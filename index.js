@@ -27,6 +27,12 @@ function displayRandomImage(nameStructure, elementId) {
                 const element = document.getElementById(elementId);
                 if (element) {
                     element.src = finalPath;
+                    
+                    // Ak je obrázok obalený odkazom (<a>), aktualizujeme aj jeho href, aby sa dal rozkliknúť
+                    const linkElement = element.parentElement;
+                    if (linkElement && linkElement.tagName.toLowerCase() === 'a') {
+                        linkElement.href = finalPath;
+                    }
                 } else {
                     console.error("Element s ID '" + elementId + "' nebol nájdený.");
                 }
