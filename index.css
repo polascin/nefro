@@ -1,0 +1,202 @@
+/* Základné premenné a CSS Reset pre konzistentný vzhľad */
+:root {
+    --bg-color: #f8fafc;
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --primary-color: #3b82f6;
+    --primary-hover: #2563eb;
+    --white: #ffffff;
+    --border-color: #e2e8f0;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Štylizácia hlavičky (<header>) */
+.site-header {
+    background: linear-gradient(135deg, var(--primary-color), #1d4ed8);
+    color: var(--white);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.site-header h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    letter-spacing: -0.5px;
+}
+
+.site-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Štylizácia navigácie (<nav>) */
+.main-nav {
+    background-color: var(--white);
+    box-shadow: var(--shadow-sm);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 30px;
+}
+
+.main-nav a {
+    display: block;
+    padding: 20px 0;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    transition: var(--transition);
+}
+
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.main-nav a:hover {
+    color: var(--primary-color);
+}
+
+.main-nav a:hover::after,
+.main-nav a.active::after {
+    width: 100%;
+}
+
+/* Rozloženie hlavného obsahu (<main>) */
+.main-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    padding: 60px 20px;
+}
+
+@media (max-width: 900px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Štylizácia článkov a sekcií (<article>, <section>) */
+.primary-article,
+.features-section,
+.widget {
+    background-color: var(--white);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 30px;
+    transition: var(--transition);
+}
+
+.primary-article:hover,
+.widget:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+h2, h3 {
+    color: var(--text-primary);
+    margin-bottom: 20px;
+}
+
+p {
+    color: var(--text-secondary);
+    margin-bottom: 15px;
+}
+
+.meta {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    margin-bottom: 25px;
+}
+
+code {
+    background-color: #f1f5f9;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+    color: #ef4444;
+}
+
+/* Dizajn pre prvky v sekciách */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.feature-card {
+    padding: 20px;
+    background-color: var(--bg-color);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+/* Štylizácia bočného panelu (<aside>) */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.widget ul {
+    list-style: none;
+}
+
+.widget ul li {
+    margin-bottom: 10px;
+}
+
+.widget ul a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.widget ul a:hover {
+    text-decoration: underline;
+}
+
+/* Štylizácia pätičky (<footer>) */
+.site-footer {
+    background-color: #0f172a;
+    color: #94a3b8;
+    text-align: center;
+    padding: 40px 0;
+    margin-top: auto;
+}

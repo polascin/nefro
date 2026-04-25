@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ukážka štandardnej štruktúry HTML5 stránky s hlavnými sémantickými prvkami.">
+    <title>Nefro - Hlavná stránka</title>
+    
+    <!-- Prepojenie na externý CSS súbor pre moderný dizajn -->
+    <link rel="stylesheet" href="index.css">
+    
+    <!-- Google Fonts pre modernú typografiu -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- <header>: Hlavička stránky alebo sekcie, zvyčajne obsahuje logo a hlavný nadpis -->
+    <header class="site-header">
+        <div class="container">
+            <h1>Nefro Projekt</h1>
+            <p>Sémantická štruktúra HTML5 dokumentu</p>
+        </div>
+    </header>
+
+    <!-- <nav>: Hlavná navigácia stránky (menu) -->
+    <nav class="main-nav">
+        <div class="container">
+            <ul>
+                <li><a href="#domov" class="active">Domov</a></li>
+                <li><a href="#sluzby">Služby</a></li>
+                <li><a href="#o-nas">O nás</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- <main>: Hlavný obsah stránky, ktorý je pre daný dokument unikátny -->
+    <main class="container main-content">
+        <div class="content-wrapper">
+            
+            <!-- <article>: Nezávislý obsah, ktorý má zmysel sám o sebe (napr. článok, blogpost) -->
+            <article class="primary-article">
+                <header>
+                    <h2>Hlavný článok: Sémantické elementy</h2>
+                    <p class="meta">Publikované: <time datetime="2026-04-25">25. Apríl 2026</time></p>
+                </header>
+                <p>Toto je ukážka <code>&lt;article&gt;</code> elementu. Slúži na označenie nezávislého obsahu, ktorý má zmysel aj sám o sebe. Okrem toho používame rôzne ďalšie značky, aby sme prehliadačom a vyhľadávačom pomohli lepšie pochopiť obsah.</p>
+                
+                <!-- <section>: Tematické rozdelenie obsahu, zvyčajne s vlastným nadpisom -->
+                <section class="content-section">
+                    <h3>Podsekcia článku</h3>
+                    <p>Pomocou elementu <code>&lt;section&gt;</code> rozdeľujeme obsah do logických celkov. Táto časť sa venuje detailnejšiemu popisu problematiky a je súčasťou väčšieho článku.</p>
+                </section>
+            </article>
+
+            <!-- Ďalšia nezávislá <section> v hlavnom obsahu -->
+            <section class="features-section">
+                <h2>Prečo používať HTML5?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h3>Dostupnosť (A11y)</h3>
+                        <p>Čítačky obrazovky oveľa lepšie rozumejú sémantickým značkám ako obyčajným <code>&lt;div&gt;</code> blokom.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>SEO</h3>
+                        <p>Vyhľadávače (Google, Bing) preferujú weby, ktoré správne označujú svoj dôležitý obsah.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- <aside>: Bočný panel, obsah, ktorý len okrajovo súvisí s hlavným obsahom -->
+        <aside class="sidebar">
+            <div class="widget">
+                <h3>O paneli (Aside)</h3>
+                <p>Element <code>&lt;aside&gt;</code> obsahuje informácie, ktoré doplňujú hlavný obsah. Môžu tu byť reklamy, kategórie alebo krátke informácie o autorovi.</p>
+            </div>
+            <div class="widget">
+                <h3>Užitočné odkazy</h3>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">MDN: HTML Elementy</a></li>
+                    <li><a href="https://html.spec.whatwg.org/" target="_blank">HTML Špecifikácia</a></li>
+                </ul>
+            </div>
+        </aside>
+    </main>
+
+    <!-- <footer>: Pätička stránky alebo sekcie, obsahuje autorské práva, dôležité odkazy atď. -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Nefro Projekt. Vytvorené s využitím moderných štandardov HTML5 a s dôrazom na prístupnosť.</p>
+        </div>
+    </footer>
+</body>
+</html>
