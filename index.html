@@ -73,6 +73,55 @@
         <!-- <aside>: Bočný panel, obsah, ktorý len okrajovo súvisí s hlavným obsahom -->
         <aside class="sidebar">
             <div class="widget">
+                <h3>Náhodný obrázok</h3>
+                <img id="randomImage" alt="Náhodný obrázok" style="width: 100%; height: auto; border-radius: 8px; display: block; margin-bottom: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+                <script>
+                    /**
+                     * Automaticky spočíta obrázky s danou štruktúrou a zobrazí jeden náhodný.
+                     * @param {string} strukturaNazvu - Štruktúra názvu súboru (napr. 'kdigockd2024_{n}.png'). Značka '{n}' bude nahradená číslom.
+                     * @param {string} idElementu - ID elementu <img>, do ktorého sa má obrázok načítať.
+                     */
+                    function zobrazNahodnyObrazok(strukturaNazvu, idElementu) {
+                        let pocet = 0;
+                        
+                        function skontrolujDalsi() {
+                            const img = new Image();
+                            const testovaciaCesta = './img/' + strukturaNazvu.replace('{n}', pocet);
+                            
+                            // Ak sa obrázok načíta, znamená to, že existuje
+                            img.onload = function() {
+                                pocet++;
+                                skontrolujDalsi(); // Skontroluj existenciu ďalšieho obrázka v poradí
+                            };
+                            
+                            // Ak nastane chyba (404), znamená to, že sme našli koniec radu a vieme konečný počet
+                            img.onerror = function() {
+                                if (pocet > 0) {
+                                    // Vygenerovanie náhodného čísla n = od 0 po počet obrázkov - 1
+                                    const n = Math.floor(Math.random() * pocet);
+                                    const finalnaCesta = './img/' + strukturaNazvu.replace('{n}', n);
+                                    
+                                    // Zobrazenie vybraného náhodného obrázku v DOM
+                                    document.getElementById(idElementu).src = finalnaCesta;
+                                } else {
+                                    console.warn("V priečinku ./img sa nenašli žiadne obrázky vyhovujúce štruktúre " + strukturaNazvu);
+                                }
+                            };
+                            
+                            // Priradením `src` sa spustí sťahovanie/kontrola obrázka (vyvolá buď onload alebo onerror)
+                            img.src = testovaciaCesta;
+                        }
+                        
+                        // Spustenie hľadania obrázkov začínajúc od nuly
+                        skontrolujDalsi();
+                    }
+                    
+                    // Volanie funkcie pre danú štruktúru názvu
+                    zobrazNahodnyObrazok('kdigockd2024_{n}.png', 'randomImage');
+                </script>
+            </div>
+
+            <div class="widget">
                 <h3>O paneli (Aside)</h3>
                 <p>Element <code>&lt;aside&gt;</code> obsahuje informácie, ktoré doplňujú hlavný obsah. Môžu tu byť reklamy, kategórie alebo krátke informácie o autorovi.</p>
             </div>
