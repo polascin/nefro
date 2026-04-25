@@ -85,10 +85,23 @@ body {
     }
 }
 
+.header-logo {
+    max-width: 33%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.25));
+    transition: var(--transition-smooth);
+}
+
+.header-logo:hover {
+    transform: scale(1.05) translateY(-3px);
+    filter: drop-shadow(0 10px 20px rgba(255, 255, 255, 0.3));
+}
+
 .site-header h1 {
     font-size: 4.2rem;
     font-weight: 900;
-    margin-bottom: 24px;
     letter-spacing: -1.5px;
     position: relative;
     z-index: 1;
@@ -114,18 +127,18 @@ body {
 }
 
 .site-header p.intro {
-    font-size: 1.35rem;
+    font-size: 1.2rem;
     font-weight: 400;
     max-width: 850px;
     margin: 0 auto;
     opacity: 1;
     position: relative;
     z-index: 1;
-    line-height: 1.8;
+    line-height: 1.1;
     color: #f8fafc;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
     background: rgba(0, 0, 0, 0.15);
-    padding: 24px 32px;
+    padding: 1rem 1rem;
     border-radius: 16px;
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
@@ -356,6 +369,10 @@ code {
     width: 40px;
     height: 2px;
     background: var(--primary-color);
+}
+
+.widget p {
+    text-align: justify;
 }
 
 .widget ul {
