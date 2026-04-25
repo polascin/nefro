@@ -202,8 +202,10 @@
                         style="width: 100%; height: auto; border-radius: 8px; display: block; margin-bottom: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
                 </a>
                 <script>
-                    // Volanie funkcie z externého index.js súboru pre danú štruktúru názvu
-                    displayRandomImage('nefro_{n}.png', 'randomImage');
+                    // Volanie funkcie z externého index.js súboru po načítaní DOM
+                    document.addEventListener('DOMContentLoaded', () => {
+                        displayRandomImage('nefro_{n}.png', 'randomImage');
+                    });
                 </script>
             </div>
 
