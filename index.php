@@ -77,7 +77,8 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;900&display=swap" rel="stylesheet">
 
-
+    <!-- Skript pre Cookie Consent -->
+    <script src="cookie-consent.js" defer></script>
 </head>
 
 <body>
@@ -347,6 +348,10 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
         <div class="container">
             <p>
                 &copy; 2026 Ľubomír Polaščín. Vytvorené s využitím moderných štandardov a s dôrazom na prístupnosť.
+            </p>
+            <p style="margin-top: 10px; font-size: 0.85rem;">
+                <a href="privacy.php" style="color: #94a3b8; text-decoration: underline;">Ochrana osobných údajov (Privacy Policy)</a> | 
+                <a href="#" onclick="event.preventDefault(); window.openCookiePreferences();" style="color: #94a3b8; text-decoration: underline;">Nastavenia Cookies</a>
             </p>
         </div>
     </footer>
