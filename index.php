@@ -179,19 +179,28 @@
                 <div class="features-grid">
                     <div class="feature-card">
                         <h3>Nefrológia a Dialýza</h3>
-                        <p>Komplexná starostlivosť. Špecializácia na renálne náhrady (hemodialýza, hemodiafiltrácia), ultrasonografiu cievnych prístupov a mimotelové eliminačné metódy.</p>
+                        <p>Komplexná starostlivosť. Špecializácia na liečbu obličkových chorôb, renálnu nahradzujúcu
+                            liečbu (hemodialýza, hemodiafiltrácia, peritoneálna dialýza), ultrasonografiu orgánov brucha
+                            so zameraním na uropoetický systém, ultrasonografiu cievnych prístupov a mimotelové
+                            eliminačné metódy.</p>
                     </div>
                     <div class="feature-card">
                         <h3>Lektorstvo a vzdelávanie</h3>
-                        <p>Rozsiahle skúsenosti s výučbou a odborným prednášaním v oblasti vnútorného lekárstva, diabetológie a nefrológie pre odbornú verejnosť.</p>
+                        <p>Rozsiahle skúsenosti s výučbou a odborným prednášaním predovšetkým v oblasti nefrológie a
+                            vnútorného lekárstva pre odbornú ale aj laickú verejnosť. Dlhodobá spolupráca s
+                            univerzitnými pracoviskami ako aj so spoločnosťami zaoberajúcimi sa vzdelávaním
+                            zdravotníckeho personálu.</p>
                     </div>
                     <div class="feature-card">
                         <h3>Medicínske preklady</h3>
-                        <p>Špecializované preklady medicínskych dokumentov a lokalizácia softvéru (AJ/SJ) s maximálnym dôrazom na presnú klinickú terminológiu.</p>
+                        <p>Špecializované preklady medicínskych dokumentov a lokalizácia softvéru (AJ/SJ) s maximálnym
+                            dôrazom na presnú klinickú terminológiu. Preklady sú vždy na vysokej odbornej úrovni, bez
+                            gramatických chýb a s dôrazom na detail.</p>
                     </div>
                     <div class="feature-card">
                         <h3>IT a AI riešenia</h3>
-                        <p>Vývoj na mieru šitých medicínskych aplikácií, integrácia AI nástrojov pre spracovanie dát a modernizácia zdravotníckych systémov.</p>
+                        <p>Vývoj na mieru šitých medicínskych aplikácií, integrácia AI nástrojov pre spracovanie dát a
+                            modernizácia zdravotníckych systémov.</p>
                     </div>
                 </div>
             </section>
@@ -203,13 +212,19 @@
                     <div class="feature-card">
                         <h3>Kto som</h3>
                         <p>
-                            Som <strong>MUDr. Ľubomír Polaščín</strong> — lekár so špecializáciou na nefrológiu a vnútorné lekárstvo. Okrem medicíny sa aktívne venujem písaniu beletrie i odbornej literatúry a s vášňou vyvíjam webové riešenia a aplikácie. Moja práca stojí na prieniku zdravotníctva, literatúry a moderných IT technológií.
+                            Som <strong>MUDr. Ľubomír Polaščín</strong> — lekár so špecializáciou v nefrológii a
+                            vnútornom lekárstve. Okrem medicíny sa aktívne venujem písaniu beletrie i odbornej
+                            literatúry a s vášňou vyvíjam webové riešenia a aplikácie. Moja práca stojí na prieniku
+                            zdravotníctva, literatúry a moderných IT technológií.
                         </p>
                     </div>
                     <div class="feature-card">
                         <h3>Odborná prax</h3>
                         <p>
-                            Promoval som v odbore Všeobecné lekárstvo (1995), mám atestáciu z interného lekárstva (1998) a špecializáciu v nefrológii (2009). Dlhodobo sa zameriavam na dialýzu a od roku 2013 do 2022 som pôsobil ako primár a vedúci lekár v dvoch dialyzačných strediskách v Bratislave.
+                            Promoval som v odbore Všeobecné lekárstvo (1995), mám atestáciu z interného lekárstva (1998)
+                            a špecializáciu v nefrológii (2009). Dlhodobo sa zameriavam na dialýzu a o.i. som od roku
+                            2013 do 2022 pôsobil ako primár a vedúci lekár v dvoch dialyzačných strediskách v
+                            Bratislave.
                         </p>
                     </div>
                 </div>
