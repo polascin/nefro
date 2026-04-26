@@ -173,6 +173,29 @@
                 </footer>
             </article>
 
+            <!-- Sekcia Služby -->
+            <section class="features-section" id="sluzby">
+                <h2>Poskytované služby a expertíza</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h3>Nefrológia a Dialýza</h3>
+                        <p>Komplexná starostlivosť. Špecializácia na renálne náhrady (hemodialýza, hemodiafiltrácia), ultrasonografiu cievnych prístupov a mimotelové eliminačné metódy.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Lektorstvo a vzdelávanie</h3>
+                        <p>Rozsiahle skúsenosti s výučbou a odborným prednášaním v oblasti vnútorného lekárstva, diabetológie a nefrológie pre odbornú verejnosť.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Medicínske preklady</h3>
+                        <p>Špecializované preklady medicínskych dokumentov a lokalizácia softvéru (AJ/SJ) s maximálnym dôrazom na presnú klinickú terminológiu.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>IT a AI riešenia</h3>
+                        <p>Vývoj na mieru šitých medicínskych aplikácií, integrácia AI nástrojov pre spracovanie dát a modernizácia zdravotníckych systémov.</p>
+                    </div>
+                </div>
+            </section>
+
             <!-- Sekcia O nás -->
             <section class="features-section" id="o-nas">
                 <h2>O mne</h2>
