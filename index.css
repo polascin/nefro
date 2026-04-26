@@ -353,6 +353,38 @@ code {
     box-shadow: var(--shadow-sm);
 }
 
+/* Tlačidlá a odznaky (napr. v sekcii Kontakt) */
+.btn-primary {
+    display: inline-block;
+    padding: 12px 24px;
+    background: var(--primary-gradient);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: var(--transition-smooth);
+    box-shadow: var(--shadow-sm);
+    margin-top: 10px;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-glow);
+    color: var(--white);
+}
+
+.badge-highlight {
+    display: inline-block;
+    padding: 8px 16px;
+    background: rgba(225, 29, 72, 0.1);
+    color: #e11d48;
+    border: 1px solid rgba(225, 29, 72, 0.2);
+    border-radius: 8px;
+    font-weight: 600;
+    margin-top: 10px;
+    font-size: 0.95rem;
+}
+
 /* Bočný panel (<aside>) a Widgety */
 .sidebar {
     display: flex;

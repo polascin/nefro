@@ -53,7 +53,7 @@
 
 <body>
     <!-- <header>: Hlavička stránky alebo sekcie, zvyčajne obsahuje logo a hlavný nadpis -->
-    <header class="site-header">
+    <header class="site-header" id="domov">
         <div class="container">
             <h1>Nefro-projekt Slovensko</h1>
             <img src="./img/nps-logo.gif" alt="Nefro-projekt Slovensko Logo" class="header-logo">
@@ -173,22 +173,42 @@
                 </footer>
             </article>
 
-            <!-- Ďalšia nezávislá <section> v hlavnom obsahu 
-            <section class="features-section">
-                <h2>Prečo používať HTML5?</h2>
+            <!-- Sekcia O nás -->
+            <section class="features-section" id="o-nas">
+                <h2>O mne</h2>
                 <div class="features-grid">
                     <div class="feature-card">
-                        <h3>Dostupnosť (A11y)</h3>
-                        <p>Čítačky obrazovky oveľa lepšie rozumejú sémantickým značkám ako obyčajným
-                            <code>&lt;div&gt;</code> blokom.
+                        <h3>Kto som</h3>
+                        <p>
+                            Som <strong>MUDr. Ľubomír Polaščín</strong> — lekár so špecializáciou na nefrológiu a vnútorné lekárstvo. Okrem medicíny sa aktívne venujem písaniu beletrie i odbornej literatúry a s vášňou vyvíjam webové riešenia a aplikácie. Moja práca stojí na prieniku zdravotníctva, literatúry a moderných IT technológií.
                         </p>
                     </div>
                     <div class="feature-card">
-                        <h3>SEO</h3>
-                        <p>Vyhľadávače (Google, Bing) preferujú weby, ktoré správne označujú svoj dôležitý obsah.</p>
+                        <h3>Odborná prax</h3>
+                        <p>
+                            Promoval som v odbore Všeobecné lekárstvo (1995), mám atestáciu z interného lekárstva (1998) a špecializáciu v nefrológii (2009). Dlhodobo sa zameriavam na dialýzu a od roku 2013 do 2022 som pôsobil ako primár a vedúci lekár v dvoch dialyzačných strediskách v Bratislave.
+                        </p>
                     </div>
                 </div>
-            </section>-->
+            </section>
+
+            <!-- Ďalšia nezávislá <section> v hlavnom obsahu -->
+            <section class="features-section" id="kontakt">
+                <h2>Kontakty a spolupráca</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h3>Máte otázky alebo sa chcete zapojiť?</h3>
+                        <p>Radi uvítame akúkoľvek formu diskusie, spolupráce či dotazov. Neváhajte nás kedykoľvek
+                            kontaktovať.</p>
+                        <a href="mailto:nefro@polascin.net" class="btn-primary">Napísať e-mail</a>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Kedy očakávame ďalší príspevok?</h3>
+                        <p>Pravidelne pripravujeme nové klinické dáta a analýzy.</p>
+                        <div class="badge-highlight">Predpoklad: Začiatok júna 2026</div>
+                    </div>
+                </div>
+            </section>
         </div>
 
         <!-- <aside>: Bočný panel, obsah, ktorý len okrajovo súvisí s hlavným obsahom -->
