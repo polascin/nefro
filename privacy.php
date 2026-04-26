@@ -9,6 +9,8 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
 <html lang="sk">
 <head>
     <meta charset="UTF-8">
+    <!-- Logika pre Tmavý režim (na začiatku kvôli prevencii FOUC) -->
+    <script src="theme.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self';">
@@ -40,6 +42,10 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
             <ul>
                 <li><a href="index.php">Návrat na Domov</a></li>
             </ul>
+            <div class="theme-toggle-container">
+                <button id="themeToggleBtn" class="theme-toggle" aria-label="Prepnúť režim osvetlenia" title="Prepnúť režim osvetlenia">
+                </button>
+            </div>
         </div>
     </nav>
 

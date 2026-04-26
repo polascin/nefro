@@ -10,6 +10,8 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
 
 <head>
     <meta charset="UTF-8">
+    <!-- Logika pre Tmavý režim (na začiatku kvôli prevencii FOUC) -->
+    <script src="theme.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Bezpečnostné hlavičky (Security) -->
@@ -105,6 +107,10 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
                 <li><a href="#o-nas">O nás</a></li>
                 <li><a href="#kontakt">Kontakt</a></li>
             </ul>
+            <div class="theme-toggle-container">
+                <button id="themeToggleBtn" class="theme-toggle" aria-label="Prepnúť režim osvetlenia" title="Prepnúť režim osvetlenia">
+                </button>
+            </div>
         </div>
     </nav>
 

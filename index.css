@@ -27,6 +27,28 @@
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Premenné pre Tmavý režim (Dark Mode) */
+[data-theme="dark"] {
+    --bg-color: #0f172a;
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
+    --text-tertiary: #94a3b8;
+    --primary-color: #3b82f6;
+    --primary-light: #93c5fd;
+    --primary-gradient: linear-gradient(135deg, #1d4ed8, #60a5fa);
+    --accent-color: #38bdf8;
+    --white: #1e293b;
+    --border-color: rgba(255, 255, 255, 0.1);
+
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.2);
+    --shadow-md: 0 10px 20px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+    --shadow-lg: 0 25px 30px -12px rgba(0, 0, 0, 0.4);
+    --shadow-glow: 0 0 20px rgba(59, 130, 246, 0.2);
+
+    --glass-bg: rgba(15, 23, 42, 0.75);
+    --glass-border: rgba(255, 255, 255, 0.05);
+}
+
 /* Reset */
 * {
     margin: 0;
@@ -74,6 +96,16 @@ body {
     color: var(--text-primary);
     line-height: 1.7;
     -webkit-font-smoothing: antialiased;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Jemné stmavenie pozadia v dark mode kvôli obrázku */
+[data-theme="dark"] body {
+    background-image:
+        radial-gradient(circle at 15% 50%, rgba(30, 64, 175, 0.15), transparent 25%),
+        radial-gradient(circle at 85% 30%, rgba(14, 165, 233, 0.15), transparent 25%),
+        linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)),
+        url('img/nps-abstract.png');
 }
 
 .container {
@@ -193,6 +225,42 @@ body {
     list-style: none;
     justify-content: center;
     gap: 40px;
+    width: 100%;
+}
+
+.main-nav .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-toggle-container {
+    position: absolute;
+    right: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.theme-toggle {
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: var(--transition-fast);
+}
+
+.theme-toggle:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="dark"] .theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .main-nav a {
