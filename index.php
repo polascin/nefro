@@ -48,8 +48,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;900&display=swap" rel="stylesheet">
 
-    <!-- Externý JavaScript s užitočnými funkciami -->
-    <script src="index.js" defer></script>
+
 </head>
 
 <body>
@@ -196,17 +195,21 @@
         <aside class="sidebar">
             <div class="widget">
                 <h3>Náhodný obrázok</h3>
-                <a href="#" id="randomImageLink" target="_blank" rel="noopener noreferrer"
-                    title="Zobraziť obrázok v plnej veľkosti">
-                    <img id="randomImage" alt="Náhodný obrázok"
-                        style="width: 100%; height: auto; border-radius: 8px; display: block; margin-bottom: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                </a>
-                <script>
-                    // Volanie funkcie z externého index.js súboru po načítaní DOM
-                    document.addEventListener('DOMContentLoaded', () => {
-                        displayRandomImage('nefro_{n}.png', 'randomImage');
-                    });
-                </script>
+                <?php
+                // Získanie všetkých obrázkov zodpovedajúcich štruktúre
+                $images = glob('./img/nefro_*.png');
+                if ($images && count($images) > 0) {
+                    // Výber náhodného obrázka
+                    $randomIndex = array_rand($images);
+                    $randomImagePath = $images[$randomIndex];
+
+                    echo '<a href="' . htmlspecialchars($randomImagePath) . '" id="randomImageLink" target="_blank" rel="noopener noreferrer" title="Zobraziť obrázok v plnej veľkosti">';
+                    echo '<img id="randomImage" src="' . htmlspecialchars($randomImagePath) . '" alt="Náhodný obrázok" style="width: 100%; height: auto; border-radius: 8px; display: block; margin-bottom: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">';
+                    echo '</a>';
+                } else {
+                    echo '<p>Žiadne obrázky neboli nájdené.</p>';
+                }
+                ?>
             </div>
 
             <div class="widget">
@@ -252,8 +255,8 @@
     <!-- <footer>: Pätička stránky alebo sekcie, obsahuje autorské práva, dôležité odkazy atď. -->
     <footer class="site-footer">
         <div class="container">
-            <p>&copy; 2026 Ľubomír Polaščín. Vytvorené s využitím moderných štandardov HTML5 a s dôrazom na
-                prístupnosť.
+            <p>
+                &copy; 2026 Ľubomír Polaščín. Vytvorené s využitím moderných štandardov a s dôrazom na prístupnosť.
             </p>
         </div>
     </footer>
