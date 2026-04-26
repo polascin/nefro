@@ -25,6 +25,17 @@
     /* Animácie */
     --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* UI komponenty */
+    --card-gradient: linear-gradient(145deg, #ffffff, #f8fafc);
+    --btn-secondary-bg: #e2e8f0;
+    --btn-secondary-hover: #cbd5e1;
+    --btn-outline-border: #cbd5e1;
+    --btn-outline-hover-bg: #f1f5f9;
+    --btn-outline-hover-border: #94a3b8;
+    --code-bg: #f1f5f9;
+    --code-border: #e2e8f0;
+    --modal-footer-bg: #f8fafc;
 }
 
 /* Premenné pre Tmavý režim (Dark Mode) */
@@ -47,6 +58,17 @@
 
     --glass-bg: rgba(15, 23, 42, 0.75);
     --glass-border: rgba(255, 255, 255, 0.05);
+
+    /* UI komponenty (Dark Mode) */
+    --card-gradient: linear-gradient(145deg, #1e293b, #0f172a);
+    --btn-secondary-bg: #334155;
+    --btn-secondary-hover: #475569;
+    --btn-outline-border: #475569;
+    --btn-outline-hover-bg: #1e293b;
+    --btn-outline-hover-border: #64748b;
+    --code-bg: #1e293b;
+    --code-border: #334155;
+    --modal-footer-bg: #0f172a;
 }
 
 /* Reset */
@@ -410,13 +432,13 @@ p {
 }
 
 code {
-    background-color: #f1f5f9;
+    background-color: var(--code-bg);
     padding: 4px 8px;
     border-radius: 6px;
     font-family: 'Courier New', Courier, monospace;
     font-size: 0.9em;
     color: #db2777;
-    border: 1px solid #e2e8f0;
+    border: 1px solid var(--code-border);
 }
 
 /* Prečo používať HTML5 (Mriežka funkcií) */
@@ -429,7 +451,7 @@ code {
 
 .feature-card {
     padding: 25px;
-    background: linear-gradient(145deg, #ffffff, #f8fafc);
+    background: var(--card-gradient);
     border-radius: 12px;
     border: 1px solid var(--border-color);
     transition: var(--transition-fast);
@@ -629,7 +651,7 @@ code {
 
 .btn-secondary {
     padding: 10px 20px;
-    background: #e2e8f0;
+    background: var(--btn-secondary-bg);
     color: var(--text-primary);
     border: none;
     border-radius: 8px;
@@ -638,22 +660,22 @@ code {
 }
 
 .btn-secondary:hover {
-    background: #cbd5e1;
+    background: var(--btn-secondary-hover);
 }
 
 .btn-outline {
     padding: 10px 20px;
     background: transparent;
     color: var(--text-primary);
-    border: 1px solid #cbd5e1;
+    border: 1px solid var(--btn-outline-border);
     border-radius: 8px;
     font-weight: 600;
     transition: var(--transition-fast);
 }
 
 .btn-outline:hover {
-    background: #f1f5f9;
-    border-color: #94a3b8;
+    background: var(--btn-outline-hover-bg);
+    border-color: var(--btn-outline-hover-border);
 }
 
 /* Modálne okno (Preferences) */
@@ -838,7 +860,7 @@ input:disabled + .slider:before {
     padding: 16px 24px;
     border-top: 1px solid var(--border-color);
     text-align: right;
-    background: #f8fafc;
+    background: var(--modal-footer-bg);
     border-radius: 0 0 16px 16px;
 }
 
