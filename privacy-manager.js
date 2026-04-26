@@ -1,7 +1,30 @@
 /**
- * Komplexný Cookie Consent Banner (GDPR, CCPA)
+ * Komplexný Cookie Consent Banner (GDPR, CCPA) s Google Consent Mode v2
  * Autor: MUDr. Ľubomír Polaščín
  */
+
+// Inicializácia Google Analytics 4 (Google Consent Mode v2)
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+
+// Predvolené nastavenie súhlasu podľa GDPR - všetko zablokované (okrem default-ov)
+gtag('consent', 'default', {
+  'ad_storage': 'denied',
+  'ad_user_data': 'denied',
+  'ad_personalization': 'denied',
+  'analytics_storage': 'denied'
+});
+
+// Dynamické načítanie Google Tag Manager scriptu (nahrádza inline script kvôli CSP)
+(function() {
+    const gtagScript = document.createElement('script');
+    gtagScript.async = true;
+    gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-0JT5VMQ61K";
+    document.head.appendChild(gtagScript);
+})();
+
+gtag('js', new Date());
+gtag('config', 'G-0JT5VMQ61K');
 
 document.addEventListener('DOMContentLoaded', () => {
     const consentKey = 'nps_cookie_consent';
@@ -159,9 +182,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function applyConsent(consentData) {
-        // Tu by sa aktivovali/deaktivovali skripty na základe consentData
-        // Napríklad ak consentData.analytics == true, injektovať Google Analytics, atď.
-        console.log("Cookie consent aplikovaný: ", consentData);
+        // Aplikácia súhlasu pre Google Analytics 4 (Consent Mode v2)
+        gtag('consent', 'update', {
+            'analytics_storage': consentData.analytics ? 'granted' : 'denied',
+            'ad_storage': consentData.marketing ? 'granted' : 'denied',
+            'ad_user_data': consentData.marketing ? 'granted' : 'denied',
+            'ad_personalization': consentData.marketing ? 'granted' : 'denied'
+        });
+        
+        console.log("Cookie consent aplikovaný do GA4: ", consentData);
     }
 
     // Ak už bol súhlas udelený predtým, aplikuj ho hneď po načítaní
