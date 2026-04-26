@@ -58,7 +58,7 @@
             <h1>Nefro-projekt Slovensko</h1>
             <img src="./img/nps-logo.gif" alt="Nefro-projekt Slovensko Logo" class="header-logo">
             <p class="intro">
-                Dynamická renesancia nefrológie: Od molekulárnej biológie po umelú inteligenciu
+                Dynamická renesancia nefrológie: Od molekulárnej biológie po umelú inteligenciu.
             </p>
         </div>
     </header>
