@@ -1,3 +1,10 @@
+<?php
+// Bezpečnostné HTTP hlavičky
+header("X-Frame-Options: SAMEORIGIN"); // Ochrana pred Clickjackingom
+header("X-XSS-Protection: 1; mode=block"); // Ochrana pred XSS útokmi
+header("X-Content-Type-Options: nosniff"); // Zabránenie MIME-sniffingu
+header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"); // Vynútenie HTTPS
+?>
 <!DOCTYPE html>
 <html lang="sk">
 
@@ -8,7 +15,7 @@
     <!-- Bezpečnostné hlavičky (Security) -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline';">
+        content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self';">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta name="referrer" content="strict-origin-when-cross-origin">
 
@@ -24,7 +31,10 @@
     <meta property="og:title" content="Nefro-projekt Slovensko">
     <meta property="og:description"
         content="Dynamická renesancia nefrológie: Od molekulárnej biológie po umelú inteligenciu.">
-    <meta property="og:image" content="./img/nps.gif">
+    <meta property="og:url" content="https://nefro.polascin.net/">
+    <meta property="og:site_name" content="Nefro-projekt Slovensko">
+    <meta property="og:locale" content="sk_SK">
+    <meta property="og:image" content="https://nefro.polascin.net/img/nps-logo.gif">
 
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
@@ -32,6 +42,25 @@
     <meta name="twitter:description" content="Dynamická renesancia nefrológie a moderné prístupy v liečbe.">
 
     <title>Nefro-projekt Slovensko</title>
+
+    <!-- JSON-LD Štruktúrované dáta pre lepšie vyhľadávanie -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalOrganization",
+      "name": "Nefro-projekt Slovensko",
+      "url": "https://nefro.polascin.net/",
+      "logo": "https://nefro.polascin.net/img/nps-logo.gif",
+      "description": "Dynamická renesancia nefrológie: Od molekulárnej biológie po umelú inteligenciu.",
+      "medicalSpecialty": "https://en.wikipedia.org/wiki/Nephrology",
+      "founder": {
+        "@type": "Person",
+        "name": "MUDr. Ľubomír Polaščín",
+        "jobTitle": "Lekár, Nefrológ",
+        "url": "https://polascin.com/"
+      }
+    }
+    </script>
 
     <!-- Favikony (PWA, Apple, Android, Windows) -->
     <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
@@ -52,8 +81,11 @@
 </head>
 
 <body>
+    <!-- Skip to content (A11y) -->
+    <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>
+
     <!-- <header>: Hlavička stránky alebo sekcie, zvyčajne obsahuje logo a hlavný nadpis -->
-    <header class="site-header" id="domov">
+    <header class="site-header" id="domov" role="banner">
         <div class="container">
             <h1>Nefro-projekt Slovensko</h1>
             <img src="./img/nps-logo.gif" alt="Nefro-projekt Slovensko Logo" class="header-logo">
@@ -76,7 +108,7 @@
     </nav>
 
     <!-- <main>: Hlavný obsah stránky, ktorý je pre daný dokument unikátny -->
-    <main class="container main-content">
+    <main id="main-content" class="container main-content" role="main">
         <div class="content-wrapper">
 
             <!-- <article>: Nezávislý obsah, ktorý má zmysel sám o sebe (napr. článok, blogpost) -->
@@ -311,7 +343,7 @@
     </main>
 
     <!-- <footer>: Pätička stránky alebo sekcie, obsahuje autorské práva, dôležité odkazy atď. -->
-    <footer class="site-footer">
+    <footer class="site-footer" role="contentinfo">
         <div class="container">
             <p>
                 &copy; 2026 Ľubomír Polaščín. Vytvorené s využitím moderných štandardov a s dôrazom na prístupnosť.
