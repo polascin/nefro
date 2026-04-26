@@ -5,26 +5,28 @@
 
 // Inicializácia Google Analytics 4 (Google Consent Mode v2)
 window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
+window.gtag = function(){ dataLayer.push(arguments); };
 
-// Predvolené nastavenie súhlasu podľa GDPR - všetko zablokované (okrem default-ov)
-gtag('consent', 'default', {
-  'ad_storage': 'denied',
-  'ad_user_data': 'denied',
-  'ad_personalization': 'denied',
-  'analytics_storage': 'denied'
-});
+try {
+    // Predvolené nastavenie súhlasu podľa GDPR - všetko zablokované (okrem default-ov)
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied'
+    });
 
-// Dynamické načítanie Google Tag Manager scriptu (nahrádza inline script kvôli CSP)
-(function() {
+    // Dynamické načítanie Google Tag Manager scriptu
     const gtagScript = document.createElement('script');
     gtagScript.async = true;
     gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-0JT5VMQ61K";
     document.head.appendChild(gtagScript);
-})();
 
-gtag('js', new Date());
-gtag('config', 'G-0JT5VMQ61K');
+    gtag('js', new Date());
+    gtag('config', 'G-0JT5VMQ61K');
+} catch (error) {
+    console.warn("NPS Privacy Manager: GA4 script bol zablokovaný (pravdepodobne Ad-Blockerom).", error);
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     const consentKey = 'nps_cookie_consent';
