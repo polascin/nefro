@@ -25,8 +25,8 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;900&display=swap" rel="stylesheet">
     
-    <!-- Cookie Consent Skript -->
-    <script src="cookie-consent.js?v=<?= filemtime('cookie-consent.js') ?>" defer></script>
+    <!-- Privacy Manager Skript -->
+    <script src="privacy-manager.js?v=<?= filemtime('privacy-manager.js') ?>" defer></script>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>

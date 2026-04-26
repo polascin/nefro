@@ -79,8 +79,8 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;900&display=swap" rel="stylesheet">
 
-    <!-- Skript pre Cookie Consent -->
-    <script src="cookie-consent.js?v=<?= filemtime('cookie-consent.js') ?>" defer></script>
+    <!-- Skript pre Privacy Manager (Cookies) -->
+    <script src="privacy-manager.js?v=<?= filemtime('privacy-manager.js') ?>" defer></script>
 </head>
 
 <body>

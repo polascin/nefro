@@ -17,9 +17,17 @@ document.addEventListener('DOMContentLoaded', () => {
         timestamp: null
     };
 
-    // Načítanie súhlasu
-    let currentConsent = JSON.parse(localStorage.getItem(consentKey));
-    let hasResponded = currentConsent !== null;
+    // Načítanie súhlasu s ochranou proti chybám (ak má užívateľ prísne blokované cookies)
+    let currentConsent = null;
+    let hasResponded = false;
+
+    try {
+        currentConsent = JSON.parse(localStorage.getItem(consentKey));
+        hasResponded = currentConsent !== null;
+    } catch (e) {
+        console.warn('NPS Privacy Manager: Prehliadač blokuje prístup k localStorage.');
+        hasResponded = false; // Vynúti aspoň snahu o zobrazenie
+    }
 
     if (!currentConsent) {
         currentConsent = { ...defaultSettings };
@@ -140,7 +148,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function saveConsent(consentData) {
         consentData.timestamp = new Date().toISOString();
-        localStorage.setItem(consentKey, JSON.stringify(consentData));
+        try {
+            localStorage.setItem(consentKey, JSON.stringify(consentData));
+        } catch (e) {
+            console.error('NPS Privacy Manager: Nepodarilo sa uložiť nastavenia do localStorage.', e);
+        }
         banner.classList.add('hidden');
         closeModal();
         applyConsent(consentData);
@@ -163,7 +175,13 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = 'hidden'; // Zabrániť scrollovaniu pod modalom
         
         // Obnova aktuálnych nastavení do toggle tlačidiel
-        const saved = JSON.parse(localStorage.getItem(consentKey)) || defaultSettings;
+        let saved = null;
+        try {
+            saved = JSON.parse(localStorage.getItem(consentKey));
+        } catch (e) {}
+        
+        saved = saved || defaultSettings;
+        
         toggleAnalytics.checked = saved.analytics;
         toggleMarketing.checked = saved.marketing;
         togglePreferences.checked = saved.preferences;
