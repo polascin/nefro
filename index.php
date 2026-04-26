@@ -11,7 +11,7 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
 <head>
     <meta charset="UTF-8">
     <!-- Logika pre Tmavý režim (na začiatku kvôli prevencii FOUC) -->
-    <script src="theme.js"></script>
+    <script src="theme.js?v=<?= filemtime('theme.js') ?>"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Bezpečnostné hlavičky (Security) -->
@@ -72,7 +72,7 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
     <link rel="shortcut icon" href="./favicon.ico">
 
     <!-- Prepojenie na externý CSS súbor pre moderný dizajn -->
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css?v=<?= filemtime('index.css') ?>">
 
     <!-- Google Fonts pre modernú typografiu -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -80,7 +80,7 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;900&display=swap" rel="stylesheet">
 
     <!-- Skript pre Cookie Consent -->
-    <script src="cookie-consent.js" defer></script>
+    <script src="cookie-consent.js?v=<?= filemtime('cookie-consent.js') ?>" defer></script>
 </head>
 
 <body>

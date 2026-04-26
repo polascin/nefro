@@ -10,7 +10,7 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
 <head>
     <meta charset="UTF-8">
     <!-- Logika pre Tmavý režim (na začiatku kvôli prevencii FOUC) -->
-    <script src="theme.js"></script>
+    <script src="theme.js?v=<?= filemtime('theme.js') ?>"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self';">
@@ -20,13 +20,13 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
     <meta name="description" content="Zásady ochrany osobných údajov pre projekt Nefro-projekt Slovensko.">
     <title>Privacy Policy | Nefro-projekt Slovensko</title>
 
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css?v=<?= filemtime('index.css') ?>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;900&display=swap" rel="stylesheet">
     
     <!-- Cookie Consent Skript -->
-    <script src="cookie-consent.js" defer></script>
+    <script src="cookie-consent.js?v=<?= filemtime('cookie-consent.js') ?>" defer></script>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>
