@@ -95,7 +95,7 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
                     <li><strong>Preferenčné (Preferences):</strong> Umožňujú stránke poskytovať vylepšenú funkcionalitu a prispôsobenie (napr. jazyk).</li>
                 </ul>
                 <p>Svoj súhlas môžete kedykoľvek zmeniť alebo odvolať kliknutím na odkaz "Nastavenia Cookies" v pätičke stránky.</p>
-                <button onclick="window.openCookiePreferences()" class="btn-outline" style="margin-top: 10px;">Otvoriť nastavenia cookies</button>
+                <button class="cookie-settings-trigger btn-outline" style="margin-top: 10px;">Otvoriť nastavenia cookies</button>
 
                 <h3>6. Zmeny v týchto pravidlách</h3>
                 <p>Tieto Zásady ochrany osobných údajov môžeme z času na čas aktualizovať, aby odrážali zmeny v našich postupoch alebo z iných prevádzkových, právnych alebo regulačných dôvodov. Odporúčame vám, aby ste túto stránku pravidelne kontrolovali.</p>
@@ -109,7 +109,7 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
             <p>&copy; 2026 Ľubomír Polaščín. Vytvorené s využitím moderných štandardov a s dôrazom na prístupnosť.</p>
             <p style="margin-top: 10px; font-size: 0.85rem;">
                 <a href="privacy.php" style="color: #94a3b8; text-decoration: underline;">Ochrana osobných údajov (Privacy Policy)</a> | 
-                <a href="#" onclick="event.preventDefault(); window.openCookiePreferences();" style="color: #94a3b8; text-decoration: underline;">Nastavenia Cookies</a>
+                <a href="#" class="cookie-settings-trigger" style="color: #94a3b8; text-decoration: underline;">Nastavenia Cookies</a>
             </p>
         </div>
     </footer>

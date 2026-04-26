@@ -357,7 +357,7 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
             </p>
             <p style="margin-top: 10px; font-size: 0.85rem;">
                 <a href="privacy.php" style="color: #94a3b8; text-decoration: underline;">Ochrana osobných údajov (Privacy Policy)</a> | 
-                <a href="#" onclick="event.preventDefault(); window.openCookiePreferences();" style="color: #94a3b8; text-decoration: underline;">Nastavenia Cookies</a>
+                <a href="#" class="cookie-settings-trigger" style="color: #94a3b8; text-decoration: underline;">Nastavenia Cookies</a>
             </p>
         </div>
     </footer>

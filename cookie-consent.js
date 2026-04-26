@@ -207,6 +207,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Vystavenie funkcie openModal globálne pre link z pätky
+    // Vystavenie funkcie openModal globálne pre prípadné ďalšie využitie
     window.openCookiePreferences = openModal;
+
+    // Pridanie event listenerov pre odkazy na otvorenie nastavení (namiesto inline onclick kvôli CSP)
+    const cookieTriggers = document.querySelectorAll('.cookie-settings-trigger');
+    cookieTriggers.forEach(trigger => {
+        trigger.addEventListener('click', (e) => {
+            e.preventDefault();
+            openModal();
+        });
+    });
 });
