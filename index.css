@@ -626,6 +626,13 @@ code {
   color: #cbd5e1;
 }
 
+.site-footer__updated {
+  margin-top: 6px;
+  font-size: 0.8rem;
+  font-style: italic;
+  color: #94a3b8;
+}
+
 /* Modifikátor kompaktnej hlavičky (pre vnútorné stránky, napr. privacy.php) */
 .site-header--compact {
   padding: 60px 0 40px;

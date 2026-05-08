@@ -19,6 +19,8 @@ $csp = "default-src 'self'; "
   . "connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://*.analytics.google.com https://stats.g.doubleclick.net; "
   . "base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; upgrade-insecure-requests; block-all-mixed-content";
 header("Content-Security-Policy: " . $csp);
+$pageLastUpdated = date('d.m.Y H:i', filemtime(__FILE__));
+$pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
 ?>
 <!DOCTYPE html>
 <html lang="sk">
@@ -197,6 +199,9 @@ header("Content-Security-Policy: " . $csp);
         <div class="container">
             <p>
               &copy; 2026 Ľubomír Polaščín. Vytvorené s využitím moderných štandardov a s dôrazom na prístupnosť.
+            </p>
+            <p class="site-footer__updated">
+              Posledná aktualizácia stránky: <?= htmlspecialchars($pageLastUpdated, ENT_QUOTES, 'UTF-8') ?> (časové pásmo: <?= htmlspecialchars($pageTimeZone, ENT_QUOTES, 'UTF-8') ?>)
             </p>
             <p class="site-footer__links">
               <a href="privacy.php" class="site-footer__link" aria-current="page">Ochrana osobných údajov (Privacy Policy)</a> | <a href="#" class="cookie-settings-trigger site-footer__link" aria-haspopup="dialog" aria-controls="cookieConsentModal">Nastavenia Cookies</a>

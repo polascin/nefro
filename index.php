@@ -18,6 +18,26 @@ $csp = "default-src 'self'; "
   . "connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://*.analytics.google.com https://stats.g.doubleclick.net; "
   . "base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; upgrade-insecure-requests; block-all-mixed-content";
 header("Content-Security-Policy: " . $csp);
+
+$monthsLocative = [
+  1 => 'januári',
+  2 => 'februári',
+  3 => 'marci',
+  4 => 'apríli',
+  5 => 'máji',
+  6 => 'júni',
+  7 => 'júli',
+  8 => 'auguste',
+  9 => 'septembri',
+  10 => 'októbri',
+  11 => 'novembri',
+  12 => 'decembri',
+];
+$currentMonth = (int) date('n');
+$currentYear = date('Y');
+$currentMonthYearLocative = ($monthsLocative[$currentMonth] ?? '') . ' ' . $currentYear;
+$pageLastUpdated = date('d.m.Y H:i', filemtime(__FILE__));
+$pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
 ?>
 <!DOCTYPE html>
 <html lang="sk">
@@ -410,7 +430,7 @@ header("Content-Security-Policy: " . $csp);
         <img src="./img/nps.gif" alt="Nefro-projekt Slovensko Logo" class="header-logo">
         <h3>O projekte</h3>
         <p>
-          Ako nefrológa a nadšenca pre internú medicínu ma fascinuje, akou obrovskou a dynamickou renesanciou prechádza naša nefrologická špecializácia. Sme v máji 2026 a nefrológia sa rozvíja míľovými krokmi. Nie je to už len o manažovaní terminálneho zlyhania obličiek a čakaní na transplantáciu. Zažívame doslova explóziu inovácií, od molekulárnej biológie až po umelú inteligenciu.
+          Ako nefrológa a nadšenca pre internú medicínu ma fascinuje, akou obrovskou a dynamickou renesanciou prechádza naša nefrologická špecializácia. Sme v <?= htmlspecialchars($currentMonthYearLocative, ENT_QUOTES, 'UTF-8') ?> a nefrológia sa rozvíja míľovými krokmi. Nie je to už len o manažovaní terminálneho zlyhania obličiek a čakaní na transplantáciu. Zažívame doslova explóziu inovácií, od molekulárnej biológie až po umelú inteligenciu.
         </p>
       </div>
       <div class="widget">
@@ -446,6 +466,9 @@ header("Content-Security-Policy: " . $csp);
     <div class="container">
       <p>
         &copy; 2026 Ľubomír Polaščín. Vytvorené s využitím moderných štandardov a s dôrazom na prístupnosť.
+      </p>
+      <p class="site-footer__updated">
+        Posledná aktualizácia stránky: <?= htmlspecialchars($pageLastUpdated, ENT_QUOTES, 'UTF-8') ?> (časové pásmo: <?= htmlspecialchars($pageTimeZone, ENT_QUOTES, 'UTF-8') ?>)
       </p>
       <p class="site-footer__links">
         <a href="privacy.php" class="site-footer__link">Ochrana osobných údajov (Privacy Policy)</a> | <a href="#" class="cookie-settings-trigger site-footer__link" aria-haspopup="dialog" aria-controls="cookieConsentModal">Nastavenia Cookies</a>
