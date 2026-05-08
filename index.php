@@ -47,21 +47,21 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
 
   <!-- JSON-LD Štruktúrované dáta pre lepšie vyhľadávanie -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "MedicalOrganization",
-    "name": "Nefro-projekt Slovensko",
-    "url": "https://nefro.polascin.net/",
-    "logo": "https://nefro.polascin.net/img/nps-logo.gif",
-    "description": "Dynamická renesancia nefrológie: Od molekulárnej biológie po umelú inteligenciu.",
-    "medicalSpecialty": "https://en.wikipedia.org/wiki/Nephrology",
-    "founder": {
-      "@type": "Person",
-      "name": "MUDr. Ľubomír Polaščín",
-      "jobTitle": "Lekár, Nefrológ",
-      "url": "https://polascin.com/"
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalOrganization",
+      "name": "Nefro-projekt Slovensko",
+      "url": "https://nefro.polascin.net/",
+      "logo": "https://nefro.polascin.net/img/nps-logo.gif",
+      "description": "Dynamická renesancia nefrológie: Od molekulárnej biológie po umelú inteligenciu.",
+      "medicalSpecialty": "https://en.wikipedia.org/wiki/Nephrology",
+      "founder": {
+        "@type": "Person",
+        "name": "MUDr. Ľubomír Polaščín",
+        "jobTitle": "Lekár, Nefrológ",
+        "url": "https://polascin.com/"
+      }
     }
-  }
   </script>
 
   <!-- Favikony (PWA, Apple, Android, Windows) -->
@@ -469,7 +469,7 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
         <h3>O projekte</h3>
         <p>
           Ako nefrológa a nadšenca pre internú medicínu ma fascinuje, akou obrovskou a dynamickou renesanciou prechádza
-          naša nefrologická špecializácia. Sme v apríli 2026 a nefrológia sa rozvíja míľovými krokmi. Nie je to už len o
+          naša nefrologická špecializácia. Sme v máji 2026 a nefrológia sa rozvíja míľovými krokmi. Nie je to už len o
           manažovaní terminálneho zlyhania obličiek a čakaní na transplantáciu. Zažívame doslova explóziu inovácií, od
           molekulárnej biológie až po umelú inteligenciu.
         </p>
@@ -509,10 +509,9 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
       <p>
         &copy; 2026 Ľubomír Polaščín. Vytvorené s využitím moderných štandardov a s dôrazom na prístupnosť.
       </p>
-      <p style="margin-top: 10px; font-size: 0.85rem;">
-        <a href="privacy.php" style="color: #94a3b8; text-decoration: underline;">Ochrana osobných údajov (Privacy
-          Policy)</a> | <a href="#" class="cookie-settings-trigger"
-          style="color: #94a3b8; text-decoration: underline;">Nastavenia Cookies</a>
+      <p class="site-footer__links">
+        <a href="privacy.php" class="site-footer__link">Ochrana osobných údajov (Privacy Policy)</a> |
+        <a href="#" class="cookie-settings-trigger site-footer__link">Nastavenia Cookies</a>
       </p>
     </div>
   </footer>

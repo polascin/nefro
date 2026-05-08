@@ -7,33 +7,83 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
 ?>
 <!DOCTYPE html>
 <html lang="sk">
+
 <head>
     <meta charset="UTF-8">
     <!-- Logika pre Tmavý režim (na začiatku kvôli prevencii FOUC) -->
     <script src="theme.js?v=<?= filemtime('theme.js') ?>"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bezpečnostné hlavičky (Security) -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://*.analytics.google.com https://stats.g.doubleclick.net;">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://*.analytics.google.com https://stats.g.doubleclick.net;">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta name="referrer" content="strict-origin-when-cross-origin">
 
+    <!-- SEO & Metadata -->
     <meta name="description" content="Zásady ochrany osobných údajov pre projekt Nefro-projekt Slovensko.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://nefro.polascin.net/privacy.php">
+
+    <!-- Open Graph (Social SEO) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Privacy Policy | Nefro-projekt Slovensko">
+    <meta property="og:description" content="Zásady ochrany osobných údajov pre projekt Nefro-projekt Slovensko.">
+    <meta property="og:url" content="https://nefro.polascin.net/privacy.php">
+    <meta property="og:site_name" content="Nefro-projekt Slovensko">
+    <meta property="og:locale" content="sk_SK">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Privacy Policy | Nefro-projekt Slovensko">
+    <meta name="twitter:description" content="Zásady ochrany osobných údajov pre projekt Nefro-projekt Slovensko.">
+
     <title>Privacy Policy | Nefro-projekt Slovensko</title>
 
+    <!-- JSON-LD Štruktúrované dáta -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Privacy Policy | Nefro-projekt Slovensko",
+            "url": "https://nefro.polascin.net/privacy.php",
+            "description": "Zásady ochrany osobných údajov pre projekt Nefro-projekt Slovensko.",
+            "isPartOf": {
+                "@type": "WebSite",
+                "name": "Nefro-projekt Slovensko",
+                "url": "https://nefro.polascin.net/"
+            }
+        }
+    </script>
+
+    <!-- Favikony (PWA, Apple, Android, Windows) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="shortcut icon" href="./favicon.ico">
+
+    <!-- Prepojenie na externý CSS súbor pre moderný dizajn -->
     <link rel="stylesheet" href="index.css?v=<?= filemtime('index.css') ?>">
+
+    <!-- Google Fonts pre modernú typografiu -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;900&display=swap" rel="stylesheet">
-    
-    <!-- Privacy Manager Skript -->
+
+    <!-- Skript pre Privacy Manager (Cookies) -->
     <script src="privacy-manager.js?v=<?= filemtime('privacy-manager.js') ?>" defer></script>
 </head>
+
 <body>
+    <!-- Skip to content (A11y) -->
     <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>
-    <header class="site-header" id="domov" role="banner" style="padding: 60px 0 40px;">
+
+    <header class="site-header site-header--compact" id="domov" role="banner">
         <div class="container">
             <h1>Zásady ochrany osobných údajov</h1>
-            <p class="intro">Privacy Policy & Cookie Policy</p>
+            <p class="intro">Privacy Policy &amp; Cookie Policy</p>
         </div>
     </header>
 
@@ -43,23 +93,24 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
                 <li><a href="index.php">Návrat na Domov</a></li>
             </ul>
             <div class="theme-toggle-container">
-                <button id="themeToggleBtn" class="theme-toggle" aria-label="Prepnúť režim osvetlenia" title="Prepnúť režim osvetlenia">
+                <button id="themeToggleBtn" class="theme-toggle" aria-label="Prepnúť režim osvetlenia"
+                    title="Prepnúť režim osvetlenia">
                 </button>
             </div>
         </div>
     </nav>
 
-    <main id="main-content" class="container main-content" role="main" style="grid-template-columns: 1fr;">
+    <main id="main-content" class="container main-content main-content--single-col" role="main">
         <div class="content-wrapper">
             <article class="primary-article">
                 <header>
                     <h2>Ochrana osobných údajov (Privacy Policy)</h2>
                     <p class="meta">Posledná aktualizácia:&nbsp; <time datetime="2026-04-26">26. Apríl 2026</time></p>
                 </header>
-                
+
                 <h3>1. Úvodné ustanovenia</h3>
                 <p>Tieto Zásady ochrany osobných údajov ("Privacy Policy") vysvetľujú, ako zhromažďujeme, používame, zverejňujeme a chránime vaše informácie pri návšteve našej webovej stránky (ďalej len "Stránka"). Dodržiavame Nariadenie (EÚ) 2016/679 (GDPR), smernicu ePrivacy, a tiež zohľadňujeme medzinárodné štandardy vrátane CCPA/CPRA, pokiaľ ide o návštevníkov z príslušných regiónov.</p>
-                
+
                 <h3>2. Aké údaje zhromažďujeme</h3>
                 <p>Môžeme o vás zhromažďovať informácie rôznymi spôsobmi:</p>
                 <ul>
@@ -81,7 +132,7 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
                 <ul>
                     <li><strong>Právo na prístup:</strong> Máte právo požadovať kópiu svojich osobných údajov.</li>
                     <li><strong>Právo na opravu:</strong> Máte právo požadovať opravu nepresných údajov.</li>
-                    <li><strong>Právo na vymazanie (právo „na zabudnutie“):</strong> Môžete požiadať o vymazanie svojich údajov.</li>
+                    <li><strong>Právo na vymazanie (právo „na zabudnutie"):</strong> Môžete požiadať o vymazanie svojich údajov.</li>
                     <li><strong>Právo na obmedzenie spracúvania a prenosnosť údajov.</strong></li>
                 </ul>
                 <p>Pre uplatnenie týchto práv nás kontaktujte na e-mailovej adrese: <code>nefro@polascin.net</code>.</p>
@@ -95,11 +146,11 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
                     <li><strong>Preferenčné (Preferences):</strong> Umožňujú stránke poskytovať vylepšenú funkcionalitu a prispôsobenie (napr. jazyk).</li>
                 </ul>
                 <p>Svoj súhlas môžete kedykoľvek zmeniť alebo odvolať kliknutím na odkaz "Nastavenia Cookies" v pätičke stránky.</p>
-                <button class="cookie-settings-trigger btn-outline" style="margin-top: 10px;">Otvoriť nastavenia cookies</button>
+                <button class="cookie-settings-trigger btn-outline btn-outline--mt">Otvoriť nastavenia cookies</button>
 
                 <h3>6. Zmeny v týchto pravidlách</h3>
                 <p>Tieto Zásady ochrany osobných údajov môžeme z času na čas aktualizovať, aby odrážali zmeny v našich postupoch alebo z iných prevádzkových, právnych alebo regulačných dôvodov. Odporúčame vám, aby ste túto stránku pravidelne kontrolovali.</p>
-                
+
             </article>
         </div>
     </main>
@@ -107,11 +158,12 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
     <footer class="site-footer" role="contentinfo">
         <div class="container">
             <p>&copy; 2026 Ľubomír Polaščín. Vytvorené s využitím moderných štandardov a s dôrazom na prístupnosť.</p>
-            <p style="margin-top: 10px; font-size: 0.85rem;">
-                <a href="privacy.php" style="color: #94a3b8; text-decoration: underline;">Ochrana osobných údajov (Privacy Policy)</a> | 
-                <a href="#" class="cookie-settings-trigger" style="color: #94a3b8; text-decoration: underline;">Nastavenia Cookies</a>
+            <p class="site-footer__links">
+                <a href="privacy.php" class="site-footer__link">Ochrana osobných údajov (Privacy Policy)</a> |
+                <a href="#" class="cookie-settings-trigger site-footer__link">Nastavenia Cookies</a>
             </p>
         </div>
     </footer>
 </body>
+
 </html>
