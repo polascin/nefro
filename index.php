@@ -16,14 +16,12 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
 
   <!-- Bezpečnostné hlavičky (Security) -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta http-equiv="Content-Security-Policy"
-    content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://*.analytics.google.com https://stats.g.doubleclick.net;">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://*.analytics.google.com https://stats.g.doubleclick.net;">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta name="referrer" content="strict-origin-when-cross-origin">
 
   <!-- SEO & Metadata -->
-  <meta name="description"
-    content="Nefro-projekt Slovensko. Dynamická renesancia nefrológie: Od molekulárnej biológie po umelú inteligenciu. MUDr. Ľubomír Polaščín. https://nefro.polascin.net/">
+  <meta name="description" content="Nefro-projekt Slovensko. Dynamická renesancia nefrológie: Od molekulárnej biológie po umelú inteligenciu. MUDr. Ľubomír Polaščín. https://nefro.polascin.net/">
   <meta name="keywords" content="nefrológia, Slovensko, CKD, dialýza, IgAN, gliflozíny, MUDr. Ľubomír Polaščín">
   <meta name="author" content="Dr. Ľubomír Polaščín">
   <link rel="canonical" href="https://nefro.polascin.net/">
@@ -31,8 +29,7 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
   <!-- Open Graph (Social SEO) -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Nefro-projekt Slovensko">
-  <meta property="og:description"
-    content="Dynamická renesancia nefrológie: Od molekulárnej biológie po umelú inteligenciu.">
+  <meta property="og:description" content="Dynamická renesancia nefrológie: Od molekulárnej biológie po umelú inteligenciu.">
   <meta property="og:url" content="https://nefro.polascin.net/">
   <meta property="og:site_name" content="Nefro-projekt Slovensko">
   <meta property="og:locale" content="sk_SK">
@@ -108,8 +105,7 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
         <li><a href="#kontakt">Kontakt</a></li>
       </ul>
       <div class="theme-toggle-container">
-        <button id="themeToggleBtn" class="theme-toggle" aria-label="Prepnúť režim osvetlenia"
-          title="Prepnúť režim osvetlenia">
+        <button id="themeToggleBtn" class="theme-toggle" aria-label="Prepnúť režim osvetlenia" title="Prepnúť režim osvetlenia">
         </button>
       </div>
     </div>
@@ -128,50 +124,31 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
           </p>
         </header>
         <p>
-          V apríli 2026 časopis <em>The Lancet</em> publikoval individuálnu metaanalýzu dát (individual-participant data
-          meta-analysis), ktorá skúmala, či znižovanie krvného tlaku prináša rovnaký kardiovaskulárny prínos pacientom s
-          chronickým ochorením obličiek (CKD) aj pacientom bez CKD. Ide o doteraz najrozsiahlejšiu analýzu tohto typu.
+          V apríli 2026 časopis <em>The Lancet</em> publikoval individuálnu metaanalýzu dát (individual-participant data meta-analysis), ktorá skúmala, či znižovanie krvného tlaku prináša rovnaký kardiovaskulárny prínos pacientom s chronickým ochorením obličiek (CKD) aj pacientom bez CKD. Ide o doteraz najrozsiahlejšiu analýzu tohto typu.
         </p>
         <h3>Dizajn a populácia</h3>
         <p>
-          Vedci z Blood Pressure Lowering Treatment Trialists' Collaboration analyzovali údaje zo 46 randomizovaných
-          štúdií zahŕňajúcich <strong>285 124 účastníkov</strong>. Z nich malo 20,7 % CKD a 30,2 % diabetes 2. typu.
-          Medián sledovania bol 4,4 roka. Primárnym sledovaným ukazovateľom boli závažné kardiovaskulárne príhody
-          (fatálna alebo nefatálna cievna mozgová príhoda, ischemická choroba srdca, hospitalizácia alebo úmrtie pre
-          srdcové zlyhanie).
+          Vedci z Blood Pressure Lowering Treatment Trialists' Collaboration analyzovali údaje zo 46 randomizovaných štúdií zahŕňajúcich <strong>285 124 účastníkov</strong>. Z nich malo 20,7 % CKD a 30,2 % diabetes 2. typu. Medián sledovania bol 4,4 roka. Primárnym sledovaným ukazovateľom boli závažné kardiovaskulárne príhody (fatálna alebo nefatálna cievna mozgová príhoda, ischemická choroba srdca, hospitalizácia alebo úmrtie pre srdcové zlyhanie).
         </p>
         <h3>Hlavné výsledky</h3>
         <p>
-          <strong>Konzistentný prínos naprieč štádiami CKD</strong> – Každé zníženie systolického tlaku o 5 mm Hg bolo
-          spojené s približne 9 – 10 % relatívnym znížením rizika závažných kardiovaskulárnych príhod. Tento efekt bol
-          prakticky rovnaký u pacientov s CKD (HR 0,91; 95 % CI 0,87 – 0,94) aj bez CKD (HR 0,90; 95 % CI 0,88 – 0,93).
-          Nezistila sa heterogenita účinku naprieč štádiami CKD vrátane štádií 4 – 5 ani podľa prítomnosti proteinúrie.
+          <strong>Konzistentný prínos naprieč štádiami CKD</strong> – Každé zníženie systolického tlaku o 5 mm Hg bolo spojené s približne 9 – 10 % relatívnym znížením rizika závažných kardiovaskulárnych príhod. Tento efekt bol prakticky rovnaký u pacientov s CKD (HR 0,91; 95 % CI 0,87 – 0,94) aj bez CKD (HR 0,90; 95 % CI 0,88 – 0,93). Nezistila sa heterogenita účinku naprieč štádiami CKD vrátane štádií 4 – 5 ani podľa prítomnosti proteinúrie.
         </p>
         <p>
-          <strong>Efekt aj pri nízkom východiskovom tlaku</strong> – Prínos pretrvával aj u pacientov s východiskovým
-          tlakom pod 120/70 mm Hg, čo naznačuje, že neexistuje jasný „prah“, pod ktorým by liečba strácala zmysel.
+          <strong>Efekt aj pri nízkom východiskovom tlaku</strong> – Prínos pretrvával aj u pacientov s východiskovým tlakom pod 120/70 mm Hg, čo naznačuje, že neexistuje jasný „prah“, pod ktorým by liečba strácala zmysel.
         </p>
         <p>
-          <strong>Triedy liekov</strong> – Sieťová metaanalýza ukázala, že hlavné triedy antihypertenzív (ACE
-          inhibítory, blokátory receptorov angiotenzínu, blokátory kalciových kanálov, diuretiká, betablokátory) mali
-          podobný relatívny účinok voči placebu. Prínos teda nie je viazaný na konkrétnu triedu, ale na samotné zníženie
-          tlaku.
+          <strong>Triedy liekov</strong> – Sieťová metaanalýza ukázala, že hlavné triedy antihypertenzív (ACE inhibítory, blokátory receptorov angiotenzínu, blokátory kalciových kanálov, diuretiká, betablokátory) mali podobný relatívny účinok voči placebu. Prínos teda nie je viazaný na konkrétnu triedu, ale na samotné zníženie tlaku.
         </p>
         <p>
-          <strong>Výnimka – pacienti s CKD a diabetom</strong> – V rámci podskupiny CKD bol účinok liečby významne
-          slabší u pacientov s diabetom (HR 0,96; 95 % CI 0,90 – 1,02) oproti pacientom s CKD bez diabetu (HR 0,88; 95 %
-          CI 0,84 – 0,93). Interakcia bola štatisticky významná (p = 0,044). Tento signál vyžaduje ďalšie overenie.
+          <strong>Výnimka – pacienti s CKD a diabetom</strong> – V rámci podskupiny CKD bol účinok liečby významne slabší u pacientov s diabetom (HR 0,96; 95 % CI 0,90 – 1,02) oproti pacientom s CKD bez diabetu (HR 0,88; 95 % CI 0,84 – 0,93). Interakcia bola štatisticky významná (p = 0,044). Tento signál vyžaduje ďalšie overenie.
         </p>
         <h3>Čo to znamená v praxi?</h3>
         <p>
-          Zistenia podporujú <strong>univerzálne znižovanie kardiovaskulárneho rizika</strong> pomocou
-          antihypertenzívnej liečby u pacientov s CKD – bez ohľadu na štádium ochorenia, východiskový tlak alebo triedu
-          lieku. Výnimku môžu tvoriť pacienti s kombináciou CKD a diabetu, kde je prínos menej výrazný a rozhodovanie by
-          malo byť individuálne.
+          Zistenia podporujú <strong>univerzálne znižovanie kardiovaskulárneho rizika</strong> pomocou antihypertenzívnej liečby u pacientov s CKD – bez ohľadu na štádium ochorenia, východiskový tlak alebo triedu lieku. Výnimku môžu tvoriť pacienti s kombináciou CKD a diabetu, kde je prínos menej výrazný a rozhodovanie by malo byť individuálne.
         </p>
         <p>
-          Autori zdôrazňujú, že liečba by sa nemala odkladať ani u pacientov s pokročilým CKD (štádium 4 – 5), ktorí sú
-          často z kardiovaskulárnych štúdií vylučovaní.
+          Autori zdôrazňujú, že liečba by sa nemala odkladať ani u pacientov s pokročilým CKD (štádium 4 – 5), ktorí sú často z kardiovaskulárnych štúdií vylučovaní.
         </p>
         <p>
           <em>Zdroj: ReachMD / The Lancet, publikované v apríli 2026</em>
@@ -191,10 +168,7 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
           </p>
         </header>
         <p>
-          V apríli 2026 bola publikovaná bayesovská sieťová metaanalýza, ktorá porovnala konvenčné imunosupresíva s
-          novšími cielenými liekmi pri liečbe IgA nefropatie (IgAN) u dospelých. Vedci prehľadali databázy PubMed,
-          Cochrane Library, Web of Science, Scopus a Embase od začiatku do marca 2025 a do analýzy zaradili 17
-          randomizovaných klinických štúdií.
+          V apríli 2026 bola publikovaná bayesovská sieťová metaanalýza, ktorá porovnala konvenčné imunosupresíva s novšími cielenými liekmi pri liečbe IgA nefropatie (IgAN) u dospelých. Vedci prehľadali databázy PubMed, Cochrane Library, Web of Science, Scopus a Embase od začiatku do marca 2025 a do analýzy zaradili 17 randomizovaných klinických štúdií.
         </p>
         <h3>Aké lieky sa porovnávali?</h3>
         <ul>
@@ -206,39 +180,27 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
           <li>Sibeprenlimab</li>
         </ul>
         <p>
-          Všetky lieky sa porovnávali s placebom alebo štandardnou podpornou liečbou. Sledovali sa renálne funkcie (eGFR
-          slope), proteinúria (pomer bielkovín a kreatínu v moči – UPCR) a závažné nežiaduce udalosti.
+          Všetky lieky sa porovnávali s placebom alebo štandardnou podpornou liečbou. Sledovali sa renálne funkcie (eGFR slope), proteinúria (pomer bielkovín a kreatínu v moči – UPCR) a závažné nežiaduce udalosti.
         </p>
         <h3>Hlavné výsledky</h3>
         <p>
-          <strong>Funkcia obličiek (eGFR slope)</strong> – Nefecon dosiahol najpriaznivejší bodový odhad a najvyššie
-          SUCRA hodnotenie, čo naznačuje potenciálne priaznivý signál. 95 % intervaly dôveryhodnosti však zahŕňali
-          nulový efekt, takže nemožno hovoriť o preukázanej nadradenosti.
+          <strong>Funkcia obličiek (eGFR slope)</strong> – Nefecon dosiahol najpriaznivejší bodový odhad a najvyššie SUCRA hodnotenie, čo naznačuje potenciálne priaznivý signál. 95 % intervaly dôveryhodnosti však zahŕňali nulový efekt, takže nemožno hovoriť o preukázanej nadradenosti.
         </p>
         <p>
-          <strong>Proteinúria</strong> – Metylprednizolón viedol k najväčšiemu zníženiu pomeru bielkovín a kreatínu v
-          moči (UPCR) v porovnaní s placebom. Aj iptakopan a sibeprenlimab boli spojené so znížením proteinúrie. Viaceré
-          liečby teda vykázali prínos, no ich vzájomné postavenie zostáva neisté.
+          <strong>Proteinúria</strong> – Metylprednizolón viedol k najväčšiemu zníženiu pomeru bielkovín a kreatínu v moči (UPCR) v porovnaní s placebom. Aj iptakopan a sibeprenlimab boli spojené so znížením proteinúrie. Viaceré liečby teda vykázali prínos, no ich vzájomné postavenie zostáva neisté.
         </p>
         <p>
-          <strong>Bezpečnosť</strong> – Porovnania závažných nežiaducich udalostí boli prevažne nepresvedčivé, keďže
-          údajov bolo málo a intervaly neistoty široké. Iptakopan vykázal numericky nižší výskyt závažných nežiaducich
-          udalostí, ale aj tento signál zostáva neistý.
+          <strong>Bezpečnosť</strong> – Porovnania závažných nežiaducich udalostí boli prevažne nepresvedčivé, keďže údajov bolo málo a intervaly neistoty široké. Iptakopan vykázal numericky nižší výskyt závažných nežiaducich udalostí, ale aj tento signál zostáva neistý.
         </p>
         <p>
-          <strong>Podskupiny</strong> – Analýzy nepreukázali, že by bol účinok liečby výrazne ovplyvnený vstupnou
-          funkciou obličiek (eGFR pod alebo nad 60 ml/min/1,73 m²).
+          <strong>Podskupiny</strong> – Analýzy nepreukázali, že by bol účinok liečby výrazne ovplyvnený vstupnou funkciou obličiek (eGFR pod alebo nad 60 ml/min/1,73 m²).
         </p>
         <h3>Čo to znamená v praxi?</h3>
         <p>
-          Autori zdôrazňujú, že ide o <strong>exploratívne zistenia</strong>, nie o dôkaz nadradenosti niektorej liečby.
-          Sieť porovnaní bola riedka, režimy liečby heterogénne a sledovanie krátke. Na jednoznačné závery sú potrebné
-          väčšie a dlhšie štúdie s priamym porovnávaním liekov a tvrdými renálnymi ukazovateľmi (napr. zlyhanie
-          obličiek).
+          Autori zdôrazňujú, že ide o <strong>exploratívne zistenia</strong>, nie o dôkaz nadradenosti niektorej liečby. Sieť porovnaní bola riedka, režimy liečby heterogénne a sledovanie krátke. Na jednoznačné závery sú potrebné väčšie a dlhšie štúdie s priamym porovnávaním liekov a tvrdými renálnymi ukazovateľmi (napr. zlyhanie obličiek).
         </p>
         <p>
-          Napriek obmedzeniam môžu tieto signály pomôcť pri <strong>individualizovanom rozhodovaní</strong> o liečbe u
-          konkrétnych pacientov s IgA nefropatiou.
+          Napriek obmedzeniam môžu tieto signály pomôcť pri <strong>individualizovanom rozhodovaní</strong> o liečbe u konkrétnych pacientov s IgA nefropatiou.
         </p>
         <p>
           <em>Zdroj: ReachMD, zverejnené 24. apríla 2026</em>
@@ -258,13 +220,7 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
           </p>
         </header>
         <p>
-          SGLT2 inhibítory (gliflozíny) už dnes vnímame ako absolútny štandard a základný kameň terapie. Skutočným
-          zemetrasením posledných mesiacov však bola ofenzíva GLP-1 receptorových agonistov. Po prelomových dátach zo
-          štúdie FLOW sa v rokoch 2025 a 2026 indikácie molekúl ako semaglutid oficiálnerozšírili priamo na spomalenie
-          progresie chronického ochorenia obličiek (CKD). Keď tento prístup elegantne skombinujeme s nesteroidnými
-          antagonistami mineralokortikoidových receptorov (ako je finerenón) a novými inhibítormi aldosterón syntázy,
-          máme v rukách nefarmakologický a farmakologický arzenál, ktorý mení prirodzený priebeh diabetickej aj
-          nediabetickej nefropatie.
+          SGLT2 inhibítory (gliflozíny) už dnes vnímame ako absolútny štandard a základný kameň terapie. Skutočným zemetrasením posledných mesiacov však bola ofenzíva GLP-1 receptorových agonistov. Po prelomových dátach zo štúdie FLOW sa v rokoch 2025 a 2026 indikácie molekúl ako semaglutid oficiálnerozšírili priamo na spomalenie progresie chronického ochorenia obličiek (CKD). Keď tento prístup elegantne skombinujeme s nesteroidnými antagonistami mineralokortikoidových receptorov (ako je finerenón) a novými inhibítormi aldosterón syntázy, máme v rukách nefarmakologický a farmakologický arzenál, ktorý mení prirodzený priebeh diabetickej aj nediabetickej nefropatie.
         </p>
         <!-- <section>: Tematické rozdelenie obsahu, zvyčajne s vlastným nadpisom 
                 <section class="content-section">
@@ -288,12 +244,7 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
           </p>
         </header>
         <p>
-          Roky sme boli odkázaní na neselektívnu imunosupresiu kortikoidmi so všetkými jej devastačnými vedľajšími
-          účinkami. Súčasnosť patrí precíznej medicíne. V poslednom období sa schválili a do praxe zaviedli lieky
-          zasahujúce priamo do patogenézy. Či už hovoríme o duálnych antagonistoch receptorov pre endotelín a
-          angiotenzín (sparsentan), alebo o fascinujúcej biologickej liečbe. Modulácia komplementovej kaskády (napríklad
-          iptakopan) a blokátory dráh APRIL/BAFF (sibeprenlimab) postupne menia prognózu pacientov s IgAN z fatálnej na
-          chronicky manažovateľnú.
+          Roky sme boli odkázaní na neselektívnu imunosupresiu kortikoidmi so všetkými jej devastačnými vedľajšími účinkami. Súčasnosť patrí precíznej medicíne. V poslednom období sa schválili a do praxe zaviedli lieky zasahujúce priamo do patogenézy. Či už hovoríme o duálnych antagonistoch receptorov pre endotelín a angiotenzín (sparsentan), alebo o fascinujúcej biologickej liečbe. Modulácia komplementovej kaskády (napríklad iptakopan) a blokátory dráh APRIL/BAFF (sibeprenlimab) postupne menia prognózu pacientov s IgAN z fatálnej na chronicky manažovateľnú.
         </p>
         <footer>
           <p class="author">
@@ -311,12 +262,7 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
           </p>
         </header>
         <p>
-          V oblasti dialýzy sú kľúčové najnovšie odporúčania z jari 2026 týkajúce sa inkrementálnej peritoneálnej
-          dialýzy. Tento koncept naberá na obrovskej popularite, pretože je šetrnejší k pacientom, predlžuje zachovanie
-          reziduálnej renálnej funkcie a zlepšuje kvalitu života. Čo sa týka anémie pri CKD, v praxi sa definitívne
-          etablujú HIF-PH inhibítory (ako roxadustat či daprodustat). Princíp oklamania senzoru pre hypoxiu v tele bez
-          nutnosti injekčného podávania erytropoézu stimulujúcich látok (ESA) je fyziologicky čistým riešením. Pre
-          pacienta to znamená obrovský komfort perorálnej liečby a pre personál menej logistickej záťaže.
+          V oblasti dialýzy sú kľúčové najnovšie odporúčania z jari 2026 týkajúce sa inkrementálnej peritoneálnej dialýzy. Tento koncept naberá na obrovskej popularite, pretože je šetrnejší k pacientom, predlžuje zachovanie reziduálnej renálnej funkcie a zlepšuje kvalitu života. Čo sa týka anémie pri CKD, v praxi sa definitívne etablujú HIF-PH inhibítory (ako roxadustat či daprodustat). Princíp oklamania senzoru pre hypoxiu v tele bez nutnosti injekčného podávania erytropoézu stimulujúcich látok (ESA) je fyziologicky čistým riešením. Pre pacienta to znamená obrovský komfort perorálnej liečby a pre personál menej logistickej záťaže.
         </p>
         <footer>
           <p class="author">
@@ -334,22 +280,13 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
           </p>
         </header>
         <p>
-          Nefrológia a dialýza generujú gigantické množstvo dát z laboratórnych výsledkov, monitorovania tlaku krvi,
-          pulzu, parametrov ultrafiltrácie a mnohých ďalších. Dnes vidíme masívny nástup prediktívnych modelov, ktoré
-          dokážu na základe zdanlivo nesúvisiacich premenných predpovedať trajektóriu poklesu eGFR alebo riziko
-          intradialytickej hypotenzie.
+          Nefrológia a dialýza generujú gigantické množstvo dát z laboratórnych výsledkov, monitorovania tlaku krvi, pulzu, parametrov ultrafiltrácie a mnohých ďalších. Dnes vidíme masívny nástup prediktívnych modelov, ktoré dokážu na základe zdanlivo nesúvisiacich premenných predpovedať trajektóriu poklesu eGFR alebo riziko intradialytickej hypotenzie.
         </p>
         <p>
-          <strong>Programátori a lekári.</strong> Schopnosť spojiť prísny klinický úsudok lekára s algoritmickým
-          myslením programátora je dnes neuveriteľne vzácna. S technologickým stackom (PHP, JS, Python, HTML, CSS) môže
-          byť jeden v dokonalej pozícii nielen konzumovať medicínske vedomosti, ale rovno budovať vlastné nástroje a
-          aplikácie. Môže vytvárať systémy na mieru pre svoje dialyzačné stredisko, ktoré budú analyzovať trendy
-          pacientov a automatizovať administratívu.
+          <strong>Programátori a lekári.</strong> Schopnosť spojiť prísny klinický úsudok lekára s algoritmickým myslením programátora je dnes neuveriteľne vzácna. S technologickým stackom (PHP, JS, Python, HTML, CSS) môže byť jeden v dokonalej pozícii nielen konzumovať medicínske vedomosti, ale rovno budovať vlastné nástroje a aplikácie. Môže vytvárať systémy na mieru pre svoje dialyzačné stredisko, ktoré budú analyzovať trendy pacientov a automatizovať administratívu.
         </p>
         <p>
-          Je fascinujúce sledovať, ako sa jazyk medicíny a jazyk kódu prelínajú do jedného zmysluplného celku. Aký je
-          váš pohľad na integráciu týchto nových technológií alebo liekov priamo vo vašom stredisku? Vidíte už niektoré
-          z týchto inovácií reálne rezonovať na oddelení alebo v praxi aj na Slovensku?
+          Je fascinujúce sledovať, ako sa jazyk medicíny a jazyk kódu prelínajú do jedného zmysluplného celku. Aký je váš pohľad na integráciu týchto nových technológií alebo liekov priamo vo vašom stredisku? Vidíte už niektoré z týchto inovácií reálne rezonovať na oddelení alebo v praxi aj na Slovensku?
         </p>
         <footer>
           <p class="author">
@@ -365,32 +302,25 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
           <div class="feature-card">
             <h3>Nefrológia a Dialýza</h3>
             <p>
-              Komplexná starostlivosť. Špecializácia na liečbu obličkových chorôb, renálnu nahradzujúcu liečbu
-              (hemodialýza, hemodiafiltrácia, peritoneálna dialýza), ultrasonografiu orgánov brucha so zameraním na
-              uropoetický systém, ultrasonografiu cievnych prístupov a mimotelové eliminačné metódy.
+              Komplexná starostlivosť. Špecializácia na liečbu obličkových chorôb, renálnu nahradzujúcu liečbu (hemodialýza, hemodiafiltrácia, peritoneálna dialýza), ultrasonografiu orgánov brucha so zameraním na uropoetický systém, ultrasonografiu cievnych prístupov a mimotelové eliminačné metódy.
             </p>
           </div>
           <div class="feature-card">
             <h3>Lektorstvo a vzdelávanie</h3>
             <p>
-              Rozsiahle skúsenosti s výučbou a odborným prednášaním predovšetkým v oblasti nefrológie a vnútorného
-              lekárstva pre odbornú ale aj laickú verejnosť. Dlhodobá spolupráca s univerzitnými pracoviskami ako aj so
-              spoločnosťami zaoberajúcimi sa vzdelávaním zdravotníckeho personálu.
+              Rozsiahle skúsenosti s výučbou a odborným prednášaním predovšetkým v oblasti nefrológie a vnútorného lekárstva pre odbornú ale aj laickú verejnosť. Dlhodobá spolupráca s univerzitnými pracoviskami ako aj so spoločnosťami zaoberajúcimi sa vzdelávaním zdravotníckeho personálu.
             </p>
           </div>
           <div class="feature-card">
             <h3>Medicínske preklady</h3>
             <p>
-              Špecializované preklady medicínskych dokumentov a lokalizácia softvéru (AJ/SJ) s maximálnym dôrazom na
-              presnú klinickú terminológiu. Preklady sú vždy na vysokej odbornej úrovni, bez gramatických chýb a s
-              dôrazom na detail.
+              Špecializované preklady medicínskych dokumentov a lokalizácia softvéru (AJ/SJ) s maximálnym dôrazom na presnú klinickú terminológiu. Preklady sú vždy na vysokej odbornej úrovni, bez gramatických chýb a s dôrazom na detail.
             </p>
           </div>
           <div class="feature-card">
             <h3>IT a AI riešenia</h3>
             <p>
-              Vývoj na mieru šitých medicínskych aplikácií, integrácia AI nástrojov pre spracovanie dát a modernizácia
-              zdravotníckych systémov.
+              Vývoj na mieru šitých medicínskych aplikácií, integrácia AI nástrojov pre spracovanie dát a modernizácia zdravotníckych systémov.
             </p>
           </div>
         </div>
@@ -403,17 +333,13 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
           <div class="feature-card">
             <h3>Kto som</h3>
             <p>
-              Som <strong>MUDr. Ľubomír Polaščín</strong> — lekár so špecializáciou v nefrológii a vnútornom lekárstve.
-              Okrem medicíny sa aktívne venujem písaniu beletrie i odbornej literatúry a s vášňou vyvíjam webové
-              riešenia a aplikácie. Moja práca stojí na prieniku zdravotníctva, literatúry a moderných IT technológií.
+              Som <strong>MUDr. Ľubomír Polaščín</strong> — lekár so špecializáciou v nefrológii a vnútornom lekárstve. Okrem medicíny sa aktívne venujem písaniu beletrie i odbornej literatúry a s vášňou vyvíjam webové riešenia a aplikácie. Moja práca stojí na prieniku zdravotníctva, literatúry a moderných IT technológií.
             </p>
           </div>
           <div class="feature-card">
             <h3>Odborná prax</h3>
             <p>
-              Promoval som v odbore Všeobecné lekárstvo (1995), mám atestáciu z interného lekárstva (1998) a
-              špecializáciu v nefrológii (2009). Dlhodobo sa zameriavam na dialýzu a o.i. som od roku 2013 do 2022
-              pôsobil ako primár a vedúci lekár v dvoch dialyzačných strediskách v Bratislave.
+              Promoval som v odbore Všeobecné lekárstvo (1995), mám atestáciu z interného lekárstva (1998) a špecializáciu v nefrológii (2009). Dlhodobo sa zameriavam na dialýzu a o.i. som od roku 2013 do 2022 pôsobil ako primár a vedúci lekár v dvoch dialyzačných strediskách v Bratislave.
             </p>
           </div>
         </div>
@@ -468,17 +394,13 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
         <img src="./img/nps.gif" alt="Nefro-projekt Slovensko Logo" class="header-logo">
         <h3>O projekte</h3>
         <p>
-          Ako nefrológa a nadšenca pre internú medicínu ma fascinuje, akou obrovskou a dynamickou renesanciou prechádza
-          naša nefrologická špecializácia. Sme v máji 2026 a nefrológia sa rozvíja míľovými krokmi. Nie je to už len o
-          manažovaní terminálneho zlyhania obličiek a čakaní na transplantáciu. Zažívame doslova explóziu inovácií, od
-          molekulárnej biológie až po umelú inteligenciu.
+          Ako nefrológa a nadšenca pre internú medicínu ma fascinuje, akou obrovskou a dynamickou renesanciou prechádza naša nefrologická špecializácia. Sme v máji 2026 a nefrológia sa rozvíja míľovými krokmi. Nie je to už len o manažovaní terminálneho zlyhania obličiek a čakaní na transplantáciu. Zažívame doslova explóziu inovácií, od molekulárnej biológie až po umelú inteligenciu.
         </p>
       </div>
       <div class="widget">
         <h3>Užitočné odkazy</h3>
         <ul>
-          <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank"
-              rel="noopener noreferrer">MDN: HTML
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank" rel="noopener noreferrer">MDN: HTML
               Elementy</a></li>
           <li><a href="https://html.spec.whatwg.org/" target="_blank" rel="noopener noreferrer">HTML
               Špecifikácia</a></li>
@@ -510,8 +432,7 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
         &copy; 2026 Ľubomír Polaščín. Vytvorené s využitím moderných štandardov a s dôrazom na prístupnosť.
       </p>
       <p class="site-footer__links">
-        <a href="privacy.php" class="site-footer__link">Ochrana osobných údajov (Privacy Policy)</a> |
-        <a href="#" class="cookie-settings-trigger site-footer__link">Nastavenia Cookies</a>
+        <a href="privacy.php" class="site-footer__link">Ochrana osobných údajov (Privacy Policy)</a> | <a href="#" class="cookie-settings-trigger site-footer__link">Nastavenia Cookies</a>
       </p>
     </div>
   </footer>
