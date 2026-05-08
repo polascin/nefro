@@ -82,7 +82,11 @@
 
 /* Prístupnosť (Accessibility) - Klávesnicová navigácia */
 a:focus-visible,
-button:focus-visible {
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
   outline: 3px solid var(--primary-color);
   outline-offset: 3px;
   border-radius: 4px;
@@ -247,7 +251,7 @@ body {
   opacity: 1;
   position: relative;
   z-index: 1;
-  line-height: 1.1;
+  line-height: 1.5;
   color: #f8fafc;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
   background: rgba(0, 0, 0, 0.15);
@@ -422,10 +426,11 @@ p {
   color: var(--text-secondary);
   margin-bottom: 20px;
   font-size: 1.05rem;
+  line-height: 1.8;
 }
 
 .primary-article p {
-  text-align: justify;
+  text-align: left;
 }
 
 /* Fix: Odstránená chyba ".primary-article.meta", správne má byť medzera (ide o child element) */
@@ -553,7 +558,7 @@ code {
 }
 
 .widget p {
-  text-align: justify;
+  text-align: left;
 }
 
 .widget ul {
@@ -591,6 +596,12 @@ code {
 
 /* Obrázok vo widgete */
 #randomImage {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: var(--transition-smooth);
   cursor: pointer;
 }
@@ -1015,5 +1026,30 @@ input:disabled + .slider:before {
   .main-nav ul {
     justify-content: flex-start;
     gap: 12px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .site-header::before,
+  .site-header h1 {
+    animation: none !important;
+  }
+
+  .primary-article:hover,
+  .widget:hover,
+  .header-logo:hover,
+  #randomImage:hover,
+  .btn-primary:hover,
+  .feature-card:hover {
+    transform: none !important;
   }
 }

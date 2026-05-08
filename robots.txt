@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://nefro.polascin.net/sitemap.xml

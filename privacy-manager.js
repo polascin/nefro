@@ -158,6 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const banner = document.getElementById(bannerId);
     const modal = document.getElementById(modalId);
     const overlay = document.getElementById('cookieModalOverlay');
+    let lastFocusedElement = null;
     
     // Tlačidlá
     const btnAcceptAll = document.getElementById('btnAcceptAll');
@@ -170,6 +171,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const toggleAnalytics = document.getElementById('toggleAnalytics');
     const toggleMarketing = document.getElementById('toggleMarketing');
     const togglePreferences = document.getElementById('togglePreferences');
+
+    modal.setAttribute('aria-hidden', 'true');
 
     function saveConsent(consentData) {
         consentData.timestamp = new Date().toISOString();
@@ -201,8 +204,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function openModal() {
+        lastFocusedElement = document.activeElement;
         modal.classList.remove('hidden');
         overlay.classList.remove('hidden');
+        modal.setAttribute('aria-hidden', 'false');
         document.body.style.overflow = 'hidden'; // Zabrániť scrollovaniu pod modalom
         
         // Obnova aktuálnych nastavení do toggle tlačidiel
@@ -216,12 +221,44 @@ document.addEventListener('DOMContentLoaded', () => {
         toggleAnalytics.checked = saved.analytics;
         toggleMarketing.checked = saved.marketing;
         togglePreferences.checked = saved.preferences;
+
+        btnCloseModal.focus();
     }
 
     function closeModal() {
         modal.classList.add('hidden');
         overlay.classList.add('hidden');
+        modal.setAttribute('aria-hidden', 'true');
         document.body.style.overflow = '';
+
+        if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
+            lastFocusedElement.focus();
+        }
+    }
+
+    function trapFocusInModal(event) {
+        if (modal.classList.contains('hidden') || event.key !== 'Tab') {
+            return;
+        }
+
+        const focusableElements = modal.querySelectorAll(
+            'button:not([disabled]), input:not([disabled]), [href], [tabindex]:not([tabindex="-1"])'
+        );
+
+        if (!focusableElements.length) {
+            return;
+        }
+
+        const firstFocusable = focusableElements[0];
+        const lastFocusable = focusableElements[focusableElements.length - 1];
+
+        if (event.shiftKey && document.activeElement === firstFocusable) {
+            event.preventDefault();
+            lastFocusable.focus();
+        } else if (!event.shiftKey && document.activeElement === lastFocusable) {
+            event.preventDefault();
+            firstFocusable.focus();
+        }
     }
 
     // Event listenery
@@ -246,6 +283,14 @@ document.addEventListener('DOMContentLoaded', () => {
     btnCustomize.addEventListener('click', openModal);
     btnCloseModal.addEventListener('click', closeModal);
     overlay.addEventListener('click', closeModal);
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
+            closeModal();
+            return;
+        }
+
+        trapFocusInModal(event);
+    });
 
     btnSavePreferences.addEventListener('click', () => {
         saveConsent({

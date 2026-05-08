@@ -1,9 +1,24 @@
 <?php
 // Bezpečnostné HTTP hlavičky
+header_remove("X-Powered-By");
 header("X-Frame-Options: SAMEORIGIN");
-header("X-XSS-Protection: 1; mode=block");
+header("X-XSS-Protection: 0");
 header("X-Content-Type-Options: nosniff");
 header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload");
+header("X-Robots-Tag: noindex, follow", true);
+header("Referrer-Policy: strict-origin-when-cross-origin");
+header("Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=()");
+header("Cross-Origin-Opener-Policy: same-origin");
+header("X-Permitted-Cross-Domain-Policies: none");
+
+$csp = "default-src 'self'; "
+  . "img-src 'self' data: https:; "
+  . "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; "
+  . "font-src 'self' https://fonts.gstatic.com; "
+  . "script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com; "
+  . "connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://*.analytics.google.com https://stats.g.doubleclick.net; "
+  . "base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; upgrade-insecure-requests; block-all-mixed-content";
+header("Content-Security-Policy: " . $csp);
 ?>
 <!DOCTYPE html>
 <html lang="sk">
@@ -16,15 +31,13 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
 
     <!-- Bezpečnostné hlavičky (Security) -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://*.analytics.google.com https://stats.g.doubleclick.net;">
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta name="referrer" content="strict-origin-when-cross-origin">
 
     <!-- SEO & Metadata -->
     <meta name="description" content="Zásady ochrany osobných údajov pre projekt Nefro-projekt Slovensko.">
     <meta name="robots" content="noindex, follow">
     <link rel="canonical" href="https://nefro.polascin.net/privacy.php">
+    <link rel="alternate" hreflang="sk-SK" href="https://nefro.polascin.net/privacy.php">
 
     <!-- Open Graph (Social SEO) -->
     <meta property="og:type" content="website">
@@ -33,11 +46,14 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
     <meta property="og:url" content="https://nefro.polascin.net/privacy.php">
     <meta property="og:site_name" content="Nefro-projekt Slovensko">
     <meta property="og:locale" content="sk_SK">
+    <meta property="og:image" content="https://nefro.polascin.net/img/nps-logo.gif">
+    <meta property="og:image:alt" content="Logo Nefro-projekt Slovensko">
 
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Privacy Policy | Nefro-projekt Slovensko">
     <meta name="twitter:description" content="Zásady ochrany osobných údajov pre projekt Nefro-projekt Slovensko.">
+    <meta name="twitter:image" content="https://nefro.polascin.net/img/nps-logo.gif">
 
     <title>Privacy Policy | Nefro-projekt Slovensko</title>
 
@@ -95,8 +111,8 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
                 <li><a href="index.php">Návrat na Domov</a></li>
             </ul>
             <div class="theme-toggle-container">
-                <button id="themeToggleBtn" class="theme-toggle" aria-label="Prepnúť režim osvetlenia"
-                    title="Prepnúť režim osvetlenia">
+              <button id="themeToggleBtn" class="theme-toggle" type="button" aria-label="Prepnúť režim osvetlenia"
+                title="Prepnúť režim osvetlenia" aria-pressed="false">
                 </button>
             </div>
         </div>
@@ -166,7 +182,7 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
                 <p>
                   Svoj súhlas môžete kedykoľvek zmeniť alebo odvolať kliknutím na odkaz "Nastavenia Cookies" v pätičke stránky.
                 </p>
-                <button class="cookie-settings-trigger btn-outline btn-outline--mt">Otvoriť nastavenia cookies</button>
+                <button class="cookie-settings-trigger btn-outline btn-outline--mt" type="button" aria-haspopup="dialog" aria-controls="cookieConsentModal">Otvoriť nastavenia cookies</button>
 
                 <h3>6. Zmeny v týchto pravidlách</h3>
                 <p>
@@ -183,7 +199,7 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
               &copy; 2026 Ľubomír Polaščín. Vytvorené s využitím moderných štandardov a s dôrazom na prístupnosť.
             </p>
             <p class="site-footer__links">
-              <a href="privacy.php" class="site-footer__link">Ochrana osobných údajov (Privacy Policy)</a> | <a href="#" class="cookie-settings-trigger site-footer__link">Nastavenia Cookies</a>
+              <a href="privacy.php" class="site-footer__link" aria-current="page">Ochrana osobných údajov (Privacy Policy)</a> | <a href="#" class="cookie-settings-trigger site-footer__link" aria-haspopup="dialog" aria-controls="cookieConsentModal">Nastavenia Cookies</a>
             </p>
         </div>
     </footer>

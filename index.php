@@ -1,9 +1,23 @@
 <?php
 // Bezpečnostné HTTP hlavičky
+header_remove("X-Powered-By");
 header("X-Frame-Options: SAMEORIGIN"); // Ochrana pred Clickjackingom
-header("X-XSS-Protection: 1; mode=block"); // Ochrana pred XSS útokmi
+header("X-XSS-Protection: 0"); // Legacy hlavička, moderné prehliadače používajú CSP
 header("X-Content-Type-Options: nosniff"); // Zabránenie MIME-sniffingu
 header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"); // Vynútenie HTTPS
+header("Referrer-Policy: strict-origin-when-cross-origin");
+header("Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=()");
+header("Cross-Origin-Opener-Policy: same-origin");
+header("X-Permitted-Cross-Domain-Policies: none");
+
+$csp = "default-src 'self'; "
+  . "img-src 'self' data: https:; "
+  . "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; "
+  . "font-src 'self' https://fonts.gstatic.com; "
+  . "script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com; "
+  . "connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://*.analytics.google.com https://stats.g.doubleclick.net; "
+  . "base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; upgrade-insecure-requests; block-all-mixed-content";
+header("Content-Security-Policy: " . $csp);
 ?>
 <!DOCTYPE html>
 <html lang="sk">
@@ -16,15 +30,15 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
 
   <!-- Bezpečnostné hlavičky (Security) -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://*.analytics.google.com https://stats.g.doubleclick.net;">
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta name="referrer" content="strict-origin-when-cross-origin">
 
   <!-- SEO & Metadata -->
   <meta name="description" content="Nefro-projekt Slovensko. Dynamická renesancia nefrológie: Od molekulárnej biológie po umelú inteligenciu. MUDr. Ľubomír Polaščín. https://nefro.polascin.net/">
+  <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="keywords" content="nefrológia, Slovensko, CKD, dialýza, IgAN, gliflozíny, MUDr. Ľubomír Polaščín">
   <meta name="author" content="Dr. Ľubomír Polaščín">
   <link rel="canonical" href="https://nefro.polascin.net/">
+  <link rel="alternate" hreflang="sk-SK" href="https://nefro.polascin.net/">
 
   <!-- Open Graph (Social SEO) -->
   <meta property="og:type" content="website">
@@ -34,11 +48,13 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
   <meta property="og:site_name" content="Nefro-projekt Slovensko">
   <meta property="og:locale" content="sk_SK">
   <meta property="og:image" content="https://nefro.polascin.net/img/nps-logo.gif">
+  <meta property="og:image:alt" content="Logo Nefro-projekt Slovensko">
 
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Nefro-projekt Slovensko">
   <meta name="twitter:description" content="Dynamická renesancia nefrológie a moderné prístupy v liečbe.">
+  <meta name="twitter:image" content="https://nefro.polascin.net/img/nps-logo.gif">
 
   <title>Nefro-projekt Slovensko</title>
 
@@ -99,13 +115,13 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
   <nav class="main-nav" aria-label="Hlavná navigácia">
     <div class="container">
       <ul>
-        <li><a href="#domov" class="active">Domov</a></li>
+        <li><a href="#domov" class="active" aria-current="page">Domov</a></li>
         <li><a href="#sluzby">Služby</a></li>
         <li><a href="#o-nas">O nás</a></li>
         <li><a href="#kontakt">Kontakt</a></li>
       </ul>
       <div class="theme-toggle-container">
-        <button id="themeToggleBtn" class="theme-toggle" aria-label="Prepnúť režim osvetlenia" title="Prepnúť režim osvetlenia">
+        <button id="themeToggleBtn" class="theme-toggle" type="button" aria-label="Prepnúť režim osvetlenia" title="Prepnúť režim osvetlenia" aria-pressed="false">
         </button>
       </div>
     </div>
@@ -380,7 +396,7 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
           $randomImagePath = $images[$randomIndex];
 
           echo '<a href="' . htmlspecialchars($randomImagePath) . '" id="randomImageLink" target="_blank" rel="noopener noreferrer" title="Zobraziť obrázok v plnej veľkosti">';
-          echo '<img id="randomImage" src="' . htmlspecialchars($randomImagePath) . '" alt="Náhodný obrázok" style="width: 100%; height: auto; border-radius: 8px; display: block; margin-bottom: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">';
+          echo '<img id="randomImage" src="' . htmlspecialchars($randomImagePath) . '" alt="Náhodný obrázok">';
           echo '</a>';
         } else {
           echo "<p>\n";
@@ -432,7 +448,7 @@ header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"
         &copy; 2026 Ľubomír Polaščín. Vytvorené s využitím moderných štandardov a s dôrazom na prístupnosť.
       </p>
       <p class="site-footer__links">
-        <a href="privacy.php" class="site-footer__link">Ochrana osobných údajov (Privacy Policy)</a> | <a href="#" class="cookie-settings-trigger site-footer__link">Nastavenia Cookies</a>
+        <a href="privacy.php" class="site-footer__link">Ochrana osobných údajov (Privacy Policy)</a> | <a href="#" class="cookie-settings-trigger site-footer__link" aria-haspopup="dialog" aria-controls="cookieConsentModal">Nastavenia Cookies</a>
       </p>
     </div>
   </footer>
