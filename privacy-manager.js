@@ -28,7 +28,7 @@ try {
     console.warn("NPS Privacy Manager: GA4 script bol zablokovaný (pravdepodobne Ad-Blockerom).", error);
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+function initPrivacyManager() {
     const consentKey = 'nps_cookie_consent';
     const consentCookieMaxAgeDays = 365;
     const bannerId = 'cookieConsentBanner';
@@ -354,12 +354,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // Vystavenie funkcie openModal globálne pre prípadné ďalšie využitie
     window.openCookiePreferences = openModal;
 
-    // Pridanie event listenerov pre odkazy na otvorenie nastavení (namiesto inline onclick kvôli CSP)
-    const cookieTriggers = document.querySelectorAll('.cookie-settings-trigger');
-    cookieTriggers.forEach(trigger => {
-        trigger.addEventListener('click', (e) => {
-            e.preventDefault();
-            openModal();
-        });
+    // Delegovaný handler funguje aj pre dynamicky vložené prvky (napr. pri live-reloade).
+    document.addEventListener('click', (event) => {
+        const trigger = event.target.closest('.cookie-settings-trigger');
+        if (!trigger) {
+            return;
+        }
+
+        event.preventDefault();
+        openModal();
     });
-});
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initPrivacyManager, { once: true });
+} else {
+    initPrivacyManager();
+}
