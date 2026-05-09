@@ -4,7 +4,12 @@
  */
 
 (function() {
-    const storedTheme = localStorage.getItem('nps_theme');
+    let storedTheme = null;
+    try {
+        storedTheme = localStorage.getItem('nps_theme');
+    } catch (e) {
+        storedTheme = null;
+    }
     const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     
     let initialTheme = 'light';
@@ -28,7 +33,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
         
         document.documentElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('nps_theme', newTheme);
+        try {
+            localStorage.setItem('nps_theme', newTheme);
+        } catch (e) {
+            // Ignorovať zlyhanie uloženia, téma ostane funkčná aspoň pre aktuálnu reláciu.
+        }
 
         setToggleAccessibility(newTheme);
         updateToggleIcon(newTheme);

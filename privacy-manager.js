@@ -30,6 +30,7 @@ try {
 
 document.addEventListener('DOMContentLoaded', () => {
     const consentKey = 'nps_cookie_consent';
+    const consentCookieMaxAgeDays = 365;
     const bannerId = 'cookieConsentBanner';
     const modalId = 'cookieConsentModal';
 
@@ -46,11 +47,67 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentConsent = null;
     let hasResponded = false;
 
+    function setCookie(name, value, days) {
+        const maxAge = Math.max(1, Math.floor(days * 24 * 60 * 60));
+        const securePart = window.location.protocol === 'https:' ? '; Secure' : '';
+        document.cookie = `${name}=${encodeURIComponent(value)}; Path=/; Max-Age=${maxAge}; SameSite=Lax${securePart}`;
+    }
+
+    function getCookie(name) {
+        const escapedName = name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        const match = document.cookie.match(new RegExp(`(?:^|; )${escapedName}=([^;]*)`));
+        return match ? decodeURIComponent(match[1]) : null;
+    }
+
+    function readStoredConsentRaw() {
+        try {
+            const fromLocalStorage = localStorage.getItem(consentKey);
+            if (fromLocalStorage) {
+                return fromLocalStorage;
+            }
+        } catch (e) {
+            console.warn('NPS Privacy Manager: localStorage nie je dostupný, používam cookie fallback.');
+        }
+
+        return getCookie(consentKey);
+    }
+
+    function readStoredConsent() {
+        const raw = readStoredConsentRaw();
+        if (!raw) {
+            return null;
+        }
+
+        try {
+            return JSON.parse(raw);
+        } catch (e) {
+            console.warn('NPS Privacy Manager: Uložený consent je poškodený, použijem predvolené nastavenia.');
+            return null;
+        }
+    }
+
+    function persistConsent(consentData) {
+        const serializedConsent = JSON.stringify(consentData);
+
+        let localStorageSaved = false;
+        try {
+            localStorage.setItem(consentKey, serializedConsent);
+            localStorageSaved = true;
+        } catch (e) {
+            console.warn('NPS Privacy Manager: Nepodarilo sa uložiť nastavenia do localStorage, používam cookie fallback.', e);
+        }
+
+        // Cookie fallback zároveň drží consent dostupný aj bez localStorage.
+        setCookie(consentKey, serializedConsent, consentCookieMaxAgeDays);
+
+        return localStorageSaved;
+    }
+
     try {
-        currentConsent = JSON.parse(localStorage.getItem(consentKey));
+        currentConsent = readStoredConsent();
         hasResponded = currentConsent !== null;
     } catch (e) {
-        console.warn('NPS Privacy Manager: Prehliadač blokuje prístup k localStorage.');
+        console.warn('NPS Privacy Manager: Prehliadač blokuje trvalé uloženie súhlasu.');
         hasResponded = false; // Vynúti aspoň snahu o zobrazenie
     }
 
@@ -176,11 +233,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function saveConsent(consentData) {
         consentData.timestamp = new Date().toISOString();
-        try {
-            localStorage.setItem(consentKey, JSON.stringify(consentData));
-        } catch (e) {
-            console.error('NPS Privacy Manager: Nepodarilo sa uložiť nastavenia do localStorage.', e);
-        }
+        persistConsent(consentData);
         banner.classList.add('hidden');
         closeModal();
         applyConsent(consentData);
@@ -211,16 +264,13 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = 'hidden'; // Zabrániť scrollovaniu pod modalom
         
         // Obnova aktuálnych nastavení do toggle tlačidiel
-        let saved = null;
-        try {
-            saved = JSON.parse(localStorage.getItem(consentKey));
-        } catch (e) {}
+        const saved = readStoredConsent();
+
+        const effectiveSettings = saved || defaultSettings;
         
-        saved = saved || defaultSettings;
-        
-        toggleAnalytics.checked = saved.analytics;
-        toggleMarketing.checked = saved.marketing;
-        togglePreferences.checked = saved.preferences;
+        toggleAnalytics.checked = effectiveSettings.analytics;
+        toggleMarketing.checked = effectiveSettings.marketing;
+        togglePreferences.checked = effectiveSettings.preferences;
 
         btnCloseModal.focus();
     }
