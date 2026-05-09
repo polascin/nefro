@@ -103,6 +103,18 @@ function initPrivacyManager() {
         return localStorageSaved;
     }
 
+    function syncCookieBannerSpace() {
+        if (!banner) {
+            return;
+        }
+
+        const bannerIsVisible = !banner.classList.contains('hidden');
+        const bannerHeight = bannerIsVisible ? Math.ceil(banner.getBoundingClientRect().height) : 0;
+        const extraSpace = bannerIsVisible ? Math.max(32, bannerHeight + 24) : 0;
+
+        document.body.style.setProperty('--cookie-banner-space', `${extraSpace}px`);
+    }
+
     try {
         currentConsent = readStoredConsent();
         hasResponded = currentConsent !== null;
@@ -230,11 +242,13 @@ function initPrivacyManager() {
     const togglePreferences = document.getElementById('togglePreferences');
 
     modal.setAttribute('aria-hidden', 'true');
+    syncCookieBannerSpace();
 
     function saveConsent(consentData) {
         consentData.timestamp = new Date().toISOString();
         persistConsent(consentData);
         banner.classList.add('hidden');
+        syncCookieBannerSpace();
         closeModal();
         applyConsent(consentData);
     }
@@ -285,6 +299,8 @@ function initPrivacyManager() {
             lastFocusedElement.focus();
         }
     }
+
+    window.addEventListener('resize', syncCookieBannerSpace, { passive: true });
 
     function trapFocusInModal(event) {
         if (modal.classList.contains('hidden') || event.key !== 'Tab') {
