@@ -114,6 +114,7 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
 
   <!-- Skript pre Privacy Manager (Cookies) -->
   <script src="privacy-manager.js?v=<?= filemtime('privacy-manager.js') ?>" defer></script>
+  <script src="cookie-settings-fallback.js?v=<?= filemtime('cookie-settings-fallback.js') ?>" defer></script>
 </head>
 
 <body>
