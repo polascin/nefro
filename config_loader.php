@@ -18,11 +18,41 @@ function getAppConfigPaths(): array {
     }
 
     $appRoot = __DIR__;
-    $parentDir = dirname($appRoot);
+    $searchRoots = [$appRoot];
 
-    $paths[] = $parentDir . DIRECTORY_SEPARATOR . 'nefro.env.ini';
-    $paths[] = $parentDir . DIRECTORY_SEPARATOR . 'private' . DIRECTORY_SEPARATOR . 'nefro.env.ini';
-    $paths[] = $parentDir . DIRECTORY_SEPARATOR . 'private' . DIRECTORY_SEPARATOR . 'env.ini';
+    $currentDir = $appRoot;
+    for ($level = 0; $level < 4; $level++) {
+        $parentDir = dirname($currentDir);
+        if ($parentDir === $currentDir) {
+            break;
+        }
+        $searchRoots[] = $parentDir;
+        $currentDir = $parentDir;
+    }
+
+    $documentRoot = trim((string) ($_SERVER['DOCUMENT_ROOT'] ?? ''));
+    if ($documentRoot !== '') {
+        $searchRoots[] = rtrim($documentRoot, '/\\');
+
+        $currentDir = rtrim($documentRoot, '/\\');
+        for ($level = 0; $level < 4; $level++) {
+            $parentDir = dirname($currentDir);
+            if ($parentDir === $currentDir) {
+                break;
+            }
+            $searchRoots[] = $parentDir;
+            $currentDir = $parentDir;
+        }
+    }
+
+    $searchRoots = array_values(array_unique($searchRoots));
+
+    foreach ($searchRoots as $root) {
+        $paths[] = $root . DIRECTORY_SEPARATOR . 'nefro.env.ini';
+        $paths[] = $root . DIRECTORY_SEPARATOR . 'env.ini';
+        $paths[] = $root . DIRECTORY_SEPARATOR . 'private' . DIRECTORY_SEPARATOR . 'nefro.env.ini';
+        $paths[] = $root . DIRECTORY_SEPARATOR . 'private' . DIRECTORY_SEPARATOR . 'env.ini';
+    }
 
     // Fallback pre lokálny vývoj alebo existujúce prostredie.
     $paths[] = $appRoot . DIRECTORY_SEPARATOR . 'env.ini';
