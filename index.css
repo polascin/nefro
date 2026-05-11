@@ -1061,3 +1061,140 @@ input:disabled + .slider:before {
     transform: none !important;
   }
 }
+
+/* Formuláre (Auth & Registrácia) */
+.auth-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  backdrop-filter: blur(10px);
+}
+
+.auth-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--text);
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--text);
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.2);
+}
+
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.form-check input[type="checkbox"] {
+  width: 1.25rem;
+  height: 1.25rem;
+  accent-color: var(--primary);
+}
+
+.form-actions {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.alert {
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: var(--radius-md);
+  border-left: 4px solid;
+}
+
+.alert-error {
+  background-color: rgba(239, 68, 68, 0.1);
+  border-left-color: #ef4444;
+  color: #b91c1c;
+}
+
+.dark-mode .alert-error {
+  color: #fca5a5;
+}
+
+.alert-success {
+  background-color: rgba(34, 197, 94, 0.1);
+  border-left-color: #22c55e;
+  color: #15803d;
+}
+
+.dark-mode .alert-success {
+  color: #86efac;
+}
+
+.auth-links {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.auth-links a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.auth-links a:hover {
+  text-decoration: underline;
+}
+
+/* Grid pre zložitejšie formuláre (registrácia) */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.form-section {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.form-section h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: var(--primary);
+}

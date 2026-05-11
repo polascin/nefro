@@ -116,3 +116,6 @@ ehthumbs_vista.db
 # Temp files
 tmp/
 temp/
+
+# Environment variables
+env.ini

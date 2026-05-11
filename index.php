@@ -1,4 +1,5 @@
 <?php
+require_once 'auth.php';
 // Bezpečnostné HTTP hlavičky
 header_remove("X-Powered-By");
 header("X-Frame-Options: SAMEORIGIN"); // Ochrana pred Clickjackingom
@@ -147,6 +148,12 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
         <li><a href="#sluzby">Služby</a></li>
         <li><a href="#o-nas">O nás</a></li>
         <li><a href="#kontakt">Kontakt</a></li>
+        <?php if (isLoggedIn()): ?>
+          <li><a href="logout.php">Odhlásiť sa (<?= htmlspecialchars($_SESSION['username'] ?? 'Profil') ?>)</a></li>
+        <?php else: ?>
+          <li><a href="login.php">Prihlásenie</a></li>
+          <li><a href="register.php">Registrácia</a></li>
+        <?php endif; ?>
       </ul>
       <div class="theme-toggle-container">
         <button id="themeToggleBtn" class="theme-toggle" type="button" aria-label="Prepnúť režim osvetlenia" title="Prepnúť režim osvetlenia" aria-pressed="false">
