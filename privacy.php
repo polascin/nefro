@@ -21,7 +21,7 @@ $csp = "default-src 'self'; "
   . "font-src 'self' https://fonts.gstatic.com; "
   . "script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com; "
   . "connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://*.analytics.google.com https://stats.g.doubleclick.net; "
-  . "base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; upgrade-insecure-requests; block-all-mixed-content";
+  . "base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; upgrade-insecure-requests";
 header("Content-Security-Policy: " . $csp);
 $pageLastUpdated = date('d.m.Y H:i', filemtime(__FILE__));
 $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';

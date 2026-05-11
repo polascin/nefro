@@ -434,7 +434,7 @@ p {
   text-align: left;
 }
 
-/* Fix: Odstránená chyba ".primary-article.meta", správne má byť medzera (ide o child element) */
+/* Zarovnanie a formátovanie metadát v článkoch */
 .primary-article .meta {
   font-size: 0.85rem;
   color: #8b9eb5;

@@ -20,7 +20,7 @@ $csp = "default-src 'self'; "
   . "font-src 'self' https://fonts.gstatic.com; "
   . "script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com; "
   . "connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://*.analytics.google.com https://stats.g.doubleclick.net; "
-  . "base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; upgrade-insecure-requests; block-all-mixed-content";
+  . "base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; upgrade-insecure-requests";
 header("Content-Security-Policy: " . $csp);
 
 $monthsLocative = [
@@ -451,12 +451,6 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
         <p>
           SGLT2 inhibítory (gliflozíny) už dnes vnímame ako absolútny štandard a základný kameň terapie. Skutočným zemetrasením posledných mesiacov však bola ofenzíva GLP-1 receptorových agonistov. Po prelomových dátach zo štúdie FLOW sa v rokoch 2025 a 2026 indikácie molekúl ako semaglutid oficiálnerozšírili priamo na spomalenie progresie chronického ochorenia obličiek (CKD). Keď tento prístup elegantne skombinujeme s nesteroidnými antagonistami mineralokortikoidových receptorov (ako je finerenón) a novými inhibítormi aldosterón syntázy, máme v rukách nefarmakologický a farmakologický arzenál, ktorý mení prirodzený priebeh diabetickej aj nediabetickej nefropatie.
         </p>
-        <!-- <section>: Tematické rozdelenie obsahu, zvyčajne s vlastným nadpisom 
-                <section class="content-section">
-                    <h3>Podsekcia článku</h3>
-                    <p>Pomocou elementu <code>&lt;section&gt;</code> rozdeľujeme obsah do logických celkov. Táto časť sa
-                        venuje detailnejšiemu popisu problematiky a je súčasťou väčšieho článku.</p>
-                </section>-->
         <footer>
           <p class="author">
             Autor: <span class="authorname">Dr. Ľubomír Polaščín</span>
@@ -608,8 +602,8 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
           $randomIndex = array_rand($images);
           $randomImagePath = $images[$randomIndex];
 
-          echo '<a href="' . htmlspecialchars($randomImagePath) . '" id="randomImageLink" target="_blank" rel="noopener noreferrer" title="Zobraziť obrázok v plnej veľkosti">';
-          echo '<img id="randomImage" src="' . htmlspecialchars($randomImagePath) . '" alt="Náhodný obrázok">';
+          echo '<a href="' . htmlspecialchars($randomImagePath) . '" id="randomImageLink" target="_blank" rel="noopener noreferrer" title="Zobraziť obrázok v plnej veľkosti" aria-label="Zobraziť náhodný abstraktný obrázok v plnej veľkosti">';
+          echo '<img id="randomImage" src="' . htmlspecialchars($randomImagePath) . '" alt="Náhodný abstraktný obrázok Nefro">';
           echo '</a>';
         } else {
           echo "<p>\n";
