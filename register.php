@@ -206,7 +206,10 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                                     <option value="">-- Vyberte --</option>
                                     <option value="Muž" <?= ($_POST['gender'] ?? '') === 'Muž' ? 'selected' : '' ?>>Muž</option>
                                     <option value="Žena" <?= ($_POST['gender'] ?? '') === 'Žena' ? 'selected' : '' ?>>Žena</option>
-                                    <option value="Iné" <?= ($_POST['gender'] ?? '') === 'Iné' ? 'selected' : '' ?>>Iné</option>
+                                    <option value="Transgender muž" <?= ($_POST['gender'] ?? '') === 'Transgender muž' ? 'selected' : '' ?>>Transgender muž</option>
+                                    <option value="Transgender žena" <?= ($_POST['gender'] ?? '') === 'Transgender žena' ? 'selected' : '' ?>>Transgender žena</option>
+                                    <option value="Nebinárna osoba" <?= ($_POST['gender'] ?? '') === 'Nebinárna osoba' ? 'selected' : '' ?>>Nebinárna osoba</option>
+                                    <option value="Iné" <?= ($_POST['gender'] ?? '') === 'Iné' ? 'selected' : '' ?>>Iné / Iná identita</option>
                                     <option value="Nechcem uviesť" <?= ($_POST['gender'] ?? '') === 'Nechcem uviesť' ? 'selected' : '' ?>>Nechcem uviesť</option>
                                 </select>
                             </div>
