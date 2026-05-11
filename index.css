@@ -1408,6 +1408,36 @@ input:disabled + .slider:before {
   color: var(--text-secondary);
 }
 
+.header-profile__email-status {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 2px 7px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.header-profile__email-status--verified {
+  color: #166534;
+  background: rgba(34, 197, 94, 0.16);
+}
+
+.header-profile__email-status--unverified {
+  color: #9a3412;
+  background: rgba(249, 115, 22, 0.16);
+}
+
+[data-theme="dark"] .header-profile__email-status--verified {
+  color: #86efac;
+  background: rgba(34, 197, 94, 0.2);
+}
+
+[data-theme="dark"] .header-profile__email-status--unverified {
+  color: #fdba74;
+  background: rgba(249, 115, 22, 0.22);
+}
+
 .header-profile__logout-link {
   display: inline-block;
   margin-top: 6px;

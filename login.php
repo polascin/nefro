@@ -9,6 +9,7 @@ if (isLoggedIn()) {
 }
 
 $errors = [];
+$resendLoginHint = '';
 
 $host = strtolower((string) ($_SERVER['HTTP_HOST'] ?? $_SERVER['SERVER_NAME'] ?? ''));
 $isLocalDev = $host === 'localhost'
@@ -65,7 +66,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 $errors[] = "Zadajte používateľské meno (alebo e-mail) a heslo.";
             } else {
                 try {
-                    $stmt = $pdo->prepare("SELECT id, password_hash, username, is_admin, is_active FROM users WHERE email = :email OR username = :username");
+                    $stmt = $pdo->prepare("SELECT id, email, password_hash, username, is_admin, is_active, email_verified_at FROM users WHERE email = :email OR username = :username");
                     $stmt->execute([
                         'email'    => $loginInput,
                         'username' => $loginInput,
@@ -75,6 +76,9 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     if ($user && password_verify($password, $user['password_hash'])) {
                         if (!(int) ($user['is_active'] ?? 1)) {
                             $errors[] = "Váš účet bol deaktivovaný. Kontaktujte administrátora.";
+                        } elseif (empty($user['email_verified_at'])) {
+                            $errors[] = "E-mailová adresa ešte nie je overená. Dokončite overenie pred prihlásením.";
+                            $resendLoginHint = (string) ($user['email'] ?? $loginInput);
                         } else {
                             // Prihlásenie úspešné — vyčisti IP záznamy
                             try {
@@ -84,6 +88,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                             $_SESSION['user_id']  = $user['id'];
                             $_SESSION['username'] = $user['username'];
                             $_SESSION['is_admin'] = (int) ($user['is_admin'] ?? 0);
+                            $_SESSION['email_verified'] = !empty($user['email_verified_at']) ? 1 : 0;
                             header("Location: index.php");
                             exit;
                         }
@@ -151,6 +156,15 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                             <li><?= htmlspecialchars($error) ?></li>
                         <?php endforeach; ?>
                     </ul>
+                </div>
+            <?php endif; ?>
+
+            <?php if (!empty($resendLoginHint)): ?>
+                <div class="alert alert-success">
+                    <p>
+                        Potrebujete nový overovací e-mail?
+                        <a href="resend_verification.php?login=<?= urlencode($resendLoginHint) ?>">Poslať overenie znova</a>
+                    </p>
                 </div>
             <?php endif; ?>
 

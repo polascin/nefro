@@ -14,6 +14,10 @@ try {
         pronouns VARCHAR(50),
         avatar_path VARCHAR(255),
         email VARCHAR(255) UNIQUE NOT NULL,
+        email_verified_at DATETIME NULL,
+        email_verification_token_hash VARCHAR(255) NULL,
+        email_verification_expires_at DATETIME NULL,
+        email_verification_sent_at DATETIME NULL,
         password_hash VARCHAR(255) NOT NULL,
         title_before VARCHAR(50),
         first_name VARCHAR(255),
@@ -70,6 +74,38 @@ try {
     $districtColumnStmt->execute();
     if ((int) $districtColumnStmt->fetchColumn() === 0) {
         $pdo->exec("ALTER TABLE users ADD COLUMN district VARCHAR(255) NULL AFTER city");
+    }
+
+    $emailVerifiedAtAdded = false;
+    $emailVerifiedAtStmt = $pdo->prepare("SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'users' AND COLUMN_NAME = 'email_verified_at'");
+    $emailVerifiedAtStmt->execute();
+    if ((int) $emailVerifiedAtStmt->fetchColumn() === 0) {
+        $pdo->exec("ALTER TABLE users ADD COLUMN email_verified_at DATETIME NULL AFTER email");
+        $emailVerifiedAtAdded = true;
+    }
+
+    $emailTokenHashStmt = $pdo->prepare("SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'users' AND COLUMN_NAME = 'email_verification_token_hash'");
+    $emailTokenHashStmt->execute();
+    if ((int) $emailTokenHashStmt->fetchColumn() === 0) {
+        $pdo->exec("ALTER TABLE users ADD COLUMN email_verification_token_hash VARCHAR(255) NULL AFTER email_verified_at");
+    }
+
+    $emailExpiresStmt = $pdo->prepare("SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'users' AND COLUMN_NAME = 'email_verification_expires_at'");
+    $emailExpiresStmt->execute();
+    if ((int) $emailExpiresStmt->fetchColumn() === 0) {
+        $pdo->exec("ALTER TABLE users ADD COLUMN email_verification_expires_at DATETIME NULL AFTER email_verification_token_hash");
+    }
+
+    $emailSentAtStmt = $pdo->prepare("SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'users' AND COLUMN_NAME = 'email_verification_sent_at'");
+    $emailSentAtStmt->execute();
+    if ((int) $emailSentAtStmt->fetchColumn() === 0) {
+        $pdo->exec("ALTER TABLE users ADD COLUMN email_verification_sent_at DATETIME NULL AFTER email_verification_expires_at");
+    }
+
+    // Pri prvom zavedení stĺpca považujeme existujúce účty za overené,
+    // aby sa neblokovali produkčné prístupy.
+    if ($emailVerifiedAtAdded) {
+        $pdo->exec("UPDATE users SET email_verified_at = NOW() WHERE email_verified_at IS NULL");
     }
 
     $profileArchiveSql = "CREATE TABLE IF NOT EXISTS users_profile_archive (
