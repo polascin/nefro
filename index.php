@@ -130,15 +130,12 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
   <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>
 
   <!-- <header>: Hlavička stránky alebo sekcie, zvyčajne obsahuje logo a hlavný nadpis -->
-  <header class="site-header" id="domov" role="banner">
-    <div class="container">
-      <h1>Nefro-projekt Slovensko</h1>
-      <img src="./img/nps-logo.gif" alt="Nefro-projekt Slovensko Logo" class="header-logo">
-      <p class="intro">
-        Dynamická renesancia nefrológie: Od molekulárnej biológie po umelú inteligenciu.
-      </p>
-    </div>
-  </header>
+  <?php
+  $headerTitle = 'Nefro-projekt Slovensko';
+  $headerIntro = 'Dynamická renesancia nefrológie: Od molekulárnej biológie po umelú inteligenciu.';
+  $showLogo = true;
+  include 'header.php';
+  ?>
 
   <!-- <nav>: Hlavná navigácia stránky (menu) -->
   <nav class="main-nav" aria-label="Hlavná navigácia">
@@ -155,10 +152,7 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
           <li><a href="register.php">Registrácia</a></li>
         <?php endif; ?>
       </ul>
-      <div class="theme-toggle-container">
-        <button id="themeToggleBtn" class="theme-toggle" type="button" aria-label="Prepnúť režim osvetlenia" title="Prepnúť režim osvetlenia" aria-pressed="false">
-        </button>
-      </div>
+
     </div>
   </nav>
 
@@ -592,7 +586,7 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
               Zaregistrujte sa a získajte prístup k obsahu. Pri registrácii si môžete zvoliť súhlas so zasielaním noviniek a my vás budeme ihneď informovať o najnovších príspevkoch a analýzach.
             </p>
             <?php if (!isLoggedIn()): ?>
-              <br><a href="register.php" class="btn-primary" style="margin-top: 10px;">Registrovať sa</a>
+              <br><a href="register.php" class="btn-primary mt-15 d-inline-block">Registrovať sa</a>
             <?php else: ?>
               <div class="badge-highlight">Ste prihlásený</div>
             <?php endif; ?>
@@ -659,20 +653,4 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
     </aside>
   </main>
 
-  <!-- <footer>: Pätička stránky alebo sekcie, obsahuje autorské práva, dôležité odkazy atď. -->
-  <footer class="site-footer" role="contentinfo">
-    <div class="container">
-      <p>
-        &copy; 2026 Ľubomír Polaščín. Vytvorené s využitím moderných štandardov a s dôrazom na prístupnosť.
-      </p>
-      <p class="site-footer__updated">
-        Posledná aktualizácia stránky: <?= htmlspecialchars($pageLastUpdated, ENT_QUOTES, 'UTF-8') ?> (časové pásmo: <?= htmlspecialchars($pageTimeZone, ENT_QUOTES, 'UTF-8') ?>)
-      </p>
-      <p class="site-footer__links">
-        <a href="privacy.php" class="site-footer__link">Ochrana osobných údajov (Privacy Policy)</a> | <a href="#cookie-settings" role="button" class="cookie-settings-trigger site-footer__link" aria-haspopup="dialog" aria-controls="cookieConsentModal">Nastavenia Cookies</a>
-      </p>
-    </div>
-  </footer>
-</body>
-
-</html>
+  <?php include 'footer.php'; ?>

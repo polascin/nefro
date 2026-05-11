@@ -106,25 +106,19 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
     <!-- Skip to content (A11y) -->
     <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>
 
-    <header class="site-header site-header--compact" id="domov" role="banner">
-        <div class="container">
-            <h1>Zásady ochrany osobných údajov</h1>
-            <p class="intro">
-              Privacy Policy &amp; Cookie Policy
-            </p>
-        </div>
-    </header>
+    <?php
+    $headerTitle = 'Zásady ochrany osobných údajov';
+    $headerIntro = 'Privacy Policy &amp; Cookie Policy';
+    $showLogo = false;
+    include 'header.php';
+    ?>
 
     <nav class="main-nav" aria-label="Hlavná navigácia">
         <div class="container">
             <ul>
                 <li><a href="index.php">Návrat na Domov</a></li>
             </ul>
-            <div class="theme-toggle-container">
-              <button id="themeToggleBtn" class="theme-toggle" type="button" aria-label="Prepnúť režim osvetlenia"
-                title="Prepnúť režim osvetlenia" aria-pressed="false">
-                </button>
-            </div>
+
         </div>
     </nav>
 
@@ -203,19 +197,4 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
         </div>
     </main>
 
-    <footer class="site-footer" role="contentinfo">
-        <div class="container">
-            <p>
-              &copy; 2026 Ľubomír Polaščín. Vytvorené s využitím moderných štandardov a s dôrazom na prístupnosť.
-            </p>
-            <p class="site-footer__updated">
-              Posledná aktualizácia stránky: <?= htmlspecialchars($pageLastUpdated, ENT_QUOTES, 'UTF-8') ?> (časové pásmo: <?= htmlspecialchars($pageTimeZone, ENT_QUOTES, 'UTF-8') ?>)
-            </p>
-            <p class="site-footer__links">
-              <a href="privacy.php" class="site-footer__link" aria-current="page">Ochrana osobných údajov (Privacy Policy)</a> | <a href="#cookie-settings" role="button" class="cookie-settings-trigger site-footer__link" aria-haspopup="dialog" aria-controls="cookieConsentModal">Nastavenia Cookies</a>
-            </p>
-        </div>
-    </footer>
-</body>
-
-</html>
+    <?php include 'footer.php'; ?>

@@ -57,11 +57,11 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="site-header" role="banner">
-        <div class="container">
-            <h1><a href="index.php" style="text-decoration:none; color:inherit;">Nefro-projekt Slovensko</a></h1>
-        </div>
-    </header>
+    <?php
+    $headerTitle = 'Nefro-projekt Slovensko';
+    $showLogo = false;
+    include 'header.php';
+    ?>
 
     <main class="container">
         <div class="auth-container">
@@ -100,5 +100,4 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
             </div>
         </div>
     </main>
-</body>
-</html>
+    <?php include 'footer.php'; ?>

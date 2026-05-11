@@ -21,12 +21,24 @@
 })();
 
 document.addEventListener('DOMContentLoaded', () => {
-    const themeToggleBtn = document.getElementById('themeToggleBtn');
-    if (!themeToggleBtn) return;
+    let themeToggleBtn = document.getElementById('themeToggleBtn');
+    
+    // Ak tlačidlo neexistuje v HTML, vytvoríme ho dynamicky a pridáme do body
+    if (!themeToggleBtn) {
+        const container = document.createElement('div');
+        container.className = 'theme-toggle-container';
+        themeToggleBtn = document.createElement('button');
+        themeToggleBtn.id = 'themeToggleBtn';
+        themeToggleBtn.className = 'theme-toggle';
+        themeToggleBtn.type = 'button';
+        container.appendChild(themeToggleBtn);
+        document.body.appendChild(container);
+    }
     
     const initialTheme = document.documentElement.getAttribute('data-theme');
     setToggleAccessibility(initialTheme);
     updateToggleIcon(initialTheme);
+    updateHeaderAvatar(initialTheme);
     
     themeToggleBtn.addEventListener('click', () => {
         const currentTheme = document.documentElement.getAttribute('data-theme');
@@ -41,7 +53,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
         setToggleAccessibility(newTheme);
         updateToggleIcon(newTheme);
+        updateHeaderAvatar(newTheme);
     });
+
+    function updateHeaderAvatar(theme) {
+        const headerAvatar = document.getElementById('headerAvatar');
+        if (headerAvatar && headerAvatar.dataset.isDefault === 'true') {
+            headerAvatar.src = theme === 'dark' ? 'img/default-avatar-dark.svg' : 'img/default-avatar-light.svg';
+        }
+    }
 
     function setToggleAccessibility(theme) {
         const isDark = theme === 'dark';
