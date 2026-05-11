@@ -98,8 +98,8 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;900&display=swap" rel="stylesheet">
 
     <!-- Skript pre Privacy Manager (Cookies) -->
-    <script src="consent-manager.js?v=20260509-4&cb=<?= filemtime('consent-manager.js') ?>" defer></script>
-    <script src="consent-fallback.js?v=20260509-4&cb=<?= filemtime('consent-fallback.js') ?>" defer></script>
+    <script src="ui-preferences.js?v=20260511-1&cb=<?= filemtime('ui-preferences.js') ?>" defer></script>
+    <script src="ui-preferences-fallback.js?v=20260511-1&cb=<?= filemtime('ui-preferences-fallback.js') ?>" defer></script>
 </head>
 
 <body>
