@@ -26,6 +26,14 @@ function isLoggedIn() {
 }
 
 /**
+ * Funkcia na overenie, či má používateľ overený e-mail
+ * @return bool
+ */
+function isEmailVerified(): bool {
+    return !empty($_SESSION['email_verified']) && (int) $_SESSION['email_verified'] === 1;
+}
+
+/**
  * Funkcia na overenie admin oprávnenia
  * @return bool True ak je používateľ admin
  */
@@ -80,5 +88,28 @@ function validateCsrfToken($token) {
  */
 function regenerateSession() {
     session_regenerate_id(true);
+}
+
+/**
+ * Uloženie jednorazovej hlášky do relácie
+ */
+function setFlashMessage(string $type, string $message): void {
+    $_SESSION['flash_message'] = [
+        'type' => $type,
+        'message' => $message,
+    ];
+}
+
+/**
+ * Načítanie a odstránenie jednorazovej hlášky z relácie
+ */
+function popFlashMessage(): ?array {
+    if (empty($_SESSION['flash_message']) || !is_array($_SESSION['flash_message'])) {
+        return null;
+    }
+
+    $flash = $_SESSION['flash_message'];
+    unset($_SESSION['flash_message']);
+    return $flash;
 }
 ?>

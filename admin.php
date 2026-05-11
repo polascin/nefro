@@ -26,7 +26,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     $tStmt = $pdo->prepare("SELECT is_admin, username FROM users WHERE id = :id");
                     $tStmt->execute(['id' => $targetUserId]);
                     $tUser = $tStmt->fetch();
-                    if (!$tUser) { $actionError = 'Používateľ neнájdený.'; break; }
+                    if (!$tUser) { $actionError = 'Používateľ nenájdený.'; break; }
                     $newRole = ((int) $tUser['is_admin']) ? 0 : 1;
                     $pdo->prepare("UPDATE users SET is_admin = :role WHERE id = :id")->execute(['role' => $newRole, 'id' => $targetUserId]);
                     $actionResult = ($newRole ? 'Rola Admin udelená' : 'Rola Admin odňatá') . ' — ' . htmlspecialchars((string) $tUser['username']) . '.';
@@ -45,7 +45,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     $tStmt = $pdo->prepare("SELECT is_active, username FROM users WHERE id = :id");
                     $tStmt->execute(['id' => $targetUserId]);
                     $tUser = $tStmt->fetch();
-                    if (!$tUser) { $actionError = 'Používateľ neнájdený.'; break; }
+                    if (!$tUser) { $actionError = 'Používateľ nenájdený.'; break; }
                     $newActive = ((int) $tUser['is_active']) ? 0 : 1;
                     $pdo->prepare("UPDATE users SET is_active = :active WHERE id = :id")->execute(['active' => $newActive, 'id' => $targetUserId]);
                     $actionResult = ($newActive ? 'Účet aktivovaný' : 'Účet deaktivovaný') . ' — ' . htmlspecialchars((string) $tUser['username']) . '.';
@@ -60,7 +60,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     $tStmt = $pdo->prepare("SELECT username FROM users WHERE id = :id");
                     $tStmt->execute(['id' => $targetUserId]);
                     $tUser = $tStmt->fetch();
-                    if (!$tUser) { $actionError = 'Používateľ neнájdený.'; break; }
+                    if (!$tUser) { $actionError = 'Používateľ nenájdený.'; break; }
                     $tempPwd = bin2hex(random_bytes(8));
                     $pdo->prepare("UPDATE users SET password_hash = :hash WHERE id = :id")
                         ->execute(['hash' => password_hash($tempPwd, PASSWORD_DEFAULT), 'id' => $targetUserId]);

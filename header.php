@@ -2,6 +2,15 @@
 $headerTitle = $headerTitle ?? 'Nefro-projekt Slovensko';
 $headerIntro = $headerIntro ?? '';
 $showLogo = $showLogo ?? false;
+$flash = function_exists('popFlashMessage') ? popFlashMessage() : null;
+$showUnverifiedNotice = function_exists('isLoggedIn')
+    && function_exists('isEmailVerified')
+    && isLoggedIn()
+    && !isEmailVerified();
+$resendLink = 'resend_verification.php';
+if ($showUnverifiedNotice && !empty($_SESSION['email'])) {
+    $resendLink .= '?login=' . urlencode((string) $_SESSION['email']);
+}
 ?>
 <header class="site-header" role="banner" id="domov">
   <div class="site-header__wrapper">
@@ -41,3 +50,22 @@ $showLogo = $showLogo ?? false;
     
   </div>
 </header>
+
+<?php if (is_array($flash) && !empty($flash['message'])): ?>
+    <div class="container">
+        <div class="alert <?= (($flash['type'] ?? '') === 'warning') ? 'alert-error' : 'alert-success' ?>">
+            <p><?= htmlspecialchars((string) $flash['message']) ?></p>
+        </div>
+    </div>
+<?php endif; ?>
+
+<?php if ($showUnverifiedNotice): ?>
+    <div class="container">
+        <div class="alert alert-error">
+            <p>
+                Váš účet má neoverenú e-mailovú adresu. Neoverení používatelia nemôžu využívať služby určené pre používateľov.
+                <a href="<?= htmlspecialchars($resendLink) ?>">Poslať overenie znova</a>
+            </p>
+        </div>
+    </div>
+<?php endif; ?>
