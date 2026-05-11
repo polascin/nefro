@@ -1,10 +1,15 @@
 <?php
+// Ochrana pred priamym prístupom z webu
+if (basename($_SERVER['PHP_SELF']) === basename(__FILE__) && php_sapi_name() !== 'cli') {
+    http_response_code(403);
+    exit("Prístup odmietnutý.");
+}
 require_once 'db_config.php';
 
 try {
     $sql = "CREATE TABLE IF NOT EXISTS users (
         id INT AUTO_INCREMENT PRIMARY KEY,
-        username VARCHAR(100) UNIQUE NOT NULL,
+        username VARCHAR(255) UNIQUE NOT NULL,
         gender VARCHAR(50),
         pronouns VARCHAR(50),
         avatar_path VARCHAR(255),

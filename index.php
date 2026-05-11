@@ -1,5 +1,6 @@
 <?php
 require_once 'auth.php';
+require_once 'db_config.php';
 // Bezpečnostné HTTP hlavičky
 header_remove("X-Powered-By");
 header("X-Frame-Options: SAMEORIGIN"); // Ochrana pred Clickjackingom
