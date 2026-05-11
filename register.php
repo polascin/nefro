@@ -4,10 +4,30 @@ require_once 'db_config.php';
 
 $errors = [];
 $success = false;
+$registeredData = [];
+
+$host = strtolower((string) ($_SERVER['HTTP_HOST'] ?? $_SERVER['SERVER_NAME'] ?? ''));
+$isLocalDev = $host === 'localhost'
+    || str_starts_with($host, 'localhost:')
+    || str_starts_with($host, '127.0.0.1')
+    || str_starts_with($host, '::1');
 
 if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
-    if (!validateCsrfToken($_POST['csrf_token'] ?? '')) {
+    $postedCsrfToken = $_POST['csrf_token'] ?? '';
+    if (!validateCsrfToken($postedCsrfToken)) {
         $errors[] = "Neplatný CSRF token. Skúste to znova.";
+
+        if ($isLocalDev) {
+            $sessionTokenPresent = !empty($_SESSION['csrf_token']);
+            $postTokenPresent = !empty($postedCsrfToken);
+            $csrfReason = !$postTokenPresent
+                ? 'Vo formulári chýba CSRF token.'
+                : (!$sessionTokenPresent
+                    ? 'V relácii chýba CSRF token (pravdepodobne problém so session cookie alebo stará otvorená karta).'
+                    : 'Token vo formulári sa nezhoduje s tokenom v relácii.');
+
+            $errors[] = "[DEV diagnostika] CSRF zlyhanie: " . $csrfReason;
+        }
     } else {
         $email = filter_var(trim($_POST['email'] ?? ''), FILTER_SANITIZE_EMAIL);
         $password = $_POST['password'] ?? '';
@@ -26,10 +46,19 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 
         if (empty($errors)) {
             try {
-                $stmt = $pdo->prepare("SELECT id FROM users WHERE email = :email");
-                $stmt->execute(['email' => $email]);
-                if ($stmt->fetch()) {
-                    $errors[] = "Používateľ s týmto e-mailom už existuje.";
+                $stmt = $pdo->prepare("SELECT email, username FROM users WHERE email = :email OR username = :username LIMIT 1");
+                $stmt->execute([
+                    'email' => $email,
+                    'username' => $username,
+                ]);
+                $existingUser = $stmt->fetch();
+                if ($existingUser) {
+                    if (($existingUser['email'] ?? '') === $email) {
+                        $errors[] = "Používateľ s týmto e-mailom už existuje.";
+                    }
+                    if (($existingUser['username'] ?? '') === $username) {
+                        $errors[] = "Používateľ s týmto používateľským menom už existuje.";
+                    }
                 } else {
                     $passwordHash = password_hash($password, PASSWORD_DEFAULT);
                     $newsletterConsent = isset($_POST['newsletter_consent']) ? 1 : 0;
@@ -81,7 +110,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                         )";
                         
                         $stmt = $pdo->prepare($sql);
-                        $stmt->execute([
+                        $registrationParams = [
                             'username' => $username,
                             'email' => $email,
                             'password_hash' => $passwordHash,
@@ -123,14 +152,22 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                             'country' => trim($_POST['country'] ?? ''),
                             'address_note' => trim($_POST['address_note'] ?? ''),
                             'newsletter_consent' => $newsletterConsent
-                        ]);
+                        ];
+                        $stmt->execute($registrationParams);
                         
                         $success = true;
+                        $registeredData = $registrationParams;
+                        unset($registeredData['password_hash']);
+                        $registeredData['newsletter_consent'] = $newsletterConsent ? 'Áno' : 'Nie';
                     }
                 }
             } catch (\PDOException $e) {
                 error_log("Chyba registrácie: " . $e->getMessage());
-                $errors[] = "Vyskytla sa chyba pri registrácii. Skúste to prosím neskôr.";
+                if ((string) $e->getCode() === '23000') {
+                    $errors[] = "Používateľ s rovnakým e-mailom alebo používateľským menom už existuje.";
+                } else {
+                    $errors[] = "Vyskytla sa chyba pri registrácii. Skúste to prosím neskôr.";
+                }
             }
         }
     }
@@ -160,6 +197,12 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
             <h2>Registrácia</h2>
             <p class="auth-subtitle">Používateľ webovej lokality <a href="https://nefro.polascin.net/" class="auth-subtitle__link">https://nefro.polascin.net/</a></p>
             
+            <?php if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && !$success): ?>
+                <div class="alert alert-error">
+                    Registrácia nebola úspešná. Skontrolujte chyby nižšie a skúste formulár odoslať znova.
+                </div>
+            <?php endif; ?>
+
             <?php if (!empty($errors)): ?>
                 <div class="alert alert-error">
                     <ul>
@@ -172,7 +215,67 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 
             <?php if ($success): ?>
                 <div class="alert alert-success">
-                    Registrácia prebehla úspešne. Teraz sa môžete <strong><a href="login.php">prihlásiť</a></strong>.
+                    Registrácia prebehla úspešne.
+                </div>
+                <div class="form-section">
+                    <h3>Potvrdenie registrácie</h3>
+                    <p>Nižšie sú zobrazené údaje, ktoré boli uložené pri registrácii.</p>
+                    <div class="form-grid">
+                        <?php
+                        $fieldLabels = [
+                            'username' => 'Používateľské meno',
+                            'email' => 'E-mailová adresa',
+                            'gender' => 'Identifikácia (pohlavie)',
+                            'pronouns' => 'Identifikačné zámená',
+                            'title_before' => 'Titul pred menom',
+                            'first_name' => 'Prvé (krstné) meno',
+                            'middle_name' => 'Stredné meno/á',
+                            'last_name' => 'Priezvisko',
+                            'title_after' => 'Titul za menom',
+                            'birth_date' => 'Dátum narodenia',
+                            'name_note' => 'Poznámka k menu',
+                            'organization' => 'Organizácia',
+                            'job_function' => 'Funkcia',
+                            'work_mobile_phone' => 'Číslo pracovného mobilného telefónu',
+                            'org_website' => 'Webové stránky organizácie',
+                            'work_email' => 'Pracovný e-mail',
+                            'mobile_phone' => 'Číslo súkromného mobilného telefónu',
+                            'other_phone' => 'Iné telefónne číslo',
+                            'website' => 'Osobné webové stránky',
+                            'social_linkedin' => 'LinkedIn profil',
+                            'social_x' => 'X (Twitter) profil',
+                            'social_facebook' => 'Facebook profil',
+                            'social_instagram' => 'Instagram profil',
+                            'social_other' => 'Iné sociálne siete',
+                            'other_contact' => 'Iné kontaktné informácie',
+                            'street' => 'Ulica',
+                            'house_number' => 'Popisné číslo',
+                            'orientation_number' => 'Orientačné číslo',
+                            'zip_code' => 'PSČ',
+                            'city' => 'Obec',
+                            'region' => 'Kraj',
+                            'country' => 'Štát',
+                            'address_note' => 'Poznámka k adrese',
+                            'newsletter_consent' => 'Súhlas so zasielaním noviniek',
+                        ];
+                        ?>
+                        <?php foreach ($fieldLabels as $field => $label): ?>
+                            <div class="form-group">
+                                <label><?= htmlspecialchars($label) ?></label>
+                                <p><?= htmlspecialchars(($registeredData[$field] ?? '') !== '' ? (string) $registeredData[$field] : 'Neuvedené') ?></p>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+
+                    <?php if (!empty($registeredData['avatar_path'])): ?>
+                        <div class="form-group">
+                            <label>Nahraný avatar</label>
+                            <p><a href="<?= htmlspecialchars($registeredData['avatar_path']) ?>" target="_blank" rel="noopener noreferrer">Zobraziť avatar</a></p>
+                        </div>
+                    <?php endif; ?>
+                </div>
+                <div class="auth-links">
+                    <p>Teraz sa môžete <a href="login.php">prihlásiť</a>.</p>
                 </div>
             <?php else: ?>
                 <form method="POST" action="register.php" enctype="multipart/form-data">

@@ -2,7 +2,14 @@
 // Zabezpečené nastavenia relácie
 ini_set('session.cookie_httponly', 1);
 ini_set('session.use_only_cookies', 1);
-ini_set('session.cookie_secure', 1); // Zapnúť len pre HTTPS prostredie
+
+// Secure cookie zapíname iba pri HTTPS, inak sa na HTTP (lokálny vývoj) cookie neuloží.
+$isHttps = (
+    (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off')
+    || (isset($_SERVER['SERVER_PORT']) && (int) $_SERVER['SERVER_PORT'] === 443)
+    || (!empty($_SERVER['HTTP_X_FORWARDED_PROTO']) && strtolower((string) $_SERVER['HTTP_X_FORWARDED_PROTO']) === 'https')
+);
+ini_set('session.cookie_secure', $isHttps ? '1' : '0');
 ini_set('session.cookie_samesite', 'Strict');
 
 // Spustenie relácie
