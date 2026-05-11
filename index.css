@@ -1095,25 +1095,38 @@ input:disabled + .slider:before {
 .form-group label {
   display: block;
   margin-bottom: 0.5rem;
-  font-weight: 600;
-  color: var(--text-primary);
+  font-weight: 500;
+  font-size: 0.92rem;
+  letter-spacing: 0.01em;
+  color: var(--text-secondary);
 }
 
 .form-control {
   width: 100%;
   padding: 0.875rem 1rem;
   font-family: inherit;
-  font-size: 1rem;
+  font-size: 1.03rem;
+  font-weight: 600;
+  line-height: 1.35;
   color: var(--text-primary);
-  background-color: var(--bg-color);
+  background-color: var(--bg-secondary);
   border: 1px solid #94a3b8; /* ZlepĹˇenĂ˝ kontrast orĂˇmovania */
   border-radius: 8px;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 [data-theme="dark"] .form-control {
-  background-color: #0f172a;
+  background-color: #0b1220;
   border: 1px solid #475569; /* ZlepĹˇenĂ˝ kontrast pre dark mode */
+}
+
+.form-control::placeholder {
+  color: #64748b;
+  font-weight: 400;
+}
+
+[data-theme="dark"] .form-control::placeholder {
+  color: #94a3b8;
 }
 
 .form-control:focus {
