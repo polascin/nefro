@@ -41,6 +41,7 @@ try {
         orientation_number VARCHAR(50),
         zip_code VARCHAR(20),
         city VARCHAR(255),
+        district VARCHAR(255),
         region VARCHAR(255),
         country VARCHAR(255),
         address_note TEXT,
@@ -63,6 +64,12 @@ try {
     $isActiveColumnStmt->execute();
     if ((int) $isActiveColumnStmt->fetchColumn() === 0) {
         $pdo->exec("ALTER TABLE users ADD COLUMN is_active TINYINT(1) DEFAULT 1");
+    }
+
+    $districtColumnStmt = $pdo->prepare("SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'users' AND COLUMN_NAME = 'district'");
+    $districtColumnStmt->execute();
+    if ((int) $districtColumnStmt->fetchColumn() === 0) {
+        $pdo->exec("ALTER TABLE users ADD COLUMN district VARCHAR(255) NULL AFTER city");
     }
 
     $profileArchiveSql = "CREATE TABLE IF NOT EXISTS users_profile_archive (

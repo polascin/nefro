@@ -118,7 +118,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'work_email', 'mobile_phone', 'other_phone', 'social_linkedin', 
             'social_x', 'social_facebook', 'social_instagram', 'social_other', 
             'other_contact', 'website', 'birth_date', 'street', 'house_number', 
-            'orientation_number', 'zip_code', 'city', 'region', 'country', 'address_note'
+            'orientation_number', 'zip_code', 'city', 'district', 'region', 'country', 'address_note'
         ];
         
         $data = [];
@@ -203,7 +203,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     other_contact = :other_contact, website = :website, 
                     birth_date = :birth_date, street = :street, house_number = :house_number, 
                     orientation_number = :orientation_number, zip_code = :zip_code, 
-                    city = :city, region = :region, country = :country, 
+                    city = :city, district = :district, region = :region, country = :country, 
                     address_note = :address_note, newsletter_consent = :newsletter_consent,
                     avatar_path = :avatar_path
                     $password_query
@@ -520,6 +520,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <div class="form-group">
                             <label for="city">Obec</label>
                             <input type="text" id="city" name="city" class="form-control" value="<?= htmlspecialchars($user['city'] ?? '') ?>">
+                        </div>
+                        <div class="form-group">
+                            <label for="district">Okres</label>
+                            <input type="text" id="district" name="district" class="form-control" value="<?= htmlspecialchars($user['district'] ?? '') ?>">
                         </div>
                         <div class="form-group">
                             <label for="region">Kraj</label>

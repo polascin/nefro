@@ -82,12 +82,12 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                             username, email, password_hash, gender, pronouns, avatar_path, title_before, first_name, middle_name, last_name,
                             title_after, name_note, organization, job_function, work_mobile_phone, org_website,
                             work_email, mobile_phone, other_phone, social_linkedin, social_x, social_facebook, social_instagram, social_other, other_contact, website, birth_date,
-                            street, house_number, orientation_number, zip_code, city, region, country, address_note, newsletter_consent
+                            street, house_number, orientation_number, zip_code, city, district, region, country, address_note, newsletter_consent
                         ) VALUES (
                             :username, :email, :password_hash, :gender, :pronouns, :avatar_path, :title_before, :first_name, :middle_name, :last_name,
                             :title_after, :name_note, :organization, :job_function, :work_mobile_phone, :org_website,
                             :work_email, :mobile_phone, :other_phone, :social_linkedin, :social_x, :social_facebook, :social_instagram, :social_other, :other_contact, :website, :birth_date,
-                            :street, :house_number, :orientation_number, :zip_code, :city, :region, :country, :address_note, :newsletter_consent
+                            :street, :house_number, :orientation_number, :zip_code, :city, :district, :region, :country, :address_note, :newsletter_consent
                         )";
                         
                         $stmt = $pdo->prepare($sql);
@@ -129,6 +129,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                             'orientation_number' => trim($_POST['orientation_number'] ?? ''),
                             'zip_code' => trim($_POST['zip_code'] ?? ''),
                             'city' => trim($_POST['city'] ?? ''),
+                            'district' => trim($_POST['district'] ?? ''),
                             'region' => trim($_POST['region'] ?? ''),
                             'country' => trim($_POST['country'] ?? ''),
                             'address_note' => trim($_POST['address_note'] ?? ''),
@@ -234,6 +235,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                             'orientation_number' => 'Orientačné číslo',
                             'zip_code' => 'PSČ',
                             'city' => 'Obec',
+                            'district' => 'Okres',
                             'region' => 'Kraj',
                             'country' => 'Štát',
                             'address_note' => 'Poznámka k adrese',
@@ -434,6 +436,10 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                             <div class="form-group">
                                 <label for="city">Obec</label>
                                 <input type="text" id="city" name="city" class="form-control" value="<?= htmlspecialchars($_POST['city'] ?? '') ?>">
+                            </div>
+                            <div class="form-group">
+                                <label for="district">Okres</label>
+                                <input type="text" id="district" name="district" class="form-control" value="<?= htmlspecialchars($_POST['district'] ?? '') ?>">
                             </div>
                             <div class="form-group">
                                 <label for="region">Kraj</label>
