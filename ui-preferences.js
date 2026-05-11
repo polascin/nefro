@@ -130,7 +130,7 @@ function initPrivacyManager() {
     function injectHTML() {
         // Banner
         const bannerHTML = `
-            <div id="${bannerId}" class="cookie-banner ${hasResponded ? 'hidden' : ''}" role="dialog" aria-live="polite" aria-labelledby="cookieBannerTitle" aria-describedby="cookieBannerDesc">
+            <div id="${bannerId}" class="cookie-banner ${hasResponded ? 'hidden' : ''}" role="region" aria-label="Nastavenia súkromia" aria-labelledby="cookieBannerTitle" aria-describedby="cookieBannerDesc">
                 <div class="cookie-content">
                     <h2 id="cookieBannerTitle">Vážime si vaše súkromie</h2>
                     <p id="cookieBannerDesc">
@@ -159,12 +159,12 @@ function initPrivacyManager() {
                         
                         <div class="cookie-category">
                             <div class="category-info">
-                                <h3>Nevyhnutné cookies (Strictly Necessary)</h3>
+                                <h3 id="necessaryCookiesTitle">Nevyhnutné cookies (Strictly Necessary)</h3>
                                 <p>Sú potrebné pre správne fungovanie webu (napr. uloženie tohto súhlasu). Nedajú sa vypnúť.</p>
                             </div>
                             <div class="category-toggle">
                                 <label class="switch">
-                                    <input type="checkbox" checked disabled>
+                                    <input type="checkbox" aria-labelledby="necessaryCookiesTitle" checked disabled>
                                     <span class="slider round"></span>
                                 </label>
                             </div>
@@ -172,12 +172,12 @@ function initPrivacyManager() {
 
                         <div class="cookie-category">
                             <div class="category-info">
-                                <h3>Analytické cookies (Analytics)</h3>
+                                <h3 id="analyticsCookiesTitle">Analytické cookies (Analytics)</h3>
                                 <p>Pomáhajú nám pochopiť, ako návštevníci používajú náš web. Dáta sú zbierané anonymne.</p>
                             </div>
                             <div class="category-toggle">
                                 <label class="switch">
-                                    <input type="checkbox" id="toggleAnalytics" ${currentConsent.analytics ? 'checked' : ''}>
+                                    <input type="checkbox" id="toggleAnalytics" aria-labelledby="analyticsCookiesTitle" ${currentConsent.analytics ? 'checked' : ''}>
                                     <span class="slider round"></span>
                                 </label>
                             </div>
@@ -185,12 +185,12 @@ function initPrivacyManager() {
 
                         <div class="cookie-category">
                             <div class="category-info">
-                                <h3>Marketingové cookies (Marketing)</h3>
+                                <h3 id="marketingCookiesTitle">Marketingové cookies (Marketing)</h3>
                                 <p>Používajú sa na sledovanie návštevníkov naprieč webmi s cieľom zobraziť relevantnú reklamu.</p>
                             </div>
                             <div class="category-toggle">
                                 <label class="switch">
-                                    <input type="checkbox" id="toggleMarketing" ${currentConsent.marketing ? 'checked' : ''}>
+                                    <input type="checkbox" id="toggleMarketing" aria-labelledby="marketingCookiesTitle" ${currentConsent.marketing ? 'checked' : ''}>
                                     <span class="slider round"></span>
                                 </label>
                             </div>
@@ -198,12 +198,12 @@ function initPrivacyManager() {
 
                         <div class="cookie-category">
                             <div class="category-info">
-                                <h3>Preferenčné cookies (Preferences)</h3>
+                                <h3 id="preferencesCookiesTitle">Preferenčné cookies (Preferences)</h3>
                                 <p>Umožňujú stránke zapamätať si informácie, ktoré menia, ako sa stránka správa alebo vyzerá (napr. preferovaný jazyk).</p>
                             </div>
                             <div class="category-toggle">
                                 <label class="switch">
-                                    <input type="checkbox" id="togglePreferences" ${currentConsent.preferences ? 'checked' : ''}>
+                                    <input type="checkbox" id="togglePreferences" aria-labelledby="preferencesCookiesTitle" ${currentConsent.preferences ? 'checked' : ''}>
                                     <span class="slider round"></span>
                                 </label>
                             </div>
