@@ -54,8 +54,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (!empty($current_password) || !empty($new_password) || !empty($new_password_confirm)) {
             if (!password_verify($current_password, $user['password_hash'])) {
                 $errors[] = "Súčasné heslo nie je správne.";
-            } elseif (strlen($new_password) < 8) {
-                $errors[] = "Nové heslo musí mať aspoň 8 znakov.";
+            } elseif (strlen($new_password) < 8 || !preg_match('/[A-Z]/', $new_password) || !preg_match('/[a-z]/', $new_password) || !preg_match('/[0-9]/', $new_password)) {
+                $errors[] = "Nové heslo musí mať aspoň 8 znakov, obsahovať aspoň jedno veľké písmeno, malé písmeno a číslicu.";
             } elseif ($new_password !== $new_password_confirm) {
                 $errors[] = "Nové heslá sa nezhodujú.";
             } else {
@@ -151,7 +151,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profil používateľa - Nefro-projekt Slovensko</title>
-    <script src="theme.js?v=20260509-1"></script>
+    <script src="theme.js?v=20260511-1"></script>
     <link rel="stylesheet" href="index.css?v=20260509-1">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;900&display=swap" rel="stylesheet">
 </head>
@@ -198,7 +198,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <input type="password" id="current_password" name="current_password" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label for="new_password">Nové heslo (min. 8 znakov)</label>
+                            <label for="new_password">Nové heslo <small>(min. 8 znakov, veľké/malé písmená a číslice)</small></label>
                             <input type="password" id="new_password" name="new_password" class="form-control">
                         </div>
                         <div class="form-group">

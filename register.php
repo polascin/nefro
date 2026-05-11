@@ -16,8 +16,8 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
         if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $errors[] = "Zadajte platnú e-mailovú adresu.";
         }
-        if (strlen($password) < 8) {
-            $errors[] = "Heslo musí mať aspoň 8 znakov.";
+        if (strlen($password) < 8 || !preg_match('/[A-Z]/', $password) || !preg_match('/[a-z]/', $password) || !preg_match('/[0-9]/', $password)) {
+            $errors[] = "Heslo musí mať aspoň 8 znakov, obsahovať aspoň jedno veľké písmeno, malé písmeno a číslicu.";
         }
         
         if (empty($username)) {
@@ -135,7 +135,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrácia - Nefro-projekt Slovensko</title>
-    <script src="theme.js?v=20260509-1"></script>
+    <script src="theme.js?v=20260511-1"></script>
     <link rel="stylesheet" href="index.css?v=20260509-1">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;900&display=swap" rel="stylesheet">
 </head>
@@ -177,7 +177,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                                 <input type="email" id="email" name="email" class="form-control" required value="<?= htmlspecialchars($_POST['email'] ?? '') ?>">
                             </div>
                             <div class="form-group">
-                                <label for="password">Heslo * (min. 8 znakov)</label>
+                                <label for="password">Heslo <small>(min. 8 znakov, veľké/malé písmená a číslice)</small> *</label>
                                 <input type="password" id="password" name="password" class="form-control" required>
                             </div>
                         </div>

@@ -14,33 +14,48 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
     if (!validateCsrfToken($_POST['csrf_token'] ?? '')) {
         $errors[] = "Neplatný CSRF token. Skúste to znova.";
     } else {
-        // Jednoduchý limit pre brute-force (sleep)
-        sleep(1);
+        // Ochrana proti brute-force útokom (Zablokovanie po 5 neúspešných pokusoch)
+        if (!isset($_SESSION['login_attempts'])) {
+            $_SESSION['login_attempts'] = 0;
+            $_SESSION['last_login_attempt'] = time();
+        }
 
-        $loginInput = trim($_POST['login'] ?? '');
-        $password = $_POST['password'] ?? '';
-        
-        if (empty($loginInput) || empty($password)) {
-            $errors[] = "Zadajte používateľské meno (alebo e-mail) a heslo.";
+        // Reset počítadla po 5 minútach
+        if (time() - $_SESSION['last_login_attempt'] > 300) {
+            $_SESSION['login_attempts'] = 0;
+        }
+
+        if ($_SESSION['login_attempts'] >= 5) {
+            $errors[] = "Z bezpečnostných dôvodov bolo prihlásenie zablokované. Skúste to znova o 5 minút.";
         } else {
-            try {
-                $stmt = $pdo->prepare("SELECT id, password_hash, username FROM users WHERE email = :login OR username = :login");
-                $stmt->execute(['login' => $loginInput]);
-                $user = $stmt->fetch();
-                
-                if ($user && password_verify($password, $user['password_hash'])) {
-                    // Prihlásenie úspešné
-                    regenerateSession();
-                    $_SESSION['user_id'] = $user['id'];
-                    $_SESSION['username'] = $user['username'];
-                    header("Location: index.php");
-                    exit;
-                } else {
-                    $errors[] = "Nesprávny e-mail alebo heslo.";
+            $loginInput = trim($_POST['login'] ?? '');
+            $password = $_POST['password'] ?? '';
+            
+            if (empty($loginInput) || empty($password)) {
+                $errors[] = "Zadajte používateľské meno (alebo e-mail) a heslo.";
+            } else {
+                try {
+                    $stmt = $pdo->prepare("SELECT id, password_hash, username FROM users WHERE email = :login OR username = :login");
+                    $stmt->execute(['login' => $loginInput]);
+                    $user = $stmt->fetch();
+                    
+                    if ($user && password_verify($password, $user['password_hash'])) {
+                        // Prihlásenie úspešné
+                        regenerateSession();
+                        $_SESSION['user_id'] = $user['id'];
+                        $_SESSION['username'] = $user['username'];
+                        unset($_SESSION['login_attempts']); // Vyčistenie po úspechu
+                        header("Location: index.php");
+                        exit;
+                    } else {
+                        $_SESSION['login_attempts']++;
+                        $_SESSION['last_login_attempt'] = time();
+                        $errors[] = "Nesprávny e-mail alebo heslo.";
+                    }
+                } catch (\PDOException $e) {
+                    error_log("Chyba prihlásenia: " . $e->getMessage());
+                    $errors[] = "Vyskytla sa chyba. Skúste to prosím neskôr.";
                 }
-            } catch (\PDOException $e) {
-                error_log("Chyba prihlásenia: " . $e->getMessage());
-                $errors[] = "Vyskytla sa chyba. Skúste to prosím neskôr.";
             }
         }
     }
