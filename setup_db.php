@@ -15,6 +15,8 @@ try {
         name_note TEXT,
         organization VARCHAR(255),
         job_function VARCHAR(255),
+        work_mobile_phone VARCHAR(50),
+        org_website VARCHAR(255),
         work_email VARCHAR(255),
         mobile_phone VARCHAR(50),
         other_phone VARCHAR(50),

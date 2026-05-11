@@ -36,14 +36,14 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     
                     $sql = "INSERT INTO users (
                         username, email, password_hash, title_before, first_name, middle_name, last_name,
-                        title_after, name_note, organization, job_function, work_email, mobile_phone,
-                        other_phone, social_media, other_contact, website, birth_date, street, house_number,
-                        orientation_number, zip_code, city, region, country, address_note, newsletter_consent
+                        title_after, name_note, organization, job_function, work_mobile_phone, org_website,
+                        work_email, mobile_phone, other_phone, social_media, other_contact, website, birth_date,
+                        street, house_number, orientation_number, zip_code, city, region, country, address_note, newsletter_consent
                     ) VALUES (
                         :username, :email, :password_hash, :title_before, :first_name, :middle_name, :last_name,
-                        :title_after, :name_note, :organization, :job_function, :work_email, :mobile_phone,
-                        :other_phone, :social_media, :other_contact, :website, :birth_date, :street, :house_number,
-                        :orientation_number, :zip_code, :city, :region, :country, :address_note, :newsletter_consent
+                        :title_after, :name_note, :organization, :job_function, :work_mobile_phone, :org_website,
+                        :work_email, :mobile_phone, :other_phone, :social_media, :other_contact, :website, :birth_date,
+                        :street, :house_number, :orientation_number, :zip_code, :city, :region, :country, :address_note, :newsletter_consent
                     )";
                     
                     $stmt = $pdo->prepare($sql);
@@ -59,6 +59,8 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                         'name_note' => trim($_POST['name_note'] ?? ''),
                         'organization' => trim($_POST['organization'] ?? ''),
                         'job_function' => trim($_POST['job_function'] ?? ''),
+                        'work_mobile_phone' => trim($_POST['work_mobile_phone'] ?? ''),
+                        'org_website' => trim($_POST['org_website'] ?? ''),
                         'work_email' => trim($_POST['work_email'] ?? ''),
                         'mobile_phone' => trim($_POST['mobile_phone'] ?? ''),
                         'other_phone' => trim($_POST['other_phone'] ?? ''),
@@ -179,7 +181,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     </div>
 
                     <div class="form-section">
-                        <h3>Pracovné a kontaktné údaje</h3>
+                        <h3>Pracovné údaje</h3>
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="organization">Organizácia</label>
@@ -190,11 +192,25 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                                 <input type="text" id="job_function" name="job_function" class="form-control" value="<?= htmlspecialchars($_POST['job_function'] ?? '') ?>">
                             </div>
                             <div class="form-group">
+                                <label for="work_mobile_phone">Číslo pracovného mobilného telefónu</label>
+                                <input type="tel" id="work_mobile_phone" name="work_mobile_phone" class="form-control" value="<?= htmlspecialchars($_POST['work_mobile_phone'] ?? '') ?>">
+                            </div>
+                            <div class="form-group">
+                                <label for="org_website">Webové stránky organizácie</label>
+                                <input type="url" id="org_website" name="org_website" class="form-control" value="<?= htmlspecialchars($_POST['org_website'] ?? '') ?>">
+                            </div>
+                            <div class="form-group">
                                 <label for="work_email">Pracovný e-mail</label>
                                 <input type="email" id="work_email" name="work_email" class="form-control" value="<?= htmlspecialchars($_POST['work_email'] ?? '') ?>">
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Kontaktné údaje</h3>
+                        <div class="form-grid">
                             <div class="form-group">
-                                <label for="mobile_phone">Číslo mobilného telefónu</label>
+                                <label for="mobile_phone">Číslo súkromného mobilného telefónu</label>
                                 <input type="tel" id="mobile_phone" name="mobile_phone" class="form-control" value="<?= htmlspecialchars($_POST['mobile_phone'] ?? '') ?>">
                             </div>
                             <div class="form-group">
@@ -202,7 +218,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                                 <input type="tel" id="other_phone" name="other_phone" class="form-control" value="<?= htmlspecialchars($_POST['other_phone'] ?? '') ?>">
                             </div>
                             <div class="form-group">
-                                <label for="website">Webové stránky používateľa</label>
+                                <label for="website">Osobné webové stránky</label>
                                 <input type="url" id="website" name="website" class="form-control" value="<?= htmlspecialchars($_POST['website'] ?? '') ?>">
                             </div>
                         </div>

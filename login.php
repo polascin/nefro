@@ -17,15 +17,15 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
         // Jednoduchý limit pre brute-force (sleep)
         sleep(1);
 
-        $email = filter_var(trim($_POST['email'] ?? ''), FILTER_SANITIZE_EMAIL);
+        $loginInput = trim($_POST['login'] ?? '');
         $password = $_POST['password'] ?? '';
         
-        if (empty($email) || empty($password)) {
-            $errors[] = "Zadajte e-mail a heslo.";
+        if (empty($loginInput) || empty($password)) {
+            $errors[] = "Zadajte používateľské meno (alebo e-mail) a heslo.";
         } else {
             try {
-                $stmt = $pdo->prepare("SELECT id, password_hash, username FROM users WHERE email = :email");
-                $stmt->execute(['email' => $email]);
+                $stmt = $pdo->prepare("SELECT id, password_hash, username FROM users WHERE email = :login OR username = :login");
+                $stmt->execute(['login' => $loginInput]);
                 $user = $stmt->fetch();
                 
                 if ($user && password_verify($password, $user['password_hash'])) {
@@ -81,8 +81,8 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
                 
                 <div class="form-group">
-                    <label for="email">E-mailová adresa</label>
-                    <input type="email" id="email" name="email" class="form-control" required value="<?= htmlspecialchars($_POST['email'] ?? '') ?>">
+                    <label for="login">Používateľské meno alebo e-mailová adresa</label>
+                    <input type="text" id="login" name="login" class="form-control" required value="<?= htmlspecialchars($_POST['login'] ?? '') ?>">
                 </div>
                 
                 <div class="form-group">
