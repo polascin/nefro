@@ -119,3 +119,6 @@ temp/
 
 # Environment variables
 env.ini
+*.env.ini
+private/
+env.ini

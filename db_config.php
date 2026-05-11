@@ -7,19 +7,26 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
 
 /**
  * Konfigurácia pripojenia k databáze
- * 
- * POZNÁMKA: Nahraďte 'ZADAJTE_MENO' a 'ZADAJTE_HESLO' vašimi skutočnými údajmi.
  */
-$env = parse_ini_file(__DIR__ . '/env.ini');
-if ($env === false) {
-    exit("Chyba: Konfiguračný súbor env.ini sa nenašiel alebo je neplatný.");
+require_once __DIR__ . '/config_loader.php';
+
+try {
+    $env = loadAppConfig();
+} catch (\RuntimeException $e) {
+    error_log('Konfiguracia DB nebola nacitana: ' . $e->getMessage());
+    exit("Chyba: Konfiguračný súbor sa nenašiel alebo je neplatný.");
 }
 
-$dbHost = $env['DB_HOST'];
-$dbName = $env['DB_NAME'];
-$dbUser = $env['DB_USER'];
-$dbPass = $env['DB_PASS'];
+$dbHost = (string) ($env['DB_HOST'] ?? '');
+$dbName = (string) ($env['DB_NAME'] ?? '');
+$dbUser = (string) ($env['DB_USER'] ?? '');
+$dbPass = (string) ($env['DB_PASS'] ?? '');
 $dbCharset = 'utf8mb4';
+
+if ($dbHost === '' || $dbName === '' || $dbUser === '') {
+    error_log('Konfiguracia DB je nekompletna.');
+    exit("Chyba: Databázová konfigurácia je nekompletná.");
+}
 
 $dsn = "mysql:host=$dbHost;dbname=$dbName;charset=$dbCharset";
 $options = [

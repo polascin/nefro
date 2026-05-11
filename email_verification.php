@@ -1,14 +1,17 @@
 <?php
 
+require_once __DIR__ . '/config_loader.php';
+
 function getEmailEnvConfig(): array {
     static $config = null;
     if ($config !== null) {
         return $config;
     }
 
-    $envPath = __DIR__ . '/env.ini';
-    $env = is_file($envPath) ? parse_ini_file($envPath) : false;
-    if ($env === false) {
+    try {
+        $env = loadAppConfig();
+    } catch (\RuntimeException $e) {
+        error_log('SMTP konfiguracia nebola nacitana: ' . $e->getMessage());
         $env = [];
     }
 
