@@ -3,17 +3,60 @@
  * Autor: MUDr. Ľubomír Polaščín
  */
 
+const consentKey = 'nps_cookie_consent';
+const consentCookieMaxAgeDays = 365;
+
+// Predvolené nastavenia
+const defaultSettings = {
+    necessary: true, // Vždy zapnuté
+    analytics: false,
+    marketing: false,
+    preferences: false,
+    timestamp: null
+};
+
+// Pomocná funkcia pre synchrónne načítanie cookie
+function getCookieSync(name) {
+    const escapedName = name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const match = document.cookie.match(new RegExp(`(?:^|; )${escapedName}=([^;]*)`));
+    return match ? decodeURIComponent(match[1]) : null;
+}
+
+// Synchrónne načítanie súhlasu z localStorage alebo cookie pred inicializáciou GA4
+function readStoredConsentSync() {
+    try {
+        const fromLocalStorage = localStorage.getItem(consentKey);
+        if (fromLocalStorage) {
+            return JSON.parse(fromLocalStorage);
+        }
+    } catch (e) {
+        // Ignorovať chyby localStorage
+    }
+
+    const cookieVal = getCookieSync(consentKey);
+    if (cookieVal) {
+        try {
+            return JSON.parse(cookieVal);
+        } catch (e) {
+            return null;
+        }
+    }
+    return null;
+}
+
+const initialConsent = readStoredConsentSync() || defaultSettings;
+
 // Inicializácia Google Analytics 4 (Google Consent Mode v2)
 window.dataLayer = window.dataLayer || [];
 window.gtag = function(){ dataLayer.push(arguments); };
 
 try {
-    // Predvolené nastavenie súhlasu podľa GDPR - všetko zablokované (okrem default-ov)
+    // Nastavenie defaultného súhlasu podľa uložených preferencií (zabráni strate dát pri prvom zobrazení pre vracajúcich sa návštevníkov)
     gtag('consent', 'default', {
-      'ad_storage': 'denied',
-      'ad_user_data': 'denied',
-      'ad_personalization': 'denied',
-      'analytics_storage': 'denied'
+      'ad_storage': initialConsent.marketing ? 'granted' : 'denied',
+      'ad_user_data': initialConsent.marketing ? 'granted' : 'denied',
+      'ad_personalization': initialConsent.marketing ? 'granted' : 'denied',
+      'analytics_storage': initialConsent.analytics ? 'granted' : 'denied'
     });
 
     // Dynamické načítanie Google Tag Manager scriptu
@@ -29,21 +72,10 @@ try {
 }
 
 function initPrivacyManager() {
-    const consentKey = 'nps_cookie_consent';
-    const consentCookieMaxAgeDays = 365;
     const bannerId = 'cookieConsentBanner';
     const modalId = 'cookieConsentModal';
 
-    // Predvolené nastavenia
-    const defaultSettings = {
-        necessary: true, // Vždy zapnuté
-        analytics: false,
-        marketing: false,
-        preferences: false,
-        timestamp: null
-    };
-
-    // Načítanie súhlasu s ochranou proti chybám (ak má užívateľ prísne blokované cookies)
+    // Načítanie súhlasu s ochranou proti chybám
     let currentConsent = null;
     let hasResponded = false;
 
@@ -51,39 +83,6 @@ function initPrivacyManager() {
         const maxAge = Math.max(1, Math.floor(days * 24 * 60 * 60));
         const securePart = window.location.protocol === 'https:' ? '; Secure' : '';
         document.cookie = `${name}=${encodeURIComponent(value)}; Path=/; Max-Age=${maxAge}; SameSite=Lax${securePart}`;
-    }
-
-    function getCookie(name) {
-        const escapedName = name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-        const match = document.cookie.match(new RegExp(`(?:^|; )${escapedName}=([^;]*)`));
-        return match ? decodeURIComponent(match[1]) : null;
-    }
-
-    function readStoredConsentRaw() {
-        try {
-            const fromLocalStorage = localStorage.getItem(consentKey);
-            if (fromLocalStorage) {
-                return fromLocalStorage;
-            }
-        } catch (e) {
-            console.warn('NPS Privacy Manager: localStorage nie je dostupný, používam cookie fallback.');
-        }
-
-        return getCookie(consentKey);
-    }
-
-    function readStoredConsent() {
-        const raw = readStoredConsentRaw();
-        if (!raw) {
-            return null;
-        }
-
-        try {
-            return JSON.parse(raw);
-        } catch (e) {
-            console.warn('NPS Privacy Manager: Uložený consent je poškodený, použijem predvolené nastavenia.');
-            return null;
-        }
     }
 
     function persistConsent(consentData) {
@@ -116,7 +115,7 @@ function initPrivacyManager() {
     }
 
     try {
-        currentConsent = readStoredConsent();
+        currentConsent = readStoredConsentSync();
         hasResponded = currentConsent !== null;
     } catch (e) {
         console.warn('NPS Privacy Manager: Prehliadač blokuje trvalé uloženie súhlasu.');
@@ -265,7 +264,7 @@ function initPrivacyManager() {
         console.log("Cookie consent aplikovaný do GA4: ", consentData);
     }
 
-    // Ak už bol súhlas udelený predtým, aplikuj ho hneď po načítaní
+    // Ak už bol súhlas udelený predtým, aplikuj ho hneď po načítaní (aktualizuje prípadné zmeny)
     if (hasResponded) {
         applyConsent(currentConsent);
     }
@@ -278,7 +277,7 @@ function initPrivacyManager() {
         document.body.style.overflow = 'hidden'; // Zabrániť scrollovaniu pod modalom
         
         // Obnova aktuálnych nastavení do toggle tlačidiel
-        const saved = readStoredConsent();
+        const saved = readStoredConsentSync();
 
         const effectiveSettings = saved || defaultSettings;
         
