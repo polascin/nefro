@@ -162,6 +162,133 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
       <!-- <article>: Nezávislý obsah, ktorý má zmysel sám o sebe (napr. článok, blogpost) -->
       <article class="primary-article">
         <header>
+          <h2>IgA nefropatia v ére nových terapeutických možností: od podpornej liečby k cielenej terapii</h2>
+          <p class="meta">
+            Publikované:&nbsp; <time datetime="2026-05-11">11. máj 2026</time>
+          </p>
+        </header>
+        <p>
+          IgA nefropatia patrí medzi najčastejšie glomerulové ochorenia na svete. Napriek tomu, že je známa desaťročia, jej liečba prechádza jednou z najvýznamnejších zmien. Nové poznatky o patogenéze a nové lieky posúvajú klinickú prax od všeobecnej nefroprotekcie k cielenej terapii zasahujúcej konkrétne mechanizmy ochorenia.
+        </p>
+        <p>
+          Klinický priebeh je veľmi variabilný: od dlhodobo miernych foriem až po progresiu do chronickej choroby obličiek a terminálneho zlyhania. Typickým prejavom u mladších pacientov býva synfaryngitická makroskopická hematúria, u starších skôr mikroskopická hematúria s rôznym stupňom proteinúrie.
+        </p>
+        <h3>Štvorzásahový model: prečo ochorenie progreduje</h3>
+        <p>
+          Súčasné chápanie IgA nefropatie vychádza zo štvorzásahového modelu: tvorba galaktózovo deficitného IgA1, vznik autoprotilátok, tvorba imunitných komplexov a ich ukladanie v mezangiu glomerulov. Následne sa aktivuje zápal, komplement a procesy vedúce k postupnému poškodeniu obličkového tkaniva.
+        </p>
+        <p>
+          Práve tento patofyziologický rámec umožnil vývoj liekov, ktoré cielia slizničnú produkciu patologického IgA, B-bunkové signály, komplementové dráhy aj mechanizmy spojené s proteinúriou a fibrózou.
+        </p>
+        <h3>Proteinúria ako hlavný terapeutický cieľ</h3>
+        <p>
+          Nové odporúčania KDIGO kladú dôraz na prísnejšie ciele proteinúrie. U pacientov s rizikom progresie má byť cieľom znížiť proteinúriu aspoň pod <strong>0,5 g/deň</strong>, ideálne pod <strong>0,3 g/deň</strong>. Tento cieľ má praktický význam, pretože proteinúria je dôležitý marker aktivity ochorenia aj prediktor budúceho poklesu renálnej funkcie.
+        </p>
+        <h3>Základ zostáva rovnaký: kvalitná nefroprotekcia</h3>
+        <p>
+          Podporná liečba zostáva základom manažmentu IgA nefropatie a má byť optimalizovaná včas. Kľúčové sú najmä ACE inhibítory alebo sartany, dôsledná kontrola krvného tlaku, inhibítory SGLT2 u vhodných pacientov, režimové opatrenia a systematické znižovanie proteinúrie.
+        </p>
+        <p>
+          Dáta zo štúdií DAPA-CKD a EMPA-KIDNEY podporujú nefroprotektívny účinok SGLT2 inhibítorov aj pri proteinurických fenotypoch vrátane IgA nefropatie.
+        </p>
+        <h3>Nové cielené možnosti liečby</h3>
+        <p>
+          Medzi dôležité novinky patria antagonisty endotelínového receptora. <strong>Sparsentan</strong> ako duálny antagonista angiotenzínového a endotelínového receptora viedol v štúdii PROTECT k výraznejšiemu poklesu proteinúrie než irbesartan. <strong>Atrasentan</strong> (štúdia ALIGN) priniesol významné zníženie proteinúrie oproti placebu, pri liečbe je však potrebné sledovať najmä retenciu tekutín.
+        </p>
+        <p>
+          <strong>Cielený budezonid</strong> využíva črevno-obličkovú os a uvoľňuje sa v distálnom ileu, kde pôsobí na Peyerove plaky. Štúdia NefIgArd ukázala zníženie proteinúrie a priaznivejší vývoj eGFR v porovnaní s placebom.
+        </p>
+        <p>
+          <strong>Iptakopan</strong>, inhibítor faktora B alternatívnej komplementovej dráhy, v štúdii APPLAUSE-IgAN významne znížil proteinúriu. Pri tejto liečbe je dôležitá prevencia infekcií opuzdrenými baktériami vrátane adekvátneho očkovania.
+        </p>
+        <p>
+          Významnú pozornosť pútajú aj lieky cieliace APRIL/BAFF osi. <strong>Sibeprenlimab</strong> (anti-APRIL protilátka) podľa dostupných údajov vedie k významnému poklesu proteinúrie. Ďalšie molekuly, ako atacicept alebo povetacicept, sú vo vývoji.
+        </p>
+        <h3>Individualizácia rozhodovania v praxi</h3>
+        <p>
+          Moderná liečba IgA nefropatie si vyžaduje individualizáciu podľa výšky proteinúrie, dynamiky eGFR, krvného tlaku, histologického nálezu, veku, komorbidít, rizika nežiaducich účinkov, plánovania tehotenstva, dostupnosti liečby a preferencií pacienta.
+        </p>
+        <p>
+          Diagnóza ostáva postavená na renálnej biopsii a prognostickom hodnotení (vrátane MEST-C), pričom výber liečby nemá byť mechanický, ale klinicky cielený.
+        </p>
+        <h3>Záver</h3>
+        <p>
+          IgA nefropatia vstupuje do novej terapeutickej éry. Podporná liečba zostáva nevyhnutným základom, no už nie je jedinou možnosťou. Kombinácia nefroprotekcie a cielenej imunomodulácie umožňuje presnejší zásah do biologického podkladu ochorenia a otvára priestor pre lepšie dlhodobé renálne výsledky.
+        </p>
+        <p>
+          <em>Zdroj: odborné zhrnutie aktuálnych terapeutických trendov v IgA nefropatii, vrátane odporúčaní KDIGO a dát zo štúdií PROTECT, ALIGN, NefIgArd, APPLAUSE-IgAN, DAPA-CKD a EMPA-KIDNEY</em>
+        </p>
+        <footer>
+          <p class="author">
+            Autor: <span class="authorname">Dr. Ľubomír Polaščín</span>
+          </p>
+        </footer>
+      </article>
+
+      <article class="primary-article">
+        <header>
+          <h2>Konzervatívnejšia dialyzačná stratégia pri AKI môže podporiť obnovu funkcie obličiek</h2>
+          <p class="meta">
+            Publikované:&nbsp; <time datetime="2026-05-11">11. máj 2026</time>
+          </p>
+        </header>
+        <p>
+          Nová randomizovaná klinická štúdia publikovaná v časopise <em>JAMA</em> naznačuje, že u hospitalizovaných pacientov s akútnym poškodením obličiek (AKI), ktorí vyžadujú dialýzu, môže byť konzervatívnejší prístup k dialýze spojený s častejšou obnovou funkcie obličiek pri prepustení z nemocnice.
+        </p>
+        <p>
+          V praxi sa často rieši otázka, ako intenzívne a ako často dialyzovať pacienta v období, keď ešte existuje šanca na regeneráciu vlastnej renálnej funkcie. Tieto dáta prinášajú dôležitý pohľad: dialýza podávaná pri jasných metabolických alebo klinických indikáciách môže byť u vybraných pacientov výhodnejšia než rutinné plánované dialyzovanie trikrát týždenne.
+        </p>
+        <h3>Čo štúdia sledovala</h3>
+        <p>
+          Multicentrická randomizovaná klinická štúdia porovnávala dve stratégie u hospitalizovaných dospelých pacientov s AKI vyžadujúcim dialýzu. Konzervatívna stratégia znamenala vykonanie dialýzy iba pri splnení konkrétnych metabolických alebo klinických kritérií. Konvenčná stratégia využívala pravidelnú dialýzu trikrát týždenne až do splnenia kritérií obnovy diurézy alebo klírensu kreatinínu.
+        </p>
+        <p>
+          Do štúdie bolo zaradených 221 pacientov v štyroch centrách v USA, pričom intervenciu dostalo 220 účastníkov. Priemerný vek bol 56 rokov, približne dve tretiny tvorili muži a priemerná východisková eGFR dosiahla 64,8 ml/min/1,73 m². Randomizácia prebehla mediánovo 9 dní po začatí náhrady funkcie obličiek.
+        </p>
+        <h3>Hlavný výsledok: obnova funkcie obličiek</h3>
+        <p>
+          Primárnym ukazovateľom bola obnova funkcie obličiek pri prepustení z nemocnice, definovaná ako stav, keď bol pacient nažive, bez potreby dialýzy a mal minimálne 14 po sebe nasledujúcich dní bez dialýzy (vrátane obdobia po prepustení).
+        </p>
+        <ul>
+          <li><strong>64 % pacientov</strong> v konzervatívnej skupine dosiahlo obnovu funkcie obličiek.</li>
+          <li><strong>50 % pacientov</strong> v konvenčnej skupine dosiahlo obnovu funkcie obličiek.</li>
+        </ul>
+        <p>
+          Absolútny rozdiel bol 13,8 %. V neupravenej analýze bol rozdiel štatisticky významný, no v predšpecifikovanej upravenej analýze sa štatistická významnosť nepotvrdila. Veľkosť účinku preto zostáva neistá a vyžaduje potvrdenie vo väčších štúdiách.
+        </p>
+        <h3>Menej dialýz a viac dní bez dialýzy</h3>
+        <p>
+          Konzervatívny prístup bol spojený s nižším počtom dialyzačných procedúr: mediánovo <strong>1,8 dialýzy týždenne</strong> oproti <strong>3,1 dialýzy týždenne</strong> v konvenčnej skupine.
+        </p>
+        <p>
+          Výrazný rozdiel sa ukázal aj v počte dní bez dialýzy do 28. dňa: konzervatívna skupina mala medián <strong>21 po sebe nasledujúcich dní bez dialýzy</strong>, zatiaľ čo konvenčná skupina iba <strong>5 dní</strong>.
+        </p>
+        <h3>Menej epizód intradialytickej hypotenzie</h3>
+        <p>
+          Dôležitým klinickým zistením bol nižší výskyt hypotenzie spojenej s dialýzou: v konzervatívnej skupine bolo zaznamenaných 69 príhod oproti 97 príhodám v konvenčnej skupine.
+        </p>
+        <p>
+          Hypotenzia počas dialýzy môže zhoršovať perfúziu obličiek a potenciálne negatívne ovplyvniť ich regeneráciu. Aj preto je primeraná intenzita dialyzačnej liečby pri AKI klinicky zásadná.
+        </p>
+        <h3>Čo z toho vyplýva pre klinickú prax</h3>
+        <p>
+          U hemodynamicky stabilných pacientov s dialyzačne liečeným AKI nemusí byť automatické pokračovanie v pravidelnej dialýze trikrát týždenne vždy optimálnou stratégiou. Konzervatívnejší, indikačne cielený prístup môže byť spojený s vyšším podielom obnovy funkcie obličiek v neupravenej analýze, menším počtom dialýz, väčším počtom dní bez dialýzy a nižším výskytom hypotenzie.
+        </p>
+        <p>
+          Zároveň však treba výsledky interpretovať opatrne, keďže upravená analýza hlavného výsledku nedosiahla štatistickú významnosť.
+        </p>
+        <p>
+          <em>Zdroj: ReachMD, podľa randomizovanej klinickej štúdie publikovanej v JAMA</em>
+        </p>
+        <footer>
+          <p class="author">
+            Autor: <span class="authorname">Dr. Ľubomír Polaščín</span>
+          </p>
+        </footer>
+      </article>
+
+      <article class="primary-article">
+        <header>
           <h2>Znižovanie krvného tlaku u pacientov s chronickým ochorením obličiek: metaanalýza</h2>
           <p class="meta">
             Publikované:&nbsp; <time datetime="2026-05-08">8. máj 2026</time>
