@@ -26,12 +26,31 @@ function isLoggedIn() {
 }
 
 /**
+ * Funkcia na overenie admin oprávnenia
+ * @return bool True ak je používateľ admin
+ */
+function isAdmin() {
+    return !empty($_SESSION['is_admin']) && (int) $_SESSION['is_admin'] === 1;
+}
+
+/**
  * Funkcia na vyžadovanie prihlásenia (presmeruje ak nie je)
  */
 function requireLogin() {
     if (!isLoggedIn()) {
         header("Location: login.php");
         exit;
+    }
+}
+
+/**
+ * Funkcia na vyžadovanie admin oprávnenia
+ */
+function requireAdmin() {
+    requireLogin();
+    if (!isAdmin()) {
+        header("HTTP/1.1 403 Forbidden");
+        exit("Prístup len pre administrátora.");
     }
 }
 

@@ -10,47 +10,107 @@ if (isLoggedIn()) {
 
 $errors = [];
 
+$host = strtolower((string) ($_SERVER['HTTP_HOST'] ?? $_SERVER['SERVER_NAME'] ?? ''));
+$isLocalDev = $host === 'localhost'
+    || str_starts_with($host, 'localhost:')
+    || str_starts_with($host, '127.0.0.1')
+    || str_starts_with($host, '::1');
+
 if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
-    if (!validateCsrfToken($_POST['csrf_token'] ?? '')) {
+    $postedCsrfToken = $_POST['csrf_token'] ?? '';
+    if (!validateCsrfToken($postedCsrfToken)) {
         $errors[] = "Neplatný CSRF token. Skúste to znova.";
+
+        if ($isLocalDev) {
+            $sessionTokenPresent = !empty($_SESSION['csrf_token']);
+            $postTokenPresent = !empty($postedCsrfToken);
+            $csrfReason = !$postTokenPresent
+                ? 'Vo formulári chýba CSRF token.'
+                : (!$sessionTokenPresent
+                    ? 'V relácii chýba CSRF token (pravdepodobne problém so session cookie alebo stará otvorená karta).'
+                    : 'Token vo formulári sa nezhoduje s tokenom v relácii.');
+
+            $errors[] = "[DEV diagnostika] CSRF zlyhanie: " . $csrfReason;
+        }
     } else {
-        // Ochrana proti brute-force útokom (Zablokovanie po 5 neúspešných pokusoch)
-        if (!isset($_SESSION['login_attempts'])) {
-            $_SESSION['login_attempts'] = 0;
-            $_SESSION['last_login_attempt'] = time();
+        // DB/IP brute-force ochrana (10 pokusov, blokovanie na 15 minút)
+        $clientIp    = $_SERVER['REMOTE_ADDR'] ?? '0.0.0.0';
+        $maxAttempts = 10;
+        $blockSecs   = 900; // 15 minút
+        $ipBlocked   = false;
+
+        try {
+            // Odstrán expirované bloky (staršie ako 1 deň)
+            $pdo->prepare("DELETE FROM login_attempts WHERE blocked_until IS NOT NULL AND blocked_until < DATE_SUB(NOW(), INTERVAL 1 DAY)")
+                ->execute();
+
+            $laStmt = $pdo->prepare("SELECT attempt_count, blocked_until FROM login_attempts WHERE ip = :ip");
+            $laStmt->execute(['ip' => $clientIp]);
+            $laRow = $laStmt->fetch();
+
+            if ($laRow && $laRow['blocked_until'] !== null) {
+                $ipBlocked = true;
+                $errors[] = "Z bezpečnostných dôvodov bol prístup dočasne zablokovaný. Skúste to znova o 15 minút.";
+            }
+        } catch (\PDOException $e) {
+            error_log("Rate limit check error: " . $e->getMessage());
+            // Pri DB chybe pokračuj bez rate limitingu
         }
 
-        // Reset počítadla po 5 minútach
-        if (time() - $_SESSION['last_login_attempt'] > 300) {
-            $_SESSION['login_attempts'] = 0;
-        }
-
-        if ($_SESSION['login_attempts'] >= 5) {
-            $errors[] = "Z bezpečnostných dôvodov bolo prihlásenie zablokované. Skúste to znova o 5 minút.";
-        } else {
+        if (!$ipBlocked) {
             $loginInput = trim($_POST['login'] ?? '');
-            $password = $_POST['password'] ?? '';
-            
+            $password   = $_POST['password'] ?? '';
+
             if (empty($loginInput) || empty($password)) {
                 $errors[] = "Zadajte používateľské meno (alebo e-mail) a heslo.";
             } else {
                 try {
-                    $stmt = $pdo->prepare("SELECT id, password_hash, username FROM users WHERE email = :login OR username = :login");
-                    $stmt->execute(['login' => $loginInput]);
+                    $stmt = $pdo->prepare("SELECT id, password_hash, username, is_admin, is_active FROM users WHERE email = :email OR username = :username");
+                    $stmt->execute([
+                        'email'    => $loginInput,
+                        'username' => $loginInput,
+                    ]);
                     $user = $stmt->fetch();
-                    
+
                     if ($user && password_verify($password, $user['password_hash'])) {
-                        // Prihlásenie úspešné
-                        regenerateSession();
-                        $_SESSION['user_id'] = $user['id'];
-                        $_SESSION['username'] = $user['username'];
-                        unset($_SESSION['login_attempts']); // Vyčistenie po úspechu
-                        header("Location: index.php");
-                        exit;
+                        if (!(int) ($user['is_active'] ?? 1)) {
+                            $errors[] = "Váš účet bol deaktivovaný. Kontaktujte administrátora.";
+                        } else {
+                            // Prihlásenie úspešné — vyčisti IP záznamy
+                            try {
+                                $pdo->prepare("DELETE FROM login_attempts WHERE ip = :ip")->execute(['ip' => $clientIp]);
+                            } catch (\PDOException) { /* ignoruj */ }
+                            regenerateSession();
+                            $_SESSION['user_id']  = $user['id'];
+                            $_SESSION['username'] = $user['username'];
+                            $_SESSION['is_admin'] = (int) ($user['is_admin'] ?? 0);
+                            header("Location: index.php");
+                            exit;
+                        }
                     } else {
-                        $_SESSION['login_attempts']++;
-                        $_SESSION['last_login_attempt'] = time();
-                        $errors[] = "Nesprávny e-mail alebo heslo.";
+                        // Nesprávne prihlásenie — zaznamenaj pokus
+                        try {
+                            $pdo->prepare(
+                                "INSERT INTO login_attempts (ip, attempt_count, first_attempt, last_attempt)
+                                 VALUES (:ip, 1, NOW(), NOW())
+                                 ON DUPLICATE KEY UPDATE attempt_count = attempt_count + 1, last_attempt = NOW()"
+                            )->execute(['ip' => $clientIp]);
+
+                            $cntStmt = $pdo->prepare("SELECT attempt_count FROM login_attempts WHERE ip = :ip");
+                            $cntStmt->execute(['ip' => $clientIp]);
+                            $currentCount = (int) ($cntStmt->fetchColumn() ?? 0);
+
+                            if ($currentCount >= $maxAttempts) {
+                                $pdo->prepare("UPDATE login_attempts SET blocked_until = DATE_ADD(NOW(), INTERVAL :secs SECOND) WHERE ip = :ip")
+                                    ->execute(['secs' => $blockSecs, 'ip' => $clientIp]);
+                                $errors[] = "Príliš veľa neúspešných pokusov. Prístup bol zablokovaný na 15 minút.";
+                            } else {
+                                $errors[] = "Nesprávny e-mail alebo heslo.";
+                            }
+                        } catch (\PDOException $e) {
+                            error_log("Rate limit update error: " . $e->getMessage());
+                            $errors[] = "Nesprávny e-mail alebo heslo.";
+                        }
                     }
                 } catch (\PDOException $e) {
                     error_log("Chyba prihlásenia: " . $e->getMessage());

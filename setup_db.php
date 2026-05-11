@@ -44,13 +44,64 @@ try {
         region VARCHAR(255),
         country VARCHAR(255),
         address_note TEXT,
+        is_admin TINYINT(1) DEFAULT 0,
+        is_active TINYINT(1) DEFAULT 1,
         newsletter_consent TINYINT(1) DEFAULT 0,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";
 
     $pdo->exec($sql);
-    echo "Tabuľka 'users' bola úspešne vytvorená alebo už existuje.";
+
+    $isAdminColumnStmt = $pdo->prepare("SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'users' AND COLUMN_NAME = 'is_admin'");
+    $isAdminColumnStmt->execute();
+    if ((int) $isAdminColumnStmt->fetchColumn() === 0) {
+        $pdo->exec("ALTER TABLE users ADD COLUMN is_admin TINYINT(1) DEFAULT 0");
+    }
+
+    $isActiveColumnStmt = $pdo->prepare("SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'users' AND COLUMN_NAME = 'is_active'");
+    $isActiveColumnStmt->execute();
+    if ((int) $isActiveColumnStmt->fetchColumn() === 0) {
+        $pdo->exec("ALTER TABLE users ADD COLUMN is_active TINYINT(1) DEFAULT 1");
+    }
+
+    $profileArchiveSql = "CREATE TABLE IF NOT EXISTS users_profile_archive (
+        id BIGINT AUTO_INCREMENT PRIMARY KEY,
+        user_id INT NOT NULL,
+        changed_fields JSON NOT NULL,
+        previous_data JSON NOT NULL,
+        changed_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        INDEX idx_users_profile_archive_user_id (user_id),
+        CONSTRAINT fk_users_profile_archive_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";
+
+    $avatarArchiveSql = "CREATE TABLE IF NOT EXISTS users_avatar_archive (
+        id BIGINT AUTO_INCREMENT PRIMARY KEY,
+        user_id INT NOT NULL,
+        action ENUM('updated', 'deleted') NOT NULL,
+        original_path VARCHAR(255) NOT NULL,
+        archived_path VARCHAR(255),
+        replacement_path VARCHAR(255),
+        changed_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        INDEX idx_users_avatar_archive_user_id (user_id),
+        CONSTRAINT fk_users_avatar_archive_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";
+
+    $pdo->exec($profileArchiveSql);
+    $pdo->exec($avatarArchiveSql);
+
+    $loginAttemptsSql = "CREATE TABLE IF NOT EXISTS login_attempts (
+        ip VARCHAR(45) NOT NULL,
+        attempt_count INT NOT NULL DEFAULT 1,
+        first_attempt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        last_attempt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        blocked_until TIMESTAMP NULL DEFAULT NULL,
+        PRIMARY KEY (ip),
+        INDEX idx_login_attempts_blocked (blocked_until)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";
+    $pdo->exec($loginAttemptsSql);
+
+    echo "Tabuľky 'users', 'users_profile_archive' a 'users_avatar_archive' boli úspešne vytvorené alebo už existujú.";
 } catch (\PDOException $e) {
     echo "Chyba pri vytváraní tabuľky: " . $e->getMessage();
 }

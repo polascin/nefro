@@ -27,6 +27,10 @@ $isHomePage = basename($_SERVER['PHP_SELF']) === 'index.php';
         <?php endif; ?>
         <a href="privacy.php" class="site-footer__link">Ochrana osobných údajov (Privacy Policy)</a> <span class="site-footer__separator">|</span> 
         <a href="#cookie-settings" role="button" class="cookie-settings-trigger site-footer__link" aria-haspopup="dialog" aria-controls="cookieConsentModal">Nastavenia Cookies</a>
+        <?php if (function_exists('isLoggedIn') && isLoggedIn()): ?>
+          <span class="site-footer__separator">|</span>
+          <a href="logout.php" class="site-footer__link">Odhlásiť sa</a>
+        <?php endif; ?>
       </p>
     </div>
   </footer>

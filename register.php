@@ -1,6 +1,7 @@
 <?php
 require_once 'auth.php';
 require_once 'db_config.php';
+require_once 'avatar_upload.php';
 
 $errors = [];
 $success = false;
@@ -68,31 +69,11 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     // Spracovanie avatara
                     $avatarPath = null;
                     if (isset($_FILES['avatar']) && $_FILES['avatar']['error'] === UPLOAD_ERR_OK) {
-                        $fileTmpPath = $_FILES['avatar']['tmp_name'];
-                        $fileSize = $_FILES['avatar']['size'];
-                        $fileType = mime_content_type($fileTmpPath);
-                        $maxFileSize = 2 * 1024 * 1024; // 2 MB
-                        
-                        $mimeToExt = ['image/jpeg' => 'jpg', 'image/png' => 'png', 'image/gif' => 'gif', 'image/webp' => 'webp'];
-                        if (!isset($mimeToExt[$fileType])) {
-                            $errors[] = "Nepovolený formát obrázka. Povolené sú iba JPG, PNG, GIF a WebP.";
-                        } elseif ($fileSize > $maxFileSize) {
-                            $errors[] = "Obrázok je príliš veľký. Maximálna povolená veľkosť je 2 MB.";
+                        $avatarUploadResult = processAvatarUpload($_FILES['avatar']);
+                        if (!empty($avatarUploadResult['error'])) {
+                            $errors[] = $avatarUploadResult['error'];
                         } else {
-                            $fileExtension = $mimeToExt[$fileType];
-                            $newFileName = uniqid('avatar_', true) . '.' . $fileExtension;
-                            $uploadDir = __DIR__ . '/uploads/avatars/';
-                            $destPath = 'uploads/avatars/' . $newFileName;
-                            
-                            if (!is_dir($uploadDir)) {
-                                mkdir($uploadDir, 0755, true);
-                            }
-                            
-                            if (move_uploaded_file($fileTmpPath, $uploadDir . $newFileName)) {
-                                $avatarPath = $destPath;
-                            } else {
-                                $errors[] = "Nastala chyba pri nahrávaní obrázka.";
-                            }
+                            $avatarPath = $avatarUploadResult['path'];
                         }
                     }
 

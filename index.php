@@ -147,6 +147,9 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
         <li><a href="#o-nas">O nás</a></li>
         <li><a href="#kontakt">Kontakt</a></li>
         <?php if (isLoggedIn()): ?>
+          <?php if (isAdmin()): ?>
+            <li><a href="admin.php">Admin panel</a></li>
+          <?php endif; ?>
           <li><a href="logout.php">Odhlásiť sa (<?= htmlspecialchars($_SESSION['username'] ?? 'Profil') ?>)</a></li>
         <?php else: ?>
           <li><a href="login.php">Prihlásenie</a></li>

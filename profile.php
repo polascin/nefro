@@ -1,12 +1,19 @@
 <?php
 require_once 'auth.php';
 require_once 'db_config.php';
+require_once 'avatar_upload.php';
 
 requireLogin();
 
 $user_id = $_SESSION['user_id'];
 $errors = [];
 $success = false;
+
+$host = strtolower((string) ($_SERVER['HTTP_HOST'] ?? $_SERVER['SERVER_NAME'] ?? ''));
+$isLocalDev = $host === 'localhost'
+    || str_starts_with($host, 'localhost:')
+    || str_starts_with($host, '127.0.0.1')
+    || str_starts_with($host, '::1');
 
 // Načítanie aktuálnych údajov
 $stmt = $pdo->prepare("SELECT * FROM users WHERE id = :id");
@@ -19,9 +26,89 @@ if (!$user) {
     exit;
 }
 
+$normalizeValue = function ($value) {
+    if ($value === '') {
+        return null;
+    }
+    return $value;
+};
+
+$deleteAvatarFile = function (?string $relativePath): void {
+    if (empty($relativePath)) {
+        return;
+    }
+
+    $uploadsRoot = realpath(__DIR__ . '/uploads/avatars');
+    if ($uploadsRoot === false) {
+        return;
+    }
+
+    $candidate = realpath(__DIR__ . '/' . ltrim($relativePath, '/\\'));
+    if ($candidate === false) {
+        return;
+    }
+
+    if (!str_starts_with($candidate, $uploadsRoot . DIRECTORY_SEPARATOR)) {
+        return;
+    }
+
+    if (is_file($candidate)) {
+        @unlink($candidate);
+    }
+};
+
+$archiveAvatarVersion = function (int $userId, string $action, ?string $originalPath, ?string $replacementPath) use ($pdo): void {
+    if (empty($originalPath)) {
+        return;
+    }
+
+    $uploadsRoot = realpath(__DIR__ . '/uploads/avatars');
+    $originalAbsolute = realpath(__DIR__ . '/' . ltrim($originalPath, '/\\'));
+
+    $archivedPath = null;
+    if ($uploadsRoot !== false && $originalAbsolute !== false && str_starts_with($originalAbsolute, $uploadsRoot . DIRECTORY_SEPARATOR) && is_file($originalAbsolute)) {
+        $archiveDirAbsolute = __DIR__ . '/uploads/avatars/archive/' . $userId;
+        if (!is_dir($archiveDirAbsolute)) {
+            mkdir($archiveDirAbsolute, 0755, true);
+        }
+
+        if (is_dir($archiveDirAbsolute)) {
+            $safeBaseName = preg_replace('/[^A-Za-z0-9._-]/', '_', basename($originalPath));
+            $archiveFileName = date('Ymd_His') . '_' . $action . '_' . $safeBaseName;
+            $archiveAbsolute = $archiveDirAbsolute . '/' . $archiveFileName;
+
+            if (@copy($originalAbsolute, $archiveAbsolute)) {
+                $archivedPath = 'uploads/avatars/archive/' . $userId . '/' . $archiveFileName;
+            }
+        }
+    }
+
+    $archiveStmt = $pdo->prepare("INSERT INTO users_avatar_archive (user_id, action, original_path, archived_path, replacement_path) VALUES (:user_id, :action, :original_path, :archived_path, :replacement_path)");
+    $archiveStmt->execute([
+        'user_id' => $userId,
+        'action' => $action,
+        'original_path' => $originalPath,
+        'archived_path' => $archivedPath,
+        'replacement_path' => $replacementPath,
+    ]);
+};
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (!validateCsrfToken($_POST['csrf_token'] ?? '')) {
+    $postedCsrfToken = $_POST['csrf_token'] ?? '';
+    if (!validateCsrfToken($postedCsrfToken)) {
         $errors[] = "Neplatný CSRF token. Skúste to znova.";
+
+        if ($isLocalDev) {
+            $sessionTokenPresent = !empty($_SESSION['csrf_token']);
+            $postTokenPresent = !empty($postedCsrfToken);
+            $csrfReason = !$postTokenPresent
+                ? 'Vo formulári chýba CSRF token.'
+                : (!$sessionTokenPresent
+                    ? 'V relácii chýba CSRF token (pravdepodobne problém so session cookie alebo stará otvorená karta).'
+                    : 'Token vo formulári sa nezhoduje s tokenom v relácii.');
+
+            $errors[] = "[DEV diagnostika] CSRF zlyhanie: " . $csrfReason;
+        }
     } else {
         // Zber polí
         $fields = [
@@ -74,34 +161,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Upload avatara
         $avatar_path = $user['avatar_path'];
-        if (isset($_FILES['avatar']) && $_FILES['avatar']['error'] === UPLOAD_ERR_OK) {
-            $allowed_types = ['image/jpeg' => 'jpg', 'image/png' => 'png', 'image/gif' => 'gif', 'image/webp' => 'webp'];
-            $max_size = 2 * 1024 * 1024; // 2 MB
-            $detected_mime = mime_content_type($_FILES['avatar']['tmp_name']);
-            
-            if ($_FILES['avatar']['size'] > $max_size) {
-                $errors[] = "Súbor avatara je príliš veľký (max 2 MB).";
-            } elseif (!isset($allowed_types[$detected_mime])) {
-                $errors[] = "Nepodporovaný formát avatara. Povolené sú JPG, PNG, GIF a WebP.";
+        $removeAvatar = isset($_POST['remove_avatar']) && $_POST['remove_avatar'] === '1';
+        $hasNewAvatarUpload = isset($_FILES['avatar']) && $_FILES['avatar']['error'] === UPLOAD_ERR_OK;
+
+        $avatarAction = null;
+        $newUploadedAvatarPath = null;
+
+        if (empty($errors) && $removeAvatar && !$hasNewAvatarUpload) {
+            if (!empty($avatar_path)) {
+                $avatarAction = 'deleted';
+            }
+            $avatar_path = null;
+        }
+
+        if (empty($errors) && $hasNewAvatarUpload) {
+            $avatarUploadResult = processAvatarUpload($_FILES['avatar']);
+            if (!empty($avatarUploadResult['error'])) {
+                $errors[] = $avatarUploadResult['error'];
             } else {
-                $upload_dir = __DIR__ . '/uploads/avatars/';
-                if (!is_dir($upload_dir)) {
-                    mkdir($upload_dir, 0755, true);
+                $newUploadedAvatarPath = $avatarUploadResult['path'];
+                if (!empty($avatar_path)) {
+                    $avatarAction = 'updated';
                 }
-                
-                $extension = $allowed_types[$detected_mime];
-                $filename = uniqid('avatar_', true) . '.' . $extension;
-                $destination = $upload_dir . $filename;
-                
-                if (move_uploaded_file($_FILES['avatar']['tmp_name'], $destination)) {
-                    // Zmazanie starého avatara
-                    if (!empty($user['avatar_path']) && file_exists(__DIR__ . '/' . $user['avatar_path'])) {
-                        unlink(__DIR__ . '/' . $user['avatar_path']);
-                    }
-                    $avatar_path = 'uploads/avatars/' . $filename;
-                } else {
-                    $errors[] = "Chyba pri nahrávaní avatara.";
-                }
+                $avatar_path = $newUploadedAvatarPath;
             }
         }
         
@@ -131,15 +213,54 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $params['avatar_path'] = $avatar_path;
                 $params['id'] = $user_id;
                 $params = array_merge($params, $password_params);
-                
-                $stmt = $pdo->prepare($sql);
-                $stmt->execute($params);
+
+                $changedFields = [];
+                $trackedFields = array_merge(array_keys($data), ['avatar_path']);
+                foreach ($trackedFields as $field) {
+                    $oldValue = $normalizeValue($user[$field] ?? null);
+                    $newValue = $normalizeValue($params[$field] ?? null);
+                    if ($oldValue !== $newValue) {
+                        $changedFields[] = $field;
+                    }
+                }
+
+                if (!empty($password_params)) {
+                    $changedFields[] = 'password_hash';
+                }
+
+                if (empty($changedFields)) {
+                    $success = true;
+                } else {
+                    $pdo->beginTransaction();
+
+                    $historyStmt = $pdo->prepare("INSERT INTO users_profile_archive (user_id, changed_fields, previous_data) VALUES (:user_id, :changed_fields, :previous_data)");
+                    $historyStmt->execute([
+                        'user_id' => $user_id,
+                        'changed_fields' => json_encode(array_values(array_unique($changedFields)), JSON_UNESCAPED_UNICODE),
+                        'previous_data' => json_encode($user, JSON_UNESCAPED_UNICODE),
+                    ]);
+
+                    $stmt = $pdo->prepare($sql);
+                    $stmt->execute($params);
+
+                    $oldAvatarPath = $user['avatar_path'] ?? null;
+                    $avatarChanged = $oldAvatarPath !== $avatar_path;
+                    if ($avatarChanged && !empty($oldAvatarPath) && ($avatarAction === 'updated' || $avatarAction === 'deleted')) {
+                        $archiveAvatarVersion($user_id, $avatarAction, $oldAvatarPath, $avatar_path);
+                        $deleteAvatarFile($oldAvatarPath);
+                    }
+
+                    $pdo->commit();
+                    $success = true;
+                }
+
+                if (!$success && !empty($newUploadedAvatarPath)) {
+                    $deleteAvatarFile($newUploadedAvatarPath);
+                }
                 
                 if (!empty($data['username'])) {
                     $_SESSION['username'] = $data['username'];
                 }
-                
-                $success = true;
                 
                 // Obnova údajov
                 $stmt = $pdo->prepare("SELECT * FROM users WHERE id = :id");
@@ -147,6 +268,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $user = $stmt->fetch();
                 
             } catch (\PDOException $e) {
+                if ($pdo->inTransaction()) {
+                    $pdo->rollBack();
+                }
+
+                if (!empty($newUploadedAvatarPath)) {
+                    $deleteAvatarFile($newUploadedAvatarPath);
+                }
+
                 if ($e->getCode() == 23000) {
                     $errors[] = "Toto používateľské meno už niekto používa.";
                 } else {
@@ -235,6 +364,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <label for="avatar" class="avatar-upload-label">Profilová fotografia (Avatar)</label>
                             <input type="file" id="avatar" name="avatar" class="form-control" accept="image/jpeg, image/png, image/gif, image/webp" onchange="previewAvatar(event)">
                             <small class="avatar-upload-hint">Zvoľte nový obrázok, ak chcete zmeniť aktuálny.</small>
+                            <?php if (!empty($user['avatar_path'])): ?>
+                                <div class="form-check">
+                                    <input type="checkbox" id="remove_avatar" name="remove_avatar" value="1" <?= isset($_POST['remove_avatar']) ? 'checked' : '' ?>>
+                                    <label for="remove_avatar">Vymazať aktuálny obrázok profilu</label>
+                                </div>
+                            <?php endif; ?>
                         </div>
                     </div>
 
@@ -431,7 +566,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     function previewAvatar(event) {
         const input = event.target;
         const preview = document.getElementById('avatarPreview');
+        const removeCheckbox = document.getElementById('remove_avatar');
         if (input.files && input.files[0]) {
+            if (removeCheckbox) {
+                removeCheckbox.checked = false;
+            }
+            preview.dataset.isDefault = 'false';
             const reader = new FileReader();
             reader.onload = function(e) {
                 preview.src = e.target.result;
@@ -449,7 +589,35 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     document.addEventListener('DOMContentLoaded', () => {
+        const preview = document.getElementById('avatarPreview');
+        const input = document.getElementById('avatar');
+        const removeCheckbox = document.getElementById('remove_avatar');
+        const originalAvatarSrc = '<?= htmlspecialchars($user['avatar_path'] ?? '') ?>';
+
         updateDefaultAvatar();
+
+        if (removeCheckbox) {
+            removeCheckbox.addEventListener('change', () => {
+                if (removeCheckbox.checked) {
+                    preview.dataset.isDefault = 'true';
+                    updateDefaultAvatar();
+                    return;
+                }
+
+                if (input.files && input.files[0]) {
+                    previewAvatar({ target: input });
+                    return;
+                }
+
+                if (originalAvatarSrc) {
+                    preview.dataset.isDefault = 'false';
+                    preview.src = originalAvatarSrc;
+                } else {
+                    preview.dataset.isDefault = 'true';
+                    updateDefaultAvatar();
+                }
+            });
+        }
         
         const observer = new MutationObserver((mutations) => {
             mutations.forEach((mutation) => {
