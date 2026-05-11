@@ -167,6 +167,266 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
       <!-- <article>: Nezávislý obsah, ktorý má zmysel sám o sebe (napr. článok, blogpost) -->
       <article class="primary-article">
         <header>
+          <h2>Tirzepatid verzus semaglutid: nižšia mortalita a menej gastrointestinálnych komplikácií?</h2>
+          <p class="meta">
+            Publikované:&nbsp; <time datetime="2026-05-11">11. máj 2026</time>
+          </p>
+        </header>
+        <p><strong>Tirzepatid bol vo veľkej observačnej analýze z reálnej klinickej praxe spojený s nižšou celkovou mortalitou a s menším výskytom niektorých gastrointestinálnych nežiaducich udalostí v porovnaní so semaglutidom. Výsledky boli prezentované na Digestive Disease Week 2026 a môžu byť zaujímavé najmä pre diabetológov, internistov, nefrológov, kardiológov a lekárov starajúcich sa o pacientov s obezitou a diabetom 2. typu.</strong></p>
+        <p>Tirzepatid a semaglutid patria medzi lieky, ktoré výrazne zmenili manažment diabetu 2. typu a obezity. Semaglutid pôsobí ako agonista GLP-1 receptorov, zatiaľ čo tirzepatid je duálny inkretínový agonista s účinkom na receptory GIP a GLP-1. Oba lieky zlepšujú glykemickú kontrolu, podporujú redukciu telesnej hmotnosti a majú potenciálne kardiometabolické benefity.</p>
+        <p>Nové údaje z veľkej globálnej kohorty však naznačujú, že medzi týmito dvoma molekulami môžu existovať rozdiely nielen v účinnosti, ale aj v bezpečnostnom profile.</p>
+
+        <h3>Veľká analýza z reálnej klinickej praxe</h3>
+        <p>Výskumníci využili databázu <strong>TriNetX Global Collaborative Network</strong>, ktorá umožňuje analyzovať veľké súbory pacientov z bežnej praxe. Do štúdie zaradili pacientov s nadváhou alebo obezitou a diabetom 2. typu, ktorí začali liečbu buď tirzepatidom, alebo semaglutidom.</p>
+        <p>Po párovaní podľa propensity score vznikli dve veľké, porovnateľné skupiny:</p>
+        <ul>
+          <li><strong>126 971 pacientov</strong> iniciujúcich tirzepatid,</li>
+          <li><strong>126 971 pacientov</strong> iniciujúcich semaglutid.</li>
+        </ul>
+        <p>Pacienti, ktorí užívali oba lieky, boli z analýzy vylúčení. Sledované obdobie sa pohybovalo od 1 dňa do 5 rokov po začiatku liečby.</p>
+        <p>Autori hodnotili najmä:</p>
+        <ul>
+          <li>celkovú mortalitu,</li>
+          <li>gastroparézu,</li>
+          <li>paralytický ileus alebo intestinálnu obštrukciu,</li>
+          <li>aspiračnú pneumonitídu.</li>
+        </ul>
+
+        <h3>Nižšia celková mortalita pri tirzepatide</h3>
+        <p>Najvýraznejší rozdiel sa týkal celkovej mortality. V skupine s tirzepatidom bolo zaznamenaných <strong>1182 úmrtí</strong>, zatiaľ čo v skupine so semaglutidom <strong>1998 úmrtí</strong>.</p>
+        <p>V percentách to predstavovalo:</p>
+        <ul>
+          <li><strong>0,9 % pri tirzepatide</strong>,</li>
+          <li><strong>1,6 % pri semaglutide</strong>.</li>
+        </ul>
+        <p>Relatívne riziko bolo <strong>0,59</strong>, čo naznačuje približne <strong>41 % relatívne nižšie riziko celkovej mortality</strong> u pacientov liečených tirzepatidom v porovnaní so semaglutidom.</p>
+        <p>Treba však zdôrazniť, že ide o observačné údaje. Takýto typ analýzy vie ukázať asociáciu, nie definitívnu kauzalitu. Inými slovami, výsledok neznamená automaticky, že tirzepatid sám osebe „spôsobil" nižšiu mortalitu. Môžu sa uplatniť aj rozdiely v charakteristikách pacientov, predpisovacej praxi, dávkach, adherencii či dostupnosti zdravotnej starostlivosti.</p>
+
+        <h3>Menej ileu, črevnej obštrukcie a aspiračnej pneumonitídy</h3>
+        <p>Tirzepatid bol spojený aj s nižším rizikom niektorých gastrointestinálnych komplikácií.</p>
+        <p>Výskyt paralytického ileu alebo intestinálnej obštrukcie bol:</p>
+        <ul>
+          <li><strong>0,9 % pri tirzepatide</strong>,</li>
+          <li><strong>1,0 % pri semaglutide</strong>,</li>
+        </ul>
+        <p>s relatívnym rizikom <strong>0,84</strong>.</p>
+        <p>Aspiračná pneumonitída bola tiež menej častá pri tirzepatide:</p>
+        <ul>
+          <li><strong>0,3 % pri tirzepatide</strong>,</li>
+          <li><strong>0,4 % pri semaglutide</strong>,</li>
+        </ul>
+        <p>s relatívnym rizikom <strong>0,69</strong>.</p>
+        <p>Riziko gastroparézy bolo medzi skupinami podobné:</p>
+        <ul>
+          <li><strong>1,0 % pri tirzepatide</strong>,</li>
+          <li><strong>1,1 % pri semaglutide</strong>,</li>
+        </ul>
+        <p>s relatívnym rizikom <strong>0,95</strong>.</p>
+        <p>Tieto rozdiely sú numericky malé, ale pri veľmi veľkých populáciách môžu byť klinicky významné, najmä ak ide o pacientov s vyšším rizikom gastrointestinálnych komplikácií, aspiračných udalostí alebo perioperačných problémov.</p>
+
+        <h3>Prečo je to prekvapivé?</h3>
+        <p>Podľa hlavnej riešiteľky Aasmy Shaukat, MD, z NYU Langone Health v New Yorku bolo prekvapivé, že tirzepatid bol napriek duálnemu inkretínovému mechanizmu spojený s menším počtom nežiaducich udalostí.</p>
+        <p>Pri inkretínovej liečbe sa často diskutuje spomalenie vyprázdňovania žalúdka, nauzea, vracanie, gastroparéza a potenciálne aspiračné riziko pri anestézii alebo endoskopii. Dalo by sa preto očakávať, že silnejší alebo širší inkretínový efekt môže priniesť viac gastrointestinálnych problémov. Táto analýza však naznačuje opak, aspoň v sledovaných parametroch.</p>
+        <p>Autori posteru uviedli, že tirzepatid môže v rutinnej praxi ponúkať priaznivejší pomer benefitu a rizika, kombinujúci silnejšie metabolické účinky so zachovanou žalúdočnou motilitou a nižším aspiračným rizikom.</p>
+
+        <h3>Čo z toho vyplýva pre klinickú prax?</h3>
+        <p>Výsledky môžu podporiť preferenciu tirzepatidu u vhodných pacientov s diabetom 2. typu a obezitou, najmä ak je cieľom výrazná metabolická intervencia a zároveň minimalizácia niektorých gastrointestinálnych rizík.</p>
+        <p>Pre nefrologickú a internistickú prax je táto téma zaujímavá z viacerých dôvodov. Pacienti s diabetom 2. typu, obezitou, chronickou chorobou obličiek a vysokým kardiovaskulárnym rizikom často potrebujú liečbu, ktorá presahuje samotné zníženie HbA1c. Inkretínová terapia je čoraz viac vnímaná ako súčasť komplexnej kardiorenálno-metabolickej ochrany.</p>
+        <p>Pri výbere medzi semaglutidom a tirzepatidom však treba zohľadniť:</p>
+        <ul>
+          <li>indikáciu liečby,</li>
+          <li>dostupnosť a úhradu,</li>
+          <li>renálnu funkciu,</li>
+          <li>kardiovaskulárne riziko,</li>
+          <li>telesnú hmotnosť a metabolické ciele,</li>
+          <li>predchádzajúcu toleranciu liečby,</li>
+          <li>gastrointestinálne príznaky,</li>
+          <li>perioperačné alebo endoskopické riziko,</li>
+          <li>pacientove preferencie a adherenciu.</li>
+        </ul>
+
+        <h3>Opatrnosť pri interpretácii</h3>
+        <p>Napriek veľkému počtu pacientov má štúdia dôležité limity. Ide o observačnú analýzu z databázy reálnej klinickej praxe, nie o randomizovanú kontrolovanú štúdiu. Aj po párovaní pacientov môže pretrvávať reziduálne skreslenie. Niektoré premenné môžu byť neúplne zachytené alebo nesprávne kódované. Dôležité môže byť aj dávkovanie, dĺžka liečby, adherencia a dôvod výberu konkrétneho lieku.</p>
+        <p>Samotní autori zdôraznili, že výsledky si vyžadujú potvrdenie v ďalších kohortách a v prospektívnych štúdiách. Plánujú tiež skúmať vzťah medzi dávkou a odpoveďou.</p>
+
+        <h3>Praktický záver</h3>
+        <p>Táto veľká globálna analýza naznačuje, že <strong>tirzepatid bol v reálnej praxi spojený s nižšou celkovou mortalitou, nižším rizikom ileu alebo črevnej obštrukcie a nižším výskytom aspiračnej pneumonitídy v porovnaní so semaglutidom</strong>. Riziko gastroparézy bolo medzi oboma liekmi podobné.</p>
+        <p>Tieto výsledky sú klinicky zaujímavé, ale zatiaľ by nemali viesť k zjednodušenému záveru, že tirzepatid je univerzálne lepšou voľbou pre každého pacienta. Skôr podporujú individualizovaný výber liečby, pri ktorom sa hodnotí nielen HbA1c a telesná hmotnosť, ale aj celkový kardiorenálno-metabolický profil, gastrointestinálna tolerancia a konkrétne riziká pacienta.</p>
+        <p>
+          <em>Zdroj: Spracované podľa Medscape Medical News: „Tirzepatide Tied to Less Mortality and AEs Than Semaglutide", 2026.</em>
+        </p>
+        <footer>
+          <p class="author">
+            Autor: <span class="authorname">Dr. Ľubomír Polaščín</span>
+          </p>
+        </footer>
+      </article>
+
+      <!-- <article>: Nezávislý obsah, ktorý má zmysel sám o sebe (napr. článok, blogpost) -->
+      <article class="primary-article">
+        <header>
+          <h2>GLP-1 agonisty pred operáciou: vysadiť alebo pokračovať?</h2>
+          <p class="meta">
+            Publikované:&nbsp; <time datetime="2026-05-11">11. máj 2026</time>
+          </p>
+        </header>
+        <p><strong>Moderné antidiabetiká a antiobezitiká zo skupiny agonistov GLP-1 receptorov priniesli výrazný pokrok v liečbe diabetu 2. typu, obezity aj kardiorenálnej ochrany. V perioperačnej medicíne však otvorili praktickú otázku: majú sa pred plánovaným výkonom vysadiť, alebo je bezpečnejšie v liečbe pokračovať?</strong></p>
+        <p>Agonisty GLP-1 receptorov, medzi ktoré patria napríklad semaglutid, liraglutid, dulaglutid či tirzepatid s účinkom na inkretínový systém, znižujú glykémiu, tlmia chuť do jedla a podporujú redukciu hmotnosti. Ich účinok na tráviaci trakt však môže byť významný aj z pohľadu anestéziológie. Spomaľujú vyprázdňovanie žalúdka, čím môžu u niektorých pacientov zvyšovať objem reziduálneho žalúdočného obsahu pred anestéziou.</p>
+
+        <h3>Prečo je to dôležité pred operáciou?</h3>
+        <p>Pri celkovej anestézii je jednou z obáv aspirácia žalúdočného obsahu do dýchacích ciest. Ide síce o zriedkavú komplikáciu, no potenciálne závažnú. Práve preto sa pred operačnými výkonmi dodržiavajú pravidlá predoperačného hladovania.</p>
+        <p>Novšie údaje ukazujú, že pacienti liečení GLP-1 agonistami môžu mať vyšší reziduálny objem žalúdka. Tento efekt sa pozoruje pri krátkodobo aj dlhodobo pôsobiacich prípravkoch, pričom výraznejší môže byť pri dlhodobo pôsobiacich liekoch podávaných raz týždenne. Zaujímavé je, že spomalené vyprázdňovanie žalúdka môže pretrvávať aj viac ako 7 dní po prerušení liečby.</p>
+        <p>Riziko môže byť vyššie najmä:</p>
+        <ul>
+          <li>pri vyšších dávkach,</li>
+          <li>počas úvodnej titrácie dávky,</li>
+          <li>u pacientov s gastrointestinálnymi príznakmi,</li>
+          <li>pri diabetickej autonómnej neuropatii,</li>
+          <li>pri súbežnom užívaní liekov spomaľujúcich motilitu tráviaceho traktu, napríklad opioidov.</li>
+        </ul>
+
+        <h3>Vyšší objem žalúdka neznamená automaticky vyššiu aspiráciu</h3>
+        <p>Kľúčový problém spočíva v tom, že vyšší reziduálny objem žalúdka síce bol opakovane popísaný, ale jednoznačný nárast klinicky potvrdených aspirácií sa zatiaľ nepreukázal.</p>
+        <p>Aspirácia pri modernej anestézii zostáva zriedkavá, s odhadovanou incidenciou približne 0,05 až 0,20 %. Viaceré metaanalýzy nepreukázali jasné zvýšenie rizika aspirácie u pacientov užívajúcich GLP-1 agonisty, hoci žalúdočný objem môže byť vyšší. Niektoré práce naznačujú možný nárast rizika, ale dôkazy sú zatiaľ limitované a metodicky rôznorodé.</p>
+
+        <h3>Má zmysel liečbu pred operáciou prerušiť?</h3>
+        <p>Staršie odporúčania navrhovali vysadiť denné prípravky približne 24 hodín pred výkonom a týždenné prípravky niekoľko dní pred operáciou. Tento prístup sa však v súčasnosti prehodnocuje.</p>
+        <p>Dostupné údaje totiž neukazujú jasný vzťah medzi dĺžkou prerušenia liečby a poklesom reziduálneho žalúdočného objemu. Stabilizácia vyprázdňovania žalúdka môže trvať niekoľko týždňov, nie iba niekoľko dní. Navyše neexistuje presvedčivý dôkaz, že krátkodobé vysadenie GLP-1 agonistu pred výkonom reálne znižuje výskyt aspirácie.</p>
+        <p>Na druhej strane vysadenie liečby môže mať svoje nevýhody:</p>
+        <ul>
+          <li>zhoršenie glykemickej kontroly,</li>
+          <li>potrebu úpravy antidiabetickej liečby,</li>
+          <li>stratu časti kardiovaskulárneho a renálneho benefitu,</li>
+          <li>vyššiu organizačnú záťaž pre pacienta aj lekára.</li>
+        </ul>
+        <p>Pre nefrologickú prax je tento aspekt mimoriadne dôležitý. Mnohí pacienti s diabetom 2. typu, chronickou chorobou obličiek, obezitou a vysokým kardiovaskulárnym rizikom môžu z GLP-1 liečby profitovať. Automatické vysadzovanie bez individuálneho posúdenia preto nemusí byť optimálne.</p>
+
+        <h3>Predlžovať hladovanie? Zatiaľ nie</h3>
+        <p>Aktuálne dôkazy nepodporujú rutinné predlžovanie predoperačného hladovania u pacientov užívajúcich GLP-1 agonisty. Dlhšie hladovanie nemusí zlepšiť vyprázdňovanie žalúdka a môže viesť k dehydratácii, nauzee, úzkosti a celkovému diskomfortu.</p>
+        <p>Štandardné pravidlá predoperačného hladovania by sa mali dodržiavať, pokiaľ nie je podozrenie na gastroparézu alebo iný klinicky významný problém s vyprázdňovaním žalúdka.</p>
+
+        <h3>Úloha ultrazvuku žalúdka</h3>
+        <p>Jedným z praktických riešení môže byť predoperačná ultrasonografia žalúdka. Ide o neinvazívne vyšetrenie, ktoré umožňuje zhodnotiť obsah žalúdka krátko pred výkonom. Ak je nález rizikový alebo nejasný, anestéziológ môže upraviť stratégiu, napríklad zvoliť rýchlu sekvenčnú indukciu, zvýšené aspiračné opatrenia alebo preferovať regionálnu anestéziu, ak je to vhodné.</p>
+
+        <h3>Súčasný trend: individuálne rozhodovanie</h3>
+        <p>Novšie odporúčania zdôrazňujú personalizovaný prístup. Francúzske odborné odporúčania z roku 2025, pripravené anestéziologickou a diabetologickou odbornou spoločnosťou, neodporúčajú rutinné vysadenie dlhodobo pôsobiacich GLP-1 agonistov do 7 dní pred operáciou u nízkorizikových pacientov.</p>
+        <p>Rozhodovanie by malo zohľadniť:</p>
+        <ul>
+          <li>typ GLP-1 lieku a dávkovací režim,</li>
+          <li>fázu liečby, najmä titráciu dávky,</li>
+          <li>prítomnosť nauzey, vracania, pocitu plnosti alebo iných príznakov gastroparézy,</li>
+          <li>diabetickú neuropatiu,</li>
+          <li>obezitu a pridružené ochorenia,</li>
+          <li>súbežnú liečbu ovplyvňujúcu motilitu tráviaceho traktu,</li>
+          <li>typ výkonu a plánovaný spôsob anestézie.</li>
+        </ul>
+
+        <h3>Praktický záver</h3>
+        <p>GLP-1 agonisty pred operáciou nemožno posudzovať jednoduchým pravidlom „vysadiť všetkým" alebo „pokračovať u všetkých". Dôkazy naznačujú zvýšený reziduálny žalúdočný objem, ale zatiaľ nepreukazujú jednoznačné zvýšenie výskytu aspirácie. Krátkodobé prerušenie liečby nemusí spoľahlivo odstrániť riziko, no môže zhoršiť metabolickú stabilitu pacienta.</p>
+        <p>Najrozumnejším prístupom je individuálne zhodnotenie rizika v spolupráci anestéziológa, diabetológa, internistu, prípadne nefrológa. U nízkorizikových pacientov môže byť pokračovanie v liečbe primerané. U pacientov s príznakmi gastroparézy, počas titrácie dávky alebo pri ďalších rizikových faktoroch je vhodné zvážiť špecifické anestéziologické opatrenia, prípadne ultrazvukové posúdenie žalúdka.</p>
+        <p>
+          <em>Zdroj: Spracované podľa Medscape, článok „GLP-1 Drugs and Surgery: Stop or Continue?", 2026.</em>
+        </p>
+        <footer>
+          <p class="author">
+            Autor: <span class="authorname">Dr. Ľubomír Polaščín</span>
+          </p>
+        </footer>
+      </article>
+
+      <!-- <article>: Nezávislý obsah, ktorý má zmysel sám o sebe (napr. článok, blogpost) -->
+      <article class="primary-article">
+        <header>
+          <h2>10 najčastejších chýb pri predpisovaní SGLT2 inhibítorov a GLP-1 agonistov</h2>
+          <p class="meta">
+            Publikované:&nbsp; <time datetime="2026-05-11">11. máj 2026</time>
+          </p>
+        </header>
+        <p><strong>SGLT2 inhibítory a agonisty GLP-1 receptorov zásadne zmenili liečbu diabetu 2. typu, obezity, chronickej choroby obličiek aj srdcového zlyhávania. Ich význam dnes ďaleko presahuje samotné znižovanie glykémie. Pri nesprávnom používaní však môžeme pacienta pripraviť o časť kardiorenálneho benefitu alebo ho vystaviť zbytočnému riziku.</strong></p>
+        <p>Moderná liečba diabetu 2. typu sa už nedá hodnotiť iba cez prizmu HbA1c. SGLT2 inhibítory a GLP-1 agonisty priniesli nový terapeutický jazyk: ochranu obličiek, srdca, ciev a metabolického zdravia. Práve v bežnej ambulantnej praxi však vznikajú opakovateľné chyby. Niektoré vedú k predčasnému vysadeniu účinnej liečby, iné k podceneniu nežiaducich účinkov alebo kontraindikácií.</p>
+        <p>Nasledujúci prehľad zhŕňa desať prakticky dôležitých omylov, ktorým sa oplatí vyhnúť.</p>
+
+        <h3>1. Pozerať sa iba na HbA1c a ignorovať kardiorenálne indikácie</h3>
+        <p>Najväčšou chybou je vnímať SGLT2 inhibítory a GLP-1 agonisty výlučne ako antidiabetiká určené až do neskorších línií liečby. Súčasné odporúčania kladú dôraz na orgánovú ochranu.</p>
+        <p>SGLT2 inhibítory majú významné miesto pri chronickej chorobe obličiek a srdcovom zlyhávaní, často nezávisle od hodnoty HbA1c a dokonca aj nezávisle od prítomnosti diabetu. GLP-1 agonisty, napríklad semaglutid, znižujú riziko veľkých kardiovaskulárnych príhod a prinášajú priaznivé účinky aj na renálne a kardiálne parametre.</p>
+        <p>V praxi to znamená, že pri pacientovi s diabetom 2. typu, chronickou chorobou obličiek, albuminúriou, obezitou alebo srdcovým zlyhávaním sa nemáme pýtať iba: „Aký má HbA1c?" Rovnako dôležitá otázka znie: „Aké orgány potrebujeme chrániť?"</p>
+
+        <h3>2. Nesprávne interpretovať počiatočný pokles eGFR po nasadení SGLT2 inhibítora</h3>
+        <p>Po začatí liečby SGLT2 inhibítorom sa často objaví mierny prechodný pokles eGFR, typicky približne o 10 až 15 % oproti východiskovej hodnote. Nejde o prejav nefrotoxicity. Ide o očakávaný hemodynamický efekt v glomerule, ktorý súvisí s dlhodobou renálnou ochranou.</p>
+        <p>Chybou je automaticky vysadiť liek pri každom poklese eGFR. Pokles do 30 % počas prvých troch mesiacov liečby sa všeobecne považuje za akceptovateľný. Ak je však pokles väčší ako 30 %, alebo sa renálna funkcia ďalej zhoršuje, treba hľadať iné príčiny: hypovolémiu, hypotenziu, nadmernú diuretickú liečbu, užívanie nesteroidových antiflogistík alebo inú interkurentnú patológiu.</p>
+        <p>Pre nefrologickú prax je toto mimoriadne dôležité. Predčasné vysadenie SGLT2 inhibítora pre „kozmetický" pokles eGFR môže pacienta pripraviť o dlhodobú nefroprotekciu.</p>
+
+        <h3>3. Zle manažovať genitálne a močové nežiaduce účinky SGLT2 inhibítorov</h3>
+        <p>Najčastejším nežiaducim účinkom SGLT2 inhibítorov sú genitálne mykotické infekcie, najmä kandidózy. Môžu sa vyskytnúť až u približne 10 % pacientov, častejšie pri obezite alebo pri anamnéze mykotických infekcií.</p>
+        <p>Chybou je považovať každú mykotickú infekciu za dôvod na definitívne vysadenie liečby. Pacienta treba už pri začatí liečby poučiť o riziku, hygiene a potrebe včasnej liečby príznakov. Pri prvých prejavoch je vhodná lokálna antimykotická liečba, pri potrebe aj systémová liečba, často bez nutnosti prerušiť SGLT2 inhibítor.</p>
+        <p>Riziko infekcií močových ciest sa javí ako malé a týka sa najmä žien. Rutinná antibiotická profylaxia sa neodporúča.</p>
+
+        <h3>4. Podceniť euglykemickú ketoacidózu pri SGLT2 inhibítoroch</h3>
+        <p>Euglykemická ketoacidóza je zradná práve tým, že glykémia nemusí byť výrazne zvýšená. Môže sa objaviť aj pri relatívne nízkych hodnotách glukózy. Vyskytuje sa takmer výlučne u pacientov s diabetom, najmä pri nedostatočnej dávke inzulínu alebo pri záťažových situáciách.</p>
+        <p>Rizikovými faktormi sú:</p>
+        <ul>
+          <li>dlhšie hladovanie,</li>
+          <li>ketogénna alebo veľmi nízkosacharidová diéta,</li>
+          <li>nadmerný príjem alkoholu,</li>
+          <li>infekcia,</li>
+          <li>operačný výkon,</li>
+          <li>dehydratácia,</li>
+          <li>nedostatočná inzulinizácia.</li>
+        </ul>
+        <p>Pacient musí poznať takzvané „sick day rules". Pri akútnom ochorení, vracaní, dehydratácii alebo výraznom obmedzení príjmu potravy má dočasne prerušiť SGLT2 inhibítor, zabezpečiť príjem tekutín a sacharidov a pri riziku monitorovať ketolátky.</p>
+        <p>Treba tiež pripomenúť, že SGLT2 inhibítory nie sú štandardne indikované pri diabete 1. typu.</p>
+
+        <h3>5. Nedostatočne riešiť perioperačné vysadenie SGLT2 inhibítorov</h3>
+        <p>Perioperačné obdobie je typickou situáciou, v ktorej môže vzniknúť euglykemická ketoacidóza. Preto sa SGLT2 inhibítory pred plánovaným operačným výkonom dočasne vysadzujú.</p>
+        <p>Praktické pravidlo je jednoduché: liečba sa má prerušiť 3 dni pred výkonom. Do tohto obdobia sa zahŕňa deň pred operáciou, deň operácie a deň po operácii. Liečbu možno obnoviť až vtedy, keď pacient normálne prijíma potravu a už nie je riziko dehydratácie.</p>
+        <p>Pri urgentných výkonoch je potrebná vyššia pozornosť k hydratácii, acidobázickej rovnováhe a ketolátkam.</p>
+
+        <h3>6. Rutinne vysadzovať GLP-1 agonisty pred operáciou</h3>
+        <p>Na rozdiel od SGLT2 inhibítorov nie je pri GLP-1 agonistoch potrebné rutinné vysadenie pred operáciou alebo endoskopiou. Hlavnou obavou je spomalené vyprázdňovanie žalúdka, ktoré môže zvýšiť riziko reziduálneho žalúdočného obsahu.</p>
+        <p>Väčšina pacientov však môže v liečbe pokračovať. Dočasné prerušenie má zmysel zvažovať individuálne, najmä pri:</p>
+        <ul>
+          <li>známej gastroparéze,</li>
+          <li>výraznej nauzee alebo vracaní,</li>
+          <li>aktívnych gastrointestinálnych príznakoch,</li>
+          <li>nedávnej eskalácii dávky.</li>
+        </ul>
+        <p>Ak existuje neistota, praktickým kompromisom môže byť číra tekutá diéta počas 24 hodín pred výkonom. Rozhodnutie by malo vzniknúť v spolupráci s anestéziológom a lekárom, ktorý liečbu indikuje.</p>
+
+        <h3>7. Ignorovať retinopatiu pri rýchlom poklese HbA1c po semaglutide</h3>
+        <p>Pri semaglutide bol v niektorých štúdiách pozorovaný mierny nárast komplikácií diabetickej retinopatie u pacientov s veľmi vysokým rizikom. Pravdepodobne nejde o priamu toxickú retinálnu reakciu, ale skôr o efekt rýchleho zlepšenia glykémie, podobne ako pri intenzifikácii inzulínovej liečby.</p>
+        <p>Rizikoví sú najmä pacienti s výrazne zle kontrolovaným diabetom a preproliferatívnou alebo proliferatívnou retinopatiou. Pred začatím liečby je vhodný skríning retinopatie, opatrná titrácia dávky a úzka oftalmologická kontrola.</p>
+
+        <h3>8. Kombinovať GLP-1 agonistu s DPP-4 inhibítorom</h3>
+        <p>Kombinácia GLP-1 agonistu a DPP-4 inhibítora neprináša významný dodatočný klinický benefit. Obe skupiny pôsobia cez inkretínový systém, ale GLP-1 agonisty majú výraznejší účinok.</p>
+        <p>Ak je indikovaný GLP-1 agonista, DPP-4 inhibítor sa má zvyčajne vysadiť. Ich kombinovanie zvyšuje náklady bez adekvátneho prínosu a veľké odporúčania ho všeobecne neodporúčajú.</p>
+
+        <h3>9. Neupraviť ostatnú antidiabetickú liečbu pri nasadení GLP-1 agonistu</h3>
+        <p>GLP-1 agonisty majú samy osebe nízke riziko hypoglykémie, pretože ich účinok je glukózovo závislý. Riziko sa však zvyšuje pri kombinácii s inzulínom, sulfonylureou alebo glinidmi.</p>
+        <p>Častou chybou je pridať GLP-1 agonistu bez úpravy existujúcej liečby. Rozumným prístupom môže byť zníženie dávky sulfonylurey alebo bazálneho inzulínu približne o 50 % pri začatí liečby, s následnou úpravou podľa domácich glykémií. Samozrejme, treba zohľadniť východiskovú kompenzáciu diabetu, renálnu funkciu, vek pacienta a riziko hypoglykémie.</p>
+
+        <h3>10. Prehliadnuť kontraindikácie a dôležité upozornenia pri GLP-1 agonistoch</h3>
+        <p>GLP-1 agonisty sú účinné lieky, ale nie sú vhodné pre každého pacienta. Semaglutid sa neodporúča počas gravidity. Ženy vo fertilnom veku majú počas liečby používať účinnú antikoncepciu a pri plánovaní gravidity sa má semaglutid vysadiť aspoň 2 mesiace pred počatím.</p>
+        <p>Absolútnou kontraindikáciou je osobná alebo rodinná anamnéza medulárneho karcinómu štítnej žľazy alebo syndrómu mnohopočetnej endokrinnej neoplázie typu 2.</p>
+        <p>Pri predpisovaní je preto potrebné cielene sa pýtať na relevantnú osobnú a rodinnú anamnézu, nie iba mechanicky pridať liek do chronickej medikácie.</p>
+
+        <h3>Praktický záver pre ambulanciu</h3>
+        <p>SGLT2 inhibítory a GLP-1 agonisty patria medzi najvýznamnejšie liekové skupiny modernej metabolickej, kardiologickej a nefrologickej medicíny. Ich správne používanie vyžaduje zmenu myslenia: od samotnej glykémie k orgánovej ochrane.</p>
+        <p>Pri SGLT2 inhibítoroch treba rátať s očakávaným úvodným poklesom eGFR, správne manažovať genitálne mykózy, myslieť na euglykemickú ketoacidózu a liek dočasne vysadiť pred operáciou alebo pri akútnom ochorení s rizikom dehydratácie.</p>
+        <p>Pri GLP-1 agonistoch je dôležité nevysadzovať ich automaticky pred výkonom, nekombinovať ich s DPP-4 inhibítormi, upraviť rizikovú antidiabetickú liečbu a nezabudnúť na retinopatiu, graviditu a kontraindikácie.</p>
+        <p>Dobre indikovaná a dobre vedená liečba týmito liekmi môže pacientom s diabetom 2. typu, chronickou chorobou obličiek, obezitou alebo srdcovým zlyhávaním priniesť výrazný kardiorenálny benefit. Rovnako však platí, že najväčší úžitok vzniká až vtedy, keď liek nepredpisujeme iba „podľa schémy", ale podľa konkrétneho pacienta.</p>
+        <p>
+          <em>Zdroj: Spracované podľa Medscape: „Avoid These 10 Mistakes When Prescribing SGLT2 Inhibitor and GLP-1 RA", 2026.</em>
+        </p>
+        <footer>
+          <p class="author">
+            Autor: <span class="authorname">Dr. Ľubomír Polaščín</span>
+          </p>
+        </footer>
+      </article>
+
+      <!-- <article>: Nezávislý obsah, ktorý má zmysel sám o sebe (napr. článok, blogpost) -->
+      <article class="primary-article">
+        <header>
           <h2>IgA nefropatia: úloha APRIL v štvorzásahovom modeli patogenézy</h2>
           <p class="meta">
             Publikované:&nbsp; <time datetime="2026-05-11">11. máj 2026</time>
