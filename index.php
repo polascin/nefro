@@ -162,6 +162,61 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
       <!-- <article>: Nezávislý obsah, ktorý má zmysel sám o sebe (napr. článok, blogpost) -->
       <article class="primary-article">
         <header>
+          <h2>IgA nefropatia: úloha APRIL v štvorzásahovom modeli patogenézy</h2>
+          <p class="meta">
+            Publikované:&nbsp; <time datetime="2026-05-11">11. máj 2026</time>
+          </p>
+        </header>
+        <p>
+          IgA nefropatia patrí medzi najčastejšie primárne glomerulonefritídy na svete. V posledných rokoch sa pohľad na jej vznik a progresiu výrazne spresnil. Kľúčovým konceptom je štvorzásahový model patogenézy, v ktorom dôležitú úlohu zohráva cytokín APRIL.
+        </p>
+        <p>
+          Ochorenie dnes nechápeme iba ako pasívne ukladanie IgA v mezangiu, ale ako komplexný imunologický proces: od poruchy slizničnej imunity, cez tvorbu abnormálneho IgA1 a autoprotilátok, až po vznik imunitných komplexov, zápal a poškodenie glomerulov.
+        </p>
+        <h3>Čo je APRIL a prečo je dôležitý</h3>
+        <p>
+          APRIL (A Proliferation-Inducing Ligand) je cytokín podporujúci prežívanie a diferenciáciu B buniek a plazmatických buniek. Pri IgA nefropatii je významný tým, že môže podporovať tvorbu IgA a najmä patologického galaktózovo deficitného IgA1 (Gd-IgA1), ktorý stojí na začiatku patogenetickej kaskády.
+        </p>
+        <p>
+          Z pohľadu kliniky ide o upstream mechanizmus. To znamená, že cielenie APRIL môže potenciálne zasiahnuť ochorenie vyššie v patogenetickom reťazci, nie iba tlmiť jeho neskoré dôsledky.
+        </p>
+        <h3>Štvorzásahový model IgA nefropatie</h3>
+        <p>
+          Patogenéza IgA nefropatie sa často vysvetľuje 4-hit modelom. V prvom kroku vzniká Gd-IgA1. V druhom kroku sa tvoria autoprotilátky proti tomuto abnormálnemu IgA1. V treťom kroku vznikajú cirkulujúce imunitné komplexy. V štvrtom kroku sa tieto komplexy ukladajú v mezangiu, aktivujú lokálny zápal, komplement a vedú k progresívnemu glomerulovému poškodeniu.
+        </p>
+        <p>
+          Klinickým dôsledkom sú hematúria, proteinúria, pokles eGFR a pri progresívnom priebehu aj chronická choroba obličiek až zlyhanie obličiek.
+        </p>
+        <h3>Pacient za diagnózou: variabilita rizika</h3>
+        <p>
+          IgA nefropatia má veľmi heterogénny priebeh. U časti pacientov je zachytená náhodne pri mikroskopickej hematúrii, iní prichádzajú s epizódami makroskopickej hematúrie po infekcii horných dýchacích ciest, ďalší už pri diagnóze majú významnú proteinúriu, hypertenziu alebo zníženú eGFR.
+        </p>
+        <p>
+          Preto je rozhodujúca stratifikácia rizika podľa proteinúrie, krvného tlaku, hodnoty a dynamiky eGFR, histologického nálezu a celkového klinického kontextu.
+        </p>
+        <h3>Liečba: od nefroprotekcie k mechanistickému cielenému prístupu</h3>
+        <p>
+          Základom zostáva optimalizovaná nefroprotekcia: kontrola krvného tlaku, blokáda RAAS pomocou ACE inhibítorov alebo sartanov, redukcia proteinúrie, režimové opatrenia a manažment komplikácií CKD.
+        </p>
+        <p>
+          Súčasne pribúdajú liečebné stratégie zamerané na konkrétne mechanizmy ochorenia vrátane osí APRIL/BAFF, komplementu, slizničnej tvorby IgA a endotelínovej cesty. Tento posun umožňuje individualizovanejšie rozhodovanie u pacientov s vyšším rizikom progresie.
+        </p>
+        <h3>Praktické posolstvo pre nefrológa</h3>
+        <p>
+          Moderný manažment IgA nefropatie stojí na troch pilieroch: presnej diagnostike (vrátane biopsie), dôslednej stratifikácii rizika a individualizovanej liečbe. APRIL zapadá do tohto rámca ako významný biologický faktor, ktorý môže udržiavať aktivitu ochorenia a predstavuje racionálny terapeutický cieľ.
+        </p>
+        <p>
+          <em>Zdroj: ReachMD, program „Navigating IgA Nephropathy: Pathogenesis, The Role Of APRIL &amp; The 4-Hit Process, &amp; A Patient Case Study“</em>
+        </p>
+        <footer>
+          <p class="author">
+            Autor: <span class="authorname">Dr. Ľubomír Polaščín</span>
+          </p>
+        </footer>
+      </article>
+
+      <article class="primary-article">
+        <header>
           <h2>IgA nefropatia v ére nových terapeutických možností: od podpornej liečby k cielenej terapii</h2>
           <p class="meta">
             Publikované:&nbsp; <time datetime="2026-05-11">11. máj 2026</time>
@@ -217,6 +272,9 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
         </p>
         <p>
           <em>Zdroj: odborné zhrnutie aktuálnych terapeutických trendov v IgA nefropatii, vrátane odporúčaní KDIGO a dát zo štúdií PROTECT, ALIGN, NefIgArd, APPLAUSE-IgAN, DAPA-CKD a EMPA-KIDNEY</em>
+        </p>
+        <p>
+          <em>Zdroj:</em> <a href="https://luxsci.com/Yitu_rBoGz7CuP_NI_ebd1/email-link/194531/2894/take-me?v1=D26CE1E28C708445834C87CFA4E08141EE90A2D8&amp;n1=1778498451&amp;to=https://reachmd.com/segment/54415/%3fautoplay%3d1%26utm_source%3d30%26utm_medium%3d20%26utm_campaign%3d1502324%26utm_brand%3d1%26rmd_token%3d4e71790cab6d42ea4c12cc13b19b7ae7052250b1b0f16f438ebfd47a89dd195a%26utm_segment%3d%26campaign%3dWNLMKT" target="_blank" rel="noopener noreferrer">ReachMD - pôvodný odkaz</a>
         </p>
         <footer>
           <p class="author">
