@@ -41,6 +41,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $data[$field] = null;
             }
         }
+        // Validácia dátumu narodenia
+        if (!empty($data['birth_date'])) {
+            $bd = DateTime::createFromFormat('Y-m-d', $data['birth_date']);
+            if (!$bd || $bd->format('Y-m-d') !== $data['birth_date']) {
+                $errors[] = "Neplatný dátum narodenia.";
+                $data['birth_date'] = null;
+            }
+        }
         $data['newsletter_consent'] = isset($_POST['newsletter_consent']) ? 1 : 0;
         
         // Zmena hesla
@@ -54,8 +62,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (!empty($current_password) || !empty($new_password) || !empty($new_password_confirm)) {
             if (!password_verify($current_password, $user['password_hash'])) {
                 $errors[] = "Súčasné heslo nie je správne.";
-            } elseif (strlen($new_password) < 8 || !preg_match('/[A-Z]/', $new_password) || !preg_match('/[a-z]/', $new_password) || !preg_match('/[0-9]/', $new_password)) {
-                $errors[] = "Nové heslo musí mať aspoň 8 znakov, obsahovať aspoň jedno veľké písmeno, malé písmeno a číslicu.";
+            } elseif (strlen($new_password) < 8 || strlen($new_password) > 1024 || !preg_match('/[A-Z]/', $new_password) || !preg_match('/[a-z]/', $new_password) || !preg_match('/[0-9]/', $new_password)) {
+                $errors[] = "Nové heslo musí mať 8–1024 znakov, obsahovať aspoň jedno veľké písmeno, malé písmeno a číslicu.";
             } elseif ($new_password !== $new_password_confirm) {
                 $errors[] = "Nové heslá sa nezhodujú.";
             } else {
@@ -67,26 +75,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Upload avatara
         $avatar_path = $user['avatar_path'];
         if (isset($_FILES['avatar']) && $_FILES['avatar']['error'] === UPLOAD_ERR_OK) {
-            $allowed_types = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'];
+            $allowed_types = ['image/jpeg' => 'jpg', 'image/png' => 'png', 'image/gif' => 'gif', 'image/webp' => 'webp'];
             $max_size = 2 * 1024 * 1024; // 2 MB
             $detected_mime = mime_content_type($_FILES['avatar']['tmp_name']);
             
             if ($_FILES['avatar']['size'] > $max_size) {
                 $errors[] = "Súbor avatara je príliš veľký (max 2 MB).";
-            } elseif (!in_array($detected_mime, $allowed_types)) {
+            } elseif (!isset($allowed_types[$detected_mime])) {
                 $errors[] = "Nepodporovaný formát avatara. Povolené sú JPG, PNG, GIF a WebP.";
             } else {
-                $upload_dir = 'uploads/avatars/';
+                $upload_dir = __DIR__ . '/uploads/avatars/';
                 if (!is_dir($upload_dir)) {
                     mkdir($upload_dir, 0755, true);
                 }
                 
-                $extension = pathinfo($_FILES['avatar']['name'], PATHINFO_EXTENSION);
+                $extension = $allowed_types[$detected_mime];
                 $filename = uniqid('avatar_', true) . '.' . $extension;
                 $destination = $upload_dir . $filename;
                 
                 if (move_uploaded_file($_FILES['avatar']['tmp_name'], $destination)) {
-                    $avatar_path = $destination;
+                    // Zmazanie starého avatara
+                    if (!empty($user['avatar_path']) && file_exists(__DIR__ . '/' . $user['avatar_path'])) {
+                        unlink(__DIR__ . '/' . $user['avatar_path']);
+                    }
+                    $avatar_path = 'uploads/avatars/' . $filename;
                 } else {
                     $errors[] = "Chyba pri nahrávaní avatara.";
                 }

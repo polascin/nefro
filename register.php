@@ -16,8 +16,8 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
         if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $errors[] = "Zadajte platnú e-mailovú adresu.";
         }
-        if (strlen($password) < 8 || !preg_match('/[A-Z]/', $password) || !preg_match('/[a-z]/', $password) || !preg_match('/[0-9]/', $password)) {
-            $errors[] = "Heslo musí mať aspoň 8 znakov, obsahovať aspoň jedno veľké písmeno, malé písmeno a číslicu.";
+        if (strlen($password) < 8 || strlen($password) > 1024 || !preg_match('/[A-Z]/', $password) || !preg_match('/[a-z]/', $password) || !preg_match('/[0-9]/', $password)) {
+            $errors[] = "Heslo musí mať 8–1024 znakov, obsahovať aspoň jedno veľké písmeno, malé písmeno a číslicu.";
         }
         
         if (empty($username)) {
@@ -40,24 +40,26 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     $avatarPath = null;
                     if (isset($_FILES['avatar']) && $_FILES['avatar']['error'] === UPLOAD_ERR_OK) {
                         $fileTmpPath = $_FILES['avatar']['tmp_name'];
-                        $fileName = $_FILES['avatar']['name'];
                         $fileSize = $_FILES['avatar']['size'];
                         $fileType = mime_content_type($fileTmpPath);
-                        
-                        $allowedMimeTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/webp'];
                         $maxFileSize = 2 * 1024 * 1024; // 2 MB
                         
-                        if (!in_array($fileType, $allowedMimeTypes)) {
+                        $mimeToExt = ['image/jpeg' => 'jpg', 'image/png' => 'png', 'image/gif' => 'gif', 'image/webp' => 'webp'];
+                        if (!isset($mimeToExt[$fileType])) {
                             $errors[] = "Nepovolený formát obrázka. Povolené sú iba JPG, PNG, GIF a WebP.";
                         } elseif ($fileSize > $maxFileSize) {
                             $errors[] = "Obrázok je príliš veľký. Maximálna povolená veľkosť je 2 MB.";
                         } else {
-                            $fileExtension = strtolower(pathinfo($fileName, PATHINFO_EXTENSION));
+                            $fileExtension = $mimeToExt[$fileType];
                             $newFileName = uniqid('avatar_', true) . '.' . $fileExtension;
-                            $uploadDir = 'uploads/avatars/';
-                            $destPath = $uploadDir . $newFileName;
+                            $uploadDir = __DIR__ . '/uploads/avatars/';
+                            $destPath = 'uploads/avatars/' . $newFileName;
                             
-                            if (move_uploaded_file($fileTmpPath, $destPath)) {
+                            if (!is_dir($uploadDir)) {
+                                mkdir($uploadDir, 0755, true);
+                            }
+                            
+                            if (move_uploaded_file($fileTmpPath, $uploadDir . $newFileName)) {
                                 $avatarPath = $destPath;
                             } else {
                                 $errors[] = "Nastala chyba pri nahrávaní obrázka.";
@@ -106,7 +108,12 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                             'social_other' => trim($_POST['social_other'] ?? ''),
                             'other_contact' => trim($_POST['other_contact'] ?? ''),
                             'website' => trim($_POST['website'] ?? ''),
-                            'birth_date' => !empty($_POST['birth_date']) ? $_POST['birth_date'] : null,
+                            'birth_date' => (function() {
+                                $raw = $_POST['birth_date'] ?? '';
+                                if (empty($raw)) return null;
+                                $d = DateTime::createFromFormat('Y-m-d', $raw);
+                                return ($d && $d->format('Y-m-d') === $raw) ? $raw : null;
+                            })(),
                             'street' => trim($_POST['street'] ?? ''),
                             'house_number' => trim($_POST['house_number'] ?? ''),
                             'orientation_number' => trim($_POST['orientation_number'] ?? ''),
