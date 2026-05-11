@@ -1087,6 +1087,9 @@ input:disabled + .slider:before {
 
 .form-group {
   margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .form-group label {
