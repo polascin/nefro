@@ -587,11 +587,15 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
             <a href="mailto:nefro@polascin.net" class="btn-primary">Napísať e-mail</a>
           </div>
           <div class="feature-card">
-            <h3>Kedy očakávame ďalší príspevok?</h3>
+            <h3>Staňte sa súčasťou komunity</h3>
             <p>
-              Pravidelne pripravujeme nové klinické dáta a analýzy.
+              Zaregistrujte sa a získajte prístup k obsahu. Pri registrácii si môžete zvoliť súhlas so zasielaním noviniek a my vás budeme ihneď informovať o najnovších príspevkoch a analýzach.
             </p>
-            <div class="badge-highlight">Predpoklad: Začiatok júna 2026</div>
+            <?php if (!isLoggedIn()): ?>
+              <br><a href="register.php" class="btn-primary" style="margin-top: 10px;">Registrovať sa</a>
+            <?php else: ?>
+              <div class="badge-highlight">Ste prihlásený</div>
+            <?php endif; ?>
           </div>
         </div>
       </section>

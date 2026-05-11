@@ -5,7 +5,7 @@ require_once 'db_config.php';
 $errors = [];
 $success = false;
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
     if (!validateCsrfToken($_POST['csrf_token'] ?? '')) {
         $errors[] = "Neplatný CSRF token. Skúste to znova.";
     } else {
