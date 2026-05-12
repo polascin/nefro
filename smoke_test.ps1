@@ -1,3 +1,57 @@
+$textExtensions = @("*.php", "*.css", "*.js", "*.md", "*.txt", "*.xml", "*.json", "*.ini", "*.ps1", "*.html")
+
+function Test-TextFilesEncoding {
+	param(
+		[Parameter(Mandatory = $true)]
+		[string]$RootPath
+	)
+
+	$utf8Strict = New-Object System.Text.UTF8Encoding($false, $true)
+	$invalidUtf8 = New-Object System.Collections.Generic.List[string]
+	$filesWithBom = New-Object System.Collections.Generic.List[string]
+
+	$files = Get-ChildItem -Path $RootPath -Recurse -File -Include $textExtensions
+
+	foreach ($file in $files) {
+		try {
+			$bytes = [System.IO.File]::ReadAllBytes($file.FullName)
+
+			if ($bytes.Length -ge 3 -and $bytes[0] -eq 0xEF -and $bytes[1] -eq 0xBB -and $bytes[2] -eq 0xBF) {
+				$filesWithBom.Add($file.FullName)
+			}
+
+			[void]$utf8Strict.GetString($bytes)
+		} catch {
+			$invalidUtf8.Add($file.FullName)
+		}
+	}
+
+	Write-Host "Encoding check scanned files: $($files.Count)"
+
+	if ($filesWithBom.Count -gt 0) {
+		Write-Host "Files with UTF-8 BOM:" -ForegroundColor Yellow
+		foreach ($path in $filesWithBom) {
+			Write-Host " - $path"
+		}
+	}
+
+	if ($invalidUtf8.Count -gt 0) {
+		Write-Host "Invalid UTF-8 files:" -ForegroundColor Red
+		foreach ($path in $invalidUtf8) {
+			Write-Host " - $path"
+		}
+		throw "Encoding check failed: invalid UTF-8 files found."
+	}
+
+	if ($filesWithBom.Count -gt 0) {
+		throw "Encoding check failed: UTF-8 BOM detected."
+	}
+
+	Write-Host "Encoding check: PASS"
+}
+
+Test-TextFilesEncoding -RootPath $PSScriptRoot
+
 $session = New-Object Microsoft.PowerShell.Commands.WebRequestSession
 $url = "http://127.0.0.1:8099"
 $res = Invoke-WebRequest -Uri "$url/login.php" -SessionVariable session

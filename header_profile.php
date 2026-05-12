@@ -2,7 +2,7 @@
 $currentUser = null;
 if (isLoggedIn() && isset($pdo)) {
     try {
-        $stmt = $pdo->prepare("SELECT username, email, avatar_path, is_admin, email_verified_at, mobile_phone, mobile_verified_at FROM users WHERE id = :id");
+        $stmt = $pdo->prepare("SELECT username, email, first_name, last_name, avatar_path, is_admin, email_verified_at, mobile_phone, mobile_verified_at FROM users WHERE id = :id");
         $stmt->execute(['id' => $_SESSION['user_id']]);
         $currentUser = $stmt->fetch();
     } catch (\PDOException $e) {
@@ -15,6 +15,8 @@ if (isLoggedIn() && !$currentUser) {
     $currentUser = [
         'username' => $_SESSION['username'] ?? '',
         'email' => '',
+        'first_name' => '',
+        'last_name' => '',
         'avatar_path' => null,
         'is_admin' => !empty($_SESSION['is_admin']) ? 1 : 0,
         'email_verified_at' => !empty($_SESSION['email_verified']) ? date('Y-m-d H:i:s') : null,
@@ -32,6 +34,11 @@ if ($currentUser && !empty($currentUser['avatar_path'])) {
     $isDefaultAvatar = true;
 }
 
+$firstName = $currentUser ? trim((string) ($currentUser['first_name'] ?? '')) : '';
+$lastName = $currentUser ? trim((string) ($currentUser['last_name'] ?? '')) : '';
+$displayFullName = ($firstName !== '' && $lastName !== '')
+    ? htmlspecialchars($firstName . ' ' . $lastName)
+    : '';
 $displayName = $currentUser ? htmlspecialchars(($currentUser['username'] ?? '') ?: ($currentUser['email'] ?? '')) : '<a href="login.php" class="header-profile__unlogged">Neprihlásený používateľ</a>';
 $displayEmail = $currentUser ? htmlspecialchars($currentUser['email']) : '';
 $emailIsVerified = $currentUser && !empty($currentUser['email_verified_at']);
@@ -43,7 +50,12 @@ $profileLink = $currentUser ? 'profile.php' : 'login.php';
     <div class="header-profile__info">
         <?php if ($currentUser): ?>
             <a href="<?= $profileLink ?>" class="header-profile__link">
-                <div class="header-profile__name"><?= $displayName ?></div>
+                <?php if ($displayFullName !== ''): ?>
+                    <div class="header-profile__name"><?= $displayFullName ?></div>
+                <?php endif; ?>
+                <?php if ($displayName !== ''): ?>
+                    <div class="header-profile__email"><?= $displayName ?></div>
+                <?php endif; ?>
                 <?php if ($displayEmail): ?>
                     <div class="header-profile__email"><?= $displayEmail ?></div>
                     <div class="header-profile__email-status <?= $emailIsVerified ? 'header-profile__email-status--verified' : 'header-profile__email-status--unverified' ?>">

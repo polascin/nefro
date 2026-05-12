@@ -34,5 +34,45 @@ $isHomePage = basename($_SERVER['PHP_SELF']) === 'index.php';
       </p>
     </div>
   </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const passwordInputs = document.querySelectorAll('input[type="password"]');
+
+      passwordInputs.forEach((input, index) => {
+        if (input.dataset.passwordToggleReady === 'true') {
+          return;
+        }
+
+        const wrapper = document.createElement('div');
+        wrapper.className = 'password-toggle';
+
+        input.parentNode.insertBefore(wrapper, input);
+        wrapper.appendChild(input);
+
+        const toggleButton = document.createElement('button');
+        toggleButton.type = 'button';
+        toggleButton.className = 'password-toggle__button';
+        toggleButton.setAttribute('aria-controls', input.id || `password-field-${index + 1}`);
+        toggleButton.setAttribute('aria-label', 'Zobraziť heslo');
+        toggleButton.setAttribute('aria-pressed', 'false');
+        toggleButton.textContent = 'Zobraziť';
+
+        if (!input.id) {
+          input.id = `password-field-${index + 1}`;
+        }
+
+        toggleButton.addEventListener('click', () => {
+          const isVisible = input.type === 'text';
+          input.type = isVisible ? 'password' : 'text';
+          toggleButton.textContent = isVisible ? 'Zobraziť' : 'Skryť';
+          toggleButton.setAttribute('aria-label', isVisible ? 'Zobraziť heslo' : 'Skryť heslo');
+          toggleButton.setAttribute('aria-pressed', isVisible ? 'false' : 'true');
+        });
+
+        wrapper.appendChild(toggleButton);
+        input.dataset.passwordToggleReady = 'true';
+      });
+    });
+  </script>
 </body>
 </html>

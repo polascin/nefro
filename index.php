@@ -892,26 +892,14 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
       <div class="widget">
         <h3>Užitočné odkazy</h3>
         <ul>
-          <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank" rel="noopener noreferrer">MDN: HTML
-              Elementy</a></li>
-          <li><a href="https://html.spec.whatwg.org/" target="_blank" rel="noopener noreferrer">HTML
-              Špecifikácia</a></li>
-          <li><a href="https://tc39.es/ecma262/" target="_blank" rel="noopener noreferrer">JavaScript
-              (ECMAScript) Špecifikácia</a></li>
-          <li><a href="https://www.php.net/manual/en/langref.php" target="_blank" rel="noopener noreferrer">PHP
-              Špecifikácia
-              (Manual)</a></li>
-          <li><a href="https://docs.python.org/3/reference/" target="_blank" rel="noopener noreferrer">Python
-              Špecifikácia jazyka</a>
-          </li>
-          <li><a href="https://sk.polascin.net/" target="_blank" rel="noopener noreferrer">Polascin.net
-              (SK)</a></li>
-          <li><a href="https://nephrosite.polascin.net/" target="_blank" rel="noopener noreferrer">Nephrosite</a></li>
-          <li><a href="https://polascin.net/" target="_blank" rel="noopener noreferrer">Polascin.net (EN)</a>
-          </li>
-          <li><a href="https://polascin.com/" target="_blank" rel="noopener noreferrer">Polascin.com</a></li>
-          <li><a href="https://books.polascin.net/" target="_blank" rel="noopener noreferrer">Polascin
-              Books</a></li>
+          <li><a href="https://kdigo.org/guidelines/" target="_blank" rel="noopener noreferrer">KDIGO Guidelines</a></li>
+          <li><a href="https://www.era-online.org/guidelines/" target="_blank" rel="noopener noreferrer">ERA Guidelines</a></li>
+          <li><a href="https://www.theisn.org/" target="_blank" rel="noopener noreferrer">International Society of Nephrology (ISN)</a></li>
+          <li><a href="https://www.kidney.org/professionals/guidelines" target="_blank" rel="noopener noreferrer">National Kidney Foundation (KDOQI)</a></li>
+          <li><a href="https://www.niddk.nih.gov/health-information/kidney-disease" target="_blank" rel="noopener noreferrer">NIDDK: Kidney Disease Resources</a></li>
+          <li><a href="https://www.escardio.org/Guidelines" target="_blank" rel="noopener noreferrer">ESC Guidelines</a></li>
+          <li><a href="https://pubmed.ncbi.nlm.nih.gov/?term=nephrology" target="_blank" rel="noopener noreferrer">PubMed: Nephrology</a></li>
+          <li><a href="https://clinicaltrials.gov/search?cond=Kidney%20Diseases" target="_blank" rel="noopener noreferrer">ClinicalTrials.gov: Kidney Diseases</a></li>
         </ul>
       </div>
     </aside>
