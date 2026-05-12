@@ -106,6 +106,40 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 
 $errors = [];
 $csrfToken = generateCsrfToken();
+$noticeAudit = [];
+$noticeAuditAdminOptions = [];
+
+$auditFilterAdminId = max(0, (int) ($_GET['audit_admin_id'] ?? 0));
+$auditFilterFormatRaw = strtolower(trim((string) ($_GET['audit_format'] ?? '')));
+$auditAllowedFormats = ['view', 'print', 'csv', 'json', 'txt'];
+$auditFilterFormat = in_array($auditFilterFormatRaw, $auditAllowedFormats, true) ? $auditFilterFormatRaw : '';
+
+$auditFilterDateFromRaw = trim((string) ($_GET['audit_date_from'] ?? ''));
+$auditFilterDateToRaw = trim((string) ($_GET['audit_date_to'] ?? ''));
+$auditFilterDateFrom = preg_match('/^\d{4}-\d{2}-\d{2}$/', $auditFilterDateFromRaw) ? $auditFilterDateFromRaw : '';
+$auditFilterDateTo = preg_match('/^\d{4}-\d{2}-\d{2}$/', $auditFilterDateToRaw) ? $auditFilterDateToRaw : '';
+$auditDatePreset = strtolower(trim((string) ($_GET['audit_date_preset'] ?? '')));
+
+if ($auditDatePreset !== '') {
+    switch ($auditDatePreset) {
+        case 'today':
+            $today = date('Y-m-d');
+            $auditFilterDateFrom = $today;
+            $auditFilterDateTo = $today;
+            break;
+        case 'last7':
+            $auditFilterDateFrom = date('Y-m-d', strtotime('-6 days'));
+            $auditFilterDateTo = date('Y-m-d');
+            break;
+        case 'month':
+            $auditFilterDateFrom = date('Y-m-01');
+            $auditFilterDateTo = date('Y-m-t');
+            break;
+        default:
+            $auditDatePreset = '';
+            break;
+    }
+}
 
 try {
     $statsStmt = $pdo->query("SELECT
@@ -140,6 +174,55 @@ try {
         ORDER BY a.changed_at DESC, a.id DESC
         LIMIT 200");
     $avatarHistory = $avatarHistoryStmt->fetchAll();
+
+    try {
+        $noticeAuditAdminsStmt = $pdo->query("SELECT DISTINCT a.admin_user_id, u.username
+            FROM admin_users_notice_audit a
+            LEFT JOIN users u ON u.id = a.admin_user_id
+            ORDER BY u.username ASC, a.admin_user_id ASC");
+        $noticeAuditAdminOptions = $noticeAuditAdminsStmt->fetchAll();
+
+        $noticeAuditWhere = [];
+        $noticeAuditParams = [];
+
+        if ($auditFilterAdminId > 0) {
+            $noticeAuditWhere[] = 'a.admin_user_id = :admin_user_id';
+            $noticeAuditParams['admin_user_id'] = $auditFilterAdminId;
+        }
+
+        if ($auditFilterFormat !== '') {
+            $noticeAuditWhere[] = 'a.export_format = :export_format';
+            $noticeAuditParams['export_format'] = $auditFilterFormat;
+        }
+
+        if ($auditFilterDateFrom !== '') {
+            $noticeAuditWhere[] = 'a.created_at >= :date_from';
+            $noticeAuditParams['date_from'] = $auditFilterDateFrom . ' 00:00:00';
+        }
+
+        if ($auditFilterDateTo !== '') {
+            $noticeAuditWhere[] = 'a.created_at <= :date_to';
+            $noticeAuditParams['date_to'] = $auditFilterDateTo . ' 23:59:59';
+        }
+
+        $noticeAuditSql = "SELECT a.id, a.admin_user_id, u.username, a.export_format, a.include_sensitive, a.generated_rows, a.client_ip, a.user_agent, a.created_at
+            FROM admin_users_notice_audit a
+            LEFT JOIN users u ON u.id = a.admin_user_id";
+
+        if (!empty($noticeAuditWhere)) {
+            $noticeAuditSql .= ' WHERE ' . implode(' AND ', $noticeAuditWhere);
+        }
+
+        $noticeAuditSql .= ' ORDER BY a.created_at DESC, a.id DESC LIMIT 200';
+
+        $noticeAuditStmt = $pdo->prepare($noticeAuditSql);
+        $noticeAuditStmt->execute($noticeAuditParams);
+        $noticeAudit = $noticeAuditStmt->fetchAll();
+    } catch (\PDOException $e) {
+        error_log('Admin notice audit read error: ' . $e->getMessage());
+        $noticeAudit = [];
+        $noticeAuditAdminOptions = [];
+    }
 } catch (\PDOException $e) {
     error_log('Admin page DB error: ' . $e->getMessage());
     $errors[] = 'Nepodarilo sa načítať administrátorské údaje.';
@@ -154,6 +237,8 @@ try {
     $users = [];
     $profileHistory = [];
     $avatarHistory = [];
+    $noticeAudit = [];
+    $noticeAuditAdminOptions = [];
 }
 
 $pageLastUpdated = date('d.m.Y H:i', filemtime(__FILE__));
@@ -229,6 +314,53 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
                     <div class="admin-stat__label">Archivované zmeny avatarov</div>
                     <div class="admin-stat__value"><?= (int) ($stats['avatar_changes_total'] ?? 0) ?></div>
                 </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Oznam používateľov</h3>
+                <p>Vygenerovanie kompletného zoznamu všetkých používateľov zoradených podľa priezviska (vzostupne) s možnosťou výberu režimu exportu.</p>
+                <h4>Režim: bez technických/citlivých polí</h4>
+                <div class="admin-notice-actions">
+                    <a class="btn-admin-action" href="admin_users_notice.php?format=view&amp;include_sensitive=0" target="_blank" rel="noopener">Zobraziť dokument</a>
+                    <a class="btn-admin-action" href="admin_users_notice.php?format=print&amp;include_sensitive=0" target="_blank" rel="noopener">Vytlačiť</a>
+                    <a class="btn-admin-action" href="admin_users_notice.php?format=csv&amp;include_sensitive=0" rel="noopener">Uložiť CSV</a>
+                    <a class="btn-admin-action" href="admin_users_notice.php?format=json&amp;include_sensitive=0" rel="noopener">Uložiť JSON</a>
+                    <a class="btn-admin-action" href="admin_users_notice.php?format=txt&amp;include_sensitive=0" rel="noopener">Uložiť TXT</a>
+                </div>
+                <h4>Režim: vrátane technických/citlivých polí</h4>
+                <div class="admin-notice-actions">
+                    <form method="POST" action="admin_users_notice.php" target="_blank" style="display:inline" onsubmit="return confirm('Naozaj otvoriť citlivý výstup používateľov?')">
+                        <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
+                        <input type="hidden" name="format" value="view">
+                        <input type="hidden" name="include_sensitive" value="1">
+                        <button type="submit" class="btn-admin-action btn-admin-action--warn">Zobraziť dokument</button>
+                    </form>
+                    <form method="POST" action="admin_users_notice.php" target="_blank" style="display:inline" onsubmit="return confirm('Naozaj otvoriť citlivý výstup používateľov?')">
+                        <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
+                        <input type="hidden" name="format" value="print">
+                        <input type="hidden" name="include_sensitive" value="1">
+                        <button type="submit" class="btn-admin-action btn-admin-action--warn">Vytlačiť</button>
+                    </form>
+                    <form method="POST" action="admin_users_notice.php" style="display:inline" onsubmit="return confirm('Naozaj otvoriť citlivý výstup používateľov?')">
+                        <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
+                        <input type="hidden" name="format" value="csv">
+                        <input type="hidden" name="include_sensitive" value="1">
+                        <button type="submit" class="btn-admin-action btn-admin-action--warn">Uložiť CSV</button>
+                    </form>
+                    <form method="POST" action="admin_users_notice.php" style="display:inline" onsubmit="return confirm('Naozaj otvoriť citlivý výstup používateľov?')">
+                        <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
+                        <input type="hidden" name="format" value="json">
+                        <input type="hidden" name="include_sensitive" value="1">
+                        <button type="submit" class="btn-admin-action btn-admin-action--warn">Uložiť JSON</button>
+                    </form>
+                    <form method="POST" action="admin_users_notice.php" style="display:inline" onsubmit="return confirm('Naozaj otvoriť citlivý výstup používateľov?')">
+                        <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
+                        <input type="hidden" name="format" value="txt">
+                        <input type="hidden" name="include_sensitive" value="1">
+                        <button type="submit" class="btn-admin-action btn-admin-action--warn">Uložiť TXT</button>
+                    </form>
+                </div>
+                <p class="form-hint">Pre uloženie do PDF použite voľbu „Vytlačiť“ a v dialógu prehliadača vyberte „Uložiť ako PDF“.</p>
             </div>
 
             <div class="form-section">
@@ -350,6 +482,78 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
                                         <td><code><?= htmlspecialchars((string) ($h['archived_path'] ?? '')) ?></code></td>
                                         <td><code><?= htmlspecialchars((string) ($h['replacement_path'] ?? '')) ?></code></td>
                                         <td><?= htmlspecialchars((string) ($h['changed_at'] ?? '')) ?></td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            <?php endif; ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Audit log oznamov používateľov (posledných 200)</h3>
+                <form method="GET" action="admin.php">
+                    <div class="form-group form-group--inline">
+                        <label for="audit_admin_id">Admin:</label>
+                        <select id="audit_admin_id" name="audit_admin_id" class="form-control form-control--short">
+                            <option value="0">Všetci</option>
+                            <?php foreach ($noticeAuditAdminOptions as $opt): ?>
+                                <?php $optAdminId = (int) ($opt['admin_user_id'] ?? 0); ?>
+                                <option value="<?= $optAdminId ?>" <?= ($auditFilterAdminId === $optAdminId) ? 'selected' : '' ?>>
+                                    <?= htmlspecialchars((string) (($opt['username'] ?? '') !== '' ? $opt['username'] : ('#' . $optAdminId))) ?>
+                                </option>
+                            <?php endforeach; ?>
+                        </select>
+
+                        <label for="audit_format">Formát:</label>
+                        <select id="audit_format" name="audit_format" class="form-control form-control--short">
+                            <option value="">Všetky</option>
+                            <?php foreach ($auditAllowedFormats as $fmt): ?>
+                                <option value="<?= htmlspecialchars($fmt) ?>" <?= ($auditFilterFormat === $fmt) ? 'selected' : '' ?>><?= htmlspecialchars(strtoupper($fmt)) ?></option>
+                            <?php endforeach; ?>
+                        </select>
+
+                        <label for="audit_date_from">Dátum od:</label>
+                        <input type="date" id="audit_date_from" name="audit_date_from" value="<?= htmlspecialchars($auditFilterDateFrom) ?>" class="form-control">
+
+                        <label for="audit_date_to">Dátum do:</label>
+                        <input type="date" id="audit_date_to" name="audit_date_to" value="<?= htmlspecialchars($auditFilterDateTo) ?>" class="form-control">
+
+                        <button type="submit" class="btn-admin-action">Filtrovať</button>
+                        <button type="submit" name="audit_date_preset" value="today" class="btn-admin-action <?= ($auditDatePreset === 'today') ? 'btn-admin-action--active' : '' ?>">Dnes</button>
+                        <button type="submit" name="audit_date_preset" value="last7" class="btn-admin-action <?= ($auditDatePreset === 'last7') ? 'btn-admin-action--active' : '' ?>">Posledných 7 dní</button>
+                        <button type="submit" name="audit_date_preset" value="month" class="btn-admin-action <?= ($auditDatePreset === 'month') ? 'btn-admin-action--active' : '' ?>">Tento mesiac</button>
+                        <a href="admin.php" class="btn-admin-action">Zrušiť filter</a>
+                    </div>
+                </form>
+                <div class="admin-table-wrap">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Admin</th>
+                                <th>Formát</th>
+                                <th>Citlivé polia</th>
+                                <th>Počet riadkov</th>
+                                <th>IP adresa</th>
+                                <th>User Agent</th>
+                                <th>Čas</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php if (empty($noticeAudit)): ?>
+                                <tr><td colspan="8">Zatiaľ bez záznamov audit logu oznamov.</td></tr>
+                            <?php else: ?>
+                                <?php foreach ($noticeAudit as $a): ?>
+                                    <tr>
+                                        <td><?= (int) $a['id'] ?></td>
+                                        <td><?= htmlspecialchars((string) ($a['username'] ?? ('#' . (int) $a['admin_user_id']))) ?></td>
+                                        <td><?= htmlspecialchars(strtoupper((string) ($a['export_format'] ?? ''))) ?></td>
+                                        <td><?= ((int) ($a['include_sensitive'] ?? 0) === 1) ? 'Áno' : 'Nie' ?></td>
+                                        <td><?= (int) ($a['generated_rows'] ?? 0) ?></td>
+                                        <td><?= htmlspecialchars((string) ($a['client_ip'] ?? '')) ?></td>
+                                        <td><code><?= htmlspecialchars((string) ($a['user_agent'] ?? '')) ?></code></td>
+                                        <td><?= htmlspecialchars((string) ($a['created_at'] ?? '')) ?></td>
                                     </tr>
                                 <?php endforeach; ?>
                             <?php endif; ?>

@@ -165,7 +165,22 @@ try {
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";
     $pdo->exec($passwordResetsSql);
 
-    echo "Tabuľky 'users', 'users_profile_archive', 'users_avatar_archive' a 'password_resets' boli úspešne vytvorené alebo už existujú.";
+    $adminExportsAuditSql = "CREATE TABLE IF NOT EXISTS admin_users_notice_audit (
+        id BIGINT AUTO_INCREMENT PRIMARY KEY,
+        admin_user_id INT NOT NULL,
+        export_format VARCHAR(20) NOT NULL,
+        include_sensitive TINYINT(1) NOT NULL DEFAULT 0,
+        generated_rows INT NOT NULL DEFAULT 0,
+        client_ip VARCHAR(45) NULL,
+        user_agent VARCHAR(500) NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        INDEX idx_admin_users_notice_audit_created_at (created_at),
+        INDEX idx_admin_users_notice_audit_admin_user_id (admin_user_id),
+        CONSTRAINT fk_admin_users_notice_audit_user FOREIGN KEY (admin_user_id) REFERENCES users(id) ON DELETE CASCADE
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";
+    $pdo->exec($adminExportsAuditSql);
+
+    echo "Tabuľky 'users', 'users_profile_archive', 'users_avatar_archive', 'password_resets' a 'admin_users_notice_audit' boli úspešne vytvorené alebo už existujú.";
     echo "\n";
 } catch (\PDOException $e) {
     echo "Chyba pri vytváraní tabuľky: " . $e->getMessage();
