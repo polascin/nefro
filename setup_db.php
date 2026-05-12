@@ -166,6 +166,7 @@ try {
     $pdo->exec($passwordResetsSql);
 
     echo "Tabuľky 'users', 'users_profile_archive', 'users_avatar_archive' a 'password_resets' boli úspešne vytvorené alebo už existujú.";
+    echo "\n";
 } catch (\PDOException $e) {
     echo "Chyba pri vytváraní tabuľky: " . $e->getMessage();
 }
