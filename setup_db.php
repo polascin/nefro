@@ -18,6 +18,10 @@ try {
         email_verification_token_hash VARCHAR(255) NULL,
         email_verification_expires_at DATETIME NULL,
         email_verification_sent_at DATETIME NULL,
+        mobile_verified_at DATETIME NULL,
+        mobile_verification_code_hash CHAR(64) NULL,
+        mobile_verification_expires_at DATETIME NULL,
+        mobile_verification_sent_at DATETIME NULL,
         password_hash VARCHAR(255) NOT NULL,
         title_before VARCHAR(50),
         first_name VARCHAR(255),
@@ -106,6 +110,30 @@ try {
     $emailSentAtStmt->execute();
     if ((int) $emailSentAtStmt->fetchColumn() === 0) {
         $pdo->exec("ALTER TABLE users ADD COLUMN email_verification_sent_at DATETIME NULL AFTER email_verification_expires_at");
+    }
+
+    $mobileVerifiedAtStmt = $pdo->prepare("SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'users' AND COLUMN_NAME = 'mobile_verified_at'");
+    $mobileVerifiedAtStmt->execute();
+    if ((int) $mobileVerifiedAtStmt->fetchColumn() === 0) {
+        $pdo->exec("ALTER TABLE users ADD COLUMN mobile_verified_at DATETIME NULL AFTER email_verification_sent_at");
+    }
+
+    $mobileCodeHashStmt = $pdo->prepare("SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'users' AND COLUMN_NAME = 'mobile_verification_code_hash'");
+    $mobileCodeHashStmt->execute();
+    if ((int) $mobileCodeHashStmt->fetchColumn() === 0) {
+        $pdo->exec("ALTER TABLE users ADD COLUMN mobile_verification_code_hash CHAR(64) NULL AFTER mobile_verified_at");
+    }
+
+    $mobileExpiresStmt = $pdo->prepare("SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'users' AND COLUMN_NAME = 'mobile_verification_expires_at'");
+    $mobileExpiresStmt->execute();
+    if ((int) $mobileExpiresStmt->fetchColumn() === 0) {
+        $pdo->exec("ALTER TABLE users ADD COLUMN mobile_verification_expires_at DATETIME NULL AFTER mobile_verification_code_hash");
+    }
+
+    $mobileSentAtStmt = $pdo->prepare("SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'users' AND COLUMN_NAME = 'mobile_verification_sent_at'");
+    $mobileSentAtStmt->execute();
+    if ((int) $mobileSentAtStmt->fetchColumn() === 0) {
+        $pdo->exec("ALTER TABLE users ADD COLUMN mobile_verification_sent_at DATETIME NULL AFTER mobile_verification_expires_at");
     }
 
     // Pri prvom zavedení stĺpca považujeme existujúce účty za overené,

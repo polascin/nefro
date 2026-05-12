@@ -2,7 +2,7 @@
 $currentUser = null;
 if (isLoggedIn() && isset($pdo)) {
     try {
-        $stmt = $pdo->prepare("SELECT username, email, avatar_path, is_admin, email_verified_at FROM users WHERE id = :id");
+        $stmt = $pdo->prepare("SELECT username, email, avatar_path, is_admin, email_verified_at, mobile_phone, mobile_verified_at FROM users WHERE id = :id");
         $stmt->execute(['id' => $_SESSION['user_id']]);
         $currentUser = $stmt->fetch();
     } catch (\PDOException $e) {
@@ -18,6 +18,8 @@ if (isLoggedIn() && !$currentUser) {
         'avatar_path' => null,
         'is_admin' => !empty($_SESSION['is_admin']) ? 1 : 0,
         'email_verified_at' => !empty($_SESSION['email_verified']) ? date('Y-m-d H:i:s') : null,
+        'mobile_phone' => null,
+        'mobile_verified_at' => null,
     ];
 }
 
@@ -33,6 +35,8 @@ if ($currentUser && !empty($currentUser['avatar_path'])) {
 $displayName = $currentUser ? htmlspecialchars(($currentUser['username'] ?? '') ?: ($currentUser['email'] ?? '')) : '<a href="login.php" class="header-profile__unlogged">Neprihlásený používateľ</a>';
 $displayEmail = $currentUser ? htmlspecialchars($currentUser['email']) : '';
 $emailIsVerified = $currentUser && !empty($currentUser['email_verified_at']);
+$mobileIsSet = $currentUser && !empty($currentUser['mobile_phone']);
+$mobileIsVerified = $mobileIsSet && !empty($currentUser['mobile_verified_at']);
 $profileLink = $currentUser ? 'profile.php' : 'login.php';
 ?>
 <div class="header-profile">
@@ -45,6 +49,11 @@ $profileLink = $currentUser ? 'profile.php' : 'login.php';
                     <div class="header-profile__email-status <?= $emailIsVerified ? 'header-profile__email-status--verified' : 'header-profile__email-status--unverified' ?>">
                         <?= $emailIsVerified ? 'E-mail overený' : 'E-mail neoverený' ?>
                     </div>
+                    <?php if ($mobileIsSet): ?>
+                        <div class="header-profile__email-status <?= $mobileIsVerified ? 'header-profile__email-status--verified' : 'header-profile__email-status--unverified' ?>">
+                            <?= $mobileIsVerified ? 'Mobil overený' : 'Mobil neoverený' ?>
+                        </div>
+                    <?php endif; ?>
                 <?php endif; ?>
             </a>
             <?php if (!empty($currentUser['is_admin'])): ?>

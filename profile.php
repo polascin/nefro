@@ -3,12 +3,14 @@ require_once 'auth.php';
 require_once 'db_config.php';
 require_once 'avatar_upload.php';
 require_once 'phone_utils.php';
+require_once 'mobile_verification.php';
 
 requireLogin();
 
 $user_id = $_SESSION['user_id'];
 $errors = [];
 $success = false;
+$mobileVerificationNotice = null;
 
 $host = strtolower((string) ($_SERVER['HTTP_HOST'] ?? $_SERVER['SERVER_NAME'] ?? ''));
 $isLocalDev = $host === 'localhost'
@@ -151,6 +153,85 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $data['other_phone'] = $normalizedOtherPhone;
         }
 
+        $mobileVerificationAction = trim((string) ($_POST['mobile_verification_action'] ?? ''));
+        $requestedMobileCode = trim((string) ($_POST['mobile_verification_code'] ?? ''));
+
+        $existingMobilePhone = trim((string) ($user['mobile_phone'] ?? ''));
+        $existingMobilePhone = $existingMobilePhone === '' ? null : $existingMobilePhone;
+        $mobilePhoneChanged = $existingMobilePhone !== ($data['mobile_phone'] ?? null);
+
+        $mobileVerifiedAt = $user['mobile_verified_at'] ?? null;
+        $mobileVerificationCodeHash = $user['mobile_verification_code_hash'] ?? null;
+        $mobileVerificationExpiresAt = $user['mobile_verification_expires_at'] ?? null;
+        $mobileVerificationSentAt = $user['mobile_verification_sent_at'] ?? null;
+
+        if ($mobilePhoneChanged) {
+            $mobileVerifiedAt = null;
+            $mobileVerificationCodeHash = null;
+            $mobileVerificationExpiresAt = null;
+            $mobileVerificationSentAt = null;
+        }
+
+        if ($mobileVerificationAction === 'send') {
+            if (empty($data['mobile_phone'])) {
+                $errors[] = "Najprv zadajte číslo súkromného mobilného telefónu, ktoré chcete overiť.";
+            } elseif (!$mobilePhoneChanged && !isMobileResendAllowed($mobileVerificationSentAt, 60)) {
+                $errors[] = "Overovací SMS kód bol odoslaný nedávno. Skúste to znova o chvíľu.";
+            } else {
+                $usingExternalProvider = isExternalMobileVerificationProvider();
+
+                $tokenData = null;
+                if (!$usingExternalProvider) {
+                    $tokenData = generateMobileVerificationCode();
+                }
+
+                $sent = sendMobileVerificationCode(
+                    (string) $data['mobile_phone'],
+                    $tokenData['code'] ?? null
+                );
+
+                if ($sent) {
+                    $mobileVerifiedAt = null;
+                    $mobileVerificationCodeHash = $usingExternalProvider ? null : ($tokenData['code_hash'] ?? null);
+                    $mobileVerificationExpiresAt = $usingExternalProvider
+                        ? date('Y-m-d H:i:s', time() + 600)
+                        : ($tokenData['expires_at'] ?? null);
+                    $mobileVerificationSentAt = date('Y-m-d H:i:s');
+                    $mobileVerificationNotice = 'Overovací SMS kód bol odoslaný. Platnosť kódu je 10 minút.';
+
+                    if ($isLocalDev && !$usingExternalProvider && isset($tokenData['code'])) {
+                        $mobileVerificationNotice .= ' [DEV] Kód: ' . $tokenData['code'];
+                    }
+                } else {
+                    $errors[] = "Overovací SMS kód sa nepodarilo odoslať. Skúste to znova neskôr.";
+                }
+            }
+        } elseif ($mobileVerificationAction === 'verify') {
+            $verificationStatus = verifyMobileCodeByProvider([
+                'mobile_verified_at' => $mobileVerifiedAt,
+                'mobile_verification_code_hash' => $mobileVerificationCodeHash,
+                'mobile_verification_expires_at' => $mobileVerificationExpiresAt,
+            ], (string) ($data['mobile_phone'] ?? ''), $requestedMobileCode);
+
+            if ($verificationStatus === 'ok') {
+                $mobileVerifiedAt = date('Y-m-d H:i:s');
+                $mobileVerificationCodeHash = null;
+                $mobileVerificationExpiresAt = null;
+                $mobileVerificationSentAt = null;
+                $mobileVerificationNotice = 'Mobilné číslo bolo úspešne overené.';
+            } elseif ($verificationStatus === 'already_verified') {
+                $mobileVerificationNotice = 'Mobilné číslo je už overené.';
+            } elseif ($verificationStatus === 'missing_code') {
+                $errors[] = 'Overovací kód nie je dostupný. Najprv požiadajte o zaslanie SMS kódu.';
+            } elseif ($verificationStatus === 'expired') {
+                $errors[] = 'Platnosť overovacieho SMS kódu vypršala. Požiadajte o nový kód.';
+            } elseif ($verificationStatus === 'provider_error') {
+                $errors[] = 'Overenie mobilného čísla je dočasne nedostupné. Skúste to prosím neskôr.';
+            } else {
+                $errors[] = 'Neplatný overovací SMS kód.';
+            }
+        }
+
         // Validácia dátumu narodenia
         if (!empty($data['birth_date'])) {
             $bd = DateTime::createFromFormat('Y-m-d', $data['birth_date']);
@@ -228,17 +309,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     orientation_number = :orientation_number, zip_code = :zip_code, 
                     city = :city, district = :district, region = :region, country = :country, 
                     address_note = :address_note, newsletter_consent = :newsletter_consent,
-                    avatar_path = :avatar_path
+                    avatar_path = :avatar_path,
+                    mobile_verified_at = :mobile_verified_at,
+                    mobile_verification_code_hash = :mobile_verification_code_hash,
+                    mobile_verification_expires_at = :mobile_verification_expires_at,
+                    mobile_verification_sent_at = :mobile_verification_sent_at
                     $password_query
                     WHERE id = :id";
                 
                 $params = $data;
                 $params['avatar_path'] = $avatar_path;
+                $params['mobile_verified_at'] = $mobileVerifiedAt;
+                $params['mobile_verification_code_hash'] = $mobileVerificationCodeHash;
+                $params['mobile_verification_expires_at'] = $mobileVerificationExpiresAt;
+                $params['mobile_verification_sent_at'] = $mobileVerificationSentAt;
                 $params['id'] = $user_id;
                 $params = array_merge($params, $password_params);
 
                 $changedFields = [];
-                $trackedFields = array_merge(array_keys($data), ['avatar_path']);
+                $trackedFields = array_merge(array_keys($data), [
+                    'avatar_path',
+                    'mobile_verified_at',
+                    'mobile_verification_code_hash',
+                    'mobile_verification_expires_at',
+                    'mobile_verification_sent_at',
+                ]);
                 foreach ($trackedFields as $field) {
                     $oldValue = $normalizeValue($user[$field] ?? null);
                     $newValue = $normalizeValue($params[$field] ?? null);
@@ -348,6 +443,35 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <label for="mobile_phone">Číslo súkromného mobilného telefónu</label>
                             <input type="tel" id="mobile_phone" name="mobile_phone" class="form-control" value="<?= htmlspecialchars(formatPhoneForDisplay((string) ($user['mobile_phone'] ?? ''))) ?>" placeholder="+421 901 234 567" pattern="^\+421[0-9\s\-()\.\/]{8,20}$" title="Zadajte číslo vo formáte +421XXXXXXXXX alebo +421 901 234 567">
                             <small class="avatar-upload-hint">Povolený je iba medzinárodný formát začínajúci znakom +.</small>
+
+                            <?php
+                            $isMobileVerified = !empty($user['mobile_verified_at']);
+                            $mobileSentAt = $user['mobile_verification_sent_at'] ?? null;
+                            $mobileExpiresAt = $user['mobile_verification_expires_at'] ?? null;
+                            ?>
+                            <p class="avatar-upload-hint" style="margin-top:8px;">
+                                Stav overenia mobilu:
+                                <strong><?= $isMobileVerified ? 'Overený' : 'Neoverený' ?></strong>
+                                <?php if (!empty($user['mobile_phone']) && !$isMobileVerified): ?>
+                                    <?php if (!empty($mobileExpiresAt) && strtotime((string) $mobileExpiresAt) >= time()): ?>
+                                        (kód aktívny do <?= htmlspecialchars(date('d.m.Y H:i', strtotime((string) $mobileExpiresAt))) ?>)
+                                    <?php elseif (!empty($mobileSentAt)): ?>
+                                        (posledný kód odoslaný <?= htmlspecialchars(date('d.m.Y H:i', strtotime((string) $mobileSentAt))) ?>)
+                                    <?php endif; ?>
+                                <?php endif; ?>
+                            </p>
+
+                            <div class="form-grid" style="margin-top:10px;">
+                                <div class="form-group">
+                                    <label for="mobile_verification_code">SMS overovací kód</label>
+                                    <input type="text" id="mobile_verification_code" name="mobile_verification_code" class="form-control" inputmode="numeric" pattern="^\d{6}$" maxlength="6" placeholder="123456">
+                                </div>
+                            </div>
+
+                            <div class="form-actions" style="margin-top:6px; display:flex; gap:10px; flex-wrap:wrap;">
+                                <button type="submit" name="mobile_verification_action" value="send" class="btn-primary">Poslať overovací SMS kód</button>
+                                <button type="submit" name="mobile_verification_action" value="verify" class="btn-primary">Overiť mobilný kód</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -365,6 +489,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <?php if ($success): ?>
                 <div class="alert alert-success">
                     Profil bol úspešne aktualizovaný.
+                </div>
+            <?php endif; ?>
+
+            <?php if ($mobileVerificationNotice !== null): ?>
+                <div class="alert alert-success">
+                    <p><?= htmlspecialchars($mobileVerificationNotice) ?></p>
                 </div>
             <?php endif; ?>
 

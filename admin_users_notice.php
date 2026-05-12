@@ -14,6 +14,9 @@ $sensitiveColumns = [
     'email_verification_token_hash',
     'email_verification_expires_at',
     'email_verification_sent_at',
+    'mobile_verification_code_hash',
+    'mobile_verification_expires_at',
+    'mobile_verification_sent_at',
 ];
 
 $columnLabelMap = [
@@ -24,6 +27,7 @@ $columnLabelMap = [
     'avatar_path' => 'Cesta avatara',
     'email' => 'E-mail',
     'email_verified_at' => 'E-mail overený',
+    'mobile_verified_at' => 'Mobil overený',
     'title_before' => 'Titul pred',
     'first_name' => 'Meno',
     'middle_name' => 'Stredné meno',
