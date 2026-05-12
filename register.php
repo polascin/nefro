@@ -315,8 +315,8 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                                 <input type="email" id="email" name="email" class="form-control" required value="<?= htmlspecialchars($_POST['email'] ?? '') ?>">
                             </div>
                             <div class="form-group">
-                                <label for="mobile_phone">Číslo súkromného mobilného telefónu *</label>
-                                <input type="tel" id="mobile_phone" name="mobile_phone" class="form-control" required value="<?= htmlspecialchars($_POST['mobile_phone'] ?? '') ?>" placeholder="+421 901 234 567" pattern="^\+421[0-9\s\-()\.\/]{8,20}$" title="Zadajte číslo vo formáte +421XXXXXXXXX alebo +421 901 234 567">
+                                <label for="mobile_phone">Číslo súkromného mobilného telefónu</label>
+                                <input type="tel" id="mobile_phone" name="mobile_phone" class="form-control" value="<?= htmlspecialchars($_POST['mobile_phone'] ?? '') ?>" placeholder="+421 901 234 567" pattern="^\+421[0-9\s\-()\.\/]{8,20}$" title="Zadajte číslo vo formáte +421XXXXXXXXX alebo +421 901 234 567">
                                 <small class="avatar-upload-hint">Povolený je iba medzinárodný formát začínajúci znakom +.</small>
                             </div>
                             <div class="form-group">
