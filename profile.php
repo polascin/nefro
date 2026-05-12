@@ -2,6 +2,7 @@
 require_once 'auth.php';
 require_once 'db_config.php';
 require_once 'avatar_upload.php';
+require_once 'phone_utils.php';
 
 requireLogin();
 
@@ -32,38 +33,6 @@ $normalizeValue = function ($value) {
     }
     return $value;
 };
-
-/**
- * Normalize and validate user's mobile phone in local format.
- * Accepted examples: +421901234567, 0901234567, 901234567.
- * Returns normalized format +421XXXXXXXXX or null when empty.
- */
-function normalizeUserMobilePhone(?string $rawPhone)
-{
-    $value = trim((string) $rawPhone);
-    if ($value === '') {
-        return null;
-    }
-
-    $digits = preg_replace('/\D+/', '', $value);
-    if ($digits === null || $digits === '') {
-        return false;
-    }
-
-    if (str_starts_with($digits, '421')) {
-        $local = substr($digits, 3);
-    } elseif (str_starts_with($digits, '0')) {
-        $local = substr($digits, 1);
-    } else {
-        $local = $digits;
-    }
-
-    if (!preg_match('/^9\d{8}$/', (string) $local)) {
-        return false;
-    }
-
-    return '+421' . $local;
-}
 
 $deleteAvatarFile = function (?string $relativePath): void {
     if (empty($relativePath)) {
@@ -163,9 +132,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $normalizedMobilePhone = normalizeUserMobilePhone($_POST['mobile_phone'] ?? null);
         if ($normalizedMobilePhone === false) {
-            $errors[] = "Zadajte platné číslo súkromného mobilného telefónu vo formáte +421XXXXXXXXX alebo 09XXXXXXXX.";
+            $errors[] = "Zadajte platné číslo súkromného mobilného telefónu vo formáte +421XXXXXXXXX (môžete použiť aj medzery).";
         } else {
             $data['mobile_phone'] = $normalizedMobilePhone;
+        }
+
+        $normalizedWorkMobilePhone = normalizeUserMobilePhone($_POST['work_mobile_phone'] ?? null);
+        if ($normalizedWorkMobilePhone === false) {
+            $errors[] = "Zadajte platné číslo pracovného mobilného telefónu vo formáte +421XXXXXXXXX (môžete použiť aj medzery).";
+        } else {
+            $data['work_mobile_phone'] = $normalizedWorkMobilePhone;
+        }
+
+        $normalizedOtherPhone = normalizeGenericPhone($_POST['other_phone'] ?? null);
+        if ($normalizedOtherPhone === false) {
+            $errors[] = "Zadajte platné iné telefónne číslo v medzinárodnom formáte +XXXXXXXX (môžete použiť aj medzery).";
+        } else {
+            $data['other_phone'] = $normalizedOtherPhone;
         }
 
         // Validácia dátumu narodenia
@@ -353,7 +336,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <p class="auth-subtitle">
                 E-mailová adresa (prihlasovacia): <strong><?= htmlspecialchars($user['email']) ?></strong>
             </p>
-            <p class="auth-subtitle">Formát mobilného čísla: <strong>+421XXXXXXXXX</strong> alebo <strong>09XXXXXXXX</strong>.</p>
+            <p class="auth-subtitle">Formát mobilného čísla: <strong>+421XXXXXXXXX</strong> (môžete použiť aj medzery).</p>
 
             <form method="POST" action="profile.php" enctype="multipart/form-data">
                 <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
@@ -363,8 +346,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <div class="form-grid">
                         <div class="form-group form-group--full-width">
                             <label for="mobile_phone">Číslo súkromného mobilného telefónu</label>
-                            <input type="tel" id="mobile_phone" name="mobile_phone" class="form-control" value="<?= htmlspecialchars($user['mobile_phone'] ?? '') ?>" placeholder="+421901234567" pattern="^(\+421|0)9[0-9]{8}$" title="Zadajte číslo vo formáte +421XXXXXXXXX alebo 09XXXXXXXX">
-                            <small class="avatar-upload-hint">Odporúčaný formát: +421XXXXXXXXX.</small>
+                            <input type="tel" id="mobile_phone" name="mobile_phone" class="form-control" value="<?= htmlspecialchars(formatPhoneForDisplay((string) ($user['mobile_phone'] ?? ''))) ?>" placeholder="+421 901 234 567" pattern="^\+421[0-9\s\-()\.\/]{8,20}$" title="Zadajte číslo vo formáte +421XXXXXXXXX alebo +421 901 234 567">
+                            <small class="avatar-upload-hint">Povolený je iba medzinárodný formát začínajúci znakom +.</small>
                         </div>
                     </div>
                 </div>
@@ -492,7 +475,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         </div>
                         <div class="form-group">
                             <label for="work_mobile_phone">Číslo pracovného mobilného telefónu</label>
-                            <input type="tel" id="work_mobile_phone" name="work_mobile_phone" class="form-control" value="<?= htmlspecialchars($user['work_mobile_phone'] ?? '') ?>">
+                            <input type="tel" id="work_mobile_phone" name="work_mobile_phone" class="form-control" value="<?= htmlspecialchars(formatPhoneForDisplay((string) ($user['work_mobile_phone'] ?? ''))) ?>" placeholder="+421 901 234 567" pattern="^\+421[0-9\s\-()\.\/]{8,20}$" title="Zadajte číslo vo formáte +421XXXXXXXXX alebo +421 901 234 567">
                         </div>
                         <div class="form-group">
                             <label for="org_website">Webové stránky organizácie</label>
@@ -510,7 +493,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <div class="form-grid">
                         <div class="form-group">
                             <label for="other_phone">Iné telefónne číslo</label>
-                            <input type="tel" id="other_phone" name="other_phone" class="form-control" value="<?= htmlspecialchars($user['other_phone'] ?? '') ?>">
+                            <input type="tel" id="other_phone" name="other_phone" class="form-control" value="<?= htmlspecialchars(formatPhoneForDisplay((string) ($user['other_phone'] ?? ''))) ?>" placeholder="+421 2 1234 5678" pattern="^\+[0-9][0-9\s\-()\.\/]{7,20}$" title="Zadajte číslo v medzinárodnom formáte +XXXXXXXX, napr. +421 2 1234 5678">
                         </div>
                         <div class="form-group">
                             <label for="website">Osobné webové stránky</label>

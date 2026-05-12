@@ -317,9 +317,9 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
             </div>
 
             <div class="form-section">
-                <h3>Oznam používateľov</h3>
-                <p>Vygenerovanie kompletného zoznamu všetkých používateľov zoradených podľa priezviska (vzostupne) s možnosťou výberu režimu exportu.</p>
-                <h4>Režim: bez technických/citlivých polí</h4>
+                <h3>Zoznam používateľov</h3>
+                <p>Generovanie kompletného zoznamu všetkých používateľov zoradených podľa priezviska (vzostupne) s možnosťou výberu režimu exportu.</p>
+                <h4>Režim: bez technických a citlivých polí</h4>
                 <div class="admin-notice-actions">
                     <a class="btn-admin-action" href="admin_users_notice.php?format=view&amp;include_sensitive=0" target="_blank" rel="noopener">Zobraziť dokument</a>
                     <a class="btn-admin-action" href="admin_users_notice.php?format=print&amp;include_sensitive=0" target="_blank" rel="noopener">Vytlačiť</a>
@@ -327,7 +327,7 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
                     <a class="btn-admin-action" href="admin_users_notice.php?format=json&amp;include_sensitive=0" rel="noopener">Uložiť JSON</a>
                     <a class="btn-admin-action" href="admin_users_notice.php?format=txt&amp;include_sensitive=0" rel="noopener">Uložiť TXT</a>
                 </div>
-                <h4>Režim: vrátane technických/citlivých polí</h4>
+                <h4>Režim: vrátane technických a citlivých polí</h4>
                 <div class="admin-notice-actions">
                     <form method="POST" action="admin_users_notice.php" target="_blank" style="display:inline" onsubmit="return confirm('Naozaj otvoriť citlivý výstup používateľov?')">
                         <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
@@ -491,7 +491,7 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
             </div>
 
             <div class="form-section">
-                <h3>Audit log oznamov používateľov (posledných 200)</h3>
+                <h3>Audit log exportov zoznamu používateľov (posledných 200)</h3>
                 <form method="GET" action="admin.php">
                     <div class="form-group form-group--inline">
                         <label for="audit_admin_id">Admin:</label>
@@ -542,7 +542,7 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
                         </thead>
                         <tbody>
                             <?php if (empty($noticeAudit)): ?>
-                                <tr><td colspan="8">Zatiaľ bez záznamov audit logu oznamov.</td></tr>
+                                <tr><td colspan="8">Zatiaľ bez záznamov v audit logu exportov zoznamu používateľov.</td></tr>
                             <?php else: ?>
                                 <?php foreach ($noticeAudit as $a): ?>
                                     <tr>

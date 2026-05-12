@@ -3,43 +3,12 @@ require_once 'auth.php';
 require_once 'db_config.php';
 require_once 'avatar_upload.php';
 require_once 'email_verification.php';
+require_once 'phone_utils.php';
 
 $errors = [];
 $success = false;
 $registeredData = [];
 $verificationNotice = null;
-
-/**
- * Normalize and validate user's mobile phone in local format.
- * Accepted examples: +421901234567, 0901234567, 901234567.
- * Returns normalized format +421XXXXXXXXX or null when empty.
- */
-function normalizeUserMobilePhone(?string $rawPhone)
-{
-    $value = trim((string) $rawPhone);
-    if ($value === '') {
-        return null;
-    }
-
-    $digits = preg_replace('/\D+/', '', $value);
-    if ($digits === null || $digits === '') {
-        return false;
-    }
-
-    if (str_starts_with($digits, '421')) {
-        $local = substr($digits, 3);
-    } elseif (str_starts_with($digits, '0')) {
-        $local = substr($digits, 1);
-    } else {
-        $local = $digits;
-    }
-
-    if (!preg_match('/^9\d{8}$/', (string) $local)) {
-        return false;
-    }
-
-    return '+421' . $local;
-}
 
 $host = strtolower((string) ($_SERVER['HTTP_HOST'] ?? $_SERVER['SERVER_NAME'] ?? ''));
 $isLocalDev = $host === 'localhost'
@@ -66,6 +35,8 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
     } else {
         $email = filter_var(trim($_POST['email'] ?? ''), FILTER_SANITIZE_EMAIL);
         $mobilePhone = normalizeUserMobilePhone($_POST['mobile_phone'] ?? null);
+        $workMobilePhone = normalizeUserMobilePhone($_POST['work_mobile_phone'] ?? null);
+        $otherPhone = normalizeGenericPhone($_POST['other_phone'] ?? null);
         $password = $_POST['password'] ?? '';
         $passwordConfirm = $_POST['password_confirm'] ?? '';
         $username = trim($_POST['username'] ?? '');
@@ -79,7 +50,13 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
             $errors[] = "Heslá sa nezhodujú. Skontrolujte potvrdenie hesla.";
         }
         if ($mobilePhone === false) {
-            $errors[] = "Zadajte platné číslo súkromného mobilného telefónu vo formáte +421XXXXXXXXX alebo 09XXXXXXXX.";
+            $errors[] = "Zadajte platné číslo súkromného mobilného telefónu vo formáte +421XXXXXXXXX (môžete použiť aj medzery).";
+        }
+        if ($workMobilePhone === false) {
+            $errors[] = "Zadajte platné číslo pracovného mobilného telefónu vo formáte +421XXXXXXXXX (môžete použiť aj medzery).";
+        }
+        if ($otherPhone === false) {
+            $errors[] = "Zadajte platné iné telefónne číslo v medzinárodnom formáte +XXXXXXXX (môžete použiť aj medzery).";
         }
         
         if (empty($username)) {
@@ -150,11 +127,11 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                             'name_note' => trim($_POST['name_note'] ?? ''),
                             'organization' => trim($_POST['organization'] ?? ''),
                             'job_function' => trim($_POST['job_function'] ?? ''),
-                            'work_mobile_phone' => trim($_POST['work_mobile_phone'] ?? ''),
+                            'work_mobile_phone' => $workMobilePhone,
                             'org_website' => trim($_POST['org_website'] ?? ''),
                             'work_email' => trim($_POST['work_email'] ?? ''),
                             'mobile_phone' => $mobilePhone,
-                            'other_phone' => trim($_POST['other_phone'] ?? ''),
+                            'other_phone' => $otherPhone,
                             'social_linkedin' => trim($_POST['social_linkedin'] ?? ''),
                             'social_x' => trim($_POST['social_x'] ?? ''),
                             'social_facebook' => trim($_POST['social_facebook'] ?? ''),
@@ -302,7 +279,13 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                         <?php foreach ($fieldLabels as $field => $label): ?>
                             <div class="form-group">
                                 <label><?= htmlspecialchars($label) ?></label>
-                                <p><?= htmlspecialchars(($registeredData[$field] ?? '') !== '' ? (string) $registeredData[$field] : 'Neuvedené') ?></p>
+                                <?php
+                                $displayValue = ($registeredData[$field] ?? '') !== '' ? (string) $registeredData[$field] : 'Neuvedené';
+                                if (in_array($field, ['mobile_phone', 'work_mobile_phone', 'other_phone'], true) && $displayValue !== 'Neuvedené') {
+                                    $displayValue = formatPhoneForDisplay($displayValue);
+                                }
+                                ?>
+                                <p><?= htmlspecialchars($displayValue) ?></p>
                             </div>
                         <?php endforeach; ?>
                     </div>
@@ -333,8 +316,8 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                             </div>
                             <div class="form-group">
                                 <label for="mobile_phone">Číslo súkromného mobilného telefónu *</label>
-                                <input type="tel" id="mobile_phone" name="mobile_phone" class="form-control" required value="<?= htmlspecialchars($_POST['mobile_phone'] ?? '') ?>" placeholder="+421901234567" pattern="^(\+421|0)9[0-9]{8}$" title="Zadajte číslo vo formáte +421XXXXXXXXX alebo 09XXXXXXXX">
-                                <small class="avatar-upload-hint">Odporúčaný formát: +421XXXXXXXXX.</small>
+                                <input type="tel" id="mobile_phone" name="mobile_phone" class="form-control" required value="<?= htmlspecialchars($_POST['mobile_phone'] ?? '') ?>" placeholder="+421 901 234 567" pattern="^\+421[0-9\s\-()\.\/]{8,20}$" title="Zadajte číslo vo formáte +421XXXXXXXXX alebo +421 901 234 567">
+                                <small class="avatar-upload-hint">Povolený je iba medzinárodný formát začínajúci znakom +.</small>
                             </div>
                             <div class="form-group">
                                 <label for="password">Heslo <small>(min. 8 znakov, veľké/malé písmená a číslice)</small> *</label>
@@ -425,7 +408,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                             </div>
                             <div class="form-group">
                                 <label for="work_mobile_phone">Číslo pracovného mobilného telefónu</label>
-                                <input type="tel" id="work_mobile_phone" name="work_mobile_phone" class="form-control" value="<?= htmlspecialchars($_POST['work_mobile_phone'] ?? '') ?>">
+                                <input type="tel" id="work_mobile_phone" name="work_mobile_phone" class="form-control" value="<?= htmlspecialchars($_POST['work_mobile_phone'] ?? '') ?>" placeholder="+421 901 234 567" pattern="^\+421[0-9\s\-()\.\/]{8,20}$" title="Zadajte číslo vo formáte +421XXXXXXXXX alebo +421 901 234 567">
                             </div>
                             <div class="form-group">
                                 <label for="org_website">Webové stránky organizácie</label>
@@ -443,7 +426,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="other_phone">Iné telefónne číslo</label>
-                                <input type="tel" id="other_phone" name="other_phone" class="form-control" value="<?= htmlspecialchars($_POST['other_phone'] ?? '') ?>">
+                                <input type="tel" id="other_phone" name="other_phone" class="form-control" value="<?= htmlspecialchars($_POST['other_phone'] ?? '') ?>" placeholder="+421 2 1234 5678" pattern="^\+[0-9][0-9\s\-()\.\/]{7,20}$" title="Zadajte číslo v medzinárodnom formáte +XXXXXXXX, napr. +421 2 1234 5678">
                             </div>
                             <div class="form-group">
                                 <label for="website">Osobné webové stránky</label>

@@ -1,6 +1,7 @@
 <?php
 require_once 'auth.php';
 require_once 'db_config.php';
+require_once 'phone_utils.php';
 
 requireAdmin();
 $currentAdminId = (int) ($_SESSION['user_id'] ?? 0);
@@ -124,7 +125,7 @@ try {
     error_log('Admin users notice error: ' . $e->getMessage());
     http_response_code(500);
     header('Content-Type: text/plain; charset=UTF-8');
-    echo 'Nepodarilo sa pripraviť oznam používateľov.';
+    echo 'Nepodarilo sa pripraviť zoznam používateľov.';
     exit;
 }
 
@@ -149,9 +150,18 @@ $labelFor = static function (string $column) use ($columnLabelMap): string {
     return $columnLabelMap[$column] ?? str_replace('_', ' ', ucfirst($column));
 };
 
+$phoneColumns = ['mobile_phone', 'work_mobile_phone', 'other_phone'];
+$formatCellValue = static function (string $column, mixed $value) use ($phoneColumns): string {
+    $stringValue = (string) ($value ?? '');
+    if (in_array($column, $phoneColumns, true)) {
+        return formatPhoneForDisplay($stringValue);
+    }
+    return $stringValue;
+};
+
 if ($format === 'csv') {
     $timestamp = date('Ymd_His');
-    $filename = 'oznam_pouzivatelov_' . $timestamp . '.csv';
+    $filename = 'zoznam_pouzivatelov_' . $timestamp . '.csv';
 
     header('Content-Type: text/csv; charset=UTF-8');
     header('Content-Disposition: attachment; filename="' . $filename . '"');
@@ -187,7 +197,7 @@ if ($format === 'csv') {
 
 if ($format === 'json') {
     $timestamp = date('Ymd_His');
-    $filename = 'oznam_pouzivatelov_' . $timestamp . '.json';
+    $filename = 'zoznam_pouzivatelov_' . $timestamp . '.json';
 
     header('Content-Type: application/json; charset=UTF-8');
     header('Content-Disposition: attachment; filename="' . $filename . '"');
@@ -208,14 +218,14 @@ if ($format === 'json') {
 
 if ($format === 'txt') {
     $timestamp = date('Ymd_His');
-    $filename = 'oznam_pouzivatelov_' . $timestamp . '.txt';
+    $filename = 'zoznam_pouzivatelov_' . $timestamp . '.txt';
 
     header('Content-Type: text/plain; charset=UTF-8');
     header('Content-Disposition: attachment; filename="' . $filename . '"');
     header('Pragma: no-cache');
     header('Expires: 0');
 
-    echo "Oznam používateľov\n";
+    echo "Zoznam používateľov\n";
     echo "Generované: " . date('d.m.Y H:i:s') . "\n";
     echo "Počet používateľov: " . count($users) . "\n\n";
 
@@ -229,7 +239,7 @@ if ($format === 'txt') {
         echo "Používateľ #" . $counter . "\n";
         foreach ($orderedColumns as $col) {
             $label = $labelFor($col);
-            $value = (string) ($userRow[$col] ?? '');
+            $value = $formatCellValue($col, $userRow[$col] ?? '');
             echo $label . ': ' . $value . "\n";
         }
         echo str_repeat('-', 72) . "\n";
@@ -249,16 +259,26 @@ $modeLabel = $includeSensitive ? 'Vrátane technických/citlivých polí' : 'Bez
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oznam používateľov - Nefro</title>
+    <title>Zoznam používateľov - Nefro</title>
     <script src="theme.js?v=20260511-1&cb=<?= filemtime('theme.js') ?>"></script>
     <link rel="stylesheet" href="index.css?v=20260509-1&cb=<?= filemtime('index.css') ?>">
     <script src="ui-preferences.js?v=20260511-1&cb=<?= filemtime('ui-preferences.js') ?>" defer></script>
     <script src="ui-preferences-fallback.js?v=20260511-1&cb=<?= filemtime('ui-preferences-fallback.js') ?>" defer></script>
 </head>
 <body class="admin-notice-page">
+    <div class="admin-print-header print-only">
+        <div>Zoznam používateľov</div>
+        <div>Generované: <?= htmlspecialchars($nowHuman) ?></div>
+    </div>
+
+    <div class="admin-print-footer print-only">
+        <span>Nefro - Zoznam používateľov</span>
+        <span>Strana <span class="print-page-number"></span></span>
+    </div>
+
     <main class="container admin-notice-container">
         <div class="auth-container auth-container--wide admin-notice-card">
-            <h2>Oznam používateľov</h2>
+            <h2>Zoznam používateľov</h2>
             <p class="auth-subtitle">Zoznam všetkých používateľov zoradený abecedne podľa priezviska.</p>
 
             <div class="admin-notice-meta">
@@ -316,7 +336,7 @@ $modeLabel = $includeSensitive ? 'Vrátane technických/citlivých polí' : 'Bez
                 <a class="btn-admin-action" href="admin.php">Späť na Admin panel</a>
             </div>
 
-            <div class="admin-table-wrap">
+            <div class="admin-table-wrap screen-only">
                 <table class="admin-table admin-notice-table">
                     <thead>
                         <tr>
@@ -334,13 +354,31 @@ $modeLabel = $includeSensitive ? 'Vrátane technických/citlivých polí' : 'Bez
                             <?php foreach ($users as $userRow): ?>
                                 <tr>
                                     <?php foreach ($orderedColumns as $col): ?>
-                                        <td><?= htmlspecialchars((string) ($userRow[$col] ?? '')) ?></td>
+                                        <td><?= htmlspecialchars($formatCellValue($col, $userRow[$col] ?? '')) ?></td>
                                     <?php endforeach; ?>
                                 </tr>
                             <?php endforeach; ?>
                         <?php endif; ?>
                     </tbody>
                 </table>
+            </div>
+
+            <div class="admin-notice-print-list print-only">
+                <?php if (empty($users)): ?>
+                    <p>V databáze sa nenašli žiadni používatelia.</p>
+                <?php else: ?>
+                    <?php foreach ($users as $index => $userRow): ?>
+                        <section class="admin-notice-print-user">
+                            <h3>Používateľ #<?= (int) ($index + 1) ?></h3>
+                            <?php foreach ($orderedColumns as $col): ?>
+                                <div class="admin-notice-print-row">
+                                    <strong><?= htmlspecialchars($labelFor($col)) ?>:</strong>
+                                    <span><?= htmlspecialchars($formatCellValue($col, $userRow[$col] ?? '')) ?></span>
+                                </div>
+                            <?php endforeach; ?>
+                        </section>
+                    <?php endforeach; ?>
+                <?php endif; ?>
             </div>
         </div>
     </main>
