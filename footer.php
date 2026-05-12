@@ -34,6 +34,7 @@ $isHomePage = basename($_SERVER['PHP_SELF']) === 'index.php';
       </p>
     </div>
   </footer>
+  <script src="form-submit-enter.js?v=20260512-1&cb=<?= filemtime('form-submit-enter.js') ?>" defer></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const passwordInputs = document.querySelectorAll('input[type="password"]');
