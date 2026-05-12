@@ -222,6 +222,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
             </form>
 
             <div class="auth-links">
+                <p><a href="forgot_password.php">Zabudnuté heslo?</a></p>
                 <p>Ešte nemáte účet? <a href="register.php">Zaregistrujte sa</a></p>
             </div>
         </div>

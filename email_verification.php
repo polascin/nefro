@@ -275,6 +275,34 @@ function sendVerificationEmail(string $toEmail, string $username, int $userId, s
     return @mail($toEmail, $subject, $message, implode("\r\n", $headers));
 }
 
+function sendPasswordResetEmail(string $toEmail, string $username, string $rawToken): bool {
+    $resetUrl = getAppBaseUrl() . '/reset_password.php?token=' . urlencode($rawToken);
+
+    $subject = 'Obnova hesla - Nefro-projekt Slovensko';
+    $displayName = trim($username) !== '' ? $username : $toEmail;
+    $message = "Dobrý deň, " . $displayName . "\n\n"
+        . "prijali sme žiadosť o obnovenie hesla pre váš účet v Nefro-projekt Slovensko.\n"
+        . "Nové heslo nastavíte kliknutím na tento odkaz:\n\n"
+        . $resetUrl . "\n\n"
+        . "Platnosť odkazu je 60 minút.\n"
+        . "Ak ste o obnovu hesla nežiadali, tento e-mail ignorujte.\n\n"
+        . "Nefro-projekt Slovensko";
+
+    $cfg = getEmailEnvConfig();
+    if (sendViaSmtp($toEmail, $subject, $message, $cfg)) {
+        return true;
+    }
+
+    $fallbackFrom = $cfg['from_email'] !== '' ? $cfg['from_email'] : ('no-reply@' . preg_replace('/:\\d+$/', '', (string) ($_SERVER['HTTP_HOST'] ?? 'nefro.polascin.net')));
+    $headers = [
+        'MIME-Version: 1.0',
+        'Content-Type: text/plain; charset=UTF-8',
+        'From: ' . ($cfg['from_name'] ?: 'Nefro-projekt') . ' <' . $fallbackFrom . '>',
+    ];
+
+    return @mail($toEmail, $subject, $message, implode("\r\n", $headers));
+}
+
 function markEmailAsVerified(PDO $pdo, int $userId): void {
     $stmt = $pdo->prepare("UPDATE users
         SET email_verified_at = NOW(),

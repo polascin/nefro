@@ -1,0 +1,184 @@
+<?php
+require_once 'auth.php';
+require_once 'db_config.php';
+
+$errors = [];
+$token = trim((string) ($_GET['token'] ?? $_POST['token'] ?? ''));
+$tokenHash = $token !== '' ? hash('sha256', $token) : '';
+$resetRequest = null;
+
+if ($tokenHash !== '') {
+    try {
+        $stmt = $pdo->prepare("SELECT pr.id, pr.user_id, u.email, u.username
+            FROM password_resets pr
+            INNER JOIN users u ON u.id = pr.user_id
+            WHERE pr.token_hash = :token_hash
+              AND pr.used_at IS NULL
+              AND pr.expires_at >= NOW()
+            LIMIT 1");
+        $stmt->execute(['token_hash' => $tokenHash]);
+        $resetRequest = $stmt->fetch();
+    } catch (\PDOException $e) {
+        error_log('Reset password lookup error: ' . $e->getMessage());
+        $resetRequest = null;
+    }
+}
+
+$host = strtolower((string) ($_SERVER['HTTP_HOST'] ?? $_SERVER['SERVER_NAME'] ?? ''));
+$isLocalDev = $host === 'localhost'
+    || str_starts_with($host, 'localhost:')
+    || str_starts_with($host, '127.0.0.1')
+    || str_starts_with($host, '::1');
+
+if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
+    $postedCsrfToken = $_POST['csrf_token'] ?? '';
+    if (!validateCsrfToken($postedCsrfToken)) {
+        $errors[] = "Neplatný CSRF token. Skúste to znova.";
+
+        if ($isLocalDev) {
+            $sessionTokenPresent = !empty($_SESSION['csrf_token']);
+            $postTokenPresent = !empty($postedCsrfToken);
+            $csrfReason = !$postTokenPresent
+                ? 'Vo formulári chýba CSRF token.'
+                : (!$sessionTokenPresent
+                    ? 'V relácii chýba CSRF token (pravdepodobne problém so session cookie alebo stará otvorená karta).'
+                    : 'Token vo formulári sa nezhoduje s tokenom v relácii.');
+
+            $errors[] = "[DEV diagnostika] CSRF zlyhanie: " . $csrfReason;
+        }
+    }
+
+    $newPassword = $_POST['new_password'] ?? '';
+    $newPasswordConfirm = $_POST['new_password_confirm'] ?? '';
+
+    if ($resetRequest === null) {
+        $errors[] = 'Odkaz na obnovenie hesla je neplatný alebo už expiroval.';
+    }
+
+    if (strlen($newPassword) < 8 || strlen($newPassword) > 1024 || !preg_match('/[A-Z]/', $newPassword) || !preg_match('/[a-z]/', $newPassword) || !preg_match('/[0-9]/', $newPassword)) {
+        $errors[] = 'Heslo musí mať 8–1024 znakov, obsahovať aspoň jedno veľké písmeno, malé písmeno a číslicu.';
+    } elseif ($newPassword !== $newPasswordConfirm) {
+        $errors[] = 'Heslá sa nezhodujú.';
+    }
+
+    if (empty($errors) && $resetRequest !== null) {
+        try {
+            $pdo->beginTransaction();
+
+            $updatePwd = $pdo->prepare('UPDATE users SET password_hash = :password_hash WHERE id = :user_id');
+            $updatePwd->execute([
+                'password_hash' => password_hash($newPassword, PASSWORD_DEFAULT),
+                'user_id' => (int) $resetRequest['user_id'],
+            ]);
+
+            $useToken = $pdo->prepare('UPDATE password_resets SET used_at = NOW() WHERE user_id = :user_id AND used_at IS NULL');
+            $useToken->execute(['user_id' => (int) $resetRequest['user_id']]);
+
+            $pdo->commit();
+
+            setFlashMessage('success', 'Heslo bolo úspešne zmenené. Môžete sa prihlásiť novým heslom.');
+            header('Location: login.php');
+            exit;
+        } catch (\PDOException $e) {
+            if ($pdo->inTransaction()) {
+                $pdo->rollBack();
+            }
+            error_log('Reset password update error: ' . $e->getMessage());
+            $errors[] = 'Pri zmene hesla došlo k chybe. Skúste to znova neskôr.';
+        }
+    }
+}
+?>
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nastavenie nového hesla - Nefro-projekt Slovensko</title>
+    <script src="theme.js?v=20260511-1&cb=<?= filemtime('theme.js') ?>"></script>
+    <link rel="stylesheet" href="index.css?v=20260509-1&cb=<?= filemtime('index.css') ?>">
+    <script src="ui-preferences.js?v=20260511-1&cb=<?= filemtime('ui-preferences.js') ?>" defer></script>
+    <script src="ui-preferences-fallback.js?v=20260511-1&cb=<?= filemtime('ui-preferences-fallback.js') ?>" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <?php
+    $headerTitle = 'Nefro-projekt Slovensko';
+    $showLogo = false;
+    include 'header.php';
+    ?>
+
+    <main class="container">
+        <div class="auth-container">
+            <h2>Nastavenie nového hesla</h2>
+
+            <?php if (!empty($errors)): ?>
+                <div class="alert alert-error">
+                    <ul>
+                        <?php foreach ($errors as $error): ?>
+                            <li><?= htmlspecialchars($error) ?></li>
+                        <?php endforeach; ?>
+                    </ul>
+                </div>
+            <?php endif; ?>
+
+            <?php if ($resetRequest === null): ?>
+                <div class="alert alert-error">
+                    <p>Odkaz na obnovenie hesla je neplatný alebo už expiroval.</p>
+                </div>
+                <div class="auth-links">
+                    <p><a href="forgot_password.php">Požiadať o nový odkaz</a></p>
+                    <p><a href="login.php">Späť na prihlásenie</a></p>
+                </div>
+            <?php else: ?>
+                <p class="auth-subtitle">Účet: <strong><?= htmlspecialchars((string) ($resetRequest['email'] ?? '')) ?></strong></p>
+
+                <form method="POST" action="reset_password.php">
+                    <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
+                    <input type="hidden" name="token" value="<?= htmlspecialchars($token) ?>">
+
+                    <div class="form-group">
+                        <label for="new_password">Nové heslo</label>
+                        <input type="password" id="new_password" name="new_password" class="form-control" required autocomplete="new-password">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="new_password_confirm">Potvrdenie nového hesla</label>
+                        <input type="password" id="new_password_confirm" name="new_password_confirm" class="form-control" required autocomplete="new-password">
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary btn-block">Uložiť nové heslo</button>
+                    </div>
+                </form>
+
+                <div class="auth-links">
+                    <p><a href="login.php">Späť na prihlásenie</a></p>
+                </div>
+            <?php endif; ?>
+        </div>
+    </main>
+
+    <?php if ($resetRequest !== null): ?>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const form = document.querySelector('form[action="reset_password.php"]');
+        const pass = document.getElementById('new_password');
+        const confirm = document.getElementById('new_password_confirm');
+        if (!form || !pass || !confirm) return;
+
+        const validate = () => {
+            const same = pass.value === confirm.value;
+            confirm.setCustomValidity(same ? '' : 'Heslá sa nezhodujú.');
+        };
+
+        pass.addEventListener('input', validate);
+        confirm.addEventListener('input', validate);
+        form.addEventListener('submit', validate);
+    });
+    </script>
+    <?php endif; ?>
+
+    <?php include 'footer.php'; ?>
+</body>
+</html>

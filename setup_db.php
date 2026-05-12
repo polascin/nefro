@@ -76,6 +76,12 @@ try {
         $pdo->exec("ALTER TABLE users ADD COLUMN district VARCHAR(255) NULL AFTER city");
     }
 
+    $mobilePhoneColumnStmt = $pdo->prepare("SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'users' AND COLUMN_NAME = 'mobile_phone'");
+    $mobilePhoneColumnStmt->execute();
+    if ((int) $mobilePhoneColumnStmt->fetchColumn() === 0) {
+        $pdo->exec("ALTER TABLE users ADD COLUMN mobile_phone VARCHAR(50) NULL AFTER work_email");
+    }
+
     $emailVerifiedAtAdded = false;
     $emailVerifiedAtStmt = $pdo->prepare("SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'users' AND COLUMN_NAME = 'email_verified_at'");
     $emailVerifiedAtStmt->execute();
@@ -144,7 +150,22 @@ try {
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";
     $pdo->exec($loginAttemptsSql);
 
-    echo "Tabuľky 'users', 'users_profile_archive' a 'users_avatar_archive' boli úspešne vytvorené alebo už existujú.";
+    $passwordResetsSql = "CREATE TABLE IF NOT EXISTS password_resets (
+        id BIGINT AUTO_INCREMENT PRIMARY KEY,
+        user_id INT NOT NULL,
+        token_hash CHAR(64) NOT NULL,
+        expires_at DATETIME NOT NULL,
+        requested_ip VARCHAR(45) NULL,
+        used_at DATETIME NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        UNIQUE KEY uq_password_resets_token_hash (token_hash),
+        INDEX idx_password_resets_user_id (user_id),
+        INDEX idx_password_resets_expires_at (expires_at),
+        CONSTRAINT fk_password_resets_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";
+    $pdo->exec($passwordResetsSql);
+
+    echo "Tabuľky 'users', 'users_profile_archive', 'users_avatar_archive' a 'password_resets' boli úspešne vytvorené alebo už existujú.";
 } catch (\PDOException $e) {
     echo "Chyba pri vytváraní tabuľky: " . $e->getMessage();
 }

@@ -33,6 +33,38 @@ $normalizeValue = function ($value) {
     return $value;
 };
 
+/**
+ * Normalize and validate user's mobile phone in local format.
+ * Accepted examples: +421901234567, 0901234567, 901234567.
+ * Returns normalized format +421XXXXXXXXX or null when empty.
+ */
+function normalizeUserMobilePhone(?string $rawPhone)
+{
+    $value = trim((string) $rawPhone);
+    if ($value === '') {
+        return null;
+    }
+
+    $digits = preg_replace('/\D+/', '', $value);
+    if ($digits === null || $digits === '') {
+        return false;
+    }
+
+    if (str_starts_with($digits, '421')) {
+        $local = substr($digits, 3);
+    } elseif (str_starts_with($digits, '0')) {
+        $local = substr($digits, 1);
+    } else {
+        $local = $digits;
+    }
+
+    if (!preg_match('/^9\d{8}$/', (string) $local)) {
+        return false;
+    }
+
+    return '+421' . $local;
+}
+
 $deleteAvatarFile = function (?string $relativePath): void {
     if (empty($relativePath)) {
         return;
@@ -128,6 +160,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $data[$field] = null;
             }
         }
+
+        $normalizedMobilePhone = normalizeUserMobilePhone($_POST['mobile_phone'] ?? null);
+        if ($normalizedMobilePhone === false) {
+            $errors[] = "Zadajte platné číslo súkromného mobilného telefónu vo formáte +421XXXXXXXXX alebo 09XXXXXXXX.";
+        } else {
+            $data['mobile_phone'] = $normalizedMobilePhone;
+        }
+
         // Validácia dátumu narodenia
         if (!empty($data['birth_date'])) {
             $bd = DateTime::createFromFormat('Y-m-d', $data['birth_date']);
@@ -313,6 +353,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <p class="auth-subtitle">
                 E-mailová adresa (prihlasovacia): <strong><?= htmlspecialchars($user['email']) ?></strong>
             </p>
+            <p class="auth-subtitle">Formát mobilného čísla: <strong>+421XXXXXXXXX</strong> alebo <strong>09XXXXXXXX</strong>.</p>
+
+            <form method="POST" action="profile.php" enctype="multipart/form-data">
+                <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
+
+                <div class="form-section">
+                    <h3>Prihlasovacie údaje</h3>
+                    <div class="form-grid">
+                        <div class="form-group form-group--full-width">
+                            <label for="mobile_phone">Číslo súkromného mobilného telefónu</label>
+                            <input type="tel" id="mobile_phone" name="mobile_phone" class="form-control" value="<?= htmlspecialchars($user['mobile_phone'] ?? '') ?>" placeholder="+421901234567" pattern="^(\+421|0)9[0-9]{8}$" title="Zadajte číslo vo formáte +421XXXXXXXXX alebo 09XXXXXXXX">
+                            <small class="avatar-upload-hint">Odporúčaný formát: +421XXXXXXXXX.</small>
+                        </div>
+                    </div>
+                </div>
             
             <?php if (!empty($errors)): ?>
                 <div class="alert alert-error">
@@ -329,9 +384,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     Profil bol úspešne aktualizovaný.
                 </div>
             <?php endif; ?>
-
-            <form method="POST" action="profile.php" enctype="multipart/form-data">
-                <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
 
                 <div class="form-section">
                     <h3>Zmena hesla</h3>
@@ -457,10 +509,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <h3>Kontaktné údaje</h3>
                     <div class="form-grid">
                         <div class="form-group">
-                            <label for="mobile_phone">Číslo súkromného mobilného telefónu</label>
-                            <input type="tel" id="mobile_phone" name="mobile_phone" class="form-control" value="<?= htmlspecialchars($user['mobile_phone'] ?? '') ?>">
-                        </div>
-                        <div class="form-group">
                             <label for="other_phone">Iné telefónne číslo</label>
                             <input type="tel" id="other_phone" name="other_phone" class="form-control" value="<?= htmlspecialchars($user['other_phone'] ?? '') ?>">
                         </div>
@@ -473,24 +521,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <div class="form-grid">
                         <div class="form-group">
                             <label for="social_linkedin">LinkedIn profil</label>
-                            <input type="url" id="social_linkedin" name="social_linkedin" class="form-control" value="<?= htmlspecialchars($user['social_linkedin'] ?? '') ?>">
+                            <input type="url" id="social_linkedin" name="social_linkedin" class="form-control" value="<?= htmlspecialchars($user['social_linkedin'] ?? '') ?>" placeholder="https://linkedin.com/in/meno-priezvisko">
+                            <small class="avatar-upload-hint">Formát: linkedin.com/in/<em>pouzivatelske-meno</em></small>
                         </div>
                         <div class="form-group">
                             <label for="social_x">X (Twitter) profil</label>
-                            <input type="url" id="social_x" name="social_x" class="form-control" value="<?= htmlspecialchars($user['social_x'] ?? '') ?>">
+                            <input type="url" id="social_x" name="social_x" class="form-control" value="<?= htmlspecialchars($user['social_x'] ?? '') ?>" placeholder="https://x.com/pouzivatelske_meno">
+                            <small class="avatar-upload-hint">Formát: x.com/<em>pouzivatelske_meno</em></small>
                         </div>
                         <div class="form-group">
                             <label for="social_facebook">Facebook profil</label>
-                            <input type="url" id="social_facebook" name="social_facebook" class="form-control" value="<?= htmlspecialchars($user['social_facebook'] ?? '') ?>">
+                            <input type="url" id="social_facebook" name="social_facebook" class="form-control" value="<?= htmlspecialchars($user['social_facebook'] ?? '') ?>" placeholder="https://facebook.com/meno.priezvisko">
+                            <small class="avatar-upload-hint">Formát: facebook.com/<em>meno.priezvisko</em> alebo facebook.com/<em>profile.php?id=ID</em></small>
                         </div>
                         <div class="form-group">
                             <label for="social_instagram">Instagram profil</label>
-                            <input type="url" id="social_instagram" name="social_instagram" class="form-control" value="<?= htmlspecialchars($user['social_instagram'] ?? '') ?>">
+                            <input type="url" id="social_instagram" name="social_instagram" class="form-control" value="<?= htmlspecialchars($user['social_instagram'] ?? '') ?>" placeholder="https://instagram.com/pouzivatelske_meno">
+                            <small class="avatar-upload-hint">Formát: instagram.com/<em>pouzivatelske_meno</em></small>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="social_other">Iné sociálne siete (odkazy)</label>
-                        <input type="text" id="social_other" name="social_other" class="form-control" value="<?= htmlspecialchars($user['social_other'] ?? '') ?>">
+                        <input type="text" id="social_other" name="social_other" class="form-control" value="<?= htmlspecialchars($user['social_other'] ?? '') ?>" placeholder="https://tiktok.com/@meno, https://youtube.com/@meno">
+                        <small class="avatar-upload-hint">Uveďte URL adresu profilu. Viac odkazov oddeľte čiarkou.</small>
                     </div>
                     <div class="form-group">
                         <label for="other_contact">Iné kontaktné informácie</label>
