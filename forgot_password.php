@@ -40,8 +40,8 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
             $errors[] = 'Zadajte e-mail alebo používateľské meno.';
         } else {
             try {
-                $stmt = $pdo->prepare("SELECT id, email, username, is_active FROM users WHERE email = :login OR username = :login LIMIT 1");
-                $stmt->execute(['login' => $login]);
+                $stmt = $pdo->prepare("SELECT id, email, username, is_active FROM users WHERE email = :email OR username = :username LIMIT 1");
+                $stmt->execute(['email' => $login, 'username' => $login]);
                 $user = $stmt->fetch();
 
                 if ($user && (int) ($user['is_active'] ?? 1) === 1) {
