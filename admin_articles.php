@@ -154,7 +154,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
             // ── MOVE UP ─────────────────────────────────────────────────
             case 'move_up':
                 $id = (int) ($_POST['article_id'] ?? 0);
-                if ($id <= 0) { $actionError = 'Neplatné ID články.'; break; }
+              if ($id <= 0) { $actionError = 'Neplatné ID článku.'; break; }
                 try {
                     $pdo->beginTransaction();
                     $currentStmt = $pdo->prepare("SELECT sort_order FROM articles WHERE id = :id");
@@ -173,14 +173,14 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     $pdo->prepare("UPDATE articles SET sort_order = :sort WHERE id = :id")->execute(['sort' => $prevSort, 'id' => $id]);
                     $pdo->prepare("UPDATE articles SET sort_order = :sort WHERE id = :id")->execute(['sort' => $currentSort, 'id' => $prevId]);
                     $pdo->commit();
-                    $actionResult = 'Články bol presunutý vyššie.';
+                    $actionResult = 'Článok bol presunutý vyššie.';
                 } catch (\PDOException $e) { $pdo->rollBack(); error_log('admin_articles move_up error: ' . $e->getMessage()); $actionError = 'Chyba pri presúvaní.'; }
                 break;
 
             // ── MOVE DOWN ───────────────────────────────────────────────
             case 'move_down':
                 $id = (int) ($_POST['article_id'] ?? 0);
-                if ($id <= 0) { $actionError = 'Neplatné ID články.'; break; }
+              if ($id <= 0) { $actionError = 'Neplatné ID článku.'; break; }
                 try {
                     $pdo->beginTransaction();
                     $currentStmt = $pdo->prepare("SELECT sort_order FROM articles WHERE id = :id");
@@ -199,7 +199,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     $pdo->prepare("UPDATE articles SET sort_order = :sort WHERE id = :id")->execute(['sort' => $nextSort, 'id' => $id]);
                     $pdo->prepare("UPDATE articles SET sort_order = :sort WHERE id = :id")->execute(['sort' => $currentSort, 'id' => $nextId]);
                     $pdo->commit();
-                    $actionResult = 'Články bol presunutý nižšie.';
+                    $actionResult = 'Článok bol presunutý nižšie.';
                 } catch (\PDOException $e) { $pdo->rollBack(); error_log('admin_articles move_down error: ' . $e->getMessage()); $actionError = 'Chyba pri presúvaní.'; }
                 break;
 

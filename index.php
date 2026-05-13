@@ -180,7 +180,7 @@ try {
         <?php if (isLoggedIn()): ?>
           <?php if (isAdmin()): ?>
             <li><a href="admin.php">Admin panel</a></li>
-            <li><a href="admin_articles.php">Správa články</a></li>
+            <li><a href="admin_articles.php">Správa článkov</a></li>
           <?php endif; ?>
           <li><a href="logout.php">Odhlásiť sa (<?= htmlspecialchars($_SESSION['username'] ?? 'Profil') ?>)</a></li>
         <?php else: ?>
