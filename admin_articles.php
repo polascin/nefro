@@ -1,6 +1,7 @@
 <?php
 require_once 'auth.php';
 require_once 'db_config.php';
+require_once __DIR__ . '/newsletter_notifications.php';
 
 requireAdmin();
 
@@ -97,6 +98,16 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     ]);
                     $newId        = (int) $pdo->lastInsertId();
                     $actionResult = 'Článok bol úspešne vytvorený. <a href="article.php?id=' . $newId . '" target="_blank">Zobraziť →</a>';
+
+                    if ($isPub === 1) {
+                      try {
+                        $queuedCount = enqueueArticleNewsletterEmails($pdo, $newId);
+                        $actionResult .= ' Do fronty noviniek bolo zaradených ' . $queuedCount . ' e-mailov.';
+                      } catch (\Throwable $queueError) {
+                        error_log('admin_articles create newsletter enqueue error: ' . $queueError->getMessage());
+                        $actionResult .= ' Článok bol uložený, ale novinky sa nepodarilo zaradiť do fronty.';
+                      }
+                    }
                 } catch (\PDOException $e) {
                     error_log('admin_articles create error: ' . $e->getMessage());
                     $actionError = 'Chyba pri ukladaní článku.';
@@ -127,6 +138,22 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 $slug = preg_replace('/[^a-z0-9\-]/', '', strtolower($slug)) ?? '';
                 $slug = uniqueSlug($pdo, $slug, $id);
 
+                $previousPublished = null;
+                try {
+                  $prevStmt = $pdo->prepare("SELECT is_published FROM articles WHERE id = :id LIMIT 1");
+                  $prevStmt->execute(['id' => $id]);
+                  $prevRow = $prevStmt->fetch();
+                  if (!$prevRow) {
+                    $actionError = 'Článok nenájdený.';
+                    break;
+                  }
+                  $previousPublished = (int) ($prevRow['is_published'] ?? 0);
+                } catch (\PDOException $e) {
+                  error_log('admin_articles update prev state error: ' . $e->getMessage());
+                  $actionError = 'Chyba pri načítaní článku.';
+                  break;
+                }
+
                 try {
                     $stmt = $pdo->prepare(
                         "UPDATE articles SET title=:title, slug=:slug, author=:author, content=:content,
@@ -145,6 +172,21 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                         'id'           => $id,
                     ]);
                     $actionResult = 'Článok bol úspešne aktualizovaný. <a href="article.php?id=' . $id . '" target="_blank">Zobraziť →</a>';
+
+                    try {
+                      if ($previousPublished === 0 && $isPub === 1) {
+                        $queuedCount = enqueueArticleNewsletterEmails($pdo, $id);
+                        $actionResult .= ' Do fronty noviniek bolo zaradených ' . $queuedCount . ' e-mailov.';
+                      } elseif ($previousPublished === 1 && $isPub === 0) {
+                        $cancelledCount = cancelPendingArticleNewsletter($pdo, $id);
+                        if ($cancelledCount > 0) {
+                          $actionResult .= ' Z fronty noviniek bolo zrušených ' . $cancelledCount . ' čakajúcich e-mailov.';
+                        }
+                      }
+                    } catch (\Throwable $queueError) {
+                      error_log('admin_articles update newsletter queue error: ' . $queueError->getMessage());
+                      $actionResult .= ' Aktualizácia prebehla, ale správa fronty noviniek zlyhala.';
+                    }
                 } catch (\PDOException $e) {
                     error_log('admin_articles update error: ' . $e->getMessage());
                     $actionError = 'Chyba pri aktualizácii článku.';

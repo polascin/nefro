@@ -48,3 +48,23 @@ Pre Twilio nastav v env súbore minimálne:
 - `SMS_TWILIO_VERIFY_SERVICE_SID=VA330ca23508539352eb04fa85d784cddc`
 
 Poznámka: `VA...` je Twilio Verify Service SID (nie Phone Number SID). Overovací kód sa potom posiela a validuje priamo cez Twilio Verify API.
+
+## Automatické e-mailové novinky pri novom článku
+
+Pri publikovaní článku v administrácii sa e-mailové novinky zapisujú do fronty `article_newsletter_queue`.
+
+- Posiela sa iba používateľom, ktorí majú:
+	- `newsletter_consent = 1`
+	- `is_active = 1`
+	- overený e-mail (`email_verified_at` nie je `NULL`)
+- SMS sa v tomto procese nepoužíva.
+
+### Spustenie workeru
+
+Worker spracovania fronty je CLI skript:
+
+```bash
+php newsletter_worker.php --limit=50 --max-attempts=5
+```
+
+Odporúčanie: spúšťať cez plánovač úloh (Task Scheduler/cron) každú 1 minútu.

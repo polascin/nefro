@@ -431,7 +431,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <p class="auth-subtitle">
                 E-mailová adresa (prihlasovacia): <strong><?= htmlspecialchars($user['email']) ?></strong>
             </p>
-            <p class="auth-subtitle">Formát mobilného čísla: <strong>+421XXXXXXXXX</strong> (môžete použiť aj medzery).</p>
+            <p class="auth-subtitle">Formát mobilného čísla: <strong>+421XXXXXXXXX</strong> (môžete použiť aj medzery, pole je voliteľné).</p>
 
             <form method="POST" action="profile.php" enctype="multipart/form-data">
                 <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
@@ -440,9 +440,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <h3>Prihlasovacie údaje</h3>
                     <div class="form-grid">
                         <div class="form-group form-group--full-width">
-                            <label for="mobile_phone">Číslo súkromného mobilného telefónu</label>
+                            <label for="mobile_phone">Číslo súkromného mobilného telefónu (voliteľné)</label>
                             <input type="tel" id="mobile_phone" name="mobile_phone" class="form-control" value="<?= htmlspecialchars(formatPhoneForDisplay((string) ($user['mobile_phone'] ?? ''))) ?>" placeholder="+421 901 234 567" pattern="^\+421[0-9\s\-()\.\/]{8,20}$" title="Zadajte číslo vo formáte +421XXXXXXXXX alebo +421 901 234 567">
-                            <small class="avatar-upload-hint">Povolený je iba medzinárodný formát začínajúci znakom +.</small>
+                            <small class="avatar-upload-hint">Pole je voliteľné. Povolený je iba medzinárodný formát začínajúci znakom +.</small>
 
                             <?php
                             $isMobileVerified = !empty($user['mobile_verified_at']);
@@ -604,7 +604,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <input type="text" id="job_function" name="job_function" class="form-control" value="<?= htmlspecialchars($user['job_function'] ?? '') ?>">
                         </div>
                         <div class="form-group">
-                            <label for="work_mobile_phone">Číslo pracovného mobilného telefónu</label>
+                            <label for="work_mobile_phone">Číslo pracovného mobilného telefónu (voliteľné)</label>
                             <input type="tel" id="work_mobile_phone" name="work_mobile_phone" class="form-control" value="<?= htmlspecialchars(formatPhoneForDisplay((string) ($user['work_mobile_phone'] ?? ''))) ?>" placeholder="+421 901 234 567" pattern="^\+421[0-9\s\-()\.\/]{8,20}$" title="Zadajte číslo vo formáte +421XXXXXXXXX alebo +421 901 234 567">
                         </div>
                         <div class="form-group">

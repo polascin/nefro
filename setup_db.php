@@ -231,6 +231,27 @@ try {
     $pdo->exec($articlesSql);
     echo "Tabuľka 'articles' bola úspešne vytvorená alebo už existuje.\n";
 
+    $articleNewsletterQueueSql = "CREATE TABLE IF NOT EXISTS article_newsletter_queue (
+        id BIGINT AUTO_INCREMENT PRIMARY KEY,
+        article_id INT NOT NULL,
+        user_id INT NOT NULL,
+        email VARCHAR(255) NOT NULL,
+        status ENUM('pending', 'sent', 'failed', 'cancelled') NOT NULL DEFAULT 'pending',
+        attempts INT NOT NULL DEFAULT 0,
+        next_attempt_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        sent_at DATETIME NULL,
+        last_error TEXT NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        UNIQUE KEY uq_article_newsletter_queue_article_user (article_id, user_id),
+        INDEX idx_article_newsletter_queue_status_next (status, next_attempt_at),
+        INDEX idx_article_newsletter_queue_user_id (user_id),
+        CONSTRAINT fk_article_newsletter_queue_article FOREIGN KEY (article_id) REFERENCES articles(id) ON DELETE CASCADE,
+        CONSTRAINT fk_article_newsletter_queue_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";
+    $pdo->exec($articleNewsletterQueueSql);
+    echo "Tabuľka 'article_newsletter_queue' bola úspešne vytvorená alebo už existuje.\n";
+
     // ── Migrácia: sort_order stĺpec ──────────────────────────────────
     $sortOrderColumnStmt = $pdo->prepare("SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'articles' AND COLUMN_NAME = 'sort_order'");
     $sortOrderColumnStmt->execute();

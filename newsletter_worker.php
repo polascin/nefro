@@ -1,0 +1,39 @@
+<?php
+
+if (php_sapi_name() !== 'cli') {
+    http_response_code(403);
+    exit("Prístup odmietnutý.");
+}
+
+require_once __DIR__ . '/db_config.php';
+require_once __DIR__ . '/newsletter_notifications.php';
+
+$limit = 50;
+$maxAttempts = 5;
+
+foreach ($argv as $arg) {
+    if (preg_match('/^--limit=(\d+)$/', (string) $arg, $m)) {
+        $limit = (int) $m[1];
+    }
+    if (preg_match('/^--max-attempts=(\d+)$/', (string) $arg, $m)) {
+        $maxAttempts = (int) $m[1];
+    }
+}
+
+$limit = max(1, min(500, $limit));
+$maxAttempts = max(1, min(20, $maxAttempts));
+
+try {
+    $stats = processArticleNewsletterQueue($pdo, $limit, $maxAttempts);
+
+    echo "Newsletter worker dokončený.\n";
+    echo "Vybrané z fronty: " . (int) ($stats['selected'] ?? 0) . "\n";
+    echo "Odoslané e-maily: " . (int) ($stats['sent'] ?? 0) . "\n";
+    echo "Zlyhané pokusy: " . (int) ($stats['failed'] ?? 0) . "\n";
+    echo "Zrušené položky: " . (int) ($stats['cancelled'] ?? 0) . "\n";
+    echo "Preskočené položky: " . (int) ($stats['skipped'] ?? 0) . "\n";
+} catch (Throwable $e) {
+    error_log('newsletter_worker error: ' . $e->getMessage());
+    fwrite(STDERR, "Newsletter worker zlyhal: " . $e->getMessage() . "\n");
+    exit(1);
+}
