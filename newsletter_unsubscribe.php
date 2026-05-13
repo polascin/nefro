@@ -1,4 +1,5 @@
 <?php
+require_once 'auth.php';
 require_once 'db_config.php';
 require_once 'newsletter_notifications.php';
 

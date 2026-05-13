@@ -1,6 +1,10 @@
 <?php
 $currentUser = null;
-if (isLoggedIn() && isset($pdo)) {
+$loggedIn = function_exists('isLoggedIn')
+    ? isLoggedIn()
+    : (isset($_SESSION) && !empty($_SESSION['user_id']));
+
+if ($loggedIn && isset($pdo)) {
     try {
         $stmt = $pdo->prepare("SELECT username, email, first_name, last_name, avatar_path, is_admin, email_verified_at, mobile_phone, mobile_verified_at FROM users WHERE id = :id");
         $stmt->execute(['id' => $_SESSION['user_id']]);
@@ -10,16 +14,16 @@ if (isLoggedIn() && isset($pdo)) {
     }
 }
 
-if (isLoggedIn() && !$currentUser) {
+if ($loggedIn && !$currentUser) {
     // Fallback pre stránky bez DB pripojenia (napr. privacy.php)
     $currentUser = [
-        'username' => $_SESSION['username'] ?? '',
+        'username' => (isset($_SESSION) ? ($_SESSION['username'] ?? '') : ''),
         'email' => '',
         'first_name' => '',
         'last_name' => '',
         'avatar_path' => null,
-        'is_admin' => !empty($_SESSION['is_admin']) ? 1 : 0,
-        'email_verified_at' => !empty($_SESSION['email_verified']) ? date('Y-m-d H:i:s') : null,
+        'is_admin' => (isset($_SESSION) && !empty($_SESSION['is_admin'])) ? 1 : 0,
+        'email_verified_at' => (isset($_SESSION) && !empty($_SESSION['email_verified'])) ? date('Y-m-d H:i:s') : null,
         'mobile_phone' => null,
         'mobile_verified_at' => null,
     ];
