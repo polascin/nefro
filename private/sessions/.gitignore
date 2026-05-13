@@ -1,0 +1,4 @@
+# Ignore all session files
+*
+# Except this .gitignore file
+!.gitignore
