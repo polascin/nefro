@@ -54,8 +54,10 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 if ($blockedUntilTs !== false && $blockedUntilTs > time()) {
                     $ipBlocked = true;
                     $errors[] = "Z bezpečnostných dôvodov bol prístup dočasne zablokovaný. Skúste to znova o 15 minút.";
-                    $remainingMins = max(1, (int) ceil(($blockedUntilTs - time()) / 60));
-                    $loginFailureDetails[] = "Prihlásenie z IP adresy je blokované ešte približne {$remainingMins} min.";
+                    if ($isLocalDev) {
+                        $remainingMins = max(1, (int) ceil(($blockedUntilTs - time()) / 60));
+                        $loginFailureDetails[] = "Prihlásenie z IP adresy je blokované ešte približne {$remainingMins} min.";
+                    }
                 } else {
                     // Blokácia už vypršala, vyčisti ju pre tento záznam IP.
                     $pdo->prepare("UPDATE login_attempts SET blocked_until = NULL WHERE ip = :ip")
@@ -90,8 +92,10 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 
                     if ($user && password_verify($password, $user['password_hash'])) {
                         if (!(int) ($user['is_active'] ?? 1)) {
-                            $errors[] = "Váš účet bol deaktivovaný. Kontaktujte administrátora.";
-                            $loginFailureDetails[] = 'Účet existuje, ale je deaktivovaný administrátorom.';
+                            $errors[] = "Prihlásenie sa nepodarilo.";
+                            if ($isLocalDev) {
+                                $loginFailureDetails[] = 'Účet existuje, ale je deaktivovaný administrátorom.';
+                            }
                         } else {
                             // Prihlásenie úspešné — vyčisti IP záznamy
                             try {
@@ -117,10 +121,14 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                         // Nesprávne prihlásenie — zaznamenaj pokus
                         if (!$user) {
                             $errors[] = "Prihlásenie sa nepodarilo.";
-                            $loginFailureDetails[] = 'Účet so zadaným e-mailom alebo používateľským menom neexistuje.';
+                            if ($isLocalDev) {
+                                $loginFailureDetails[] = 'Účet so zadaným e-mailom alebo používateľským menom neexistuje.';
+                            }
                         } else {
                             $errors[] = "Prihlásenie sa nepodarilo.";
-                            $loginFailureDetails[] = 'Zadané heslo nie je správne.';
+                            if ($isLocalDev) {
+                                $loginFailureDetails[] = 'Zadané heslo nie je správne.';
+                            }
                         }
 
                         try {
@@ -138,21 +146,29 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                                 $pdo->prepare("UPDATE login_attempts SET blocked_until = DATE_ADD(NOW(), INTERVAL :secs SECOND) WHERE ip = :ip")
                                     ->execute(['secs' => $blockSecs, 'ip' => $clientIp]);
                                 $errors[] = "Príliš veľa neúspešných pokusov. Prístup bol zablokovaný na 15 minút.";
-                                $loginFailureDetails[] = 'Bol dosiahnutý bezpečnostný limit neúspešných pokusov pre túto IP adresu.';
+                                if ($isLocalDev) {
+                                    $loginFailureDetails[] = 'Bol dosiahnutý bezpečnostný limit neúspešných pokusov pre túto IP adresu.';
+                                }
                             } else {
-                                $remaining = max(0, $maxAttempts - $currentCount);
-                                $loginFailureDetails[] = "Zostávajúce pokusy pred dočasnou blokáciou IP: {$remaining}.";
+                                if ($isLocalDev) {
+                                    $remaining = max(0, $maxAttempts - $currentCount);
+                                    $loginFailureDetails[] = "Zostávajúce pokusy pred dočasnou blokáciou IP: {$remaining}.";
+                                }
                             }
                         } catch (\PDOException $e) {
                             error_log("Rate limit update error: " . $e->getMessage());
-                            $errors[] = "Nesprávny e-mail alebo heslo.";
-                            $loginFailureDetails[] = 'Nepodarilo sa aktualizovať počítadlo bezpečnostných pokusov.';
+                            $errors[] = "Prihlásenie sa nepodarilo.";
+                            if ($isLocalDev) {
+                                $loginFailureDetails[] = 'Nepodarilo sa aktualizovať počítadlo bezpečnostných pokusov.';
+                            }
                         }
                     }
                 } catch (\PDOException $e) {
                     error_log("Chyba prihlásenia: " . $e->getMessage());
                     $errors[] = "Vyskytla sa chyba. Skúste to prosím neskôr.";
-                    $loginFailureDetails[] = 'Pri overovaní prihlasovacích údajov došlo k databázovej chybe.';
+                    if ($isLocalDev) {
+                        $loginFailureDetails[] = 'Pri overovaní prihlasovacích údajov došlo k databázovej chybe.';
+                    }
                 }
             }
         }
