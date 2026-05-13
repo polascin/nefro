@@ -12,6 +12,12 @@ Appka vie nacitat secrets v tomto poradi:
 
 Pre produkciu na hostingu pouzi odporucane umiestnenie mimo webroot, napr. `../private/nefro.env.ini`, a nenahravaj produkcne hesla do verejne pristupneho root adresara webu.
 
+Pre podpisovanie odhlasovacich odkazov z newslettera nastav aj:
+
+- `NEWSLETTER_UNSUBSCRIBE_SECRET=...` (dlhy nahodny retazec)
+
+Ak nie je nastavena, aplikacia pouzije fallback (`APP_KEY`, `APP_SECRET`, `DB_PASS`, `SMTP_PASS`), co je funkcne, ale samostatny secret je odporucany.
+
 ## Smoke Test: Prihlásenie
 
 Použi krátky smoke test po zmenách v autentifikácii. Over minimálne tieto 3 scenáre:
@@ -58,6 +64,8 @@ Pri publikovaní článku v administrácii sa e-mailové novinky zapisujú do fr
 	- `is_active = 1`
 	- overený e-mail (`email_verified_at` nie je `NULL`)
 - SMS sa v tomto procese nepoužíva.
+- Každý newsletter obsahuje na konci jedinečný odkaz na odhlásenie odberu.
+- Klik na odkaz nastaví používateľovi `newsletter_consent = 0` a zruší čakajúce položky vo fronte (`pending`/`failed`).
 
 ### Spustenie workeru
 

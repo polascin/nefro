@@ -2,6 +2,86 @@
 
 require_once __DIR__ . '/email_verification.php';
 
+if (!function_exists('getNewsletterUnsubscribeSecret')) {
+    function getNewsletterUnsubscribeSecret(): string
+    {
+        static $secret = null;
+        if ($secret !== null) {
+            return $secret;
+        }
+
+        $rawSecret = '';
+        try {
+            $env = loadAppConfig();
+            $candidates = [
+                (string) ($env['NEWSLETTER_UNSUBSCRIBE_SECRET'] ?? ''),
+                (string) ($env['APP_KEY'] ?? ''),
+                (string) ($env['APP_SECRET'] ?? ''),
+                (string) ($env['DB_PASS'] ?? ''),
+                (string) ($env['SMTP_PASS'] ?? ''),
+            ];
+            foreach ($candidates as $candidate) {
+                $candidate = trim($candidate);
+                if ($candidate !== '') {
+                    $rawSecret = $candidate;
+                    break;
+                }
+            }
+        } catch (\RuntimeException $e) {
+            error_log('Newsletter secret config loading failed: ' . $e->getMessage());
+        }
+
+        if ($rawSecret === '') {
+            $rawSecret = __DIR__ . '|newsletter-unsubscribe-fallback';
+        }
+
+        $secret = hash('sha256', $rawSecret);
+        return $secret;
+    }
+}
+
+if (!function_exists('buildNewsletterUnsubscribeSignature')) {
+    function buildNewsletterUnsubscribeSignature(int $userId, string $email, int $expiresAt): string
+    {
+        $normalizedEmail = strtolower(trim($email));
+        $payload = $userId . '|' . $normalizedEmail . '|' . $expiresAt;
+        return hash_hmac('sha256', $payload, getNewsletterUnsubscribeSecret());
+    }
+}
+
+if (!function_exists('buildNewsletterUnsubscribeUrl')) {
+    function buildNewsletterUnsubscribeUrl(int $userId, string $email, int $ttlSeconds = 2592000): string
+    {
+        $ttlSeconds = max(3600, min(31536000, $ttlSeconds));
+        $expiresAt = time() + $ttlSeconds;
+        $signature = buildNewsletterUnsubscribeSignature($userId, $email, $expiresAt);
+
+        return getAppBaseUrl() . '/newsletter_unsubscribe.php?uid=' . urlencode((string) $userId)
+            . '&exp=' . urlencode((string) $expiresAt)
+            . '&sig=' . urlencode($signature);
+    }
+}
+
+if (!function_exists('verifyNewsletterUnsubscribeSignature')) {
+    function verifyNewsletterUnsubscribeSignature(int $userId, string $email, int $expiresAt, string $signature): bool
+    {
+        if ($userId <= 0 || $expiresAt <= 0 || trim($signature) === '') {
+            return false;
+        }
+
+        if ($expiresAt < time()) {
+            return false;
+        }
+
+        if ($expiresAt > (time() + 31536000)) {
+            return false;
+        }
+
+        $expected = buildNewsletterUnsubscribeSignature($userId, $email, $expiresAt);
+        return hash_equals($expected, trim($signature));
+    }
+}
+
 if (!function_exists('enqueueArticleNewsletterEmails')) {
     function enqueueArticleNewsletterEmails(PDO $pdo, int $articleId): int
     {
@@ -369,6 +449,7 @@ if (!function_exists('processArticleNewsletterQueue')) {
 
             $subject = 'Nový článok: ' . (string) $item['title'] . ' - Nefro-projekt Slovensko';
             $articleUrl = getAppBaseUrl() . '/article.php?slug=' . urlencode((string) ($item['slug'] ?? ''));
+            $unsubscribeUrl = buildNewsletterUnsubscribeUrl((int) ($item['user_id'] ?? 0), $recipientEmail);
             $excerpt = trim((string) strip_tags((string) ($item['excerpt'] ?? '')));
             if ($excerpt !== '') {
                 $excerpt = mb_substr($excerpt, 0, 320);
@@ -408,7 +489,9 @@ if (!function_exists('processArticleNewsletterQueue')) {
             }
 
             $message .= "Tento e-mail ste dostali, pretože máte povolené zasielanie noviniek.\n"
-                . "Nastavenie môžete zmeniť vo svojom profile.\n\n"
+                . "Nastavenie môžete zmeniť vo svojom profile.\n"
+                . "Ak už nechcete dostávať novinky, odhláste sa jedným klikom:\n"
+                . $unsubscribeUrl . "\n\n"
                 . "Nefro-projekt Slovensko";
 
             $cfg = getEmailEnvConfig();
