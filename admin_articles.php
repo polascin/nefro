@@ -251,6 +251,33 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 }
                 break;
 
+              // ── NEWSLETTER: ODOSLAŤ DUE NOW POLOŽKY ───────────────────
+              case 'send_newsletter_queue':
+                $limit = (int) ($_POST['send_limit'] ?? 50);
+                $limit = max(1, min(200, $limit));
+                try {
+                  $stats = processArticleNewsletterQueue($pdo, $limit, 5);
+                  $selected = (int) ($stats['selected'] ?? 0);
+                  $sent = (int) ($stats['sent'] ?? 0);
+                  $failed = (int) ($stats['failed'] ?? 0);
+                  $cancelled = (int) ($stats['cancelled'] ?? 0);
+                  $skipped = (int) ($stats['skipped'] ?? 0);
+
+                  if ($selected === 0) {
+                    $actionResult = 'Vo fronte nie sú žiadne položky pripravené na odoslanie.';
+                  } else {
+                    $actionResult = 'Odoslanie avíz dokončené. Vybrané: ' . $selected
+                      . ', odoslané: ' . $sent
+                      . ', zlyhané: ' . $failed
+                      . ', zrušené: ' . $cancelled
+                      . ', preskočené: ' . $skipped . '.';
+                  }
+                } catch (\Throwable $e) {
+                  error_log('admin_articles send_newsletter_queue error: ' . $e->getMessage());
+                  $actionError = 'Chyba pri odosielaní avíz.';
+                }
+                break;
+
             // ── MOVE UP ─────────────────────────────────────────────────
             case 'move_up':
                 $id = (int) ($_POST['article_id'] ?? 0);
@@ -553,6 +580,13 @@ $pageTimeZone    = date('T') . ' (' . date_default_timezone_get() . ')';
           <span class="badge-top-sm">Sent: <?= (int) ($queueSummary['sent'] ?? 0) ?></span>
           <span class="badge-draft" style="background:#e5e7eb;color:#374151;">Cancelled: <?= (int) ($queueSummary['cancelled'] ?? 0) ?></span>
           <span class="badge-pub" style="background:#dbeafe;color:#1e3a8a;">Due now: <?= (int) ($queueSummary['due_now'] ?? 0) ?></span>
+          <form method="POST" action="admin_articles.php" style="display:inline; margin-left:8px;"
+                onsubmit="return confirm('Naozaj chcete odoslať avíza pripravené na odoslanie?');">
+            <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
+            <input type="hidden" name="action" value="send_newsletter_queue">
+            <input type="hidden" name="send_limit" value="50">
+            <button type="submit" class="btn-secondary-small" title="Odoslať položky z fronty, ktoré sú pripravené na odoslanie">Odoslať</button>
+          </form>
         </div>
 
         <?php if (!empty($queueRecent)): ?>
@@ -668,7 +702,7 @@ $pageTimeZone    = date('T') . ' (' . date_default_timezone_get() . ')';
                     </form>
                     &nbsp;
                     <form method="POST" action="admin_articles.php" style="display:inline"
-                          onsubmit="return confirm('Naozaj chcete odstrániť článok „<?= addslashes($aTitle) ?>"?');">
+                        onsubmit="return confirm('Naozaj chcete odstrániť tento článok?');">
                       <input type="hidden" name="csrf_token"  value="<?= htmlspecialchars($csrfToken) ?>">
                       <input type="hidden" name="action"      value="delete">
                       <input type="hidden" name="article_id"  value="<?= $aId ?>">
