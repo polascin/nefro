@@ -210,6 +210,27 @@ try {
 
     echo "Tabuľky 'users', 'users_profile_archive', 'users_avatar_archive', 'password_resets' a 'admin_users_notice_audit' boli úspešne vytvorené alebo už existujú.";
     echo "\n";
+
+    $articlesSql = "CREATE TABLE IF NOT EXISTS articles (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        title VARCHAR(500) NOT NULL,
+        slug VARCHAR(500) NOT NULL,
+        author VARCHAR(255) NOT NULL DEFAULT 'Dr. Ľubomír Polaščín',
+        content LONGTEXT NOT NULL,
+        excerpt TEXT NOT NULL,
+        published_at DATETIME NOT NULL,
+        is_top TINYINT(1) NOT NULL DEFAULT 0,
+        is_published TINYINT(1) NOT NULL DEFAULT 1,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        UNIQUE KEY uq_articles_slug (slug),
+        INDEX idx_articles_published_at (published_at),
+        INDEX idx_articles_is_top (is_top),
+        INDEX idx_articles_is_published (is_published)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";
+    $pdo->exec($articlesSql);
+    echo "Tabuľka 'articles' bola úspešne vytvorená alebo už existuje.\n";
+
 } catch (\PDOException $e) {
     echo "Chyba pri vytváraní tabuľky: " . $e->getMessage();
 }

@@ -269,6 +269,10 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
             <h2>Admin panel</h2>
             <p class="auth-subtitle">Komplexné možnosti administrácie a audit histórie zmien profilov.</p>
 
+            <p style="margin-bottom:1.2rem;">
+                <a href="admin_articles.php" class="btn-admin-action">📝 Správa článkov</a>
+            </p>
+
             <?php if ($actionResult !== null): ?>
                 <div class="alert alert-success">
                     <p><?= $actionResult /* already escaped or contains intentional HTML (code tag for temp password) */ ?></p>
