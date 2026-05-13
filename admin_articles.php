@@ -9,6 +9,30 @@ $currentAdminId = (int) ($_SESSION['user_id'] ?? 0);
 $actionResult   = null;
 $actionError    = null;
 $editArticle    = null;
+$queueSummary   = [
+  'pending' => 0,
+  'failed' => 0,
+  'sent' => 0,
+  'cancelled' => 0,
+  'due_now' => 0,
+  'total' => 0,
+];
+$articleQueueStats = [];
+$queueRecent = [];
+$queueFilterStatus = strtolower(trim((string) ($_GET['q_status'] ?? '')));
+$queueFilterArticleId = max(0, (int) ($_GET['q_article_id'] ?? 0));
+$queuePreset = strtolower(trim((string) ($_GET['q_preset'] ?? '')));
+$queueAllowedStatuses = ['pending', 'failed', 'sent', 'cancelled'];
+if (!in_array($queueFilterStatus, $queueAllowedStatuses, true)) {
+  $queueFilterStatus = '';
+}
+if (!in_array($queuePreset, ['', 'unsent', 'due_now'], true)) {
+  $queuePreset = '';
+}
+if ($queueFilterStatus !== '') {
+  // Pri manuálnom výbere stavu má explicitný filter prednosť pred presetom.
+  $queuePreset = '';
+}
 
 // ── Pomocné funkcie ───────────────────────────────────────────────────────────
 
@@ -193,6 +217,40 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 }
                 break;
 
+              // ── NEWSLETTER: MANUÁLNE AVÍZO PRE ČLÁNOK ───────────────────
+              case 'enqueue_newsletter':
+                $id = (int) ($_POST['article_id'] ?? 0);
+                if ($id <= 0) { $actionError = 'Neplatné ID článku.'; break; }
+                try {
+                  $result = enqueueArticleNewsletterEmailsNow($pdo, $id);
+                  if (($result['total'] ?? 0) > 0) {
+                    $actionResult = 'Avízo bolo ručne zaradené pre článok. Počet príjemcov vo fronte: ' . (int) $result['total'] . '.';
+                  } else {
+                    $actionError = 'Avízo sa nepodarilo zaradiť. Skontrolujte, či je článok zverejnený.';
+                  }
+                } catch (\Throwable $e) {
+                  error_log('admin_articles enqueue_newsletter error: ' . $e->getMessage());
+                  $actionError = 'Chyba pri ručnom zaradení avíza.';
+                }
+                break;
+
+              // ── NEWSLETTER: ZNOVU ZARADIŤ NEODOSLANÉ ───────────────────
+              case 'requeue_failed_newsletter':
+                $id = (int) ($_POST['article_id'] ?? 0);
+                if ($id <= 0) { $actionError = 'Neplatné ID článku.'; break; }
+                try {
+                  $requeuedCount = requeueFailedArticleNewsletter($pdo, $id);
+                  if ($requeuedCount > 0) {
+                    $actionResult = 'Neodoslané avíza boli znovu zaradené do fronty. Počet: ' . $requeuedCount . '.';
+                  } else {
+                    $actionError = 'Pre tento článok neboli nájdené neodoslané avíza na znovuzaradenie.';
+                  }
+                } catch (\Throwable $e) {
+                  error_log('admin_articles requeue_failed_newsletter error: ' . $e->getMessage());
+                  $actionError = 'Chyba pri znovuzaradení neodoslaných avíz.';
+                }
+                break;
+
             // ── MOVE UP ─────────────────────────────────────────────────
             case 'move_up':
                 $id = (int) ($_POST['article_id'] ?? 0);
@@ -286,6 +344,14 @@ try {
     )->fetchAll();
 } catch (\PDOException $e) {
     error_log('admin_articles list error: ' . $e->getMessage());
+}
+
+try {
+  $queueSummary = getNewsletterQueueSummary($pdo);
+  $articleQueueStats = getArticleNewsletterQueueStats($pdo);
+  $queueRecent = getNewsletterQueueRecent($pdo, 30, $queueFilterStatus, $queueFilterArticleId, $queuePreset);
+} catch (\Throwable $e) {
+  error_log('admin_articles newsletter queue read error: ' . $e->getMessage());
 }
 
 $pageLastUpdated = date('d.m.Y H:i', filemtime(__FILE__));
@@ -442,6 +508,87 @@ $pageTimeZone    = date('T') . ' (' . date_default_timezone_get() . ')';
 
       <hr class="section-divider">
 
+      <!-- ── NEWSLETTER FRONTA ──────────────────────────────────────── -->
+      <div class="primary-article">
+        <h3>Fronta e-mailových avíz</h3>
+        <p class="helper-text">Automatické notifikácie pre používateľov so súhlasom s novinkami (bez SMS).</p>
+
+        <form method="GET" action="admin_articles.php" class="form-row-inline" style="margin-top:10px; margin-bottom:12px;">
+          <input type="hidden" name="q_preset" value="<?= htmlspecialchars($queuePreset) ?>">
+          <label for="q_status">Stav:</label>
+          <select id="q_status" name="q_status" class="form-control" style="max-width:220px;">
+            <option value="" <?= $queueFilterStatus === '' ? 'selected' : '' ?>>Všetky</option>
+            <option value="pending" <?= $queueFilterStatus === 'pending' ? 'selected' : '' ?>>Pending</option>
+            <option value="failed" <?= $queueFilterStatus === 'failed' ? 'selected' : '' ?>>Failed</option>
+            <option value="sent" <?= $queueFilterStatus === 'sent' ? 'selected' : '' ?>>Sent</option>
+            <option value="cancelled" <?= $queueFilterStatus === 'cancelled' ? 'selected' : '' ?>>Cancelled</option>
+          </select>
+
+          <label for="q_article_id">Článok:</label>
+          <select id="q_article_id" name="q_article_id" class="form-control" style="max-width:340px;">
+            <option value="0">Všetky články</option>
+            <?php foreach ($articles as $filterArticle): ?>
+              <?php $filterArticleId = (int) ($filterArticle['id'] ?? 0); ?>
+              <option value="<?= $filterArticleId ?>" <?= $queueFilterArticleId === $filterArticleId ? 'selected' : '' ?>>
+                #<?= $filterArticleId ?> — <?= htmlspecialchars((string) ($filterArticle['title'] ?? '')) ?>
+              </option>
+            <?php endforeach; ?>
+          </select>
+
+          <button type="submit" class="btn-secondary-small">Filtrovať</button>
+          <a href="admin_articles.php?q_preset=unsent<?= $queueFilterArticleId > 0 ? '&q_article_id=' . $queueFilterArticleId : '' ?>" class="btn-secondary-small">Len neodoslané</a>
+          <a href="admin_articles.php?q_preset=due_now<?= $queueFilterArticleId > 0 ? '&q_article_id=' . $queueFilterArticleId : '' ?>" class="btn-secondary-small">Len due now</a>
+          <a href="admin_articles.php" class="btn-secondary-small">Reset</a>
+        </form>
+
+        <?php if ($queuePreset === 'unsent'): ?>
+          <p class="helper-text" style="margin-top:-6px;">Aktívny rýchly filter: len neodoslané (pending + failed).</p>
+        <?php elseif ($queuePreset === 'due_now'): ?>
+          <p class="helper-text" style="margin-top:-6px;">Aktívny rýchly filter: due now (pending + failed, pripravené na odoslanie).</p>
+        <?php endif; ?>
+
+        <div class="form-row-inline" style="margin-top:10px;">
+          <span class="badge-pub">Pending: <?= (int) ($queueSummary['pending'] ?? 0) ?></span>
+          <span class="badge-draft">Failed: <?= (int) ($queueSummary['failed'] ?? 0) ?></span>
+          <span class="badge-top-sm">Sent: <?= (int) ($queueSummary['sent'] ?? 0) ?></span>
+          <span class="badge-draft" style="background:#e5e7eb;color:#374151;">Cancelled: <?= (int) ($queueSummary['cancelled'] ?? 0) ?></span>
+          <span class="badge-pub" style="background:#dbeafe;color:#1e3a8a;">Due now: <?= (int) ($queueSummary['due_now'] ?? 0) ?></span>
+        </div>
+
+        <?php if (!empty($queueRecent)): ?>
+          <div style="overflow-x:auto; margin-top:16px;">
+            <table class="admin-articles-table" aria-label="Posledné položky fronty noviniek">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Článok</th>
+                  <th>Používateľ</th>
+                  <th>Stav</th>
+                  <th>Pokusy</th>
+                  <th>Aktualizované</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php foreach ($queueRecent as $q): ?>
+                  <tr>
+                    <td><?= (int) ($q['id'] ?? 0) ?></td>
+                    <td><?= htmlspecialchars((string) ($q['article_title'] ?? ('#' . (int) ($q['article_id'] ?? 0)))) ?></td>
+                    <td><?= htmlspecialchars((string) ($q['username'] ?? ($q['email'] ?? ''))) ?></td>
+                    <td><?= htmlspecialchars(strtoupper((string) ($q['status'] ?? ''))) ?></td>
+                    <td><?= (int) ($q['attempts'] ?? 0) ?></td>
+                    <td><?= htmlspecialchars((string) ($q['updated_at'] ?? '')) ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+          </div>
+        <?php else: ?>
+          <p style="margin-top:12px;">Fronta je zatiaľ prázdna.</p>
+        <?php endif; ?>
+      </div>
+
+      <hr class="section-divider">
+
       <!-- ── ZOZNAM ČLÁNKOV ──────────────────────────────────────────── -->
       <div class="primary-article">
         <h3>Všetky články (<?= count($articles) ?>)</h3>
@@ -466,6 +613,7 @@ $pageTimeZone    = date('T') . ' (' . date_default_timezone_get() . ')';
                   $aId = (int) $a['id']; $aTitle = htmlspecialchars((string) $a['title']);
                   $aDate = htmlspecialchars(substr((string) $a['published_at'], 0, 10));
                   $aTop = (int) $a['is_top'] === 1; $aPub = (int) $a['is_published'] === 1;
+                  $qStats = $articleQueueStats[$aId] ?? ['pending' => 0, 'failed' => 0, 'sent' => 0, 'cancelled' => 0];
                   $isFirst = ($idx === 0); $isLast = ($idx === $articleCount - 1);
                 ?>
                 <tr>
@@ -484,6 +632,11 @@ $pageTimeZone    = date('T') . ' (' . date_default_timezone_get() . ')';
                     <?php endif; ?>
                   </td>
                   <td>
+                    <div style="margin-bottom:6px; font-size:0.78rem; color:var(--text-secondary);">
+                      P: <?= (int) ($qStats['pending'] ?? 0) ?> |
+                      F: <?= (int) ($qStats['failed'] ?? 0) ?> |
+                      S: <?= (int) ($qStats['sent'] ?? 0) ?>
+                    </div>
                     <?php if (!$isFirst): ?>
                       <form method="POST" action="admin_articles.php" style="display:inline">
                         <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
@@ -501,6 +654,18 @@ $pageTimeZone    = date('T') . ' (' . date_default_timezone_get() . ')';
                       </form>
                     <?php endif; ?>
                     <a href="admin_articles.php?action=edit&id=<?= $aId ?>" class="btn-secondary-small">✏️ Upraviť</a>
+                    <form method="POST" action="admin_articles.php" style="display:inline">
+                      <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
+                      <input type="hidden" name="action" value="enqueue_newsletter">
+                      <input type="hidden" name="article_id" value="<?= $aId ?>">
+                      <button type="submit" class="btn-secondary-small" title="Ručne odoslať avízo pre tento článok" <?= $aPub ? '' : 'disabled' ?>>📧 Avízo teraz</button>
+                    </form>
+                    <form method="POST" action="admin_articles.php" style="display:inline">
+                      <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
+                      <input type="hidden" name="action" value="requeue_failed_newsletter">
+                      <input type="hidden" name="article_id" value="<?= $aId ?>">
+                      <button type="submit" class="btn-secondary-small" title="Znovu zaradiť neodoslané avíza">↻ Neodoslané</button>
+                    </form>
                     &nbsp;
                     <form method="POST" action="admin_articles.php" style="display:inline"
                           onsubmit="return confirm('Naozaj chcete odstrániť článok „<?= addslashes($aTitle) ?>"?');">
