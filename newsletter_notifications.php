@@ -299,6 +299,11 @@ if (!function_exists('processArticleNewsletterQueue')) {
                     a.excerpt,
                     a.is_published,
                     u.username,
+                    u.title_before,
+                    u.first_name,
+                    u.middle_name,
+                    u.last_name,
+                    u.title_after,
                     u.email AS user_email,
                     u.newsletter_consent,
                     u.is_active,
@@ -369,12 +374,31 @@ if (!function_exists('processArticleNewsletterQueue')) {
                 $excerpt = mb_substr($excerpt, 0, 320);
             }
 
-            $displayName = trim((string) ($item['username'] ?? ''));
-            if ($displayName === '') {
-                $displayName = $recipientEmail;
+            $titleBefore = trim((string) ($item['title_before'] ?? ''));
+            $firstName = trim((string) ($item['first_name'] ?? ''));
+            $middleName = trim((string) ($item['middle_name'] ?? ''));
+            $lastName = trim((string) ($item['last_name'] ?? ''));
+            $titleAfter = trim((string) ($item['title_after'] ?? ''));
+            if ($firstName !== '' && $lastName !== '') {
+                $nameParts = array_filter([
+                    $titleBefore,
+                    $firstName,
+                    $middleName,
+                ], static fn ($part) => $part !== '');
+                $nameParts[] = $lastName;
+
+                $displayName = trim(implode(' ', $nameParts));
+                if ($titleAfter !== '') {
+                    $displayName .= ', ' . $titleAfter;
+                }
+            } else {
+                $displayName = trim((string) ($item['username'] ?? ''));
+                if ($displayName === '') {
+                    $displayName = $recipientEmail;
+                }
             }
 
-            $message = "Dobrý deň, " . $displayName . "\n\n"
+            $message = "Dobrý deň, " . $displayName . ",\n\n"
                 . "bol publikovaný nový článok na Nefro-projekt Slovensko:\n\n"
                 . (string) $item['title'] . "\n"
                 . $articleUrl . "\n\n";
