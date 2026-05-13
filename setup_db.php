@@ -231,6 +231,15 @@ try {
     $pdo->exec($articlesSql);
     echo "Tabuľka 'articles' bola úspešne vytvorená alebo už existuje.\n";
 
+    // ── Migrácia: sort_order stĺpec ──────────────────────────────────
+    $sortOrderColumnStmt = $pdo->prepare("SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'articles' AND COLUMN_NAME = 'sort_order'");
+    $sortOrderColumnStmt->execute();
+    if ((int) $sortOrderColumnStmt->fetchColumn() === 0) {
+        $pdo->exec("ALTER TABLE articles ADD COLUMN sort_order INT NOT NULL DEFAULT 0");
+        $pdo->exec("SET @row_num := 0; UPDATE articles SET sort_order = (@row_num := @row_num + 1) ORDER BY published_at DESC, id DESC");
+        echo "Stĺpec 'sort_order' bol pridaný a inicializovaný.\n";
+    }
+
 } catch (\PDOException $e) {
     echo "Chyba pri vytváraní tabuľky: " . $e->getMessage();
 }

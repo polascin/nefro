@@ -151,6 +151,58 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 }
                 break;
 
+            // ── MOVE UP ─────────────────────────────────────────────────
+            case 'move_up':
+                $id = (int) ($_POST['article_id'] ?? 0);
+                if ($id <= 0) { $actionError = 'Neplatné ID články.'; break; }
+                try {
+                    $pdo->beginTransaction();
+                    $currentStmt = $pdo->prepare("SELECT sort_order FROM articles WHERE id = :id");
+                    $currentStmt->execute(['id' => $id]);
+                    $current = $currentStmt->fetch();
+                    if (!$current) { $pdo->rollBack(); $actionError = 'Článok nenájdený.'; break; }
+                    $currentSort = (int) $current['sort_order'];
+                    $prevStmt = $pdo->prepare("SELECT id FROM articles WHERE sort_order < :sort ORDER BY sort_order DESC LIMIT 1");
+                    $prevStmt->execute(['sort' => $currentSort]);
+                    $prev = $prevStmt->fetch();
+                    if (!$prev) { $pdo->rollBack(); $actionError = 'Nie je čím ísť vyššie.'; break; }
+                    $prevId = (int) $prev['id'];
+                    $prevSortStmt = $pdo->prepare("SELECT sort_order FROM articles WHERE id = :id");
+                    $prevSortStmt->execute(['id' => $prevId]);
+                    $prevSort = (int) $prevSortStmt->fetch()['sort_order'];
+                    $pdo->prepare("UPDATE articles SET sort_order = :sort WHERE id = :id")->execute(['sort' => $prevSort, 'id' => $id]);
+                    $pdo->prepare("UPDATE articles SET sort_order = :sort WHERE id = :id")->execute(['sort' => $currentSort, 'id' => $prevId]);
+                    $pdo->commit();
+                    $actionResult = 'Články bol presunutý vyššie.';
+                } catch (\PDOException $e) { $pdo->rollBack(); error_log('admin_articles move_up error: ' . $e->getMessage()); $actionError = 'Chyba pri presúvaní.'; }
+                break;
+
+            // ── MOVE DOWN ───────────────────────────────────────────────
+            case 'move_down':
+                $id = (int) ($_POST['article_id'] ?? 0);
+                if ($id <= 0) { $actionError = 'Neplatné ID články.'; break; }
+                try {
+                    $pdo->beginTransaction();
+                    $currentStmt = $pdo->prepare("SELECT sort_order FROM articles WHERE id = :id");
+                    $currentStmt->execute(['id' => $id]);
+                    $current = $currentStmt->fetch();
+                    if (!$current) { $pdo->rollBack(); $actionError = 'Článok nenájdený.'; break; }
+                    $currentSort = (int) $current['sort_order'];
+                    $nextStmt = $pdo->prepare("SELECT id FROM articles WHERE sort_order > :sort ORDER BY sort_order ASC LIMIT 1");
+                    $nextStmt->execute(['sort' => $currentSort]);
+                    $next = $nextStmt->fetch();
+                    if (!$next) { $pdo->rollBack(); $actionError = 'Nie je čím ísť nižšie.'; break; }
+                    $nextId = (int) $next['id'];
+                    $nextSortStmt = $pdo->prepare("SELECT sort_order FROM articles WHERE id = :id");
+                    $nextSortStmt->execute(['id' => $nextId]);
+                    $nextSort = (int) $nextSortStmt->fetch()['sort_order'];
+                    $pdo->prepare("UPDATE articles SET sort_order = :sort WHERE id = :id")->execute(['sort' => $nextSort, 'id' => $id]);
+                    $pdo->prepare("UPDATE articles SET sort_order = :sort WHERE id = :id")->execute(['sort' => $currentSort, 'id' => $nextId]);
+                    $pdo->commit();
+                    $actionResult = 'Články bol presunutý nižšie.';
+                } catch (\PDOException $e) { $pdo->rollBack(); error_log('admin_articles move_down error: ' . $e->getMessage()); $actionError = 'Chyba pri presúvaní.'; }
+                break;
+
             // ── DELETE ──────────────────────────────────────────────────────
             case 'delete':
                 $id = (int) ($_POST['article_id'] ?? 0);
@@ -187,8 +239,8 @@ if (($_GET['action'] ?? '') === 'edit' && $editId > 0) {
 $articles = [];
 try {
     $articles = $pdo->query(
-        "SELECT id, title, slug, author, published_at, is_top, is_published, created_at
-         FROM articles ORDER BY published_at DESC, id DESC"
+        "SELECT id, title, slug, author, published_at, is_top, is_published, created_at, sort_order
+         FROM articles ORDER BY sort_order ASC, id ASC"
     )->fetchAll();
 } catch (\PDOException $e) {
     error_log('admin_articles list error: ' . $e->getMessage());
@@ -360,6 +412,7 @@ $pageTimeZone    = date('T') . ' (' . date_default_timezone_get() . ')';
               <thead>
                 <tr>
                   <th>#</th>
+                  <th>Poradie</th>
                   <th>Titulok</th>
                   <th>Dátum</th>
                   <th>Stav</th>
@@ -367,15 +420,15 @@ $pageTimeZone    = date('T') . ' (' . date_default_timezone_get() . ')';
                 </tr>
               </thead>
               <tbody>
-                <?php foreach ($articles as $a):
-                  $aId    = (int) $a['id'];
-                  $aTitle = htmlspecialchars((string) $a['title']);
-                  $aDate  = htmlspecialchars(substr((string) $a['published_at'], 0, 10));
-                  $aTop   = (int) $a['is_top'] === 1;
-                  $aPub   = (int) $a['is_published'] === 1;
+                <?php $articleCount = count($articles); foreach ($articles as $idx => $a):
+                  $aId = (int) $a['id']; $aTitle = htmlspecialchars((string) $a['title']);
+                  $aDate = htmlspecialchars(substr((string) $a['published_at'], 0, 10));
+                  $aTop = (int) $a['is_top'] === 1; $aPub = (int) $a['is_published'] === 1;
+                  $isFirst = ($idx === 0); $isLast = ($idx === $articleCount - 1);
                 ?>
                 <tr>
                   <td><?= $aId ?></td>
+                  <td style="font-weight:600; color:var(--primary-color);"><?= $idx + 1 ?></td>
                   <td>
                     <a href="article.php?id=<?= $aId ?>" target="_blank"><?= $aTitle ?></a>
                     <?php if ($aTop): ?><br><span class="badge-top-sm">★ TOP</span><?php endif; ?>
@@ -389,6 +442,22 @@ $pageTimeZone    = date('T') . ' (' . date_default_timezone_get() . ')';
                     <?php endif; ?>
                   </td>
                   <td>
+                    <?php if (!$isFirst): ?>
+                      <form method="POST" action="admin_articles.php" style="display:inline">
+                        <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
+                        <input type="hidden" name="action" value="move_up">
+                        <input type="hidden" name="article_id" value="<?= $aId ?>">
+                        <button type="submit" class="btn-secondary-small" title="Hore">▲</button>
+                      </form>
+                    <?php endif; ?>
+                    <?php if (!$isLast): ?>
+                      <form method="POST" action="admin_articles.php" style="display:inline">
+                        <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
+                        <input type="hidden" name="action" value="move_down">
+                        <input type="hidden" name="article_id" value="<?= $aId ?>">
+                        <button type="submit" class="btn-secondary-small" title="Dole">▼</button>
+                      </form>
+                    <?php endif; ?>
                     <a href="admin_articles.php?action=edit&id=<?= $aId ?>" class="btn-secondary-small">✏️ Upraviť</a>
                     &nbsp;
                     <form method="POST" action="admin_articles.php" style="display:inline"

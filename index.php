@@ -62,14 +62,14 @@ try {
     $stmtTop = $pdo->query(
         "SELECT id, title, slug, author, excerpt, published_at
          FROM articles WHERE is_top = 1 AND is_published = 1
-         ORDER BY published_at DESC"
+         ORDER BY sort_order ASC, published_at DESC"
     );
     $topArticles = $stmtTop->fetchAll();
 
     $stmtOther = $pdo->query(
         "SELECT id, title, slug, author, excerpt, published_at
          FROM articles WHERE is_top = 0 AND is_published = 1
-         ORDER BY published_at DESC"
+         ORDER BY sort_order ASC, published_at DESC"
     );
     $otherArticles = $stmtOther->fetchAll();
 } catch (\PDOException $e) {
@@ -180,6 +180,7 @@ try {
         <?php if (isLoggedIn()): ?>
           <?php if (isAdmin()): ?>
             <li><a href="admin.php">Admin panel</a></li>
+            <li><a href="admin_articles.php">Správa články</a></li>
           <?php endif; ?>
           <li><a href="logout.php">Odhlásiť sa (<?= htmlspecialchars($_SESSION['username'] ?? 'Profil') ?>)</a></li>
         <?php else: ?>
