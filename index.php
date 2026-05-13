@@ -196,9 +196,9 @@ try {
     <div class="content-wrapper">
 
       <?php if (!empty($topArticles)): ?>
-      <!-- Top ÄŚlĂˇnky -->
+      <!-- Top články -->
       <section class="articles-top-section" id="domov" aria-labelledby="top-articles-heading">
-        <h2 id="top-articles-heading" class="section-heading">OdporĂşÄŤanĂ© ÄŤlĂˇnky</h2>
+        <h2 id="top-articles-heading" class="section-heading">Odporúčané články</h2>
         <?php foreach ($topArticles as $art):
           $artSlug    = htmlspecialchars((string) $art['slug'], ENT_QUOTES);
           $artTitle   = htmlspecialchars((string) $art['title']);
@@ -207,25 +207,25 @@ try {
           $artDateIso = htmlspecialchars(substr((string) $art['published_at'], 0, 10));
         ?>
         <article class="primary-article">
-          <span class="badge-top" aria-label="OdporĂşÄŤanĂ˝ ÄŤlĂˇnok">&#9733; TOP</span>
+          <span class="badge-top" aria-label="Odporúčaný článok">&#9733; TOP</span>
           <header>
             <h2><a href="article.php?slug=<?= $artSlug ?>" class="article-title-link"><?= $artTitle ?></a></h2>
             <p class="meta">
-              PublikovanĂ©:&nbsp; <time datetime="<?= $artDateIso ?>"><?= $artDate ?></time>
+              Publikované:&nbsp; <time datetime="<?= $artDateIso ?>"><?= $artDate ?></time>
             </p>
           </header>
           <p class="article-excerpt"><?= $artExc ?></p>
-          <a href="article.php?slug=<?= $artSlug ?>" class="read-more">ÄŚĂ­taĹĄ ÄŹalej &rarr;</a>
+          <a href="article.php?slug=<?= $artSlug ?>" class="read-more">Čítať ďalej &rarr;</a>
         </article>
         <?php endforeach; ?>
       </section>
       <?php endif; ?>
 
       <?php if (!empty($otherArticles)): ?>
-      <!-- ÄŽalĹˇie ÄŚlĂˇnky -->
+      <!-- Ďalšie články -->
       <section class="articles-list-section" aria-labelledby="all-articles-heading">
         <div class="primary-article">
-          <h2 id="all-articles-heading">ÄŽalĹˇie ÄŤlĂˇnky</h2>
+          <h2 id="all-articles-heading">Ďalšie články</h2>
           <ul class="articles-list" role="list">
             <?php foreach ($otherArticles as $art):
               $artSlug    = htmlspecialchars((string) $art['slug'], ENT_QUOTES);
@@ -249,9 +249,9 @@ try {
 
       <?php if (empty($topArticles) && empty($otherArticles)): ?>
       <div class="primary-article">
-        <p>Ĺ˝iadne ÄŤlĂˇnky eĹˇte neboli zverejnenĂ©.</p>
+        <p>Žiadne články ešte neboli zverejnené.</p>
         <?php if (isAdmin()): ?>
-          <a href="admin_articles.php" class="btn-primary">PridaĹĄ prvĂ˝ ÄŤlĂˇnok</a>
+          <a href="admin_articles.php" class="btn-primary">Pridať prvý článok</a>
         <?php endif; ?>
       </div>
       <?php endif; ?>
