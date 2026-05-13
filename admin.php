@@ -64,7 +64,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     $tempPwd = bin2hex(random_bytes(8));
                     $pdo->prepare("UPDATE users SET password_hash = :hash WHERE id = :id")
                         ->execute(['hash' => password_hash($tempPwd, PASSWORD_DEFAULT), 'id' => $targetUserId]);
-                    $actionResult = 'Heslo resetované — ' . htmlspecialchars((string) $tUser['username']) . '. Dočasné heslo: <code>' . htmlspecialchars($tempPwd) . '<\/code>';
+                    $actionResult = 'Heslo resetované — ' . htmlspecialchars((string) $tUser['username']) . '. Dočasné heslo: <code>' . htmlspecialchars($tempPwd) . '</code>';
                 } catch (\PDOException $e) {
                     error_log('Admin reset_password error: ' . $e->getMessage());
                     $actionError = 'Chyba pri resete hesla.';

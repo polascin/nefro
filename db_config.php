@@ -41,6 +41,6 @@ try {
     // V produkcii by sa chyba nemala vypisovať priamo kvôli bezpečnosti
     // Zapisujeme do logu a zobrazíme všeobecnú chybu
     error_log("Chyba pripojenia k databáze: " . $e->getMessage());
-    // exit("Pripojenie k databáze zlyhalo. Skontrolujte konfiguračný súbor.");
+    exit("Chyba: Pripojenie k databáze zlyhalo.");
 }
 ?>

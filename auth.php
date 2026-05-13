@@ -12,9 +12,27 @@ $isHttps = (
 ini_set('session.cookie_secure', $isHttps ? '1' : '0');
 ini_set('session.cookie_samesite', 'Strict');
 
+$sessionSavePath = (string) ini_get('session.save_path');
+$sessionPath = $sessionSavePath;
+if (str_contains($sessionPath, ';')) {
+    $sessionPathParts = explode(';', $sessionPath);
+    $sessionPath = (string) end($sessionPathParts);
+}
+
+if ($sessionPath === '' || !is_dir($sessionPath) || !is_writable($sessionPath)) {
+    $fallbackSessionPath = sys_get_temp_dir() . DIRECTORY_SEPARATOR . 'nefro_sessions';
+    if ((is_dir($fallbackSessionPath) || mkdir($fallbackSessionPath, 0700, true)) && is_writable($fallbackSessionPath)) {
+        session_save_path($fallbackSessionPath);
+    }
+}
+
 // Spustenie relácie
 if (session_status() === PHP_SESSION_NONE) {
-    session_start();
+    if (!session_start()) {
+        error_log('Nepodarilo sa spustit PHP session. Skontrolujte session.save_path a opravnenia.');
+        http_response_code(500);
+        exit('Chyba: Nepodarilo sa spustiť reláciu.');
+    }
 }
 
 /**
