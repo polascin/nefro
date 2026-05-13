@@ -1,0 +1,10 @@
+#!/bin/sh
+# Automatický git push po commite
+
+# Získaj aktuálnu branch
+current_branch=$(git rev-parse --abbrev-ref HEAD)
+
+# Spusti git push na aktuálnu branch
+git push origin "$current_branch" 2>/dev/null
+
+exit 0
