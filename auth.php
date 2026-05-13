@@ -12,17 +12,15 @@ $isHttps = (
 ini_set('session.cookie_secure', $isHttps ? '1' : '0');
 ini_set('session.cookie_samesite', 'Strict');
 
-$sessionSavePath = (string) ini_get('session.save_path');
-$sessionPath = $sessionSavePath;
-if (str_contains($sessionPath, ';')) {
-    $sessionPathParts = explode(';', $sessionPath);
-    $sessionPath = (string) end($sessionPathParts);
-}
-
-if ($sessionPath === '' || !is_dir($sessionPath) || !is_writable($sessionPath)) {
-    $fallbackSessionPath = sys_get_temp_dir() . DIRECTORY_SEPARATOR . 'nefro_sessions';
-    if ((is_dir($fallbackSessionPath) || mkdir($fallbackSessionPath, 0700, true)) && is_writable($fallbackSessionPath)) {
-        session_save_path($fallbackSessionPath);
+// Priorita: projekt-lokální sessions > temp > default
+$projectSessionPath = __DIR__ . DIRECTORY_SEPARATOR . 'private' . DIRECTORY_SEPARATOR . 'sessions';
+if ((is_dir($projectSessionPath) || @mkdir($projectSessionPath, 0755, true)) && is_writable($projectSessionPath)) {
+    session_save_path($projectSessionPath);
+} else {
+    // Fallback na sys_get_temp_dir() ak projekt-lokální cesta zlyhá
+    $tempSessionPath = sys_get_temp_dir() . DIRECTORY_SEPARATOR . 'nefro_sessions';
+    if ((is_dir($tempSessionPath) || @mkdir($tempSessionPath, 0755, true)) && is_writable($tempSessionPath)) {
+        session_save_path($tempSessionPath);
     }
 }
 
