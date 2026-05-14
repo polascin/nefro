@@ -58,6 +58,13 @@ function formatArticleDate(string $datetime): string {
 
 $topArticles   = [];
 $otherArticles = [];
+$otherArticlesPerPage = 10;
+$otherArticlesTotal = 0;
+$otherArticlesTotalPages = 1;
+$otherArticlesPage = isset($_GET['page']) ? (int) $_GET['page'] : 1;
+if ($otherArticlesPage < 1) {
+  $otherArticlesPage = 1;
+}
 try {
     $stmtTop = $pdo->query(
         "SELECT id, title, slug, author, excerpt, published_at
@@ -66,11 +73,26 @@ try {
     );
     $topArticles = $stmtTop->fetchAll();
 
-    $stmtOther = $pdo->query(
-        "SELECT id, title, slug, author, excerpt, published_at
-         FROM articles WHERE is_top = 0 AND is_published = 1
-         ORDER BY sort_order ASC, published_at DESC"
-    );
+  $stmtOtherCount = $pdo->query(
+    "SELECT COUNT(*)
+     FROM articles WHERE is_top = 0 AND is_published = 1"
+  );
+  $otherArticlesTotal = (int) $stmtOtherCount->fetchColumn();
+  $otherArticlesTotalPages = max(1, (int) ceil($otherArticlesTotal / $otherArticlesPerPage));
+  if ($otherArticlesPage > $otherArticlesTotalPages) {
+    $otherArticlesPage = $otherArticlesTotalPages;
+  }
+  $otherArticlesOffset = ($otherArticlesPage - 1) * $otherArticlesPerPage;
+
+  $stmtOther = $pdo->prepare(
+    "SELECT id, title, slug, author, excerpt, published_at
+     FROM articles WHERE is_top = 0 AND is_published = 1
+     ORDER BY sort_order ASC, published_at DESC
+     LIMIT :limit OFFSET :offset"
+  );
+  $stmtOther->bindValue(':limit', $otherArticlesPerPage, \PDO::PARAM_INT);
+  $stmtOther->bindValue(':offset', $otherArticlesOffset, \PDO::PARAM_INT);
+  $stmtOther->execute();
     $otherArticles = $stmtOther->fetchAll();
 } catch (\PDOException $e) {
     error_log('index.php – chyba pri načítaní článkov: ' . $e->getMessage());
@@ -244,6 +266,21 @@ try {
             </li>
             <?php endforeach; ?>
           </ul>
+
+          <?php if ($otherArticlesTotalPages > 1): ?>
+            <nav class="articles-pagination" aria-label="Stránkovanie ďalších článkov">
+              <span class="articles-pagination__label">Stránky:</span>
+              <div class="articles-pagination__links">
+                <?php for ($p = 1; $p <= $otherArticlesTotalPages; $p++): ?>
+                  <?php if ($p === $otherArticlesPage): ?>
+                    <span class="articles-page-link is-active" aria-current="page"><?= $p ?></span>
+                  <?php else: ?>
+                    <a class="articles-page-link" href="?page=<?= $p ?>#all-articles-heading"><?= $p ?></a>
+                  <?php endif; ?>
+                <?php endfor; ?>
+              </div>
+            </nav>
+          <?php endif; ?>
         </div>
       </section>
       <?php endif; ?>

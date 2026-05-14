@@ -2001,6 +2001,54 @@ input:disabled + .slider:before {
     margin: 0;
   }
 
+  .articles-pagination {
+    margin-top: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .articles-pagination__label {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  .articles-pagination__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .articles-page-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 34px;
+    height: 34px;
+    padding: 0 10px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    background: var(--card-bg);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: border-color 0.2s, color 0.2s, background 0.2s;
+  }
+
+  .articles-page-link:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+  }
+
+  .articles-page-link.is-active {
+    border-color: var(--primary-color);
+    background: var(--primary-color);
+    color: #fff;
+  }
+
   /* Navigačné tlačidlo v article.php */
   .article-nav {
     margin-top: 20px;
@@ -2043,6 +2091,16 @@ input:disabled + .slider:before {
       flex-direction: column;
       gap: 2px;
     }
+
+    .articles-pagination {
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .articles-pagination__label {
+      width: 100%;
+    }
+
     .article-list-item__date {
       font-size: 0.78rem;
     }
