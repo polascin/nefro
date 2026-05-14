@@ -82,7 +82,7 @@ HTML,
 // ── Článok 2: 5 hlavných noviniek v liečbe obezity z ECO 2026 ──────────────────
 $articles[] = [
     'title'        => '5 hlavných noviniek v liečbe obezity z ECO 2026',
-    'slug'         => '5-noviniek-liečbe-obezity-eco-2026',
+    'slug'         => '5-noviniek-liebe-obezity-eco-2026',
     'author'       => 'Dr. Ľubomír Polaščín',
     'published_at' => '2026-05-12',
     'is_top'       => 1,
@@ -237,7 +237,7 @@ HTML,
 // ── Článok 3: Zhrnutie správy ────────────────────────────────────────────────
 $articles[] = [
     'title'        => 'ECO 2026 priniesol nové údaje o dlhodobej liečbe obezity',
-    'slug'         => 'eco-2026-novinky-dlhodoba-liecba-obezity',
+    'slug'         => 'eco-2026-novinky-dlhodoba-liebe-obezity',
     'author'       => 'Dr. Ľubomír Polaščín',
     'published_at' => '2026-05-14',
     'is_top'       => 0,
