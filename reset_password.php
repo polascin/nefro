@@ -24,11 +24,7 @@ if ($tokenHash !== '') {
     }
 }
 
-$host = strtolower((string) ($_SERVER['HTTP_HOST'] ?? $_SERVER['SERVER_NAME'] ?? ''));
-$isLocalDev = $host === 'localhost'
-    || str_starts_with($host, 'localhost:')
-    || str_starts_with($host, '127.0.0.1')
-    || str_starts_with($host, '::1');
+$isLocalDev = isAppLocalDev();
 
 if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
     $postedCsrfToken = $_POST['csrf_token'] ?? '';

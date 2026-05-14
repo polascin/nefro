@@ -499,7 +499,7 @@ if (!function_exists('processArticleNewsletterQueue')) {
             if (!$sent) {
                 $fallbackFrom = $cfg['from_email'] !== ''
                     ? $cfg['from_email']
-                    : ('no-reply@' . preg_replace('/:\\d+$/', '', (string) ($_SERVER['HTTP_HOST'] ?? 'nefro.polascin.net')));
+                    : 'no-reply@nefro.polascin.net';
                 $headers = [
                     'MIME-Version: 1.0',
                     'Content-Type: text/plain; charset=UTF-8',

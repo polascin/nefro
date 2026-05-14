@@ -85,3 +85,113 @@ function loadAppConfig(): array {
     $searchedPaths = implode(', ', getAppConfigPaths());
     throw new RuntimeException('Konfiguračný súbor sa nenašiel alebo je neplatný. Hľadané cesty: ' . $searchedPaths);
 }
+
+/**
+ * Vráti true/false pre textové env hodnoty ako 1/0, true/false, yes/no, on/off.
+ */
+function parseEnvBool(mixed $value, bool $default = false): bool {
+    if ($value === null) {
+        return $default;
+    }
+
+    $normalized = strtolower(trim((string) $value));
+    if ($normalized === '') {
+        return $default;
+    }
+
+    $truthy = ['1', 'true', 'yes', 'on'];
+    $falsy = ['0', 'false', 'no', 'off'];
+
+    if (in_array($normalized, $truthy, true)) {
+        return true;
+    }
+    if (in_array($normalized, $falsy, true)) {
+        return false;
+    }
+
+    return $default;
+}
+
+/**
+ * Centrálne určenie lokálneho/development režimu.
+ * Preferuje explicitnú konfiguráciu APP_ENV alebo APP_LOCAL_DEV.
+ */
+function isAppLocalDev(): bool {
+    try {
+        $env = loadAppConfig();
+    } catch (\RuntimeException) {
+        $env = [];
+    }
+
+    $appEnv = strtolower(trim((string) ($env['APP_ENV'] ?? getenv('APP_ENV') ?? '')));
+    if ($appEnv !== '') {
+        return in_array($appEnv, ['local', 'dev', 'development', 'test', 'testing'], true);
+    }
+
+    if (array_key_exists('APP_LOCAL_DEV', $env) || getenv('APP_LOCAL_DEV') !== false) {
+        return parseEnvBool($env['APP_LOCAL_DEV'] ?? getenv('APP_LOCAL_DEV'), false);
+    }
+
+    return false;
+}
+
+/**
+ * Urči HTTPS schému bez dôvery v spoofovateľný Host header.
+ * Proxy hlavičky sa akceptujú len ak je explicitne povolené TRUST_PROXY_HEADERS.
+ */
+function isRequestHttps(): bool {
+    $httpsFlag = $_SERVER['HTTPS'] ?? null;
+    if (!empty($httpsFlag) && strtolower((string) $httpsFlag) !== 'off') {
+        return true;
+    }
+
+    if (isset($_SERVER['SERVER_PORT']) && (int) $_SERVER['SERVER_PORT'] === 443) {
+        return true;
+    }
+
+    try {
+        $env = loadAppConfig();
+    } catch (\RuntimeException) {
+        $env = [];
+    }
+
+    $trustProxy = parseEnvBool($env['TRUST_PROXY_HEADERS'] ?? getenv('TRUST_PROXY_HEADERS'), false);
+    if ($trustProxy) {
+        $forwardedProto = strtolower(trim((string) ($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? '')));
+        if ($forwardedProto === 'https') {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+/**
+ * Vráti bezpečný základ URL. Priorita:
+ * 1) APP_BASE_URL z konfigurácie
+ * 2) schéma + SERVER_NAME (+ port)
+ */
+function getAppBaseUrl(): string {
+    try {
+        $env = loadAppConfig();
+    } catch (\RuntimeException) {
+        $env = [];
+    }
+
+    $configured = trim((string) ($env['APP_BASE_URL'] ?? getenv('APP_BASE_URL') ?? ''));
+    if ($configured !== '' && filter_var($configured, FILTER_VALIDATE_URL)) {
+        return rtrim($configured, '/');
+    }
+
+    $scheme = isRequestHttps() ? 'https' : 'http';
+    $serverName = trim((string) ($_SERVER['SERVER_NAME'] ?? 'localhost'));
+
+    if ($serverName === '' || !preg_match('/^[a-z0-9.-]+$/i', $serverName)) {
+        $serverName = 'localhost';
+    }
+
+    $port = (int) ($_SERVER['SERVER_PORT'] ?? 0);
+    $includePort = $port > 0 && !(($scheme === 'http' && $port === 80) || ($scheme === 'https' && $port === 443));
+
+    return $scheme . '://' . $serverName . ($includePort ? ':' . $port : '');
+}

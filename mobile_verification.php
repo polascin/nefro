@@ -201,11 +201,7 @@ function verifyMobileCodeByProvider(array $userRow, ?string $mobilePhone, string
 function sendMobileVerificationCode(string $mobilePhone, ?string $code = null): bool {
     $cfg = getMobileVerificationEnvConfig();
     $provider = $cfg['sms_provider'];
-    $host = strtolower((string) ($_SERVER['HTTP_HOST'] ?? $_SERVER['SERVER_NAME'] ?? ''));
-    $isLocalDev = $host === 'localhost'
-        || str_starts_with($host, 'localhost:')
-        || str_starts_with($host, '127.0.0.1')
-        || str_starts_with($host, '::1');
+    $isLocalDev = isAppLocalDev();
 
     if ($provider === 'twilio_verify') {
         $result = twilioVerifyApiRequest('Verifications', [

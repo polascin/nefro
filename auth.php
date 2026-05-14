@@ -1,14 +1,12 @@
 <?php
+require_once __DIR__ . '/config_loader.php';
+
 // Zabezpečené nastavenia relácie
 ini_set('session.cookie_httponly', 1);
 ini_set('session.use_only_cookies', 1);
 
 // Secure cookie zapíname iba pri HTTPS, inak sa na HTTP (lokálny vývoj) cookie neuloží.
-$isHttps = (
-    (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off')
-    || (isset($_SERVER['SERVER_PORT']) && (int) $_SERVER['SERVER_PORT'] === 443)
-    || (!empty($_SERVER['HTTP_X_FORWARDED_PROTO']) && strtolower((string) $_SERVER['HTTP_X_FORWARDED_PROTO']) === 'https')
-);
+$isHttps = isRequestHttps();
 ini_set('session.cookie_secure', $isHttps ? '1' : '0');
 ini_set('session.cookie_samesite', 'Strict');
 

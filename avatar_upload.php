@@ -112,6 +112,23 @@ if (!function_exists('processAvatarUpload')) {
 
         $tmpPath = (string) ($file['tmp_name'] ?? '');
         $fileSize = (int) ($file['size'] ?? 0);
+        if ($tmpPath === '' || !is_uploaded_file($tmpPath) || $fileSize <= 0) {
+            return ['path' => null, 'error' => 'Nahraný súbor je neplatný.'];
+        }
+
+        $imageMeta = @getimagesize($tmpPath);
+        if ($imageMeta === false || empty($imageMeta[0]) || empty($imageMeta[1])) {
+            return ['path' => null, 'error' => 'Nahraný súbor nie je validný obrázok.'];
+        }
+
+        $imgWidth = (int) $imageMeta[0];
+        $imgHeight = (int) $imageMeta[1];
+        $maxPixels = 25000000; // 25 MP
+        $maxSide = 8000;
+        if ($imgWidth > $maxSide || $imgHeight > $maxSide || ($imgWidth * $imgHeight) > $maxPixels) {
+            return ['path' => null, 'error' => 'Obrázok má príliš veľké rozmery. Maximálne 8000x8000 px a 25 MP.'];
+        }
+
         $mime = (string) mime_content_type($tmpPath);
         $mimeToExt = [
             'image/jpeg' => 'jpg',

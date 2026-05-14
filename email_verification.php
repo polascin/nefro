@@ -210,19 +210,6 @@ function sendViaSmtp(string $toEmail, string $subject, string $messageBody, arra
     return $dataCode === 250;
 }
 
-function getAppBaseUrl(): string {
-    $isHttps = (
-        (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off')
-        || (isset($_SERVER['SERVER_PORT']) && (int) $_SERVER['SERVER_PORT'] === 443)
-        || (!empty($_SERVER['HTTP_X_FORWARDED_PROTO']) && strtolower((string) $_SERVER['HTTP_X_FORWARDED_PROTO']) === 'https')
-    );
-
-    $scheme = $isHttps ? 'https' : 'http';
-    $host = $_SERVER['HTTP_HOST'] ?? $_SERVER['SERVER_NAME'] ?? 'localhost';
-
-    return $scheme . '://' . $host;
-}
-
 function generateEmailVerificationToken(): array {
     $rawToken = rtrim(strtr(base64_encode(random_bytes(32)), '+/', '-_'), '=');
     $tokenHash = hash('sha256', $rawToken);
@@ -266,7 +253,7 @@ function sendVerificationEmail(string $toEmail, string $username, int $userId, s
     }
 
     // Fallback pre prípad, že SMTP dočasne zlyhá.
-    $fallbackFrom = $cfg['from_email'] !== '' ? $cfg['from_email'] : ('no-reply@' . preg_replace('/:\\d+$/', '', (string) ($_SERVER['HTTP_HOST'] ?? 'nefro.polascin.net')));
+    $fallbackFrom = $cfg['from_email'] !== '' ? $cfg['from_email'] : 'no-reply@nefro.polascin.net';
     $headers = [
         'MIME-Version: 1.0',
         'Content-Type: text/plain; charset=UTF-8',
@@ -294,7 +281,7 @@ function sendPasswordResetEmail(string $toEmail, string $username, string $rawTo
         return true;
     }
 
-    $fallbackFrom = $cfg['from_email'] !== '' ? $cfg['from_email'] : ('no-reply@' . preg_replace('/:\\d+$/', '', (string) ($_SERVER['HTTP_HOST'] ?? 'nefro.polascin.net')));
+    $fallbackFrom = $cfg['from_email'] !== '' ? $cfg['from_email'] : 'no-reply@nefro.polascin.net';
     $headers = [
         'MIME-Version: 1.0',
         'Content-Type: text/plain; charset=UTF-8',
@@ -366,7 +353,7 @@ function sendAdminNewRegistrationEmail(array $dbUserRow, array $registrationCont
         return true;
     }
 
-    $fallbackFrom = $cfg['from_email'] !== '' ? $cfg['from_email'] : ('no-reply@' . preg_replace('/:\\d+$/', '', (string) ($_SERVER['HTTP_HOST'] ?? 'nefro.polascin.net')));
+    $fallbackFrom = $cfg['from_email'] !== '' ? $cfg['from_email'] : 'no-reply@nefro.polascin.net';
     $headers = [
         'MIME-Version: 1.0',
         'Content-Type: text/plain; charset=UTF-8',
@@ -409,7 +396,7 @@ function sendUserRegistrationNotificationEmail(string $toEmail, string $username
         return true;
     }
 
-    $fallbackFrom = $cfg['from_email'] !== '' ? $cfg['from_email'] : ('no-reply@' . preg_replace('/:\\d+$/', '', (string) ($_SERVER['HTTP_HOST'] ?? 'nefro.polascin.net')));
+    $fallbackFrom = $cfg['from_email'] !== '' ? $cfg['from_email'] : 'no-reply@nefro.polascin.net';
     $headers = [
         'MIME-Version: 1.0',
         'Content-Type: text/plain; charset=UTF-8',

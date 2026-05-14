@@ -9,6 +9,11 @@ $requestMethod = strtoupper((string) ($_SERVER['REQUEST_METHOD'] ?? 'GET'));
 $csrfToken = generateCsrfToken();
 
 $requiredColumns = ['last_name', 'first_name', 'username', 'email', 'mobile_phone'];
+$hardBlockedColumns = [
+    'password_hash',
+    'email_verification_token_hash',
+    'mobile_verification_code_hash',
+];
 $sensitiveColumns = [
     'password_hash',
     'email_verification_token_hash',
@@ -93,12 +98,17 @@ try {
         }
     }
 
-    $safeColumns = $includeSensitive
-        ? array_values($allColumns)
-        : array_values(array_filter(
-            $allColumns,
+    $safeColumns = array_values(array_filter(
+        $allColumns,
+        static fn(string $col): bool => !in_array($col, $hardBlockedColumns, true)
+    ));
+
+    if (!$includeSensitive) {
+        $safeColumns = array_values(array_filter(
+            $safeColumns,
             static fn(string $col): bool => !in_array($col, $sensitiveColumns, true)
         ));
+    }
 
     $orderedColumns = [];
     foreach ($requiredColumns as $required) {
@@ -256,7 +266,9 @@ if ($format === 'txt') {
 $isPrintMode = ($format === 'print');
 $nowHuman = date('d.m.Y H:i:s');
 $totalUsers = count($users);
-$modeLabel = $includeSensitive ? 'Vrátane technických/citlivých polí' : 'Bez technických/citlivých polí';
+$modeLabel = $includeSensitive
+    ? 'Rozšírený režim (bez hash/token polí)'
+    : 'Bez technických/citlivých polí';
 ?>
 <!DOCTYPE html>
 <html lang="sk">
