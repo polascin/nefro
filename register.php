@@ -161,9 +161,35 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                         $stmt->execute($registrationParams);
 
                         $newUserId = (int) $pdo->lastInsertId();
+                        $newUserRow = null;
+                        $userFetchStmt = $pdo->prepare("SELECT * FROM users WHERE id = :id LIMIT 1");
+                        $userFetchStmt->execute(['id' => $newUserId]);
+                        $newUserRow = $userFetchStmt->fetch();
+
                         $sent = sendVerificationEmail($email, $username, $newUserId, $tokenData['token']);
                         if (!$sent) {
                             $verificationNotice = 'Účet bol vytvorený, ale overovací e-mail sa nepodarilo odoslať. Skúste možnosť opätovného odoslania.';
+                        }
+
+                        $userNoticeSent = sendUserRegistrationNotificationEmail(
+                            $email,
+                            $username,
+                            is_array($newUserRow) ? $newUserRow : []
+                        );
+                        if (!$userNoticeSent) {
+                            error_log('Registracia: pouzivatelsky notifikacny e-mail sa nepodarilo odoslat pre user_id=' . $newUserId);
+                        }
+
+                        if (is_array($newUserRow)) {
+                            $adminNoticeSent = sendAdminNewRegistrationEmail($newUserRow, [
+                                'ip' => (string) ($_SERVER['REMOTE_ADDR'] ?? ''),
+                                'user_agent' => (string) ($_SERVER['HTTP_USER_AGENT'] ?? ''),
+                                'referer' => (string) ($_SERVER['HTTP_REFERER'] ?? ''),
+                                'request_uri' => (string) ($_SERVER['REQUEST_URI'] ?? ''),
+                            ]);
+                            if (!$adminNoticeSent) {
+                                error_log('Registracia: admin notifikacny e-mail sa nepodarilo odoslat pre user_id=' . $newUserId);
+                            }
                         }
                         
                         $success = true;

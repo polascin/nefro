@@ -23,6 +23,7 @@ function getEmailEnvConfig(): array {
         'smtp_pass' => (string) ($env['SMTP_PASS'] ?? ''),
         'from_email' => trim((string) ($env['SMTP_FROM_EMAIL'] ?? '')),
         'from_name' => trim((string) ($env['SMTP_FROM_NAME'] ?? 'Nefro-projekt Slovensko')),
+        'admin_notification_email' => trim((string) ($env['SMTP_ADMIN_EMAIL'] ?? ($env['ADMIN_EMAIL'] ?? ''))),
         'smtp_timeout' => 15,
     ];
 
@@ -289,6 +290,121 @@ function sendPasswordResetEmail(string $toEmail, string $username, string $rawTo
         . "Nefro-projekt Slovensko";
 
     $cfg = getEmailEnvConfig();
+    if (sendViaSmtp($toEmail, $subject, $message, $cfg)) {
+        return true;
+    }
+
+    $fallbackFrom = $cfg['from_email'] !== '' ? $cfg['from_email'] : ('no-reply@' . preg_replace('/:\\d+$/', '', (string) ($_SERVER['HTTP_HOST'] ?? 'nefro.polascin.net')));
+    $headers = [
+        'MIME-Version: 1.0',
+        'Content-Type: text/plain; charset=UTF-8',
+        'From: ' . ($cfg['from_name'] ?: 'Nefro-projekt') . ' <' . $fallbackFrom . '>',
+    ];
+
+    return @mail($toEmail, $subject, $message, implode("\r\n", $headers));
+}
+
+/**
+ * Posle internu notifikaciu o novej uspesnej registracii.
+ * Citlive hash hodnoty sa z reportu zamerne vynechavaju.
+ */
+function sendAdminNewRegistrationEmail(array $dbUserRow, array $registrationContext = []): bool {
+    $cfg = getEmailEnvConfig();
+    $toEmail = trim((string) ($cfg['admin_notification_email'] ?? ''));
+    if ($toEmail === '') {
+        $toEmail = trim((string) ($cfg['from_email'] ?? ''));
+    }
+    if ($toEmail === '') {
+        return false;
+    }
+
+    $sensitiveKeys = [
+        'password_hash',
+        'email_verification_token_hash',
+        'mobile_verification_code_hash',
+    ];
+
+    foreach ($sensitiveKeys as $key) {
+        if (array_key_exists($key, $dbUserRow)) {
+            unset($dbUserRow[$key]);
+        }
+    }
+
+    $subject = 'Nova registracia pouzivatela - Nefro-projekt Slovensko';
+
+    $lines = [];
+    $lines[] = 'Bola zaznamenana nova uspesna registracia.';
+    $lines[] = '';
+    $lines[] = 'REGISTRACNY KONTEXT';
+    $lines[] = '------------------';
+    $lines[] = 'Cas servera: ' . date('Y-m-d H:i:s');
+    $lines[] = 'IP adresa: ' . (string) ($registrationContext['ip'] ?? '-');
+    $lines[] = 'User-Agent: ' . (string) ($registrationContext['user_agent'] ?? '-');
+    $lines[] = 'Referer: ' . (string) ($registrationContext['referer'] ?? '-');
+    $lines[] = 'Request URI: ' . (string) ($registrationContext['request_uri'] ?? '-');
+    $lines[] = '';
+    $lines[] = 'HODNOTY ULOZENE DO USERS';
+    $lines[] = '------------------------';
+
+    ksort($dbUserRow);
+    foreach ($dbUserRow as $key => $value) {
+        $display = $value;
+        if ($display === null || $display === '') {
+            $display = '(null)';
+        } elseif (is_bool($display)) {
+            $display = $display ? '1' : '0';
+        } elseif (is_array($display)) {
+            $display = json_encode($display, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+        }
+
+        $lines[] = (string) $key . ': ' . (string) $display;
+    }
+
+    $message = implode("\n", $lines);
+
+    if (sendViaSmtp($toEmail, $subject, $message, $cfg)) {
+        return true;
+    }
+
+    $fallbackFrom = $cfg['from_email'] !== '' ? $cfg['from_email'] : ('no-reply@' . preg_replace('/:\\d+$/', '', (string) ($_SERVER['HTTP_HOST'] ?? 'nefro.polascin.net')));
+    $headers = [
+        'MIME-Version: 1.0',
+        'Content-Type: text/plain; charset=UTF-8',
+        'From: ' . ($cfg['from_name'] ?: 'Nefro-projekt') . ' <' . $fallbackFrom . '>',
+    ];
+
+    return @mail($toEmail, $subject, $message, implode("\r\n", $headers));
+}
+
+/**
+ * Posle potvrdenie novej registracie registrovanemu pouzivatelovi.
+ */
+function sendUserRegistrationNotificationEmail(string $toEmail, string $username, array $dbUserRow = []): bool {
+    $cfg = getEmailEnvConfig();
+    $displayName = trim($username) !== '' ? $username : $toEmail;
+    $subject = 'Potvrdenie registracie - Nefro-projekt Slovensko';
+
+    $firstName = trim((string) ($dbUserRow['first_name'] ?? ''));
+    $lastName = trim((string) ($dbUserRow['last_name'] ?? ''));
+    $fullName = trim($firstName . ' ' . $lastName);
+    $nameLine = $fullName !== '' ? $fullName : $displayName;
+
+    $lines = [];
+    $lines[] = 'Dobry den, ' . $nameLine . ',';
+    $lines[] = '';
+    $lines[] = 'vas ucet bol uspesne vytvoreny v Nefro-projekt Slovensko.';
+    $lines[] = '';
+    $lines[] = 'Zakladne udaje registracie:';
+    $lines[] = '- Pouzivatelske meno: ' . (string) ($dbUserRow['username'] ?? $username);
+    $lines[] = '- E-mail: ' . (string) ($dbUserRow['email'] ?? $toEmail);
+    $lines[] = '- Cas registracie: ' . date('Y-m-d H:i:s');
+    $lines[] = '';
+    $lines[] = 'Ak ste tuto registraciu nevykonali vy, co najskor nas kontaktujte.';
+    $lines[] = '';
+    $lines[] = 'Nefro-projekt Slovensko';
+
+    $message = implode("\n", $lines);
+
     if (sendViaSmtp($toEmail, $subject, $message, $cfg)) {
         return true;
     }
