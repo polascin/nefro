@@ -24,14 +24,14 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
 $siteName  = 'Nefro-projekt Slovensko';
 $baseUrl   = 'https://nefro.polascin.net/';
 $pageUrl   = $baseUrl . 'calculators.php';
-$pageTitle = 'Kalkulačky KDIGO 2024 CKD | ' . $siteName;
+$pageTitle = 'Nefrologické kalkulačky | ' . $siteName;
 $pageDesc  = 'Klinické kalkulačky pre nefrológiu podľa KDIGO 2024: eGFR (CKD-EPI 2021), KDIGO G/A riziko, KFRE predikcia dialýzy, CKD-PC Grams 2022, IgAN Prediction Tool a Mayo ADPKD klasifikácia. Pre zdravotníckych pracovníkov na Slovensku.';
 $ogImage   = $baseUrl . 'img/nps-logo.gif';
 
 $schemaWebApp = [
   '@context'    => 'https://schema.org',
   '@type'       => ['WebApplication', 'MedicalWebPage'],
-  'name'        => 'Kalkulačky KDIGO 2024 — Nefro-projekt Slovensko',
+  'name'        => 'Nefrologické kalkulačky — Nefro-projekt Slovensko',
   'description' => $pageDesc,
   'url'         => $pageUrl,
   'inLanguage'  => 'sk-SK',
@@ -133,8 +133,8 @@ $schemaWebApp = [
     <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>
 
     <?php
-    $headerTitle = 'Kalkulačky';
-    $headerIntro = 'Klinické výpočty podľa KDIGO 2024 pre CKD';
+    $headerTitle = 'Nefrologické kalkulačky';
+    $headerIntro = '';
     $showLogo = false;
     include 'header.php';
     ?>
@@ -164,7 +164,7 @@ $schemaWebApp = [
     <main id="main-content" class="container main-content main-content--single-col" role="main">
         <div class="content-wrapper">
             <section class="primary-article">
-                <h1>Kalkulačky KDIGO 2024 CKD</h1>
+                <h1>Nefrologické kalkulačky</h1>
                 <p>
                     Výpočty sú určené na orientačnú podporu klinického rozhodovania. Údaje pacienta
                     (meno, priezvisko, dátum narodenia, rodné číslo, kód zdravotnej poisťovne) sú voliteľné.
