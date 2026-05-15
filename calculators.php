@@ -25,7 +25,7 @@ $siteName  = 'Nefro-projekt Slovensko';
 $baseUrl   = 'https://nefro.polascin.net/';
 $pageUrl   = $baseUrl . 'calculators.php';
 $pageTitle = 'Kalkulačky KDIGO 2024 CKD | ' . $siteName;
-$pageDesc  = 'Klinické kalkulačky pre CKD podľa KDIGO 2024: eGFR (CKD-EPI 2021), KDIGO G/A riziko, KFRE predikcia dialýzy a CKD-PC Grams 2022. Určené pre zdravotníckych pracovníkov na Slovensku.';
+$pageDesc  = 'Klinické kalkulačky pre nefrológiu podľa KDIGO 2024: eGFR (CKD-EPI 2021), KDIGO G/A riziko, KFRE predikcia dialýzy, CKD-PC Grams 2022, IgAN Prediction Tool a Mayo ADPKD klasifikácia. Pre zdravotníckych pracovníkov na Slovensku.';
 $ogImage   = $baseUrl . 'img/nps-logo.gif';
 
 $schemaWebApp = [
@@ -53,6 +53,8 @@ $schemaWebApp = [
     ['@type' => 'WebApplication', 'name' => 'KDIGO G/A riziko CKD',                  'url' => $baseUrl . 'calculator_kdigo_risk.php'],
     ['@type' => 'WebApplication', 'name' => 'KFRE — Kidney Failure Risk Equation',   'url' => $baseUrl . 'calculator_kfre.php'],
     ['@type' => 'WebApplication', 'name' => 'CKD-PC — Grams 2022 (3-ročné riziko)', 'url' => $baseUrl . 'calculator_ckdpc.php'],
+    ['@type' => 'WebApplication', 'name' => 'IgAN Prediction Tool (Barbour 2019)',  'url' => $baseUrl . 'calculator_igan.php'],
+    ['@type' => 'WebApplication', 'name' => 'Mayo ADPKD klasifikácia (Irazabal 2015)', 'url' => $baseUrl . 'calculator_adpkd.php'],
   ],
 ];
 ?>
@@ -191,6 +193,24 @@ $schemaWebApp = [
                         <h3>CKD-PC — Grams 2022 (3-ročné riziko)</h3>
                         <p>Odhad 3-ročného rizika poklesu eGFR o ≥40 % alebo zlyhania obličiek — platné pre všetky štádiá CKD vrátane G1–G2. Rozšírený model s 13+ vstupmi.</p>
                         <a href="calculator_ckdpc.php" class="btn-primary">Otvoriť kalkulačku</a>
+                    </article>
+                </div>
+            </section>
+
+            <section class="features-section" aria-labelledby="spec-calculators-heading">
+                <h2 id="spec-calculators-heading">Diagnózovo špecifické kalkulačky</h2>
+                <p style="margin-bottom:16px;font-size:0.92rem;opacity:0.8;">KDIGO 2024 odporúča pre niektoré ochorenia obličiek použiť externálne validované, diagnózovo špecifické prognostické nástroje.</p>
+                <div class="features-grid calculators-grid">
+                    <article class="feature-card calculator-card">
+                        <h3>IgAN Prediction Tool</h3>
+                        <p>Odhad 5-ročného rizika poklesu eGFR o ≥50 % alebo ESKD pri IgA nefropatii. Klinický model (Barbour 2019) bez požiadavky na histológiu.</p>
+                        <a href="calculator_igan.php" class="btn-primary">Otvoriť kalkulačku</a>
+                    </article>
+
+                    <article class="feature-card calculator-card">
+                        <h3>Mayo ADPKD klasifikácia</h3>
+                        <p>Zaradenie pacienta s ADPKD do tried 1A–1E podľa HtTKV a veku (Irazabal 2015). Pomáha pri indikácii tolvaptanu a sledovaní progresie.</p>
+                        <a href="calculator_adpkd.php" class="btn-primary">Otvoriť kalkulačku</a>
                     </article>
                 </div>
             </section>

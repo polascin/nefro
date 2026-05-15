@@ -1,0 +1,379 @@
+<?php
+require_once 'auth.php';
+require_once 'db_config.php';
+require_once 'calculators_common.php';
+
+/**
+ * Mayo ADPKD klasifikácia — Irazabal et al. JASN 2015;26(8):1987–1994
+ * HtTKV = TKV / výška (mL/m)
+ * k = ln(HtTKV / 150) / vek  — odhadovaná ročná rýchlosť rastu obličiek
+ * Triedy 1A–1E podľa k (prahové hodnoty: 1.5%, 3.0%, 4.5%, 6.0%/rok)
+ * Trieda 2 = atypická ADPKD (unilaterálna, asymetrická)
+ */
+function adpkdClassify(float $tkv_ml, float $height_cm, float $age): array
+{
+    $height_m = $height_cm / 100.0;
+    $httkv    = $tkv_ml / $height_m;                     // mL/m
+    $k        = log($httkv / 150.0) / $age;              // ročná miera rastu (log)
+    $annual_pct = (exp($k) - 1.0) * 100.0;              // % za rok
+
+    if      ($k < 0.015) { $class = '1A'; $speed = 'Pomalá (<1,5 %/rok)'; }
+    elseif  ($k < 0.030) { $class = '1B'; $speed = 'Mierna (1,5–3 %/rok)'; }
+    elseif  ($k < 0.045) { $class = '1C'; $speed = 'Rýchla (3–4,5 %/rok)'; }
+    elseif  ($k < 0.060) { $class = '1D'; $speed = 'Veľmi rýchla (4,5–6 %/rok)'; }
+    else                  { $class = '1E'; $speed = 'Extrémne rýchla (>6 %/rok)'; }
+
+    return [
+        'httkv'      => round($httkv, 1),
+        'k_pct'      => round($annual_pct, 2),
+        'class'      => $class,
+        'speed'      => $speed,
+    ];
+}
+
+function adpkdInterpretation(string $class): array
+{
+    $interp = [];
+    $warn   = [];
+    switch ($class) {
+        case '1A':
+            $interp[] = 'Trieda 1A — pomalá progresia. Pravidelné sledovanie, konzervatívna liečba.';
+            break;
+        case '1B':
+            $interp[] = 'Trieda 1B — mierna progresia. Optimalizácia krvného tlaku, hydratácia.';
+            break;
+        case '1C':
+            $interp[] = 'Trieda 1C — rýchla progresia. Zvážiť tolvaptan (KDIGO 2024 odporúčanie).';
+            $warn[]   = 'Trieda 1C je typický kandidát na špecifickú liečbu tolvaptanom.';
+            break;
+        case '1D':
+            $interp[] = 'Trieda 1D — veľmi rýchla progresia. Tolvaptan indikovaný pri absencii kontraindikácií.';
+            $warn[]   = 'Odporúčané nefrologické sledovanie každých 6 mesiacov.';
+            break;
+        case '1E':
+            $interp[] = 'Trieda 1E — extrémne rýchla progresia. Tolvaptan a včasné plánovanie RRT.';
+            $warn[]   = 'URGENTNÉ: Zvážiť zaradenie do transplantačného programu. Tolvaptan pri absencii hepatotoxicity.';
+            break;
+    }
+    return ['interpretation' => $interp, 'warnings' => $warn];
+}
+
+header_remove('X-Powered-By');
+header('X-Frame-Options: SAMEORIGIN');
+header('X-Content-Type-Options: nosniff');
+header('Strict-Transport-Security: max-age=31536000; includeSubDomains; preload');
+header('Referrer-Policy: strict-origin-when-cross-origin');
+$csp = "default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com; connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://*.analytics.google.com https://stats.g.doubleclick.net; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; upgrade-insecure-requests";
+header('Content-Security-Policy: ' . $csp);
+
+$siteName  = 'Nefro-projekt Slovensko';
+$baseUrl   = 'https://nefro.polascin.net/';
+$pageUrl   = $baseUrl . 'calculator_adpkd.php';
+$pageTitle = 'Mayo ADPKD klasifikácia — rýchlosť progresie ADPKD | ' . $siteName;
+$pageDesc  = 'Mayo Clinic ADPKD klasifikácia (Irazabal 2015) — zaradenie do tried 1A–1E podľa výškou adjustovaného celkového objemu obličiek (HtTKV) a veku. Pre výber tolvaptanu a sledovanie ADPKD.';
+$ogImage   = $baseUrl . 'img/nps-logo.gif';
+
+$errors = []; $messages = []; $calculated = null; $savedResults = [];
+
+$form = [
+    'tkv_ml'       => (string)($_POST['tkv_ml']    ?? ''),
+    'height_cm'    => (string)($_POST['height_cm'] ?? ''),
+    'age_years'    => (string)($_POST['age_years'] ?? ''),
+    'typical_adpkd'=> (string)($_POST['typical_adpkd'] ?? '1'),
+    'patient_first_name'    => (string)($_POST['patient_first_name']    ?? ''),
+    'patient_last_name'     => (string)($_POST['patient_last_name']     ?? ''),
+    'patient_birth_date'    => (string)($_POST['patient_birth_date']    ?? ''),
+    'patient_birth_number'  => (string)($_POST['patient_birth_number']  ?? ''),
+    'patient_insurance_code'=> (string)($_POST['patient_insurance_code']?? ''),
+];
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (!isset($_POST['csrf_token']) || !hash_equals($_SESSION['csrf_token'] ?? '', $_POST['csrf_token'])) {
+        $errors[] = 'Neplatný bezpečnostný token. Obnovte stránku.';
+    } else {
+        $patient = calculatorPatientDataFromRequest($_POST);
+        calculatorValidateOptionalPatientData($patient, $errors);
+
+        $tkvMl     = calculatorParsePositiveFloat($form['tkv_ml']);
+        $heightCm  = calculatorParsePositiveFloat($form['height_cm']);
+        $ageYears  = calculatorParsePositiveFloat($form['age_years']);
+        $isTypical = ($form['typical_adpkd'] === '1');
+
+        if ($tkvMl   === null || $tkvMl   > 10000) $errors[] = 'Celkový objem obličiek (TKV) musí byť 1–10 000 mL.';
+        if ($heightCm === null || $heightCm < 100 || $heightCm > 220) $errors[] = 'Výška musí byť 100–220 cm.';
+        if ($ageYears === null || $ageYears < 15 || $ageYears > 80)   $errors[] = 'Vek musí byť 15–80 rokov.';
+
+        if (empty($errors)) {
+            if (!$isTypical) {
+                $calculated = ['class' => '2', 'speed' => 'Atypická ADPKD', 'httkv' => round($tkvMl / ($heightCm/100), 1), 'k_pct' => null,
+                    'interpretation' => ['Trieda 2 — atypická ADPKD (unilaterálna alebo asymetrická). Mayo klasifikácia nie je aplikovateľná.'],
+                    'warnings' => ['Odporúčané individuálne genetické vyšetrenie a nefrologické sledovanie.']];
+            } else {
+                $res  = adpkdClassify($tkvMl, $heightCm, $ageYears);
+                $int  = adpkdInterpretation($res['class']);
+                $calculated = array_merge($res, ['interpretation' => $int['interpretation'], 'warnings' => $int['warnings'],
+                    'tkv' => $tkvMl, 'height' => $heightCm, 'age' => $ageYears]);
+
+                if (isLoggedIn()) {
+                    try {
+                        $pdo = getPDO();
+                        $saved = calculatorSaveResult($pdo, (int)$_SESSION['user_id'], 'adpkd', 'Mayo ADPKD klasifikácia', $patient,
+                            ['tkv_ml' => $tkvMl, 'height_cm' => $heightCm, 'age_years' => $ageYears],
+                            ['class' => $res['class'], 'httkv' => $res['httkv'], 'k_pct' => $res['k_pct']]);
+                        if ($saved) $messages[] = 'Výsledok bol uložený.';
+                    } catch (\Throwable $e) { $errors[] = 'Uloženie zlyhalo: ' . htmlspecialchars($e->getMessage()); }
+                }
+            }
+        }
+    }
+}
+
+if (isLoggedIn()) {
+    try { $pdo = getPDO(); $savedResults = calculatorFetchSavedResults($pdo, (int)$_SESSION['user_id'], 'adpkd');
+    } catch (\Throwable) {} }
+?>
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title><?= htmlspecialchars($pageTitle, ENT_QUOTES) ?></title>
+    <meta name="description" content="<?= htmlspecialchars($pageDesc, ENT_QUOTES) ?>">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="MUDr. Ľubomír Polaščín">
+    <link rel="canonical" href="<?= htmlspecialchars($pageUrl, ENT_QUOTES) ?>">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="<?= htmlspecialchars($pageTitle, ENT_QUOTES) ?>">
+    <meta property="og:description" content="<?= htmlspecialchars($pageDesc, ENT_QUOTES) ?>">
+    <meta property="og:url" content="<?= htmlspecialchars($pageUrl, ENT_QUOTES) ?>">
+    <meta property="og:image" content="<?= htmlspecialchars($ogImage, ENT_QUOTES) ?>">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;900&display=swap"></noscript>
+    <script src="theme.js?v=20260509-1&cb=<?= filemtime('theme.js') ?>"></script>
+    <link rel="stylesheet" href="index.css?v=20260509-1&cb=<?= filemtime('index.css') ?>">
+    <script src="ui-preferences.js?v=20260511-1&cb=<?= filemtime('ui-preferences.js') ?>" defer></script>
+    <script src="ui-preferences-fallback.js?v=20260511-1&cb=<?= filemtime('ui-preferences-fallback.js') ?>" defer></script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>
+    <?php $headerTitle = 'Mayo ADPKD klasifikácia'; $headerIntro = 'Rýchlosť progresie polycystickej choroby obličiek'; $showLogo = false; include 'header.php'; ?>
+
+    <nav class="main-nav" aria-label="Hlavná navigácia">
+        <div class="container"><ul>
+            <li><a href="index.php">Domov</a></li>
+            <li><a href="calculators.php" class="active" aria-current="page">Kalkulačky</a></li>
+            <li><a href="calculator_egfr.php">eGFR CKD-EPI</a></li>
+            <li><a href="calculator_kdigo_risk.php">KDIGO G/A riziko</a></li>
+            <?php if (isLoggedIn()): ?>
+                <?php if (isAdmin()): ?><li><a href="admin.php">Admin panel</a></li><?php endif; ?>
+                <li><a href="logout.php">Odhlásiť sa (<?= htmlspecialchars($_SESSION['username'] ?? 'Profil') ?>)</a></li>
+            <?php else: ?><li><a href="login.php">Prihlásenie</a></li><?php endif; ?>
+        </ul></div>
+    </nav>
+
+    <main id="main-content" class="container main-content main-content--single-col" role="main">
+        <div class="content-wrapper">
+            <div class="auth-container auth-container--wide">
+                <h2>Mayo ADPKD klasifikácia</h2>
+                <p class="auth-subtitle">Zaradenie pacienta s autozomálne dominantnou polycystickou chorobou obličiek (ADPKD) do tried 1A–1E podľa Mayo klasifikácie (Irazabal 2015) na základe HtTKV a veku.</p>
+
+                <details open class="calc-formula-box">
+                    <summary>Vzorec — Mayo ADPKD klasifikácia (Irazabal 2015)</summary>
+                    <div class="calc-formula-content">
+                        <code class="calc-formula-line">HtTKV = TKV [mL] / výška [m]
+
+k = ln(HtTKV / 150) / vek
+
+Triedy: 1A: k&lt;0,015 &nbsp; 1B: 0,015–0,030 &nbsp; 1C: 0,030–0,045 &nbsp; 1D: 0,045–0,060 &nbsp; 1E: k≥0,060</code>
+                        <div class="calc-formula-vars">
+                            HtTKV = výškou adjustovaný celkový objem obličiek (mL/m) &ensp;&bull;&ensp;
+                            k = odhadovaná ročná miera rastu (exponent) &ensp;&bull;&ensp;
+                            Platí len pre typickú ADPKD (bilaterálna, difúzna) &ensp;&bull;&ensp;
+                            Zdroj: Irazabal MV et al. <em>JASN.</em> 2015;26(8):1987–1994.
+                        </div>
+                    </div>
+                </details>
+
+                <div class="alert" style="background:rgba(16,185,129,0.07);border-left:4px solid #10b981;padding:12px 16px;border-radius:6px;margin-bottom:16px;font-size:0.88rem;">
+                    <strong>Porovnanie s referenčnými kalkulátormi:</strong>
+                    <a href="https://www.mdcalc.com/search?q=Mayo+ADPKD" target="_blank" rel="noopener noreferrer">MDCalc Mayo ADPKD</a> &ensp;&bull;&ensp;
+                    <a href="https://qxmd.com/calculate" target="_blank" rel="noopener noreferrer">QxMD (vyhľadajte "ADPKD")</a>
+                </div>
+
+                <?php foreach ($messages as $msg): ?>
+                    <div class="alert alert-success"><p><?= htmlspecialchars($msg) ?></p></div>
+                <?php endforeach; ?>
+
+                <?php if (!empty($errors)): ?>
+                    <div class="alert alert-error"><ul>
+                        <?php foreach ($errors as $e): ?><li><?= htmlspecialchars($e) ?></li><?php endforeach; ?>
+                    </ul></div>
+                <?php endif; ?>
+
+                <?php if ($calculated !== null):
+                    $classColor = match($calculated['class']) {
+                        '1A' => '#22c55e', '1B' => '#84cc16',
+                        '1C' => '#f59e0b', '1D' => '#f97316', '1E','2' => '#ef4444', default => '#64748b'};
+                ?>
+                <div class="calc-result-box" role="region" aria-label="Výsledok klasifikácie">
+                    <h3>Výsledok — Mayo ADPKD klasifikácia</h3>
+                    <div class="calc-result-grid">
+                        <div class="calc-result-item calc-result-item--highlight" style="border-color:<?= $classColor ?>;">
+                            <span class="calc-result-label">Mayo trieda</span>
+                            <span class="calc-result-value" style="color:<?= $classColor ?>;"><?= htmlspecialchars($calculated['class']) ?></span>
+                        </div>
+                        <div class="calc-result-item">
+                            <span class="calc-result-label">HtTKV</span>
+                            <span class="calc-result-value"><?= number_format($calculated['httkv'], 1, ',', '&thinsp;') ?>&thinsp;mL/m</span>
+                        </div>
+                        <?php if ($calculated['k_pct'] !== null): ?>
+                        <div class="calc-result-item">
+                            <span class="calc-result-label">Odh. ročný rast</span>
+                            <span class="calc-result-value"><?= number_format($calculated['k_pct'], 1, ',', '&thinsp;') ?>&thinsp;%/rok</span>
+                        </div>
+                        <?php endif; ?>
+                        <div class="calc-result-item">
+                            <span class="calc-result-label">Rýchlosť progresie</span>
+                            <span class="calc-result-value" style="font-size:1rem;"><?= htmlspecialchars($calculated['speed']) ?></span>
+                        </div>
+                    </div>
+                    <?php foreach ($calculated['interpretation'] as $line): ?>
+                        <p class="calc-result-note"><?= htmlspecialchars($line) ?></p>
+                    <?php endforeach; ?>
+                    <?php foreach ($calculated['warnings'] as $w): ?>
+                        <p class="calc-result-warning">⚠ <?= htmlspecialchars($w) ?></p>
+                    <?php endforeach; ?>
+                </div>
+                <?php endif; ?>
+
+                <form method="POST" action="calculator_adpkd.php" novalidate>
+                    <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
+
+                    <div class="form-section">
+                        <h3>Údaje pacienta (voliteľné)</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="adpkd_fn">Meno</label>
+                                <input type="text" id="adpkd_fn" name="patient_first_name" class="form-control" maxlength="100" autocomplete="off" value="<?= htmlspecialchars($form['patient_first_name']) ?>">
+                            </div>
+                            <div class="form-group">
+                                <label for="adpkd_ln">Priezvisko</label>
+                                <input type="text" id="adpkd_ln" name="patient_last_name" class="form-control" maxlength="100" autocomplete="off" value="<?= htmlspecialchars($form['patient_last_name']) ?>">
+                            </div>
+                            <div class="form-group">
+                                <label for="adpkd_bd">Dátum narodenia</label>
+                                <input type="date" id="adpkd_bd" name="patient_birth_date" class="form-control" value="<?= htmlspecialchars($form['patient_birth_date']) ?>">
+                            </div>
+                            <div class="form-group">
+                                <label for="adpkd_bn">Rodné číslo</label>
+                                <input type="text" id="adpkd_bn" name="patient_birth_number" class="form-control" maxlength="20" autocomplete="off" value="<?= htmlspecialchars($form['patient_birth_number']) ?>">
+                            </div>
+                            <div class="form-group">
+                                <label for="adpkd_zp">Kód ZP</label>
+                                <input type="text" id="adpkd_zp" name="patient_insurance_code" class="form-control" maxlength="10" autocomplete="off" value="<?= htmlspecialchars($form['patient_insurance_code']) ?>">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Parametre ADPKD</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="adpkd_tkv">Celkový objem obličiek — TKV (mL) <span class="required">*</span></label>
+                                <input type="number" id="adpkd_tkv" name="tkv_ml" min="100" max="10000" step="1" required class="form-control" placeholder="napr. 800" value="<?= htmlspecialchars($form['tkv_ml']) ?>">
+                                <small class="form-hint">Z MRI alebo CT volumetrie (súčet oboch obličiek)</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="adpkd_height">Výška (cm) <span class="required">*</span></label>
+                                <input type="number" id="adpkd_height" name="height_cm" min="100" max="220" step="0.5" required class="form-control" placeholder="napr. 170" value="<?= htmlspecialchars($form['height_cm']) ?>">
+                            </div>
+                            <div class="form-group">
+                                <label for="adpkd_age">Vek (roky) <span class="required">*</span></label>
+                                <input type="number" id="adpkd_age" name="age_years" min="15" max="80" step="1" required class="form-control" placeholder="napr. 38" value="<?= htmlspecialchars($form['age_years']) ?>">
+                            </div>
+                            <div class="form-group">
+                                <label for="adpkd_typical">Typ ADPKD <span class="required">*</span></label>
+                                <select id="adpkd_typical" name="typical_adpkd" class="form-control">
+                                    <option value="1" <?= $form['typical_adpkd']==='1'?'selected':'' ?>>Typická (bilaterálna, difúzna) — trieda 1</option>
+                                    <option value="0" <?= $form['typical_adpkd']==='0'?'selected':'' ?>>Atypická (unilaterálna/asymetrická) — trieda 2</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary" id="adpkd_submit">Klasifikovať</button>
+                        <a href="calculator_adpkd.php" class="btn-secondary">Vymazať formulár</a>
+                        <a href="calculators.php" class="btn-secondary">Späť na prehľad</a>
+                    </div>
+                </form>
+
+                <div class="calc-formula-box" style="margin-top:24px;">
+                    <details>
+                        <summary>Referenčné HtTKV prahy podľa veku (triedy 1A–1E)</summary>
+                        <div class="calc-formula-content">
+                            <table style="width:100%;border-collapse:collapse;font-size:0.85rem;margin-top:8px;">
+                                <thead><tr style="border-bottom:1px solid rgba(255,255,255,0.15);">
+                                    <th style="text-align:left;padding:4px 8px;">Vek</th>
+                                    <th style="padding:4px 8px;">1A (&lt;mL/m)</th>
+                                    <th style="padding:4px 8px;">1B (&lt;mL/m)</th>
+                                    <th style="padding:4px 8px;">1C (&lt;mL/m)</th>
+                                    <th style="padding:4px 8px;">1D (&lt;mL/m)</th>
+                                    <th style="padding:4px 8px;">1E (≥mL/m)</th>
+                                </tr></thead>
+                                <tbody>
+                                <?php
+                                $ages = [20,25,30,35,40,45,50,55,60];
+                                foreach ($ages as $a) {
+                                    $t = [150*exp(0.015*$a), 150*exp(0.030*$a), 150*exp(0.045*$a), 150*exp(0.060*$a)];
+                                    echo "<tr style='border-bottom:1px solid rgba(255,255,255,0.06);'>";
+                                    echo "<td style='padding:4px 8px;font-weight:600;'>{$a} r</td>";
+                                    foreach ($t as $v) echo "<td style='padding:4px 8px;text-align:center;'>".round($v)."</td>";
+                                    echo "<td style='padding:4px 8px;text-align:center;'>≥".round($t[3])."</td>";
+                                    echo "</tr>";
+                                }
+                                ?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </details>
+                </div>
+
+                <?php if (!empty($savedResults)): ?>
+                <section class="calc-saved-results" aria-labelledby="adpkd-saved-heading">
+                    <h3 id="adpkd-saved-heading">Uložené výsledky</h3>
+                    <div class="calc-saved-list">
+                        <?php foreach ($savedResults as $row): ?>
+                        <details class="calc-saved-item">
+                            <summary>
+                                <?= htmlspecialchars(calculatorBuildPatientDisplay($row)) ?> —
+                                Trieda <?= htmlspecialchars((string)($row['result_payload']['class'] ?? '—')) ?>
+                                <span class="calc-saved-date">(<?= htmlspecialchars(substr((string)($row['created_at']??''),0,10)) ?>)</span>
+                            </summary>
+                            <div class="calc-saved-detail">
+                                <p>Trieda: <strong><?= htmlspecialchars((string)($row['result_payload']['class']??'—')) ?></strong> &bull;
+                                   HtTKV: <?= htmlspecialchars((string)($row['result_payload']['httkv']??'—')) ?> mL/m</p>
+                                <form method="POST" action="calculator_adpkd.php" style="display:inline;">
+                                    <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
+                                    <input type="hidden" name="delete_id" value="<?= (int)$row['id'] ?>">
+                                    <button type="submit" class="btn-danger btn-sm">Vymazať</button>
+                                </form>
+                            </div>
+                        </details>
+                        <?php endforeach; ?>
+                    </div>
+                </section>
+                <?php endif; ?>
+
+            </div>
+        </div>
+    </main>
+    <?php include 'footer.php'; ?>
+</body>
+</html>
