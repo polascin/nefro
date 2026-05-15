@@ -69,3 +69,41 @@ if ($showUnverifiedNotice && !empty($_SESSION['email'])) {
         </div>
     </div>
 <?php endif; ?>
+
+<?php
+$isCalculatorPage = str_starts_with(basename($_SERVER['PHP_SELF']), 'calculator');
+if ($isCalculatorPage && !empty($currentUser)):
+    $tb = trim((string)($currentUser['title_before'] ?? ''));
+    $fn = trim((string)($currentUser['first_name'] ?? ''));
+    $mn = trim((string)($currentUser['middle_name'] ?? ''));
+    $ln = trim((string)($currentUser['last_name'] ?? ''));
+    $ta = trim((string)($currentUser['title_after'] ?? ''));
+
+    $fullNameParts = array_filter([$tb, $fn, $mn, $ln]);
+    $fullName = implode(' ', $fullNameParts);
+    if ($ta !== '') $fullName .= ', ' . $ta;
+
+    $email = trim((string)($currentUser['email'] ?? ''));
+    $mobile = trim((string)($currentUser['mobile_phone'] ?? ''));
+    
+    $line2Parts = array_filter([$email, $mobile]);
+    $line2 = implode(' | ', $line2Parts);
+
+    $org = trim((string)($currentUser['organization'] ?? ''));
+    $job = trim((string)($currentUser['job_function'] ?? ''));
+    $wMobile = trim((string)($currentUser['work_mobile_phone'] ?? ''));
+    $orgWeb = trim((string)($currentUser['org_website'] ?? ''));
+    $wEmail = trim((string)($currentUser['work_email'] ?? ''));
+
+    $line3Parts = array_filter([$org, $job, $wMobile, $orgWeb, $wEmail]);
+    $line3 = implode(' | ', $line3Parts);
+?>
+    <div class="user-print-header print-only">
+        <div class="user-print-header__content">
+            <div class="user-print-header__line1"><?= htmlspecialchars($fullName ?: ($currentUser['username'] ?? '')) ?></div>
+            <?php if ($line2 !== ''): ?><div class="user-print-header__line2"><?= htmlspecialchars($line2) ?></div><?php endif; ?>
+            <?php if ($line3 !== ''): ?><div class="user-print-header__line3"><?= htmlspecialchars($line3) ?></div><?php endif; ?>
+        </div>
+        <div class="user-print-header__pagination">Strana <span class="print-page-number"></span></div>
+    </div>
+<?php endif; ?>

@@ -6,7 +6,7 @@ $loggedIn = function_exists('isLoggedIn')
 
 if ($loggedIn && isset($pdo)) {
     try {
-        $stmt = $pdo->prepare("SELECT username, email, first_name, last_name, avatar_path, is_admin, email_verified_at, mobile_phone, mobile_verified_at FROM users WHERE id = :id");
+        $stmt = $pdo->prepare("SELECT username, email, first_name, last_name, avatar_path, is_admin, email_verified_at, mobile_phone, mobile_verified_at, title_before, middle_name, title_after, organization, job_function, work_mobile_phone, org_website, work_email FROM users WHERE id = :id");
         $stmt->execute(['id' => $_SESSION['user_id']]);
         $currentUser = $stmt->fetch();
     } catch (\PDOException $e) {

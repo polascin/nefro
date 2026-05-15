@@ -1768,7 +1768,7 @@ input:disabled + .slider:before {
 
 @media print {
   @page {
-    margin: 18mm 12mm;
+    margin: 32mm 12mm 18mm 12mm;
   }
 
   .screen-only {
@@ -1777,6 +1777,47 @@ input:disabled + .slider:before {
 
   .print-only {
     display: block !important;
+  }
+
+  .user-print-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #000;
+    text-align: center;
+    color: #000;
+    font-size: 9pt;
+    z-index: 9999;
+    display: flex !important;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .user-print-header__content {
+    text-align: left;
+    line-height: 1.4;
+  }
+
+  .user-print-header__line1 {
+    font-weight: bold;
+    font-size: 11pt;
+  }
+
+  .user-print-header__line2 {
+    font-size: 9.5pt;
+  }
+
+  .user-print-header__line3 {
+    font-size: 8.5pt;
+    color: #333;
+  }
+
+  .user-print-header__pagination {
+    font-size: 10pt;
+    white-space: nowrap;
+    padding-bottom: 2px;
   }
 
   .no-print,
@@ -1930,7 +1971,7 @@ input:disabled + .slider:before {
   }
 
   .print-page-number::before {
-    content: counter(page);
+    content: counter(page) " z " counter(pages);
   }
 
   .admin-notice-page .container,
