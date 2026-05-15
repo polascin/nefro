@@ -126,4 +126,91 @@ function popFlashMessage(): ?array {
     unset($_SESSION['flash_message']);
     return $flash;
 }
+
+/**
+ * 1. ČASOVÁ ANALÝZA: Zaznamená čas načítania formulára.
+ * @param string $formId Identifikátor formulára
+ */
+function markFormLoadTime(string $formId): void {
+    $_SESSION['form_load_' . $formId] = time();
+}
+
+/**
+ * 1. ČASOVÁ ANALÝZA: Overí, či od načítania formulára uplynul dostatočný čas.
+ * @param string $formId Identifikátor formulára
+ * @param int $minSeconds Minimálny počet sekúnd (predvolené 4s)
+ * @return bool True ak prešlo dosť času, False ak je to pravdepodobne bot.
+ */
+function validateFormTime(string $formId, int $minSeconds = 4): bool {
+    $key = 'form_load_' . $formId;
+    if (empty($_SESSION[$key])) {
+        return false; // Formulár nebol načítaný cez GET
+    }
+    $elapsed = time() - $_SESSION[$key];
+    return $elapsed >= $minSeconds;
+}
+
+/**
+ * 2. JS-CHALLENGE: Vygeneruje token, ktorý musí byť vložený do formulára cez JS.
+ * @return string Unikátny kľúč
+ */
+function generateJsChallengeToken(): string {
+    if (empty($_SESSION['js_challenge_token'])) {
+        $_SESSION['js_challenge_token'] = bin2hex(random_bytes(16));
+    }
+    return $_SESSION['js_challenge_token'];
+}
+
+/**
+ * 2. JS-CHALLENGE: Overí kľúč z POST požiadavky.
+ */
+function validateJsChallengeToken(?string $token): bool {
+    return isset($_SESSION['js_challenge_token']) && $token === $_SESSION['js_challenge_token'];
+}
+
+/**
+ * 3. USER-AGENT CHECK: Kontroluje, či požiadavka nepochádza od známeho bota.
+ */
+function isKnownBotUserAgent(): bool {
+    $ua = $_SERVER['HTTP_USER_AGENT'] ?? '';
+    if (empty($ua)) return true; // Požiadavky bez UA sú takmer vždy boti
+
+    $botPatterns = [
+        '/curl/i', '/Wget/i', '/libwww-perl/i', '/Python-urllib/i', '/php/i',
+        '/Go-http-client/i', '/Java\//i', '/PostmanRuntime/i', '/axios/i'
+    ];
+
+    foreach ($botPatterns as $pattern) {
+        if (preg_match($pattern, $ua)) {
+            return true;
+        }
+    }
+    return false;
+}
+
+/**
+ * 4. DNS CHECK: Overí, či doména e-mailu má platné DNS záznamy (MX alebo A).
+ * @param string $email E-mailová adresa na overenie
+ * @return bool True ak doména existuje a môže prijímať poštu.
+ */
+function isEmailDomainValid(string $email): bool {
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        return false;
+    }
+
+    $domain = substr(strrchr($email, "@"), 1);
+    if (empty($domain)) return false;
+
+    // Skontrolujeme MX záznamy (poštové servery)
+    if (checkdnsrr($domain, 'MX')) {
+        return true;
+    }
+
+    // Fallback: Skontrolujeme A záznam (ak doména nemá MX, ale má IP, môže prijímať poštu)
+    if (checkdnsrr($domain, 'A')) {
+        return true;
+    }
+
+    return false;
+}
 ?>

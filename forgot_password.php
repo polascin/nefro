@@ -37,16 +37,28 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
             $errors[] = "[DEV diagnostika] CSRF zlyhanie: " . $csrfReason;
         }
     } else {
+        // ── 0. User-Agent Check ───────────────────────────────────────────
+        if (isKnownBotUserAgent()) {
+            if ($isLocalDev) { $errors[] = "[DEV] Detekovaný nepovolený User-Agent."; }
+            else { $notice = 'Ak účet existuje, poslali sme na jeho e-mail odkaz na obnovenie hesla.'; goto endOfFpProcessing; }
+        }
+
         // ── 1. Honeypot ochrana ─────────────────────────────────────────
-        // Skryté CSS pole — musí ostatť prázdne, boti ho vypĺňajú.
         if (($_POST['hp_contact'] ?? '') !== '') {
-            if ($isLocalDev) {
-                $errors[] = "[DEV] Honeypot aktivovaný na forgot_password.";
-            } else {
-                // Ticho simulujeme úspešnú akciu — bot nezíska informáciu
-                $notice = 'Ak účet existuje, poslali sme na jeho e-mail odkaz na obnovenie hesla.';
-                goto endOfFpProcessing;
-            }
+            if ($isLocalDev) { $errors[] = "[DEV] Honeypot aktivovaný."; }
+            else { $notice = 'Ak účet existuje, poslali sme na jeho e-mail odkaz na obnovenie hesla.'; goto endOfFpProcessing; }
+        }
+
+        // ── 2. JS-Challenge Check ─────────────────────────────────────────
+        if (!validateJsChallengeToken($_POST['js_token'] ?? null)) {
+            if ($isLocalDev) { $errors[] = "[DEV] JS-Challenge zlyhal."; }
+            else { $notice = 'Ak účet existuje, poslali sme na jeho e-mail odkaz na obnovenie hesla.'; goto endOfFpProcessing; }
+        }
+
+        // ── 3. Time-based Check ───────────────────────────────────────────
+        if (!validateFormTime('forgot_password', 5)) {
+            if ($isLocalDev) { $errors[] = "[DEV] Formulár odoslaný príliš rýchlo."; }
+            else { $notice = 'Ak účet existuje, poslali sme na jeho e-mail odkaz na obnovenie hesla.'; goto endOfFpProcessing; }
         }
 
         // ── 2. IP Rate Limiting (max 3 pokusy/hodína per IP) ───────────────
@@ -144,6 +156,9 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
         // ── endOfFpProcessing ── cieľ pre goto pri honeypot detekcii ──
         endOfFpProcessing:
     }
+} else {
+    // GET požiadavka: zaznamenaj čas načítania
+    markFormLoadTime('forgot_password');
 }
 ?>
 <!DOCTYPE html>
@@ -189,6 +204,13 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 
             <form method="POST" action="forgot_password.php">
                 <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
+                <input type="hidden" name="js_token" id="js_token_field" value="">
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        document.getElementById('js_token_field').value = "<?= generateJsChallengeToken() ?>";
+                    });
+                </script>
+
                 <!-- Honeypot pole: neviditeľné pre ľudí, vypĺňajú ho iba boti. Musí ostatť prázdne. -->
                 <div style="position:absolute;left:-9999px;top:-9999px;overflow:hidden;" aria-hidden="true" tabindex="-1">
                     <label for="hp_contact">Kontakt (nevypĺňať)</label>

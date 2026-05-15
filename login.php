@@ -37,8 +37,33 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
             $errors[] = "[DEV diagnostika] CSRF zlyhanie: " . $csrfReason;
         }
     } else {
+        // ── 0. User-Agent Check ───────────────────────────────────────────
+        if (isKnownBotUserAgent()) {
+            if ($isLocalDev) { $errors[] = "[DEV] Detekovaný nepovolený User-Agent."; }
+            else { goto endOfLoginProcessing; }
+        }
+
+        // ── 1. Honeypot ochrana ──────────────────────────────────────────
+        if (($_POST['work_email_confirm'] ?? '') !== '') {
+            if ($isLocalDev) { $errors[] = "[DEV] Honeypot aktivovaný."; }
+            else { goto endOfLoginProcessing; }
+        }
+
+        // ── 2. JS-Challenge Check ─────────────────────────────────────────
+        if (!validateJsChallengeToken($_POST['js_token'] ?? null)) {
+            if ($isLocalDev) { $errors[] = "[DEV] JS-Challenge zlyhal."; }
+            else { goto endOfLoginProcessing; }
+        }
+
+        // ── 3. Time-based Check ───────────────────────────────────────────
+        if (!validateFormTime('login', 4)) {
+            if ($isLocalDev) { $errors[] = "[DEV] Formulár odoslaný príliš rýchlo."; }
+            else { goto endOfLoginProcessing; }
+        }
+
         // DB/IP brute-force ochrana (10 pokusov, blokovanie na 15 minút)
         $clientIp    = $_SERVER['REMOTE_ADDR'] ?? '0.0.0.0';
+
         $maxAttempts = 10;
         $blockSecs   = 900; // 15 minút
         $ipBlocked   = false;
@@ -175,7 +200,12 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 }
             }
         }
+        // ── endOfLoginProcessing ──
+        endOfLoginProcessing:
     }
+} else {
+    // GET požiadavka: zaznamenaj čas načítania
+    markFormLoadTime('login');
 }
 ?>
 <!DOCTYPE html>
@@ -232,6 +262,19 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 
             <form method="POST" action="login.php">
                 <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
+                <input type="hidden" name="js_token" id="js_token_field" value="">
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        document.getElementById('js_token_field').value = "<?= generateJsChallengeToken() ?>";
+                    });
+                </script>
+
+                <!-- Honeypot: neviditeľné pole -->
+                <div style="position:absolute;left:-9999px;top:-9999px;overflow:hidden;" aria-hidden="true" tabindex="-1">
+                    <label for="work_email_confirm">Pracovný e-mail (potvrdenie)</label>
+                    <input type="text" id="work_email_confirm" name="work_email_confirm" value="" autocomplete="off" tabindex="-1">
+                </div>
+
                 
                 <div class="form-group">
                     <label for="login">Používateľské meno alebo e-mailová adresa</label>

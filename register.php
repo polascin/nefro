@@ -36,18 +36,28 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
             $errors[] = "[DEV diagnostika] CSRF zlyhanie: " . $csrfReason;
         }
     } else {
+        // ── 0. User-Agent Check ───────────────────────────────────────────
+        if (isKnownBotUserAgent()) {
+            if ($isLocalDev) { $errors[] = "[DEV] Detekovaný nepovolený User-Agent."; }
+            else { $success = true; goto endOfPostProcessing; }
+        }
+
         // ── 1. Honeypot ochrana (musí byť prázdne) ─────────────────────────────
-        // Skryté CSS pole — ľudskí používatelia ho nevidia ani nevypĺňajú.
-        // Boti často vypĺňajú všetky polia automaticky — to ich prezradí.
         if (($_POST['website_url'] ?? '') !== '') {
-            // Tiché zamietnutie — bot nedostane žiadnu informáciu o detekcii.
-            if ($isLocalDev) {
-                $errors[] = "[DEV] Honeypot aktivovaný: bot vyplňuje skryté pole.";
-            } else {
-                // V produkcii simulujeme úspešnú registráciu — bot nezistí, že bol odmietnnutý.
-                $success = true;
-                goto endOfPostProcessing;
-            }
+            if ($isLocalDev) { $errors[] = "[DEV] Honeypot aktivovaný."; }
+            else { $success = true; goto endOfPostProcessing; }
+        }
+
+        // ── 2. JS-Challenge Check ─────────────────────────────────────────
+        if (!validateJsChallengeToken($_POST['js_token'] ?? null)) {
+            if ($isLocalDev) { $errors[] = "[DEV] JS-Challenge zlyhal (chýba js_token)."; }
+            else { $success = true; goto endOfPostProcessing; }
+        }
+
+        // ── 3. Time-based Check ───────────────────────────────────────────
+        if (!validateFormTime('register', 5)) {
+            if ($isLocalDev) { $errors[] = "[DEV] Formulár odoslaný príliš rýchlo (pod 5s)."; }
+            else { $success = true; goto endOfPostProcessing; }
         }
 
         // ── 2. IP Rate Limiting (max 5 pokusov/hodína per IP) ────────────────
@@ -98,6 +108,8 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
         
         if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $errors[] = "Zadajte platnú e-mailovú adresu.";
+        } elseif (!isEmailDomainValid($email)) {
+            $errors[] = "Doména e-mailovej adresy neexistuje alebo nemôže prijímať poštu.";
         }
         if (strlen($password) < 8 || strlen($password) > 1024 || !preg_match('/[A-Z]/', $password) || !preg_match('/[a-z]/', $password) || !preg_match('/[0-9]/', $password)) {
             $errors[] = "Heslo musí mať 8–1024 znakov, obsahovať aspoň jedno veľké písmeno, malé písmeno a číslicu.";
@@ -283,9 +295,13 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 }
             }
         }
+        }
         // ── endOfPostProcessing ── cíl pre goto pri honeypot detekcii ──
         endOfPostProcessing:
     }
+} else {
+    // GET požiadavka: zaznamenaj čas načítania pre ochranu pred botmi
+    markFormLoadTime('register');
 }
 ?>
 <!DOCTYPE html>
@@ -418,6 +434,14 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
             <?php else: ?>
                 <form method="POST" action="register.php" enctype="multipart/form-data">
                     <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
+                    <input type="hidden" name="js_token" id="js_token_field" value="">
+                    <script>
+                        // JS Challenge: Vloží token po načítaní stránky. Boti bez JS toto nespustia.
+                        document.addEventListener('DOMContentLoaded', function() {
+                            document.getElementById('js_token_field').value = "<?= generateJsChallengeToken() ?>";
+                        });
+                    </script>
+
                     <!-- Honeypot pole: neviditeľné pre ľudí, vypĺňajú ho iba boti. Musí ostatť prázdne. -->
                     <div style="position:absolute;left:-9999px;top:-9999px;overflow:hidden;" aria-hidden="true" tabindex="-1">
                         <label for="website_url">Webová adresa (nevypĺňať)</label>
