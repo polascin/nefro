@@ -68,11 +68,12 @@ function formatInputKey(string $key): string {
     return $map[$key] ?? ucfirst(str_replace('_', ' ', $key));
 }
 
-// Zostaví čitateľnú hodnotu — konvertuje interné kódy na zobraziteľný text
+// Konvertuje internú hodnotu payloadu na čitateľný slovenský text.
+// Pokrýva: jednotky, pohlavie, fačenie, boolean hodnoty, typ mutácie, kódy štádií.
 function formatInputValue(string $key, $value): string {
     $value = (string) $value;
 
-    // Jednotky — vždy zobraziť správnu notáciu
+    // ── Jednotky kreatíníu, UACR a iných laboratorných veličín ───────────
     $unitMap = [
         'umol_l'  => 'µmol/L',
         'mmol_l'  => 'mmol/L',
@@ -80,12 +81,11 @@ function formatInputValue(string $key, $value): string {
         'mg_mmol' => 'mg/mmol',
         'mg_g'    => 'mg/g',
     ];
-    // Ak je kľúč unit alebo hodnota je known unit kód
     if (isset($unitMap[$value])) {
         return $unitMap[$value];
     }
 
-    // Pohlavie
+    // ── Pohlavie ──────────────────────────────────────────────
     if ($key === 'sex') {
         return match($value) {
             'female' => 'Žena',
@@ -95,27 +95,78 @@ function formatInputValue(string $key, $value): string {
         };
     }
 
+    // ── Fačenie ─────────────────────────────────────────────
+    if ($key === 'smoking') {
+        return match($value) {
+            'never'   => 'Nefačí',
+            'former'  => 'Ex-fačiar',
+            'current' => 'Fačí',
+            default   => $value,
+        };
+    }
+
+    // ── Boolean hodnoty (0/1 a true/false z JSON) ────────────────────
+    $boolKeys = ['diabetes', 'antihtn', 'hf', 'chd', 'afib', 'insulin', 'oral_dm'];
+    if (in_array($key, $boolKeys, true)) {
+        return match($value) {
+            '1', 'true'  => 'Áno',
+            '0', 'false' => 'Nie',
+            default      => $value,
+        };
+    }
+
+    // ── Typ mutácie ADPKD ───────────────────────────────────────
+    if ($key === 'mutation_type') {
+        return match($value) {
+            'pkd1_truncating'    => 'PKD1 — skracujúca (truncating)',
+            'pkd1_nontruncating' => 'PKD1 — neskracujúca (non-truncating)',
+            'pkd2'               => 'PKD2',
+            'unknown'            => 'Neznáma / Netestovaná',
+            default              => $value,
+        };
+    }
+
+    // ── Štádiá CKD (G-kategória) ───────────────────────────────────
+    if ($key === 'stage') {
+        return str_starts_with($value, 'G') ? 'Štádium ' . $value : $value;
+    }
+
     return $value;
 }
 
 // Zostaví čitateľný štítok kľúča výsledkového poľa
 function formatResultKey(string $key): string {
     $map = [
-        'egfr'            => 'eGFR (ml/min/1,73 m²)',
-        'g_category'      => 'Kategória G',
-        'g_description'   => 'Popis kategórie',
-        'a_category'      => 'Kategória A (UACR)',
-        'ktv'             => 'Kt/V',
-        'creatinine_mg_dl'=> 'Kreatinín (mg/dL)',
-        'cg_crcl'         => 'Klírens kreatinínu (CG)',
-        'na_corrected'    => 'Korigovaný Na',
-        'ca_corrected'    => 'Korigovaný vápnik',
-        'result'          => 'Výsledok',
-        'classification'  => 'Klasifikácia',
-        'risk_category'   => 'Riziková kategória',
-        'interpretation'  => 'Interpretácia',
-        'slope'           => 'Sklon eGFR',
-        'aki_stage'       => 'Štádium AKI',
+        'egfr'                   => 'eGFR (ml/min/1,73 m²)',
+        'g_category'             => 'Kategória G',
+        'g_description'          => 'Popis kategórie',
+        'a_category'             => 'Kategória A (UACR)',
+        'ktv'                    => 'Kt/V',
+        'crcl'                   => 'Klírens kreatinínu CrCl (ml/min)',
+        'creatinine_mg_dl'       => 'Kreatinín (mg/dL)',
+        'na_corrected'           => 'Korigovaný Na (mmol/L)',
+        'ca_corrected'           => 'Korigovaný vápnik (mmol/L)',
+        'result'                 => 'Výsledok',
+        'classification'         => 'Klasifikácia',
+        'risk_category'          => 'Riziková kategória',
+        'interpretation'         => 'Interpretácia',
+        'slope'                  => 'Sklon eGFR (ml/min/1,73 m²/rok)',
+        'aki_stage'              => 'Štádium AKI',
+        'risk_2yr'               => '2-ročné riziko zlyhania oblíčiek (KFRE)',
+        'risk_5yr'               => '5-ročné riziko zlyhania oblíčiek (KFRE)',
+        'risk_3yr'               => '3-ročné riziko progresie CKD (CKD-PC)',
+        'model_name'             => 'Použitý model',
+        'fena'                   => 'FENa (%)',
+        'feurea'                 => 'FEUrea (%)',
+        'fena_interpretation'    => 'Interpretácia FENa',
+        'feurea_interpretation'  => 'Interpretácia FEUrea',
+        'sex'                    => 'Pohlavie',
+        'age_years'              => 'Vek (roky)',
+        's_cr_input'             => 'S-Kreatinín (vstup)',
+        's_cr_unit'              => 'Jednotka S-kreatinínu',
+        'uacr_mg_g'              => 'UACR (mg/g)',
+        'uacr_input'             => 'UACR (vstup)',
+        'warnings'               => 'Upozornenia',
     ];
     return $map[$key] ?? ucfirst(str_replace('_', ' ', $key));
 }
