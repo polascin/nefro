@@ -263,6 +263,13 @@ if (isLoggedIn()) {
                     </div>
                 </details>
 
+                <div class="alert" style="background:rgba(16,185,129,0.07);border-left:4px solid #10b981;padding:12px 16px;border-radius:6px;margin-bottom:16px;font-size:0.88rem;">
+                    <strong>Porovnanie s referenčnými kalkulátormi:</strong>
+                    <a href="https://www.kidney.org/professionals/kdoqi/gfr_calculator" target="_blank" rel="noopener noreferrer">NKF / KDOQI eGFR</a> &ensp;&bull;&ensp;
+                    <a href="https://www.mdcalc.com/calc/3939/ckd-epi-equations-glomerular-filtration-rate-gfr" target="_blank" rel="noopener noreferrer">MDCalc CKD-EPI</a> &ensp;&bull;&ensp;
+                    <a href="https://qxmd.com/calculate/calculator_251/egfr-using-ckd-epi-2021" target="_blank" rel="noopener noreferrer">QxMD eGFR</a>
+                </div>
+
                 <?php foreach ($messages as $message): ?>
                     <div class="alert alert-success"><p><?= htmlspecialchars($message) ?></p></div>
                 <?php endforeach; ?>

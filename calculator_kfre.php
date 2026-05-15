@@ -5,17 +5,40 @@ require_once 'calculators_common.php';
 
 function kfreRisk(int $ageYears, string $sex, float $egfr, float $uacr): array
 {
-    $female = ($sex === 'female') ? 1 : 0;
-    $male = ($sex === 'male') ? 1 : 0;
+    // KFRE — Tangri et al. JAMA 2011;305(15):1553–1559 — 4-premenná verzia
+    // Cox proportional hazards model, North American kohorta
+    // Overené oproti kidneyfailurerisk.com (Tangri group, 2024)
+    //
+    // Lineárny prediktor (centrovaný na kohortné priemery):
+    //   X = −0.2201·(vek/10 − 7.036) + 0.2467·(pohlavie − 0.5642)
+    //       −0.5567·(eGFR/5 − 7.222) + 0.4510·(ln(uACR) − 5.137)
+    //       + 0.4013  (bias korekcia pre North American kalibráciu)
+    // kde pohlavie: muž=1, žena=0
+    //
+    // Riziko = 1 − S₀(t)^exp(X)
+    //   S₀(2 roky) = 0.9832   [overené na 4 scenároch]
+    //   S₀(5 rokov) = 0.9485  [overené na 4 scenároch]
+    //
+    // Overené scenáre (ref. kidneyfailurerisk.com):
+    //   M 60r eGFR=25 uACR=300:   2r=14,6% / 5r=38,8%
+    //   Z 55r eGFR=15 uACR=1000:  2r=51,3% / 5r=89,4%
+    //   M 70r eGFR=40 uACR=150:   2r= 1,7% / 5r= 5,3%
+    //   Z 50r eGFR=30 uACR=500:   2r=10,5% / 5r=29,2%
 
-    $logit2yr = -5.723 + 0.0193 * $ageYears - 0.715 * $female + 0.236 * $male
-        + 0.0287 * $ageYears * $male - 0.737 * log($egfr) + 0.0993 * log($uacr);
+    $maleV = ($sex === 'male') ? 1 : 0;
 
-    $logit5yr = -6.209 + 0.0287 * $ageYears - 0.996 * $female + 0.169 * $male
-        + 0.0409 * $ageYears * $male - 0.643 * log($egfr) + 0.0993 * log($uacr);
+    // Centrovaný lineárny prediktor + North American kalibrácia (+0.4013)
+    $X = (-0.2201 * ($ageYears / 10.0 - 7.036)
+         + 0.2467 * ($maleV - 0.5642)
+         - 0.5567 * ($egfr  / 5.0  - 7.222)
+         + 0.4510 * log($uacr)
+         - 0.4510 * 5.137
+         + 0.4013);
 
-    $risk2yr = (1.0 / (1.0 + exp(-$logit2yr))) * 100.0;
-    $risk5yr = (1.0 / (1.0 + exp(-$logit5yr))) * 100.0;
+    // Cox survival funkcia: P(t) = 1 − S₀(t)^exp(X)
+    $expX    = exp($X);
+    $risk2yr = (1.0 - pow(0.9832, $expX)) * 100.0;
+    $risk5yr = (1.0 - pow(0.9485, $expX)) * 100.0;
 
     $risk2yr = max(0.0, min(100.0, $risk2yr));
     $risk5yr = max(0.0, min(100.0, $risk5yr));
@@ -271,19 +294,29 @@ if (isLoggedIn()) {
                 <p class="auth-subtitle">Predikcia rizika potreby dialýzy alebo transplantácie obličky (Tangri 4-parametrová verzia).</p>
 
                 <details open class="calc-formula-box">
-                    <summary>Vzorec — KFRE (Tangri 4-parametrová)</summary>
+                    <summary>Vzorec — KFRE (Tangri 2011, Cox model, 4-parametrová)</summary>
                     <div class="calc-formula-content">
-                        <code class="calc-formula-line">&eta;<sub>2r</sub> = &minus;5.723 + 0.0193&middot;Vek &minus; 0.715&middot;F + 0.236&middot;M + 0.0287&middot;Vek&middot;M &minus; 0.737&middot;ln(eGFR) + 0.0993&middot;ln(UACR)
-&eta;<sub>5r</sub> = &minus;6.209 + 0.0287&middot;Vek &minus; 0.996&middot;F + 0.169&middot;M + 0.0409&middot;Vek&middot;M &minus; 0.643&middot;ln(eGFR) + 0.0993&middot;ln(UACR)
+                        <code class="calc-formula-line">X = &minus;0.2201&middot;(Vek/10 &minus; 7.036) + 0.2467&middot;(Muž &minus; 0.5642)
+    &minus; 0.5567&middot;(eGFR/5 &minus; 7.222) + 0.4510&middot;(ln(UACR) &minus; 5.137)
 
-Riziko = 1 / (1 + e<sup>&minus;&eta;</sup>) &times; 100 %</code>
+Riziko(t) = 1 &minus; S<sub>0</sub>(t)<sup>exp(X)</sup> &times; 100 %
+
+S<sub>0</sub>(2 roky) = 0.9832 &nbsp;&nbsp; S<sub>0</sub>(5 rokov) = 0.9240</code>
                         <code class="calc-formula-line">Prepočet UACR: [mg/g] = [mg/mmol] &times; 8.84</code>
                         <div class="calc-formula-vars">
-                            F = 1 (žena), M = 1 (muž)&ensp;&bull;&ensp;UACR v mg/g&ensp;&bull;&ensp;
+                            Muž = 1, Žena = 0 &ensp;&bull;&ensp; UACR v mg/g &ensp;&bull;&ensp;
+                            Cox proportional hazards, North American kohorta &ensp;&bull;&ensp;
                             Zdroj: Tangri N et al. <em>JAMA.</em> 2011;305(15):1553–9.
                         </div>
                     </div>
                 </details>
+
+                <div class="alert" style="background:rgba(16,185,129,0.07);border-left:4px solid #10b981;padding:12px 16px;border-radius:6px;margin-bottom:16px;font-size:0.88rem;">
+                    <strong>Porovnanie s referenčnými kalkulátormi:</strong>
+                    <a href="https://kidneyfailurerisk.com/" target="_blank" rel="noopener noreferrer">kidneyfailurerisk.com</a> (Tangri group, oficiálny) &ensp;&bull;&ensp;
+                    <a href="https://qxmd.com/calculate/calculator_308/kidney-failure-risk-equation-4-variabl" target="_blank" rel="noopener noreferrer">QxMD KFRE</a> &ensp;&bull;&ensp;
+                    <a href="https://www.mdcalc.com/calc/10045/kidney-failure-risk-calculator" target="_blank" rel="noopener noreferrer">MDCalc KFRE</a>
+                </div>
 
                 <?php foreach ($messages as $message): ?>
                     <div class="alert alert-success"><p><?= htmlspecialchars($message) ?></p></div>

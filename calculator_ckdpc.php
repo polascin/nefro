@@ -539,6 +539,12 @@ function sexLabel(string $v): string { return $v === 'male' ? 'Muž' : 'Žena'; 
                     </div>
                 </details>
 
+                <div class="alert" style="background:rgba(16,185,129,0.07);border-left:4px solid #10b981;padding:12px 16px;border-radius:6px;margin-bottom:16px;font-size:0.88rem;">
+                    <strong>Porovnanie s referenčnými kalkulátormi:</strong>
+                    <a href="https://ckdpcrisk.org/gfrdecline40/" target="_blank" rel="noopener noreferrer">ckdpcrisk.org/gfrdecline40/</a> (CKD-PC Grams, oficiálny) &ensp;&bull;&ensp;
+                    <a href="https://kidneyfailurerisk.com/" target="_blank" rel="noopener noreferrer">kidneyfailurerisk.com</a> (KFRE, Tangri)
+                </div>
+
                 <?php foreach ($messages as $msg): ?>
                     <div class="alert alert-success"><p><?= htmlspecialchars($msg) ?></p></div>
                 <?php endforeach; ?>
