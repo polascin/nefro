@@ -84,6 +84,12 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
                         <p>Zaradenie do G a A kategorie a orientacny rizikovy stupen podla KDIGO mapy.</p>
                         <a href="calculator_kdigo_risk.php" class="btn-primary">Otvorit kalkulacku</a>
                     </article>
+
+                    <article class="feature-card calculator-card">
+                        <h4>KFRE — Kidney Failure Risk Equation</h4>
+                        <p>Predikcia rizika potreby dialýzy alebo transplantácie obličky na 2 a 5 rokov (Tangri 4-parametrová).</p>
+                        <a href="calculator_kfre.php" class="btn-primary">Otvoriť kalkulačku</a>
+                    </article>
                 </div>
             </section>
         </div>

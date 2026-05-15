@@ -31,6 +31,12 @@ $urls = [
         'changefreq' => 'weekly',
         'priority' => '0.8',
     ],
+    [
+        'loc' => $baseUrl . 'calculator_kfre.php',
+        'lastmod' => date('c'),
+        'changefreq' => 'weekly',
+        'priority' => '0.8',
+    ],
 ];
 
 try {

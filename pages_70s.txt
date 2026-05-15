@@ -1,0 +1,550 @@
+--- PAGE 71 ---
+Special considerations
+Pediatric considerations.
+Practice Point 1.2.3.3: Laboratories measuring creatinine in
+infants or small children must ensure their quality control
+process include the lowest end of the expected range of
+values for the group of interest.
+Practice Point 1.2.3.4: Consider the consistent use of
+enzymatic creatinine assays in children, given the higher
+relative contribution of non-creatinine chromogens to
+measured creatinine in children when using the Jaffe assay,
+and the high prevalence of icteric and hemolyzed samples
+in the neonatal period.
+Practice Point 1.2.3.5: An eGFRcr level <90 ml/min per
+1.73 m
+2 can be ﬂagged as “low” in children and adolescents
+over the age of 2 years.
+In the KDIGO 2012 Clinical Practice Guideline for the
+Evaluation and Management of Chronic Kidney Disease, 1 a
+cutoff of 60 ml/min per 1.73 m 2 was chosen to de ﬁne “low”
+GFR for children. In this update, we advise increasing the
+cutoff to 90 ml/min per 1.73 m 2 for children and adolescents.
+In children and adolescents, a reduced GFR is likely to
+deteriorate further and, therefore, warrants closer monitoring
+and early intervention. Children with lower-than-normal GFR
+often experience deterioration in GFR during periods of rapid
+growth in adolescence.
+224 Those with subnormal GFR during
+adolescence are more likely to eventually experience clinically
+important low GFR later in life. Even mild decreases in
+eGFR (i.e., CKD G2) are associated with poor kidney
+outcomes. In a US study of over 7 million children captured
+by electronic health record data, 8600 had CKD G2. At 10
+years from cohort entry, the rate of reaching kidney failure
+or a 50% decline in eGFR ranged from around 10%
+(nonglomerular CKD) to around 40% (glomerular CKD).
+225
+Furthermore, eGFR between 60 and 90 ml/min per 1.73 m 2
+is sometimes associated with impaired linear growth and
+with hyperparathyroidism in children and adolescents.
+226,227
+A higher cutoff de ﬁning low GFR for children and ado-
+lescents also re ﬂects their longer life expectancy. Early inter-
+vention may have profound protection of GFR. CKD G2 has
+long been considered to re ﬂect decreased GFR in children,
+reﬂected by the inclusion of children and adolescents with
+CKD G2 in pediatric CKD trials and cohort studies, including
+Effect of Strict Blood Pressure Control and ACE Inhibition on
+the Progression of CRF in Pediatric Patients (ESCAPE),
+228
+Hypertension Optimal Treatment in Children with Chronic
+Kidney Disease (HOT-KIDS; United Kingdom), 229 CKiD
+(North America), 230 KoreaN cohort study for outcomes in
+people with pediatric CKD (KNOW-PedCKD; South
+Korea),231 and the Kids with CKD (KCAD; Australia and
+New Zealand). 232 The de ﬁnition of CKD remains
+unchanged; the ﬂagging of GFR <90 ml/min per 1.73 m 2 as
+low for children and adolescents re ﬂects the need for closer
+assessment for evidence of kidney damage and monitoring.
+1.2.4 Selection of GFR estimating equations
+Recommendation 1.2.4.1: We recommend using a
+validated GFR estimating equation to derive GFR
+from serum ﬁltration markers (eGFR) rather than
+relying on the serum ﬁltration markers alone (1D).
+Practice Point 1.2.4.1: Use the same equation within
+geographical regions (as de ﬁned locally [e.g., continent,
+country, and region] and as large as possible). Within such
+regions, equations may differ for adults and children.
+The recommendation places a high value on the use of an
+estimating equation for GFR that has been validated in the
+population of interest and which has been shown to be most
+accurate in comparison with mGFR and a low value on the
+comparison of performance characteristics across different
+equations. The key points are to use an equation validated in
+and most suited to the population of interest.
+Key information
+Balance of bene ﬁts and harms. This recommendation rec-
+ognizes that there are now a number of validated GFR esti-
+mating equations available. They have differing performance
+characteristics, which may differ depending on the population
+of interest. The intention of suggesting the use of the same
+equation within a region is to reduce clinical confusion if
+people with CKD go to different laboratories within a region
+and to enable appropriate population comparisons. Use of
+different equations (and thus different eGFR values for the
+same person) may lead to confusion for both the individual
+person and their healthcare providers.
+The W ork Group judged that there is potential for harm if
+people get different eGFR values when receiving care in
+different settings. As described in Section 1.2.2,t h e r ea r e
+several sources of variability in eGFR. Differences between
+valid equations are often substantially less than these sources
+of variability, but that might not be understood by most
+healthcare providers or people, leading to excessive anxiety
+and repeated testing for small changes in GFR as related to
+the use of a different GFR estimating equation. Using the
+same equation within the same geographical region can
+eliminate the source of variation that is related to the speci ﬁc
+parameters of the GFR estimating equation.
+There is bene ﬁt to clinical care, research, and public health
+with the use of validated equations such that decisions,
+research ﬁndings, and public policy are informed by accurate
+estimates of CKD.
+Certainty of evidence. This recommendation is based on
+W ork Group consensus regarding good clinical practice to use
+a GFR estimating equation validated in the population of
+interest. Table 13 lists criteria for validated equations.
+The criteria were developed by accumulated evidence from
+assessment of the performance of eGFR versus mGFR across
+equations and populations. For example, use of equations
+developed using assays that are not traceable to reference
+chapter 1 www.kidney-international.org
+S186 Kidney International (2024) 105 (Suppl 4S), S117–S314
+--- PAGE 72 ---
+materials cannot be applied to settings with differences in
+assays,233 or use of equations developed in one population
+may not perform well in other populations with very
+different characteristics.
+153,234,235
+Values and preferences. There are now several valid equa-
+tions that can be reasonably used in local settings. The W ork
+Group recognizes that different values and preferences may
+lead to different decisions in selection among validated GFR
+estimating equations. Thus, instead of being prescriptive, we
+list a set of criteria that de ﬁnes a valid equation, a set of
+equations considered valid at this time, and a list of metrics to
+deﬁne better versus worse performance as evaluated in the
+local area. It is of value that GFR thresholds for de ﬁnition and
+staging be standardized using valid equations optimized for a
+speciﬁc region helps to ensure this occurs. Where possible,
+inclusion of representation from key constituents in the
+population in the development of the equation and ensuring
+that it remains valid in those populations is also of value.
+Using validated eGFR equations improves the accuracy of
+assessment of true GFR but remains imperfect, and no single
+equation performs consistently across all populations. The W ork
+Group judged that people with CKD and their healthcare pro-
+viders would want GFR estimated using the equation providing
+the greatest accuracy in the population of their geographical
+region. The W ork Group recognizes that across the world there is
+signiﬁcant variation in the sociodemographic and ethnic
+makeup of populations and that even well-validated equations
+developed in different populations may not perform as well as
+others developed and validated in the population of interest.
+Resource use and costs. There are a number of initial costs
+including human resource costs associated with taking the time
+to decide on which equation, then time and technical infor-
+mation resources to be considered to change the computation,
+and the laboratory and nephrology teams to test the new
+equation and inform the clinical partners on the change. In
+addition, education for primary care providers, people with
+CKD, and other healthcare providers is also required, which
+incurs both direct and indirect costs. There will be costs, both
+human resource and meetings costs, associated with decision-
+making around which equation to use. Additional costs will be
+accrued if validation and impact studies are required.
+Considerations for implementation. Each region should have
+a mechanism for review and selection of equations for
+implementation by laboratories. For most countries, this
+might be through the national kidney society working in
+collaboration with laboratory physician organizations or
+regional laboratory groups, as has occurred in the United
+States and Europe, respectively.
+236,237 Decisions at this level by
+continental or national organizations are likely to minimize
+the likelihood that decisions for equation use will be made
+within small geographical areas or governed by local
+decisions, leading to greater variation in eGFR and
+uncertainty by people with CKD and healthcare providers.
+Considerations in decisions about implementation will
+reﬂect the balance of the criteria listed in Table 13.
+There are likely to be tradeoffs between optimal accuracy
+in local regions versus uniformity. Equations optimized for a
+speciﬁc region can help to ensure that the GFR thresholds for
+disease de ﬁnition, classi ﬁcation, and risk estimation have the
+same implications across regions. However, it would lead to
+barriers to implementation, as it will not be possible for all
+regions to conduct a suf ﬁciently large and representative
+study to evaluate these equations and develop modi ﬁcations.
+If not possible, or in the interim, we advise using equations
+that were developed in populations most similar to the
+available populations. For example, until more accurate re-
+gion-speciﬁc equations are available in countries within
+Central or South America, it may be reasonable to use CKD-
+EPI given the inclusion of Black and Hispanic participants in
+the development of equation, and within African countries, to
+use the EKFC equations using the Q-values, the median SCr
+concentration in a cohort developed in 2 African countries.
+234
+Table 13 | Criteria for a validated GFR estimating equation
+Criteria Consideration
+Developed using rigorous measured GFR (mGFR) methods; ideally using comparable measurements for
+all individuals in the development populations
+Development methods
+Developed using assays for ﬁltration markers traceable to reference materials with acceptable accuracy
+and imprecision
+Development methods
+Developed with suf ﬁcient sample size for the population Development population
+Study populations with a wide range of clinical characteristics and GFR, where possible representative
+of the clinical populations in which equations are to be applied, including representative samples
+of general population and people with kidney disease
+Development population
+Performance vs. mGFR evaluated in separate populations from that in which it was developed
+(i.e., external validation, not random split of development data)
+Accuracy
+Performance shows certain thresholds for performance compared with other equations (see Table 15 ) Accuracy
+Can be reported by laboratories (i.e., no other variables required for computation that are
+not readily available)
+Implementation by clinical laboratories
+GFR, glomerular ﬁltration rate.
+www.kidney-international.org chapter 1
+Kidney International (2024) 105 (Suppl 4S), S117–S314 S187
+--- PAGE 73 ---
+However, other considerations may also be relevant for the
+regional organization making these decisions. We also note
+that if cystatin C is available, then using eGFRcr-cys would
+simplify the selection of the equation as the performance of
+eGFRcr-cys computed from the different equations is more
+similar than that of eGFRcr.
+Rationale
+The KDIGO 2012 Clinical Practice Guideline for the Evalu-
+ation and Management of Chronic Kidney Disease recom-
+mended “to report eGFRcr in adults using the 2009 CKD-EPI
+creatinine equation. An alternative creatinine-based GFR
+estimating equation is acceptable if it has been shown to
+improve accuracy of GFR estimates compared to the 2009
+CKD-EPI creatinine equation. ” We are updating this recom-
+mendation to accommodate the availability of alternative
+equations that also have high levels of accuracy. Since the
+publication of the KDIGO 2012 Clinical Practice Guideline
+for the Evaluation and Management of Chronic Kidney Dis-
+ease
+1 for GFR estimation in adults, there have been 3 main
+sources of validated equations: those developed by the
+CKD-EPI, those developed by EKFC, and modi ﬁcations of
+each for use in speci ﬁc regions ( Table 14
+83,91,147,148,235,238–
+243). Table 15 lists thresholds for key performance metrics
+that can be used to guide comparison between equations.
+The CKD-EPI Research Group developed equations for
+estimating GFR from creatinine, cystatin C, and the combination
+of both, with and without inclusion of a coef ﬁcient for Black
+race. The concerns about the continued use of race in GFR that
+led to the removal of the race coef ﬁcient are described in the
+rationale that follows Practice Point 1.2.4.2. The 2009 CKD-EPI
+creatinine equation includes creatinine, age, race, and sex.
+238 The
+2021 CKD-EPI creatinine equation was reﬁtted without race and
+includes creatinine, age, and sex. 147 As a consequence of not
+including the Black race coef ﬁcient, the 2021 CKD-EPI
+creatinine equation leads to a small overestimate of GFR in
+non-Black individuals and a small underestimate in Black
+individuals. The 2009 CKD-EPI creatinine equation is more
+accurate than the 2021 CKD-EPI creatinine equation in the
+non-Black race group, as indicated by the percentage of eGFRs
+within 30% of mGFR (P
+30), although the change in the level of
+accuracy is small compared with the known variability in
+mGFR and eGFR, and P
+30 remains at the level consistent with
+recommended targets as indicated in prior CKD guidelines
+(Table 1483,91,147,148,235,238–243 Section 1.2.2, Figure 12 174).1,147
+The 2021 CKD-EPI eGFR creatinine-cystatin C equation that
+includes both ﬁltration markers but does not include a term
+for Black race leads to improved accuracy in both race groups,
+with less difference between race groups in all metrics. The
+EKFC developed equations for estimating GFR from creatinine
+and cystatin C.
+91,240 Before implementation in other regions,
+the authors recommended that local regions specify
+population-speciﬁc Q-values for the creatinine-based EKFC
+equation, which is the normal level of creatinine in that region.
+T o make the SCr-based EKFC equation applicable for children,
+age-adjusted Q-values were de ﬁned. The original EKFC
+creatinine equation had a Q-value developed from Belgium
+and Sweden but was validated in 7 European studies and is
+recommended for use in White Europeans.
+240 They have
+recently published Q-values for Black Europeans developed
+from a cohort of 90 kidney donors in Paris and for Black
+Africans developed from 2 cohorts in République
+Démocratique de Congo Cote D ’Ivoire. The EKFC cystatin C
+equation includes only age and cystatin C, that is, it does not
+include sex or race. The Q-value for cystatin C was developed
+in a White cohort in Uppsala, Sweden. The cystatin C –based
+EKFC equation has been validated in White Europeans, Black
+Europeans, White Americans, and Black Africans. T o increase
+accuracy and precision, EKFC recommends averaging
+creatinine and cystatin C to obtain an estimate of GFR that
+includes both ﬁltration markers. eGFRcr-cys (the average of
+the EKFC creatinine and EKFC cystatin C) also provides the
+most accurate estimates, consistent with the ﬁndings of CKD-
+EPI eGFRcr-cys.
+In both the CKD-EPI and EKFC external validation data-
+sets, there are consistent ﬁndings that the eGFRcr-cys provides
+improved performance in estimating mGFR compared with
+the respective creatinine- or cystatin-only equations. This re-
+inforces the recommendation in Section 1.2.1 emphasizing the
+greater use of eGFRcr-cys for decisions that require GFR.
+There have been several modi ﬁcations to the CKD-EPI
+equations for use in individual countries, including China, Japan,
+and Pakistan.
+83,153,235 We expect country-speciﬁcm o d iﬁcations
+of both CKD-EPI and EKFC to continue to be developed. One
+recent study in China reported no clinically meaningful
+difference in the performance of the Asian-modi ﬁed CKD-EPI
+and EKFC equations compared with mGFR.244
+Studies vary in their consistency and precision. Direct
+comparisons of available estimating equations in populations
+with worldwide applicability are lacking, and so too are
+validation studies comparing equations against mGFR in all
+populations of interest. The overall certainty of the evidence is
+therefore low but where the performance characteristics of
+GFR estimating equations in the population of interest are
+known, there are data to support the use of one equation over
+another for improved accuracy of GFR reporting.
+Practice Point 1.2.4.2: Use of race in the computation of
+eGFR should be avoided.
+Estimating equations for GFR have historically incorpo-
+rated demographic variables of age, sex, and race to explain
+variation in serum concentrations of endogenous ﬁltration
+markers that are unrelated to GFR, thereby minimizing sys-
+tematic errors in subgroups de ﬁned by these variables and
+systematic differences between groups.
+Age, sex, and race variables were included in the 2009
+CKD-EPI equation as previous studies indicated higher
+average SCr for the same mGFR level in people who are older
+versus younger, males versus females, and people who are
+Black versus non-Black. Incorporation of these variables
+minimized systematic errors in groups and systematic dif-
+ferences between groups.
+147,245 Similarly, subsequent to the
+chapter 1 www.kidney-international.org
+S188 Kidney International (2024) 105 (Suppl 4S), S117–S314
+--- PAGE 74 ---
+Table 14 | Validated GFR estimating equations
+Marker
+Equation name and
+year Age Variables Development populations
+Creatinine CKD-EPI 2009 238 $18; modi ﬁcation
+CKD-EPI 40 for
+pediatric available
+Developed using A, S, R but
+reported not using the Black
+race coef ﬁcient, A, S, R (NB)
+8254 Black and NB individuals from 10 studies
+in the United States and Europe
+a
+CKiD U25 2021 239 1–25 A, S, height 928 children with CKD in the United States and
+Canada
+CKD-EPI 2021 147 $18 A, S 8254 Black and NB individuals from 10 studies
+in the United States and Europe a
+EKFC 2021 240 2–100 A, S, European Black and NB
+speciﬁc Q-value; separate
+Q-values for Africa vs. Europe
+mGFR vs. SCr (11,251 participants in 7 studies
+in Europe and 1 study from the United States)
+Normal GFR from 5482 participants in 12 studies
+of kidney donor candidates (100% Caucasian)
+European NB Q from 83,157 laboratory samples
+(age 2–40 years) in 3 European hospital clinical
+laboratories; European Black Q-value (N ¼ 90
+living kidney donors from Paris); African Black
+Q-value (N ¼ 470 healthy individuals from
+République Démocratique de Congo); All
+Q-values developed in cohorts independent
+for EKFC development and validation
+Lund Malmö Revised
+2014
+241
+A, S 3495 GFR examinations from 2847 adults from
+Sweden referred for measurement of GFR
+CKD-EPI 2009
+Modiﬁed for
+China 2014 b,242
+$18 A, S 589 people with diabetes from the Third Af ﬁliated
+Hospital of Sun Yat-sen University, China
+CKD-EPI 2009
+Modiﬁed for
+Japan 2016 b,83
+$18 A, S 413 hospitalized Japanese people in 80 medical
+centers
+CKD-EPI 2009
+Modiﬁed for
+Pakistan 2013 b,235
+$18 A, S 542 randomly selected low- to middle-income
+communities in Karachi and 39 people from
+the kidney clinic
+Cystatin C CKD-EPI 2012 148 $18 A, S 5352 Black and NB individuals from 13 studies
+in the United States and Europe
+EKFC 2023 91 18–100 A mGFR vs. SCys (assumed to be the same as
+mGFR vs. SCr)
+Normal GFR (same as for the SCr equation)
+Q from laboratory samples from 227,643 (42%
+female) laboratory samples from Uppsala
+University Hospital, Sweden
+CAPA 2014
+243 A, S 4690 individuals within large subpopulations of
+children and Asian and Caucasian adults
+Creatinine-
+cystatin C
+CKD-EPI 2012 148 $18 Developed using A, S, R but
+reported not using the Black
+race coef ﬁcient, A, S, R (NB)
+5352 Black and NB individuals from 13 studies
+in the United States and Europe
+CKD-EPI 2021
+147 $18 A, S 5352 Black and NB individuals from 13 studies in
+the United States and Europe
+Average of EKFC cr
+and cys 240
+$2 A, S, European race speci ﬁc
+Q-value; separate Q-values
+for Africa vs. Europe
+See above for EKFC creatinine and cystatin C
+A, age; CAPA, Caucasian and Asian pediatric and adult subjects; CKD, chronic kidney disease; CKD-EPI, Chronic Kidney Disease Epidemiology Collaboration; CKiD, chronic
+kidney disease in children; cr, creatinine; cys, cystatin C; EKFC, European Kidney Function Consortium; GFR, glomerular ﬁltration rate; mGFR, measured glomerular ﬁltration
+rate; NB, non-Black; Q values, median level of serum creatinine or cystatin C in a given population without chronic kidney disease; R, race; S, sex; SCr, serum creatinine; SCys,
+serum cystatin C; U25, under 25 years old.
+aAlso included 100 Asians and 353 Hispanic or Native Americans.
+bModiﬁed from CKD-EPI or MDRD; modi ﬁcations may re ﬂect systematic differences in measurement of creatinine and mGFR as well as population differences in non-GFR
+determinants of creatinine.
+www.kidney-international.org chapter 1
+Kidney International (2024) 105 (Suppl 4S), S117–S314 S189
+--- PAGE 75 ---
+initial publication, the EKFC equation also included as
+separate Q-values, the median SCr concentration for Black
+Europeans from Paris and Africans from Cote D ’Ivoire and
+Democratic Republic of the Congo.
+91
+Race differs from age and sex, as race (and ethnicity) is dy-
+namic, shaped by geographic, cultural, and sociopolitical forces,
+and thus the de ﬁnition can change across geography and over
+time.
+246,247 Consistent with this, in the past several years,
+inclusion of race in GFR estimating equations, along with
+other algorithms in medicine, faced increasing scrutiny,
+particularly in the United States but also elsewhere in the
+world.
+248–254 Concerns included, ﬁrst, race is a social and not a
+biological construct, and thus the de ﬁnition of a race group is
+subject to change over time. Second, using a binary variable to
+assign race groups ignores social and biological diversity within
+and among people with similar racial background groups.
+Third, there are differences across countries and regions in
+self-reported race and ethnicity, thus leading to uncertainty as
+to how to apply the term, and blanket use can lead to error.
+Thus, even though the inclusion of an indicator for race
+group leads to improved accuracy compared with mGFR in
+some studies, these concerns and other considerations led to the
+2021 recommendation for it not to be used in the computation
+of eGFR in the United States.
+255 Other countries have also
+recognized that race should not be included in computation
+and elected to use the CKD-EPI 2009 age, sex, race –non-
+Black, as the population of people who are Black was
+sufﬁciently small to not warrant error for other groups.
+236,256
+W e recognize that speci ﬁc countries or regions (e.g., Japan
+and Thailand) have developed “region-speciﬁc” equations.153
+W e advocate for modifying equations based on the population
+being tested.
+Special considerations
+Pediatric considerations.
+Practice Point 1.2.4.3: Estimate GFR in children using
+validated equations that have been developed or validated
+in comparable populations.
+Examples of validated equations include the CKiD under 25
+years old (U25) 2021 eGFRcr equation, the EKFC, and the
+CKD-EPI40. The W ork Group judged that many healthcare
+providers would choose the CKiD U25 2021 eGFRcr equation
+given it was derived in a multiracial cohort of children with
+CKD and has been externally validated in cohorts with reduced
+and normal GFR. The performance of the CKiD U25 2021
+eGFRcr equation is uncertain in the very young, those with very
+low GFR, or in populations outside of Europe and North
+America.
+257 An alternative height/sex/age/creatinine-based
+GFR estimating equation is acceptable if it has been shown to
+improve accuracy of GFR estimates in the population of
+interest ( Table 14
+83,91,147,148,235,238–243). The EKFC equation
+has been validated in a large cohort of European children (N
+¼ 1254), as well as in adults. 240 Of interest, the EKFC
+equation in children is the same as in adults. Thus, both
+CKiD U25 and EKFC allow a GFR estimation for children
+with CKD without changes in calculated eGFR at the
+transition between adolescence and young adulthood. In
+children with neurological disorders, muscle wasting, or who
+have metabolic disorders and are on a very low –protein diet,
+a cystatin C –based equation is likely more appropriate.
+1.3 Evaluation of albuminuria
+Albuminuria refers to abnormal loss of albumin in the urine
+(urine ACR $30 mg/g or $3 mg/mmol). Albumin is one type
+of plasma protein found in the urine in normal subjects and
+in larger quantity in people with kidney disease. In the KDIGO
+2012 Clinical Practice Guideline for the Evaluation and
+Management of Chronic Kidney Disease,
+1 clinical terminology
+was changed to focus on albuminuria rather than proteinuria
+as albumin is the principal component of urinary protein in
+most kidney diseases. Epidemiologic data demonstrate a strong
+relationship between the quantity of urine albumin with both
+kidney and CVD risk and observed CVD even at very low
+levels, and assays to measure albumin are more precise and
+sensitive than assays to measure urine protein. W e refer to
+albuminuria or urine albumin when discussing general
+concepts and will refer either to total protein, albumin, or other
+speciﬁc proteins when discussing that parameter speciﬁcally.
+1.3.1 Guidance for physicians and other healthcare providers
+Practice Point 1.3.1.1: Use the following measurements for
+initial testing of albuminuria (in descending order of prefer-
+ence). In all cases, a ﬁrst void in the morning midstream
+sample is preferred in adults and children.
+(i) urine ACR, or
+(ii) reagent strip urinalysis for albumin and ACR with
+automated reading.
+If measuring urine protein, use the following measurements:
+(i) urine protein-to-creatinine ratio (PCR),
+(ii) reagent strip urinalysis for total protein with auto-
+mated reading, or
+(iii) reagent strip urinalysis for total protein with
+manual reading.
+Table 15 | Criteria for equation comparison for comparison of
+candidate equations to another (i.e., how to determine
+validity)
+Criteria Consideration
+Systematic error (bias): absolute magnitude
+of the absolute value of the median
+difference ¼ median (eGFR – mGFR)
+Small <5
+Moderate 5 –10
+Large >10
+Precision: IQR of the difference between
+eGFR and mGFR
+Small <10
+Moderate 10 –20
+Large >20
+Accuracy: P 30 (percentage of estimates
+within 30% of mGFR)
+Optimal $90
+Acceptable 80 –90
+Poor <80
+eGFR, estimated glomerular ﬁltration rate; IQR, interquartile range; mGFR, measured
+glomerular ﬁltration rate.
+Units for systematic error (bias) and IQR are ml/min per 1.73 m 2 and for units for P 30
+are percentages. Equations that have large error (bias) or IQR, or low P 30 have poor
+performance.
+chapter 1 www.kidney-international.org
+S190 Kidney International (2024) 105 (Suppl 4S), S117–S314

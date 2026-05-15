@@ -1,0 +1,162 @@
+--- PAGE 34 ---
+Summary of recommendation statements and practice
+points
+Chapter 1: Evaluation of CKD
+1.1 Detection and evaluation of CKD
+1.1.1 Detection of CKD
+Practice Point 1.1.1.1: Test people at risk for and with chronic kidney disease (CKD) using both urine albumin mea-
+surement and assessment of glomerular ﬁltration rate (GFR).
+Practice Point 1.1.1.2: Following incidental detection of elevated urinary albumin-to-creatinine ratio (ACR), hematuria,
+or low estimated GFR (eGFR), repeat tests to con ﬁrm presence of CKD.
+1.1.2 Methods for staging of CKD
+Recommendation 1.1.2.1: In adults at risk for CKD, we recommend using creatinine-based estimated glomer-
+ular ﬁltration rate (eGFRcr). If cystatin C is available, the GFR category should be
+estimated from the combination of creatinine and cystatin C (creatinine and cystatin
+C–based estimated glomerular ﬁltration rate [eGFRcr-cys]) (1B).
+1.1.3 Evaluation of chronicity
+Practice Point 1.1.3.1: Proof of chronicity (duration of a minimum of 3 months) can be established by:
+(i) review of past measurements/estimations of GFR;
+(ii) review of past measurements of albuminuria or proteinuria and urine microscopic
+examinations;
+(iii) imaging ﬁndings such as reduced kidney size and reduction in cortical thickness;
+(iv) kidney pathological ﬁndings such as ﬁbrosis and atrophy;
+(v) medical history, especially conditions known to cause or contribute to CKD;
+(vi) repeat measurements within and beyond the 3-month point.
+Practice Point 1.1.3.2: Do not assume chronicity based upon a single abnormal level for eGFR and ACR, as the ﬁnding
+could be the result of a recent acute kidney injury (AKI) event or acute kidney disease (AKD).
+Practice Point 1.1.3.3: Consider initiation of treatments for CKD at ﬁrst presentation of decreased GFR or elevated ACR
+if CKD is deemed likely due to presence of other clinical indicators.
+1.1.4 Evaluation of cause
+Practice Point 1.1.4.1: Establish the cause of CKD using clinical context, personal and family history, social and envi-
+ronmental factors, medications, physical examination, laboratory measures, imaging, and genetic
+and pathologic diagnosis ( Figure 8).
+www.kidney-international.org summary of recommendation sta tements and practice points
+Kidney International (2024) 105 (Suppl 4S), S117–S314 S149
+
+================================================================================
+
+--- PAGE 45 ---
+Practice Point 3.8.2: A nonsteroidal MRA may be added to a RASi and an SGLT2i for treatment of T2D and CKD in adults.
+Practice Point 3.8.3: To mitigate risk of hyperkalemia, select people with consistently normal serum potassium concen-
+tration and monitor serum potassium regularly after initiation of a nonsteroidal MRA ( Figure 26 ).
+Practice Point 3.8.4: The choice of a nonsteroidal MRA should prioritize agents with documented kidney or
+cardiovascular beneﬁts.
+Practice Point 3.8.5: A steroidal MRA may be used for treatment of heart failure, hyperaldosteronism, or refractory
+hypertension, but may cause hyperkalemia or a reversible decline in glomerularﬁltration, particularly
+among people with a low GFR.
+3.9 Glucagon-like peptide-1 receptor agonists (GLP-1 RA)
+The Work Group highlights a key recommendation and practice point from the KDIGO 2022 Clinical Practice Guideline for
+Diabetes Management in Chronic Kidney Disease .23
+Recommendation 3.9.1: In adults with T2D and CKD who have not achieved individualized glycemic targets
+despite use of metformin and SGLT2 inhibitor treatment, or who are unable to use
+those medications, we recommend a long-acting GLP-1 RA (1B).
+Practice Point 3.9.1: The choice of GLP-1 RA should prioritize agents with documented cardiovascular bene ﬁts.
+3.10 Metabolic acidosis
+Practice Point 3.10.1: In people with CKD, consider use of pharmacological treatment with or without dietary
+intervention to prevent development of acidosis with potential clinical implications (e.g., serum
+bicarbonate <18 mmol/l in adults).
+Practice Point 3.10.2: Monitor treatment for metabolic acidosis to ensure it does not result in serum bicarbonate
+concentrations exceeding the upper limit of normal and does not adversely affect BP control,
+serum potassium, or ﬂuid status.
+3.11 Hyperkalemia in CKD
+3.11.1 Awareness of factors impacting on potassium measurement
+Practice Point 3.11.1.1: Be aware of the variability of potassium laboratory measurements as well as factors and mech-
+anisms that may in ﬂuence potassium measurement including diurnal and seasonal variation,
+plasma versus serum samples, and the actions of medications.
+3.11.2 Potassium exchange agents
+Practice Point 3.11.2.1: Be aware of local availability or formulary restrictions with regard to the pharmacologic man-
+agement of nonemergent hyperkalemia.
+3.11.3 Timing to recheck potassium after identifying moderate and severe hyperkalemia in adults
+[No recommendations and practice points]
+K+ ≤4.8 mmol/l K+ 4.9–5.5 mmol/l K+ >5.5 mmol/l
+• Initiate finerenone
+  - 10 mg daily if eGFR 25–59 ml/min/1.73 m2
+  - 20 mg daily if eGFR ≥60 ml/min/1.73 m 2
+• Monitor K+ at 1 month after initiation and then every 4
+  months
+• Increase dose to 20 mg daily, if on 10 mg daily
+• Restart 10 mg daily if previously held for hyperkalemia and
+  K+ now ≤5.0 mmol/l
+• Continue finerenone 10 mg or 20 mg
+• Monitor K+ every 4 months
+• Hold finerenone
+• Consider adjustments to diet or concomitant
+  medications to mitigate hyperkalemia
+• Recheck K+
+• Consider reinitiation if/when K+ ≤5.0 mmol/l
+Figure 26 | Serum potassium monitoring during treatment with a nonsteroidal mineralocorticoid receptor antagonist (MRA)
+(ﬁnerenone). Adapted from the protocols of Finerenone in Reducing Kidney Failure and Disease Progression in Diabetic Kidney Disease (FIDELIO-
+DKD) and Finerenone in Reducing Cardiovascular Mortality and Morbidity in Diabetic Kidney Disease (FIGARO-DKD). The Work Group considers
+these potassium thresholds to be conservative, and it may be considered appropriate to continue MRAs in people with potassium of 5.5–6.0 mmol/
+l. This algorithm could be used for steroidal MRA. The US Food and Drug Administration (FDA) has approved initiation of K
+þ < 5.0 mmol/l. This
+ﬁgure is guided by trial design and the FDA label and may be different in other countries. Serum creatinine/estimated glomerular ﬁltration rate
+(eGFR) should be monitored concurrently with serum potassium. Reproduced from Kidney Disease: Improving Global Outcomes Diabetes Work
+Group. KDIGO 2022 Clinical Practice Guideline for Diabetes Management in Chronic Kidney Disease. Kidney Int. 2022;102:S1–S127.
+23
+summary of recommendation sta tements and practice points www.kidney-international.org
+S160 Kidney International (2024) 105 (Suppl 4S), S117–S314
+
+================================================================================
+
+--- PAGE 62 ---
+Most people with CKD and their healthcare providers would
+prefer the more accurate assessment of kidney function resulting
+from the use of GFR estimating equations compared with SCr
+alone. Minimal cost or resources issues are expected because
+creatinine is available in healthcare settings globally, and evalu-
+ating GFR with the use of creatinine in the form of GFR esti-
+mating equations has been recommended for>20 years.
+eGFR from creatinine is widely used. Attention is required
+to implement and ensure the quality of eGFR reporting by
+clinical laboratories and ensure coordination with the elec-
+tronic medical record (EMR), including those eGFR reports
+from point-of-care settings (Section 1.2.2).
+Recommendation 1.2.2.1: We recommend using
+eGFRcr-cys in clinical situations when eGFRcr is less
+accurate and GFR affects clinical decision-making
+(Table 8
+127-142) (1C).
+This recommendation places a high value on using estimates of
+GFR derived from a combination of creatinine and cystatin C in
+clinical situations where eGFRcr is an unreliable or inadequate
+assessment of GFR. There is consistent evidence that eGFRcr-cys
+provides more accurate estimates of mGFR than eGFRcr and
+eGFRcys in ambulatory people.
+Initial test – eGFRcr*
+Consider sources of error and need for
+more accurate assessment.
+Is eGFR thought to be accurate?
+Consider potential sources of error in eGFRcr-cys
+and need for an even more accurate assessment.†
+Is a more accurate assessment needed?
+NoYes
+No Yes
+Measure
+cystatin C
+Evaluation of GFR for clinical application
+15 30 45 60 90 120
+Use eGFRcr
+Measure
+GFR
+Use 
+GFRcr-cys‡
+Figure 11 | Approach to glomerular ﬁltration rate (GFR) evaluation using initial and supportive tests. The algorithm describes the
+approach to the evaluation of GFR. The approach uses initial and supportive testing to develop a ﬁnal assessment of true GFR and to apply it in
+individual decision-making. The initial test for the evaluation of GFR is creatinine-based estimated GFR (eGFRcr), which will be available for most
+people because creatinine is measured routinely as part of the basic metabolic panel. If eGFRcr is expected to be inaccurate, or if a more
+accurate assessment of GFR is needed for clinical decision-making, such as diagnosis or staging of chronic kidney disease or drug dosing, then,
+if available, cystatin C should be measured, and creatinine and cystatin C –based estimated GFR (eGFRcr-cys) should be estimated. If eGFRcr-cys
+is expected to be inaccurate, or if an even more accurate assessment of GFR is needed for clinical decision-making, then, if available, GFR should
+be measured using plasma or urinary clearance of exogenous ﬁltration markers. *Initial test may be estimated GFR by cystatin C (eGFRcys or
+eGFRcr-cys) in otherwise healthy populations with changes in creatinine generation due to non-GFR determinants such as changes in muscle
+mass or creatinine secretion or extrarenal elimination due to the use of speci ﬁc medications.
+†Sources of error in eGFRcr-cys include very low
+muscle mass or very high levels of in ﬂammation, high catabolic states, or exogenous steroid use. ‡Consider eGFRcys rather than eGFRcr-cys in
+otherwise healthy populations with decreased creatinine generation due to reduced muscle mass or decreased creatinine secretion or
+extrarenal elimination due to the use of speci ﬁc medications.
+www.kidney-international.org chapter 1
+Kidney International (2024) 105 (Suppl 4S), S117–S314 S177
+
+================================================================================
+

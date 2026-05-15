@@ -1,0 +1,3323 @@
+--- PAGE 3 ---
+KDIGO 2024 Clinical Practice Guideline for the Evaluation and
+Management of Chronic Kidney Disease
+S118 Tables, ﬁgures, and supplementary material
+S124 KDIGO Executive Committee
+S125 Reference keys
+S126 CKD nomenclature
+S127 Conversion factors
+S128 Abbreviations and acronyms
+S129 Notice
+S130 Foreword
+S131 Work Group membership
+S133 Abstract
+S134 Patient foreword
+S135 Introduction, qualifying statements, and key concepts
+S141 Special considerations
+S144 Summary of relative and absolute risks relevant to CKD from meta-analysis of
+large multinational population studies in the CKD Prognosis Consortium
+(CKD-PC)
+S149 Summary of recommendation statements and practice points
+S169 Chapter 1: Evaluation of CKD
+S196 Chapter 2: Risk assessment in people with CKD
+S205 Chapter 3: Delaying CKD progression and managing its complications
+S246 Chapter 4: Medication management and drug stewardship in CKD
+S255 Chapter 5: Optimal models of care
+S270 Chapter 6: Research recommendations
+S274 Methods for guideline development
+S283 Biographic and disclosure information
+S294 Acknowledgments
+S295 References
+This article is published as part of a supplement sponsored by Kidney Disease: Improving Global Outcomes (KDIGO). The
+opinions or views expressed in this supplement are those of the authors and do not necessarily re ﬂect the opinions or rec-
+ommendations of the International Society of Nephrology or Elsevier. Dosages, indications, and methods of use for products
+that are referred to in the supplement by the authors may re ﬂect their clinical experience or may be derived from the pro-
+fessional literature or other clinical sources. Because of the differences between in vitro and in vivo systems and between
+laboratory animal models and clinical data in humans, in vitro and animal data do not necessarily correlate with clinical results.
+contents www.kidney-international.org
+VOL 105 | ISSUE 4S | APRIL 2024
+S118 Kidney International (2024) 105 (Suppl 4S), S117–S314
+
+================================================================================
+
+--- PAGE 7 ---
+S248 Figure 45. Selected herbal remedies and dietary supplements with evidence of potential nephrotoxicity, grouped
+by the continent from where the reports ﬁrst came
+S250 Figure 46. Suggested steps in the process of medication review and reconciliation
+S251 Figure 47. Essential steps for appropriate sick day rule implementation
+S255 Figure 48. Circumstances for referral to specialist kidney care services and goals of the referral
+S258 Figure 49. Common symptoms, prevalence, and severity in people with chronic kidney disease
+S261 Figure 50. Optimal care model by increasing severity of chronic kidney disease (CKD)
+S262 Figure 51. The chronic care model
+S262 Figure 52. Speciﬁ c components of the chronic kidney disease model of care
+S263 Figure 53. Strategy for effective patient education programs for people with chronic kidney disease (CKD)
+S264 Figure 54. Telehealth technologies for people with chronic kidney disease (CKD)
+S265 Figure 55. The process of transition from pediatric to adult care in chronic kidney disease (CKD)
+S269 Figure 56. Relationship between supportive care, comprehensive conservative care, and end-of-life care
+S279 Figure 57. Search yield and study ﬂow diagram
+SUPPLEMENTARY MATERIAL
+Supplementary File (PDF)
+Appendix A. Search strategies
+Table S1. Search strategies for systematic review topics
+Appendix B. Concurrence with Institute of Medicine (IOM) standards for guideline development
+Table S2. Guideline development checklist – IOM standards for development of trustworthy clinical practice
+guidelines
+Appendix C. Data supplement - Summary of ﬁndings (SoF) tables cited in the guideline text
+Chapter 1. Evaluation of CKD
+Table S3. Adults and children with or without CKD, estimated GFR (eGFR) based on measurements of cystatin C
+(eGFRcys); creatinine (eGFRcr); cystatin C and creatinine (eGFRcr-cys) versus measured GFR (mGFR;
+using urinary or plasma clearance of exogenous ﬁltration marker)
+Table S4. Adults and children with suspected or diagnosed CKD, native kidney biopsy versus clinical or standard
+diagnosis or prognosis for studies evaluating diagnostic or prognostic bene ﬁt; no comparator for
+studies evaluating safety
+Table S5. Adults and children, machine-read quantitative or semiquantitative protein or albumin urine dipstick
+tests versus laboratory-based methods for measuring urinary protein or albumin (e.g., 24-hour urinary
+sample, spot urine protein-to-creatinine ratio [PCR], or albumin-to-creatinine ratio [ACR])
+Chapter 2. Risk assessment in people with CKD
+Table S6. Adults, children, and young people with CKD G1 –G5, C-statistics of kidney failure risk equations for
+predicting progression (e.g., Tangri equation [KFRE])
+Table S7. Adults, children, and young people with CKD G1 –G5, Brier scores of kidney failure risk equations for
+predicting progression (e.g., Tangri equation [KFRE])
+Table S8. Adults, children, and young people with CKD G1 –G5, R 2 statistics of kidney failure risk equations for
+predicting progression (e.g., Tangri equation [KFRE])
+Table S9. Adults, children, and young people with CKD G1 –G5, sensitivity and speci ﬁcity to start kidney
+replacement therapy (KRT) for kidney failure risk equations for predicting progression (e.g., Tangri
+equation [KFRE])
+Chapter 3. Delaying CKD progression and managing its complications
+Table S10. Adults and children with CKD, sodium-glucose cotransporter-2 inhibitors (SGLT2i) versus placebo or
+usual care; active comparator (e.g., another glucose-lowering agent)
+Table S11. Adults and children with CKD and symptomatic hyperuricemia, uric acid –lowering therapy (ULT;
+allopurinol, benzbromarone, febuxostat, oxipurinol, pegloticase, probenecid, topiroxostat,
+rasburicase, sulﬁ npyrazone, lesinurad) versus active comparator, placebo, or usual care
+Table S12. Adults and children with CKD and asymptomatic hyperuricemia, uric acid –lowering therapy (ULT;
+allopurinol, benzbromarone, febuxostat, oxipurinol, pegloticase, probenecid, topiroxostat,
+rasburicase, sulﬁ npyrazone, lesinurad) versus active comparator, placebo, or usual care
+Table S13. Adults and children with CKD and ischemic heart disease, angiography or coronary revascularization
+versus medical treatment
+contents www.kidney-international.org
+S122 Kidney International (2024) 105 (Suppl 4S), S117–S314
+
+================================================================================
+
+--- PAGE 13 ---
+Abbreviations and acronyms
+ACEi angiotensin-converting enzyme inhibitor(s)
+ACR albumin-to-creatinine ratio
+ADA American Diabetes Association
+ADPKD autosomal dominant polycystic kidney disease
+AER albumin excretion rate
+AIDS acquired immune de ﬁciency syndrome
+AKD acute kidney disease
+AKI acute kidney injury
+ARB angiotensin II receptor blocker
+ASCVD atherosclerotic cardiovascular disease
+BMI body mass index
+BP blood pressure
+BSA body surface area
+CI conﬁdence interval
+CKD chronic kidney disease
+CKD-EPI Chronic Kidney Disease Epidemiology
+Collaboration
+CKiD Chronic Kidney Disease in Children
+CKD-MBD chronic kidney disease-mineral and bone
+disorder
+CKD-PC Chronic Kidney Disease Prognosis
+Consortium
+CrCl creatinine clearance
+CT computed tomography
+CVD cardiovascular disease
+DALY disability-adjusted life-year
+eGFR estimated glomerular ﬁltration rate
+eGFRcr creatinine-based estimated glomerular
+ﬁltration rate
+eGFRcr-cys creatinine and cystatin C –based estimated
+glomerular ﬁltration rate
+eGFRcys cystatin C –based estimated glomerular
+ﬁltration rate
+EKFC European Kidney Function Consortium
+EMA European Medicines Agency
+EMR electronic medical record
+ERT Evidence Review T eam
+FDA Food and Drug Administration
+GBD Global Burden of Disease
+GFR glomerular ﬁltration rate
+GLP-1 RA glucagon-like peptide-1 receptor agonist(s)
+GN glomerulonephritis
+HBV hepatitis B virus
+HCV hepatitis C virus
+HDL high-density lipoprotein
+HIV human immunode ﬁciency virus
+HR hazard ratio
+HRQoL health-related quality of life
+IgG immunoglobulin G
+IQR interquartile range
+i.v. intravenous
+KDIGO Kidney Disease: Improving Global
+Outcomes
+KDOQI Kidney Disease Outcomes Quality Initiative
+KFRE Kidney Failure Risk Equation
+KRT kidney replacement therapy
+LDL low-density lipoprotein
+LMIC low- and middle-income countries
+MACE major adverse cardiovascular events
+MDRD Modi ﬁcation of Diet in Renal Disease
+mGFR measured glomerular ﬁltration rate
+MRA mineralocorticoid receptor antagonist(s)
+mTOR mammalian target of rapamycin
+NICE National Institute for Health and Care
+Excellence
+NIHR National Institute for Health and Care
+Research
+NOAC non– vitamin K antagonist oral
+anticoagulant
+NSAIDs nonsteroidal anti-inﬂammatory drugs
+OR odds ratio
+OTC over-the-counter
+PCR protein-to-creatinine ratio
+PCSK-9 proprotein convertase subtilisin/kexin type-9
+PICOS population, intervention, comparator,
+outcomes, study design
+POCT point-of-care testing
+PROM patient-reported outcome measure
+QoL quality of life
+RAS(i) renin-angiotensin system (inhibitor)
+RAAS(i) renin-angiotensin-aldosterone system
+(inhibitor)
+RBC red blood cell
+RCT randomized controlled trial
+RR relative risk
+SCr serum creatinine
+SBP systolic blood pressure
+SES socioeconomic status
+SGL T2i sodium-glucose cotransporter-2
+inhibitor(s)
+T1D Type 1 diabetes
+T2D Type 2 diabetes
+UK United Kingdom
+US United States
+USRDS United States Renal Data System
+WHO World Health Organization
+abbreviations and acronyms www.kidney-international.org
+S128 Kidney International (2024) 105 (Suppl 4S), S117–S314
+
+================================================================================
+
+--- PAGE 29 ---
+Summary of relative and absolute risks relevant to CKD
+from meta-analysis of large multinational population
+studies in the CKD Prognosis Consortium (CKD-PC)
+Outcomes relevant to CKD, and the prognostic importance of
+CKD categories
+The most highly evaluated endpoints in epidemiological
+studies have been all-cause mortality, cardiovascular events
+(myocardial infarction, stroke, and heart failure), and kidney-
+speciﬁc outcomes (progression to kidney failure and AKI),
+although additional outcomes such as all-cause hospitaliza-
+tion and incident atrial ﬁbrillation have been studied more
+recently. In this section, we highlight newer data derived from
+the CKD Prognosis Consortium (CKD-PC).
+12 We describe
+the associations of CKD categories with 10 of these
+important outcomes and demonstrate the importance of
+different methods of estimating GFR (i.e., using creatinine-
+or cystatin C –based equations) on these risk gradients.
+Healthcare providers, researchers, and policy makers
+should understand the association of CKD parameters (ACR
+and eGFR) in populations. The overall distributions of
+epidemiological risk across CKD categories on a population
+level are presented here. This is not to be confused with the
+information presented in Chapter 2, where individualized risk
+assessment tools are described, and those tools can be used to
+inform clinical and management decisions for individual
+people with CKD.
+Associations of all complications of CKD are incre-
+mentally increased with worsened categories of estimated
+glomerular ﬁltration rate (eGFR) and albuminuria:
+updated data.
+The KDIGO 2012 Clinical Practice Guideline for the Evalu-
+ation and Management of Chronic Kidney Disease introduced
+the combined staging by eGFR and albuminuria categories,
+which were justiﬁed by their associations with CKD complica-
+tions.
+1 The combined associations of eGFR and ACR categories
+were presented as “heatmaps,” a color-coded depiction of the
+associations of increased risk with worsening CKD, for
+outcomes of all-cause mortality, kidney failure, AKI, and
+cardiovascular mortality on a population level. In this section,
+we provide an update to these CKD heatmaps, which have
+been provided by the CKD-PC.
+12
+Several changes in the development of these updated
+heatmaps are important to highlight.
+(i) They now include several clinical databases that allow a
+much larger population base, comprising up to 27,503,140
+people for the analyses of each adverse outcome.
+(ii) The eGFRcr has been changed to the 2021 CKD Epide-
+miology Collaboration (CKD-EPI) equation, as this
+newer version no longer includes race as a component.
+(iii) The number of outcomes has been increased to 10,
+including 6 that are cardiovascular related, 2 that are
+kidney speci ﬁc (kidney failure and AKI), and 2 general
+outcomes (all-cause mortality and all-cause
+hospitalization).
+(iv) Additional analyses have been conducted using the 2021
+CKD-EPI combined eGFR equation that incorporates
+both creatinine and cystatin C. Although the sample size
+for these subsequent analyses is much smaller (n ¼
+720,736), it does permit better differentiation of associ-
+ations of eGFR and risk and allows validation of CKD
+thresholds across populations.
+CKD staging by eGFRcr and ACR and association with adverse
+events
+Figure 5 12 presents the RRs for all eGFR/ACR combinations
+for the 10 identi ﬁed outcomes.
+The RRs presented have all been adjusted for age, sex,
+smoking status (current, former, or never), systolic BP (SBP),
+total cholesterol, high-density lipoprotein (HDL) cholesterol,
+body mass index (BMI), use of antihypertensive medications,
+and a medical history of diabetes, coronary heart disease,
+stroke, heart failure, atrial ﬁbrillation, peripheral artery dis-
+ease, cancer, and chronic obstructive pulmonary disease.
+Therefore, the RRs can be interpreted as the proportional
+elevation in risk for each outcome experienced by people in
+that stage of CKD (or non-CKD) compared with people in
+the healthiest group. Across all the heatmaps, a consistent
+color scheme is used.
+The ﬁgures reveal several common themes and highlight
+the necessity of having both eGFR and ACR parameters
+available in assessing risk. First, within the CKD popula-
+t i o n ,t h ea s s o c i a t i o no fr i s kf o ra l l1 0o u t c o m e si n c r e a s e s
+with higher stages of both eGFR and albuminuria. The
+ﬁgures present only the RRs for each speci ﬁcs t a g ea n dn o t
+the absolute risk of experiencing that outcome for people
+in the risk cell. This distinction between relative and ab-
+solute risks demonstrates the importance of using indi-
+vidual risk prediction tools for persons with CKD, a subject
+of Chapter 2.
+Although nearly all CKD categories are at substantially
+elevated risk for most outcomes inFigure 5, a distinction must be
+made for people in the eGFRcr CKD G3a category and with the
+lowest ACR severity (<10 mg/g [<1m g / m m o l ] ) .T h i sg r o u pi s
+portrayed in the lower-risk green color for 7 of the 10 outcomes
+presented, although they have 3-fold higher adjusted risk of AKI
+and 13-fold higher risk of kidney failure compared with the
+reference group. The inconsistent risk association for
+populations with CKD G3a, A1, particularly in older adults,
+has led to controversy over whether this group should be
+relative and absolute risks associated with CKD www.kidney-international.org
+S144 Kidney International (2024) 105 (Suppl 4S), S117–S314
+
+================================================================================
+
+--- PAGE 30 ---
+considered as having CKD. 55 The CKD-PC investigators
+repeated all 10 heatmaps using creatinine- and cystatin C –
+based eGFR (eGFRcr-cys), in part to evaluate whether the
+weaker associations of CKD G3a, A1 with clinical outcomes
+were caused by the limitations of the speci ﬁc creatinine-based
+equation eGFRcr, compared with eGFRcr-cys, which has been
+established as a better approximation of measured GFR
+(mGFR) than eGFRcr (Figure 6
+12).
+Overall
+eGFRcr <10 10–29 30–299 300–999 1000+ <10 10–29 30–299
+105+ 1.6 2.2 2.9 4.3 5.8 1.1 1.4 2.0
+90–104 ref 1.3 1.8 2.6 3.1 ref 1.3 1.6
+60–89 1.0 1.3 1.7 2.2 2.8 1.1 1.3 1.6
+45–59 1.3 1.6 2.0 2.4 3.1 1.4 1.7 2.0
+30–44 1.8 2.0 2.5 3.2 3.9 1.9 2.0 2.4
+15–29 2.8 2.8 3.3 4.1 5.6 2.7 3.1 3.1
+<15 4.6 5.0 5.3 6.0 7.0 4.6 5.6 4.8
+105+ 1.4 2.0 3.0 4.1 5.4 1.2 1.6 2.2
+90–104 ref 1.3 1.9 2.7 3.6 ref 1.3 1.6
+60–89 1.0 1.4 1.7 2.4 3.2 1.1 1.3 1.7
+45–59 1.4 1.7 2.2 2.8 3.8 1.4 1.6 1.9
+30–44 2.0 2.3 2.8 3.7 4.6 1.6 1.7 2.0
+15–29 3.2 3.1 3.5 5.0 6.5 1.8 2.1 2.1
+<15 6.1 6.4 6.4 7.3 8.2 3.2 2.8 2.9
+105+ 0.5 1.2 2.9 7.7 25 1.2 1.7 2.7
+90–104 ref 1.8 4.3 12 43 ref 1.3 2.0
+60–89 2.3 4.9 10 27 85 1.1 1.4 1.9
+45–59 13 19 37 89 236 1.6 1.8 2.4
+30–44 50 58 115 240 463 2.2 2.5 3.1
+15–29 283 301 443 796 1253 3.6 3.5 4.1
+<15 770 1040 1618 2297 2547 5.1 5.7 5.8
+105+ 1.0 1.6 2.4 3.7 5.5 1.1 1.3 1.7
+90–104 ref 1.4 2.1 3.2 5.0 ref 1.2 1.5
+60–89 1.6 2.2 3.1 4.3 6.7 1.0 1.2 1.4
+45–59 3.5 4.0 5.1 6.9 9.0 1.2 1.3 1.5
+30–44 5.6 5.9 6.8 8.6 11 1.4 1.5 1.7
+15–29 8.3 8.0 8.5 9.9 10 1.9 1.8 2.0
+<15 8.5 11 7.9 5.5 5.7 2.6 2.5 3.1
+105+ 1.4 1.7 2.1 2.1 2.3 0.9 1.4 1.9
+90–104 ref 1.1 1.3 1.5 1.7 ref 1.3 1.9
+60–89 1.0 1.1 1.3 1.5 1.8 1.0 1.3 1.8
+45–59 1.3 1.3 1.5 1.7 2.1 1.5 1.7 2.1
+Urine albumin-creatinine r g / g m  , o i t a r  e n i n i t a e r c - n i m u b l a  e n i rUg / g m  , o i t a
+All-cause mortality: 82 cohorts
+26 444 384 
+participants; 2 604 028 events 
+Myocardial infarction: 64 cohorts 
+22 838 356 participants; 451 063 events 
+Kidney failure with replacement therapy: 57 cohorts 
+25 466 956 participants; 158 846 events 
+Heart failure: 61 cohorts
+24 603 016 participants; 1 132 443 events 
+Cardiovascular mortality: 76 cohorts
+26 022 346 participants; 776 441 events 
+Stroke: 68 cohorts
+24 746 436 participants; 461 785 events 
+Acute kidney injury: 49 cohorts
+23 914 614 participants; 1 408 929 events 22 886 642 participants; 1 068 701 events 
+Hospitalization: 49 cohorts
+25 426 722 participants; 8 398 637 events 
+Peripheral artery disease: 54 cohorts
+24 830 794 participants; 378 924 events 
+30–44 1.5 1.5 1.6 1.9 2.3 2.0 1.9 2.5
+15–29 1.8 1.8 1.9 2.4 2.8 3.3 3.3 3.8
+<15 2.7 2.8 3.0 3.2 3.8 9.1 9.0 9.6
+300–999 1000+
+2.7 3.8
+2.2 3.2
+2.2 3.1
+2.8 3.7
+3.2 4.3
+4.2 5.1
+6.0 6.0
+3.1 4.3
+2.4 3.1
+2.2 3.0
+2.3 2.9
+2.4 3.0
+2.7 3.0
+3.2 3.8
+4.2 6.9
+2.8 4.2
+2.7 4.2
+3.4 5.0
+4.2 6.5
+5.8 8.1
+7.9 9.9
+2.4 3.5
+1.9 2.3
+1.7 2.2
+1.8 2.4
+2.0 2.4
+2.6 3.0
+3.6 4.2
+2.8 5.0
+2.8 4.3
+2.5 3.8
+2.9 4.2
+3.6 5.0
+5.7 8.1
+13 14
+Figure 5 | Associations of chronic kidney disease (CKD) staging by estimated glomerular ﬁltration rate by creatinine (eGFRcr) and
+albumin-to-creatinine ratio (ACR) categories and risks for 10 common complications in multivariable-adjusted analyses. Numbers
+reﬂect the adjusted hazard ratio compared with the reference cell. Adjustment variables included age, sex, smoking status (current, former, or
+never), systolic blood pressure, total cholesterol, high-density lipoprotein cholesterol, body mass index, use of antihypertensive medications,
+and a medical history of diabetes, coronary heart disease, stroke, heart failure, atrial ﬁbrillation, peripheral artery disease, cancer, and chronic
+obstructive pulmonary disease, where relevant. The colors were determined for each outcome separately using the following rule: the
+percentile shaded the darkest green color corresponds to the proportion of cells in the grid without CKD (e.g., 6 of 35 cells with eGFR $60 ml/
+min per 1.73 m
+2 and ACR <30 mg/g [<3 mg/mmol]), and the percentile shaded the darkest red color corresponds to proportion expected to be
+at highest risk (e.g., 11 of 35 cells with eGFR <15 ml/min per 1.73 m 2 and albumin-to-creatinine ratio 1000 þ mg/g [100 þ mg/mmol]). In this
+manner, the numbers of green and red cells are consistent across outcomes, but the patterns are allowed to differ. ref, reference cell.
+Reproduced with permission from JAMA, Writing Group for the CKD Prognosis Consortium; Grams ME, Coresh J, Matsushita K, et al. Estimated
+glomerular ﬁltration rate, albuminuria, and adverse outcomes: an individual-participant data meta-analysis. JAMA. 2023;330(13):1266–1277.
+12
+Copyright ª 2023 American Medical Association. All rights reserved.
+www.kidney-international.org relative and absolute risks associated with CKD
+Kidney International (2024) 105 (Suppl 4S), S117–S314 S145
+
+================================================================================
+
+--- PAGE 31 ---
+CKD staging by eGFRcr-cys and ACR and risk for adverse
+events
+Within the CKD-PC collaboration, 720,736 individuals had
+measures of blood cystatin C in addition to having eGFRcr
+and ACR. The replacement of eGFRcr with eGFRcr-cys in the
+heatmap led to several changes in the risk distributions. Most
+notably, the groups with eGFR category 45 –59 ml/min per
+1.73 m
+2 and ACR <10 mg/g [< 1 mg/mmol] were moved to
+eGFRcr-cys <10 10–29 30–299 300+ <10 10–29 30–299
+105+
+90–104
+60–89
+45–59
+30–44
+<30
+105+
+90–104
+60–89
+45–59
+30–44
+<30
+105+
+90–104
+60–89
+45–59
+30–44
+<30
+105+
+90–104
+60–89
+45–59
+30–44
+<30
+105+
+90–104
+60–89
+45–59
+Urine albumin-creatinine ratio, mg/g Urine albumin-creatinine ratio, mg/g
+All-cause mortality: 11 cohorts
+692 802 participants; 97 006 events
+Myocardial infarction: 10 cohorts
+649 365 participants; 17 926 events
+Kidney failure with replacement therapy: 5 cohorts 
+630 370 participants; 4306 events
+Heart failure: 9 cohorts
+641 298 participants; 27 406 events
+Cardiovascular mortality: 11 cohorts
+692 322 participants, 25 322 events
+Stroke: 9 cohorts
+662 605 participants; 16 909 events
+Acute kidney injury: 5 cohorts
+630 370 participants; 24 062 events 607 102 participants; 37 278 events
+Hospitalization: 3 cohorts
+630 489 participants; 464 894 events
+Peripheral artery disease: 6 cohorts
+642 624 participants; 3943 events
+30–44
+<30
+300+
+1.0 1.3 1.6 2.5 0.9 1.2 1.4 2.8
+ref 1.3 1.5 2.0 ref 1.2 1.4 1.8
+1.2 1.5 1.9 2.5 1.2 1.4 1.5 1.9
+1.7 2.2 2.5 3.3 1.6 1.9 2.3 3.3
+2.3 2.6 3.4 4.4 2.1 2.6 3.1 3.3
+3.6 4.0 5.5 7.1 5.1 3.0 4.9 5.0
+1.0 1.4 1.8 4.1 1.0 1.2 1.6 2.5
+ref 1.5 1.6 2.9 ref 1.2 1.5 2.3
+1.2 1.7 2.3 3.4 1.2 1.4 1.8 2.5
+1.9 2.7 3.2 4.6 1.6 1.7 2.1 2.7
+2.5 3.5 4.5 5.9 1.7 2.0 2.3 2.6
+5.8 5.0 6.1 8.7 1.9 2.3 2.8 4.4
+0.6 0.8 2.3 10 0.9 1.2 1.7 3.7
+ref 1.5 4.5 11 ref 1.3 1.4 2.5
+1.9 3.7 8.3 31 1.2 1.6 1.9 3.0
+5.8 13 25 73 1.5 2.2 3.0 4.1
+20 23 78 191 2.5 2.9 4.1 5.7
+111 261 343 580 5.3 4.8 6.5 7.7
+0.8 1.0 1.4 3.5 0.9 1.0 1.1 1.9
+ref 1.3 1.7 2.8 ref 1.2 1.4 2.2
+1.6 2.5 2.9 5.3 1.1 1.3 1.5 2.0
+3.9 4.7 5.5 7.5 1.3 1.6 1.8 2.2
+5.8 7.0 8.4 10 1.6 2.0 2.2 2.5
+11 12 12 21 2.0 2.0 2.7 4.4
+1.0 1.1 1.1 1.6 0.9 1.9 1.8 2.9
+ref 1.1 1.3 1.4 ref 1.5 2.0 3.2
+1.1 1.2 1.3 1.6 1.3 1.8 2.1 3.9
+1.3 1.4 1.5 1.7 2.5 3.7 3.3 4.0
+1.5 1.5 1.6 2.1 4.0 3.7 4.5 6.9
+1.8 2.0 2.1 3.0 7.8 4.5 9.0 12
+Figure 6 | Associations of chronic kidney disease (CKD) staging by estimated glomerular ﬁltration rate by creatinine and cystatin C
+(eGFRcr-cys) and albumin-to-creatinine ratio categories and risks for 10 common complications in multivariable-adjusted analyses.
+Numbers re ﬂect the adjusted hazard ratio compared with the reference cell. Adjustment variables included age, sex, smoking status (current,
+former, or never), systolic blood pressure, total cholesterol, high-density lipoprotein cholesterol, body mass index, use of antihypertensive
+medications, and a medical history of diabetes, coronary heart disease, stroke, heart failure, atrial ﬁbrillation, peripheral artery disease, cancer,
+and chronic obstructive pulmonary disease, where relevant. The colors were determined for each outcome separately using the following rule:
+the percentile shaded the darkest green color corresponds to the proportion of cells in the grid without CKD (e.g., 6 of 24 cells), and the
+percentile shaded the darkest red color corresponds to proportion expected to be at highest risk (e.g., 5 of 24 cells). In this manner, the numbers
+of green and red cells are consistent across outcomes, but the patterns are allowed to differ. ref, reference cell. Reproduced with permission
+from JAMA, Writing Group for the CKD Prognosis Consortium; Grams ME, Coresh J, Matsushita K, et al. Estimated glomerular ﬁltration rate,
+albuminuria, and adverse outcomes: an individual-participant data meta-analysis. JAMA. 2023;330(13):1266–1277.
+12 Copyright ª 2023 American
+Medical Association. All rights reserved.
+relative and absolute risks associated with CKD www.kidney-international.org
+S146 Kidney International (2024) 105 (Suppl 4S), S117–S314
+
+================================================================================
+
+--- PAGE 45 ---
+Practice Point 3.8.2: A nonsteroidal MRA may be added to a RASi and an SGLT2i for treatment of T2D and CKD in adults.
+Practice Point 3.8.3: To mitigate risk of hyperkalemia, select people with consistently normal serum potassium concen-
+tration and monitor serum potassium regularly after initiation of a nonsteroidal MRA ( Figure 26 ).
+Practice Point 3.8.4: The choice of a nonsteroidal MRA should prioritize agents with documented kidney or
+cardiovascular beneﬁts.
+Practice Point 3.8.5: A steroidal MRA may be used for treatment of heart failure, hyperaldosteronism, or refractory
+hypertension, but may cause hyperkalemia or a reversible decline in glomerularﬁltration, particularly
+among people with a low GFR.
+3.9 Glucagon-like peptide-1 receptor agonists (GLP-1 RA)
+The Work Group highlights a key recommendation and practice point from the KDIGO 2022 Clinical Practice Guideline for
+Diabetes Management in Chronic Kidney Disease .23
+Recommendation 3.9.1: In adults with T2D and CKD who have not achieved individualized glycemic targets
+despite use of metformin and SGLT2 inhibitor treatment, or who are unable to use
+those medications, we recommend a long-acting GLP-1 RA (1B).
+Practice Point 3.9.1: The choice of GLP-1 RA should prioritize agents with documented cardiovascular bene ﬁts.
+3.10 Metabolic acidosis
+Practice Point 3.10.1: In people with CKD, consider use of pharmacological treatment with or without dietary
+intervention to prevent development of acidosis with potential clinical implications (e.g., serum
+bicarbonate <18 mmol/l in adults).
+Practice Point 3.10.2: Monitor treatment for metabolic acidosis to ensure it does not result in serum bicarbonate
+concentrations exceeding the upper limit of normal and does not adversely affect BP control,
+serum potassium, or ﬂuid status.
+3.11 Hyperkalemia in CKD
+3.11.1 Awareness of factors impacting on potassium measurement
+Practice Point 3.11.1.1: Be aware of the variability of potassium laboratory measurements as well as factors and mech-
+anisms that may in ﬂuence potassium measurement including diurnal and seasonal variation,
+plasma versus serum samples, and the actions of medications.
+3.11.2 Potassium exchange agents
+Practice Point 3.11.2.1: Be aware of local availability or formulary restrictions with regard to the pharmacologic man-
+agement of nonemergent hyperkalemia.
+3.11.3 Timing to recheck potassium after identifying moderate and severe hyperkalemia in adults
+[No recommendations and practice points]
+K+ ≤4.8 mmol/l K+ 4.9–5.5 mmol/l K+ >5.5 mmol/l
+• Initiate finerenone
+  - 10 mg daily if eGFR 25–59 ml/min/1.73 m2
+  - 20 mg daily if eGFR ≥60 ml/min/1.73 m 2
+• Monitor K+ at 1 month after initiation and then every 4
+  months
+• Increase dose to 20 mg daily, if on 10 mg daily
+• Restart 10 mg daily if previously held for hyperkalemia and
+  K+ now ≤5.0 mmol/l
+• Continue finerenone 10 mg or 20 mg
+• Monitor K+ every 4 months
+• Hold finerenone
+• Consider adjustments to diet or concomitant
+  medications to mitigate hyperkalemia
+• Recheck K+
+• Consider reinitiation if/when K+ ≤5.0 mmol/l
+Figure 26 | Serum potassium monitoring during treatment with a nonsteroidal mineralocorticoid receptor antagonist (MRA)
+(ﬁnerenone). Adapted from the protocols of Finerenone in Reducing Kidney Failure and Disease Progression in Diabetic Kidney Disease (FIDELIO-
+DKD) and Finerenone in Reducing Cardiovascular Mortality and Morbidity in Diabetic Kidney Disease (FIGARO-DKD). The Work Group considers
+these potassium thresholds to be conservative, and it may be considered appropriate to continue MRAs in people with potassium of 5.5–6.0 mmol/
+l. This algorithm could be used for steroidal MRA. The US Food and Drug Administration (FDA) has approved initiation of K
+þ < 5.0 mmol/l. This
+ﬁgure is guided by trial design and the FDA label and may be different in other countries. Serum creatinine/estimated glomerular ﬁltration rate
+(eGFR) should be monitored concurrently with serum potassium. Reproduced from Kidney Disease: Improving Global Outcomes Diabetes Work
+Group. KDIGO 2022 Clinical Practice Guideline for Diabetes Management in Chronic Kidney Disease. Kidney Int. 2022;102:S1–S127.
+23
+summary of recommendation sta tements and practice points www.kidney-international.org
+S160 Kidney International (2024) 105 (Suppl 4S), S117–S314
+
+================================================================================
+
+--- PAGE 56 ---
+transient hematuria. Persistent hematuria may indicate
+glomerular disease, other kidney diseases, or urologic
+disease including genitourinary malignancy. Thus, persistent
+hematuria should prompt further investigation.
+66,67
+Special considerations
+Pediatric considerations. People who are born preterm,
+especially if also small for gestational age, are at increased risk
+for CKD and kidney failure. This is largely related to
+decreased nephron number.
+68–70 Additional insults after birth
+such as neonatal AKI and childhood obesity can further in-
+crease the risk of CKD.
+71,72
+1.1.2 Methods for staging of CKD
+Recommendation 1.1.2.1: In adults at risk for CKD,
+we recommend using creatinine-based estimated
+glomerular ﬁltration rate (eGFRcr). If cystatin C is
+available, the GFR category should be estimated
+from the combination of creatinine and cystatin C
+(creatinine and cystatin C –based estimated glomer-
+ular ﬁltration rate [eGFRcr-cys]) (1B).
+For the diagnosis and staging of CKD by GFR, this recom-
+mendation puts a high value on data suggesting that the most
+accurate method of estimating GFR is by using 2 biomarkers
+(cystatin C and creatinine), as each has limitations and bene ﬁts
+as ﬁltration markers. As compared with mGFR, estimating
+equations using both creatinine and cystatin C afford greater
+accuracy in comparison with either ﬁltration marker alone. The
+recommendation places a lower value on the resource utilization
+and cost associated with the assessment of eGFRcr-cys.
+Key information
+Balance of bene ﬁts and harms. In the CKD-PC collabora-
+tion, 720,736 people had measures of blood cystatin C in addi-
+tion to having eGFRcr and ACR.
+12 Replacing the assessment of
+eGFRcr with eGFRcr-cys in the matrix of GFR categories led
+to several changes in the risk distributions. Most notably, the
+group with an eGFR category 45 –59 ml/min per 1.73 m
+2 and
+ACR <10 mg/g ( <1 mg/mmol) was moved to higher risk for
+all 10 outcomes, and this category was no longer labeled
+as being low-risk ( “green”) for any of the complications
+(Figure 6
+12). For the 8 outcomes that are not in ﬂuenced by
+changes in creatinine (i.e. all except kidney failure and AKI),
+eGFRcr exhibited a J-shaped association such that risk
+increased with eGFR values >105 ml/min per 1.73 m
+2
+(Figure 7 12). In contrast eGFRcr-cys demonstrated much
+more linear associations with each of these complications
+throughout its distribution. These data demonstrate that the
+combined eGFRcr-cys equation is superior for distinguishing
+GFR risk stages compared with eGFRcr.
+Certainty of evidence. This recommendation is based on 2
+broadly different types of data —data comparing the accuracy
+(P30) of equations from a combination of creatinine and
+cystatin C as ﬁltration markers and creatinine and cystatin C
+Table 5 | Risk factors for CKD
+Domains Example conditions
+Common risk factors Hypertension
+Diabetes
+Cardiovascular disease (including heart failure)
+Prior AKI/AKD
+People who live in geographical areas with
+high prevalence of CKD
+Areas with endemic CKDu
+Areas with the high prevalence of APOL1 genetic variants
+Environmental exposures
+Genitourinary disorders Structural urinary tract disease
+Recurrent kidney calculi
+Multisystem diseases/chronic in ﬂammatory
+conditions
+Systemic lupus erythematosus
+Vasculitis
+HIV
+Iatrogenic (related to drug treatments and procedures) Drug-induced nephrotoxicity and radiation nephritis
+Family history or known genetic variant
+associated with CKD
+Kidney failure, regardless of identi ﬁed cause
+Kidney disease recognized to be associated with genetic abnormality (e.g., PKD,
+APOL1-mediated kidney disease, and Alport syndrome)
+Gestational conditions Preterm birth
+Small gestational size
+Pre-eclampsia/eclampsia
+Occupational exposures that promote CKD risk Cadmium, lead, and mercury exposure
+Polycyclic hydrocarbons
+Pesticides
+AKD, acute kidney disease; AKI, acute kidney injury; APOL1, apolipoprotein L1; CKD, chronic kidney disease; CKDu, chronic kidney disease of undetermined origin; PKD,
+polycystic kidney disease.
+www.kidney-international.org chapter 1
+Kidney International (2024) 105 (Suppl 4S), S117–S314 S171
+
+================================================================================
+
+--- PAGE 57 ---
+alone and data from the CKD-PC examining the risk of
+outcome by GFR stage assessed by eGFRcr compared with
+eGFRcr-cys. As compared with equations based on creatinine
+and cystatin C alone, the equation using both creatinine and
+cystatin C comes closest to mGFR most consistently
+(Supplementary T able S3
+73–96). The CKD-PC data were an
+individual-level data analysis of 27,503,140 participants
+from 114 global cohorts (eGFRcr) and 720,736 participants
+from 20 cohorts (eGFRcr-cys) and 9,067,753 participants
+from 114 cohorts (albuminuria) from 1980 to 2021 from
+around the world conveying a high degree of robustness in
+the association of CKD stage with a broad range of adverse
+outcomes. Based on the totality and consistency of the
+CKD-PC data, the overall certainty of the evidence was
+rated as moderate.
+Values and preferences. This recommendation places a high
+value on the need for the most accurate assessment of GFR.
+The Work Group judged that many people at risk for CKD
+would prefer an accurate measurement when con ﬁrming the
+diagnosis of CKD and its staging. For this reason, the W ork
+Group prioritized eGFRcr-cys over eGFRcr or eGFRcys for
+the most accurate measurement. The recommendation puts a
+low value on the availability and cost of an assessment of
+eGFRcr-cys suggesting that people at risk of CKD would opt
+for the more accurate assessment.
+Resource use and costs. The costs and resource use associ-
+ated with eGFRcr-cys are currently greater than those of
+eGFRcr; however, the need for an accurate measurement may
+offset these expenses. In addition, accurate diagnosis of CKD
+as early as possible may lead to lower resource utilization and
+healthcare spending than if diagnosed in later stages of CKD.
+For more information on the costs associated with cystatin C
+assessments, please refer to Section 1.2.2.
+Considerations for implementation. The biggest consideration
+for implementation is the availability of cystatin C measurement.
+For this reason, the recommendation includes the alternative for
+eGFRcr in such cases taking into consideration the limitations
+and drawbacks of creatinine-based measurements.
+Rationale
+The KDIGO CKD staging system based on 2 dimensions,
+GFR and albuminuria, was created largely to re ﬂect the as-
+sociation of outcomes of people with CKD, relative to the
+earlier staging systems based solely on GFR stages. Assessment
+of GFR stage is ideally performed using accurate assessment
+of GFR and ACR and is used to best capture the prognosis for
+people with CKD with regard to outcomes such as kidney
+failure, CVD, and mortality risk. There is now a large evi-
+dence base demonstrating that the use of eGFRcr-cys reclas-
+siﬁes a large proportion of the population into different GFR
+stages and the “new” stages better re ﬂect their risk associa-
+tions. For that reason, where available, cystatin C should be
+added to creatinine for the purpose of estimating GFR for
+CKD diagnosis and staging.
+1.1.3 Evaluation of chronicity
+Practice Point 1.1.3.1: Proof of chronicity (duration of a
+minimum of 3 months) can be established by:
+(i) review of past measurements/estimations of GFR;
+(ii) review of past measurements of albuminuria or
+proteinuria and urine microscopic examinations;
+(iii) imaging ﬁndings such as reduced kidney size and
+reduction in cortical thickness;
+(iv) kidney pathological ﬁndings such as ﬁbrosis and
+atrophy;
+(v) medical history, especially conditions known to
+cause or contribute to CKD;
+(vi) repeat measurements within and beyond the 3-
+month point.
+Practice Point 1.1.3.2: Do not assume chronicity based
+upon a single abnormal level for eGFR and ACR, as the
+ﬁnding could be the result of a recent acute kidney injury
+(AKI) event or acute kidney disease (AKD).
+Practice Point 1.1.3.3: Consider initiation of treatments for
+CKD at ﬁrst presentation of decreased GFR or elevated
+ACR if CKD is deemed likely due to presence of other
+clinical indicators.
+Kidney diseases may be acute or chronic.
+1,97 We explicitly
+yet arbitrarily de ﬁne the duration of a minimum of 3 months
+(>90 days) as delineating “chronic” kidney disease. The
+rationale for de ﬁning chronicity is to differentiate CKD
+from AKDs (such as acute glomerulonephritis [GN]),
+including AKI, which may require different timelines for
+initiation of treatments, different interventions, and have
+different etiologies and outcomes. The duration of kidney
+disease may be documented or inferred based on the
+clinical context. For example, a person with decreased GFR
+or kidney damage during an acute illness, without prior
+documentation of kidney disease, may be inferred to have
+AKD. Resolution over days to weeks would con ﬁrm the
+diagnosis of AKI from a variety of different causes. A
+person with similar ﬁndings in the absence of an acute
+illness may be inferred to have CKD, and if followed over
+time, would be con ﬁrmed to have CKD. In both cases,
+repeat ascertainment of GFR and kidney damage is
+recommended for accurate diagnosis and staging. The
+timing of the evaluation depends on clinical judgment, with
+earlier evaluation for those suspected of having AKI and
+later evaluation for those suspected of having CKD.
+For people with risk factors for CKD, delaying diag-
+nosis for the sake of con ﬁrming chronicity can delay
+care. Many people may not recognize the importance of
+a repeat visit if treatment had not been initiated. Thus,
+initiating treatment both allows for earlier intervention
+and also indicates to people the importance of the
+disease.
+chapter 1 www.kidney-international.org
+S172 Kidney International (2024) 105 (Suppl 4S), S117–S314
+
+================================================================================
+
+--- PAGE 84 ---
+provider subjective estimation of risk. 404 Several risk
+prediction tools have been developed speci ﬁcally for people
+with CKD, and when implemented, allow healthcare
+providers to more precisely estimate risk for individual
+people for speci ﬁc outcomes, which supports a deeper
+personalization of CKD management.
+405,406 Besides
+improving individual risk prediction, these tools may be
+used to more effectively use specialized and often scarce,
+nephrology resources, identify people for earlier use of
+disease-modifying therapy, or enable personalized
+discussions of overall goals of care. Importantly, some of
+the developed prediction models have been externally
+validated in multiple populations, have high discrimination
+performance (C-statistics >0.8 or higher), and are easily
+used via online calculators ( Ta b l e 1 9
+9,10,407–411).
+Recommendation 2.2.1: In people with CKD G3– G5,
+we recommend using an externally validated risk
+equation to estimate the absolute risk of kidney
+failure (1A).
+This recommendation places a high value on the need and po-
+tential bene ﬁts for individual risk prediction to deliver person-
+alized care for people with CKD. The recommendation is worded
+to encourage healthcare providers, patients, researchers, and
+policy makers to go beyond broad categories of RR for popula-
+tion and to estimate the absolute risk of outcomes for each in-
+dividual. The recommendation also places a high value on
+externally validated prediction equations that can be applied in
+diverse healthcare settings and the need for implementation
+science in laboratory information systems and EMRs to enable
+the delivery of risk-based care for people with CKD.
+Key information
+Balance of bene ﬁts and harms. There is a large body of
+evidence to support the use of the validated risk equations to
+estimate the absolute risk of kidney failure requiring dialysis
+or transplant in people with CKD G3 –G5. Risk equations
+using routinely collected data have been developed, externally
+validated, and implemented in labs, EMRs, and health
+systems.
+408,412,413
+with eGFR <60 ml/min/1.73 m2 (N=350,232)
+Kidney failure replacement therapy risk among patients ba Risk of 40% decline in eGFR among patients
+with eGFR >15 ml/min/1.73 m2 (N=1,365,272)
+CKD categories substantially overlapping multiple risk ranges Nearly all CKD categories substantially overlap multiple risk ranges
+CKD
+stage
+G3aA1 G3bA1 G4A1 G3aA1G3bA1 G4A1G1A1 G2A1 G1A2 G2A2 G1A3 G2A3G5A1 G3aA2 G3bA2 G3aA2 G3bA2G4A2 G4A2G5A2 G3aA3 G3bA3 G4A3 G3aA3 G3bA3 G4A3G5A3
+2-year risk of KFRE (%)
+100
+90
+80
+70
+60
+50
+40
+30
+20
+10
+0
+Risk of eGFR 40% decline (%)
+80
+70
+60
+50
+40
+30
+20
+10
+0
+Referral thresholds
+20%–40%: dialysis access/transplant
+>10%: multidisciplinary care
+>2%: nephrology
+Thresholds
+>10%: maximize therapy
+>5%: consider multiple medications
+>1%: optimize medications
+Figure 14 | (a) Predicted risk of kidney failure and (b) ‡40% decline in estimated glomerular ﬁltration rate (eGFR) by chronic kidney
+disease (CKD) eGFR (G1 –G5) and albumin-to-creatinine ratio (ACR) (A1 –A3) categories in Optum Labs Data Warehouse. The lines show
+potential thresholds for clinical decisions. KFRE, Kidney Failure Risk Equation. Reproduced from ( a) Chen TK, Hoenig MP, Nitsch D, et al.
+Advances in the management of chronic kidney disease. BMJ. 2023;383:074216401;( b) Grams M, Sang Y, Ballew S, et al. TH-PO890. Risk
+prediction: CKD staging is the beginning, not the end. J Am Soc Nephrol. 2022;33:301.402
+Table 19 | Externally validated risk equations for predicting kidney failure in the general (CKD G3 –G5) population
+Equation Variable Population
+Outcome
+(time horizon)
+Discrimination
+and calibration Usability
+KFRE9,10,407,408
+www.kidneyfailurerisk.com
+www.ckdpc.org/risk-
+models.html
+Age, sex, eGFR, ACR (4 variable) þ
+calcium, phosphate, bicarbonate,
+and albumin (8 variables)
+>1 million patients, >100,000
+events from more than
+30 countries
+Treated kidney
+failure (2 –5 yr)
+0.88–0.91/þþ
+KPNW
+410 Age, sex, eGFR, albuminuria,
+systolic BP, antihypertensive use,
+diabetes, and diabetes
+complications
+39,013 patients, 1097 events
+from the Kaiser Permanente
+Health System (United States)
+Kidney failure
+(5 yr)
+0.95/þþ
+Landray et al.
+411 Sex, SCr, albuminuria, and
+phosphate
+595 patients, >190 events from
+the CRIB and East Kent cohorts
+in the United Kingdom
+Kidney failure 0.91/ þ –
+Z6 score
+409 SCr, albumin, cystatin C, urea,
+hemoglobin, and ACR
+7978 patients, 870 events —developed
+in the German CKD study, validated
+in 3 additional European cohorts
+Kidney failure
+(5 yr)
+0.89–0.92/þ –
+ACR, albumin-to-creatinine ratio; BP, blood pressure; CKD, chronic kidney disease; CRIB, chronic renal impairment in Birmingham; eGFR, estimated glomerular ﬁltration rate;
+KFRE, Kidney Failure Risk Equation; KPNW, Kaiser Permanente Northwest; SCr, serum creatinine.
+www.kidney-international.org chapter 2
+Kidney International (2024) 105 (Suppl 4S), S117–S314 S199
+
+================================================================================
+
+--- PAGE 85 ---
+Multiple systematic reviews and quality assessments of risk
+prediction equations have been performed in the last 10 years,
+with the most recent review published in 2020. 405 This review
+included 35 development studies and 17 external validation
+studies, and described the variables included in the
+prediction models and provided a decision aid for selecting
+the best model for the prediction horizon and the
+underlying etiology of kidney disease. More recently, an
+additional externally validated model using serum cystatin
+C has also been developed in Germany and externally
+validated in 3 European cohorts.
+409 A summary of
+externally validated models for kidney failure is provided
+below and in Table 19.9,10,407–411
+W e highlight here 3 validated models, The Kidney Failure
+Risk Equation (KFRE), the V eterans Affairs model, and the Z6
+Score model. All of these use routinely collected data from
+labs or EMRs and have been validated in different pop-
+ulations, both in North America and internationally to
+varying degrees. Detailed review of all existing prediction
+models is beyond the scope of this document.
+The KFRE was developed and initially validated in 8391 adults
+from 2 Canadian provinces, and subsequently validated in
+721,357 individuals from more than 30 countries spanning 4
+continents.
+9,10 In this large validation study, cohorts from both
+general populations and nephrology clinic settings were
+included. Discrimination was excellent (C-statistic>0.80 in 28/
+30 cohorts), and the use of a calibration factor improved
+calibration for some regions outside of North America; the
+validation populations now exceed 2 million individuals in
+more than 60 cohorts from nearly every continent.
+407,408 The
+KFRE is consistently highly accurate and has not been improved
+by the addition of longitudinal slopes or variability of eGFR and
+urine ACR, or by adding cardiovascular comorbidities.
+407
+A further 2 externally validated models from large US
+health systems (Kaiser Permanente North West and V eterans
+Affairs) also use routinely collected data and predict kidney
+failure with high accuracy within a 5-year horizon.
+410,414 Only
+1 externally validated model for kidney failure has been
+developed using serum cystatin C (Z6 model), and although
+it is highly accurate in 4 European cohorts, it has not been
+validated in other continents.
+409
+The Work Group judged that the published externally vali-
+dated models (delineated in Table 19 9,10,407–411) all had
+sufﬁcient accuracy to be used in clinical settings. Given the
+potential bene ﬁts and utility of knowing the risk of kidney
+failure, patients and healthcare providers should be
+encouraged to use these tools. Assessing risk of progression
+can aid in optimizing healthcare delivery services, facilitate
+the earlier identi ﬁcation of individuals for disease-modifying
+therapy, help with planning for modality education, and
+identify goals of care planning. There are limited but
+supportive studies describing the better prediction of
+outcomes when using risk equations compared with care that
+is delivered according to isolated eGFR values and clinical
+judgment. Potential harms from the use of prediction
+equations could result from inappropriate use in the settings
+of AKI or AKD or in younger individuals with CKD G1 –G2
+who may be at high risk of progression but low risk of kidney
+failure in the next 5 years. In these people, more proximal
+outcomes such as 40% decline in GFR or lifetime risk were
+judged to be more appropriate (i.e., establishing a validated
+risk equation for the appropriate outcome of interest, derived
+from the population of interest). As described above,
+healthcare providers should be cognizant of the impact of
+biological and analytical variability in albuminuria and eGFR
+values and the subsequent impact on calculation of predicted
+risk of kidney failure.
+Certainty of the evidence. T o assess the certainty of evidence,
+the ERT examined 2 existing systematic reviews addressing the
+question of the ability of risk prediction models to predict
+kidney failure (see Supplementary Table S6 ).
+406,415 The 2021
+review from NICE in the United Kingdom (UK) assessed the
+certainty of evidence for a variety of risk-based equations to
+predict kidney failure and concluded that there was high-
+quality evidence to state that the chosen risk prediction
+equations accurately predict kidney failure.
+415 There was high
+certainty of the evidence (C-statistics were high, and the CIs
+were narrow). The Tangri 2013 review did not assess the
+certainty of evidence as part of the review (Supplementary
+Tables S6–S9
+9,85,89,94,96,408,416).406
+The Work Group agreed with the NICE assessment and
+considered evidence from other systematic reviews and
+recently published validation studies. The certainty of evi-
+dence was based on the established and growing evidence base
+for clinical validation and clinical utility as well as feasibility
+for validated risk prediction equations that predict kidney
+failure.
+Values and preferences. The W ork Group judged that the
+accurate prediction of kidney failure was of importance to
+people with CKD, their families, and healthcare providers,
+and that most people with CKD would choose to receive
+prognostic information about their individual risk of kidney
+failure as part of routine care. For a global guideline, the W ork
+Group focused on prediction equations that were externally
+validated, had a low risk of bias, and included variables that
+were routinely available in most healthcare settings.
+Resource use and costs. Most externally validated risk
+equations for predicting kidney failure use routinely collected
+data including laboratory variables such as eGFR, albumin-
+uria, and serum albumin, phosphate, calcium, or hemoglo-
+bin, or information on demographics and comorbid
+conditions that can be easily obtained. As such, these models
+can be easily implemented at low cost to health systems. Only
+1 externally validated model (Z6 Score) used cystatin C, and
+its usability in global health will depend on the potential
+increased routine availability of cystatin C in laboratories
+worldwide.
+Considerations for implementation. Given the potential
+value of risk prediction models for planning and care de-
+cisions, healthcare providers should consider how to integrate
+risk prediction models into clinical practice, either in EMRs,
+laboratory information systems, or using other mechanisms
+chapter 2 www.kidney-international.org
+S200 Kidney International (2024) 105 (Suppl 4S), S117–S314
+
+================================================================================
+
+--- PAGE 86 ---
+(mobile apps). These should aid clinical work ﬂow and deci-
+sion-making and even patient understanding. Where possible,
+laboratories should report the results from a validated risk
+equation speci ﬁc to the region automatically for individuals
+with CKD G3 –G5 when the required variables are available.
+Simpler equations can be implemented and reported when
+minimal data are available and more complex equations,
+requiring additional variables, can be implemented if the
+required data are present.
+The reporting of risk in the laboratory reports and EMRs
+should be standardized with appropriate guidance on risk
+thresholds, when available. Local validation studies can be
+performed to determine optimal calibration of the speci ﬁc
+risk prediction equations before implementation. Imple-
+mentation of risk equations that are externally validated and
+use routinely collected data should be prioritized for health
+equity and global health considerations.
+Rationale
+Risk prediction equations that are externally validated, and
+locally calibrated, when possible, can lead to improvement in
+the delivery of CKD care. These equations should be used as
+they can further personalize care plans for people with CKD
+and enable discussions about the bene ﬁts and harms of dis-
+ease-modifying therapy.
+This is a strong recommendation, as the Work Group
+judged that the evidence supporting both the clinical validity
+and clinical utility of risk prediction equations was suf ﬁciently
+strong to recommend widespread adoption. The W ork Group
+judged that most externally validated equations rely on
+routinely collected data and could therefore be implemented
+equally in low-resource settings. The Work Group also judged
+that the majority of physicians will be comfortable in calcu-
+lating the risk of kidney failure and discussing the risk and
+related treatment decisions with patients and caregivers.
+Special considerations
+Pediatric considerations. Work from the CKiD group (2015)
+provides a risk calculator for disease progression, using age, sex,
+glomerular versus nonglomerular disease, eGFR, hypertension
+and laboratory parameters (calculator available at https://www.
+kidney.org/professionals/kdoqi/gfr_calculatorPedRiskCalc).
+417
+Further analyses combining the CKiD data with that from the
+ESCAPE trial (of BP control in CKD progression in children)
+resulted in a risk calculator that uses diagnosis, eGFR and
+proteinuria, and can be accessed at www.ckdprognosis.
+com.
+418 The 4-value KFRE has been validated in the CKiD
+cohort with good discrimination. 416 However, further
+evaluation of the calibration in the cohort revealed
+incongruence between predicted and observed outcomes in
+those with higher predicted risks of kidney failure (who had
+lower observed risks).
+419
+Considerations regarding sex and gender. There is uncer-
+tainty around whether sex assigned at birth or gender identity
+is to be used in risk equations. At present, a holistic approach
+should be used that takes into account sex assigned at birth,
+sex hormone milieu, and gender identity with shared deci-
+sion-making with the person with CKD.
+Practice Point 2.2.1: A 5-year kidney failure risk of 3% –5%
+can be used to determine need for nephrology referral in
+addition to criteria based on eGFR or urine ACR, and other
+clinical considerations.
+In most developing and developed countries, there are
+insufﬁcient nephrology care resources to manage all people
+with CKD. Using an objective tool to appropriately triage
+those most likely to bene ﬁt from referral may help to manage
+those nephrology resources in an evidence-informed manner.
+Because only a small fraction of the CKD population is at
+high risk for progression to kidney failure, those people with
+lower risks of progression to kidney failure may be effectively
+managed in primary care settings with guideline-based
+treatments to delay CKD progression (Figure 15 ). Referral
+criteria for nephrology services that include a risk threshold
+of 3% –5% over 5 years have been examined retrospectively
+and have also been implemented prospectively in several
+healthcare settings.
+420,421
+In settings within Canada and the UK, retrospective
+studies have found that the use of these risk thresholds has
+avoided harms from nonreferral or delayed referral of those
+progressing to kidney failure. 412 In addition, prospective
+evaluation has demonstrated a reduction in nephrology
+eGFR-based criteria
+Risk-based criteria
+Transition from
+primary care to
+nephrology care
+Transition from
+nephrology care to
+interprofessional care
+Access and
+transplant
+planning
+eGFR 90 60 30 20 ≤10 Kidney
+failure
+KF risk ≥3%–5%
+5 years
+KF risk ≥10%
+2 years
+KF risk ≥40%
+2 years
+eGFR 30–60 eGFR <30 eGFR <20
+Figure 15 | Transition from an estimated glomerular ﬁltration rate (eGFR)-based to a risk-based approach to chronic kidney disease
+care. KF, kidney failure.
+www.kidney-international.org chapter 2
+Kidney International (2024) 105 (Suppl 4S), S117–S314 S201
+
+================================================================================
+
+--- PAGE 87 ---
+referral wait times, particularly for high-risk individuals. In
+other clinical settings with relatively scarce access to
+nephrology care, these thresholds should be adjusted to
+ensure that wait times are acceptable for local standards.
+421
+Discussion of risk should also consider the individual
+person, their comorbidities, and their risk of death from
+other causes.
+Practice Point 2.2.2: A 2-year kidney failure risk of >10%
+can be used to determine the timing of multidisciplinary
+care in addition to eGFR-based criteria and other clinical
+considerations.
+People with CKD G4 –G5 are more likely to develop con-
+current complications of CKD including anemia, hyper-
+kalemia, bone mineral disorders, and/or metabolic acidosis
+and protein-energy wasting. In addition, they remain at high
+risk for adverse events including AKI, emergency department
+visits, and hospitalizations. As such, in many countries and
+healthcare settings, these people may be enrolled in inter-
+disciplinary care clinics or receive care management resources
+to reduce morbidity and healthcare costs, and to avoid un-
+planned dialysis initiation.
+A risk threshold risk of >10% over 2 years has been
+studied and implemented in some jurisdictions in Canada as
+the key eligibility criteria for access to interdisciplinary care
+that includes a nurse, pharmacist, renal dietitian or accredited
+nutrition provider, and other allied health support. This
+practice point is based on results from these studies, which
+demonstrate acceptance and preference of a risk-based
+criteria by patients and providers.
+422 Given the costs
+associated with delivery of care management resources and
+interdisciplinary models, risk-based thresholds offer a useful
+guide to the selection of the ideal target patient population
+to derive most bene ﬁt from the highly specialized team. It
+is important to note that people with CKD at earlier stages
+or those at lower risk of progression may bene ﬁt from an
+individual allied health resource (e.g., pharmacist or
+dietitian); however, risk-based thresholds provide a guide to
+identify people with CKD who bene ﬁt most from an entire
+multidisciplinary team.
+Practice Point 2.2.3: A 2-year kidney failure risk threshold
+of >40% can be used to determine the modality education,
+timing of preparation for kidney replacement therapy
+(KRT) including vascular access planning or referral for
+transplantation, in addition to eGFR-based criteria and
+other clinical considerations.
+The appropriate timing for modality education, timing of
+vascular access planning, or referral for transplantation in a
+person with low or declining GFR can be dif ﬁcult to predict.
+Vascular access planning in all adults with CKD G4 would
+lead to the unnecessary placement of ﬁstulae, whereas waiting
+until eGFR falls below 15 ml/min per 1.73 m
+2 may lead to
+inappropriate overuse of central venous catheters at dialysis
+initiation. Studies have described the potential utility of risk-
+based thresholds in planning for dialysis access speci ﬁcally
+and found acceptable speci ﬁcity and positive predictive values
+for the risk-based threshold criteria as compared with eGFR
+alone. The Work Group noted that the KDOQI vascular ac-
+cess guideline (2019) currently recommend a risk-based
+threshold >50% or eGFR <15 ml/min per 1.73 m
+2 for
+initiation of vascular access planning, while acknowledging
+that access to surgeons and primary failure to maturation
+rates may vary by patient and by center.
+423
+Based on current evidence, a threshold of >40% risk or an
+eGFR of 15 ml/min per 1.73 m 2 is acceptable to use for
+initiating vascular access referral. Lower risk thresholds, such
+as >20%, can optimize sensitivity, can be used to initiate
+modality education, and may be appropriate for presurgical
+vascular access planning or referral for transplantation in
+centers with longer wait times.
+Practice Point 2.2.4: Note that risk prediction equations
+developed for use in people with CKD G3 –G5, may not be
+valid for use in those with CKD G1 –G2.
+The W ork Group recognizes that the progression of CKD
+can occur at all severities, and that in earlier stages of disease
+(G1–G3), large declines in eGFR can occur in 2- to 5-year
+time frames without reaching kidney failure (Figure 16
+424).
+Risk prediction models developed in populations with later
+stages of CKD are not accurate in CKD G1 –G2, whereas
+alternative, accurate, externally validated risk prediction
+equations have been developed for predicting 40% decline in
+eGFR or kidney failure at all stages of CKD. For this
+Patient profile:
+50-year-old male with diabetes, eGFR 80 ml/min per 1.73 m2, urine ACR 1 g/g 
+Kidney failure risk: 0.07% over 2 years, 0.23% over 5 years
+CKD progression risk: 10.4% over 3 years
+0
+2
+4
+6
+8
+10
+12Risk (%)
+2 years 3 years
+Kidney failure*
+0.07%
+CKD progression*
+10.4%
+Figure 16 | Comparison of risk of chronic kidney disease (CKD)
+progression (5-year probability of estimated glomerular ﬁltration
+rate [eGFR] <60 ml/min per 1.73 m 2) versus kidney failure in
+adults with CKD G1 –G2 calculated from the risk equation
+available at https://www.ckdpc.org/risk-models.html. *Kidney
+failure risk calculated from Kidney Failure Risk Equation (KFRE). ACR,
+albumin-to-creatinine ratio. CKD progression risk from Grams ME,
+Brunskill NJ, Ballew SH, et al. Development and validation of
+prediction models of adverse kidney outcomes in the population with
+and without diabetes. Diabetes Care . 2022;45:2055 –2063.
+424
+chapter 2 www.kidney-international.org
+S202 Kidney International (2024) 105 (Suppl 4S), S117–S314
+
+================================================================================
+
+--- PAGE 88 ---
+intermediate CKD progression outcome, 3 recent publica-
+tions present models for people with or without diabetes,
+using both regression and machine learning –based methods,
+with or without biomarkers ( Table 20 ).
+8,424,425 Given the
+potential utility of these new models to identify high-risk
+people for early intervention, they should be used to predict
+disease progression in people with CKD G1 –G2 and may
+supplement established risk equations among people with
+CKD G3. People with CKD identi ﬁed as intermediate risk
+(e.g., >1% per year) with these tools may bene ﬁt from the
+earlier initiation of therapy and closer follow-up, and those
+identiﬁed as high risk (e.g., >5% per year) may have the
+largest bene ﬁt from multidrug therapy to slow progression.
+Practice Point 2.2.5: Use disease-speci ﬁc, externally vali-
+dated prediction equations in people with immunoglobulin
+A nephropathy (IgAN) and autosomal dominant polycystic
+kidney disease (ADPKD).
+Risk prediction models for speci ﬁc etiologies of CKD have
+also been developed, are externally validated, and used in
+healthcare settings to guide clinical care. For autosomal domi-
+nant polycystic kidney disease (ADPKD), 2 equations can be
+useful in determining the longer-term risk of kidney failure and
+may guide therapy with tolvaptan— the Mayo Clinic Classi ﬁ-
+cation tool and the Predicting Renal Outcome in Polycystic
+Kidney Disease (PROPKD) score,
+426,427 which incorporates
+genetic data. Of these, the Mayo Clinic Classi ﬁcation tool has
+been shown to be accurate in external validation.
+In people with IgAN, 2 externally validated prediction
+tools (clinical or clinical þ histology) have been developed
+using large international cohort studies. Models that included
+the mesangial hypercellularity (M), endocapillary hyper-
+cellularity, segmental glomerulosclerosis (S), and tubular at-
+rophy/interstitial ﬁbrosis (T) (MEST) histological score were
+more accurate (C-statistic: 0.81 –0.82 vs. 0.78) and showed
+improved reclassi ﬁcation in development and external vali-
+dation datasets.
+428,429 Given the availability of accurate
+externally validated models, these should be preferentially
+used over more general CKD models in people with an
+established diagnosis of IgAN or ADPKD. It is important to
+note that the clinical presentation of IgAN can include
+rapidly progressive disease, and people with rapidly
+progressive GN may not have been well represented in the
+cohorts used to develop existing prediction tools.
+2.3 Prediction of cardiovascular risk in people with
+CKD
+Practice Point 2.3.1: For cardiovascular risk prediction to
+guide preventive therapies in people with CKD, use externally
+validated models that are either developed within CKD
+populations or that incorporate eGFR and albuminuria.
+Cardiovascular morbidity and mortality disproportion-
+ately affect people with CKD, and risk prediction tools
+developed in the general (non-CKD) population may un-
+derestimate the risk of atherosclerotic CVD (ASCVD) or
+heart failure in CKD populations. Absolute risk is used to
+determine eligibility for disease-modifying pharmacological
+therapy in CVD guidelines, and underestimation of risk may
+lead to suboptimal treatment of people with CKD, perpetu-
+ating biases (“ renalism”) that have existed for more than 2
+decades. New models that have been developed speci ﬁcally in
+adults with CKD (QRISK3
+430) and severe CKD (ckdpc.org ),6
+and modi ﬁcations to existing CVD models (pooled cohort
+equations [PCE]/Systematic COronary Risk Evaluation
+[SCORE]
+431) that include eGFR and albuminuria should be
+used to predict cardiovascular events in individuals with
+CKD.
+390–393,427,428,430,431,432 In the case of the PCE, the
+CKD patch signi ﬁcantly improves the calibration of ASCVD
+risk, and the eGFR patch improves the prediction of CVD
+mortality using SCORE. Recently, the American Heart
+Association Predicting Risk of CVD EVENTs (PREVENT /C212
+,
+pending) equations were developed in over 6 million US
+adults aged 30 –79 years without known CVD with
+outcomes of incident ASCVD and HF (combined and
+separately).433,434 These equations included eGFR in the
+primary model and included ACR in an add-on model, so
+they may be particularly appropriate for people with CKD.
+Practice Point 2.3.2: For mortality risk prediction to guide
+discussions about goals of care, use externally validated
+models that predict all-cause mortality speci ﬁcally devel-
+oped in the CKD population.
+People with CKD are at high risk of all-cause mortality,
+and the competing risk of death can affect clinical decision-
+making, particularly for older adults with CKD G4, who may
+simultaneously be at high risk of kidney failure requiring
+dialysis. All-cause mortality can be challenging to predict due
+to the multiple biological pathways and differences in
+Table 20 | Externally validated risk models for predicting a 40% decline in GFR
+Variables Population/events
+Time
+horizon (yr)
+Discrimination
+and calibration
+CKD-PC424 16 variables including demography, CVD
+risk factors, clinical and laboratory variable
+1.6 million adults with or at
+risk for CKD
+5 0.74–0.77
+Klinrisk8 20 laboratory variables derived from CBC,
+chemistry panel, and urine
+177,196 adults with CKD G1 –G4
+or at risk for CKD
+1–5 0.84 –0.88
+KidneyIntelx425 3 proprietary biomarkers, 5 additional
+clinical variables including albuminuria, BP
+1146 adults with CKD G1 –G3
+and diabetes
+5 0.77
+BP, blood pressure; CBC, complete blood count; CKD, chronic kidney disease; CKD-PC, Chronic Kidney Disease Prognosis Consortium; GFR, glomerular ﬁltration rate.
+www.kidney-international.org chapter 2
+Kidney International (2024) 105 (Suppl 4S), S117–S314 S203
+
+================================================================================
+
+--- PAGE 89 ---
+personal preferences and goals of care that are not captured
+by risk prediction models. Models developed by the CKD-PC
+for multiple outcomes in CKD G4 þ predict the risk of death,
+nonfatal CVD event, or kidney failure in adults at 2 and 4
+years and were developed using multinational data.
+6,434
+A 5-year mortality model was also developed in the Car-
+diovascular Health Study in older adults from the United
+States, where the majority of people had CKD G3. 434 Both
+models have modest discrimination (C-statistics
+approximately 0.70). These may be more appropriate to
+identify high-risk groups, where earlier discussions about
+conservative care pathways or alternative goals of care may
+have been helpful. These models should not be used to
+determine the futility of initiating KRT.
+For research recommendations, please see Chapter
+6: Research recommendations.
+chapter 2 www.kidney-international.org
+S204 Kidney International (2024) 105 (Suppl 4S), S117–S314
+
+================================================================================
+
+--- PAGE 108 ---
+older people with chronic kidney disease and low-grade
+acidosis (BiCARB) Study Group. 543 It contributed 33 of 152
+versus 33 of 148 kidney failure outcomes to the meta-
+analysis in its bicarbonate versus placebo arms, respectively
+(HR: 0.97; 95% CI: 0.64 –1.49). Importantly, the BiCARB
+trial, which studied people with CKD G3 –G4 aged $60
+years and sodium bicarbonate concentration <22 mmol/l,
+also found no evidence of bene ﬁt on nonkidney outcomes
+to support oral sodium bicarbonate supplementation (the
+primary outcome was based on the Short Physical
+Performance Battery at 12 months, and secondary outcomes
+included generic and disease-speci ﬁc QoL assessments,
+anthropometry, kidney function, walk distance, BP , and
+bone and vascular health markers). Allocation to oral
+sodium bicarbonate was associated with higher costs and
+lower European Quality of Life 5 Dimensions 3 Level
+V ersion (EQ-5D-3L) assessed QoL over 1 year.
+543
+Licensed non-alkali oral interventions may be an alterna-
+tive to oral sodium bicarbonate to treat metabolic acidosis but
+have not been shown to have particular advantages.
+544,545
+Although placebo-controlled trials have found no good
+evidence that correcting sodium bicarbonate levels has
+important effects on clinical outcomes, the W ork Group
+concluded that the intervention is clearly effective at
+increasing serum bicarbonate concentration and is a
+suitable treatment to avoid more severe acidosis with
+potential for clinical implications. The W ork Group suggests
+that a serum bicarbonate of <18 mmol/l in adults is
+desirable to avoid, but large RCTs are required to determine
+a precise threshold whereby the treatment of low serum
+bicarbonate levels leads to improvements in clinical
+outcome. As correction of bicarbonate to the normal range
+has not been demonstrated to reduce the risk of kidney
+failure, lower thresholds to initiate therapy than 18 mmol/l
+could be considered (see Research Recommendations).
+Dietary approaches. Dietary modi ﬁcations that limit the
+consumption of acid-rich foods and/or increase the intake of
+alkaline-rich foods reduce the net endogenous acid production
+and can serve as an additional strategy to control metabolic
+acidosis in people with CKD.
+546,547 Such diets are generally low
+in animal protein or have a higher consumption of plant-based
+foods over animal-based foods (i.e., plant-dominant diets such
+as Mediterranean or vegetarian diets). Four small RCT s of
+alkaline-rich plant-based diets in adults with CKD
+demonstrate a comparable bene ﬁtt oo r a ls o d i u m
+bicarbonate in controlling metabolic acidosis.
+548–551
+Special considerations
+Pediatric considerations. As in adults, children with CKD
+often have metabolic acidosis. In the CKiD and the Cardio-
+vascular Comorbidity in Children with Chronic Kidney Disease
+Study (4C) studies, 38% –60% of children had a serum bicar-
+bonate of <22 mmol/l, varying by CKD category. Low bicar-
+bonate was associated with increased risk of disease
+progression.
+395,552 It should also be noted that for younger
+children, the normal range for sodium bicarbonate is as low
+as 17 mmol/l. In children, metabolic acidosis is also likely to
+cause growth retardation. Data from the observational CKiD
+study revealed that prepubertal children with acidosis who
+were treated with alkali had improved growth.
+553 In children
+with normal GFR but renal tubular acidosis, prolonged
+acidosis can also result in poor growth. The KDOQI
+guideline on bone metabolism for children with CKD
+recommends the prevention of acidosis in children to
+optimize growth.
+554 There have not been any trials examining
+the effect of bicarbonate supplementation on CKD
+progression or growth in children.
+3.11 Hyperkalemia in CKD
+Deﬁnition and prevalence. Potassium is key to cell mem-
+brane electrophysiology, with abnormalities predisposing to
+abnormal cardiac conduction and arrhythmias. The kidneys
+play a key role in potassium homeostasis with decreased GFR
+generally associated with increased potassium concentration
+(T able 24; Figure 29
+555). The de ﬁnition of hyperkalemia is
+based on the distribution of potassium values in the general
+population. Hyperkalemia is uncommon when the eGFR is
+>60 ml/min per 1.73 m
+2 and increases with lower GFR.
+Adults with CKD G3, A1 in the general and high-risk pop-
+ulation cohorts, contributing to the CKD-PC, had an adjusted
+prevalence of hyperkalemia (de ﬁned as a serum potassium
+>5.0 mmol/l) of 8.8% and 4.5% in those with and without
+diabetes, respectively, increasing to 34.4% and 23.7% by CKD
+G5, A3 (Figure 30 ).
+541 Note that there is variability in the
+prevalence of hyperkalemia, and it is not inevitable at lower
+Table 24 | Variation of laboratory values in a large population database a by age group, sex, and eGFR; potassium, mmol/l, mean
+(SD), and n [ 4,278,600
+Measure, mean (SD) Age (yr) Sex
+GFR category (ml/min per 1.73 m 2)
+105D 90–104 75 –89 60 –74 45 –59 30 –44 15 –29 0 –14
+Serum potassium $65 Female 4.1 (0.5) 4.2 (1.3) 4.2 (0.5) 4.3 (0.5) 4.3 (1.3) 4.4 (0.5) 4.5 (1.0) 4.5 (2.0)
+Male 4.2 (0.5) 4.3 (0.6) 4.3 (1.1) 4.4 (0.6) 4.4 (0.7) 4.5 (1.1) 4.6 (0.6) 4.6 (1.6)
+<65 Female 4.1 (0.7) 4.2 (1.3) 4.3 (17.0) 4.2 (1.0) 4.3 (0.5) 4.3 (0.6) 4.4 (0.6) 4.5 (1.1)
+Male 4.2 (0.4) 4.3 (0.5) 4.3 (0.6) 4.3 (0.4) 4.4 (0.5) 4.5 (0.6) 4.5 (0.7) 4.6 (0.7)
+eGFR, estimated glomerular ﬁltration rate; GFR, glomerular ﬁltration rate.
+aData from the Optum Labs Data Warehouse, a longitudinal, real-world data asset with deidenti ﬁed administrative claims and electronic health record data. The database
+contains longitudinal health information on enrollees and patients, representing the diversity of geographical regions across the United States.
+www.kidney-international.org chapter 3
+Kidney International (2024) 105 (Suppl 4S), S117–S314 S223
+
+================================================================================
+
+--- PAGE 111 ---
+monitoring, please refer to Figure 21. See Section 4.3 for more
+information on continuing RASi after hyperkalemia events.
+3.11.2 Potassium exchange agents
+Practice Point 3.11.2.1: Be aware of local availability or
+formulary restrictions with regard to the pharmacologic
+management of nonemergent hyperkalemia.
+The pharmacologic management of nonemergent hyper-
+kalemia has a number of clinical tools with the increased
+number of licensed potassium exchange agents. These med-
+ications have differing mechanisms of action, onsets of clin-
+ical effects, and potential medication and disease-state
+interactions ( Table 27
+581,582). Although the classic potassium
+exchange agents have had tolerability issues, the newer ones
+appear to have fewer such issues and appear relatively safe
+when used long term.
+575,583,584 Use of these newer exchange
+agents may help facilitate essential use of RASi/MRA.
+However, it is important that the healthcare provider be
+aware of clinical nuances and local availability or formulary
+restrictions in determining therapy selection.
+583 A
+comparison of available potassium exchange agents can be
+found in Table 27.
+3.11.3 Timing to recheck potassium after identifying moder-
+ate and severe hyperkalemia in adults
+“Think Kidneys ” and the UK Kidney Association have pro-
+vided a practical guide, which we have adapted ( Ta bl e 2 8)f o r
+repeat testing after a hyperkalemic episode. 585 The timing of
+repeat testing is guided by the level of hyperkalemia and the
+clinical context.586
+3.11.4 Managing hyperkalemia
+In people with CKD and the management of nonemergent
+hyperkalemia, a systematic approach of treating correctable
+factors (e.g., correction of severe metabolic acidosis) and
+understanding the role of diet and medications may provide
+a pragmatic framework. Figure 32 shows a stepwise
+practical approach to the management of hyperkalemia in
+CKD.
+3.11.5 Dietary considerations
+In early stages of CKD, high intake of foods naturally rich in
+potassium appears to be protective against disease progres-
+sion, and dietary restriction of foods naturally containing
+potassium, such as fruits and vegetables, may be harmful to
+cardiac health; therefore, such restriction is not endorsed.
+587
+Practice Point 3.11.5.1: Implement an individualized
+approach in people with CKD G3 –G5 and emergent
+hyperkalemia that includes dietary and pharmacologic in-
+terventions and takes into consideration associated
+comorbidities and quality of life (QoL). Assessment and
+education through a renal dietitian or an accredited
+nutrition provider are advised.
+Practice Point 3.11.5.2: Provide advice to limit the intake of
+foods rich in bioavailable potassium (e.g., processed foods)
+for people with CKD G3 –G5 who have a history of
+hyperkalemia or as a prevention strategy during disease
+periods in which hyperkalemia risk may be a concern.
+Diet may increase serum potassium postprandially,
+575,588
+but other conditions such as the use of potassium-sparing
+Table 26 | Medications associated with increased risk of hyperkalemia
+Class Mechanism Example
+ACEi Inhibit conversion of angiotensin I to angiotensin II Captopril, lisinopril, perindopril, etc.
+ARB Inhibit activation of angiotensin I receptor by angiotensin II Losartan, irbesartan, candesartan, etc.
+Aldosterone antagonist Block aldosterone receptor activation Spironolactone, eplerenone, and ﬁnerenone
+b-Adrenergic receptor
+blocker
+Inhibit renin release Propranolol, metoprolol, and atenolol
+Digitalis glycoside Inhibit Na þ-Kþ-ATPase, necessary for collecting duct K þ secretion Digoxin
+Heparin Reduced production of aldosterone Heparin sodium
+Potassium-sparing
+diuretic
+Block collecting duct apical Na þ channel, decreasing gradient for K þ secretion Amiloride and triamterene
+NSAIDs Inhibit synthesis of prostaglandin E and prostacyclin, inhibiting renin release Ibuprofen, naproxen, diclofenac, etc.
+CNI Inhibit Na þ-Kþ-ATPase, necessary for collecting duct K þ secretion Cyclosporine and tacrolimus
+ns-MRA Block MR-mediated Na þ reabsorption Finerenone
+Other Block collecting duct apical Na þ channel, decreasing gradient for K þ secretion Trimethoprim and pentamidine
+ACEi, angiotensin-converting enzyme inhibitor; ARB, angiotensin II receptor blocker; ATP, adenosine triphosphate; CNI, calcineurin inhibitor; K þ, potassium; Na þ, sodium;
+NSAID, nonsteroidal anti-in ﬂammatory drug; ns-MRA, nonsteroidal mineralocorticoid receptor antagonist.
+Data from Weiner et al. 576 and Kidney Disease: Improving Global Outcomes Diabetes Work Group. 23
+chapter 3 www.kidney-international.org
+S226 Kidney International (2024) 105 (Suppl 4S), S117–S314
+
+================================================================================
+
+--- PAGE 112 ---
+medications, metabolic acidosis, hyperosmosis due to
+hyperglycemia, hypernatremia or uremia, and constipation
+are more likely to explain plasma potassium abnormalities
+than diet.
+545,556,572,589 Although short-term dietary
+restriction of the foods highest in potassium is a valid
+strategy to treat acute hyperkalemia, restriction of foods
+highest in bioavailable potassium may be a supportive
+prevention strategy for people with a history of
+hyperkalemia or during periods in which hyperkalemia risk
+is a concern.
+590 Increased efforts toward education on
+potassium content in foods can serve to improve diet
+quality and diversity for many people with CKD where this
+Table 27 | A comparison of potassium exchange agents
+(Polystyrene sulfonates) sodium or calcium Patiromer Sodium zirconium cyclosilicate (SZC)
+Mechanism of
+action
+Sodium-potassium exchange resin (SPS) or
+calcium-potassium exchange resin (CPS)
+Calcium-potassium exchange polymer Crystalline compound that traps K þ in
+exchange for hydrogen and sodium
+cations
+Counterion
+content
+SPS: Suspension contains 65 mmol/60 ml (15 g)
+of sodium and powder approximately 4.1
+mmol/g of sodium.
+CPS: 1.6 –2.4 mmol/g of calcium.
+1600 mg of calcium per 8.4 g of
+patiromer
+Approximately 400 mg of sodium per
+5 g of SZC
+Cations bound Potassium, magnesium, and calcium Potassium, magnesium, and phosphate
+(bound by calcium release)
+582
+Potassium
+Formulation
+of route of
+administration
+Powder for reconstitution (oral), suspension
+(oral), and enema (rectal)
+Powder for reconstitution (oral) Powder for reconstitution (oral
+suspension)
+Dosage and
+titration
+Oral: 15 –60 g/d (up to 4 times per day)
+Rectal: 30 g/d (for SPS up to a maximum
+of 50 g/d)
+Initial: 8.4 g orally once per day
+(maximum 25.2 g orally once per
+day); dose can be increased by 8.4 g
+increments at 1-week intervals
+Initial: 10 g orally 3 times per day for
+up to 48 hours
+Maintenance
+dosing
+15–60 g/d orally per day depending on
+potassium level and level of tolerability
+8.4–25.2 g orally once per day 5 g every second day to 10 g once
+per day
+Onset of effect Variable, hours to days 4–7 hours Starts to reduce potassium within
+1 hour with normokalemia typically
+at 24 –48 hours
+Duration
+of effect
+Variable, 6 –24 hours 24 hours Not studied; not systematically
+absorbed and excreted fecally
+Administration
+pearls
+Separate from oral medications by at least
+3 hours before or 3 hours after
+administration; if gastroparesis, separate
+other medications by 6 hours
+Separate from oral medications by at
+least 3 hours before or 3 hours after
+administration except for those
+drugs to not have a clinically
+important interaction
+No dose adjustments or separation of
+time of dosing is required for any
+medication that does not have pH-
+dependent bioavailability. However,
+SZC should be administered at least
+2 hours before or 2 hours after oral
+medicinal products with clinically
+meaningful gastric pH-dependent
+bioavailability
+Adverse effects GI events (nausea, vomiting, diarrhea,
+constipation), electrolyte disturbances
+(hypokalemia, hypocalcemia, and
+hypomagnesemia), edema, and potentially
+serious GI adverse events (intestinal
+necrosis, bleeding, ischemic colitis, and
+perforation)
+GI events (nausea, diarrhea, and
+ﬂatulence), electrolyte disturbances
+(hypokalemia, hypercalcemia, and
+hypomagnesemia)
+Insufﬁcient postmarketing surveillance
+at present to evaluate long-term/
+rare events
+Hypokalemia and edema events are the
+most common. Milder reports of GI
+events (nausea, diarrhea, and
+constipation)
+Insufﬁcient postmarketing surveillance
+at present to evaluate long-term/
+rare events
+GI, gastrointestinal.
+Modiﬁed from Bridgeman MB, Shah M, Foote E. Potassium-lowering agents for the treatment of nonemergent hyperkalemia: pharmacology, dosing and comparative ef ﬁcacy.
+Nephrology Dialysis Transplantation , Volume 34, Supplement 3, pages iii45 –iii50.581 ª The Author(s) 2019. Published by Oxford University Press on behalf of ERA-EDTA. All
+rights reserved.
+Table 28 | Suggested action in the event of moderate and
+severe hyperkalemia
+Severity of
+hyperkalemia Clinically unwell or AKI Unexpected result
+Moderate
+Kþ 6.0–6.4 mmol/l
+Assess and treat
+in hospital
+Repeat within
+24 hours
+Severe
+K
+þ $6.5 mmol/l
+Take immediate action to assess and treat.
+Assessment will include blood testing and
+electrocardiogram monitoring
+AKI, acute kidney injury; K þ, potassium.
+Data from Think Kidneys, the Renal Association and the British Society for Heart
+Failure.585
+www.kidney-international.org chapter 3
+Kidney International (2024) 105 (Suppl 4S), S117–S314 S227
+
+================================================================================
+
+--- PAGE 114 ---
+directed at reducing both progression of CKD and reduction
+in MACE.
+Pediatric considerations. As described for adults with CKD,
+abnormal serum potassium levels are also commonly seen in
+children with advanced stages of CKD, as well as those with
+glomerular disorders, metabolic acidosis, and those on
+RASi.
+600 In addition, a small group of children with CKD can
+have persistent hypokalemia, usually as a result of inherited or
+acquired renal tubular disorders.
+In children with CKD, discontinuation of RASi was asso-
+ciated with an acceleration of kidney function decline
+compared with a matched control cohort of children in
+whom RASi were continued.
+395
+In children with CKD, the dietary management of potas-
+sium can pose unique challenges as the provision of adequate
+energy, protein, and micronutrients for growth cannot be
+compromised, and specialized low potassium nutritional
+formulas may not be widely available or palatable.
+601
+An example of a patient resource (for children and their
+caregivers) for potassium management can be found at:
+Nutrition taskforce —European Society for Paediatric
+Nephrology (https://www.espn-online.org/ ).
+3.12 Anemia
+The KDIGO 2012 Clinical Practice Guideline for Anemia in
+Chronic Kidney Disease will be updated in 2024. 436
+Mean hemoglobin is, on average, lower in both men and
+women with an eGFR <60 ml/min per 1.73 m 2 compared
+with health adults and progressively falls with decreasing GFR
+(Table 29; Figure 34 541). For example, adults with CKD G3,
+A1 in the general and high-risk population cohorts
+contributing to the CKD-PC had an adjusted prevalence of
+anemia (hemoglobin <12 g/dl in men; <11 g/dl in women)
+of 14.9% and 11.5% in those with and without diabetes,
+respectively, and this prevalence increased to 60.7% and
+57.4% by CKD G5, A3. Note that a drop in Hb is expected
+in pregnancy (physiologic anemia) and may not warrant
+treatment (although the cutoff at which treatment is
+desirable is unclear and requires clinical judgment). Please
+refer to the KDIGO Clinical Practice Guideline for Anemia
+in Chronic Kidney Disease publications for speci ﬁc
+recommendations, selection, and dosing of speci ﬁc
+therapeutic agents, as well as research recommendations.
+3.13 CKD-Mineral Bone Disorder (CKD-MBD)
+The Work Group highlights the KDIGO 2017 Clinical Practice
+Guideline Update for the Diagnosis, Evaluation, Prevention,
+and Treatment of Chronic Kidney Disease –Mineral and Bone
+Disorder (CKD-MBD).
+20 Please refer to this publication for
+speciﬁc recommendations, selection, dosing of speci ﬁc
+therapeutic agents, and research recommendations.
+Changes in bone mineral metabolism and alterations in
+calcium and phosphate homeostasis occur early in the course
+of CKD and progress as eGFR declines ( Figure 35
+541). These
+are detectable as abnormalities of serum calcium, phosphate,
+vitamin D metabolites, and circulating hormones (i.e.,
+parathyroid hormone [PTH] and ﬁbroblast growth factor-
+23). These changes are grouped under the umbrella term
+CKD-MBD, which also includes renal osteodystrophy and
+Table 29 | Variation of laboratory values in a large population database a by age group, sex, and eGFR; hemoglobin, g/dl, mean
+(SD), and n [ 3,561,622
+Measure, mean (SD) Age (yr) Sex
+GFR category (ml/min per 1.73 m 2)
+105D 90–104 75 –89 60 –74 45 –59 30 –44 15 –29 0 –14
+Hemoglobin $65 Female 12.2 (2.0) 13.2 (4.6) 13.2 (1.7) 13.2 (1.5) 12.8 (1.6) 12.1 (1.7) 11.2 (1.8) 10.3 (1.7)
+Male 12.9 (2.4) 14.2 (1.8) 14.2 (1.7) 14.1 (1.8) 13.5 (1.9) 12.7 (2.0) 11.5 (2.0) 10.5 (2.0)
+<65 Female 13.0 (1.4) 13.3 (1.3) 13.4 (2.0) 13.4 (1.4) 13.0 (1.6) 12.1 (1.8) 11.0 (1.9) 10.6 (2.5)
+Male 14.9 (1.5) 15.0 (3.1) 15.0 (1.4) 14.9 (1.6) 14.1 (2.0) 12.9 (2.2) 11.7 (2.2) 10.9 (2.0)
+eGFR, estimated glomerular ﬁltration rate; GFR, glomerular ﬁltration rate.
+aData from the Optum Labs Data Warehouse, a longitudinal, real-world data asset with deidenti ﬁed administrative claims and electronic health record data. The database
+contains longitudinal health information on enrollees and patients, representing the diversity of geographical regions across the United States.
+–2.5
+–2
+–1.5
+–1
+–0.5
+0
+0.5
+1
+1.5
+Hemoglobin, g/d
+15 30 45 60 75 90 105 12 0
+eGFR, ml/min/1.73 m2
+Female
+Male
+Figure 34 | Association between estimated glomerular ﬁltration
+rate (eGFR) and hemoglobin concentration from general
+population and high-risk cohorts from the Chronic Kidney Disease
+Prognosis Consortium, by diabetes status. The y axis represents
+the meta-analyzed absolute difference from the mean adjusted value
+at an eGFR of 80 ml/min per 1.73 m
+2 and albumin excretion <30 mg/g
+(<3 mg/mmol). Reproduced from American Journal of Kidney Diseases ,
+volume 73, issue 2, Inker LA, Grams ME, Levey AS, et al. Relationship of
+estimated GFR and albuminuria to concurrent laboratory abnormalities:
+an individual participant data meta-analysis in a Global Consortium,
+pages 206–217, Copyright ª 2018, with permission from the National
+Kidney Foundation, Inc.
+541
+www.kidney-international.org chapter 3
+Kidney International (2024) 105 (Suppl 4S), S117–S314 S229
+
+================================================================================
+
+--- PAGE 125 ---
+considered that the well-established intervention of coronary
+revascularization will continue to have a key role in angina
+relief.
+705 Importantly, this recommendation should not
+apply to those with unacceptably severe angina symptoms.
+It should also be noted that people with left ventricular
+dysfunction (i.e., ejection fraction <35%) or left main
+disease were excluded from the de ﬁnitive ISCHEMIA
+trial.707a The Work Group considers that certain design
+features of the ISCHEMIA-CKD trial may have led to
+angina bene ﬁts not being detected, and the trial results
+should not rule out angina bene ﬁts in people with CKD
+(see above). If an invasive strategy is pursued, there are
+effective strategies to reduce the risk of contrast-induced
+AKI (Chapter 4).
+708
+The totality of the evidence from the CKD-speci ﬁc trials is
+consistent with no net difference between an initial conser-
+vative approach using aggressive medical therapy versus an
+invasive strategy when treating stable stress-test con ﬁrmed
+ischemic heart disease. This is consistent with the large gen-
+eral population-based ISCHEMIA trial.
+707a
+3.16 CKD and atrial ﬁbrillation
+In CKD, the same principles to diagnose and manage atrial
+ﬁbrillation should be used as in people without CKD.
+Prevalence and consequences. Atrial ﬁbrillation is the com-
+monest sustained arrhythmia, with risk increasing steeply with
+increasing age (earlier in men than women). 709 There is a
+particularly high prevalence in people with CKD. Crude
+prevalence ranging from 16% to 21% has been reported in
+people with CKD not requiring KRT .
+710 In the cohorts
+contributing to the CKD-PC, adults with CKD G3, A1 had
+an adjusted risk of atrial ﬁbrillation of 1.2 –1.5, increasing to
+an adjusted risk of 4.2 by CKD stages G5, A3 ( Figure 3912).
+Atrial ﬁbrillation can directly cause thromboembolism
+(particularly stroke) and/or heart failure. It is also linked,
+perhaps directly or through shared risk factors, with increased
+risk of death, hospitalization, vascular dementia, depression,
+and reduced QoL.
+709 Detailed clinical practice guidelines have
+been formulated by the cardiology community describing
+deﬁnitions, classi ﬁcation, diagnosis, screening strategies, and
+management.709 It is beyond the scope of this KDIGO
+guideline to consider all aspects of the diagnosis and
+management of atrial ﬁbrillation in people with CKD. The
+ERT review focused on the role of non –vitamin K antagonist
+oral anticoagulants (NOACs) versus warfarin for
+thromboprophylaxis in CKD.
+Identiﬁcation and management. Atrial ﬁbrillation can be
+asymptomatic but symptoms are not a prerequisite for risk of
+complications. As the prevalence of atrial ﬁbrillation is high in
+people with CKD and there are effective strategies to manage
+its associated complications, opportunistic pulse-based
+screening (e.g., when taking BP), followed by a 12-lead
+electrocardiogram if an irregularly irregular pulse is identi ﬁed
+should be considered. Such an approach is low cost and
+simple to implement. Figure 40 outlines approaches to
+different diagnostic and management strategies.
+Practice Point 3.16.1: Follow established strategies for the
+diagnosis and management of atrial ﬁbrillation (Figure 40).
+Prophylaxis against stroke and systemic thromboembolism.
+Recent cardiology guidelines recommend a risk factor –based
+approach to stroke thromboprophylaxis decisions in atrial
+ﬁbrillation using the Congestive heart failure, Hypertension,
+Age $75 (doubled), Diabetes, Stroke (doubled), Vascular
+disease, Age 65 to 74, and Sex category (female) (CHA
+2DS2-
+V ASc) stroke risk score. They recommend that only people at
+“low stroke risk ” (CHA
+2DS2-V ASc score ¼ 0i nm e n ,o r1i n
+women) should not be offered antithrombotic therapy. Oral
+anticoagulants should be considered for stroke prevention
+with a CHA
+2DS2-V ASc score of 1 in men or 2 in women,
+considering net clinical bene ﬁt and values and preferences
+of people with CKD. Oral anticoagulants are clearly recom-
+mended for stroke prevention in people with atrial ﬁbrillation
+and a CHA
+2DS2-V ASc score $2 in men or $3 in women. 709
+Our W ork Group considered that oral anticoagulation for
+thromboprophylaxis should nearly always be considered for
+preventing stroke in people with decreased eGFR and atrial
+ﬁbrillation (Figure 40 ). The presence of decreased GFR is a
+risk for thromboembolic stroke in people with atrial
+ﬁbrillation.
+710–712 It has been estimated that approximately
+95% of people with an eGFR of <60 ml/min per 1.73 m 2
+have a CHA 2DS2-V ASc score of $2, increasing to
+approximately 99% at an eGFR of <30 ml/min per 1.73
+m2.711 Importantly, it has also been shown that in a group
+of people with a CHA 2DS2-V ASc score of 0 to 1 point (i.e.,
+a group where thromboprophylaxis may not be considered
+indicated), people with CKD within the group are at much
+higher risk of cerebrovascular and other systemic
+105+
+90–104
+60–89
+45–59
+30–44
+15–29
+<15
+<10 10–29 30–299 300–999 1000+
+1.1 1.3 1.7 2.4 3.5
+Ref 1.2 1.5 1.9 2.3
+1.0 1.2 1.4 1.7 2.2
+1.2 1.3 1.5 1.8 2.4
+1.4 1.5 1.7 2.0 2.4
+1.9 1.8 2.0 2.6 3.0
+2.6 2.5 3.1 3.6 4.2
+Overall
+eGFRcr
+ACR (mg/g)
+Atrial fibrillation: 50 cohorts
+Study size = 22,886,642; events = 1,068,701
+Figure 39 | Meta-analyzed adjusted prevalence of atrial
+ﬁbrillation from cohorts contributing to the Chronic Kidney
+Disease Prognosis Consortium, by diabetes status. ACR, albumin-
+to-creatine ratio eGFRcr, creatinine-based estimate glomerular
+ﬁltration rate. Reproduced with permission from JAMA, Writing Group
+for the CKD Prognosis Consortium; Grams ME, Coresh J, Matsushita K,
+et al. Estimated glomerular ﬁltration rate, albuminuria, and adverse
+outcomes: an individual-participant data meta-analysis. JAMA.
+2023;330(13):1266–1277.
+12 Copyright ª 2023 American Medical
+Association. All rights reserved.
+chapter 3 www.kidney-international.org
+S240 Kidney International (2024) 105 (Suppl 4S), S117–S314
+
+================================================================================
+
+--- PAGE 131 ---
+Chapter 4: Medication management and drug
+stewardship in CKD
+Medication management is an important component of the
+care of people with CKD. Medications can be highly bene ﬁ-
+cial, but some may be toxic, are excreted by the kidney, may
+have narrow therapeutic windows, or may have no proven
+clear evidence of bene ﬁt or indication in people with CKD.
+Drug stewardship refers to the effective, safe, and sus-
+tainable use of medications by all staff and physicians,
+encompassing the whole cycle of medication use. Medica-
+tions need to be prescribed responsibly, monitored for ef ﬁ-
+cacy and safety, and when they do not or no longer serve
+their intended purpose, discontinued. This chapter discusses
+key concepts in the processes of drug stewardship in people
+with CKD. It is beyond the scope of this guideline to list all
+the medications that may have altered risks/bene ﬁts in
+people with CKD. Such information is widely available in
+documents that may exist at local, regional, or national
+bodies (e.g., British National Formulary: www.bnf.org)a n d
+in textbooks of pharmacology. However, we describe case
+examples to highlight the key classes of commonly pre-
+scribed medications in people with CKD. This guidance is
+based on knowledge of pharmacology that has universal
+relevance. In many cases, knowledge of altered risks/bene ﬁts
+of medications comes, however, from observational studies
+and case reports from routine care.
+4.1 Medication choices and monitoring for safety
+Abnormal kidney function results in alteration in pharma-
+cokinetics and pharmacodynamics, and for people with CKD,
+as the GFR worsens, so does the prevalence of polypharmacy
+and comorbidities.
+725 People with CKD are at increased risk
+of medication errors and inappropriate prescribing (noted
+to be up to 37% in ambulatory outpatient studies and up
+to 43% in long-term care studies
+726,727). Thus, improved
+understanding and collaboration with pharmacists in
+developing care plans and medication review is strongly
+recommended.
+People with CKD have reduced ability to excrete medica-
+tions and/or their metabolites (which may increase adverse
+event risk or exaggerate/diminish ef ﬁcacy) and increased
+sensitivity to medications (e.g., those bound to albumin in
+hypoalbuminemic states such as nephrotic syndrome).
+Additional issues include nephrotoxicity, diminished toler-
+ance of side effects in the context of coexisting comorbidities
+or older age, and lack of adequate evidence for either bene ﬁt
+or harm of speci ﬁc compounds, due to historical exclusion of
+people with (advanced) CKD from most clinical trials.
+727,728
+As in all medical decision-making, healthcare providers
+should consider the indication, bene ﬁt-risk pro ﬁle, and po-
+tential nephrotoxicity while balancing accessibility, availabil-
+ity, local health policies, cultural practices, affordability, and
+patient preferences. Where available, consultation with
+pharmacists as part of the multidisciplinary team is encour-
+aged to assure optimized comprehensive medication man-
+agement and to improve pharmacoequity.
+Practice Point 4.1.1: People with CKD may be more sus-
+ceptible to the nephrotoxic effects of medications. When
+prescribing such medications to people with CKD, always
+consider the bene ﬁts versus potential harms.
+Between 18% –20% of people with CKD G3 –G5 receive at
+least one potentially inappropriate nephrotoxic medication
+annually, primarily NSAIDs, nephrotoxic antivirals, and
+bisphosphonates.
+729 Nephrotoxic medications may be
+indicated in people with CKD if expected bene ﬁts exceed
+potential harms. 730 However, whenever possible, healthcare
+providers should strive to use non-nephrotoxic alternatives.
+Common nephrotoxic medications to be aware of and
+potential alternatives that could be prescribed instead are
+listed in Table 31 .
+725,731–738 Although some nephrotoxic
+medications have viable alternatives, the alternatives may be
+less potent or there is limited comparison data on clinical
+outcomes, safety, and cost-effectiveness.
+Practice Point 4.1.2: Monitor eGFR, electrolytes, and ther-
+apeutic medication levels, when indicated, in people with
+CKD receiving medications with narrow therapeutic win-
+dows, potential adverse effects, or nephrotoxicity, both in
+outpatient practice and in hospital settings.
+Ensuring a safe use of medication requires careful moni-
+toring for adverse effects and ef ﬁcacy. A key example includes
+the need to monitor potassium and creatinine during the
+initial weeks of treatment with ACEi and ARBs (Figure 21 ).
+23
+Medications such as gentamicin and vancomycin have a
+narrow therapeutic range, with higher trough levels
+commonly associated with AKI, and so require close
+monitoring of GFR and medication levels during prolonged
+treatment.
+731 Other medications, such as lithium or
+methotrexate, require at least annual monitoring of
+creatinine to evaluate potential risks of nephrotoxicity.
+Practice Point 4.1.3: Review and limit the use of over-the-
+counter medicines and dietary or herbal remedies that may
+be harmful for people with CKD.
+chapter 4 www.kidney-international.org
+S246 Kidney International (2024) 105 (Suppl 4S), S117–S314
+
+================================================================================
+
+--- PAGE 134 ---
+may impact drug metabolism and response. Because drug
+dosages are often universal, women are more likely to
+consume higher doses in relation to their body
+weight,
+136,763,764 and this could be associated with more
+adverse events. 136 In people with heart failure with reduced
+ejection fraction, observational studies show improved
+survival in women with lower doses of renin-angiotensin-
+aldosterone system (RAAS)-blocking medications, whereas
+men bene ﬁt from higher doses.
+765,766 This may be related to
+lower RAAS activity in women compared with men. 767
+4.2 Dose adjustments by level of GFR
+Practice Point 4.2.1: Consider GFR when dosing medications
+cleared by the kidneys.
+Many medications and/or their active metabolites are
+excreted by the kidneys. Failure to properly account for the
+effect of GFR when designing appropriate drug-dosing regi-
+mens can predispose a person to treatment failure or adverse
+events.
+725,728 Although guidelines for adjustment of the
+dosing regimen at varying severities of CKD provided by
+the manufacturer are widely available in pharmacopeias,
+textbooks, online references, or local procedures, there may
+be signi ﬁcant differences in information provided by these
+resources.
+768
+Practice Point 4.2.2: For most people and clinical settings,
+validated eGFR equations using SCr are appropriate for
+drug dosing.
+Practice Point 4.2.3: Where more accuracy is required for
+drug-related decision-making (e.g., dosing due to narrow
+therapeutic or toxic range), drug toxicity, or clinical situ-
+ations where eGFRcr estimates may be unreliable, use of
+equations that combine both creatinine and cystatin C, or
+measured GFR may be indicated.
+An assessment of GFR is important for guiding decisions
+related to the choice and dosing of medications. Section 1.2
+addresses the accuracy of validated eGFR equations, as well
+as indications for the use of eGFRcr-cys or mGFR.
+There is inconsistency between this guidance and those
+found in the package inserts or classic source references for
+drug dosing. Regulatory agencies have not universally
+required pharmacokinetics in abnormal kidney function for
+medication approval.
+769 In addition, although the Cockcroft-
+Gault formula for estimating CrCl has been used in many past
+pharmacokinetic studies that serve as the basis for the drug
+dosing, there are multiple concerns with that equation. It
+was developed in an era when the need for standardization
+of creatinine measurements was not appreciated, women
+and individuals of Black race were not included, and there
+are concerns about use of weight, which can be impacted
+by edema or obesity.
+770 However, to date, few studies have
+been conducted to compare different equations for eGFR in
+the context of drug dosing/kinetics, etc.
+There is now a recognition by major regulatory agencies
+that “any contemporary, widely accepted, and clinically
+applicable estimating GFR equation is considered reasonable
+to assess GFR in pharmacokinetic studies. ”
+770,771
+Practice Point 4.2.4: In people with extremes of body
+weight, eGFR nonindexed for body surface area (BSA) may
+be indicated, especially for medications with a narrow
+therapeutic range or requiring a minimum concentration
+to be effective.
+For assessment of CKD, it is relevant to compare the GFR
+according to a standard body size. For this reason, GFR
+estimating equations have been developed in units of ml/min
+per 1.73 m
+2. However, because drug clearance is more
+strongly associated with nonindexed eGFR (ml/min) than
+indexed eGFR (ml/min per 1.73 m
+2), in very small or large
+individuals, this can result in over- or underdosing, respec-
+tively, as well as noninitiation of certain medications.
+772,773
+Nonindexed eGFR can be obtained by multiplying the
+indexed eGFR results by the person ’s BSA and dividing by
+1.73 m
+2, or by using an appropriate online calculator.
+Practice Point 4.2.5: Consider and adapt drug dosing in
+people where GFR, non-GFR determinants of the ﬁltration
+markers, or volume of distribution are not in a steady state.
+In people with rapidly changing health status, it can be a
+challenge to estimate the GFR. Serum concentrations of
+ﬁltration markers may be changing because of changes in true
+GFR and/or in non-GFR determinants of the marker (Section
+1.2). In such settings for people who require medications that
+are impacted by or could impact GFR, healthcare providers
+should regularly assess risk, bene ﬁts, and value of the
+medication, and consider higher or lower doses than
+indicated. Where possible, use medication level testing to
+guide dosing.
+730,774
+Special considerations
+Dose adjustments in cancer. GFR plays a large role in
+determining anticancer therapy, including anticancer agent
+selection, dosing, and eligibility for investigational drugs and
+clinical trials.
+775,776 Notwithstanding its lack of validation and
+its relative inaccuracy compared with other validated eGFR
+equations, the Cockroft-Gault equation continues to be one
+of the most commonly used eGFR methods for these
+people.
+775,776 An evaluation of eGFR equation performance
+against mGFR determined by plasma clearance of 51Cr-
+EDTA in 1200 people with solid tumors observed the
+eGFRcr (CKD-EPI) and the eGFRcr-cys (CKD-EPI)
+predicted mGFR with greater accuracy than Cockroft-
+Gault.
+136 W e advise that the same approach to GFR
+evaluation described in Section 1.2 be adopted in oncology
+practice and clinical trials. 136,764 BSA-adjusted eGFR may be
+indicated for selected speci ﬁc situations like carboplatin
+dosing. It is important to consider that non-GFR
+determinants of both creatinine and cystatin C may be
+www.kidney-international.org chapter 4
+Kidney International (2024) 105 (Suppl 4S), S117–S314 S249
+
+================================================================================
+
+--- PAGE 141 ---
+Referral to specialists for assessment does not necessarily
+equate to access to or need for multidisciplinary care, and
+differentiation of the value of each is important. Specialist
+referral to aid in ascertainment of cause and prognosis can be
+seen as separate from care and support services targeted at
+complications, and delay of, and preparation for progressive
+CKD. Application of risk prediction tools (Chapter 2) may aid
+decision-making in terms of identifying those at risk of
+progression and determining action thresholds for multidis-
+ciplinary care and placement of access for KRT or referral to
+transplantation. Current recommendations to use validated
+risk equations to ascertain those at high probability of kidney
+failure within 2 years should prompt actions that align with
+provision of appropriate education activities, review of un-
+derstanding, and decision-making, and prompting referrals to
+other healthcare providers (e.g., vascular access surgeons,
+transplant teams, etc.).
+Risk-based referral was compared with guideline referral
+criteria in a cross-sectional study from the UK.
+829 Analysis
+revealed that approximately 40% of patients classi ﬁed as at
+high risk of progression to kidney failure by KFRE ( >3% by 5
+years) were missed by guideline referral criteria. Moreover, a
+model predicting the timing of clinical outcomes, validated in
+a multicenter prospective cohort study of 1517 people aged
+$65 years with eGFR 10 –30 ml/min per 1.73 m
+2, showed
+good performance for predicting the timing and occurrence
+of KRT. Using this prediction model to guide referral for
+vascular access preparation resulted in less unnecessary
+arteriovenous ﬁstula surgeries than using eGFR thresholds.
+830
+In this section, we consider the evidence relating to timely
+referral for planning KRT in people with progressive CKD.
+The literature concerning late referral has been remarkably
+consistent with both clinical studies and narrative reviews
+identifying several adverse consequences of late referral and
+related bene ﬁts of early referral ( T able 34).
+Both individual and healthcare system factors are associ-
+ated with late referral for KRT planning. A systematic review
+of 18 studies and physician surveys identi ﬁed speci ﬁc factors
+responsible for late referral for KRT as shown in Table 35.
+831
+W e encourage each nephrology program to explore factors
+associated with late referral to improve referral patterns
+appropriately.
+People with kidney disease have never been randomized to
+early or late referral to nephrology services, and the deﬁnition of
+late referral in the published studies varies between 1 and 12
+months before the start of KRT. Three months is probably less
+than the absolute minimum amount of time required for
+assessment, education, preparation for KRT, and creation of
+access, but 3 months is the most frequently employed deﬁnition.
+A systematic review of 40 studies showed that early referral
+was associated with better clinical and biochemical outcomes
+such as improvement in mortality at 3 and 5 years, decrease in
+hospitalizations, better access to vascular access and KRT with
+peritoneal dialysis, as well as improvements in BP , hemoglobin,
+and serum albumin ( T able 36).
+832 A retrospective study of
+105,219 patients (early referral 21,024 patients and late referral
+84,195 patients) showed that early referral to nephrology care
+was associated with slower progression of CKD as signi ﬁcantly
+more patients in early referral group did not change their CKD
+stage (65%–72.9% vs. 52%–64.6%, P < 0.05).
+833
+Local practice and resources will dictate local referral
+practices. Regardless of the healthcare system, delay, or pre-
+vention of progression of both CKD and its complications
+will be of value to both individuals and healthcare systems.
+Local organizations will determine the best methods of
+communication and interaction between people with CKD,
+kidney care specialists, the multidisciplinary team, and pri-
+mary care physicians.
+T echnology may be used to promote appropriate
+nephrology referral. Embedding clinical practice guidelines
+into clinical information systems may effectively create a
+reminder system for primary care physicians. Clinical deci-
+sion support systems could also improve referral criteria
+adherence. The smartphone application, Nefroconsultor,
+which uses KDIGO referral criteria was shown to increase the
+rate of appropriate referral by 28.8%.
+834
+Table 34 | Bene ﬁts and consequences of early versus late referral
+Consequences of late referral Beneﬁts of early referral
+Severe hypertension and ﬂuid overload, and increased cardiovascular
+comorbidity
+Delay requirement for KRT, better management of CVD, and
+comorbid conditions
+Low prevalence of permanent access Reduced need for urgent dialysis using temporary access
+Delayed referral for transplant Greater choice of treatment options and pre-emptive transplantation
+Higher initial hospitalization rate Reduced hospital length of stay and costs
+Higher 1-year mortality rate Lower 1-year mortality rate
+Less choice of KRT modality Increased informed freedom of choice of KRT modality
+Worse psychosocial adjustment and increase in DALYs Early access to psychosocial counseling and support for care partners
+Malnutrition Improved nutritional status
+CVD, cardiovascular disease; DALY, disability-adjusted life-year; KRT, kidney replacement therapy.
+chapter 5 www.kidney-international.org
+S256 Kidney International (2024) 105 (Suppl 4S), S117–S314
+
+================================================================================
+
+--- PAGE 159 ---
+Methods for guideline development
+Aim
+The aim of this project was to update the KDIGO 2012
+Clinical Practice Guideline for the Evaluation and Manage-
+ment of Chronic Kidney Disease. 1 The guideline development
+methods are described below.
+Overview of the process
+This guideline adhered to international best practices for
+guideline development (Appendix B : Supplementary Table
+S2)916,917 and have been reported in accordance with the
+AGREE II reporting checklist. 918 The processes undertaken
+for the development of the KDIGO 2024 Clinical Practice
+Guideline for the Evaluation and Management of CKD are
+described below.
+/C15 Appointing Work Group members and the ERT
+/C15 Finalizing guideline development methodology
+/C15 Deﬁning scope of the guideline
+/C15 Developing and registering protocols for systematic reviews
+/C15 Implementing literature search strategies to identify the
+evidence base for the guideline
+/C15 Selecting studies according to prede ﬁned inclusion criteria
+/C15 Conducting data extraction and risk of bias assessment of
+included studies
+/C15 Conducting evidence syntheses, including meta-analysis
+where appropriate
+/C15 Assessing the certainty of the evidence for each critical
+outcome
+/C15 Finalizing guideline recommendations and supporting
+rationale
+/C15 Grading the strength of the recommendations based on the
+overall certainty of the evidence and other considerations
+/C15 Convening a public review of the guideline draft in July
+2023
+/C15 Updating systematic reviews
+/C15 Amending the guideline based on the external review
+feedback and updated systematic reviews
+/C15 Finalizing and publishing the guideline.
+Commissioning of Work Group and ERT. KDIGO and the
+Co-Chairs assembled and engaged a W ork Group with
+expertise in pediatric, adult, and geriatric nephrology,
+including both dialysis and transplant specialists; primary
+care; internal medicine; dietetics; nursing; women ’s health;
+clinical trials; epidemiology; medical decision-making; and
+public health; as well as people living with CKD. Johns
+Hopkins University, with expertise in nephrology, evidence
+synthesis, and guideline development, was contracted as the
+ERT and was tasked with conducting the evidence reviews.
+The ERT coordinated the methodological and analytical
+processes of guideline development, including literature
+searching, data extraction, risk-of-bias assessment, evidence
+synthesis and meta-analysis, grading the certainty of the evi-
+dence per critical outcome, and grading the overall certainty
+of the evidence for the recommendations. The Work Group
+was responsible for writing the recommendations and the
+underlying rationale, grading the strength of the recom-
+mendations, and developing practice points.
+Deﬁning scope and topics and formulating key clinical ques-
+tions. The KDIGO 2012 CKD guideline was reviewed by the
+Co-Chairs to identify topics to be included in the 2024
+guideline. Scoping reviews of these topics were conducted by
+the ERT to provide an overview of the available evidence base
+and to identify existing relevant systematic reviews.
+The Risk of Bias in Systematic Reviews (ROBIS) tool was
+used to assess the risk of bias of the existing reviews. When
+high-quality systematic reviews were identi ﬁed during the
+scoping reviews, the ERT conducted an updated search based
+on the existing review and extracted information from the
+newly identi ﬁed studies. This information was added to the
+existing review data and analyzed as appropriate.
+For topics that did not map to current high-quality re-
+views, de novo systematic reviews were undertaken. Protocols
+for each review were developed by the ERT and reviewed by
+the Work Group. Protocols were registered on PROSPERO
+(https://www.crd.york.ac.uk/prospero/). Systematic reviews
+were conducted in accordance with current standards,
+including those from the Cochrane Handbook.
+919
+Details of the Population, Intervention, Comparator,
+Outcome and Study design (PICOS) of the questions are pro-
+vided in T able 44.
+23,316,318,415,511,609,920–926 Information about
+existing reviews that were used is included in these tables.
+For some topics not prede ﬁned in the Scope of Work, the
+ERT extracted the certainty of evidence from existing high-
+quality systematic reviews, as available. Details of the PICOS
+for these questions are also provided in Table 44.
+Literature searches and article selection. Searches for RCTs
+were conducted on PubMed, Embase, and the Cochrane
+Central Register of Controlled Trials (CENTRAL), and
+searches for diagnosis/prognosis studies were conducted on
+PubMed, Embase, and CINAHL. For topics with available
+existing reviews, the review was used and an updated search
+was conducted. The search strategies are provided in
+Appendix A : Supplementary Table S1 .
+T o improve ef ﬁciency and accuracy in the title/abstract
+screening process and to manage the process, search results
+were uploaded to a web-based screening tool, PICO Portal
+(www.picoportal.net). PICO Portal uses machine learning to
+sort and present those citations most likely to be promoted to
+full-text screening ﬁrst. The titles and abstracts resulting from
+methods for guideline development www.kidney-international.org
+S274 Kidney International (2024) 105 (Suppl 4S), S117–S314
+
+================================================================================
+
+--- PAGE 161 ---
+Table 44 | (Continued) Clinical questions and systematic review topics in PICOS format
+Chapter 1 Evaluation of chronic kidney disease (CKD)
+Intervention (index test) Machine-read quantitative or semiquantitative protein or albumin urine dipstick tests
+Comparator Laboratory-based methods for measuring urinary protein or albumin (e.g., 24-hour urinary sample, spot urine ACR, or
+PCR)
+Outcomes Critical outcomes: measurement bias, analytical sensitivity (limit of detection), analytical variability (coef ﬁcient of
+variation), and analytic speci ﬁcity (or numbers to calculate)
+Other outcomes: probability of being classi ﬁed in each albuminuria or proteinuria stage
+Study design Cross-sectional
+Existing systematic reviews
+for handsearching
+McTaggart MP, Newall RG, Hirst JA, et al. Diagnostic accuracy of point-of-care tests for detecting albuminuria: a
+systematic review and meta-analysis. Ann Int Med. 2014;160:550–557.
+318
+SoF tables Supplementary Table S5
+Search date July 2022
+Citations screened/included
+studies
+2184/65
+Supplementary Figure S5
+Chapter 2 Risk assessment in people with CKD
+Clinical question Are kidney failure prediction equations good predictors of progression, kidney failure, or end-stage renal
+disease?
+Population Adults, children, and young people with CKD G1-G5
+Predictor Kidney failure risk equations (e.g., Tangri equation [Kidney Failure Risk Equation])
+Outcomes Prognostic performance:
+Calibration (goodness of measures, e.g., R
+2, Brier score, and Hosmer-Lemeshow test)
+Discrimination (e.g., sensitivity/speci ﬁcity; area under the curve [AUC] from receiver operating characteristic [ROC] and
+area under the receiver operating characteristic curve [AUROC]; C-statistic)
+Study design Systematic review
+Existing systematic review National Institute for Health and Care Excellence. Evidence review for the best combination of measures to identify
+increased risk of progression in adults, children and young people. Chronic Kidney Disease: Evidence Review F . NICE
+Evidence Reviews Collection; 2021. NICE.
+415
+SoF tables Supplementary Tables S6 –S9
+Search date N/A
+Chapter 3 Delaying CKD progression and managing its complications
+Clinical question What is the effect of sodium-glucose cotransporter-2 inhibitors (SGLT2i) compared with placebo, usual care, or
+an active comparator among people with CKD in terms of mortality, progression of CKD, complications of CKD,
+and adverse events?
+Population Adults and children with CKD; subgroup of people (1) with type 2 diabetes (T2D), (2) without T2D, (3) with heart failure,
+and (4) without albuminuria
+Intervention SGLT2i (canagli ﬂozin, dapagli ﬂozin, empagli ﬂozin, ertugli ﬂozin, ipragli ﬂozin, luseogli ﬂozin, remogli ﬂozin, sotagli ﬂozin,
+tofogliﬂozin)
+Comparator Active comparator (e.g., another glucose-lowering agent), placebo, or usual care
+Outcomes Critical outcomes: kidney failure (including CKD progression) and all-cause hospitalizations
+Other outcomes: mortality, change in eGFR (including acute changes), complications of CKD, and adverse events
+Study design Randomized controlled trials (RCTs)
+Existing systematic review
+data included
+Kidney Disease: Improving Global Outcomes Diabetes Work Group. KDIGO 2022 Clinical Practice Guideline for Diabetes
+Management in Chronic Kidney Disease. Kidney Int. 2022;102(5S):S1–S127.
+23
+Nufﬁeld Department of Population Health Renal Studies Group, SGLT Inhibitor Meta-Analysis Cardio-Renal Trialists ’
+Consortium. Impact of diabetes on the effects of sodium glucose co-transporter-2 inhibitors on kidney outcomes:
+collaborative meta-analysis of large placebo-controlled trials. Lancet 2022;400:1788–1801.
+511
+SoF tables Supplementary Table S10
+Search date NDPH 2022: September 2022; KDIGO 2022: December 2021; Updated: April 2023
+Citations screened/included
+studies
+252/2
+Supplementary Figure S6
+Clinical question What is the effect of mineralocorticoid receptor agonists (MRAs) compared with placebo, usual care, or an active
+comparator among people with CKD but not T2D in terms of mortality, progression of CKD, complications of
+CKD, and adverse events?
+Population Adults and children with CKD but not diabetes
+Intervention Steroidal MRAs (canrenone, eplerenone, spironolactone); nonsteroidal MRAs (esaxerenone, ﬁnerenone)
+Comparator Active comparator, placebo, or usual care
+Outcomes Critical outcomes: kidney failure and all-cause hospitalizations
+Other outcomes: mortality, progression of CKD, complications of CKD, and adverse events
+Study design RCTs
+Existing systematic review
+used for handsearching
+Chung EY, Ruospo M, Natale P, et al. Aldosterone antagonists in addition to renin angiotensin system antagonists for
+preventing the progression of chronic kidney disease. Cochrane Database Syst Rev. 2020;10:Cd007004.
+923
+SoF tables Supplementary Table S16
+(Continued on following page )
+methods for guideline development www.kidney-international.org
+S276 Kidney International (2024) 105 (Suppl 4S), S117–S314
+
+================================================================================
+
+--- PAGE 164 ---
+included RCTs. For these reviews, the Cochrane Risk of Bias 2
+tool was used to assess risk of bias for RCTs based on the
+randomization process, deviations from the intended in-
+terventions, missing outcome data, measurement of the
+outcome, and selection of the reported results.
+927
+The Quality Assessment of Diagnostic Accuracy Studies
+(QUADAS-2) tool was used to assess study limitations of
+diagnostic studies based on the following items
+928:
+/C15 Could the selection of patients have introduced bias (pa-
+tient selection)?
+/C15 Could the conduct or interpretation of the index test have
+introduced bias (index test)?
+/C15 Could the reference standard, its conduct, or its interpre-
+tation have introduced bias (reference standard)?
+/C15 Could the patientﬂow have introduced bias (ﬂow and timing)?
+/C15 Applicability
+/C15 Are there concerns that the included patients and
+setting do not match the review question?
+/C15 Are there concerns that the index test, its conduct,
+or interpretation differ from the review question?
+/C15 Are there concerns that the target condition as
+deﬁned by the reference standard does not match
+the question?
+The ROBIS tool was used to assess risk of bias in sys-
+tematic reviews based on study eligibility criteria, identi ﬁca-
+tion and selection of studies, data collection and study
+appraisal, and overall risk of bias.
+929
+All risk-of-bias assessments were conducted independently
+by 2 members of the ERT, with disagreements resolved by
+internal discussion and consultation with a third ERT mem-
+ber, as needed.
+Evidence synthesis and meta-analysis. Measures of treatment
+effect. For dichotomous outcomes, a pooled effect estimate
+was calculated as the RR between the trial arms of RCTs, with
+each study weighted by the inverse variance, using a random-
+effects model with the DerSimonian and Laird formula for
+calculating between-study variance.
+930 For continuous
+outcomes, a standardized mean difference was calculated by
+using a random-effects model with the DerSimonian and
+Laird formula.
+930
+Data synthesis. Meta-analysis was conducted if there were 2
+or more studies that were suf ﬁciently similar with respect to
+key variables (population characteristics, study duration, and
+comparisons).
+W e combined studies of interventions in the same class
+when reporting outcomes. If there was substantial heteroge-
+neity (I
+2 >50%) in pooled estimates for any outcome, we
+stratiﬁed by the type of intervention before conducting the
+pooled analyses.
+Pooled sensitivity and speci ﬁcity was calculated using a
+random-effects model in studies addressing biopsy diagnosis
+and prognosis using the Freeman-Tukey double arcsine
+transformation to calculate the pooled estimate.
+931 The
+binomial exact method to calculate the CIs was used. 932
+Included RCTs:
+• SGLT2: 79 RCTs (278 reports)
+• MRA (without type 2 diabetes): 19 RCTs (33 reports)
+• GLP-1 (without type 2 diabetes): 0 RCTs
+• Uric acid: 30 studies (32 reports)
+• Aspirin: 5 RCTs
+• Angiography: 5 RCTs (7 reports)
+• NOAC: 7 RCTs (13 reports)
+Included nonrandomized studies:
+• Biopsy: 65 studies*
+• eGFR: 47 studies (48 reports)
+• ACR_PCR: 0 studies
+• POC creatinine: 55 studies
+• POC dipstick: 65 studies (66 reports)
+Included studies:
+RCTs: 145 (368 reports)
+Non-randomized: 232 studies (234 reports) * 38 studies included in the analyses
+Nonrandomized studies (cross-sectional, pre-post, 
+prospective observational, noncomparative):
+• PubMed: 4944
+• Embase: 5196
+• CINAHL: 146
+• Central: 82
+• Other reviews: 68
+• Handsearching: 74
+Randomized controlled trials identified from databases:
+•  PubMed: 7030
+•  Embase: 5716
+•  Cochrane Central: 6999
+•  KDIGO Diabetes 2022 GL: 393
+•  Other reviews: 153
+•  Handsearching: 60
+Figure 57 | Search yield and study ﬂow diagram. ACR, albumin-to-creatinine ratio; CINALL, Cumulative Index to Nursing and Allied Health
+Literature; eGFR, estimated glomerular ﬁltration rate; GLP-1, glucagon-like peptide-1; KDIGO, Kidney Disease: Improving Global Outcomes; MRA,
+mineralocorticoid antagonists; NOAC, non –vitamin K antagonist oral anticoagulant; PCR, protein-to-creatinine ratio; POC, point of care; RCT,
+randomized controlled trial; SGLT2, sodium-glucose cotransporter-2.
+www.kidney-international.org methods for guideline development
+Kidney International (2024) 105 (Suppl 4S), S117–S314 S279
+
+================================================================================
+
+--- PAGE 167 ---
+Limitations of the guideline development process. Two peo-
+ple living with diabetes and CKD were members of the W ork
+Group and provided invaluable perspectives and lived expe-
+riences for the development of these guidelines. However, in
+the development of these guidelines, no scoping exercise with
+patients, searches of the qualitative literature, or formal
+qualitative evidence synthesis examining patient experiences
+and priorities were undertaken. As noted, although resource
+implications were considered in the formulation of recom-
+mendations, no economic evaluations were undertaken.
+methods for guideline development www.kidney-international.org
+S282 Kidney International (2024) 105 (Suppl 4S), S117–S314
+
+================================================================================
+
+--- PAGE 173 ---
+Reassessing the Use of Race in Diagnosing Kidney Disease
+that resulted in the removal of race from the estimated
+glomerular ﬁltration rate (eGFR) formula. Recently NKF
+announced that Glenda is the most recent recipient of the
+Celeste Lee Patient Engagement Award, the highest honor
+given by NKF to a distinguished kidney patient who exem-
+pliﬁes NKF ’s mission and Celeste ’s legacy of putting patients
+at the center of all aspects of healthcare through their
+involvement with NKF and community partners. In 2022, the
+ASN honored her with its highest award, the President ’s
+Medal. She was the 2023 “Accelerate Innovation ” spokes-
+person for the “We’re United 4 Kidney Health ” campaign,
+which invites healthcare professionals to join the movement
+to shift their focus from kidney failure to kidney health.
+With her CDI team, she won a KidneyX Redesign Dialysis
+P h a s e1p r i z ef o r “The Ambulatory Kidney to Improve
+Vitality (AKTIV). ” The Kidney Week 2021 Celeste Castillo
+Lee Memorial Lecturer, Glenda also received the President ’s
+Volunteer Service Awards from President Donald J. Trump
+and President Joseph R. Biden, in 2020 and 2022,
+respectively.
+Glenda has been involved in a myriad of regional, national,
+and international, transformative kidney healthcare initia-
+tives. Many of these are focused on developing new innovative
+treatments and therapies to make life better for people living
+with kidney diseases and the cardio-kidney-metabolic syn-
+drome. In addition to being involved with a number of
+KDIGO (Kidney Disease: Improving Global Outcomes) ini-
+tiatives, she serves on the Board of Directors for the Kidney
+Health Initiative (KHI), a partnership between the US Food &
+Drug Administration and ASN, whose mission is to catalyze
+innovation and the development of safe and effective patient-
+centered therapies for people living with kidney diseases.
+Glenda has been actively involved with and has a leadership
+position in several research projects, including the Kidney
+Precision Medicine Project (KPMP), the APOL1 Long-term
+Kidney Transplantation Outcomes Network (APOLLO), the
+BLOod Sugar Sensing On Maintenance dialysis (BLOSSOM),
+the Biomarker Data Repository (BmDR) and numerous pa-
+tient advisory committees supported by federal programs,
+pharmaceutical companies, and other public and private
+funders. Since 2018, she has authored/co-authored or been
+featured in over 35 publications.
+GR declared no competing interests.
+Dharshana Sabanayagam, MD,
+FRACP, is an adult nephrologist,
+working as a Post-Graduate Fellow at
+Westmead Hospital, Sydney,
+Australia. She is also enrolled in a
+Master of Philosophy with the Uni-
+versity of Sydney, with a focus on
+optimization of dialysis initiation in
+people with kidney failure.
+DS declared no competing interests.
+Elke Schaeffner, MD, MSc, is a
+board-certiﬁed nephrologist and an
+epidemiologist at the Institute of
+Public Health, Charité —Uni-
+versitätsmedizin Berlin where she
+holds a professorship for Nephrology
+and Health Care Research. She
+studied Medicine at the University of
+Freiburg, Germany and obtained her
+Master of Science in Epidemiology at the Harvard School of
+Public Health, Boston, USA. Dr. Schaeffner ’s primary ﬁelds of
+research are renal epidemiology and aging, with a particular
+focus on CKD in an aging society as well as biomarkers for
+assessing kidney function. She is principal investigator (PI) of
+the “Berlin Initiative Study ” a population-based cohort study
+investigating the epidemiology of CKD in persons aged 70 þ
+over the course of several years. Dr. Schaeffner’ s engagement
+in education has made her one of the leading ﬁgures in
+launching a new master ’s degree program (MScPH) at the
+Berlin School of Public Health where she is deputy director.
+Since the beginning of 2022, Dr. Schaeffner has joined the
+editorial board of AJKD as international editor. She was
+awarded the ASN distinguished leader award in 2022. Also in
+2022, Dr. Schaeffner was elected an executive board member
+of the German Society of Nephrology.
+ES reports receiving consultancy fees from AstraZeneca;
+research support from Bayer AG* and E.N.D.I. Stiftung*;
+speaker honoraria from Verband dt. Nierenzentren; and
+serving on the Executive Board of the German Society of
+Nephrology and the Editorial Board of National Kidney
+Foundation.
+*Monies paid to institution.
+Michael Shlipak, MD, MPH, is the
+co-founder and scienti ﬁc director of
+the Kidney Health Research Collab-
+orative (KHRC) at the University of
+California, San Francisco (UCSF)
+and the San Francisco V eterans Af-
+fairs Healthcare System (SFV AHCS),
+where he also serves as the associate
+chief of medicine for research
+development. At SFV AHCS, Dr. Shlipak previously served as
+the division chief for General Internal Medicine from 2004 to
+2018; at UCSF, he is professor of medicine, epidemiology &
+biostatistics. Dr. Shlipak’s training comprised a degree in His-
+tory from Dartmouth College, followed by Harvard Medical
+School, and the Harvard School of Public Health. He completed
+internal medicine residency and a General Internal Medicine
+fellowship at UCSF. His research activities involve the detection
+and the determinants of kidney disease, and its association with
+adverse outcomes, including cardiovascular disease. He has
+particularly been a pioneer on the use of cystatin C as a novel
+indicator of kidney function and its potential to improve un-
+derstanding of kidney disease epidemiology and clinical care.
+biographic and disclosure information www.kidney-international.org
+S288 Kidney International (2024) 105 (Suppl 4S), S117–S314
+
+================================================================================
+
+--- PAGE 174 ---
+For that body of work, Dr. Shlipak was awarded the John
+Blair Barnwell Award in 2018 from V A Clinical Science
+Research and Development Service. Much of his current
+research is focused upon novel diagnostic opportunities that
+utilize urine proteins to characterize chronic and acute kidney
+diseases. Dr. Shlipak ’s research has been continuously funded
+by NIH grants for the past 22 years, in addition to research
+grants from V A Health Services Research and Development,
+the Robert W ood Johnson Foundation, the American Heart
+Association, and the American Federation for Aging Research.
+Dr. Shlipak is the author of over 500 peer-reviewed manu-
+scripts. In addition, Dr. Shlipak was a writing member of the
+KDIGO 2012 Clinical Practice Guideline for the Evaluation
+and Management of Chronic Kidney Disease, and he is a
+member for the 2024 update of this guideline. He also served
+as Co-Chair and lead author for the KDIGO 2019 Contro-
+versies Conference entitled “Early Identi ﬁcation and Inter-
+vention in CKD ”.
+MS reports receiving research support from Bayer*, NIH
+(NHLBI, NIA, NIDDK)*, V A Health Services Research &
+Development*, and V A Clinical Science Research & Devel-
+opment*; speaker honoraria from AstraZeneca, Bayer, and
+Boehringer Ingelheim; and funding for expert testimony for
+Hagens Berman International Law Firm.
+*Monies paid to institution.
+Rukshana Shroff, MD, FRCPCH,
+PhD, is a professor of pediatric
+nephrology at Great Ormond Street
+Hospital for Children and University
+College London, UK. Her research
+focuses on bone and cardiovascular
+disease in childhood CKD, aiming to
+improve outcomes for children on
+dialysis. She has led several
+international multicenter trials in the ﬁeld.
+Dr. Shroff is co-editor for the 8th edition of Pediatric
+Nephrology, the de ﬁnitive textbook in our ﬁeld. She is the
+Scientiﬁc Chair for the European Society for Pediatric
+Nephrology (ESPN) meeting in 2023. She has received a
+prestigious senior fellowship from the National Institute for
+Health Research, served as a member of the KDIGO Executive
+Committee, and participated in international guideline
+committees through KDIGO, NICE, and ESPN. She is chair
+of the ESPN Dialysis working group and represents pediatric
+dialysis at the ERA. She has developed the Paediatric Renal
+Nutrition Taskforce, and co-chairs the ISN Sister Renal
+Centre Program.
+RS reports receiving consultancy fees from AstraZeneca* and
+Fresenius Medical Care*; research support from Fresenius
+Medical Care* and Vita ﬂo*; speaker honoraria from Amgen
+and Fresenius Medical Care.
+*Monies paid to institution.
+Navdeep Tangri, MD, PhD,
+FRCP(C), is an attending physician
+and professor in the Division of
+Nephrology, Department of Internal
+Medicine and the Rady Faculty of
+Community Health Sciences at the
+University of Manitoba. Dr. Tangri ’s
+research program is clinical, trans-
+lational, and focused on improving
+clinical decision-making for people with advanced CKD. He
+developed and validated the Kidney Failure Risk Equation
+(KFRE) to predict the need for dialysis in patients with CKD
+and is presently engaged in multiple validation and imple-
+mentation efforts to increase the uptake of the KFRE.
+In addition, Dr. Tangri is conducting a large prospective
+study on frailty, physical, and cognitive function in advanced
+CKD, as well as leading a multinational randomized trial on
+the safety and ef ﬁcacy of new therapies in this population. He
+has published over 350 manuscripts, presented at multiple
+national and international scienti ﬁc meetings, and is a
+recipient of the CIHR New Investigator Award and a CIHR
+Foundation grant.
+NT reports receiving consultancy fees from AstraZeneca, Bayer,
+Boehringer Ingelheim, GlaxoSmithKline, Janssen, Otsuka,
+ProKidney, and Roche; research support from AstraZeneca*,
+Bayer*, Boehringer Ingelheim*, and Janssen*; funding for
+development of educational presentations for AstraZeneca;
+having stock/stock options from Clinpredict, Klinrisk, Mar-
+izyme, ProKidney, Pulsedata, and Quanta; and a patent for a
+microﬂuidic device for measuring ACR at point of care.
+*Monies paid to institution.
+Teerawat Thanachayanont, MD,
+MSc, is a senior nephrologist at
+Bhumirajanagarindra Kidney Insti-
+tute, Bangkok, Thailand. He gradu-
+ated Doctor of Medicine from
+Mahidol University, Thailand, and
+did internal medicine training at
+Siriraj Hospital, Mahidol University,
+Thailand. He has postgraduate
+training in Nephrology at the University of British Columbia,
+Canada, and has done a 1-year training in independent
+dialysis at the University of British Columbia, Canada.
+He is currently the head of the CKD clinic and Peritoneal
+Dialysis unit of Bhumirajanagarindra Kidney Institute Hos-
+pital. His clinical work includes management of predialysis
+CKD, peritoneal dialysis, and hemodialysis patients. He also
+initiated the in-center nocturnal hemodialysis program in
+Thailand. For academic work, he is an adjunct clinical
+instructor at Chulabhorn Royal Academy, Thailand, and a
+lecturer at the Nephrology Society of Thailand and Royal
+College of Family Physicians of Thailand.
+www.kidney-international.org biographic and disclosure information
+Kidney International (2024) 105 (Suppl 4S), S117–S314 S289
+
+================================================================================
+
+--- PAGE 176 ---
+International Advisory Board; and member of Editorial
+Boards of Clinical Journal of the American Society of
+Nephrology and American Journal of Kidney Diseases .
+LZ reports receiving research support from AstraZeneca* and
+Bayer*
+*Monies paid to institution.
+KDIGO Chairs
+Michel Jadoul, MD, received his MD
+degree in 1983 at the Université
+Catholique de Louvain (UCLouvain),
+Brussels, Belgium. Dr. Jadoul trained
+in internal medicine and nephrology
+under the mentorship of Professor
+Charles van Ypersele de Strihou. He
+has served as chair at the Department
+of Nephrology of the Cliniques
+Universitaires Saint-Luc (2003 –2023) and is currently a full
+clinical professor at UCLouvain. Dr. Jadoul ’s clinical activities
+focus on the follow-up of hemodialysis and CKD patients, and
+his main research interests include
+b2-microglobulin amyloid-
+osis, hepatitis C, and other complications (e.g., falls, bone
+fractures, and sudden death) in hemodialysis patients, as well as
+cardiovascular complications after kidney transplantation and
+various causes of kidney disease (e.g., drug-induced).
+Dr. Jadoul has coauthored over 350 scienti ﬁc papers, most
+of them published in major nephrology journals. He is
+currently serving as an associate editor of Nephrology Dialysis
+Transplantation, and he is also a country co-investigator for
+DOPPS (2001 –present). In 2008, he received the Interna-
+tional Distinguished Medal from the US NKF . He was pre-
+viously a member of the ERA Council (2013 –2016). Presently,
+Dr. Jadoul is a KDIGO Co-Chair.
+MJ reports receiving consultancy fees from Astellas*, Astra-
+Zeneca*, Bayer*, Boehringer Ingelheim*, Cardiorenal*, CSL
+Vifor*, Fresenius Medical Care Asia Paci ﬁc*, GlaxoSmith-
+Kline*, Mundipharma*, and Vertex*; grants/research support
+from Amgen and AstraZeneca*; speaker honoraria for
+AstraZeneca*, Bayer*, and Boehringer Ingelheim*; funding
+for expert testimony from Astellas* and Stada-Eurogenerics*;
+travel support from AstraZeneca*.
+*Monies paid to institution.
+Morgan E. Grams, MD, PhD, MHS,
+is the co-director of the New Y ork
+University Division of Precision
+Medicine, a multidisciplinary
+research unit that aims to produce
+evidence to inform the delivery of
+high-quality, equitable patient care
+responding rapidly to changes in
+healthcare guidelines, delivery,
+safety, and regulation. A practicing nephrologist, PhD-
+trained epidemiologist, and the Susan and Morris Mark
+Professor of Medicine and Population Health at New Y ork
+U n i v e r s i t y ,D r .G r a m si sC o - P r i n c i p a lI n v e s t i g a t o ro ft h e
+Chronic Kidney Disease Prognosis Consortium (CKD-PC),
+a consortium of over 30 million participants, 100 cohorts,
+and 250 investigators from around the globe. In this role, Dr.
+Grams and the CKD-PC team focus on developing, testing,
+and implementing analytic strategies to answer clinically
+meaningful questions using as much of the world ’s data on
+kidney measures and outcomes as possible. She also leads
+e f f o r t st oi n t e g r a t em u l t i m o d a lo m i c sd a t aa st h e yr e l a t et o
+kidney disease. She was the winner of the Y oung Investigator
+A w a r di n2 0 1 8g i v e nb yt h eA S N / A m e r i c a nH e a r tA s s o c i a -
+tion Kidney Council, the top award for investigators under
+4 5y e a r so fa g e ,a n ds h ei sam e m b e ro ft h eA m e r i c a nS o c i e t y
+of Clinical Investigation. She attended medical school at
+Columbia University and completed her nephrology
+fellowship at Johns Hopkins University. She is also a Co-
+Chair of KDIGO.
+MEG declared no competing interests.
+Methods Committee Representative
+Bertram L. Kasiske, MD, FACP, did
+his undergraduate training at Mich-
+igan State University, East Lansing,
+Michigan. He received his medical
+degree from the University of Iowa,
+Iowa City, Iowa. He completed In-
+ternal Medicine residency, and
+fellowship training in Nephrology, at
+Hennepin County Medical Center,
+an af ﬁliate hospital of the University of Minnesota in Min-
+neapolis. He is former deputy director of the United States
+Renal Data System, former editor-in-chief of the American
+Journal of Kidney Diseases , former Co-Chair of KDIGO,
+former Director of Nephrology at Hennepin County Medical
+Center, and former Director of the Scienti ﬁc Registry of
+Transplant Recipients. He is professor of medicine at the
+University of Minnesota, and he is currently President of the
+Board of Trustees of the CADASIL Association, Inc., a patient
+advocacy group for the rare disease cerebral autosomal
+dominant arteriopathy with subcortical infarcts and leu-
+koencephalopathy (CADASIL).
+BLK declared no competing interests.
+Evidence Review Team
+Karen A. Robinson, PhD, is a pro-
+fessor in the Department of Medicine
+at the Johns Hopkins University
+School of Medicine with joint ap-
+pointments in the Department of
+Epidemiology and the Department of
+Health Policy & Management at the
+university’s Bloomberg School of
+Public Health. Dr. Robinson con-
+ducts systematic reviews and research on the use of evidence
+www.kidney-international.org biographic and disclosure information
+Kidney International (2024) 105 (Suppl 4S), S117–S314 S291
+
+================================================================================
+
+--- PAGE 181 ---
+46. Bots SH, Schreuder MM, Roeters van Lennep JE, et al. Sex differences in
+reported adverse drug reactions to angiotensin-converting enzyme
+inhibitors. JAMA. Netw Open . 2022;5:e228224.
+47. Garcia GG, Iyengar A, Kaze F, et al. Sex and gender differences in chronic
+kidney disease and access to care around the globe. Semin Nephrol .
+2022;42:101–113.
+48. Swartling O, Yang Y, Clase CM, et al. Sex differences in the recognition,
+monitoring, and management of CKD in health care: an observational
+cohort study. J Am Soc Nephrol . 2022;33:1903 –1914.
+49. Ahmed SB, Beach LB, Safer JD, et al. Considerations in the care of
+transgender persons. Nat Rev Nephrol . 2023;19:360 –365.
+50. Dumanski SM, Eckersten D, Piccoli GB. Reproductive health in chronic
+kidney disease: the implications of sex and gender. Semin Nephrol .
+2022;42:142–152.
+51. Wiles KS, Nelson-Piercy C, Bramham K. Reproductive health and
+pregnancy in women with chronic kidney disease. Nat Rev Nephrol .
+2018;14:165–184.
+52. Barrett PM, McCarthy FP, Kublickiene K, et al. Adverse pregnancy
+outcomes and long-term maternal kidney disease: a systematic review
+and meta-analysis. JAMA Netw Open . 2020;3:e1920964.
+53. Al Khalaf S, Bodunde E, Maher GM, et al. Chronic kidney disease and
+adverse pregnancy outcomes: a systematic review and meta-analysis.
+Am J Obstet Gynecol . 2022;226:656 –670.e632.
+54. Wiles K, Chappell L, Clark K, et al. Clinical practice guideline on
+pregnancy and renal disease. BMC Nephrol . 2019;20:401.
+55. Delanaye P, Glassock RJ, Pottel H, et al. An age-calibrated deﬁ nition of
+chronic kidney disease: rationale and bene ﬁts. Clin Biochem Rev .
+2016;37:17–26.
+56. Palmer Alves T, Lewis J. Racial differences in chronic kidney disease
+(CKD) and end-stage renal disease (ESRD) in the United States: a social
+and economic dilemma. Clin Nephrol . 2010;74(suppl 1):S72 –S77.
+57. Li PK, Garcia-Garcia G, Lui SF, et al. Kidney health for everyone
+everywhere-from prevention to detection and equitable access to
+care. Kidney Int . 2020;97:226 –232.
+58. Charles C, Gafni A, Whelan T. Shared decision-making in the medical
+encounter: what does it mean? (or it takes at least two to tango). Soc
+Sci Med. 1997;44:681 –692.
+59. Hoffmann TC, Montori VM, Del Mar C. The connection between
+evidence-based medicine and shared decision making. JAMA.
+2014;312:1295–1296.
+60. Naik
+AD, Kallen MA, Walder A, et al. Improving hypertension control in
+diabetes mellitus: the effects of collaborative and proactive health
+communication. Circulation. 2008;117:1361 –1368.
+61. Andermann A, Blancquaert I, Beauchamp S, et al. Revisiting Wilson and
+Jungner in the genomic age: a review of screening criteria over the past
+40 years. Bull World Health Organ . 2008;86:317 –319.
+62. Levin A, Stevens PE. Early detection of CKD: the bene ﬁts, limitations and
+effects on prognosis. Nat Rev Nephrol . 2011;7:446 –457.
+63. Wilson JMG, Jungner G. Principles and Practice of Screening for Disease .
+World Health Organization; 1968.
+64. Hemmelgarn BR, Pannu N, Ahmed SB, et al. Determining the research
+priorities for patients with chronic kidney disease not on dialysis.
+Nephrol Dial Transplant . 2017;32:847 –854.
+65. Um YJ, Chang Y, Kim Y, et al. Risk of CKD following detection of
+microscopic hematuria: a retrospective cohort study. Am J Kidney Dis .
+2023;81:425–433.e421.
+66. Barocas DA, Boorjian SA, Alvarez RD, et al. Microhematuria: AUA/SUFU
+guideline. J Urol . 2020;204:778 –786.
+67. Ingelﬁnger JR. Hematuria in adults. N Engl J Med. 2021;385:153 –163.
+68. Crump C, Sundquist J, Winkleby MA, et al. Preterm birth and risk of
+chronic kidney disease from childhood into mid-adulthood: national
+cohort study. BMJ. 2019;365:l1346.
+69. Luyckx VA, Brenner BM. Birth weight, malnutrition and kidney-associated
+outcomes—ag l o b a lc o n c e r n .Nat Rev Nephrol . 2015;11:135–149.
+70. Luyckx VA, Perico N, Somaschini M, et al. A developmental approach to
+the prevention of hypertension and kidney disease: a report from the
+Low Birth Weight and Nephron Number Working Group. Lancet.
+2017;390:424–428.
+71. Vivante A, Golan E, Tzur D, et al. Body mass index in 1.2 million
+adolescents and risk for end-stage renal disease. Arch Intern Med.
+2012;172:1644–1650.
+72. Chaturvedi S, Ng KH, Mammen C. The path to chronic kidney disease
+following acute kidney injury: a neonatal perspective. Pediatr Nephrol .
+2017;32:227–241.
+73. Allen AM, Kim WR, Larson JJ, et al. Serum cystatin C as an indicator of
+renal function and mortality in liver transplant recipients.
+Transplantation.
+ 2015;99:1431–1435.
+74. Bhasin B, Lau B, Atta MG, et al. HIV viremia and T-cell activation
+differentially affect the performance of glomerular ﬁltration rate
+equations based on creatinine and cystatin C. PLoS One . 2014;8:e82028.
+75. Björk J, Grubb A, Gudnason V, et al. Comparison of glomerular ﬁltration
+rate estimating equations derived from creatinine and cystatin C:
+validation in the Age, Gene/Environment Susceptibility-Reykjavik
+elderly cohort. Nephrol Dial Transplant . 2017;33:1380 –1388.
+76. Bluhme E, Malenicka S, Fischler B, et al. Comparison of cystatin C,
+creatinine, and iohexol clearance in pediatric liver transplantation-a
+retrospective cohort study. Pediatr Transplant . 2021;25:e13993.
+77. Bukabau JB, Sumaili EK, Cavalier E, et al. Performance of glomerular
+ﬁltration rate estimation equations in Congolese healthy adults: the
+inopportunity of the ethnic correction. PLoS One . 2018;13:e0193384.
+78. Chen N, Shi H, Zhang L, et al. GFR estimation using a panel of ﬁltration
+markers in Shanghai and Beijing. Kidney Med . 2020;2:172 –180.
+79. De Souza V, Hadj-Aissa A, Dolomanova O, et al. Creatinine- versus
+cystatin C-based equations in assessing the renal function of
+candidates for liver transplantation with cirrhosis. Hepatology. 2014;59:
+1522–1531.
+80. Fan L, Inker LA, Rossert J, et al. Glomerular ﬁltration rate estimation using
+cystatin C alone or combined with creatinine as a conﬁ rmatory test.
+Nephrol Dial Transplant . 2014;29:1195 –1203.
+81. Fan L, Levey AS, Gudnason V, et al. Comparing GFR estimating equations
+using cystatin C and creatinine in elderly individuals. J Am Soc Nephrol .
+2014;26:1982–1989.
+82. Fu EL, Levey AS, Coresh J, et al. Accuracy of GFR estimating equations in
+patients with discordances between creatinine and cystatin C-based
+estimations. J Am Soc Nephrol . 2023;34:1241 –1251.
+83. Horio M, Imai E, Yasuda Y, et al. GFR estimation using standardized
+serum cystatin C in Japan. Am J Kidney Dis . 2012;61:197 –203.
+84. Inker LA, Levey AS, Tighiouart H, et al. Performance of glomerular
+ﬁltration rate estimating equations in a community-based sample of
+Blacks and Whites: the multiethnic study of atherosclerosis. Nephrol
+Dial Transplant . 2017;33:417 –425.
+85. Lennartz CS, Pickering JW, Seiler-Mussler S, et al. External validation of
+the kidney failure risk equation and re-calibration with addition of
+ultrasound parameters. Clin J Am Soc Nephrol .
+ 2016;11:609–615.
+86. Liu X, Ma H, Huang H, et al. Is the Chronic Kidney Disease Epidemiology
+Collaboration creatinine-cystatin C equation useful for glomerular
+ﬁltration rate estimation in the elderly? Clinical Interv Aging . 2013;8:
+1387–1391.
+87. Lopes MB, Araújo LQ, Passos MT, et al. Estimation of glomerular ﬁltration
+rate from serum creatinine and cystatin C in octogenarians and
+nonagenarians. BMC Nephrol . 2013;14:265.
+88. Machado JD, Camargo EG, Boff R, et al. Combined creatinine-cystatin C
+CKD-EPI equation signiﬁ cantly underestimates measured glomerular
+ﬁltration rate in people with type 2 diabetes mellitus. Clin Biochem .
+2018;53:43–48.
+89. Marks A, Fluck N, Prescott GJ, et al. Looking to the future: predicting
+renal replacement outcomes in a large community cohort with
+chronic kidney disease. Nephrol Dial Transplant . 2015;30:1507 –1517.
+90. Medina Arnaudo GI. [Evaluation of equations using cystatin C for
+estimation of the glomerular ﬁltration rate in healthy adult population
+of candidates for kidney donors]. Rev Fac Cien Med Univ Nac Cordoba .
+2018;74:243–250 [in Spanish].
+91. Pottel H, Björk J, Rule AD, et al. Cystatin C-based equation to estimate
+GFR without the inclusion of race and sex. N Engl J Med. 2023;388:
+333–343.
+92. Schaeffner ES, Ebert N, Delanaye P, et al. Two novel equations to
+estimate kidney function in persons aged 70 years or older. Ann Intern
+Med. 2012;157:471 –481.
+93. Wang Y, Levey AS, Inker LA, et al. Performance and determinants of
+serum creatinine and cystatin C-based GFR estimating equations in
+South Asians. Kidney Int Rep. 2021;6:962 –975.
+94. Wang Y, Nguyen F, Allen JC, et al. Validation of the kidney failure risk
+equation for end-stage kidney disease in Southeast Asia. BMC Nephrol .
+2019;20:451.
+95. Werner K, Pihlsgård M, Elmståhl S, et al. Combining cystatin C and
+creatinine yields a reliable glomerular ﬁltration rate estimation in older
+adults in contrast to
+b-trace protein and b2-microglobulin. Nephron.
+2017;137:29–37.
+references www.kidney-international.org
+S296 Kidney International (2024) 105 (Suppl 4S), S117–S314
+
+================================================================================
+
+--- PAGE 188 ---
+392. Lambers Heerspink HJ, Gansevoort RT. Albuminuria is an appropriate
+therapeutic target in patients with CKD: the pro view. Clin J Am Soc
+Nephrol. 2015;10:1079 –1088.
+393. Fuhrman DY, Schneider MF, Dell KM, et al. Albuminuria, proteinuria, and
+renal disease progression in children with CKD. Clin J Am Soc Nephrol .
+2017;12:912–920.
+394. Harambat J, Kunzmann K, Azukaitis K, et al. Metabolic acidosis is
+common and associates with disease progression in children with
+chronic kidney disease. Kidney Int . 2017;92:1507 –1514.
+395. van den Belt SM, Heerspink HJL, Kirchner M, et al. Discontinuation of
+RAAS inhibition in children with advanced CKD. Clin J Am Soc Nephrol .
+2020;15:625–632.
+396. Ardissino G, Testa S, Daccò V, et al. Proteinuria as a predictor of disease
+progression in children with hypodysplastic nephropathy. Data from the
+Ital Kid Project. Pediatr Nephrol . 2004;19:172 –177.
+397. Kamath N, Iyengar A, George N, et al. Risk factors and rate of progression
+of CKD in children. Kidney Int Rep . 2019;4:1472 –1477.
+398. Ishikura K, Uemura O, Hamasaki Y, et al. Progression to end-stage kidney
+disease in Japanese children with chronic kidney disease: results of a
+nationwide prospective cohort study. Nephrol Dial Transplant . 2014;29:
+878–884.
+399. Rigatto C, Sood MM, Tangri N. Risk prediction in chronic kidney disease:
+pitfalls and caveats. Curr Opin Nephrol Hypertens. 2012;21:612 –618.
+400. Stevens PE, Levin A, Kidney Disease. Improving Global Outcomes
+Chronic Kidney Disease Guideline Development Work Group Members.
+Evaluation and management of chronic kidney disease: synopsis of
+the kidney disease: improving global outcomes 2012 clinical practice
+guideline. Ann Intern Med . 2013;158:825 –830.
+401. Chen TK, Hoenig MP, Nitsch D, et al. Advances in the management of
+chronic kidney disease. BMJ. 2023;383:074216.
+402. Grams M, Sang Y, Ballew S, et al. TH-PO890. Risk prediction: CKD staging
+is the beginning, not the end. J Am Soc Nephrol . 2022;33:301.
+403. The EMPA-KIDNEY Collaborative Group, Herrington WG, Staplin N, et al.
+Empagliﬂozin in patients with chronic kidney disease. N Engl J Med .
+2023;388:117–127.
+404. Rifkin DE. Chronicle of a Death Foretold : can studying death help us care
+for the living? Clin J Am Soc Nephrol . 2020;15:883 –885.
+405. Ramspek CL, de Jong Y, Dekker FW, et al. Towards the best kidney failure
+prediction tool: a systematic review and selection aid. Nephrol
+ Dial
+Transplant. 2020;35:1527 –1538.
+406. Tangri N, Kitsios GD, Inker LA, et al. Risk prediction models for patients
+with chronic kidney disease: a systematic review. Ann Intern Med.
+2013;158:596–603.
+407. Grams ME, Brunskill NJ, Ballew SH, et al. The kidney failure risk equation:
+evaluation of novel input variables including eGFR estimated using the
+CKD-EPI 2021 equation in 59 cohorts. J Am Soc Nephrol . 2023;34:482 –
+494.
+408. Major RW, Shepherd D, Medcalf JF, et al. The kidney failure risk equation
+for prediction of end stage renal disease in UK primary care: an external
+validation and clinical impact projection cohort study. PLoS Med.
+2019;16:e1002955.
+409. Zacharias HU, Altenbuchinger M, Schultheiss UT, et al. A predictive
+model for progression of CKD to kidney failure based on routine
+laboratory tests. Am J Kidney Dis . 2022;79:217 –230.e1.
+410. Schroeder EB, Yang X, Thorp ML, et al. Predicting 5-year risk of RRT in
+stage 3 or 4 CKD: development and external validation. Clin J Am Soc
+Nephrol. 2017;12:87 –94.
+411. Landray MJ, Thambyrajah J, McGlynn FJ, et al. Epidemiological
+evaluation of known and suspected cardiovascular risk factors in
+chronic renal impairment. Am J Kidney Dis . 2001;38:537 –546.
+412. Che M, Iliescu E, Thanabalasingam S, et al. Death and dialysis following
+discharge from chronic kidney disease clinic: a retrospective cohort
+study. Can J Kidney Health Dis . 2022;9:20543581221118434.
+413. Hemmelgarn BR, Smekal MD, Weaver RG, et al. Implementation and
+evaluation of a risk-based approach to guide chronic kidney disease
+care: protocol for a multiphase mixed-methods study. Can J Kidney
+Health Dis . 2018;5:2054358117753618.
+414. Drawz PE, Goswami P, Azem R, et al. A simple tool to predict end-stage
+renal disease within 1 year in elderly adults with advanced chronic
+kidney disease. J Am Geriatr Soc . 2013;61:762 –768.
+415. National Institute for Health and Care Excellence. Evidence review for the
+best combination of measures to identify increased risk of progression in
+adults, children and young people: chronic kidney disease . NICE Evidence
+Reviews Collection . NICE; 2021.
+416. Winnicki E, McCulloch CE, Mitsnefes MM, et al. Use of the kidney failure
+risk equation to determine the risk of progression to end-stage renal
+disease in children with chronic kidney disease. JAMA Pediatr .
+2018;172:174–180.
+417. Warady BA, Abraham AG, Schwartz GJ, et al. Predictors of rapid
+progression of glomerular and nonglomerular kidney disease in
+children and adolescents: the Chronic Kidney Disease in Children
+(CKiD) cohort. Am J Kidney Dis . 2015;65:878 –888.
+418. Furth SL, Pierce C, Hui WF, et al. Estimating time to ESRD in children with
+CKD. Am J Kidney Dis . 2018;71:783 –792.
+419. Menon G, Pierce CB, Ng DK, et al. Revisiting the application of an adult
+kidney failure risk prediction equation to children with CKD. Am
+ J Kidney
+Dis. 2023;81:734 –737.
+420. National Institute for Health and Care Excellence. Chronic kidney
+disease: assessment and management. NICE Guideline [NG203]. Report
+no. 978-1-4731-4233-6. NICE. 2021.
+421. Hingwala J, Wojciechowski P, Hiebert B, et al. Risk-based triage for
+nephrology referrals using the kidney failure risk equation. Can J
+Kidney Health Dis . 2017;4:2054358117722782.
+422. Smekal MD, Tam-Tham H, Finlay J, et al. Patient and provider experience
+and perspectives of a risk-based approach to multidisciplinary chronic
+kidney disease care: a mixed methods study. BMC Nephrol . 2019;20:110.
+423. Lok CE, Huber TS, Lee T, et al. KDOQI clinical practice guideline for
+vascular access: 2019 update. Am J Kidney Dis . 2020;75(suppl 2):S1 –S164.
+424. Grams ME, Brunskill NJ, Ballew SH, et al. Development and validation of
+prediction models of adverse kidney outcomes in the population with
+and without diabetes. Diabetes Care . 2022;45:2055 –2063.
+425. Chan L, Nadkarni GN, Fleming F, et al. Derivation and validation of a
+machine learning risk score using biomarker and electronic patient
+data to predict progression of diabetic kidney disease. Diabetologia.
+2021;64:1504–1515.
+426. Cornec-Le Gall E, Audrezet MP, Rousseau A, et al. The PROPKD score: a
+new algorithm to predict renal survival in autosomal dominant
+polycystic kidney disease. J Am Soc Nephrol . 2016;27:942 –951.
+427. Irazabal MV, Rangel LJ, Bergstralh EJ, et al. Imaging classi ﬁcation of
+autosomal dominant polycystic kidney disease: a simple model
+for selecting patients for clinical trials. J Am Soc Nephrol . 2015;26:160 –
+172.
+428. Barbour SJ, Coppo R, Zhang H, et al. Evaluating a new international risk-
+prediction tool in IgA nephropathy. JAMA Intern Med . 2019;179:942–952.
+429. Berthoux F, Mohey H, Laurent B, et al. Predicting the risk for dialysis or
+death in IgA nephropathy. J Am Soc Nephrol . 2011;22:752 –761.
+430. Hippisley-Cox J, Coupland C, Brindle P. Development and validation of
+QRISK3 risk prediction algorithms to estimate future risk of
+cardiovascular disease: prospective cohort study. BMJ. 2017;357:j2099.
+431. Matsushita K, Jassal SK, Sang Y, et al. Incorporating kidney disease measures
+into cardiovascular risk prediction: development and validation in 9 million
+adults from 72 datasets. EClinicalMedicine. 2020;27:100552.
+432. Bansal N, Katz R, De Boer IH, et al. Development and validation of a
+model to predict 5-year risk of death without ESRD among older
+adults with CKD. Clin J Am Soc Nephrol . 2015;10:363 –371.
+433. Khan SS, Coresh J, Pencina MJ, et al. Novel prediction equations for
+absolute risk assessment of total cardiovascular disease incorporating
+cardiovascular-kidney-metabolic health: a scienti ﬁc statement from the
+American Heart Association. Circulation.
+2023;148:1982 –2004.
+434. Khan SS, Matsushita K, Sang S, et al. Development and validation of the
+American Heart Association ’s PREVENT equations. Circulation. 2024;149:
+430–449.
+435. Webster AC, Nagler EV, Morton RL, et al. Chronic kidney disease. Lancet.
+2017;389:1238–1252.
+436. Kidney Disease: Improving Global Outcomes Anemia Work Group.
+KDIGO clinical practice guideline for anemia in chronic kidney disease.
+Kidney Int Suppl . 2012;2:S1 –S335.
+437. Doll R, Peto R, Boreham J, et al. Mortality in relation to smoking: 50 years ’
+observations on male British doctors. BMJ. 2004;328:1519.
+438. Jennings C, Kotseva K, De Bacquer D, et al. Effectiveness of a preventive
+cardiology programme for high CVD risk persistent smokers: the
+EUROACTION PLUS varenicline trial. Eur Heart J . 2014;35:1411 –1420.
+439. Prospective Studies Collaboration, Whitlock G, Lewington S, et al. Body-
+mass index and cause-speciﬁ c mortality in 900 000 adults: collaborative
+analyses of 57 prospective studies. Lancet. 2009;373:1083 –1096.
+440. Herrington WG, Smith M, Bankhead C, et al. Body-mass index and risk of
+advanced chronic kidney disease: prospective analyses from a primary
+care cohort of 1.4 million adults in England. PLoS One. 2017;12:e0173515.
+www.kidney-international.org references
+Kidney International (2024) 105 (Suppl 4S), S117–S314 S303
+
+================================================================================
+
