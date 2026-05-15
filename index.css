@@ -1037,6 +1037,71 @@ input:disabled + .slider:before {
     justify-content: flex-start;
     gap: 12px;
   }
+
+  /* Auth container — plň šírka na malých telefonóch */
+  .auth-container {
+    padding: 1.25rem 1rem;
+    margin: 1rem auto;
+    border-radius: 10px;
+  }
+
+  .auth-container--wide {
+    padding: 1.25rem 1rem;
+  }
+
+  /* Header profile — zbalenie na mobiloch */
+  .header-profile {
+    gap: 8px;
+  }
+
+  .header-profile__info {
+    display: none;
+  }
+
+  /* Site header cols — zabráni pretekaniu na 320px */
+  .site-header__col--left,
+  .site-header__col--right {
+    min-width: 0;
+    flex: 0 1 auto;
+  }
+
+  .site-header__col--center {
+    min-width: 0;
+    flex: 1 1 100%;
+    order: -1;
+  }
+
+  .site-header__wrapper {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  /* Admin notice print row — jednosľpkový layout */
+  .admin-notice-print-row {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+
+  /* Calc disclaimer — menší padding */
+  .calc-disclaimer {
+    padding: 12px 14px;
+    font-size: 0.82rem;
+  }
+
+  /* Kalkulačkové výsledkové boxy */
+  .calculator-result-block {
+    padding: 14px 12px;
+  }
+
+  .kfre-risk-display {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  /* Form grid — vždy 1 stĺpec na mobile */
+  .form-grid {
+    grid-template-columns: 1fr !important;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1073,6 +1138,8 @@ input:disabled + .slider:before {
   border: 1px solid var(--border-color);
   border-radius: 16px;
   box-shadow: var(--shadow-md);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .auth-container h2 {
