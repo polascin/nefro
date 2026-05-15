@@ -963,41 +963,7 @@ function sexLabel(string $v): string { return $v === 'male' ? 'Muž' : 'Žena'; 
             </div><!-- /.auth-container -->
         </div><!-- /.content-wrapper -->
     </main>
-
-    <script>
-    (function () {
-        function ageFromDate(dateStr) {
-            if (!dateStr) return null;
-            var b = new Date(dateStr), t = new Date();
-            var age = t.getFullYear() - b.getFullYear();
-            var m = t.getMonth() - b.getMonth();
-            if (m < 0 || (m === 0 && t.getDate() < b.getDate())) age--;
-            return age >= 0 ? age : null;
-        }
-        function ageFromBirthNumber(bn) {
-            var d = bn.replace(/[\s\/]/g, '');
-            if (!/^\d{9,10}$/.test(d)) return null;
-            var yy = +d.slice(0,2), mm = +d.slice(2,4), dd = +d.slice(4,6);
-            if (mm >= 71) mm -= 70; else if (mm >= 51) mm -= 50; else if (mm >= 21) mm -= 20;
-            if (mm < 1 || mm > 12 || dd < 1 || dd > 31) return null;
-            var cy = new Date().getFullYear();
-            var yr = (2000 + yy <= cy) ? 2000 + yy : 1900 + yy;
-            var ds = yr + '-' + String(mm).padStart(2,'0') + '-' + String(dd).padStart(2,'0');
-            return ageFromDate(ds);
-        }
-        function fillAge(age) {
-            var el = document.getElementById('age_years');
-            if (!el || age === null) return;
-            el.value = age;
-        }
-        var bd = document.getElementById('patient_birth_date');
-        var bn = document.getElementById('patient_birth_number');
-        if (bd) bd.addEventListener('change', function () { fillAge(ageFromDate(this.value)); });
-        if (bn) bn.addEventListener('input', function () {
-            var a = ageFromBirthNumber(this.value); if (a !== null) fillAge(a);
-        });
-    })();
-    </script>
+    <script src="patient_autofill.js?v=20260515-1&cb=<?= filemtime('patient_autofill.js') ?>" defer></script>
     <?php include 'footer.php'; ?>
 </body>
 </html>

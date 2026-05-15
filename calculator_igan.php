@@ -228,6 +228,8 @@ if (isLoggedIn()) {
     }
 }
     </script>
+
+    <script src="patient_autofill.js?v=20260515-1&cb=<?= filemtime('patient_autofill.js') ?>" defer></script>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>

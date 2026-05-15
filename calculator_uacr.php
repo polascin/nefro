@@ -172,6 +172,8 @@ if (isLoggedIn()) {
     }
 }
     </script>
+
+    <script src="patient_autofill.js?v=20260515-1&cb=<?= filemtime('patient_autofill.js') ?>" defer></script>
 </head>
 <body>
     <?php $headerTitle = 'UACR (Albumín/Kreatinín)'; $headerIntro = 'Hodnotenie albuminúrie (KDIGO)'; $showLogo = false; include 'header.php'; ?>

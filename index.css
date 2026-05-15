@@ -1202,6 +1202,13 @@ input:disabled + .slider:before {
   box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.4);
 }
 
+/* Auto-fill highlight — zobrazí sa keď sa pole vyplní z RČ */
+.form-control.autofilled {
+  border-color: var(--success-color, #10b981);
+  box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.25);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
 .password-toggle {
   position: relative;
   width: 100%;

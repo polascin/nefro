@@ -18,6 +18,27 @@ function calculatorPatientDataFromRequest(array $source): array
 }
 
 /**
+ * Odvodí pohlavie z rodného čísla.
+ * Žena:  mesiac 51–62 (bežne) alebo 71–82 (náhradná starostlivosť)
+ * Muž:   mesiac 01–12 (bežne) alebo 21–32 (náhradná starostlivosť)
+ *
+ * @param  string $raw  Surové RČ (môže obsahovať lomku a medzery)
+ * @return string|null  'female', 'male', alebo null ak formát neplatí
+ */
+function sexFromBirthNumber(string $raw): ?string {
+    $bn = preg_replace('/[\s\/]/', '', $raw) ?? '';
+    if (!preg_match('/^\d{9,10}$/', $bn)) {
+        return null;
+    }
+    $mm = (int) substr($bn, 2, 2);
+    if ($mm >= 51 && $mm <= 62) { return 'female'; }  // žena — bežný rozsah
+    if ($mm >= 71 && $mm <= 82) { return 'female'; }  // žena — záložný rozsah (+70)
+    if ($mm >= 1  && $mm <= 12) { return 'male';   }  // muž  — bežný rozsah
+    if ($mm >= 21 && $mm <= 32) { return 'male';   }  // muž  — záložný rozsah (+20)
+    return null;
+}
+
+/**
  * Validuje slovenské / české rodné číslo.
  *
  * Pravidlá:
@@ -43,9 +64,9 @@ function validateBirthNumber(string $raw): array {
 
     // Korekcie mesiacov
     $mmReal = $mm;
-    if ($mmReal >= 71)      { $mmReal -= 70; }   // žena adoptovaná / náhradná starostlivosť
-    elseif ($mmReal >= 51)  { $mmReal -= 50; }   // žena (bežný prípad)
-    elseif ($mmReal >= 21)  { $mmReal -= 20; }   // muž adoptovaný / náhradná starostlivosť
+    if ($mmReal >= 71)      { $mmReal -= 70; }   // žena — záložný rozsah (+70)
+    elseif ($mmReal >= 51)  { $mmReal -= 50; }   // žena — bežný rozsah (+50)
+    elseif ($mmReal >= 21)  { $mmReal -= 20; }   // muž  — záložný rozsah (+20)
 
     if ($mmReal < 1 || $mmReal > 12) {
         return ['Rodné číslo obsahuje neplatný mesiac (pozícia 3–4).'];
