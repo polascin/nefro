@@ -1,5 +1,6 @@
 <?php
 require_once 'auth.php';
+require_once 'db_config.php';
 
 header_remove('X-Powered-By');
 header('X-Frame-Options: SAMEORIGIN');
