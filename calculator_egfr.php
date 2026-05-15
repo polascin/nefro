@@ -257,7 +257,7 @@ if (isLoggedIn()) {
                         <div class="calc-formula-vars">
                             &kappa; = 0.7 (žena) / 0.9 (muž)&ensp;&bull;&ensp;
                             &alpha; = &minus;0.241 (žena) / &minus;0.302 (muž)&ensp;&bull;&ensp;
-                            S<sub>cr</sub> = sérový kreatinín v mg/dl
+                            S<sub>cr</sub> = sérový kreatinín v mg/dL
                         </div>
                     </div>
                 </details>
@@ -326,8 +326,8 @@ if (isLoggedIn()) {
                             <div class="form-group">
                                 <label for="creatinine_unit">Jednotka kreatinínu</label>
                                 <select id="creatinine_unit" name="creatinine_unit" class="form-control" required>
-                                    <option value="umol_l" <?= $form['creatinine_unit'] === 'umol_l' ? 'selected' : '' ?>>umol/l</option>
-                                    <option value="mg_dl" <?= $form['creatinine_unit'] === 'mg_dl' ? 'selected' : '' ?>>mg/dl</option>
+                                    <option value="umol_l" <?= $form['creatinine_unit'] === 'umol_l' ? 'selected' : '' ?>>µmol/L</option>
+                                    <option value="mg_dl" <?= $form['creatinine_unit'] === 'mg_dl' ? 'selected' : '' ?>>mg/dL</option>
                                 </select>
                             </div>
                         </div>
@@ -345,7 +345,7 @@ if (isLoggedIn()) {
                         <h3>Výsledok výpočtu</h3>
                         <p><strong>eGFR:</strong> <?= htmlspecialchars(number_format((float) $calculated['egfr'], 1, ',', ' ')) ?> ml/min/1,73m²</p>
                         <p><strong>Kategória:</strong> <?= htmlspecialchars($calculated['g_category']) ?> (<?= htmlspecialchars($calculated['g_description']) ?>)</p>
-                        <p><strong>Kreatinín prepočítaný na mg/dl:</strong> <?= htmlspecialchars(number_format((float) $calculated['creatinine_mg_dl'], 3, ',', ' ')) ?></p>
+                        <p><strong>Kreatinín prepočítaný na mg/dL:</strong> <?= htmlspecialchars(number_format((float) $calculated['creatinine_mg_dl'], 3, ',', ' ')) ?></p>
                         <div class="form-actions no-print">
                             <button type="button" class="btn-primary" onclick="window.print()">Vytlačiť výpočet</button>
                         </div>
@@ -381,7 +381,7 @@ if (isLoggedIn()) {
                                         <td><?= htmlspecialchars((string) ($row['created_at'] ?? '')) ?></td>
                                         <td><?= htmlspecialchars(calculatorBuildPatientDisplay($row)) ?></td>
                                         <td>
-                                            <?= htmlspecialchars(number_format($egfrValue, 1, ',', ' ')) ?> ml/min/1,73m2
+                                            <?= htmlspecialchars(number_format($egfrValue, 1, ',', ' ')) ?> ml/min/1,73 m²
                                             <?php if ($category !== ''): ?>
                                                 (<?= htmlspecialchars($category) ?>)
                                             <?php endif; ?>

@@ -25,7 +25,7 @@ if ((is_dir($projectSessionPath) || @mkdir($projectSessionPath, 0755, true)) && 
 // Spustenie relácie
 if (session_status() === PHP_SESSION_NONE) {
     if (!session_start()) {
-        error_log('Nepodarilo sa spustit PHP session. Skontrolujte session.save_path a opravnenia.');
+        error_log('Nepodarilo sa spustiť PHP session. Skontrolujte session.save_path a oprávnenia.');
         http_response_code(500);
         exit('Chyba: Nepodarilo sa spustiť reláciu.');
     }

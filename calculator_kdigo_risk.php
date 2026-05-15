@@ -290,7 +290,7 @@ A1: UACR &lt; 30 &nbsp;&nbsp;A2: 30&ndash;300 &nbsp;&nbsp;A3: &gt; 300 &nbsp;mg/
                         <h3>Povinné vstupy pre výpočet</h3>
                         <div class="form-grid">
                             <div class="form-group">
-                                <label for="egfr">eGFR (ml/min/1,73m2)</label>
+                                <label for="egfr">eGFR (ml/min/1,73 m²)</label>
                                 <input type="text" id="egfr" name="egfr" required class="form-control" value="<?= htmlspecialchars($form['egfr']) ?>">
                             </div>
                             <div class="form-group">
