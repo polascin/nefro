@@ -55,6 +55,14 @@ $schemaWebApp = [
     ['@type' => 'WebApplication', 'name' => 'CKD-PC — Grams 2022 (3-ročné riziko)', 'url' => $baseUrl . 'calculator_ckdpc.php'],
     ['@type' => 'WebApplication', 'name' => 'IgAN Prediction Tool (Barbour 2019)',  'url' => $baseUrl . 'calculator_igan.php'],
     ['@type' => 'WebApplication', 'name' => 'Mayo ADPKD klasifikácia (Irazabal 2015)', 'url' => $baseUrl . 'calculator_adpkd.php'],
+    ['@type' => 'WebApplication', 'name' => 'FENa / FEUrea (AKI)', 'url' => $baseUrl . 'calculator_aki.php'],
+    ['@type' => 'WebApplication', 'name' => 'Cockcroft-Gault (Klírens kreatinínu)', 'url' => $baseUrl . 'calculator_cg.php'],
+    ['@type' => 'WebApplication', 'name' => 'Korigovaný vápnik pri hypoalbuminémii', 'url' => $baseUrl . 'calculator_ca.php'],
+    ['@type' => 'WebApplication', 'name' => 'Poruchy sodíka a vody', 'url' => $baseUrl . 'calculator_na.php'],
+    ['@type' => 'WebApplication', 'name' => 'Aniónová medzera a Delta Ratio', 'url' => $baseUrl . 'calculator_acidbase.php'],
+    ['@type' => 'WebApplication', 'name' => 'Rýchlosť poklesu eGFR (Slope)', 'url' => $baseUrl . 'calculator_egfr_slope.php'],
+    ['@type' => 'WebApplication', 'name' => 'Kt/V a URR (Adekvátnosť HD)', 'url' => $baseUrl . 'calculator_ktv.php'],
+    ['@type' => 'WebApplication', 'name' => 'UACR a KDIGO klasifikácia', 'url' => $baseUrl . 'calculator_uacr.php'],
   ],
 ];
 ?>
@@ -193,6 +201,76 @@ $schemaWebApp = [
                         <h3>CKD-PC — Grams 2022 (3-ročné riziko)</h3>
                         <p>Odhad 3-ročného rizika poklesu eGFR o ≥40 % alebo zlyhania obličiek — platné pre všetky štádiá CKD vrátane G1–G2. Rozšírený model s 13+ vstupmi.</p>
                         <a href="calculator_ckdpc.php" class="btn-primary">Otvoriť kalkulačku</a>
+                    </article>
+                </div>
+            </section>
+
+            <section class="features-section" aria-labelledby="aki-calculators-heading">
+                <h2 id="aki-calculators-heading">Akútne poškodenie obličiek (AKI)</h2>
+                <div class="features-grid calculators-grid">
+                    <article class="feature-card calculator-card">
+                        <h3>FENa a FEUrea</h3>
+                        <p>Frakčná exkrécia sodíka a urey pre diferenciálnu diagnostiku AKI (prerenálne vs. renálne zlyhanie).</p>
+                        <a href="calculator_aki.php" class="btn-primary">Otvoriť kalkulačku</a>
+                    </article>
+                </div>
+            </section>
+
+            <section class="features-section" aria-labelledby="dosing-calculators-heading">
+                <h2 id="dosing-calculators-heading">Úprava dávkovania liekov</h2>
+                <div class="features-grid calculators-grid">
+                    <article class="feature-card calculator-card">
+                        <h3>Cockcroft-Gault</h3>
+                        <p>Odhad klírensu kreatinínu, historický štandard pre farmakokinetickú úpravu dávkovania liekov.</p>
+                        <a href="calculator_cg.php" class="btn-primary">Otvoriť kalkulačku</a>
+                    </article>
+                </div>
+            </section>
+
+            <section class="features-section" aria-labelledby="lytes-calculators-heading">
+                <h2 id="lytes-calculators-heading">Elektrolytové a acidobázické poruchy</h2>
+                <div class="features-grid calculators-grid">
+                    <article class="feature-card calculator-card">
+                        <h3>Korigovaný vápnik</h3>
+                        <p>Prepočet celkového vápnika vzhľadom na hladinu albumínu (časté pri CKD-MBD s hypoalbuminémiou).</p>
+                        <a href="calculator_ca.php" class="btn-primary">Otvoriť kalkulačku</a>
+                    </article>
+                    <article class="feature-card calculator-card">
+                        <h3>Poruchy sodíka a vody</h3>
+                        <p>Deficit voľnej vody pri hypernatrémii a Adrogue-Madiasova rovnica pre bezpečnú korekciu hyponatrémie.</p>
+                        <a href="calculator_na.php" class="btn-primary">Otvoriť kalkulačku</a>
+                    </article>
+                    <article class="feature-card calculator-card">
+                        <h3>Aniónová medzera a &Delta;/&Delta;</h3>
+                        <p>Základný nástroj na diferenciálnu diagnostiku a identifikáciu zmiešaných porúch acidobázickej rovnováhy.</p>
+                        <a href="calculator_acidbase.php" class="btn-primary">Otvoriť kalkulačku</a>
+                    </article>
+                </div>
+            </section>
+
+            <section class="features-section" aria-labelledby="progression-calculators-heading">
+                <h2 id="progression-calculators-heading">Progresia CKD a Dialýza</h2>
+                <div class="features-grid calculators-grid">
+                    <article class="feature-card calculator-card">
+                        <h3>eGFR Slope</h3>
+                        <p>Výpočet lineárneho trendu (rýchlosti poklesu eGFR) z viacerých meraní v čase (identifikácia rýchlych progresorov).</p>
+                        <a href="calculator_egfr_slope.php" class="btn-primary">Otvoriť kalkulačku</a>
+                    </article>
+                    <article class="feature-card calculator-card">
+                        <h3>Kt/V a URR</h3>
+                        <p>Hodnotenie adekvátnosti hemodialýzy podľa Daugirdasovej rovnice (2. generácia) a pomeru redukcie urey.</p>
+                        <a href="calculator_ktv.php" class="btn-primary">Otvoriť kalkulačku</a>
+                    </article>
+                </div>
+            </section>
+
+            <section class="features-section" aria-labelledby="proteinuria-calculators-heading">
+                <h2 id="proteinuria-calculators-heading">Analýza proteinúrie</h2>
+                <div class="features-grid calculators-grid">
+                    <article class="feature-card calculator-card">
+                        <h3>UACR a KDIGO klasifikácia</h3>
+                        <p>Univerzálny prevodník jednotiek pre UACR s okamžitým zaradením do KDIGO kategórií (A1-A3).</p>
+                        <a href="calculator_uacr.php" class="btn-primary">Otvoriť kalkulačku</a>
                     </article>
                 </div>
             </section>

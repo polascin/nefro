@@ -3,51 +3,20 @@ require_once 'auth.php';
 require_once 'db_config.php';
 require_once 'calculators_common.php';
 
-function egfrCategory(float $egfr): string
-{
-    if ($egfr >= 90.0) {
-        return 'G1';
-    }
-    if ($egfr >= 60.0) {
-        return 'G2';
-    }
-    if ($egfr >= 45.0) {
-        return 'G3a';
-    }
-    if ($egfr >= 30.0) {
-        return 'G3b';
-    }
-    if ($egfr >= 15.0) {
-        return 'G4';
-    }
-
-    return 'G5';
-}
-
-function egfrCategoryDescription(string $category): string
-{
-    $map = [
-        'G1' => 'normálna alebo vysoká filtrácia',
-        'G2' => 'mierne znížená filtrácia',
-        'G3a' => 'mierne až stredne znížená filtrácia',
-        'G3b' => 'stredne až výrazne znížená filtrácia',
-        'G4' => 'výrazne znížená filtrácia',
-        'G5' => 'zlyhanie obličiek',
-    ];
-
-    return $map[$category] ?? '';
-}
-
 $errors = [];
 $messages = [];
 $calculated = null;
 $savedResults = [];
 
 $form = [
-    'sex' => (string) ($_POST['sex'] ?? 'female'),
-    'age_years' => (string) ($_POST['age_years'] ?? ''),
-    'creatinine_value' => (string) ($_POST['creatinine_value'] ?? ''),
-    'creatinine_unit' => (string) ($_POST['creatinine_unit'] ?? 'umol_l'),
+    's_cr_value' => (string) ($_POST['s_cr_value'] ?? ''),
+    's_cr_unit' => (string) ($_POST['s_cr_unit'] ?? 'umol_l'),
+    'u_cr_value' => (string) ($_POST['u_cr_value'] ?? ''),
+    'u_cr_unit' => (string) ($_POST['u_cr_unit'] ?? 'mmol_l'),
+    's_na' => (string) ($_POST['s_na'] ?? ''),
+    'u_na' => (string) ($_POST['u_na'] ?? ''),
+    's_urea' => (string) ($_POST['s_urea'] ?? ''),
+    'u_urea' => (string) ($_POST['u_urea'] ?? ''),
     'patient_first_name' => (string) ($_POST['patient_first_name'] ?? ''),
     'patient_last_name' => (string) ($_POST['patient_last_name'] ?? ''),
     'patient_birth_date' => (string) ($_POST['patient_birth_date'] ?? ''),
@@ -97,79 +66,74 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     }
                 } catch (\PDOException $e) {
                     $errors[] = 'Databázová chyba pri mazaní záznamu.';
-                    error_log('calculator_egfr delete error: ' . $e->getMessage());
+                    error_log('calculator_aki delete error: ' . $e->getMessage());
                 }
             }
         }
     } elseif ($action === 'calculate' || $action === 'save') {
         $patient = calculatorPatientDataFromRequest($_POST);
         calculatorValidateOptionalPatientData($patient, $errors);
-        // Auto-doplniť vek z dát. narodenia / rodného čísla, ak pole ostalo prázdne
-        if ($form['age_years'] === '') {
-            $derived = calculatorAgeFromPatient($patient);
-            if ($derived !== null) {
-                $form['age_years'] = (string) $derived;
-            }
-        }
 
-        $sex = in_array($form['sex'], ['female', 'male'], true) ? $form['sex'] : '';
-        if ($sex === '') {
-            $errors[] = 'Vyberte pohlavie.';
-        }
+        $sCrValue = calculatorParsePositiveFloat($form['s_cr_value']);
+        $uCrValue = calculatorParsePositiveFloat($form['u_cr_value']);
 
-        $ageYears = filter_var($form['age_years'], FILTER_VALIDATE_INT, [
-            'options' => [
-                'min_range' => 18,
-                'max_range' => 120,
-            ],
-        ]);
-        if ($ageYears === false) {
-            $errors[] = 'Vek musí byť celé číslo v intervale 18 až 120 rokov.';
-        }
+        if ($sCrValue === null) $errors[] = 'Zadajte platnú hodnotu sérového kreatinínu.';
+        if ($uCrValue === null) $errors[] = 'Zadajte platnú hodnotu kreatinínu v moči.';
 
-        $creatinineValue = calculatorParsePositiveFloat($form['creatinine_value']);
-        if ($creatinineValue === null) {
-            $errors[] = 'Kreatinín musí byť kladné číslo.';
-        }
+        $sCrUnit = in_array($form['s_cr_unit'], ['umol_l', 'mg_dl'], true) ? $form['s_cr_unit'] : '';
+        $uCrUnit = in_array($form['u_cr_unit'], ['mmol_l', 'mg_dl'], true) ? $form['u_cr_unit'] : '';
 
-        $creatinineUnit = in_array($form['creatinine_unit'], ['umol_l', 'mg_dl'], true)
-            ? $form['creatinine_unit']
-            : '';
-        if ($creatinineUnit === '') {
-            $errors[] = 'Vyberte jednotku kreatinínu.';
+        if ($sCrUnit === '') $errors[] = 'Vyberte jednotku sérového kreatinínu.';
+        if ($uCrUnit === '') $errors[] = 'Vyberte jednotku kreatinínu v moči.';
+
+        $sNa = calculatorParsePositiveFloat($form['s_na']);
+        $uNa = calculatorParsePositiveFloat($form['u_na']);
+        $sUrea = calculatorParsePositiveFloat($form['s_urea']);
+        $uUrea = calculatorParsePositiveFloat($form['u_urea']);
+
+        $canCalcNa = ($sNa !== null && $uNa !== null);
+        $canCalcUrea = ($sUrea !== null && $uUrea !== null);
+
+        if (!$canCalcNa && !$canCalcUrea) {
+            $errors[] = 'Pre výpočet musíte zadať hodnoty sodíka (S-Na a U-Na) alebo urey (S-Urea a U-Urea).';
         }
 
         if (empty($errors)) {
-            $creatinineMgDl = $creatinineUnit === 'umol_l'
-                ? ((float) $creatinineValue / 88.4)
-                : (float) $creatinineValue;
+            $sCrUmol = $sCrUnit === 'mg_dl' ? ((float) $sCrValue * 88.4) : (float) $sCrValue;
+            $sCrMmol = $sCrUmol / 1000.0;
+            $uCrMmol = $uCrUnit === 'mg_dl' ? ((float) $uCrValue * 0.0884) : (float) $uCrValue;
 
-            $kappa = $sex === 'female' ? 0.7 : 0.9;
-            $alpha = $sex === 'female' ? -0.241 : -0.302;
-
-            $ratio = $creatinineMgDl / $kappa;
-            $egfr = 142
-                * pow(min($ratio, 1), $alpha)
-                * pow(max($ratio, 1), -1.200)
-                * pow(0.9938, (int) $ageYears);
-
-            if ($sex === 'female') {
-                $egfr *= 1.012;
+            $fena = null;
+            $fenaInterpretation = '';
+            if ($canCalcNa) {
+                $fena = ($uNa * $sCrMmol) / ($sNa * $uCrMmol) * 100.0;
+                if ($fena < 1.0) {
+                    $fenaInterpretation = 'Prerenálne zlyhanie (často < 1 %)';
+                } elseif ($fena > 2.0) {
+                    $fenaInterpretation = 'Akútna tubulárna nekróza - ATN (často > 2 %)';
+                } else {
+                    $fenaInterpretation = 'Hraničná hodnota (zmiešaná etiológia)';
+                }
             }
 
-            $egfrRounded = round($egfr, 1);
-            $gCategory = egfrCategory($egfrRounded);
-            $gDescription = egfrCategoryDescription($gCategory);
+            $feurea = null;
+            $feureaInterpretation = '';
+            if ($canCalcUrea) {
+                $feurea = ($uUrea * $sCrMmol) / ($sUrea * $uCrMmol) * 100.0;
+                if ($feurea < 35.0) {
+                    $feureaInterpretation = 'Prerenálne zlyhanie (často < 35 %)';
+                } elseif ($feurea > 50.0) {
+                    $feureaInterpretation = 'Akútna tubulárna nekróza - ATN (často > 50 %)';
+                } else {
+                    $feureaInterpretation = 'Hraničná hodnota (zmiešaná etiológia)';
+                }
+            }
 
             $calculated = [
-                'egfr' => $egfrRounded,
-                'g_category' => $gCategory,
-                'g_description' => $gDescription,
-                'sex' => $sex,
-                'age_years' => (int) $ageYears,
-                'creatinine_input' => round((float) $creatinineValue, 2),
-                'creatinine_unit' => $creatinineUnit,
-                'creatinine_mg_dl' => round($creatinineMgDl, 3),
+                'fena' => $fena !== null ? round($fena, 2) : null,
+                'fena_interpretation' => $fenaInterpretation,
+                'feurea' => $feurea !== null ? round($feurea, 2) : null,
+                'feurea_interpretation' => $feureaInterpretation,
             ];
 
             if ($action === 'save') {
@@ -178,24 +142,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 } else {
                     try {
                         $inputPayload = [
-                            'sex' => $sex,
-                            'age_years' => (int) $ageYears,
-                            'creatinine_value' => round((float) $creatinineValue, 2),
-                            'creatinine_unit' => $creatinineUnit,
+                            's_cr_value' => round((float) $sCrValue, 2),
+                            's_cr_unit' => $sCrUnit,
+                            'u_cr_value' => round((float) $uCrValue, 2),
+                            'u_cr_unit' => $uCrUnit,
+                            's_na' => $sNa,
+                            'u_na' => $uNa,
+                            's_urea' => $sUrea,
+                            'u_urea' => $uUrea,
                         ];
 
-                        $resultPayload = [
-                            'egfr' => $egfrRounded,
-                            'g_category' => $gCategory,
-                            'g_description' => $gDescription,
-                            'creatinine_mg_dl' => round($creatinineMgDl, 3),
-                        ];
+                        $resultPayload = $calculated;
 
                         if (calculatorSaveResult(
                             $pdo,
                             (int) $_SESSION['user_id'],
-                            'egfr_ckd_epi_2021',
-                            'eGFR (CKD-EPI 2021)',
+                            'aki_fena_feurea',
+                            'FENa / FEUrea',
                             $patient,
                             $inputPayload,
                             $resultPayload
@@ -206,7 +169,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         }
                     } catch (\PDOException $e) {
                         $errors[] = 'Databázová chyba pri ukladaní výsledku.';
-                        error_log('calculator_egfr save error: ' . $e->getMessage());
+                        error_log('calculator_aki save error: ' . $e->getMessage());
                     }
                 }
             }
@@ -216,10 +179,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 if (isLoggedIn()) {
     try {
-        $savedResults = calculatorFetchSavedResults($pdo, (int) $_SESSION['user_id'], 'egfr_ckd_epi_2021', 25);
+        $savedResults = calculatorFetchSavedResults($pdo, (int) $_SESSION['user_id'], 'aki_fena_feurea', 25);
     } catch (\PDOException $e) {
         $errors[] = 'Nepodarilo sa načítať uložené výsledky.';
-        error_log('calculator_egfr fetch history error: ' . $e->getMessage());
+        error_log('calculator_aki fetch history error: ' . $e->getMessage());
     }
 }
 ?>
@@ -228,12 +191,12 @@ if (isLoggedIn()) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>eGFR CKD-EPI 2021 - Kalkulačky KDIGO 2024 CKD</title>
-    <meta name="description" content="Nefrologická kalkulačka a nástroj: eGFR CKD-EPI 2021. CKD-EPI 2021 podľa KDIGO 2024. Presné klinické výpočty podľa najnovších odporúčaní pre lekárov na Slovensku.">
-    <link rel="canonical" href="https://nefro.polascin.net/calculator_egfr.php">
-    <meta property="og:title" content="eGFR CKD-EPI 2021">
-    <meta property="og:description" content="Nefrologická kalkulačka a nástroj: eGFR CKD-EPI 2021. CKD-EPI 2021 podľa KDIGO 2024. Presné klinické výpočty podľa najnovších odporúčaní pre lekárov na Slovensku.">
-    <meta property="og:url" content="https://nefro.polascin.net/calculator_egfr.php">
+    <title>FENa a FEUrea (AKI) - Kalkulačky KDIGO 2024 CKD</title>
+    <meta name="description" content="Nefrologická kalkulačka a nástroj: FENa a FEUrea (AKI). FENa a FEUrea (Frakčná exkrécia). Presné klinické výpočty podľa najnovších odporúčaní pre lekárov na Slovensku.">
+    <link rel="canonical" href="https://nefro.polascin.net/calculator_aki.php">
+    <meta property="og:title" content="FENa a FEUrea (AKI)">
+    <meta property="og:description" content="Nefrologická kalkulačka a nástroj: FENa a FEUrea (AKI). FENa a FEUrea (Frakčná exkrécia). Presné klinické výpočty podľa najnovších odporúčaní pre lekárov na Slovensku.">
+    <meta property="og:url" content="https://nefro.polascin.net/calculator_aki.php">
     <meta property="og:type" content="website">
     <meta name="robots" content="index, follow">
 
@@ -249,8 +212,8 @@ if (isLoggedIn()) {
     <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>
 
     <?php
-    $headerTitle = 'Kalkulačka eGFR';
-    $headerIntro = 'CKD-EPI 2021 podľa KDIGO 2024';
+    $headerTitle = 'Kalkulačka AKI';
+    $headerIntro = 'FENa a FEUrea (Frakčná exkrécia)';
     $showLogo = false;
     include 'header.php';
     ?>
@@ -260,7 +223,7 @@ if (isLoggedIn()) {
             <ul>
                 <li><a href="index.php">Domov</a></li>
                 <li><a href="calculators.php" class="active" aria-current="page">Kalkulačky</a></li>
-                <li><a href="calculator_kdigo_risk.php">KDIGO G/A riziko</a></li>
+                <li><a href="calculator_egfr.php">eGFR</a></li>
                 <?php if (isLoggedIn()): ?>
                     <?php if (isAdmin()): ?>
                         <li><a href="admin.php">Admin panel</a></li>
@@ -276,28 +239,20 @@ if (isLoggedIn()) {
     <main id="main-content" class="container main-content main-content--single-col" role="main">
         <div class="content-wrapper">
             <div class="auth-container auth-container--wide">
-                <h2>eGFR (CKD-EPI 2021)</h2>
-                <p class="auth-subtitle">Voliteľné údaje pacienta + povinné vstupy pre výpočet.</p>
+                <h2>Frakčná exkrécia sodíka a urey (FENa / FEUrea)</h2>
+                <p class="auth-subtitle">Diferenciálna diagnostika akútneho poškodenia obličiek (AKI).</p>
 
-                <details open class="calc-formula-box">
-                    <summary>Vzorec — CKD-EPI 2021</summary>
+                <details class="calc-formula-box">
+                    <summary>Vzorce a vysvetlivky</summary>
                     <div class="calc-formula-content">
-                        <code class="calc-formula-line">eGFR = 142 &times; min(S<sub>cr</sub>/&kappa;, 1)<sup>&alpha;</sup> &times; max(S<sub>cr</sub>/&kappa;, 1)<sup>&minus;1.200</sup> &times; 0.9938<sup>Vek</sup> [&times; 1.012 &nbsp;ak&nbsp;&nbsp;&#x2640;]</code>
-                        <code class="calc-formula-line">Prepočet: S<sub>cr</sub> [mg/dL] = S<sub>cr</sub> [&micro;mol/L] &divide; 88.4</code>
+                        <code class="calc-formula-line">FENa = (U<sub>Na</sub> &times; S<sub>Cr</sub>) / (S<sub>Na</sub> &times; U<sub>Cr</sub>) &times; 100 [%]</code>
+                        <code class="calc-formula-line">FEUrea = (U<sub>Urea</sub> &times; S<sub>Cr</sub>) / (S<sub>Urea</sub> &times; U<sub>Cr</sub>) &times; 100 [%]</code>
                         <div class="calc-formula-vars">
-                            &kappa; = 0.7 (žena) / 0.9 (muž)&ensp;&bull;&ensp;
-                            &alpha; = &minus;0.241 (žena) / &minus;0.302 (muž)&ensp;&bull;&ensp;
-                            S<sub>cr</sub> = sérový kreatinín v mg/dL
+                            <strong>FENa:</strong> &lt; 1 % typicky svedčí pre prerenálne zlyhanie (hypoperfúzia), &gt; 2 % pre renálne zlyhanie (ATN). V prípade užívania diuretík je FENa nepresná (zvýšená exkrécia Na).<br>
+                            <strong>FEUrea:</strong> Výhodná pri užívaní diuretík. &lt; 35 % svedčí pre prerenálne zlyhanie, &gt; 50 % pre ATN.
                         </div>
                     </div>
                 </details>
-
-                <div class="alert" style="background:rgba(16,185,129,0.07);border-left:4px solid #10b981;padding:12px 16px;border-radius:6px;margin-bottom:16px;font-size:0.88rem;">
-                    <strong>Porovnanie s referenčnými kalkulátormi:</strong>
-                    <a href="https://www.kidney.org/professionals/kdoqi/gfr_calculator" target="_blank" rel="noopener noreferrer">NKF / KDOQI eGFR</a> &ensp;&bull;&ensp;
-                    <a href="https://www.mdcalc.com/calc/3939/ckd-epi-equations-glomerular-filtration-rate-gfr" target="_blank" rel="noopener noreferrer">MDCalc CKD-EPI</a> &ensp;&bull;&ensp;
-                    <a href="https://qxmd.com/calculate/calculator_251/egfr-using-ckd-epi-2021" target="_blank" rel="noopener noreferrer">QxMD eGFR</a>
-                </div>
 
                 <?php foreach ($messages as $message): ?>
                     <div class="alert alert-success"><p><?= htmlspecialchars($message) ?></p></div>
@@ -313,7 +268,7 @@ if (isLoggedIn()) {
                     </div>
                 <?php endif; ?>
 
-                <form method="POST" action="calculator_egfr.php">
+                <form method="POST" action="calculator_aki.php">
                     <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
 
                     <div class="form-section">
@@ -327,45 +282,63 @@ if (isLoggedIn()) {
                                 <label for="patient_last_name">Priezvisko</label>
                                 <input type="text" id="patient_last_name" name="patient_last_name" class="form-control" value="<?= htmlspecialchars($form['patient_last_name']) ?>">
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Vstupné parametre (Kreatinín je povinný)</h3>
+                        <div class="form-grid">
                             <div class="form-group">
-                                <label for="patient_birth_date">Dátum narodenia</label>
-                                <input type="date" id="patient_birth_date" name="patient_birth_date" class="form-control" value="<?= htmlspecialchars($form['patient_birth_date']) ?>">
+                                <label for="s_cr_value">S-Kreatinín</label>
+                                <input type="text" id="s_cr_value" name="s_cr_value" required class="form-control" value="<?= htmlspecialchars($form['s_cr_value']) ?>">
                             </div>
                             <div class="form-group">
-                                <label for="patient_birth_number">Rodné číslo</label>
-                                <input type="text" id="patient_birth_number" name="patient_birth_number" class="form-control" placeholder="000000/0000" value="<?= htmlspecialchars($form['patient_birth_number']) ?>">
+                                <label for="s_cr_unit">Jednotka S-Kreatinínu</label>
+                                <select id="s_cr_unit" name="s_cr_unit" class="form-control" required>
+                                    <option value="umol_l" <?= $form['s_cr_unit'] === 'umol_l' ? 'selected' : '' ?>>µmol/L</option>
+                                    <option value="mg_dl" <?= $form['s_cr_unit'] === 'mg_dl' ? 'selected' : '' ?>>mg/dL</option>
+                                </select>
                             </div>
                             <div class="form-group">
-                                <label for="patient_insurance_code">Kód zdravotnej poisťovne</label>
-                                <input type="text" id="patient_insurance_code" name="patient_insurance_code" class="form-control" placeholder="24 alebo 24-01" value="<?= htmlspecialchars($form['patient_insurance_code']) ?>">
+                                <label for="u_cr_value">U-Kreatinín</label>
+                                <input type="text" id="u_cr_value" name="u_cr_value" required class="form-control" value="<?= htmlspecialchars($form['u_cr_value']) ?>">
+                            </div>
+                            <div class="form-group">
+                                <label for="u_cr_unit">Jednotka U-Kreatinínu</label>
+                                <select id="u_cr_unit" name="u_cr_unit" class="form-control" required>
+                                    <option value="mmol_l" <?= $form['u_cr_unit'] === 'mmol_l' ? 'selected' : '' ?>>mmol/L</option>
+                                    <option value="mg_dl" <?= $form['u_cr_unit'] === 'mg_dl' ? 'selected' : '' ?>>mg/dL</option>
+                                </select>
                             </div>
                         </div>
                     </div>
 
                     <div class="form-section">
-                        <h3>Povinné vstupy pre výpočet</h3>
+                        <h3>Parametre pre FENa (Sodík)</h3>
+                        <p style="font-size: 0.85rem; color: var(--color-text-light); margin-bottom: 12px;">Vyplňte pre výpočet FENa.</p>
                         <div class="form-grid">
                             <div class="form-group">
-                                <label for="sex">Pohlavie</label>
-                                <select id="sex" name="sex" class="form-control" required>
-                                    <option value="female" <?= $form['sex'] === 'female' ? 'selected' : '' ?>>Žena</option>
-                                    <option value="male" <?= $form['sex'] === 'male' ? 'selected' : '' ?>>Muž</option>
-                                </select>
+                                <label for="s_na">S-Sodík (mmol/L)</label>
+                                <input type="text" id="s_na" name="s_na" class="form-control" value="<?= htmlspecialchars($form['s_na']) ?>">
                             </div>
                             <div class="form-group">
-                                <label for="age_years">Vek (roky)</label>
-                                <input type="number" id="age_years" name="age_years" min="18" max="120" required class="form-control" value="<?= htmlspecialchars($form['age_years']) ?>" placeholder="automaticky z dát. nar. / RČ">
+                                <label for="u_na">U-Sodík (mmol/L)</label>
+                                <input type="text" id="u_na" name="u_na" class="form-control" value="<?= htmlspecialchars($form['u_na']) ?>">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Parametre pre FEUrea (Urea)</h3>
+                        <p style="font-size: 0.85rem; color: var(--color-text-light); margin-bottom: 12px;">Vyplňte pre výpočet FEUrea (vhodné pri diuretikách).</p>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="s_urea">S-Urea (mmol/L)</label>
+                                <input type="text" id="s_urea" name="s_urea" class="form-control" value="<?= htmlspecialchars($form['s_urea']) ?>">
                             </div>
                             <div class="form-group">
-                                <label for="creatinine_value">S-kreatinín</label>
-                                <input type="text" id="creatinine_value" name="creatinine_value" required class="form-control" value="<?= htmlspecialchars($form['creatinine_value']) ?>">
-                            </div>
-                            <div class="form-group">
-                                <label for="creatinine_unit">Jednotka kreatinínu</label>
-                                <select id="creatinine_unit" name="creatinine_unit" class="form-control" required>
-                                    <option value="umol_l" <?= $form['creatinine_unit'] === 'umol_l' ? 'selected' : '' ?>>µmol/L</option>
-                                    <option value="mg_dl" <?= $form['creatinine_unit'] === 'mg_dl' ? 'selected' : '' ?>>mg/dL</option>
-                                </select>
+                                <label for="u_urea">U-Urea (mmol/L)</label>
+                                <input type="text" id="u_urea" name="u_urea" class="form-control" value="<?= htmlspecialchars($form['u_urea']) ?>">
                             </div>
                         </div>
                     </div>
@@ -380,10 +353,17 @@ if (isLoggedIn()) {
                 <?php if ($calculated !== null): ?>
                     <div class="form-section calculator-result-block">
                         <h3>Výsledok výpočtu</h3>
-                        <p><strong>eGFR:</strong> <?= htmlspecialchars(number_format((float) $calculated['egfr'], 1, ',', ' ')) ?> ml/min/1,73m²</p>
-                        <p><strong>Kategória:</strong> <?= htmlspecialchars($calculated['g_category']) ?> (<?= htmlspecialchars($calculated['g_description']) ?>)</p>
-                        <p><strong>Kreatinín prepočítaný na mg/dL:</strong> <?= htmlspecialchars(number_format((float) $calculated['creatinine_mg_dl'], 3, ',', ' ')) ?></p>
-                        <div class="form-actions no-print">
+                        <?php if ($calculated['fena'] !== null): ?>
+                            <p><strong>FENa:</strong> <?= htmlspecialchars(number_format((float) $calculated['fena'], 2, ',', ' ')) ?> %</p>
+                            <p style="margin-bottom: 16px;"><strong>Interpretácia FENa:</strong> <?= htmlspecialchars($calculated['fena_interpretation']) ?></p>
+                        <?php endif; ?>
+                        
+                        <?php if ($calculated['feurea'] !== null): ?>
+                            <p><strong>FEUrea:</strong> <?= htmlspecialchars(number_format((float) $calculated['feurea'], 2, ',', ' ')) ?> %</p>
+                            <p><strong>Interpretácia FEUrea:</strong> <?= htmlspecialchars($calculated['feurea_interpretation']) ?></p>
+                        <?php endif; ?>
+
+                        <div class="form-actions no-print" style="margin-top: 24px;">
                             <button type="button" class="btn-primary" onclick="window.print()">Vytlačiť výpočet</button>
                         </div>
                     </div>
@@ -411,22 +391,20 @@ if (isLoggedIn()) {
                                 <?php foreach ($savedResults as $row): ?>
                                     <?php
                                     $result = is_array($row['result_payload']) ? $row['result_payload'] : [];
-                                    $egfrValue = (float) ($result['egfr'] ?? 0);
-                                    $category = (string) ($result['g_category'] ?? '');
+                                    $fena = isset($result['fena']) ? number_format((float)$result['fena'], 2, ',', ' ') . ' %' : '-';
+                                    $feurea = isset($result['feurea']) ? number_format((float)$result['feurea'], 2, ',', ' ') . ' %' : '-';
                                     ?>
                                     <tr>
                                         <td><?= htmlspecialchars(date('d.m.Y H:i', strtotime($row['created_at'] ?? ''))) ?></td>
                                         <td><?= htmlspecialchars(calculatorBuildPatientDisplay($row)) ?></td>
                                         <td>
-                                            <?= htmlspecialchars(number_format($egfrValue, 1, ',', ' ')) ?> ml/min/1,73 m²
-                                            <?php if ($category !== ''): ?>
-                                                (<?= htmlspecialchars($category) ?>)
-                                            <?php endif; ?>
+                                            FENa: <?= $fena ?><br>
+                                            FEUrea: <?= $feurea ?>
                                         </td>
                                         <td class="admin-actions-cell">
                                             <a href="?load_id=<?= (int) $row['id'] ?>" class="btn-admin-action" style="background: var(--color-primary); color: white; border-color: var(--color-primary);">Načítať</a>
                                             <a href="calculator_result_print.php?result_id=<?= (int) $row['id'] ?>" target="_blank" rel="noopener" class="btn-admin-action">Tlačiť</a>
-                                            <form method="POST" action="calculator_egfr.php" style="display:inline" onsubmit="return confirm('Naozaj vymazať záznam?')">
+                                            <form method="POST" action="calculator_aki.php" style="display:inline" onsubmit="return confirm('Naozaj vymazať záznam?')">
                                                 <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
                                                 <input type="hidden" name="action" value="delete_saved">
                                                 <input type="hidden" name="result_id" value="<?= (int) $row['id'] ?>">
@@ -443,40 +421,6 @@ if (isLoggedIn()) {
         </div>
     </main>
 
-    <script>
-    (function () {
-        function ageFromDate(dateStr) {
-            if (!dateStr) return null;
-            var b = new Date(dateStr), t = new Date();
-            var age = t.getFullYear() - b.getFullYear();
-            var m = t.getMonth() - b.getMonth();
-            if (m < 0 || (m === 0 && t.getDate() < b.getDate())) age--;
-            return age >= 0 ? age : null;
-        }
-        function ageFromBirthNumber(bn) {
-            var d = bn.replace(/[\s\/]/g, '');
-            if (!/^\d{9,10}$/.test(d)) return null;
-            var yy = +d.slice(0,2), mm = +d.slice(2,4), dd = +d.slice(4,6);
-            if (mm >= 71) mm -= 70; else if (mm >= 51) mm -= 50; else if (mm >= 21) mm -= 20;
-            if (mm < 1 || mm > 12 || dd < 1 || dd > 31) return null;
-            var cy = new Date().getFullYear();
-            var yr = (2000 + yy <= cy) ? 2000 + yy : 1900 + yy;
-            var ds = yr + '-' + String(mm).padStart(2,'0') + '-' + String(dd).padStart(2,'0');
-            return ageFromDate(ds);
-        }
-        function fillAge(age) {
-            var el = document.getElementById('age_years');
-            if (!el || age === null) return;
-            el.value = age;
-        }
-        var bd = document.getElementById('patient_birth_date');
-        var bn = document.getElementById('patient_birth_number');
-        if (bd) bd.addEventListener('change', function () { fillAge(ageFromDate(this.value)); });
-        if (bn) bn.addEventListener('input', function () {
-            var a = ageFromBirthNumber(this.value); if (a !== null) fillAge(a);
-        });
-    })();
-    </script>
     <?php include 'footer.php'; ?>
 </body>
 </html>

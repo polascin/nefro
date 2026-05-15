@@ -174,7 +174,7 @@ function calculatorFetchSavedResults(PDO $pdo, int $userId, string $calculatorKe
             created_at
          FROM calculator_results
          WHERE user_id = :user_id AND calculator_key = :calculator_key
-         ORDER BY created_at DESC, id DESC
+         ORDER BY patient_last_name ASC, patient_first_name ASC, created_at DESC
          LIMIT :result_limit'
     );
     $stmt->bindValue(':user_id', $userId, PDO::PARAM_INT);

@@ -43,6 +43,72 @@ $urls = [
         'changefreq' => 'weekly',
         'priority' => '0.8',
     ],
+    [
+        'loc' => $baseUrl . 'calculator_igan.php',
+        'lastmod' => date('c'),
+        'changefreq' => 'weekly',
+        'priority' => '0.8',
+    ],
+    [
+        'loc' => $baseUrl . 'calculator_adpkd.php',
+        'lastmod' => date('c'),
+        'changefreq' => 'weekly',
+        'priority' => '0.8',
+    ],
+    [
+        'loc' => $baseUrl . 'calculator_aki.php',
+        'lastmod' => date('c'),
+        'changefreq' => 'weekly',
+        'priority' => '0.8',
+    ],
+    [
+        'loc' => $baseUrl . 'calculator_cg.php',
+        'lastmod' => date('c'),
+        'changefreq' => 'weekly',
+        'priority' => '0.8',
+    ],
+    [
+        'loc' => $baseUrl . 'calculator_ca.php',
+        'lastmod' => date('c'),
+        'changefreq' => 'weekly',
+        'priority' => '0.8',
+    ],
+    [
+        'loc' => $baseUrl . 'calculator_na.php',
+        'lastmod' => date('c'),
+        'changefreq' => 'weekly',
+        'priority' => '0.8',
+    ],
+    [
+        'loc' => $baseUrl . 'calculator_acidbase.php',
+        'lastmod' => date('c'),
+        'changefreq' => 'weekly',
+        'priority' => '0.8',
+    ],
+    [
+        'loc' => $baseUrl . 'calculator_egfr_slope.php',
+        'lastmod' => date('c'),
+        'changefreq' => 'weekly',
+        'priority' => '0.8',
+    ],
+    [
+        'loc' => $baseUrl . 'calculator_ktv.php',
+        'lastmod' => date('c'),
+        'changefreq' => 'weekly',
+        'priority' => '0.8',
+    ],
+    [
+        'loc' => $baseUrl . 'calculator_uacr.php',
+        'lastmod' => date('c'),
+        'changefreq' => 'weekly',
+        'priority' => '0.8',
+    ],
+    [
+        'loc' => $baseUrl . 'privacy.php',
+        'lastmod' => date('c'),
+        'changefreq' => 'weekly',
+        'priority' => '0.8',
+    ],
 ];
 
 try {

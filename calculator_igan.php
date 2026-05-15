@@ -94,8 +94,26 @@ $form = [
 ];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (!isset($_POST['csrf_token']) || !hash_equals($_SESSION['csrf_token'] ?? '', $_POST['csrf_token'])) {
-        $errors[] = 'Neplatný bezpečnostný token. Obnovte stránku.';
+    if (!validateCsrfToken((string)($_POST['csrf_token'] ?? ''))) {
+        $errors[] = 'Neplatný CSRF token.';
+    } elseif (isset($_POST['delete_id'])) {
+        if (!isLoggedIn()) {
+            $errors[] = 'Na mazanie výsledkov je potrebné prihlásenie.';
+        } else {
+            $deleteId = (int)$_POST['delete_id'];
+            if ($deleteId > 0) {
+                try {
+                    $pdo = getPDO();
+                    if (calculatorDeleteSavedResult($pdo, $deleteId, (int)$_SESSION['user_id'])) {
+                        $messages[] = 'Záznam bol úspešne vymazaný.';
+                    } else {
+                        $errors[] = 'Záznam sa nepodarilo vymazať (alebo neexistuje).';
+                    }
+                } catch (\Throwable $e) {
+                    $errors[] = 'Chyba pri mazaní: ' . htmlspecialchars($e->getMessage());
+                }
+            }
+        }
     } else {
         $patient = calculatorPatientDataFromRequest($_POST);
         calculatorValidateOptionalPatientData($patient, $errors);

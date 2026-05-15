@@ -466,6 +466,14 @@ function sexLabel(string $v): string { return $v === 'male' ? 'Muž' : 'Žena'; 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CKD-PC — Riziko progresie CKD - Kalkulačky KDIGO 2024 CKD</title>
+    <meta name="description" content="Nefrologická kalkulačka a nástroj: CKD-PC — Riziko progresie CKD. CKD Prognosis Consortium — 3-ročné riziko progresie CKD (Grams 2022). Presné klinické výpočty podľa najnovších odporúčaní pre lekárov na Slovensku.">
+    <link rel="canonical" href="https://nefro.polascin.net/calculator_ckdpc.php">
+    <meta property="og:title" content="CKD-PC — Riziko progresie CKD">
+    <meta property="og:description" content="Nefrologická kalkulačka a nástroj: CKD-PC — Riziko progresie CKD. CKD Prognosis Consortium — 3-ročné riziko progresie CKD (Grams 2022). Presné klinické výpočty podľa najnovších odporúčaní pre lekárov na Slovensku.">
+    <meta property="og:url" content="https://nefro.polascin.net/calculator_ckdpc.php">
+    <meta property="og:type" content="website">
+    <meta name="robots" content="index, follow">
+
     <script src="theme.js?v=20260511-1&cb=<?= filemtime('theme.js') ?>"></script>
     <link rel="stylesheet" href="index.css?v=20260515-1&cb=<?= filemtime('index.css') ?>">
     <script src="ui-preferences.js?v=20260511-1&cb=<?= filemtime('ui-preferences.js') ?>" defer></script>

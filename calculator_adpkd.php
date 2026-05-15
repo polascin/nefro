@@ -87,9 +87,48 @@ $form = [
     'patient_insurance_code'=> (string)($_POST['patient_insurance_code']?? ''),
 ];
 
+
+if (isLoggedIn() && isset($_GET['load_id'])) {
+    $loadId = (int) $_GET['load_id'];
+    $loadedRow = calculatorFetchSavedResultById($pdo, $loadId, (int) $_SESSION['user_id']);
+    if ($loadedRow) {
+        $form['patient_first_name'] = (string) ($loadedRow['patient_first_name'] ?? '');
+        $form['patient_last_name'] = (string) ($loadedRow['patient_last_name'] ?? '');
+        $form['patient_birth_date'] = (string) ($loadedRow['patient_birth_date'] ?? '');
+        $form['patient_birth_number'] = (string) ($loadedRow['patient_birth_number'] ?? '');
+        $form['patient_insurance_code'] = (string) ($loadedRow['patient_insurance_code'] ?? '');
+        if (is_array($loadedRow['input_payload'])) {
+            foreach ($loadedRow['input_payload'] as $k => $v) {
+                if (isset($form[$k]) || array_key_exists($k, $form)) {
+                    $form[$k] = (string) $v;
+                }
+            }
+        }
+        $messages[] = 'Údaje z histórie boli načítané do formulára. Môžete ich upraviť a vykonať nový výpočet.';
+    }
+}
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (!isset($_POST['csrf_token']) || !hash_equals($_SESSION['csrf_token'] ?? '', $_POST['csrf_token'])) {
-        $errors[] = 'Neplatný bezpečnostný token. Obnovte stránku.';
+    if (!validateCsrfToken((string)($_POST['csrf_token'] ?? ''))) {
+        $errors[] = 'Neplatný CSRF token.';
+    } elseif (isset($_POST['delete_id'])) {
+        if (!isLoggedIn()) {
+            $errors[] = 'Na mazanie výsledkov je potrebné prihlásenie.';
+        } else {
+            $deleteId = (int)$_POST['delete_id'];
+            if ($deleteId > 0) {
+                try {
+                    $pdo = getPDO();
+                    if (calculatorDeleteSavedResult($pdo, $deleteId, (int)$_SESSION['user_id'])) {
+                        $messages[] = 'Záznam bol úspešne vymazaný.';
+                    } else {
+                        $errors[] = 'Záznam sa nepodarilo vymazať (alebo neexistuje).';
+                    }
+                } catch (\Throwable $e) {
+                    $errors[] = 'Chyba pri mazaní: ' . htmlspecialchars($e->getMessage());
+                }
+            }
+        }
     } else {
         $patient = calculatorPatientDataFromRequest($_POST);
         calculatorValidateOptionalPatientData($patient, $errors);

@@ -250,6 +250,14 @@ if (isLoggedIn()) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KFRE — Kidney Failure Risk Equation - Kalkulačky KDIGO 2024 CKD</title>
+    <meta name="description" content="Nefrologická kalkulačka a nástroj: KFRE — Kidney Failure Risk Equation. Kidney Failure Risk Equation — Predikcia zlyhania obličiek (Tangri 2024). Presné klinické výpočty podľa najnovších odporúčaní pre lekárov na Slovensku.">
+    <link rel="canonical" href="https://nefro.polascin.net/calculator_kfre.php">
+    <meta property="og:title" content="KFRE — Kidney Failure Risk Equation">
+    <meta property="og:description" content="Nefrologická kalkulačka a nástroj: KFRE — Kidney Failure Risk Equation. Kidney Failure Risk Equation — Predikcia zlyhania obličiek (Tangri 2024). Presné klinické výpočty podľa najnovších odporúčaní pre lekárov na Slovensku.">
+    <meta property="og:url" content="https://nefro.polascin.net/calculator_kfre.php">
+    <meta property="og:type" content="website">
+    <meta name="robots" content="index, follow">
+
     <script src="theme.js?v=20260511-1&cb=<?= filemtime('theme.js') ?>"></script>
     <link rel="stylesheet" href="index.css?v=20260509-1&cb=<?= filemtime('index.css') ?>">
     <script src="ui-preferences.js?v=20260511-1&cb=<?= filemtime('ui-preferences.js') ?>" defer></script>
