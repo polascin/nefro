@@ -34,6 +34,10 @@ function formatInputKey(string $key): string {
         'creatinine_value'    => 'Kreatinín',
         'creatinine_unit'     => 'Jednotka kreatinínu',
         'creatinine_mg_dl'    => 'Kreatinín (mg/dL)',
+        's_cr_value'          => 'S-Kreatinín',
+        's_cr_unit'           => 'Jednotka S-kreatinínu',
+        'u_cr_value'          => 'U-Kreatinín',
+        'u_cr_unit'           => 'Jednotka U-kreatinínu',
         'weight_kg'           => 'Hmotnosť (kg)',
         'height_cm'           => 'Výška (cm)',
         'urine_creatinine'    => 'Kreatinín v moči',
@@ -56,8 +60,42 @@ function formatInputKey(string $key): string {
         'mutation_type'       => 'Typ mutácie',
         'age_at_diagnosis'    => 'Vek pri diagnóze',
         'kidney_length_cm'    => 'Dĺžka obličky (cm)',
+        's_na'                => 'S-Sodík',
+        'u_na'                => 'U-Sodík',
+        's_urea'              => 'S-Urea',
+        'u_urea'              => 'U-Urea',
     ];
     return $map[$key] ?? ucfirst(str_replace('_', ' ', $key));
+}
+
+// Zostaví čitateľnú hodnotu — konvertuje interné kódy na zobraziteľný text
+function formatInputValue(string $key, $value): string {
+    $value = (string) $value;
+
+    // Jednotky — vždy zobraziť správnu notáciu
+    $unitMap = [
+        'umol_l'  => 'µmol/L',
+        'mmol_l'  => 'mmol/L',
+        'mg_dl'   => 'mg/dL',
+        'mg_mmol' => 'mg/mmol',
+        'mg_g'    => 'mg/g',
+    ];
+    // Ak je kľúč unit alebo hodnota je known unit kód
+    if (isset($unitMap[$value])) {
+        return $unitMap[$value];
+    }
+
+    // Pohlavie
+    if ($key === 'sex') {
+        return match($value) {
+            'female' => 'Žena',
+            'male'   => 'Muž',
+            'other'  => 'Iné',
+            default  => $value,
+        };
+    }
+
+    return $value;
 }
 
 // Zostaví čitateľný štítok kľúča výsledkového poľa
@@ -153,7 +191,7 @@ function formatResultKey(string $key): string {
                             <?php foreach ($inputPayload as $key => $value): ?>
                                 <div class="admin-notice-print-row">
                                     <strong><?= htmlspecialchars(formatInputKey((string) $key)) ?></strong>
-                                    <span><?= htmlspecialchars(is_scalar($value) ? (string) $value : json_encode($value, JSON_UNESCAPED_UNICODE)) ?></span>
+                                    <span><?= htmlspecialchars(formatInputValue((string) $key, is_scalar($value) ? (string) $value : json_encode($value, JSON_UNESCAPED_UNICODE))) ?></span>
                                 </div>
                             <?php endforeach; ?>
                         <?php endif; ?>
