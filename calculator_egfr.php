@@ -250,6 +250,18 @@ if (isLoggedIn()) {
                 <h2>eGFR (CKD-EPI 2021)</h2>
                 <p class="auth-subtitle">Voliteľné údaje pacienta + povinné vstupy pre výpočet.</p>
 
+                <details open class="calc-formula-box">
+                    <summary>Vzorec — CKD-EPI 2021</summary>
+                    <div class="calc-formula-content">
+                        <code class="calc-formula-line">eGFR = 142 &times; min(S<sub>cr</sub>/&kappa;, 1)<sup>&alpha;</sup> &times; max(S<sub>cr</sub>/&kappa;, 1)<sup>&minus;1.200</sup> &times; 0.9938<sup>Vek</sup> [&times; 1.012 &nbsp;ak&nbsp;&nbsp;&#x2640;]</code>
+                        <div class="calc-formula-vars">
+                            &kappa; = 0.7 (žena) / 0.9 (muž)&ensp;&bull;&ensp;
+                            &alpha; = &minus;0.241 (žena) / &minus;0.302 (muž)&ensp;&bull;&ensp;
+                            S<sub>cr</sub> = sérový kreatinín v mg/dl
+                        </div>
+                    </div>
+                </details>
+
                 <?php foreach ($messages as $message): ?>
                     <div class="alert alert-success"><p><?= htmlspecialchars($message) ?></p></div>
                 <?php endforeach; ?>

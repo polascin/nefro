@@ -522,6 +522,22 @@ function sexLabel(string $v): string { return $v === 'male' ? 'Muž' : 'Žena'; 
                     <a href="https://ckdpcrisk.org/gfrdecline40/" target="_blank" rel="noopener noreferrer">ckdpcrisk.org/gfrdecline40/</a>.
                 </div>
 
+                <details open class="calc-formula-box">
+                    <summary>Vzorec — CKD-PC / Grams 2022 (clog-log)</summary>
+                    <div class="calc-formula-content">
+                        <code class="calc-formula-line">P = 1 &minus; exp(&minus;exp(&eta;))
+
+&eta; = &beta;<sub>0</sub> + &beta;<sub>1</sub>&middot;Vek + &beta;<sub>2</sub>&middot;muž + &beta;<sub>3</sub>&middot;ln(eGFR) + &beta;<sub>4</sub>&middot;ln(uACR) + &beta;<sub>5</sub>&middot;SBP
+    + &beta;<sub>6</sub>&middot;antihyp + &beta;<sub>7</sub>&middot;SZ + &beta;<sub>8</sub>&middot;ICHS + &beta;<sub>9</sub>&middot;FP + &beta;<sub>10</sub>&middot;BMI + &beta;<sub>11</sub>&middot;fajč.
+    + [&beta;<sub>12</sub>&middot;HbA1c + &beta;<sub>13</sub>&middot;inzulín + &beta;<sub>14</sub>&middot;PAD] &nbsp;(len pri DM)</code>
+                        <div class="calc-formula-vars">
+                            P = 3-ročné riziko (&ge;40 % pokles eGFR alebo zlyhanie obličiek)&ensp;&bull;&ensp;
+                            4 sub-modely: DM / bez DM &times; eGFR &ge;60 / &lt;60&ensp;&bull;&ensp;
+                            uACR v mg/g, SBP v mmHg
+                        </div>
+                    </div>
+                </details>
+
                 <?php foreach ($messages as $msg): ?>
                     <div class="alert alert-success"><p><?= htmlspecialchars($msg) ?></p></div>
                 <?php endforeach; ?>

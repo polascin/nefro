@@ -1702,6 +1702,70 @@ input:disabled + .slider:before {
   overflow-wrap: anywhere;
 }
 
+/* ── Vzorec kalkulačky ──────────────────────────────────── */
+.calc-formula-box {
+  background: var(--code-bg);
+  border: 1px solid var(--code-border);
+  border-radius: 8px;
+  padding: 0;
+  margin: 0 0 16px;
+  font-size: 0.875rem;
+  overflow: hidden;
+}
+
+.calc-formula-box > summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-secondary);
+  padding: 9px 14px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  user-select: none;
+  border-radius: 8px;
+}
+
+.calc-formula-box > summary::-webkit-details-marker { display: none; }
+
+.calc-formula-box > summary::before {
+  content: '▶';
+  font-size: 0.6rem;
+  transition: transform 0.15s;
+  color: var(--primary-color);
+  display: inline-block;
+}
+
+.calc-formula-box[open] > summary::before {
+  transform: rotate(90deg);
+}
+
+.calc-formula-content {
+  padding: 0 14px 14px;
+}
+
+.calc-formula-line {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.84rem;
+  line-height: 1.75;
+  color: var(--text-primary);
+  white-space: pre-wrap;
+  display: block;
+  margin: 0;
+}
+
+.calc-formula-vars {
+  margin-top: 10px;
+  font-size: 0.79rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  border-top: 1px dashed var(--code-border);
+  padding-top: 8px;
+}
+
 @media print {
   @page {
     margin: 18mm 12mm;

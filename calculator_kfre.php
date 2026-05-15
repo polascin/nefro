@@ -270,6 +270,20 @@ if (isLoggedIn()) {
                 <h2>KFRE — Kidney Failure Risk Equation</h2>
                 <p class="auth-subtitle">Predikcia rizika potreby dialýzy alebo transplantácie obličky (Tangri 4-parametrová verzia).</p>
 
+                <details open class="calc-formula-box">
+                    <summary>Vzorec — KFRE (Tangri 4-parametrová)</summary>
+                    <div class="calc-formula-content">
+                        <code class="calc-formula-line">&eta;<sub>2r</sub> = &minus;5.723 + 0.0193&middot;Vek &minus; 0.715&middot;F + 0.236&middot;M + 0.0287&middot;Vek&middot;M &minus; 0.737&middot;ln(eGFR) + 0.0993&middot;ln(UACR)
+&eta;<sub>5r</sub> = &minus;6.209 + 0.0287&middot;Vek &minus; 0.996&middot;F + 0.169&middot;M + 0.0409&middot;Vek&middot;M &minus; 0.643&middot;ln(eGFR) + 0.0993&middot;ln(UACR)
+
+Riziko = 1 / (1 + e<sup>&minus;&eta;</sup>) &times; 100 %</code>
+                        <div class="calc-formula-vars">
+                            F = 1 (žena), M = 1 (muž)&ensp;&bull;&ensp;UACR v mg/g&ensp;&bull;&ensp;
+                            Zdroj: Tangri N et al. <em>JAMA.</em> 2011;305(15):1553–9.
+                        </div>
+                    </div>
+                </details>
+
                 <?php foreach ($messages as $message): ?>
                     <div class="alert alert-success"><p><?= htmlspecialchars($message) ?></p></div>
                 <?php endforeach; ?>

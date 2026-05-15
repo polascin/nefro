@@ -231,6 +231,18 @@ if (isLoggedIn()) {
                 <h2>KDIGO G/A riziko CKD</h2>
                 <p class="auth-subtitle">Zadanie eGFR a UACR, automatické určenie G/A kategórie a orientačného rizika.</p>
 
+                <details open class="calc-formula-box">
+                    <summary>Klasifikácia — KDIGO 2024 (G a A kategórie)</summary>
+                    <div class="calc-formula-content">
+                        <code class="calc-formula-line">G1: eGFR &ge; 90 &nbsp;&nbsp;G2: 60&ndash;89 &nbsp;&nbsp;G3a: 45&ndash;59 &nbsp;&nbsp;G3b: 30&ndash;44 &nbsp;&nbsp;G4: 15&ndash;29 &nbsp;&nbsp;G5: &lt; 15 &nbsp;ml/min/1,73&thinsp;m&sup2;
+A1: UACR &lt; 30 &nbsp;&nbsp;A2: 30&ndash;300 &nbsp;&nbsp;A3: &gt; 300 &nbsp;mg/g</code>
+                        <div class="calc-formula-vars">
+                            Riziko CKD = kombinácia G &times; A kategórie podľa KDIGO heatmapy&ensp;&bull;&ensp;
+                            eGFR v ml/min/1,73&thinsp;m², UACR v mg/g
+                        </div>
+                    </div>
+                </details>
+
                 <?php foreach ($messages as $message): ?>
                     <div class="alert alert-success"><p><?= htmlspecialchars($message) ?></p></div>
                 <?php endforeach; ?>
