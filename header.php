@@ -97,6 +97,7 @@ if ($isCalculatorPage && !empty($currentUser)):
 
     $line3Parts = array_filter([$org, $job, $wMobile, $orgWeb, $wEmail]);
     $line3 = implode(' | ', $line3Parts);
+?>
     <div class="print-layout-table">
         <div class="print-layout-thead">
             <div class="user-print-header print-only">
