@@ -208,6 +208,21 @@ try {
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";
     $pdo->exec($adminExportsAuditSql);
 
+    // ── Rate limiting pre formuláre (registrácia, reset hesla, atď.) ────────
+    $formRateLimitSql = "CREATE TABLE IF NOT EXISTS form_rate_limit (
+        id BIGINT AUTO_INCREMENT PRIMARY KEY,
+        ip VARCHAR(45) NOT NULL,
+        action VARCHAR(50) NOT NULL COMMENT 'Identifikátor akcie (napr. register, forgot_password)',
+        attempt_count INT NOT NULL DEFAULT 1,
+        first_attempt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        last_attempt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        blocked_until TIMESTAMP NULL DEFAULT NULL,
+        INDEX idx_form_rate_limit_ip_action (ip, action),
+        INDEX idx_form_rate_limit_blocked (blocked_until)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";
+    $pdo->exec($formRateLimitSql);
+    echo "Tabuľka 'form_rate_limit' bola úspešne vytvorená alebo už existuje.\n";
+
     echo "Tabuľky 'users', 'users_profile_archive', 'users_avatar_archive', 'password_resets' a 'admin_users_notice_audit' boli úspešne vytvorené alebo už existujú.";
     echo "\n";
 

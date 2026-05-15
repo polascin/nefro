@@ -5,6 +5,13 @@ require_once 'avatar_upload.php';
 require_once 'email_verification.php';
 require_once 'phone_utils.php';
 
+// Bezpečnostné HTTP hlavičky
+header_remove('X-Powered-By');
+header('X-Frame-Options: SAMEORIGIN');
+header('X-Content-Type-Options: nosniff');
+header('Referrer-Policy: strict-origin-when-cross-origin');
+header('Permissions-Policy: geolocation=(), microphone=(), camera=()');
+
 $errors = [];
 $success = false;
 $registeredData = [];
@@ -29,7 +36,59 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
             $errors[] = "[DEV diagnostika] CSRF zlyhanie: " . $csrfReason;
         }
     } else {
-        $email = filter_var(trim($_POST['email'] ?? ''), FILTER_SANITIZE_EMAIL);
+        // ── 1. Honeypot ochrana (musí byť prázdne) ─────────────────────────────
+        // Skryté CSS pole — ľudskí používatelia ho nevidia ani nevypĺňajú.
+        // Boti často vypĺňajú všetky polia automaticky — to ich prezradí.
+        if (($_POST['website_url'] ?? '') !== '') {
+            // Tiché zamietnutie — bot nedostane žiadnu informáciu o detekcii.
+            if ($isLocalDev) {
+                $errors[] = "[DEV] Honeypot aktivovaný: bot vyplňuje skryté pole.";
+            } else {
+                // V produkcii simulujeme úspešnú registráciu — bot nezistí, že bol odmietnnutý.
+                $success = true;
+                goto endOfPostProcessing;
+            }
+        }
+
+        // ── 2. IP Rate Limiting (max 5 pokusov/hodína per IP) ────────────────
+        $clientIpReg = $_SERVER['REMOTE_ADDR'] ?? '0.0.0.0';
+        $maxRegAttempts = 5;    // max registrácií za okno
+        $regWindowSecs  = 3600; // okno: 1 hodína
+        $regBlockSecs   = 3600; // blokácia: 1 hodína
+        $regIsBlocked   = false;
+
+        try {
+            // Odstrán expirované blóky staršie ako 1 deň
+            $pdo->prepare("DELETE FROM form_rate_limit WHERE action = 'register' AND blocked_until IS NOT NULL AND blocked_until < DATE_SUB(NOW(), INTERVAL 1 DAY)")
+                ->execute();
+
+            $rlStmt = $pdo->prepare("SELECT attempt_count, blocked_until FROM form_rate_limit WHERE ip = :ip AND action = 'register'");
+            $rlStmt->execute(['ip' => $clientIpReg]);
+            $rlRow = $rlStmt->fetch();
+
+            if ($rlRow && !empty($rlRow['blocked_until'])) {
+                $blockedUntilTs = strtotime((string) $rlRow['blocked_until']);
+                if ($blockedUntilTs !== false && $blockedUntilTs > time()) {
+                    $regIsBlocked = true;
+                    $errors[] = "Z bezpečnostných dôvodov bol prístup k registrácii dočasne zablokovaný. Skúste to znova o hodinu.";
+                    if ($isLocalDev) {
+                        $remainingMins = max(1, (int) ceil(($blockedUntilTs - time()) / 60));
+                        $errors[] = "[DEV] IP {$clientIpReg} je blokovaná na registráciu ešte {$remainingMins} min.";
+                    }
+                } else {
+                    // Blokácia expirovala — vymazáme ju
+                    $pdo->prepare("UPDATE form_rate_limit SET blocked_until = NULL WHERE ip = :ip AND action = 'register'")
+                        ->execute(['ip' => $clientIpReg]);
+                }
+            }
+        } catch (\PDOException $e) {
+            error_log('Register rate limit check error: ' . $e->getMessage());
+            // Pri DB chybe pokračuj bez rate limitingu
+        }
+
+        if (!$regIsBlocked) {
+        $email = trim($_POST['email'] ?? '');
+
         $mobilePhone = normalizeUserMobilePhone($_POST['mobile_phone'] ?? null);
         $workMobilePhone = normalizeUserMobilePhone($_POST['work_mobile_phone'] ?? null);
         $otherPhone = normalizeGenericPhone($_POST['other_phone'] ?? null);
@@ -61,6 +120,27 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 
         if (empty($errors)) {
             try {
+                // Zaznamenať pokus o registráciu pre rate limiting
+                try {
+                    $pdo->prepare(
+                        "INSERT INTO form_rate_limit (ip, action, attempt_count, first_attempt)
+                         VALUES (:ip, 'register', 1, NOW())
+                         ON DUPLICATE KEY UPDATE attempt_count = attempt_count + 1, last_attempt = NOW()"
+                    )->execute(['ip' => $clientIpReg]);
+
+                    $cntStmt = $pdo->prepare("SELECT attempt_count FROM form_rate_limit WHERE ip = :ip AND action = 'register'");
+                    $cntStmt->execute(['ip' => $clientIpReg]);
+                    $regCurrentCount = (int) ($cntStmt->fetchColumn() ?? 0);
+
+                    if ($regCurrentCount >= $maxRegAttempts) {
+                        $pdo->prepare("UPDATE form_rate_limit SET blocked_until = DATE_ADD(NOW(), INTERVAL :secs SECOND) WHERE ip = :ip AND action = 'register'")
+                            ->execute(['secs' => $regBlockSecs, 'ip' => $clientIpReg]);
+                    }
+                } catch (\PDOException $rlEx) {
+                    error_log('Register rate limit update error: ' . $rlEx->getMessage());
+                }
+
+
                 $stmt = $pdo->prepare("SELECT email, username FROM users WHERE email = :email OR username = :username LIMIT 1");
                 $stmt->execute([
                     'email' => $email,
@@ -203,6 +283,8 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 }
             }
         }
+        // ── endOfPostProcessing ── cíl pre goto pri honeypot detekcii ──
+        endOfPostProcessing:
     }
 }
 ?>
@@ -336,6 +418,11 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
             <?php else: ?>
                 <form method="POST" action="register.php" enctype="multipart/form-data">
                     <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
+                    <!-- Honeypot pole: neviditeľné pre ľudí, vypĺňajú ho iba boti. Musí ostatť prázdne. -->
+                    <div style="position:absolute;left:-9999px;top:-9999px;overflow:hidden;" aria-hidden="true" tabindex="-1">
+                        <label for="website_url">Webová adresa (nevypĺňať)</label>
+                        <input type="text" id="website_url" name="website_url" value="" autocomplete="off" tabindex="-1" maxlength="255">
+                    </div>
                     
                     <div class="form-section">
                         <h3>Povinné údaje</h3>

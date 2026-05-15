@@ -5,6 +5,13 @@ require_once 'avatar_upload.php';
 require_once 'phone_utils.php';
 require_once 'mobile_verification.php';
 
+// Bezpečnostné HTTP hlavičky
+header_remove('X-Powered-By');
+header('X-Frame-Options: SAMEORIGIN');
+header('X-Content-Type-Options: nosniff');
+header('Referrer-Policy: strict-origin-when-cross-origin');
+header('Permissions-Policy: geolocation=(), microphone=(), camera=()');
+
 requireLogin();
 
 $user_id = $_SESSION['user_id'];

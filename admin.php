@@ -2,6 +2,13 @@
 require_once 'auth.php';
 require_once 'db_config.php';
 
+// Bezpečnostné HTTP hlavičky
+header_remove('X-Powered-By');
+header('X-Frame-Options: SAMEORIGIN');
+header('X-Content-Type-Options: nosniff');
+header('Referrer-Policy: strict-origin-when-cross-origin');
+header('Permissions-Policy: geolocation=(), microphone=(), camera=()');
+
 requireAdmin();
 
 $currentAdminId     = (int) ($_SESSION['user_id'] ?? 0);
