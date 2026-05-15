@@ -22,20 +22,74 @@ function calculatorValidateOptionalPatientData(array $patient, array &$errors): 
     if ($patient['birth_date'] !== '') {
         $dt = \DateTime::createFromFormat('Y-m-d', $patient['birth_date']);
         if (!$dt || $dt->format('Y-m-d') !== $patient['birth_date']) {
-            $errors[] = 'Neplatny datum narodenia.';
+            $errors[] = 'Neplatný dátum narodenia.';
         }
     }
 
     if ($patient['birth_number'] !== '') {
         $normalizedBirthNumber = preg_replace('/\s+/', '', $patient['birth_number']) ?? '';
         if (!preg_match('/^\d{6}\/??\d{3,4}$/', $normalizedBirthNumber)) {
-            $errors[] = 'Rodne cislo musi byt vo formate 000000/0000 alebo 0000000000.';
+            $errors[] = 'Rodné číslo musí byť vo formáte 000000/0000 alebo 0000000000.';
         }
     }
 
-    if ($patient['insurance_code'] !== '' && !preg_match('/^\d{3}$/', $patient['insurance_code'])) {
-        $errors[] = 'Kod zdravotnej poistovne musi mat 3 cislice.';
+    if ($patient['insurance_code'] !== '' && !preg_match('/^\d{2,3}(-\d{2})?$/', $patient['insurance_code'])) {
+        $errors[] = 'Kód zdravotnej poisťovne musí mať formát XX alebo XX-YY (napr. 24 alebo 24-01).';
     }
+}
+
+/**
+ * Odvodí vek pacienta z dátumu narodenia alebo rodného čísla.
+ * Preferuje dátum narodenia; fallback na rodné číslo.
+ *
+ * @param array $patient  Výstup calculatorPatientDataFromRequest()
+ * @return int|null  Vek v rokoch, alebo null ak sa nedá odvodiť
+ */
+function calculatorAgeFromPatient(array $patient): ?int
+{
+    $today = new \DateTime('today');
+
+    if ($patient['birth_date'] !== '') {
+        $dt = \DateTime::createFromFormat('Y-m-d', $patient['birth_date']);
+        if ($dt && $dt->format('Y-m-d') === $patient['birth_date']) {
+            $diff = $today->diff($dt);
+            return ($diff->invert === 1) ? (int) $diff->y : null;
+        }
+    }
+
+    if ($patient['birth_number'] !== '') {
+        $bn = preg_replace('/[\s\/]/', '', $patient['birth_number']) ?? '';
+        if (!preg_match('/^\d{9,10}$/', $bn)) {
+            return null;
+        }
+        $yy = (int) substr($bn, 0, 2);
+        $mm = (int) substr($bn, 2, 2);
+        $dd = (int) substr($bn, 4, 2);
+
+        if ($mm >= 71) {
+            $mm -= 70;
+        } elseif ($mm >= 51) {
+            $mm -= 50;
+        } elseif ($mm >= 21) {
+            $mm -= 20;
+        }
+
+        if ($mm < 1 || $mm > 12 || $dd < 1 || $dd > 31) {
+            return null;
+        }
+
+        $currentYear = (int) $today->format('Y');
+        $year = (2000 + $yy <= $currentYear) ? 2000 + $yy : 1900 + $yy;
+        $dateStr = sprintf('%04d-%02d-%02d', $year, $mm, $dd);
+        $dt = \DateTime::createFromFormat('Y-m-d', $dateStr);
+        if (!$dt || $dt->format('Y-m-d') !== $dateStr) {
+            return null;
+        }
+        $diff = $today->diff($dt);
+        return ($diff->invert === 1) ? (int) $diff->y : null;
+    }
+
+    return null;
 }
 
 function calculatorParsePositiveFloat(string $value): ?float

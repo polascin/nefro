@@ -10,15 +10,15 @@ $resultRow = null;
 $errorMessage = null;
 
 if ($resultId <= 0) {
-    $errorMessage = 'Neplatne ID vysledku.';
+    $errorMessage = 'Neplatné ID výsledku.';
 } else {
     try {
         $resultRow = calculatorFetchSavedResultById($pdo, $resultId, (int) $_SESSION['user_id']);
         if ($resultRow === null) {
-            $errorMessage = 'Vysledok nebol najdeny.';
+            $errorMessage = 'Výsledok nebol nájdený.';
         }
     } catch (\PDOException $e) {
-        $errorMessage = 'Databazova chyba pri nacitani vysledku.';
+        $errorMessage = 'Databázová chyba pri načítaní výsledku.';
         error_log('calculator_result_print error: ' . $e->getMessage());
     }
 }
@@ -31,7 +31,7 @@ $resultPayload = is_array($resultRow['result_payload'] ?? null) ? $resultRow['re
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tlac vysledku kalkulacky</title>
+    <title>Tlač výsledku kalkulačky</title>
     <script src="theme.js?v=20260511-1&cb=<?= filemtime('theme.js') ?>"></script>
     <link rel="stylesheet" href="index.css?v=20260509-1&cb=<?= filemtime('index.css') ?>">
     <script src="ui-preferences.js?v=20260511-1&cb=<?= filemtime('ui-preferences.js') ?>" defer></script>
@@ -40,24 +40,24 @@ $resultPayload = is_array($resultRow['result_payload'] ?? null) ? $resultRow['re
 <body class="admin-notice-page">
     <main class="container main-content main-content--single-col" role="main">
         <div class="auth-container auth-container--wide admin-notice-card">
-            <h2>Tlac vysledku kalkulacky</h2>
+            <h2>Tlač výsledku kalkulačky</h2>
 
             <?php if ($errorMessage !== null): ?>
                 <div class="alert alert-error"><p><?= htmlspecialchars($errorMessage) ?></p></div>
-                <p><a href="calculators.php" class="btn-primary">Spat na kalkulacky</a></p>
+                <p><a href="calculators.php" class="btn-primary">Späť na kalkulačky</a></p>
             <?php else: ?>
                 <p class="auth-subtitle"><?= htmlspecialchars((string) ($resultRow['calculator_label'] ?? '')) ?></p>
 
                 <div class="admin-notice-print-user">
-                    <h3>Identifikacia pacienta</h3>
+                    <h3>Identifikácia pacienta</h3>
                     <div class="admin-notice-print-row"><strong>Pacient</strong><span><?= htmlspecialchars(calculatorBuildPatientDisplay($resultRow)) ?></span></div>
-                    <div class="admin-notice-print-row"><strong>Datum ulozenia</strong><span><?= htmlspecialchars((string) ($resultRow['created_at'] ?? '')) ?></span></div>
+                    <div class="admin-notice-print-row"><strong>Dátum uloženia</strong><span><?= htmlspecialchars((string) ($resultRow['created_at'] ?? '')) ?></span></div>
                 </div>
 
                 <div class="admin-notice-print-user">
-                    <h3>Vstupy kalkulacky</h3>
+                    <h3>Vstupy kalkulačky</h3>
                     <?php if (empty($inputPayload)): ?>
-                        <p>Vstupne udaje nie su dostupne.</p>
+                        <p>Vstupné údaje nie sú dostupné.</p>
                     <?php else: ?>
                         <?php foreach ($inputPayload as $key => $value): ?>
                             <div class="admin-notice-print-row">
@@ -69,9 +69,9 @@ $resultPayload = is_array($resultRow['result_payload'] ?? null) ? $resultRow['re
                 </div>
 
                 <div class="admin-notice-print-user">
-                    <h3>Vysledok</h3>
+                    <h3>Výsledok</h3>
                     <?php if (empty($resultPayload)): ?>
-                        <p>Vysledok nie je dostupny.</p>
+                        <p>Výsledok nie je dostupný.</p>
                     <?php else: ?>
                         <?php foreach ($resultPayload as $key => $value): ?>
                             <div class="admin-notice-print-row">
@@ -83,11 +83,16 @@ $resultPayload = is_array($resultRow['result_payload'] ?? null) ? $resultRow['re
                 </div>
 
                 <div class="form-actions no-print">
-                    <button type="button" class="btn-primary" onclick="window.print()">Tlacit</button>
-                    <a href="javascript:window.close()" class="btn-secondary">Zatvorit okno</a>
+                    <button type="button" class="btn-primary" onclick="window.print()">Tlačiť</button>
+                    <a href="javascript:window.close()" class="btn-secondary">Zatvoriť okno</a>
                 </div>
             <?php endif; ?>
         </div>
     </main>
+    <script>
+        if (document.querySelector('.alert-error') === null) {
+            window.addEventListener('load', function () { window.print(); });
+        }
+    </script>
 </body>
 </html>

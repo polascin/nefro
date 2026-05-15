@@ -103,6 +103,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $patient = calculatorPatientDataFromRequest($_POST);
         calculatorValidateOptionalPatientData($patient, $errors);
 
+        // Auto-doplniť vek z dát. narodenia / rodného čísla, ak pole ostalo prázdne
+        if ($form['age_years'] === '') {
+            $derived = calculatorAgeFromPatient($patient);
+            if ($derived !== null) {
+                $form['age_years'] = (string) $derived;
+            }
+        }
+
         $ageYears = filter_var($form['age_years'], FILTER_VALIDATE_INT, [
             'options' => [
                 'min_range' => 18,
@@ -300,7 +308,7 @@ if (isLoggedIn()) {
                             </div>
                             <div class="form-group">
                                 <label for="patient_insurance_code">Kód zdravotnej poisťovne</label>
-                                <input type="text" id="patient_insurance_code" name="patient_insurance_code" class="form-control" placeholder="001" value="<?= htmlspecialchars($form['patient_insurance_code']) ?>">
+                                <input type="text" id="patient_insurance_code" name="patient_insurance_code" class="form-control" placeholder="24 alebo 24-01" value="<?= htmlspecialchars($form['patient_insurance_code']) ?>">
                             </div>
                         </div>
                     </div>
@@ -311,7 +319,7 @@ if (isLoggedIn()) {
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="age_years">Vek (roky)</label>
-                                <input type="number" id="age_years" name="age_years" min="18" max="120" required class="form-control" value="<?= htmlspecialchars($form['age_years']) ?>">
+                                <input type="number" id="age_years" name="age_years" min="18" max="120" required class="form-control" value="<?= htmlspecialchars($form['age_years']) ?>" placeholder="automaticky z dát. nar. / RČ">
                             </div>
                             <div class="form-group">
                                 <label for="sex">Pohlavie</label>
@@ -410,7 +418,7 @@ if (isLoggedIn()) {
                 <?php endif; ?>
             </div>
 
-            <section class="auth-container auth-container--wide">
+            <section class="auth-container auth-container--wide calc-saved-results">
                 <h3>Uložené výsledky</h3>
                 <?php if (!isLoggedIn()): ?>
                     <p>Pre ukladanie a históriu výpočtov je potrebné prihlásenie.</p>
@@ -460,6 +468,40 @@ if (isLoggedIn()) {
         </div>
     </main>
 
+    <script>
+    (function () {
+        function ageFromDate(dateStr) {
+            if (!dateStr) return null;
+            var b = new Date(dateStr), t = new Date();
+            var age = t.getFullYear() - b.getFullYear();
+            var m = t.getMonth() - b.getMonth();
+            if (m < 0 || (m === 0 && t.getDate() < b.getDate())) age--;
+            return age >= 0 ? age : null;
+        }
+        function ageFromBirthNumber(bn) {
+            var d = bn.replace(/[\s\/]/g, '');
+            if (!/^\d{9,10}$/.test(d)) return null;
+            var yy = +d.slice(0,2), mm = +d.slice(2,4), dd = +d.slice(4,6);
+            if (mm >= 71) mm -= 70; else if (mm >= 51) mm -= 50; else if (mm >= 21) mm -= 20;
+            if (mm < 1 || mm > 12 || dd < 1 || dd > 31) return null;
+            var cy = new Date().getFullYear();
+            var yr = (2000 + yy <= cy) ? 2000 + yy : 1900 + yy;
+            var ds = yr + '-' + String(mm).padStart(2,'0') + '-' + String(dd).padStart(2,'0');
+            return ageFromDate(ds);
+        }
+        function fillAge(age) {
+            var el = document.getElementById('age_years');
+            if (!el || age === null) return;
+            el.value = age;
+        }
+        var bd = document.getElementById('patient_birth_date');
+        var bn = document.getElementById('patient_birth_number');
+        if (bd) bd.addEventListener('change', function () { fillAge(ageFromDate(this.value)); });
+        if (bn) bn.addEventListener('input', function () {
+            var a = ageFromBirthNumber(this.value); if (a !== null) fillAge(a);
+        });
+    })();
+    </script>
     <?php include 'footer.php'; ?>
 </body>
 </html>

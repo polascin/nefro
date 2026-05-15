@@ -1719,8 +1719,119 @@ input:disabled + .slider:before {
   .site-footer,
   .site-header,
   header,
-  footer {
+  footer,
+  .main-nav,
+  .calc-saved-results,
+  .kfre-legend,
+  .form-actions {
     display: none !important;
+  }
+
+  /* Compact calculator layout in print */
+  .content-wrapper {
+    padding: 0 !important;
+  }
+
+  .auth-container {
+    padding: 10px 14px !important;
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+    margin-bottom: 10px !important;
+  }
+
+  .form-section {
+    margin-bottom: 6px !important;
+    padding: 6px 10px !important;
+    border: 1px solid #ddd !important;
+    border-radius: 4px !important;
+  }
+
+  .form-section h3 {
+    font-size: 11pt !important;
+    margin-bottom: 4px !important;
+  }
+
+  .form-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 2px 12px !important;
+  }
+
+  .form-group {
+    margin-bottom: 3px !important;
+  }
+
+  .form-group label {
+    font-size: 8pt !important;
+    color: #555 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .form-control {
+    font-size: 9.5pt !important;
+    border: none !important;
+    padding: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  .calculator-result-block {
+    border: 2px solid #222 !important;
+    padding: 10px 14px !important;
+    background: #fff !important;
+    page-break-inside: avoid;
+  }
+
+  .calculator-result-block h3 {
+    font-size: 12pt !important;
+    margin-bottom: 6px !important;
+    border-bottom: 1px solid #666;
+    padding-bottom: 4px;
+  }
+
+  .calculator-result-block p,
+  .calculator-result-block li {
+    font-size: 10pt !important;
+    line-height: 1.4 !important;
+    margin-bottom: 3px !important;
+  }
+
+  /* KFRE risk display compact */
+  .kfre-risk-display {
+    gap: 6px !important;
+  }
+
+  .risk-item {
+    padding: 6px 8px !important;
+  }
+
+  /* CKD-PC risk display compact */
+  .ckdpc-risk-display {
+    gap: 6px !important;
+  }
+
+  /* Details/summary – expand for print */
+  details {
+    display: block !important;
+  }
+
+  details > summary {
+    display: none !important;
+  }
+
+  details[open],
+  details {
+    border: none !important;
+    padding: 0 !important;
+  }
+
+  .ckdpc-inputs-summary table {
+    font-size: 8pt !important;
+  }
+
+  .ckdpc-inputs-summary th,
+  .ckdpc-inputs-summary td {
+    padding: 2px 6px !important;
   }
 
   body.admin-notice-page {
