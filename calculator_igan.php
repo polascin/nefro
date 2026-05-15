@@ -331,35 +331,34 @@ Riziko (5 r.) = 1 &minus; 0.972<sup>exp(LP)</sup> &times; 100&thinsp;%</code>
 
                 <form method="POST" action="calculator_igan.php" novalidate>
                     <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
-
                     <div class="form-section">
-                        <h3>Údaje pacienta (voliteľné)</h3>
+                        <h3>Voliteľné identifikačné údaje pacienta</h3>
                         <div class="form-grid">
                             <div class="form-group">
-                                <label for="igan_first_name">Meno</label>
-                                <input type="text" id="igan_first_name" name="patient_first_name" class="form-control" maxlength="100" autocomplete="off" value="<?= htmlspecialchars($form['patient_first_name']) ?>">
+                                <label for="patient_first_name">Meno</label>
+                                <input type="text" id="patient_first_name" name="patient_first_name" class="form-control" value="<?= htmlspecialchars($form['patient_first_name']) ?>">
                             </div>
                             <div class="form-group">
-                                <label for="igan_last_name">Priezvisko</label>
-                                <input type="text" id="igan_last_name" name="patient_last_name" class="form-control" maxlength="100" autocomplete="off" value="<?= htmlspecialchars($form['patient_last_name']) ?>">
+                                <label for="patient_last_name">Priezvisko</label>
+                                <input type="text" id="patient_last_name" name="patient_last_name" class="form-control" value="<?= htmlspecialchars($form['patient_last_name']) ?>">
                             </div>
                             <div class="form-group">
-                                <label for="igan_birth_date">Dátum narodenia</label>
-                                <input type="date" id="igan_birth_date" name="patient_birth_date" class="form-control" value="<?= htmlspecialchars($form['patient_birth_date']) ?>">
+                                <label for="patient_birth_date">Dátum narodenia</label>
+                                <input type="date" id="patient_birth_date" name="patient_birth_date" class="form-control" value="<?= htmlspecialchars($form['patient_birth_date']) ?>">
                             </div>
                             <div class="form-group">
-                                <label for="igan_birth_number">Rodné číslo</label>
-                                <input type="text" id="igan_birth_number" name="patient_birth_number" class="form-control" maxlength="20" autocomplete="off" value="<?= htmlspecialchars($form['patient_birth_number']) ?>">
+                                <label for="patient_birth_number">Rodné číslo</label>
+                                <input type="text" id="patient_birth_number" name="patient_birth_number" class="form-control" placeholder="000000/0000" value="<?= htmlspecialchars($form['patient_birth_number']) ?>">
                             </div>
                             <div class="form-group">
-                                <label for="igan_insurance_code">Kód ZP</label>
-                                <input type="text" id="igan_insurance_code" name="patient_insurance_code" class="form-control" maxlength="10" autocomplete="off" value="<?= htmlspecialchars($form['patient_insurance_code']) ?>">
+                                <label for="patient_insurance_code">Kód zdravotnej poisťovne</label>
+                                <input type="text" id="patient_insurance_code" name="patient_insurance_code" class="form-control" placeholder="24 alebo 24-01" value="<?= htmlspecialchars($form['patient_insurance_code']) ?>">
                             </div>
                         </div>
                     </div>
 
                     <div class="form-section">
-                        <h3>Klinické parametre (pri biopsii / aktuálne)</h3>
+                        <h3>Povinné vstupy na výpočet</h3>
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="igan_egfr">eGFR (mL/min/1,73&thinsp;m²) <span class="required">*</span></label>

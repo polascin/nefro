@@ -322,35 +322,34 @@ Triedy: 1A: k&lt;0,015 &nbsp; 1B: 0,015–0,030 &nbsp; 1C: 0,030–0,045 &nbsp; 
 
                 <form method="POST" action="calculator_adpkd.php" novalidate>
                     <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
-
                     <div class="form-section">
-                        <h3>Údaje pacienta (voliteľné)</h3>
+                        <h3>Voliteľné identifikačné údaje pacienta</h3>
                         <div class="form-grid">
                             <div class="form-group">
-                                <label for="adpkd_fn">Meno</label>
-                                <input type="text" id="adpkd_fn" name="patient_first_name" class="form-control" maxlength="100" autocomplete="off" value="<?= htmlspecialchars($form['patient_first_name']) ?>">
+                                <label for="patient_first_name">Meno</label>
+                                <input type="text" id="patient_first_name" name="patient_first_name" class="form-control" value="<?= htmlspecialchars($form['patient_first_name']) ?>">
                             </div>
                             <div class="form-group">
-                                <label for="adpkd_ln">Priezvisko</label>
-                                <input type="text" id="adpkd_ln" name="patient_last_name" class="form-control" maxlength="100" autocomplete="off" value="<?= htmlspecialchars($form['patient_last_name']) ?>">
+                                <label for="patient_last_name">Priezvisko</label>
+                                <input type="text" id="patient_last_name" name="patient_last_name" class="form-control" value="<?= htmlspecialchars($form['patient_last_name']) ?>">
                             </div>
                             <div class="form-group">
-                                <label for="adpkd_bd">Dátum narodenia</label>
-                                <input type="date" id="adpkd_bd" name="patient_birth_date" class="form-control" value="<?= htmlspecialchars($form['patient_birth_date']) ?>">
+                                <label for="patient_birth_date">Dátum narodenia</label>
+                                <input type="date" id="patient_birth_date" name="patient_birth_date" class="form-control" value="<?= htmlspecialchars($form['patient_birth_date']) ?>">
                             </div>
                             <div class="form-group">
-                                <label for="adpkd_bn">Rodné číslo</label>
-                                <input type="text" id="adpkd_bn" name="patient_birth_number" class="form-control" maxlength="20" autocomplete="off" value="<?= htmlspecialchars($form['patient_birth_number']) ?>">
+                                <label for="patient_birth_number">Rodné číslo</label>
+                                <input type="text" id="patient_birth_number" name="patient_birth_number" class="form-control" placeholder="000000/0000" value="<?= htmlspecialchars($form['patient_birth_number']) ?>">
                             </div>
                             <div class="form-group">
-                                <label for="adpkd_zp">Kód ZP</label>
-                                <input type="text" id="adpkd_zp" name="patient_insurance_code" class="form-control" maxlength="10" autocomplete="off" value="<?= htmlspecialchars($form['patient_insurance_code']) ?>">
+                                <label for="patient_insurance_code">Kód zdravotnej poisťovne</label>
+                                <input type="text" id="patient_insurance_code" name="patient_insurance_code" class="form-control" placeholder="24 alebo 24-01" value="<?= htmlspecialchars($form['patient_insurance_code']) ?>">
                             </div>
                         </div>
                     </div>
 
                     <div class="form-section">
-                        <h3>Parametre ADPKD</h3>
+                        <h3>Povinné vstupy na výpočet</h3>
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="adpkd_tkv">Celkový objem obličiek — TKV (mL) <span class="required">*</span></label>

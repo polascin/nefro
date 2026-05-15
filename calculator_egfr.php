@@ -344,7 +344,6 @@ if (isLoggedIn()) {
 
                 <form method="POST" action="calculator_egfr.php">
                     <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
-
                     <div class="form-section">
                         <h3>Voliteľné identifikačné údaje pacienta</h3>
                         <div class="form-grid">
@@ -372,7 +371,7 @@ if (isLoggedIn()) {
                     </div>
 
                     <div class="form-section">
-                        <h3>Povinné vstupy pre výpočet</h3>
+                        <h3>Povinné vstupy na výpočet</h3>
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="sex">Pohlavie</label>

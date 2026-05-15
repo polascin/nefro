@@ -316,7 +316,6 @@ A1: UACR &lt; 30 &nbsp;&nbsp;A2: 30&ndash;300 &nbsp;&nbsp;A3: &gt; 300 &nbsp;mg/
 
                 <form method="POST" action="calculator_kdigo_risk.php">
                     <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
-
                     <div class="form-section">
                         <h3>Voliteľné identifikačné údaje pacienta</h3>
                         <div class="form-grid">
@@ -344,7 +343,7 @@ A1: UACR &lt; 30 &nbsp;&nbsp;A2: 30&ndash;300 &nbsp;&nbsp;A3: &gt; 300 &nbsp;mg/
                     </div>
 
                     <div class="form-section">
-                        <h3>Povinné vstupy pre výpočet</h3>
+                        <h3>Povinné vstupy na výpočet</h3>
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="egfr">eGFR (ml/min/1,73 m²)</label>

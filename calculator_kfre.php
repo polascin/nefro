@@ -371,7 +371,6 @@ S<sub>0</sub>(2 roky) = 0.9832 &nbsp;&nbsp; S<sub>0</sub>(5 rokov) = 0.9240</cod
 
                 <form method="POST" action="calculator_kfre.php">
                     <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
-
                     <div class="form-section">
                         <h3>Voliteľné identifikačné údaje pacienta</h3>
                         <div class="form-grid">
@@ -399,7 +398,7 @@ S<sub>0</sub>(2 roky) = 0.9832 &nbsp;&nbsp; S<sub>0</sub>(5 rokov) = 0.9240</cod
                     </div>
 
                     <div class="form-section">
-                        <h3>Povinné vstupy pre výpočet</h3>
+                        <h3>Povinné vstupy na výpočet</h3>
                         <p class="helper-text"><strong>Poznámka:</strong> KFRE sa odporúča najmä pre pacientov s CKD v kategóriách G3–G5 (eGFR &lt;60 ml/min/1,73 m²).</p>
                         <div class="form-grid">
                             <div class="form-group">

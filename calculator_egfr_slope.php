@@ -213,20 +213,34 @@ if (isLoggedIn()) {
 
                 <form method="POST">
                     <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
-                    
                     <div class="form-section">
                         <h3>Voliteľné identifikačné údaje pacienta</h3>
                         <div class="form-grid">
-                            <div class="form-group"><label for="patient_first_name">Meno</label><input type="text" id="patient_first_name" name="patient_first_name" class="form-control" value="<?= htmlspecialchars($form['patient_first_name']) ?>"></div>
-                            <div class="form-group"><label for="patient_last_name">Priezvisko</label><input type="text" id="patient_last_name" name="patient_last_name" class="form-control" value="<?= htmlspecialchars($form['patient_last_name']) ?>"></div>
-                            <div class="form-group"><label for="patient_birth_date">Dátum narodenia</label><input type="date" id="patient_birth_date" name="patient_birth_date" class="form-control" value="<?= htmlspecialchars($form['patient_birth_date']) ?>"></div>
-                            <div class="form-group"><label for="patient_birth_number">Rodné číslo</label><input type="text" id="patient_birth_number" name="patient_birth_number" class="form-control" placeholder="000000/0000" value="<?= htmlspecialchars($form['patient_birth_number']) ?>"></div>
-                            <div class="form-group"><label for="patient_insurance_code">Kód zdravotnej poisťovne</label><input type="text" id="patient_insurance_code" name="patient_insurance_code" class="form-control" placeholder="24 alebo 24-01" value="<?= htmlspecialchars($form['patient_insurance_code']) ?>"></div>
+                            <div class="form-group">
+                                <label for="patient_first_name">Meno</label>
+                                <input type="text" id="patient_first_name" name="patient_first_name" class="form-control" value="<?= htmlspecialchars($form['patient_first_name']) ?>">
+                            </div>
+                            <div class="form-group">
+                                <label for="patient_last_name">Priezvisko</label>
+                                <input type="text" id="patient_last_name" name="patient_last_name" class="form-control" value="<?= htmlspecialchars($form['patient_last_name']) ?>">
+                            </div>
+                            <div class="form-group">
+                                <label for="patient_birth_date">Dátum narodenia</label>
+                                <input type="date" id="patient_birth_date" name="patient_birth_date" class="form-control" value="<?= htmlspecialchars($form['patient_birth_date']) ?>">
+                            </div>
+                            <div class="form-group">
+                                <label for="patient_birth_number">Rodné číslo</label>
+                                <input type="text" id="patient_birth_number" name="patient_birth_number" class="form-control" placeholder="000000/0000" value="<?= htmlspecialchars($form['patient_birth_number']) ?>">
+                            </div>
+                            <div class="form-group">
+                                <label for="patient_insurance_code">Kód zdravotnej poisťovne</label>
+                                <input type="text" id="patient_insurance_code" name="patient_insurance_code" class="form-control" placeholder="24 alebo 24-01" value="<?= htmlspecialchars($form['patient_insurance_code']) ?>">
+                            </div>
                         </div>
                     </div>
 
                     <div class="form-section">
-                        <h3>Vstupné hodnoty (Zadajte aspoň 2 merania)</h3>
+                        <h3>Povinné vstupy na výpočet</h3>
                         <?php for ($i=1; $i<=4; $i++): ?>
                         <div class="form-grid" style="margin-bottom:8px; border-bottom:1px solid var(--color-border); padding-bottom:8px;">
                             <div class="form-group"><label>Dátum merania <?= $i ?></label><input type="date" name="date_<?= $i ?>" class="form-control" value="<?= htmlspecialchars($form["date_$i"]) ?>"></div>

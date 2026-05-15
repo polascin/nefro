@@ -250,20 +250,34 @@ if (isLoggedIn()) {
 
                 <form method="POST" action="calculator_acidbase.php">
                     <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
-
                     <div class="form-section">
                         <h3>Voliteľné identifikačné údaje pacienta</h3>
                         <div class="form-grid">
-                            <div class="form-group"><label for="patient_first_name">Meno</label><input type="text" id="patient_first_name" name="patient_first_name" class="form-control" value="<?= htmlspecialchars($form['patient_first_name']) ?>"></div>
-                            <div class="form-group"><label for="patient_last_name">Priezvisko</label><input type="text" id="patient_last_name" name="patient_last_name" class="form-control" value="<?= htmlspecialchars($form['patient_last_name']) ?>"></div>
-                            <div class="form-group"><label for="patient_birth_date">Dátum narodenia</label><input type="date" id="patient_birth_date" name="patient_birth_date" class="form-control" value="<?= htmlspecialchars($form['patient_birth_date']) ?>"></div>
-                            <div class="form-group"><label for="patient_birth_number">Rodné číslo</label><input type="text" id="patient_birth_number" name="patient_birth_number" class="form-control" placeholder="000000/0000" value="<?= htmlspecialchars($form['patient_birth_number']) ?>"></div>
-                            <div class="form-group"><label for="patient_insurance_code">Kód zdravotnej poisťovne</label><input type="text" id="patient_insurance_code" name="patient_insurance_code" class="form-control" placeholder="24 alebo 24-01" value="<?= htmlspecialchars($form['patient_insurance_code']) ?>"></div>
+                            <div class="form-group">
+                                <label for="patient_first_name">Meno</label>
+                                <input type="text" id="patient_first_name" name="patient_first_name" class="form-control" value="<?= htmlspecialchars($form['patient_first_name']) ?>">
+                            </div>
+                            <div class="form-group">
+                                <label for="patient_last_name">Priezvisko</label>
+                                <input type="text" id="patient_last_name" name="patient_last_name" class="form-control" value="<?= htmlspecialchars($form['patient_last_name']) ?>">
+                            </div>
+                            <div class="form-group">
+                                <label for="patient_birth_date">Dátum narodenia</label>
+                                <input type="date" id="patient_birth_date" name="patient_birth_date" class="form-control" value="<?= htmlspecialchars($form['patient_birth_date']) ?>">
+                            </div>
+                            <div class="form-group">
+                                <label for="patient_birth_number">Rodné číslo</label>
+                                <input type="text" id="patient_birth_number" name="patient_birth_number" class="form-control" placeholder="000000/0000" value="<?= htmlspecialchars($form['patient_birth_number']) ?>">
+                            </div>
+                            <div class="form-group">
+                                <label for="patient_insurance_code">Kód zdravotnej poisťovne</label>
+                                <input type="text" id="patient_insurance_code" name="patient_insurance_code" class="form-control" placeholder="24 alebo 24-01" value="<?= htmlspecialchars($form['patient_insurance_code']) ?>">
+                            </div>
                         </div>
                     </div>
 
                     <div class="form-section">
-                        <h3>Vstupy pre výpočet</h3>
+                        <h3>Povinné vstupy na výpočet</h3>
                         <div class="form-grid">
                             <div class="form-group"><label for="s_na">S-Na (mmol/L)</label><input type="text" id="s_na" name="s_na" required class="form-control" value="<?= htmlspecialchars($form['s_na']) ?>"></div>
                             <div class="form-group"><label for="s_cl">S-Cl (mmol/L)</label><input type="text" id="s_cl" name="s_cl" required class="form-control" value="<?= htmlspecialchars($form['s_cl']) ?>"></div>
