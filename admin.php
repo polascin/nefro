@@ -64,7 +64,9 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     $tempPwd = bin2hex(random_bytes(8));
                     $pdo->prepare("UPDATE users SET password_hash = :hash WHERE id = :id")
                         ->execute(['hash' => password_hash($tempPwd, PASSWORD_DEFAULT), 'id' => $targetUserId]);
-                    $actionResult = 'Heslo resetované — ' . htmlspecialchars((string) $tUser['username']) . '. Dočasné heslo: <code>' . htmlspecialchars($tempPwd) . '</code>';
+                    // Dočasné heslo uložené oddelene — výpis cez htmlspecialchars() + <code> v šablóne
+                    $actionResult = 'Heslo resetované — ' . htmlspecialchars((string) $tUser['username']) . '.';
+                    $actionTempPassword = $tempPwd;
                 } catch (\PDOException $e) {
                     error_log('Admin reset_password error: ' . $e->getMessage());
                     $actionError = 'Chyba pri resete hesla.';
@@ -106,6 +108,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 
 $errors = [];
 $csrfToken = generateCsrfToken();
+$actionTempPassword = null;
 $noticeAudit = [];
 $noticeAuditAdminOptions = [];
 
@@ -275,7 +278,11 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
 
             <?php if ($actionResult !== null): ?>
                 <div class="alert alert-success">
-                    <p><?= $actionResult /* already escaped or contains intentional HTML (code tag for temp password) */ ?></p>
+                    <p><?= htmlspecialchars($actionResult) ?></p>
+                    <?php if ($actionTempPassword !== null): ?>
+                        <p>Dočasné heslo: <code><?= htmlspecialchars($actionTempPassword) ?></code></p>
+                        <p><em>Heslo sa zobrazí iba raz. Odovzdajte ho používateľovi bezpečným kanálom.</em></p>
+                    <?php endif; ?>
                 </div>
             <?php endif; ?>
             <?php if ($actionError !== null): ?>

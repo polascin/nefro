@@ -138,29 +138,39 @@ $articleSchema = null;
 if ($article) {
   $articleSchema = [
     '@context' => 'https://schema.org',
-    '@type' => 'Article',
+    '@type'    => ['Article', 'MedicalWebPage'],
     'headline' => $articleTitleRaw,
     'description' => $metaDescriptionRaw,
-    'inLanguage' => 'sk-SK',
+    'inLanguage'  => 'sk-SK',
     'mainEntityOfPage' => $canonicalUrlRaw,
-    'url' => $canonicalUrlRaw,
+    'url'         => $canonicalUrlRaw,
     'datePublished' => toIso8601((string) ($article['published_at'] ?? '')),
-    'dateModified' => toIso8601((string) ($article['updated_at'] ?? ($article['published_at'] ?? ''))),
+    'dateModified'  => toIso8601((string) ($article['updated_at'] ?? ($article['published_at'] ?? ''))),
+    'medicalSpecialty' => 'Nephrology',
+    'audience' => [
+      '@type'       => 'MedicalAudience',
+      'audienceType' => 'Clinician',
+    ],
     'author' => [
-      '@type' => 'Person',
-      'name' => $articleAuthorRaw,
+      '@type'  => 'Person',
+      'name'   => $articleAuthorRaw,
+      'sameAs' => 'https://polascin.com/',
     ],
     'publisher' => [
       '@type' => 'MedicalOrganization',
-      'name' => $siteName,
-      'logo' => [
+      'name'  => $siteName,
+      'logo'  => [
         '@type' => 'ImageObject',
-        'url' => $baseUrl . 'img/nps-logo.gif',
+        'url'   => $baseUrl . 'img/nps-logo.gif',
+        'width' => 200,
+        'height' => 200,
       ],
     ],
     'image' => [
-      '@type' => 'ImageObject',
-      'url' => $baseUrl . 'img/nps-logo.gif',
+      '@type'  => 'ImageObject',
+      'url'    => $baseUrl . 'img/nps-logo.gif',
+      'width'  => 200,
+      'height' => 200,
     ],
   ];
 }
@@ -179,7 +189,8 @@ if ($article) {
 
   <meta name="description" content="<?= $metaDescription ?>">
   <meta name="robots" content="<?= htmlspecialchars($robotsMeta, ENT_QUOTES) ?>">
-  <meta name="author" content="Dr. Ľubomír Polaščín">
+  <meta name="author" content="MUDr. Ľubomír Polaščín">
+  <meta name="keywords" content="nefrológia, CKD, chronické ochorenie obličiek, KDIGO, dialýza, transplantácia obličiek, Slovensko, <?= htmlspecialchars(mb_substr($articleTitleRaw, 0, 60), ENT_QUOTES) ?>">
   <?php if ($article): ?>
   <link rel="canonical" href="<?= $canonicalUrl ?>">
   <link rel="alternate" hreflang="sk-SK" href="<?= $canonicalUrl ?>">
@@ -194,6 +205,8 @@ if ($article) {
   <meta property="og:locale" content="sk_SK">
   <meta property="og:image" content="https://nefro.polascin.net/img/nps-logo.gif">
   <meta property="og:image:alt" content="Nefro-projekt Slovensko">
+  <meta property="og:image:width" content="200">
+  <meta property="og:image:height" content="200">
 
   <?php if ($article): ?>
   <meta property="article:published_time" content="<?= htmlspecialchars(toIso8601((string) ($article['published_at'] ?? '')), ENT_QUOTES) ?>">

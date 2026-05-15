@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 require_once 'auth.php';
 require_once 'db_config.php';
 // Bezpečnostné HTTP hlavičky
@@ -170,14 +170,31 @@ $structuredData = [
     '@type' => 'MedicalOrganization',
     'name' => $siteName,
     'url' => $baseUrl,
-    'logo' => $baseUrl . 'img/nps-logo.gif',
+    'logo' => [
+      '@type'  => 'ImageObject',
+      'url'    => $baseUrl . 'img/nps-logo.gif',
+      'width'  => 200,
+      'height' => 200,
+    ],
     'description' => 'Dynamická renesancia nefrológie: od molekulárnej biológie po umelú inteligenciu.',
     'medicalSpecialty' => 'Nephrology',
+    'inLanguage' => 'sk-SK',
+    'sameAs' => [
+      'https://polascin.com/',
+      'https://nefro.sk/',
+    ],
     'founder' => [
-      '@type' => 'Person',
-      'name' => 'MUDr. Ľubomír Polaščín',
+      '@type'    => 'Person',
+      'name'     => 'MUDr. Ľubomír Polaščín',
       'jobTitle' => 'Lekár, Nefrológ',
-      'url' => 'https://polascin.com/',
+      'url'      => 'https://polascin.com/',
+      'sameAs'   => ['https://polascin.com/', 'https://nefro.sk/'],
+    ],
+    'contactPoint' => [
+      '@type'       => 'ContactPoint',
+      'email'       => 'nefro@polascin.net',
+      'contactType' => 'customer support',
+      'availableLanguage' => ['Slovak', 'Czech', 'English'],
     ],
   ],
   [
@@ -187,6 +204,11 @@ $structuredData = [
     'url' => $baseUrl,
     'inLanguage' => 'sk-SK',
     'description' => $seoDescription,
+    'potentialAction' => [
+      '@type'       => 'SearchAction',
+      'target'      => ['@type' => 'EntryPoint', 'urlTemplate' => $baseUrl . '?s={search_term_string}'],
+      'query-input' => 'required name=search_term_string',
+    ],
   ],
 ];
 
@@ -218,7 +240,8 @@ if (!empty($itemListElements)) {
   <!-- SEO & Metadata -->
   <meta name="description" content="<?= htmlspecialchars($seoDescription, ENT_QUOTES) ?>">
   <meta name="robots" content="index, follow, max-image-preview:large">
-  <meta name="author" content="Dr. Ľubomír Polaščín">
+  <meta name="author" content="MUDr. Ľubomír Polaščín">
+  <meta name="keywords" content="nefrológia, CKD, chronické ochorenie obličiek, KDIGO 2024, eGFR, dialýza, transplantácia obličiek, nefrologické kalkulačky, Slovensko">
   <link rel="canonical" href="<?= htmlspecialchars($canonicalUrl, ENT_QUOTES) ?>">
   <link rel="alternate" hreflang="sk-SK" href="<?= htmlspecialchars($canonicalUrl, ENT_QUOTES) ?>">
   <?php if ($prevUrl !== ''): ?>
@@ -237,12 +260,15 @@ if (!empty($itemListElements)) {
   <meta property="og:locale" content="sk_SK">
   <meta property="og:image" content="https://nefro.polascin.net/img/nps-logo.gif">
   <meta property="og:image:alt" content="Logo Nefro-projekt Slovensko">
+  <meta property="og:image:width" content="200">
+  <meta property="og:image:height" content="200">
 
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="<?= htmlspecialchars($pageTitle, ENT_QUOTES) ?>">
   <meta name="twitter:description" content="<?= htmlspecialchars($seoDescription, ENT_QUOTES) ?>">
   <meta name="twitter:image" content="https://nefro.polascin.net/img/nps-logo.gif">
+  <meta name="twitter:image:alt" content="Logo Nefro-projekt Slovensko">
 
   <title><?= htmlspecialchars($pageTitle, ENT_QUOTES) ?></title>
 
@@ -260,10 +286,11 @@ if (!empty($itemListElements)) {
   <!-- Prepojenie na externý CSS súbor pre moderný dizajn -->
   <link rel="stylesheet" href="index.css?v=20260509-1&cb=<?= filemtime('index.css') ?>">
 
-  <!-- Google Fonts pre modernú typografiu -->
+  <!-- Google Fonts pre modernú typografiu (non-blocking preload) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;900&display=swap" rel="stylesheet">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;900&display=swap"></noscript>
 
   <!-- Skript pre Privacy Manager (Cookies) -->
   <script src="ui-preferences.js?v=20260511-1&cb=<?= filemtime('ui-preferences.js') ?>" defer></script>

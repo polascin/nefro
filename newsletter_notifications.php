@@ -13,12 +13,13 @@ if (!function_exists('getNewsletterUnsubscribeSecret')) {
         $rawSecret = '';
         try {
             $env = loadAppConfig();
+            // Povolené zdroje kľúča: iba dedikované aplikačné tajomstvá.
+            // DB_PASS a SMTP_PASS sú zámerne vynechané — ich únik by umožnil
+            // falšovanie odhlasovacích odkazov.
             $candidates = [
                 (string) ($env['NEWSLETTER_UNSUBSCRIBE_SECRET'] ?? ''),
                 (string) ($env['APP_KEY'] ?? ''),
                 (string) ($env['APP_SECRET'] ?? ''),
-                (string) ($env['DB_PASS'] ?? ''),
-                (string) ($env['SMTP_PASS'] ?? ''),
             ];
             foreach ($candidates as $candidate) {
                 $candidate = trim($candidate);
@@ -32,6 +33,11 @@ if (!function_exists('getNewsletterUnsubscribeSecret')) {
         }
 
         if ($rawSecret === '') {
+            // Bezpečnostné varovanie: bez dedikovaného kľúča sú odhlasovacia URL
+            // podpísané iba cestou adresára. Pridajte NEWSLETTER_UNSUBSCRIBE_SECRET
+            // do env.ini pre produkčné nasadenie.
+            error_log('BEZPECNOSTNE VAROVANIE: NEWSLETTER_UNSUBSCRIBE_SECRET nie je nastavený v env.ini. '
+                . 'Odhlasovacia URL používa fallback podpis. Nastavte dedikovaný kľúč v env.ini.');
             $rawSecret = __DIR__ . '|newsletter-unsubscribe-fallback';
         }
 

@@ -1,12 +1,62 @@
+# robots.txt — Nefro-projekt Slovensko
+# https://nefro.polascin.net/
+# Generované: 2026-05-15
+
+# ── Všeobecné pravidlá pre všetkých robotov ────────────────────────────────
 User-agent: *
 Allow: /
+
+# Administratívne a vývojové stránky
 Disallow: /admin.php
 Disallow: /admin_articles.php
 Disallow: /admin_users_notice.php
 Disallow: /query_article.php
 Disallow: /setup_db.php
 Disallow: /archive_cleanup.php
+Disallow: /newsletter_worker.php
+Disallow: /resend_verification.php
+Disallow: /verify_email.php
+Disallow: /newsletter_unsubscribe.php
+Disallow: /logout.php
+Disallow: /avatar_upload.php
+Disallow: /calculator_result_print.php
+
+# Privátne adresáre
 Disallow: /private/
 Disallow: /uploads/avatars/archive/
+Disallow: /hooks/
 
+# Vývojové súbory (Python skripty, txt exporty)
+Disallow: /*.py$
+Disallow: /*.txt$
+Disallow: /*.json$
+Disallow: /*.ps1$
+
+# Stránkovanie — allow, ale bez indexovania stránky 2+
+Allow: /?page=
+
+# Crawl delay pre šetrenie servera
+Crawl-delay: 10
+
+# ── Blokovaní agresívni scrapovací roboti ──────────────────────────────────
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+# ── Sitemaps ────────────────────────────────────────────────────────────────
 Sitemap: https://nefro.polascin.net/sitemap.php
+Sitemap: https://nefro.polascin.net/sitemap.xml

@@ -1,0 +1,19 @@
+# ── Bezpečnostné blokovanie citlivých súborov ──────────────────────────────
+
+# Databázový setup skript — prístupný iba cez CLI, nie cez web
+<Files "setup_db.php">
+    Require all denied
+</Files>
+
+# Vývojové diagnostické skripty — nie sú určené pre produkčný prístup
+<Files "query_article.php">
+    Require all denied
+</Files>
+
+# Konfiguračné súbory — nikdy nesmú byť stiahnuteľné
+<Files "*.ini">
+    Require all denied
+</Files>
+<Files "*.env">
+    Require all denied
+</Files>
