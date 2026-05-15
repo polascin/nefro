@@ -4,6 +4,7 @@ require_once 'db_config.php';
 require_once 'avatar_upload.php';
 require_once 'phone_utils.php';
 require_once 'mobile_verification.php';
+require_once 'title_codebook.php';
 
 requireLogin();
 
@@ -560,7 +561,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         </div>
                         <div class="form-group">
                             <label for="title_before">Titul pred menom</label>
-                            <input type="text" id="title_before" name="title_before" class="form-control" value="<?= htmlspecialchars($user['title_before'] ?? '') ?>">
+                            <?php $titlesBefore = getTitlesBeforeName($pdo); ?>
+                            <input type="text" id="title_before" name="title_before" class="form-control"
+                                list="title_before_list"
+                                value="<?= htmlspecialchars($user['title_before'] ?? '') ?>"
+                                placeholder="napr. MUDr. alebo MUDr. doc."
+                                autocomplete="off">
+                            <datalist id="title_before_list">
+                                <?php foreach ($titlesBefore as $t): ?>
+                                    <option value="<?= htmlspecialchars($t) ?>">
+                                <?php endforeach; ?>
+                            </datalist>
+                            <small class="avatar-upload-hint">Vyberte zo zoznamu alebo zadajte vlastný titul (prípadne aj kombináciu viacerých).</small>
                         </div>
                         <div class="form-group">
                             <label for="first_name">Prvé (krstné) meno</label>
@@ -576,7 +588,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         </div>
                         <div class="form-group">
                             <label for="title_after">Titul za menom</label>
-                            <input type="text" id="title_after" name="title_after" class="form-control" value="<?= htmlspecialchars($user['title_after'] ?? '') ?>">
+                            <?php $titlesAfter = getTitlesAfterName($pdo); ?>
+                            <input type="text" id="title_after" name="title_after" class="form-control"
+                                list="title_after_list"
+                                value="<?= htmlspecialchars($user['title_after'] ?? '') ?>"
+                                placeholder="napr. PhD. alebo PhD., MBA"
+                                autocomplete="off">
+                            <datalist id="title_after_list">
+                                <?php foreach ($titlesAfter as $t): ?>
+                                    <option value="<?= htmlspecialchars($t) ?>">
+                                <?php endforeach; ?>
+                            </datalist>
+                            <small class="avatar-upload-hint">Vyberte zo zoznamu alebo zadajte vlastný titul (prípadne aj kombináciu viacerých).</small>
                         </div>
                         <div class="form-group">
                             <label for="birth_date">Dátum narodenia</label>

@@ -318,6 +318,71 @@ try {
         echo "Stĺpec 'sort_order' bol pridaný a inicializovaný.\n";
     }
 
+    // ── Číselník akademických a iných titulov ───────────────────────
+    $titleCodebookSql = "CREATE TABLE IF NOT EXISTS title_codebook (
+        id SMALLINT AUTO_INCREMENT PRIMARY KEY,
+        type ENUM('before', 'after') NOT NULL COMMENT 'before = pred menom, after = za menom',
+        title VARCHAR(50) NOT NULL COMMENT 'Titul (napr. MUDr., PhD.)',
+        sort_order SMALLINT NOT NULL DEFAULT 100 COMMENT 'Poradie zobrazenia (nižšie = skôr)',
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        UNIQUE KEY uq_title_codebook_type_title (type, title),
+        INDEX idx_title_codebook_type (type),
+        INDEX idx_title_codebook_sort (sort_order)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";
+    $pdo->exec($titleCodebookSql);
+    echo "Tabuľka 'title_codebook' bola úspešne vytvorená alebo už existuje.\n";
+
+    // Seed: tituly pred menom — akademické a odborné tituly SR/ČR
+    $titleBeforeSeedSql = "INSERT IGNORE INTO title_codebook (type, title, sort_order) VALUES
+        ('before', 'prof.',       10),
+        ('before', 'doc.',        20),
+        ('before', 'MUDr.',       30),
+        ('before', 'MDDr.',       35),
+        ('before', 'MVDr.',       40),
+        ('before', 'RNDr.',       50),
+        ('before', 'PhDr.',       55),
+        ('before', 'JUDr.',       60),
+        ('before', 'PaedDr.',     65),
+        ('before', 'PhMr.',       70),
+        ('before', 'Mgr.',        75),
+        ('before', 'Mgr. art.',   76),
+        ('before', 'Ing.',        80),
+        ('before', 'Ing. arch.',  81),
+        ('before', 'Bc.',         85),
+        ('before', 'BcA.',        86),
+        ('before', 'ThDr.',       90),
+        ('before', 'ThLic.',      91),
+        ('before', 'ThMgr.',      92),
+        ('before', 'Dr.',         95),
+        ('before', 'Dr. h. c.',   96),
+        ('before', 'Dipl. Ing.', 100)";
+    $pdo->exec($titleBeforeSeedSql);
+    echo "Seed dáta titulov pred menom boli vložené (duplicity ignorované).\n";
+
+    // Seed: tituly za menom — vedecké hodnosti a medzinárodné certifikácie
+    $titleAfterSeedSql = "INSERT IGNORE INTO title_codebook (type, title, sort_order) VALUES
+        ('after', 'PhD.',    10),
+        ('after', 'Ph.D.',   11),
+        ('after', 'CSc.',    20),
+        ('after', 'DrSc.',   25),
+        ('after', 'DSc.',    26),
+        ('after', 'DBA',     30),
+        ('after', 'MBA',     35),
+        ('after', 'MSc.',    40),
+        ('after', 'LL.M.',   45),
+        ('after', 'MPH',     50),
+        ('after', 'MHA',     51),
+        ('after', 'MPA',     52),
+        ('after', 'MPHA',    53),
+        ('after', 'MPM',     54),
+        ('after', 'FRCPS',   60),
+        ('after', 'FACP',    61),
+        ('after', 'FRCP',    62),
+        ('after', 'dis.',    80),
+        ('after', 'DiS.',    81)";
+    $pdo->exec($titleAfterSeedSql);
+    echo "Seed dáta titulov za menom boli vložené (duplicity ignorované).\n";
+
 } catch (\PDOException $e) {
     echo "Chyba pri vytváraní tabuľky: " . $e->getMessage();
 }
