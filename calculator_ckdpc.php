@@ -530,6 +530,7 @@ function sexLabel(string $v): string { return $v === 'male' ? 'Muž' : 'Žena'; 
 &eta; = &beta;<sub>0</sub> + &beta;<sub>1</sub>&middot;Vek + &beta;<sub>2</sub>&middot;muž + &beta;<sub>3</sub>&middot;ln(eGFR) + &beta;<sub>4</sub>&middot;ln(uACR) + &beta;<sub>5</sub>&middot;SBP
     + &beta;<sub>6</sub>&middot;antihyp + &beta;<sub>7</sub>&middot;SZ + &beta;<sub>8</sub>&middot;ICHS + &beta;<sub>9</sub>&middot;FP + &beta;<sub>10</sub>&middot;BMI + &beta;<sub>11</sub>&middot;fajč.
     + [&beta;<sub>12</sub>&middot;HbA1c + &beta;<sub>13</sub>&middot;inzulín + &beta;<sub>14</sub>&middot;PAD] &nbsp;(len pri DM)</code>
+                        <code class="calc-formula-line">Prepočet uACR: [mg/g] = [mg/mmol] &times; 8.84</code>
                         <div class="calc-formula-vars">
                             P = 3-ročné riziko (&ge;40 % pokles eGFR alebo zlyhanie obličiek)&ensp;&bull;&ensp;
                             4 sub-modely: DM / bez DM &times; eGFR &ge;60 / &lt;60&ensp;&bull;&ensp;

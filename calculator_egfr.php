@@ -254,6 +254,7 @@ if (isLoggedIn()) {
                     <summary>Vzorec — CKD-EPI 2021</summary>
                     <div class="calc-formula-content">
                         <code class="calc-formula-line">eGFR = 142 &times; min(S<sub>cr</sub>/&kappa;, 1)<sup>&alpha;</sup> &times; max(S<sub>cr</sub>/&kappa;, 1)<sup>&minus;1.200</sup> &times; 0.9938<sup>Vek</sup> [&times; 1.012 &nbsp;ak&nbsp;&nbsp;&#x2640;]</code>
+                        <code class="calc-formula-line">Prepočet: S<sub>cr</sub> [mg/dL] = S<sub>cr</sub> [&micro;mol/L] &divide; 88.4</code>
                         <div class="calc-formula-vars">
                             &kappa; = 0.7 (žena) / 0.9 (muž)&ensp;&bull;&ensp;
                             &alpha; = &minus;0.241 (žena) / &minus;0.302 (muž)&ensp;&bull;&ensp;

@@ -277,6 +277,7 @@ if (isLoggedIn()) {
 &eta;<sub>5r</sub> = &minus;6.209 + 0.0287&middot;Vek &minus; 0.996&middot;F + 0.169&middot;M + 0.0409&middot;Vek&middot;M &minus; 0.643&middot;ln(eGFR) + 0.0993&middot;ln(UACR)
 
 Riziko = 1 / (1 + e<sup>&minus;&eta;</sup>) &times; 100 %</code>
+                        <code class="calc-formula-line">Prepočet UACR: [mg/g] = [mg/mmol] &times; 8.84</code>
                         <div class="calc-formula-vars">
                             F = 1 (žena), M = 1 (muž)&ensp;&bull;&ensp;UACR v mg/g&ensp;&bull;&ensp;
                             Zdroj: Tangri N et al. <em>JAMA.</em> 2011;305(15):1553–9.
