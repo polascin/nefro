@@ -40,7 +40,7 @@ $isHomePage = basename($_SERVER['PHP_SELF']) === 'index.php';
   $printDateTime = date('d.m.Y H:i:s');
   $isCalculatorPageFooter = str_starts_with(basename($_SERVER['PHP_SELF']), 'calculator');
   ?>
-  <?php if ($isCalculatorPageFooter && !empty($_SESSION['user_id'])): ?>
+  <?php if ($isCalculatorPageFooter && !empty($currentUser)): ?>
         </div> <!-- end .print-layout-tbody -->
         <div class="print-layout-tfoot">
   <?php endif; ?>
@@ -50,7 +50,7 @@ $isHomePage = basename($_SERVER['PHP_SELF']) === 'index.php';
     <div style="margin-top: 2px;">Dátum a čas tlače: <?= $printDateTime ?> (<?= htmlspecialchars($pageTimeZone, ENT_QUOTES, 'UTF-8') ?>)</div>
   </div>
 
-  <?php if ($isCalculatorPageFooter && !empty($_SESSION['user_id'])): ?>
+  <?php if ($isCalculatorPageFooter && !empty($currentUser)): ?>
         </div> <!-- end .print-layout-tfoot -->
     </div> <!-- end .print-layout-table -->
   <?php endif; ?>
