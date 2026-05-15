@@ -97,13 +97,15 @@ if ($isCalculatorPage && !empty($currentUser)):
 
     $line3Parts = array_filter([$org, $job, $wMobile, $orgWeb, $wEmail]);
     $line3 = implode(' | ', $line3Parts);
-?>
-    <div class="user-print-header print-only">
-        <div class="user-print-header__content">
-            <div class="user-print-header__line1"><?= htmlspecialchars($fullName ?: ($currentUser['username'] ?? '')) ?></div>
-            <?php if ($line2 !== ''): ?><div class="user-print-header__line2"><?= htmlspecialchars($line2) ?></div><?php endif; ?>
-            <?php if ($line3 !== ''): ?><div class="user-print-header__line3"><?= htmlspecialchars($line3) ?></div><?php endif; ?>
+    <div class="print-layout-table">
+        <div class="print-layout-thead">
+            <div class="user-print-header print-only">
+                <div class="user-print-header__content">
+                    <div class="user-print-header__line1"><?= htmlspecialchars($fullName ?: ($currentUser['username'] ?? '')) ?></div>
+                    <?php if ($line2 !== ''): ?><div class="user-print-header__line2"><?= htmlspecialchars($line2) ?></div><?php endif; ?>
+                    <?php if ($line3 !== ''): ?><div class="user-print-header__line3"><?= htmlspecialchars($line3) ?></div><?php endif; ?>
+                </div>
+            </div>
         </div>
-        <div class="user-print-header__pagination">Strana <span class="print-page-number"></span></div>
-    </div>
+        <div class="print-layout-tbody">
 <?php endif; ?>

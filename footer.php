@@ -36,11 +36,24 @@ $isHomePage = basename($_SERVER['PHP_SELF']) === 'index.php';
   </footer>
 
   <!-- Tlačová pätička -->
-  <?php $printDateTime = date('d.m.Y H:i:s'); ?>
+  <?php
+  $printDateTime = date('d.m.Y H:i:s');
+  $isCalculatorPageFooter = str_starts_with(basename($_SERVER['PHP_SELF']), 'calculator');
+  ?>
+  <?php if ($isCalculatorPageFooter && !empty($_SESSION['user_id'])): ?>
+        </div> <!-- end .print-layout-tbody -->
+        <div class="print-layout-tfoot">
+  <?php endif; ?>
+
   <div class="global-print-footer print-only" aria-hidden="true">
     <div>Vytlačené z webovej lokality Nefro-projekt Slovensko - https://nefro.polascin.net/ &copy; <?= date('Y') ?> Ľubomír Polaščín</div>
     <div style="margin-top: 2px;">Dátum a čas tlače: <?= $printDateTime ?> (<?= htmlspecialchars($pageTimeZone, ENT_QUOTES, 'UTF-8') ?>)</div>
   </div>
+
+  <?php if ($isCalculatorPageFooter && !empty($_SESSION['user_id'])): ?>
+        </div> <!-- end .print-layout-tfoot -->
+    </div> <!-- end .print-layout-table -->
+  <?php endif; ?>
 
   <script src="form-submit-enter.js?v=20260512-1&cb=<?= filemtime('form-submit-enter.js') ?>" defer></script>
   <script>

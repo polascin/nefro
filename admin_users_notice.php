@@ -282,17 +282,16 @@ $modeLabel = $includeSensitive
     <script src="ui-preferences-fallback.js?v=20260511-1&cb=<?= filemtime('ui-preferences-fallback.js') ?>" defer></script>
 </head>
 <body class="admin-notice-page">
-    <div class="admin-print-header print-only">
-        <div>Zoznam používateľov</div>
-        <div>Generované: <?= htmlspecialchars($nowHuman) ?></div>
-    </div>
-
-    <div class="admin-print-footer print-only">
-        <span>Nefro - Zoznam používateľov</span>
-        <span>Strana <span class="print-page-number"></span></span>
-    </div>
-
-    <main class="container admin-notice-container">
+    <div class="print-layout-table">
+        <div class="print-layout-thead">
+            <div class="admin-print-header print-only">
+                <div>Zoznam používateľov</div>
+                <div>Generované: <?= htmlspecialchars($nowHuman) ?></div>
+            </div>
+        </div>
+        
+        <div class="print-layout-tbody">
+            <main class="container admin-notice-container">
         <div class="auth-container auth-container--wide admin-notice-card">
             <h2>Zoznam používateľov</h2>
             <p class="auth-subtitle">Zoznam všetkých používateľov zoradený abecedne podľa priezviska.</p>
@@ -398,6 +397,14 @@ $modeLabel = $includeSensitive
             </div>
         </div>
     </main>
+    </div> <!-- end print-layout-tbody -->
+    
+    <div class="print-layout-tfoot">
+        <div class="admin-print-footer print-only">
+            <span>Nefro - Zoznam používateľov</span>
+        </div>
+    </div>
+    </div> <!-- end print-layout-table -->
 
     <?php if ($isPrintMode): ?>
         <script>
