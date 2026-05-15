@@ -87,11 +87,11 @@ function formatInputValue(string $key, $value): string {
 
     // ── Pohlavie ──────────────────────────────────────────────
     if ($key === 'sex') {
+        // Akákoľvek hodnota odlišná od 'female'/'male' sa zobrazí ako 'Iné'
         return match($value) {
             'female' => 'Žena',
             'male'   => 'Muž',
-            'other'  => 'Iné',
-            default  => $value,
+            default  => 'Iné',
         };
     }
 
