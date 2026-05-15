@@ -61,6 +61,7 @@ if ($article === null && !$notFound) {
 
 if ($notFound || $article === null) {
     http_response_code(404);
+  header('X-Robots-Tag: noindex, follow', true);
 }
 
 // Formátovanie dátumu
@@ -76,13 +77,93 @@ function formatArticleDate(string $datetime, array $months): string {
     return (int) date('j', $ts) . '. ' . ($months[(int) date('n', $ts)] ?? '') . ' ' . date('Y', $ts);
 }
 
-$pageTitle      = $article ? htmlspecialchars((string) $article['title']) : 'Článok nenájdený';
+function normalizePlainText(string $text): string {
+  $decoded = html_entity_decode($text, ENT_QUOTES | ENT_HTML5, 'UTF-8');
+  $stripped = strip_tags($decoded);
+  $normalized = preg_replace('/\s+/u', ' ', $stripped) ?? $stripped;
+  return trim($normalized);
+}
+
+function buildSeoExcerpt(string $preferredText, string $fallbackText = '', int $maxLen = 165): string {
+  $source = normalizePlainText($preferredText);
+  if ($source === '') {
+    $source = normalizePlainText($fallbackText);
+  }
+  if ($source === '') {
+    return '';
+  }
+  if (mb_strlen($source) <= $maxLen) {
+    return $source;
+  }
+
+  $slice = mb_substr($source, 0, $maxLen + 1);
+  $slice = preg_replace('/\s+\S*$/u', '', $slice) ?? $slice;
+  $slice = rtrim($slice, " \t\n\r\0\x0B,.;:-");
+  return $slice . '…';
+}
+
+function toIso8601(string $datetime): string {
+  $ts = strtotime($datetime);
+  if (!$ts) {
+    return date(DATE_ATOM);
+  }
+  return date(DATE_ATOM, $ts);
+}
+
+$siteName = 'Nefro-projekt Slovensko';
+$baseUrl = 'https://nefro.polascin.net/';
+
+$articleTitleRaw = $article ? (string) ($article['title'] ?? '') : '';
+$articleAuthorRaw = $article ? (string) ($article['author'] ?? 'Dr. Ľubomír Polaščín') : 'Dr. Ľubomír Polaščín';
+$canonicalUrlRaw = $article ? ($baseUrl . 'article.php?slug=' . (string) ($article['slug'] ?? '')) : '';
+
+$metaDescriptionRaw = $article
+  ? buildSeoExcerpt((string) ($article['excerpt'] ?? ''), (string) ($article['content'] ?? ''), 165)
+  : 'Požadovaný článok neexistuje alebo bol odstránený.';
+if ($metaDescriptionRaw === '') {
+  $metaDescriptionRaw = 'Odborný článok z oblasti nefrológie.';
+}
+
+$pageTitleRaw = $article ? ($articleTitleRaw . ' | ' . $siteName) : ('Článok nenájdený | ' . $siteName);
+$pageTitle = htmlspecialchars($pageTitleRaw, ENT_QUOTES);
 $pageLastUpdated = $article
     ? date('d.m.Y H:i', strtotime((string) $article['updated_at']))
     : date('d.m.Y H:i', filemtime(__FILE__));
 $pageTimeZone    = date('T') . ' (' . date_default_timezone_get() . ')';
-$canonicalSlug   = $article ? htmlspecialchars((string) $article['slug'], ENT_QUOTES) : '';
-$ogDescription   = $article ? htmlspecialchars(mb_substr(strip_tags((string) $article['excerpt']), 0, 200)) : '';
+$canonicalUrl = htmlspecialchars($canonicalUrlRaw, ENT_QUOTES);
+$metaDescription = htmlspecialchars($metaDescriptionRaw, ENT_QUOTES);
+$robotsMeta = $article ? 'index, follow, max-image-preview:large' : 'noindex, follow, noarchive';
+
+$articleSchema = null;
+if ($article) {
+  $articleSchema = [
+    '@context' => 'https://schema.org',
+    '@type' => 'Article',
+    'headline' => $articleTitleRaw,
+    'description' => $metaDescriptionRaw,
+    'inLanguage' => 'sk-SK',
+    'mainEntityOfPage' => $canonicalUrlRaw,
+    'url' => $canonicalUrlRaw,
+    'datePublished' => toIso8601((string) ($article['published_at'] ?? '')),
+    'dateModified' => toIso8601((string) ($article['updated_at'] ?? ($article['published_at'] ?? ''))),
+    'author' => [
+      '@type' => 'Person',
+      'name' => $articleAuthorRaw,
+    ],
+    'publisher' => [
+      '@type' => 'MedicalOrganization',
+      'name' => $siteName,
+      'logo' => [
+        '@type' => 'ImageObject',
+        'url' => $baseUrl . 'img/nps-logo.gif',
+      ],
+    ],
+    'image' => [
+      '@type' => 'ImageObject',
+      'url' => $baseUrl . 'img/nps-logo.gif',
+    ],
+  ];
+}
 ?>
 <!DOCTYPE html>
 <html lang="sk">
@@ -96,23 +177,41 @@ $ogDescription   = $article ? htmlspecialchars(mb_substr(strip_tags((string) $ar
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="referrer" content="strict-origin-when-cross-origin">
 
-  <meta name="description" content="<?= $ogDescription ?>">
-  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="description" content="<?= $metaDescription ?>">
+  <meta name="robots" content="<?= htmlspecialchars($robotsMeta, ENT_QUOTES) ?>">
   <meta name="author" content="Dr. Ľubomír Polaščín">
   <?php if ($article): ?>
-  <link rel="canonical" href="https://nefro.polascin.net/article.php?slug=<?= $canonicalSlug ?>">
+  <link rel="canonical" href="<?= $canonicalUrl ?>">
+  <link rel="alternate" hreflang="sk-SK" href="<?= $canonicalUrl ?>">
   <?php endif; ?>
 
   <!-- Open Graph -->
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="<?= $pageTitle ?> – Nefro-projekt Slovensko">
-  <meta property="og:description" content="<?= $ogDescription ?>">
-  <meta property="og:url" content="https://nefro.polascin.net/article.php?slug=<?= $canonicalSlug ?>">
+  <meta property="og:type" content="<?= $article ? 'article' : 'website' ?>">
+  <meta property="og:title" content="<?= $pageTitle ?>">
+  <meta property="og:description" content="<?= $metaDescription ?>">
+  <meta property="og:url" content="<?= $article ? $canonicalUrl : htmlspecialchars($baseUrl . 'article.php', ENT_QUOTES) ?>">
   <meta property="og:site_name" content="Nefro-projekt Slovensko">
   <meta property="og:locale" content="sk_SK">
   <meta property="og:image" content="https://nefro.polascin.net/img/nps-logo.gif">
+  <meta property="og:image:alt" content="Nefro-projekt Slovensko">
 
-  <title><?= $pageTitle ?> – Nefro-projekt Slovensko</title>
+  <?php if ($article): ?>
+  <meta property="article:published_time" content="<?= htmlspecialchars(toIso8601((string) ($article['published_at'] ?? '')), ENT_QUOTES) ?>">
+  <meta property="article:modified_time" content="<?= htmlspecialchars(toIso8601((string) ($article['updated_at'] ?? ($article['published_at'] ?? ''))), ENT_QUOTES) ?>">
+  <meta property="article:author" content="<?= htmlspecialchars($articleAuthorRaw, ENT_QUOTES) ?>">
+  <?php endif; ?>
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="<?= $pageTitle ?>">
+  <meta name="twitter:description" content="<?= $metaDescription ?>">
+  <meta name="twitter:image" content="https://nefro.polascin.net/img/nps-logo.gif">
+  <meta name="twitter:image:alt" content="Nefro-projekt Slovensko">
+
+  <title><?= $pageTitle ?></title>
+
+  <?php if ($articleSchema !== null): ?>
+  <script type="application/ld+json"><?= json_encode($articleSchema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) ?></script>
+  <?php endif; ?>
 
   <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">

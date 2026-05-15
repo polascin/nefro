@@ -56,6 +56,31 @@ function formatArticleDate(string $datetime): string {
     return (int) date('j', $ts) . '. ' . ($months[(int) date('n', $ts)] ?? '') . ' ' . date('Y', $ts);
 }
 
+  function normalizePlainText(string $text): string {
+    $decoded = html_entity_decode($text, ENT_QUOTES | ENT_HTML5, 'UTF-8');
+    $stripped = strip_tags($decoded);
+    $normalized = preg_replace('/\s+/u', ' ', $stripped) ?? $stripped;
+    return trim($normalized);
+  }
+
+  function buildSeoExcerpt(string $preferredText, string $fallbackText = '', int $maxLen = 170): string {
+    $source = normalizePlainText($preferredText);
+    if ($source === '') {
+      $source = normalizePlainText($fallbackText);
+    }
+    if ($source === '') {
+      return '';
+    }
+    if (mb_strlen($source) <= $maxLen) {
+      return $source;
+    }
+
+    $slice = mb_substr($source, 0, $maxLen + 1);
+    $slice = preg_replace('/\s+\S*$/u', '', $slice) ?? $slice;
+    $slice = rtrim($slice, " \t\n\r\0\x0B,.;:-");
+    return $slice . '…';
+  }
+
 $topArticles   = [];
 $otherArticles = [];
 $otherArticlesPerPage = 10;
@@ -97,6 +122,82 @@ try {
 } catch (\PDOException $e) {
     error_log('index.php – chyba pri načítaní článkov: ' . $e->getMessage());
 }
+
+$siteName = 'Nefro-projekt Slovensko';
+$baseUrl = 'https://nefro.polascin.net/';
+$isPaginated = $otherArticlesPage > 1;
+$firstArticleForSeo = $topArticles[0] ?? $otherArticles[0] ?? null;
+
+$defaultDescription = 'Nefrologické články a odborné analýzy o CKD, dialýze a moderných odporúčaniach pre klinickú prax na Slovensku.';
+$seoDescription = $defaultDescription;
+if (is_array($firstArticleForSeo)) {
+  $seoDescription = buildSeoExcerpt((string) ($firstArticleForSeo['excerpt'] ?? ''), '', 165);
+  if ($seoDescription === '') {
+    $seoDescription = $defaultDescription;
+  }
+}
+
+$pageTitle = $isPaginated
+  ? 'Nefrologické články – strana ' . $otherArticlesPage . ' | ' . $siteName
+  : $siteName;
+$canonicalUrl = $isPaginated ? ($baseUrl . '?page=' . $otherArticlesPage) : $baseUrl;
+$prevUrl = $otherArticlesPage > 1
+  ? ($otherArticlesPage === 2 ? $baseUrl : ($baseUrl . '?page=' . ($otherArticlesPage - 1)))
+  : '';
+$nextUrl = $otherArticlesPage < $otherArticlesTotalPages
+  ? ($baseUrl . '?page=' . ($otherArticlesPage + 1))
+  : '';
+
+$itemListElements = [];
+$allPageArticles = array_merge($topArticles, $otherArticles);
+foreach ($allPageArticles as $idx => $art) {
+  $slug = (string) ($art['slug'] ?? '');
+  $title = normalizePlainText((string) ($art['title'] ?? ''));
+  if ($slug === '' || $title === '') {
+    continue;
+  }
+  $itemListElements[] = [
+    '@type' => 'ListItem',
+    'position' => count($itemListElements) + 1,
+    'url' => $baseUrl . 'article.php?slug=' . $slug,
+    'name' => $title,
+  ];
+}
+
+$structuredData = [
+  [
+    '@context' => 'https://schema.org',
+    '@type' => 'MedicalOrganization',
+    'name' => $siteName,
+    'url' => $baseUrl,
+    'logo' => $baseUrl . 'img/nps-logo.gif',
+    'description' => 'Dynamická renesancia nefrológie: od molekulárnej biológie po umelú inteligenciu.',
+    'medicalSpecialty' => 'Nephrology',
+    'founder' => [
+      '@type' => 'Person',
+      'name' => 'MUDr. Ľubomír Polaščín',
+      'jobTitle' => 'Lekár, Nefrológ',
+      'url' => 'https://polascin.com/',
+    ],
+  ],
+  [
+    '@context' => 'https://schema.org',
+    '@type' => 'WebSite',
+    'name' => $siteName,
+    'url' => $baseUrl,
+    'inLanguage' => 'sk-SK',
+    'description' => $seoDescription,
+  ],
+];
+
+if (!empty($itemListElements)) {
+  $structuredData[] = [
+    '@context' => 'https://schema.org',
+    '@type' => 'ItemList',
+    'name' => $isPaginated ? ('Články – strana ' . $otherArticlesPage) : 'Články',
+    'itemListElement' => $itemListElements,
+  ];
+}
 ?>
 <!DOCTYPE html>
 <html lang="sk">
@@ -115,18 +216,23 @@ try {
   <meta name="referrer" content="strict-origin-when-cross-origin">
 
   <!-- SEO & Metadata -->
-  <meta name="description" content="Nefro-projekt Slovensko. Dynamická renesancia nefrológie: Od molekulárnej biológie po umelú inteligenciu. MUDr. Ľubomír Polaščín. https://nefro.polascin.net/">
+  <meta name="description" content="<?= htmlspecialchars($seoDescription, ENT_QUOTES) ?>">
   <meta name="robots" content="index, follow, max-image-preview:large">
-  <meta name="keywords" content="nefrológia, Slovensko, CKD, dialýza, IgAN, gliflozíny, MUDr. Ľubomír Polaščín">
   <meta name="author" content="Dr. Ľubomír Polaščín">
-  <link rel="canonical" href="https://nefro.polascin.net/">
-  <link rel="alternate" hreflang="sk-SK" href="https://nefro.polascin.net/">
+  <link rel="canonical" href="<?= htmlspecialchars($canonicalUrl, ENT_QUOTES) ?>">
+  <link rel="alternate" hreflang="sk-SK" href="<?= htmlspecialchars($canonicalUrl, ENT_QUOTES) ?>">
+  <?php if ($prevUrl !== ''): ?>
+  <link rel="prev" href="<?= htmlspecialchars($prevUrl, ENT_QUOTES) ?>">
+  <?php endif; ?>
+  <?php if ($nextUrl !== ''): ?>
+  <link rel="next" href="<?= htmlspecialchars($nextUrl, ENT_QUOTES) ?>">
+  <?php endif; ?>
 
   <!-- Open Graph (Social SEO) -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Nefro-projekt Slovensko">
-  <meta property="og:description" content="Dynamická renesancia nefrológie: Od molekulárnej biológie po umelú inteligenciu.">
-  <meta property="og:url" content="https://nefro.polascin.net/">
+  <meta property="og:title" content="<?= htmlspecialchars($pageTitle, ENT_QUOTES) ?>">
+  <meta property="og:description" content="<?= htmlspecialchars($seoDescription, ENT_QUOTES) ?>">
+  <meta property="og:url" content="<?= htmlspecialchars($canonicalUrl, ENT_QUOTES) ?>">
   <meta property="og:site_name" content="Nefro-projekt Slovensko">
   <meta property="og:locale" content="sk_SK">
   <meta property="og:image" content="https://nefro.polascin.net/img/nps-logo.gif">
@@ -134,30 +240,15 @@ try {
 
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Nefro-projekt Slovensko">
-  <meta name="twitter:description" content="Dynamická renesancia nefrológie a moderné prístupy v liečbe.">
+  <meta name="twitter:title" content="<?= htmlspecialchars($pageTitle, ENT_QUOTES) ?>">
+  <meta name="twitter:description" content="<?= htmlspecialchars($seoDescription, ENT_QUOTES) ?>">
   <meta name="twitter:image" content="https://nefro.polascin.net/img/nps-logo.gif">
 
-  <title>Nefro-projekt Slovensko</title>
+  <title><?= htmlspecialchars($pageTitle, ENT_QUOTES) ?></title>
 
-  <!-- JSON-LD Štruktúrované dáta pre lepšie vyhľadávanie -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "MedicalOrganization",
-      "name": "Nefro-projekt Slovensko",
-      "url": "https://nefro.polascin.net/",
-      "logo": "https://nefro.polascin.net/img/nps-logo.gif",
-      "description": "Dynamická renesancia nefrológie: Od molekulárnej biológie po umelú inteligenciu.",
-      "medicalSpecialty": "https://en.wikipedia.org/wiki/Nephrology",
-      "founder": {
-        "@type": "Person",
-        "name": "MUDr. Ľubomír Polaščín",
-        "jobTitle": "Lekár, Nefrológ",
-        "url": "https://polascin.com/"
-      }
-    }
-  </script>
+  <?php foreach ($structuredData as $schema): ?>
+  <script type="application/ld+json"><?= json_encode($schema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) ?></script>
+  <?php endforeach; ?>
 
   <!-- Favikony (PWA, Apple, Android, Windows) -->
   <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
@@ -225,7 +316,7 @@ try {
         <?php foreach ($topArticles as $art):
           $artSlug    = htmlspecialchars((string) $art['slug'], ENT_QUOTES);
           $artTitle   = htmlspecialchars((string) $art['title']);
-          $artExc     = htmlspecialchars(strip_tags((string) $art['excerpt']));
+          $artExc     = htmlspecialchars(buildSeoExcerpt((string) ($art['excerpt'] ?? ''), '', 220));
           $artDate    = htmlspecialchars(formatArticleDate((string) $art['published_at']));
           $artDateIso = htmlspecialchars(substr((string) $art['published_at'], 0, 10));
         ?>
@@ -253,7 +344,7 @@ try {
             <?php foreach ($otherArticles as $art):
               $artSlug    = htmlspecialchars((string) $art['slug'], ENT_QUOTES);
               $artTitle   = htmlspecialchars((string) $art['title']);
-              $artExc     = htmlspecialchars(strip_tags((string) $art['excerpt']));
+              $artExc     = htmlspecialchars(buildSeoExcerpt((string) ($art['excerpt'] ?? ''), '', 220));
               $artDate    = htmlspecialchars(formatArticleDate((string) $art['published_at']));
               $artDateIso = htmlspecialchars(substr((string) $art['published_at'], 0, 10));
             ?>

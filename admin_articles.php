@@ -72,6 +72,34 @@ function uniqueSlug(PDO $pdo, string $slug, int $excludeId = 0): string {
     }
 }
 
+    function normalizeExcerptText(string $text): string {
+      $decoded = html_entity_decode($text, ENT_QUOTES | ENT_HTML5, 'UTF-8');
+      $stripped = strip_tags($decoded);
+      $normalized = preg_replace('/\s+/u', ' ', $stripped) ?? $stripped;
+      return trim($normalized);
+    }
+
+    function shortenTextAtWordBoundary(string $text, int $maxLen): string {
+      if (mb_strlen($text) <= $maxLen) {
+        return $text;
+      }
+      $slice = mb_substr($text, 0, $maxLen + 1);
+      $slice = preg_replace('/\s+\S*$/u', '', $slice) ?? $slice;
+      $slice = rtrim($slice, " \t\n\r\0\x0B,.;:-");
+      return $slice . '…';
+    }
+
+    function optimizeExcerptForSeo(string $excerpt, string $content, int $maxLen = 220): string {
+      $candidate = normalizeExcerptText($excerpt);
+      if ($candidate === '') {
+        $candidate = normalizeExcerptText($content);
+      }
+      if ($candidate === '') {
+        return '';
+      }
+      return shortenTextAtWordBoundary($candidate, $maxLen);
+    }
+
 $csrfToken = generateCsrfToken();
 
 // ── Spracovanie POST akcií ────────────────────────────────────────────────────
@@ -94,9 +122,11 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 $isTop      = isset($_POST['is_top']) ? 1 : 0;
                 $isPub      = isset($_POST['is_published']) ? 1 : 0;
 
+                $excerpt = optimizeExcerptForSeo($excerpt, $content, 220);
+
                 if ($title === '') { $actionError = 'Titulok je povinný.'; break; }
                 if ($content === '') { $actionError = 'Obsah článku je povinný.'; break; }
-                if ($excerpt === '') { $actionError = 'Perex (excerpt) je povinný.'; break; }
+                if ($excerpt === '') { $actionError = 'Perex sa nepodarilo vytvoriť. Doplňte obsah článku alebo perex manuálne.'; break; }
                 if ($pubAt === '' || !preg_match('/^\d{4}-\d{2}-\d{2}/', $pubAt)) {
                     $actionError = 'Dátum publikácie je neplatný.'; break;
                 }
@@ -150,10 +180,12 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 $isTop      = isset($_POST['is_top']) ? 1 : 0;
                 $isPub      = isset($_POST['is_published']) ? 1 : 0;
 
+                $excerpt = optimizeExcerptForSeo($excerpt, $content, 220);
+
                 if ($id <= 0)     { $actionError = 'Neplatné ID článku.'; break; }
                 if ($title === '') { $actionError = 'Titulok je povinný.'; break; }
                 if ($content === '') { $actionError = 'Obsah článku je povinný.'; break; }
-                if ($excerpt === '') { $actionError = 'Perex (excerpt) je povinný.'; break; }
+                if ($excerpt === '') { $actionError = 'Perex sa nepodarilo vytvoriť. Doplňte obsah článku alebo perex manuálne.'; break; }
                 if ($pubAt === '' || !preg_match('/^\d{4}-\d{2}-\d{2}/', $pubAt)) {
                     $actionError = 'Dátum publikácie je neplatný.'; break;
                 }
@@ -513,10 +545,10 @@ $pageTimeZone    = date('T') . ' (' . date_default_timezone_get() . ')';
             </div>
 
             <div class="form-row">
-              <label for="f_excerpt">Perex / excerpt <span style="color:red">*</span></label>
-              <textarea id="f_excerpt" name="excerpt" required rows="3"
+              <label for="f_excerpt">Perex / excerpt</label>
+              <textarea id="f_excerpt" name="excerpt" rows="3" maxlength="600"
                         placeholder="Krátky úvodný text zobrazovaný v zozname článkov (čistý text, bez HTML)"><?= htmlspecialchars((string) ($editArticle['excerpt'] ?? '')) ?></textarea>
-              <span class="helper-text">Čistý text, bez HTML tagov. Zobrazí sa ako úryvok v zozname článkov na hlavnej stránke.</span>
+              <span class="helper-text">Čistý text bez HTML. Odporúčaná dĺžka je približne 120 až 220 znakov. Ak perex necháte prázdny, systém ho vygeneruje z obsahu článku.</span>
             </div>
 
             <div class="form-row">
@@ -759,10 +791,11 @@ $pageTimeZone    = date('T') . ' (' . date_default_timezone_get() . ')';
   <?php include 'footer.php'; ?>
 
   <script>
-    // Automatické generovanie slugu z titulku
+    // Automatické generovanie slugu z titulku + SEO nápoveda pre perex
     (function () {
       const titleInput = document.getElementById('f_title');
       const slugInput  = document.getElementById('f_slug');
+      const excerptInput = document.getElementById('f_excerpt');
       if (!titleInput || !slugInput) return;
 
       titleInput.addEventListener('input', function () {
@@ -780,6 +813,21 @@ $pageTimeZone    = date('T') . ' (' . date_default_timezone_get() . ')';
       slugInput.addEventListener('input', function () {
         slugInput.dataset.manualEdit = slugInput.value.length > 0 ? 'true' : 'false';
       });
+
+      if (excerptInput) {
+        const counter = document.createElement('span');
+        counter.className = 'helper-text';
+        excerptInput.insertAdjacentElement('afterend', counter);
+
+        const updateCounter = () => {
+          const len = excerptInput.value.trim().length;
+          const isRecommended = len >= 120 && len <= 220;
+          counter.textContent = 'Dĺžka perexu: ' + len + ' znakov' + (isRecommended ? ' (odporúčané rozmedzie)' : ' (mimo odporúčaného rozmedzia 120-220)');
+        };
+
+        excerptInput.addEventListener('input', updateCounter);
+        updateCounter();
+      }
     })();
   </script>
 </body>
