@@ -21,3 +21,13 @@
 # Rewrite sitemap.xml na sitemap.php
 RewriteEngine On
 RewriteRule ^sitemap\.xml$ sitemap.php [L]
+
+# Vývojové Python skripty — nie sú určené pre web prístup
+<FilesMatch "\.py$">
+    Require all denied
+</FilesMatch>
+
+# Extrahované a pomocné textové súbory — nie sú určené pre web prístup
+<FilesMatch "^(extracted_utf8|pages_70s|pages_detailed|pages_text|extracted_info)\.txt$">
+    Require all denied
+</FilesMatch>

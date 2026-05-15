@@ -4,9 +4,10 @@ require_once 'db_config.php';
 
 requireAdmin();
 
-$currentAdminId = (int) ($_SESSION['user_id'] ?? 0);
-$actionResult   = null;
-$actionError    = null;
+$currentAdminId     = (int) ($_SESSION['user_id'] ?? 0);
+$actionResult       = null;
+$actionError        = null;
+$actionTempPassword = null;
 
 if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
     $postedCsrf = $_POST['csrf_token'] ?? '';
@@ -108,7 +109,6 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 
 $errors = [];
 $csrfToken = generateCsrfToken();
-$actionTempPassword = null;
 $noticeAudit = [];
 $noticeAuditAdminOptions = [];
 
@@ -253,6 +253,7 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin panel - Nefro-projekt Slovensko</title>
+    <meta name="robots" content="noindex, nofollow">
     <script src="theme.js?v=20260511-1&cb=<?= filemtime('theme.js') ?>"></script>
     <link rel="stylesheet" href="index.css?v=20260509-1&cb=<?= filemtime('index.css') ?>">
     <script src="ui-preferences.js?v=20260511-1&cb=<?= filemtime('ui-preferences.js') ?>" defer></script>

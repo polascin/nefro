@@ -177,10 +177,10 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prihlásenie - Nefro-projekt Slovensko</title>
-    <meta name="description" content="Nefro-projekt Slovensko - Prihlásenie-projekt Slovensko. Odborný portál pre lekárov a nefrológov.">
+    <meta name="description" content="Prihláste sa do Nefro-projekt Slovensko — odborného portálu pre nefrológov a lekárov.">
     <link rel="canonical" href="https://nefro.polascin.net/login.php">
-    <meta property="og:title" content="Prihlásenie-projekt Slovensko">
-    <meta property="og:description" content="Nefro-projekt Slovensko - Prihlásenie-projekt Slovensko. Odborný portál pre lekárov a nefrológov.">
+    <meta property="og:title" content="Prihlásenie | Nefro-projekt Slovensko">
+    <meta property="og:description" content="Prihláste sa do Nefro-projekt Slovensko — odborného portálu pre nefrológov a lekárov.">
     <meta property="og:url" content="https://nefro.polascin.net/login.php">
     <meta property="og:type" content="website">
     <meta name="robots" content="index, follow">
