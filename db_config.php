@@ -43,4 +43,60 @@ try {
     error_log("Chyba pripojenia k databáze: " . $e->getMessage());
     exit("Chyba: Pripojenie k databáze zlyhalo.");
 }
+
+// ── Číselník akademických a iných titulov ───────────────────────────────────
+
+/**
+ * Vráti zoznam titulov pred menom z tabuľky title_codebook.
+ * Ak tabuľka neexistuje alebo je prázdna, vráti zabudovaný fallback zoznam.
+ */
+function getTitlesBeforeName(\PDO $pdo): array {
+    try {
+        $stmt = $pdo->prepare(
+            "SELECT title FROM title_codebook WHERE type = 'before' ORDER BY sort_order ASC, title ASC"
+        );
+        $stmt->execute();
+        $rows = $stmt->fetchAll(\PDO::FETCH_COLUMN);
+        return $rows ?: _getFallbackTitlesBefore();
+    } catch (\PDOException $e) {
+        error_log('title_codebook: chyba načítania titulov pred menom: ' . $e->getMessage());
+        return _getFallbackTitlesBefore();
+    }
+}
+
+/**
+ * Vráti zoznam titulov za menom z tabuľky title_codebook.
+ * Ak tabuľka neexistuje alebo je prázdna, vráti zabudovaný fallback zoznam.
+ */
+function getTitlesAfterName(\PDO $pdo): array {
+    try {
+        $stmt = $pdo->prepare(
+            "SELECT title FROM title_codebook WHERE type = 'after' ORDER BY sort_order ASC, title ASC"
+        );
+        $stmt->execute();
+        $rows = $stmt->fetchAll(\PDO::FETCH_COLUMN);
+        return $rows ?: _getFallbackTitlesAfter();
+    } catch (\PDOException $e) {
+        error_log('title_codebook: chyba načítania titulov za menom: ' . $e->getMessage());
+        return _getFallbackTitlesAfter();
+    }
+}
+
+/** @internal Fallback zoznam titulov pred menom. */
+function _getFallbackTitlesBefore(): array {
+    return [
+        'prof.', 'doc.', 'MUDr.', 'MDDr.', 'MVDr.', 'RNDr.', 'PhDr.', 'JUDr.',
+        'PaedDr.', 'PhMr.', 'Mgr.', 'Mgr. art.', 'Ing.', 'Ing. arch.',
+        'Bc.', 'BcA.', 'ThDr.', 'ThLic.', 'ThMgr.', 'Dr.', 'Dr. h. c.', 'Dipl. Ing.',
+    ];
+}
+
+/** @internal Fallback zoznam titulov za menom. */
+function _getFallbackTitlesAfter(): array {
+    return [
+        'PhD.', 'Ph.D.', 'CSc.', 'DrSc.', 'DSc.', 'DBA', 'MBA', 'MSc.',
+        'LL.M.', 'MPH', 'MHA', 'MPA', 'MPHA', 'MPM', 'FRCPS', 'FACP', 'FRCP',
+        'dis.', 'DiS.',
+    ];
+}
 ?>

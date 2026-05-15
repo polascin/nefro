@@ -4,7 +4,6 @@ require_once 'db_config.php';
 require_once 'avatar_upload.php';
 require_once 'phone_utils.php';
 require_once 'mobile_verification.php';
-require_once __DIR__ . '/title_codebook.php';
 
 requireLogin();
 
