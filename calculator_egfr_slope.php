@@ -170,6 +170,11 @@ if (isLoggedIn()) {
 
     <script src="theme.js?v=20260511-1&cb=<?= filemtime('theme.js') ?>"></script>
     <link rel="stylesheet" href="index.css?v=20260509-1&cb=<?= filemtime('index.css') ?>">
+    <script src="ui-preferences.js?v=20260511-1&cb=<?= filemtime('ui-preferences.js') ?>" defer></script>
+    <script src="ui-preferences-fallback.js?v=20260511-1&cb=<?= filemtime('ui-preferences-fallback.js') ?>" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;900&display=swap" rel="stylesheet">
     <script type="application/ld+json">
 {
     "@context": "https://schema.org",
@@ -201,9 +206,20 @@ if (isLoggedIn()) {
     </script>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>
+
     <?php $headerTitle = 'eGFR Slope'; $headerIntro = 'Hodnotenie progresie CKD'; $showLogo = false; include 'header.php'; ?>
-    <nav class="main-nav"><div class="container"><ul><li><a href="calculators.php">Späť na kalkulačky</a></li></ul></div></nav>
-    <main class="container main-content main-content--single-col">
+    <nav class="main-nav" aria-label="Hlavná navigácia"><div class="container"><ul>
+        <li><a href="index.php">Domov</a></li>
+        <li><a href="calculators.php" class="active" aria-current="page">Kalkulačky</a></li>
+        <?php if (isLoggedIn()): ?>
+            <?php if (isAdmin()): ?><li><a href="admin.php">Admin panel</a></li><?php endif; ?>
+            <li><a href="logout.php">Odhlásiť sa (<?= htmlspecialchars($_SESSION['username'] ?? '') ?>)</a></li>
+        <?php else: ?>
+            <li><a href="login.php">Prihlásenie</a></li>
+        <?php endif; ?>
+    </ul></div></nav>
+    <main id="main-content" class="container main-content main-content--single-col" role="main">
         <div class="content-wrapper">
             <div class="auth-container auth-container--wide">
                 <h2>Rýchlosť poklesu eGFR (Slope)</h2>
