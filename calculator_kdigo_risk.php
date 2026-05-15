@@ -70,12 +70,13 @@ $calculated = null;
 $savedResults = [];
 
 $form = [
-    'egfr' => (string) ($_POST['egfr'] ?? ''),
-    'uacr' => (string) ($_POST['uacr'] ?? ''),
-    'patient_first_name' => (string) ($_POST['patient_first_name'] ?? ''),
-    'patient_last_name' => (string) ($_POST['patient_last_name'] ?? ''),
-    'patient_birth_date' => (string) ($_POST['patient_birth_date'] ?? ''),
-    'patient_birth_number' => (string) ($_POST['patient_birth_number'] ?? ''),
+    'egfr'                   => (string) ($_POST['egfr'] ?? ''),
+    'uacr'                   => (string) ($_POST['uacr'] ?? ''),
+    'uacr_unit'              => (string) ($_POST['uacr_unit'] ?? 'mg_g'),
+    'patient_first_name'     => (string) ($_POST['patient_first_name'] ?? ''),
+    'patient_last_name'      => (string) ($_POST['patient_last_name'] ?? ''),
+    'patient_birth_date'     => (string) ($_POST['patient_birth_date'] ?? ''),
+    'patient_birth_number'   => (string) ($_POST['patient_birth_number'] ?? ''),
     'patient_insurance_code' => (string) ($_POST['patient_insurance_code'] ?? ''),
 ];
 
@@ -113,25 +114,34 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $errors[] = 'eGFR musí byť kladné číslo v realistickom rozsahu (0–200).';
         }
 
+        // Jednotka UACR
+        $uacrUnit = in_array($form['uacr_unit'], ['mg_g', 'mg_mmol'], true) ? $form['uacr_unit'] : '';
+        if ($uacrUnit === '') {
+            $errors[] = 'Vyberte jednotku UACR.';
+        }
         $uacr = calculatorParsePositiveFloat($form['uacr']);
-        if ($uacr === null || $uacr > 10000) {
-            $errors[] = 'UACR musí byť kladné číslo v mg/g.';
+        if ($uacr === null || $uacr > 15000) {
+            $errors[] = 'UACR musí byť kladné číslo v rozumnom rozsahu.';
         }
 
         if (empty($errors)) {
-            $egfrValue = (float) $egfr;
-            $uacrValue = (float) $uacr;
-            $gCategory = kdigoGCategory($egfrValue);
-            $aCategory = kdigoACategory($uacrValue);
-            $riskInfo = kdigoRisk($gCategory, $aCategory);
+            $egfrValue  = (float) $egfr;
+            $uacrInput  = (float) $uacr;
+            // Prepočet UACR: [mg/g] = [mg/mmol] × 8.84
+            $uacrMgG    = ($uacrUnit === 'mg_mmol') ? ($uacrInput * 8.84) : $uacrInput;
+            $gCategory  = kdigoGCategory($egfrValue);
+            $aCategory  = kdigoACategory($uacrMgG);
+            $riskInfo   = kdigoRisk($gCategory, $aCategory);
 
             $calculated = [
-                'egfr' => round($egfrValue, 1),
-                'uacr' => round($uacrValue, 1),
-                'g_category' => $gCategory,
-                'a_category' => $aCategory,
-                'risk' => $riskInfo['risk'],
-                'note' => $riskInfo['note'],
+                'egfr'        => round($egfrValue, 1),
+                'uacr_input'  => round($uacrInput, 2),
+                'uacr_unit'   => $uacrUnit,
+                'uacr_mg_g'   => round($uacrMgG, 1),
+                'g_category'  => $gCategory,
+                'a_category'  => $aCategory,
+                'risk'        => $riskInfo['risk'],
+                'note'        => $riskInfo['note'],
             ];
 
             if ($action === 'save') {
@@ -140,8 +150,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 } else {
                     try {
                         $inputPayload = [
-                            'egfr' => round($egfrValue, 1),
-                            'uacr' => round($uacrValue, 1),
+                            'egfr'       => $calculated['egfr'],
+                            'uacr_value' => $calculated['uacr_input'],
+                            'uacr_unit'  => $calculated['uacr_unit'],
+                            'uacr_mg_g'  => $calculated['uacr_mg_g'],
                         ];
 
                         $resultPayload = [
@@ -236,9 +248,10 @@ if (isLoggedIn()) {
                     <div class="calc-formula-content">
                         <code class="calc-formula-line">G1: eGFR &ge; 90 &nbsp;&nbsp;G2: 60&ndash;89 &nbsp;&nbsp;G3a: 45&ndash;59 &nbsp;&nbsp;G3b: 30&ndash;44 &nbsp;&nbsp;G4: 15&ndash;29 &nbsp;&nbsp;G5: &lt; 15 &nbsp;ml/min/1,73&thinsp;m&sup2;
 A1: UACR &lt; 30 &nbsp;&nbsp;A2: 30&ndash;300 &nbsp;&nbsp;A3: &gt; 300 &nbsp;mg/g</code>
+                        <code class="calc-formula-line">Prepočet UACR: [mg/g] = [mg/mmol] &times; 8.84</code>
                         <div class="calc-formula-vars">
                             Riziko CKD = kombinácia G &times; A kategórie podľa KDIGO heatmapy&ensp;&bull;&ensp;
-                            eGFR v ml/min/1,73&thinsp;m², UACR v mg/g
+                            eGFR v ml/min/1,73&thinsp;m²&ensp;&bull;&ensp;UACR v mg/g
                         </div>
                     </div>
                 </details>
@@ -294,8 +307,16 @@ A1: UACR &lt; 30 &nbsp;&nbsp;A2: 30&ndash;300 &nbsp;&nbsp;A3: &gt; 300 &nbsp;mg/
                                 <input type="text" id="egfr" name="egfr" required class="form-control" value="<?= htmlspecialchars($form['egfr']) ?>">
                             </div>
                             <div class="form-group">
-                                <label for="uacr">UACR (mg/g)</label>
-                                <input type="text" id="uacr" name="uacr" required class="form-control" value="<?= htmlspecialchars($form['uacr']) ?>">
+                                <label for="uacr">UACR</label>
+                                <div style="display:flex;gap:8px;">
+                                    <input type="text" id="uacr" name="uacr" required
+                                           class="form-control" style="flex:1;"
+                                           value="<?= htmlspecialchars($form['uacr']) ?>">
+                                    <select name="uacr_unit" class="form-control" style="flex:0.8;">
+                                        <option value="mg_g"    <?= $form['uacr_unit'] === 'mg_g'    ? 'selected' : '' ?>>mg/g</option>
+                                        <option value="mg_mmol" <?= $form['uacr_unit'] === 'mg_mmol' ? 'selected' : '' ?>>mg/mmol</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -352,8 +373,13 @@ A1: UACR &lt; 30 &nbsp;&nbsp;A2: 30&ndash;300 &nbsp;&nbsp;A3: &gt; 300 &nbsp;mg/
                                             <?php if (!empty($result['g_category']) && !empty($result['a_category'])): ?>
                                                 (<?= htmlspecialchars((string) $result['g_category']) ?>/<?= htmlspecialchars((string) $result['a_category']) ?>)
                                             <?php endif; ?>
-                                            <?php if (!empty($input['egfr']) && !empty($input['uacr'])): ?>
-                                                - eGFR <?= htmlspecialchars((string) $input['egfr']) ?>, UACR <?= htmlspecialchars((string) $input['uacr']) ?>
+                                            <?php if (!empty($input['egfr']) && !empty($input['uacr_mg_g'])): ?>
+                                                - eGFR <?= htmlspecialchars((string) $input['egfr']) ?>,
+                                                UACR <?= htmlspecialchars(number_format((float) $input['uacr_value'], 2, ',', ' ')) ?>
+                                                <?= $input['uacr_unit'] === 'mg_mmol' ? 'mg/mmol' : 'mg/g' ?>
+                                                <?php if (($input['uacr_unit'] ?? '') === 'mg_mmol'): ?>
+                                                    (= <?= htmlspecialchars(number_format((float) $input['uacr_mg_g'], 1, ',', ' ')) ?> mg/g)
+                                                <?php endif; ?>
                                             <?php endif; ?>
                                         </td>
                                         <td class="admin-actions-cell">
