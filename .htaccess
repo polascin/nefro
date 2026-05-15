@@ -7,6 +7,9 @@
 <Files "seed_municipalities_sk.php">
     Require all denied
 </Files>
+<Files "import_municipalities_from_csv.php">
+    Require all denied
+</Files>
 
 # Vývojové diagnostické skripty — nie sú určené pre produkčný prístup
 <Files "query_article.php">
