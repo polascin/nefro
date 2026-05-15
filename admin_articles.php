@@ -278,6 +278,31 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 }
                 break;
 
+            // ── TOP TOGGLE ───────────────────────────────────────────────
+            case 'set_top':
+                $id = (int) ($_POST['article_id'] ?? 0);
+                $setTop = (int) ($_POST['set_top'] ?? -1);
+                if ($id <= 0) { $actionError = 'Neplatné ID článku.'; break; }
+                if (!in_array($setTop, [0, 1], true)) { $actionError = 'Neplatná hodnota TOP príznaku.'; break; }
+                try {
+                    $chk = $pdo->prepare("SELECT title FROM articles WHERE id = :id LIMIT 1");
+                    $chk->execute(['id' => $id]);
+                    $row = $chk->fetch();
+                    if (!$row) { $actionError = 'Článok nenájdený.'; break; }
+
+                    $upd = $pdo->prepare("UPDATE articles SET is_top = :is_top WHERE id = :id");
+                    $upd->execute(['is_top' => $setTop, 'id' => $id]);
+
+                    $titleSafe = htmlspecialchars((string) ($row['title'] ?? ''));
+                    $actionResult = $setTop === 1
+                      ? 'Článok „' . $titleSafe . '“ bol označený ako TOP.'
+                      : 'Článok „' . $titleSafe . '“ bol vyradený z TOP sekcie.';
+                } catch (\PDOException $e) {
+                    error_log('admin_articles set_top error: ' . $e->getMessage());
+                    $actionError = 'Chyba pri zmene TOP príznaku.';
+                }
+                break;
+
             // ── MOVE UP ─────────────────────────────────────────────────
             case 'move_up':
                 $id = (int) ($_POST['article_id'] ?? 0);
@@ -687,6 +712,17 @@ $pageTimeZone    = date('T') . ' (' . date_default_timezone_get() . ')';
                         <button type="submit" class="btn-secondary-small" title="Dole">▼</button>
                       </form>
                     <?php endif; ?>
+                    <form method="POST" action="admin_articles.php" style="display:inline"<?= $aTop ? ' onsubmit="return confirm(\'Naozaj chcete vyradiť tento článok z TOP sekcie?\');"' : '' ?>>
+                      <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
+                      <input type="hidden" name="action" value="set_top">
+                      <input type="hidden" name="article_id" value="<?= $aId ?>">
+                      <input type="hidden" name="set_top" value="<?= $aTop ? 0 : 1 ?>">
+                      <?php if ($aTop): ?>
+                        <button type="submit" class="btn-secondary-small" title="Vypnúť TOP pre tento článok">☆ TOP vypnúť</button>
+                      <?php else: ?>
+                        <button type="submit" class="btn-secondary-small" title="Zapnúť TOP pre tento článok">★ TOP zapnúť</button>
+                      <?php endif; ?>
+                    </form>
                     <a href="admin_articles.php?action=edit&id=<?= $aId ?>" class="btn-secondary-small">✏️ Upraviť</a>
                     <form method="POST" action="admin_articles.php" style="display:inline">
                       <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
