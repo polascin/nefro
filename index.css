@@ -2007,6 +2007,37 @@ input:disabled + .slider:before {
   font-weight: 500;
 }
 
+/* CKD-PC kalkulačka ─────────────────────────────────────── */
+.ckdpc-risk-display {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  padding: 16px 0;
+}
+
+.risk-item.risk-3yr {
+  border-left: 4px solid #10b981;
+  min-width: 220px;
+}
+
+.risk-sublabel {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+.ckdpc-inputs-summary {
+  margin-top: 16px;
+  font-size: 0.875rem;
+}
+
+.ckdpc-inputs-summary summary {
+  cursor: pointer;
+  color: var(--primary-color);
+  font-weight: 500;
+  padding: 4px 0;
+}
+
 .link-error {
   color: var(--error-color) !important;
 }

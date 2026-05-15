@@ -37,6 +37,12 @@ $urls = [
         'changefreq' => 'weekly',
         'priority' => '0.8',
     ],
+    [
+        'loc' => $baseUrl . 'calculator_ckdpc.php',
+        'lastmod' => date('c'),
+        'changefreq' => 'weekly',
+        'priority' => '0.8',
+    ],
 ];
 
 try {
