@@ -6,6 +6,11 @@
 const consentKey = 'nps_cookie_consent';
 const consentCookieMaxAgeDays = 365;
 
+// Verzia Privacy Policy — pri zmene zásad aktualizovať tento reťazec.
+// Všetky uložené súhlasy zo staršej verzie sa automaticky invalidujú
+// a banner sa zobrazí znova (GDPR čl. 7 ods. 3 — nový súhlas pri zmene podmienok).
+const consentVersion = '2026-05-15';
+
 // Predvolené nastavenia
 const defaultSettings = {
     necessary: true, // Vždy zapnuté
@@ -22,12 +27,19 @@ function getCookieSync(name) {
     return match ? decodeURIComponent(match[1]) : null;
 }
 
-// Synchrónne načítanie súhlasu z localStorage alebo cookie pred inicializáciou GA4
+// Synchrónne načítanie súhlasu z localStorage alebo cookie pred inicializáciou GA4.
+// Overuje verziu — pri nezhode vráti null (vynúti zobrazenie bannera).
 function readStoredConsentSync() {
     try {
         const fromLocalStorage = localStorage.getItem(consentKey);
         if (fromLocalStorage) {
-            return JSON.parse(fromLocalStorage);
+            const parsed = JSON.parse(fromLocalStorage);
+            // Verzia sa musí zhodovať s aktuálnou consentVersion
+            if (parsed && parsed.version === consentVersion) {
+                return parsed;
+            }
+            // Stará verzia — súhlas je neplatný, banner sa zobrazí znova
+            return null;
         }
     } catch (e) {
         // Ignorovať chyby localStorage
@@ -36,7 +48,11 @@ function readStoredConsentSync() {
     const cookieVal = getCookieSync(consentKey);
     if (cookieVal) {
         try {
-            return JSON.parse(cookieVal);
+            const parsed = JSON.parse(cookieVal);
+            if (parsed && parsed.version === consentVersion) {
+                return parsed;
+            }
+            return null;
         } catch (e) {
             return null;
         }
@@ -245,6 +261,9 @@ function initPrivacyManager() {
 
     function saveConsent(consentData) {
         consentData.timestamp = new Date().toISOString();
+        // Uložiť aktuálnu verziu súhlasu — pri budúcej zmene Privacy Policy
+        // stačí aktualizovať konštantu consentVersion na začiatku súboru
+        consentData.version = consentVersion;
         persistConsent(consentData);
         banner.classList.add('hidden');
         syncCookieBannerSpace();

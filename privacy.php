@@ -291,6 +291,14 @@ $pageLastUpdated = date('d.m.Y', filemtime(__FILE__));
                     úpravy súboru. Pri podstatných zmenách vás upozorníme bannerom alebo
                     e-mailom (ak ste registrovaní).
                 </p>
+                <p>
+                    <strong>Automatické opätovné vyžiadanie súhlasu:</strong>
+                    Náš systém správy cookies uchováva verziu platného súhlasu.
+                    Pri každej podstatnej zmene týchto Zásad sa verzia aktualizuje
+                    a všetkým návštevníkom sa automaticky znova zobrazí banner
+                    na potvrdenie nových podmienok — bez ohľadu na predtým udelený súhlas.
+                    Toto je v súlade s čl. 7 ods. 3 GDPR.
+                </p>
 
             </article>
         </div>
