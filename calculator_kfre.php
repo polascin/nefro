@@ -36,7 +36,7 @@ function kfreInterpretation(float $risk2yr, float $risk5yr): array
     } elseif ($risk5yr > 5.0) {
         $interpretation[] = '5-ročné riziko ' . number_format($risk5yr, 1, ',', ' ') . ' % — výrazne zvýšené, odporúča sa konzultácia nefrológa.';
     } else {
-        $interpretation[] = '5-ročné riziko ' . number_format($risk5yr, 1, ',', ' ') . ' % — nižšie ako odporúčaný prah pre nefrológickú konzultáciu.';
+        $interpretation[] = '5-ročné riziko ' . number_format($risk5yr, 1, ',', ' ') . ' % — nižšie ako odporúčaný prah pre nefrologickú konzultáciu.';
     }
 
     if ($risk2yr > 10.0) {
@@ -417,7 +417,7 @@ Riziko = 1 / (1 + e<sup>&minus;&eta;</sup>) &times; 100 %</code>
                             <ul>
                                 <li>Nefrológa</li>
                                 <li>Diabetológa (ak relevantné)</li>
-                                <li>Kardióloha</li>
+                                <li>Kardiológa</li>
                                 <li>Nutričného terapeuta</li>
                                 <li>Všeobecného lekára</li>
                                 <li>Edukačnú sestru</li>
