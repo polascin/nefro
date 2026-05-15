@@ -259,8 +259,8 @@ A1: UACR &lt; 30 &nbsp;&nbsp;A2: 30&ndash;300 &nbsp;&nbsp;A3: &gt; 300 &nbsp;mg/
                 <div class="alert" style="background:rgba(16,185,129,0.07);border-left:4px solid #10b981;padding:12px 16px;border-radius:6px;margin-bottom:16px;font-size:0.88rem;">
                     <strong>Porovnanie s referenčnými zdrojmi:</strong>
                     <a href="https://kdigo.org/guidelines/ckd-evaluation-and-management/" target="_blank" rel="noopener noreferrer">KDIGO 2024 Guidelines</a> &ensp;&bull;&ensp;
-                    <a href="https://www.mdcalc.com/calc/3837/ckd-stages" target="_blank" rel="noopener noreferrer">MDCalc CKD Stages</a> &ensp;&bull;&ensp;
-                    <a href="https://www.kidney.org/professionals/KDOQI/gfr" target="_blank" rel="noopener noreferrer">NKF CKD Classification</a>
+                    <a href="https://www.kidney.org/kidney-topics/chronic-kidney-disease-ckd" target="_blank" rel="noopener noreferrer">NKF — CKD (G/A klasifikácia)</a> &ensp;&bull;&ensp;
+                    <a href="https://www.mdcalc.com/calc/3939/ckd-epi-equations-glomerular-filtration-rate-gfr" target="_blank" rel="noopener noreferrer">MDCalc CKD-EPI + KDIGO staging</a>
                 </div>
 
                 <?php foreach ($messages as $message): ?>

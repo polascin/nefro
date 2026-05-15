@@ -314,7 +314,7 @@ S<sub>0</sub>(2 roky) = 0.9832 &nbsp;&nbsp; S<sub>0</sub>(5 rokov) = 0.9240</cod
                 <div class="alert" style="background:rgba(16,185,129,0.07);border-left:4px solid #10b981;padding:12px 16px;border-radius:6px;margin-bottom:16px;font-size:0.88rem;">
                     <strong>Porovnanie s referenčnými kalkulátormi:</strong>
                     <a href="https://kidneyfailurerisk.com/" target="_blank" rel="noopener noreferrer">kidneyfailurerisk.com</a> (Tangri group, oficiálny) &ensp;&bull;&ensp;
-                    <a href="https://qxmd.com/calculate/calculator_308/kidney-failure-risk-equation-4-variabl" target="_blank" rel="noopener noreferrer">QxMD KFRE</a> &ensp;&bull;&ensp;
+                    <a href="https://qxmd.com/calculate/calculator_308/kidney-failure-risk-equation-4-variable" target="_blank" rel="noopener noreferrer">QxMD KFRE</a> &ensp;&bull;&ensp;
                     <a href="https://www.mdcalc.com/calc/10045/kidney-failure-risk-calculator" target="_blank" rel="noopener noreferrer">MDCalc KFRE</a>
                 </div>
 
