@@ -14,7 +14,7 @@ try {
     if ($article) {
         echo "Názov: " . $article["title"] . "\n";
         echo "Slug: " . $article["slug"] . "\n";
-        echo "Úvodok: " . $article["excerpt"] . "\n";
+        echo "Úvod (excerpt): " . $article["excerpt"] . "\n";
         echo "Obsah (prvých 2000 znakov):\n";
         echo substr($article["content"] ?? "", 0, 2000) . "\n";
     } else {
