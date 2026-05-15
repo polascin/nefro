@@ -1854,7 +1854,14 @@ input:disabled + .slider:before {
   .main-nav,
   .calc-saved-results,
   .kfre-legend,
-  .form-actions {
+  .form-actions,
+  /* Cookie banner, modal a overlay */
+  .cookie-banner,
+  .cookie-modal,
+  .cookie-overlay,
+  #cookieConsentBanner,
+  #cookieConsentModal,
+  #cookieModalOverlay {
     display: none !important;
   }
 
