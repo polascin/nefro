@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 require_once 'auth.php';
 require_once 'db_config.php';
 require_once 'calculators_common.php';
@@ -413,6 +413,7 @@ Triedy: 1A: k&lt;0,015 &nbsp; 1B: 0,015–0,030 &nbsp; 1C: 0,030–0,045 &nbsp; 
                 </div>
 
                 <?php if (!empty($savedResults)): ?>
+            <?php include 'calculator_disclaimer.php'; ?>
                 <section class="calc-saved-results" aria-labelledby="adpkd-saved-heading">
                     <h3 id="adpkd-saved-heading">Uložené výsledky</h3>
                     <div class="calc-saved-list">

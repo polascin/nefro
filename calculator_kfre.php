@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 require_once 'auth.php';
 require_once 'db_config.php';
 require_once 'calculators_common.php';
@@ -502,6 +502,7 @@ S<sub>0</sub>(2 roky) = 0.9832 &nbsp;&nbsp; S<sub>0</sub>(5 rokov) = 0.9240</cod
                 <?php endif; ?>
             </div>
 
+            <?php include 'calculator_disclaimer.php'; ?>
             <section class="auth-container auth-container--wide calc-saved-results">
                 <h3>Uložené výsledky</h3>
                 <?php if (!isLoggedIn()): ?>

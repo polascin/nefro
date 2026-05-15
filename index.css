@@ -2499,9 +2499,90 @@ input:disabled + .slider:before {
       width: 100%;
     }
 
+    .articles-pagination__label {
+      width: 100%;
+    }
+
     .article-list-item__date {
       font-size: 0.78rem;
     }
   }
 
 
+/* ============================================================
+   Právne upozornenie klinických kalkulačiek (.calc-disclaimer)
+   ============================================================ */
+
+.calc-disclaimer {
+  margin: 32px 0 0;
+  padding: 18px 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(234, 179, 8, 0.4);
+  background: rgba(254, 252, 232, 0.7);
+  font-size: 0.87rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
+
+[data-theme="dark"] .calc-disclaimer {
+  background: rgba(92, 72, 0, 0.22);
+  border-color: rgba(234, 179, 8, 0.25);
+}
+
+.calc-disclaimer__title {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #92400e;
+  margin-bottom: 8px;
+  letter-spacing: 0.01em;
+}
+
+[data-theme="dark"] .calc-disclaimer__title {
+  color: #fcd34d;
+}
+
+.calc-disclaimer__text {
+  margin-bottom: 8px;
+  font-size: 0.85rem;
+  color: inherit;
+}
+
+.calc-disclaimer__text:last-child {
+  margin-bottom: 0;
+}
+
+.calc-disclaimer__text--small {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+/* Tlač — kompaktná verzia s tučným ohraničením */
+@media print {
+  .calc-disclaimer {
+    margin: 16px 0 0;
+    padding: 10px 14px;
+    border: 2px solid #000;
+    background: #fff !important;
+    color: #000 !important;
+    font-size: 7.5pt;
+    line-height: 1.45;
+    page-break-inside: avoid;
+    border-radius: 0;
+  }
+
+  .calc-disclaimer__title {
+    font-size: 8pt;
+    color: #000 !important;
+    margin-bottom: 4px;
+  }
+
+  .calc-disclaimer__text {
+    font-size: 7.5pt;
+    color: #000 !important;
+    margin-bottom: 4px;
+  }
+
+  .calc-disclaimer__text--small {
+    font-size: 7pt;
+  }
+}

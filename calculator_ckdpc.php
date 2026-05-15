@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 require_once 'auth.php';
 require_once 'db_config.php';
 require_once 'calculators_common.php';
@@ -908,6 +908,7 @@ function sexLabel(string $v): string { return $v === 'male' ? 'Muž' : 'Žena'; 
 
                 <!-- ── HISTÓRIA ULOŽENÝCH VÝSLEDKOV ──────────────── -->
                 <?php if (isLoggedIn()): ?>
+            <?php include 'calculator_disclaimer.php'; ?>
                     <section class="form-section calc-saved-results" aria-label="Uložené výsledky">
                         <h3>Uložené výsledky</h3>
                         <?php if (empty($savedResults)): ?>

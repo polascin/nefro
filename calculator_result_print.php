@@ -180,6 +180,8 @@ function formatResultKey(string $key): string {
                         <a href="calculators.php" class="btn-secondary">Kalkulačky</a>
                     </div>
 
+                    <?php include 'calculator_disclaimer.php'; ?>
+
                 <?php endif; ?>
             </div>
         </div>

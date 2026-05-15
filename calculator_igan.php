@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 require_once 'auth.php';
 require_once 'db_config.php';
 require_once 'calculators_common.php';
@@ -402,6 +402,7 @@ Riziko (5 r.) = 1 &minus; 0.972<sup>exp(LP)</sup> &times; 100&thinsp;%</code>
                 </form>
 
                 <?php if (!empty($savedResults)): ?>
+            <?php include 'calculator_disclaimer.php'; ?>
                 <section class="calc-saved-results" aria-labelledby="saved-results-heading">
                     <h3 id="saved-results-heading">Uložené výsledky</h3>
                     <div class="calc-saved-list">
