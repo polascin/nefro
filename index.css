@@ -1768,7 +1768,7 @@ input:disabled + .slider:before {
 
 @media print {
   @page {
-    margin: 32mm 12mm 18mm 12mm;
+    margin: 32mm 12mm 22mm 12mm;
   }
 
   .screen-only {
@@ -1812,6 +1812,21 @@ input:disabled + .slider:before {
   .user-print-header__line3 {
     font-size: 8.5pt;
     color: #333;
+  }
+
+  .global-print-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 8pt;
+    font-style: italic;
+    color: #555;
+    padding-bottom: 5mm;
+    background: transparent;
+    z-index: 9999;
+    line-height: 1.3;
   }
 
   .user-print-header__pagination {

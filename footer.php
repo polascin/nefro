@@ -34,6 +34,14 @@ $isHomePage = basename($_SERVER['PHP_SELF']) === 'index.php';
       </p>
     </div>
   </footer>
+
+  <!-- Tlačová pätička -->
+  <?php $printDateTime = date('d.m.Y H:i:s'); ?>
+  <div class="global-print-footer print-only" aria-hidden="true">
+    <div>Vytlačené z webovej lokality Nefro-projekt Slovensko - https://nefro.polascin.net/ &copy; <?= date('Y') ?> Ľubomír Polaščín</div>
+    <div style="margin-top: 2px;">Dátum a čas tlače: <?= $printDateTime ?> (<?= htmlspecialchars($pageTimeZone, ENT_QUOTES, 'UTF-8') ?>)</div>
+  </div>
+
   <script src="form-submit-enter.js?v=20260512-1&cb=<?= filemtime('form-submit-enter.js') ?>" defer></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
