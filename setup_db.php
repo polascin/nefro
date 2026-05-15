@@ -252,6 +252,27 @@ try {
     $pdo->exec($articleNewsletterQueueSql);
     echo "Tabuľka 'article_newsletter_queue' bola úspešne vytvorená alebo už existuje.\n";
 
+    $calculatorResultsSql = "CREATE TABLE IF NOT EXISTS calculator_results (
+        id BIGINT AUTO_INCREMENT PRIMARY KEY,
+        user_id INT NOT NULL,
+        calculator_key VARCHAR(100) NOT NULL,
+        calculator_label VARCHAR(255) NOT NULL,
+        patient_first_name VARCHAR(100) NULL,
+        patient_last_name VARCHAR(100) NULL,
+        patient_birth_date DATE NULL,
+        patient_birth_number VARCHAR(20) NULL,
+        patient_insurance_code VARCHAR(10) NULL,
+        input_payload JSON NOT NULL,
+        result_payload JSON NOT NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        INDEX idx_calculator_results_user (user_id),
+        INDEX idx_calculator_results_calculator (calculator_key),
+        INDEX idx_calculator_results_created (created_at),
+        CONSTRAINT fk_calculator_results_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";
+    $pdo->exec($calculatorResultsSql);
+    echo "Tabuľka 'calculator_results' bola úspešne vytvorená alebo už existuje.\n";
+
     // ── Migrácia: sort_order stĺpec ──────────────────────────────────
     $sortOrderColumnStmt = $pdo->prepare("SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'articles' AND COLUMN_NAME = 'sort_order'");
     $sortOrderColumnStmt->execute();

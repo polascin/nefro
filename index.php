@@ -290,6 +290,7 @@ if (!empty($itemListElements)) {
         <li><a href="#sluzby">Služby</a></li>
         <li><a href="#o-nas">O nás</a></li>
         <li><a href="#kontakt">Kontakt</a></li>
+        <li><a href="calculators.php">Kalkulačky</a></li>
         <?php if (isLoggedIn()): ?>
           <?php if (isAdmin()): ?>
             <li><a href="admin.php">Admin panel</a></li>

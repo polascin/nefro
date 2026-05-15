@@ -13,6 +13,24 @@ $urls = [
         'changefreq' => 'daily',
         'priority' => '1.0',
     ],
+    [
+        'loc' => $baseUrl . 'calculators.php',
+        'lastmod' => date('c'),
+        'changefreq' => 'weekly',
+        'priority' => '0.9',
+    ],
+    [
+        'loc' => $baseUrl . 'calculator_egfr.php',
+        'lastmod' => date('c'),
+        'changefreq' => 'weekly',
+        'priority' => '0.8',
+    ],
+    [
+        'loc' => $baseUrl . 'calculator_kdigo_risk.php',
+        'lastmod' => date('c'),
+        'changefreq' => 'weekly',
+        'priority' => '0.8',
+    ],
 ];
 
 try {

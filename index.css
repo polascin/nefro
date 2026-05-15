@@ -1876,6 +1876,33 @@ input:disabled + .slider:before {
   text-align: center;
 }
 
+.calculators-grid {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.calculator-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.calculator-card h4 {
+  color: var(--text-primary);
+  font-size: 1.15rem;
+}
+
+.calculator-card p {
+  color: var(--text-secondary);
+}
+
+.calculator-result-block {
+  margin-top: 24px;
+  padding: 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  background: var(--card-gradient);
+}
+
 .link-error {
   color: var(--error-color) !important;
 }

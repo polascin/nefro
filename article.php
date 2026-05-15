@@ -244,6 +244,7 @@ if ($article) {
         <li><a href="index.php#sluzby">Služby</a></li>
         <li><a href="index.php#o-nas">O nás</a></li>
         <li><a href="index.php#kontakt">Kontakt</a></li>
+        <li><a href="calculators.php">Kalkulačky</a></li>
         <?php if (isLoggedIn()): ?>
           <?php if (isAdmin()): ?>
             <li><a href="admin.php">Admin panel</a></li>
