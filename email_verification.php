@@ -11,7 +11,7 @@ function getEmailEnvConfig(): array {
     try {
         $env = loadAppConfig();
     } catch (\RuntimeException $e) {
-        error_log('SMTP konfiguracia nebola nacitana: ' . $e->getMessage());
+        error_log('SMTP konfigurácia nebola načítaná: ' . $e->getMessage());
         $env = [];
     }
 
@@ -292,8 +292,8 @@ function sendPasswordResetEmail(string $toEmail, string $username, string $rawTo
 }
 
 /**
- * Posle internu notifikaciu o novej uspesnej registracii.
- * Citlive hash hodnoty sa z reportu zamerne vynechavaju.
+ * Pošle internú notifikáciu o novej úspešnej registrácii.
+ * Citlivé hash hodnoty sa zo správy zámerne vynechávajú.
  */
 function sendAdminNewRegistrationEmail(array $dbUserRow, array $registrationContext = []): bool {
     $cfg = getEmailEnvConfig();
@@ -317,20 +317,20 @@ function sendAdminNewRegistrationEmail(array $dbUserRow, array $registrationCont
         }
     }
 
-    $subject = 'Nova registracia pouzivatela - Nefro-projekt Slovensko';
+    $subject = 'Nová registrácia používateľa - Nefro-projekt Slovensko';
 
     $lines = [];
-    $lines[] = 'Bola zaznamenana nova uspesna registracia.';
+    $lines[] = 'Bola zaznamenaná nová úspešná registrácia.';
     $lines[] = '';
-    $lines[] = 'REGISTRACNY KONTEXT';
+    $lines[] = 'REGISTRAČNÝ KONTEXT';
     $lines[] = '------------------';
-    $lines[] = 'Cas servera: ' . date('Y-m-d H:i:s');
+    $lines[] = 'Čas servera: ' . date('Y-m-d H:i:s');
     $lines[] = 'IP adresa: ' . (string) ($registrationContext['ip'] ?? '-');
     $lines[] = 'User-Agent: ' . (string) ($registrationContext['user_agent'] ?? '-');
     $lines[] = 'Referer: ' . (string) ($registrationContext['referer'] ?? '-');
     $lines[] = 'Request URI: ' . (string) ($registrationContext['request_uri'] ?? '-');
     $lines[] = '';
-    $lines[] = 'HODNOTY ULOZENE DO USERS';
+    $lines[] = 'HODNOTY ULOŽENÉ DO USERS';
     $lines[] = '------------------------';
 
     ksort($dbUserRow);
@@ -364,12 +364,12 @@ function sendAdminNewRegistrationEmail(array $dbUserRow, array $registrationCont
 }
 
 /**
- * Posle potvrdenie novej registracie registrovanemu pouzivatelovi.
+ * Pošle potvrdenie novej registrácie registrovanému používateľovi.
  */
 function sendUserRegistrationNotificationEmail(string $toEmail, string $username, array $dbUserRow = []): bool {
     $cfg = getEmailEnvConfig();
     $displayName = trim($username) !== '' ? $username : $toEmail;
-    $subject = 'Potvrdenie registracie - Nefro-projekt Slovensko';
+    $subject = 'Potvrdenie registrácie - Nefro-projekt Slovensko';
 
     $firstName = trim((string) ($dbUserRow['first_name'] ?? ''));
     $lastName = trim((string) ($dbUserRow['last_name'] ?? ''));
@@ -377,16 +377,16 @@ function sendUserRegistrationNotificationEmail(string $toEmail, string $username
     $nameLine = $fullName !== '' ? $fullName : $displayName;
 
     $lines = [];
-    $lines[] = 'Dobry den, ' . $nameLine . ',';
+    $lines[] = 'Dobrý deň, ' . $nameLine . ',';
     $lines[] = '';
-    $lines[] = 'vas ucet bol uspesne vytvoreny v Nefro-projekt Slovensko.';
+    $lines[] = 'váš účet bol úspešne vytvorený v Nefro-projekt Slovensko.';
     $lines[] = '';
-    $lines[] = 'Zakladne udaje registracie:';
-    $lines[] = '- Pouzivatelske meno: ' . (string) ($dbUserRow['username'] ?? $username);
+    $lines[] = 'Základné údaje registrácie:';
+    $lines[] = '- Používateľské meno: ' . (string) ($dbUserRow['username'] ?? $username);
     $lines[] = '- E-mail: ' . (string) ($dbUserRow['email'] ?? $toEmail);
-    $lines[] = '- Cas registracie: ' . date('Y-m-d H:i:s');
+    $lines[] = '- Čas registrácie: ' . date('Y-m-d H:i:s');
     $lines[] = '';
-    $lines[] = 'Ak ste tuto registraciu nevykonali vy, co najskor nas kontaktujte.';
+    $lines[] = 'Ak ste túto registráciu nevykonali vy, čo najskôr nás kontaktujte.';
     $lines[] = '';
     $lines[] = 'Nefro-projekt Slovensko';
 

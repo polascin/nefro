@@ -96,7 +96,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     if (calculatorDeleteSavedResult($pdo, $resultId, (int) $_SESSION['user_id'])) {
                         $messages[] = 'Uložený výsledok bol vymazaný.';
                     } else {
-                        $errors[] = 'Záznam sa nepodarilo vymažať alebo neexistuje.';
+                        $errors[] = 'Záznam sa nepodarilo vymazať alebo neexistuje.';
                     }
                 } catch (\PDOException $e) {
                     $errors[] = 'Databázová chyba pri mazaní záznamu.';
@@ -202,7 +202,7 @@ if (isLoggedIn()) {
 
     <?php
     $headerTitle = 'Kalkulačka KDIGO G/A rizika';
-    $headerIntro = 'Kategorizácia CKD podľa eGFR a albuminúiry (UACR)';
+    $headerIntro = 'Kategoriácia CKD podľa eGFR a albuminúrie (UACR)';
     $showLogo = false;
     include 'header.php';
     ?>
@@ -358,11 +358,11 @@ A1: UACR &lt; 30 &nbsp;&nbsp;A2: 30&ndash;300 &nbsp;&nbsp;A3: &gt; 300 &nbsp;mg/
                                         </td>
                                         <td class="admin-actions-cell">
                                             <a href="calculator_result_print.php?result_id=<?= (int) $row['id'] ?>" target="_blank" rel="noopener" class="btn-admin-action">Tlačiť</a>
-                                            <form method="POST" action="calculator_kdigo_risk.php" style="display:inline" onsubmit="return confirm('Naozaj vymažať záznam?')">
+                                            <form method="POST" action="calculator_kdigo_risk.php" style="display:inline" onsubmit="return confirm('Naozaj vymazať záznam?')">
                                                 <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
                                                 <input type="hidden" name="action" value="delete_saved">
                                                 <input type="hidden" name="result_id" value="<?= (int) $row['id'] ?>">
-                                                <button type="submit" class="btn-admin-action btn-admin-action--warn">Vymažať</button>
+                                                <button type="submit" class="btn-admin-action btn-admin-action--warn">Vymazať</button>
                                             </form>
                                         </td>
                                     </tr>

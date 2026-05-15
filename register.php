@@ -173,7 +173,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                             is_array($newUserRow) ? $newUserRow : []
                         );
                         if (!$userNoticeSent) {
-                            error_log('Registracia: pouzivatelsky notifikacny e-mail sa nepodarilo odoslat pre user_id=' . $newUserId);
+                            error_log('Registrácia: používateľský notifikačný e-mail sa nepodarilo odoslať pre user_id=' . $newUserId);
                         }
 
                         if (is_array($newUserRow)) {
@@ -184,7 +184,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                                 'request_uri' => (string) ($_SERVER['REQUEST_URI'] ?? ''),
                             ]);
                             if (!$adminNoticeSent) {
-                                error_log('Registracia: admin notifikacny e-mail sa nepodarilo odoslat pre user_id=' . $newUserId);
+                                error_log('Registrácia: admin notifikačný e-mail sa nepodarilo odoslať pre user_id=' . $newUserId);
                             }
                         }
                         

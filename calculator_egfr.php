@@ -72,7 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     if (calculatorDeleteSavedResult($pdo, $resultId, (int) $_SESSION['user_id'])) {
                         $messages[] = 'Uložený výsledok bol vymazaný.';
                     } else {
-                        $errors[] = 'Záznam sa nepodarilo vymažať alebo neexistuje.';
+                        $errors[] = 'Záznam sa nepodarilo vymazať alebo neexistuje.';
                     }
                 } catch (\PDOException $e) {
                     $errors[] = 'Databázová chyba pri mazaní záznamu.';
@@ -320,7 +320,7 @@ if (isLoggedIn()) {
                                 <input type="number" id="age_years" name="age_years" min="18" max="120" required class="form-control" value="<?= htmlspecialchars($form['age_years']) ?>" placeholder="automaticky z dát. nar. / RČ">
                             </div>
                             <div class="form-group">
-                                <label for="creatinine_value">S-kreatinin</label>
+                                <label for="creatinine_value">S-kreatinín</label>
                                 <input type="text" id="creatinine_value" name="creatinine_value" required class="form-control" value="<?= htmlspecialchars($form['creatinine_value']) ?>">
                             </div>
                             <div class="form-group">
@@ -388,11 +388,11 @@ if (isLoggedIn()) {
                                         </td>
                                         <td class="admin-actions-cell">
                                             <a href="calculator_result_print.php?result_id=<?= (int) $row['id'] ?>" target="_blank" rel="noopener" class="btn-admin-action">Tlačiť</a>
-                                            <form method="POST" action="calculator_egfr.php" style="display:inline" onsubmit="return confirm('Naozaj vymažať záznam?')">
+                                            <form method="POST" action="calculator_egfr.php" style="display:inline" onsubmit="return confirm('Naozaj vymazať záznam?')">
                                                 <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
                                                 <input type="hidden" name="action" value="delete_saved">
                                                 <input type="hidden" name="result_id" value="<?= (int) $row['id'] ?>">
-                                                <button type="submit" class="btn-admin-action btn-admin-action--warn">Vymažať</button>
+                                                <button type="submit" class="btn-admin-action btn-admin-action--warn">Vymazať</button>
                                             </form>
                                         </td>
                                     </tr>

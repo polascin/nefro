@@ -128,7 +128,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $egfr = calculatorParsePositiveFloat($form['egfr']);
         if ($egfr === null || $egfr > 200) {
-            $errors[] = 'eGFR musí byť kladné číslo v realistickom rozsahu (0-200).';
+            $errors[] = 'eGFR musí byť kladné číslo v realistickom rozsahu (0–200).';
         }
 
         $uacrUnit = in_array($form['uacr_unit'], ['mg_g', 'mg_mmol'], true)

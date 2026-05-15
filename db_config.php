@@ -13,7 +13,7 @@ require_once __DIR__ . '/config_loader.php';
 try {
     $env = loadAppConfig();
 } catch (\RuntimeException $e) {
-    error_log('Konfiguracia DB nebola nacitana: ' . $e->getMessage());
+    error_log('Konfigurácia DB nebola načítaná: ' . $e->getMessage());
     exit("Chyba: Konfiguračný súbor sa nenašiel alebo je neplatný.");
 }
 
@@ -24,7 +24,7 @@ $dbPass = (string) ($env['DB_PASS'] ?? '');
 $dbCharset = 'utf8mb4';
 
 if ($dbHost === '' || $dbName === '' || $dbUser === '') {
-    error_log('Konfiguracia DB je nekompletna.');
+    error_log('Konfigurácia DB je nekompletná.');
     exit("Chyba: Databázová konfigurácia je nekompletná.");
 }
 

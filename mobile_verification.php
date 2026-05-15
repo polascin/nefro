@@ -93,7 +93,7 @@ function getMobileVerificationEnvConfig(): array {
     try {
         $env = loadAppConfig();
     } catch (\RuntimeException $e) {
-        error_log('SMS konfiguracia nebola nacitana: ' . $e->getMessage());
+        error_log('SMS konfigurácia nebola načítaná: ' . $e->getMessage());
         $env = [];
     }
 
