@@ -69,11 +69,11 @@ function formatInputKey(string $key): string {
 }
 
 // Konvertuje internú hodnotu payloadu na čitateľný slovenský text.
-// Pokrýva: jednotky, pohlavie, fačenie, boolean hodnoty, typ mutácie, kódy štádií.
+// Pokrýva: jednotky, pohlavie, fajčenie, boolean hodnoty, typ mutácie, kódy štádií.
 function formatInputValue(string $key, $value): string {
     $value = (string) $value;
 
-    // ── Jednotky kreatíníu, UACR a iných laboratorných veličín ───────────
+    // ── Jednotky kreatinínu, UACR a iných laboratórnych veličín ─────────────
     $unitMap = [
         'umol_l'  => 'µmol/L',
         'mmol_l'  => 'mmol/L',
@@ -95,12 +95,12 @@ function formatInputValue(string $key, $value): string {
         };
     }
 
-    // ── Fačenie ─────────────────────────────────────────────
+    // ── Fajčenie ────────────────────────────────────────────
     if ($key === 'smoking') {
         return match($value) {
-            'never'   => 'Nefačí',
-            'former'  => 'Ex-fačiar',
-            'current' => 'Fačí',
+            'never'   => 'Nefajčí',
+            'former'  => 'Ex-fajčiar',
+            'current' => 'Fajčí',
             default   => $value,
         };
     }
