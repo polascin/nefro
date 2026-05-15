@@ -17,6 +17,64 @@ function calculatorPatientDataFromRequest(array $source): array
     ];
 }
 
+/**
+ * Validuje slovenské / české rodné číslo.
+ *
+ * Pravidlá:
+ * - Formát: 6 číslic, voliteľné „/", 3–4 číslice (pred r. 1954 = 9-ciferné bez lomky)
+ * - Prvých 6 číslic musí tvoriť platný kalendárny dátum (s korekciou pre ženy +50 a pre adoptované +20/+70)
+ * - Pre RČ vydané od 1.1.1954 (10-ciferné): celé číslo musí byť deliteľné 11
+ *
+ * @param  string $raw   Surový vstup (môže obsahovať lomku, medzery)
+ * @return string[]      Pole chybových hlásení (prázdne = OK)
+ */
+function validateBirthNumber(string $raw): array {
+    // Normalizácia: odstránenie medzier a lomky
+    $bn = preg_replace('/[\s\/]/', '', $raw) ?? '';
+
+    // Dĺžka: 9 alebo 10 číslic
+    if (!preg_match('/^\d{9,10}$/', $bn)) {
+        return ['Rodné číslo musí obsahovať 9 alebo 10 číslic (formát 000000/0000 alebo XXXXXXXXXX).'];
+    }
+
+    $yy = (int) substr($bn, 0, 2);
+    $mm = (int) substr($bn, 2, 2);
+    $dd = (int) substr($bn, 4, 2);
+
+    // Korekcie mesiacov
+    $mmReal = $mm;
+    if ($mmReal >= 71)      { $mmReal -= 70; }   // žena adoptovaná / náhradná starostlivosť
+    elseif ($mmReal >= 51)  { $mmReal -= 50; }   // žena (bežný prípad)
+    elseif ($mmReal >= 21)  { $mmReal -= 20; }   // muž adoptovaný / náhradná starostlivosť
+
+    if ($mmReal < 1 || $mmReal > 12) {
+        return ['Rodné číslo obsahuje neplatný mesiac (pozícia 3–4).'];
+    }
+
+    // Rok — určenie storočia
+    $currentYear = (int) (new DateTime('today'))->format('Y');
+    $year = (2000 + $yy <= $currentYear) ? 2000 + $yy : 1900 + $yy;
+
+    // Overenie dátumu
+    $dateStr = sprintf('%04d-%02d-%02d', $year, $mmReal, $dd);
+    $dt = DateTime::createFromFormat('Y-m-d', $dateStr);
+    if (!$dt || $dt->format('Y-m-d') !== $dateStr) {
+        return ["Rodné číslo obsahuje neplatný dátum ($dateStr)."];
+    }
+    if ($dt > new DateTime('today')) {
+        return ['Rodné číslo obsahuje dátum narodenia v budúcnosti.'];
+    }
+
+    // Modulo 11 — platí pre 10-ciferné RČ (vydané od 1.1.1954)
+    if (strlen($bn) === 10) {
+        if ((int) $bn % 11 !== 0) {
+            return ['Rodné číslo má nesprávny kontrolný súčet (modulo 11).'];
+        }
+    }
+
+    return [];
+}
+
 function calculatorValidateOptionalPatientData(array $patient, array &$errors): void
 {
     if ($patient['birth_date'] !== '') {
@@ -27,9 +85,9 @@ function calculatorValidateOptionalPatientData(array $patient, array &$errors): 
     }
 
     if ($patient['birth_number'] !== '') {
-        $normalizedBirthNumber = preg_replace('/\s+/', '', $patient['birth_number']) ?? '';
-        if (!preg_match('/^\d{6}\/??\d{3,4}$/', $normalizedBirthNumber)) {
-            $errors[] = 'Rodné číslo musí byť vo formáte 000000/0000 alebo 0000000000.';
+        $bnErrors = validateBirthNumber($patient['birth_number']);
+        foreach ($bnErrors as $bnError) {
+            $errors[] = $bnError;
         }
     }
 

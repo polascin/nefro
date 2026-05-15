@@ -229,7 +229,7 @@ function formatResultKey(string $key): string {
                         <?php if (!empty($resultRow['patient_insurance_code'])): ?>
                         <div class="admin-notice-print-row">
                             <strong>Zdravotná poisťovňa</strong>
-                            <span><?= htmlspecialchars(insuranceName((string) $resultRow['patient_insurance_code'], true)) ?></span>
+                            <span><?= htmlspecialchars(insuranceName((string) $resultRow['patient_insurance_code'], true, $pdo)) ?></span>
                         </div>
                         <?php endif; ?>
                     </div>
