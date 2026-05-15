@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Ak tlačidlo neexistuje v HTML, vytvoríme ho dynamicky a pridáme do body
     if (!themeToggleBtn) {
         const container = document.createElement('div');
-        container.className = 'theme-toggle-container';
+        container.className = 'theme-toggle-container no-print';
         themeToggleBtn = document.createElement('button');
         themeToggleBtn.id = 'themeToggleBtn';
         themeToggleBtn.className = 'theme-toggle';
