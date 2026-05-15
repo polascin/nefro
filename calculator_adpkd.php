@@ -198,6 +198,35 @@ if (isLoggedIn()) {
     <link rel="stylesheet" href="index.css?v=20260509-1&cb=<?= filemtime('index.css') ?>">
     <script src="ui-preferences.js?v=20260511-1&cb=<?= filemtime('ui-preferences.js') ?>" defer></script>
     <script src="ui-preferences-fallback.js?v=20260511-1&cb=<?= filemtime('ui-preferences-fallback.js') ?>" defer></script>
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": [
+        "MedicalWebPage",
+        "WebApplication"
+    ],
+    "name": "Mayo ADPKD klasifikácia — rýchlosť progresie ADPKD",
+    "description": "Mayo Clinic ADPKD klasifikácia (Irazabal 2015) — zaradenie do tried 1A–1E podľa výškou adjustovaného celkového objemu obličiek (HtTKV) a veku. Pre výber tolvaptanu a sledovanie ADPKD.",
+    "url": "https://nefro.polascin.net/calculator_adpkd.php",
+    "applicationCategory": "HealthApplication",
+    "audience": {
+        "@type": "MedicalAudience",
+        "audienceType": "Clinician"
+    },
+    "about": {
+        "@type": "MedicalCondition",
+        "name": "Kidney Disease"
+    },
+    "publisher": {
+        "@type": "MedicalOrganization",
+        "name": "Nefro-projekt Slovensko",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://nefro.polascin.net/img/nps-logo.gif"
+        }
+    }
+}
+    </script>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>

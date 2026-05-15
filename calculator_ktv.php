@@ -121,6 +121,35 @@ if (isLoggedIn()) {
 
     <script src="theme.js?v=20260511-1&cb=<?= filemtime('theme.js') ?>"></script>
     <link rel="stylesheet" href="index.css?v=20260509-1&cb=<?= filemtime('index.css') ?>">
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": [
+        "MedicalWebPage",
+        "WebApplication"
+    ],
+    "name": "Lekárska kalkulačka",
+    "description": "Nástroj pre klinické rozhodovanie a výpočty v nefrológii.",
+    "url": "https://nefro.polascin.net/calculator_ktv.php",
+    "applicationCategory": "HealthApplication",
+    "audience": {
+        "@type": "MedicalAudience",
+        "audienceType": "Clinician"
+    },
+    "about": {
+        "@type": "MedicalCondition",
+        "name": "Kidney Disease"
+    },
+    "publisher": {
+        "@type": "MedicalOrganization",
+        "name": "Nefro-projekt Slovensko",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://nefro.polascin.net/img/nps-logo.gif"
+        }
+    }
+}
+    </script>
 </head>
 <body>
     <?php $headerTitle = 'Kt/V a URR'; $headerIntro = 'Hodnotenie adekvátnosti HD'; $showLogo = false; include 'header.php'; ?>

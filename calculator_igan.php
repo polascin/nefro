@@ -199,6 +199,35 @@ if (isLoggedIn()) {
     <link rel="stylesheet" href="index.css?v=20260509-1&cb=<?= filemtime('index.css') ?>">
     <script src="ui-preferences.js?v=20260511-1&cb=<?= filemtime('ui-preferences.js') ?>" defer></script>
     <script src="ui-preferences-fallback.js?v=20260511-1&cb=<?= filemtime('ui-preferences-fallback.js') ?>" defer></script>
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": [
+        "MedicalWebPage",
+        "WebApplication"
+    ],
+    "name": "IgAN Prediction Tool — riziko progresie IgA nefropatie",
+    "description": "International IgA Nephropathy Prediction Tool (Barbour 2019) — odhad 5-ročného rizika poklesu eGFR o ≥50 % alebo ESKD u pacientov s IgA nefropatiou. Klinický model.",
+    "url": "https://nefro.polascin.net/calculator_igan.php",
+    "applicationCategory": "HealthApplication",
+    "audience": {
+        "@type": "MedicalAudience",
+        "audienceType": "Clinician"
+    },
+    "about": {
+        "@type": "MedicalCondition",
+        "name": "Kidney Disease"
+    },
+    "publisher": {
+        "@type": "MedicalOrganization",
+        "name": "Nefro-projekt Slovensko",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://nefro.polascin.net/img/nps-logo.gif"
+        }
+    }
+}
+    </script>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>

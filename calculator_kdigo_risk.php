@@ -216,6 +216,35 @@ if (isLoggedIn()) {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;900&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": [
+        "MedicalWebPage",
+        "WebApplication"
+    ],
+    "name": "Lekárska kalkulačka",
+    "description": "Nástroj pre klinické rozhodovanie a výpočty v nefrológii.",
+    "url": "https://nefro.polascin.net/calculator_kdigo_risk.php",
+    "applicationCategory": "HealthApplication",
+    "audience": {
+        "@type": "MedicalAudience",
+        "audienceType": "Clinician"
+    },
+    "about": {
+        "@type": "MedicalCondition",
+        "name": "Kidney Disease"
+    },
+    "publisher": {
+        "@type": "MedicalOrganization",
+        "name": "Nefro-projekt Slovensko",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://nefro.polascin.net/img/nps-logo.gif"
+        }
+    }
+}
+    </script>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>
