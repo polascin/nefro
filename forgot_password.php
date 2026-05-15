@@ -64,7 +64,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
         // ── 2. IP Rate Limiting (max 3 pokusy/hodína per IP) ───────────────
         // Prísnejší limit ako na registrácii — každý pokus odosielal e-mail.
         $clientIpFp   = $_SERVER['REMOTE_ADDR'] ?? '0.0.0.0';
-        $maxFpAttempts = 3;    // max pokusov za okno
+        $maxFpAttempts = 5;    // max pokusov za okno (zvýšené z 3 na 5 pre lepší UX)
         $fpBlockSecs   = 3600; // blokácia: 1 hodína
         $fpIsBlocked   = false;
 
