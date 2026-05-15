@@ -5,7 +5,7 @@ import re
 pdf_file = r'c:\Users\polas\Downloads\KDIGO-2024-CKD\KDIGO-2024-CKD-Guideline.pdf'
 reader = pypdf.PdfReader(pdf_file)
 
-# Just check the 3-year term specifically and dump context
+# Overenie výskytu výrazu '3-year' a výpis kontextu
 for i, page in enumerate(reader.pages):
     text = page.extract_text()
     if '3-year' in text or '3 year' in text:

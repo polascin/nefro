@@ -15,18 +15,18 @@ for p_num in pages_to_check:
     page = reader.pages[p_num - 1]
     text = page.extract_text()
     
-    # Simple strategy: find 2-year, 3-year, 5-year and print context
+    # Jednoduchá stratégia: nájsť výrazy 2-year, 3-year, 5-year a vypísať kontext
     for horizon in ['3-year', '3 year', '2-year', '5-year']:
         if horizon.lower() in text.lower():
             start = text.lower().find(horizon.lower())
             print(f"CONTEXT ({horizon}): {text[max(0, start-100):min(len(text), start+100)].replace('\n', ' ')}")
 
-    # Look for coefficients (floats with several decimals)
+    # Hľadanie koeficientov (desatinné čísla s viacerými číslicami)
     coeffs = re.findall(r'[-+]?\d\.\d{3,}', text)
     if coeffs:
         print(f"POTENTIAL COEFFICIENTS: {coeffs}")
         
-    # Check for CKD-PC tables/links
+    # Kontrola výskytu tabuliek/odkazov CKD-PC
     if "CKD-PC" in text:
         print("CKD-PC found on this page.")
 

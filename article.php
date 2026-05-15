@@ -293,7 +293,7 @@ if ($article) {
             </p>
           </header>
 
-          <?= $article['content'] /* Trusted HTML — managed exclusively by admin */ ?>
+          <?= $article['content'] /* Dôverované HTML — správuje iba admin */ ?>
 
           <footer>
             <p class="author">

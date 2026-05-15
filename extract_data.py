@@ -24,7 +24,7 @@ for filename in os.listdir(folder):
                         tables = page.extract_tables()
                         if tables:
                             for table_idx, table in enumerate(tables):
-                                # Filter tables that might contain numbers/coefficients
+                                # Filtrovanie tabuliek, ktoré môžu obsahovať čísla/koeficienty
                                 table_str = str(table)
                                 if re.search(r"\d+\.\d+", table_str) or any(kw.lower() in table_str.lower() for kw in keywords):
                                     results.append({
@@ -34,14 +34,14 @@ for filename in os.listdir(folder):
                                         "content": table
                                     })
                         
-                        # Also look for decimals in text if tables are missing or small
+                        # Hľadanie desatinných čísel v texte, ak tabuľky chýbajú alebo sú malé
                         decimals = re.findall(r"-?\d+\.\d{2,}", text)
                         if len(decimals) > 5:
                             results.append({
                                 "file": filename,
                                 "page": page_num + 1,
                                 "type": "text_decimals",
-                                "content": decimals[:20] # Limit output
+                                "content": decimals[:20] # Obmedzenie výstupu
                             })
         except Exception as e:
             print(f"Error processing {filename}: {e}")

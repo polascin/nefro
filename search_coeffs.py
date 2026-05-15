@@ -6,9 +6,9 @@ pdf_file = r'c:\Users\polas\Downloads\KDIGO-2024-CKD\KDIGO-2024-CKD-Guideline.pd
 
 reader = pypdf.PdfReader(pdf_file)
 
-# We suspect equations or supplements might be at the end or in appendices
-# Let's search for "intercept", "beta", "equation" in more pages or 
-# check for a list of tables.
+# Rovnice alebo doplnky sa môžu nachádzať na konci dokumentu alebo v prílohách
+# Vyhľadávanie výrazov "intercept", "beta", "equation" na ďalších stránkach
+# alebo kontrola zoznamu tabuliek.
 target_terms = ['coefficient', 'intercept', 'beta', 'baseline hazard']
 
 for i in range(len(reader.pages)):
@@ -17,12 +17,12 @@ for i in range(len(reader.pages)):
     
     found = [t for t in target_terms if t.lower() in page_text.lower()]
     if found:
-        # Search for floats with at least 4 decimal places which are common in model coefficients
+        # Hľadanie desatinných čísel so ≥4 desatinnými miestami (typické pre koeficienty modelov)
         coeffs = re.findall(r'[-+]?\d\.\d{4,}', page_text)
         if coeffs:
              print(f"PAGE {i+1} | TERMS: {found}")
              print(f"COEFFS: {coeffs}")
-             # Print a bit of context around the first coefficient
+             # Výpis kontextu okolo prvého koeficientu
              idx = page_text.find(coeffs[0])
              print(f"CONTEXT: {page_text[max(0, idx-50):idx+50].replace('\n', ' ')}")
              print("-" * 30)

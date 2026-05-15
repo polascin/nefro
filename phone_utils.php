@@ -2,9 +2,9 @@
 
 if (!function_exists('normalizeUserMobilePhone')) {
     /**
-     * Normalize and validate user's mobile phone in international format.
-     * Accepted examples: +421901234567, +421 901 234 567.
-     * Returns normalized format +421XXXXXXXXX or null when empty.
+     * Normalizuje a validuje mobilné tel. číslo používateľa v medzinárodnom formáte.
+     * Akceptované príklady: +421901234567, +421 901 234 567.
+     * Vráti normalizovaný formát +421XXXXXXXXX alebo null pre prázdnu hodnotu.
      */
     function normalizeUserMobilePhone(?string $rawPhone)
     {
@@ -42,9 +42,9 @@ if (!function_exists('normalizeUserMobilePhone')) {
 
 if (!function_exists('normalizeGenericPhone')) {
     /**
-     * Normalize and validate a generic phone number in international format.
-     * Supports +XXXXXXXX without/with separators.
-     * Returns normalized format +XXXXXXXX or null when empty.
+     * Normalizuje a validuje všeobecné tel. číslo v medzinárodnom formáte.
+     * Podporuje +XXXXXXXX bez oddeľovačov alebo s oddeľovačmi.
+     * Vráti normalizovaný formát +XXXXXXXX alebo null pre prázdnu hodnotu.
      */
     function normalizeGenericPhone(?string $rawPhone)
     {
@@ -73,8 +73,8 @@ if (!function_exists('normalizeGenericPhone')) {
 
 if (!function_exists('formatPhoneForDisplay')) {
     /**
-     * Formats a normalized phone number with spaces for readability.
-     * Keeps unsupported formats unchanged.
+     * Naformátuje normalizované tel. číslo s medzerami pre čiteľnosť.
+     * Nepodporované formáty ponechá bezo zmeny.
      */
     function formatPhoneForDisplay(?string $rawPhone): string
     {

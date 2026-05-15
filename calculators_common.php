@@ -269,7 +269,7 @@ function calculatorBuildPatientDisplay(array $row): string
     }
 
     if (empty($parts)) {
-        return 'Pacient nebol vyplneny';
+        return 'Pacient nebol vyplnený';
     }
 
     return implode(', ', $parts);

@@ -16,11 +16,11 @@ for filename in os.listdir(dir_path):
                     for term in search_terms:
                         if term.lower() in text.lower():
                             print(f'--- Found "{term}" on page {i+1} ---')
-                            # Print a snippet of the text
+                            # Výpis úryvku textu
                             start = max(0, text.lower().find(term.lower()) - 200)
                             end = min(len(text), text.lower().find(term.lower()) + 500)
                             print(text[start:end])
                             print('\n' + '='*50 + '\n')
-                            break # Move to next page after first find
+                            break # Prechod na ďalšiu stránku po prvom nájdení
         except Exception as e:
             print(f'Error reading {filename}: {e}')

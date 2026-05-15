@@ -217,13 +217,13 @@ function sendMobileVerificationCode(string $mobilePhone, ?string $code = null): 
         return $status === 'pending' || $status === 'approved';
     }
 
-    // Log provider fallback: usable in local dev, explicit failure in non-dev.
+    // Fallback logovacího providéra: použiteľný pri lokálnom vývoji, v produkcii zlyhá.
     if ($provider === '' || $provider === 'log') {
         error_log('SMS verification code for ' . $mobilePhone . ': ' . (string) $code);
         return $isLocalDev;
     }
 
-    // Placeholder for future providers.
+    // Zástupné miesto pre budúce SMS providéry.
     error_log('SMS provider not implemented: ' . $provider . ' for ' . $mobilePhone . ', sender=' . $cfg['sms_sender']);
     return false;
 }

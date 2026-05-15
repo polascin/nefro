@@ -2,7 +2,7 @@ import pypdf
 import sys
 import re
 
-# Set output encoding to UTF-8
+# Nastavenie kódovania výstupu na UTF-8
 sys.stdout.reconfigure(encoding='utf-8')
 
 pdf_path = r'c:\Users\polas\Downloads\KDIGO-2024-CKD\KDIGO-2024-CKD-Guideline.pdf'

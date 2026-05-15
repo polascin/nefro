@@ -23,10 +23,10 @@ for pdf_file in pdf_files:
             if not text:
                 continue
             
-            # Check for search terms
+            # Kontrola výskytu hľadaných výrazov
             found = [term for term in search_terms if term.lower() in text.lower()]
             if found:
-                # Look for numerical patterns like coefficients (e.g., -0.123 or 0.456)
+                # Hľadanie číselných vzorov (napr. koeficienty ako -0.123 alebo 0.456)
                 coeffs = re.findall(r'[-+]?\d*\.\d{3,}', text)
                 
                 results.append({
@@ -39,8 +39,8 @@ for pdf_file in pdf_files:
     except Exception as e:
         print(f"Error reading {pdf_file}: {e}")
 
-# Output summaries of interesting pages
+# Výpis súhrnov zaujímavých stránok
 for res in results:
     if res['has_numbers'] or '3-year' in str(res['terms']) or 'coefficient' in str(res['terms']) or 'CKD-PC' in str(res['terms']):
          print(f"FILE: {res['file']} | PAGE: {res['page']} | TERMS: {res['terms']}")
-         # Extract lines for context if it seems very relevant
+         # Extrakcia riadkov pre kontext, ak sa stránka javí ako relevantná
