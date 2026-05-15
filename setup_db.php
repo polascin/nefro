@@ -273,6 +273,42 @@ try {
     $pdo->exec($calculatorResultsSql);
     echo "Tabuľka 'calculator_results' bola úspešne vytvorená alebo už existuje.\n";
 
+    // ── Číselník zdravotných poisťovní SR ────────────────────────────────
+    $insuranceSql = "CREATE TABLE IF NOT EXISTS insurance_companies (
+        id SMALLINT AUTO_INCREMENT PRIMARY KEY,
+        code VARCHAR(10) NOT NULL UNIQUE COMMENT 'Číselný kód poisťovne (napr. 24)',
+        nazov VARCHAR(255) NOT NULL COMMENT 'Úradný názov poisťovne',
+        skratka VARCHAR(50) NOT NULL COMMENT 'Obchodná skratka (napr. VšZP)',
+        aktivna TINYINT(1) NOT NULL DEFAULT 1 COMMENT '1 = aktívna, 0 = historická',
+        poznamka TEXT NULL COMMENT 'Voliteľná poznámka (napr. dôvod zániku)',
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        INDEX idx_insurance_code (code),
+        INDEX idx_insurance_aktivna (aktivna)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";
+    $pdo->exec($insuranceSql);
+    echo "Tabuľka 'insurance_companies' bola úspešne vytvorená alebo už existuje.\n";
+
+    // Seed: vloží aktuálne aktívne poisťovne (ignoruje duplicity)
+    $insuranceSeedSql = "INSERT IGNORE INTO insurance_companies (code, nazov, skratka, aktivna) VALUES
+        ('24', 'Všeobecná zdravotná poisťovňa, a. s.', 'VšZP',   1),
+        ('25', 'DÔVERA zdravotná poisťovňa, a. s.',   'DÔVERA',  1),
+        ('27', 'UNION zdravotná poisťovňa, a. s.',     'UNION',   1)";
+    $pdo->exec($insuranceSeedSql);
+    echo "Seed dáta poisťovní boli vložené (duplicity ignorované).\n";
+
+    // Migrácia: rozšíriť patient_insurance_code na VARCHAR(10) ak je kratší
+    $insColStmt = $pdo->prepare("SELECT CHARACTER_MAXIMUM_LENGTH
+        FROM INFORMATION_SCHEMA.COLUMNS
+        WHERE TABLE_SCHEMA = DATABASE()
+          AND TABLE_NAME   = 'calculator_results'
+          AND COLUMN_NAME  = 'patient_insurance_code'");
+    $insColStmt->execute();
+    $insColLen = (int) $insColStmt->fetchColumn();
+    if ($insColLen > 0 && $insColLen < 10) {
+        $pdo->exec("ALTER TABLE calculator_results MODIFY COLUMN patient_insurance_code VARCHAR(10) NULL");
+        echo "Migrácia: patient_insurance_code rozšírená na VARCHAR(10).\n";
+    }
+
     // ── Migrácia: sort_order stĺpec ──────────────────────────────────
     $sortOrderColumnStmt = $pdo->prepare("SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'articles' AND COLUMN_NAME = 'sort_order'");
     $sortOrderColumnStmt->execute();

@@ -2,6 +2,7 @@
 require_once 'auth.php';
 require_once 'db_config.php';
 require_once 'calculators_common.php';
+require_once 'insurance_codes.php';
 
 requireLogin();
 
@@ -227,8 +228,8 @@ function formatResultKey(string $key): string {
                         <?php endif; ?>
                         <?php if (!empty($resultRow['patient_insurance_code'])): ?>
                         <div class="admin-notice-print-row">
-                            <strong>Kód zdravotnej poisťovne</strong>
-                            <span><?= htmlspecialchars((string) $resultRow['patient_insurance_code']) ?></span>
+                            <strong>Zdravotná poisťovňa</strong>
+                            <span><?= htmlspecialchars(insuranceName((string) $resultRow['patient_insurance_code'], true)) ?></span>
                         </div>
                         <?php endif; ?>
                     </div>

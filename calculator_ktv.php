@@ -198,10 +198,10 @@ if (isLoggedIn()) {
                                 <label for="patient_birth_number">Rodné číslo</label>
                                 <input type="text" id="patient_birth_number" name="patient_birth_number" class="form-control" placeholder="000000/0000" value="<?= htmlspecialchars($form['patient_birth_number']) ?>">
                             </div>
-                            <div class="form-group">
-                                <label for="patient_insurance_code">Kód zdravotnej poisťovne</label>
-                                <input type="text" id="patient_insurance_code" name="patient_insurance_code" class="form-control" placeholder="24 alebo 24-01" value="<?= htmlspecialchars($form['patient_insurance_code']) ?>">
-                            </div>
+
+                            <?php include __DIR__ . '/patient_insurance_select.php'; ?>
+
+
                         </div>
                     </div>
 
