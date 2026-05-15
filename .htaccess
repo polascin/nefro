@@ -4,6 +4,9 @@
 <Files "setup_db.php">
     Require all denied
 </Files>
+<Files "seed_municipalities_sk.php">
+    Require all denied
+</Files>
 
 # Vývojové diagnostické skripty — nie sú určené pre produkčný prístup
 <Files "query_article.php">

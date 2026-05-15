@@ -383,7 +383,167 @@ try {
     $pdo->exec($titleAfterSeedSql);
     echo "Seed dáta titulov za menom boli vložené (duplicity ignorované).\n";
 
+    // ── Číselník štátov ─────────────────────────────────────────────
+    $pdo->exec("CREATE TABLE IF NOT EXISTS codebook_countries (
+        id SMALLINT AUTO_INCREMENT PRIMARY KEY,
+        code CHAR(2) NOT NULL COMMENT 'ISO 3166-1 alpha-2',
+        name_sk VARCHAR(100) NOT NULL COMMENT 'Názov štátu v slovenčine',
+        sort_order SMALLINT NOT NULL DEFAULT 100,
+        UNIQUE KEY uq_codebook_countries_code (code),
+        INDEX idx_codebook_countries_sort (sort_order)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci");
+    echo "Tabuľka 'codebook_countries' bola úspešne vytvorená alebo už existuje.\n";
+
+    $pdo->exec("INSERT IGNORE INTO codebook_countries (code, name_sk, sort_order) VALUES
+        ('SK','Slovenská republika',1),('CZ','Česká republika',2),('AT','Rakúsko',3),
+        ('HU','Maďarsko',4),('PL','Poľsko',5),('DE','Nemecko',6),('UA','Ukrajina',7),
+        ('AF','Afganistan',100),('AL','Albánsko',101),('DZ','Alžírsko',102),
+        ('AD','Andorra',103),('AO','Angola',104),('AG','Antigua a Barbuda',105),
+        ('AR','Argentína',106),('AM','Arménsko',107),('AU','Austrália',108),
+        ('AZ','Azerbajdžan',109),('BS','Bahamy',110),('BH','Bahrajn',111),
+        ('BD','Bangladéš',112),('BB','Barbados',113),('BE','Belgicko',114),
+        ('BZ','Belize',115),('BJ','Benin',116),('BT','Bhután',117),
+        ('BY','Bielorusko',118),('BO','Bolívia',119),('BA','Bosna a Hercegovina',120),
+        ('BW','Botswana',121),('BR','Brazília',122),('BN','Brunej',123),
+        ('BG','Bulharsko',124),('BF','Burkina Faso',125),('BI','Burundi',126),
+        ('CL','Čile',127),('CN','Čína',128),('ME','Čierna Hora',129),
+        ('TD','Čad',130),('DK','Dánsko',131),('DM','Dominika',132),
+        ('DO','Dominikánska republika',133),('DJ','Džibutsko',134),
+        ('EG','Egypt',135),('EC','Ekvádor',136),('ER','Eritrea',137),
+        ('EE','Estónsko',138),('ET','Etiópia',139),('FJ','Fidži',140),
+        ('PH','Filipíny',141),('FI','Fínsko',142),('FR','Francúzsko',143),
+        ('GA','Gabon',144),('GM','Gambia',145),('GH','Ghana',146),
+        ('GD','Grenada',147),('GE','Gruzínsko',148),('GT','Guatemala',149),
+        ('GN','Guinea',150),('GW','Guinea-Bissau',151),('GY','Guyana',152),
+        ('HT','Haiti',153),('NL','Holandsko',154),('HN','Honduras',155),
+        ('HR','Chorvátsko',156),('ID','Indonézia',157),('IQ','Irak',158),
+        ('IR','Irán',159),('IE','Írsko',160),('IS','Island',161),
+        ('IL','Izrael',162),('JM','Jamajka',163),('JP','Japonsko',164),
+        ('YE','Jemen',165),('JO','Jordánsko',166),('ZA','Južná Afrika',167),
+        ('SS','Južný Sudán',168),('KH','Kambodža',169),('CM','Kamerun',170),
+        ('CA','Kanada',171),('QA','Katar',172),('KZ','Kazachstan',173),
+        ('KE','Keňa',174),('CY','Cyprus',175),('KI','Kiribati',176),
+        ('CO','Kolumbia',177),('KM','Komory',178),('CG','Kongo',179),
+        ('CD','Konžská demokratická republika',180),('KP','Kórea (KĽDR)',181),
+        ('KR','Kórea (republika)',182),('XK','Kosovo',183),('CR','Kostarika',184),
+        ('CU','Kuba',185),('KW','Kuvajt',186),('KG','Kirgizsko',187),
+        ('LA','Laos',188),('LS','Lesotho',189),('LB','Libanon',190),
+        ('LR','Libéria',191),('LY','Líbya',192),('LI','Lichtenštajnsko',193),
+        ('LT','Litva',194),('LV','Lotyšsko',195),('LU','Luxembursko',196),
+        ('MG','Madagaskar',197),('MK','Macedónsko',198),('MW','Malawi',199),
+        ('MV','Maldivy',200),('MY','Malajzia',201),('ML','Mali',202),
+        ('MT','Malta',203),('MA','Maroko',204),('MH','Marshallove ostrovy',205),
+        ('MR','Mauritánia',206),('MU','Mauritius',207),('MX','Mexiko',208),
+        ('FM','Mikronézia',209),('MD','Moldavsko',210),('MC','Monako',211),
+        ('MN','Mongolsko',212),('MZ','Mozambik',213),('MM','Mjanmarsko',214),
+        ('NA','Namíbia',215),('NR','Nauru',216),('NP','Nepál',217),
+        ('NE','Niger',218),('NG','Nigéria',219),('NI','Nikaragua',220),
+        ('NO','Nórsko',221),('NZ','Nový Zéland',222),('OM','Omán',223),
+        ('PK','Pakistan',224),('PW','Palau',225),('PA','Panama',226),
+        ('PG','Papua Nová Guinea',227),('PY','Paraguaj',228),('PE','Peru',229),
+        ('PT','Portugalsko',230),('RO','Rumunsko',231),('RU','Rusko',232),
+        ('RW','Rwanda',233),('SB','Šalamúnove ostrovy',234),('SM','San Maríno',235),
+        ('SA','Saudská Arábia',236),('SN','Senegal',237),('SC','Seychely',238),
+        ('SL','Sierra Leone',239),('SG','Singapur',240),('SI','Slovinsko',241),
+        ('SO','Somálsko',242),('RS','Srbsko',243),('LK','Srí Lanka',244),
+        ('SD','Sudán',245),('SR','Surinam',246),('SZ','Svazijsko',247),
+        ('SY','Sýria',248),('ST','Svätý Tomáš a Princov ostrov',249),
+        ('VC','Svätý Vincent a Grenadíny',250),('KN','Svätý Krištof a Nevis',251),
+        ('LC','Svätá Lucia',252),('ES','Španielsko',253),('SE','Švédsko',254),
+        ('CH','Švajčiarsko',255),('TJ','Tadžikistan',256),('TZ','Tanzánia',257),
+        ('TH','Thajsko',258),('TL','Východný Timor',259),('TG','Togo',260),
+        ('TO','Tonga',261),('TT','Trinidad a Tobago',262),('TN','Tunisko',263),
+        ('TR','Turecko',264),('TM','Turkménsko',265),('TV','Tuvalu',266),
+        ('UG','Uganda',267),('UY','Uruguaj',268),('UZ','Uzbekistan',269),
+        ('VU','Vanuatu',270),('VA','Vatikán',271),('VE','Venezuela',272),
+        ('VN','Vietnam',273),('GB','Veľká Británia',274),('US','Spojené štáty americké',275),
+        ('AE','Spojené arabské emiráty',276),('CF','Stredoafrická republika',277),
+        ('WS','Samoa',278),('ZM','Zambia',279),('ZW','Zimbabwe',280)");
+    echo "Seed dáta štátov boli vložené (duplicity ignorované).\n";
+
+    // ── Číselník krajov SR ───────────────────────────────────────────
+    $pdo->exec("CREATE TABLE IF NOT EXISTS codebook_regions (
+        id TINYINT AUTO_INCREMENT PRIMARY KEY,
+        code CHAR(2) NOT NULL COMMENT 'Kód kraja (napr. BA)',
+        name VARCHAR(80) NOT NULL COMMENT 'Názov kraja',
+        country_code CHAR(2) NOT NULL DEFAULT 'SK',
+        sort_order TINYINT NOT NULL DEFAULT 10,
+        UNIQUE KEY uq_codebook_regions_code (code),
+        INDEX idx_codebook_regions_country (country_code)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci");
+    echo "Tabuľka 'codebook_regions' bola úspešne vytvorená alebo už existuje.\n";
+
+    $pdo->exec("INSERT IGNORE INTO codebook_regions (code, name, country_code, sort_order) VALUES
+        ('BL','Bratislavský kraj','SK',1),
+        ('TA','Trnavský kraj','SK',2),
+        ('TC','Trenčiansky kraj','SK',3),
+        ('NI','Nitriansky kraj','SK',4),
+        ('ZI','Žilinský kraj','SK',5),
+        ('BC','Banskobystrický kraj','SK',6),
+        ('PV','Prešovský kraj','SK',7),
+        ('KI','Košický kraj','SK',8)");
+    echo "Seed dáta krajov SR boli vložené (duplicity ignorované).\n";
+
+    // ── Číselník okresov SR ──────────────────────────────────────────
+    $pdo->exec("CREATE TABLE IF NOT EXISTS codebook_districts (
+        id SMALLINT AUTO_INCREMENT PRIMARY KEY,
+        name VARCHAR(80) NOT NULL COMMENT 'Názov okresu',
+        region_code CHAR(2) NOT NULL COMMENT 'Kód kraja',
+        sort_order SMALLINT NOT NULL DEFAULT 100,
+        UNIQUE KEY uq_codebook_districts_name (name),
+        INDEX idx_codebook_districts_region (region_code)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci");
+    echo "Tabuľka 'codebook_districts' bola úspešne vytvorená alebo už existuje.\n";
+
+    $pdo->exec("INSERT IGNORE INTO codebook_districts (name, region_code, sort_order) VALUES
+        ('Bratislava I','BL',1),('Bratislava II','BL',2),('Bratislava III','BL',3),
+        ('Bratislava IV','BL',4),('Bratislava V','BL',5),('Malacky','BL',6),
+        ('Pezinok','BL',7),('Senec','BL',8),
+        ('Dunajská Streda','TA',10),('Galanta','TA',11),('Hlohovec','TA',12),
+        ('Piešťany','TA',13),('Senica','TA',14),('Skalica','TA',15),('Trnava','TA',16),
+        ('Bánovce nad Bebravou','TC',20),('Ilava','TC',21),('Myjava','TC',22),
+        ('Nové Mesto nad Váhom','TC',23),('Partizánske','TC',24),
+        ('Považská Bystrica','TC',25),('Púchov','TC',26),('Trenčín','TC',27),
+        ('Komárno','NI',30),('Levice','NI',31),('Nitra','NI',32),
+        ('Nové Zámky','NI',33),('Šaľa','NI',34),('Topoľčany','NI',35),
+        ('Zlaté Moravce','NI',36),
+        ('Bytča','ZI',40),('Čadca','ZI',41),('Dolný Kubín','ZI',42),
+        ('Kysucké Nové Mesto','ZI',43),('Liptovský Mikuláš','ZI',44),
+        ('Martin','ZI',45),('Námestovo','ZI',46),('Ružomberok','ZI',47),
+        ('Turčianske Teplice','ZI',48),('Tvrdošín','ZI',49),('Žilina','ZI',50),
+        ('Banská Bystrica','BC',60),('Banská Štiavnica','BC',61),('Brezno','BC',62),
+        ('Detva','BC',63),('Krupina','BC',64),('Lučenec','BC',65),('Poltár','BC',66),
+        ('Revúca','BC',67),('Rimavská Sobota','BC',68),('Veľký Krtíš','BC',69),
+        ('Zvolen','BC',70),('Žarnovica','BC',71),('Žiar nad Hronom','BC',72),
+        ('Bardejov','PV',80),('Humenné','PV',81),('Kežmarok','PV',82),
+        ('Levoča','PV',83),('Medzilaborce','PV',84),('Poprad','PV',85),
+        ('Prešov','PV',86),('Sabinov','PV',87),('Snina','PV',88),
+        ('Spišská Stará Ves','PV',89),('Stará Ľubovňa','PV',90),
+        ('Stropkov','PV',91),('Vranov nad Topľou','PV',92),
+        ('Gelnica','KI',100),('Košice I','KI',101),('Košice II','KI',102),
+        ('Košice III','KI',103),('Košice IV','KI',104),('Košice-okolie','KI',105),
+        ('Michalovce','KI',106),('Rožňava','KI',107),('Sobrance','KI',108),
+        ('Spišská Nová Ves','KI',109),('Trebišov','KI',110)");
+    echo "Seed dáta okresov SR boli vložené (duplicity ignorované).\n";
+
+    // ── Číselník obcí SR s PSČ ───────────────────────────────────────
+    $pdo->exec("CREATE TABLE IF NOT EXISTS codebook_municipalities (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        name VARCHAR(100) NOT NULL COMMENT 'Názov obce',
+        district_name VARCHAR(80) NOT NULL COMMENT 'Okres',
+        region_code CHAR(2) NOT NULL COMMENT 'Kód kraja',
+        zip_code CHAR(5) NOT NULL COMMENT 'PSČ (5 číslic)',
+        sort_order INT NOT NULL DEFAULT 100,
+        UNIQUE KEY uq_codebook_mun_name_district (name, district_name),
+        INDEX idx_codebook_mun_district (district_name),
+        INDEX idx_codebook_mun_region (region_code),
+        INDEX idx_codebook_mun_zip (zip_code)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci");
+    echo "Tabuľka 'codebook_municipalities' bola úspešne vytvorená alebo už existuje.\n";
+    echo "Poznámka: Pre import všetkých obcí SR spustite seed_municipalities_sk.php\n";
+
 } catch (\PDOException $e) {
     echo "Chyba pri vytváraní tabuľky: " . $e->getMessage();
 }
 ?>
+
