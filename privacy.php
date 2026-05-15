@@ -109,7 +109,7 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
 
     <?php
     $headerTitle = 'Zásady ochrany osobných údajov';
-    $headerIntro = 'Privacy Policy &amp; Cookie Policy';
+    $headerIntro = 'Privacy Policy & Cookie Policy';
     $showLogo = false;
     include 'header.php';
     ?>

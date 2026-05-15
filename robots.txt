@@ -1,4 +1,12 @@
 User-agent: *
 Allow: /
+Disallow: /admin.php
+Disallow: /admin_articles.php
+Disallow: /admin_users_notice.php
+Disallow: /query_article.php
+Disallow: /setup_db.php
+Disallow: /archive_cleanup.php
+Disallow: /private/
+Disallow: /uploads/avatars/archive/
 
 Sitemap: https://nefro.polascin.net/sitemap.php

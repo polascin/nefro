@@ -1,6 +1,7 @@
 <?php
-error_reporting(E_ALL);
-ini_set("display_errors", 1);
+require_once __DIR__ . '/auth.php';
+requireAdmin();
+ini_set('display_errors', 0);
 require_once "db_config.php";
 if (!isset($pdo)) { die("PDO connection failed.\n"); }
 try {

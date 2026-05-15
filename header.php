@@ -32,13 +32,13 @@ if ($showUnverifiedNotice && !empty($_SESSION['email'])) {
         
         <?php if ($headerTitle !== 'Nefro-projekt Slovensko'): ?>
             <h2 class="site-header__subtitle">
-                <?= $headerTitle ?>
+                <?= htmlspecialchars($headerTitle) ?>
             </h2>
         <?php endif; ?>
         
         <?php if (!empty($headerIntro)): ?>
             <p class="site-header__intro">
-                <?= $headerIntro ?>
+                <?= htmlspecialchars($headerIntro) ?>
             </p>
         <?php endif; ?>
     </div>
