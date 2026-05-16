@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 require_once 'auth.php';
 require_once 'db_config.php';
 require_once 'calculators_common.php';
@@ -319,33 +319,6 @@ if (isLoggedIn()) {
                                     <option value="mg_dl" <?= $form['u_cr_unit'] === 'mg_dl' ? 'selected' : '' ?>>mg/dL</option>
                                 </select>
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="form-section">
-                        <h3>Parametre pre FENa (Sodík)</h3>
-                        <p style="font-size: 0.85rem; color: var(--color-text-light); margin-bottom: 12px;">Vyplňte pre výpočet FENa.</p>
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label for="s_na">S-Sodík (mmol/L)</label>
-                                <input type="text" id="s_na" name="s_na" class="form-control" value="<?= htmlspecialchars($form['s_na']) ?>">
-                            </div>
-                            <div class="form-group">
-                                <label for="u_na">U-Sodík (mmol/L)</label>
-                                <input type="text" id="u_na" name="u_na" class="form-control" value="<?= htmlspecialchars($form['u_na']) ?>">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form-section">
-                        <h3>Parametre pre FEUrea (Urea)</h3>
-                        <p style="font-size: 0.85rem; color: var(--color-text-light); margin-bottom: 12px;">Vyplňte pre výpočet FEUrea (vhodné pri diuretikách).</p>
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label for="s_urea">S-Urea (mmol/L)</label>
-                                <input type="text" id="s_urea" name="s_urea" class="form-control" value="<?= htmlspecialchars($form['s_urea']) ?>">
-                            </div>
-                            <div class="form-group">
                                 <label for="u_urea">U-Urea (mmol/L)</label>
                                 <input type="text" id="u_urea" name="u_urea" class="form-control" value="<?= htmlspecialchars($form['u_urea']) ?>">
                             </div>

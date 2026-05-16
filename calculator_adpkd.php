@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 require_once 'auth.php';
 require_once 'db_config.php';
 require_once 'calculators_common.php';
@@ -118,7 +118,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $deleteId = (int)$_POST['delete_id'];
             if ($deleteId > 0) {
                 try {
-                    $pdo = getPDO();
                     if (calculatorDeleteSavedResult($pdo, $deleteId, (int)$_SESSION['user_id'])) {
                         $messages[] = 'Záznam bol úspešne vymazaný.';
                     } else {
@@ -155,7 +154,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 if (isLoggedIn()) {
                     try {
-                        $pdo = getPDO();
                         $saved = calculatorSaveResult($pdo, (int)$_SESSION['user_id'], 'adpkd', 'Mayo ADPKD klasifikácia', $patient,
                             ['tkv_ml' => $tkvMl, 'height_cm' => $heightCm, 'age_years' => $ageYears],
                             ['class' => $res['class'], 'httkv' => $res['httkv'], 'k_pct' => $res['k_pct']]);
@@ -168,15 +166,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 if (isLoggedIn()) {
-    try { $pdo = getPDO(); $savedResults = calculatorFetchSavedResults($pdo, (int)$_SESSION['user_id'], 'adpkd');
-    } catch (\Throwable) {} }
+    try { $savedResults = calculatorFetchSavedResults($pdo, (int)$_SESSION['user_id'], 'adpkd');
+    } catch (\Throwable $e) {} }
 ?>
 <!DOCTYPE html>
 <html lang="sk">
 <head>
   <?php
-  $pageTitle = '<?= htmlspecialchars($pageTitle, ENT_QUOTES) ?>';
-  $seoDescription = '<?= htmlspecialchars($pageDesc, ENT_QUOTES) ?>';
+  $pageTitle = 'Mayo ADPKD klasifikácia — rýchlosť progresie ADPKD';
+  $seoDescription = 'Mayo Clinic ADPKD klasifikácia (Irazabal 2015) — zaradenie do tried 1A–1E podľa výškou adjustovaného celkového objemu obličiek (HtTKV) a veku.';
   $structuredData = [
     [
       '@context' => 'https://schema.org',
@@ -218,10 +216,8 @@ if (isLoggedIn()) {
                     <summary>Vzorec — Mayo ADPKD klasifikácia (Irazabal 2015)</summary>
                     <div class="calc-formula-content">
                         <code class="calc-formula-line">HtTKV = TKV [mL] / výška [m]
-
-k = ln(HtTKV / 150) / vek
-
-Triedy: 1A: k&lt;0,015 &nbsp; 1B: 0,015–0,030 &nbsp; 1C: 0,030–0,045 &nbsp; 1D: 0,045–0,060 &nbsp; 1E: k≥0,060</code>
+<br>k = ln(HtTKV / 150) / vek
+<br>Triedy: 1A: k<0,015 &nbsp; 1B: 0,015–0,030 &nbsp; 1C: 0,030–0,045 &nbsp; 1D: 0,045–0,060 &nbsp; 1E: k≥0,060</code>
                         <div class="calc-formula-vars">
                             HtTKV = výškou adjustovaný celkový objem obličiek (mL/m) &ensp;&bull;&ensp;
                             k = odhadovaná ročná miera rastu (exponent) &ensp;&bull;&ensp;
@@ -304,10 +300,7 @@ Triedy: 1A: k&lt;0,015 &nbsp; 1B: 0,015–0,030 &nbsp; 1C: 0,030–0,045 &nbsp; 
                                 <label for="patient_birth_number">Rodné číslo</label>
                                 <input type="text" id="patient_birth_number" name="patient_birth_number" class="form-control" placeholder="000000/0000" value="<?= htmlspecialchars($form['patient_birth_number']) ?>">
                             </div>
-
                             <?php include __DIR__ . '/patient_insurance_select.php'; ?>
-
-
                         </div>
                     </div>
 
@@ -359,8 +352,8 @@ Triedy: 1A: k&lt;0,015 &nbsp; 1B: 0,015–0,030 &nbsp; 1C: 0,030–0,045 &nbsp; 
                                 </tr></thead>
                                 <tbody>
                                 <?php
-                                $ages = [20,25,30,35,40,45,50,55,60];
-                                foreach ($ages as $a) {
+                                $agesList = [20,25,30,35,40,45,50,55,60];
+                                foreach ($agesList as $a) {
                                     $t = [150*exp(0.015*$a), 150*exp(0.030*$a), 150*exp(0.045*$a), 150*exp(0.060*$a)];
                                     echo "<tr style='border-bottom:1px solid rgba(255,255,255,0.06);'>";
                                     echo "<td style='padding:4px 8px;font-weight:600;'>{$a} r</td>";
@@ -374,11 +367,13 @@ Triedy: 1A: k&lt;0,015 &nbsp; 1B: 0,015–0,030 &nbsp; 1C: 0,030–0,045 &nbsp; 
                         </div>
                     </details>
                 </div>
+            </div>
 
-                <?php if (!empty($savedResults)): ?>
             <?php include 'calculator_disclaimer.php'; ?>
-                <section class="calc-saved-results" aria-labelledby="adpkd-saved-heading">
-                    <h3 id="adpkd-saved-heading">Uložené výsledky</h3>
+
+            <?php if (!empty($savedResults)): ?>
+                <section class="auth-container auth-container--wide calc-saved-results" style="margin-top:32px;">
+                    <h3>Uložené výsledky</h3>
                     <div class="calc-saved-list">
                         <?php foreach ($savedResults as $row): ?>
                         <details class="calc-saved-item">
@@ -400,9 +395,7 @@ Triedy: 1A: k&lt;0,015 &nbsp; 1B: 0,015–0,030 &nbsp; 1C: 0,030–0,045 &nbsp; 
                         <?php endforeach; ?>
                     </div>
                 </section>
-                <?php endif; ?>
-
-            </div>
+            <?php endif; ?>
         </div>
     </main>
     <?php include 'footer.php'; ?>

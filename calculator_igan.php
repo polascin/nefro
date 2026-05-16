@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 require_once 'auth.php';
 require_once 'db_config.php';
 require_once 'calculators_common.php';
@@ -7,16 +7,6 @@ require_once 'calculators_common.php';
  * IgAN — International IgA Nephropathy Prediction Tool
  * Barbour SJ et al. JAMA Intern Med. 2019;179(7):942–952. PMC7876283
  * Klinický model (bez histológie) — Cox proportional hazards
- *
- * Výsledok: 5-ročné riziko poklesu eGFR o ≥50 % alebo ESKD
- * Koeficienty z publikovaných HR (Table 2, klinický model bez MEST):
- *   eGFR:         HR=0.9737/mL/min -> beta=ln(0.9737)=-0.02663
- *   Proteinúria:  HR=1.7380/g/deň  -> beta=ln(1.7380)= 0.55198
- *   MAP:          HR=1.0068/mmHg   -> beta=ln(1.0068)= 0.00678
- *   RASB:         HR=0.7940 (áno)  -> beta=ln(0.7940)=-0.23079
- *   Imunosupr.:   HR=0.5280 (áno)  -> beta=ln(0.5280)=-0.63861
- * Kohortné priemery (centrujeme LP): eGFR=66, prot=1.7, MAP=96, RASB=0.65, IS=0.21
- * S0(5yr) = 0.972
  */
 function iganRisk(float $egfr, float $uprotGDay, float $map, bool $rasb, bool $immuno): float
 {
@@ -50,7 +40,6 @@ function iganInterpretation(float $risk5yr): array
     return ['interpretation' => $interp, 'warnings' => $warn];
 }
 
-// --- Hlavičkové premenné ---
 header_remove('X-Powered-By');
 header('X-Frame-Options: SAMEORIGIN');
 header('X-Content-Type-Options: nosniff');
@@ -71,9 +60,8 @@ header('Content-Security-Policy: ' . $csp);
 $siteName  = 'Nefro-projekt Slovensko';
 $baseUrl   = 'https://nefro.polascin.net/';
 $pageUrl   = $baseUrl . 'calculator_igan.php';
-$pageTitle = 'IgAN Prediction Tool — riziko progresie IgA nefropatie | ' . $siteName;
-$pageDesc  = 'International IgA Nephropathy Prediction Tool (Barbour 2019) — odhad 5-ročného rizika poklesu eGFR o ≥50 % alebo ESKD u pacientov s IgA nefropatiou. Klinický model.';
-$ogImage   = $baseUrl . 'img/nps-logo.gif';
+$pageTitle = 'IgAN Prediction Tool — riziko progresie IgA nefropatie';
+$pageDesc  = 'International IgA Nephropathy Prediction Tool (Barbour 2019) — odhad 5-ročného rizika poklesu eGFR o ≥50 % alebo ESKD u pacientov s IgA nefropatiou.';
 
 $errors    = [];
 $messages  = [];
@@ -103,7 +91,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $deleteId = (int)$_POST['delete_id'];
             if ($deleteId > 0) {
                 try {
-                    $pdo = getPDO();
                     if (calculatorDeleteSavedResult($pdo, $deleteId, (int)$_SESSION['user_id'])) {
                         $messages[] = 'Záznam bol úspešne vymazaný.';
                     } else {
@@ -149,7 +136,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             if (isLoggedIn()) {
                 try {
-                    $pdo = getPDO();
                     $saved = calculatorSaveResult($pdo, (int)$_SESSION['user_id'], 'igan', 'IgAN Prediction Tool',
                         $patient,
                         ['egfr' => $egfr, 'uprot_g_day' => $uprotGDay, 'map_mmhg' => $mapMmhg,
@@ -167,17 +153,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 if (isLoggedIn()) {
     try {
-        $pdo = getPDO();
         $savedResults = calculatorFetchSavedResults($pdo, (int)$_SESSION['user_id'], 'igan');
-    } catch (\Throwable) {}
+    } catch (\Throwable $e) {}
 }
 ?>
 <!DOCTYPE html>
 <html lang="sk">
 <head>
   <?php
-  $pageTitle = '<?= htmlspecialchars($pageTitle, ENT_QUOTES) ?>';
-  $seoDescription = '<?= htmlspecialchars($pageDesc, ENT_QUOTES) ?>';
+  $pageTitle = 'IgAN Prediction Tool — riziko progresie IgA nefropatie';
+  $seoDescription = 'International IgA Nephropathy Prediction Tool (Barbour 2019) — odhad 5-ročného rizika poklesu eGFR o ≥50 % alebo ESKD.';
   $structuredData = [
     [
       '@context' => 'https://schema.org',
@@ -194,30 +179,18 @@ if (isLoggedIn()) {
 </head>
 <body>
     <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>
-    <?php
-    $headerTitle = 'IgAN Prediction Tool';
-    $headerIntro = 'Predikcia progresie IgA nefropatie';
-    $showLogo = false;
-    include 'header.php';
-    ?>
+    <?php $headerTitle = 'IgAN Prediction Tool'; $headerIntro = 'Predikcia progresie IgA nefropatie'; $showLogo = false; include 'header.php'; ?>
 
     <nav class="main-nav" aria-label="Hlavná navigácia">
-        <div class="container">
-            <ul>
-                <li><a href="index.php">Domov</a></li>
-                <li><a href="calculators.php" class="active" aria-current="page">Kalkulačky</a></li>
-                <li><a href="calculator_egfr.php">eGFR CKD-EPI</a></li>
-                <li><a href="calculator_kdigo_risk.php">KDIGO G/A riziko</a></li>
-                <?php if (isLoggedIn()): ?>
-                    <?php if (isAdmin()): ?>
-                        <li><a href="admin.php">Admin panel</a></li>
-                    <?php endif; ?>
-                    <li><a href="logout.php">Odhlásiť sa (<?= htmlspecialchars($_SESSION['username'] ?? 'Profil') ?>)</a></li>
-                <?php else: ?>
-                    <li><a href="login.php">Prihlásenie</a></li>
-                <?php endif; ?>
-            </ul>
-        </div>
+        <div class="container"><ul>
+            <li><a href="index.php">Domov</a></li>
+            <li><a href="calculators.php" class="active" aria-current="page">Kalkulačky</a></li>
+            <li><a href="calculator_egfr.php">eGFR CKD-EPI</a></li>
+            <?php if (isLoggedIn()): ?>
+                <?php if (isAdmin()): ?><li><a href="admin.php">Admin panel</a></li><?php endif; ?>
+                <li><a href="logout.php">Odhlásiť sa (<?= htmlspecialchars($_SESSION['username'] ?? 'Profil') ?>)</a></li>
+            <?php else: ?><li><a href="login.php">Prihlásenie</a></li><?php endif; ?>
+        </ul></div>
     </nav>
 
     <main id="main-content" class="container main-content main-content--single-col" role="main">
@@ -228,43 +201,23 @@ if (isLoggedIn()) {
 
                 <div class="alert" style="background:rgba(245,158,11,0.08);border-left:4px solid #f59e0b;padding:12px 16px;border-radius:6px;margin-bottom:16px;font-size:0.88rem;">
                     <strong>⚠ Klinický model bez histológie.</strong> Pre presnejšie výsledky vrátane Oxford MEST-C skóre použite
-                    <a href="https://qxcalc.app.link/igarisk" target="_blank" rel="noopener noreferrer">QxMD IgAN Tool</a> alebo
-                    <a href="https://www.mdcalc.com/search?q=IgA+Nephropathy" target="_blank" rel="noopener noreferrer">MDCalc IgAN Tool</a>.
+                    <a href="https://qxcalc.app.link/igarisk" target="_blank" rel="noopener noreferrer">QxMD IgAN Tool</a>.
                 </div>
 
                 <details open class="calc-formula-box">
-                    <summary>Vzorec — IgAN Prediction Tool (Barbour 2019, klinický model)</summary>
+                    <summary>Vzorec — IgAN Prediction Tool (Barbour 2019)</summary>
                     <div class="calc-formula-content">
                         <code class="calc-formula-line">LP = &minus;0.02663·(eGFR&minus;66) + 0.55198·(prot&minus;1.7) + 0.00678·(MAP&minus;96) &minus; 0.23079·(RASB&minus;0.65) &minus; 0.63861·(IS&minus;0.21)
-
-Riziko (5 r.) = 1 &minus; 0.972<sup>exp(LP)</sup> &times; 100&thinsp;%</code>
-                        <div class="calc-formula-vars">
-                            prot = proteinúria (g/deň) &ensp;&bull;&ensp; MAP = stredný arteriálny tlak (mmHg) &ensp;&bull;&ensp;
-                            RASB = blokáda RAAS (0/1) &ensp;&bull;&ensp; IS = imunosupresia (0/1) &ensp;&bull;&ensp;
-                            Zdroj: Barbour SJ et al. <em>JAMA Intern Med.</em> 2019;179(7):942–952.
-                        </div>
+<br>Riziko (5 r.) = 1 &minus; 0.972<sup>exp(LP)</sup> &times; 100&thinsp;%</code>
                     </div>
                 </details>
-
-                <div class="alert" style="background:rgba(16,185,129,0.07);border-left:4px solid #10b981;padding:12px 16px;border-radius:6px;margin-bottom:16px;font-size:0.88rem;">
-                    <strong>Porovnanie s referenčnými kalkulátormi:</strong>
-                    <a href="https://qxcalc.app.link/igarisk" target="_blank" rel="noopener noreferrer">QxMD IgAN (plný model)</a> &ensp;&bull;&ensp;
-                    <a href="https://www.mdcalc.com/search?q=IgA+Nephropathy" target="_blank" rel="noopener noreferrer">MDCalc IgAN Tool</a> &ensp;&bull;&ensp;
-                    <a href="https://kidneyfailurerisk.com/" target="_blank" rel="noopener noreferrer">kidneyfailurerisk.com (KFRE)</a>
-                </div>
 
                 <?php foreach ($messages as $message): ?>
                     <div class="alert alert-success"><p><?= htmlspecialchars($message) ?></p></div>
                 <?php endforeach; ?>
 
                 <?php if (!empty($errors)): ?>
-                    <div class="alert alert-error">
-                        <ul>
-                            <?php foreach ($errors as $error): ?>
-                                <li><?= htmlspecialchars($error) ?></li>
-                            <?php endforeach; ?>
-                        </ul>
-                    </div>
+                    <div class="alert alert-error"><ul><?php foreach ($errors as $error): ?><li><?= htmlspecialchars($error) ?></li><?php endforeach; ?></ul></div>
                 <?php endif; ?>
 
                 <?php if ($calculated !== null): ?>
@@ -282,13 +235,6 @@ Riziko (5 r.) = 1 &minus; 0.972<sup>exp(LP)</sup> &times; 100&thinsp;%</code>
                     <?php foreach ($calculated['warnings'] as $w): ?>
                         <p class="calc-result-warning">⚠ <?= htmlspecialchars($w) ?></p>
                     <?php endforeach; ?>
-                    <p class="calc-result-note" style="margin-top:8px;font-size:0.82rem;opacity:0.75;">
-                        Vstupy: eGFR&nbsp;<?= number_format($calculated['egfr'],1,',','&thinsp;') ?>&thinsp;mL/min/1,73&thinsp;m² &bull;
-                        Proteinúria&nbsp;<?= number_format($calculated['uprot_g_day'],2,',','&thinsp;') ?>&thinsp;g/deň &bull;
-                        MAP&nbsp;<?= number_format($calculated['map_mmhg'],0,',','&thinsp;') ?>&thinsp;mmHg &bull;
-                        RASB:&nbsp;<?= $calculated['rasb'] ? 'áno' : 'nie' ?> &bull;
-                        IS:&nbsp;<?= $calculated['immuno'] ? 'áno' : 'nie' ?>
-                    </p>
                 </div>
                 <?php endif; ?>
 
@@ -313,10 +259,7 @@ Riziko (5 r.) = 1 &minus; 0.972<sup>exp(LP)</sup> &times; 100&thinsp;%</code>
                                 <label for="patient_birth_number">Rodné číslo</label>
                                 <input type="text" id="patient_birth_number" name="patient_birth_number" class="form-control" placeholder="000000/0000" value="<?= htmlspecialchars($form['patient_birth_number']) ?>">
                             </div>
-
                             <?php include __DIR__ . '/patient_insurance_select.php'; ?>
-
-
                         </div>
                     </div>
 
@@ -325,23 +268,18 @@ Riziko (5 r.) = 1 &minus; 0.972<sup>exp(LP)</sup> &times; 100&thinsp;%</code>
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="igan_egfr">eGFR (mL/min/1,73&thinsp;m²) <span class="required">*</span></label>
-                                <input type="number" id="igan_egfr" name="egfr" min="1" max="150" step="0.1" required class="form-control"
-                                    placeholder="napr. 45" value="<?= htmlspecialchars($form['egfr']) ?>">
+                                <input type="number" id="igan_egfr" name="egfr" min="1" max="150" step="0.1" required class="form-control" value="<?= htmlspecialchars($form['egfr']) ?>">
                             </div>
                             <div class="form-group">
                                 <label for="igan_uprot">Proteinúria (g/deň) <span class="required">*</span></label>
-                                <input type="number" id="igan_uprot" name="uprot_g_day" min="0.01" max="30" step="0.01" required class="form-control"
-                                    placeholder="napr. 1.5" value="<?= htmlspecialchars($form['uprot_g_day']) ?>">
-                                <small class="form-hint">24-hodinová alebo z uPCR (g/g ≈ g/deň pri diuréze 1 L)</small>
+                                <input type="number" id="igan_uprot" name="uprot_g_day" min="0.01" max="30" step="0.01" required class="form-control" value="<?= htmlspecialchars($form['uprot_g_day']) ?>">
                             </div>
                             <div class="form-group">
                                 <label for="igan_map">MAP (mmHg) <span class="required">*</span></label>
-                                <input type="number" id="igan_map" name="map_mmhg" min="50" max="200" step="1" required class="form-control"
-                                    placeholder="napr. 96" value="<?= htmlspecialchars($form['map_mmhg']) ?>">
-                                <small class="form-hint">MAP = (SBP + 2×DBP) / 3</small>
+                                <input type="number" id="igan_map" name="map_mmhg" min="50" max="200" step="1" required class="form-control" value="<?= htmlspecialchars($form['map_mmhg']) ?>">
                             </div>
                             <div class="form-group">
-                                <label for="igan_rasb">Blokáda RAAS (ACE-inhibítor / ARB) <span class="required">*</span></label>
+                                <label for="igan_rasb">Blokáda RAAS <span class="required">*</span></label>
                                 <select id="igan_rasb" name="rasb" class="form-control">
                                     <option value="0" <?= $form['rasb'] === '0' ? 'selected' : '' ?>>Nie</option>
                                     <option value="1" <?= $form['rasb'] === '1' ? 'selected' : '' ?>>Áno</option>
@@ -363,11 +301,13 @@ Riziko (5 r.) = 1 &minus; 0.972<sup>exp(LP)</sup> &times; 100&thinsp;%</code>
                         <a href="calculators.php" class="btn-secondary">Späť na prehľad</a>
                     </div>
                 </form>
+            </div>
 
-                <?php if (!empty($savedResults)): ?>
             <?php include 'calculator_disclaimer.php'; ?>
-                <section class="calc-saved-results" aria-labelledby="saved-results-heading">
-                    <h3 id="saved-results-heading">Uložené výsledky</h3>
+
+            <?php if (!empty($savedResults)): ?>
+                <section class="auth-container auth-container--wide calc-saved-results" style="margin-top:32px;">
+                    <h3>Uložené výsledky</h3>
                     <div class="calc-saved-list">
                         <?php foreach ($savedResults as $row): ?>
                         <details class="calc-saved-item">
@@ -378,9 +318,6 @@ Riziko (5 r.) = 1 &minus; 0.972<sup>exp(LP)</sup> &times; 100&thinsp;%</code>
                             </summary>
                             <div class="calc-saved-detail">
                                 <p>5-ročné riziko: <strong><?= number_format((float)($row['result_payload']['risk5yr'] ?? 0), 1, ',', ' ') ?>&thinsp;%</strong></p>
-                                <p>eGFR: <?= htmlspecialchars((string)($row['input_payload']['egfr'] ?? '—')) ?> &bull;
-                                   Prot.: <?= htmlspecialchars((string)($row['input_payload']['uprot_g_day'] ?? '—')) ?> g/d &bull;
-                                   MAP: <?= htmlspecialchars((string)($row['input_payload']['map_mmhg'] ?? '—')) ?> mmHg</p>
                                 <form method="POST" action="calculator_igan.php" style="display:inline;">
                                     <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
                                     <input type="hidden" name="delete_id" value="<?= (int)$row['id'] ?>">
@@ -391,12 +328,9 @@ Riziko (5 r.) = 1 &minus; 0.972<sup>exp(LP)</sup> &times; 100&thinsp;%</code>
                         <?php endforeach; ?>
                     </div>
                 </section>
-                <?php endif; ?>
-
-            </div>
+            <?php endif; ?>
         </div>
     </main>
-
     <?php include 'footer.php'; ?>
 </body>
 </html>

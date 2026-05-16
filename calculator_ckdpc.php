@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 require_once 'auth.php';
 require_once 'db_config.php';
 require_once 'calculators_common.php';
@@ -853,7 +853,7 @@ function sexLabel(string $v): string { return $v === 'male' ? 'Muž' : 'Žena'; 
                     </div>
 
                     <div class="kfre-threshold">
-                        <h4>5-ročné riziko zlyhania obličiek (KFRE)</h4>
+                        <h4>5-ročné riziko zlyhanie obličiek (KFRE)</h4>
                         <ul>
                             <li><strong>3–5 %</strong> — zvážiť odoslanie k nefrológovi</li>
                             <li><strong>&gt;5 %</strong> — odporúčaná konzultácia nefrológa</li>
@@ -875,10 +875,13 @@ function sexLabel(string $v): string { return $v === 'male' ? 'Muž' : 'Žena'; 
                     </div>
                 </section>
 
+            </div><!-- /.auth-container -->
+
+            <?php include 'calculator_disclaimer.php'; ?>
+
                 <!-- ── HISTÓRIA ULOŽENÝCH VÝSLEDKOV ──────────────── -->
                 <?php if (isLoggedIn()): ?>
-            <?php include 'calculator_disclaimer.php'; ?>
-                    <section class="form-section calc-saved-results" aria-label="Uložené výsledky">
+                    <section class="auth-container auth-container--wide calc-saved-results" aria-label="Uložené výsledky">
                         <h3>Uložené výsledky</h3>
                         <?php if (empty($savedResults)): ?>
                             <p>Žiadne uložené výsledky.</p>
@@ -929,7 +932,6 @@ function sexLabel(string $v): string { return $v === 'male' ? 'Muž' : 'Žena'; 
                     </section>
                 <?php endif; ?>
 
-            </div><!-- /.auth-container -->
         </div><!-- /.content-wrapper -->
     </main>
     <script src="patient_autofill.js?v=20260515-1&cb=<?= filemtime('patient_autofill.js') ?>" defer></script>
