@@ -340,15 +340,15 @@ if ($article) {
         <h3>Užitočné odkazy</h3>
         <ul>
           <li><a href="https://kdigo.org/guidelines/" target="_blank" rel="noopener noreferrer">KDIGO Guidelines</a></li>
-          <li><a href="https://www.era-online.org/guidelines/" target="_blank" rel="noopener noreferrer">ERA Guidelines</a></li>
+          <li><a href="https://www.era-online.org/era-guidance/" target="_blank" rel="noopener noreferrer">ERA Guidance</a></li>
           <li><a href="https://www.theisn.org/" target="_blank" rel="noopener noreferrer">International Society of Nephrology</a></li>
           <li><a href="https://www.kidney.org/professionals/guidelines" target="_blank" rel="noopener noreferrer">National Kidney Foundation (KDOQI)</a></li>
           <li><a href="https://pubmed.ncbi.nlm.nih.gov/?term=nephrology" target="_blank" rel="noopener noreferrer">PubMed: Nephrology</a></li>
           <li class="sidebar-list-header" style="margin-top: 15px; font-weight: 700; color: var(--text-primary); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Kalkulačky</li>
-          <li><a href="https://www.mdcalc.com/nephrology" target="_blank" rel="noopener noreferrer">MDCalc: Nephrology</a></li>
+          <li><a href="https://www.mdcalc.com/specialties/nephrology" target="_blank" rel="noopener noreferrer">MDCalc: Nephrology</a></li>
           <li><a href="https://qxmd.com/calculate" target="_blank" rel="noopener noreferrer">Calculate by QxMD</a></li>
           <li><a href="https://nephcalc.com/" target="_blank" rel="noopener noreferrer">NephCalc</a></li>
-          <li><a href="https://www.era-online.org/calculators/" target="_blank" rel="noopener noreferrer">ERA-EDTA Calculators</a></li>
+          <li><a href="https://www.era-online.org/clinical-practice/calculators/" target="_blank" rel="noopener noreferrer">ERA Clinical Calculators</a></li>
           <li><a href="https://clincalc.com/nephrology/" target="_blank" rel="noopener noreferrer">ClinCalc: Nephrology</a></li>
         </ul>
       </div>
