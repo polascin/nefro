@@ -1,0 +1,21 @@
+# ── Ochrana uploads adresára ────────────────────────────────────────────────
+# Zakazuje spustenie PHP a iných skriptov — prevencia Remote Code Execution (RCE)
+
+# Zakázať spustenie PHP a iných skriptovacích jazykov
+<FilesMatch "\.(php|php3|php4|php5|php7|php8|phtml|phar|cgi|pl|py|rb|asp|aspx|jsp|sh|bash)$">
+    Require all denied
+</FilesMatch>
+
+# Zakázať výkon CGI skriptov
+Options -ExecCGI
+
+# Zakázať prehľadávanie adresára
+Options -Indexes
+
+# Vypnúť PHP procesor pre tento adresár (ak je podporované)
+<IfModule mod_php.c>
+    php_flag engine off
+</IfModule>
+<IfModule mod_php8.c>
+    php_flag engine off
+</IfModule>
