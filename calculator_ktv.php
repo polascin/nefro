@@ -148,7 +148,7 @@ if (isLoggedIn()) {
                     <summary>Vzorce — Kt/V (Daugirdas II) a URR</summary>
                     <div class="calc-formula-content">
                         <div class="calc-formula-line">\[ \text{URR} = \left(1 - \frac{U_{\text{post}}}{U_{\text{pre}}}\right) \times 100\% \]</div>
-                        <div class="calc-formula-line">\[ r = \frac{U_{\text{post}}}{U_{\text{pre}}}, \quad \text{Kt/V} = -\ln(r - 0.008 \cdot t) + (4 - 3.5r) \cdot \frac{UF}{W} \]</div>
+                        <div class="calc-formula-line">\[ \begin{aligned} r &= \frac{U_{\text{post}}}{U_{\text{pre}}} \\ \text{Kt/V} &= -\ln(r - 0.008 \cdot t) + (4 - 3.5r) \cdot \frac{UF}{W} \end{aligned} \]</div>
                         <div class="calc-formula-vars">
                             $U_{\text{pre/post}}$ = močová urea pred/po dialýze &bull;
                             $t$ = čas dialýzy (h) &bull;

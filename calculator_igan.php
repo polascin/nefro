@@ -192,7 +192,7 @@ if (isLoggedIn()) {
                 <details open class="calc-formula-box">
                     <summary>Vzorec — IgAN Prediction Tool (Barbour 2019)</summary>
                     <div class="calc-formula-content">
-                        <div class="calc-formula-line">\[ \begin{aligned} LP = &-0.02663 \cdot (\text{eGFR} - 66) + 0.55198 \cdot (\text{prot} - 1.7) + 0.00678 \cdot (\text{MAP} - 96) \\ &- 0.23079 \cdot (\text{RASB} - 0.65) - 0.63861 \cdot (\text{IS} - 0.21) \end{aligned} \]</div>
+                        <div class="calc-formula-line">\[ \begin{aligned} LP = &-0.02663 \cdot (\text{eGFR} - 66) + 0.55198 \cdot (\text{prot} - 1.7) \\ &+ 0.00678 \cdot (\text{MAP} - 96) - 0.23079 \cdot (\text{RASB} - 0.65) \\ &- 0.63861 \cdot (\text{IS} - 0.21) \end{aligned} \]</div>
                         <div class="calc-formula-line">\[ \text{Riziko (5 r.)} = (1 - 0.972^{\exp(LP)}) \times 100\% \]</div>
                     </div>
                 </details>

@@ -252,7 +252,7 @@ if (isLoggedIn()) {
                 <details open class="calc-formula-box">
                     <summary>Klasifikácia — KDIGO 2024 (G a A kategórie)</summary>
                     <div class="calc-formula-content">
-                        <div class="calc-formula-line">\[ \begin{aligned} &\text{G1: eGFR} \ge 90 \quad \text{G2: } 60\text{--}89 \quad \text{G3a: } 45\text{--}59 \quad \text{G3b: } 30\text{--}44 \\ &\text{G4: } 15\text{--}29 \quad \text{G5: eGFR} \lt 15 \quad \text{(ml/min/1{,}73 m}^2\text{)} \\ &\text{A1: UACR} \lt 30 \quad \text{A2: } 30\text{--}300 \quad \text{A3: UACR} \gt 300 \quad \text{(mg/g)} \end{aligned} \]</div>
+                        <div class="calc-formula-line">\[ \begin{aligned} &\text{G1: eGFR} \ge 90 \quad \text{G2: } 60\text{--}89 \quad \text{G3a: } 45\text{--}59 \\ &\text{G3b: } 30\text{--}44 \quad \text{G4: } 15\text{--}29 \quad \text{G5: eGFR} \lt 15 \\ &\text{(ml/min/1{,}73 m}^2\text{)} \\ &\text{A1: UACR} \lt 30 \quad \text{A2: } 30\text{--}300 \quad \text{A3: UACR} \gt 300 \quad \text{(mg/g)} \end{aligned} \]</div>
                         <div class="calc-formula-line">\[ \text{UACR [mg/g]} = \text{UACR [mg/mmol]} \times 8.84 \]</div>
                         <div class="calc-formula-vars">
                             Riziko CKD = kombinácia G &times; A kategórie podľa KDIGO heatmapy&ensp;&bull;&ensp;

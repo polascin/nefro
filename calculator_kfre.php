@@ -302,7 +302,7 @@ if (isLoggedIn()) {
                 <details open class="calc-formula-box">
                     <summary>Vzorec — KFRE (Tangri 2011, Cox model, 4-parametrová)</summary>
                     <div class="calc-formula-content">
-                        <div class="calc-formula-line">\[ \begin{aligned} X = &-0.2201 \cdot (\text{Vek}/10 - 7.036) + 0.2467 \cdot (\text{Muž} - 0.5642) \\ &- 0.5567 \cdot (\text{eGFR}/5 - 7.222) + 0.4510 \cdot (\ln(\text{UACR}) - 5.137) \end{aligned} \]</div>
+                        <div class="calc-formula-line">\[ \begin{aligned} X = &-0.2201 \cdot (\text{Vek}/10 - 7.036) + 0.2467 \cdot (\text{Muž} - 0.5642) \\ &- 0.5567 \cdot (\text{eGFR}/5 - 7.222) \\ &+ 0.4510 \cdot (\ln(\text{UACR}) - 5.137) \end{aligned} \]</div>
                         <div class="calc-formula-line">\[ \text{Riziko}(t) = (1 - S_0(t)^{\exp(X)}) \times 100\% \]</div>
                         <div class="calc-formula-line">\[ S_0(2 \text{ roky}) = 0.9832 \quad S_0(5 \text{ rokov}) = 0.9240 \]</div>
                         <div class="calc-formula-line">\[ \text{UACR [mg/g]} = \text{UACR [mg/mmol]} \times 8.84 \]</div>

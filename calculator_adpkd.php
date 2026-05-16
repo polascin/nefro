@@ -211,7 +211,7 @@ if (isLoggedIn()) {
                     <div class="calc-formula-content">
                         <div class="calc-formula-line">\[ \text{HtTKV} = \frac{\text{TKV [mL]}}{\text{výška [m]}} \]</div>
                         <div class="calc-formula-line">\[ k = \frac{\ln(\text{HtTKV} / 150)}{\text{vek}} \]</div>
-                        <div class="calc-formula-line">\[ \text{Triedy: } 1A: k \lt 0.015 \quad 1B: 0.015\text{--}0.030 \quad 1C: 0.030\text{--}0.045 \quad 1D: 0.045\text{--}0.060 \quad 1E: k \ge 0.060 \]</div>
+                        <div class="calc-formula-line">\[ \begin{aligned} \text{Triedy: } &1A: k \lt 0.015 \quad 1B: 0.015\text{--}0.030 \quad 1C: 0.030\text{--}0.045 \\ &1D: 0.045\text{--}0.060 \quad 1E: k \ge 0.060 \end{aligned} \]</div>
                         <div class="calc-formula-vars">
                             HtTKV = výškou adjustovaný celkový objem obličiek (mL/m) &ensp;&bull;&ensp;
                             k = odhadovaná ročná miera rastu (exponent) &ensp;&bull;&ensp;
