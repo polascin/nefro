@@ -1,42 +1,44 @@
 # ── Základné bezpečnostné nastavenia ────────────────────────────────────────
+# POZN.: Options a ServerSignature vyžadujú AllowOverride Options resp. All
+# v httpd.conf. Ak server vracia 500, zakomentujte tieto dva riadky.
 Options -Indexes -FollowSymLinks
 ServerSignature Off
 
 # ── Globálne bezpečnostné HTTP hlavičky ─────────────────────────────────────
 <IfModule mod_headers.c>
-    # Zabraňuje clickjackingu
     Header always set X-Frame-Options "SAMEORIGIN"
-    # Zabraňuje MIME-type sniffing útokom
     Header always set X-Content-Type-Options "nosniff"
-    # HTTPS vynútenie na 1 rok
     Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
-    # Obmedzenie referrer informácií
     Header always set Referrer-Policy "strict-origin-when-cross-origin"
-    # Zakáže prístup k Device APIs
     Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=(), usb=()"
-    # Skryje informáciu o PHP verzii
     Header always unset X-Powered-By
     Header unset X-Powered-By
 </IfModule>
 
-# ── Blokovanie .git adresára a verziovacej histórie ──────────────────────────
-# KRITICKÉ: .git adresár odhalí celú históriu kódu vrátane možných secrets
-<DirectoryMatch "\.git">
-    Require all denied
-</DirectoryMatch>
+# ── Blokovanie .git adresára a citlivých súborov ─────────────────────────────
+# DÔLEŽITÉ: <DirectoryMatch> NIE JE povolená v .htaccess (len v httpd.conf).
+# Adresáre blokujeme cez RewriteRule a RedirectMatch (povolené v .htaccess).
+
+# Blokuj súbory začínajúce na .git (napr. .gitignore)
 <FilesMatch "^\.git">
     Require all denied
 </FilesMatch>
-<Files ".gitignore">
-    Require all denied
-</Files>
 
-# ── Blokovanie vývojových adresárov ─────────────────────────────────────────
-RedirectMatch 403 ^/(\.git|scratch|hooks|\.vscode)(/|$)
+# ── Blokovanie vývojových adresárov cez RewriteRule ─────────────────────────
+# (RedirectMatch/RewriteRule sú v .htaccess povolené)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Blokovanie .git, scratch, hooks, .vscode adresárov
+    RewriteRule ^(\.git|scratch|hooks|\.vscode)(/.*)?$ - [F,L]
+
+    # Rewrite sitemap.xml → sitemap.php
+    RewriteRule ^sitemap\.xml$ sitemap.php [L]
+</IfModule>
 
 # ── Bezpečnostné blokovanie citlivých súborov ──────────────────────────────
 
-# Databázový setup skript — prístupný iba cez CLI, nie cez web
+# Databázový setup — prístupný iba cez CLI, nie cez web
 <Files "setup_db.php">
     Require all denied
 </Files>
@@ -47,7 +49,7 @@ RedirectMatch 403 ^/(\.git|scratch|hooks|\.vscode)(/|$)
     Require all denied
 </Files>
 
-# Vývojové diagnostické skripty — nie sú určené pre produkčný prístup
+# Vývojové a diagnostické skripty
 <Files "query_article.php">
     Require all denied
 </Files>
@@ -55,12 +57,12 @@ RedirectMatch 403 ^/(\.git|scratch|hooks|\.vscode)(/|$)
     Require all denied
 </Files>
 
-# Knižničné a konfiguračné PHP súbory — prístupné len ako include, nie priamo cez web
+# Knižničné PHP súbory — prístupné len ako include, nie priamo cez web
 <FilesMatch "^(db_config|config_loader|auth|phone_utils|calculators_common|header|header_profile|footer|head_meta|calculator_disclaimer|email_verification|mobile_verification)\.php$">
     Require all denied
 </FilesMatch>
 
-# Konfiguračné súbory — nikdy nesmú byť stiahnuteľné
+# Konfiguračné súbory
 <Files "*.ini">
     Require all denied
 </Files>
@@ -78,16 +80,12 @@ RedirectMatch 403 ^/(\.git|scratch|hooks|\.vscode)(/|$)
     Require all denied
 </FilesMatch>
 
-# Rewrite sitemap.xml na sitemap.php
-RewriteEngine On
-RewriteRule ^sitemap\.xml$ sitemap.php [L]
-
-# Vývojové Python skripty — nie sú určené pre web prístup
+# Vývojové Python skripty
 <FilesMatch "\.py$">
     Require all denied
 </FilesMatch>
 
-# Extrahované a pomocné textové súbory — nie sú určené pre web prístup
+# Extrahované pomocné textové súbory
 <FilesMatch "^(extracted_utf8|pages_70s|pages_detailed|pages_text|extracted_info)\.txt$">
     Require all denied
 </FilesMatch>
