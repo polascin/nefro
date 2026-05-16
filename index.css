@@ -170,11 +170,26 @@ body {
 .site-header {
   background: var(--primary-gradient);
   color: var(--white);
-  padding: 100px 0 80px;
+  padding: clamp(60px, 10vh, 100px) 0 clamp(40px, 8vh, 80px);
   text-align: center;
   position: relative;
   overflow: hidden;
   clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+}
+
+.site-header__main-title {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  font-weight: 900;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.site-header__subtitle {
+  font-size: clamp(1rem, 3vw, 1.4rem);
+  opacity: 0.95;
+  font-weight: 500;
+  margin-bottom: 12px;
 }
 
 .site-header::before {
@@ -948,6 +963,49 @@ input:disabled + .slider:before {
 }
 
 .cookie-modal-footer .btn-primary {
+  padding: 10px 24px;
+}
+
+/* Štýly pre rozbaľovacie zoznamy v sidebar */
+.expandable-list li.hidden-item {
+  display: none;
+}
+
+.show-more-btn {
+  background: transparent;
+  border: none;
+  color: var(--primary-color);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 8px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: var(--transition-fast);
+  margin-top: 4px;
+}
+
+.show-more-btn:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+.show-more-btn::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease;
+  margin-bottom: 4px;
+}
+
+.show-more-btn.expanded::after {
+  transform: rotate(-135deg);
+  margin-bottom: -4px;
+}
   margin-top: 0;
 }
 
@@ -2665,5 +2723,220 @@ input:disabled + .slider:before {
 
   .calc-disclaimer__text--small {
     font-size: 7pt;
+  }
+}
+
+/* ============================================================
+   RESPONZÍVNE TABUĽKY
+   ============================================================ */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Lepšia mriežka pre kalkulačky na mobile */
+@media (max-width: 768px) {
+  .calculators-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .site-header__wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .site-header__col {
+    width: 100% !important;
+    text-align: center !important;
+  }
+  
+  .site-header__logo-img {
+    max-height: 60px;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 5px;
+  }
+  
+  .main-nav li {
+    width: 100%;
+  }
+  
+  .main-nav a {
+    display: block;
+    padding: 12px 15px;
+    border-radius: 6px;
+    background: rgba(0,0,0,0.03);
+  }
+}
+
+/* Optimalizácia pre veľmi malé displeje */
+@media (max-width: 380px) {
+  .container {
+    padding: 0 15px;
+  }
+  
+  .primary-article {
+    padding: 20px 15px;
+  }
+  
+  .btn-primary, .btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ============================================================
+   ADMIN & FORMULÁRE (Globálne)
+   ============================================================ */
+.admin-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 0.9rem; }
+.admin-table th, .admin-table td { padding: 10px 12px; border-bottom: 1px solid var(--border-color); text-align: left; vertical-align: top; }
+.admin-table th { font-weight: 600; color: var(--text-secondary); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px; }
+.admin-table tr:hover td { background: rgba(59,130,246,0.04); }
+
+.admin-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 1rem;
+}
+
+.form-grid { display: grid; gap: 18px; }
+.form-group { display: flex; flex-direction: column; gap: 5px; }
+.form-group label { font-weight: 600; font-size: 0.88rem; color: var(--text-secondary); }
+.form-control {
+  width: 100%; padding: 10px 12px; border: 1px solid var(--border-color);
+  border-radius: 8px; background: var(--bg-color); color: var(--text-primary);
+  font-family: inherit; font-size: 0.95rem; transition: border-color 0.2s;
+}
+.form-control:focus { outline: none; border-color: var(--primary-color); }
+
+.badge-pub   { background:#d1fae5;color:#065f46; padding:2px 8px;border-radius:10px;font-size:0.75rem;font-weight:600; }
+.badge-draft { background:#fef3c7;color:#92400e; padding:2px 8px;border-radius:10px;font-size:0.75rem;font-weight:600; }
+.badge-top-sm { background: var(--primary-gradient);color:#fff; padding:2px 8px;border-radius:10px;font-size:0.75rem;font-weight:600; }
+
+/* ============================================================
+   MOBILNÁ NAVIGÁCIA (Hamburger Menu)
+   ============================================================ */
+.menu-toggle {
+  display: none;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: var(--white);
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 8px;
+  z-index: 1001;
+  font-size: 0.9rem;
+  font-weight: 600;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition-fast);
+}
+
+.menu-toggle:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+    margin: 10px auto;
+  }
+  
+  .main-nav {
+    position: relative;
+    padding: 5px 0;
+  }
+  
+  .main-nav ul {
+    display: none;
+    flex-direction: column;
+    background: var(--white);
+    padding: 10px 0;
+    box-shadow: var(--shadow-lg);
+    border-radius: 12px;
+    margin-top: 10px;
+  }
+  
+  [data-theme="dark"] .main-nav ul {
+    background: var(--white); /* V dark mode je --white vlastne tmavý modrý */
+  }
+  
+  .main-nav ul.is-open {
+    display: flex;
+  }
+  
+  .main-nav ul li {
+    width: 100%;
+  }
+  
+  .main-nav ul li a {
+    color: var(--text-primary);
+    padding: 14px 24px;
+    display: block;
+    border-bottom: 1px solid var(--border-color);
+    background: transparent !important;
+  }
+  
+  .main-nav ul li a.active {
+    background: var(--primary-color) !important;
+    color: #fff !important;
+  }
+  
+  .main-nav ul li:last-child a {
+    border-bottom: none;
+  }
+}
+
+/* ============================================================
+   TLAČIDLO SPÄŤ NAHOR
+   ============================================================ */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--primary-gradient);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-lg);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 999;
+}
+
+.back-to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  transform: scale(1.1) translateY(-5px);
+  box-shadow: var(--shadow-glow);
+}
+
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
   }
 }

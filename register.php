@@ -307,22 +307,11 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 <!DOCTYPE html>
 <html lang="sk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrácia - Nefro-projekt Slovensko</title>
-    <meta name="description" content="Zaregistrujte sa do Nefro-projekt Slovensko — odborného portálu pre nefrológov a lekárov.">
-    <link rel="canonical" href="https://nefro.polascin.net/register.php">
-    <meta property="og:title" content="Registrácia | Nefro-projekt Slovensko">
-    <meta property="og:description" content="Zaregistrujte sa do Nefro-projekt Slovensko — odborného portálu pre nefrológov a lekárov.">
-    <meta property="og:url" content="https://nefro.polascin.net/register.php">
-    <meta property="og:type" content="website">
-    <meta name="robots" content="index, follow">
-
-    <script src="theme.js?v=20260511-1&cb=<?= filemtime('theme.js') ?>"></script>
-    <link rel="stylesheet" href="index.css?v=20260509-1&cb=<?= filemtime('index.css') ?>">
-    <script src="ui-preferences.js?v=20260511-1&cb=<?= filemtime('ui-preferences.js') ?>" defer></script>
-    <script src="ui-preferences-fallback.js?v=20260511-1&cb=<?= filemtime('ui-preferences-fallback.js') ?>" defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;900&display=swap" rel="stylesheet">
+  <?php
+  $pageTitle = 'Registrácia - Nefro-projekt Slovensko';
+  $seoDescription = 'Zaregistrujte sa do Nefro-projekt Slovensko — odborného portálu pre nefrológov a lekárov.';
+  include 'head_meta.php';
+  ?>
 </head>
 <body>
     <?php

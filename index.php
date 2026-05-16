@@ -225,76 +225,17 @@ if (!empty($itemListElements)) {
 <html lang="sk">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
-  <meta http-equiv="Pragma" content="no-cache">
-  <meta http-equiv="Expires" content="0">
-  <!-- Logika pre Tmavý režim (na začiatku kvôli prevencii FOUC) -->
-  <script src="theme.js?v=20260509-1&cb=<?= filemtime('theme.js') ?>"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Bezpečnostné hlavičky (Security) -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="referrer" content="strict-origin-when-cross-origin">
-
-  <!-- SEO & Metadata -->
-  <meta name="description" content="<?= htmlspecialchars($seoDescription, ENT_QUOTES) ?>">
-  <meta name="robots" content="index, follow, max-image-preview:large">
-  <meta name="author" content="MUDr. Ľubomír Polaščín">
-  <meta name="keywords" content="nefrológia, CKD, chronické ochorenie obličiek, KDIGO 2024, eGFR, dialýza, transplantácia obličiek, nefrologické kalkulačky, Slovensko">
-  <link rel="canonical" href="<?= htmlspecialchars($canonicalUrl, ENT_QUOTES) ?>">
-  <link rel="alternate" hreflang="sk-SK" href="<?= htmlspecialchars($canonicalUrl, ENT_QUOTES) ?>">
+  <?php
+  // Príprava pre head_meta.php
+  $structuredData = $structuredData ?? [];
+  include 'head_meta.php';
+  ?>
   <?php if ($prevUrl !== ''): ?>
   <link rel="prev" href="<?= htmlspecialchars($prevUrl, ENT_QUOTES) ?>">
   <?php endif; ?>
   <?php if ($nextUrl !== ''): ?>
   <link rel="next" href="<?= htmlspecialchars($nextUrl, ENT_QUOTES) ?>">
   <?php endif; ?>
-
-  <!-- Open Graph (Social SEO) -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="<?= htmlspecialchars($pageTitle, ENT_QUOTES) ?>">
-  <meta property="og:description" content="<?= htmlspecialchars($seoDescription, ENT_QUOTES) ?>">
-  <meta property="og:url" content="<?= htmlspecialchars($canonicalUrl, ENT_QUOTES) ?>">
-  <meta property="og:site_name" content="Nefro-projekt Slovensko">
-  <meta property="og:locale" content="sk_SK">
-  <meta property="og:image" content="https://nefro.polascin.net/img/nps-logo.gif">
-  <meta property="og:image:alt" content="Logo Nefro-projekt Slovensko">
-  <meta property="og:image:width" content="200">
-  <meta property="og:image:height" content="200">
-
-  <!-- Twitter Cards -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="<?= htmlspecialchars($pageTitle, ENT_QUOTES) ?>">
-  <meta name="twitter:description" content="<?= htmlspecialchars($seoDescription, ENT_QUOTES) ?>">
-  <meta name="twitter:image" content="https://nefro.polascin.net/img/nps-logo.gif">
-  <meta name="twitter:image:alt" content="Logo Nefro-projekt Slovensko">
-
-  <title><?= htmlspecialchars($pageTitle, ENT_QUOTES) ?></title>
-
-  <?php foreach ($structuredData as $schema): ?>
-  <script type="application/ld+json"><?= json_encode($schema, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) ?></script>
-  <?php endforeach; ?>
-
-  <!-- Favikony (PWA, Apple, Android, Windows) -->
-  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
-  <link rel="manifest" href="./site.webmanifest">
-  <link rel="shortcut icon" href="./favicon.ico">
-
-  <!-- Prepojenie na externý CSS súbor pre moderný dizajn -->
-  <link rel="stylesheet" href="index.css?v=20260509-1&cb=<?= filemtime('index.css') ?>">
-
-  <!-- Google Fonts pre modernú typografiu (non-blocking preload) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;900&display=swap"></noscript>
-
-  <!-- Skript pre Privacy Manager (Cookies) -->
-  <script src="ui-preferences.js?v=20260511-1&cb=<?= filemtime('ui-preferences.js') ?>" defer></script>
-  <script src="ui-preferences-fallback.js?v=20260511-1&cb=<?= filemtime('ui-preferences-fallback.js') ?>" defer></script>
 </head>
 
 <body>
@@ -312,6 +253,10 @@ if (!empty($itemListElements)) {
   <!-- <nav>: Hlavná navigácia stránky (menu) -->
   <nav class="main-nav" aria-label="Hlavná navigácia">
     <div class="container">
+      <button class="menu-toggle" id="menuToggle" aria-label="Otvoriť menu" aria-expanded="false">
+        <span>Menu</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
       <ul>
         <li><a href="#domov" class="active" aria-current="page">Domov</a></li>
         <li><a href="#sluzby">Služby</a></li>
@@ -501,7 +446,7 @@ if (!empty($itemListElements)) {
           $randomImagePath = $images[$randomIndex];
 
           echo '<a href="' . htmlspecialchars($randomImagePath) . '" id="randomImageLink" target="_blank" rel="noopener noreferrer" title="Zobraziť obrázok v plnej veľkosti" aria-label="Zobraziť náhodný abstraktný obrázok v plnej veľkosti">';
-          echo '<img id="randomImage" src="' . htmlspecialchars($randomImagePath) . '" alt="Náhodný abstraktný obrázok Nefro">';
+          echo '<img id="randomImage" src="' . htmlspecialchars($randomImagePath) . '" alt="Náhodný abstraktný obrázok Nefro" loading="lazy">';
           echo '</a>';
         } else {
           echo "<p>\n";
@@ -512,7 +457,7 @@ if (!empty($itemListElements)) {
       </div>
 
       <div class="widget">
-        <img src="./img/nps.gif" alt="Nefro-projekt Slovensko Logo" class="header-logo">
+        <img src="./img/nps.gif" alt="Nefro-projekt Slovensko Logo" class="header-logo" loading="lazy">
         <h3>O projekte</h3>
         <p>
           Ako nefrológa a nadšenca pre internú medicínu ma fascinuje, akou obrovskou a dynamickou renesanciou prechádza naša nefrologická špecializácia. Sme v <?= htmlspecialchars($currentMonthYearLocative, ENT_QUOTES, 'UTF-8') ?> a nefrológia sa rozvíja míľovými krokmi. Nie je to už len o manažovaní terminálneho zlyhania obličiek a čakaní na transplantáciu. Zažívame doslova explóziu inovácií, od molekulárnej biológie až po umelú inteligenciu.
@@ -524,22 +469,22 @@ if (!empty($itemListElements)) {
           <li><a href="https://kdigo.org/guidelines/" target="_blank" rel="noopener noreferrer">KDIGO Guidelines</a></li>
           <li><a href="https://www.era-online.org/era-guidance/" target="_blank" rel="noopener noreferrer">ERA Guidance</a></li>
           <li><a href="https://www.theisn.org/" target="_blank" rel="noopener noreferrer">International Society of Nephrology (ISN)</a></li>
-          <li><a href="https://www.kidney.org/professionals/guidelines" target="_blank" rel="noopener noreferrer">National Kidney Foundation (KDOQI)</a></li>
-          <li><a href="https://www.niddk.nih.gov/health-information/kidney-disease" target="_blank" rel="noopener noreferrer">NIDDK: Kidney Disease Resources</a></li>
-          <li><a href="https://www.escardio.org/Guidelines" target="_blank" rel="noopener noreferrer">ESC Guidelines</a></li>
-          <li><a href="https://pubmed.ncbi.nlm.nih.gov/?term=nephrology" target="_blank" rel="noopener noreferrer">PubMed: Nephrology</a></li>
-          <li><a href="https://clinicaltrials.gov/search?cond=Kidney%20Diseases" target="_blank" rel="noopener noreferrer">ClinicalTrials.gov: Kidney Diseases</a></li>
-          <li class="sidebar-list-header" style="margin-top: 15px; font-weight: 700; color: var(--text-primary); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Kalkulačky</li>
-          <li><a href="https://www.mdcalc.com/specialties/nephrology" target="_blank" rel="noopener noreferrer">MDCalc: Nephrology</a></li>
-          <li><a href="https://qxmd.com/calculate" target="_blank" rel="noopener noreferrer">Calculate by QxMD</a></li>
+          <li><a href="https://www.era-online.org/" target="_blank" rel="noopener noreferrer">European Renal Association (ERA)</a></li>
+          <li><a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noopener noreferrer">PubMed</a></li>
+        </ul>
+        <h4 style="margin: 15px 0 10px; font-size: 0.95rem; color: var(--text-secondary); border-bottom: 1px solid var(--border-color); padding-bottom: 5px;">Kalkulačky</h4>
+        <ul>
+          <li><a href="https://www.mdcalc.com/specialties/nephrology" target="_blank" rel="noopener noreferrer">MDCalc Nephrology</a></li>
+          <li><a href="https://qxmd.com/calculate/" target="_blank" rel="noopener noreferrer">Calculate by QxMD</a></li>
           <li><a href="https://nephcalc.com/" target="_blank" rel="noopener noreferrer">NephCalc</a></li>
-          <li><a href="https://www.era-online.org/clinical-practice/calculators/" target="_blank" rel="noopener noreferrer">ERA Clinical Calculators</a></li>
-          <li><a href="https://clincalc.com/nephrology/" target="_blank" rel="noopener noreferrer">ClinCalc: Nephrology</a></li>
+          <li><a href="https://www.era-online.org/clinical-practice/calculators-and-tools/" target="_blank" rel="noopener noreferrer">ERA Calculators</a></li>
+          <li><a href="https://clincalc.com/nephrology/" target="_blank" rel="noopener noreferrer">ClinCalc Nephrology</a></li>
         </ul>
       </div>
+
       <div class="widget">
         <h3>Národné nefrologické spoločnosti</h3>
-        <ul>
+        <ul class="expandable-list" data-limit="10">
           <li><a href="https://www.nefro.sk/" target="_blank" rel="noopener noreferrer">Slovensko (SNS)</a></li>
           <li><a href="https://www.nefrol.cz/" target="_blank" rel="noopener noreferrer">Česko (ČNS)</a></li>
           <li><a href="https://www.asn-online.org/" target="_blank" rel="noopener noreferrer">USA (ASN)</a></li>
@@ -572,16 +517,28 @@ if (!empty($itemListElements)) {
           <li><a href="https://nefrologs.lv/" target="_blank" rel="noopener noreferrer">Lotyšsko (LNA)</a></li>
           <li><a href="https://nefro.ee/" target="_blank" rel="noopener noreferrer">Estónsko (ENS)</a></li>
           <li><a href="https://www.nek.org.cy/" target="_blank" rel="noopener noreferrer">Cyprus (CRA)</a></li>
+          <!-- Medzinárodné organizácie -->
+          <li style="border-top: 1px solid var(--border-color); margin-top: 10px; padding-top: 10px;"><a href="https://www.theisn.org/" target="_blank" rel="noopener noreferrer">International Society of Nephrology (ISN)</a></li>
+          <li><a href="https://www.era-online.org/" target="_blank" rel="noopener noreferrer">European Renal Association (ERA)</a></li>
+          <li><a href="https://kdigo.org/" target="_blank" rel="noopener noreferrer">KDIGO</a></li>
+          <li><a href="https://www.edtnaerca.org/" target="_blank" rel="noopener noreferrer">EDTNA/ERCA (International Nurses)</a></li>
+          <li><a href="https://ekpf.eu/" target="_blank" rel="noopener noreferrer">European Kidney Patients' Federation (EKPF)</a></li>
+          <li><a href="https://www.ifkf-wka.org/" target="_blank" rel="noopener noreferrer">IFKF-WKA (World Kidney Alliance)</a></li>
+          <li><a href="https://academy.theisn.org/" target="_blank" rel="noopener noreferrer">ISN Academy (Education)</a></li>
+          <li><a href="https://www.era-online.org/education/" target="_blank" rel="noopener noreferrer">ERA Education</a></li>
+          <li><a href="https://kdigo.org/education/" target="_blank" rel="noopener noreferrer">KDIGO Education</a></li>
+          <li><a href="http://www.nephjc.com/" target="_blank" rel="noopener noreferrer">NSMC (Social Media Collective)</a></li>
         </ul>
+        <button class="show-more-btn no-print" type="button">Zobraziť viac</button>
       </div>
 
       <div class="widget">
         <h3>Organizácie nefrologických sestier</h3>
-        <ul>
-          <li><a href="https://www.sksapa.sk/odborne-sekcie/sekcia-sestier-pracujucich-v-nefrologii-sksapa/" target="_blank" rel="noopener noreferrer">Slovensko (SKSaPA)</a></li>
+        <ul class="expandable-list" data-limit="10">
+          <li><a href="https://www.sksapa.sk/o-komore/odborne-sekcie/sekcia-sestier-pracujucich-v-nefrologii/" target="_blank" rel="noopener noreferrer">Slovensko (SKSaPA)</a></li>
           <li><a href="https://www.cnna.cz/sekce-a-regiony/sekce-nefrologicko-urologicka/" target="_blank" rel="noopener noreferrer">Česko (ČAS)</a></li>
           <li><a href="https://www.annanurse.org/" target="_blank" rel="noopener noreferrer">USA (ANNA)</a></li>
-          <li><a href="https://cannt.ca/" target="_blank" rel="noopener noreferrer">Kanada (CANNT)</a></li>
+          <li><a href="https://cannt-acitn.ca/" target="_blank" rel="noopener noreferrer">Kanada (CANNT)</a></li>
           <!-- Susedia Slovenska podľa počtu obyvateľov -->
           <li><a href="https://pspn.pl/" target="_blank" rel="noopener noreferrer">Poľsko (PSPN)</a></li>
           <li><a href="http://www.nephrologia.hu/" target="_blank" rel="noopener noreferrer">Maďarsko (MANET)</a></li>
@@ -600,7 +557,7 @@ if (!empty($itemListElements)) {
           <li><a href="https://www.snsf.eu/" target="_blank" rel="noopener noreferrer">Švédsko (SNSF)</a></li>
           <li><a href="https://www.apen.org.pt/" target="_blank" rel="noopener noreferrer">Portugalsko (APEN)</a></li>
           <li><a href="https://nursing-bg.com/" target="_blank" rel="noopener noreferrer">Bulharsko (BAHPN)</a></li>
-          <li><a href="https://www.lns-nefro.dk/" target="_blank" rel="noopener noreferrer">Dánsko (DNS)</a></li>
+          <li><a href="https://www.lns-nefro.dk/" target="_blank" rel="noopener noreferrer">Dánsko (LNS)</a></li>
           <li><a href="http://www.snhy.fi/" target="_blank" rel="noopener noreferrer">Fínsko (SNHY)</a></li>
           <li><a href="https://www.nsf.no/faggrupper/nefrologiske" target="_blank" rel="noopener noreferrer">Nórsko (NSF)</a></li>
           <li><a href="https://inna-ireland.com/" target="_blank" rel="noopener noreferrer">Írsko (INNA)</a></li>
@@ -611,11 +568,12 @@ if (!empty($itemListElements)) {
           <li><a href="https://www.ena.ee/" target="_blank" rel="noopener noreferrer">Estónsko (ENA)</a></li>
           <li><a href="https://cynma.com/" target="_blank" rel="noopener noreferrer">Cyprus (CYNMA)</a></li>
         </ul>
+        <button class="show-more-btn no-print" type="button">Zobraziť viac</button>
       </div>
 
       <div class="widget">
         <h3>Pacientske organizácie</h3>
-        <ul>
+        <ul class="expandable-list" data-limit="10">
           <li><a href="https://sdat.sk/" target="_blank" rel="noopener noreferrer">Slovensko (SDaT)</a></li>
           <li><a href="https://www.ledviny.cz/" target="_blank" rel="noopener noreferrer">Česko (Společnost RTCH)</a></li>
           <li><a href="https://www.kidney.org/" target="_blank" rel="noopener noreferrer">USA (NKF)</a></li>
@@ -644,6 +602,58 @@ if (!empty($itemListElements)) {
           <li><a href="https://ika.ie/" target="_blank" rel="noopener noreferrer">Írsko (IKA)</a></li>
           <li><a href="https://transplant.hr/" target="_blank" rel="noopener noreferrer">Chorvátsko (HUT)</a></li>
           <li><a href="https://geraviltis.lt/" target="_blank" rel="noopener noreferrer">Litva (Gera viltis)</a></li>
+          <li><a href="https://www.zveza-ledvica.si/" target="_blank" rel="noopener noreferrer">Slovinsko (ZDLBS)</a></li>
+          <li><a href="http://www.nieras.lv/" target="_blank" rel="noopener noreferrer">Lotyšsko (Nieras.lv)</a></li>
+          <li><a href="https://www.neeruliit.ee/" target="_blank" rel="noopener noreferrer">Estónsko (ENL)</a></li>
+          <li><a href="http://www.nefropathes.org.cy/" target="_blank" rel="noopener noreferrer">Cyprus (CKA)</a></li>
+        </ul>
+        <button class="show-more-btn no-print" type="button">Zobraziť viac</button>
+      </div>
+
+      <div class="widget">
+        <h3>Vzdelávacie inštitúcie</h3>
+        <ul class="expandable-list" data-limit="10">
+          <li><a href="https://www.szu.sk/" target="_blank" rel="noopener noreferrer">Slovensko (SZU)</a></li>
+          <li><a href="https://www.ipvz.cz/" target="_blank" rel="noopener noreferrer">Česko (IPVZ)</a></li>
+          <li><a href="https://www.asn-online.org/education/" target="_blank" rel="noopener noreferrer">USA (ASN Education)</a></li>
+          <li><a href="https://www.csn-scn.ca/education/" target="_blank" rel="noopener noreferrer">Kanada (CSN Education)</a></li>
+          <!-- Susedia Slovenska podľa počtu obyvateľov -->
+          <li><a href="https://www.gov.pl/web/zdrowie/ksztalcenie-podyplomowe-kadr-medycznych" target="_blank" rel="noopener noreferrer">Poľsko (CMKP)</a></li>
+          <li><a href="https://semmelweis.hu/nefrologia/" target="_blank" rel="noopener noreferrer">Maďarsko (Semmelweis University)</a></li>
+          <li><a href="https://www.meduniwien.ac.at/" target="_blank" rel="noopener noreferrer">Rakúsko (MedUni Wien)</a></li>
+          <!-- Ostatné krajiny podľa počtu obyvateľov -->
+          <li><a href="https://nefroloji.org.tr/tr/egitim/" target="_blank" rel="noopener noreferrer">Turecko (TND Eğitim)</a></li>
+          <li><a href="https://www.dgfn.eu/akademie.html" target="_blank" rel="noopener noreferrer">Nemecko (Akademie DGfN)</a></li>
+          <li><a href="https://www.sfndt.org/formation" target="_blank" rel="noopener noreferrer">Francúzsko (SFNDT Formation)</a></li>
+          <li><a href="https://ukkidney.org/education" target="_blank" rel="noopener noreferrer">Spojené kráľovstvo (UKKA Education)</a></li>
+          <li><a href="https://sinitaly.org/formazione/" target="_blank" rel="noopener noreferrer">Taliansko (SIN Formazione)</a></li>
+          <li><a href="https://www.senefro.org/modules.php?name=webinar" target="_blank" rel="noopener noreferrer">Španielsko (S.E.N. Formación)</a></li>
+          <li><a href="https://www.srnefro.ro/cursuri" target="_blank" rel="noopener noreferrer">Rumunsko (SRN Cursuri)</a></li>
+          <li><a href="https://www.nefro.nl/nascholing" target="_blank" rel="noopener noreferrer">Holandsko (NfN Nascholing)</a></li>
+          <li><a href="https://www.bvnv.be/education/" target="_blank" rel="noopener noreferrer">Belgicko (BVNV Education)</a></li>
+          <li><a href="http://www.ene.gr/index.php/ekpaidefsi" target="_blank" rel="noopener noreferrer">Grécko (ENE Education)</a></li>
+          <li><a href="https://njurmed.com/utbildning/" target="_blank" rel="noopener noreferrer">Švédsko (SNF Utbildning)</a></li>
+          <li><a href="https://www.spnefro.pt/formacao" target="_blank" rel="noopener noreferrer">Portugalsko (SPN Formação)</a></li>
+          <li><a href="http://bgnephrology.com/education" target="_blank" rel="noopener noreferrer">Bulharsko (BNA Education)</a></li>
+          <li><a href="https://nephrology.dk/uddannelse/" target="_blank" rel="noopener noreferrer">Dánsko (DNS Uddannelse)</a></li>
+          <li><a href="https://www.sny.fi/koulutus/" target="_blank" rel="noopener noreferrer">Fínsko (SNY Koulutus)</a></li>
+          <li><a href="https://www.nephro.no/utdanning" target="_blank" rel="noopener noreferrer">Nórsko (NNF Utdanning)</a></li>
+          <li><a href="https://irishnephrology.ie/education/" target="_blank" rel="noopener noreferrer">Írsko (INS Education)</a></li>
+          <li><a href="https://www.hdndt.org/edukacija" target="_blank" rel="noopener noreferrer">Chorvátsko (HDNDT Edukacija)</a></li>
+          <li><a href="https://lndta.lt/mokymai/" target="_blank" rel="noopener noreferrer">Litva (LNDTA Mokymai)</a></li>
+          <li><a href="http://www.nephro-slovenia.si/izobrazevanje" target="_blank" rel="noopener noreferrer">Slovinsko (SND Izobraževanje)</a></li>
+          <li><a href="https://nefrologs.lv/izglitiba" target="_blank" rel="noopener noreferrer">Lotyšsko (LNA Izglītība)</a></li>
+          <li><a href="https://nefro.ee/koolitus/" target="_blank" rel="noopener noreferrer">Estónsko (ENS Koolitus)</a></li>
+          <li><a href="https://www.nek.org.cy/education" target="_blank" rel="noopener noreferrer">Cyprus (CRA Education)</a></li>
+          <!-- Medzinárodné vzdelávacie inštitúcie -->
+          <li style="border-top: 1px solid var(--border-color); margin-top: 10px; padding-top: 10px;"><a href="https://academy.theisn.org/" target="_blank" rel="noopener noreferrer">ISN Academy</a></li>
+          <li><a href="https://www.era-online.org/education/" target="_blank" rel="noopener noreferrer">ERA Education</a></li>
+          <li><a href="https://kdigo.org/education/" target="_blank" rel="noopener noreferrer">KDIGO Education</a></li>
+          <li><a href="http://www.nephjc.com/" target="_blank" rel="noopener noreferrer">NephJC (Nephrology Journal Club)</a></li>
+          <li><a href="https://www.edtnaerca.org/education" target="_blank" rel="noopener noreferrer">EDTNA/ERCA Education</a></li>
+        </ul>
+        <button class="show-more-btn no-print" type="button">Zobraziť viac</button>
+      </div>>
           <li><a href="https://www.zveza-ledvica.si/" target="_blank" rel="noopener noreferrer">Slovinsko (ZDLBS)</a></li>
           <li><a href="http://www.nieras.lv/" target="_blank" rel="noopener noreferrer">Lotyšsko (Nieras.lv)</a></li>
           <li><a href="https://www.neeruliit.ee/" target="_blank" rel="noopener noreferrer">Estónsko (ENL)</a></li>

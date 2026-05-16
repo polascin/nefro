@@ -175,61 +175,22 @@ if (isLoggedIn()) {
 <!DOCTYPE html>
 <html lang="sk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="referrer" content="strict-origin-when-cross-origin">
-    <title><?= htmlspecialchars($pageTitle, ENT_QUOTES) ?></title>
-    <meta name="description" content="<?= htmlspecialchars($pageDesc, ENT_QUOTES) ?>">
-    <meta name="robots" content="index, follow">
-    <meta name="author" content="MUDr. Ľubomír Polaščín">
-    <link rel="canonical" href="<?= htmlspecialchars($pageUrl, ENT_QUOTES) ?>">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="<?= htmlspecialchars($pageTitle, ENT_QUOTES) ?>">
-    <meta property="og:description" content="<?= htmlspecialchars($pageDesc, ENT_QUOTES) ?>">
-    <meta property="og:url" content="<?= htmlspecialchars($pageUrl, ENT_QUOTES) ?>">
-    <meta property="og:image" content="<?= htmlspecialchars($ogImage, ENT_QUOTES) ?>">
-    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
-    <link rel="manifest" href="./site.webmanifest">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;900&display=swap"></noscript>
-    <script src="theme.js?v=20260509-1&cb=<?= filemtime('theme.js') ?>"></script>
-    <link rel="stylesheet" href="index.css?v=20260509-1&cb=<?= filemtime('index.css') ?>">
-    <script src="ui-preferences.js?v=20260511-1&cb=<?= filemtime('ui-preferences.js') ?>" defer></script>
-    <script src="ui-preferences-fallback.js?v=20260511-1&cb=<?= filemtime('ui-preferences-fallback.js') ?>" defer></script>
-    <script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": [
-        "MedicalWebPage",
-        "WebApplication"
-    ],
-    "name": "IgAN Prediction Tool — riziko progresie IgA nefropatie",
-    "description": "International IgA Nephropathy Prediction Tool (Barbour 2019) — odhad 5-ročného rizika poklesu eGFR o ≥50 % alebo ESKD u pacientov s IgA nefropatiou. Klinický model.",
-    "url": "https://nefro.polascin.net/calculator_igan.php",
-    "applicationCategory": "HealthApplication",
-    "audience": {
-        "@type": "MedicalAudience",
-        "audienceType": "Clinician"
-    },
-    "about": {
-        "@type": "MedicalCondition",
-        "name": "Kidney Disease"
-    },
-    "publisher": {
-        "@type": "MedicalOrganization",
-        "name": "Nefro-projekt Slovensko",
-        "logo": {
-            "@type": "ImageObject",
-            "url": "https://nefro.polascin.net/img/nps-logo.gif"
-        }
-    }
-}
-    </script>
-
-    <script src="patient_autofill.js?v=20260515-1&cb=<?= filemtime('patient_autofill.js') ?>" defer></script>
+  <?php
+  $pageTitle = '<?= htmlspecialchars($pageTitle, ENT_QUOTES) ?>';
+  $seoDescription = '<?= htmlspecialchars($pageDesc, ENT_QUOTES) ?>';
+  $structuredData = [
+    [
+      '@context' => 'https://schema.org',
+      '@type' => 'BreadcrumbList',
+      'itemListElement' => [
+        ['@type' => 'ListItem', 'position' => 1, 'name' => 'Domov', 'item' => $baseUrl],
+        ['@type' => 'ListItem', 'position' => 2, 'name' => 'Kalkulačky', 'item' => $baseUrl . 'calculators.php'],
+        ['@type' => 'ListItem', 'position' => 3, 'name' => 'IgAN Prediction Tool', 'item' => $baseUrl . 'calculator_igan.php']
+      ]
+    ]
+  ];
+  include 'head_meta.php';
+  ?>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>

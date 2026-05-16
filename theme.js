@@ -148,4 +148,69 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Rozbaľovacie zoznamy v sidebar
+    const expandableLists = document.querySelectorAll('.expandable-list');
+    expandableLists.forEach(list => {
+        const limit = parseInt(list.dataset.limit) || 10;
+        const items = list.querySelectorAll('li');
+        const button = list.parentElement.querySelector('.show-more-btn');
+        
+        if (items.length <= limit) {
+            if (button) button.style.display = 'none';
+            return;
+        }
+
+        // Skryť položky nad limit
+        items.forEach((item, index) => {
+            if (index >= limit) {
+                item.classList.add('hidden-item');
+            }
+        });
+
+        if (button) {
+            button.addEventListener('click', () => {
+                const isExpanded = button.classList.contains('expanded');
+                
+                if (isExpanded) {
+                    // Skryť
+                    items.forEach((item, index) => {
+                        if (index >= limit) item.classList.add('hidden-item');
+                    });
+                    button.textContent = 'Zobraziť viac';
+                    button.classList.remove('expanded');
+                } else {
+                    // Zobraziť všetko
+                    items.forEach(item => item.classList.remove('hidden-item'));
+                    button.textContent = 'Zobraziť menej';
+                    button.classList.add('expanded');
+                }
+            });
+        }
+    });
+
+    // Logika pre mobilné menu (Hamburger)
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNavList = document.querySelector('.main-nav ul');
+    
+    if (menuToggle && mainNavList) {
+        menuToggle.addEventListener('click', () => {
+            const isOpen = mainNavList.classList.toggle('is-open');
+            menuToggle.setAttribute('aria-expanded', isOpen);
+            menuToggle.innerHTML = isOpen 
+                ? '<span>Zavrieť menu</span> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>'
+                : '<span>Menu</span> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>';
+        });
+
+        // Zatvoriť menu po kliknutí na odkaz (najmä pre kotvy na tej istej stránke)
+        mainNavList.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (mainNavList.classList.contains('is-open')) {
+                    mainNavList.classList.remove('is-open');
+                    menuToggle.setAttribute('aria-expanded', 'false');
+                    menuToggle.innerHTML = '<span>Menu</span> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>';
+                }
+            });
+        });
+    }
 });

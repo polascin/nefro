@@ -133,55 +133,22 @@ if (isLoggedIn()) {
 <!DOCTYPE html>
 <html lang="sk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Korigovaný vápnik - Kalkulačky KDIGO 2024 CKD</title>
-    <meta name="description" content="Nefrologická kalkulačka a nástroj: Korigovaný vápnik. Hodnotenie kalciémie pri hypoalbuminémii. Presné klinické výpočty podľa najnovších odporúčaní pre lekárov na Slovensku.">
-    <link rel="canonical" href="https://nefro.polascin.net/calculator_ca.php">
-    <meta property="og:title" content="Korigovaný vápnik">
-    <meta property="og:description" content="Nefrologická kalkulačka a nástroj: Korigovaný vápnik. Hodnotenie kalciémie pri hypoalbuminémii. Presné klinické výpočty podľa najnovších odporúčaní pre lekárov na Slovensku.">
-    <meta property="og:url" content="https://nefro.polascin.net/calculator_ca.php">
-    <meta property="og:type" content="website">
-    <meta name="robots" content="index, follow">
-
-    <script src="theme.js?v=20260511-1&cb=<?= filemtime('theme.js') ?>"></script>
-    <link rel="stylesheet" href="index.css?v=20260509-1&cb=<?= filemtime('index.css') ?>">
-    <script src="ui-preferences.js?v=20260511-1&cb=<?= filemtime('ui-preferences.js') ?>" defer></script>
-    <script src="ui-preferences-fallback.js?v=20260511-1&cb=<?= filemtime('ui-preferences-fallback.js') ?>" defer></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;900&display=swap" rel="stylesheet">
-    <script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": [
-        "MedicalWebPage",
-        "WebApplication"
-    ],
-    "name": "Lekárska kalkulačka",
-    "description": "Nástroj pre klinické rozhodovanie a výpočty v nefrológii.",
-    "url": "https://nefro.polascin.net/calculator_ca.php",
-    "applicationCategory": "HealthApplication",
-    "audience": {
-        "@type": "MedicalAudience",
-        "audienceType": "Clinician"
-    },
-    "about": {
-        "@type": "MedicalCondition",
-        "name": "Kidney Disease"
-    },
-    "publisher": {
-        "@type": "MedicalOrganization",
-        "name": "Nefro-projekt Slovensko",
-        "logo": {
-            "@type": "ImageObject",
-            "url": "https://nefro.polascin.net/img/nps-logo.gif"
-        }
-    }
-}
-    </script>
-
-    <script src="patient_autofill.js?v=20260515-1&cb=<?= filemtime('patient_autofill.js') ?>" defer></script>
+  <?php
+  $pageTitle = 'Korigovaný vápnik - Kalkulačky KDIGO 2024 CKD';
+  $seoDescription = 'Nefrologická kalkulačka a nástroj: Korigovaný vápnik. Hodnotenie kalciémie pri hypoalbuminémii. Presné klinické výpočty podľa najnovších odporúčaní pre lekárov na Slovensku.';
+  $structuredData = [
+    [
+      '@context' => 'https://schema.org',
+      '@type' => 'BreadcrumbList',
+      'itemListElement' => [
+        ['@type' => 'ListItem', 'position' => 1, 'name' => 'Domov', 'item' => $baseUrl],
+        ['@type' => 'ListItem', 'position' => 2, 'name' => 'Kalkulačky', 'item' => $baseUrl . 'calculators.php'],
+        ['@type' => 'ListItem', 'position' => 3, 'name' => 'Korigovaný vápnik pri hypoalbuminémii', 'item' => $baseUrl . 'calculator_ca.php']
+      ]
+    ]
+  ];
+  include 'head_meta.php';
+  ?>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>

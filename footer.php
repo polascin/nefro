@@ -35,6 +35,11 @@ $isHomePage = basename($_SERVER['PHP_SELF']) === 'index.php';
     </div>
   </footer>
 
+  <!-- Tlačidlo Späť nahor -->
+  <button id="backToTop" class="back-to-top no-print" aria-label="Späť nahor" title="Späť nahor">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
   <!-- Tlačová pätička -->
   <?php
   $printDateTime = date('d.m.Y H:i:s');
@@ -94,6 +99,22 @@ $isHomePage = basename($_SERVER['PHP_SELF']) === 'index.php';
         wrapper.appendChild(toggleButton);
         input.dataset.passwordToggleReady = 'true';
       });
+
+      // Logika pre tlačidlo Späť nahor
+      const backToTopBtn = document.getElementById('backToTop');
+      if (backToTopBtn) {
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 400) {
+            backToTopBtn.classList.add('is-visible');
+          } else {
+            backToTopBtn.classList.remove('is-visible');
+          }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
     });
   </script>
 </body>

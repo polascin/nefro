@@ -411,15 +411,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <!DOCTYPE html>
 <html lang="sk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil používateľa - Nefro-projekt Slovensko</title>
-    <meta name="robots" content="noindex, nofollow">
-    <script src="theme.js?v=20260511-1&cb=<?= filemtime('theme.js') ?>"></script>
-    <link rel="stylesheet" href="index.css?v=20260509-1&cb=<?= filemtime('index.css') ?>">
-    <script src="ui-preferences.js?v=20260511-1&cb=<?= filemtime('ui-preferences.js') ?>" defer></script>
-    <script src="ui-preferences-fallback.js?v=20260511-1&cb=<?= filemtime('ui-preferences-fallback.js') ?>" defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;900&display=swap" rel="stylesheet">
+  <?php
+  $pageTitle = 'Profil používateľa - Nefro-projekt Slovensko';
+  include 'head_meta.php';
+  ?>
 </head>
 <body>
     <?php

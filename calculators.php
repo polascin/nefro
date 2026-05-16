@@ -69,64 +69,39 @@ $schemaWebApp = [
 <!DOCTYPE html>
 <html lang="sk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="referrer" content="strict-origin-when-cross-origin">
+  <?php
+  // Mapovanie premenných pre head_meta.php
+  $seoDescription = $pageDesc;
+  $seoKeywords = "eGFR kalkulačka, KDIGO 2024, CKD riziko, KFRE, CKD-PC, nefrológia, chronické ochorenie obličiek, Slovensko";
+  $canonicalUrl = $pageUrl;
+  
+  $structuredData = [];
+  if (isset($schemaWebApp)) {
+      $structuredData[] = $schemaWebApp;
+  }
+  
+  // Pridanie Breadcrumbs
+  $structuredData[] = [
+      '@context' => 'https://schema.org',
+      '@type' => 'BreadcrumbList',
+      'itemListElement' => [
+          [
+              '@type' => 'ListItem',
+              'position' => 1,
+              'name' => 'Domov',
+              'item' => $baseUrl
+          ],
+          [
+              '@type' => 'ListItem',
+              'position' => 2,
+              'name' => 'Kalkulačky',
+              'item' => $pageUrl
+          ]
+      ]
+  ];
 
-    <!-- SEO & Metadata -->
-    <title><?= htmlspecialchars($pageTitle, ENT_QUOTES) ?></title>
-    <meta name="description" content="<?= htmlspecialchars($pageDesc, ENT_QUOTES) ?>">
-    <meta name="robots" content="index, follow, max-image-preview:large">
-    <meta name="author" content="MUDr. Ľubomír Polaščín">
-    <meta name="keywords" content="eGFR kalkulačka, KDIGO 2024, CKD riziko, KFRE, CKD-PC, nefrológia, chronické ochorenie obličiek, Slovensko">
-    <link rel="canonical" href="<?= htmlspecialchars($pageUrl, ENT_QUOTES) ?>">
-    <link rel="alternate" hreflang="sk-SK" href="<?= htmlspecialchars($pageUrl, ENT_QUOTES) ?>">
-
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="<?= htmlspecialchars($pageTitle, ENT_QUOTES) ?>">
-    <meta property="og:description" content="<?= htmlspecialchars($pageDesc, ENT_QUOTES) ?>">
-    <meta property="og:url" content="<?= htmlspecialchars($pageUrl, ENT_QUOTES) ?>">
-    <meta property="og:site_name" content="<?= htmlspecialchars($siteName, ENT_QUOTES) ?>">
-    <meta property="og:locale" content="sk_SK">
-    <meta property="og:image" content="<?= htmlspecialchars($ogImage, ENT_QUOTES) ?>">
-    <meta property="og:image:alt" content="Logo Nefro-projekt Slovensko">
-    <meta property="og:image:width" content="200">
-    <meta property="og:image:height" content="200">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="<?= htmlspecialchars($pageTitle, ENT_QUOTES) ?>">
-    <meta name="twitter:description" content="<?= htmlspecialchars($pageDesc, ENT_QUOTES) ?>">
-    <meta name="twitter:image" content="<?= htmlspecialchars($ogImage, ENT_QUOTES) ?>">
-    <meta name="twitter:image:alt" content="Logo Nefro-projekt Slovensko">
-
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json"><?= json_encode($schemaWebApp, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) ?></script>
-
-    <!-- Favikony (PWA, Apple, Android, Windows) -->
-    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
-    <link rel="manifest" href="./site.webmanifest">
-    <link rel="shortcut icon" href="./favicon.ico">
-
-    <!-- Preload kritických zdrojov -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;900&display=swap"></noscript>
-
-    <!-- Logika pre Tmavý režim (na začiatku kvôli prevencii FOUC) -->
-    <script src="theme.js?v=20260509-1&cb=<?= filemtime('theme.js') ?>"></script>
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="index.css?v=20260509-1&cb=<?= filemtime('index.css') ?>">
-
-    <!-- Skript pre Privacy Manager (Cookies) -->
-    <script src="ui-preferences.js?v=20260511-1&cb=<?= filemtime('ui-preferences.js') ?>" defer></script>
-    <script src="ui-preferences-fallback.js?v=20260511-1&cb=<?= filemtime('ui-preferences-fallback.js') ?>" defer></script>
+  include 'head_meta.php';
+  ?>
 </head>
 
 <body>
@@ -141,6 +116,10 @@ $schemaWebApp = [
 
     <nav class="main-nav" aria-label="Hlavná navigácia">
         <div class="container">
+            <button class="menu-toggle" id="menuToggle" aria-label="Otvoriť menu" aria-expanded="false">
+                <span>Menu</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
             <ul>
                 <li><a href="index.php">Domov</a></li>
                 <li><a href="index.php#sluzby">Služby</a></li>
