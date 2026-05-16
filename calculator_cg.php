@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 require_once 'auth.php';
 require_once 'db_config.php';
 require_once 'calculators_common.php';
@@ -230,7 +230,7 @@ if (isLoggedIn()) {
                             Hmotnosť v kg&ensp;&bull;&ensp;
                             S<sub>cr</sub> v mg/dL
                         </div>
-                        <p style="margin-top: 8px; font-size: 0.85rem; color: var(--color-text-light);">
+                        <p style="margin-top: 8px; font-size: 0.85rem; color: var(--text-secondary);">
                             Upozornenie: Hoci sa na zaradenie do štádií CKD používa rovnica CKD-EPI (s výstupom ml/min/1,73 m²), mnohé SPC liekov historicky vyžadujú na úpravu dávky práve tento vzorec (výstup ml/min). Pri extrémnej obezite sa niekedy odporúča použiť ideálnu alebo korigovanú telesnú hmotnosť.
                         </p>
                     </div>

@@ -513,10 +513,10 @@ if (!empty($itemListElements)) {
           <li><a href="https://irishnephrology.ie/" target="_blank" rel="noopener noreferrer">Írsko (INS)</a></li>
           <li><a href="https://www.hdndt.org/" target="_blank" rel="noopener noreferrer">Chorvátsko (HDNDT)</a></li>
           <li><a href="https://www.lndta.lt/" target="_blank" rel="noopener noreferrer">Litva (LNDTA)</a></li>
-          <li><a href="http://www.nephro-slovenia.si/" target="_blank" rel="noopener noreferrer">Slovinsko (SND)</a></li>
-          <li><a href="https://nefrologs.lv/" target="_blank" rel="noopener noreferrer">Lotyšsko (LNA)</a></li>
-          <li><a href="https://nefro.ee/" target="_blank" rel="noopener noreferrer">Estónsko (ENS)</a></li>
-          <li><a href="https://www.nek.org.cy/" target="_blank" rel="noopener noreferrer">Cyprus (CRA)</a></li>
+          <li><a href="https://zdlbs.si/" target="_blank" rel="noopener noreferrer">Slovinsko (ZDLBS)</a></li>
+          <li><a href="https://niere.lv/" target="_blank" rel="noopener noreferrer">Lotyšsko (Nieras.lv)</a></li>
+          <li><a href="https://neer.ee/" target="_blank" rel="noopener noreferrer">Estónsko (ENL)</a></li>
+          <li><a href="https://www.nek.org.cy/" target="_blank" rel="noopener noreferrer">Cyprus (CKA)</a></li>
           <!-- Medzinárodné organizácie -->
           <li style="border-top: 1px solid var(--border-color); margin-top: 10px; padding-top: 10px;"><a href="https://www.theisn.org/" target="_blank" rel="noopener noreferrer">International Society of Nephrology (ISN)</a></li>
           <li><a href="https://www.era-online.org/" target="_blank" rel="noopener noreferrer">European Renal Association (ERA)</a></li>
@@ -527,7 +527,7 @@ if (!empty($itemListElements)) {
           <li><a href="https://academy.theisn.org/" target="_blank" rel="noopener noreferrer">ISN Academy (Education)</a></li>
           <li><a href="https://www.era-online.org/education/" target="_blank" rel="noopener noreferrer">ERA Education</a></li>
           <li><a href="https://kdigo.org/education/" target="_blank" rel="noopener noreferrer">KDIGO Education</a></li>
-          <li><a href="http://www.nephjc.com/" target="_blank" rel="noopener noreferrer">NSMC (Social Media Collective)</a></li>
+          <li><a href="https://www.nephjc.com/" target="_blank" rel="noopener noreferrer">NSMC (Social Media Collective)</a></li>
         </ul>
         <button class="show-more-btn no-print" type="button">Zobraziť viac</button>
       </div>
@@ -602,10 +602,10 @@ if (!empty($itemListElements)) {
           <li><a href="https://ika.ie/" target="_blank" rel="noopener noreferrer">Írsko (IKA)</a></li>
           <li><a href="https://transplant.hr/" target="_blank" rel="noopener noreferrer">Chorvátsko (HUT)</a></li>
           <li><a href="https://geraviltis.lt/" target="_blank" rel="noopener noreferrer">Litva (Gera viltis)</a></li>
-          <li><a href="https://www.zveza-ledvica.si/" target="_blank" rel="noopener noreferrer">Slovinsko (ZDLBS)</a></li>
-          <li><a href="http://www.nieras.lv/" target="_blank" rel="noopener noreferrer">Lotyšsko (Nieras.lv)</a></li>
-          <li><a href="https://www.neeruliit.ee/" target="_blank" rel="noopener noreferrer">Estónsko (ENL)</a></li>
-          <li><a href="http://www.nefropathes.org.cy/" target="_blank" rel="noopener noreferrer">Cyprus (CKA)</a></li>
+          <li><a href="https://zdlbs.si/" target="_blank" rel="noopener noreferrer">Slovinsko (ZDLBS)</a></li>
+          <li><a href="https://niere.lv/" target="_blank" rel="noopener noreferrer">Lotyšsko (Nieras.lv)</a></li>
+          <li><a href="https://neer.ee/" target="_blank" rel="noopener noreferrer">Estónsko (ENL)</a></li>
+          <li><a href="https://www.nek.org.cy/" target="_blank" rel="noopener noreferrer">Cyprus (CKA)</a></li>
         </ul>
         <button class="show-more-btn no-print" type="button">Zobraziť viac</button>
       </div>
@@ -613,7 +613,7 @@ if (!empty($itemListElements)) {
       <div class="widget">
         <h3>Vzdelávacie inštitúcie</h3>
         <ul class="expandable-list" data-limit="10">
-          <li><a href="https://www.szu.sk/" target="_blank" rel="noopener noreferrer">Slovensko (SZU)</a></li>
+          <li><a href="https://eszu.sk/" target="_blank" rel="noopener noreferrer">Slovensko (SZU)</a></li>
           <li><a href="https://www.fmed.uniba.sk/" target="_blank" rel="noopener noreferrer">Slovensko (LF UK Bratislava)</a></li>
           <li><a href="https://www.jfmed.uniba.sk/" target="_blank" rel="noopener noreferrer">Slovensko (JLF UK Martin)</a></li>
           <li><a href="https://www.upjs.sk/lekarska-fakulta/" target="_blank" rel="noopener noreferrer">Slovensko (LF UPJŠ Košice)</a></li>
@@ -660,7 +660,7 @@ if (!empty($itemListElements)) {
           <li style="border-top: 1px solid var(--border-color); margin-top: 10px; padding-top: 10px;"><a href="https://academy.theisn.org/" target="_blank" rel="noopener noreferrer">ISN Academy</a></li>
           <li><a href="https://www.era-online.org/education/" target="_blank" rel="noopener noreferrer">ERA Education</a></li>
           <li><a href="https://kdigo.org/education/" target="_blank" rel="noopener noreferrer">KDIGO Education</a></li>
-          <li><a href="http://www.nephjc.com/" target="_blank" rel="noopener noreferrer">NephJC (Nephrology Journal Club)</a></li>
+          <li><a href="https://www.nephjc.com/" target="_blank" rel="noopener noreferrer">NephJC (Nephrology Journal Club)</a></li>
           <li><a href="https://www.edtnaerca.org/education" target="_blank" rel="noopener noreferrer">EDTNA/ERCA Education</a></li>
         </ul>
         <button class="show-more-btn no-print" type="button">Zobraziť viac</button>
