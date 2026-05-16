@@ -1,6 +1,6 @@
 # robots.txt — Nefro-projekt Slovensko
 # https://nefro.polascin.net/
-# Generované: 2026-05-15
+# Aktualizované: 2025-06-01
 
 # ── Všeobecné pravidlá pre všetkých robotov ────────────────────────────────
 User-agent: *
@@ -25,15 +25,12 @@ Disallow: /calculator_result_print.php
 Disallow: /private/
 Disallow: /uploads/avatars/archive/
 Disallow: /hooks/
+Disallow: /scratch/
+Disallow: /.git/
 
-# Vývojové súbory (Python skripty, txt exporty)
-Disallow: /*.py$
-Disallow: /*.txt$
-Disallow: /*.json$
-Disallow: /*.ps1$
-
-# Stránkovanie — allow, ale bez indexovania stránky 2+
-Allow: /?page=
+# Vývojové súbory
+Disallow: /*.py
+Disallow: /*.ps1
 
 # Crawl delay pre šetrenie servera
 Crawl-delay: 10
@@ -57,6 +54,5 @@ Disallow: /
 User-agent: PetalBot
 Disallow: /
 
-# ── Sitemaps ────────────────────────────────────────────────────────────────
-Sitemap: https://nefro.polascin.net/sitemap.php
+# ── Sitemap ─────────────────────────────────────────────────────────────────
 Sitemap: https://nefro.polascin.net/sitemap.xml

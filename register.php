@@ -105,7 +105,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
         $password = $_POST['password'] ?? '';
         $passwordConfirm = $_POST['password_confirm'] ?? '';
         $username = trim($_POST['username'] ?? '');
-        
+
         if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $errors[] = "Zadajte platnú e-mailovú adresu.";
         } elseif (!isEmailDomainValid($email)) {
@@ -125,7 +125,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
         if ($otherPhone === false) {
             $errors[] = "Zadajte platné iné telefónne číslo v medzinárodnom formáte +XXXXXXXX (môžete použiť aj medzery).";
         }
-        
+
         if (empty($username)) {
             $username = $email;
         }
@@ -160,18 +160,58 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 ]);
                 $existingUser = $stmt->fetch();
                 if ($existingUser) {
-                    if (($existingUser['email'] ?? '') === $email) {
-                        $errors[] = "Používateľ s týmto e-mailom už existuje.";
-                    }
-                    if (($existingUser['username'] ?? '') === $username) {
-                        $errors[] = "Používateľ s týmto používateľským menom už existuje.";
-                    }
+                    // Anti-enumeration: generické hlásenie — neodhalujeme,
+                    // či je duplicita v e-maili alebo v používateľskom mene.
+                    // (Konkrétne hlásenie by umožňovalo aut. harvestovanie existujúcich účtov.)
+                    $errors[] = 'Registrácia sa nepodarila. Zadajte iný e-mail alebo používateľské meno.';
                 } else {
                     $passwordHash = password_hash($password, PASSWORD_DEFAULT);
                     $newsletterConsent = isset($_POST['newsletter_consent']) ? 1 : 0;
-                    $gender = trim($_POST['gender'] ?? '');
-                    $pronouns = trim($_POST['pronouns'] ?? '');
-                    
+
+                    // Whitelist pre gender a pronouns — používateľ nesmie vložiť ľubovolný reťazec
+                    $allowedGenders   = ['male', 'female', 'other', 'prefer_not_to_say', ''];
+                    $allowedPronouns  = ['he/him', 'she/her', 'they/them', 'other', ''];
+                    $genderRaw        = trim($_POST['gender'] ?? '');
+                    $pronounsRaw      = trim($_POST['pronouns'] ?? '');
+                    $gender           = in_array($genderRaw,   $allowedGenders,  true) ? $genderRaw   : '';
+                    $pronouns         = in_array($pronounsRaw, $allowedPronouns, true) ? $pronounsRaw : '';
+
+                    // Dĺžkové limity pre textové polia (prevencia pred oversized vstupmi)
+                    $fieldLimits = [
+                        'title_before'     => 50,
+                        'first_name'       => 100,
+                        'middle_name'      => 100,
+                        'last_name'        => 100,
+                        'title_after'      => 50,
+                        'name_note'        => 255,
+                        'organization'     => 255,
+                        'job_function'     => 255,
+                        'org_website'      => 500,
+                        'work_email'       => 254,
+                        'social_linkedin'  => 500,
+                        'social_x'         => 500,
+                        'social_facebook'  => 500,
+                        'social_instagram' => 500,
+                        'social_other'     => 500,
+                        'other_contact'    => 500,
+                        'website'          => 500,
+                        'street'           => 255,
+                        'house_number'     => 20,
+                        'orientation_number' => 20,
+                        'zip_code'         => 10,
+                        'city'             => 150,
+                        'district'         => 150,
+                        'region'           => 150,
+                        'country'          => 100,
+                        'address_note'     => 500,
+                    ];
+                    foreach ($fieldLimits as $_field => $_max) {
+                        $rawVal = trim($_POST[$_field] ?? '');
+                        if (mb_strlen($rawVal, 'UTF-8') > $_max) {
+                            $errors[] = 'Pole je príliš dlhé (max. ' . $_max . ' znakov). Skontrolujte zadané údaje.';
+                        }
+                    }
+
                     // Spracovanie avatara
                     $avatarPath = null;
                     if (isset($_FILES['avatar']) && $_FILES['avatar']['error'] === UPLOAD_ERR_OK) {
@@ -197,7 +237,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                             :street, :house_number, :orientation_number, :zip_code, :city, :district, :region, :country, :address_note, :newsletter_consent, NULL,
                             :email_verification_token_hash, :email_verification_expires_at, NOW()
                         )";
-                        
+
                         $stmt = $pdo->prepare($sql);
                         $tokenData = generateEmailVerificationToken();
                         $registrationParams = [
@@ -279,7 +319,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                                 error_log('Registrácia: admin notifikačný e-mail sa nepodarilo odoslať pre user_id=' . $newUserId);
                             }
                         }
-                        
+
                         $success = true;
                         $registeredData = $registrationParams;
                         unset($registeredData['password_hash']);
@@ -324,7 +364,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
         <div class="auth-container auth-container--wide">
             <h2>Registrácia</h2>
             <p class="auth-subtitle">Používateľ webovej lokality <a href="https://nefro.polascin.net/" class="auth-subtitle__link">https://nefro.polascin.net/</a></p>
-            
+
             <?php if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && !$success): ?>
                 <div class="alert alert-error">
                     Registrácia nebola úspešná. Skontrolujte chyby nižšie a skúste formulár odoslať znova.
@@ -436,7 +476,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                         <label for="website_url">Webová adresa (nevypĺňať)</label>
                         <input type="text" id="website_url" name="website_url" value="" autocomplete="off" tabindex="-1" maxlength="255">
                     </div>
-                    
+
                     <div class="form-section">
                         <h3>Povinné údaje</h3>
                         <div class="form-grid">
@@ -462,7 +502,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 
                     <div class="form-section">
                         <h3>Základné a osobné údaje</h3>
-                        
+
                         <div class="avatar-upload-group">
                             <img src="" id="avatarPreview" alt="Náhľad avatara" class="avatar-upload-preview">
                             <div>
@@ -766,7 +806,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
     document.addEventListener('DOMContentLoaded', () => {
         // Inicializácia pri načítaní stránky
         updateDefaultAvatar();
-        
+
         // Sledovanie zmeny témy
         const observer = new MutationObserver(function(mutations) {
             mutations.forEach(function(mutation) {

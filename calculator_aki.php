@@ -190,7 +190,8 @@ if (isLoggedIn()) {
 <html lang="sk">
 <head>
   <?php
-  $pageTitle = 'FENa a FEUrea (AKI) - Kalkulačky KDIGO 2024 CKD';
+  $pageTitle    = 'FENa a FEUrea (AKI) | Kalkulačky | Nefro-projekt Slovensko';
+  $canonicalUrl  = 'https://nefro.polascin.net/calculator_aki.php';
   $seoDescription = 'Nefrologická kalkulačka a nástroj: FENa a FEUrea (AKI). FENa a FEUrea (Frakčná exkrécia). Presné klinické výpočty podľa najnovších odporúčaní pre lekárov na Slovensku.';
   $structuredData = [
     [
@@ -368,7 +369,7 @@ if (isLoggedIn()) {
                             <p><strong>FENa:</strong> <?= htmlspecialchars(number_format((float) $calculated['fena'], 2, ',', ' ')) ?> %</p>
                             <p style="margin-bottom: 16px;"><strong>Interpretácia FENa:</strong> <?= htmlspecialchars($calculated['fena_interpretation']) ?></p>
                         <?php endif; ?>
-                        
+
                         <?php if ($calculated['feurea'] !== null): ?>
                             <p><strong>FEUrea:</strong> <?= htmlspecialchars(number_format((float) $calculated['feurea'], 2, ',', ' ')) ?> %</p>
                             <p><strong>Interpretácia FEUrea:</strong> <?= htmlspecialchars($calculated['feurea_interpretation']) ?></p>

@@ -1,3 +1,39 @@
+# ── Základné bezpečnostné nastavenia ────────────────────────────────────────
+Options -Indexes -FollowSymLinks
+ServerSignature Off
+
+# ── Globálne bezpečnostné HTTP hlavičky ─────────────────────────────────────
+<IfModule mod_headers.c>
+    # Zabraňuje clickjackingu
+    Header always set X-Frame-Options "SAMEORIGIN"
+    # Zabraňuje MIME-type sniffing útokom
+    Header always set X-Content-Type-Options "nosniff"
+    # HTTPS vynútenie na 1 rok
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+    # Obmedzenie referrer informácií
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    # Zakáže prístup k Device APIs
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=(), usb=()"
+    # Skryje informáciu o PHP verzii
+    Header always unset X-Powered-By
+    Header unset X-Powered-By
+</IfModule>
+
+# ── Blokovanie .git adresára a verziovacej histórie ──────────────────────────
+# KRITICKÉ: .git adresár odhalí celú históriu kódu vrátane možných secrets
+<DirectoryMatch "\.git">
+    Require all denied
+</DirectoryMatch>
+<FilesMatch "^\.git">
+    Require all denied
+</FilesMatch>
+<Files ".gitignore">
+    Require all denied
+</Files>
+
+# ── Blokovanie vývojových adresárov ─────────────────────────────────────────
+RedirectMatch 403 ^/(\.git|scratch|hooks|\.vscode)(/|$)
+
 # ── Bezpečnostné blokovanie citlivých súborov ──────────────────────────────
 
 # Databázový setup skript — prístupný iba cez CLI, nie cez web
@@ -15,6 +51,14 @@
 <Files "query_article.php">
     Require all denied
 </Files>
+<Files "generate_og_image.php">
+    Require all denied
+</Files>
+
+# Knižničné a konfiguračné PHP súbory — prístupné len ako include, nie priamo cez web
+<FilesMatch "^(db_config|config_loader|auth|phone_utils|calculators_common|header|header_profile|footer|head_meta|calculator_disclaimer|email_verification|mobile_verification)\.php$">
+    Require all denied
+</FilesMatch>
 
 # Konfiguračné súbory — nikdy nesmú byť stiahnuteľné
 <Files "*.ini">
@@ -23,6 +67,16 @@
 <Files "*.env">
     Require all denied
 </Files>
+
+# Dočasné vývojové JS súbory
+<FilesMatch "^tmp_.*\.js$">
+    Require all denied
+</FilesMatch>
+
+# Archívy a komprimované balíčky
+<FilesMatch "\.(tgz|tar\.gz|bz2|7z)$">
+    Require all denied
+</FilesMatch>
 
 # Rewrite sitemap.xml na sitemap.php
 RewriteEngine On

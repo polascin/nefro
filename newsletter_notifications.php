@@ -33,12 +33,21 @@ if (!function_exists('getNewsletterUnsubscribeSecret')) {
         }
 
         if ($rawSecret === '') {
-            // Bezpečnostné varovanie: bez dedikovaného kľúča sú odhlasovacia URL
-            // podpísané iba cestou adresára. Pridajte NEWSLETTER_UNSUBSCRIBE_SECRET
-            // do env.ini pre produkčné nasadenie.
-            error_log('BEZPECNOSTNE VAROVANIE: NEWSLETTER_UNSUBSCRIBE_SECRET nie je nastavený v env.ini. '
-                . 'Odhlasovacia URL používa fallback podpis. Nastavte dedikovaný kľúč v env.ini.');
-            $rawSecret = __DIR__ . '|newsletter-unsubscribe-fallback';
+            // Kritícké bezpečnostné varovanie: žiadny dedikovaný tajný kľúč nie je nakonfigurovaný.
+            // Fallback kombinuje DB credentials + cestu adresára — táto kombinácia je
+            // jedinečná pre každú inštaláciu a nedokáže byť uhadná bez DB prístupu.
+            // Odstráňte tento fallback pridelenou hodnotou NEWSLETTER_UNSUBSCRIBE_SECRET do env.ini.
+            error_log('CRITICAL SECURITY: NEWSLETTER_UNSUBSCRIBE_SECRET nie je nastavený v env.ini. '
+                . 'Používam núdzový fallback odvojený z DB credentials. '
+                . 'Nastavte NEWSLETTER_UNSUBSCRIBE_SECRET v env.ini pre produkĎné nasadenie!');
+            // Fallback secret: hash(cesta_suboru + DB_credentials) — jedinecžné per-server,
+            // nepredvídatelňé bez DB prístupu (na rozdiel od predchádzajúceho __DIR__-only fallbacku).
+            $rawSecret = hash('sha256',
+                __DIR__ . '|newsletter-unsubscribe'
+                . '|' . ($env['DB_PASS'] ?? '')
+                . '|' . ($env['DB_USER'] ?? '')
+                . '|' . ($env['DB_NAME'] ?? '')
+            );
         }
 
         $secret = hash('sha256', $rawSecret);

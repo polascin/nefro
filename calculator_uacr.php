@@ -43,7 +43,7 @@ if (isLoggedIn() && isset($_GET['load_id'])) {
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $action = (string) ($_POST['action'] ?? '');
-    
+
     if (!validateCsrfToken((string) ($_POST['csrf_token'] ?? ''))) {
         $errors[] = 'Neplatný CSRF token.';
     } elseif ($action === 'delete_saved') {
@@ -62,24 +62,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $ualb = calculatorParsePositiveFloat($form['u_alb']);
         $ucr = calculatorParsePositiveFloat($form['u_cr']);
-        
+
         if ($ualb === null || $ucr === null) {
             $errors[] = 'Zadajte platné kladné čísla pre albumín aj kreatinín.';
         } else {
             $alb_mg_l = $ualb;
             if ($form['u_alb_unit'] === 'mg_dl') $alb_mg_l = $ualb * 10;
             elseif ($form['u_alb_unit'] === 'g_l') $alb_mg_l = $ualb * 1000;
-            
+
             $cr_mmol_l = $ucr;
             if ($form['u_cr_unit'] === 'mg_dl') {
                 $cr_mmol_l = $ucr * 0.0884;
             }
             $cr_g_l = $cr_mmol_l * 113.12 / 1000;
-            
+
             if ($cr_mmol_l > 0 && $cr_g_l > 0) {
                 $uacr_mg_mmol = $alb_mg_l / $cr_mmol_l;
                 $uacr_mg_g = $alb_mg_l / $cr_g_l;
-                
+
                 $stage = '';
                 $desc = '';
                 if ($uacr_mg_mmol < 3) {
@@ -92,7 +92,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $stage = 'A3';
                     $desc = 'Výrazne zvýšená albuminúria (makroalbuminúria)';
                 }
-                
+
                 $calculated = [
                     'mg_mmol' => round($uacr_mg_mmol, 2),
                     'mg_g' => round($uacr_mg_g, 2),
@@ -126,7 +126,8 @@ if (isLoggedIn()) {
 <html lang="sk">
 <head>
   <?php
-  $pageTitle = 'UACR a KDIGO klasifikácia - Kalkulačky';
+  $pageTitle    = 'UACR a KDIGO klasifikácia | Kalkulačky | Nefro-projekt Slovensko';
+  $canonicalUrl  = 'https://nefro.polascin.net/calculator_uacr.php';
   $seoDescription = 'Nefrologická kalkulačka a nástroj: UACR a KDIGO klasifikácia. Hodnotenie albuminúrie (KDIGO). Presné klinické výpočty podľa najnovších odporúčaní pre lekárov na Slovensku.';
   $structuredData = [
     [

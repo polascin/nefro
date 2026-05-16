@@ -227,7 +227,8 @@ if (isLoggedIn()) {
 <html lang="sk">
 <head>
   <?php
-  $pageTitle = 'eGFR CKD-EPI 2021 - Kalkulačky KDIGO 2024 CKD';
+  $pageTitle    = 'eGFR CKD-EPI 2021 | Kalkulačky | Nefro-projekt Slovensko';
+  $canonicalUrl  = 'https://nefro.polascin.net/calculator_egfr.php';
   $seoDescription = 'Nefrologická kalkulačka a nástroj: eGFR CKD-EPI 2021. CKD-EPI 2021 podľa KDIGO 2024. Presné klinické výpočty podľa najnovších odporúčaní pre lekárov na Slovensku.';
   $structuredData = [
     [
@@ -283,8 +284,8 @@ if (isLoggedIn()) {
                         <div class="calc-formula-line">\[ \begin{aligned} \text{eGFR} = 142 &\times \min(S_{cr}/\kappa, 1)^\alpha \times \max(S_{cr}/\kappa, 1)^{-1.200} \\ &\times 0.9938^{\text{Vek}} \times [1.012 \text{ ak žena}] \end{aligned} \]</div>
                         <div class="calc-formula-line">\[ S_{cr} [\text{mg/dL}] = S_{cr} [\mu\text{mol/L}] \div 88.4 \]</div>
                         <div class="calc-formula-vars">
-                            $\kappa = 0.7 \text{ (žena)} / 0.9 \text{ (muž)}$ &bull; 
-                            $\alpha = -0.241 \text{ (žena)} / -0.302 \text{ (muž)}$ &bull; 
+                            $\kappa = 0.7 \text{ (žena)} / 0.9 \text{ (muž)}$ &bull;
+                            $\alpha = -0.241 \text{ (žena)} / -0.302 \text{ (muž)}$ &bull;
                             $S_{cr} = \text{sérový kreatinín [mg/dL]}$
                         </div>
                     </div>

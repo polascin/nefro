@@ -464,7 +464,8 @@ function sexLabel(string $v): string { return $v === 'male' ? 'Muž' : 'Žena'; 
 <html lang="sk">
 <head>
   <?php
-  $pageTitle = 'CKD-PC — Riziko progresie CKD - Kalkulačky KDIGO 2024 CKD';
+  $pageTitle    = 'CKD-PC — Riziko progresie CKD | Kalkulačky | Nefro-projekt Slovensko';
+  $canonicalUrl  = 'https://nefro.polascin.net/calculator_ckdpc.php';
   $seoDescription = 'Nefrologická kalkulačka a nástroj: CKD-PC — Riziko progresie CKD. CKD Prognosis Consortium — 3-ročné riziko progresie CKD (Grams 2022). Presné klinické výpočty podľa najnovších odporúčaní pre lekárov na Slovensku.';
   $structuredData = [
     [

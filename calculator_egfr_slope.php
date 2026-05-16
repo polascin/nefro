@@ -112,7 +112,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
 
             $slope = calculateSlope($x, $y);
-            
+
             if ($slope !== null) {
                 $interpretation = '';
                 if ($slope < -5) {
@@ -158,7 +158,8 @@ if (isLoggedIn()) {
 <html lang="sk">
 <head>
   <?php
-  $pageTitle = 'Rýchlosť poklesu eGFR (Slope) - Kalkulačky';
+  $pageTitle    = 'Rýchlosť poklesu eGFR (Slope) | Kalkulačky | Nefro-projekt Slovensko';
+  $canonicalUrl  = 'https://nefro.polascin.net/calculator_egfr_slope.php';
   $seoDescription = 'Nefrologická kalkulačka a nástroj: Rýchlosť poklesu eGFR (Slope). Hodnotenie progresie CKD. Presné klinické výpočty podľa najnovších odporúčaní pre lekárov na Slovensku.';
   $structuredData = [
     [
@@ -264,7 +265,7 @@ if (isLoggedIn()) {
                     </div>
                 <?php endif; ?>
             </div>
-            
+
             <?php include 'calculator_disclaimer.php'; ?>
             <section class="auth-container auth-container--wide calc-saved-results">
                 <h3>Uložené výsledky</h3>

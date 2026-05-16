@@ -85,13 +85,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $correctedAg = $ag + 0.25 * (40.0 - $alb);
             $deltaGap = $correctedAg - 12.0;
             $deltaHco3 = 24.0 - $hco3;
-            
+
             $deltaRatio = null;
             $interpretation = '';
-            
+
             if (abs($deltaHco3) > 0.5) {
                 $deltaRatio = $deltaGap / $deltaHco3;
-                
+
                 if ($deltaRatio < 0.4) {
                     $interpretation = 'Hyperchloremická (normálna AG) metabolická acidóza.';
                 } elseif ($deltaRatio < 0.8) {
@@ -155,7 +155,8 @@ if (isLoggedIn()) {
 <html lang="sk">
 <head>
   <?php
-  $pageTitle = 'Aniónová medzera a Delta Ratio - Kalkulačky';
+  $pageTitle    = 'Aniónová medzera a Delta Ratio | Kalkulačky | Nefro-projekt Slovensko';
+  $canonicalUrl  = 'https://nefro.polascin.net/calculator_acidbase.php';
   $seoDescription = 'Nefrologická kalkulačka a nástroj: Aniónová medzera a Delta Ratio. Súčasť analýzy metabolickej acidózy. Presné klinické výpočty podľa najnovších odporúčaní pre lekárov na Slovensku.';
   $structuredData = [
     [
@@ -279,7 +280,7 @@ if (isLoggedIn()) {
                     </div>
                 <?php endif; ?>
             </div>
-            
+
             <?php include 'calculator_disclaimer.php'; ?>
             <section class="auth-container auth-container--wide calc-saved-results">
                 <h3>Uložené výsledky</h3>

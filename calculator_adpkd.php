@@ -167,7 +167,8 @@ if (isLoggedIn()) {
 <html lang="sk">
 <head>
   <?php
-  $pageTitle = 'Mayo ADPKD klasifikácia — rýchlosť progresie ADPKD';
+  $pageTitle    = 'Mayo ADPKD klasifikácia — rýchlosť progresie ADPKD | Nefro-projekt Slovensko';
+  $canonicalUrl  = 'https://nefro.polascin.net/calculator_adpkd.php';
   $seoDescription = 'Mayo Clinic ADPKD klasifikácia (Irazabal 2015) — zaradenie do tried 1A–1E podľa výškou adjustovaného celkového objemu obličiek (HtTKV) a veku.';
   $structuredData = [
     [

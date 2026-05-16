@@ -118,15 +118,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } else {
         // Zber polí
         $fields = [
-            'username', 'gender', 'pronouns', 'title_before', 'first_name', 
-            'middle_name', 'last_name', 'title_after', 'name_note', 
-            'organization', 'job_function', 'work_mobile_phone', 'org_website', 
-            'work_email', 'mobile_phone', 'other_phone', 'social_linkedin', 
-            'social_x', 'social_facebook', 'social_instagram', 'social_other', 
-            'other_contact', 'website', 'birth_date', 'street', 'house_number', 
+            'username', 'gender', 'pronouns', 'title_before', 'first_name',
+            'middle_name', 'last_name', 'title_after', 'name_note',
+            'organization', 'job_function', 'work_mobile_phone', 'org_website',
+            'work_email', 'mobile_phone', 'other_phone', 'social_linkedin',
+            'social_x', 'social_facebook', 'social_instagram', 'social_other',
+            'other_contact', 'website', 'birth_date', 'street', 'house_number',
             'orientation_number', 'zip_code', 'city', 'district', 'region', 'country', 'address_note'
         ];
-        
+
         $data = [];
         foreach ($fields as $field) {
             $data[$field] = trim($_POST[$field] ?? '');
@@ -244,15 +244,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
         }
         $data['newsletter_consent'] = isset($_POST['newsletter_consent']) ? 1 : 0;
-        
+
         // Zmena hesla
         $current_password = $_POST['current_password'] ?? '';
         $new_password = $_POST['new_password'] ?? '';
         $new_password_confirm = $_POST['new_password_confirm'] ?? '';
-        
+
         $password_query = "";
         $password_params = [];
-        
+
         if (!empty($current_password) || !empty($new_password) || !empty($new_password_confirm)) {
             if (!password_verify($current_password, $user['password_hash'])) {
                 $errors[] = "Súčasné heslo nie je správne.";
@@ -293,24 +293,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $avatar_path = $newUploadedAvatarPath;
             }
         }
-        
+
         if (empty($errors)) {
             try {
-                $sql = "UPDATE users SET 
-                    username = :username, gender = :gender, pronouns = :pronouns, 
-                    title_before = :title_before, first_name = :first_name, 
-                    middle_name = :middle_name, last_name = :last_name, 
-                    title_after = :title_after, name_note = :name_note, 
-                    organization = :organization, job_function = :job_function, 
-                    work_mobile_phone = :work_mobile_phone, org_website = :org_website, 
-                    work_email = :work_email, mobile_phone = :mobile_phone, 
-                    other_phone = :other_phone, social_linkedin = :social_linkedin, 
-                    social_x = :social_x, social_facebook = :social_facebook, 
-                    social_instagram = :social_instagram, social_other = :social_other, 
-                    other_contact = :other_contact, website = :website, 
-                    birth_date = :birth_date, street = :street, house_number = :house_number, 
-                    orientation_number = :orientation_number, zip_code = :zip_code, 
-                    city = :city, district = :district, region = :region, country = :country, 
+                $sql = "UPDATE users SET
+                    username = :username, gender = :gender, pronouns = :pronouns,
+                    title_before = :title_before, first_name = :first_name,
+                    middle_name = :middle_name, last_name = :last_name,
+                    title_after = :title_after, name_note = :name_note,
+                    organization = :organization, job_function = :job_function,
+                    work_mobile_phone = :work_mobile_phone, org_website = :org_website,
+                    work_email = :work_email, mobile_phone = :mobile_phone,
+                    other_phone = :other_phone, social_linkedin = :social_linkedin,
+                    social_x = :social_x, social_facebook = :social_facebook,
+                    social_instagram = :social_instagram, social_other = :social_other,
+                    other_contact = :other_contact, website = :website,
+                    birth_date = :birth_date, street = :street, house_number = :house_number,
+                    orientation_number = :orientation_number, zip_code = :zip_code,
+                    city = :city, district = :district, region = :region, country = :country,
                     address_note = :address_note, newsletter_consent = :newsletter_consent,
                     avatar_path = :avatar_path,
                     mobile_verified_at = :mobile_verified_at,
@@ -319,7 +319,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     mobile_verification_sent_at = :mobile_verification_sent_at
                     $password_query
                     WHERE id = :id";
-                
+
                 $params = $data;
                 $params['avatar_path'] = $avatar_path;
                 $params['mobile_verified_at'] = $mobileVerifiedAt;
@@ -354,11 +354,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 } else {
                     $pdo->beginTransaction();
 
+                    // BEZPEČnosŤ: Audit log nesmie obsahovať citlivé pole (password_hash, tokeny).
+                    // Odfiltrujeme všetky bezpečnostné polia pred serializovaním do JSON.
+                    $AUDIT_SENSITIVE_KEYS = [
+                        'password_hash',
+                        'email_verification_token_hash',
+                        'email_verification_expires_at',
+                        'email_verification_sent_at',
+                        'mobile_verification_code_hash',
+                        'mobile_verification_expires_at',
+                        'mobile_verification_sent_at',
+                    ];
+                    $safeUserSnapshot = array_diff_key($user, array_flip($AUDIT_SENSITIVE_KEYS));
+
                     $historyStmt = $pdo->prepare("INSERT INTO users_profile_archive (user_id, changed_fields, previous_data) VALUES (:user_id, :changed_fields, :previous_data)");
                     $historyStmt->execute([
-                        'user_id' => $user_id,
+                        'user_id'        => $user_id,
                         'changed_fields' => json_encode(array_values(array_unique($changedFields)), JSON_UNESCAPED_UNICODE),
-                        'previous_data' => json_encode($user, JSON_UNESCAPED_UNICODE),
+                        'previous_data'  => json_encode($safeUserSnapshot, JSON_UNESCAPED_UNICODE),
                     ]);
 
                     $stmt = $pdo->prepare($sql);
@@ -378,16 +391,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 if (!$success && !empty($newUploadedAvatarPath)) {
                     $deleteAvatarFile($newUploadedAvatarPath);
                 }
-                
+
                 if (!empty($data['username'])) {
                     $_SESSION['username'] = $data['username'];
                 }
-                
+
                 // Obnova údajov
                 $stmt = $pdo->prepare("SELECT * FROM users WHERE id = :id");
                 $stmt->execute(['id' => $user_id]);
                 $user = $stmt->fetch();
-                
+
             } catch (\PDOException $e) {
                 if ($pdo->inTransaction()) {
                     $pdo->rollBack();
@@ -474,7 +487,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         </div>
                     </div>
                 </div>
-            
+
             <?php if (!empty($errors)): ?>
                 <div class="alert alert-error">
                     <ul>
@@ -518,7 +531,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 <div class="form-section">
                     <h3>Základné a osobné údaje</h3>
-                    
+
                     <div class="avatar-upload-group">
                         <?php
                         $avatarSrc = !empty($user['avatar_path']) ? htmlspecialchars($user['avatar_path']) : 'img/default-avatar-dark.svg'; // Default set by JS later
@@ -541,7 +554,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <label for="username">Používateľské meno</label>
                         <input type="text" id="username" name="username" class="form-control" value="<?= htmlspecialchars($user['username'] ?? '') ?>">
                     </div>
-                    
+
                     <div class="form-grid">
                         <div class="form-group">
                             <label for="gender">Identifikácia (pohlavie)</label>
@@ -808,7 +821,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     function updateDefaultAvatar() {
         const preview = document.getElementById('avatarPreview');
         const input = document.getElementById('avatar');
-        
+
         // Ak je obrázok defaultný (z databázy nie je cesta) a nezvolil sa nový súbor
         if (preview.dataset.isDefault === 'true' && (!input.files || !input.files[0])) {
             const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
@@ -871,7 +884,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 }
             });
         }
-        
+
         const observer = new MutationObserver((mutations) => {
             mutations.forEach((mutation) => {
                 if (mutation.attributeName === 'data-theme') {
@@ -884,6 +897,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         });
     });
     </script>
-    
+
     <script src="address-autofill.js?cb=<?= filemtime('address-autofill.js') ?>" defer></script>
     <?php include 'footer.php'; ?>

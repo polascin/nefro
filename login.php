@@ -212,8 +212,10 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 <html lang="sk">
 <head>
   <?php
-  $pageTitle = 'Prihlásenie - Nefro-projekt Slovensko';
+  $pageTitle      = 'Prihlásenie | Nefro-projekt Slovensko';
   $seoDescription = 'Prihláste sa do Nefro-projekt Slovensko — odborného portálu pre nefrológov a lekárov.';
+  $robotsMeta     = 'noindex, follow';
+  $canonicalUrl   = 'https://nefro.polascin.net/login.php';
   include 'head_meta.php';
   ?>
 </head>
@@ -227,7 +229,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
     <main class="container">
         <div class="auth-container">
             <h2>Prihlásenie</h2>
-            
+
             <?php if (!empty($errors)): ?>
                 <div class="alert alert-error">
                     <ul>
@@ -264,17 +266,17 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     <input type="text" id="work_email_confirm" name="work_email_confirm" value="" autocomplete="off" tabindex="-1">
                 </div>
 
-                
+
                 <div class="form-group">
                     <label for="login">Používateľské meno alebo e-mailová adresa</label>
                     <input type="text" id="login" name="login" class="form-control" required value="<?= htmlspecialchars($_POST['login'] ?? '') ?>">
                 </div>
-                
+
                 <div class="form-group">
                     <label for="password">Heslo</label>
                     <input type="password" id="password" name="password" class="form-control" required>
                 </div>
-                
+
                 <div class="form-actions">
                     <button type="submit" class="btn-primary btn-block">Prihlásiť sa</button>
                 </div>

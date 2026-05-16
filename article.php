@@ -125,14 +125,17 @@ if ($metaDescriptionRaw === '') {
 }
 
 $pageTitleRaw = $article ? ($articleTitleRaw . ' | ' . $siteName) : ('Článok nenájdený | ' . $siteName);
-$pageTitle = htmlspecialchars($pageTitleRaw, ENT_QUOTES);
+// POZNÁMKA: $pageTitle, $canonicalUrl a $seoDescription sa NEpre-escapujú.
+// head_meta.php ich escapuje sám cez htmlspecialchars() — dvojité escapovanie
+// by spôsobilo, že & → &amp;amp; a znaky sa stratia v title/canonical/description.
+$pageTitle    = $pageTitleRaw;    // head_meta.php: htmlspecialchars($pageTitle)
+$canonicalUrl = $canonicalUrlRaw; // head_meta.php: htmlspecialchars($canonicalUrl)
+// $metaDescriptionRaw sa odovzdá priamo ako $seoDescription (pozri nižšie v <head>)
 $pageLastUpdated = $article
     ? date('d.m.Y H:i', strtotime((string) $article['updated_at']))
     : date('d.m.Y H:i', filemtime(__FILE__));
-$pageTimeZone    = date('T') . ' (' . date_default_timezone_get() . ')';
-$canonicalUrl = htmlspecialchars($canonicalUrlRaw, ENT_QUOTES);
-$metaDescription = htmlspecialchars($metaDescriptionRaw, ENT_QUOTES);
-$robotsMeta = $article ? 'index, follow, max-image-preview:large' : 'noindex, follow, noarchive';
+$pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
+$robotsMeta   = $article ? 'index, follow, max-image-preview:large' : 'noindex, follow, noarchive';
 
 $articleSchema = null;
 if ($article) {
@@ -159,18 +162,21 @@ if ($article) {
     'publisher' => [
       '@type' => 'MedicalOrganization',
       'name'  => $siteName,
+      'url'   => $baseUrl,
+      // Logo pre Schema.org publisher – GIF logo (portálové id, malé rozmery sú OK pre logo)
       'logo'  => [
-        '@type' => 'ImageObject',
-        'url'   => $baseUrl . 'img/nps-logo.gif',
-        'width' => 200,
+        '@type'  => 'ImageObject',
+        'url'    => $baseUrl . 'img/nps-logo.gif',
+        'width'  => 200,
         'height' => 200,
       ],
     ],
+    // Primárny obrázok článku – Schema.org Article vyžaduje min. 1200 px šírku
     'image' => [
       '@type'  => 'ImageObject',
-      'url'    => $baseUrl . 'img/nps-logo.gif',
-      'width'  => 200,
-      'height' => 200,
+      'url'    => $baseUrl . 'img/og-default.jpg',
+      'width'  => 1200,
+      'height' => 630,
     ],
   ];
 }
@@ -179,40 +185,41 @@ if ($article) {
 <html lang="sk">
 <head>
   <?php
-  // Mapovanie premenných pre head_meta.php
-  $seoDescription = $metaDescription;
-  $seoKeywords = "nefrológia, CKD, chronické ochorenie obličiek, KDIGO, dialýza, transplantácia obličiek, Slovensko, " . $articleTitleRaw;
+  // Mapovanie premenných pre head_meta.php — odovzdávame RAW (neescapované) hodnoty.
+  // head_meta.php aplikuje htmlspecialchars() na každý výstup sám.
+  $seoDescription = $metaDescriptionRaw;
+  $seoKeywords    = 'nefrológia, CKD, chronické ochorenie obličiek, KDIGO, dialýza, transplantácia obličiek, Slovensko, ' . $articleTitleRaw;
   $ogType = $article ? 'article' : 'website';
-  
+
   $structuredData = [];
   if ($articleSchema) {
       $structuredData[] = $articleSchema;
   }
-  
-  // Pridanie Breadcrumbs
+
+  // BreadcrumbList — všetky URL musia byť RAW (nie HTML-escaped), json_encode() ich správne zakóduje.
   $structuredData[] = [
       '@context' => 'https://schema.org',
-      '@type' => 'BreadcrumbList',
+      '@type'    => 'BreadcrumbList',
       'itemListElement' => [
           [
-              '@type' => 'ListItem',
+              '@type'    => 'ListItem',
               'position' => 1,
-              'name' => 'Domov',
-              'item' => $baseUrl
+              'name'     => 'Domov',
+              'item'     => $baseUrl,                    // kanonická domovská URL
           ],
           [
-              '@type' => 'ListItem',
+              '@type'    => 'ListItem',
               'position' => 2,
-              'name' => 'Články',
-              'item' => $baseUrl . 'index.php'
+              'name'     => 'Články',
+              'item'     => $baseUrl,                    // zoznam článkov = domovská stránka
           ],
           [
-              '@type' => 'ListItem',
+              '@type'    => 'ListItem',
               'position' => 3,
-              'name' => $articleTitleRaw,
-              'item' => $canonicalUrl
-          ]
-      ]
+              'name'     => $articleTitleRaw,
+              'item'     => $canonicalUrlRaw,            // RAW URL — nie HTML-escaped!
+          ],
+      ],
   ];
 
   include 'head_meta.php';

@@ -146,7 +146,8 @@ if (isLoggedIn()) {
 <html lang="sk">
 <head>
   <?php
-  $pageTitle = 'IgAN Prediction Tool — riziko progresie IgA nefropatie';
+  $pageTitle    = 'IgAN Prediction Tool — riziko progresie IgA nefropatie | Nefro-projekt Slovensko';
+  $canonicalUrl  = 'https://nefro.polascin.net/calculator_igan.php';
   $seoDescription = 'International IgA Nephropathy Prediction Tool (Barbour 2019) — odhad 5-ročného rizika poklesu eGFR o ≥50 % alebo ESKD.';
   $structuredData = [
     [

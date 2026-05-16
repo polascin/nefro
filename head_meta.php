@@ -7,7 +7,12 @@
 // Basic site configuration
 $siteName = 'Nefro-projekt Slovensko';
 $baseUrl = 'https://nefro.polascin.net/';
-$currentUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+// Bezpečná konštrukcia currentUrl — validujeme host voči pevnej konfigurácii
+// (ochrana pred Host Header Injection → SEO poisoning)
+$_allowedHost = 'nefro.polascin.net';
+$_scheme = (isset($_SERVER['HTTPS']) && strtolower((string)$_SERVER['HTTPS']) !== 'off') ? 'https' : 'http';
+$_requestUri = filter_var($_SERVER['REQUEST_URI'] ?? '/', FILTER_SANITIZE_URL) ?: '/';
+$currentUrl = $_scheme . '://' . $_allowedHost . $_requestUri;
 
 // Default SEO values (should be overridden by individual pages)
 $pageTitle = $pageTitle ?? $siteName;
@@ -16,7 +21,10 @@ $seoKeywords = $seoKeywords ?? 'nefrológia, CKD, chronické ochorenie obličiek
 $canonicalUrl = $canonicalUrl ?? $currentUrl;
 $robotsMeta = $robotsMeta ?? 'index, follow, max-image-preview:large';
 $ogType = $ogType ?? 'website';
-$ogImage = $ogImage ?? ($baseUrl . 'img/nps-logo.gif');
+// OG obrázok: odporúčané minimum pre sociálne siete je 1200×630 px, formát JPG/PNG
+$ogImage = $ogImage ?? ($baseUrl . 'img/og-default.jpg');
+$ogImageWidth = $ogImageWidth ?? 1200;
+$ogImageHeight = $ogImageHeight ?? 630;
 
 // Helper for Schema.org
 $structuredData = $structuredData ?? [];
@@ -43,6 +51,8 @@ $katexAutoRender = $katexBase . '/contrib/auto-render.min.js';
 <meta name="author" content="MUDr. Ľubomír Polaščín">
 <meta name="robots" content="<?= htmlspecialchars($robotsMeta, ENT_QUOTES) ?>">
 <link rel="canonical" href="<?= htmlspecialchars($canonicalUrl, ENT_QUOTES) ?>">
+<link rel="alternate" hreflang="sk" href="<?= htmlspecialchars($canonicalUrl, ENT_QUOTES) ?>">
+<link rel="alternate" hreflang="x-default" href="<?= htmlspecialchars($canonicalUrl, ENT_QUOTES) ?>">
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="<?= htmlspecialchars($ogType, ENT_QUOTES) ?>">
@@ -53,6 +63,8 @@ $katexAutoRender = $katexBase . '/contrib/auto-render.min.js';
 <meta property="og:locale" content="sk_SK">
 <meta property="og:image" content="<?= htmlspecialchars($ogImage, ENT_QUOTES) ?>">
 <meta property="og:image:alt" content="<?= htmlspecialchars($pageTitle, ENT_QUOTES) ?>">
+<meta property="og:image:width" content="<?= (int)($ogImageWidth ?? 1200) ?>">
+<meta property="og:image:height" content="<?= (int)($ogImageHeight ?? 630) ?>">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">

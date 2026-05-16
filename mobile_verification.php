@@ -217,9 +217,20 @@ function sendMobileVerificationCode(string $mobilePhone, ?string $code = null): 
         return $status === 'pending' || $status === 'approved';
     }
 
-    // Fallback logovacího providéra: použiteľný pri lokálnom vývoji, v produkcii zlyhá.
+    // Fallback logovacieho providéra: použiteľný pri lokálnom vývoji, v produkcii zlyhá.
     if ($provider === '' || $provider === 'log') {
-        error_log('SMS verification code for ' . $mobilePhone . ': ' . (string) $code);
+        // BEZPEČnosŤ: samotmý overovací kód sa nesmie objaviť v logoch — logy čítajú
+        // systémoví administrátori, sú archivované zálohami a môžu byť dostupné
+        // cez webový server v chybnej konfigurácii.
+        if ($isLocalDev) {
+            // V DEV režime logujeme kód (maskované telefónne číslo) pre ladenie
+            $maskedPhone = substr($mobilePhone, 0, -4) . '****';
+            error_log('[DEV] SMS overovací kód pre ' . $maskedPhone . ': ' . (string) $code);
+        } else {
+            // V produkcii zaznamenávame IBA fakt o odoslaní, NIE kód
+            $maskedPhone = substr($mobilePhone, 0, -4) . '****';
+            error_log('SMS verifikácia odoslaná (log provider) na: ' . $maskedPhone);
+        }
         return $isLocalDev;
     }
 

@@ -134,7 +134,8 @@ if (isLoggedIn()) {
 <html lang="sk">
 <head>
   <?php
-  $pageTitle = 'Korigovaný vápnik - Kalkulačky KDIGO 2024 CKD';
+  $pageTitle    = 'Korigovaný vápnik | Kalkulačky | Nefro-projekt Slovensko';
+  $canonicalUrl  = 'https://nefro.polascin.net/calculator_ca.php';
   $seoDescription = 'Nefrologická kalkulačka a nástroj: Korigovaný vápnik. Hodnotenie kalciémie pri hypoalbuminémii. Presné klinické výpočty podľa najnovších odporúčaní pre lekárov na Slovensku.';
   $structuredData = [
     [
@@ -260,7 +261,7 @@ if (isLoggedIn()) {
                     <div class="form-section calculator-result-block">
                         <h3>Výsledok výpočtu</h3>
                         <p><strong>Korigovaný vápnik:</strong> <?= htmlspecialchars(number_format((float) $calculated['corrected_ca'], 2, ',', ' ')) ?> mmol/L</p>
-                        
+
                         <div class="form-actions no-print" style="margin-top: 24px;">
                             <button type="button" class="btn-primary" onclick="window.print()">Vytlačiť výpočet</button>
                         </div>

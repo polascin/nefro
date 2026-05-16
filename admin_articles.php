@@ -5,9 +5,10 @@ require_once __DIR__ . '/newsletter_notifications.php';
 
 requireAdmin();
 
-$currentAdminId = (int) ($_SESSION['user_id'] ?? 0);
-$actionResult   = null;
-$actionError    = null;
+$currentAdminId    = (int) ($_SESSION['user_id'] ?? 0);
+$actionResult      = null;   // vždy plain text — escapuje sa cez htmlspecialchars() pri výpise
+$actionResultLink  = null;   // voliteľný HTML odkaz, konštruovaný výhradne z in-cast hodnôt (int IDs)
+$actionError       = null;
 $editArticle    = null;
 $queueSummary   = [
   'pending' => 0,
@@ -151,7 +152,8 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                         'is_published' => $isPub,
                     ]);
                     $newId        = (int) $pdo->lastInsertId();
-                    $actionResult = 'Článok bol úspešne vytvorený. <a href="article.php?id=' . $newId . '" target="_blank">Zobraziť →</a>';
+                    $actionResult     = 'Článok bol úspešne vytvorený.';
+                    $actionResultLink = '<a href="article.php?id=' . $newId . '" target="_blank" rel="noopener">Zobraziť →</a>';
 
                     if ($isPub === 1) {
                       try {
@@ -227,7 +229,8 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                         'is_published' => $isPub,
                         'id'           => $id,
                     ]);
-                    $actionResult = 'Článok bol úspešne aktualizovaný. <a href="article.php?id=' . $id . '" target="_blank">Zobraziť →</a>';
+                    $actionResult     = 'Článok bol úspešne aktualizovaný.';
+                    $actionResultLink = '<a href="article.php?id=' . $id . '" target="_blank" rel="noopener">Zobraziť →</a>';
 
                     try {
                       if ($previousPublished === 0 && $isPub === 1) {
@@ -505,7 +508,12 @@ $pageTimeZone    = date('T') . ' (' . date_default_timezone_get() . ')';
       <p class="auth-subtitle">Pridávanie, úprava a mazanie článkov na hlavnej stránke.</p>
 
       <?php if ($actionResult !== null): ?>
-        <div class="alert alert-success"><p><?= $actionResult /* contains safe HTML (links) */ ?></p></div>
+        <div class="alert alert-success"><p>
+          <?= htmlspecialchars((string) $actionResult) ?>
+          <?php if ($actionResultLink !== null): ?>
+            <?= $actionResultLink /* $actionResultLink je bezpečný — obsahuje výhradne int ID v href */ ?>
+          <?php endif; ?>
+        </p></div>
       <?php endif; ?>
       <?php if ($actionError !== null): ?>
         <div class="alert alert-error"><p><?= htmlspecialchars($actionError) ?></p></div>

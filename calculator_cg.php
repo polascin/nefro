@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } elseif ($action === 'calculate' || $action === 'save') {
         $patient = calculatorPatientDataFromRequest($_POST);
         calculatorValidateOptionalPatientData($patient, $errors);
-        
+
         if ($form['age_years'] === '') {
             $derived = calculatorAgeFromPatient($patient);
             if ($derived !== null) {
@@ -171,7 +171,8 @@ if (isLoggedIn()) {
 <html lang="sk">
 <head>
   <?php
-  $pageTitle = 'Cockcroft-Gault (Klírens kreatinínu) - Kalkulačky KDIGO 2024 CKD';
+  $pageTitle    = 'Cockcroft-Gault (Klírens kreatinínu) | Kalkulačky | Nefro-projekt Slovensko';
+  $canonicalUrl  = 'https://nefro.polascin.net/calculator_cg.php';
   $seoDescription = 'Nefrologická kalkulačka a nástroj: Cockcroft-Gault (Klírens kreatinínu). Úprava dávkovania liekov. Presné klinické výpočty podľa najnovších odporúčaní pre lekárov na Slovensku.';
   $structuredData = [
     [
@@ -321,7 +322,7 @@ if (isLoggedIn()) {
                     <div class="form-section calculator-result-block">
                         <h3>Výsledok výpočtu</h3>
                         <p><strong>Odhadovaný klírens kreatinínu (CrCl):</strong> <?= htmlspecialchars(number_format((float) $calculated['crcl'], 1, ',', ' ')) ?> ml/min</p>
-                        
+
                         <div class="form-actions no-print" style="margin-top: 24px;">
                             <button type="button" class="btn-primary" onclick="window.print()">Vytlačiť výpočet</button>
                         </div>

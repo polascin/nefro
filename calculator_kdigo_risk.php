@@ -199,7 +199,8 @@ if (isLoggedIn()) {
 <html lang="sk">
 <head>
   <?php
-  $pageTitle = 'KDIGO G/A riziko CKD - Kalkulačky KDIGO 2024 CKD';
+  $pageTitle    = 'KDIGO G/A riziko CKD | Kalkulačky | Nefro-projekt Slovensko';
+  $canonicalUrl  = 'https://nefro.polascin.net/calculator_kdigo_risk.php';
   $seoDescription = 'Nefrologická kalkulačka a nástroj: KDIGO G/A riziko CKD. Kategoriácia CKD podľa eGFR a albuminúrie (UACR). Presné klinické výpočty podľa najnovších odporúčaní pre lekárov na Slovensku.';
   $structuredData = [
     [

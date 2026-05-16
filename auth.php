@@ -77,10 +77,13 @@ function requireAdmin() {
 }
 
 /**
- * Generovanie CSRF tokenu
- * @return string CSRF token
+ * Generovanie CSRF tokenu (Synchronizer Token Pattern).
+ * Token je generovaný raz za reláciu a uložený v session.
+ * Po úspechné validácii POST formulára sa token rotuje (pozri validateCsrfToken).
+ *
+ * @return string Aktuálny CSRF token pre vloženie do formulára.
  */
-function generateCsrfToken() {
+function generateCsrfToken(): string {
     if (empty($_SESSION['csrf_token'])) {
         $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
     }
@@ -88,12 +91,23 @@ function generateCsrfToken() {
 }
 
 /**
- * Validácia CSRF tokenu z formulára
- * @param string $token Token z POST požiadavky
- * @return bool True ak je platný, inak False
+ * Validácia CSRF tokenu z POST formulára.
+ * Po úspechnéj validácii sa token automaticky rotuje — ochráni pred opakovaným
+ * použitím a pred CSRF-token-fixation útokmi.
+ *
+ * @param string $token Token z POST požiadavky ($_POST['csrf_token'])
+ * @return bool True ak je token platný, inak False
  */
-function validateCsrfToken($token) {
-    return isset($_SESSION['csrf_token']) && hash_equals($_SESSION['csrf_token'], $token);
+function validateCsrfToken(string $token): bool {
+    if (!isset($_SESSION['csrf_token']) || $token === '') {
+        return false;
+    }
+    $valid = hash_equals($_SESSION['csrf_token'], $token);
+    // Token rotuje po každom POST — platný aj neplatný pokus.
+    // Znemožňuje replay attack a CSRF token fixation.
+    // Používateľ dostane pri ďaľšom načítaní stránky nový token.
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+    return $valid;
 }
 
 /**

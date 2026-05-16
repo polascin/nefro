@@ -176,7 +176,8 @@ if (isLoggedIn()) {
 <html lang="sk">
 <head>
   <?php
-  $pageTitle = 'Poruchy sodíka a vody - Kalkulačky KDIGO 2024 CKD';
+  $pageTitle    = 'Poruchy sodíka a vody | Kalkulačky | Nefro-projekt Slovensko';
+  $canonicalUrl  = 'https://nefro.polascin.net/calculator_na.php';
   $seoDescription = 'Nefrologická kalkulačka a nástroj: Poruchy sodíka a vody. Deficit voľnej vody a Adrogue-Madias. Presné klinické výpočty podľa najnovších odporúčaní pre lekárov na Slovensku.';
   $structuredData = [
     [
@@ -325,7 +326,7 @@ if (isLoggedIn()) {
                     </div>
                 <?php endif; ?>
             </div>
-            
+
             <?php include 'calculator_disclaimer.php'; ?>
             <section class="auth-container auth-container--wide calc-saved-results">
                 <h3>Uložené výsledky</h3>

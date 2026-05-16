@@ -44,7 +44,7 @@ if (isLoggedIn() && isset($_GET['load_id'])) {
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $action = (string) ($_POST['action'] ?? '');
-    
+
     if (!validateCsrfToken((string) ($_POST['csrf_token'] ?? ''))) {
         $errors[] = 'Neplatný CSRF token.';
     } elseif ($action === 'delete_saved') {
@@ -72,13 +72,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } else {
             $r = $upost / $upre;
             $urr = (1 - $r) * 100;
-            
+
             $logTerm = $r - (0.008 * $t);
             if ($logTerm <= 0) {
                 $errors[] = 'Zadané hodnoty neumožňujú výpočet logaritmu v Daugirdasovej rovnici (extrémne nízke U_post alebo dlhý čas).';
             } else {
                 $ktv = -log($logTerm) + (4 - 3.5 * $r) * ($uf / $w);
-                
+
                 $calculated = [
                     'urr' => round($urr, 1),
                     'ktv' => round($ktv, 2),
@@ -109,7 +109,8 @@ if (isLoggedIn()) {
 <html lang="sk">
 <head>
   <?php
-  $pageTitle = 'Hodnotenie hemodialýzy Kt/V a URR - Kalkulačky';
+  $pageTitle    = 'Hodnotenie hemodialýzy Kt/V a URR | Kalkulačky | Nefro-projekt Slovensko';
+  $canonicalUrl  = 'https://nefro.polascin.net/calculator_ktv.php';
   $seoDescription = 'Nefrologická kalkulačka a nástroj: Hodnotenie hemodialýzy Kt/V a URR. Hodnotenie adekvátnosti HD. Presné klinické výpočty podľa najnovších odporúčaní pre lekárov na Slovensku.';
   $structuredData = [
     [
