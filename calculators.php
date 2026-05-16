@@ -142,10 +142,14 @@ $schemaWebApp = [
 
     <main id="main-content" class="container main-content main-content--single-col" role="main">
         <div class="content-wrapper">
+            <section class="calculator-hero">
+                <img src="img/nefro_13.png" alt="Nefrologické kalkulačky - Nástroje pre klinickú prax" class="calculator-hero__img" loading="eager">
+            </section>
+
             <section class="primary-article">
-                <h1>Nefrologické kalkulačky</h1>
+                <h1 class="visually-hidden">Nefrologické kalkulačky</h1>
                 <p>
-                    Výpočty sú určené na orientačnú podporu klinického rozhodovania. Údaje pacienta
+                    Klinické výpočty sú určené na orientačnú podporu klinického rozhodovania. Údaje pacienta
                     (meno, priezvisko, dátum narodenia, rodné číslo, kód zdravotnej poisťovne) sú voliteľné.
                     Údaje potrebné pre výpočet sú povinné.
                 </p>
