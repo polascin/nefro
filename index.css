@@ -1854,7 +1854,7 @@ input:disabled + .slider:before {
   padding: 0;
   margin: 0 0 16px;
   font-size: 0.875rem;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .calc-formula-box > summary {
@@ -1889,6 +1889,7 @@ input:disabled + .slider:before {
 
 .calc-formula-content {
   padding: 0 14px 14px;
+  overflow-x: auto;
 }
 
 .calc-formula-line {

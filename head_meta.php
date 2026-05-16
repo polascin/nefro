@@ -78,16 +78,8 @@ $structuredData = $structuredData ?? [];
 <!-- KaTeX for mathematical formulas -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-n9jH451W31ALuDQF6V/MInIX++7H6G4pzSj6V454ec3j817ExgD605ER047PtcWv" crossorigin="anonymous">
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zk9W9fkTim/umWJJSUndd1tqZpW1M9NLW2P16SJC8uPAfK9tMUEG2L179WmU9gL" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"
-    onload="renderMathInElement(document.body, {
-        delimiters: [
-            {left: '$$', right: '$$', display: true},
-            {left: '$', right: '$', display: false},
-            {left: '\\(', right: '\\)', display: false},
-            {left: '\\[', right: '\\]', display: true}
-        ],
-        throwOnError: false
-    });"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
+<script defer src="formula-math.js?v=<?= filemtime('formula-math.js') ?>"></script>
 
 <link rel="stylesheet" href="index.css?v=<?= filemtime('index.css') ?>">
 <script src="theme.js?v=<?= filemtime('theme.js') ?>"></script>
