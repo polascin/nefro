@@ -1,7 +1,9 @@
 # ── Základné bezpečnostné nastavenia ────────────────────────────────────────
-# POZN.: Options a ServerSignature vyžadujú AllowOverride Options resp. All
-# v httpd.conf. Ak server vracia 500, zakomentujte tieto dva riadky.
-Options -Indexes -FollowSymLinks
+# DÔLEŽITÉ: -FollowSymLinks sa NESMIE používať v .htaccess pokiaľ mod_rewrite
+# beží v rovnakom adresári. mod_rewrite vyžaduje FollowSymLinks alebo
+# SymLinksIfOwnerMatch — bez toho vráti Apache 403 pre každú požiadavku.
+# ServerSignature vyžaduje AllowOverride All — ak server vracia 500, zakomentuj.
+Options -Indexes
 ServerSignature Off
 
 # ── Globálne bezpečnostné HTTP hlavičky ─────────────────────────────────────
