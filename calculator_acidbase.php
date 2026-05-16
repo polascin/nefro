@@ -203,9 +203,9 @@ if (isLoggedIn()) {
                 <details class="calc-formula-box">
                     <summary>Vzorce a vysvetlivky</summary>
                     <div class="calc-formula-content">
-                        <code class="calc-formula-line">AG = Na &minus; (Cl + HCO3)</code>
-                        <code class="calc-formula-line">Korig. AG = AG + 0.25 &times; (40 &minus; Albumín)</code>
-                        <code class="calc-formula-line">&Delta; Ratio = (Korig. AG &minus; 12) / (24 &minus; HCO3)</code>
+                        <div class="calc-formula-line">\[ \text{AG} = \text{Na} - (\text{Cl} + \text{HCO}_3) \]</div>
+                        <div class="calc-formula-line">\[ \text{AG}_{\text{korig}} = \text{AG} + 0.25 \times (40 - \text{Albumín}) \]</div>
+                        <div class="calc-formula-line">\[ \Delta\text{-Ratio} = \frac{\text{AG}_{\text{korig}} - 12}{24 - \text{HCO}_3} \]</div>
                         <div class="calc-formula-vars">
                             Normálna aniónová medzera je cca 10-14 mmol/L.<br>
                             U pacientov s hypoalbuminémiou (časté pri nefrotickom syndróme, závažnom CKD) musí byť AG korigovaná, inak sa falošne podhodnotí.

@@ -531,15 +531,12 @@ function sexLabel(string $v): string { return $v === 'male' ? 'Muž' : 'Žena'; 
                 <details open class="calc-formula-box">
                     <summary>Vzorec — CKD-PC / Grams 2022 (clog-log)</summary>
                     <div class="calc-formula-content">
-                        <code class="calc-formula-line">P = 1 &minus; exp(&minus;exp(&eta;))
-
-&eta; = &beta;<sub>0</sub> + &beta;<sub>1</sub>&middot;Vek + &beta;<sub>2</sub>&middot;muž + &beta;<sub>3</sub>&middot;ln(eGFR) + &beta;<sub>4</sub>&middot;ln(uACR) + &beta;<sub>5</sub>&middot;SBP
-    + &beta;<sub>6</sub>&middot;antihyp + &beta;<sub>7</sub>&middot;SZ + &beta;<sub>8</sub>&middot;ICHS + &beta;<sub>9</sub>&middot;FP + &beta;<sub>10</sub>&middot;BMI + &beta;<sub>11</sub>&middot;fajč.
-    + [&beta;<sub>12</sub>&middot;HbA1c + &beta;<sub>13</sub>&middot;inzulín + &beta;<sub>14</sub>&middot;PAD] &nbsp;(len pri DM)</code>
-                        <code class="calc-formula-line">Prepočet UACR: [mg/g] = [mg/mmol] &times; 8.84</code>
+                        <div class="calc-formula-line">\[ P = 1 - \exp(-\exp(\eta)) \]</div>
+                        <div class="calc-formula-line">\[ \begin{aligned} \eta = \beta_0 &+ \beta_1 \cdot \text{Vek} + \beta_2 \cdot \text{muž} + \beta_3 \cdot \ln(\text{eGFR}) + \beta_4 \cdot \ln(\text{uACR}) + \beta_5 \cdot \text{SBP} \\ &+ \beta_6 \cdot \text{antihyp} + \beta_7 \cdot \text{SZ} + \beta_8 \cdot \text{ICHS} + \beta_9 \cdot \text{FP} + \beta_{10} \cdot \text{BMI} + \beta_{11} \cdot \text{fajč.} \\ &+ [\beta_{12} \cdot \text{HbA1c} + \beta_{13} \cdot \text{inzulín} + \beta_{14} \cdot \text{PAD}] \text{ (len pri DM)} \end{aligned} \]</div>
+                        <div class="calc-formula-line">\[ \text{UACR [mg/g]} = \text{UACR [mg/mmol]} \times 8.84 \]</div>
                         <div class="calc-formula-vars">
-                            P = 3-ročné riziko (&ge;40 % pokles eGFR alebo zlyhanie obličiek)&ensp;&bull;&ensp;
-                            4 sub-modely: DM / bez DM &times; eGFR &ge;60 / &lt;60&ensp;&bull;&ensp;
+                            $P = \text{3-ročné riziko (}\ge 40\% \text{ pokles eGFR alebo zlyhanie obličiek)}$ &bull;
+                            4 sub-modely: DM / bez DM $\times$ eGFR $\ge 60$ / $< 60$ &bull;
                             uACR v mg/g, SBP v mmHg
                         </div>
                     </div>

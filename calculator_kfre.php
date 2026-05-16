@@ -302,16 +302,13 @@ if (isLoggedIn()) {
                 <details open class="calc-formula-box">
                     <summary>Vzorec — KFRE (Tangri 2011, Cox model, 4-parametrová)</summary>
                     <div class="calc-formula-content">
-                        <code class="calc-formula-line">X = &minus;0.2201&middot;(Vek/10 &minus; 7.036) + 0.2467&middot;(Muž &minus; 0.5642)
-    &minus; 0.5567&middot;(eGFR/5 &minus; 7.222) + 0.4510&middot;(ln(UACR) &minus; 5.137)
-
-Riziko(t) = 1 &minus; S<sub>0</sub>(t)<sup>exp(X)</sup> &times; 100 %
-
-S<sub>0</sub>(2 roky) = 0.9832 &nbsp;&nbsp; S<sub>0</sub>(5 rokov) = 0.9240</code>
-                        <code class="calc-formula-line">Prepočet UACR: [mg/g] = [mg/mmol] &times; 8.84</code>
+                        <div class="calc-formula-line">\[ \begin{aligned} X = &-0.2201 \cdot (\text{Vek}/10 - 7.036) + 0.2467 \cdot (\text{Muž} - 0.5642) \\ &- 0.5567 \cdot (\text{eGFR}/5 - 7.222) + 0.4510 \cdot (\ln(\text{UACR}) - 5.137) \end{aligned} \]</div>
+                        <div class="calc-formula-line">\[ \text{Riziko}(t) = (1 - S_0(t)^{\exp(X)}) \times 100\% \]</div>
+                        <div class="calc-formula-line">\[ S_0(2 \text{ roky}) = 0.9832 \quad S_0(5 \text{ rokov}) = 0.9240 \]</div>
+                        <div class="calc-formula-line">\[ \text{UACR [mg/g]} = \text{UACR [mg/mmol]} \times 8.84 \]</div>
                         <div class="calc-formula-vars">
-                            Muž = 1, Žena = 0 &ensp;&bull;&ensp; UACR v mg/g &ensp;&bull;&ensp;
-                            Cox proportional hazards, North American kohorta &ensp;&bull;&ensp;
+                            $\text{Muž} = 1, \text{Žena} = 0$ &bull; $\text{UACR v mg/g}$ &bull;
+                            Cox proportional hazards, North American kohorta &bull;
                             Zdroj: Tangri N et al. <em>JAMA.</em> 2011;305(15):1553–9.
                         </div>
                     </div>

@@ -280,12 +280,12 @@ if (isLoggedIn()) {
                 <details open class="calc-formula-box">
                     <summary>Vzorec — CKD-EPI 2021</summary>
                     <div class="calc-formula-content">
-                        <code class="calc-formula-line">eGFR = 142 &times; min(S<sub>cr</sub>/&kappa;, 1)<sup>&alpha;</sup> &times; max(S<sub>cr</sub>/&kappa;, 1)<sup>&minus;1.200</sup> &times; 0.9938<sup>Vek</sup> [&times; 1.012 &nbsp;ak&nbsp;&nbsp;&#x2640;]</code>
-                        <code class="calc-formula-line">Prepočet: S<sub>cr</sub> [mg/dL] = S<sub>cr</sub> [&micro;mol/L] &divide; 88.4</code>
+                        <div class="calc-formula-line">\[ \text{eGFR} = 142 \times \min(S_{cr}/\kappa, 1)^\alpha \times \max(S_{cr}/\kappa, 1)^{-1.200} \times 0.9938^{\text{Vek}} \times [1.012 \text{ ak žena}] \]</div>
+                        <div class="calc-formula-line">\[ S_{cr} [\text{mg/dL}] = S_{cr} [\mu\text{mol/L}] \div 88.4 \]</div>
                         <div class="calc-formula-vars">
-                            &kappa; = 0.7 (žena) / 0.9 (muž)&ensp;&bull;&ensp;
-                            &alpha; = &minus;0.241 (žena) / &minus;0.302 (muž)&ensp;&bull;&ensp;
-                            S<sub>cr</sub> = sérový kreatinín v mg/dL
+                            $\kappa = 0.7 \text{ (žena)} / 0.9 \text{ (muž)}$ &bull; 
+                            $\alpha = -0.241 \text{ (žena)} / -0.302 \text{ (muž)}$ &bull; 
+                            $S_{cr} = \text{sérový kreatinín [mg/dL]}$
                         </div>
                     </div>
                 </details>

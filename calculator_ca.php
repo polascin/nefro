@@ -186,10 +186,9 @@ if (isLoggedIn()) {
                 <details class="calc-formula-box">
                     <summary>Vzorec pre výpočet</summary>
                     <div class="calc-formula-content">
-                        <code class="calc-formula-line">Korigovaný Ca = Nameraný Ca + 0.02 &times; (40 &minus; Albumín)</code>
+                        <div class="calc-formula-line">\[ \text{Ca}_{\text{korig}} = \text{Ca}_{\text{nameraný}} + 0.02 \times (40 - \text{Albumín}) \]</div>
                         <div class="calc-formula-vars">
-                            Vápnik v mmol/L&ensp;&bull;&ensp;
-                            Albumín v g/L (Norma sa uvažuje 40 g/L)
+                            $\text{Vápnik [mmol/L]}$ &bull; $\text{Albumín [g/L]}$ (norma uvažovaná $40 \text{ g/L}$)
                         </div>
                     </div>
                 </details>

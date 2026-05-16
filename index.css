@@ -1892,22 +1892,23 @@ input:disabled + .slider:before {
 }
 
 .calc-formula-line {
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 0.84rem;
-  line-height: 1.75;
+  font-size: 1.05rem;
+  line-height: 1.5;
   color: var(--text-primary);
-  white-space: pre-wrap;
+  white-space: normal;
   display: block;
-  margin: 0;
+  margin: 10px 0;
+  text-align: center;
 }
 
 .calc-formula-vars {
   margin-top: 10px;
-  font-size: 0.79rem;
+  font-size: 0.85rem;
   color: var(--text-secondary);
   line-height: 1.6;
   border-top: 1px dashed var(--code-border);
-  padding-top: 8px;
+  padding-top: 10px;
+  text-align: center;
 }
 
 @media print {

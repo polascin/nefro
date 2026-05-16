@@ -215,9 +215,9 @@ if (isLoggedIn()) {
                 <details open class="calc-formula-box">
                     <summary>Vzorec — Mayo ADPKD klasifikácia (Irazabal 2015)</summary>
                     <div class="calc-formula-content">
-                        <code class="calc-formula-line">HtTKV = TKV [mL] / výška [m]
-<br>k = ln(HtTKV / 150) / vek
-<br>Triedy: 1A: k<0,015 &nbsp; 1B: 0,015–0,030 &nbsp; 1C: 0,030–0,045 &nbsp; 1D: 0,045–0,060 &nbsp; 1E: k≥0,060</code>
+                        <div class="calc-formula-line">\[ \text{HtTKV} = \frac{\text{TKV [mL]}}{\text{výška [m]}} \]</div>
+                        <div class="calc-formula-line">\[ k = \frac{\ln(\text{HtTKV} / 150)}{\text{vek}} \]</div>
+                        <div class="calc-formula-line">\[ \text{Triedy: } 1A: k < 0.015 \quad 1B: 0.015\text{--}0.030 \quad 1C: 0.030\text{--}0.045 \quad 1D: 0.045\text{--}0.060 \quad 1E: k \ge 0.060 \]</div>
                         <div class="calc-formula-vars">
                             HtTKV = výškou adjustovaný celkový objem obličiek (mL/m) &ensp;&bull;&ensp;
                             k = odhadovaná ročná miera rastu (exponent) &ensp;&bull;&ensp;

@@ -224,9 +224,9 @@ if (isLoggedIn()) {
                 <details class="calc-formula-box">
                     <summary>Vzorce a vysvetlivky</summary>
                     <div class="calc-formula-content">
-                        <code class="calc-formula-line">TBW = Hmotnosť &times; (0.45 až 0.6 podľa pohlavia a veku)</code>
-                        <code class="calc-formula-line">Deficit vody [L] = TBW &times; ((S-Na / Cieľové Na) &minus; 1)</code>
-                        <code class="calc-formula-line">Adrogue-Madias = (Infúzia Na + Infúzia K &minus; S-Na) / (TBW + 1)</code>
+                        <div class="calc-formula-line">\[ \text{TBW} = \text{Hmotnosť} \times (0.45 \text{ až } 0.6 \text{ podľa pohlavia a veku}) \]</div>
+                        <div class="calc-formula-line">\[ \text{Deficit vody [L]} = \text{TBW} \times \left( \frac{\text{S-Na}}{\text{Cieľové Na}} - 1 \right) \]</div>
+                        <div class="calc-formula-line">\[ \text{Adrogue-Madias} = \frac{\text{Infúzia Na} + \text{Infúzia K} - \text{S-Na}}{\text{TBW} + 1} \]</div>
                         <div class="calc-formula-vars">
                             <strong>TBW:</strong> Celková telesná voda v litroch.<br>
                             <strong>Adrogue-Madias:</strong> Odhaduje, o koľko mmol/L sa zmení sérový sodík po podaní 1 litra konkrétneho infúzneho roztoku. Upozornenie: Rýchlosť korekcie by nemala presiahnuť 8-10 mmol/L za 24h, inak hrozí osmotický demyelinizačný syndróm!

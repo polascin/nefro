@@ -224,11 +224,11 @@ if (isLoggedIn()) {
                 <details class="calc-formula-box">
                     <summary>Vzorec — Cockcroft-Gault</summary>
                     <div class="calc-formula-content">
-                        <code class="calc-formula-line">CrCl = ((140 &minus; Vek) &times; Hmotnosť) / (72 &times; S<sub>cr</sub>) [&times; 0.85 &nbsp;ak&nbsp;&nbsp;&#x2640;]</code>
+                        <div class="calc-formula-line">
+                            \[ \text{CrCl} = \frac{(140 - \text{Vek}) \times \text{Hmotnosť}}{72 \times S_{cr}} \times [0.85 \text{ ak žena}] \]
+                        </div>
                         <div class="calc-formula-vars">
-                            Vek v rokoch&ensp;&bull;&ensp;
-                            Hmotnosť v kg&ensp;&bull;&ensp;
-                            S<sub>cr</sub> v mg/dL
+                            $\text{Vek [roky]}$ &bull; $\text{Hmotnosť [kg]}$ &bull; $S_{cr} = \text{sérový kreatinín [mg/dL]}$
                         </div>
                         <p style="margin-top: 8px; font-size: 0.85rem; color: var(--text-secondary);">
                             Upozornenie: Hoci sa na zaradenie do štádií CKD používa rovnica CKD-EPI (s výstupom ml/min/1,73 m²), mnohé SPC liekov historicky vyžadujú na úpravu dávky práve tento vzorec (výstup ml/min). Pri extrémnej obezite sa niekedy odporúča použiť ideálnu alebo korigovanú telesnú hmotnosť.
