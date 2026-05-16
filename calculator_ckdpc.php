@@ -536,7 +536,7 @@ function sexLabel(string $v): string { return $v === 'male' ? 'Muž' : 'Žena'; 
                         <div class="calc-formula-line">\[ \text{UACR [mg/g]} = \text{UACR [mg/mmol]} \times 8.84 \]</div>
                         <div class="calc-formula-vars">
                             $P = \text{3-ročné riziko (}\ge 40\% \text{ pokles eGFR alebo zlyhanie obličiek)}$ &bull;
-                            4 sub-modely: DM / bez DM $\times$ eGFR $\ge 60$ / $< 60$ &bull;
+                            4 sub-modely: DM / bez DM $\times$ eGFR $\ge 60$ / $\lt 60$ &bull;
                             uACR v mg/g, SBP v mmHg
                         </div>
                     </div>
