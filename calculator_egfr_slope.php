@@ -193,6 +193,19 @@ if (isLoggedIn()) {
             <div class="auth-container auth-container--wide">
                 <h2>Rýchlosť poklesu eGFR (Slope)</h2>
                 <p class="auth-subtitle">KDIGO 2024 zdôrazňuje potrebu identifikovať tzv. "fast progressors" (pokles eGFR > 5 ml/min/rok).</p>
+
+                <details class="calc-formula-box">
+                    <summary>Vzorec — rýchlosť poklesu eGFR (lineárna regresia)</summary>
+                    <div class="calc-formula-content">
+                        <div class="calc-formula-line">\[ \text{Slope} = \frac{\sum_i (x_i - \bar{x})(y_i - \bar{y})}{\sum_i (x_i - \bar{x})^2} \]</div>
+                        <div class="calc-formula-vars">
+                            $x_i$ = čas od prvého merania (roky) &bull;
+                            $y_i$ = eGFR (ml/min/1,73 m²) &bull;
+                            výstup v ml/min/1,73 m² za rok
+                        </div>
+                    </div>
+                </details>
+
                 <?php foreach ($messages as $m): ?><div class="alert alert-success"><?= htmlspecialchars($m) ?></div><?php endforeach; ?>
                 <?php if (!empty($errors)): ?><div class="alert alert-error"><ul><?php foreach ($errors as $e): ?><li><?= htmlspecialchars($e) ?></li><?php endforeach; ?></ul></div><?php endif; ?>
 

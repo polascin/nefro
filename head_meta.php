@@ -20,6 +20,11 @@ $ogImage = $ogImage ?? ($baseUrl . 'img/nps-logo.gif');
 
 // Helper for Schema.org
 $structuredData = $structuredData ?? [];
+
+$katexBase = 'assets/katex/0.16.11';
+$katexCss = $katexBase . '/katex.min.css';
+$katexJs = $katexBase . '/katex.min.js';
+$katexAutoRender = $katexBase . '/contrib/auto-render.min.js';
 ?>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -75,10 +80,10 @@ $structuredData = $structuredData ?? [];
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;900&display=swap" rel="stylesheet">
 
-<!-- KaTeX for mathematical formulas -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-n9jH451W31ALuDQF6V/MInIX++7H6G4pzSj6V454ec3j817ExgD605ER047PtcWv" crossorigin="anonymous">
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zk9W9fkTim/umWJJSUndd1tqZpW1M9NLW2P16SJC8uPAfK9tMUEG2L179WmU9gL" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
+<!-- KaTeX for mathematical formulas (self-hosted) -->
+<link rel="stylesheet" href="<?= htmlspecialchars($katexCss) ?>?v=<?= filemtime($katexCss) ?>">
+<script defer src="<?= htmlspecialchars($katexJs) ?>?v=<?= filemtime($katexJs) ?>"></script>
+<script defer src="<?= htmlspecialchars($katexAutoRender) ?>?v=<?= filemtime($katexAutoRender) ?>"></script>
 <script defer src="formula-math.js?v=<?= filemtime('formula-math.js') ?>"></script>
 
 <link rel="stylesheet" href="index.css?v=<?= filemtime('index.css') ?>">

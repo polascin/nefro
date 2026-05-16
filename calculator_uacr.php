@@ -149,6 +149,18 @@ if (isLoggedIn()) {
         <div class="content-wrapper">
             <div class="auth-container auth-container--wide">
                 <h2>UACR (Urine Albumin-to-Creatinine Ratio) a KDIGO A-štádium</h2>
+
+                <details class="calc-formula-box">
+                    <summary>Vzorce — UACR a KDIGO A-štádium</summary>
+                    <div class="calc-formula-content">
+                        <div class="calc-formula-line">\[ \text{UACR} = \frac{\text{Alb}_{\text{moč}}}{\text{Cr}_{\text{moč}}} \]</div>
+                        <div class="calc-formula-line">\[ \text{UACR [mg/g]} = \text{UACR [mg/mmol]} \times 8.84 \]</div>
+                        <div class="calc-formula-vars">
+                            A1: UACR $\lt 30$ mg/g &bull; A2: $30$–$300$ mg/g &bull; A3: $\gt 300$ mg/g
+                        </div>
+                    </div>
+                </details>
+
                 <?php foreach ($messages as $m): ?><div class="alert alert-success"><?= htmlspecialchars($m) ?></div><?php endforeach; ?>
                 <?php if (!empty($errors)): ?><div class="alert alert-error"><ul><?php foreach ($errors as $e): ?><li><?= htmlspecialchars($e) ?></li><?php endforeach; ?></ul></div><?php endif; ?>
 

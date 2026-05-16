@@ -143,6 +143,21 @@ if (isLoggedIn()) {
         <div class="content-wrapper">
             <div class="auth-container auth-container--wide">
                 <h2>Kt/V (Daugirdas II) a Urea Reduction Ratio (URR)</h2>
+
+                <details class="calc-formula-box">
+                    <summary>Vzorce — Kt/V (Daugirdas II) a URR</summary>
+                    <div class="calc-formula-content">
+                        <div class="calc-formula-line">\[ \text{URR} = \left(1 - \frac{U_{\text{post}}}{U_{\text{pre}}}\right) \times 100\% \]</div>
+                        <div class="calc-formula-line">\[ r = \frac{U_{\text{post}}}{U_{\text{pre}}}, \quad \text{Kt/V} = -\ln(r - 0.008 \cdot t) + (4 - 3.5r) \cdot \frac{UF}{W} \]</div>
+                        <div class="calc-formula-vars">
+                            $U_{\text{pre/post}}$ = močová urea pred/po dialýze &bull;
+                            $t$ = čas dialýzy (h) &bull;
+                            $UF$ = ultrafiltrát (L) &bull;
+                            $W$ = postdialyzačná hmotnosť (kg)
+                        </div>
+                    </div>
+                </details>
+
                 <?php foreach ($messages as $m): ?><div class="alert alert-success"><?= htmlspecialchars($m) ?></div><?php endforeach; ?>
                 <?php if (!empty($errors)): ?><div class="alert alert-error"><ul><?php foreach ($errors as $e): ?><li><?= htmlspecialchars($e) ?></li><?php endforeach; ?></ul></div><?php endif; ?>
 

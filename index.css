@@ -1912,7 +1912,20 @@ input:disabled + .slider:before {
   text-align: center;
 }
 
+.calc-formula-line .katex-display {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.calc-formula-vars .katex {
+  font-size: 1em;
+}
+
 @media print {
+  .katex {
+    break-inside: avoid;
+  }
+
   @page {
     margin: 15mm 12mm 15mm 12mm;
     @bottom-right {
