@@ -243,9 +243,11 @@ if (isLoggedIn()) {
                 <details class="calc-formula-box">
                     <summary>Vzorce a vysvetlivky</summary>
                     <div class="calc-formula-content">
-                        <div class="calc-formula-line">\[ \text{FENa} = \frac{U_{Na} \times S_{Cr}}{S_{Na} \times U_{Cr}} \times 100\% \]</div>
-                        <div class="calc-formula-line">\[ \text{FEUrea} = \frac{U_{\text{Urea}} \times S_{Cr}}{S_{\text{Urea}} \times U_{Cr}} \times 100\% \]</div>
+                        <div class="calc-formula-line">\[ \text{FENa} = \frac{U_{\text{Na}} \times S_{\text{Cr}}}{S_{\text{Na}} \times U_{\text{Cr}}} \times 100\% \]</div>
+                        <div class="calc-formula-line">\[ \text{FEUrea} = \frac{U_{\text{urea}} \times S_{\text{Cr}}}{S_{\text{urea}} \times U_{\text{Cr}}} \times 100\% \]</div>
                         <div class="calc-formula-vars">
+                            $U_{\text{Na}}$ = močový sodík, $S_{\text{Na}}$ = sérový sodík, $U_{\text{Cr}}$ = močový kreatinín, $S_{\text{Cr}}$ = sérový kreatinín.<br>
+                            $U_{\text{urea}}$ = močová urea, $S_{\text{urea}}$ = sérová urea.<br>
                             <strong>FENa:</strong> &lt; 1 % typicky svedčí pre prerenálne zlyhanie (hypoperfúzia), &gt; 2 % pre renálne zlyhanie (ATN). V prípade užívania diuretík je FENa nepresná (zvýšená exkrécia Na).<br>
                             <strong>FEUrea:</strong> Výhodná pri užívaní diuretík. &lt; 35 % svedčí pre prerenálne zlyhanie, &gt; 50 % pre ATN.
                         </div>
