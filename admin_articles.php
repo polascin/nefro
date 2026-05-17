@@ -664,15 +664,25 @@ if (($_GET["action"] ?? "") === "edit" && $editId > 0) {
     }
 }
 
-// ── Načítanie všetkých článkov pre zoznam ────────────────────────────────────
+// ── Načítanie článkov pre zoznam s podporou stránkovania ─────────────────────
 $articles = [];
+$articlesTotal = 0;
+$articlesPerPage = 50; // počet článkov na stránku v administračnom zobrazení
+$articlesPage = max(1, (int) ($_GET['page'] ?? 1));
+$articlesOffset = ($articlesPage - 1) * $articlesPerPage;
 try {
-    $articles = $pdo
-        ->query(
-            "SELECT id, title, slug, author, published_at, is_top, is_published, created_at, sort_order
-         FROM articles ORDER BY sort_order ASC, id ASC",
-        )
-        ->fetchAll();
+    $totalStmt = $pdo->query("SELECT COUNT(*) FROM articles");
+    $articlesTotal = (int) $totalStmt->fetchColumn();
+
+    $stmt = $pdo->prepare(
+        "SELECT id, title, slug, author, published_at, is_top, is_published, created_at, sort_order
+         FROM articles ORDER BY sort_order ASC, id ASC LIMIT :limit OFFSET :offset",
+    );
+    $stmt->bindValue(':limit', $articlesPerPage, PDO::PARAM_INT);
+    $stmt->bindValue(':offset', $articlesOffset, PDO::PARAM_INT);
+    $stmt->execute();
+    $articles = $stmt->fetchAll();
+    $articlesTotalPages = $articlesPerPage > 0 ? (int) ceil($articlesTotal / $articlesPerPage) : 1;
 } catch (\PDOException $e) {
     error_log("admin_articles list error: " . $e->getMessage());
 }
@@ -766,7 +776,7 @@ $pageTimeZone = date("T") . " (" . date_default_timezone_get() . ")";
     </div>
   </nav>
 
-  <main class="container" style="padding-top:40px;padding-bottom:60px;">
+  <main class="container container--wide" style="padding-top:40px;padding-bottom:60px;">
     <div class="auth-container auth-container--wide">
       <h2>Správa článkov</h2>
       <p class="auth-subtitle">Pridávanie, úprava a mazanie článkov na hlavnej stránke.</p>
@@ -1032,7 +1042,7 @@ $filterArticleId
 
       <!-- ── ZOZNAM ČLÁNKOV ──────────────────────────────────────────── -->
       <div class="primary-article">
-        <h3>Všetky články (<?= count($articles) ?>)</h3>
+        <h3>Všetky články (<?= (int) ($articlesTotal ?? count($articles)) ?>)</h3>
 
         <?php if (empty($articles)): ?>
           <p>Zatiaľ žiadne články. Pridajte prvý vyššie.</p>
@@ -1169,6 +1179,20 @@ $filterArticleId
             </table>
           </div>
         <?php endif; ?>
+                <?php if (!empty($articlesTotalPages) && $articlesTotalPages > 1): ?>
+                    <nav class="articles-pagination" aria-label="Stránkovanie článkov" style="margin-top:16px;">
+                        <span class="articles-pagination__label">Stránky:</span>
+                        <div class="articles-pagination__links">
+                            <?php for ($p = 1; $p <= $articlesTotalPages; $p++): ?>
+                                <?php if ($p === $articlesPage): ?>
+                                    <span class="articles-page-link is-active" aria-current="page"><?= $p ?></span>
+                                <?php else: ?>
+                                    <a class="articles-page-link" href="admin_articles.php?page=<?= $p ?>"><?= $p ?></a>
+                                <?php endif; ?>
+                            <?php endfor; ?>
+                        </div>
+                    </nav>
+                <?php endif; ?>
       </div>
 
     </div><!-- /.auth-container -->

@@ -23,6 +23,9 @@
     --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
+    /* Layout */
+    --container-max-width: 1200px;
+
     /* UI komponenty */
     --card-gradient: linear-gradient(145deg, #ffffff, #f8fafc);
     --btn-secondary-bg: #e2e8f0;
@@ -183,9 +186,23 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: var(--container-max-width);
     margin: 0 auto;
     padding: 0 24px;
+}
+
+/* Wider container variants for admin/management pages */
+.container--wide {
+    max-width: 1600px;
+}
+
+.auth-container--wide {
+    max-width: calc(var(--container-max-width) + 320px);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 12px;
+    padding-right: 12px;
 }
 
 .site-header {
@@ -2250,7 +2267,8 @@ input:disabled + .slider:before {
 }
 
 .auth-container--wide {
-    max-width: 800px;
+    /* Prefer the global container width for wide auth/admin views */
+    max-width: var(--container-max-width);
 }
 
 .auth-subtitle {

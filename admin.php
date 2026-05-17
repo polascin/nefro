@@ -275,7 +275,7 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
     include 'header.php';
     ?>
 
-    <main class="container">
+    <main class="container container--wide">
         <div class="auth-container auth-container--wide">
             <h2>Admin panel</h2>
             <p class="auth-subtitle">Komplexné možnosti administrácie a audit histórie zmien profilov.</p>
