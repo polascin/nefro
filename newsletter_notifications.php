@@ -494,30 +494,33 @@ if (!function_exists('processArticleNewsletterQueue')) {
                 }
             }
 
-            $message = "Dobrý deň, " . $displayName . ",\n\n"
-                . "bol publikovaný nový článok na Nefro-projekt Slovensko:\n\n"
-                . (string) $item['title'] . "\n"
-                . $articleUrl . "\n\n";
+            $titleHtml = htmlspecialchars((string) $item['title'], ENT_QUOTES | ENT_HTML5, 'UTF-8');
+            $articleUrlEscaped = htmlspecialchars($articleUrl, ENT_QUOTES | ENT_HTML5, 'UTF-8');
+            $unsubscribeUrlEscaped = htmlspecialchars($unsubscribeUrl, ENT_QUOTES | ENT_HTML5, 'UTF-8');
+            $excerptHtml = $excerpt !== ''
+                ? '<p><strong>Perex:</strong><br>' . nl2br(htmlspecialchars($excerpt, ENT_QUOTES | ENT_HTML5, 'UTF-8')) . '</p>'
+                : '';
 
-            if ($excerpt !== '') {
-                $message .= "Perex:\n" . $excerpt . "\n\n";
-            }
-
-            $message .= "Tento e-mail ste dostali, pretože máte povolené zasielanie noviniek.\n"
-                . "Nastavenie môžete zmeniť vo svojom profile.\n"
-                . "Ak už nechcete dostávať novinky, odhláste sa jedným klikom:\n"
-                . $unsubscribeUrl . "\n\n"
-                . "Nefro-projekt Slovensko";
+            $message = '<p>Dobrý deň, ' . htmlspecialchars($displayName, ENT_QUOTES | ENT_HTML5, 'UTF-8') . ',</p>'
+                . '<p>bol publikovaný nový článok na Nefro-projekt Slovensko:</p>'
+                . '<p><strong>' . $titleHtml . '</strong><br>'
+                . '<a href="' . $articleUrlEscaped . '">' . $articleUrlEscaped . '</a></p>'
+                . $excerptHtml
+                . '<p>Tento e-mail ste dostali, pretože máte povolené zasielanie noviniek.<br>'
+                . 'Nastavenie môžete zmeniť vo svojom profile.<br>'
+                . 'Ak už nechcete dostávať novinky, odhláste sa jedným klikom:<br>'
+                . '<a href="' . $unsubscribeUrlEscaped . '">' . $unsubscribeUrlEscaped . '</a></p>'
+                . '<p>Nefro-projekt Slovensko</p>';
 
             $cfg = getEmailEnvConfig();
-            $sent = sendViaSmtp($recipientEmail, $subject, $message, $cfg);
+            $sent = sendViaSmtp($recipientEmail, $subject, $message, $cfg, 'text/html; charset=UTF-8');
             if (!$sent) {
                 $fallbackFrom = $cfg['from_email'] !== ''
                     ? $cfg['from_email']
                     : 'no-reply@nefro.polascin.net';
                 $headers = [
                     'MIME-Version: 1.0',
-                    'Content-Type: text/plain; charset=UTF-8',
+                    'Content-Type: text/html; charset=UTF-8',
                     'From: ' . ($cfg['from_name'] ?: 'Nefro-projekt') . ' <' . $fallbackFrom . '>',
                 ];
                 $sent = @mail($recipientEmail, $subject, $message, implode("\r\n", $headers));

@@ -30,7 +30,7 @@ function getEmailEnvConfig(): array {
     return $config;
 }
 
-function smtpReadResponse($socket): array {
+function smtpReadResponse(resource $socket): array {
     $lines = '';
     $code = 0;
 
@@ -68,7 +68,7 @@ function smtpLogError(string $stage, string $reason, array $context = []): void 
     error_log(implode('; ', $parts));
 }
 
-function smtpSendCommand($socket, string $command, array $expectedCodes, string $stage): array {
+function smtpSendCommand(resource $socket, string $command, array $expectedCodes, string $stage): array {
     if (@fwrite($socket, $command . "\r\n") === false) {
         smtpLogError($stage, 'write_failed', ['expected' => $expectedCodes]);
         return ['ok' => false, 'code' => 0, 'response' => ''];
@@ -87,7 +87,7 @@ function smtpSendCommand($socket, string $command, array $expectedCodes, string 
     return ['ok' => $ok, 'code' => $code, 'response' => $response];
 }
 
-function sendViaSmtp(string $toEmail, string $subject, string $messageBody, array $cfg): bool {
+function sendViaSmtp(string $toEmail, string $subject, string $messageBody, array $cfg, string $contentType = 'text/plain; charset=UTF-8'): bool {
     if ($cfg['smtp_host'] === '' || $cfg['smtp_user'] === '' || $cfg['smtp_pass'] === '' || $cfg['from_email'] === '') {
         return false;
     }
@@ -180,7 +180,7 @@ function sendViaSmtp(string $toEmail, string $subject, string $messageBody, arra
         'To: <' . $toEmail . '>',
         'Subject: ' . $encodedSubject,
         'MIME-Version: 1.0',
-        'Content-Type: text/plain; charset=UTF-8',
+        'Content-Type: ' . $contentType,
         'Content-Transfer-Encoding: 8bit',
         'Date: ' . date(DATE_RFC2822),
     ];
