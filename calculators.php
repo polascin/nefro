@@ -1,69 +1,131 @@
 <?php
-require_once 'auth.php';
-require_once 'db_config.php';
+require_once "auth.php";
+require_once "db_config.php";
 
-header_remove('X-Powered-By');
-header('X-Frame-Options: SAMEORIGIN');
-header('X-Content-Type-Options: nosniff');
-header('Strict-Transport-Security: max-age=31536000; includeSubDomains; preload');
-header('Referrer-Policy: strict-origin-when-cross-origin');
-header('Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=()');
+header_remove("X-Powered-By");
+header("X-Frame-Options: SAMEORIGIN");
+header("X-Content-Type-Options: nosniff");
+header(
+    "Strict-Transport-Security: max-age=31536000; includeSubDomains; preload",
+);
+header("Referrer-Policy: strict-origin-when-cross-origin");
+header(
+    "Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=()",
+);
 
-$csp = "default-src 'self'; "
-  . "img-src 'self' data: https:; "
-  . "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; "
-  . "font-src 'self' https://fonts.gstatic.com; "
-  . "script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com; "
-  . "connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://*.analytics.google.com https://stats.g.doubleclick.net; "
-  . "base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; upgrade-insecure-requests";
-header('Content-Security-Policy: ' . $csp);
+$csp =
+    "default-src 'self'; " .
+    "img-src 'self' data: https:; " .
+    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; " .
+    "font-src 'self' https://fonts.gstatic.com; " .
+    "script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com; " .
+    "connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://*.analytics.google.com https://stats.g.doubleclick.net; " .
+    "base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; upgrade-insecure-requests";
+header("Content-Security-Policy: " . $csp);
 
-$pageLastUpdated = date('d.m.Y H:i', filemtime(__FILE__));
-$pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
+$pageLastUpdated = date("d.m.Y H:i", filemtime(__FILE__));
+$pageTimeZone = date("T") . " (" . date_default_timezone_get() . ")";
 
-$siteName  = 'Nefro-projekt Slovensko';
-$baseUrl   = 'https://nefro.polascin.net/';
-$pageUrl   = $baseUrl . 'calculators.php';
-$pageTitle = 'Nefrologické kalkulačky | ' . $siteName;
-$pageDesc  = 'Klinické kalkulačky pre nefrológiu podľa KDIGO 2024: eGFR (CKD-EPI 2021), KDIGO G/A riziko, KFRE predikcia dialýzy, CKD-PC Grams 2022, IgAN Prediction Tool a Mayo ADPKD klasifikácia. Pre zdravotníckych pracovníkov na Slovensku.';
-$ogImage   = $baseUrl . 'img/nps-logo.gif';
+$siteName = "Nefro-projekt Slovensko";
+$baseUrl = "https://nefro.polascin.net/";
+$pageUrl = $baseUrl . "calculators.php";
+$pageTitle = "Nefrologické kalkulačky | " . $siteName;
+$pageDesc =
+    "Klinické kalkulačky pre nefrológiu podľa KDIGO 2024: eGFR (CKD-EPI 2021), KDIGO G/A riziko, KFRE predikcia dialýzy, CKD-PC Grams 2022, IgAN Prediction Tool a Mayo ADPKD klasifikácia. Pre zdravotníckych pracovníkov na Slovensku.";
+$ogImage = $baseUrl . "img/nps-logo.gif";
 
 $schemaWebApp = [
-  '@context'    => 'https://schema.org',
-  '@type'       => ['WebApplication', 'MedicalWebPage'],
-  'name'        => 'Nefrologické kalkulačky — Nefro-projekt Slovensko',
-  'description' => $pageDesc,
-  'url'         => $pageUrl,
-  'inLanguage'  => 'sk-SK',
-  'applicationCategory' => 'HealthApplication',
-  'operatingSystem'     => 'Web',
-  'medicalSpecialty'    => 'Nephrology',
-  'audience'    => [
-    '@type' => 'MedicalAudience',
-    'audienceType' => 'Clinician',
-  ],
-  'publisher' => [
-    '@type' => 'MedicalOrganization',
-    'name'  => $siteName,
-    'url'   => $baseUrl,
-    'logo'  => ['@type' => 'ImageObject', 'url' => $ogImage],
-  ],
-  'hasPart' => [
-    ['@type' => 'WebApplication', 'name' => 'eGFR kalkulačka (CKD-EPI 2021)',       'url' => $baseUrl . 'calculator_egfr.php'],
-    ['@type' => 'WebApplication', 'name' => 'KDIGO G/A riziko CKD',                  'url' => $baseUrl . 'calculator_kdigo_risk.php'],
-    ['@type' => 'WebApplication', 'name' => 'KFRE — Kidney Failure Risk Equation',   'url' => $baseUrl . 'calculator_kfre.php'],
-    ['@type' => 'WebApplication', 'name' => 'CKD-PC — Grams 2022 (3-ročné riziko)', 'url' => $baseUrl . 'calculator_ckdpc.php'],
-    ['@type' => 'WebApplication', 'name' => 'IgAN Prediction Tool (Barbour 2019)',  'url' => $baseUrl . 'calculator_igan.php'],
-    ['@type' => 'WebApplication', 'name' => 'Mayo ADPKD klasifikácia (Irazabal 2015)', 'url' => $baseUrl . 'calculator_adpkd.php'],
-    ['@type' => 'WebApplication', 'name' => 'FENa / FEUrea (AKI)', 'url' => $baseUrl . 'calculator_aki.php'],
-    ['@type' => 'WebApplication', 'name' => 'Cockcroft-Gault (Klírens kreatinínu)', 'url' => $baseUrl . 'calculator_cg.php'],
-    ['@type' => 'WebApplication', 'name' => 'Korigovaný vápnik pri hypoalbuminémii', 'url' => $baseUrl . 'calculator_ca.php'],
-    ['@type' => 'WebApplication', 'name' => 'Poruchy sodíka a vody', 'url' => $baseUrl . 'calculator_na.php'],
-    ['@type' => 'WebApplication', 'name' => 'Aniónová medzera a Delta Ratio', 'url' => $baseUrl . 'calculator_acidbase.php'],
-    ['@type' => 'WebApplication', 'name' => 'Rýchlosť poklesu eGFR (Slope)', 'url' => $baseUrl . 'calculator_egfr_slope.php'],
-    ['@type' => 'WebApplication', 'name' => 'Kt/V a URR (Adekvátnosť HD)', 'url' => $baseUrl . 'calculator_ktv.php'],
-    ['@type' => 'WebApplication', 'name' => 'UACR a KDIGO klasifikácia', 'url' => $baseUrl . 'calculator_uacr.php'],
-  ],
+    "@context" => "https://schema.org",
+    "@type" => ["WebApplication", "MedicalWebPage"],
+    "name" => "Nefrologické kalkulačky — Nefro-projekt Slovensko",
+    "description" => $pageDesc,
+    "url" => $pageUrl,
+    "inLanguage" => "sk-SK",
+    "applicationCategory" => "HealthApplication",
+    "operatingSystem" => "Web",
+    "medicalSpecialty" => "Nephrology",
+    "audience" => [
+        "@type" => "MedicalAudience",
+        "audienceType" => "Clinician",
+    ],
+    "publisher" => [
+        "@type" => "MedicalOrganization",
+        "name" => $siteName,
+        "url" => $baseUrl,
+        "logo" => ["@type" => "ImageObject", "url" => $ogImage],
+    ],
+    "hasPart" => [
+        [
+            "@type" => "WebApplication",
+            "name" => "eGFR kalkulačka (CKD-EPI 2021)",
+            "url" => $baseUrl . "calculator_egfr.php",
+        ],
+        [
+            "@type" => "WebApplication",
+            "name" => "KDIGO G/A riziko CKD",
+            "url" => $baseUrl . "calculator_kdigo_risk.php",
+        ],
+        [
+            "@type" => "WebApplication",
+            "name" => "KFRE — Kidney Failure Risk Equation",
+            "url" => $baseUrl . "calculator_kfre.php",
+        ],
+        [
+            "@type" => "WebApplication",
+            "name" => "CKD-PC — Grams 2022 (3-ročné riziko)",
+            "url" => $baseUrl . "calculator_ckdpc.php",
+        ],
+        [
+            "@type" => "WebApplication",
+            "name" => "IgAN Prediction Tool (Barbour 2019)",
+            "url" => $baseUrl . "calculator_igan.php",
+        ],
+        [
+            "@type" => "WebApplication",
+            "name" => "Mayo ADPKD klasifikácia (Irazabal 2015)",
+            "url" => $baseUrl . "calculator_adpkd.php",
+        ],
+        [
+            "@type" => "WebApplication",
+            "name" => "FENa / FEUrea (AKI)",
+            "url" => $baseUrl . "calculator_aki.php",
+        ],
+        [
+            "@type" => "WebApplication",
+            "name" => "Cockcroft-Gault (Klírens kreatinínu)",
+            "url" => $baseUrl . "calculator_cg.php",
+        ],
+        [
+            "@type" => "WebApplication",
+            "name" => "Korigovaný vápnik pri hypoalbuminémii",
+            "url" => $baseUrl . "calculator_ca.php",
+        ],
+        [
+            "@type" => "WebApplication",
+            "name" => "Poruchy sodíka a vody",
+            "url" => $baseUrl . "calculator_na.php",
+        ],
+        [
+            "@type" => "WebApplication",
+            "name" => "Aniónová medzera a Delta Ratio",
+            "url" => $baseUrl . "calculator_acidbase.php",
+        ],
+        [
+            "@type" => "WebApplication",
+            "name" => "Rýchlosť poklesu eGFR (Slope)",
+            "url" => $baseUrl . "calculator_egfr_slope.php",
+        ],
+        [
+            "@type" => "WebApplication",
+            "name" => "Kt/V a URR (Adekvátnosť HD)",
+            "url" => $baseUrl . "calculator_ktv.php",
+        ],
+        [
+            "@type" => "WebApplication",
+            "name" => "UACR a KDIGO klasifikácia",
+            "url" => $baseUrl . "calculator_uacr.php",
+        ],
+    ],
 ];
 ?>
 <!DOCTYPE html>
@@ -72,35 +134,36 @@ $schemaWebApp = [
   <?php
   // Mapovanie premenných pre head_meta.php
   $seoDescription = $pageDesc;
-  $seoKeywords = "eGFR kalkulačka, KDIGO 2024, CKD riziko, KFRE, CKD-PC, nefrológia, chronické ochorenie obličiek, Slovensko";
+  $seoKeywords =
+      "eGFR kalkulačka, KDIGO 2024, CKD riziko, KFRE, CKD-PC, nefrológia, chronické ochorenie obličiek, Slovensko";
   $canonicalUrl = $pageUrl;
-  
+
   $structuredData = [];
   if (isset($schemaWebApp)) {
       $structuredData[] = $schemaWebApp;
   }
-  
+
   // Pridanie Breadcrumbs
   $structuredData[] = [
-      '@context' => 'https://schema.org',
-      '@type' => 'BreadcrumbList',
-      'itemListElement' => [
+      "@context" => "https://schema.org",
+      "@type" => "BreadcrumbList",
+      "itemListElement" => [
           [
-              '@type' => 'ListItem',
-              'position' => 1,
-              'name' => 'Domov',
-              'item' => $baseUrl
+              "@type" => "ListItem",
+              "position" => 1,
+              "name" => "Domov",
+              "item" => $baseUrl,
           ],
           [
-              '@type' => 'ListItem',
-              'position' => 2,
-              'name' => 'Kalkulačky',
-              'item' => $pageUrl
-          ]
-      ]
+              "@type" => "ListItem",
+              "position" => 2,
+              "name" => "Kalkulačky",
+              "item" => $pageUrl,
+          ],
+      ],
   ];
 
-  include 'head_meta.php';
+  include "head_meta.php";
   ?>
 </head>
 
@@ -108,10 +171,10 @@ $schemaWebApp = [
     <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>
 
     <?php
-    $headerTitle = 'Nefrologické kalkulačky';
-    $headerIntro = '';
+    $headerTitle = "Nefrologické kalkulačky";
+    $headerIntro = "";
     $showLogo = false;
-    include 'header.php';
+    include "header.php";
     ?>
 
     <nav class="main-nav" aria-label="Hlavná navigácia">
@@ -126,12 +189,15 @@ $schemaWebApp = [
                 <li><a href="index.php#o-nas">O nás</a></li>
                 <li><a href="index.php#kontakt">Kontakt</a></li>
                 <li><a href="calculators.php" class="active" aria-current="page">Kalkulačky</a></li>
+                <li><a href="search.php">Vyhľadávanie</a></li>
                 <?php if (isLoggedIn()): ?>
                     <?php if (isAdmin()): ?>
                         <li><a href="admin.php">Admin panel</a></li>
                         <li><a href="admin_articles.php">Správa článkov</a></li>
                     <?php endif; ?>
-                    <li><a href="logout.php">Odhlásiť sa (<?= htmlspecialchars($_SESSION['username'] ?? 'Profil') ?>)</a></li>
+                    <li><a href="logout.php">Odhlásiť sa (<?= htmlspecialchars(
+                        $_SESSION["username"] ?? "Profil",
+                    ) ?>)</a></li>
                 <?php else: ?>
                     <li><a href="login.php">Prihlásenie</a></li>
                     <li><a href="register.php">Registrácia</a></li>
@@ -278,6 +344,6 @@ $schemaWebApp = [
         </div>
     </main>
 
-    <?php include 'footer.php'; ?>
+    <?php include "footer.php"; ?>
 </body>
 </html>

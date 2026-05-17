@@ -3075,3 +3075,211 @@ input:disabled + .slider:before {
 [data-theme="dark"] .calculator-hero__img {
     filter: brightness(0.9) contrast(1.1);
 }
+
+/* ============================================================
+   VYHĽADÁVANIE — search.php
+   ============================================================ */
+
+/* Highlight vyhľadaných výrazov v snippetoch a nadpisoch */
+mark.search-hl {
+    background: rgba(37, 99, 235, 0.13);
+    color: var(--text-primary);
+    font-style: normal;
+    font-weight: 700;
+    border-radius: 2px;
+    padding: 0 2px;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+}
+[data-theme="dark"] mark.search-hl {
+    background: rgba(96, 165, 250, 0.22);
+}
+
+/* Formulár vyhľadávania */
+.search-form-wrap {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 2rem;
+    align-items: stretch;
+}
+.search-input {
+    flex: 1;
+    padding: 0.875rem 1rem;
+    border: 1px solid #94a3b8;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    transition:
+        border-color 0.2s,
+        box-shadow 0.2s;
+    min-width: 0;
+}
+.search-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.18);
+}
+[data-theme="dark"] .search-input {
+    background: #0b1220;
+    border-color: #475569;
+}
+.search-btn {
+    padding: 0.875rem 1.5rem;
+    background: var(--primary-gradient);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: var(--transition-fast);
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    min-height: 44px;
+}
+.search-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-glow);
+}
+
+/* Meta lišta výsledkov */
+.search-meta {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+.search-meta__count {
+    font-weight: 700;
+    color: var(--text-primary);
+}
+.search-meta__time {
+    color: var(--text-tertiary);
+    font-size: 0.8rem;
+}
+.search-meta__term {
+    background: rgba(37, 99, 235, 0.09);
+    color: var(--primary-color);
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+/* Výsledok vyhľadávania */
+.search-result {
+    padding: 18px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+.search-result:last-child {
+    border-bottom: none;
+}
+.search-result__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-decoration: none;
+    line-height: 1.4;
+    display: block;
+    margin-bottom: 4px;
+    transition: color 0.15s;
+}
+.search-result__title:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+.search-result__meta {
+    font-size: 0.78rem;
+    color: var(--text-tertiary);
+    margin-bottom: 7px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+}
+.search-result__field-badge {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 1px 6px;
+    border-radius: 3px;
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--primary-color);
+}
+.search-result__snippet {
+    color: var(--text-secondary);
+    font-size: 0.91rem;
+    line-height: 1.65;
+}
+
+/* Prázdny stav / nulové výsledky */
+.search-empty {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: var(--text-secondary);
+}
+.search-empty__icon {
+    font-size: 2.8rem;
+    margin-bottom: 0.75rem;
+    opacity: 0.5;
+}
+.search-empty__title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+.search-empty__text {
+    font-size: 0.95rem;
+    max-width: 440px;
+    margin: 0 auto 1.5rem;
+}
+
+/* Stránkovanie výsledkov */
+.search-pagination {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responzivita */
+@media (max-width: 480px) {
+    .search-form-wrap {
+        flex-direction: column;
+    }
+    .search-btn {
+        justify-content: center;
+    }
+    .search-meta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media print {
+    .search-form-wrap,
+    .search-pagination {
+        display: none;
+    }
+    mark.search-hl {
+        background: transparent;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+}

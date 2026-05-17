@@ -1,38 +1,38 @@
 <?php
-require_once 'auth.php';
-require_once 'db_config.php';
-require_once __DIR__ . '/newsletter_notifications.php';
+require_once "auth.php";
+require_once "db_config.php";
+require_once __DIR__ . "/newsletter_notifications.php";
 
 requireAdmin();
 
-$currentAdminId    = (int) ($_SESSION['user_id'] ?? 0);
-$actionResult      = null;   // vždy plain text — escapuje sa cez htmlspecialchars() pri výpise
-$actionResultLink  = null;   // voliteľný HTML odkaz, konštruovaný výhradne z in-cast hodnôt (int IDs)
-$actionError       = null;
-$editArticle    = null;
-$queueSummary   = [
-  'pending' => 0,
-  'failed' => 0,
-  'sent' => 0,
-  'cancelled' => 0,
-  'due_now' => 0,
-  'total' => 0,
+$currentAdminId = (int) ($_SESSION["user_id"] ?? 0);
+$actionResult = null; // vždy plain text — escapuje sa cez htmlspecialchars() pri výpise
+$actionResultLink = null; // voliteľný HTML odkaz, konštruovaný výhradne z in-cast hodnôt (int IDs)
+$actionError = null;
+$editArticle = null;
+$queueSummary = [
+    "pending" => 0,
+    "failed" => 0,
+    "sent" => 0,
+    "cancelled" => 0,
+    "due_now" => 0,
+    "total" => 0,
 ];
 $articleQueueStats = [];
 $queueRecent = [];
-$queueFilterStatus = strtolower(trim((string) ($_GET['q_status'] ?? '')));
-$queueFilterArticleId = max(0, (int) ($_GET['q_article_id'] ?? 0));
-$queuePreset = strtolower(trim((string) ($_GET['q_preset'] ?? '')));
-$queueAllowedStatuses = ['pending', 'failed', 'sent', 'cancelled'];
+$queueFilterStatus = strtolower(trim((string) ($_GET["q_status"] ?? "")));
+$queueFilterArticleId = max(0, (int) ($_GET["q_article_id"] ?? 0));
+$queuePreset = strtolower(trim((string) ($_GET["q_preset"] ?? "")));
+$queueAllowedStatuses = ["pending", "failed", "sent", "cancelled"];
 if (!in_array($queueFilterStatus, $queueAllowedStatuses, true)) {
-  $queueFilterStatus = '';
+    $queueFilterStatus = "";
 }
-if (!in_array($queuePreset, ['', 'unsent', 'due_now'], true)) {
-  $queuePreset = '';
+if (!in_array($queuePreset, ["", "unsent", "due_now"], true)) {
+    $queuePreset = "";
 }
-if ($queueFilterStatus !== '') {
-  // Pri manuálnom výbere stavu má explicitný filter prednosť pred presetom.
-  $queuePreset = '';
+if ($queueFilterStatus !== "") {
+    // Pri manuálnom výbere stavu má explicitný filter prednosť pred presetom.
+    $queuePreset = "";
 }
 
 // ── Pomocné funkcie ───────────────────────────────────────────────────────────
@@ -41,17 +41,48 @@ if ($queueFilterStatus !== '') {
  * Generuje URL-friendly slug z titulku článku.
  * Translit. diakritiky, malé písmená, pomlčky namiesto medzier a spec. znakov.
  */
-function generateSlug(string $title): string {
+function generateSlug(string $title): string
+{
     $map = [
-        'á'=>'a','ä'=>'a','č'=>'c','ď'=>'d','é'=>'e','í'=>'i','ĺ'=>'l','ľ'=>'l',
-        'ň'=>'n','ó'=>'o','ô'=>'o','ŕ'=>'r','š'=>'s','ť'=>'t','ú'=>'u','ý'=>'y','ž'=>'z',
-        'Á'=>'a','Ä'=>'a','Č'=>'c','Ď'=>'d','É'=>'e','Í'=>'i','Ĺ'=>'l','Ľ'=>'l',
-        'Ň'=>'n','Ó'=>'o','Ô'=>'o','Ŕ'=>'r','Š'=>'s','Ť'=>'t','Ú'=>'u','Ý'=>'y','Ž'=>'z',
+        "á" => "a",
+        "ä" => "a",
+        "č" => "c",
+        "ď" => "d",
+        "é" => "e",
+        "í" => "i",
+        "ĺ" => "l",
+        "ľ" => "l",
+        "ň" => "n",
+        "ó" => "o",
+        "ô" => "o",
+        "ŕ" => "r",
+        "š" => "s",
+        "ť" => "t",
+        "ú" => "u",
+        "ý" => "y",
+        "ž" => "z",
+        "Á" => "a",
+        "Ä" => "a",
+        "Č" => "c",
+        "Ď" => "d",
+        "É" => "e",
+        "Í" => "i",
+        "Ĺ" => "l",
+        "Ľ" => "l",
+        "Ň" => "n",
+        "Ó" => "o",
+        "Ô" => "o",
+        "Ŕ" => "r",
+        "Š" => "s",
+        "Ť" => "t",
+        "Ú" => "u",
+        "Ý" => "y",
+        "Ž" => "z",
     ];
     $title = strtr($title, $map);
     $title = strtolower($title);
-    $title = preg_replace('/[^a-z0-9]+/', '-', $title) ?? '';
-    $title = trim($title, '-');
+    $title = preg_replace("/[^a-z0-9]+/", "-", $title) ?? "";
+    $title = trim($title, "-");
     return mb_substr($title, 0, 200);
 }
 
@@ -59,351 +90,562 @@ function generateSlug(string $title): string {
  * Zabezpečí unikátnosť slugu v DB.
  * Ak slug existuje, pripojí -2, -3, atď.
  */
-function uniqueSlug(PDO $pdo, string $slug, int $excludeId = 0): string {
-    $base  = $slug;
-    $n     = 2;
+function uniqueSlug(PDO $pdo, string $slug, int $excludeId = 0): string
+{
+    $base = $slug;
+    $n = 2;
     while (true) {
-        $stmt = $pdo->prepare("SELECT id FROM articles WHERE slug = :slug AND id != :id LIMIT 1");
-        $stmt->execute(['slug' => $slug, 'id' => $excludeId]);
+        $stmt = $pdo->prepare(
+            "SELECT id FROM articles WHERE slug = :slug AND id != :id LIMIT 1",
+        );
+        $stmt->execute(["slug" => $slug, "id" => $excludeId]);
         if ($stmt->fetch() === false) {
             return $slug;
         }
-        $slug = $base . '-' . $n;
+        $slug = $base . "-" . $n;
         $n++;
     }
 }
 
-    function normalizeExcerptText(string $text): string {
-      $decoded = html_entity_decode($text, ENT_QUOTES | ENT_HTML5, 'UTF-8');
-      $stripped = strip_tags($decoded);
-      $normalized = preg_replace('/\s+/u', ' ', $stripped) ?? $stripped;
-      return trim($normalized);
-    }
+function normalizeExcerptText(string $text): string
+{
+    $decoded = html_entity_decode($text, ENT_QUOTES | ENT_HTML5, "UTF-8");
+    $stripped = strip_tags($decoded);
+    $normalized = preg_replace("/\s+/u", " ", $stripped) ?? $stripped;
+    return trim($normalized);
+}
 
-    function shortenTextAtWordBoundary(string $text, int $maxLen): string {
-      if (mb_strlen($text) <= $maxLen) {
+function shortenTextAtWordBoundary(string $text, int $maxLen): string
+{
+    if (mb_strlen($text) <= $maxLen) {
         return $text;
-      }
-      $slice = mb_substr($text, 0, $maxLen + 1);
-      $slice = preg_replace('/\s+\S*$/u', '', $slice) ?? $slice;
-      $slice = rtrim($slice, " \t\n\r\0\x0B,.;:-");
-      return $slice . '…';
     }
+    $slice = mb_substr($text, 0, $maxLen + 1);
+    $slice = preg_replace('/\s+\S*$/u', "", $slice) ?? $slice;
+    $slice = rtrim($slice, " \t\n\r\0\x0B,.;:-");
+    return $slice . "…";
+}
 
-    function optimizeExcerptForSeo(string $excerpt, string $content, int $maxLen = 220): string {
-      $candidate = normalizeExcerptText($excerpt);
-      if ($candidate === '') {
+function optimizeExcerptForSeo(
+    string $excerpt,
+    string $content,
+    int $maxLen = 220,
+): string {
+    $candidate = normalizeExcerptText($excerpt);
+    if ($candidate === "") {
         $candidate = normalizeExcerptText($content);
-      }
-      if ($candidate === '') {
-        return '';
-      }
-      return shortenTextAtWordBoundary($candidate, $maxLen);
     }
-
-$csrfToken = generateCsrfToken();
+    if ($candidate === "") {
+        return "";
+    }
+    return shortenTextAtWordBoundary($candidate, $maxLen);
+}
 
 // ── Spracovanie POST akcií ────────────────────────────────────────────────────
-if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
-    $postedCsrf = $_POST['csrf_token'] ?? '';
+if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
+    $postedCsrf = $_POST["csrf_token"] ?? "";
     if (!validateCsrfToken($postedCsrf)) {
-        $actionError = 'Neplatný CSRF token.';
+        $actionError = "Neplatný CSRF token.";
     } else {
-        $action = $_POST['action'] ?? '';
+        $action = $_POST["action"] ?? "";
 
         switch ($action) {
             // ── CREATE ──────────────────────────────────────────────────────
-            case 'create':
-                $title      = trim((string) ($_POST['title'] ?? ''));
-                $slug       = trim((string) ($_POST['slug'] ?? ''));
-                $author     = trim((string) ($_POST['author'] ?? 'Dr. Ľubomír Polaščín'));
-                $content    = trim((string) ($_POST['content'] ?? ''));
-                $excerpt    = trim((string) ($_POST['excerpt'] ?? ''));
-                $pubAt      = trim((string) ($_POST['published_at'] ?? ''));
-                $isTop      = isset($_POST['is_top']) ? 1 : 0;
-                $isPub      = isset($_POST['is_published']) ? 1 : 0;
+            case "create":
+                $title = trim((string) ($_POST["title"] ?? ""));
+                $slug = trim((string) ($_POST["slug"] ?? ""));
+                $author = trim(
+                    (string) ($_POST["author"] ?? "Dr. Ľubomír Polaščín"),
+                );
+                $content = trim((string) ($_POST["content"] ?? ""));
+                $excerpt = trim((string) ($_POST["excerpt"] ?? ""));
+                $pubAt = trim((string) ($_POST["published_at"] ?? ""));
+                $isTop = isset($_POST["is_top"]) ? 1 : 0;
+                $isPub = isset($_POST["is_published"]) ? 1 : 0;
 
                 $excerpt = optimizeExcerptForSeo($excerpt, $content, 220);
 
-                if ($title === '') { $actionError = 'Titulok je povinný.'; break; }
-                if ($content === '') { $actionError = 'Obsah článku je povinný.'; break; }
-                if ($excerpt === '') { $actionError = 'Perex sa nepodarilo vytvoriť. Doplňte obsah článku alebo perex manuálne.'; break; }
-                if ($pubAt === '' || !preg_match('/^\d{4}-\d{2}-\d{2}/', $pubAt)) {
-                    $actionError = 'Dátum publikácie je neplatný.'; break;
+                if ($title === "") {
+                    $actionError = "Titulok je povinný.";
+                    break;
+                }
+                if ($content === "") {
+                    $actionError = "Obsah článku je povinný.";
+                    break;
+                }
+                if ($excerpt === "") {
+                    $actionError =
+                        "Perex sa nepodarilo vytvoriť. Doplňte obsah článku alebo perex manuálne.";
+                    break;
+                }
+                if (
+                    $pubAt === "" ||
+                    !preg_match("/^\d{4}-\d{2}-\d{2}/", $pubAt)
+                ) {
+                    $actionError = "Dátum publikácie je neplatný.";
+                    break;
                 }
                 // Automatický slug ak prázdny
-                if ($slug === '') { $slug = generateSlug($title); }
-                $slug = preg_replace('/[^a-z0-9\-]/', '', strtolower($slug)) ?? '';
+                if ($slug === "") {
+                    $slug = generateSlug($title);
+                }
+                $slug =
+                    preg_replace("/[^a-z0-9\-]/", "", strtolower($slug)) ?? "";
                 $slug = uniqueSlug($pdo, $slug);
 
                 try {
                     $stmt = $pdo->prepare(
                         "INSERT INTO articles (title, slug, author, content, excerpt, published_at, is_top, is_published)
-                         VALUES (:title,:slug,:author,:content,:excerpt,:published_at,:is_top,:is_published)"
+                         VALUES (:title,:slug,:author,:content,:excerpt,:published_at,:is_top,:is_published)",
                     );
                     $stmt->execute([
-                        'title'        => $title,
-                        'slug'         => $slug,
-                        'author'       => $author !== '' ? $author : 'Dr. Ľubomír Polaščín',
-                        'content'      => $content,
-                        'excerpt'      => $excerpt,
-                        'published_at' => $pubAt,
-                        'is_top'       => $isTop,
-                        'is_published' => $isPub,
+                        "title" => $title,
+                        "slug" => $slug,
+                        "author" =>
+                            $author !== "" ? $author : "Dr. Ľubomír Polaščín",
+                        "content" => $content,
+                        "excerpt" => $excerpt,
+                        "published_at" => $pubAt,
+                        "is_top" => $isTop,
+                        "is_published" => $isPub,
                     ]);
-                    $newId        = (int) $pdo->lastInsertId();
-                    $actionResult     = 'Článok bol úspešne vytvorený.';
-                    $actionResultLink = '<a href="article.php?id=' . $newId . '" target="_blank" rel="noopener">Zobraziť →</a>';
+                    $newId = (int) $pdo->lastInsertId();
+                    $actionResult = "Článok bol úspešne vytvorený.";
+                    $actionResultLink =
+                        '<a href="article.php?id=' .
+                        $newId .
+                        '" target="_blank" rel="noopener">Zobraziť →</a>';
 
                     if ($isPub === 1) {
-                      try {
-                        $queuedCount = enqueueArticleNewsletterEmails($pdo, $newId);
-                        $actionResult .= ' Do fronty noviniek bolo zaradených ' . $queuedCount . ' e-mailov.';
-                      } catch (\Throwable $queueError) {
-                        error_log('admin_articles create newsletter enqueue error: ' . $queueError->getMessage());
-                        $actionResult .= ' Článok bol uložený, ale novinky sa nepodarilo zaradiť do fronty.';
-                      }
+                        try {
+                            $queuedCount = enqueueArticleNewsletterEmails(
+                                $pdo,
+                                $newId,
+                            );
+                            $actionResult .=
+                                " Do fronty noviniek bolo zaradených " .
+                                $queuedCount .
+                                " e-mailov.";
+                        } catch (\Throwable $queueError) {
+                            error_log(
+                                "admin_articles create newsletter enqueue error: " .
+                                    $queueError->getMessage(),
+                            );
+                            $actionResult .=
+                                " Článok bol uložený, ale novinky sa nepodarilo zaradiť do fronty.";
+                        }
                     }
                 } catch (\PDOException $e) {
-                    error_log('admin_articles create error: ' . $e->getMessage());
-                    $actionError = 'Chyba pri ukladaní článku.';
+                    error_log(
+                        "admin_articles create error: " . $e->getMessage(),
+                    );
+                    $actionError = "Chyba pri ukladaní článku.";
                 }
                 break;
 
             // ── UPDATE ──────────────────────────────────────────────────────
-            case 'update':
-                $id         = (int) ($_POST['article_id'] ?? 0);
-                $title      = trim((string) ($_POST['title'] ?? ''));
-                $slug       = trim((string) ($_POST['slug'] ?? ''));
-                $author     = trim((string) ($_POST['author'] ?? ''));
-                $content    = trim((string) ($_POST['content'] ?? ''));
-                $excerpt    = trim((string) ($_POST['excerpt'] ?? ''));
-                $pubAt      = trim((string) ($_POST['published_at'] ?? ''));
-                $isTop      = isset($_POST['is_top']) ? 1 : 0;
-                $isPub      = isset($_POST['is_published']) ? 1 : 0;
+            case "update":
+                $id = (int) ($_POST["article_id"] ?? 0);
+                $title = trim((string) ($_POST["title"] ?? ""));
+                $slug = trim((string) ($_POST["slug"] ?? ""));
+                $author = trim((string) ($_POST["author"] ?? ""));
+                $content = trim((string) ($_POST["content"] ?? ""));
+                $excerpt = trim((string) ($_POST["excerpt"] ?? ""));
+                $pubAt = trim((string) ($_POST["published_at"] ?? ""));
+                $isTop = isset($_POST["is_top"]) ? 1 : 0;
+                $isPub = isset($_POST["is_published"]) ? 1 : 0;
 
                 $excerpt = optimizeExcerptForSeo($excerpt, $content, 220);
 
-                if ($id <= 0)     { $actionError = 'Neplatné ID článku.'; break; }
-                if ($title === '') { $actionError = 'Titulok je povinný.'; break; }
-                if ($content === '') { $actionError = 'Obsah článku je povinný.'; break; }
-                if ($excerpt === '') { $actionError = 'Perex sa nepodarilo vytvoriť. Doplňte obsah článku alebo perex manuálne.'; break; }
-                if ($pubAt === '' || !preg_match('/^\d{4}-\d{2}-\d{2}/', $pubAt)) {
-                    $actionError = 'Dátum publikácie je neplatný.'; break;
+                if ($id <= 0) {
+                    $actionError = "Neplatné ID článku.";
+                    break;
+                }
+                if ($title === "") {
+                    $actionError = "Titulok je povinný.";
+                    break;
+                }
+                if ($content === "") {
+                    $actionError = "Obsah článku je povinný.";
+                    break;
+                }
+                if ($excerpt === "") {
+                    $actionError =
+                        "Perex sa nepodarilo vytvoriť. Doplňte obsah článku alebo perex manuálne.";
+                    break;
+                }
+                if (
+                    $pubAt === "" ||
+                    !preg_match("/^\d{4}-\d{2}-\d{2}/", $pubAt)
+                ) {
+                    $actionError = "Dátum publikácie je neplatný.";
+                    break;
                 }
 
-                if ($slug === '') { $slug = generateSlug($title); }
-                $slug = preg_replace('/[^a-z0-9\-]/', '', strtolower($slug)) ?? '';
+                if ($slug === "") {
+                    $slug = generateSlug($title);
+                }
+                $slug =
+                    preg_replace("/[^a-z0-9\-]/", "", strtolower($slug)) ?? "";
                 $slug = uniqueSlug($pdo, $slug, $id);
 
                 $previousPublished = null;
                 try {
-                  $prevStmt = $pdo->prepare("SELECT is_published FROM articles WHERE id = :id LIMIT 1");
-                  $prevStmt->execute(['id' => $id]);
-                  $prevRow = $prevStmt->fetch();
-                  if (!$prevRow) {
-                    $actionError = 'Článok nenájdený.';
-                    break;
-                  }
-                  $previousPublished = (int) ($prevRow['is_published'] ?? 0);
+                    $prevStmt = $pdo->prepare(
+                        "SELECT is_published FROM articles WHERE id = :id LIMIT 1",
+                    );
+                    $prevStmt->execute(["id" => $id]);
+                    $prevRow = $prevStmt->fetch();
+                    if (!$prevRow) {
+                        $actionError = "Článok nenájdený.";
+                        break;
+                    }
+                    $previousPublished = (int) ($prevRow["is_published"] ?? 0);
                 } catch (\PDOException $e) {
-                  error_log('admin_articles update prev state error: ' . $e->getMessage());
-                  $actionError = 'Chyba pri načítaní článku.';
-                  break;
+                    error_log(
+                        "admin_articles update prev state error: " .
+                            $e->getMessage(),
+                    );
+                    $actionError = "Chyba pri načítaní článku.";
+                    break;
                 }
 
                 try {
                     $stmt = $pdo->prepare(
                         "UPDATE articles SET title=:title, slug=:slug, author=:author, content=:content,
                          excerpt=:excerpt, published_at=:published_at, is_top=:is_top, is_published=:is_published
-                         WHERE id=:id"
+                         WHERE id=:id",
                     );
                     $stmt->execute([
-                        'title'        => $title,
-                        'slug'         => $slug,
-                        'author'       => $author !== '' ? $author : 'Dr. Ľubomír Polaščín',
-                        'content'      => $content,
-                        'excerpt'      => $excerpt,
-                        'published_at' => $pubAt,
-                        'is_top'       => $isTop,
-                        'is_published' => $isPub,
-                        'id'           => $id,
+                        "title" => $title,
+                        "slug" => $slug,
+                        "author" =>
+                            $author !== "" ? $author : "Dr. Ľubomír Polaščín",
+                        "content" => $content,
+                        "excerpt" => $excerpt,
+                        "published_at" => $pubAt,
+                        "is_top" => $isTop,
+                        "is_published" => $isPub,
+                        "id" => $id,
                     ]);
-                    $actionResult     = 'Článok bol úspešne aktualizovaný.';
-                    $actionResultLink = '<a href="article.php?id=' . $id . '" target="_blank" rel="noopener">Zobraziť →</a>';
+                    $actionResult = "Článok bol úspešne aktualizovaný.";
+                    $actionResultLink =
+                        '<a href="article.php?id=' .
+                        $id .
+                        '" target="_blank" rel="noopener">Zobraziť →</a>';
 
                     try {
-                      if ($previousPublished === 0 && $isPub === 1) {
-                        $queuedCount = enqueueArticleNewsletterEmails($pdo, $id);
-                        $actionResult .= ' Do fronty noviniek bolo zaradených ' . $queuedCount . ' e-mailov.';
-                      } elseif ($previousPublished === 1 && $isPub === 0) {
-                        $cancelledCount = cancelPendingArticleNewsletter($pdo, $id);
-                        if ($cancelledCount > 0) {
-                          $actionResult .= ' Z fronty noviniek bolo zrušených ' . $cancelledCount . ' čakajúcich e-mailov.';
+                        if ($previousPublished === 0 && $isPub === 1) {
+                            $queuedCount = enqueueArticleNewsletterEmails(
+                                $pdo,
+                                $id,
+                            );
+                            $actionResult .=
+                                " Do fronty noviniek bolo zaradených " .
+                                $queuedCount .
+                                " e-mailov.";
+                        } elseif ($previousPublished === 1 && $isPub === 0) {
+                            $cancelledCount = cancelPendingArticleNewsletter(
+                                $pdo,
+                                $id,
+                            );
+                            if ($cancelledCount > 0) {
+                                $actionResult .=
+                                    " Z fronty noviniek bolo zrušených " .
+                                    $cancelledCount .
+                                    " čakajúcich e-mailov.";
+                            }
                         }
-                      }
                     } catch (\Throwable $queueError) {
-                      error_log('admin_articles update newsletter queue error: ' . $queueError->getMessage());
-                      $actionResult .= ' Aktualizácia prebehla, ale správa fronty noviniek zlyhala.';
+                        error_log(
+                            "admin_articles update newsletter queue error: " .
+                                $queueError->getMessage(),
+                        );
+                        $actionResult .=
+                            " Aktualizácia prebehla, ale správa fronty noviniek zlyhala.";
                     }
                 } catch (\PDOException $e) {
-                    error_log('admin_articles update error: ' . $e->getMessage());
-                    $actionError = 'Chyba pri aktualizácii článku.';
+                    error_log(
+                        "admin_articles update error: " . $e->getMessage(),
+                    );
+                    $actionError = "Chyba pri aktualizácii článku.";
                 }
                 break;
 
-              // ── NEWSLETTER: MANUÁLNE AVÍZO PRE ČLÁNOK ───────────────────
-              case 'enqueue_newsletter':
-                $id = (int) ($_POST['article_id'] ?? 0);
-                if ($id <= 0) { $actionError = 'Neplatné ID článku.'; break; }
+            // ── NEWSLETTER: MANUÁLNE AVÍZO PRE ČLÁNOK ───────────────────
+            case "enqueue_newsletter":
+                $id = (int) ($_POST["article_id"] ?? 0);
+                if ($id <= 0) {
+                    $actionError = "Neplatné ID článku.";
+                    break;
+                }
                 try {
-                  $result = enqueueArticleNewsletterEmailsNow($pdo, $id);
-                  if (($result['total'] ?? 0) > 0) {
-                    $actionResult = 'Avízo bolo ručne zaradené pre článok. Počet príjemcov vo fronte: ' . (int) $result['total'] . '.';
-                  } else {
-                    $actionError = 'Avízo sa nepodarilo zaradiť. Skontrolujte, či je článok zverejnený.';
-                  }
+                    $result = enqueueArticleNewsletterEmailsNow($pdo, $id);
+                    if (($result["total"] ?? 0) > 0) {
+                        $actionResult =
+                            "Avízo bolo ručne zaradené pre článok. Počet príjemcov vo fronte: " .
+                            (int) $result["total"] .
+                            ".";
+                    } else {
+                        $actionError =
+                            "Avízo sa nepodarilo zaradiť. Skontrolujte, či je článok zverejnený.";
+                    }
                 } catch (\Throwable $e) {
-                  error_log('admin_articles enqueue_newsletter error: ' . $e->getMessage());
-                  $actionError = 'Chyba pri ručnom zaradení avíza.';
+                    error_log(
+                        "admin_articles enqueue_newsletter error: " .
+                            $e->getMessage(),
+                    );
+                    $actionError = "Chyba pri ručnom zaradení avíza.";
                 }
                 break;
 
-              // ── NEWSLETTER: ZNOVU ZARADIŤ NEODOSLANÉ ───────────────────
-              case 'requeue_failed_newsletter':
-                $id = (int) ($_POST['article_id'] ?? 0);
-                if ($id <= 0) { $actionError = 'Neplatné ID článku.'; break; }
+            // ── NEWSLETTER: ZNOVU ZARADIŤ NEODOSLANÉ ───────────────────
+            case "requeue_failed_newsletter":
+                $id = (int) ($_POST["article_id"] ?? 0);
+                if ($id <= 0) {
+                    $actionError = "Neplatné ID článku.";
+                    break;
+                }
                 try {
-                  $requeuedCount = requeueFailedArticleNewsletter($pdo, $id);
-                  if ($requeuedCount > 0) {
-                    $actionResult = 'Neodoslané avíza boli znovu zaradené do fronty. Počet: ' . $requeuedCount . '.';
-                  } else {
-                    $actionError = 'Pre tento článok neboli nájdené neodoslané avíza na znovuzaradenie.';
-                  }
+                    $requeuedCount = requeueFailedArticleNewsletter($pdo, $id);
+                    if ($requeuedCount > 0) {
+                        $actionResult =
+                            "Neodoslané avíza boli znovu zaradené do fronty. Počet: " .
+                            $requeuedCount .
+                            ".";
+                    } else {
+                        $actionError =
+                            "Pre tento článok neboli nájdené neodoslané avíza na znovuzaradenie.";
+                    }
                 } catch (\Throwable $e) {
-                  error_log('admin_articles requeue_failed_newsletter error: ' . $e->getMessage());
-                  $actionError = 'Chyba pri znovuzaradení neodoslaných avíz.';
+                    error_log(
+                        "admin_articles requeue_failed_newsletter error: " .
+                            $e->getMessage(),
+                    );
+                    $actionError = "Chyba pri znovuzaradení neodoslaných avíz.";
                 }
                 break;
 
-              // ── NEWSLETTER: ODOSLAŤ DUE NOW POLOŽKY ───────────────────
-              case 'send_newsletter_queue':
-                $limit = (int) ($_POST['send_limit'] ?? 50);
+            // ── NEWSLETTER: ODOSLAŤ DUE NOW POLOŽKY ───────────────────
+            case "send_newsletter_queue":
+                $limit = (int) ($_POST["send_limit"] ?? 50);
                 $limit = max(1, min(200, $limit));
                 try {
-                  $stats = processArticleNewsletterQueue($pdo, $limit, 5);
-                  $selected = (int) ($stats['selected'] ?? 0);
-                  $sent = (int) ($stats['sent'] ?? 0);
-                  $failed = (int) ($stats['failed'] ?? 0);
-                  $cancelled = (int) ($stats['cancelled'] ?? 0);
-                  $skipped = (int) ($stats['skipped'] ?? 0);
+                    $stats = processArticleNewsletterQueue($pdo, $limit, 5);
+                    $selected = (int) ($stats["selected"] ?? 0);
+                    $sent = (int) ($stats["sent"] ?? 0);
+                    $failed = (int) ($stats["failed"] ?? 0);
+                    $cancelled = (int) ($stats["cancelled"] ?? 0);
+                    $skipped = (int) ($stats["skipped"] ?? 0);
 
-                  if ($selected === 0) {
-                    $actionResult = 'Vo fronte nie sú žiadne položky pripravené na odoslanie.';
-                  } else {
-                    $actionResult = 'Odoslanie avíz dokončené. Vybrané: ' . $selected
-                      . ', odoslané: ' . $sent
-                      . ', zlyhané: ' . $failed
-                      . ', zrušené: ' . $cancelled
-                      . ', preskočené: ' . $skipped . '.';
-                  }
+                    if ($selected === 0) {
+                        $actionResult =
+                            "Vo fronte nie sú žiadne položky pripravené na odoslanie.";
+                    } else {
+                        $actionResult =
+                            "Odoslanie avíz dokončené. Vybrané: " .
+                            $selected .
+                            ", odoslané: " .
+                            $sent .
+                            ", zlyhané: " .
+                            $failed .
+                            ", zrušené: " .
+                            $cancelled .
+                            ", preskočené: " .
+                            $skipped .
+                            ".";
+                    }
                 } catch (\Throwable $e) {
-                  error_log('admin_articles send_newsletter_queue error: ' . $e->getMessage());
-                  $actionError = 'Chyba pri odosielaní avíz.';
+                    error_log(
+                        "admin_articles send_newsletter_queue error: " .
+                            $e->getMessage(),
+                    );
+                    $actionError = "Chyba pri odosielaní avíz.";
                 }
                 break;
 
             // ── TOP TOGGLE ───────────────────────────────────────────────
-            case 'set_top':
-                $id = (int) ($_POST['article_id'] ?? 0);
-                $setTop = (int) ($_POST['set_top'] ?? -1);
-                if ($id <= 0) { $actionError = 'Neplatné ID článku.'; break; }
-                if (!in_array($setTop, [0, 1], true)) { $actionError = 'Neplatná hodnota TOP príznaku.'; break; }
+            case "set_top":
+                $id = (int) ($_POST["article_id"] ?? 0);
+                $setTop = (int) ($_POST["set_top"] ?? -1);
+                if ($id <= 0) {
+                    $actionError = "Neplatné ID článku.";
+                    break;
+                }
+                if (!in_array($setTop, [0, 1], true)) {
+                    $actionError = "Neplatná hodnota TOP príznaku.";
+                    break;
+                }
                 try {
-                    $chk = $pdo->prepare("SELECT title FROM articles WHERE id = :id LIMIT 1");
-                    $chk->execute(['id' => $id]);
+                    $chk = $pdo->prepare(
+                        "SELECT title FROM articles WHERE id = :id LIMIT 1",
+                    );
+                    $chk->execute(["id" => $id]);
                     $row = $chk->fetch();
-                    if (!$row) { $actionError = 'Článok nenájdený.'; break; }
+                    if (!$row) {
+                        $actionError = "Článok nenájdený.";
+                        break;
+                    }
 
-                    $upd = $pdo->prepare("UPDATE articles SET is_top = :is_top WHERE id = :id");
-                    $upd->execute(['is_top' => $setTop, 'id' => $id]);
+                    $upd = $pdo->prepare(
+                        "UPDATE articles SET is_top = :is_top WHERE id = :id",
+                    );
+                    $upd->execute(["is_top" => $setTop, "id" => $id]);
 
-                    $titleSafe = htmlspecialchars((string) ($row['title'] ?? ''));
-                    $actionResult = $setTop === 1
-                      ? 'Článok „' . $titleSafe . '“ bol označený ako TOP.'
-                      : 'Článok „' . $titleSafe . '“ bol vyradený z TOP sekcie.';
+                    $titleSafe = htmlspecialchars(
+                        (string) ($row["title"] ?? ""),
+                    );
+                    $actionResult =
+                        $setTop === 1
+                            ? "Článok „" .
+                                $titleSafe .
+                                "“ bol označený ako TOP."
+                            : "Článok „" .
+                                $titleSafe .
+                                "“ bol vyradený z TOP sekcie.";
                 } catch (\PDOException $e) {
-                    error_log('admin_articles set_top error: ' . $e->getMessage());
-                    $actionError = 'Chyba pri zmene TOP príznaku.';
+                    error_log(
+                        "admin_articles set_top error: " . $e->getMessage(),
+                    );
+                    $actionError = "Chyba pri zmene TOP príznaku.";
                 }
                 break;
 
             // ── MOVE UP ─────────────────────────────────────────────────
-            case 'move_up':
-                $id = (int) ($_POST['article_id'] ?? 0);
-              if ($id <= 0) { $actionError = 'Neplatné ID článku.'; break; }
+            case "move_up":
+                $id = (int) ($_POST["article_id"] ?? 0);
+                if ($id <= 0) {
+                    $actionError = "Neplatné ID článku.";
+                    break;
+                }
                 try {
                     $pdo->beginTransaction();
-                    $currentStmt = $pdo->prepare("SELECT sort_order FROM articles WHERE id = :id");
-                    $currentStmt->execute(['id' => $id]);
+                    $currentStmt = $pdo->prepare(
+                        "SELECT sort_order FROM articles WHERE id = :id",
+                    );
+                    $currentStmt->execute(["id" => $id]);
                     $current = $currentStmt->fetch();
-                    if (!$current) { $pdo->rollBack(); $actionError = 'Článok nenájdený.'; break; }
-                    $currentSort = (int) $current['sort_order'];
-                    $prevStmt = $pdo->prepare("SELECT id FROM articles WHERE sort_order < :sort ORDER BY sort_order DESC LIMIT 1");
-                    $prevStmt->execute(['sort' => $currentSort]);
+                    if (!$current) {
+                        $pdo->rollBack();
+                        $actionError = "Článok nenájdený.";
+                        break;
+                    }
+                    $currentSort = (int) $current["sort_order"];
+                    $prevStmt = $pdo->prepare(
+                        "SELECT id FROM articles WHERE sort_order < :sort ORDER BY sort_order DESC LIMIT 1",
+                    );
+                    $prevStmt->execute(["sort" => $currentSort]);
                     $prev = $prevStmt->fetch();
-                    if (!$prev) { $pdo->rollBack(); $actionError = 'Nie je čím ísť vyššie.'; break; }
-                    $prevId = (int) $prev['id'];
-                    $prevSortStmt = $pdo->prepare("SELECT sort_order FROM articles WHERE id = :id");
-                    $prevSortStmt->execute(['id' => $prevId]);
-                    $prevSort = (int) $prevSortStmt->fetch()['sort_order'];
-                    $pdo->prepare("UPDATE articles SET sort_order = :sort WHERE id = :id")->execute(['sort' => $prevSort, 'id' => $id]);
-                    $pdo->prepare("UPDATE articles SET sort_order = :sort WHERE id = :id")->execute(['sort' => $currentSort, 'id' => $prevId]);
+                    if (!$prev) {
+                        $pdo->rollBack();
+                        $actionError = "Nie je čím ísť vyššie.";
+                        break;
+                    }
+                    $prevId = (int) $prev["id"];
+                    $prevSortStmt = $pdo->prepare(
+                        "SELECT sort_order FROM articles WHERE id = :id",
+                    );
+                    $prevSortStmt->execute(["id" => $prevId]);
+                    $prevSort = (int) $prevSortStmt->fetch()["sort_order"];
+                    $pdo->prepare(
+                        "UPDATE articles SET sort_order = :sort WHERE id = :id",
+                    )->execute(["sort" => $prevSort, "id" => $id]);
+                    $pdo->prepare(
+                        "UPDATE articles SET sort_order = :sort WHERE id = :id",
+                    )->execute(["sort" => $currentSort, "id" => $prevId]);
                     $pdo->commit();
-                    $actionResult = 'Článok bol presunutý vyššie.';
-                } catch (\PDOException $e) { $pdo->rollBack(); error_log('admin_articles move_up error: ' . $e->getMessage()); $actionError = 'Chyba pri presúvaní.'; }
+                    $actionResult = "Článok bol presunutý vyššie.";
+                } catch (\PDOException $e) {
+                    $pdo->rollBack();
+                    error_log(
+                        "admin_articles move_up error: " . $e->getMessage(),
+                    );
+                    $actionError = "Chyba pri presúvaní.";
+                }
                 break;
 
             // ── MOVE DOWN ───────────────────────────────────────────────
-            case 'move_down':
-                $id = (int) ($_POST['article_id'] ?? 0);
-              if ($id <= 0) { $actionError = 'Neplatné ID článku.'; break; }
+            case "move_down":
+                $id = (int) ($_POST["article_id"] ?? 0);
+                if ($id <= 0) {
+                    $actionError = "Neplatné ID článku.";
+                    break;
+                }
                 try {
                     $pdo->beginTransaction();
-                    $currentStmt = $pdo->prepare("SELECT sort_order FROM articles WHERE id = :id");
-                    $currentStmt->execute(['id' => $id]);
+                    $currentStmt = $pdo->prepare(
+                        "SELECT sort_order FROM articles WHERE id = :id",
+                    );
+                    $currentStmt->execute(["id" => $id]);
                     $current = $currentStmt->fetch();
-                    if (!$current) { $pdo->rollBack(); $actionError = 'Článok nenájdený.'; break; }
-                    $currentSort = (int) $current['sort_order'];
-                    $nextStmt = $pdo->prepare("SELECT id FROM articles WHERE sort_order > :sort ORDER BY sort_order ASC LIMIT 1");
-                    $nextStmt->execute(['sort' => $currentSort]);
+                    if (!$current) {
+                        $pdo->rollBack();
+                        $actionError = "Článok nenájdený.";
+                        break;
+                    }
+                    $currentSort = (int) $current["sort_order"];
+                    $nextStmt = $pdo->prepare(
+                        "SELECT id FROM articles WHERE sort_order > :sort ORDER BY sort_order ASC LIMIT 1",
+                    );
+                    $nextStmt->execute(["sort" => $currentSort]);
                     $next = $nextStmt->fetch();
-                    if (!$next) { $pdo->rollBack(); $actionError = 'Nie je čím ísť nižšie.'; break; }
-                    $nextId = (int) $next['id'];
-                    $nextSortStmt = $pdo->prepare("SELECT sort_order FROM articles WHERE id = :id");
-                    $nextSortStmt->execute(['id' => $nextId]);
-                    $nextSort = (int) $nextSortStmt->fetch()['sort_order'];
-                    $pdo->prepare("UPDATE articles SET sort_order = :sort WHERE id = :id")->execute(['sort' => $nextSort, 'id' => $id]);
-                    $pdo->prepare("UPDATE articles SET sort_order = :sort WHERE id = :id")->execute(['sort' => $currentSort, 'id' => $nextId]);
+                    if (!$next) {
+                        $pdo->rollBack();
+                        $actionError = "Nie je čím ísť nižšie.";
+                        break;
+                    }
+                    $nextId = (int) $next["id"];
+                    $nextSortStmt = $pdo->prepare(
+                        "SELECT sort_order FROM articles WHERE id = :id",
+                    );
+                    $nextSortStmt->execute(["id" => $nextId]);
+                    $nextSort = (int) $nextSortStmt->fetch()["sort_order"];
+                    $pdo->prepare(
+                        "UPDATE articles SET sort_order = :sort WHERE id = :id",
+                    )->execute(["sort" => $nextSort, "id" => $id]);
+                    $pdo->prepare(
+                        "UPDATE articles SET sort_order = :sort WHERE id = :id",
+                    )->execute(["sort" => $currentSort, "id" => $nextId]);
                     $pdo->commit();
-                    $actionResult = 'Článok bol presunutý nižšie.';
-                } catch (\PDOException $e) { $pdo->rollBack(); error_log('admin_articles move_down error: ' . $e->getMessage()); $actionError = 'Chyba pri presúvaní.'; }
+                    $actionResult = "Článok bol presunutý nižšie.";
+                } catch (\PDOException $e) {
+                    $pdo->rollBack();
+                    error_log(
+                        "admin_articles move_down error: " . $e->getMessage(),
+                    );
+                    $actionError = "Chyba pri presúvaní.";
+                }
                 break;
 
             // ── DELETE ──────────────────────────────────────────────────────
-            case 'delete':
-                $id = (int) ($_POST['article_id'] ?? 0);
-                if ($id <= 0) { $actionError = 'Neplatné ID článku.'; break; }
+            case "delete":
+                $id = (int) ($_POST["article_id"] ?? 0);
+                if ($id <= 0) {
+                    $actionError = "Neplatné ID článku.";
+                    break;
+                }
                 try {
-                    $chk = $pdo->prepare("SELECT title FROM articles WHERE id = :id LIMIT 1");
-                    $chk->execute(['id' => $id]);
+                    $chk = $pdo->prepare(
+                        "SELECT title FROM articles WHERE id = :id LIMIT 1",
+                    );
+                    $chk->execute(["id" => $id]);
                     $row = $chk->fetch();
-                    if (!$row) { $actionError = 'Článok nenájdený.'; break; }
-                    $pdo->prepare("DELETE FROM articles WHERE id = :id")->execute(['id' => $id]);
-                    $actionResult = 'Článok „' . htmlspecialchars((string) $row['title']) . '" bol odstránený.';
+                    if (!$row) {
+                        $actionError = "Článok nenájdený.";
+                        break;
+                    }
+                    $pdo->prepare(
+                        "DELETE FROM articles WHERE id = :id",
+                    )->execute(["id" => $id]);
+                    $actionResult =
+                        "Článok „" .
+                        htmlspecialchars((string) $row["title"]) .
+                        '" bol odstránený.';
                 } catch (\PDOException $e) {
-                    error_log('admin_articles delete error: ' . $e->getMessage());
-                    $actionError = 'Chyba pri mazaní článku.';
+                    error_log(
+                        "admin_articles delete error: " . $e->getMessage(),
+                    );
+                    $actionError = "Chyba pri mazaní článku.";
                 }
                 break;
         }
@@ -411,38 +653,52 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 }
 
 // ── Načítanie článku na editáciu (GET) ────────────────────────────────────────
-$editId = (int) ($_GET['id'] ?? 0);
-if (($_GET['action'] ?? '') === 'edit' && $editId > 0) {
+$editId = (int) ($_GET["id"] ?? 0);
+if (($_GET["action"] ?? "") === "edit" && $editId > 0) {
     try {
         $stmt = $pdo->prepare("SELECT * FROM articles WHERE id = :id LIMIT 1");
-        $stmt->execute(['id' => $editId]);
+        $stmt->execute(["id" => $editId]);
         $editArticle = $stmt->fetch() ?: null;
     } catch (\PDOException $e) {
-        error_log('admin_articles edit load error: ' . $e->getMessage());
+        error_log("admin_articles edit load error: " . $e->getMessage());
     }
 }
 
 // ── Načítanie všetkých článkov pre zoznam ────────────────────────────────────
 $articles = [];
 try {
-    $articles = $pdo->query(
-        "SELECT id, title, slug, author, published_at, is_top, is_published, created_at, sort_order
-         FROM articles ORDER BY sort_order ASC, id ASC"
-    )->fetchAll();
+    $articles = $pdo
+        ->query(
+            "SELECT id, title, slug, author, published_at, is_top, is_published, created_at, sort_order
+         FROM articles ORDER BY sort_order ASC, id ASC",
+        )
+        ->fetchAll();
 } catch (\PDOException $e) {
-    error_log('admin_articles list error: ' . $e->getMessage());
+    error_log("admin_articles list error: " . $e->getMessage());
 }
 
 try {
-  $queueSummary = getNewsletterQueueSummary($pdo);
-  $articleQueueStats = getArticleNewsletterQueueStats($pdo);
-  $queueRecent = getNewsletterQueueRecent($pdo, 30, $queueFilterStatus, $queueFilterArticleId, $queuePreset);
+    $queueSummary = getNewsletterQueueSummary($pdo);
+    $articleQueueStats = getArticleNewsletterQueueStats($pdo);
+    $queueRecent = getNewsletterQueueRecent(
+        $pdo,
+        30,
+        $queueFilterStatus,
+        $queueFilterArticleId,
+        $queuePreset,
+    );
 } catch (\Throwable $e) {
-  error_log('admin_articles newsletter queue read error: ' . $e->getMessage());
+    error_log(
+        "admin_articles newsletter queue read error: " . $e->getMessage(),
+    );
 }
 
-$pageLastUpdated = date('d.m.Y H:i', filemtime(__FILE__));
-$pageTimeZone    = date('T') . ' (' . date_default_timezone_get() . ')';
+// CSRF token: volať AŽ PO spracovaní POST — po rotacíach bude v session nový token,
+// ale $csrfToken v PHP získa správnu (aktuálnu) hodnotu pre všetky formuláre na stránke.
+$csrfToken = generateCsrfToken();
+
+$pageLastUpdated = date("d.m.Y H:i", filemtime(__FILE__));
+$pageTimeZone = date("T") . " (" . date_default_timezone_get() . ")";
 ?>
 <!DOCTYPE html>
 <html lang="sk">
@@ -451,11 +707,17 @@ $pageTimeZone    = date('T') . ' (' . date_default_timezone_get() . ')';
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Správa článkov – Nefro-projekt Slovensko</title>
   <meta name="robots" content="noindex, nofollow">
-  <script src="theme.js?v=20260509-1&cb=<?= filemtime('theme.js') ?>"></script>
-  <link rel="stylesheet" href="index.css?v=20260509-1&cb=<?= filemtime('index.css') ?>">
+  <script src="theme.js?v=20260509-1&cb=<?= filemtime("theme.js") ?>"></script>
+  <link rel="stylesheet" href="index.css?v=20260509-1&cb=<?= filemtime(
+      "index.css",
+  ) ?>">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;900&display=swap" rel="stylesheet">
-  <script src="ui-preferences.js?v=20260511-1&cb=<?= filemtime('ui-preferences.js') ?>" defer></script>
-  <script src="ui-preferences-fallback.js?v=20260511-1&cb=<?= filemtime('ui-preferences-fallback.js') ?>" defer></script>
+  <script src="ui-preferences.js?v=20260511-1&cb=<?= filemtime(
+      "ui-preferences.js",
+  ) ?>" defer></script>
+  <script src="ui-preferences-fallback.js?v=20260511-1&cb=<?= filemtime(
+      "ui-preferences-fallback.js",
+  ) ?>" defer></script>
   <style>
     .admin-articles-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 0.9rem; }
     .admin-articles-table th, .admin-articles-table td { padding: 10px 12px; border-bottom: 1px solid var(--border-color); text-align: left; vertical-align: top; }
@@ -485,10 +747,10 @@ $pageTimeZone    = date('T') . ' (' . date_default_timezone_get() . ')';
 </head>
 <body>
   <?php
-  $headerTitle = 'Správa článkov';
-  $headerIntro = 'CRUD rozhranie pre správu článkov';
-  $showLogo    = false;
-  include 'header.php';
+  $headerTitle = "Správa článkov";
+  $headerIntro = "CRUD rozhranie pre správu článkov";
+  $showLogo = false;
+  include "header.php";
   ?>
 
   <nav class="main-nav" aria-label="Hlavná navigácia">
@@ -497,7 +759,9 @@ $pageTimeZone    = date('T') . ' (' . date_default_timezone_get() . ')';
         <li><a href="index.php">Domov</a></li>
         <li><a href="admin.php">Admin panel</a></li>
         <li><a href="admin_articles.php" class="active" aria-current="page">Správa článkov</a></li>
-        <li><a href="logout.php">Odhlásiť sa (<?= htmlspecialchars($_SESSION['username'] ?? '') ?>)</a></li>
+        <li><a href="logout.php">Odhlásiť sa (<?= htmlspecialchars(
+            $_SESSION["username"] ?? "",
+        ) ?>)</a></li>
       </ul>
     </div>
   </nav>
@@ -511,37 +775,51 @@ $pageTimeZone    = date('T') . ' (' . date_default_timezone_get() . ')';
         <div class="alert alert-success"><p>
           <?= htmlspecialchars((string) $actionResult) ?>
           <?php if ($actionResultLink !== null): ?>
-            <?= $actionResultLink /* $actionResultLink je bezpečný — obsahuje výhradne int ID v href */ ?>
+            <?= $actionResultLink
+              /* $actionResultLink je bezpečný — obsahuje výhradne int ID v href */
+              ?>
           <?php endif; ?>
         </p></div>
       <?php endif; ?>
       <?php if ($actionError !== null): ?>
-        <div class="alert alert-error"><p><?= htmlspecialchars($actionError) ?></p></div>
+        <div class="alert alert-error"><p><?= htmlspecialchars(
+            $actionError,
+        ) ?></p></div>
       <?php endif; ?>
 
       <!-- ── FORMULÁR (pridanie / editácia) ─────────────────────────── -->
       <div class="primary-article">
-        <h3><?= $editArticle ? 'Upraviť článok' : 'Pridať nový článok' ?></h3>
+        <h3><?= $editArticle ? "Upraviť článok" : "Pridať nový článok" ?></h3>
 
         <form method="POST" action="admin_articles.php" id="articleForm">
-          <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
-          <input type="hidden" name="action"     value="<?= $editArticle ? 'update' : 'create' ?>">
+          <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(
+              $csrfToken,
+          ) ?>">
+          <input type="hidden" name="action"     value="<?= $editArticle
+              ? "update"
+              : "create" ?>">
           <?php if ($editArticle): ?>
-            <input type="hidden" name="article_id" value="<?= (int) $editArticle['id'] ?>">
+            <input type="hidden" name="article_id" value="<?= (int) $editArticle[
+                "id"
+            ] ?>">
           <?php endif; ?>
 
           <div class="article-form-grid">
             <div class="form-row">
               <label for="f_title">Titulok článku <span style="color:red">*</span></label>
               <input type="text" id="f_title" name="title" required maxlength="500"
-                     value="<?= htmlspecialchars((string) ($editArticle['title'] ?? '')) ?>"
+                     value="<?= htmlspecialchars(
+                         (string) ($editArticle["title"] ?? ""),
+                     ) ?>"
                      placeholder="Titulok článku">
             </div>
 
             <div class="form-row">
               <label for="f_slug">Slug (URL identifikátor)</label>
               <input type="text" id="f_slug" name="slug" maxlength="500"
-                     value="<?= htmlspecialchars((string) ($editArticle['slug'] ?? '')) ?>"
+                     value="<?= htmlspecialchars(
+                         (string) ($editArticle["slug"] ?? ""),
+                     ) ?>"
                      placeholder="napr. moj-clanok-o-nefrologii (nechajte prázdne pre automatické generovanie)">
               <span class="helper-text">Používajte len malé písmená, číslice a pomlčky. Ak necháte prázdne, slug sa vygeneruje automaticky z titulku.</span>
             </div>
@@ -549,38 +827,57 @@ $pageTimeZone    = date('T') . ' (' . date_default_timezone_get() . ')';
             <div class="form-row">
               <label for="f_author">Autor</label>
               <input type="text" id="f_author" name="author" maxlength="255"
-                     value="<?= htmlspecialchars((string) ($editArticle['author'] ?? 'Dr. Ľubomír Polaščín')) ?>">
+                     value="<?= htmlspecialchars(
+                         (string) ($editArticle["author"] ??
+                             "Dr. Ľubomír Polaščín"),
+                     ) ?>">
             </div>
 
             <div class="form-row">
               <label for="f_excerpt">Perex / excerpt</label>
               <textarea id="f_excerpt" name="excerpt" rows="3" maxlength="600"
-                        placeholder="Krátky úvodný text zobrazovaný v zozname článkov (čistý text, bez HTML)"><?= htmlspecialchars((string) ($editArticle['excerpt'] ?? '')) ?></textarea>
+                        placeholder="Krátky úvodný text zobrazovaný v zozname článkov (čistý text, bez HTML)"><?= htmlspecialchars(
+                            (string) ($editArticle["excerpt"] ?? ""),
+                        ) ?></textarea>
               <span class="helper-text">Čistý text bez HTML. Odporúčaná dĺžka je približne 120 až 220 znakov. Ak perex necháte prázdny, systém ho vygeneruje z obsahu článku.</span>
             </div>
 
             <div class="form-row">
               <label for="f_content">Obsah článku (HTML) <span style="color:red">*</span></label>
               <textarea id="f_content" name="content" required
-                        placeholder="Plný HTML obsah článku (odseky, h3 nadpisy, zoznamy atď.)"><?= htmlspecialchars((string) ($editArticle['content'] ?? '')) ?></textarea>
+                        placeholder="Plný HTML obsah článku (odseky, h3 nadpisy, zoznamy atď.)"><?= htmlspecialchars(
+                            (string) ($editArticle["content"] ?? ""),
+                        ) ?></textarea>
               <span class="helper-text">Zadajte HTML obsah článku bez obaľujúcich tagov &lt;article&gt;, &lt;header&gt; a &lt;footer&gt;. Tieto sa generujú automaticky.</span>
             </div>
 
             <div class="form-row">
               <label for="f_published_at">Dátum publikácie <span style="color:red">*</span></label>
               <input type="date" id="f_published_at" name="published_at" required
-                     value="<?= htmlspecialchars(substr((string) ($editArticle['published_at'] ?? date('Y-m-d')), 0, 10)) ?>">
+                     value="<?= htmlspecialchars(
+                         substr(
+                             (string) ($editArticle["published_at"] ??
+                                 date("Y-m-d")),
+                             0,
+                             10,
+                         ),
+                     ) ?>">
             </div>
 
             <div class="form-row-inline">
               <label>
                 <input type="checkbox" name="is_top" value="1"
-                  <?= (!empty($editArticle) && (int) $editArticle['is_top'] === 1) ? 'checked' : '' ?>>
+                  <?= !empty($editArticle) && (int) $editArticle["is_top"] === 1
+                      ? "checked"
+                      : "" ?>>
                 ★ Odporúčaný článok (TOP sekcia)
               </label>
               <label>
                 <input type="checkbox" name="is_published" value="1"
-                  <?= (empty($editArticle) || (int) $editArticle['is_published'] === 1) ? 'checked' : '' ?>>
+                  <?= empty($editArticle) ||
+                  (int) $editArticle["is_published"] === 1
+                      ? "checked"
+                      : "" ?>>
                 Zverejnený
               </label>
             </div>
@@ -588,11 +885,13 @@ $pageTimeZone    = date('T') . ' (' . date_default_timezone_get() . ')';
 
           <div class="form-actions" style="margin-top:20px;">
             <button type="submit" class="btn-primary">
-              <?= $editArticle ? '💾 Uložiť zmeny' : '➕ Pridať článok' ?>
+              <?= $editArticle ? "💾 Uložiť zmeny" : "➕ Pridať článok" ?>
             </button>
             <?php if ($editArticle): ?>
               <a href="admin_articles.php" class="btn-secondary-small">Zrušiť editáciu</a>
-              <a href="article.php?id=<?= (int) $editArticle['id'] ?>" target="_blank" class="btn-secondary-small">👁 Zobraziť</a>
+              <a href="article.php?id=<?= (int) $editArticle[
+                  "id"
+              ] ?>" target="_blank" class="btn-secondary-small">👁 Zobraziť</a>
             <?php endif; ?>
           </div>
         </form>
@@ -606,48 +905,82 @@ $pageTimeZone    = date('T') . ' (' . date_default_timezone_get() . ')';
         <p class="helper-text">Automatické notifikácie pre používateľov so súhlasom s novinkami (bez SMS).</p>
 
         <form method="GET" action="admin_articles.php" class="form-row-inline" style="margin-top:10px; margin-bottom:12px;">
-          <input type="hidden" name="q_preset" value="<?= htmlspecialchars($queuePreset) ?>">
+          <input type="hidden" name="q_preset" value="<?= htmlspecialchars(
+              $queuePreset,
+          ) ?>">
           <label for="q_status">Stav:</label>
           <select id="q_status" name="q_status" class="form-control" style="max-width:220px;">
-            <option value="" <?= $queueFilterStatus === '' ? 'selected' : '' ?>>Všetky</option>
-            <option value="pending" <?= $queueFilterStatus === 'pending' ? 'selected' : '' ?>>Pending</option>
-            <option value="failed" <?= $queueFilterStatus === 'failed' ? 'selected' : '' ?>>Failed</option>
-            <option value="sent" <?= $queueFilterStatus === 'sent' ? 'selected' : '' ?>>Sent</option>
-            <option value="cancelled" <?= $queueFilterStatus === 'cancelled' ? 'selected' : '' ?>>Cancelled</option>
+            <option value="" <?= $queueFilterStatus === ""
+                ? "selected"
+                : "" ?>>Všetky</option>
+            <option value="pending" <?= $queueFilterStatus === "pending"
+                ? "selected"
+                : "" ?>>Pending</option>
+            <option value="failed" <?= $queueFilterStatus === "failed"
+                ? "selected"
+                : "" ?>>Failed</option>
+            <option value="sent" <?= $queueFilterStatus === "sent"
+                ? "selected"
+                : "" ?>>Sent</option>
+            <option value="cancelled" <?= $queueFilterStatus === "cancelled"
+                ? "selected"
+                : "" ?>>Cancelled</option>
           </select>
 
           <label for="q_article_id">Článok:</label>
           <select id="q_article_id" name="q_article_id" class="form-control" style="max-width:340px;">
             <option value="0">Všetky články</option>
             <?php foreach ($articles as $filterArticle): ?>
-              <?php $filterArticleId = (int) ($filterArticle['id'] ?? 0); ?>
-              <option value="<?= $filterArticleId ?>" <?= $queueFilterArticleId === $filterArticleId ? 'selected' : '' ?>>
-                #<?= $filterArticleId ?> — <?= htmlspecialchars((string) ($filterArticle['title'] ?? '')) ?>
+              <?php $filterArticleId = (int) ($filterArticle["id"] ?? 0); ?>
+              <option value="<?= $filterArticleId ?>" <?= $queueFilterArticleId ===
+$filterArticleId
+    ? "selected"
+    : "" ?>>
+                #<?= $filterArticleId ?> — <?= htmlspecialchars(
+     (string) ($filterArticle["title"] ?? ""),
+ ) ?>
               </option>
             <?php endforeach; ?>
           </select>
 
           <button type="submit" class="btn-secondary-small">Filtrovať</button>
-          <a href="admin_articles.php?q_preset=unsent<?= $queueFilterArticleId > 0 ? '&q_article_id=' . $queueFilterArticleId : '' ?>" class="btn-secondary-small">Len neodoslané</a>
-          <a href="admin_articles.php?q_preset=due_now<?= $queueFilterArticleId > 0 ? '&q_article_id=' . $queueFilterArticleId : '' ?>" class="btn-secondary-small">Len due now</a>
+          <a href="admin_articles.php?q_preset=unsent<?= $queueFilterArticleId >
+          0
+              ? "&q_article_id=" . $queueFilterArticleId
+              : "" ?>" class="btn-secondary-small">Len neodoslané</a>
+          <a href="admin_articles.php?q_preset=due_now<?= $queueFilterArticleId >
+          0
+              ? "&q_article_id=" . $queueFilterArticleId
+              : "" ?>" class="btn-secondary-small">Len due now</a>
           <a href="admin_articles.php" class="btn-secondary-small">Reset</a>
         </form>
 
-        <?php if ($queuePreset === 'unsent'): ?>
+        <?php if ($queuePreset === "unsent"): ?>
           <p class="helper-text" style="margin-top:-6px;">Aktívny rýchly filter: len neodoslané (pending + failed).</p>
-        <?php elseif ($queuePreset === 'due_now'): ?>
+        <?php elseif ($queuePreset === "due_now"): ?>
           <p class="helper-text" style="margin-top:-6px;">Aktívny rýchly filter: due now (pending + failed, pripravené na odoslanie).</p>
         <?php endif; ?>
 
         <div class="form-row-inline" style="margin-top:10px;">
-          <span class="badge-pub">Pending: <?= (int) ($queueSummary['pending'] ?? 0) ?></span>
-          <span class="badge-draft">Failed: <?= (int) ($queueSummary['failed'] ?? 0) ?></span>
-          <span class="badge-top-sm">Sent: <?= (int) ($queueSummary['sent'] ?? 0) ?></span>
-          <span class="badge-draft" style="background:#e5e7eb;color:#374151;">Cancelled: <?= (int) ($queueSummary['cancelled'] ?? 0) ?></span>
-          <span class="badge-pub" style="background:#dbeafe;color:#1e3a8a;">Due now: <?= (int) ($queueSummary['due_now'] ?? 0) ?></span>
+          <span class="badge-pub">Pending: <?= (int) ($queueSummary[
+              "pending"
+          ] ?? 0) ?></span>
+          <span class="badge-draft">Failed: <?= (int) ($queueSummary[
+              "failed"
+          ] ?? 0) ?></span>
+          <span class="badge-top-sm">Sent: <?= (int) ($queueSummary["sent"] ??
+              0) ?></span>
+          <span class="badge-draft" style="background:#e5e7eb;color:#374151;">Cancelled: <?= (int) ($queueSummary[
+              "cancelled"
+          ] ?? 0) ?></span>
+          <span class="badge-pub" style="background:#dbeafe;color:#1e3a8a;">Due now: <?= (int) ($queueSummary[
+              "due_now"
+          ] ?? 0) ?></span>
           <form method="POST" action="admin_articles.php" style="display:inline; margin-left:8px;"
                 onsubmit="return confirm('Naozaj chcete odoslať avíza pripravené na odoslanie?');">
-            <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
+            <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(
+                $csrfToken,
+            ) ?>">
             <input type="hidden" name="action" value="send_newsletter_queue">
             <input type="hidden" name="send_limit" value="50">
             <button type="submit" class="btn-secondary-small" title="Odoslať položky z fronty, ktoré sú pripravené na odoslanie">Odoslať</button>
@@ -670,12 +1003,21 @@ $pageTimeZone    = date('T') . ' (' . date_default_timezone_get() . ')';
               <tbody>
                 <?php foreach ($queueRecent as $q): ?>
                   <tr>
-                    <td><?= (int) ($q['id'] ?? 0) ?></td>
-                    <td><?= htmlspecialchars((string) ($q['article_title'] ?? ('#' . (int) ($q['article_id'] ?? 0)))) ?></td>
-                    <td><?= htmlspecialchars((string) ($q['username'] ?? ($q['email'] ?? ''))) ?></td>
-                    <td><?= htmlspecialchars(strtoupper((string) ($q['status'] ?? ''))) ?></td>
-                    <td><?= (int) ($q['attempts'] ?? 0) ?></td>
-                    <td><?= htmlspecialchars((string) ($q['updated_at'] ?? '')) ?></td>
+                    <td><?= (int) ($q["id"] ?? 0) ?></td>
+                    <td><?= htmlspecialchars(
+                        (string) ($q["article_title"] ??
+                            "#" . (int) ($q["article_id"] ?? 0)),
+                    ) ?></td>
+                    <td><?= htmlspecialchars(
+                        (string) ($q["username"] ?? ($q["email"] ?? "")),
+                    ) ?></td>
+                    <td><?= htmlspecialchars(
+                        strtoupper((string) ($q["status"] ?? "")),
+                    ) ?></td>
+                    <td><?= (int) ($q["attempts"] ?? 0) ?></td>
+                    <td><?= htmlspecialchars(
+                        (string) ($q["updated_at"] ?? ""),
+                    ) ?></td>
                   </tr>
                 <?php endforeach; ?>
               </tbody>
@@ -708,19 +1050,35 @@ $pageTimeZone    = date('T') . ' (' . date_default_timezone_get() . ')';
                 </tr>
               </thead>
               <tbody>
-                <?php $articleCount = count($articles); foreach ($articles as $idx => $a):
-                  $aId = (int) $a['id']; $aTitle = htmlspecialchars((string) $a['title']);
-                  $aDate = htmlspecialchars(substr((string) $a['published_at'], 0, 10));
-                  $aTop = (int) $a['is_top'] === 1; $aPub = (int) $a['is_published'] === 1;
-                  $qStats = $articleQueueStats[$aId] ?? ['pending' => 0, 'failed' => 0, 'sent' => 0, 'cancelled' => 0];
-                  $isFirst = ($idx === 0); $isLast = ($idx === $articleCount - 1);
-                ?>
+                <?php
+                $articleCount = count($articles);
+                foreach ($articles as $idx => $a):
+
+                    $aId = (int) $a["id"];
+                    $aTitle = htmlspecialchars((string) $a["title"]);
+                    $aDate = htmlspecialchars(
+                        substr((string) $a["published_at"], 0, 10),
+                    );
+                    $aTop = (int) $a["is_top"] === 1;
+                    $aPub = (int) $a["is_published"] === 1;
+                    $qStats = $articleQueueStats[$aId] ?? [
+                        "pending" => 0,
+                        "failed" => 0,
+                        "sent" => 0,
+                        "cancelled" => 0,
+                    ];
+                    $isFirst = $idx === 0;
+                    $isLast = $idx === $articleCount - 1;
+                    ?>
                 <tr>
                   <td><?= $aId ?></td>
-                  <td style="font-weight:600; color:var(--primary-color);"><?= $idx + 1 ?></td>
+                  <td style="font-weight:600; color:var(--primary-color);"><?= $idx +
+                      1 ?></td>
                   <td>
                     <a href="article.php?id=<?= $aId ?>" target="_blank"><?= $aTitle ?></a>
-                    <?php if ($aTop): ?><br><span class="badge-top-sm">★ TOP</span><?php endif; ?>
+                    <?php if (
+                        $aTop
+                    ): ?><br><span class="badge-top-sm">★ TOP</span><?php endif; ?>
                   </td>
                   <td><?= $aDate ?></td>
                   <td>
@@ -732,13 +1090,15 @@ $pageTimeZone    = date('T') . ' (' . date_default_timezone_get() . ')';
                   </td>
                   <td>
                     <div style="margin-bottom:6px; font-size:0.78rem; color:var(--text-secondary);">
-                      P: <?= (int) ($qStats['pending'] ?? 0) ?> |
-                      F: <?= (int) ($qStats['failed'] ?? 0) ?> |
-                      S: <?= (int) ($qStats['sent'] ?? 0) ?>
+                      P: <?= (int) ($qStats["pending"] ?? 0) ?> |
+                      F: <?= (int) ($qStats["failed"] ?? 0) ?> |
+                      S: <?= (int) ($qStats["sent"] ?? 0) ?>
                     </div>
                     <?php if (!$isFirst): ?>
                       <form method="POST" action="admin_articles.php" style="display:inline">
-                        <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
+                        <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(
+                            $csrfToken,
+                        ) ?>">
                         <input type="hidden" name="action" value="move_up">
                         <input type="hidden" name="article_id" value="<?= $aId ?>">
                         <button type="submit" class="btn-secondary-small" title="Hore">▲</button>
@@ -746,17 +1106,25 @@ $pageTimeZone    = date('T') . ' (' . date_default_timezone_get() . ')';
                     <?php endif; ?>
                     <?php if (!$isLast): ?>
                       <form method="POST" action="admin_articles.php" style="display:inline">
-                        <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
+                        <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(
+                            $csrfToken,
+                        ) ?>">
                         <input type="hidden" name="action" value="move_down">
                         <input type="hidden" name="article_id" value="<?= $aId ?>">
                         <button type="submit" class="btn-secondary-small" title="Dole">▼</button>
                       </form>
                     <?php endif; ?>
-                    <form method="POST" action="admin_articles.php" style="display:inline"<?= $aTop ? ' onsubmit="return confirm(\'Naozaj chcete vyradiť tento článok z TOP sekcie?\');"' : '' ?>>
-                      <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
+                    <form method="POST" action="admin_articles.php" style="display:inline"<?= $aTop
+                        ? ' onsubmit="return confirm(\'Naozaj chcete vyradiť tento článok z TOP sekcie?\');"'
+                        : "" ?>>
+                      <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(
+                          $csrfToken,
+                      ) ?>">
                       <input type="hidden" name="action" value="set_top">
                       <input type="hidden" name="article_id" value="<?= $aId ?>">
-                      <input type="hidden" name="set_top" value="<?= $aTop ? 0 : 1 ?>">
+                      <input type="hidden" name="set_top" value="<?= $aTop
+                          ? 0
+                          : 1 ?>">
                       <?php if ($aTop): ?>
                         <button type="submit" class="btn-secondary-small" title="Vypnúť TOP pre tento článok">☆ TOP vypnúť</button>
                       <?php else: ?>
@@ -765,13 +1133,19 @@ $pageTimeZone    = date('T') . ' (' . date_default_timezone_get() . ')';
                     </form>
                     <a href="admin_articles.php?action=edit&id=<?= $aId ?>" class="btn-secondary-small">✏️ Upraviť</a>
                     <form method="POST" action="admin_articles.php" style="display:inline">
-                      <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
+                      <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(
+                          $csrfToken,
+                      ) ?>">
                       <input type="hidden" name="action" value="enqueue_newsletter">
                       <input type="hidden" name="article_id" value="<?= $aId ?>">
-                      <button type="submit" class="btn-secondary-small" title="Ručne odoslať avízo pre tento článok" <?= $aPub ? '' : 'disabled' ?>>📧 Avízo teraz</button>
+                      <button type="submit" class="btn-secondary-small" title="Ručne odoslať avízo pre tento článok" <?= $aPub
+                          ? ""
+                          : "disabled" ?>>📧 Avízo teraz</button>
                     </form>
                     <form method="POST" action="admin_articles.php" style="display:inline">
-                      <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
+                      <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(
+                          $csrfToken,
+                      ) ?>">
                       <input type="hidden" name="action" value="requeue_failed_newsletter">
                       <input type="hidden" name="article_id" value="<?= $aId ?>">
                       <button type="submit" class="btn-secondary-small" title="Znovu zaradiť neodoslané avíza">↻ Neodoslané</button>
@@ -779,14 +1153,18 @@ $pageTimeZone    = date('T') . ' (' . date_default_timezone_get() . ')';
                     &nbsp;
                     <form method="POST" action="admin_articles.php" style="display:inline"
                         onsubmit="return confirm('Naozaj chcete odstrániť tento článok?');">
-                      <input type="hidden" name="csrf_token"  value="<?= htmlspecialchars($csrfToken) ?>">
+                      <input type="hidden" name="csrf_token"  value="<?= htmlspecialchars(
+                          $csrfToken,
+                      ) ?>">
                       <input type="hidden" name="action"      value="delete">
                       <input type="hidden" name="article_id"  value="<?= $aId ?>">
                       <button type="submit" class="btn-secondary-small" style="border-color:#ef4444;color:#ef4444;">🗑 Zmazať</button>
                     </form>
                   </td>
                 </tr>
-                <?php endforeach; ?>
+                <?php
+                endforeach;
+                ?>
               </tbody>
             </table>
           </div>
@@ -796,7 +1174,7 @@ $pageTimeZone    = date('T') . ' (' . date_default_timezone_get() . ')';
     </div><!-- /.auth-container -->
   </main>
 
-  <?php include 'footer.php'; ?>
+  <?php include "footer.php"; ?>
 
   <script>
     // Automatické generovanie slugu z titulku + SEO nápoveda pre perex

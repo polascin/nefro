@@ -1,57 +1,68 @@
 <?php
-require_once 'auth.php';
-require_once 'db_config.php';
+require_once "auth.php";
+require_once "db_config.php";
 
 // Bezpečnostné HTTP hlavičky
 header_remove("X-Powered-By");
 header("X-Frame-Options: SAMEORIGIN");
 header("X-XSS-Protection: 0");
 header("X-Content-Type-Options: nosniff");
-header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload");
+header(
+    "Strict-Transport-Security: max-age=31536000; includeSubDomains; preload",
+);
 header("Referrer-Policy: strict-origin-when-cross-origin");
-header("Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=()");
+header(
+    "Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=()",
+);
 header("Cross-Origin-Opener-Policy: same-origin");
 header("X-Permitted-Cross-Domain-Policies: none");
-header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0, private");
+header(
+    "Cache-Control: no-store, no-cache, must-revalidate, max-age=0, private",
+);
 header("Pragma: no-cache");
 header("Expires: 0");
 header("Surrogate-Control: no-store");
 
-$csp = "default-src 'self'; "
-  . "img-src 'self' data: https:; "
-  . "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; "
-  . "font-src 'self' https://fonts.gstatic.com; "
-  . "script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com; "
-  . "connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://*.analytics.google.com https://stats.g.doubleclick.net; "
-  . "base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; upgrade-insecure-requests";
+$csp =
+    "default-src 'self'; " .
+    "img-src 'self' data: https:; " .
+    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; " .
+    "font-src 'self' https://fonts.gstatic.com; " .
+    "script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com; " .
+    "connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://*.analytics.google.com https://stats.g.doubleclick.net; " .
+    "base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; upgrade-insecure-requests";
 header("Content-Security-Policy: " . $csp);
 
 // Načítanie parametra – akceptujeme len slug alebo id
 $article = null;
 $notFound = false;
 
-$rawSlug = trim((string) ($_GET['slug'] ?? ''));
-$rawId   = (int) ($_GET['id'] ?? 0);
+$rawSlug = trim((string) ($_GET["slug"] ?? ""));
+$rawId = (int) ($_GET["id"] ?? 0);
 
 try {
-    if ($rawSlug !== '') {
+    if ($rawSlug !== "") {
         // Validácia: slug smie obsahovať len písmená, číslice a pomlčky
         if (!preg_match('/^[a-z0-9\-]{1,500}$/i', $rawSlug)) {
             $notFound = true;
         } else {
-            $stmt = $pdo->prepare("SELECT * FROM articles WHERE slug = :slug AND is_published = 1 LIMIT 1");
-            $stmt->execute(['slug' => $rawSlug]);
+            $stmt = $pdo->prepare(
+                "SELECT * FROM articles WHERE slug = :slug AND is_published = 1 LIMIT 1",
+            );
+            $stmt->execute(["slug" => $rawSlug]);
             $article = $stmt->fetch() ?: null;
         }
     } elseif ($rawId > 0) {
-        $stmt = $pdo->prepare("SELECT * FROM articles WHERE id = :id AND is_published = 1 LIMIT 1");
-        $stmt->execute(['id' => $rawId]);
+        $stmt = $pdo->prepare(
+            "SELECT * FROM articles WHERE id = :id AND is_published = 1 LIMIT 1",
+        );
+        $stmt->execute(["id" => $rawId]);
         $article = $stmt->fetch() ?: null;
     } else {
         $notFound = true;
     }
 } catch (\PDOException $e) {
-    error_log('article.php DB error: ' . $e->getMessage());
+    error_log("article.php DB error: " . $e->getMessage());
     $notFound = true;
 }
 
@@ -61,124 +72,161 @@ if ($article === null && !$notFound) {
 
 if ($notFound || $article === null) {
     http_response_code(404);
-  header('X-Robots-Tag: noindex, follow', true);
+    header("X-Robots-Tag: noindex, follow", true);
 }
 
 // Formátovanie dátumu
 $months = [
-    1 => 'januára', 2 => 'februára', 3 => 'marca',    4 => 'apríla',
-    5 => 'mája',    6 => 'júna',     7 => 'júla',     8 => 'augusta',
-    9 => 'septembra', 10 => 'októbra', 11 => 'novembra', 12 => 'decembra',
+    1 => "januára",
+    2 => "februára",
+    3 => "marca",
+    4 => "apríla",
+    5 => "mája",
+    6 => "júna",
+    7 => "júla",
+    8 => "augusta",
+    9 => "septembra",
+    10 => "októbra",
+    11 => "novembra",
+    12 => "decembra",
 ];
 
-function formatArticleDate(string $datetime, array $months): string {
+function formatArticleDate(string $datetime, array $months): string
+{
     $ts = strtotime($datetime);
-    if (!$ts) { return htmlspecialchars($datetime); }
-    return (int) date('j', $ts) . '. ' . ($months[(int) date('n', $ts)] ?? '') . ' ' . date('Y', $ts);
+    if (!$ts) {
+        return htmlspecialchars($datetime);
+    }
+    return (int) date("j", $ts) .
+        ". " .
+        ($months[(int) date("n", $ts)] ?? "") .
+        " " .
+        date("Y", $ts);
 }
 
-function normalizePlainText(string $text): string {
-  $decoded = html_entity_decode($text, ENT_QUOTES | ENT_HTML5, 'UTF-8');
-  $stripped = strip_tags($decoded);
-  $normalized = preg_replace('/\s+/u', ' ', $stripped) ?? $stripped;
-  return trim($normalized);
+function normalizePlainText(string $text): string
+{
+    $decoded = html_entity_decode($text, ENT_QUOTES | ENT_HTML5, "UTF-8");
+    $stripped = strip_tags($decoded);
+    $normalized = preg_replace("/\s+/u", " ", $stripped) ?? $stripped;
+    return trim($normalized);
 }
 
-function buildSeoExcerpt(string $preferredText, string $fallbackText = '', int $maxLen = 165): string {
-  $source = normalizePlainText($preferredText);
-  if ($source === '') {
-    $source = normalizePlainText($fallbackText);
-  }
-  if ($source === '') {
-    return '';
-  }
-  if (mb_strlen($source) <= $maxLen) {
-    return $source;
-  }
+function buildSeoExcerpt(
+    string $preferredText,
+    string $fallbackText = "",
+    int $maxLen = 165,
+): string {
+    $source = normalizePlainText($preferredText);
+    if ($source === "") {
+        $source = normalizePlainText($fallbackText);
+    }
+    if ($source === "") {
+        return "";
+    }
+    if (mb_strlen($source) <= $maxLen) {
+        return $source;
+    }
 
-  $slice = mb_substr($source, 0, $maxLen + 1);
-  $slice = preg_replace('/\s+\S*$/u', '', $slice) ?? $slice;
-  $slice = rtrim($slice, " \t\n\r\0\x0B,.;:-");
-  return $slice . '…';
+    $slice = mb_substr($source, 0, $maxLen + 1);
+    $slice = preg_replace('/\s+\S*$/u', "", $slice) ?? $slice;
+    $slice = rtrim($slice, " \t\n\r\0\x0B,.;:-");
+    return $slice . "…";
 }
 
-function toIso8601(string $datetime): string {
-  $ts = strtotime($datetime);
-  if (!$ts) {
-    return date(DATE_ATOM);
-  }
-  return date(DATE_ATOM, $ts);
+function toIso8601(string $datetime): string
+{
+    $ts = strtotime($datetime);
+    if (!$ts) {
+        return date(DATE_ATOM);
+    }
+    return date(DATE_ATOM, $ts);
 }
 
-$siteName = 'Nefro-projekt Slovensko';
-$baseUrl = 'https://nefro.polascin.net/';
+$siteName = "Nefro-projekt Slovensko";
+$baseUrl = "https://nefro.polascin.net/";
 
-$articleTitleRaw = $article ? (string) ($article['title'] ?? '') : '';
-$articleAuthorRaw = $article ? (string) ($article['author'] ?? 'Dr. Ľubomír Polaščín') : 'Dr. Ľubomír Polaščín';
-$canonicalUrlRaw = $article ? ($baseUrl . 'article.php?slug=' . (string) ($article['slug'] ?? '')) : '';
+$articleTitleRaw = $article ? (string) ($article["title"] ?? "") : "";
+$articleAuthorRaw = $article
+    ? (string) ($article["author"] ?? "Dr. Ľubomír Polaščín")
+    : "Dr. Ľubomír Polaščín";
+$canonicalUrlRaw = $article
+    ? $baseUrl . "article.php?slug=" . (string) ($article["slug"] ?? "")
+    : "";
 
 $metaDescriptionRaw = $article
-  ? buildSeoExcerpt((string) ($article['excerpt'] ?? ''), (string) ($article['content'] ?? ''), 165)
-  : 'Požadovaný článok neexistuje alebo bol odstránený.';
-if ($metaDescriptionRaw === '') {
-  $metaDescriptionRaw = 'Odborný článok z oblasti nefrológie.';
+    ? buildSeoExcerpt(
+        (string) ($article["excerpt"] ?? ""),
+        (string) ($article["content"] ?? ""),
+        165,
+    )
+    : "Požadovaný článok neexistuje alebo bol odstránený.";
+if ($metaDescriptionRaw === "") {
+    $metaDescriptionRaw = "Odborný článok z oblasti nefrológie.";
 }
 
-$pageTitleRaw = $article ? ($articleTitleRaw . ' | ' . $siteName) : ('Článok nenájdený | ' . $siteName);
+$pageTitleRaw = $article
+    ? $articleTitleRaw . " | " . $siteName
+    : "Článok nenájdený | " . $siteName;
 // POZNÁMKA: $pageTitle, $canonicalUrl a $seoDescription sa NEpre-escapujú.
 // head_meta.php ich escapuje sám cez htmlspecialchars() — dvojité escapovanie
 // by spôsobilo, že & → &amp;amp; a znaky sa stratia v title/canonical/description.
-$pageTitle    = $pageTitleRaw;    // head_meta.php: htmlspecialchars($pageTitle)
+$pageTitle = $pageTitleRaw; // head_meta.php: htmlspecialchars($pageTitle)
 $canonicalUrl = $canonicalUrlRaw; // head_meta.php: htmlspecialchars($canonicalUrl)
 // $metaDescriptionRaw sa odovzdá priamo ako $seoDescription (pozri nižšie v <head>)
 $pageLastUpdated = $article
-    ? date('d.m.Y H:i', strtotime((string) $article['updated_at']))
-    : date('d.m.Y H:i', filemtime(__FILE__));
-$pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
-$robotsMeta   = $article ? 'index, follow, max-image-preview:large' : 'noindex, follow, noarchive';
+    ? date("d.m.Y H:i", strtotime((string) $article["updated_at"]))
+    : date("d.m.Y H:i", filemtime(__FILE__));
+$pageTimeZone = date("T") . " (" . date_default_timezone_get() . ")";
+$robotsMeta = $article
+    ? "index, follow, max-image-preview:large"
+    : "noindex, follow, noarchive";
 
 $articleSchema = null;
 if ($article) {
-  $articleSchema = [
-    '@context' => 'https://schema.org',
-    '@type'    => ['Article', 'MedicalWebPage'],
-    'headline' => $articleTitleRaw,
-    'description' => $metaDescriptionRaw,
-    'inLanguage'  => 'sk-SK',
-    'mainEntityOfPage' => $canonicalUrlRaw,
-    'url'         => $canonicalUrlRaw,
-    'datePublished' => toIso8601((string) ($article['published_at'] ?? '')),
-    'dateModified'  => toIso8601((string) ($article['updated_at'] ?? ($article['published_at'] ?? ''))),
-    'medicalSpecialty' => 'Nephrology',
-    'audience' => [
-      '@type'       => 'MedicalAudience',
-      'audienceType' => 'Clinician',
-    ],
-    'author' => [
-      '@type'  => 'Person',
-      'name'   => $articleAuthorRaw,
-      'sameAs' => 'https://polascin.com/',
-    ],
-    'publisher' => [
-      '@type' => 'MedicalOrganization',
-      'name'  => $siteName,
-      'url'   => $baseUrl,
-      // Logo pre Schema.org publisher – GIF logo (portálové id, malé rozmery sú OK pre logo)
-      'logo'  => [
-        '@type'  => 'ImageObject',
-        'url'    => $baseUrl . 'img/nps-logo.gif',
-        'width'  => 200,
-        'height' => 200,
-      ],
-    ],
-    // Primárny obrázok článku – Schema.org Article vyžaduje min. 1200 px šírku
-    'image' => [
-      '@type'  => 'ImageObject',
-      'url'    => $baseUrl . 'img/og-default.jpg',
-      'width'  => 1200,
-      'height' => 630,
-    ],
-  ];
+    $articleSchema = [
+        "@context" => "https://schema.org",
+        "@type" => ["Article", "MedicalWebPage"],
+        "headline" => $articleTitleRaw,
+        "description" => $metaDescriptionRaw,
+        "inLanguage" => "sk-SK",
+        "mainEntityOfPage" => $canonicalUrlRaw,
+        "url" => $canonicalUrlRaw,
+        "datePublished" => toIso8601((string) ($article["published_at"] ?? "")),
+        "dateModified" => toIso8601(
+            (string) ($article["updated_at"] ??
+                ($article["published_at"] ?? "")),
+        ),
+        "medicalSpecialty" => "Nephrology",
+        "audience" => [
+            "@type" => "MedicalAudience",
+            "audienceType" => "Clinician",
+        ],
+        "author" => [
+            "@type" => "Person",
+            "name" => $articleAuthorRaw,
+            "sameAs" => "https://polascin.com/",
+        ],
+        "publisher" => [
+            "@type" => "MedicalOrganization",
+            "name" => $siteName,
+            "url" => $baseUrl,
+            // Logo pre Schema.org publisher – GIF logo (portálové id, malé rozmery sú OK pre logo)
+            "logo" => [
+                "@type" => "ImageObject",
+                "url" => $baseUrl . "img/nps-logo.gif",
+                "width" => 200,
+                "height" => 200,
+            ],
+        ],
+        // Primárny obrázok článku – Schema.org Article vyžaduje min. 1200 px šírku
+        "image" => [
+            "@type" => "ImageObject",
+            "url" => $baseUrl . "img/og-default.jpg",
+            "width" => 1200,
+            "height" => 630,
+        ],
+    ];
 }
 ?>
 <!DOCTYPE html>
@@ -188,8 +236,10 @@ if ($article) {
   // Mapovanie premenných pre head_meta.php — odovzdávame RAW (neescapované) hodnoty.
   // head_meta.php aplikuje htmlspecialchars() na každý výstup sám.
   $seoDescription = $metaDescriptionRaw;
-  $seoKeywords    = 'nefrológia, CKD, chronické ochorenie obličiek, KDIGO, dialýza, transplantácia obličiek, Slovensko, ' . $articleTitleRaw;
-  $ogType = $article ? 'article' : 'website';
+  $seoKeywords =
+      "nefrológia, CKD, chronické ochorenie obličiek, KDIGO, dialýza, transplantácia obličiek, Slovensko, " .
+      $articleTitleRaw;
+  $ogType = $article ? "article" : "website";
 
   $structuredData = [];
   if ($articleSchema) {
@@ -198,36 +248,47 @@ if ($article) {
 
   // BreadcrumbList — všetky URL musia byť RAW (nie HTML-escaped), json_encode() ich správne zakóduje.
   $structuredData[] = [
-      '@context' => 'https://schema.org',
-      '@type'    => 'BreadcrumbList',
-      'itemListElement' => [
+      "@context" => "https://schema.org",
+      "@type" => "BreadcrumbList",
+      "itemListElement" => [
           [
-              '@type'    => 'ListItem',
-              'position' => 1,
-              'name'     => 'Domov',
-              'item'     => $baseUrl,                    // kanonická domovská URL
+              "@type" => "ListItem",
+              "position" => 1,
+              "name" => "Domov",
+              "item" => $baseUrl, // kanonická domovská URL
           ],
           [
-              '@type'    => 'ListItem',
-              'position' => 2,
-              'name'     => 'Články',
-              'item'     => $baseUrl,                    // zoznam článkov = domovská stránka
+              "@type" => "ListItem",
+              "position" => 2,
+              "name" => "Články",
+              "item" => $baseUrl, // zoznam článkov = domovská stránka
           ],
           [
-              '@type'    => 'ListItem',
-              'position' => 3,
-              'name'     => $articleTitleRaw,
-              'item'     => $canonicalUrlRaw,            // RAW URL — nie HTML-escaped!
+              "@type" => "ListItem",
+              "position" => 3,
+              "name" => $articleTitleRaw,
+              "item" => $canonicalUrlRaw, // RAW URL — nie HTML-escaped!
           ],
       ],
   ];
 
-  include 'head_meta.php';
+  include "head_meta.php";
   ?>
   <?php if ($article): ?>
-  <meta property="article:published_time" content="<?= htmlspecialchars(toIso8601((string) ($article['published_at'] ?? '')), ENT_QUOTES) ?>">
-  <meta property="article:modified_time" content="<?= htmlspecialchars(toIso8601((string) ($article['updated_at'] ?? ($article['published_at'] ?? ''))), ENT_QUOTES) ?>">
-  <meta property="article:author" content="<?= htmlspecialchars($articleAuthorRaw, ENT_QUOTES) ?>">
+  <meta property="article:published_time" content="<?= htmlspecialchars(
+      toIso8601((string) ($article["published_at"] ?? "")),
+      ENT_QUOTES,
+  ) ?>">
+  <meta property="article:modified_time" content="<?= htmlspecialchars(
+      toIso8601(
+          (string) ($article["updated_at"] ?? ($article["published_at"] ?? "")),
+      ),
+      ENT_QUOTES,
+  ) ?>">
+  <meta property="article:author" content="<?= htmlspecialchars(
+      $articleAuthorRaw,
+      ENT_QUOTES,
+  ) ?>">
   <?php endif; ?>
 </head>
 
@@ -235,10 +296,11 @@ if ($article) {
   <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>
 
   <?php
-  $headerTitle = 'Nefro-projekt Slovensko';
-  $headerIntro = 'Dynamická renesancia nefrológie: Od molekulárnej biológie po umelú inteligenciu.';
+  $headerTitle = "Nefro-projekt Slovensko";
+  $headerIntro =
+      "Dynamická renesancia nefrológie: Od molekulárnej biológie po umelú inteligenciu.";
   $showLogo = true;
-  include 'header.php';
+  include "header.php";
   ?>
 
   <nav class="main-nav" aria-label="Hlavná navigácia">
@@ -253,12 +315,15 @@ if ($article) {
         <li><a href="index.php#o-nas">O nás</a></li>
         <li><a href="index.php#kontakt">Kontakt</a></li>
         <li><a href="calculators.php">Kalkulačky</a></li>
+        <li><a href="search.php">Vyhľadávanie</a></li>
         <?php if (isLoggedIn()): ?>
           <?php if (isAdmin()): ?>
             <li><a href="admin.php">Admin panel</a></li>
             <li><a href="admin_articles.php">Správa článkov</a></li>
           <?php endif; ?>
-          <li><a href="logout.php">Odhlásiť sa (<?= htmlspecialchars($_SESSION['username'] ?? 'Profil') ?>)</a></li>
+          <li><a href="logout.php">Odhlásiť sa (<?= htmlspecialchars(
+              $_SESSION["username"] ?? "Profil",
+          ) ?>)</a></li>
         <?php else: ?>
           <li><a href="login.php">Prihlásenie</a></li>
           <li><a href="register.php">Registrácia</a></li>
@@ -278,38 +343,52 @@ if ($article) {
           <a href="index.php" class="btn-primary">← Späť na úvodnú stránku</a>
         </article>
 
-      <?php else:
-        $pubDate    = (string) $article['published_at'];
-        $pubDateIso = htmlspecialchars(substr($pubDate, 0, 10));
-        $pubDateSk  = formatArticleDate($pubDate, $months);
-        $isTop      = (int) $article['is_top'] === 1;
-      ?>
+       /* Dôverované HTML — správuje iba admin */<?php
+          /* Dôverované HTML — správuje iba admin */
+          else:
+          $pubDate = (string) $article["published_at"];
+          $pubDateIso = htmlspecialchars(substr($pubDate, 0, 10));
+          $pubDateSk = formatArticleDate($pubDate, $months);
+          $isTop = (int) $article["is_top"] === 1;
+          ?>
 
         <article class="primary-article" itemscope itemtype="https://schema.org/Article">
           <?php if ($isTop): ?>
             <span class="badge-top" aria-label="Odporúčaný článok">★ TOP</span>
           <?php endif; ?>
           <header>
-            <h2 itemprop="headline"><?= htmlspecialchars((string) $article['title']) ?></h2>
+            <h2 itemprop="headline"><?= htmlspecialchars(
+                (string) $article["title"],
+            ) ?></h2>
             <p class="meta">
               Publikované:&nbsp;
-              <time datetime="<?= $pubDateIso ?>" itemprop="datePublished"><?= htmlspecialchars($pubDateSk) ?></time>
+              <time datetime="<?= $pubDateIso ?>" itemprop="datePublished"><?= htmlspecialchars(
+    $pubDateSk,
+) ?></time>
               &nbsp;|&nbsp;
               <span itemprop="author" itemscope itemtype="https://schema.org/Person">
-                <span itemprop="name"><?= htmlspecialchars((string) $article['author']) ?></span>
+                <span itemprop="name"><?= htmlspecialchars(
+                    (string) $article["author"],
+                ) ?></span>
               </span>
             </p>
           </header>
 
-          <?= $article['content'] /* Dôverované HTML — správuje iba admin */ ?>
+          <?= $article["content"]
+          /* Dôverované HTML — správuje iba admin */
+          ?>
 
           <footer>
             <p class="author">
-              Autor: <span class="authorname"><?= htmlspecialchars((string) $article['author']) ?></span>
+              Autor: <span class="authorname"><?= htmlspecialchars(
+                  (string) $article["author"],
+              ) ?></span>
             </p>
             <?php if (isAdmin()): ?>
               <p class="article-admin-actions">
-                <a href="admin_articles.php?action=edit&id=<?= (int) $article['id'] ?>" class="btn-secondary-small">✏️ Upraviť článok</a>
+                <a href="admin_articles.php?action=edit&id=<?= (int) $article[
+                    "id"
+                ] ?>" class="btn-secondary-small">✏️ Upraviť článok</a>
               </p>
             <?php endif; ?>
           </footer>
@@ -535,6 +614,6 @@ if ($article) {
     </aside>
   </main>
 
-  <?php include 'footer.php'; ?>
+  <?php include "footer.php"; ?>
 </body>
 </html>

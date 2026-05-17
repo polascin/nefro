@@ -1,7 +1,7 @@
 ﻿<?php
-require_once 'auth.php';
-require_once 'db_config.php';
-require_once 'calculators_common.php';
+require_once "auth.php";
+require_once "db_config.php";
+require_once "calculators_common.php";
 
 $errors = [];
 $messages = [];
@@ -9,73 +9,92 @@ $calculated = null;
 $savedResults = [];
 
 $form = [
-    'calcium' => (string) ($_POST['calcium'] ?? ''),
-    'albumin' => (string) ($_POST['albumin'] ?? ''),
-    'patient_first_name' => (string) ($_POST['patient_first_name'] ?? ''),
-    'patient_last_name' => (string) ($_POST['patient_last_name'] ?? ''),
-    'patient_birth_date' => (string) ($_POST['patient_birth_date'] ?? ''),
-    'patient_birth_number' => (string) ($_POST['patient_birth_number'] ?? ''),
-    'patient_insurance_code' => (string) ($_POST['patient_insurance_code'] ?? ''),
+    "calcium" => (string) ($_POST["calcium"] ?? ""),
+    "albumin" => (string) ($_POST["albumin"] ?? ""),
+    "patient_first_name" => (string) ($_POST["patient_first_name"] ?? ""),
+    "patient_last_name" => (string) ($_POST["patient_last_name"] ?? ""),
+    "patient_birth_date" => (string) ($_POST["patient_birth_date"] ?? ""),
+    "patient_birth_number" => (string) ($_POST["patient_birth_number"] ?? ""),
+    "patient_insurance_code" =>
+        (string) ($_POST["patient_insurance_code"] ?? ""),
 ];
 
-
-if (isLoggedIn() && isset($_GET['load_id'])) {
-    $loadId = (int) $_GET['load_id'];
-    $loadedRow = calculatorFetchSavedResultById($pdo, $loadId, (int) $_SESSION['user_id']);
+if (isLoggedIn() && isset($_GET["load_id"])) {
+    $loadId = (int) $_GET["load_id"];
+    $loadedRow = calculatorFetchSavedResultById(
+        $pdo,
+        $loadId,
+        (int) $_SESSION["user_id"],
+    );
     if ($loadedRow) {
-        $form['patient_first_name'] = (string) ($loadedRow['patient_first_name'] ?? '');
-        $form['patient_last_name'] = (string) ($loadedRow['patient_last_name'] ?? '');
-        $form['patient_birth_date'] = (string) ($loadedRow['patient_birth_date'] ?? '');
-        $form['patient_birth_number'] = (string) ($loadedRow['patient_birth_number'] ?? '');
-        $form['patient_insurance_code'] = (string) ($loadedRow['patient_insurance_code'] ?? '');
-        if (is_array($loadedRow['input_payload'])) {
-            foreach ($loadedRow['input_payload'] as $k => $v) {
+        $form["patient_first_name"] =
+            (string) ($loadedRow["patient_first_name"] ?? "");
+        $form["patient_last_name"] =
+            (string) ($loadedRow["patient_last_name"] ?? "");
+        $form["patient_birth_date"] =
+            (string) ($loadedRow["patient_birth_date"] ?? "");
+        $form["patient_birth_number"] =
+            (string) ($loadedRow["patient_birth_number"] ?? "");
+        $form["patient_insurance_code"] =
+            (string) ($loadedRow["patient_insurance_code"] ?? "");
+        if (is_array($loadedRow["input_payload"])) {
+            foreach ($loadedRow["input_payload"] as $k => $v) {
                 if (isset($form[$k]) || array_key_exists($k, $form)) {
                     $form[$k] = (string) $v;
                 }
             }
         }
-        $messages[] = 'Údaje z histórie boli načítané do formulára. Môžete ich upraviť a vykonať nový výpočet.';
+        $messages[] =
+            "Údaje z histórie boli načítané do formulára. Môžete ich upraviť a vykonať nový výpočet.";
     }
 }
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $action = (string) ($_POST['action'] ?? '');
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $action = (string) ($_POST["action"] ?? "");
 
-    if (!validateCsrfToken((string) ($_POST['csrf_token'] ?? ''))) {
-        $errors[] = 'Neplatný CSRF token.';
-    } elseif ($action === 'delete_saved') {
+    if (!validateCsrfToken((string) ($_POST["csrf_token"] ?? ""))) {
+        $errors[] = "Neplatný CSRF token.";
+    } elseif ($action === "delete_saved") {
         if (!isLoggedIn()) {
-            $errors[] = 'Na mazanie výsledkov je potrebné prihlásenie.';
+            $errors[] = "Na mazanie výsledkov je potrebné prihlásenie.";
         } else {
-            $resultId = (int) ($_POST['result_id'] ?? 0);
+            $resultId = (int) ($_POST["result_id"] ?? 0);
             if ($resultId <= 0) {
-                $errors[] = 'Neplatné ID záznamu.';
+                $errors[] = "Neplatné ID záznamu.";
             } else {
                 try {
-                    if (calculatorDeleteSavedResult($pdo, $resultId, (int) $_SESSION['user_id'])) {
-                        $messages[] = 'Uložený výsledok bol vymazaný.';
+                    if (
+                        calculatorDeleteSavedResult(
+                            $pdo,
+                            $resultId,
+                            (int) $_SESSION["user_id"],
+                        )
+                    ) {
+                        $messages[] = "Uložený výsledok bol vymazaný.";
                     } else {
-                        $errors[] = 'Záznam sa nepodarilo vymazať alebo neexistuje.';
+                        $errors[] =
+                            "Záznam sa nepodarilo vymazať alebo neexistuje.";
                     }
                 } catch (\PDOException $e) {
-                    $errors[] = 'Databázová chyba pri mazaní záznamu.';
-                    error_log('calculator_ca delete error: ' . $e->getMessage());
+                    $errors[] = "Databázová chyba pri mazaní záznamu.";
+                    error_log(
+                        "calculator_ca delete error: " . $e->getMessage(),
+                    );
                 }
             }
         }
-    } elseif ($action === 'calculate' || $action === 'save') {
+    } elseif ($action === "calculate" || $action === "save") {
         $patient = calculatorPatientDataFromRequest($_POST);
         calculatorValidateOptionalPatientData($patient, $errors);
 
-        $ca = calculatorParsePositiveFloat($form['calcium']);
+        $ca = calculatorParsePositiveFloat($form["calcium"]);
         if ($ca === null) {
-            $errors[] = 'Zadajte platnú hodnotu celkového vápnika.';
+            $errors[] = "Zadajte platnú hodnotu celkového vápnika.";
         }
 
-        $alb = calculatorParsePositiveFloat($form['albumin']);
+        $alb = calculatorParsePositiveFloat($form["albumin"]);
         if ($alb === null) {
-            $errors[] = 'Zadajte platnú hodnotu sérového albumínu.';
+            $errors[] = "Zadajte platnú hodnotu sérového albumínu.";
         }
 
         if (empty($errors)) {
@@ -83,37 +102,41 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $correctedCa = $ca + 0.02 * (40.0 - $alb);
 
             $calculated = [
-                'corrected_ca' => round($correctedCa, 2),
-                'measured_ca' => round($ca, 2),
-                'albumin' => round($alb, 1),
+                "corrected_ca" => round($correctedCa, 2),
+                "measured_ca" => round($ca, 2),
+                "albumin" => round($alb, 1),
             ];
 
-            if ($action === 'save') {
+            if ($action === "save") {
                 if (!isLoggedIn()) {
-                    $errors[] = 'Pre uloženie výsledku sa najskôr prihláste.';
+                    $errors[] = "Pre uloženie výsledku sa najskôr prihláste.";
                 } else {
                     try {
                         $inputPayload = [
-                            'calcium' => round($ca, 2),
-                            'albumin' => round($alb, 1),
+                            "calcium" => round($ca, 2),
+                            "albumin" => round($alb, 1),
                         ];
 
-                        if (calculatorSaveResult(
-                            $pdo,
-                            (int) $_SESSION['user_id'],
-                            'ca_corrected',
-                            'Korigovaný vápnik',
-                            $patient,
-                            $inputPayload,
-                            $calculated
-                        )) {
-                            $messages[] = 'Výsledok bol uložený do databázy.';
+                        if (
+                            calculatorSaveResult(
+                                $pdo,
+                                (int) $_SESSION["user_id"],
+                                "ca_corrected",
+                                "Korigovaný vápnik",
+                                $patient,
+                                $inputPayload,
+                                $calculated,
+                            )
+                        ) {
+                            $messages[] = "Výsledok bol uložený do databázy.";
                         } else {
-                            $errors[] = 'Výsledok sa nepodarilo uložiť.';
+                            $errors[] = "Výsledok sa nepodarilo uložiť.";
                         }
                     } catch (\PDOException $e) {
-                        $errors[] = 'Databázová chyba pri ukladaní výsledku.';
-                        error_log('calculator_ca save error: ' . $e->getMessage());
+                        $errors[] = "Databázová chyba pri ukladaní výsledku.";
+                        error_log(
+                            "calculator_ca save error: " . $e->getMessage(),
+                        );
                     }
                 }
             }
@@ -123,10 +146,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 if (isLoggedIn()) {
     try {
-        $savedResults = calculatorFetchSavedResults($pdo, (int) $_SESSION['user_id'], 'ca_corrected', 25);
+        $savedResults = calculatorFetchSavedResults(
+            $pdo,
+            (int) $_SESSION["user_id"],
+            "ca_corrected",
+            25,
+        );
     } catch (\PDOException $e) {
-        $errors[] = 'Nepodarilo sa načítať uložené výsledky.';
-        error_log('calculator_ca fetch history error: ' . $e->getMessage());
+        $errors[] = "Nepodarilo sa načítať uložené výsledky.";
+        error_log("calculator_ca fetch history error: " . $e->getMessage());
     }
 }
 ?>
@@ -134,31 +162,47 @@ if (isLoggedIn()) {
 <html lang="sk">
 <head>
   <?php
-  $pageTitle    = 'Korigovaný vápnik | Kalkulačky | Nefro-projekt Slovensko';
-  $canonicalUrl  = 'https://nefro.polascin.net/calculator_ca.php';
-  $seoDescription = 'Nefrologická kalkulačka a nástroj: Korigovaný vápnik. Hodnotenie kalciémie pri hypoalbuminémii. Presné klinické výpočty podľa najnovších odporúčaní pre lekárov na Slovensku.';
+  $pageTitle = "Korigovaný vápnik | Kalkulačky | Nefro-projekt Slovensko";
+  $canonicalUrl = "https://nefro.polascin.net/calculator_ca.php";
+  $seoDescription =
+      "Nefrologická kalkulačka a nástroj: Korigovaný vápnik. Hodnotenie kalciémie pri hypoalbuminémii. Presné klinické výpočty podľa najnovších odporúčaní pre lekárov na Slovensku.";
   $structuredData = [
-    [
-      '@context' => 'https://schema.org',
-      '@type' => 'BreadcrumbList',
-      'itemListElement' => [
-        ['@type' => 'ListItem', 'position' => 1, 'name' => 'Domov', 'item' => $baseUrl],
-        ['@type' => 'ListItem', 'position' => 2, 'name' => 'Kalkulačky', 'item' => $baseUrl . 'calculators.php'],
-        ['@type' => 'ListItem', 'position' => 3, 'name' => 'Korigovaný vápnik pri hypoalbuminémii', 'item' => $baseUrl . 'calculator_ca.php']
-      ]
-    ]
+      [
+          "@context" => "https://schema.org",
+          "@type" => "BreadcrumbList",
+          "itemListElement" => [
+              [
+                  "@type" => "ListItem",
+                  "position" => 1,
+                  "name" => "Domov",
+                  "item" => $baseUrl,
+              ],
+              [
+                  "@type" => "ListItem",
+                  "position" => 2,
+                  "name" => "Kalkulačky",
+                  "item" => $baseUrl . "calculators.php",
+              ],
+              [
+                  "@type" => "ListItem",
+                  "position" => 3,
+                  "name" => "Korigovaný vápnik pri hypoalbuminémii",
+                  "item" => $baseUrl . "calculator_ca.php",
+              ],
+          ],
+      ],
   ];
-  include 'head_meta.php';
+  include "head_meta.php";
   ?>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>
 
     <?php
-    $headerTitle = 'Kalkulačka korigovaného Ca';
-    $headerIntro = 'Hodnotenie kalciémie pri hypoalbuminémii';
+    $headerTitle = "Kalkulačka korigovaného Ca";
+    $headerIntro = "Hodnotenie kalciémie pri hypoalbuminémii";
     $showLogo = false;
-    include 'header.php';
+    include "header.php";
     ?>
 
     <nav class="main-nav" aria-label="Hlavná navigácia">
@@ -166,11 +210,14 @@ if (isLoggedIn()) {
             <ul>
                 <li><a href="index.php">Domov</a></li>
                 <li><a href="calculators.php" class="active" aria-current="page">Kalkulačky</a></li>
+                <li><a href="search.php">Vyhľadávanie</a></li>
                 <?php if (isLoggedIn()): ?>
                     <?php if (isAdmin()): ?>
                         <li><a href="admin.php">Admin panel</a></li>
                     <?php endif; ?>
-                    <li><a href="logout.php">Odhlásiť sa (<?= htmlspecialchars($_SESSION['username'] ?? 'Profil') ?>)</a></li>
+                    <li><a href="logout.php">Odhlásiť sa (<?= htmlspecialchars(
+                        $_SESSION["username"] ?? "Profil",
+                    ) ?>)</a></li>
                 <?php else: ?>
                     <li><a href="login.php">Prihlásenie</a></li>
                 <?php endif; ?>
@@ -195,7 +242,9 @@ if (isLoggedIn()) {
                 </details>
 
                 <?php foreach ($messages as $message): ?>
-                    <div class="alert alert-success"><p><?= htmlspecialchars($message) ?></p></div>
+                    <div class="alert alert-success"><p><?= htmlspecialchars(
+                        $message,
+                    ) ?></p></div>
                 <?php endforeach; ?>
 
                 <?php if (!empty($errors)): ?>
@@ -209,28 +258,39 @@ if (isLoggedIn()) {
                 <?php endif; ?>
 
                 <form method="POST" action="calculator_ca.php">
-                    <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
+                    <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(
+                        generateCsrfToken(),
+                    ) ?>">
                     <div class="form-section">
                         <h3>Voliteľné identifikačné údaje pacienta</h3>
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="patient_first_name">Meno</label>
-                                <input type="text" id="patient_first_name" name="patient_first_name" class="form-control" value="<?= htmlspecialchars($form['patient_first_name']) ?>">
+                                <input type="text" id="patient_first_name" name="patient_first_name" class="form-control" value="<?= htmlspecialchars(
+                                    $form["patient_first_name"],
+                                ) ?>">
                             </div>
                             <div class="form-group">
                                 <label for="patient_last_name">Priezvisko</label>
-                                <input type="text" id="patient_last_name" name="patient_last_name" class="form-control" value="<?= htmlspecialchars($form['patient_last_name']) ?>">
+                                <input type="text" id="patient_last_name" name="patient_last_name" class="form-control" value="<?= htmlspecialchars(
+                                    $form["patient_last_name"],
+                                ) ?>">
                             </div>
                             <div class="form-group">
                                 <label for="patient_birth_date">Dátum narodenia</label>
-                                <input type="date" id="patient_birth_date" name="patient_birth_date" class="form-control" value="<?= htmlspecialchars($form['patient_birth_date']) ?>">
+                                <input type="date" id="patient_birth_date" name="patient_birth_date" class="form-control" value="<?= htmlspecialchars(
+                                    $form["patient_birth_date"],
+                                ) ?>">
                             </div>
                             <div class="form-group">
                                 <label for="patient_birth_number">Rodné číslo</label>
-                                <input type="text" id="patient_birth_number" name="patient_birth_number" class="form-control" placeholder="000000/0000" value="<?= htmlspecialchars($form['patient_birth_number']) ?>">
+                                <input type="text" id="patient_birth_number" name="patient_birth_number" class="form-control" placeholder="000000/0000" value="<?= htmlspecialchars(
+                                    $form["patient_birth_number"],
+                                ) ?>">
                             </div>
 
-                            <?php include __DIR__ . '/patient_insurance_select.php'; ?>
+                            <?php include __DIR__ .
+                                "/patient_insurance_select.php"; ?>
 
 
                         </div>
@@ -241,11 +301,15 @@ if (isLoggedIn()) {
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="calcium">Celkový vápnik (S-Ca v mmol/L)</label>
-                                <input type="text" id="calcium" name="calcium" required class="form-control" value="<?= htmlspecialchars($form['calcium']) ?>">
+                                <input type="text" id="calcium" name="calcium" required class="form-control" value="<?= htmlspecialchars(
+                                    $form["calcium"],
+                                ) ?>">
                             </div>
                             <div class="form-group">
                                 <label for="albumin">S-Albumín (g/L)</label>
-                                <input type="text" id="albumin" name="albumin" required class="form-control" value="<?= htmlspecialchars($form['albumin']) ?>">
+                                <input type="text" id="albumin" name="albumin" required class="form-control" value="<?= htmlspecialchars(
+                                    $form["albumin"],
+                                ) ?>">
                             </div>
                         </div>
                     </div>
@@ -260,7 +324,14 @@ if (isLoggedIn()) {
                 <?php if ($calculated !== null): ?>
                     <div class="form-section calculator-result-block">
                         <h3>Výsledok výpočtu</h3>
-                        <p><strong>Korigovaný vápnik:</strong> <?= htmlspecialchars(number_format((float) $calculated['corrected_ca'], 2, ',', ' ')) ?> mmol/L</p>
+                        <p><strong>Korigovaný vápnik:</strong> <?= htmlspecialchars(
+                            number_format(
+                                (float) $calculated["corrected_ca"],
+                                2,
+                                ",",
+                                " ",
+                            ),
+                        ) ?> mmol/L</p>
 
                         <div class="form-actions no-print" style="margin-top: 24px;">
                             <button type="button" class="btn-primary" onclick="window.print()">Vytlačiť výpočet</button>
@@ -269,7 +340,7 @@ if (isLoggedIn()) {
                 <?php endif; ?>
             </div>
 
-            <?php include 'calculator_disclaimer.php'; ?>
+            <?php include "calculator_disclaimer.php"; ?>
             <section class="auth-container auth-container--wide calc-saved-results">
                 <h3>Uložené výsledky</h3>
                 <?php if (!isLoggedIn()): ?>
@@ -290,22 +361,44 @@ if (isLoggedIn()) {
                             <tbody>
                                 <?php foreach ($savedResults as $row): ?>
                                     <?php
-                                    $result = is_array($row['result_payload']) ? $row['result_payload'] : [];
-                                    $ca = (float) ($result['corrected_ca'] ?? 0);
+                                    $result = is_array($row["result_payload"])
+                                        ? $row["result_payload"]
+                                        : [];
+                                    $ca =
+                                        (float) ($result["corrected_ca"] ?? 0);
                                     ?>
                                     <tr>
-                                        <td><?= htmlspecialchars(date('d.m.Y H:i', strtotime($row['created_at'] ?? ''))) ?></td>
-                                        <td><?= htmlspecialchars(calculatorBuildPatientDisplay($row)) ?></td>
+                                        <td><?= htmlspecialchars(
+                                            date(
+                                                "d.m.Y H:i",
+                                                strtotime(
+                                                    $row["created_at"] ?? "",
+                                                ),
+                                            ),
+                                        ) ?></td>
+                                        <td><?= htmlspecialchars(
+                                            calculatorBuildPatientDisplay($row),
+                                        ) ?></td>
                                         <td>
-                                            <?= htmlspecialchars(number_format($ca, 2, ',', ' ')) ?> mmol/L
+                                            <?= htmlspecialchars(
+                                                number_format($ca, 2, ",", " "),
+                                            ) ?> mmol/L
                                         </td>
                                         <td class="admin-actions-cell">
-                                            <a href="?load_id=<?= (int) $row['id'] ?>" class="btn-admin-action" style="background: var(--color-primary); color: white; border-color: var(--color-primary);">Načítať</a>
-                                            <a href="calculator_result_print.php?result_id=<?= (int) $row['id'] ?>" target="_blank" rel="noopener" class="btn-admin-action">Tlačiť</a>
+                                            <a href="?load_id=<?= (int) $row[
+                                                "id"
+                                            ] ?>" class="btn-admin-action" style="background: var(--color-primary); color: white; border-color: var(--color-primary);">Načítať</a>
+                                            <a href="calculator_result_print.php?result_id=<?= (int) $row[
+                                                "id"
+                                            ] ?>" target="_blank" rel="noopener" class="btn-admin-action">Tlačiť</a>
                                             <form method="POST" action="calculator_ca.php" style="display:inline" onsubmit="return confirm('Naozaj vymazať záznam?')">
-                                                <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
+                                                <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(
+                                                    generateCsrfToken(),
+                                                ) ?>">
                                                 <input type="hidden" name="action" value="delete_saved">
-                                                <input type="hidden" name="result_id" value="<?= (int) $row['id'] ?>">
+                                                <input type="hidden" name="result_id" value="<?= (int) $row[
+                                                    "id"
+                                                ] ?>">
                                                 <button type="submit" class="btn-admin-action btn-admin-action--warn">Vymazať</button>
                                             </form>
                                         </td>
@@ -319,6 +412,6 @@ if (isLoggedIn()) {
         </div>
     </main>
 
-    <?php include 'footer.php'; ?>
+    <?php include "footer.php"; ?>
 </body>
 </html>

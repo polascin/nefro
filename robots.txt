@@ -20,6 +20,7 @@ Disallow: /newsletter_unsubscribe.php
 Disallow: /logout.php
 Disallow: /avatar_upload.php
 Disallow: /calculator_result_print.php
+Disallow: /search.php?*page=
 
 # Privátne adresáre
 Disallow: /private/

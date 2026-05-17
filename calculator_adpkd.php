@@ -1,7 +1,7 @@
 <?php
-require_once 'auth.php';
-require_once 'db_config.php';
-require_once 'calculators_common.php';
+require_once "auth.php";
+require_once "db_config.php";
+require_once "calculators_common.php";
 
 /**
  * Mayo ADPKD klasifikácia — Irazabal et al. JASN 2015;26(8):1987–1994
@@ -13,112 +13,154 @@ require_once 'calculators_common.php';
 function adpkdClassify(float $tkv_ml, float $height_cm, float $age): array
 {
     $height_m = $height_cm / 100.0;
-    $httkv    = $tkv_ml / $height_m;                     // mL/m
-    $k        = log($httkv / 150.0) / $age;              // ročná miera rastu (log)
-    $annual_pct = (exp($k) - 1.0) * 100.0;              // % za rok
+    $httkv = $tkv_ml / $height_m; // mL/m
+    $k = log($httkv / 150.0) / $age; // ročná miera rastu (log)
+    $annual_pct = (exp($k) - 1.0) * 100.0; // % za rok
 
-    if      ($k < 0.015) { $class = '1A'; $speed = 'Pomalá (<1,5 %/rok)'; }
-    elseif  ($k < 0.030) { $class = '1B'; $speed = 'Mierna (1,5–3 %/rok)'; }
-    elseif  ($k < 0.045) { $class = '1C'; $speed = 'Rýchla (3–4,5 %/rok)'; }
-    elseif  ($k < 0.060) { $class = '1D'; $speed = 'Veľmi rýchla (4,5–6 %/rok)'; }
-    else                  { $class = '1E'; $speed = 'Extrémne rýchla (>6 %/rok)'; }
+    if ($k < 0.015) {
+        $class = "1A";
+        $speed = "Pomalá (<1,5 %/rok)";
+    } elseif ($k < 0.03) {
+        $class = "1B";
+        $speed = "Mierna (1,5–3 %/rok)";
+    } elseif ($k < 0.045) {
+        $class = "1C";
+        $speed = "Rýchla (3–4,5 %/rok)";
+    } elseif ($k < 0.06) {
+        $class = "1D";
+        $speed = "Veľmi rýchla (4,5–6 %/rok)";
+    } else {
+        $class = "1E";
+        $speed = "Extrémne rýchla (>6 %/rok)";
+    }
 
     return [
-        'httkv'      => round($httkv, 1),
-        'k_pct'      => round($annual_pct, 2),
-        'class'      => $class,
-        'speed'      => $speed,
+        "httkv" => round($httkv, 1),
+        "k_pct" => round($annual_pct, 2),
+        "class" => $class,
+        "speed" => $speed,
     ];
 }
 
 function adpkdInterpretation(string $class): array
 {
     $interp = [];
-    $warn   = [];
+    $warn = [];
     switch ($class) {
-        case '1A':
-            $interp[] = 'Trieda 1A — pomalá progresia. Pravidelné sledovanie, konzervatívna liečba.';
+        case "1A":
+            $interp[] =
+                "Trieda 1A — pomalá progresia. Pravidelné sledovanie, konzervatívna liečba.";
             break;
-        case '1B':
-            $interp[] = 'Trieda 1B — mierna progresia. Optimalizácia krvného tlaku, hydratácia.';
+        case "1B":
+            $interp[] =
+                "Trieda 1B — mierna progresia. Optimalizácia krvného tlaku, hydratácia.";
             break;
-        case '1C':
-            $interp[] = 'Trieda 1C — rýchla progresia. Zvážiť tolvaptan (KDIGO 2024 odporúčanie).';
-            $warn[]   = 'Trieda 1C je typický kandidát na špecifickú liečbu tolvaptanom.';
+        case "1C":
+            $interp[] =
+                "Trieda 1C — rýchla progresia. Zvážiť tolvaptan (KDIGO 2024 odporúčanie).";
+            $warn[] =
+                "Trieda 1C je typický kandidát na špecifickú liečbu tolvaptanom.";
             break;
-        case '1D':
-            $interp[] = 'Trieda 1D — veľmi rýchla progresia. Tolvaptan indikovaný pri absencii kontraindikácií.';
-            $warn[]   = 'Odporúčané nefrologické sledovanie každých 6 mesiacov.';
+        case "1D":
+            $interp[] =
+                "Trieda 1D — veľmi rýchla progresia. Tolvaptan indikovaný pri absencii kontraindikácií.";
+            $warn[] = "Odporúčané nefrologické sledovanie každých 6 mesiacov.";
             break;
-        case '1E':
-            $interp[] = 'Trieda 1E — extrémne rýchla progresia. Tolvaptan a včasné plánovanie RRT.';
-            $warn[]   = 'URGENTNÉ: Zvážiť zaradenie do transplantačného programu. Tolvaptan pri absencii hepatotoxicity.';
+        case "1E":
+            $interp[] =
+                "Trieda 1E — extrémne rýchla progresia. Tolvaptan a včasné plánovanie RRT.";
+            $warn[] =
+                "URGENTNÉ: Zvážiť zaradenie do transplantačného programu. Tolvaptan pri absencii hepatotoxicity.";
             break;
     }
-    return ['interpretation' => $interp, 'warnings' => $warn];
+    return ["interpretation" => $interp, "warnings" => $warn];
 }
 
 calculatorSendSecurityHeaders();
 
-$siteName  = 'Nefro-projekt Slovensko';
-$baseUrl   = 'https://nefro.polascin.net/';
-$pageUrl   = $baseUrl . 'calculator_adpkd.php';
-$pageTitle = 'Mayo ADPKD klasifikácia — rýchlosť progresie ADPKD | ' . $siteName;
-$pageDesc  = 'Mayo Clinic ADPKD klasifikácia (Irazabal 2015) — zaradenie do tried 1A–1E podľa výškou adjustovaného celkového objemu obličiek (HtTKV) a veku. Pre výber tolvaptanu a sledovanie ADPKD.';
-$ogImage   = $baseUrl . 'img/nps-logo.gif';
+$siteName = "Nefro-projekt Slovensko";
+$baseUrl = "https://nefro.polascin.net/";
+$pageUrl = $baseUrl . "calculator_adpkd.php";
+$pageTitle =
+    "Mayo ADPKD klasifikácia — rýchlosť progresie ADPKD | " . $siteName;
+$pageDesc =
+    "Mayo Clinic ADPKD klasifikácia (Irazabal 2015) — zaradenie do tried 1A–1E podľa výškou adjustovaného celkového objemu obličiek (HtTKV) a veku. Pre výber tolvaptanu a sledovanie ADPKD.";
+$ogImage = $baseUrl . "img/nps-logo.gif";
 
-$errors = []; $messages = []; $calculated = null; $savedResults = [];
+$errors = [];
+$messages = [];
+$calculated = null;
+$savedResults = [];
 
 $form = [
-    'tkv_ml'       => (string)($_POST['tkv_ml']    ?? ''),
-    'height_cm'    => (string)($_POST['height_cm'] ?? ''),
-    'age_years'    => (string)($_POST['age_years'] ?? ''),
-    'typical_adpkd'=> (string)($_POST['typical_adpkd'] ?? '1'),
-    'patient_first_name'    => (string)($_POST['patient_first_name']    ?? ''),
-    'patient_last_name'     => (string)($_POST['patient_last_name']     ?? ''),
-    'patient_birth_date'    => (string)($_POST['patient_birth_date']    ?? ''),
-    'patient_birth_number'  => (string)($_POST['patient_birth_number']  ?? ''),
-    'patient_insurance_code'=> (string)($_POST['patient_insurance_code']?? ''),
+    "tkv_ml" => (string) ($_POST["tkv_ml"] ?? ""),
+    "height_cm" => (string) ($_POST["height_cm"] ?? ""),
+    "age_years" => (string) ($_POST["age_years"] ?? ""),
+    "typical_adpkd" => (string) ($_POST["typical_adpkd"] ?? "1"),
+    "patient_first_name" => (string) ($_POST["patient_first_name"] ?? ""),
+    "patient_last_name" => (string) ($_POST["patient_last_name"] ?? ""),
+    "patient_birth_date" => (string) ($_POST["patient_birth_date"] ?? ""),
+    "patient_birth_number" => (string) ($_POST["patient_birth_number"] ?? ""),
+    "patient_insurance_code" =>
+        (string) ($_POST["patient_insurance_code"] ?? ""),
 ];
 
-
-if (isLoggedIn() && isset($_GET['load_id'])) {
-    $loadId = (int) $_GET['load_id'];
-    $loadedRow = calculatorFetchSavedResultById($pdo, $loadId, (int) $_SESSION['user_id']);
+if (isLoggedIn() && isset($_GET["load_id"])) {
+    $loadId = (int) $_GET["load_id"];
+    $loadedRow = calculatorFetchSavedResultById(
+        $pdo,
+        $loadId,
+        (int) $_SESSION["user_id"],
+    );
     if ($loadedRow) {
-        $form['patient_first_name'] = (string) ($loadedRow['patient_first_name'] ?? '');
-        $form['patient_last_name'] = (string) ($loadedRow['patient_last_name'] ?? '');
-        $form['patient_birth_date'] = (string) ($loadedRow['patient_birth_date'] ?? '');
-        $form['patient_birth_number'] = (string) ($loadedRow['patient_birth_number'] ?? '');
-        $form['patient_insurance_code'] = (string) ($loadedRow['patient_insurance_code'] ?? '');
-        if (is_array($loadedRow['input_payload'])) {
-            foreach ($loadedRow['input_payload'] as $k => $v) {
+        $form["patient_first_name"] =
+            (string) ($loadedRow["patient_first_name"] ?? "");
+        $form["patient_last_name"] =
+            (string) ($loadedRow["patient_last_name"] ?? "");
+        $form["patient_birth_date"] =
+            (string) ($loadedRow["patient_birth_date"] ?? "");
+        $form["patient_birth_number"] =
+            (string) ($loadedRow["patient_birth_number"] ?? "");
+        $form["patient_insurance_code"] =
+            (string) ($loadedRow["patient_insurance_code"] ?? "");
+        if (is_array($loadedRow["input_payload"])) {
+            foreach ($loadedRow["input_payload"] as $k => $v) {
                 if (isset($form[$k]) || array_key_exists($k, $form)) {
                     $form[$k] = (string) $v;
                 }
             }
         }
-        $messages[] = 'Údaje z histórie boli načítané do formulára. Môžete ich upraviť a vykonať nový výpočet.';
+        $messages[] =
+            "Údaje z histórie boli načítané do formulára. Môžete ich upraviť a vykonať nový výpočet.";
     }
 }
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (!validateCsrfToken((string)($_POST['csrf_token'] ?? ''))) {
-        $errors[] = 'Neplatný CSRF token.';
-    } elseif (isset($_POST['delete_id'])) {
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    if (!validateCsrfToken((string) ($_POST["csrf_token"] ?? ""))) {
+        $errors[] = "Neplatný CSRF token.";
+    } elseif (isset($_POST["delete_id"])) {
         if (!isLoggedIn()) {
-            $errors[] = 'Na mazanie výsledkov je potrebné prihlásenie.';
+            $errors[] = "Na mazanie výsledkov je potrebné prihlásenie.";
         } else {
-            $deleteId = (int)$_POST['delete_id'];
+            $deleteId = (int) $_POST["delete_id"];
             if ($deleteId > 0) {
                 try {
-                    if (calculatorDeleteSavedResult($pdo, $deleteId, (int)$_SESSION['user_id'])) {
-                        $messages[] = 'Záznam bol úspešne vymazaný.';
+                    if (
+                        calculatorDeleteSavedResult(
+                            $pdo,
+                            $deleteId,
+                            (int) $_SESSION["user_id"],
+                        )
+                    ) {
+                        $messages[] = "Záznam bol úspešne vymazaný.";
                     } else {
-                        $errors[] = 'Záznam sa nepodarilo vymazať (alebo neexistuje).';
+                        $errors[] =
+                            "Záznam sa nepodarilo vymazať (alebo neexistuje).";
                     }
                 } catch (\Throwable $e) {
-                    $errors[] = 'Chyba pri mazaní: ' . htmlspecialchars($e->getMessage());
+                    $errors[] =
+                        "Chyba pri mazaní: " .
+                        htmlspecialchars($e->getMessage());
                 }
             }
         }
@@ -126,33 +168,73 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $patient = calculatorPatientDataFromRequest($_POST);
         calculatorValidateOptionalPatientData($patient, $errors);
 
-        $tkvMl     = calculatorParsePositiveFloat($form['tkv_ml']);
-        $heightCm  = calculatorParsePositiveFloat($form['height_cm']);
-        $ageYears  = calculatorParsePositiveFloat($form['age_years']);
-        $isTypical = ($form['typical_adpkd'] === '1');
+        $tkvMl = calculatorParsePositiveFloat($form["tkv_ml"]);
+        $heightCm = calculatorParsePositiveFloat($form["height_cm"]);
+        $ageYears = calculatorParsePositiveFloat($form["age_years"]);
+        $isTypical = $form["typical_adpkd"] === "1";
 
-        if ($tkvMl   === null || $tkvMl   > 10000) $errors[] = 'Celkový objem obličiek (TKV) musí byť 1–10 000 mL.';
-        if ($heightCm === null || $heightCm < 100 || $heightCm > 220) $errors[] = 'Výška musí byť 100–220 cm.';
-        if ($ageYears === null || $ageYears < 15 || $ageYears > 80)   $errors[] = 'Vek musí byť 15–80 rokov.';
+        if ($tkvMl === null || $tkvMl > 10000) {
+            $errors[] = "Celkový objem obličiek (TKV) musí byť 1–10 000 mL.";
+        }
+        if ($heightCm === null || $heightCm < 100 || $heightCm > 220) {
+            $errors[] = "Výška musí byť 100–220 cm.";
+        }
+        if ($ageYears === null || $ageYears < 15 || $ageYears > 80) {
+            $errors[] = "Vek musí byť 15–80 rokov.";
+        }
 
         if (empty($errors)) {
             if (!$isTypical) {
-                $calculated = ['class' => '2', 'speed' => 'Atypická ADPKD', 'httkv' => round($tkvMl / ($heightCm/100), 1), 'k_pct' => null,
-                    'interpretation' => ['Trieda 2 — atypická ADPKD (unilaterálna alebo asymetrická). Mayo klasifikácia nie je aplikovateľná.'],
-                    'warnings' => ['Odporúčané individuálne genetické vyšetrenie a nefrologické sledovanie.']];
+                $calculated = [
+                    "class" => "2",
+                    "speed" => "Atypická ADPKD",
+                    "httkv" => round($tkvMl / ($heightCm / 100), 1),
+                    "k_pct" => null,
+                    "interpretation" => [
+                        "Trieda 2 — atypická ADPKD (unilaterálna alebo asymetrická). Mayo klasifikácia nie je aplikovateľná.",
+                    ],
+                    "warnings" => [
+                        "Odporúčané individuálne genetické vyšetrenie a nefrologické sledovanie.",
+                    ],
+                ];
             } else {
-                $res  = adpkdClassify($tkvMl, $heightCm, $ageYears);
-                $int  = adpkdInterpretation($res['class']);
-                $calculated = array_merge($res, ['interpretation' => $int['interpretation'], 'warnings' => $int['warnings'],
-                    'tkv' => $tkvMl, 'height' => $heightCm, 'age' => $ageYears]);
+                $res = adpkdClassify($tkvMl, $heightCm, $ageYears);
+                $int = adpkdInterpretation($res["class"]);
+                $calculated = array_merge($res, [
+                    "interpretation" => $int["interpretation"],
+                    "warnings" => $int["warnings"],
+                    "tkv" => $tkvMl,
+                    "height" => $heightCm,
+                    "age" => $ageYears,
+                ]);
 
                 if (isLoggedIn()) {
                     try {
-                        $saved = calculatorSaveResult($pdo, (int)$_SESSION['user_id'], 'adpkd', 'Mayo ADPKD klasifikácia', $patient,
-                            ['tkv_ml' => $tkvMl, 'height_cm' => $heightCm, 'age_years' => $ageYears],
-                            ['class' => $res['class'], 'httkv' => $res['httkv'], 'k_pct' => $res['k_pct']]);
-                        if ($saved) $messages[] = 'Výsledok bol uložený.';
-                    } catch (\Throwable $e) { $errors[] = 'Uloženie zlyhalo: ' . htmlspecialchars($e->getMessage()); }
+                        $saved = calculatorSaveResult(
+                            $pdo,
+                            (int) $_SESSION["user_id"],
+                            "adpkd",
+                            "Mayo ADPKD klasifikácia",
+                            $patient,
+                            [
+                                "tkv_ml" => $tkvMl,
+                                "height_cm" => $heightCm,
+                                "age_years" => $ageYears,
+                            ],
+                            [
+                                "class" => $res["class"],
+                                "httkv" => $res["httkv"],
+                                "k_pct" => $res["k_pct"],
+                            ],
+                        );
+                        if ($saved) {
+                            $messages[] = "Výsledok bol uložený.";
+                        }
+                    } catch (\Throwable $e) {
+                        $errors[] =
+                            "Uloženie zlyhalo: " .
+                            htmlspecialchars($e->getMessage());
+                    }
                 }
             }
         }
@@ -160,43 +242,77 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 if (isLoggedIn()) {
-    try { $savedResults = calculatorFetchSavedResults($pdo, (int)$_SESSION['user_id'], 'adpkd');
-    } catch (\Throwable $e) {} }
+    try {
+        $savedResults = calculatorFetchSavedResults(
+            $pdo,
+            (int) $_SESSION["user_id"],
+            "adpkd",
+        );
+    } catch (\Throwable $e) {
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="sk">
 <head>
   <?php
-  $pageTitle    = 'Mayo ADPKD klasifikácia — rýchlosť progresie ADPKD | Nefro-projekt Slovensko';
-  $canonicalUrl  = 'https://nefro.polascin.net/calculator_adpkd.php';
-  $seoDescription = 'Mayo Clinic ADPKD klasifikácia (Irazabal 2015) — zaradenie do tried 1A–1E podľa výškou adjustovaného celkového objemu obličiek (HtTKV) a veku.';
+  $pageTitle =
+      "Mayo ADPKD klasifikácia — rýchlosť progresie ADPKD | Nefro-projekt Slovensko";
+  $canonicalUrl = "https://nefro.polascin.net/calculator_adpkd.php";
+  $seoDescription =
+      "Mayo Clinic ADPKD klasifikácia (Irazabal 2015) — zaradenie do tried 1A–1E podľa výškou adjustovaného celkového objemu obličiek (HtTKV) a veku.";
   $structuredData = [
-    [
-      '@context' => 'https://schema.org',
-      '@type' => 'BreadcrumbList',
-      'itemListElement' => [
-        ['@type' => 'ListItem', 'position' => 1, 'name' => 'Domov', 'item' => $baseUrl],
-        ['@type' => 'ListItem', 'position' => 2, 'name' => 'Kalkulačky', 'item' => $baseUrl . 'calculators.php'],
-        ['@type' => 'ListItem', 'position' => 3, 'name' => 'Mayo ADPKD klasifikácia', 'item' => $baseUrl . 'calculator_adpkd.php']
-      ]
-    ]
+      [
+          "@context" => "https://schema.org",
+          "@type" => "BreadcrumbList",
+          "itemListElement" => [
+              [
+                  "@type" => "ListItem",
+                  "position" => 1,
+                  "name" => "Domov",
+                  "item" => $baseUrl,
+              ],
+              [
+                  "@type" => "ListItem",
+                  "position" => 2,
+                  "name" => "Kalkulačky",
+                  "item" => $baseUrl . "calculators.php",
+              ],
+              [
+                  "@type" => "ListItem",
+                  "position" => 3,
+                  "name" => "Mayo ADPKD klasifikácia",
+                  "item" => $baseUrl . "calculator_adpkd.php",
+              ],
+          ],
+      ],
   ];
-  include 'head_meta.php';
+  include "head_meta.php";
   ?>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>
-    <?php $headerTitle = 'Mayo ADPKD klasifikácia'; $headerIntro = 'Rýchlosť progresie polycystickej choroby obličiek'; $showLogo = false; include 'header.php'; ?>
+    <?php
+    $headerTitle = "Mayo ADPKD klasifikácia";
+    $headerIntro = "Rýchlosť progresie polycystickej choroby obličiek";
+    $showLogo = false;
+    include "header.php";
+    ?>
 
     <nav class="main-nav" aria-label="Hlavná navigácia">
         <div class="container"><ul>
             <li><a href="index.php">Domov</a></li>
             <li><a href="calculators.php" class="active" aria-current="page">Kalkulačky</a></li>
+            <li><a href="search.php">Vyhľadávanie</a></li>
             <li><a href="calculator_egfr.php">eGFR CKD-EPI</a></li>
             <li><a href="calculator_kdigo_risk.php">KDIGO G/A riziko</a></li>
             <?php if (isLoggedIn()): ?>
-                <?php if (isAdmin()): ?><li><a href="admin.php">Admin panel</a></li><?php endif; ?>
-                <li><a href="logout.php">Odhlásiť sa (<?= htmlspecialchars($_SESSION['username'] ?? 'Profil') ?>)</a></li>
+                <?php if (
+                    isAdmin()
+                ): ?><li><a href="admin.php">Admin panel</a></li><?php endif; ?>
+                <li><a href="logout.php">Odhlásiť sa (<?= htmlspecialchars(
+                    $_SESSION["username"] ?? "Profil",
+                ) ?>)</a></li>
             <?php else: ?><li><a href="login.php">Prihlásenie</a></li><?php endif; ?>
         </ul></div>
     </nav>
@@ -229,73 +345,114 @@ if (isLoggedIn()) {
                 </div>
 
                 <?php foreach ($messages as $msg): ?>
-                    <div class="alert alert-success"><p><?= htmlspecialchars($msg) ?></p></div>
+                    <div class="alert alert-success"><p><?= htmlspecialchars(
+                        $msg,
+                    ) ?></p></div>
                 <?php endforeach; ?>
 
                 <?php if (!empty($errors)): ?>
                     <div class="alert alert-error"><ul>
-                        <?php foreach ($errors as $e): ?><li><?= htmlspecialchars($e) ?></li><?php endforeach; ?>
+                        <?php foreach (
+                            $errors
+                            as $e
+                        ): ?><li><?= htmlspecialchars(
+    $e,
+) ?></li><?php endforeach; ?>
                     </ul></div>
                 <?php endif; ?>
 
                 <?php if ($calculated !== null):
-                    $classColor = match($calculated['class']) {
-                        '1A' => '#22c55e', '1B' => '#84cc16',
-                        '1C' => '#f59e0b', '1D' => '#f97316', '1E','2' => '#ef4444', default => '#64748b'};
-                ?>
+                    $classColor = match ($calculated["class"]) {
+                        "1A" => "#22c55e",
+                        "1B" => "#84cc16",
+                        "1C" => "#f59e0b",
+                        "1D" => "#f97316",
+                        "1E", "2" => "#ef4444",
+                        default => "#64748b",
+                    }; ?>
                 <div class="calc-result-box" role="region" aria-label="Výsledok klasifikácie">
                     <h3>Výsledok — Mayo ADPKD klasifikácia</h3>
                     <div class="calc-result-grid">
                         <div class="calc-result-item calc-result-item--highlight" style="border-color:<?= $classColor ?>;">
                             <span class="calc-result-label">Mayo trieda</span>
-                            <span class="calc-result-value" style="color:<?= $classColor ?>;"><?= htmlspecialchars($calculated['class']) ?></span>
+                            <span class="calc-result-value" style="color:<?= $classColor ?>;"><?= htmlspecialchars(
+    $calculated["class"],
+) ?></span>
                         </div>
                         <div class="calc-result-item">
                             <span class="calc-result-label">HtTKV</span>
-                            <span class="calc-result-value"><?= number_format($calculated['httkv'], 1, ',', '&thinsp;') ?>&thinsp;mL/m</span>
+                            <span class="calc-result-value"><?= number_format(
+                                $calculated["httkv"],
+                                1,
+                                ",",
+                                "&thinsp;",
+                            ) ?>&thinsp;mL/m</span>
                         </div>
-                        <?php if ($calculated['k_pct'] !== null): ?>
+                        <?php if ($calculated["k_pct"] !== null): ?>
                         <div class="calc-result-item">
                             <span class="calc-result-label">Odh. ročný rast</span>
-                            <span class="calc-result-value"><?= number_format($calculated['k_pct'], 1, ',', '&thinsp;') ?>&thinsp;%/rok</span>
+                            <span class="calc-result-value"><?= number_format(
+                                $calculated["k_pct"],
+                                1,
+                                ",",
+                                "&thinsp;",
+                            ) ?>&thinsp;%/rok</span>
                         </div>
                         <?php endif; ?>
                         <div class="calc-result-item">
                             <span class="calc-result-label">Rýchlosť progresie</span>
-                            <span class="calc-result-value" style="font-size:1rem;"><?= htmlspecialchars($calculated['speed']) ?></span>
+                            <span class="calc-result-value" style="font-size:1rem;"><?= htmlspecialchars(
+                                $calculated["speed"],
+                            ) ?></span>
                         </div>
                     </div>
-                    <?php foreach ($calculated['interpretation'] as $line): ?>
-                        <p class="calc-result-note"><?= htmlspecialchars($line) ?></p>
+                    <?php foreach ($calculated["interpretation"] as $line): ?>
+                        <p class="calc-result-note"><?= htmlspecialchars(
+                            $line,
+                        ) ?></p>
                     <?php endforeach; ?>
-                    <?php foreach ($calculated['warnings'] as $w): ?>
-                        <p class="calc-result-warning">⚠ <?= htmlspecialchars($w) ?></p>
+                    <?php foreach ($calculated["warnings"] as $w): ?>
+                        <p class="calc-result-warning">⚠ <?= htmlspecialchars(
+                            $w,
+                        ) ?></p>
                     <?php endforeach; ?>
                 </div>
-                <?php endif; ?>
+                <?php
+                endif; ?>
 
                 <form method="POST" action="calculator_adpkd.php" novalidate>
-                    <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
+                    <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(
+                        generateCsrfToken(),
+                    ) ?>">
                     <div class="form-section">
                         <h3>Voliteľné identifikačné údaje pacienta</h3>
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="patient_first_name">Meno</label>
-                                <input type="text" id="patient_first_name" name="patient_first_name" class="form-control" value="<?= htmlspecialchars($form['patient_first_name']) ?>">
+                                <input type="text" id="patient_first_name" name="patient_first_name" class="form-control" value="<?= htmlspecialchars(
+                                    $form["patient_first_name"],
+                                ) ?>">
                             </div>
                             <div class="form-group">
                                 <label for="patient_last_name">Priezvisko</label>
-                                <input type="text" id="patient_last_name" name="patient_last_name" class="form-control" value="<?= htmlspecialchars($form['patient_last_name']) ?>">
+                                <input type="text" id="patient_last_name" name="patient_last_name" class="form-control" value="<?= htmlspecialchars(
+                                    $form["patient_last_name"],
+                                ) ?>">
                             </div>
                             <div class="form-group">
                                 <label for="patient_birth_date">Dátum narodenia</label>
-                                <input type="date" id="patient_birth_date" name="patient_birth_date" class="form-control" value="<?= htmlspecialchars($form['patient_birth_date']) ?>">
+                                <input type="date" id="patient_birth_date" name="patient_birth_date" class="form-control" value="<?= htmlspecialchars(
+                                    $form["patient_birth_date"],
+                                ) ?>">
                             </div>
                             <div class="form-group">
                                 <label for="patient_birth_number">Rodné číslo</label>
-                                <input type="text" id="patient_birth_number" name="patient_birth_number" class="form-control" placeholder="000000/0000" value="<?= htmlspecialchars($form['patient_birth_number']) ?>">
+                                <input type="text" id="patient_birth_number" name="patient_birth_number" class="form-control" placeholder="000000/0000" value="<?= htmlspecialchars(
+                                    $form["patient_birth_number"],
+                                ) ?>">
                             </div>
-                            <?php include __DIR__ . '/patient_insurance_select.php'; ?>
+                            <?php include __DIR__ .
+                                "/patient_insurance_select.php"; ?>
                         </div>
                     </div>
 
@@ -304,22 +461,36 @@ if (isLoggedIn()) {
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="adpkd_tkv">Celkový objem obličiek — TKV (mL) <span class="required">*</span></label>
-                                <input type="number" id="adpkd_tkv" name="tkv_ml" min="100" max="10000" step="1" required class="form-control" placeholder="napr. 800" value="<?= htmlspecialchars($form['tkv_ml']) ?>">
+                                <input type="number" id="adpkd_tkv" name="tkv_ml" min="100" max="10000" step="1" required class="form-control" placeholder="napr. 800" value="<?= htmlspecialchars(
+                                    $form["tkv_ml"],
+                                ) ?>">
                                 <small class="form-hint">Z MRI alebo CT volumetrie (súčet oboch obličiek)</small>
                             </div>
                             <div class="form-group">
                                 <label for="adpkd_height">Výška (cm) <span class="required">*</span></label>
-                                <input type="number" id="adpkd_height" name="height_cm" min="100" max="220" step="0.5" required class="form-control" placeholder="napr. 170" value="<?= htmlspecialchars($form['height_cm']) ?>">
+                                <input type="number" id="adpkd_height" name="height_cm" min="100" max="220" step="0.5" required class="form-control" placeholder="napr. 170" value="<?= htmlspecialchars(
+                                    $form["height_cm"],
+                                ) ?>">
                             </div>
                             <div class="form-group">
                                 <label for="adpkd_age">Vek (roky) <span class="required">*</span></label>
-                                <input type="number" id="adpkd_age" name="age_years" min="15" max="80" step="1" required class="form-control" placeholder="napr. 38" value="<?= htmlspecialchars($form['age_years']) ?>">
+                                <input type="number" id="adpkd_age" name="age_years" min="15" max="80" step="1" required class="form-control" placeholder="napr. 38" value="<?= htmlspecialchars(
+                                    $form["age_years"],
+                                ) ?>">
                             </div>
                             <div class="form-group">
                                 <label for="adpkd_typical">Typ ADPKD <span class="required">*</span></label>
                                 <select id="adpkd_typical" name="typical_adpkd" class="form-control">
-                                    <option value="1" <?= $form['typical_adpkd']==='1'?'selected':'' ?>>Typická (bilaterálna, difúzna) — trieda 1</option>
-                                    <option value="0" <?= $form['typical_adpkd']==='0'?'selected':'' ?>>Atypická (unilaterálna/asymetrická) — trieda 2</option>
+                                    <option value="1" <?= $form[
+                                        "typical_adpkd"
+                                    ] === "1"
+                                        ? "selected"
+                                        : "" ?>>Typická (bilaterálna, difúzna) — trieda 1</option>
+                                    <option value="0" <?= $form[
+                                        "typical_adpkd"
+                                    ] === "0"
+                                        ? "selected"
+                                        : "" ?>>Atypická (unilaterálna/asymetrická) — trieda 2</option>
                                 </select>
                             </div>
                         </div>
@@ -347,13 +518,34 @@ if (isLoggedIn()) {
                                 </tr></thead>
                                 <tbody>
                                 <?php
-                                $agesList = [20,25,30,35,40,45,50,55,60];
+                                $agesList = [
+                                    20,
+                                    25,
+                                    30,
+                                    35,
+                                    40,
+                                    45,
+                                    50,
+                                    55,
+                                    60,
+                                ];
                                 foreach ($agesList as $a) {
-                                    $t = [150*exp(0.015*$a), 150*exp(0.030*$a), 150*exp(0.045*$a), 150*exp(0.060*$a)];
+                                    $t = [
+                                        150 * exp(0.015 * $a),
+                                        150 * exp(0.03 * $a),
+                                        150 * exp(0.045 * $a),
+                                        150 * exp(0.06 * $a),
+                                    ];
                                     echo "<tr style='border-bottom:1px solid rgba(255,255,255,0.06);'>";
                                     echo "<td style='padding:4px 8px;font-weight:600;'>{$a} r</td>";
-                                    foreach ($t as $v) echo "<td style='padding:4px 8px;text-align:center;'>".round($v)."</td>";
-                                    echo "<td style='padding:4px 8px;text-align:center;'>≥".round($t[3])."</td>";
+                                    foreach ($t as $v) {
+                                        echo "<td style='padding:4px 8px;text-align:center;'>" .
+                                            round($v) .
+                                            "</td>";
+                                    }
+                                    echo "<td style='padding:4px 8px;text-align:center;'>≥" .
+                                        round($t[3]) .
+                                        "</td>";
                                     echo "</tr>";
                                 }
                                 ?>
@@ -364,7 +556,7 @@ if (isLoggedIn()) {
                 </div>
             </div>
 
-            <?php include 'calculator_disclaimer.php'; ?>
+            <?php include "calculator_disclaimer.php"; ?>
 
             <?php if (!empty($savedResults)): ?>
                 <section class="auth-container auth-container--wide calc-saved-results" style="margin-top:32px;">
@@ -373,16 +565,38 @@ if (isLoggedIn()) {
                         <?php foreach ($savedResults as $row): ?>
                         <details class="calc-saved-item">
                             <summary>
-                                <?= htmlspecialchars(calculatorBuildPatientDisplay($row)) ?> —
-                                Trieda <?= htmlspecialchars((string)($row['result_payload']['class'] ?? '—')) ?>
-                                <span class="calc-saved-date">(<?= htmlspecialchars(substr((string)($row['created_at']??''),0,10)) ?>)</span>
+                                <?= htmlspecialchars(
+                                    calculatorBuildPatientDisplay($row),
+                                ) ?> —
+                                Trieda <?= htmlspecialchars(
+                                    (string) ($row["result_payload"]["class"] ??
+                                        "—"),
+                                ) ?>
+                                <span class="calc-saved-date">(<?= htmlspecialchars(
+                                    substr(
+                                        (string) ($row["created_at"] ?? ""),
+                                        0,
+                                        10,
+                                    ),
+                                ) ?>)</span>
                             </summary>
                             <div class="calc-saved-detail">
-                                <p>Trieda: <strong><?= htmlspecialchars((string)($row['result_payload']['class']??'—')) ?></strong> &bull;
-                                   HtTKV: <?= htmlspecialchars((string)($row['result_payload']['httkv']??'—')) ?> mL/m</p>
+                                <p>Trieda: <strong><?= htmlspecialchars(
+                                    (string) ($row["result_payload"]["class"] ??
+                                        "—"),
+                                ) ?></strong> &bull;
+                                   HtTKV: <?= htmlspecialchars(
+                                       (string) ($row["result_payload"][
+                                           "httkv"
+                                       ] ?? "—"),
+                                   ) ?> mL/m</p>
                                 <form method="POST" action="calculator_adpkd.php" style="display:inline;">
-                                    <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
-                                    <input type="hidden" name="delete_id" value="<?= (int)$row['id'] ?>">
+                                    <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(
+                                        generateCsrfToken(),
+                                    ) ?>">
+                                    <input type="hidden" name="delete_id" value="<?= (int) $row[
+                                        "id"
+                                    ] ?>">
                                     <button type="submit" class="btn-danger btn-sm">Vymazať</button>
                                 </form>
                             </div>
@@ -393,6 +607,6 @@ if (isLoggedIn()) {
             <?php endif; ?>
         </div>
     </main>
-    <?php include 'footer.php'; ?>
+    <?php include "footer.php"; ?>
 </body>
 </html>

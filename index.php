@@ -1,224 +1,270 @@
 <?php
-require_once 'auth.php';
-require_once 'db_config.php';
+require_once "auth.php";
+require_once "db_config.php";
 // Bezpečnostné HTTP hlavičky
 header_remove("X-Powered-By");
 header("X-Frame-Options: SAMEORIGIN"); // Ochrana pred Clickjackingom
 header("X-XSS-Protection: 0"); // Legacy hlavička, moderné prehliadače používajú CSP
 header("X-Content-Type-Options: nosniff"); // Zabránenie MIME-sniffingu
-header("Strict-Transport-Security: max-age=31536000; includeSubDomains; preload"); // Vynútenie HTTPS
+header(
+    "Strict-Transport-Security: max-age=31536000; includeSubDomains; preload",
+); // Vynútenie HTTPS
 header("Referrer-Policy: strict-origin-when-cross-origin");
-header("Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=()");
+header(
+    "Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=()",
+);
 header("Cross-Origin-Opener-Policy: same-origin");
 header("X-Permitted-Cross-Domain-Policies: none");
-header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0, private");
+header(
+    "Cache-Control: no-store, no-cache, must-revalidate, max-age=0, private",
+);
 header("Pragma: no-cache");
 header("Expires: 0");
 header("Surrogate-Control: no-store");
 
-$csp = "default-src 'self'; "
-  . "img-src 'self' data: https:; "
-  . "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; "
-  . "font-src 'self' https://fonts.gstatic.com; "
-  . "script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com; "
-  . "connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://*.analytics.google.com https://stats.g.doubleclick.net; "
-  . "base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; upgrade-insecure-requests";
+$csp =
+    "default-src 'self'; " .
+    "img-src 'self' data: https:; " .
+    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; " .
+    "font-src 'self' https://fonts.gstatic.com; " .
+    "script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com; " .
+    "connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://*.analytics.google.com https://stats.g.doubleclick.net; " .
+    "base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; upgrade-insecure-requests";
 header("Content-Security-Policy: " . $csp);
 
 $monthsLocative = [
-  1 => 'januári',
-  2 => 'februári',
-  3 => 'marci',
-  4 => 'apríli',
-  5 => 'máji',
-  6 => 'júni',
-  7 => 'júli',
-  8 => 'auguste',
-  9 => 'septembri',
-  10 => 'októbri',
-  11 => 'novembri',
-  12 => 'decembri',
+    1 => "januári",
+    2 => "februári",
+    3 => "marci",
+    4 => "apríli",
+    5 => "máji",
+    6 => "júni",
+    7 => "júli",
+    8 => "auguste",
+    9 => "septembri",
+    10 => "októbri",
+    11 => "novembri",
+    12 => "decembri",
 ];
-$currentMonth = (int) date('n');
-$currentYear = date('Y');
-$currentMonthYearLocative = ($monthsLocative[$currentMonth] ?? '') . ' ' . $currentYear;
-$pageLastUpdated = date('d.m.Y H:i', filemtime(__FILE__));
-$pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
+$currentMonth = (int) date("n");
+$currentYear = date("Y");
+$currentMonthYearLocative =
+    ($monthsLocative[$currentMonth] ?? "") . " " . $currentYear;
+$pageLastUpdated = date("d.m.Y H:i", filemtime(__FILE__));
+$pageTimeZone = date("T") . " (" . date_default_timezone_get() . ")";
 
-function formatArticleDate(string $datetime): string {
+function formatArticleDate(string $datetime): string
+{
     $months = [
-        1 => 'januára', 2 => 'februára', 3 => 'marca',    4 => 'apríla',
-        5 => 'mája',    6 => 'júna',     7 => 'júla',     8 => 'augusta',
-        9 => 'septembra', 10 => 'októbra', 11 => 'novembra', 12 => 'decembra',
+        1 => "januára",
+        2 => "februára",
+        3 => "marca",
+        4 => "apríla",
+        5 => "mája",
+        6 => "júna",
+        7 => "júla",
+        8 => "augusta",
+        9 => "septembra",
+        10 => "októbra",
+        11 => "novembra",
+        12 => "decembra",
     ];
     $ts = strtotime($datetime);
-    if (!$ts) { return htmlspecialchars($datetime); }
-    return (int) date('j', $ts) . '. ' . ($months[(int) date('n', $ts)] ?? '') . ' ' . date('Y', $ts);
+    if (!$ts) {
+        return htmlspecialchars($datetime);
+    }
+    return (int) date("j", $ts) .
+        ". " .
+        ($months[(int) date("n", $ts)] ?? "") .
+        " " .
+        date("Y", $ts);
 }
 
-  function normalizePlainText(string $text): string {
-    $decoded = html_entity_decode($text, ENT_QUOTES | ENT_HTML5, 'UTF-8');
+function normalizePlainText(string $text): string
+{
+    $decoded = html_entity_decode($text, ENT_QUOTES | ENT_HTML5, "UTF-8");
     $stripped = strip_tags($decoded);
-    $normalized = preg_replace('/\s+/u', ' ', $stripped) ?? $stripped;
+    $normalized = preg_replace("/\s+/u", " ", $stripped) ?? $stripped;
     return trim($normalized);
-  }
+}
 
-  function buildSeoExcerpt(string $preferredText, string $fallbackText = '', int $maxLen = 170): string {
+function buildSeoExcerpt(
+    string $preferredText,
+    string $fallbackText = "",
+    int $maxLen = 170,
+): string {
     $source = normalizePlainText($preferredText);
-    if ($source === '') {
-      $source = normalizePlainText($fallbackText);
+    if ($source === "") {
+        $source = normalizePlainText($fallbackText);
     }
-    if ($source === '') {
-      return '';
+    if ($source === "") {
+        return "";
     }
     if (mb_strlen($source) <= $maxLen) {
-      return $source;
+        return $source;
     }
 
     $slice = mb_substr($source, 0, $maxLen + 1);
-    $slice = preg_replace('/\s+\S*$/u', '', $slice) ?? $slice;
+    $slice = preg_replace('/\s+\S*$/u', "", $slice) ?? $slice;
     $slice = rtrim($slice, " \t\n\r\0\x0B,.;:-");
-    return $slice . '…';
-  }
+    return $slice . "…";
+}
 
-$topArticles   = [];
+$topArticles = [];
 $otherArticles = [];
 $otherArticlesPerPage = 10;
 $otherArticlesTotal = 0;
 $otherArticlesTotalPages = 1;
-$otherArticlesPage = isset($_GET['page']) ? (int) $_GET['page'] : 1;
+$otherArticlesPage = isset($_GET["page"]) ? (int) $_GET["page"] : 1;
 if ($otherArticlesPage < 1) {
-  $otherArticlesPage = 1;
+    $otherArticlesPage = 1;
 }
 try {
     $stmtTop = $pdo->query(
         "SELECT id, title, slug, author, excerpt, published_at
          FROM articles WHERE is_top = 1 AND is_published = 1
-         ORDER BY sort_order ASC, published_at DESC"
+         ORDER BY sort_order ASC, published_at DESC",
     );
     $topArticles = $stmtTop->fetchAll();
 
-  $stmtOtherCount = $pdo->query(
-    "SELECT COUNT(*)
-     FROM articles WHERE is_top = 0 AND is_published = 1"
-  );
-  $otherArticlesTotal = (int) $stmtOtherCount->fetchColumn();
-  $otherArticlesTotalPages = max(1, (int) ceil($otherArticlesTotal / $otherArticlesPerPage));
-  if ($otherArticlesPage > $otherArticlesTotalPages) {
-    $otherArticlesPage = $otherArticlesTotalPages;
-  }
-  $otherArticlesOffset = ($otherArticlesPage - 1) * $otherArticlesPerPage;
+    $stmtOtherCount = $pdo->query(
+        "SELECT COUNT(*)
+     FROM articles WHERE is_top = 0 AND is_published = 1",
+    );
+    $otherArticlesTotal = (int) $stmtOtherCount->fetchColumn();
+    $otherArticlesTotalPages = max(
+        1,
+        (int) ceil($otherArticlesTotal / $otherArticlesPerPage),
+    );
+    if ($otherArticlesPage > $otherArticlesTotalPages) {
+        $otherArticlesPage = $otherArticlesTotalPages;
+    }
+    $otherArticlesOffset = ($otherArticlesPage - 1) * $otherArticlesPerPage;
 
-  $stmtOther = $pdo->prepare(
-    "SELECT id, title, slug, author, excerpt, published_at
+    $stmtOther = $pdo->prepare(
+        "SELECT id, title, slug, author, excerpt, published_at
      FROM articles WHERE is_top = 0 AND is_published = 1
      ORDER BY sort_order ASC, published_at DESC
-     LIMIT :limit OFFSET :offset"
-  );
-  $stmtOther->bindValue(':limit', $otherArticlesPerPage, \PDO::PARAM_INT);
-  $stmtOther->bindValue(':offset', $otherArticlesOffset, \PDO::PARAM_INT);
-  $stmtOther->execute();
+     LIMIT :limit OFFSET :offset",
+    );
+    $stmtOther->bindValue(":limit", $otherArticlesPerPage, \PDO::PARAM_INT);
+    $stmtOther->bindValue(":offset", $otherArticlesOffset, \PDO::PARAM_INT);
+    $stmtOther->execute();
     $otherArticles = $stmtOther->fetchAll();
 } catch (\PDOException $e) {
-    error_log('index.php – chyba pri načítaní článkov: ' . $e->getMessage());
+    error_log("index.php – chyba pri načítaní článkov: " . $e->getMessage());
 }
 
-$siteName = 'Nefro-projekt Slovensko';
-$baseUrl = 'https://nefro.polascin.net/';
+$siteName = "Nefro-projekt Slovensko";
+$baseUrl = "https://nefro.polascin.net/";
 $isPaginated = $otherArticlesPage > 1;
-$firstArticleForSeo = $topArticles[0] ?? $otherArticles[0] ?? null;
+$firstArticleForSeo = $topArticles[0] ?? ($otherArticles[0] ?? null);
 
-$defaultDescription = 'Nefrologické články a odborné analýzy o CKD, dialýze a moderných odporúčaniach pre klinickú prax na Slovensku.';
+$defaultDescription =
+    "Nefrologické články a odborné analýzy o CKD, dialýze a moderných odporúčaniach pre klinickú prax na Slovensku.";
 $seoDescription = $defaultDescription;
 if (is_array($firstArticleForSeo)) {
-  $seoDescription = buildSeoExcerpt((string) ($firstArticleForSeo['excerpt'] ?? ''), '', 165);
-  if ($seoDescription === '') {
-    $seoDescription = $defaultDescription;
-  }
+    $seoDescription = buildSeoExcerpt(
+        (string) ($firstArticleForSeo["excerpt"] ?? ""),
+        "",
+        165,
+    );
+    if ($seoDescription === "") {
+        $seoDescription = $defaultDescription;
+    }
 }
 
 $pageTitle = $isPaginated
-  ? 'Nefrologické články – strana ' . $otherArticlesPage . ' | ' . $siteName
-  : $siteName;
-$canonicalUrl = $isPaginated ? ($baseUrl . '?page=' . $otherArticlesPage) : $baseUrl;
-$prevUrl = $otherArticlesPage > 1
-  ? ($otherArticlesPage === 2 ? $baseUrl : ($baseUrl . '?page=' . ($otherArticlesPage - 1)))
-  : '';
-$nextUrl = $otherArticlesPage < $otherArticlesTotalPages
-  ? ($baseUrl . '?page=' . ($otherArticlesPage + 1))
-  : '';
+    ? "Nefrologické články – strana " . $otherArticlesPage . " | " . $siteName
+    : $siteName;
+$canonicalUrl = $isPaginated
+    ? $baseUrl . "?page=" . $otherArticlesPage
+    : $baseUrl;
+$prevUrl =
+    $otherArticlesPage > 1
+        ? ($otherArticlesPage === 2
+            ? $baseUrl
+            : $baseUrl . "?page=" . ($otherArticlesPage - 1))
+        : "";
+$nextUrl =
+    $otherArticlesPage < $otherArticlesTotalPages
+        ? $baseUrl . "?page=" . ($otherArticlesPage + 1)
+        : "";
 
 $itemListElements = [];
 $allPageArticles = array_merge($topArticles, $otherArticles);
 foreach ($allPageArticles as $idx => $art) {
-  $slug = (string) ($art['slug'] ?? '');
-  $title = normalizePlainText((string) ($art['title'] ?? ''));
-  if ($slug === '' || $title === '') {
-    continue;
-  }
-  $itemListElements[] = [
-    '@type' => 'ListItem',
-    'position' => count($itemListElements) + 1,
-    'url' => $baseUrl . 'article.php?slug=' . $slug,
-    'name' => $title,
-  ];
+    $slug = (string) ($art["slug"] ?? "");
+    $title = normalizePlainText((string) ($art["title"] ?? ""));
+    if ($slug === "" || $title === "") {
+        continue;
+    }
+    $itemListElements[] = [
+        "@type" => "ListItem",
+        "position" => count($itemListElements) + 1,
+        "url" => $baseUrl . "article.php?slug=" . $slug,
+        "name" => $title,
+    ];
 }
 
 $structuredData = [
-  [
-    '@context' => 'https://schema.org',
-    '@type' => 'MedicalOrganization',
-    'name' => $siteName,
-    'url' => $baseUrl,
-    'logo' => [
-      '@type'  => 'ImageObject',
-      'url'    => $baseUrl . 'img/nps-logo.gif',
-      'width'  => 200,
-      'height' => 200,
+    [
+        "@context" => "https://schema.org",
+        "@type" => "MedicalOrganization",
+        "name" => $siteName,
+        "url" => $baseUrl,
+        "logo" => [
+            "@type" => "ImageObject",
+            "url" => $baseUrl . "img/nps-logo.gif",
+            "width" => 200,
+            "height" => 200,
+        ],
+        "description" =>
+            "Dynamická renesancia nefrológie: od molekulárnej biológie po umelú inteligenciu.",
+        "medicalSpecialty" => "Nephrology",
+        "inLanguage" => "sk-SK",
+        "sameAs" => ["https://polascin.com/", "https://nefro.sk/"],
+        "founder" => [
+            "@type" => "Person",
+            "name" => "MUDr. Ľubomír Polaščín",
+            "jobTitle" => "Lekár, Nefrológ",
+            "url" => "https://polascin.com/",
+            "sameAs" => ["https://polascin.com/", "https://nefro.sk/"],
+        ],
+        "contactPoint" => [
+            "@type" => "ContactPoint",
+            "email" => "nefro@polascin.net",
+            "contactType" => "customer support",
+            "availableLanguage" => ["Slovak", "Czech", "English"],
+        ],
     ],
-    'description' => 'Dynamická renesancia nefrológie: od molekulárnej biológie po umelú inteligenciu.',
-    'medicalSpecialty' => 'Nephrology',
-    'inLanguage' => 'sk-SK',
-    'sameAs' => [
-      'https://polascin.com/',
-      'https://nefro.sk/',
+    [
+        "@context" => "https://schema.org",
+        "@type" => "WebSite",
+        "name" => $siteName,
+        "url" => $baseUrl,
+        "inLanguage" => "sk-SK",
+        "description" => $seoDescription,
+        "potentialAction" => [
+            "@type" => "SearchAction",
+            "target" => [
+                "@type" => "EntryPoint",
+                "urlTemplate" => $baseUrl . "search.php?s={search_term_string}",
+            ],
+            "query-input" => "required name=search_term_string",
+        ],
     ],
-    'founder' => [
-      '@type'    => 'Person',
-      'name'     => 'MUDr. Ľubomír Polaščín',
-      'jobTitle' => 'Lekár, Nefrológ',
-      'url'      => 'https://polascin.com/',
-      'sameAs'   => ['https://polascin.com/', 'https://nefro.sk/'],
-    ],
-    'contactPoint' => [
-      '@type'       => 'ContactPoint',
-      'email'       => 'nefro@polascin.net',
-      'contactType' => 'customer support',
-      'availableLanguage' => ['Slovak', 'Czech', 'English'],
-    ],
-  ],
-  [
-    '@context' => 'https://schema.org',
-    '@type' => 'WebSite',
-    'name' => $siteName,
-    'url' => $baseUrl,
-    'inLanguage' => 'sk-SK',
-    'description' => $seoDescription,
-    'potentialAction' => [
-      '@type'       => 'SearchAction',
-      'target'      => ['@type' => 'EntryPoint', 'urlTemplate' => $baseUrl . '?s={search_term_string}'],
-      'query-input' => 'required name=search_term_string',
-    ],
-  ],
 ];
 
 if (!empty($itemListElements)) {
-  $structuredData[] = [
-    '@context' => 'https://schema.org',
-    '@type' => 'ItemList',
-    'name' => $isPaginated ? ('Články – strana ' . $otherArticlesPage) : 'Články',
-    'itemListElement' => $itemListElements,
-  ];
+    $structuredData[] = [
+        "@context" => "https://schema.org",
+        "@type" => "ItemList",
+        "name" => $isPaginated
+            ? "Články – strana " . $otherArticlesPage
+            : "Články",
+        "itemListElement" => $itemListElements,
+    ];
 }
 ?>
 <!DOCTYPE html>
@@ -228,12 +274,12 @@ if (!empty($itemListElements)) {
   <?php
   // Príprava pre head_meta.php
   $structuredData = $structuredData ?? [];
-  include 'head_meta.php';
+  include "head_meta.php";
   ?>
-  <?php if ($prevUrl !== ''): ?>
+  <?php if ($prevUrl !== ""): ?>
   <link rel="prev" href="<?= htmlspecialchars($prevUrl, ENT_QUOTES) ?>">
   <?php endif; ?>
-  <?php if ($nextUrl !== ''): ?>
+  <?php if ($nextUrl !== ""): ?>
   <link rel="next" href="<?= htmlspecialchars($nextUrl, ENT_QUOTES) ?>">
   <?php endif; ?>
 </head>
@@ -244,10 +290,11 @@ if (!empty($itemListElements)) {
 
   <!-- <header>: Hlavička stránky alebo sekcie, zvyčajne obsahuje logo a hlavný nadpis -->
   <?php
-  $headerTitle = 'Nefro-projekt Slovensko';
-  $headerIntro = 'Dynamická renesancia nefrológie: Od molekulárnej biológie po umelú inteligenciu.';
+  $headerTitle = "Nefro-projekt Slovensko";
+  $headerIntro =
+      "Dynamická renesancia nefrológie: Od molekulárnej biológie po umelú inteligenciu.";
   $showLogo = true;
-  include 'header.php';
+  include "header.php";
   ?>
 
   <!-- <nav>: Hlavná navigácia stránky (menu) -->
@@ -263,12 +310,15 @@ if (!empty($itemListElements)) {
         <li><a href="#o-nas">O nás</a></li>
         <li><a href="#kontakt">Kontakt</a></li>
         <li><a href="calculators.php">Kalkulačky</a></li>
+        <li><a href="search.php">Vyhľadávanie</a></li>
         <?php if (isLoggedIn()): ?>
           <?php if (isAdmin()): ?>
             <li><a href="admin.php">Admin panel</a></li>
             <li><a href="admin_articles.php">Správa článkov</a></li>
           <?php endif; ?>
-          <li><a href="logout.php">Odhlásiť sa (<?= htmlspecialchars($_SESSION['username'] ?? 'Profil') ?>)</a></li>
+          <li><a href="logout.php">Odhlásiť sa (<?= htmlspecialchars(
+              $_SESSION["username"] ?? "Profil",
+          ) ?>)</a></li>
         <?php else: ?>
           <li><a href="login.php">Prihlásenie</a></li>
           <li><a href="register.php">Registrácia</a></li>
@@ -287,12 +337,19 @@ if (!empty($itemListElements)) {
       <section class="articles-top-section" aria-labelledby="top-articles-heading">
         <h2 id="top-articles-heading" class="section-heading">Odporúčané články</h2>
         <?php foreach ($topArticles as $art):
-          $artSlug    = htmlspecialchars((string) $art['slug'], ENT_QUOTES);
-          $artTitle   = htmlspecialchars((string) $art['title']);
-          $artExc     = htmlspecialchars(buildSeoExcerpt((string) ($art['excerpt'] ?? ''), '', 220));
-          $artDate    = htmlspecialchars(formatArticleDate((string) $art['published_at']));
-          $artDateIso = htmlspecialchars(substr((string) $art['published_at'], 0, 10));
-        ?>
+
+            $artSlug = htmlspecialchars((string) $art["slug"], ENT_QUOTES);
+            $artTitle = htmlspecialchars((string) $art["title"]);
+            $artExc = htmlspecialchars(
+                buildSeoExcerpt((string) ($art["excerpt"] ?? ""), "", 220),
+            );
+            $artDate = htmlspecialchars(
+                formatArticleDate((string) $art["published_at"]),
+            );
+            $artDateIso = htmlspecialchars(
+                substr((string) $art["published_at"], 0, 10),
+            );
+            ?>
         <article class="primary-article">
           <span class="badge-top" aria-label="Odporúčaný článok">&#9733; TOP</span>
           <header>
@@ -304,7 +361,8 @@ if (!empty($itemListElements)) {
           <p class="article-excerpt"><?= $artExc ?></p>
           <a href="article.php?slug=<?= $artSlug ?>" class="read-more">Čítať ďalej &rarr;</a>
         </article>
-        <?php endforeach; ?>
+        <?php
+        endforeach; ?>
       </section>
       <?php endif; ?>
 
@@ -315,12 +373,19 @@ if (!empty($itemListElements)) {
           <h2 id="all-articles-heading">Ďalšie články</h2>
           <ul class="articles-list" role="list">
             <?php foreach ($otherArticles as $art):
-              $artSlug    = htmlspecialchars((string) $art['slug'], ENT_QUOTES);
-              $artTitle   = htmlspecialchars((string) $art['title']);
-              $artExc     = htmlspecialchars(buildSeoExcerpt((string) ($art['excerpt'] ?? ''), '', 220));
-              $artDate    = htmlspecialchars(formatArticleDate((string) $art['published_at']));
-              $artDateIso = htmlspecialchars(substr((string) $art['published_at'], 0, 10));
-            ?>
+
+                $artSlug = htmlspecialchars((string) $art["slug"], ENT_QUOTES);
+                $artTitle = htmlspecialchars((string) $art["title"]);
+                $artExc = htmlspecialchars(
+                    buildSeoExcerpt((string) ($art["excerpt"] ?? ""), "", 220),
+                );
+                $artDate = htmlspecialchars(
+                    formatArticleDate((string) $art["published_at"]),
+                );
+                $artDateIso = htmlspecialchars(
+                    substr((string) $art["published_at"], 0, 10),
+                );
+                ?>
             <li class="article-list-item">
               <div class="article-list-item__header">
                 <a href="article.php?slug=<?= $artSlug ?>" class="article-list-item__title"><?= $artTitle ?></a>
@@ -328,7 +393,8 @@ if (!empty($itemListElements)) {
               </div>
               <p class="article-list-item__excerpt"><?= $artExc ?></p>
             </li>
-            <?php endforeach; ?>
+            <?php
+            endforeach; ?>
           </ul>
 
           <?php if ($otherArticlesTotalPages > 1): ?>
@@ -439,19 +505,23 @@ if (!empty($itemListElements)) {
         <h3>Náhodný obrázok</h3>
         <?php
         // Získanie všetkých obrázkov zodpovedajúcich štruktúre
-        $images = glob('./img/nefro_*.png');
+        $images = glob("./img/nefro_*.png");
         if ($images && count($images) > 0) {
-          // Výber náhodného obrázka
-          $randomIndex = array_rand($images);
-          $randomImagePath = $images[$randomIndex];
+            // Výber náhodného obrázka
+            $randomIndex = array_rand($images);
+            $randomImagePath = $images[$randomIndex];
 
-          echo '<a href="' . htmlspecialchars($randomImagePath) . '" id="randomImageLink" target="_blank" rel="noopener noreferrer" title="Zobraziť obrázok v plnej veľkosti" aria-label="Zobraziť náhodný abstraktný obrázok v plnej veľkosti">';
-          echo '<img id="randomImage" src="' . htmlspecialchars($randomImagePath) . '" alt="Náhodný abstraktný obrázok Nefro" loading="lazy">';
-          echo '</a>';
+            echo '<a href="' .
+                htmlspecialchars($randomImagePath) .
+                '" id="randomImageLink" target="_blank" rel="noopener noreferrer" title="Zobraziť obrázok v plnej veľkosti" aria-label="Zobraziť náhodný abstraktný obrázok v plnej veľkosti">';
+            echo '<img id="randomImage" src="' .
+                htmlspecialchars($randomImagePath) .
+                '" alt="Náhodný abstraktný obrázok Nefro" loading="lazy">';
+            echo "</a>";
         } else {
-          echo "<p>\n";
-          echo "Žiadne obrázky neboli nájdené.\n";
-          echo "</p>";
+            echo "<p>\n";
+            echo "Žiadne obrázky neboli nájdené.\n";
+            echo "</p>";
         }
         ?>
       </div>
@@ -460,7 +530,11 @@ if (!empty($itemListElements)) {
         <img src="./img/nps.gif" alt="Nefro-projekt Slovensko Logo" class="header-logo" loading="lazy">
         <h3>O projekte</h3>
         <p>
-          Ako nefrológa a nadšenca pre internú medicínu ma fascinuje, akou obrovskou a dynamickou renesanciou prechádza naša nefrologická špecializácia. Sme v <?= htmlspecialchars($currentMonthYearLocative, ENT_QUOTES, 'UTF-8') ?> a nefrológia sa rozvíja míľovými krokmi. Nie je to už len o manažovaní terminálneho zlyhania obličiek a čakaní na transplantáciu. Zažívame doslova explóziu inovácií, od molekulárnej biológie až po umelú inteligenciu.
+          Ako nefrológa a nadšenca pre internú medicínu ma fascinuje, akou obrovskou a dynamickou renesanciou prechádza naša nefrologická špecializácia. Sme v <?= htmlspecialchars(
+              $currentMonthYearLocative,
+              ENT_QUOTES,
+              "UTF-8",
+          ) ?> a nefrológia sa rozvíja míľovými krokmi. Nie je to už len o manažovaní terminálneho zlyhania obličiek a čakaní na transplantáciu. Zažívame doslova explóziu inovácií, od molekulárnej biológie až po umelú inteligenciu.
         </p>
       </div>
       <div class="widget">
@@ -668,5 +742,4 @@ if (!empty($itemListElements)) {
     </aside>
   </main>
 
-  <?php include 'footer.php'; ?>
-  
+  <?php include "footer.php"; ?>

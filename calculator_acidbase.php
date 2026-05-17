@@ -1,7 +1,7 @@
 ﻿<?php
-require_once 'auth.php';
-require_once 'db_config.php';
-require_once 'calculators_common.php';
+require_once "auth.php";
+require_once "db_config.php";
+require_once "calculators_common.php";
 
 $errors = [];
 $messages = [];
@@ -9,76 +9,103 @@ $calculated = null;
 $savedResults = [];
 
 $form = [
-    's_na' => (string) ($_POST['s_na'] ?? ''),
-    's_cl' => (string) ($_POST['s_cl'] ?? ''),
-    's_hco3' => (string) ($_POST['s_hco3'] ?? ''),
-    'albumin' => (string) ($_POST['albumin'] ?? '40'),
-    'patient_first_name' => (string) ($_POST['patient_first_name'] ?? ''),
-    'patient_last_name' => (string) ($_POST['patient_last_name'] ?? ''),
-    'patient_birth_date' => (string) ($_POST['patient_birth_date'] ?? ''),
-    'patient_birth_number' => (string) ($_POST['patient_birth_number'] ?? ''),
-    'patient_insurance_code' => (string) ($_POST['patient_insurance_code'] ?? ''),
+    "s_na" => (string) ($_POST["s_na"] ?? ""),
+    "s_cl" => (string) ($_POST["s_cl"] ?? ""),
+    "s_hco3" => (string) ($_POST["s_hco3"] ?? ""),
+    "albumin" => (string) ($_POST["albumin"] ?? "40"),
+    "patient_first_name" => (string) ($_POST["patient_first_name"] ?? ""),
+    "patient_last_name" => (string) ($_POST["patient_last_name"] ?? ""),
+    "patient_birth_date" => (string) ($_POST["patient_birth_date"] ?? ""),
+    "patient_birth_number" => (string) ($_POST["patient_birth_number"] ?? ""),
+    "patient_insurance_code" =>
+        (string) ($_POST["patient_insurance_code"] ?? ""),
 ];
 
-
-if (isLoggedIn() && isset($_GET['load_id'])) {
-    $loadId = (int) $_GET['load_id'];
-    $loadedRow = calculatorFetchSavedResultById($pdo, $loadId, (int) $_SESSION['user_id']);
+if (isLoggedIn() && isset($_GET["load_id"])) {
+    $loadId = (int) $_GET["load_id"];
+    $loadedRow = calculatorFetchSavedResultById(
+        $pdo,
+        $loadId,
+        (int) $_SESSION["user_id"],
+    );
     if ($loadedRow) {
-        $form['patient_first_name'] = (string) ($loadedRow['patient_first_name'] ?? '');
-        $form['patient_last_name'] = (string) ($loadedRow['patient_last_name'] ?? '');
-        $form['patient_birth_date'] = (string) ($loadedRow['patient_birth_date'] ?? '');
-        $form['patient_birth_number'] = (string) ($loadedRow['patient_birth_number'] ?? '');
-        $form['patient_insurance_code'] = (string) ($loadedRow['patient_insurance_code'] ?? '');
-        if (is_array($loadedRow['input_payload'])) {
-            foreach ($loadedRow['input_payload'] as $k => $v) {
+        $form["patient_first_name"] =
+            (string) ($loadedRow["patient_first_name"] ?? "");
+        $form["patient_last_name"] =
+            (string) ($loadedRow["patient_last_name"] ?? "");
+        $form["patient_birth_date"] =
+            (string) ($loadedRow["patient_birth_date"] ?? "");
+        $form["patient_birth_number"] =
+            (string) ($loadedRow["patient_birth_number"] ?? "");
+        $form["patient_insurance_code"] =
+            (string) ($loadedRow["patient_insurance_code"] ?? "");
+        if (is_array($loadedRow["input_payload"])) {
+            foreach ($loadedRow["input_payload"] as $k => $v) {
                 if (isset($form[$k]) || array_key_exists($k, $form)) {
                     $form[$k] = (string) $v;
                 }
             }
         }
-        $messages[] = 'Údaje z histórie boli načítané do formulára. Môžete ich upraviť a vykonať nový výpočet.';
+        $messages[] =
+            "Údaje z histórie boli načítané do formulára. Môžete ich upraviť a vykonať nový výpočet.";
     }
 }
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $action = (string) ($_POST['action'] ?? '');
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $action = (string) ($_POST["action"] ?? "");
 
-    if (!validateCsrfToken((string) ($_POST['csrf_token'] ?? ''))) {
-        $errors[] = 'Neplatný CSRF token.';
-    } elseif ($action === 'delete_saved') {
+    if (!validateCsrfToken((string) ($_POST["csrf_token"] ?? ""))) {
+        $errors[] = "Neplatný CSRF token.";
+    } elseif ($action === "delete_saved") {
         if (!isLoggedIn()) {
-            $errors[] = 'Na mazanie výsledkov je potrebné prihlásenie.';
+            $errors[] = "Na mazanie výsledkov je potrebné prihlásenie.";
         } else {
-            $resultId = (int) ($_POST['result_id'] ?? 0);
+            $resultId = (int) ($_POST["result_id"] ?? 0);
             if ($resultId <= 0) {
-                $errors[] = 'Neplatné ID záznamu.';
+                $errors[] = "Neplatné ID záznamu.";
             } else {
                 try {
-                    if (calculatorDeleteSavedResult($pdo, $resultId, (int) $_SESSION['user_id'])) {
-                        $messages[] = 'Uložený výsledok bol vymazaný.';
+                    if (
+                        calculatorDeleteSavedResult(
+                            $pdo,
+                            $resultId,
+                            (int) $_SESSION["user_id"],
+                        )
+                    ) {
+                        $messages[] = "Uložený výsledok bol vymazaný.";
                     } else {
-                        $errors[] = 'Záznam sa nepodarilo vymazať alebo neexistuje.';
+                        $errors[] =
+                            "Záznam sa nepodarilo vymazať alebo neexistuje.";
                     }
                 } catch (\PDOException $e) {
-                    $errors[] = 'Databázová chyba pri mazaní záznamu.';
-                    error_log('calculator_acidbase delete error: ' . $e->getMessage());
+                    $errors[] = "Databázová chyba pri mazaní záznamu.";
+                    error_log(
+                        "calculator_acidbase delete error: " . $e->getMessage(),
+                    );
                 }
             }
         }
-    } elseif ($action === 'calculate' || $action === 'save') {
+    } elseif ($action === "calculate" || $action === "save") {
         $patient = calculatorPatientDataFromRequest($_POST);
         calculatorValidateOptionalPatientData($patient, $errors);
 
-        $na = calculatorParsePositiveFloat($form['s_na']);
-        $cl = calculatorParsePositiveFloat($form['s_cl']);
-        $hco3 = calculatorParsePositiveFloat($form['s_hco3']);
-        $alb = calculatorParsePositiveFloat($form['albumin']);
+        $na = calculatorParsePositiveFloat($form["s_na"]);
+        $cl = calculatorParsePositiveFloat($form["s_cl"]);
+        $hco3 = calculatorParsePositiveFloat($form["s_hco3"]);
+        $alb = calculatorParsePositiveFloat($form["albumin"]);
 
-        if ($na === null) $errors[] = 'Zadajte platnú hodnotu S-Na.';
-        if ($cl === null) $errors[] = 'Zadajte platnú hodnotu S-Cl.';
-        if ($hco3 === null) $errors[] = 'Zadajte platnú hodnotu HCO3.';
-        if ($alb === null) $alb = 40.0;
+        if ($na === null) {
+            $errors[] = "Zadajte platnú hodnotu S-Na.";
+        }
+        if ($cl === null) {
+            $errors[] = "Zadajte platnú hodnotu S-Cl.";
+        }
+        if ($hco3 === null) {
+            $errors[] = "Zadajte platnú hodnotu HCO3.";
+        }
+        if ($alb === null) {
+            $alb = 40.0;
+        }
 
         if (empty($errors)) {
             $ag = $na - ($cl + $hco3);
@@ -87,55 +114,73 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $deltaHco3 = 24.0 - $hco3;
 
             $deltaRatio = null;
-            $interpretation = '';
+            $interpretation = "";
 
             if (abs($deltaHco3) > 0.5) {
                 $deltaRatio = $deltaGap / $deltaHco3;
 
                 if ($deltaRatio < 0.4) {
-                    $interpretation = 'Hyperchloremická (normálna AG) metabolická acidóza.';
+                    $interpretation =
+                        "Hyperchloremická (normálna AG) metabolická acidóza.";
                 } elseif ($deltaRatio < 0.8) {
-                    $interpretation = 'Zmiešaná high-AG a normálna-AG metabolická acidóza.';
+                    $interpretation =
+                        "Zmiešaná high-AG a normálna-AG metabolická acidóza.";
                 } elseif ($deltaRatio < 2.0) {
-                    $interpretation = 'Čistá high-AG metabolická acidóza.';
+                    $interpretation = "Čistá high-AG metabolická acidóza.";
                 } else {
-                    $interpretation = 'High-AG metabolická acidóza + súbežná metabolická alkalóza alebo chronická respiračná acidóza.';
+                    $interpretation =
+                        "High-AG metabolická acidóza + súbežná metabolická alkalóza alebo chronická respiračná acidóza.";
                 }
             } else {
-                $interpretation = 'Delta HCO3 je príliš blízko nule pre výpočet Delta pomeru.';
+                $interpretation =
+                    "Delta HCO3 je príliš blízko nule pre výpočet Delta pomeru.";
             }
 
             $calculated = [
-                'ag' => round($ag, 1),
-                'corrected_ag' => round($correctedAg, 1),
-                'delta_ratio' => $deltaRatio !== null ? round($deltaRatio, 2) : null,
-                'interpretation' => $interpretation,
-                'na' => round($na, 1),
-                'cl' => round($cl, 1),
-                'hco3' => round($hco3, 1),
-                'alb' => round($alb, 1),
+                "ag" => round($ag, 1),
+                "corrected_ag" => round($correctedAg, 1),
+                "delta_ratio" =>
+                    $deltaRatio !== null ? round($deltaRatio, 2) : null,
+                "interpretation" => $interpretation,
+                "na" => round($na, 1),
+                "cl" => round($cl, 1),
+                "hco3" => round($hco3, 1),
+                "alb" => round($alb, 1),
             ];
 
-            if ($action === 'save') {
+            if ($action === "save") {
                 if (!isLoggedIn()) {
-                    $errors[] = 'Pre uloženie výsledku sa prihláste.';
+                    $errors[] = "Pre uloženie výsledku sa prihláste.";
                 } else {
                     try {
                         $inputPayload = [
-                            's_na' => round($na, 1),
-                            's_cl' => round($cl, 1),
-                            's_hco3' => round($hco3, 1),
-                            'albumin' => round($alb, 1),
+                            "s_na" => round($na, 1),
+                            "s_cl" => round($cl, 1),
+                            "s_hco3" => round($hco3, 1),
+                            "albumin" => round($alb, 1),
                         ];
 
-                        if (calculatorSaveResult($pdo, (int) $_SESSION['user_id'], 'acidbase_ag', 'Acidobáza (Anion Gap)', $patient, $inputPayload, $calculated)) {
-                            $messages[] = 'Výsledok bol uložený.';
+                        if (
+                            calculatorSaveResult(
+                                $pdo,
+                                (int) $_SESSION["user_id"],
+                                "acidbase_ag",
+                                "Acidobáza (Anion Gap)",
+                                $patient,
+                                $inputPayload,
+                                $calculated,
+                            )
+                        ) {
+                            $messages[] = "Výsledok bol uložený.";
                         } else {
-                            $errors[] = 'Výsledok sa nepodarilo uložiť.';
+                            $errors[] = "Výsledok sa nepodarilo uložiť.";
                         }
                     } catch (\PDOException $e) {
-                        $errors[] = 'Databázová chyba pri ukladaní výsledku.';
-                        error_log('calculator_acidbase save error: ' . $e->getMessage());
+                        $errors[] = "Databázová chyba pri ukladaní výsledku.";
+                        error_log(
+                            "calculator_acidbase save error: " .
+                                $e->getMessage(),
+                        );
                     }
                 }
             }
@@ -145,9 +190,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 if (isLoggedIn()) {
     try {
-        $savedResults = calculatorFetchSavedResults($pdo, (int) $_SESSION['user_id'], 'acidbase_ag', 25);
+        $savedResults = calculatorFetchSavedResults(
+            $pdo,
+            (int) $_SESSION["user_id"],
+            "acidbase_ag",
+            25,
+        );
     } catch (\PDOException $e) {
-        $errors[] = 'Nepodarilo sa načítať uložené výsledky.';
+        $errors[] = "Nepodarilo sa načítať uložené výsledky.";
     }
 }
 ?>
@@ -155,39 +205,61 @@ if (isLoggedIn()) {
 <html lang="sk">
 <head>
   <?php
-  $pageTitle    = 'Aniónová medzera a Delta Ratio | Kalkulačky | Nefro-projekt Slovensko';
-  $canonicalUrl  = 'https://nefro.polascin.net/calculator_acidbase.php';
-  $seoDescription = 'Nefrologická kalkulačka a nástroj: Aniónová medzera a Delta Ratio. Súčasť analýzy metabolickej acidózy. Presné klinické výpočty podľa najnovších odporúčaní pre lekárov na Slovensku.';
+  $pageTitle =
+      "Aniónová medzera a Delta Ratio | Kalkulačky | Nefro-projekt Slovensko";
+  $canonicalUrl = "https://nefro.polascin.net/calculator_acidbase.php";
+  $seoDescription =
+      "Nefrologická kalkulačka a nástroj: Aniónová medzera a Delta Ratio. Súčasť analýzy metabolickej acidózy. Presné klinické výpočty podľa najnovších odporúčaní pre lekárov na Slovensku.";
   $structuredData = [
-    [
-      '@context' => 'https://schema.org',
-      '@type' => 'BreadcrumbList',
-      'itemListElement' => [
-        ['@type' => 'ListItem', 'position' => 1, 'name' => 'Domov', 'item' => $baseUrl],
-        ['@type' => 'ListItem', 'position' => 2, 'name' => 'Kalkulačky', 'item' => $baseUrl . 'calculators.php'],
-        ['@type' => 'ListItem', 'position' => 3, 'name' => 'Aniónová medzera a Delta-Delta pomer', 'item' => $baseUrl . 'calculator_acidbase.php']
-      ]
-    ]
+      [
+          "@context" => "https://schema.org",
+          "@type" => "BreadcrumbList",
+          "itemListElement" => [
+              [
+                  "@type" => "ListItem",
+                  "position" => 1,
+                  "name" => "Domov",
+                  "item" => $baseUrl,
+              ],
+              [
+                  "@type" => "ListItem",
+                  "position" => 2,
+                  "name" => "Kalkulačky",
+                  "item" => $baseUrl . "calculators.php",
+              ],
+              [
+                  "@type" => "ListItem",
+                  "position" => 3,
+                  "name" => "Aniónová medzera a Delta-Delta pomer",
+                  "item" => $baseUrl . "calculator_acidbase.php",
+              ],
+          ],
+      ],
   ];
-  include 'head_meta.php';
+  include "head_meta.php";
   ?>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>
     <?php
-    $headerTitle = 'Aniónová medzera (Anion Gap)';
-    $headerIntro = 'Súčasť analýzy metabolickej acidózy';
+    $headerTitle = "Aniónová medzera (Anion Gap)";
+    $headerIntro = "Súčasť analýzy metabolickej acidózy";
     $showLogo = false;
-    include 'header.php';
+    include "header.php";
     ?>
     <nav class="main-nav" aria-label="Hlavná navigácia">
         <div class="container">
             <ul>
                 <li><a href="index.php">Domov</a></li>
                 <li><a href="calculators.php" class="active">Kalkulačky</a></li>
+                <li><a href="search.php">Vyhľadávanie</a></li>
                 <?php if (isLoggedIn()): ?>
-                    <?php if (isAdmin()): ?><li><a href="admin.php">Admin panel</a></li><?php endif; ?>
-                    <li><a href="logout.php">Odhlásiť sa (<?= htmlspecialchars($_SESSION['username'] ?? '') ?>)</a></li>
+                    <?php if (
+                        isAdmin()
+                    ): ?><li><a href="admin.php">Admin panel</a></li><?php endif; ?>
+                    <li><a href="logout.php">Odhlásiť sa (<?= htmlspecialchars(
+                        $_SESSION["username"] ?? "",
+                    ) ?>)</a></li>
                 <?php else: ?>
                     <li><a href="login.php">Prihlásenie</a></li>
                 <?php endif; ?>
@@ -215,35 +287,53 @@ if (isLoggedIn()) {
                 </details>
 
                 <?php foreach ($messages as $message): ?>
-                    <div class="alert alert-success"><p><?= htmlspecialchars($message) ?></p></div>
+                    <div class="alert alert-success"><p><?= htmlspecialchars(
+                        $message,
+                    ) ?></p></div>
                 <?php endforeach; ?>
                 <?php if (!empty($errors)): ?>
-                    <div class="alert alert-error"><ul><?php foreach ($errors as $error): ?><li><?= htmlspecialchars($error) ?></li><?php endforeach; ?></ul></div>
+                    <div class="alert alert-error"><ul><?php foreach (
+                        $errors
+                        as $error
+                    ): ?><li><?= htmlspecialchars(
+    $error,
+) ?></li><?php endforeach; ?></ul></div>
                 <?php endif; ?>
 
                 <form method="POST" action="calculator_acidbase.php">
-                    <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
+                    <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(
+                        generateCsrfToken(),
+                    ) ?>">
                     <div class="form-section">
                         <h3>Voliteľné identifikačné údaje pacienta</h3>
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="patient_first_name">Meno</label>
-                                <input type="text" id="patient_first_name" name="patient_first_name" class="form-control" value="<?= htmlspecialchars($form['patient_first_name']) ?>">
+                                <input type="text" id="patient_first_name" name="patient_first_name" class="form-control" value="<?= htmlspecialchars(
+                                    $form["patient_first_name"],
+                                ) ?>">
                             </div>
                             <div class="form-group">
                                 <label for="patient_last_name">Priezvisko</label>
-                                <input type="text" id="patient_last_name" name="patient_last_name" class="form-control" value="<?= htmlspecialchars($form['patient_last_name']) ?>">
+                                <input type="text" id="patient_last_name" name="patient_last_name" class="form-control" value="<?= htmlspecialchars(
+                                    $form["patient_last_name"],
+                                ) ?>">
                             </div>
                             <div class="form-group">
                                 <label for="patient_birth_date">Dátum narodenia</label>
-                                <input type="date" id="patient_birth_date" name="patient_birth_date" class="form-control" value="<?= htmlspecialchars($form['patient_birth_date']) ?>">
+                                <input type="date" id="patient_birth_date" name="patient_birth_date" class="form-control" value="<?= htmlspecialchars(
+                                    $form["patient_birth_date"],
+                                ) ?>">
                             </div>
                             <div class="form-group">
                                 <label for="patient_birth_number">Rodné číslo</label>
-                                <input type="text" id="patient_birth_number" name="patient_birth_number" class="form-control" placeholder="000000/0000" value="<?= htmlspecialchars($form['patient_birth_number']) ?>">
+                                <input type="text" id="patient_birth_number" name="patient_birth_number" class="form-control" placeholder="000000/0000" value="<?= htmlspecialchars(
+                                    $form["patient_birth_number"],
+                                ) ?>">
                             </div>
 
-                            <?php include __DIR__ . '/patient_insurance_select.php'; ?>
+                            <?php include __DIR__ .
+                                "/patient_insurance_select.php"; ?>
 
 
                         </div>
@@ -252,10 +342,18 @@ if (isLoggedIn()) {
                     <div class="form-section">
                         <h3>Povinné vstupy na výpočet</h3>
                         <div class="form-grid">
-                            <div class="form-group"><label for="s_na">S-Na (mmol/L)</label><input type="text" id="s_na" name="s_na" required class="form-control" value="<?= htmlspecialchars($form['s_na']) ?>"></div>
-                            <div class="form-group"><label for="s_cl">S-Cl (mmol/L)</label><input type="text" id="s_cl" name="s_cl" required class="form-control" value="<?= htmlspecialchars($form['s_cl']) ?>"></div>
-                            <div class="form-group"><label for="s_hco3">S-HCO3 (mmol/L)</label><input type="text" id="s_hco3" name="s_hco3" required class="form-control" value="<?= htmlspecialchars($form['s_hco3']) ?>"></div>
-                            <div class="form-group"><label for="albumin">S-Albumín (g/L)</label><input type="text" id="albumin" name="albumin" class="form-control" value="<?= htmlspecialchars($form['albumin']) ?>"></div>
+                            <div class="form-group"><label for="s_na">S-Na (mmol/L)</label><input type="text" id="s_na" name="s_na" required class="form-control" value="<?= htmlspecialchars(
+                                $form["s_na"],
+                            ) ?>"></div>
+                            <div class="form-group"><label for="s_cl">S-Cl (mmol/L)</label><input type="text" id="s_cl" name="s_cl" required class="form-control" value="<?= htmlspecialchars(
+                                $form["s_cl"],
+                            ) ?>"></div>
+                            <div class="form-group"><label for="s_hco3">S-HCO3 (mmol/L)</label><input type="text" id="s_hco3" name="s_hco3" required class="form-control" value="<?= htmlspecialchars(
+                                $form["s_hco3"],
+                            ) ?>"></div>
+                            <div class="form-group"><label for="albumin">S-Albumín (g/L)</label><input type="text" id="albumin" name="albumin" class="form-control" value="<?= htmlspecialchars(
+                                $form["albumin"],
+                            ) ?>"></div>
                         </div>
                     </div>
 
@@ -268,11 +366,21 @@ if (isLoggedIn()) {
                 <?php if ($calculated !== null): ?>
                     <div class="form-section calculator-result-block">
                         <h3>Výsledok výpočtu</h3>
-                        <p><strong>Nekorigovaná Aniónová medzera:</strong> <?= htmlspecialchars($calculated['ag']) ?> mmol/L</p>
-                        <p><strong>Korigovaná Aniónová medzera (pri Alb. <?= $calculated['alb'] ?> g/L):</strong> <?= htmlspecialchars($calculated['corrected_ag']) ?> mmol/L</p>
-                        <?php if ($calculated['delta_ratio'] !== null): ?>
-                            <p style="margin-top:16px;"><strong>Delta Ratio (&Delta;/&Delta; pomer):</strong> <?= htmlspecialchars($calculated['delta_ratio']) ?></p>
-                            <p style="color:var(--color-accent); font-weight:600;">Interpretácia: <?= htmlspecialchars($calculated['interpretation']) ?></p>
+                        <p><strong>Nekorigovaná Aniónová medzera:</strong> <?= htmlspecialchars(
+                            $calculated["ag"],
+                        ) ?> mmol/L</p>
+                        <p><strong>Korigovaná Aniónová medzera (pri Alb. <?= $calculated[
+                            "alb"
+                        ] ?> g/L):</strong> <?= htmlspecialchars(
+     $calculated["corrected_ag"],
+ ) ?> mmol/L</p>
+                        <?php if ($calculated["delta_ratio"] !== null): ?>
+                            <p style="margin-top:16px;"><strong>Delta Ratio (&Delta;/&Delta; pomer):</strong> <?= htmlspecialchars(
+                                $calculated["delta_ratio"],
+                            ) ?></p>
+                            <p style="color:var(--color-accent); font-weight:600;">Interpretácia: <?= htmlspecialchars(
+                                $calculated["interpretation"],
+                            ) ?></p>
                         <?php endif; ?>
                         <div class="form-actions no-print" style="margin-top: 24px;">
                             <button type="button" class="btn-primary" onclick="window.print()">Vytlačiť výpočet</button>
@@ -281,7 +389,7 @@ if (isLoggedIn()) {
                 <?php endif; ?>
             </div>
 
-            <?php include 'calculator_disclaimer.php'; ?>
+            <?php include "calculator_disclaimer.php"; ?>
             <section class="auth-container auth-container--wide calc-saved-results">
                 <h3>Uložené výsledky</h3>
                 <?php if (!isLoggedIn()): ?>
@@ -295,21 +403,53 @@ if (isLoggedIn()) {
                             <tbody>
                                 <?php foreach ($savedResults as $row): ?>
                                     <tr>
-                                        <td><?= htmlspecialchars(date('d.m.Y H:i', strtotime($row['created_at'] ?? ''))) ?></td>
-                                        <td><?= htmlspecialchars(calculatorBuildPatientDisplay($row)) ?></td>
+                                        <td><?= htmlspecialchars(
+                                            date(
+                                                "d.m.Y H:i",
+                                                strtotime(
+                                                    $row["created_at"] ?? "",
+                                                ),
+                                            ),
+                                        ) ?></td>
+                                        <td><?= htmlspecialchars(
+                                            calculatorBuildPatientDisplay($row),
+                                        ) ?></td>
                                         <td>
-                                            AG: <?= number_format($row['result_payload']['ag']??0, 1) ?> mmol/L<br>
-                                            <?php if(isset($row['result_payload']['delta_ratio'])): ?>
-                                                &Delta; Ratio: <?= number_format($row['result_payload']['delta_ratio'], 2) ?>
+                                            AG: <?= number_format(
+                                                $row["result_payload"]["ag"] ??
+                                                    0,
+                                                1,
+                                            ) ?> mmol/L<br>
+                                            <?php if (
+                                                isset(
+                                                    $row["result_payload"][
+                                                        "delta_ratio"
+                                                    ],
+                                                )
+                                            ): ?>
+                                                &Delta; Ratio: <?= number_format(
+                                                    $row["result_payload"][
+                                                        "delta_ratio"
+                                                    ],
+                                                    2,
+                                                ) ?>
                                             <?php endif; ?>
                                         </td>
                                         <td class="admin-actions-cell">
-                                            <a href="?load_id=<?= (int) $row['id'] ?>" class="btn-admin-action" style="background: var(--color-primary); color: white; border-color: var(--color-primary);">Načítať</a>
-                                            <a href="calculator_result_print.php?result_id=<?= (int) $row['id'] ?>" target="_blank" rel="noopener" class="btn-admin-action">Tlačiť</a>
+                                            <a href="?load_id=<?= (int) $row[
+                                                "id"
+                                            ] ?>" class="btn-admin-action" style="background: var(--color-primary); color: white; border-color: var(--color-primary);">Načítať</a>
+                                            <a href="calculator_result_print.php?result_id=<?= (int) $row[
+                                                "id"
+                                            ] ?>" target="_blank" rel="noopener" class="btn-admin-action">Tlačiť</a>
                                             <form method="POST" action="calculator_acidbase.php" style="display:inline">
-                                                <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
+                                                <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(
+                                                    generateCsrfToken(),
+                                                ) ?>">
                                                 <input type="hidden" name="action" value="delete_saved">
-                                                <input type="hidden" name="result_id" value="<?= (int) $row['id'] ?>">
+                                                <input type="hidden" name="result_id" value="<?= (int) $row[
+                                                    "id"
+                                                ] ?>">
                                                 <button type="submit" class="btn-admin-action btn-admin-action--warn">Zmazať</button>
                                             </form>
                                         </td>
@@ -322,6 +462,6 @@ if (isLoggedIn()) {
             </section>
         </div>
     </main>
-    <?php include 'footer.php'; ?>
+    <?php include "footer.php"; ?>
 </body>
 </html>
