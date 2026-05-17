@@ -6,46 +6,96 @@
 if (php_sapi_name() !== 'cli') { exit(403); }
 require_once __DIR__ . '/db_config.php';
 
-echo "── Test searchViaLike() pattern ────────────────────────────────\n\n";
-
-// Simulácia: token "eGFR" (1 token, indx=0)
-$pattern = '%eGFR%';
-
-// Toto je presne to, čo robí search.php → searchViaLike()
-$whereClause = "(title LIKE :pt0 OR excerpt LIKE :pe0 OR content LIKE :pc0)";
-$scoreExpr   = "(CASE WHEN title LIKE :pt0 THEN 10 ELSE 0 END) + "
-             . "(CASE WHEN excerpt LIKE :pe0 THEN 5 ELSE 0 END) + "
-             . "(CASE WHEN content LIKE :pc0 THEN 1 ELSE 0 END)";
-
-$params = ['pt0' => $pattern, 'pe0' => $pattern, 'pc0' => $pattern];
-
-echo "1. COUNT query (každý param ojedinele):\n";
-try {
-    $cnt = $pdo->prepare("SELECT COUNT(*) FROM articles WHERE is_published=1 AND ({$whereClause})");
-    $cnt->execute($params);
-    echo "   ✓ COUNT = " . $cnt->fetchColumn() . "\n\n";
-} catch (\PDOException $e) {
-    echo "   ✗ CHYBA: " . $e->getMessage() . "\n\n";
+function escapeLikeTerm(string $term): string
+{
+    return str_replace(['\\', '%', '_'], ['\\\\', '\\%', '\\_'], $term);
 }
 
-echo "2. SELECT query (každý param 2× v SQL: WHERE + CASE):\n";
-try {
-    $sel = $pdo->prepare(
-        "SELECT id, title, ({$scoreExpr}) AS score
-         FROM articles
-         WHERE is_published=1 AND ({$whereClause})
-         ORDER BY score DESC LIMIT 5"
-    );
-    foreach ($params as $k => $v) {
-        $sel->bindValue(':' . $k, $v, PDO::PARAM_STR);
+function buildLikeSearchSql(array $tokens): array
+{
+    $whereParams = [];
+    $scoreParams = [];
+    $whereParts = [];
+    $scoreParts = [];
+    $idx = 0;
+
+    foreach ($tokens as $norm => $orig) {
+        $term = escapeLikeTerm($orig);
+        $pattern = "%{$term}%";
+
+        $wT = "wt{$idx}";
+        $wE = "we{$idx}";
+        $wC = "wc{$idx}";
+        $whereParams[$wT] = $pattern;
+        $whereParams[$wE] = $pattern;
+        $whereParams[$wC] = $pattern;
+        $whereParts[] = "(title LIKE :{$wT} ESCAPE '\\\\' OR excerpt LIKE :{$wE} ESCAPE '\\\\' OR content LIKE :{$wC} ESCAPE '\\\\')";
+
+        $sT = "st{$idx}";
+        $sE = "se{$idx}";
+        $sC = "sc{$idx}";
+        $scoreParams[$sT] = $pattern;
+        $scoreParams[$sE] = $pattern;
+        $scoreParams[$sC] = $pattern;
+        $scoreParts[] = "(CASE WHEN title LIKE :{$sT} ESCAPE '\\\\' THEN 10 ELSE 0 END)";
+        $scoreParts[] = "(CASE WHEN excerpt LIKE :{$sE} ESCAPE '\\\\' THEN 5 ELSE 0 END)";
+        $scoreParts[] = "(CASE WHEN content LIKE :{$sC} ESCAPE '\\\\' THEN 1 ELSE 0 END)";
+
+        $idx++;
     }
-    $sel->execute();
-    $rows = $sel->fetchAll();
-    echo "   ✓ Nájdených: " . count($rows) . " výsledkov\n";
-    foreach ($rows as $r) echo "      " . $r['id'] . " [skóre=" . $r['score'] . "]: " . mb_substr($r['title'], 0, 50) . "\n";
-} catch (\PDOException $e) {
-    echo "   ✗ CHYBA: " . $e->getMessage() . "\n";
-    echo "   ← TOTO JE TEN BUG!\n";
+
+    return [
+        $whereParams,
+        $scoreParams,
+        implode(' AND ', $whereParts),
+        implode(' + ', $scoreParts),
+    ];
+}
+
+echo "── Test searchViaLike() pattern ────────────────────────────────\n\n";
+
+echo "1. Rozšírený LIKE test pre špeciálne prípady vyhľadávania:\n";
+$cases = [
+    ['egfr' => 'eGFR'],
+    ['hyponatriemia' => 'hyponatriémia'],
+    ['vitamin d' => 'vitamín D'],
+];
+
+foreach ($cases as $case) {
+    $label = implode(' + ', $case);
+    echo "\nTest: {$label}\n";
+    [$whereParams, $scoreParams, $whereClause, $scoreExpr] = buildLikeSearchSql($case);
+
+    try {
+        $cnt = $pdo->prepare("SELECT COUNT(*) FROM articles WHERE is_published=1 AND ({$whereClause})");
+        $cnt->execute($whereParams);
+        echo "   ✓ COUNT = " . $cnt->fetchColumn() . "\n";
+    } catch (\PDOException $e) {
+        echo "   ✗ COUNT CHYBA: " . $e->getMessage() . "\n";
+    }
+
+    try {
+        $sel = $pdo->prepare(
+            "SELECT id, title, ({$scoreExpr}) AS score
+             FROM articles
+             WHERE is_published=1 AND ({$whereClause})
+             ORDER BY score DESC LIMIT 5"
+        );
+        foreach ($whereParams as $k => $v) {
+            $sel->bindValue(':' . $k, $v, PDO::PARAM_STR);
+        }
+        foreach ($scoreParams as $k => $v) {
+            $sel->bindValue(':' . $k, $v, PDO::PARAM_STR);
+        }
+        $sel->execute();
+        $rows = $sel->fetchAll();
+        echo "   ✓ SELECT = " . count($rows) . " výsledkov\n";
+        foreach ($rows as $r) {
+            echo "      " . $r['id'] . " [skóre=" . $r['score'] . "]: " . mb_substr($r['title'], 0, 50) . "\n";
+        }
+    } catch (\PDOException $e) {
+        echo "   ✗ SELECT CHYBA: " . $e->getMessage() . "\n";
+    }
 }
 
 echo "\n── Test FULLTEXT cesty ─────────────────────────────────────────\n";
