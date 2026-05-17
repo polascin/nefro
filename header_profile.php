@@ -4,6 +4,10 @@ $loggedIn = function_exists('isLoggedIn')
     ? isLoggedIn()
     : (isset($_SESSION) && !empty($_SESSION['user_id']));
 
+if ($loggedIn && !isset($pdo)) {
+    require_once __DIR__ . '/db_config.php';
+}
+
 if ($loggedIn && isset($pdo)) {
     try {
         $stmt = $pdo->prepare("SELECT username, email, first_name, last_name, avatar_path, is_admin, email_verified_at, mobile_phone, mobile_verified_at, title_before, middle_name, title_after, organization, job_function, work_mobile_phone, org_website, work_email FROM users WHERE id = :id");
@@ -32,7 +36,7 @@ if ($loggedIn && !$currentUser) {
 $isDefaultAvatar = false;
 $avatarSrc = "";
 if ($currentUser && !empty($currentUser['avatar_path'])) {
-    $avatarSrc = htmlspecialchars($currentUser['avatar_path']);
+    $avatarSrc = htmlspecialchars(str_replace('\\', '/', trim((string) $currentUser['avatar_path'])));
 } else {
     $avatarSrc = 'img/default-avatar-dark.svg';
     $isDefaultAvatar = true;
@@ -73,7 +77,7 @@ $profileLink = $currentUser ? 'profile.php' : 'login.php';
                 <?php endif; ?>
             </a>
             <?php if (!empty($currentUser['is_admin'])): ?>
-                <a href="admin.php" class="header-profile__admin-link">Admin panel</a>
+                <a href="admin.php" class="header-profile__admin-link">Administrácia</a>
             <?php endif; ?>
             <a href="logout.php" class="header-profile__logout-link">Odhlásiť sa</a>
         <?php else: ?>

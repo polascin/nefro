@@ -34,6 +34,9 @@ if ($queueFilterStatus !== "") {
     // Pri manuálnom výbere stavu má explicitný filter prednosť pred presetom.
     $queuePreset = "";
 }
+if ($queueFilterStatus === "" && $queuePreset === "") {
+    $queueFilterStatus = "pending";
+}
 
 // ── Pomocné funkcie ───────────────────────────────────────────────────────────
 
@@ -761,20 +764,8 @@ $pageTimeZone = date("T") . " (" . date_default_timezone_get() . ")";
   $headerIntro = "CRUD rozhranie pre správu článkov";
   $showLogo = false;
   include "header.php";
+  include 'admin_menu.php';
   ?>
-
-  <nav class="main-nav" aria-label="Hlavná navigácia">
-    <div class="container">
-      <ul>
-        <li><a href="index.php">Domov</a></li>
-        <li><a href="admin.php">Admin panel</a></li>
-        <li><a href="admin_articles.php" class="active" aria-current="page">Správa článkov</a></li>
-        <li><a href="logout.php">Odhlásiť sa (<?= htmlspecialchars(
-            $_SESSION["username"] ?? "",
-        ) ?>)</a></li>
-      </ul>
-    </div>
-  </nav>
 
   <main class="container container--wide" style="padding-top:40px;padding-bottom:60px;">
     <div class="auth-container auth-container--wide">
@@ -925,16 +916,16 @@ $pageTimeZone = date("T") . " (" . date_default_timezone_get() . ")";
                 : "" ?>>Všetky</option>
             <option value="pending" <?= $queueFilterStatus === "pending"
                 ? "selected"
-                : "" ?>>Pending</option>
+                : "" ?>>Čakajúce</option>
             <option value="failed" <?= $queueFilterStatus === "failed"
                 ? "selected"
-                : "" ?>>Failed</option>
+                : "" ?>>Neúspešné</option>
             <option value="sent" <?= $queueFilterStatus === "sent"
                 ? "selected"
-                : "" ?>>Sent</option>
+                : "" ?>>Odoslané</option>
             <option value="cancelled" <?= $queueFilterStatus === "cancelled"
                 ? "selected"
-                : "" ?>>Cancelled</option>
+                : "" ?>>Zrušené</option>
           </select>
 
           <label for="q_article_id">Článok:</label>
@@ -961,29 +952,29 @@ $filterArticleId
           <a href="admin_articles.php?q_preset=due_now<?= $queueFilterArticleId >
           0
               ? "&q_article_id=" . $queueFilterArticleId
-              : "" ?>" class="btn-secondary-small">Len due now</a>
+              : "" ?>" class="btn-secondary-small">Len pripravené</a>
           <a href="admin_articles.php" class="btn-secondary-small">Reset</a>
         </form>
 
         <?php if ($queuePreset === "unsent"): ?>
-          <p class="helper-text" style="margin-top:-6px;">Aktívny rýchly filter: len neodoslané (pending + failed).</p>
+          <p class="helper-text" style="margin-top:-6px;">Aktívny rýchly filter: len neodoslané (čakajúce + neúspešné).</p>
         <?php elseif ($queuePreset === "due_now"): ?>
-          <p class="helper-text" style="margin-top:-6px;">Aktívny rýchly filter: due now (pending + failed, pripravené na odoslanie).</p>
+          <p class="helper-text" style="margin-top:-6px;">Aktívny rýchly filter: len pripravené na odoslanie (čakajúce + neúspešné).</p>
         <?php endif; ?>
 
         <div class="form-row-inline" style="margin-top:10px;">
-          <span class="badge-pub">Pending: <?= (int) ($queueSummary[
+          <span class="badge-pub">Čakajúce: <?= (int) ($queueSummary[
               "pending"
           ] ?? 0) ?></span>
-          <span class="badge-draft">Failed: <?= (int) ($queueSummary[
+          <span class="badge-draft">Neúspešné: <?= (int) ($queueSummary[
               "failed"
           ] ?? 0) ?></span>
-          <span class="badge-top-sm">Sent: <?= (int) ($queueSummary["sent"] ??
+          <span class="badge-top-sm">Odoslané: <?= (int) ($queueSummary["sent"] ??
               0) ?></span>
-          <span class="badge-draft" style="background:#e5e7eb;color:#374151;">Cancelled: <?= (int) ($queueSummary[
+          <span class="badge-draft" style="background:#e5e7eb;color:#374151;">Zrušené: <?= (int) ($queueSummary[
               "cancelled"
           ] ?? 0) ?></span>
-          <span class="badge-pub" style="background:#dbeafe;color:#1e3a8a;">Due now: <?= (int) ($queueSummary[
+          <span class="badge-pub" style="background:#dbeafe;color:#1e3a8a;">Pripravené: <?= (int) ($queueSummary[
               "due_now"
           ] ?? 0) ?></span>
           <form method="POST" action="admin_articles.php" style="display:inline; margin-left:8px;"

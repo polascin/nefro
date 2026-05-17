@@ -259,7 +259,7 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin panel - Nefro-projekt Slovensko</title>
+    <title>Administrácia - Nefro-projekt Slovensko</title>
     <meta name="robots" content="noindex, nofollow">
     <script src="theme.js?v=20260511-1&cb=<?= filemtime('theme.js') ?>"></script>
     <link rel="stylesheet" href="index.css?v=20260509-1&cb=<?= filemtime('index.css') ?>">
@@ -273,11 +273,12 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
     $headerIntro = 'Správa používateľov a audit zmien';
     $showLogo = false;
     include 'header.php';
+    include 'admin_menu.php';
     ?>
 
     <main class="container container--wide">
         <div class="auth-container auth-container--wide">
-            <h2>Admin panel</h2>
+            <h2>Administrácia</h2>
             <p class="auth-subtitle">Komplexné možnosti administrácie a audit histórie zmien profilov.</p>
 
             <p style="margin-bottom:1.2rem;">
