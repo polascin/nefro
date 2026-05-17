@@ -75,6 +75,8 @@ if ($notFound || $article === null) {
     header("X-Robots-Tag: noindex, follow", true);
 }
 
+$projectPublicStats = getProjectPublicStats($pdo);
+
 // Formátovanie dátumu
 $months = [
     1 => "januára",
@@ -407,6 +409,24 @@ if ($article) {
           Nefrológia sa rozvíja míľovými krokmi — od molekulárnej biológie po umelú inteligenciu.
           Sledujte najnovšie poznatky a analýzy.
         </p>
+        <div class="project-stats" aria-label="Aktuálne štatistiky projektu">
+          <div class="project-stat">
+            <strong><?= htmlspecialchars(
+                formatProjectPublicCount((int) $projectPublicStats["published_articles"]),
+                ENT_QUOTES,
+                "UTF-8",
+            ) ?></strong>
+            <span>zverejnených článkov</span>
+          </div>
+          <div class="project-stat">
+            <strong><?= htmlspecialchars(
+                formatProjectPublicCount((int) $projectPublicStats["users_total"]),
+                ENT_QUOTES,
+                "UTF-8",
+            ) ?></strong>
+            <span>registrovaných používateľov</span>
+          </div>
+        </div>
         <a href="index.php" class="btn-primary" style="display:inline-block;margin-top:10px;">Všetky články</a>
       </div>
       <div class="widget">

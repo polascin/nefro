@@ -44,6 +44,37 @@ try {
     exit("Chyba: Pripojenie k databáze zlyhalo.");
 }
 
+/**
+ * Vráti verejne zobraziteľné štatistiky projektu.
+ *
+ * @return array{published_articles:int,users_total:int}
+ */
+function getProjectPublicStats(\PDO $pdo): array {
+    $stats = [
+        'published_articles' => 0,
+        'users_total' => 0,
+    ];
+
+    try {
+        $stmt = $pdo->query(
+            "SELECT
+                (SELECT COUNT(*) FROM articles WHERE is_published = 1) AS published_articles,
+                (SELECT COUNT(*) FROM users) AS users_total"
+        );
+        $row = $stmt->fetch(\PDO::FETCH_ASSOC) ?: [];
+        $stats['published_articles'] = max(0, (int) ($row['published_articles'] ?? 0));
+        $stats['users_total'] = max(0, (int) ($row['users_total'] ?? 0));
+    } catch (\PDOException $e) {
+        error_log('project stats: chyba načítania verejných štatistík: ' . $e->getMessage());
+    }
+
+    return $stats;
+}
+
+function formatProjectPublicCount(int $count): string {
+    return number_format(max(0, $count), 0, ',', ' ');
+}
+
 // ── Číselník akademických a iných titulov ───────────────────────────────────
 
 /**

@@ -155,6 +155,8 @@ try {
     error_log("index.php – chyba pri načítaní článkov: " . $e->getMessage());
 }
 
+$projectPublicStats = getProjectPublicStats($pdo);
+
 $siteName = "Nefro-projekt Slovensko";
 $baseUrl = "https://nefro.polascin.net/";
 $isPaginated = $otherArticlesPage > 1;
@@ -535,6 +537,24 @@ if (!empty($itemListElements)) {
               "UTF-8",
           ) ?> a nefrológia sa rozvíja míľovými krokmi. Nie je to už len o manažovaní terminálneho zlyhania obličiek a čakaní na transplantáciu. Zažívame doslova explóziu inovácií, od molekulárnej biológie až po umelú inteligenciu.
         </p>
+        <div class="project-stats" aria-label="Aktuálne štatistiky projektu">
+          <div class="project-stat">
+            <strong><?= htmlspecialchars(
+                formatProjectPublicCount((int) $projectPublicStats["published_articles"]),
+                ENT_QUOTES,
+                "UTF-8",
+            ) ?></strong>
+            <span>zverejnených článkov</span>
+          </div>
+          <div class="project-stat">
+            <strong><?= htmlspecialchars(
+                formatProjectPublicCount((int) $projectPublicStats["users_total"]),
+                ENT_QUOTES,
+                "UTF-8",
+            ) ?></strong>
+            <span>registrovaných používateľov</span>
+          </div>
+        </div>
       </div>
       <div class="widget">
         <h3>Užitočné odkazy</h3>
