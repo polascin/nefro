@@ -307,7 +307,6 @@ if (!empty($itemListElements)) {
       <ul>
         <li><a href="#domov" class="active" aria-current="page">Domov</a></li>
         <li><a href="#sluzby">Služby</a></li>
-        <li><a href="#o-nas">O nás</a></li>
         <li><a href="#kontakt">Kontakt</a></li>
         <li><a href="calculators.php">Kalkulačky</a></li>
         <li><a href="search.php">Vyhľadávanie</a></li>

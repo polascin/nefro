@@ -312,7 +312,6 @@ if ($article) {
       <ul>
         <li><a href="index.php">Domov</a></li>
         <li><a href="index.php#sluzby">Služby</a></li>
-        <li><a href="index.php#o-nas">O nás</a></li>
         <li><a href="index.php#kontakt">Kontakt</a></li>
         <li><a href="calculators.php">Kalkulačky</a></li>
         <li><a href="search.php">Vyhľadávanie</a></li>
