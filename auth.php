@@ -49,6 +49,17 @@ function isAdmin() {
 }
 
 /**
+ * Funkcia na overenie, či je používateľ prihlásený.
+ *
+ * @return bool True ak je v relácii platný user_id
+ */
+if (!function_exists('isLoggedIn')) {
+    function isLoggedIn(): bool {
+        return isset($_SESSION['user_id']) && (int) $_SESSION['user_id'] > 0;
+    }
+}
+
+/**
  * Funkcia na vyžadovanie prihlásenia (presmeruje ak nie je)
  */
 function requireLogin() {

@@ -1,4 +1,9 @@
 <?php
+// Ensure auth helpers are available when header is included directly.
+if (!function_exists('isLoggedIn')) {
+    require_once __DIR__ . '/auth.php';
+}
+
 $headerTitle = $headerTitle ?? 'Nefro-projekt Slovensko';
 $headerIntro = $headerIntro ?? '';
 $showLogo = $showLogo ?? false;
