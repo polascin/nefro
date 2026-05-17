@@ -453,8 +453,8 @@ if (!empty($itemListElements)) {
         </div>
       </section>
 
-      <!-- Sekcia O nás -->
-      <section class="features-section" id="o-nas">
+      <!-- Sekcia O mne -->
+      <section class="features-section" id="o-mne">
         <h2>O mne</h2>
         <div class="features-grid">
           <div class="feature-card">
