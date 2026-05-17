@@ -193,6 +193,31 @@ try {
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";
     $pdo->exec($passwordResetsSql);
 
+    $accessLogsSql = "CREATE TABLE IF NOT EXISTS access_logs (
+        id BIGINT AUTO_INCREMENT PRIMARY KEY,
+        user_id INT NULL,
+        username VARCHAR(255) NULL,
+        event_type VARCHAR(50) NOT NULL DEFAULT 'page_view',
+        method VARCHAR(10) NOT NULL DEFAULT 'GET',
+        request_uri VARCHAR(2048) NOT NULL,
+        query_string VARCHAR(2048) NULL,
+        http_status SMALLINT NOT NULL DEFAULT 200,
+        client_ip VARCHAR(45) NULL,
+        user_agent VARCHAR(500) NULL,
+        referer VARCHAR(2048) NULL,
+        host VARCHAR(255) NULL,
+        accept_language VARCHAR(255) NULL,
+        response_time_ms INT NULL,
+        is_bot TINYINT(1) NOT NULL DEFAULT 0,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        INDEX idx_access_logs_created_at (created_at),
+        INDEX idx_access_logs_user_id (user_id),
+        INDEX idx_access_logs_http_status (http_status),
+        INDEX idx_access_logs_client_ip (client_ip),
+        CONSTRAINT fk_access_logs_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE SET NULL
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";
+    $pdo->exec($accessLogsSql);
+
     $adminExportsAuditSql = "CREATE TABLE IF NOT EXISTS admin_users_notice_audit (
         id BIGINT AUTO_INCREMENT PRIMARY KEY,
         admin_user_id INT NOT NULL,

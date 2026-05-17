@@ -185,6 +185,18 @@ try {
         LIMIT 200");
     $avatarHistory = $avatarHistoryStmt->fetchAll();
 
+    $accessLogs = [];
+    try {
+        $accessLogsStmt = $pdo->query("SELECT a.id, a.user_id, u.username, a.event_type, a.method, a.request_uri, a.http_status, a.client_ip, a.user_agent, a.referer, a.accept_language, a.response_time_ms, a.is_bot, a.created_at
+            FROM access_logs a
+            LEFT JOIN users u ON u.id = a.user_id
+            ORDER BY a.created_at DESC, a.id DESC
+            LIMIT 200");
+        $accessLogs = $accessLogsStmt->fetchAll();
+    } catch (\PDOException $e) {
+        error_log('Admin access log read error: ' . $e->getMessage());
+    }
+
     try {
         $noticeAuditAdminsStmt = $pdo->query("SELECT DISTINCT a.admin_user_id, u.username
             FROM admin_users_notice_audit a
@@ -574,6 +586,46 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
                                         <td><?= htmlspecialchars((string) ($a['client_ip'] ?? '')) ?></td>
                                         <td><code><?= htmlspecialchars((string) ($a['user_agent'] ?? '')) ?></code></td>
                                         <td><?= htmlspecialchars((string) ($a['created_at'] ?? '')) ?></td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            <?php endif; ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Audit log prístupov (posledných 200)</h3>
+                <div class="admin-table-wrap">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Používateľ</th>
+                                <th>Typ</th>
+                                <th>Metóda</th>
+                                <th>URI</th>
+                                <th>Stav</th>
+                                <th>IP adresa</th>
+                                <th>Bot</th>
+                                <th>Čas</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php if (empty($accessLogs)): ?>
+                                <tr><td colspan="9">Zatiaľ bez záznamov v access logu.</td></tr>
+                            <?php else: ?>
+                                <?php foreach ($accessLogs as $log): ?>
+                                    <tr>
+                                        <td><?= (int) $log['id'] ?></td>
+                                        <td><?= htmlspecialchars((string) ($log['username'] ?? ('#' . (int) $log['user_id']))) ?></td>
+                                        <td><?= htmlspecialchars((string) $log['event_type']) ?></td>
+                                        <td><?= htmlspecialchars((string) $log['method']) ?></td>
+                                        <td><code><?= htmlspecialchars((string) $log['request_uri']) ?></code></td>
+                                        <td><?= (int) $log['http_status'] ?></td>
+                                        <td><?= htmlspecialchars((string) ($log['client_ip'] ?? '')) ?></td>
+                                        <td><?= ((int) ($log['is_bot'] ?? 0) === 1) ? 'Áno' : 'Nie' ?></td>
+                                        <td><?= htmlspecialchars((string) ($log['created_at'] ?? '')) ?></td>
                                     </tr>
                                 <?php endforeach; ?>
                             <?php endif; ?>

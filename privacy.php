@@ -209,6 +209,54 @@ $pageLastUpdated = date('d.m.Y', filemtime(__FILE__));
                     (<a href="https://www.uoou.sk" target="_blank" rel="noopener noreferrer">www.uoou.sk</a>).
                 </p>
 
+                <!-- 4a. GDPR DOLOŽKA -->
+                <h3>4a. GDPR doložka</h3>
+                <p>
+                    V prípade spracúvania osobných údajov postupujeme v súlade s GDPR
+                    a uplatňujeme tieto právne základy:
+                </p>
+                <ul>
+                    <li>
+                        <strong>Plnenie zmluvy</strong> (čl. 6 ods. 1 písm. b GDPR) – spracúvanie
+                        údajov pre registráciu, prihlásenie, nahrávanie a spracovanie výsledkov
+                        kalkulačiek a poskytovanie služieb prihlásenému používateľovi.
+                    </li>
+                    <li>
+                        <strong>Oprávnený záujem</strong> (čl. 6 ods. 1 písm. f GDPR) – prevádzka
+                        bezpečného webu, ochrana pred zneužitím, detekcia útokov, audit a
+                        zabezpečenie integrity aplikácie.
+                    </li>
+                    <li>
+                        <strong>Súhlas</strong> (čl. 6 ods. 1 písm. a GDPR) – spracúvanie analytických
+                        cookies, marketingových nastavení a newsletterov na základe dobrovoľného
+                        udelenia súhlasu.
+                    </li>
+                </ul>
+                <p>
+                    Osobné údaje získavame priamo od vás pri registrácii, pri úprave profilu,
+                    pri zasielaní formulárov a pri používaní stránky prostredníctvom cookies.
+                </p>
+                <p>
+                    Príjemcami údajov sú výlučne interné systémy služby a dôveryhodné tretie
+                    strany, ktoré poskytujú technickú infraštruktúru, analytiku, e-mailové služby
+                    a bezpečnosť. Medzi ne patria napríklad Google Analytics 4 a iné služby,
+                    ktoré spracúvajú údaje výlučne na základe nášho pokynu.
+                </p>
+                <p>
+                    Prenosy údajov mimo Európskej únie sú realizované výhradne na základe
+                    platných právnych mechanizmov GDPR, vrátane štandardných zmluvných doložiek
+                    (SCC) alebo iných vhodných ochranných opatrení.
+                </p>
+                <p>
+                    Doba uchovávania jednotlivých kategórií údajov je opísaná v sekcii 6.
+                    Uchovávame ich len po dobu nevyhnutnú na naplnenie účelu spracovania.
+                </p>
+                <p>
+                    V prípade zmeny zásad alebo aktualizácie verzie súhlasu platí, že systém
+                    automaticky vyžiada nový súhlas používateľa pre analytické a marketingové
+                    cookies. Toto je v súlade s čl. 7 ods. 3 GDPR.
+                </p>
+
                 <!-- 5. COOKIES & GA4 -->
                 <h3>5. Súbory cookies a Google Analytics 4</h3>
                 <p>

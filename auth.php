@@ -30,14 +30,7 @@ if (session_status() === PHP_SESSION_NONE) {
         exit('Chyba: Nepodarilo sa spustiť reláciu.');
     }
 }
-
-/**
- * Funkcia na overenie prihlásenia používateľa
- * @return bool True ak je prihlásený, inak False
- */
-function isLoggedIn() {
-    return isset($_SESSION['user_id']);
-}
+registerAccessLogger();
 
 /**
  * Funkcia na overenie, či má používateľ overený e-mail
@@ -180,6 +173,177 @@ function generateJsChallengeToken(): string {
  */
 function validateJsChallengeToken(?string $token): bool {
     return isset($_SESSION['js_challenge_token']) && $token === $_SESSION['js_challenge_token'];
+}
+
+/**
+ * Centrálna funkcia na získanie klientovej IP adresy.
+ */
+function getClientIpAddress(): string {
+    $defaultIp = $_SERVER['REMOTE_ADDR'] ?? '0.0.0.0';
+    try {
+        $env = loadAppConfig();
+    } catch (\RuntimeException $e) {
+        $env = [];
+    }
+
+    if (parseEnvBool($env['TRUST_PROXY_HEADERS'] ?? getenv('TRUST_PROXY_HEADERS'), false)) {
+        $forwarded = $_SERVER['HTTP_X_FORWARDED_FOR'] ?? $_SERVER['HTTP_CLIENT_IP'] ?? $_SERVER['HTTP_X_REAL_IP'] ?? '';
+        if ($forwarded !== '') {
+            foreach (explode(',', $forwarded) as $candidate) {
+                $candidate = trim($candidate);
+                if (filter_var($candidate, FILTER_VALIDATE_IP)) {
+                    return $candidate;
+                }
+            }
+        }
+    }
+
+    return filter_var($defaultIp, FILTER_VALIDATE_IP) ? $defaultIp : '0.0.0.0';
+}
+
+/**
+ * Centrálna funkcia na získanie PDO pre audit logy, ak je dostupná.
+ */
+function getAccessLogPdo(): ?\PDO {
+    if (isset($GLOBALS['pdo']) && $GLOBALS['pdo'] instanceof \PDO) {
+        return $GLOBALS['pdo'];
+    }
+
+    $configPath = __DIR__ . '/db_config.php';
+    if (!is_file($configPath)) {
+        return null;
+    }
+
+    try {
+        require_once $configPath;
+    } catch (\Throwable $e) {
+        error_log('Access log DB load failed: ' . $e->getMessage());
+        return null;
+    }
+
+    if (isset($pdo) && $pdo instanceof \PDO) {
+        return $pdo;
+    }
+
+    return isset($GLOBALS['pdo']) && $GLOBALS['pdo'] instanceof \PDO ? $GLOBALS['pdo'] : null;
+}
+
+/**
+ * Zapíše informácie o prístupe do databázy alebo do fallback logu.
+ */
+function saveAccessLog(array $record): bool {
+    $pdo = getAccessLogPdo();
+    if ($pdo === null) {
+        return false;
+    }
+
+    try {
+        $stmt = $pdo->prepare(
+            "INSERT INTO access_logs (
+                user_id, username, event_type, method, request_uri, query_string,
+                http_status, client_ip, user_agent, referer, host, accept_language,
+                response_time_ms, is_bot
+            ) VALUES (
+                :user_id, :username, :event_type, :method, :request_uri, :query_string,
+                :http_status, :client_ip, :user_agent, :referer, :host, :accept_language,
+                :response_time_ms, :is_bot
+            )"
+        );
+
+        $stmt->execute([
+            ':user_id' => $record['user_id'],
+            ':username' => $record['username'],
+            ':event_type' => $record['event_type'],
+            ':method' => $record['method'],
+            ':request_uri' => $record['request_uri'],
+            ':query_string' => $record['query_string'],
+            ':http_status' => $record['http_status'],
+            ':client_ip' => $record['client_ip'],
+            ':user_agent' => $record['user_agent'],
+            ':referer' => $record['referer'],
+            ':host' => $record['host'],
+            ':accept_language' => $record['accept_language'],
+            ':response_time_ms' => $record['response_time_ms'],
+            ':is_bot' => $record['is_bot'],
+        ]);
+
+        return true;
+    } catch (\PDOException $e) {
+        error_log('Access log write failed: ' . $e->getMessage());
+        return false;
+    }
+}
+
+/**
+ * Zapíše prístupový záznam do lokálneho fallback logu, ak DB nie je dostupná.
+ */
+function fallbackAccessLog(array $record): void {
+    $logDir = __DIR__ . '/private/logs';
+    @mkdir($logDir, 0755, true);
+    $logFile = $logDir . '/access.log';
+    $line = sprintf(
+        "%s\t%s\t%s\t%s\t%s\t%d\t%s\t%s\t%s\t%s\t%s\t%s\t%d\t%d\n",
+        date('Y-m-d H:i:s'),
+        $record['event_type'],
+        $record['method'],
+        $record['request_uri'],
+        $record['query_string'],
+        $record['http_status'],
+        $record['client_ip'],
+        str_replace(["\r", "\n"], ['',''], $record['user_agent']),
+        str_replace(["\r", "\n"], ['',''], $record['referer']),
+        $record['host'],
+        $record['accept_language'],
+        $record['username'] ?? '',
+        $record['response_time_ms'],
+        $record['is_bot'],
+    );
+    @file_put_contents($logFile, $line, FILE_APPEND | LOCK_EX);
+}
+
+/**
+ * Registruje shutdown handler pre audit prístupu.
+ */
+function registerAccessLogger(): void {
+    register_shutdown_function('recordAccessLogShutdown');
+}
+
+/**
+ * Zaznamená prístup pri ukončení spracovania požiadavky.
+ */
+function recordAccessLogShutdown(): void {
+    if (php_sapi_name() === 'cli') {
+        return;
+    }
+
+    $method = $_SERVER['REQUEST_METHOD'] ?? 'GET';
+    $uri = $_SERVER['REQUEST_URI'] ?? ($_SERVER['PHP_SELF'] ?? '/');
+    $query = $_SERVER['QUERY_STRING'] ?? '';
+    $status = http_response_code();
+    if (!is_int($status) || $status < 100 || $status > 599) {
+        $status = 200;
+    }
+
+    $record = [
+        'user_id' => isLoggedIn() ? (int) ($_SESSION['user_id'] ?? 0) : null,
+        'username' => $_SESSION['username'] ?? null,
+        'event_type' => 'page_view',
+        'method' => $method,
+        'request_uri' => $uri,
+        'query_string' => $query,
+        'http_status' => $status,
+        'client_ip' => getClientIpAddress(),
+        'user_agent' => $_SERVER['HTTP_USER_AGENT'] ?? '',
+        'referer' => $_SERVER['HTTP_REFERER'] ?? '',
+        'host' => $_SERVER['HTTP_HOST'] ?? '',
+        'accept_language' => $_SERVER['HTTP_ACCEPT_LANGUAGE'] ?? '',
+        'response_time_ms' => isset($_SERVER['REQUEST_TIME_FLOAT']) ? (int) round((microtime(true) - $_SERVER['REQUEST_TIME_FLOAT']) * 1000) : null,
+        'is_bot' => isKnownBotUserAgent() ? 1 : 0,
+    ];
+
+    if (!saveAccessLog($record)) {
+        fallbackAccessLog($record);
+    }
 }
 
 /**
