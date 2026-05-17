@@ -658,6 +658,54 @@ code {
     }
 }
 
+.project-authors {
+    margin-top: 2px;
+}
+
+.project-authors h4 {
+    margin: 0 0 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    font-weight: 700;
+}
+
+.project-authors ul {
+    margin: 0;
+    padding: 0;
+}
+
+.project-authors li {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.project-authors li:last-child {
+    margin-bottom: 0;
+}
+
+.project-authors span {
+    min-width: 0;
+    color: var(--text-secondary);
+    font-size: 0.88rem;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+}
+
+.project-authors strong {
+    flex: 0 0 auto;
+    color: var(--text-primary);
+    font-size: 0.82rem;
+    line-height: 1.4;
+    font-weight: 700;
+    text-align: right;
+    white-space: nowrap;
+}
+
 .widget ul {
     list-style: none;
 }

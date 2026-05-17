@@ -230,7 +230,7 @@ try {
         id INT AUTO_INCREMENT PRIMARY KEY,
         title VARCHAR(500) NOT NULL,
         slug VARCHAR(500) NOT NULL,
-        author VARCHAR(255) NOT NULL DEFAULT 'Dr. Ľubomír Polaščín',
+        author VARCHAR(255) NOT NULL DEFAULT 'MUDr. Ľubomír Polaščín',
         content LONGTEXT NOT NULL,
         excerpt TEXT NOT NULL,
         published_at DATETIME NOT NULL,
@@ -561,4 +561,3 @@ try {
     echo "Chyba pri vytváraní tabuľky: " . $e->getMessage();
 }
 ?>
-

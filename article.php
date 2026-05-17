@@ -150,8 +150,8 @@ $baseUrl = "https://nefro.polascin.net/";
 
 $articleTitleRaw = $article ? (string) ($article["title"] ?? "") : "";
 $articleAuthorRaw = $article
-    ? (string) ($article["author"] ?? "Dr. Ľubomír Polaščín")
-    : "Dr. Ľubomír Polaščín";
+    ? (string) ($article["author"] ?? "MUDr. Ľubomír Polaščín")
+    : "MUDr. Ľubomír Polaščín";
 $canonicalUrlRaw = $article
     ? $baseUrl . "article.php?slug=" . (string) ($article["slug"] ?? "")
     : "";
@@ -427,6 +427,35 @@ if ($article) {
             <span>registrovaných používateľov</span>
           </div>
         </div>
+        <?php
+        $projectAuthors = is_array($projectPublicStats["authors"] ?? null)
+            ? $projectPublicStats["authors"]
+            : [];
+        ?>
+        <?php if (!empty($projectAuthors)): ?>
+        <div class="project-authors" aria-label="Autori článkov podľa počtu príspevkov">
+          <h4>Zúčastnení autori</h4>
+          <ul>
+            <?php foreach ($projectAuthors as $authorStat):
+                $authorName = trim((string) ($authorStat["author"] ?? ""));
+                if ($authorName === "") {
+                    continue;
+                }
+                $authorArticles = (int) ($authorStat["articles"] ?? 0);
+                ?>
+            <li>
+              <span><?= htmlspecialchars($authorName, ENT_QUOTES, "UTF-8") ?></span>
+              <strong><?= htmlspecialchars(
+                  formatProjectArticleCountLabel($authorArticles),
+                  ENT_QUOTES,
+                  "UTF-8",
+              ) ?></strong>
+            </li>
+            <?php
+            endforeach; ?>
+          </ul>
+        </div>
+        <?php endif; ?>
         <a href="index.php" class="btn-primary" style="display:inline-block;margin-top:10px;">Všetky články</a>
       </div>
       <div class="widget">

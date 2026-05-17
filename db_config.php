@@ -47,12 +47,13 @@ try {
 /**
  * Vráti verejne zobraziteľné štatistiky projektu.
  *
- * @return array{published_articles:int,users_total:int}
+ * @return array{published_articles:int,users_total:int,authors:array<int,array{author:string,articles:int}>}
  */
 function getProjectPublicStats(\PDO $pdo): array {
     $stats = [
         'published_articles' => 0,
         'users_total' => 0,
+        'authors' => [],
     ];
 
     try {
@@ -68,11 +69,44 @@ function getProjectPublicStats(\PDO $pdo): array {
         error_log('project stats: chyba načítania verejných štatistík: ' . $e->getMessage());
     }
 
+    try {
+        $authorsStmt = $pdo->query(
+            "SELECT TRIM(author) AS author_name, COUNT(*) AS articles_total
+             FROM articles
+             WHERE is_published = 1 AND TRIM(author) <> ''
+             GROUP BY author_name
+             ORDER BY articles_total DESC, author_name ASC"
+        );
+        foreach ($authorsStmt->fetchAll(\PDO::FETCH_ASSOC) as $row) {
+            $authorName = trim((string) ($row['author_name'] ?? ''));
+            if ($authorName === '') {
+                continue;
+            }
+            $stats['authors'][] = [
+                'author' => $authorName,
+                'articles' => max(0, (int) ($row['articles_total'] ?? 0)),
+            ];
+        }
+    } catch (\PDOException $e) {
+        error_log('project stats: chyba načítania autorov článkov: ' . $e->getMessage());
+    }
+
     return $stats;
 }
 
 function formatProjectPublicCount(int $count): string {
     return number_format(max(0, $count), 0, ',', ' ');
+}
+
+function formatProjectArticleCountLabel(int $count): string {
+    $count = max(0, $count);
+    $unit = match ($count) {
+        1 => 'článok',
+        2, 3, 4 => 'články',
+        default => 'článkov',
+    };
+
+    return formatProjectPublicCount($count) . ' ' . $unit;
 }
 
 // ── Číselník akademických a iných titulov ───────────────────────────────────

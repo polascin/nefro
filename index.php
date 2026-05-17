@@ -555,6 +555,35 @@ if (!empty($itemListElements)) {
             <span>registrovaných používateľov</span>
           </div>
         </div>
+        <?php
+        $projectAuthors = is_array($projectPublicStats["authors"] ?? null)
+            ? $projectPublicStats["authors"]
+            : [];
+        ?>
+        <?php if (!empty($projectAuthors)): ?>
+        <div class="project-authors" aria-label="Autori článkov podľa počtu príspevkov">
+          <h4>Zúčastnení autori</h4>
+          <ul>
+            <?php foreach ($projectAuthors as $authorStat):
+                $authorName = trim((string) ($authorStat["author"] ?? ""));
+                if ($authorName === "") {
+                    continue;
+                }
+                $authorArticles = (int) ($authorStat["articles"] ?? 0);
+                ?>
+            <li>
+              <span><?= htmlspecialchars($authorName, ENT_QUOTES, "UTF-8") ?></span>
+              <strong><?= htmlspecialchars(
+                  formatProjectArticleCountLabel($authorArticles),
+                  ENT_QUOTES,
+                  "UTF-8",
+              ) ?></strong>
+            </li>
+            <?php
+            endforeach; ?>
+          </ul>
+        </div>
+        <?php endif; ?>
       </div>
       <div class="widget">
         <h3>Užitočné odkazy</h3>

@@ -158,7 +158,7 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
                 $title = trim((string) ($_POST["title"] ?? ""));
                 $slug = trim((string) ($_POST["slug"] ?? ""));
                 $author = trim(
-                    (string) ($_POST["author"] ?? "Dr. Ľubomír Polaščín"),
+                    (string) ($_POST["author"] ?? "MUDr. Ľubomír Polaščín"),
                 );
                 $content = trim((string) ($_POST["content"] ?? ""));
                 $excerpt = trim((string) ($_POST["excerpt"] ?? ""));
@@ -205,7 +205,7 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
                         "title" => $title,
                         "slug" => $slug,
                         "author" =>
-                            $author !== "" ? $author : "Dr. Ľubomír Polaščín",
+                            $author !== "" ? $author : "MUDr. Ľubomír Polaščín",
                         "content" => $content,
                         "excerpt" => $excerpt,
                         "published_at" => $pubAt,
@@ -323,7 +323,7 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
                         "title" => $title,
                         "slug" => $slug,
                         "author" =>
-                            $author !== "" ? $author : "Dr. Ľubomír Polaščín",
+                            $author !== "" ? $author : "MUDr. Ľubomír Polaščín",
                         "content" => $content,
                         "excerpt" => $excerpt,
                         "published_at" => $pubAt,
@@ -670,6 +670,7 @@ if (($_GET["action"] ?? "") === "edit" && $editId > 0) {
 // ── Načítanie článkov pre zoznam s podporou stránkovania ─────────────────────
 $articles = [];
 $articlesTotal = 0;
+$articleAuthorOptions = [];
 $articlesPerPage = 50; // počet článkov na stránku v administračnom zobrazení
 $articlesPage = max(1, (int) ($_GET['page'] ?? 1));
 $articlesOffset = ($articlesPage - 1) * $articlesPerPage;
@@ -688,6 +689,26 @@ try {
     $articlesTotalPages = $articlesPerPage > 0 ? (int) ceil($articlesTotal / $articlesPerPage) : 1;
 } catch (\PDOException $e) {
     error_log("admin_articles list error: " . $e->getMessage());
+}
+
+try {
+    $authorStmt = $pdo->query(
+        "SELECT DISTINCT TRIM(author) AS author_name
+         FROM articles
+         WHERE TRIM(author) <> ''
+         ORDER BY author_name ASC",
+    );
+    $articleAuthorOptions = array_values(
+        array_filter(
+            array_map(
+                static fn ($author): string => trim((string) $author),
+                $authorStmt->fetchAll(\PDO::FETCH_COLUMN),
+            ),
+            static fn (string $author): bool => $author !== "",
+        ),
+    );
+} catch (\PDOException $e) {
+    error_log("admin_articles authors list error: " . $e->getMessage());
 }
 
 try {
@@ -827,11 +848,19 @@ $pageTimeZone = date("T") . " (" . date_default_timezone_get() . ")";
 
             <div class="form-row">
               <label for="f_author">Autor</label>
-              <input type="text" id="f_author" name="author" maxlength="255"
+              <input type="text" id="f_author" name="author" maxlength="255" list="article-author-options"
                      value="<?= htmlspecialchars(
                          (string) ($editArticle["author"] ??
-                             "Dr. Ľubomír Polaščín"),
+                             "MUDr. Ľubomír Polaščín"),
                      ) ?>">
+              <?php if (!empty($articleAuthorOptions)): ?>
+                <datalist id="article-author-options">
+                  <?php foreach ($articleAuthorOptions as $authorOption): ?>
+                    <option value="<?= htmlspecialchars($authorOption, ENT_QUOTES, "UTF-8") ?>"></option>
+                  <?php endforeach; ?>
+                </datalist>
+              <?php endif; ?>
+              <span class="helper-text">Používajte konzistentný zápis mena. Podľa tejto hodnoty sa počíta zoznam autorov v sekcii „O projekte“.</span>
             </div>
 
             <div class="form-row">
