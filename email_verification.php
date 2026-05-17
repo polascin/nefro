@@ -30,7 +30,7 @@ function getEmailEnvConfig(): array {
     return $config;
 }
 
-function smtpReadResponse(resource $socket): array {
+function smtpReadResponse(\resource $socket): array {
     $lines = '';
     $code = 0;
 
@@ -68,7 +68,7 @@ function smtpLogError(string $stage, string $reason, array $context = []): void 
     error_log(implode('; ', $parts));
 }
 
-function smtpSendCommand(resource $socket, string $command, array $expectedCodes, string $stage): array {
+function smtpSendCommand(\resource $socket, string $command, array $expectedCodes, string $stage): array {
     if (@fwrite($socket, $command . "\r\n") === false) {
         smtpLogError($stage, 'write_failed', ['expected' => $expectedCodes]);
         return ['ok' => false, 'code' => 0, 'response' => ''];
