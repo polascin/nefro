@@ -4,31 +4,118 @@
  * Funkcie: FULLTEXT + LIKE, slovenské diakritiky, stop slová,
  *          relevančné skórovanie, zvýraznenie výrazov, snippety, stránkovanie.
  */
-require_once 'auth.php';
-require_once 'db_config.php';
+require_once "auth.php";
+require_once "db_config.php";
 
 // Bezpečnostné hlavičky
-header_remove('X-Powered-By');
-header('X-Frame-Options: SAMEORIGIN');
-header('X-Content-Type-Options: nosniff');
-header('Referrer-Policy: strict-origin-when-cross-origin');
+header_remove("X-Powered-By");
+header("X-Frame-Options: SAMEORIGIN");
+header("X-Content-Type-Options: nosniff");
+header("Referrer-Policy: strict-origin-when-cross-origin");
 
 // ── Konštanty ────────────────────────────────────────────────────────────────
-const SEARCH_PER_PAGE   = 10;
-const SEARCH_SNIPPET    = 230;   // znakov pre ukážku
-const SEARCH_MIN_LEN    = 2;     // minimálna dĺžka slova
-const SEARCH_MAX_TOKENS = 8;     // max počet slov v dopyte
+const SEARCH_PER_PAGE = 10;
+const SEARCH_SNIPPET = 230; // znakov pre ukážku
+const SEARCH_MIN_LEN = 2; // minimálna dĺžka slova
+const SEARCH_MAX_TOKENS = 8; // max počet slov v dopyte
 
 // ── Stop slová (slovenčina + angličtina) ─────────────────────────────────────
 const SK_STOP_WORDS = [
-    'a','aby','aj','ak','ale','ani','ako','alebo','az','ba','bez','bol','bola',
-    'boli','byť','by','čo','či','ďalej','do','dolu','ho','hoci','ich','je',
-    'jej','im','k','kde','keď','kedy','keďže','kto','ktory','ku','lebo','len',
-    'medzi','mi','my','na','nad','nám','nie','nielen','no','o','od','okolo',
-    'on','oni','po','pod','podľa','pokiaľ','pre','pri','s','sa','si','sme',
-    'sú','tak','taktiež','teda','tejto','to','toho','tom','tu','u','v','viac',
-    'vo','voči','vždy','z','za','zo','že','než','iba','toto','táto','tento',
-    'the','and','for','that','are','with','this','was','but','not',
+    "a",
+    "aby",
+    "aj",
+    "ak",
+    "ale",
+    "ani",
+    "ako",
+    "alebo",
+    "az",
+    "ba",
+    "bez",
+    "bol",
+    "bola",
+    "boli",
+    "byť",
+    "by",
+    "čo",
+    "či",
+    "ďalej",
+    "do",
+    "dolu",
+    "ho",
+    "hoci",
+    "ich",
+    "je",
+    "jej",
+    "im",
+    "k",
+    "kde",
+    "keď",
+    "kedy",
+    "keďže",
+    "kto",
+    "ktory",
+    "ku",
+    "lebo",
+    "len",
+    "medzi",
+    "mi",
+    "my",
+    "na",
+    "nad",
+    "nám",
+    "nie",
+    "nielen",
+    "no",
+    "o",
+    "od",
+    "okolo",
+    "on",
+    "oni",
+    "po",
+    "pod",
+    "podľa",
+    "pokiaľ",
+    "pre",
+    "pri",
+    "s",
+    "sa",
+    "si",
+    "sme",
+    "sú",
+    "tak",
+    "taktiež",
+    "teda",
+    "tejto",
+    "to",
+    "toho",
+    "tom",
+    "tu",
+    "u",
+    "v",
+    "viac",
+    "vo",
+    "voči",
+    "vždy",
+    "z",
+    "za",
+    "zo",
+    "že",
+    "než",
+    "iba",
+    "toto",
+    "táto",
+    "tento",
+    "the",
+    "and",
+    "for",
+    "that",
+    "are",
+    "with",
+    "this",
+    "was",
+    "but",
+    "not",
 ];
 
 // ── Pomocné funkcie ───────────────────────────────────────────────────────────
@@ -40,10 +127,40 @@ const SK_STOP_WORDS = [
 function searchNormalizeSk(string $text): string
 {
     static $map = [
-        'á'=>'a','ä'=>'a','č'=>'c','ď'=>'d','é'=>'e','í'=>'i','ĺ'=>'l','ľ'=>'l',
-        'ň'=>'n','ó'=>'o','ô'=>'o','ŕ'=>'r','š'=>'s','ť'=>'t','ú'=>'u','ý'=>'y','ž'=>'z',
-        'Á'=>'a','Ä'=>'a','Č'=>'c','Ď'=>'d','É'=>'e','Í'=>'i','Ĺ'=>'l','Ľ'=>'l',
-        'Ň'=>'n','Ó'=>'o','Ô'=>'o','Ŕ'=>'r','Š'=>'s','Ť'=>'t','Ú'=>'u','Ý'=>'y','Ž'=>'z',
+        "á" => "a",
+        "ä" => "a",
+        "č" => "c",
+        "ď" => "d",
+        "é" => "e",
+        "í" => "i",
+        "ĺ" => "l",
+        "ľ" => "l",
+        "ň" => "n",
+        "ó" => "o",
+        "ô" => "o",
+        "ŕ" => "r",
+        "š" => "s",
+        "ť" => "t",
+        "ú" => "u",
+        "ý" => "y",
+        "ž" => "z",
+        "Á" => "a",
+        "Ä" => "a",
+        "Č" => "c",
+        "Ď" => "d",
+        "É" => "e",
+        "Í" => "i",
+        "Ĺ" => "l",
+        "Ľ" => "l",
+        "Ň" => "n",
+        "Ó" => "o",
+        "Ô" => "o",
+        "Ŕ" => "r",
+        "Š" => "s",
+        "Ť" => "t",
+        "Ú" => "u",
+        "Ý" => "y",
+        "Ž" => "z",
     ];
     return strtolower(strtr($text, $map));
 }
@@ -55,15 +172,15 @@ function searchNormalizeSk(string $text): string
 function searchTokenize(string $rawQuery): array
 {
     // Odstráň špeciálne DB znaky a normalizuj whitespace
-    $clean = preg_replace('/[+\-*~<>()\"@]+/', ' ', $rawQuery) ?? $rawQuery;
-    $clean = preg_replace('/\s+/u', ' ', trim($clean)) ?? $clean;
+    $clean = preg_replace('/[+\-*~<>()\"@]+/', " ", $rawQuery) ?? $rawQuery;
+    $clean = preg_replace("/\s+/u", " ", trim($clean)) ?? $clean;
 
-    $rawTokens = explode(' ', $clean);
-    $tokens    = [];
+    $rawTokens = explode(" ", $clean);
+    $tokens = [];
 
     foreach ($rawTokens as $tok) {
         $tok = trim($tok);
-        if (mb_strlen($tok, 'UTF-8') < SEARCH_MIN_LEN) {
+        if (mb_strlen($tok, "UTF-8") < SEARCH_MIN_LEN) {
             continue;
         }
         $normalized = searchNormalizeSk($tok);
@@ -93,7 +210,7 @@ function searchFtIndexExists(PDO $pdo): bool
              WHERE table_schema = DATABASE()
                AND table_name   = 'articles'
                AND index_name   = 'ft_articles_search'
-               AND index_type   = 'FULLTEXT'"
+               AND index_type   = 'FULLTEXT'",
         );
         $s->execute();
         $cache = ((int) $s->fetchColumn()) > 0;
@@ -113,24 +230,30 @@ function searchFtIndexExists(PDO $pdo): bool
  *   3. LIKE s normalizovaným dopytom (de-accented fallback)
  */
 function doArticleSearch(
-    PDO    $pdo,
+    PDO $pdo,
     string $rawQuery,
-    array  $tokens,       // ['normalized' => 'original']
-    int    $page,
-    int    $perPage
+    array $tokens, // ['normalized' => 'original']
+    int $page,
+    int $perPage,
 ): array {
-    $offset   = ($page - 1) * $perPage;
-    $strategy = 'none';
+    $offset = ($page - 1) * $perPage;
+    $strategy = "none";
 
     if (empty($tokens)) {
-        return ['items' => [], 'total' => 0, 'strategy' => $strategy];
+        return ["items" => [], "total" => 0, "strategy" => $strategy];
     }
 
     // ── Pokus 1: FULLTEXT BOOLEAN mode ───────────────────────────────────────
     if (searchFtIndexExists($pdo)) {
-        $ftResult = searchViaFullText($pdo, $rawQuery, $tokens, $offset, $perPage);
-        if ($ftResult['total'] > 0) {
-            $ftResult['strategy'] = 'fulltext';
+        $ftResult = searchViaFullText(
+            $pdo,
+            $rawQuery,
+            $tokens,
+            $offset,
+            $perPage,
+        );
+        if ($ftResult["total"] > 0) {
+            $ftResult["strategy"] = "fulltext";
             return $ftResult;
         }
     }
@@ -138,20 +261,20 @@ function doArticleSearch(
     // ── Pokus 2: LIKE s pôvodným dopytom ─────────────────────────────────────
     // utf8mb4_unicode_ci automaticky rieši SK diakritiky aj veľké/malé písmená
     $likeResult = searchViaLike($pdo, $tokens, $offset, $perPage, false);
-    if ($likeResult['total'] > 0) {
-        $likeResult['strategy'] = 'like';
+    if ($likeResult["total"] > 0) {
+        $likeResult["strategy"] = "like";
         return $likeResult;
     }
 
     // ── Pokus 3: LIKE s de-akcento­vaným dopytom ─────────────────────────────
     // Fallback: ak DB collation z nejakého dôvodu nespáruje diakritiku
     $likeNormResult = searchViaLike($pdo, $tokens, $offset, $perPage, true);
-    if ($likeNormResult['total'] > 0) {
-        $likeNormResult['strategy'] = 'like-normalized';
+    if ($likeNormResult["total"] > 0) {
+        $likeNormResult["strategy"] = "like-normalized";
         return $likeNormResult;
     }
 
-    return ['items' => [], 'total' => 0, 'strategy' => 'none'];
+    return ["items" => [], "total" => 0, "strategy" => "none"];
 }
 
 /**
@@ -159,39 +282,43 @@ function doArticleSearch(
  * Query format: "token1* token2*" (prefix matching, OR logic)
  */
 function searchViaFullText(
-    PDO    $pdo,
+    PDO $pdo,
     string $rawQuery,
-    array  $tokens,
-    int    $offset,
-    int    $perPage
+    array $tokens,
+    int $offset,
+    int $perPage,
 ): array {
     // Zostavíme BOOLEAN query: každý token s wildcard (prefix matching)
     $ftParts = [];
     foreach ($tokens as $norm => $orig) {
         // Escape špeciálnych znakov pre BOOLEAN mode
-        $safe = str_replace(['*','@','~','+','-','<','>','(',')','\"'], '', $orig);
-        if ($safe !== '') {
-            $ftParts[] = $safe . '*';
+        $safe = str_replace(
+            ["*", "@", "~", "+", "-", "<", ">", "(", ")", '\"'],
+            "",
+            $orig,
+        );
+        if ($safe !== "") {
+            $ftParts[] = $safe . "*";
         }
     }
     if (empty($ftParts)) {
-        return ['items' => [], 'total' => 0];
+        return ["items" => [], "total" => 0];
     }
 
-    $ftQuery = implode(' ', $ftParts);
+    $ftQuery = implode(" ", $ftParts);
 
     try {
         // Počet výsledkov
         $cntStmt = $pdo->prepare(
             "SELECT COUNT(*) FROM articles
              WHERE is_published = 1
-               AND MATCH(title, excerpt, content) AGAINST(:q IN BOOLEAN MODE)"
+               AND MATCH(title, excerpt, content) AGAINST(:q IN BOOLEAN MODE)",
         );
-        $cntStmt->execute(['q' => $ftQuery]);
+        $cntStmt->execute(["q" => $ftQuery]);
         $total = (int) $cntStmt->fetchColumn();
 
         if ($total === 0) {
-            return ['items' => [], 'total' => 0];
+            return ["items" => [], "total" => 0];
         }
 
         // Načítanie výsledkov so skóre
@@ -207,7 +334,7 @@ function searchViaFullText(
              WHERE is_published = 1
                AND MATCH(title, excerpt, content) AGAINST(:q IN BOOLEAN MODE)
              ORDER BY ft_score DESC, published_at DESC
-             LIMIT :lim OFFSET :off"
+             LIMIT :lim OFFSET :off",
         );
         // Tri MATCH(...) calls potrebujú tri separate AGAINST — spoj iba v bodovaní,
         // ale WHERE stačí jeden kombinovaný index.
@@ -220,17 +347,17 @@ function searchViaFullText(
                AND MATCH(title, excerpt, content) AGAINST(:q IN BOOLEAN MODE)
              ORDER BY MATCH(title, excerpt, content) AGAINST(:q IN BOOLEAN MODE) DESC,
                       published_at DESC
-             LIMIT :lim OFFSET :off"
+             LIMIT :lim OFFSET :off",
         );
-        $stmt2->bindValue(':q',   $ftQuery,  PDO::PARAM_STR);
-        $stmt2->bindValue(':lim', $perPage,  PDO::PARAM_INT);
-        $stmt2->bindValue(':off', $offset,   PDO::PARAM_INT);
+        $stmt2->bindValue(":q", $ftQuery, PDO::PARAM_STR);
+        $stmt2->bindValue(":lim", $perPage, PDO::PARAM_INT);
+        $stmt2->bindValue(":off", $offset, PDO::PARAM_INT);
         $stmt2->execute();
         $rows = $stmt2->fetchAll();
 
-        return ['items' => $rows, 'total' => $total];
+        return ["items" => $rows, "total" => $total];
     } catch (\PDOException) {
-        return ['items' => [], 'total' => 0];
+        return ["items" => [], "total" => 0];
     }
 }
 
@@ -241,58 +368,69 @@ function searchViaFullText(
  * @param bool $useNormalized Ak true, použije de-akcentované tokeny
  */
 function searchViaLike(
-    PDO   $pdo,
+    PDO $pdo,
     array $tokens,
-    int   $offset,
-    int   $perPage,
-    bool  $useNormalized
+    int $offset,
+    int $perPage,
+    bool $useNormalized,
 ): array {
     if (empty($tokens)) {
-        return ['items' => [], 'total' => 0];
+        return ["items" => [], "total" => 0];
     }
 
-    $params = [];
-    $whereParts  = [];
-    $scoreParts  = [];
+    // POZNÁMKA: PDO s ATTR_EMULATE_PREPARES=false nedovoluje rovnaký
+    // pomenovaný parameter použiť v SQL viackrát. Preto používame
+    // 2 OSOBITNÉ sady mien: jedna pre WHERE, druhá pre CASE/skórovanie.
+    $whereParams = [];
+    $scoreParams = [];
+    $whereParts = [];
+    $scoreParts = [];
     $idx = 0;
 
     foreach ($tokens as $norm => $orig) {
-        $term    = $useNormalized ? $norm : $orig;
-        $pattern = '%' . $term . '%';
-        $pTitle  = 'pt' . $idx;
-        $pExc    = 'pe' . $idx;
-        $pCont   = 'pc' . $idx;
+        $term = $useNormalized ? $norm : $orig;
+        $pattern = "%" . $term . "%";
 
-        $params[$pTitle] = $pattern;
-        $params[$pExc]   = $pattern;
-        $params[$pCont]  = $pattern;
+        // WHERE: param. mená wt/we/wc (where-title/excerpt/content)
+        $wT = "wt" . $idx;
+        $wE = "we" . $idx;
+        $wC = "wc" . $idx;
+        $whereParams[$wT] = $pattern;
+        $whereParams[$wE] = $pattern;
+        $whereParams[$wC] = $pattern;
+        $whereParts[] = "(title LIKE :{$wT} OR excerpt LIKE :{$wE} OR content LIKE :{$wC})";
 
-        $whereParts[] = "(title LIKE :{$pTitle} OR excerpt LIKE :{$pExc} OR content LIKE :{$pCont})";
-
-        // Skóre: title match = 10, excerpt = 5, content = 1
-        $scoreParts[] = "(CASE WHEN title   LIKE :{$pTitle} THEN 10 ELSE 0 END)";
-        $scoreParts[] = "(CASE WHEN excerpt  LIKE :{$pExc}  THEN  5 ELSE 0 END)";
-        $scoreParts[] = "(CASE WHEN content  LIKE :{$pCont} THEN  1 ELSE 0 END)";
+        // SCORE: šeparatné mená st/se/sc (score-title/excerpt/content)
+        $sT = "st" . $idx;
+        $sE = "se" . $idx;
+        $sC = "sc" . $idx;
+        $scoreParams[$sT] = $pattern;
+        $scoreParams[$sE] = $pattern;
+        $scoreParams[$sC] = $pattern;
+        // Skóre: title=10, excerpt=5, content=1 (za každý token)
+        $scoreParts[] = "(CASE WHEN title   LIKE :{$sT} THEN 10 ELSE 0 END)";
+        $scoreParts[] = "(CASE WHEN excerpt LIKE :{$sE} THEN  5 ELSE 0 END)";
+        $scoreParts[] = "(CASE WHEN content LIKE :{$sC} THEN  1 ELSE 0 END)";
 
         $idx++;
     }
 
     // AND medzi tokenmi: všetky musia byť niekde prítomné
-    $whereClause = implode(' AND ', $whereParts);
-    $scoreExpr   = implode(' + ', $scoreParts);
+    $whereClause = implode(" AND ", $whereParts);
+    $scoreExpr = implode(" + ", $scoreParts);
 
     try {
-        // Celkový počet
-        $cntSql  = "SELECT COUNT(*) FROM articles WHERE is_published = 1 AND ({$whereClause})";
+        // ── COUNT query — iba WHERE parametre ─────────────────────────
+        $cntSql = "SELECT COUNT(*) FROM articles WHERE is_published = 1 AND ({$whereClause})";
         $cntStmt = $pdo->prepare($cntSql);
-        $cntStmt->execute($params);
+        $cntStmt->execute($whereParams);
         $total = (int) $cntStmt->fetchColumn();
 
         if ($total === 0) {
-            return ['items' => [], 'total' => 0];
+            return ["items" => [], "total" => 0];
         }
 
-        // Výsledky s relevančným skóre
+        // ── SELECT query — WHERE + SCORE parametre (osobitne) ─────────
         $selSql = "SELECT id, title, slug, author, excerpt, published_at,
                           LEFT(content, 3000) AS content_preview,
                           ({$scoreExpr}) AS score
@@ -303,18 +441,21 @@ function searchViaLike(
                    LIMIT :lim OFFSET :off";
 
         $selStmt = $pdo->prepare($selSql);
-        foreach ($params as $k => $v) {
-            $selStmt->bindValue(':' . $k, $v, PDO::PARAM_STR);
+        foreach ($whereParams as $k => $v) {
+            $selStmt->bindValue(":" . $k, $v, PDO::PARAM_STR);
         }
-        $selStmt->bindValue(':lim', $perPage, PDO::PARAM_INT);
-        $selStmt->bindValue(':off', $offset,  PDO::PARAM_INT);
+        foreach ($scoreParams as $k => $v) {
+            $selStmt->bindValue(":" . $k, $v, PDO::PARAM_STR);
+        }
+        $selStmt->bindValue(":lim", $perPage, PDO::PARAM_INT);
+        $selStmt->bindValue(":off", $offset, PDO::PARAM_INT);
         $selStmt->execute();
         $rows = $selStmt->fetchAll();
 
-        return ['items' => $rows, 'total' => $total];
+        return ["items" => $rows, "total" => $total];
     } catch (\PDOException $e) {
-        error_log('search.php LIKE error: ' . $e->getMessage());
-        return ['items' => [], 'total' => 0];
+        error_log("search.php LIKE error: " . $e->getMessage());
+        return ["items" => [], "total" => 0];
     }
 }
 
@@ -324,53 +465,57 @@ function searchViaLike(
  */
 function buildSearchSnippet(
     string $htmlContent,
-    array  $tokens,          // ['normalized' => 'original']
-    int    $snippetLen = SEARCH_SNIPPET
+    array $tokens, // ['normalized' => 'original']
+    int $snippetLen = SEARCH_SNIPPET,
 ): string {
     // Strip HTML → plain text
-    $text = html_entity_decode(strip_tags($htmlContent), ENT_QUOTES | ENT_HTML5, 'UTF-8');
-    $text = preg_replace('/\s+/u', ' ', trim($text)) ?? $text;
+    $text = html_entity_decode(
+        strip_tags($htmlContent),
+        ENT_QUOTES | ENT_HTML5,
+        "UTF-8",
+    );
+    $text = preg_replace("/\s+/u", " ", trim($text)) ?? $text;
 
-    if ($text === '') {
-        return '';
+    if ($text === "") {
+        return "";
     }
 
-    $textLower = mb_strtolower($text, 'UTF-8');
-    $firstPos  = mb_strlen($text, 'UTF-8'); // začneme od konca (worst case)
+    $textLower = mb_strtolower($text, "UTF-8");
+    $firstPos = mb_strlen($text, "UTF-8"); // začneme od konca (worst case)
 
     // Nájdi najskoršiu pozíciu ľubovoľného tokenu
     foreach ($tokens as $norm => $orig) {
         // Skús pôvodný token
-        $pos = mb_stripos($text, $orig, 0, 'UTF-8');
+        $pos = mb_stripos($text, $orig, 0, "UTF-8");
         if ($pos !== false && $pos < $firstPos) {
             $firstPos = $pos;
         }
         // Fallback: normalizovaný
-        $pos2 = mb_stripos($textLower, $norm, 0, 'UTF-8');
+        $pos2 = mb_stripos($textLower, $norm, 0, "UTF-8");
         if ($pos2 !== false && $pos2 < $firstPos) {
             $firstPos = $pos2;
         }
     }
 
     // Ak nebol nájdený žiaden výraz, vráť začiatok textu
-    if ($firstPos >= mb_strlen($text, 'UTF-8')) {
+    if ($firstPos >= mb_strlen($text, "UTF-8")) {
         $firstPos = 0;
     }
 
     // Výber kontextu (symetricky okolo prvého výskytu)
-    $half  = (int) ($snippetLen / 2);
+    $half = (int) ($snippetLen / 2);
     $start = max(0, $firstPos - $half);
 
     // Posun na začiatok slova
-    while ($start > 0 && mb_substr($text, $start - 1, 1, 'UTF-8') !== ' ') {
+    while ($start > 0 && mb_substr($text, $start - 1, 1, "UTF-8") !== " ") {
         $start--;
     }
 
-    $snippet = mb_substr($text, $start, $snippetLen, 'UTF-8');
+    $snippet = mb_substr($text, $start, $snippetLen, "UTF-8");
 
     // Pridaj elipsy
-    $prefix = $start > 0 ? '…' : '';
-    $suffix = ($start + $snippetLen) < mb_strlen($text, 'UTF-8') ? '…' : '';
+    $prefix = $start > 0 ? "…" : "";
+    $suffix = $start + $snippetLen < mb_strlen($text, "UTF-8") ? "…" : "";
 
     $snippet = $prefix . trim($snippet) . $suffix;
 
@@ -392,19 +537,23 @@ function highlightSearchTerms(string $text, array $tokens): string
             $allTerms[] = $norm;
         }
     }
-    usort($allTerms, fn($a, $b) => mb_strlen($b, 'UTF-8') - mb_strlen($a, 'UTF-8'));
+    usort(
+        $allTerms,
+        fn($a, $b) => mb_strlen($b, "UTF-8") - mb_strlen($a, "UTF-8"),
+    );
 
     foreach ($allTerms as $term) {
-        if (mb_strlen($term, 'UTF-8') < SEARCH_MIN_LEN) {
+        if (mb_strlen($term, "UTF-8") < SEARCH_MIN_LEN) {
             continue;
         }
-        $escaped = preg_quote($term, '/');
+        $escaped = preg_quote($term, "/");
         // Regex s /ui flagmi: case-insensitive + unicode
-        $text = preg_replace(
-            '/(' . $escaped . ')/ui',
-            '<mark class="search-hl">$1</mark>',
-            $text
-        ) ?? $text;
+        $text =
+            preg_replace(
+                "/(" . $escaped . ")/ui",
+                '<mark class="search-hl">$1</mark>',
+                $text,
+            ) ?? $text;
     }
 
     return $text;
@@ -418,20 +567,28 @@ function detectMatchFields(array $row, array $tokens): array
 {
     $fields = [];
     foreach ($tokens as $norm => $orig) {
-        if (!in_array('title', $fields, true)
-            && (mb_stripos((string)($row['title'] ?? ''), $orig) !== false
-                || mb_stripos((string)($row['title'] ?? ''), $norm) !== false)) {
-            $fields[] = 'title';
+        if (
+            !in_array("title", $fields, true) &&
+            (mb_stripos((string) ($row["title"] ?? ""), $orig) !== false ||
+                mb_stripos((string) ($row["title"] ?? ""), $norm) !== false)
+        ) {
+            $fields[] = "title";
         }
-        if (!in_array('excerpt', $fields, true)
-            && (mb_stripos((string)($row['excerpt'] ?? ''), $orig) !== false
-                || mb_stripos((string)($row['excerpt'] ?? ''), $norm) !== false)) {
-            $fields[] = 'excerpt';
+        if (
+            !in_array("excerpt", $fields, true) &&
+            (mb_stripos((string) ($row["excerpt"] ?? ""), $orig) !== false ||
+                mb_stripos((string) ($row["excerpt"] ?? ""), $norm) !== false)
+        ) {
+            $fields[] = "excerpt";
         }
-        if (!in_array('content', $fields, true)
-            && (mb_stripos((string)($row['content_preview'] ?? ''), $orig) !== false
-                || mb_stripos((string)($row['content_preview'] ?? ''), $norm) !== false)) {
-            $fields[] = 'content';
+        if (
+            !in_array("content", $fields, true) &&
+            (mb_stripos((string) ($row["content_preview"] ?? ""), $orig) !==
+                false ||
+                mb_stripos((string) ($row["content_preview"] ?? ""), $norm) !==
+                    false)
+        ) {
+            $fields[] = "content";
         }
     }
     return $fields;
@@ -439,21 +596,21 @@ function detectMatchFields(array $row, array $tokens): array
 
 // ── Spracovanie vstupu ────────────────────────────────────────────────────────
 
-$rawQuery = trim((string) ($_GET['s'] ?? ''));
-$page     = max(1, (int) ($_GET['page'] ?? 1));
+$rawQuery = trim((string) ($_GET["s"] ?? ""));
+$page = max(1, (int) ($_GET["page"] ?? 1));
 
 // Sanitácia: max 200 znakov
-if (mb_strlen($rawQuery, 'UTF-8') > 200) {
-    $rawQuery = mb_substr($rawQuery, 0, 200, 'UTF-8');
+if (mb_strlen($rawQuery, "UTF-8") > 200) {
+    $rawQuery = mb_substr($rawQuery, 0, 200, "UTF-8");
 }
 
-$tokens      = [];   // ['normalized' => 'original']
-$results     = [];
-$totalItems  = 0;
-$totalPages  = 1;
-$strategy    = 'none';
-$searchTime  = 0.0;
-$hasQuery    = $rawQuery !== '';
+$tokens = []; // ['normalized' => 'original']
+$results = [];
+$totalItems = 0;
+$totalPages = 1;
+$strategy = "none";
+$searchTime = 0.0;
+$hasQuery = $rawQuery !== "";
 
 if ($hasQuery) {
     $tokens = searchTokenize($rawQuery);
@@ -463,64 +620,94 @@ if ($hasQuery) {
         $sr = doArticleSearch($pdo, $rawQuery, $tokens, $page, SEARCH_PER_PAGE);
         $searchTime = round((microtime(true) - $t0) * 1000, 1); // ms
 
-        $results    = $sr['items'];
-        $totalItems = $sr['total'];
-        $strategy   = $sr['strategy'];
+        $results = $sr["items"];
+        $totalItems = $sr["total"];
+        $strategy = $sr["strategy"];
         $totalPages = max(1, (int) ceil($totalItems / SEARCH_PER_PAGE));
 
         if ($page > $totalPages) {
-            $page       = $totalPages;
-            $results    = [];
+            $page = $totalPages;
+            $results = [];
         }
     }
 }
 
 // ── SEO meta ─────────────────────────────────────────────────────────────────
 
-$baseUrl = 'https://nefro.polascin.net/';
-$siteName = 'Nefro-projekt Slovensko';
+$baseUrl = "https://nefro.polascin.net/";
+$siteName = "Nefro-projekt Slovensko";
 
 $pageTitle = $hasQuery
-    ? 'Výsledky hľadania: ' . $rawQuery . ' | ' . $siteName
-    : 'Vyhľadávanie | ' . $siteName;
+    ? "Výsledky hľadania: " . $rawQuery . " | " . $siteName
+    : "Vyhľadávanie | " . $siteName;
 
 $seoDescription = $hasQuery
-    ? 'Výsledky vyhľadávania pre: ' . $rawQuery . ' — odborné nefrologické články, kalkulačky a analýzy.'
-    : 'Prehľadávajte odborné nefrologické články, kalkulačky CKD, eGFR, KFRE a ďalší obsah portálu Nefro-projekt Slovensko.';
+    ? "Výsledky vyhľadávania pre: " .
+        $rawQuery .
+        " — odborné nefrologické články, kalkulačky a analýzy."
+    : "Prehľadávajte odborné nefrologické články, kalkulačky CKD, eGFR, KFRE a ďalší obsah portálu Nefro-projekt Slovensko.";
 
-$robotsMeta   = 'noindex, follow';
-$canonicalUrl = $baseUrl . 'search.php' . ($hasQuery ? '?s=' . urlencode($rawQuery) : '');
+$robotsMeta = "noindex, follow";
+$canonicalUrl =
+    $baseUrl . "search.php" . ($hasQuery ? "?s=" . urlencode($rawQuery) : "");
 
-$prevUrl = '';
-$nextUrl = '';
+$prevUrl = "";
+$nextUrl = "";
 if ($page > 1) {
-    $prevUrl = $baseUrl . 'search.php?s=' . urlencode($rawQuery) . '&page=' . ($page - 1);
+    $prevUrl =
+        $baseUrl .
+        "search.php?s=" .
+        urlencode($rawQuery) .
+        "&page=" .
+        ($page - 1);
 }
 if ($page < $totalPages) {
-    $nextUrl = $baseUrl . 'search.php?s=' . urlencode($rawQuery) . '&page=' . ($page + 1);
+    $nextUrl =
+        $baseUrl .
+        "search.php?s=" .
+        urlencode($rawQuery) .
+        "&page=" .
+        ($page + 1);
 }
 
 // Pomocná funkcia na formátovanie dátumu
 function formatSearchDate(string $datetime): string
 {
     $months = [
-        1=>'januára',2=>'februára',3=>'marca',4=>'apríla',
-        5=>'mája',6=>'júna',7=>'júla',8=>'augusta',
-        9=>'septembra',10=>'októbra',11=>'novembra',12=>'decembra',
+        1 => "januára",
+        2 => "februára",
+        3 => "marca",
+        4 => "apríla",
+        5 => "mája",
+        6 => "júna",
+        7 => "júla",
+        8 => "augusta",
+        9 => "septembra",
+        10 => "októbra",
+        11 => "novembra",
+        12 => "decembra",
     ];
     $ts = strtotime($datetime);
     if (!$ts) {
         return htmlspecialchars($datetime);
     }
-    return (int)date('j',$ts) . '. ' . ($months[(int)date('n',$ts)] ?? '') . ' ' . date('Y',$ts);
+    return (int) date("j", $ts) .
+        ". " .
+        ($months[(int) date("n", $ts)] ?? "") .
+        " " .
+        date("Y", $ts);
 }
 
-$fieldLabels = ['title' => 'Nadpis', 'excerpt' => 'Perex', 'content' => 'Obsah'];
+$fieldLabels = [
+    "title" => "Nadpis",
+    "excerpt" => "Perex",
+    "content" => "Obsah",
+];
 ?>
 <!DOCTYPE html>
 <html lang="sk">
 <head>
-  <?php include 'head_meta.php'; ?>
+  <?php include "head_meta.php"; ?>
   <?php if ($prevUrl): ?>
   <link rel="prev" href="<?= htmlspecialchars($prevUrl) ?>">
   <?php endif; ?>
@@ -532,9 +719,9 @@ $fieldLabels = ['title' => 'Nadpis', 'excerpt' => 'Perex', 'content' => 'Obsah']
   <a href="#search-results" class="skip-link">Preskočiť na výsledky</a>
 
   <?php
-  $headerTitle = 'Nefro-projekt Slovensko';
-  $showLogo    = false;
-  include 'header.php';
+  $headerTitle = "Nefro-projekt Slovensko";
+  $showLogo = false;
+  include "header.php";
   ?>
 
   <nav class="main-nav" aria-label="Hlavná navigácia">
@@ -599,7 +786,9 @@ $fieldLabels = ['title' => 'Nadpis', 'excerpt' => 'Perex', 'content' => 'Obsah']
             <p style="font-size:0.8rem;color:var(--text-tertiary);margin-top:-12px;margin-bottom:0;">
               Vyhľadávané výrazy:
               <?php foreach ($tokens as $norm => $orig): ?>
-                <span class="search-meta__term"><?= htmlspecialchars($orig) ?></span>
+                <span class="search-meta__term"><?= htmlspecialchars(
+                    $orig,
+                ) ?></span>
               <?php endforeach; ?>
             </p>
           <?php endif; ?>
@@ -612,7 +801,11 @@ $fieldLabels = ['title' => 'Nadpis', 'excerpt' => 'Perex', 'content' => 'Obsah']
             <?php if ($totalItems > 0): ?>
               <span>
                 Nájdených: <strong class="search-meta__count"><?= $totalItems ?></strong>
-                <?= $totalItems === 1 ? 'výsledok' : ($totalItems < 5 ? 'výsledky' : 'výsledkov') ?>
+                <?= $totalItems === 1
+                    ? "výsledok"
+                    : ($totalItems < 5
+                        ? "výsledky"
+                        : "výsledkov") ?>
               </span>
               <?php if ($totalPages > 1): ?>
                 <span style="color:var(--text-tertiary);">·</span>
@@ -621,7 +814,9 @@ $fieldLabels = ['title' => 'Nadpis', 'excerpt' => 'Perex', 'content' => 'Obsah']
               <span style="color:var(--text-tertiary);">·</span>
               <span class="search-meta__time"><?= $searchTime ?>&nbsp;ms</span>
             <?php else: ?>
-              <span>Žiadne výsledky pre <span class="search-meta__term"><?= htmlspecialchars($rawQuery) ?></span></span>
+              <span>Žiadne výsledky pre <span class="search-meta__term"><?= htmlspecialchars(
+                  $rawQuery,
+              ) ?></span></span>
             <?php endif; ?>
           </div>
 
@@ -630,46 +825,71 @@ $fieldLabels = ['title' => 'Nadpis', 'excerpt' => 'Perex', 'content' => 'Obsah']
             <!-- ── Zoznam výsledkov ─────────────────────────────────── -->
             <div role="list" aria-label="Výsledky vyhľadávania">
               <?php foreach ($results as $row):
-                $matchFields = detectMatchFields($row, $tokens);
-                $snippet     = buildSearchSnippet(
-                    (string) ($row['content_preview'] ?? $row['excerpt'] ?? ''),
-                    $tokens
-                );
-                $titleHl     = highlightSearchTerms(
-                    htmlspecialchars((string) ($row['title'] ?? '')),
-                    $tokens
-                );
-                $articleUrl  = 'article.php?slug=' . rawurlencode((string) ($row['slug'] ?? ''));
-              ?>
+
+                  $matchFields = detectMatchFields($row, $tokens);
+                  $snippet = buildSearchSnippet(
+                      (string) ($row["content_preview"] ??
+                          ($row["excerpt"] ?? "")),
+                      $tokens,
+                  );
+                  $titleHl = highlightSearchTerms(
+                      htmlspecialchars((string) ($row["title"] ?? "")),
+                      $tokens,
+                  );
+                  $articleUrl =
+                      "article.php?slug=" .
+                      rawurlencode((string) ($row["slug"] ?? ""));
+                  ?>
               <article class="search-result" role="listitem">
-                <a href="<?= htmlspecialchars($articleUrl) ?>" class="search-result__title">
+                <a href="<?= htmlspecialchars(
+                    $articleUrl,
+                ) ?>" class="search-result__title">
                   <?= $titleHl ?>
                 </a>
 
                 <div class="search-result__meta">
-                  <time datetime="<?= htmlspecialchars(substr((string)($row['published_at']??''),0,10)) ?>">
-                    <?= formatSearchDate((string) ($row['published_at'] ?? '')) ?>
+                  <time datetime="<?= htmlspecialchars(
+                      substr((string) ($row["published_at"] ?? ""), 0, 10),
+                  ) ?>">
+                    <?= formatSearchDate(
+                        (string) ($row["published_at"] ?? ""),
+                    ) ?>
                   </time>
-                  <?php if (!empty($row['author'])): ?>
+                  <?php if (!empty($row["author"])): ?>
                     <span style="color:var(--text-tertiary);">·</span>
-                    <span><?= htmlspecialchars((string) $row['author']) ?></span>
+                    <span><?= htmlspecialchars(
+                        (string) $row["author"],
+                    ) ?></span>
                   <?php endif; ?>
                   <?php foreach ($matchFields as $field): ?>
-                    <span class="search-result__field-badge"><?= htmlspecialchars($fieldLabels[$field] ?? $field) ?></span>
+                    <span class="search-result__field-badge"><?= htmlspecialchars(
+                        $fieldLabels[$field] ?? $field,
+                    ) ?></span>
                   <?php endforeach; ?>
                 </div>
 
-                <?php if ($snippet !== ''): ?>
+                <?php if ($snippet !== ""): ?>
                   <div class="search-result__snippet" aria-label="Ukážka z článku">
                     <?= $snippet ?>
                   </div>
-                <?php elseif (!empty($row['excerpt'])): ?>
+                <?php elseif (!empty($row["excerpt"])): ?>
                   <div class="search-result__snippet">
-                    <?= highlightSearchTerms(htmlspecialchars(mb_substr((string)$row['excerpt'], 0, SEARCH_SNIPPET, 'UTF-8')), $tokens) ?>
+                    <?= highlightSearchTerms(
+                        htmlspecialchars(
+                            mb_substr(
+                                (string) $row["excerpt"],
+                                0,
+                                SEARCH_SNIPPET,
+                                "UTF-8",
+                            ),
+                        ),
+                        $tokens,
+                    ) ?>
                   </div>
                 <?php endif; ?>
               </article>
-              <?php endforeach; ?>
+              <?php
+              endforeach; ?>
             </div>
 
             <!-- ── Stránkovanie ─────────────────────────────────────── -->
@@ -684,15 +904,23 @@ $fieldLabels = ['title' => 'Nadpis', 'excerpt' => 'Perex', 'content' => 'Obsah']
 
                 <?php
                 $startP = max(1, $page - 2);
-                $endP   = min($totalPages, $page + 2);
+                $endP = min($totalPages, $page + 2);
                 for ($p = $startP; $p <= $endP; $p++):
-                    $pUrl = $baseUrl . 'search.php?s=' . urlencode($rawQuery) . '&page=' . $p;
-                ?>
+                    $pUrl =
+                        $baseUrl .
+                        "search.php?s=" .
+                        urlencode($rawQuery) .
+                        "&page=" .
+                        $p; ?>
                   <a href="<?= htmlspecialchars($pUrl) ?>"
-                     class="articles-page-link<?= $p === $page ? ' is-active' : '' ?>"
-                     <?= $p === $page ? 'aria-current="page"' : '' ?>
+                     class="articles-page-link<?= $p === $page
+                         ? " is-active"
+                         : "" ?>"
+                     <?= $p === $page ? 'aria-current="page"' : "" ?>
                      aria-label="Strana <?= $p ?>"><?= $p ?></a>
-                <?php endfor; ?>
+                <?php
+                endfor;
+                ?>
 
                 <?php if ($nextUrl): ?>
                   <a href="<?= htmlspecialchars($nextUrl) ?>"
@@ -724,10 +952,24 @@ $fieldLabels = ['title' => 'Nadpis', 'excerpt' => 'Perex', 'content' => 'Obsah']
               <div style="margin-top:1.5rem;">
                 <p style="font-size:0.88rem;color:var(--text-tertiary);margin-bottom:0.75rem;">Skúste napríklad:</p>
                 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;">
-                  <?php foreach (['eGFR','CKD','KFRE','hyponatriémia','dyslipidémia','dialýza','statín','vitamín D'] as $sugg): ?>
+                  <?php foreach (
+                      [
+                          "eGFR",
+                          "CKD",
+                          "KFRE",
+                          "hyponatriémia",
+                          "dyslipidémia",
+                          "dialýza",
+                          "statín",
+                          "vitamín D",
+                      ]
+                      as $sugg
+                  ): ?>
                     <a href="search.php?s=<?= urlencode($sugg) ?>"
                        class="search-meta__term"
-                       style="text-decoration:none;cursor:pointer;"><?= htmlspecialchars($sugg) ?></a>
+                       style="text-decoration:none;cursor:pointer;"><?= htmlspecialchars(
+                           $sugg,
+                       ) ?></a>
                   <?php endforeach; ?>
                 </div>
               </div>
@@ -752,7 +994,25 @@ $fieldLabels = ['title' => 'Nadpis', 'excerpt' => 'Perex', 'content' => 'Obsah']
 
             <p style="font-size:0.88rem;color:var(--text-tertiary);margin-bottom:1rem;">Obľúbené témy:</p>
             <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:2.5rem;">
-              <?php foreach (['eGFR','CKD','KFRE','KDIGO','hyponatriémia','dyslipidémia','dialýza','AKI','lymfóm','prediabetes','statín','vitamín D','ADPKD','IgA nefropatia'] as $sugg): ?>
+              <?php foreach (
+                  [
+                      "eGFR",
+                      "CKD",
+                      "KFRE",
+                      "KDIGO",
+                      "hyponatriémia",
+                      "dyslipidémia",
+                      "dialýza",
+                      "AKI",
+                      "lymfóm",
+                      "prediabetes",
+                      "statín",
+                      "vitamín D",
+                      "ADPKD",
+                      "IgA nefropatia",
+                  ]
+                  as $sugg
+              ): ?>
                 <a href="search.php?s=<?= urlencode($sugg) ?>"
                    class="search-meta__term"
                    style="text-decoration:none;cursor:pointer;font-size:0.9rem;padding:5px 12px;">
@@ -777,7 +1037,7 @@ $fieldLabels = ['title' => 'Nadpis', 'excerpt' => 'Perex', 'content' => 'Obsah']
     </div><!-- /.main-content -->
   </main>
 
-  <?php include 'footer.php'; ?>
+  <?php include "footer.php"; ?>
 
   <script>
   // Hamburger menu
