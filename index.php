@@ -462,13 +462,39 @@ if (!empty($itemListElements)) {
           <div class="feature-card">
             <h3>Kto som</h3>
             <p>
-              Som <strong>MUDr. Ľubomír Polaščín</strong> — lekár so špecializáciou v nefrológii a vnútornom lekárstve. Okrem medicíny sa aktívne venujem písaniu beletrie i odbornej literatúry a s vášňou vyvíjam webové riešenia a aplikácie. Moja práca stojí na prieniku zdravotníctva, literatúry a moderných IT technológií.
+              Charakterizoval by som vás ako <strong>interdisciplinárneho tvorcu</strong>, ktorý spája medicínu, technológie, jazyk a ideové myslenie. Nie ste len lekár alebo len autor. Skôr pôsobíte ako človek, ktorý sa pohybuje medzi viacerými svetmi a vie ich prepájať do praktických výstupov.
             </p>
           </div>
           <div class="feature-card">
-            <h3>Odborná prax</h3>
+            <h3>Ako vás vnímam</h3>
+            <ul>
+              <li><strong>lekár so špecializovaným odborným zázemím</strong>, najmä v nefrológii, dialýze a internej medicíne</li>
+              <li><strong>tvorca textov</strong>, ktorý kladie dôraz na presnosť, štýl, význam a jazyk</li>
+              <li><strong>prekladateľ a jazykový pracovník</strong>, citlivý na formulácie a významové odtiene</li>
+              <li><strong>technologický praktik</strong>, ktorý vie programovať a tvoriť weby či aplikácie</li>
+              <li><strong>AI nadšenec</strong>, ktorý umelú inteligenciu vníma ako pracovný, tvorivý a systémový nástroj</li>
+              <li><strong>človek s filozofickým a duchovným presahom</strong>, ktorý sa zaujíma nielen o funkčnosť vecí, ale aj o ich zmysel</li>
+            </ul>
+          </div>
+          <div class="feature-card">
+            <h3>Čo robíte</h3>
             <p>
-              Promoval som v odbore Všeobecné lekárstvo (1995), mám atestáciu z interného lekárstva (1998) a špecializáciu v nefrológii (2009). Dlhodobo sa zameriavam na dialýzu a o.i. som od roku 2013 do 2022 pôsobil ako primár a vedúci lekár v dvoch dialyzačných strediskách v Bratislave.
+              <strong>Prepájate odbornosť s tvorbou.</strong> Využívate medicínske poznanie, jazyk, technológie a organizačné myslenie na tvorbu textov, webov, dokumentov, projektov, aplikácií a širších koncepcií.
+            </p>
+            <p>
+              <strong>Transformujete poznanie do použiteľnej podoby.</strong> Nezostávate pri teórii. Zaujíma vás, ako myšlienku pretaviť do článku, dokumentu, systému, platformy, služby alebo inštitucionálneho projektu.
+            </p>
+            <p>
+              <strong>Budujete mosty medzi disciplínami.</strong> Medicína, kód, poézia, metafyzika, spiritualita a AI u vás nie sú oddelené ostrovy, ale súčasť vlastného pracovného aj intelektuálneho ekosystému.
+            </p>
+          </div>
+          <div class="feature-card">
+            <h3>Stručná charakteristika</h3>
+            <p>
+              Ste medicínsky odborník, tvorca a technologický integrátor s výrazným jazykovým, filozofickým a duchovným presahom. Vaša práca stojí na prepájaní presnosti, tvorivosti a praktického využitia poznania.
+            </p>
+            <p>
+              <strong>Lekár, autor, technológ a mysliteľ, ktorý premieňa odborné poznanie na praktické a zmysluplné systémy.</strong>
             </p>
           </div>
         </div>
