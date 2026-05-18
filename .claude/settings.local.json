@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(php -l profile.php)",
-      "Bash(php -l setup_db.php)"
+      "Bash(php -l setup_db.php)",
+      "Bash(php -l mobile_verification.php)"
     ]
   }
 }

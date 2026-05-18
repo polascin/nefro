@@ -142,13 +142,15 @@ function twilioVerifyApiRequest(string $resourcePath, array $postData): array {
     curl_setopt($ch, CURLOPT_USERPWD, $accountSid . ':' . $authToken);
     curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
     curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($postData));
-    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
-    curl_setopt($ch, CURLOPT_TIMEOUT, 20);
+    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
+    curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);
 
     $rawResponse = curl_exec($ch);
     $statusCode = (int) curl_getinfo($ch, CURLINFO_HTTP_CODE);
     $curlErr = curl_error($ch);
-    curl_close($ch);
+    unset($ch);
 
     if ($rawResponse === false) {
         error_log('Twilio Verify request failed: ' . $curlErr);
@@ -237,4 +239,60 @@ function sendMobileVerificationCode(string $mobilePhone, ?string $code = null): 
     // Zástupné miesto pre budúce SMS providéry.
     error_log('SMS provider not implemented: ' . $provider . ' for ' . $mobilePhone . ', sender=' . $cfg['sms_sender']);
     return false;
+}
+
+/**
+ * Vráti true ak je SMS verifikácia zablokovaná kvôli príliš veľa neúspešným pokusom.
+ */
+function isMobileVerifyLocked(array $user): bool {
+    $lockedUntil = $user['mobile_verify_locked_until'] ?? null;
+    if (empty($lockedUntil)) {
+        return false;
+    }
+    $ts = strtotime((string) $lockedUntil);
+    return $ts !== false && $ts > time();
+}
+
+/**
+ * Zaznamená neúspešný pokus o overenie SMS kódu.
+ * Pri dosiahnutí 5 pokusov nastaví 15-minútový lockout.
+ */
+function recordMobileVerifyFail(PDO $pdo, int $userId, array $user): void {
+    $newCount   = ((int) ($user['mobile_verify_fail_count'] ?? 0)) + 1;
+    $maxAttempts = 5;
+    $lockoutSecs = 900; // 15 minút
+    $lockedUntil = $newCount >= $maxAttempts
+        ? date('Y-m-d H:i:s', time() + $lockoutSecs)
+        : null;
+
+    $pdo->prepare(
+        "UPDATE users
+         SET mobile_verify_fail_count = :count,
+             mobile_verify_locked_until = :locked_until
+         WHERE id = :id"
+    )->execute([
+        ':count'        => $newCount,
+        ':locked_until' => $lockedUntil,
+        ':id'           => $userId,
+    ]);
+
+    error_log(sprintf(
+        'mobile_verify: fail uid=%d attempt=%d/%d%s',
+        $userId,
+        $newCount,
+        $maxAttempts,
+        $lockedUntil !== null ? ' LOCKED_UNTIL=' . $lockedUntil : ''
+    ));
+}
+
+/**
+ * Resetuje počítadlo neúspešných pokusov po úspešnom overení SMS kódu.
+ */
+function resetMobileVerifyAttempts(PDO $pdo, int $userId): void {
+    $pdo->prepare(
+        "UPDATE users
+         SET mobile_verify_fail_count = 0,
+             mobile_verify_locked_until = NULL
+         WHERE id = :id"
+    )->execute([':id' => $userId]);
 }

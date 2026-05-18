@@ -136,6 +136,20 @@ try {
         $pdo->exec("ALTER TABLE users ADD COLUMN mobile_verification_sent_at DATETIME NULL AFTER mobile_verification_expires_at");
     }
 
+    // ── Migrácia: rate-limit stĺpce pre SMS overovanie ───────────────────────
+    $mobileVerifyFailStmt = $pdo->prepare("SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'users' AND COLUMN_NAME = 'mobile_verify_fail_count'");
+    $mobileVerifyFailStmt->execute();
+    if ((int) $mobileVerifyFailStmt->fetchColumn() === 0) {
+        $pdo->exec("ALTER TABLE users
+            ADD COLUMN mobile_verify_fail_count TINYINT UNSIGNED NOT NULL DEFAULT 0
+                COMMENT 'Počet zlyhaných pokusov o overenie SMS kódu'
+                AFTER mobile_verification_sent_at,
+            ADD COLUMN mobile_verify_locked_until DATETIME NULL
+                COMMENT 'SMS verify zablokovaný do tohto času'
+                AFTER mobile_verify_fail_count");
+        echo "Migracia: mobile_verify_fail_count + mobile_verify_locked_until pridane.\n";
+    }
+
     // Pri prvom zavedení stĺpca považujeme existujúce účty za overené,
     // aby sa neblokovali produkčné prístupy.
     if ($emailVerifiedAtAdded) {

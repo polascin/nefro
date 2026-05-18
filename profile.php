@@ -344,8 +344,8 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
         if ($mobileVerificationAction === 'send') {
             if (empty($data['mobile_phone'])) {
                 $errors[] = "Najprv zadajte číslo súkromného mobilného telefónu, ktoré chcete overiť.";
-            } elseif (!$mobilePhoneChanged && !isMobileResendAllowed($mobileVerificationSentAt, 60)) {
-                $errors[] = "Overovací SMS kód bol odoslaný nedávno. Skúste to znova o chvíľu.";
+            } elseif (!$mobilePhoneChanged && !isMobileResendAllowed($mobileVerificationSentAt, 120)) {
+                $errors[] = "Overovací SMS kód bol odoslaný nedávno. Skúste to znova za 2 minúty.";
             } else {
                 $usingExternalProvider = isExternalMobileVerificationProvider();
 
@@ -376,18 +376,26 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 }
             }
         } elseif ($mobileVerificationAction === 'verify') {
+            if (isMobileVerifyLocked($user)) {
+                $lockedUntilTs  = strtotime((string) ($user['mobile_verify_locked_until'] ?? ''));
+                $remainingMins  = $lockedUntilTs ? max(1, (int) ceil(($lockedUntilTs - time()) / 60)) : 15;
+                $errors[] = "Príliš veľa neúspešných pokusov. SMS overenie je zablokované na {$remainingMins} min.";
+                goto skipMobileVerify;
+            }
+
             $verificationStatus = verifyMobileCodeByProvider([
-                'mobile_verified_at' => $mobileVerifiedAt,
-                'mobile_verification_code_hash' => $mobileVerificationCodeHash,
+                'mobile_verified_at'             => $mobileVerifiedAt,
+                'mobile_verification_code_hash'  => $mobileVerificationCodeHash,
                 'mobile_verification_expires_at' => $mobileVerificationExpiresAt,
             ], (string) ($data['mobile_phone'] ?? ''), $requestedMobileCode);
 
             if ($verificationStatus === 'ok') {
-                $mobileVerifiedAt = date('Y-m-d H:i:s');
-                $mobileVerificationCodeHash = null;
+                resetMobileVerifyAttempts($pdo, $user_id);
+                $mobileVerifiedAt            = date('Y-m-d H:i:s');
+                $mobileVerificationCodeHash  = null;
                 $mobileVerificationExpiresAt = null;
-                $mobileVerificationSentAt = null;
-                $mobileVerificationNotice = 'Mobilné číslo bolo úspešne overené.';
+                $mobileVerificationSentAt    = null;
+                $mobileVerificationNotice    = 'Mobilné číslo bolo úspešne overené.';
             } elseif ($verificationStatus === 'already_verified') {
                 $mobileVerificationNotice = 'Mobilné číslo je už overené.';
             } elseif ($verificationStatus === 'missing_code') {
@@ -395,10 +403,15 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
             } elseif ($verificationStatus === 'expired') {
                 $errors[] = 'Platnosť overovacieho SMS kódu vypršala. Požiadajte o nový kód.';
             } elseif ($verificationStatus === 'provider_error') {
+                recordMobileVerifyFail($pdo, $user_id, $user);
                 $errors[] = 'Overenie mobilného čísla je dočasne nedostupné. Skúste to prosím neskôr.';
             } else {
+                // 'invalid' — nesprávny kód
+                recordMobileVerifyFail($pdo, $user_id, $user);
                 $errors[] = 'Neplatný overovací SMS kód.';
             }
+
+            skipMobileVerify:
         }
 
         // Validácia dátumu narodenia
@@ -625,9 +638,12 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                             <small class="avatar-upload-hint">Pole je voliteľné. Povolený je iba medzinárodný formát začínajúci znakom +.</small>
 
                             <?php
-                            $isMobileVerified = !empty($user['mobile_verified_at']);
-                            $mobileSentAt = $user['mobile_verification_sent_at'] ?? null;
-                            $mobileExpiresAt = $user['mobile_verification_expires_at'] ?? null;
+                            $isMobileVerified   = !empty($user['mobile_verified_at']);
+                            $mobileSentAt       = $user['mobile_verification_sent_at'] ?? null;
+                            $mobileExpiresAt    = $user['mobile_verification_expires_at'] ?? null;
+                            $mobileVerifyLocked = isMobileVerifyLocked($user);
+                            $codeInputAutofocus = $mobileVerificationNotice !== null
+                                && str_contains($mobileVerificationNotice, 'odoslaný');
                             ?>
                             <p class="avatar-upload-hint profile-mt-8">
                                 Stav overenia mobilu:
@@ -639,12 +655,17 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                                         (posledný kód odoslaný <?= htmlspecialchars(date('d.m.Y H:i', strtotime((string) $mobileSentAt))) ?>)
                                     <?php endif; ?>
                                 <?php endif; ?>
+                                <?php if ($mobileVerifyLocked): ?>
+                                    <span class="badge-draft">
+                                        SMS overenie zablokované do <?= htmlspecialchars(date('H:i', strtotime((string) ($user['mobile_verify_locked_until'] ?? '')))) ?>
+                                    </span>
+                                <?php endif; ?>
                             </p>
 
                             <div class="form-grid profile-mt-10">
                                 <div class="form-group">
                                     <label for="mobile_verification_code">SMS overovací kód</label>
-                                    <input type="text" id="mobile_verification_code" name="mobile_verification_code" class="form-control" inputmode="numeric" pattern="^\d{6}$" maxlength="6" placeholder="123456">
+                                    <input type="text" id="mobile_verification_code" name="mobile_verification_code" class="form-control" inputmode="numeric" pattern="^\d{6}$" maxlength="6" placeholder="123456" autocomplete="one-time-code"<?= $codeInputAutofocus ? ' autofocus' : '' ?>>
                                 </div>
                             </div>
 
