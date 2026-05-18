@@ -544,7 +544,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                     <div class="avatar-upload-group">
                         <?php
-                        $avatarSrc = !empty($user['avatar_path']) ? htmlspecialchars($user['avatar_path']) : 'img/default-avatar-dark.svg'; // Default set by JS later
+                        $avatarSrc = !empty($user['avatar_path']) ? htmlspecialchars($user['avatar_path']) : 'img/default-avatar-light.svg'; // Default set by JS later
                         ?>
                         <img src="<?= $avatarSrc ?>" id="avatarPreview" data-is-default="<?= empty($user['avatar_path']) ? 'true' : 'false' ?>" alt="Náhľad avatara" class="avatar-upload-preview">
                         <div>

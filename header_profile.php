@@ -38,7 +38,7 @@ $avatarSrc = "";
 if ($currentUser && !empty($currentUser['avatar_path'])) {
     $avatarSrc = htmlspecialchars(str_replace('\\', '/', trim((string) $currentUser['avatar_path'])));
 } else {
-    $avatarSrc = 'img/default-avatar-dark.svg';
+    $avatarSrc = 'img/default-avatar-light.svg';
     $isDefaultAvatar = true;
 }
 

@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const initialTheme = document.documentElement.getAttribute('data-theme');
     setToggleAccessibility(initialTheme);
     updateToggleIcon(initialTheme);
-    updateHeaderAvatar(initialTheme);
+    updateAvatars(initialTheme);
     
     themeToggleBtn.addEventListener('click', () => {
         const currentTheme = document.documentElement.getAttribute('data-theme');
@@ -53,13 +53,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
         setToggleAccessibility(newTheme);
         updateToggleIcon(newTheme);
-        updateHeaderAvatar(newTheme);
+        updateAvatars(newTheme);
     });
 
-    function updateHeaderAvatar(theme) {
+    function updateAvatars(theme) {
+        // Aktualizuj header avatar
         const headerAvatar = document.getElementById('headerAvatar');
         if (headerAvatar && headerAvatar.dataset.isDefault === 'true') {
             headerAvatar.src = theme === 'dark' ? 'img/default-avatar-dark.svg' : 'img/default-avatar-light.svg';
+        }
+        
+        // Aktualizuj avatar preview na profile stránke
+        const avatarPreview = document.getElementById('avatarPreview');
+        if (avatarPreview && avatarPreview.dataset.isDefault === 'true') {
+            avatarPreview.src = theme === 'dark' ? 'img/default-avatar-dark.svg' : 'img/default-avatar-light.svg';
         }
     }
 
