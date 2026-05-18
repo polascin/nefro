@@ -1768,6 +1768,22 @@ input:disabled + .slider:before {
     transition: color 0.2s;
 }
 
+.header-profile__profile-link {
+    display: inline-block;
+    margin-top: 6px;
+    margin-right: 10px;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    border-bottom: 1px dashed currentColor;
+    transition: color 0.2s;
+}
+
+.header-profile__profile-link:hover,
+.header-profile__profile-link:focus-visible {
+    color: var(--primary-color);
+}
+
 .header-profile__admin-link {
     display: inline-block;
     margin-top: 6px;
@@ -1787,6 +1803,16 @@ input:disabled + .slider:before {
 .header-profile__logout-link:hover,
 .header-profile__logout-link:focus-visible {
     color: #dc2626;
+}
+
+.header-profile__link--guest {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.header-profile__link--guest:hover .header-profile__name {
+    color: var(--primary-color);
 }
 
 .header-profile__avatar-wrapper {

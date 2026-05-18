@@ -76,12 +76,15 @@ $profileLink = $currentUser ? 'profile.php' : 'login.php';
                     <?php endif; ?>
                 <?php endif; ?>
             </a>
+            <a href="profile.php" class="header-profile__profile-link">Môj profil</a>
             <?php if (!empty($currentUser['is_admin'])): ?>
                 <a href="admin.php" class="header-profile__admin-link">Administrácia</a>
             <?php endif; ?>
             <a href="logout.php" class="header-profile__logout-link">Odhlásiť sa</a>
         <?php else: ?>
-            <div class="header-profile__name"><?= $displayName ?></div>
+            <a href="login.php" class="header-profile__link header-profile__link--guest">
+                <div class="header-profile__name"><?= $displayName ?></div>
+            </a>
         <?php endif; ?>
     </div>
     <a href="<?= $profileLink ?>" class="header-profile__avatar-wrapper">
