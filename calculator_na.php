@@ -454,7 +454,7 @@ if (isLoggedIn()) {
                             <p class="calc-note-opacity">Ak je hodnota kladná, S-Na stúpne. Ak je záporná, S-Na klesne.</p>
                         <?php endif; ?>
                         <div class="form-actions no-print calc-formula-mt24">
-                            <button type="button" class="btn-primary" onclick="window.print()">Vytlačiť</button>
+                            <button type="button" class="btn-primary js-print">Vytlačiť</button>
                         </div>
                     </div>
                 <?php endif; ?>

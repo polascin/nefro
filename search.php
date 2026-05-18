@@ -7,12 +7,6 @@
 require_once "auth.php";
 require_once "db_config.php";
 
-// Bezpečnostné hlavičky
-header_remove("X-Powered-By");
-header("X-Frame-Options: SAMEORIGIN");
-header("X-Content-Type-Options: nosniff");
-header("Referrer-Policy: strict-origin-when-cross-origin");
-
 require_once "search_helpers.php";
 
 // ── Spracovanie vstupu ────────────────────────────────────────────────────────
@@ -459,18 +453,5 @@ $fieldLabels = [
 
   <?php include "footer.php"; ?>
 
-  <script>
-  // Hamburger menu
-  document.addEventListener('DOMContentLoaded', () => {
-    const btn = document.getElementById('menuToggle');
-    const nav = document.querySelector('.main-nav ul');
-    if (btn && nav) {
-      btn.addEventListener('click', () => {
-        const open = nav.classList.toggle('is-open');
-        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-      });
-    }
-  });
-  </script>
 </body>
 </html>

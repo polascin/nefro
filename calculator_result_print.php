@@ -185,7 +185,7 @@ function formatResultKey(string $key): string {
     <script src="ui-preferences-fallback.js?v=20260511-1&cb=<?= filemtime('ui-preferences-fallback.js') ?>" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body data-auto-print="1">
     <?php
     // Header includovaný rovnako ako v kalkulačkách — aktivuje print-layout-table a user-print-header
     $headerTitle = htmlspecialchars((string) ($resultRow['calculator_label'] ?? 'Výsledok kalkulačky'));
@@ -265,7 +265,7 @@ function formatResultKey(string $key): string {
                     </div>
 
                     <div class="form-actions no-print calc-result-mt24">
-                        <button type="button" class="btn-primary" onclick="window.print()">🖨 Tlačiť</button>
+                        <button type="button" class="btn-primary js-print">🖨 Tlačiť</button>
                         <a href="javascript:window.close()" class="btn-secondary">Zatvoriť okno</a>
                         <a href="calculators.php" class="btn-secondary">Kalkulačky</a>
                     </div>
@@ -278,14 +278,5 @@ function formatResultKey(string $key): string {
     </main>
 
     <?php include 'footer.php'; ?>
-
-    <script>
-        // Automatická tlač iba ak nedošlo k chybe
-        if (document.querySelector('.alert-error') === null) {
-            window.addEventListener('load', function () {
-                window.print();
-            });
-        }
-    </script>
 </body>
 </html>

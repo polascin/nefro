@@ -1045,7 +1045,7 @@ function sexLabel(string $v): string
                         </details>
 
                         <div class="form-actions no-print calc-result-mt16">
-                            <button type="button" class="btn-primary" onclick="window.print()">Tlačiť výpočet</button>
+                            <button type="button" class="btn-primary js-print">Tlačiť výpočet</button>
                             <a href="calculator_kfre.php" class="btn-secondary">Otvoriť KFRE (2-ročné &amp; 5-ročné)</a>
                         </div>
                     </div>
@@ -1175,7 +1175,7 @@ function sexLabel(string $v): string
                                                        target="_blank" class="btn-secondary btn-sm">Tlačiť</a>
                                                     <form method="POST" action="calculator_ckdpc.php"
                                                           class="d-inline"
-                                                          onsubmit="return confirm('Naozaj vymazať tento záznam?')">
+                                                          data-confirm="Naozaj vymazať tento záznam?">
                                                         <input type="hidden" name="csrf_token"
                                                                value="<?= htmlspecialchars(
                                                                    generateCsrfToken(),

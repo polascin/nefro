@@ -427,7 +427,7 @@ if (isLoggedIn()) {
                             $calculated["note"],
                         ) ?></p>
                         <div class="form-actions no-print">
-                            <button type="button" class="btn-primary" onclick="window.print()">Vytlačiť výpočet</button>
+                            <button type="button" class="btn-primary js-print">Vytlačiť výpočet</button>
                         </div>
                     </div>
                 <?php endif; ?>
@@ -528,7 +528,7 @@ if (isLoggedIn()) {
                                             <a href="calculator_result_print.php?result_id=<?= (int) $row[
                                                 "id"
                                             ] ?>" target="_blank" rel="noopener" class="btn-admin-action">Tlačiť</a>
-                                            <form method="POST" action="calculator_kdigo_risk.php" class="d-inline" onsubmit="return confirm('Naozaj vymazať záznam?')">
+                                            <form method="POST" action="calculator_kdigo_risk.php" class="d-inline" data-confirm="Naozaj vymazať záznam?">
                                                 <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(
                                                     generateCsrfToken(),
                                                 ) ?>">

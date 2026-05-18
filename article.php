@@ -2,37 +2,6 @@
 require_once "auth.php";
 require_once "db_config.php";
 
-// Bezpečnostné HTTP hlavičky
-header_remove("X-Powered-By");
-header("X-Frame-Options: SAMEORIGIN");
-header("X-XSS-Protection: 0");
-header("X-Content-Type-Options: nosniff");
-header(
-    "Strict-Transport-Security: max-age=31536000; includeSubDomains; preload",
-);
-header("Referrer-Policy: strict-origin-when-cross-origin");
-header(
-    "Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=()",
-);
-header("Cross-Origin-Opener-Policy: same-origin");
-header("X-Permitted-Cross-Domain-Policies: none");
-header(
-    "Cache-Control: no-store, no-cache, must-revalidate, max-age=0, private",
-);
-header("Pragma: no-cache");
-header("Expires: 0");
-header("Surrogate-Control: no-store");
-
-$csp =
-    "default-src 'self'; " .
-    "img-src 'self' data: https:; " .
-    "style-src 'self' https://fonts.googleapis.com; " .
-    "font-src 'self' https://fonts.gstatic.com; " .
-    "script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com; " .
-    "connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://*.analytics.google.com https://stats.g.doubleclick.net; " .
-    "base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; upgrade-insecure-requests";
-header("Content-Security-Policy: " . $csp);
-
 // Načítanie parametra – akceptujeme len slug alebo id
 $article = null;
 $notFound = false;

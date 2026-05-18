@@ -2,13 +2,6 @@
 require_once 'auth.php';
 require_once 'db_config.php';
 
-// Bezpečnostné HTTP hlavičky
-header_remove('X-Powered-By');
-header('X-Frame-Options: SAMEORIGIN');
-header('X-Content-Type-Options: nosniff');
-header('Referrer-Policy: strict-origin-when-cross-origin');
-header('Permissions-Policy: geolocation=(), microphone=(), camera=()');
-
 $errors = [];
 $token = trim((string) ($_GET['token'] ?? $_POST['token'] ?? ''));
 $tokenHash = $token !== '' ? hash('sha256', $token) : '';
@@ -158,25 +151,6 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
         </div>
     </main>
 
-    <?php if ($resetRequest !== null): ?>
-    <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const form = document.querySelector('form[action="reset_password.php"]');
-        const pass = document.getElementById('new_password');
-        const confirm = document.getElementById('new_password_confirm');
-        if (!form || !pass || !confirm) return;
-
-        const validate = () => {
-            const same = pass.value === confirm.value;
-            confirm.setCustomValidity(same ? '' : 'Heslá sa nezhodujú.');
-        };
-
-        pass.addEventListener('input', validate);
-        confirm.addEventListener('input', validate);
-        form.addEventListener('submit', validate);
-    });
-    </script>
-    <?php endif; ?>
 
     <?php include 'footer.php'; ?>
 </body>

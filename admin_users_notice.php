@@ -305,31 +305,31 @@ $modeLabel = $includeSensitive
 
             <div class="admin-notice-actions no-print">
                 <?php if ($includeSensitive): ?>
-                    <form method="POST" action="admin_users_notice.php" class="d-inline" onsubmit="return confirm('Naozaj pokračovať v citlivom exporte?')">
+                    <form method="POST" action="admin_users_notice.php" class="d-inline" data-confirm="Naozaj pokračovať v citlivom exporte?">
                         <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
                         <input type="hidden" name="format" value="view">
                         <input type="hidden" name="include_sensitive" value="1">
                         <button type="submit" class="btn-admin-action btn-admin-action--warn">Zobraziť</button>
                     </form>
-                    <form method="POST" action="admin_users_notice.php" class="d-inline" onsubmit="return confirm('Naozaj pokračovať v citlivom exporte?')">
+                    <form method="POST" action="admin_users_notice.php" class="d-inline" data-confirm="Naozaj pokračovať v citlivom exporte?">
                         <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
                         <input type="hidden" name="format" value="print">
                         <input type="hidden" name="include_sensitive" value="1">
                         <button type="submit" class="btn-admin-action btn-admin-action--warn">Tlačiť</button>
                     </form>
-                    <form method="POST" action="admin_users_notice.php" class="d-inline" onsubmit="return confirm('Naozaj pokračovať v citlivom exporte?')">
+                    <form method="POST" action="admin_users_notice.php" class="d-inline" data-confirm="Naozaj pokračovať v citlivom exporte?">
                         <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
                         <input type="hidden" name="format" value="csv">
                         <input type="hidden" name="include_sensitive" value="1">
                         <button type="submit" class="btn-admin-action btn-admin-action--warn">Stiahnuť CSV</button>
                     </form>
-                    <form method="POST" action="admin_users_notice.php" class="d-inline" onsubmit="return confirm('Naozaj pokračovať v citlivom exporte?')">
+                    <form method="POST" action="admin_users_notice.php" class="d-inline" data-confirm="Naozaj pokračovať v citlivom exporte?">
                         <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
                         <input type="hidden" name="format" value="json">
                         <input type="hidden" name="include_sensitive" value="1">
                         <button type="submit" class="btn-admin-action btn-admin-action--warn">Stiahnuť JSON</button>
                     </form>
-                    <form method="POST" action="admin_users_notice.php" class="d-inline" onsubmit="return confirm('Naozaj pokračovať v citlivom exporte?')">
+                    <form method="POST" action="admin_users_notice.php" class="d-inline" data-confirm="Naozaj pokračovať v citlivom exporte?">
                         <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
                         <input type="hidden" name="format" value="txt">
                         <input type="hidden" name="include_sensitive" value="1">
@@ -342,7 +342,7 @@ $modeLabel = $includeSensitive
                     <a class="btn-admin-action" href="admin_users_notice.php?format=csv&amp;include_sensitive=0">Stiahnuť CSV</a>
                     <a class="btn-admin-action" href="admin_users_notice.php?format=json&amp;include_sensitive=0">Stiahnuť JSON</a>
                     <a class="btn-admin-action" href="admin_users_notice.php?format=txt&amp;include_sensitive=0">Stiahnuť TXT</a>
-                    <form method="POST" action="admin_users_notice.php" class="d-inline" onsubmit="return confirm('Naozaj prepnúť na citlivý režim exportu?')">
+                    <form method="POST" action="admin_users_notice.php" class="d-inline" data-confirm="Naozaj prepnúť na citlivý režim exportu?">
                         <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
                         <input type="hidden" name="format" value="view">
                         <input type="hidden" name="include_sensitive" value="1">

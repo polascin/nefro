@@ -5,13 +5,6 @@ require_once 'avatar_upload.php';
 require_once 'email_verification.php';
 require_once 'phone_utils.php';
 
-// Bezpečnostné HTTP hlavičky
-header_remove('X-Powered-By');
-header('X-Frame-Options: SAMEORIGIN');
-header('X-Content-Type-Options: nosniff');
-header('Referrer-Policy: strict-origin-when-cross-origin');
-header('Permissions-Policy: geolocation=(), microphone=(), camera=()');
-
 $errors = [];
 $success = false;
 $registeredData = [];
@@ -365,7 +358,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
     <main class="container">
         <div class="auth-container auth-container--wide">
             <h2>Registrácia</h2>
-            <p class="auth-subtitle">Používateľ webovej lokality <a href="https://nefro.polascin.net/" class="auth-subtitle__link">https://nefro.polascin.net/</a></p>
+            <p class="auth-subtitle">Používateľ webovej lokality <a href="https://nefro.polascin.net/" class="auth-subtitle__link" rel="noopener noreferrer">https://nefro.polascin.net/</a></p>
 
             <?php if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && !$success): ?>
                 <div class="alert alert-error">
@@ -466,7 +459,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 <form method="POST" action="register.php" enctype="multipart/form-data">
                     <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
                     <input type="hidden" name="js_token" id="js_token_field" value="">
-                    <script>
+                    <script nonce="<?= htmlspecialchars(getScriptNonce()) ?>">
                         // JS Challenge: Vloží token po načítaní stránky. Boti bez JS toto nespustia.
                         document.addEventListener('DOMContentLoaded', function() {
                             document.getElementById('js_token_field').value = "<?= generateJsChallengeToken() ?>";
@@ -509,7 +502,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                             <img src="" id="avatarPreview" alt="Náhľad avatara" class="avatar-upload-preview">
                             <div>
                                 <label for="avatar" class="avatar-upload-label">Profilová fotografia (Avatar)</label>
-                                <input type="file" id="avatar" name="avatar" class="form-control" accept="image/jpeg, image/png, image/gif, image/webp" onchange="previewAvatar(event)">
+                                <input type="file" id="avatar" name="avatar" class="form-control" accept="image/jpeg, image/png, image/gif, image/webp">
                                 <small class="avatar-upload-hint">Max. 2 MB (JPG, PNG, GIF, WebP). Ak nevyberiete, použije sa univerzálny avatar.</small>
                             </div>
                         </div>
@@ -781,46 +774,5 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
             </div>
         </div>
     </main>
-    <script>
-    function updateDefaultAvatar() {
-        const preview = document.getElementById('avatarPreview');
-        const input = document.getElementById('avatar');
-        if (!input.files || !input.files[0]) {
-            const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
-            preview.src = currentTheme === 'dark' ? 'img/default-avatar-dark.svg' : 'img/default-avatar-light.svg';
-        }
-    }
-
-    function previewAvatar(event) {
-        const input = event.target;
-        const preview = document.getElementById('avatarPreview');
-        if (input.files && input.files[0]) {
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                preview.src = e.target.result;
-            }
-            reader.readAsDataURL(input.files[0]);
-        } else {
-            updateDefaultAvatar();
-        }
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-        // Inicializácia pri načítaní stránky
-        updateDefaultAvatar();
-
-        // Sledovanie zmeny témy
-        const observer = new MutationObserver(function(mutations) {
-            mutations.forEach(function(mutation) {
-                if (mutation.attributeName === "data-theme") {
-                    updateDefaultAvatar();
-                }
-            });
-        });
-        observer.observe(document.documentElement, {
-            attributes: true
-        });
-    });
-    </script>
     <script src="address-autofill.js?cb=<?= filemtime('address-autofill.js') ?>" defer></script>
     <?php include 'footer.php'; ?>

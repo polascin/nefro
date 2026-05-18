@@ -1,10 +1,22 @@
 <?php
+declare(strict_types=1);
 require_once __DIR__ . '/config_loader.php';
+
+/**
+ * Vráti CSP nonce pre aktuálnu HTTP požiadavku (lazy singleton per-request).
+ * Použiť ako atribút nonce="<?= htmlspecialchars(getScriptNonce()) ?>" na inline <script> tagoch.
+ */
+function getScriptNonce(): string {
+    static $nonce = null;
+    if ($nonce === null) {
+        $nonce = base64_encode(random_bytes(18));
+    }
+    return $nonce;
+}
 
 /**
  * Odosiela kompletný set bezpečnostných HTTP hlavičiek.
  * Volá sa automaticky pri každej web požiadavke cez auth.php.
- * Stránky s vlastnou CSP ju môžu prepísať volaním header() po require_once 'auth.php'.
  */
 function sendSecurityHeaders(): void {
     if (php_sapi_name() === 'cli') {
@@ -23,16 +35,19 @@ function sendSecurityHeaders(): void {
     header('Pragma: no-cache');
     header('Expires: 0');
     header('Surrogate-Control: no-store');
+    $nonce = getScriptNonce();
     $csp =
         "default-src 'self'; " .
         "img-src 'self' data: https:; " .
         "style-src 'self' https://fonts.googleapis.com; " .
         "font-src 'self' https://fonts.gstatic.com; " .
-        "script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com; " .
+        "script-src 'self' 'nonce-{$nonce}' https://www.googletagmanager.com https://www.google-analytics.com; " .
         "connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com " .
             "https://analytics.google.com https://*.analytics.google.com https://stats.g.doubleclick.net; " .
         "base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; upgrade-insecure-requests";
     header('Content-Security-Policy: ' . $csp);
+    $cspRO = $csp . '; report-uri /csp-report.php';
+    header('Content-Security-Policy-Report-Only: ' . $cspRO);
 }
 
 // Zabezpečené nastavenia relácie
@@ -228,7 +243,7 @@ function getClientIpAddress(): string {
     $defaultIp = $_SERVER['REMOTE_ADDR'] ?? '0.0.0.0';
     try {
         $env = loadAppConfig();
-    } catch (\RuntimeException $e) {
+    } catch (\RuntimeException) {
         $env = [];
     }
 

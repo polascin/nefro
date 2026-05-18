@@ -2,7 +2,6 @@
 require_once 'db_config.php';
 
 header('Content-Type: application/xml; charset=UTF-8');
-header('X-Content-Type-Options: nosniff');
 header('Cache-Control: public, max-age=1800');
 
 $baseUrl = 'https://nefro.polascin.net/';

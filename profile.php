@@ -5,13 +5,6 @@ require_once 'avatar_upload.php';
 require_once 'phone_utils.php';
 require_once 'mobile_verification.php';
 
-// Bezpečnostné HTTP hlavičky
-header_remove('X-Powered-By');
-header('X-Frame-Options: SAMEORIGIN');
-header('X-Content-Type-Options: nosniff');
-header('Referrer-Policy: strict-origin-when-cross-origin');
-header('Permissions-Policy: geolocation=(), microphone=(), camera=()');
-
 requireLogin();
 
 $user_id = $_SESSION['user_id'];
@@ -546,10 +539,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <?php
                         $avatarSrc = !empty($user['avatar_path']) ? htmlspecialchars($user['avatar_path']) : 'img/default-avatar-light.svg'; // Default set by JS later
                         ?>
-                        <img src="<?= $avatarSrc ?>" id="avatarPreview" data-is-default="<?= empty($user['avatar_path']) ? 'true' : 'false' ?>" alt="Náhľad avatara" class="avatar-upload-preview">
+                        <img src="<?= $avatarSrc ?>" id="avatarPreview" data-is-default="<?= empty($user['avatar_path']) ? 'true' : 'false' ?>" data-original-src="<?= htmlspecialchars($user['avatar_path'] ?? '') ?>" alt="Náhľad avatara" class="avatar-upload-preview">
                         <div>
                             <label for="avatar" class="avatar-upload-label">Profilová fotografia (Avatar)</label>
-                            <input type="file" id="avatar" name="avatar" class="form-control" accept="image/jpeg, image/png, image/gif, image/webp" onchange="previewAvatar(event)">
+                            <input type="file" id="avatar" name="avatar" class="form-control" accept="image/jpeg, image/png, image/gif, image/webp">
                             <small class="avatar-upload-hint">Zvoľte nový obrázok, ak chcete zmeniť aktuálny.</small>
                             <?php if (!empty($user['avatar_path'])): ?>
                                 <div class="form-check">
@@ -827,67 +820,56 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
     </main>
 
-    <script>
-    function updateDefaultAvatar() {
-        const preview = document.getElementById('avatarPreview');
-        const input = document.getElementById('avatar');
+    <script nonce="<?= htmlspecialchars(getScriptNonce()) ?>">
+    (function () {
+        var preview        = document.getElementById('avatarPreview');
+        var input          = document.getElementById('avatar');
+        var removeCheckbox = document.getElementById('remove_avatar');
+        if (!preview || !input) return;
+        // PHP hodnota odovzdaná cez data atribút — nie viac ako literal v JS
+        var originalSrc = preview.dataset.originalSrc || '';
 
-        // Ak je obrázok defaultný (z databázy nie je cesta) a nezvolil sa nový súbor
-        if (preview.dataset.isDefault === 'true' && (!input.files || !input.files[0])) {
-            const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
-            preview.src = currentTheme === 'dark' ? 'img/default-avatar-dark.svg' : 'img/default-avatar-light.svg';
+        function updateDefaultAvatar() {
+            if (preview.dataset.isDefault === 'true' && (!input.files || !input.files[0])) {
+                var theme = document.documentElement.getAttribute('data-theme') || 'light';
+                preview.src = theme === 'dark'
+                    ? 'img/default-avatar-dark.svg'
+                    : 'img/default-avatar-light.svg';
+            }
         }
-    }
 
-    function previewAvatar(event) {
-        const input = event.target;
-        const preview = document.getElementById('avatarPreview');
-        const removeCheckbox = document.getElementById('remove_avatar');
-        if (input.files && input.files[0]) {
-            if (removeCheckbox) {
-                removeCheckbox.checked = false;
-            }
-            preview.dataset.isDefault = 'false';
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                preview.src = e.target.result;
-            }
-            reader.readAsDataURL(input.files[0]);
-        } else {
-            // Používateľ zrušil výber, obnov náhľad pôvodného avatara
-            const originalSrc = preview.dataset.isDefault === 'true' ? '' : '<?= htmlspecialchars($user['avatar_path'] ?? '') ?>';
-            if (originalSrc) {
-                preview.src = originalSrc;
+        function doPreview(file) {
+            if (file) {
+                if (removeCheckbox) removeCheckbox.checked = false;
+                preview.dataset.isDefault = 'false';
+                var reader = new FileReader();
+                reader.onload = function (e) { preview.src = e.target.result; };
+                reader.readAsDataURL(file);
             } else {
-                updateDefaultAvatar();
+                if (originalSrc) {
+                    preview.dataset.isDefault = 'false';
+                    preview.src = originalSrc;
+                } else {
+                    preview.dataset.isDefault = 'true';
+                    updateDefaultAvatar();
+                }
             }
         }
-    }
 
-    document.addEventListener('DOMContentLoaded', () => {
-        const preview = document.getElementById('avatarPreview');
-        const input = document.getElementById('avatar');
-        const removeCheckbox = document.getElementById('remove_avatar');
-        const originalAvatarSrc = '<?= htmlspecialchars($user['avatar_path'] ?? '') ?>';
-
-        updateDefaultAvatar();
+        input.addEventListener('change', function () {
+            doPreview(input.files[0] || null);
+        });
 
         if (removeCheckbox) {
-            removeCheckbox.addEventListener('change', () => {
+            removeCheckbox.addEventListener('change', function () {
                 if (removeCheckbox.checked) {
                     preview.dataset.isDefault = 'true';
                     updateDefaultAvatar();
-                    return;
-                }
-
-                if (input.files && input.files[0]) {
-                    previewAvatar({ target: input });
-                    return;
-                }
-
-                if (originalAvatarSrc) {
+                } else if (input.files && input.files[0]) {
+                    doPreview(input.files[0]);
+                } else if (originalSrc) {
                     preview.dataset.isDefault = 'false';
-                    preview.src = originalAvatarSrc;
+                    preview.src = originalSrc;
                 } else {
                     preview.dataset.isDefault = 'true';
                     updateDefaultAvatar();
@@ -895,17 +877,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             });
         }
 
-        const observer = new MutationObserver((mutations) => {
-            mutations.forEach((mutation) => {
-                if (mutation.attributeName === 'data-theme') {
-                    updateDefaultAvatar();
-                }
-            });
+        document.addEventListener('DOMContentLoaded', function () {
+            updateDefaultAvatar();
+            new MutationObserver(function (mutations) {
+                mutations.forEach(function (m) {
+                    if (m.attributeName === 'data-theme') updateDefaultAvatar();
+                });
+            }).observe(document.documentElement, { attributes: true });
         });
-        observer.observe(document.documentElement, {
-            attributes: true
-        });
-    });
+    })();
     </script>
 
     <script src="address-autofill.js?cb=<?= filemtime('address-autofill.js') ?>" defer></script>

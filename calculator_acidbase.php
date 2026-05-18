@@ -383,7 +383,7 @@ if (isLoggedIn()) {
                             ) ?></p>
                         <?php endif; ?>
                         <div class="form-actions no-print calc-formula-mt24">
-                            <button type="button" class="btn-primary" onclick="window.print()">Vytlačiť výpočet</button>
+                            <button type="button" class="btn-primary js-print">Vytlačiť výpočet</button>
                         </div>
                     </div>
                 <?php endif; ?>

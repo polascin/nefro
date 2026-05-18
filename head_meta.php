@@ -74,7 +74,7 @@ $katexAutoRender = $katexBase . '/contrib/auto-render.min.js';
 
 <!-- Structured Data (Schema.org) -->
 <?php if (!empty($structuredData)): ?>
-<script type="application/ld+json">
+<script type="application/ld+json" nonce="<?= htmlspecialchars(getScriptNonce()) ?>">
 <?= json_encode($structuredData, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) ?>
 </script>
 <?php endif; ?>
@@ -102,3 +102,4 @@ $katexAutoRender = $katexBase . '/contrib/auto-render.min.js';
 <script src="theme.js?v=<?= filemtime('theme.js') ?>"></script>
 <script src="ui-preferences.js?v=<?= filemtime('ui-preferences.js') ?>" defer></script>
 <script src="ui-preferences-fallback.js?v=<?= filemtime('ui-preferences-fallback.js') ?>" defer></script>
+<script src="nefro-ui.js?v=<?= filemtime(__DIR__ . '/nefro-ui.js') ?>" defer></script>

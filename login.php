@@ -2,13 +2,6 @@
 require_once 'auth.php';
 require_once 'db_config.php';
 
-// Bezpečnostné HTTP hlavičky
-header_remove('X-Powered-By');
-header('X-Frame-Options: SAMEORIGIN');
-header('X-Content-Type-Options: nosniff');
-header('Referrer-Policy: strict-origin-when-cross-origin');
-header('Permissions-Policy: geolocation=(), microphone=(), camera=()');
-
 // Ak už je prihlásený, presmerovať
 if (isLoggedIn()) {
     header("Location: index.php");
@@ -270,7 +263,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
             <form method="POST" action="login.php">
                 <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
                 <input type="hidden" name="js_token" id="js_token_field" value="<?= htmlspecialchars(generateJsChallengeToken(), ENT_QUOTES) ?>">
-                <script>
+                <script nonce="<?= htmlspecialchars(getScriptNonce()) ?>">
                     document.addEventListener('DOMContentLoaded', function() {
                         var el = document.getElementById('js_token_field');
                         if (el && !el.value) {

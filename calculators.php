@@ -2,27 +2,6 @@
 require_once "auth.php";
 require_once "db_config.php";
 
-header_remove("X-Powered-By");
-header("X-Frame-Options: SAMEORIGIN");
-header("X-Content-Type-Options: nosniff");
-header(
-    "Strict-Transport-Security: max-age=31536000; includeSubDomains; preload",
-);
-header("Referrer-Policy: strict-origin-when-cross-origin");
-header(
-    "Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=()",
-);
-
-$csp =
-    "default-src 'self'; " .
-    "img-src 'self' data: https:; " .
-    "style-src 'self' https://fonts.googleapis.com; " .
-    "font-src 'self' https://fonts.gstatic.com; " .
-    "script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com; " .
-    "connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://*.analytics.google.com https://stats.g.doubleclick.net; " .
-    "base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; upgrade-insecure-requests";
-header("Content-Security-Policy: " . $csp);
-
 $pageLastUpdated = date("d.m.Y H:i", filemtime(__FILE__));
 $pageTimeZone = date("T") . " (" . date_default_timezone_get() . ")";
 

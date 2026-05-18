@@ -981,7 +981,7 @@ $filterArticleId
               "due_now"
           ] ?? 0) ?></span>
           <form method="POST" action="admin_articles.php" class="d-inline ml-8"
-                onsubmit="return confirm('Naozaj chcete odoslať avíza pripravené na odoslanie?');">
+                data-confirm="Naozaj chcete odoslať avíza pripravené na odoslanie?">
             <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(
                 $csrfToken,
             ) ?>">
@@ -1119,7 +1119,7 @@ $filterArticleId
                       </form>
                     <?php endif; ?>
                     <form method="POST" action="admin_articles.php" class="d-inline"<?= $aTop
-                        ? ' onsubmit="return confirm(\'Naozaj chcete vyradiť tento článok z TOP sekcie?\');"'
+                        ? ' data-confirm="Naozaj chcete vyradiť tento článok z TOP sekcie?"'
                         : "" ?>>
                       <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(
                           $csrfToken,
@@ -1156,7 +1156,7 @@ $filterArticleId
                     </form>
                     &nbsp;
                     <form method="POST" action="admin_articles.php" class="d-inline"
-                        onsubmit="return confirm('Naozaj chcete odstrániť tento článok?');">
+                        data-confirm="Naozaj chcete odstrániť tento článok?">
                       <input type="hidden" name="csrf_token"  value="<?= htmlspecialchars(
                           $csrfToken,
                       ) ?>">
@@ -1194,45 +1194,5 @@ $filterArticleId
 
   <?php include "footer.php"; ?>
 
-  <script>
-    // Automatické generovanie slugu z titulku + SEO nápoveda pre perex
-    (function () {
-      const titleInput = document.getElementById('f_title');
-      const slugInput  = document.getElementById('f_slug');
-      const excerptInput = document.getElementById('f_excerpt');
-      if (!titleInput || !slugInput) return;
-
-      titleInput.addEventListener('input', function () {
-        if (slugInput.dataset.manualEdit === 'true') return;
-        const map = {
-          'á':'a','ä':'a','č':'c','ď':'d','é':'e','í':'i','ĺ':'l','ľ':'l',
-          'ň':'n','ó':'o','ô':'o','ŕ':'r','š':'s','ť':'t','ú':'u','ý':'y','ž':'z'
-        };
-        let s = titleInput.value.toLowerCase();
-        s = s.replace(/[áäčďéíĺľňóôŕšťúýž]/g, c => map[c] || c);
-        s = s.replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-        slugInput.value = s.substring(0, 200);
-      });
-
-      slugInput.addEventListener('input', function () {
-        slugInput.dataset.manualEdit = slugInput.value.length > 0 ? 'true' : 'false';
-      });
-
-      if (excerptInput) {
-        const counter = document.createElement('span');
-        counter.className = 'helper-text';
-        excerptInput.insertAdjacentElement('afterend', counter);
-
-        const updateCounter = () => {
-          const len = excerptInput.value.trim().length;
-          const isRecommended = len >= 120 && len <= 220;
-          counter.textContent = 'Dĺžka perexu: ' + len + ' znakov' + (isRecommended ? ' (odporúčané rozmedzie)' : ' (mimo odporúčaného rozmedzia 120-220)');
-        };
-
-        excerptInput.addEventListener('input', updateCounter);
-        updateCounter();
-      }
-    })();
-  </script>
 </body>
 </html>
