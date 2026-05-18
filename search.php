@@ -140,28 +140,7 @@ $fieldLabels = [
   include "header.php";
   ?>
 
-  <nav class="main-nav" aria-label="Hlavná navigácia">
-    <div class="container">
-      <button class="menu-toggle" id="menuToggle" aria-label="Otvoriť menu" aria-expanded="false">
-        <span>Menu</span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-      </button>
-      <ul>
-        <li><a href="index.php">Domov</a></li>
-        <li><a href="calculators.php">Kalkulačky</a></li>
-        <li><a href="search.php" class="active" aria-current="page">Vyhľadávanie</a></li>
-        <?php if (isLoggedIn()): ?>
-          <?php if (isAdmin()): ?>
-            <li><a href="admin.php">Admin</a></li>
-            <li><a href="admin_articles.php">Správa článkov</a></li>
-          <?php endif; ?>
-          <li><a href="logout.php">Odhlásiť sa</a></li>
-        <?php else: ?>
-          <li><a href="login.php">Prihlásenie</a></li>
-        <?php endif; ?>
-      </ul>
-    </div>
-  </nav>
+  <?php include 'main_nav.php'; ?>
 
   <main id="search-results" class="container search-main">
     <div class="main-content main-content--single-col">

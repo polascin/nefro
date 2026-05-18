@@ -299,23 +299,7 @@ if (isLoggedIn()) {
     include "header.php";
     ?>
 
-    <nav class="main-nav" aria-label="Hlavná navigácia">
-        <div class="container"><ul>
-            <li><a href="index.php">Domov</a></li>
-            <li><a href="calculators.php" class="active" aria-current="page">Kalkulačky</a></li>
-            <li><a href="search.php">Vyhľadávanie</a></li>
-            <li><a href="calculator_egfr.php">eGFR CKD-EPI</a></li>
-            <li><a href="calculator_kdigo_risk.php">KDIGO G/A riziko</a></li>
-            <?php if (isLoggedIn()): ?>
-                <?php if (
-                    isAdmin()
-                ): ?><li><a href="admin.php">Admin panel</a></li><?php endif; ?>
-                <li><a href="logout.php">Odhlásiť sa (<?= htmlspecialchars(
-                    $_SESSION["username"] ?? "Profil",
-                ) ?>)</a></li>
-            <?php else: ?><li><a href="login.php">Prihlásenie</a></li><?php endif; ?>
-        </ul></div>
-    </nav>
+    <?php include 'main_nav.php'; ?>
 
     <main id="main-content" class="container main-content main-content--single-col" role="main">
         <div class="content-wrapper">

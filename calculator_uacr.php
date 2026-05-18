@@ -201,7 +201,7 @@ if (isLoggedIn()) {
     $showLogo = false;
     include "header.php";
     ?>
-    <nav class="main-nav"><div class="container"><ul><li><a href="calculators.php">Späť na kalkulačky</a></li><li><a href="search.php">Vyhľadávanie</a></li></ul></div></nav>
+    <?php include 'main_nav.php'; ?>
     <main class="container main-content main-content--single-col">
         <div class="content-wrapper">
             <div class="auth-container auth-container--wide">

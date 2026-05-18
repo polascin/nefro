@@ -89,13 +89,7 @@ $pageLastUpdated = date('d.m.Y', filemtime(__FILE__));
     include 'header.php';
     ?>
 
-    <nav class="main-nav" aria-label="Hlavná navigácia">
-        <div class="container">
-            <ul>
-                <li><a href="index.php">Návrat na Domov</a></li>
-            </ul>
-        </div>
-    </nav>
+    <?php include 'main_nav.php'; ?>
 
     <main id="main-content" class="container main-content main-content--single-col" role="main">
         <div class="content-wrapper">
