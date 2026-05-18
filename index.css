@@ -2833,6 +2833,16 @@ input:disabled + .slider:before {
     color: var(--error-color) !important;
 }
 
+.link-error--btn {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    text-decoration: underline;
+}
+
 /* ==========================================================================
    UTILITY TRIEDY
    ========================================================================== */

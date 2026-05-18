@@ -7,7 +7,9 @@
       "Bash(Get-ChildItem -Path \"d:\\\\OneDrive\\\\www\\\\nefro\" -Filter \"*.php\")",
       "Bash(Select-Object Name)",
       "Bash(grep -E \"\\\\.php$\")",
-      "Bash(grep \"\\\\.php$\")"
+      "Bash(grep \"\\\\.php$\")",
+      "Bash(cd /d \"d:\\\\OneDrive\\\\www\\\\nefro\")",
+      "Bash(php setup_db.php)"
     ]
   }
 }

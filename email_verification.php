@@ -416,6 +416,36 @@ function markEmailAsVerified(PDO $pdo, int $userId): void {
     $stmt->execute(['id' => $userId]);
 }
 
+function sendAccountDeletionConfirmationEmail(string $toEmail, string $username, string $rawToken): bool {
+    $confirmUrl = getAppBaseUrl() . '/confirm_account_deletion.php?token=' . urlencode($rawToken);
+    $displayName = trim($username) !== '' ? $username : $toEmail;
+    $subject = 'Potvrdenie zrušenia účtu - Nefro-projekt Slovensko';
+    $message = "Dobrý deň, " . $displayName . ",\n\n"
+        . "prijali sme žiadosť o zrušenie vášho účtu v Nefro-projekt Slovensko.\n\n"
+        . "Pre dokončenie a trvalé vymazanie účtu kliknite na tento odkaz:\n\n"
+        . $confirmUrl . "\n\n"
+        . "Platnosť odkazu je 24 hodín.\n\n"
+        . "UPOZORNENIE: Táto akcia je nezvratná. Po potvrdení budú natrvalo vymazané "
+        . "všetky vaše údaje vrátane výsledkov kalkulačiek a nastavení profilu.\n\n"
+        . "Ak ste o zrušenie účtu nežiadali, tento e-mail ignorujte. "
+        . "Váš účet zostane zachovaný.\n\n"
+        . "Nefro-projekt Slovensko";
+
+    $cfg = getEmailEnvConfig();
+    if (sendViaSmtp($toEmail, $subject, $message, $cfg)) {
+        return true;
+    }
+
+    $fallbackFrom = $cfg['from_email'] !== '' ? $cfg['from_email'] : 'no-reply@nefro.polascin.net';
+    $headers = [
+        'MIME-Version: 1.0',
+        'Content-Type: text/plain; charset=UTF-8',
+        'From: ' . ($cfg['from_name'] ?: 'Nefro-projekt') . ' <' . $fallbackFrom . '>',
+    ];
+
+    return @mail($toEmail, $subject, $message, implode("\r\n", $headers));
+}
+
 function isEmailResendAllowed(?string $sentAt, int $cooldownSeconds = 60): bool {
     if (empty($sentAt)) {
         return true;

@@ -4,6 +4,7 @@ require_once 'db_config.php';
 require_once 'avatar_upload.php';
 require_once 'phone_utils.php';
 require_once 'mobile_verification.php';
+require_once 'email_verification.php';
 
 requireLogin();
 
@@ -183,75 +184,48 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && ($_POST['action'] ?? '') ==
         } elseif (!password_verify($confirmPassword, (string) $user['password_hash'])) {
             $deleteErrors[] = "Zadané heslo nie je správne. Účet nebol zrušený.";
         } else {
-            $clientIp  = getClientIpAddress();
-            $userAgent = mb_substr($_SERVER['HTTP_USER_AGENT'] ?? '', 0, 500);
-
+            // Heslo je správne — namiesto okamžitého mazania odošleme e-mail s potvrdením.
+            // Skutočné mazanie prebehne až po kliknutí na odkaz v e-maile (confirm_account_deletion.php).
             try {
-                $pdo->beginTransaction();
+                $rawToken = rtrim(strtr(base64_encode(random_bytes(32)), '+/', '-_'), '=');
+                $tokenHash = hash('sha256', $rawToken);
+                $expiresAt = date('Y-m-d H:i:s', time() + 86400); // 24 hodín
+                $clientIp  = getClientIpAddress();
 
-                // Štatistiky pred mazaním (pre log)
-                $stCalcStmt = $pdo->prepare("SELECT COUNT(*) FROM calculator_results WHERE user_id = :uid");
-                $stCalcStmt->execute([':uid' => $user_id]);
-                $statCalc = (int) $stCalcStmt->fetchColumn();
+                $pdo->prepare(
+                    "INSERT INTO account_deletion_tokens (user_id, token_hash, expires_at, requested_ip)
+                     VALUES (:user_id, :token_hash, :expires_at, :requested_ip)
+                     ON DUPLICATE KEY UPDATE token_hash = VALUES(token_hash),
+                         expires_at = VALUES(expires_at), requested_ip = VALUES(requested_ip),
+                         created_at = CURRENT_TIMESTAMP"
+                )->execute([
+                    'user_id'      => $user_id,
+                    'token_hash'   => $tokenHash,
+                    'expires_at'   => $expiresAt,
+                    'requested_ip' => $clientIp,
+                ]);
 
-                $stProfStmt = $pdo->prepare("SELECT COUNT(*) FROM users_profile_archive WHERE user_id = :uid");
-                $stProfStmt->execute([':uid' => $user_id]);
-                $statProfile = (int) $stProfStmt->fetchColumn();
-
-                // Logovanie (vnútri transakcie — atomické s mazaním)
-                writeAccountDeletionLog(
-                    $pdo,
-                    $user,
-                    ['calculator_results' => $statCalc, 'profile_changes' => $statProfile],
-                    ['client_ip' => $clientIp, 'user_agent' => $userAgent,
-                     'initiated_by' => 'user_self', 'admin_actor_id' => null]
-                );
-
-                // Súborový systém: vymazanie avatara a archívu
-                if (!empty($user['avatar_path'])) {
-                    $deleteAvatarFile($user['avatar_path']);
-                }
-                $archiveDir = realpath(__DIR__ . '/uploads/avatars/archive/' . $user_id);
-                if ($archiveDir !== false && is_dir($archiveDir)) {
-                    foreach (glob($archiveDir . '/*') as $archFile) {
-                        if (is_file($archFile)) {
-                            @unlink($archFile);
-                        }
-                    }
-                    @rmdir($archiveDir);
-                }
-
-                // DB: CASCADE vymaže users_profile_archive, users_avatar_archive,
-                //     password_resets, calculator_results, article_newsletter_queue,
-                //     access_logs (user_id FK = SET NULL), admin_users_notice_audit (CASCADE)
-                $pdo->prepare("DELETE FROM users WHERE id = :id")->execute(['id' => $user_id]);
-
-                $pdo->commit();
-
-                // Fallback súborový log (po commite — potvrdenie, že mazanie prebehlo)
-                writeAccountDeletionFallbackLog(
-                    $user_id,
+                $emailSent = sendAccountDeletionConfirmationEmail(
+                    (string) $user['email'],
                     (string) ($user['username'] ?? ''),
-                    $clientIp,
-                    'user_self'
+                    $rawToken
                 );
 
-                // Zničenie relácie (rovnaký vzor ako logout.php)
-                $_SESSION = [];
-                if (ini_get('session.use_cookies')) {
-                    $p = session_get_cookie_params();
-                    setcookie(session_name(), '', time() - 42000,
-                        $p['path'], $p['domain'], $p['secure'], $p['httponly']);
+                if (!$emailSent) {
+                    error_log('Nepodarilo sa odoslať potvrdzovací e-mail pre zrušenie účtu user_id=' . $user_id);
                 }
-                session_destroy();
 
-                header('Location: login.php?account_deleted=1');
-                exit;
+                // Zobrazíme správu bez ohľadu na úspech odoslania — anti-enumeration
+                setFlashMessage('info',
+                    'Na vašu e-mailovú adresu sme zaslali potvrdzovací odkaz. '
+                    . 'Kliknite naň do 24 hodín pre trvalé zrušenie účtu. '
+                    . 'Ak e-mail neprišiel, skontrolujte priečinok so spamom.'
+                );
+                $showDeleteForm = false;
 
             } catch (\PDOException $e) {
-                $pdo->rollBack();
-                error_log('Zrušenie účtu zlyhalo pre user_id=' . $user_id . ': ' . $e->getMessage());
-                $deleteErrors[] = "Nastala chyba pri mazaní účtu. Skúste to znova neskôr.";
+                error_log('Chyba pri generovaní tokenu pre zrušenie účtu user_id=' . $user_id . ': ' . $e->getMessage());
+                $deleteErrors[] = "Nastala chyba. Skúste to znova neskôr.";
             }
         }
     }
@@ -1011,7 +985,10 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && ($_POST['action'] ?? '') !=
                 </div>
             </form>
             <div class="auth-links auth-links--spaced">
-                <p><a href="logout.php" class="link-error">Odhlásiť sa zo systému</a></p>
+                <form action="logout.php" method="post" style="display:inline">
+                    <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
+                    <button type="submit" class="link-error link-error--btn">Odhlásiť sa zo systému</button>
+                </form>
             </div>
 
             <!-- ── Nebezpečná zóna ─────────────────────────────────────────── -->

@@ -219,21 +219,21 @@ function sendMobileVerificationCode(string $mobilePhone, ?string $code = null): 
         return $status === 'pending' || $status === 'approved';
     }
 
-    // Fallback logovacieho providéra: použiteľný pri lokálnom vývoji, v produkcii zlyhá.
+    // Logovací provider: použiteľný iba pri lokálnom vývoji.
+    // BEZPEČNOSŤ: kód sa nesmie objaviť v produkčných logoch.
     if ($provider === '' || $provider === 'log') {
-        // BEZPEČnosŤ: samotmý overovací kód sa nesmie objaviť v logoch — logy čítajú
-        // systémoví administrátori, sú archivované zálohami a môžu byť dostupné
-        // cez webový server v chybnej konfigurácii.
+        $maskedPhone = substr($mobilePhone, 0, -4) . '****';
         if ($isLocalDev) {
-            // V DEV režime logujeme kód (maskované telefónne číslo) pre ladenie
-            $maskedPhone = substr($mobilePhone, 0, -4) . '****';
             error_log('[DEV] SMS overovací kód pre ' . $maskedPhone . ': ' . (string) $code);
-        } else {
-            // V produkcii zaznamenávame IBA fakt o odoslaní, NIE kód
-            $maskedPhone = substr($mobilePhone, 0, -4) . '****';
-            error_log('SMS verifikácia odoslaná (log provider) na: ' . $maskedPhone);
+            return true;
         }
-        return $isLocalDev;
+        // V produkcii zlyhávame explicitne — tichý návrat true by maskoval
+        // chýbajúcu konfiguráciu SMS_PROVIDER a používatelia by nikdy SMS nedostali.
+        error_log(
+            'SMS verifikácia zlyhala: SMS_PROVIDER="' . $provider . '" nie je platný produkčný provider. '
+            . 'Nakonfigurujte SMS_PROVIDER=twilio_verify v .env súbore.'
+        );
+        return false;
     }
 
     // Zástupné miesto pre budúce SMS providéry.

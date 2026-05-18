@@ -321,6 +321,20 @@ try {
     $pdo->exec($accountDeletionLogSql);
     echo "Tabuľka 'account_deletion_log' bola úspešne vytvorená alebo už existuje.\n";
 
+    // ── Tokeny pre e-mailové potvrdenie zrušenia účtu ────────────────────────
+    $accountDeletionTokensSql = "CREATE TABLE IF NOT EXISTS account_deletion_tokens (
+        id BIGINT AUTO_INCREMENT PRIMARY KEY,
+        user_id INT NOT NULL,
+        token_hash CHAR(64) NOT NULL COMMENT 'SHA-256 hash tokenu',
+        expires_at DATETIME NOT NULL,
+        requested_ip VARCHAR(45) NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        UNIQUE KEY uq_adt_user_id (user_id),
+        CONSTRAINT fk_adt_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";
+    $pdo->exec($accountDeletionTokensSql);
+    echo "Tabuľka 'account_deletion_tokens' bola úspešne vytvorená alebo už existuje.\n";
+
     echo "Tabuľky 'users', 'users_profile_archive', 'users_avatar_archive', 'password_resets' a 'admin_users_notice_audit' boli úspešne vytvorené alebo už existujú.";
     echo "\n";
 

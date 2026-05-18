@@ -56,7 +56,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 
         // ── 2. IP Rate Limiting (max 3 pokusy/hodína per IP) ───────────────
         // Prísnejší limit ako na registrácii — každý pokus odosielal e-mail.
-        $clientIpFp   = $_SERVER['REMOTE_ADDR'] ?? '0.0.0.0';
+        $clientIpFp   = getClientIpAddress();
         $maxFpAttempts = 5;    // max pokusov za okno (zvýšené z 3 na 5 pre lepší UX)
         $fpBlockSecs   = 3600; // blokácia: 1 hodína
         $fpIsBlocked   = false;
@@ -120,18 +120,23 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     $rawToken = rtrim(strtr(base64_encode(random_bytes(32)), '+/', '-_'), '=');
                     $tokenHash = hash('sha256', $rawToken);
                     $expiresAt = date('Y-m-d H:i:s', time() + 3600); // 60 min
-                    $clientIp = $_SERVER['REMOTE_ADDR'] ?? null;
+                    $clientIp = getClientIpAddress();
 
+                    // Transakcia zabraňuje race condition: medzi DELETE a INSERT
+                    // by súbežná požiadavka mohla vložiť vlastný token.
+                    $pdo->beginTransaction();
                     $pdo->prepare("DELETE FROM password_resets WHERE user_id = :user_id AND used_at IS NULL")
                         ->execute(['user_id' => (int) $user['id']]);
-
-                    $insert = $pdo->prepare("INSERT INTO password_resets (user_id, token_hash, expires_at, requested_ip) VALUES (:user_id, :token_hash, :expires_at, :requested_ip)");
-                    $insert->execute([
+                    $pdo->prepare(
+                        "INSERT INTO password_resets (user_id, token_hash, expires_at, requested_ip)
+                         VALUES (:user_id, :token_hash, :expires_at, :requested_ip)"
+                    )->execute([
                         'user_id'      => (int) $user['id'],
                         'token_hash'   => $tokenHash,
                         'expires_at'   => $expiresAt,
                         'requested_ip' => $clientIp,
                     ]);
+                    $pdo->commit();
 
                     if (!sendPasswordResetEmail((string) $user['email'], (string) ($user['username'] ?? ''), $rawToken)) {
                         error_log('Password reset email send failed for user_id=' . (int) $user['id']);
@@ -141,6 +146,9 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 // Anti-enumeration: rovnaká odpoveď bez ohľadu na existenciu účtu.
                 $notice = 'Ak účet existuje, poslali sme na jeho e-mail odkaz na obnovenie hesla.';
             } catch (\PDOException $e) {
+                if ($pdo->inTransaction()) {
+                    $pdo->rollBack();
+                }
                 error_log('Forgot password error: ' . $e->getMessage());
                 $notice = 'Ak účet existuje, poslali sme na jeho e-mail odkaz na obnovenie hesla.';
             }

@@ -71,7 +71,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
         }
 
         // DB/IP brute-force ochrana (10 pokusov, blokovanie na 15 minút)
-        $clientIp    = $_SERVER['REMOTE_ADDR'] ?? '0.0.0.0';
+        $clientIp    = getClientIpAddress();
 
         $maxAttempts = 10;
         $blockSecs   = 900; // 15 minút

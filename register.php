@@ -54,7 +54,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
         }
 
         // ── 2. IP Rate Limiting (max 5 pokusov/hodína per IP) ────────────────
-        $clientIpReg = $_SERVER['REMOTE_ADDR'] ?? '0.0.0.0';
+        $clientIpReg = getClientIpAddress();
         $maxRegAttempts = 5;    // max registrácií za okno
         $regWindowSecs  = 3600; // okno: 1 hodína
         $regBlockSecs   = 3600; // blokácia: 1 hodína
@@ -303,7 +303,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 
                         if (is_array($newUserRow)) {
                             $adminNoticeSent = sendAdminNewRegistrationEmail($newUserRow, [
-                                'ip' => (string) ($_SERVER['REMOTE_ADDR'] ?? ''),
+                                'ip' => getClientIpAddress(),
                                 'user_agent' => (string) ($_SERVER['HTTP_USER_AGENT'] ?? ''),
                                 'referer' => (string) ($_SERVER['HTTP_REFERER'] ?? ''),
                                 'request_uri' => (string) ($_SERVER['REQUEST_URI'] ?? ''),
