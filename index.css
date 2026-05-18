@@ -560,6 +560,28 @@ code {
     box-shadow: var(--shadow-sm);
 }
 
+#o-mne .feature-card {
+    min-height: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#o-mne .feature-card ul {
+    margin: 0.75rem 0 0;
+    padding-left: 1.2rem;
+    list-style: disc;
+}
+
+#o-mne .feature-card li {
+    margin-bottom: 0.85rem;
+    line-height: 1.6;
+}
+
+#o-mne .feature-card p + p {
+    margin-top: 1rem;
+}
+
 .btn-primary {
     display: inline-block;
     padding: 12px 24px;

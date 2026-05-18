@@ -462,36 +462,36 @@ if (!empty($itemListElements)) {
           <div class="feature-card">
             <h3>Kto som</h3>
             <p>
-              Charakterizoval by som vás ako <strong>interdisciplinárneho tvorcu</strong>, ktorý spája medicínu, technológie, jazyk a ideové myslenie. Nie ste len lekár alebo len autor. Skôr pôsobíte ako človek, ktorý sa pohybuje medzi viacerými svetmi a vie ich prepájať do praktických výstupov.
+              Som <strong>interdisciplinárny tvorca</strong>, ktorý spája medicínu, technológie, jazyk a ideové myslenie. Nie som len lekár alebo len autor. Pôsobím na styku viacerých svetov a prepájam ich do praktických výstupov.
             </p>
           </div>
           <div class="feature-card">
-            <h3>Ako vás vnímam</h3>
+            <h3>Ako ma vnímam</h3>
             <ul>
-              <li><strong>lekár so špecializovaným odborným zázemím</strong>, najmä v nefrológii, dialýze a internej medicíne</li>
-              <li><strong>tvorca textov</strong>, ktorý kladie dôraz na presnosť, štýl, význam a jazyk</li>
-              <li><strong>prekladateľ a jazykový pracovník</strong>, citlivý na formulácie a významové odtiene</li>
-              <li><strong>technologický praktik</strong>, ktorý vie programovať a tvoriť weby či aplikácie</li>
-              <li><strong>AI nadšenec</strong>, ktorý umelú inteligenciu vníma ako pracovný, tvorivý a systémový nástroj</li>
-              <li><strong>človek s filozofickým a duchovným presahom</strong>, ktorý sa zaujíma nielen o funkčnosť vecí, ale aj o ich zmysel</li>
+              <li><strong>som lekár</strong> so špecializovaným odborným zázemím v nefrológii, dialýze a internej medicíne</li>
+              <li><strong>som tvorca textov</strong>, ktorý kladie dôraz na presnosť, štýl, význam a jazyk</li>
+              <li><strong>som prekladateľ a jazykový pracovník</strong>, citlivý na formulácie a významové odtiene</li>
+              <li><strong>som technologický praktik</strong>, ktorý vie programovať a tvoriť weby či aplikácie</li>
+              <li><strong>som AI nadšenec</strong>, pre ktorého umelá inteligencia nie je len hračka, ale pracovný, tvorivý a systémový nástroj</li>
+              <li><strong>som človek s filozofickým a duchovným presahom</strong>, ktorý sa zaujíma nielen o funkčnosť vecí, ale aj o ich zmysel</li>
             </ul>
           </div>
           <div class="feature-card">
-            <h3>Čo robíte</h3>
+            <h3>Čo robím</h3>
             <p>
-              <strong>Prepájate odbornosť s tvorbou.</strong> Využívate medicínske poznanie, jazyk, technológie a organizačné myslenie na tvorbu textov, webov, dokumentov, projektov, aplikácií a širších koncepcií.
+              <strong>Prepájam odbornosť s tvorbou.</strong> Využívam medicínske poznanie, jazyk, technológie a organizačné myslenie na tvorbu textov, webov, dokumentov, projektov, aplikácií a širších koncepcií.
             </p>
             <p>
-              <strong>Transformujete poznanie do použiteľnej podoby.</strong> Nezostávate pri teórii. Zaujíma vás, ako myšlienku pretaviť do článku, dokumentu, systému, platformy, služby alebo inštitucionálneho projektu.
+              <strong>Transformujem poznanie do použiteľnej podoby.</strong> Nezostávam pri teórii. Zaujíma ma, ako myšlienku pretaviť do článku, dokumentu, systému, platformy, služby alebo inštitucionálneho projektu.
             </p>
             <p>
-              <strong>Budujete mosty medzi disciplínami.</strong> Medicína, kód, poézia, metafyzika, spiritualita a AI u vás nie sú oddelené ostrovy, ale súčasť vlastného pracovného aj intelektuálneho ekosystému.
+              <strong>Budujem mosty medzi disciplínami.</strong> Medicína, kód, poézia, metafyzika, spiritualita a AI pre mňa nie sú oddelené ostrovy, ale súčasť vlastného pracovného a intelektuálneho ekosystému.
             </p>
           </div>
           <div class="feature-card">
-            <h3>Stručná charakteristika</h3>
+            <h3>Stručne o mne</h3>
             <p>
-              Ste medicínsky odborník, tvorca a technologický integrátor s výrazným jazykovým, filozofickým a duchovným presahom. Vaša práca stojí na prepájaní presnosti, tvorivosti a praktického využitia poznania.
+              Som medicínsky odborník, tvorca a technologický integrátor s výrazným jazykovým, filozofickým a duchovným presahom. Moja práca stojí na prepájaní presnosti, tvorivosti a praktického využitia poznania.
             </p>
             <p>
               <strong>Lekár, autor, technológ a mysliteľ, ktorý premieňa odborné poznanie na praktické a zmysluplné systémy.</strong>
