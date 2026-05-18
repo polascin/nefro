@@ -30,6 +30,33 @@ function getEmailEnvConfig(): array {
     return $config;
 }
 
+function escapeEmailHtml(string $text): string {
+    return htmlspecialchars($text, ENT_QUOTES | ENT_HTML5, 'UTF-8');
+}
+
+function renderEmailHtmlLayout(string $contentHtml, string $actionLabel = '', string $actionUrl = ''): string {
+    $brand = 'Nefro-projekt Slovensko';
+    $buttonHtml = '';
+    if ($actionLabel !== '' && $actionUrl !== '') {
+        $buttonHtml = '<p style="text-align:center;margin:28px 0 0;">'
+            . '<a href="' . escapeEmailHtml($actionUrl) . '" style="display:inline-block;padding:12px 20px;background:#0055a5;color:#ffffff;border-radius:8px;text-decoration:none;font-weight:600;">'
+            . escapeEmailHtml($actionLabel) . '</a></p>';
+    }
+
+    return '<!doctype html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>'
+        . escapeEmailHtml($brand) . '</title></head><body style="margin:0;padding:0;background:#f4f6f8;color:#111111;font-family:Arial,Helvetica,sans-serif;">'
+        . '<table width="100%" cellpadding="0" cellspacing="0" role="presentation"><tr><td align="center" style="padding:24px 12px;">'
+        . '<table width="100%" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;background:#ffffff;border-radius:16px;overflow:hidden;box-shadow:0 18px 50px rgba(15,23,42,0.08);">'
+        . '<tr><td style="background:#0055a5;padding:30px;text-align:center;color:#ffffff;font-size:22px;font-weight:700;">'
+        . escapeEmailHtml($brand) . '</td></tr>'
+        . '<tr><td style="padding:30px;">' . $contentHtml . $buttonHtml
+        . '<p style="margin:28px 0 0;color:#6b7280;font-size:13px;line-height:20px;">Ak tento e-mail nevyžadujete, ignorujte ho.</p>'
+        . '</td></tr>'
+        . '<tr><td style="background:#f3f4f6;padding:18px 30px 22px 30px;color:#64748b;font-size:13px;line-height:20px;text-align:center;">'
+        . 'Nefro-projekt Slovensko • <a href="' . escapeEmailHtml(getAppBaseUrl()) . '" style="color:#64748b;text-decoration:underline;">Navštívte web</a>'
+        . '</td></tr></table></td></tr></table></body></html>';
+}
+
 function smtpReadResponse($socket): array {
     $lines = '';
     $code = 0;
@@ -247,20 +274,27 @@ function sendVerificationEmail(string $toEmail, string $username, int $userId, s
         . "Ak ste sa neregistrovali, tento e-mail ignorujte.\n\n"
         . "Nefro-projekt Slovensko";
 
+    $htmlBody = '<p style="margin:0 0 16px;">Dobrý deň, ' . escapeEmailHtml($displayName) . ',</p>'
+        . '<p style="margin:0 0 16px;">ďakujeme za registráciu v Nefro-projekt Slovensko.</p>'
+        . '<p style="margin:0 0 16px;">Pre aktiváciu účtu overte svoju e-mailovú adresu kliknutím na tlačidlo nižšie.</p>'
+        . '<p style="margin:0 0 16px;color:#334155;">Ak tlačidlo nefunguje, skopírujte a vložte tento odkaz do prehliadača:</p>'
+        . '<p style="margin:0 0 16px;word-break:break-word;"><a href="' . escapeEmailHtml($verifyUrl) . '" style="color:#0b61d1;text-decoration:underline;">' . escapeEmailHtml($verifyUrl) . '</a></p>'
+        . '<p style="margin:0;color:#64748b;font-size:14px;line-height:22px;">Platnosť odkazu je 24 hodín.</p>';
+    $htmlMessage = renderEmailHtmlLayout($htmlBody, 'Overiť e-mail', $verifyUrl);
+
     $cfg = getEmailEnvConfig();
-    if (sendViaSmtp($toEmail, $subject, $message, $cfg)) {
+    if (sendViaSmtp($toEmail, $subject, $htmlMessage, $cfg, 'text/html; charset=UTF-8')) {
         return true;
     }
 
-    // Fallback pre prípad, že SMTP dočasne zlyhá.
     $fallbackFrom = $cfg['from_email'] !== '' ? $cfg['from_email'] : 'no-reply@nefro.polascin.net';
     $headers = [
         'MIME-Version: 1.0',
-        'Content-Type: text/plain; charset=UTF-8',
+        'Content-Type: text/html; charset=UTF-8',
         'From: ' . ($cfg['from_name'] ?: 'Nefro-projekt') . ' <' . $fallbackFrom . '>',
     ];
 
-    return @mail($toEmail, $subject, $message, implode("\r\n", $headers));
+    return @mail($toEmail, $subject, $htmlMessage, implode("\r\n", $headers));
 }
 
 function sendPasswordResetEmail(string $toEmail, string $username, string $rawToken): bool {
@@ -276,19 +310,27 @@ function sendPasswordResetEmail(string $toEmail, string $username, string $rawTo
         . "Ak ste o obnovu hesla nežiadali, tento e-mail ignorujte.\n\n"
         . "Nefro-projekt Slovensko";
 
+    $htmlBody = '<p style="margin:0 0 16px;">Dobrý deň, ' . escapeEmailHtml($displayName) . ',</p>'
+        . '<p style="margin:0 0 16px;">Prijali sme žiadosť o obnovenie hesla pre váš účet v Nefro-projekt Slovensko.</p>'
+        . '<p style="margin:0 0 16px;">Nové heslo nastavíte kliknutím na tlačidlo nižšie.</p>'
+        . '<p style="margin:0 0 16px;color:#334155;">Ak tlačidlo nefunguje, skopírujte a vložte tento odkaz do prehliadača:</p>'
+        . '<p style="margin:0 0 16px;word-break:break-word;"><a href="' . escapeEmailHtml($resetUrl) . '" style="color:#0b61d1;text-decoration:underline;">' . escapeEmailHtml($resetUrl) . '</a></p>'
+        . '<p style="margin:0;color:#64748b;font-size:14px;line-height:22px;">Platnosť odkazu je 60 minút.</p>';
+    $htmlMessage = renderEmailHtmlLayout($htmlBody, 'Obnoviť heslo', $resetUrl);
+
     $cfg = getEmailEnvConfig();
-    if (sendViaSmtp($toEmail, $subject, $message, $cfg)) {
+    if (sendViaSmtp($toEmail, $subject, $htmlMessage, $cfg, 'text/html; charset=UTF-8')) {
         return true;
     }
 
     $fallbackFrom = $cfg['from_email'] !== '' ? $cfg['from_email'] : 'no-reply@nefro.polascin.net';
     $headers = [
         'MIME-Version: 1.0',
-        'Content-Type: text/plain; charset=UTF-8',
+        'Content-Type: text/html; charset=UTF-8',
         'From: ' . ($cfg['from_name'] ?: 'Nefro-projekt') . ' <' . $fallbackFrom . '>',
     ];
 
-    return @mail($toEmail, $subject, $message, implode("\r\n", $headers));
+    return @mail($toEmail, $subject, $htmlMessage, implode("\r\n", $headers));
 }
 
 /**
@@ -348,19 +390,31 @@ function sendAdminNewRegistrationEmail(array $dbUserRow, array $registrationCont
     }
 
     $message = implode("\n", $lines);
+    $htmlBody = '<p style="margin:0 0 16px;">Bola zaznamenaná nová úspešná registrácia.</p>'
+        . '<h2 style="margin:0 0 14px;font-size:18px;color:#0f172a;">Registračný kontext</h2>'
+        . '<ul style="margin:0 0 16px;padding-left:20px;color:#334155;line-height:24px;">'
+        . '<li>Čas servera: ' . escapeEmailHtml(date('Y-m-d H:i:s')) . '</li>'
+        . '<li>IP adresa: ' . escapeEmailHtml((string) ($registrationContext['ip'] ?? '-')) . '</li>'
+        . '<li>User-Agent: ' . escapeEmailHtml((string) ($registrationContext['user_agent'] ?? '-')) . '</li>'
+        . '<li>Referer: ' . escapeEmailHtml((string) ($registrationContext['referer'] ?? '-')) . '</li>'
+        . '<li>Request URI: ' . escapeEmailHtml((string) ($registrationContext['request_uri'] ?? '-')) . '</li>'
+        . '</ul>'
+        . '<h2 style="margin:0 0 14px;font-size:18px;color:#0f172a;">Uložené hodnoty</h2>'
+        . '<pre style="margin:0;padding:14px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;white-space:pre-wrap;word-break:break-word;color:#334155;font-size:13px;line-height:21px;">' . escapeEmailHtml($message) . '</pre>';
+    $htmlMessage = renderEmailHtmlLayout($htmlBody);
 
-    if (sendViaSmtp($toEmail, $subject, $message, $cfg)) {
+    if (sendViaSmtp($toEmail, $subject, $htmlMessage, $cfg, 'text/html; charset=UTF-8')) {
         return true;
     }
 
     $fallbackFrom = $cfg['from_email'] !== '' ? $cfg['from_email'] : 'no-reply@nefro.polascin.net';
     $headers = [
         'MIME-Version: 1.0',
-        'Content-Type: text/plain; charset=UTF-8',
+        'Content-Type: text/html; charset=UTF-8',
         'From: ' . ($cfg['from_name'] ?: 'Nefro-projekt') . ' <' . $fallbackFrom . '>',
     ];
 
-    return @mail($toEmail, $subject, $message, implode("\r\n", $headers));
+    return @mail($toEmail, $subject, $htmlMessage, implode("\r\n", $headers));
 }
 
 /**
@@ -392,18 +446,29 @@ function sendUserRegistrationNotificationEmail(string $toEmail, string $username
 
     $message = implode("\n", $lines);
 
-    if (sendViaSmtp($toEmail, $subject, $message, $cfg)) {
+    $htmlBody = '<p style="margin:0 0 16px;">Dobrý deň, ' . escapeEmailHtml($nameLine) . ',</p>'
+        . '<p style="margin:0 0 16px;">Váš účet bol úspešne vytvorený v Nefro-projekt Slovensko.</p>'
+        . '<div style="margin:18px 0 24px;padding:18px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;color:#334155;line-height:24px;">'
+        . '<strong>Základné údaje registrácie:</strong><br>'
+        . 'Používateľské meno: ' . escapeEmailHtml((string) ($dbUserRow['username'] ?? $username)) . '<br>'
+        . 'E-mail: ' . escapeEmailHtml((string) ($dbUserRow['email'] ?? $toEmail)) . '<br>'
+        . 'Čas registrácie: ' . escapeEmailHtml(date('Y-m-d H:i:s')) . '</div>'
+        . '<p style="margin:0 0 16px;color:#475569;">Ak ste túto registráciu nevykonali vy, čo najskôr nás kontaktujte.</p>';
+
+    $htmlMessage = renderEmailHtmlLayout($htmlBody);
+
+    if (sendViaSmtp($toEmail, $subject, $htmlMessage, $cfg, 'text/html; charset=UTF-8')) {
         return true;
     }
 
     $fallbackFrom = $cfg['from_email'] !== '' ? $cfg['from_email'] : 'no-reply@nefro.polascin.net';
     $headers = [
         'MIME-Version: 1.0',
-        'Content-Type: text/plain; charset=UTF-8',
+        'Content-Type: text/html; charset=UTF-8',
         'From: ' . ($cfg['from_name'] ?: 'Nefro-projekt') . ' <' . $fallbackFrom . '>',
     ];
 
-    return @mail($toEmail, $subject, $message, implode("\r\n", $headers));
+    return @mail($toEmail, $subject, $htmlMessage, implode("\r\n", $headers));
 }
 
 function markEmailAsVerified(PDO $pdo, int $userId): void {
@@ -431,19 +496,26 @@ function sendAccountDeletionConfirmationEmail(string $toEmail, string $username,
         . "Váš účet zostane zachovaný.\n\n"
         . "Nefro-projekt Slovensko";
 
+    $htmlBody = '<p style="margin:0 0 16px;">Dobrý deň, ' . escapeEmailHtml($displayName) . ',</p>'
+        . '<p style="margin:0 0 16px;">Prijali sme žiadosť o zrušenie vášho účtu v Nefro-projekt Slovensko.</p>'
+        . '<p style="margin:0 0 16px;">Pre dokončenie a trvalé vymazanie účtu kliknite na tlačidlo nižšie.</p>'
+        . '<p style="margin:0 0 16px;color:#334155;">Odkaz je platný 24 hodín.</p>'
+        . '<p style="margin:0 0 16px;color:#334155;font-size:14px;line-height:22px;">Táto akcia je nezvratná. Po potvrdení budú natrvalo vymazané všetky vaše údaje vrátane výsledkov kalkulačiek a nastavení profilu.</p>';
+    $htmlMessage = renderEmailHtmlLayout($htmlBody, 'Potvrdiť zrušenie účtu', $confirmUrl);
+
     $cfg = getEmailEnvConfig();
-    if (sendViaSmtp($toEmail, $subject, $message, $cfg)) {
+    if (sendViaSmtp($toEmail, $subject, $htmlMessage, $cfg, 'text/html; charset=UTF-8')) {
         return true;
     }
 
     $fallbackFrom = $cfg['from_email'] !== '' ? $cfg['from_email'] : 'no-reply@nefro.polascin.net';
     $headers = [
         'MIME-Version: 1.0',
-        'Content-Type: text/plain; charset=UTF-8',
+        'Content-Type: text/html; charset=UTF-8',
         'From: ' . ($cfg['from_name'] ?: 'Nefro-projekt') . ' <' . $fallbackFrom . '>',
     ];
 
-    return @mail($toEmail, $subject, $message, implode("\r\n", $headers));
+    return @mail($toEmail, $subject, $htmlMessage, implode("\r\n", $headers));
 }
 
 function isEmailResendAllowed(?string $sentAt, int $cooldownSeconds = 60): bool {

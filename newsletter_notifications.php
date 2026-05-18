@@ -501,16 +501,16 @@ if (!function_exists('processArticleNewsletterQueue')) {
                 ? '<p><strong>Perex:</strong><br>' . nl2br(htmlspecialchars($excerpt, ENT_QUOTES | ENT_HTML5, 'UTF-8')) . '</p>'
                 : '';
 
-            $message = '<p>Dobrý deň, ' . htmlspecialchars($displayName, ENT_QUOTES | ENT_HTML5, 'UTF-8') . ',</p>'
-                . '<p>bol publikovaný nový článok na Nefro-projekt Slovensko:</p>'
-                . '<p><strong>' . $titleHtml . '</strong><br>'
-                . '<a href="' . $articleUrlEscaped . '">' . $articleUrlEscaped . '</a></p>'
+            $messageBody = '<p style="margin:0 0 16px;">Dobrý deň, ' . htmlspecialchars($displayName, ENT_QUOTES | ENT_HTML5, 'UTF-8') . ',</p>'
+                . '<p style="margin:0 0 16px;">Bol publikovaný nový článok na Nefro-projekt Slovensko.</p>'
+                . '<h2 style="margin:0 0 16px;font-size:20px;color:#0f172a;">' . $titleHtml . '</h2>'
+                . '<p style="margin:0 0 16px;"><a href="' . $articleUrlEscaped . '" style="color:#1d4ed8;text-decoration:none;font-weight:600;">Prečítajte si článok</a></p>'
                 . $excerptHtml
-                . '<p>Tento e-mail ste dostali, pretože máte povolené zasielanie noviniek.<br>'
-                . 'Nastavenie môžete zmeniť vo svojom profile.<br>'
-                . 'Ak už nechcete dostávať novinky, odhláste sa jedným klikom:<br>'
-                . '<a href="' . $unsubscribeUrlEscaped . '">' . $unsubscribeUrlEscaped . '</a></p>'
-                . '<p>Nefro-projekt Slovensko</p>';
+                . '<p style="margin:24px 0 16px;color:#475569;line-height:22px;">Tento e-mail ste dostali, pretože máte povolené zasielanie noviniek.<br>'
+                . 'Nastavenie môžete zmeniť vo svojom profile.</p>'
+                . '<p style="margin:0 0 16px;color:#475569;line-height:22px;">Ak už nechcete dostávať novinky, odhláste sa jedným klikom:<br>'
+                . '<a href="' . $unsubscribeUrlEscaped . '" style="color:#1d4ed8;text-decoration:underline;">Odhlásiť sa</a></p>';
+            $message = renderEmailHtmlLayout($messageBody, 'Zobraziť článok', $articleUrl);
 
             $cfg = getEmailEnvConfig();
             $sent = sendViaSmtp($recipientEmail, $subject, $message, $cfg, 'text/html; charset=UTF-8');
