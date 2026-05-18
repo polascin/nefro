@@ -30,7 +30,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
     $postedCsrfToken = $_POST['csrf_token'] ?? '';
     if (!validateCsrfToken($postedCsrfToken)) {
         $errors[] = "Neplatný CSRF token. Skúste to znova.";
-    } elseif ($deletionRequest === null) {
+    } elseif (empty($deletionRequest)) {
         $errors[] = "Potvrdzovací odkaz je neplatný alebo expiroval.";
     } elseif (!empty($deletionRequest['is_admin'])) {
         $errors[] = "Administrátorský účet nie je možné zrušiť týmto spôsobom.";
@@ -178,7 +178,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 </div>
             <?php endif; ?>
 
-            <?php if ($deletionRequest === null): ?>
+            <?php if (empty($deletionRequest)): ?>
                 <div class="alert alert-error">
                     <p>Potvrdzovací odkaz je neplatný alebo expiroval (platnosť je 24 hodín).</p>
                 </div>
