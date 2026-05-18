@@ -240,6 +240,8 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
     include 'header.php';
     ?>
 
+    <?php include 'main_nav.php'; ?>
+
     <main class="container">
         <div class="auth-container">
             <h2>Prihlásenie</h2>

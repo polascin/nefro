@@ -29,7 +29,10 @@ $isHomePage = basename($_SERVER['PHP_SELF']) === 'index.php';
         <a href="#cookie-settings" role="button" class="cookie-settings-trigger site-footer__link" aria-haspopup="dialog" aria-controls="cookieConsentModal">Nastavenia Cookies</a>
         <?php if (function_exists('isLoggedIn') && isLoggedIn()): ?>
           <span class="site-footer__separator">|</span>
-          <a href="logout.php" class="site-footer__link">Odhlásiť sa</a>
+          <form action="logout.php" method="post" class="footer-logout-form">
+              <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(function_exists('generateCsrfToken') ? generateCsrfToken() : '') ?>">
+              <button type="submit" class="site-footer__link footer-logout-btn">Odhlásiť sa</button>
+          </form>
         <?php endif; ?>
       </p>
     </div>

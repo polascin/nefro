@@ -355,6 +355,8 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
     include 'header.php';
     ?>
 
+    <?php include 'main_nav.php'; ?>
+
     <main class="container">
         <div class="auth-container auth-container--wide">
             <h2>Registrácia</h2>

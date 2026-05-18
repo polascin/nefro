@@ -602,6 +602,8 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && ($_POST['action'] ?? '') !=
     include 'header.php';
     ?>
 
+    <?php include 'main_nav.php'; ?>
+
     <main class="container">
         <div class="auth-container auth-container--wide">
             <h2>Úprava profilu</h2>

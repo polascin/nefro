@@ -283,6 +283,15 @@ $modeLabel = $includeSensitive
     <script src="ui-preferences-fallback.js?v=20260511-1&cb=<?= filemtime('ui-preferences-fallback.js') ?>" defer></script>
 </head>
 <body class="admin-notice-page">
+    <nav class="main-nav no-print" aria-label="Navigácia">
+        <div class="container">
+            <ul>
+                <li><a href="index.php">Domov</a></li>
+                <li><a href="admin.php">Administrácia</a></li>
+                <li><a href="admin_articles.php">Správa článkov</a></li>
+            </ul>
+        </div>
+    </nav>
     <div class="print-layout-table">
         <div class="print-layout-thead">
             <div class="admin-print-header print-only">
