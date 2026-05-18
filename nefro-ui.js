@@ -13,7 +13,16 @@ document.addEventListener('submit', function (e) {
     }
 }, { capture: true });
 
-// ── 2. Print tlačidlá (náhrada onclick="window.print()") ─────────────────────
+// ── 2. Button toggle (data-toggle-btn="targetId" prepína triedu d-none) ────────
+document.addEventListener('click', function (e) {
+    var btn = e.target.closest('[data-toggle-btn]');
+    if (!btn) return;
+    var target = document.getElementById(btn.dataset.toggleBtn);
+    if (!target) return;
+    target.classList.toggle('d-none');
+});
+
+// ── 3. Print tlačidlá (náhrada onclick="window.print()") ──────────────────────
 document.addEventListener('click', function (e) {
     if (e.target.closest('.js-print')) {
         window.print();

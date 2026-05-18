@@ -239,6 +239,13 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
         <div class="auth-container">
             <h2>Prihlásenie</h2>
 
+            <?php if (($_GET['account_deleted'] ?? '') === '1'): ?>
+                <div class="alert alert-success">
+                    <p><strong>Váš účet bol úspešne zrušený.</strong></p>
+                    <p>Všetky vaše osobné údaje boli natrvalo vymazané. Ďakujeme, že ste využívali Nefro-projekt Slovensko.</p>
+                </div>
+            <?php endif; ?>
+
             <?php if (!empty($errors)): ?>
                 <div class="alert alert-error">
                     <ul>

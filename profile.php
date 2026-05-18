@@ -92,7 +92,71 @@ $archiveAvatarVersion = function (int $userId, string $action, ?string $original
     ]);
 };
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+// ── Zrušenie účtu ────────────────────────────────────────────────────────────
+$deleteErrors   = [];
+$showDeleteForm = false;
+
+if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && ($_POST['action'] ?? '') === 'delete_account') {
+    $showDeleteForm = true;
+    $postedCsrfToken = $_POST['csrf_token'] ?? '';
+
+    if (!validateCsrfToken($postedCsrfToken)) {
+        $deleteErrors[] = "Neplatný CSRF token. Skúste to znova.";
+    } elseif (isAdmin()) {
+        $deleteErrors[] = "Administrátorský účet nie je možné zrušiť z profilu. Požiadajte iného administrátora o zrušenie.";
+    } else {
+        $confirmPassword = $_POST['delete_confirm_password'] ?? '';
+        if ($confirmPassword === '') {
+            $deleteErrors[] = "Pre potvrdenie zadajte svoje aktuálne heslo.";
+        } elseif (!password_verify($confirmPassword, (string) $user['password_hash'])) {
+            $deleteErrors[] = "Zadané heslo nie je správne. Účet nebol zrušený.";
+        } else {
+            try {
+                $pdo->beginTransaction();
+
+                // Súborový systém: vymazanie avatara a archívu
+                if (!empty($user['avatar_path'])) {
+                    $deleteAvatarFile($user['avatar_path']);
+                }
+                $archiveDir = realpath(__DIR__ . '/uploads/avatars/archive/' . $user_id);
+                if ($archiveDir !== false && is_dir($archiveDir)) {
+                    foreach (glob($archiveDir . '/*') as $archFile) {
+                        if (is_file($archFile)) {
+                            @unlink($archFile);
+                        }
+                    }
+                    @rmdir($archiveDir);
+                }
+
+                // DB: CASCADE vymaže users_profile_archive, users_avatar_archive,
+                //     password_resets, calculator_results, article_newsletter_queue,
+                //     access_logs (user_id), admin_users_notice_audit (admin_user_id)
+                $pdo->prepare("DELETE FROM users WHERE id = :id")->execute(['id' => $user_id]);
+
+                $pdo->commit();
+
+                // Zničenie relácie (rovnaký vzor ako logout.php)
+                $_SESSION = [];
+                if (ini_get('session.use_cookies')) {
+                    $p = session_get_cookie_params();
+                    setcookie(session_name(), '', time() - 42000,
+                        $p['path'], $p['domain'], $p['secure'], $p['httponly']);
+                }
+                session_destroy();
+
+                header('Location: login.php?account_deleted=1');
+                exit;
+
+            } catch (\PDOException $e) {
+                $pdo->rollBack();
+                error_log('Zrušenie účtu zlyhalo pre user_id=' . $user_id . ': ' . $e->getMessage());
+                $deleteErrors[] = "Nastala chyba pri mazaní účtu. Skúste to znova neskôr.";
+            }
+        }
+    }
+}
+
+if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
     $postedCsrfToken = $_POST['csrf_token'] ?? '';
     if (!validateCsrfToken($postedCsrfToken)) {
         $errors[] = "Neplatný CSRF token. Skúste to znova.";
@@ -816,6 +880,62 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </form>
             <div class="auth-links auth-links--spaced">
                 <p><a href="logout.php" class="link-error">Odhlásiť sa zo systému</a></p>
+            </div>
+
+            <!-- ── Nebezpečná zóna ─────────────────────────────────────────── -->
+            <div class="danger-zone" id="danger-zone">
+                <h3 class="danger-zone__title">Nebezpečná zóna</h3>
+                <p class="danger-zone__desc">
+                    Zrušenie účtu je <strong>nezvratné</strong>. Po vymazaní nie je možné obnoviť žiadne vaše dáta.
+                </p>
+                <button type="button" class="btn-danger-outline" data-toggle-btn="delete-account-confirm">
+                    Zrušiť môj účet
+                </button>
+
+                <div id="delete-account-confirm" class="delete-confirm-panel<?= $showDeleteForm ? '' : ' d-none' ?>">
+                    <div class="alert alert-error delete-confirm-panel__warning">
+                        <p><strong>Upozornenie — táto akcia je nezvratná!</strong></p>
+                        <p>Po potvrdení budú <strong>natrvalo vymazané</strong>:</p>
+                        <ul>
+                            <li>Váš účet a všetky osobné údaje</li>
+                            <li>Profilová fotografia a jej zálohy</li>
+                            <li>Všetky uložené výsledky kalkulačiek</li>
+                            <li>História zmien profilu</li>
+                            <li>Záznamy o prístupe viazané na váš účet</li>
+                        </ul>
+                    </div>
+
+                    <?php if (!empty($deleteErrors)): ?>
+                        <div class="alert alert-error">
+                            <ul>
+                                <?php foreach ($deleteErrors as $delErr): ?>
+                                    <li><?= htmlspecialchars($delErr) ?></li>
+                                <?php endforeach; ?>
+                            </ul>
+                        </div>
+                    <?php endif; ?>
+
+                    <form method="POST" action="profile.php" class="delete-confirm-panel__form">
+                        <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
+                        <input type="hidden" name="action" value="delete_account">
+
+                        <div class="form-group">
+                            <label for="delete_confirm_password">Potvrďte svoje aktuálne heslo</label>
+                            <input type="password" id="delete_confirm_password" name="delete_confirm_password"
+                                   class="form-control" required autocomplete="current-password"
+                                   placeholder="Zadajte heslo pre potvrdenie">
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="button" class="btn-secondary" data-toggle-btn="delete-account-confirm">
+                                Zrušiť
+                            </button>
+                            <button type="submit" class="btn-danger">
+                                Natrvalo vymazať môj účet
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </main>
