@@ -39,26 +39,42 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
     } else {
         // ── 0. User-Agent Check ───────────────────────────────────────────
         if (isKnownBotUserAgent()) {
-            if ($isLocalDev) { $errors[] = "[DEV] Detekovaný nepovolený User-Agent."; }
-            else { goto endOfLoginProcessing; }
+            if ($isLocalDev) {
+                $errors[] = "[DEV] Detekovaný nepovolený User-Agent.";
+            } else {
+                $errors[] = "Neplatná požiadavka. Skúste to znova (User-Agent neprešiel overením).";
+                goto endOfLoginProcessing;
+            }
         }
 
         // ── 1. Honeypot ochrana ──────────────────────────────────────────
         if (($_POST['work_email_confirm'] ?? '') !== '') {
-            if ($isLocalDev) { $errors[] = "[DEV] Honeypot aktivovaný."; }
-            else { goto endOfLoginProcessing; }
+            if ($isLocalDev) {
+                $errors[] = "[DEV] Honeypot aktivovaný.";
+            } else {
+                $errors[] = "Neplatná požiadavka. Skúste to znova.";
+                goto endOfLoginProcessing;
+            }
         }
 
         // ── 2. JS-Challenge Check ─────────────────────────────────────────
         if (!validateJsChallengeToken($_POST['js_token'] ?? null)) {
-            if ($isLocalDev) { $errors[] = "[DEV] JS-Challenge zlyhal."; }
-            else { goto endOfLoginProcessing; }
+            if ($isLocalDev) {
+                $errors[] = "[DEV] JS-Challenge zlyhal.";
+            } else {
+                $errors[] = "Požiadavka nebola overená (vyžaduje sa JavaScript). Zapnite JavaScript a skúste znova.";
+                goto endOfLoginProcessing;
+            }
         }
 
         // ── 3. Time-based Check ───────────────────────────────────────────
         if (!validateFormTime('login', 4)) {
-            if ($isLocalDev) { $errors[] = "[DEV] Formulár odoslaný príliš rýchlo."; }
-            else { goto endOfLoginProcessing; }
+            if ($isLocalDev) {
+                $errors[] = "[DEV] Formulár odoslaný príliš rýchlo.";
+            } else {
+                $errors[] = "Formulár bol odoslaný príliš rýchlo. Skúste to znova za pár sekúnd.";
+                goto endOfLoginProcessing;
+            }
         }
 
         // DB/IP brute-force ochrana (10 pokusov, blokovanie na 15 minút)
@@ -253,10 +269,13 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 
             <form method="POST" action="login.php">
                 <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
-                <input type="hidden" name="js_token" id="js_token_field" value="">
+                <input type="hidden" name="js_token" id="js_token_field" value="<?= htmlspecialchars(generateJsChallengeToken(), ENT_QUOTES) ?>">
                 <script>
                     document.addEventListener('DOMContentLoaded', function() {
-                        document.getElementById('js_token_field').value = "<?= generateJsChallengeToken() ?>";
+                        var el = document.getElementById('js_token_field');
+                        if (el && !el.value) {
+                            el.value = "<?= generateJsChallengeToken() ?>";
+                        }
                     });
                 </script>
 
