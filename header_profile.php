@@ -47,7 +47,7 @@ $lastName = $currentUser ? trim((string) ($currentUser['last_name'] ?? '')) : ''
 $displayFullName = ($firstName !== '' && $lastName !== '')
     ? htmlspecialchars($firstName . ' ' . $lastName)
     : '';
-$displayName = $currentUser ? htmlspecialchars(($currentUser['username'] ?? '') ?: ($currentUser['email'] ?? '')) : '<a href="login.php" class="header-profile__unlogged">Neprihlásený používateľ</a>';
+$displayName = $currentUser ? htmlspecialchars(($currentUser['username'] ?? '') ?: ($currentUser['email'] ?? '')) : 'Neprihlásený používateľ';
 $displayEmail = $currentUser ? htmlspecialchars($currentUser['email']) : '';
 $emailIsVerified = $currentUser && !empty($currentUser['email_verified_at']);
 $mobileIsSet = $currentUser && !empty($currentUser['mobile_phone']);
