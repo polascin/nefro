@@ -80,7 +80,10 @@ $profileLink = $currentUser ? 'profile.php' : 'login.php';
             <?php if (!empty($currentUser['is_admin'])): ?>
                 <a href="admin.php" class="header-profile__admin-link">Administrácia</a>
             <?php endif; ?>
-            <a href="logout.php" class="header-profile__logout-link">Odhlásiť sa</a>
+            <form action="logout.php" method="post" class="header-profile__logout-form">
+                <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
+                <button type="submit" class="header-profile__logout-link">Odhlásiť sa</button>
+            </form>
         <?php else: ?>
             <a href="login.php" class="header-profile__link header-profile__link--guest">
                 <div class="header-profile__name"><?= $displayName ?></div>

@@ -127,7 +127,12 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     ]);
                     $user = $stmt->fetch();
 
-                    if ($user && password_verify($password, $user['password_hash'])) {
+                    // Vždy voláme password_verify (aj pre neexistujúceho používateľa)
+                    // aby sme zabránili timing útoku na enumeráciu e-mailov.
+                    $hashToVerify = $user ? $user['password_hash'] : '$2y$12$abcdefghijklmnopqrstuuABCDEFGHIJKLMNOPQRSTUVWXYZab012';
+                    $passwordOk = password_verify($password, $hashToVerify);
+
+                    if ($user && $passwordOk) {
                         if (!(int) ($user['is_active'] ?? 1)) {
                             $errors[] = "Prihlásenie sa nepodarilo.";
                             if ($isLocalDev) {

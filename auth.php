@@ -53,6 +53,7 @@ function sendSecurityHeaders(): void {
 // Zabezpečené nastavenia relácie
 ini_set('session.cookie_httponly', 1);
 ini_set('session.use_only_cookies', 1);
+ini_set('session.gc_maxlifetime', 3600); // PHP GC vymaže neaktívne sessions po 1 hodine
 
 // Secure cookie zapíname iba pri HTTPS, inak sa na HTTP (lokálny vývoj) cookie neuloží.
 $isHttps = isRequestHttps();
@@ -79,6 +80,21 @@ if (session_status() === PHP_SESSION_NONE) {
         exit('Chyba: Nepodarilo sa spustiť reláciu.');
     }
 }
+
+// Kontrola idle timeout: ak bol používateľ prihlásený a 1 hodinu nebol aktívny, odhlásiť ho.
+const SESSION_IDLE_TIMEOUT = 3600;
+if (!empty($_SESSION['user_id'])) {
+    $now = time();
+    if (isset($_SESSION['_last_activity']) && ($now - $_SESSION['_last_activity']) > SESSION_IDLE_TIMEOUT) {
+        $_SESSION = [];
+        session_destroy();
+        session_start();
+        setFlashMessage('info', 'Vaša relácia vypršala z dôvodu nečinnosti. Prihláste sa znova.');
+    } else {
+        $_SESSION['_last_activity'] = $now;
+    }
+}
+
 sendSecurityHeaders();
 registerAccessLogger();
 

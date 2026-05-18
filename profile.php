@@ -257,7 +257,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && ($_POST['action'] ?? '') ==
     }
 }
 
-if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
+if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && ($_POST['action'] ?? '') !== 'delete_account') {
     $postedCsrfToken = $_POST['csrf_token'] ?? '';
     if (!validateCsrfToken($postedCsrfToken)) {
         $errors[] = "Neplatný CSRF token. Skúste to znova.";
@@ -420,6 +420,16 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
             if (!$bd || $bd->format('Y-m-d') !== $data['birth_date']) {
                 $errors[] = "Neplatný dátum narodenia.";
                 $data['birth_date'] = null;
+            } else {
+                $today = new DateTime();
+                $minDate = (new DateTime())->modify('-120 years');
+                if ($bd > $today) {
+                    $errors[] = "Dátum narodenia nemôže byť v budúcnosti.";
+                    $data['birth_date'] = null;
+                } elseif ($bd < $minDate) {
+                    $errors[] = "Dátum narodenia je mimo povolený rozsah.";
+                    $data['birth_date'] = null;
+                }
             }
         }
         $data['newsletter_consent'] = isset($_POST['newsletter_consent']) ? 1 : 0;

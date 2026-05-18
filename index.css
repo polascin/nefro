@@ -1758,6 +1758,12 @@ input:disabled + .slider:before {
     background: rgba(249, 115, 22, 0.22);
 }
 
+.header-profile__logout-form {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
 .header-profile__logout-link {
     display: inline-block;
     margin-top: 6px;
@@ -1766,6 +1772,14 @@ input:disabled + .slider:before {
     text-decoration: none;
     border-bottom: 1px dashed currentColor;
     transition: color 0.2s;
+    background: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding: 0;
+    cursor: pointer;
+    font-family: inherit;
+    line-height: inherit;
 }
 
 .header-profile__profile-link {
