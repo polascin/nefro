@@ -81,8 +81,8 @@ if ($includeSensitive) {
     $postedCsrf = $_POST['csrf_token'] ?? '';
     if ($requestMethod !== 'POST' || !validateCsrfToken($postedCsrf)) {
         http_response_code(403);
-        header('Content-Type: text/plain; charset=UTF-8');
-        echo 'Citlivý export vyžaduje POST požiadavku s platným CSRF tokenom.';
+        header('Content-Type: text/html; charset=UTF-8');
+        echo '<!DOCTYPE html><html lang="sk"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Citlivý export vyžaduje POST</title><style>body{font-family:Arial,Helvetica,sans-serif;background:#f4f6f8;color:#111;margin:0;padding:0;} .container{max-width:720px;margin:52px auto;padding:24px;background:#fff;border-radius:14px;box-shadow:0 18px 40px rgba(15,23,42,0.08);} h1{margin-top:0;color:#0f172a;} p{line-height:1.7;color:#475569;} .btn{display:inline-block;margin-top:20px;padding:12px 18px;background:#0055a5;color:#fff;text-decoration:none;border-radius:10px;}</style></head><body><div class="container"><h1>Citlivý export vyžaduje POST</h1><p>Pre otvorenie citlivého exportu zoznamu používateľov sa musí použiť formulár a platný CSRF token. Toto je bezpečnostná ochrana, ktorá zabraňuje neautorizovanému spusteniu exportu.</p><p>Vráťte sa prosím na <a href="admin.php">Administráciu</a> a skúste export znova cez ovládacie prvky v sekcii "Zoznam používateľov".</p></div></body></html>';
         exit;
     }
 }
