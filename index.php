@@ -407,7 +407,7 @@ if (!empty($itemListElements)) {
             </p>
           </div>
           <div class="feature-card">
-            <h3>Ako ma vnímam</h3>
+            <h3>Ako sa vnímam</h3>
             <ul>
               <li><strong>som lekár</strong> so špecializovaným odborným zázemím v nefrológii, dialýze a internej medicíne</li>
               <li><strong>som tvorca textov</strong>, ktorý kladie dôraz na presnosť, štýl, význam a jazyk</li>
