@@ -128,13 +128,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
             @file_put_contents($logDir . '/account_deletions.log', $logLine, FILE_APPEND | LOCK_EX);
 
             // Zničenie relácie (pokiaľ bol používateľ prihlásený)
-            $_SESSION = [];
-            if (ini_get('session.use_cookies')) {
-                $p = session_get_cookie_params();
-                setcookie(session_name(), '', time() - 42000,
-                    $p['path'], $p['domain'], $p['secure'], $p['httponly']);
-            }
-            session_destroy();
+            clearUserSession();
 
             header('Location: login.php?account_deleted=1');
             exit;
