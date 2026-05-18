@@ -456,6 +456,27 @@ body {
     border-color: rgba(59, 130, 246, 0.2);
 }
 
+#o-mne {
+    background: linear-gradient(180deg, rgba(240, 249, 255, 0.95), rgba(255, 255, 255, 0.9));
+    border-color: rgba(59, 130, 246, 0.18);
+    box-shadow: 0 24px 65px rgba(15, 118, 255, 0.05);
+    padding: 48px 42px;
+}
+
+#o-mne h2 {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+#o-mne .features-grid {
+    gap: 32px;
+}
+
+#o-mne .feature-card {
+    background: rgba(255, 255, 255, 0.92);
+    border-color: rgba(59, 130, 246, 0.12);
+}
+
 .primary-article::before {
     content: "";
     position: absolute;
