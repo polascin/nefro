@@ -431,7 +431,7 @@ if (isLoggedIn()) {
                             $calculated["fwd"] !== null &&
                             $calculated["fwd"] > 0
                         ): ?>
-                            <p style="color:var(--color-accent); font-weight:600; margin-top:8px;">Deficit voľnej vody: <?= htmlspecialchars(
+                            <p class="text-accent-bold-mt8">Deficit voľnej vody: <?= htmlspecialchars(
                                 number_format(
                                     (float) $calculated["fwd"],
                                     2,
@@ -443,7 +443,7 @@ if (isLoggedIn()) {
  ] ?> na <?= $calculated["target_na"] ?> mmol/L)</p>
                         <?php endif; ?>
                         <?php if ($calculated["change_per_l"] !== null): ?>
-                            <p style="margin-top:8px;"><strong>Odhad. zmena S-Na po 1L infúzie:</strong> <?= htmlspecialchars(
+                            <p class="calc-result-mt8"><strong>Odhad. zmena S-Na po 1L infúzie:</strong> <?= htmlspecialchars(
                                 number_format(
                                     (float) $calculated["change_per_l"],
                                     2,
@@ -451,9 +451,9 @@ if (isLoggedIn()) {
                                     " ",
                                 ),
                             ) ?> mmol/L</p>
-                            <p style="font-size:0.85rem; opacity:0.8;">Ak je hodnota kladná, S-Na stúpne. Ak je záporná, S-Na klesne.</p>
+                            <p class="calc-note-opacity">Ak je hodnota kladná, S-Na stúpne. Ak je záporná, S-Na klesne.</p>
                         <?php endif; ?>
-                        <div class="form-actions no-print" style="margin-top: 24px;">
+                        <div class="form-actions no-print calc-formula-mt24">
                             <button type="button" class="btn-primary" onclick="window.print()">Vytlačiť</button>
                         </div>
                     </div>
@@ -506,11 +506,11 @@ if (isLoggedIn()) {
                                         <td class="admin-actions-cell">
                                             <a href="?load_id=<?= (int) $row[
                                                 "id"
-                                            ] ?>" class="btn-admin-action" style="background: var(--color-primary); color: white; border-color: var(--color-primary);">Načítať</a>
+                                            ] ?>" class="btn-admin-action btn-primary-filled">Načítať</a>
                                             <a href="calculator_result_print.php?result_id=<?= (int) $row[
                                                 "id"
                                             ] ?>" target="_blank" rel="noopener" class="btn-admin-action">Tlačiť</a>
-                                            <form method="POST" action="calculator_na.php" style="display:inline">
+                                            <form method="POST" action="calculator_na.php" class="d-inline">
                                                 <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(
                                                     generateCsrfToken(),
                                                 ) ?>">

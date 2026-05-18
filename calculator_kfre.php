@@ -387,7 +387,7 @@ if (isLoggedIn()) {
                     </div>
                 </details>
 
-                <div class="alert" style="background:rgba(16,185,129,0.07);border-left:4px solid #10b981;padding:12px 16px;border-radius:6px;margin-bottom:16px;font-size:0.88rem;">
+                <div class="info-box-green">
                     <strong>Porovnanie s referenčnými kalkulátormi:</strong>
                     <a href="https://kidneyfailurerisk.com/" target="_blank" rel="noopener noreferrer">kidneyfailurerisk.com</a> (Tangri group, oficiálny) &ensp;&bull;&ensp;
                     <a href="https://qxmd.com/calculate/calculator_308/kidney-failure-risk-equation-4-variable" target="_blank" rel="noopener noreferrer">QxMD KFRE</a> &ensp;&bull;&ensp;
@@ -480,11 +480,11 @@ if (isLoggedIn()) {
                             </div>
                             <div class="form-group">
                                 <label for="uacr_value">UACR</label>
-                                <div style="display: flex; gap: 8px; align-items: flex-end;">
-                                    <input type="text" id="uacr_value" name="uacr_value" required class="form-control" style="flex: 1;" value="<?= htmlspecialchars(
+                                <div class="flex-gap-8-end">
+                                    <input type="text" id="uacr_value" name="uacr_value" required class="form-control flex-1" value="<?= htmlspecialchars(
                                         $form["uacr_value"],
                                     ) ?>">
-                                    <select name="uacr_unit" class="form-control" style="flex: 0.8;">
+                                    <select name="uacr_unit" class="form-control flex-08">
                                         <option value="mg_g" <?= $form[
                                             "uacr_unit"
                                         ] === "mg_g"
@@ -546,7 +546,7 @@ if (isLoggedIn()) {
                             <?php endforeach; ?>
 
                             <?php if (!empty($calculated["warnings"])): ?>
-                                <div class="alert alert-error" style="margin-top: 12px;">
+                                <div class="alert alert-error calc-result-mt12">
                                     <strong>Varovanie:</strong>
                                     <ul>
                                         <?php foreach (
@@ -654,7 +654,7 @@ if (isLoggedIn()) {
                                             <a href="calculator_result_print.php?result_id=<?= (int) $row[
                                                 "id"
                                             ] ?>" target="_blank" rel="noopener" class="btn-admin-action">Tlačiť</a>
-                                            <form method="POST" action="calculator_kfre.php" style="display:inline" onsubmit="return confirm('Naozaj vymazať záznam?')">
+                                            <form method="POST" action="calculator_kfre.php" class="d-inline" onsubmit="return confirm('Naozaj vymazať záznam?')">
                                                 <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(
                                                     generateCsrfToken(),
                                                 ) ?>">

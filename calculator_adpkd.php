@@ -338,7 +338,7 @@ if (isLoggedIn()) {
                     </div>
                 </details>
 
-                <div class="alert" style="background:rgba(16,185,129,0.07);border-left:4px solid #10b981;padding:12px 16px;border-radius:6px;margin-bottom:16px;font-size:0.88rem;">
+                <div class="info-box-green">
                     <strong>Porovnanie s referenčnými kalkulátormi:</strong>
                     <a href="https://www.mdcalc.com/search?q=Mayo+ADPKD" target="_blank" rel="noopener noreferrer">MDCalc Mayo ADPKD</a> &ensp;&bull;&ensp;
                     <a href="https://qxmd.com/calculate" target="_blank" rel="noopener noreferrer">QxMD (vyhľadajte "ADPKD")</a>
@@ -362,20 +362,20 @@ if (isLoggedIn()) {
                 <?php endif; ?>
 
                 <?php if ($calculated !== null):
-                    $classColor = match ($calculated["class"]) {
-                        "1A" => "#22c55e",
-                        "1B" => "#84cc16",
-                        "1C" => "#f59e0b",
-                        "1D" => "#f97316",
-                        "1E", "2" => "#ef4444",
-                        default => "#64748b",
+                    $classSlug = match ($calculated["class"]) {
+                        "1A"      => "adpkd-result-1a",
+                        "1B"      => "adpkd-result-1b",
+                        "1C"      => "adpkd-result-1c",
+                        "1D"      => "adpkd-result-1d",
+                        "1E", "2" => "adpkd-result-1e",
+                        default   => "adpkd-result-default",
                     }; ?>
-                <div class="calc-result-box" role="region" aria-label="Výsledok klasifikácie">
+                <div class="calc-result-box <?= $classSlug ?>" role="region" aria-label="Výsledok klasifikácie">
                     <h3>Výsledok — Mayo ADPKD klasifikácia</h3>
                     <div class="calc-result-grid">
-                        <div class="calc-result-item calc-result-item--highlight" style="border-color:<?= $classColor ?>;">
+                        <div class="calc-result-item calc-result-item--highlight">
                             <span class="calc-result-label">Mayo trieda</span>
-                            <span class="calc-result-value" style="color:<?= $classColor ?>;"><?= htmlspecialchars(
+                            <span class="calc-result-value calc-result-value--class"><?= htmlspecialchars(
     $calculated["class"],
 ) ?></span>
                         </div>
@@ -401,7 +401,7 @@ if (isLoggedIn()) {
                         <?php endif; ?>
                         <div class="calc-result-item">
                             <span class="calc-result-label">Rýchlosť progresie</span>
-                            <span class="calc-result-value" style="font-size:1rem;"><?= htmlspecialchars(
+                            <span class="calc-result-value"><?= htmlspecialchars(
                                 $calculated["speed"],
                             ) ?></span>
                         </div>
@@ -503,18 +503,18 @@ if (isLoggedIn()) {
                     </div>
                 </form>
 
-                <div class="calc-formula-box" style="margin-top:24px;">
+                <div class="calc-formula-box calc-formula-mt24">
                     <details>
                         <summary>Referenčné HtTKV prahy podľa veku (triedy 1A–1E)</summary>
                         <div class="calc-formula-content">
-                            <table style="width:100%;border-collapse:collapse;font-size:0.85rem;margin-top:8px;">
-                                <thead><tr style="border-bottom:1px solid rgba(255,255,255,0.15);">
-                                    <th style="text-align:left;padding:4px 8px;">Vek</th>
-                                    <th style="padding:4px 8px;">1A (&lt;mL/m)</th>
-                                    <th style="padding:4px 8px;">1B (&lt;mL/m)</th>
-                                    <th style="padding:4px 8px;">1C (&lt;mL/m)</th>
-                                    <th style="padding:4px 8px;">1D (&lt;mL/m)</th>
-                                    <th style="padding:4px 8px;">1E (≥mL/m)</th>
+                            <table class="adpkd-ref-table">
+                                <thead><tr class="adpkd-ref-tr-head">
+                                    <th class="adpkd-ref-th-left">Vek</th>
+                                    <th class="adpkd-ref-th">1A (&lt;mL/m)</th>
+                                    <th class="adpkd-ref-th">1B (&lt;mL/m)</th>
+                                    <th class="adpkd-ref-th">1C (&lt;mL/m)</th>
+                                    <th class="adpkd-ref-th">1D (&lt;mL/m)</th>
+                                    <th class="adpkd-ref-th">1E (≥mL/m)</th>
                                 </tr></thead>
                                 <tbody>
                                 <?php
@@ -536,14 +536,14 @@ if (isLoggedIn()) {
                                         150 * exp(0.045 * $a),
                                         150 * exp(0.06 * $a),
                                     ];
-                                    echo "<tr style='border-bottom:1px solid rgba(255,255,255,0.06);'>";
-                                    echo "<td style='padding:4px 8px;font-weight:600;'>{$a} r</td>";
+                                    echo "<tr class='adpkd-ref-tr'>";
+                                    echo "<td class='adpkd-ref-td-label'>{$a} r</td>";
                                     foreach ($t as $v) {
-                                        echo "<td style='padding:4px 8px;text-align:center;'>" .
+                                        echo "<td class='adpkd-ref-td'>" .
                                             round($v) .
                                             "</td>";
                                     }
-                                    echo "<td style='padding:4px 8px;text-align:center;'>≥" .
+                                    echo "<td class='adpkd-ref-td'>≥" .
                                         round($t[3]) .
                                         "</td>";
                                     echo "</tr>";
@@ -559,7 +559,7 @@ if (isLoggedIn()) {
             <?php include "calculator_disclaimer.php"; ?>
 
             <?php if (!empty($savedResults)): ?>
-                <section class="auth-container auth-container--wide calc-saved-results" style="margin-top:32px;">
+                <section class="auth-container auth-container--wide calc-saved-results calc-result-mt32">
                     <h3>Uložené výsledky</h3>
                     <div class="calc-saved-list">
                         <?php foreach ($savedResults as $row): ?>
@@ -590,7 +590,7 @@ if (isLoggedIn()) {
                                            "httkv"
                                        ] ?? "—"),
                                    ) ?> mL/m</p>
-                                <form method="POST" action="calculator_adpkd.php" style="display:inline;">
+                                <form method="POST" action="calculator_adpkd.php" class="d-inline">
                                     <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(
                                         generateCsrfToken(),
                                     ) ?>">

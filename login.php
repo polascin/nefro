@@ -261,7 +261,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 </script>
 
                 <!-- Honeypot: neviditeľné pole -->
-                <div style="position:absolute;left:-9999px;top:-9999px;overflow:hidden;" aria-hidden="true" tabindex="-1">
+                <div class="honeypot" aria-hidden="true" tabindex="-1">
                     <label for="work_email_confirm">Pracovný e-mail (potvrdenie)</label>
                     <input type="text" id="work_email_confirm" name="work_email_confirm" value="" autocomplete="off" tabindex="-1">
                 </div>

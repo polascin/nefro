@@ -286,7 +286,7 @@ if (isLoggedIn()) {
                         <div class="calc-formula-vars">
                             $\text{Vek [roky]}$ &bull; $\text{Hmotnosť [kg]}$ &bull; $S_{cr} = \text{sérový kreatinín [mg/dL]}$
                         </div>
-                        <p style="margin-top: 8px; font-size: 0.85rem; color: var(--text-secondary);">
+                        <p class="text-secondary-sm mt-8">
                             Upozornenie: Hoci sa na zaradenie do štádií CKD používa rovnica CKD-EPI (s výstupom ml/min/1,73 m²), mnohé SPC liekov historicky vyžadujú na úpravu dávky práve tento vzorec (výstup ml/min). Pri extrémnej obezite sa niekedy odporúča použiť ideálnu alebo korigovanú telesnú hmotnosť.
                         </p>
                     </div>
@@ -418,7 +418,7 @@ if (isLoggedIn()) {
                             ),
                         ) ?> ml/min</p>
 
-                        <div class="form-actions no-print" style="margin-top: 24px;">
+                        <div class="form-actions no-print calc-formula-mt24">
                             <button type="button" class="btn-primary" onclick="window.print()">Vytlačiť výpočet</button>
                         </div>
                     </div>
@@ -476,11 +476,11 @@ if (isLoggedIn()) {
                                         <td class="admin-actions-cell">
                                             <a href="?load_id=<?= (int) $row[
                                                 "id"
-                                            ] ?>" class="btn-admin-action" style="background: var(--color-primary); color: white; border-color: var(--color-primary);">Načítať</a>
+                                            ] ?>" class="btn-admin-action btn-primary-filled">Načítať</a>
                                             <a href="calculator_result_print.php?result_id=<?= (int) $row[
                                                 "id"
                                             ] ?>" target="_blank" rel="noopener" class="btn-admin-action">Tlačiť</a>
-                                            <form method="POST" action="calculator_cg.php" style="display:inline" onsubmit="return confirm('Naozaj vymazať záznam?')">
+                                            <form method="POST" action="calculator_cg.php" class="d-inline" onsubmit="return confirm('Naozaj vymazať záznam?')">
                                                 <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(
                                                     generateCsrfToken(),
                                                 ) ?>">

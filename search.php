@@ -169,16 +169,16 @@ $fieldLabels = [
     </div>
   </nav>
 
-  <main id="search-results" class="container" style="padding-top:48px;padding-bottom:64px;">
+  <main id="search-results" class="container search-main">
     <div class="main-content main-content--single-col">
       <div class="primary-article">
 
         <!-- ── Nadpis stránky ──────────────────────────────────────── -->
-        <h2 style="margin-bottom:1.5rem;">
+        <h2 class="search-title">
           <?php if ($hasQuery): ?>
             Výsledky hľadania
           <?php else: ?>
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-5px;margin-right:8px;opacity:0.7;"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>Vyhľadávanie
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" class="search-icon"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>Vyhľadávanie
           <?php endif; ?>
         </h2>
 
@@ -205,7 +205,7 @@ $fieldLabels = [
           </div>
 
           <?php if ($hasQuery && !empty($tokens)): ?>
-            <p style="font-size:0.8rem;color:var(--text-tertiary);margin-top:-12px;margin-bottom:0;">
+            <p class="search-hint">
               Vyhľadávané výrazy:
               <?php foreach ($tokens as $norm => $orig): ?>
                 <span class="search-meta__term"><?= htmlspecialchars(
@@ -230,10 +230,10 @@ $fieldLabels = [
                         : "výsledkov") ?>
               </span>
               <?php if ($totalPages > 1): ?>
-                <span style="color:var(--text-tertiary);">·</span>
+                <span class="text-tertiary">·</span>
                 <span>Strana <?= $page ?> z <?= $totalPages ?></span>
               <?php endif; ?>
-              <span style="color:var(--text-tertiary);">·</span>
+              <span class="text-tertiary">·</span>
               <span class="search-meta__time"><?= $searchTime ?>&nbsp;ms</span>
             <?php else: ?>
               <span>Žiadne výsledky pre <span class="search-meta__term"><?= htmlspecialchars(
@@ -278,7 +278,7 @@ $fieldLabels = [
                     ) ?>
                   </time>
                   <?php if (!empty($row["author"])): ?>
-                    <span style="color:var(--text-tertiary);">·</span>
+                    <span class="text-tertiary">·</span>
                     <span><?= htmlspecialchars(
                         (string) $row["author"],
                     ) ?></span>
@@ -365,15 +365,15 @@ $fieldLabels = [
               </p>
 
               <?php if (empty($tokens)): ?>
-                <p class="search-empty__text" style="font-size:0.85rem;">
+                <p class="search-empty__text fs-085">
                   Zadaný výraz obsahuje iba krátke alebo bežné slovenské slová.
                   Skúste konkrétnejší odborný výraz.
                 </p>
               <?php endif; ?>
 
-              <div style="margin-top:1.5rem;">
-                <p style="font-size:0.88rem;color:var(--text-tertiary);margin-bottom:0.75rem;">Skúste napríklad:</p>
-                <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;">
+              <div class="mt-1-5rem">
+                <p class="search-section-label">Skúste napríklad:</p>
+                <div class="flex-center-wrap-gap8">
                   <?php foreach (
                       [
                           "eGFR",
@@ -388,16 +388,15 @@ $fieldLabels = [
                       as $sugg
                   ): ?>
                     <a href="search.php?s=<?= urlencode($sugg) ?>"
-                       class="search-meta__term"
-                       style="text-decoration:none;cursor:pointer;"><?= htmlspecialchars(
+                       class="search-meta__term link-unstyled"><?= htmlspecialchars(
                            $sugg,
                        ) ?></a>
                   <?php endforeach; ?>
                 </div>
               </div>
 
-              <div style="margin-top:2rem;">
-                <a href="index.php" class="btn-primary" style="display:inline-block;">
+              <div class="mt-2rem">
+                <a href="index.php" class="btn-primary d-inline-block">
                   ← Späť na zoznam článkov
                 </a>
               </div>
@@ -408,14 +407,14 @@ $fieldLabels = [
         <?php else: ?>
 
           <!-- ── Úvodná stránka vyhľadávania (bez dopytu) ─────────── -->
-          <div style="text-align:center;padding:2rem 0;">
-            <p style="color:var(--text-secondary);font-size:1.05rem;max-width:520px;margin:0 auto 2rem;">
+          <div class="search-empty">
+            <p class="search-empty-desc">
               Prehľadávajte odborné nefrologické články, analýzy a komentáre.
               Vyhľadávanie je jazykovo inteligentné — rozumie slovenčine, diakritike aj medicínskym skratkám.
             </p>
 
-            <p style="font-size:0.88rem;color:var(--text-tertiary);margin-bottom:1rem;">Obľúbené témy:</p>
-            <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:2.5rem;">
+            <p class="search-section-label-1rem">Obľúbené témy:</p>
+            <div class="flex-center-wrap-gap10 mb-25rem">
               <?php foreach (
                   [
                       "eGFR",
@@ -436,18 +435,17 @@ $fieldLabels = [
                   as $sugg
               ): ?>
                 <a href="search.php?s=<?= urlencode($sugg) ?>"
-                   class="search-meta__term"
-                   style="text-decoration:none;cursor:pointer;font-size:0.9rem;padding:5px 12px;">
+                   class="search-meta__term link-chip">
                   <?= htmlspecialchars($sugg) ?>
                 </a>
               <?php endforeach; ?>
             </div>
 
-            <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
-              <a href="index.php" class="btn-secondary" style="display:inline-block;padding:10px 22px;border-radius:8px;">
+            <div class="flex-gap-16-center-wrap">
+              <a href="index.php" class="btn-secondary search-cta-btn">
                 📄 Všetky články
               </a>
-              <a href="calculators.php" class="btn-secondary" style="display:inline-block;padding:10px 22px;border-radius:8px;">
+              <a href="calculators.php" class="btn-secondary search-cta-btn">
                 🧮 Kalkulačky
               </a>
             </div>

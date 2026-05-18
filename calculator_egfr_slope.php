@@ -335,7 +335,7 @@ if (isLoggedIn()) {
                     <div class="form-section">
                         <h3>Povinné vstupy na výpočet</h3>
                         <?php for ($i = 1; $i <= 4; $i++): ?>
-                        <div class="form-grid" style="margin-bottom:8px; border-bottom:1px solid var(--color-border); padding-bottom:8px;">
+                        <div class="form-grid calc-item-separator">
                             <div class="form-group"><label>Dátum merania <?= $i ?></label><input type="date" name="date_<?= $i ?>" class="form-control" value="<?= htmlspecialchars(
     $form["date_$i"],
 ) ?>"></div>
@@ -357,15 +357,15 @@ if (isLoggedIn()) {
                         <p><strong>Rýchlosť zmeny (Slope):</strong> <?= htmlspecialchars(
                             $calculated["slope"],
                         ) ?> ml/min/1,73m² za rok</p>
-                        <p style="color:var(--color-accent); font-weight:600;">Interpretácia: <?= htmlspecialchars(
+                        <p class="calc-accent-text">Interpretácia: <?= htmlspecialchars(
                             $calculated["interpretation"],
                         ) ?></p>
-                        <p style="font-size:0.85rem;">Sledované obdobie: <?= $calculated[
+                        <p class="calc-note-text">Sledované obdobie: <?= $calculated[
                             "duration_years"
                         ] ?> rokov, počet bodov: <?= $calculated[
      "n_points"
  ] ?></p>
-                        <div class="form-actions no-print" style="margin-top: 24px;">
+                        <div class="form-actions no-print calc-formula-mt24">
                             <button type="button" class="btn-primary" onclick="window.print()">Vytlačiť výpočet</button>
                         </div>
                     </div>
@@ -408,11 +408,11 @@ if (isLoggedIn()) {
                                         <td class="admin-actions-cell">
                                             <a href="?load_id=<?= (int) $row[
                                                 "id"
-                                            ] ?>" class="btn-admin-action" style="background: var(--color-primary); color: white; border-color: var(--color-primary);">Načítať</a>
+                                            ] ?>" class="btn-admin-action btn-primary-filled">Načítať</a>
                                             <a href="calculator_result_print.php?result_id=<?= (int) $row[
                                                 "id"
                                             ] ?>" target="_blank" rel="noopener" class="btn-admin-action">Tlačiť</a>
-                                            <form method="POST" action="calculator_egfr_slope.php" style="display:inline">
+                                            <form method="POST" action="calculator_egfr_slope.php" class="d-inline">
                                                 <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(
                                                     generateCsrfToken(),
                                                 ) ?>">

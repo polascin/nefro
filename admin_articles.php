@@ -752,32 +752,6 @@ $pageTimeZone = date("T") . " (" . date_default_timezone_get() . ")";
   <script src="ui-preferences-fallback.js?v=20260511-1&cb=<?= filemtime(
       "ui-preferences-fallback.js",
   ) ?>" defer></script>
-  <style>
-    .admin-articles-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 0.9rem; }
-    .admin-articles-table th, .admin-articles-table td { padding: 10px 12px; border-bottom: 1px solid var(--border-color); text-align: left; vertical-align: top; }
-    .admin-articles-table th { font-weight: 600; color: var(--text-secondary); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.5px; }
-    .admin-articles-table tr:hover td { background: rgba(59,130,246,0.04); }
-    .article-form-grid { display: grid; gap: 18px; }
-    .form-row { display: flex; flex-direction: column; gap: 5px; }
-    .form-row label { font-weight: 600; font-size: 0.88rem; color: var(--text-secondary); }
-    .form-row input[type="text"], .form-row input[type="date"],
-    .form-row textarea, .form-row select {
-      width: 100%; padding: 10px 12px; border: 1px solid var(--border-color);
-      border-radius: 8px; background: var(--bg-color); color: var(--text-primary);
-      font-family: inherit; font-size: 0.95rem; transition: border-color 0.2s;
-    }
-    .form-row textarea { min-height: 420px; font-family: 'Courier New', monospace; font-size: 0.85rem; resize: vertical; }
-    .form-row input:focus, .form-row textarea:focus { outline: none; border-color: var(--primary-color); }
-    .form-row-inline { display: flex; gap: 20px; flex-wrap: wrap; align-items: center; }
-    .form-row-inline label { display: flex; align-items: center; gap: 6px; font-weight: 500; cursor: pointer; }
-    .form-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
-    .badge-pub   { background:#d1fae5;color:#065f46; padding:2px 8px;border-radius:10px;font-size:0.75rem;font-weight:600; }
-    .badge-draft { background:#fef3c7;color:#92400e; padding:2px 8px;border-radius:10px;font-size:0.75rem;font-weight:600; }
-    .badge-top-sm { background: var(--primary-gradient);color:#fff; padding:2px 8px;border-radius:10px;font-size:0.75rem;font-weight:600; }
-    .section-divider { border: none; border-top: 2px solid var(--border-color); margin: 36px 0; }
-    .helper-text { font-size: 0.8rem; color: var(--text-secondary); margin-top: 3px; }
-    @media(max-width:600px){.admin-articles-table th:nth-child(3),.admin-articles-table td:nth-child(3){display:none;}}
-  </style>
 </head>
 <body>
   <?php
@@ -788,7 +762,7 @@ $pageTimeZone = date("T") . " (" . date_default_timezone_get() . ")";
   include 'admin_menu.php';
   ?>
 
-  <main class="container container--wide" style="padding-top:40px;padding-bottom:60px;">
+  <main class="container container--wide admin-page-main">
     <div class="auth-container auth-container--wide">
       <h2>Správa článkov</h2>
       <p class="auth-subtitle">Pridávanie, úprava a mazanie článkov na hlavnej stránke.</p>
@@ -828,7 +802,7 @@ $pageTimeZone = date("T") . " (" . date_default_timezone_get() . ")";
 
           <div class="article-form-grid">
             <div class="form-row">
-              <label for="f_title">Titulok článku <span style="color:red">*</span></label>
+              <label for="f_title">Titulok článku <span class="text-error">*</span></label>
               <input type="text" id="f_title" name="title" required maxlength="500"
                      value="<?= htmlspecialchars(
                          (string) ($editArticle["title"] ?? ""),
@@ -873,7 +847,7 @@ $pageTimeZone = date("T") . " (" . date_default_timezone_get() . ")";
             </div>
 
             <div class="form-row">
-              <label for="f_content">Obsah článku (HTML) <span style="color:red">*</span></label>
+              <label for="f_content">Obsah článku (HTML) <span class="text-error">*</span></label>
               <textarea id="f_content" name="content" required
                         placeholder="Plný HTML obsah článku (odseky, h3 nadpisy, zoznamy atď.)"><?= htmlspecialchars(
                             (string) ($editArticle["content"] ?? ""),
@@ -882,7 +856,7 @@ $pageTimeZone = date("T") . " (" . date_default_timezone_get() . ")";
             </div>
 
             <div class="form-row">
-              <label for="f_published_at">Dátum publikácie <span style="color:red">*</span></label>
+              <label for="f_published_at">Dátum publikácie <span class="text-error">*</span></label>
               <input type="date" id="f_published_at" name="published_at" required
                      value="<?= htmlspecialchars(
                          substr(
@@ -913,7 +887,7 @@ $pageTimeZone = date("T") . " (" . date_default_timezone_get() . ")";
             </div>
           </div>
 
-          <div class="form-actions" style="margin-top:20px;">
+          <div class="form-actions admin-action-mt">
             <button type="submit" class="btn-primary">
               <?= $editArticle ? "💾 Uložiť zmeny" : "➕ Pridať článok" ?>
             </button>
@@ -934,12 +908,12 @@ $pageTimeZone = date("T") . " (" . date_default_timezone_get() . ")";
         <h3>Fronta e-mailových avíz</h3>
         <p class="helper-text">Automatické notifikácie pre používateľov so súhlasom s novinkami (bez SMS).</p>
 
-        <form method="GET" action="admin_articles.php" class="form-row-inline" style="margin-top:10px; margin-bottom:12px;">
+        <form method="GET" action="admin_articles.php" class="form-row-inline admin-filter-form">
           <input type="hidden" name="q_preset" value="<?= htmlspecialchars(
               $queuePreset,
           ) ?>">
           <label for="q_status">Stav:</label>
-          <select id="q_status" name="q_status" class="form-control" style="max-width:220px;">
+          <select id="q_status" name="q_status" class="form-control admin-select-sm">
             <option value="" <?= $queueFilterStatus === ""
                 ? "selected"
                 : "" ?>>Všetky</option>
@@ -958,7 +932,7 @@ $pageTimeZone = date("T") . " (" . date_default_timezone_get() . ")";
           </select>
 
           <label for="q_article_id">Článok:</label>
-          <select id="q_article_id" name="q_article_id" class="form-control" style="max-width:340px;">
+          <select id="q_article_id" name="q_article_id" class="form-control admin-select-md">
             <option value="0">Všetky články</option>
             <?php foreach ($articles as $filterArticle): ?>
               <?php $filterArticleId = (int) ($filterArticle["id"] ?? 0); ?>
@@ -986,12 +960,12 @@ $filterArticleId
         </form>
 
         <?php if ($queuePreset === "unsent"): ?>
-          <p class="helper-text" style="margin-top:-6px;">Aktívny rýchly filter: len neodoslané (čakajúce + neúspešné).</p>
+          <p class="helper-text admin-helper-neg">Aktívny rýchly filter: len neodoslané (čakajúce + neúspešné).</p>
         <?php elseif ($queuePreset === "due_now"): ?>
-          <p class="helper-text" style="margin-top:-6px;">Aktívny rýchly filter: len pripravené na odoslanie (čakajúce + neúspešné).</p>
+          <p class="helper-text admin-helper-neg">Aktívny rýchly filter: len pripravené na odoslanie (čakajúce + neúspešné).</p>
         <?php endif; ?>
 
-        <div class="form-row-inline" style="margin-top:10px;">
+        <div class="form-row-inline admin-tag-section">
           <span class="badge-pub">Čakajúce: <?= (int) ($queueSummary[
               "pending"
           ] ?? 0) ?></span>
@@ -1000,13 +974,13 @@ $filterArticleId
           ] ?? 0) ?></span>
           <span class="badge-top-sm">Odoslané: <?= (int) ($queueSummary["sent"] ??
               0) ?></span>
-          <span class="badge-draft" style="background:#e5e7eb;color:#374151;">Zrušené: <?= (int) ($queueSummary[
+          <span class="badge-draft badge-neutral">Zrušené: <?= (int) ($queueSummary[
               "cancelled"
           ] ?? 0) ?></span>
-          <span class="badge-pub" style="background:#dbeafe;color:#1e3a8a;">Pripravené: <?= (int) ($queueSummary[
+          <span class="badge-pub badge-info">Pripravené: <?= (int) ($queueSummary[
               "due_now"
           ] ?? 0) ?></span>
-          <form method="POST" action="admin_articles.php" style="display:inline; margin-left:8px;"
+          <form method="POST" action="admin_articles.php" class="d-inline ml-8"
                 onsubmit="return confirm('Naozaj chcete odoslať avíza pripravené na odoslanie?');">
             <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(
                 $csrfToken,
@@ -1018,7 +992,7 @@ $filterArticleId
         </div>
 
         <?php if (!empty($queueRecent)): ?>
-          <div style="overflow-x:auto; margin-top:16px;">
+          <div class="admin-table-overflow">
             <table class="admin-articles-table" aria-label="Posledné položky fronty noviniek">
               <thead>
                 <tr>
@@ -1054,7 +1028,7 @@ $filterArticleId
             </table>
           </div>
         <?php else: ?>
-          <p style="margin-top:12px;">Fronta je zatiaľ prázdna.</p>
+          <p class="calc-result-mt12">Fronta je zatiaľ prázdna.</p>
         <?php endif; ?>
       </div>
 
@@ -1067,7 +1041,7 @@ $filterArticleId
         <?php if (empty($articles)): ?>
           <p>Zatiaľ žiadne články. Pridajte prvý vyššie.</p>
         <?php else: ?>
-          <div style="overflow-x:auto;">
+          <div class="overflow-x-auto">
             <table class="admin-articles-table" aria-label="Zoznam článkov">
               <thead>
                 <tr>
@@ -1102,7 +1076,7 @@ $filterArticleId
                     ?>
                 <tr>
                   <td><?= $aId ?></td>
-                  <td style="font-weight:600; color:var(--primary-color);"><?= $idx +
+                  <td class="admin-article-title"><?= $idx +
                       1 ?></td>
                   <td>
                     <a href="article.php?id=<?= $aId ?>" target="_blank"><?= $aTitle ?></a>
@@ -1119,13 +1093,13 @@ $filterArticleId
                     <?php endif; ?>
                   </td>
                   <td>
-                    <div style="margin-bottom:6px; font-size:0.78rem; color:var(--text-secondary);">
+                    <div class="admin-article-meta">
                       P: <?= (int) ($qStats["pending"] ?? 0) ?> |
                       F: <?= (int) ($qStats["failed"] ?? 0) ?> |
                       S: <?= (int) ($qStats["sent"] ?? 0) ?>
                     </div>
                     <?php if (!$isFirst): ?>
-                      <form method="POST" action="admin_articles.php" style="display:inline">
+                      <form method="POST" action="admin_articles.php" class="d-inline">
                         <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(
                             $csrfToken,
                         ) ?>">
@@ -1135,7 +1109,7 @@ $filterArticleId
                       </form>
                     <?php endif; ?>
                     <?php if (!$isLast): ?>
-                      <form method="POST" action="admin_articles.php" style="display:inline">
+                      <form method="POST" action="admin_articles.php" class="d-inline">
                         <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(
                             $csrfToken,
                         ) ?>">
@@ -1144,7 +1118,7 @@ $filterArticleId
                         <button type="submit" class="btn-secondary-small" title="Dole">▼</button>
                       </form>
                     <?php endif; ?>
-                    <form method="POST" action="admin_articles.php" style="display:inline"<?= $aTop
+                    <form method="POST" action="admin_articles.php" class="d-inline"<?= $aTop
                         ? ' onsubmit="return confirm(\'Naozaj chcete vyradiť tento článok z TOP sekcie?\');"'
                         : "" ?>>
                       <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(
@@ -1162,7 +1136,7 @@ $filterArticleId
                       <?php endif; ?>
                     </form>
                     <a href="admin_articles.php?action=edit&id=<?= $aId ?>" class="btn-secondary-small">✏️ Upraviť</a>
-                    <form method="POST" action="admin_articles.php" style="display:inline">
+                    <form method="POST" action="admin_articles.php" class="d-inline">
                       <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(
                           $csrfToken,
                       ) ?>">
@@ -1172,7 +1146,7 @@ $filterArticleId
                           ? ""
                           : "disabled" ?>>📧 Avízo teraz</button>
                     </form>
-                    <form method="POST" action="admin_articles.php" style="display:inline">
+                    <form method="POST" action="admin_articles.php" class="d-inline">
                       <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(
                           $csrfToken,
                       ) ?>">
@@ -1181,14 +1155,14 @@ $filterArticleId
                       <button type="submit" class="btn-secondary-small" title="Znovu zaradiť neodoslané avíza">↻ Neodoslané</button>
                     </form>
                     &nbsp;
-                    <form method="POST" action="admin_articles.php" style="display:inline"
+                    <form method="POST" action="admin_articles.php" class="d-inline"
                         onsubmit="return confirm('Naozaj chcete odstrániť tento článok?');">
                       <input type="hidden" name="csrf_token"  value="<?= htmlspecialchars(
                           $csrfToken,
                       ) ?>">
                       <input type="hidden" name="action"      value="delete">
                       <input type="hidden" name="article_id"  value="<?= $aId ?>">
-                      <button type="submit" class="btn-secondary-small" style="border-color:#ef4444;color:#ef4444;">🗑 Zmazať</button>
+                      <button type="submit" class="btn-secondary-small btn-danger-outline">🗑 Zmazať</button>
                     </form>
                   </td>
                 </tr>
@@ -1200,7 +1174,7 @@ $filterArticleId
           </div>
         <?php endif; ?>
                 <?php if (!empty($articlesTotalPages) && $articlesTotalPages > 1): ?>
-                    <nav class="articles-pagination" aria-label="Stránkovanie článkov" style="margin-top:16px;">
+                    <nav class="articles-pagination admin-pagination" aria-label="Stránkovanie článkov">
                         <span class="articles-pagination__label">Stránky:</span>
                         <div class="articles-pagination__links">
                             <?php for ($p = 1; $p <= $articlesTotalPages; $p++): ?>

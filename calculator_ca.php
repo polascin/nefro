@@ -333,7 +333,7 @@ if (isLoggedIn()) {
                             ),
                         ) ?> mmol/L</p>
 
-                        <div class="form-actions no-print" style="margin-top: 24px;">
+                        <div class="form-actions no-print calc-result-mt24">
                             <button type="button" class="btn-primary" onclick="window.print()">Vytlačiť výpočet</button>
                         </div>
                     </div>
@@ -387,11 +387,11 @@ if (isLoggedIn()) {
                                         <td class="admin-actions-cell">
                                             <a href="?load_id=<?= (int) $row[
                                                 "id"
-                                            ] ?>" class="btn-admin-action" style="background: var(--color-primary); color: white; border-color: var(--color-primary);">Načítať</a>
+                                            ] ?>" class="btn-admin-action btn-primary-filled">Načítať</a>
                                             <a href="calculator_result_print.php?result_id=<?= (int) $row[
                                                 "id"
                                             ] ?>" target="_blank" rel="noopener" class="btn-admin-action">Tlačiť</a>
-                                            <form method="POST" action="calculator_ca.php" style="display:inline" onsubmit="return confirm('Naozaj vymazať záznam?')">
+                                            <form method="POST" action="calculator_ca.php" class="d-inline" onsubmit="return confirm('Naozaj vymazať záznam?')">
                                                 <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(
                                                     generateCsrfToken(),
                                                 ) ?>">

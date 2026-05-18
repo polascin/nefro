@@ -16,7 +16,7 @@ header(
 $csp =
     "default-src 'self'; " .
     "img-src 'self' data: https:; " .
-    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; " .
+    "style-src 'self' https://fonts.googleapis.com; " .
     "font-src 'self' https://fonts.gstatic.com; " .
     "script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com; " .
     "connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://*.analytics.google.com https://stats.g.doubleclick.net; " .
@@ -325,7 +325,7 @@ $schemaWebApp = [
 
             <section class="features-section" aria-labelledby="spec-calculators-heading">
                 <h2 id="spec-calculators-heading">Diagnózovo špecifické kalkulačky</h2>
-                <p style="margin-bottom:16px;font-size:0.92rem;opacity:0.8;">KDIGO 2024 odporúča pre niektoré ochorenia obličiek použiť externálne validované, diagnózovo špecifické prognostické nástroje.</p>
+                <p class="calc-intro-text">KDIGO 2024 odporúča pre niektoré ochorenia obličiek použiť externálne validované, diagnózovo špecifické prognostické nástroje.</p>
                 <div class="features-grid calculators-grid">
                     <article class="feature-card calculator-card">
                         <h3>IgAN Prediction Tool</h3>

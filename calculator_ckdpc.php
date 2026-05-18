@@ -598,7 +598,7 @@ function sexLabel(string $v): string
                     (kde KFRE nemusí byť presný).
                 </p>
 
-                <div class="alert" style="background: rgba(59,130,246,0.07); border-left: 4px solid #3b82f6; padding: 12px 16px; border-radius: 6px; margin-bottom: 16px; font-size: 0.88rem;">
+                <div class="info-box-blue">
                     <strong>Zdroj:</strong> Grams ME et al. <em>Diabetes Care.</em> 2022;45(9):2055–2063.
                     <a href="https://pubmed.ncbi.nlm.nih.gov/35856507/" target="_blank" rel="noopener noreferrer">PMID 35856507</a>.
                     Oficiálny kalkulátor:
@@ -619,7 +619,7 @@ function sexLabel(string $v): string
                     </div>
                 </details>
 
-                <div class="alert" style="background:rgba(16,185,129,0.07);border-left:4px solid #10b981;padding:12px 16px;border-radius:6px;margin-bottom:16px;font-size:0.88rem;">
+                <div class="info-box-green">
                     <strong>Porovnanie s referenčnými kalkulátormi:</strong>
                     <a href="https://ckdpcrisk.org/gfrdecline40/" target="_blank" rel="noopener noreferrer">ckdpcrisk.org/gfrdecline40/</a> (CKD-PC Grams, oficiálny) &ensp;&bull;&ensp;
                     <a href="https://kidneyfailurerisk.com/" target="_blank" rel="noopener noreferrer">kidneyfailurerisk.com</a> (KFRE, Tangri)
@@ -720,13 +720,13 @@ function sexLabel(string $v): string
 
                             <div class="form-group">
                                 <label for="uacr_value">UACR</label>
-                                <div style="display:flex;gap:8px;">
+                                <div class="flex-gap-8">
                                     <input type="text" id="uacr_value" name="uacr_value" required
-                                           class="form-control" style="flex:1;"
+                                           class="form-control flex-1"
                                            value="<?= htmlspecialchars(
                                                $form["uacr_value"],
                                            ) ?>">
-                                    <select name="uacr_unit" class="form-control" style="flex:0.8;">
+                                    <select name="uacr_unit" class="form-control flex-08">
                                         <option value="mg_g"    <?= $form[
                                             "uacr_unit"
                                         ] === "mg_g"
@@ -839,7 +839,7 @@ function sexLabel(string $v): string
                             <div class="form-group">
                                 <label for="diabetes">Diabetes mellitus</label>
                                 <select id="diabetes" name="diabetes" class="form-control"
-                                        onchange="document.getElementById('dm-fields').style.display = this.value==='1' ? '' : 'none'">
+                                        onchange="document.getElementById('dm-fields').classList.toggle('d-none', this.value !== '1')">
                                     <option value="0" <?= $form["diabetes"] ===
                                     "0"
                                         ? "selected"
@@ -855,11 +855,7 @@ function sexLabel(string $v): string
                     </div><!-- /.form-section -->
 
                     <!-- DM-špecifické polia -->
-                    <div class="form-section" id="dm-fields" style="<?= $form[
-                        "diabetes"
-                    ] === "1"
-                        ? ""
-                        : "display:none" ?>">
+                    <div class="form-section<?= $form["diabetes"] === "1" ? "" : " d-none" ?>" id="dm-fields">
                         <h3>Liečba a laboratórium pri DM</h3>
                         <div class="form-grid">
 
@@ -950,7 +946,7 @@ function sexLabel(string $v): string
                             <?php endforeach; ?>
 
                             <?php if (!empty($calculated["warnings"])): ?>
-                                <div class="alert alert-error" style="margin-top:12px;">
+                                <div class="alert alert-error calc-result-mt12">
                                     <ul>
                                         <?php foreach (
                                             $calculated["warnings"]
@@ -968,7 +964,7 @@ function sexLabel(string $v): string
                         <!-- Vstupné hodnoty -->
                         <details class="ckdpc-inputs-summary">
                             <summary>Použité vstupné hodnoty</summary>
-                            <table class="admin-table" style="margin-top:8px;">
+                            <table class="admin-table mt-8">
                                 <tr><th>Vek</th><td><?= (int) $calculated[
                                     "age_years"
                                 ] ?> rokov</td></tr>
@@ -1048,7 +1044,7 @@ function sexLabel(string $v): string
                             </table>
                         </details>
 
-                        <div class="form-actions no-print" style="margin-top:16px;">
+                        <div class="form-actions no-print calc-result-mt16">
                             <button type="button" class="btn-primary" onclick="window.print()">Tlačiť výpočet</button>
                             <a href="calculator_kfre.php" class="btn-secondary">Otvoriť KFRE (2-ročné &amp; 5-ročné)</a>
                         </div>
@@ -1096,7 +1092,7 @@ function sexLabel(string $v): string
                         <p><a href="calculator_kfre.php">Otvoriť KFRE kalkulačku →</a></p>
                     </div>
 
-                    <div class="kfre-threshold" style="border-left-color: #6b7280; background: rgba(107,114,128,0.05);">
+                    <div class="kfre-threshold info-box-gray">
                         <h4>Obmedzenia a disclaimer</h4>
                         <p>
                             Koeficienty modelov 1, 2 a 4 (Bez DM a DM eGFR&lt;60) sú odvodené z
@@ -1178,7 +1174,7 @@ function sexLabel(string $v): string
                                                     ] ?>"
                                                        target="_blank" class="btn-secondary btn-sm">Tlačiť</a>
                                                     <form method="POST" action="calculator_ckdpc.php"
-                                                          style="display:inline;"
+                                                          class="d-inline"
                                                           onsubmit="return confirm('Naozaj vymazať tento záznam?')">
                                                         <input type="hidden" name="csrf_token"
                                                                value="<?= htmlspecialchars(

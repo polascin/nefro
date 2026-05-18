@@ -474,7 +474,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     </script>
 
                     <!-- Honeypot pole: neviditeľné pre ľudí, vypĺňajú ho iba boti. Musí ostatť prázdne. -->
-                    <div style="position:absolute;left:-9999px;top:-9999px;overflow:hidden;" aria-hidden="true" tabindex="-1">
+                    <div class="honeypot" aria-hidden="true" tabindex="-1">
                         <label for="website_url">Webová adresa (nevypĺňať)</label>
                         <input type="text" id="website_url" name="website_url" value="" autocomplete="off" tabindex="-1" maxlength="255">
                     </div>

@@ -351,7 +351,7 @@ if (isLoggedIn()) {
                     </div>
                 </details>
 
-                <div class="alert" style="background:rgba(16,185,129,0.07);border-left:4px solid #10b981;padding:12px 16px;border-radius:6px;margin-bottom:16px;font-size:0.88rem;">
+                <div class="info-box-green">
                     <strong>Porovnanie s referenčnými kalkulátormi:</strong>
                     <a href="https://www.kidney.org/professionals/kdoqi/gfr_calculator" target="_blank" rel="noopener noreferrer">NKF / KDOQI eGFR</a> &ensp;&bull;&ensp;
                     <a href="https://www.mdcalc.com/calc/3939/ckd-epi-equations-glomerular-filtration-rate-gfr" target="_blank" rel="noopener noreferrer">MDCalc CKD-EPI</a> &ensp;&bull;&ensp;
@@ -555,11 +555,11 @@ if (isLoggedIn()) {
                                         <td class="admin-actions-cell">
                                             <a href="?load_id=<?= (int) $row[
                                                 "id"
-                                            ] ?>" class="btn-admin-action" style="background: var(--color-primary); color: white; border-color: var(--color-primary);">Načítať</a>
+                                            ] ?>" class="btn-admin-action btn-primary-filled">Načítať</a>
                                             <a href="calculator_result_print.php?result_id=<?= (int) $row[
                                                 "id"
                                             ] ?>" target="_blank" rel="noopener" class="btn-admin-action">Tlačiť</a>
-                                            <form method="POST" action="calculator_egfr.php" style="display:inline" onsubmit="return confirm('Naozaj vymazať záznam?')">
+                                            <form method="POST" action="calculator_egfr.php" class="d-inline" onsubmit="return confirm('Naozaj vymazať záznam?')">
                                                 <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(
                                                     generateCsrfToken(),
                                                 ) ?>">

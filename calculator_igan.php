@@ -276,7 +276,7 @@ if (isLoggedIn()) {
                 <h2>IgAN Prediction Tool</h2>
                 <p class="auth-subtitle">Odhad 5-ročného rizika poklesu eGFR o ≥&thinsp;50&thinsp;% alebo ESKD pri IgA nefropatii (Barbour et al. 2019, klinický model).</p>
 
-                <div class="alert" style="background:rgba(245,158,11,0.08);border-left:4px solid #f59e0b;padding:12px 16px;border-radius:6px;margin-bottom:16px;font-size:0.88rem;">
+                <div class="info-box-yellow">
                     <strong>⚠ Klinický model bez histológie.</strong> Pre presnejšie výsledky vrátane Oxford MEST-C skóre použite
                     <a href="https://qxcalc.app.link/igarisk" target="_blank" rel="noopener noreferrer">QxMD IgAN Tool</a>.
                 </div>
@@ -426,7 +426,7 @@ if (isLoggedIn()) {
             <?php include "calculator_disclaimer.php"; ?>
 
             <?php if (!empty($savedResults)): ?>
-                <section class="auth-container auth-container--wide calc-saved-results" style="margin-top:32px;">
+                <section class="auth-container auth-container--wide calc-saved-results calc-result-mt32">
                     <h3>Uložené výsledky</h3>
                     <div class="calc-saved-list">
                         <?php foreach ($savedResults as $row): ?>
@@ -460,7 +460,7 @@ if (isLoggedIn()) {
                                     ",",
                                     " ",
                                 ) ?>&thinsp;%</strong></p>
-                                <form method="POST" action="calculator_igan.php" style="display:inline;">
+                                <form method="POST" action="calculator_igan.php" class="d-inline">
                                     <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(
                                         generateCsrfToken(),
                                     ) ?>">

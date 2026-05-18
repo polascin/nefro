@@ -264,7 +264,7 @@ function formatResultKey(string $key): string {
                         <?php endif; ?>
                     </div>
 
-                    <div class="form-actions no-print" style="margin-top: 24px;">
+                    <div class="form-actions no-print calc-result-mt24">
                         <button type="button" class="btn-primary" onclick="window.print()">🖨 Tlačiť</button>
                         <a href="javascript:window.close()" class="btn-secondary">Zatvoriť okno</a>
                         <a href="calculators.php" class="btn-secondary">Kalkulačky</a>

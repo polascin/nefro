@@ -18,7 +18,7 @@ header("Surrogate-Control: no-store");
 
 $csp = "default-src 'self'; "
   . "img-src 'self' data: https:; "
-  . "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; "
+  . "style-src 'self' https://fonts.googleapis.com; "
   . "font-src 'self' https://fonts.gstatic.com; "
   . "script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com; "
   . "connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://*.analytics.google.com https://stats.g.doubleclick.net; "
@@ -153,7 +153,7 @@ $pageLastUpdated = date('d.m.Y', filemtime(__FILE__));
                 <!-- 2. AKÉ ÚDAJE ZHROMAŽĎUJEME -->
                 <h3>2. Aké osobné údaje spracúvame</h3>
 
-                <h4 style="margin:12px 0 6px; font-size:1rem; font-weight:600;">2a. Registrovaní používatelia</h4>
+                <h4 class="privacy-subheading">2a. Registrovaní používatelia</h4>
                 <p>
                     Pri registrácii a používaní konta spracúvame:
                 </p>
@@ -169,7 +169,7 @@ $pageLastUpdated = date('d.m.Y', filemtime(__FILE__));
                     oprávnený záujem na bezpečnosti systému (čl. 6 ods. 1 písm. f) GDPR).
                 </p>
 
-                <h4 style="margin:12px 0 6px; font-size:1rem; font-weight:600;">2b. Všetci návštevníci</h4>
+                <h4 class="privacy-subheading">2b. Všetci návštevníci</h4>
                 <ul>
                     <li><strong>Prevádzkové záznamy (server logy):</strong> IP adresa, typ prehliadača, operačný systém, URL požiadavky, čas prístupu — uchovávané z dôvodu bezpečnosti a ladenia.</li>
                     <li><strong>Analytické dáta (GA4):</strong> iba so súhlasom — anonymizované štatistiky návštevnosti cez Google Analytics 4 (pozri sekciu 5).</li>
@@ -265,7 +265,7 @@ $pageLastUpdated = date('d.m.Y', filemtime(__FILE__));
                     zvoliť kategórie cookies.
                 </p>
 
-                <h4 style="margin:12px 0 6px; font-size:1rem; font-weight:600;">Kategórie cookies</h4>
+                <h4 class="privacy-subheading">Kategórie cookies</h4>
                 <ul>
                     <li>
                         <strong>Nevyhnutné (Strictly Necessary):</strong> zabezpečujú základné
@@ -298,7 +298,7 @@ $pageLastUpdated = date('d.m.Y', filemtime(__FILE__));
                     </li>
                 </ul>
 
-                <h4 style="margin:12px 0 6px; font-size:1rem; font-weight:600;">Uloženie súhlasu</h4>
+                <h4 class="privacy-subheading">Uloženie súhlasu</h4>
                 <p>
                     Váš súhlas sa ukladá do <code>localStorage</code> prehliadača (primárne)
                     a zálohou do cookie <code>nps_cookie_consent</code> s platnosťou

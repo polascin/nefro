@@ -26,7 +26,7 @@ header("Surrogate-Control: no-store");
 $csp =
     "default-src 'self'; " .
     "img-src 'self' data: https:; " .
-    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; " .
+    "style-src 'self' https://fonts.googleapis.com; " .
     "font-src 'self' https://fonts.gstatic.com; " .
     "script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com; " .
     "connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com https://analytics.google.com https://*.analytics.google.com https://stats.g.doubleclick.net; " .
@@ -450,7 +450,7 @@ if ($article) {
           </ul>
         </div>
         <?php endif; ?>
-        <a href="index.php" class="btn-primary" style="display:inline-block;margin-top:10px;">Všetky články</a>
+        <a href="index.php" class="btn-primary article-back-link">Všetky články</a>
       </div>
       <div class="widget">
         <h3>Užitočné odkazy</h3>
@@ -461,7 +461,7 @@ if ($article) {
           <li><a href="https://www.era-online.org/" target="_blank" rel="noopener noreferrer">European Renal Association (ERA)</a></li>
           <li><a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noopener noreferrer">PubMed</a></li>
         </ul>
-        <h4 style="margin: 15px 0 10px; font-size: 0.95rem; color: var(--text-secondary); border-bottom: 1px solid var(--border-color); padding-bottom: 5px;">Kalkulačky</h4>
+        <h4 class="subheading-secondary">Kalkulačky</h4>
         <ul>
           <li><a href="https://www.mdcalc.com/specialties/nephrology" target="_blank" rel="noopener noreferrer">MDCalc Nephrology</a></li>
           <li><a href="https://qxmd.com/calculate/" target="_blank" rel="noopener noreferrer">Calculate by QxMD</a></li>
@@ -506,7 +506,7 @@ if ($article) {
           <li><a href="https://neer.ee/" target="_blank" rel="noopener noreferrer">Estónsko (ENL)</a></li>
           <li><a href="https://www.nek.org.cy/" target="_blank" rel="noopener noreferrer">Cyprus (CKA)</a></li>
           <!-- Medzinárodné organizácie -->
-          <li style="border-top: 1px solid var(--border-color); margin-top: 10px; padding-top: 10px;"><a href="https://www.theisn.org/" target="_blank" rel="noopener noreferrer">International Society of Nephrology (ISN)</a></li>
+          <li class="list-item-separator"><a href="https://www.theisn.org/" target="_blank" rel="noopener noreferrer">International Society of Nephrology (ISN)</a></li>
           <li><a href="https://www.era-online.org/" target="_blank" rel="noopener noreferrer">European Renal Association (ERA)</a></li>
           <li><a href="https://kdigo.org/" target="_blank" rel="noopener noreferrer">KDIGO</a></li>
           <li><a href="https://www.edtnaerca.org/" target="_blank" rel="noopener noreferrer">EDTNA/ERCA (International Nurses)</a></li>
@@ -645,7 +645,7 @@ if ($article) {
           <li><a href="https://nefro.ee/koolitus/" target="_blank" rel="noopener noreferrer">Estónsko (ENS Koolitus)</a></li>
           <li><a href="https://www.nek.org.cy/education" target="_blank" rel="noopener noreferrer">Cyprus (CRA Education)</a></li>
           <!-- Medzinárodné vzdelávacie inštitúcie -->
-          <li style="border-top: 1px solid var(--border-color); margin-top: 10px; padding-top: 10px;"><a href="https://academy.theisn.org/" target="_blank" rel="noopener noreferrer">ISN Academy</a></li>
+          <li class="list-item-separator"><a href="https://academy.theisn.org/" target="_blank" rel="noopener noreferrer">ISN Academy</a></li>
           <li><a href="https://www.era-online.org/education/" target="_blank" rel="noopener noreferrer">ERA Education</a></li>
           <li><a href="https://kdigo.org/education/" target="_blank" rel="noopener noreferrer">KDIGO Education</a></li>
           <li><a href="https://www.nephjc.com/" target="_blank" rel="noopener noreferrer">NephJC (Nephrology Journal Club)</a></li>

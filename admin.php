@@ -293,7 +293,7 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
             <h2>Administrácia</h2>
             <p class="auth-subtitle">Komplexné možnosti administrácie a audit histórie zmien profilov.</p>
 
-            <p style="margin-bottom:1.2rem;">
+            <p class="admin-p-intro">
                 <a href="admin_articles.php" class="btn-admin-action">📝 Správa článkov</a>
             </p>
 
@@ -361,31 +361,31 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
                 </div>
                 <h4>Režim: vrátane technických a citlivých polí</h4>
                 <div class="admin-notice-actions">
-                    <form method="POST" action="admin_users_notice.php" target="_blank" style="display:inline" onsubmit="return confirm('Naozaj otvoriť citlivý výstup používateľov?')">
+                    <form method="POST" action="admin_users_notice.php" target="_blank" class="d-inline" onsubmit="return confirm('Naozaj otvoriť citlivý výstup používateľov?')">
                         <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
                         <input type="hidden" name="format" value="view">
                         <input type="hidden" name="include_sensitive" value="1">
                         <button type="submit" class="btn-admin-action btn-admin-action--warn">Zobraziť dokument</button>
                     </form>
-                    <form method="POST" action="admin_users_notice.php" target="_blank" style="display:inline" onsubmit="return confirm('Naozaj otvoriť citlivý výstup používateľov?')">
+                    <form method="POST" action="admin_users_notice.php" target="_blank" class="d-inline" onsubmit="return confirm('Naozaj otvoriť citlivý výstup používateľov?')">
                         <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
                         <input type="hidden" name="format" value="print">
                         <input type="hidden" name="include_sensitive" value="1">
                         <button type="submit" class="btn-admin-action btn-admin-action--warn">Vytlačiť</button>
                     </form>
-                    <form method="POST" action="admin_users_notice.php" style="display:inline" onsubmit="return confirm('Naozaj otvoriť citlivý výstup používateľov?')">
+                    <form method="POST" action="admin_users_notice.php" class="d-inline" onsubmit="return confirm('Naozaj otvoriť citlivý výstup používateľov?')">
                         <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
                         <input type="hidden" name="format" value="csv">
                         <input type="hidden" name="include_sensitive" value="1">
                         <button type="submit" class="btn-admin-action btn-admin-action--warn">Uložiť CSV</button>
                     </form>
-                    <form method="POST" action="admin_users_notice.php" style="display:inline" onsubmit="return confirm('Naozaj otvoriť citlivý výstup používateľov?')">
+                    <form method="POST" action="admin_users_notice.php" class="d-inline" onsubmit="return confirm('Naozaj otvoriť citlivý výstup používateľov?')">
                         <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
                         <input type="hidden" name="format" value="json">
                         <input type="hidden" name="include_sensitive" value="1">
                         <button type="submit" class="btn-admin-action btn-admin-action--warn">Uložiť JSON</button>
                     </form>
-                    <form method="POST" action="admin_users_notice.php" style="display:inline" onsubmit="return confirm('Naozaj otvoriť citlivý výstup používateľov?')">
+                    <form method="POST" action="admin_users_notice.php" class="d-inline" onsubmit="return confirm('Naozaj otvoriť citlivý výstup používateľov?')">
                         <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
                         <input type="hidden" name="format" value="txt">
                         <input type="hidden" name="include_sensitive" value="1">
@@ -424,19 +424,19 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
                                         <td><?= htmlspecialchars((string) ($u['created_at'] ?? '')) ?></td>
                                         <td class="admin-actions-cell">
                                             <?php if ((int) $u['id'] !== $currentAdminId): ?>
-                                                <form method="POST" action="admin.php" style="display:inline" onsubmit="return confirm('Naozaj zmeniť rolu?')">
+                                                <form method="POST" action="admin.php" class="d-inline" onsubmit="return confirm('Naozaj zmeniť rolu?')">
                                                     <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
                                                     <input type="hidden" name="action" value="toggle_admin">
                                                     <input type="hidden" name="user_id" value="<?= (int) $u['id'] ?>">
                                                     <button type="submit" class="btn-admin-action"><?= !empty($u['is_admin']) ? 'Odňať Admin' : 'Udeliť Admin' ?></button>
                                                 </form>
-                                                <form method="POST" action="admin.php" style="display:inline" onsubmit="return confirm('Naozaj zmeniť stav účtu?')">
+                                                <form method="POST" action="admin.php" class="d-inline" onsubmit="return confirm('Naozaj zmeniť stav účtu?')">
                                                     <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
                                                     <input type="hidden" name="action" value="toggle_active">
                                                     <input type="hidden" name="user_id" value="<?= (int) $u['id'] ?>">
                                                     <button type="submit" class="btn-admin-action"><?= ((int) ($u['is_active'] ?? 1)) ? 'Deaktivovať' : 'Aktivovať' ?></button>
                                                 </form>
-                                                <form method="POST" action="admin.php" style="display:inline" onsubmit="return confirm('Naozaj resetovať heslo? Dočasné heslo bude zobrazené jednorázovo.')">
+                                                <form method="POST" action="admin.php" class="d-inline" onsubmit="return confirm('Naozaj resetovať heslo? Dočasné heslo bude zobrazené jednorázovo.')">
                                                     <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
                                                     <input type="hidden" name="action" value="reset_password">
                                                     <input type="hidden" name="user_id" value="<?= (int) $u['id'] ?>">

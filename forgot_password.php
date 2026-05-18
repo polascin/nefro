@@ -207,7 +207,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 </script>
 
                 <!-- Honeypot pole: neviditeľné pre ľudí, vypĺňajú ho iba boti. Musí ostatť prázdne. -->
-                <div style="position:absolute;left:-9999px;top:-9999px;overflow:hidden;" aria-hidden="true" tabindex="-1">
+                <div class="honeypot" aria-hidden="true" tabindex="-1">
                     <label for="hp_contact">Kontakt (nevypĺňať)</label>
                     <input type="text" id="hp_contact" name="hp_contact" value="" autocomplete="off" tabindex="-1" maxlength="255">
                 </div>

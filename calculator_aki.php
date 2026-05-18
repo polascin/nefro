@@ -431,7 +431,7 @@ if (isLoggedIn()) {
 
                     <div class="form-section">
                         <h3>Parametre pre FENa (Sodík)</h3>
-                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 12px;">Vyplňte pre výpočet FENa.</p>
+                        <p class="text-secondary-sm-mb12"Vyplňte pre výpočet FENa.</p>
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="s_na">S-Sodík (mmol/L)</label>
@@ -450,7 +450,7 @@ if (isLoggedIn()) {
 
                     <div class="form-section">
                         <h3>Parametre pre FEUrea (Urea)</h3>
-                        <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 12px;">Vyplňte pre výpočet FEUrea (vhodné pri diuretikách).</p>
+                        <p class="text-secondary-sm-mb12"Vyplňte pre výpočet FEUrea (vhodné pri diuretikách).</p>
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="s_urea">S-Urea (mmol/L)</label>
@@ -486,7 +486,7 @@ if (isLoggedIn()) {
                                     " ",
                                 ),
                             ) ?> %</p>
-                            <p style="margin-bottom: 16px;"><strong>Interpretácia FENa:</strong> <?= htmlspecialchars(
+                            <p class="mb-16"><strong>Interpretácia FENa:</strong> <?= htmlspecialchars(
                                 $calculated["fena_interpretation"],
                             ) ?></p>
                         <?php endif; ?>
@@ -505,7 +505,7 @@ if (isLoggedIn()) {
                             ) ?></p>
                         <?php endif; ?>
 
-                        <div class="form-actions no-print" style="margin-top: 24px;">
+                        <div class="form-actions no-print calc-result-mt24">
                             <button type="button" class="btn-primary" onclick="window.print()">Vytlačiť výpočet</button>
                         </div>
                     </div>
@@ -572,11 +572,11 @@ if (isLoggedIn()) {
                                         <td class="admin-actions-cell">
                                             <a href="?load_id=<?= (int) $row[
                                                 "id"
-                                            ] ?>" class="btn-admin-action" style="background: var(--color-primary); color: white; border-color: var(--color-primary);">Načítať</a>
+                                            ] ?>" class="btn-admin-action btn-primary-filled">Načítať</a>
                                             <a href="calculator_result_print.php?result_id=<?= (int) $row[
                                                 "id"
                                             ] ?>" target="_blank" rel="noopener" class="btn-admin-action">Tlačiť</a>
-                                            <form method="POST" action="calculator_aki.php" style="display:inline" onsubmit="return confirm('Naozaj vymazať záznam?')">
+                                            <form method="POST" action="calculator_aki.php" class="d-inline" onsubmit="return confirm('Naozaj vymazať záznam?')">
                                                 <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(
                                                     generateCsrfToken(),
                                                 ) ?>">

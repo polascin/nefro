@@ -471,7 +471,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             $mobileSentAt = $user['mobile_verification_sent_at'] ?? null;
                             $mobileExpiresAt = $user['mobile_verification_expires_at'] ?? null;
                             ?>
-                            <p class="avatar-upload-hint" style="margin-top:8px;">
+                            <p class="avatar-upload-hint profile-mt-8">
                                 Stav overenia mobilu:
                                 <strong><?= $isMobileVerified ? 'Overený' : 'Neoverený' ?></strong>
                                 <?php if (!empty($user['mobile_phone']) && !$isMobileVerified): ?>
@@ -483,14 +483,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 <?php endif; ?>
                             </p>
 
-                            <div class="form-grid" style="margin-top:10px;">
+                            <div class="form-grid profile-mt-10">
                                 <div class="form-group">
                                     <label for="mobile_verification_code">SMS overovací kód</label>
                                     <input type="text" id="mobile_verification_code" name="mobile_verification_code" class="form-control" inputmode="numeric" pattern="^\d{6}$" maxlength="6" placeholder="123456">
                                 </div>
                             </div>
 
-                            <div class="form-actions" style="margin-top:6px; display:flex; gap:10px; flex-wrap:wrap;">
+                            <div class="form-actions profile-actions">
                                 <button type="submit" name="mobile_verification_action" value="send" class="btn-primary">Poslať overovací SMS kód</button>
                                 <button type="submit" name="mobile_verification_action" value="verify" class="btn-primary">Overiť mobilný kód</button>
                             </div>

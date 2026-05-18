@@ -308,7 +308,7 @@ if (isLoggedIn()) {
                     </div>
                 </details>
 
-                <div class="alert" style="background:rgba(16,185,129,0.07);border-left:4px solid #10b981;padding:12px 16px;border-radius:6px;margin-bottom:16px;font-size:0.88rem;">
+                <div class="info-box-green">
                     <strong>Porovnanie s referenčnými zdrojmi:</strong>
                     <a href="https://kdigo.org/guidelines/ckd-evaluation-and-management/" target="_blank" rel="noopener noreferrer">KDIGO 2024 Guidelines</a> &ensp;&bull;&ensp;
                     <a href="https://www.kidney.org/kidney-topics/chronic-kidney-disease-ckd" target="_blank" rel="noopener noreferrer">NKF — CKD (G/A klasifikácia)</a> &ensp;&bull;&ensp;
@@ -381,13 +381,13 @@ if (isLoggedIn()) {
                             </div>
                             <div class="form-group">
                                 <label for="uacr">UACR</label>
-                                <div style="display:flex;gap:8px;">
+                                <div class="flex-gap-8">
                                     <input type="text" id="uacr" name="uacr" required
-                                           class="form-control" style="flex:1;"
+                                           class="form-control flex-1"
                                            value="<?= htmlspecialchars(
                                                $form["uacr"],
                                            ) ?>">
-                                    <select name="uacr_unit" class="form-control" style="flex:0.8;">
+                                    <select name="uacr_unit" class="form-control flex-08">
                                         <option value="mg_g"    <?= $form[
                                             "uacr_unit"
                                         ] === "mg_g"
@@ -528,7 +528,7 @@ if (isLoggedIn()) {
                                             <a href="calculator_result_print.php?result_id=<?= (int) $row[
                                                 "id"
                                             ] ?>" target="_blank" rel="noopener" class="btn-admin-action">Tlačiť</a>
-                                            <form method="POST" action="calculator_kdigo_risk.php" style="display:inline" onsubmit="return confirm('Naozaj vymazať záznam?')">
+                                            <form method="POST" action="calculator_kdigo_risk.php" class="d-inline" onsubmit="return confirm('Naozaj vymazať záznam?')">
                                                 <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(
                                                     generateCsrfToken(),
                                                 ) ?>">
