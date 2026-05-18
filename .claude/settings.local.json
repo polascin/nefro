@@ -3,7 +3,9 @@
     "allow": [
       "Bash(php -l profile.php)",
       "Bash(php -l setup_db.php)",
-      "Bash(php -l mobile_verification.php)"
+      "Bash(php -l mobile_verification.php)",
+      "Bash(Get-ChildItem -Path \"d:\\\\OneDrive\\\\www\\\\nefro\" -Filter \"*.php\")",
+      "Bash(Select-Object Name)"
     ]
   }
 }
