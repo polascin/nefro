@@ -234,6 +234,8 @@ try {
     $pdo->exec($adminExportsAuditSql);
 
     // ── Rate limiting pre formuláre (registrácia, reset hesla, atď.) ────────
+    // UNIQUE KEY na (ip, action) je nevyhnutný pre správne fungovanie
+    // ON DUPLICATE KEY UPDATE v register.php, resend_verification.php a verify_email.php.
     $formRateLimitSql = "CREATE TABLE IF NOT EXISTS form_rate_limit (
         id BIGINT AUTO_INCREMENT PRIMARY KEY,
         ip VARCHAR(45) NOT NULL,
@@ -242,11 +244,39 @@ try {
         first_attempt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         last_attempt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
         blocked_until TIMESTAMP NULL DEFAULT NULL,
-        INDEX idx_form_rate_limit_ip_action (ip, action),
+        UNIQUE KEY uq_form_rate_limit_ip_action (ip, action),
         INDEX idx_form_rate_limit_blocked (blocked_until)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";
     $pdo->exec($formRateLimitSql);
     echo "Tabuľka 'form_rate_limit' bola úspešne vytvorená alebo už existuje.\n";
+
+    // ── Migrácia: pridanie UNIQUE constraint pre existujúce inštalácie ────────
+    $uqCheckStmt = $pdo->prepare(
+        "SELECT COUNT(*) FROM INFORMATION_SCHEMA.STATISTICS
+         WHERE TABLE_SCHEMA = DATABASE()
+           AND TABLE_NAME   = 'form_rate_limit'
+           AND INDEX_NAME   = 'uq_form_rate_limit_ip_action'"
+    );
+    $uqCheckStmt->execute();
+    if ((int) $uqCheckStmt->fetchColumn() === 0) {
+        // Odstrán duplikáty (ponechaj riadok s najvyšším attempt_count per ip+action)
+        $pdo->exec("
+            DELETE t1 FROM form_rate_limit t1
+            INNER JOIN form_rate_limit t2
+                ON t1.ip = t2.ip AND t1.action = t2.action
+            WHERE t1.attempt_count < t2.attempt_count
+               OR (t1.attempt_count = t2.attempt_count AND t1.id < t2.id)
+        ");
+        // Staré INDEX nahraď UNIQUE KEY
+        try {
+            $pdo->exec("ALTER TABLE form_rate_limit DROP INDEX idx_form_rate_limit_ip_action");
+        } catch (\PDOException) { /* index nemusí existovať */ }
+        $pdo->exec(
+            "ALTER TABLE form_rate_limit
+             ADD UNIQUE KEY uq_form_rate_limit_ip_action (ip, action)"
+        );
+        echo "Migracia: UNIQUE constraint pridany do form_rate_limit.\n";
+    }
 
     // ── Audit log pre zrušenie/vymazanie účtov ───────────────────────────────
     // Zámerne BEZ FK na users(id) — záznam musí pretrvať po vymazaní používateľa.

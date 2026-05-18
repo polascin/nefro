@@ -3,9 +3,14 @@ require_once 'auth.php';
 require_once 'db_config.php';
 require_once 'email_verification.php';
 
-$errors = [];
-$success = null;
+$errors     = [];
+$success    = null;
 $loginValue = trim((string) ($_GET['login'] ?? $_POST['login'] ?? ''));
+
+// Konštanty rate limitingu
+const RESEND_MAX_ATTEMPTS  = 5;    // max pokusov per IP
+const RESEND_WINDOW_SECS   = 3600; // okno 1 hodina
+const RESEND_COOLDOWN_SECS = 300;  // 5 minút medzi jednotlivými odoslaniami
 
 if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
     $postedCsrf = $_POST['csrf_token'] ?? '';
@@ -16,43 +21,111 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
         if ($loginValue === '') {
             $errors[] = 'Zadajte e-mailovú adresu alebo používateľské meno.';
         } else {
+            // ── IP rate limiting ──────────────────────────────────────────────
+            $clientIp = getClientIpAddress();
+            $ipBlocked = false;
+
             try {
-                $stmt = $pdo->prepare("SELECT id, username, email, email_verified_at, email_verification_sent_at
-                    FROM users WHERE email = :login OR username = :login LIMIT 1");
-                $stmt->execute(['login' => $loginValue]);
-                $user = $stmt->fetch();
+                $pdo->prepare(
+                    "DELETE FROM form_rate_limit
+                     WHERE action = 'resend_verification'
+                       AND first_attempt < DATE_SUB(NOW(), INTERVAL 1 DAY)"
+                )->execute();
 
-                if (!$user) {
-                    $success = 'Ak účet existuje, nový overovací e-mail bol odoslaný.';
-                } elseif (!empty($user['email_verified_at'])) {
-                    $success = 'Táto e-mailová adresa je už overená.';
-                } elseif (!isEmailResendAllowed($user['email_verification_sent_at'] ?? null, 60)) {
-                    $errors[] = 'Overovací e-mail bol odoslaný nedávno. Skúste to znova o chvíľu.';
-                } else {
-                    $tokenData = generateEmailVerificationToken();
-                    saveEmailVerificationToken(
-                        $pdo,
-                        (int) $user['id'],
-                        $tokenData['token_hash'],
-                        $tokenData['expires_at']
-                    );
+                $rlStmt = $pdo->prepare(
+                    "SELECT attempt_count, blocked_until
+                     FROM form_rate_limit
+                     WHERE ip = :ip AND action = 'resend_verification'"
+                );
+                $rlStmt->execute(['ip' => $clientIp]);
+                $rlRow = $rlStmt->fetch();
 
-                    $sent = sendVerificationEmail(
-                        (string) $user['email'],
-                        (string) ($user['username'] ?? ''),
-                        (int) $user['id'],
-                        $tokenData['token']
-                    );
-
-                    if ($sent) {
-                        $success = 'Nový overovací e-mail bol odoslaný.';
+                if ($rlRow && !empty($rlRow['blocked_until'])) {
+                    $blockedUntilTs = strtotime((string) $rlRow['blocked_until']);
+                    if ($blockedUntilTs !== false && $blockedUntilTs > time()) {
+                        $ipBlocked = true;
+                        $errors[] = 'Príliš veľa pokusov. Skúste to znova o hodinu.';
                     } else {
-                        $errors[] = 'Overovací e-mail sa nepodarilo odoslať. Skúste to znova neskôr.';
+                        $pdo->prepare(
+                            "UPDATE form_rate_limit
+                             SET blocked_until = NULL
+                             WHERE ip = :ip AND action = 'resend_verification'"
+                        )->execute(['ip' => $clientIp]);
                     }
                 }
             } catch (\PDOException $e) {
-                error_log('Resend verification DB error: ' . $e->getMessage());
-                $errors[] = 'Pri spracovaní požiadavky došlo k chybe. Skúste to znova neskôr.';
+                error_log('Resend verification rate limit check error: ' . $e->getMessage());
+            }
+
+            if (!$ipBlocked) {
+                try {
+                    $stmt = $pdo->prepare(
+                        "SELECT id, username, email, email_verified_at, email_verification_sent_at
+                         FROM users WHERE email = :login OR username = :login LIMIT 1"
+                    );
+                    $stmt->execute(['login' => $loginValue]);
+                    $user = $stmt->fetch();
+
+                    // Anti-enumeration: rovnaká odpoveď pre neexistujúci účet aj overený účet
+                    if (!$user || !empty($user['email_verified_at'])) {
+                        $success = 'Ak účet existuje a čaká na overenie, nový overovací e-mail bol odoslaný.';
+                    } elseif (!isEmailResendAllowed(
+                        $user['email_verification_sent_at'] ?? null,
+                        RESEND_COOLDOWN_SECS
+                    )) {
+                        $errors[] = 'Overovací e-mail bol odoslaný nedávno. Skúste to znova o 5 minút.';
+                    } else {
+                        $tokenData = generateEmailVerificationToken();
+                        saveEmailVerificationToken(
+                            $pdo,
+                            (int) $user['id'],
+                            $tokenData['token_hash'],
+                            $tokenData['expires_at']
+                        );
+
+                        $sent = sendVerificationEmail(
+                            (string) $user['email'],
+                            (string) ($user['username'] ?? ''),
+                            (int) $user['id'],
+                            $tokenData['token']
+                        );
+
+                        if ($sent) {
+                            $success = 'Nový overovací e-mail bol odoslaný.';
+                        } else {
+                            $errors[] = 'Overovací e-mail sa nepodarilo odoslať. Skúste to znova neskôr.';
+                        }
+
+                        // Zaznamenaj pokus per IP (aj pri úspechu)
+                        try {
+                            $pdo->prepare(
+                                "INSERT INTO form_rate_limit (ip, action, attempt_count, first_attempt)
+                                 VALUES (:ip, 'resend_verification', 1, NOW())
+                                 ON DUPLICATE KEY UPDATE attempt_count = attempt_count + 1, last_attempt = NOW()"
+                            )->execute(['ip' => $clientIp]);
+
+                            $cntStmt = $pdo->prepare(
+                                "SELECT attempt_count FROM form_rate_limit
+                                 WHERE ip = :ip AND action = 'resend_verification'"
+                            );
+                            $cntStmt->execute(['ip' => $clientIp]);
+                            $currentCount = (int) ($cntStmt->fetchColumn() ?? 0);
+
+                            if ($currentCount >= RESEND_MAX_ATTEMPTS) {
+                                $pdo->prepare(
+                                    "UPDATE form_rate_limit
+                                     SET blocked_until = DATE_ADD(NOW(), INTERVAL :secs SECOND)
+                                     WHERE ip = :ip AND action = 'resend_verification'"
+                                )->execute(['secs' => RESEND_WINDOW_SECS, 'ip' => $clientIp]);
+                            }
+                        } catch (\PDOException $e) {
+                            error_log('Resend verification rate limit update error: ' . $e->getMessage());
+                        }
+                    }
+                } catch (\PDOException $e) {
+                    error_log('Resend verification DB error: ' . $e->getMessage());
+                    $errors[] = 'Pri spracovaní požiadavky došlo k chybe. Skúste to znova neskôr.';
+                }
             }
         }
     }
@@ -61,13 +134,13 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 <!DOCTYPE html>
 <html lang="sk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Opätovné odoslanie overenia - Nefro-projekt Slovensko</title>
-    <script src="theme.js?v=20260511-1&cb=<?= filemtime('theme.js') ?>"></script>
-    <link rel="stylesheet" href="index.css?v=20260509-1&cb=<?= filemtime('index.css') ?>">
-    <script src="ui-preferences.js?v=20260511-1&cb=<?= filemtime('ui-preferences.js') ?>" defer></script>
-    <script src="ui-preferences-fallback.js?v=20260511-1&cb=<?= filemtime('ui-preferences-fallback.js') ?>" defer></script>
+  <?php
+  $pageTitle      = 'Opätovné odoslanie overenia | Nefro-projekt Slovensko';
+  $seoDescription = 'Požiadajte o nové overenie e-mailovej adresy vášho účtu na Nefro-projekt Slovensko.';
+  $robotsMeta     = 'noindex, follow';
+  $canonicalUrl   = 'https://nefro.polascin.net/resend_verification.php';
+  include 'head_meta.php';
+  ?>
 </head>
 <body>
     <?php
@@ -101,7 +174,8 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
                 <div class="form-group">
                     <label for="login">E-mail alebo používateľské meno</label>
-                    <input type="text" id="login" name="login" class="form-control" required value="<?= htmlspecialchars($loginValue) ?>">
+                    <input type="text" id="login" name="login" class="form-control" required
+                           value="<?= htmlspecialchars($loginValue) ?>">
                 </div>
                 <div class="form-actions">
                     <button type="submit" class="btn-primary btn-block">Poslať overovací e-mail</button>

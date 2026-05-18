@@ -246,6 +246,13 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 </div>
             <?php endif; ?>
 
+            <?php if (($_GET['verified'] ?? '') === '1'): ?>
+                <div class="alert alert-success">
+                    <p><strong>E-mailová adresa bola úspešne overená.</strong></p>
+                    <p>Váš účet je aktívny. Môžete sa prihlásiť.</p>
+                </div>
+            <?php endif; ?>
+
             <?php if (!empty($errors)): ?>
                 <div class="alert alert-error">
                     <ul>

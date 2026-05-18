@@ -24,13 +24,13 @@ function getEmailEnvConfig(): array {
         'from_email' => trim((string) ($env['SMTP_FROM_EMAIL'] ?? '')),
         'from_name' => trim((string) ($env['SMTP_FROM_NAME'] ?? 'Nefro-projekt Slovensko')),
         'admin_notification_email' => trim((string) ($env['SMTP_ADMIN_EMAIL'] ?? ($env['ADMIN_EMAIL'] ?? ''))),
-        'smtp_timeout' => 15,
+        'smtp_timeout' => max(5, min(30, (int) ($env['SMTP_TIMEOUT'] ?? 10))),
     ];
 
     return $config;
 }
 
-function smtpReadResponse(\resource $socket): array {
+function smtpReadResponse($socket): array {
     $lines = '';
     $code = 0;
 
@@ -68,7 +68,7 @@ function smtpLogError(string $stage, string $reason, array $context = []): void 
     error_log(implode('; ', $parts));
 }
 
-function smtpSendCommand(\resource $socket, string $command, array $expectedCodes, string $stage): array {
+function smtpSendCommand($socket, string $command, array $expectedCodes, string $stage): array {
     if (@fwrite($socket, $command . "\r\n") === false) {
         smtpLogError($stage, 'write_failed', ['expected' => $expectedCodes]);
         return ['ok' => false, 'code' => 0, 'response' => ''];
