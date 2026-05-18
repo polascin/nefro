@@ -6,6 +6,9 @@
  * Výstup: img/og-default.jpg
  */
 
+// Ochrana: súbor je určený iba pre CLI použitie
+if (php_sapi_name() !== 'cli') { http_response_code(403); exit('Forbidden'); }
+
 define('OG_W', 1200);
 define('OG_H', 630);
 define('OUT_PATH', __DIR__ . '/img/og-default.jpg');

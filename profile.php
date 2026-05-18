@@ -135,6 +135,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
         }
 
+        // Whitelist pre gender — ochrana pred vložením ľubovoľného reťazca
+        $allowedGenders = ['Muž', 'Žena', 'Transgender muž', 'Transgender žena', 'Nebinárna osoba', 'Iné', 'Nechcem uviesť', null];
+        if (!in_array($data['gender'], $allowedGenders, true)) { $data['gender'] = null; }
+        // Pronouns sú voľný text (input type="text") — dĺžkovo obmedzíme (50 znakov)
+        if ($data['pronouns'] !== null) {
+            $data['pronouns'] = mb_substr((string) $data['pronouns'], 0, 50, 'UTF-8') ?: null;
+        }
+
         $normalizedMobilePhone = normalizeUserMobilePhone($_POST['mobile_phone'] ?? null);
         if ($normalizedMobilePhone === false) {
             $errors[] = "Zadajte platné číslo súkromného mobilného telefónu vo formáte +421XXXXXXXXX (môžete použiť aj medzery).";
@@ -426,6 +434,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
   <?php
   $pageTitle = 'Profil používateľa - Nefro-projekt Slovensko';
+  $robotsMeta = 'noindex, nofollow';
+  $canonicalUrl = 'https://nefro.polascin.net/profile.php';
   include 'head_meta.php';
   ?>
 </head>

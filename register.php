@@ -168,13 +168,13 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     $passwordHash = password_hash($password, PASSWORD_DEFAULT);
                     $newsletterConsent = isset($_POST['newsletter_consent']) ? 1 : 0;
 
-                    // Whitelist pre gender a pronouns — používateľ nesmie vložiť ľubovolný reťazec
-                    $allowedGenders   = ['male', 'female', 'other', 'prefer_not_to_say', ''];
-                    $allowedPronouns  = ['he/him', 'she/her', 'they/them', 'other', ''];
-                    $genderRaw        = trim($_POST['gender'] ?? '');
-                    $pronounsRaw      = trim($_POST['pronouns'] ?? '');
-                    $gender           = in_array($genderRaw,   $allowedGenders,  true) ? $genderRaw   : '';
-                    $pronouns         = in_array($pronounsRaw, $allowedPronouns, true) ? $pronounsRaw : '';
+                    // Whitelist pre gender — hodnoty musia zodpovedať hodnotám <option value="..."> v HTML formulári
+                    $allowedGenders  = ['Muž', 'Žena', 'Transgender muž', 'Transgender žena', 'Nebinárna osoba', 'Iné', 'Nechcem uviesť', ''];
+                    $genderRaw       = trim($_POST['gender'] ?? '');
+                    $gender          = in_array($genderRaw, $allowedGenders, true) ? $genderRaw : '';
+                    // Pronouns sú voľný text (input type="text") — dĺžkovo obmedzíme a sanitizujeme
+                    $pronounsRaw     = trim($_POST['pronouns'] ?? '');
+                    $pronouns        = mb_substr($pronounsRaw, 0, 50, 'UTF-8');
 
                     // Dĺžkové limity pre textové polia (prevencia pred oversized vstupmi)
                     $fieldLimits = [
@@ -350,6 +350,8 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
   <?php
   $pageTitle = 'Registrácia - Nefro-projekt Slovensko';
   $seoDescription = 'Zaregistrujte sa do Nefro-projekt Slovensko — odborného portálu pre nefrológov a lekárov.';
+  $robotsMeta = 'noindex, follow';
+  $canonicalUrl = 'https://nefro.polascin.net/register.php';
   include 'head_meta.php';
   ?>
 </head>
