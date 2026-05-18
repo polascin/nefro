@@ -366,12 +366,6 @@ if ($article) {
               <time datetime="<?= $pubDateIso ?>" itemprop="datePublished"><?= htmlspecialchars(
     $pubDateSk,
 ) ?></time>
-              &nbsp;|&nbsp;
-              <span itemprop="author" itemscope itemtype="https://schema.org/Person">
-                <span itemprop="name"><?= htmlspecialchars(
-                    (string) $article["author"],
-                ) ?></span>
-              </span>
             </p>
           </header>
 
