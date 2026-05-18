@@ -248,6 +248,35 @@ try {
     $pdo->exec($formRateLimitSql);
     echo "Tabuľka 'form_rate_limit' bola úspešne vytvorená alebo už existuje.\n";
 
+    // ── Audit log pre zrušenie/vymazanie účtov ───────────────────────────────
+    // Zámerne BEZ FK na users(id) — záznam musí pretrvať po vymazaní používateľa.
+    // E-mail je uložený ako SHA-256 hash (GDPR — možnosť overenia bez uchovávania plaintextu).
+    // IP adresa a username podliehajú retenčnej politike (odporúčané vymazanie po 90 dňoch).
+    $accountDeletionLogSql = "CREATE TABLE IF NOT EXISTS account_deletion_log (
+        id BIGINT AUTO_INCREMENT PRIMARY KEY,
+        deleted_user_id INT NOT NULL COMMENT 'ID vymazaného používateľa (bez FK)',
+        username VARCHAR(255) NOT NULL COMMENT 'Meno v čase vymazania (retenčná politika: 90 dní)',
+        email_hash CHAR(64) NOT NULL COMMENT 'SHA-256 hex hash e-mailu',
+        email_domain VARCHAR(255) NOT NULL COMMENT 'Doména e-mailu pre štatistiky',
+        is_admin TINYINT(1) NOT NULL DEFAULT 0,
+        account_age_days INT NOT NULL DEFAULT 0 COMMENT 'Vek účtu od registrácie v dňoch',
+        initiated_by ENUM('user_self', 'admin') NOT NULL DEFAULT 'user_self',
+        admin_actor_id INT NULL COMMENT 'ID admina pri admin-iniciovanom mazaní',
+        client_ip VARCHAR(45) NOT NULL COMMENT 'IP žiadateľa (retenčná politika: 90 dní)',
+        user_agent VARCHAR(500) NULL,
+        stat_calculator_results INT NOT NULL DEFAULT 0 COMMENT 'Počet vymazaných výsledkov kalkulačiek',
+        stat_profile_changes INT NOT NULL DEFAULT 0 COMMENT 'Počet záznamov v profile archive',
+        had_avatar TINYINT(1) NOT NULL DEFAULT 0,
+        had_newsletter_consent TINYINT(1) NOT NULL DEFAULT 0,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        INDEX idx_adl_deleted_user_id (deleted_user_id),
+        INDEX idx_adl_created_at (created_at),
+        INDEX idx_adl_client_ip (client_ip),
+        INDEX idx_adl_email_hash (email_hash)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";
+    $pdo->exec($accountDeletionLogSql);
+    echo "Tabuľka 'account_deletion_log' bola úspešne vytvorená alebo už existuje.\n";
+
     echo "Tabuľky 'users', 'users_profile_archive', 'users_avatar_archive', 'password_resets' a 'admin_users_notice_audit' boli úspešne vytvorené alebo už existujú.";
     echo "\n";
 

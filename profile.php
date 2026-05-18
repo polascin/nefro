@@ -96,6 +96,78 @@ $archiveAvatarVersion = function (int $userId, string $action, ?string $original
 $deleteErrors   = [];
 $showDeleteForm = false;
 
+/**
+ * Zapíše udalosť zrušenia účtu do tabuľky account_deletion_log.
+ * Volá sa VNÚTRI transakcie pred DELETE FROM users, aby bola atomická.
+ *
+ * @param PDO   $pdo        Aktívna DB spojenie (v transakcii)
+ * @param array $userData   Snapshot riadku users pred zmazaním
+ * @param array $stats      ['calculator_results' => int, 'profile_changes' => int]
+ * @param array $context    ['client_ip' => string, 'user_agent' => string,
+ *                           'initiated_by' => 'user_self'|'admin',
+ *                           'admin_actor_id' => int|null]
+ */
+function writeAccountDeletionLog(PDO $pdo, array $userData, array $stats, array $context): void
+{
+    $emailRaw  = (string) ($userData['email'] ?? '');
+    $emailHash = hash('sha256', strtolower(trim($emailRaw)));
+    $emailDomain = strstr($emailRaw, '@') !== false
+        ? ltrim((string) strstr($emailRaw, '@'), '@')
+        : 'unknown';
+
+    $createdAt = strtotime((string) ($userData['created_at'] ?? '')) ?: time();
+    $ageDays   = (int) round((time() - $createdAt) / 86400);
+
+    $pdo->prepare(
+        "INSERT INTO account_deletion_log (
+            deleted_user_id, username, email_hash, email_domain, is_admin,
+            account_age_days, initiated_by, admin_actor_id,
+            client_ip, user_agent,
+            stat_calculator_results, stat_profile_changes,
+            had_avatar, had_newsletter_consent
+        ) VALUES (
+            :uid, :username, :email_hash, :email_domain, :is_admin,
+            :age_days, :initiated_by, :admin_actor_id,
+            :client_ip, :user_agent,
+            :calc_results, :profile_changes,
+            :had_avatar, :newsletter
+        )"
+    )->execute([
+        ':uid'            => (int) ($userData['id'] ?? 0),
+        ':username'       => mb_substr((string) ($userData['username'] ?? ''), 0, 255),
+        ':email_hash'     => $emailHash,
+        ':email_domain'   => mb_substr($emailDomain, 0, 255),
+        ':is_admin'       => (int) ($userData['is_admin'] ?? 0),
+        ':age_days'       => $ageDays,
+        ':initiated_by'   => $context['initiated_by'] ?? 'user_self',
+        ':admin_actor_id' => $context['admin_actor_id'] ?? null,
+        ':client_ip'      => mb_substr($context['client_ip'] ?? '0.0.0.0', 0, 45),
+        ':user_agent'     => mb_substr($context['user_agent'] ?? '', 0, 500),
+        ':calc_results'   => (int) ($stats['calculator_results'] ?? 0),
+        ':profile_changes'=> (int) ($stats['profile_changes'] ?? 0),
+        ':had_avatar'     => empty($userData['avatar_path']) ? 0 : 1,
+        ':newsletter'     => (int) ($userData['newsletter_consent'] ?? 0),
+    ]);
+}
+
+/**
+ * Zapíše fallback záznam o zrušení účtu do súboru, ak DB zlyhá.
+ */
+function writeAccountDeletionFallbackLog(int $userId, string $username, string $clientIp, string $initiatedBy): void
+{
+    $logDir  = __DIR__ . '/private/logs';
+    @mkdir($logDir, 0755, true);
+    $line = implode("\t", [
+        date('Y-m-d H:i:s'),
+        'account_deleted',
+        $userId,
+        mb_substr($username, 0, 255),
+        $initiatedBy,
+        $clientIp,
+    ]) . "\n";
+    @file_put_contents($logDir . '/account_deletions.log', $line, FILE_APPEND | LOCK_EX);
+}
+
 if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && ($_POST['action'] ?? '') === 'delete_account') {
     $showDeleteForm = true;
     $postedCsrfToken = $_POST['csrf_token'] ?? '';
@@ -111,8 +183,29 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && ($_POST['action'] ?? '') ==
         } elseif (!password_verify($confirmPassword, (string) $user['password_hash'])) {
             $deleteErrors[] = "Zadané heslo nie je správne. Účet nebol zrušený.";
         } else {
+            $clientIp  = getClientIpAddress();
+            $userAgent = mb_substr($_SERVER['HTTP_USER_AGENT'] ?? '', 0, 500);
+
             try {
                 $pdo->beginTransaction();
+
+                // Štatistiky pred mazaním (pre log)
+                $stCalcStmt = $pdo->prepare("SELECT COUNT(*) FROM calculator_results WHERE user_id = :uid");
+                $stCalcStmt->execute([':uid' => $user_id]);
+                $statCalc = (int) $stCalcStmt->fetchColumn();
+
+                $stProfStmt = $pdo->prepare("SELECT COUNT(*) FROM users_profile_archive WHERE user_id = :uid");
+                $stProfStmt->execute([':uid' => $user_id]);
+                $statProfile = (int) $stProfStmt->fetchColumn();
+
+                // Logovanie (vnútri transakcie — atomické s mazaním)
+                writeAccountDeletionLog(
+                    $pdo,
+                    $user,
+                    ['calculator_results' => $statCalc, 'profile_changes' => $statProfile],
+                    ['client_ip' => $clientIp, 'user_agent' => $userAgent,
+                     'initiated_by' => 'user_self', 'admin_actor_id' => null]
+                );
 
                 // Súborový systém: vymazanie avatara a archívu
                 if (!empty($user['avatar_path'])) {
@@ -130,10 +223,18 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && ($_POST['action'] ?? '') ==
 
                 // DB: CASCADE vymaže users_profile_archive, users_avatar_archive,
                 //     password_resets, calculator_results, article_newsletter_queue,
-                //     access_logs (user_id), admin_users_notice_audit (admin_user_id)
+                //     access_logs (user_id FK = SET NULL), admin_users_notice_audit (CASCADE)
                 $pdo->prepare("DELETE FROM users WHERE id = :id")->execute(['id' => $user_id]);
 
                 $pdo->commit();
+
+                // Fallback súborový log (po commite — potvrdenie, že mazanie prebehlo)
+                writeAccountDeletionFallbackLog(
+                    $user_id,
+                    (string) ($user['username'] ?? ''),
+                    $clientIp,
+                    'user_self'
+                );
 
                 // Zničenie relácie (rovnaký vzor ako logout.php)
                 $_SESSION = [];
