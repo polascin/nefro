@@ -202,25 +202,25 @@ $schemaWebApp = [
             <section class="features-section" aria-labelledby="calculators-heading">
                 <h2 id="calculators-heading">Dostupné kalkulačky</h2>
                 <div class="features-grid calculators-grid">
-                    <article class="feature-card calculator-card">
+                    <article id="calculator-egfr" class="feature-card calculator-card">
                         <h3>eGFR (CKD-EPI 2021)</h3>
                         <p>Výpočet odhadovanej glomerulovej filtrácie z veku, pohlavia a kreatinínu.</p>
                         <a href="calculator_egfr.php" class="btn-primary">Otvoriť kalkulačku</a>
                     </article>
 
-                    <article class="feature-card calculator-card">
+                    <article id="calculator-kdigo" class="feature-card calculator-card">
                         <h3>KDIGO G/A riziko CKD</h3>
                         <p>Zaradenie do G a A kategórie a orientačný rizikový stupeň podľa KDIGO mapy.</p>
                         <a href="calculator_kdigo_risk.php" class="btn-primary">Otvoriť kalkulačku</a>
                     </article>
 
-                    <article class="feature-card calculator-card">
+                    <article id="calculator-kfre" class="feature-card calculator-card">
                         <h3>KFRE — Kidney Failure Risk Equation</h3>
                         <p>Predikcia rizika potreby dialýzy alebo transplantácie obličky na 2 a 5 rokov (Tangri 4-parametrová).</p>
                         <a href="calculator_kfre.php" class="btn-primary">Otvoriť kalkulačku</a>
                     </article>
 
-                    <article class="feature-card calculator-card">
+                    <article id="calculator-ckdpc" class="feature-card calculator-card">
                         <h3>CKD-PC — Grams 2022 (3-ročné riziko)</h3>
                         <p>Odhad 3-ročného rizika poklesu eGFR o ≥40 % alebo zlyhania obličiek — platné pre všetky štádiá CKD vrátane G1–G2. Rozšírený model s 13+ vstupmi.</p>
                         <a href="calculator_ckdpc.php" class="btn-primary">Otvoriť kalkulačku</a>
@@ -231,7 +231,7 @@ $schemaWebApp = [
             <section class="features-section" aria-labelledby="aki-calculators-heading">
                 <h2 id="aki-calculators-heading">Akútne poškodenie obličiek (AKI)</h2>
                 <div class="features-grid calculators-grid">
-                    <article class="feature-card calculator-card">
+                    <article id="calculator-aki" class="feature-card calculator-card">
                         <h3>FENa a FEUrea</h3>
                         <p>Frakčná exkrécia sodíka a urey pre diferenciálnu diagnostiku AKI (prerenálne vs. renálne zlyhanie).</p>
                         <a href="calculator_aki.php" class="btn-primary">Otvoriť kalkulačku</a>
@@ -242,7 +242,7 @@ $schemaWebApp = [
             <section class="features-section" aria-labelledby="dosing-calculators-heading">
                 <h2 id="dosing-calculators-heading">Úprava dávkovania liekov</h2>
                 <div class="features-grid calculators-grid">
-                    <article class="feature-card calculator-card">
+                    <article id="calculator-cg" class="feature-card calculator-card">
                         <h3>Cockcroft-Gault</h3>
                         <p>Odhad klírensu kreatinínu, historický štandard pre farmakokinetickú úpravu dávkovania liekov.</p>
                         <a href="calculator_cg.php" class="btn-primary">Otvoriť kalkulačku</a>
@@ -253,17 +253,17 @@ $schemaWebApp = [
             <section class="features-section" aria-labelledby="lytes-calculators-heading">
                 <h2 id="lytes-calculators-heading">Elektrolytové a acidobázické poruchy</h2>
                 <div class="features-grid calculators-grid">
-                    <article class="feature-card calculator-card">
+                    <article id="calculator-ca" class="feature-card calculator-card">
                         <h3>Korigovaný vápnik</h3>
                         <p>Prepočet celkového vápnika vzhľadom na hladinu albumínu (časté pri CKD-MBD s hypoalbuminémiou).</p>
                         <a href="calculator_ca.php" class="btn-primary">Otvoriť kalkulačku</a>
                     </article>
-                    <article class="feature-card calculator-card">
+                    <article id="calculator-na" class="feature-card calculator-card">
                         <h3>Poruchy sodíka a vody</h3>
                         <p>Deficit voľnej vody pri hypernatrémii a Adrogue-Madiasova rovnica pre bezpečnú korekciu hyponatrémie.</p>
                         <a href="calculator_na.php" class="btn-primary">Otvoriť kalkulačku</a>
                     </article>
-                    <article class="feature-card calculator-card">
+                    <article id="calculator-acidbase" class="feature-card calculator-card">
                         <h3>Aniónová medzera a &Delta;/&Delta;</h3>
                         <p>Základný nástroj na diferenciálnu diagnostiku a identifikáciu zmiešaných porúch acidobázickej rovnováhy.</p>
                         <a href="calculator_acidbase.php" class="btn-primary">Otvoriť kalkulačku</a>
@@ -274,12 +274,12 @@ $schemaWebApp = [
             <section class="features-section" aria-labelledby="progression-calculators-heading">
                 <h2 id="progression-calculators-heading">Progresia CKD a Dialýza</h2>
                 <div class="features-grid calculators-grid">
-                    <article class="feature-card calculator-card">
+                    <article id="calculator-slope" class="feature-card calculator-card">
                         <h3>eGFR Slope</h3>
                         <p>Výpočet lineárneho trendu (rýchlosti poklesu eGFR) z viacerých meraní v čase (identifikácia rýchlych progresorov).</p>
                         <a href="calculator_egfr_slope.php" class="btn-primary">Otvoriť kalkulačku</a>
                     </article>
-                    <article class="feature-card calculator-card">
+                    <article id="calculator-ktv" class="feature-card calculator-card">
                         <h3>Kt/V a URR</h3>
                         <p>Hodnotenie adekvátnosti hemodialýzy podľa Daugirdasovej rovnice (2. generácia) a pomeru redukcie urey.</p>
                         <a href="calculator_ktv.php" class="btn-primary">Otvoriť kalkulačku</a>
@@ -290,7 +290,7 @@ $schemaWebApp = [
             <section class="features-section" aria-labelledby="proteinuria-calculators-heading">
                 <h2 id="proteinuria-calculators-heading">Analýza proteinúrie</h2>
                 <div class="features-grid calculators-grid">
-                    <article class="feature-card calculator-card">
+                    <article id="calculator-uacr" class="feature-card calculator-card">
                         <h3>UACR a KDIGO klasifikácia</h3>
                         <p>Univerzálny prevodník jednotiek pre UACR s okamžitým zaradením do KDIGO kategórií (A1-A3).</p>
                         <a href="calculator_uacr.php" class="btn-primary">Otvoriť kalkulačku</a>
@@ -302,13 +302,13 @@ $schemaWebApp = [
                 <h2 id="spec-calculators-heading">Diagnózovo špecifické kalkulačky</h2>
                 <p class="calc-intro-text">KDIGO 2024 odporúča pre niektoré ochorenia obličiek použiť externálne validované, diagnózovo špecifické prognostické nástroje.</p>
                 <div class="features-grid calculators-grid">
-                    <article class="feature-card calculator-card">
+                    <article id="calculator-igan" class="feature-card calculator-card">
                         <h3>IgAN Prediction Tool</h3>
                         <p>Odhad 5-ročného rizika poklesu eGFR o ≥50 % alebo ESKD pri IgA nefropatii. Klinický model (Barbour 2019) bez požiadavky na histológiu.</p>
                         <a href="calculator_igan.php" class="btn-primary">Otvoriť kalkulačku</a>
                     </article>
 
-                    <article class="feature-card calculator-card">
+                    <article id="calculator-adpkd" class="feature-card calculator-card">
                         <h3>Mayo ADPKD klasifikácia</h3>
                         <p>Zaradenie pacienta s ADPKD do tried 1A–1E podľa HtTKV a veku (Irazabal 2015). Pomáha pri indikácii tolvaptanu a sledovaní progresie.</p>
                         <a href="calculator_adpkd.php" class="btn-primary">Otvoriť kalkulačku</a>
