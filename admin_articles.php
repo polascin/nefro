@@ -680,7 +680,7 @@ try {
 
     $stmt = $pdo->prepare(
         "SELECT id, title, slug, author, published_at, is_top, is_published, created_at, sort_order
-         FROM articles ORDER BY sort_order ASC, id ASC LIMIT :limit OFFSET :offset",
+         FROM articles ORDER BY published_at DESC, id DESC LIMIT :limit OFFSET :offset",
     );
     $stmt->bindValue(':limit', $articlesPerPage, PDO::PARAM_INT);
     $stmt->bindValue(':offset', $articlesOffset, PDO::PARAM_INT);
