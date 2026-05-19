@@ -11,12 +11,14 @@ $_navCalcActive = $_navCurrent === 'calculators.php' || str_starts_with($_navCur
 // Na hlavnej stránke odkazujeme na vlastné sekcie (hash), inde na index.php
 $_navOnIndex = $_navCurrent === 'index.php';
 
-function _navA(string $href, string $label, bool $active): string {
-    if ($active) {
-        return '<a href="' . htmlspecialchars($href) . '" class="active" aria-current="page">'
-            . htmlspecialchars($label) . '</a>';
+if (!function_exists('_navA')) {
+    function _navA(string $href, string $label, bool $active): string {
+        if ($active) {
+            return '<a href="' . htmlspecialchars($href) . '" class="active" aria-current="page">'
+                . htmlspecialchars($label) . '</a>';
+        }
+        return '<a href="' . htmlspecialchars($href) . '">' . htmlspecialchars($label) . '</a>';
     }
-    return '<a href="' . htmlspecialchars($href) . '">' . htmlspecialchars($label) . '</a>';
 }
 ?>
 <nav class="main-nav" aria-label="Hlavná navigácia">
