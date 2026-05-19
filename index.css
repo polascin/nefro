@@ -3873,6 +3873,14 @@ mark.search-hl {
     transform: translateY(-2px);
 }
 
+.quick-nav-calculators a.active {
+    background: rgba(255, 255, 255, 0.95);
+    color: #003d7a;
+    font-weight: 700;
+    transform: none;
+    cursor: default;
+}
+
 /* Mobilný dizajn */
 @media (max-width: 768px) {
     .quick-nav-calculators {
