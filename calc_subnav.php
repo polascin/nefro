@@ -42,8 +42,9 @@ $_calcSubnavItems = [
         <?php endif; ?>
     </div>
 </nav>
-<?php if (!empty($_calcProfile) && !empty(array_filter($_calcProfile))): ?>
 <script nonce="<?= htmlspecialchars(function_exists('getScriptNonce') ? getScriptNonce() : '', ENT_QUOTES) ?>">
+window.calcIsGuest = <?= (function_exists('isLoggedIn') && isLoggedIn()) ? 'false' : 'true' ?>;
+<?php if (!empty($_calcProfile) && !empty(array_filter($_calcProfile))): ?>
 window.calcProfileData = <?= json_encode($_calcProfile, JSON_UNESCAPED_UNICODE) ?>;
-</script>
 <?php endif; ?>
+</script>

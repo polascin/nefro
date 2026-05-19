@@ -33,14 +33,16 @@ document.addEventListener('DOMContentLoaded', function () {
                 localStorage.setItem('calc_autosave', this.checked ? '1' : '0');
             });
 
-            // Pri kliknutí na "Vypočítať" — ak auto-save zapnuté, zmeň action na save
-            calcBtn.addEventListener('click', function (e) {
-                if (autoCb.checked) {
-                    calcBtn.value = 'save';
-                    // Obnovíme po odoslaní
-                    setTimeout(function () { calcBtn.value = 'calculate'; }, 200);
-                }
-            });
+            // Pri submite formulára — spoľahlivejšie ako click (form submit handler)
+            var calcForm = calcBtn.closest('form');
+            if (calcForm) {
+                calcForm.addEventListener('submit', function () {
+                    if (autoCb.checked && document.activeElement === calcBtn) {
+                        calcBtn.value = 'save';
+                        setTimeout(function () { calcBtn.value = 'calculate'; }, 0);
+                    }
+                });
+            }
         }
     }
 
@@ -147,8 +149,10 @@ document.addEventListener('DOMContentLoaded', function () {
             else if (mm > 50) mm -= 50;
             else if (mm > 20) mm -= 20;
 
-            // Storočie: 10-miestne RC vydané od r. 1954
-            var year = (rc.length === 10 && yy < 54) ? 2000 + yy : 1900 + yy;
+            // Storočie: dynamicky podľa aktuálneho roka (rovnaká logika ako PHP)
+            var curYear = new Date().getFullYear();
+            var year = (2000 + yy <= curYear) ? 2000 + yy : 1900 + yy;
+            if (rc.length === 9) year = 1900 + yy; // 9-miestne len 19xx
 
             if (mm < 1 || mm > 12 || dd < 1 || dd > 31) return null;
 
@@ -163,6 +167,8 @@ document.addEventListener('DOMContentLoaded', function () {
         var ageInp  = document.getElementById('age_years');
 
         if (!rcInput || !bdInput) return;
+
+        var currentYear = new Date().getFullYear();
 
         function onRcChange() {
             var val = rcInput.value.trim();
@@ -205,9 +211,13 @@ document.addEventListener('DOMContentLoaded', function () {
         var savedSection = document.querySelector('.calc-saved-results');
         if (!savedSection) return;
 
-        // Zistiť, či je používateľ neprihlásený podľa PHP výstupu sekcie
-        var loginMsg = savedSection.querySelector('p');
-        var isGuest  = loginMsg && loginMsg.textContent.indexOf('prihlás') !== -1;
+        // Spoľahlivá detekcia cez PHP export z calc_subnav.php
+        var isGuest = (window.calcIsGuest === true);
+        // Fallback na textovú detekciu ak window.calcIsGuest nie je nastavené
+        if (window.calcIsGuest === undefined) {
+            var loginMsg = savedSection.querySelector('p');
+            isGuest = !!(loginMsg && loginMsg.textContent.indexOf('prihlás') !== -1);
+        }
 
         // Kľúč kalkulačky z URL (napr. "calculator_egfr")
         var calcPageKey = window.location.pathname.replace(/.*\//, '').replace('.php', '');
