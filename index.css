@@ -2064,8 +2064,9 @@ input:disabled + .slider:before {
 .site-header__col--left {
     flex: 1 1 25%;
     min-width: 0;
-    align-items: center;
-    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 .site-header__col--center {
@@ -2103,6 +2104,22 @@ input:disabled + .slider:before {
 
 .site-header__logo-img:hover {
     transform: scale(1.02);
+}
+
+.header-beat-link {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 0.78rem;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.04em;
+    color: rgba(255, 255, 255, 0.45);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.header-beat-link:hover {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: underline;
 }
 
 .site-header__title-link {
