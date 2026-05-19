@@ -18,6 +18,14 @@ if (!isset($pageLastUpdated) || !isset($pageTimeZone)) {
 }
 
 $isHomePage = basename($_SERVER['PHP_SELF']) === 'index.php';
+
+// @beat — Swiss Internet Time (BMT = UTC+1, 1 deň = 1000 beatov)
+$utcNow     = new DateTime('now', new DateTimeZone('UTC'));
+$utcSecs    = (int)$utcNow->format('H') * 3600
+            + (int)$utcNow->format('i') * 60
+            + (int)$utcNow->format('s');
+$bmtSecs    = ($utcSecs + 3600) % 86400;
+$swatchBeat = '@' . str_pad((string)(int)floor($bmtSecs / 86.4), 3, '0', STR_PAD_LEFT);
 ?>
   <footer class="site-footer" role="contentinfo">
     <div class="container site-footer__body">
@@ -62,7 +70,9 @@ $isHomePage = basename($_SERVER['PHP_SELF']) === 'index.php';
         <span class="site-footer__bottom-sep" aria-hidden="true">·</span>
         <a href="#cookie-settings" role="button" class="cookie-settings-trigger site-footer__link" aria-haspopup="dialog" aria-controls="cookieConsentModal">Nastavenia Cookies</a>
         <span class="site-footer__bottom-sep" aria-hidden="true">·</span>
-        <span class="site-footer__updated">Aktualizované: <?= htmlspecialchars($pageLastUpdated, ENT_QUOTES, 'UTF-8') ?></span>
+        <span class="site-footer__updated">Aktualizované: <?= htmlspecialchars($pageLastUpdated, ENT_QUOTES, 'UTF-8') ?> (<?= htmlspecialchars($pageTimeZone, ENT_QUOTES, 'UTF-8') ?>)</span>
+        <span class="site-footer__bottom-sep" aria-hidden="true">·</span>
+        <a href="https://www.swatch.com/en-us/internet-time.html" target="_blank" rel="noopener noreferrer" class="site-footer__link site-footer__beat" title="Swiss Internet Time — 1 deň = 1000 beatov"><?= htmlspecialchars($swatchBeat, ENT_QUOTES, 'UTF-8') ?> .beat</a>
       </div>
     </div>
   </footer>
