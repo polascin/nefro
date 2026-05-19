@@ -145,16 +145,20 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                             } catch (\PDOException) { /* ignoruj */ }
 
                             $emailVerified = !empty($user['email_verified_at']) ? 1 : 0;
+
+                            if ($emailVerified !== 1) {
+                                // Neoverený email — nepovoliť prihlásenie, presmerovať na verifikáciu
+                                setFlashMessage('warning', 'Pred prihlásením musíte overiť svoju e-mailovú adresu. Skontrolujte doručenú poštu alebo si nechajte zaslať nový overovací e-mail.');
+                                header("Location: resend_verification.php");
+                                exit;
+                            }
+
                             regenerateSession();
                             $_SESSION['user_id'] = $user['id'];
                             $_SESSION['username'] = $user['username'];
                             $_SESSION['email'] = (string) ($user['email'] ?? '');
                             $_SESSION['is_admin'] = (int) ($user['is_admin'] ?? 0);
                             $_SESSION['email_verified'] = $emailVerified;
-
-                            if ($emailVerified !== 1) {
-                                setFlashMessage('warning', 'Váš účet má neoverenú e-mailovú adresu. Neoverení používatelia nemôžu využívať služby určené pre používateľov.');
-                            }
 
                             header("Location: index.php");
                             exit;

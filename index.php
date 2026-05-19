@@ -497,46 +497,43 @@ if (!empty($itemListElements)) {
       </section>
 
       <!-- Sekcia O mne -->
-      <section class="features-section" id="o-mne">
-        <h2>O mne</h2>
-        <div class="features-grid">
-          <div class="feature-card">
-            <h3>Kto som</h3>
+      <section class="features-section" id="o-mne" aria-labelledby="o-mne-heading">
+        <h2 id="o-mne-heading">O mne</h2>
+
+        <div class="about-bio">
+          <div class="about-bio__avatar">
+            <img src="img/lubomir-polascin.jpg" alt="MUDr. Ľubomír Polaščín" class="about-bio__photo" width="80" height="80" loading="lazy">
+          </div>
+          <div class="about-bio__text">
+            <p class="about-bio__name">MUDr. Ľubomír Polaščín</p>
+            <p class="about-bio__tagline">Nefrológ &middot; Autor &middot; Technológ &middot; Mysliteľ</p>
             <p>
-              Som <strong>interdisciplinárny tvorca</strong>, ktorý spája medicínu, technológie, jazyk a ideové myslenie. Nie som len lekár alebo len autor. Pôsobím na styku viacerých svetov a prepájam ich do praktických výstupov.
+              <strong>Interdisciplinárny tvorca</strong> na styku medicíny, technológií, jazyka a ideového myslenia.
+              Lekár so špecializáciou v nefrológii a internej medicíne, ktorý spája odbornosť s tvorbou praktických a zmysluplných výstupov.
             </p>
           </div>
-          <div class="feature-card">
-            <h3>Ako sa vnímam</h3>
-            <ul>
-              <li><strong>som lekár</strong> so špecializovaným odborným zázemím v nefrológii, dialýze a internej medicíne</li>
-              <li><strong>som tvorca textov</strong>, ktorý kladie dôraz na presnosť, štýl, význam a jazyk</li>
-              <li><strong>som prekladateľ a jazykový pracovník</strong>, citlivý na formulácie a významové odtiene</li>
-              <li><strong>som technologický praktik</strong>, ktorý vie programovať a tvoriť weby či aplikácie</li>
-              <li><strong>som AI nadšenec</strong>, pre ktorého umelá inteligencia nie je len hračka, ale pracovný, tvorivý a systémový nástroj</li>
-              <li><strong>som človek s filozofickým a duchovným presahom</strong>, ktorý sa zaujíma nielen o funkčnosť vecí, ale aj o ich zmysel</li>
-            </ul>
+        </div>
+
+        <div class="features-grid about-grid">
+          <div class="feature-card about-card">
+            <div class="about-card__icon" aria-hidden="true">🩺</div>
+            <h3>Lekár a odborník</h3>
+            <p>Špecializované zázemie v <strong>nefrológii</strong>, dialýze, hemodiafiltráciách, peritoneálnej dialýze a internej medicíne. Klinická prax dopĺňaná o vedeckú reflexiu a odborné písanie.</p>
           </div>
-          <div class="feature-card">
-            <h3>Čo robím</h3>
-            <p>
-              <strong>Prepájam odbornosť s tvorbou.</strong> Využívam medicínske poznanie, jazyk, technológie a organizačné myslenie na tvorbu textov, webov, dokumentov, projektov, aplikácií a širších koncepcií.
-            </p>
-            <p>
-              <strong>Transformujem poznanie do použiteľnej podoby.</strong> Nezostávam pri teórii. Zaujíma ma, ako myšlienku pretaviť do článku, dokumentu, systému, platformy, služby alebo inštitucionálneho projektu.
-            </p>
-            <p>
-              <strong>Budujem mosty medzi disciplínami.</strong> Medicína, kód, poézia, metafyzika, spiritualita a AI pre mňa nie sú oddelené ostrovy, ale súčasť vlastného pracovného a intelektuálneho ekosystému.
-            </p>
+          <div class="feature-card about-card">
+            <div class="about-card__icon" aria-hidden="true">✍️</div>
+            <h3>Tvorca a autor</h3>
+            <p>Kladiem dôraz na <strong>presnosť, štýl a jazyk</strong>. Som prekladateľ a jazykový pracovník citlivý na formulácie a významové odtiene — od odborných textov po literárne žánre.</p>
           </div>
-          <div class="feature-card">
-            <h3>Stručne o mne</h3>
-            <p>
-              Som medicínsky odborník, tvorca a technologický integrátor s výrazným jazykovým, filozofickým a duchovným presahom. Moja práca stojí na prepájaní presnosti, tvorivosti a praktického využitia poznania.
-            </p>
-            <p>
-              <strong>Lekár, autor, technológ a mysliteľ, ktorý premieňa odborné poznanie na praktické a zmysluplné systémy.</strong>
-            </p>
+          <div class="feature-card about-card">
+            <div class="about-card__icon" aria-hidden="true">💻</div>
+            <h3>Technologický praktik</h3>
+            <p>Programujem a tvorím weby a aplikácie. <strong>Umelá inteligencia</strong> pre mňa nie je hračka, ale pracovný, tvorivý a systémový nástroj integrovaný do každodennej praxe.</p>
+          </div>
+          <div class="feature-card about-card">
+            <div class="about-card__icon" aria-hidden="true">🔗</div>
+            <h3>Integrátor disciplín</h3>
+            <p>Medicína, kód, filozofia a spiritualita nie sú oddelené ostrovy — sú súčasťou jedného <strong>intelektuálneho ekosystému</strong>. Zaujíma ma nielen funkčnosť vecí, ale aj ich hlbší zmysel.</p>
           </div>
         </div>
       </section>

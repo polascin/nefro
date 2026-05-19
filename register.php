@@ -205,6 +205,22 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                         }
                     }
 
+                    // Validácia dátumu narodenia (nepovinné pole, ale ak zadané, musí byť platné a vek min. 18 rokov)
+                    $birthDateRaw = trim($_POST['birth_date'] ?? '');
+                    if ($birthDateRaw !== '') {
+                        $bd = DateTime::createFromFormat('Y-m-d', $birthDateRaw);
+                        $today = new DateTime();
+                        if (!$bd || $bd->format('Y-m-d') !== $birthDateRaw) {
+                            $errors[] = 'Dátum narodenia má neplatný formát.';
+                        } elseif ($bd > $today) {
+                            $errors[] = 'Dátum narodenia nemôže byť v budúcnosti.';
+                        } elseif ($bd < (new DateTime())->modify('-120 years')) {
+                            $errors[] = 'Dátum narodenia je mimo povolený rozsah (max. 120 rokov).';
+                        } elseif ($today->diff($bd)->y < 18) {
+                            $errors[] = 'Registrácia je povolená len osobám starším ako 18 rokov.';
+                        }
+                    }
+
                     // Spracovanie avatara
                     $avatarPath = null;
                     if (isset($_FILES['avatar']) && $_FILES['avatar']['error'] === UPLOAD_ERR_OK) {

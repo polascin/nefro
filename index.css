@@ -516,7 +516,84 @@ body {
     border-color: rgba(59, 130, 246, 0.12);
 }
 
+/* Bio blok — foto + meno + popis */
+.about-bio {
+    display: flex;
+    align-items: flex-start;
+    gap: 28px;
+    margin-bottom: 36px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.about-bio__avatar {
+    flex: 0 0 90px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(59, 130, 246, 0.25);
+    border: 3px solid rgba(59, 130, 246, 0.2);
+}
+
+.about-bio__photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
+.about-bio__text {
+    flex: 1;
+    min-width: 0;
+}
+
+.about-bio__name {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0 0 4px;
+}
+
+.about-bio__tagline {
+    font-size: 0.85rem;
+    color: var(--text-muted, var(--text-secondary));
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin: 0 0 12px;
+}
+
+/* Karty s ikonou */
+.about-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.about-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.about-card__icon {
+    font-size: 1.8rem;
+    line-height: 1;
+    margin-bottom: 2px;
+}
+
 /* Dark mode styles for O mne section */
+[data-theme="dark"] .about-bio {
+    border-bottom-color: rgba(59, 130, 246, 0.2);
+}
+
+[data-theme="dark"] .about-bio__name {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .about-bio__tagline {
+    color: var(--text-secondary);
+}
+
 [data-theme="dark"] #o-mne {
     background: linear-gradient(180deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.95));
     border-color: rgba(59, 130, 246, 0.25);
@@ -1296,6 +1373,16 @@ input:disabled + .slider:before {
 }
 
 @media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-bio {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
     .site-header {
         padding: 70px 0 50px;
     }
