@@ -208,11 +208,11 @@ body {
 .site-header {
     background: var(--primary-gradient);
     color: var(--white);
-    padding: clamp(60px, 10vh, 100px) 0 clamp(40px, 8vh, 80px);
+    padding: clamp(20px, 3vh, 36px) 0 clamp(12px, 2vh, 24px);
     text-align: center;
     position: relative;
     overflow: hidden;
-    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
 }
 
 .site-header__main-title {
@@ -2058,7 +2058,7 @@ input:disabled + .slider:before {
 
 .site-header__col {
     display: flex;
-    padding: 10px 0;
+    padding: 6px 0;
 }
 
 .site-header__col--left {
@@ -2094,7 +2094,7 @@ input:disabled + .slider:before {
 .site-header__logo-img {
     width: 100%;
     height: auto;
-    max-height: 235px; /* Zlatý rez z pôvodných 380px */
+    max-height: 80px;
     object-fit: contain;
     object-position: left center;
     border-radius: 8px;
@@ -2107,7 +2107,7 @@ input:disabled + .slider:before {
 
 .site-header__beat-bar {
     text-align: center;
-    padding: 0 0 14px;
+    padding: 0 0 8px;
 }
 
 .header-beat-link {
