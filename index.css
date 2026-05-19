@@ -3776,11 +3776,11 @@ input:disabled + .slider:before {
    ============================================================ */
 .menu-toggle {
     display: none;
-    background: rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: var(--white);
+    background: rgba(0, 0, 0, 0.07);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
     cursor: pointer;
-    padding: 8px 12px;
+    padding: 8px 14px;
     border-radius: 8px;
     z-index: 1001;
     font-size: 0.9rem;
@@ -3791,31 +3791,52 @@ input:disabled + .slider:before {
 }
 
 .menu-toggle:hover {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.12);
+}
+
+[data-theme="dark"] .menu-toggle,
+.main-nav.is-stuck .menu-toggle {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #e2e8f0;
+}
+
+[data-theme="dark"] .menu-toggle:hover,
+.main-nav.is-stuck .menu-toggle:hover {
+    background: rgba(255, 255, 255, 0.18);
 }
 
 /* ── Hamburger navigácia (≤1024px) ──────────────────────── */
 @media (max-width: 1024px) {
     /* Hamburger tlačidlo */
+    /* Kontajner — wrap umožní ul wrappovať pod button */
+    .main-nav .container {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 4px 16px;
+    }
+
+    /* Button vpravo, bez auto-centringu */
     .menu-toggle {
         display: flex;
-        margin: 8px auto;
+        margin: 6px 0 6px auto;
+        flex-shrink: 0;
     }
 
-    /* Desktop nav linky (≤1024px ale ≥1025 nie) nie sú zobrazené, platí len dropdown */
-
-    /* Nav wrapper — zachová sticky, len padding upravíme */
+    /* Nav wrapper */
     .main-nav {
-        padding: 4px 0;
+        padding: 0;
     }
 
-    /* Skryté ul — zobrazí sa až po kliknutí */
+    /* Skryté ul — plná šírka, wrappuje sa pod button */
     .main-nav ul {
-        display: none !important;
-        flex-direction: column !important;
-        flex-wrap: nowrap !important;
-        gap: 0 !important;
+        display: none;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 0;
         width: 100%;
+        order: 10;
         background: var(--white);
         border-radius: 0 0 12px 12px;
         box-shadow: var(--shadow-lg);
@@ -3824,7 +3845,7 @@ input:disabled + .slider:before {
     }
 
     .main-nav ul.is-open {
-        display: flex !important;
+        display: flex;
     }
 
     /* Položky */
