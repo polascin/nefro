@@ -47,3 +47,4 @@ function _navA(string $href, string $label, bool $active): string {
         </ul>
     </div>
 </nav>
+<?php if ($_navCalcActive): include 'calc_subnav.php'; endif; ?>

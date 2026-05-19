@@ -88,38 +88,69 @@ $otherArticlesPage = isset($_GET["page"]) ? (int) $_GET["page"] : 1;
 if ($otherArticlesPage < 1) {
     $otherArticlesPage = 1;
 }
+$autorFilter = isset($_GET["autor"]) ? mb_substr(trim($_GET["autor"]), 0, 255) : "";
+
 try {
-    $stmtTop = $pdo->query(
-        "SELECT id, title, slug, author, excerpt, published_at
-         FROM articles WHERE is_top = 1 AND is_published = 1
-         ORDER BY sort_order ASC, published_at DESC",
-    );
-    $topArticles = $stmtTop->fetchAll();
+    if ($autorFilter !== "") {
+        // Režim filtrovania podľa autora — všetky jeho články, stránkované
+        $stmtCount = $pdo->prepare(
+            "SELECT COUNT(*) FROM articles
+             WHERE is_published = 1 AND TRIM(author) = :author",
+        );
+        $stmtCount->execute([":author" => $autorFilter]);
+        $otherArticlesTotal = (int) $stmtCount->fetchColumn();
+        $otherArticlesTotalPages = max(
+            1,
+            (int) ceil($otherArticlesTotal / $otherArticlesPerPage),
+        );
+        if ($otherArticlesPage > $otherArticlesTotalPages) {
+            $otherArticlesPage = $otherArticlesTotalPages;
+        }
+        $otherArticlesOffset = ($otherArticlesPage - 1) * $otherArticlesPerPage;
+        $stmtOther = $pdo->prepare(
+            "SELECT id, title, slug, author, excerpt, published_at
+             FROM articles
+             WHERE is_published = 1 AND TRIM(author) = :author
+             ORDER BY is_top DESC, sort_order ASC, published_at DESC
+             LIMIT :limit OFFSET :offset",
+        );
+        $stmtOther->bindValue(":author", $autorFilter);
+        $stmtOther->bindValue(":limit", $otherArticlesPerPage, \PDO::PARAM_INT);
+        $stmtOther->bindValue(":offset", $otherArticlesOffset, \PDO::PARAM_INT);
+        $stmtOther->execute();
+        $otherArticles = $stmtOther->fetchAll();
+    } else {
+        // Štandardný režim — top + ostatné články
+        $stmtTop = $pdo->query(
+            "SELECT id, title, slug, author, excerpt, published_at
+             FROM articles WHERE is_top = 1 AND is_published = 1
+             ORDER BY sort_order ASC, published_at DESC",
+        );
+        $topArticles = $stmtTop->fetchAll();
 
-    $stmtOtherCount = $pdo->query(
-        "SELECT COUNT(*)
-     FROM articles WHERE is_top = 0 AND is_published = 1",
-    );
-    $otherArticlesTotal = (int) $stmtOtherCount->fetchColumn();
-    $otherArticlesTotalPages = max(
-        1,
-        (int) ceil($otherArticlesTotal / $otherArticlesPerPage),
-    );
-    if ($otherArticlesPage > $otherArticlesTotalPages) {
-        $otherArticlesPage = $otherArticlesTotalPages;
+        $stmtOtherCount = $pdo->query(
+            "SELECT COUNT(*) FROM articles WHERE is_top = 0 AND is_published = 1",
+        );
+        $otherArticlesTotal = (int) $stmtOtherCount->fetchColumn();
+        $otherArticlesTotalPages = max(
+            1,
+            (int) ceil($otherArticlesTotal / $otherArticlesPerPage),
+        );
+        if ($otherArticlesPage > $otherArticlesTotalPages) {
+            $otherArticlesPage = $otherArticlesTotalPages;
+        }
+        $otherArticlesOffset = ($otherArticlesPage - 1) * $otherArticlesPerPage;
+        $stmtOther = $pdo->prepare(
+            "SELECT id, title, slug, author, excerpt, published_at
+             FROM articles WHERE is_top = 0 AND is_published = 1
+             ORDER BY sort_order ASC, published_at DESC
+             LIMIT :limit OFFSET :offset",
+        );
+        $stmtOther->bindValue(":limit", $otherArticlesPerPage, \PDO::PARAM_INT);
+        $stmtOther->bindValue(":offset", $otherArticlesOffset, \PDO::PARAM_INT);
+        $stmtOther->execute();
+        $otherArticles = $stmtOther->fetchAll();
     }
-    $otherArticlesOffset = ($otherArticlesPage - 1) * $otherArticlesPerPage;
-
-    $stmtOther = $pdo->prepare(
-        "SELECT id, title, slug, author, excerpt, published_at
-     FROM articles WHERE is_top = 0 AND is_published = 1
-     ORDER BY sort_order ASC, published_at DESC
-     LIMIT :limit OFFSET :offset",
-    );
-    $stmtOther->bindValue(":limit", $otherArticlesPerPage, \PDO::PARAM_INT);
-    $stmtOther->bindValue(":offset", $otherArticlesOffset, \PDO::PARAM_INT);
-    $stmtOther->execute();
-    $otherArticles = $stmtOther->fetchAll();
 } catch (\PDOException $e) {
     error_log("index.php – chyba pri načítaní článkov: " . $e->getMessage());
 }
@@ -130,6 +161,8 @@ $siteName = "Nefro-projekt Slovensko";
 $baseUrl = "https://nefro.polascin.net/";
 $isPaginated = $otherArticlesPage > 1;
 $firstArticleForSeo = $topArticles[0] ?? ($otherArticles[0] ?? null);
+$autorFilterUrl = $autorFilter !== "" ? urlencode($autorFilter) : "";
+$autorFilterHtml = $autorFilter !== "" ? htmlspecialchars($autorFilter, ENT_QUOTES, "UTF-8") : "";
 
 $defaultDescription =
     "Nefrologické články a odborné analýzy o CKD, dialýze a moderných odporúčaniach pre klinickú prax na Slovensku.";
@@ -145,22 +178,38 @@ if (is_array($firstArticleForSeo)) {
     }
 }
 
-$pageTitle = $isPaginated
-    ? "Nefrologické články – strana " . $otherArticlesPage . " | " . $siteName
-    : $siteName;
-$canonicalUrl = $isPaginated
-    ? $baseUrl . "?page=" . $otherArticlesPage
-    : $baseUrl;
-$prevUrl =
-    $otherArticlesPage > 1
+if ($autorFilter !== "") {
+    $pageTitle = "Články autora: " . $autorFilterHtml
+        . ($isPaginated ? " – strana " . $otherArticlesPage : "")
+        . " | " . $siteName;
+    $canonicalUrl = $baseUrl . "?autor=" . $autorFilterUrl
+        . ($isPaginated ? "&page=" . $otherArticlesPage : "");
+    $prevUrl = $otherArticlesPage > 1
         ? ($otherArticlesPage === 2
-            ? $baseUrl
-            : $baseUrl . "?page=" . ($otherArticlesPage - 1))
+            ? $baseUrl . "?autor=" . $autorFilterUrl
+            : $baseUrl . "?autor=" . $autorFilterUrl . "&page=" . ($otherArticlesPage - 1))
         : "";
-$nextUrl =
-    $otherArticlesPage < $otherArticlesTotalPages
-        ? $baseUrl . "?page=" . ($otherArticlesPage + 1)
+    $nextUrl = $otherArticlesPage < $otherArticlesTotalPages
+        ? $baseUrl . "?autor=" . $autorFilterUrl . "&page=" . ($otherArticlesPage + 1)
         : "";
+} else {
+    $pageTitle = $isPaginated
+        ? "Nefrologické články – strana " . $otherArticlesPage . " | " . $siteName
+        : $siteName;
+    $canonicalUrl = $isPaginated
+        ? $baseUrl . "?page=" . $otherArticlesPage
+        : $baseUrl;
+    $prevUrl =
+        $otherArticlesPage > 1
+            ? ($otherArticlesPage === 2
+                ? $baseUrl
+                : $baseUrl . "?page=" . ($otherArticlesPage - 1))
+            : "";
+    $nextUrl =
+        $otherArticlesPage < $otherArticlesTotalPages
+            ? $baseUrl . "?page=" . ($otherArticlesPage + 1)
+            : "";
+}
 
 $itemListElements = [];
 $allPageArticles = array_merge($topArticles, $otherArticles);
@@ -274,7 +323,58 @@ if (!empty($itemListElements)) {
   <main id="main-content" class="container main-content" role="main">
     <div class="content-wrapper">
 
-      <?php if (!empty($topArticles)): ?>
+      <?php if ($autorFilter !== ""): ?>
+      <!-- Články filtrované podľa autora -->
+      <section class="articles-list-section" aria-labelledby="autor-articles-heading">
+        <div class="primary-article">
+          <h2 id="autor-articles-heading">
+            Články autora: <em><?= $autorFilterHtml ?></em>
+            <a href="index.php" class="autor-filter-reset" aria-label="Zobraziť všetky články" title="Zobraziť všetky články">✕</a>
+          </h2>
+          <?php if (empty($otherArticles)): ?>
+            <p>Tento autor nemá žiadne publikované články.</p>
+          <?php else: ?>
+          <ul class="articles-list" role="list">
+            <?php foreach ($otherArticles as $art):
+                $artSlug = htmlspecialchars((string) $art["slug"], ENT_QUOTES);
+                $artTitle = htmlspecialchars((string) $art["title"]);
+                $artExc = htmlspecialchars(buildSeoExcerpt((string) ($art["excerpt"] ?? ""), "", 220));
+                $artDate = htmlspecialchars(formatArticleDate((string) $art["published_at"]));
+                $artDateIso = htmlspecialchars(substr((string) $art["published_at"], 0, 10));
+                $artIsTop = !empty($art["is_top"]);
+                ?>
+            <li class="article-list-item">
+              <div class="article-list-item__header">
+                <a href="article.php?slug=<?= $artSlug ?>" class="article-list-item__title">
+                  <?php if ($artIsTop): ?><span class="badge-top" aria-label="Odporúčaný článok">&#9733;</span> <?php endif; ?>
+                  <?= $artTitle ?>
+                </a>
+                <time class="article-list-item__date" datetime="<?= $artDateIso ?>"><?= $artDate ?></time>
+              </div>
+              <p class="article-list-item__excerpt"><?= $artExc ?></p>
+            </li>
+            <?php endforeach; ?>
+          </ul>
+          <?php if ($otherArticlesTotalPages > 1): ?>
+            <nav class="articles-pagination" aria-label="Stránkovanie článkov autora">
+              <span class="articles-pagination__label">Stránky:</span>
+              <div class="articles-pagination__links">
+                <?php for ($p = 1; $p <= $otherArticlesTotalPages; $p++): ?>
+                  <?php if ($p === $otherArticlesPage): ?>
+                    <span class="articles-page-link is-active" aria-current="page"><?= $p ?></span>
+                  <?php else: ?>
+                    <a class="articles-page-link" href="?autor=<?= $autorFilterUrl ?>&page=<?= $p ?>#autor-articles-heading"><?= $p ?></a>
+                  <?php endif; ?>
+                <?php endfor; ?>
+              </div>
+            </nav>
+          <?php endif; ?>
+          <?php endif; ?>
+        </div>
+      </section>
+      <?php endif; ?>
+
+      <?php if ($autorFilter === "" && !empty($topArticles)): ?>
       <!-- Top články -->
       <section class="articles-top-section" aria-labelledby="top-articles-heading">
         <h2 id="top-articles-heading" class="section-heading">Odporúčané články</h2>
@@ -308,7 +408,7 @@ if (!empty($itemListElements)) {
       </section>
       <?php endif; ?>
 
-      <?php if (!empty($otherArticles)): ?>
+      <?php if ($autorFilter === "" && !empty($otherArticles)): ?>
       <!-- Ďalšie články -->
       <section class="articles-list-section" aria-labelledby="all-articles-heading">
         <div class="primary-article">
@@ -357,7 +457,7 @@ if (!empty($itemListElements)) {
       </section>
       <?php endif; ?>
 
-      <?php if (empty($topArticles) && empty($otherArticles)): ?>
+      <?php if ($autorFilter === "" && empty($topArticles) && empty($otherArticles)): ?>
       <div class="primary-article">
         <p>Žiadne články ešte neboli zverejnené.</p>
         <?php if (isAdmin()): ?>
@@ -366,103 +466,136 @@ if (!empty($itemListElements)) {
       </div>
       <?php endif; ?>
       <!-- Sekcia Služby -->
-      <section class="features-section" id="sluzby">
-        <h2>Poskytované služby a expertíza</h2>
+      <section class="features-section" id="sluzby" aria-labelledby="sluzby-heading">
+        <h2 id="sluzby-heading">Čo ponúkam</h2>
         <div class="features-grid">
-          <div class="feature-card">
-            <h3>Nefrológia a Dialýza</h3>
-            <p>
-              Komplexná starostlivosť. Špecializácia na liečbu obličkových chorôb, renálnu nahradzujúcu liečbu (hemodialýza, hemodiafiltrácia, peritoneálna dialýza), ultrasonografiu orgánov brucha so zameraním na uropoetický systém, ultrasonografiu cievnych prístupov a mimotelové eliminačné metódy.
-            </p>
+
+          <div class="feature-card service-card service-card--blue">
+            <div class="service-card__icon" aria-hidden="true">🩺</div>
+            <h3>Nefrológia a dialýza</h3>
+            <p>Klinická a konziliárna nefrológia s dlhoročnou praxou v renálnej nahradzujúcej liečbe a ultrasonografii.</p>
+            <ul class="service-card__list">
+              <li>Hemodialýza, hemodiafiltrácia, peritoneálna dialýza</li>
+              <li>Mimotelové eliminačné metódy (AKI, intoxikácie)</li>
+              <li>Ultrasonografia obličiek, cievnych prístupov a brucha</li>
+              <li>Konziliárna nefrológia a manažment CKD</li>
+            </ul>
           </div>
-          <div class="feature-card">
+
+          <div class="feature-card service-card service-card--green">
+            <div class="service-card__icon" aria-hidden="true">🎓</div>
             <h3>Lektorstvo a vzdelávanie</h3>
-            <p>
-              Rozsiahle skúsenosti s výučbou a odborným prednášaním predovšetkým v oblasti nefrológie a vnútorného lekárstva pre odbornú ale aj laickú verejnosť. Dlhodobá spolupráca s univerzitnými pracoviskami ako aj so spoločnosťami zaoberajúcimi sa vzdelávaním zdravotníckeho personálu.
-            </p>
+            <p>Odborné prednášky a vzdelávacie aktivity pre zdravotníkov aj laickú verejnosť v oblasti nefrológie a internej medicíny.</p>
+            <ul class="service-card__list">
+              <li>Prednášky a workshopy pre zdravotníkov</li>
+              <li>Spolupráca s univerzitnými pracoviskami</li>
+              <li>Edukácia pacientov a laickej verejnosti</li>
+              <li>Tvorba odborných vzdelávacích materiálov</li>
+            </ul>
           </div>
-          <div class="feature-card">
+
+          <div class="feature-card service-card service-card--purple">
+            <div class="service-card__icon" aria-hidden="true">🌐</div>
             <h3>Medicínske preklady</h3>
-            <p>
-              Špecializované preklady medicínskych dokumentov a lokalizácia softvéru (AJ/SJ) s maximálnym dôrazom na presnú klinickú terminológiu. Preklady sú vždy na vysokej odbornej úrovni, bez gramatických chýb a s dôrazom na detail.
-            </p>
+            <p>Odborné preklady medicínskych textov a lokalizácia softvéru s dôrazom na presnú klinickú terminológiu.</p>
+            <ul class="service-card__list">
+              <li>Preklady AJ ↔ SJ (odborné aj populárne texty)</li>
+              <li>Lokalizácia medicínskeho softvéru a UI</li>
+              <li>Klinická dokumentácia a vedecké články</li>
+              <li>Terminologická konzultácia</li>
+            </ul>
           </div>
-          <div class="feature-card">
+
+          <div class="feature-card service-card service-card--orange">
+            <div class="service-card__icon" aria-hidden="true">💻</div>
             <h3>IT a AI riešenia</h3>
-            <p>
-              Vývoj na mieru šitých medicínskych aplikácií, integrácia AI nástrojov pre spracovanie dát a modernizácia zdravotníckych systémov.
-            </p>
+            <p>Vývoj medicínskych aplikácií a integrácia AI nástrojov pre zdravotnícke prostredie.</p>
+            <ul class="service-card__list">
+              <li>Webové aplikácie a portály pre zdravotníkov</li>
+              <li>Klinické kalkulačky a rozhodovacie nástroje</li>
+              <li>Integrácia AI do medicínskej praxe</li>
+              <li>Automatizácia dokumentácie a dátová analýza</li>
+            </ul>
           </div>
+
+        </div>
+        <div class="service-cta">
+          <p>Máte záujem o spoluprácu alebo konzultáciu?</p>
+          <a href="mailto:nefro@polascin.net" class="btn-primary">Napísať e-mail</a>
         </div>
       </section>
 
       <!-- Sekcia O mne -->
-      <section class="features-section" id="o-mne">
-        <h2>O mne</h2>
-        <div class="features-grid">
-          <div class="feature-card">
-            <h3>Kto som</h3>
+      <section class="features-section" id="o-mne" aria-labelledby="o-mne-heading">
+        <h2 id="o-mne-heading">O mne</h2>
+
+        <div class="about-bio">
+          <div class="about-bio__avatar">
+            <img src="img/lubomir-polascin.jpg" alt="MUDr. Ľubomír Polaščín" class="about-bio__photo" width="80" height="80" loading="lazy">
+          </div>
+          <div class="about-bio__text">
+            <p class="about-bio__name">MUDr. Ľubomír Polaščín</p>
+            <p class="about-bio__tagline">Nefrológ &middot; Autor &middot; Technológ &middot; Mysliteľ</p>
             <p>
-              Som <strong>interdisciplinárny tvorca</strong>, ktorý spája medicínu, technológie, jazyk a ideové myslenie. Nie som len lekár alebo len autor. Pôsobím na styku viacerých svetov a prepájam ich do praktických výstupov.
+              <strong>Interdisciplinárny tvorca</strong> na styku medicíny, technológií, jazyka a ideového myslenia.
+              Lekár so špecializáciou v nefrológii a internej medicíne, ktorý spája odbornosť s tvorbou praktických a zmysluplných výstupov.
             </p>
           </div>
-          <div class="feature-card">
-            <h3>Ako sa vnímam</h3>
-            <ul>
-              <li><strong>som lekár</strong> so špecializovaným odborným zázemím v nefrológii, dialýze a internej medicíne</li>
-              <li><strong>som tvorca textov</strong>, ktorý kladie dôraz na presnosť, štýl, význam a jazyk</li>
-              <li><strong>som prekladateľ a jazykový pracovník</strong>, citlivý na formulácie a významové odtiene</li>
-              <li><strong>som technologický praktik</strong>, ktorý vie programovať a tvoriť weby či aplikácie</li>
-              <li><strong>som AI nadšenec</strong>, pre ktorého umelá inteligencia nie je len hračka, ale pracovný, tvorivý a systémový nástroj</li>
-              <li><strong>som človek s filozofickým a duchovným presahom</strong>, ktorý sa zaujíma nielen o funkčnosť vecí, ale aj o ich zmysel</li>
-            </ul>
+        </div>
+
+        <div class="features-grid about-grid">
+          <div class="feature-card about-card">
+            <div class="about-card__icon" aria-hidden="true">🩺</div>
+            <h3>Lekár a odborník</h3>
+            <p>Špecializované zázemie v <strong>nefrológii</strong>, dialýze, hemodiafiltráciách, peritoneálnej dialýze a internej medicíne. Klinická prax dopĺňaná o vedeckú reflexiu a odborné písanie.</p>
           </div>
-          <div class="feature-card">
-            <h3>Čo robím</h3>
-            <p>
-              <strong>Prepájam odbornosť s tvorbou.</strong> Využívam medicínske poznanie, jazyk, technológie a organizačné myslenie na tvorbu textov, webov, dokumentov, projektov, aplikácií a širších koncepcií.
-            </p>
-            <p>
-              <strong>Transformujem poznanie do použiteľnej podoby.</strong> Nezostávam pri teórii. Zaujíma ma, ako myšlienku pretaviť do článku, dokumentu, systému, platformy, služby alebo inštitucionálneho projektu.
-            </p>
-            <p>
-              <strong>Budujem mosty medzi disciplínami.</strong> Medicína, kód, poézia, metafyzika, spiritualita a AI pre mňa nie sú oddelené ostrovy, ale súčasť vlastného pracovného a intelektuálneho ekosystému.
-            </p>
+          <div class="feature-card about-card">
+            <div class="about-card__icon" aria-hidden="true">✍️</div>
+            <h3>Tvorca a autor</h3>
+            <p>Kladiem dôraz na <strong>presnosť, štýl a jazyk</strong>. Som prekladateľ a jazykový pracovník citlivý na formulácie a významové odtiene — od odborných textov po literárne žánre.</p>
           </div>
-          <div class="feature-card">
-            <h3>Stručne o mne</h3>
-            <p>
-              Som medicínsky odborník, tvorca a technologický integrátor s výrazným jazykovým, filozofickým a duchovným presahom. Moja práca stojí na prepájaní presnosti, tvorivosti a praktického využitia poznania.
-            </p>
-            <p>
-              <strong>Lekár, autor, technológ a mysliteľ, ktorý premieňa odborné poznanie na praktické a zmysluplné systémy.</strong>
-            </p>
+          <div class="feature-card about-card">
+            <div class="about-card__icon" aria-hidden="true">💻</div>
+            <h3>Technologický praktik</h3>
+            <p>Programujem a tvorím weby a aplikácie. <strong>Umelá inteligencia</strong> pre mňa nie je hračka, ale pracovný, tvorivý a systémový nástroj integrovaný do každodennej praxe.</p>
+          </div>
+          <div class="feature-card about-card">
+            <div class="about-card__icon" aria-hidden="true">🔗</div>
+            <h3>Integrátor disciplín</h3>
+            <p>Medicína, kód, filozofia a spiritualita nie sú oddelené ostrovy — sú súčasťou jedného <strong>intelektuálneho ekosystému</strong>. Zaujíma ma nielen funkčnosť vecí, ale aj ich hlbší zmysel.</p>
           </div>
         </div>
       </section>
 
-      <!-- Ďalšia nezávislá <section> v hlavnom obsahu -->
-      <section class="features-section" id="kontakt">
-        <h2>Kontakty a spolupráca</h2>
-        <div class="features-grid">
-          <div class="feature-card">
-            <h3>Máte otázky alebo sa chcete zapojiť?</h3>
-            <p>
-              Radi uvítame akúkoľvek formu diskusie, spolupráce či dotazov. Neváhajte nás kedykoľvek kontaktovať.
-            </p>
-            <a href="mailto:nefro@polascin.net" class="btn-primary">Napísať e-mail</a>
+      <section class="features-section" id="kontakt" aria-labelledby="kontakt-heading">
+        <h2 id="kontakt-heading">Kontakt a spolupráca</h2>
+        <div class="contact-grid">
+
+          <div class="contact-main">
+            <p class="contact-main__lead">Som otvorený odbornej diskusii, prednáškam, prekladateľským zákazkám aj technologickej spolupráci.</p>
+            <a href="mailto:nefro@polascin.net" class="contact-email-link" aria-label="Napísať e-mail na nefro@polascin.net">
+              <span class="contact-email-link__icon" aria-hidden="true">✉</span>
+              nefro@polascin.net
+            </a>
+            <ul class="contact-topics">
+              <li>Odborné konzultácie a second opinion v nefrológii</li>
+              <li>Prednášky, workshopy, edukačné projekty</li>
+              <li>Medicínske preklady a terminologická spolupráca</li>
+              <li>Vývoj medicínskych aplikácií a AI integrácia</li>
+            </ul>
           </div>
-          <div class="feature-card">
+
+          <div class="feature-card contact-community">
+            <div class="contact-community__icon" aria-hidden="true">👥</div>
             <h3>Staňte sa súčasťou komunity</h3>
-            <p>
-              Zaregistrujte sa a získajte prístup k obsahu. Pri registrácii si môžete zvoliť súhlas so zasielaním noviniek a my vás budeme ihneď informovať o najnovších príspevkoch a analýzach.
-            </p>
+            <p>Zaregistrujte sa a získajte prístup k obsahu. Môžete si zvoliť zasielanie avíz o nových článkoch priamo do e-mailu.</p>
             <?php if (!isLoggedIn()): ?>
-              <br><a href="register.php" class="btn-primary mt-15 d-inline-block">Registrovať sa</a>
+              <a href="register.php" class="btn-primary">Registrovať sa</a>
             <?php else: ?>
-              <div class="badge-highlight">Ste prihlásený</div>
+              <div class="badge-highlight">✓ Ste prihlásený</div>
             <?php endif; ?>
           </div>
+
         </div>
       </section>
     </div>
@@ -539,7 +672,11 @@ if (!empty($itemListElements)) {
                 $authorArticles = (int) ($authorStat["articles"] ?? 0);
                 ?>
             <li>
-              <span><?= htmlspecialchars($authorName, ENT_QUOTES, "UTF-8") ?></span>
+              <a href="?autor=<?= urlencode($authorName) ?>#autor-articles-heading"
+                 class="author-filter-link"
+                 aria-label="Zobraziť články autora <?= htmlspecialchars($authorName, ENT_QUOTES, "UTF-8") ?>">
+                <?= htmlspecialchars($authorName, ENT_QUOTES, "UTF-8") ?>
+              </a>
               <strong><?= htmlspecialchars(
                   formatProjectArticleCountLabel($authorArticles),
                   ENT_QUOTES,

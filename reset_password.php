@@ -4,6 +4,10 @@ require_once 'db_config.php';
 
 $errors = [];
 $token = trim((string) ($_GET['token'] ?? $_POST['token'] ?? ''));
+// Validácia formátu tokenu pred hashovaním (base64url: A-Z a-z 0-9 - _)
+if ($token !== '' && !preg_match('/^[A-Za-z0-9_\-]{32,128}$/', $token)) {
+    $token = '';
+}
 $tokenHash = $token !== '' ? hash('sha256', $token) : '';
 $resetRequest = null;
 

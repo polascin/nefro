@@ -158,28 +158,6 @@ $schemaWebApp = [
 
     <?php include 'main_nav.php'; ?>
 
-    <!-- Rýchla navigácia na kalkulačky -->
-    <nav class="quick-nav-calculators" aria-label="Rýchla navigácia na kalkulačky">
-        <div class="container">
-            <ul class="quick-nav-list">
-                <li><a href="#calculator-egfr">eGFR (CKD-EPI 2021)</a></li>
-                <li><a href="#calculator-kdigo">KDIGO G/A riziko</a></li>
-                <li><a href="#calculator-kfre">KFRE</a></li>
-                <li><a href="#calculator-ckdpc">CKD-PC</a></li>
-                <li><a href="#calculator-igan">IgAN</a></li>
-                <li><a href="#calculator-adpkd">Mayo ADPKD</a></li>
-                <li><a href="#calculator-aki">AKI (FENa/FEUrea)</a></li>
-                <li><a href="#calculator-cg">Cockcroft-Gault</a></li>
-                <li><a href="#calculator-ca">Vápnik (korigovaný)</a></li>
-                <li><a href="#calculator-na">Poruchy sodíka</a></li>
-                <li><a href="#calculator-acidbase">Aniónová medzera</a></li>
-                <li><a href="#calculator-slope">eGFR Slope</a></li>
-                <li><a href="#calculator-ktv">Kt/V a URR</a></li>
-                <li><a href="#calculator-uacr">UACR</a></li>
-            </ul>
-        </div>
-    </nav>
-
     <main id="main-content" class="container main-content main-content--single-col" role="main">
         <div class="content-wrapper">
             <section class="calculator-hero">

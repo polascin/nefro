@@ -90,6 +90,12 @@ if (!empty($_SESSION['user_id'])) {
         session_destroy();
         session_start();
         setFlashMessage('info', 'Vaša relácia vypršala z dôvodu nečinnosti. Prihláste sa znova.');
+        // Presmeruj na prihlásenie okamžite — bez čakania na ďalšiu akciu používateľa
+        $currentScript = basename($_SERVER['SCRIPT_NAME'] ?? '');
+        if (!in_array($currentScript, ['login.php', 'register.php', 'forgot_password.php', 'reset_password.php'], true)) {
+            header('Location: login.php');
+            exit;
+        }
     } else {
         $_SESSION['_last_activity'] = $now;
     }
