@@ -55,21 +55,25 @@ if (!function_exists('_navA')) {
 <?php if ($_navCalcActive): include 'calc_subnav.php'; endif; ?>
 <script nonce="<?= htmlspecialchars(function_exists('getScriptNonce') ? getScriptNonce() : '', ENT_QUOTES) ?>">
 (function () {
-    // Hamburger toggle — inline, elementy sú zaručene v DOM
-    var btn = document.getElementById('menuToggle');
-    var ul  = document.querySelector('.main-nav ul');
-    if (btn && ul) {
-        btn.addEventListener('click', function () {
-            var open = ul.classList.toggle('is-open');
-            btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-            btn.setAttribute('aria-label', open ? 'Zavrieť menu' : 'Otvoriť menu');
+    // Hamburger toggle
+    var navBtn = document.getElementById('menuToggle');
+    var navUl  = navBtn ? navBtn.parentNode.querySelector('ul') : null;
+    if (navBtn && navUl) {
+        navBtn.addEventListener('click', function (e) {
+            e.stopPropagation();
+            var open = navUl.style.display !== 'flex';
+            navUl.style.display       = open ? 'flex'   : 'none';
+            navUl.style.flexDirection = open ? 'column' : '';
+            navUl.style.gap           = open ? '0'      : '';
+            navUl.style.width         = open ? '100%'   : '';
+            navBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+            navBtn.setAttribute('aria-label',    open ? 'Zavrieť menu' : 'Otvoriť menu');
         });
-        // Zavrieť pri kliknutí mimo menu
         document.addEventListener('click', function (e) {
-            if (!e.target.closest('.main-nav')) {
-                ul.classList.remove('is-open');
-                btn.setAttribute('aria-expanded', 'false');
-                btn.setAttribute('aria-label', 'Otvoriť menu');
+            if (navUl.style.display === 'flex' && !navBtn.contains(e.target) && !navUl.contains(e.target)) {
+                navUl.style.display = 'none';
+                navBtn.setAttribute('aria-expanded', 'false');
+                navBtn.setAttribute('aria-label', 'Otvoriť menu');
             }
         });
     }
