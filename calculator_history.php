@@ -266,17 +266,23 @@ $totalCount = array_sum(array_column($statsByCalc, 'count'));
         $isAnon = $pkey === '__anon__';
         $canvasId = 'egfr-trend-' . $patIdx;
       ?>
-      <details class="calc-patient-section" open>
+      <details class="calc-patient-section" open data-patient-idx="<?= $patIdx ?>">
         <summary class="calc-patient-summary">
           <span class="calc-patient-name"><?= htmlspecialchars($patHeading) ?></span>
           <span class="calc-patient-meta">
             <?= count($patRows) ?> záznam<?= count($patRows) === 1 ? '' : (count($patRows) < 5 ? 'y' : 'ov') ?>
             · posledný: <?= htmlspecialchars(date('d.m.Y', strtotime($patRows[0]['created_at'] ?? ''))) ?>
           </span>
-          <?php if ($filterPat === '' && !$isAnon): ?>
-            <a href="?patient=<?= urlencode($pkey) ?><?= $filterKey ? '&calc='.urlencode($filterKey) : '' ?>"
-               class="calc-patient-filter-link" onclick="event.stopPropagation()">Len tento pacient</a>
-          <?php endif; ?>
+          <span class="calc-patient-summary-actions">
+            <?php if ($filterPat === '' && !$isAnon): ?>
+              <a href="?patient=<?= urlencode($pkey) ?><?= $filterKey ? '&calc='.urlencode($filterKey) : '' ?>"
+                 class="calc-patient-filter-link" onclick="event.stopPropagation()">Len tento</a>
+            <?php endif; ?>
+            <button type="button" class="calc-patient-print-btn btn-secondary"
+                    data-patient-idx="<?= $patIdx ?>"
+                    onclick="event.stopPropagation(); printPatient(<?= $patIdx ?>)"
+                    title="Vytlačiť históriu tohto pacienta">🖨 Tlačiť</button>
+          </span>
         </summary>
 
         <!-- eGFR trend pre pacienta -->
@@ -410,6 +416,35 @@ $totalCount = array_sum(array_column($statsByCalc, 'count'));
           window.location.href = url;
         });
       })();
+
+      // Tlač histórie jedného pacienta
+      window.printPatient = function(patIdx) {
+        var all = document.querySelectorAll('.calc-patient-section');
+        // Zabezpeč, že cieľová sekcia je otvorená
+        all.forEach(function(s) {
+          var idx = parseInt(s.getAttribute('data-patient-idx'), 10);
+          if (idx === patIdx) {
+            s.setAttribute('open', '');
+            s.classList.add('print-patient-active');
+          } else {
+            s.classList.add('print-patient-hidden');
+          }
+        });
+        // Skry filtre a toolbar pre tlač
+        var header = document.querySelector('.calc-history-header');
+        var toolbar = document.querySelector('.calc-history-toolbar-global');
+        if (header)  header.classList.add('no-print');
+        if (toolbar) toolbar.classList.add('no-print');
+
+        window.print();
+
+        // Obnov stav po tlači
+        all.forEach(function(s) {
+          s.classList.remove('print-patient-active', 'print-patient-hidden');
+        });
+        if (header)  header.classList.remove('no-print');
+        if (toolbar) toolbar.classList.remove('no-print');
+      };
       </script>
 
     </form>
