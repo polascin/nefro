@@ -466,33 +466,62 @@ if (!empty($itemListElements)) {
       </div>
       <?php endif; ?>
       <!-- Sekcia Služby -->
-      <section class="features-section" id="sluzby">
-        <h2>Poskytované služby a expertíza</h2>
+      <section class="features-section" id="sluzby" aria-labelledby="sluzby-heading">
+        <h2 id="sluzby-heading">Čo ponúkam</h2>
         <div class="features-grid">
-          <div class="feature-card">
-            <h3>Nefrológia a Dialýza</h3>
-            <p>
-              Komplexná starostlivosť. Špecializácia na liečbu obličkových chorôb, renálnu nahradzujúcu liečbu (hemodialýza, hemodiafiltrácia, peritoneálna dialýza), ultrasonografiu orgánov brucha so zameraním na uropoetický systém, ultrasonografiu cievnych prístupov a mimotelové eliminačné metódy.
-            </p>
+
+          <div class="feature-card service-card service-card--blue">
+            <div class="service-card__icon" aria-hidden="true">🩺</div>
+            <h3>Nefrológia a dialýza</h3>
+            <p>Klinická a konziliárna nefrológia s dlhoročnou praxou v renálnej nahradzujúcej liečbe a ultrasonografii.</p>
+            <ul class="service-card__list">
+              <li>Hemodialýza, hemodiafiltrácia, peritoneálna dialýza</li>
+              <li>Mimotelové eliminačné metódy (AKI, intoxikácie)</li>
+              <li>Ultrasonografia obličiek, cievnych prístupov a brucha</li>
+              <li>Konziliárna nefrológia a manažment CKD</li>
+            </ul>
           </div>
-          <div class="feature-card">
+
+          <div class="feature-card service-card service-card--green">
+            <div class="service-card__icon" aria-hidden="true">🎓</div>
             <h3>Lektorstvo a vzdelávanie</h3>
-            <p>
-              Rozsiahle skúsenosti s výučbou a odborným prednášaním predovšetkým v oblasti nefrológie a vnútorného lekárstva pre odbornú ale aj laickú verejnosť. Dlhodobá spolupráca s univerzitnými pracoviskami ako aj so spoločnosťami zaoberajúcimi sa vzdelávaním zdravotníckeho personálu.
-            </p>
+            <p>Odborné prednášky a vzdelávacie aktivity pre zdravotníkov aj laickú verejnosť v oblasti nefrológie a internej medicíny.</p>
+            <ul class="service-card__list">
+              <li>Prednášky a workshopy pre zdravotníkov</li>
+              <li>Spolupráca s univerzitnými pracoviskami</li>
+              <li>Edukácia pacientov a laickej verejnosti</li>
+              <li>Tvorba odborných vzdelávacích materiálov</li>
+            </ul>
           </div>
-          <div class="feature-card">
+
+          <div class="feature-card service-card service-card--purple">
+            <div class="service-card__icon" aria-hidden="true">🌐</div>
             <h3>Medicínske preklady</h3>
-            <p>
-              Špecializované preklady medicínskych dokumentov a lokalizácia softvéru (AJ/SJ) s maximálnym dôrazom na presnú klinickú terminológiu. Preklady sú vždy na vysokej odbornej úrovni, bez gramatických chýb a s dôrazom na detail.
-            </p>
+            <p>Odborné preklady medicínskych textov a lokalizácia softvéru s dôrazom na presnú klinickú terminológiu.</p>
+            <ul class="service-card__list">
+              <li>Preklady AJ ↔ SJ (odborné aj populárne texty)</li>
+              <li>Lokalizácia medicínskeho softvéru a UI</li>
+              <li>Klinická dokumentácia a vedecké články</li>
+              <li>Terminologická konzultácia</li>
+            </ul>
           </div>
-          <div class="feature-card">
+
+          <div class="feature-card service-card service-card--orange">
+            <div class="service-card__icon" aria-hidden="true">💻</div>
             <h3>IT a AI riešenia</h3>
-            <p>
-              Vývoj na mieru šitých medicínskych aplikácií, integrácia AI nástrojov pre spracovanie dát a modernizácia zdravotníckych systémov.
-            </p>
+            <p>Vývoj medicínskych aplikácií a integrácia AI nástrojov pre zdravotnícke prostredie.</p>
+            <ul class="service-card__list">
+              <li>Webové aplikácie a portály pre zdravotníkov</li>
+              <li>Klinické kalkulačky a rozhodovacie nástroje</li>
+              <li>Integrácia AI do medicínskej praxe</li>
+              <li>Automatizácia dokumentácie a dátová analýza</li>
+            </ul>
           </div>
+
+        </div>
+        <div class="service-cta">
+          <p>Máte záujem o spoluprácu alebo konzultáciu?</p>
+          <a href="mailto:nefro@polascin.net" class="btn-primary">Napísať e-mail</a>
         </div>
       </section>
 
