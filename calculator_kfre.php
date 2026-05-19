@@ -488,31 +488,42 @@ if (isLoggedIn()) {
                     </div>
                 </form>
 
-                <?php if ($calculated !== null): ?>
-                    <div class="form-section calculator-result-block kfre-result">
+                <?php if ($calculated !== null):
+                    $kfRiskCls = kfreRiskClass((float) $calculated["risk_5yr"]);
+                ?>
+                    <div class="form-section calculator-result-block kfre-result <?= htmlspecialchars($kfRiskCls) ?>">
                         <h3>Výsledok KFRE</h3>
                         <div class="kfre-risk-display">
                             <div class="risk-item risk-2yr">
                                 <div class="risk-label">2-ročné riziko</div>
-                                <div class="risk-value"><?= htmlspecialchars(
-                                    number_format(
-                                        (float) $calculated["risk_2yr"],
-                                        1,
-                                        ",",
-                                        " ",
-                                    ),
-                                ) ?> %</div>
+                                <div class="risk-value">
+                                    <?= htmlspecialchars(number_format((float)$calculated["risk_2yr"], 1, ",", " ")) ?> %
+                                </div>
+                                <div class="risk-gauge" role="meter"
+                                     aria-valuenow="<?= (float)$calculated['risk_2yr'] ?>"
+                                     aria-valuemin="0" aria-valuemax="100">
+                                    <div class="risk-gauge__fill" style="width:<?= min(100, (float)$calculated['risk_2yr']) ?>%"></div>
+                                </div>
                             </div>
                             <div class="risk-item risk-5yr">
                                 <div class="risk-label">5-ročné riziko</div>
-                                <div class="risk-value"><?= htmlspecialchars(
-                                    number_format(
-                                        (float) $calculated["risk_5yr"],
-                                        1,
-                                        ",",
-                                        " ",
-                                    ),
-                                ) ?> %</div>
+                                <div class="risk-value">
+                                    <?= htmlspecialchars(number_format((float)$calculated["risk_5yr"], 1, ",", " ")) ?> %
+                                    <span class="calc-result-badge <?= htmlspecialchars($kfRiskCls) ?>" style="font-size:0.75rem;margin-left:8px">
+                                        <?= match($kfRiskCls) {
+                                            'risk-low'       => 'Nízke',
+                                            'risk-moderate'  => 'Stredné',
+                                            'risk-high'      => 'Vysoké',
+                                            'risk-very-high' => 'Veľmi vysoké',
+                                            default => ''
+                                        } ?>
+                                    </span>
+                                </div>
+                                <div class="risk-gauge" role="meter"
+                                     aria-valuenow="<?= (float)$calculated['risk_5yr'] ?>"
+                                     aria-valuemin="0" aria-valuemax="100">
+                                    <div class="risk-gauge__fill" style="width:<?= min(100, (float)$calculated['risk_5yr']) ?>%"></div>
+                                </div>
                             </div>
                         </div>
 
@@ -544,6 +555,7 @@ if (isLoggedIn()) {
 
                         <div class="form-actions no-print">
                             <button type="button" class="btn-primary js-print">Tlačiť výpočet</button>
+                            <a href="calculator_history.php?calc=kfre" class="btn-secondary">História KFRE</a>
                         </div>
                     </div>
 

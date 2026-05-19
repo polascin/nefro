@@ -3288,6 +3288,28 @@ input:disabled + .slider:before {
     transition: width 0.5s ease;
 }
 
+/* ── Quick-nav historia link ── */
+.quick-nav-history-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-decoration: none;
+    background: rgba(59, 130, 246, 0.08);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    transition: background 0.15s;
+    white-space: nowrap;
+}
+.quick-nav-history-link:hover,
+.quick-nav-history-link.active {
+    background: rgba(59, 130, 246, 0.18);
+    color: var(--primary-color);
+}
+
 /* ── Auto-save toggle ── */
 .calc-autosave-label {
     display: inline-flex;

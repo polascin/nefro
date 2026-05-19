@@ -301,14 +301,6 @@ if (isLoggedIn()) {
   include "head_meta.php";
   ?>
   <meta name="calculator-key" content="egfr_ckd_epi_2021">
-  <?php if (isLoggedIn() && !empty($_SESSION['birth_date'] ?? '') || !empty($currentUser['birth_date'] ?? '')): ?>
-  <meta name="calc-profile" content='<?= htmlspecialchars(json_encode([
-    "sex"        => $_SESSION["gender"] ?? "",
-    "birth_date" => $_SESSION["birth_date"] ?? "",
-    "first_name" => $_SESSION["first_name"] ?? "",
-    "last_name"  => $_SESSION["last_name"] ?? "",
-  ]), ENT_QUOTES) ?>'>
-  <?php endif; ?>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>

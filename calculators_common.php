@@ -355,6 +355,36 @@ function calculatorBuildPatientDisplay(array $row): string
 }
 
 /**
+ * Načíta základné klinické údaje používateľa z DB pre quickfill.
+ */
+function calculatorGetUserProfile(PDO $pdo, int $userId): array
+{
+    try {
+        $stmt = $pdo->prepare(
+            'SELECT first_name, last_name, birth_date, gender
+             FROM users WHERE id = :id LIMIT 1'
+        );
+        $stmt->execute([':id' => $userId]);
+        $row = $stmt->fetch(PDO::FETCH_ASSOC) ?: [];
+        $age = null;
+        if (!empty($row['birth_date'])) {
+            $bd = new DateTime((string) $row['birth_date']);
+            $age = (int) $bd->diff(new DateTime())->y;
+        }
+        $sexMap = ['Muž' => 'male', 'Žena' => 'female'];
+        return [
+            'first_name' => (string) ($row['first_name'] ?? ''),
+            'last_name'  => (string) ($row['last_name']  ?? ''),
+            'birth_date' => (string) ($row['birth_date'] ?? ''),
+            'sex'        => $sexMap[$row['gender'] ?? ''] ?? '',
+            'age'        => $age,
+        ];
+    } catch (\PDOException $e) {
+        return [];
+    }
+}
+
+/**
  * Vráti všetky uložené výsledky používateľa naprieč všetkými kalkulačkami.
  */
 function calculatorFetchAllResults(PDO $pdo, int $userId, int $limit = 200): array

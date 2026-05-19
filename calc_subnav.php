@@ -1,5 +1,9 @@
 <?php
 // $_navCurrent musí byť nastavené pred include (nastavuje main_nav.php)
+// Profil pre quickfill — dostupný na všetkých kalkulačkách
+if (function_exists('isLoggedIn') && isLoggedIn() && isset($pdo)) {
+    $_calcProfile = calculatorGetUserProfile($pdo, (int) $_SESSION['user_id']);
+}
 $_calcSubnavItems = [
     ['file' => 'calculator_egfr.php',       'label' => 'eGFR'],
     ['file' => 'calculator_kdigo_risk.php',  'label' => 'KDIGO G/A'],
@@ -31,9 +35,14 @@ $_calcSubnavItems = [
             <?php endforeach; ?>
         </ul>
         <?php if (function_exists('isLoggedIn') && isLoggedIn()): ?>
-        <a href="calculator_history.php" class="quick-nav-history-link <?= (isset($_navCurrent) && $_navCurrent === 'calculator_history.php') ? 'active' : '' ?>">
-            📋 História
-        </a>
+        <a href="calculator_history.php"
+           class="quick-nav-history-link<?= (isset($_navCurrent) && $_navCurrent === 'calculator_history.php') ? ' active' : '' ?>"
+           title="História výpočtov">📋 História</a>
         <?php endif; ?>
     </div>
 </nav>
+<?php if (!empty($_calcProfile) && !empty(array_filter($_calcProfile))): ?>
+<script nonce="<?= htmlspecialchars(function_exists('getScriptNonce') ? getScriptNonce() : '', ENT_QUOTES) ?>">
+window.calcProfileData = <?= json_encode($_calcProfile, JSON_UNESCAPED_UNICODE) ?>;
+</script>
+<?php endif; ?>

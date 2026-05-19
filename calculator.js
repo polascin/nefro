@@ -83,22 +83,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // ── 4. QUICKFILL Z PROFILU ────────────────────────────────────────────────
-    var profileData = null;
-    try {
-        var raw = localStorage.getItem('calc_profile_prefill');
-        if (raw) profileData = JSON.parse(raw);
-    } catch (e) {}
-
-    // Načítaj profil zo servera ak je prítomný meta tag
-    var profileMeta = document.querySelector('meta[name="calc-profile"]');
-    if (profileMeta) {
-        try {
-            profileData = JSON.parse(profileMeta.content);
-            if (profileData) {
-                localStorage.setItem('calc_profile_prefill', JSON.stringify(profileData));
-            }
-        } catch (e) {}
-    }
+    // Dáta sú dostupné cez window.calcProfileData (generuje calc_subnav.php z DB)
+    var profileData = window.calcProfileData || null;
 
     if (profileData) {
         var sexSel      = document.getElementById('sex');
