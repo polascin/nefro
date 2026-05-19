@@ -30,5 +30,10 @@ $_calcSubnavItems = [
                 </li>
             <?php endforeach; ?>
         </ul>
+        <?php if (function_exists('isLoggedIn') && isLoggedIn()): ?>
+        <a href="calculator_history.php" class="quick-nav-history-link <?= (isset($_navCurrent) && $_navCurrent === 'calculator_history.php') ? 'active' : '' ?>">
+            📋 História
+        </a>
+        <?php endif; ?>
     </div>
 </nav>

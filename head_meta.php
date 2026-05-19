@@ -103,3 +103,6 @@ $katexAutoRender = $katexBase . '/contrib/auto-render.min.js';
 <script src="ui-preferences.js?v=<?= filemtime('ui-preferences.js') ?>" defer></script>
 <script src="ui-preferences-fallback.js?v=<?= filemtime('ui-preferences-fallback.js') ?>" defer></script>
 <script src="nefro-ui.js?v=<?= filemtime(__DIR__ . '/nefro-ui.js') ?>" defer></script>
+<?php if (str_starts_with(basename($_SERVER['PHP_SELF'] ?? ''), 'calculator')): ?>
+<script src="calculator.js?v=<?= filemtime(__DIR__ . '/calculator.js') ?>" defer></script>
+<?php endif; ?>

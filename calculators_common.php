@@ -355,6 +355,60 @@ function calculatorBuildPatientDisplay(array $row): string
 }
 
 /**
+ * Vráti všetky uložené výsledky používateľa naprieč všetkými kalkulačkami.
+ */
+function calculatorFetchAllResults(PDO $pdo, int $userId, int $limit = 200): array
+{
+    $limit = max(1, min(500, $limit));
+    $stmt = $pdo->prepare(
+        'SELECT id, calculator_key, calculator_label,
+                patient_first_name, patient_last_name, patient_birth_date,
+                patient_birth_number, patient_insurance_code,
+                input_payload, result_payload, created_at
+         FROM calculator_results
+         WHERE user_id = :user_id
+         ORDER BY created_at DESC
+         LIMIT :lim'
+    );
+    $stmt->bindValue(':user_id', $userId, PDO::PARAM_INT);
+    $stmt->bindValue(':lim', $limit, PDO::PARAM_INT);
+    $stmt->execute();
+    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    foreach ($rows as &$row) {
+        $row['input_payload']  = calculatorDecodeJsonArray((string) ($row['input_payload']  ?? ''));
+        $row['result_payload'] = calculatorDecodeJsonArray((string) ($row['result_payload'] ?? ''));
+    }
+    return $rows;
+}
+
+/**
+ * Vráti CSS triedu rizika pre eGFR kategóriu.
+ */
+function egfrRiskClass(string $category): string
+{
+    return match ($category) {
+        'G1'  => 'risk-g1',
+        'G2'  => 'risk-g2',
+        'G3a' => 'risk-g3a',
+        'G3b' => 'risk-g3b',
+        'G4'  => 'risk-g4',
+        'G5'  => 'risk-g5',
+        default => '',
+    };
+}
+
+/**
+ * Vráti CSS triedu rizika pre KFRE percentuálne riziko (5-ročné).
+ */
+function kfreRiskClass(float $risk5yr): string
+{
+    if ($risk5yr < 3.0)  return 'risk-low';
+    if ($risk5yr < 10.0) return 'risk-moderate';
+    if ($risk5yr < 40.0) return 'risk-high';
+    return 'risk-very-high';
+}
+
+/**
  * Bezpečnostné hlavičky pre kalkulačky s rozšíreným SEO/CSP (lokálny KaTeX cez 'self').
  */
 function calculatorSendSecurityHeaders(): void

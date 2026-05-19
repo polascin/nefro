@@ -300,6 +300,15 @@ if (isLoggedIn()) {
   ];
   include "head_meta.php";
   ?>
+  <meta name="calculator-key" content="egfr_ckd_epi_2021">
+  <?php if (isLoggedIn() && !empty($_SESSION['birth_date'] ?? '') || !empty($currentUser['birth_date'] ?? '')): ?>
+  <meta name="calc-profile" content='<?= htmlspecialchars(json_encode([
+    "sex"        => $_SESSION["gender"] ?? "",
+    "birth_date" => $_SESSION["birth_date"] ?? "",
+    "first_name" => $_SESSION["first_name"] ?? "",
+    "last_name"  => $_SESSION["last_name"] ?? "",
+  ]), ENT_QUOTES) ?>'>
+  <?php endif; ?>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>
@@ -447,32 +456,31 @@ if (isLoggedIn()) {
                     </div>
                 </form>
 
-                <?php if ($calculated !== null): ?>
-                    <div class="form-section calculator-result-block">
+                <?php if ($calculated !== null):
+                    $riskCls = egfrRiskClass($calculated["g_category"]);
+                ?>
+                    <div class="form-section calculator-result-block <?= htmlspecialchars($riskCls) ?>">
                         <h3>Výsledok výpočtu</h3>
-                        <p><strong>eGFR:</strong> <?= htmlspecialchars(
-                            number_format(
-                                (float) $calculated["egfr"],
-                                1,
-                                ",",
-                                " ",
-                            ),
-                        ) ?> ml/min/1,73m²</p>
-                        <p><strong>Kategória:</strong> <?= htmlspecialchars(
-                            $calculated["g_category"],
-                        ) ?> (<?= htmlspecialchars(
-     $calculated["g_description"],
- ) ?>)</p>
-                        <p><strong>Kreatinín prepočítaný na mg/dL:</strong> <?= htmlspecialchars(
-                            number_format(
-                                (float) $calculated["creatinine_mg_dl"],
-                                3,
-                                ",",
-                                " ",
-                            ),
-                        ) ?></p>
+                        <div class="calc-egfr-result-main">
+                            <div class="calc-result-value-block">
+                                <span class="calc-result-big-value"><?= htmlspecialchars(number_format((float)$calculated["egfr"], 1, ",", " ")) ?></span>
+                                <span class="calc-result-unit">ml/min/1,73 m²</span>
+                            </div>
+                            <div class="calc-result-badge <?= htmlspecialchars($riskCls) ?>">
+                                <?= htmlspecialchars($calculated["g_category"]) ?>
+                                <span><?= htmlspecialchars($calculated["g_description"]) ?></span>
+                            </div>
+                        </div>
+                        <div class="calc-risk-bar-wrap"
+                             data-risk-value="<?= (float)$calculated['egfr'] ?>"
+                             data-risk-max="120"
+                             data-risk-label="eGFR"></div>
+                        <p class="calc-result-detail"><strong>Kreatinín (mg/dL):</strong>
+                            <?= htmlspecialchars(number_format((float)$calculated["creatinine_mg_dl"], 3, ",", " ")) ?>
+                        </p>
                         <div class="form-actions no-print">
                             <button type="button" class="btn-primary js-print">Vytlačiť výpočet</button>
+                            <a href="calculator_history.php?calc=egfr_ckd_epi_2021" class="btn-secondary">História eGFR</a>
                         </div>
                     </div>
                 <?php endif; ?>
