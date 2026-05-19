@@ -88,38 +88,69 @@ $otherArticlesPage = isset($_GET["page"]) ? (int) $_GET["page"] : 1;
 if ($otherArticlesPage < 1) {
     $otherArticlesPage = 1;
 }
+$autorFilter = isset($_GET["autor"]) ? mb_substr(trim($_GET["autor"]), 0, 255) : "";
+
 try {
-    $stmtTop = $pdo->query(
-        "SELECT id, title, slug, author, excerpt, published_at
-         FROM articles WHERE is_top = 1 AND is_published = 1
-         ORDER BY sort_order ASC, published_at DESC",
-    );
-    $topArticles = $stmtTop->fetchAll();
+    if ($autorFilter !== "") {
+        // Režim filtrovania podľa autora — všetky jeho články, stránkované
+        $stmtCount = $pdo->prepare(
+            "SELECT COUNT(*) FROM articles
+             WHERE is_published = 1 AND TRIM(author) = :author",
+        );
+        $stmtCount->execute([":author" => $autorFilter]);
+        $otherArticlesTotal = (int) $stmtCount->fetchColumn();
+        $otherArticlesTotalPages = max(
+            1,
+            (int) ceil($otherArticlesTotal / $otherArticlesPerPage),
+        );
+        if ($otherArticlesPage > $otherArticlesTotalPages) {
+            $otherArticlesPage = $otherArticlesTotalPages;
+        }
+        $otherArticlesOffset = ($otherArticlesPage - 1) * $otherArticlesPerPage;
+        $stmtOther = $pdo->prepare(
+            "SELECT id, title, slug, author, excerpt, published_at
+             FROM articles
+             WHERE is_published = 1 AND TRIM(author) = :author
+             ORDER BY is_top DESC, sort_order ASC, published_at DESC
+             LIMIT :limit OFFSET :offset",
+        );
+        $stmtOther->bindValue(":author", $autorFilter);
+        $stmtOther->bindValue(":limit", $otherArticlesPerPage, \PDO::PARAM_INT);
+        $stmtOther->bindValue(":offset", $otherArticlesOffset, \PDO::PARAM_INT);
+        $stmtOther->execute();
+        $otherArticles = $stmtOther->fetchAll();
+    } else {
+        // Štandardný režim — top + ostatné články
+        $stmtTop = $pdo->query(
+            "SELECT id, title, slug, author, excerpt, published_at
+             FROM articles WHERE is_top = 1 AND is_published = 1
+             ORDER BY sort_order ASC, published_at DESC",
+        );
+        $topArticles = $stmtTop->fetchAll();
 
-    $stmtOtherCount = $pdo->query(
-        "SELECT COUNT(*)
-     FROM articles WHERE is_top = 0 AND is_published = 1",
-    );
-    $otherArticlesTotal = (int) $stmtOtherCount->fetchColumn();
-    $otherArticlesTotalPages = max(
-        1,
-        (int) ceil($otherArticlesTotal / $otherArticlesPerPage),
-    );
-    if ($otherArticlesPage > $otherArticlesTotalPages) {
-        $otherArticlesPage = $otherArticlesTotalPages;
+        $stmtOtherCount = $pdo->query(
+            "SELECT COUNT(*) FROM articles WHERE is_top = 0 AND is_published = 1",
+        );
+        $otherArticlesTotal = (int) $stmtOtherCount->fetchColumn();
+        $otherArticlesTotalPages = max(
+            1,
+            (int) ceil($otherArticlesTotal / $otherArticlesPerPage),
+        );
+        if ($otherArticlesPage > $otherArticlesTotalPages) {
+            $otherArticlesPage = $otherArticlesTotalPages;
+        }
+        $otherArticlesOffset = ($otherArticlesPage - 1) * $otherArticlesPerPage;
+        $stmtOther = $pdo->prepare(
+            "SELECT id, title, slug, author, excerpt, published_at
+             FROM articles WHERE is_top = 0 AND is_published = 1
+             ORDER BY sort_order ASC, published_at DESC
+             LIMIT :limit OFFSET :offset",
+        );
+        $stmtOther->bindValue(":limit", $otherArticlesPerPage, \PDO::PARAM_INT);
+        $stmtOther->bindValue(":offset", $otherArticlesOffset, \PDO::PARAM_INT);
+        $stmtOther->execute();
+        $otherArticles = $stmtOther->fetchAll();
     }
-    $otherArticlesOffset = ($otherArticlesPage - 1) * $otherArticlesPerPage;
-
-    $stmtOther = $pdo->prepare(
-        "SELECT id, title, slug, author, excerpt, published_at
-     FROM articles WHERE is_top = 0 AND is_published = 1
-     ORDER BY sort_order ASC, published_at DESC
-     LIMIT :limit OFFSET :offset",
-    );
-    $stmtOther->bindValue(":limit", $otherArticlesPerPage, \PDO::PARAM_INT);
-    $stmtOther->bindValue(":offset", $otherArticlesOffset, \PDO::PARAM_INT);
-    $stmtOther->execute();
-    $otherArticles = $stmtOther->fetchAll();
 } catch (\PDOException $e) {
     error_log("index.php – chyba pri načítaní článkov: " . $e->getMessage());
 }
@@ -130,6 +161,8 @@ $siteName = "Nefro-projekt Slovensko";
 $baseUrl = "https://nefro.polascin.net/";
 $isPaginated = $otherArticlesPage > 1;
 $firstArticleForSeo = $topArticles[0] ?? ($otherArticles[0] ?? null);
+$autorFilterUrl = $autorFilter !== "" ? urlencode($autorFilter) : "";
+$autorFilterHtml = $autorFilter !== "" ? htmlspecialchars($autorFilter, ENT_QUOTES, "UTF-8") : "";
 
 $defaultDescription =
     "Nefrologické články a odborné analýzy o CKD, dialýze a moderných odporúčaniach pre klinickú prax na Slovensku.";
@@ -145,22 +178,38 @@ if (is_array($firstArticleForSeo)) {
     }
 }
 
-$pageTitle = $isPaginated
-    ? "Nefrologické články – strana " . $otherArticlesPage . " | " . $siteName
-    : $siteName;
-$canonicalUrl = $isPaginated
-    ? $baseUrl . "?page=" . $otherArticlesPage
-    : $baseUrl;
-$prevUrl =
-    $otherArticlesPage > 1
+if ($autorFilter !== "") {
+    $pageTitle = "Články autora: " . $autorFilterHtml
+        . ($isPaginated ? " – strana " . $otherArticlesPage : "")
+        . " | " . $siteName;
+    $canonicalUrl = $baseUrl . "?autor=" . $autorFilterUrl
+        . ($isPaginated ? "&page=" . $otherArticlesPage : "");
+    $prevUrl = $otherArticlesPage > 1
         ? ($otherArticlesPage === 2
-            ? $baseUrl
-            : $baseUrl . "?page=" . ($otherArticlesPage - 1))
+            ? $baseUrl . "?autor=" . $autorFilterUrl
+            : $baseUrl . "?autor=" . $autorFilterUrl . "&page=" . ($otherArticlesPage - 1))
         : "";
-$nextUrl =
-    $otherArticlesPage < $otherArticlesTotalPages
-        ? $baseUrl . "?page=" . ($otherArticlesPage + 1)
+    $nextUrl = $otherArticlesPage < $otherArticlesTotalPages
+        ? $baseUrl . "?autor=" . $autorFilterUrl . "&page=" . ($otherArticlesPage + 1)
         : "";
+} else {
+    $pageTitle = $isPaginated
+        ? "Nefrologické články – strana " . $otherArticlesPage . " | " . $siteName
+        : $siteName;
+    $canonicalUrl = $isPaginated
+        ? $baseUrl . "?page=" . $otherArticlesPage
+        : $baseUrl;
+    $prevUrl =
+        $otherArticlesPage > 1
+            ? ($otherArticlesPage === 2
+                ? $baseUrl
+                : $baseUrl . "?page=" . ($otherArticlesPage - 1))
+            : "";
+    $nextUrl =
+        $otherArticlesPage < $otherArticlesTotalPages
+            ? $baseUrl . "?page=" . ($otherArticlesPage + 1)
+            : "";
+}
 
 $itemListElements = [];
 $allPageArticles = array_merge($topArticles, $otherArticles);
@@ -274,7 +323,58 @@ if (!empty($itemListElements)) {
   <main id="main-content" class="container main-content" role="main">
     <div class="content-wrapper">
 
-      <?php if (!empty($topArticles)): ?>
+      <?php if ($autorFilter !== ""): ?>
+      <!-- Články filtrované podľa autora -->
+      <section class="articles-list-section" aria-labelledby="autor-articles-heading">
+        <div class="primary-article">
+          <h2 id="autor-articles-heading">
+            Články autora: <em><?= $autorFilterHtml ?></em>
+            <a href="index.php" class="autor-filter-reset" aria-label="Zobraziť všetky články" title="Zobraziť všetky články">✕</a>
+          </h2>
+          <?php if (empty($otherArticles)): ?>
+            <p>Tento autor nemá žiadne publikované články.</p>
+          <?php else: ?>
+          <ul class="articles-list" role="list">
+            <?php foreach ($otherArticles as $art):
+                $artSlug = htmlspecialchars((string) $art["slug"], ENT_QUOTES);
+                $artTitle = htmlspecialchars((string) $art["title"]);
+                $artExc = htmlspecialchars(buildSeoExcerpt((string) ($art["excerpt"] ?? ""), "", 220));
+                $artDate = htmlspecialchars(formatArticleDate((string) $art["published_at"]));
+                $artDateIso = htmlspecialchars(substr((string) $art["published_at"], 0, 10));
+                $artIsTop = !empty($art["is_top"]);
+                ?>
+            <li class="article-list-item">
+              <div class="article-list-item__header">
+                <a href="article.php?slug=<?= $artSlug ?>" class="article-list-item__title">
+                  <?php if ($artIsTop): ?><span class="badge-top" aria-label="Odporúčaný článok">&#9733;</span> <?php endif; ?>
+                  <?= $artTitle ?>
+                </a>
+                <time class="article-list-item__date" datetime="<?= $artDateIso ?>"><?= $artDate ?></time>
+              </div>
+              <p class="article-list-item__excerpt"><?= $artExc ?></p>
+            </li>
+            <?php endforeach; ?>
+          </ul>
+          <?php if ($otherArticlesTotalPages > 1): ?>
+            <nav class="articles-pagination" aria-label="Stránkovanie článkov autora">
+              <span class="articles-pagination__label">Stránky:</span>
+              <div class="articles-pagination__links">
+                <?php for ($p = 1; $p <= $otherArticlesTotalPages; $p++): ?>
+                  <?php if ($p === $otherArticlesPage): ?>
+                    <span class="articles-page-link is-active" aria-current="page"><?= $p ?></span>
+                  <?php else: ?>
+                    <a class="articles-page-link" href="?autor=<?= $autorFilterUrl ?>&page=<?= $p ?>#autor-articles-heading"><?= $p ?></a>
+                  <?php endif; ?>
+                <?php endfor; ?>
+              </div>
+            </nav>
+          <?php endif; ?>
+          <?php endif; ?>
+        </div>
+      </section>
+      <?php endif; ?>
+
+      <?php if ($autorFilter === "" && !empty($topArticles)): ?>
       <!-- Top články -->
       <section class="articles-top-section" aria-labelledby="top-articles-heading">
         <h2 id="top-articles-heading" class="section-heading">Odporúčané články</h2>
@@ -308,7 +408,7 @@ if (!empty($itemListElements)) {
       </section>
       <?php endif; ?>
 
-      <?php if (!empty($otherArticles)): ?>
+      <?php if ($autorFilter === "" && !empty($otherArticles)): ?>
       <!-- Ďalšie články -->
       <section class="articles-list-section" aria-labelledby="all-articles-heading">
         <div class="primary-article">
@@ -357,7 +457,7 @@ if (!empty($itemListElements)) {
       </section>
       <?php endif; ?>
 
-      <?php if (empty($topArticles) && empty($otherArticles)): ?>
+      <?php if ($autorFilter === "" && empty($topArticles) && empty($otherArticles)): ?>
       <div class="primary-article">
         <p>Žiadne články ešte neboli zverejnené.</p>
         <?php if (isAdmin()): ?>
@@ -539,7 +639,11 @@ if (!empty($itemListElements)) {
                 $authorArticles = (int) ($authorStat["articles"] ?? 0);
                 ?>
             <li>
-              <span><?= htmlspecialchars($authorName, ENT_QUOTES, "UTF-8") ?></span>
+              <a href="?autor=<?= urlencode($authorName) ?>#autor-articles-heading"
+                 class="author-filter-link"
+                 aria-label="Zobraziť články autora <?= htmlspecialchars($authorName, ENT_QUOTES, "UTF-8") ?>">
+                <?= htmlspecialchars($authorName, ENT_QUOTES, "UTF-8") ?>
+              </a>
               <strong><?= htmlspecialchars(
                   formatProjectArticleCountLabel($authorArticles),
                   ENT_QUOTES,
