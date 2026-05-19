@@ -344,6 +344,15 @@ body {
     border-bottom-color: rgba(59, 130, 246, 0.25);
 }
 
+.main-nav.is-stuck a {
+    color: #cbd5e1;
+}
+
+.main-nav.is-stuck a:hover,
+.main-nav.is-stuck a.active {
+    color: #60a5fa;
+}
+
 .main-nav ul {
     display: flex;
     list-style: none;
@@ -3815,14 +3824,26 @@ input:disabled + .slider:before {
     background: rgba(0, 0, 0, 0.3);
 }
 
-@media (max-width: 768px) {
+/* Zmenšenie medzier pred hamburgerom (768–1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .main-nav ul {
+        gap: 14px;
+    }
+
+    .main-nav a {
+        font-size: 0.82rem;
+        padding: 16px 0;
+    }
+}
+
+/* Hamburger menu — aktivuje sa pod 1024px */
+@media (max-width: 1024px) {
     .menu-toggle {
         display: flex;
         margin: 10px auto;
     }
 
     .main-nav {
-        position: relative;
         padding: 5px 0;
     }
 
@@ -3836,10 +3857,23 @@ input:disabled + .slider:before {
         margin-top: 10px;
     }
 
+    .main-nav.is-stuck ul {
+        background: #0f172a;
+        border: 1px solid rgba(59, 130, 246, 0.2);
+    }
+
+    .main-nav.is-stuck ul li a {
+        color: #cbd5e1;
+        border-bottom-color: rgba(255, 255, 255, 0.07);
+    }
+
+    .main-nav.is-stuck ul li a.active {
+        background: rgba(59, 130, 246, 0.25) !important;
+        color: #93c5fd !important;
+    }
+
     [data-theme="dark"] .main-nav ul {
-        background: var(
-            --white
-        ); /* V dark mode je --white vlastne tmavý modrý */
+        background: var(--white);
     }
 
     .main-nav ul.is-open {
