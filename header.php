@@ -25,38 +25,6 @@ if ($showUnverifiedNotice && !empty($_SESSION['email'])) {
         <a href="index.php" class="site-header__logo-link">
             <img src="./img/nps-logo.gif" alt="Nefro-projekt Slovensko Logo" class="site-header__logo-img">
         </a>
-        <?php
-        // Počiatočná hodnota zo servera (minimalizuje bliknutie pri načítaní)
-        $nowUtc   = new DateTime('now', new DateTimeZone('UTC'));
-        $utcSecs  = (int)$nowUtc->format('H') * 3600
-                  + (int)$nowUtc->format('i') * 60
-                  + (int)$nowUtc->format('s');
-        $initBeat = number_format((($utcSecs + 3600) % 86400) / 86.4, 2, '.', '');
-        ?>
-        <a href="https://www.swatch.com/en-us/internet-time.html"
-           target="_blank" rel="noopener noreferrer"
-           class="header-beat-link"
-           title="Swiss Internet Time — reálny čas, 1 deň = 1000 beatov">
-            <span id="beat-clock">@<?= $initBeat ?></span> .beat
-        </a>
-        <script nonce="<?= htmlspecialchars(function_exists('getScriptNonce') ? getScriptNonce() : '', ENT_QUOTES) ?>">
-        (function () {
-            function swatchBeat() {
-                var now = new Date();
-                var ms = now.getUTCHours() * 3600000
-                       + now.getUTCMinutes() * 60000
-                       + now.getUTCSeconds() * 1000
-                       + now.getUTCMilliseconds();
-                return ((ms + 3600000) % 86400000 / 86400).toFixed(2);
-            }
-            function tick() {
-                var el = document.getElementById('beat-clock');
-                if (el) el.textContent = '@' + swatchBeat();
-            }
-            tick();
-            setInterval(tick, 500);
-        })();
-        </script>
     </div>
     
     <!-- Stred - Nadpis a Podnadpis (1/3) -->
@@ -86,6 +54,40 @@ if ($showUnverifiedNotice && !empty($_SESSION['email'])) {
     </div>
     
   </div>
+
+  <?php
+  $nowUtc  = new DateTime('now', new DateTimeZone('UTC'));
+  $utcSecs = (int)$nowUtc->format('H') * 3600
+           + (int)$nowUtc->format('i') * 60
+           + (int)$nowUtc->format('s');
+  $initBeat = number_format((($utcSecs + 3600) % 86400) / 86.4, 2, '.', '');
+  ?>
+  <div class="site-header__beat-bar">
+    <a href="https://www.swatch.com/en-us/internet-time.html"
+       target="_blank" rel="noopener noreferrer"
+       class="header-beat-link"
+       title="Swiss Internet Time — reálny čas, 1 deň = 1000 beatov">
+      <span id="beat-clock">@<?= $initBeat ?></span> .beat
+    </a>
+  </div>
+  <script nonce="<?= htmlspecialchars(function_exists('getScriptNonce') ? getScriptNonce() : '', ENT_QUOTES) ?>">
+  (function () {
+      function swatchBeat() {
+          var now = new Date();
+          var ms = now.getUTCHours() * 3600000
+                 + now.getUTCMinutes() * 60000
+                 + now.getUTCSeconds() * 1000
+                 + now.getUTCMilliseconds();
+          return ((ms + 3600000) % 86400000 / 86400).toFixed(2);
+      }
+      function tick() {
+          var el = document.getElementById('beat-clock');
+          if (el) el.textContent = '@' + swatchBeat();
+      }
+      tick();
+      setInterval(tick, 500);
+  })();
+  </script>
 </header>
 
 <?php if (is_array($flash) && !empty($flash['message'])): ?>
