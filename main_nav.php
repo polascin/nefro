@@ -55,13 +55,34 @@ if (!function_exists('_navA')) {
 <?php if ($_navCalcActive): include 'calc_subnav.php'; endif; ?>
 <script nonce="<?= htmlspecialchars(function_exists('getScriptNonce') ? getScriptNonce() : '', ENT_QUOTES) ?>">
 (function () {
+    // Hamburger toggle — inline, elementy sú zaručene v DOM
+    var btn = document.getElementById('menuToggle');
+    var ul  = document.querySelector('.main-nav ul');
+    if (btn && ul) {
+        btn.addEventListener('click', function () {
+            var open = ul.classList.toggle('is-open');
+            btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+            btn.setAttribute('aria-label', open ? 'Zavrieť menu' : 'Otvoriť menu');
+        });
+        // Zavrieť pri kliknutí mimo menu
+        document.addEventListener('click', function (e) {
+            if (!e.target.closest('.main-nav')) {
+                ul.classList.remove('is-open');
+                btn.setAttribute('aria-expanded', 'false');
+                btn.setAttribute('aria-label', 'Otvoriť menu');
+            }
+        });
+    }
+
+    // is-stuck IntersectionObserver
     var nav = document.querySelector('.main-nav');
-    if (!nav || !window.IntersectionObserver) return;
-    var sentinel = document.createElement('div');
-    sentinel.style.cssText = 'position:absolute;height:1px;width:1px;top:0;pointer-events:none;visibility:hidden';
-    nav.parentNode.insertBefore(sentinel, nav);
-    new IntersectionObserver(function (entries) {
-        nav.classList.toggle('is-stuck', !entries[0].isIntersecting);
-    }, { threshold: [1] }).observe(sentinel);
+    if (nav && window.IntersectionObserver) {
+        var sentinel = document.createElement('div');
+        sentinel.style.cssText = 'position:absolute;height:1px;width:1px;top:0;pointer-events:none;visibility:hidden';
+        nav.parentNode.insertBefore(sentinel, nav);
+        new IntersectionObserver(function (entries) {
+            nav.classList.toggle('is-stuck', !entries[0].isIntersecting);
+        }, { threshold: [1] }).observe(sentinel);
+    }
 })();
 </script>

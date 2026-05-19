@@ -140,16 +140,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // ── 8. Hamburger menu ─────────────────────────────────────────────────────
-    var menuBtn = document.getElementById('menuToggle');
-    var mainNav = document.querySelector('.main-nav ul');
-    if (menuBtn && mainNav) {
-        menuBtn.addEventListener('click', function () {
-            var open = mainNav.classList.toggle('is-open');
-            menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
-        });
-    }
-
     // ── 9. Validácia zhody hesiel (reset_password.php) ────────────────────────
     var resetForm    = document.querySelector('form[action="reset_password.php"]');
     var newPass      = document.getElementById('new_password');
