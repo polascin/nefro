@@ -2064,9 +2064,8 @@ input:disabled + .slider:before {
 .site-header__col--left {
     flex: 1 1 25%;
     min-width: 0;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .site-header__col--center {
@@ -2106,9 +2105,13 @@ input:disabled + .slider:before {
     transform: scale(1.02);
 }
 
+.site-header__beat-bar {
+    text-align: center;
+    padding: 0 0 14px;
+}
+
 .header-beat-link {
     display: inline-block;
-    margin-top: 8px;
     font-size: 0.78rem;
     font-variant-numeric: tabular-nums;
     letter-spacing: 0.04em;
