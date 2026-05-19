@@ -136,6 +136,14 @@ try {
         $pdo->exec("ALTER TABLE users ADD COLUMN mobile_verification_sent_at DATETIME NULL AFTER mobile_verification_expires_at");
     }
 
+    // ── Migrácia: nastavenie automatickej témy ───────────────────────────────
+    $themeAutoStmt = $pdo->prepare("SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'users' AND COLUMN_NAME = 'theme_auto'");
+    $themeAutoStmt->execute();
+    if ((int) $themeAutoStmt->fetchColumn() === 0) {
+        $pdo->exec("ALTER TABLE users ADD COLUMN theme_auto TINYINT(1) NOT NULL DEFAULT 1 COMMENT 'Automaticky sledovať systémovú tému (1=áno, 0=manuálne)' AFTER newsletter_consent");
+        echo "Migracia: theme_auto pridane.\n";
+    }
+
     // ── Migrácia: rate-limit stĺpce pre SMS overovanie ───────────────────────
     $mobileVerifyFailStmt = $pdo->prepare("SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'users' AND COLUMN_NAME = 'mobile_verify_fail_count'");
     $mobileVerifyFailStmt->execute();

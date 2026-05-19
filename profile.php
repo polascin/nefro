@@ -407,6 +407,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && ($_POST['action'] ?? '') !=
             }
         }
         $data['newsletter_consent'] = isset($_POST['newsletter_consent']) ? 1 : 0;
+        $data['theme_auto'] = isset($_POST['theme_auto']) ? 1 : 0;
 
         // Zmena hesla
         $current_password = $_POST['current_password'] ?? '';
@@ -476,6 +477,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && ($_POST['action'] ?? '') !=
                     city = :city, district = :district, region = :region, country = :country,
                     address_note = :address_note, newsletter_consent = :newsletter_consent,
                     avatar_path = :avatar_path,
+                    theme_auto = :theme_auto,
                     mobile_verified_at = :mobile_verified_at,
                     mobile_verification_code_hash = :mobile_verification_code_hash,
                     mobile_verification_expires_at = :mobile_verification_expires_at,
@@ -558,6 +560,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && ($_POST['action'] ?? '') !=
                 if (!empty($data['username'])) {
                     $_SESSION['username'] = $data['username'];
                 }
+                $_SESSION['theme_auto'] = $data['theme_auto'];
 
                 // Obnova údajov
                 $stmt = $pdo->prepare("SELECT * FROM users WHERE id = :id");
@@ -974,6 +977,11 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && ($_POST['action'] ?? '') !=
                     </div>
                 </div>
 
+
+                <div class="form-check">
+                    <input type="checkbox" id="theme_auto" name="theme_auto" value="1" <?= ($user['theme_auto'] ?? 1) ? 'checked' : '' ?>>
+                    <label for="theme_auto">Automaticky prispôsobovať tému (svetlá/tmavá) podľa nastavenia systému</label>
+                </div>
 
                 <div class="form-check">
                     <input type="checkbox" id="newsletter_consent" name="newsletter_consent" value="1" <?= $user['newsletter_consent'] ? 'checked' : '' ?>>

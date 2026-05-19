@@ -32,6 +32,7 @@ function formatInputKey(string $key): string {
     $map = [
         'sex'                 => 'Pohlavie',
         'age_years'           => 'Vek (roky)',
+        'egfr'                => 'eGFR (ml/min/1,73 m²)',
         'creatinine_value'    => 'Kreatinín',
         'creatinine_unit'     => 'Jednotka kreatinínu',
         'creatinine_mg_dl'    => 'Kreatinín (mg/dL)',
@@ -65,6 +66,17 @@ function formatInputKey(string $key): string {
         'u_na'                => 'U-Sodík',
         's_urea'              => 'S-Urea',
         'u_urea'              => 'U-Urea',
+        // IgAN Prediction Tool
+        'uprot_g_day'         => 'Proteinúria (g/deň)',
+        'map_mmhg'            => 'MAP (mmHg)',
+        'rasb'                => 'Blokáda RAAS',
+        'immuno'              => 'Imunosupresívna liečba',
+        // Mayo ADPKD
+        'tkv_ml'              => 'Celkový objem obličiek TKV (mL)',
+        // CKD-PC
+        'sbp'                 => 'Systolický TK (mmHg)',
+        'bmi'                 => 'BMI (kg/m²)',
+        'hba1c'               => 'HbA1c (%)',
     ];
     return $map[$key] ?? ucfirst(str_replace('_', ' ', $key));
 }
@@ -107,7 +119,7 @@ function formatInputValue(string $key, $value): string {
     }
 
     // ── Boolean hodnoty (0/1 a true/false z JSON) ────────────────────
-    $boolKeys = ['diabetes', 'antihtn', 'hf', 'chd', 'afib', 'insulin', 'oral_dm'];
+    $boolKeys = ['diabetes', 'antihtn', 'hf', 'chd', 'afib', 'insulin', 'oral_dm', 'rasb', 'immuno'];
     if (in_array($key, $boolKeys, true)) {
         return match($value) {
             '1', 'true'  => 'Áno',
@@ -153,9 +165,10 @@ function formatResultKey(string $key): string {
         'interpretation'         => 'Interpretácia',
         'slope'                  => 'Sklon eGFR (ml/min/1,73 m²/rok)',
         'aki_stage'              => 'Štádium AKI',
-        'risk_2yr'               => '2-ročné riziko zlyhania oblíčiek (KFRE)',
-        'risk_5yr'               => '5-ročné riziko zlyhania oblíčiek (KFRE)',
+        'risk_2yr'               => '2-ročné riziko zlyhania obličiek (KFRE)',
+        'risk_5yr'               => '5-ročné riziko zlyhania obličiek (KFRE)',
         'risk_3yr'               => '3-ročné riziko progresie CKD (CKD-PC)',
+        'risk5yr'                => '5-ročné riziko progresie (IgAN)',
         'model_name'             => 'Použitý model',
         'fena'                   => 'FENa (%)',
         'feurea'                 => 'FEUrea (%)',
@@ -168,6 +181,10 @@ function formatResultKey(string $key): string {
         'uacr_mg_g'              => 'UACR (mg/g)',
         'uacr_input'             => 'UACR (vstup)',
         'warnings'               => 'Upozornenia',
+        // Mayo ADPKD
+        'class'                  => 'Mayo trieda',
+        'httkv'                  => 'HtTKV (mL/m)',
+        'k_pct'                  => 'Ročný rast TKV (%)',
     ];
     return $map[$key] ?? ucfirst(str_replace('_', ' ', $key));
 }
@@ -244,7 +261,7 @@ function formatResultKey(string $key): string {
                             <?php foreach ($inputPayload as $key => $value): ?>
                                 <div class="admin-notice-print-row">
                                     <strong><?= htmlspecialchars(formatInputKey((string) $key)) ?></strong>
-                                    <span><?= htmlspecialchars(formatInputValue((string) $key, is_scalar($value) ? (string) $value : json_encode($value, JSON_UNESCAPED_UNICODE))) ?></span>
+                                    <span><?= htmlspecialchars(formatInputValue((string) $key, is_bool($value) ? ($value ? '1' : '0') : (is_scalar($value) ? (string) $value : json_encode($value, JSON_UNESCAPED_UNICODE)))) ?></span>
                                 </div>
                             <?php endforeach; ?>
                         <?php endif; ?>
@@ -259,7 +276,7 @@ function formatResultKey(string $key): string {
                             <?php foreach ($resultPayload as $key => $value): ?>
                                 <div class="admin-notice-print-row">
                                     <strong><?= htmlspecialchars(formatResultKey((string) $key)) ?></strong>
-                                    <span><?= htmlspecialchars(is_scalar($value) ? (string) $value : json_encode($value, JSON_UNESCAPED_UNICODE)) ?></span>
+                                    <span><?= htmlspecialchars(is_bool($value) ? ($value ? 'Áno' : 'Nie') : (is_scalar($value) ? (string) $value : json_encode($value, JSON_UNESCAPED_UNICODE))) ?></span>
                                 </div>
                             <?php endforeach; ?>
                         <?php endif; ?>

@@ -99,6 +99,24 @@ $katexAutoRender = $katexBase . '/contrib/auto-render.min.js';
 <script defer src="formula-math.js?v=<?= filemtime('formula-math.js') ?>"></script>
 
 <link rel="stylesheet" href="index.css?v=<?= filemtime('index.css') ?>">
+<?php
+// Sync server-side theme_auto preference → localStorage pred theme.js
+$_themeAuto = 1; // default: auto (sleduj systém)
+if (function_exists('isLoggedIn') && isLoggedIn()) {
+    if (isset($_SESSION['theme_auto'])) {
+        $_themeAuto = (int) $_SESSION['theme_auto'];
+    } elseif (isset($pdo)) {
+        try {
+            $_taStmt = $pdo->prepare("SELECT theme_auto FROM users WHERE id = :id LIMIT 1");
+            $_taStmt->execute(['id' => $_SESSION['user_id']]);
+            $_taRow = $_taStmt->fetch(PDO::FETCH_ASSOC);
+            $_themeAuto = (int) ($_taRow['theme_auto'] ?? 1);
+            $_SESSION['theme_auto'] = $_themeAuto;
+        } catch (\Throwable $_taEx) {}
+    }
+}
+?>
+<script nonce="<?= htmlspecialchars(getScriptNonce()) ?>">try{localStorage.setItem('nps_theme_auto','<?= (int)$_themeAuto ?>');}catch(_e){}</script>
 <script src="theme.js?v=<?= filemtime('theme.js') ?>"></script>
 <script src="ui-preferences.js?v=<?= filemtime('ui-preferences.js') ?>" defer></script>
 <script src="ui-preferences-fallback.js?v=<?= filemtime('ui-preferences-fallback.js') ?>" defer></script>

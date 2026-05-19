@@ -4,20 +4,23 @@
  */
 
 (function() {
-    let storedTheme = null;
+    var isAuto = true;
+    var storedTheme = null;
     try {
+        isAuto = localStorage.getItem('nps_theme_auto') !== '0';
         storedTheme = localStorage.getItem('nps_theme');
-    } catch (e) {
-        storedTheme = null;
+    } catch (e) {}
+
+    var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    var theme;
+    if (isAuto) {
+        theme = prefersDark ? 'dark' : 'light';
+    } else {
+        theme = (storedTheme === 'dark' || storedTheme === 'light') ? storedTheme : (prefersDark ? 'dark' : 'light');
     }
-    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    
-    let initialTheme = 'light';
-    if (storedTheme === 'dark' || (!storedTheme && prefersDark)) {
-        initialTheme = 'dark';
-    }
-    
-    document.documentElement.setAttribute('data-theme', initialTheme);
+
+    document.documentElement.setAttribute('data-theme', theme);
 })();
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -43,18 +46,34 @@ document.addEventListener('DOMContentLoaded', () => {
     themeToggleBtn.addEventListener('click', () => {
         const currentTheme = document.documentElement.getAttribute('data-theme');
         const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        
+
         document.documentElement.setAttribute('data-theme', newTheme);
         try {
             localStorage.setItem('nps_theme', newTheme);
-        } catch (e) {
-            // Ignorovať zlyhanie uloženia, téma ostane funkčná aspoň pre aktuálnu reláciu.
-        }
+            // Manuálne prepnutie deaktivuje auto režim lokálne;
+            // trvalé nastavenie sa mení v profile.php
+            localStorage.setItem('nps_theme_auto', '0');
+        } catch (e) {}
 
         setToggleAccessibility(newTheme);
         updateToggleIcon(newTheme);
         updateAvatars(newTheme);
     });
+
+    // Živá odozva na zmenu systémovej témy — aplikuje sa len v auto režime
+    const themeMq = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)');
+    if (themeMq && typeof themeMq.addEventListener === 'function') {
+        themeMq.addEventListener('change', (e) => {
+            let isAuto = true;
+            try { isAuto = localStorage.getItem('nps_theme_auto') !== '0'; } catch (_) {}
+            if (!isAuto) return;
+            const newTheme = e.matches ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            setToggleAccessibility(newTheme);
+            updateToggleIcon(newTheme);
+            updateAvatars(newTheme);
+        });
+    }
 
     function updateAvatars(theme) {
         // Aktualizuj header avatar

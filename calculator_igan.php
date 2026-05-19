@@ -107,26 +107,30 @@ if (isLoggedIn() && isset($_GET["load_id"])) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $action = (string) ($_POST["action"] ?? "");
+
     if (!validateCsrfToken((string) ($_POST["csrf_token"] ?? ""))) {
         $errors[] = "Neplatný CSRF token.";
-    } elseif (isset($_POST["delete_id"])) {
+    } elseif ($action === "delete_saved") {
         if (!isLoggedIn()) {
             $errors[] = "Na mazanie výsledkov je potrebné prihlásenie.";
         } else {
-            $deleteId = (int) $_POST["delete_id"];
-            if ($deleteId > 0) {
+            $resultId = (int) ($_POST["result_id"] ?? 0);
+            if ($resultId <= 0) {
+                $errors[] = "Neplatné ID záznamu.";
+            } else {
                 try {
                     if (
                         calculatorDeleteSavedResult(
                             $pdo,
-                            $deleteId,
+                            $resultId,
                             (int) $_SESSION["user_id"],
                         )
                     ) {
-                        $messages[] = "Záznam bol úspešne vymazaný.";
+                        $messages[] = "Uložený výsledok bol vymazaný.";
                     } else {
                         $errors[] =
-                            "Záznam sa nepodarilo vymazať (alebo neexistuje).";
+                            "Záznam sa nepodarilo vymazať alebo neexistuje.";
                     }
                 } catch (\Throwable $e) {
                     $errors[] =
@@ -331,6 +335,10 @@ if (isLoggedIn()) {
                             $w,
                         ) ?></p>
                     <?php endforeach; ?>
+                    <div class="form-actions no-print">
+                        <button type="button" class="btn-primary js-print">Vytlačiť výpočet</button>
+                        <a href="calculator_history.php?calc=igan_risk" class="btn-secondary">História IgAN</a>
+                    </div>
                 </div>
                 <?php endif; ?>
 
@@ -428,56 +436,58 @@ if (isLoggedIn()) {
 
             <?php include "calculator_disclaimer.php"; ?>
 
-            <?php if (!empty($savedResults)): ?>
-                <section class="auth-container auth-container--wide calc-saved-results calc-result-mt32">
-                    <h3>Uložené výsledky</h3>
-                    <div class="calc-saved-list">
-                        <?php foreach ($savedResults as $row): ?>
-                        <details class="calc-saved-item">
-                            <summary>
-                                <?= htmlspecialchars(
-                                    calculatorBuildPatientDisplay($row),
-                                ) ?> —
-                                <?= number_format(
-                                    (float) ($row["result_payload"][
-                                        "risk5yr"
-                                    ] ?? 0),
-                                    1,
-                                    ",",
-                                    " ",
-                                ) ?>&thinsp;%
-                                <span class="calc-saved-date">(<?= htmlspecialchars(
-                                    substr(
-                                        (string) ($row["created_at"] ?? ""),
-                                        0,
-                                        10,
-                                    ),
-                                ) ?>)</span>
-                            </summary>
-                            <div class="calc-saved-detail">
-                                <p>5-ročné riziko: <strong><?= number_format(
-                                    (float) ($row["result_payload"][
-                                        "risk5yr"
-                                    ] ?? 0),
-                                    1,
-                                    ",",
-                                    " ",
-                                ) ?>&thinsp;%</strong></p>
-                                <form method="POST" action="calculator_igan.php" class="d-inline">
-                                    <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(
-                                        generateCsrfToken(),
-                                    ) ?>">
-                                    <input type="hidden" name="delete_id" value="<?= (int) $row[
-                                        "id"
-                                    ] ?>">
-                                    <button type="submit" class="btn-danger btn-sm">Vymazať</button>
-                                </form>
-                            </div>
-                        </details>
-                        <?php endforeach; ?>
+            <section class="auth-container auth-container--wide calc-saved-results calc-result-mt32">
+                <h3>Uložené výsledky</h3>
+                <?php if (!isLoggedIn()): ?>
+                    <p>Pre ukladanie a históriu výpočtov je potrebné prihlásenie.</p>
+                <?php elseif (empty($savedResults)): ?>
+                    <p>Zatiaľ nemáte uložené žiadne výsledky pre túto kalkulačku.</p>
+                <?php else: ?>
+                    <div class="admin-table-wrap">
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>Dátum</th>
+                                    <th>Pacient</th>
+                                    <th>Výsledok</th>
+                                    <th>Akcie</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php foreach ($savedResults as $row): ?>
+                                    <tr>
+                                        <td><?= htmlspecialchars(
+                                            date(
+                                                "d.m.Y H:i",
+                                                strtotime(
+                                                    $row["created_at"] ?? "",
+                                                ),
+                                            ),
+                                        ) ?></td>
+                                        <td><?= htmlspecialchars(
+                                            calculatorBuildPatientDisplay($row),
+                                        ) ?></td>
+                                        <td><?= number_format(
+                                            (float) ($row["result_payload"]["risk5yr"] ?? 0),
+                                            1, ",", " ",
+                                        ) ?>&thinsp;% (5-r.)</td>
+                                        <td class="admin-actions-cell">
+                                            <a href="?load_id=<?= (int) $row["id"] ?>" class="btn-admin-action btn-primary-filled">Načítať</a>
+                                            <a href="calculator_result_print.php?result_id=<?= (int) $row["id"] ?>" target="_blank" rel="noopener" class="btn-admin-action">Tlačiť</a>
+                                            <form method="POST" action="calculator_igan.php" class="d-inline" data-confirm="Naozaj vymazať záznam?">
+                                                <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
+                                                <input type="hidden" name="action" value="delete_saved">
+                                                <input type="hidden" name="result_id" value="<?= (int) $row["id"] ?>">
+                                                <button type="submit" class="btn-admin-action btn-admin-action--warn">Vymazať</button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            </tbody>
+                        </table>
                     </div>
-                </section>
-            <?php endif; ?>
+                <?php endif; ?>
+            </section>
         </div>
     </main>
     <?php include "footer.php"; ?>
