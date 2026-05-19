@@ -145,10 +145,11 @@ $pageTitleRaw = $article
 $pageTitle = $pageTitleRaw; // head_meta.php: htmlspecialchars($pageTitle)
 $canonicalUrl = $canonicalUrlRaw; // head_meta.php: htmlspecialchars($canonicalUrl)
 // $metaDescriptionRaw sa odovzdá priamo ako $seoDescription (pozri nižšie v <head>)
-$pageLastUpdated = $article
+$pageLastUpdated     = $article
     ? date("d.m.Y H:i", strtotime((string) $article["updated_at"]))
     : date("d.m.Y H:i", filemtime(__FILE__));
-$pageTimeZone = date("T") . " (" . date_default_timezone_get() . ")";
+$pageTimeZone        = date("T") . " (" . date_default_timezone_get() . ")";
+$usePageLastUpdated  = true; // zachovaj dátum článku, nie deploy timestamp
 $robotsMeta = $article
     ? "index, follow, max-image-preview:large"
     : "noindex, follow, noarchive";

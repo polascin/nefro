@@ -5,16 +5,17 @@ if (file_exists($deployInfoFile)) {
     require_once $deployInfoFile;
 }
 
-if (!isset($pageLastUpdated) || !isset($pageTimeZone)) {
-    if (defined('DEPLOY_TIME')) {
-        $pageLastUpdated = DEPLOY_TIME;
-    } else {
-        $currentFile = $_SERVER['SCRIPT_FILENAME'];
-        $pageLastUpdated = file_exists($currentFile)
-            ? date('d.m.Y H:i', filemtime($currentFile))
-            : date('d.m.Y H:i');
-    }
-    $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
+// DEPLOY_TIME má prednosť pred filemtime nastavovaným jednotlivými stránkami,
+// okrem stránok, ktoré explicitne žiadajú vlastný dátum (napr. article.php).
+if (!isset($usePageLastUpdated) && defined('DEPLOY_TIME')) {
+    $pageLastUpdated = DEPLOY_TIME;
+    $pageTimeZone    = date('T') . ' (' . date_default_timezone_get() . ')';
+} elseif (!isset($pageLastUpdated)) {
+    $currentFile     = $_SERVER['SCRIPT_FILENAME'] ?? '';
+    $pageLastUpdated = ($currentFile !== '' && file_exists($currentFile))
+        ? date('d.m.Y H:i', filemtime($currentFile))
+        : date('d.m.Y H:i');
+    $pageTimeZone    = date('T') . ' (' . date_default_timezone_get() . ')';
 }
 
 $isHomePage = basename($_SERVER['PHP_SELF']) === 'index.php';

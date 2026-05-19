@@ -132,6 +132,74 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    // ── 5. AUTO-VYPLNENIE DÁTUMU NARODENIA Z RODNÉHO ČÍSLA ───────────────────
+    (function () {
+        function parseRodneCislo(rc) {
+            rc = rc.replace(/[\s/]/g, '');
+            if (!/^\d{9,10}$/.test(rc)) return null;
+
+            var yy = parseInt(rc.substring(0, 2), 10);
+            var mm = parseInt(rc.substring(2, 4), 10);
+            var dd = parseInt(rc.substring(4, 6), 10);
+
+            // Korekcia mesiaca: ženy +50, cudzinci +20 alebo +70
+            if (mm > 70)      mm -= 70;
+            else if (mm > 50) mm -= 50;
+            else if (mm > 20) mm -= 20;
+
+            // Storočie: 10-miestne RC vydané od r. 1954
+            var year = (rc.length === 10 && yy < 54) ? 2000 + yy : 1900 + yy;
+
+            if (mm < 1 || mm > 12 || dd < 1 || dd > 31) return null;
+
+            return year.toString().padStart(4, '0') + '-' +
+                   mm.toString().padStart(2, '0') + '-' +
+                   dd.toString().padStart(2, '0');
+        }
+
+        var rcInput = document.getElementById('patient_birth_number');
+        var bdInput = document.getElementById('patient_birth_date');
+        var sexSel2 = document.getElementById('sex');
+        var ageInp  = document.getElementById('age_years');
+
+        if (!rcInput || !bdInput) return;
+
+        function onRcChange() {
+            var val = rcInput.value.trim();
+            var date = parseRodneCislo(val);
+            if (!date) return;
+
+            // Vyplniť dátum narodenia len ak je prázdny alebo sa líši
+            if (!bdInput.value || bdInput.value !== date) {
+                bdInput.value = date;
+                bdInput.dispatchEvent(new Event('change', { bubbles: true }));
+            }
+
+            // Vyplniť pohlavie z RC (mesiac > 50 = žena)
+            if (sexSel2 && !sexSel2.value) {
+                var rcMm = parseInt(val.substring(2, 4), 10);
+                var isFemale = (rcMm > 50 && rcMm <= 62) || (rcMm > 70 && rcMm <= 82);
+                sexSel2.value = isFemale ? 'female' : 'male';
+            }
+
+            // Vypočítať vek
+            if (ageInp && (!ageInp.value || ageInp.value === '0')) {
+                var bd = new Date(date);
+                var today = new Date();
+                var age = today.getFullYear() - bd.getFullYear();
+                var m = today.getMonth() - bd.getMonth();
+                if (m < 0 || (m === 0 && today.getDate() < bd.getDate())) age--;
+                if (age > 0 && age < 130) ageInp.value = age;
+            }
+        }
+
+        rcInput.addEventListener('input', onRcChange);
+        rcInput.addEventListener('blur',  onRcChange);
+
+        // Spusti aj pri načítaní (ak je RC z histórie načítané)
+        if (rcInput.value.trim().length >= 9) onRcChange();
+    })();
+
     // ── LOCALSTORAGE pre neprihlásených ───────────────────────────────────────
     // Po zobrazení výsledku uložíme do localStorage (fallback pre hostí)
     var resultBlockLocal = document.querySelector('.calculator-result-block');
