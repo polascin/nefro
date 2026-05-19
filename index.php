@@ -567,28 +567,35 @@ if (!empty($itemListElements)) {
         </div>
       </section>
 
-      <!-- Ďalšia nezávislá <section> v hlavnom obsahu -->
-      <section class="features-section" id="kontakt">
-        <h2>Kontakty a spolupráca</h2>
-        <div class="features-grid">
-          <div class="feature-card">
-            <h3>Máte otázky alebo sa chcete zapojiť?</h3>
-            <p>
-              Radi uvítame akúkoľvek formu diskusie, spolupráce či dotazov. Neváhajte nás kedykoľvek kontaktovať.
-            </p>
-            <a href="mailto:nefro@polascin.net" class="btn-primary">Napísať e-mail</a>
+      <section class="features-section" id="kontakt" aria-labelledby="kontakt-heading">
+        <h2 id="kontakt-heading">Kontakt a spolupráca</h2>
+        <div class="contact-grid">
+
+          <div class="contact-main">
+            <p class="contact-main__lead">Som otvorený odbornej diskusii, prednáškam, prekladateľským zákazkám aj technologickej spolupráci.</p>
+            <a href="mailto:nefro@polascin.net" class="contact-email-link" aria-label="Napísať e-mail na nefro@polascin.net">
+              <span class="contact-email-link__icon" aria-hidden="true">✉</span>
+              nefro@polascin.net
+            </a>
+            <ul class="contact-topics">
+              <li>Odborné konzultácie a second opinion v nefrológii</li>
+              <li>Prednášky, workshopy, edukačné projekty</li>
+              <li>Medicínske preklady a terminologická spolupráca</li>
+              <li>Vývoj medicínskych aplikácií a AI integrácia</li>
+            </ul>
           </div>
-          <div class="feature-card">
+
+          <div class="feature-card contact-community">
+            <div class="contact-community__icon" aria-hidden="true">👥</div>
             <h3>Staňte sa súčasťou komunity</h3>
-            <p>
-              Zaregistrujte sa a získajte prístup k obsahu. Pri registrácii si môžete zvoliť súhlas so zasielaním noviniek a my vás budeme ihneď informovať o najnovších príspevkoch a analýzach.
-            </p>
+            <p>Zaregistrujte sa a získajte prístup k obsahu. Môžete si zvoliť zasielanie avíz o nových článkoch priamo do e-mailu.</p>
             <?php if (!isLoggedIn()): ?>
-              <br><a href="register.php" class="btn-primary mt-15 d-inline-block">Registrovať sa</a>
+              <a href="register.php" class="btn-primary">Registrovať sa</a>
             <?php else: ?>
-              <div class="badge-highlight">Ste prihlásený</div>
+              <div class="badge-highlight">✓ Ste prihlásený</div>
             <?php endif; ?>
           </div>
+
         </div>
       </section>
     </div>

@@ -19,26 +19,51 @@ if (!isset($pageLastUpdated) || !isset($pageTimeZone)) {
 
 $isHomePage = basename($_SERVER['PHP_SELF']) === 'index.php';
 ?>
-  <!-- <footer>: Pätička stránky alebo sekcie, obsahuje autorské práva, dôležité odkazy atď. -->
   <footer class="site-footer" role="contentinfo">
-    <div class="container site-footer__container">
-      <p>
-        &copy; 2026 Ľubomír Polaščín. Vytvorené s využitím moderných štandardov a s dôrazom na prístupnosť.
-      </p>
-      <p class="site-footer__updated">
-        Posledná aktualizácia stránky: <?= htmlspecialchars($pageLastUpdated, ENT_QUOTES, 'UTF-8') ?> (časové pásmo: <?= htmlspecialchars($pageTimeZone, ENT_QUOTES, 'UTF-8') ?>)
-      </p>
-      <p class="site-footer__links site-footer__links--margined">
-        <?php if (!$isHomePage): ?>
-            <a href="index.php" class="site-footer__link site-footer__link--home">Návrat na Domov</a> <span class="site-footer__separator">|</span> 
-        <?php endif; ?>
-        <a href="privacy.php" class="site-footer__link">Ochrana osobných údajov (Privacy Policy)</a> <span class="site-footer__separator">|</span> 
+    <div class="container site-footer__body">
+
+      <div class="site-footer__col site-footer__col--brand">
+        <img src="./img/nps.gif" alt="Nefro-projekt Slovensko" class="site-footer__logo" loading="lazy" width="48" height="48">
+        <p class="site-footer__brand-name">Nefro-projekt Slovensko</p>
+        <p class="site-footer__brand-desc">Odborný portál o nefrológii, dialýze a internej medicíne pre zdravotníkov aj informovaných pacientov.</p>
+      </div>
+
+      <nav class="site-footer__col site-footer__col--nav" aria-label="Rýchla navigácia v pätičke">
+        <p class="site-footer__col-heading">Navigácia</p>
+        <ul class="site-footer__nav-list">
+          <li><a href="index.php" class="site-footer__link">Domov</a></li>
+          <li><a href="index.php#sluzby" class="site-footer__link">Služby</a></li>
+          <li><a href="index.php#o-mne" class="site-footer__link">O mne</a></li>
+          <li><a href="index.php#kontakt" class="site-footer__link">Kontakt</a></li>
+          <li><a href="calculators.php" class="site-footer__link">Kalkulačky</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-footer__col site-footer__col--contact">
+        <p class="site-footer__col-heading">Kontakt</p>
+        <ul class="site-footer__nav-list">
+          <li><a href="mailto:nefro@polascin.net" class="site-footer__link">nefro@polascin.net</a></li>
+          <?php if (function_exists('isLoggedIn') && !isLoggedIn()): ?>
+            <li><a href="register.php" class="site-footer__link">Registrácia</a></li>
+            <li><a href="login.php" class="site-footer__link">Prihlásenie</a></li>
+          <?php else: ?>
+            <li><a href="profile.php" class="site-footer__link">Môj profil</a></li>
+            <li><a href="logout.php" class="site-footer__link">Odhlásiť sa</a></li>
+          <?php endif; ?>
+          <li><a href="privacy.php" class="site-footer__link">Ochrana osobných údajov</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="site-footer__bottom">
+      <div class="container site-footer__bottom-inner">
+        <span>&copy; <?= date('Y') ?> Ľubomír Polaščín</span>
+        <span class="site-footer__bottom-sep" aria-hidden="true">·</span>
         <a href="#cookie-settings" role="button" class="cookie-settings-trigger site-footer__link" aria-haspopup="dialog" aria-controls="cookieConsentModal">Nastavenia Cookies</a>
-        <?php if (function_exists('isLoggedIn') && isLoggedIn()): ?>
-          <span class="site-footer__separator">|</span>
-          <a href="logout.php" class="site-footer__link">Odhlásiť sa</a>
-        <?php endif; ?>
-      </p>
+        <span class="site-footer__bottom-sep" aria-hidden="true">·</span>
+        <span class="site-footer__updated">Aktualizované: <?= htmlspecialchars($pageLastUpdated, ENT_QUOTES, 'UTF-8') ?></span>
+      </div>
     </div>
   </footer>
 
