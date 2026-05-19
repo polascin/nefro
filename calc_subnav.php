@@ -1,7 +1,8 @@
 <?php
 // $_navCurrent musí byť nastavené pred include (nastavuje main_nav.php)
-// Profil pre quickfill — dostupný na všetkých kalkulačkách
-if (function_exists('isLoggedIn') && isLoggedIn() && isset($pdo)) {
+// Profil pre quickfill — dostupný na kalkulačkách (vyžaduje calculators_common.php)
+if (function_exists('isLoggedIn') && isLoggedIn() && isset($pdo)
+    && function_exists('calculatorGetUserProfile')) {
     $_calcProfile = calculatorGetUserProfile($pdo, (int) $_SESSION['user_id']);
 }
 $_calcSubnavItems = [
