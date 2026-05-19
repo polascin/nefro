@@ -201,7 +201,9 @@ function sendViaSmtp(string $toEmail, string $subject, string $messageBody, arra
         return false;
     }
 
-    $encodedSubject = '=?UTF-8?B?' . base64_encode($subject) . '?=';
+    // mb_encode_mimeheader správne rozdelí dlhý predmet na viacero RFC 2047 encoded words
+    // (max. 75 znakov každý) — jednoduchý base64_encode bez delenia lámal diakritiku.
+    $encodedSubject = mb_encode_mimeheader($subject, 'UTF-8', 'B', "\r\n ");
     $headers = [
         'From: ' . $cfg['from_name'] . ' <' . $cfg['from_email'] . '>',
         'To: <' . $toEmail . '>',
