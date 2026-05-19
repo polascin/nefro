@@ -232,6 +232,7 @@ $form = [
     "patient_birth_number" => (string) ($_POST["patient_birth_number"] ?? ""),
     "patient_insurance_code" =>
         (string) ($_POST["patient_insurance_code"] ?? ""),
+    "examination_date" => (string) ($_POST["examination_date"] ?? date("Y-m-d")),
 ];
 
 if (isLoggedIn() && isset($_GET["load_id"])) {
@@ -439,6 +440,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                             "Pre uloženie výsledku sa najskôr prihláste.";
                     } else {
                         $inputPayload = [
+                            "examination_date" => $form["examination_date"],
                             "age_years" => $calculated["age_years"],
                             "sex" => $calculated["sex"],
                             "egfr" => $calculated["egfr"],
@@ -684,6 +686,10 @@ function sexLabel(string $v): string
                         <div class="form-grid">
 
                             <div class="form-group">
+                                <label for="examination_date">Dátum vyšetrenia <span class="required">*</span></label>
+                                <input type="date" id="examination_date" name="examination_date" required class="form-control" max="<?= date('Y-m-d') ?>" value="<?= htmlspecialchars($form['examination_date']) ?>">
+                            </div>
+                                                        <div class="form-group">
                                 <label for="age_years">Vek (roky, 20–80)</label>
                                 <input type="number" id="age_years" name="age_years"
                                        min="20" max="80" required class="form-control"
@@ -1119,7 +1125,7 @@ function sexLabel(string $v): string
                                 <table class="admin-table">
                                     <thead>
                                         <tr>
-                                            <th>Dátum</th>
+                                            <th>Vyšetrenie</th>
                                             <th>Pacient</th>
                                             <th>Model</th>
                                             <th>3-ročné riziko</th>
@@ -1132,15 +1138,11 @@ function sexLabel(string $v): string
                                             as $row
                                         ): ?>
                                             <tr>
-                                                <td><?= htmlspecialchars(
-                                                    substr(
-                                                        (string) ($row[
-                                                            "created_at"
-                                                        ] ?? ""),
-                                                        0,
-                                                        16,
-                                                    ),
-                                                ) ?></td>
+                                                <td>
+                                                    <?php $_examD = (string) ($row["input_payload"]["examination_date"] ?? ""); ?>
+                                                    <?= $_examD ? htmlspecialchars(date("d.m.Y", strtotime($_examD))) : '—' ?>
+                                                    <small class="d-block" style="color:var(--text-secondary);font-size:.8em">ulo.: <?= htmlspecialchars(date("d.m.Y H:i", strtotime($row["created_at"] ?? ""))) ?></small>
+                                                </td>
                                                 <td><?= htmlspecialchars(
                                                     calculatorBuildPatientDisplay(
                                                         $row,

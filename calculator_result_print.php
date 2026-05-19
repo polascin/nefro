@@ -66,6 +66,8 @@ function formatInputKey(string $key): string {
         'u_na'                => 'U-Sodík',
         's_urea'              => 'S-Urea',
         'u_urea'              => 'U-Urea',
+        // Dátum vyšetrenia (spoločný pre všetky kalkulačky)
+        'examination_date'    => 'Dátum vyšetrenia',
         // IgAN Prediction Tool
         'uprot_g_day'         => 'Proteinúria (g/deň)',
         'map_mmhg'            => 'MAP (mmHg)',
@@ -126,6 +128,12 @@ function formatInputValue(string $key, $value): string {
             '0', 'false' => 'Nie',
             default      => $value,
         };
+    }
+
+    // ── Dátum vyšetrenia (YYYY-MM-DD → DD.MM.YYYY) ──────────────
+    if ($key === 'examination_date' && $value !== '') {
+        $d = \DateTimeImmutable::createFromFormat('Y-m-d', $value);
+        return $d ? $d->format('d.m.Y') : $value;
     }
 
     // ── Typ mutácie ADPKD ───────────────────────────────────────

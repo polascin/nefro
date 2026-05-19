@@ -71,6 +71,21 @@ function patientHeading(array $row): string {
     return 'Neidentifikovaný pacient';
 }
 
+/**
+ * Vráti zobrazovací dátum záznamu.
+ * Prednosť: examination_date z input_payload; fallback: created_at.
+ * $withTime = true pridá čas len pri fallback na created_at (examination_date je iba dátum).
+ */
+function calcDisplayDate(array $row, bool $withTime = false): string {
+    $examDate = trim((string)($row['input_payload']['examination_date'] ?? ''));
+    if ($examDate !== '') {
+        $ts = strtotime($examDate);
+        return $ts ? date('d.m.Y', $ts) : $examDate;
+    }
+    $ts = strtotime((string)($row['created_at'] ?? ''));
+    return $ts ? date($withTime ? 'd.m.Y H:i' : 'd.m.Y', $ts) : '—';
+}
+
 // POST akcie
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
     if (!validateCsrfToken((string)($_POST['csrf_token'] ?? ''))) {
@@ -116,8 +131,10 @@ if (isLoggedIn()) {
         if ($r['calculator_key'] === 'egfr_ckd_epi_2021') {
             $egfr = (float)($r['result_payload']['egfr'] ?? 0);
             if ($egfr > 0) {
+                $examDate = trim((string)($r['input_payload']['examination_date'] ?? ''));
+                $dateStr  = $examDate !== '' ? $examDate : substr((string)($r['created_at'] ?? ''), 0, 10);
                 $grouped[$pkey]['egfrTrend'][] = [
-                    'date'     => substr((string)($r['created_at'] ?? ''), 0, 10),
+                    'date'     => $dateStr,
                     'egfr'     => $egfr,
                     'category' => (string)($r['result_payload']['g_category'] ?? ''),
                 ];
@@ -135,8 +152,8 @@ if (isLoggedIn()) {
         );
     });
     foreach ($grouped as &$g) {
-        // eGFR trend od najstaršieho
-        $g['egfrTrend'] = array_reverse($g['egfrTrend']);
+        // eGFR trend chronologicky podľa dátumu vyšetrenia
+        usort($g['egfrTrend'], fn($a, $b) => strcmp($a['date'], $b['date']));
     }
     unset($g);
 }
@@ -208,7 +225,7 @@ $totalCount = array_sum(array_column($statsByCalc, 'count'));
         <div class="calc-compare-card">
           <div class="calc-compare-card__header">
             <span class="calc-compare-card__label"><?= htmlspecialchars($cr['calculator_label'] ?? '') ?></span>
-            <span class="calc-compare-card__date"><?= htmlspecialchars(date('d.m.Y', strtotime($cr['created_at'] ?? ''))) ?></span>
+            <span class="calc-compare-card__date"><?= htmlspecialchars(calcDisplayDate($cr)) ?></span>
           </div>
           <div class="calc-compare-card__patient"><?= htmlspecialchars(calculatorBuildPatientDisplay($cr)) ?></div>
           <div class="calc-compare-card__result">
@@ -271,7 +288,7 @@ $totalCount = array_sum(array_column($statsByCalc, 'count'));
           <span class="calc-patient-name"><?= htmlspecialchars($patHeading) ?></span>
           <span class="calc-patient-meta">
             <?= count($patRows) ?> záznam<?= count($patRows) === 1 ? '' : (count($patRows) < 5 ? 'y' : 'ov') ?>
-            · posledný: <?= htmlspecialchars(date('d.m.Y', strtotime($patRows[0]['created_at'] ?? ''))) ?>
+            · posledný: <?= htmlspecialchars(calcDisplayDate($patRows[0])) ?>
           </span>
           <span class="calc-patient-summary-actions">
             <?php if ($filterPat === '' && !$isAnon): ?>
@@ -366,7 +383,12 @@ $totalCount = array_sum(array_column($statsByCalc, 'count'));
           ?>
           <tr>
             <td><input type="checkbox" name="compare[]" value="<?= (int)$row['id'] ?>" class="compare-check" aria-label="Vybrať na porovnanie"></td>
-            <td><?= htmlspecialchars(date('d.m.Y H:i', strtotime($row['created_at'] ?? ''))) ?></td>
+            <td>
+              <?= htmlspecialchars(calcDisplayDate($row)) ?>
+              <?php if (isset($row['input_payload']['examination_date']) && $row['input_payload']['examination_date'] !== ''): ?>
+                <small class="d-block" style="color:var(--text-secondary);font-size:.8em">ulo.: <?= htmlspecialchars(date('d.m.Y H:i', strtotime($row['created_at'] ?? ''))) ?></small>
+              <?php endif; ?>
+            </td>
             <td><?= htmlspecialchars($row['calculator_label'] ?? CALC_LABELS[$key] ?? $key) ?></td>
             <td><?php if ($riskCls): ?>
                 <span class="calc-result-badge <?= htmlspecialchars($riskCls) ?>"><?= htmlspecialchars($resultText) ?></span>

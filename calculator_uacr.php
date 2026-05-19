@@ -19,6 +19,7 @@ $form = [
     "patient_birth_number" => (string) ($_POST["patient_birth_number"] ?? ""),
     "patient_insurance_code" =>
         (string) ($_POST["patient_insurance_code"] ?? ""),
+    "examination_date" => (string) ($_POST["examination_date"] ?? date("Y-m-d")),
 ];
 
 if (isLoggedIn() && isset($_GET["load_id"])) {
@@ -122,6 +123,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                         $errors[] = "Pre uloženie sa prihláste.";
                     } else {
                         $inPayload = [
+                            "examination_date" => $form["examination_date"],
                             "u_alb" => $ualb,
                             "u_alb_unit" => $form["u_alb_unit"],
                             "u_cr" => $ucr,
@@ -275,7 +277,11 @@ if (isLoggedIn()) {
                     <div class="form-section">
                         <h3>Povinné vstupy na výpočet</h3>
                         <div class="form-grid">
-                            <div class="form-group"><label>U-Albumín</label><input type="text" name="u_alb" class="form-control" value="<?= htmlspecialchars(
+                            <div class="form-group">
+                                <label for="examination_date">Dátum vyšetrenia <span class="required">*</span></label>
+                                <input type="date" id="examination_date" name="examination_date" required class="form-control" max="<?= date('Y-m-d') ?>" value="<?= htmlspecialchars($form['examination_date']) ?>">
+                            </div>
+                                                        <div class="form-group"><label>U-Albumín</label><input type="text" name="u_alb" class="form-control" value="<?= htmlspecialchars(
                                 $form["u_alb"],
                             ) ?>" required></div>
                             <div class="form-group">
@@ -354,18 +360,15 @@ if (isLoggedIn()) {
                 <?php else: ?>
                     <div class="admin-table-wrap">
                         <table class="admin-table">
-                            <thead><tr><th>Dátum</th><th>Pacient</th><th>Výsledok</th><th>Akcie</th></tr></thead>
+                            <thead><tr><th>Vyšetrenie</th><th>Pacient</th><th>Výsledok</th><th>Akcie</th></tr></thead>
                             <tbody>
                                 <?php foreach ($savedResults as $row): ?>
                                     <tr>
-                                        <td><?= htmlspecialchars(
-                                            date(
-                                                "d.m.Y H:i",
-                                                strtotime(
-                                                    $row["created_at"] ?? "",
-                                                ),
-                                            ),
-                                        ) ?></td>
+                                        <td>
+                                            <?php $_examD = (string) ($row["input_payload"]["examination_date"] ?? ""); ?>
+                                            <?= $_examD ? htmlspecialchars(date("d.m.Y", strtotime($_examD))) : '—' ?>
+                                            <small class="d-block" style="color:var(--text-secondary);font-size:.8em">ulo.: <?= htmlspecialchars(date("d.m.Y H:i", strtotime($row["created_at"] ?? ""))) ?></small>
+                                        </td>
                                         <td><?= htmlspecialchars(
                                             calculatorBuildPatientDisplay($row),
                                         ) ?></td>

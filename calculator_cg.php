@@ -20,6 +20,7 @@ $form = [
     "patient_birth_number" => (string) ($_POST["patient_birth_number"] ?? ""),
     "patient_insurance_code" =>
         (string) ($_POST["patient_insurance_code"] ?? ""),
+    "examination_date" => (string) ($_POST["examination_date"] ?? date("Y-m-d")),
 ];
 
 if (isLoggedIn() && isset($_GET["load_id"])) {
@@ -154,6 +155,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 } else {
                     try {
                         $inputPayload = [
+                            "examination_date" => $form["examination_date"],
                             "sex" => $sex,
                             "age_years" => (int) $ageYears,
                             "weight_kg" => round((float) $weightKg, 1),
@@ -332,6 +334,10 @@ if (isLoggedIn()) {
                         <h3>Povinné vstupy na výpočet</h3>
                         <div class="form-grid">
                             <div class="form-group">
+                                <label for="examination_date">Dátum vyšetrenia <span class="required">*</span></label>
+                                <input type="date" id="examination_date" name="examination_date" required class="form-control" max="<?= date('Y-m-d') ?>" value="<?= htmlspecialchars($form['examination_date']) ?>">
+                            </div>
+                                                        <div class="form-group">
                                 <label for="sex">Pohlavie</label>
                                 <select id="sex" name="sex" class="form-control" required>
                                     <option value="female" <?= $form["sex"] ===
@@ -419,7 +425,7 @@ if (isLoggedIn()) {
                         <table class="admin-table">
                             <thead>
                                 <tr>
-                                    <th>Dátum</th>
+                                    <th>Vyšetrenie</th>
                                     <th>Pacient</th>
                                     <th>Výsledok</th>
                                     <th>Akcie</th>
@@ -434,14 +440,11 @@ if (isLoggedIn()) {
                                     $crcl = (float) ($result["crcl"] ?? 0);
                                     ?>
                                     <tr>
-                                        <td><?= htmlspecialchars(
-                                            date(
-                                                "d.m.Y H:i",
-                                                strtotime(
-                                                    $row["created_at"] ?? "",
-                                                ),
-                                            ),
-                                        ) ?></td>
+                                        <td>
+                                            <?php $_examD = (string) ($row["input_payload"]["examination_date"] ?? ""); ?>
+                                            <?= $_examD ? htmlspecialchars(date("d.m.Y", strtotime($_examD))) : '—' ?>
+                                            <small class="d-block" style="color:var(--text-secondary);font-size:.8em">ulo.: <?= htmlspecialchars(date("d.m.Y H:i", strtotime($row["created_at"] ?? ""))) ?></small>
+                                        </td>
                                         <td><?= htmlspecialchars(
                                             calculatorBuildPatientDisplay($row),
                                         ) ?></td>

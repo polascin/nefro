@@ -19,6 +19,7 @@ $form = [
     "patient_birth_number" => (string) ($_POST["patient_birth_number"] ?? ""),
     "patient_insurance_code" =>
         (string) ($_POST["patient_insurance_code"] ?? ""),
+    "examination_date" => (string) ($_POST["examination_date"] ?? date("Y-m-d")),
 ];
 
 if (isLoggedIn() && isset($_GET["load_id"])) {
@@ -154,6 +155,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 } else {
                     try {
                         $inputPayload = [
+                            "examination_date" => $form["examination_date"],
                             "s_na" => round($na, 1),
                             "s_cl" => round($cl, 1),
                             "s_hco3" => round($hco3, 1),
@@ -324,7 +326,11 @@ if (isLoggedIn()) {
                     <div class="form-section">
                         <h3>Povinné vstupy na výpočet</h3>
                         <div class="form-grid">
-                            <div class="form-group"><label for="s_na">S-Na (mmol/L)</label><input type="text" id="s_na" name="s_na" required class="form-control" value="<?= htmlspecialchars(
+                            <div class="form-group">
+                                <label for="examination_date">Dátum vyšetrenia <span class="required">*</span></label>
+                                <input type="date" id="examination_date" name="examination_date" required class="form-control" max="<?= date('Y-m-d') ?>" value="<?= htmlspecialchars($form['examination_date']) ?>">
+                            </div>
+                                                        <div class="form-group"><label for="s_na">S-Na (mmol/L)</label><input type="text" id="s_na" name="s_na" required class="form-control" value="<?= htmlspecialchars(
                                 $form["s_na"],
                             ) ?>"></div>
                             <div class="form-group"><label for="s_cl">S-Cl (mmol/L)</label><input type="text" id="s_cl" name="s_cl" required class="form-control" value="<?= htmlspecialchars(
@@ -382,18 +388,15 @@ if (isLoggedIn()) {
                 <?php else: ?>
                     <div class="admin-table-wrap">
                         <table class="admin-table">
-                            <thead><tr><th>Dátum</th><th>Pacient</th><th>Výsledok</th><th>Akcie</th></tr></thead>
+                            <thead><tr><th>Vyšetrenie</th><th>Pacient</th><th>Výsledok</th><th>Akcie</th></tr></thead>
                             <tbody>
                                 <?php foreach ($savedResults as $row): ?>
                                     <tr>
-                                        <td><?= htmlspecialchars(
-                                            date(
-                                                "d.m.Y H:i",
-                                                strtotime(
-                                                    $row["created_at"] ?? "",
-                                                ),
-                                            ),
-                                        ) ?></td>
+                                        <td>
+                                            <?php $_examD = (string) ($row["input_payload"]["examination_date"] ?? ""); ?>
+                                            <?= $_examD ? htmlspecialchars(date("d.m.Y", strtotime($_examD))) : '—' ?>
+                                            <small class="d-block" style="color:var(--text-secondary);font-size:.8em">ulo.: <?= htmlspecialchars(date("d.m.Y H:i", strtotime($row["created_at"] ?? ""))) ?></small>
+                                        </td>
                                         <td><?= htmlspecialchars(
                                             calculatorBuildPatientDisplay($row),
                                         ) ?></td>
