@@ -201,23 +201,94 @@ document.addEventListener('DOMContentLoaded', function () {
     })();
 
     // ── LOCALSTORAGE pre neprihlásených ───────────────────────────────────────
-    // Po zobrazení výsledku uložíme do localStorage (fallback pre hostí)
-    var resultBlockLocal = document.querySelector('.calculator-result-block');
-    if (resultBlockLocal) {
-        var calcKey = document.querySelector('meta[name="calculator-key"]');
-        if (calcKey && calcKey.content) {
-            var resultData = {
-                key:       calcKey.content,
-                html:      resultBlockLocal.innerHTML,
-                timestamp: new Date().toISOString(),
+    (function () {
+        var savedSection = document.querySelector('.calc-saved-results');
+        if (!savedSection) return;
+
+        // Zistiť, či je používateľ neprihlásený podľa PHP výstupu sekcie
+        var loginMsg = savedSection.querySelector('p');
+        var isGuest  = loginMsg && loginMsg.textContent.indexOf('prihlás') !== -1;
+
+        // Kľúč kalkulačky z URL (napr. "calculator_egfr")
+        var calcPageKey = window.location.pathname.replace(/.*\//, '').replace('.php', '');
+
+        // Vykresli lokálnu históriu pre neprihlásených
+        function renderLocal() {
+            var list = [];
+            try { list = JSON.parse(localStorage.getItem('calc_local_history') || '[]'); } catch (e) {}
+            list = list.filter(function (r) { return r.key === calcPageKey; });
+
+            if (!list.length) {
+                if (isGuest && loginMsg) {
+                    loginMsg.textContent = 'Pre trvalú históriu sa prihláste. Žiadne lokálne záznamy.';
+                }
+                return;
+            }
+
+            var html = '<p class="calc-local-note">Záznamy uložené len vo vašom prehliadači.'
+                + ' Pre trvalú históriu sa <a href="login.php">prihláste</a>.</p>';
+            html += '<div class="calc-local-list">';
+            list.forEach(function (r, i) {
+                var d = new Date(r.timestamp);
+                var ds = d.toLocaleDateString('sk-SK') + ' ' + d.toLocaleTimeString('sk-SK', {hour:'2-digit', minute:'2-digit'});
+                html += '<div class="calc-local-entry">';
+                html += '<div class="calc-local-entry__header"><span class="calc-local-entry__date">' + ds + '</span>'
+                    + '<button type="button" class="btn-admin-action btn-admin-action--warn calc-local-del" data-idx="' + i + '">Vymazať</button></div>';
+                html += '<div class="calc-local-entry__result">' + r.resultHtml + '</div>';
+                html += '</div>';
+            });
+            html += '</div>';
+
+            savedSection.innerHTML = '<h3>Uložené výsledky</h3>' + html;
+
+            savedSection.querySelectorAll('.calc-local-del').forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    try {
+                        var all = JSON.parse(localStorage.getItem('calc_local_history') || '[]');
+                        // Odstrán záznam s týmto indexom pre daný kľúč
+                        var keyList = all.filter(function(r){ return r.key === calcPageKey; });
+                        var delTs   = keyList[parseInt(this.dataset.idx, 10)].timestamp;
+                        all = all.filter(function(r){ return r.timestamp !== delTs; });
+                        localStorage.setItem('calc_local_history', JSON.stringify(all));
+                    } catch (e) {}
+                    renderLocal();
+                });
+            });
+        }
+
+        // Uložiť výsledok ak je výpočet zobrazený A používateľ je hosť
+        var resultBlock = document.querySelector('.calculator-result-block');
+        if (resultBlock && isGuest) {
+            var formEl   = document.querySelector('form');
+            var inputs   = {};
+            if (formEl) {
+                try {
+                    new FormData(formEl).forEach(function (v, k) {
+                        if (k !== 'csrf_token' && k !== 'action' && k !== 'js_token') {
+                            inputs[k] = v;
+                        }
+                    });
+                } catch (e) {}
+            }
+
+            var entry = {
+                key:        calcPageKey,
+                label:      document.title.split('|')[0].trim(),
+                resultHtml: resultBlock.outerHTML,
+                inputs:     inputs,
+                timestamp:  new Date().toISOString(),
             };
+
             try {
-                var histList = JSON.parse(localStorage.getItem('calc_local_history') || '[]');
-                histList.unshift(resultData);
-                histList = histList.slice(0, 20); // max 20 záznamov
-                localStorage.setItem('calc_local_history', JSON.stringify(histList));
+                var all = JSON.parse(localStorage.getItem('calc_local_history') || '[]');
+                all.unshift(entry);
+                all = all.slice(0, 50);
+                localStorage.setItem('calc_local_history', JSON.stringify(all));
             } catch (e) {}
         }
-    }
+
+        // Vždy vykresli lokálnu históriu pre hostí
+        if (isGuest) renderLocal();
+    })();
 
 });

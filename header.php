@@ -150,4 +150,14 @@ if ($isCalculatorPage && !empty($currentUser)):
             </div>
         </div>
         <div class="print-layout-tbody">
+<?php elseif ($isCalculatorPage): ?>
+    <div class="print-layout-table">
+        <div class="print-layout-thead">
+            <div class="user-print-header print-only">
+                <div class="user-print-header__content">
+                    <div class="user-print-header__line1" style="font-style:italic;color:#666">Nie je prihlásený žiaden používateľ</div>
+                </div>
+            </div>
+        </div>
+        <div class="print-layout-tbody">
 <?php endif; ?>

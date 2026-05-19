@@ -258,7 +258,7 @@ if (isLoggedIn()) {
                 <h2>Cockcroft-Gault (Odhad klírensu kreatinínu)</h2>
                 <p class="auth-subtitle">Štandard pre farmakokinetickú úpravu dávkovania väčšiny liekov pri renálnej insuficiencii (napr. DOAK, antibiotiká).</p>
 
-                <details class="calc-formula-box">
+                <details open class="calc-formula-box">
                     <summary>Vzorec — Cockcroft-Gault</summary>
                     <div class="calc-formula-content">
                         <div class="calc-formula-line">

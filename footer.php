@@ -91,7 +91,7 @@ $swatchBeat = '@' . number_format($beatValue, 2, '.', '');
   $printDateTime = date('d.m.Y H:i:s');
   $isCalculatorPageFooter = str_starts_with(basename($_SERVER['PHP_SELF']), 'calculator');
   ?>
-  <?php if ($isCalculatorPageFooter && !empty($currentUser)): ?>
+  <?php if ($isCalculatorPageFooter && (!empty($currentUser) || !isLoggedIn())): ?>
         </div> <!-- end .print-layout-tbody -->
         <div class="print-layout-tfoot">
   <?php endif; ?>
@@ -101,7 +101,7 @@ $swatchBeat = '@' . number_format($beatValue, 2, '.', '');
     <div class="mt-2">Dátum a čas tlače: <?= $printDateTime ?> (<?= htmlspecialchars($pageTimeZone, ENT_QUOTES, 'UTF-8') ?>)</div>
   </div>
 
-  <?php if ($isCalculatorPageFooter && !empty($currentUser)): ?>
+  <?php if ($isCalculatorPageFooter && (!empty($currentUser) || !isLoggedIn())): ?>
         </div> <!-- end .print-layout-tfoot -->
     </div> <!-- end .print-layout-table -->
   <?php endif; ?>

@@ -213,7 +213,7 @@ if (isLoggedIn()) {
                 <h2>Korigovaný vápnik pri hypoalbuminémii</h2>
                 <p class="auth-subtitle">U pacientov s CKD (a inými stavmi) spojenými s nízkou hladinou albumínu môže byť celkový vápnik falošne nízky. Ionizovaný vápnik zostáva relatívne stabilný. Táto kalkulačka prepočíta celkový vápnik vzhľadom na hladinu albumínu.</p>
 
-                <details class="calc-formula-box">
+                <details open class="calc-formula-box">
                     <summary>Vzorec pre výpočet</summary>
                     <div class="calc-formula-content">
                         <div class="calc-formula-line">\[ \text{Ca}_{\text{korig}} = \text{Ca}_{\text{nameraný}} + 0.02 \times (40 - \text{Albumín}) \]</div>

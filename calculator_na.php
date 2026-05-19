@@ -278,7 +278,7 @@ if (isLoggedIn()) {
                 <h2>Poruchy sodíka a vody</h2>
                 <p class="auth-subtitle">Kalkulačka pre manažment hypernatrémie (deficit voľnej vody) a hyponatrémie (Adrogue-Madiasova rovnica).</p>
 
-                <details class="calc-formula-box">
+                <details open class="calc-formula-box">
                     <summary>Vzorce a vysvetlivky</summary>
                     <div class="calc-formula-content">
                         <div class="calc-formula-line">\[ \text{TBW} = \text{Hmotnosť} \times (0.45 \text{ až } 0.6 \text{ podľa pohlavia a veku}) \]</div>

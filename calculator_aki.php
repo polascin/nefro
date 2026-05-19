@@ -293,7 +293,7 @@ if (isLoggedIn()) {
                 <h2>Frakčná exkrécia sodíka a urey (FENa / FEUrea)</h2>
                 <p class="auth-subtitle">Diferenciálna diagnostika akútneho poškodenia obličiek (AKI).</p>
 
-                <details class="calc-formula-box">
+                <details open class="calc-formula-box">
                     <summary>Vzorce a vysvetlivky</summary>
                     <div class="calc-formula-content">
                         <div class="calc-formula-line">\[ \text{FENa} = \frac{U_{\text{Na}} \times S_{\text{Cr}}}{S_{\text{Na}} \times U_{\text{Cr}}} \times 100\% \]</div>

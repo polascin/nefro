@@ -255,7 +255,7 @@ if (isLoggedIn()) {
                 <h2>Aniónová medzera a Delta-Delta pomer</h2>
                 <p class="auth-subtitle">Základný nástroj na diagnostiku zmiešaných porúch acidobázickej rovnováhy.</p>
 
-                <details class="calc-formula-box">
+                <details open class="calc-formula-box">
                     <summary>Vzorce a vysvetlivky</summary>
                     <div class="calc-formula-content">
                         <div class="calc-formula-line">\[ \text{AG} = \text{Na} - (\text{Cl} + \text{HCO}_3) \]</div>

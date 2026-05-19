@@ -193,7 +193,7 @@ if (isLoggedIn()) {
             <div class="auth-container auth-container--wide">
                 <h2>Kt/V (Daugirdas II) a Urea Reduction Ratio (URR)</h2>
 
-                <details class="calc-formula-box">
+                <details open class="calc-formula-box">
                     <summary>Vzorce — Kt/V (Daugirdas II) a URR</summary>
                     <div class="calc-formula-content">
                         <div class="calc-formula-line">\[ \text{URR} = \left(1 - \frac{U_{\text{post}}}{U_{\text{pre}}}\right) \times 100\% \]</div>

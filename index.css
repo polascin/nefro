@@ -2902,7 +2902,6 @@ input:disabled + .slider:before {
   .quick-nav-calculators,
   .site-header__beat-bar,
   .calc-saved-results,
-  .kfre-legend,
   .form-actions,
   .calc-history-header,
   .calc-history-actions,
@@ -3010,6 +3009,32 @@ input:disabled + .slider:before {
 
     details > summary {
         display: none !important;
+    }
+
+    /* Vzorce a vysvetlivky – zobraziť vrátane nadpisu */
+    .calc-formula-box {
+        display: block !important;
+        border: 1px solid #ccc !important;
+        padding: 8px 12px !important;
+        margin-bottom: 10px !important;
+        page-break-inside: avoid;
+    }
+
+    .calc-formula-box > summary {
+        display: block !important;
+        font-weight: 700 !important;
+        font-size: 9pt !important;
+        margin-bottom: 6px !important;
+        color: #000 !important;
+    }
+
+    .calc-formula-content {
+        display: block !important;
+    }
+
+    /* KFRE legenda s prahovými hodnotami – zobraziť pri tlači */
+    .kfre-legend {
+        display: block !important;
     }
 
     details[open],
@@ -3339,6 +3364,43 @@ input:disabled + .slider:before {
 .calc-quickfill-btn {
     margin-bottom: 16px;
     font-size: 0.88rem;
+}
+
+/* ── Lokálna história (neprihlásení) ── */
+.calc-local-note {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 12px;
+}
+
+.calc-local-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.calc-local-entry {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.calc-local-entry__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 14px;
+    background: var(--card-gradient);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.calc-local-entry__date {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+}
+
+.calc-local-entry__result {
+    padding: 12px 14px;
 }
 
 /* ── History page ── */

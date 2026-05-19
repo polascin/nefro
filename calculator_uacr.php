@@ -207,7 +207,7 @@ if (isLoggedIn()) {
             <div class="auth-container auth-container--wide">
                 <h2>UACR (Urine Albumin-to-Creatinine Ratio) a KDIGO A-štádium</h2>
 
-                <details class="calc-formula-box">
+                <details open class="calc-formula-box">
                     <summary>Vzorce — UACR a KDIGO A-štádium</summary>
                     <div class="calc-formula-content">
                         <div class="calc-formula-line">\[ \text{UACR} = \frac{\text{Alb}_{\text{moč}}}{\text{Cr}_{\text{moč}}} \]</div>
