@@ -427,6 +427,7 @@ if (isLoggedIn()) {
                         ) ?></p>
                         <div class="form-actions no-print">
                             <button type="button" class="btn-primary js-print">Vytlačiť výpočet</button>
+                            <a href="calculator_history.php?calc=kdigo_risk" class="btn-secondary">História KDIGO</a>
                         </div>
                     </div>
                 <?php endif; ?>
@@ -524,6 +525,7 @@ if (isLoggedIn()) {
                                             <?php endif; ?>
                                         </td>
                                         <td class="admin-actions-cell">
+                                            <a href="?load_id=<?= (int) $row["id"] ?>" class="btn-admin-action btn-primary-filled">Načítať</a>
                                             <a href="calculator_result_print.php?result_id=<?= (int) $row[
                                                 "id"
                                             ] ?>" target="_blank" rel="noopener" class="btn-admin-action">Tlačiť</a>
@@ -548,6 +550,7 @@ if (isLoggedIn()) {
         </div>
     </main>
 
+    <script src="patient_autofill.js?v=20260515-1&cb=<?= filemtime("patient_autofill.js") ?>" defer></script>
     <?php include "footer.php"; ?>
 </body>
 </html>

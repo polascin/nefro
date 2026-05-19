@@ -490,6 +490,7 @@ if (isLoggedIn()) {
             </section>
         </div>
     </main>
+    <script src="patient_autofill.js?v=20260515-1&cb=<?= filemtime("patient_autofill.js") ?>" defer></script>
     <?php include "footer.php"; ?>
 </body>
 </html>

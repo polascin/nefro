@@ -572,7 +572,7 @@ if (isLoggedIn()) {
                         </div>
 
                         <div class="form-actions no-print">
-                            <button type="button" class="btn-primary js-print">Tlačiť výpočet</button>
+                            <button type="button" class="btn-primary js-print">Vytlačiť výpočet</button>
                             <a href="calculator_history.php?calc=kfre" class="btn-secondary">História KFRE</a>
                         </div>
                     </div>
@@ -661,6 +661,7 @@ if (isLoggedIn()) {
                                             ) ?> %
                                         </td>
                                         <td class="admin-actions-cell">
+                                            <a href="?load_id=<?= (int) $row["id"] ?>" class="btn-admin-action btn-primary-filled">Načítať</a>
                                             <a href="calculator_result_print.php?result_id=<?= (int) $row[
                                                 "id"
                                             ] ?>" target="_blank" rel="noopener" class="btn-admin-action">Tlačiť</a>

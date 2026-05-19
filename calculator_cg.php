@@ -401,6 +401,7 @@ if (isLoggedIn()) {
 
                         <div class="form-actions no-print calc-formula-mt24">
                             <button type="button" class="btn-primary js-print">Vytlačiť výpočet</button>
+                            <a href="calculator_history.php?calc=cockcroft_gault" class="btn-secondary">História CG</a>
                         </div>
                     </div>
                 <?php endif; ?>

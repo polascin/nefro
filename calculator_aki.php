@@ -488,6 +488,7 @@ if (isLoggedIn()) {
 
                         <div class="form-actions no-print calc-result-mt24">
                             <button type="button" class="btn-primary js-print">Vytlačiť výpočet</button>
+                            <a href="calculator_history.php?calc=aki_fenafeurea" class="btn-secondary">História AKI</a>
                         </div>
                     </div>
                 <?php endif; ?>
@@ -578,6 +579,7 @@ if (isLoggedIn()) {
         </div>
     </main>
 
+    <script src="patient_autofill.js?v=20260515-1&cb=<?= filemtime("patient_autofill.js") ?>" defer></script>
     <?php include "footer.php"; ?>
 </body>
 </html>

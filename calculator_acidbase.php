@@ -366,6 +366,7 @@ if (isLoggedIn()) {
                         <?php endif; ?>
                         <div class="form-actions no-print calc-formula-mt24">
                             <button type="button" class="btn-primary js-print">Vytlačiť výpočet</button>
+                            <a href="calculator_history.php?calc=anion_gap" class="btn-secondary">História Anión. medzera</a>
                         </div>
                     </div>
                 <?php endif; ?>
@@ -424,7 +425,7 @@ if (isLoggedIn()) {
                                             <a href="calculator_result_print.php?result_id=<?= (int) $row[
                                                 "id"
                                             ] ?>" target="_blank" rel="noopener" class="btn-admin-action">Tlačiť</a>
-                                            <form method="POST" action="calculator_acidbase.php" class="d-inline">
+                                            <form method="POST" action="calculator_acidbase.php" class="d-inline" data-confirm="Naozaj vymazať záznam?">
                                                 <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(
                                                     generateCsrfToken(),
                                                 ) ?>">
@@ -432,7 +433,7 @@ if (isLoggedIn()) {
                                                 <input type="hidden" name="result_id" value="<?= (int) $row[
                                                     "id"
                                                 ] ?>">
-                                                <button type="submit" class="btn-admin-action btn-admin-action--warn">Zmazať</button>
+                                                <button type="submit" class="btn-admin-action btn-admin-action--warn">Vymazať</button>
                                             </form>
                                         </td>
                                     </tr>
@@ -444,6 +445,7 @@ if (isLoggedIn()) {
             </section>
         </div>
     </main>
+    <script src="patient_autofill.js?v=20260515-1&cb=<?= filemtime("patient_autofill.js") ?>" defer></script>
     <?php include "footer.php"; ?>
 </body>
 </html>

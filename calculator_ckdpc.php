@@ -1042,7 +1042,8 @@ function sexLabel(string $v): string
                         </details>
 
                         <div class="form-actions no-print calc-result-mt16">
-                            <button type="button" class="btn-primary js-print">Tlačiť výpočet</button>
+                            <button type="button" class="btn-primary js-print">Vytlačiť výpočet</button>
+                            <a href="calculator_history.php?calc=ckd_pc_grams_2022" class="btn-secondary">História CKD-PC</a>
                             <a href="calculator_kfre.php" class="btn-secondary">Otvoriť KFRE (2-ročné &amp; 5-ročné)</a>
                         </div>
                     </div>
@@ -1165,14 +1166,14 @@ function sexLabel(string $v): string
                                                         ) ?> %
                                                     </strong>
                                                 </td>
-                                                <td>
+                                                <td class="admin-actions-cell">
+                                                    <a href="?load_id=<?= (int) $row["id"] ?>" class="btn-admin-action btn-primary-filled">Načítať</a>
                                                     <a href="calculator_result_print.php?result_id=<?= (int) $row[
                                                         "id"
-                                                    ] ?>"
-                                                       target="_blank" class="btn-secondary btn-sm">Tlačiť</a>
+                                                    ] ?>" target="_blank" rel="noopener" class="btn-admin-action">Tlačiť</a>
                                                     <form method="POST" action="calculator_ckdpc.php"
                                                           class="d-inline"
-                                                          data-confirm="Naozaj vymazať tento záznam?">
+                                                          data-confirm="Naozaj vymazať záznam?">
                                                         <input type="hidden" name="csrf_token"
                                                                value="<?= htmlspecialchars(
                                                                    generateCsrfToken(),
@@ -1181,7 +1182,7 @@ function sexLabel(string $v): string
                                                         <input type="hidden" name="result_id" value="<?= (int) $row[
                                                             "id"
                                                         ] ?>">
-                                                        <button type="submit" class="btn-secondary btn-sm btn-danger">Vymazať</button>
+                                                        <button type="submit" class="btn-admin-action btn-admin-action--warn">Vymazať</button>
                                                     </form>
                                                 </td>
                                             </tr>
