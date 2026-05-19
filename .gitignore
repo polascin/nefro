@@ -118,6 +118,9 @@ ehthumbs_vista.db
 tmp/
 temp/
 
+# Auto-generované deploy skriptom
+deploy_info.php
+
 # Environment variables
 env.ini
 *.env.ini

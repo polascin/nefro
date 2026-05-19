@@ -1,11 +1,18 @@
 <?php
-// Získanie času poslednej modifikácie aktuálneho súboru, ak nebol definovaný
+// Načítaj deploy timestamp ak existuje (generuje deploy.sh)
+$deployInfoFile = __DIR__ . '/deploy_info.php';
+if (file_exists($deployInfoFile)) {
+    require_once $deployInfoFile;
+}
+
 if (!isset($pageLastUpdated) || !isset($pageTimeZone)) {
-    $currentFile = $_SERVER['SCRIPT_FILENAME'];
-    if (file_exists($currentFile)) {
-        $pageLastUpdated = date('d.m.Y H:i', filemtime($currentFile));
+    if (defined('DEPLOY_TIME')) {
+        $pageLastUpdated = DEPLOY_TIME;
     } else {
-        $pageLastUpdated = date('d.m.Y H:i');
+        $currentFile = $_SERVER['SCRIPT_FILENAME'];
+        $pageLastUpdated = file_exists($currentFile)
+            ? date('d.m.Y H:i', filemtime($currentFile))
+            : date('d.m.Y H:i');
     }
     $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
 }
