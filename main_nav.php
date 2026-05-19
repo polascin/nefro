@@ -1,4 +1,7 @@
 <?php
+if (defined('MAIN_NAV_INCLUDED')) return;
+define('MAIN_NAV_INCLUDED', 1);
+
 // Aktívna položka: automatická detekcia, alebo ručné nastavenie cez $navActiveItem pred include.
 $_navCurrent = isset($navActiveItem) ? $navActiveItem : basename((string) ($_SERVER['PHP_SELF'] ?? ''));
 
@@ -48,3 +51,15 @@ function _navA(string $href, string $label, bool $active): string {
     </div>
 </nav>
 <?php if ($_navCalcActive): include 'calc_subnav.php'; endif; ?>
+<script nonce="<?= htmlspecialchars(function_exists('getScriptNonce') ? getScriptNonce() : '', ENT_QUOTES) ?>">
+(function () {
+    var nav = document.querySelector('.main-nav');
+    if (!nav || !window.IntersectionObserver) return;
+    var sentinel = document.createElement('div');
+    sentinel.style.cssText = 'position:absolute;height:1px;width:1px;top:0;pointer-events:none;visibility:hidden';
+    nav.parentNode.insertBefore(sentinel, nav);
+    new IntersectionObserver(function (entries) {
+        nav.classList.toggle('is-stuck', !entries[0].isIntersecting);
+    }, { threshold: [1] }).observe(sentinel);
+})();
+</script>

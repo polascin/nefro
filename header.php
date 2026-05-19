@@ -90,50 +90,7 @@ if ($showUnverifiedNotice && !empty($_SESSION['email'])) {
   })();
   </script>
 </header>
-
-<!-- Sticky header — zobrazí sa po odscrollovaní za hlavičku -->
-<div id="sticky-header" class="sticky-header no-print" aria-hidden="true" role="banner">
-  <div class="container sticky-header__inner">
-    <a href="index.php" class="sticky-header__brand">
-      <img src="./img/nps-logo.gif" alt="" class="sticky-header__logo" aria-hidden="true" width="28" height="28">
-      <span>Nefro-projekt Slovensko</span>
-    </a>
-    <nav class="sticky-header__nav" aria-label="Rýchla navigácia">
-      <?php
-      $stickyPage = basename((string) ($_SERVER['PHP_SELF'] ?? ''));
-      $stickyOnIndex = $stickyPage === 'index.php';
-      ?>
-      <a href="<?= $stickyOnIndex ? '#domov' : 'index.php' ?>">Domov</a>
-      <a href="<?= $stickyOnIndex ? '#sluzby' : 'index.php#sluzby' ?>">Služby</a>
-      <a href="calculators.php">Kalkulačky</a>
-      <a href="search.php">Vyhľadávanie</a>
-      <?php if (function_exists('isLoggedIn') && isLoggedIn()): ?>
-        <a href="profile.php">Profil</a>
-      <?php else: ?>
-        <a href="login.php" class="sticky-header__nav-cta">Prihlásenie</a>
-      <?php endif; ?>
-    </nav>
-  </div>
-</div>
-<script nonce="<?= htmlspecialchars(function_exists('getScriptNonce') ? getScriptNonce() : '', ENT_QUOTES) ?>">
-(function () {
-    var stickyEl = document.getElementById('sticky-header');
-    var headerEl = document.querySelector('.site-header');
-    if (!stickyEl || !headerEl) return;
-    var threshold = 0;
-    function onScroll() {
-        if (threshold === 0) threshold = headerEl.offsetHeight;
-        if (window.scrollY > threshold) {
-            stickyEl.classList.add('is-visible');
-            stickyEl.setAttribute('aria-hidden', 'false');
-        } else {
-            stickyEl.classList.remove('is-visible');
-            stickyEl.setAttribute('aria-hidden', 'true');
-        }
-    }
-    window.addEventListener('scroll', onScroll, { passive: true });
-})();
-</script>
+<?php include __DIR__ . '/main_nav.php'; ?>
 
 <?php if (is_array($flash) && !empty($flash['message'])): ?>
     <div class="container">

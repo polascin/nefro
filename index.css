@@ -334,7 +334,14 @@ body {
     box-shadow: var(--shadow-sm);
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 800;
+    transition: box-shadow 0.2s, background 0.2s;
+}
+
+.main-nav.is-stuck {
+    background: var(--nav-stuck-bg, rgba(15, 23, 42, 0.97));
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.18);
+    border-bottom-color: rgba(59, 130, 246, 0.25);
 }
 
 .main-nav ul {
@@ -1097,82 +1104,6 @@ code {
 #randomImage:hover {
     transform: scale(1.02);
     box-shadow: var(--shadow-glow);
-}
-
-/* ── Sticky header ─────────────────────────────────────── */
-.sticky-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 900;
-    background: rgba(10, 18, 35, 0.96);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    border-bottom: 1px solid rgba(59, 130, 246, 0.2);
-    transform: translateY(-100%);
-    transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-    padding: 8px 0;
-}
-
-.sticky-header.is-visible {
-    transform: translateY(0);
-}
-
-.sticky-header__inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-}
-
-.sticky-header__brand {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-    color: #f1f5f9;
-    font-weight: 700;
-    font-size: 0.9rem;
-    white-space: nowrap;
-    flex-shrink: 0;
-}
-
-.sticky-header__logo {
-    width: 28px;
-    height: 28px;
-    border-radius: 4px;
-    object-fit: contain;
-}
-
-.sticky-header__nav {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.sticky-header__nav a {
-    color: #94a3b8;
-    text-decoration: none;
-    font-size: 0.83rem;
-    transition: color 0.15s;
-    white-space: nowrap;
-}
-
-.sticky-header__nav a:hover {
-    color: #f1f5f9;
-}
-
-.sticky-header__nav-cta {
-    color: #60a5fa !important;
-    font-weight: 600;
-}
-
-@media (max-width: 600px) {
-    .sticky-header__brand span { display: none; }
-    .sticky-header__nav { gap: 12px; }
-    .sticky-header__nav a { font-size: 0.78rem; }
 }
 
 /* ── Sekcia Kontakt ─────────────────────────────────────── */
