@@ -1318,7 +1318,7 @@ code {
     -webkit-backdrop-filter: blur(16px);
     border-top: 1px solid var(--glass-border);
     box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.1);
-    z-index: 9999;
+    z-index: 9998;
     padding: 24px;
     display: flex;
     flex-wrap: wrap;
@@ -1672,17 +1672,6 @@ input:disabled + .slider:before {
         font-size: 2.4rem;
     }
 
-    .main-nav ul {
-        gap: 15px;
-        flex-wrap: wrap;
-        padding-right: 40px;
-    }
-
-    .main-nav a {
-        padding: 12px 0;
-        font-size: 0.85rem;
-    }
-
     .main-content {
         padding: 30px 15px;
         gap: 25px;
@@ -1732,10 +1721,6 @@ input:disabled + .slider:before {
         max-width: 50%;
     }
 
-    .main-nav ul {
-        justify-content: flex-start;
-        gap: 12px;
-    }
 
     /* Auth container — plň šírka na malých telefonóch */
     .auth-container {
@@ -1768,6 +1753,7 @@ input:disabled + .slider:before {
         min-width: 0;
         flex: 1 1 100%;
         order: -1;
+        margin-top: 0;
     }
 
     .site-header__wrapper {
@@ -3705,22 +3691,6 @@ input:disabled + .slider:before {
         max-height: 70px;
     }
 
-    .main-nav ul {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 5px;
-    }
-
-    .main-nav li {
-        width: 100%;
-    }
-
-    .main-nav a {
-        display: block;
-        padding: 12px 15px;
-        border-radius: 6px;
-        background: rgba(0, 0, 0, 0.03);
-    }
 }
 
 /* Optimalizácia pre veľmi malé displeje */
@@ -3824,81 +3794,113 @@ input:disabled + .slider:before {
     background: rgba(0, 0, 0, 0.3);
 }
 
-/* Zmenšenie medzier pred hamburgerom (768–1024px) */
-@media (max-width: 1024px) and (min-width: 769px) {
-    .main-nav ul {
-        gap: 14px;
-    }
-
-    .main-nav a {
-        font-size: 0.82rem;
-        padding: 16px 0;
-    }
-}
-
-/* Hamburger menu — aktivuje sa pod 1024px */
+/* ── Hamburger navigácia (≤1024px) ──────────────────────── */
 @media (max-width: 1024px) {
+    /* Hamburger tlačidlo */
     .menu-toggle {
         display: flex;
-        margin: 10px auto;
+        margin: 8px auto;
     }
 
+    /* Desktop nav linky (≤1024px ale ≥1025 nie) nie sú zobrazené, platí len dropdown */
+
+    /* Nav wrapper — zachová sticky, len padding upravíme */
     .main-nav {
-        padding: 5px 0;
+        padding: 4px 0;
     }
 
+    /* Skryté ul — zobrazí sa až po kliknutí */
     .main-nav ul {
-        display: none;
-        flex-direction: column;
+        display: none !important;
+        flex-direction: column !important;
+        flex-wrap: nowrap !important;
+        gap: 0 !important;
+        width: 100%;
         background: var(--white);
-        padding: 10px 0;
+        border-radius: 0 0 12px 12px;
         box-shadow: var(--shadow-lg);
-        border-radius: 12px;
-        margin-top: 10px;
+        padding: 6px 0 10px;
+        margin: 0;
     }
 
+    .main-nav ul.is-open {
+        display: flex !important;
+    }
+
+    /* Položky */
+    .main-nav ul li {
+        width: 100%;
+    }
+
+    .main-nav ul li a {
+        display: block;
+        padding: 13px 24px;
+        color: var(--text-primary) !important;
+        font-size: 0.92rem;
+        border-bottom: 1px solid var(--border-color);
+        background: transparent !important;
+    }
+
+    .main-nav ul li:last-child a {
+        border-bottom: none;
+    }
+
+    .main-nav ul li a.active,
+    .main-nav ul li a:hover {
+        background: var(--primary-color) !important;
+        color: #fff !important;
+    }
+
+    /* Dark mode dropdown */
+    [data-theme="dark"] .main-nav ul {
+        background: #1e293b;
+        border: 1px solid rgba(59, 130, 246, 0.15);
+    }
+
+    [data-theme="dark"] .main-nav ul li a {
+        color: #cbd5e1 !important;
+        border-bottom-color: rgba(255, 255, 255, 0.06);
+    }
+
+    /* Stuck state dropdown */
     .main-nav.is-stuck ul {
         background: #0f172a;
         border: 1px solid rgba(59, 130, 246, 0.2);
     }
 
     .main-nav.is-stuck ul li a {
-        color: #cbd5e1;
+        color: #cbd5e1 !important;
         border-bottom-color: rgba(255, 255, 255, 0.07);
     }
 
-    .main-nav.is-stuck ul li a.active {
+    .main-nav.is-stuck ul li a.active,
+    .main-nav.is-stuck ul li a:hover {
         background: rgba(59, 130, 246, 0.25) !important;
         color: #93c5fd !important;
     }
 
-    [data-theme="dark"] .main-nav ul {
-        background: var(--white);
-    }
-
-    .main-nav ul.is-open {
-        display: flex;
-    }
-
-    .main-nav ul li {
+    /* Logout tlačidlo v mobile menu */
+    .main-nav ul .nav-logout-form {
         width: 100%;
-    }
-
-    .main-nav ul li a {
-        color: var(--text-primary);
-        padding: 14px 24px;
-        display: block;
+        padding: 0;
         border-bottom: 1px solid var(--border-color);
-        background: transparent !important;
     }
 
-    .main-nav ul li a.active {
+    .main-nav ul .nav-logout-btn {
+        display: block;
+        width: 100%;
+        padding: 13px 24px;
+        text-align: left;
+        background: transparent;
+        border: none;
+        color: var(--text-primary);
+        font-size: 0.92rem;
+        cursor: pointer;
+    }
+
+    .main-nav ul .nav-logout-btn:hover {
         background: var(--primary-color) !important;
-        color: #fff !important;
-    }
-
-    .main-nav ul li:last-child a {
-        border-bottom: none;
+        color: #fff;
     }
 }
 
