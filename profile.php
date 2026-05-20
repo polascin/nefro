@@ -316,8 +316,10 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && ($_POST['action'] ?? '') !=
         }
 
         if ($mobileVerificationAction === 'send') {
-            if (empty($data['mobile_phone'])) {
+            if ($normalizedMobilePhone === null) {
                 $errors[] = "Najprv zadajte číslo súkromného mobilného telefónu, ktoré chcete overiť.";
+            } elseif ($normalizedMobilePhone === false) {
+                // Validačná chyba čísla je už v $errors — odosielanie SMS preskočíme.
             } elseif (!$mobilePhoneChanged && !isMobileResendAllowed($mobileVerificationSentAt, 120)) {
                 $errors[] = "Overovací SMS kód bol odoslaný nedávno. Skúste to znova za 2 minúty.";
             } else {
@@ -340,6 +342,31 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && ($_POST['action'] ?? '') !=
                         ? date('Y-m-d H:i:s', time() + 600)
                         : ($tokenData['expires_at'] ?? null);
                     $mobileVerificationSentAt = date('Y-m-d H:i:s');
+
+                    // Okamžité uloženie do DB: code_hash musí byť dostupný na overenie
+                    // aj keď hlavný UPDATE nenastane kvôli chybám v iných poliach formulára.
+                    if (!$usingExternalProvider && $mobileVerificationCodeHash !== null) {
+                        saveMobileVerificationCode(
+                            $pdo,
+                            $user_id,
+                            (string) $mobileVerificationCodeHash,
+                            (string) $mobileVerificationExpiresAt
+                        );
+                    } else {
+                        $pdo->prepare(
+                            "UPDATE users SET mobile_verification_sent_at = NOW(), mobile_verified_at = NULL WHERE id = :id"
+                        )->execute([':id' => $user_id]);
+                    }
+
+                    // Ak sa číslo zmenilo, aktualizujeme mobile_phone okamžite pre konzistenciu
+                    // s práve uloženým code_hash — inak by $mobilePhoneChanged na ďalší request
+                    // resetoval lokálne premenné a overenie by vrátilo missing_code.
+                    if ($mobilePhoneChanged) {
+                        $pdo->prepare(
+                            "UPDATE users SET mobile_phone = :phone WHERE id = :id"
+                        )->execute([':phone' => $data['mobile_phone'], ':id' => $user_id]);
+                    }
+
                     $mobileVerificationNotice = 'Overovací SMS kód bol odoslaný. Platnosť kódu je 10 minút.';
 
                     if ($isLocalDev && !$usingExternalProvider && isset($tokenData['code'])) {
