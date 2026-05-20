@@ -290,7 +290,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     document.addEventListener('DOMContentLoaded', function() {
                         var el = document.getElementById('js_token_field');
                         if (el && !el.value) {
-                            el.value = "<?= generateJsChallengeToken() ?>";
+                            el.value = "<?= htmlspecialchars(generateJsChallengeToken(), ENT_QUOTES) ?>";
                         }
                     });
                 </script>

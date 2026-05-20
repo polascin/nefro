@@ -46,45 +46,45 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 
             $errors[] = "[DEV diagnostika] CSRF zlyhanie: " . $csrfReason;
         }
-    }
+    } else {
+        $newPassword = $_POST['new_password'] ?? '';
+        $newPasswordConfirm = $_POST['new_password_confirm'] ?? '';
 
-    $newPassword = $_POST['new_password'] ?? '';
-    $newPasswordConfirm = $_POST['new_password_confirm'] ?? '';
+        if ($resetRequest === null) {
+            $errors[] = 'Odkaz na obnovenie hesla je neplatný alebo už expiroval.';
+        }
 
-    if ($resetRequest === null) {
-        $errors[] = 'Odkaz na obnovenie hesla je neplatný alebo už expiroval.';
-    }
+        if (strlen($newPassword) < 8 || strlen($newPassword) > 1024 || !preg_match('/[A-Z]/', $newPassword) || !preg_match('/[a-z]/', $newPassword) || !preg_match('/[0-9]/', $newPassword)) {
+            $errors[] = 'Heslo musí mať 8–1024 znakov, obsahovať aspoň jedno veľké písmeno, malé písmeno a číslicu.';
+        } elseif ($newPassword !== $newPasswordConfirm) {
+            $errors[] = 'Heslá sa nezhodujú.';
+        }
 
-    if (strlen($newPassword) < 8 || strlen($newPassword) > 1024 || !preg_match('/[A-Z]/', $newPassword) || !preg_match('/[a-z]/', $newPassword) || !preg_match('/[0-9]/', $newPassword)) {
-        $errors[] = 'Heslo musí mať 8–1024 znakov, obsahovať aspoň jedno veľké písmeno, malé písmeno a číslicu.';
-    } elseif ($newPassword !== $newPasswordConfirm) {
-        $errors[] = 'Heslá sa nezhodujú.';
-    }
+        if (empty($errors) && $resetRequest !== null) {
+            try {
+                $pdo->beginTransaction();
 
-    if (empty($errors) && $resetRequest !== null) {
-        try {
-            $pdo->beginTransaction();
+                $updatePwd = $pdo->prepare('UPDATE users SET password_hash = :password_hash WHERE id = :user_id');
+                $updatePwd->execute([
+                    'password_hash' => password_hash($newPassword, PASSWORD_DEFAULT),
+                    'user_id' => (int) $resetRequest['user_id'],
+                ]);
 
-            $updatePwd = $pdo->prepare('UPDATE users SET password_hash = :password_hash WHERE id = :user_id');
-            $updatePwd->execute([
-                'password_hash' => password_hash($newPassword, PASSWORD_DEFAULT),
-                'user_id' => (int) $resetRequest['user_id'],
-            ]);
+                $useToken = $pdo->prepare('UPDATE password_resets SET used_at = NOW() WHERE user_id = :user_id AND used_at IS NULL');
+                $useToken->execute(['user_id' => (int) $resetRequest['user_id']]);
 
-            $useToken = $pdo->prepare('UPDATE password_resets SET used_at = NOW() WHERE user_id = :user_id AND used_at IS NULL');
-            $useToken->execute(['user_id' => (int) $resetRequest['user_id']]);
+                $pdo->commit();
 
-            $pdo->commit();
-
-            setFlashMessage('success', 'Heslo bolo úspešne zmenené. Môžete sa prihlásiť novým heslom.');
-            header('Location: login.php');
-            exit;
-        } catch (\PDOException $e) {
-            if ($pdo->inTransaction()) {
-                $pdo->rollBack();
+                setFlashMessage('success', 'Heslo bolo úspešne zmenené. Môžete sa prihlásiť novým heslom.');
+                header('Location: login.php');
+                exit;
+            } catch (\PDOException $e) {
+                if ($pdo->inTransaction()) {
+                    $pdo->rollBack();
+                }
+                error_log('Reset password update error: ' . $e->getMessage());
+                $errors[] = 'Pri zmene hesla došlo k chybe. Skúste to znova neskôr.';
             }
-            error_log('Reset password update error: ' . $e->getMessage());
-            $errors[] = 'Pri zmene hesla došlo k chybe. Skúste to znova neskôr.';
         }
     }
 }

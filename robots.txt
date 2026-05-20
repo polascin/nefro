@@ -1,6 +1,6 @@
 # robots.txt — Nefro-projekt Slovensko
 # https://nefro.polascin.net/
-# Aktualizované: 2025-06-01
+# Aktualizované: 2026-05-20
 
 # ── Všeobecné pravidlá pre všetkých robotov ────────────────────────────────
 User-agent: *

@@ -112,7 +112,9 @@ if (function_exists('isLoggedIn') && isLoggedIn()) {
             $_taRow = $_taStmt->fetch(PDO::FETCH_ASSOC);
             $_themeAuto = (int) ($_taRow['theme_auto'] ?? 1);
             $_SESSION['theme_auto'] = $_themeAuto;
-        } catch (\Throwable $_taEx) {}
+        } catch (\Throwable $_taEx) {
+            error_log('head_meta: theme_auto load failed for user_id=' . ($_SESSION['user_id'] ?? '?') . ': ' . $_taEx->getMessage());
+        }
     }
 }
 ?>

@@ -141,7 +141,7 @@ try {
     $themeAutoStmt->execute();
     if ((int) $themeAutoStmt->fetchColumn() === 0) {
         $pdo->exec("ALTER TABLE users ADD COLUMN theme_auto TINYINT(1) NOT NULL DEFAULT 1 COMMENT 'Automaticky sledovať systémovú tému (1=áno, 0=manuálne)' AFTER newsletter_consent");
-        echo "Migracia: theme_auto pridane.\n";
+        echo "Migrácia: theme_auto pridané.\n";
     }
 
     // ── Migrácia: rate-limit stĺpce pre SMS overovanie ───────────────────────
@@ -155,7 +155,7 @@ try {
             ADD COLUMN mobile_verify_locked_until DATETIME NULL
                 COMMENT 'SMS verify zablokovaný do tohto času'
                 AFTER mobile_verify_fail_count");
-        echo "Migracia: mobile_verify_fail_count + mobile_verify_locked_until pridane.\n";
+        echo "Migrácia: mobile_verify_fail_count + mobile_verify_locked_until pridané.\n";
     }
 
     // Pri prvom zavedení stĺpca považujeme existujúce účty za overené,

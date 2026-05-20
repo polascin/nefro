@@ -54,7 +54,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
             else { $notice = 'Ak účet existuje, poslali sme na jeho e-mail odkaz na obnovenie hesla.'; goto endOfFpProcessing; }
         }
 
-        // ── 4. IP Rate Limiting (max 3 pokusy/hodína per IP) ───────────────
+        // ── 4. IP Rate Limiting (max 5 pokusov/hodina per IP) ───────────────
         // Prísnejší limit ako na registrácii — každý pokus odosielal e-mail.
         $clientIpFp   = getClientIpAddress();
         $maxFpAttempts = 5;    // max pokusov za okno (zvýšené z 3 na 5 pre lepší UX)
@@ -205,7 +205,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 <input type="hidden" name="js_token" id="js_token_field" value="">
                 <script nonce="<?= htmlspecialchars(getScriptNonce()) ?>">
                     document.addEventListener('DOMContentLoaded', function() {
-                        document.getElementById('js_token_field').value = "<?= generateJsChallengeToken() ?>";
+                        document.getElementById('js_token_field').value = "<?= htmlspecialchars(generateJsChallengeToken(), ENT_QUOTES) ?>";
                     });
                 </script>
 

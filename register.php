@@ -483,7 +483,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     <script nonce="<?= htmlspecialchars(getScriptNonce()) ?>">
                         // JS Challenge: Vloží token po načítaní stránky. Boti bez JS toto nespustia.
                         document.addEventListener('DOMContentLoaded', function() {
-                            document.getElementById('js_token_field').value = "<?= generateJsChallengeToken() ?>";
+                            document.getElementById('js_token_field').value = "<?= htmlspecialchars(generateJsChallengeToken(), ENT_QUOTES) ?>";
                         });
                     </script>
 
