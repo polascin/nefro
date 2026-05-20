@@ -54,7 +54,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
             else { $notice = 'Ak účet existuje, poslali sme na jeho e-mail odkaz na obnovenie hesla.'; goto endOfFpProcessing; }
         }
 
-        // ── 2. IP Rate Limiting (max 3 pokusy/hodína per IP) ───────────────
+        // ── 4. IP Rate Limiting (max 3 pokusy/hodína per IP) ───────────────
         // Prísnejší limit ako na registrácii — každý pokus odosielal e-mail.
         $clientIpFp   = getClientIpAddress();
         $maxFpAttempts = 5;    // max pokusov za okno (zvýšené z 3 na 5 pre lepší UX)

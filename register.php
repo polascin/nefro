@@ -53,7 +53,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
             else { $success = true; goto endOfPostProcessing; }
         }
 
-        // ── 2. IP Rate Limiting (max 5 pokusov/hodína per IP) ────────────────
+        // ── 4. IP Rate Limiting (max 5 pokusov/hodína per IP) ────────────────
         $clientIpReg = getClientIpAddress();
         $maxRegAttempts = 5;    // max registrácií za okno
         $regWindowSecs  = 3600; // okno: 1 hodína
@@ -172,6 +172,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 
                     // Dĺžkové limity pre textové polia (prevencia pred oversized vstupmi)
                     $fieldLimits = [
+                        'username'         => 255,
                         'title_before'     => 50,
                         'first_name'       => 100,
                         'middle_name'      => 100,
@@ -180,15 +181,15 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                         'name_note'        => 255,
                         'organization'     => 255,
                         'job_function'     => 255,
-                        'org_website'      => 500,
+                        'org_website'      => 255,
                         'work_email'       => 254,
-                        'social_linkedin'  => 500,
-                        'social_x'         => 500,
-                        'social_facebook'  => 500,
-                        'social_instagram' => 500,
+                        'social_linkedin'  => 255,
+                        'social_x'         => 255,
+                        'social_facebook'  => 255,
+                        'social_instagram' => 255,
                         'social_other'     => 500,
                         'other_contact'    => 500,
-                        'website'          => 500,
+                        'website'          => 255,
                         'street'           => 255,
                         'house_number'     => 20,
                         'orientation_number' => 20,

@@ -187,7 +187,7 @@ function validateCsrfToken(string $token): bool {
 }
 
 /**
- * Ochana proti Session Hijacking a Fixation
+ * Ochrana proti Session Hijacking a Fixation
  * Odporúča sa volať po prihlásení
  */
 function regenerateSession() {
