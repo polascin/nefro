@@ -160,6 +160,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 } else {
                     $passwordHash = password_hash($password, PASSWORD_DEFAULT);
                     $newsletterConsent = isset($_POST['newsletter_consent']) ? 1 : 0;
+                    $themeAuto = isset($_POST['theme_auto']) ? 1 : 0;
 
                     // Whitelist pre gender — hodnoty musia zodpovedať hodnotám <option value="..."> v HTML formulári
                     $allowedGenders  = ['Muž', 'Žena', 'Transgender muž', 'Transgender žena', 'Nebinárna osoba', 'Iné', 'Nechcem uviesť', ''];
@@ -237,13 +238,13 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                             username, email, password_hash, gender, pronouns, avatar_path, title_before, first_name, middle_name, last_name,
                             title_after, name_note, organization, job_function, work_mobile_phone, org_website,
                             work_email, mobile_phone, other_phone, social_linkedin, social_x, social_facebook, social_instagram, social_other, other_contact, website, birth_date,
-                            street, house_number, orientation_number, zip_code, city, district, region, country, address_note, newsletter_consent, email_verified_at,
+                            street, house_number, orientation_number, zip_code, city, district, region, country, address_note, newsletter_consent, theme_auto, email_verified_at,
                             email_verification_token_hash, email_verification_expires_at, email_verification_sent_at
                         ) VALUES (
                             :username, :email, :password_hash, :gender, :pronouns, :avatar_path, :title_before, :first_name, :middle_name, :last_name,
                             :title_after, :name_note, :organization, :job_function, :work_mobile_phone, :org_website,
                             :work_email, :mobile_phone, :other_phone, :social_linkedin, :social_x, :social_facebook, :social_instagram, :social_other, :other_contact, :website, :birth_date,
-                            :street, :house_number, :orientation_number, :zip_code, :city, :district, :region, :country, :address_note, :newsletter_consent, NULL,
+                            :street, :house_number, :orientation_number, :zip_code, :city, :district, :region, :country, :address_note, :newsletter_consent, :theme_auto, NULL,
                             :email_verification_token_hash, :email_verification_expires_at, NOW()
                         )";
 
@@ -292,6 +293,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                             'country' => trim($_POST['country'] ?? ''),
                             'address_note' => trim($_POST['address_note'] ?? ''),
                             'newsletter_consent' => $newsletterConsent,
+                            'theme_auto' => $themeAuto,
                             'email_verification_token_hash' => $tokenData['token_hash'],
                             'email_verification_expires_at' => $tokenData['expires_at'],
                         ];
@@ -333,6 +335,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                         $registeredData = $registrationParams;
                         unset($registeredData['password_hash']);
                         $registeredData['newsletter_consent'] = $newsletterConsent ? 'Áno' : 'Nie';
+                        $registeredData['theme_auto'] = $themeAuto ? 'Áno' : 'Nie';
                     }
                 }
             } catch (\PDOException $e) {
@@ -442,6 +445,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                             'country' => 'Štát',
                             'address_note' => 'Poznámka k adrese',
                             'newsletter_consent' => 'Súhlas so zasielaním noviniek',
+                            'theme_auto' => 'Automatické prispôsobovanie témy',
                         ];
                         ?>
                         <?php foreach ($fieldLabels as $field => $label): ?>
@@ -773,6 +777,11 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                         </div>
                     </div>
 
+
+                    <div class="form-check">
+                        <input type="checkbox" id="theme_auto" name="theme_auto" value="1" <?= (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST' || isset($_POST['theme_auto'])) ? 'checked' : '' ?>>
+                        <label for="theme_auto">Automaticky prispôsobovať tému (svetlá/tmavá) podľa nastavenia systému</label>
+                    </div>
 
                     <div class="form-check">
                         <input type="checkbox" id="newsletter_consent" name="newsletter_consent" value="1" <?= isset($_POST['newsletter_consent']) ? 'checked' : '' ?>>
