@@ -23,6 +23,14 @@ import type {Mode, ArgType, BreakToken} from "./types";
 import type {FunctionContext, FunctionSpec} from "./defineFunction";
 import type {EnvSpec} from "./defineEnvironment";
 
+// Hoisted Regular Expressions
+const colorRegex = /^(#[a-f0-9]{3}|#?[a-f0-9]{6}|[a-z]+)$/i;
+const colorHexRegex = /^[0-9a-f]{6}$/i;
+const sizeRegex = /^[-+]? *(?:$|\d+|\d+\.\d*|\.\d*) *[a-z]{0,2} *$/;
+const sizeMatchRegex = /([-+]?) *(\d+(?:\.\d*)?|\.\d+) *([a-z]{2})/;
+const urlEscapeRegex = /\\([#$%&~_^{}])/g;
+const verbRegex = /^\\verb[^a-zA-Z]/;
+
 /**
  * This file contains the parser used to parse out a TeX expression from the
  * input. Since TeX isn't context-free, standard parsers don't work particularly
@@ -303,10 +311,10 @@ export default class Parser {
      * contained within a color node whose color is determined by errorColor
      */
     formatUnsupportedCmd(text: string): UnsupportedCmdParseNode {
-        const textordArray = [];
+        const textordArray = new Array(text.length);
 
         for (let i = 0; i < text.length; i++) {
-            textordArray.push({type: "textord", mode: "text", text: text[i]});
+            textordArray[i] = {type: "textord", mode: "text", text: text[i]};
         }
 
         const textNode = {
@@ -668,12 +676,12 @@ export default class Parser {
         if (res == null) {
             return null;
         }
-        const match = (/^(#[a-f0-9]{3}|#?[a-f0-9]{6}|[a-z]+)$/i).exec(res.text);
+        const match = colorRegex.exec(res.text);
         if (!match) {
             throw new ParseError("Invalid color: '" + res.text + "'", res);
         }
         let color = match[0];
-        if (/^[0-9a-f]{6}$/i.test(color)) {
+        if (colorHexRegex.test(color)) {
             // We allow a 6-digit HTML color spec without a leading "#".
             // This follows the xcolor package's HTML color model.
             // Predefined color names are all missed by this RegEx pattern.
@@ -696,7 +704,7 @@ export default class Parser {
         this.gullet.consumeSpaces();
         if (!optional && this.gullet.future().text !== "{") {
             res = this.parseRegexGroup(
-                /^[-+]? *(?:$|\d+|\d+\.\d*|\.\d*) *[a-z]{0,2} *$/, "size");
+                sizeRegex, "size");
         } else {
             res = this.parseStringGroup("size", optional);
         }
@@ -710,7 +718,7 @@ export default class Parser {
             res.text = "0pt";    // Enable \above{}
             isBlank = true;      // This is here specifically for \genfrac
         }
-        const match = (/([-+]?) *(\d+(?:\.\d*)?|\.\d+) *([a-z]{2})/).exec(res.text);
+        const match = sizeMatchRegex.exec(res.text);
         if (!match) {
             throw new ParseError("Invalid size: '" + res.text + "'", res);
         }
@@ -746,7 +754,7 @@ export default class Parser {
         // generate valid links in such cases; we interpret this as
         // "undefined" behaviour, and keep them as-is. Some browser will
         // replace backslashes with forward slashes.
-        const url = res.text.replace(/\\([#$%&~_^{}])/g, '$1');
+        const url = res.text.replace(urlEscapeRegex, '$1');
         return {
             type: "url",
             mode: this.mode,
@@ -891,7 +899,7 @@ export default class Parser {
         const nucleus = this.fetch();
         let text = nucleus.text;
 
-        if (/^\\verb[^a-zA-Z]/.test(text)) {
+        if (verbRegex.test(text)) {
             this.consume();
             let arg = text.slice(5);
             const star = (arg.charAt(0) === "*");
