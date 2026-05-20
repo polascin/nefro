@@ -871,8 +871,7 @@ export default class Parser {
                     });
                     n -= 1;
                 }
-            }
-            if ((v === "'" || v === "`") && group[i + 1].text === v) {
+        } else if ((v === "'" || v === "`") && group[i + 1].text === v) {
                 group.splice(i, 2, {
                     type: "textord",
                     mode: "text",

@@ -70,7 +70,7 @@ const renderElem = function(elem, optionsCopy) {
             if (frag) {
                 // Remove extra text nodes
                 for (let j = 0; j < nSiblings; j++) {
-                    childNode.nextSibling.remove();
+                    childNode.parentNode.removeChild(childNode.nextSibling);
                 }
                 i += frag.childNodes.length - 1;
                 elem.replaceChild(frag, childNode);
