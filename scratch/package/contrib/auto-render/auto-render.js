@@ -100,14 +100,7 @@ const renderMathInElement = function(elem, options) {
         throw new Error("No element provided to render");
     }
 
-    const optionsCopy = {};
-
-    // Object.assign(optionsCopy, option)
-    for (const option in options) {
-        if (options.hasOwnProperty(option)) {
-            optionsCopy[option] = options[option];
-        }
-    }
+    const optionsCopy = { ...options };
 
     // default options
     optionsCopy.delimiters = optionsCopy.delimiters || [
