@@ -26,8 +26,6 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'STREAMED UP zaradil do série NephroLive ďalšie odborné vysielanie s názvom Dialyse 2026. Obsah je zameraný na tri oblasti, ktoré zostávajú v nefrológii mimoriadne dôležité: aferézu, aktuálny vývoj v hemodialýze a pokroky v peritoneálnej dialýze.',
     'content'      => <<<'HTML'
-<h2>Dialyse 2026: odborný livestream pre nefrologickú prax</h2>
-
 <p>STREAMED UP zaradil do série NephroLive ďalšie odborné vysielanie s názvom <strong>Dialyse 2026</strong>. Obsah je zameraný na tri oblasti, ktoré zostávajú v nefrológii mimoriadne dôležité: <strong>aferézu</strong>, <strong>aktuálny vývoj v hemodialýze</strong> a <strong>pokroky v peritoneálnej dialýze</strong>.</p>
 
 <p>Dialýza patrí medzi základné piliere liečby pacientov s pokročilým chronickým ochorením obličiek a pri akútnych stavoch, kde je potrebná náhrada funkcie obličiek. Každá odborná platforma, ktorá prehľadne sprístupňuje nové poznatky z tejto oblasti, má preto praktický význam pre lekárov aj pre zdravotníckych pracovníkov v dialyzačných prevádzkach.</p>
