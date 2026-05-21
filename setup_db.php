@@ -297,7 +297,7 @@ try {
             "ALTER TABLE form_rate_limit
              ADD UNIQUE KEY uq_form_rate_limit_ip_action (ip, action)"
         );
-        echo "Migracia: UNIQUE constraint pridany do form_rate_limit.\n";
+        echo "Migrácia: UNIQUE constraint pridaný do form_rate_limit.\n";
     }
 
     // ── Audit log pre zrušenie/vymazanie účtov ───────────────────────────────

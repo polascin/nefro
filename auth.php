@@ -116,7 +116,7 @@ function isEmailVerified(): bool {
  * Funkcia na overenie admin oprávnenia
  * @return bool True ak je používateľ admin
  */
-function isAdmin() {
+function isAdmin(): bool {
     return !empty($_SESSION['is_admin']) && (int) $_SESSION['is_admin'] === 1;
 }
 
@@ -134,7 +134,7 @@ if (!function_exists('isLoggedIn')) {
 /**
  * Funkcia na vyžadovanie prihlásenia (presmeruje ak nie je)
  */
-function requireLogin() {
+function requireLogin(): void {
     if (!isLoggedIn()) {
         header("Location: login.php");
         exit;
@@ -144,7 +144,7 @@ function requireLogin() {
 /**
  * Funkcia na vyžadovanie admin oprávnenia
  */
-function requireAdmin() {
+function requireAdmin(): void {
     requireLogin();
     if (!isAdmin()) {
         header("HTTP/1.1 403 Forbidden");
@@ -181,7 +181,7 @@ function validateCsrfToken(string $token): bool {
     $valid = hash_equals($_SESSION['csrf_token'], $token);
     // Token rotuje po každom POST — platný aj neplatný pokus.
     // Znemožňuje replay attack a CSRF token fixation.
-    // Používateľ dostane pri ďaľšom načítaní stránky nový token.
+    // Používateľ dostane pri ďalšom načítaní stránky nový token.
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
     return $valid;
 }
@@ -190,7 +190,7 @@ function validateCsrfToken(string $token): bool {
  * Ochrana proti Session Hijacking a Fixation
  * Odporúča sa volať po prihlásení
  */
-function regenerateSession() {
+function regenerateSession(): void {
     session_regenerate_id(true);
 }
 

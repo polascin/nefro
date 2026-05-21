@@ -53,15 +53,15 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
             else { $success = true; goto endOfPostProcessing; }
         }
 
-        // ── 4. IP Rate Limiting (max 5 pokusov/hodína per IP) ────────────────
+        // ── 4. IP Rate Limiting (max 5 pokusov/hodina per IP) ────────────────
         $clientIpReg = getClientIpAddress();
         $maxRegAttempts = 5;    // max registrácií za okno
-        $regWindowSecs  = 3600; // okno: 1 hodína
-        $regBlockSecs   = 3600; // blokácia: 1 hodína
+        $regWindowSecs  = 3600; // okno: 1 hodina
+        $regBlockSecs   = 3600; // blokácia: 1 hodina
         $regIsBlocked   = false;
 
         try {
-            // Odstrán expirované blóky staršie ako 1 deň
+            // Odstrán expirované bloky staršie ako 1 deň
             $pdo->prepare("DELETE FROM form_rate_limit WHERE action = 'register' AND blocked_until IS NOT NULL AND blocked_until < DATE_SUB(NOW(), INTERVAL 1 DAY)")
                 ->execute();
 
@@ -487,7 +487,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                         });
                     </script>
 
-                    <!-- Honeypot pole: neviditeľné pre ľudí, vypĺňajú ho iba boti. Musí ostatť prázdne. -->
+                    <!-- Honeypot pole: neviditeľné pre ľudí, vypĺňajú ho iba boti. Musí ostať prázdne. -->
                     <div class="honeypot" aria-hidden="true" tabindex="-1">
                         <label for="website_url">Webová adresa (nevypĺňať)</label>
                         <input type="text" id="website_url" name="website_url" value="" autocomplete="off" tabindex="-1" maxlength="255">

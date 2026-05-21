@@ -58,7 +58,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
         // Prísnejší limit ako na registrácii — každý pokus odosielal e-mail.
         $clientIpFp   = getClientIpAddress();
         $maxFpAttempts = 5;    // max pokusov za okno (zvýšené z 3 na 5 pre lepší UX)
-        $fpBlockSecs   = 3600; // blokácia: 1 hodína
+        $fpBlockSecs   = 3600; // blokácia: 1 hodina
         $fpIsBlocked   = false;
 
         try {
@@ -209,7 +209,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     });
                 </script>
 
-                <!-- Honeypot pole: neviditeľné pre ľudí, vypĺňajú ho iba boti. Musí ostatť prázdne. -->
+                <!-- Honeypot pole: neviditeľné pre ľudí, vypĺňajú ho iba boti. Musí ostať prázdne. -->
                 <div class="honeypot" aria-hidden="true" tabindex="-1">
                     <label for="hp_contact">Kontakt (nevypĺňať)</label>
                     <input type="text" id="hp_contact" name="hp_contact" value="" autocomplete="off" tabindex="-1" maxlength="255">

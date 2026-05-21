@@ -150,6 +150,7 @@ function twilioVerifyApiRequest(string $resourcePath, array $postData): array {
     $rawResponse = curl_exec($ch);
     $statusCode = (int) curl_getinfo($ch, CURLINFO_HTTP_CODE);
     $curlErr = curl_error($ch);
+    curl_close($ch);
     unset($ch);
 
     if ($rawResponse === false) {
