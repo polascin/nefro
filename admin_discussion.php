@@ -46,9 +46,8 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                         break;
 
                     case 'hide':
-                        $note = trim(mb_substr((string) ($_POST['moderation_note'] ?? ''), 0, 500));
-                        $pdo->prepare("UPDATE discussion_posts SET is_hidden = 1, moderation_note = :note WHERE id = :id")
-                            ->execute(['id' => $postId, 'note' => $note !== '' ? $note : null]);
+                        $pdo->prepare("UPDATE discussion_posts SET is_hidden = 1 WHERE id = :id")
+                            ->execute(['id' => $postId]);
                         $actionResult = 'Príspevok bol skrytý pred verejnosťou.';
                         break;
 
