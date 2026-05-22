@@ -365,6 +365,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 }
             }
         }
+        } // if (!$regIsBlocked)
         } // !$isBotRequest else
     }
 } else {
