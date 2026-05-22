@@ -12,6 +12,7 @@ if (php_sapi_name() !== 'cli') {
     requireAdmin();
 }
 require_once __DIR__ . '/db_config.php';
+require_once __DIR__ . '/newsletter_notifications.php';
 
 // ── Dáta článkov ──────────────────────────────────────────────────────────────
 
@@ -98,9 +99,10 @@ HTML,
 
 // ── Vkladanie do databázy ──────────────────────────────────────────────────────
 
-$inserted = 0;
-$skipped  = 0;
-$errors   = [];
+$inserted    = 0;
+$skipped     = 0;
+$errors      = [];
+$queuedTotal = 0;
 
 $stmt = $pdo->prepare(
     "INSERT IGNORE INTO articles (title, slug, author, content, excerpt, published_at, is_top, is_published)
@@ -120,6 +122,12 @@ foreach ($articles as $a) {
         ]);
         if ($stmt->rowCount() > 0) {
             $inserted++;
+            $newId = (int) $pdo->lastInsertId();
+            try {
+                $queuedTotal += enqueueArticleNewsletterEmails($pdo, $newId);
+            } catch (\Throwable $qe) {
+                error_log('add_ivzelzo_infekcia_article newsletter enqueue error: ' . $qe->getMessage());
+            }
         } else {
             $skipped++;
         }
@@ -138,6 +146,7 @@ if (php_sapi_name() === 'cli') {
     echo "──────────────────────────────────────────────────────\n";
     echo "Výsledok: $inserted z $total článkov bolo vložených.\n";
     echo "Preskočení (slug už existuje): $skipped\n";
+    echo "Zaradených do fronty avíz:     $queuedTotal\n";
     if (!empty($errors)) {
         echo "\nChyby:\n";
         foreach ($errors as $err) {
