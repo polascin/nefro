@@ -27,41 +27,6 @@
     }
 
     /**
-     * Odvodí vek z rodného čísla.
-     * @param {string} raw
-     * @returns {number|null}
-     */
-    function ageFromBirthNumber(raw) {
-        var d = raw.replace(/[\s\/]/g, '');
-        if (!/^\d{9,10}$/.test(d)) return null;
-        var yy = +d.slice(0, 2), mm = +d.slice(2, 4), dd = +d.slice(4, 6);
-        if (mm >= 71)      mm -= 70; // žena — záložný rozsah
-        else if (mm >= 51) mm -= 50; // žena — bežný rozsah
-        else if (mm >= 21) mm -= 20; // muž  — záložný rozsah
-        if (mm < 1 || mm > 12 || dd < 1 || dd > 31) return null;
-        var cy = new Date().getFullYear();
-        var yr = (2000 + yy <= cy) ? 2000 + yy : 1900 + yy;
-        var ds = yr + '-' + String(mm).padStart(2, '0') + '-' + String(dd).padStart(2, '0');
-        return ageFromDate(ds);
-    }
-
-    /**
-     * Odvodí pohlavie z rodného čísla.
-     * @param {string} raw
-     * @returns {'female'|'male'|null}
-     */
-    function sexFromBirthNumber(raw) {
-        var d = raw.replace(/[\s\/]/g, '');
-        if (!/^\d{9,10}$/.test(d)) return null;
-        var mm = +d.slice(2, 4);
-        if (mm >= 51 && mm <= 62) return 'female'; // žena — bežný rozsah (+50)
-        if (mm >= 71 && mm <= 82) return 'female'; // žena — záložný rozsah (+70)
-        if (mm >= 1  && mm <= 12) return 'male';   // muž  — bežný rozsah
-        if (mm >= 21 && mm <= 32) return 'male';   // muž  — záložný rozsah (+20)
-        return null;
-    }
-
-    /**
      * Vyplní pole #age_years hodnotou veku, ak existuje.
      * @param {number|null} age
      */
@@ -101,11 +66,14 @@
         // Rodné číslo → vek + pohlavie
         if (bnEl) {
             bnEl.addEventListener('input', function () {
+                if (typeof window.Utils === 'undefined' || typeof window.Utils.parseBirthNumber !== 'function') {
+                    return;
+                }
                 var raw = this.value;
-                var age = ageFromBirthNumber(raw);
-                var sex = sexFromBirthNumber(raw);
-                if (age !== null) fillAge(age);
-                if (sex !== null) fillSex(sex);
+                var parsedData = window.Utils.parseBirthNumber(raw);
+                if (!parsedData) return;
+                if (parsedData.age !== null) fillAge(parsedData.age);
+                if (parsedData.sex !== null) fillSex(parsedData.sex);
             });
         }
     });

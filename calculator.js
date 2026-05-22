@@ -136,31 +136,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // ── 5. AUTO-VYPLNENIE DÁTUMU NARODENIA Z RODNÉHO ČÍSLA ───────────────────
     (function () {
-        function parseRodneCislo(rc) {
-            rc = rc.replace(/[\s/]/g, '');
-            if (!/^\d{9,10}$/.test(rc)) return null;
-
-            var yy = parseInt(rc.substring(0, 2), 10);
-            var mm = parseInt(rc.substring(2, 4), 10);
-            var dd = parseInt(rc.substring(4, 6), 10);
-
-            // Korekcia mesiaca: ženy +50, cudzinci +20 alebo +70
-            if (mm > 70)      mm -= 70;
-            else if (mm > 50) mm -= 50;
-            else if (mm > 20) mm -= 20;
-
-            // Storočie: dynamicky podľa aktuálneho roka (rovnaká logika ako PHP)
-            var curYear = new Date().getFullYear();
-            var year = (2000 + yy <= curYear) ? 2000 + yy : 1900 + yy;
-            if (rc.length === 9) year = 1900 + yy; // 9-miestne len 19xx
-
-            if (mm < 1 || mm > 12 || dd < 1 || dd > 31) return null;
-
-            return year.toString().padStart(4, '0') + '-' +
-                   mm.toString().padStart(2, '0') + '-' +
-                   dd.toString().padStart(2, '0');
-        }
-
         var rcInput = document.getElementById('patient_birth_number');
         var bdInput = document.getElementById('patient_birth_date');
         var sexSel2 = document.getElementById('sex');
@@ -168,34 +143,28 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (!rcInput || !bdInput) return;
 
-        var currentYear = new Date().getFullYear();
-
         function onRcChange() {
+            if (typeof window.Utils === 'undefined' || typeof window.Utils.parseBirthNumber !== 'function') {
+                return;
+            }
             var val = rcInput.value.trim();
-            var date = parseRodneCislo(val);
-            if (!date) return;
+            var parsedData = window.Utils.parseBirthNumber(val);
+            if (!parsedData) return;
 
             // Vyplniť dátum narodenia len ak je prázdny alebo sa líši
-            if (!bdInput.value || bdInput.value !== date) {
-                bdInput.value = date;
+            if (!bdInput.value || bdInput.value !== parsedData.date) {
+                bdInput.value = parsedData.date;
                 bdInput.dispatchEvent(new Event('change', { bubbles: true }));
             }
 
             // Vyplniť pohlavie z RC (mesiac > 50 = žena)
-            if (sexSel2 && !sexSel2.value) {
-                var rcMm = parseInt(val.substring(2, 4), 10);
-                var isFemale = (rcMm > 50 && rcMm <= 62) || (rcMm > 70 && rcMm <= 82);
-                sexSel2.value = isFemale ? 'female' : 'male';
+            if (sexSel2 && !sexSel2.value && parsedData.sex) {
+                sexSel2.value = parsedData.sex;
             }
 
             // Vypočítať vek
-            if (ageInp && (!ageInp.value || ageInp.value === '0')) {
-                var bd = new Date(date);
-                var today = new Date();
-                var age = today.getFullYear() - bd.getFullYear();
-                var m = today.getMonth() - bd.getMonth();
-                if (m < 0 || (m === 0 && today.getDate() < bd.getDate())) age--;
-                if (age > 0 && age < 130) ageInp.value = age;
+            if (ageInp && (!ageInp.value || ageInp.value === '0') && parsedData.age >= 0) {
+                ageInp.value = parsedData.age;
             }
         }
 

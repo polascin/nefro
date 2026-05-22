@@ -5,6 +5,10 @@ require_once __DIR__ . '/email_verification.php';
 if (!function_exists('getNewsletterUnsubscribeSecret')) {
     function getNewsletterUnsubscribeSecret(): string
     {
+        if (!function_exists('isAppLocalDev')) {
+            require_once __DIR__ . '/auth.php';
+        }
+
         static $secret = null;
         if ($secret !== null) {
             return $secret;
@@ -33,21 +37,15 @@ if (!function_exists('getNewsletterUnsubscribeSecret')) {
         }
 
         if ($rawSecret === '') {
-            // Kritícké bezpečnostné varovanie: žiadny dedikovaný tajný kľúč nie je nakonfigurovaný.
-            // Fallback kombinuje DB credentials + cestu adresára — táto kombinácia je
-            // jedinečná pre každú inštaláciu a nedokáže byť uhadná bez DB prístupu.
-            // Odstráňte tento fallback pridelenou hodnotou NEWSLETTER_UNSUBSCRIBE_SECRET do env.ini.
-            error_log('CRITICAL SECURITY: NEWSLETTER_UNSUBSCRIBE_SECRET nie je nastavený v env.ini. '
-                . 'Používam núdzový fallback odvojený z DB credentials. '
-                . 'Nastavte NEWSLETTER_UNSUBSCRIBE_SECRET v env.ini pre produkĎné nasadenie!');
-            // Fallback secret: hash(cesta_suboru + DB_credentials) — jedinecžné per-server,
-            // nepredvídatelňé bez DB prístupu (na rozdiel od predchádzajúceho __DIR__-only fallbacku).
-            $rawSecret = hash('sha256',
-                __DIR__ . '|newsletter-unsubscribe'
-                . '|' . ($env['DB_PASS'] ?? '')
-                . '|' . ($env['DB_USER'] ?? '')
-                . '|' . ($env['DB_NAME'] ?? '')
-            );
+            $isLocal = function_exists('isAppLocalDev') && isAppLocalDev();
+            if ($isLocal) {
+                error_log('SECURITY WARNING: NEWSLETTER_UNSUBSCRIBE_SECRET is not set in env.ini. Using a temporary, insecure development key.');
+                $rawSecret = 'dev-insecure-newsletter-secret';
+            } else {
+                // V produkcii je dedikovaný kľúč povinný. Pád aplikácie je v tomto prípade
+                // bezpečnostné opatrenie, ktoré núti administrátora nakonfigurovať kľúč.
+                throw new \RuntimeException('NEWSLETTER_UNSUBSCRIBE_SECRET is not configured in env.ini. This is mandatory for production environments.');
+            }
         }
 
         $secret = hash('sha256', $rawSecret);
