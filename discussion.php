@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $isLoggedIn) {
                         // Overí, že rodičovský príspevok existuje a je top-level
                         $stmtParent = $pdo->prepare(
                             "SELECT id FROM discussion_posts
-                             WHERE id = :id AND parent_id IS NULL AND is_deleted = 0
+                             WHERE id = :id AND parent_id IS NULL AND is_deleted = 0 AND is_hidden = 0
                              LIMIT 1"
                         );
                         $stmtParent->execute(['id' => $parentId]);
@@ -93,8 +93,8 @@ try {
                 u.username, u.avatar_path
          FROM discussion_posts dp
          JOIN users u ON dp.user_id = u.id
-         WHERE dp.parent_id IS NULL AND dp.is_deleted = 0
-         ORDER BY dp.created_at DESC
+         WHERE dp.parent_id IS NULL AND dp.is_deleted = 0 AND dp.is_hidden = 0
+         ORDER BY dp.is_pinned DESC, dp.created_at DESC
          LIMIT 200"
     );
     $posts = $stmtPosts->fetchAll(\PDO::FETCH_ASSOC);
@@ -113,7 +113,7 @@ try {
                     u.username, u.avatar_path
              FROM discussion_posts dp
              JOIN users u ON dp.user_id = u.id
-             WHERE dp.parent_id IN ($inPlaceholders) AND dp.is_deleted = 0
+             WHERE dp.parent_id IN ($inPlaceholders) AND dp.is_deleted = 0 AND dp.is_hidden = 0
              ORDER BY dp.parent_id, dp.created_at ASC"
         );
         $stmtReplies->execute($parentIds);
