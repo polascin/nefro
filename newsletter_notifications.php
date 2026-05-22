@@ -376,6 +376,39 @@ if (!function_exists('processArticleNewsletterQueue')) {
         $ids = $selectStmt->fetchAll(PDO::FETCH_COLUMN);
         $stats['selected'] = count($ids);
 
+        // Príprava dopytov mimo cyklu pre maximalizáciu výkonu
+        $itemStmt = $pdo->prepare("SELECT
+                q.id, q.article_id, q.user_id, q.email, q.attempts,
+                a.title, a.slug, a.excerpt, a.is_published,
+                u.username, u.title_before, u.first_name, u.middle_name,
+                u.last_name, u.title_after, u.email AS user_email,
+                u.newsletter_consent, u.is_active, u.email_verified_at
+            FROM article_newsletter_queue q
+            LEFT JOIN articles a ON a.id = q.article_id
+            LEFT JOIN users u ON u.id = q.user_id
+            WHERE q.id = :id
+            LIMIT 1");
+
+        $cancelStmt = $pdo->prepare("UPDATE article_newsletter_queue
+            SET status = 'cancelled',
+                next_attempt_at = NOW(),
+                last_error = :reason
+            WHERE id = :id AND sent_at IS NULL");
+
+        $failStmt = $pdo->prepare("UPDATE article_newsletter_queue
+            SET status = 'failed',
+                attempts = :attempts,
+                next_attempt_at = :next_attempt_at,
+                last_error = :last_error
+            WHERE id = :id AND sent_at IS NULL");
+
+        $successStmt = $pdo->prepare("UPDATE article_newsletter_queue
+            SET status = 'sent',
+                attempts = attempts + 1,
+                sent_at = NOW(),
+                last_error = NULL
+            WHERE id = :id AND sent_at IS NULL");
+
         foreach ($ids as $queueIdRaw) {
             $queueId = (int) $queueIdRaw;
             if ($queueId <= 0) {
@@ -383,31 +416,6 @@ if (!function_exists('processArticleNewsletterQueue')) {
                 continue;
             }
 
-            $itemStmt = $pdo->prepare("SELECT
-                    q.id,
-                    q.article_id,
-                    q.user_id,
-                    q.email,
-                    q.attempts,
-                    a.title,
-                    a.slug,
-                    a.excerpt,
-                    a.is_published,
-                    u.username,
-                    u.title_before,
-                    u.first_name,
-                    u.middle_name,
-                    u.last_name,
-                    u.title_after,
-                    u.email AS user_email,
-                    u.newsletter_consent,
-                    u.is_active,
-                    u.email_verified_at
-                FROM article_newsletter_queue q
-                LEFT JOIN articles a ON a.id = q.article_id
-                LEFT JOIN users u ON u.id = q.user_id
-                WHERE q.id = :id
-                LIMIT 1");
             $itemStmt->execute(['id' => $queueId]);
             $item = $itemStmt->fetch();
 
@@ -428,11 +436,6 @@ if (!function_exists('processArticleNewsletterQueue')) {
             }
 
             if ($cancelReason !== null) {
-                $cancelStmt = $pdo->prepare("UPDATE article_newsletter_queue
-                    SET status = 'cancelled',
-                        next_attempt_at = NOW(),
-                        last_error = :reason
-                    WHERE id = :id AND sent_at IS NULL");
                 $cancelStmt->execute([
                     'id' => $queueId,
                     'reason' => $cancelReason,
@@ -446,12 +449,6 @@ if (!function_exists('processArticleNewsletterQueue')) {
                 $failAttempt = (int) ($item['attempts'] ?? 0) + 1;
                 $nextAttemptAt = date('Y-m-d H:i:s', time() + min(3600, (int) pow(2, min($failAttempt, 10)) * 60));
 
-                $failStmt = $pdo->prepare("UPDATE article_newsletter_queue
-                    SET status = 'failed',
-                        attempts = :attempts,
-                        next_attempt_at = :next_attempt_at,
-                        last_error = :last_error
-                    WHERE id = :id AND sent_at IS NULL");
                 $failStmt->execute([
                     'id' => $queueId,
                     'attempts' => $failAttempt,
@@ -527,24 +524,12 @@ if (!function_exists('processArticleNewsletterQueue')) {
             }
 
             if ($sent) {
-                $successStmt = $pdo->prepare("UPDATE article_newsletter_queue
-                    SET status = 'sent',
-                        attempts = attempts + 1,
-                        sent_at = NOW(),
-                        last_error = NULL
-                    WHERE id = :id AND sent_at IS NULL");
                 $successStmt->execute(['id' => $queueId]);
                 $stats['sent']++;
             } else {
                 $failAttempt = (int) ($item['attempts'] ?? 0) + 1;
                 $nextAttemptAt = date('Y-m-d H:i:s', time() + min(3600, (int) pow(2, min($failAttempt, 10)) * 60));
 
-                $failStmt = $pdo->prepare("UPDATE article_newsletter_queue
-                    SET status = 'failed',
-                        attempts = :attempts,
-                        next_attempt_at = :next_attempt_at,
-                        last_error = :last_error
-                    WHERE id = :id AND sent_at IS NULL");
                 $failStmt->execute([
                     'id' => $queueId,
                     'attempts' => $failAttempt,

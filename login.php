@@ -30,46 +30,49 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
             $errors[] = "[DEV diagnostika] CSRF zlyhanie: " . $csrfReason;
         }
     } else {
+        $isRequestValid = true;
+
         // ── 0. User-Agent Check ───────────────────────────────────────────
         if (isKnownBotUserAgent()) {
             if ($isLocalDev) {
                 $errors[] = "[DEV] Detekovaný nepovolený User-Agent.";
             } else {
                 $errors[] = "Neplatná požiadavka. Skúste to znova (User-Agent neprešiel overením).";
-                goto endOfLoginProcessing;
+                $isRequestValid = false;
             }
         }
 
         // ── 1. Honeypot ochrana ──────────────────────────────────────────
-        if (($_POST['work_email_confirm'] ?? '') !== '') {
+        if ($isRequestValid && ($_POST['work_email_confirm'] ?? '') !== '') {
             if ($isLocalDev) {
                 $errors[] = "[DEV] Honeypot aktivovaný.";
             } else {
                 $errors[] = "Neplatná požiadavka. Skúste to znova.";
-                goto endOfLoginProcessing;
+                $isRequestValid = false;
             }
         }
 
         // ── 2. JS-Challenge Check ─────────────────────────────────────────
-        if (!validateJsChallengeToken($_POST['js_token'] ?? null)) {
+        if ($isRequestValid && !validateJsChallengeToken($_POST['js_token'] ?? null)) {
             if ($isLocalDev) {
                 $errors[] = "[DEV] JS-Challenge zlyhal.";
             } else {
                 $errors[] = "Požiadavka nebola overená (vyžaduje sa JavaScript). Zapnite JavaScript a skúste znova.";
-                goto endOfLoginProcessing;
+                $isRequestValid = false;
             }
         }
 
         // ── 3. Time-based Check ───────────────────────────────────────────
-        if (!validateFormTime('login', 4)) {
+        if ($isRequestValid && !validateFormTime('login', 4)) {
             if ($isLocalDev) {
                 $errors[] = "[DEV] Formulár odoslaný príliš rýchlo.";
             } else {
                 $errors[] = "Formulár bol odoslaný príliš rýchlo. Skúste to znova za pár sekúnd.";
-                goto endOfLoginProcessing;
+                $isRequestValid = false;
             }
         }
 
+        if ($isRequestValid) {
         // DB/IP brute-force ochrana (10 pokusov, blokovanie na 15 minút)
         $clientIp    = getClientIpAddress();
 
@@ -218,8 +221,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 }
             }
         }
-        // ── endOfLoginProcessing ──
-        endOfLoginProcessing:
+        }
     }
 } else {
     // GET požiadavka: zaznamenaj čas načítania
