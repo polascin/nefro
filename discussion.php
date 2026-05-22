@@ -211,6 +211,13 @@ function discAvatarSrc(array $row): string
             Prosíme o vecnú, odbornú a rešpektujúcu komunikáciu v súlade s etickými zásadami
             medicínskej komunity. Diskusia je určená výhradne pre registrovaných a prihlásených členov.
           </p>
+          <p class="disc-welcome__rules">
+            Hoci má určite anonymita svoje miesto v prípadoch nespravodlivého prenasledovania
+            najrozličnejšieho druhu, takým prípadom nie je bezbrehé ventilovanie svojej frustrácie
+            a najrozličnejších patologických porúch štruktúry vlastnej osobnosti. Z uvedeného dôvodu,
+            aj keď čisto technicky sú viac-menej možné, nie sú anonymné príspevky v&nbsp;tejto
+            diskusii vítané.
+          </p>
         </div>
 
         <!-- Flash a chybové správy -->
