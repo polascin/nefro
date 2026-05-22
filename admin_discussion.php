@@ -134,7 +134,7 @@ try {
     $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
 } catch (\PDOException $e) {
     error_log('admin_discussion list error: ' . $e->getMessage());
-    $actionError = ($actionError ?? '') . ' Chyba pri načítaní príspevkov.';
+    $actionError = trim(($actionError ?? '') . ' Chyba pri načítaní príspevkov.');
 }
 
 // ── Súhrnné štatistiky ────────────────────────────────────────────────────────
@@ -225,12 +225,12 @@ include 'admin_menu.php';
       <table class="admin-articles-table" aria-label="Príspevky diskusie">
         <thead>
           <tr>
-            <th style="width:50px">#</th>
-            <th style="width:130px">Autor</th>
+            <th class="disc-col-id">#</th>
+            <th class="disc-col-author">Autor</th>
             <th>Obsah</th>
-            <th style="width:90px">Dátum</th>
-            <th style="width:80px">Stav</th>
-            <th style="width:260px">Akcie</th>
+            <th class="disc-col-date">Dátum</th>
+            <th class="disc-col-status">Stav</th>
+            <th class="disc-col-actions">Akcie</th>
           </tr>
         </thead>
         <tbody>

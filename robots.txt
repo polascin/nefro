@@ -9,6 +9,7 @@ Allow: /
 # Administratívne a vývojové stránky
 Disallow: /admin.php
 Disallow: /admin_articles.php
+Disallow: /admin_discussion.php
 Disallow: /admin_users_notice.php
 Disallow: /query_article.php
 Disallow: /setup_db.php
@@ -20,7 +21,7 @@ Disallow: /newsletter_unsubscribe.php
 Disallow: /logout.php
 Disallow: /avatar_upload.php
 Disallow: /calculator_result_print.php
-Disallow: /search.php?*page=
+Disallow: /search.php?*
 
 # Privátne adresáre
 Disallow: /private/

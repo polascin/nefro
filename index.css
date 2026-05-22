@@ -2604,6 +2604,7 @@ input:disabled + .slider:before {
 .badge-pub   { background: #d1fae5; color: #065f46; padding: 2px 8px; border-radius: 10px; font-size: 0.75rem; font-weight: 600; }
 .badge-draft { background: #fef3c7; color: #92400e; padding: 2px 8px; border-radius: 10px; font-size: 0.75rem; font-weight: 600; }
 .badge-top-sm { background: var(--primary-gradient); color: #fff; padding: 2px 8px; border-radius: 10px; font-size: 0.75rem; font-weight: 600; }
+.badge-active { outline: 2px solid var(--accent-color); outline-offset: 1px; }
 .section-divider { border: none; border-top: 2px solid var(--border-color); margin: 36px 0; }
 .helper-text { font-size: 0.8rem; color: var(--text-secondary); margin-top: 3px; }
 @media (max-width: 600px) {
@@ -4260,6 +4261,23 @@ input:disabled + .slider:before {
     border-radius: 10px;
     font-size: 0.75rem;
     font-weight: 600;
+}
+.badge-active { outline: 2px solid var(--accent-color); outline-offset: 1px; }
+
+/* ── Tabuľka moderovania diskusie ──────────────────────────────────────────── */
+.disc-col-id      { width: 50px; }
+.disc-col-author  { width: 130px; }
+.disc-col-date    { width: 90px; }
+.disc-col-status  { width: 80px; }
+.disc-col-actions { width: 260px; }
+@media (max-width: 768px) {
+    .disc-col-date   { display: none; }
+    .disc-col-status { width: 60px; }
+    .disc-col-actions { width: auto; }
+}
+@media (max-width: 480px) {
+    .disc-col-id     { display: none; }
+    .disc-col-author { width: 80px; }
 }
 
 /* ============================================================
