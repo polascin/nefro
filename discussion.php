@@ -6,7 +6,7 @@ require_once "db_config.php";
 $isLoggedIn   = isLoggedIn();
 $currentUserId = $isLoggedIn ? (int) $_SESSION['user_id'] : 0;
 
-$flash        = popFlashMessage();
+$discFlash    = popFlashMessage();
 $errorMessage = null;
 
 // ── POST: nový príspevok alebo odpoveď (len pre prihlásených) ──────────────
@@ -220,9 +220,9 @@ function discAvatarSrc(array $row): string
         </div>
 
         <!-- Flash a chybové správy -->
-        <?php if (!empty($flash) && $flash['type'] === 'success'): ?>
+        <?php if (!empty($discFlash) && $discFlash['type'] === 'success'): ?>
         <div class="alert alert-success disc-alert" role="alert" aria-live="polite">
-          ✓ <?= htmlspecialchars((string) $flash['message'], ENT_QUOTES, 'UTF-8') ?>
+          ✓ <?= htmlspecialchars((string) $discFlash['message'], ENT_QUOTES, 'UTF-8') ?>
         </div>
         <?php endif; ?>
 
