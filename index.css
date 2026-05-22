@@ -4889,13 +4889,12 @@ mark.search-hl {
 .disc-welcome__text {
     font-size: 1rem;
     margin: 0 0 0.75rem;
-    opacity: 0.95;
     line-height: 1.6;
 }
 
 .disc-welcome__rules {
     font-size: 0.875rem;
-    opacity: 0.8;
+    color: rgba(255,255,255,0.9);
     margin: 0;
     line-height: 1.5;
     border-top: 1px solid rgba(255,255,255,0.25);
