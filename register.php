@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 require_once 'auth.php';
 require_once 'db_config.php';
 require_once 'avatar_upload.php';
@@ -29,29 +30,45 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
             $errors[] = "[DEV diagnostika] CSRF zlyhanie: " . $csrfReason;
         }
     } else {
-        // ── 0. User-Agent Check ───────────────────────────────────────────
+        // ── Bot detekcia (User-Agent, honeypot, JS-challenge, time-check) ────
+        $isBotRequest = false;
+
         if (isKnownBotUserAgent()) {
-            if ($isLocalDev) { $errors[] = "[DEV] Detekovaný nepovolený User-Agent."; }
-            else { $success = true; goto endOfPostProcessing; }
+            if ($isLocalDev) {
+                $errors[] = "[DEV] Detekovaný nepovolený User-Agent.";
+            } else {
+                $isBotRequest = true;
+            }
         }
 
-        // ── 1. Honeypot ochrana (musí byť prázdne) ─────────────────────────────
-        if (($_POST['website_url'] ?? '') !== '') {
-            if ($isLocalDev) { $errors[] = "[DEV] Honeypot aktivovaný."; }
-            else { $success = true; goto endOfPostProcessing; }
+        if (!$isBotRequest && ($_POST['website_url'] ?? '') !== '') {
+            if ($isLocalDev) {
+                $errors[] = "[DEV] Honeypot aktivovaný.";
+            } else {
+                $isBotRequest = true;
+            }
         }
 
-        // ── 2. JS-Challenge Check ─────────────────────────────────────────
-        if (!validateJsChallengeToken($_POST['js_token'] ?? null)) {
-            if ($isLocalDev) { $errors[] = "[DEV] JS-Challenge zlyhal (chýba js_token)."; }
-            else { $success = true; goto endOfPostProcessing; }
+        if (!$isBotRequest && !validateJsChallengeToken($_POST['js_token'] ?? null)) {
+            if ($isLocalDev) {
+                $errors[] = "[DEV] JS-Challenge zlyhal (chýba js_token).";
+            } else {
+                $isBotRequest = true;
+            }
         }
 
-        // ── 3. Time-based Check ───────────────────────────────────────────
-        if (!validateFormTime('register', 5)) {
-            if ($isLocalDev) { $errors[] = "[DEV] Formulár odoslaný príliš rýchlo (pod 5s)."; }
-            else { $success = true; goto endOfPostProcessing; }
+        if (!$isBotRequest && !validateFormTime('register', 5)) {
+            if ($isLocalDev) {
+                $errors[] = "[DEV] Formulár odoslaný príliš rýchlo (pod 5s).";
+            } else {
+                $isBotRequest = true;
+            }
         }
+
+        if ($isBotRequest) {
+            // Tvárime sa, že registrácia prebehla úspešne — neinformujeme bota o detekcii
+            $success = true;
+        } else {
 
         // ── 4. IP Rate Limiting (max 5 pokusov/hodina per IP) ────────────────
         $clientIpReg = getClientIpAddress();
@@ -348,9 +365,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 }
             }
         }
-        }
-        // ── endOfPostProcessing ── cíl pre goto pri honeypot detekcii ──
-        endOfPostProcessing:
+        } // !$isBotRequest else
     }
 } else {
     // GET požiadavka: zaznamenaj čas načítania pre ochranu pred botmi
@@ -361,7 +376,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 <html lang="sk">
 <head>
   <?php
-  $pageTitle = 'Registrácia - Nefro-projekt Slovensko';
+  $pageTitle = 'Registrácia | Nefro-projekt Slovensko';
   $seoDescription = 'Zaregistrujte sa do Nefro-projekt Slovensko — odborného portálu pre nefrológov a lekárov.';
   $robotsMeta = 'noindex, follow';
   $canonicalUrl = 'https://nefro.polascin.net/register.php';

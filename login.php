@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 require_once 'auth.php';
 require_once 'db_config.php';
 
@@ -162,6 +163,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                             $_SESSION['email'] = (string) ($user['email'] ?? '');
                             $_SESSION['is_admin'] = (int) ($user['is_admin'] ?? 0);
                             $_SESSION['email_verified'] = $emailVerified;
+                            $_SESSION['_last_activity'] = time();
 
                             header("Location: index.php");
                             exit;

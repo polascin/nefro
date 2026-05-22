@@ -35,8 +35,9 @@ if ($loggedIn && !$currentUser) {
 
 $isDefaultAvatar = false;
 $avatarSrc = "";
-if ($currentUser && !empty($currentUser['avatar_path'])) {
-    $avatarSrc = htmlspecialchars(str_replace('\\', '/', trim((string) $currentUser['avatar_path'])));
+$rawAvatarPath = str_replace('\\', '/', trim((string) ($currentUser['avatar_path'] ?? '')));
+if ($currentUser && $rawAvatarPath !== '' && str_starts_with($rawAvatarPath, 'uploads/avatars/')) {
+    $avatarSrc = htmlspecialchars($rawAvatarPath);
 } else {
     $avatarSrc = 'img/default-avatar-light.svg';
     $isDefaultAvatar = true;

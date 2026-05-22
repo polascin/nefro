@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 require_once __DIR__ . '/config_loader.php';
 
@@ -289,14 +290,8 @@ function sendVerificationEmail(string $toEmail, string $username, int $userId, s
         return true;
     }
 
-    $fallbackFrom = $cfg['from_email'] !== '' ? $cfg['from_email'] : 'no-reply@nefro.polascin.net';
-    $headers = [
-        'MIME-Version: 1.0',
-        'Content-Type: text/html; charset=UTF-8',
-        'From: ' . ($cfg['from_name'] ?: 'Nefro-projekt') . ' <' . $fallbackFrom . '>',
-    ];
-
-    return @mail($toEmail, $subject, $htmlMessage, implode("\r\n", $headers));
+    error_log('sendVerificationEmail: SMTP zlyhalo pre ' . $toEmail);
+    return false;
 }
 
 function sendPasswordResetEmail(string $toEmail, string $username, string $rawToken): bool {
@@ -325,14 +320,8 @@ function sendPasswordResetEmail(string $toEmail, string $username, string $rawTo
         return true;
     }
 
-    $fallbackFrom = $cfg['from_email'] !== '' ? $cfg['from_email'] : 'no-reply@nefro.polascin.net';
-    $headers = [
-        'MIME-Version: 1.0',
-        'Content-Type: text/html; charset=UTF-8',
-        'From: ' . ($cfg['from_name'] ?: 'Nefro-projekt') . ' <' . $fallbackFrom . '>',
-    ];
-
-    return @mail($toEmail, $subject, $htmlMessage, implode("\r\n", $headers));
+    error_log('sendPasswordResetEmail: SMTP zlyhalo pre ' . $toEmail);
+    return false;
 }
 
 /**
@@ -409,14 +398,8 @@ function sendAdminNewRegistrationEmail(array $dbUserRow, array $registrationCont
         return true;
     }
 
-    $fallbackFrom = $cfg['from_email'] !== '' ? $cfg['from_email'] : 'no-reply@nefro.polascin.net';
-    $headers = [
-        'MIME-Version: 1.0',
-        'Content-Type: text/html; charset=UTF-8',
-        'From: ' . ($cfg['from_name'] ?: 'Nefro-projekt') . ' <' . $fallbackFrom . '>',
-    ];
-
-    return @mail($toEmail, $subject, $htmlMessage, implode("\r\n", $headers));
+    error_log('sendAdminNewRegistrationEmail: SMTP zlyhalo pre ' . $toEmail);
+    return false;
 }
 
 /**
@@ -463,14 +446,8 @@ function sendUserRegistrationNotificationEmail(string $toEmail, string $username
         return true;
     }
 
-    $fallbackFrom = $cfg['from_email'] !== '' ? $cfg['from_email'] : 'no-reply@nefro.polascin.net';
-    $headers = [
-        'MIME-Version: 1.0',
-        'Content-Type: text/html; charset=UTF-8',
-        'From: ' . ($cfg['from_name'] ?: 'Nefro-projekt') . ' <' . $fallbackFrom . '>',
-    ];
-
-    return @mail($toEmail, $subject, $htmlMessage, implode("\r\n", $headers));
+    error_log('sendUserRegistrationNotificationEmail: SMTP zlyhalo pre ' . $toEmail);
+    return false;
 }
 
 function markEmailAsVerified(PDO $pdo, int $userId): void {
@@ -510,14 +487,8 @@ function sendAccountDeletionConfirmationEmail(string $toEmail, string $username,
         return true;
     }
 
-    $fallbackFrom = $cfg['from_email'] !== '' ? $cfg['from_email'] : 'no-reply@nefro.polascin.net';
-    $headers = [
-        'MIME-Version: 1.0',
-        'Content-Type: text/html; charset=UTF-8',
-        'From: ' . ($cfg['from_name'] ?: 'Nefro-projekt') . ' <' . $fallbackFrom . '>',
-    ];
-
-    return @mail($toEmail, $subject, $htmlMessage, implode("\r\n", $headers));
+    error_log('sendAccountDeletionConfirmationEmail: SMTP zlyhalo pre ' . $toEmail);
+    return false;
 }
 
 function isEmailResendAllowed(?string $sentAt, int $cooldownSeconds = 60): bool {

@@ -155,7 +155,7 @@ function requireAdmin(): void {
 /**
  * Generovanie CSRF tokenu (Synchronizer Token Pattern).
  * Token je generovaný raz za reláciu a uložený v session.
- * Po úspechné validácii POST formulára sa token rotuje (pozri validateCsrfToken).
+ * Po úspešnej validácii POST formulára sa token rotuje (pozri validateCsrfToken).
  *
  * @return string Aktuálny CSRF token pre vloženie do formulára.
  */
@@ -168,7 +168,7 @@ function generateCsrfToken(): string {
 
 /**
  * Validácia CSRF tokenu z POST formulára.
- * Po úspechnéj validácii sa token automaticky rotuje — ochráni pred opakovaným
+ * Po úspešnej validácii sa token automaticky rotuje — ochráni pred opakovaným
  * použitím a pred CSRF-token-fixation útokmi.
  *
  * @param string $token Token z POST požiadavky ($_POST['csrf_token'])

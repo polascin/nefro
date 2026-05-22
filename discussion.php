@@ -100,8 +100,10 @@ try {
     $posts = $stmtPosts->fetchAll(\PDO::FETCH_ASSOC);
 
     if (!empty($posts)) {
+        $parentIds = array_map(fn($p) => (int) $p['id'], $posts);
+        $inPlaceholders = implode(',', array_fill(0, count($parentIds), '?'));
         $stmtReplies = $pdo->prepare(
-            "SELECT dp.id, dp.content, dp.created_at, dp.user_id,
+            "SELECT dp.id, dp.parent_id, dp.content, dp.created_at, dp.user_id,
                     TRIM(CONCAT_WS(' ',
                         NULLIF(TRIM(u.title_before), ''),
                         NULLIF(TRIM(u.first_name), ''),
@@ -111,12 +113,18 @@ try {
                     u.username, u.avatar_path
              FROM discussion_posts dp
              JOIN users u ON dp.user_id = u.id
-             WHERE dp.parent_id = :parent_id AND dp.is_deleted = 0
-             ORDER BY dp.created_at ASC"
+             WHERE dp.parent_id IN ($inPlaceholders) AND dp.is_deleted = 0
+             ORDER BY dp.parent_id, dp.created_at ASC"
         );
+        $stmtReplies->execute($parentIds);
+        $allReplies = $stmtReplies->fetchAll(\PDO::FETCH_ASSOC);
+
+        $repliesByParent = [];
+        foreach ($allReplies as $reply) {
+            $repliesByParent[(int) $reply['parent_id']][] = $reply;
+        }
         foreach ($posts as &$post) {
-            $stmtReplies->execute(['parent_id' => (int) $post['id']]);
-            $post['replies'] = $stmtReplies->fetchAll(\PDO::FETCH_ASSOC);
+            $post['replies'] = $repliesByParent[(int) $post['id']] ?? [];
         }
         unset($post);
     }

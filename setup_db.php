@@ -1,10 +1,17 @@
 <?php
+declare(strict_types=1);
 // Ochrana pred priamym prístupom z webu
 if (basename($_SERVER['PHP_SELF']) === basename(__FILE__) && php_sapi_name() !== 'cli') {
     http_response_code(403);
     exit("Prístup odmietnutý.");
 }
 require_once 'db_config.php';
+
+$cliOut = static function (string $s): void {
+    if (php_sapi_name() === 'cli') {
+        echo $s;
+    }
+};
 
 try {
     $sql = "CREATE TABLE IF NOT EXISTS users (
@@ -141,7 +148,7 @@ try {
     $themeAutoStmt->execute();
     if ((int) $themeAutoStmt->fetchColumn() === 0) {
         $pdo->exec("ALTER TABLE users ADD COLUMN theme_auto TINYINT(1) NOT NULL DEFAULT 1 COMMENT 'Automaticky sledovať systémovú tému (1=áno, 0=manuálne)' AFTER newsletter_consent");
-        echo "Migrácia: theme_auto pridané.\n";
+        $cliOut("Migrácia: theme_auto pridané.\n");
     }
 
     // ── Migrácia: rate-limit stĺpce pre SMS overovanie ───────────────────────
@@ -155,7 +162,7 @@ try {
             ADD COLUMN mobile_verify_locked_until DATETIME NULL
                 COMMENT 'SMS verify zablokovaný do tohto času'
                 AFTER mobile_verify_fail_count");
-        echo "Migrácia: mobile_verify_fail_count + mobile_verify_locked_until pridané.\n";
+        $cliOut("Migrácia: mobile_verify_fail_count + mobile_verify_locked_until pridané.\n");
     }
 
     // Pri prvom zavedení stĺpca považujeme existujúce účty za overené,
@@ -270,7 +277,7 @@ try {
         INDEX idx_form_rate_limit_blocked (blocked_until)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";
     $pdo->exec($formRateLimitSql);
-    echo "Tabuľka 'form_rate_limit' bola úspešne vytvorená alebo už existuje.\n";
+    $cliOut("Tabuľka 'form_rate_limit' bola úspešne vytvorená alebo už existuje.\n");
 
     // ── Migrácia: pridanie UNIQUE constraint pre existujúce inštalácie ────────
     $uqCheckStmt = $pdo->prepare(
@@ -297,7 +304,7 @@ try {
             "ALTER TABLE form_rate_limit
              ADD UNIQUE KEY uq_form_rate_limit_ip_action (ip, action)"
         );
-        echo "Migrácia: UNIQUE constraint pridaný do form_rate_limit.\n";
+        $cliOut("Migrácia: UNIQUE constraint pridaný do form_rate_limit.\n");
     }
 
     // ── Audit log pre zrušenie/vymazanie účtov ───────────────────────────────
@@ -327,7 +334,7 @@ try {
         INDEX idx_adl_email_hash (email_hash)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";
     $pdo->exec($accountDeletionLogSql);
-    echo "Tabuľka 'account_deletion_log' bola úspešne vytvorená alebo už existuje.\n";
+    $cliOut("Tabuľka 'account_deletion_log' bola úspešne vytvorená alebo už existuje.\n");
 
     // ── Tokeny pre e-mailové potvrdenie zrušenia účtu ────────────────────────
     $accountDeletionTokensSql = "CREATE TABLE IF NOT EXISTS account_deletion_tokens (
@@ -341,10 +348,10 @@ try {
         CONSTRAINT fk_adt_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";
     $pdo->exec($accountDeletionTokensSql);
-    echo "Tabuľka 'account_deletion_tokens' bola úspešne vytvorená alebo už existuje.\n";
+    $cliOut("Tabuľka 'account_deletion_tokens' bola úspešne vytvorená alebo už existuje.\n");
 
-    echo "Tabuľky 'users', 'users_profile_archive', 'users_avatar_archive', 'password_resets' a 'admin_users_notice_audit' boli úspešne vytvorené alebo už existujú.";
-    echo "\n";
+    $cliOut("Tabuľky 'users', 'users_profile_archive', 'users_avatar_archive', 'password_resets' a 'admin_users_notice_audit' boli úspešne vytvorené alebo už existujú.");
+    $cliOut("\n");
 
     $articlesSql = "CREATE TABLE IF NOT EXISTS articles (
         id INT AUTO_INCREMENT PRIMARY KEY,
@@ -364,7 +371,7 @@ try {
         INDEX idx_articles_is_published (is_published)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";
     $pdo->exec($articlesSql);
-    echo "Tabuľka 'articles' bola úspešne vytvorená alebo už existuje.\n";
+    $cliOut("Tabuľka 'articles' bola úspešne vytvorená alebo už existuje.\n");
 
     $articleNewsletterQueueSql = "CREATE TABLE IF NOT EXISTS article_newsletter_queue (
         id BIGINT AUTO_INCREMENT PRIMARY KEY,
@@ -385,7 +392,7 @@ try {
         CONSTRAINT fk_article_newsletter_queue_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";
     $pdo->exec($articleNewsletterQueueSql);
-    echo "Tabuľka 'article_newsletter_queue' bola úspešne vytvorená alebo už existuje.\n";
+    $cliOut("Tabuľka 'article_newsletter_queue' bola úspešne vytvorená alebo už existuje.\n");
 
     $calculatorResultsSql = "CREATE TABLE IF NOT EXISTS calculator_results (
         id BIGINT AUTO_INCREMENT PRIMARY KEY,
@@ -406,7 +413,7 @@ try {
         CONSTRAINT fk_calculator_results_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";
     $pdo->exec($calculatorResultsSql);
-    echo "Tabuľka 'calculator_results' bola úspešne vytvorená alebo už existuje.\n";
+    $cliOut("Tabuľka 'calculator_results' bola úspešne vytvorená alebo už existuje.\n");
 
     // ── Diskusia — vlákna príspevkov prihlásených používateľov ──────────
     $discussionPostsSql = "CREATE TABLE IF NOT EXISTS discussion_posts (
@@ -424,7 +431,7 @@ try {
         CONSTRAINT fk_disc_parent FOREIGN KEY (parent_id) REFERENCES discussion_posts(id) ON DELETE CASCADE
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";
     $pdo->exec($discussionPostsSql);
-    echo "Tabuľka 'discussion_posts' bola úspešne vytvorená alebo už existuje.\n";
+    $cliOut("Tabuľka 'discussion_posts' bola úspešne vytvorená alebo už existuje.\n");
 
     // ── Číselník zdravotných poisťovní SR ────────────────────────────────
     $insuranceSql = "CREATE TABLE IF NOT EXISTS insurance_companies (
@@ -439,7 +446,7 @@ try {
         INDEX idx_insurance_aktivna (aktivna)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";
     $pdo->exec($insuranceSql);
-    echo "Tabuľka 'insurance_companies' bola úspešne vytvorená alebo už existuje.\n";
+    $cliOut("Tabuľka 'insurance_companies' bola úspešne vytvorená alebo už existuje.\n");
 
     // Seed: vloží aktuálne aktívne poisťovne (ignoruje duplicity)
     $insuranceSeedSql = "INSERT IGNORE INTO insurance_companies (code, nazov, skratka, aktivna) VALUES
@@ -447,7 +454,7 @@ try {
         ('25', 'DÔVERA zdravotná poisťovňa, a. s.',   'DÔVERA',  1),
         ('27', 'UNION zdravotná poisťovňa, a. s.',     'UNION',   1)";
     $pdo->exec($insuranceSeedSql);
-    echo "Seed dáta poisťovní boli vložené (duplicity ignorované).\n";
+    $cliOut("Seed dáta poisťovní boli vložené (duplicity ignorované).\n");
 
     // Migrácia: rozšíriť patient_insurance_code na VARCHAR(10) ak je kratší
     $insColStmt = $pdo->prepare("SELECT CHARACTER_MAXIMUM_LENGTH
@@ -459,7 +466,7 @@ try {
     $insColLen = (int) $insColStmt->fetchColumn();
     if ($insColLen > 0 && $insColLen < 10) {
         $pdo->exec("ALTER TABLE calculator_results MODIFY COLUMN patient_insurance_code VARCHAR(10) NULL");
-        echo "Migrácia: patient_insurance_code rozšírená na VARCHAR(10).\n";
+        $cliOut("Migrácia: patient_insurance_code rozšírená na VARCHAR(10).\n");
     }
 
     // ── Migrácia: sort_order stĺpec ──────────────────────────────────
@@ -468,7 +475,7 @@ try {
     if ((int) $sortOrderColumnStmt->fetchColumn() === 0) {
         $pdo->exec("ALTER TABLE articles ADD COLUMN sort_order INT NOT NULL DEFAULT 0");
         $pdo->exec("SET @row_num := 0; UPDATE articles SET sort_order = (@row_num := @row_num + 1) ORDER BY published_at DESC, id DESC");
-        echo "Stĺpec 'sort_order' bol pridaný a inicializovaný.\n";
+        $cliOut("Stĺpec 'sort_order' bol pridaný a inicializovaný.\n");
     }
 
     // ── Číselník akademických a iných titulov ───────────────────────
@@ -483,7 +490,7 @@ try {
         INDEX idx_title_codebook_sort (sort_order)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";
     $pdo->exec($titleCodebookSql);
-    echo "Tabuľka 'title_codebook' bola úspešne vytvorená alebo už existuje.\n";
+    $cliOut("Tabuľka 'title_codebook' bola úspešne vytvorená alebo už existuje.\n");
 
     // Seed: tituly pred menom — akademické a odborné tituly SR/ČR
     $titleBeforeSeedSql = "INSERT IGNORE INTO title_codebook (type, title, sort_order) VALUES
@@ -510,7 +517,7 @@ try {
         ('before', 'Dr. h. c.',   96),
         ('before', 'Dipl. Ing.', 100)";
     $pdo->exec($titleBeforeSeedSql);
-    echo "Seed dáta titulov pred menom boli vložené (duplicity ignorované).\n";
+    $cliOut("Seed dáta titulov pred menom boli vložené (duplicity ignorované).\n");
 
     // Seed: tituly za menom — vedecké hodnosti a medzinárodné certifikácie
     $titleAfterSeedSql = "INSERT IGNORE INTO title_codebook (type, title, sort_order) VALUES
@@ -534,7 +541,7 @@ try {
         ('after', 'dis.',    80),
         ('after', 'DiS.',    81)";
     $pdo->exec($titleAfterSeedSql);
-    echo "Seed dáta titulov za menom boli vložené (duplicity ignorované).\n";
+    $cliOut("Seed dáta titulov za menom boli vložené (duplicity ignorované).\n");
 
     // ── Číselník štátov ─────────────────────────────────────────────
     $pdo->exec("CREATE TABLE IF NOT EXISTS codebook_countries (
@@ -545,7 +552,7 @@ try {
         UNIQUE KEY uq_codebook_countries_code (code),
         INDEX idx_codebook_countries_sort (sort_order)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci");
-    echo "Tabuľka 'codebook_countries' bola úspešne vytvorená alebo už existuje.\n";
+    $cliOut("Tabuľka 'codebook_countries' bola úspešne vytvorená alebo už existuje.\n");
 
     $pdo->exec("INSERT IGNORE INTO codebook_countries (code, name_sk, sort_order) VALUES
         ('SK','Slovenská republika',1),('CZ','Česká republika',2),('AT','Rakúsko',3),
@@ -612,7 +619,7 @@ try {
         ('VN','Vietnam',273),('GB','Veľká Británia',274),('US','Spojené štáty americké',275),
         ('AE','Spojené arabské emiráty',276),('CF','Stredoafrická republika',277),
         ('WS','Samoa',278),('ZM','Zambia',279),('ZW','Zimbabwe',280)");
-    echo "Seed dáta štátov boli vložené (duplicity ignorované).\n";
+    $cliOut("Seed dáta štátov boli vložené (duplicity ignorované).\n");
 
     // ── Číselník krajov SR ───────────────────────────────────────────
     $pdo->exec("CREATE TABLE IF NOT EXISTS codebook_regions (
@@ -624,7 +631,7 @@ try {
         UNIQUE KEY uq_codebook_regions_code (code),
         INDEX idx_codebook_regions_country (country_code)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci");
-    echo "Tabuľka 'codebook_regions' bola úspešne vytvorená alebo už existuje.\n";
+    $cliOut("Tabuľka 'codebook_regions' bola úspešne vytvorená alebo už existuje.\n");
 
     $pdo->exec("INSERT IGNORE INTO codebook_regions (code, name, country_code, sort_order) VALUES
         ('BL','Bratislavský kraj','SK',1),
@@ -635,7 +642,7 @@ try {
         ('BC','Banskobystrický kraj','SK',6),
         ('PV','Prešovský kraj','SK',7),
         ('KI','Košický kraj','SK',8)");
-    echo "Seed dáta krajov SR boli vložené (duplicity ignorované).\n";
+    $cliOut("Seed dáta krajov SR boli vložené (duplicity ignorované).\n");
 
     // ── Číselník okresov SR ──────────────────────────────────────────
     $pdo->exec("CREATE TABLE IF NOT EXISTS codebook_districts (
@@ -646,7 +653,7 @@ try {
         UNIQUE KEY uq_codebook_districts_name (name),
         INDEX idx_codebook_districts_region (region_code)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci");
-    echo "Tabuľka 'codebook_districts' bola úspešne vytvorená alebo už existuje.\n";
+    $cliOut("Tabuľka 'codebook_districts' bola úspešne vytvorená alebo už existuje.\n");
 
     $pdo->exec("INSERT IGNORE INTO codebook_districts (name, region_code, sort_order) VALUES
         ('Bratislava I','BL',1),('Bratislava II','BL',2),('Bratislava III','BL',3),
@@ -677,7 +684,7 @@ try {
         ('Košice III','KI',103),('Košice IV','KI',104),('Košice-okolie','KI',105),
         ('Michalovce','KI',106),('Rožňava','KI',107),('Sobrance','KI',108),
         ('Spišská Nová Ves','KI',109),('Trebišov','KI',110)");
-    echo "Seed dáta okresov SR boli vložené (duplicity ignorované).\n";
+    $cliOut("Seed dáta okresov SR boli vložené (duplicity ignorované).\n");
 
     // ── Číselník obcí SR s PSČ ───────────────────────────────────────
     $pdo->exec("CREATE TABLE IF NOT EXISTS codebook_municipalities (
@@ -692,10 +699,10 @@ try {
         INDEX idx_codebook_mun_region (region_code),
         INDEX idx_codebook_mun_zip (zip_code)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci");
-    echo "Tabuľka 'codebook_municipalities' bola úspešne vytvorená alebo už existuje.\n";
-    echo "Poznámka: Pre import všetkých obcí SR spustite seed_municipalities_sk.php\n";
+    $cliOut("Tabuľka 'codebook_municipalities' bola úspešne vytvorená alebo už existuje.\n");
+    $cliOut("Poznámka: Pre import všetkých obcí SR spustite seed_municipalities_sk.php\n");
 
 } catch (\PDOException $e) {
-    echo "Chyba pri vytváraní tabuľky: " . $e->getMessage();
+    $cliOut("Chyba pri vytváraní tabuľky: " . $e->getMessage());
 }
 ?>

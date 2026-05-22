@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 require_once 'auth.php';
 require_once 'db_config.php';
 require_once 'email_verification.php';
@@ -168,7 +169,10 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 <html lang="sk">
 <head>
   <?php
-  $pageTitle = 'Zabudnuté heslo - Nefro-projekt Slovensko';
+  $pageTitle      = 'Zabudnuté heslo | Nefro-projekt Slovensko';
+  $seoDescription = 'Obnovte prístup k svojmu účtu Nefro-projekt Slovensko zadaním e-mailu alebo používateľského mena.';
+  $robotsMeta     = 'noindex, follow';
+  $canonicalUrl   = 'https://nefro.polascin.net/forgot_password.php';
   include 'head_meta.php';
   ?>
 </head>

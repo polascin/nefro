@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 require_once 'auth.php';
 require_once 'db_config.php';
 
@@ -93,7 +94,10 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 <html lang="sk">
 <head>
   <?php
-  $pageTitle = 'Nastavenie nového hesla - Nefro-projekt Slovensko';
+  $pageTitle      = 'Nastavenie nového hesla | Nefro-projekt Slovensko';
+  $seoDescription = 'Nastavte nové heslo pre váš účet Nefro-projekt Slovensko pomocou odkazu z e-mailu.';
+  $robotsMeta     = 'noindex, nofollow';
+  $canonicalUrl   = 'https://nefro.polascin.net/reset_password.php';
   include 'head_meta.php';
   ?>
 </head>

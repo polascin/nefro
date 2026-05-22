@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 if (!function_exists('npsCreateImageResourceFromFile')) {
     function npsCreateImageResourceFromFile(string $filePath, string $mime)
@@ -144,6 +145,12 @@ if (!function_exists('processAvatarUpload')) {
         $uploadDir = __DIR__ . '/uploads/avatars/';
         if (!is_dir($uploadDir) && !mkdir($uploadDir, 0755, true)) {
             return ['path' => null, 'error' => 'Nepodarilo sa pripraviť priečinok pre avatar.'];
+        }
+        $htaccessPath = $uploadDir . '.htaccess';
+        if (!is_file($htaccessPath)) {
+            @file_put_contents($htaccessPath,
+                "<FilesMatch \"\\.php[0-9]?$\">\n    Require all denied\n</FilesMatch>\nOptions -ExecCGI\nphp_flag engine off\n"
+            );
         }
 
         $extension = $mimeToExt[$mime];
