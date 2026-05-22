@@ -1,4 +1,6 @@
 <?php
+require_once 'auth.php';
+requireAdmin();
 require_once 'db_config.php';
 
 $stmt = $pdo->query('SELECT id, username, avatar_path, is_admin FROM users LIMIT 10');

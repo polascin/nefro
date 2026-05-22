@@ -1,4 +1,9 @@
 <?php
+require_once 'config_loader.php';
+if (!isAppLocalDev()) {
+    http_response_code(403);
+    exit('Prístup odmietnutý. Tento súbor je dostupný len v lokálnom vývojovom prostredí.');
+}
 session_start();
 require_once 'db_config.php';
 

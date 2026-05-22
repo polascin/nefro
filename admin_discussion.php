@@ -164,13 +164,15 @@ try {
 $csrfToken = generateCsrfToken();
 
 // ── Pomocná funkcia — skrátenie textu ─────────────────────────────────────────
-function truncatePost(string $text, int $max = 200): string
-{
-    $text = trim($text);
-    if (mb_strlen($text) <= $max) {
-        return $text;
+if (!function_exists('truncatePost')) {
+    function truncatePost(string $text, int $max = 200): string
+    {
+        $text = trim($text);
+        if (mb_strlen($text) <= $max) {
+            return $text;
+        }
+        return mb_substr($text, 0, $max) . '…';
     }
-    return mb_substr($text, 0, $max) . '…';
 }
 ?>
 <!DOCTYPE html>
