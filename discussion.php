@@ -212,11 +212,10 @@ function discAvatarSrc(array $row): string
             medicínskej komunity. Diskusia je určená výhradne pre registrovaných a prihlásených členov.
           </p>
           <p class="disc-welcome__rules">
-            Hoci má určite anonymita svoje miesto v prípadoch nespravodlivého prenasledovania
-            najrozličnejšieho druhu, takým prípadom nie je bezbrehé ventilovanie svojej frustrácie
-            a najrozličnejších patologických porúch štruktúry vlastnej osobnosti. Z uvedeného dôvodu,
-            aj keď čisto technicky sú viac-menej možné, nie sú anonymné príspevky v&nbsp;tejto
-            diskusii vítané.
+            Hoci anonymita má svoje opodstatnenie tam, kde hrozí nespravodlivé prenasledovanie,
+            táto diskusia nie je určená na nekontrolované ventilovanie frustrácií alebo osobných
+            patologických prejavov. Preto, aj keď technicky anonymné príspevky umožňujeme,
+            v&nbsp;tejto diskusii nie sú vítané.
           </p>
         </div>
 
