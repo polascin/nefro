@@ -410,9 +410,9 @@ try {
 
     // ── Diskusia — vlákna príspevkov prihlásených používateľov ──────────
     $discussionPostsSql = "CREATE TABLE IF NOT EXISTS discussion_posts (
-        id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-        parent_id INT UNSIGNED NULL DEFAULT NULL COMMENT 'NULL = vrchný príspevok, inak odpoveď',
-        user_id INT UNSIGNED NOT NULL,
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        parent_id INT NULL DEFAULT NULL COMMENT 'NULL = vrchný príspevok, inak odpoveď',
+        user_id INT NOT NULL,
         content TEXT NOT NULL,
         is_deleted TINYINT(1) NOT NULL DEFAULT 0,
         created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
