@@ -408,6 +408,24 @@ try {
     $pdo->exec($calculatorResultsSql);
     echo "Tabuľka 'calculator_results' bola úspešne vytvorená alebo už existuje.\n";
 
+    // ── Diskusia — vlákna príspevkov prihlásených používateľov ──────────
+    $discussionPostsSql = "CREATE TABLE IF NOT EXISTS discussion_posts (
+        id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+        parent_id INT UNSIGNED NULL DEFAULT NULL COMMENT 'NULL = vrchný príspevok, inak odpoveď',
+        user_id INT UNSIGNED NOT NULL,
+        content TEXT NOT NULL,
+        is_deleted TINYINT(1) NOT NULL DEFAULT 0,
+        created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        updated_at DATETIME NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+        INDEX idx_disc_parent (parent_id),
+        INDEX idx_disc_user (user_id),
+        INDEX idx_disc_created (created_at),
+        CONSTRAINT fk_disc_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
+        CONSTRAINT fk_disc_parent FOREIGN KEY (parent_id) REFERENCES discussion_posts(id) ON DELETE CASCADE
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";
+    $pdo->exec($discussionPostsSql);
+    echo "Tabuľka 'discussion_posts' bola úspešne vytvorená alebo už existuje.\n";
+
     // ── Číselník zdravotných poisťovní SR ────────────────────────────────
     $insuranceSql = "CREATE TABLE IF NOT EXISTS insurance_companies (
         id SMALLINT AUTO_INCREMENT PRIMARY KEY,

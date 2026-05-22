@@ -4853,3 +4853,381 @@ mark.search-hl {
         padding: 0.4rem 0.8rem;
     }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   DISKUSIA — discussion.php
+   ═══════════════════════════════════════════════════════════════ */
+
+.disc-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 0 3rem;
+}
+
+/* Uvítacia správa */
+.disc-welcome {
+    background: var(--primary-gradient);
+    color: #fff;
+    border-radius: 12px;
+    padding: 2rem 2rem 1.75rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-md);
+}
+
+.disc-welcome__icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.disc-welcome__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 0.75rem;
+    color: #fff;
+}
+
+.disc-welcome__text {
+    font-size: 1rem;
+    margin: 0 0 0.75rem;
+    opacity: 0.95;
+    line-height: 1.6;
+}
+
+.disc-welcome__rules {
+    font-size: 0.875rem;
+    opacity: 0.8;
+    margin: 0;
+    line-height: 1.5;
+    border-top: 1px solid rgba(255,255,255,0.25);
+    padding-top: 0.75rem;
+}
+
+/* Flash/chybové hlášky */
+.disc-alert {
+    margin-bottom: 1.25rem;
+    border-radius: 8px;
+}
+
+/* Výzva na prihlásenie */
+.disc-login-prompt {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 2rem;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.disc-login-prompt a {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.disc-login-prompt a:hover {
+    text-decoration: underline;
+}
+
+/* Formulár nového príspevku */
+.disc-new-post {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.disc-new-post__title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 1rem;
+    color: var(--text-primary);
+}
+
+/* Formuláre */
+.disc-form__field {
+    margin-bottom: 0.75rem;
+}
+
+.disc-form__label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: 0.4rem;
+}
+
+.disc-form__textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    color: var(--text-primary);
+    background: var(--surface-color);
+    resize: vertical;
+    transition: var(--transition-fast);
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+.disc-form__textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.15);
+}
+
+.disc-form__textarea--reply {
+    min-height: 80px;
+}
+
+.disc-form__counter {
+    font-size: 0.8rem;
+    color: var(--text-tertiary);
+    text-align: right;
+    margin-top: 0.3rem;
+    transition: color 0.15s;
+}
+
+.disc-form__counter--warn { color: #d97706; }
+.disc-form__counter--over { color: var(--error-color); font-weight: 600; }
+
+.disc-form__actions {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    margin-top: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.disc-form__submit {
+    padding: 0.55rem 1.4rem;
+    font-size: 0.9rem;
+}
+
+/* Sekcia príspevkov */
+.disc-posts {
+    margin-top: 1rem;
+}
+
+.disc-posts__heading {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+}
+
+.disc-posts__count {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: var(--text-tertiary);
+}
+
+.disc-empty {
+    color: var(--text-tertiary);
+    font-size: 0.95rem;
+    padding: 1.5rem;
+    text-align: center;
+    background: var(--bg-secondary);
+    border-radius: 10px;
+}
+
+/* Zoznam príspevkov */
+.disc-post-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+/* Jednotlivý príspevok */
+.disc-post {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem 1rem;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow 0.2s;
+}
+
+.disc-post:target {
+    box-shadow: 0 0 0 3px var(--primary-color), var(--shadow-md);
+}
+
+/* Hlavička príspevku */
+.disc-post__header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.85rem;
+    flex-wrap: wrap;
+}
+
+.disc-post__avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    border: 2px solid var(--border-color);
+    background: var(--bg-secondary);
+}
+
+.disc-post__avatar--sm {
+    width: 30px;
+    height: 30px;
+}
+
+.disc-post__meta {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+
+.disc-post__author {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.disc-post__date {
+    font-size: 0.78rem;
+    color: var(--text-tertiary);
+}
+
+.disc-post__permalink {
+    margin-left: auto;
+    font-size: 0.85rem;
+    color: var(--text-tertiary);
+    text-decoration: none;
+    opacity: 0.4;
+    flex-shrink: 0;
+    padding: 0.1rem 0.3rem;
+    border-radius: 4px;
+    transition: opacity 0.15s;
+}
+
+.disc-post__permalink:hover,
+.disc-post:hover .disc-post__permalink {
+    opacity: 1;
+    color: var(--primary-color);
+}
+
+/* Obsah príspevku */
+.disc-post__body {
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    line-height: 1.65;
+    word-break: break-word;
+    white-space: pre-wrap;
+    white-space: pre-line;
+    margin-bottom: 0.75rem;
+}
+
+/* Odpovede */
+.disc-replies {
+    margin-top: 0.75rem;
+    margin-left: 1.5rem;
+    border-left: 3px solid var(--primary-light);
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.disc-reply {
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    padding: 0.85rem 1rem 0.75rem;
+}
+
+.disc-reply:target {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+/* Sekcia odpovede */
+.disc-reply-section {
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.disc-reply-toggle {
+    background: none;
+    border: 1px solid var(--btn-outline-border);
+    border-radius: 6px;
+    padding: 0.35rem 0.9rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 500;
+    transition: var(--transition-fast);
+}
+
+.disc-reply-toggle:hover {
+    background: var(--btn-outline-hover-bg);
+    border-color: var(--btn-outline-hover-border);
+    color: var(--primary-color);
+}
+
+.disc-reply-form-wrap {
+    margin-top: 0.85rem;
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+/* Responzivita */
+@media (max-width: 600px) {
+    .disc-welcome {
+        padding: 1.5rem 1.25rem 1.25rem;
+    }
+
+    .disc-welcome__title {
+        font-size: 1.25rem;
+    }
+
+    .disc-new-post,
+    .disc-post {
+        padding: 1rem 1.1rem 0.9rem;
+    }
+
+    .disc-replies {
+        margin-left: 0.75rem;
+        padding-left: 0.75rem;
+    }
+
+    .disc-form__actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .disc-form__submit {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+[data-theme="dark"] .disc-reply-form-wrap {
+    background: rgba(255,255,255,0.04);
+}
+
+[data-theme="dark"] .disc-reply {
+    background: rgba(255,255,255,0.04);
+}

@@ -34,6 +34,7 @@ if (!function_exists('_navA')) {
             <li><?= _navA('calculators.php', 'Kalkulačky', $_navCalcActive) ?></li>
             <li><?= _navA('search.php', 'Vyhľadávanie', $_navCurrent === 'search.php') ?></li>
             <?php if (function_exists('isLoggedIn') && isLoggedIn()): ?>
+                <li><?= _navA('discussion.php', 'Diskusia', $_navCurrent === 'discussion.php') ?></li>
                 <li><?= _navA('profile.php', 'Môj profil', $_navCurrent === 'profile.php') ?></li>
                 <?php if (function_exists('isAdmin') && isAdmin()): ?>
                     <li><?= _navA('admin.php', 'Administrácia', $_navCurrent === 'admin.php') ?></li>
