@@ -88,6 +88,11 @@ $profileLink = $currentUser ? 'profile.php' : 'login.php';
             <a href="login.php" class="header-profile__link header-profile__link--guest">
                 <div class="header-profile__name"><?= $displayName ?></div>
             </a>
+            <?php if (basename((string) ($_SERVER['PHP_SELF'] ?? '')) === 'discussion.php'): ?>
+                <div class="header-profile__guest-note">
+                    Diskusia je prístupná len pre registrovaných a prihlásených používateľov.
+                </div>
+            <?php endif; ?>
         <?php endif; ?>
     </div>
     <a href="<?= $profileLink ?>" class="header-profile__avatar-wrapper">

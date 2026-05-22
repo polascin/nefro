@@ -2327,6 +2327,13 @@ input:disabled + .slider:before {
     color: var(--primary-color);
 }
 
+.header-profile__guest-note {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+    margin-top: 0.4rem;
+}
+
 .header-profile__avatar-wrapper {
     display: block;
     line-height: 0;
