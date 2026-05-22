@@ -753,6 +753,7 @@ $pageTimeZone = date("T") . " (" . date_default_timezone_get() . ")";
   <script src="ui-preferences-fallback.js?v=20260511-1&cb=<?= filemtime(
       "ui-preferences-fallback.js",
   ) ?>" defer></script>
+  <script src="nefro-ui.js?v=<?= filemtime('nefro-ui.js') ?>" defer></script>
 </head>
 <body>
   <?php

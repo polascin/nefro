@@ -9,9 +9,9 @@ $actionResult = null;
 $actionError  = null;
 
 // ── Stránkovanie a filtre ─────────────────────────────────────────────────────
-$perPage      = 50;
-$currentPage  = max(1, (int) ($_GET['page'] ?? 1));
-$offset       = ($currentPage - 1) * $perPage;
+$perPage     = 50;
+$currentPage = max(1, (int) ($_GET['page'] ?? 1));
+// $offset sa vypočíta definitívne až po orezaní $currentPage na $totalPages
 
 $allowedFilters = ['all', 'visible', 'hidden', 'deleted', 'pinned'];
 $filter = strtolower(trim((string) ($_GET['filter'] ?? 'all')));
@@ -108,8 +108,9 @@ try {
         "SELECT COUNT(*) FROM discussion_posts dp WHERE $whereClause"
     );
     $totalPosts = (int) $countStmt->fetchColumn();
-    $totalPages = max(1, (int) ceil($totalPosts / $perPage));
+    $totalPages  = max(1, (int) ceil($totalPosts / $perPage));
     $currentPage = min($currentPage, $totalPages);
+    $offset      = ($currentPage - 1) * $perPage;
 
     $stmt = $pdo->prepare(
         "SELECT dp.id, dp.parent_id, dp.content, dp.created_at, dp.updated_at,
@@ -185,6 +186,7 @@ function truncatePost(string $text, int $max = 200): string
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;900&display=swap" rel="stylesheet">
   <script src="ui-preferences.js?v=20260511-1&cb=<?= filemtime('ui-preferences.js') ?>" defer></script>
   <script src="ui-preferences-fallback.js?v=20260511-1&cb=<?= filemtime('ui-preferences-fallback.js') ?>" defer></script>
+  <script src="nefro-ui.js?v=<?= filemtime('nefro-ui.js') ?>" defer></script>
 </head>
 <body>
 <?php
