@@ -37,8 +37,7 @@ if (!function_exists('_navA')) {
                 <li><?= _navA('discussion.php', 'Diskusia', $_navCurrent === 'discussion.php') ?></li>
                 <li><?= _navA('profile.php', 'Môj profil', $_navCurrent === 'profile.php') ?></li>
                 <?php if (function_exists('isAdmin') && isAdmin()): ?>
-                    <li><?= _navA('admin.php', 'Administrácia', $_navCurrent === 'admin.php') ?></li>
-                    <li><?= _navA('admin_articles.php', 'Správa článkov', $_navCurrent === 'admin_articles.php') ?></li>
+                    <li><?= _navA('admin.php', 'Administrácia', in_array($_navCurrent, ['admin.php', 'admin_articles.php', 'admin_discussion.php'], true)) ?></li>
                 <?php endif; ?>
                 <li>
                     <form action="logout.php" method="post" class="nav-logout-form">
