@@ -20,7 +20,7 @@ $articles = [];
 
 $articles[] = [
     'title'        => 'Strava, tuky a kardiovaskulárne riziko pri chronickom ochorení obličiek (CKD): čo dáva zmysel v praxi',
-    'slug'         => 'strava-tuky-kardiovaskularné-riziko-ckd-co-dava-zmysel-praxi',
+    'slug'         => 'strava-tuky-kardiovaskularne-riziko-ckd-co-dava-zmysel-praxi',
     'author'       => 'Dr. Ľubomír Polaščín',
     'published_at' => '2026-05-24',
     'is_top'       => 0,
