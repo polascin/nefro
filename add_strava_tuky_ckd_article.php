@@ -71,7 +71,7 @@ $articles[] = [
 
 <ul>
   <li>finančná dostupnosť jedla,</li>
-  <li>udržanie nekajúcnosti od fajčenia alebo abstinencie od alkoholu,</li>
+  <li>udržanie zdržanlivosti od fajčenia alebo abstinencie od alkoholu,</li>
   <li>konzistentnejšia kontrola glykémie,</li>
   <li>alebo proste reálne nastavenie zmeny, ktorú človek vie dlhodobo udržať.</li>
 </ul>
