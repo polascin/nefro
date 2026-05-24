@@ -288,8 +288,7 @@ if ($article) {
           <a href="index.php" class="btn-primary">← Späť na úvodnú stránku</a>
         </article>
 
-       /* Dôverované HTML — správuje iba admin */<?php
-          /* Dôverované HTML — správuje iba admin */
+      <?php /* Dôverované HTML — správuje iba admin */
           else:
           $pubDate = (string) $article["published_at"];
           $pubDateIso = htmlspecialchars(substr($pubDate, 0, 10));
