@@ -7,15 +7,14 @@ if (file_exists($deployInfoFile)) {
 
 // DEPLOY_TIME má prednosť pred filemtime nastavovaným jednotlivými stránkami,
 // okrem stránok, ktoré explicitne žiadajú vlastný dátum (napr. article.php).
+$pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
 if (!isset($usePageLastUpdated) && defined('DEPLOY_TIME')) {
     $pageLastUpdated = DEPLOY_TIME;
-    $pageTimeZone    = date('T') . ' (' . date_default_timezone_get() . ')';
 } elseif (!isset($pageLastUpdated)) {
     $currentFile     = $_SERVER['SCRIPT_FILENAME'] ?? '';
     $pageLastUpdated = ($currentFile !== '' && file_exists($currentFile))
         ? date('d.m.Y H:i', filemtime($currentFile))
         : date('d.m.Y H:i');
-    $pageTimeZone    = date('T') . ' (' . date_default_timezone_get() . ')';
 }
 
 $isHomePage = basename($_SERVER['PHP_SELF']) === 'index.php';
@@ -72,7 +71,7 @@ $swatchBeat = '@' . number_format($beatValue, 2, '.', '');
       <div class="container site-footer__bottom-inner">
         <span>&copy; <?= date('Y') ?> Ľubomír Polaščín</span>
         <span class="site-footer__bottom-sep" aria-hidden="true">·</span>
-        <a href="#cookie-settings" role="button" class="cookie-settings-trigger site-footer__link" aria-haspopup="dialog" aria-controls="cookieConsentModal">Nastavenia Cookies</a>
+        <a href="#cookie-settings" role="button" class="cookie-settings-trigger site-footer__link" aria-haspopup="dialog" aria-controls="cookieConsentModal">Nastavenia cookies</a>
         <span class="site-footer__bottom-sep" aria-hidden="true">·</span>
         <span class="site-footer__updated">Aktualizované: <a href="https://time.is/" target="_blank" rel="noopener noreferrer" class="site-footer__link"><?= htmlspecialchars($pageLastUpdated, ENT_QUOTES, 'UTF-8') ?> (<?= htmlspecialchars($pageTimeZone, ENT_QUOTES, 'UTF-8') ?>)</a></span>
         <span class="site-footer__bottom-sep" aria-hidden="true">·</span>

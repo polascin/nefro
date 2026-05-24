@@ -133,7 +133,7 @@ $total = count($articles);
 if (php_sapi_name() === 'cli') {
     echo "\n";
     echo "──────────────────────────────────────────────────────\n";
-    echo "Migrácia clanku: Wellness peptidy – bezpecnost a ucinnost\n";
+    echo "Migrácia článku: Wellness peptidy – bezpečnosť a účinnosť\n";
     echo "──────────────────────────────────────────────────────\n";
     echo "Výsledok: $inserted z $total článkov bolo vložených.\n";
     echo "Preskočení (slug už existuje): $skipped\n";

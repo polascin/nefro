@@ -28,7 +28,7 @@ $articles[] = [
     'content'      => <<<'HTML'
 <p>Obličky pracujú nepretržite: filtrujú odpadové látky, pomáhajú udržiavať rovnováhu tekutín a elektrolytov a súvisia aj s reguláciou krvného tlaku. Pri chronickom ochorení obličiek (CKD) môže mať výživa veľký vplyv na to, ako sa cítime a ako sa darí chrániť ich funkciu.</p>
 
-<p>Dobrou správou je, že strava bohatá na rastlinné potraviny a antioxidanty môže podporiť zdravie obličiek. Zároveň ale platí, že pri CKD je dôležité všímať si konkrétne nutrienty, najmä sodík, draslík, fosfor a hydratáciu. Presné hodnoty pre vás majú vychádzať z odporúčaní lekára alebo dietológa.</p>
+<p>Dobrou správou je, že strava bohatá na rastlinné potraviny a antioxidanty môže podporiť zdravie obličiek. Zároveň však platí, že pri CKD je dôležité všímať si konkrétne nutrienty, najmä sodík, draslík, fosfor a hydratáciu. Presné hodnoty pre vás majú vychádzať z odporúčaní lekára alebo dietológa.</p>
 
 <p>Nižšie je 5 druhov zeleniny, ktoré dietológovia odporúčajú zaradiť častejšie.</p>
 

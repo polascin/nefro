@@ -61,7 +61,7 @@ $articles[] = [
 <p>V malej kohorte <strong>35 účastníkov</strong> test dokázal:</p>
 
 <ul>
-  <li>odlíšiť pacientov s fibrózou obličiek od zdravých kontrol s <strong>84% senzitivitou</strong> a <strong>94% špecifickosťou</strong>,</li>
+  <li>odlíšiť pacientov s fibrózou obličiek od zdravých kontrol s <strong>84% senzitivitou</strong> a <strong>94% špecificitou</strong>,</li>
   <li>rozlíšiť <strong>mierne vs. závažné prípady</strong> fibrózy, pričom to bolo potvrdené aj histologickým hodnotením.</li>
 </ul>
 

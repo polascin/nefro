@@ -158,11 +158,11 @@ $total = count($articles);
 if (php_sapi_name() === 'cli') {
     echo "\n";
     echo "──────────────────────────────────────────────────────\n";
-    echo "Migracia clanku: Preeklampsia a oblicky\n";
+    echo "Migrácia článku: Preeklampsia a obličky\n";
     echo "──────────────────────────────────────────────────────\n";
-    echo "Vysledok: $inserted z $total clankov bolo vlozenych.\n";
-    echo "Preskoceni (slug uz existuje): $skipped\n";
-    echo "Zara dených do fronty aviz:    $queuedTotal\n";
+    echo "Výsledok: $inserted z $total článkov bolo vložených.\n";
+    echo "Preskočení (slug už existuje): $skipped\n";
+    echo "Zaradených do fronty avíz:     $queuedTotal\n";
     if (!empty($errors)) {
         echo "\nChyby:\n";
         foreach ($errors as $err) {
