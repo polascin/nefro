@@ -513,12 +513,14 @@ if (!function_exists('processArticleNewsletterQueue')) {
                 $fallbackFrom = $cfg['from_email'] !== ''
                     ? $cfg['from_email']
                     : 'no-reply@nefro.polascin.net';
+                $fallbackFromName = mb_encode_mimeheader($cfg['from_name'] ?: 'Nefro-projekt', 'UTF-8', 'B', "\r\n ");
+                $fallbackSubject = mb_encode_mimeheader($subject, 'UTF-8', 'B', "\r\n ");
                 $headers = [
                     'MIME-Version: 1.0',
                     'Content-Type: text/html; charset=UTF-8',
-                    'From: ' . ($cfg['from_name'] ?: 'Nefro-projekt') . ' <' . $fallbackFrom . '>',
+                    'From: ' . $fallbackFromName . ' <' . $fallbackFrom . '>',
                 ];
-                $sent = @mail($recipientEmail, $subject, $message, implode("\r\n", $headers));
+                $sent = @mail($recipientEmail, $fallbackSubject, $message, implode("\r\n", $headers));
             }
 
             if ($sent) {

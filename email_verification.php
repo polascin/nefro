@@ -205,8 +205,9 @@ function sendViaSmtp(string $toEmail, string $subject, string $messageBody, arra
     // mb_encode_mimeheader správne rozdelí dlhý predmet na viacero RFC 2047 encoded words
     // (max. 75 znakov každý) — jednoduchý base64_encode bez delenia lámal diakritiku.
     $encodedSubject = mb_encode_mimeheader($subject, 'UTF-8', 'B', "\r\n ");
+    $encodedFromName = mb_encode_mimeheader($cfg['from_name'], 'UTF-8', 'B', "\r\n ");
     $headers = [
-        'From: ' . $cfg['from_name'] . ' <' . $cfg['from_email'] . '>',
+        'From: ' . $encodedFromName . ' <' . $cfg['from_email'] . '>',
         'To: <' . $toEmail . '>',
         'Subject: ' . $encodedSubject,
         'MIME-Version: 1.0',
@@ -269,13 +270,6 @@ function sendVerificationEmail(string $toEmail, string $username, int $userId, s
 
     $subject = 'Overenie e-mailovej adresy - Nefro-projekt Slovensko';
     $displayName = trim($username) !== '' ? $username : $toEmail;
-    $message = "Dobrý deň, " . $displayName . "\n\n"
-        . "ďakujeme za registráciu v Nefro-projekt Slovensko.\n"
-        . "Pre aktiváciu účtu overte svoju e-mailovú adresu kliknutím na tento odkaz:\n\n"
-        . $verifyUrl . "\n\n"
-        . "Platnosť odkazu je 24 hodín.\n"
-        . "Ak ste sa neregistrovali, tento e-mail ignorujte.\n\n"
-        . "Nefro-projekt Slovensko";
 
     $htmlBody = '<p style="margin:0 0 16px;">Dobrý deň, ' . escapeEmailHtml($displayName) . ',</p>'
         . '<p style="margin:0 0 16px;">ďakujeme za registráciu v Nefro-projekt Slovensko.</p>'
@@ -299,13 +293,6 @@ function sendPasswordResetEmail(string $toEmail, string $username, string $rawTo
 
     $subject = 'Obnova hesla - Nefro-projekt Slovensko';
     $displayName = trim($username) !== '' ? $username : $toEmail;
-    $message = "Dobrý deň, " . $displayName . "\n\n"
-        . "prijali sme žiadosť o obnovenie hesla pre váš účet v Nefro-projekt Slovensko.\n"
-        . "Nové heslo nastavíte kliknutím na tento odkaz:\n\n"
-        . $resetUrl . "\n\n"
-        . "Platnosť odkazu je 60 minút.\n"
-        . "Ak ste o obnovu hesla nežiadali, tento e-mail ignorujte.\n\n"
-        . "Nefro-projekt Slovensko";
 
     $htmlBody = '<p style="margin:0 0 16px;">Dobrý deň, ' . escapeEmailHtml($displayName) . ',</p>'
         . '<p style="margin:0 0 16px;">Prijali sme žiadosť o obnovenie hesla pre váš účet v Nefro-projekt Slovensko.</p>'
