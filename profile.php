@@ -604,7 +604,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && ($_POST['action'] ?? '') !=
                     $deleteAvatarFile($newUploadedAvatarPath);
                 }
 
-                if ($e->getCode() == 23000) {
+                if ((string) $e->getCode() === '23000') {
                     $errors[] = "Toto používateľské meno už niekto používa.";
                 } else {
                     $errors[] = "Chyba pri ukladaní do databázy.";
@@ -619,7 +619,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && ($_POST['action'] ?? '') !=
 <html lang="sk">
 <head>
   <?php
-  $pageTitle = 'Profil používateľa - Nefro-projekt Slovensko';
+  $pageTitle = 'Profil používateľa | Nefro-projekt Slovensko';
   $robotsMeta = 'noindex, nofollow';
   $canonicalUrl = 'https://nefro.polascin.net/profile.php';
   include 'head_meta.php';

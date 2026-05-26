@@ -8,7 +8,7 @@ function generateMobileVerificationCode(): array {
 
     return [
         'code' => $code,
-        'code_hash' => hash('sha256', $code),
+        'code_hash' => password_hash($code, PASSWORD_DEFAULT),
         'expires_at' => date('Y-m-d H:i:s', time() + 600), // 10 min
     ];
 }
@@ -77,8 +77,7 @@ function verifyMobileCodeRecord(array $userRow, string $providedCode): string {
         return 'invalid';
     }
 
-    $providedHash = hash('sha256', $providedCode);
-    if (!hash_equals((string) $userRow['mobile_verification_code_hash'], $providedHash)) {
+    if (!password_verify($providedCode, (string) $userRow['mobile_verification_code_hash'])) {
         return 'invalid';
     }
 

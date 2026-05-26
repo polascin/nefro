@@ -39,11 +39,6 @@ $katexAutoRender = $katexBase . '/contrib/auto-render.min.js';
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 
-<!-- Cache Control -->
-<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Expires" content="0">
-
 <!-- SEO Metadata -->
 <title><?= htmlspecialchars($pageTitle, ENT_QUOTES) ?></title>
 <meta name="description" content="<?= htmlspecialchars($seoDescription, ENT_QUOTES) ?>">

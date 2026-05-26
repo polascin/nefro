@@ -11,8 +11,6 @@ $pageUrl = $baseUrl . "calculators.php";
 $pageTitle = "Nefrologické kalkulačky | " . $siteName;
 $pageDesc =
     "Klinické kalkulačky pre nefrológiu podľa KDIGO 2024: eGFR (CKD-EPI 2021), KDIGO G/A riziko, KFRE predikcia dialýzy, CKD-PC Grams 2022, IgAN Prediction Tool a Mayo ADPKD klasifikácia. Pre zdravotníckych pracovníkov na Slovensku.";
-$ogImage = $baseUrl . "img/nps-logo.gif";
-
 $schemaWebApp = [
     "@context" => "https://schema.org",
     "@type" => ["WebApplication", "MedicalWebPage"],
@@ -31,7 +29,7 @@ $schemaWebApp = [
         "@type" => "MedicalOrganization",
         "name" => $siteName,
         "url" => $baseUrl,
-        "logo" => ["@type" => "ImageObject", "url" => $ogImage],
+        "logo" => ["@type" => "ImageObject", "url" => $baseUrl . "img/nps-logo.png"],
     ],
     "hasPart" => [
         [

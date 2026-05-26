@@ -58,9 +58,8 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
             } else {
                 $secret = generateTotpSecret();
                 $_SESSION['2fa_setup_secret'] = $secret;
-                $pendingSecret = $secret;
-                // Obnov premennú — nový kľúč bol práve vygenerovaný
-                $successes[] = "Tajný kľúč bol vygenerovaný. Pridajte ho do svojej autentifikačnej aplikácie a potom potvrďte prvý kód.";
+                header("Location: 2fa_setup.php");
+                exit;
             }
         }
 
@@ -92,12 +91,9 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                         // Záložné kódy zobrazíme jednoraz — uložíme do session, po načítaní stránky ich zobrazíme a vymažeme
                         $_SESSION['2fa_new_backup_codes'] = $backup['plain'];
                         $newPlainBackupCodes = $backup['plain'];
-                        $successes[] = "Dvojfaktorové overenie bolo úspešne aktivované!";
-
-                        // Obnov lokálne premenné
-                        $user['totp_enabled']    = 1;
-                        $user['totp_backup_codes'] = json_encode($backup['hashed']);
-                        $backupCodes = $backup['hashed'];
+                        setFlashMessage('success', 'Dvojfaktorové overenie bolo úspešne aktivované!');
+                        header("Location: 2fa_setup.php");
+                        exit;
                     } catch (\PDOException $e) {
                         error_log("2fa_setup: enable_confirm DB chyba: " . $e->getMessage());
                         $errors[] = "Nastala databázová chyba. Skúste to znova neskôr.";
@@ -121,14 +117,10 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                         $pdo->prepare(
                             "UPDATE users SET totp_secret = NULL, totp_enabled = 0, totp_backup_codes = NULL WHERE id = :id"
                         )->execute(['id' => $userId]);
-                        $totpEnabled   = false;
-                        $backupCodes   = [];
-                        $pendingSecret = null;
                         unset($_SESSION['2fa_setup_secret']);
-                        $successes[] = "Dvojfaktorové overenie bolo deaktivované.";
-                        $user['totp_enabled']    = 0;
-                        $user['totp_secret']     = null;
-                        $user['totp_backup_codes'] = null;
+                        setFlashMessage('success', 'Dvojfaktorové overenie bolo deaktivované.');
+                        header("Location: 2fa_setup.php");
+                        exit;
                     } catch (\PDOException $e) {
                         error_log("2fa_setup: disable DB chyba: " . $e->getMessage());
                         $errors[] = "Nastala databázová chyba. Skúste to znova neskôr.";
@@ -156,10 +148,10 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                             'codes' => json_encode($backup['hashed'], JSON_UNESCAPED_UNICODE),
                             'id'    => $userId,
                         ]);
-                        $backupCodes = $backup['hashed'];
                         $_SESSION['2fa_new_backup_codes'] = $backup['plain'];
-                        $newPlainBackupCodes = $backup['plain'];
-                        $successes[] = "Záložné kódy boli úspešne obnovené.";
+                        setFlashMessage('success', 'Záložné kódy boli úspešne obnovené.');
+                        header("Location: 2fa_setup.php");
+                        exit;
                     } catch (\PDOException $e) {
                         error_log("2fa_setup: regenerate_backup DB chyba: " . $e->getMessage());
                         $errors[] = "Nastala databázová chyba. Skúste to znova neskôr.";
@@ -178,9 +170,10 @@ $totpUri = $pendingSecret ? getTotpUri($pendingSecret, (string) ($user['email'] 
 <html lang="sk">
 <head>
   <?php
-  $pageTitle  = 'Dvojfaktorové overenie (2FA) | Nefro-projekt Slovensko';
-  $robotsMeta = 'noindex, nofollow';
-  $canonicalUrl = 'https://nefro.polascin.net/2fa_setup.php';
+  $pageTitle      = 'Dvojfaktorové overenie (2FA) | Nefro-projekt Slovensko';
+  $seoDescription = 'Správa dvojfaktorového overenia (2FA) — aktivácia, deaktivácia a obnova záložných kódov.';
+  $robotsMeta     = 'noindex, nofollow';
+  $canonicalUrl   = 'https://nefro.polascin.net/2fa_setup.php';
   include 'head_meta.php';
   ?>
 </head>
@@ -201,16 +194,6 @@ $totpUri = $pendingSecret ? getTotpUri($pendingSecret, (string) ($user['email'] 
           <ul>
             <?php foreach ($errors as $err): ?>
               <li><?= htmlspecialchars($err) ?></li>
-            <?php endforeach; ?>
-          </ul>
-        </div>
-      <?php endif; ?>
-
-      <?php if (!empty($successes)): ?>
-        <div class="alert alert-success">
-          <ul>
-            <?php foreach ($successes as $s): ?>
-              <li><?= htmlspecialchars($s) ?></li>
             <?php endforeach; ?>
           </ul>
         </div>

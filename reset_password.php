@@ -52,7 +52,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
         $newPasswordConfirm = $_POST['new_password_confirm'] ?? '';
 
         if ($resetRequest === null) {
-            $errors[] = 'Odkaz na obnovenie hesla je neplatný alebo už expiroval.';
+            $errors[] = 'Odkaz na obnovenie hesla je neplatný alebo jeho platnosť vypršala.';
         }
 
         if (strlen($newPassword) < 8 || strlen($newPassword) > 1024 || !preg_match('/[A-Z]/', $newPassword) || !preg_match('/[a-z]/', $newPassword) || !preg_match('/[0-9]/', $newPassword)) {
@@ -124,7 +124,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 
             <?php if ($resetRequest === null): ?>
                 <div class="alert alert-error">
-                    <p>Odkaz na obnovenie hesla je neplatný alebo už expiroval.</p>
+                    <p>Odkaz na obnovenie hesla je neplatný alebo jeho platnosť vypršala.</p>
                 </div>
                 <div class="auth-links">
                     <p><a href="forgot_password.php">Požiadať o nový odkaz</a></p>

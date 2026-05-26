@@ -85,8 +85,6 @@ $pageTitle =
     "Mayo ADPKD klasifikácia — rýchlosť progresie ADPKD | " . $siteName;
 $pageDesc =
     "Mayo Clinic ADPKD klasifikácia (Irazabal 2015) — zaradenie do tried 1A–1E podľa výškou adjustovaného celkového objemu obličiek (HtTKV) a veku. Pre výber tolvaptanu a sledovanie ADPKD.";
-$ogImage = $baseUrl . "img/nps-logo.gif";
-
 $errors = [];
 $messages = [];
 $calculated = null;

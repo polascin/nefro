@@ -164,9 +164,10 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                             if ((int) ($user['totp_enabled'] ?? 0) === 1 && !empty($user['totp_secret'])) {
                                 regenerateSession();
                                 $_SESSION['2fa_pending'] = [
-                                    'user_id'  => $user['id'],
-                                    'expires'  => time() + 300, // 5 minút na zadanie kódu
-                                    'attempts' => 0,
+                                    'user_id'        => $user['id'],
+                                    'expires'        => time() + 300, // 5 minút na zadanie kódu
+                                    'attempts'       => 0,
+                                    'pwd_fingerprint' => substr(hash('sha256', (string) $user['password_hash']), 0, 16),
                                 ];
                                 header("Location: 2fa_verify.php");
                                 exit;

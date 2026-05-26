@@ -227,19 +227,13 @@ if ($article) {
               "@type" => "ListItem",
               "position" => 1,
               "name" => "Domov",
-              "item" => $baseUrl, // kanonická domovská URL
+              "item" => $baseUrl,
           ],
           [
               "@type" => "ListItem",
               "position" => 2,
-              "name" => "Články",
-              "item" => $baseUrl, // zoznam článkov = domovská stránka
-          ],
-          [
-              "@type" => "ListItem",
-              "position" => 3,
               "name" => $articleTitleRaw,
-              "item" => $canonicalUrlRaw, // RAW URL — nie HTML-escaped!
+              "item" => $canonicalUrlRaw,
           ],
       ],
   ];

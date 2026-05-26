@@ -55,6 +55,20 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
             exit;
         }
 
+        // Overenie pwd_fingerprint — detekuje zmenu hesla počas čakania na 2FA
+        if (empty($errors) && $user) {
+            $expectedFingerprint = $_SESSION['2fa_pending']['pwd_fingerprint'] ?? null;
+            if ($expectedFingerprint !== null) {
+                $actualFingerprint = substr(hash('sha256', (string) $user['password_hash']), 0, 16);
+                if (!hash_equals($expectedFingerprint, $actualFingerprint)) {
+                    unset($_SESSION['2fa_pending']);
+                    setFlashMessage('warning', 'Prihlásenie sa nepodarilo. Prihláste sa znova.');
+                    header("Location: login.php");
+                    exit;
+                }
+            }
+        }
+
         if (empty($errors)) {
             // IP rate limiting
             $ipBlocked = false;
@@ -124,7 +138,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     // Úspech — vyčisti rate limiter a dokončí login
                     try {
                         $pdo->prepare("DELETE FROM totp_attempts WHERE ip = :ip")->execute(['ip' => $clientIp]);
-                    } catch (\PDOException) { /* ignoruj */ }
+                    } catch (\PDOException $e) { error_log("2fa_verify: vyčistenie totp_attempts: " . $e->getMessage()); }
 
                     completeTwoFactorLogin($user);
 
@@ -186,7 +200,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
   <main class="container">
     <div class="auth-container">
       <h2>Dvojfaktorové overenie</h2>
-      <p class="auth-subtitle">Zadajte 6-ciferný kód z vašej autentifikačnej aplikácie, alebo jeden zo záložných kódov.</p>
+      <p class="auth-subtitle">Zadajte 6-ciferný kód z vašej autentifikačnej aplikácie alebo jeden zo záložných kódov.</p>
 
       <?php if (!empty($errors)): ?>
         <div class="alert alert-error">

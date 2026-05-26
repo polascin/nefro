@@ -53,19 +53,19 @@ function sendSecurityHeaders(): void {
 // Zabezpečené nastavenia relácie
 ini_set('session.cookie_httponly', 1);
 ini_set('session.use_only_cookies', 1);
-ini_set('session.gc_maxlifetime', 3600); // PHP GC vymaže neaktívne sessions po 1 hodine
+ini_set('session.gc_maxlifetime', (string) SESSION_IDLE_TIMEOUT); // PHP GC vymaže neaktívne sessions po SESSION_IDLE_TIMEOUT sekundách
 
 // Secure cookie zapíname iba pri HTTPS, inak sa na HTTP (lokálny vývoj) cookie neuloží.
 $isHttps = isRequestHttps();
 ini_set('session.cookie_secure', $isHttps ? '1' : '0');
 ini_set('session.cookie_samesite', 'Strict');
 
-// Priorita: projekt-lokální sessions > temp > default
+// Priorita: projektovo-lokálne sessions > temp > default
 $projectSessionPath = __DIR__ . DIRECTORY_SEPARATOR . 'private' . DIRECTORY_SEPARATOR . 'sessions';
 if ((is_dir($projectSessionPath) || @mkdir($projectSessionPath, 0755, true)) && is_writable($projectSessionPath)) {
     session_save_path($projectSessionPath);
 } else {
-    // Fallback na sys_get_temp_dir() ak projekt-lokální cesta zlyhá
+    // Fallback na sys_get_temp_dir() ak projektovo-lokálne cesta zlyhá
     $tempSessionPath = sys_get_temp_dir() . DIRECTORY_SEPARATOR . 'nefro_sessions';
     if ((is_dir($tempSessionPath) || @mkdir($tempSessionPath, 0755, true)) && is_writable($tempSessionPath)) {
         session_save_path($tempSessionPath);

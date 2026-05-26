@@ -15,7 +15,7 @@ function generateTotpSecret(): string
 }
 
 /**
- * Overí TOTP kód. Akceptuje ±1 časové okno (tolerancia hodín ~30 s).
+ * Overí TOTP kód. Akceptuje ±1 časové okno (tolerancia ±30 s).
  *
  * @param string $secret  Base32-kódovaný tajný kľúč
  * @param string $code    6-ciferný kód od používateľa
@@ -93,12 +93,14 @@ function verifyAndConsumeBackupCode(string $inputCode, array $hashedCodes): int
     if (!preg_match('/^[0-9A-F]{10}$/', $normalized)) {
         return -1;
     }
+    // Prejdeme celé pole bez predčasného ukončenia — zabraňuje timing útoku.
+    $matchIdx = -1;
     foreach ($hashedCodes as $i => $hash) {
-        if (password_verify($normalized, (string) $hash)) {
-            return (int) $i;
+        if (password_verify($normalized, (string) $hash) && $matchIdx === -1) {
+            $matchIdx = (int) $i;
         }
     }
-    return -1;
+    return $matchIdx;
 }
 
 // ── Interné funkcie ───────────────────────────────────────────────────────────

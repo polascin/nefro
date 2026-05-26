@@ -98,7 +98,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     $s3->execute(['days' => $retDays]);
                     $cntAvatar = $s3->rowCount();
 
-                    $actionResult = "Cleanup hotový: {$cntProfile} prof. záznamov, {$cntAvatar} avatar záznamov, {$cntFiles} súborov zmazaných (retenčná lehota: {$retDays} dní).";
+                    $actionResult = "Čistenie dokončené: {$cntProfile} prof. záznamov, {$cntAvatar} avatar záznamov, {$cntFiles} súborov zmazaných (retenčná lehota: {$retDays} dní).";
                 } catch (\PDOException $e) {
                     error_log('Cleanup error: ' . $e->getMessage());
                     $actionError = 'Chyba počas cleanup operácie.';

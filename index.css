@@ -1606,6 +1606,7 @@ input:disabled + .slider:before {
     gap: 6px;
     transition: var(--transition-fast);
     margin-top: 4px;
+    min-height: 44px;
 }
 
 .show-more-btn:hover {
@@ -2426,6 +2427,7 @@ input:disabled + .slider:before {
     cursor: pointer;
     margin: 2px 1px;
     transition: background 0.15s;
+    min-height: 32px;
 }
 
 .btn-admin-action:hover {
@@ -2759,7 +2761,7 @@ input:disabled + .slider:before {
 
 .calc-formula-content {
     padding: 0 14px 14px;
-    overflow-x: hidden;
+    overflow-x: auto;
     max-width: 100%;
     min-width: 0;
 }
@@ -4020,7 +4022,8 @@ input:disabled + .slider:before {
 
 /* Malé sekundárne tlačidlo */
 .btn-secondary-small {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     padding: 6px 14px;
     font-size: 0.82rem;
     font-weight: 600;
@@ -4030,6 +4033,7 @@ input:disabled + .slider:before {
     border-radius: 6px;
     text-decoration: none;
     cursor: pointer;
+    min-height: 44px;
     transition:
         background 0.2s,
         color 0.2s;
@@ -4315,8 +4319,8 @@ input:disabled + .slider:before {
     background: rgba(255, 255, 255, 0.18);
 }
 
-/* ── Hamburger navigácia (≤1024px) ──────────────────────── */
-@media (max-width: 1024px) {
+/* ── Hamburger navigácia (≤960px) ──────────────────────── */
+@media (max-width: 960px) {
     /* Hamburger tlačidlo */
     /* Kontajner — wrap umožní ul wrappovať pod button */
     .main-nav .container {
@@ -4877,6 +4881,10 @@ mark.search-hl {
     .quick-nav-calculators a {
         font-size: 0.85rem;
         padding: 0.4rem 0.8rem;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 

@@ -60,6 +60,9 @@ try {
         region VARCHAR(255),
         country VARCHAR(255),
         address_note TEXT,
+        totp_secret VARCHAR(32) NULL,
+        totp_enabled TINYINT(1) NOT NULL DEFAULT 0,
+        totp_backup_codes TEXT NULL,
         is_admin TINYINT(1) DEFAULT 0,
         is_active TINYINT(1) DEFAULT 1,
         newsletter_consent TINYINT(1) DEFAULT 0,
@@ -165,6 +168,17 @@ try {
         $cliOut("Migrácia: mobile_verify_fail_count + mobile_verify_locked_until pridané.\n");
     }
 
+    // ── Migrácia: TOTP 2FA stĺpce ────────────────────────────────────────────
+    $totpSecretStmt = $pdo->prepare("SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'users' AND COLUMN_NAME = 'totp_secret'");
+    $totpSecretStmt->execute();
+    if ((int) $totpSecretStmt->fetchColumn() === 0) {
+        $pdo->exec("ALTER TABLE users
+            ADD COLUMN totp_secret VARCHAR(32) NULL AFTER is_active,
+            ADD COLUMN totp_enabled TINYINT(1) NOT NULL DEFAULT 0 AFTER totp_secret,
+            ADD COLUMN totp_backup_codes TEXT NULL AFTER totp_enabled");
+        $cliOut("Migrácia: totp_secret, totp_enabled, totp_backup_codes pridané.\n");
+    }
+
     // Pri prvom zavedení stĺpca považujeme existujúce účty za overené,
     // aby sa neblokovali produkčné prístupy.
     if ($emailVerifiedAtAdded) {
@@ -206,6 +220,18 @@ try {
         INDEX idx_login_attempts_blocked (blocked_until)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";
     $pdo->exec($loginAttemptsSql);
+
+    $totpAttemptsSql = "CREATE TABLE IF NOT EXISTS totp_attempts (
+        ip VARCHAR(45) NOT NULL,
+        attempt_count INT NOT NULL DEFAULT 1,
+        first_attempt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        last_attempt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        blocked_until TIMESTAMP NULL DEFAULT NULL,
+        PRIMARY KEY (ip),
+        INDEX idx_totp_attempts_blocked (blocked_until)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";
+    $pdo->exec($totpAttemptsSql);
+    $cliOut("Tabuľka 'totp_attempts' bola úspešne vytvorená alebo už existuje.\n");
 
     $passwordResetsSql = "CREATE TABLE IF NOT EXISTS password_resets (
         id BIGINT AUTO_INCREMENT PRIMARY KEY,
@@ -474,7 +500,8 @@ try {
     $sortOrderColumnStmt->execute();
     if ((int) $sortOrderColumnStmt->fetchColumn() === 0) {
         $pdo->exec("ALTER TABLE articles ADD COLUMN sort_order INT NOT NULL DEFAULT 0");
-        $pdo->exec("SET @row_num := 0; UPDATE articles SET sort_order = (@row_num := @row_num + 1) ORDER BY published_at DESC, id DESC");
+        $pdo->exec("SET @row_num := 0");
+        $pdo->exec("UPDATE articles SET sort_order = (@row_num := @row_num + 1) ORDER BY published_at DESC, id DESC");
         $cliOut("Stĺpec 'sort_order' bol pridaný a inicializovaný.\n");
     }
 

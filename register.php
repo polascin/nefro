@@ -240,14 +240,17 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                         }
                     }
 
-                    // Spracovanie avatara
                     $avatarPath = null;
-                    if (isset($_FILES['avatar']) && $_FILES['avatar']['error'] === UPLOAD_ERR_OK) {
-                        $avatarUploadResult = processAvatarUpload($_FILES['avatar']);
-                        if (!empty($avatarUploadResult['error'])) {
-                            $errors[] = $avatarUploadResult['error'];
-                        } else {
-                            $avatarPath = $avatarUploadResult['path'];
+
+                    if (empty($errors)) {
+                        // Spracovanie avatara — až po overení ostatných polí, aby sme neprijímali súbory pri chybách formulára
+                        if (isset($_FILES['avatar']) && $_FILES['avatar']['error'] === UPLOAD_ERR_OK) {
+                            $avatarUploadResult = processAvatarUpload($_FILES['avatar']);
+                            if (!empty($avatarUploadResult['error'])) {
+                                $errors[] = $avatarUploadResult['error'];
+                            } else {
+                                $avatarPath = $avatarUploadResult['path'];
+                            }
                         }
                     }
 
