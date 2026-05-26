@@ -37,7 +37,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
         try {
             $stmt = $pdo->prepare(
                 "SELECT id, email, username, is_admin, is_active, email_verified_at,
-                        totp_secret, totp_enabled, totp_backup_codes
+                        totp_secret, totp_enabled, totp_backup_codes, password_hash
                  FROM users WHERE id = :id"
             );
             $stmt->execute(['id' => $pendingUserId]);
@@ -97,8 +97,8 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 $totpOk   = false;
                 $backupOk = false;
 
-                // Skús TOTP
-                if (verifyTotpCode((string) $user['totp_secret'], $inputCode)) {
+                // Skús TOTP (window=2 = tolerancia ±60 s pre prípadnú odchýlku hodín)
+                if (verifyTotpCode((string) $user['totp_secret'], $inputCode, 2)) {
                     $totpOk = true;
                 }
 
