@@ -73,20 +73,10 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
             // IP rate limiting
             $ipBlocked = false;
             try {
-                $pdo->prepare("DELETE FROM totp_attempts WHERE blocked_until IS NOT NULL AND blocked_until < DATE_SUB(NOW(), INTERVAL 1 DAY)")
-                    ->execute();
-                $laStmt = $pdo->prepare("SELECT attempt_count, blocked_until FROM totp_attempts WHERE ip = :ip");
-                $laStmt->execute(['ip' => $clientIp]);
-                $laRow = $laStmt->fetch();
-                if ($laRow && !empty($laRow['blocked_until'])) {
-                    $blockedUntilTs = strtotime((string) $laRow['blocked_until']);
-                    if ($blockedUntilTs !== false && $blockedUntilTs > time()) {
-                        $ipBlocked = true;
-                        $errors[]  = "Z bezpečnostných dôvodov bol prístup dočasne zablokovaný. Skúste to znova o 15 minút.";
-                    } else {
-                        $pdo->prepare("UPDATE totp_attempts SET blocked_until = NULL WHERE ip = :ip")
-                            ->execute(['ip' => $clientIp]);
-                    }
+                $blockedUntilTs = ipRateLimitBlockedUntil($pdo, 'totp_attempts', $clientIp);
+                if ($blockedUntilTs > 0) {
+                    $ipBlocked = true;
+                    $errors[]  = "Z bezpečnostných dôvodov bol prístup dočasne zablokovaný. Skúste to znova o 15 minút.";
                 }
             } catch (\PDOException $e) {
                 error_log("2fa_verify: rate limit check: " . $e->getMessage());
@@ -137,7 +127,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 if ($totpOk || $backupOk) {
                     // Úspech — vyčisti rate limiter a dokončí login
                     try {
-                        $pdo->prepare("DELETE FROM totp_attempts WHERE ip = :ip")->execute(['ip' => $clientIp]);
+                        clearIpRateLimit($pdo, 'totp_attempts', $clientIp);
                     } catch (\PDOException $e) { error_log("2fa_verify: vyčistenie totp_attempts: " . $e->getMessage()); }
 
                     completeTwoFactorLogin($user);
@@ -157,19 +147,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     $errors[] = "Nesprávny overovací kód. Skontrolujte čas v autentifikátore a skúste znova.";
 
                     try {
-                        $pdo->prepare(
-                            "INSERT INTO totp_attempts (ip, attempt_count, first_attempt, last_attempt)
-                             VALUES (:ip, 1, NOW(), NOW())
-                             ON DUPLICATE KEY UPDATE attempt_count = attempt_count + 1, last_attempt = NOW()"
-                        )->execute(['ip' => $clientIp]);
-
-                        $cntStmt = $pdo->prepare("SELECT attempt_count FROM totp_attempts WHERE ip = :ip");
-                        $cntStmt->execute(['ip' => $clientIp]);
-                        $currentCount = (int) ($cntStmt->fetchColumn() ?? 0);
-                        if ($currentCount >= $maxAttempts) {
-                            $pdo->prepare("UPDATE totp_attempts SET blocked_until = DATE_ADD(NOW(), INTERVAL :secs SECOND) WHERE ip = :ip")
-                                ->execute(['secs' => $blockSecs, 'ip' => $clientIp]);
-                        }
+                        recordIpFailedAttempt($pdo, 'totp_attempts', $clientIp, $maxAttempts, $blockSecs);
                     } catch (\PDOException $e) {
                         error_log("2fa_verify: rate limit update: " . $e->getMessage());
                     }

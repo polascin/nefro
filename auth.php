@@ -305,6 +305,64 @@ function getClientIpAddress(): string {
 }
 
 /**
+ * Overí, či je IP blokovaná pre danú rate-limit tabuľku. Odstraňuje expirované bloky.
+ * @param string $table Povolené hodnoty: 'login_attempts', 'totp_attempts'
+ * @return int Unix timestamp konca blokácie, alebo 0 ak nie je blokovaná
+ */
+function ipRateLimitBlockedUntil(PDO $pdo, string $table, string $ip): int
+{
+    $pdo->prepare("DELETE FROM `{$table}` WHERE blocked_until IS NOT NULL AND blocked_until < DATE_SUB(NOW(), INTERVAL 1 DAY)")
+        ->execute();
+
+    $stmt = $pdo->prepare("SELECT blocked_until FROM `{$table}` WHERE ip = :ip");
+    $stmt->execute(['ip' => $ip]);
+    $row = $stmt->fetch();
+
+    if ($row && !empty($row['blocked_until'])) {
+        $ts = strtotime((string) $row['blocked_until']);
+        if ($ts !== false && $ts > time()) {
+            return $ts;
+        }
+        $pdo->prepare("UPDATE `{$table}` SET blocked_until = NULL WHERE ip = :ip")
+            ->execute(['ip' => $ip]);
+    }
+
+    return 0;
+}
+
+/**
+ * Zaznamená neúspešný pokus pre IP. Nastaví blokáciu ak bol dosiahnutý limit.
+ * @return int Aktuálny počet pokusov
+ */
+function recordIpFailedAttempt(PDO $pdo, string $table, string $ip, int $maxAttempts, int $blockSecs): int
+{
+    $pdo->prepare(
+        "INSERT INTO `{$table}` (ip, attempt_count, first_attempt, last_attempt)
+         VALUES (:ip, 1, NOW(), NOW())
+         ON DUPLICATE KEY UPDATE attempt_count = attempt_count + 1, last_attempt = NOW()"
+    )->execute(['ip' => $ip]);
+
+    $stmt = $pdo->prepare("SELECT attempt_count FROM `{$table}` WHERE ip = :ip");
+    $stmt->execute(['ip' => $ip]);
+    $count = (int) ($stmt->fetchColumn() ?? 0);
+
+    if ($count >= $maxAttempts) {
+        $pdo->prepare("UPDATE `{$table}` SET blocked_until = DATE_ADD(NOW(), INTERVAL :secs SECOND) WHERE ip = :ip")
+            ->execute(['secs' => $blockSecs, 'ip' => $ip]);
+    }
+
+    return $count;
+}
+
+/**
+ * Vyčistí rate-limit záznamy pre IP adresu (volaj pri úspešnom prihlásení).
+ */
+function clearIpRateLimit(PDO $pdo, string $table, string $ip): void
+{
+    $pdo->prepare("DELETE FROM `{$table}` WHERE ip = :ip")->execute(['ip' => $ip]);
+}
+
+/**
  * Centrálna funkcia na získanie PDO pre audit logy, ak je dostupná.
  */
 function getAccessLogPdo(): ?\PDO {

@@ -9,238 +9,212 @@ if (isLoggedIn()) {
     exit;
 }
 
-$errors = [];
-$loginFailureDetails = [];
-
 $isLocalDev = isAppLocalDev();
 
-if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
+/**
+ * Spracuje POST požiadavku prihlásenia. Vráti pole errors+loginFailureDetails,
+ * alebo pri úspešnom prihlásení priamo presmeruje (header + exit).
+ * @return array{errors: string[], loginFailureDetails: string[]}
+ */
+function handleLoginPost(PDO $pdo, bool $isLocalDev): array
+{
+    $errors             = [];
+    $loginFailureDetails = [];
+    $maxAttempts        = 10;
+    $blockSecs          = 900;
+
+    // ── CSRF ─────────────────────────────────────────────────────────────────
     $postedCsrfToken = $_POST['csrf_token'] ?? '';
     if (!validateCsrfToken($postedCsrfToken)) {
         $errors[] = "Neplatný CSRF token. Skúste to znova.";
-
         if ($isLocalDev) {
             $sessionTokenPresent = !empty($_SESSION['csrf_token']);
-            $postTokenPresent = !empty($postedCsrfToken);
+            $postTokenPresent    = !empty($postedCsrfToken);
             $csrfReason = !$postTokenPresent
                 ? 'Vo formulári chýba CSRF token.'
                 : (!$sessionTokenPresent
                     ? 'V relácii chýba CSRF token (pravdepodobne problém so session cookie alebo stará otvorená karta).'
                     : 'Token vo formulári sa nezhoduje s tokenom v relácii.');
-
             $errors[] = "[DEV diagnostika] CSRF zlyhanie: " . $csrfReason;
         }
-    } else {
-        $isRequestValid = true;
+        return compact('errors', 'loginFailureDetails');
+    }
 
-        // ── 0. User-Agent Check ───────────────────────────────────────────
-        if (isKnownBotUserAgent()) {
-            if ($isLocalDev) {
-                $errors[] = "[DEV] Detekovaný nepovolený User-Agent.";
-            } else {
-                $errors[] = "Neplatná požiadavka. Skúste to znova (User-Agent neprešiel overením).";
-                $isRequestValid = false;
-            }
-        }
-
-        // ── 1. Honeypot ochrana ──────────────────────────────────────────
-        if ($isRequestValid && ($_POST['work_email_confirm'] ?? '') !== '') {
-            if ($isLocalDev) {
-                $errors[] = "[DEV] Honeypot aktivovaný.";
-            } else {
-                $errors[] = "Neplatná požiadavka. Skúste to znova.";
-                $isRequestValid = false;
-            }
-        }
-
-        // ── 2. JS-Challenge Check ─────────────────────────────────────────
-        if ($isRequestValid && !validateJsChallengeToken($_POST['js_token'] ?? null)) {
-            if ($isLocalDev) {
-                $errors[] = "[DEV] JS-Challenge zlyhal.";
-            } else {
-                $errors[] = "Požiadavka nebola overená (vyžaduje sa JavaScript). Zapnite JavaScript a skúste znova.";
-                $isRequestValid = false;
-            }
-        }
-
-        // ── 3. Time-based Check ───────────────────────────────────────────
-        if ($isRequestValid && !validateFormTime('login', 4)) {
-            if ($isLocalDev) {
-                $errors[] = "[DEV] Formulár odoslaný príliš rýchlo.";
-            } else {
-                $errors[] = "Formulár bol odoslaný príliš rýchlo. Skúste to znova za pár sekúnd.";
-                $isRequestValid = false;
-            }
-        }
-
-        if ($isRequestValid) {
-        // DB/IP brute-force ochrana (10 pokusov, blokovanie na 15 minút)
-        $clientIp    = getClientIpAddress();
-
-        $maxAttempts = 10;
-        $blockSecs   = 900; // 15 minút
-        $ipBlocked   = false;
-
-        try {
-            // Odstrán expirované bloky (staršie ako 1 deň)
-            $pdo->prepare("DELETE FROM login_attempts WHERE blocked_until IS NOT NULL AND blocked_until < DATE_SUB(NOW(), INTERVAL 1 DAY)")
-                ->execute();
-
-            $laStmt = $pdo->prepare("SELECT attempt_count, blocked_until FROM login_attempts WHERE ip = :ip");
-            $laStmt->execute(['ip' => $clientIp]);
-            $laRow = $laStmt->fetch();
-
-            if ($laRow && !empty($laRow['blocked_until'])) {
-                $blockedUntilTs = strtotime((string) $laRow['blocked_until']);
-                if ($blockedUntilTs !== false && $blockedUntilTs > time()) {
-                    $ipBlocked = true;
-                    $errors[] = "Z bezpečnostných dôvodov bol prístup dočasne zablokovaný. Skúste to znova o 15 minút.";
-                    if ($isLocalDev) {
-                        $remainingMins = max(1, (int) ceil(($blockedUntilTs - time()) / 60));
-                        $loginFailureDetails[] = "Prihlásenie z IP adresy je blokované ešte približne {$remainingMins} min.";
-                    }
-                } else {
-                    // Blokácia už vypršala, vyčisti ju pre tento záznam IP.
-                    $pdo->prepare("UPDATE login_attempts SET blocked_until = NULL WHERE ip = :ip")
-                        ->execute(['ip' => $clientIp]);
-                }
-            }
-        } catch (\PDOException $e) {
-            error_log("Rate limit check error: " . $e->getMessage());
-            // Pri DB chybe pokračuj bez rate limitingu
-        }
-
-        if (!$ipBlocked) {
-            $loginInput = trim($_POST['login'] ?? '');
-            $password   = $_POST['password'] ?? '';
-
-            if (empty($loginInput) || empty($password)) {
-                $errors[] = "Zadajte používateľské meno (alebo e-mail) a heslo.";
-                if (empty($loginInput)) {
-                    $loginFailureDetails[] = 'Nie je vyplnené používateľské meno ani e-mail.';
-                }
-                if (empty($password)) {
-                    $loginFailureDetails[] = 'Nie je vyplnené heslo.';
-                }
-            } else {
-                try {
-                    $stmt = $pdo->prepare("SELECT id, email, password_hash, username, is_admin, is_active, email_verified_at, totp_enabled, totp_secret FROM users WHERE email = :email OR username = :username");
-                    $stmt->execute([
-                        'email'    => $loginInput,
-                        'username' => $loginInput,
-                    ]);
-                    $user = $stmt->fetch();
-
-                    // Vždy voláme password_verify (aj pre neexistujúceho používateľa)
-                    // aby sme zabránili timing útoku na enumeráciu e-mailov.
-                    // Dummy hash sa generuje dynamicky — žiadny hardcoded reťazec v kóde.
-                    $hashToVerify = $user
-                        ? (string) $user['password_hash']
-                        : password_hash(bin2hex(random_bytes(8)), PASSWORD_DEFAULT);
-                    $passwordOk = password_verify($password, $hashToVerify);
-
-                    if ($user && $passwordOk) {
-                        if (!(int) ($user['is_active'] ?? 1)) {
-                            $errors[] = "Prihlásenie sa nepodarilo.";
-                            if ($isLocalDev) {
-                                $loginFailureDetails[] = 'Účet existuje, ale je deaktivovaný administrátorom.';
-                            }
-                        } else {
-                            // Prihlásenie úspešné — vyčisti IP záznamy
-                            try {
-                                $pdo->prepare("DELETE FROM login_attempts WHERE ip = :ip")->execute(['ip' => $clientIp]);
-                            } catch (\PDOException) { /* ignoruj */ }
-
-                            $emailVerified = !empty($user['email_verified_at']) ? 1 : 0;
-
-                            if ($emailVerified !== 1) {
-                                // Neoverený email — nepovoliť prihlásenie, presmerovať na verifikáciu
-                                setFlashMessage('warning', 'Pred prihlásením musíte overiť svoju e-mailovú adresu. Skontrolujte doručenú poštu alebo si nechajte zaslať nový overovací e-mail.');
-                                header("Location: resend_verification.php");
-                                exit;
-                            }
-
-                            // ── 2FA check ────────────────────────────────────
-                            if ((int) ($user['totp_enabled'] ?? 0) === 1 && !empty($user['totp_secret'])) {
-                                regenerateSession();
-                                $_SESSION['2fa_pending'] = [
-                                    'user_id'        => $user['id'],
-                                    'expires'        => time() + 300, // 5 minút na zadanie kódu
-                                    'attempts'       => 0,
-                                    'pwd_fingerprint' => substr(hash('sha256', (string) $user['password_hash']), 0, 16),
-                                ];
-                                header("Location: 2fa_verify.php");
-                                exit;
-                            }
-
-                            regenerateSession();
-                            $_SESSION['user_id'] = $user['id'];
-                            $_SESSION['username'] = $user['username'];
-                            $_SESSION['email'] = (string) ($user['email'] ?? '');
-                            $_SESSION['is_admin'] = (int) ($user['is_admin'] ?? 0);
-                            $_SESSION['email_verified'] = $emailVerified;
-                            $_SESSION['_last_activity'] = time();
-
-                            header("Location: index.php");
-                            exit;
-                        }
-                    } else {
-                        // Nesprávne prihlásenie — zaznamenaj pokus
-                        if (!$user) {
-                            $errors[] = "Prihlásenie sa nepodarilo.";
-                            if ($isLocalDev) {
-                                $loginFailureDetails[] = 'Účet so zadaným e-mailom alebo používateľským menom neexistuje.';
-                            }
-                        } else {
-                            $errors[] = "Prihlásenie sa nepodarilo.";
-                            if ($isLocalDev) {
-                                $loginFailureDetails[] = 'Zadané heslo nie je správne.';
-                            }
-                        }
-
-                        try {
-                            $pdo->prepare(
-                                "INSERT INTO login_attempts (ip, attempt_count, first_attempt, last_attempt)
-                                 VALUES (:ip, 1, NOW(), NOW())
-                                 ON DUPLICATE KEY UPDATE attempt_count = attempt_count + 1, last_attempt = NOW()"
-                            )->execute(['ip' => $clientIp]);
-
-                            $cntStmt = $pdo->prepare("SELECT attempt_count FROM login_attempts WHERE ip = :ip");
-                            $cntStmt->execute(['ip' => $clientIp]);
-                            $currentCount = (int) ($cntStmt->fetchColumn() ?? 0);
-
-                            if ($currentCount >= $maxAttempts) {
-                                $pdo->prepare("UPDATE login_attempts SET blocked_until = DATE_ADD(NOW(), INTERVAL :secs SECOND) WHERE ip = :ip")
-                                    ->execute(['secs' => $blockSecs, 'ip' => $clientIp]);
-                                $errors[] = "Príliš veľa neúspešných pokusov. Prístup bol zablokovaný na 15 minút.";
-                                if ($isLocalDev) {
-                                    $loginFailureDetails[] = 'Bol dosiahnutý bezpečnostný limit neúspešných pokusov pre túto IP adresu.';
-                                }
-                            } else {
-                                if ($isLocalDev) {
-                                    $remaining = max(0, $maxAttempts - $currentCount);
-                                    $loginFailureDetails[] = "Zostávajúce pokusy pred dočasnou blokáciou IP: {$remaining}.";
-                                }
-                            }
-                        } catch (\PDOException $e) {
-                            error_log("Rate limit update error: " . $e->getMessage());
-                            $errors[] = "Prihlásenie sa nepodarilo.";
-                            if ($isLocalDev) {
-                                $loginFailureDetails[] = 'Nepodarilo sa aktualizovať počítadlo bezpečnostných pokusov.';
-                            }
-                        }
-                    }
-                } catch (\PDOException $e) {
-                    error_log("Chyba prihlásenia: " . $e->getMessage());
-                    $errors[] = "Vyskytla sa chyba. Skúste to prosím neskôr.";
-                    if ($isLocalDev) {
-                        $loginFailureDetails[] = 'Pri overovaní prihlasovacích údajov došlo k databázovej chybe.';
-                    }
-                }
-            }
-        }
+    // ── 0. User-Agent check ───────────────────────────────────────────────────
+    if (isKnownBotUserAgent()) {
+        if ($isLocalDev) {
+            $errors[] = "[DEV] Detekovaný nepovolený User-Agent.";
+        } else {
+            $errors[] = "Neplatná požiadavka. Skúste to znova (User-Agent neprešiel overením).";
+            return compact('errors', 'loginFailureDetails');
         }
     }
+
+    // ── 1. Honeypot ───────────────────────────────────────────────────────────
+    if (($_POST['work_email_confirm'] ?? '') !== '') {
+        if ($isLocalDev) {
+            $errors[] = "[DEV] Honeypot aktivovaný.";
+        } else {
+            $errors[] = "Neplatná požiadavka. Skúste to znova.";
+            return compact('errors', 'loginFailureDetails');
+        }
+    }
+
+    // ── 2. JS-Challenge ───────────────────────────────────────────────────────
+    if (!validateJsChallengeToken($_POST['js_token'] ?? null)) {
+        if ($isLocalDev) {
+            $errors[] = "[DEV] JS-Challenge zlyhal.";
+        } else {
+            $errors[] = "Požiadavka nebola overená (vyžaduje sa JavaScript). Zapnite JavaScript a skúste znova.";
+            return compact('errors', 'loginFailureDetails');
+        }
+    }
+
+    // ── 3. Time-based check ───────────────────────────────────────────────────
+    if (!validateFormTime('login', 4)) {
+        if ($isLocalDev) {
+            $errors[] = "[DEV] Formulár odoslaný príliš rýchlo.";
+        } else {
+            $errors[] = "Formulár bol odoslaný príliš rýchlo. Skúste to znova za pár sekúnd.";
+            return compact('errors', 'loginFailureDetails');
+        }
+    }
+
+    // ── IP rate-limit ─────────────────────────────────────────────────────────
+    $clientIp = getClientIpAddress();
+    try {
+        $blockedUntilTs = ipRateLimitBlockedUntil($pdo, 'login_attempts', $clientIp);
+        if ($blockedUntilTs > 0) {
+            $errors[] = "Z bezpečnostných dôvodov bol prístup dočasne zablokovaný. Skúste to znova o 15 minút.";
+            if ($isLocalDev) {
+                $remainingMins = max(1, (int) ceil(($blockedUntilTs - time()) / 60));
+                $loginFailureDetails[] = "Prihlásenie z IP adresy je blokované ešte približne {$remainingMins} min.";
+            }
+            return compact('errors', 'loginFailureDetails');
+        }
+    } catch (\PDOException $e) {
+        error_log("Rate limit check error: " . $e->getMessage());
+    }
+
+    // ── Prihlasovanie údaje ───────────────────────────────────────────────────
+    $loginInput = trim($_POST['login'] ?? '');
+    $password   = $_POST['password'] ?? '';
+
+    if (empty($loginInput) || empty($password)) {
+        $errors[] = "Zadajte používateľské meno (alebo e-mail) a heslo.";
+        if (empty($loginInput)) {
+            $loginFailureDetails[] = 'Nie je vyplnené používateľské meno ani e-mail.';
+        }
+        if (empty($password)) {
+            $loginFailureDetails[] = 'Nie je vyplnené heslo.';
+        }
+        return compact('errors', 'loginFailureDetails');
+    }
+
+    try {
+        $stmt = $pdo->prepare(
+            "SELECT id, email, password_hash, username, is_admin, is_active, email_verified_at, totp_enabled, totp_secret
+             FROM users WHERE email = :email OR username = :username"
+        );
+        $stmt->execute(['email' => $loginInput, 'username' => $loginInput]);
+        $user = $stmt->fetch();
+
+        // Vždy voláme password_verify (aj pre neexistujúceho používateľa)
+        // aby sme zabránili timing útoku na enumeráciu e-mailov.
+        // Dummy hash sa generuje dynamicky — žiadny hardcoded reťazec v kóde.
+        $hashToVerify = $user
+            ? (string) $user['password_hash']
+            : password_hash(bin2hex(random_bytes(8)), PASSWORD_DEFAULT);
+        $passwordOk = password_verify($password, $hashToVerify);
+
+        if (!$user || !$passwordOk) {
+            $errors[] = "Prihlásenie sa nepodarilo.";
+            if ($isLocalDev) {
+                $loginFailureDetails[] = !$user
+                    ? 'Účet so zadaným e-mailom alebo používateľským menom neexistuje.'
+                    : 'Zadané heslo nie je správne.';
+            }
+            try {
+                $count = recordIpFailedAttempt($pdo, 'login_attempts', $clientIp, $maxAttempts, $blockSecs);
+                if ($count >= $maxAttempts) {
+                    $errors[] = "Príliš veľa neúspešných pokusov. Prístup bol zablokovaný na 15 minút.";
+                    if ($isLocalDev) {
+                        $loginFailureDetails[] = 'Bol dosiahnutý bezpečnostný limit neúspešných pokusov pre túto IP adresu.';
+                    }
+                } elseif ($isLocalDev) {
+                    $loginFailureDetails[] = "Zostávajúce pokusy pred dočasnou blokáciou IP: " . max(0, $maxAttempts - $count) . ".";
+                }
+            } catch (\PDOException $e) {
+                error_log("Rate limit update error: " . $e->getMessage());
+                if ($isLocalDev) {
+                    $loginFailureDetails[] = 'Nepodarilo sa aktualizovať počítadlo bezpečnostných pokusov.';
+                }
+            }
+            return compact('errors', 'loginFailureDetails');
+        }
+
+        if (!(int) ($user['is_active'] ?? 1)) {
+            $errors[] = "Prihlásenie sa nepodarilo.";
+            if ($isLocalDev) {
+                $loginFailureDetails[] = 'Účet existuje, ale je deaktivovaný administrátorom.';
+            }
+            return compact('errors', 'loginFailureDetails');
+        }
+
+        // Prihlásenie úspešné — vyčisti IP záznamy
+        try {
+            clearIpRateLimit($pdo, 'login_attempts', $clientIp);
+        } catch (\PDOException) { /* ignoruj */ }
+
+        $emailVerified = !empty($user['email_verified_at']) ? 1 : 0;
+
+        if ($emailVerified !== 1) {
+            setFlashMessage('warning', 'Pred prihlásením musíte overiť svoju e-mailovú adresu. Skontrolujte doručenú poštu alebo si nechajte zaslať nový overovací e-mail.');
+            header("Location: resend_verification.php");
+            exit;
+        }
+
+        // ── 2FA check ─────────────────────────────────────────────────────────
+        if ((int) ($user['totp_enabled'] ?? 0) === 1 && !empty($user['totp_secret'])) {
+            regenerateSession();
+            $_SESSION['2fa_pending'] = [
+                'user_id'         => $user['id'],
+                'expires'         => time() + 300,
+                'attempts'        => 0,
+                'pwd_fingerprint' => substr(hash('sha256', (string) $user['password_hash']), 0, 16),
+            ];
+            header("Location: 2fa_verify.php");
+            exit;
+        }
+
+        regenerateSession();
+        $_SESSION['user_id']         = $user['id'];
+        $_SESSION['username']        = $user['username'];
+        $_SESSION['email']           = (string) ($user['email'] ?? '');
+        $_SESSION['is_admin']        = (int) ($user['is_admin'] ?? 0);
+        $_SESSION['email_verified']  = $emailVerified;
+        $_SESSION['_last_activity']  = time();
+
+        header("Location: index.php");
+        exit;
+
+    } catch (\PDOException $e) {
+        error_log("Chyba prihlásenia: " . $e->getMessage());
+        $errors[] = "Vyskytla sa chyba. Skúste to prosím neskôr.";
+        if ($isLocalDev) {
+            $loginFailureDetails[] = 'Pri overovaní prihlasovacích údajov došlo k databázovej chybe.';
+        }
+        return compact('errors', 'loginFailureDetails');
+    }
+}
+
+$errors             = [];
+$loginFailureDetails = [];
+
+if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
+    $result              = handleLoginPost($pdo, $isLocalDev);
+    $errors              = $result['errors'];
+    $loginFailureDetails = $result['loginFailureDetails'];
 } else {
     // GET požiadavka: zaznamenaj čas načítania
     markFormLoadTime('login');

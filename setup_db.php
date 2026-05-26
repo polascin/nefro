@@ -13,6 +13,16 @@ $cliOut = static function (string $s): void {
     }
 };
 
+function columnExists(PDO $pdo, string $table, string $column): bool
+{
+    $stmt = $pdo->prepare(
+        "SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS
+         WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = :table AND COLUMN_NAME = :column"
+    );
+    $stmt->execute(['table' => $table, 'column' => $column]);
+    return (int) $stmt->fetchColumn() > 0;
+}
+
 try {
     $sql = "CREATE TABLE IF NOT EXISTS users (
         id INT AUTO_INCREMENT PRIMARY KEY,
@@ -26,7 +36,7 @@ try {
         email_verification_expires_at DATETIME NULL,
         email_verification_sent_at DATETIME NULL,
         mobile_verified_at DATETIME NULL,
-        mobile_verification_code_hash CHAR(64) NULL,
+        mobile_verification_code_hash VARCHAR(255) NULL,
         mobile_verification_expires_at DATETIME NULL,
         mobile_verification_sent_at DATETIME NULL,
         password_hash VARCHAR(255) NOT NULL,
@@ -72,92 +82,76 @@ try {
 
     $pdo->exec($sql);
 
-    $isAdminColumnStmt = $pdo->prepare("SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'users' AND COLUMN_NAME = 'is_admin'");
-    $isAdminColumnStmt->execute();
-    if ((int) $isAdminColumnStmt->fetchColumn() === 0) {
+    if (!columnExists($pdo, 'users', 'is_admin')) {
         $pdo->exec("ALTER TABLE users ADD COLUMN is_admin TINYINT(1) DEFAULT 0");
     }
 
-    $isActiveColumnStmt = $pdo->prepare("SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'users' AND COLUMN_NAME = 'is_active'");
-    $isActiveColumnStmt->execute();
-    if ((int) $isActiveColumnStmt->fetchColumn() === 0) {
+    if (!columnExists($pdo, 'users', 'is_active')) {
         $pdo->exec("ALTER TABLE users ADD COLUMN is_active TINYINT(1) DEFAULT 1");
     }
 
-    $districtColumnStmt = $pdo->prepare("SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'users' AND COLUMN_NAME = 'district'");
-    $districtColumnStmt->execute();
-    if ((int) $districtColumnStmt->fetchColumn() === 0) {
+    if (!columnExists($pdo, 'users', 'district')) {
         $pdo->exec("ALTER TABLE users ADD COLUMN district VARCHAR(255) NULL AFTER city");
     }
 
-    $mobilePhoneColumnStmt = $pdo->prepare("SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'users' AND COLUMN_NAME = 'mobile_phone'");
-    $mobilePhoneColumnStmt->execute();
-    if ((int) $mobilePhoneColumnStmt->fetchColumn() === 0) {
+    if (!columnExists($pdo, 'users', 'mobile_phone')) {
         $pdo->exec("ALTER TABLE users ADD COLUMN mobile_phone VARCHAR(50) NULL AFTER work_email");
     }
 
     $emailVerifiedAtAdded = false;
-    $emailVerifiedAtStmt = $pdo->prepare("SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'users' AND COLUMN_NAME = 'email_verified_at'");
-    $emailVerifiedAtStmt->execute();
-    if ((int) $emailVerifiedAtStmt->fetchColumn() === 0) {
+    if (!columnExists($pdo, 'users', 'email_verified_at')) {
         $pdo->exec("ALTER TABLE users ADD COLUMN email_verified_at DATETIME NULL AFTER email");
         $emailVerifiedAtAdded = true;
     }
 
-    $emailTokenHashStmt = $pdo->prepare("SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'users' AND COLUMN_NAME = 'email_verification_token_hash'");
-    $emailTokenHashStmt->execute();
-    if ((int) $emailTokenHashStmt->fetchColumn() === 0) {
+    if (!columnExists($pdo, 'users', 'email_verification_token_hash')) {
         $pdo->exec("ALTER TABLE users ADD COLUMN email_verification_token_hash VARCHAR(255) NULL AFTER email_verified_at");
     }
 
-    $emailExpiresStmt = $pdo->prepare("SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'users' AND COLUMN_NAME = 'email_verification_expires_at'");
-    $emailExpiresStmt->execute();
-    if ((int) $emailExpiresStmt->fetchColumn() === 0) {
+    if (!columnExists($pdo, 'users', 'email_verification_expires_at')) {
         $pdo->exec("ALTER TABLE users ADD COLUMN email_verification_expires_at DATETIME NULL AFTER email_verification_token_hash");
     }
 
-    $emailSentAtStmt = $pdo->prepare("SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'users' AND COLUMN_NAME = 'email_verification_sent_at'");
-    $emailSentAtStmt->execute();
-    if ((int) $emailSentAtStmt->fetchColumn() === 0) {
+    if (!columnExists($pdo, 'users', 'email_verification_sent_at')) {
         $pdo->exec("ALTER TABLE users ADD COLUMN email_verification_sent_at DATETIME NULL AFTER email_verification_expires_at");
     }
 
-    $mobileVerifiedAtStmt = $pdo->prepare("SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'users' AND COLUMN_NAME = 'mobile_verified_at'");
-    $mobileVerifiedAtStmt->execute();
-    if ((int) $mobileVerifiedAtStmt->fetchColumn() === 0) {
+    if (!columnExists($pdo, 'users', 'mobile_verified_at')) {
         $pdo->exec("ALTER TABLE users ADD COLUMN mobile_verified_at DATETIME NULL AFTER email_verification_sent_at");
     }
 
-    $mobileCodeHashStmt = $pdo->prepare("SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'users' AND COLUMN_NAME = 'mobile_verification_code_hash'");
-    $mobileCodeHashStmt->execute();
-    if ((int) $mobileCodeHashStmt->fetchColumn() === 0) {
-        $pdo->exec("ALTER TABLE users ADD COLUMN mobile_verification_code_hash CHAR(64) NULL AFTER mobile_verified_at");
+    if (!columnExists($pdo, 'users', 'mobile_verification_code_hash')) {
+        $pdo->exec("ALTER TABLE users ADD COLUMN mobile_verification_code_hash VARCHAR(255) NULL AFTER mobile_verified_at");
     }
 
-    $mobileExpiresStmt = $pdo->prepare("SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'users' AND COLUMN_NAME = 'mobile_verification_expires_at'");
-    $mobileExpiresStmt->execute();
-    if ((int) $mobileExpiresStmt->fetchColumn() === 0) {
+    // Migrácia: CHAR(64) → VARCHAR(255) pre existujúce inštalácie (bcrypt → Argon2-safe)
+    $mobileHashTypeStmt = $pdo->prepare(
+        "SELECT DATA_TYPE FROM INFORMATION_SCHEMA.COLUMNS
+         WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'users' AND COLUMN_NAME = 'mobile_verification_code_hash'"
+    );
+    $mobileHashTypeStmt->execute();
+    $mobileHashType = strtolower((string) ($mobileHashTypeStmt->fetchColumn() ?: ''));
+    if ($mobileHashType === 'char') {
+        $pdo->exec("ALTER TABLE users MODIFY COLUMN mobile_verification_code_hash VARCHAR(255) NULL");
+        $cliOut("Migrácia: mobile_verification_code_hash CHAR(64) → VARCHAR(255).\n");
+    }
+
+    if (!columnExists($pdo, 'users', 'mobile_verification_expires_at')) {
         $pdo->exec("ALTER TABLE users ADD COLUMN mobile_verification_expires_at DATETIME NULL AFTER mobile_verification_code_hash");
     }
 
-    $mobileSentAtStmt = $pdo->prepare("SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'users' AND COLUMN_NAME = 'mobile_verification_sent_at'");
-    $mobileSentAtStmt->execute();
-    if ((int) $mobileSentAtStmt->fetchColumn() === 0) {
+    if (!columnExists($pdo, 'users', 'mobile_verification_sent_at')) {
         $pdo->exec("ALTER TABLE users ADD COLUMN mobile_verification_sent_at DATETIME NULL AFTER mobile_verification_expires_at");
     }
 
     // ── Migrácia: nastavenie automatickej témy ───────────────────────────────
-    $themeAutoStmt = $pdo->prepare("SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'users' AND COLUMN_NAME = 'theme_auto'");
-    $themeAutoStmt->execute();
-    if ((int) $themeAutoStmt->fetchColumn() === 0) {
+    if (!columnExists($pdo, 'users', 'theme_auto')) {
         $pdo->exec("ALTER TABLE users ADD COLUMN theme_auto TINYINT(1) NOT NULL DEFAULT 1 COMMENT 'Automaticky sledovať systémovú tému (1=áno, 0=manuálne)' AFTER newsletter_consent");
         $cliOut("Migrácia: theme_auto pridané.\n");
     }
 
     // ── Migrácia: rate-limit stĺpce pre SMS overovanie ───────────────────────
-    $mobileVerifyFailStmt = $pdo->prepare("SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'users' AND COLUMN_NAME = 'mobile_verify_fail_count'");
-    $mobileVerifyFailStmt->execute();
-    if ((int) $mobileVerifyFailStmt->fetchColumn() === 0) {
+    if (!columnExists($pdo, 'users', 'mobile_verify_fail_count')) {
         $pdo->exec("ALTER TABLE users
             ADD COLUMN mobile_verify_fail_count TINYINT UNSIGNED NOT NULL DEFAULT 0
                 COMMENT 'Počet zlyhaných pokusov o overenie SMS kódu'
@@ -169,9 +163,7 @@ try {
     }
 
     // ── Migrácia: TOTP 2FA stĺpce ────────────────────────────────────────────
-    $totpSecretStmt = $pdo->prepare("SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'users' AND COLUMN_NAME = 'totp_secret'");
-    $totpSecretStmt->execute();
-    if ((int) $totpSecretStmt->fetchColumn() === 0) {
+    if (!columnExists($pdo, 'users', 'totp_secret')) {
         $pdo->exec("ALTER TABLE users
             ADD COLUMN totp_secret VARCHAR(32) NULL AFTER is_active,
             ADD COLUMN totp_enabled TINYINT(1) NOT NULL DEFAULT 0 AFTER totp_secret,
@@ -496,9 +488,7 @@ try {
     }
 
     // ── Migrácia: sort_order stĺpec ──────────────────────────────────
-    $sortOrderColumnStmt = $pdo->prepare("SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = 'articles' AND COLUMN_NAME = 'sort_order'");
-    $sortOrderColumnStmt->execute();
-    if ((int) $sortOrderColumnStmt->fetchColumn() === 0) {
+    if (!columnExists($pdo, 'articles', 'sort_order')) {
         $pdo->exec("ALTER TABLE articles ADD COLUMN sort_order INT NOT NULL DEFAULT 0");
         $pdo->exec("SET @row_num := 0");
         $pdo->exec("UPDATE articles SET sort_order = (@row_num := @row_num + 1) ORDER BY published_at DESC, id DESC");
