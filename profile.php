@@ -715,6 +715,33 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && ($_POST['action'] ?? '') !=
             <?php endif; ?>
 
                 <div class="form-section">
+                    <h3>Dvojfaktorové overenie (2FA)</h3>
+                    <?php
+                    $twoFaEnabled = (int) ($user['totp_enabled'] ?? 0) === 1;
+                    $twoFaBackupCount = 0;
+                    if ($twoFaEnabled && !empty($user['totp_backup_codes'])) {
+                        $parsedBackup = json_decode((string) $user['totp_backup_codes'], true);
+                        $twoFaBackupCount = is_array($parsedBackup) ? count($parsedBackup) : 0;
+                    }
+                    ?>
+                    <p class="avatar-upload-hint">
+                        Stav 2FA:
+                        <?php if ($twoFaEnabled): ?>
+                            <strong style="color:var(--primary-color);">Zapnuté</strong>
+                            — záložných kódov zostáva: <strong><?= $twoFaBackupCount ?></strong>
+                            <?php if ($twoFaBackupCount <= 2): ?>
+                                <span class="badge-draft">Málo záložných kódov</span>
+                            <?php endif; ?>
+                        <?php else: ?>
+                            <strong style="color:var(--text-secondary);">Vypnuté</strong>
+                        <?php endif; ?>
+                    </p>
+                    <div class="form-actions profile-actions">
+                        <a href="2fa_setup.php" class="btn-secondary">Spravovať 2FA nastavenia</a>
+                    </div>
+                </div>
+
+                <div class="form-section">
                     <h3>Zmena hesla</h3>
                     <p class="avatar-upload-hint mb-15">Ak nechcete zmeniť heslo, ponechajte tieto polia prázdne.</p>
                     <div class="form-grid">

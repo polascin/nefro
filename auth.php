@@ -494,4 +494,40 @@ function isEmailDomainValid(string $email): bool {
 
     return false;
 }
+
+// ── 2FA helpre ────────────────────────────────────────────────────────────────
+
+/**
+ * Vráti true ak je v session uložený 2FA pending stav a ešte nevypršal (TTL 5 min).
+ * Automaticky vyčistí expirovaný pending stav.
+ */
+function isTwoFactorPending(): bool
+{
+    if (empty($_SESSION['2fa_pending']) || !is_array($_SESSION['2fa_pending'])) {
+        return false;
+    }
+    if (empty($_SESSION['2fa_pending']['expires']) || $_SESSION['2fa_pending']['expires'] < time()) {
+        unset($_SESSION['2fa_pending']);
+        return false;
+    }
+    return true;
+}
+
+/**
+ * Dokončí prihlásenie po úspešnom overení 2FA alebo záložného kódu.
+ * Ekvivalent bloku v login.php — nastavuje rovnaké session premenné.
+ *
+ * @param array $user  Riadok z tabuľky users (musí obsahovať id, username, email, is_admin, email_verified_at)
+ */
+function completeTwoFactorLogin(array $user): void
+{
+    unset($_SESSION['2fa_pending']);
+    regenerateSession();
+    $_SESSION['user_id']        = $user['id'];
+    $_SESSION['username']       = $user['username'];
+    $_SESSION['email']          = (string) ($user['email'] ?? '');
+    $_SESSION['is_admin']       = (int) ($user['is_admin'] ?? 0);
+    $_SESSION['email_verified'] = !empty($user['email_verified_at']) ? 1 : 0;
+    $_SESSION['_last_activity'] = time();
+}
 ?>

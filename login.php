@@ -124,7 +124,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 }
             } else {
                 try {
-                    $stmt = $pdo->prepare("SELECT id, email, password_hash, username, is_admin, is_active, email_verified_at FROM users WHERE email = :email OR username = :username");
+                    $stmt = $pdo->prepare("SELECT id, email, password_hash, username, is_admin, is_active, email_verified_at, totp_enabled, totp_secret FROM users WHERE email = :email OR username = :username");
                     $stmt->execute([
                         'email'    => $loginInput,
                         'username' => $loginInput,
@@ -154,6 +154,18 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                                 // Neoverený email — nepovoliť prihlásenie, presmerovať na verifikáciu
                                 setFlashMessage('warning', 'Pred prihlásením musíte overiť svoju e-mailovú adresu. Skontrolujte doručenú poštu alebo si nechajte zaslať nový overovací e-mail.');
                                 header("Location: resend_verification.php");
+                                exit;
+                            }
+
+                            // ── 2FA check ────────────────────────────────────
+                            if ((int) ($user['totp_enabled'] ?? 0) === 1 && !empty($user['totp_secret'])) {
+                                regenerateSession();
+                                $_SESSION['2fa_pending'] = [
+                                    'user_id'  => $user['id'],
+                                    'expires'  => time() + 300, // 5 minút na zadanie kódu
+                                    'attempts' => 0,
+                                ];
+                                header("Location: 2fa_verify.php");
                                 exit;
                             }
 
