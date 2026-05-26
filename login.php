@@ -133,7 +133,10 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 
                     // Vždy voláme password_verify (aj pre neexistujúceho používateľa)
                     // aby sme zabránili timing útoku na enumeráciu e-mailov.
-                    $hashToVerify = $user ? $user['password_hash'] : '$2y$12$abcdefghijklmnopqrstuuABCDEFGHIJKLMNOPQRSTUVWXYZab012';
+                    // Dummy hash sa generuje dynamicky — žiadny hardcoded reťazec v kóde.
+                    $hashToVerify = $user
+                        ? (string) $user['password_hash']
+                        : password_hash(bin2hex(random_bytes(8)), PASSWORD_DEFAULT);
                     $passwordOk = password_verify($password, $hashToVerify);
 
                     if ($user && $passwordOk) {
