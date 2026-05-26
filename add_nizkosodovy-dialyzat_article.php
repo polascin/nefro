@@ -1,7 +1,7 @@
 <?php
 /**
  * add_nizkosodovy-dialyzat_article.php
- * Vkladá článok o nízkosodíovom dialyzáte a sodíku v tkanivách (crossover štúdia).
+ * Vkladá článok o nízkosodíkovom dialyzáte a sodíku v tkanivách (crossover štúdia).
  */
 
 // Ochrana – len admin alebo CLI
@@ -17,18 +17,18 @@ require_once __DIR__ . '/newsletter_notifications.php';
 $articles = [];
 
 $articles[] = [
-    'title'        => 'Nízkosodíový dialyzát a sodík v tkanivách: čo ukázala randomizovaná crossover štúdia',
-    'slug'         => 'nizkosodovy-dialyzat-a-sodik-v-tkanivach-randomizovana-crossover-studia',
+    'title'        => 'Nízkosodíkový dialyzát a sodík v tkanivách: čo ukázala randomizovaná crossover štúdia',
+    'slug'         => 'nizkosodikovy-dialyzat-a-sodik-v-tkanivach-randomizovana-crossover-studia',
     'author'       => 'Dr. Ľubomír Polaščín',
     'published_at' => '2026-05-26',
     'is_top'       => 0,
-    'excerpt'      => 'Randomizovaná crossover štúdia hodnotila vplyv dialyzátu s 132 mEq/L sodíka oproti 138 mEq/L na tkanivový sodík (koža, sval) meraný cez ²³Na MRI. Celkové rozdiely neboli štatisticky signifikantné, no upravené analýzy ukázali asociáciu s poklesom sodíka v koži a zdôraznili úlohu ultrafiltrácie.',
+    'excerpt'      => 'Randomizovaná crossover štúdia hodnotila vplyv nízkosodíkového dialyzátu (132 mEq/L sodíka) oproti vyššiosodíkovému (138 mEq/L) na tkanivový sodík (koža, sval) meraný pomocou ²³Na MRI. Celkové rozdiely neboli štatisticky významné, no upravené analýzy ukázali asociáciu s poklesom sodíka v koži a zdôraznili úlohu ultrafiltrácie.',
     'content'      => <<<'HTML'
-<p>V udržiavacej hemodialýze sa dlho rieši otázka, či úprava koncentrácie sodíka v dialyzáte dokáže ovplyvniť sodík prítomný priamo v tkanivách. Zmysel tejto otázky je praktický: ak by sa podarilo znížiť „tkanivový" sodík, mohlo by to potenciálne súvisieť s klinickými prejavmi, ako je napríklad kožná hydratácia či systémový zápal. Nová randomizovaná crossover štúdia sa preto zamerala presne na rozdiely v sodíku medzi nízkosodíovým a vyšším sodíkovým dialyzátom.</p>
+<p>V udržiavacej hemodialýze sa dlho rieši otázka, či úprava koncentrácie sodíka v dialyzáte dokáže ovplyvniť sodík prítomný priamo v tkanivách. Zmysel tejto otázky je praktický: ak by sa podarilo znížiť „tkanivový" sodík, mohlo by to potenciálne súvisieť s klinickými prejavmi, ako je napríklad kožná hydratácia či systémový zápal. Nová randomizovaná crossover štúdia sa preto zamerala presne na rozdiely v sodíku medzi nízkosodíkovým a vyšším sodíkovým dialyzátom.</p>
 
 <h2>Dizajn štúdie</h2>
 
-<p>Štúdia mala randomizovaný crossover charakter. Pacientom v udržiavacej hemodialýze bol podávaný <strong>nízkosodíový dialyzát: 132 mEq/L</strong> alebo <strong>vyššiosodíový dialyzát: 138 mEq/L</strong>. Každé liečebné obdobie trvalo <strong>4 týždne</strong>. Tkanivový sodík sa hodnotil pomocou <strong><sup>23</sup>Na magnetickej rezonančnej tomografie (MRI)</strong> na konci každého obdobia. V randomizácii bolo zapojených <strong>28 účastníkov</strong>, pričom <strong>23 z nich poskytlo údaje pre crossover analýzu</strong> (obe fázy).</p>
+<p>Štúdia mala randomizovaný crossover charakter. Pacientom v udržiavacej hemodialýze bol podávaný <strong>nízkosodíkový dialyzát: 132 mEq/L</strong> alebo <strong>vyššiosodíkový dialyzát: 138 mEq/L</strong>. Každé liečebné obdobie trvalo <strong>4 týždne</strong>. Tkanivový sodík sa hodnotil pomocou <strong><sup>23</sup>Na magnetickej rezonančnej tomografie (MRI)</strong> na konci každého obdobia. V randomizácii bolo zapojených <strong>28 účastníkov</strong>, pričom <strong>23 z nich poskytlo údaje pre crossover analýzu</strong> (obe fázy).</p>
 
 <p>Sledovali sa dva „tkanivové kompartmenty":</p>
 <ul>
@@ -38,19 +38,19 @@ $articles[] = [
 
 <h2>Hlavné výsledky: celkové rozdiely neboli štatisticky významné</h2>
 
-<p>Keď autori porovnali obdobie s vyšším sodíkovým dialyzátom ako referenciu, odhadli rozdiely pri nízkosodíovom dialyzáte:</p>
+<p>Keď autori porovnali obdobie s vyšším sodíkovým dialyzátom ako referenciu, odhadli rozdiely pri nízkosodíkovom dialyzáte:</p>
 <ul>
   <li>v <strong>svale</strong> bol odhadnutý rozdiel <strong>−0,8</strong> (tendencia k nižšiemu sodíku), štatistická významnosť však vyšla nepresvedčivo: <strong>p = 0,27</strong></li>
   <li>v <strong>koži</strong> bol odhadnutý rozdiel <strong>−1,5</strong>, opäť trend k nižším hodnotám, ale so skôr hraničným výsledkom: <strong>p = 0,09</strong></li>
 </ul>
 
-<p>Zjednodušene: <strong>neboli zistené štatisticky významné celkové rozdiely v sodíku v koži ani vo svaloch</strong>, aj keď oba kompartmenty pri nízkosodíovom dialyzáte skôr klesali.</p>
+<p>Zjednodušene: <strong>neboli zistené štatisticky významné celkové rozdiely v sodíku v koži ani vo svaloch</strong>, aj keď oba kompartmenty pri nízkosodíkovom dialyzáte skôr klesali.</p>
 
 <h2>Čo ukázali upravené analýzy: koža vs. sval sa „rozdvojili"</h2>
 
 <p>Keď sa analýzy upravili o východiskové hodnoty tkanivového sodíka a <strong>rýchlosť ultrafiltrácie</strong>, obraz sa oddelil medzi kožou a svalom:</p>
 <ul>
-  <li><strong>Nízko-sodíový dialyzát bol spojený s poklesom sodíka v koži</strong>, ale</li>
+  <li><strong>Nízkosodíkový dialyzát bol spojený s poklesom sodíka v koži</strong>, ale</li>
   <li><strong>nebolo preukázané spojenie s poklesom sodíka vo svaloch</strong> v upravených modeloch.</li>
 </ul>
 
@@ -58,7 +58,7 @@ $articles[] = [
 
 <h2>Zápalové a nutričné biomarkery: bez zjavného rozdielu</h2>
 
-<p>Autori sledovali aj systémové ukazovatele – <strong>hsCRP (high-sensitivity C-reactive protein)</strong> a <strong>prealbumín</strong>. Medzi obdobím s nízkosodíovým a vyšším sodíkovým dialyzátom <strong>nevykázali štatisticky významné rozdiely</strong>. To podporuje interpretáciu, že zmena dialyzátovej koncentrácie sama o sebe nemusela vyvolať jasný systémový efekt, aspoň v rámci daného časového horizontu štúdie.</p>
+<p>Autori sledovali aj systémové ukazovatele – <strong>hsCRP (high-sensitivity C-reactive protein)</strong> a <strong>prealbumín</strong>. Medzi obdobím s nízkosodíkovým a vyšším sodíkovým dialyzátom <strong>nevykázali štatisticky významné rozdiely</strong>. To podporuje interpretáciu, že zmena dialyzátovej koncentrácie sama o sebe nemusela vyvolať jasný systémový efekt, aspoň v rámci daného časového horizontu štúdie.</p>
 
 <h2>Bezpečnosť</h2>
 
@@ -68,7 +68,7 @@ $articles[] = [
 
 <p>Táto štúdia prináša tri prakticky zaujímavé posolstvá:</p>
 <ol>
-  <li><strong>Celkový efekt nízkosodíového dialyzátu na tkanivový sodík</strong> (koža aj svaly) <strong>nebol štatisticky jednoznačný</strong> v primárnom porovnaní.</li>
+  <li><strong>Celkový efekt nízkosodíkového dialyzátu na tkanivový sodík</strong> (koža aj svaly) <strong>nebol štatisticky jednoznačný</strong> v primárnom porovnaní.</li>
   <li><strong>Po úprave na východiskové hodnoty a ultrafiltráciu</strong> sa ukázala <strong>aspoň čiastočná súvislosť</strong> s poklesom <strong>kožného</strong> sodíka.</li>
   <li><strong>Ultrafiltrácia</strong> sa javí ako faktor, ktorý môže ovplyvniť tkanivový sodík vo viac než jednom kompartmentu – to posúva pozornosť od samotného dialyzátu k celkovému nastaveniu liečby.</li>
 </ol>
