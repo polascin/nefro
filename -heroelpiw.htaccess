@@ -1,0 +1,96 @@
+# ── Základné bezpečnostné nastavenia ────────────────────────────────────────
+# DÔLEŽITÉ: -FollowSymLinks sa NESMIE používať v .htaccess pokiaľ mod_rewrite
+# beží v rovnakom adresári. mod_rewrite vyžaduje FollowSymLinks alebo
+# SymLinksIfOwnerMatch — bez toho vráti Apache 403 pre každú požiadavku.
+# ServerSignature vyžaduje AllowOverride All — ak server vracia 500, zakomentuj.
+Options -Indexes
+ServerSignature Off
+
+# ── Globálne bezpečnostné HTTP hlavičky ─────────────────────────────────────
+<IfModule mod_headers.c>
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=(), usb=()"
+    Header always unset X-Powered-By
+    Header unset X-Powered-By
+</IfModule>
+
+# ── Blokovanie .git adresára a citlivých súborov ─────────────────────────────
+# DÔLEŽITÉ: <DirectoryMatch> NIE JE povolená v .htaccess (len v httpd.conf).
+# Adresáre blokujeme cez RewriteRule a RedirectMatch (povolené v .htaccess).
+
+# Blokuj súbory začínajúce na .git (napr. .gitignore)
+<FilesMatch "^\.git">
+    Require all denied
+</FilesMatch>
+
+# ── Blokovanie vývojových adresárov cez RewriteRule ─────────────────────────
+# (RedirectMatch/RewriteRule sú v .htaccess povolené)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Blokovanie .git, scratch, hooks, .vscode adresárov
+    RewriteRule ^(\.git|scratch|hooks|\.vscode)(/.*)?$ - [F,L]
+
+    # Rewrite sitemap.xml → sitemap.php
+    RewriteRule ^sitemap\.xml$ sitemap.php [L]
+</IfModule>
+
+# ── Bezpečnostné blokovanie citlivých súborov ──────────────────────────────
+
+# Databázový setup — prístupný iba cez CLI, nie cez web
+<Files "setup_db.php">
+    Require all denied
+</Files>
+<Files "seed_municipalities_sk.php">
+    Require all denied
+</Files>
+<Files "import_municipalities_from_csv.php">
+    Require all denied
+</Files>
+
+# Vývojové a diagnostické skripty
+<Files "query_article.php">
+    Require all denied
+</Files>
+<Files "generate_og_image.php">
+    Require all denied
+</Files>
+<Files "add_search_ft_index.php">
+    Require all denied
+</Files>
+
+# Knižničné PHP súbory — prístupné len ako include, nie priamo cez web
+<FilesMatch "^(db_config|config_loader|auth|phone_utils|calculators_common|header|header_profile|footer|head_meta|calculator_disclaimer|email_verification|mobile_verification)\.php$">
+    Require all denied
+</FilesMatch>
+
+# Konfiguračné súbory
+<Files "*.ini">
+    Require all denied
+</Files>
+<Files "*.env">
+    Require all denied
+</Files>
+
+# Dočasné vývojové JS súbory
+<FilesMatch "^tmp_.*\.js$">
+    Require all denied
+</FilesMatch>
+
+# Archívy a komprimované balíčky
+<FilesMatch "\.(tgz|tar\.gz|bz2|7z)$">
+    Require all denied
+</FilesMatch>
+
+# Vývojové Python skripty
+<FilesMatch "\.py$">
+    Require all denied
+</FilesMatch>
+
+# Extrahované pomocné textové súbory
+<FilesMatch "^(extracted_utf8|pages_70s|pages_detailed|pages_text|extracted_info)\.txt$">
+    Require all denied
+</FilesMatch>
