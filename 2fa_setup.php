@@ -71,8 +71,21 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 $errors[] = "Relačné údaje nastavenia vypršali. Začnite aktiváciu znova.";
             } else {
                 $confirmCode = trim($_POST['totp_confirm_code'] ?? '');
-                if (!verifyTotpCode($_SESSION['2fa_setup_secret'], $confirmCode)) {
+                if (!verifyTotpCode($_SESSION['2fa_setup_secret'], $confirmCode, 2)) {
                     $errors[] = "Nesprávny overovací kód. Skontrolujte čas v aplikácii a skúste znova.";
+                    // Admin diagnostika — pomáha zistiť, či je problém v synchronizácii hodín
+                    if (!empty($_SESSION['is_admin'])) {
+                        $diagKey = totpBase32Decode($_SESSION['2fa_setup_secret']);
+                        if ($diagKey !== false && $diagKey !== '') {
+                            $diagCounter = (int) floor(time() / 30);
+                            $diagCodes = [];
+                            for ($diagW = -2; $diagW <= 2; $diagW++) {
+                                $diagCode = totpComputeCode($diagKey, $diagCounter + $diagW);
+                                $diagCodes[] = ($diagW === 0) ? "[{$diagCode}]" : $diagCode;
+                            }
+                            $errors[] = "[Diagnostika] Server: " . date('H:i:s T') . " | Akceptované kódy: " . implode('  ', $diagCodes) . " (stredný = aktuálny)";
+                        }
+                    }
                 } else {
                     // Kód je správny — ulož tajný kľúč a záložné kódy
                     $backup   = generateBackupCodes();
@@ -231,20 +244,38 @@ $totpUri = $pendingSecret ? getTotpUri($pendingSecret, (string) ($user['email'] 
           <p>Pridajte tento kľúč do vašej autentifikačnej aplikácie (Google Authenticator, Authy, Bitwarden, Microsoft Authenticator a pod.), potom zadajte prvý vygenerovaný kód.</p>
 
           <div class="form-section" style="background:var(--bg-secondary);border-radius:8px;padding:1rem 1.25rem;margin-bottom:1.25rem;">
-            <p class="avatar-upload-hint" style="margin-bottom:.5rem;">Tajný kľúč (manuálne zadanie do aplikácie):</p>
-            <div style="display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;">
-              <code id="totp-secret-display" style="font-size:1.1rem;letter-spacing:.12em;word-break:break-all;background:var(--code-bg);padding:.4rem .75rem;border-radius:6px;border:1px solid var(--code-border);"><?= htmlspecialchars(formatTotpSecret($pendingSecret)) ?></code>
-              <button type="button" id="copy-secret-btn" class="btn-secondary" style="white-space:nowrap;">Kopírovať kľúč</button>
+            <div style="display:flex;gap:1.5rem;flex-wrap:wrap;align-items:flex-start;">
+              <div>
+                <p class="avatar-upload-hint" style="margin-bottom:.5rem;">Naskenujte QR kód aplikáciou:</p>
+                <div id="totp-qr" style="background:#fff;padding:8px;display:inline-block;border-radius:6px;border:1px solid var(--code-border);"></div>
+                <p class="avatar-upload-hint" style="margin-top:.5rem;font-size:.8rem;">
+                  Na mobile môžete tiež <a href="<?= htmlspecialchars($totpUri) ?>">otvoriť priamo v aplikácii</a>.
+                </p>
+              </div>
+              <div style="flex:1;min-width:220px;">
+                <p class="avatar-upload-hint" style="margin-bottom:.5rem;">Alebo zadajte kľúč ručne:</p>
+                <code id="totp-secret-display" style="font-size:1rem;letter-spacing:.12em;word-break:break-all;background:var(--code-bg);padding:.4rem .75rem;border-radius:6px;border:1px solid var(--code-border);display:block;"><?= htmlspecialchars(formatTotpSecret($pendingSecret)) ?></code>
+                <button type="button" id="copy-secret-btn" class="btn-secondary" style="margin-top:.5rem;white-space:nowrap;">Kopírovať kľúč</button>
+                <p class="avatar-upload-hint" style="margin-top:.75rem;">
+                  V aplikácii zvoľte <em>„Pridať účet → Zadať kód ručne"</em> a vložte kľúč bez medzier.
+                </p>
+              </div>
             </div>
-            <p class="avatar-upload-hint" style="margin-top:.75rem;">
-              Na mobilnom zariadení môžete kliknúť:
-              <a href="<?= htmlspecialchars($totpUri) ?>">Otvoriť v autentifikátore</a>
-            </p>
-            <p class="avatar-upload-hint" style="margin-top:.5rem;">
-              Väčšina autentifikačných aplikácií umožňuje ručné pridanie kódu cez menu
-              <em>„Pridať účet → Zadať kód ručne"</em>. Zadajte vyššie zobrazený tajný kľúč.
-            </p>
           </div>
+          <script nonce="<?= htmlspecialchars($nonce ?? '') ?>" src="/assets/qrcode.min.js"></script>
+          <script nonce="<?= htmlspecialchars($nonce ?? '') ?>">
+            (function() {
+              var el = document.getElementById('totp-qr');
+              if (el && typeof QRCode !== 'undefined') {
+                new QRCode(el, {
+                  text: <?= json_encode($totpUri) ?>,
+                  width: 180, height: 180,
+                  colorDark: '#000000', colorLight: '#ffffff',
+                  correctLevel: QRCode.CorrectLevel.M
+                });
+              }
+            })();
+          </script>
 
           <form method="POST" action="2fa_setup.php">
             <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
