@@ -50,6 +50,9 @@ function sendSecurityHeaders(): void {
     header('Content-Security-Policy-Report-Only: ' . $cspRO);
 }
 
+// Kontrola idle timeout a GC – konštanta musí byť definovaná pred prvým použitím
+const SESSION_IDLE_TIMEOUT = 3600;
+
 // Zabezpečené nastavenia relácie
 ini_set('session.cookie_httponly', 1);
 ini_set('session.use_only_cookies', 1);
@@ -82,7 +85,6 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 
 // Kontrola idle timeout: ak bol používateľ prihlásený a 1 hodinu nebol aktívny, odhlásiť ho.
-const SESSION_IDLE_TIMEOUT = 3600;
 if (!empty($_SESSION['user_id'])) {
     $now = time();
     if (isset($_SESSION['_last_activity']) && ($now - $_SESSION['_last_activity']) > SESSION_IDLE_TIMEOUT) {
