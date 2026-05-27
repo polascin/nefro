@@ -36,19 +36,18 @@ $backupCodes    = is_array($backupCodesRaw) ? $backupCodesRaw : [];
 // Nový tajný kľúč pre aktiváciu — uložený v session počas nastavenia
 $pendingSecret = $_SESSION['2fa_setup_secret'] ?? null;
 
-// Novo vygenerované záložné kódy na zobrazenie (len raz po aktivácii)
-$newPlainBackupCodes = $_SESSION['2fa_new_backup_codes'] ?? null;
-if ($newPlainBackupCodes !== null) {
-    unset($_SESSION['2fa_new_backup_codes']); // Jednorazové zobrazenie
-}
-
 // ── Spracovanie POST akcií ────────────────────────────────────────────────────
+// CSRF kontrola ide ako prvá — pred načítaním záložných kódov zo session.
+// Ak CSRF zlyhá, presmerujeme cez PRG; záložné kódy ostanú v session a zobrazia
+// sa používateľovi správne po presmerovaní na GET, nie zmätene vedľa chybovej hlášky.
 if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
     $postedCsrfToken = $_POST['csrf_token'] ?? '';
     $action          = $_POST['action'] ?? '';
 
     if (!validateCsrfToken($postedCsrfToken)) {
-        $errors[] = "Neplatný CSRF token. Skúste to znova.";
+        setFlashMessage('error', 'Neplatný CSRF token. Skúste stránku obnoviť a akciu zopakovať.');
+        header("Location: 2fa_setup.php");
+        exit;
     } else {
 
         // ── Krok 1: Začať aktiváciu — vygeneruj tajný kľúč ─────────────────
@@ -175,6 +174,13 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
             }
         }
     }
+}
+
+// Novo vygenerované záložné kódy na zobrazenie (len raz po aktivácii).
+// Načítavame až tu — po POST bloku — aby ich CSRF redirect nesmazal skôr, než sa zobrazia.
+$newPlainBackupCodes = $_SESSION['2fa_new_backup_codes'] ?? null;
+if ($newPlainBackupCodes !== null) {
+    unset($_SESSION['2fa_new_backup_codes']);
 }
 
 // Otpauth URI pre manuálne pridanie do autentifikátora

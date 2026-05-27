@@ -94,7 +94,7 @@ if ($showUnverifiedNotice && !empty($_SESSION['email'])) {
 
 <?php if (is_array($flash) && !empty($flash['message'])): ?>
     <div class="container">
-        <div class="alert <?= (($flash['type'] ?? '') === 'warning') ? 'alert-error' : 'alert-success' ?>">
+        <div class="alert <?= in_array(($flash['type'] ?? ''), ['error', 'warning'], true) ? 'alert-error' : 'alert-success' ?>">
             <p><?= htmlspecialchars((string) $flash['message']) ?></p>
         </div>
     </div>
