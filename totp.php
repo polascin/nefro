@@ -41,6 +41,34 @@ function verifyTotpCode(string $secret, string $code, int $window = 1): bool
 }
 
 /**
+ * Overí TOTP kód a vráti matched counter (int) alebo false.
+ * Používa sa na replay ochranu — uložte counter do DB a odmietajte nižšie alebo rovnaké hodnoty.
+ *
+ * @param string $secret  Base32-kódovaný tajný kľúč
+ * @param string $code    6-ciferný kód od používateľa
+ * @param int    $window  Počet intervalov (každý 30 s) na každú stranu
+ * @return int|false  Matched counter alebo false ak kód neplatí
+ */
+function verifyTotpCodeGetCounter(string $secret, string $code, int $window = 1): int|false
+{
+    $code = preg_replace('/\s+/', '', $code);
+    if (!preg_match('/^\d{6}$/', $code)) {
+        return false;
+    }
+    $key = totpBase32Decode($secret);
+    if ($key === false || $key === '') {
+        return false;
+    }
+    $counter = (int) floor(time() / 30);
+    for ($i = -$window; $i <= $window; $i++) {
+        if (hash_equals(totpComputeCode($key, $counter + $i), $code)) {
+            return $counter + $i;
+        }
+    }
+    return false;
+}
+
+/**
  * Vráti otpauth:// URI pre zobrazenie QR kódu alebo manuálne pridanie.
  */
 function getTotpUri(string $secret, string $accountName, string $issuer): string

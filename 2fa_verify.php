@@ -37,7 +37,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
         try {
             $stmt = $pdo->prepare(
                 "SELECT id, email, username, is_admin, is_active, email_verified_at,
-                        totp_secret, totp_enabled, totp_backup_codes, password_hash
+                        totp_secret, totp_enabled, totp_backup_codes, totp_last_counter, password_hash
                  FROM users WHERE id = :id"
             );
             $stmt->execute(['id' => $pendingUserId]);
@@ -98,8 +98,17 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 $backupOk = false;
 
                 // Skús TOTP (window=2 = tolerancia ±60 s pre prípadnú odchýlku hodín)
-                if (verifyTotpCode((string) $user['totp_secret'], $inputCode, 2)) {
+                // Replay ochrana: akceptujeme len counter > naposledy použitého
+                $matchedCounter = verifyTotpCodeGetCounter((string) $user['totp_secret'], $inputCode, 2);
+                $lastCounter    = isset($user['totp_last_counter']) ? (int) $user['totp_last_counter'] : -1;
+                if ($matchedCounter !== false && $matchedCounter > $lastCounter) {
                     $totpOk = true;
+                    try {
+                        $pdo->prepare("UPDATE users SET totp_last_counter = :c WHERE id = :id")
+                            ->execute(['c' => $matchedCounter, 'id' => $pendingUserId]);
+                    } catch (\PDOException $e) {
+                        error_log("2fa_verify: chyba pri ukladaní totp_last_counter: " . $e->getMessage());
+                    }
                 }
 
                 // Skús záložný kód (ak TOTP nezostal)

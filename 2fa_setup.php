@@ -70,8 +70,9 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
             } elseif (empty($_SESSION['2fa_setup_secret'])) {
                 $errors[] = "Relačné údaje nastavenia vypršali. Začnite aktiváciu znova.";
             } else {
-                $confirmCode = trim($_POST['totp_confirm_code'] ?? '');
-                if (!verifyTotpCode($_SESSION['2fa_setup_secret'], $confirmCode, 2)) {
+                $confirmCode    = trim($_POST['totp_confirm_code'] ?? '');
+                $matchedCounter = verifyTotpCodeGetCounter($_SESSION['2fa_setup_secret'], $confirmCode, 2);
+                if ($matchedCounter === false) {
                     $errors[] = "Nesprávny overovací kód. Skontrolujte čas v aplikácii a skúste znova.";
                     // Admin diagnostika — pomáha zistiť, či je problém v synchronizácii hodín
                     if (!empty($_SESSION['is_admin'])) {
@@ -87,16 +88,17 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                         }
                     }
                 } else {
-                    // Kód je správny — ulož tajný kľúč a záložné kódy
-                    $backup   = generateBackupCodes();
+                    // Kód je správny — ulož tajný kľúč, záložné kódy a počiatočný counter
+                    $backup       = generateBackupCodes();
                     $secretToSave = $_SESSION['2fa_setup_secret'];
                     try {
                         $pdo->prepare(
-                            "UPDATE users SET totp_secret = :secret, totp_enabled = 1, totp_backup_codes = :codes WHERE id = :id"
+                            "UPDATE users SET totp_secret = :secret, totp_enabled = 1, totp_backup_codes = :codes, totp_last_counter = :counter WHERE id = :id"
                         )->execute([
-                            'secret' => $secretToSave,
-                            'codes'  => json_encode($backup['hashed'], JSON_UNESCAPED_UNICODE),
-                            'id'     => $userId,
+                            'secret'  => $secretToSave,
+                            'codes'   => json_encode($backup['hashed'], JSON_UNESCAPED_UNICODE),
+                            'counter' => $matchedCounter,
+                            'id'      => $userId,
                         ]);
                         unset($_SESSION['2fa_setup_secret']);
                         $pendingSecret = null;
@@ -262,8 +264,8 @@ $totpUri = $pendingSecret ? getTotpUri($pendingSecret, (string) ($user['email'] 
               </div>
             </div>
           </div>
-          <script nonce="<?= htmlspecialchars($nonce ?? '') ?>" src="/assets/qrcode.min.js"></script>
-          <script nonce="<?= htmlspecialchars($nonce ?? '') ?>">
+          <script src="/assets/qrcode.min.js?v=<?= filemtime(__DIR__ . '/assets/qrcode.min.js') ?>"></script>
+          <script nonce="<?= htmlspecialchars(getScriptNonce()) ?>">
             (function() {
               var el = document.getElementById('totp-qr');
               if (el && typeof QRCode !== 'undefined') {
