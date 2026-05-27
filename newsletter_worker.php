@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 if (php_sapi_name() !== 'cli') {
     http_response_code(403);
