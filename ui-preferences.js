@@ -30,34 +30,34 @@ function getCookieSync(name) {
 // Synchrónne načítanie súhlasu z localStorage alebo cookie pred inicializáciou GA4.
 // Overuje verziu — pri nezhode vráti null (vynúti zobrazenie bannera).
 function readStoredConsentSync() {
+    let consent = null;
     try {
         const fromLocalStorage = localStorage.getItem(consentKey);
         if (fromLocalStorage) {
             const parsed = JSON.parse(fromLocalStorage);
             // Verzia sa musí zhodovať s aktuálnou consentVersion
             if (parsed && parsed.version === consentVersion) {
-                return parsed;
+                consent = parsed;
             }
-            // Stará verzia — súhlas je neplatný, banner sa zobrazí znova
-            return null;
         }
     } catch (e) {
         // Ignorovať chyby localStorage
     }
 
-    const cookieVal = getCookieSync(consentKey);
-    if (cookieVal) {
-        try {
-            const parsed = JSON.parse(cookieVal);
-            if (parsed && parsed.version === consentVersion) {
-                return parsed;
+    if (!consent) {
+        const cookieVal = getCookieSync(consentKey);
+        if (cookieVal) {
+            try {
+                const parsed = JSON.parse(cookieVal);
+                if (parsed && parsed.version === consentVersion) {
+                    consent = parsed;
+                }
+            } catch (e) {
+                // Ignorovať chyby
             }
-            return null;
-        } catch (e) {
-            return null;
         }
     }
-    return null;
+    return consent;
 }
 
 const initialConsent = readStoredConsentSync() || defaultSettings;
@@ -79,6 +79,9 @@ try {
     const gtagScript = document.createElement('script');
     gtagScript.async = true;
     gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-0JT5VMQ61K";
+    gtagScript.onerror = function() {
+        console.warn("NPS Privacy Manager: GA4 script bol zablokovaný (pravdepodobne blokovačom reklám alebo nastala chyba siete).");
+    };
     document.head.appendChild(gtagScript);
 
     gtag('js', new Date());
