@@ -9,7 +9,10 @@ $message = 'Neplatný alebo expirovaný overovací odkaz.';
 if ($token !== '') {
     try {
         $stmt = $pdo->prepare(
-            "SELECT id, email, verified_at FROM newsletter_subscribers WHERE verify_token = :token LIMIT 1"
+            "SELECT id, email, verified_at FROM newsletter_subscribers
+             WHERE verify_token = :token
+               AND updated_at >= DATE_SUB(NOW(), INTERVAL 7 DAY)
+             LIMIT 1"
         );
         $stmt->execute(['token' => $token]);
         $sub = $stmt->fetch();
@@ -54,7 +57,7 @@ $pageClass = $status === 'success' ? 'alert-success' : 'alert-error';
   <main class="container">
     <div class="auth-container">
       <h2>Odber noviniek</h2>
-      <div class="alert <?= $pageClass ?>">
+      <div class="alert <?= htmlspecialchars($pageClass, ENT_QUOTES) ?>">
         <p><?= htmlspecialchars($message) ?></p>
       </div>
       <div class="auth-links auth-links--spaced">

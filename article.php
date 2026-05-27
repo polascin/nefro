@@ -639,6 +639,8 @@ if ($article) {
         })
         .then(function (r) { return r.json(); })
         .then(function (data) {
+          // innerHTML je zámerné: jedna zo správ obsahuje <a> odkaz (registered user flow).
+          // Invariant: server NIKDY nevkladá user-supplied dáta do poľa message.
           msg.innerHTML = data.message || '';
           msg.hidden    = false;
           if (data.success) {

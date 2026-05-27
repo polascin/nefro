@@ -127,7 +127,7 @@ $pageClass = $status === 'success' ? 'alert-success' : 'alert-error';
     <main class="container">
         <div class="auth-container">
             <h2>Odhlásenie odberu noviniek</h2>
-            <div class="alert <?= $pageClass ?>">
+            <div class="alert <?= htmlspecialchars($pageClass, ENT_QUOTES) ?>">
                 <p><?= htmlspecialchars($message) ?></p>
             </div>
             <div class="auth-links auth-links--spaced">
