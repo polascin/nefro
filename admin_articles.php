@@ -468,6 +468,37 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
                 }
                 break;
 
+            // ── NEWSLETTER: ZMAZAŤ ČAKAJÚCE ─────────────────────────────
+            case "delete_pending_newsletter":
+                $articleId = (int) ($_POST["article_id"] ?? 0);
+                try {
+                    if ($articleId > 0) {
+                        $delStmt = $pdo->prepare(
+                            "DELETE FROM article_newsletter_queue WHERE status = 'pending' AND article_id = :article_id",
+                        );
+                        $delStmt->execute(["article_id" => $articleId]);
+                    } else {
+                        $delStmt = $pdo->prepare(
+                            "DELETE FROM article_newsletter_queue WHERE status = 'pending'",
+                        );
+                        $delStmt->execute();
+                    }
+                    $deletedCount = $delStmt->rowCount();
+                    $actionResult =
+                        "Zmazaných " .
+                        $deletedCount .
+                        " čakajúcich avíz" .
+                        ($articleId > 0 ? " pre daný článok" : "") .
+                        ".";
+                } catch (\PDOException $e) {
+                    error_log(
+                        "admin_articles delete_pending_newsletter error: " .
+                            $e->getMessage(),
+                    );
+                    $actionError = "Chyba pri mazaní čakajúcich avíz.";
+                }
+                break;
+
             // ── TOP TOGGLE ───────────────────────────────────────────────
             case "set_top":
                 $id = (int) ($_POST["article_id"] ?? 0);
@@ -990,6 +1021,19 @@ $filterArticleId
             <input type="hidden" name="action" value="send_newsletter_queue">
             <input type="hidden" name="send_limit" value="50">
             <button type="submit" class="btn-secondary-small" title="Odoslať položky z fronty, ktoré sú pripravené na odoslanie">Odoslať</button>
+          </form>
+          <form method="POST" action="admin_articles.php" class="d-inline ml-8"
+                data-confirm="Naozaj chcete natrvalo zmazať všetky čakajúce avíza<?= $queueFilterArticleId > 0 ? ' pre tento článok' : '' ?>?">
+            <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(
+                $csrfToken,
+            ) ?>">
+            <input type="hidden" name="action" value="delete_pending_newsletter">
+            <?php if ($queueFilterArticleId > 0): ?>
+              <input type="hidden" name="article_id" value="<?= $queueFilterArticleId ?>">
+            <?php endif; ?>
+            <button type="submit" class="btn-secondary-small btn-danger-sm"
+                    title="Natrvalo zmazať čakajúce avíza<?= $queueFilterArticleId > 0 ? ' pre daný článok' : '' ?>"
+                    <?= (int) ($queueSummary["pending"] ?? 0) === 0 ? 'disabled' : '' ?>>Zmazať čakajúce</button>
           </form>
         </div>
 

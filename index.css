@@ -4044,6 +4044,41 @@ input:disabled + .slider:before {
     color: #fff;
 }
 
+/* Malé nebezpečné tlačidlo (admin akcie mazania) */
+.btn-danger-sm {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 14px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #ef4444;
+    background: transparent;
+    border: 1px solid #ef4444;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    min-height: 44px;
+    transition:
+        background 0.2s,
+        color 0.2s;
+}
+.btn-danger-sm:hover {
+    background: #ef4444;
+    color: #fff;
+}
+.btn-danger-sm:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+[data-theme="dark"] .btn-danger-sm {
+    color: #f87171;
+    border-color: #f87171;
+}
+[data-theme="dark"] .btn-danger-sm:hover {
+    background: #ef4444;
+    color: #fff;
+}
+
 /* Sekcia nadpis inline (v div.primary-article) */
 .articles-list-section .primary-article h2 {
     margin-bottom: 20px;
