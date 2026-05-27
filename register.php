@@ -805,7 +805,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 
                     <div class="form-check">
                         <input type="checkbox" id="newsletter_consent" name="newsletter_consent" value="1" <?= isset($_POST['newsletter_consent']) ? 'checked' : '' ?>>
-                        <label for="newsletter_consent">Súhlasím so zasielaním noviniek</label>
+                        <label for="newsletter_consent">Chcem dostávať nové odborné články priamo do e-mailu (bezplatný odber, odhlásite sa kedykoľvek)</label>
                     </div>
 
                     <div class="form-actions">

@@ -119,8 +119,20 @@ if (!function_exists('enqueueArticleNewsletterEmails')) {
 
         $stmt = $pdo->prepare($insertSql);
         $stmt->execute(['article_id' => $articleId]);
+        $userCount = (int) $stmt->rowCount();
 
-        return (int) $stmt->rowCount();
+        // Anonymní odberatelia (newsletter_subscribers)
+        $subInsertSql = "INSERT IGNORE INTO nl_sub_queue (article_id, subscriber_id, email, status, next_attempt_at)
+            SELECT :article_id, s.id, s.email, 'pending', NOW()
+            FROM newsletter_subscribers s
+            WHERE s.verified_at IS NOT NULL
+              AND s.unsubscribed_at IS NULL
+              AND s.email IS NOT NULL
+              AND s.email <> ''";
+        $subStmt = $pdo->prepare($subInsertSql);
+        $subStmt->execute(['article_id' => $articleId]);
+
+        return $userCount + (int) $subStmt->rowCount();
     }
 }
 
@@ -342,6 +354,158 @@ if (!function_exists('getNewsletterQueueRecent')) {
         $stmt->bindValue(':limit_rows', $limit, PDO::PARAM_INT);
         $stmt->execute();
         return $stmt->fetchAll();
+    }
+}
+
+if (!function_exists('buildSubscriberUnsubscribeUrl')) {
+    function buildSubscriberUnsubscribeUrl(int $subscriberId, string $unsubToken): string
+    {
+        return getAppBaseUrl() . '/newsletter_unsubscribe.php?sub=' . urlencode((string) $subscriberId)
+            . '&token=' . urlencode($unsubToken);
+    }
+}
+
+if (!function_exists('sendSubscriberVerifyEmail')) {
+    function sendSubscriberVerifyEmail(string $email, string $verifyToken): bool
+    {
+        $verifyUrl     = getAppBaseUrl() . '/newsletter_verify_sub.php?token=' . urlencode($verifyToken);
+        $subject       = 'Potvrďte odber noviniek - Nefro-projekt Slovensko';
+        $verifyUrlHtml = htmlspecialchars($verifyUrl, ENT_QUOTES | ENT_HTML5, 'UTF-8');
+
+        $body = '<p style="margin:0 0 16px;">Dobrý deň,</p>'
+            . '<p style="margin:0 0 16px;">Požiadali ste o odber noviniek z webu Nefro-projekt Slovensko.</p>'
+            . '<p style="margin:0 0 16px;">Kliknite na tlačidlo nižšie a potvrďte svoju e-mailovú adresu:</p>'
+            . '<p style="margin:0 0 24px;"><a href="' . $verifyUrlHtml . '" style="display:inline-block;padding:12px 20px;background:#0055a5;color:#ffffff;border-radius:8px;text-decoration:none;font-weight:600;">Potvrdiť odber</a></p>'
+            . '<p style="margin:0 0 16px;color:#475569;font-size:13px;">Ak ste o odber nepožiadali, tento e-mail ignorujte. Odkaz vyprší po 7 dňoch.</p>'
+            . '<p style="margin:0 0 16px;color:#475569;font-size:13px;">Priamy odkaz: <a href="' . $verifyUrlHtml . '" style="color:#1d4ed8;">' . $verifyUrlHtml . '</a></p>';
+
+        $message = renderEmailHtmlLayout($body, 'Potvrdiť odber', $verifyUrl);
+        $cfg     = getEmailEnvConfig();
+        $sent    = sendViaSmtp($email, $subject, $message, $cfg, 'text/html; charset=UTF-8');
+
+        if (!$sent) {
+            $fallbackFrom     = $cfg['from_email'] !== '' ? $cfg['from_email'] : 'no-reply@nefro.polascin.net';
+            $fallbackFromName = mb_encode_mimeheader($cfg['from_name'] ?: 'Nefro-projekt', 'UTF-8', 'B', "\r\n ");
+            $headers = [
+                'MIME-Version: 1.0',
+                'Content-Type: text/html; charset=UTF-8',
+                'From: ' . $fallbackFromName . ' <' . $fallbackFrom . '>',
+            ];
+            $sent = @mail($email, mb_encode_mimeheader($subject, 'UTF-8', 'B', "\r\n "), $message, implode("\r\n", $headers));
+        }
+
+        return $sent;
+    }
+}
+
+if (!function_exists('processNlSubQueue')) {
+    function processNlSubQueue(PDO $pdo, int $limit = 50, int $maxAttempts = 5): array
+    {
+        $limit       = max(1, min(500, $limit));
+        $maxAttempts = max(1, min(20, $maxAttempts));
+
+        $stats = ['selected' => 0, 'sent' => 0, 'failed' => 0, 'cancelled' => 0, 'skipped' => 0];
+
+        $selectStmt = $pdo->prepare("SELECT id FROM nl_sub_queue
+            WHERE status IN ('pending','failed')
+              AND attempts < :max_attempts
+              AND next_attempt_at <= NOW()
+              AND sent_at IS NULL
+            ORDER BY next_attempt_at ASC, id ASC
+            LIMIT :limit_rows");
+        $selectStmt->bindValue(':max_attempts', $maxAttempts, PDO::PARAM_INT);
+        $selectStmt->bindValue(':limit_rows', $limit, PDO::PARAM_INT);
+        $selectStmt->execute();
+        $ids                = $selectStmt->fetchAll(PDO::FETCH_COLUMN);
+        $stats['selected']  = count($ids);
+
+        $itemStmt = $pdo->prepare("SELECT q.id, q.article_id, q.subscriber_id, q.email, q.attempts,
+                a.title, a.slug, a.excerpt, a.is_published,
+                s.verified_at, s.unsubscribed_at, s.unsub_token
+            FROM nl_sub_queue q
+            LEFT JOIN articles a ON a.id = q.article_id
+            LEFT JOIN newsletter_subscribers s ON s.id = q.subscriber_id
+            WHERE q.id = :id LIMIT 1");
+
+        $cancelStmt = $pdo->prepare("UPDATE nl_sub_queue SET status='cancelled', next_attempt_at=NOW(), last_error=:reason WHERE id=:id AND sent_at IS NULL");
+        $failStmt   = $pdo->prepare("UPDATE nl_sub_queue SET status='failed', attempts=:attempts, next_attempt_at=:next_attempt_at, last_error=:last_error WHERE id=:id AND sent_at IS NULL");
+        $successStmt = $pdo->prepare("UPDATE nl_sub_queue SET status='sent', attempts=attempts+1, sent_at=NOW(), last_error=NULL WHERE id=:id AND sent_at IS NULL");
+
+        foreach ($ids as $queueIdRaw) {
+            $queueId = (int) $queueIdRaw;
+            if ($queueId <= 0) { $stats['skipped']++; continue; }
+
+            $itemStmt->execute(['id' => $queueId]);
+            $item = $itemStmt->fetch();
+            if (!$item) { $stats['skipped']++; continue; }
+
+            $cancelReason = null;
+            if (empty($item['title']) || (int) ($item['is_published'] ?? 0) !== 1) {
+                $cancelReason = 'Článok nie je publikovaný alebo už neexistuje.';
+            } elseif ($item['verified_at'] === null) {
+                $cancelReason = 'E-mail odberateľa nie je overený.';
+            } elseif ($item['unsubscribed_at'] !== null) {
+                $cancelReason = 'Odberateľ sa odhlásil z noviniek.';
+            }
+
+            if ($cancelReason !== null) {
+                $cancelStmt->execute(['id' => $queueId, 'reason' => $cancelReason]);
+                $stats['cancelled']++;
+                continue;
+            }
+
+            $recipientEmail = trim((string) ($item['email'] ?? ''));
+            if ($recipientEmail === '' || !filter_var($recipientEmail, FILTER_VALIDATE_EMAIL)) {
+                $failAttempt    = (int) ($item['attempts'] ?? 0) + 1;
+                $nextAttemptAt  = date('Y-m-d H:i:s', time() + min(3600, (int) pow(2, min($failAttempt, 10)) * 60));
+                $failStmt->execute(['id' => $queueId, 'attempts' => $failAttempt, 'next_attempt_at' => $nextAttemptAt, 'last_error' => 'Neplatný e-mail.']);
+                $stats['failed']++;
+                continue;
+            }
+
+            $unsubscribeUrl     = buildSubscriberUnsubscribeUrl((int) $item['subscriber_id'], (string) $item['unsub_token']);
+            $articleUrl         = getAppBaseUrl() . '/article.php?slug=' . urlencode((string) ($item['slug'] ?? ''));
+            $subject            = 'Nový článok: ' . (string) $item['title'] . ' - Nefro-projekt Slovensko';
+            $titleHtml          = htmlspecialchars((string) $item['title'], ENT_QUOTES | ENT_HTML5, 'UTF-8');
+            $articleUrlEsc      = htmlspecialchars($articleUrl, ENT_QUOTES | ENT_HTML5, 'UTF-8');
+            $unsubscribeUrlEsc  = htmlspecialchars($unsubscribeUrl, ENT_QUOTES | ENT_HTML5, 'UTF-8');
+            $excerpt            = mb_substr(trim(strip_tags((string) ($item['excerpt'] ?? ''))), 0, 320);
+            $excerptHtml        = $excerpt !== ''
+                ? '<p><strong>Perex:</strong><br>' . nl2br(htmlspecialchars($excerpt, ENT_QUOTES | ENT_HTML5, 'UTF-8')) . '</p>'
+                : '';
+
+            $messageBody = '<p style="margin:0 0 16px;">Dobrý deň,</p>'
+                . '<p style="margin:0 0 16px;">Bol publikovaný nový článok na Nefro-projekt Slovensko.</p>'
+                . '<h2 style="margin:0 0 16px;font-size:20px;color:#0f172a;">' . $titleHtml . '</h2>'
+                . '<p style="margin:0 0 16px;"><a href="' . $articleUrlEsc . '" style="color:#1d4ed8;text-decoration:none;font-weight:600;">Prečítajte si článok</a></p>'
+                . $excerptHtml
+                . '<p style="margin:24px 0 16px;color:#475569;line-height:22px;">Tento e-mail ste dostali, pretože ste prihlásení na odber noviniek.<br>'
+                . 'Ak už nechcete dostávať novinky, odhláste sa jedným klikom:<br>'
+                . '<a href="' . $unsubscribeUrlEsc . '" style="color:#1d4ed8;text-decoration:underline;">Odhlásiť sa</a></p>';
+
+            $message = renderEmailHtmlLayout($messageBody, 'Zobraziť článok', $articleUrl);
+            $cfg     = getEmailEnvConfig();
+            $sent    = sendViaSmtp($recipientEmail, $subject, $message, $cfg, 'text/html; charset=UTF-8');
+
+            if (!$sent) {
+                $fallbackFrom     = $cfg['from_email'] !== '' ? $cfg['from_email'] : 'no-reply@nefro.polascin.net';
+                $fallbackFromName = mb_encode_mimeheader($cfg['from_name'] ?: 'Nefro-projekt', 'UTF-8', 'B', "\r\n ");
+                $headers = ['MIME-Version: 1.0', 'Content-Type: text/html; charset=UTF-8', 'From: ' . $fallbackFromName . ' <' . $fallbackFrom . '>'];
+                $sent    = @mail($recipientEmail, mb_encode_mimeheader($subject, 'UTF-8', 'B', "\r\n "), $message, implode("\r\n", $headers));
+            }
+
+            if ($sent) {
+                $successStmt->execute(['id' => $queueId]);
+                $stats['sent']++;
+            } else {
+                $failAttempt   = (int) ($item['attempts'] ?? 0) + 1;
+                $nextAttemptAt = date('Y-m-d H:i:s', time() + min(3600, (int) pow(2, min($failAttempt, 10)) * 60));
+                $failStmt->execute(['id' => $queueId, 'attempts' => $failAttempt, 'next_attempt_at' => $nextAttemptAt, 'last_error' => 'SMTP zlyhalo.']);
+                $stats['failed']++;
+            }
+        }
+
+        return $stats;
     }
 }
 

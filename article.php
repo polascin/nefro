@@ -326,6 +326,19 @@ if ($article) {
           </footer>
         </article>
 
+        <div class="newsletter-cta-inline" id="nl-cta-inline">
+          <div class="newsletter-cta__inner">
+            <h3 class="newsletter-cta__title">Dostávajte nové odborné články priamo do e-mailu</h3>
+            <p class="newsletter-cta__desc">Bezplatný odber. Odhlásite sa kedykoľvek jedným klikom.</p>
+            <form class="newsletter-cta__form" id="nl-form-inline" novalidate>
+              <input type="text" name="website" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
+              <input type="email" name="email" placeholder="váš@email.sk" class="form-control newsletter-cta__input" required aria-label="Vaša e-mailová adresa">
+              <button type="submit" class="btn-primary newsletter-cta__btn">Prihlásiť na odber</button>
+            </form>
+            <div class="newsletter-cta__msg" id="nl-msg-inline" hidden role="status"></div>
+          </div>
+        </div>
+
         <nav class="article-nav" aria-label="Navigácia článkov">
           <a href="index.php" class="btn-secondary-small">← Späť na zoznam článkov</a>
         </nav>
@@ -389,6 +402,17 @@ if ($article) {
         <?php endif; ?>
         <a href="index.php" class="btn-primary article-back-link">Všetky články</a>
       </div>
+      <div class="widget newsletter-widget">
+        <h3>Odber noviniek</h3>
+        <p>Dostávajte nové odborné články priamo do e-mailu — zadarmo.</p>
+        <form class="newsletter-cta__form" id="nl-form-sidebar" novalidate>
+          <input type="text" name="website" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
+          <input type="email" name="email" placeholder="váš@email.sk" class="form-control" required aria-label="Vaša e-mailová adresa">
+          <button type="submit" class="btn-primary" style="width:100%;margin-top:10px;">Prihlásiť na odber</button>
+        </form>
+        <div id="nl-msg-sidebar" hidden role="status" style="margin-top:10px;font-size:0.9rem;"></div>
+      </div>
+
       <div class="widget">
         <h3>Užitočné odkazy</h3>
         <ul>
@@ -592,6 +616,50 @@ if ($article) {
       </div>
     </aside>
   </main>
+
+  <script>
+  (function () {
+    function initNlForm(formId, msgId) {
+      var form = document.getElementById(formId);
+      var msg  = document.getElementById(msgId);
+      if (!form || !msg) return;
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var emailInput = form.querySelector('input[type="email"]');
+        var btn        = form.querySelector('button[type="submit"]');
+        var email      = emailInput ? emailInput.value.trim() : '';
+        if (!email) return;
+        btn.disabled    = true;
+        btn.textContent = 'Odosielam…';
+        fetch('newsletter_subscribe.php', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: 'email=' + encodeURIComponent(email)
+                + '&website=' + encodeURIComponent(form.querySelector('input[name="website"]') ? form.querySelector('input[name="website"]').value : '')
+        })
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          msg.innerHTML = data.message || '';
+          msg.hidden    = false;
+          if (data.success) {
+            form.hidden = true;
+          } else {
+            btn.disabled    = false;
+            btn.textContent = 'Prihlásiť na odber';
+          }
+        })
+        .catch(function () {
+          msg.textContent = 'Nastala chyba. Skúste to neskôr.';
+          msg.hidden      = false;
+          btn.disabled    = false;
+          btn.textContent = 'Prihlásiť na odber';
+        });
+      });
+    }
+    initNlForm('nl-form-inline',  'nl-msg-inline');
+    initNlForm('nl-form-sidebar', 'nl-msg-sidebar');
+  })();
+  </script>
 
   <?php include "footer.php"; ?>
 </body>

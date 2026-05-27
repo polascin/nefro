@@ -25,13 +25,21 @@ $maxAttempts = max(1, min(20, $maxAttempts));
 
 try {
     $stats = processArticleNewsletterQueue($pdo, $limit, $maxAttempts);
+    $subStats = processNlSubQueue($pdo, $limit, $maxAttempts);
 
     echo "Newsletter worker dokončený.\n";
+    echo "\n-- Registrovaní používatelia --\n";
     echo "Vybrané z fronty: " . (int) ($stats['selected'] ?? 0) . "\n";
     echo "Odoslané e-maily: " . (int) ($stats['sent'] ?? 0) . "\n";
     echo "Zlyhané pokusy: " . (int) ($stats['failed'] ?? 0) . "\n";
     echo "Zrušené položky: " . (int) ($stats['cancelled'] ?? 0) . "\n";
     echo "Preskočené položky: " . (int) ($stats['skipped'] ?? 0) . "\n";
+    echo "\n-- Anonymní odberatelia --\n";
+    echo "Vybrané z fronty: " . (int) ($subStats['selected'] ?? 0) . "\n";
+    echo "Odoslané e-maily: " . (int) ($subStats['sent'] ?? 0) . "\n";
+    echo "Zlyhané pokusy: " . (int) ($subStats['failed'] ?? 0) . "\n";
+    echo "Zrušené položky: " . (int) ($subStats['cancelled'] ?? 0) . "\n";
+    echo "Preskočené položky: " . (int) ($subStats['skipped'] ?? 0) . "\n";
 } catch (Throwable $e) {
     error_log('newsletter_worker error: ' . $e->getMessage());
     fwrite(STDERR, "Newsletter worker zlyhal: " . $e->getMessage() . "\n");

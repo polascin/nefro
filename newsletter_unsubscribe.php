@@ -10,7 +10,48 @@ $uid = (int) ($_GET['uid'] ?? 0);
 $expiresAt = (int) ($_GET['exp'] ?? 0);
 $signature = trim((string) ($_GET['sig'] ?? ''));
 
-if ($uid > 0 && $expiresAt > 0 && $signature !== '') {
+// Anonymný odberateľ (newsletter_subscribers)
+$subId    = (int) ($_GET['sub'] ?? 0);
+$subToken = trim((string) ($_GET['token'] ?? ''));
+
+if ($subId > 0 && $subToken !== '') {
+    try {
+        $stmt = $pdo->prepare(
+            "SELECT id, email, unsubscribed_at FROM newsletter_subscribers WHERE id = :id AND unsub_token = :token LIMIT 1"
+        );
+        $stmt->execute(['id' => $subId, 'token' => $subToken]);
+        $sub = $stmt->fetch();
+
+        if (!$sub) {
+            $message = 'Odhlasovací odkaz nie je platný.';
+        } elseif ($sub['unsubscribed_at'] !== null) {
+            $status  = 'success';
+            $message = 'Odber noviniek je už odhlásený.';
+        } else {
+            $pdo->beginTransaction();
+            $pdo->prepare(
+                "UPDATE newsletter_subscribers SET unsubscribed_at = NOW() WHERE id = :id"
+            )->execute(['id' => $subId]);
+            $cancelStmt = $pdo->prepare(
+                "UPDATE nl_sub_queue SET status='cancelled', next_attempt_at=NOW(), last_error='Odberateľ sa odhlásil.'
+                 WHERE subscriber_id = :sid AND status IN ('pending','failed') AND sent_at IS NULL"
+            );
+            $cancelStmt->execute(['sid' => $subId]);
+            $cancelled = (int) $cancelStmt->rowCount();
+            $pdo->commit();
+
+            $status  = 'success';
+            $message = 'Odber noviniek bol úspešne odhlásený.';
+            if ($cancelled > 0) {
+                $message .= ' Z fronty bolo zrušených ' . $cancelled . ' čakajúcich e-mailov.';
+            }
+        }
+    } catch (\PDOException $e) {
+        if ($pdo->inTransaction()) { $pdo->rollBack(); }
+        error_log('Newsletter sub unsubscribe error: ' . $e->getMessage());
+        $message = 'Pri odhlásení odberu došlo k chybe. Skúste to neskôr.';
+    }
+} elseif ($uid > 0 && $expiresAt > 0 && $signature !== '') {
     try {
         $stmt = $pdo->prepare("SELECT id, email, newsletter_consent FROM users WHERE id = :id LIMIT 1");
         $stmt->execute(['id' => $uid]);
@@ -61,7 +102,7 @@ if ($uid > 0 && $expiresAt > 0 && $signature !== '') {
         error_log('Newsletter unsubscribe DB error: ' . $e->getMessage());
         $message = 'Pri odhlásení odberu došlo k chybe. Skúste to neskôr.';
     }
-}
+} // end elseif registered user
 
 $pageClass = $status === 'success' ? 'alert-success' : 'alert-error';
 ?>
