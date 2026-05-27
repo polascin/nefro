@@ -1,7 +1,6 @@
 <?php
 require_once 'auth.php';
 require_once 'db_config.php';
-require_once 'newsletter_notifications.php';
 
 $token   = trim((string) ($_GET['token'] ?? ''));
 $status  = 'error';
@@ -22,7 +21,7 @@ if ($token !== '') {
             $message = 'Váš e-mail je už overený. Odber noviniek je aktívny.';
         } else {
             $pdo->prepare(
-                "UPDATE newsletter_subscribers SET verified_at = NOW(), verify_token = NULL WHERE id = :id"
+                "UPDATE newsletter_subscribers SET verified_at = NOW() WHERE id = :id AND verified_at IS NULL"
             )->execute(['id' => (int) $sub['id']]);
             $status  = 'success';
             $message = 'E-mail bol úspešne overený. Vitajte medzi odberateľmi!';

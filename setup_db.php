@@ -423,10 +423,18 @@ try {
         updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
         UNIQUE KEY uq_ns_email (email),
         INDEX idx_ns_verified (verified_at),
-        INDEX idx_ns_unsub (unsub_token)
+        INDEX idx_ns_unsub (unsub_token),
+        INDEX idx_ns_verify_token (verify_token)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";
     $pdo->exec($newsletterSubscribersSql);
     $cliOut("Tabuľka 'newsletter_subscribers' bola úspešne vytvorená alebo už existuje.\n");
+
+    // Idempotentná migrácia: pridaj index ak chýba (pre existujúce databázy)
+    $idxCheck = $pdo->query("SHOW INDEX FROM newsletter_subscribers WHERE Key_name = 'idx_ns_verify_token'");
+    if (!$idxCheck->fetch()) {
+        $pdo->exec("ALTER TABLE newsletter_subscribers ADD INDEX idx_ns_verify_token (verify_token)");
+        $cliOut("Index idx_ns_verify_token pridaný do newsletter_subscribers.\n");
+    }
 
     $nlSubQueueSql = "CREATE TABLE IF NOT EXISTS nl_sub_queue (
         id BIGINT AUTO_INCREMENT PRIMARY KEY,

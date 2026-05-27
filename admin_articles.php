@@ -435,12 +435,13 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
                 $limit = (int) ($_POST["send_limit"] ?? 50);
                 $limit = max(1, min(200, $limit));
                 try {
-                    $stats = processArticleNewsletterQueue($pdo, $limit, 5);
-                    $selected = (int) ($stats["selected"] ?? 0);
-                    $sent = (int) ($stats["sent"] ?? 0);
-                    $failed = (int) ($stats["failed"] ?? 0);
-                    $cancelled = (int) ($stats["cancelled"] ?? 0);
-                    $skipped = (int) ($stats["skipped"] ?? 0);
+                    $stats    = processArticleNewsletterQueue($pdo, $limit, 5);
+                    $subStats = processNlSubQueue($pdo, $limit, 5);
+                    $selected  = (int) ($stats["selected"] ?? 0) + (int) ($subStats["selected"] ?? 0);
+                    $sent      = (int) ($stats["sent"] ?? 0) + (int) ($subStats["sent"] ?? 0);
+                    $failed    = (int) ($stats["failed"] ?? 0) + (int) ($subStats["failed"] ?? 0);
+                    $cancelled = (int) ($stats["cancelled"] ?? 0) + (int) ($subStats["cancelled"] ?? 0);
+                    $skipped   = (int) ($stats["skipped"] ?? 0) + (int) ($subStats["skipped"] ?? 0);
 
                     if ($selected === 0) {
                         $actionResult =

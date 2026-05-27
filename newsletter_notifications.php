@@ -151,8 +151,18 @@ if (!function_exists('cancelPendingArticleNewsletter')) {
               AND status IN ('pending', 'failed')
               AND sent_at IS NULL");
         $stmt->execute(['article_id' => $articleId]);
+        $count = (int) $stmt->rowCount();
 
-        return (int) $stmt->rowCount();
+        $subStmt = $pdo->prepare("UPDATE nl_sub_queue
+            SET status = 'cancelled',
+                next_attempt_at = NOW(),
+                last_error = 'Článok bol odpublikovaný pred odoslaním noviniek.'
+            WHERE article_id = :article_id
+              AND status IN ('pending', 'failed')
+              AND sent_at IS NULL");
+        $subStmt->execute(['article_id' => $articleId]);
+
+        return $count + (int) $subStmt->rowCount();
     }
 }
 
@@ -176,8 +186,22 @@ if (!function_exists('requeueFailedArticleNewsletter')) {
               AND u.is_active = 1
               AND u.email_verified_at IS NOT NULL");
         $stmt->execute(['article_id' => $articleId]);
+        $count = (int) $stmt->rowCount();
 
-        return (int) $stmt->rowCount();
+        $subStmt = $pdo->prepare("UPDATE nl_sub_queue q
+            INNER JOIN newsletter_subscribers s ON s.id = q.subscriber_id
+            SET q.status = 'pending',
+                q.attempts = 0,
+                q.next_attempt_at = NOW(),
+                q.sent_at = NULL,
+                q.last_error = 'Ručne znovu zaradené administrátorom.'
+            WHERE q.article_id = :article_id
+              AND q.status IN ('failed', 'cancelled')
+              AND s.verified_at IS NOT NULL
+              AND s.unsubscribed_at IS NULL");
+        $subStmt->execute(['article_id' => $articleId]);
+
+        return $count + (int) $subStmt->rowCount();
     }
 }
 
@@ -220,10 +244,33 @@ if (!function_exists('enqueueArticleNewsletterEmailsNow')) {
         $insertStmt->execute(['article_id' => $articleId]);
         $inserted = (int) $insertStmt->rowCount();
 
+        $subUpdateStmt = $pdo->prepare("UPDATE nl_sub_queue q
+            INNER JOIN newsletter_subscribers s ON s.id = q.subscriber_id
+            SET q.status = 'pending',
+                q.attempts = 0,
+                q.next_attempt_at = NOW(),
+                q.sent_at = NULL,
+                q.last_error = 'Ručné odoslanie avíza administrátorom.'
+            WHERE q.article_id = :article_id
+              AND s.verified_at IS NOT NULL
+              AND s.unsubscribed_at IS NULL");
+        $subUpdateStmt->execute(['article_id' => $articleId]);
+        $subUpdated = (int) $subUpdateStmt->rowCount();
+
+        $subInsertStmt = $pdo->prepare("INSERT IGNORE INTO nl_sub_queue (article_id, subscriber_id, email, status, next_attempt_at, attempts, sent_at, last_error)
+            SELECT :article_id, s.id, s.email, 'pending', NOW(), 0, NULL, 'Ručné odoslanie avíza administrátorom.'
+            FROM newsletter_subscribers s
+            WHERE s.verified_at IS NOT NULL
+              AND s.unsubscribed_at IS NULL
+              AND s.email IS NOT NULL
+              AND s.email <> ''");
+        $subInsertStmt->execute(['article_id' => $articleId]);
+        $subInserted = (int) $subInsertStmt->rowCount();
+
         return [
-            'updated' => $updated,
-            'inserted' => $inserted,
-            'total' => $updated + $inserted,
+            'updated' => $updated + $subUpdated,
+            'inserted' => $inserted + $subInserted,
+            'total' => $updated + $inserted + $subUpdated + $subInserted,
         ];
     }
 }
