@@ -1,6 +1,6 @@
 <?php
-require_once "auth.php";
-require_once "db_config.php";
+require_once __DIR__ . '/auth.php';
+require_once __DIR__ . '/db_config.php';
 
 // Načítanie parametra – akceptujeme len slug alebo id
 $article = null;

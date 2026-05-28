@@ -1,8 +1,8 @@
 <?php
 declare(strict_types=1);
-require_once 'auth.php';
-require_once 'db_config.php';
-require_once 'email_verification.php';
+require_once __DIR__ . '/auth.php';
+require_once __DIR__ . '/db_config.php';
+require_once __DIR__ . '/email_verification.php';
 
 if (isLoggedIn()) {
     header("Location: index.php");

@@ -5,7 +5,7 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__) && php_sapi_name() !==
     http_response_code(403);
     exit("Prístup odmietnutý.");
 }
-require_once 'db_config.php';
+require_once __DIR__ . '/db_config.php';
 
 $cliOut = static function (string $s): void {
     if (php_sapi_name() === 'cli') {

@@ -1,11 +1,12 @@
-<?php
+﻿<?php
 declare(strict_types=1);
-require_once 'auth.php';
-require_once 'db_config.php';
-require_once 'avatar_upload.php';
-require_once 'phone_utils.php';
-require_once 'mobile_verification.php';
-require_once 'email_verification.php';
+require_once __DIR__ . '/auth.php';
+require_once __DIR__ . '/db_config.php';
+require_once __DIR__ . '/avatar_upload.php';
+require_once __DIR__ . '/phone_utils.php';
+require_once __DIR__ . '/mobile_verification.php';
+require_once __DIR__ . '/email_verification.php';
+require_once __DIR__ . '/profile_account_deletion.php';
 
 requireLogin();
 
@@ -94,142 +95,13 @@ $archiveAvatarVersion = function (int $userId, string $action, ?string $original
     ]);
 };
 
-// ── Zrušenie účtu ────────────────────────────────────────────────────────────
 $deleteErrors   = [];
 $showDeleteForm = false;
 
-/**
- * Zapíše udalosť zrušenia účtu do tabuľky account_deletion_log.
- * Volá sa VNÚTRI transakcie pred DELETE FROM users, aby bola atomická.
- *
- * @param PDO   $pdo        Aktívna DB spojenie (v transakcii)
- * @param array $userData   Snapshot riadku users pred zmazaním
- * @param array $stats      ['calculator_results' => int, 'profile_changes' => int]
- * @param array $context    ['client_ip' => string, 'user_agent' => string,
- *                           'initiated_by' => 'user_self'|'admin',
- *                           'admin_actor_id' => int|null]
- */
-function writeAccountDeletionLog(PDO $pdo, array $userData, array $stats, array $context): void
-{
-    $emailRaw  = (string) ($userData['email'] ?? '');
-    $emailHash = hash('sha256', strtolower(trim($emailRaw)));
-    $emailDomain = strstr($emailRaw, '@') !== false
-        ? ltrim((string) strstr($emailRaw, '@'), '@')
-        : 'unknown';
-
-    $createdAt = strtotime((string) ($userData['created_at'] ?? '')) ?: time();
-    $ageDays   = (int) round((time() - $createdAt) / 86400);
-
-    $pdo->prepare(
-        "INSERT INTO account_deletion_log (
-            deleted_user_id, username, email_hash, email_domain, is_admin,
-            account_age_days, initiated_by, admin_actor_id,
-            client_ip, user_agent,
-            stat_calculator_results, stat_profile_changes,
-            had_avatar, had_newsletter_consent
-        ) VALUES (
-            :uid, :username, :email_hash, :email_domain, :is_admin,
-            :age_days, :initiated_by, :admin_actor_id,
-            :client_ip, :user_agent,
-            :calc_results, :profile_changes,
-            :had_avatar, :newsletter
-        )"
-    )->execute([
-        ':uid'            => (int) ($userData['id'] ?? 0),
-        ':username'       => mb_substr((string) ($userData['username'] ?? ''), 0, 255),
-        ':email_hash'     => $emailHash,
-        ':email_domain'   => mb_substr($emailDomain, 0, 255),
-        ':is_admin'       => (int) ($userData['is_admin'] ?? 0),
-        ':age_days'       => $ageDays,
-        ':initiated_by'   => $context['initiated_by'] ?? 'user_self',
-        ':admin_actor_id' => $context['admin_actor_id'] ?? null,
-        ':client_ip'      => mb_substr($context['client_ip'] ?? '0.0.0.0', 0, 45),
-        ':user_agent'     => mb_substr($context['user_agent'] ?? '', 0, 500),
-        ':calc_results'   => (int) ($stats['calculator_results'] ?? 0),
-        ':profile_changes'=> (int) ($stats['profile_changes'] ?? 0),
-        ':had_avatar'     => empty($userData['avatar_path']) ? 0 : 1,
-        ':newsletter'     => (int) ($userData['newsletter_consent'] ?? 0),
-    ]);
-}
-
-/**
- * Zapíše fallback záznam o zrušení účtu do súboru, ak DB zlyhá.
- */
-function writeAccountDeletionFallbackLog(int $userId, string $username, string $clientIp, string $initiatedBy): void
-{
-    $logDir  = __DIR__ . '/private/logs';
-    @mkdir($logDir, 0755, true);
-    $line = implode("\t", [
-        date('Y-m-d H:i:s'),
-        'account_deleted',
-        $userId,
-        mb_substr($username, 0, 255),
-        $initiatedBy,
-        $clientIp,
-    ]) . "\n";
-    @file_put_contents($logDir . '/account_deletions.log', $line, FILE_APPEND | LOCK_EX);
-}
-
 if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && ($_POST['action'] ?? '') === 'delete_account') {
-    $showDeleteForm = true;
-    $postedCsrfToken = $_POST['csrf_token'] ?? '';
-
-    if (!validateCsrfToken($postedCsrfToken)) {
-        $deleteErrors[] = "Neplatný CSRF token. Skúste to znova.";
-    } elseif (isAdmin()) {
-        $deleteErrors[] = "Administrátorský účet nie je možné zrušiť z profilu. Požiadajte iného administrátora o zrušenie.";
-    } else {
-        $confirmPassword = $_POST['delete_confirm_password'] ?? '';
-        if ($confirmPassword === '') {
-            $deleteErrors[] = "Pre potvrdenie zadajte svoje aktuálne heslo.";
-        } elseif (!password_verify($confirmPassword, (string) $user['password_hash'])) {
-            $deleteErrors[] = "Zadané heslo nie je správne. Účet nebol zrušený.";
-        } else {
-            // Heslo je správne — namiesto okamžitého mazania odošleme e-mail s potvrdením.
-            // Skutočné mazanie prebehne až po kliknutí na odkaz v e-maile (confirm_account_deletion.php).
-            try {
-                $rawToken = rtrim(strtr(base64_encode(random_bytes(32)), '+/', '-_'), '=');
-                $tokenHash = hash('sha256', $rawToken);
-                $expiresAt = date('Y-m-d H:i:s', time() + 86400); // 24 hodín
-                $clientIp  = getClientIpAddress();
-
-                $pdo->prepare(
-                    "INSERT INTO account_deletion_tokens (user_id, token_hash, expires_at, requested_ip)
-                     VALUES (:user_id, :token_hash, :expires_at, :requested_ip)
-                     ON DUPLICATE KEY UPDATE token_hash = VALUES(token_hash),
-                         expires_at = VALUES(expires_at), requested_ip = VALUES(requested_ip),
-                         created_at = CURRENT_TIMESTAMP"
-                )->execute([
-                    'user_id'      => $user_id,
-                    'token_hash'   => $tokenHash,
-                    'expires_at'   => $expiresAt,
-                    'requested_ip' => $clientIp,
-                ]);
-
-                $emailSent = sendAccountDeletionConfirmationEmail(
-                    (string) $user['email'],
-                    (string) ($user['username'] ?? ''),
-                    $rawToken
-                );
-
-                if (!$emailSent) {
-                    error_log('Nepodarilo sa odoslať potvrdzovací e-mail pre zrušenie účtu user_id=' . $user_id);
-                }
-
-                // Zobrazíme správu bez ohľadu na úspech odoslania — anti-enumeration
-                setFlashMessage('info',
-                    'Na vašu e-mailovú adresu sme zaslali potvrdzovací odkaz. '
-                    . 'Kliknite naň do 24 hodín pre trvalé zrušenie účtu. '
-                    . 'Ak e-mail neprišiel, skontrolujte priečinok so spamom.'
-                );
-                $showDeleteForm = false;
-
-            } catch (\PDOException $e) {
-                error_log('Chyba pri generovaní tokenu pre zrušenie účtu user_id=' . $user_id . ': ' . $e->getMessage());
-                $deleteErrors[] = "Nastala chyba. Skúste to znova neskôr.";
-            }
-        }
-    }
+    $result = profileHandleDeleteAccount($pdo, $user, $user_id);
+    $deleteErrors   = $result['errors'];
+    $showDeleteForm = $result['showForm'];
 }
 
 if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && ($_POST['action'] ?? '') !== 'delete_account') {
@@ -760,102 +632,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && ($_POST['action'] ?? '') !=
                     </div>
                 </div>
 
-                <div class="form-section">
-                    <h3>Základné a osobné údaje</h3>
-
-                    <div class="avatar-upload-group">
-                        <?php
-                        $avatarSrc = !empty($user['avatar_path']) ? htmlspecialchars($user['avatar_path']) : 'img/default-avatar-light.svg'; // Default set by JS later
-                        ?>
-                        <img src="<?= $avatarSrc ?>" id="avatarPreview" data-is-default="<?= empty($user['avatar_path']) ? 'true' : 'false' ?>" data-original-src="<?= htmlspecialchars($user['avatar_path'] ?? '') ?>" alt="Náhľad avatara" class="avatar-upload-preview">
-                        <div>
-                            <label for="avatar" class="avatar-upload-label">Profilová fotografia (Avatar)</label>
-                            <input type="file" id="avatar" name="avatar" class="form-control" accept="image/jpeg, image/png, image/gif, image/webp">
-                            <small class="avatar-upload-hint">Zvoľte nový obrázok, ak chcete zmeniť aktuálny.</small>
-                            <?php if (!empty($user['avatar_path'])): ?>
-                                <div class="form-check">
-                                    <input type="checkbox" id="remove_avatar" name="remove_avatar" value="1" <?= isset($_POST['remove_avatar']) ? 'checked' : '' ?>>
-                                    <label for="remove_avatar">Vymazať aktuálny obrázok profilu</label>
-                                </div>
-                            <?php endif; ?>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="username">Používateľské meno</label>
-                        <input type="text" id="username" name="username" class="form-control" value="<?= htmlspecialchars($user['username'] ?? '') ?>">
-                    </div>
-
-                    <div class="form-grid">
-                        <div class="form-group">
-                            <label for="gender">Identifikácia (pohlavie)</label>
-                            <select id="gender" name="gender" class="form-control">
-                                <option value="">-- Vyberte --</option>
-                                <option value="Muž" <?= ($user['gender'] ?? '') === 'Muž' ? 'selected' : '' ?>>Muž</option>
-                                <option value="Žena" <?= ($user['gender'] ?? '') === 'Žena' ? 'selected' : '' ?>>Žena</option>
-                                <option value="Transgender muž" <?= ($user['gender'] ?? '') === 'Transgender muž' ? 'selected' : '' ?>>Transgender muž</option>
-                                <option value="Transgender žena" <?= ($user['gender'] ?? '') === 'Transgender žena' ? 'selected' : '' ?>>Transgender žena</option>
-                                <option value="Nebinárna osoba" <?= ($user['gender'] ?? '') === 'Nebinárna osoba' ? 'selected' : '' ?>>Nebinárna osoba</option>
-                                <option value="Iné" <?= ($user['gender'] ?? '') === 'Iné' ? 'selected' : '' ?>>Iné / Iná identita</option>
-                                <option value="Nechcem uviesť" <?= ($user['gender'] ?? '') === 'Nechcem uviesť' ? 'selected' : '' ?>>Nechcem uviesť</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="pronouns">Identifikačné zámená (napr. on/jeho)</label>
-                            <input type="text" id="pronouns" name="pronouns" class="form-control" value="<?= htmlspecialchars($user['pronouns'] ?? '') ?>">
-                        </div>
-                        <div class="form-group">
-                            <label for="title_before">Titul pred menom</label>
-                            <?php $titlesBefore = getTitlesBeforeName($pdo); ?>
-                            <input type="text" id="title_before" name="title_before" class="form-control"
-                                list="title_before_list"
-                                value="<?= htmlspecialchars($user['title_before'] ?? '') ?>"
-                                placeholder="napr. MUDr. alebo MUDr. doc."
-                                autocomplete="off">
-                            <datalist id="title_before_list">
-                                <?php foreach ($titlesBefore as $t): ?>
-                                    <option value="<?= htmlspecialchars($t) ?>">
-                                <?php endforeach; ?>
-                            </datalist>
-                            <small class="avatar-upload-hint">Vyberte zo zoznamu alebo zadajte vlastný titul (prípadne aj kombináciu viacerých).</small>
-                        </div>
-                        <div class="form-group">
-                            <label for="first_name">Prvé (krstné) meno</label>
-                            <input type="text" id="first_name" name="first_name" class="form-control" value="<?= htmlspecialchars($user['first_name'] ?? '') ?>">
-                        </div>
-                        <div class="form-group">
-                            <label for="middle_name">Stredné meno/á</label>
-                            <input type="text" id="middle_name" name="middle_name" class="form-control" value="<?= htmlspecialchars($user['middle_name'] ?? '') ?>">
-                        </div>
-                        <div class="form-group">
-                            <label for="last_name">Priezvisko</label>
-                            <input type="text" id="last_name" name="last_name" class="form-control" value="<?= htmlspecialchars($user['last_name'] ?? '') ?>">
-                        </div>
-                        <div class="form-group">
-                            <label for="title_after">Titul za menom</label>
-                            <?php $titlesAfter = getTitlesAfterName($pdo); ?>
-                            <input type="text" id="title_after" name="title_after" class="form-control"
-                                list="title_after_list"
-                                value="<?= htmlspecialchars($user['title_after'] ?? '') ?>"
-                                placeholder="napr. PhD. alebo PhD., MBA"
-                                autocomplete="off">
-                            <datalist id="title_after_list">
-                                <?php foreach ($titlesAfter as $t): ?>
-                                    <option value="<?= htmlspecialchars($t) ?>">
-                                <?php endforeach; ?>
-                            </datalist>
-                            <small class="avatar-upload-hint">Vyberte zo zoznamu alebo zadajte vlastný titul (prípadne aj kombináciu viacerých).</small>
-                        </div>
-                        <div class="form-group">
-                            <label for="birth_date">Dátum narodenia</label>
-                            <input type="date" id="birth_date" name="birth_date" class="form-control" value="<?= htmlspecialchars($user['birth_date'] ?? '') ?>">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="name_note">Poznámka k menu</label>
-                        <input type="text" id="name_note" name="name_note" class="form-control" value="<?= htmlspecialchars($user['name_note'] ?? '') ?>">
-                    </div>
-                </div>
+                <?php include __DIR__ . '/profile_form_personal.php'; ?>
 
                 <div class="form-section">
                     <h3>Pracovné údaje</h3>
@@ -929,108 +706,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && ($_POST['action'] ?? '') !=
                     </div>
                 </div>
 
-                <div class="form-section">
-                    <h3>Adresa</h3>
-                    <?php
-                    $addrCountries      = getCountries($pdo);
-                    $addrRegions        = getRegions($pdo);
-                    $addrDistricts      = getDistricts($pdo);
-                    $addrMunicipalities = getMunicipalitiesWithZip($pdo);
-                    $addrZips           = getZipCodes($pdo);
-                    ?>
-                    <div class="form-grid">
-                        <div class="form-group">
-                            <label for="street">Ulica</label>
-                            <input type="text" id="street" name="street" class="form-control"
-                                value="<?= htmlspecialchars($user['street'] ?? '') ?>"
-                                placeholder="napr. Hlavná">
-                        </div>
-                        <div class="form-group">
-                            <label for="house_number">Popisné číslo</label>
-                            <input type="text" id="house_number" name="house_number" class="form-control"
-                                value="<?= htmlspecialchars($user['house_number'] ?? '') ?>">
-                        </div>
-                        <div class="form-group">
-                            <label for="orientation_number">Orientačné číslo</label>
-                            <input type="text" id="orientation_number" name="orientation_number" class="form-control"
-                                value="<?= htmlspecialchars($user['orientation_number'] ?? '') ?>">
-                        </div>
-                        <div class="form-group">
-                            <label for="city">Obec</label>
-                            <input type="text" id="city" name="city" class="form-control"
-                                list="city_list"
-                                value="<?= htmlspecialchars($user['city'] ?? '') ?>"
-                                placeholder="napr. Bratislava"
-                                autocomplete="off">
-                            <datalist id="city_list">
-                                <?php foreach ($addrMunicipalities as $m): ?>
-                                    <option value="<?= htmlspecialchars($m['name']) ?>"
-                                        data-zip="<?= htmlspecialchars($m['zip_code']) ?>"
-                                        data-district="<?= htmlspecialchars($m['district_name']) ?>"
-                                        data-region="<?= htmlspecialchars(getRegionNameByCode($pdo, $m['region_code'])) ?>">
-                                <?php endforeach; ?>
-                            </datalist>
-                            <small class="avatar-upload-hint">Výberom obce sa automaticky doplní PSČ, okres a kraj.</small>
-                        </div>
-                        <div class="form-group">
-                            <label for="zip_code">PSČ</label>
-                            <input type="text" id="zip_code" name="zip_code" class="form-control"
-                                list="zip_list"
-                                value="<?= htmlspecialchars($user['zip_code'] ?? '') ?>"
-                                placeholder="napr. 81101"
-                                maxlength="6" autocomplete="off">
-                            <datalist id="zip_list">
-                                <?php foreach ($addrZips as $z): ?>
-                                    <option value="<?= htmlspecialchars($z) ?>">
-                                <?php endforeach; ?>
-                            </datalist>
-                        </div>
-                        <div class="form-group">
-                            <label for="district">Okres</label>
-                            <input type="text" id="district" name="district" class="form-control"
-                                list="district_list"
-                                value="<?= htmlspecialchars($user['district'] ?? '') ?>"
-                                placeholder="napr. Bratislava I"
-                                autocomplete="off">
-                            <datalist id="district_list">
-                                <?php foreach ($addrDistricts as $d): ?>
-                                    <option value="<?= htmlspecialchars($d) ?>">
-                                <?php endforeach; ?>
-                            </datalist>
-                        </div>
-                        <div class="form-group">
-                            <label for="region">Kraj</label>
-                            <input type="text" id="region" name="region" class="form-control"
-                                list="region_list"
-                                value="<?= htmlspecialchars($user['region'] ?? '') ?>"
-                                placeholder="napr. Bratislavský kraj"
-                                autocomplete="off">
-                            <datalist id="region_list">
-                                <?php foreach ($addrRegions as $r): ?>
-                                    <option value="<?= htmlspecialchars($r) ?>">
-                                <?php endforeach; ?>
-                            </datalist>
-                        </div>
-                        <div class="form-group">
-                            <label for="country">Štát</label>
-                            <input type="text" id="country" name="country" class="form-control"
-                                list="country_list"
-                                value="<?= htmlspecialchars($user['country'] ?? '') ?>"
-                                placeholder="napr. Slovenská republika"
-                                autocomplete="off">
-                            <datalist id="country_list">
-                                <?php foreach ($addrCountries as $c): ?>
-                                    <option value="<?= htmlspecialchars($c) ?>">
-                                <?php endforeach; ?>
-                            </datalist>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="address_note">Poznámka k adrese</label>
-                        <input type="text" id="address_note" name="address_note" class="form-control"
-                            value="<?= htmlspecialchars($user['address_note'] ?? '') ?>">
-                    </div>
-                </div>
+                <?php include __DIR__ . '/profile_form_address.php'; ?>
 
 
                 <div class="form-check">

@@ -6,6 +6,26 @@ header('Content-Type: application/json; charset=UTF-8');
 require_once __DIR__ . '/db_config.php';
 require_once __DIR__ . '/newsletter_notifications.php';
 
+// Origin/Referer check — bráni CSRF z tretích stránok.
+// Prehliadač vždy posiela Origin hlavičku pre cross-site POST; útočník ju nemôže spoofiť.
+// V lokálnom vývoji sa kontrola preskakuje (rôzne hosty/porty).
+if (!isAppLocalDev()) {
+    $_nlAllowedHost = 'nefro.polascin.net';
+    $_nlOrigin      = $_SERVER['HTTP_ORIGIN'] ?? '';
+    $_nlReferer     = $_SERVER['HTTP_REFERER'] ?? '';
+    $_nlHostOk      = false;
+    if ($_nlOrigin !== '') {
+        $_nlHostOk = (parse_url($_nlOrigin, PHP_URL_HOST) === $_nlAllowedHost);
+    } elseif ($_nlReferer !== '') {
+        $_nlHostOk = (parse_url($_nlReferer, PHP_URL_HOST) === $_nlAllowedHost);
+    }
+    if (!$_nlHostOk) {
+        http_response_code(403);
+        echo json_encode(['success' => false, 'message' => 'Neplatná požiadavka.']);
+        exit;
+    }
+}
+
 $email = strtolower(trim((string) ($_POST['email'] ?? '')));
 
 // Honeypot

@@ -1,5 +1,5 @@
 <?php
-require_once 'db_config.php';
+require_once __DIR__ . '/db_config.php';
 
 header('Content-Type: application/xml; charset=UTF-8');
 header('Cache-Control: public, max-age=1800');

@@ -2,7 +2,7 @@
 require_once __DIR__ . '/auth.php';
 requireAdmin();
 ini_set('display_errors', 0);
-require_once "db_config.php";
+require_once __DIR__ . '/db_config.php';
 if (!isset($pdo)) { die("Pripojenie PDO zlyhalo.\n"); }
 try {
     $countQuery = $pdo->query("SELECT COUNT(*) FROM articles WHERE is_top=1 AND is_published=1");

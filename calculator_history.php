@@ -1,7 +1,7 @@
 <?php
-require_once 'auth.php';
-require_once 'db_config.php';
-require_once 'calculators_common.php';
+require_once __DIR__ . '/auth.php';
+require_once __DIR__ . '/db_config.php';
+require_once __DIR__ . '/calculators_common.php';
 
 $pageTitle = 'História výpočtov | Nefro-projekt Slovensko';
 $errors    = [];

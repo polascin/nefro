@@ -1,5 +1,5 @@
 <?php
-require_once 'auth.php';
+require_once __DIR__ . '/auth.php';
 header("X-Robots-Tag: noindex, follow", true);
 $pageLastUpdated = date('d.m.Y', filemtime(__FILE__));
 ?>

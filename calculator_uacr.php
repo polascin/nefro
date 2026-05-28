@@ -1,7 +1,7 @@
 ﻿<?php
-require_once "auth.php";
-require_once "db_config.php";
-require_once "calculators_common.php";
+require_once __DIR__ . '/auth.php';
+require_once __DIR__ . '/db_config.php';
+require_once __DIR__ . '/calculators_common.php';
 
 $errors = [];
 $messages = [];
@@ -22,35 +22,7 @@ $form = [
     "examination_date" => (string) ($_POST["examination_date"] ?? date("Y-m-d")),
 ];
 
-if (isLoggedIn() && isset($_GET["load_id"])) {
-    $loadId = (int) $_GET["load_id"];
-    $loadedRow = calculatorFetchSavedResultById(
-        $pdo,
-        $loadId,
-        (int) $_SESSION["user_id"],
-    );
-    if ($loadedRow) {
-        $form["patient_first_name"] =
-            (string) ($loadedRow["patient_first_name"] ?? "");
-        $form["patient_last_name"] =
-            (string) ($loadedRow["patient_last_name"] ?? "");
-        $form["patient_birth_date"] =
-            (string) ($loadedRow["patient_birth_date"] ?? "");
-        $form["patient_birth_number"] =
-            (string) ($loadedRow["patient_birth_number"] ?? "");
-        $form["patient_insurance_code"] =
-            (string) ($loadedRow["patient_insurance_code"] ?? "");
-        if (is_array($loadedRow["input_payload"])) {
-            foreach ($loadedRow["input_payload"] as $k => $v) {
-                if (isset($form[$k]) || array_key_exists($k, $form)) {
-                    $form[$k] = (string) $v;
-                }
-            }
-        }
-        $messages[] =
-            "Údaje z histórie boli načítané do formulára. Môžete ich upraviť a vykonať nový výpočet.";
-    }
-}
+calculatorHandleLoadId($pdo, $form, $messages);
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $action = (string) ($_POST["action"] ?? "");
@@ -58,19 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (!validateCsrfToken((string) ($_POST["csrf_token"] ?? ""))) {
         $errors[] = "Neplatný CSRF token.";
     } elseif ($action === "delete_saved") {
-        if (!isLoggedIn()) {
-            $errors[] = "Na mazanie výsledkov je potrebné prihlásenie.";
-        } else {
-            $resultId = (int) ($_POST["result_id"] ?? 0);
-            if ($resultId > 0) {
-                calculatorDeleteSavedResult(
-                    $pdo,
-                    $resultId,
-                    (int) $_SESSION["user_id"],
-                );
-                $messages[] = "Výsledok bol vymazaný.";
-            }
-        }
+        calculatorHandleDeleteSaved($pdo, $errors, $messages, 'calculator_uacr');
     } elseif ($action === "calculate" || $action === "save") {
         $patient = calculatorPatientDataFromRequest($_POST);
         calculatorValidateOptionalPatientData($patient, $errors);
@@ -239,40 +199,7 @@ if (isLoggedIn()) {
                     <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(
                         generateCsrfToken(),
                     ) ?>">
-                    <div class="form-section">
-                        <h3>Voliteľné identifikačné údaje pacienta</h3>
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label for="patient_first_name">Meno</label>
-                                <input type="text" id="patient_first_name" name="patient_first_name" class="form-control" value="<?= htmlspecialchars(
-                                    $form["patient_first_name"],
-                                ) ?>">
-                            </div>
-                            <div class="form-group">
-                                <label for="patient_last_name">Priezvisko</label>
-                                <input type="text" id="patient_last_name" name="patient_last_name" class="form-control" value="<?= htmlspecialchars(
-                                    $form["patient_last_name"],
-                                ) ?>">
-                            </div>
-                            <div class="form-group">
-                                <label for="patient_birth_date">Dátum narodenia</label>
-                                <input type="date" id="patient_birth_date" name="patient_birth_date" class="form-control" value="<?= htmlspecialchars(
-                                    $form["patient_birth_date"],
-                                ) ?>">
-                            </div>
-                            <div class="form-group">
-                                <label for="patient_birth_number">Rodné číslo</label>
-                                <input type="text" id="patient_birth_number" name="patient_birth_number" class="form-control" placeholder="000000/0000" value="<?= htmlspecialchars(
-                                    $form["patient_birth_number"],
-                                ) ?>">
-                            </div>
-
-                            <?php include __DIR__ .
-                                "/patient_insurance_select.php"; ?>
-
-
-                        </div>
-                    </div>
+                    <?php include __DIR__ . '/calculator_patient_fields.php'; ?>
 
                     <div class="form-section">
                         <h3>Povinné vstupy na výpočet</h3>
@@ -351,65 +278,14 @@ if (isLoggedIn()) {
             </div>
 
             <?php include "calculator_disclaimer.php"; ?>
-            <section class="auth-container auth-container--wide calc-saved-results">
-                <h3>Uložené výsledky</h3>
-                <?php if (!isLoggedIn()): ?>
-                    <p>Pre ukladanie výsledkov sa prihláste.</p>
-                <?php elseif (empty($savedResults)): ?>
-                    <p>Žiadne uložené výsledky.</p>
-                <?php else: ?>
-                    <div class="admin-table-wrap">
-                        <table class="admin-table">
-                            <thead><tr><th>Vyšetrenie</th><th>Pacient</th><th>Výsledok</th><th>Akcie</th></tr></thead>
-                            <tbody>
-                                <?php foreach ($savedResults as $row): ?>
-                                    <tr>
-                                        <td>
-                                            <?php $_examD = (string) ($row["input_payload"]["examination_date"] ?? ""); ?>
-                                            <?= $_examD ? htmlspecialchars(date("d.m.Y", strtotime($_examD))) : '—' ?>
-                                            <small class="d-block" style="color:var(--text-secondary);font-size:.8em">ulo.: <?= htmlspecialchars(date("d.m.Y H:i", strtotime($row["created_at"] ?? ""))) ?></small>
-                                        </td>
-                                        <td><?= htmlspecialchars(
-                                            calculatorBuildPatientDisplay($row),
-                                        ) ?></td>
-                                        <td>
-                                            <?= number_format(
-                                                $row["result_payload"][
-                                                    "mg_mmol"
-                                                ] ?? 0,
-                                                2,
-                                            ) ?> mg/mmol<br>
-                                            Štádium: <?= htmlspecialchars(
-                                                $row["result_payload"][
-                                                    "stage"
-                                                ] ?? "",
-                                            ) ?>
-                                        </td>
-                                        <td class="admin-actions-cell">
-                                            <a href="?load_id=<?= (int) $row[
-                                                "id"
-                                            ] ?>" class="btn-admin-action btn-primary-filled">Načítať</a>
-                                            <a href="calculator_result_print.php?result_id=<?= (int) $row[
-                                                "id"
-                                            ] ?>" target="_blank" rel="noopener" class="btn-admin-action">Tlačiť</a>
-                                            <form method="POST" action="calculator_uacr.php" class="d-inline" data-confirm="Naozaj vymazať záznam?">
-                                                <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(
-                                                    generateCsrfToken(),
-                                                ) ?>">
-                                                <input type="hidden" name="action" value="delete_saved">
-                                                <input type="hidden" name="result_id" value="<?= (int) $row[
-                                                    "id"
-                                                ] ?>">
-                                                <button type="submit" class="btn-admin-action btn-admin-action--warn">Vymazať</button>
-                                            </form>
-                                        </td>
-                                    </tr>
-                                <?php endforeach; ?>
-                            </tbody>
-                        </table>
-                    </div>
-                <?php endif; ?>
-            </section>
+            <?php calculatorRenderSavedResultsTable(
+                $savedResults,
+                'calculator_uacr.php',
+                function (array $row): void {
+                    $result = is_array($row['result_payload']) ? $row['result_payload'] : [];
+                    echo number_format((float) ($result['mg_mmol'] ?? 0), 2) . ' mg/mmol<br>';
+                    echo 'Štádium: ' . htmlspecialchars((string) ($result['stage'] ?? ''));                }
+            ); ?>
         </div>
     </main>
     <script src="patient_autofill.js?v=20260515-1&cb=<?= filemtime("patient_autofill.js") ?>" defer></script>

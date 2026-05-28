@@ -1,7 +1,7 @@
-<?php
-require_once "auth.php";
-require_once "db_config.php";
-require_once "calculators_common.php";
+﻿<?php
+require_once __DIR__ . '/auth.php';
+require_once __DIR__ . '/db_config.php';
+require_once __DIR__ . '/calculators_common.php';
 
 const EGFR_SLOPE_MAX_ROWS = 20;
 const EGFR_SLOPE_MIN_ROWS = 4;
@@ -298,45 +298,7 @@ if (isLoggedIn()) {
                     <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
                     <input type="hidden" name="max_row"    id="max_row" value="<?= (int)$form["max_row"] ?>">
 
-                    <div class="form-section">
-                        <h3>Voliteľné identifikačné údaje pacienta</h3>
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label for="patient_first_name">Meno</label>
-                                <input type="text" id="patient_first_name" name="patient_first_name" class="form-control" value="<?= htmlspecialchars($form["patient_first_name"]) ?>">
-                            </div>
-                            <div class="form-group">
-                                <label for="patient_last_name">Priezvisko</label>
-                                <input type="text" id="patient_last_name" name="patient_last_name" class="form-control" value="<?= htmlspecialchars($form["patient_last_name"]) ?>">
-                            </div>
-                            <div class="form-group">
-                                <label for="patient_birth_date">Dátum narodenia</label>
-                                <input type="date" id="patient_birth_date" name="patient_birth_date" class="form-control" value="<?= htmlspecialchars($form["patient_birth_date"]) ?>">
-                            </div>
-                            <div class="form-group">
-                                <label for="patient_birth_number">Rodné číslo</label>
-                                <input type="text" id="patient_birth_number" name="patient_birth_number" class="form-control" placeholder="000000/0000" value="<?= htmlspecialchars($form["patient_birth_number"]) ?>">
-                            </div>
-                            <?php include __DIR__ . "/patient_insurance_select.php"; ?>
-                        </div>
-                        <?php if (isLoggedIn()): ?>
-                        <div class="form-actions" style="margin-top:.75rem">
-                            <button type="submit" name="action" value="load_patient" class="btn-secondary">
-                                Načítať eGFR z histórie pacienta
-                            </button>
-                            <small class="form-hint">Načíta uložené výsledky eGFR (CKD-EPI) podľa rodného čísla pacienta.</small>
-                        </div>
-                        <?php endif; ?>
-                    </div>
-
-                    <div class="form-section">
-                        <h3>Povinné vstupy na výpočet</h3>
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label for="examination_date">Dátum vyšetrenia <span class="required">*</span></label>
-                                <input type="date" id="examination_date" name="examination_date" required class="form-control" max="<?= date('Y-m-d') ?>" value="<?= htmlspecialchars($form['examination_date']) ?>">
-                            </div>
-                        </div>
+                    <?php include __DIR__ . '/calculator_patient_fields.php'; ?>
 
                         <div id="egfr-rows">
                         <?php for ($i = 1; $i <= max(EGFR_SLOPE_MIN_ROWS, $maxRow); $i++):

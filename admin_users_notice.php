@@ -1,7 +1,8 @@
 <?php
-require_once 'auth.php';
-require_once 'db_config.php';
-require_once 'phone_utils.php';
+declare(strict_types=1);
+require_once __DIR__ . '/auth.php';
+require_once __DIR__ . '/db_config.php';
+require_once __DIR__ . '/phone_utils.php';
 
 requireAdmin();
 $currentAdminId = (int) ($_SESSION['user_id'] ?? 0);

@@ -1,7 +1,7 @@
 <?php
-require_once 'auth.php';
-require_once 'db_config.php';
-require_once 'email_verification.php';
+require_once __DIR__ . '/auth.php';
+require_once __DIR__ . '/db_config.php';
+require_once __DIR__ . '/email_verification.php';
 
 $errors = [];
 $token = trim((string) ($_GET['token'] ?? $_POST['token'] ?? ''));

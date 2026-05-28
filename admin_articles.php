@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
-require_once "auth.php";
-require_once "db_config.php";
+require_once __DIR__ . '/auth.php';
+require_once __DIR__ . '/db_config.php';
 require_once __DIR__ . "/newsletter_notifications.php";
 
 requireAdmin();

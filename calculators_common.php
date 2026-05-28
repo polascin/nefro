@@ -439,6 +439,117 @@ function kfreRiskClass(float $risk5yr): string
 }
 
 /**
+ * Načíta uložený výsledok do $form podľa GET parametra load_id.
+ */
+function calculatorHandleLoadId(PDO $pdo, array &$form, array &$messages): void
+{
+    if (!isLoggedIn() || !isset($_GET['load_id'])) {
+        return;
+    }
+    $loadId = (int) $_GET['load_id'];
+    $loadedRow = calculatorFetchSavedResultById($pdo, $loadId, (int) $_SESSION['user_id']);
+    if (!$loadedRow) {
+        return;
+    }
+    $form['patient_first_name']     = (string) ($loadedRow['patient_first_name'] ?? '');
+    $form['patient_last_name']      = (string) ($loadedRow['patient_last_name'] ?? '');
+    $form['patient_birth_date']     = (string) ($loadedRow['patient_birth_date'] ?? '');
+    $form['patient_birth_number']   = (string) ($loadedRow['patient_birth_number'] ?? '');
+    $form['patient_insurance_code'] = (string) ($loadedRow['patient_insurance_code'] ?? '');
+    if (is_array($loadedRow['input_payload'])) {
+        foreach ($loadedRow['input_payload'] as $k => $v) {
+            if (isset($form[$k]) || array_key_exists($k, $form)) {
+                $form[$k] = (string) $v;
+            }
+        }
+    }
+    $messages[] = 'Údaje z histórie boli načítané do formulára. Môžete ich upraviť a vykonať nový výpočet.';
+}
+
+/**
+ * Spracuje akciu delete_saved z POST handlera kalkulačky.
+ */
+function calculatorHandleDeleteSaved(PDO $pdo, array &$errors, array &$messages, string $logPrefix): void
+{
+    if (!isLoggedIn()) {
+        $errors[] = 'Na mazanie výsledkov je potrebné prihlásenie.';
+        return;
+    }
+    $resultId = (int) ($_POST['result_id'] ?? 0);
+    if ($resultId <= 0) {
+        $errors[] = 'Neplatné ID záznamu.';
+        return;
+    }
+    try {
+        if (calculatorDeleteSavedResult($pdo, $resultId, (int) $_SESSION['user_id'])) {
+            $messages[] = 'Uložený výsledok bol vymazaný.';
+        } else {
+            $errors[] = 'Záznam sa nepodarilo vymazať alebo neexistuje.';
+        }
+    } catch (\PDOException $e) {
+        $errors[] = 'Databázová chyba pri mazaní záznamu.';
+        error_log($logPrefix . ' delete error: ' . $e->getMessage());
+    }
+}
+
+/**
+ * Vykreslí sekciu uložených výsledkov so štandardnou 4-stĺpcovou tabuľkou.
+ * $renderResultCell(array $row): void — echos HTML pre stĺpec "Výsledok"
+ */
+function calculatorRenderSavedResultsTable(
+    array $savedResults,
+    string $calcFile,
+    callable $renderResultCell,
+    string $extraSectionClass = ''
+): void {
+    $cls = 'auth-container auth-container--wide calc-saved-results';
+    if ($extraSectionClass !== '') {
+        $cls .= ' ' . $extraSectionClass;
+    }
+    ?>
+    <section class="<?= htmlspecialchars($cls) ?>">
+        <h3>Uložené výsledky</h3>
+        <?php if (!isLoggedIn()): ?>
+            <p>Pre ukladanie a históriu výpočtov je potrebné prihlásenie.</p>
+        <?php elseif (empty($savedResults)): ?>
+            <p>Zatiaľ nemáte uložené žiadne výsledky pre túto kalkulačku.</p>
+        <?php else: ?>
+            <div class="admin-table-wrap">
+                <table class="admin-table">
+                    <thead>
+                        <tr><th>Vyšetrenie</th><th>Pacient</th><th>Výsledok</th><th>Akcie</th></tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($savedResults as $row):
+                            $_examD = (string) ($row['input_payload']['examination_date'] ?? ''); ?>
+                            <tr>
+                                <td>
+                                    <?= $_examD ? htmlspecialchars(date('d.m.Y', strtotime($_examD))) : '—' ?>
+                                    <small class="d-block" style="color:var(--text-secondary);font-size:.8em">ulo.: <?= htmlspecialchars(date('d.m.Y H:i', strtotime((string) ($row['created_at'] ?? '')))) ?></small>
+                                </td>
+                                <td><?= htmlspecialchars(calculatorBuildPatientDisplay($row)) ?></td>
+                                <td><?php $renderResultCell($row); ?></td>
+                                <td class="admin-actions-cell">
+                                    <a href="?load_id=<?= (int) $row['id'] ?>" class="btn-admin-action btn-primary-filled">Načítať</a>
+                                    <a href="calculator_result_print.php?result_id=<?= (int) $row['id'] ?>" target="_blank" rel="noopener" class="btn-admin-action">Tlačiť</a>
+                                    <form method="POST" action="<?= htmlspecialchars($calcFile) ?>" class="d-inline" data-confirm="Naozaj vymazať záznam?">
+                                        <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
+                                        <input type="hidden" name="action" value="delete_saved">
+                                        <input type="hidden" name="result_id" value="<?= (int) $row['id'] ?>">
+                                        <button type="submit" class="btn-admin-action btn-admin-action--warn">Vymazať</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+        <?php endif; ?>
+    </section>
+    <?php
+}
+
+/**
  * Bezpečnostné hlavičky pre kalkulačky s rozšíreným SEO/CSP (lokálny KaTeX cez 'self').
  */
 function calculatorSendSecurityHeaders(): void

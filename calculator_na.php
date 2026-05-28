@@ -1,7 +1,7 @@
 ﻿<?php
-require_once "auth.php";
-require_once "db_config.php";
-require_once "calculators_common.php";
+require_once __DIR__ . '/auth.php';
+require_once __DIR__ . '/db_config.php';
+require_once __DIR__ . '/calculators_common.php';
 
 $errors = [];
 $messages = [];
@@ -25,35 +25,7 @@ $form = [
     "examination_date" => (string) ($_POST["examination_date"] ?? date("Y-m-d")),
 ];
 
-if (isLoggedIn() && isset($_GET["load_id"])) {
-    $loadId = (int) $_GET["load_id"];
-    $loadedRow = calculatorFetchSavedResultById(
-        $pdo,
-        $loadId,
-        (int) $_SESSION["user_id"],
-    );
-    if ($loadedRow) {
-        $form["patient_first_name"] =
-            (string) ($loadedRow["patient_first_name"] ?? "");
-        $form["patient_last_name"] =
-            (string) ($loadedRow["patient_last_name"] ?? "");
-        $form["patient_birth_date"] =
-            (string) ($loadedRow["patient_birth_date"] ?? "");
-        $form["patient_birth_number"] =
-            (string) ($loadedRow["patient_birth_number"] ?? "");
-        $form["patient_insurance_code"] =
-            (string) ($loadedRow["patient_insurance_code"] ?? "");
-        if (is_array($loadedRow["input_payload"])) {
-            foreach ($loadedRow["input_payload"] as $k => $v) {
-                if (isset($form[$k]) || array_key_exists($k, $form)) {
-                    $form[$k] = (string) $v;
-                }
-            }
-        }
-        $messages[] =
-            "Údaje z histórie boli načítané do formulára. Môžete ich upraviť a vykonať nový výpočet.";
-    }
-}
+calculatorHandleLoadId($pdo, $form, $messages);
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $action = (string) ($_POST["action"] ?? "");
@@ -61,34 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if (!validateCsrfToken((string) ($_POST["csrf_token"] ?? ""))) {
         $errors[] = "Neplatný CSRF token.";
     } elseif ($action === "delete_saved") {
-        if (!isLoggedIn()) {
-            $errors[] = "Na mazanie výsledkov je potrebné prihlásenie.";
-        } else {
-            $resultId = (int) ($_POST["result_id"] ?? 0);
-            if ($resultId <= 0) {
-                $errors[] = "Neplatné ID záznamu.";
-            } else {
-                try {
-                    if (
-                        calculatorDeleteSavedResult(
-                            $pdo,
-                            $resultId,
-                            (int) $_SESSION["user_id"],
-                        )
-                    ) {
-                        $messages[] = "Uložený výsledok bol vymazaný.";
-                    } else {
-                        $errors[] =
-                            "Záznam sa nepodarilo vymazať alebo neexistuje.";
-                    }
-                } catch (\PDOException $e) {
-                    $errors[] = "Databázová chyba pri mazaní záznamu.";
-                    error_log(
-                        "calculator_na delete error: " . $e->getMessage(),
-                    );
-                }
-            }
-        }
+        calculatorHandleDeleteSaved($pdo, $errors, $messages, 'calculator_na');
     } elseif ($action === "calculate" || $action === "save") {
         $patient = calculatorPatientDataFromRequest($_POST);
         calculatorValidateOptionalPatientData($patient, $errors);
@@ -314,40 +259,7 @@ if (isLoggedIn()) {
                         generateCsrfToken(),
                     ) ?>">
 
-                    <div class="form-section">
-                        <h3>Voliteľné identifikačné údaje pacienta</h3>
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label for="patient_first_name">Meno</label>
-                                <input type="text" id="patient_first_name" name="patient_first_name" class="form-control" value="<?= htmlspecialchars(
-                                    $form["patient_first_name"],
-                                ) ?>">
-                            </div>
-                            <div class="form-group">
-                                <label for="patient_last_name">Priezvisko</label>
-                                <input type="text" id="patient_last_name" name="patient_last_name" class="form-control" value="<?= htmlspecialchars(
-                                    $form["patient_last_name"],
-                                ) ?>">
-                            </div>
-                            <div class="form-group">
-                                <label for="patient_birth_date">Dátum narodenia</label>
-                                <input type="date" id="patient_birth_date" name="patient_birth_date" class="form-control" value="<?= htmlspecialchars(
-                                    $form["patient_birth_date"],
-                                ) ?>">
-                            </div>
-                            <div class="form-group">
-                                <label for="patient_birth_number">Rodné číslo</label>
-                                <input type="text" id="patient_birth_number" name="patient_birth_number" class="form-control" placeholder="000000/0000" value="<?= htmlspecialchars(
-                                    $form["patient_birth_number"],
-                                ) ?>">
-                            </div>
-
-                            <?php include __DIR__ .
-                                "/patient_insurance_select.php"; ?>
-
-
-                        </div>
-                    </div>
+                    <?php include __DIR__ . '/calculator_patient_fields.php'; ?>
 
                     <div class="form-section">
                         <h3>Povinné vstupy na výpočet</h3>

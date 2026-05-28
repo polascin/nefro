@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
-require_once 'auth.php';
-require_once 'db_config.php';
-require_once 'avatar_upload.php';
-require_once 'email_verification.php';
-require_once 'phone_utils.php';
+require_once __DIR__ . '/auth.php';
+require_once __DIR__ . '/db_config.php';
+require_once __DIR__ . '/avatar_upload.php';
+require_once __DIR__ . '/email_verification.php';
+require_once __DIR__ . '/phone_utils.php';
 
 $errors = [];
 $success = false;

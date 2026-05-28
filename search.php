@@ -4,10 +4,10 @@
  * Funkcie: FULLTEXT + LIKE, slovenské diakritiky, stop slová,
  *          relevančné skórovanie, zvýraznenie výrazov, snippety, stránkovanie.
  */
-require_once "auth.php";
-require_once "db_config.php";
+require_once __DIR__ . '/auth.php';
+require_once __DIR__ . '/db_config.php';
 
-require_once "search_helpers.php";
+require_once __DIR__ . '/search_helpers.php';
 
 // ── Spracovanie vstupu ────────────────────────────────────────────────────────
 
