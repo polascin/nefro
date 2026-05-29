@@ -409,7 +409,7 @@ $modeLabel = $includeSensitive
     </div> <!-- end print-layout-table -->
 
     <?php if ($isPrintMode): ?>
-        <script>
+        <script nonce="<?= htmlspecialchars(getScriptNonce()) ?>">
             window.addEventListener('load', function () {
                 window.print();
             });
