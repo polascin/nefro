@@ -533,6 +533,9 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                                 <input type="password" id="password_confirm" name="password_confirm" class="form-control" required autocomplete="new-password">
                             </div>
                         </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn-primary btn-block">Registrovať sa</button>
+                        </div>
                     </div>
 
                     <div class="form-section">
