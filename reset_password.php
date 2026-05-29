@@ -102,13 +102,14 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
   ?>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>
     <?php
     $headerTitle = 'Nefro-projekt Slovensko';
     $showLogo = false;
     include 'header.php';
     ?>
 
-    <main class="container">
+    <main id="main-content" class="container">
         <div class="auth-container">
             <h2>Nastavenie nového hesla</h2>
 

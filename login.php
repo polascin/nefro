@@ -232,13 +232,14 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
   ?>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>
     <?php
     $headerTitle = 'Nefro-projekt Slovensko';
     $showLogo = false;
     include 'header.php';
     ?>
 
-    <main class="container">
+    <main id="main-content" class="container">
         <div class="auth-container">
             <h2>Prihlásenie</h2>
 
@@ -298,7 +299,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 
                 <div class="form-group">
                     <label for="login">Používateľské meno alebo e-mailová adresa</label>
-                    <input type="text" id="login" name="login" class="form-control" required value="<?= htmlspecialchars($_POST['login'] ?? '') ?>">
+                    <input type="text" id="login" name="login" class="form-control" required value="<?= htmlspecialchars($_POST['login'] ?? '') ?>" autocomplete="username">
                 </div>
 
                 <div class="form-group">

@@ -283,7 +283,7 @@ function initPrivacyManager() {
             'ad_personalization': consentData.marketing ? 'granted' : 'denied'
         });
         
-        console.log("Cookie consent aplikovaný do GA4: ", consentData);
+        // GA4 consent update applied
     }
 
     // Ak už bol súhlas udelený predtým, aplikuj ho hneď po načítaní (aktualizuje prípadné zmeny)

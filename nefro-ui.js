@@ -29,7 +29,7 @@ document.addEventListener('click', function (e) {
     }
 });
 
-// ── 3. Toggle visibility na základe select hodnoty (data-toggle-target) ───────
+// ── 4. Toggle visibility na základe select hodnoty (data-toggle-target) ───────
 function applyToggleTargets() {
     document.querySelectorAll('[data-toggle-target]').forEach(function (sel) {
         var target = document.getElementById(sel.dataset.toggleTarget);
@@ -46,7 +46,7 @@ document.addEventListener('change', function (e) {
     }
 });
 
-// ── 4. Avatar preview pre register.php (bez PHP hodnôt) ───────────────────────
+// ── 5. Avatar preview pre register.php (bez PHP hodnôt) ───────────────────────
 (function () {
     var preview = document.getElementById('avatarPreview');
     var input   = document.getElementById('avatar');
@@ -82,7 +82,7 @@ document.addEventListener('change', function (e) {
     });
 })();
 
-// ── 5. Auto-print pre výsledkové stránky (data-auto-print="1" na <body>) ─────
+// ── 6. Auto-print pre výsledkové stránky (data-auto-print="1" na <body>) ─────
 (function () {
     if (document.body && document.body.dataset.autoPrint === '1'
             && !document.querySelector('.alert-error')) {
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Inicializácia toggle targets (select-controlled visibility)
     applyToggleTargets();
 
-    // ── 6. Password toggle ────────────────────────────────────────────────────
+    // ── 7. Password toggle ────────────────────────────────────────────────────
     var passwordInputs = document.querySelectorAll('input[type="password"]');
     passwordInputs.forEach(function (input, index) {
         if (input.dataset.passwordToggleReady === 'true') return;
@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function () {
         input.dataset.passwordToggleReady = 'true';
     });
 
-    // ── 7. Back-to-top tlačidlo ───────────────────────────────────────────────
+    // ── 8. Back-to-top tlačidlo ───────────────────────────────────────────────
     var backToTopBtn = document.getElementById('backToTop');
     if (backToTopBtn) {
         window.addEventListener('scroll', function () {
