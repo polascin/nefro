@@ -1,0 +1,15 @@
+[MASTER]
+ignore=.git,.trunk,__pycache__,.venv,build,dist
+
+[MESSAGES CONTROL]
+disable=
+    missing-module-docstring,
+    missing-class-docstring,
+    missing-function-docstring,
+    too-few-public-methods
+
+[FORMAT]
+max-line-length=88
+
+[REPORTS]
+score=no

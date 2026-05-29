@@ -76,3 +76,18 @@ php newsletter_worker.php --limit=50 --max-attempts=5
 ```
 
 Odporúčanie: spúšťať cez plánovač úloh (Task Scheduler/cron) každú 1 minútu.
+
+## Python code quality (Black + Pylint)
+
+This repository is primarily PHP, but Black and Pylint are configured for any Python files you add.
+
+```powershell
+$pyFiles = Get-ChildItem -Path . -Recurse -Filter *.py | ForEach-Object { $_.FullName }
+$pyFiles = $pyFiles | Where-Object { $_ -notmatch "\\\\.trunk\\\\" -and $_ -notmatch "\\\\.git\\\\" }
+if ($pyFiles.Count -gt 0) {
+  python -m black $pyFiles
+  python -m pylint $pyFiles
+} else {
+  Write-Host "No Python files found."
+}
+```
