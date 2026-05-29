@@ -617,7 +617,7 @@ if ($article) {
     </aside>
   </main>
 
-  <script>
+  <script nonce="<?= htmlspecialchars(getScriptNonce()) ?>">
   (function () {
     function initNlForm(formId, msgId) {
       var form = document.getElementById(formId);
