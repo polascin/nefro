@@ -311,7 +311,7 @@ $pageLastUpdated = date('d.m.Y H:i', filemtime(__FILE__));
                                     </form>
                                     <?php endif; ?>
                                     <form method="POST" action="admin_newsletter.php" style="display:inline;"
-                                          onsubmit="return confirm('Natrvalo zmazať odberateľa <?= htmlspecialchars((string) $sub['email'], ENT_QUOTES) ?>?');">
+                                          class="form-delete-sub" data-email="<?= htmlspecialchars((string) $sub['email'], ENT_QUOTES) ?>">
                                         <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
                                         <input type="hidden" name="action" value="delete_subscriber">
                                         <input type="hidden" name="sub_id" value="<?= (int) $sub['id'] ?>">
@@ -332,6 +332,16 @@ $pageLastUpdated = date('d.m.Y H:i', filemtime(__FILE__));
         </div>
     </main>
 
+    <script nonce="<?= htmlspecialchars(getScriptNonce()) ?>">
+    document.querySelectorAll('.form-delete-sub').forEach(function (form) {
+        form.addEventListener('submit', function (e) {
+            var email = form.getAttribute('data-email') || '';
+            if (!confirm('Natrvalo zmazať odberateľa ' + email + '?')) {
+                e.preventDefault();
+            }
+        });
+    });
+    </script>
     <?php include 'footer.php'; ?>
 </body>
 </html>
