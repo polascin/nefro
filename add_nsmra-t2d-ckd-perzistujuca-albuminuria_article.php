@@ -31,7 +31,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'U pacienta s T2D a CKD s pretrvávajúcou albuminúriou napriek maximálne tolerovanej RAS inhibícii je nsMRA logickým ďalším krokom. Praktický prehľad indikačného rámca, work-upu pred nasadením a ambulantného algoritmu vrátane monitorovania K⁺.',
     'content'      => <<<'HTML'
-<p>U pacienta s <strong>diabetom 2. typu (T2D)</strong> a <strong>chronickým ochorením obličiek (CKD)</strong>, ktorý má <strong>pretrvávajúcu albuminúriu napriek maximálne tolerovanej liečbe v osi RAS</strong>, dáva zmysel zvážiť prídavok <strong>nesteroidného mineralokortikoidového receptor antagonistu (nsMRA)</strong>. Výsledkom má byť zlepšenie „cardio-kidney" dopadov a spomalenie nepriaznivého priebehu.</p>
+<p>U pacienta s <strong>diabetom 2. typu (T2D)</strong> a <strong>chronickým ochorením obličiek (CKD)</strong>, ktorý má <strong>pretrvávajúcu albuminúriu napriek maximálne tolerovanej liečbe v osi RAS</strong>, dáva zmysel zvážiť prídavok <strong>nesteroidného antagonistu mineralokortikoidového receptora (nsMRA)</strong>. Výsledkom má byť zlepšenie „cardio-kidney" dopadov a spomalenie nepriaznivého priebehu.</p>
 
 <h2>Indikačný rámec (prakticky)</h2>
 
@@ -45,7 +45,7 @@ $articles[] = [
 
 <h2>Rýchly „work-up" pred nasadením</h2>
 
-<p>Skôr než začnete, nastav si kontrolný rámec tak, aby si minimalizoval riziko nežiaducich účinkov (najmä hyperkaliémie) a aby dávalo zmysel aj časovanie kontrol.</p>
+<p>Skôr než začneš, nastav si kontrolný rámec tak, aby si minimalizoval riziko nežiaducich účinkov (najmä hyperkaliémie) a aby dávalo zmysel aj časovanie kontrol.</p>
 
 <h3>Laboratórny prehľad (pred nasadením)</h3>
 <ul>
@@ -72,7 +72,7 @@ $articles[] = [
 </ul>
 
 <h3>Krok B: zabezpečíš „core" liečbu</h3>
-<p>nsMRA sa zvyčajne pridávajú až vtedy, keď:</p>
+<p>Títo antagonisti sa zvyčajne pridávajú až vtedy, keď:</p>
 <ul>
   <li>RAS inhibícia je už v maximálne tolerovanej podobe,</li>
   <li>ďalšie nefro-metabolické piliere (napr. SGLT2 inhibícia u vhodných pacientov) sú už riešené podľa štandardu starostlivosti.</li>
@@ -110,7 +110,7 @@ $articles[] = [
 
 <h2>Mechanistické pozadie (pre pochopenie)</h2>
 
-<p>MR nadmerná aktivácia sa spája s nepriaznivými procesmi v obličkách a srdci. Preto sa nsMRA prezentujú ako lieky, ktoré zasahujú do „škodlivých dráh" pri cardiorenal prepojení.</p>
+<p>Nadmerná aktivácia MR sa spája s nepriaznivými procesmi v obličkách a srdci. Preto sa nsMRA prezentujú ako lieky, ktoré zasahujú do „škodlivých dráh" pri kardioreálnom prepojení.</p>
 <p>Pri ambulantnom vysvetľovaní pacientovi stačí povedať v jednoduchej forme:</p>
 <ul>
   <li>liek cieli nepriaznivé signály v tkanivách,</li>
@@ -120,7 +120,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>U pacienta s <strong>T2D a CKD</strong> s <strong>perzistujúcou albuminúriou napriek maximálne tolerovanej RAS inhibícii</strong> je <strong>nsMRA</strong> logickým ďalším krokom. Kľúč k bezpečnej implementácii je vopred nastavený plán kontrol (najmä <strong>K⁺</strong> a renálnych parametrov) a jasná komunikácia s pacientom.</p>
+<p>U pacienta s <strong>T2D a CKD</strong> s <strong>perzistujúcou albuminúriou napriek maximálne tolerovanej RAS inhibícii</strong> je <strong>nsMRA</strong> logickým ďalším krokom. Kľúčom k bezpečnej implementácii je vopred nastavený plán kontrol (najmä <strong>K⁺</strong> a renálnych parametrov) a jasná komunikácia s pacientom.</p>
 
 <hr>
 
