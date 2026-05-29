@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/db_config.php';
 require_once __DIR__ . '/calculators_common.php';
