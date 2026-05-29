@@ -3,6 +3,7 @@ $adminNavItems = [
     'index.php' => 'Domov',
     'admin.php' => 'Administrácia',
     'admin_articles.php' => 'Správa článkov',
+    'admin_newsletter.php' => 'Newsletter',
     'admin_discussion.php' => 'Diskusia',
 ];
 $currentPage = basename($_SERVER['PHP_SELF']);
