@@ -307,12 +307,12 @@ if (isLoggedIn()) {
                         ?>
                         <div class="form-grid calc-item-separator egfr-slope-row" id="row-<?= $i ?>">
                             <div class="form-group">
-                                <label>Dátum merania <?= $i ?></label>
-                                <input type="date" name="date_<?= $i ?>" class="form-control" max="<?= date('Y-m-d') ?>" value="<?= htmlspecialchars($form["date_$i"]) ?>">
+                                <label for="date_<?= $i ?>">Dátum merania <?= $i ?></label>
+                                <input type="date" id="date_<?= $i ?>" name="date_<?= $i ?>" class="form-control" max="<?= date('Y-m-d') ?>" value="<?= htmlspecialchars($form["date_$i"]) ?>">
                             </div>
                             <div class="form-group">
-                                <label>eGFR <?= $i ?> (ml/min/1,73&thinsp;m²)</label>
-                                <input type="text" name="egfr_<?= $i ?>" class="form-control" inputmode="decimal" placeholder="napr. 45.2" value="<?= htmlspecialchars($form["egfr_$i"]) ?>">
+                                <label for="egfr_<?= $i ?>">eGFR <?= $i ?> (ml/min/1,73&thinsp;m²)</label>
+                                <input type="text" id="egfr_<?= $i ?>" name="egfr_<?= $i ?>" class="form-control" inputmode="decimal" placeholder="napr. 45.2" value="<?= htmlspecialchars($form["egfr_$i"]) ?>">
                             </div>
                             <?php if ($i > EGFR_SLOPE_MIN_ROWS): ?>
                             <div class="form-group" style="align-self:flex-end">
@@ -426,12 +426,12 @@ if (isLoggedIn()) {
             var idx = maxRow;
             row.innerHTML =
                 '<div class="form-group">' +
-                    '<label>Dátum merania ' + idx + '</label>' +
-                    '<input type="date" name="date_' + idx + '" class="form-control" max="<?= date('Y-m-d') ?>">' +
+                    '<label for="date_' + idx + '">Dátum merania ' + idx + '</label>' +
+                    '<input type="date" id="date_' + idx + '" name="date_' + idx + '" class="form-control" max="<?= date('Y-m-d') ?>">' +
                 '</div>' +
                 '<div class="form-group">' +
-                    '<label>eGFR ' + idx + ' (ml/min/1,73 m²)</label>' +
-                    '<input type="text" name="egfr_' + idx + '" class="form-control" inputmode="decimal" placeholder="napr. 45.2">' +
+                    '<label for="egfr_' + idx + '">eGFR ' + idx + ' (ml/min/1,73 m²)</label>' +
+                    '<input type="text" id="egfr_' + idx + '" name="egfr_' + idx + '" class="form-control" inputmode="decimal" placeholder="napr. 45.2">' +
                 '</div>' +
                 '<div class="form-group" style="align-self:flex-end">' +
                     '<button type="button" class="btn-secondary" onclick="removeEgfrRow(' + idx + ')" title="Odstrániť" aria-label="Odstrániť riadok ' + idx + '">−</button>' +

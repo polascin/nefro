@@ -177,7 +177,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 <div class="form-group">
                     <label for="login">E-mail alebo používateľské meno</label>
                     <input type="text" id="login" name="login" class="form-control" required
-                           value="<?= htmlspecialchars($loginValue) ?>">
+                           value="<?= htmlspecialchars($loginValue) ?>" autocomplete="username">
                 </div>
                 <div class="form-actions">
                     <button type="submit" class="btn-primary btn-block">Poslať overovací e-mail</button>

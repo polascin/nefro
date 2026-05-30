@@ -313,6 +313,10 @@ function getClientIpAddress(): string {
  */
 function ipRateLimitBlockedUntil(PDO $pdo, string $table, string $ip): int
 {
+    $allowedTables = ['login_attempts', 'totp_attempts'];
+    if (!in_array($table, $allowedTables, true)) {
+        throw new \InvalidArgumentException("Nepovolená tabuľka rate-limit: {$table}");
+    }
     $pdo->prepare("DELETE FROM `{$table}` WHERE blocked_until IS NOT NULL AND blocked_until < DATE_SUB(NOW(), INTERVAL 1 DAY)")
         ->execute();
 
@@ -338,6 +342,10 @@ function ipRateLimitBlockedUntil(PDO $pdo, string $table, string $ip): int
  */
 function recordIpFailedAttempt(PDO $pdo, string $table, string $ip, int $maxAttempts, int $blockSecs): int
 {
+    $allowedTables = ['login_attempts', 'totp_attempts'];
+    if (!in_array($table, $allowedTables, true)) {
+        throw new \InvalidArgumentException("Nepovolená tabuľka rate-limit: {$table}");
+    }
     $pdo->prepare(
         "INSERT INTO `{$table}` (ip, attempt_count, first_attempt, last_attempt)
          VALUES (:ip, 1, NOW(), NOW())
@@ -361,6 +369,10 @@ function recordIpFailedAttempt(PDO $pdo, string $table, string $ip, int $maxAtte
  */
 function clearIpRateLimit(PDO $pdo, string $table, string $ip): void
 {
+    $allowedTables = ['login_attempts', 'totp_attempts'];
+    if (!in_array($table, $allowedTables, true)) {
+        throw new \InvalidArgumentException("Nepovolená tabuľka rate-limit: {$table}");
+    }
     $pdo->prepare("DELETE FROM `{$table}` WHERE ip = :ip")->execute(['ip' => $ip]);
 }
 

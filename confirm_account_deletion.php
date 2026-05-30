@@ -92,9 +92,13 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
             // Vymazanie súborov avatara
             $avatarPath = $deletionRequest['avatar_path'] ?? null;
             if (!empty($avatarPath)) {
-                $absPath = __DIR__ . '/' . ltrim(str_replace('\\', '/', $avatarPath), '/');
-                if (is_file($absPath)) {
-                    @unlink($absPath);
+                $uploadsRoot = realpath(__DIR__ . '/uploads/avatars');
+                $candidate   = realpath(__DIR__ . '/' . ltrim(str_replace('\\', '/', $avatarPath), '/'));
+                if ($uploadsRoot !== false && $candidate !== false
+                    && str_starts_with($candidate, $uploadsRoot . DIRECTORY_SEPARATOR)
+                    && is_file($candidate)
+                ) {
+                    @unlink($candidate);
                 }
             }
             $archiveDir = realpath(__DIR__ . '/uploads/avatars/archive/' . $userId);
