@@ -509,7 +509,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && ($_POST['action'] ?? '') !=
         <div class="auth-container auth-container--wide">
             <h2>Úprava profilu</h2>
             <p class="auth-subtitle">
-                E-mailová adresa (prihlasovacia): <strong><?= htmlspecialchars($user['email']) ?></strong>
+                E-mailová adresa (prihlasovacia): <strong><?= htmlspecialchars($user['email'], ENT_QUOTES, 'UTF-8') ?></strong>
             </p>
             <p class="auth-subtitle">Formát mobilného čísla: <strong>+421XXXXXXXXX</strong> (môžete použiť aj medzery, pole je voliteľné).</p>
 
