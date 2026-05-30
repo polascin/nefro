@@ -457,7 +457,7 @@ function buildSearchSnippet(
     $suffix = $start + $snippetLen < mb_strlen($text, "UTF-8") ? "…" : "";
     $snippet = $prefix . trim($snippet) . $suffix;
 
-    return highlightSearchTerms($snippet, $tokens);
+    return highlightSearchTerms(htmlspecialchars($snippet, ENT_QUOTES, 'UTF-8'), $tokens);
 }
 
 function highlightSearchTerms(string $text, array $tokens): string
