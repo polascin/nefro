@@ -60,8 +60,6 @@ function iganInterpretation(float $risk5yr): array
     return ["interpretation" => $interp, "warnings" => $warn];
 }
 
-calculatorSendSecurityHeaders();
-
 $siteName = "Nefro-projekt Slovensko";
 $baseUrl = "https://nefro.polascin.net/";
 $pageUrl = $baseUrl . "calculator_igan.php";

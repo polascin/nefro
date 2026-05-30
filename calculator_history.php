@@ -143,12 +143,12 @@ if (isLoggedIn()) {
     }
 
     // Zoradiť každú skupinu od najnovšieho, anonymní na koniec
-    uksort($grouped, function ($a, $b) {
+    uksort($grouped, function ($a, $b) use (&$grouped) {
         if ($a === '__anon__') return 1;
         if ($b === '__anon__') return -1;
         return strcmp(
-            $GLOBALS['grouped'][$a]['heading'],
-            $GLOBALS['grouped'][$b]['heading']
+            $grouped[$a]['heading'],
+            $grouped[$b]['heading']
         );
     });
     foreach ($grouped as &$g) {

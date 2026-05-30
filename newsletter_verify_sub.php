@@ -43,6 +43,7 @@ $pageClass = $status === 'success' ? 'alert-success' : 'alert-error';
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
   <title>Potvrdenie odberu noviniek - Nefro-projekt Slovensko</title>
   <script src="theme.js?v=<?= filemtime('theme.js') ?>"></script>
   <link rel="stylesheet" href="index.css?v=<?= filemtime('index.css') ?>">

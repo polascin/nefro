@@ -76,8 +76,6 @@ function adpkdInterpretation(string $class): array
     return ["interpretation" => $interp, "warnings" => $warn];
 }
 
-calculatorSendSecurityHeaders();
-
 $siteName = "Nefro-projekt Slovensko";
 $baseUrl = "https://nefro.polascin.net/";
 $pageUrl = $baseUrl . "calculator_adpkd.php";
