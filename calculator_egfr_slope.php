@@ -335,7 +335,7 @@ if (isLoggedIn()) {
                 </form>
 
                 <?php if ($calculated !== null): ?>
-                    <div class="form-section calculator-result-block" role="status">
+                    <div class="form-section calculator-result-block" role="status" aria-live="polite">
                         <h3>Výsledok lineárnej regresie</h3>
                         <p><strong>Rýchlosť zmeny (Slope):</strong> <?= htmlspecialchars((string)$calculated["slope"]) ?> ml/min/1,73&thinsp;m² za rok</p>
                         <p class="calc-accent-text">Interpretácia: <?= htmlspecialchars($calculated["interpretation"]) ?></p>

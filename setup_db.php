@@ -171,6 +171,12 @@ try {
         $cliOut("Migrácia: totp_secret, totp_enabled, totp_backup_codes pridané.\n");
     }
 
+    // ── Migrácia: TOTP replay ochrana (last_counter) ─────────────────────────
+    if (!columnExists($pdo, 'users', 'totp_last_counter')) {
+        $pdo->exec("ALTER TABLE users ADD COLUMN totp_last_counter INT NULL DEFAULT NULL AFTER totp_backup_codes");
+        $cliOut("Migrácia: totp_last_counter pridané.\n");
+    }
+
     // Pri prvom zavedení stĺpca považujeme existujúce účty za overené,
     // aby sa neblokovali produkčné prístupy.
     if ($emailVerifiedAtAdded) {

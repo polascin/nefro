@@ -439,7 +439,7 @@ if (isLoggedIn()) {
                 <?php if ($calculated !== null):
                     $kfRiskCls = kfreRiskClass((float) $calculated["risk_5yr"]);
                 ?>
-                    <div class="form-section calculator-result-block kfre-result <?= htmlspecialchars($kfRiskCls) ?>" role="status">
+                    <div class="form-section calculator-result-block kfre-result <?= htmlspecialchars($kfRiskCls) ?>" role="status" aria-live="polite">
                         <h3>Výsledok KFRE</h3>
                         <div class="kfre-risk-display">
                             <div class="risk-item risk-2yr">

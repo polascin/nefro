@@ -221,7 +221,7 @@ if (isLoggedIn()) {
                 </form>
 
                 <?php if ($calculated !== null): ?>
-                    <div class="form-section calculator-result-block" role="status">
+                    <div class="form-section calculator-result-block" role="status" aria-live="polite">
                         <h3>Výsledok</h3>
                         <p><strong>Kt/V (Daugirdas II):</strong> <?= htmlspecialchars(
                             $calculated["ktv"],

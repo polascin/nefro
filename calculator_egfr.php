@@ -369,7 +369,7 @@ if (isLoggedIn()) {
                 <?php if ($calculated !== null):
                     $riskCls = egfrRiskClass($calculated["g_category"]);
                 ?>
-                    <div class="form-section calculator-result-block <?= htmlspecialchars($riskCls) ?>" role="status">
+                    <div class="form-section calculator-result-block <?= htmlspecialchars($riskCls) ?>" role="status" aria-live="polite">
                         <h3>Výsledok výpočtu</h3>
                         <div class="calc-egfr-result-main">
                             <div class="calc-result-value-block">

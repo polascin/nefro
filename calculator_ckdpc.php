@@ -840,7 +840,7 @@ function sexLabel(string $v): string
 
                 <!-- ── VÝSLEDOK ─────────────────────────────────── -->
                 <?php if ($calculated !== null): ?>
-                    <div class="form-section calculator-result-block ckdpc-result" role="status">
+                    <div class="form-section calculator-result-block ckdpc-result" role="status" aria-live="polite">
                         <h3>Výsledok CKD-PC</h3>
                         <p class="helper-text">Model: <strong><?= htmlspecialchars(
                             $calculated["model_name"],
