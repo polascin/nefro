@@ -500,7 +500,7 @@ if (!function_exists('processNlSubQueue')) {
 
         $itemStmt = $pdo->prepare("SELECT q.id, q.article_id, q.subscriber_id, q.email, q.attempts,
                 a.title, a.slug, a.excerpt, a.is_published,
-                s.verified_at, s.unsubscribed_at, s.unsub_token
+                s.verified_at, s.unsubscribed_at
             FROM nl_sub_queue q
             LEFT JOIN articles a ON a.id = q.article_id
             LEFT JOIN newsletter_subscribers s ON s.id = q.subscriber_id
