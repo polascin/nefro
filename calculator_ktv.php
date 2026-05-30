@@ -198,19 +198,19 @@ if (isLoggedIn()) {
                                 <label for="examination_date">Dátum vyšetrenia <span class="required">*</span></label>
                                 <input type="date" id="examination_date" name="examination_date" required class="form-control" max="<?= date('Y-m-d') ?>" value="<?= htmlspecialchars($form['examination_date']) ?>">
                             </div>
-                                                        <div class="form-group"><label>S-Urea PRED dialýzou (mmol/L)</label><input type="text" name="u_pre" class="form-control" value="<?= htmlspecialchars(
+                                                        <div class="form-group"><label for="u_pre">S-Urea PRED dialýzou (mmol/L)</label><input type="text" id="u_pre" name="u_pre" class="form-control" value="<?= htmlspecialchars(
                                 $form["u_pre"],
                             ) ?>" required></div>
-                            <div class="form-group"><label>S-Urea PO dialýze (mmol/L)</label><input type="text" name="u_post" class="form-control" value="<?= htmlspecialchars(
+                            <div class="form-group"><label for="u_post">S-Urea PO dialýze (mmol/L)</label><input type="text" id="u_post" name="u_post" class="form-control" value="<?= htmlspecialchars(
                                 $form["u_post"],
                             ) ?>" required></div>
-                            <div class="form-group"><label>Trvanie dialýzy (hodiny)</label><input type="text" name="time_hours" class="form-control" value="<?= htmlspecialchars(
+                            <div class="form-group"><label for="time_hours">Trvanie dialýzy (hodiny)</label><input type="text" id="time_hours" name="time_hours" class="form-control" value="<?= htmlspecialchars(
                                 $form["time_hours"],
                             ) ?>" required></div>
-                            <div class="form-group"><label>Hmotnosť PO dialýze (kg)</label><input type="text" name="weight_post" class="form-control" value="<?= htmlspecialchars(
+                            <div class="form-group"><label for="weight_post">Hmotnosť PO dialýze (kg)</label><input type="text" id="weight_post" name="weight_post" class="form-control" value="<?= htmlspecialchars(
                                 $form["weight_post"],
                             ) ?>" required></div>
-                            <div class="form-group"><label>Ultrafiltrácia (L alebo kg)</label><input type="text" name="uf_volume" class="form-control" value="<?= htmlspecialchars(
+                            <div class="form-group"><label for="uf_volume">Ultrafiltrácia (L alebo kg)</label><input type="text" id="uf_volume" name="uf_volume" class="form-control" value="<?= htmlspecialchars(
                                 $form["uf_volume"],
                             ) ?>" required></div>
                         </div>

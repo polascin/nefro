@@ -1050,11 +1050,11 @@ function sexLabel(string $v): string
                                 <table class="admin-table">
                                     <thead>
                                         <tr>
-                                            <th>Vyšetrenie</th>
-                                            <th>Pacient</th>
-                                            <th>Model</th>
-                                            <th>3-ročné riziko</th>
-                                            <th>Akcie</th>
+                                            <th scope="col">Vyšetrenie</th>
+                                            <th scope="col">Pacient</th>
+                                            <th scope="col">Model</th>
+                                            <th scope="col">3-ročné riziko</th>
+                                            <th scope="col">Akcie</th>
                                         </tr>
                                     </thead>
                                     <tbody>

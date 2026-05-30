@@ -304,7 +304,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 
                 <div class="form-group">
                     <label for="password">Heslo</label>
-                    <input type="password" id="password" name="password" class="form-control" required>
+                    <input type="password" id="password" name="password" class="form-control" required autocomplete="current-password">
                 </div>
 
                 <div class="form-actions">

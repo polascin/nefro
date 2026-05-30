@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 /**
  * generate_og_image.php
  * Generuje Open Graph obrázok 1200×630 px pre Nefro-projekt Slovensko.

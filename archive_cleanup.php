@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 /**
  * archive_cleanup.php — CLI-only retenčný cleanup skript
  *

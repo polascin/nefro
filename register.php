@@ -518,11 +518,11 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="email">E-mailová adresa *</label>
-                                <input type="email" id="email" name="email" class="form-control" required value="<?= htmlspecialchars($_POST['email'] ?? '') ?>">
+                                <input type="email" id="email" name="email" class="form-control" required value="<?= htmlspecialchars($_POST['email'] ?? '') ?>" autocomplete="email">
                             </div>
                             <div class="form-group">
                                 <label for="mobile_phone">Číslo súkromného mobilného telefónu (voliteľné)</label>
-                                <input type="tel" id="mobile_phone" name="mobile_phone" class="form-control" value="<?= htmlspecialchars($_POST['mobile_phone'] ?? '') ?>" placeholder="+421 901 234 567" pattern="^\+421[0-9\s\-()\.\/]{8,20}$" title="Zadajte číslo vo formáte +421XXXXXXXXX alebo +421 901 234 567">
+                                <input type="tel" id="mobile_phone" name="mobile_phone" class="form-control" value="<?= htmlspecialchars($_POST['mobile_phone'] ?? '') ?>" placeholder="+421 901 234 567" pattern="^\+421[0-9\s\-()\.\/]{8,20}$" title="Zadajte číslo vo formáte +421XXXXXXXXX alebo +421 901 234 567" autocomplete="tel">
                                 <small class="avatar-upload-hint">Pole je voliteľné. Povolený je iba medzinárodný formát začínajúci znakom +.</small>
                             </div>
                             <div class="form-group">
@@ -553,7 +553,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 
                         <div class="form-group">
                             <label for="username">Používateľské meno (ak nevyplníte, použije sa e-mail)</label>
-                            <input type="text" id="username" name="username" class="form-control" value="<?= htmlspecialchars($_POST['username'] ?? '') ?>">
+                            <input type="text" id="username" name="username" class="form-control" value="<?= htmlspecialchars($_POST['username'] ?? '') ?>" autocomplete="username">
                         </div>
                         <div class="form-grid">
                             <div class="form-group">
@@ -590,15 +590,15 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                             </div>
                             <div class="form-group">
                                 <label for="first_name">Prvé (krstné) meno</label>
-                                <input type="text" id="first_name" name="first_name" class="form-control" value="<?= htmlspecialchars($_POST['first_name'] ?? '') ?>">
+                                <input type="text" id="first_name" name="first_name" class="form-control" value="<?= htmlspecialchars($_POST['first_name'] ?? '') ?>" autocomplete="given-name">
                             </div>
                             <div class="form-group">
                                 <label for="middle_name">Stredné meno/á</label>
-                                <input type="text" id="middle_name" name="middle_name" class="form-control" value="<?= htmlspecialchars($_POST['middle_name'] ?? '') ?>">
+                                <input type="text" id="middle_name" name="middle_name" class="form-control" value="<?= htmlspecialchars($_POST['middle_name'] ?? '') ?>" autocomplete="additional-name">
                             </div>
                             <div class="form-group">
                                 <label for="last_name">Priezvisko</label>
-                                <input type="text" id="last_name" name="last_name" class="form-control" value="<?= htmlspecialchars($_POST['last_name'] ?? '') ?>">
+                                <input type="text" id="last_name" name="last_name" class="form-control" value="<?= htmlspecialchars($_POST['last_name'] ?? '') ?>" autocomplete="family-name">
                             </div>
                             <div class="form-group">
                                 <label for="title_after">Titul za menom</label>
@@ -617,7 +617,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                             </div>
                             <div class="form-group">
                                 <label for="birth_date">Dátum narodenia</label>
-                                <input type="date" id="birth_date" name="birth_date" class="form-control" value="<?= htmlspecialchars($_POST['birth_date'] ?? '') ?>">
+                                <input type="date" id="birth_date" name="birth_date" class="form-control" value="<?= htmlspecialchars($_POST['birth_date'] ?? '') ?>" autocomplete="bday">
                             </div>
                         </div>
                         <div class="form-group">
@@ -631,23 +631,23 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="organization">Organizácia</label>
-                                <input type="text" id="organization" name="organization" class="form-control" value="<?= htmlspecialchars($_POST['organization'] ?? '') ?>">
+                                <input type="text" id="organization" name="organization" class="form-control" value="<?= htmlspecialchars($_POST['organization'] ?? '') ?>" autocomplete="organization">
                             </div>
                             <div class="form-group">
                                 <label for="job_function">Funkcia</label>
-                                <input type="text" id="job_function" name="job_function" class="form-control" value="<?= htmlspecialchars($_POST['job_function'] ?? '') ?>">
+                                <input type="text" id="job_function" name="job_function" class="form-control" value="<?= htmlspecialchars($_POST['job_function'] ?? '') ?>" autocomplete="organization-title">
                             </div>
                             <div class="form-group">
                                 <label for="work_mobile_phone">Číslo pracovného mobilného telefónu (voliteľné)</label>
-                                <input type="tel" id="work_mobile_phone" name="work_mobile_phone" class="form-control" value="<?= htmlspecialchars($_POST['work_mobile_phone'] ?? '') ?>" placeholder="+421 901 234 567" pattern="^\+421[0-9\s\-()\.\/]{8,20}$" title="Zadajte číslo vo formáte +421XXXXXXXXX alebo +421 901 234 567">
+                                <input type="tel" id="work_mobile_phone" name="work_mobile_phone" class="form-control" value="<?= htmlspecialchars($_POST['work_mobile_phone'] ?? '') ?>" placeholder="+421 901 234 567" pattern="^\+421[0-9\s\-()\.\/]{8,20}$" title="Zadajte číslo vo formáte +421XXXXXXXXX alebo +421 901 234 567" autocomplete="work tel-national">
                             </div>
                             <div class="form-group">
                                 <label for="org_website">Webové stránky organizácie</label>
-                                <input type="url" id="org_website" name="org_website" class="form-control" value="<?= htmlspecialchars($_POST['org_website'] ?? '') ?>">
+                                <input type="url" id="org_website" name="org_website" class="form-control" value="<?= htmlspecialchars($_POST['org_website'] ?? '') ?>" autocomplete="url">
                             </div>
                             <div class="form-group">
                                 <label for="work_email">Pracovný e-mail</label>
-                                <input type="email" id="work_email" name="work_email" class="form-control" value="<?= htmlspecialchars($_POST['work_email'] ?? '') ?>">
+                                <input type="email" id="work_email" name="work_email" class="form-control" value="<?= htmlspecialchars($_POST['work_email'] ?? '') ?>" autocomplete="work email">
                             </div>
                         </div>
                     </div>
@@ -657,11 +657,11 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="other_phone">Iné telefónne číslo</label>
-                                <input type="tel" id="other_phone" name="other_phone" class="form-control" value="<?= htmlspecialchars($_POST['other_phone'] ?? '') ?>" placeholder="+421 2 1234 5678" pattern="^\+[0-9][0-9\s\-()\.\/]{7,20}$" title="Zadajte číslo v medzinárodnom formáte +XXXXXXXX, napr. +421 2 1234 5678">
+                                <input type="tel" id="other_phone" name="other_phone" class="form-control" value="<?= htmlspecialchars($_POST['other_phone'] ?? '') ?>" placeholder="+421 2 1234 5678" pattern="^\+[0-9][0-9\s\-()\.\/]{7,20}$" title="Zadajte číslo v medzinárodnom formáte +XXXXXXXX, napr. +421 2 1234 5678" autocomplete="tel">
                             </div>
                             <div class="form-group">
                                 <label for="website">Osobné webové stránky</label>
-                                <input type="url" id="website" name="website" class="form-control" value="<?= htmlspecialchars($_POST['website'] ?? '') ?>">
+                                <input type="url" id="website" name="website" class="form-control" value="<?= htmlspecialchars($_POST['website'] ?? '') ?>" autocomplete="url">
                             </div>
                         </div>
                         <h3>Sociálne siete</h3>
@@ -712,7 +712,8 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                                 <label for="street">Ulica</label>
                                 <input type="text" id="street" name="street" class="form-control"
                                     value="<?= htmlspecialchars($_POST['street'] ?? '') ?>"
-                                    placeholder="napr. Hlavná">
+                                    placeholder="napr. Hlavná"
+                                    autocomplete="address-line1">
                             </div>
                             <div class="form-group">
                                 <label for="house_number">Popisné číslo</label>

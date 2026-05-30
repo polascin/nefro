@@ -210,12 +210,12 @@ if (isLoggedIn()) {
                                 <label for="examination_date">Dátum vyšetrenia <span class="required">*</span></label>
                                 <input type="date" id="examination_date" name="examination_date" required class="form-control" max="<?= date('Y-m-d') ?>" value="<?= htmlspecialchars($form['examination_date']) ?>">
                             </div>
-                                                        <div class="form-group"><label>U-Albumín</label><input type="text" name="u_alb" class="form-control" value="<?= htmlspecialchars(
+                                                        <div class="form-group"><label for="u_alb">U-Albumín</label><input type="text" id="u_alb" name="u_alb" class="form-control" value="<?= htmlspecialchars(
                                 $form["u_alb"],
                             ) ?>" required></div>
                             <div class="form-group">
-                                <label>Jednotka Albumínu</label>
-                                <select name="u_alb_unit" class="form-control">
+                                <label for="u_alb_unit">Jednotka Albumínu</label>
+                                <select id="u_alb_unit" name="u_alb_unit" class="form-control">
                                     <option value="mg_l" <?= $form[
                                         "u_alb_unit"
                                     ] === "mg_l"
@@ -233,12 +233,12 @@ if (isLoggedIn()) {
                                         : "" ?>>g/L</option>
                                 </select>
                             </div>
-                            <div class="form-group"><label>U-Kreatinín</label><input type="text" name="u_cr" class="form-control" value="<?= htmlspecialchars(
+                            <div class="form-group"><label for="u_cr">U-Kreatinín</label><input type="text" id="u_cr" name="u_cr" class="form-control" value="<?= htmlspecialchars(
                                 $form["u_cr"],
                             ) ?>" required></div>
                             <div class="form-group">
-                                <label>Jednotka Kreatinínu</label>
-                                <select name="u_cr_unit" class="form-control">
+                                <label for="u_cr_unit">Jednotka Kreatinínu</label>
+                                <select id="u_cr_unit" name="u_cr_unit" class="form-control">
                                     <option value="mmol_l" <?= $form[
                                         "u_cr_unit"
                                     ] === "mmol_l"
