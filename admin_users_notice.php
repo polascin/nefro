@@ -284,6 +284,7 @@ $modeLabel = $includeSensitive
     <script src="ui-preferences-fallback.js?v=20260511-1&cb=<?= filemtime('ui-preferences-fallback.js') ?>" defer></script>
 </head>
 <body class="admin-notice-page">
+    <a href="#main-notice-content" class="skip-link">Preskočiť na hlavný obsah</a>
     <div class="print-layout-table">
         <div class="print-layout-thead">
             <div class="admin-print-header print-only">
@@ -293,7 +294,7 @@ $modeLabel = $includeSensitive
         </div>
         
         <div class="print-layout-tbody">
-            <main class="container admin-notice-container">
+            <main id="main-notice-content" class="container admin-notice-container">
         <div class="auth-container auth-container--wide admin-notice-card">
             <h2>Zoznam používateľov</h2>
             <p class="auth-subtitle">Zoznam všetkých používateľov zoradený abecedne podľa priezviska.</p>

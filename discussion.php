@@ -208,9 +208,9 @@ function discAvatarSrc(array $row): string
       <div class="disc-page">
 
         <!-- Uvítacia správa (permanentná) -->
-        <div class="disc-welcome" role="banner" aria-label="Uvítanie v diskusii">
+        <div class="disc-welcome" role="region" aria-labelledby="disc-welcome-heading">
           <div class="disc-welcome__icon" aria-hidden="true">💬</div>
-          <h1 class="disc-welcome__title">Vitajte v diskusii</h1>
+          <h1 id="disc-welcome-heading" class="disc-welcome__title">Vitajte v diskusii</h1>
           <p class="disc-welcome__text">
             Toto je priestor pre odbornú diskusiu členov <strong>Nefro-projektu Slovensko</strong>.
             Zdieľajte skúsenosti, otázky a poznatky z nefrológie a príbuzných odborov s kolegami.

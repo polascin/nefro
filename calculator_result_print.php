@@ -213,6 +213,7 @@ function formatResultKey(string $key): string {
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;900&display=swap" rel="stylesheet">
 </head>
 <body data-auto-print="1">
+    <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>
     <?php
     // Header includovaný rovnako ako v kalkulačkách — aktivuje print-layout-table a user-print-header
     $headerTitle = htmlspecialchars((string) ($resultRow['calculator_label'] ?? 'Výsledok kalkulačky'));
@@ -222,7 +223,7 @@ function formatResultKey(string $key): string {
     // $currentUser je teraz nastavený cez header_profile.php (includovaný z header.php)
     ?>
 
-    <main class="container main-content main-content--single-col" role="main">
+    <main id="main-content" class="container main-content main-content--single-col" role="main">
         <div class="content-wrapper">
             <div class="auth-container auth-container--wide">
 
