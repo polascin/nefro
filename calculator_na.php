@@ -101,7 +101,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 $fwd = $tbw * ($sNa / $targetNa - 1);
             }
 
-            // Adrogue-Madias (Odhadovaná zmena Na po 1L infúzie)
+            // Adrogué-Madias (Odhadovaná zmena Na po 1L infúzie)
             $changePerL = null;
             if ($infNa !== null && $infK !== null) {
                 $changePerL = ($infNa + $infK - $sNa) / ($tbw + 1);
@@ -180,7 +180,7 @@ if (isLoggedIn()) {
   $pageTitle = "Poruchy sodíka a vody | Kalkulačky | Nefro-projekt Slovensko";
   $canonicalUrl = "https://nefro.polascin.net/calculator_na.php";
   $seoDescription =
-      "Nefrologická kalkulačka a nástroj: Poruchy sodíka a vody. Deficit voľnej vody a Adrogue-Madias. Presné klinické výpočty podľa najnovších odporúčaní pre lekárov na Slovensku.";
+      "Nefrologická kalkulačka a nástroj: Poruchy sodíka a vody. Deficit voľnej vody a Adrogué-Madias. Presné klinické výpočty podľa najnovších odporúčaní pre lekárov na Slovensku.";
   $structuredData = [
       [
           "@context" => "https://schema.org",
@@ -214,7 +214,7 @@ if (isLoggedIn()) {
     <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>
     <?php
     $headerTitle = "Kalkulačka Sodíka";
-    $headerIntro = "Deficit voľnej vody a Adrogue-Madias";
+    $headerIntro = "Deficit voľnej vody a Adrogué-Madias";
     $showLogo = false;
     include "header.php";
     ?>
@@ -224,17 +224,17 @@ if (isLoggedIn()) {
         <div class="content-wrapper">
             <div class="auth-container auth-container--wide">
                 <h2>Poruchy sodíka a vody</h2>
-                <p class="auth-subtitle">Kalkulačka pre manažment hypernatrémie (deficit voľnej vody) a hyponatrémie (Adrogue-Madiasova rovnica).</p>
+                <p class="auth-subtitle">Kalkulačka pre manažment hypernatrémie (deficit voľnej vody) a hyponatrémie (Adrogué-Madiasova rovnica).</p>
 
                 <details open class="calc-formula-box">
                     <summary>Vzorce a vysvetlivky</summary>
                     <div class="calc-formula-content">
                         <div class="calc-formula-line">\[ \text{TBW} = \text{Hmotnosť} \times (0.45 \text{ až } 0.6 \text{ podľa pohlavia a veku}) \]</div>
                         <div class="calc-formula-line">\[ \text{Deficit vody [L]} = \text{TBW} \times \left( \frac{\text{S-Na}}{\text{Cieľové Na}} - 1 \right) \]</div>
-                        <div class="calc-formula-line">\[ \text{Adrogue-Madias} = \frac{\text{Infúzia Na} + \text{Infúzia K} - \text{S-Na}}{\text{TBW} + 1} \]</div>
+                        <div class="calc-formula-line">\[ \text{Adrogué-Madias} = \frac{\text{Infúzia Na} + \text{Infúzia K} - \text{S-Na}}{\text{TBW} + 1} \]</div>
                         <div class="calc-formula-vars">
                             <strong>TBW:</strong> Celková telesná voda v litroch.<br>
-                            <strong>Adrogue-Madias:</strong> Odhaduje, o koľko mmol/L sa zmení sérový sodík po podaní 1 litra konkrétneho infúzneho roztoku. Upozornenie: Rýchlosť korekcie by nemala presiahnuť 8-10 mmol/L za 24h, inak hrozí osmotický demyelinizačný syndróm!
+                            <strong>Adrogué-Madias:</strong> Odhaduje, o koľko mmol/L sa zmení sérový sodík po podaní 1 litra konkrétneho infúzneho roztoku. Upozornenie: Rýchlosť korekcie by nemala presiahnuť 8-10 mmol/L za 24h, inak hrozí osmotický demyelinizačný syndróm!
                         </div>
                     </div>
                 </details>
@@ -300,7 +300,7 @@ if (isLoggedIn()) {
                     </div>
 
                     <div class="form-section">
-                        <h3>Parametre infúzie (Pre Adrogue-Madias)</h3>
+                        <h3>Parametre infúzie (Pre Adrogué-Madias)</h3>
                         <div class="form-grid">
                             <div class="form-group"><label for="infusion_na">Sodík v infúzii (mmol/L)</label><input type="text" id="infusion_na" name="infusion_na" class="form-control" value="<?= htmlspecialchars(
                                 $form["infusion_na"],

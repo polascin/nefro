@@ -276,7 +276,7 @@ $schemaWebApp = [
             </section>
 
             <section class="features-section" aria-labelledby="spec-calculators-heading">
-                <h2 id="spec-calculators-heading">Diagnózovo špecifické kalkulačky</h2>
+                <h2 id="spec-calculators-heading">Kalkulačky pre špecifické diagnózy</h2>
                 <p class="calc-intro-text">KDIGO 2024 odporúča pre niektoré ochorenia obličiek použiť externálne validované, diagnózovo špecifické prognostické nástroje.</p>
                 <div class="features-grid calculators-grid">
                     <article class="feature-card calculator-card">
