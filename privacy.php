@@ -89,8 +89,6 @@ $pageLastUpdated = date('d.m.Y', filemtime(__FILE__));
     include 'header.php';
     ?>
 
-    <?php include 'main_nav.php'; ?>
-
     <main id="main-content" class="container main-content main-content--single-col" role="main">
         <div class="content-wrapper">
             <article class="primary-article">

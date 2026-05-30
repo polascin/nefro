@@ -304,7 +304,7 @@ if (isLoggedIn()) {
                         "1E", "2" => "adpkd-result-1e",
                         default   => "adpkd-result-default",
                     }; ?>
-                <div class="calc-result-box <?= $classSlug ?>" role="region" aria-label="Výsledok klasifikácie">
+                <div class="calc-result-box <?= $classSlug ?>" role="status" aria-label="Výsledok klasifikácie" aria-live="polite">
                     <h3>Výsledok — Mayo ADPKD klasifikácia</h3>
                     <div class="calc-result-grid">
                         <div class="calc-result-item calc-result-item--highlight">

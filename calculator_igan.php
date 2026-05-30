@@ -272,7 +272,7 @@ if (isLoggedIn()) {
                 <?php endif; ?>
 
                 <?php if ($calculated !== null): ?>
-                <div class="calc-result-box" role="region" aria-label="Výsledok kalkulácie">
+                <div class="calc-result-box" role="status" aria-label="Výsledok kalkulácie" aria-live="polite">
                     <h3>Výsledok — IgAN Prediction Tool</h3>
                     <div class="calc-result-grid">
                         <div class="calc-result-item calc-result-item--highlight">
