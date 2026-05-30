@@ -204,8 +204,15 @@ document.addEventListener('DOMContentLoaded', function () {
             list = list.filter(function (r) { return r.key === calcPageKey; });
 
             if (!list.length) {
-                if (isGuest && loginMsg) {
-                    loginMsg.textContent = 'Pre trvalú históriu sa prihláste. Žiadne lokálne záznamy.';
+                if (isGuest) {
+                    if (loginMsg && loginMsg.isConnected) {
+                        loginMsg.textContent = 'Pre trvalú históriu sa prihláste. Žiadne lokálne záznamy.';
+                    } else {
+                        while (savedSection.firstChild) { savedSection.removeChild(savedSection.firstChild); }
+                        var emptyP = document.createElement('p');
+                        emptyP.textContent = 'Pre trvalú históriu sa prihláste. Žiadne lokálne záznamy.';
+                        savedSection.appendChild(emptyP);
+                    }
                 }
                 return;
             }
