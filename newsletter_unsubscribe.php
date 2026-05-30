@@ -15,12 +15,53 @@ $signature = trim((string) ($_GET['sig'] ?? ''));
 $subId    = (int) ($_GET['sub'] ?? 0);
 $subToken = trim((string) ($_GET['token'] ?? ''));
 
-if ($subId > 0 && $subToken !== '') {
+if ($subId > 0 && $expiresAt > 0 && $signature !== '') {
+    // Nový HMAC odhlasovací odkaz (bez DB tokenu)
     try {
         $stmt = $pdo->prepare(
-            "SELECT id, email, unsubscribed_at FROM newsletter_subscribers WHERE id = :id AND unsub_token = :token LIMIT 1"
+            "SELECT id, email, unsubscribed_at FROM newsletter_subscribers WHERE id = :id AND verified_at IS NOT NULL LIMIT 1"
         );
-        $stmt->execute(['id' => $subId, 'token' => $subToken]);
+        $stmt->execute(['id' => $subId]);
+        $sub = $stmt->fetch();
+
+        if (!$sub) {
+            $message = 'Odhlasovací odkaz nie je platný.';
+        } elseif (!verifySubscriberUnsubscribeHmac($subId, (string) ($sub['email'] ?? ''), $expiresAt, $signature)) {
+            $message = 'Odhlasovací odkaz je neplatný alebo jeho platnosť vypršala.';
+        } elseif ($sub['unsubscribed_at'] !== null) {
+            $status  = 'success';
+            $message = 'Odber noviniek je už odhlásený.';
+        } else {
+            $pdo->beginTransaction();
+            $pdo->prepare(
+                "UPDATE newsletter_subscribers SET unsubscribed_at = NOW() WHERE id = :id"
+            )->execute(['id' => $subId]);
+            $cancelStmt = $pdo->prepare(
+                "UPDATE nl_sub_queue SET status='cancelled', next_attempt_at=NOW(), last_error='Odberateľ sa odhlásil.'
+                 WHERE subscriber_id = :sid AND status IN ('pending','failed') AND sent_at IS NULL"
+            );
+            $cancelStmt->execute(['sid' => $subId]);
+            $cancelled = (int) $cancelStmt->rowCount();
+            $pdo->commit();
+
+            $status  = 'success';
+            $message = 'Odber noviniek bol úspešne odhlásený.';
+            if ($cancelled > 0) {
+                $message .= ' Z fronty bolo zrušených ' . $cancelled . ' čakajúcich e-mailov.';
+            }
+        }
+    } catch (\PDOException $e) {
+        if ($pdo->inTransaction()) { $pdo->rollBack(); }
+        error_log('Newsletter sub HMAC unsubscribe error: ' . $e->getMessage());
+        $message = 'Pri odhlásení odberu došlo k chybe. Skúste to neskôr.';
+    }
+} elseif ($subId > 0 && $subToken !== '') {
+    // Starý formát tokenu — backward kompatibilita (token v URL, hash v DB)
+    try {
+        $stmt = $pdo->prepare(
+            "SELECT id, email, unsubscribed_at FROM newsletter_subscribers WHERE id = :id AND unsub_token = :token_hash LIMIT 1"
+        );
+        $stmt->execute(['id' => $subId, 'token_hash' => hash('sha256', $subToken)]);
         $sub = $stmt->fetch();
 
         if (!$sub) {
@@ -113,19 +154,20 @@ $pageClass = $status === 'success' ? 'alert-success' : 'alert-error';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Odhlásenie noviniek - Nefro-projekt Slovensko</title>
-    <script src="theme.js?v=20260511-1&cb=<?= filemtime('theme.js') ?>"></script>
-    <link rel="stylesheet" href="index.css?v=20260509-1&cb=<?= filemtime('index.css') ?>">
-    <script src="ui-preferences.js?v=20260511-1&cb=<?= filemtime('ui-preferences.js') ?>" defer></script>
-    <script src="ui-preferences-fallback.js?v=20260511-1&cb=<?= filemtime('ui-preferences-fallback.js') ?>" defer></script>
+    <script src="theme.js?v=<?= filemtime('theme.js') ?>"></script>
+    <link rel="stylesheet" href="index.css?v=<?= filemtime('index.css') ?>">
+    <script src="ui-preferences.js?v=<?= filemtime('ui-preferences.js') ?>" defer></script>
+    <script src="ui-preferences-fallback.js?v=<?= filemtime('ui-preferences-fallback.js') ?>" defer></script>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>
     <?php
     $headerTitle = 'Odhlásenie noviniek';
     $showLogo = false;
     include 'header.php';
     ?>
 
-    <main class="container">
+    <main id="main-content" class="container">
         <div class="auth-container">
             <h2>Odhlásenie odberu noviniek</h2>
             <div class="alert <?= htmlspecialchars($pageClass, ENT_QUOTES) ?>">

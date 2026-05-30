@@ -413,6 +413,37 @@ if (!function_exists('buildSubscriberUnsubscribeUrl')) {
     }
 }
 
+if (!function_exists('buildSubscriberUnsubscribeHmacUrl')) {
+    function buildSubscriberUnsubscribeHmacUrl(int $subscriberId, string $email, int $ttlSeconds = 315360000): string
+    {
+        $ttlSeconds      = max(86400, min(315360000, $ttlSeconds));
+        $expiresAt       = time() + $ttlSeconds;
+        $normalizedEmail = strtolower(trim($email));
+        $payload         = $subscriberId . '|' . $normalizedEmail . '|' . $expiresAt;
+        $signature       = hash_hmac('sha256', $payload, getNewsletterUnsubscribeSecret());
+
+        return getAppBaseUrl() . '/newsletter_unsubscribe.php?sub=' . urlencode((string) $subscriberId)
+            . '&exp=' . urlencode((string) $expiresAt)
+            . '&sig=' . urlencode($signature);
+    }
+}
+
+if (!function_exists('verifySubscriberUnsubscribeHmac')) {
+    function verifySubscriberUnsubscribeHmac(int $subscriberId, string $email, int $expiresAt, string $signature): bool
+    {
+        if ($subscriberId <= 0 || $expiresAt <= 0 || trim($signature) === '') {
+            return false;
+        }
+        if ($expiresAt < time()) {
+            return false;
+        }
+        $normalizedEmail = strtolower(trim($email));
+        $payload         = $subscriberId . '|' . $normalizedEmail . '|' . $expiresAt;
+        $expected        = hash_hmac('sha256', $payload, getNewsletterUnsubscribeSecret());
+        return hash_equals($expected, trim($signature));
+    }
+}
+
 if (!function_exists('sendSubscriberVerifyEmail')) {
     function sendSubscriberVerifyEmail(string $email, string $verifyToken): bool
     {
@@ -511,7 +542,7 @@ if (!function_exists('processNlSubQueue')) {
                 continue;
             }
 
-            $unsubscribeUrl     = buildSubscriberUnsubscribeUrl((int) $item['subscriber_id'], (string) $item['unsub_token']);
+            $unsubscribeUrl     = buildSubscriberUnsubscribeHmacUrl((int) $item['subscriber_id'], $recipientEmail);
             $articleUrl         = getAppBaseUrl() . '/article.php?slug=' . urlencode((string) ($item['slug'] ?? ''));
             $subject            = 'Nový článok: ' . (string) $item['title'] . ' - Nefro-projekt Slovensko';
             $titleHtml          = htmlspecialchars((string) $item['title'], ENT_QUOTES | ENT_HTML5, 'UTF-8');

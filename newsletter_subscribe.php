@@ -90,15 +90,17 @@ try {
         exit;
     }
 
-    $verifyToken = bin2hex(random_bytes(32));
-    $unsubToken  = bin2hex(random_bytes(32));
+    $verifyToken     = bin2hex(random_bytes(32));
+    $unsubToken      = bin2hex(random_bytes(32));
+    $verifyTokenHash = hash('sha256', $verifyToken);
+    $unsubTokenHash  = hash('sha256', $unsubToken);
 
     if ($existing) {
         $pdo->prepare(
             "UPDATE newsletter_subscribers
              SET verify_token = :vt, unsub_token = :ut, verified_at = NULL, unsubscribed_at = NULL, updated_at = NOW()
              WHERE id = :id"
-        )->execute(['vt' => $verifyToken, 'ut' => $unsubToken, 'id' => (int) $existing['id']]);
+        )->execute(['vt' => $verifyTokenHash, 'ut' => $unsubTokenHash, 'id' => (int) $existing['id']]);
         // Zruš čakajúce položky — po resete overovania sa nesmú odoslať.
         $pdo->prepare(
             "UPDATE nl_sub_queue SET status = 'cancelled', last_error = 'Odberateľ znovu podal formulár a resetoval overenie.'
@@ -107,7 +109,7 @@ try {
     } else {
         $pdo->prepare(
             "INSERT INTO newsletter_subscribers (email, verify_token, unsub_token) VALUES (:email, :vt, :ut)"
-        )->execute(['email' => $email, 'vt' => $verifyToken, 'ut' => $unsubToken]);
+        )->execute(['email' => $email, 'vt' => $verifyTokenHash, 'ut' => $unsubTokenHash]);
     }
 
     if (!sendSubscriberVerifyEmail($email, $verifyToken)) {

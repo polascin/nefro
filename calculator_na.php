@@ -317,7 +317,7 @@ if (isLoggedIn()) {
                 </form>
 
                 <?php if ($calculated !== null): ?>
-                    <div class="form-section calculator-result-block">
+                    <div class="form-section calculator-result-block" role="status">
                         <h3>Výsledok výpočtu</h3>
                         <p><strong>Celková telesná voda (TBW):</strong> <?= htmlspecialchars(
                             number_format(

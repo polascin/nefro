@@ -98,7 +98,7 @@ $pageLastUpdated = date('d.m.Y', filemtime(__FILE__));
                     <h2>Ochrana osobných údajov (Privacy Policy)</h2>
                     <p class="meta">
                         Posledná aktualizácia:&nbsp;
-                        <time datetime="2026-05-15"><?= $pageLastUpdated ?></time>
+                        <time datetime="<?= date('Y-m-d', filemtime(__FILE__)) ?>"><?= $pageLastUpdated ?></time>
                     </p>
                 </header>
 
@@ -209,10 +209,13 @@ $pageLastUpdated = date('d.m.Y', filemtime(__FILE__));
                 </p>
                 <p>
                     Príjemcami údajov sú výlučne interné systémy služby a dôveryhodné tretie
-                    strany, ktoré poskytujú technickú infraštruktúru, analytiku, e-mailové služby
-                    a bezpečnosť. Medzi ne patria napríklad Google Analytics 4 a iné služby,
-                    ktoré spracúvajú údaje výlučne na základe nášho pokynu.
+                    strany, ktoré poskytujú technickú infraštruktúru, analytiku a e-mailové služby.
+                    Všetky spracúvajú údaje výlučne na základe nášho pokynu:
                 </p>
+                <ul>
+                    <li><strong>Google LLC</strong> (USA) — Google Analytics 4; prenos do USA krytý štandardnými zmluvnými doložkami (SCC) podľa čl. 46 GDPR.</li>
+                    <li><strong>WebSupport, s.r.o.</strong> (SK) — webhostingová infraštruktúra (server, databáza) a SMTP e-mailová služba (zasielanie verifikačných, notifikačných a newsletterových e-mailov).</li>
+                </ul>
                 <p>
                     Prenosy údajov mimo Európskej únie sú realizované výhradne na základe
                     platných právnych mechanizmov GDPR, vrátane štandardných zmluvných doložiek

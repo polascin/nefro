@@ -258,7 +258,7 @@ if (isLoggedIn()) {
                 </form>
 
                 <?php if ($calculated !== null): ?>
-                    <div class="form-section calculator-result-block">
+                    <div class="form-section calculator-result-block" role="status">
                         <h3>Výsledok KDIGO</h3>
                         <p><strong>UACR:</strong> <?= htmlspecialchars(
                             $calculated["mg_mmol"],

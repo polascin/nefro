@@ -11,11 +11,11 @@ if ($token !== '') {
     try {
         $stmt = $pdo->prepare(
             "SELECT id, email, verified_at FROM newsletter_subscribers
-             WHERE verify_token = :token
+             WHERE verify_token = :token_hash
                AND updated_at >= DATE_SUB(NOW(), INTERVAL 7 DAY)
              LIMIT 1"
         );
-        $stmt->execute(['token' => $token]);
+        $stmt->execute(['token_hash' => hash('sha256', $token)]);
         $sub = $stmt->fetch();
 
         if (!$sub) {
@@ -44,18 +44,19 @@ $pageClass = $status === 'success' ? 'alert-success' : 'alert-error';
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Potvrdenie odberu noviniek - Nefro-projekt Slovensko</title>
-  <script src="theme.js?v=20260511-1&cb=<?= filemtime('theme.js') ?>"></script>
-  <link rel="stylesheet" href="index.css?v=20260509-1&cb=<?= filemtime('index.css') ?>">
-  <script src="ui-preferences.js?v=20260511-1&cb=<?= filemtime('ui-preferences.js') ?>" defer></script>
-  <script src="ui-preferences-fallback.js?v=20260511-1&cb=<?= filemtime('ui-preferences-fallback.js') ?>" defer></script>
+  <script src="theme.js?v=<?= filemtime('theme.js') ?>"></script>
+  <link rel="stylesheet" href="index.css?v=<?= filemtime('index.css') ?>">
+  <script src="ui-preferences.js?v=<?= filemtime('ui-preferences.js') ?>" defer></script>
+  <script src="ui-preferences-fallback.js?v=<?= filemtime('ui-preferences-fallback.js') ?>" defer></script>
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>
   <?php
   $headerTitle = 'Potvrdenie odberu';
   $showLogo    = false;
   include 'header.php';
   ?>
-  <main class="container">
+  <main id="main-content" class="container">
     <div class="auth-container">
       <h2>Odber noviniek</h2>
       <div class="alert <?= htmlspecialchars($pageClass, ENT_QUOTES) ?>">
