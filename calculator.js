@@ -20,9 +20,15 @@ document.addEventListener('DOMContentLoaded', function () {
             var toggleLabel = document.createElement('label');
             toggleLabel.className = 'calc-autosave-label';
             toggleLabel.title = 'Automaticky uložiť každý výpočet (len pre prihlásených)';
-            toggleLabel.innerHTML =
-                '<input type="checkbox" id="calc_autosave_toggle" class="calc-autosave-cb"> ' +
-                '<span>Auto-uloženie</span>';
+            var autoCbInline = document.createElement('input');
+            autoCbInline.type = 'checkbox';
+            autoCbInline.id = 'calc_autosave_toggle';
+            autoCbInline.className = 'calc-autosave-cb';
+            var autoSpan = document.createElement('span');
+            autoSpan.textContent = 'Auto-uloženie';
+            toggleLabel.appendChild(autoCbInline);
+            toggleLabel.appendChild(document.createTextNode(' '));
+            toggleLabel.appendChild(autoSpan);
             actionsDiv.appendChild(toggleLabel);
 
             var autoCb = document.getElementById('calc_autosave_toggle');
@@ -204,27 +210,70 @@ document.addEventListener('DOMContentLoaded', function () {
                 return;
             }
 
-            var html = '<p class="calc-local-note">Záznamy uložené len vo vašom prehliadači.'
-                + ' Pre trvalú históriu sa <a href="login.php">prihláste</a>.</p>';
-            html += '<div class="calc-local-list">';
+            while (savedSection.firstChild) { savedSection.removeChild(savedSection.firstChild); }
+
+            var h3 = document.createElement('h3');
+            h3.textContent = 'Uložené výsledky';
+            savedSection.appendChild(h3);
+
+            var noteP = document.createElement('p');
+            noteP.className = 'calc-local-note';
+            noteP.textContent = 'Záznamy uložené len vo vašom prehliadači. Pre trvalú históriu sa ';
+            var loginLink = document.createElement('a');
+            loginLink.href = 'login.php';
+            loginLink.textContent = 'prihláste';
+            noteP.appendChild(loginLink);
+            noteP.appendChild(document.createTextNode('.'));
+            savedSection.appendChild(noteP);
+
+            var listDiv = document.createElement('div');
+            listDiv.className = 'calc-local-list';
+
+            var parser = new DOMParser();
+
             list.forEach(function (r, i) {
                 var d = new Date(r.timestamp);
                 var ds = d.toLocaleDateString('sk-SK') + ' ' + d.toLocaleTimeString('sk-SK', {hour:'2-digit', minute:'2-digit'});
-                html += '<div class="calc-local-entry">';
-                html += '<div class="calc-local-entry__header"><span class="calc-local-entry__date">' + ds + '</span>'
-                    + '<button type="button" class="btn-admin-action btn-admin-action--warn calc-local-del" data-idx="' + i + '">Vymazať</button></div>';
-                html += '<div class="calc-local-entry__result">' + r.resultHtml + '</div>';
-                html += '</div>';
-            });
-            html += '</div>';
 
-            savedSection.innerHTML = '<h3>Uložené výsledky</h3>' + html;
+                var entry = document.createElement('div');
+                entry.className = 'calc-local-entry';
+
+                var header = document.createElement('div');
+                header.className = 'calc-local-entry__header';
+
+                var dateSpan = document.createElement('span');
+                dateSpan.className = 'calc-local-entry__date';
+                dateSpan.textContent = ds;
+                header.appendChild(dateSpan);
+
+                var delBtn = document.createElement('button');
+                delBtn.type = 'button';
+                delBtn.className = 'btn-admin-action btn-admin-action--warn calc-local-del';
+                delBtn.dataset.idx = i;
+                delBtn.textContent = 'Vymazať';
+                header.appendChild(delBtn);
+
+                entry.appendChild(header);
+
+                var resultDiv = document.createElement('div');
+                resultDiv.className = 'calc-local-entry__result';
+                try {
+                    var doc = parser.parseFromString(r.resultHtml || '', 'text/html');
+                    Array.from(doc.body.childNodes).forEach(function (node) {
+                        resultDiv.appendChild(document.importNode(node, true));
+                    });
+                } catch (e) {}
+                entry.appendChild(resultDiv);
+
+                listDiv.appendChild(entry);
+            });
+
+            savedSection.appendChild(listDiv);
 
             savedSection.querySelectorAll('.calc-local-del').forEach(function (btn) {
                 btn.addEventListener('click', function () {
                     try {
                         var all = JSON.parse(localStorage.getItem('calc_local_history') || '[]');
-                        // Odstrán záznam s týmto indexom pre daný kľúč
                         var keyList = all.filter(function(r){ return r.key === calcPageKey; });
                         var delTs   = keyList[parseInt(this.dataset.idx, 10)].timestamp;
                         all = all.filter(function(r){ return r.timestamp !== delTs; });
