@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 /**
  * search.php — Komplexné hĺbkové vyhľadávanie v článkoch
  * Funkcie: FULLTEXT + LIKE, slovenské diakritiky, stop slová,
