@@ -166,7 +166,7 @@ if (isLoggedIn()) {
     include "header.php";
     ?>
     <?php include 'main_nav.php'; ?>
-    <main id="main-content" class="container main-content main-content--single-col">
+    <main id="main-content" class="container main-content main-content--single-col" role="main">
         <div class="content-wrapper">
             <div class="auth-container auth-container--wide">
                 <h2>UACR (Urine Albumin-to-Creatinine Ratio) a KDIGO A-štádium</h2>

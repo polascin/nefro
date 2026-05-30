@@ -331,7 +331,7 @@ if (isLoggedIn()) {
 
                     <div class="form-section">
                         <h3>Parametre pre FENa (Sodík)</h3>
-                        <p class="text-secondary-sm-mb12"Vyplňte pre výpočet FENa.</p>
+                        <p class="text-secondary-sm-mb12">Vyplňte pre výpočet FENa.</p>
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="s_na">S-Sodík (mmol/L)</label>
@@ -350,7 +350,7 @@ if (isLoggedIn()) {
 
                     <div class="form-section">
                         <h3>Parametre pre FEUrea (Urea)</h3>
-                        <p class="text-secondary-sm-mb12"Vyplňte pre výpočet FEUrea (vhodné pri diuretikách).</p>
+                        <p class="text-secondary-sm-mb12">Vyplňte pre výpočet FEUrea (vhodné pri diuretikách).</p>
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="s_urea">S-Urea (mmol/L)</label>

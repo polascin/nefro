@@ -303,10 +303,6 @@ if (isLoggedIn()) {
                                 <input type="date" id="examination_date" name="examination_date" required class="form-control" max="<?= date('Y-m-d') ?>" value="<?= htmlspecialchars($form['examination_date']) ?>">
                             </div>
                                                         <div class="form-group">
-                                <label for="examination_date">Dátum vyšetrenia <span class="required">*</span></label>
-                                <input type="date" id="examination_date" name="examination_date" required class="form-control" max="<?= date('Y-m-d') ?>" value="<?= htmlspecialchars($form['examination_date']) ?>">
-                            </div>
-                                                        <div class="form-group">
                                 <label for="egfr">eGFR (ml/min/1,73 m²)</label>
                                 <input type="text" id="egfr" name="egfr" required class="form-control" value="<?= htmlspecialchars(
                                     $form["egfr"],
