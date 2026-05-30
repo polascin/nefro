@@ -284,7 +284,7 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
     include 'admin_menu.php';
     ?>
 
-    <main id="main-content" class="container container--wide">
+    <main id="main-content" class="container container--wide" role="main">
         <div class="auth-container auth-container--wide">
             <h2>Administrácia</h2>
             <p class="auth-subtitle">Komplexné možnosti administrácie a audit histórie zmien profilov.</p>

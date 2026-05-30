@@ -57,7 +57,7 @@ $pageClass = $status === 'success' ? 'alert-success' : 'alert-error';
   $showLogo    = false;
   include 'header.php';
   ?>
-  <main id="main-content" class="container">
+  <main id="main-content" class="container" role="main">
     <div class="auth-container">
       <h2>Odber noviniek</h2>
       <div class="alert <?= htmlspecialchars($pageClass, ENT_QUOTES) ?>">

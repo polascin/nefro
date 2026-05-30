@@ -506,7 +506,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && ($_POST['action'] ?? '') !=
     include 'header.php';
     ?>
 
-    <main id="main-content" class="container">
+    <main id="main-content" class="container" role="main">
         <div class="auth-container auth-container--wide">
             <h2>Úprava profilu</h2>
             <p class="auth-subtitle">

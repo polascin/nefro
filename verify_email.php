@@ -167,7 +167,7 @@ $pageClass = $status === 'success' ? 'alert-success' : 'alert-error';
     include 'header.php';
     ?>
 
-    <main id="main-content" class="container">
+    <main id="main-content" class="container" role="main">
         <div class="auth-container">
             <h2>Overenie e-mailovej adresy</h2>
 

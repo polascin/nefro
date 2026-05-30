@@ -294,7 +294,7 @@ $modeLabel = $includeSensitive
         </div>
         
         <div class="print-layout-tbody">
-            <main id="main-notice-content" class="container admin-notice-container">
+            <main id="main-notice-content" class="container admin-notice-container" role="main">
         <div class="auth-container auth-container--wide admin-notice-card">
             <h2>Zoznam používateľov</h2>
             <p class="auth-subtitle">Zoznam všetkých používateľov zoradený abecedne podľa priezviska.</p>

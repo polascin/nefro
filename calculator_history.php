@@ -181,7 +181,7 @@ $totalCount = array_sum(array_column($statsByCalc, 'count'));
 <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>
 <?php $headerTitle = 'História výpočtov'; $showLogo = false; include 'header.php'; ?>
 
-<main id="main-content" class="container calc-history-main">
+<main id="main-content" class="container calc-history-main" role="main">
   <?php foreach ($errors   as $e): ?><div class="alert alert-error"><?= htmlspecialchars($e) ?></div><?php endforeach; ?>
   <?php foreach ($messages as $m): ?><div class="alert alert-success"><?= htmlspecialchars($m) ?></div><?php endforeach; ?>
 

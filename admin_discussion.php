@@ -199,7 +199,7 @@ include 'header.php';
 include 'admin_menu.php';
 ?>
 
-<main id="main-content" class="container container--wide admin-page-main">
+<main id="main-content" class="container container--wide admin-page-main" role="main">
   <div class="auth-container auth-container--wide">
     <h2>Moderovanie diskusie</h2>
     <p class="auth-subtitle">Prehľad a správa príspevkov diskusie.</p>

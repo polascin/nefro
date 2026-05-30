@@ -151,7 +151,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
     include 'header.php';
     ?>
 
-    <main id="main-content" class="container">
+    <main id="main-content" class="container" role="main">
         <div class="auth-container">
             <h2>Poslať nový overovací e-mail</h2>
             <p class="auth-subtitle">Zadajte e-mail alebo používateľské meno účtu, ktorý chcete overiť.</p>

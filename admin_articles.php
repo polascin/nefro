@@ -797,7 +797,7 @@ $pageTimeZone = date("T") . " (" . date_default_timezone_get() . ")";
   include 'admin_menu.php';
   ?>
 
-  <main id="main-content" class="container container--wide admin-page-main">
+  <main id="main-content" class="container container--wide admin-page-main" role="main">
     <div class="auth-container auth-container--wide">
       <h2>Správa článkov</h2>
       <p class="auth-subtitle">Pridávanie, úprava a mazanie článkov na hlavnej stránke.</p>

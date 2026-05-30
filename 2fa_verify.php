@@ -185,7 +185,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
   include 'header.php';
   ?>
 
-  <main id="main-content" class="container">
+  <main id="main-content" class="container" role="main">
     <div class="auth-container">
       <h2>Dvojfaktorové overenie</h2>
       <p class="auth-subtitle">Zadajte 6-ciferný kód z vašej autentifikačnej aplikácie alebo jeden zo záložných kódov.</p>

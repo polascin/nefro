@@ -164,7 +164,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
     include 'header.php';
     ?>
 
-    <main id="main-content" class="container">
+    <main id="main-content" class="container" role="main">
         <div class="auth-container">
             <h2>Zrušenie účtu</h2>
 

@@ -395,7 +395,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
     include 'header.php';
     ?>
 
-    <main id="main-content" class="container">
+    <main id="main-content" class="container" role="main">
         <div class="auth-container auth-container--wide">
             <h2>Registrácia</h2>
             <p class="auth-subtitle">Používateľ webovej lokality <a href="https://nefro.polascin.net/" class="auth-subtitle__link" rel="noopener noreferrer">https://nefro.polascin.net/</a></p>

@@ -184,7 +184,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
     include 'header.php';
     ?>
 
-    <main id="main-content" class="container">
+    <main id="main-content" class="container" role="main">
         <div class="auth-container">
             <h2>Zabudnuté heslo</h2>
             <p class="auth-subtitle">Zadajte e-mail alebo používateľské meno a pošleme vám odkaz na obnovenie hesla.</p>

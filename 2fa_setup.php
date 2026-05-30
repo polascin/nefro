@@ -207,7 +207,7 @@ $totpUri = $pendingSecret ? getTotpUri($pendingSecret, (string) ($user['email'] 
   include 'header.php';
   ?>
 
-  <main id="main-content" class="container">
+  <main id="main-content" class="container" role="main">
     <div class="auth-container auth-container--wide">
       <h2>Dvojfaktorové overenie (2FA)</h2>
 

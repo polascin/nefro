@@ -143,7 +143,7 @@ $fieldLabels = [
 
   <?php include 'main_nav.php'; ?>
 
-  <main id="search-results" class="container search-main">
+  <main id="search-results" class="container search-main" role="main">
     <div class="main-content main-content--single-col">
       <div class="primary-article">
 
