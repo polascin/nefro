@@ -158,6 +158,7 @@ if (isLoggedIn()) {
   ?>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>
     <?php
     $headerTitle = "UACR (Albumín/Kreatinín)";
     $headerIntro = "Hodnotenie albuminúrie (KDIGO)";
@@ -165,7 +166,7 @@ if (isLoggedIn()) {
     include "header.php";
     ?>
     <?php include 'main_nav.php'; ?>
-    <main class="container main-content main-content--single-col">
+    <main id="main-content" class="container main-content main-content--single-col">
         <div class="content-wrapper">
             <div class="auth-container auth-container--wide">
                 <h2>UACR (Urine Albumin-to-Creatinine Ratio) a KDIGO A-štádium</h2>

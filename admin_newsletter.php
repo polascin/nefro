@@ -175,6 +175,7 @@ $pageLastUpdated = date('d.m.Y H:i', filemtime(__FILE__));
     <script src="nefro-ui.js?v=<?= filemtime('nefro-ui.js') ?>" defer></script>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>
     <?php
     $headerTitle = 'Odberatelia newslettera';
     $headerIntro = 'Správa anonymných odberateľov noviniek';
@@ -183,7 +184,7 @@ $pageLastUpdated = date('d.m.Y H:i', filemtime(__FILE__));
     include 'admin_menu.php';
     ?>
 
-    <main class="container container--wide admin-page-main">
+    <main id="main-content" class="container container--wide admin-page-main">
         <div class="auth-container auth-container--wide">
             <h2>Odberatelia newslettera</h2>
             <p class="auth-subtitle">Anonymní odberatelia (bez registrácie). Registrovaných používateľov spravujte v <a href="admin.php">Administrácii</a>.</p>

@@ -199,6 +199,7 @@ $totpUri = $pendingSecret ? getTotpUri($pendingSecret, (string) ($user['email'] 
   ?>
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>
   <?php
   $headerTitle = 'Nastavenia 2FA';
   $headerIntro = 'Správa dvojfaktorového overenia';
@@ -206,7 +207,7 @@ $totpUri = $pendingSecret ? getTotpUri($pendingSecret, (string) ($user['email'] 
   include 'header.php';
   ?>
 
-  <main class="container">
+  <main id="main-content" class="container">
     <div class="auth-container auth-container--wide">
       <h2>Dvojfaktorové overenie (2FA)</h2>
 

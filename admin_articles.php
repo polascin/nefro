@@ -788,6 +788,7 @@ $pageTimeZone = date("T") . " (" . date_default_timezone_get() . ")";
   <script src="nefro-ui.js?v=<?= filemtime('nefro-ui.js') ?>" defer></script>
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>
   <?php
   $headerTitle = "Správa článkov";
   $headerIntro = "CRUD rozhranie pre správu článkov";
@@ -796,7 +797,7 @@ $pageTimeZone = date("T") . " (" . date_default_timezone_get() . ")";
   include 'admin_menu.php';
   ?>
 
-  <main class="container container--wide admin-page-main">
+  <main id="main-content" class="container container--wide admin-page-main">
     <div class="auth-container auth-container--wide">
       <h2>Správa článkov</h2>
       <p class="auth-subtitle">Pridávanie, úprava a mazanie článkov na hlavnej stránke.</p>

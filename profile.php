@@ -498,6 +498,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && ($_POST['action'] ?? '') !=
   ?>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>
     <?php
     $headerTitle = 'Môj profil';
     $headerIntro = 'Správa osobných údajov a nastavení';
@@ -505,7 +506,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && ($_POST['action'] ?? '') !=
     include 'header.php';
     ?>
 
-    <main class="container">
+    <main id="main-content" class="container">
         <div class="auth-container auth-container--wide">
             <h2>Úprava profilu</h2>
             <p class="auth-subtitle">

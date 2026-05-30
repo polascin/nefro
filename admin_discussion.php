@@ -190,6 +190,7 @@ if (!function_exists('truncatePost')) {
   <script src="nefro-ui.js?v=<?= filemtime('nefro-ui.js') ?>" defer></script>
 </head>
 <body>
+<a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>
 <?php
 $headerTitle = 'Moderovanie diskusie';
 $headerIntro = 'Správa príspevkov — skrytie, mazanie, pin';
@@ -198,7 +199,7 @@ include 'header.php';
 include 'admin_menu.php';
 ?>
 
-<main class="container container--wide admin-page-main">
+<main id="main-content" class="container container--wide admin-page-main">
   <div class="auth-container auth-container--wide">
     <h2>Moderovanie diskusie</h2>
     <p class="auth-subtitle">Prehľad a správa príspevkov diskusie.</p>

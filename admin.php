@@ -275,6 +275,7 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>
     <?php
     $headerTitle = 'Administrácia systému';
     $headerIntro = 'Správa používateľov a audit zmien';
@@ -283,7 +284,7 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
     include 'admin_menu.php';
     ?>
 
-    <main class="container container--wide">
+    <main id="main-content" class="container container--wide">
         <div class="auth-container auth-container--wide">
             <h2>Administrácia</h2>
             <p class="auth-subtitle">Komplexné možnosti administrácie a audit histórie zmien profilov.</p>
