@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 require_once __DIR__ . '/auth.php';
 requireAdmin();
 ini_set('display_errors', 0);

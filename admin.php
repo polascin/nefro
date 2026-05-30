@@ -558,14 +558,14 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
                     <table class="admin-table">
                         <thead>
                             <tr>
-                                <th>ID</th>
-                                <th>Admin</th>
-                                <th>Formát</th>
-                                <th>Citlivé polia</th>
-                                <th>Počet riadkov</th>
-                                <th>IP adresa</th>
-                                <th>User Agent</th>
-                                <th>Čas</th>
+                                <th scope="col">ID</th>
+                                <th scope="col">Admin</th>
+                                <th scope="col">Formát</th>
+                                <th scope="col">Citlivé polia</th>
+                                <th scope="col">Počet riadkov</th>
+                                <th scope="col">IP adresa</th>
+                                <th scope="col">User Agent</th>
+                                <th scope="col">Čas</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -596,15 +596,15 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
                     <table class="admin-table">
                         <thead>
                             <tr>
-                                <th>ID</th>
-                                <th>Používateľ</th>
-                                <th>Typ</th>
-                                <th>Metóda</th>
-                                <th>URI</th>
-                                <th>Stav</th>
-                                <th>IP adresa</th>
-                                <th>Bot</th>
-                                <th>Čas</th>
+                                <th scope="col">ID</th>
+                                <th scope="col">Používateľ</th>
+                                <th scope="col">Typ</th>
+                                <th scope="col">Metóda</th>
+                                <th scope="col">URI</th>
+                                <th scope="col">Stav</th>
+                                <th scope="col">IP adresa</th>
+                                <th scope="col">Bot</th>
+                                <th scope="col">Čas</th>
                             </tr>
                         </thead>
                         <tbody>

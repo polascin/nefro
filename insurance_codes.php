@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 /**
  * Číselník zdravotných poisťovní Slovenskej republiky.
  * Zdroj: UDZS SR — Zoznam zdravotných poisťovní.

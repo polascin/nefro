@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 /**
  * Právne upozornenie pre klinické kalkulačky.
  * Includovať do každej kalkulačky a do stránky tlače výsledkov.

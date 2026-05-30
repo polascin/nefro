@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 /**
  * search_helpers.php — Shared search helpers for search.php and regression tests.
  */

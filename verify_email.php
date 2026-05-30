@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/db_config.php';
 require_once __DIR__ . '/email_verification.php';
@@ -159,13 +160,14 @@ $pageClass = $status === 'success' ? 'alert-success' : 'alert-error';
   <?php endif; ?>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>
     <?php
     $headerTitle = 'Overenie e-mailu';
     $showLogo = false;
     include 'header.php';
     ?>
 
-    <main class="container">
+    <main id="main-content" class="container">
         <div class="auth-container">
             <h2>Overenie e-mailovej adresy</h2>
 

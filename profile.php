@@ -619,15 +619,15 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && ($_POST['action'] ?? '') !=
                     <div class="form-grid">
                         <div class="form-group form-group--full-width">
                             <label for="current_password">Súčasné heslo</label>
-                            <input type="password" id="current_password" name="current_password" class="form-control">
+                            <input type="password" id="current_password" name="current_password" class="form-control" autocomplete="current-password">
                         </div>
                         <div class="form-group">
                             <label for="new_password">Nové heslo <small>(min. 8 znakov, veľké/malé písmená a číslice)</small></label>
-                            <input type="password" id="new_password" name="new_password" class="form-control">
+                            <input type="password" id="new_password" name="new_password" class="form-control" autocomplete="new-password">
                         </div>
                         <div class="form-group">
                             <label for="new_password_confirm">Potvrdenie nového hesla</label>
-                            <input type="password" id="new_password_confirm" name="new_password_confirm" class="form-control">
+                            <input type="password" id="new_password_confirm" name="new_password_confirm" class="form-control" autocomplete="new-password">
                         </div>
                     </div>
                 </div>

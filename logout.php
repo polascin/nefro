@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 require_once __DIR__ . '/auth.php';
 
 // Vyžadujeme POST s platným CSRF tokenom, aby sa zabránilo force-logout CSRF útoku.
