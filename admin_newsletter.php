@@ -76,8 +76,8 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     if (!$sub) { $actionError = 'Odberateľ nenájdený.'; break; }
                     if ($sub['verified_at'] !== null) { $actionError = 'Odberateľ je už overený — overovací e-mail nie je potrebný.'; break; }
                     $newToken = bin2hex(random_bytes(32));
-                    $pdo->prepare("UPDATE newsletter_subscribers SET verify_token = :token, updated_at = NOW() WHERE id = :id")
-                        ->execute(['token' => $newToken, 'id' => $subId]);
+                    $pdo->prepare("UPDATE newsletter_subscribers SET verify_token = :token_hash, updated_at = NOW() WHERE id = :id")
+                        ->execute(['token_hash' => hash('sha256', $newToken), 'id' => $subId]);
                     $sent = sendSubscriberVerifyEmail((string) $sub['email'], $newToken);
                     if ($sent) {
                         $actionResult = 'Overovací e-mail bol znovu odoslaný na ' . $sub['email'] . '.';
