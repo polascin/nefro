@@ -196,3 +196,32 @@ function getAppBaseUrl(): string {
 
     return $scheme . '://' . $serverName . ($includePort ? ':' . $port : '');
 }
+
+/**
+ * Centrálna funkcia na získanie klientovej IP adresy.
+ * Rešpektuje TRUST_PROXY_HEADERS — dostupná aj v endpoint súboroch bez auth.php.
+ */
+if (!function_exists('getClientIpAddress')) {
+    function getClientIpAddress(): string {
+        $defaultIp = $_SERVER['REMOTE_ADDR'] ?? '0.0.0.0';
+        try {
+            $env = loadAppConfig();
+        } catch (\RuntimeException) {
+            $env = [];
+        }
+
+        if (parseEnvBool($env['TRUST_PROXY_HEADERS'] ?? getenv('TRUST_PROXY_HEADERS'), false)) {
+            $forwarded = $_SERVER['HTTP_X_FORWARDED_FOR'] ?? $_SERVER['HTTP_CLIENT_IP'] ?? $_SERVER['HTTP_X_REAL_IP'] ?? '';
+            if ($forwarded !== '') {
+                foreach (explode(',', $forwarded) as $candidate) {
+                    $candidate = trim($candidate);
+                    if (filter_var($candidate, FILTER_VALIDATE_IP)) {
+                        return $candidate;
+                    }
+                }
+            }
+        }
+
+        return filter_var($defaultIp, FILTER_VALIDATE_IP) ? $defaultIp : '0.0.0.0';
+    }
+}

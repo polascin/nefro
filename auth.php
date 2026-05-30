@@ -282,7 +282,9 @@ function validateJsChallengeToken(?string $token): bool {
 
 /**
  * Centrálna funkcia na získanie klientovej IP adresy.
+ * Definovaná primárne v config_loader.php — guard zabraňuje duplikácii.
  */
+if (!function_exists('getClientIpAddress')) {
 function getClientIpAddress(): string {
     $defaultIp = $_SERVER['REMOTE_ADDR'] ?? '0.0.0.0';
     try {
@@ -305,6 +307,7 @@ function getClientIpAddress(): string {
 
     return filter_var($defaultIp, FILTER_VALIDATE_IP) ? $defaultIp : '0.0.0.0';
 }
+} // end if (!function_exists('getClientIpAddress'))
 
 /**
  * Overí, či je IP blokovaná pre danú rate-limit tabuľku. Odstraňuje expirované bloky.

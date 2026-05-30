@@ -40,7 +40,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 }
 
 // IP rate limiting
-$_nlIp    = $_SERVER['REMOTE_ADDR'] ?? 'unknown';
+$_nlIp    = getClientIpAddress();
 $_nlMax   = 5;
 $_nlBlock = 3600;
 try {
