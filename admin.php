@@ -397,13 +397,13 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
                     <table class="admin-table">
                         <thead>
                             <tr>
-                                <th>ID</th>
-                                <th>Používateľské meno</th>
-                                <th>E-mail</th>
-                                <th>Rola</th>
-                                <th>Stav</th>
-                                <th>Vytvorený</th>
-                                <th>Akcie</th>
+                                <th scope="col">ID</th>
+                                <th scope="col">Používateľské meno</th>
+                                <th scope="col">E-mail</th>
+                                <th scope="col">Rola</th>
+                                <th scope="col">Stav</th>
+                                <th scope="col">Vytvorený</th>
+                                <th scope="col">Akcie</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -456,11 +456,11 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
                     <table class="admin-table">
                         <thead>
                             <tr>
-                                <th>ID</th>
-                                <th>Používateľ</th>
-                                <th>E-mail</th>
-                                <th>Zmenené polia</th>
-                                <th>Čas zmeny</th>
+                                <th scope="col">ID</th>
+                                <th scope="col">Používateľ</th>
+                                <th scope="col">E-mail</th>
+                                <th scope="col">Zmenené polia</th>
+                                <th scope="col">Čas zmeny</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -488,13 +488,13 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
                     <table class="admin-table">
                         <thead>
                             <tr>
-                                <th>ID</th>
-                                <th>Používateľ</th>
-                                <th>Akcia</th>
-                                <th>Pôvodná cesta</th>
-                                <th>Archívna cesta</th>
-                                <th>Nová cesta</th>
-                                <th>Čas zmeny</th>
+                                <th scope="col">ID</th>
+                                <th scope="col">Používateľ</th>
+                                <th scope="col">Akcia</th>
+                                <th scope="col">Pôvodná cesta</th>
+                                <th scope="col">Archívna cesta</th>
+                                <th scope="col">Nová cesta</th>
+                                <th scope="col">Čas zmeny</th>
                             </tr>
                         </thead>
                         <tbody>

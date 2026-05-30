@@ -227,12 +227,12 @@ include 'admin_menu.php';
       <table class="admin-articles-table" aria-label="Príspevky diskusie">
         <thead>
           <tr>
-            <th class="disc-col-id">#</th>
-            <th class="disc-col-author">Autor</th>
-            <th>Obsah</th>
-            <th class="disc-col-date">Dátum</th>
-            <th class="disc-col-status">Stav</th>
-            <th class="disc-col-actions">Akcie</th>
+            <th scope="col" class="disc-col-id">#</th>
+            <th scope="col" class="disc-col-author">Autor</th>
+            <th scope="col">Obsah</th>
+            <th scope="col" class="disc-col-date">Dátum</th>
+            <th scope="col" class="disc-col-status">Stav</th>
+            <th scope="col" class="disc-col-actions">Akcie</th>
           </tr>
         </thead>
         <tbody>

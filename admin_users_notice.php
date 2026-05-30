@@ -358,7 +358,7 @@ $modeLabel = $includeSensitive
                     <thead>
                         <tr>
                             <?php foreach ($orderedColumns as $col): ?>
-                                <th><?= htmlspecialchars($labelFor($col)) ?></th>
+                                <th scope="col"><?= htmlspecialchars($labelFor($col)) ?></th>
                             <?php endforeach; ?>
                         </tr>
                     </thead>

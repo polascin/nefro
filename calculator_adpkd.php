@@ -421,12 +421,12 @@ if (isLoggedIn()) {
                         <div class="calc-formula-content">
                             <table class="adpkd-ref-table">
                                 <thead><tr class="adpkd-ref-tr-head">
-                                    <th class="adpkd-ref-th-left">Vek</th>
-                                    <th class="adpkd-ref-th">1A (&lt;mL/m)</th>
-                                    <th class="adpkd-ref-th">1B (&lt;mL/m)</th>
-                                    <th class="adpkd-ref-th">1C (&lt;mL/m)</th>
-                                    <th class="adpkd-ref-th">1D (&lt;mL/m)</th>
-                                    <th class="adpkd-ref-th">1E (≥mL/m)</th>
+                                    <th scope="col" class="adpkd-ref-th-left">Vek</th>
+                                    <th scope="col" class="adpkd-ref-th">1A (&lt;mL/m)</th>
+                                    <th scope="col" class="adpkd-ref-th">1B (&lt;mL/m)</th>
+                                    <th scope="col" class="adpkd-ref-th">1C (&lt;mL/m)</th>
+                                    <th scope="col" class="adpkd-ref-th">1D (&lt;mL/m)</th>
+                                    <th scope="col" class="adpkd-ref-th">1E (≥mL/m)</th>
                                 </tr></thead>
                                 <tbody>
                                 <?php

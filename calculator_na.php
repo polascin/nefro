@@ -371,7 +371,7 @@ if (isLoggedIn()) {
                 <?php else: ?>
                     <div class="admin-table-wrap">
                         <table class="admin-table">
-                            <thead><tr><th>Vyšetrenie</th><th>Výsledok</th><th>Akcie</th></tr></thead>
+                            <thead><tr><th scope="col">Vyšetrenie</th><th scope="col">Výsledok</th><th scope="col">Akcie</th></tr></thead>
                             <tbody>
                                 <?php foreach ($savedResults as $row): ?>
                                     <tr>

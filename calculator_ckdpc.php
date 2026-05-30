@@ -892,16 +892,16 @@ function sexLabel(string $v): string
                         <details class="ckdpc-inputs-summary">
                             <summary>Použité vstupné hodnoty</summary>
                             <table class="admin-table mt-8">
-                                <tr><th>Vek</th><td><?= (int) $calculated[
+                                <tr><th scope="row">Vek</th><td><?= (int) $calculated[
                                     "age_years"
                                 ] ?> rokov</td></tr>
-                                <tr><th>Pohlavie</th><td><?= htmlspecialchars(
+                                <tr><th scope="row">Pohlavie</th><td><?= htmlspecialchars(
                                     sexLabel($calculated["sex"]),
                                 ) ?></td></tr>
-                                <tr><th>eGFR</th><td><?= htmlspecialchars(
+                                <tr><th scope="row">eGFR</th><td><?= htmlspecialchars(
                                     (string) $calculated["egfr"],
                                 ) ?> ml/min/1,73 m²</td></tr>
-                                <tr><th>UACR</th><td>
+                                <tr><th scope="row">UACR</th><td>
                                     <?= htmlspecialchars(
                                         number_format(
                                             (float) $calculated["uacr_input"],
@@ -928,32 +928,32 @@ function sexLabel(string $v): string
                                         ) ?> mg/g)
                                     <?php endif; ?>
                                 </td></tr>
-                                <tr><th>DM</th><td><?= boolLabel(
+                                <tr><th scope="row">DM</th><td><?= boolLabel(
                                     $calculated["diabetes"],
                                 ) ?></td></tr>
-                                <tr><th>Systolický TK</th><td><?= (int) $calculated[
+                                <tr><th scope="row">Systolický TK</th><td><?= (int) $calculated[
                                     "sbp"
                                 ] ?> mmHg</td></tr>
-                                <tr><th>Antihypertenzíva</th><td><?= boolLabel(
+                                <tr><th scope="row">Antihypertenzíva</th><td><?= boolLabel(
                                     $calculated["antihtn"],
                                 ) ?></td></tr>
-                                <tr><th>Srdcové zlyhanie</th><td><?= boolLabel(
+                                <tr><th scope="row">Srdcové zlyhanie</th><td><?= boolLabel(
                                     $calculated["hf"],
                                 ) ?></td></tr>
-                                <tr><th>ICHS</th><td><?= boolLabel(
+                                <tr><th scope="row">ICHS</th><td><?= boolLabel(
                                     $calculated["chd"],
                                 ) ?></td></tr>
-                                <tr><th>Fibrilácia predsiení</th><td><?= boolLabel(
+                                <tr><th scope="row">Fibrilácia predsiení</th><td><?= boolLabel(
                                     $calculated["afib"],
                                 ) ?></td></tr>
-                                <tr><th>BMI</th><td><?= htmlspecialchars(
+                                <tr><th scope="row">BMI</th><td><?= htmlspecialchars(
                                     (string) $calculated["bmi"],
                                 ) ?> kg/m²</td></tr>
-                                <tr><th>Fajčenie</th><td><?= htmlspecialchars(
+                                <tr><th scope="row">Fajčenie</th><td><?= htmlspecialchars(
                                     smokingLabel($calculated["smoking"]),
                                 ) ?></td></tr>
                                 <?php if ($calculated["diabetes"]): ?>
-                                    <tr><th>HbA1c</th><td><?= htmlspecialchars(
+                                    <tr><th scope="row">HbA1c</th><td><?= htmlspecialchars(
                                         number_format(
                                             (float) $calculated["hba1c"],
                                             1,
@@ -961,10 +961,10 @@ function sexLabel(string $v): string
                                             " ",
                                         ),
                                     ) ?> %</td></tr>
-                                    <tr><th>Inzulín</th><td><?= boolLabel(
+                                    <tr><th scope="row">Inzulín</th><td><?= boolLabel(
                                         $calculated["insulin"],
                                     ) ?></td></tr>
-                                    <tr><th>Perorálna antidiabetická liečba</th><td><?= boolLabel(
+                                    <tr><th scope="row">Perorálna antidiabetická liečba</th><td><?= boolLabel(
                                         $calculated["oral_dm"],
                                     ) ?></td></tr>
                                 <?php endif; ?>

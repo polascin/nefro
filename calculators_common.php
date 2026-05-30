@@ -517,7 +517,7 @@ function calculatorRenderSavedResultsTable(
             <div class="admin-table-wrap">
                 <table class="admin-table">
                     <thead>
-                        <tr><th>Vyšetrenie</th><th>Pacient</th><th>Výsledok</th><th>Akcie</th></tr>
+                        <tr><th scope="col">Vyšetrenie</th><th scope="col">Pacient</th><th scope="col">Výsledok</th><th scope="col">Akcie</th></tr>
                     </thead>
                     <tbody>
                         <?php foreach ($savedResults as $row):

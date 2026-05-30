@@ -343,11 +343,11 @@ $totalCount = array_sum(array_column($statsByCalc, 'count'));
         <table class="admin-table">
           <thead>
             <tr>
-              <th></th>
-              <th>Dátum</th>
-              <th>Kalkulačka</th>
-              <th>Výsledok</th>
-              <th>Akcie</th>
+              <th scope="col"></th>
+              <th scope="col">Dátum</th>
+              <th scope="col">Kalkulačka</th>
+              <th scope="col">Výsledok</th>
+              <th scope="col">Akcie</th>
             </tr>
           </thead>
           <tbody>

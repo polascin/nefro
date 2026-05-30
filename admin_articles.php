@@ -1043,12 +1043,12 @@ $filterArticleId
             <table class="admin-articles-table" aria-label="Posledné položky fronty noviniek">
               <thead>
                 <tr>
-                  <th>ID</th>
-                  <th>Článok</th>
-                  <th>Používateľ</th>
-                  <th>Stav</th>
-                  <th>Pokusy</th>
-                  <th>Aktualizované</th>
+                  <th scope="col">ID</th>
+                  <th scope="col">Článok</th>
+                  <th scope="col">Používateľ</th>
+                  <th scope="col">Stav</th>
+                  <th scope="col">Pokusy</th>
+                  <th scope="col">Aktualizované</th>
                 </tr>
               </thead>
               <tbody>
@@ -1092,12 +1092,12 @@ $filterArticleId
             <table class="admin-articles-table" aria-label="Zoznam článkov">
               <thead>
                 <tr>
-                  <th>#</th>
-                  <th>Poradie</th>
-                  <th>Titulok</th>
-                  <th>Dátum</th>
-                  <th>Stav</th>
-                  <th>Akcie</th>
+                  <th scope="col">#</th>
+                  <th scope="col">Poradie</th>
+                  <th scope="col">Titulok</th>
+                  <th scope="col">Dátum</th>
+                  <th scope="col">Stav</th>
+                  <th scope="col">Akcie</th>
                 </tr>
               </thead>
               <tbody>

@@ -244,13 +244,13 @@ $pageLastUpdated = date('d.m.Y H:i', filemtime(__FILE__));
                 <table class="admin-table">
                     <thead>
                         <tr>
-                            <th>ID</th>
-                            <th>E-mail</th>
-                            <th>Stav</th>
-                            <th>Zaregistrovaný</th>
-                            <th>Overený</th>
-                            <th>Odhlásený</th>
-                            <th>Akcie</th>
+                            <th scope="col">ID</th>
+                            <th scope="col">E-mail</th>
+                            <th scope="col">Stav</th>
+                            <th scope="col">Zaregistrovaný</th>
+                            <th scope="col">Overený</th>
+                            <th scope="col">Odhlásený</th>
+                            <th scope="col">Akcie</th>
                         </tr>
                     </thead>
                     <tbody>

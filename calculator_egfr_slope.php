@@ -361,11 +361,11 @@ if (isLoggedIn()) {
                         <table class="admin-table">
                             <thead>
                                 <tr>
-                                    <th>Vyšetrenie</th>
-                                    <th>Pacient</th>
-                                    <th>Výsledok</th>
-                                    <th>Bodov</th>
-                                    <th>Akcie</th>
+                                    <th scope="col">Vyšetrenie</th>
+                                    <th scope="col">Pacient</th>
+                                    <th scope="col">Výsledok</th>
+                                    <th scope="col">Bodov</th>
+                                    <th scope="col">Akcie</th>
                                 </tr>
                             </thead>
                             <tbody>
