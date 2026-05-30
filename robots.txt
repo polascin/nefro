@@ -1,6 +1,6 @@
 # robots.txt — Nefro-projekt Slovensko
 # https://nefro.polascin.net/
-# Aktualizované: 2026-05-20
+# Aktualizované: 2026-05-30
 
 # ── Všeobecné pravidlá pre všetkých robotov ────────────────────────────────
 User-agent: *
@@ -10,6 +10,7 @@ Allow: /
 Disallow: /admin.php
 Disallow: /admin_articles.php
 Disallow: /admin_discussion.php
+Disallow: /admin_newsletter.php
 Disallow: /admin_users_notice.php
 Disallow: /query_article.php
 Disallow: /setup_db.php
@@ -18,10 +19,23 @@ Disallow: /newsletter_worker.php
 Disallow: /resend_verification.php
 Disallow: /verify_email.php
 Disallow: /newsletter_unsubscribe.php
+Disallow: /newsletter_subscribe.php
 Disallow: /logout.php
 Disallow: /avatar_upload.php
 Disallow: /calculator_result_print.php
 Disallow: /search.php?*
+Disallow: /discussion.php
+Disallow: /profile.php
+Disallow: /login.php
+Disallow: /register.php
+Disallow: /2fa_setup.php
+Disallow: /2fa_verify.php
+Disallow: /email_verification.php
+Disallow: /mobile_verification.php
+Disallow: /forgot_password.php
+Disallow: /reset_password.php
+Disallow: /confirm_account_deletion.php
+Disallow: /calculator_history.php
 
 # Privátne adresáre
 Disallow: /private/

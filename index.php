@@ -179,7 +179,7 @@ if (is_array($firstArticleForSeo)) {
 }
 
 if ($autorFilter !== "") {
-    $pageTitle = "Články autora: " . $autorFilterHtml
+    $pageTitle = "Články autora: " . $autorFilter
         . ($isPaginated ? " – strana " . $otherArticlesPage : "")
         . " | " . $siteName;
     $canonicalUrl = $baseUrl . "?autor=" . $autorFilterUrl

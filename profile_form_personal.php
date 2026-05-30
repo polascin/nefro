@@ -22,7 +22,7 @@
 
                     <div class="form-group">
                         <label for="username">Používateľské meno</label>
-                        <input type="text" id="username" name="username" class="form-control" value="<?= htmlspecialchars($user['username'] ?? '') ?>">
+                        <input type="text" id="username" name="username" class="form-control" value="<?= htmlspecialchars($user['username'] ?? '') ?>" autocomplete="username">
                     </div>
 
                     <div class="form-grid">
@@ -41,7 +41,7 @@
                         </div>
                         <div class="form-group">
                             <label for="pronouns">Identifikačné zámená (napr. on/jeho)</label>
-                            <input type="text" id="pronouns" name="pronouns" class="form-control" value="<?= htmlspecialchars($user['pronouns'] ?? '') ?>">
+                            <input type="text" id="pronouns" name="pronouns" class="form-control" value="<?= htmlspecialchars($user['pronouns'] ?? '') ?>" autocomplete="off">
                         </div>
                         <div class="form-group">
                             <label for="title_before">Titul pred menom</label>
@@ -60,15 +60,15 @@
                         </div>
                         <div class="form-group">
                             <label for="first_name">Prvé (krstné) meno</label>
-                            <input type="text" id="first_name" name="first_name" class="form-control" value="<?= htmlspecialchars($user['first_name'] ?? '') ?>">
+                            <input type="text" id="first_name" name="first_name" class="form-control" value="<?= htmlspecialchars($user['first_name'] ?? '') ?>" autocomplete="given-name">
                         </div>
                         <div class="form-group">
                             <label for="middle_name">Stredné meno/á</label>
-                            <input type="text" id="middle_name" name="middle_name" class="form-control" value="<?= htmlspecialchars($user['middle_name'] ?? '') ?>">
+                            <input type="text" id="middle_name" name="middle_name" class="form-control" value="<?= htmlspecialchars($user['middle_name'] ?? '') ?>" autocomplete="additional-name">
                         </div>
                         <div class="form-group">
                             <label for="last_name">Priezvisko</label>
-                            <input type="text" id="last_name" name="last_name" class="form-control" value="<?= htmlspecialchars($user['last_name'] ?? '') ?>">
+                            <input type="text" id="last_name" name="last_name" class="form-control" value="<?= htmlspecialchars($user['last_name'] ?? '') ?>" autocomplete="family-name">
                         </div>
                         <div class="form-group">
                             <label for="title_after">Titul za menom</label>
@@ -87,7 +87,7 @@
                         </div>
                         <div class="form-group">
                             <label for="birth_date">Dátum narodenia</label>
-                            <input type="date" id="birth_date" name="birth_date" class="form-control" value="<?= htmlspecialchars($user['birth_date'] ?? '') ?>">
+                            <input type="date" id="birth_date" name="birth_date" class="form-control" value="<?= htmlspecialchars($user['birth_date'] ?? '') ?>" autocomplete="bday">
                         </div>
                     </div>
                     <div class="form-group">

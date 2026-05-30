@@ -13,7 +13,8 @@
                             <label for="street">Ulica</label>
                             <input type="text" id="street" name="street" class="form-control"
                                 value="<?= htmlspecialchars($user['street'] ?? '') ?>"
-                                placeholder="napr. Hlavná">
+                                placeholder="napr. Hlavná"
+                                autocomplete="address-line1">
                         </div>
                         <div class="form-group">
                             <label for="house_number">Popisné číslo</label>
@@ -31,7 +32,7 @@
                                 list="city_list"
                                 value="<?= htmlspecialchars($user['city'] ?? '') ?>"
                                 placeholder="napr. Bratislava"
-                                autocomplete="off">
+                                autocomplete="address-level2">
                             <datalist id="city_list">
                                 <?php foreach ($addrMunicipalities as $m): ?>
                                     <option value="<?= htmlspecialchars($m['name']) ?>"
@@ -48,7 +49,7 @@
                                 list="zip_list"
                                 value="<?= htmlspecialchars($user['zip_code'] ?? '') ?>"
                                 placeholder="napr. 81101"
-                                maxlength="6" autocomplete="off">
+                                maxlength="6" autocomplete="postal-code">
                             <datalist id="zip_list">
                                 <?php foreach ($addrZips as $z): ?>
                                     <option value="<?= htmlspecialchars($z) ?>">
@@ -87,7 +88,7 @@
                                 list="country_list"
                                 value="<?= htmlspecialchars($user['country'] ?? '') ?>"
                                 placeholder="napr. Slovenská republika"
-                                autocomplete="off">
+                                autocomplete="country-name">
                             <datalist id="country_list">
                                 <?php foreach ($addrCountries as $c): ?>
                                     <option value="<?= htmlspecialchars($c) ?>">
