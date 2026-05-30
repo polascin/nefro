@@ -123,7 +123,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     $expiresAt = date('Y-m-d H:i:s', time() + 3600); // 60 min
                     $clientIp = getClientIpAddress();
 
-                    // Transakcia s SERIALIZABLE izoláciou zabraňuje race condition:
+                    // Atomický DELETE+INSERT v transakcii zabraňuje race condition:
                     // bez nej by súbežné požiadavky mohli vložiť viac platných tokenov naraz.
                     // ON DUPLICATE KEY UPDATE nie je vhodné — tabuľka uchováva históriu resetov
                     // (user_id nie je UNIQUE), preto zostávame pri atomickom DELETE+INSERT v transakcii.

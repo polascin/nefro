@@ -145,7 +145,7 @@ try {
 }
 
 try {
-    $clientIp = substr((string) ($_SERVER['REMOTE_ADDR'] ?? ''), 0, 45);
+    $clientIp = substr(getClientIpAddress(), 0, 45);
     $userAgent = substr((string) ($_SERVER['HTTP_USER_AGENT'] ?? ''), 0, 500);
     $auditStmt = $pdo->prepare('INSERT INTO admin_users_notice_audit (admin_user_id, export_format, include_sensitive, generated_rows, client_ip, user_agent)
         VALUES (:admin_user_id, :export_format, :include_sensitive, :generated_rows, :client_ip, :user_agent)');
