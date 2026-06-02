@@ -3,8 +3,8 @@ declare(strict_types=1);
 /**
  * archive_cleanup.php — CLI-only retenčný cleanup skript
  *
- * Použitie: php archive_cleanup.php [profile_days] [avatar_days]
- * Predvolená retenčná lehota: 365 dní pre oba archívy.
+ * Použitie: php archive_cleanup.php [profile_days] [avatar_days] [access_log_days]
+ * Predvolená retenčná lehota: 365 dní pre archívy, 90 dní pre access logy/rate-limit záznamy.
  *
  * Príklad cron jobu (každú nedeľu o 02:00):
  *   0 2 * * 0 /usr/bin/php /path/to/nefro/archive_cleanup.php >> /var/log/nefro_cleanup.log 2>&1
@@ -17,6 +17,7 @@ if (php_sapi_name() !== 'cli') {
 
 $profileRetentionDays = max(30, (int) ($argv[1] ?? 365));
 $avatarRetentionDays  = max(30, (int) ($argv[2] ?? 365));
+$accessLogRetentionDays = max(30, (int) ($argv[3] ?? 90));
 
 require_once __DIR__ . '/db_config.php';
 
@@ -24,13 +25,16 @@ echo "Nefro Archív Cleanup\n";
 echo "====================\n";
 echo "Dátum:                    " . date('Y-m-d H:i:s') . "\n";
 echo "Retenčná lehota profilov: {$profileRetentionDays} dní\n";
-echo "Retenčná lehota avatarov: {$avatarRetentionDays} dní\n\n";
+echo "Retenčná lehota avatarov: {$avatarRetentionDays} dní\n";
+echo "Retenčná lehota logov: {$accessLogRetentionDays} dní\n\n";
 
-$errors        = [];
-$profileDeleted = 0;
-$avatarDeleted  = 0;
-$filesDeleted   = 0;
-$laDeleted      = 0;
+$errors          = [];
+$profileDeleted  = 0;
+$avatarDeleted   = 0;
+$filesDeleted    = 0;
+$laDeleted       = 0;
+$flDeleted       = 0;
+$accessDeleted   = 0;
 
 try {
     // 1. Zmaž staré záznamy z histórie profilov
@@ -77,6 +81,18 @@ try {
     $laStmt->execute();
     $laDeleted = $laStmt->rowCount();
 
+    $flStmt = $pdo->prepare(
+        "DELETE FROM form_rate_limit WHERE last_attempt IS NOT NULL AND last_attempt < DATE_SUB(NOW(), INTERVAL :days DAY)"
+    );
+    $flStmt->execute(['days' => $accessLogRetentionDays]);
+    $flDeleted = $flStmt->rowCount();
+
+    $alStmt = $pdo->prepare(
+        "DELETE FROM access_logs WHERE created_at < DATE_SUB(NOW(), INTERVAL :days DAY)"
+    );
+    $alStmt->execute(['days' => $accessLogRetentionDays]);
+    $accessDeleted = $alStmt->rowCount();
+
 } catch (\PDOException $e) {
     $errors[] = "Databázová chyba: " . $e->getMessage();
 }
@@ -86,6 +102,8 @@ echo "  Zmaz. záznamy z histórie profilov:  {$profileDeleted}\n";
 echo "  Zmaz. záznamy z histórie avatarov:  {$avatarDeleted}\n";
 echo "  Zmazané archívne súbory:            {$filesDeleted}\n";
 echo "  Vyčistené expirované IP záznamy:    {$laDeleted}\n";
+echo "  Vyčistené staré rate-limit záznamy: {$flDeleted}\n";
+echo "  Vyčistené staré access logy:        {$accessDeleted}\n";
 
 if (!empty($errors)) {
     echo "\nUpozornenia:\n";

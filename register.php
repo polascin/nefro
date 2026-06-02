@@ -352,11 +352,14 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                             }
                         }
 
-                        $success = true;
-                        $registeredData = $registrationParams;
-                        unset($registeredData['password_hash']);
-                        $registeredData['newsletter_consent'] = $newsletterConsent ? 'Áno' : 'Nie';
-                        $registeredData['theme_auto'] = $themeAuto ? 'Áno' : 'Nie';
+                        if ($sent) {
+                            setFlashMessage('success', 'Registrácia prebehla úspešne. Overovací e-mail bol odoslaný.');
+                        } else {
+                            setFlashMessage('warning', 'Registrácia prebehla úspešne, ale overovací e-mail sa nepodarilo odoslať. Skúste ho odoslať znova.');
+                        }
+
+                        header('Location: register.php?registered=1');
+                        exit;
                     }
                 }
             } catch (\PDOException $e) {
@@ -416,85 +419,13 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 </div>
             <?php endif; ?>
 
-            <?php if ($success): ?>
+            <?php if (isset($_GET['registered']) && $_GET['registered'] === '1'): ?>
                 <div class="alert alert-success">
-                    Registrácia prebehla úspešne. Na prihlásenie je potrebné overiť e-mailovú adresu.
-                </div>
-                <?php if ($verificationNotice !== null): ?>
-                    <div class="alert alert-error">
-                        <p><?= htmlspecialchars($verificationNotice) ?></p>
-                    </div>
-                <?php endif; ?>
-                <div class="form-section">
-                    <h3>Potvrdenie registrácie</h3>
-                    <p>Nižšie sú zobrazené údaje, ktoré boli uložené pri registrácii.</p>
-                    <div class="form-grid">
-                        <?php
-                        $fieldLabels = [
-                            'username' => 'Používateľské meno',
-                            'email' => 'E-mailová adresa',
-                            'gender' => 'Identifikácia (pohlavie)',
-                            'pronouns' => 'Identifikačné zámená',
-                            'title_before' => 'Titul pred menom',
-                            'first_name' => 'Prvé (krstné) meno',
-                            'middle_name' => 'Stredné meno/á',
-                            'last_name' => 'Priezvisko',
-                            'title_after' => 'Titul za menom',
-                            'birth_date' => 'Dátum narodenia',
-                            'name_note' => 'Poznámka k menu',
-                            'organization' => 'Organizácia',
-                            'job_function' => 'Funkcia',
-                            'work_mobile_phone' => 'Číslo pracovného mobilného telefónu',
-                            'org_website' => 'Webové stránky organizácie',
-                            'work_email' => 'Pracovný e-mail',
-                            'mobile_phone' => 'Číslo súkromného mobilného telefónu',
-                            'other_phone' => 'Iné telefónne číslo',
-                            'website' => 'Osobné webové stránky',
-                            'social_linkedin' => 'LinkedIn profil',
-                            'social_x' => 'X (Twitter) profil',
-                            'social_facebook' => 'Facebook profil',
-                            'social_instagram' => 'Instagram profil',
-                            'social_other' => 'Iné sociálne siete',
-                            'other_contact' => 'Iné kontaktné informácie',
-                            'street' => 'Ulica',
-                            'house_number' => 'Popisné číslo',
-                            'orientation_number' => 'Orientačné číslo',
-                            'zip_code' => 'PSČ',
-                            'city' => 'Obec',
-                            'district' => 'Okres',
-                            'region' => 'Kraj',
-                            'country' => 'Štát',
-                            'address_note' => 'Poznámka k adrese',
-                            'newsletter_consent' => 'Súhlas so zasielaním noviniek',
-                            'theme_auto' => 'Automatické prispôsobovanie témy',
-                        ];
-                        ?>
-                        <?php foreach ($fieldLabels as $field => $label): ?>
-                            <div class="form-group">
-                                <label><?= htmlspecialchars($label) ?></label>
-                                <?php
-                                $displayValue = ($registeredData[$field] ?? '') !== '' ? (string) $registeredData[$field] : 'Neuvedené';
-                                if (in_array($field, ['mobile_phone', 'work_mobile_phone', 'other_phone'], true) && $displayValue !== 'Neuvedené') {
-                                    $displayValue = formatPhoneForDisplay($displayValue);
-                                }
-                                ?>
-                                <p><?= htmlspecialchars($displayValue) ?></p>
-                            </div>
-                        <?php endforeach; ?>
-                    </div>
-
-                    <?php if (!empty($registeredData['avatar_path'])): ?>
-                        <div class="form-group">
-                            <label>Nahraný avatar</label>
-                            <p><a href="<?= htmlspecialchars($registeredData['avatar_path']) ?>" target="_blank" rel="noopener noreferrer">Zobraziť avatar</a></p>
-                        </div>
-                    <?php endif; ?>
+                    Ďakujeme za registráciu. Skontrolujte svoju e-mailovú schránku a dokončite overenie účtu.
                 </div>
                 <div class="auth-links">
-                    <p>
-                        Skontrolujte e-mail a overte účet.
-                        Ak e-mail neprišiel, môžete ho <a href="resend_verification.php?login=<?= urlencode((string) ($registeredData['email'] ?? '')) ?>">odoslať znova</a>.
-                    </p>
+                    <p>Ak ste e-mail nedostali, môžete si ho <a href="resend_verification.php">odoslať znova</a>.</p>
+                    <p>Po overení sa prihláste na <a href="login.php">prihlasovacej stránke</a>.</p>
                 </div>
             <?php else: ?>
                 <form method="POST" action="register.php" enctype="multipart/form-data">

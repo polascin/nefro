@@ -65,17 +65,14 @@ const initialConsent = readStoredConsentSync() || defaultSettings;
 // Inicializácia Google Analytics 4 (Google Consent Mode v2)
 window.dataLayer = window.dataLayer || [];
 window.gtag = function(){ dataLayer.push(arguments); };
+window.gtagInitialized = false;
 
-try {
-    // Nastavenie defaultného súhlasu podľa uložených preferencií (zabráni strate dát pri prvom zobrazení pre vracajúcich sa návštevníkov)
-    gtag('consent', 'default', {
-      'ad_storage': initialConsent.marketing ? 'granted' : 'denied',
-      'ad_user_data': initialConsent.marketing ? 'granted' : 'denied',
-      'ad_personalization': initialConsent.marketing ? 'granted' : 'denied',
-      'analytics_storage': initialConsent.analytics ? 'granted' : 'denied'
-    });
+function initializeGA4() {
+    if (window.gtagInitialized) {
+        return;
+    }
+    window.gtagInitialized = true;
 
-    // Dynamické načítanie Google Tag Manager scriptu
     const gtagScript = document.createElement('script');
     gtagScript.async = true;
     gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-0JT5VMQ61K";
@@ -86,8 +83,22 @@ try {
 
     gtag('js', new Date());
     gtag('config', 'G-0JT5VMQ61K');
+}
+
+try {
+    // Nastavenie defaultného súhlasu podľa uložených preferencií (zabráni strate dát pri prvom zobrazení pre vracajúcich sa návštevníkov)
+    gtag('consent', 'default', {
+      'ad_storage': initialConsent.marketing ? 'granted' : 'denied',
+      'ad_user_data': initialConsent.marketing ? 'granted' : 'denied',
+      'ad_personalization': initialConsent.marketing ? 'granted' : 'denied',
+      'analytics_storage': initialConsent.analytics ? 'granted' : 'denied'
+    });
+
+    if (initialConsent.analytics || initialConsent.marketing) {
+        initializeGA4();
+    }
 } catch (error) {
-    console.warn("NPS Privacy Manager: GA4 script bol zablokovaný (pravdepodobne Ad-Blockerom).", error);
+    console.warn("NPS Privacy Manager: GA4 inicializácia zlyhala.", error);
 }
 
 function initPrivacyManager() {
@@ -282,7 +293,10 @@ function initPrivacyManager() {
             'ad_user_data': consentData.marketing ? 'granted' : 'denied',
             'ad_personalization': consentData.marketing ? 'granted' : 'denied'
         });
-        
+
+        if (consentData.analytics || consentData.marketing) {
+            initializeGA4();
+        }
         // GA4 consent update applied
     }
 

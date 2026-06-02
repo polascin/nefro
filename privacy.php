@@ -251,7 +251,8 @@ $pageLastUpdated = date('d.m.Y', filemtime(__FILE__));
                         <code>G-0JT5VMQ61K</code>), ktorý zhromažďuje anonymizované štatistiky
                         návštevnosti (počet relácií, zobrazenia stránok, typ zariadenia).
                         GA4 je implementovaný cez <strong>Google Consent Mode v2</strong> —
-                        skript sa načíta vždy, no odosielanie dát je podmienené vaším súhlasom
+                        skript sa načíta iba po udelení súhlasu na analytické alebo marketingové cookies
+                        a odosielanie dát je podmienené vaším súhlasom
                         (<code>analytics_storage: granted/denied</code>).
                         Dáta spracúva Google LLC, USA; prenos je krytý štandardnými zmluvnými
                         doložkami (SCC) podľa čl. 46 GDPR.
