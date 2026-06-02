@@ -2,7 +2,7 @@
 /**
  * add_optimalizacia-raasi-mra-hyperkaliemia-ckd-hf_article.php
  * ════════════════════════════════════════════════════════════════════════════
- * Vloženie článku: Optimalizácia RAASi/MRA terapie u pacientov so srdcovým 
+ * Vloženie článku: Optimalizácia RAASi/MRA terapie u pacientov so srdcovým
  * zlyhávaním, CKD a hyperkaliémiou (praktický prístup)
  */
 
@@ -69,13 +69,13 @@ $articles[] = [
 <li>ďalšie faktory: metabolická acidóza, diétne excesy draslíka (aspoň orientačne), pridružené ochorenia.</li>
 </ul>
 
-<p><strong>Cieľom je predvídať,</strong> nie len reagovať po tom, čo sa K<sup>+</sup> už zvýši.</p>
+<p><strong>Cieľom je predpovedať,</strong> nie len reagovať po tom, čo sa K<sup>+</sup> už zvýši.</p>
 
 <h3>2) Titruj RAASi/MRA plánovane, s reálnym monitoringom</h3>
 
 <p>Po zmene dávky je rozumné nastaviť laboratórnu kontrolu tak, aby zachytila trend draslíka včas. V praxi to typicky znamená kontrolu v prvých dňoch až týždňoch podľa lokálneho protokolu a rizikovosti pacienta.</p>
 
-<p>Keď K<sup>+</sup> začne rásť, nech sa titrácia a riešenie draslíka nespomalia neskoro, keď už je problém „v plnom rozsahu".</p>
+<p>Keď K<sup>+</sup> začne rásť, titráciu a riešenie draslíka sa nemá spomaľovať; problémy sa riešia v momente, keď K<sup>+</sup> už dosahuje výraznejšie hodnoty a problém je "v plnom rozsahu".</p>
 
 <h3>3) Keď K<sup>+</sup> rastie: rieš príčiny + uvoľni cestu pre udržanie RAASi/MRA</h3>
 
@@ -114,7 +114,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>Hyperkaliémia je v cardiorenálnom manažmente časté prekážkou, ale nemá byť dôvodom na trvalé podliečenie pacienta RAASi/MRA terapiou. Praktický cieľ je udržať a optimalizovať RAASi/MRA tak, že súčasne proaktívne riešime príčiny a máme si pripravený plán na kontrolu draslíka. V článkoch a vzdelávacích programoch tejto témy sa opakovane zdôrazňuje, že „udržanie liečby" je často uskutočniteľné práve vďaka včasnej stratifikácii rizika a cielenej intervencii pri hyperkaliémii.</p>
+<p>Hyperkaliémia je v cardiorenálnom manažmente čestou prekážkou, ale nemá byť dôvodom na trvalé podliečenie pacienta RAASi/MRA terapiou. Praktický cieľ je udržať a optimalizovať RAASi/MRA tak, že súčasne proaktívne riešime príčiny a máme si pripravený plán na kontrolu draslíka. V článkoch a vzdelávacích programoch tejto témy sa opakovane zdôrazňuje, že „udržanie liečby" je často uskutočniteľné práve vďaka včasnej stratifikácii rizika a cielenej intervencii pri hyperkaliémii.</p>
 
 <hr>
 
@@ -164,10 +164,10 @@ foreach ($articles as $a) {
 // ── Výsledok ──────────────────────────────────────────────────────────────────
 
 echo "\n═══════════════════════════════════════════════════════════════════════════\n";
-echo "VÝSLEDOK VLOŽENIA ČLÁNKY\n";
+echo "VÝSLEDOK VLOŽENIA ČLÁNKOV\n";
 echo "═══════════════════════════════════════════════════════════════════════════\n";
-echo "Vložené:        " . $inserted . "\n";
-echo "Preskočené:     " . $skipped . " (už existuje)\n";
+echo "Vložené:         " . $inserted . "\n";
+echo "Preskočené:      " . $skipped . " (už existuje)\n";
 echo "Chyby:          " . count($errors) . "\n";
 echo "Newsletter:     " . $queuedTotal . " e-mailov zaradených\n";
 
