@@ -1,283 +1,211 @@
 <?php
+
 declare(strict_types=1);
-require_once __DIR__ . '/auth.php';
-header("X-Robots-Tag: noindex, follow", true);
-$pageLastUpdated = date('d.m.Y', filemtime(__FILE__));
+
+require_once __DIR__ . '/legal_data.php';
+
+$info = legalInfo();
+$pageLastUpdated = date('d.m.Y', strtotime($info['effectiveDate']));
+
+$legalTitle       = 'Ochrana osobných údajov';
+$legalDescription = 'Zásady ochrany osobných údajov pre Nefro-projekt Slovensko — aké údaje spracúvame, na akom právnom základe, sprostredkovatelia a vaše práva podľa GDPR a zákonov sveta.';
+$legalSlug        = 'privacy.php';
+$legalHeaderTitle = 'Zásady ochrany osobných údajov';
+$legalHeaderIntro = 'Privacy Policy';
+
+include 'legal_head.php';
 ?>
-<!DOCTYPE html>
-<html lang="sk">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
-    <!-- Logika pre Tmavý režim (na začiatku kvôli prevencii FOUC) -->
-    <script src="theme.js?v=20260509-1&cb=<?= filemtime('theme.js') ?>"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Bezpečnostné hlavičky (Security) -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="referrer" content="strict-origin-when-cross-origin">
-
-    <!-- SEO & Metadata -->
-    <meta name="description" content="Zásady ochrany osobných údajov a Cookie Policy pre Nefro-projekt Slovensko — informácie o spracúvaní údajov, Google Analytics 4 a právach dotknutých osôb (GDPR).">
-    <meta name="robots" content="noindex, follow">
-    <link rel="canonical" href="https://nefro.polascin.net/privacy.php">
-    <link rel="alternate" hreflang="sk-SK" href="https://nefro.polascin.net/privacy.php">
-
-    <!-- Open Graph (Social SEO) -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Ochrana osobných údajov | Nefro-projekt Slovensko">
-    <meta property="og:description" content="Zásady ochrany osobných údajov a Cookie Policy pre Nefro-projekt Slovensko.">
-    <meta property="og:url" content="https://nefro.polascin.net/privacy.php">
-    <meta property="og:site_name" content="Nefro-projekt Slovensko">
-    <meta property="og:locale" content="sk_SK">
-    <meta property="og:image" content="https://nefro.polascin.net/img/nps-logo.gif">
-    <meta property="og:image:alt" content="Logo Nefro-projekt Slovensko">
-
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Ochrana osobných údajov | Nefro-projekt Slovensko">
-    <meta name="twitter:description" content="Zásady ochrany osobných údajov a Cookie Policy pre Nefro-projekt Slovensko.">
-    <meta name="twitter:image" content="https://nefro.polascin.net/img/nps-logo.gif">
-
-    <title>Ochrana osobných údajov | Nefro-projekt Slovensko</title>
-
-    <!-- JSON-LD Štruktúrované dáta -->
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            "name": "Ochrana osobných údajov | Nefro-projekt Slovensko",
-            "url": "https://nefro.polascin.net/privacy.php",
-            "description": "Zásady ochrany osobných údajov a Cookie Policy pre Nefro-projekt Slovensko.",
-            "isPartOf": {
-                "@type": "WebSite",
-                "name": "Nefro-projekt Slovensko",
-                "url": "https://nefro.polascin.net/"
-            }
-        }
-    </script>
-
-    <!-- Favikony (PWA, Apple, Android, Windows) -->
-    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
-    <link rel="manifest" href="./site.webmanifest">
-    <link rel="shortcut icon" href="./favicon.ico">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="index.css?v=20260509-1&cb=<?= filemtime('index.css') ?>">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;900&display=swap" rel="stylesheet">
-
-    <!-- Cookie Consent & GA4 Consent Mode v2 -->
-    <script src="ui-preferences.js?v=20260511-1&cb=<?= filemtime('ui-preferences.js') ?>" defer></script>
-    <script src="ui-preferences-fallback.js?v=20260511-1&cb=<?= filemtime('ui-preferences-fallback.js') ?>" defer></script>
-</head>
-
-<body>
-    <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>
-
-    <?php
-    $headerTitle = 'Zásady ochrany osobných údajov';
-    $headerIntro = 'Privacy Policy & Cookie Policy';
-    $showLogo = false;
-    include 'header.php';
-    ?>
 
     <main id="main-content" class="container main-content main-content--single-col" role="main">
         <div class="content-wrapper">
-            <article class="primary-article">
+            <article class="primary-article legal-article">
                 <header>
-                    <h2>Ochrana osobných údajov (Privacy Policy)</h2>
+                    <h2>Zásady ochrany osobných údajov</h2>
                     <p class="meta">
-                        Posledná aktualizácia:&nbsp;
-                        <time datetime="<?= date('Y-m-d', filemtime(__FILE__)) ?>"><?= $pageLastUpdated ?></time>
+                        <?= htmlspecialchars($info['entity'], ENT_QUOTES, 'UTF-8') ?>
+                        · Verzia <?= htmlspecialchars($info['version'], ENT_QUOTES, 'UTF-8') ?>
+                        · Posledná aktualizácia:&nbsp;
+                        <time datetime="<?= htmlspecialchars($info['effectiveDate'], ENT_QUOTES, 'UTF-8') ?>"><?= htmlspecialchars($pageLastUpdated, ENT_QUOTES, 'UTF-8') ?></time>
+                    </p>
+                    <p>
+                        Tieto Zásady vysvetľujú, ako prevádzkovateľ webovej lokality
+                        <strong><?= htmlspecialchars($info['entity'], ENT_QUOTES, 'UTF-8') ?></strong>
+                        (<code><?= htmlspecialchars($info['url'], ENT_QUOTES, 'UTF-8') ?></code>) zhromažďuje,
+                        používa, zdieľa a chráni vaše osobné údaje a aké práva máte. Vzťahujú sa
+                        na túto webovú lokalitu a jej služby.
                     </p>
                 </header>
 
-                <!-- 1. ÚVODNÉ USTANOVENIA -->
-                <h3>1. Úvodné ustanovenia a prevádzkovateľ</h3>
+                <!-- SÚHRN ZMIEN -->
+                <section class="legal-updates" aria-labelledby="legal-updates-heading">
+                    <h3 id="legal-updates-heading">Súhrn posledných zmien</h3>
+                    <ul>
+                        <?php foreach (legalRecentUpdates() as $update): ?>
+                            <li><?= htmlspecialchars($update, ENT_QUOTES, 'UTF-8') ?></li>
+                        <?php endforeach; ?>
+                    </ul>
+                </section>
+
+                <!-- 1. PREVÁDZKOVATEĽ -->
+                <h3>1. Kto zodpovedá za vaše údaje</h3>
                 <p>
-                    Tieto Zásady ochrany osobných údajov (<em>ďalej len „Zásady"</em>) vysvetľujú,
-                    ako webová lokalita <strong>Nefro-projekt Slovensko</strong>
-                    (<code>https://nefro.polascin.net</code>) zhromažďuje, používa a chráni
-                    vaše osobné údaje v súlade s:
-                </p>
-                <ul>
-                    <li>Nariadením (EÚ) 2016/679 (GDPR),</li>
-                    <li>zákonom č. 18/2018 Z. z. o ochrane osobných údajov,</li>
-                    <li>smernicou ePrivacy (2002/58/ES v znení 2009/136/ES),</li>
-                    <li>požiadavkami CCPA/CPRA pre návštevníkov z Kalifornie.</li>
-                </ul>
-                <p>
-                    <strong>Prevádzkovateľ:</strong> MUDr. Ľubomír Polaščín<br>
-                    <strong>Kontakt:</strong> <code>nefro@polascin.net</code>
+                    Prevádzkovateľom je <strong><?= htmlspecialchars($info['operator'], ENT_QUOTES, 'UTF-8') ?></strong>
+                    (IČO <?= htmlspecialchars($info['companyId'], ENT_QUOTES, 'UTF-8') ?>),
+                    so sídlom v <?= htmlspecialchars($info['governingLaw'], ENT_QUOTES, 'UTF-8') ?>,
+                    ktorý prevádzkuje <?= htmlspecialchars($info['entity'], ENT_QUOTES, 'UTF-8') ?>.
+                    V otázkach súkromia alebo pri uplatnení práv nás kontaktujte na
+                    <a href="mailto:<?= htmlspecialchars($info['contactEmail'], ENT_QUOTES, 'UTF-8') ?>"><?= htmlspecialchars($info['contactEmail'], ENT_QUOTES, 'UTF-8') ?></a>.
+                    Máte tiež právo podať sťažnosť na dozorný úrad; naším vedúcim dozorným úradom je
+                    <a href="<?= htmlspecialchars($info['supervisoryAuthorityUrl'], ENT_QUOTES, 'UTF-8') ?>" target="_blank" rel="noopener noreferrer"><?= htmlspecialchars($info['supervisoryAuthority'], ENT_QUOTES, 'UTF-8') ?></a>.
                 </p>
 
                 <!-- 2. AKÉ ÚDAJE ZHROMAŽĎUJEME -->
                 <h3>2. Aké osobné údaje spracúvame</h3>
-
-                <h4 class="privacy-subheading">2a. Registrovaní používatelia</h4>
+                <div class="admin-table-wrap legal-table-wrap">
+                    <table class="admin-table legal-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Kategória</th>
+                                <th scope="col">Príklady</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach (legalDataCategories() as $row): ?>
+                                <tr>
+                                    <th scope="row"><?= htmlspecialchars($row['category'], ENT_QUOTES, 'UTF-8') ?></th>
+                                    <td><?= htmlspecialchars($row['examples'], ENT_QUOTES, 'UTF-8') ?></td>
+                                </tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                </div>
                 <p>
-                    Pri registrácii a používaní konta spracúvame:
-                </p>
-                <ul>
-                    <li><strong>Identifikačné údaje:</strong> meno, priezvisko, používateľské meno, e-mailová adresa, voliteľne mobilné telefónne číslo.</li>
-                    <li><strong>Profesijné údaje:</strong> titul pred menom / za menom, pracovná funkcia, organizácia, pracovný e-mail, pracovný mobil, webová adresa organizácie (voliteľné polia v profile).</li>
-                    <li><strong>Autentifikačné údaje:</strong> hašované heslo (bcrypt), čas posledného prihlásenia, IP adresa pri prihlásení.</li>
-                    <li><strong>Avatar:</strong> voliteľne nahraná profilová fotografia uložená na serveri.</li>
-                    <li><strong>Klinické výsledky kalkulačiek:</strong> výsledky výpočtov uložené na žiadosť lekára spolu s anonymizovanými pacientskymi identifikátormi (meno, dátum narodenia, rodné číslo, kód poisťovne — vkladá ich výhradne prihlásený lekár, sú asociované s jeho kontom).</li>
-                </ul>
-                <p>
-                    <strong>Právny základ:</strong> plnenie zmluvy (čl. 6 ods. 1 písm. b) GDPR),
-                    oprávnený záujem na bezpečnosti systému (čl. 6 ods. 1 písm. f) GDPR).
-                </p>
-
-                <h4 class="privacy-subheading">2b. Všetci návštevníci</h4>
-                <ul>
-                    <li><strong>Prevádzkové záznamy (server logy):</strong> IP adresa, typ prehliadača, operačný systém, URL požiadavky, čas prístupu — uchovávané z dôvodu bezpečnosti a ladenia.</li>
-                    <li><strong>Analytické dáta (GA4):</strong> iba so súhlasom — anonymizované štatistiky návštevnosti cez Google Analytics 4 (pozri sekciu 5).</li>
-                    <li><strong>Nastavenia súkromia:</strong> váš cookie-súhlas uložený v <code>localStorage</code> a cookie <code>nps_cookie_consent</code> (platnosť 365 dní).</li>
-                </ul>
-
-                <!-- 3. SPRACOVANIE A VYUŽITIE -->
-                <h3>3. Účely a právne základy spracúvania</h3>
-                <ul>
-                    <li>Zabezpečenie fungovania, integrity a bezpečnosti webovej lokality.</li>
-                    <li>Správa používateľských kont, autentifikácia a obnova hesla.</li>
-                    <li>Ukladanie a zobrazovanie výsledkov klinických kalkulačiek na žiadosť lekára.</li>
-                    <li>Zasielanie e-mailových notifikácií o nových článkoch a aktualizáciách (newsletter) — iba so súhlasom a s možnosťou odhlásenia.</li>
-                    <li>Analýza návštevnosti a zlepšovanie obsahu (iba so súhlasom, cez GA4).</li>
-                </ul>
-                <p>
-                    <strong>Vaše osobné údaje nepredávame, neobchodujeme s nimi ani ich neprenajímame
-                    tretím stranám.</strong> (<em>„We do not sell your personal information"</em>
-                    v zmysle CCPA/CPRA.)
+                    Spracúvame údaje, ktoré nám poskytnete (napr. pri registrácii), údaje
+                    vznikajúce pri používaní služby a obmedzené technické údaje zbierané
+                    automaticky. Údaje o zdraví (výsledky kalkulačiek s pacientskymi
+                    identifikátormi) vkladá výhradne prihlásený lekár a sú asociované s jeho kontom.
                 </p>
 
-                <!-- 4. PRÁVA DOTKNUTÝCH OSÔB -->
-                <h3>4. Vaše práva (GDPR)</h3>
-                <p>V zmysle GDPR máte nasledujúce práva:</p>
-                <ul>
-                    <li><strong>Právo na prístup</strong> — môžete požiadať o kópiu vašich osobných údajov.</li>
-                    <li><strong>Právo na opravu</strong> — nepresné údaje môžete opraviť priamo v profile.</li>
-                    <li><strong>Právo na vymazanie</strong> — môžete požiadať o zmazanie konta a všetkých súvisiacich údajov.</li>
-                    <li><strong>Právo na obmedzenie spracúvania</strong> — za určitých podmienok môžete požiadať o pozastavenie spracúvania.</li>
-                    <li><strong>Právo na prenosnosť údajov</strong> — môžete požiadať o export vašich údajov v štruktúrovanom formáte.</li>
-                    <li><strong>Právo namietať</strong> — môžete namietať spracúvanie na základe oprávneného záujmu.</li>
-                    <li><strong>Právo odvolať súhlas</strong> — súhlas s cookies môžete kedykoľvek zmeniť (tlačidlo nižšie).</li>
-                </ul>
+                <!-- 3. ÚČELY A PRÁVNE ZÁKLADY -->
+                <h3>3. Prečo údaje používame a naše právne základy</h3>
                 <p>
-                    Pre uplatnenie týchto práv nás kontaktujte na: <code>nefro@polascin.net</code>.
-                    Máte tiež právo podať sťažnosť na Úrad na ochranu osobných údajov SR
-                    (<a href="https://www.uoou.sk" target="_blank" rel="noopener noreferrer">www.uoou.sk</a>).
+                    Pre používateľov v EHP, Švajčiarsku a Spojenom kráľovstve sa opierame
+                    o nasledujúce právne základy (GDPR / UK GDPR / zákon č. 18/2018 Z. z.):
+                </p>
+                <div class="admin-table-wrap legal-table-wrap">
+                    <table class="admin-table legal-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Účel</th>
+                                <th scope="col">Právny základ</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach (legalProcessingPurposes() as $row): ?>
+                                <tr>
+                                    <td><?= htmlspecialchars($row['purpose'], ENT_QUOTES, 'UTF-8') ?></td>
+                                    <td><?= htmlspecialchars($row['basis'], ENT_QUOTES, 'UTF-8') ?></td>
+                                </tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- 4. ZDIEĽANIE ÚDAJOV -->
+                <h3>4. Ako údaje zdieľame</h3>
+                <p>
+                    <strong>Vaše osobné údaje nepredávame za peniaze.</strong>
+                    Údaje zdieľame len so sprostredkovateľmi, ktorých potrebujeme na
+                    prevádzku služby, ak to vyžaduje zákon alebo pri prevode podniku.
+                    Každý sprostredkovateľ je viazaný zmluvou o spracúvaní údajov a spracúva
+                    ich výlučne podľa našich pokynov.
+                </p>
+                <div class="admin-table-wrap legal-table-wrap">
+                    <table class="admin-table legal-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Poskytovateľ</th>
+                                <th scope="col">Účel</th>
+                                <th scope="col">Prenos</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach (legalSubprocessors() as $row): ?>
+                                <tr>
+                                    <th scope="row"><?= htmlspecialchars($row['name'], ENT_QUOTES, 'UTF-8') ?></th>
+                                    <td><?= htmlspecialchars($row['purpose'], ENT_QUOTES, 'UTF-8') ?></td>
+                                    <td><?= htmlspecialchars($row['transfer'], ENT_QUOTES, 'UTF-8') ?></td>
+                                </tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- 5. MEDZINÁRODNÉ PRENOSY -->
+                <h3>5. Medzinárodné prenosy</h3>
+                <p>
+                    Niektorí poskytovatelia sídlia mimo vašej krajiny. Pri prenose údajov do
+                    tretích krajín sa opierame o vhodné záruky podľa čl. 46 GDPR — najmä
+                    štandardné zmluvné doložky EÚ (SCC), prípadne rámec EU-US Data Privacy
+                    Framework tam, kde sa uplatňuje. Prenos do USA sa týka výlučne
+                    analytických údajov v Google Analytics 4 a iba po udelení vášho súhlasu.
                 </p>
 
-                <!-- 4a. GDPR DOLOŽKA -->
-                <h3>4a. GDPR doložka</h3>
-                <p>
-                    V prípade spracúvania osobných údajov postupujeme v súlade s GDPR
-                    a uplatňujeme tieto právne základy:
-                </p>
+                <!-- 6. DOBA UCHOVÁVANIA -->
+                <h3>6. Ako dlho údaje uchovávame</h3>
                 <ul>
-                    <li>
-                        <strong>Plnenie zmluvy</strong> (čl. 6 ods. 1 písm. b GDPR) – spracúvanie
-                        údajov pre registráciu, prihlásenie, nahrávanie a spracovanie výsledkov
-                        kalkulačiek a poskytovanie služieb prihlásenému používateľovi.
-                    </li>
-                    <li>
-                        <strong>Oprávnený záujem</strong> (čl. 6 ods. 1 písm. f GDPR) – prevádzka
-                        bezpečného webu, ochrana pred zneužitím, detekcia útokov, audit a
-                        zabezpečenie integrity aplikácie.
-                    </li>
-                    <li>
-                        <strong>Súhlas</strong> (čl. 6 ods. 1 písm. a GDPR) – spracúvanie analytických
-                        cookies, marketingových nastavení a newsletterov na základe dobrovoľného
-                        udelenia súhlasu.
-                    </li>
-                </ul>
-                <p>
-                    Osobné údaje získavame priamo od vás pri registrácii, pri úprave profilu,
-                    pri zasielaní formulárov a pri používaní stránky prostredníctvom cookies.
-                </p>
-                <p>
-                    Príjemcami údajov sú výlučne interné systémy služby a dôveryhodné tretie
-                    strany, ktoré poskytujú technickú infraštruktúru, analytiku a e-mailové služby.
-                    Všetky spracúvajú údaje výlučne na základe nášho pokynu:
-                </p>
-                <ul>
-                    <li><strong>Google LLC</strong> (USA) — Google Analytics 4; prenos do USA krytý štandardnými zmluvnými doložkami (SCC) podľa čl. 46 GDPR.</li>
-                    <li><strong>WebSupport, s.r.o.</strong> (SK) — webhostingová infraštruktúra (server, databáza) a SMTP e-mailová služba (zasielanie verifikačných, notifikačných a newsletterových e-mailov).</li>
-                </ul>
-                <p>
-                    Prenosy údajov mimo Európskej únie sú realizované výhradne na základe
-                    platných právnych mechanizmov GDPR, vrátane štandardných zmluvných doložiek
-                    (SCC) alebo iných vhodných ochranných opatrení.
-                </p>
-                <p>
-                    Doba uchovávania jednotlivých kategórií údajov je opísaná v sekcii 6.
-                    Uchovávame ich len po dobu nevyhnutnú na naplnenie účelu spracovania.
-                </p>
-                <p>
-                    V prípade zmeny zásad alebo aktualizácie verzie súhlasu platí, že systém
-                    automaticky vyžiada nový súhlas používateľa pre analytické a marketingové
-                    cookies. Toto je v súlade s čl. 7 ods. 3 GDPR.
-                </p>
-
-                <!-- 5. COOKIES & GA4 -->
-                <h3>5. Súbory cookies a Google Analytics 4</h3>
-                <p>
-                    Naša stránka používa súbory cookies a podobné technológie ukladania (vrátane
-                    <code>localStorage</code>). Pri prvej návšteve sa zobrazí banner, kde si môžete
-                    zvoliť kategórie cookies.
-                </p>
-
-                <h4 class="privacy-subheading">Kategórie cookies</h4>
-                <ul>
-                    <li>
-                        <strong>Nevyhnutné (Strictly Necessary):</strong> zabezpečujú základné
-                        fungovanie webu (prihlásenie, CSRF ochrana, uloženie tohto súhlasu
-                        v <code>nps_cookie_consent</code>). Nie je možné ich vypnúť.
-                    </li>
-                    <li>
-                        <strong>Analytické (Analytics):</strong> <em>len so súhlasom.</em>
-                        Používame <strong>Google Analytics 4</strong> (merací ID:
-                        <code>G-0JT5VMQ61K</code>), ktorý zhromažďuje anonymizované štatistiky
-                        návštevnosti (počet relácií, zobrazenia stránok, typ zariadenia).
-                        GA4 je implementovaný cez <strong>Google Consent Mode v2</strong> —
-                        skript sa načíta iba po udelení súhlasu na analytické alebo marketingové cookies
-                        a odosielanie dát je podmienené vaším súhlasom
-                        (<code>analytics_storage: granted/denied</code>).
-                        Dáta spracúva Google LLC, USA; prenos je krytý štandardnými zmluvnými
-                        doložkami (SCC) podľa čl. 46 GDPR.
-                        Viac info:
-                        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>,
-                        <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">Google Analytics Opt-out</a>.
-                    </li>
-                    <li>
-                        <strong>Marketingové (Marketing):</strong> <em>len so súhlasom.</em>
-                        Kontrolujú parametre GA4 <code>ad_storage</code>,
-                        <code>ad_user_data</code> a <code>ad_personalization</code>.
-                        Aktuálne nie sú aktívne žiadne reklamné kampane.
-                    </li>
-                    <li>
-                        <strong>Preferenčné (Preferences):</strong> <em>len so súhlasom.</em>
-                        Uchovávajú vaše nastavenia rozhrania (napr. tmavý režim).
-                    </li>
+                    <li><strong>Používateľské kontá:</strong> po dobu aktívneho používania; na žiadosť možné okamžité vymazanie.</li>
+                    <li><strong>Výsledky kalkulačiek:</strong> kým ich používateľ nevymaže alebo nepožiada o zmazanie konta.</li>
+                    <li><strong>Server logy:</strong> maximálne 90 dní, potom automaticky mazané.</li>
+                    <li><strong>Bezpečnostné záznamy (pokusy o prihlásenie, rate-limiting):</strong> priebežne mazané po uplynutí ich účelu.</li>
+                    <li><strong>GA4 dáta:</strong> štandardne 14 mesiacov v Google Analytics; Google ich môže anonymizovať po uplynutí lehoty.</li>
+                    <li><strong>Cookie súhlas:</strong> 365 dní (po uplynutí sa banner znova zobrazí).</li>
                 </ul>
 
-                <h4 class="privacy-subheading">Uloženie súhlasu</h4>
+                <!-- 7. BEZPEČNOSŤ -->
+                <h3>7. Ako údaje chránime</h3>
                 <p>
-                    Váš súhlas sa ukladá do <code>localStorage</code> prehliadača (primárne)
-                    a zálohou do cookie <code>nps_cookie_consent</code> s platnosťou
-                    <strong>365 dní</strong>, <code>SameSite=Lax; Secure</code>.
-                    Súhlas môžete kedykoľvek zmeniť alebo odvolať:
+                    Heslá sú hašované algoritmom bcrypt, prenos je šifrovaný cez TLS (HTTPS, HSTS),
+                    formuláre chránia CSRF tokeny, databázové dopyty sú parametrizované (PDO),
+                    uplatňujeme striktné bezpečnostné hlavičky (CSP, X-Frame-Options),
+                    rate-limiting a overenie e-mailovej adresy pri registrácii. Žiadny spôsob
+                    prenosu ani uchovávania nie je 100 % bezpečný, no robíme všetko pre ochranu
+                    vašich údajov a v prípade incidentu vás upozorníme tam, kde to vyžaduje zákon.
+                </p>
+
+                <!-- 8. PRÁVA PODĽA REGIÓNU -->
+                <h3>8. Vaše práva podľa regiónu</h3>
+                <div class="legal-regions">
+                    <?php foreach (legalRightsRegions() as $region): ?>
+                        <div class="legal-region-card">
+                            <p class="legal-region-card__region"><?= htmlspecialchars($region['region'], ENT_QUOTES, 'UTF-8') ?></p>
+                            <p class="legal-region-card__law"><?= htmlspecialchars($region['law'], ENT_QUOTES, 'UTF-8') ?></p>
+                            <p class="legal-region-card__rights"><?= htmlspecialchars($region['rights'], ENT_QUOTES, 'UTF-8') ?></p>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+                <p>
+                    Pre uplatnenie ktoréhokoľvek práva nás kontaktujte na
+                    <a href="mailto:<?= htmlspecialchars($info['contactEmail'], ENT_QUOTES, 'UTF-8') ?>"><?= htmlspecialchars($info['contactEmail'], ENT_QUOTES, 'UTF-8') ?></a>.
+                    Väčšinu úprav (oprava údajov, zmena súhlasu) zvládnete priamo vo svojom
+                    profile a v nastaveniach cookies.
+                </p>
+
+                <!-- 9. DETI -->
+                <h3>9. Deti</h3>
+                <p>
+                    Služba nie je určená deťom mladším ako 16 rokov (alebo vek stanovený vaším
+                    miestnym právom) a ich údaje vedome nezhromažďujeme. Ak sa domnievate, že nám
+                    dieťa poskytlo údaje, kontaktujte nás na
+                    <a href="mailto:<?= htmlspecialchars($info['contactEmail'], ENT_QUOTES, 'UTF-8') ?>"><?= htmlspecialchars($info['contactEmail'], ENT_QUOTES, 'UTF-8') ?></a>.
+                </p>
+
+                <!-- 10. COOKIES -->
+                <h3>10. Cookies a podobné technológie</h3>
+                <p>
+                    Predvolene používame iba nevyhnutné úložisko; voliteľné cookies nastavujeme
+                    len s vaším súhlasom. Podrobnosti a správu volieb nájdete v našej
+                    <a href="cookies.php">Cookie Policy</a>. Súhlas môžete kedykoľvek zmeniť:
                 </p>
                 <button class="cookie-settings-trigger btn-outline btn-outline--mt"
                         type="button"
@@ -286,46 +214,28 @@ $pageLastUpdated = date('d.m.Y', filemtime(__FILE__));
                     Otvoriť nastavenia cookies
                 </button>
 
-                <!-- 6. UCHOVÁVANIE ÚDAJOV -->
-                <h3>6. Doba uchovávania údajov</h3>
-                <ul>
-                    <li><strong>Používateľské kontá:</strong> po dobu aktívneho používania; na žiadosť možné okamžité vymazanie.</li>
-                    <li><strong>Výsledky kalkulačiek:</strong> uchované, kým ich používateľ nevymaže alebo nepožiada o zmazanie konta.</li>
-                    <li><strong>Server logy:</strong> maximálne 90 dní, potom automaticky mazané.</li>
-                    <li><strong>GA4 dáta:</strong> štandardne 14 mesiacov v Google Analytics (nastaviteľné v konzole GA4); Google ich môže anonymizovať po uplynutí lehoty.</li>
-                    <li><strong>Cookie súhlas:</strong> 365 dní (po uplynutí sa banner znova zobrazí).</li>
-                </ul>
-
-                <!-- 7. BEZPEČNOSŤ -->
-                <h3>7. Bezpečnosť údajov</h3>
+                <!-- 11. ZMENY -->
+                <h3>11. Zmeny týchto Zásad</h3>
                 <p>
-                    Webová lokalita využíva HTTPS (HSTS), hašovanie hesiel (bcrypt),
-                    CSRF tokeny vo formulároch, parametrizované SQL dopyty (PDO),
-                    striktné HTTP bezpečnostné hlavičky (CSP, X-Frame-Options, HSTS)
-                    a overenie e-mailovej adresy pri registrácii.
+                    Tieto Zásady môžeme aktualizovať. Podstatné zmeny zvýrazníme v sekcii
+                    „Súhrn posledných zmien" vyššie a zmení sa dátum poslednej aktualizácie.
+                    Náš systém správy cookies uchováva verziu platného súhlasu — pri každej
+                    podstatnej zmene sa verzia aktualizuje a všetkým návštevníkom sa znova
+                    zobrazí banner na potvrdenie nových podmienok (v súlade s čl. 7 ods. 3 GDPR).
                 </p>
 
-                <!-- 8. ZMENY -->
-                <h3>8. Zmeny týchto Zásad</h3>
+                <!-- 12. KONTAKT -->
+                <h3>12. Kontakt</h3>
                 <p>
-                    Tieto Zásady môžeme aktualizovať. Dátum poslednej aktualizácie je uvedený
-                    v záhlaví dokumentu a je automaticky generovaný podľa dátumu poslednej
-                    úpravy súboru. Pri podstatných zmenách vás upozorníme bannerom alebo
-                    e-mailom (ak ste registrovaní).
-                </p>
-                <p>
-                    <strong>Automatické opätovné vyžiadanie súhlasu:</strong>
-                    Náš systém správy cookies uchováva verziu platného súhlasu.
-                    Pri každej podstatnej zmene týchto Zásad sa verzia aktualizuje
-                    a všetkým návštevníkom sa automaticky znova zobrazí banner
-                    na potvrdenie nových podmienok — bez ohľadu na predtým udelený súhlas.
-                    Toto je v súlade s čl. 7 ods. 3 GDPR.
+                    Ochrana súkromia:
+                    <a href="mailto:<?= htmlspecialchars($info['contactEmail'], ENT_QUOTES, 'UTF-8') ?>"><?= htmlspecialchars($info['contactEmail'], ENT_QUOTES, 'UTF-8') ?></a>
+                    · Pozrite si aj naše <a href="terms.php">Podmienky používania</a> a
+                    <a href="cookies.php">Cookie Policy</a>.
                 </p>
 
+                <?php $legalCurrent = 'privacy.php'; include 'legal_related.php'; ?>
             </article>
         </div>
     </main>
 
     <?php include 'footer.php'; ?>
-</body>
-</html>

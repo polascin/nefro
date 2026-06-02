@@ -62,6 +62,8 @@ $swatchBeat = '@' . number_format($beatValue, 2, '.', '');
             <li><a href="logout.php" class="site-footer__link">Odhlásiť sa</a></li>
           <?php endif; ?>
           <li><a href="privacy.php" class="site-footer__link">Ochrana osobných údajov</a></li>
+          <li><a href="cookies.php" class="site-footer__link">Cookie Policy</a></li>
+          <li><a href="terms.php" class="site-footer__link">Podmienky používania</a></li>
         </ul>
       </div>
 

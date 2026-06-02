@@ -117,6 +117,18 @@ $urls = [
         'changefreq' => 'yearly',
         'priority'   => '0.3',
     ],
+    [
+        'loc'        => $baseUrl . 'cookies.php',
+        'lastmod'    => _sitemapLastmod('cookies.php'),
+        'changefreq' => 'yearly',
+        'priority'   => '0.3',
+    ],
+    [
+        'loc'        => $baseUrl . 'terms.php',
+        'lastmod'    => _sitemapLastmod('terms.php'),
+        'changefreq' => 'yearly',
+        'priority'   => '0.3',
+    ],
 ];
 
 try {

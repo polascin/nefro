@@ -744,6 +744,11 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                         <label for="newsletter_consent">Chcem dostávať nové odborné články priamo do e-mailu (bezplatný odber, odhlásite sa kedykoľvek)</label>
                     </div>
 
+                    <p class="auth-consent-note">
+                        Registráciou súhlasíte s našimi <a href="terms.php">Podmienkami používania</a>
+                        a <a href="privacy.php">Zásadami ochrany osobných údajov</a>.
+                    </p>
+
                     <div class="form-actions">
                         <button type="submit" class="btn-primary btn-block">Registrovať sa</button>
                     </div>

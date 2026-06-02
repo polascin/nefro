@@ -7,9 +7,10 @@ const consentKey = 'nps_cookie_consent';
 const consentCookieMaxAgeDays = 365;
 
 // Verzia Privacy Policy — pri zmene zásad aktualizovať tento reťazec.
+// MUSÍ sa zhodovať s `consentVersion` v legal_data.php (legalInfo()).
 // Všetky uložené súhlasy zo staršej verzie sa automaticky invalidujú
 // a banner sa zobrazí znova (GDPR čl. 7 ods. 3 — nový súhlas pri zmene podmienok).
-const consentVersion = '2026-05-15';
+const consentVersion = '2026-06-02';
 
 // Predvolené nastavenia
 const defaultSettings = {
@@ -165,7 +166,7 @@ function initPrivacyManager() {
                     <h2 id="cookieBannerTitle">Vážime si vaše súkromie</h2>
                     <p id="cookieBannerDesc">
                         Naša webová stránka používa súbory cookies na zabezpečenie základného fungovania (nevyhnutné cookies) a s vaším súhlasom aj na analytické, marketingové a personalizačné účely. Vaše údaje nám pomáhajú zlepšovať obsah a používateľský zážitok.
-                        Viac informácií nájdete v našich <a href="privacy.php">Zásadách ochrany osobných údajov</a>.
+                        Viac v <a href="cookies.php">Cookie Policy</a> a <a href="privacy.php">Zásadách ochrany osobných údajov</a>.
                     </p>
                 </div>
                 <div class="cookie-buttons">
@@ -185,8 +186,8 @@ function initPrivacyManager() {
                         <button id="btnCloseModal" class="btn-close" aria-label="Zatvoriť">&times;</button>
                     </div>
                     <div class="cookie-modal-body">
-                        <p>Tu môžete povoliť alebo zakázať jednotlivé kategórie cookies. Pre fungovanie stránky sú kľúčové 'Nevyhnutné' cookies, ktoré nie je možné vypnúť.</p>
-                        
+                        <p>Tu môžete povoliť alebo zakázať jednotlivé kategórie cookies. Pre fungovanie stránky sú kľúčové „Nevyhnutné" cookies, ktoré nie je možné vypnúť. Viac v <a href="cookies.php">Cookie Policy</a>.</p>
+
                         <div class="cookie-category">
                             <div class="category-info">
                                 <h3 id="necessaryCookiesTitle">Nevyhnutné cookies (Strictly Necessary)</h3>
@@ -240,6 +241,7 @@ function initPrivacyManager() {
                         </div>
                     </div>
                     <div class="cookie-modal-footer">
+                        <p id="cookieConsentSavedInfo" class="cookie-modal-saved" hidden></p>
                         <button id="btnSavePreferences" class="btn-primary">Uložiť moje nastavenia</button>
                     </div>
                 </div>
@@ -269,6 +271,7 @@ function initPrivacyManager() {
     const toggleAnalytics = document.getElementById('toggleAnalytics');
     const toggleMarketing = document.getElementById('toggleMarketing');
     const togglePreferences = document.getElementById('togglePreferences');
+    const savedInfo = document.getElementById('cookieConsentSavedInfo');
 
     modal.setAttribute('aria-hidden', 'true');
     syncCookieBannerSpace();
@@ -316,10 +319,22 @@ function initPrivacyManager() {
         const saved = readStoredConsentSync();
 
         const effectiveSettings = saved || defaultSettings;
-        
+
         toggleAnalytics.checked = effectiveSettings.analytics;
         toggleMarketing.checked = effectiveSettings.marketing;
         togglePreferences.checked = effectiveSettings.preferences;
+
+        // Informácia o dátume posledného uloženého súhlasu
+        if (savedInfo) {
+            if (saved && saved.timestamp) {
+                const savedDate = new Date(saved.timestamp);
+                savedInfo.textContent = 'Vaša posledná voľba bola uložená ' +
+                    savedDate.toLocaleDateString('sk-SK', { day: 'numeric', month: 'long', year: 'numeric' }) + '.';
+                savedInfo.hidden = false;
+            } else {
+                savedInfo.hidden = true;
+            }
+        }
 
         btnCloseModal.focus();
     }
