@@ -56,7 +56,7 @@ include 'legal_head.php';
                 <p>
                     Službu poskytuje <strong><?= htmlspecialchars($info['operator'], ENT_QUOTES, 'UTF-8') ?></strong>
                     (IČO <?= htmlspecialchars($info['companyId'], ENT_QUOTES, 'UTF-8') ?>),
-                    so sídlom v <?= htmlspecialchars($info['governingLaw'], ENT_QUOTES, 'UTF-8') ?>.
+                    so sídlom v <?= htmlspecialchars($info['establishment'], ENT_QUOTES, 'UTF-8') ?>.
                     Ak sa poskytujúca osoba zmení, túto sekciu aktualizujeme a upozorníme vás.
                 </p>
 
@@ -165,7 +165,7 @@ include 'legal_head.php';
                 <!-- 12. ROZHODNÉ PRÁVO A SPORY -->
                 <h3>12. Rozhodné právo a spory</h3>
                 <p>
-                    Tieto Podmienky sa riadia právom <?= htmlspecialchars($info['governingLaw'], ENT_QUOTES, 'UTF-8') ?>,
+                    Tieto Podmienky sa riadia právom <?= htmlspecialchars($info['jurisdiction'], ENT_QUOTES, 'UTF-8') ?>,
                     bez vplyvu na záväzné spotrebiteľské pravidlá vašej krajiny pobytu.
                     Spotrebitelia v EHP a UK môžu využiť aj príslušné mechanizmy online riešenia
                     sporov a podať žalobu na svojom miestnom súde.

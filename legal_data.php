@@ -36,7 +36,8 @@ function legalInfo(): array
         'site'                     => 'nefro.polascin.net',
         'url'                      => 'https://nefro.polascin.net',
         'contactEmail'             => 'nefro@polascin.net',
-        'governingLaw'             => 'Slovenská republika (EÚ)',
+        'establishment'            => 'Slovenskej republike (EÚ)',
+        'jurisdiction'             => 'Slovenskej republiky (EÚ)',
         'supervisoryAuthority'     => 'Úrad na ochranu osobných údajov Slovenskej republiky',
         'supervisoryAuthorityUrl'  => 'https://www.uoou.sk',
         'effectiveDate'            => '2026-06-02',
@@ -131,6 +132,11 @@ function legalSubprocessors(): array
         [
             'name'     => 'Google LLC (USA)',
             'purpose'  => 'Google Analytics 4 — len so súhlasom',
+            'transfer' => 'USA — štandardné zmluvné doložky (SCC) / EU-US Data Privacy Framework',
+        ],
+        [
+            'name'     => 'Google LLC (USA) — Google Fonts',
+            'purpose'  => 'Načítanie webového písma Inter z CDN (prenáša sa IP adresa)',
             'transfer' => 'USA — štandardné zmluvné doložky (SCC) / EU-US Data Privacy Framework',
         ],
     ];

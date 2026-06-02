@@ -51,7 +51,7 @@ include 'legal_head.php';
                 <p>
                     Prevádzkovateľom je <strong><?= htmlspecialchars($info['operator'], ENT_QUOTES, 'UTF-8') ?></strong>
                     (IČO <?= htmlspecialchars($info['companyId'], ENT_QUOTES, 'UTF-8') ?>),
-                    so sídlom v <?= htmlspecialchars($info['governingLaw'], ENT_QUOTES, 'UTF-8') ?>,
+                    so sídlom v <?= htmlspecialchars($info['establishment'], ENT_QUOTES, 'UTF-8') ?>,
                     ktorý prevádzkuje <?= htmlspecialchars($info['entity'], ENT_QUOTES, 'UTF-8') ?>.
                     V otázkach súkromia alebo pri uplatnení práv nás kontaktujte na
                     <a href="mailto:<?= htmlspecialchars($info['contactEmail'], ENT_QUOTES, 'UTF-8') ?>"><?= htmlspecialchars($info['contactEmail'], ENT_QUOTES, 'UTF-8') ?></a>.
@@ -147,8 +147,9 @@ include 'legal_head.php';
                     Niektorí poskytovatelia sídlia mimo vašej krajiny. Pri prenose údajov do
                     tretích krajín sa opierame o vhodné záruky podľa čl. 46 GDPR — najmä
                     štandardné zmluvné doložky EÚ (SCC), prípadne rámec EU-US Data Privacy
-                    Framework tam, kde sa uplatňuje. Prenos do USA sa týka výlučne
-                    analytických údajov v Google Analytics 4 a iba po udelení vášho súhlasu.
+                    Framework tam, kde sa uplatňuje. Do USA sa prenáša vaša IP adresa pri
+                    načítaní webového písma (Google Fonts, nevyhnutné pre zobrazenie) a —
+                    iba po udelení vášho súhlasu — analytické údaje v Google Analytics 4.
                 </p>
 
                 <!-- 6. DOBA UCHOVÁVANIA -->
