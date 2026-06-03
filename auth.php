@@ -277,7 +277,9 @@ function generateJsChallengeToken(): string {
  * 2. JS-CHALLENGE: Overí kľúč z POST požiadavky.
  */
 function validateJsChallengeToken(?string $token): bool {
-    return isset($_SESSION['js_challenge_token']) && $token === $_SESSION['js_challenge_token'];
+    return isset($_SESSION['js_challenge_token'])
+        && $token !== null
+        && hash_equals($_SESSION['js_challenge_token'], $token);
 }
 
 /**
