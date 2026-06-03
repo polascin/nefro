@@ -91,3 +91,35 @@ if ($pyFiles.Count -gt 0) {
   Write-Host "No Python files found."
 }
 ```
+
+## Týždenná údržba Windows (PowerShell)
+
+Pre automatizovanú údržbu je v projekte skript `WeeklyMaintenance.ps1`.
+
+Skript vykoná:
+
+- neinteraktívny upgrade balíkov cez Winget:
+  `winget upgrade --all --include-unknown --accept-source-agreements --accept-package-agreements --disable-interactivity --silent`
+- `DISM /Online /Cleanup-Image /CheckHealth`
+- `sfc /scannow`
+- `chkdsk C: /scan` (alebo iný disk cez parameter)
+- kontrolu posledných udalostí optimalizácie disku
+- generovanie textového + JSON reportu
+
+### Spustenie
+
+```powershell
+pwsh -NoProfile -ExecutionPolicy Bypass -File .\WeeklyMaintenance.ps1
+```
+
+### Inštalácia týždennej plánovanej úlohy
+
+```powershell
+pwsh -NoProfile -ExecutionPolicy Bypass -File .\WeeklyMaintenance.ps1 -InstallScheduledTask
+```
+
+Naplánovaná úloha sa vytvorí ako `WeeklyWindowsMaintenance` (každý pondelok o 03:00 pod účtom `SYSTEM`).
+
+### Umiestnenie reportov
+
+Predvolene: `C:\ProgramData\WindowsWeeklyMaintenance`
