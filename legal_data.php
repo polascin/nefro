@@ -40,8 +40,8 @@ function legalInfo(): array
         'jurisdiction'             => 'Slovenskej republiky (EÚ)',
         'supervisoryAuthority'     => 'Úrad na ochranu osobných údajov Slovenskej republiky',
         'supervisoryAuthorityUrl'  => 'https://www.uoou.sk',
-        'effectiveDate'            => '2026-06-02',
-        'version'                  => '2.0',
+        'effectiveDate'            => '2026-06-03',
+        'version'                  => '2.1',
         'consentVersion'           => '2026-06-02',
     ];
 }
@@ -132,11 +132,6 @@ function legalSubprocessors(): array
         [
             'name'     => 'Google LLC (USA)',
             'purpose'  => 'Google Analytics 4 — len so súhlasom',
-            'transfer' => 'USA — štandardné zmluvné doložky (SCC) / EU-US Data Privacy Framework',
-        ],
-        [
-            'name'     => 'Google LLC (USA) — Google Fonts',
-            'purpose'  => 'Načítanie webového písma Inter z CDN (prenáša sa IP adresa)',
             'transfer' => 'USA — štandardné zmluvné doložky (SCC) / EU-US Data Privacy Framework',
         ],
     ];
@@ -253,6 +248,7 @@ function legalStoredItems(): array
 function legalRecentUpdates(): array
 {
     return [
+        'Webové písmo (Inter) sme presunuli na vlastný server — pri jeho načítaní sa už neprenáša žiadny údaj (IP adresa) do Google LLC (USA).',
         'Právne dokumenty sme rozdelili do troch samostatných stránok: Zásady ochrany osobných údajov, Cookie Policy a Podmienky používania.',
         'Doplnili sme prehľad práv podľa regiónu (USA – CCPA/CPRA a GPC, Brazília – LGPD, Ázia, Austrália a Nový Zéland).',
         'Spresnili sme účely a právne základy spracúvania (prehľadná tabuľka) a zoznam sprostredkovateľov vrátane medzinárodných prenosov.',

@@ -778,7 +778,6 @@ $pageTimeZone = date("T") . " (" . date_default_timezone_get() . ")";
   <link rel="stylesheet" href="index.css?v=20260509-1&cb=<?= filemtime(
       "index.css",
   ) ?>">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;900&display=swap" rel="stylesheet">
   <script src="ui-preferences.js?v=20260511-1&cb=<?= filemtime(
       "ui-preferences.js",
   ) ?>" defer></script>

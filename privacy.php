@@ -147,9 +147,10 @@ include 'legal_head.php';
                     Niektorí poskytovatelia sídlia mimo vašej krajiny. Pri prenose údajov do
                     tretích krajín sa opierame o vhodné záruky podľa čl. 46 GDPR — najmä
                     štandardné zmluvné doložky EÚ (SCC), prípadne rámec EU-US Data Privacy
-                    Framework tam, kde sa uplatňuje. Do USA sa prenáša vaša IP adresa pri
-                    načítaní webového písma (Google Fonts, nevyhnutné pre zobrazenie) a —
-                    iba po udelení vášho súhlasu — analytické údaje v Google Analytics 4.
+                    Framework tam, kde sa uplatňuje. Do USA sa — iba po udelení vášho súhlasu —
+                    prenášajú analytické údaje v Google Analytics 4. Webové písmo (Inter) je
+                    hostované priamo na našom serveri, takže pri jeho načítaní sa žiadne
+                    údaje do tretích krajín neprenášajú.
                 </p>
 
                 <!-- 6. DOBA UCHOVÁVANIA -->

@@ -83,10 +83,6 @@ $katexAutoRender = $katexBase . '/contrib/auto-render.min.js';
 <meta name="theme-color" content="#2563eb">
 
 <!-- Assets with Cache-Busting -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;900&display=swap" rel="stylesheet">
-
 <!-- KaTeX for mathematical formulas (self-hosted) -->
 <link rel="stylesheet" href="<?= htmlspecialchars($katexCss) ?>?v=<?= filemtime($katexCss) ?>">
 <script defer src="<?= htmlspecialchars($katexJs) ?>?v=<?= filemtime($katexJs) ?>"></script>

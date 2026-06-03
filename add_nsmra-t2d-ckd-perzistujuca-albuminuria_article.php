@@ -194,7 +194,6 @@ if (php_sapi_name() === 'cli') {
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Migrácia článku</title>
       <link rel="stylesheet" href="index.css?v=20260509-1&cb=<?= filemtime('index.css') ?>">
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     </head>
     <body>
       <main class="container" style="padding-top:60px;padding-bottom:60px;">

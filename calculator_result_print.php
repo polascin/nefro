@@ -210,7 +210,6 @@ function formatResultKey(string $key): string {
     <script src="ui-preferences.js?v=20260511-1&cb=<?= filemtime('ui-preferences.js') ?>" defer></script>
     <script src="ui-preferences-fallback.js?v=20260511-1&cb=<?= filemtime('ui-preferences-fallback.js') ?>" defer></script>
     <script src="nefro-ui.js?v=<?= filemtime('nefro-ui.js') ?>" defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;900&display=swap" rel="stylesheet">
 </head>
 <body data-auto-print="1">
     <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>
