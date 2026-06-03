@@ -1,4 +1,9 @@
 <?php
+// Ochrana – len admin alebo CLI
+if (php_sapi_name() !== 'cli') {
+    require_once __DIR__ . '/auth.php';
+    requireAdmin();
+}
 require_once __DIR__ . '/db_config.php';
 
 // Delete old version
