@@ -10,7 +10,9 @@ function Test-TextFilesEncoding {
 	$invalidUtf8 = New-Object System.Collections.Generic.List[string]
 	$filesWithBom = New-Object System.Collections.Generic.List[string]
 
-	$files = Get-ChildItem -Path $RootPath -Recurse -File -Include $textExtensions
+	$files = Get-ChildItem -Path $RootPath -Recurse -File -Include $textExtensions | Where-Object {
+		$_.FullName -notmatch '\\\.git\\' -and $_.FullName -notmatch '\\\.trunk\\'
+	}
 
 	foreach ($file in $files) {
 		try {
