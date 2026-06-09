@@ -786,3 +786,235 @@ if (!function_exists('processArticleNewsletterQueue')) {
         return $stats;
     }
 }
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Týždenný prehľad (digest) — jeden e-mail so súhrnom článkov za uplynulé obdobie.
+// Doplnok k okamžitým avízam pri publikovaní; posiela sa hromadne (cron/CLI).
+// ─────────────────────────────────────────────────────────────────────────────
+
+if (!function_exists('ensureWeeklyDigestTable')) {
+    function ensureWeeklyDigestTable(PDO $pdo): void
+    {
+        $pdo->exec("CREATE TABLE IF NOT EXISTS newsletter_digest_runs (
+            id BIGINT AUTO_INCREMENT PRIMARY KEY,
+            window_start DATETIME NOT NULL,
+            window_end DATETIME NOT NULL,
+            articles_count INT NOT NULL DEFAULT 0,
+            users_sent INT NOT NULL DEFAULT 0,
+            subscribers_sent INT NOT NULL DEFAULT 0,
+            failed INT NOT NULL DEFAULT 0,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            INDEX idx_ndr_window_end (window_end)
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci");
+    }
+}
+
+if (!function_exists('getWeeklyDigestArticles')) {
+    function getWeeklyDigestArticles(PDO $pdo, string $since, string $until): array
+    {
+        $stmt = $pdo->prepare("SELECT id, title, slug, excerpt, published_at
+            FROM articles
+            WHERE is_published = 1
+              AND published_at > :since
+              AND published_at <= :until
+            ORDER BY published_at DESC, id DESC");
+        $stmt->execute(['since' => $since, 'until' => $until]);
+        return $stmt->fetchAll();
+    }
+}
+
+if (!function_exists('buildWeeklyDigestArticlesHtml')) {
+    function buildWeeklyDigestArticlesHtml(array $articles): string
+    {
+        $baseUrl = getAppBaseUrl();
+        $items   = '';
+        foreach ($articles as $a) {
+            $title = htmlspecialchars((string) ($a['title'] ?? ''), ENT_QUOTES | ENT_HTML5, 'UTF-8');
+            $url   = htmlspecialchars($baseUrl . '/article.php?slug=' . urlencode((string) ($a['slug'] ?? '')), ENT_QUOTES | ENT_HTML5, 'UTF-8');
+            $excerptRaw = trim(strip_tags((string) ($a['excerpt'] ?? '')));
+            $excerptHtml = $excerptRaw !== ''
+                ? '<p style="margin:6px 0 0;color:#475569;font-size:14px;line-height:20px;">'
+                    . htmlspecialchars(mb_substr($excerptRaw, 0, 280), ENT_QUOTES | ENT_HTML5, 'UTF-8') . '</p>'
+                : '';
+            $items .= '<div style="padding:16px 0;border-bottom:1px solid #e5e7eb;">'
+                . '<a href="' . $url . '" style="color:#0f172a;font-size:17px;font-weight:700;text-decoration:none;line-height:24px;">' . $title . '</a>'
+                . $excerptHtml
+                . '<p style="margin:8px 0 0;"><a href="' . $url . '" style="color:#1d4ed8;text-decoration:none;font-weight:600;font-size:14px;">Prečítať článok →</a></p>'
+                . '</div>';
+        }
+        return $items;
+    }
+}
+
+if (!function_exists('sendWeeklyNewsletterDigest')) {
+    /**
+     * Pošle týždenný prehľad nových článkov všetkým overeným príjemcom
+     * (registrovaní používatelia so súhlasom + anonymní odberatelia).
+     *
+     * @param array $opts  days (int, predvolené 7), dry_run (bool), ignore_last_run (bool)
+     * @return array  Súhrn behu.
+     */
+    function sendWeeklyNewsletterDigest(PDO $pdo, array $opts = []): array
+    {
+        ensureWeeklyDigestTable($pdo);
+
+        $fallbackDays = max(1, min(60, (int) ($opts['days'] ?? 7)));
+        $dryRun       = !empty($opts['dry_run']);
+        $ignoreLast   = !empty($opts['ignore_last_run']);
+
+        $until = (new DateTime('now'))->format('Y-m-d H:i:s');
+
+        // Okno: od konca posledného behu (aby sa články neopakovali), inak now - fallbackDays.
+        $since = null;
+        if (!$ignoreLast) {
+            $lastEnd = $pdo->query("SELECT window_end FROM newsletter_digest_runs ORDER BY id DESC LIMIT 1")->fetchColumn();
+            if ($lastEnd) {
+                $since = (string) $lastEnd;
+            }
+        }
+        if ($since === null) {
+            $since = (new DateTime('now'))->modify('-' . $fallbackDays . ' days')->format('Y-m-d H:i:s');
+        }
+
+        $articles = getWeeklyDigestArticles($pdo, $since, $until);
+
+        $result = [
+            'window_start'     => $since,
+            'window_end'       => $until,
+            'articles'         => count($articles),
+            'users_sent'       => 0,
+            'subscribers_sent' => 0,
+            'failed'           => 0,
+            'skipped_empty'    => false,
+            'dry_run'          => $dryRun,
+        ];
+
+        if (empty($articles)) {
+            // Prázdny prehľad neposielame; beh ani nezaznamenávame, aby sa okno neposunulo.
+            $result['skipped_empty'] = true;
+            return $result;
+        }
+
+        $articlesHtml = buildWeeklyDigestArticlesHtml($articles);
+        $count        = count($articles);
+        $intro        = $count === 1
+            ? 'Za uplynulé obdobie pribudol nový článok:'
+            : 'Za uplynulé obdobie pribudli nové články (' . $count . '):';
+        $subject      = $count === 1
+            ? 'Týždenný prehľad: 1 nový článok – Nefro-projekt Slovensko'
+            : 'Týždenný prehľad: ' . $count . ' nových článkov – Nefro-projekt Slovensko';
+        $cfg          = getEmailEnvConfig();
+
+        $sendOne = static function (string $email, string $unsubscribeUrl, string $greetingName) use ($articlesHtml, $intro, $subject, $cfg, $dryRun): bool {
+            if ($dryRun) {
+                return true;
+            }
+            $greeting = $greetingName !== ''
+                ? 'Dobrý deň, ' . htmlspecialchars($greetingName, ENT_QUOTES | ENT_HTML5, 'UTF-8') . ','
+                : 'Dobrý deň,';
+            $unsubEsc = htmlspecialchars($unsubscribeUrl, ENT_QUOTES | ENT_HTML5, 'UTF-8');
+            $body = '<p style="margin:0 0 16px;">' . $greeting . '</p>'
+                . '<p style="margin:0 0 8px;">' . $intro . '</p>'
+                . $articlesHtml
+                . '<p style="margin:24px 0 16px;color:#475569;line-height:22px;">Tento prehľad ste dostali, pretože odoberáte novinky z webu Nefro-projekt Slovensko.<br>'
+                . 'Ak už nechcete dostávať novinky, odhláste sa jedným klikom:<br>'
+                . '<a href="' . $unsubEsc . '" style="color:#1d4ed8;text-decoration:underline;">Odhlásiť sa</a></p>';
+            $message = renderEmailHtmlLayout($body, 'Zobraziť všetky články', getAppBaseUrl());
+
+            $sent = sendViaSmtp($email, $subject, $message, $cfg, 'text/html; charset=UTF-8');
+            if (!$sent) {
+                $fallbackFrom     = $cfg['from_email'] !== '' ? $cfg['from_email'] : 'no-reply@nefro.polascin.net';
+                $fallbackFromName = mb_encode_mimeheader($cfg['from_name'] ?: 'Nefro-projekt', 'UTF-8', 'B', "\r\n ");
+                $headers = ['MIME-Version: 1.0', 'Content-Type: text/html; charset=UTF-8', 'From: ' . $fallbackFromName . ' <' . $fallbackFrom . '>'];
+                $sent = @mail($email, mb_encode_mimeheader($subject, 'UTF-8', 'B', "\r\n "), $message, implode("\r\n", $headers));
+            }
+            return $sent;
+        };
+
+        // Deduplikácia podľa e-mailu (používateľ aj odberateľ s rovnakým e-mailom dostane len jeden prehľad).
+        $sentEmails = [];
+
+        // 1) Registrovaní používatelia so súhlasom
+        $userStmt = $pdo->query("SELECT id, email, title_before, first_name, middle_name, last_name, title_after, username
+            FROM users
+            WHERE newsletter_consent = 1 AND is_active = 1 AND email_verified_at IS NOT NULL
+              AND email IS NOT NULL AND email <> ''");
+        foreach ($userStmt->fetchAll() as $u) {
+            $email = trim((string) ($u['email'] ?? ''));
+            if ($email === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                $result['failed']++;
+                continue;
+            }
+            $emailKey = strtolower($email);
+            if (isset($sentEmails[$emailKey])) {
+                continue;
+            }
+
+            $first = trim((string) ($u['first_name'] ?? ''));
+            $last  = trim((string) ($u['last_name'] ?? ''));
+            if ($first !== '' && $last !== '') {
+                $parts = array_filter([
+                    trim((string) ($u['title_before'] ?? '')),
+                    $first,
+                    trim((string) ($u['middle_name'] ?? '')),
+                ], static fn ($p) => $p !== '');
+                $parts[] = $last;
+                $name = trim(implode(' ', $parts));
+                $titleAfter = trim((string) ($u['title_after'] ?? ''));
+                if ($titleAfter !== '') {
+                    $name .= ', ' . $titleAfter;
+                }
+            } else {
+                $name = trim((string) ($u['username'] ?? ''));
+            }
+
+            $unsub = buildNewsletterUnsubscribeUrl((int) $u['id'], $email);
+            if ($sendOne($email, $unsub, $name)) {
+                $result['users_sent']++;
+                $sentEmails[$emailKey] = true;
+            } else {
+                $result['failed']++;
+            }
+        }
+
+        // 2) Anonymní odberatelia
+        $subStmt = $pdo->query("SELECT id, email FROM newsletter_subscribers
+            WHERE verified_at IS NOT NULL AND unsubscribed_at IS NULL
+              AND email IS NOT NULL AND email <> ''");
+        foreach ($subStmt->fetchAll() as $s) {
+            $email = trim((string) ($s['email'] ?? ''));
+            if ($email === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                $result['failed']++;
+                continue;
+            }
+            $emailKey = strtolower($email);
+            if (isset($sentEmails[$emailKey])) {
+                continue;
+            }
+            $unsub = buildSubscriberUnsubscribeHmacUrl((int) $s['id'], $email);
+            if ($sendOne($email, $unsub, '')) {
+                $result['subscribers_sent']++;
+                $sentEmails[$emailKey] = true;
+            } else {
+                $result['failed']++;
+            }
+        }
+
+        // Zaznamenaj beh (pri dry-run neukladáme, aby sa okno neposunulo).
+        if (!$dryRun) {
+            $logStmt = $pdo->prepare("INSERT INTO newsletter_digest_runs
+                (window_start, window_end, articles_count, users_sent, subscribers_sent, failed)
+                VALUES (:ws, :we, :ac, :us, :ss, :f)");
+            $logStmt->execute([
+                'ws' => $since,
+                'we' => $until,
+                'ac' => $count,
+                'us' => $result['users_sent'],
+                'ss' => $result['subscribers_sent'],
+                'f'  => $result['failed'],
+            ]);
+        }
+
+        return $result;
+    }
+}
