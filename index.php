@@ -587,13 +587,19 @@ if (!empty($itemListElements)) {
           </div>
 
           <div class="feature-card contact-community">
-            <div class="contact-community__icon" aria-hidden="true">👥</div>
-            <h3>Staňte sa súčasťou komunity</h3>
-            <p>Zaregistrujte sa a získajte prístup k obsahu. Môžete si zvoliť zasielanie avíz o nových článkoch priamo do e-mailu.</p>
+            <div class="contact-community__icon" aria-hidden="true">✉</div>
+            <h3>Odoberajte novinky</h3>
+            <p>Dostávajte nové odborné články priamo do e-mailu — nové štúdie, zmeny v odporúčaniach a praktické závery pre prax. Zadarmo, kedykoľvek sa odhlásite.</p>
+            <form class="newsletter-cta__form" id="nl-form-home" novalidate>
+              <div class="honeypot" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
+              <input type="email" name="email" placeholder="váš@email.sk" class="form-control" required aria-label="Vaša e-mailová adresa">
+              <button type="submit" class="btn-primary" style="width:100%;margin-top:10px;">Prihlásiť na odber</button>
+            </form>
+            <div id="nl-msg-home" hidden role="status" style="margin-top:10px;font-size:0.9rem;"></div>
             <?php if (!isLoggedIn()): ?>
-              <a href="register.php" class="btn-primary">Registrovať sa</a>
+              <p class="contact-community__account" style="margin-top:14px;font-size:0.9rem;">Chcete diskutovať k článkom? <a href="register.php">Vytvorte si účet</a> — stačí e-mail a heslo.</p>
             <?php else: ?>
-              <div class="badge-highlight">✓ Ste prihlásený</div>
+              <div class="badge-highlight" style="margin-top:14px;">✓ Ste prihlásený</div>
             <?php endif; ?>
           </div>
 
@@ -895,4 +901,5 @@ if (!empty($itemListElements)) {
     </aside>
   </main>
 
+  <script src="newsletter-cta.js?cb=<?= filemtime('newsletter-cta.js') ?>" defer></script>
   <?php include "footer.php"; ?>

@@ -401,7 +401,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
     <main id="main-content" class="container" role="main">
         <div class="auth-container auth-container--wide">
             <h2>Registrácia</h2>
-            <p class="auth-subtitle">Používateľ webovej lokality <a href="https://nefro.polascin.net/" class="auth-subtitle__link" rel="noopener noreferrer">https://nefro.polascin.net/</a></p>
+            <p class="auth-subtitle">Vytvorte si účet za pár sekúnd — stačí e-mail a heslo. Ostatné údaje sú nepovinné a môžete ich kedykoľvek doplniť vo svojom profile.</p>
 
             <?php if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && !$success): ?>
                 <div class="alert alert-error">
@@ -445,16 +445,12 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     </div>
 
                     <div class="form-section">
-                        <h3>Povinné údaje</h3>
+                        <h3>Vytvorenie účtu</h3>
+                        <p class="form-section-hint" style="margin:-0.25rem 0 1rem;color:var(--text-secondary,#666);">Na vytvorenie účtu stačí e-mail a heslo. Všetko ostatné je nepovinné — môžete to doplniť nižšie alebo kedykoľvek neskôr vo svojom profile.</p>
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="email">E-mailová adresa *</label>
                                 <input type="email" id="email" name="email" class="form-control" required value="<?= htmlspecialchars($_POST['email'] ?? '') ?>" autocomplete="email">
-                            </div>
-                            <div class="form-group">
-                                <label for="mobile_phone">Číslo súkromného mobilného telefónu (voliteľné)</label>
-                                <input type="tel" id="mobile_phone" name="mobile_phone" class="form-control" value="<?= htmlspecialchars($_POST['mobile_phone'] ?? '') ?>" placeholder="+421 901 234 567" pattern="^\+421[0-9\s\-()\.\/]{8,20}$" title="Zadajte číslo vo formáte +421XXXXXXXXX alebo +421 901 234 567" autocomplete="tel">
-                                <small class="avatar-upload-hint">Pole je voliteľné. Povolený je iba medzinárodný formát začínajúci znakom +.</small>
                             </div>
                             <div class="form-group">
                                 <label for="password">Heslo <small>(min. 8 znakov, veľké/malé písmená a číslice)</small> *</label>
@@ -465,10 +461,15 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                                 <input type="password" id="password_confirm" name="password_confirm" class="form-control" required autocomplete="new-password">
                             </div>
                         </div>
-                        <div class="form-actions">
-                            <button type="submit" class="btn-primary btn-block">Registrovať sa</button>
-                        </div>
                     </div>
+
+                    <div class="form-check">
+                        <input type="checkbox" id="newsletter_consent" name="newsletter_consent" value="1" <?= isset($_POST['newsletter_consent']) ? 'checked' : '' ?>>
+                        <label for="newsletter_consent">Chcem dostávať nové odborné články do e-mailu — nové štúdie, zmeny v odporúčaniach a praktické závery pre prax. Zadarmo, kedykoľvek sa odhlásite.</label>
+                    </div>
+
+                    <details class="register-optional" style="margin:1.25rem 0;border:1px solid var(--border-color,#ddd);border-radius:8px;padding:0.25rem 1rem;">
+                      <summary class="register-optional__summary" style="cursor:pointer;font-weight:600;padding:0.65rem 0;">Doplniť ďalšie údaje (titul, pracovisko, adresa, sociálne siete) — nepovinné</summary>
 
                     <div class="form-section">
                         <h3>Základné a osobné údaje</h3>
@@ -586,6 +587,11 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     <div class="form-section">
                         <h3>Kontaktné údaje</h3>
                         <div class="form-grid">
+                            <div class="form-group">
+                                <label for="mobile_phone">Číslo súkromného mobilného telefónu</label>
+                                <input type="tel" id="mobile_phone" name="mobile_phone" class="form-control" value="<?= htmlspecialchars($_POST['mobile_phone'] ?? '') ?>" placeholder="+421 901 234 567" pattern="^\+421[0-9\s\-()\.\/]{8,20}$" title="Zadajte číslo vo formáte +421XXXXXXXXX alebo +421 901 234 567" autocomplete="tel">
+                                <small class="avatar-upload-hint">Povolený je iba medzinárodný formát začínajúci znakom +.</small>
+                            </div>
                             <div class="form-group">
                                 <label for="other_phone">Iné telefónne číslo</label>
                                 <input type="tel" id="other_phone" name="other_phone" class="form-control" value="<?= htmlspecialchars($_POST['other_phone'] ?? '') ?>" placeholder="+421 2 1234 5678" pattern="^\+[0-9][0-9\s\-()\.\/]{7,20}$" title="Zadajte číslo v medzinárodnom formáte +XXXXXXXX, napr. +421 2 1234 5678" autocomplete="tel">
@@ -738,11 +744,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                         <input type="checkbox" id="theme_auto" name="theme_auto" value="1" <?= (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST' || isset($_POST['theme_auto'])) ? 'checked' : '' ?>>
                         <label for="theme_auto">Automaticky prispôsobovať tému (svetlá/tmavá) podľa nastavenia systému</label>
                     </div>
-
-                    <div class="form-check">
-                        <input type="checkbox" id="newsletter_consent" name="newsletter_consent" value="1" <?= isset($_POST['newsletter_consent']) ? 'checked' : '' ?>>
-                        <label for="newsletter_consent">Chcem dostávať nové odborné články priamo do e-mailu (bezplatný odber, odhlásite sa kedykoľvek)</label>
-                    </div>
+                    </details>
 
                     <p class="auth-consent-note">
                         Registráciou súhlasíte s našimi <a href="terms.php">Podmienkami používania</a>
