@@ -14,6 +14,8 @@ declare(strict_types=1);
  * Voľby:
  *   --days=N      veľkosť okna v dňoch pri prvom behu (predvolené 7)
  *   --force       ignoruj posledný beh a použi okno posledných N dní
+ *   --seed        nič neodošli, len nastav základňu okna (window_end = teraz),
+ *                 aby najbližší prehľad obsahoval iba články pridané po tomto bode
  *   --dry-run     nič neodošli ani nezaznamenaj, len vypíš, čo by sa stalo
  * ════════════════════════════════════════════════════════════════════════════
  */
@@ -26,7 +28,7 @@ if (php_sapi_name() !== 'cli') {
 require_once __DIR__ . '/db_config.php';
 require_once __DIR__ . '/newsletter_notifications.php';
 
-$opts = ['days' => 7, 'dry_run' => false, 'ignore_last_run' => false];
+$opts = ['days' => 7, 'dry_run' => false, 'ignore_last_run' => false, 'seed' => false];
 
 foreach ($argv as $arg) {
     if (preg_match('/^--days=(\d+)$/', (string) $arg, $m)) {
@@ -35,6 +37,8 @@ foreach ($argv as $arg) {
         $opts['dry_run'] = true;
     } elseif ($arg === '--force') {
         $opts['ignore_last_run'] = true;
+    } elseif ($arg === '--seed') {
+        $opts['seed'] = true;
     }
 }
 
@@ -43,6 +47,12 @@ try {
 
     echo "Týždenný prehľad – " . ($r['dry_run'] ? "SKÚŠOBNÝ BEH (nič sa neodoslalo)" : "dokončené") . ".\n";
     echo "Okno: " . $r['window_start'] . "  →  " . $r['window_end'] . "\n";
+
+    if (!empty($r['seeded'])) {
+        echo "ZÁKLADŇA NASTAVENÁ — neodoslalo sa nič. Najbližší prehľad bude obsahovať iba\n";
+        echo "články pridané po " . $r['window_end'] . " (" . (int) $r['articles'] . " dnešných článkov sa preskočí).\n";
+        exit(0);
+    }
 
     if (!empty($r['skipped_empty'])) {
         echo "Za toto obdobie nepribudli žiadne nové články — prehľad sa neposlal.\n";

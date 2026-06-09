@@ -861,6 +861,7 @@ if (!function_exists('sendWeeklyNewsletterDigest')) {
         $fallbackDays = max(1, min(60, (int) ($opts['days'] ?? 7)));
         $dryRun       = !empty($opts['dry_run']);
         $ignoreLast   = !empty($opts['ignore_last_run']);
+        $seed         = !empty($opts['seed']);
 
         $until = (new DateTime('now'))->format('Y-m-d H:i:s');
 
@@ -886,8 +887,23 @@ if (!function_exists('sendWeeklyNewsletterDigest')) {
             'subscribers_sent' => 0,
             'failed'           => 0,
             'skipped_empty'    => false,
+            'seeded'           => false,
             'dry_run'          => $dryRun,
         ];
+
+        // SEED: iba nastaví základňu okna (zaznamená beh bez odoslania), aby ďalší
+        // (týždenný) beh posielal len články pridané po tomto bode. Použité na
+        // „presunutie" prvého prehľadu na ďalší cyklus bez zopakovania už avizovaných článkov.
+        if ($seed) {
+            if (!$dryRun) {
+                $logStmt = $pdo->prepare("INSERT INTO newsletter_digest_runs
+                    (window_start, window_end, articles_count, users_sent, subscribers_sent, failed)
+                    VALUES (:ws, :we, :ac, 0, 0, 0)");
+                $logStmt->execute(['ws' => $since, 'we' => $until, 'ac' => count($articles)]);
+            }
+            $result['seeded'] = true;
+            return $result;
+        }
 
         if (empty($articles)) {
             // Prázdny prehľad neposielame; beh ani nezaznamenávame, aby sa okno neposunulo.
