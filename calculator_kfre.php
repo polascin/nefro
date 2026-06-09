@@ -451,7 +451,7 @@ if (isLoggedIn()) {
                                 <div class="risk-gauge" role="meter"
                                      aria-valuenow="<?= (float)$calculated['risk_2yr'] ?>"
                                      aria-valuemin="0" aria-valuemax="100">
-                                    <div class="risk-gauge__fill" style="width:<?= min(100, (float)$calculated['risk_2yr']) ?>%"></div>
+                                    <div class="risk-gauge__fill" data-width="<?= min(100, (float)$calculated['risk_2yr']) ?>"></div>
                                 </div>
                             </div>
                             <div class="risk-item risk-5yr">
@@ -471,10 +471,16 @@ if (isLoggedIn()) {
                                 <div class="risk-gauge" role="meter"
                                      aria-valuenow="<?= (float)$calculated['risk_5yr'] ?>"
                                      aria-valuemin="0" aria-valuemax="100">
-                                    <div class="risk-gauge__fill" style="width:<?= min(100, (float)$calculated['risk_5yr']) ?>%"></div>
+                                    <div class="risk-gauge__fill" data-width="<?= min(100, (float)$calculated['risk_5yr']) ?>"></div>
                                 </div>
                             </div>
                         </div>
+
+                        <script nonce="<?= htmlspecialchars(getScriptNonce(), ENT_QUOTES) ?>">
+                          document.querySelectorAll('.risk-gauge__fill[data-width]').forEach(function (el) {
+                            el.style.width = el.getAttribute('data-width') + '%';
+                          });
+                        </script>
 
                         <div class="kfre-interpretation">
                             <h4>Klinické hodnotenie</h4>
