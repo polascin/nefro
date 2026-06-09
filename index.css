@@ -5508,11 +5508,48 @@ mark.search-hl {
     text-decoration: underline;
 }
 
-/* Sidebar variant */
-.newsletter-widget .newsletter-cta__form {
+/* Sidebar a domovská karta — stĺpcový layout (vstup nad tlačidlom) */
+.newsletter-widget .newsletter-cta__form,
+.contact-community .newsletter-cta__form {
     flex-direction: column;
     max-width: 100%;
     gap: 0;
+}
+
+/* Náhrada za inline štýly (CSP style-src 'self' blokuje style="" atribúty).
+   Blokové tlačidlo odberu + stavová správa pre bočný panel a domovskú kartu. */
+.newsletter-cta__btn--block {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.newsletter-cta__status {
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+.contact-community__account {
+    margin-top: 14px;
+    font-size: 0.9rem;
+}
+
+/* Registračný formulár — pomocné triedy (náhrada za inline štýly, CSP) */
+.form-section-hint {
+    margin: -0.25rem 0 1rem;
+    color: var(--text-secondary, #666);
+}
+
+.register-optional {
+    margin: 1.25rem 0;
+    border: 1px solid var(--border-color, #ddd);
+    border-radius: 8px;
+    padding: 0.25rem 1rem;
+}
+
+.register-optional__summary {
+    cursor: pointer;
+    font-weight: 600;
+    padding: 0.65rem 0;
 }
 
 @media (max-width: 640px) {

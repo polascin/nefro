@@ -415,9 +415,9 @@ if ($article) {
         <form class="newsletter-cta__form" id="nl-form-sidebar" novalidate>
           <div class="honeypot" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
           <input type="email" name="email" placeholder="váš@email.sk" class="form-control" required aria-label="Vaša e-mailová adresa">
-          <button type="submit" class="btn-primary" style="width:100%;margin-top:10px;">Prihlásiť na odber</button>
+          <button type="submit" class="btn-primary newsletter-cta__btn--block">Prihlásiť na odber</button>
         </form>
-        <div id="nl-msg-sidebar" hidden role="status" style="margin-top:10px;font-size:0.9rem;"></div>
+        <div id="nl-msg-sidebar" hidden role="status" class="newsletter-cta__status"></div>
       </div>
 
       <div class="widget">

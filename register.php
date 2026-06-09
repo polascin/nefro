@@ -446,7 +446,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 
                     <div class="form-section">
                         <h3>Vytvorenie účtu</h3>
-                        <p class="form-section-hint" style="margin:-0.25rem 0 1rem;color:var(--text-secondary,#666);">Na vytvorenie účtu stačí e-mail a heslo. Všetko ostatné je nepovinné — môžete to doplniť nižšie alebo kedykoľvek neskôr vo svojom profile.</p>
+                        <p class="form-section-hint">Na vytvorenie účtu stačí e-mail a heslo. Všetko ostatné je nepovinné — môžete to doplniť nižšie alebo kedykoľvek neskôr vo svojom profile.</p>
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="email">E-mailová adresa *</label>
@@ -468,8 +468,8 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                         <label for="newsletter_consent">Chcem dostávať nové odborné články do e-mailu — nové štúdie, zmeny v odporúčaniach a praktické závery pre prax. Zadarmo, kedykoľvek sa odhlásite.</label>
                     </div>
 
-                    <details class="register-optional" style="margin:1.25rem 0;border:1px solid var(--border-color,#ddd);border-radius:8px;padding:0.25rem 1rem;">
-                      <summary class="register-optional__summary" style="cursor:pointer;font-weight:600;padding:0.65rem 0;">Doplniť ďalšie údaje (titul, pracovisko, adresa, sociálne siete) — nepovinné</summary>
+                    <details class="register-optional">
+                      <summary class="register-optional__summary">Doplniť ďalšie údaje (titul, pracovisko, adresa, sociálne siete) — nepovinné</summary>
 
                     <div class="form-section">
                         <h3>Základné a osobné údaje</h3>

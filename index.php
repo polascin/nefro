@@ -599,13 +599,13 @@ if (!empty($itemListElements)) {
             <form class="newsletter-cta__form" id="nl-form-home" novalidate>
               <div class="honeypot" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
               <input type="email" name="email" placeholder="váš@email.sk" class="form-control" required aria-label="Vaša e-mailová adresa">
-              <button type="submit" class="btn-primary" style="width:100%;margin-top:10px;">Prihlásiť na odber</button>
+              <button type="submit" class="btn-primary newsletter-cta__btn--block">Prihlásiť na odber</button>
             </form>
-            <div id="nl-msg-home" hidden role="status" style="margin-top:10px;font-size:0.9rem;"></div>
+            <div id="nl-msg-home" hidden role="status" class="newsletter-cta__status"></div>
             <?php if (!isLoggedIn()): ?>
-              <p class="contact-community__account" style="margin-top:14px;font-size:0.9rem;">Chcete diskutovať k článkom? <a href="register.php">Vytvorte si účet</a> — stačí e-mail a heslo.</p>
+              <p class="contact-community__account">Chcete diskutovať k článkom? <a href="register.php">Vytvorte si účet</a> — stačí e-mail a heslo.</p>
             <?php else: ?>
-              <div class="badge-highlight" style="margin-top:14px;">✓ Ste prihlásený</div>
+              <div class="badge-highlight contact-community__account">✓ Ste prihlásený</div>
             <?php endif; ?>
           </div>
 
