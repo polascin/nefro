@@ -233,7 +233,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
       $remaining = (int) (($_SESSION['2fa_pending']['expires'] ?? time()) - time());
       if ($remaining > 0):
       ?>
-        <p class="avatar-upload-hint" style="text-align:center; margin-top:1rem;">
+        <p class="avatar-upload-hint hint-center-mt1">
           Platnosť prihlásenia vyprší o <strong><?= $remaining ?> sekúnd</strong>.
         </p>
       <?php endif; ?>

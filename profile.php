@@ -600,13 +600,13 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && ($_POST['action'] ?? '') !=
                     <p class="avatar-upload-hint">
                         Stav 2FA:
                         <?php if ($twoFaEnabled): ?>
-                            <strong style="color:var(--primary-color);">Zapnuté</strong>
+                            <strong class="text-primary">Zapnuté</strong>
                             — záložných kódov zostáva: <strong><?= $twoFaBackupCount ?></strong>
                             <?php if ($twoFaBackupCount <= 2): ?>
                                 <span class="badge-draft">Málo záložných kódov</span>
                             <?php endif; ?>
                         <?php else: ?>
-                            <strong style="color:var(--text-secondary);">Vypnuté</strong>
+                            <strong class="text-secondary">Vypnuté</strong>
                         <?php endif; ?>
                     </p>
                     <div class="form-actions profile-actions">
@@ -725,7 +725,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && ($_POST['action'] ?? '') !=
                 </div>
             </form>
             <div class="auth-links auth-links--spaced">
-                <form action="logout.php" method="post" style="display:inline">
+                <form action="logout.php" method="post" class="d-inline">
                     <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
                     <button type="submit" class="link-error link-error--btn">Odhlásiť sa zo systému</button>
                 </form>

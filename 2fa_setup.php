@@ -226,7 +226,7 @@ $totpUri = $pendingSecret ? getTotpUri($pendingSecret, (string) ($user['email'] 
         <h3>Aktuálny stav</h3>
         <?php if ($totpEnabled): ?>
           <p>
-            <span style="display:inline-block;background:#dcfce7;color:#166534;padding:2px 10px;border-radius:10px;font-size:.8rem;font-weight:600;">2FA je ZAPNUTÉ</span>
+            <span class="badge-2fa-on">2FA je ZAPNUTÉ</span>
             — váš účet je chránený TOTP autentifikátorom.
           </p>
           <p class="avatar-upload-hint">
@@ -252,20 +252,20 @@ $totpUri = $pendingSecret ? getTotpUri($pendingSecret, (string) ($user['email'] 
           <!-- Krok 2: Zobraziť tajný kľúč a formulár na potvrdenie -->
           <p>Pridajte tento kľúč do vašej autentifikačnej aplikácie (Google Authenticator, Authy, Bitwarden, Microsoft Authenticator a pod.), potom zadajte prvý vygenerovaný kód.</p>
 
-          <div class="form-section" style="background:var(--bg-secondary);border-radius:8px;padding:1rem 1.25rem;margin-bottom:1.25rem;">
-            <div style="display:flex;gap:1.5rem;flex-wrap:wrap;align-items:flex-start;">
+          <div class="form-section totp-panel">
+            <div class="totp-row">
               <div>
-                <p class="avatar-upload-hint" style="margin-bottom:.5rem;">Naskenujte QR kód aplikáciou:</p>
-                <div id="totp-qr" style="background:#fff;padding:8px;display:inline-block;border-radius:6px;border:1px solid var(--code-border);"></div>
-                <p class="avatar-upload-hint" style="margin-top:.5rem;font-size:.8rem;">
+                <p class="avatar-upload-hint mb-05rem">Naskenujte QR kód aplikáciou:</p>
+                <div id="totp-qr" class="totp-qr-box"></div>
+                <p class="avatar-upload-hint">
                   Na mobile môžete tiež <a href="<?= htmlspecialchars($totpUri) ?>">otvoriť priamo v aplikácii</a>.
                 </p>
               </div>
-              <div style="flex:1;min-width:220px;">
-                <p class="avatar-upload-hint" style="margin-bottom:.5rem;">Alebo zadajte kľúč ručne:</p>
-                <code id="totp-secret-display" style="font-size:1rem;letter-spacing:.12em;word-break:break-all;background:var(--code-bg);padding:.4rem .75rem;border-radius:6px;border:1px solid var(--code-border);display:block;"><?= htmlspecialchars(formatTotpSecret($pendingSecret)) ?></code>
-                <button type="button" id="copy-secret-btn" class="btn-secondary" style="margin-top:.5rem;white-space:nowrap;">Kopírovať kľúč</button>
-                <p class="avatar-upload-hint" style="margin-top:.75rem;">
+              <div class="totp-manual-col">
+                <p class="avatar-upload-hint mb-05rem">Alebo zadajte kľúč ručne:</p>
+                <code id="totp-secret-display" class="totp-secret"><?= htmlspecialchars(formatTotpSecret($pendingSecret)) ?></code>
+                <button type="button" id="copy-secret-btn" class="btn-secondary totp-copy-btn">Kopírovať kľúč</button>
+                <p class="avatar-upload-hint">
                   V aplikácii zvoľte <em>„Pridať účet → Zadať kód ručne"</em> a vložte kľúč bez medzier.
                 </p>
               </div>
@@ -309,7 +309,7 @@ $totpUri = $pendingSecret ? getTotpUri($pendingSecret, (string) ($user['email'] 
             </div>
           </form>
 
-          <form method="POST" action="2fa_setup.php" style="margin-top:.75rem;">
+          <form method="POST" action="2fa_setup.php" class="mt-075rem">
             <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
             <input type="hidden" name="action" value="enable_start">
             <button type="submit" class="btn-secondary">Vygenerovať nový kľúč</button>
@@ -336,13 +336,13 @@ $totpUri = $pendingSecret ? getTotpUri($pendingSecret, (string) ($user['email'] 
       <?php if ($newPlainBackupCodes !== null): ?>
       <div class="form-section">
         <h3>Záložné kódy</h3>
-        <div class="alert alert-error" style="border-left:4px solid var(--primary-color);background:var(--bg-secondary);">
+        <div class="alert alert-error alert-2fa-backup">
           <p><strong>Uložte si tieto záložné kódy na bezpečné miesto!</strong></p>
           <p class="avatar-upload-hint">Každý kód môžete použiť raz namiesto TOTP kódu. Po tomto zobrazení ich nebude možné znova zobraziť.</p>
         </div>
-        <div id="backup-codes-list" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:.5rem;margin:1rem 0;">
+        <div id="backup-codes-list" class="backup-codes-grid">
           <?php foreach ($newPlainBackupCodes as $bc): ?>
-            <code style="background:var(--code-bg);border:1px solid var(--code-border);border-radius:6px;padding:.4rem .75rem;font-size:.95rem;text-align:center;"><?= htmlspecialchars($bc) ?></code>
+            <code class="backup-code"><?= htmlspecialchars($bc) ?></code>
           <?php endforeach; ?>
         </div>
         <button type="button" id="copy-backup-btn" class="btn-secondary">Kopírovať všetky záložné kódy</button>
@@ -390,7 +390,7 @@ $totpUri = $pendingSecret ? getTotpUri($pendingSecret, (string) ($user['email'] 
       </div>
       <?php endif; ?>
 
-      <div class="auth-links" style="margin-top:1.5rem;">
+      <div class="auth-links mt-1-5rem">
         <p><a href="profile.php">&larr; Späť na profil</a></p>
       </div>
     </div>
