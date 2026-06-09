@@ -458,7 +458,7 @@ if (isLoggedIn()) {
                                 <div class="risk-label">5-ročné riziko</div>
                                 <div class="risk-value">
                                     <?= htmlspecialchars(number_format((float)$calculated["risk_5yr"], 1, ",", " ")) ?> %
-                                    <span class="calc-result-badge <?= htmlspecialchars($kfRiskCls) ?>" style="font-size:0.75rem;margin-left:8px">
+                                    <span class="calc-result-badge <?= htmlspecialchars($kfRiskCls) ?> fs-075 ml-8">
                                         <?= match($kfRiskCls) {
                                             'risk-low'       => 'Nízke',
                                             'risk-moderate'  => 'Stredné',

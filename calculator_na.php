@@ -379,7 +379,7 @@ if (isLoggedIn()) {
                                         <td>
                                             <?php $_examD = (string) ($row["input_payload"]["examination_date"] ?? ""); ?>
                                             <?= $_examD ? htmlspecialchars(date("d.m.Y", strtotime($_examD))) : '—' ?>
-                                            <small class="d-block" style="color:var(--text-secondary);font-size:.8em">ulo.: <?= htmlspecialchars(date("d.m.Y H:i", strtotime($row["created_at"] ?? ""))) ?></small>
+                                            <small class="d-block saved-meta">ulo.: <?= htmlspecialchars(date("d.m.Y H:i", strtotime($row["created_at"] ?? ""))) ?></small>
                                         </td>
                                         <td>
                                             TBW: <?= number_format(

@@ -315,7 +315,7 @@ if (isLoggedIn()) {
                                 <input type="text" id="egfr_<?= $i ?>" name="egfr_<?= $i ?>" class="form-control" inputmode="decimal" placeholder="napr. 45.2" value="<?= htmlspecialchars($form["egfr_$i"]) ?>">
                             </div>
                             <?php if ($i > EGFR_SLOPE_MIN_ROWS): ?>
-                            <div class="form-group" style="align-self:flex-end">
+                            <div class="form-group align-self-end">
                                 <button type="button" class="btn-secondary" onclick="removeEgfrRow(<?= $i ?>)" title="Odstrániť tento riadok" aria-label="Odstrániť riadok <?= $i ?>">−</button>
                             </div>
                             <?php endif; ?>
@@ -323,7 +323,7 @@ if (isLoggedIn()) {
                         <?php endfor; ?>
                         </div>
 
-                        <div class="form-actions" style="margin-top:.5rem">
+                        <div class="form-actions mt-05rem">
                             <button type="button" id="btn-add-egfr-row" class="btn-secondary" onclick="addEgfrRow()">+ Pridať meranie</button>
                         </div>
                     </div>
@@ -375,7 +375,7 @@ if (isLoggedIn()) {
                                         <td>
                                             <?php $_examD = (string)($row["input_payload"]["examination_date"] ?? ""); ?>
                                             <?= $_examD ? htmlspecialchars(date("d.m.Y", strtotime($_examD))) : "—" ?>
-                                            <small class="d-block" style="color:var(--text-secondary);font-size:.8em">ulo.: <?= htmlspecialchars(date("d.m.Y H:i", strtotime($row["created_at"] ?? ""))) ?></small>
+                                            <small class="d-block saved-meta">ulo.: <?= htmlspecialchars(date("d.m.Y H:i", strtotime($row["created_at"] ?? ""))) ?></small>
                                         </td>
                                         <td><?= htmlspecialchars(calculatorBuildPatientDisplay($row)) ?></td>
                                         <td><?= number_format((float)($row["result_payload"]["slope"] ?? 0), 2, ",", " ") ?> ml/min/rok</td>
@@ -433,7 +433,7 @@ if (isLoggedIn()) {
                     '<label for="egfr_' + idx + '">eGFR ' + idx + ' (ml/min/1,73 m²)</label>' +
                     '<input type="text" id="egfr_' + idx + '" name="egfr_' + idx + '" class="form-control" inputmode="decimal" placeholder="napr. 45.2">' +
                 '</div>' +
-                '<div class="form-group" style="align-self:flex-end">' +
+                '<div class="form-group align-self-end">' +
                     '<button type="button" class="btn-secondary" onclick="removeEgfrRow(' + idx + ')" title="Odstrániť" aria-label="Odstrániť riadok ' + idx + '">−</button>' +
                 '</div>';
             container.appendChild(row);

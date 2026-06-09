@@ -155,7 +155,7 @@ if ($isCalculatorPage && !empty($currentUser)):
         <div class="print-layout-thead">
             <div class="user-print-header print-only">
                 <div class="user-print-header__content">
-                    <div class="user-print-header__line1" style="font-style:italic;color:#666">Nie je prihlásený žiaden používateľ</div>
+                    <div class="user-print-header__line1 text-muted-italic">Nie je prihlásený žiaden používateľ</div>
                 </div>
             </div>
         </div>

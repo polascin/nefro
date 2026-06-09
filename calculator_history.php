@@ -274,7 +274,7 @@ $totalCount = array_sum(array_column($statsByCalc, 'count'));
       <?php if ($filterPat): ?><input type="hidden" name="patient" value="<?= htmlspecialchars($filterPat) ?>"><?php endif; ?>
 
       <div class="calc-history-toolbar-global">
-        <button type="submit" name="compare" id="compare-btn" class="btn-secondary" style="display:none">Porovnať vybrané</button>
+        <button type="submit" name="compare" id="compare-btn" class="btn-secondary d-none">Porovnať vybrané</button>
       </div>
 
       <?php $patIdx = 0; foreach ($grouped as $pkey => $pg):
@@ -388,7 +388,7 @@ $totalCount = array_sum(array_column($statsByCalc, 'count'));
             <td>
               <?= htmlspecialchars(calcDisplayDate($row)) ?>
               <?php if (isset($row['input_payload']['examination_date']) && $row['input_payload']['examination_date'] !== ''): ?>
-                <small class="d-block" style="color:var(--text-secondary);font-size:.8em">ulo.: <?= htmlspecialchars(date('d.m.Y H:i', strtotime($row['created_at'] ?? ''))) ?></small>
+                <small class="d-block saved-meta">ulo.: <?= htmlspecialchars(date('d.m.Y H:i', strtotime($row['created_at'] ?? ''))) ?></small>
               <?php endif; ?>
             </td>
             <td><?= htmlspecialchars($row['calculator_label'] ?? CALC_LABELS[$key] ?? $key) ?></td>

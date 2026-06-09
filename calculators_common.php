@@ -526,7 +526,7 @@ function calculatorRenderSavedResultsTable(
                             <tr>
                                 <td>
                                     <?= $_examD ? htmlspecialchars(date('d.m.Y', strtotime($_examD))) : '—' ?>
-                                    <small class="d-block" style="color:var(--text-secondary);font-size:.8em">ulo.: <?= htmlspecialchars(date('d.m.Y H:i', strtotime((string) ($row['created_at'] ?? '')))) ?></small>
+                                    <small class="d-block saved-meta">ulo.: <?= htmlspecialchars(date('d.m.Y H:i', strtotime((string) ($row['created_at'] ?? '')))) ?></small>
                                 </td>
                                 <td><?= htmlspecialchars(calculatorBuildPatientDisplay($row)) ?></td>
                                 <td><?php $renderResultCell($row); ?></td>
