@@ -2550,6 +2550,27 @@ input:disabled + .slider:before {
 .backup-codes-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: .5rem; margin: 1rem 0; }
 .backup-code { background: var(--code-bg); border: 1px solid var(--code-border); border-radius: 6px; padding: .4rem .75rem; font-size: .95rem; text-align: center; }
 .avatar-upload-hint.hint-center-mt1 { text-align: center; margin-top: 1rem; }
+
+/* Admin newsletter/diskusia komponenty (inline-style sweep) */
+.admin-stats-grid { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 24px; }
+.admin-stat-link { flex: 1; min-width: 130px; text-decoration: none; }
+.admin-stat-card { border: 2px solid #e2e8f0; border-radius: 8px; padding: 16px; text-align: center; background: var(--bg-card, #fff); }
+.admin-stat-card--active { border-color: #0055a5; background: #eff6ff; }
+.admin-stat-value { font-size: 1.8rem; font-weight: 700; color: #0055a5; }
+.admin-stat-label { font-size: 0.85rem; color: #64748b; margin-top: 4px; }
+.admin-filter-bar { margin-bottom: 16px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.admin-filter-label { font-size: 0.9rem; color: #64748b; }
+.admin-empty-cell { text-align: center; padding: 24px; color: #64748b; }
+.nl-status { font-weight: 600; font-size: 0.85rem; }
+.nl-status--unsub   { color: #dc2626; }
+.nl-status--active  { color: #16a34a; }
+.nl-status--pending { color: #d97706; }
+.admin-actions-row { display: flex; gap: 6px; flex-wrap: wrap; }
+.row-deleted { opacity: .5; }
+.flex-wrap-gap4 { display: flex; flex-wrap: wrap; gap: 4px; align-items: flex-start; }
+.summary-reset { cursor: pointer; list-style: none; display: inline-block; }
+.admin-note-textarea { width: 100%; font-size: 0.82rem; padding: 4px 6px; border: 1px solid var(--border-color); border-radius: 4px; resize: vertical; }
+.form-hint.form-hint--export { margin: .75rem 0 0; color: #475569; }
 .btn-primary-filled { background: var(--primary-color) !important; color: white !important; border-color: var(--primary-color) !important; }
 .badge-neutral { background: #e5e7eb; color: #374151; }
 .badge-info    { background: #dbeafe; color: #1e3a8a; }

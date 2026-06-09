@@ -23,7 +23,7 @@ if (!empty($_SESSION['username'])) {
                 </li>
             <?php endforeach; ?>
             <li>
-                <form action="logout.php" method="post" style="display:inline;">
+                <form action="logout.php" method="post" class="d-inline">
                     <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(function_exists('generateCsrfToken') ? generateCsrfToken() : '') ?>">
                     <button type="submit" class="nav-logout-btn"><?= $logoutLabel ?></button>
                 </form>

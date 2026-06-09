@@ -368,7 +368,7 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
                         <input type="hidden" name="include_sensitive" value="1">
                         <button type="submit" class="btn-admin-action btn-admin-action--warn">Vytlačiť</button>
                     </form>
-                    <p class="form-hint" style="margin:0.75rem 0 0;color:#475569;">Citlivý export vyžaduje POST požiadavku s platným CSRF tokenom.</p>
+                    <p class="form-hint form-hint--export">Citlivý export vyžaduje POST požiadavku s platným CSRF tokenom.</p>
                     <form method="POST" action="admin_users_notice.php" class="d-inline" data-confirm="Naozaj otvoriť citlivý výstup používateľov?">
                         <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
                         <input type="hidden" name="format" value="csv">

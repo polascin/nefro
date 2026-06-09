@@ -196,7 +196,7 @@ $pageLastUpdated = date('d.m.Y H:i', filemtime(__FILE__));
             <?php endif; ?>
 
             <!-- Štatistiky -->
-            <div class="admin-stats-grid" style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:24px;">
+            <div class="admin-stats-grid">
                 <?php
                 $statItems = [
                     ['label' => 'Celkom', 'value' => $stats['total'], 'filter' => ''],
@@ -208,19 +208,18 @@ $pageLastUpdated = date('d.m.Y H:i', filemtime(__FILE__));
                     $isActive = $statusFilter === $si['filter'];
                 ?>
                 <a href="admin_newsletter.php<?= $si['filter'] !== '' ? '?status=' . urlencode($si['filter']) : '' ?>"
-                   style="flex:1;min-width:130px;text-decoration:none;">
-                    <div class="admin-stat-card<?= $isActive ? ' admin-stat-card--active' : '' ?>"
-                         style="border:2px solid <?= $isActive ? '#0055a5' : '#e2e8f0' ?>;border-radius:8px;padding:16px;text-align:center;background:<?= $isActive ? '#eff6ff' : 'var(--bg-card, #fff)' ?>;">
-                        <div style="font-size:1.8rem;font-weight:700;color:#0055a5;"><?= $si['value'] ?></div>
-                        <div style="font-size:0.85rem;color:#64748b;margin-top:4px;"><?= htmlspecialchars($si['label']) ?></div>
+                   class="admin-stat-link">
+                    <div class="admin-stat-card<?= $isActive ? ' admin-stat-card--active' : '' ?>">
+                        <div class="admin-stat-value"><?= $si['value'] ?></div>
+                        <div class="admin-stat-label"><?= htmlspecialchars($si['label']) ?></div>
                     </div>
                 </a>
                 <?php endforeach; ?>
             </div>
 
             <!-- Filter -->
-            <div style="margin-bottom:16px;display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
-                <span style="font-size:0.9rem;color:#64748b;">Filter:</span>
+            <div class="admin-filter-bar">
+                <span class="admin-filter-label">Filter:</span>
                 <?php
                 $filterLinks = [
                     '' => 'Všetci',
@@ -232,8 +231,7 @@ $pageLastUpdated = date('d.m.Y H:i', filemtime(__FILE__));
                     $isSelected = $statusFilter === $fVal;
                 ?>
                 <a href="admin_newsletter.php<?= $fVal !== '' ? '?status=' . urlencode($fVal) : '' ?>"
-                   class="<?= $isSelected ? 'btn-primary' : 'btn-secondary-small' ?>"
-                   style="font-size:0.85rem;">
+                   class="<?= $isSelected ? 'btn-primary' : 'btn-secondary-small' ?> fs-085">
                     <?= htmlspecialchars($fLabel) ?>
                 </a>
                 <?php endforeach; ?>
@@ -255,39 +253,39 @@ $pageLastUpdated = date('d.m.Y H:i', filemtime(__FILE__));
                     </thead>
                     <tbody>
                     <?php if (empty($subscribers)): ?>
-                        <tr><td colspan="7" style="text-align:center;padding:24px;color:#64748b;">Žiadni odberatelia.</td></tr>
+                        <tr><td colspan="7" class="admin-empty-cell">Žiadni odberatelia.</td></tr>
                     <?php else: ?>
                         <?php foreach ($subscribers as $sub):
                             $isVerified    = $sub['verified_at'] !== null;
                             $isUnsubscribed = $sub['unsubscribed_at'] !== null;
                             if ($isUnsubscribed) {
                                 $statusLabel = 'Odhlásený';
-                                $statusColor = '#dc2626';
+                                $statusClass = 'nl-status--unsub';
                             } elseif ($isVerified) {
                                 $statusLabel = 'Aktívny';
-                                $statusColor = '#16a34a';
+                                $statusClass = 'nl-status--active';
                             } else {
                                 $statusLabel = 'Čaká na overenie';
-                                $statusColor = '#d97706';
+                                $statusClass = 'nl-status--pending';
                             }
                         ?>
                         <tr>
                             <td><?= (int) $sub['id'] ?></td>
                             <td><?= htmlspecialchars((string) $sub['email']) ?></td>
-                            <td><span style="color:<?= $statusColor ?>;font-weight:600;font-size:0.85rem;"><?= $statusLabel ?></span></td>
+                            <td><span class="nl-status <?= $statusClass ?>"><?= $statusLabel ?></span></td>
                             <td><?= htmlspecialchars((string) ($sub['created_at'] ?? '')) ?></td>
-                            <td><?= $sub['verified_at'] !== null ? htmlspecialchars((string) $sub['verified_at']) : '<span style="color:#94a3b8;">—</span>' ?></td>
-                            <td><?= $sub['unsubscribed_at'] !== null ? htmlspecialchars((string) $sub['unsubscribed_at']) : '<span style="color:#94a3b8;">—</span>' ?></td>
+                            <td><?= $sub['verified_at'] !== null ? htmlspecialchars((string) $sub['verified_at']) : '<span class="text-muted">—</span>' ?></td>
+                            <td><?= $sub['unsubscribed_at'] !== null ? htmlspecialchars((string) $sub['unsubscribed_at']) : '<span class="text-muted">—</span>' ?></td>
                             <td>
-                                <div style="display:flex;gap:6px;flex-wrap:wrap;">
+                                <div class="admin-actions-row">
                                     <?php if (!$isVerified): ?>
-                                    <form method="POST" action="admin_newsletter.php" style="display:inline;">
+                                    <form method="POST" action="admin_newsletter.php" class="d-inline">
                                         <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
                                         <input type="hidden" name="action" value="force_verify">
                                         <input type="hidden" name="sub_id" value="<?= (int) $sub['id'] ?>">
                                         <button type="submit" class="btn-secondary-small" title="Manuálne overiť e-mail">Overiť</button>
                                     </form>
-                                    <form method="POST" action="admin_newsletter.php" style="display:inline;">
+                                    <form method="POST" action="admin_newsletter.php" class="d-inline">
                                         <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
                                         <input type="hidden" name="action" value="resend_verification">
                                         <input type="hidden" name="sub_id" value="<?= (int) $sub['id'] ?>">
@@ -295,7 +293,7 @@ $pageLastUpdated = date('d.m.Y H:i', filemtime(__FILE__));
                                     </form>
                                     <?php endif; ?>
                                     <?php if ($isVerified && !$isUnsubscribed): ?>
-                                    <form method="POST" action="admin_newsletter.php" style="display:inline;">
+                                    <form method="POST" action="admin_newsletter.php" class="d-inline">
                                         <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
                                         <input type="hidden" name="action" value="force_unsubscribe">
                                         <input type="hidden" name="sub_id" value="<?= (int) $sub['id'] ?>">
@@ -303,19 +301,19 @@ $pageLastUpdated = date('d.m.Y H:i', filemtime(__FILE__));
                                     </form>
                                     <?php endif; ?>
                                     <?php if ($isUnsubscribed): ?>
-                                    <form method="POST" action="admin_newsletter.php" style="display:inline;">
+                                    <form method="POST" action="admin_newsletter.php" class="d-inline">
                                         <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
                                         <input type="hidden" name="action" value="reactivate">
                                         <input type="hidden" name="sub_id" value="<?= (int) $sub['id'] ?>">
                                         <button type="submit" class="btn-secondary-small" title="Obnoviť odber">Obnoviť odber</button>
                                     </form>
                                     <?php endif; ?>
-                                    <form method="POST" action="admin_newsletter.php" style="display:inline;"
-                                          class="form-delete-sub" data-email="<?= htmlspecialchars((string) $sub['email'], ENT_QUOTES) ?>">
+                                    <form method="POST" action="admin_newsletter.php"
+                                          class="form-delete-sub d-inline" data-email="<?= htmlspecialchars((string) $sub['email'], ENT_QUOTES) ?>">
                                         <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
                                         <input type="hidden" name="action" value="delete_subscriber">
                                         <input type="hidden" name="sub_id" value="<?= (int) $sub['id'] ?>">
-                                        <button type="submit" class="btn-secondary-small" style="color:#dc2626;" title="Natrvalo zmazať">Zmazať</button>
+                                        <button type="submit" class="btn-secondary-small text-danger" title="Natrvalo zmazať">Zmazať</button>
                                     </form>
                                 </div>
                             </td>
@@ -326,7 +324,7 @@ $pageLastUpdated = date('d.m.Y H:i', filemtime(__FILE__));
                 </table>
             </div>
 
-            <p style="margin-top:16px;font-size:0.8rem;color:#94a3b8;">
+            <p class="mt-16 fs-08 text-muted">
                 Zobrazuje sa max. 500 záznamov. Posledná aktualizácia stránky: <?= htmlspecialchars($pageLastUpdated) ?>.
             </p>
         </div>

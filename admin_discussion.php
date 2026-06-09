@@ -211,7 +211,7 @@ include 'admin_menu.php';
     <?php endif; ?>
 
     <!-- ── ŠTATISTIKY ────────────────────────────────────────────────── -->
-    <div class="form-row-inline admin-tag-section" style="margin-bottom:16px;">
+    <div class="form-row-inline admin-tag-section mb-16">
       <a href="admin_discussion.php?filter=all"     class="badge-pub   <?= $filter === 'all'     ? 'badge-active' : '' ?>">Všetky: <?= $stats['all'] ?></a>
       <a href="admin_discussion.php?filter=visible" class="badge-pub   <?= $filter === 'visible' ? 'badge-active' : '' ?>">Viditeľné: <?= $stats['visible'] ?></a>
       <a href="admin_discussion.php?filter=hidden"  class="badge-draft <?= $filter === 'hidden'  ? 'badge-active' : '' ?>">Skryté: <?= $stats['hidden'] ?></a>
@@ -247,7 +247,7 @@ include 'admin_menu.php';
             $content  = htmlspecialchars(truncatePost((string) $p['content']));
             $date     = substr((string) $p['created_at'], 0, 10);
           ?>
-          <tr<?= $deleted ? ' style="opacity:.5;"' : '' ?>>
+          <tr<?= $deleted ? ' class="row-deleted"' : '' ?>>
             <td>
               <?= $pid ?>
               <?php if (!$isTop): ?>
@@ -258,7 +258,7 @@ include 'admin_menu.php';
             <td>
               <?= $content ?>
               <?php if ($note !== ''): ?>
-                <br><em class="helper-text" style="color:var(--text-secondary);">📝 <?= htmlspecialchars($note) ?></em>
+                <br><em class="helper-text">📝 <?= htmlspecialchars($note) ?></em>
               <?php endif; ?>
             </td>
             <td><?= htmlspecialchars($date) ?></td>
@@ -275,7 +275,7 @@ include 'admin_menu.php';
               <?php endif; ?>
             </td>
             <td>
-              <div style="display:flex;flex-wrap:wrap;gap:4px;align-items:flex-start;">
+              <div class="flex-wrap-gap4">
 
               <?php if (!$deleted): ?>
                 <?php if (!$hidden): ?>
@@ -336,16 +336,16 @@ include 'admin_menu.php';
               <?php endif; ?>
 
               <!-- Poznámka -->
-              <details style="width:100%;">
-                <summary class="btn-secondary-small" style="cursor:pointer;list-style:none;display:inline-block;">📝 Poznámka</summary>
-                <form method="POST" action="admin_discussion.php?filter=<?= htmlspecialchars($filter) ?>&page=<?= $currentPage ?>" style="margin-top:6px;">
+              <details class="w-100">
+                <summary class="btn-secondary-small summary-reset">📝 Poznámka</summary>
+                <form method="POST" action="admin_discussion.php?filter=<?= htmlspecialchars($filter) ?>&page=<?= $currentPage ?>" class="mt-6">
                   <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
                   <input type="hidden" name="action"  value="set_note">
                   <input type="hidden" name="post_id" value="<?= $pid ?>">
                   <textarea name="moderation_note" rows="2" maxlength="500"
-                            style="width:100%;font-size:0.82rem;padding:4px 6px;border:1px solid var(--border-color);border-radius:4px;resize:vertical;"
+                            class="admin-note-textarea"
                             placeholder="Interná poznámka (max 500 znakov)…"><?= htmlspecialchars($note) ?></textarea>
-                  <button type="submit" class="btn-secondary-small" style="margin-top:4px;">Uložiť</button>
+                  <button type="submit" class="btn-secondary-small mt-4">Uložiť</button>
                 </form>
               </details>
 
@@ -373,7 +373,7 @@ include 'admin_menu.php';
     </nav>
     <?php endif; ?>
 
-    <p class="helper-text" style="margin-top:8px;">Celkom: <?= $totalPosts ?> príspevkov v tomto filtri.</p>
+    <p class="helper-text mt-8">Celkom: <?= $totalPosts ?> príspevkov v tomto filtri.</p>
 
     <?php endif; ?>
 
