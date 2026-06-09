@@ -166,7 +166,7 @@ if (php_sapi_name() === 'cli') {
       <link rel="stylesheet" href="index.css?v=20260509-1&cb=<?= filemtime('index.css') ?>">
     </head>
     <body>
-      <main class="container" style="padding-top:60px;padding-bottom:60px;">
+      <main class="container pt-60 pb-60">
         <div class="auth-container">
           <h2>Migrácia článku</h2>
 
@@ -189,7 +189,7 @@ if (php_sapi_name() === 'cli') {
             <?php endforeach; ?>
           </ul>
 
-          <p style="margin-top:30px;">
+          <p class="mt-30">
             <a href="index.php" class="btn-primary">← Späť na hlavnú stránku</a>
             &nbsp;
             <a href="admin_articles.php" class="btn-secondary-small">Správa článkov</a>
