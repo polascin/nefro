@@ -4339,6 +4339,28 @@ input:disabled + .slider:before {
     box-shadow: var(--shadow-sm);
 }
 
+/* Tabuľky v obsahu článkov — štýl cez triedy (CSP style-src 'self' blokuje
+   inline style="" v DB obsahu článkov, napr. porovnávacie tabuľky). */
+.primary-article table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.95rem;
+}
+
+.primary-article th {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 2px solid var(--border-color);
+    background: var(--bg-secondary);
+}
+
+.primary-article td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+
 /* Lepšia mriežka pre kalkulačky na mobile */
 @media (max-width: 768px) {
     .calculators-grid {
