@@ -131,6 +131,8 @@ $urls = [
     ],
 ];
 
+$maxArticleTs = 0;
+
 try {
     $stmt = $pdo->query("SELECT slug, published_at, updated_at FROM articles WHERE is_published = 1 ORDER BY published_at DESC, id DESC");
     $articles = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -143,6 +145,9 @@ try {
 
         $lastModRaw = (string) ($article['updated_at'] ?? $article['published_at'] ?? '');
         $lastModTs = strtotime($lastModRaw);
+        if ($lastModTs && $lastModTs > $maxArticleTs) {
+            $maxArticleTs = $lastModTs;
+        }
 
         $urls[] = [
             'loc' => $baseUrl . 'article.php?slug=' . rawurlencode($slug),
@@ -153,6 +158,13 @@ try {
     }
 } catch (\PDOException $e) {
     error_log('sitemap.php generation error: ' . $e->getMessage());
+}
+
+// Domovská stránka sa obsahovo mení pri každom novom článku — lastmod nech
+// odráža najnovší článok (signál čerstvosti), nie len dátum deployu index.php.
+if ($maxArticleTs > 0) {
+    $homeTs = is_file(__DIR__ . '/index.php') ? (int) @filemtime(__DIR__ . '/index.php') : 0;
+    $urls[0]['lastmod'] = date('c', max($maxArticleTs, $homeTs));
 }
 
 echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";

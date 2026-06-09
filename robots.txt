@@ -1,6 +1,6 @@
 # robots.txt — Nefro-projekt Slovensko
 # https://nefro.polascin.net/
-# Aktualizované: 2026-05-30
+# Aktualizované: 2026-06-09
 
 # ── Všeobecné pravidlá pre všetkých robotov ────────────────────────────────
 User-agent: *
@@ -48,8 +48,9 @@ Disallow: /.git/
 Disallow: /*.py
 Disallow: /*.ps1
 
-# Crawl delay pre šetrenie servera
-Crawl-delay: 10
+# Crawl delay pre šetrenie servera (nízka hodnota — malý web chce byť indexovaný;
+# Google Crawl-delay ignoruje, Bing/Yandex ho rešpektujú)
+Crawl-delay: 1
 
 # ── Blokovaní agresívni scrapovací roboti ──────────────────────────────────
 User-agent: SemrushBot
