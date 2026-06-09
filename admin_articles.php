@@ -189,6 +189,13 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
                     $actionError = "Dátum publikácie je neplatný.";
                     break;
                 }
+                // Normalizuj na MySQL DATETIME (akceptuje aj 'YYYY-MM-DDTHH:MM' z datetime-local).
+                $pubTs = strtotime($pubAt);
+                if ($pubTs === false) {
+                    $actionError = "Dátum publikácie je neplatný.";
+                    break;
+                }
+                $pubAt = date("Y-m-d H:i:s", $pubTs);
                 // Automatický slug ak prázdny
                 if ($slug === "") {
                     $slug = generateSlug($title);
@@ -285,6 +292,13 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
                     $actionError = "Dátum publikácie je neplatný.";
                     break;
                 }
+                // Normalizuj na MySQL DATETIME (akceptuje aj 'YYYY-MM-DDTHH:MM' z datetime-local).
+                $pubTs = strtotime($pubAt);
+                if ($pubTs === false) {
+                    $actionError = "Dátum publikácie je neplatný.";
+                    break;
+                }
+                $pubAt = date("Y-m-d H:i:s", $pubTs);
 
                 if ($slug === "") {
                     $slug = generateSlug($title);
@@ -890,14 +904,12 @@ $pageTimeZone = date("T") . " (" . date_default_timezone_get() . ")";
             </div>
 
             <div class="form-row">
-              <label for="f_published_at">Dátum publikácie <span class="text-error">*</span></label>
-              <input type="date" id="f_published_at" name="published_at" required
+              <label for="f_published_at">Dátum a čas publikácie <span class="text-error">*</span></label>
+              <input type="datetime-local" id="f_published_at" name="published_at" required
                      value="<?= htmlspecialchars(
-                         substr(
-                             (string) ($editArticle["published_at"] ??
-                                 date("Y-m-d")),
-                             0,
-                             10,
+                         date(
+                             'Y-m-d\TH:i',
+                             strtotime((string) ($editArticle["published_at"] ?? "")) ?: time(),
                          ),
                      ) ?>">
             </div>

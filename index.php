@@ -43,11 +43,17 @@ function formatArticleDate(string $datetime): string
     if (!$ts) {
         return htmlspecialchars($datetime);
     }
-    return (int) date("j", $ts) .
+    $formatted = (int) date("j", $ts) .
         ". " .
         ($months[(int) date("n", $ts)] ?? "") .
         " " .
         date("Y", $ts);
+    // Čas pripoj len ak je zmysluplný (nie polnoc) — staršie články bez času
+    // (00:00) tak zostanú zobrazené len dátumom.
+    if (date("H:i", $ts) !== "00:00") {
+        $formatted .= " o " . date("H:i", $ts);
+    }
+    return $formatted;
 }
 
 function normalizePlainText(string $text): string
