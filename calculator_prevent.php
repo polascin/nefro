@@ -332,7 +332,7 @@ function preventRenderOutcome(string $title, array $pair, bool $show30): void
 
                 <div class="info-box-green">
                     <strong>Porovnanie s referenčnými kalkulátormi:</strong>
-                    <a href="https://professional.heart.org/en/guidelines-and-statements/prevent-calculator" target="_blank" rel="noopener noreferrer">AHA PREVENT (oficiálny)</a> &ensp;&bull;&ensp;
+                    <a href="https://professional.heart.org/en/guidelines-and-statements/about-prevent-calculator" target="_blank" rel="noopener noreferrer">AHA PREVENT (oficiálny)</a> &ensp;&bull;&ensp;
                     <a href="https://tools.acc.org/CVD-Risk-Estimator-Plus/" target="_blank" rel="noopener noreferrer">ACC CVD Risk Estimator+</a>
                 </div>
 
@@ -372,7 +372,7 @@ function preventRenderOutcome(string $title, array $pair, bool $show30): void
                                 <label for="total_c">Celkový cholesterol</label>
                                 <div class="flex-gap-8-end">
                                     <input type="text" id="total_c" name="total_c" required class="form-control flex-1" value="<?= htmlspecialchars($form['total_c']) ?>">
-                                    <select name="chol_unit" id="chol_unit" class="form-control flex-08">
+                                    <select name="chol_unit" id="chol_unit" aria-label="Jednotka cholesterolu" class="form-control flex-08">
                                         <option value="mmol" <?= $form['chol_unit'] === 'mmol' ? 'selected' : '' ?>>mmol/l</option>
                                         <option value="mgdl" <?= $form['chol_unit'] === 'mgdl' ? 'selected' : '' ?>>mg/dl</option>
                                     </select>
@@ -450,7 +450,7 @@ function preventRenderOutcome(string $title, array $pair, bool $show30): void
                                 <label for="uacr_value">UACR</label>
                                 <div class="flex-gap-8-end">
                                     <input type="text" id="uacr_value" name="uacr_value" class="form-control flex-1" value="<?= htmlspecialchars($form['uacr_value']) ?>" placeholder="voliteľné">
-                                    <select name="uacr_unit" class="form-control flex-08">
+                                    <select name="uacr_unit" aria-label="Jednotka UACR" class="form-control flex-08">
                                         <option value="mg_g" <?= $form['uacr_unit'] === 'mg_g' ? 'selected' : '' ?>>mg/g</option>
                                         <option value="mg_mmol" <?= $form['uacr_unit'] === 'mg_mmol' ? 'selected' : '' ?>>mg/mmol</option>
                                     </select>

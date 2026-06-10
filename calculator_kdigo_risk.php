@@ -316,7 +316,7 @@ if (isLoggedIn()) {
                                            value="<?= htmlspecialchars(
                                                $form["uacr"],
                                            ) ?>">
-                                    <select name="uacr_unit" class="form-control flex-08">
+                                    <select name="uacr_unit" aria-label="Jednotka UACR" class="form-control flex-08">
                                         <option value="mg_g"    <?= $form[
                                             "uacr_unit"
                                         ] === "mg_g"
