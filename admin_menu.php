@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 $adminNavItems = [
     'index.php' => 'Domov',
     'admin.php' => 'Administrácia',

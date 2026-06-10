@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 if (defined('MAIN_NAV_INCLUDED')) return;
 define('MAIN_NAV_INCLUDED', 1);
 

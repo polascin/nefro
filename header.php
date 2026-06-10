@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 // Ensure auth helpers are available when header is included directly.
 if (!function_exists('isLoggedIn')) {
     require_once __DIR__ . '/auth.php';

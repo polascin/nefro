@@ -1,4 +1,5 @@
-<?php /* Uses $user, $pdo from calling scope */ ?>
+<?php
+declare(strict_types=1); /* Uses $user, $pdo from calling scope */ ?>
                 <div class="form-section">
                     <h3>Základné a osobné údaje</h3>
 

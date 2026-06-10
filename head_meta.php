@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 /**
  * head_meta.php — Centralized <head> section for Nefro-projekt Slovensko
  * Provides SEO, Social Metadata, JSON-LD support, and common assets.

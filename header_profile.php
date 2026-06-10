@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 $currentUser = null;
 $loggedIn = function_exists('isLoggedIn')
     ? isLoggedIn()

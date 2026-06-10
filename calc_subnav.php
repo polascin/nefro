@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 // $_navCurrent musí byť nastavené pred include (nastavuje main_nav.php)
 // Profil pre quickfill — dostupný na kalkulačkách (vyžaduje calculators_common.php)
 if (function_exists('isLoggedIn') && isLoggedIn() && isset($pdo)

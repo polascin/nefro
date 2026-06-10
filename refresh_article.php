@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 // Ochrana – len admin alebo CLI
 if (php_sapi_name() !== 'cli') {
     require_once __DIR__ . '/auth.php';

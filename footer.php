@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 // Načítaj deploy timestamp ak existuje (generuje deploy.sh)
 $deployInfoFile = __DIR__ . '/deploy_info.php';
 if (file_exists($deployInfoFile)) {
@@ -13,7 +14,7 @@ if (!isset($usePageLastUpdated) && defined('DEPLOY_TIME')) {
 } elseif (!isset($pageLastUpdated)) {
     $currentFile     = $_SERVER['SCRIPT_FILENAME'] ?? '';
     $pageLastUpdated = ($currentFile !== '' && file_exists($currentFile))
-        ? date('d.m.Y H:i', filemtime($currentFile))
+        ? date('d.m.Y H:i', (int) filemtime($currentFile))
         : date('d.m.Y H:i');
 }
 

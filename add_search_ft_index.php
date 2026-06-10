@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 /**
  * add_search_ft_index.php
  * Jednorazová migrácia: pridá FULLTEXT index na tabuľku articles.

@@ -1,4 +1,5 @@
-<?php /* Uses $form from calling scope */ ?>
+<?php
+declare(strict_types=1); /* Uses $form from calling scope */ ?>
 <div class="form-section">
     <h3>Voliteľné identifikačné údaje pacienta</h3>
     <div class="form-grid">
