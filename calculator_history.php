@@ -13,6 +13,7 @@ const CALC_LABELS = [
     'kdigo_risk'          => 'KDIGO G/A riziko',
     'kfre'                => 'KFRE – Kidney Failure Risk',
     'ckd_pc_grams_2022'   => 'CKD-PC (Grams 2022)',
+    'prevent_aha_2024'    => 'PREVENT (AHA 2024)',
     'igan_risk'           => 'IgAN riziko',
     'adpkd_mayo'          => 'Mayo ADPKD',
     'aki_fenafeurea'      => 'AKI – FENa/FEUrea',
@@ -30,6 +31,7 @@ const CALC_URLS = [
     'kdigo_risk'          => 'calculator_kdigo_risk.php',
     'kfre'                => 'calculator_kfre.php',
     'ckd_pc_grams_2022'   => 'calculator_ckdpc.php',
+    'prevent_aha_2024'    => 'calculator_prevent.php',
     'igan_risk'           => 'calculator_igan.php',
     'adpkd_mayo'          => 'calculator_adpkd.php',
     'aki_fenafeurea'      => 'calculator_aki.php',
@@ -240,6 +242,11 @@ $totalCount = array_sum(array_column($statsByCalc, 'count'));
               $r5 = (float)($rp['risk_5yr']??0);
               echo '<div class="calc-result-badge ' . kfreRiskClass($r5) . '">5r: '
                  . htmlspecialchars(number_format($r5,1,',',' ')) . '%</div>';
+            elseif ($key === 'prevent_aha_2024'):
+              $a10 = (float)($rp['ascvd_10yr']??0);
+              $aCls = $a10 < 3 ? 'risk-low' : ($a10 < 5 ? 'risk-moderate' : ($a10 < 10 ? 'risk-high' : 'risk-very-high'));
+              echo '<div class="calc-result-badge ' . $aCls . '">ASCVD 10r: '
+                 . htmlspecialchars(number_format($a10,1,',',' ')) . '%</div>';
             else:
               foreach ($rp as $ck => $cv) {
                   if (is_numeric($cv)) {
@@ -371,6 +378,10 @@ $totalCount = array_sum(array_column($statsByCalc, 'count'));
                 $r3 = (float)($rp['risk_3yr'] ?? 0);
                 $resultText = '3r: ' . number_format($r3,1,',',' ') . '%';
                 $riskCls = $r3 < 5 ? 'risk-low' : ($r3 < 15 ? 'risk-moderate' : 'risk-high');
+            } elseif ($key === 'prevent_aha_2024') {
+                $a10 = (float)($rp['ascvd_10yr'] ?? 0);
+                $resultText = 'ASCVD 10r: ' . number_format($a10,1,',',' ') . '%';
+                $riskCls = $a10 < 3 ? 'risk-low' : ($a10 < 5 ? 'risk-moderate' : ($a10 < 10 ? 'risk-high' : 'risk-very-high'));
             } elseif ($key === 'cockcroft_gault') {
                 $resultText = number_format((float)($rp['crcl'] ?? 0),1,',',' ') . ' ml/min';
             } elseif ($key === 'uacr') {

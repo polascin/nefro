@@ -55,6 +55,11 @@ $schemaWebApp = [
         ],
         [
             "@type" => "WebApplication",
+            "name" => "PREVENT — AHA 2024 (kardiovaskulárne riziko)",
+            "url" => $baseUrl . "calculator_prevent.php",
+        ],
+        [
+            "@type" => "WebApplication",
             "name" => "IgAN Prediction Tool (Barbour 2019)",
             "url" => $baseUrl . "calculator_igan.php",
         ],
@@ -201,6 +206,17 @@ $schemaWebApp = [
                         <h3>CKD-PC — Grams 2022 (3-ročné riziko)</h3>
                         <p>Odhad 3-ročného rizika poklesu eGFR o ≥40 % alebo zlyhania obličiek — platné pre všetky štádiá CKD vrátane G1–G2. Rozšírený model s 13+ vstupmi.</p>
                         <a href="calculator_ckdpc.php" class="btn-primary">Otvoriť kalkulačku</a>
+                    </article>
+                </div>
+            </section>
+
+            <section class="features-section" aria-labelledby="cvrisk-calculators-heading">
+                <h2 id="cvrisk-calculators-heading">Kardiovaskulárne riziko</h2>
+                <div class="features-grid calculators-grid">
+                    <article class="feature-card calculator-card">
+                        <h3>PREVENT — AHA 2024</h3>
+                        <p>10- a 30-ročné riziko pre Total CVD, ASCVD a srdcové zlyhávanie (Khan 2024). Nahrádza starý PCE; zahŕňa eGFR a voliteľne UACR, HbA1c a SDI. S interpretáciou rizikovej kategórie a cieľa LDL podľa odporúčaní 2026.</p>
+                        <a href="calculator_prevent.php" class="btn-primary">Otvoriť kalkulačku</a>
                     </article>
                 </div>
             </section>

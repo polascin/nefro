@@ -4013,6 +4013,103 @@ input:disabled + .slider:before {
     padding: 4px 0;
 }
 
+/* PREVENT (AHA 2024) kalkulačka ─────────────────────────── */
+.prevent-result {
+    border-left: 4px solid var(--primary-color);
+}
+
+.prevent-model-note {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin: 4px 0 16px;
+}
+
+.prevent-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin: 16px 0;
+}
+
+.prevent-outcome {
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-secondary);
+}
+
+.prevent-outcome__title {
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.prevent-horizons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.prevent-horizon {
+    text-align: center;
+}
+
+.prevent-horizon__label {
+    display: block;
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.prevent-horizon__value {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+}
+
+.prevent-horizon__value--na {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.prevent-interpretation {
+    margin-top: 20px;
+    padding: 16px;
+    background: rgba(96, 165, 250, 0.05);
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.prevent-interpretation h4 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.prevent-notes {
+    margin: 12px 0 0;
+    padding-left: 20px;
+}
+
+.prevent-notes li {
+    margin: 6px 0;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.prevent-bmi-helper {
+    margin-top: 12px;
+}
+
+.prevent-bmi-helper__action {
+    display: flex;
+    align-items: flex-end;
+}
+
 .link-error {
     color: var(--error-color) !important;
 }
