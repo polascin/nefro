@@ -115,7 +115,7 @@ function smtpSendCommand($socket, string $command, array $expectedCodes, string 
     return ['ok' => $ok, 'code' => $code, 'response' => $response];
 }
 
-function sendViaSmtp(string $toEmail, string $subject, string $messageBody, array $cfg, string $contentType = 'text/plain; charset=UTF-8'): bool {
+function sendViaSmtp(string $toEmail, string $subject, string $messageBody, array $cfg, string $contentType = 'text/plain; charset=UTF-8', ?string $plainTextAlt = null): bool {
     if ($cfg['smtp_host'] === '' || $cfg['smtp_user'] === '' || $cfg['smtp_pass'] === '' || $cfg['from_email'] === '') {
         return false;
     }
@@ -208,17 +208,40 @@ function sendViaSmtp(string $toEmail, string $subject, string $messageBody, arra
     // (max. 75 znakov každý) — jednoduchý base64_encode bez delenia lámal diakritiku.
     $encodedSubject = mb_encode_mimeheader($subject, 'UTF-8', 'B', "\r\n ");
     $encodedFromName = mb_encode_mimeheader($cfg['from_name'], 'UTF-8', 'B', "\r\n ");
+
+    // Multipart/alternative (text/plain + text/html) zlepšuje doručiteľnosť (spam skóre)
+    // a podporuje klientov bez HTML. Aktivuje sa, keď je k HTML obsahu daný aj plaintext.
+    $useMultipart = ($plainTextAlt !== null && stripos($contentType, 'text/html') !== false);
+
     $headers = [
         'From: ' . $encodedFromName . ' <' . $cfg['from_email'] . '>',
         'To: <' . $toEmail . '>',
         'Subject: ' . $encodedSubject,
         'MIME-Version: 1.0',
-        'Content-Type: ' . $contentType,
-        'Content-Transfer-Encoding: 8bit',
-        'Date: ' . date(DATE_RFC2822),
     ];
 
-    $payload = implode("\r\n", $headers) . "\r\n\r\n" . str_replace(["\r\n", "\r"], "\n", $messageBody);
+    if ($useMultipart) {
+        $boundary = '=_nps_' . bin2hex(random_bytes(16));
+        $headers[] = 'Content-Type: multipart/alternative; boundary="' . $boundary . '"';
+        $headers[] = 'Date: ' . date(DATE_RFC2822);
+        // Poradie častí: najprv text/plain, potom text/html (klient zobrazí poslednú, ktorú vie).
+        $body = '--' . $boundary . "\n"
+            . "Content-Type: text/plain; charset=UTF-8\n"
+            . "Content-Transfer-Encoding: 8bit\n\n"
+            . $plainTextAlt . "\n\n"
+            . '--' . $boundary . "\n"
+            . "Content-Type: text/html; charset=UTF-8\n"
+            . "Content-Transfer-Encoding: 8bit\n\n"
+            . $messageBody . "\n\n"
+            . '--' . $boundary . "--\n";
+    } else {
+        $headers[] = 'Content-Type: ' . $contentType;
+        $headers[] = 'Content-Transfer-Encoding: 8bit';
+        $headers[] = 'Date: ' . date(DATE_RFC2822);
+        $body = $messageBody;
+    }
+
+    $payload = implode("\r\n", $headers) . "\r\n\r\n" . str_replace(["\r\n", "\r"], "\n", $body);
     $payload = str_replace("\n", "\r\n", $payload);
     $payload .= "\r\n.\r\n";
 
@@ -280,9 +303,15 @@ function sendVerificationEmail(string $toEmail, string $username, int $userId, s
         . '<p style="margin:0 0 16px;word-break:break-word;"><a href="' . escapeEmailHtml($verifyUrl) . '" style="color:#0b61d1;text-decoration:underline;">' . escapeEmailHtml($verifyUrl) . '</a></p>'
         . '<p style="margin:0;color:#64748b;font-size:14px;line-height:22px;">Platnosť odkazu je 24 hodín.</p>';
     $htmlMessage = renderEmailHtmlLayout($htmlBody, 'Overiť e-mail', $verifyUrl);
+    $plainMessage = "Dobrý deň, " . $displayName . ",\n\n"
+        . "ďakujeme za registráciu v Nefro-projekt Slovensko.\n\n"
+        . "Pre aktiváciu účtu overte svoju e-mailovú adresu otvorením tohto odkazu:\n"
+        . $verifyUrl . "\n\n"
+        . "Platnosť odkazu je 24 hodín.\n\n"
+        . "Nefro-projekt Slovensko";
 
     $cfg = getEmailEnvConfig();
-    if (sendViaSmtp($toEmail, $subject, $htmlMessage, $cfg, 'text/html; charset=UTF-8')) {
+    if (sendViaSmtp($toEmail, $subject, $htmlMessage, $cfg, 'text/html; charset=UTF-8', $plainMessage)) {
         return true;
     }
 
@@ -303,9 +332,15 @@ function sendPasswordResetEmail(string $toEmail, string $username, string $rawTo
         . '<p style="margin:0 0 16px;word-break:break-word;"><a href="' . escapeEmailHtml($resetUrl) . '" style="color:#0b61d1;text-decoration:underline;">' . escapeEmailHtml($resetUrl) . '</a></p>'
         . '<p style="margin:0;color:#64748b;font-size:14px;line-height:22px;">Platnosť odkazu je 60 minút.</p>';
     $htmlMessage = renderEmailHtmlLayout($htmlBody, 'Obnoviť heslo', $resetUrl);
+    $plainMessage = "Dobrý deň, " . $displayName . ",\n\n"
+        . "prijali sme žiadosť o obnovenie hesla pre váš účet v Nefro-projekt Slovensko.\n\n"
+        . "Nové heslo nastavíte otvorením tohto odkazu:\n"
+        . $resetUrl . "\n\n"
+        . "Platnosť odkazu je 60 minút.\n\n"
+        . "Nefro-projekt Slovensko";
 
     $cfg = getEmailEnvConfig();
-    if (sendViaSmtp($toEmail, $subject, $htmlMessage, $cfg, 'text/html; charset=UTF-8')) {
+    if (sendViaSmtp($toEmail, $subject, $htmlMessage, $cfg, 'text/html; charset=UTF-8', $plainMessage)) {
         return true;
     }
 
@@ -383,7 +418,7 @@ function sendAdminNewRegistrationEmail(array $dbUserRow, array $registrationCont
         . '<pre style="margin:0;padding:14px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;white-space:pre-wrap;word-break:break-word;color:#334155;font-size:13px;line-height:21px;">' . escapeEmailHtml($message) . '</pre>';
     $htmlMessage = renderEmailHtmlLayout($htmlBody);
 
-    if (sendViaSmtp($toEmail, $subject, $htmlMessage, $cfg, 'text/html; charset=UTF-8')) {
+    if (sendViaSmtp($toEmail, $subject, $htmlMessage, $cfg, 'text/html; charset=UTF-8', $message)) {
         return true;
     }
 
@@ -431,7 +466,7 @@ function sendUserRegistrationNotificationEmail(string $toEmail, string $username
 
     $htmlMessage = renderEmailHtmlLayout($htmlBody);
 
-    if (sendViaSmtp($toEmail, $subject, $htmlMessage, $cfg, 'text/html; charset=UTF-8')) {
+    if (sendViaSmtp($toEmail, $subject, $htmlMessage, $cfg, 'text/html; charset=UTF-8', $message)) {
         return true;
     }
 
@@ -472,7 +507,7 @@ function sendAccountDeletionConfirmationEmail(string $toEmail, string $username,
     $htmlMessage = renderEmailHtmlLayout($htmlBody, 'Potvrdiť zrušenie účtu', $confirmUrl);
 
     $cfg = getEmailEnvConfig();
-    if (sendViaSmtp($toEmail, $subject, $htmlMessage, $cfg, 'text/html; charset=UTF-8')) {
+    if (sendViaSmtp($toEmail, $subject, $htmlMessage, $cfg, 'text/html; charset=UTF-8', $message)) {
         return true;
     }
 
