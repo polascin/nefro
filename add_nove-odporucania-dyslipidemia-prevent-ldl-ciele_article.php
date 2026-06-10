@@ -28,7 +28,7 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Odporúčania ACC/AHA/ADA pre dyslipidémiu z roku 2026 zavádzajú kalkulátor PREVENT, hodnotenie 10- aj 30-ročného rizika, jasnejšie cieľové hodnoty LDL a väčší dôraz na ApoB, Lp(a) a koronárne kalciové skóre. Pri sekundárnej prevencii sa kľúčovou hodnotou stáva LDL pod 55 mg/dl.',
+    'excerpt'      => 'Odporúčania ACC/AHA/ADA pre dyslipidémiu z roku 2026 zavádzajú kalkulátor PREVENT, hodnotenie 10- aj 30-ročného rizika, jasnejšie cieľové hodnoty LDL a väčší dôraz na ApoB, Lp(a) a koronárne kalciové skóre. Pri sekundárnej prevencii sa kľúčovou hodnotou stáva LDL pod 55 mg/dl (1,4 mmol/l).',
     'content'      => <<<'HTML'
 <p>Nové odporúčania ACC/AHA/ADA pre manažment dyslipidémie z roku 2026 prinášajú viacero prakticky dôležitých zmien. Nejde len o kozmetickú úpravu starých pravidiel. Mení sa spôsob odhadu kardiovaskulárneho rizika, zavádzajú sa jasnejšie rizikové kategórie, viac sa pracuje s celoživotným rizikom a pri vyššom riziku sa cieľové hodnoty LDL cholesterolu posúvajú nižšie.</p>
 
@@ -50,9 +50,9 @@ $articles[] = [
 
 <h3>Nízke riziko: menej ako 3 %</h3>
 
-<p>Pacienti s 10-ročným rizikom pod 3 % sa považujú za nízkorizikových. Ak majú LDL cholesterol pod 160 mg/dl a 30-ročné riziko pod 10 %, základom je poradenstvo o životnom štýle.</p>
+<p>Pacienti s 10-ročným rizikom pod 3 % sa považujú za nízkorizikových. Ak majú LDL cholesterol pod 160 mg/dl (4,1 mmol/l) a 30-ročné riziko pod 10 %, základom je poradenstvo o životnom štýle.</p>
 
-<p>Ak je však LDL v rozmedzí 160 až 189 mg/dl alebo ak je 30-ročné riziko aspoň 10 % vo veku 30 až 50 rokov, stredne intenzívny statín je rozumnou možnosťou. Toto je dôležitý posun. Odporúčania viac myslia na kumulatívnu celoživotnú expozíciu aterogénnym lipoproteínom, nielen na krátkodobé 10-ročné riziko.</p>
+<p>Ak je však LDL v rozmedzí 160 až 189 mg/dl (4,1 až 4,9 mmol/l) alebo ak je 30-ročné riziko aspoň 10 % vo veku 30 až 50 rokov, stredne intenzívny statín je rozumnou možnosťou. Toto je dôležitý posun. Odporúčania viac myslia na kumulatívnu celoživotnú expozíciu aterogénnym lipoproteínom, nielen na krátkodobé 10-ročné riziko.</p>
 
 <h3>Hraničné riziko: 3 až 5 %</h3>
 
@@ -67,17 +67,17 @@ $articles[] = [
   <li>koronárne kalciové skóre.</li>
 </ul>
 
-<p>Ak sa liečba v tejto skupine začne, cieľom je LDL cholesterol pod 100 mg/dl.</p>
+<p>Ak sa liečba v tejto skupine začne, cieľom je LDL cholesterol pod 100 mg/dl (2,6 mmol/l).</p>
 
 <h3>Stredné riziko: 5 až 10 %</h3>
 
 <p>Pacienti s 10-ročným rizikom 5 až 10 % patria do skupiny stredného rizika. U nich sa má zvážiť LDL znižujúca liečba aspoň stredne intenzívnym statínom.</p>
 
-<p>Pri vyššom konci tohto rizikového pásma môže byť vhodný aj vysoko intenzívny statín. Cieľová hodnota LDL cholesterolu je pod 100 mg/dl.</p>
+<p>Pri vyššom konci tohto rizikového pásma môže byť vhodný aj vysoko intenzívny statín. Cieľová hodnota LDL cholesterolu je pod 100 mg/dl (2,6 mmol/l).</p>
 
 <h3>Vysoké riziko: nad 10 %</h3>
 
-<p>Pri 10-ročnom riziku nad 10 % ide podľa nového systému o vysoké riziko. Cieľová hodnota LDL cholesterolu je tu 70 mg/dl alebo menej.</p>
+<p>Pri 10-ročnom riziku nad 10 % ide podľa nového systému o vysoké riziko. Cieľová hodnota LDL cholesterolu je tu 70 mg/dl (1,8 mmol/l) alebo menej.</p>
 
 <p>Ak sa cieľ nedosiahne samotným statínom, je rozumné pridať ezetimib. Tento postup môže na prvý pohľad pôsobiť prísne, ale treba si uvedomiť, že pacienti s rizikom nad 10 % podľa PREVENT by často mali podľa starého PCE kalkulátora riziko nad 20 %.</p>
 
@@ -89,10 +89,10 @@ $articles[] = [
   <li>diabetom,</li>
   <li>chronickou chorobou obličiek štádia 3 alebo 4,</li>
   <li>infekciou HIV,</li>
-  <li>LDL cholesterolom nad 190 mg/dl.</li>
+  <li>LDL cholesterolom nad 190 mg/dl (4,9 mmol/l).</li>
 </ul>
 
-<p>Pri LDL nad 190 mg/dl je cieľom dostať LDL pod 100 mg/dl. Ak má pacient diabetes a viacero rizikových faktorov, cieľ je prísnejší: LDL pod 70 mg/dl.</p>
+<p>Pri LDL nad 190 mg/dl (4,9 mmol/l) je cieľom dostať LDL pod 100 mg/dl (2,6 mmol/l). Ak má pacient diabetes a viacero rizikových faktorov, cieľ je prísnejší: LDL pod 70 mg/dl (1,8 mmol/l).</p>
 
 <p>Pre nefrologickú prax je dôležité, že CKD štádia 3 a 4 zostáva samostatnou rizikovou kategóriou. U týchto pacientov sa nemá rozhodovanie odkladať len preto, že kalkulátor vyjde relatívne priaznivo. CKD samo osebe významne zvyšuje kardiovaskulárne riziko.</p>
 
@@ -120,18 +120,18 @@ $articles[] = [
 
 <ul>
   <li>CAC skóre 0 znamená nízke riziko koronárnej príhody v najbližších približne 5 rokoch. Statín zvyčajne nie je potrebný a vyšetrenie možno zopakovať o 3 až 7 rokov.</li>
-  <li>CAC skóre 1 až 99 znamená, že liečba je rozumná, s cieľom LDL pod 100 mg/dl.</li>
-  <li>CAC skóre 100 až 999 podporuje odporúčanie LDL znižujúcej liečby s cieľom pod 70 mg/dl.</li>
-  <li>CAC skóre nad 1000 môže viesť k úvahe o veľmi prísnom cieli LDL pod 55 mg/dl.</li>
+  <li>CAC skóre 1 až 99 znamená, že liečba je rozumná, s cieľom LDL pod 100 mg/dl (2,6 mmol/l).</li>
+  <li>CAC skóre 100 až 999 podporuje odporúčanie LDL znižujúcej liečby s cieľom pod 70 mg/dl (1,8 mmol/l).</li>
+  <li>CAC skóre nad 1000 môže viesť k úvahe o veľmi prísnom cieli LDL pod 55 mg/dl (1,4 mmol/l).</li>
 </ul>
 
 <p>Tento prístup má výhodu v komunikácii s pacientom. Namiesto abstraktného percenta rizika vidí konkrétny dôkaz aterosklerotického postihnutia koronárnych artérií. Zároveň však treba zvážiť dostupnosť, náklady, radiačnú záťaž a klinickú primeranosť vyšetrenia.</p>
 
-<h2>Sekundárna prevencia: LDL pod 55 mg/dl sa stáva kľúčovou hodnotou</h2>
+<h2>Sekundárna prevencia: LDL pod 55 mg/dl (1,4 mmol/l) sa stáva kľúčovou hodnotou</h2>
 
 <p>V sekundárnej prevencii sú odporúčania výrazne prísnejšie. Ide o pacientov s už prítomným aterosklerotickým kardiovaskulárnym ochorením, napríklad po infarkte myokardu, akútnom koronárnom syndróme, ischemickej cievnej mozgovej príhode alebo s periférnym artériovým ochorením.</p>
 
-<p>Podľa odporúčaní bude väčšina pacientov s anamnézou ASCVD pravdepodobne patriť do veľmi vysokého rizika. Pre nich je cieľová hodnota LDL cholesterolu pod 55 mg/dl.</p>
+<p>Podľa odporúčaní bude väčšina pacientov s anamnézou ASCVD pravdepodobne patriť do veľmi vysokého rizika. Pre nich je cieľová hodnota LDL cholesterolu pod 55 mg/dl (1,4 mmol/l).</p>
 
 <p>To má praktický dôsledok: vysokointenzívny statín často nebude stačiť. Odporúčania preto zdôrazňujú potrebu včas pridávať ďalšie lieky, ak sa cieľ nedosiahne.</p>
 
@@ -158,9 +158,18 @@ $articles[] = [
 
 <p>Nové odporúčania pre dyslipidémiu prinášajú štyri hlavné zmeny: používanie kalkulátora PREVENT, hodnotenie 10-ročného aj 30-ročného rizika, jasnejšie cieľové hodnoty LDL podľa rizika a väčší dôraz na individualizáciu pomocou ApoB, Lp(a) a koronárneho kalciového skóre.</p>
 
-<p>V primárnej prevencii sa rozhodovanie stáva jemnejším. V sekundárnej prevencii sa ciele sprísňujú, pričom LDL pod 55 mg/dl sa stáva kľúčovou hodnotou pre väčšinu pacientov s ASCVD.</p>
+<p>V primárnej prevencii sa rozhodovanie stáva jemnejším. V sekundárnej prevencii sa ciele sprísňujú, pričom LDL pod 55 mg/dl (1,4 mmol/l) sa stáva kľúčovou hodnotou pre väčšinu pacientov s ASCVD.</p>
 
 <p>Najpraktickejšie posolstvo je toto: najskôr správne určiť riziko, potom zvoliť primerane intenzívnu liečbu a následne skutočne kontrolovať, či pacient dosiahol cieľ. Pri vysokom riziku nestačí statín predpísať. Treba sa uistiť, že výsledný LDL zodpovedá riziku pacienta.</p>
+
+<div class="info-box-blue">
+<p><strong>Poznámka — prepočet jednotiek cholesterolu.</strong> Hodnoty v mmol/l uvedené v zátvorkách sú prepočítané z mg/dl a zaokrúhlené na jedno desatinné miesto. Pre cholesterol (LDL, HDL aj celkový cholesterol) platí:</p>
+<ul>
+  <li>mmol/l = mg/dl ÷ 38,67 (čiže mg/dl × 0,02586),</li>
+  <li>mg/dl = mmol/l × 38,67.</li>
+</ul>
+<p>Pre triglyceridy platí odlišný prepočítavací faktor: mmol/l = mg/dl ÷ 88,57 (× 0,01129) a mg/dl = mmol/l × 88,57.</p>
+</div>
 
 <hr>
 
@@ -171,13 +180,17 @@ HTML,
 // ── Vkladanie do databázy ──────────────────────────────────────────────────────
 
 $inserted    = 0;
+$updated     = 0;
 $skipped     = 0;
 $errors      = [];
 $queuedTotal = 0;
 
 $stmt = $pdo->prepare(
-    "INSERT IGNORE INTO articles (title, slug, author, content, excerpt, published_at, is_top, is_published)
-     VALUES (:title, :slug, :author, :content, :excerpt, :published_at, :is_top, 1)"
+    "INSERT INTO articles (title, slug, author, content, excerpt, published_at, is_top, is_published)
+     VALUES (:title, :slug, :author, :content, :excerpt, :published_at, :is_top, 1)
+     ON DUPLICATE KEY UPDATE
+        title = VALUES(title), author = VALUES(author),
+        content = VALUES(content), excerpt = VALUES(excerpt), is_top = VALUES(is_top)"
 );
 
 foreach ($articles as $a) {
@@ -191,7 +204,10 @@ foreach ($articles as $a) {
             'published_at' => $a['published_at'],
             'is_top'       => $a['is_top'],
         ]);
-        if ($stmt->rowCount() > 0) {
+        // rowCount(): 1 = nový INSERT, 2 = UPDATE existujúceho článku, 0 = bez zmeny.
+        // Newsletter avíza posielame LEN pri novom článku (rc === 1), nikdy pri update.
+        $rc = $stmt->rowCount();
+        if ($rc === 1) {
             $inserted++;
             $newId = (int) $pdo->lastInsertId();
             try {
@@ -199,6 +215,8 @@ foreach ($articles as $a) {
             } catch (\Throwable $qe) {
                 error_log('add_article newsletter enqueue error: ' . $qe->getMessage());
             }
+        } elseif ($rc === 2) {
+            $updated++;
         } else {
             $skipped++;
         }
@@ -215,8 +233,8 @@ if (php_sapi_name() === 'cli') {
     echo "──────────────────────────────────────────────────────\n";
     echo "Migrácia článku: " . ($articles[0]['title'] ?? '(bez titulu)') . "\n";
     echo "──────────────────────────────────────────────────────\n";
-    echo "Výsledok: $inserted z $total článkov bolo vložených.\n";
-    echo "Preskočení (slug už existuje): $skipped\n";
+    echo "Výsledok: $inserted vložených, $updated aktualizovaných z $total článkov.\n";
+    echo "Preskočení (bez zmeny):        $skipped\n";
     echo "Zaradených do fronty avíz:     $queuedTotal\n";
     if (!empty($errors)) {
         echo "\nChyby:\n";
@@ -247,7 +265,7 @@ if (php_sapi_name() === 'cli') {
           <?php endif; ?>
 
           <div class="alert <?= $inserted > 0 ? 'alert-success' : 'alert-info' ?>">
-            <p><strong>Výsledok:</strong> <?= $inserted ?> z <?= $total ?> článkov bolo vložených. <?= $skipped ?> preskočených (slug už existuje).</p>
+            <p><strong>Výsledok:</strong> <?= $inserted ?> vložených, <?= $updated ?> aktualizovaných z <?= $total ?> článkov. <?= $skipped ?> bez zmeny.</p>
             <?php if ($queuedTotal > 0): ?>
               <p>Do fronty avíz zaradených: <strong><?= $queuedTotal ?></strong> e-mailov.</p>
             <?php endif; ?>

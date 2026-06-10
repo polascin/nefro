@@ -110,6 +110,14 @@ $articles[] = [
 
 <p>Ak sa tieto výsledky potvrdia aj v ďalších štúdiách a v bežnej klinickej praxi, CGM sa môže stať dôležitým nástrojom individualizovanej starostlivosti o širšiu skupinu pacientov s diabetom 2. typu.</p>
 
+<div class="info-box-blue">
+<p><strong>Poznámka — prepočet jednotiek glukózy.</strong> Hodnota v mmol/l uvedená v zátvorke je prepočítaná z mg/dl a zaokrúhlená na jedno desatinné miesto. Pre glukózu v krvi platí:</p>
+<ul>
+  <li>mmol/l = mg/dl ÷ 18 (čiže mg/dl × 0,0555),</li>
+  <li>mg/dl = mmol/l × 18.</li>
+</ul>
+</div>
+
 <hr>
 
 <p><em><strong>Zdroj:</strong> Medscape, „CGM Monitoring Benefits Extend to Non-Insulin-Using T2D“. <a href="https://www.medscape.com/viewarticle/cgm-monitoring-benefits-extend-non-insulin-using-t2d-2026a1000iz6" target="_blank" rel="noopener noreferrer">medscape.com</a></em></p>
@@ -119,13 +127,17 @@ HTML,
 // ── Vkladanie do databázy ──────────────────────────────────────────────────────
 
 $inserted    = 0;
+$updated     = 0;
 $skipped     = 0;
 $errors      = [];
 $queuedTotal = 0;
 
 $stmt = $pdo->prepare(
-    "INSERT IGNORE INTO articles (title, slug, author, content, excerpt, published_at, is_top, is_published)
-     VALUES (:title, :slug, :author, :content, :excerpt, :published_at, :is_top, 1)"
+    "INSERT INTO articles (title, slug, author, content, excerpt, published_at, is_top, is_published)
+     VALUES (:title, :slug, :author, :content, :excerpt, :published_at, :is_top, 1)
+     ON DUPLICATE KEY UPDATE
+        title = VALUES(title), author = VALUES(author),
+        content = VALUES(content), excerpt = VALUES(excerpt), is_top = VALUES(is_top)"
 );
 
 foreach ($articles as $a) {
@@ -139,7 +151,10 @@ foreach ($articles as $a) {
             'published_at' => $a['published_at'],
             'is_top'       => $a['is_top'],
         ]);
-        if ($stmt->rowCount() > 0) {
+        // rowCount(): 1 = nový INSERT, 2 = UPDATE existujúceho článku, 0 = bez zmeny.
+        // Newsletter avíza posielame LEN pri novom článku (rc === 1), nikdy pri update.
+        $rc = $stmt->rowCount();
+        if ($rc === 1) {
             $inserted++;
             $newId = (int) $pdo->lastInsertId();
             try {
@@ -147,6 +162,8 @@ foreach ($articles as $a) {
             } catch (\Throwable $qe) {
                 error_log('add_article newsletter enqueue error: ' . $qe->getMessage());
             }
+        } elseif ($rc === 2) {
+            $updated++;
         } else {
             $skipped++;
         }
@@ -163,8 +180,8 @@ if (php_sapi_name() === 'cli') {
     echo "──────────────────────────────────────────────────────\n";
     echo "Migrácia článku: " . ($articles[0]['title'] ?? '(bez titulu)') . "\n";
     echo "──────────────────────────────────────────────────────\n";
-    echo "Výsledok: $inserted z $total článkov bolo vložených.\n";
-    echo "Preskočení (slug už existuje): $skipped\n";
+    echo "Výsledok: $inserted vložených, $updated aktualizovaných z $total článkov.\n";
+    echo "Preskočení (bez zmeny):        $skipped\n";
     echo "Zaradených do fronty avíz:     $queuedTotal\n";
     if (!empty($errors)) {
         echo "\nChyby:\n";
@@ -195,7 +212,7 @@ if (php_sapi_name() === 'cli') {
           <?php endif; ?>
 
           <div class="alert <?= $inserted > 0 ? 'alert-success' : 'alert-info' ?>">
-            <p><strong>Výsledok:</strong> <?= $inserted ?> z <?= $total ?> článkov bolo vložených. <?= $skipped ?> preskočených (slug už existuje).</p>
+            <p><strong>Výsledok:</strong> <?= $inserted ?> vložených, <?= $updated ?> aktualizovaných z <?= $total ?> článkov. <?= $skipped ?> bez zmeny.</p>
             <?php if ($queuedTotal > 0): ?>
               <p>Do fronty avíz zaradených: <strong><?= $queuedTotal ?></strong> e-mailov.</p>
             <?php endif; ?>

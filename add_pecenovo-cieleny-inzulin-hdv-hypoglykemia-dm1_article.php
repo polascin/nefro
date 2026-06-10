@@ -57,7 +57,7 @@ $articles[] = [
 
 <p>Medián východiskového HbA1c bol približne 7,3 až 7,4 %. Štúdia mala 12-týždňovú fázu optimalizácie dávok a následne 13-týždňovú udržiavaciu fázu.</p>
 
-<p>Primárny cieľ bol pomerne ambiciózny. Zahŕňal noninferioritu v HbA1c a zároveň lepšie výsledky v parametroch hypoglykémie, najmä pri nočnej hypoglykémii pod 54 mg/dl.</p>
+<p>Primárny cieľ bol pomerne ambiciózny. Zahŕňal noninferioritu v HbA1c a zároveň lepšie výsledky v parametroch hypoglykémie, najmä pri nočnej hypoglykémii pod 54 mg/dl (3,0 mmol/l).</p>
 
 <h2>Glykemická kontrola sa nezhoršila</h2>
 
@@ -74,10 +74,10 @@ $articles[] = [
 <p>Zaujímavejšie boli výsledky v udržiavacej fáze. HDV-lispro dosiahol štatisticky významne lepšie výsledky vo viacerých sekundárnych ukazovateľoch:</p>
 
 <ul>
-  <li>28 % zníženie 24-hodinových epizód hypoglykémie 2. stupňa pod 54 mg/dl,</li>
+  <li>28 % zníženie 24-hodinových epizód hypoglykémie 2. stupňa pod 54 mg/dl (3,0 mmol/l),</li>
   <li>33 % zníženie denných epizód hypoglykémie 2. stupňa,</li>
-  <li>28 % zníženie času stráveného pod 54 mg/dl počas 24 hodín,</li>
-  <li>32 % zníženie denného času pod 54 mg/dl,</li>
+  <li>28 % zníženie času stráveného pod 54 mg/dl (3,0 mmol/l) počas 24 hodín,</li>
+  <li>32 % zníženie denného času pod 54 mg/dl (3,0 mmol/l),</li>
   <li>36 % zníženie predĺžených hypoglykemických epizód.</li>
 </ul>
 
@@ -107,6 +107,14 @@ $articles[] = [
 
 <p>Najrozumnejšia interpretácia je triezva: nejde o prelom potvrdený pre prax, ale o mechanisticky zaujímavý a klinicky relevantný koncept, ktorý si zaslúži veľkú štúdiu fázy 3. Ak sa účinok potvrdí, mohlo by ísť o významný krok k bezpečnejšej inzulínovej liečbe diabetu 1. typu.</p>
 
+<div class="info-box-blue">
+<p><strong>Poznámka — prepočet jednotiek glukózy.</strong> Hodnoty v mmol/l uvedené v zátvorkách sú prepočítané z mg/dl a zaokrúhlené na jedno desatinné miesto. Pre glukózu v krvi platí:</p>
+<ul>
+  <li>mmol/l = mg/dl ÷ 18 (čiže mg/dl × 0,0555),</li>
+  <li>mg/dl = mmol/l × 18.</li>
+</ul>
+</div>
+
 <hr>
 
 <p><em><strong>Zdroj:</strong> Medscape, <em>Liver-Directed Insulin: New Way to Reduce Hypoglycemia?</em> (2026). <a href="https://www.medscape.com/viewarticle/liver-directed-insulin-new-way-reduce-hypoglycemia-2026a1000j57" target="_blank" rel="noopener noreferrer">Link na zdroj</a>.</em></p>
@@ -116,13 +124,17 @@ HTML,
 // ── Vkladanie do databázy ──────────────────────────────────────────────────────
 
 $inserted    = 0;
+$updated     = 0;
 $skipped     = 0;
 $errors      = [];
 $queuedTotal = 0;
 
 $stmt = $pdo->prepare(
-    "INSERT IGNORE INTO articles (title, slug, author, content, excerpt, published_at, is_top, is_published)
-     VALUES (:title, :slug, :author, :content, :excerpt, :published_at, :is_top, 1)"
+    "INSERT INTO articles (title, slug, author, content, excerpt, published_at, is_top, is_published)
+     VALUES (:title, :slug, :author, :content, :excerpt, :published_at, :is_top, 1)
+     ON DUPLICATE KEY UPDATE
+        title = VALUES(title), author = VALUES(author),
+        content = VALUES(content), excerpt = VALUES(excerpt), is_top = VALUES(is_top)"
 );
 
 foreach ($articles as $a) {
@@ -136,7 +148,10 @@ foreach ($articles as $a) {
             'published_at' => $a['published_at'],
             'is_top'       => $a['is_top'],
         ]);
-        if ($stmt->rowCount() > 0) {
+        // rowCount(): 1 = nový INSERT, 2 = UPDATE existujúceho článku, 0 = bez zmeny.
+        // Newsletter avíza posielame LEN pri novom článku (rc === 1), nikdy pri update.
+        $rc = $stmt->rowCount();
+        if ($rc === 1) {
             $inserted++;
             $newId = (int) $pdo->lastInsertId();
             try {
@@ -144,6 +159,8 @@ foreach ($articles as $a) {
             } catch (\Throwable $qe) {
                 error_log('add_article newsletter enqueue error: ' . $qe->getMessage());
             }
+        } elseif ($rc === 2) {
+            $updated++;
         } else {
             $skipped++;
         }
@@ -160,8 +177,8 @@ if (php_sapi_name() === 'cli') {
     echo "──────────────────────────────────────────────────────\n";
     echo "Migrácia článku: " . ($articles[0]['title'] ?? '(bez titulu)') . "\n";
     echo "──────────────────────────────────────────────────────\n";
-    echo "Výsledok: $inserted z $total článkov bolo vložených.\n";
-    echo "Preskočení (slug už existuje): $skipped\n";
+    echo "Výsledok: $inserted vložených, $updated aktualizovaných z $total článkov.\n";
+    echo "Preskočení (bez zmeny):        $skipped\n";
     echo "Zaradených do fronty avíz:     $queuedTotal\n";
     if (!empty($errors)) {
         echo "\nChyby:\n";
@@ -192,7 +209,7 @@ if (php_sapi_name() === 'cli') {
           <?php endif; ?>
 
           <div class="alert <?= $inserted > 0 ? 'alert-success' : 'alert-info' ?>">
-            <p><strong>Výsledok:</strong> <?= $inserted ?> z <?= $total ?> článkov bolo vložených. <?= $skipped ?> preskočených (slug už existuje).</p>
+            <p><strong>Výsledok:</strong> <?= $inserted ?> vložených, <?= $updated ?> aktualizovaných z <?= $total ?> článkov. <?= $skipped ?> bez zmeny.</p>
             <?php if ($queuedTotal > 0): ?>
               <p>Do fronty avíz zaradených: <strong><?= $queuedTotal ?></strong> e-mailov.</p>
             <?php endif; ?>
