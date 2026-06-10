@@ -52,6 +52,12 @@ $urls = [
         'priority'   => '0.8',
     ],
     [
+        'loc'        => $baseUrl . 'calculator_prevent.php',
+        'lastmod'    => _sitemapLastmod('calculator_prevent.php'),
+        'changefreq' => 'monthly',
+        'priority'   => '0.8',
+    ],
+    [
         'loc'        => $baseUrl . 'calculator_igan.php',
         'lastmod'    => _sitemapLastmod('calculator_igan.php'),
         'changefreq' => 'monthly',

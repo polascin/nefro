@@ -40,8 +40,8 @@ function legalInfo(): array
         'jurisdiction'             => 'Slovenskej republiky (EÚ)',
         'supervisoryAuthority'     => 'Úrad na ochranu osobných údajov Slovenskej republiky',
         'supervisoryAuthorityUrl'  => 'https://www.uoou.sk',
-        'effectiveDate'            => '2026-06-03',
-        'version'                  => '2.1',
+        'effectiveDate'            => '2026-06-10',
+        'version'                  => '2.2',
         'consentVersion'           => '2026-06-02',
     ];
 }
@@ -128,6 +128,11 @@ function legalSubprocessors(): array
             'name'     => 'WebSupport, s.r.o. (SK)',
             'purpose'  => 'Webhosting, databáza a SMTP e-mailová služba',
             'transfer' => 'Európska únia (Slovensko)',
+        ],
+        [
+            'name'     => 'Twilio Inc. (USA)',
+            'purpose'  => 'Odosielanie overovacích SMS kódov pri overení telefónneho čísla',
+            'transfer' => 'USA — štandardné zmluvné doložky (SCC)',
         ],
         [
             'name'     => 'Google LLC (USA)',
@@ -248,6 +253,7 @@ function legalStoredItems(): array
 function legalRecentUpdates(): array
 {
     return [
+        'Do zoznamu sprostredkovateľov sme doplnili Twilio Inc. (USA), ktoré odosiela overovacie SMS kódy pri overení telefónneho čísla; prenos do USA je krytý štandardnými zmluvnými doložkami (SCC).',
         'Webové písmo (Inter) sme presunuli na vlastný server — pri jeho načítaní sa už neprenáša žiadny údaj (IP adresa) do Google LLC (USA).',
         'Právne dokumenty sme rozdelili do troch samostatných stránok: Zásady ochrany osobných údajov, Cookie Policy a Podmienky používania.',
         'Doplnili sme prehľad práv podľa regiónu (USA – CCPA/CPRA a GPC, Brazília – LGPD, Ázia, Austrália a Nový Zéland).',

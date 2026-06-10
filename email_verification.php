@@ -44,7 +44,7 @@ function renderEmailHtmlLayout(string $contentHtml, string $actionLabel = '', st
             . escapeEmailHtml($actionLabel) . '</a></p>';
     }
 
-    return '<!doctype html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>'
+    return '<!doctype html><html lang="sk"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>'
         . escapeEmailHtml($brand) . '</title></head><body style="margin:0;padding:0;background:#f4f6f8;color:#111111;font-family:Arial,Helvetica,sans-serif;">'
         . '<table width="100%" cellpadding="0" cellspacing="0" role="presentation"><tr><td align="center" style="padding:24px 12px;">'
         . '<table width="100%" cellpadding="0" cellspacing="0" role="presentation" style="max-width:600px;background:#ffffff;border-radius:16px;overflow:hidden;box-shadow:0 18px 50px rgba(15,23,42,0.08);">'
@@ -163,7 +163,9 @@ function sendViaSmtp(string $toEmail, string $subject, string $messageBody, arra
             return false;
         }
 
-        $cryptoEnabled = @stream_socket_enable_crypto($socket, true, STREAM_CRYPTO_METHOD_TLS_CLIENT);
+        // TLS 1.2+ vynútené — STREAM_CRYPTO_METHOD_TLS_CLIENT povoľuje aj deprecated TLS 1.0/1.1 (RFC 8996)
+        $tlsMethod = STREAM_CRYPTO_METHOD_TLSv1_2_CLIENT | STREAM_CRYPTO_METHOD_TLSv1_3_CLIENT;
+        $cryptoEnabled = @stream_socket_enable_crypto($socket, true, $tlsMethod);
         if ($cryptoEnabled !== true) {
             smtpLogError('starttls_crypto', 'tls_handshake_failed');
             fclose($socket);

@@ -148,9 +148,11 @@ include 'legal_head.php';
                     tretích krajín sa opierame o vhodné záruky podľa čl. 46 GDPR — najmä
                     štandardné zmluvné doložky EÚ (SCC), prípadne rámec EU-US Data Privacy
                     Framework tam, kde sa uplatňuje. Do USA sa — iba po udelení vášho súhlasu —
-                    prenášajú analytické údaje v Google Analytics 4. Webové písmo (Inter) je
-                    hostované priamo na našom serveri, takže pri jeho načítaní sa žiadne
-                    údaje do tretích krajín neprenášajú.
+                    prenášajú analytické údaje v Google Analytics 4. Ak si overujete telefónne
+                    číslo, vaše číslo sa prenáša spoločnosti Twilio Inc. (USA), ktorá odosiela
+                    overovací SMS kód; tento prenos je krytý štandardnými zmluvnými doložkami (SCC).
+                    Webové písmo (Inter) je hostované priamo na našom serveri, takže pri jeho
+                    načítaní sa žiadne údaje do tretích krajín neprenášajú.
                 </p>
 
                 <!-- 6. DOBA UCHOVÁVANIA -->
