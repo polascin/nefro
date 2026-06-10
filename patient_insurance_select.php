@@ -59,7 +59,7 @@ $_baseInsCode    = strtok($_currentInsCode ?: '', '-') ?: '';
             class="form-control"
             aria-label="Zdravotná poisťovňa">
         <option value="">— nevyplnené —</option>
-        <?php foreach ($_insuranceList as $code => $ins): ?>
+        <?php foreach ($_insuranceList as $code => $ins): $code = (string) $code; ?>
             <option value="<?= htmlspecialchars($code) ?>"
                     <?= $_baseInsCode === $code ? 'selected' : '' ?>>
                 <?= htmlspecialchars($code . ' – ' . $ins['skratka'] . ' (' . $ins['nazov'] . ')') ?>
