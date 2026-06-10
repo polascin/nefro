@@ -1,12 +1,12 @@
 <?php
 /**
- * add_tnf-inhibitor-vcasna-perifrna-spondyloartritida-spartacus_article.php
+ * add_tnf-inhibitor-vcasna-periferna-spondyloartritida-spartacus_article.php
  * ════════════════════════════════════════════════════════════════════════════
  * Jednorazový skript na vloženie článku do DB (INSERT IGNORE → idempotentný).
  * Spustenie cez SSH:
  *   ssh -i "$HOME/.ssh/nefro_deploy" -p 26650 \
  *       uid58858@shell.r1.websupport.sk \
- *       "php /data/8/6/868f981d-e598-4e71-b7f5-246f2e180cef/polascin.net/sub/nefro/add_tnf-inhibitor-vcasna-perifrna-spondyloartritida-spartacus_article.php"
+ *       "php /data/8/6/868f981d-e598-4e71-b7f5-246f2e180cef/polascin.net/sub/nefro/add_tnf-inhibitor-vcasna-periferna-spondyloartritida-spartacus_article.php"
  * ════════════════════════════════════════════════════════════════════════════
  */
 
