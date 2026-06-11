@@ -242,7 +242,6 @@ $articles[] = [
   <li>Travere Therapeutics. <em>FDA Approves Sparsentan (FILSPARI) for Focal Segmental Glomerulosclerosis.</em> NephCure Foundation, apríl 2026. <a href="https://nephcure.org/fda-approves-sparsentan-for-fsgs-marking-a-landmark-achievement-for-patients-living-with-rare-kidney-disease/" target="_blank" rel="noopener noreferrer">nephcure.org</a></li>
   <li>Rheault MN et al. <em>Sparsentan versus Irbesartan in Focal Segmental Glomerulosclerosis (DUPLEX).</em> New England Journal of Medicine. <a href="https://www.nejm.org/doi/full/10.1056/NEJMoa2308550" target="_blank" rel="noopener noreferrer">nejm.org</a></li>
   <li><em>UCSF FSGS Clinical Trials 2026.</em> <a href="https://clinicaltrials.ucsf.edu/focal-segmental-glomerulosclerosis" target="_blank" rel="noopener noreferrer">clinicaltrials.ucsf.edu</a></li>
-  <li><em>Focal Segmental Glomerulosclerosis Clinical Trials – As of March 2026.</em> Rare Disease Advisor. <a href="https://www.rarediseaseadvisor.com/hcp-resource/focal-segmental-glomerulosclerosis-clinical-trials/" target="_blank" rel="noopener noreferrer">rarediseaseadvisor.com</a></li>
   <li><em>Anti-nephrin autoantibodies in post-transplant recurrent FSGS.</em> PubMed Central (2026). <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13090191/" target="_blank" rel="noopener noreferrer">pmc.ncbi.nlm.nih.gov</a></li>
   <li><em>NephMadness 2025: Anti-Nephrin Antibodies.</em> AJKD Blog (2025). <a href="https://ajkdblog.org/2025/04/07/nephmadness-2025-anti-nephrin-antibodies-the-breakthrough-that-will-transform-minimal-change-disease-management/" target="_blank" rel="noopener noreferrer">ajkdblog.org</a></li>
   <li><em>Design and Rationale of the Phase 2 Baricitinib (JUSTICE) Study for APOL1-Associated Kidney Disease.</em> PMC. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11403079/" target="_blank" rel="noopener noreferrer">pmc.ncbi.nlm.nih.gov</a></li>
@@ -267,13 +266,17 @@ HTML,
 // ── Vkladanie do databázy ──────────────────────────────────────────────────────
 
 $inserted    = 0;
+$updated     = 0;
 $skipped     = 0;
 $errors      = [];
 $queuedTotal = 0;
 
 $stmt = $pdo->prepare(
-    "INSERT IGNORE INTO articles (title, slug, author, content, excerpt, published_at, is_top, is_published)
-     VALUES (:title, :slug, :author, :content, :excerpt, :published_at, :is_top, 1)"
+    "INSERT INTO articles (title, slug, author, content, excerpt, published_at, is_top, is_published)
+     VALUES (:title, :slug, :author, :content, :excerpt, :published_at, :is_top, 1)
+     ON DUPLICATE KEY UPDATE
+        title = VALUES(title), author = VALUES(author),
+        content = VALUES(content), excerpt = VALUES(excerpt), is_top = VALUES(is_top)"
 );
 
 foreach ($articles as $a) {
@@ -287,7 +290,10 @@ foreach ($articles as $a) {
             'published_at' => $a['published_at'],
             'is_top'       => $a['is_top'],
         ]);
-        if ($stmt->rowCount() > 0) {
+        // rowCount(): 1 = nový INSERT, 2 = UPDATE existujúceho článku, 0 = bez zmeny.
+        // Newsletter avíza posielame LEN pri novom článku (rc === 1), nikdy pri update.
+        $rc = $stmt->rowCount();
+        if ($rc === 1) {
             $inserted++;
             $newId = (int) $pdo->lastInsertId();
             try {
@@ -295,6 +301,8 @@ foreach ($articles as $a) {
             } catch (\Throwable $qe) {
                 error_log('add_article newsletter enqueue error: ' . $qe->getMessage());
             }
+        } elseif ($rc === 2) {
+            $updated++;
         } else {
             $skipped++;
         }
@@ -311,8 +319,8 @@ if (php_sapi_name() === 'cli') {
     echo "──────────────────────────────────────────────────────\n";
     echo "Migrácia článku: " . ($articles[0]['title'] ?? '(bez titulu)') . "\n";
     echo "──────────────────────────────────────────────────────\n";
-    echo "Výsledok: $inserted z $total článkov bolo vložených.\n";
-    echo "Preskočení (slug už existuje): $skipped\n";
+    echo "Výsledok: $inserted vložených, $updated aktualizovaných z $total článkov.\n";
+    echo "Preskočení (bez zmeny):        $skipped\n";
     echo "Zaradených do fronty avíz:     $queuedTotal\n";
     if (!empty($errors)) {
         echo "\nChyby:\n";
