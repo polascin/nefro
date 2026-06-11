@@ -525,6 +525,7 @@ if ($article) {
         <h3>Pacientske organizácie</h3>
         <ul class="expandable-list" data-limit="10">
           <li><a href="https://sdat.sk/" target="_blank" rel="noopener noreferrer">Slovensko (SDaT)</a></li>
+          <li><a href="https://www.zds.sk/" target="_blank" rel="noopener noreferrer">Slovensko (Zväz diabetikov Slovenska)</a></li>
           <li><a href="https://www.ledviny.cz/" target="_blank" rel="noopener noreferrer">Česko (Společnost RTCH)</a></li>
           <li><a href="https://www.kidney.org/" target="_blank" rel="noopener noreferrer">USA (NKF)</a></li>
           <li><a href="https://kidney.ca/" target="_blank" rel="noopener noreferrer">Kanada (Kidney Foundation)</a></li>
