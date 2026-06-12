@@ -33,8 +33,82 @@ $profileDeleted  = 0;
 $avatarDeleted   = 0;
 $filesDeleted    = 0;
 $laDeleted       = 0;
+$taDeleted       = 0;
 $flDeleted       = 0;
 $accessDeleted   = 0;
+$passwordResetDeleted = 0;
+$deletionTokenDeleted = 0;
+$accountAuditDeleted = 0;
+$adminAuditDeleted = 0;
+$fallbackAccessDeleted = 0;
+$fallbackDeletionDeleted = 0;
+
+/**
+ * Vyčistí riadky staršie než cutoff z tab-delimited fallback logu.
+ * Prvých 19 znakov každého riadka musí byť dátum Y-m-d H:i:s.
+ */
+function cleanupTimestampedLogFile(
+    string $path,
+    int $cutoffTimestamp,
+    array &$errors,
+    bool $stripAccessLogQueries = false
+): int
+{
+    if (!is_file($path)) {
+        return 0;
+    }
+
+    $handle = @fopen($path, 'c+');
+    if ($handle === false) {
+        $errors[] = "Nepodarilo sa otvoriť log: {$path}";
+        return 0;
+    }
+
+    $deleted = 0;
+    try {
+        if (!flock($handle, LOCK_EX)) {
+            $errors[] = "Nepodarilo sa zamknúť log: {$path}";
+            return 0;
+        }
+
+        rewind($handle);
+        $contents = stream_get_contents($handle);
+        $lines = $contents === false || $contents === ''
+            ? []
+            : preg_split('/(?<=\n)/', $contents, -1, PREG_SPLIT_NO_EMPTY);
+        $kept = [];
+
+        foreach ($lines ?: [] as $line) {
+            $timestamp = strtotime(substr($line, 0, 19));
+            if ($timestamp !== false && $timestamp < $cutoffTimestamp) {
+                $deleted++;
+                continue;
+            }
+            if ($stripAccessLogQueries) {
+                $lineEnding = str_ends_with($line, "\r\n") ? "\r\n" : (str_ends_with($line, "\n") ? "\n" : '');
+                $fields = explode("\t", rtrim($line, "\r\n"));
+                if (count($fields) >= 9) {
+                    $fields[3] = explode('?', $fields[3], 2)[0];
+                    $fields[4] = '';
+                    $fields[8] = explode('?', $fields[8], 2)[0];
+                    $line = implode("\t", $fields) . $lineEnding;
+                }
+            }
+            $kept[] = $line;
+        }
+
+        rewind($handle);
+        if (!ftruncate($handle, 0) || fwrite($handle, implode('', $kept)) === false) {
+            $errors[] = "Nepodarilo sa prepísať log: {$path}";
+        }
+        fflush($handle);
+        flock($handle, LOCK_UN);
+    } finally {
+        fclose($handle);
+    }
+
+    return $deleted;
+}
 
 try {
     // 1. Zmaž staré záznamy z histórie profilov
@@ -74,12 +148,18 @@ try {
     $delStmt->execute(['days' => $avatarRetentionDays]);
     $avatarDeleted = $delStmt->rowCount();
 
-    // 3. Vyčisti expirované IP bloky z login_attempts (staršie ako 1 deň po expiráii)
+    // 3. Vyčisti staré bezpečnostné a auditné záznamy
     $laStmt = $pdo->prepare(
-        "DELETE FROM login_attempts WHERE blocked_until IS NOT NULL AND blocked_until < DATE_SUB(NOW(), INTERVAL 1 DAY)"
+        "DELETE FROM login_attempts WHERE last_attempt < DATE_SUB(NOW(), INTERVAL :days DAY)"
     );
-    $laStmt->execute();
+    $laStmt->execute(['days' => $accessLogRetentionDays]);
     $laDeleted = $laStmt->rowCount();
+
+    $taStmt = $pdo->prepare(
+        "DELETE FROM totp_attempts WHERE last_attempt < DATE_SUB(NOW(), INTERVAL :days DAY)"
+    );
+    $taStmt->execute(['days' => $accessLogRetentionDays]);
+    $taDeleted = $taStmt->rowCount();
 
     $flStmt = $pdo->prepare(
         "DELETE FROM form_rate_limit WHERE last_attempt IS NOT NULL AND last_attempt < DATE_SUB(NOW(), INTERVAL :days DAY)"
@@ -93,17 +173,63 @@ try {
     $alStmt->execute(['days' => $accessLogRetentionDays]);
     $accessDeleted = $alStmt->rowCount();
 
+    $prStmt = $pdo->prepare(
+        "DELETE FROM password_resets
+         WHERE expires_at < NOW()
+            OR (used_at IS NOT NULL AND used_at < DATE_SUB(NOW(), INTERVAL :days DAY))"
+    );
+    $prStmt->execute(['days' => $accessLogRetentionDays]);
+    $passwordResetDeleted = $prStmt->rowCount();
+
+    $dtStmt = $pdo->prepare("DELETE FROM account_deletion_tokens WHERE expires_at < NOW()");
+    $dtStmt->execute();
+    $deletionTokenDeleted = $dtStmt->rowCount();
+
+    $aaStmt = $pdo->prepare(
+        "DELETE FROM account_deletion_log WHERE created_at < DATE_SUB(NOW(), INTERVAL :days DAY)"
+    );
+    $aaStmt->execute(['days' => $accessLogRetentionDays]);
+    $accountAuditDeleted = $aaStmt->rowCount();
+
+    $adminStmt = $pdo->prepare(
+        "DELETE FROM admin_users_notice_audit WHERE created_at < DATE_SUB(NOW(), INTERVAL :days DAY)"
+    );
+    $adminStmt->execute(['days' => $accessLogRetentionDays]);
+    $adminAuditDeleted = $adminStmt->rowCount();
+
 } catch (\PDOException $e) {
     $errors[] = "Databázová chyba: " . $e->getMessage();
+}
+
+$fallbackCutoff = strtotime("-{$accessLogRetentionDays} days");
+if ($fallbackCutoff !== false) {
+    $fallbackAccessDeleted = cleanupTimestampedLogFile(
+        __DIR__ . '/private/logs/access.log',
+        $fallbackCutoff,
+        $errors,
+        true
+    );
+    $fallbackDeletionDeleted = cleanupTimestampedLogFile(
+        __DIR__ . '/private/logs/account_deletions.log',
+        $fallbackCutoff,
+        $errors
+    );
 }
 
 echo "Výsledky:\n";
 echo "  Zmaz. záznamy z histórie profilov:  {$profileDeleted}\n";
 echo "  Zmaz. záznamy z histórie avatarov:  {$avatarDeleted}\n";
 echo "  Zmazané archívne súbory:            {$filesDeleted}\n";
-echo "  Vyčistené expirované IP záznamy:    {$laDeleted}\n";
+echo "  Vyčistené login rate-limit záznamy: {$laDeleted}\n";
+echo "  Vyčistené 2FA rate-limit záznamy:   {$taDeleted}\n";
 echo "  Vyčistené staré rate-limit záznamy: {$flDeleted}\n";
 echo "  Vyčistené staré access logy:        {$accessDeleted}\n";
+echo "  Vyčistené password reset tokeny:    {$passwordResetDeleted}\n";
+echo "  Vyčistené account deletion tokeny:  {$deletionTokenDeleted}\n";
+echo "  Vyčistené account deletion audity:  {$accountAuditDeleted}\n";
+echo "  Vyčistené admin export audity:      {$adminAuditDeleted}\n";
+echo "  Vyčistené fallback access logy:     {$fallbackAccessDeleted}\n";
+echo "  Vyčistené fallback deletion logy:   {$fallbackDeletionDeleted}\n";
 
 if (!empty($errors)) {
     echo "\nUpozornenia:\n";

@@ -198,6 +198,74 @@ function getAppBaseUrl(): string {
 }
 
 /**
+ * Vráti 32-bajtový aplikačný kľúč pre šifrovanie a pseudonymizáciu dát.
+ */
+function getAppDataProtectionKey(): string {
+    static $key = null;
+
+    if ($key !== null) {
+        return $key;
+    }
+
+    try {
+        $env = loadAppConfig();
+    } catch (\RuntimeException $e) {
+        $env = [];
+        error_log('Data protection key config loading failed: ' . $e->getMessage());
+    }
+
+    $rawKey = '';
+    $candidates = [
+        (string) ($env['DATA_PROTECTION_KEY'] ?? getenv('DATA_PROTECTION_KEY') ?: ''),
+        (string) ($env['APP_KEY'] ?? getenv('APP_KEY') ?: ''),
+        (string) ($env['APP_SECRET'] ?? getenv('APP_SECRET') ?: ''),
+        (string) ($env['NEWSLETTER_UNSUBSCRIBE_SECRET'] ?? getenv('NEWSLETTER_UNSUBSCRIBE_SECRET') ?: ''),
+    ];
+    foreach ($candidates as $candidate) {
+        $candidate = trim($candidate);
+        if ($candidate !== '') {
+            $rawKey = $candidate;
+            break;
+        }
+    }
+
+    if ($rawKey === '') {
+        $keyDir = __DIR__ . DIRECTORY_SEPARATOR . 'private';
+        $keyPath = $keyDir . DIRECTORY_SEPARATOR . 'data_protection.key';
+        if (!is_dir($keyDir) && !@mkdir($keyDir, 0750, true) && !is_dir($keyDir)) {
+            throw new \RuntimeException('DATA_PROTECTION_KEY is not configured and the private key directory cannot be created.');
+        }
+
+        if (is_file($keyPath)) {
+            $rawKey = trim((string) @file_get_contents($keyPath));
+        } else {
+            $generatedKey = base64_encode(random_bytes(32));
+            $handle = @fopen($keyPath, 'x');
+            if ($handle !== false) {
+                if (fwrite($handle, $generatedKey . PHP_EOL) === false) {
+                    fclose($handle);
+                    @unlink($keyPath);
+                    throw new \RuntimeException('Generated data protection key could not be stored.');
+                }
+                fclose($handle);
+                @chmod($keyPath, 0600);
+                $rawKey = $generatedKey;
+            } elseif (is_file($keyPath)) {
+                // Iný súbežný request vytvoril kľúč medzi kontrolou a fopen().
+                $rawKey = trim((string) @file_get_contents($keyPath));
+            }
+        }
+
+        if ($rawKey === '') {
+            throw new \RuntimeException('DATA_PROTECTION_KEY is not configured and no persistent fallback key is available.');
+        }
+    }
+
+    $key = hash('sha256', $rawKey, true);
+    return $key;
+}
+
+/**
  * Centrálna funkcia na získanie klientovej IP adresy.
  * Rešpektuje TRUST_PROXY_HEADERS — dostupná aj v endpoint súboroch bez auth.php.
  */

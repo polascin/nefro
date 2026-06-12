@@ -15,8 +15,10 @@ Pre produkciu na hostingu pouzi odporucane umiestnenie mimo webroot, napr. `../p
 Pre podpisovanie odhlasovacich odkazov z newslettera nastav aj:
 
 - `NEWSLETTER_UNSUBSCRIBE_SECRET=...` (dlhy nahodny retazec)
+- `DATA_PROTECTION_KEY=...` (dlhy nahodny retazec pre sifrovanie 2FA a pseudonymizaciu URL)
 
-Ak nie je nastavena, aplikacia pouzije fallback (`APP_KEY`, `APP_SECRET`, `DB_PASS`, `SMTP_PASS`), co je funkcne, ale samostatny secret je odporucany.
+Pre oba uceli moze aplikacia pouzit fallback `APP_KEY` alebo `APP_SECRET`; samostatne kluce su odporucane.
+Ak ziaden data-protection kluc nie je nastaveny, aplikacia jednorazovo vytvori `private/data_protection.key`. Tento subor musi ostat sukromny a musi byt zahrnuty v zalohach, inak nebude mozne desifrovat existujuce 2FA tajomstva.
 
 ## Smoke Test: Prihlásenie
 
@@ -65,7 +67,7 @@ Pri publikovaní článku v administrácii sa e-mailové novinky zapisujú do fr
 	- overený e-mail (`email_verified_at` nie je `NULL`)
 - SMS sa v tomto procese nepoužíva.
 - Každý newsletter obsahuje na konci jedinečný odkaz na odhlásenie odberu.
-- Klik na odkaz nastaví používateľovi `newsletter_consent = 0` a zruší čakajúce položky vo fronte (`pending`/`failed`).
+- Odkaz otvorí potvrdzovací formulár; až CSRF-chránený POST nastaví `newsletter_consent = 0` a zruší čakajúce položky vo fronte (`pending`/`failed`).
 
 ### Spustenie workeru
 

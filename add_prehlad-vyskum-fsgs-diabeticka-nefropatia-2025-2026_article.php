@@ -12,6 +12,7 @@
 if (php_sapi_name() !== 'cli') {
     require_once __DIR__ . '/auth.php';
     requireAdmin();
+    requireAdminMutationConfirmation('Vložiť alebo aktualizovať článok');
 }
 require_once __DIR__ . '/db_config.php';
 require_once __DIR__ . '/newsletter_notifications.php';

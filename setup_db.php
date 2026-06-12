@@ -6,6 +6,7 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__) && php_sapi_name() !==
     exit("Prístup odmietnutý.");
 }
 require_once __DIR__ . '/db_config.php';
+require_once __DIR__ . '/totp.php';
 
 $cliOut = static function (string $s): void {
     if (php_sapi_name() === 'cli') {
@@ -177,6 +178,43 @@ try {
         $cliOut("Migrácia: totp_last_counter pridané.\n");
     }
 
+    // ── Migrácia: plaintext TOTP tajomstvá na šifrovaný envelope ────────────
+    $legacyTotpStmt = $pdo->prepare(
+        "SELECT id, totp_secret, totp_backup_codes
+         FROM users
+         WHERE totp_enabled = 1
+           AND totp_secret IS NOT NULL
+           AND totp_secret <> ''
+           AND totp_secret <> :marker"
+    );
+    $legacyTotpStmt->execute(['marker' => TOTP_ENCRYPTED_MARKER]);
+    $legacyTotpRows = $legacyTotpStmt->fetchAll();
+    $migrateTotpStmt = $pdo->prepare(
+        "UPDATE users SET totp_secret = :marker, totp_backup_codes = :storage WHERE id = :id"
+    );
+    $migratedTotpCount = 0;
+    foreach ($legacyTotpRows as $legacyTotpRow) {
+        try {
+            $legacyCodes = json_decode((string) ($legacyTotpRow['totp_backup_codes'] ?? ''), true);
+            $storage = encodeTotpStorage(
+                (string) $legacyTotpRow['totp_secret'],
+                is_array($legacyCodes) && array_is_list($legacyCodes) ? $legacyCodes : []
+            );
+            $migrateTotpStmt->execute([
+                'marker' => $storage['secret_field'],
+                'storage' => $storage['backup_json'],
+                'id' => (int) $legacyTotpRow['id'],
+            ]);
+            $migratedTotpCount += $migrateTotpStmt->rowCount();
+        } catch (\RuntimeException $e) {
+            error_log('TOTP migration skipped user_id=' . (int) $legacyTotpRow['id'] . ': ' . $e->getMessage());
+            $cliOut("Upozornenie: TOTP tajomstvo user_id=" . (int) $legacyTotpRow['id'] . " sa nepodarilo migrovať.\n");
+        }
+    }
+    if ($migratedTotpCount > 0) {
+        $cliOut("Migrácia: {$migratedTotpCount} TOTP tajomstiev zašifrovaných.\n");
+    }
+
     // Pri prvom zavedení stĺpca považujeme existujúce účty za overené,
     // aby sa neblokovali produkčné prístupy.
     if ($emailVerifiedAtAdded) {
@@ -270,6 +308,24 @@ try {
         CONSTRAINT fk_access_logs_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE SET NULL
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";
     $pdo->exec($accessLogsSql);
+
+    // Staršie access logy mohli obsahovať tokeny alebo osobné údaje v query stringu.
+    // Konzervatívne z nich odstránime všetky historické query parametre.
+    $historicalAccessScrubbed = $pdo->exec(
+        "UPDATE access_logs
+         SET request_uri = SUBSTRING_INDEX(request_uri, '?', 1),
+             query_string = CASE WHEN query_string IS NULL THEN NULL ELSE '' END,
+             referer = CASE
+                 WHEN referer IS NULL THEN NULL
+                 ELSE SUBSTRING_INDEX(referer, '?', 1)
+             END
+         WHERE request_uri LIKE '%?%'
+            OR COALESCE(query_string, '') <> ''
+            OR COALESCE(referer, '') LIKE '%?%'"
+    );
+    if ((int) $historicalAccessScrubbed > 0) {
+        $cliOut("Migrácia: {$historicalAccessScrubbed} historických access logov redigovaných.\n");
+    }
 
     $adminExportsAuditSql = "CREATE TABLE IF NOT EXISTS admin_users_notice_audit (
         id BIGINT AUTO_INCREMENT PRIMARY KEY,

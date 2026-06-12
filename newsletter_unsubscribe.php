@@ -6,16 +6,21 @@ require_once __DIR__ . '/newsletter_notifications.php';
 
 $status = 'error';
 $message = 'Neplatný alebo neúplný odhlasovací odkaz.';
+$showConfirmation = false;
+$isPost = strtoupper((string) ($_SERVER['REQUEST_METHOD'] ?? 'GET')) === 'POST';
+$request = $isPost ? $_POST : $_GET;
 
-$uid = (int) ($_GET['uid'] ?? 0);
-$expiresAt = (int) ($_GET['exp'] ?? 0);
-$signature = trim((string) ($_GET['sig'] ?? ''));
+$uid = (int) ($request['uid'] ?? 0);
+$expiresAt = (int) ($request['exp'] ?? 0);
+$signature = trim((string) ($request['sig'] ?? ''));
 
 // Anonymný odberateľ (newsletter_subscribers)
-$subId    = (int) ($_GET['sub'] ?? 0);
-$subToken = trim((string) ($_GET['token'] ?? ''));
+$subId    = (int) ($request['sub'] ?? 0);
+$subToken = trim((string) ($request['token'] ?? ''));
 
-if ($subId > 0 && $expiresAt > 0 && $signature !== '') {
+if ($isPost && !validateCsrfToken((string) ($_POST['csrf_token'] ?? ''))) {
+    $message = 'Neplatný CSRF token. Otvorte odhlasovací odkaz znova.';
+} elseif ($subId > 0 && $expiresAt > 0 && $signature !== '') {
     // Nový HMAC odhlasovací odkaz (bez DB tokenu)
     try {
         $stmt = $pdo->prepare(
@@ -31,6 +36,10 @@ if ($subId > 0 && $expiresAt > 0 && $signature !== '') {
         } elseif ($sub['unsubscribed_at'] !== null) {
             $status  = 'success';
             $message = 'Odber noviniek je už odhlásený.';
+        } elseif (!$isPost) {
+            $status = 'confirm';
+            $message = 'Potvrďte, že chcete túto e-mailovú adresu odhlásiť z odberu noviniek.';
+            $showConfirmation = true;
         } else {
             $pdo->beginTransaction();
             $pdo->prepare(
@@ -69,6 +78,10 @@ if ($subId > 0 && $expiresAt > 0 && $signature !== '') {
         } elseif ($sub['unsubscribed_at'] !== null) {
             $status  = 'success';
             $message = 'Odber noviniek je už odhlásený.';
+        } elseif (!$isPost) {
+            $status = 'confirm';
+            $message = 'Potvrďte, že chcete túto e-mailovú adresu odhlásiť z odberu noviniek.';
+            $showConfirmation = true;
         } else {
             $pdo->beginTransaction();
             $pdo->prepare(
@@ -111,6 +124,10 @@ if ($subId > 0 && $expiresAt > 0 && $signature !== '') {
         } elseif ((int) ($user['newsletter_consent'] ?? 0) !== 1) {
             $status = 'success';
             $message = 'Odber noviniek je už odhlásený.';
+        } elseif (!$isPost) {
+            $status = 'confirm';
+            $message = 'Potvrďte, že chcete túto e-mailovú adresu odhlásiť z odberu noviniek.';
+            $showConfirmation = true;
         } else {
             $pdo->beginTransaction();
 
@@ -144,9 +161,13 @@ if ($subId > 0 && $expiresAt > 0 && $signature !== '') {
         error_log('Newsletter unsubscribe DB error: ' . $e->getMessage());
         $message = 'Pri odhlásení odberu došlo k chybe. Skúste to neskôr.';
     }
-} // end elseif registered user
+}
 
-$pageClass = $status === 'success' ? 'alert-success' : 'alert-error';
+$pageClass = match ($status) {
+    'success' => 'alert-success',
+    'confirm' => 'alert-success',
+    default => 'alert-error',
+};
 ?>
 <!DOCTYPE html>
 <html lang="sk">
@@ -174,6 +195,20 @@ $pageClass = $status === 'success' ? 'alert-success' : 'alert-error';
             <div class="alert <?= htmlspecialchars($pageClass, ENT_QUOTES) ?>">
                 <p><?= htmlspecialchars($message) ?></p>
             </div>
+            <?php if ($showConfirmation): ?>
+                <form method="POST" action="newsletter_unsubscribe.php">
+                    <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
+                    <?php if ($uid > 0): ?><input type="hidden" name="uid" value="<?= $uid ?>"><?php endif; ?>
+                    <?php if ($subId > 0): ?><input type="hidden" name="sub" value="<?= $subId ?>"><?php endif; ?>
+                    <?php if ($expiresAt > 0): ?><input type="hidden" name="exp" value="<?= $expiresAt ?>"><?php endif; ?>
+                    <?php if ($signature !== ''): ?><input type="hidden" name="sig" value="<?= htmlspecialchars($signature) ?>"><?php endif; ?>
+                    <?php if ($subToken !== ''): ?><input type="hidden" name="token" value="<?= htmlspecialchars($subToken) ?>"><?php endif; ?>
+                    <div class="form-actions">
+                        <button type="submit" class="btn-danger">Potvrdiť odhlásenie</button>
+                        <a href="index.php" class="btn-secondary">Ponechať odber</a>
+                    </div>
+                </form>
+            <?php endif; ?>
             <div class="auth-links auth-links--spaced">
                 <p>
                     <a href="index.php">Prejsť na domovskú stránku</a>

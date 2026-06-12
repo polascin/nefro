@@ -559,7 +559,7 @@ if (!function_exists('processNlSubQueue')) {
                 . '<p style="margin:0 0 16px;"><a href="' . $articleUrlEsc . '" style="color:#1d4ed8;text-decoration:none;font-weight:600;">Prečítajte si článok</a></p>'
                 . $excerptHtml
                 . '<p style="margin:24px 0 16px;color:#475569;line-height:22px;">Tento e-mail ste dostali, pretože ste prihlásení na odber noviniek.<br>'
-                . 'Ak už nechcete dostávať novinky, odhláste sa jedným klikom:<br>'
+                . 'Ak už nechcete dostávať novinky, otvorte odkaz a potvrďte odhlásenie:<br>'
                 . '<a href="' . $unsubscribeUrlEsc . '" style="color:#1d4ed8;text-decoration:underline;">Odhlásiť sa</a></p>';
 
             $message = renderEmailHtmlLayout($messageBody, 'Zobraziť článok', $articleUrl);
@@ -746,7 +746,7 @@ if (!function_exists('processArticleNewsletterQueue')) {
                 . $excerptHtml
                 . '<p style="margin:24px 0 16px;color:#475569;line-height:22px;">Tento e-mail ste dostali, pretože máte povolené zasielanie noviniek.<br>'
                 . 'Nastavenie môžete zmeniť vo svojom profile.</p>'
-                . '<p style="margin:0 0 16px;color:#475569;line-height:22px;">Ak už nechcete dostávať novinky, odhláste sa jedným klikom:<br>'
+                . '<p style="margin:0 0 16px;color:#475569;line-height:22px;">Ak už nechcete dostávať novinky, otvorte odkaz a potvrďte odhlásenie:<br>'
                 . '<a href="' . $unsubscribeUrlEscaped . '" style="color:#1d4ed8;text-decoration:underline;">Odhlásiť sa</a></p>';
             $message = renderEmailHtmlLayout($messageBody, 'Zobraziť článok', $articleUrl);
 
@@ -933,7 +933,7 @@ if (!function_exists('sendWeeklyNewsletterDigest')) {
                 . '<p style="margin:0 0 8px;">' . $intro . '</p>'
                 . $articlesHtml
                 . '<p style="margin:24px 0 16px;color:#475569;line-height:22px;">Tento prehľad ste dostali, pretože odoberáte novinky z webu Nefro-projekt Slovensko.<br>'
-                . 'Ak už nechcete dostávať novinky, odhláste sa jedným klikom:<br>'
+                . 'Ak už nechcete dostávať novinky, otvorte odkaz a potvrďte odhlásenie:<br>'
                 . '<a href="' . $unsubEsc . '" style="color:#1d4ed8;text-decoration:underline;">Odhlásiť sa</a></p>';
             $message = renderEmailHtmlLayout($body, 'Zobraziť všetky články', getAppBaseUrl());
 

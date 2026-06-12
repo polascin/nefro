@@ -39,6 +39,8 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
         $userId   = (int) $deletionRequest['user_id'];
         $clientIp = getClientIpAddress();
         $userAgent = mb_substr($_SERVER['HTTP_USER_AGENT'] ?? '', 0, 500);
+        $avatarFilesToDelete = [];
+        $avatarArchiveDir = null;
 
         try {
             $pdo->beginTransaction();
@@ -89,7 +91,8 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 ':had_avatar'     => empty($deletionRequest['avatar_path']) ? 0 : 1,
             ]);
 
-            // Vymazanie súborov avatara
+            // Cesty k avatarom pripravíme v transakcii, ale súbory zmažeme až po commite.
+            // Rollback tak nikdy nenechá existujúci účet bez avatarov.
             $avatarPath = $deletionRequest['avatar_path'] ?? null;
             if (!empty($avatarPath)) {
                 $uploadsRoot = realpath(__DIR__ . '/uploads/avatars');
@@ -98,17 +101,17 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     && str_starts_with($candidate, $uploadsRoot . DIRECTORY_SEPARATOR)
                     && is_file($candidate)
                 ) {
-                    @unlink($candidate);
+                    $avatarFilesToDelete[] = $candidate;
                 }
             }
             $archiveDir = realpath(__DIR__ . '/uploads/avatars/archive/' . $userId);
             if ($archiveDir !== false && is_dir($archiveDir)) {
                 foreach (glob($archiveDir . '/*') as $archFile) {
                     if (is_file($archFile)) {
-                        @unlink($archFile);
+                        $avatarFilesToDelete[] = $archFile;
                     }
                 }
-                @rmdir($archiveDir);
+                $avatarArchiveDir = $archiveDir;
             }
 
             // Vymazanie záznamu tokenu (FK CASCADE zmažú aj account_deletion_tokens)
@@ -118,6 +121,15 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
             $pdo->prepare("DELETE FROM users WHERE id = :id")->execute(['id' => $userId]);
 
             $pdo->commit();
+
+            foreach (array_unique($avatarFilesToDelete) as $avatarFile) {
+                if (is_file($avatarFile) && !@unlink($avatarFile)) {
+                    error_log('Po zmazaní účtu sa nepodarilo odstrániť avatar: ' . $avatarFile);
+                }
+            }
+            if ($avatarArchiveDir !== null && is_dir($avatarArchiveDir) && !@rmdir($avatarArchiveDir)) {
+                error_log('Po zmazaní účtu sa nepodarilo odstrániť adresár avatarov: ' . $avatarArchiveDir);
+            }
 
             // Fallback súborový log
             $logDir = __DIR__ . '/private/logs';
@@ -153,6 +165,9 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 <head>
   <?php
   $pageTitle = 'Potvrdenie zrušenia účtu - Nefro-projekt Slovensko';
+  $seoDescription = 'Súkromné potvrdenie žiadosti o zrušenie používateľského účtu.';
+  $robotsMeta = 'noindex, nofollow';
+  $canonicalUrl = getAppBaseUrl() . '/confirm_account_deletion.php';
   include 'head_meta.php';
   ?>
 </head>

@@ -93,44 +93,117 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
             if (!$ipBlocked && empty($errors)) {
                 $inputCode = trim($_POST['totp_code'] ?? '');
 
-                // Overenie: TOTP kód ALEBO záložný kód
                 $totpOk   = false;
                 $backupOk = false;
+                $backupCodes = [];
+                $verificationError = false;
 
-                // Skús TOTP (window=2 = tolerancia ±60 s pre prípadnú odchýlku hodín)
-                // Replay ochrana: akceptujeme len counter > naposledy použitého
-                $matchedCounter = verifyTotpCodeGetCounter((string) $user['totp_secret'], $inputCode, 2);
-                $lastCounter    = isset($user['totp_last_counter']) ? (int) $user['totp_last_counter'] : -1;
-                if ($matchedCounter !== false && $matchedCounter > $lastCounter) {
-                    $totpOk = true;
-                    try {
-                        $pdo->prepare("UPDATE users SET totp_last_counter = :c WHERE id = :id")
-                            ->execute(['c' => $matchedCounter, 'id' => $pendingUserId]);
-                    } catch (\PDOException $e) {
-                        error_log("2fa_verify: chyba pri ukladaní totp_last_counter: " . $e->getMessage());
+                // Overenie aj spotreba kódu prebehnú pod riadkovým zámkom.
+                // Súbežné požiadavky preto nemôžu prijať rovnaký TOTP counter
+                // ani rovnaký jednorazový záložný kód.
+                try {
+                    $pdo->beginTransaction();
+                    $lockStmt = $pdo->prepare(
+                        "SELECT id, email, username, is_admin, is_active, email_verified_at,
+                                totp_secret, totp_enabled, totp_backup_codes, totp_last_counter, password_hash
+                         FROM users WHERE id = :id FOR UPDATE"
+                    );
+                    $lockStmt->execute(['id' => $pendingUserId]);
+                    $lockedUser = $lockStmt->fetch();
+
+                    if (!$lockedUser
+                        || !(int) ($lockedUser['is_active'] ?? 0)
+                        || (int) ($lockedUser['totp_enabled'] ?? 0) !== 1
+                    ) {
+                        $pdo->rollBack();
+                        unset($_SESSION['2fa_pending']);
+                        setFlashMessage('warning', 'Prihlásenie sa nepodarilo. Skúste to znova.');
+                        header("Location: login.php");
+                        exit;
                     }
-                }
 
-                // Skús záložný kód (ak TOTP nezostal)
-                if (!$totpOk && !empty($user['totp_backup_codes'])) {
-                    $backupCodes = json_decode((string) $user['totp_backup_codes'], true);
-                    if (is_array($backupCodes)) {
-                        $usedIdx = verifyAndConsumeBackupCode($inputCode, $backupCodes);
-                        if ($usedIdx >= 0) {
-                            $backupOk = true;
-                            // Odstráň použitý záložný kód z DB
-                            array_splice($backupCodes, $usedIdx, 1);
-                            try {
-                                $pdo->prepare("UPDATE users SET totp_backup_codes = :codes WHERE id = :id")
-                                    ->execute([
-                                        'codes' => json_encode(array_values($backupCodes), JSON_UNESCAPED_UNICODE),
-                                        'id'    => $pendingUserId,
-                                    ]);
-                            } catch (\PDOException $e) {
-                                error_log("2fa_verify: chyba pri aktualizácii záložných kódov: " . $e->getMessage());
-                            }
+                    $expectedFingerprint = $_SESSION['2fa_pending']['pwd_fingerprint'] ?? null;
+                    if ($expectedFingerprint !== null) {
+                        $actualFingerprint = substr(hash('sha256', (string) $lockedUser['password_hash']), 0, 16);
+                        if (!hash_equals($expectedFingerprint, $actualFingerprint)) {
+                            $pdo->rollBack();
+                            unset($_SESSION['2fa_pending']);
+                            setFlashMessage('warning', 'Prihlásenie sa nepodarilo. Prihláste sa znova.');
+                            header("Location: login.php");
+                            exit;
                         }
                     }
+
+                    $storage = decodeTotpStorage(
+                        (string) ($lockedUser['totp_secret'] ?? ''),
+                        isset($lockedUser['totp_backup_codes']) ? (string) $lockedUser['totp_backup_codes'] : null
+                    );
+                    $backupCodes = $storage['codes'];
+
+                    // Tolerancia ±60 s; counter musí byť vyšší než naposledy spotrebovaný.
+                    $matchedCounter = verifyTotpCodeGetCounter($storage['secret'], $inputCode, 2);
+                    $lastCounter = isset($lockedUser['totp_last_counter'])
+                        ? (int) $lockedUser['totp_last_counter']
+                        : -1;
+
+                    if ($matchedCounter !== false && $matchedCounter > $lastCounter) {
+                        $totpOk = true;
+                        if ($storage['legacy']) {
+                            $migrated = encodeTotpStorage($storage['secret'], $backupCodes);
+                            $pdo->prepare(
+                                "UPDATE users
+                                 SET totp_secret = :secret, totp_backup_codes = :codes, totp_last_counter = :counter
+                                 WHERE id = :id"
+                            )->execute([
+                                'secret' => $migrated['secret_field'],
+                                'codes' => $migrated['backup_json'],
+                                'counter' => $matchedCounter,
+                                'id' => $pendingUserId,
+                            ]);
+                            $lockedUser['totp_secret'] = $migrated['secret_field'];
+                            $lockedUser['totp_backup_codes'] = $migrated['backup_json'];
+                        } else {
+                            $pdo->prepare("UPDATE users SET totp_last_counter = :counter WHERE id = :id")
+                                ->execute(['counter' => $matchedCounter, 'id' => $pendingUserId]);
+                        }
+                        $lockedUser['totp_last_counter'] = $matchedCounter;
+                    } else {
+                        $usedIdx = verifyAndConsumeBackupCode($inputCode, $backupCodes);
+                        if ($usedIdx >= 0) {
+                            array_splice($backupCodes, $usedIdx, 1);
+                            $updatedStorage = replaceTotpBackupCodes(
+                                (string) ($lockedUser['totp_secret'] ?? ''),
+                                isset($lockedUser['totp_backup_codes']) ? (string) $lockedUser['totp_backup_codes'] : null,
+                                $backupCodes
+                            );
+                            $pdo->prepare(
+                                "UPDATE users SET totp_secret = :secret, totp_backup_codes = :codes WHERE id = :id"
+                            )->execute([
+                                'secret' => $updatedStorage['secret_field'],
+                                'codes' => $updatedStorage['backup_json'],
+                                'id' => $pendingUserId,
+                            ]);
+                            $lockedUser['totp_secret'] = $updatedStorage['secret_field'];
+                            $lockedUser['totp_backup_codes'] = $updatedStorage['backup_json'];
+                            $backupOk = true;
+                        }
+                    }
+
+                    if ($totpOk || $backupOk) {
+                        $pdo->commit();
+                        $user = $lockedUser;
+                    } else {
+                        $pdo->rollBack();
+                    }
+                } catch (\Throwable $e) {
+                    if ($pdo->inTransaction()) {
+                        $pdo->rollBack();
+                    }
+                    $totpOk = false;
+                    $backupOk = false;
+                    error_log('2fa_verify: atomické overenie zlyhalo: ' . $e->getMessage());
+                    $errors[] = 'Overovací kód sa nepodarilo bezpečne spracovať. Skúste to znova.';
+                    $verificationError = true;
                 }
 
                 if ($totpOk || $backupOk) {
@@ -150,7 +223,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 
                     header("Location: index.php");
                     exit;
-                } else {
+                } elseif (!$verificationError) {
                     // Nesprávny kód — zaznamenaj pokus
                     $_SESSION['2fa_pending']['attempts'] = $sessionAttempts + 1;
                     $errors[] = "Nesprávny overovací kód. Skontrolujte čas v autentifikátore a skúste znova.";

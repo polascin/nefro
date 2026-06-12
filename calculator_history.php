@@ -5,6 +5,9 @@ require_once __DIR__ . '/db_config.php';
 require_once __DIR__ . '/calculators_common.php';
 
 $pageTitle = 'História výpočtov | Nefro-projekt Slovensko';
+$seoDescription = 'Súkromná história uložených klinických výpočtov.';
+$robotsMeta = 'noindex, nofollow';
+$canonicalUrl = getAppBaseUrl() . '/calculator_history.php';
 $errors    = [];
 $messages  = [];
 
@@ -47,11 +50,17 @@ const CALC_URLS = [
 /** Kľúč pre zoskupenie výsledkov podľa identity pacienta. */
 function patientGroupKey(array $row): string {
     $bn = trim((string)($row['patient_birth_number'] ?? ''));
-    if ($bn !== '') return 'rc:' . preg_replace('/\s+/', '', $bn);
+    if ($bn !== '') {
+        $identity = 'rc:' . (preg_replace('/\s+/', '', $bn) ?? $bn);
+        return 'patient:' . substr(hash_hmac('sha256', $identity, getAppDataProtectionKey()), 0, 32);
+    }
     $fn = mb_strtolower(trim((string)($row['patient_first_name'] ?? '')));
     $ln = mb_strtolower(trim((string)($row['patient_last_name'] ?? '')));
     $bd = trim((string)($row['patient_birth_date'] ?? ''));
-    if ($fn !== '' || $ln !== '') return 'name:' . $ln . '|' . $fn . '|' . $bd;
+    if ($fn !== '' || $ln !== '') {
+        $identity = 'name:' . $ln . '|' . $fn . '|' . $bd;
+        return 'patient:' . substr(hash_hmac('sha256', $identity, getAppDataProtectionKey()), 0, 32);
+    }
     return '__anon__';
 }
 

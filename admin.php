@@ -617,7 +617,7 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
                                         <td><?= htmlspecialchars((string) ($log['username'] ?? ('#' . (int) $log['user_id']))) ?></td>
                                         <td><?= htmlspecialchars((string) $log['event_type']) ?></td>
                                         <td><?= htmlspecialchars((string) $log['method']) ?></td>
-                                        <td><code><?= htmlspecialchars((string) $log['request_uri']) ?></code></td>
+                                        <td><code><?= htmlspecialchars(redactAccessLogUrl((string) $log['request_uri'])) ?></code></td>
                                         <td><?= (int) $log['http_status'] ?></td>
                                         <td><?= htmlspecialchars((string) ($log['client_ip'] ?? '')) ?></td>
                                         <td><?= ((int) ($log['is_bot'] ?? 0) === 1) ? 'Áno' : 'Nie' ?></td>
@@ -642,7 +642,7 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
                         <button type="submit" class="btn-admin-action btn-admin-action--warn">Spustiť cleanup</button>
                     </div>
                 </form>
-                <p class="form-hint">Pre automatizáciu použite CLI skript: <code>php archive_cleanup.php [profile_days] [avatar_days]</code></p>
+                <p class="form-hint">Pre úplný retenčný cleanup vrátane bezpečnostných logov použite CLI skript: <code>php archive_cleanup.php [profile_days] [avatar_days] [access_log_days]</code></p>
             </div>
 
             <div class="auth-links auth-links--spaced">

@@ -1,3 +1,5 @@
+$ErrorActionPreference = "Stop"
+
 $textExtensions = @("*.php", "*.css", "*.js", "*.md", "*.txt", "*.xml", "*.json", "*.ini", "*.ps1", "*.html")
 
 function Test-TextFilesEncoding {
@@ -10,8 +12,19 @@ function Test-TextFilesEncoding {
 	$invalidUtf8 = New-Object System.Collections.Generic.List[string]
 	$filesWithBom = New-Object System.Collections.Generic.List[string]
 
-	$files = Get-ChildItem -Path $RootPath -Recurse -File -Include $textExtensions | Where-Object {
-		$_.FullName -notmatch '\\\.git\\' -and $_.FullName -notmatch '\\\.trunk\\'
+	$trackedAndUntracked = & git -C $RootPath ls-files --cached --others --exclude-standard
+	if ($LASTEXITCODE -eq 0) {
+		$allowedExtensions = $textExtensions | ForEach-Object { $_.TrimStart('*').ToLowerInvariant() }
+		$files = foreach ($relativePath in $trackedAndUntracked) {
+			$extension = [System.IO.Path]::GetExtension($relativePath).ToLowerInvariant()
+			if ($allowedExtensions -contains $extension) {
+				Get-Item -LiteralPath (Join-Path $RootPath $relativePath)
+			}
+		}
+	} else {
+		$files = Get-ChildItem -Path $RootPath -Recurse -File -Include $textExtensions | Where-Object {
+			$_.FullName -notmatch '\\\.git\\' -and $_.FullName -notmatch '\\\.trunk\\'
+		}
 	}
 
 	foreach ($file in $files) {
@@ -58,20 +71,49 @@ $session = New-Object Microsoft.PowerShell.Commands.WebRequestSession
 $url = "http://127.0.0.1:8099"
 $res = Invoke-WebRequest -Uri "$url/login.php" -SessionVariable session
 $token = ([regex]'"csrf_token"\s+value="([^"]+)"').Match($res.Content).Groups[1].Value
-Write-Host "CSRF Token: $token"
+if ([string]::IsNullOrWhiteSpace($token)) { throw "Login CSRF token was not found." }
+Write-Host "Login CSRF token loaded."
 $loginBody = @{ login = "test_mobile_verify"; password = "TestPass123A"; csrf_token = $token }
 $res = Invoke-WebRequest -Uri "$url/login.php" -Method Post -Body $loginBody -WebSession $session
 Write-Host "Login Status: $($res.StatusCode)"
-$res = Invoke-WebRequest -Uri "$url/profile.php" -SessionVariable session -WebSession $session
+if ($res.BaseResponse.RequestMessage.RequestUri.AbsolutePath -eq "/login.php") {
+	throw "Smoke login failed. Verify that the test_mobile_verify fixture exists and its password is current."
+}
+$res = Invoke-WebRequest -Uri "$url/profile.php" -WebSession $session
+if ($res.BaseResponse.RequestMessage.RequestUri.AbsolutePath -ne "/profile.php" -or $res.Content -notmatch "mobile_verification_action") {
+	throw "Smoke profile check failed: authenticated profile page was not loaded."
+}
 $token = ([regex]'"csrf_token"\s+value="([^"]+)"').Match($res.Content).Groups[1].Value
-Write-Host "Profile CSRF Token: $token"
+if ([string]::IsNullOrWhiteSpace($token)) { throw "Profile CSRF token was not found." }
+Write-Host "Profile CSRF token loaded."
 $smsRequestBody = @{ csrf_token = $token; username = "test_mobile_verify"; mobile_phone = "+421901234567"; mobile_verification_action = "send" }
 $res1 = Invoke-WebRequest -Uri "$url/profile.php" -Method Post -Body $smsRequestBody -WebSession $session
 Write-Host "SMS Send Response Indicators:"
 $indicators1 = @("Overovací SMS kód bol odoslaný", "nepodarilo odoslať", "dočasne nedostupné")
-foreach ($i in $indicators1) { if ($res1.Content -match $i) { Write-Host " - Found: $i" } }
+$sendIndicatorFound = $false
+foreach ($i in $indicators1) {
+	if ($res1.Content -match $i) {
+		Write-Host " - Found: $i"
+		$sendIndicatorFound = $true
+	}
+}
+if (-not $sendIndicatorFound) {
+	throw "SMS send response did not contain an expected status indicator."
+}
+$res = Invoke-WebRequest -Uri "$url/profile.php" -WebSession $session
+$token = ([regex]'"csrf_token"\s+value="([^"]+)"').Match($res.Content).Groups[1].Value
+if ([string]::IsNullOrWhiteSpace($token)) { throw "Rotated profile CSRF token was not found." }
 $verifyBody = @{ csrf_token = $token; username = "test_mobile_verify"; mobile_phone = "+421901234567"; mobile_verification_action = "verify"; mobile_verification_code = "123456" }
 $res2 = Invoke-WebRequest -Uri "$url/profile.php" -Method Post -Body $verifyBody -WebSession $session
 Write-Host "SMS Verify Response Indicators:"
 $indicators2 = @("Mobilné číslo bolo úspešne overené", "Neplatný overovací SMS kód", "dočasne nedostupné")
-foreach ($i in $indicators2) { if ($res2.Content -match $i) { Write-Host " - Found: $i" } }
+$verifyIndicatorFound = $false
+foreach ($i in $indicators2) {
+	if ($res2.Content -match $i) {
+		Write-Host " - Found: $i"
+		$verifyIndicatorFound = $true
+	}
+}
+if (-not $verifyIndicatorFound) {
+	throw "SMS verify response did not contain an expected status indicator."
+}

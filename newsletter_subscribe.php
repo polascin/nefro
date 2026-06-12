@@ -27,10 +27,11 @@ if (!isAppLocalDev()) {
 }
 
 $email = strtolower(trim((string) ($_POST['email'] ?? '')));
+$genericSuccessMessage = 'Ak je možné túto adresu prihlásiť na odber, poslali sme na ňu ďalšie pokyny.';
 
 // Honeypot
 if (trim((string) ($_POST['website'] ?? '')) !== '') {
-    echo json_encode(['success' => true, 'message' => 'Skoro hotovo! Skontrolujte e-mailovú schránku.']);
+    echo json_encode(['success' => true, 'message' => $genericSuccessMessage]);
     exit;
 }
 
@@ -66,15 +67,11 @@ try {
 }
 
 try {
-    // Registrovaný používateľ — nasmeruj na profil
+    // Odpoveď nesmie prezradiť, či adresa patrí registrovanému používateľovi.
     $userStmt = $pdo->prepare("SELECT id FROM users WHERE LOWER(email) = :email AND is_active = 1 LIMIT 1");
     $userStmt->execute(['email' => $email]);
     if ($userStmt->fetch()) {
-        echo json_encode([
-            'success' => false,
-            'message' => 'Tento e-mail je viazaný na registrovaný účet. <a href="login.php">Prihláste sa</a> a odber nastavte v Profili.',
-            'registered' => true,
-        ]);
+        echo json_encode(['success' => true, 'message' => $genericSuccessMessage]);
         exit;
     }
 
@@ -86,7 +83,7 @@ try {
         && $existing['verified_at'] !== null
         && $existing['unsubscribed_at'] === null
     ) {
-        echo json_encode(['success' => true, 'message' => 'Tento e-mail je už prihlásený na odber. Tešíme sa na vás!', 'already' => true]);
+        echo json_encode(['success' => true, 'message' => $genericSuccessMessage]);
         exit;
     }
 
@@ -113,11 +110,10 @@ try {
     }
 
     if (!sendSubscriberVerifyEmail($email, $verifyToken)) {
-        echo json_encode(['success' => false, 'message' => 'Nepodarilo sa odoslať overovací e-mail. Skúste to neskôr.']);
-        exit;
+        error_log('newsletter_subscribe: overovací e-mail sa nepodarilo odoslať pre subscriber_id=' . (int) ($existing['id'] ?? $pdo->lastInsertId()));
     }
 
-    echo json_encode(['success' => true, 'message' => 'Skoro hotovo! Skontrolujte e-mailovú schránku a potvrďte odber kliknutím na odkaz v e-maili.']);
+    echo json_encode(['success' => true, 'message' => $genericSuccessMessage]);
 } catch (\Throwable $e) {
     error_log('newsletter_subscribe error: ' . $e->getMessage());
     echo json_encode(['success' => false, 'message' => 'Nastala chyba. Skúste to neskôr.']);

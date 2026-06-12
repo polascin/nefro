@@ -6,6 +6,197 @@ declare(strict_types=1);
  * Použitie: Google Authenticator, Authy, Bitwarden a iné TOTP aplikácie.
  */
 
+const TOTP_ENCRYPTED_MARKER = 'encrypted:v1';
+
+/**
+ * Vráti kľúč oddelený od ostatných použití aplikačného data-protection kľúča.
+ */
+function getTotpEncryptionKey(): string
+{
+    if (!function_exists('getAppDataProtectionKey')) {
+        require_once __DIR__ . '/config_loader.php';
+    }
+    return hash_hmac('sha256', 'nefro:totp-secret:v1', getAppDataProtectionKey(), true);
+}
+
+function totpBase64UrlEncode(string $value): string
+{
+    return rtrim(strtr(base64_encode($value), '+/', '-_'), '=');
+}
+
+function totpBase64UrlDecode(string $value): string|false
+{
+    $padding = strlen($value) % 4;
+    if ($padding > 0) {
+        $value .= str_repeat('=', 4 - $padding);
+    }
+    return base64_decode(strtr($value, '-_', '+/'), true);
+}
+
+/**
+ * Zašifruje TOTP tajomstvo pomocou Sodium alebo AES-256-GCM.
+ */
+function encryptTotpSecret(string $secret): string
+{
+    if ($secret === '' || totpBase32Decode($secret) === false) {
+        throw new \RuntimeException('TOTP tajomstvo nie je platné.');
+    }
+
+    if (function_exists('sodium_crypto_secretbox')) {
+        $nonce = random_bytes(SODIUM_CRYPTO_SECRETBOX_NONCEBYTES);
+        $ciphertext = sodium_crypto_secretbox($secret, $nonce, getTotpEncryptionKey());
+        return 's1:' . totpBase64UrlEncode($nonce . $ciphertext);
+    }
+
+    if (function_exists('openssl_encrypt')) {
+        $iv = random_bytes(12);
+        $tag = '';
+        $ciphertext = openssl_encrypt(
+            $secret,
+            'aes-256-gcm',
+            getTotpEncryptionKey(),
+            OPENSSL_RAW_DATA,
+            $iv,
+            $tag,
+            'nefro:totp:v1',
+            16
+        );
+        if ($ciphertext !== false && strlen($tag) === 16) {
+            return 'o1:' . totpBase64UrlEncode($iv . $tag . $ciphertext);
+        }
+    }
+
+    throw new \RuntimeException('Sodium alebo OpenSSL je potrebné pre bezpečné uloženie 2FA tajomstva.');
+}
+
+/**
+ * Dešifruje TOTP tajomstvo a odmietne poškodený alebo neznámy formát.
+ */
+function decryptTotpSecret(string $encrypted): string
+{
+    if (str_starts_with($encrypted, 's1:')) {
+        if (!function_exists('sodium_crypto_secretbox_open')) {
+            throw new \RuntimeException('PHP rozšírenie Sodium je potrebné pre načítanie 2FA tajomstva.');
+        }
+        $payload = totpBase64UrlDecode(substr($encrypted, 3));
+        if ($payload === false || strlen($payload) <= SODIUM_CRYPTO_SECRETBOX_NONCEBYTES) {
+            throw new \RuntimeException('Šifrované 2FA tajomstvo je poškodené.');
+        }
+        $nonce = substr($payload, 0, SODIUM_CRYPTO_SECRETBOX_NONCEBYTES);
+        $ciphertext = substr($payload, SODIUM_CRYPTO_SECRETBOX_NONCEBYTES);
+        $plaintext = sodium_crypto_secretbox_open($ciphertext, $nonce, getTotpEncryptionKey());
+    } elseif (str_starts_with($encrypted, 'o1:')) {
+        if (!function_exists('openssl_decrypt')) {
+            throw new \RuntimeException('PHP rozšírenie OpenSSL je potrebné pre načítanie 2FA tajomstva.');
+        }
+        $payload = totpBase64UrlDecode(substr($encrypted, 3));
+        if ($payload === false || strlen($payload) <= 28) {
+            throw new \RuntimeException('Šifrované 2FA tajomstvo je poškodené.');
+        }
+        $iv = substr($payload, 0, 12);
+        $tag = substr($payload, 12, 16);
+        $ciphertext = substr($payload, 28);
+        $plaintext = openssl_decrypt(
+            $ciphertext,
+            'aes-256-gcm',
+            getTotpEncryptionKey(),
+            OPENSSL_RAW_DATA,
+            $iv,
+            $tag,
+            'nefro:totp:v1'
+        );
+    } else {
+        throw new \RuntimeException('Neznámy formát šifrovaného 2FA tajomstva.');
+    }
+
+    if ($plaintext === false || $plaintext === '' || totpBase32Decode($plaintext) === false) {
+        throw new \RuntimeException('Šifrované 2FA tajomstvo sa nepodarilo overiť.');
+    }
+    return $plaintext;
+}
+
+/**
+ * Vytvorí šifrovaný envelope pre tajomstvo a bcrypt hashe záložných kódov.
+ *
+ * @return array{secret_field:string, backup_json:string}
+ */
+function encodeTotpStorage(string $secret, array $backupCodes): array
+{
+    $json = json_encode([
+        'version' => 1,
+        'secret' => encryptTotpSecret($secret),
+        'codes' => array_values($backupCodes),
+    ], JSON_UNESCAPED_SLASHES);
+    if ($json === false) {
+        throw new \RuntimeException('2FA údaje sa nepodarilo zakódovať.');
+    }
+
+    return [
+        'secret_field' => TOTP_ENCRYPTED_MARKER,
+        'backup_json' => $json,
+    ];
+}
+
+/**
+ * Načíta nový šifrovaný formát aj pôvodný plaintext formát.
+ *
+ * @return array{secret:string, codes:array, legacy:bool}
+ */
+function decodeTotpStorage(string $secretField, ?string $backupJson): array
+{
+    $decoded = $backupJson !== null && $backupJson !== ''
+        ? json_decode($backupJson, true)
+        : [];
+
+    if ($secretField === TOTP_ENCRYPTED_MARKER) {
+        if (!is_array($decoded)
+            || (int) ($decoded['version'] ?? 0) !== 1
+            || !is_string($decoded['secret'] ?? null)
+            || !is_array($decoded['codes'] ?? null)
+        ) {
+            throw new \RuntimeException('Šifrované 2FA úložisko je neplatné.');
+        }
+        return [
+            'secret' => decryptTotpSecret($decoded['secret']),
+            'codes' => array_values($decoded['codes']),
+            'legacy' => false,
+        ];
+    }
+
+    return [
+        'secret' => $secretField,
+        'codes' => is_array($decoded) && array_is_list($decoded) ? array_values($decoded) : [],
+        'legacy' => true,
+    ];
+}
+
+/**
+ * Nahradí záložné kódy a zachová existujúce šifrované tajomstvo.
+ *
+ * @return array{secret_field:string, backup_json:string}
+ */
+function replaceTotpBackupCodes(string $secretField, ?string $backupJson, array $backupCodes): array
+{
+    $decoded = $backupJson !== null && $backupJson !== ''
+        ? json_decode($backupJson, true)
+        : null;
+
+    if ($secretField === TOTP_ENCRYPTED_MARKER
+        && is_array($decoded)
+        && (int) ($decoded['version'] ?? 0) === 1
+        && is_string($decoded['secret'] ?? null)
+    ) {
+        $decoded['codes'] = array_values($backupCodes);
+        $json = json_encode($decoded, JSON_UNESCAPED_SLASHES);
+        if ($json === false) {
+            throw new \RuntimeException('2FA údaje sa nepodarilo zakódovať.');
+        }
+        return ['secret_field' => TOTP_ENCRYPTED_MARKER, 'backup_json' => $json];
+    }
+
+    return encodeTotpStorage($secretField, $backupCodes);
+}
+
 /**
  * Generuje náhodný Base32-kódovaný tajný kľúč (160 bitov = 32 Base32 znakov).
  */

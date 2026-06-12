@@ -189,6 +189,51 @@ function validateCsrfToken(string $token): bool {
 }
 
 /**
+ * Webové spustenie administračného mutačného skriptu povoľuje iba cez POST.
+ * GET zobrazí potvrdenie, CLI beh ostáva bez zmeny.
+ */
+function requireAdminMutationConfirmation(string $title = 'Spustiť administračný skript'): void {
+    if (php_sapi_name() === 'cli') {
+        return;
+    }
+
+    $method = strtoupper((string) ($_SERVER['REQUEST_METHOD'] ?? 'GET'));
+    if ($method === 'POST') {
+        if (!validateCsrfToken((string) ($_POST['csrf_token'] ?? ''))) {
+            http_response_code(403);
+            exit('Neplatný CSRF token.');
+        }
+        return;
+    }
+
+    if ($method !== 'GET') {
+        http_response_code(405);
+        header('Allow: GET, POST');
+        exit('Nepovolená HTTP metóda.');
+    }
+
+    $safeTitle = htmlspecialchars($title, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+    $csrfToken = htmlspecialchars(generateCsrfToken(), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+    $cssVersion = is_file(__DIR__ . '/index.css') ? (string) filemtime(__DIR__ . '/index.css') : '1';
+    $themeVersion = is_file(__DIR__ . '/theme.js') ? (string) filemtime(__DIR__ . '/theme.js') : '1';
+
+    echo '<!DOCTYPE html><html lang="sk"><head><meta charset="UTF-8">'
+        . '<meta name="viewport" content="width=device-width, initial-scale=1.0">'
+        . '<meta name="robots" content="noindex, nofollow">'
+        . '<title>' . $safeTitle . '</title>'
+        . '<script src="theme.js?v=' . rawurlencode($themeVersion) . '"></script>'
+        . '<link rel="stylesheet" href="index.css?v=' . rawurlencode($cssVersion) . '">'
+        . '</head><body><main id="main-content" class="container" role="main">'
+        . '<div class="auth-container"><h1>' . $safeTitle . '</h1>'
+        . '<div class="alert alert-error"><p>Tento skript mení údaje v databáze. Pokračujte iba vtedy, ak chcete zmenu vykonať.</p></div>'
+        . '<form method="POST"><input type="hidden" name="csrf_token" value="' . $csrfToken . '">'
+        . '<div class="form-actions"><button type="submit" class="btn-danger">Potvrdiť a spustiť</button>'
+        . '<a href="admin_articles.php" class="btn-secondary">Zrušiť</a></div></form>'
+        . '</div></main></body></html>';
+    exit;
+}
+
+/**
  * Ochrana proti Session Hijacking a Fixation
  * Odporúča sa volať po prihlásení
  */
@@ -382,6 +427,96 @@ function clearIpRateLimit(PDO $pdo, string $table, string $ip): void
 }
 
 /**
+ * Určí, či query parameter nesmie byť uložený do prístupového logu.
+ */
+function isSensitiveAccessLogParameter(string $name): bool {
+    $normalized = strtolower(rawurldecode($name));
+    $normalized = preg_replace('/[^a-z0-9]+/', '', $normalized) ?? '';
+
+    if ($normalized === '') {
+        return false;
+    }
+
+    $exact = [
+        'token', 'sig', 'signature', 'secret', 'password', 'passwd',
+        'csrf', 'csrftoken', 'jstoken', 'code', 'totpcode',
+        'email', 'phone', 'mobile', 'patient', 'birthnumber',
+        'patientbirthnumber', 'rodnecislo',
+    ];
+    if (in_array($normalized, $exact, true)) {
+        return true;
+    }
+
+    return str_contains($normalized, 'token')
+        || str_contains($normalized, 'password')
+        || str_contains($normalized, 'secret')
+        || str_contains($normalized, 'birthnumber');
+}
+
+/**
+ * Rediguje citlivé hodnoty v query stringu bez zmeny necitlivých parametrov.
+ */
+function redactAccessLogQuery(string $query): string {
+    if ($query === '') {
+        return '';
+    }
+
+    $parts = [];
+    foreach (preg_split('/[&;]/', $query) ?: [] as $part) {
+        if ($part === '') {
+            continue;
+        }
+        [$rawName, $rawValue] = array_pad(explode('=', $part, 2), 2, '');
+        if (isSensitiveAccessLogParameter($rawName)) {
+            $parts[] = $rawName . '=%5BREDACTED%5D';
+        } else {
+            $parts[] = $rawName . ($rawValue !== '' ? '=' . $rawValue : '');
+        }
+    }
+
+    return implode('&', $parts);
+}
+
+/**
+ * Odstráni prihlasovacie údaje a rediguje query parametre v URL.
+ */
+function redactAccessLogUrl(string $url): string {
+    $url = str_replace(["\r", "\n"], '', trim($url));
+    if ($url === '') {
+        return '';
+    }
+
+    $fragmentPos = strpos($url, '#');
+    if ($fragmentPos !== false) {
+        $url = substr($url, 0, $fragmentPos);
+    }
+
+    $queryPos = strpos($url, '?');
+    $base = $queryPos === false ? $url : substr($url, 0, $queryPos);
+    $query = $queryPos === false ? '' : substr($url, $queryPos + 1);
+
+    $parsed = parse_url($base);
+    if (is_array($parsed) && isset($parsed['host'])) {
+        $scheme = isset($parsed['scheme']) ? strtolower((string) $parsed['scheme']) . '://' : '//';
+        $host = strtolower((string) $parsed['host']);
+        $port = isset($parsed['port']) ? ':' . (int) $parsed['port'] : '';
+        $path = (string) ($parsed['path'] ?? '/');
+        $base = $scheme . $host . $port . $path;
+    }
+
+    $redactedQuery = redactAccessLogQuery($query);
+    return $base . ($redactedQuery !== '' ? '?' . $redactedQuery : '');
+}
+
+/**
+ * Normalizuje textové polia logu a obmedzí ich veľkosť.
+ */
+function normalizeAccessLogText(string $value, int $maxLength): string {
+    $value = str_replace(["\r", "\n", "\0"], '', $value);
+    return mb_substr($value, 0, $maxLength);
+}
+
+/**
  * Centrálna funkcia na získanie PDO pre audit logy, ak je dostupná.
  */
 function getAccessLogPdo(): ?\PDO {
@@ -497,8 +632,8 @@ function recordAccessLogShutdown(): void {
     }
 
     $method = $_SERVER['REQUEST_METHOD'] ?? 'GET';
-    $uri = $_SERVER['REQUEST_URI'] ?? ($_SERVER['PHP_SELF'] ?? '/');
-    $query = $_SERVER['QUERY_STRING'] ?? '';
+    $uri = redactAccessLogUrl((string) ($_SERVER['REQUEST_URI'] ?? ($_SERVER['PHP_SELF'] ?? '/')));
+    $query = redactAccessLogQuery((string) ($_SERVER['QUERY_STRING'] ?? ''));
     $status = http_response_code();
     if (!is_int($status) || $status < 100 || $status > 599) {
         $status = 200;
@@ -509,14 +644,14 @@ function recordAccessLogShutdown(): void {
         'username' => $_SESSION['username'] ?? null,
         'event_type' => 'page_view',
         'method' => $method,
-        'request_uri' => $uri,
-        'query_string' => $query,
+        'request_uri' => normalizeAccessLogText($uri, 2048),
+        'query_string' => normalizeAccessLogText($query, 2048),
         'http_status' => $status,
         'client_ip' => getClientIpAddress(),
-        'user_agent' => $_SERVER['HTTP_USER_AGENT'] ?? '',
-        'referer' => $_SERVER['HTTP_REFERER'] ?? '',
-        'host' => $_SERVER['HTTP_HOST'] ?? '',
-        'accept_language' => $_SERVER['HTTP_ACCEPT_LANGUAGE'] ?? '',
+        'user_agent' => normalizeAccessLogText((string) ($_SERVER['HTTP_USER_AGENT'] ?? ''), 500),
+        'referer' => normalizeAccessLogText(redactAccessLogUrl((string) ($_SERVER['HTTP_REFERER'] ?? '')), 2048),
+        'host' => normalizeAccessLogText((string) ($_SERVER['HTTP_HOST'] ?? ''), 255),
+        'accept_language' => normalizeAccessLogText((string) ($_SERVER['HTTP_ACCEPT_LANGUAGE'] ?? ''), 255),
         'response_time_ms' => isset($_SERVER['REQUEST_TIME_FLOAT']) ? (int) round((microtime(true) - $_SERVER['REQUEST_TIME_FLOAT']) * 1000) : null,
         'is_bot' => isKnownBotUserAgent() ? 1 : 0,
     ];

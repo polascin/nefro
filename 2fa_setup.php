@@ -30,8 +30,19 @@ if (!$user) {
 }
 
 $totpEnabled    = (int) ($user['totp_enabled'] ?? 0) === 1;
-$backupCodesRaw = !empty($user['totp_backup_codes']) ? json_decode((string) $user['totp_backup_codes'], true) : [];
-$backupCodes    = is_array($backupCodesRaw) ? $backupCodesRaw : [];
+$backupCodes    = [];
+if ($totpEnabled && !empty($user['totp_secret'])) {
+    try {
+        $totpStorage = decodeTotpStorage(
+            (string) $user['totp_secret'],
+            isset($user['totp_backup_codes']) ? (string) $user['totp_backup_codes'] : null
+        );
+        $backupCodes = $totpStorage['codes'];
+    } catch (\RuntimeException $e) {
+        error_log('2fa_setup: poškodené 2FA úložisko pre user_id=' . $userId . ': ' . $e->getMessage());
+        $errors[] = 'Údaje dvojfaktorového overenia sa nepodarilo bezpečne načítať. Kontaktujte administrátora.';
+    }
+}
 
 // Nový tajný kľúč pre aktiváciu — uložený v session počas nastavenia
 $pendingSecret = $_SESSION['2fa_setup_secret'] ?? null;
@@ -91,11 +102,12 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     $backup       = generateBackupCodes();
                     $secretToSave = $_SESSION['2fa_setup_secret'];
                     try {
+                        $storage = encodeTotpStorage($secretToSave, $backup['hashed']);
                         $pdo->prepare(
                             "UPDATE users SET totp_secret = :secret, totp_enabled = 1, totp_backup_codes = :codes, totp_last_counter = :counter WHERE id = :id"
                         )->execute([
-                            'secret'  => $secretToSave,
-                            'codes'   => json_encode($backup['hashed'], JSON_UNESCAPED_UNICODE),
+                            'secret'  => $storage['secret_field'],
+                            'codes'   => $storage['backup_json'],
                             'counter' => $matchedCounter,
                             'id'      => $userId,
                         ]);
@@ -108,9 +120,9 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                         setFlashMessage('success', 'Dvojfaktorové overenie bolo úspešne aktivované!');
                         header("Location: 2fa_setup.php");
                         exit;
-                    } catch (\PDOException $e) {
+                    } catch (\PDOException|\RuntimeException $e) {
                         error_log("2fa_setup: enable_confirm DB chyba: " . $e->getMessage());
-                        $errors[] = "Nastala databázová chyba. Skúste to znova neskôr.";
+                        $errors[] = "Nastala chyba pri bezpečnom ukladaní 2FA. Skúste to znova neskôr.";
                     }
                 }
             }
@@ -129,7 +141,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 } else {
                     try {
                         $pdo->prepare(
-                            "UPDATE users SET totp_secret = NULL, totp_enabled = 0, totp_backup_codes = NULL WHERE id = :id"
+                            "UPDATE users SET totp_secret = NULL, totp_enabled = 0, totp_backup_codes = NULL, totp_last_counter = NULL WHERE id = :id"
                         )->execute(['id' => $userId]);
                         unset($_SESSION['2fa_setup_secret']);
                         setFlashMessage('success', 'Dvojfaktorové overenie bolo deaktivované.');
@@ -156,19 +168,25 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 } else {
                     $backup = generateBackupCodes();
                     try {
+                        $storage = replaceTotpBackupCodes(
+                            (string) ($user['totp_secret'] ?? ''),
+                            isset($user['totp_backup_codes']) ? (string) $user['totp_backup_codes'] : null,
+                            $backup['hashed']
+                        );
                         $pdo->prepare(
-                            "UPDATE users SET totp_backup_codes = :codes WHERE id = :id"
+                            "UPDATE users SET totp_secret = :secret, totp_backup_codes = :codes WHERE id = :id"
                         )->execute([
-                            'codes' => json_encode($backup['hashed'], JSON_UNESCAPED_UNICODE),
-                            'id'    => $userId,
+                            'secret' => $storage['secret_field'],
+                            'codes'  => $storage['backup_json'],
+                            'id'     => $userId,
                         ]);
                         $_SESSION['2fa_new_backup_codes'] = $backup['plain'];
                         setFlashMessage('success', 'Záložné kódy boli úspešne obnovené.');
                         header("Location: 2fa_setup.php");
                         exit;
-                    } catch (\PDOException $e) {
+                    } catch (\PDOException|\RuntimeException $e) {
                         error_log("2fa_setup: regenerate_backup DB chyba: " . $e->getMessage());
-                        $errors[] = "Nastala databázová chyba. Skúste to znova neskôr.";
+                        $errors[] = "Nastala chyba pri bezpečnom ukladaní záložných kódov. Skúste to znova neskôr.";
                     }
                 }
             }
