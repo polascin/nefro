@@ -440,6 +440,7 @@ try {
         author VARCHAR(255) NOT NULL DEFAULT 'MUDr. Ľubomír Polaščín',
         content LONGTEXT NOT NULL,
         excerpt TEXT NOT NULL,
+        category VARCHAR(32) NOT NULL DEFAULT 'odborne' COMMENT 'odborne = odborný článok, popularne = popularizačný (pre pacientov/verejnosť)',
         published_at DATETIME NOT NULL,
         is_top TINYINT(1) NOT NULL DEFAULT 0,
         is_published TINYINT(1) NOT NULL DEFAULT 1,
@@ -448,7 +449,8 @@ try {
         UNIQUE KEY uq_articles_slug (slug),
         INDEX idx_articles_published_at (published_at),
         INDEX idx_articles_is_top (is_top),
-        INDEX idx_articles_is_published (is_published)
+        INDEX idx_articles_is_published (is_published),
+        INDEX idx_articles_category (category)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";
     $pdo->exec($articlesSql);
     $cliOut("Tabuľka 'articles' bola úspešne vytvorená alebo už existuje.\n");
@@ -599,6 +601,17 @@ try {
         $pdo->exec("SET @row_num := 0");
         $pdo->exec("UPDATE articles SET sort_order = (@row_num := @row_num + 1) ORDER BY published_at DESC, id DESC");
         $cliOut("Stĺpec 'sort_order' bol pridaný a inicializovaný.\n");
+    }
+
+    // ── Migrácia: category stĺpec (odborné / popularizačné články) ────
+    if (!columnExists($pdo, 'articles', 'category')) {
+        $pdo->exec("ALTER TABLE articles ADD COLUMN category VARCHAR(32) NOT NULL DEFAULT 'odborne' COMMENT 'odborne = odborný článok, popularne = popularizačný (pre pacientov/verejnosť)' AFTER excerpt");
+        $cliOut("Stĺpec 'category' bol pridaný do articles.\n");
+    }
+    $catIdx = $pdo->query("SHOW INDEX FROM articles WHERE Key_name = 'idx_articles_category'");
+    if (!$catIdx->fetch()) {
+        $pdo->exec("ALTER TABLE articles ADD INDEX idx_articles_category (category)");
+        $cliOut("Index 'idx_articles_category' pridaný do articles.\n");
     }
 
     // ── Číselník akademických a iných titulov ───────────────────────
