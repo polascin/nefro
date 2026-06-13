@@ -1,0 +1,4 @@
+# PDF verzie článkov – bonus pre registrovaných a prihlásených používateľov.
+# Priamy prístup cez web je zakázaný; súbory sa servírujú výhradne cez
+# download_pdf.php, ktorý overí prihlásenie používateľa.
+Require all denied

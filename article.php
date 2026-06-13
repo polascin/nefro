@@ -324,6 +324,28 @@ if ($article) {
           /* Dôverované HTML — správuje iba admin */
           ?>
 
+          <?php
+          $pdfFile = trim((string) ($article["pdf_file"] ?? ""));
+          if ($pdfFile !== ""):
+              $pdfSlug = htmlspecialchars(
+                  (string) ($article["slug"] ?? ""),
+                  ENT_QUOTES,
+              );
+          ?>
+          <aside class="article-pdf" aria-label="PDF verzia článku na stiahnutie">
+            <?php if (isLoggedIn()): ?>
+              <p class="article-pdf__text">📄 <strong>Bonus pre prihlásených:</strong> stiahnite si celý článok aj s ilustráciami ako PDF.</p>
+              <a class="btn-primary article-pdf__btn" href="download_pdf.php?slug=<?= $pdfSlug ?>" rel="nofollow">Stiahnuť PDF</a>
+            <?php else: ?>
+              <p class="article-pdf__text">📄 <strong>PDF verzia</strong> tohto článku (s ilustráciami) je k dispozícii na stiahnutie pre registrovaných používateľov — zdarma.</p>
+              <p class="article-pdf__cta">
+                <a class="btn-secondary-small" href="login.php">Prihlásiť sa</a>
+                <a class="btn-secondary-small" href="register.php">Zaregistrovať sa zdarma</a>
+              </p>
+            <?php endif; ?>
+          </aside>
+          <?php endif; ?>
+
           <footer>
             <p class="author">
               Autor: <span class="authorname"><?= htmlspecialchars(
