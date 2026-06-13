@@ -41,7 +41,7 @@ ServerSignature Off
     # Ak prehliadač akceptuje image/webp a vedľa PNG existuje .webp súrodenec,
     # pošle sa WebP. HTML naďalej odkazuje na .png; PNG ostáva ako fallback.
     RewriteCond %{HTTP_ACCEPT} image/webp
-    RewriteCond %{REQUEST_FILENAME}\.webp -f
+    RewriteCond %{DOCUMENT_ROOT}/$1.webp -f
     RewriteRule ^(img/.+)\.png$ $1.webp [T=image/webp,E=WEBP_SERVED:1,L]
 </IfModule>
 
