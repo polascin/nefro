@@ -1,0 +1,13 @@
+# Shell skripty a git hooky musia mať LF konce riadkov,
+# inak na Windows checkoute zlyhajú s „/bin/sh^M: bad interpreter".
+hooks/* text eol=lf
+*.sh    text eol=lf
+
+# Binárne súbory — git ich nesmie normalizovať / meniť konce riadkov
+*.png   binary
+*.webp  binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.ico   binary
+*.pdf   binary

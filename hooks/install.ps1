@@ -24,6 +24,13 @@ if (Test-Path "$hooksSourceDir/post-commit") {
     Write-Host "✓ Installed post-commit hook (Unix/Bash)" -ForegroundColor Green
 }
 
+# Copy pre-commit hook (automatic PNG → WebP conversion)
+if (Test-Path "$hooksSourceDir/pre-commit") {
+    Copy-Item "$hooksSourceDir/pre-commit" "$gitHooksDir/pre-commit" -Force
+    if ($PSVersionTable.Platform -eq "Unix") { chmod +x "$gitHooksDir/pre-commit" }
+    Write-Host "✓ Installed pre-commit hook (PNG to WebP)" -ForegroundColor Green
+}
+
 # For Windows, also create a .bat version
 if (Test-Path "$hooksSourceDir/post-commit") {
     $content = Get-Content "$hooksSourceDir/post-commit" -Raw

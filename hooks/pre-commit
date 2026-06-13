@@ -1,0 +1,29 @@
+#!/bin/sh
+# Automatická konverzia PNG → WebP pred commitom.
+# Pre každý staged PNG v img/ vytvorí WebP súrodenca a pridá ho do commitu.
+# PNG zostáva ako fallback — web ho transparentne nahrádza WebP (content
+# negotiation v .htaccess). Pozri tools/convert_images_webp.php.
+
+# Existujú staged PNG v img/?
+changed=$(git diff --cached --name-only --diff-filter=ACM -- 'img/*.png')
+[ -z "$changed" ] && exit 0
+
+# Bez PHP konverziu preskočíme (commit nezablokujeme).
+if ! command -v php >/dev/null 2>&1; then
+    echo "pre-commit: php nenájdený — preskakujem auto-konverziu PNG→WebP." >&2
+    exit 0
+fi
+
+# Skonvertuj neaktuálne PNG v img/ (idempotentné — aktuálne preskočí).
+php tools/convert_images_webp.php || {
+    echo "pre-commit: konverzia PNG→WebP zlyhala — commit zastavený." >&2
+    exit 1
+}
+
+# Pridaj vygenerované .webp súrodence k staged PNG (robustné voči medzerám v názve).
+git diff --cached --name-only --diff-filter=ACM -z -- 'img/*.png' | while IFS= read -r -d '' f; do
+    webp="${f%.png}.webp"
+    [ -f "$webp" ] && git add "$webp"
+done
+
+exit 0

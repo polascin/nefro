@@ -31,11 +31,29 @@ ServerSignature Off
 <IfModule mod_rewrite.c>
     RewriteEngine On
 
-    # Blokovanie .git, scratch, hooks, .vscode adresárov
-    RewriteRule ^(\.git|scratch|hooks|\.vscode)(/.*)?$ - [F,L]
+    # Blokovanie .git, scratch, hooks, tools, .vscode adresárov
+    RewriteRule ^(\.git|scratch|hooks|tools|\.vscode)(/.*)?$ - [F,L]
 
     # Rewrite sitemap.xml → sitemap.php
     RewriteRule ^sitemap\.xml$ sitemap.php [L]
+
+    # Transparentné servírovanie WebP namiesto PNG (content negotiation).
+    # Ak prehliadač akceptuje image/webp a vedľa PNG existuje .webp súrodenec,
+    # pošle sa WebP. HTML naďalej odkazuje na .png; PNG ostáva ako fallback.
+    RewriteCond %{HTTP_ACCEPT} image/webp
+    RewriteCond %{REQUEST_FILENAME}\.webp -f
+    RewriteRule ^(img/.+)\.png$ $1.webp [T=image/webp,E=WEBP_SERVED:1,L]
+</IfModule>
+
+# ── WebP: MIME typ a korektné cachovanie ────────────────────────────────────
+<IfModule mod_mime.c>
+    AddType image/webp .webp
+</IfModule>
+<IfModule mod_headers.c>
+    # Proxy/CDN musia cachovať PNG aj WebP variant podľa hlavičky Accept
+    <FilesMatch "\.(png|webp)$">
+        Header append Vary Accept
+    </FilesMatch>
 </IfModule>
 
 # ── Bezpečnostné blokovanie citlivých súborov ──────────────────────────────
