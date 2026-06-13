@@ -27,8 +27,8 @@ $articles[] = [
     'excerpt'      => 'Moderné lieky pri cukrovke chránia nielen hladinu cukru, ale aj srdce a obličky. Zrozumiteľne o SGLT2 inhibítoroch, GLP-1 agonistoch, nsMRA a o tom, čo môže pre svoje obličky urobiť sám pacient.',
     'content'      => <<<'NEFRO_HTML'
 <figure class="article-figure">
-  <a href="img/nefroprot-01.png" target="_blank" rel="noopener noreferrer">
-    <img src="img/nefroprot-01.png" alt="Ilustrácia: moderné trendy v nefroprotekcii pri cukrovke" loading="lazy" decoding="async">
+  <a href="img/nefroprot-01.webp" target="_blank" rel="noopener noreferrer">
+    <img src="img/nefroprot-01.webp" alt="Ilustrácia: moderné trendy v nefroprotekcii pri cukrovke" loading="lazy" decoding="async">
   </a>
   <figcaption>Moderná liečba cukrovky chráni nielen hladinu cukru, ale aj srdce a obličky.</figcaption>
 </figure>
@@ -52,8 +52,8 @@ $articles[] = [
 <p>Odhadovaná glomerulová filtrácia (eGFR) je kľúčová pre včasné odhalenie poškodenia obličiek. Pravidelné vyšetrenia vám môžu poskytnúť pocit kontroly a istoty v starostlivosti o vaše zdravie.</p>
 
 <figure class="article-figure">
-  <a href="img/nefroprot-02.png" target="_blank" rel="noopener noreferrer">
-    <img src="img/nefroprot-02.png" alt="Ilustrácia k téme: prečo cukrovka poškodzuje obličky" loading="lazy" decoding="async">
+  <a href="img/nefroprot-02.webp" target="_blank" rel="noopener noreferrer">
+    <img src="img/nefroprot-02.webp" alt="Ilustrácia k téme: prečo cukrovka poškodzuje obličky" loading="lazy" decoding="async">
   </a>
   <figcaption>Prečo cukrovka poškodzuje obličky</figcaption>
 </figure>
@@ -67,8 +67,8 @@ $articles[] = [
 <p>Nové lieky tento základ <strong>nenahrádzajú</strong>, ale ho dopĺňajú.</p>
 
 <figure class="article-figure">
-  <a href="img/nefroprot-03.png" target="_blank" rel="noopener noreferrer">
-    <img src="img/nefroprot-03.png" alt="Ilustrácia k téme: staré základy liečby zostávajú dôležité" loading="lazy" decoding="async">
+  <a href="img/nefroprot-03.webp" target="_blank" rel="noopener noreferrer">
+    <img src="img/nefroprot-03.webp" alt="Ilustrácia k téme: staré základy liečby zostávajú dôležité" loading="lazy" decoding="async">
   </a>
   <figcaption>Staré základy liečby zostávajú dôležité</figcaption>
 </figure>
@@ -90,8 +90,8 @@ $articles[] = [
 <p>Zjednodušene povedané, nejde už iba o lieky „na cukor“. Sú to lieky s ochranným účinkom na obličky a srdce.</p>
 
 <figure class="article-figure">
-  <a href="img/nefroprot-04.png" target="_blank" rel="noopener noreferrer">
-    <img src="img/nefroprot-04.png" alt="Ilustrácia: kľúčové štúdie so SGLT2 inhibítormi" loading="lazy" decoding="async">
+  <a href="img/nefroprot-04.webp" target="_blank" rel="noopener noreferrer">
+    <img src="img/nefroprot-04.webp" alt="Ilustrácia: kľúčové štúdie so SGLT2 inhibítormi" loading="lazy" decoding="async">
   </a>
   <figcaption>SGLT2 inhibítory — kľúčové klinické štúdie</figcaption>
 </figure>
@@ -105,8 +105,8 @@ $articles[] = [
 <p>Tieto lieky môžu tiež mierne znižovať hmotnosť, krvný tlak a množstvo tekutín v tele. To je výhodné najmä u pacientov so srdcovým zlyhávaním alebo so sklonom k opuchom. Nejde však o močopudné lieky v klasickom zmysle slova.</p>
 
 <figure class="article-figure">
-  <a href="img/nefroprot-05.png" target="_blank" rel="noopener noreferrer">
-    <img src="img/nefroprot-05.png" alt="Ilustrácia: ako SGLT2 inhibítory chránia obličky" loading="lazy" decoding="async">
+  <a href="img/nefroprot-05.webp" target="_blank" rel="noopener noreferrer">
+    <img src="img/nefroprot-05.webp" alt="Ilustrácia: ako SGLT2 inhibítory chránia obličky" loading="lazy" decoding="async">
   </a>
   <figcaption>Ako SGLT2 inhibítory chránia obličky</figcaption>
 </figure>
@@ -118,8 +118,8 @@ $articles[] = [
 <p>To je zásadná zmena. Ukazuje sa, že ochranný účinok tejto skupiny liekov presahuje samotné zníženie hladiny cukru v krvi.</p>
 
 <figure class="article-figure">
-  <a href="img/nefroprot-06.png" target="_blank" rel="noopener noreferrer">
-    <img src="img/nefroprot-06.png" alt="Ilustrácia: pre koho môžu byť SGLT2 inhibítory vhodné" loading="lazy" decoding="async">
+  <a href="img/nefroprot-06.webp" target="_blank" rel="noopener noreferrer">
+    <img src="img/nefroprot-06.webp" alt="Ilustrácia: pre koho môžu byť SGLT2 inhibítory vhodné" loading="lazy" decoding="async">
   </a>
   <figcaption>Pre koho môžu byť SGLT2 inhibítory vhodné</figcaption>
 </figure>
@@ -133,8 +133,8 @@ $articles[] = [
 <p>Zriedkavou, ale závažnou komplikáciou môže byť <strong>ketoacidóza</strong>, ktorá sa výnimočne môže objaviť aj pri veľmi vysokej hladine cukru. Preto je dôležité, aby pacient poznal varovné príznaky, ako sú nevoľnosť, vracanie, bolesti brucha, zrýchlené dýchanie, výrazná slabosť alebo zmätenosť.</p>
 
 <figure class="article-figure">
-  <a href="img/nefroprot-07.png" target="_blank" rel="noopener noreferrer">
-    <img src="img/nefroprot-07.png" alt="Ilustrácia: na čo si dať pozor pri SGLT2 inhibítoroch" loading="lazy" decoding="async">
+  <a href="img/nefroprot-07.webp" target="_blank" rel="noopener noreferrer">
+    <img src="img/nefroprot-07.webp" alt="Ilustrácia: na čo si dať pozor pri SGLT2 inhibítoroch" loading="lazy" decoding="async">
   </a>
   <figcaption>Na čo si dať pozor pri SGLT2 inhibítoroch</figcaption>
 </figure>
@@ -148,8 +148,8 @@ $articles[] = [
 <p>U pacientov s diabetom 2. typu, obezitou a vysokým srdcovocievnym rizikom môžu agonisty GLP-1 receptora znižovať riziko závažných kardiovaskulárnych príhod. Pri obličkách sa ich prínos prejavuje najmä znížením albuminúrie a priaznivým ovplyvnením rizikových faktorov, ako sú hmotnosť, glykémia, krvný tlak a zápalovo-metabolické zaťaženie organizmu.</p>
 
 <figure class="article-figure">
-  <a href="img/nefroprot-08.png" target="_blank" rel="noopener noreferrer">
-    <img src="img/nefroprot-08.png" alt="Ilustrácia: GLP-1 agonisti — viac než lieky na chudnutie" loading="lazy" decoding="async">
+  <a href="img/nefroprot-08.webp" target="_blank" rel="noopener noreferrer">
+    <img src="img/nefroprot-08.webp" alt="Ilustrácia: GLP-1 agonisti — viac než lieky na chudnutie" loading="lazy" decoding="async">
   </a>
   <figcaption>GLP-1 receptorové agonisty — viac než lieky na chudnutie</figcaption>
 </figure>
@@ -163,8 +163,8 @@ $articles[] = [
 <p>Niektoré odporúčania uprednostňujú GLP-1 receptorové agonisty s preukázaným kardiovaskulárnym prínosom najmä u pacientov s diabetom 2. typu a chronickou chorobou obličiek, ak nie je dostatočne dosiahnutá glykemická kontrola napriek metformínu a SGLT2 inhibítoru, alebo ak tieto lieky pacient nemôže užívať.</p>
 
 <figure class="article-figure">
-  <a href="img/nefroprot-09.png" target="_blank" rel="noopener noreferrer">
-    <img src="img/nefroprot-09.png" alt="Ilustrácia: ako môžu GLP-1 agonisty pomáhať obličkám" loading="lazy" decoding="async">
+  <a href="img/nefroprot-09.webp" target="_blank" rel="noopener noreferrer">
+    <img src="img/nefroprot-09.webp" alt="Ilustrácia: ako môžu GLP-1 agonisty pomáhať obličkám" loading="lazy" decoding="async">
   </a>
   <figcaption>Ako môžu GLP-1 receptorové agonisty pomáhať obličkám</figcaption>
 </figure>
@@ -178,8 +178,8 @@ $articles[] = [
 <p>Tieto lieky nie sú vhodné pre každého. Lekár musí zohľadniť osobnú anamnézu, ochorenia pankreasu, žlčníka, tráviace ťažkosti a ďalšie riziká. Aj tu platí, že dobrý liek je dobrý iba vtedy, keď je správne vybraný pre konkrétneho pacienta.</p>
 
 <figure class="article-figure">
-  <a href="img/nefroprot-10.png" target="_blank" rel="noopener noreferrer">
-    <img src="img/nefroprot-10.png" alt="Ilustrácia: najčastejšie nežiaduce účinky GLP-1 liekov" loading="lazy" decoding="async">
+  <a href="img/nefroprot-10.webp" target="_blank" rel="noopener noreferrer">
+    <img src="img/nefroprot-10.webp" alt="Ilustrácia: najčastejšie nežiaduce účinky GLP-1 liekov" loading="lazy" decoding="async">
   </a>
   <figcaption>Najčastejšie nežiaduce účinky GLP-1 liekov</figcaption>
 </figure>
@@ -191,8 +191,8 @@ $articles[] = [
 <p>Retatrutid je liečivo, ktoré cieli na GLP-1, GIP aj glukagón (tzv. triple, teda trojitý agonista). V štúdiách sa hodnotí najmä jeho potenciál dosiahnuť výraznejšie zmeny v hmotnosti a ďalších metabolických ukazovateľoch. Nie je ešte schválený na bežné klinické použitie.</p>
 
 <figure class="article-figure">
-  <a href="img/nefroprot-11.png" target="_blank" rel="noopener noreferrer">
-    <img src="img/nefroprot-11.png" alt="Ilustrácia: tirzepatid a retatrutid" loading="lazy" decoding="async">
+  <a href="img/nefroprot-11.webp" target="_blank" rel="noopener noreferrer">
+    <img src="img/nefroprot-11.webp" alt="Ilustrácia: tirzepatid a retatrutid" loading="lazy" decoding="async">
   </a>
   <figcaption>Tirzepatid a retatrutid</figcaption>
 </figure>
@@ -224,8 +224,8 @@ $articles[] = [
 <p>nsMRA je skratka pre non-steroidal mineralocorticoid receptor antagonists, po slovensky ide o lieky, ktoré blokujú mineralokortikoidný receptor (nie sú to „klasické“ steroidné antagonisty). V praxi sa najčastejšie stretávame s <strong>finerenónom</strong>. Tieto lieky majú význam najmä pri diabetickej chorobe obličiek.</p>
 
 <figure class="article-figure">
-  <a href="img/nefroprot-12.png" target="_blank" rel="noopener noreferrer">
-    <img src="img/nefroprot-12.png" alt="Ilustrácia: nsMRA — nové možnosti ochrany obličiek a srdca" loading="lazy" decoding="async">
+  <a href="img/nefroprot-12.webp" target="_blank" rel="noopener noreferrer">
+    <img src="img/nefroprot-12.webp" alt="Ilustrácia: nsMRA — nové možnosti ochrany obličiek a srdca" loading="lazy" decoding="async">
   </a>
   <figcaption>nsMRA — nové možnosti ochrany obličiek a srdca</figcaption>
 </figure>
@@ -261,8 +261,8 @@ $articles[] = [
 <p>V posledných mesiacoch pribúda na internete a v reklame na sociálnych sieťach obsah, ktorý láka ľudí na „výskumné peptidy“. Často sa predávajú pod označeniami typu <em>research grade</em>, <em>for research use only</em> alebo podobne. Problém je, že toto označenie neznamená bezpečnosť ani to, že ide o látky overené pre bežných pacientov.</p>
 
 <figure class="article-figure">
-  <a href="img/nefroprot-13.png" target="_blank" rel="noopener noreferrer">
-    <img src="img/nefroprot-13.png" alt="Ilustrácia: výskumné peptidy a riziká neoverených látok" loading="lazy" decoding="async">
+  <a href="img/nefroprot-13.webp" target="_blank" rel="noopener noreferrer">
+    <img src="img/nefroprot-13.webp" alt="Ilustrácia: výskumné peptidy a riziká neoverených látok" loading="lazy" decoding="async">
   </a>
   <figcaption>Výskumné peptidy — prečo je opatrnosť na mieste</figcaption>
 </figure>
@@ -304,8 +304,8 @@ $articles[] = [
 <p>Preto moderná liečba nemá riešiť iba jednu izolovanú laboratórnu hodnotu. Má znižovať <strong>celkové riziko</strong> pacienta.</p>
 
 <figure class="article-figure">
-  <a href="img/nefroprot-14.png" target="_blank" rel="noopener noreferrer">
-    <img src="img/nefroprot-14.png" alt="Ilustrácia: čo znamená kardiorenometabolická liečba" loading="lazy" decoding="async">
+  <a href="img/nefroprot-14.webp" target="_blank" rel="noopener noreferrer">
+    <img src="img/nefroprot-14.webp" alt="Ilustrácia: čo znamená kardiorenometabolická liečba" loading="lazy" decoding="async">
   </a>
   <figcaption>Srdce, obličky a metabolizmus úzko súvisia</figcaption>
 </figure>
@@ -319,8 +319,8 @@ $articles[] = [
 <p>Pri diabete 2. typu sa preto čoraz viac hodnotí, či liečba chráni pacienta aj pred komplikáciami, ktoré najviac skracujú život a znižujú jeho kvalitu.</p>
 
 <figure class="article-figure">
-  <a href="img/nefroprot-15.png" target="_blank" rel="noopener noreferrer">
-    <img src="img/nefroprot-15.png" alt="Ilustrácia: prečo nestačí sledovať iba cukor" loading="lazy" decoding="async">
+  <a href="img/nefroprot-15.webp" target="_blank" rel="noopener noreferrer">
+    <img src="img/nefroprot-15.webp" alt="Ilustrácia: prečo nestačí sledovať iba cukor" loading="lazy" decoding="async">
   </a>
   <figcaption>Prečo nestačí sledovať iba cukor</figcaption>
 </figure>
@@ -342,8 +342,8 @@ $articles[] = [
 <p>Vyšetrenie moču na albuminúriu je jednoduché, ale veľmi dôležité. Môže odhaliť riziko skôr, než sa kreatinín v krvi výrazne zvýši.</p>
 
 <figure class="article-figure">
-  <a href="img/nefroprot-16.png" target="_blank" rel="noopener noreferrer">
-    <img src="img/nefroprot-16.png" alt="Ilustrácia: čo by mal pacient vedieť a sledovať" loading="lazy" decoding="async">
+  <a href="img/nefroprot-16.webp" target="_blank" rel="noopener noreferrer">
+    <img src="img/nefroprot-16.webp" alt="Ilustrácia: čo by mal pacient vedieť a sledovať" loading="lazy" decoding="async">
   </a>
   <figcaption>Čo by mal pacient vedieť a sledovať</figcaption>
 </figure>
@@ -357,8 +357,8 @@ $articles[] = [
 <p>Pacient by sa nemal báť opýtať, či je preňho vhodná liečba s ochranným účinkom na obličky a srdce. Zároveň by však nemal žiadať konkrétny liek iba preto, že o ňom čítal na internete alebo ho užíva niekto známy.</p>
 
 <figure class="article-figure">
-  <a href="img/nefroprot-17.png" target="_blank" rel="noopener noreferrer">
-    <img src="img/nefroprot-17.png" alt="Ilustrácia: liečba musí byť individuálna" loading="lazy" decoding="async">
+  <a href="img/nefroprot-17.webp" target="_blank" rel="noopener noreferrer">
+    <img src="img/nefroprot-17.webp" alt="Ilustrácia: liečba musí byť individuálna" loading="lazy" decoding="async">
   </a>
   <figcaption>Liečba musí byť individuálna</figcaption>
 </figure>
@@ -372,8 +372,8 @@ $articles[] = [
 <p>Dôležitý je aj pitný režim. Nemá byť ani extrémne nízky, ani prehnaný. Pri srdcovom zlyhávaní alebo pokročilej chorobe obličiek môže lekár odporučiť individuálne obmedzenie príjmu tekutín.</p>
 
 <figure class="article-figure">
-  <a href="img/nefroprot-18.png" target="_blank" rel="noopener noreferrer">
-    <img src="img/nefroprot-18.png" alt="Ilustrácia: čo môže pacient urobiť sám" loading="lazy" decoding="async">
+  <a href="img/nefroprot-18.webp" target="_blank" rel="noopener noreferrer">
+    <img src="img/nefroprot-18.webp" alt="Ilustrácia: čo môže pacient urobiť sám" loading="lazy" decoding="async">
   </a>
   <figcaption>Čo môže pacient urobiť sám</figcaption>
 </figure>
@@ -402,8 +402,8 @@ $articles[] = [
 <p>Liečba má byť spoločným rozhodnutím lekára a pacienta. Lekár prináša odborné posúdenie, pacient zasa informácie o svojich ťažkostiach, možnostiach, obavách a každodennom živote. Práve spojenie týchto dvoch pohľadov vedie k najlepšiemu výsledku.</p>
 
 <figure class="article-figure">
-  <a href="img/nefroprot-19.png" target="_blank" rel="noopener noreferrer">
-    <img src="img/nefroprot-19.png" alt="Ilustrácia: otázky, ktoré sa oplatí položiť lekárovi" loading="lazy" decoding="async">
+  <a href="img/nefroprot-19.webp" target="_blank" rel="noopener noreferrer">
+    <img src="img/nefroprot-19.webp" alt="Ilustrácia: otázky, ktoré sa oplatí položiť lekárovi" loading="lazy" decoding="async">
   </a>
   <figcaption>Otázky, ktoré sa oplatí položiť lekárovi</figcaption>
 </figure>
@@ -415,8 +415,8 @@ $articles[] = [
 <p>Najväčšou zmenou však nie je len nový liek. Je ňou nový spôsob myslenia. Cieľom nie je len upraviť laboratórne číslo, ale predĺžiť obdobie života bez dialýzy, bez srdcového zlyhávania, bez infarktu a bez ťažkých komplikácií.</p>
 
 <figure class="article-figure">
-  <a href="img/nefroprot-20.png" target="_blank" rel="noopener noreferrer">
-    <img src="img/nefroprot-20.png" alt="Ilustrácia: budúcnosť nefroprotekcie" loading="lazy" decoding="async">
+  <a href="img/nefroprot-20.webp" target="_blank" rel="noopener noreferrer">
+    <img src="img/nefroprot-20.webp" alt="Ilustrácia: budúcnosť nefroprotekcie" loading="lazy" decoding="async">
   </a>
   <figcaption>Budúcnosť nefroprotekcie</figcaption>
 </figure>
@@ -428,8 +428,8 @@ $articles[] = [
 <p>Nemenej dôležité sú tzv. „sick day“ pravidlá: keď má človek akútnu nevoľnosť s vracaním, hnačkou, horúčkou alebo výrazne zníženým príjmom tekutín a hrozí mu dehydratácia, môže sa zhoršiť rovnováha organizmu a niektoré lieky sa môžu dočasne pozastaviť. Pri začatí SGLT2 inhibítora sa preto od začiatku má dodržiavať presné odporúčanie na „sick day“ postup a na to, kedy liek dočasne nebrať. Pri plánovaných výkonoch sa postup tiež riadi odporúčaniami (napríklad pri SGLT2 inhibítoroch sa bežne odporúča vopred vysadenie podľa pravidiel pre daný typ zákroku).</p>
 
 <figure class="article-figure">
-  <a href="img/nefroprot-21.png" target="_blank" rel="noopener noreferrer">
-    <img src="img/nefroprot-21.png" alt="Ilustrácia: nefroprotekcia v praxi — sledovanie a bezpečné užívanie liekov" loading="lazy" decoding="async">
+  <a href="img/nefroprot-21.webp" target="_blank" rel="noopener noreferrer">
+    <img src="img/nefroprot-21.webp" alt="Ilustrácia: nefroprotekcia v praxi — sledovanie a bezpečné užívanie liekov" loading="lazy" decoding="async">
   </a>
   <figcaption>Nefroprotektívny plán doma — sledovanie a bezpečné užívanie liekov</figcaption>
 </figure>
@@ -443,8 +443,8 @@ $articles[] = [
 <p>Najlepšie výsledky prináša kombinácia včasného záchytu, pravidelných kontrol, správnej životosprávy a liečby, ktorá chráni nielen hladinu cukru, ale aj samotného pacienta.</p>
 
 <figure class="article-figure">
-  <a href="img/nefroprot-22.png" target="_blank" rel="noopener noreferrer">
-    <img src="img/nefroprot-22.png" alt="Ilustrácia: zhrnutie pre pacienta" loading="lazy" decoding="async">
+  <a href="img/nefroprot-22.webp" target="_blank" rel="noopener noreferrer">
+    <img src="img/nefroprot-22.webp" alt="Ilustrácia: zhrnutie pre pacienta" loading="lazy" decoding="async">
   </a>
   <figcaption>Zhrnutie pre pacienta</figcaption>
 </figure>
