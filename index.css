@@ -4200,9 +4200,11 @@ input:disabled + .slider:before {
 }
 
 /* Odznak sekcie „Pre pacientov" (popularizačné články) */
+/* Pozn.: pozadie = --primary-color (nie --accent-color) kvôli kontrastu s bielym
+   textom — accent #0ea5e9 dáva ~2,8:1 (pod WCAG AA), primary #2563eb ~4,7:1. */
 .badge-popular {
     display: inline-block;
-    background: var(--accent-color);
+    background: var(--primary-color);
     color: #fff;
     font-size: 0.72rem;
     font-weight: 700;
@@ -4219,6 +4221,17 @@ input:disabled + .slider:before {
 .badge-popular:hover,
 .badge-popular:focus-visible {
     filter: brightness(1.08);
+}
+
+/* Malý variant odznaku „Pre pacientov" pre zoznam v administrácii
+   (nahrádza inline style="" — to by CSP style-src 'self' orezalo). */
+.badge-popular-sm {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 0.75rem;
+    font-weight: 600;
 }
 
 /* Nadpis článku ako odkaz */

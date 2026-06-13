@@ -1164,7 +1164,7 @@ $filterArticleId
                     ): ?><br><span class="badge-top-sm">★ TOP</span><?php endif; ?>
                     <?php if (
                         (string) ($a["category"] ?? "odborne") === "popularne"
-                    ): ?><br><span class="badge-top-sm" style="background:var(--accent-color)">Pre pacientov</span><?php endif; ?>
+                    ): ?><br><span class="badge-popular-sm">Pre pacientov</span><?php endif; ?>
                   </td>
                   <td><?= $aDate ?></td>
                   <td>
