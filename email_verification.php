@@ -220,6 +220,10 @@ function sendViaSmtp(string $toEmail, string $subject, string $messageBody, arra
         'MIME-Version: 1.0',
     ];
 
+    // Telo kódujeme quoted-printable: HTML šablóna je jeden dlhý riadok (často >1 kB).
+    // Pri 8bit bez zalamovania MTA prekročí limit RFC 5321 (998 oktetov/riadok) a vloží
+    // zlom → v HTML sa zobrazí medzera na nenáležitom mieste (aj v názvoch článkov).
+    // QP zalomí na ≤76 znakov soft-breakmi (=CRLF), ktoré dekodér odstráni bez zvyšku.
     if ($useMultipart) {
         $boundary = '=_nps_' . bin2hex(random_bytes(16));
         $headers[] = 'Content-Type: multipart/alternative; boundary="' . $boundary . '"';
@@ -227,22 +231,25 @@ function sendViaSmtp(string $toEmail, string $subject, string $messageBody, arra
         // Poradie častí: najprv text/plain, potom text/html (klient zobrazí poslednú, ktorú vie).
         $body = '--' . $boundary . "\n"
             . "Content-Type: text/plain; charset=UTF-8\n"
-            . "Content-Transfer-Encoding: 8bit\n\n"
-            . $plainTextAlt . "\n\n"
+            . "Content-Transfer-Encoding: quoted-printable\n\n"
+            . quoted_printable_encode($plainTextAlt) . "\n\n"
             . '--' . $boundary . "\n"
             . "Content-Type: text/html; charset=UTF-8\n"
-            . "Content-Transfer-Encoding: 8bit\n\n"
-            . $messageBody . "\n\n"
+            . "Content-Transfer-Encoding: quoted-printable\n\n"
+            . quoted_printable_encode($messageBody) . "\n\n"
             . '--' . $boundary . "--\n";
     } else {
         $headers[] = 'Content-Type: ' . $contentType;
-        $headers[] = 'Content-Transfer-Encoding: 8bit';
+        $headers[] = 'Content-Transfer-Encoding: quoted-printable';
         $headers[] = 'Date: ' . date(DATE_RFC2822);
-        $body = $messageBody;
+        $body = quoted_printable_encode($messageBody);
     }
 
     $payload = implode("\r\n", $headers) . "\r\n\r\n" . str_replace(["\r\n", "\r"], "\n", $body);
     $payload = str_replace("\n", "\r\n", $payload);
+    // SMTP dot-stuffing (RFC 5321 §4.5.2): riadok začínajúci '.' sa musí zdvojiť,
+    // inak by ho server interpretoval ako koniec DATA. QP riadok môže začínať '.'.
+    $payload = str_replace("\r\n.", "\r\n..", $payload);
     $payload .= "\r\n.\r\n";
 
     if (@fwrite($socket, $payload) === false) {

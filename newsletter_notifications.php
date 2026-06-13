@@ -468,9 +468,11 @@ if (!function_exists('sendSubscriberVerifyEmail')) {
             $headers = [
                 'MIME-Version: 1.0',
                 'Content-Type: text/html; charset=UTF-8',
+                'Content-Transfer-Encoding: quoted-printable',
                 'From: ' . $fallbackFromName . ' <' . $fallbackFrom . '>',
             ];
-            $sent = @mail($email, mb_encode_mimeheader($subject, 'UTF-8', 'B', "\r\n "), $message, implode("\r\n", $headers));
+            // QP kódovanie: dlhý jednoriadkový HTML inak MTA zalomí (>998 oktetov) → medzery v texte
+            $sent = @mail($email, mb_encode_mimeheader($subject, 'UTF-8', 'B', "\r\n "), quoted_printable_encode($message), implode("\r\n", $headers));
         }
 
         return $sent;
@@ -569,8 +571,8 @@ if (!function_exists('processNlSubQueue')) {
             if (!$sent) {
                 $fallbackFrom     = $cfg['from_email'] !== '' ? $cfg['from_email'] : 'no-reply@nefro.polascin.net';
                 $fallbackFromName = mb_encode_mimeheader($cfg['from_name'] ?: 'Nefro-projekt', 'UTF-8', 'B', "\r\n ");
-                $headers = ['MIME-Version: 1.0', 'Content-Type: text/html; charset=UTF-8', 'From: ' . $fallbackFromName . ' <' . $fallbackFrom . '>'];
-                $sent    = @mail($recipientEmail, mb_encode_mimeheader($subject, 'UTF-8', 'B', "\r\n "), $message, implode("\r\n", $headers));
+                $headers = ['MIME-Version: 1.0', 'Content-Type: text/html; charset=UTF-8', 'Content-Transfer-Encoding: quoted-printable', 'From: ' . $fallbackFromName . ' <' . $fallbackFrom . '>'];
+                $sent    = @mail($recipientEmail, mb_encode_mimeheader($subject, 'UTF-8', 'B', "\r\n "), quoted_printable_encode($message), implode("\r\n", $headers));
             }
 
             if ($sent) {
@@ -761,9 +763,10 @@ if (!function_exists('processArticleNewsletterQueue')) {
                 $headers = [
                     'MIME-Version: 1.0',
                     'Content-Type: text/html; charset=UTF-8',
+                    'Content-Transfer-Encoding: quoted-printable',
                     'From: ' . $fallbackFromName . ' <' . $fallbackFrom . '>',
                 ];
-                $sent = @mail($recipientEmail, $fallbackSubject, $message, implode("\r\n", $headers));
+                $sent = @mail($recipientEmail, $fallbackSubject, quoted_printable_encode($message), implode("\r\n", $headers));
             }
 
             if ($sent) {
@@ -941,8 +944,8 @@ if (!function_exists('sendWeeklyNewsletterDigest')) {
             if (!$sent) {
                 $fallbackFrom     = $cfg['from_email'] !== '' ? $cfg['from_email'] : 'no-reply@nefro.polascin.net';
                 $fallbackFromName = mb_encode_mimeheader($cfg['from_name'] ?: 'Nefro-projekt', 'UTF-8', 'B', "\r\n ");
-                $headers = ['MIME-Version: 1.0', 'Content-Type: text/html; charset=UTF-8', 'From: ' . $fallbackFromName . ' <' . $fallbackFrom . '>'];
-                $sent = @mail($email, mb_encode_mimeheader($subject, 'UTF-8', 'B', "\r\n "), $message, implode("\r\n", $headers));
+                $headers = ['MIME-Version: 1.0', 'Content-Type: text/html; charset=UTF-8', 'Content-Transfer-Encoding: quoted-printable', 'From: ' . $fallbackFromName . ' <' . $fallbackFrom . '>'];
+                $sent = @mail($email, mb_encode_mimeheader($subject, 'UTF-8', 'B', "\r\n "), quoted_printable_encode($message), implode("\r\n", $headers));
             }
             return $sent;
         };
