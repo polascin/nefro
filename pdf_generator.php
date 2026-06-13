@@ -65,7 +65,6 @@ function buildArticlePdfHtml(array $article): string
 <meta charset="utf-8">
 <base href="{$baseAttr}">
 <style>
-  @page { margin: 0; }
   body { font-family: "DejaVu Sans", Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: #1a1a1a; margin: 0; }
   .pdf-header { border-bottom: 3px solid #2563eb; padding-bottom: 10px; margin-bottom: 18px; }
   .pdf-site { color: #2563eb; font-weight: bold; font-size: 9.5pt; letter-spacing: 0.6px; text-transform: uppercase; }
@@ -147,7 +146,7 @@ function generateArticlePdf(PDO $pdo, array $article, bool $updateDb = true): ar
         . ' --enable-local-file-access --encoding utf-8 --image-quality 88'
         . ' --margin-top 16 --margin-bottom 16 --margin-left 15 --margin-right 15'
         . ' --footer-center ' . escapeshellarg('[page] / [topage]')
-        . ' --footer-font-size 8 --footer-font-name "DejaVu Sans" --footer-color "#94a3b8" --footer-spacing 5'
+        . ' --footer-font-size 8 --footer-font-name ' . escapeshellarg('DejaVu Sans') . ' --footer-spacing 5'
         . ' --quiet ' . escapeshellarg($tmpHtml) . ' ' . escapeshellarg($outPath) . ' 2>&1';
 
     $res = @shell_exec($cmd);
