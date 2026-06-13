@@ -117,3 +117,62 @@ foreach ($i in $indicators2) {
 if (-not $verifyIndicatorFound) {
 	throw "SMS verify response did not contain an expected status indicator."
 }
+
+# ── PDF na stiahnutie: bonus pre prihlásených používateľov ────────────────────
+Write-Host "`n--- PDF download smoke test ---"
+
+# Deterministický fixture: zverejnený článok s priradeným PDF (len lokálne/dev)
+$seedScript = Join-Path $PSScriptRoot 'smoke_seed_pdf.php'
+$seedOut = & php $seedScript seed 2>&1
+Write-Host "Seed: $seedOut"
+if ($LASTEXITCODE -ne 0 -or "$seedOut" -notmatch 'SEED_OK') {
+	throw "PDF smoke fixture seed failed: $seedOut"
+}
+if ("$seedOut" -match 'file=MISSING') {
+	throw "PDF fixture file missing in /pdf — cannot test download."
+}
+
+try {
+	$pdfUrl = "$url/download_pdf.php?slug=smoke-test-pdf"
+
+	# 1) Anonymný používateľ → prístup zamietnutý (presmerovanie na login.php)
+	$anonSession = New-Object Microsoft.PowerShell.Commands.WebRequestSession
+	$resAnon = Invoke-WebRequest -Uri $pdfUrl -WebSession $anonSession
+	$anonPath = $resAnon.BaseResponse.RequestMessage.RequestUri.AbsolutePath
+	if ($anonPath -ne "/login.php") {
+		throw "PDF download was not gated for anonymous user (landed on '$anonPath', expected /login.php)."
+	}
+	Write-Host "Anonymous PDF access redirected to login.php: PASS"
+
+	# 2) Prihlásený používateľ (existujúca $session) → reálne PDF
+	$resPdf = Invoke-WebRequest -Uri $pdfUrl -WebSession $session
+	if ($resPdf.StatusCode -ne 200) {
+		throw "Logged-in PDF download returned HTTP $($resPdf.StatusCode), expected 200."
+	}
+	$ctype = [string]$resPdf.Headers['Content-Type']
+	if ($ctype -notmatch 'application/pdf') {
+		throw "Logged-in PDF download Content-Type was '$ctype', expected application/pdf."
+	}
+	$disp = [string]$resPdf.Headers['Content-Disposition']
+	if ($disp -notmatch 'attachment') {
+		throw "PDF download missing 'attachment' Content-Disposition (got '$disp')."
+	}
+	# Overenie PDF magic '%PDF' v prvých bajtoch (binárne aj textové telo)
+	$body = $resPdf.Content
+	if ($body -is [string]) {
+		$head = $body.Substring(0, [Math]::Min(8, $body.Length))
+		$bytes = [System.Text.Encoding]::ASCII.GetBytes($head)
+	} else {
+		$bytes = $body
+	}
+	$magic = -join ($bytes[0..3] | ForEach-Object { [char]$_ })
+	if ($magic -ne '%PDF') {
+		throw "Downloaded file did not start with PDF magic '%PDF' (got '$magic')."
+	}
+	Write-Host "Logged-in PDF download (application/pdf, attachment, %PDF): PASS"
+}
+finally {
+	$cleanOut = & php $seedScript cleanup 2>&1
+	Write-Host "Cleanup: $cleanOut"
+}
+Write-Host "PDF download smoke test: PASS"
