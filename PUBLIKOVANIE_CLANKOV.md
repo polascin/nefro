@@ -56,6 +56,24 @@ poľom `category` a tým, kde sú vypísané.
 
 ---
 
+## PDF verzia článku (bonus na stiahnutie)
+
+Pri spustení `add_<slug>_article.php` na serveri sa **automaticky vygeneruje PDF**
+verzia článku z jeho obsahu (cez `wkhtmltopdf`), uloží sa do `pdf/<slug>.pdf` a priradí
+k článku (`articles.pdf_file`). PDF je bonus na stiahnutie pre **prihlásených**
+používateľov — servíruje [download_pdf.php](download_pdf.php); priečinok `/pdf` je inak
+cez `.htaccess` blokovaný.
+
+- Generovanie zabezpečuje [pdf_generator.php](pdf_generator.php) (`generateArticlePdf()`),
+  volané priamo zo šablón po vložení článku.
+- Vyžaduje `wkhtmltopdf` (na produkčnom serveri je k dispozícii). Ak chýba, vloženie
+  článku prebehne normálne, len bez PDF.
+- **Hromadné dogenerovanie** chýbajúcich PDF: `php generate_all_article_pdfs.php` na serveri
+  (voľby `--slug=<slug>`, `--limit=N`, `--force`).
+- PDF vzniká na serveri; do gitu ho vieš stiahnuť cez SFTP z `pdf/<slug>.pdf`.
+
+---
+
 ## Rozdiely podľa kategórie
 
 - **Odborné** (`add_TEMPLATE_article.php`) — odborný jazyk, určené lekárom; zobrazujú

@@ -35,6 +35,7 @@ if (php_sapi_name() !== 'cli') {
 }
 require_once __DIR__ . '/db_config.php';
 require_once __DIR__ . '/newsletter_notifications.php';
+require_once __DIR__ . '/pdf_generator.php';
 
 // ── Dáta článku ───────────────────────────────────────────────────────────────
 
@@ -93,6 +94,16 @@ foreach ($articles as $a) {
                 $queuedTotal += enqueueArticleNewsletterEmails($pdo, $newId);
             } catch (\Throwable $qe) {
                 error_log('add_article newsletter enqueue error: ' . $qe->getMessage());
+            }
+            // Vygeneruj PDF verziu článku (bonus na stiahnutie pre prihlásených).
+            // Beží len ak je dostupné wkhtmltopdf (na produkčnom serveri áno).
+            try {
+                $pdfRes = generateArticlePdf($pdo, $a + ['id' => $newId], true);
+                if (!$pdfRes['ok'] && !empty($pdfRes['error'])) {
+                    error_log('add_article pdf gen: ' . $pdfRes['error']);
+                }
+            } catch (\Throwable $pe) {
+                error_log('add_article pdf gen error: ' . $pe->getMessage());
             }
         } else {
             $skipped++;
