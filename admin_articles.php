@@ -166,6 +166,10 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
                 $pubAt = trim((string) ($_POST["published_at"] ?? ""));
                 $isTop = isset($_POST["is_top"]) ? 1 : 0;
                 $isPub = isset($_POST["is_published"]) ? 1 : 0;
+                $category =
+                    ($_POST["category"] ?? "") === "popularne"
+                        ? "popularne"
+                        : "odborne";
 
                 $excerpt = optimizeExcerptForSeo($excerpt, $content, 220);
 
@@ -206,8 +210,8 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
 
                 try {
                     $stmt = $pdo->prepare(
-                        "INSERT INTO articles (title, slug, author, content, excerpt, published_at, is_top, is_published)
-                         VALUES (:title,:slug,:author,:content,:excerpt,:published_at,:is_top,:is_published)",
+                        "INSERT INTO articles (title, slug, author, content, excerpt, category, published_at, is_top, is_published)
+                         VALUES (:title,:slug,:author,:content,:excerpt,:category,:published_at,:is_top,:is_published)",
                     );
                     $stmt->execute([
                         "title" => $title,
@@ -216,6 +220,7 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
                             $author !== "" ? $author : "MUDr. Ľubomír Polaščín",
                         "content" => $content,
                         "excerpt" => $excerpt,
+                        "category" => $category,
                         "published_at" => $pubAt,
                         "is_top" => $isTop,
                         "is_published" => $isPub,
@@ -265,6 +270,10 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
                 $pubAt = trim((string) ($_POST["published_at"] ?? ""));
                 $isTop = isset($_POST["is_top"]) ? 1 : 0;
                 $isPub = isset($_POST["is_published"]) ? 1 : 0;
+                $category =
+                    ($_POST["category"] ?? "") === "popularne"
+                        ? "popularne"
+                        : "odborne";
 
                 $excerpt = optimizeExcerptForSeo($excerpt, $content, 220);
 
@@ -331,7 +340,7 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
                 try {
                     $stmt = $pdo->prepare(
                         "UPDATE articles SET title=:title, slug=:slug, author=:author, content=:content,
-                         excerpt=:excerpt, published_at=:published_at, is_top=:is_top, is_published=:is_published
+                         excerpt=:excerpt, category=:category, published_at=:published_at, is_top=:is_top, is_published=:is_published
                          WHERE id=:id",
                     );
                     $stmt->execute([
@@ -341,6 +350,7 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
                             $author !== "" ? $author : "MUDr. Ľubomír Polaščín",
                         "content" => $content,
                         "excerpt" => $excerpt,
+                        "category" => $category,
                         "published_at" => $pubAt,
                         "is_top" => $isTop,
                         "is_published" => $isPub,
@@ -726,7 +736,7 @@ try {
     $articlesTotal = (int) $totalStmt->fetchColumn();
 
     $stmt = $pdo->prepare(
-        "SELECT id, title, slug, author, published_at, is_top, is_published, created_at, sort_order
+        "SELECT id, title, slug, author, published_at, is_top, is_published, category, created_at, sort_order
          FROM articles ORDER BY is_top DESC, published_at DESC, id DESC LIMIT :limit OFFSET :offset",
     );
     $stmt->bindValue(':limit', $articlesPerPage, PDO::PARAM_INT);
@@ -901,6 +911,16 @@ $pageTimeZone = date("T") . " (" . date_default_timezone_get() . ")";
                             (string) ($editArticle["content"] ?? ""),
                         ) ?></textarea>
               <span class="helper-text">Zadajte HTML obsah článku bez obaľujúcich tagov &lt;article&gt;, &lt;header&gt; a &lt;footer&gt;. Tieto sa generujú automaticky.</span>
+            </div>
+
+            <div class="form-row">
+              <label for="f_category">Kategória</label>
+              <?php $editCategory = (string) ($editArticle["category"] ?? "odborne"); ?>
+              <select id="f_category" name="category">
+                <option value="odborne" <?= $editCategory !== "popularne" ? "selected" : "" ?>>Odborný článok (Domov)</option>
+                <option value="popularne" <?= $editCategory === "popularne" ? "selected" : "" ?>>Popularizačný – Pre pacientov</option>
+              </select>
+              <span class="helper-text">Odborné články sa zobrazujú na úvodnej stránke. Popularizačné v sekcii „Pre pacientov“ (populars.php).</span>
             </div>
 
             <div class="form-row">
@@ -1142,6 +1162,9 @@ $filterArticleId
                     <?php if (
                         $aTop
                     ): ?><br><span class="badge-top-sm">★ TOP</span><?php endif; ?>
+                    <?php if (
+                        (string) ($a["category"] ?? "odborne") === "popularne"
+                    ): ?><br><span class="badge-top-sm" style="background:var(--accent-color)">Pre pacientov</span><?php endif; ?>
                   </td>
                   <td><?= $aDate ?></td>
                   <td>

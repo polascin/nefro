@@ -102,7 +102,7 @@ try {
         // Režim filtrovania podľa autora — všetky jeho články, stránkované
         $stmtCount = $pdo->prepare(
             "SELECT COUNT(*) FROM articles
-             WHERE is_published = 1 AND TRIM(author) = :author",
+             WHERE is_published = 1 AND category = 'odborne' AND TRIM(author) = :author",
         );
         $stmtCount->execute([":author" => $autorFilter]);
         $otherArticlesTotal = (int) $stmtCount->fetchColumn();
@@ -117,7 +117,7 @@ try {
         $stmtOther = $pdo->prepare(
             "SELECT id, title, slug, author, excerpt, published_at
              FROM articles
-             WHERE is_published = 1 AND TRIM(author) = :author
+             WHERE is_published = 1 AND category = 'odborne' AND TRIM(author) = :author
              ORDER BY is_top DESC, sort_order ASC, published_at DESC
              LIMIT :limit OFFSET :offset",
         );
@@ -130,13 +130,13 @@ try {
         // Štandardný režim — top + ostatné články
         $stmtTop = $pdo->query(
             "SELECT id, title, slug, author, excerpt, published_at
-             FROM articles WHERE is_top = 1 AND is_published = 1
+             FROM articles WHERE is_top = 1 AND is_published = 1 AND category = 'odborne'
              ORDER BY sort_order ASC, published_at DESC",
         );
         $topArticles = $stmtTop->fetchAll();
 
         $stmtOtherCount = $pdo->query(
-            "SELECT COUNT(*) FROM articles WHERE is_top = 0 AND is_published = 1",
+            "SELECT COUNT(*) FROM articles WHERE is_top = 0 AND is_published = 1 AND category = 'odborne'",
         );
         $otherArticlesTotal = (int) $stmtOtherCount->fetchColumn();
         $otherArticlesTotalPages = max(
@@ -149,7 +149,7 @@ try {
         $otherArticlesOffset = ($otherArticlesPage - 1) * $otherArticlesPerPage;
         $stmtOther = $pdo->prepare(
             "SELECT id, title, slug, author, excerpt, published_at
-             FROM articles WHERE is_top = 0 AND is_published = 1
+             FROM articles WHERE is_top = 0 AND is_published = 1 AND category = 'odborne'
              ORDER BY sort_order ASC, published_at DESC
              LIMIT :limit OFFSET :offset",
         );

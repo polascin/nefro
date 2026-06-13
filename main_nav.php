@@ -32,6 +32,7 @@ if (!function_exists('_navA')) {
             <li><?= _navA($_navOnIndex ? '#domov' : 'index.php', 'Domov', $_navCurrent === 'index.php') ?></li>
             <li><a href="<?= $_navOnIndex ? '#sluzby' : 'index.php#sluzby' ?>">Služby</a></li>
             <li><a href="<?= $_navOnIndex ? '#kontakt' : 'index.php#kontakt' ?>">Kontakt</a></li>
+            <li><?= _navA('populars.php', 'Pre pacientov', $_navCurrent === 'populars.php') ?></li>
             <li><?= _navA('calculators.php', 'Kalkulačky', $_navCalcActive) ?></li>
             <li><?= _navA('search.php', 'Vyhľadávanie', $_navCurrent === 'search.php') ?></li>
             <?php if (function_exists('isLoggedIn') && isLoggedIn()): ?>

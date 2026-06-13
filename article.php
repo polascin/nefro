@@ -179,7 +179,10 @@ if ($article) {
         "medicalSpecialty" => "Nephrology",
         "audience" => [
             "@type" => "MedicalAudience",
-            "audienceType" => "Clinician",
+            "audienceType" =>
+                ($article["category"] ?? "odborne") === "popularne"
+                    ? "Patient"
+                    : "Clinician",
         ],
         "author" => [
             "@type" => "Person",
@@ -295,9 +298,13 @@ if ($article) {
           $pubDateIso = htmlspecialchars(date('c', strtotime($pubDate) ?: time()));
           $pubDateSk = formatArticleDate($pubDate, $months);
           $isTop = (int) $article["is_top"] === 1;
+          $isPopular = ($article["category"] ?? "odborne") === "popularne";
           ?>
 
         <article class="primary-article" itemscope itemtype="https://schema.org/Article">
+          <?php if ($isPopular): ?>
+            <a href="populars.php" class="badge-popular" aria-label="Sekcia Pre pacientov">Pre pacientov</a>
+          <?php endif; ?>
           <?php if ($isTop): ?>
             <span class="badge-top" aria-label="Odporúčaný článok">★ TOP</span>
           <?php endif; ?>
@@ -347,7 +354,11 @@ if ($article) {
         </div>
 
         <nav class="article-nav" aria-label="Navigácia článkov">
-          <a href="index.php" class="btn-secondary-small">← Späť na zoznam článkov</a>
+          <?php if ($isPopular): ?>
+            <a href="populars.php" class="btn-secondary-small">← Späť na články pre pacientov</a>
+          <?php else: ?>
+            <a href="index.php" class="btn-secondary-small">← Späť na zoznam článkov</a>
+          <?php endif; ?>
         </nav>
 
       <?php endif; ?>
