@@ -30,12 +30,13 @@ if ($slug === '' || !preg_match('/^[a-z0-9-]{1,120}$/', $slug)) {
 
 // Načítaj PDF priradené k zverejnenému článku
 $stmt = $pdo->prepare(
-    "SELECT pdf_file FROM articles WHERE slug = :slug AND is_published = 1 LIMIT 1"
+    "SELECT title, pdf_file FROM articles WHERE slug = :slug AND is_published = 1 LIMIT 1"
 );
 $stmt->execute(['slug' => $slug]);
 $row = $stmt->fetch();
 
 $pdfName = $row ? trim((string) ($row['pdf_file'] ?? '')) : '';
+$title   = $row ? trim((string) ($row['title'] ?? '')) : '';
 if ($pdfName === '') {
     http_response_code(404);
     header('Content-Type: text/plain; charset=utf-8');
@@ -57,12 +58,14 @@ while (ob_get_level() > 0) {
     ob_end_clean();
 }
 
-// Hlavičky na stiahnutie. RFC 5987 (filename*) pre diakritiku v názve.
-$asciiFallback = preg_replace('/[^A-Za-z0-9._ -]/', '_', $pdfName);
+// Čitateľný názov pri sťahovaní odvodíme z titulu článku (súbor na disku je ASCII).
+$downloadName = ($title !== '' ? $title : pathinfo($pdfName, PATHINFO_FILENAME)) . '.pdf';
+// RFC 5987 (filename*) pre diakritiku; ASCII fallback pre staré prehliadače.
+$asciiFallback = preg_replace('/[^A-Za-z0-9._ -]/', '_', $downloadName);
 header('Content-Type: application/pdf');
 header('Content-Disposition: attachment; '
     . 'filename="' . $asciiFallback . '"; '
-    . "filename*=UTF-8''" . rawurlencode($pdfName));
+    . "filename*=UTF-8''" . rawurlencode($downloadName));
 header('Content-Length: ' . filesize($path));
 header('X-Content-Type-Options: nosniff');
 header('Cache-Control: private, max-age=0, must-revalidate');

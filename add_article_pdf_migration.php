@@ -35,9 +35,12 @@ if (!$colStmt->fetch()) {
 }
 
 // 2) Priradenie dostupných PDF k článkom (podľa slugu)
+// Pozn.: názvy súborov na disku sú ASCII (bez diakritiky/medzier) — diakritika
+// v názve rozbíja SFTP deploy (git escapuje cestu). Čitateľný názov pri sťahovaní
+// generuje download_pdf.php z titulu článku.
 $map = [
-    'diabeticka-choroba-obliciek-bez-zahad' => 'Diabetická choroba obličiek bez záhad - s AI ilustráciami.pdf',
-    'moderne-trendy-v-nefroprotekcii'       => 'Moderné trendy v nefroprotekcii s AI ilustráciami.pdf',
+    'diabeticka-choroba-obliciek-bez-zahad' => 'diabeticka-choroba-obliciek-bez-zahad.pdf',
+    'moderne-trendy-v-nefroprotekcii'       => 'moderne-trendy-v-nefroprotekcii.pdf',
 ];
 
 $upd = $pdo->prepare("UPDATE articles SET pdf_file = :pdf WHERE slug = :slug");
