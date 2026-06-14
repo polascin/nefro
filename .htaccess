@@ -88,6 +88,12 @@ ServerSignature Off
     Require all denied
 </Files>
 
+# Hromadná (re)generácia PDF — len CLI/SSH (sync_article_pdfs.sh); bez browser UI,
+# admin cesta beží cez POST+CSRF v admin_articles.php (nie cez tento skript)
+<Files "generate_all_article_pdfs.php">
+    Require all denied
+</Files>
+
 # Knižničné PHP súbory — prístupné len ako include, nie priamo cez web
 <FilesMatch "^(db_config|config_loader|auth|phone_utils|calculators_common|header|header_profile|footer|head_meta|calculator_disclaimer|email_verification|mobile_verification|pdf_generator)\.php$">
     Require all denied
