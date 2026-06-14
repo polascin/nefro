@@ -1,0 +1,25 @@
+parameters:
+    # Začni nízko (0–4). Po vyčistení nálezov môžeš úroveň postupne zvyšovať až po 9.
+    level: 4
+
+    paths:
+        - .
+
+    # Plochý projekt s množstvom jednorazových skriptov — vylúč generované/cudzie veci.
+    excludePaths:
+        - .trunk/*
+        - tools/*.phar
+        - scratch/*
+        - private/*
+        - pdf/*
+        - uploads/*
+        - img/*
+        - assets/*
+        - vendor/*
+        - node_modules/*
+
+    # Existujúce nálezy sú v baseline — blokujú len NOVÉ chyby.
+    # (Súbor vytvorí install-dev-tools.ps1; placeholder je v repe, aby include nezlyhal.)
+
+includes:
+    - phpstan-baseline.neon

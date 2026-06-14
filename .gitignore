@@ -125,3 +125,8 @@ deploy_info.php
 env.ini
 *.env.ini
 private/
+
+# Lokálne PHP dev nástroje (stiahne tools/install-dev-tools.ps1) — NEdeployovať
+tools/*.phar
+.php-cs-fixer.cache
+.phpstan.cache/
