@@ -26,6 +26,11 @@ ServerSignature Off
     Require all denied
 </FilesMatch>
 
+# Lokálne dev konfigy (PHPStan, PHP-CS-Fixer) — len lokálny vývoj, nie cez web
+<FilesMatch "^(phpstan.*|\.php-cs-fixer.*)$">
+    Require all denied
+</FilesMatch>
+
 # ── Blokovanie vývojových adresárov cez RewriteRule ─────────────────────────
 # (RedirectMatch/RewriteRule sú v .htaccess povolené)
 <IfModule mod_rewrite.c>
