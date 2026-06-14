@@ -111,8 +111,8 @@ ServerSignature Off
     Require all denied
 </FilesMatch>
 
-# Vývojové Python skripty
-<FilesMatch "\.py$">
+# Vývojové Python a shell skripty
+<FilesMatch "\.(py|sh)$">
     Require all denied
 </FilesMatch>
 

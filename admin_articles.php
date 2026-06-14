@@ -3,8 +3,40 @@ declare(strict_types=1);
 require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/db_config.php';
 require_once __DIR__ . "/newsletter_notifications.php";
+require_once __DIR__ . '/pdf_generator.php';
 
 requireAdmin();
+
+/**
+ * Po vytvorení/úprave článku automaticky (pre)generuje jeho PDF verziu
+ * a priradí ju (articles.pdf_file). Tiché zlyhanie (len log) — nesmie
+ * rozbiť uloženie článku. Vráti doplnkovú hlášku pre admina.
+ */
+function regenerateArticlePdfSafe(PDO $pdo, int $id, string $slug, string $title, string $author, string $content, string $pubAt): string
+{
+    try {
+        if (!articlePdfAvailable()) {
+            return '';
+        }
+        $res = generateArticlePdf($pdo, [
+            'id' => $id,
+            'slug' => $slug,
+            'title' => $title,
+            'author' => $author !== '' ? $author : 'MUDr. Ľubomír Polaščín',
+            'content' => $content,
+            'published_at' => $pubAt,
+        ], true);
+        if ($res['ok']) {
+            return ' PDF verzia bola vygenerovaná.';
+        }
+        if (!empty($res['error'])) {
+            error_log('admin_articles pdf gen: ' . $res['error']);
+        }
+    } catch (\Throwable $pe) {
+        error_log('admin_articles pdf gen error: ' . $pe->getMessage());
+    }
+    return '';
+}
 
 $currentAdminId = (int) ($_SESSION["user_id"] ?? 0);
 $actionResult = null; // vždy plain text — escapuje sa cez htmlspecialchars() pri výpise
@@ -251,6 +283,9 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
                                 " Článok bol uložený, ale novinky sa nepodarilo zaradiť do fronty.";
                         }
                     }
+                    $actionResult .= regenerateArticlePdfSafe(
+                        $pdo, $newId, $slug, $title, $author, $content, $pubAt,
+                    );
                 } catch (\PDOException $e) {
                     error_log(
                         "admin_articles create error: " . $e->getMessage(),
@@ -392,6 +427,10 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
                         $actionResult .=
                             " Aktualizácia prebehla, ale správa fronty noviniek zlyhala.";
                     }
+                    // Obsah sa mohol zmeniť (audit, korektúra…) → preregeneruj PDF.
+                    $actionResult .= regenerateArticlePdfSafe(
+                        $pdo, $id, $slug, $title, $author, $content, $pubAt,
+                    );
                 } catch (\PDOException $e) {
                     error_log(
                         "admin_articles update error: " . $e->getMessage(),

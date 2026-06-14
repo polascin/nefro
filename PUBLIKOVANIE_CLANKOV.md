@@ -64,13 +64,29 @@ k článku (`articles.pdf_file`). PDF je bonus na stiahnutie pre **prihlásenýc
 používateľov — servíruje [download_pdf.php](download_pdf.php); priečinok `/pdf` je inak
 cez `.htaccess` blokovaný.
 
-- Generovanie zabezpečuje [pdf_generator.php](pdf_generator.php) (`generateArticlePdf()`),
-  volané priamo zo šablón po vložení článku.
-- Vyžaduje `wkhtmltopdf` (na produkčnom serveri je k dispozícii). Ak chýba, vloženie
+- Generovanie zabezpečuje [pdf_generator.php](pdf_generator.php) (`generateArticlePdf()`).
+  Volá sa **automaticky**:
+  - zo **šablón** po vložení nového článku,
+  - z **Administrácia → Správa článkov** po vytvorení aj **úprave** článku
+    (po audite, slovenskej korektúre/revízii… sa PDF preregeneruje),
+- Vyžaduje `wkhtmltopdf` (na produkčnom serveri je k dispozícii). Ak chýba, uloženie
   článku prebehne normálne, len bez PDF.
-- **Hromadné dogenerovanie** chýbajúcich PDF: `php generate_all_article_pdfs.php` na serveri
-  (voľby `--slug=<slug>`, `--limit=N`, `--force`).
-- PDF vzniká na serveri; do gitu ho vieš stiahnuť cez SFTP z `pdf/<slug>.pdf`.
+- **Hromadné / stale dogenerovanie** na serveri:
+  `php generate_all_article_pdfs.php` (chýbajúce), `--stale` (chýbajúce **aj
+  neaktuálne** podľa `updated_at`), `--force` (všetky), `--slug=<slug>`, `--limit=N`.
+
+### Zosúladenie PDF do gitu (po zmene obsahu)
+
+PDF vznikajú na serveri. Po zmene obsahu (audit, korektúra, nový/upravený článok)
+spusti z koreňa projektu:
+
+```bash
+sh sync_article_pdfs.sh
+```
+
+Skript na serveri preregeneruje neaktuálne PDF (`--stale`), stiahne ich do `pdf/`
+a commitne zmeny (post-commit hook → push + deploy). Tým ostávajú PDF v gite
+zosúladené s aktuálnym obsahom článkov.
 
 ---
 

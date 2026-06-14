@@ -30,8 +30,10 @@ require_once __DIR__ . '/pdf_generator.php';
 $onlySlug = null;
 $limit = 0;
 $force = false;
+$stale = false;
 foreach (array_slice($argv, 1) as $arg) {
     if ($arg === '--force') { $force = true; }
+    elseif ($arg === '--stale') { $stale = true; }
     elseif (str_starts_with($arg, '--slug=')) { $onlySlug = substr($arg, 7); }
     elseif (str_starts_with($arg, '--limit=')) { $limit = max(0, (int) substr($arg, 8)); }
 }
@@ -41,18 +43,36 @@ if (!articlePdfAvailable()) {
     exit(1);
 }
 
+$pdfDir = __DIR__ . '/pdf';
+
+/**
+ * Treba (pre)generovať PDF pre tento článok?
+ *   --force  → vždy
+ *   --stale  → ak PDF chýba (priradenie/súbor) ALEBO je obsah novší (updated_at > mtime PDF)
+ *   inak     → len ak PDF úplne chýba
+ */
+function articleNeedsPdf(array $a, bool $force, bool $stale, string $pdfDir): bool
+{
+    if ($force) { return true; }
+    $pf = (string) ($a['pdf_file'] ?? '');
+    if ($pf === '') { return true; }
+    $path = $pdfDir . '/' . basename($pf);
+    if (!is_file($path)) { return true; }
+    if ($stale) {
+        $updatedTs = strtotime((string) ($a['updated_at'] ?? '')) ?: 0;
+        if ($updatedTs > filemtime($path)) { return true; }
+    }
+    return false;
+}
+
 // ── Výber článkov ────────────────────────────────────────────────────────────
 if ($onlySlug !== null) {
-    $stmt = $pdo->prepare("SELECT id, slug, title, author, content, published_at, pdf_file
+    $stmt = $pdo->prepare("SELECT id, slug, title, author, content, published_at, pdf_file, updated_at
                            FROM articles WHERE slug = :slug LIMIT 1");
     $stmt->execute(['slug' => $onlySlug]);
 } else {
-    $where = "is_published = 1";
-    if (!$force) {
-        $where .= " AND (pdf_file IS NULL OR pdf_file = '')";
-    }
-    $stmt = $pdo->query("SELECT id, slug, title, author, content, published_at, pdf_file
-                         FROM articles WHERE $where ORDER BY id");
+    $stmt = $pdo->query("SELECT id, slug, title, author, content, published_at, pdf_file, updated_at
+                         FROM articles WHERE is_published = 1 ORDER BY id");
 }
 $rows = $stmt->fetchAll();
 
@@ -65,8 +85,8 @@ echo "────────────────────────�
 
 foreach ($rows as $a) {
     if ($limit > 0 && $count >= $limit) { break; }
-    // Pri hromadnom behu bez --force preskoč články, ktoré už PDF majú.
-    if ($onlySlug === null && !$force && !empty($a['pdf_file'])) { $skipped++; continue; }
+    // Pri --slug generuj vždy; inak rozhodne articleNeedsPdf (force / stale / chýbajúce).
+    if ($onlySlug === null && !articleNeedsPdf($a, $force, $stale, $pdfDir)) { $skipped++; continue; }
     $count++;
 
     $res = generateArticlePdf($pdo, $a, true);
