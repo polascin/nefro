@@ -109,12 +109,27 @@ HTML;
 }
 
 /**
- * Vygeneruje PDF pre článok. Vráti ['ok'=>bool, 'file'=>?string, 'error'=>?string].
- *
- * @param array $article  riadok z tabuľky articles (id, slug, title, author, content, published_at)
- * @param bool  $updateDb ak true, nastaví articles.pdf_file na názov súboru
+ * Slugy s ručne pripravenými PDF (kurátorovaný dizajn s AI ilustráciami), ktoré
+ * sa NESMÚ automaticky prepísať. Pregeneruj ich len explicitne ($allowProtected=true).
  */
-function generateArticlePdf(PDO $pdo, array $article, bool $updateDb = true): array
+const PROTECTED_PDF_SLUGS = [
+    'diabeticka-choroba-obliciek-bez-zahad',
+    'moderne-trendy-v-nefroprotekcii',
+];
+
+function articlePdfIsProtected(string $slug): bool
+{
+    return in_array($slug, PROTECTED_PDF_SLUGS, true);
+}
+
+/**
+ * Vygeneruje PDF pre článok. Vráti ['ok'=>bool, 'file'=>?string, 'error'=>?string, 'skipped'=>bool].
+ *
+ * @param array $article        riadok z tabuľky articles (id, slug, title, author, content, published_at)
+ * @param bool  $updateDb       ak true, nastaví articles.pdf_file na názov súboru
+ * @param bool  $allowProtected ak true, prepíše aj chránené (ručné) PDF
+ */
+function generateArticlePdf(PDO $pdo, array $article, bool $updateDb = true, bool $allowProtected = false): array
 {
     if (!articlePdfAvailable()) {
         return ['ok' => false, 'file' => null, 'error' => 'wkhtmltopdf nie je dostupné v tomto prostredí'];
@@ -123,6 +138,11 @@ function generateArticlePdf(PDO $pdo, array $article, bool $updateDb = true): ar
     $slug = preg_replace('/[^a-z0-9-]/', '', (string) ($article['slug'] ?? ''));
     if ($slug === '') {
         return ['ok' => false, 'file' => null, 'error' => 'neplatný slug'];
+    }
+
+    // Chránené (ručne pripravené) PDF sa automaticky neprepisujú.
+    if (!$allowProtected && articlePdfIsProtected($slug)) {
+        return ['ok' => true, 'file' => (string) ($article['pdf_file'] ?? ($slug . '.pdf')), 'error' => null, 'skipped' => true];
     }
 
     $pdfDir = __DIR__ . '/pdf';
@@ -162,6 +182,22 @@ function generateArticlePdf(PDO $pdo, array $article, bool $updateDb = true): ar
             $u->execute(['f' => $outFile, 'id' => (int) $article['id']]);
         } catch (\PDOException $e) {
             return ['ok' => true, 'file' => $outFile, 'error' => 'PDF vytvorené, ale DB sa nepodarilo aktualizovať: ' . $e->getMessage()];
+        }
+    }
+
+    // Zarovnaj mtime PDF tesne ZA updated_at článku (epoch z DB hodín, bez TZ posunu),
+    // aby --stale práve vygenerované PDF nepovažoval za neaktuálne (UPDATE pdf_file
+    // bumpne updated_at až po zápise súboru).
+    if (isset($article['id'])) {
+        try {
+            $ts = $pdo->prepare('SELECT UNIX_TIMESTAMP(updated_at) FROM articles WHERE id = :id');
+            $ts->execute(['id' => (int) $article['id']]);
+            $u = (int) $ts->fetchColumn();
+            if ($u > 0) {
+                @touch($outPath, $u + 1);
+            }
+        } catch (\Throwable $e) {
+            // zarovnanie je best-effort
         }
     }
 

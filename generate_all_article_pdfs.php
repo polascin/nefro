@@ -53,13 +53,16 @@ $pdfDir = __DIR__ . '/pdf';
  */
 function articleNeedsPdf(array $a, bool $force, bool $stale, string $pdfDir): bool
 {
+    // Chránené (ručne pripravené) PDF bulk nikdy automaticky neprepisuje.
+    if (articlePdfIsProtected((string) ($a['slug'] ?? ''))) { return false; }
     if ($force) { return true; }
     $pf = (string) ($a['pdf_file'] ?? '');
     if ($pf === '') { return true; }
     $path = $pdfDir . '/' . basename($pf);
     if (!is_file($path)) { return true; }
     if ($stale) {
-        $updatedTs = strtotime((string) ($a['updated_at'] ?? '')) ?: 0;
+        // Porovnanie v epoch sekundách z DB hodín (UNIX_TIMESTAMP) — bez TZ posunu.
+        $updatedTs = (int) ($a['updated_ts'] ?? 0);
         if ($updatedTs > filemtime($path)) { return true; }
     }
     return false;
@@ -67,11 +70,13 @@ function articleNeedsPdf(array $a, bool $force, bool $stale, string $pdfDir): bo
 
 // ── Výber článkov ────────────────────────────────────────────────────────────
 if ($onlySlug !== null) {
-    $stmt = $pdo->prepare("SELECT id, slug, title, author, content, published_at, pdf_file, updated_at
+    $stmt = $pdo->prepare("SELECT id, slug, title, author, content, published_at, pdf_file,
+                                  UNIX_TIMESTAMP(updated_at) AS updated_ts
                            FROM articles WHERE slug = :slug LIMIT 1");
     $stmt->execute(['slug' => $onlySlug]);
 } else {
-    $stmt = $pdo->query("SELECT id, slug, title, author, content, published_at, pdf_file, updated_at
+    $stmt = $pdo->query("SELECT id, slug, title, author, content, published_at, pdf_file,
+                                UNIX_TIMESTAMP(updated_at) AS updated_ts
                          FROM articles WHERE is_published = 1 ORDER BY id");
 }
 $rows = $stmt->fetchAll();
@@ -90,6 +95,11 @@ foreach ($rows as $a) {
     $count++;
 
     $res = generateArticlePdf($pdo, $a, true);
+    if (!empty($res['skipped'])) {
+        $skipped++;
+        echo "  • {$a['slug']}: chránené (ručné PDF) — preskočené\n";
+        continue;
+    }
     if ($res['ok']) {
         $ok++;
         $kb = round(filesize(__DIR__ . '/pdf/' . $res['file']) / 1024);
