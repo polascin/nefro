@@ -31,6 +31,12 @@ ServerSignature Off
     Require all denied
 </FilesMatch>
 
+# Interné Markdown dokumenty (.agent.md, AGENTS.md, README, PUBLIKOVANIE_*) —
+# obsahujú vývojársku/bezpečnostnú dokumentáciu, nikdy cez web
+<FilesMatch "\.md$">
+    Require all denied
+</FilesMatch>
+
 # ── Blokovanie vývojových adresárov cez RewriteRule ─────────────────────────
 # (RedirectMatch/RewriteRule sú v .htaccess povolené)
 <IfModule mod_rewrite.c>
