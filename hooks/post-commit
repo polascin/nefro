@@ -1,10 +1,17 @@
 #!/bin/sh
-# Automatický git push po commite
+# Po commite: (1) push na GitHub, (2) SFTP deploy zmenených súborov na produkciu.
+# Deploy logika je v deploy.sh (vedľa tohto hooku) — inštaluje ju hooks/install.ps1.
 
 # Získaj aktuálnu branch
 current_branch=$(git rev-parse --abbrev-ref HEAD)
 
-# Spusti git push na aktuálnu branch
+# (1) Push na GitHub
 git push origin "$current_branch" 2>/dev/null
+
+# (2) SFTP deploy na produkčný server (ak je deploy.sh prítomný)
+HOOK_DIR=$(dirname "$0")
+if [ -f "$HOOK_DIR/deploy.sh" ]; then
+    sh "$HOOK_DIR/deploy.sh"
+fi
 
 exit 0

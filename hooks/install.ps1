@@ -31,9 +31,15 @@ if (Test-Path "$hooksSourceDir/pre-commit") {
     Write-Host "✓ Installed pre-commit hook (PNG to WebP)" -ForegroundColor Green
 }
 
+# Copy deploy.sh (SFTP deploy na produkciu — volá ho post-commit)
+if (Test-Path "$hooksSourceDir/deploy.sh") {
+    Copy-Item "$hooksSourceDir/deploy.sh" "$gitHooksDir/deploy.sh" -Force
+    if ($PSVersionTable.Platform -eq "Unix") { chmod +x "$gitHooksDir/deploy.sh" }
+    Write-Host "✓ Installed deploy.sh (SFTP deploy)" -ForegroundColor Green
+}
+
 # For Windows, also create a .bat version
 if (Test-Path "$hooksSourceDir/post-commit") {
-    $content = Get-Content "$hooksSourceDir/post-commit" -Raw
     $batContent = "@echo off`r`nREM Automatický git push po commite`r`n`r`nfor /f %%i in ('git rev-parse --abbrev-ref HEAD') do set branch=%%i`r`ngit push origin %branch% 2>nul`r`n`r`nexit /b 0"
     Set-Content "$gitHooksDir/post-commit.bat" $batContent -Force
     Write-Host "✓ Installed post-commit hook (Windows Batch)" -ForegroundColor Green
