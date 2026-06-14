@@ -2,6 +2,7 @@
 declare(strict_types=1);
 require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/db_config.php';
+/** @var \PDO $pdo */
 require_once __DIR__ . '/avatar_upload.php';
 require_once __DIR__ . '/phone_utils.php';
 require_once __DIR__ . '/mobile_verification.php';

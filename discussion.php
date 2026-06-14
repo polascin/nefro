@@ -2,6 +2,7 @@
 declare(strict_types=1);
 require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/db_config.php';
+/** @var \PDO $pdo */
 
 $isLoggedIn   = isLoggedIn();
 $currentUserId = $isLoggedIn ? (int) $_SESSION['user_id'] : 0;

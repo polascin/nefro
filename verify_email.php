@@ -2,6 +2,7 @@
 declare(strict_types=1);
 require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/db_config.php';
+/** @var \PDO $pdo */
 require_once __DIR__ . '/email_verification.php';
 
 const VERIFY_MAX_ATTEMPTS = 20;   // max pokusov per IP za okno

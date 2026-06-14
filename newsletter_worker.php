@@ -7,6 +7,7 @@ if (php_sapi_name() !== 'cli') {
 }
 
 require_once __DIR__ . '/db_config.php';
+/** @var \PDO $pdo */
 require_once __DIR__ . '/newsletter_notifications.php';
 
 $limit = 50;

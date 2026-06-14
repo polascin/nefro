@@ -22,6 +22,7 @@ if (php_sapi_name() !== 'cli') {
     requireAdmin();
 }
 require_once __DIR__ . '/db_config.php';
+/** @var \PDO $pdo */
 
 if (php_sapi_name() !== 'cli') {
     header('Content-Type: text/plain; charset=utf-8');

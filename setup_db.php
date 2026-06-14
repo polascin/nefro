@@ -6,6 +6,7 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__) && php_sapi_name() !==
     exit("Prístup odmietnutý.");
 }
 require_once __DIR__ . '/db_config.php';
+/** @var \PDO $pdo */
 require_once __DIR__ . '/totp.php';
 
 $cliOut = static function (string $s): void {

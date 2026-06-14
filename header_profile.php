@@ -7,6 +7,7 @@ $loggedIn = function_exists('isLoggedIn')
 
 if ($loggedIn && !isset($pdo)) {
     require_once __DIR__ . '/db_config.php';
+    /** @var \PDO $pdo */
 }
 
 if ($loggedIn && isset($pdo)) {

@@ -20,6 +20,7 @@ $avatarRetentionDays  = max(30, (int) ($argv[2] ?? 365));
 $accessLogRetentionDays = max(30, (int) ($argv[3] ?? 90));
 
 require_once __DIR__ . '/db_config.php';
+/** @var \PDO $pdo */
 
 echo "Nefro Archív Cleanup\n";
 echo "====================\n";

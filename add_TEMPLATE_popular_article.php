@@ -39,6 +39,7 @@ if (php_sapi_name() !== 'cli') {
     requireAdminMutationConfirmation('Vložiť alebo aktualizovať popularizačný článok');
 }
 require_once __DIR__ . '/db_config.php';
+/** @var \PDO $pdo */
 require_once __DIR__ . '/newsletter_notifications.php';
 require_once __DIR__ . '/pdf_generator.php';
 

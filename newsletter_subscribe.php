@@ -4,6 +4,7 @@ declare(strict_types=1);
 header('Content-Type: application/json; charset=UTF-8');
 
 require_once __DIR__ . '/db_config.php';
+/** @var \PDO $pdo */
 require_once __DIR__ . '/newsletter_notifications.php';
 
 // Origin/Referer check — bráni CSRF z tretích stránok.

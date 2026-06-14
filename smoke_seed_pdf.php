@@ -20,6 +20,7 @@ if (php_sapi_name() !== 'cli') {
 }
 
 require_once __DIR__ . '/db_config.php'; // poskytuje $pdo aj config_loader
+/** @var \PDO $pdo */
 
 if (!function_exists('isAppLocalDev') || !isAppLocalDev()) {
     fwrite(STDERR, "ODMIETNUTÉ: smoke_seed_pdf.php beží len v lokálnom/dev prostredí (APP_ENV=local / APP_LOCAL_DEV=1).\n");

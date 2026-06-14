@@ -2,6 +2,7 @@
 declare(strict_types=1);
 require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/db_config.php';
+/** @var \PDO $pdo */
 
 $pageLastUpdated = date("d.m.Y H:i", filemtime(__FILE__));
 $pageTimeZone = date("T") . " (" . date_default_timezone_get() . ")";

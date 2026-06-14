@@ -1,45 +1,21 @@
 parameters:
 	ignoreErrors:
 		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 4
-			path: '2fa_setup.php'
-
-		-
 			message: '#^Right side of && is always true\.$#'
 			identifier: booleanAnd.rightAlwaysTrue
 			count: 1
 			path: '2fa_verify.php'
 
 		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 15
-			path: '2fa_verify.php'
-
-		-
 			message: '#^Offset ''title'' on array\{title\: '''', slug\: '''', author\: ''MUDr\. Ľubomír…'', published_at\: non\-falsy\-string, is_top\: 0, excerpt\: '''', content\: ''\<\!\-\- ← VYPLNIŤ\:…''\} on left side of \?\? always exists and is not nullable\.$#'
 			identifier: nullCoalesce.offset
 			count: 1
 			path: add_TEMPLATE_article.php
 
 		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 4
-			path: add_TEMPLATE_article.php
-
-		-
 			message: '#^Offset ''title'' on array\{title\: '''', slug\: '''', author\: ''MUDr\. Ľubomír…'', published_at\: non\-falsy\-string, is_top\: 0, excerpt\: '''', content\: ''\<\!\-\- ← VYPLNIŤ\:…''\} on left side of \?\? always exists and is not nullable\.$#'
 			identifier: nullCoalesce.offset
 			count: 1
-			path: add_TEMPLATE_popular_article.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 4
 			path: add_TEMPLATE_popular_article.php
 
 		-
@@ -49,45 +25,9 @@ parameters:
 			path: add_acc-aha-ckm-syndrom-prve-odporucanie_article.php
 
 		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 3
-			path: add_acc-aha-ckm-syndrom-prve-odporucanie_article.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 3
-			path: add_article_pdf_migration.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 4
-			path: add_category_migration.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 2
-			path: add_ckd_pacienti_infographic_2026-06-13.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 3
-			path: add_diabeticka-choroba-obliciek-bez-zahad_article.php
-
-		-
 			message: '#^Offset ''title'' on array\{title\: ''EDTA lock roztoky\:…'', slug\: ''edta\-lock\-roztoky…'', author\: ''MUDr\. Ľubomír…'', published_at\: non\-falsy\-string, is_top\: 0, excerpt\: ''Štúdia v časopise…'', content\: ''\<p\>Komplikácie…''\} on left side of \?\? always exists and is not nullable\.$#'
 			identifier: nullCoalesce.offset
 			count: 1
-			path: add_edta-lock-roztoky-priechodnost-cvk_article.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 3
 			path: add_edta-lock-roztoky-priechodnost-cvk_article.php
 
 		-
@@ -97,21 +37,9 @@ parameters:
 			path: add_elekoglipron-peroralny-glp1-agonista-faza-2_article.php
 
 		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 3
-			path: add_elekoglipron-peroralny-glp1-agonista-faza-2_article.php
-
-		-
 			message: '#^Offset ''title'' on array\{title\: ''Genetické…'', slug\: ''geneticke…'', author\: ''MUDr\. Ľubomír…'', published_at\: non\-falsy\-string, is_top\: 0, excerpt\: ''Nový prieskum z NKF…'', content\: ''\<p\>Genetické…''\} on left side of \?\? always exists and is not nullable\.$#'
 			identifier: nullCoalesce.offset
 			count: 1
-			path: add_geneticke-testovanie-obliciek-zriedkavo_article.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 3
 			path: add_geneticke-testovanie-obliciek-zriedkavo_article.php
 
 		-
@@ -121,21 +49,9 @@ parameters:
 			path: add_glp1-ischemicka-opticka-neuropatia-naion_article.php
 
 		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 3
-			path: add_glp1-ischemicka-opticka-neuropatia-naion_article.php
-
-		-
 			message: '#^Offset ''title'' on array\{title\: ''Kazuisticky\: Ako…'', slug\: ''kazuistika…'', author\: ''MUDr\. Ľubomír…'', published_at\: ''2026\-05\-27'', is_top\: 0, excerpt\: ''Hyperkaliémia je…'', content\: ''\<p\>V praxi narážame…''\} on left side of \?\? always exists and is not nullable\.$#'
 			identifier: nullCoalesce.offset
 			count: 1
-			path: add_kazuistika-hyperkaliemia-ckd-hf-zachovanie-raas_article.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 3
 			path: add_kazuistika-hyperkaliemia-ckd-hf-zachovanie-raas_article.php
 
 		-
@@ -145,21 +61,9 @@ parameters:
 			path: add_klucove-intervencie-peritonealna-dialyza-prevencia-infekcii_article.php
 
 		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 3
-			path: add_klucove-intervencie-peritonealna-dialyza-prevencia-infekcii_article.php
-
-		-
 			message: '#^Offset ''title'' on array\{title\: ''Koľko vetrov denne…'', slug\: ''kolko\-vetrov\-denne…'', author\: ''MUDr\. Ľubomír…'', published_at\: non\-falsy\-string, is_top\: 0, excerpt\: ''Nová austrálska…'', content\: ''\<p\>Nadúvanie a…''\} on left side of \?\? always exists and is not nullable\.$#'
 			identifier: nullCoalesce.offset
 			count: 1
-			path: add_kolko-vetrov-denne-normalne_article.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 3
 			path: add_kolko-vetrov-denne-normalne_article.php
 
 		-
@@ -169,21 +73,9 @@ parameters:
 			path: add_kontinualne-monitorovanie-glukozy-diabetes-2-typu-bez-inzulinu_article.php
 
 		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 3
-			path: add_kontinualne-monitorovanie-glukozy-diabetes-2-typu-bez-inzulinu_article.php
-
-		-
 			message: '#^Offset ''title'' on array\{title\: ''Kontrola draslíka…'', slug\: ''kontrola\-draslika…'', author\: ''MUDr\. Ľubomír…'', published_at\: non\-falsy\-string, is_top\: 0, excerpt\: ''Hyperkaliémia pri…'', content\: ''\<p\>Hyperkaliémia…''\} on left side of \?\? always exists and is not nullable\.$#'
 			identifier: nullCoalesce.offset
 			count: 1
-			path: add_kontrola-draslika-ckd-edukovat-nie-strasit_article.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 3
 			path: add_kontrola-draslika-ckd-edukovat-nie-strasit_article.php
 
 		-
@@ -193,21 +85,9 @@ parameters:
 			path: add_metformin-sglt2-prva-linia-diabetu_article.php
 
 		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 3
-			path: add_metformin-sglt2-prva-linia-diabetu_article.php
-
-		-
 			message: '#^Offset ''title'' on array\{title\: ''Mierne obmedzenie…'', slug\: ''mierne\-obmedzenie…'', author\: ''MUDr\. Ľubomír…'', published_at\: non\-falsy\-string, is_top\: 0, excerpt\: ''Retrospektívna…'', content\: ''\<p\>Diétne…''\} on left side of \?\? always exists and is not nullable\.$#'
 			identifier: nullCoalesce.offset
 			count: 1
-			path: add_mierne-obmedzenie-bielkovin-ckd_article.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 3
 			path: add_mierne-obmedzenie-bielkovin-ckd_article.php
 
 		-
@@ -217,39 +97,15 @@ parameters:
 			path: add_moderne-trendy-v-nefroprotekcii_article.php
 
 		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 3
-			path: add_moderne-trendy-v-nefroprotekcii_article.php
-
-		-
 			message: '#^Offset ''title'' on array\{title\: ''mRNA vakcíny zrejme…'', slug\: ''mrna\-vakciny…'', author\: ''MUDr\. Ľubomír…'', published_at\: non\-falsy\-string, is_top\: 0, excerpt\: ''Nové experimentálne…'', content\: ''\<p\>Vedci dlhé roky…''\} on left side of \?\? always exists and is not nullable\.$#'
 			identifier: nullCoalesce.offset
 			count: 1
 			path: add_mrna-vakciny-funguju-sirsie_article.php
 
 		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 3
-			path: add_mrna-vakciny-funguju-sirsie_article.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 2
-			path: add_newsletter_tables_migration.php
-
-		-
 			message: '#^Offset ''title'' on array\{title\: ''Nové odporúčania…'', slug\: ''nove\-odporucania…'', author\: ''MUDr\. Ľubomír…'', published_at\: non\-falsy\-string, is_top\: 0, excerpt\: ''Odporúčania ACC/AHA…'', content\: ''\<p\>Nové odporúčania…''\} on left side of \?\? always exists and is not nullable\.$#'
 			identifier: nullCoalesce.offset
 			count: 1
-			path: add_nove-odporucania-dyslipidemia-prevent-ldl-ciele_article.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 3
 			path: add_nove-odporucania-dyslipidemia-prevent-ldl-ciele_article.php
 
 		-
@@ -259,39 +115,15 @@ parameters:
 			path: add_nove-odporucania-hypertenzia-meranie-rozhodnutia_article.php
 
 		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 3
-			path: add_nove-odporucania-hypertenzia-meranie-rozhodnutia_article.php
-
-		-
 			message: '#^Offset ''title'' on array\{title\: ''Nefroverzia pre…'', slug\: ''nsmra\-t2d\-ckd…'', author\: ''MUDr\. Ľubomír…'', published_at\: ''2026\-05\-30'', is_top\: 0, excerpt\: ''U pacienta s T2D a…'', content\: ''\<p\>U pacienta s …''\} on left side of \?\? always exists and is not nullable\.$#'
 			identifier: nullCoalesce.offset
 			count: 1
 			path: add_nsmra-t2d-ckd-perzistujuca-albuminuria_article.php
 
 		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 3
-			path: add_nsmra-t2d-ckd-perzistujuca-albuminuria_article.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 3
-			path: add_optimalizacia-raasi-mra-hyperkaliemia-ckd-hf_article.php
-
-		-
 			message: '#^Offset ''title'' on array\{title\: ''Pečeňovo cielený…'', slug\: ''pecenovo\-cieleny…'', author\: ''MUDr\. Ľubomír…'', published_at\: non\-falsy\-string, is_top\: 0, excerpt\: ''Štúdia fázy 2b OPTI…'', content\: ''\<p\>Hypoglykémia…''\} on left side of \?\? always exists and is not nullable\.$#'
 			identifier: nullCoalesce.offset
 			count: 1
-			path: add_pecenovo-cieleny-inzulin-hdv-hypoglykemia-dm1_article.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 3
 			path: add_pecenovo-cieleny-inzulin-hdv-hypoglykemia-dm1_article.php
 
 		-
@@ -301,21 +133,9 @@ parameters:
 			path: add_potravinove-aditiva-farbiva-konzervanty-chronicke-ochorenia_article.php
 
 		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 3
-			path: add_potravinove-aditiva-farbiva-konzervanty-chronicke-ochorenia_article.php
-
-		-
 			message: '#^Offset ''title'' on array\{title\: ''Povýšenecký tón v…'', slug\: ''povysenecky\-ton…'', author\: ''MUDr\. Ľubomír…'', published_at\: non\-falsy\-string, is_top\: 0, excerpt\: ''Zrozumiteľná…'', content\: ''\<p\>Komunikácia…''\} on left side of \?\? always exists and is not nullable\.$#'
 			identifier: nullCoalesce.offset
 			count: 1
-			path: add_povysenecky-ton-medicina-jednoduchy-jazyk_article.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 3
 			path: add_povysenecky-ton-medicina-jednoduchy-jazyk_article.php
 
 		-
@@ -325,21 +145,9 @@ parameters:
 			path: add_pre-pacientov-uvod_article.php
 
 		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 3
-			path: add_pre-pacientov-uvod_article.php
-
-		-
 			message: '#^Offset ''title'' on array\{title\: ''Prehľad najnovšieho…'', slug\: ''prehlad\-vyskum\-fsgs…'', author\: ''MUDr\. Ľubomír…'', published_at\: non\-falsy\-string, is_top\: 0, excerpt\: ''Sparsentan ako prvý…'', content\: ''\<p\>Posledné mesiace…''\} on left side of \?\? always exists and is not nullable\.$#'
 			identifier: nullCoalesce.offset
 			count: 1
-			path: add_prehlad-vyskum-fsgs-diabeticka-nefropatia-2025-2026_article.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 3
 			path: add_prehlad-vyskum-fsgs-diabeticka-nefropatia-2025-2026_article.php
 
 		-
@@ -349,21 +157,9 @@ parameters:
 			path: add_proteinuria-preeklampsia-hypertenzia-ckd-riziko_article.php
 
 		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 3
-			path: add_proteinuria-preeklampsia-hypertenzia-ckd-riziko_article.php
-
-		-
 			message: '#^Offset ''title'' on array\{title\: ''Renálna denervácia…'', slug\: ''renalna\-denervacia…'', author\: ''MUDr\. Ľubomír…'', published_at\: non\-falsy\-string, is_top\: 0, excerpt\: ''Renálna denervácia…'', content\: ''\<p\>Rezistentná…''\} on left side of \?\? always exists and is not nullable\.$#'
 			identifier: nullCoalesce.offset
 			count: 1
-			path: add_renalna-denervacia-rezistentna-hypertenzia_article.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 3
 			path: add_renalna-denervacia-rezistentna-hypertenzia_article.php
 
 		-
@@ -373,39 +169,15 @@ parameters:
 			path: add_retatrutid-ubytok-hmotnosti-metabolicke-benefity_article.php
 
 		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 3
-			path: add_retatrutid-ubytok-hmotnosti-metabolicke-benefity_article.php
-
-		-
 			message: '#^Offset ''title'' on array\{title\: ''Nízka dávka…'', slug\: ''rivaroxaban…'', author\: ''MUDr\. Ľubomír…'', published_at\: non\-falsy\-string, is_top\: 0, excerpt\: ''Štúdia TRACK…'', content\: ''\<p\>Pacienti s…''\} on left side of \?\? always exists and is not nullable\.$#'
 			identifier: nullCoalesce.offset
 			count: 1
 			path: add_rivaroxaban-pokrocile-ckd-track-bez-kv-benefitu_article.php
 
 		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 3
-			path: add_rivaroxaban-pokrocile-ckd-track-bez-kv-benefitu_article.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 3
-			path: add_search_ft_index.php
-
-		-
 			message: '#^Offset ''title'' on array\{title\: ''Tirzepatid nezvýšil…'', slug\: ''tirzepatid…'', author\: ''MUDr\. Ľubomír…'', published_at\: non\-falsy\-string, is_top\: 0, excerpt\: ''Retina substúdia…'', content\: ''\<p\>Tirzepatid,…''\} on left side of \?\? always exists and is not nullable\.$#'
 			identifier: nullCoalesce.offset
 			count: 1
-			path: add_tirzepatid-diabeticka-retinopatia-surpass-cvot_article.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 3
 			path: add_tirzepatid-diabeticka-retinopatia-surpass-cvot_article.php
 
 		-
@@ -415,58 +187,16 @@ parameters:
 			path: add_tnf-inhibitor-vcasna-periferna-spondyloartritida-spartacus_article.php
 
 		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 3
-			path: add_tnf-inhibitor-vcasna-periferna-spondyloartritida-spartacus_article.php
-
-		-
 			message: '#^Offset ''title'' on array\{title\: ''Uviaznutí na…'', slug\: ''uviaznuti\-na…'', author\: ''MUDr\. Ľubomír…'', published_at\: ''2026\-05\-27'', is_top\: 0, excerpt\: ''Antihistaminiká pri…'', content\: ''\<p\>Chronické…''\} on left side of \?\? always exists and is not nullable\.$#'
 			identifier: nullCoalesce.offset
 			count: 1
 			path: add_uviaznuti-na-antihistaminikach-pri-ckd-ap_article.php
 
 		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 3
-			path: add_uviaznuti-na-antihistaminikach-pri-ckd-ap_article.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 2
-			path: add_vetry_image_link_2026-06-13.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 2
-			path: add_vetry_infographic_2026-06-13.php
-
-		-
 			message: '#^Offset ''title'' on array\{title\: ''Wearables pri…'', slug\: ''wearables\-chronicke…'', author\: ''MUDr\. Ľubomír…'', published_at\: non\-falsy\-string, is_top\: 0, excerpt\: ''Nositeľné…'', content\: ''\<p\>Nositeľné…''\} on left side of \?\? always exists and is not nullable\.$#'
 			identifier: nullCoalesce.offset
 			count: 1
 			path: add_wearables-chronicke-ochorenia-protokoly-klinicky-zmysel_article.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 3
-			path: add_wearables-chronicke-ochorenia-protokoly-klinicky-zmysel_article.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 2
-			path: add_zelenina_infographic_2026-06-13.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 17
-			path: admin.php
 
 		-
 			message: '#^Comparison operation "\>" between 50 and 0 is always true\.$#'
@@ -479,36 +209,6 @@ parameters:
 			identifier: nullCoalesce.variable
 			count: 1
 			path: admin_articles.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 48
-			path: admin_articles.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 10
-			path: admin_discussion.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 12
-			path: admin_newsletter.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 3
-			path: admin_users_notice.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 11
-			path: archive_cleanup.php
 
 		-
 			message: '#^Call to function is_array\(\) with array\<int, array\{author\: string, articles\: int\}\> will always evaluate to true\.$#'
@@ -547,39 +247,15 @@ parameters:
 			path: article.php
 
 		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 3
-			path: article.php
-
-		-
 			message: '#^Variable \$baseUrl might not be defined\.$#'
 			identifier: variable.undefined
 			count: 3
 			path: calculator_acidbase.php
 
 		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 4
-			path: calculator_acidbase.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 4
-			path: calculator_adpkd.php
-
-		-
 			message: '#^Variable \$baseUrl might not be defined\.$#'
 			identifier: variable.undefined
 			count: 3
-			path: calculator_aki.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 4
 			path: calculator_aki.php
 
 		-
@@ -589,21 +265,9 @@ parameters:
 			path: calculator_ca.php
 
 		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 4
-			path: calculator_ca.php
-
-		-
 			message: '#^Variable \$baseUrl might not be defined\.$#'
 			identifier: variable.undefined
 			count: 3
-			path: calculator_cg.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 4
 			path: calculator_cg.php
 
 		-
@@ -625,21 +289,9 @@ parameters:
 			path: calculator_ckdpc.php
 
 		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 4
-			path: calculator_ckdpc.php
-
-		-
 			message: '#^Variable \$baseUrl might not be defined\.$#'
 			identifier: variable.undefined
 			count: 3
-			path: calculator_egfr.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 4
 			path: calculator_egfr.php
 
 		-
@@ -649,33 +301,9 @@ parameters:
 			path: calculator_egfr_slope.php
 
 		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 5
-			path: calculator_egfr_slope.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 3
-			path: calculator_history.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 4
-			path: calculator_igan.php
-
-		-
 			message: '#^Variable \$baseUrl might not be defined\.$#'
 			identifier: variable.undefined
 			count: 3
-			path: calculator_kdigo_risk.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 4
 			path: calculator_kdigo_risk.php
 
 		-
@@ -685,33 +313,15 @@ parameters:
 			path: calculator_kfre.php
 
 		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 4
-			path: calculator_kfre.php
-
-		-
 			message: '#^Variable \$baseUrl might not be defined\.$#'
 			identifier: variable.undefined
 			count: 3
 			path: calculator_ktv.php
 
 		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 4
-			path: calculator_ktv.php
-
-		-
 			message: '#^Variable \$baseUrl might not be defined\.$#'
 			identifier: variable.undefined
 			count: 3
-			path: calculator_na.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 4
 			path: calculator_na.php
 
 		-
@@ -727,27 +337,9 @@ parameters:
 			path: calculator_prevent.php
 
 		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 4
-			path: calculator_prevent.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 2
-			path: calculator_result_print.php
-
-		-
 			message: '#^Variable \$baseUrl might not be defined\.$#'
 			identifier: variable.undefined
 			count: 3
-			path: calculator_uacr.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 4
 			path: calculator_uacr.php
 
 		-
@@ -763,40 +355,10 @@ parameters:
 			path: config_loader.php
 
 		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 9
-			path: confirm_account_deletion.php
-
-		-
 			message: '#^Offset 1\|2\|3\|4\|5\|6\|7\|8\|9\|10\|11\|12 on array\{1\: ''januára'', 2\: ''februára'', 3\: ''marca'', 4\: ''apríla'', 5\: ''mája'', 6\: ''júna'', 7\: ''júla'', 8\: ''augusta'', \.\.\.\} on left side of \?\? always exists and is not nullable\.$#'
 			identifier: nullCoalesce.offset
 			count: 1
 			path: discussion.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 5
-			path: discussion.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 1
-			path: download_pdf.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 13
-			path: forgot_password.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 3
-			path: generate_all_article_pdfs.php
 
 		-
 			message: '#^Variable \$ogImageHeight on left side of \?\? always exists and is not nullable\.$#'
@@ -853,58 +415,10 @@ parameters:
 			path: index.php
 
 		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 6
-			path: index.php
-
-		-
 			message: '#^Variable \$structuredData on left side of \?\? always exists and is not nullable\.$#'
 			identifier: nullCoalesce.variable
 			count: 1
 			path: index.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 1
-			path: login.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 12
-			path: newsletter_subscribe.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 21
-			path: newsletter_unsubscribe.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 2
-			path: newsletter_verify_sub.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 1
-			path: newsletter_weekly_digest.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 2
-			path: newsletter_worker.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 2
-			path: populars.php
 
 		-
 			message: '#^Strict comparison using \!\=\= between mixed and null will always evaluate to true\.$#'
@@ -927,12 +441,6 @@ parameters:
 		-
 			message: '#^Variable \$pdo might not be defined\.$#'
 			identifier: variable.undefined
-			count: 16
-			path: profile.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
 			count: 6
 			path: profile_form_address.php
 
@@ -943,28 +451,10 @@ parameters:
 			path: profile_form_personal.php
 
 		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 2
-			path: reclassify_to_popular_2026-06-13.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
+			message: '#^Variable \$pdo in isset\(\) always exists and is not nullable\.$#'
+			identifier: isset.variable
 			count: 1
-			path: refresh_article.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 18
-			path: register.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 8
-			path: resend_verification.php
+			path: query_article.php
 
 		-
 			message: '#^Strict comparison using \!\=\= between mixed and null will always evaluate to true\.$#'
@@ -973,28 +463,10 @@ parameters:
 			path: reset_password.php
 
 		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 7
-			path: reset_password.php
-
-		-
 			message: '#^Offset 1\|2\|3\|4\|5\|6\|7\|8\|9\|10\|11\|12 on array\{1\: ''januára'', 2\: ''februára'', 3\: ''marca'', 4\: ''apríla'', 5\: ''mája'', 6\: ''júna'', 7\: ''júla'', 8\: ''augusta'', \.\.\.\} on left side of \?\? always exists and is not nullable\.$#'
 			identifier: nullCoalesce.offset
 			count: 1
 			path: search.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 2
-			path: search.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 83
-			path: setup_db.php
 
 		-
 			message: '#^Offset ''changefreq'' on array\{loc\: ''https\://nefro…'', lastmod\: string, changefreq\: ''daily'', priority\: ''1\.0''\}\|array\{loc\: ''https\://nefro…'', lastmod\: string, changefreq\: ''yearly'', priority\: ''0\.3''\}\|array\{loc\: non\-falsy\-string, lastmod\: string, changefreq\: ''monthly'', priority\: ''0\.8''\|''0\.9''\} on left side of \?\? always exists and is not nullable\.$#'
@@ -1019,27 +491,3 @@ parameters:
 			identifier: nullCoalesce.offset
 			count: 1
 			path: sitemap.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 1
-			path: sitemap.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 4
-			path: smoke_seed_pdf.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 2
-			path: update_nefroprot_webp.php
-
-		-
-			message: '#^Variable \$pdo might not be defined\.$#'
-			identifier: variable.undefined
-			count: 9
-			path: verify_email.php

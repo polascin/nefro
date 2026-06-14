@@ -26,6 +26,7 @@ if (php_sapi_name() !== 'cli') {
 }
 
 require_once __DIR__ . '/db_config.php';
+/** @var \PDO $pdo */
 require_once __DIR__ . '/newsletter_notifications.php';
 
 $opts = ['days' => 7, 'dry_run' => false, 'ignore_last_run' => false, 'seed' => false];

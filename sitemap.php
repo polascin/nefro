@@ -1,6 +1,7 @@
 <?php
 declare(strict_types=1);
 require_once __DIR__ . '/db_config.php';
+/** @var \PDO $pdo */
 
 header('Content-Type: application/xml; charset=UTF-8');
 header('Cache-Control: public, max-age=1800');

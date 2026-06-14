@@ -11,6 +11,7 @@ if (php_sapi_name() !== 'cli') {
 }
 
 require_once __DIR__ . '/db_config.php';
+/** @var \PDO $pdo */
 
 echo "── FULLTEXT index migrácia ────────────────────────────────────────\n";
 

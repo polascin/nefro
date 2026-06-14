@@ -5,6 +5,7 @@ requireAdmin();
 ini_set('display_errors', 0);
 header('Content-Type: text/plain; charset=UTF-8');
 require_once __DIR__ . '/db_config.php';
+/** @var \PDO $pdo */
 if (!isset($pdo)) { die("Pripojenie PDO zlyhalo.\n"); }
 try {
     $countQuery = $pdo->query("SELECT COUNT(*) FROM articles WHERE is_top=1 AND is_published=1");

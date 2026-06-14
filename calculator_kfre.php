@@ -2,6 +2,7 @@
 declare(strict_types=1);
 require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/db_config.php';
+/** @var \PDO $pdo */
 require_once __DIR__ . '/calculators_common.php';
 
 function kfreRisk(int $ageYears, string $sex, float $egfr, float $uacr): array

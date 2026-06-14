@@ -18,6 +18,7 @@ if (php_sapi_name() !== 'cli') {
     requireAdmin();
 }
 require_once __DIR__ . '/db_config.php';
+/** @var \PDO $pdo */
 
 $slugs = [
     'kolko-vetrov-denne-je-este-normalne',
