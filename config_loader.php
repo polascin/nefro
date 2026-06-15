@@ -185,7 +185,14 @@ function getAppBaseUrl(): string {
     }
 
     $scheme = isRequestHttps() ? 'https' : 'http';
-    $serverName = trim((string) ($_SERVER['SERVER_NAME'] ?? 'localhost'));
+    $serverName = trim((string) ($_SERVER['SERVER_NAME'] ?? ''));
+
+    // Pod CLI (CRON, napr. týždenný digest) nie je SERVER_NAME k dispozícii.
+    // Nikdy nevracaj „localhost" do e-mailových odkazov — ak nejde o lokálny
+    // vývoj, použi produkčnú doménu.
+    if (($serverName === '' || $serverName === 'localhost') && !isAppLocalDev()) {
+        return 'https://nefro.polascin.net';
+    }
 
     if ($serverName === '' || !preg_match('/^[a-z0-9.-]+$/i', $serverName)) {
         $serverName = 'localhost';
