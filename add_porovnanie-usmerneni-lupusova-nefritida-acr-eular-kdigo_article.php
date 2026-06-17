@@ -115,75 +115,75 @@ $articles[] = [
 
 <h2>Súhrnné porovnanie</h2>
 
-<table style="width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.95rem;">
+<table>
   <thead>
     <tr>
-      <th style="text-align:left;padding:10px 12px;border-bottom:2px solid var(--border-color);background:var(--bg-secondary);">Oblasť</th>
-      <th style="text-align:left;padding:10px 12px;border-bottom:2px solid var(--border-color);background:var(--bg-secondary);">ACR</th>
-      <th style="text-align:left;padding:10px 12px;border-bottom:2px solid var(--border-color);background:var(--bg-secondary);">EULAR</th>
-      <th style="text-align:left;padding:10px 12px;border-bottom:2px solid var(--border-color);background:var(--bg-secondary);">KDIGO</th>
+      <th>Oblasť</th>
+      <th>ACR</th>
+      <th>EULAR</th>
+      <th>KDIGO</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>Monitorovanie</strong></td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">Skôr <strong>fixný harmonogram</strong> hodnotení (typicky každých <strong>6 až 12 mesiacov</strong>)</td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">Viac <strong>individualizovaný, rizikovo orientovaný</strong> prístup</td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">Rizikovo orientované monitorovanie, praktický dôraz na načasovanie</td>
+      <td><strong>Monitorovanie</strong></td>
+      <td>Skôr <strong>fixný harmonogram</strong> hodnotení (typicky každých <strong>6 až 12 mesiacov</strong>)</td>
+      <td>Viac <strong>individualizovaný, rizikovo orientovaný</strong> prístup</td>
+      <td>Rizikovo orientované monitorovanie, praktický dôraz na načasovanie</td>
     </tr>
     <tr>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>Prvolíniový režim (proliferatívna LN)</strong></td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">Skôr <strong>úvodná trojkombinácia</strong> (HCQ + glukokortikoidy + imunosupresia; jadro často <strong>MMF</strong>, doplnenie podľa profilu: <strong>belimumab alebo CNI</strong>)</td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">Skôr <strong>MMF + obinutuzumab</strong> (v komparácii uvádzané ako kľúčový rozdiel)</td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">Uznáva aj <strong>dvojkombináciu</strong> ako prvú líniu (napr. <strong>nízkodávkovaný cyklofosfamid</strong> alebo <strong>MMF</strong>)</td>
+      <td><strong>Prvolíniový režim (proliferatívna LN)</strong></td>
+      <td>Skôr <strong>úvodná trojkombinácia</strong> (HCQ + glukokortikoidy + imunosupresia; jadro často <strong>MMF</strong>, doplnenie podľa profilu: <strong>belimumab alebo CNI</strong>)</td>
+      <td>Skôr <strong>MMF + obinutuzumab</strong> (v komparácii uvádzané ako kľúčový rozdiel)</td>
+      <td>Uznáva aj <strong>dvojkombináciu</strong> ako prvú líniu (napr. <strong>nízkodávkovaný cyklofosfamid</strong> alebo <strong>MMF</strong>)</td>
     </tr>
     <tr>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>Miesto obinutuzumabu</strong></td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">Nie je východiskový v prvej línii</td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>Súčasť prvej línie</strong></td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">Nie je v jadre odlišujúcim prvkom oproti ostatným v tejto komparácii</td>
+      <td><strong>Miesto obinutuzumabu</strong></td>
+      <td>Nie je východiskový v prvej línii</td>
+      <td><strong>Súčasť prvej línie</strong></td>
+      <td>Nie je v jadre odlišujúcim prvkom oproti ostatným v tejto komparácii</td>
     </tr>
     <tr>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>Miesto rituximabu</strong></td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">Nie ako prvá línia (uvádza sa negatívny dosah dát typu <strong>LUNAR</strong>)</td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">Nie ako prvá línia</td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">Nie ako prvá línia v rámci komparácie</td>
+      <td><strong>Miesto rituximabu</strong></td>
+      <td>Nie ako prvá línia (uvádza sa negatívny dosah dát typu <strong>LUNAR</strong>)</td>
+      <td>Nie ako prvá línia</td>
+      <td>Nie ako prvá línia v rámci komparácie</td>
     </tr>
     <tr>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>Profilovanie pacienta</strong></td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>Najpreskriptívnejšie</strong> odporúčania podľa profilu (napr. váha proteinúrie)</td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>Opatrnejšie</strong> pri profilových záveroch</td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">Zohľadňuje viac faktorov, no je <strong>menej algoritmické</strong> v detailoch</td>
+      <td><strong>Profilovanie pacienta</strong></td>
+      <td><strong>Najpreskriptívnejšie</strong> odporúčania podľa profilu (napr. váha proteinúrie)</td>
+      <td><strong>Opatrnejšie</strong> pri profilových záveroch</td>
+      <td>Zohľadňuje viac faktorov, no je <strong>menej algoritmické</strong> v detailoch</td>
     </tr>
     <tr>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>Liečebný cieľ a časový rámec</strong></td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">Kompletná renálna odpoveď: <strong>proteinúria &lt; 0,5 g/deň</strong> pri stabilnej funkcii; hodnotenie v horizonte <strong>6 až 12 mesiacov</strong></td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">Praktický cieľový rámec; uvádza sa referenčný bod <strong>proteinúria &lt; 0,7 g/deň v 12. mesiaci</strong></td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">Kompatibilné s rámcom kompletnej renálnej odpovede a hodnotením v horizonte <strong>6 až 12 mesiacov</strong></td>
+      <td><strong>Liečebný cieľ a časový rámec</strong></td>
+      <td>Kompletná renálna odpoveď: <strong>proteinúria &lt; 0,5 g/deň</strong> pri stabilnej funkcii; hodnotenie v horizonte <strong>6 až 12 mesiacov</strong></td>
+      <td>Praktický cieľový rámec; uvádza sa referenčný bod <strong>proteinúria &lt; 0,7 g/deň v 12. mesiaci</strong></td>
+      <td>Kompatibilné s rámcom kompletnej renálnej odpovede a hodnotením v horizonte <strong>6 až 12 mesiacov</strong></td>
     </tr>
     <tr>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>Biopsia a histológia</strong></td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">Biopsia najmä pri podozrení na aktívnu LN so závažnejšími parametrami (prah typicky <strong>proteinúria &gt; 0,5 g/deň</strong> a/alebo pokles funkcie)</td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">Podobný koncept potreby biopsie pri klinickej indikácii</td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">Biopsia s dôrazom na detailné „kompartmentové“ histologické hodnotenie pre čo najcielenejšiu liečbu</td>
+      <td><strong>Biopsia a histológia</strong></td>
+      <td>Biopsia najmä pri podozrení na aktívnu LN so závažnejšími parametrami (prah typicky <strong>proteinúria &gt; 0,5 g/deň</strong> a/alebo pokles funkcie)</td>
+      <td>Podobný koncept potreby biopsie pri klinickej indikácii</td>
+      <td>Biopsia s dôrazom na detailné „kompartmentové“ histologické hodnotenie pre čo najcielenejšiu liečbu</td>
     </tr>
     <tr>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>Eskalačné kroky / zmena stratégie</strong></td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">Po úvodnej imunosupresii sa nastavuje tempo hodnotenia (6 až 12 mesiacov); pri nedostatočnej odpovedi sa zvažuje úprava stratégie (presun medzi režimami / eskalácia intenzity)</td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">Podobný princíp s dôrazom na priebežné vyhodnotenie odpovede v čase a následnú úpravu podľa rizika a odpovede</td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">Dôraz na štruktúrovanú stratifikáciu; pri nedostatočnej odpovedi logika „uprav a prehodnoť“ (úprava typu a intenzity imunosupresie)</td>
+      <td><strong>Eskalačné kroky / zmena stratégie</strong></td>
+      <td>Po úvodnej imunosupresii sa nastavuje tempo hodnotenia (6 až 12 mesiacov); pri nedostatočnej odpovedi sa zvažuje úprava stratégie (presun medzi režimami / eskalácia intenzity)</td>
+      <td>Podobný princíp s dôrazom na priebežné vyhodnotenie odpovede v čase a následnú úpravu podľa rizika a odpovede</td>
+      <td>Dôraz na štruktúrovanú stratifikáciu; pri nedostatočnej odpovedi logika „uprav a prehodnoť“ (úprava typu a intenzity imunosupresie)</td>
     </tr>
     <tr>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>Rezervné lieky (nie prvá línia)</strong></td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">Rituximab nie je prvá línia; skôr neskoršia/alternatívna možnosť pri zlyhaní alebo intolerancii prvolíniových prístupov</td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">Rituximab tiež nie je prvá línia (komparácia rieši najmä jeho neštandardnosť ako prvolíniovej liečby)</td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">Rituximab tiež nie je prvá línia; neskoršie použitie závisí od klinického kontextu</td>
+      <td><strong>Rezervné lieky (nie prvá línia)</strong></td>
+      <td>Rituximab nie je prvá línia; skôr neskoršia/alternatívna možnosť pri zlyhaní alebo intolerancii prvolíniových prístupov</td>
+      <td>Rituximab tiež nie je prvá línia (komparácia rieši najmä jeho neštandardnosť ako prvolíniovej liečby)</td>
+      <td>Rituximab tiež nie je prvá línia; neskoršie použitie závisí od klinického kontextu</td>
     </tr>
     <tr>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>Renoprotekcia</strong></td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">Spoločný rámec: kontrola krvného tlaku, <strong>blokáda RAAS</strong>, selektívne zváženie <strong>inhibítorov SGLT2</strong></td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">Rovnaký princíp — praktická renoprotekcia popri imunosupresii</td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">Rovnaký spoločný základ: cieľový krvný tlak, RAAS, selektívne SGLT2</td>
+      <td><strong>Renoprotekcia</strong></td>
+      <td>Spoločný rámec: kontrola krvného tlaku, <strong>blokáda RAAS</strong>, selektívne zváženie <strong>inhibítorov SGLT2</strong></td>
+      <td>Rovnaký princíp — praktická renoprotekcia popri imunosupresii</td>
+      <td>Rovnaký spoločný základ: cieľový krvný tlak, RAAS, selektívne SGLT2</td>
     </tr>
   </tbody>
 </table>

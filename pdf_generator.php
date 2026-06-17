@@ -90,6 +90,9 @@ function buildArticlePdfHtml(array $article): string
   .info-box-green  { border-color: #16a34a; background: #f0fdf4; }
   .info-box-gray   { border-color: #94a3b8; background: #f8fafc; }
   .pdf-footer-note { margin-top: 24px; padding-top: 10px; border-top: 1px solid #e2e8f0; color: #94a3b8; font-size: 8.5pt; line-height: 1.5; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 10pt; }
+  th { text-align: left; padding: 7px 9px; border-bottom: 2px solid #cbd5e1; background: #f1f5f9; }
+  td { padding: 7px 9px; border-bottom: 1px solid #e2e8f0; vertical-align: top; }
 </style>
 </head>
 <body>

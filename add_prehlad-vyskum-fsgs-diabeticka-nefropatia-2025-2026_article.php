@@ -41,29 +41,29 @@ $articles[] = [
 <p>Liek je duálnym antagonistom receptorov pre angiotenzín II a endotelín-1 (v liečbe IgA nefropatie je už schválený). Rozhodnutie FDA vychádza z výsledkov štúdie fázy 3 DUPLEX (n = 371, doteraz najväčšia štúdia FSGS), publikovanej v <em>New England Journal of Medicine</em>:</p>
 
 <div class="table-responsive">
-<table style="width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.95rem;">
+<table>
   <thead>
     <tr>
-      <th style="text-align:left;padding:10px 12px;border-bottom:2px solid var(--border-color);background:var(--bg-secondary);">Cieľový ukazovateľ (108. týždeň)</th>
-      <th style="text-align:left;padding:10px 12px;border-bottom:2px solid var(--border-color);background:var(--bg-secondary);">Sparsentan</th>
-      <th style="text-align:left;padding:10px 12px;border-bottom:2px solid var(--border-color);background:var(--bg-secondary);">Irbesartan</th>
+      <th>Cieľový ukazovateľ (108. týždeň)</th>
+      <th>Sparsentan</th>
+      <th>Irbesartan</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">Redukcia proteinúrie (celá populácia)</td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>46 %</strong></td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">30 %</td>
+      <td>Redukcia proteinúrie (celá populácia)</td>
+      <td><strong>46 %</strong></td>
+      <td>30 %</td>
     </tr>
     <tr>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">Redukcia proteinúrie (bez nefrotického syndrómu)</td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>48 %</strong></td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">27 %</td>
+      <td>Redukcia proteinúrie (bez nefrotického syndrómu)</td>
+      <td><strong>48 %</strong></td>
+      <td>27 %</td>
     </tr>
     <tr>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">Sklon eGFR (dlhodobý pokles)</td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">Priaznivejší trend †</td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">Referencia</td>
+      <td>Sklon eGFR (dlhodobý pokles)</td>
+      <td>Priaznivejší trend †</td>
+      <td>Referencia</td>
     </tr>
   </tbody>
 </table>
@@ -103,39 +103,39 @@ $articles[] = [
 <h3>5. Ďalšia aktívna vývojová línia</h3>
 
 <div class="table-responsive">
-<table style="width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.95rem;">
+<table>
   <thead>
     <tr>
-      <th style="text-align:left;padding:10px 12px;border-bottom:2px solid var(--border-color);background:var(--bg-secondary);">Liek</th>
-      <th style="text-align:left;padding:10px 12px;border-bottom:2px solid var(--border-color);background:var(--bg-secondary);">Mechanizmus</th>
-      <th style="text-align:left;padding:10px 12px;border-bottom:2px solid var(--border-color);background:var(--bg-secondary);">Stav</th>
+      <th>Liek</th>
+      <th>Mechanizmus</th>
+      <th>Stav</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">BI 764198</td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">Inhibítor kanála TRPC6</td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">Fáza 2, výsledky sa očakávajú</td>
+      <td>BI 764198</td>
+      <td>Inhibítor kanála TRPC6</td>
+      <td>Fáza 2, výsledky sa očakávajú</td>
     </tr>
     <tr>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">Protilátka proti suPAR</td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">Neutralizácia cirkulujúceho faktora suPAR</td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">Prebieha</td>
+      <td>Protilátka proti suPAR</td>
+      <td>Neutralizácia cirkulujúceho faktora suPAR</td>
+      <td>Prebieha</td>
     </tr>
     <tr>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">DMX-200 (Dimerix)</td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">Antagonista CCR2 (blokáda dráhy MCP-1)</td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">Prebieha</td>
+      <td>DMX-200 (Dimerix)</td>
+      <td>Antagonista CCR2 (blokáda dráhy MCP-1)</td>
+      <td>Prebieha</td>
     </tr>
     <tr>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">Metformín</td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">Aktivácia AMP-kinázy</td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">Prebieha štúdia pri FSGS</td>
+      <td>Metformín</td>
+      <td>Aktivácia AMP-kinázy</td>
+      <td>Prebieha štúdia pri FSGS</td>
     </tr>
     <tr>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">Aktivátor KLF15</td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">Stabilizácia aktínu podocytov (podobne ako steroidy, bez systémovej imunosupresie)</td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">Predklinická fáza, sľubné výsledky</td>
+      <td>Aktivátor KLF15</td>
+      <td>Stabilizácia aktínu podocytov (podobne ako steroidy, bez systémovej imunosupresie)</td>
+      <td>Predklinická fáza, sľubné výsledky</td>
     </tr>
   </tbody>
 </table>
@@ -156,29 +156,29 @@ $articles[] = [
 <p>Rozsiahla štúdia v <em>JAMA Internal Medicine</em>, ktorá využila dánske registrové dáta (sledovanie 5 rokov), postavila obe liekové skupiny zoči-voči:</p>
 
 <div class="table-responsive">
-<table style="width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.95rem;">
+<table>
   <thead>
     <tr>
-      <th style="text-align:left;padding:10px 12px;border-bottom:2px solid var(--border-color);background:var(--bg-secondary);">Cieľový ukazovateľ</th>
-      <th style="text-align:left;padding:10px 12px;border-bottom:2px solid var(--border-color);background:var(--bg-secondary);">Inhibítory SGLT2</th>
-      <th style="text-align:left;padding:10px 12px;border-bottom:2px solid var(--border-color);background:var(--bg-secondary);">Agonisty GLP-1</th>
+      <th>Cieľový ukazovateľ</th>
+      <th>Inhibítory SGLT2</th>
+      <th>Agonisty GLP-1</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">5-ročné riziko CKD</td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>6,7 %</strong></td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">8,2 %</td>
+      <td>5-ročné riziko CKD</td>
+      <td><strong>6,7 %</strong></td>
+      <td>8,2 %</td>
     </tr>
     <tr>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">Príhody akútneho poškodenia obličiek (AKI)</td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>menej časté</strong></td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">častejšie</td>
+      <td>Príhody akútneho poškodenia obličiek (AKI)</td>
+      <td><strong>menej časté</strong></td>
+      <td>častejšie</td>
     </tr>
     <tr>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">Pokles eGFR o ≥ 40 %</td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>nižší pomer rizík (HR)</strong></td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">referencia</td>
+      <td>Pokles eGFR o ≥ 40 %</td>
+      <td><strong>nižší pomer rizík (HR)</strong></td>
+      <td>referencia</td>
     </tr>
   </tbody>
 </table>
@@ -191,29 +191,29 @@ $articles[] = [
 <p>Emulácia cieľového klinického skúšania (target trial emulation) publikovaná v <em>Nature Communications</em> (október 2025) priniesla prvé porovnanie finerénonu a spironolaktónu z reálnej praxe u pacientov s DM2 a CKD (n = 2 268 po spárovaní podľa skóre náchylnosti, databáza TriNetX):</p>
 
 <div class="table-responsive">
-<table style="width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.95rem;">
+<table>
   <thead>
     <tr>
-      <th style="text-align:left;padding:10px 12px;border-bottom:2px solid var(--border-color);background:var(--bg-secondary);">Cieľový ukazovateľ</th>
-      <th style="text-align:left;padding:10px 12px;border-bottom:2px solid var(--border-color);background:var(--bg-secondary);">Finerénon vs. spironolaktón</th>
+      <th>Cieľový ukazovateľ</th>
+      <th>Finerénon vs. spironolaktón</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">Úmrtnosť z akejkoľvek príčiny</td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">aHR 0,31 (o 69 % nižšia)</td>
+      <td>Úmrtnosť z akejkoľvek príčiny</td>
+      <td>aHR 0,31 (o 69 % nižšia)</td>
     </tr>
     <tr>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">MACE (závažné kardiovaskulárne príhody)</td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">aHR 0,74 (o 26 % nižšie riziko)</td>
+      <td>MACE (závažné kardiovaskulárne príhody)</td>
+      <td>aHR 0,74 (o 26 % nižšie riziko)</td>
     </tr>
     <tr>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">MAKE (závažné obličkové príhody)</td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">aHR 0,47 (o 53 % nižšie riziko)</td>
+      <td>MAKE (závažné obličkové príhody)</td>
+      <td>aHR 0,47 (o 53 % nižšie riziko)</td>
     </tr>
     <tr>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">Hyperkaliémia (K⁺ ≥ 5,5 mmol/l)</td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">17,2 % vs. 26,4 %</td>
+      <td>Hyperkaliémia (K⁺ ≥ 5,5 mmol/l)</td>
+      <td>17,2 % vs. 26,4 %</td>
     </tr>
   </tbody>
 </table>

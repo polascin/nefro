@@ -161,113 +161,113 @@ $articles[] = [
 
 <h3>1) Dospelý s CKD (chronické ochorenie obličiek)</h3>
 
-<table style="width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.95rem;">
+<table>
   <thead>
     <tr>
-      <th style="text-align:left;padding:10px 12px;border-bottom:2px solid var(--border-color);background:var(--bg-secondary);">Infekcia</th>
-      <th style="text-align:left;padding:10px 12px;border-bottom:2px solid var(--border-color);background:var(--bg-secondary);">Kedy je indikované</th>
-      <th style="text-align:left;padding:10px 12px;border-bottom:2px solid var(--border-color);background:var(--bg-secondary);">Schéma podľa prehľadu</th>
+      <th>Infekcia</th>
+      <th>Kedy je indikované</th>
+      <th>Schéma podľa prehľadu</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>Influenza</strong></td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>všetci</strong>, <strong>každoročne</strong></td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>1× ročne</strong></td>
+      <td><strong>Influenza</strong></td>
+      <td><strong>všetci</strong>, <strong>každoročne</strong></td>
+      <td><strong>1× ročne</strong></td>
     </tr>
     <tr>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>Pneumokok</strong></td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>vek ≥ 19 rokov</strong></td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">podľa predchádzajúceho očkovania: buď <strong>1× PCV</strong> (ak nikdy), alebo <strong>1× PCV booster &gt; 1 rok po PPSV23</strong></td>
+      <td><strong>Pneumokok</strong></td>
+      <td><strong>vek ≥ 19 rokov</strong></td>
+      <td>podľa predchádzajúceho očkovania: buď <strong>1× PCV</strong> (ak nikdy), alebo <strong>1× PCV booster &gt; 1 rok po PPSV23</strong></td>
     </tr>
     <tr>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>RSV</strong></td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>vek ≥ 75 rokov</strong>, pri <strong>CKD 3+</strong></td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>1 dávka</strong></td>
+      <td><strong>RSV</strong></td>
+      <td><strong>vek ≥ 75 rokov</strong>, pri <strong>CKD 3+</strong></td>
+      <td><strong>1 dávka</strong></td>
     </tr>
     <tr>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>SARS-CoV-2 (COVID-19)</strong></td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>všetci</strong>, <strong>každoročne</strong></td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>1× ročne</strong>, podľa aktuálneho variantu</td>
+      <td><strong>SARS-CoV-2 (COVID-19)</strong></td>
+      <td><strong>všetci</strong>, <strong>každoročne</strong></td>
+      <td><strong>1× ročne</strong>, podľa aktuálneho variantu</td>
     </tr>
     <tr>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>Hepatitída B</strong></td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>CKD 3b–5</strong></td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>3–4 injekcie</strong> (bežná alebo dvojitá dávka podľa konkrétnej vakcíny), so <strong>sérologickým monitorovaním a boosterom</strong></td>
+      <td><strong>Hepatitída B</strong></td>
+      <td><strong>CKD 3b–5</strong></td>
+      <td><strong>3–4 injekcie</strong> (bežná alebo dvojitá dávka podľa konkrétnej vakcíny), so <strong>sérologickým monitorovaním a boosterom</strong></td>
     </tr>
     <tr>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>Herpes zoster (pásový opar)</strong></td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">vekové hranice podľa jurisdikcie v prehľade (ACIP ≥ 50, RKI ≥ 60, NHS ≥ 65)</td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>2× rekombinantná vakcína</strong>, <strong>2–6 mesiacov</strong> od seba</td>
+      <td><strong>Herpes zoster (pásový opar)</strong></td>
+      <td>vekové hranice podľa jurisdikcie v prehľade (ACIP ≥ 50, RKI ≥ 60, NHS ≥ 65)</td>
+      <td><strong>2× rekombinantná vakcína</strong>, <strong>2–6 mesiacov</strong> od seba</td>
     </tr>
     <tr>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>Meningokok</strong></td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">len <strong>pri špecifických rizikách</strong> (napr. asplénia, inhibícia komplementu, cestovanie)</td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>podľa rizika</strong>; v prehľade <strong>MenB alebo MenACWY</strong>, hodnotiť aj potrebu antibiotickej profylaxie</td>
+      <td><strong>Meningokok</strong></td>
+      <td>len <strong>pri špecifických rizikách</strong> (napr. asplénia, inhibícia komplementu, cestovanie)</td>
+      <td><strong>podľa rizika</strong>; v prehľade <strong>MenB alebo MenACWY</strong>, hodnotiť aj potrebu antibiotickej profylaxie</td>
     </tr>
     <tr>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>HPV</strong></td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">v prehľade <strong>9–14 rokov</strong> a catch-up do <strong>26 rokov</strong></td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>3 injekcie</strong> (mesiace <strong>0, 2, 6</strong>)</td>
+      <td><strong>HPV</strong></td>
+      <td>v prehľade <strong>9–14 rokov</strong> a catch-up do <strong>26 rokov</strong></td>
+      <td><strong>3 injekcie</strong> (mesiace <strong>0, 2, 6</strong>)</td>
     </tr>
     <tr>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>Tetanus/diftéria/pertusis (Tdap/Td)</strong></td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>všetci</strong>, každých <strong>5–10 rokov</strong></td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>1×</strong> kombinovaná vakcína</td>
+      <td><strong>Tetanus/diftéria/pertusis (Tdap/Td)</strong></td>
+      <td><strong>všetci</strong>, každých <strong>5–10 rokov</strong></td>
+      <td><strong>1×</strong> kombinovaná vakcína</td>
     </tr>
   </tbody>
 </table>
 
 <h3>2) Pacient po transplantácii obličky</h3>
 
-<table style="width:100%;border-collapse:collapse;margin:1rem 0;font-size:0.95rem;">
+<table>
   <thead>
     <tr>
-      <th style="text-align:left;padding:10px 12px;border-bottom:2px solid var(--border-color);background:var(--bg-secondary);">Infekcia</th>
-      <th style="text-align:left;padding:10px 12px;border-bottom:2px solid var(--border-color);background:var(--bg-secondary);">Kedy začať po transplantácii</th>
-      <th style="text-align:left;padding:10px 12px;border-bottom:2px solid var(--border-color);background:var(--bg-secondary);">Schéma podľa prehľadu</th>
+      <th>Infekcia</th>
+      <th>Kedy začať po transplantácii</th>
+      <th>Schéma podľa prehľadu</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>Influenza</strong></td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>od 4 týždňov</strong></td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>každoročne</strong>; <strong>nie živá vakcína</strong>; vek &lt; 60 štandardná, vek ≥ 60 <strong>high-dose</strong></td>
+      <td><strong>Influenza</strong></td>
+      <td><strong>od 4 týždňov</strong></td>
+      <td><strong>každoročne</strong>; <strong>nie živá vakcína</strong>; vek &lt; 60 štandardná, vek ≥ 60 <strong>high-dose</strong></td>
     </tr>
     <tr>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>Pneumokok</strong></td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>od 6 mesiacov</strong></td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">podľa histórie: <strong>1× PCV</strong> ak nikdy, alebo <strong>1× PCV booster &gt; 1 rok po PPSV23</strong></td>
+      <td><strong>Pneumokok</strong></td>
+      <td><strong>od 6 mesiacov</strong></td>
+      <td>podľa histórie: <strong>1× PCV</strong> ak nikdy, alebo <strong>1× PCV booster &gt; 1 rok po PPSV23</strong></td>
     </tr>
     <tr>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>RSV</strong></td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>od 6 mesiacov</strong>; vek ≥ 60</td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>1 dávka</strong> (typ vakcíny v prehľade bez preferencie)</td>
+      <td><strong>RSV</strong></td>
+      <td><strong>od 6 mesiacov</strong>; vek ≥ 60</td>
+      <td><strong>1 dávka</strong> (typ vakcíny v prehľade bez preferencie)</td>
     </tr>
     <tr>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>SARS-CoV-2</strong></td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">v prehľade ako každoročné revakcinovanie</td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>1× ročne</strong>, <strong>mRNA</strong>, <em>most recent virus variant</em>; pri úvahe sa spomína interval <strong>~6 mesiacov</strong></td>
+      <td><strong>SARS-CoV-2</strong></td>
+      <td>v prehľade ako každoročné revakcinovanie</td>
+      <td><strong>1× ročne</strong>, <strong>mRNA</strong>, <em>most recent virus variant</em>; pri úvahe sa spomína interval <strong>~6 mesiacov</strong></td>
     </tr>
     <tr>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>Hepatitída B</strong></td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">pre transplantáty: v prehľade <strong>bez špecifického odporúčania</strong></td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">sledujte podľa predošlej imunity a lokálnych protokolov</td>
+      <td><strong>Hepatitída B</strong></td>
+      <td>pre transplantáty: v prehľade <strong>bez špecifického odporúčania</strong></td>
+      <td>sledujte podľa predošlej imunity a lokálnych protokolov</td>
     </tr>
     <tr>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>Herpes zoster</strong></td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">očkuje sa v prehľade plošne podľa veku</td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>všetci ≥ 19 rokov</strong> (okrem výnimky pri RKI v prehľade); <strong>2 dávky</strong> s intervalom <strong>2–6 mesiacov</strong></td>
+      <td><strong>Herpes zoster</strong></td>
+      <td>očkuje sa v prehľade plošne podľa veku</td>
+      <td><strong>všetci ≥ 19 rokov</strong> (okrem výnimky pri RKI v prehľade); <strong>2 dávky</strong> s intervalom <strong>2–6 mesiacov</strong></td>
     </tr>
     <tr>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>Meningokok</strong></td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">len pri špecifických rizikách</td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>MenB alebo MenACWY</strong> podľa situácie; zhodnotiť antibiotickú profylaxiu</td>
+      <td><strong>Meningokok</strong></td>
+      <td>len pri špecifických rizikách</td>
+      <td><strong>MenB alebo MenACWY</strong> podľa situácie; zhodnotiť antibiotickú profylaxiu</td>
     </tr>
     <tr>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>Tdap/Td</strong></td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;">bez špecifického odkladu v prehľade</td>
-      <td style="padding:10px 12px;border-bottom:1px solid var(--border-color);vertical-align:top;"><strong>1×</strong> každých <strong>5–10 rokov</strong></td>
+      <td><strong>Tdap/Td</strong></td>
+      <td>bez špecifického odkladu v prehľade</td>
+      <td><strong>1×</strong> každých <strong>5–10 rokov</strong></td>
     </tr>
   </tbody>
 </table>
