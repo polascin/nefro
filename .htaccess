@@ -105,6 +105,11 @@ ServerSignature Off
     Require all denied
 </Files>
 
+# Jednorazový cleanup obsahu (DB write) — len CLI/SSH, bez browser UI
+<Files "cleanup_inline_table_styles.php">
+    Require all denied
+</Files>
+
 # Knižničné PHP súbory — prístupné len ako include, nie priamo cez web
 <FilesMatch "^(db_config|config_loader|auth|phone_utils|calculators_common|header|header_profile|footer|head_meta|calculator_disclaimer|email_verification|mobile_verification|pdf_generator)\.php$">
     Require all denied
