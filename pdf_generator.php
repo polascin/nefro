@@ -23,6 +23,26 @@ function wkhtmltopdfBin(): string
     static $bin = null;
     if ($bin === null) {
         $bin = trim((string) @shell_exec('command -v wkhtmltopdf 2>/dev/null'));
+        if ($bin === '') {
+            // Windows fallback: `where` returns one path per line.
+            $win = trim((string) @shell_exec('where wkhtmltopdf 2>NUL'));
+            if ($win !== '') {
+                $parts = preg_split('/\r\n|\r|\n/', $win);
+                $bin = trim((string) ($parts[0] ?? ''));
+            }
+        }
+        if ($bin === '') {
+            $candidates = [
+                'C:/Program Files/wkhtmltopdf/bin/wkhtmltopdf.exe',
+                'C:/Program Files (x86)/wkhtmltopdf/bin/wkhtmltopdf.exe',
+            ];
+            foreach ($candidates as $candidate) {
+                if (is_file($candidate)) {
+                    $bin = $candidate;
+                    break;
+                }
+            }
+        }
     }
     return $bin;
 }
