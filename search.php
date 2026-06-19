@@ -34,7 +34,7 @@ if ($hasQuery) {
 
     if (!empty($tokens)) {
         $t0 = microtime(true);
-        $sr = doArticleSearch($pdo, $rawQuery, $tokens, $page, SEARCH_PER_PAGE);
+        $sr = doArticleSearch($pdo, $tokens, $page, SEARCH_PER_PAGE);
         $searchTime = round((microtime(true) - $t0) * 1000, 1); // ms
 
         $results = $sr["items"];
@@ -44,7 +44,7 @@ if ($hasQuery) {
 
         if ($page > $totalPages) {
             $page = $totalPages;
-            $sr = doArticleSearch($pdo, $rawQuery, $tokens, $page, SEARCH_PER_PAGE);
+            $sr = doArticleSearch($pdo, $tokens, $page, SEARCH_PER_PAGE);
             $results = $sr["items"];
         }
     }
@@ -54,6 +54,8 @@ if ($hasQuery) {
 
 $baseUrl = "https://nefro.polascin.net/";
 $siteName = "Nefro-projekt Slovensko";
+$searchQueryPrefix = "search.php?s=";
+$pageQuerySeparator = "&page=";
 
 $pageTitle = $hasQuery
     ? "Výsledky hľadania: " . $rawQuery . " | " . $siteName
@@ -74,17 +76,17 @@ $nextUrl = "";
 if ($page > 1) {
     $prevUrl =
         $baseUrl .
-        "search.php?s=" .
+    $searchQueryPrefix .
         urlencode($rawQuery) .
-        "&page=" .
+    $pageQuerySeparator .
         ($page - 1);
 }
 if ($page < $totalPages) {
     $nextUrl =
         $baseUrl .
-        "search.php?s=" .
+    $searchQueryPrefix .
         urlencode($rawQuery) .
-        "&page=" .
+    $pageQuerySeparator .
         ($page + 1);
 }
 
@@ -125,7 +127,8 @@ $fieldLabels = [
 <!DOCTYPE html>
 <html lang="sk">
 <head>
-  <?php include "head_meta.php"; ?>
+  <title><?= htmlspecialchars($pageTitle, ENT_QUOTES, "UTF-8") ?></title>
+  <?php include_once "head_meta.php"; ?>
   <?php if ($prevUrl): ?>
   <link rel="prev" href="<?= htmlspecialchars($prevUrl) ?>">
   <?php endif; ?>
@@ -139,10 +142,10 @@ $fieldLabels = [
   <?php
   $headerTitle = "Nefro-projekt Slovensko";
   $showLogo = false;
-  include "header.php";
+  include_once "header.php";
   ?>
 
-  <?php include 'main_nav.php'; ?>
+  <?php include_once 'main_nav.php'; ?>
 
   <main id="search-results" class="container search-main" role="main">
     <div class="main-content main-content--single-col">
@@ -198,11 +201,15 @@ $fieldLabels = [
             <?php if ($totalItems > 0): ?>
               <span>
                 Nájdených: <strong class="search-meta__count"><?= $totalItems ?></strong>
-                <?= $totalItems === 1
-                    ? "výsledok"
-                    : ($totalItems < 5
-                        ? "výsledky"
-                        : "výsledkov") ?>
+                <?php
+                $resultWord = "výsledkov";
+                if ($totalItems === 1) {
+                  $resultWord = "výsledok";
+                } elseif ($totalItems < 5) {
+                  $resultWord = "výsledky";
+                }
+                echo $resultWord;
+                ?>
               </span>
               <?php if ($totalPages > 1): ?>
                 <span class="text-tertiary">·</span>
@@ -220,7 +227,7 @@ $fieldLabels = [
           <?php if (!empty($results)): ?>
 
             <!-- ── Zoznam výsledkov ─────────────────────────────────── -->
-            <div role="list" aria-label="Výsledky vyhľadávania">
+            <ul class="search-results-list" aria-label="Výsledky vyhľadávania">
               <?php foreach ($results as $row):
 
                   $matchFields = detectMatchFields($row, $tokens);
@@ -236,12 +243,15 @@ $fieldLabels = [
                   $articleUrl =
                       "article.php?slug=" .
                       rawurlencode((string) ($row["slug"] ?? ""));
+                  $searchTitleRaw = trim((string) ($row["title"] ?? ""));
+                  $searchTitle = $searchTitleRaw !== "" ? $searchTitleRaw : "Bez názvu článku";
                   ?>
-              <article class="search-result" role="listitem">
+              <li class="search-result-item">
+              <article class="search-result">
                 <a href="<?= htmlspecialchars(
                     $articleUrl,
-                ) ?>" class="search-result__title">
-                  <?= $titleHl ?>
+                ) ?>" class="search-result__title" aria-label="Článok: <?= htmlspecialchars($searchTitle, ENT_QUOTES, 'UTF-8') ?>">
+                  <?= $searchTitleRaw !== "" ? $titleHl : htmlspecialchars($searchTitle, ENT_QUOTES, 'UTF-8') ?>
                 </a>
 
                 <div class="search-result__meta">
@@ -285,9 +295,10 @@ $fieldLabels = [
                   </div>
                 <?php endif; ?>
               </article>
+              </li>
               <?php
               endforeach; ?>
-            </div>
+            </ul>
 
             <!-- ── Stránkovanie ─────────────────────────────────────── -->
             <?php if ($totalPages > 1): ?>
@@ -295,8 +306,7 @@ $fieldLabels = [
                 <?php if ($prevUrl): ?>
                   <a href="<?= htmlspecialchars($prevUrl) ?>"
                      class="articles-page-link"
-                     rel="prev"
-                     aria-label="Predchádzajúca strana">← Predošlá</a>
+                    rel="prev">← Predošlá</a>
                 <?php endif; ?>
 
                 <?php
@@ -305,9 +315,9 @@ $fieldLabels = [
                 for ($p = $startP; $p <= $endP; $p++):
                     $pUrl =
                         $baseUrl .
-                        "search.php?s=" .
+                        $searchQueryPrefix .
                         urlencode($rawQuery) .
-                        "&page=" .
+                        $pageQuerySeparator .
                         $p; ?>
                   <a href="<?= htmlspecialchars($pUrl) ?>"
                      class="articles-page-link<?= $p === $page
@@ -322,8 +332,7 @@ $fieldLabels = [
                 <?php if ($nextUrl): ?>
                   <a href="<?= htmlspecialchars($nextUrl) ?>"
                      class="articles-page-link"
-                     rel="next"
-                     aria-label="Nasledujúca strana">Ďalšia →</a>
+                    rel="next">Ďalšia →</a>
                 <?php endif; ?>
               </nav>
             <?php endif; ?>
@@ -331,7 +340,7 @@ $fieldLabels = [
           <?php else: ?>
 
             <!-- ── Nulové výsledky ──────────────────────────────────── -->
-            <div class="search-empty" role="status" aria-live="polite">
+            <output class="search-empty" aria-live="polite">
               <div class="search-empty__icon" aria-hidden="true">🔍</div>
               <div class="search-empty__title">Žiadne výsledky</div>
               <p class="search-empty__text">
@@ -363,7 +372,8 @@ $fieldLabels = [
                       as $sugg
                   ): ?>
                     <a href="search.php?s=<?= urlencode($sugg) ?>"
-                       class="search-meta__term link-unstyled"><?= htmlspecialchars(
+                       class="search-meta__term link-unstyled"
+                       aria-label="Hľadať výraz <?= htmlspecialchars($sugg, ENT_QUOTES, 'UTF-8') ?>"><?= htmlspecialchars(
                            $sugg,
                        ) ?></a>
                   <?php endforeach; ?>
@@ -375,7 +385,7 @@ $fieldLabels = [
                   ← Späť na zoznam článkov
                 </a>
               </div>
-            </div>
+            </output>
 
           <?php endif; ?>
 
@@ -410,7 +420,8 @@ $fieldLabels = [
                   as $sugg
               ): ?>
                 <a href="search.php?s=<?= urlencode($sugg) ?>"
-                   class="search-meta__term link-chip">
+                   class="search-meta__term link-chip"
+                   aria-label="Hľadať výraz <?= htmlspecialchars($sugg, ENT_QUOTES, 'UTF-8') ?>">
                   <?= htmlspecialchars($sugg) ?>
                 </a>
               <?php endforeach; ?>
@@ -432,7 +443,7 @@ $fieldLabels = [
     </div><!-- /.main-content -->
   </main>
 
-  <?php include "footer.php"; ?>
+  <?php include_once "footer.php"; ?>
 
 </body>
 </html>

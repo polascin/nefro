@@ -3,6 +3,13 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/config_loader.php';
 
+const EMAIL_BRAND_NAME = 'Nefro-projekt Slovensko';
+const EMAIL_DATETIME_FORMAT = 'Y-m-d H:i:s';
+const EMAIL_CONTENT_TYPE_HTML = 'text/html; charset=UTF-8';
+const EMAIL_GREETING_PREFIX = 'Dobrý deň, ';
+const EMAIL_PLAIN_PARAGRAPH_BREAK = ",\n\n";
+const EMAIL_SENTENCE_PARAGRAPH_SUFFIX = ".\n\n";
+
 function getEmailEnvConfig(): array {
     static $config = null;
     if ($config !== null) {
@@ -16,19 +23,17 @@ function getEmailEnvConfig(): array {
         $env = [];
     }
 
-    $config = [
+    return [
         'smtp_host' => trim((string) ($env['SMTP_HOST'] ?? '')),
         'smtp_port' => (int) ($env['SMTP_PORT'] ?? 587),
         'smtp_secure' => strtolower(trim((string) ($env['SMTP_SECURE'] ?? 'tls'))),
         'smtp_user' => trim((string) ($env['SMTP_USER'] ?? '')),
         'smtp_pass' => (string) ($env['SMTP_PASS'] ?? ''),
         'from_email' => trim((string) ($env['SMTP_FROM_EMAIL'] ?? '')),
-        'from_name' => trim((string) ($env['SMTP_FROM_NAME'] ?? 'Nefro-projekt Slovensko')),
+        'from_name' => trim((string) ($env['SMTP_FROM_NAME'] ?? EMAIL_BRAND_NAME)),
         'admin_notification_email' => trim((string) ($env['SMTP_ADMIN_EMAIL'] ?? ($env['ADMIN_EMAIL'] ?? ''))),
         'smtp_timeout' => max(5, min(30, (int) ($env['SMTP_TIMEOUT'] ?? 10))),
     ];
-
-    return $config;
 }
 
 function escapeEmailHtml(string $text): string {
@@ -36,7 +41,7 @@ function escapeEmailHtml(string $text): string {
 }
 
 function renderEmailHtmlLayout(string $contentHtml, string $actionLabel = '', string $actionUrl = ''): string {
-    $brand = 'Nefro-projekt Slovensko';
+    $brand = EMAIL_BRAND_NAME;
     $buttonHtml = '';
     if ($actionLabel !== '' && $actionUrl !== '') {
         $buttonHtml = '<p style="text-align:center;margin:28px 0 0;">'
@@ -115,11 +120,20 @@ function smtpSendCommand($socket, string $command, array $expectedCodes, string 
     return ['ok' => $ok, 'code' => $code, 'response' => $response];
 }
 
-function sendViaSmtp(string $toEmail, string $subject, string $messageBody, array $cfg, string $contentType = 'text/plain; charset=UTF-8', ?string $plainTextAlt = null): bool {
-    if ($cfg['smtp_host'] === '' || $cfg['smtp_user'] === '' || $cfg['smtp_pass'] === '' || $cfg['from_email'] === '') {
-        return false;
+function smtpCloseSocket($socket): void {
+    if (is_resource($socket)) {
+        fclose($socket);
     }
+}
 
+function smtpHasRequiredConfig(array $cfg): bool {
+    return $cfg['smtp_host'] !== ''
+        && $cfg['smtp_user'] !== ''
+        && $cfg['smtp_pass'] !== ''
+        && $cfg['from_email'] !== '';
+}
+
+function smtpOpenSocket(array $cfg) {
     $transportHost = $cfg['smtp_host'];
     if ($cfg['smtp_secure'] === 'ssl') {
         $transportHost = 'ssl://' . $transportHost;
@@ -132,85 +146,87 @@ function sendViaSmtp(string $toEmail, string $subject, string $messageBody, arra
         (int) $cfg['smtp_timeout'],
         STREAM_CLIENT_CONNECT
     );
-
     if (!$socket) {
         error_log('SMTP connect failed: ' . $errstr . ' (' . $errno . ')');
-        return false;
+        return null;
     }
 
     stream_set_timeout($socket, (int) $cfg['smtp_timeout']);
+    return $socket;
+}
 
+function smtpExpectBanner($socket): bool {
     [$code, $bannerResponse] = smtpReadResponse($socket);
-    if ($code !== 220) {
-        smtpLogError('banner', 'unexpected_code', [
-            'expected' => [220],
-            'actual' => $code,
-            'response' => $bannerResponse,
-        ]);
-        fclose($socket);
+    if ($code === 220) {
+        return true;
+    }
+
+    smtpLogError('banner', 'unexpected_code', [
+        'expected' => [220],
+        'actual' => $code,
+        'response' => $bannerResponse,
+    ]);
+    return false;
+}
+
+function smtpRunEhlo($socket, string $ehloHost, string $stage): bool {
+    return smtpSendCommand($socket, 'EHLO ' . $ehloHost, [250], $stage)['ok'];
+}
+
+function smtpStartTlsAndReEhlo($socket, string $ehloHost): bool {
+    if (!smtpSendCommand($socket, 'STARTTLS', [220], 'starttls')['ok']) {
         return false;
     }
 
-    $ehloHost = $_SERVER['SERVER_NAME'] ?? 'localhost';
-    if (!smtpSendCommand($socket, 'EHLO ' . $ehloHost, [250], 'ehlo_initial')['ok']) {
-        fclose($socket);
+    $tlsMethod = STREAM_CRYPTO_METHOD_TLSv1_2_CLIENT | STREAM_CRYPTO_METHOD_TLSv1_3_CLIENT;
+    $cryptoEnabled = @stream_socket_enable_crypto($socket, true, $tlsMethod) === true;
+    if (!$cryptoEnabled) {
+        smtpLogError('starttls_crypto', 'tls_handshake_failed');
         return false;
     }
 
-    if ($cfg['smtp_secure'] === 'tls') {
-        if (!smtpSendCommand($socket, 'STARTTLS', [220], 'starttls')['ok']) {
-            fclose($socket);
-            return false;
+    return smtpRunEhlo($socket, $ehloHost, 'ehlo_tls');
+}
+
+function smtpOpenAndHandshake(array $cfg) {
+    $socket = null;
+
+    if (smtpHasRequiredConfig($cfg)) {
+        $socket = smtpOpenSocket($cfg);
+        if ($socket) {
+            $ehloHost = $_SERVER['SERVER_NAME'] ?? 'localhost';
+            $ok = smtpExpectBanner($socket)
+                && smtpRunEhlo($socket, $ehloHost, 'ehlo_initial');
+
+            if ($ok && $cfg['smtp_secure'] === 'tls') {
+                $ok = smtpStartTlsAndReEhlo($socket, $ehloHost);
+            }
+
+            if (!$ok) {
+                smtpCloseSocket($socket);
+                $socket = null;
+            }
         }
-
-        // TLS 1.2+ vynútené — STREAM_CRYPTO_METHOD_TLS_CLIENT povoľuje aj deprecated TLS 1.0/1.1 (RFC 8996)
-        $tlsMethod = STREAM_CRYPTO_METHOD_TLSv1_2_CLIENT | STREAM_CRYPTO_METHOD_TLSv1_3_CLIENT;
-        $cryptoEnabled = @stream_socket_enable_crypto($socket, true, $tlsMethod);
-        if ($cryptoEnabled !== true) {
-            smtpLogError('starttls_crypto', 'tls_handshake_failed');
-            fclose($socket);
-            return false;
-        }
-
-        if (!smtpSendCommand($socket, 'EHLO ' . $ehloHost, [250], 'ehlo_tls')['ok']) {
-            fclose($socket);
-            return false;
-        }
     }
 
-    if (!smtpSendCommand($socket, 'AUTH LOGIN', [334], 'auth_login')['ok']) {
-        fclose($socket);
-        return false;
-    }
-    if (!smtpSendCommand($socket, base64_encode($cfg['smtp_user']), [334], 'auth_username')['ok']) {
-        fclose($socket);
-        return false;
-    }
-    if (!smtpSendCommand($socket, base64_encode($cfg['smtp_pass']), [235], 'auth_password')['ok']) {
-        fclose($socket);
-        return false;
-    }
+    return $socket;
+}
 
-    if (!smtpSendCommand($socket, 'MAIL FROM:<' . $cfg['from_email'] . '>', [250], 'mail_from')['ok']) {
-        fclose($socket);
-        return false;
-    }
-    if (!smtpSendCommand($socket, 'RCPT TO:<' . $toEmail . '>', [250, 251], 'rcpt_to')['ok']) {
-        fclose($socket);
-        return false;
-    }
-    if (!smtpSendCommand($socket, 'DATA', [354], 'data')['ok']) {
-        fclose($socket);
-        return false;
-    }
+function smtpAuthenticate($socket, array $cfg): bool {
+    return smtpSendCommand($socket, 'AUTH LOGIN', [334], 'auth_login')['ok']
+        && smtpSendCommand($socket, base64_encode($cfg['smtp_user']), [334], 'auth_username')['ok']
+        && smtpSendCommand($socket, base64_encode($cfg['smtp_pass']), [235], 'auth_password')['ok'];
+}
 
-    // mb_encode_mimeheader správne rozdelí dlhý predmet na viacero RFC 2047 encoded words
-    // (max. 75 znakov každý) — jednoduchý base64_encode bez delenia lámal diakritiku.
+function smtpOpenEnvelope($socket, string $fromEmail, string $toEmail): bool {
+    return smtpSendCommand($socket, 'MAIL FROM:<' . $fromEmail . '>', [250], 'mail_from')['ok']
+        && smtpSendCommand($socket, 'RCPT TO:<' . $toEmail . '>', [250, 251], 'rcpt_to')['ok']
+        && smtpSendCommand($socket, 'DATA', [354], 'data')['ok'];
+}
+
+function smtpBuildPayload(string $toEmail, string $subject, string $messageBody, array $cfg, string $contentType, ?string $plainTextAlt): string {
     $encodedSubject = mb_encode_mimeheader($subject, 'UTF-8', 'B', "\r\n ");
     $encodedFromName = mb_encode_mimeheader($cfg['from_name'], 'UTF-8', 'B', "\r\n ");
-
-    // Multipart/alternative (text/plain + text/html) zlepšuje doručiteľnosť (spam skóre)
-    // a podporuje klientov bez HTML. Aktivuje sa, keď je k HTML obsahu daný aj plaintext.
     $useMultipart = ($plainTextAlt !== null && stripos($contentType, 'text/html') !== false);
 
     $headers = [
@@ -218,43 +234,37 @@ function sendViaSmtp(string $toEmail, string $subject, string $messageBody, arra
         'To: <' . $toEmail . '>',
         'Subject: ' . $encodedSubject,
         'MIME-Version: 1.0',
+        'Date: ' . date(DATE_RFC2822),
     ];
 
-    // Telo kódujeme quoted-printable: HTML šablóna je jeden dlhý riadok (často >1 kB).
-    // Pri 8bit bez zalamovania MTA prekročí limit RFC 5321 (998 oktetov/riadok) a vloží
-    // zlom → v HTML sa zobrazí medzera na nenáležitom mieste (aj v názvoch článkov).
-    // QP zalomí na ≤76 znakov soft-breakmi (=CRLF), ktoré dekodér odstráni bez zvyšku.
     if ($useMultipart) {
         $boundary = '=_nps_' . bin2hex(random_bytes(16));
         $headers[] = 'Content-Type: multipart/alternative; boundary="' . $boundary . '"';
-        $headers[] = 'Date: ' . date(DATE_RFC2822);
-        // Poradie častí: najprv text/plain, potom text/html (klient zobrazí poslednú, ktorú vie).
         $body = '--' . $boundary . "\n"
             . "Content-Type: text/plain; charset=UTF-8\n"
             . "Content-Transfer-Encoding: quoted-printable\n\n"
-            . quoted_printable_encode($plainTextAlt) . "\n\n"
+            . quoted_printable_encode((string) $plainTextAlt) . "\n\n"
             . '--' . $boundary . "\n"
-            . "Content-Type: text/html; charset=UTF-8\n"
+            . "Content-Type: " . EMAIL_CONTENT_TYPE_HTML . "\n"
             . "Content-Transfer-Encoding: quoted-printable\n\n"
             . quoted_printable_encode($messageBody) . "\n\n"
             . '--' . $boundary . "--\n";
     } else {
         $headers[] = 'Content-Type: ' . $contentType;
         $headers[] = 'Content-Transfer-Encoding: quoted-printable';
-        $headers[] = 'Date: ' . date(DATE_RFC2822);
         $body = quoted_printable_encode($messageBody);
     }
 
     $payload = implode("\r\n", $headers) . "\r\n\r\n" . str_replace(["\r\n", "\r"], "\n", $body);
     $payload = str_replace("\n", "\r\n", $payload);
-    // SMTP dot-stuffing (RFC 5321 §4.5.2): riadok začínajúci '.' sa musí zdvojiť,
-    // inak by ho server interpretoval ako koniec DATA. QP riadok môže začínať '.'.
     $payload = str_replace("\r\n.", "\r\n..", $payload);
-    $payload .= "\r\n.\r\n";
+    return $payload . "\r\n.\r\n";
+}
 
+function smtpWritePayloadAndFinish($socket, string $payload): bool {
     if (@fwrite($socket, $payload) === false) {
         smtpLogError('data_payload', 'write_failed');
-        fclose($socket);
+        smtpSendCommand($socket, 'QUIT', [221], 'quit');
         return false;
     }
 
@@ -268,9 +278,24 @@ function sendViaSmtp(string $toEmail, string $subject, string $messageBody, arra
     }
 
     smtpSendCommand($socket, 'QUIT', [221], 'quit');
-    fclose($socket);
-
     return $dataCode === 250;
+}
+
+function sendViaSmtp(string $toEmail, string $subject, string $messageBody, array $cfg, string $contentType = 'text/plain; charset=UTF-8', ?string $plainTextAlt = null): bool {
+    $socket = smtpOpenAndHandshake($cfg);
+    if (!$socket) {
+        return false;
+    }
+
+    $ok = smtpAuthenticate($socket, $cfg)
+        && smtpOpenEnvelope($socket, (string) $cfg['from_email'], $toEmail);
+    if ($ok) {
+        $payload = smtpBuildPayload($toEmail, $subject, $messageBody, $cfg, $contentType, $plainTextAlt);
+        $ok = smtpWritePayloadAndFinish($socket, $payload);
+    }
+
+    smtpCloseSocket($socket);
+    return $ok;
 }
 
 function generateEmailVerificationToken(): array {
@@ -280,7 +305,7 @@ function generateEmailVerificationToken(): array {
     return [
         'token' => $rawToken,
         'token_hash' => $tokenHash,
-        'expires_at' => date('Y-m-d H:i:s', time() + 86400), // 24h
+        'expires_at' => date(EMAIL_DATETIME_FORMAT, time() + 86400), // 24h
     ];
 }
 
@@ -300,25 +325,25 @@ function saveEmailVerificationToken(PDO $pdo, int $userId, string $tokenHash, st
 function sendVerificationEmail(string $toEmail, string $username, int $userId, string $rawToken): bool {
     $verifyUrl = getAppBaseUrl() . '/verify_email.php?uid=' . urlencode((string) $userId) . '&token=' . urlencode($rawToken);
 
-    $subject = 'Overenie e-mailovej adresy - Nefro-projekt Slovensko';
+    $subject = 'Overenie e-mailovej adresy - ' . EMAIL_BRAND_NAME;
     $displayName = trim($username) !== '' ? $username : $toEmail;
 
     $htmlBody = '<p style="margin:0 0 16px;">Dobrý deň, ' . escapeEmailHtml($displayName) . ',</p>'
-        . '<p style="margin:0 0 16px;">ďakujeme za registráciu v Nefro-projekt Slovensko.</p>'
+        . '<p style="margin:0 0 16px;">ďakujeme za registráciu v ' . EMAIL_BRAND_NAME . '.</p>'
         . '<p style="margin:0 0 16px;">Pre aktiváciu účtu overte svoju e-mailovú adresu kliknutím na tlačidlo nižšie.</p>'
         . '<p style="margin:0 0 16px;color:#334155;">Ak tlačidlo nefunguje, skopírujte a vložte tento odkaz do prehliadača:</p>'
         . '<p style="margin:0 0 16px;word-break:break-word;"><a href="' . escapeEmailHtml($verifyUrl) . '" style="color:#0b61d1;text-decoration:underline;">' . escapeEmailHtml($verifyUrl) . '</a></p>'
         . '<p style="margin:0;color:#64748b;font-size:14px;line-height:22px;">Platnosť odkazu je 24 hodín.</p>';
     $htmlMessage = renderEmailHtmlLayout($htmlBody, 'Overiť e-mail', $verifyUrl);
-    $plainMessage = "Dobrý deň, " . $displayName . ",\n\n"
-        . "ďakujeme za registráciu v Nefro-projekt Slovensko.\n\n"
+    $plainMessage = EMAIL_GREETING_PREFIX . $displayName . EMAIL_PLAIN_PARAGRAPH_BREAK
+        . "ďakujeme za registráciu v " . EMAIL_BRAND_NAME . EMAIL_SENTENCE_PARAGRAPH_SUFFIX
         . "Pre aktiváciu účtu overte svoju e-mailovú adresu otvorením tohto odkazu:\n"
         . $verifyUrl . "\n\n"
         . "Platnosť odkazu je 24 hodín.\n\n"
-        . "Nefro-projekt Slovensko";
+        . EMAIL_BRAND_NAME;
 
     $cfg = getEmailEnvConfig();
-    if (sendViaSmtp($toEmail, $subject, $htmlMessage, $cfg, 'text/html; charset=UTF-8', $plainMessage)) {
+    if (sendViaSmtp($toEmail, $subject, $htmlMessage, $cfg, EMAIL_CONTENT_TYPE_HTML, $plainMessage)) {
         return true;
     }
 
@@ -329,25 +354,25 @@ function sendVerificationEmail(string $toEmail, string $username, int $userId, s
 function sendPasswordResetEmail(string $toEmail, string $username, string $rawToken): bool {
     $resetUrl = getAppBaseUrl() . '/reset_password.php?token=' . urlencode($rawToken);
 
-    $subject = 'Obnova hesla - Nefro-projekt Slovensko';
+    $subject = 'Obnova hesla - ' . EMAIL_BRAND_NAME;
     $displayName = trim($username) !== '' ? $username : $toEmail;
 
     $htmlBody = '<p style="margin:0 0 16px;">Dobrý deň, ' . escapeEmailHtml($displayName) . ',</p>'
-        . '<p style="margin:0 0 16px;">Prijali sme žiadosť o obnovenie hesla pre váš účet v Nefro-projekt Slovensko.</p>'
+        . '<p style="margin:0 0 16px;">Prijali sme žiadosť o obnovenie hesla pre váš účet v ' . EMAIL_BRAND_NAME . '.</p>'
         . '<p style="margin:0 0 16px;">Nové heslo nastavíte kliknutím na tlačidlo nižšie.</p>'
         . '<p style="margin:0 0 16px;color:#334155;">Ak tlačidlo nefunguje, skopírujte a vložte tento odkaz do prehliadača:</p>'
         . '<p style="margin:0 0 16px;word-break:break-word;"><a href="' . escapeEmailHtml($resetUrl) . '" style="color:#0b61d1;text-decoration:underline;">' . escapeEmailHtml($resetUrl) . '</a></p>'
         . '<p style="margin:0;color:#64748b;font-size:14px;line-height:22px;">Platnosť odkazu je 60 minút.</p>';
     $htmlMessage = renderEmailHtmlLayout($htmlBody, 'Obnoviť heslo', $resetUrl);
-    $plainMessage = "Dobrý deň, " . $displayName . ",\n\n"
-        . "prijali sme žiadosť o obnovenie hesla pre váš účet v Nefro-projekt Slovensko.\n\n"
+    $plainMessage = EMAIL_GREETING_PREFIX . $displayName . EMAIL_PLAIN_PARAGRAPH_BREAK
+        . "prijali sme žiadosť o obnovenie hesla pre váš účet v " . EMAIL_BRAND_NAME . EMAIL_SENTENCE_PARAGRAPH_SUFFIX
         . "Nové heslo nastavíte otvorením tohto odkazu:\n"
         . $resetUrl . "\n\n"
         . "Platnosť odkazu je 60 minút.\n\n"
-        . "Nefro-projekt Slovensko";
+        . EMAIL_BRAND_NAME;
 
     $cfg = getEmailEnvConfig();
-    if (sendViaSmtp($toEmail, $subject, $htmlMessage, $cfg, 'text/html; charset=UTF-8', $plainMessage)) {
+    if (sendViaSmtp($toEmail, $subject, $htmlMessage, $cfg, EMAIL_CONTENT_TYPE_HTML, $plainMessage)) {
         return true;
     }
 
@@ -381,14 +406,14 @@ function sendAdminNewRegistrationEmail(array $dbUserRow, array $registrationCont
         }
     }
 
-    $subject = 'Nová registrácia používateľa - Nefro-projekt Slovensko';
+    $subject = 'Nová registrácia používateľa - ' . EMAIL_BRAND_NAME;
 
     $lines = [];
     $lines[] = 'Bola zaznamenaná nová úspešná registrácia.';
     $lines[] = '';
     $lines[] = 'REGISTRAČNÝ KONTEXT';
     $lines[] = '------------------';
-    $lines[] = 'Čas servera: ' . date('Y-m-d H:i:s');
+    $lines[] = 'Čas servera: ' . date(EMAIL_DATETIME_FORMAT);
     $lines[] = 'IP adresa: ' . (string) ($registrationContext['ip'] ?? '-');
     $lines[] = 'User-Agent: ' . (string) ($registrationContext['user_agent'] ?? '-');
     $lines[] = 'Referer: ' . (string) ($registrationContext['referer'] ?? '-');
@@ -415,7 +440,7 @@ function sendAdminNewRegistrationEmail(array $dbUserRow, array $registrationCont
     $htmlBody = '<p style="margin:0 0 16px;">Bola zaznamenaná nová úspešná registrácia.</p>'
         . '<h2 style="margin:0 0 14px;font-size:18px;color:#0f172a;">Registračný kontext</h2>'
         . '<ul style="margin:0 0 16px;padding-left:20px;color:#334155;line-height:24px;">'
-        . '<li>Čas servera: ' . escapeEmailHtml(date('Y-m-d H:i:s')) . '</li>'
+        . '<li>Čas servera: ' . escapeEmailHtml(date(EMAIL_DATETIME_FORMAT)) . '</li>'
         . '<li>IP adresa: ' . escapeEmailHtml((string) ($registrationContext['ip'] ?? '-')) . '</li>'
         . '<li>User-Agent: ' . escapeEmailHtml((string) ($registrationContext['user_agent'] ?? '-')) . '</li>'
         . '<li>Referer: ' . escapeEmailHtml((string) ($registrationContext['referer'] ?? '-')) . '</li>'
@@ -425,7 +450,7 @@ function sendAdminNewRegistrationEmail(array $dbUserRow, array $registrationCont
         . '<pre style="margin:0;padding:14px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;white-space:pre-wrap;word-break:break-word;color:#334155;font-size:13px;line-height:21px;">' . escapeEmailHtml($message) . '</pre>';
     $htmlMessage = renderEmailHtmlLayout($htmlBody);
 
-    if (sendViaSmtp($toEmail, $subject, $htmlMessage, $cfg, 'text/html; charset=UTF-8', $message)) {
+    if (sendViaSmtp($toEmail, $subject, $htmlMessage, $cfg, EMAIL_CONTENT_TYPE_HTML, $message)) {
         return true;
     }
 
@@ -439,7 +464,7 @@ function sendAdminNewRegistrationEmail(array $dbUserRow, array $registrationCont
 function sendUserRegistrationNotificationEmail(string $toEmail, string $username, array $dbUserRow = []): bool {
     $cfg = getEmailEnvConfig();
     $displayName = trim($username) !== '' ? $username : $toEmail;
-    $subject = 'Potvrdenie registrácie - Nefro-projekt Slovensko';
+    $subject = 'Potvrdenie registrácie - ' . EMAIL_BRAND_NAME;
 
     $firstName = trim((string) ($dbUserRow['first_name'] ?? ''));
     $lastName = trim((string) ($dbUserRow['last_name'] ?? ''));
@@ -447,33 +472,33 @@ function sendUserRegistrationNotificationEmail(string $toEmail, string $username
     $nameLine = $fullName !== '' ? $fullName : $displayName;
 
     $lines = [];
-    $lines[] = 'Dobrý deň, ' . $nameLine . ',';
+    $lines[] = EMAIL_GREETING_PREFIX . $nameLine . ',';
     $lines[] = '';
-    $lines[] = 'váš účet bol úspešne vytvorený v Nefro-projekt Slovensko.';
+    $lines[] = 'váš účet bol úspešne vytvorený v ' . EMAIL_BRAND_NAME . '.';
     $lines[] = '';
     $lines[] = 'Základné údaje registrácie:';
     $lines[] = '- Používateľské meno: ' . (string) ($dbUserRow['username'] ?? $username);
     $lines[] = '- E-mail: ' . (string) ($dbUserRow['email'] ?? $toEmail);
-    $lines[] = '- Čas registrácie: ' . date('Y-m-d H:i:s');
+    $lines[] = '- Čas registrácie: ' . date(EMAIL_DATETIME_FORMAT);
     $lines[] = '';
     $lines[] = 'Ak ste túto registráciu nevykonali vy, čo najskôr nás kontaktujte.';
     $lines[] = '';
-    $lines[] = 'Nefro-projekt Slovensko';
+    $lines[] = EMAIL_BRAND_NAME;
 
     $message = implode("\n", $lines);
 
     $htmlBody = '<p style="margin:0 0 16px;">Dobrý deň, ' . escapeEmailHtml($nameLine) . ',</p>'
-        . '<p style="margin:0 0 16px;">Váš účet bol úspešne vytvorený v Nefro-projekt Slovensko.</p>'
+        . '<p style="margin:0 0 16px;">Váš účet bol úspešne vytvorený v ' . EMAIL_BRAND_NAME . '.</p>'
         . '<div style="margin:18px 0 24px;padding:18px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;color:#334155;line-height:24px;">'
         . '<strong>Základné údaje registrácie:</strong><br>'
         . 'Používateľské meno: ' . escapeEmailHtml((string) ($dbUserRow['username'] ?? $username)) . '<br>'
         . 'E-mail: ' . escapeEmailHtml((string) ($dbUserRow['email'] ?? $toEmail)) . '<br>'
-        . 'Čas registrácie: ' . escapeEmailHtml(date('Y-m-d H:i:s')) . '</div>'
+        . 'Čas registrácie: ' . escapeEmailHtml(date(EMAIL_DATETIME_FORMAT)) . '</div>'
         . '<p style="margin:0 0 16px;color:#475569;">Ak ste túto registráciu nevykonali vy, čo najskôr nás kontaktujte.</p>';
 
     $htmlMessage = renderEmailHtmlLayout($htmlBody);
 
-    if (sendViaSmtp($toEmail, $subject, $htmlMessage, $cfg, 'text/html; charset=UTF-8', $message)) {
+    if (sendViaSmtp($toEmail, $subject, $htmlMessage, $cfg, EMAIL_CONTENT_TYPE_HTML, $message)) {
         return true;
     }
 
@@ -494,9 +519,9 @@ function markEmailAsVerified(PDO $pdo, int $userId): void {
 function sendAccountDeletionConfirmationEmail(string $toEmail, string $username, string $rawToken): bool {
     $confirmUrl = getAppBaseUrl() . '/confirm_account_deletion.php?token=' . urlencode($rawToken);
     $displayName = trim($username) !== '' ? $username : $toEmail;
-    $subject = 'Potvrdenie zrušenia účtu - Nefro-projekt Slovensko';
-    $message = "Dobrý deň, " . $displayName . ",\n\n"
-        . "prijali sme žiadosť o zrušenie vášho účtu v Nefro-projekt Slovensko.\n\n"
+    $subject = 'Potvrdenie zrušenia účtu - ' . EMAIL_BRAND_NAME;
+    $message = EMAIL_GREETING_PREFIX . $displayName . EMAIL_PLAIN_PARAGRAPH_BREAK
+        . "prijali sme žiadosť o zrušenie vášho účtu v " . EMAIL_BRAND_NAME . EMAIL_SENTENCE_PARAGRAPH_SUFFIX
         . "Pre dokončenie a trvalé vymazanie účtu kliknite na tento odkaz:\n\n"
         . $confirmUrl . "\n\n"
         . "Platnosť odkazu je 24 hodín.\n\n"
@@ -504,17 +529,17 @@ function sendAccountDeletionConfirmationEmail(string $toEmail, string $username,
         . "všetky vaše údaje vrátane výsledkov kalkulačiek a nastavení profilu.\n\n"
         . "Ak ste o zrušenie účtu nežiadali, tento e-mail ignorujte. "
         . "Váš účet zostane zachovaný.\n\n"
-        . "Nefro-projekt Slovensko";
+        . EMAIL_BRAND_NAME;
 
     $htmlBody = '<p style="margin:0 0 16px;">Dobrý deň, ' . escapeEmailHtml($displayName) . ',</p>'
-        . '<p style="margin:0 0 16px;">Prijali sme žiadosť o zrušenie vášho účtu v Nefro-projekt Slovensko.</p>'
+        . '<p style="margin:0 0 16px;">Prijali sme žiadosť o zrušenie vášho účtu v ' . EMAIL_BRAND_NAME . '.</p>'
         . '<p style="margin:0 0 16px;">Pre dokončenie a trvalé vymazanie účtu kliknite na tlačidlo nižšie.</p>'
         . '<p style="margin:0 0 16px;color:#334155;">Odkaz je platný 24 hodín.</p>'
         . '<p style="margin:0 0 16px;color:#334155;font-size:14px;line-height:22px;">Táto akcia je nezvratná. Po potvrdení budú natrvalo vymazané všetky vaše údaje vrátane výsledkov kalkulačiek a nastavení profilu.</p>';
     $htmlMessage = renderEmailHtmlLayout($htmlBody, 'Potvrdiť zrušenie účtu', $confirmUrl);
 
     $cfg = getEmailEnvConfig();
-    if (sendViaSmtp($toEmail, $subject, $htmlMessage, $cfg, 'text/html; charset=UTF-8', $message)) {
+    if (sendViaSmtp($toEmail, $subject, $htmlMessage, $cfg, EMAIL_CONTENT_TYPE_HTML, $message)) {
         return true;
     }
 

@@ -6,6 +6,12 @@ if (basename($_SERVER['PHP_SELF'] ?? '') === basename(__FILE__)) {
     exit("Prístup odmietnutý.");
 }
 
+class AppConfigException extends RuntimeException {
+}
+
+class DataProtectionKeyException extends RuntimeException {
+}
+
 /**
  * Vráti kandidátne cesty ku konfiguračnému súboru.
  * Poradie je od najbezpečnejšej/explicitnej po fallback pre lokálny vývoj.
@@ -51,38 +57,34 @@ function loadAppConfig(): array {
         $parsed = parse_ini_file($path, false, INI_SCANNER_TYPED);
         if ($parsed !== false) {
             $config = $parsed;
-            return $config;
+            return $parsed;
         }
     }
 
     $searchedPaths = implode(', ', getAppConfigPaths());
-    throw new RuntimeException('Konfiguračný súbor sa nenašiel alebo je neplatný. Hľadané cesty: ' . $searchedPaths);
+    throw new AppConfigException('Konfiguračný súbor sa nenašiel alebo je neplatný. Hľadané cesty: ' . $searchedPaths);
 }
 
 /**
  * Vráti true/false pre textové env hodnoty ako 1/0, true/false, yes/no, on/off.
  */
 function parseEnvBool(mixed $value, bool $default = false): bool {
-    if ($value === null) {
-        return $default;
-    }
-
-    $normalized = strtolower(trim((string) $value));
-    if ($normalized === '') {
-        return $default;
-    }
-
     $truthy = ['1', 'true', 'yes', 'on'];
     $falsy = ['0', 'false', 'no', 'off'];
+    $result = $default;
 
-    if (in_array($normalized, $truthy, true)) {
-        return true;
-    }
-    if (in_array($normalized, $falsy, true)) {
-        return false;
+    if ($value !== null) {
+        $normalized = strtolower(trim((string) $value));
+        if ($normalized !== '') {
+            if (in_array($normalized, $truthy, true)) {
+                $result = true;
+            } elseif (in_array($normalized, $falsy, true)) {
+                $result = false;
+            }
+        }
     }
 
-    return $default;
+    return $result;
 }
 
 /**
@@ -113,13 +115,12 @@ function isAppLocalDev(): bool {
  * Proxy hlavičky sa akceptujú len ak je explicitne povolené TRUST_PROXY_HEADERS.
  */
 function isRequestHttps(): bool {
+    $isHttps = false;
     $httpsFlag = $_SERVER['HTTPS'] ?? null;
-    if (!empty($httpsFlag) && strtolower((string) $httpsFlag) !== 'off') {
-        return true;
-    }
-
-    if (isset($_SERVER['SERVER_PORT']) && (int) $_SERVER['SERVER_PORT'] === 443) {
-        return true;
+    $httpsFromFlag = !empty($httpsFlag) && strtolower((string) $httpsFlag) !== 'off';
+    $httpsFromPort = isset($_SERVER['SERVER_PORT']) && (int) $_SERVER['SERVER_PORT'] === 443;
+    if ($httpsFromFlag || $httpsFromPort) {
+        $isHttps = true;
     }
 
     try {
@@ -129,14 +130,61 @@ function isRequestHttps(): bool {
     }
 
     $trustProxy = parseEnvBool($env['TRUST_PROXY_HEADERS'] ?? getenv('TRUST_PROXY_HEADERS'), false);
-    if ($trustProxy) {
+    if (!$isHttps && $trustProxy) {
         $forwardedProto = strtolower(trim((string) ($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? '')));
         if ($forwardedProto === 'https') {
-            return true;
+            $isHttps = true;
         }
     }
 
-    return false;
+    return $isHttps;
+}
+
+function firstNonEmptySecretCandidate(array $candidates): string {
+    foreach ($candidates as $candidate) {
+        $candidate = trim((string) $candidate);
+        if ($candidate !== '') {
+            return $candidate;
+        }
+    }
+    return '';
+}
+
+function ensureDataProtectionKeyDirectory(string $keyDir): void {
+    if (!is_dir($keyDir) && !@mkdir($keyDir, 0750, true) && !is_dir($keyDir)) {
+        throw new DataProtectionKeyException('DATA_PROTECTION_KEY is not configured and the private key directory cannot be created.');
+    }
+}
+
+function generateAndStoreDataProtectionKey(string $keyPath): string {
+    $generatedKey = base64_encode(random_bytes(32));
+    $handle = @fopen($keyPath, 'x');
+    if ($handle === false) {
+        if (is_file($keyPath)) {
+            return trim((string) @file_get_contents($keyPath));
+        }
+        throw new DataProtectionKeyException('Generated data protection key could not be stored.');
+    }
+
+    if (fwrite($handle, $generatedKey . PHP_EOL) === false) {
+        fclose($handle);
+        @unlink($keyPath);
+        throw new DataProtectionKeyException('Generated data protection key could not be stored.');
+    }
+
+    fclose($handle);
+    @chmod($keyPath, 0600);
+    return $generatedKey;
+}
+
+function getPersistentDataProtectionKey(string $keyDir, string $keyPath): string {
+    ensureDataProtectionKeyDirectory($keyDir);
+
+    if (is_file($keyPath)) {
+        return trim((string) @file_get_contents($keyPath));
+    }
+
+    return generateAndStoreDataProtectionKey($keyPath);
 }
 
 /**
@@ -193,55 +241,25 @@ function getAppDataProtectionKey(): string {
         error_log('Data protection key config loading failed: ' . $e->getMessage());
     }
 
-    $rawKey = '';
     $candidates = [
         (string) ($env['DATA_PROTECTION_KEY'] ?? getenv('DATA_PROTECTION_KEY') ?: ''),
         (string) ($env['APP_KEY'] ?? getenv('APP_KEY') ?: ''),
         (string) ($env['APP_SECRET'] ?? getenv('APP_SECRET') ?: ''),
         (string) ($env['NEWSLETTER_UNSUBSCRIBE_SECRET'] ?? getenv('NEWSLETTER_UNSUBSCRIBE_SECRET') ?: ''),
     ];
-    foreach ($candidates as $candidate) {
-        $candidate = trim($candidate);
-        if ($candidate !== '') {
-            $rawKey = $candidate;
-            break;
-        }
-    }
+    $rawKey = firstNonEmptySecretCandidate($candidates);
 
     if ($rawKey === '') {
         $keyDir = __DIR__ . DIRECTORY_SEPARATOR . 'private';
         $keyPath = $keyDir . DIRECTORY_SEPARATOR . 'data_protection.key';
-        if (!is_dir($keyDir) && !@mkdir($keyDir, 0750, true) && !is_dir($keyDir)) {
-            throw new \RuntimeException('DATA_PROTECTION_KEY is not configured and the private key directory cannot be created.');
-        }
-
-        if (is_file($keyPath)) {
-            $rawKey = trim((string) @file_get_contents($keyPath));
-        } else {
-            $generatedKey = base64_encode(random_bytes(32));
-            $handle = @fopen($keyPath, 'x');
-            if ($handle !== false) {
-                if (fwrite($handle, $generatedKey . PHP_EOL) === false) {
-                    fclose($handle);
-                    @unlink($keyPath);
-                    throw new \RuntimeException('Generated data protection key could not be stored.');
-                }
-                fclose($handle);
-                @chmod($keyPath, 0600);
-                $rawKey = $generatedKey;
-            } elseif (is_file($keyPath)) {
-                // Iný súbežný request vytvoril kľúč medzi kontrolou a fopen().
-                $rawKey = trim((string) @file_get_contents($keyPath));
-            }
-        }
+        $rawKey = getPersistentDataProtectionKey($keyDir, $keyPath);
 
         if ($rawKey === '') {
-            throw new \RuntimeException('DATA_PROTECTION_KEY is not configured and no persistent fallback key is available.');
+            throw new DataProtectionKeyException('DATA_PROTECTION_KEY is not configured and no persistent fallback key is available.');
         }
     }
 
-    $key = hash('sha256', $rawKey, true);
-    return $key;
+    return hash('sha256', $rawKey, true);
 }
 
 /**

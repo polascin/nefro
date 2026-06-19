@@ -61,27 +61,21 @@ function isMobileResendAllowed(?string $sentAt, int $cooldownSeconds = 60): bool
 }
 
 function verifyMobileCodeRecord(array $userRow, string $providedCode): string {
+    $status = 'ok';
+
     if (!empty($userRow['mobile_verified_at'])) {
-        return 'already_verified';
+        $status = 'already_verified';
+    } elseif (empty($userRow['mobile_verification_code_hash']) || empty($userRow['mobile_verification_expires_at'])) {
+        $status = 'missing_code';
+    } elseif (strtotime((string) $userRow['mobile_verification_expires_at']) < time()) {
+        $status = 'expired';
+    } elseif (!preg_match('/^\d{6}$/', $providedCode)) {
+        $status = 'invalid';
+    } elseif (!password_verify($providedCode, (string) $userRow['mobile_verification_code_hash'])) {
+        $status = 'invalid';
     }
 
-    if (empty($userRow['mobile_verification_code_hash']) || empty($userRow['mobile_verification_expires_at'])) {
-        return 'missing_code';
-    }
-
-    if (strtotime((string) $userRow['mobile_verification_expires_at']) < time()) {
-        return 'expired';
-    }
-
-    if (!preg_match('/^\d{6}$/', $providedCode)) {
-        return 'invalid';
-    }
-
-    if (!password_verify($providedCode, (string) $userRow['mobile_verification_code_hash'])) {
-        return 'invalid';
-    }
-
-    return 'ok';
+    return $status;
 }
 
 function getMobileVerificationEnvConfig(): array {
@@ -97,7 +91,7 @@ function getMobileVerificationEnvConfig(): array {
         $env = [];
     }
 
-    $config = [
+    return [
         'sms_provider' => strtolower(trim((string) ($env['SMS_PROVIDER'] ?? 'log'))),
         'sms_sender' => trim((string) ($env['SMS_SENDER'] ?? 'Nefro')),
         'twilio_account_sid' => trim((string) ($env['SMS_TWILIO_ACCOUNT_SID'] ?? $env['TWILIO_ACCOUNT_SID'] ?? '')),
@@ -105,8 +99,6 @@ function getMobileVerificationEnvConfig(): array {
         'twilio_verify_service_sid' => trim((string) ($env['SMS_TWILIO_VERIFY_SERVICE_SID'] ?? $env['TWILIO_VERIFY_SERVICE_SID'] ?? '')),
         'twilio_user_sid' => trim((string) ($env['SMS_TWILIO_USER_SID'] ?? $env['TWILIO_USER_SID'] ?? '')),
     ];
-
-    return $config;
 }
 
 function isExternalMobileVerificationProvider(): bool {
@@ -114,27 +106,21 @@ function isExternalMobileVerificationProvider(): bool {
     return ($cfg['sms_provider'] ?? '') === 'twilio_verify';
 }
 
-function twilioVerifyApiRequest(string $resourcePath, array $postData): array {
-    $cfg = getMobileVerificationEnvConfig();
-    $accountSid = (string) ($cfg['twilio_account_sid'] ?? '');
-    $authToken = (string) ($cfg['twilio_auth_token'] ?? '');
-    $serviceSid = (string) ($cfg['twilio_verify_service_sid'] ?? '');
-
-    if ($accountSid === '' || $authToken === '' || $serviceSid === '') {
+function twilioVerifyMissingConfig(string $accountSid, string $authToken, string $serviceSid): bool {
+    $missing = $accountSid === '' || $authToken === '' || $serviceSid === '';
+    if ($missing) {
         error_log('Twilio Verify config missing (account/auth/service sid).');
-        return ['ok' => false, 'status_code' => 0, 'json' => null];
     }
+    return $missing;
+}
 
-    if (!function_exists('curl_init')) {
-        error_log('Twilio Verify requires PHP cURL extension.');
-        return ['ok' => false, 'status_code' => 0, 'json' => null];
-    }
-
-    $url = 'https://verify.twilio.com/v2/Services/' . rawurlencode($serviceSid) . '/' . ltrim($resourcePath, '/');
+function twilioVerifyExecuteRequest(string $url, string $accountSid, string $authToken, array $postData): array {
+    $response = ['ok' => false, 'status_code' => 0, 'json' => null];
 
     $ch = curl_init($url);
     if ($ch === false) {
-        return ['ok' => false, 'status_code' => 0, 'json' => null];
+        error_log('Twilio Verify request initialization failed.');
+        return $response;
     }
 
     curl_setopt($ch, CURLOPT_POST, true);
@@ -151,16 +137,15 @@ function twilioVerifyApiRequest(string $resourcePath, array $postData): array {
     $statusCode = (int) curl_getinfo($ch, CURLINFO_HTTP_CODE);
     $curlErr = curl_error($ch);
     curl_close($ch);
-    unset($ch);
 
     if ($rawResponse === false) {
         error_log('Twilio Verify request failed: ' . $curlErr);
-        return ['ok' => false, 'status_code' => $statusCode, 'json' => null];
+        $response['status_code'] = $statusCode;
+        return $response;
     }
 
     $decoded = json_decode((string) $rawResponse, true);
     $ok = $statusCode >= 200 && $statusCode < 300;
-
     if (!$ok) {
         $message = '';
         if (is_array($decoded) && !empty($decoded['message'])) {
@@ -172,33 +157,49 @@ function twilioVerifyApiRequest(string $resourcePath, array $postData): array {
     return ['ok' => $ok, 'status_code' => $statusCode, 'json' => $decoded];
 }
 
-function verifyMobileCodeByProvider(array $userRow, ?string $mobilePhone, string $providedCode): string {
-    if (isExternalMobileVerificationProvider()) {
-        if (!preg_match('/^\d{6}$/', $providedCode)) {
-            return 'invalid';
-        }
-        if (empty($mobilePhone)) {
-            return 'missing_code';
-        }
+function twilioVerifyApiRequest(string $resourcePath, array $postData): array {
+    $cfg = getMobileVerificationEnvConfig();
+    $accountSid = (string) ($cfg['twilio_account_sid'] ?? '');
+    $authToken = (string) ($cfg['twilio_auth_token'] ?? '');
+    $serviceSid = (string) ($cfg['twilio_verify_service_sid'] ?? '');
 
-        $result = twilioVerifyApiRequest('VerificationCheck', [
-            'To' => (string) $mobilePhone,
-            'Code' => $providedCode,
-        ]);
-
-        if (!$result['ok']) {
-            return 'provider_error';
-        }
-
-        $status = strtolower((string) (($result['json']['status'] ?? '')));
-        if ($status === 'approved') {
-            return 'ok';
-        }
-
-        return 'invalid';
+    if (twilioVerifyMissingConfig($accountSid, $authToken, $serviceSid)) {
+        return ['ok' => false, 'status_code' => 0, 'json' => null];
     }
 
-    return verifyMobileCodeRecord($userRow, $providedCode);
+    if (!function_exists('curl_init')) {
+        error_log('Twilio Verify requires PHP cURL extension.');
+        return ['ok' => false, 'status_code' => 0, 'json' => null];
+    }
+
+    $url = 'https://verify.twilio.com/v2/Services/' . rawurlencode($serviceSid) . '/' . ltrim($resourcePath, '/');
+    return twilioVerifyExecuteRequest($url, $accountSid, $authToken, $postData);
+}
+
+function verifyMobileCodeByProvider(array $userRow, ?string $mobilePhone, string $providedCode): string {
+    $status = verifyMobileCodeRecord($userRow, $providedCode);
+
+    if (isExternalMobileVerificationProvider()) {
+        if (!preg_match('/^\d{6}$/', $providedCode)) {
+            $status = 'invalid';
+        } elseif (empty($mobilePhone)) {
+            $status = 'missing_code';
+        } else {
+            $result = twilioVerifyApiRequest('VerificationCheck', [
+                'To' => (string) $mobilePhone,
+                'Code' => $providedCode,
+            ]);
+
+            if (!$result['ok']) {
+                $status = 'provider_error';
+            } else {
+                $providerStatus = strtolower((string) ($result['json']['status'] ?? ''));
+                $status = $providerStatus === 'approved' ? 'ok' : 'invalid';
+            }
+        }
+    }
+
+    return $status;
 }
 
 function sendMobileVerificationCode(string $mobilePhone, ?string $code = null): bool {
@@ -206,40 +207,39 @@ function sendMobileVerificationCode(string $mobilePhone, ?string $code = null): 
     $provider = $cfg['sms_provider'];
     $isLocalDev = isAppLocalDev();
 
+    $sent = false;
+
     if ($provider === 'twilio_verify') {
         $result = twilioVerifyApiRequest('Verifications', [
             'To' => $mobilePhone,
             'Channel' => 'sms',
         ]);
 
-        if (!$result['ok']) {
-            return false;
+        if ($result['ok']) {
+            $status = strtolower((string) ($result['json']['status'] ?? ''));
+            $sent = $status === 'pending' || $status === 'approved';
         }
-
-        $status = strtolower((string) (($result['json']['status'] ?? '')));
-        return $status === 'pending' || $status === 'approved';
-    }
-
-    // Logovací provider: použiteľný iba pri lokálnom vývoji.
-    // BEZPEČNOSŤ: kód sa nesmie objaviť v produkčných logoch.
-    if ($provider === '' || $provider === 'log') {
+    } elseif ($provider === '' || $provider === 'log') {
+        // Logovací provider: použiteľný iba pri lokálnom vývoji.
+        // BEZPEČNOSŤ: kód sa nesmie objaviť v produkčných logoch.
         $maskedPhone = substr($mobilePhone, 0, -4) . '****';
         if ($isLocalDev) {
             error_log('[DEV] SMS overovací kód pre ' . $maskedPhone . ': ' . (string) $code);
-            return true;
+            $sent = true;
+        } else {
+            // V produkcii zlyhávame explicitne — tichý návrat true by maskoval
+            // chýbajúcu konfiguráciu SMS_PROVIDER a používatelia by nikdy SMS nedostali.
+            error_log(
+                'SMS verifikácia zlyhala: SMS_PROVIDER="' . $provider . '" nie je platný produkčný provider. '
+                . 'Nakonfigurujte SMS_PROVIDER=twilio_verify v .env súbore.'
+            );
         }
-        // V produkcii zlyhávame explicitne — tichý návrat true by maskoval
-        // chýbajúcu konfiguráciu SMS_PROVIDER a používatelia by nikdy SMS nedostali.
-        error_log(
-            'SMS verifikácia zlyhala: SMS_PROVIDER="' . $provider . '" nie je platný produkčný provider. '
-            . 'Nakonfigurujte SMS_PROVIDER=twilio_verify v .env súbore.'
-        );
-        return false;
+    } else {
+        // Zástupné miesto pre budúce SMS providéry.
+        error_log('SMS provider not implemented: ' . $provider . ' for ' . $mobilePhone . ', sender=' . $cfg['sms_sender']);
     }
 
-    // Zástupné miesto pre budúce SMS providéry.
-    error_log('SMS provider not implemented: ' . $provider . ' for ' . $mobilePhone . ', sender=' . $cfg['sms_sender']);
-    return false;
+    return $sent;
 }
 
 /**

@@ -131,20 +131,21 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 <!DOCTYPE html>
 <html lang="sk">
 <head>
+  <title><?= htmlspecialchars($pageTitle, ENT_QUOTES, "UTF-8") ?></title>
   <?php
-  $pageTitle      = 'Opätovné odoslanie overenia | Nefro-projekt Slovensko';
+  include_once 'head_meta.php';
   $seoDescription = 'Požiadajte o nové overenie e-mailovej adresy vášho účtu na Nefro-projekt Slovensko.';
   $robotsMeta     = 'noindex, follow';
   $canonicalUrl   = 'https://nefro.polascin.net/resend_verification.php';
-  include 'head_meta.php';
+    include_once 'head_meta.php';
   ?>
 </head>
 <body>
-    <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>
+    include_once 'header.php';
     <?php
     $headerTitle = 'Opätovné odoslanie overenia';
     $showLogo = false;
-    include 'header.php';
+    include_once 'header.php';
     ?>
 
     <main id="main-content" class="container" role="main">
@@ -182,10 +183,10 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 
             <div class="auth-links auth-links--spaced">
                 <p><a href="login.php">Späť na prihlásenie</a></p>
-            </div>
+    <?php include_once 'footer.php'; ?>
         </div>
     </main>
 
-    <?php include 'footer.php'; ?>
+    <?php include_once 'footer.php'; ?>
 </body>
 </html>

@@ -91,6 +91,7 @@ try {
 // ── SEO ──────────────────────────────────────────────────────────────────────
 $siteName = "Nefro-projekt Slovensko";
 $baseUrl = "https://nefro.polascin.net/";
+$schemaOrgUrl = "https://schema.org";
 $isPaginated = $page > 1;
 
 $pageTitle = ($isPaginated ? "Pre pacientov – strana " . $page . " | " : "Pre pacientov – zrozumiteľne o obličkách | ") . $siteName;
@@ -102,7 +103,7 @@ $ogType = "website";
 
 $structuredData = [
     [
-        "@context" => "https://schema.org",
+        "@context" => $schemaOrgUrl,
         "@type" => "CollectionPage",
         "name" => "Pre pacientov – popularizačné články",
         "description" => $seoDescription,
@@ -114,7 +115,7 @@ $structuredData = [
         ],
     ],
     [
-        "@context" => "https://schema.org",
+        "@context" => $schemaOrgUrl,
         "@type" => "BreadcrumbList",
         "itemListElement" => [
             ["@type" => "ListItem", "position" => 1, "name" => "Domov", "item" => $baseUrl],
@@ -134,7 +135,7 @@ foreach ($articles as $i => $art) {
 }
 if (!empty($itemListElements)) {
     $structuredData[] = [
-        "@context" => "https://schema.org",
+        "@context" => $schemaOrgUrl,
         "@type" => "ItemList",
         "name" => $isPaginated ? "Pre pacientov – strana " . $page : "Pre pacientov",
         "itemListElement" => $itemListElements,
@@ -145,7 +146,8 @@ if (!empty($itemListElements)) {
 <html lang="sk">
 
 <head>
-  <?php include "head_meta.php"; ?>
+  <title><?= htmlspecialchars($pageTitle, ENT_QUOTES, "UTF-8") ?></title>
+  <?php include_once "head_meta.php"; ?>
 </head>
 
 <body>
@@ -155,10 +157,10 @@ if (!empty($itemListElements)) {
   $headerTitle = "Nefro-projekt Slovensko";
   $headerIntro = "Zrozumiteľne o obličkách — pre poučených pacientov a verejnosť.";
   $showLogo = true;
-  include "header.php";
+  include_once "header.php";
   ?>
 
-  <?php include 'main_nav.php'; ?>
+  <?php include_once 'main_nav.php'; ?>
 
   <main id="main-content" class="container main-content" role="main">
     <div class="content-wrapper content-wrapper--full">
@@ -184,7 +186,7 @@ if (!empty($itemListElements)) {
         </section>
       <?php else: ?>
         <section class="populars-grid-section" aria-label="Zoznam článkov pre pacientov">
-          <ul class="populars-grid" role="list">
+          <ul class="populars-grid">
             <?php foreach ($articles as $art):
                 $artSlug = htmlspecialchars((string) $art["slug"], ENT_QUOTES);
                 $artTitle = htmlspecialchars((string) $art["title"]);
@@ -225,7 +227,7 @@ if (!empty($itemListElements)) {
                   <?php if ($p === $page): ?>
                     <span class="articles-page-link is-active" aria-current="page"><?= $p ?></span>
                   <?php else: ?>
-                    <a class="articles-page-link" href="?page=<?= $p ?>#populars-heading"><?= $p ?></a>
+                    <a class="articles-page-link" href="?page=<?= $p ?>#populars-heading" aria-label="Strana <?= $p ?>"><?= $p ?></a>
                   <?php endif; ?>
                 <?php endfor; ?>
               </div>
@@ -243,7 +245,7 @@ if (!empty($itemListElements)) {
             <input type="email" name="email" placeholder="váš@email.sk" class="form-control newsletter-cta__input" required aria-label="Vaša e-mailová adresa">
             <button type="submit" class="btn-primary newsletter-cta__btn">Prihlásiť na odber</button>
           </form>
-          <div class="newsletter-cta__msg" id="nl-msg-inline" hidden role="status"></div>
+          <output class="newsletter-cta__msg" id="nl-msg-inline" hidden aria-live="polite"></output>
         </div>
       </div>
 
@@ -251,6 +253,6 @@ if (!empty($itemListElements)) {
   </main>
 
   <script src="newsletter-cta.js?v=<?= filemtime(__DIR__ . '/newsletter-cta.js') ?>" defer></script>
-  <?php include "footer.php"; ?>
+  <?php include_once "footer.php"; ?>
 </body>
 </html>
