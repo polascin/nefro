@@ -136,7 +136,6 @@ function twilioVerifyExecuteRequest(string $url, string $accountSid, string $aut
     $rawResponse = curl_exec($ch);
     $statusCode = (int) curl_getinfo($ch, CURLINFO_HTTP_CODE);
     $curlErr = curl_error($ch);
-    curl_close($ch);
 
     if ($rawResponse === false) {
         error_log('Twilio Verify request failed: ' . $curlErr);
