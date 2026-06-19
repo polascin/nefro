@@ -421,7 +421,7 @@ if ($article) {
         <?php if (!empty($projectAuthors)): ?>
         <div class="project-authors" aria-label="Autori článkov podľa počtu príspevkov">
           <h4>Zúčastnení autori</h4>
-          <ul>
+          <ul class="expandable-list" data-limit="8">
             <?php foreach ($projectAuthors as $authorStat):
                 $authorName = trim((string) ($authorStat["author"] ?? ""));
                 if ($authorName === "") {
@@ -430,7 +430,11 @@ if ($article) {
                 $authorArticles = (int) ($authorStat["articles"] ?? 0);
                 ?>
             <li>
-              <span><?= htmlspecialchars($authorName, ENT_QUOTES, "UTF-8") ?></span>
+              <a href="index.php?autor=<?= urlencode($authorName) ?>#autor-articles-heading"
+                 class="author-filter-link"
+                 aria-label="Zobraziť články autora <?= htmlspecialchars($authorName, ENT_QUOTES, "UTF-8") ?>">
+                <?= htmlspecialchars($authorName, ENT_QUOTES, "UTF-8") ?>
+              </a>
               <strong><?= htmlspecialchars(
                   formatProjectArticleCountLabel($authorArticles),
                   ENT_QUOTES,
@@ -440,6 +444,7 @@ if ($article) {
             <?php
             endforeach; ?>
           </ul>
+          <button class="show-more-btn no-print" type="button">Zobraziť viac</button>
         </div>
         <?php endif; ?>
         <a href="index.php" class="btn-primary article-back-link">Všetky články</a>

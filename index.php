@@ -693,7 +693,7 @@ if (!empty($itemListElements)) {
         <?php if (!empty($projectAuthors)): ?>
         <div class="project-authors" aria-label="Autori článkov podľa počtu príspevkov">
           <h4>Zúčastnení autori</h4>
-          <ul>
+          <ul class="expandable-list" data-limit="8">
             <?php foreach ($projectAuthors as $authorStat):
                 $authorName = trim((string) ($authorStat["author"] ?? ""));
                 if ($authorName === "") {
@@ -716,6 +716,7 @@ if (!empty($itemListElements)) {
             <?php
             endforeach; ?>
           </ul>
+          <button class="show-more-btn no-print" type="button">Zobraziť viac</button>
         </div>
         <?php endif; ?>
       </div>
