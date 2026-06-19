@@ -7,6 +7,9 @@ require_once __DIR__ . '/newsletter_notifications.php';
 
 requireAdmin();
 
+const ERROR_INVALID_ID = 'Neplatné ID.';
+const ERROR_SUBSCRIBER_NOT_FOUND = 'Odberateľ nenájdený.';
+
 $actionResult = null;
 $actionError  = null;
 
@@ -20,12 +23,12 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 
         switch ($action) {
             case 'delete_subscriber':
-                if ($subId <= 0) { $actionError = 'Neplatné ID.'; break; }
+                if ($subId <= 0) { $actionError = ERROR_INVALID_ID; break; }
                 try {
                     $s = $pdo->prepare("SELECT email FROM newsletter_subscribers WHERE id = :id LIMIT 1");
                     $s->execute(['id' => $subId]);
                     $sub = $s->fetch();
-                    if (!$sub) { $actionError = 'Odberateľ nenájdený.'; break; }
+                    if (!$sub) { $actionError = ERROR_SUBSCRIBER_NOT_FOUND; break; }
                     $pdo->prepare("DELETE FROM newsletter_subscribers WHERE id = :id")->execute(['id' => $subId]);
                     $actionResult = 'Odberateľ ' . $sub['email'] . ' bol natrvalo zmazaný.';
                 } catch (\PDOException $e) {
@@ -35,12 +38,12 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 break;
 
             case 'force_verify':
-                if ($subId <= 0) { $actionError = 'Neplatné ID.'; break; }
+                if ($subId <= 0) { $actionError = ERROR_INVALID_ID; break; }
                 try {
                     $s = $pdo->prepare("SELECT email, verified_at FROM newsletter_subscribers WHERE id = :id LIMIT 1");
                     $s->execute(['id' => $subId]);
                     $sub = $s->fetch();
-                    if (!$sub) { $actionError = 'Odberateľ nenájdený.'; break; }
+                    if (!$sub) { $actionError = ERROR_SUBSCRIBER_NOT_FOUND; break; }
                     if ($sub['verified_at'] !== null) { $actionError = 'Odberateľ je už overený.'; break; }
                     $pdo->prepare("UPDATE newsletter_subscribers SET verified_at = NOW(), unsubscribed_at = NULL WHERE id = :id")
                         ->execute(['id' => $subId]);
@@ -52,12 +55,12 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 break;
 
             case 'force_unsubscribe':
-                if ($subId <= 0) { $actionError = 'Neplatné ID.'; break; }
+                if ($subId <= 0) { $actionError = ERROR_INVALID_ID; break; }
                 try {
                     $s = $pdo->prepare("SELECT email, unsubscribed_at FROM newsletter_subscribers WHERE id = :id LIMIT 1");
                     $s->execute(['id' => $subId]);
                     $sub = $s->fetch();
-                    if (!$sub) { $actionError = 'Odberateľ nenájdený.'; break; }
+                    if (!$sub) { $actionError = ERROR_SUBSCRIBER_NOT_FOUND; break; }
                     if ($sub['unsubscribed_at'] !== null) { $actionError = 'Odberateľ je už odhlásený.'; break; }
                     $pdo->beginTransaction();
                     $pdo->prepare("UPDATE newsletter_subscribers SET unsubscribed_at = NOW() WHERE id = :id")
@@ -77,12 +80,12 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 break;
 
             case 'resend_verification':
-                if ($subId <= 0) { $actionError = 'Neplatné ID.'; break; }
+                if ($subId <= 0) { $actionError = ERROR_INVALID_ID; break; }
                 try {
                     $s = $pdo->prepare("SELECT email, verified_at FROM newsletter_subscribers WHERE id = :id LIMIT 1");
                     $s->execute(['id' => $subId]);
                     $sub = $s->fetch();
-                    if (!$sub) { $actionError = 'Odberateľ nenájdený.'; break; }
+                    if (!$sub) { $actionError = ERROR_SUBSCRIBER_NOT_FOUND; break; }
                     if ($sub['verified_at'] !== null) { $actionError = 'Odberateľ je už overený — overovací e-mail nie je potrebný.'; break; }
                     $newToken = bin2hex(random_bytes(32));
                     $pdo->prepare("UPDATE newsletter_subscribers SET verify_token = :token_hash, updated_at = NOW() WHERE id = :id")
@@ -100,12 +103,12 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 break;
 
             case 'reactivate':
-                if ($subId <= 0) { $actionError = 'Neplatné ID.'; break; }
+                if ($subId <= 0) { $actionError = ERROR_INVALID_ID; break; }
                 try {
                     $s = $pdo->prepare("SELECT email, unsubscribed_at FROM newsletter_subscribers WHERE id = :id LIMIT 1");
                     $s->execute(['id' => $subId]);
                     $sub = $s->fetch();
-                    if (!$sub) { $actionError = 'Odberateľ nenájdený.'; break; }
+                    if (!$sub) { $actionError = ERROR_SUBSCRIBER_NOT_FOUND; break; }
                     if ($sub['unsubscribed_at'] === null) { $actionError = 'Odberateľ nie je odhlásený.'; break; }
                     $pdo->prepare("UPDATE newsletter_subscribers SET unsubscribed_at = NULL WHERE id = :id")
                         ->execute(['id' => $subId]);
@@ -114,6 +117,9 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     error_log('admin_newsletter reactivate error: ' . $e->getMessage());
                     $actionError = 'Chyba pri obnovení odberu.';
                 }
+                break;
+            default:
+                $actionError = 'Neznáma akcia.';
                 break;
         }
     }
@@ -188,8 +194,8 @@ $pageLastUpdated = date('d.m.Y H:i', filemtime(__FILE__));
     $headerTitle = 'Odberatelia newslettera';
     $headerIntro = 'Správa anonymných odberateľov noviniek';
     $showLogo = false;
-    include 'header.php';
-    include 'admin_menu.php';
+    include_once 'header.php';
+    include_once 'admin_menu.php';
     ?>
 
     <main id="main-content" class="container container--wide admin-page-main" role="main">
@@ -240,7 +246,8 @@ $pageLastUpdated = date('d.m.Y H:i', filemtime(__FILE__));
                     $isSelected = $statusFilter === $fVal;
                 ?>
                 <a href="admin_newsletter.php<?= $fVal !== '' ? '?status=' . urlencode($fVal) : '' ?>"
-                   class="<?= $isSelected ? 'btn-primary' : 'btn-secondary-small' ?> fs-085">
+                         class="<?= $isSelected ? 'btn-primary' : 'btn-secondary-small' ?> fs-085"
+                         aria-label="Filter odberateľov: <?= htmlspecialchars($fLabel, ENT_QUOTES) ?>">
                     <?= htmlspecialchars($fLabel) ?>
                 </a>
                 <?php endforeach; ?>
@@ -349,6 +356,6 @@ $pageLastUpdated = date('d.m.Y H:i', filemtime(__FILE__));
         });
     });
     </script>
-    <?php include 'footer.php'; ?>
+    <?php include_once 'footer.php'; ?>
 </body>
 </html>

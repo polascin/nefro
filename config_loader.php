@@ -26,6 +26,8 @@ function getAppConfigPaths(): array {
     $paths[] = $parentRoot . DIRECTORY_SEPARATOR . 'nefro.env.ini';
     $paths[] = $parentRoot . DIRECTORY_SEPARATOR . 'private' . DIRECTORY_SEPARATOR . 'nefro.env.ini';
     $paths[] = $parentRoot . DIRECTORY_SEPARATOR . 'private' . DIRECTORY_SEPARATOR . 'env.ini';
+    $paths[] = $appRoot . DIRECTORY_SEPARATOR . 'private' . DIRECTORY_SEPARATOR . 'nefro.env.ini';
+    $paths[] = $appRoot . DIRECTORY_SEPARATOR . 'private' . DIRECTORY_SEPARATOR . 'env.ini';
     $paths[] = $appRoot . DIRECTORY_SEPARATOR . 'env.ini';
 
     return array_values(array_unique($paths));

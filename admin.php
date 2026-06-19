@@ -6,6 +6,8 @@ require_once __DIR__ . '/db_config.php';
 
 requireAdmin();
 
+const ERROR_USER_NOT_FOUND = 'Používateľ nenájdený.';
+
 $currentAdminId     = (int) ($_SESSION['user_id'] ?? 0);
 $actionResult       = null;
 $actionError        = null;
@@ -29,7 +31,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     $tStmt = $pdo->prepare("SELECT is_admin, username FROM users WHERE id = :id");
                     $tStmt->execute(['id' => $targetUserId]);
                     $tUser = $tStmt->fetch();
-                    if (!$tUser) { $actionError = 'Používateľ nenájdený.'; break; }
+                    if (!$tUser) { $actionError = ERROR_USER_NOT_FOUND; break; }
                     $newRole = ((int) $tUser['is_admin']) ? 0 : 1;
                     $pdo->prepare("UPDATE users SET is_admin = :role WHERE id = :id")->execute(['role' => $newRole, 'id' => $targetUserId]);
                     $actionResult = ($newRole ? 'Rola Admin udelená' : 'Rola Admin odňatá') . ' — ' . htmlspecialchars((string) $tUser['username']) . '.';
@@ -48,7 +50,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     $tStmt = $pdo->prepare("SELECT is_active, username FROM users WHERE id = :id");
                     $tStmt->execute(['id' => $targetUserId]);
                     $tUser = $tStmt->fetch();
-                    if (!$tUser) { $actionError = 'Používateľ nenájdený.'; break; }
+                    if (!$tUser) { $actionError = ERROR_USER_NOT_FOUND; break; }
                     $newActive = ((int) $tUser['is_active']) ? 0 : 1;
                     $pdo->prepare("UPDATE users SET is_active = :active WHERE id = :id")->execute(['active' => $newActive, 'id' => $targetUserId]);
                     $actionResult = ($newActive ? 'Účet aktivovaný' : 'Účet deaktivovaný') . ' — ' . htmlspecialchars((string) $tUser['username']) . '.';
@@ -63,7 +65,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     $tStmt = $pdo->prepare("SELECT username FROM users WHERE id = :id");
                     $tStmt->execute(['id' => $targetUserId]);
                     $tUser = $tStmt->fetch();
-                    if (!$tUser) { $actionError = 'Používateľ nenájdený.'; break; }
+                    if (!$tUser) { $actionError = ERROR_USER_NOT_FOUND; break; }
                     $tempPwd = bin2hex(random_bytes(8));
                     $pdo->prepare("UPDATE users SET password_hash = :hash WHERE id = :id")
                         ->execute(['hash' => password_hash($tempPwd, PASSWORD_DEFAULT), 'id' => $targetUserId]);
@@ -98,7 +100,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                                 && str_starts_with($fp, $avatarBasePrefix2)
                                 && is_file($fp)
                             ) {
-                                if (@unlink($fp)) { $cntFiles++; }
+                                $cntFiles += @unlink($fp) ? 1 : 0;
                             }
                         }
                     }
@@ -111,6 +113,9 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     error_log('Cleanup error: ' . $e->getMessage());
                     $actionError = 'Chyba počas cleanup operácie.';
                 }
+                break;
+            default:
+                $actionError = 'Neznáma akcia.';
                 break;
         }
     }
@@ -287,8 +292,8 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
     $headerTitle = 'Administrácia systému';
     $headerIntro = 'Správa používateľov a audit zmien';
     $showLogo = false;
-    include 'header.php';
-    include 'admin_menu.php';
+    include_once 'header.php';
+    include_once 'admin_menu.php';
     ?>
 
     <main id="main-content" class="container container--wide" role="main">
@@ -659,6 +664,6 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
         </div>
     </main>
 
-    <?php include 'footer.php'; ?>
+    <?php include_once 'footer.php'; ?>
 </body>
 </html>

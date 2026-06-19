@@ -15,6 +15,15 @@ try {
     $env = loadAppConfig();
 } catch (\RuntimeException $e) {
     error_log('Konfigurácia DB nebola načítaná: ' . $e->getMessage());
+
+    $isCli = php_sapi_name() === 'cli';
+    $host = strtolower((string) ($_SERVER['SERVER_NAME'] ?? ''));
+    $isLocalHttp = in_array($host, ['localhost', '127.0.0.1', '::1'], true);
+
+    if ($isCli || $isLocalHttp) {
+        exit("Chyba: " . $e->getMessage());
+    }
+
     exit("Chyba: Konfiguračný súbor sa nenašiel alebo je neplatný.");
 }
 
