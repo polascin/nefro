@@ -177,13 +177,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Rozbaľovacie zoznamy v sidebar
     const expandableLists = document.querySelectorAll('.expandable-list');
-    expandableLists.forEach(list => {
+    expandableLists.forEach((list, listIndex) => {
         const limit = parseInt(list.dataset.limit) || 10;
         const items = list.querySelectorAll('li');
         const button = list.parentElement.querySelector('.show-more-btn');
-        
+
         if (items.length <= limit) {
-            if (button) button.style.display = 'none';
+            if (button) button.hidden = true;
             return;
         }
 
@@ -195,9 +195,16 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         if (button) {
+            // Prístupnosť: tlačidlo oznamuje rozbalený/zbalený stav (WCAG 4.1.2).
+            if (!list.id) {
+                list.id = 'expandable-list-' + listIndex;
+            }
+            button.setAttribute('aria-controls', list.id);
+            button.setAttribute('aria-expanded', 'false');
+
             button.addEventListener('click', () => {
                 const isExpanded = button.classList.contains('expanded');
-                
+
                 if (isExpanded) {
                     // Skryť
                     items.forEach((item, index) => {
@@ -205,11 +212,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     });
                     button.textContent = 'Zobraziť viac';
                     button.classList.remove('expanded');
+                    button.setAttribute('aria-expanded', 'false');
                 } else {
                     // Zobraziť všetko
                     items.forEach(item => item.classList.remove('hidden-item'));
                     button.textContent = 'Zobraziť menej';
                     button.classList.add('expanded');
+                    button.setAttribute('aria-expanded', 'true');
                 }
             });
         }

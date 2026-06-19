@@ -57,41 +57,121 @@ try {
 /**
  * Vráti verejne zobraziteľné štatistiky projektu.
  *
+ * Výpočet autorov skenuje obsah všetkých publikovaných článkov (regex „Zdroj:"),
+ * preto sa výsledok cachuje. Cache invaliduje lacný podpis (počet článkov +
+ * MAX(updated_at) + počet používateľov) — pri zmene článku sa prepočíta automaticky.
+ *
  * @return array{published_articles:int,users_total:int,authors:array<int,array{author:string,articles:int}>}
  */
 function getProjectPublicStats(\PDO $pdo): array {
-    $baseCounts = fetchProjectBaseCounts($pdo);
+    $meta = fetchProjectStatsMeta($pdo);
+    $signature = $meta['signature'];
 
-    return [
-        'published_articles' => $baseCounts['published_articles'],
-        'users_total' => $baseCounts['users_total'],
+    if ($signature !== '') {
+        $cached = readProjectStatsCache($signature);
+        if ($cached !== null) {
+            return $cached;
+        }
+    }
+
+    $stats = [
+        'published_articles' => $meta['published_articles'],
+        'users_total' => $meta['users_total'],
         'authors' => fetchProjectAuthors($pdo),
     ];
+
+    if ($signature !== '') {
+        writeProjectStatsCache($signature, $stats);
+    }
+
+    return $stats;
 }
 
 /**
- * @return array{published_articles:int,users_total:int}
+ * Lacný dotaz: základné počty + podpis na invalidáciu cache (bez skenu obsahu).
+ *
+ * @return array{published_articles:int,users_total:int,signature:string}
  */
-function fetchProjectBaseCounts(\PDO $pdo): array {
-    $base = [
-        'published_articles' => 0,
-        'users_total' => 0,
-    ];
+function fetchProjectStatsMeta(\PDO $pdo): array {
+    $meta = ['published_articles' => 0, 'users_total' => 0, 'signature' => ''];
 
     try {
         $stmt = $pdo->query(
             "SELECT
                 (SELECT COUNT(*) FROM articles WHERE is_published = 1) AS published_articles,
+                (SELECT COALESCE(MAX(updated_at), '') FROM articles WHERE is_published = 1) AS max_updated,
                 (SELECT COUNT(*) FROM users) AS users_total"
         );
         $row = $stmt->fetch(\PDO::FETCH_ASSOC) ?: [];
-        $base['published_articles'] = max(0, (int) ($row['published_articles'] ?? 0));
-        $base['users_total'] = max(0, (int) ($row['users_total'] ?? 0));
+        $meta['published_articles'] = max(0, (int) ($row['published_articles'] ?? 0));
+        $meta['users_total'] = max(0, (int) ($row['users_total'] ?? 0));
+        $meta['signature'] = hash(
+            'sha256',
+            $meta['published_articles'] . '|' . (string) ($row['max_updated'] ?? '') . '|' . $meta['users_total']
+        );
     } catch (\PDOException $e) {
         error_log('project stats: chyba načítania verejných štatistík: ' . $e->getMessage());
     }
 
-    return $base;
+    return $meta;
+}
+
+function projectStatsCachePath(): string {
+    return __DIR__ . '/private/cache/project_stats.json';
+}
+
+/**
+ * @return array{published_articles:int,users_total:int,authors:array<int,array{author:string,articles:int}>}|null
+ */
+function readProjectStatsCache(string $signature): ?array {
+    $path = projectStatsCachePath();
+    if (!is_file($path)) {
+        return null;
+    }
+
+    $raw = @file_get_contents($path);
+    if ($raw === false) {
+        return null;
+    }
+
+    $data = json_decode($raw, true);
+    if (!is_array($data) || ($data['signature'] ?? '') !== $signature || !is_array($data['stats'] ?? null)) {
+        return null;
+    }
+
+    $stats = $data['stats'];
+    $authors = [];
+    foreach (is_array($stats['authors'] ?? null) ? $stats['authors'] : [] as $author) {
+        if (is_array($author)) {
+            $authors[] = [
+                'author' => (string) ($author['author'] ?? ''),
+                'articles' => (int) ($author['articles'] ?? 0),
+            ];
+        }
+    }
+
+    return [
+        'published_articles' => (int) ($stats['published_articles'] ?? 0),
+        'users_total' => (int) ($stats['users_total'] ?? 0),
+        'authors' => $authors,
+    ];
+}
+
+/**
+ * @param array{published_articles:int,users_total:int,authors:array<int,array{author:string,articles:int}>} $stats
+ */
+function writeProjectStatsCache(string $signature, array $stats): void {
+    $dir = __DIR__ . '/private/cache';
+    if (!is_dir($dir) && !@mkdir($dir, 0775, true) && !is_dir($dir)) {
+        return; // cache je best-effort — pri zlyhaní sa len prepočíta nabudúce
+    }
+
+    $payload = json_encode(['signature' => $signature, 'stats' => $stats], JSON_UNESCAPED_UNICODE);
+    if ($payload === false) {
+        return;
+    }
+
+    @file_put_contents(projectStatsCachePath(), $payload, LOCK_EX);
 }
 
 /**
@@ -126,17 +206,72 @@ function fetchProjectAuthors(\PDO $pdo): array {
  * @param array<string,mixed> $row
  */
 function registerArticleAuthors(array &$authorBuckets, array $row): void {
-    $articleAuthor = trim((string) ($row['author_name'] ?? ''));
-    $articleAuthorKey = registerAuthorContribution($authorBuckets, $articleAuthor);
+    $parsed = parseArticleAuthorField((string) ($row['author_name'] ?? ''));
 
-    $sourceFirstAuthor = extractOriginalSourceFirstAuthor((string) ($row['content'] ?? ''));
-    $sourceAuthorKey = normalizeAuthorIdentity($sourceFirstAuthor);
+    /** @var array<string,bool> $registeredKeys */
+    $registeredKeys = [];
 
-    if ($sourceAuthorKey === '' || ($articleAuthorKey !== '' && $sourceAuthorKey === $articleAuthorKey)) {
+    // Autor projektu (pole author, prípadne časť za "… Autor: X"). Musí vyzerať
+    // ako osoba — publikácie/zdroje (ReachMD, ScienceDaily, časopisy) sa nepočítajú.
+    if (isLikelyPersonalAuthorName($parsed['project'])) {
+        $projectKey = registerAuthorContribution($authorBuckets, $parsed['project']);
+        if ($projectKey !== '') {
+            $registeredKeys[$projectKey] = true;
+        }
+    }
+
+    // Pôvodný autor zdroja zapísaný priamo v poli author ("Meno (Medscape); Autor: …").
+    registerSourceAuthorOnce($authorBuckets, $parsed['source'], $registeredKeys);
+
+    // Pôvodný autor zdroja vyťažený zo značky "Zdroj:" v obsahu článku.
+    $sourceFromContent = extractOriginalSourceFirstAuthor((string) ($row['content'] ?? ''));
+    registerSourceAuthorOnce($authorBuckets, $sourceFromContent, $registeredKeys);
+}
+
+/**
+ * Zapíše autora zdroja, ak je to pravdepodobne osoba a ešte nebol pre tento článok zapísaný.
+ *
+ * @param array<string,array{author:string,articles:int}> $authorBuckets
+ * @param array<string,bool> $registeredKeys
+ */
+function registerSourceAuthorOnce(array &$authorBuckets, string $sourceAuthor, array &$registeredKeys): void {
+    if ($sourceAuthor === '' || !isLikelyPersonalAuthorName($sourceAuthor)) {
         return;
     }
 
-    registerAuthorContribution($authorBuckets, $sourceFirstAuthor);
+    $key = normalizeAuthorIdentity($sourceAuthor);
+    if ($key === '' || isset($registeredKeys[$key])) {
+        return;
+    }
+
+    registerAuthorContribution($authorBuckets, $sourceAuthor);
+    $registeredKeys[$key] = true;
+}
+
+/**
+ * Rozparsuje pole "author" na autora projektu a autora pôvodného zdroja.
+ * Podporované tvary:
+ *   "MUDr. Ľubomír Polaščín"                                  → projekt
+ *   "Batya Swift Yasgur (Medscape); Autor: MUDr. … Polaščín"  → zdroj + projekt
+ *   "Medscape / Univadis; Autor: MUDr. … Polaščín"            → (zdroj=publikácia) + projekt
+ *
+ * @return array{project:string,source:string}
+ */
+function parseArticleAuthorField(string $author): array {
+    $author = trim((string) preg_replace('/\s+/u', ' ', $author));
+    $project = $author;
+    $source = '';
+
+    if (preg_match('/^(.*?)\s*;\s*Autor\s*:\s*(.+)$/iu', $author, $m)) {
+        $source = trim($m[1]);
+        $project = trim($m[2]);
+    }
+
+    // Z autora zdroja odstráň zátvorky "(Medscape)" a koncové tituly za čiarkou (", MD").
+    $source = trim((string) preg_replace('/\s*\([^)]*\)/u', '', $source));
+    $source = trim((string) preg_replace('/,\s*[A-Za-z.\s]{1,12}$/u', '', $source));
+
+    return ['project' => $project, 'source' => $source];
 }
 
 /**
@@ -334,6 +469,33 @@ function getNonPersonAuthorKeywords(): array {
         'diabetes care',
         'core curriculum',
         'review',
+        // Publikácie, spravodajské portály a citované časopisy (nie sú osoby).
+        'reachmd',
+        'sciencedaily',
+        'science daily',
+        'docwire',
+        'univadis',
+        'advisor',
+        'academy',
+        'pathogenesis',
+        'barcelona',
+        'clinic',
+        'clínic',
+        'nephrology',
+        'dialysis',
+        'transplantation',
+        'urology',
+        'renal',
+        'nefro',
+        'infectious',
+        'disease',
+        'kidney',
+        'health',
+        'medicine',
+        'university',
+        'hospital',
+        'institute',
+        'foundation',
     ];
 }
 
