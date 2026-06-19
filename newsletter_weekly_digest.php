@@ -43,29 +43,39 @@ foreach ($argv as $arg) {
     }
 }
 
+$lockAcquired = false;
+$exitCode = 0;
+
 try {
-    $r = sendWeeklyNewsletterDigest($pdo, $opts);
+    $lockAcquired = acquireNewsletterProcessLock($pdo, 'newsletter_weekly_digest');
+    if (!$lockAcquired) {
+        echo "Týždenný prehľad už spracúva iný proces; tento beh sa preskočil.\n";
+    } else {
+        $r = sendWeeklyNewsletterDigest($pdo, $opts);
 
-    echo "Týždenný prehľad – " . ($r['dry_run'] ? "SKÚŠOBNÝ BEH (nič sa neodoslalo)" : "dokončené") . ".\n";
-    echo "Okno: " . $r['window_start'] . "  →  " . $r['window_end'] . "\n";
+        echo "Týždenný prehľad – " . ($r['dry_run'] ? "SKÚŠOBNÝ BEH (nič sa neodoslalo)" : "dokončené") . ".\n";
+        echo "Okno: " . $r['window_start'] . "  →  " . $r['window_end'] . "\n";
 
-    if (!empty($r['seeded'])) {
-        echo "ZÁKLADŇA NASTAVENÁ — neodoslalo sa nič. Najbližší prehľad bude obsahovať iba\n";
-        echo "články pridané po " . $r['window_end'] . " (" . (int) $r['articles'] . " dnešných článkov sa preskočí).\n";
-        exit(0);
+        if (!empty($r['seeded'])) {
+            echo "ZÁKLADŇA NASTAVENÁ — neodoslalo sa nič. Najbližší prehľad bude obsahovať iba\n";
+            echo "články pridané po " . $r['window_end'] . " (" . (int) $r['articles'] . " dnešných článkov sa preskočí).\n";
+        } elseif (!empty($r['skipped_empty'])) {
+            echo "Za toto obdobie nepribudli žiadne nové články — prehľad sa neposlal.\n";
+        } else {
+            echo "Nových článkov v prehľade: " . (int) $r['articles'] . "\n";
+            echo "Odoslané registrovaným:    " . (int) $r['users_sent'] . "\n";
+            echo "Odoslané odberateľom:      " . (int) $r['subscribers_sent'] . "\n";
+            echo "Zlyhané odoslania:         " . (int) $r['failed'] . "\n";
+        }
     }
-
-    if (!empty($r['skipped_empty'])) {
-        echo "Za toto obdobie nepribudli žiadne nové články — prehľad sa neposlal.\n";
-        exit(0);
-    }
-
-    echo "Nových článkov v prehľade: " . (int) $r['articles'] . "\n";
-    echo "Odoslané registrovaným:    " . (int) $r['users_sent'] . "\n";
-    echo "Odoslané odberateľom:      " . (int) $r['subscribers_sent'] . "\n";
-    echo "Zlyhané odoslania:         " . (int) $r['failed'] . "\n";
 } catch (Throwable $e) {
     error_log('newsletter_weekly_digest error: ' . $e->getMessage());
     fwrite(STDERR, "Týždenný prehľad zlyhal: " . $e->getMessage() . "\n");
-    exit(1);
+    $exitCode = 1;
+} finally {
+    if ($lockAcquired) {
+        releaseNewsletterProcessLock($pdo, 'newsletter_weekly_digest');
+    }
 }
+
+exit($exitCode);

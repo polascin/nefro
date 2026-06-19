@@ -72,20 +72,78 @@ function getProjectPublicStats(\PDO $pdo): array {
 
     try {
         $authorsStmt = $pdo->query(
-            "SELECT TRIM(author) AS author_name, COUNT(*) AS articles_total
+            "SELECT TRIM(author) AS author_name, content
              FROM articles
-             WHERE is_published = 1 AND TRIM(author) <> ''
-             GROUP BY author_name
-             ORDER BY articles_total DESC, author_name ASC"
+             WHERE is_published = 1"
         );
+
+        $authorBuckets = [];
         foreach ($authorsStmt->fetchAll(\PDO::FETCH_ASSOC) as $row) {
-            $authorName = trim((string) ($row['author_name'] ?? ''));
+            $articleAuthor = trim((string) ($row['author_name'] ?? ''));
+            if ($articleAuthor !== '') {
+                $articleAuthorKey = normalizeAuthorIdentity($articleAuthor);
+                if ($articleAuthorKey !== '') {
+                    if (!isset($authorBuckets[$articleAuthorKey])) {
+                        $authorBuckets[$articleAuthorKey] = [
+                            'author' => $articleAuthor,
+                            'articles' => 0,
+                        ];
+                    }
+                    $authorBuckets[$articleAuthorKey]['articles']++;
+                }
+            }
+
+            $sourceFirstAuthor = extractOriginalSourceFirstAuthor((string) ($row['content'] ?? ''));
+            if ($sourceFirstAuthor === '') {
+                continue;
+            }
+
+            $sourceAuthorKey = normalizeAuthorIdentity($sourceFirstAuthor);
+            if ($sourceAuthorKey === '') {
+                continue;
+            }
+
+            if (
+                $articleAuthor !== '' &&
+                isset($articleAuthorKey) &&
+                $articleAuthorKey !== '' &&
+                $sourceAuthorKey === $articleAuthorKey
+            ) {
+                continue;
+            }
+
+            if (!isset($authorBuckets[$sourceAuthorKey])) {
+                $authorBuckets[$sourceAuthorKey] = [
+                    'author' => $sourceFirstAuthor,
+                    'articles' => 0,
+                ];
+            }
+            $authorBuckets[$sourceAuthorKey]['articles']++;
+        }
+
+        uasort($authorBuckets, static function (array $left, array $right): int {
+            $leftCount = (int) ($left['articles'] ?? 0);
+            $rightCount = (int) ($right['articles'] ?? 0);
+
+            if ($leftCount !== $rightCount) {
+                return $rightCount <=> $leftCount;
+            }
+
+            return strcasecmp(
+                (string) ($left['author'] ?? ''),
+                (string) ($right['author'] ?? '')
+            );
+        });
+
+        foreach ($authorBuckets as $bucket) {
+            $authorName = trim((string) ($bucket['author'] ?? ''));
             if ($authorName === '') {
                 continue;
             }
+
             $stats['authors'][] = [
                 'author' => $authorName,
-                'articles' => max(0, (int) ($row['articles_total'] ?? 0)),
+                'articles' => max(0, (int) ($bucket['articles'] ?? 0)),
             ];
         }
     } catch (\PDOException $e) {
@@ -93,6 +151,142 @@ function getProjectPublicStats(\PDO $pdo): array {
     }
 
     return $stats;
+}
+
+/**
+ * Pokúsi sa zo sekcie "Zdroj:" vyťažiť prvého autora originálneho zdroja.
+ */
+function extractOriginalSourceFirstAuthor(string $content): string {
+    if (trim($content) === '') {
+        return '';
+    }
+
+    if (!preg_match_all('/Zdroj:\s*(.*?)(?:<\/p>|<\/li>|$)/isu', $content, $matches)) {
+        return '';
+    }
+
+    foreach (($matches[1] ?? []) as $rawSourceSnippet) {
+        $sourceText = normalizeSourceCitationText((string) $rawSourceSnippet);
+        if ($sourceText === '') {
+            continue;
+        }
+
+        $author = extractFirstAuthorFromCitation($sourceText);
+        if ($author !== '') {
+            return $author;
+        }
+    }
+
+    return '';
+}
+
+/**
+ * Normalizuje text citácie po značke "Zdroj:".
+ */
+function normalizeSourceCitationText(string $rawSource): string {
+    $sourceText = html_entity_decode(
+        strip_tags($rawSource),
+        ENT_QUOTES | ENT_HTML5,
+        'UTF-8'
+    );
+    $sourceText = trim((string) preg_replace('/\s+/u', ' ', $sourceText));
+    if ($sourceText === '') {
+        return '';
+    }
+
+    // Odstráni úvodné úvodzovky a podobné znaky.
+    $sourceText = ltrim($sourceText, " \t\n\r\0\x0B\"'“”„‚`");
+    // Odstráni počiatočné pomlčky a odrážky.
+    $sourceText = preg_replace('/^[-–—•·]+\s*/u', '', $sourceText) ?? $sourceText;
+
+    return trim($sourceText);
+}
+
+/**
+ * Z citácie sa pokúsi vyťažiť prvého autora, ak vyzerá ako osoba.
+ */
+function extractFirstAuthorFromCitation(string $sourceText): string {
+    // Niektoré citácie začínajú názvom periodika a až potom uvedú autorov.
+    // Ak je pred dvojbodkou príliš dlhý segment, skúšame časť za dvojbodkou.
+    if (preg_match('/^.{25,120}:\s+(.+)$/u', $sourceText, $segmentMatch)) {
+        $sourceText = trim((string) ($segmentMatch[1] ?? $sourceText));
+    }
+
+    $candidates = [
+        '/^([A-ZÁČĎÉÍĹĽŇÓÔŔŠŤÚÝŽ][\\p{L}\\-\'’]+(?:\s+[A-Z]{1,5}){1,2})(?=,|;|\.|\set\sal\.|\s\()/u',
+        '/^([A-ZÁČĎÉÍĹĽŇÓÔŔŠŤÚÝŽ][\\p{L}\\-\'’]+(?:\s+[A-ZÁČĎÉÍĹĽŇÓÔŔŠŤÚÝŽ][\\p{L}\\-\'’]+){1,2})(?=,|;|\.|\set\sal\.|\s\()/u',
+        '/^([A-ZÁČĎÉÍĹĽŇÓÔŔŠŤÚÝŽ][\\p{L}\\-\'’]+)(?=,|;)/u',
+    ];
+
+    foreach ($candidates as $pattern) {
+        if (!preg_match($pattern, $sourceText, $parts)) {
+            continue;
+        }
+
+        $author = trim((string) ($parts[1] ?? ''));
+        if (isLikelyPersonalAuthorName($author)) {
+            return $author;
+        }
+    }
+
+    return '';
+}
+
+/**
+ * Heuristika: overí, že extrahovaný autor je pravdepodobne osoba.
+ */
+function isLikelyPersonalAuthorName(string $author): bool {
+    if ($author === '' || preg_match('/\\d/u', $author)) {
+        return false;
+    }
+
+    if (mb_strlen($author, 'UTF-8') < 2 || mb_strlen($author, 'UTF-8') > 80) {
+        return false;
+    }
+
+    if (
+        preg_match(
+            '/medscape|american|european|international|society|association|group|collaborative|guideline|journal|ajkd|nejm|jama|kdigo|kdoqi|fda|ema|pubmed|cureus|diabetes care|core curriculum|review/i',
+            $author
+        )
+    ) {
+        return false;
+    }
+
+    return true;
+}
+
+/**
+ * Vytvorí normalizovaný kľúč autora pre porovnávanie a deduplikáciu.
+ */
+function normalizeAuthorIdentity(string $author): string {
+    $value = trim($author);
+    if ($value === '') {
+        return '';
+    }
+
+    // Zjednotenie medzier a malých/veľkých písmen.
+    $value = trim((string) preg_replace('/\s+/u', ' ', $value));
+    $value = mb_strtolower($value, 'UTF-8');
+
+    // Odstránenie bežných titulov pred menom.
+    $value = preg_replace(
+        '/^(?:prof\.|doc\.|mudr\.|mddr\.|mvdr\.|rndr\.|phdr\.|judr\.|paeddr\.|phmr\.|mgr\.|mgr\.\s*art\.|ing\.|ing\.\s*arch\.|bc\.|bca\.|dr\.)\s+/u',
+        '',
+        $value
+    ) ?? $value;
+
+    // Odstránenie bežných titulov za menom.
+    $value = preg_replace(
+        '/,?\s*(?:phd\.|ph\.d\.|csc\.|drsc\.|dsc\.|mba|msc\.|ll\.m\.|mph|mha|dis\.|di\.s\.)$/u',
+        '',
+        $value
+    ) ?? $value;
+
+    // Odstránenie bodiek pre porovnanie variantov titulov.
+    $value = str_replace('.', '', $value);
+
+    return trim($value);
 }
 
 function formatProjectPublicCount(int $count): string {

@@ -98,7 +98,11 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     }
                 } else {
                     // Blokácia expirovala — vymazáme ju
-                    $pdo->prepare("UPDATE form_rate_limit SET blocked_until = NULL WHERE ip = :ip AND action = 'register'")
+                    $pdo->prepare(
+                        "UPDATE form_rate_limit
+                         SET attempt_count = 0, first_attempt = NOW(), last_attempt = NOW(), blocked_until = NULL
+                         WHERE ip = :ip AND action = 'register'"
+                    )
                         ->execute(['ip' => $clientIpReg]);
                 }
             }
@@ -366,7 +370,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
             } catch (\PDOException $e) {
                 error_log("Chyba registrácie: " . $e->getMessage());
                 if ((string) $e->getCode() === '23000') {
-                    $errors[] = "Používateľ s rovnakým e-mailom alebo používateľským menom už existuje.";
+                    $errors[] = 'Registrácia sa nepodarila. Zadajte iný e-mail alebo používateľské meno.';
                 } else {
                     $errors[] = "Vyskytla sa chyba pri registrácii. Skúste to prosím neskôr.";
                 }

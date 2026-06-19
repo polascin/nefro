@@ -498,7 +498,13 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
             case "send_newsletter_queue":
                 $limit = (int) ($_POST["send_limit"] ?? 50);
                 $limit = max(1, min(200, $limit));
+                $newsletterLockAcquired = false;
                 try {
+                    $newsletterLockAcquired = acquireNewsletterProcessLock($pdo, 'newsletter_worker');
+                    if (!$newsletterLockAcquired) {
+                        $actionError = "Newsletter frontu práve spracúva iný worker. Skúste to po jeho dokončení.";
+                        break;
+                    }
                     $stats    = processArticleNewsletterQueue($pdo, $limit, 5);
                     $subStats = processNlSubQueue($pdo, $limit, 5);
                     $selected  = (int) ($stats["selected"] ?? 0) + (int) ($subStats["selected"] ?? 0);
@@ -530,6 +536,10 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
                             $e->getMessage(),
                     );
                     $actionError = "Chyba pri odosielaní avíz.";
+                } finally {
+                    if ($newsletterLockAcquired) {
+                        releaseNewsletterProcessLock($pdo, 'newsletter_worker');
+                    }
                 }
                 break;
 
@@ -542,13 +552,21 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
                             "DELETE FROM article_newsletter_queue WHERE status = 'pending' AND article_id = :article_id",
                         );
                         $delStmt->execute(["article_id" => $articleId]);
+                        $subDelStmt = $pdo->prepare(
+                            "DELETE FROM nl_sub_queue WHERE status = 'pending' AND article_id = :article_id",
+                        );
+                        $subDelStmt->execute(["article_id" => $articleId]);
                     } else {
                         $delStmt = $pdo->prepare(
                             "DELETE FROM article_newsletter_queue WHERE status = 'pending'",
                         );
                         $delStmt->execute();
+                        $subDelStmt = $pdo->prepare(
+                            "DELETE FROM nl_sub_queue WHERE status = 'pending'",
+                        );
+                        $subDelStmt->execute();
                     }
-                    $deletedCount = $delStmt->rowCount();
+                    $deletedCount = $delStmt->rowCount() + $subDelStmt->rowCount();
                     $actionResult =
                         "Zmazaných " .
                         $deletedCount .

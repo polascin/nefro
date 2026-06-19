@@ -259,7 +259,12 @@ function isMobileVerifyLocked(array $user): bool {
  * Pri dosiahnutí 5 pokusov nastaví 15-minútový lockout.
  */
 function recordMobileVerifyFail(PDO $pdo, int $userId, array $user): void {
-    $newCount   = ((int) ($user['mobile_verify_fail_count'] ?? 0)) + 1;
+    $previousCount = (int) ($user['mobile_verify_fail_count'] ?? 0);
+    $previousLock = strtotime((string) ($user['mobile_verify_locked_until'] ?? ''));
+    if ($previousLock !== false && $previousLock <= time()) {
+        $previousCount = 0;
+    }
+    $newCount   = $previousCount + 1;
     $maxAttempts = 5;
     $lockoutSecs = 900; // 15 minút
     $lockedUntil = $newCount >= $maxAttempts

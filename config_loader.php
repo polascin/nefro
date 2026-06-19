@@ -19,43 +19,13 @@ function getAppConfigPaths(): array {
     }
 
     $appRoot = __DIR__;
-    $searchRoots = [$appRoot];
+    $parentRoot = dirname($appRoot);
 
-    $currentDir = $appRoot;
-    for ($level = 0; $level < 4; $level++) {
-        $parentDir = dirname($currentDir);
-        if ($parentDir === $currentDir) {
-            break;
-        }
-        $searchRoots[] = $parentDir;
-        $currentDir = $parentDir;
-    }
-
-    $documentRoot = trim((string) ($_SERVER['DOCUMENT_ROOT'] ?? ''));
-    if ($documentRoot !== '') {
-        $searchRoots[] = rtrim($documentRoot, '/\\');
-
-        $currentDir = rtrim($documentRoot, '/\\');
-        for ($level = 0; $level < 4; $level++) {
-            $parentDir = dirname($currentDir);
-            if ($parentDir === $currentDir) {
-                break;
-            }
-            $searchRoots[] = $parentDir;
-            $currentDir = $parentDir;
-        }
-    }
-
-    $searchRoots = array_values(array_unique($searchRoots));
-
-    foreach ($searchRoots as $root) {
-        $paths[] = $root . DIRECTORY_SEPARATOR . 'nefro.env.ini';
-        $paths[] = $root . DIRECTORY_SEPARATOR . 'env.ini';
-        $paths[] = $root . DIRECTORY_SEPARATOR . 'private' . DIRECTORY_SEPARATOR . 'nefro.env.ini';
-        $paths[] = $root . DIRECTORY_SEPARATOR . 'private' . DIRECTORY_SEPARATOR . 'env.ini';
-    }
-
-    // Fallback pre lokálny vývoj alebo existujúce prostredie.
+    // Stabilné poradie je dôležité: produkčný config mimo web rootu má
+    // prednosť pred lokálnym fallbackom v repozitári.
+    $paths[] = $parentRoot . DIRECTORY_SEPARATOR . 'nefro.env.ini';
+    $paths[] = $parentRoot . DIRECTORY_SEPARATOR . 'private' . DIRECTORY_SEPARATOR . 'nefro.env.ini';
+    $paths[] = $parentRoot . DIRECTORY_SEPARATOR . 'private' . DIRECTORY_SEPARATOR . 'env.ini';
     $paths[] = $appRoot . DIRECTORY_SEPARATOR . 'env.ini';
 
     return array_values(array_unique($paths));

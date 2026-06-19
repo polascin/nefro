@@ -56,6 +56,7 @@ const SESSION_IDLE_TIMEOUT = 3600;
 // Zabezpečené nastavenia relácie
 ini_set('session.cookie_httponly', 1);
 ini_set('session.use_only_cookies', 1);
+ini_set('session.use_strict_mode', 1);
 ini_set('session.gc_maxlifetime', (string) SESSION_IDLE_TIMEOUT); // PHP GC vymaže neaktívne sessions po SESSION_IDLE_TIMEOUT sekundách
 
 // Secure cookie zapíname iba pri HTTPS, inak sa na HTTP (lokálny vývoj) cookie neuloží.
@@ -88,9 +89,11 @@ if (session_status() === PHP_SESSION_NONE) {
 if (!empty($_SESSION['user_id'])) {
     $now = time();
     if (isset($_SESSION['_last_activity']) && ($now - $_SESSION['_last_activity']) > SESSION_IDLE_TIMEOUT) {
-        $_SESSION = [];
-        session_destroy();
-        session_start();
+        clearUserSession();
+        if (!session_start()) {
+            http_response_code(500);
+            exit('Chyba: Nepodarilo sa obnoviť reláciu.');
+        }
         setFlashMessage('info', 'Vaša relácia vypršala z dôvodu nečinnosti. Prihláste sa znova.');
         // Presmeruj na prihlásenie okamžite — bez čakania na ďalšiu akciu používateľa
         $currentScript = basename($_SERVER['SCRIPT_NAME'] ?? '');
@@ -254,12 +257,19 @@ function clearUserSession(): void {
     $_SESSION = [];
     if (ini_get('session.use_cookies')) {
         $params = session_get_cookie_params();
-        setcookie(session_name(), '', time() - 42000,
-            $params['path'], $params['domain'], $params['secure'], $params['httponly']
-        );
+        setcookie(session_name(), '', [
+            'expires' => time() - 42000,
+            'path' => $params['path'],
+            'domain' => $params['domain'],
+            'secure' => $params['secure'],
+            'httponly' => $params['httponly'],
+            'samesite' => $params['samesite'] ?? 'Strict',
+        ]);
+        unset($_COOKIE[session_name()]);
     }
 
     session_destroy();
+    session_id('');
 }
 
 /**
@@ -380,7 +390,11 @@ function ipRateLimitBlockedUntil(PDO $pdo, string $table, string $ip): int
         if ($ts !== false && $ts > time()) {
             return $ts;
         }
-        $pdo->prepare("UPDATE `{$table}` SET blocked_until = NULL WHERE ip = :ip")
+        $pdo->prepare(
+            "UPDATE `{$table}`
+             SET attempt_count = 0, first_attempt = NOW(), last_attempt = NOW(), blocked_until = NULL
+             WHERE ip = :ip"
+        )
             ->execute(['ip' => $ip]);
     }
 
@@ -397,6 +411,14 @@ function recordIpFailedAttempt(PDO $pdo, string $table, string $ip, int $maxAtte
     if (!in_array($table, $allowedTables, true)) {
         throw new \InvalidArgumentException("Nepovolená tabuľka rate-limit: {$table}");
     }
+    // Staré neúspešné pokusy sa nesmú kumulovať navždy. Po celom okne
+    // bez pokusu začína počítadlo odznova.
+    $pdo->prepare(
+        "UPDATE `{$table}`
+         SET attempt_count = 0, first_attempt = NOW(), last_attempt = NOW(), blocked_until = NULL
+         WHERE ip = :ip AND last_attempt < DATE_SUB(NOW(), INTERVAL :window SECOND)"
+    )->execute(['ip' => $ip, 'window' => $blockSecs]);
+
     $pdo->prepare(
         "INSERT INTO `{$table}` (ip, attempt_count, first_attempt, last_attempt)
          VALUES (:ip, 1, NOW(), NOW())

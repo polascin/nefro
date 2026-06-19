@@ -64,22 +64,44 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 
         if (empty($errors) && $resetRequest !== null) {
             try {
+                $newPasswordHash = password_hash($newPassword, PASSWORD_DEFAULT);
                 $pdo->beginTransaction();
 
-                $updatePwd = $pdo->prepare('UPDATE users SET password_hash = :password_hash WHERE id = :user_id');
-                $updatePwd->execute([
-                    'password_hash' => password_hash($newPassword, PASSWORD_DEFAULT),
-                    'user_id' => (int) $resetRequest['user_id'],
+                // Opätovne načítaj a uzamkni token v transakcii. Dve súbežné
+                // požiadavky tak nemôžu použiť ten istý jednorazový odkaz.
+                $lockReset = $pdo->prepare(
+                    'SELECT id, user_id FROM password_resets
+                     WHERE id = :id AND token_hash = :token_hash
+                       AND used_at IS NULL AND expires_at >= NOW()
+                     FOR UPDATE'
+                );
+                $lockReset->execute([
+                    'id' => (int) $resetRequest['id'],
+                    'token_hash' => $tokenHash,
                 ]);
+                $lockedReset = $lockReset->fetch();
 
-                $useToken = $pdo->prepare('UPDATE password_resets SET used_at = NOW() WHERE user_id = :user_id AND used_at IS NULL');
-                $useToken->execute(['user_id' => (int) $resetRequest['user_id']]);
+                if (!$lockedReset) {
+                    $pdo->rollBack();
+                    $errors[] = 'Odkaz na obnovenie hesla už bol použitý alebo jeho platnosť vypršala.';
+                } else {
+                    $userId = (int) $lockedReset['user_id'];
+                    $updatePwd = $pdo->prepare('UPDATE users SET password_hash = :password_hash WHERE id = :user_id');
+                    $updatePwd->execute([
+                        'password_hash' => $newPasswordHash,
+                        'user_id' => $userId,
+                    ]);
 
-                $pdo->commit();
+                    // Zmena hesla zneplatní aj prípadné ostatné otvorené reset odkazy.
+                    $useToken = $pdo->prepare('UPDATE password_resets SET used_at = NOW() WHERE user_id = :user_id AND used_at IS NULL');
+                    $useToken->execute(['user_id' => $userId]);
 
-                setFlashMessage('success', 'Heslo bolo úspešne zmenené. Môžete sa prihlásiť novým heslom.');
-                header('Location: login.php');
-                exit;
+                    $pdo->commit();
+
+                    setFlashMessage('success', 'Heslo bolo úspešne zmenené. Môžete sa prihlásiť novým heslom.');
+                    header('Location: login.php');
+                    exit;
+                }
             } catch (\PDOException $e) {
                 if ($pdo->inTransaction()) {
                     $pdo->rollBack();

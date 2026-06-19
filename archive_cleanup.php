@@ -123,6 +123,9 @@ try {
         $errors[] = "Upozornenie: adresár uploads/avatars nebol nájdený, súbory sa nezmažú.";
         $avatarBase = null;
     }
+    $avatarBasePrefix = $avatarBase !== null
+        ? rtrim($avatarBase, '/\\') . DIRECTORY_SEPARATOR
+        : null;
 
     $fetchStmt = $pdo->prepare(
         "SELECT id, archived_path FROM users_avatar_archive
@@ -135,7 +138,11 @@ try {
     foreach ($avatarRows as $row) {
         if (!empty($row['archived_path']) && $avatarBase !== null) {
             $absPath = realpath(__DIR__ . '/' . ltrim((string) $row['archived_path'], '/\\'));
-            if ($absPath !== false && str_starts_with($absPath, $avatarBase) && is_file($absPath)) {
+            if ($absPath !== false
+                && $avatarBasePrefix !== null
+                && str_starts_with($absPath, $avatarBasePrefix)
+                && is_file($absPath)
+            ) {
                 if (@unlink($absPath)) {
                     $filesDeleted++;
                 } else {

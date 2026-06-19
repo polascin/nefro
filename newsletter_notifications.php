@@ -3,6 +3,28 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/email_verification.php';
 
+if (!function_exists('acquireNewsletterProcessLock')) {
+    function acquireNewsletterProcessLock(PDO $pdo, string $lockName, int $timeoutSeconds = 0): bool
+    {
+        $lockName = 'nefro:' . preg_replace('/[^a-z0-9_-]/i', '_', $lockName);
+        $timeoutSeconds = max(0, min(30, $timeoutSeconds));
+        $stmt = $pdo->prepare('SELECT GET_LOCK(:lock_name, :timeout_seconds)');
+        $stmt->bindValue(':lock_name', mb_substr($lockName, 0, 64), PDO::PARAM_STR);
+        $stmt->bindValue(':timeout_seconds', $timeoutSeconds, PDO::PARAM_INT);
+        $stmt->execute();
+        return (int) $stmt->fetchColumn() === 1;
+    }
+}
+
+if (!function_exists('releaseNewsletterProcessLock')) {
+    function releaseNewsletterProcessLock(PDO $pdo, string $lockName): void
+    {
+        $lockName = 'nefro:' . preg_replace('/[^a-z0-9_-]/i', '_', $lockName);
+        $stmt = $pdo->prepare('SELECT RELEASE_LOCK(:lock_name)');
+        $stmt->execute(['lock_name' => mb_substr($lockName, 0, 64)]);
+    }
+}
+
 if (!function_exists('getNewsletterUnsubscribeSecret')) {
     function getNewsletterUnsubscribeSecret(): string
     {

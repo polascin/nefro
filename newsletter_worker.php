@@ -25,25 +25,39 @@ foreach ($argv as $arg) {
 $limit = max(1, min(500, $limit));
 $maxAttempts = max(1, min(20, $maxAttempts));
 
-try {
-    $stats = processArticleNewsletterQueue($pdo, $limit, $maxAttempts);
-    $subStats = processNlSubQueue($pdo, $limit, $maxAttempts);
+$lockAcquired = false;
+$exitCode = 0;
 
-    echo "Newsletter worker dokončený.\n";
-    echo "\n-- Registrovaní používatelia --\n";
-    echo "Vybrané z fronty: " . (int) ($stats['selected'] ?? 0) . "\n";
-    echo "Odoslané e-maily: " . (int) ($stats['sent'] ?? 0) . "\n";
-    echo "Zlyhané pokusy: " . (int) ($stats['failed'] ?? 0) . "\n";
-    echo "Zrušené položky: " . (int) ($stats['cancelled'] ?? 0) . "\n";
-    echo "Preskočené položky: " . (int) ($stats['skipped'] ?? 0) . "\n";
-    echo "\n-- Anonymní odberatelia --\n";
-    echo "Vybrané z fronty: " . (int) ($subStats['selected'] ?? 0) . "\n";
-    echo "Odoslané e-maily: " . (int) ($subStats['sent'] ?? 0) . "\n";
-    echo "Zlyhané pokusy: " . (int) ($subStats['failed'] ?? 0) . "\n";
-    echo "Zrušené položky: " . (int) ($subStats['cancelled'] ?? 0) . "\n";
-    echo "Preskočené položky: " . (int) ($subStats['skipped'] ?? 0) . "\n";
+try {
+    $lockAcquired = acquireNewsletterProcessLock($pdo, 'newsletter_worker');
+    if (!$lockAcquired) {
+        echo "Newsletter worker už spracúva iný proces; tento beh sa preskočil.\n";
+    } else {
+        $stats = processArticleNewsletterQueue($pdo, $limit, $maxAttempts);
+        $subStats = processNlSubQueue($pdo, $limit, $maxAttempts);
+
+        echo "Newsletter worker dokončený.\n";
+        echo "\n-- Registrovaní používatelia --\n";
+        echo "Vybrané z fronty: " . (int) ($stats['selected'] ?? 0) . "\n";
+        echo "Odoslané e-maily: " . (int) ($stats['sent'] ?? 0) . "\n";
+        echo "Zlyhané pokusy: " . (int) ($stats['failed'] ?? 0) . "\n";
+        echo "Zrušené položky: " . (int) ($stats['cancelled'] ?? 0) . "\n";
+        echo "Preskočené položky: " . (int) ($stats['skipped'] ?? 0) . "\n";
+        echo "\n-- Anonymní odberatelia --\n";
+        echo "Vybrané z fronty: " . (int) ($subStats['selected'] ?? 0) . "\n";
+        echo "Odoslané e-maily: " . (int) ($subStats['sent'] ?? 0) . "\n";
+        echo "Zlyhané pokusy: " . (int) ($subStats['failed'] ?? 0) . "\n";
+        echo "Zrušené položky: " . (int) ($subStats['cancelled'] ?? 0) . "\n";
+        echo "Preskočené položky: " . (int) ($subStats['skipped'] ?? 0) . "\n";
+    }
 } catch (Throwable $e) {
     error_log('newsletter_worker error: ' . $e->getMessage());
     fwrite(STDERR, "Newsletter worker zlyhal: " . $e->getMessage() . "\n");
-    exit(1);
+    $exitCode = 1;
+} finally {
+    if ($lockAcquired) {
+        releaseNewsletterProcessLock($pdo, 'newsletter_worker');
+    }
 }
+
+exit($exitCode);

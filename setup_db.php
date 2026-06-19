@@ -441,6 +441,7 @@ try {
         author VARCHAR(255) NOT NULL DEFAULT 'MUDr. Ľubomír Polaščín',
         content LONGTEXT NOT NULL,
         excerpt TEXT NOT NULL,
+        pdf_file VARCHAR(255) NULL DEFAULT NULL,
         category VARCHAR(32) NOT NULL DEFAULT 'odborne' COMMENT 'odborne = odborný článok, popularne = popularizačný (pre pacientov/verejnosť)',
         published_at DATETIME NOT NULL,
         is_top TINYINT(1) NOT NULL DEFAULT 0,
@@ -602,6 +603,11 @@ try {
         $pdo->exec("SET @row_num := 0");
         $pdo->exec("UPDATE articles SET sort_order = (@row_num := @row_num + 1) ORDER BY published_at DESC, id DESC");
         $cliOut("Stĺpec 'sort_order' bol pridaný a inicializovaný.\n");
+    }
+
+    if (!columnExists($pdo, 'articles', 'pdf_file')) {
+        $pdo->exec("ALTER TABLE articles ADD COLUMN pdf_file VARCHAR(255) NULL DEFAULT NULL AFTER excerpt");
+        $cliOut("Migrácia: articles.pdf_file pridané.\n");
     }
 
     // ── Migrácia: category stĺpec (odborné / popularizačné články) ────
@@ -841,5 +847,8 @@ try {
 
 } catch (\PDOException $e) {
     $cliOut("Chyba pri vytváraní tabuľky: " . $e->getMessage());
+    if (php_sapi_name() === 'cli') {
+        exit(1);
+    }
 }
 ?>

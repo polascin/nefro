@@ -47,6 +47,16 @@ $_nlMax   = 5;
 $_nlBlock = 3600;
 try {
     $pdo->prepare("DELETE FROM form_rate_limit WHERE action = 'nl_subscribe' AND blocked_until IS NOT NULL AND blocked_until < DATE_SUB(NOW(), INTERVAL 1 DAY)")->execute();
+    // Po uplynutí hodinového okna musí nový pokus začínať od nuly. Pôvodný
+    // kód zrušil iba blocked_until, takže adresa ostala blokovaná po každom
+    // ďalšom pokuse prakticky navždy.
+    $_nlWindowStart = date('Y-m-d H:i:s', time() - $_nlBlock);
+    $pdo->prepare(
+        "UPDATE form_rate_limit
+         SET attempt_count = 0, first_attempt = NOW(), blocked_until = NULL
+         WHERE ip = :ip AND action = 'nl_subscribe'
+           AND (first_attempt < :window_start OR (blocked_until IS NOT NULL AND blocked_until <= NOW()))"
+    )->execute(['ip' => $_nlIp, 'window_start' => $_nlWindowStart]);
     $_nlRlStmt = $pdo->prepare("SELECT attempt_count, blocked_until FROM form_rate_limit WHERE ip = :ip AND action = 'nl_subscribe'");
     $_nlRlStmt->execute(['ip' => $_nlIp]);
     $_nlRlRow = $_nlRlStmt->fetch();
@@ -55,7 +65,7 @@ try {
             echo json_encode(['success' => false, 'message' => 'Príliš veľa pokusov. Skúste to neskôr.']);
             exit;
         }
-        $pdo->prepare("UPDATE form_rate_limit SET blocked_until = NULL WHERE ip = :ip AND action = 'nl_subscribe'")->execute(['ip' => $_nlIp]);
+        $pdo->prepare("UPDATE form_rate_limit SET attempt_count = 0, first_attempt = NOW(), blocked_until = NULL WHERE ip = :ip AND action = 'nl_subscribe'")->execute(['ip' => $_nlIp]);
     }
     $pdo->prepare("INSERT INTO form_rate_limit (ip, action, attempt_count, first_attempt) VALUES (:ip, 'nl_subscribe', 1, NOW()) ON DUPLICATE KEY UPDATE attempt_count = attempt_count + 1, last_attempt = NOW()")->execute(['ip' => $_nlIp]);
     $_nlCntStmt = $pdo->prepare("SELECT attempt_count FROM form_rate_limit WHERE ip = :ip AND action = 'nl_subscribe'");

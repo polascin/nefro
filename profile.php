@@ -186,7 +186,6 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && ($_POST['action'] ?? '') !=
             $mobileVerifiedAt = null;
             $mobileVerificationCodeHash = null;
             $mobileVerificationExpiresAt = null;
-            $mobileVerificationSentAt = null;
         }
 
         if ($mobileVerificationAction === 'send') {
@@ -194,7 +193,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && ($_POST['action'] ?? '') !=
                 $errors[] = "Najprv zadajte číslo súkromného mobilného telefónu, ktoré chcete overiť.";
             } elseif ($normalizedMobilePhone === false) {
                 // Validačná chyba čísla je už v $errors — odosielanie SMS preskočíme.
-            } elseif (!$mobilePhoneChanged && !isMobileResendAllowed($mobileVerificationSentAt, 120)) {
+            } elseif (!isMobileResendAllowed($mobileVerificationSentAt, 120)) {
                 $errors[] = "Overovací SMS kód bol odoslaný nedávno. Skúste to znova za 2 minúty.";
             } else {
                 $usingExternalProvider = isExternalMobileVerificationProvider();

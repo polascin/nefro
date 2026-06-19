@@ -79,7 +79,11 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     $notice = 'Ak účet existuje, poslali sme na jeho e-mail odkaz na obnovenie hesla.';
                     error_log("forgot_password: IP {$clientIpFp} je rate-limitovaná.");
                 } else {
-                    $pdo->prepare("UPDATE form_rate_limit SET blocked_until = NULL WHERE ip = :ip AND action = 'forgot_password'")
+                    $pdo->prepare(
+                        "UPDATE form_rate_limit
+                         SET attempt_count = 0, first_attempt = NOW(), last_attempt = NOW(), blocked_until = NULL
+                         WHERE ip = :ip AND action = 'forgot_password'"
+                    )
                         ->execute(['ip' => $clientIpFp]);
                 }
             }
@@ -124,11 +128,14 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     $expiresAt = date('Y-m-d H:i:s', time() + 3600); // 60 min
                     $clientIp = getClientIpAddress();
 
-                    // Atomický DELETE+INSERT v transakcii zabraňuje race condition:
-                    // bez nej by súbežné požiadavky mohli vložiť viac platných tokenov naraz.
-                    // ON DUPLICATE KEY UPDATE nie je vhodné — tabuľka uchováva históriu resetov
-                    // (user_id nie je UNIQUE), preto zostávame pri atomickom DELETE+INSERT v transakcii.
+                    // Uzamknutie používateľa serializuje súbežné požiadavky. Samotná
+                    // transakcia bez riadkového zámku by mohla vytvoriť dva platné tokeny.
                     $pdo->beginTransaction();
+                    $lockUser = $pdo->prepare('SELECT id FROM users WHERE id = :user_id FOR UPDATE');
+                    $lockUser->execute(['user_id' => (int) $user['id']]);
+                    if (!$lockUser->fetchColumn()) {
+                        throw new \RuntimeException('Používateľ počas vytvárania reset tokenu prestal existovať.');
+                    }
                     $pdo->prepare("DELETE FROM password_resets WHERE user_id = :user_id AND used_at IS NULL")
                         ->execute(['user_id' => (int) $user['id']]);
                     $pdo->prepare(
@@ -149,7 +156,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 
                 // Anti-enumeration: rovnaká odpoveď bez ohľadu na existenciu účtu.
                 $notice = 'Ak účet existuje, poslali sme na jeho e-mail odkaz na obnovenie hesla.';
-            } catch (\PDOException $e) {
+            } catch (\Throwable $e) {
                 if ($pdo->inTransaction()) {
                     $pdo->rollBack();
                 }

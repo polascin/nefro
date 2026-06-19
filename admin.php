@@ -84,13 +84,20 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     $cntProfile = $s1->rowCount();
 
                     $avatarBase2 = realpath(__DIR__ . '/uploads/avatars');
+                    $avatarBasePrefix2 = $avatarBase2 !== false
+                        ? rtrim($avatarBase2, '/\\') . DIRECTORY_SEPARATOR
+                        : null;
                     $s2 = $pdo->prepare("SELECT archived_path FROM users_avatar_archive WHERE changed_at < DATE_SUB(NOW(), INTERVAL :days DAY) AND archived_path IS NOT NULL");
                     $s2->execute(['days' => $retDays]);
                     $cntFiles = 0;
                     foreach ($s2->fetchAll() as $fRow) {
                         if (!empty($fRow['archived_path']) && $avatarBase2 !== false) {
                             $fp = realpath(__DIR__ . '/' . ltrim((string) $fRow['archived_path'], '/\\'));
-                            if ($fp !== false && str_starts_with($fp, $avatarBase2) && is_file($fp)) {
+                            if ($fp !== false
+                                && $avatarBasePrefix2 !== null
+                                && str_starts_with($fp, $avatarBasePrefix2)
+                                && is_file($fp)
+                            ) {
                                 if (@unlink($fp)) { $cntFiles++; }
                             }
                         }

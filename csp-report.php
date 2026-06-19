@@ -9,6 +9,18 @@ declare(strict_types=1);
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     http_response_code(405);
+    header('Allow: POST');
+    exit;
+}
+
+$maxBodyBytes = 65536;
+$contentLength = filter_var(
+    $_SERVER['CONTENT_LENGTH'] ?? null,
+    FILTER_VALIDATE_INT,
+    ['options' => ['min_range' => 0]]
+);
+if ($contentLength !== false && $contentLength > $maxBodyBytes) {
+    http_response_code(413);
     exit;
 }
 
@@ -37,9 +49,13 @@ if ((int) $_rlData['count'] >= $_rlMax) {
 $_rlData['count']++;
 @file_put_contents($_rlFile, json_encode($_rlData), LOCK_EX);
 
-$body = file_get_contents('php://input');
+$body = file_get_contents('php://input', false, null, 0, $maxBodyBytes + 1);
 if ($body === false || $body === '') {
     http_response_code(400);
+    exit;
+}
+if (strlen($body) > $maxBodyBytes) {
+    http_response_code(413);
     exit;
 }
 

@@ -1,6 +1,9 @@
 <?php
 declare(strict_types=1);
 
+// Kalkulačky skladajú JSON-LD ešte pred načítaním head_meta.php.
+$baseUrl = $baseUrl ?? 'https://nefro.polascin.net/';
+
 function calculatorPatientDataFromRequest(array $source): array
 {
     $firstName = trim((string) ($source['patient_first_name'] ?? ''));
@@ -73,9 +76,16 @@ function validateBirthNumber(string $raw): array {
         return ['Rodné číslo obsahuje neplatný mesiac (pozícia 3–4).'];
     }
 
-    // Rok — určenie storočia
+    // Deväťmiestne RČ sa vydávali iba osobám narodeným pred rokom 1954.
     $currentYear = (int) (new DateTime('today'))->format('Y');
-    $year = (2000 + $yy <= $currentYear) ? 2000 + $yy : 1900 + $yy;
+    if (strlen($bn) === 9) {
+        $year = 1900 + $yy;
+        if ($year >= 1954) {
+            return ['Deväťmiestne rodné číslo je platné iba pre dátum narodenia pred rokom 1954.'];
+        }
+    } else {
+        $year = (2000 + $yy <= $currentYear) ? 2000 + $yy : 1900 + $yy;
+    }
 
     // Overenie dátumu
     $dateStr = sprintf('%04d-%02d-%02d', $year, $mmReal, $dd);
@@ -89,7 +99,10 @@ function validateBirthNumber(string $raw): array {
 
     // Modulo 11 — platí pre 10-ciferné RČ (vydané od 1.1.1954)
     if (strlen($bn) === 10) {
-        if ((int) $bn % 11 !== 0) {
+        $legacyRemainderException = $dt < new DateTime('1985-01-01')
+            && str_ends_with($bn, '0')
+            && ((int) substr($bn, 0, 9) % 11) === 10;
+        if ((int) $bn % 11 !== 0 && !$legacyRemainderException) {
             return ['Rodné číslo má nesprávny kontrolný súčet (modulo 11).'];
         }
     }
@@ -115,6 +128,19 @@ function calculatorValidateOptionalPatientData(array $patient, array &$errors): 
 
     if ($patient['insurance_code'] !== '' && !preg_match('/^\d{2,3}(-\d{2})?$/', $patient['insurance_code'])) {
         $errors[] = 'Kód zdravotnej poisťovne musí mať formát XX alebo XX-YY (napr. 24 alebo 24-01).';
+    }
+}
+
+function calculatorValidateExaminationDate(string $date, array &$errors): void
+{
+    $dt = \DateTime::createFromFormat('!Y-m-d', $date);
+    if (!$dt || $dt->format('Y-m-d') !== $date) {
+        $errors[] = 'Zadajte platný dátum vyšetrenia.';
+        return;
+    }
+
+    if ($dt > new \DateTime('today')) {
+        $errors[] = 'Dátum vyšetrenia nemôže byť v budúcnosti.';
     }
 }
 
@@ -159,7 +185,9 @@ function calculatorAgeFromPatient(array $patient): ?int
         }
 
         $currentYear = (int) $today->format('Y');
-        $year = (2000 + $yy <= $currentYear) ? 2000 + $yy : 1900 + $yy;
+        $year = strlen($bn) === 9
+            ? 1900 + $yy
+            : ((2000 + $yy <= $currentYear) ? 2000 + $yy : 1900 + $yy);
         $dateStr = sprintf('%04d-%02d-%02d', $year, $mm, $dd);
         $dt = \DateTime::createFromFormat('Y-m-d', $dateStr);
         if (!$dt || $dt->format('Y-m-d') !== $dateStr) {
@@ -460,7 +488,11 @@ function calculatorHandleLoadId(PDO $pdo, array &$form, array &$messages): void
     if (is_array($loadedRow['input_payload'])) {
         foreach ($loadedRow['input_payload'] as $k => $v) {
             if (isset($form[$k]) || array_key_exists($k, $form)) {
-                $form[$k] = (string) $v;
+                if (is_bool($v)) {
+                    $form[$k] = $v ? '1' : '0';
+                } elseif (is_scalar($v) || $v === null) {
+                    $form[$k] = (string) $v;
+                }
             }
         }
     }

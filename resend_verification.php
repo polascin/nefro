@@ -50,7 +50,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     } else {
                         $pdo->prepare(
                             "UPDATE form_rate_limit
-                             SET blocked_until = NULL
+                             SET attempt_count = 0, first_attempt = NOW(), last_attempt = NOW(), blocked_until = NULL
                              WHERE ip = :ip AND action = 'resend_verification'"
                         )->execute(['ip' => $clientIp]);
                     }
@@ -61,6 +61,29 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 
             if (!$ipBlocked) {
                 try {
+                    // Počítame každú požiadavku, nie iba požiadavky pre existujúci
+                    // účet. Inak by sa rate limit dal použiť na enumeráciu účtov.
+                    $pdo->prepare(
+                        "INSERT INTO form_rate_limit (ip, action, attempt_count, first_attempt)
+                         VALUES (:ip, 'resend_verification', 1, NOW())
+                         ON DUPLICATE KEY UPDATE attempt_count = attempt_count + 1, last_attempt = NOW()"
+                    )->execute(['ip' => $clientIp]);
+
+                    $cntStmt = $pdo->prepare(
+                        "SELECT attempt_count FROM form_rate_limit
+                         WHERE ip = :ip AND action = 'resend_verification'"
+                    );
+                    $cntStmt->execute(['ip' => $clientIp]);
+                    $currentCount = (int) ($cntStmt->fetchColumn() ?? 0);
+                    if ($currentCount >= RESEND_MAX_ATTEMPTS) {
+                        $pdo->prepare(
+                            "UPDATE form_rate_limit
+                             SET blocked_until = DATE_ADD(NOW(), INTERVAL :secs SECOND)
+                             WHERE ip = :ip AND action = 'resend_verification'"
+                        )->execute(['secs' => RESEND_WINDOW_SECS, 'ip' => $clientIp]);
+                    }
+
+                    $success = 'Ak účet existuje a čaká na overenie, nový overovací e-mail bol odoslaný.';
                     $stmt = $pdo->prepare(
                         "SELECT id, username, email, email_verified_at, email_verification_sent_at
                          FROM users WHERE email = :login OR username = :login LIMIT 1"
@@ -70,12 +93,12 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 
                     // Anti-enumeration: rovnaká odpoveď pre neexistujúci účet aj overený účet
                     if (!$user || !empty($user['email_verified_at'])) {
-                        $success = 'Ak účet existuje a čaká na overenie, nový overovací e-mail bol odoslaný.';
+                        // Generická odpoveď je nastavená pred vetvením.
                     } elseif (!isEmailResendAllowed(
                         $user['email_verification_sent_at'] ?? null,
                         RESEND_COOLDOWN_SECS
                     )) {
-                        $errors[] = 'Overovací e-mail bol odoslaný nedávno. Skúste to znova o 5 minút.';
+                        // Cooldown nesmie prezradiť, že účet existuje.
                     } else {
                         $tokenData = generateEmailVerificationToken();
                         saveEmailVerificationToken(
@@ -92,41 +115,13 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                             $tokenData['token']
                         );
 
-                        if ($sent) {
-                            $success = 'Nový overovací e-mail bol odoslaný.';
-                        } else {
-                            $errors[] = 'Overovací e-mail sa nepodarilo odoslať. Skúste to znova neskôr.';
-                        }
-
-                        // Zaznamenaj pokus per IP (aj pri úspechu)
-                        try {
-                            $pdo->prepare(
-                                "INSERT INTO form_rate_limit (ip, action, attempt_count, first_attempt)
-                                 VALUES (:ip, 'resend_verification', 1, NOW())
-                                 ON DUPLICATE KEY UPDATE attempt_count = attempt_count + 1, last_attempt = NOW()"
-                            )->execute(['ip' => $clientIp]);
-
-                            $cntStmt = $pdo->prepare(
-                                "SELECT attempt_count FROM form_rate_limit
-                                 WHERE ip = :ip AND action = 'resend_verification'"
-                            );
-                            $cntStmt->execute(['ip' => $clientIp]);
-                            $currentCount = (int) ($cntStmt->fetchColumn() ?? 0);
-
-                            if ($currentCount >= RESEND_MAX_ATTEMPTS) {
-                                $pdo->prepare(
-                                    "UPDATE form_rate_limit
-                                     SET blocked_until = DATE_ADD(NOW(), INTERVAL :secs SECOND)
-                                     WHERE ip = :ip AND action = 'resend_verification'"
-                                )->execute(['secs' => RESEND_WINDOW_SECS, 'ip' => $clientIp]);
-                            }
-                        } catch (\PDOException $e) {
-                            error_log('Resend verification rate limit update error: ' . $e->getMessage());
+                        if (!$sent) {
+                            error_log('Resend verification email send failed for user_id=' . (int) $user['id']);
                         }
                     }
                 } catch (\PDOException $e) {
                     error_log('Resend verification DB error: ' . $e->getMessage());
-                    $errors[] = 'Pri spracovaní požiadavky došlo k chybe. Skúste to znova neskôr.';
+                    $success = 'Ak účet existuje a čaká na overenie, nový overovací e-mail bol odoslaný.';
                 }
             }
         }

@@ -44,7 +44,7 @@ if ($uid > 0 && $token !== '') {
             } else {
                 $pdo->prepare(
                     "UPDATE form_rate_limit
-                     SET blocked_until = NULL
+                     SET attempt_count = 0, first_attempt = NOW(), last_attempt = NOW(), blocked_until = NULL
                      WHERE ip = :ip AND action = 'verify_email'"
                 )->execute(['ip' => $clientIp]);
             }
