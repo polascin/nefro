@@ -116,14 +116,18 @@ HTML,
 
 // -- Vkladanie do databazy -----------------------------------------------------
 
-$inserted = 0;
-$skipped = 0;
-$errors = [];
+$inserted    = 0;
+$updated     = 0;
+$skipped     = 0;
+$errors      = [];
 $queuedTotal = 0;
 
 $stmt = $pdo->prepare(
-    "INSERT IGNORE INTO articles (title, slug, author, content, excerpt, published_at, is_top, is_published)
-     VALUES (:title, :slug, :author, :content, :excerpt, :published_at, :is_top, 1)"
+    "INSERT INTO articles (title, slug, author, content, excerpt, published_at, is_top, is_published)
+     VALUES (:title, :slug, :author, :content, :excerpt, :published_at, :is_top, 1)
+     ON DUPLICATE KEY UPDATE
+        title = VALUES(title), author = VALUES(author),
+        content = VALUES(content), excerpt = VALUES(excerpt), is_top = VALUES(is_top)"
 );
 
 foreach ($articles as $a) {
@@ -137,24 +141,41 @@ foreach ($articles as $a) {
             'published_at' => $a['published_at'],
             'is_top'       => $a['is_top'],
         ]);
-        if ($stmt->rowCount() > 0) {
+        // rowCount(): 1 = novy INSERT, 2 = UPDATE existujuceho clanku, 0 = bez zmeny.
+        $rc = $stmt->rowCount();
+        if ($rc === 0) {
+            $skipped++;
+            continue;
+        }
+
+        $articleId = (int) $pdo->lastInsertId();
+        if ($articleId === 0) {
+            // UPDATE: lastInsertId nemusi vratit existujuce id -> dohladaj podla slug.
+            $idStmt = $pdo->prepare("SELECT id FROM articles WHERE slug = :slug");
+            $idStmt->execute(['slug' => $a['slug']]);
+            $articleId = (int) $idStmt->fetchColumn();
+        }
+
+        if ($rc === 1) {
             $inserted++;
-            $newId = (int) $pdo->lastInsertId();
+            // Newsletter avizo LEN pri novom clanku (rc === 1), nikdy pri update.
             try {
-                $queuedTotal += enqueueArticleNewsletterEmails($pdo, $newId);
+                $queuedTotal += enqueueArticleNewsletterEmails($pdo, $articleId);
             } catch (\Throwable $qe) {
                 error_log('add_article newsletter enqueue error: ' . $qe->getMessage());
             }
-            try {
-                $pdfRes = generateArticlePdf($pdo, $a + ['id' => $newId], true);
-                if (!$pdfRes['ok'] && !empty($pdfRes['error'])) {
-                    error_log('add_article pdf gen: ' . $pdfRes['error']);
-                }
-            } catch (\Throwable $pe) {
-                error_log('add_article pdf gen error: ' . $pe->getMessage());
-            }
         } else {
-            $skipped++;
+            $updated++;
+        }
+
+        // PDF regeneruj pri inserte aj update (obsah sa zmenil).
+        try {
+            $pdfRes = generateArticlePdf($pdo, $a + ['id' => $articleId], true);
+            if (!$pdfRes['ok'] && !empty($pdfRes['error'])) {
+                error_log('add_article pdf gen: ' . $pdfRes['error']);
+            }
+        } catch (\Throwable $pe) {
+            error_log('add_article pdf gen error: ' . $pe->getMessage());
         }
     } catch (\PDOException $e) {
         $errors[] = 'Chyba pri clanku "' . htmlspecialchars($a['title']) . '": ' . $e->getMessage();
@@ -169,8 +190,8 @@ if (php_sapi_name() === 'cli') {
     echo "----------------------------------------------\n";
     echo 'Migracia clanku: ' . ($articles[0]['title']) . "\n";
     echo "----------------------------------------------\n";
-    echo "Vysledok: $inserted z $total clankov bolo vlozenych.\n";
-    echo "Preskoceni (slug uz existuje): $skipped\n";
+    echo "Vysledok: $inserted vlozenych, $updated aktualizovanych z $total clankov.\n";
+    echo "Preskoceni (bez zmeny):        $skipped\n";
     echo "Zaradenych do fronty aviz:     $queuedTotal\n";
     if (!empty($errors)) {
         echo "\nChyby:\n";
@@ -200,8 +221,8 @@ if (php_sapi_name() === 'cli') {
             </div>
           <?php endif; ?>
 
-          <div class="alert <?= $inserted > 0 ? 'alert-success' : 'alert-info' ?>">
-            <p><strong>Vysledok:</strong> <?= $inserted ?> z <?= $total ?> clankov bolo vlozenych. <?= $skipped ?> preskocenych (slug uz existuje).</p>
+          <div class="alert <?= ($inserted + $updated) > 0 ? 'alert-success' : 'alert-info' ?>">
+            <p><strong>Vysledok:</strong> <?= $inserted ?> vlozenych, <?= $updated ?> aktualizovanych z <?= $total ?> clankov. <?= $skipped ?> bez zmeny.</p>
             <?php if ($queuedTotal > 0): ?>
               <p>Do fronty aviz zaradenych: <strong><?= $queuedTotal ?></strong> e-mailov.</p>
             <?php endif; ?>
