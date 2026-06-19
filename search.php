@@ -127,7 +127,6 @@ $fieldLabels = [
 <!DOCTYPE html>
 <html lang="sk">
 <head>
-  <title><?= htmlspecialchars($pageTitle, ENT_QUOTES, "UTF-8") ?></title>
   <?php include_once "head_meta.php"; ?>
   <?php if ($prevUrl): ?>
   <link rel="prev" href="<?= htmlspecialchars($prevUrl) ?>">

@@ -261,7 +261,7 @@ function clearUserSession(): void {
             'domain' => $params['domain'],
             'secure' => $params['secure'],
             'httponly' => $params['httponly'],
-            'samesite' => $params['samesite'] ?? 'Strict',
+            'samesite' => $params['samesite'],
         ]);
         unset($_COOKIE[session_name()]);
     }
@@ -554,7 +554,9 @@ function getAccessLogPdo(): ?\PDO {
             }
         }
 
-        if ($resolvedPdo === null && isset($pdo) && $pdo instanceof \PDO) {
+        // PHPStan nevidí $pdo injektované cez require_once vo funkcii (include limit);
+        // fallback je zámerný pre prípad, keď db_config.php ešte nebol načítaný globálne.
+        if (isset($pdo) && $pdo instanceof \PDO) {
             $resolvedPdo = $pdo;
         }
         if ($resolvedPdo === null && isset($GLOBALS['pdo']) && $GLOBALS['pdo'] instanceof \PDO) {

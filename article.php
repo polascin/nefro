@@ -215,7 +215,6 @@ if ($article) {
 <!DOCTYPE html>
 <html lang="sk">
 <head>
-  <title><?= htmlspecialchars($articleTitleRaw, ENT_QUOTES, "UTF-8") ?></title>
   <?php
   // Mapovanie premenných pre head_meta.php — odovzdávame RAW (neescapované) hodnoty.
   // head_meta.php aplikuje htmlspecialchars() na každý výstup sám.

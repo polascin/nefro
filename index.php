@@ -311,7 +311,6 @@ if (!empty($itemListElements)) {
 <html lang="sk">
 
 <head>
-  <title><?= htmlspecialchars($pageTitle, ENT_QUOTES, "UTF-8") ?></title>
   <?php
   // Príprava pre head_meta.php
   $structuredData = $structuredData ?? [];

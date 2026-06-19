@@ -247,6 +247,30 @@ parameters:
 			path: article.php
 
 		-
+			message: '#^Result of && is always false\.$#'
+			identifier: booleanAnd.alwaysFalse
+			count: 1
+			path: auth.php
+
+		-
+			message: '#^Strict comparison using \=\=\= between null and null will always evaluate to true\.$#'
+			identifier: identical.alwaysTrue
+			count: 1
+			path: auth.php
+
+		-
+			message: '#^Undefined variable\: \$pdo$#'
+			identifier: variable.undefined
+			count: 1
+			path: auth.php
+
+		-
+			message: '#^Variable \$pdo in isset\(\) is never defined\.$#'
+			identifier: isset.variable
+			count: 1
+			path: auth.php
+
+		-
 			message: '#^Variable \$baseUrl might not be defined\.$#'
 			identifier: variable.undefined
 			count: 3
@@ -375,12 +399,6 @@ parameters:
 		-
 			message: '#^Call to function is_array\(\) with array\<int, array\{author\: string, articles\: int\}\> will always evaluate to true\.$#'
 			identifier: function.alreadyNarrowedType
-			count: 1
-			path: index.php
-
-		-
-			message: '#^Comparison operation "\>" between int\<1, max\> and 0 is always true\.$#'
-			identifier: greater.alwaysTrue
 			count: 1
 			path: index.php
 

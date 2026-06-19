@@ -166,16 +166,16 @@ function registerAuthorContribution(array &$authorBuckets, string $authorName): 
  */
 function sortAuthorBuckets(array &$authorBuckets): void {
     uasort($authorBuckets, static function (array $left, array $right): int {
-        $leftCount = (int) ($left['articles'] ?? 0);
-        $rightCount = (int) ($right['articles'] ?? 0);
+        $leftCount = (int) $left['articles'];
+        $rightCount = (int) $right['articles'];
 
         if ($leftCount !== $rightCount) {
             return $rightCount <=> $leftCount;
         }
 
         return strcasecmp(
-            (string) ($left['author'] ?? ''),
-            (string) ($right['author'] ?? '')
+            (string) $left['author'],
+            (string) $right['author']
         );
     });
 }
@@ -188,14 +188,14 @@ function mapAuthorBucketsToStats(array $authorBuckets): array {
     $stats = [];
 
     foreach ($authorBuckets as $bucket) {
-        $authorName = trim((string) ($bucket['author'] ?? ''));
+        $authorName = trim((string) $bucket['author']);
         if ($authorName === '') {
             continue;
         }
 
         $stats[] = [
             'author' => $authorName,
-            'articles' => max(0, (int) ($bucket['articles'] ?? 0)),
+            'articles' => max(0, (int) $bucket['articles']),
         ];
     }
 
@@ -212,7 +212,7 @@ function extractOriginalSourceFirstAuthor(string $content): string {
         trim($content) !== '' &&
         preg_match_all('/Zdroj:\s*([^<]*(?:<(?!\/(?:p|li)>)[^<]*)*)(?:<\/p>|<\/li>|$)/isu', $content, $matches)
     ) {
-        foreach (($matches[1] ?? []) as $rawSourceSnippet) {
+        foreach ($matches[1] as $rawSourceSnippet) {
             $sourceText = normalizeSourceCitationText((string) $rawSourceSnippet);
             if ($sourceText === '') {
                 continue;
@@ -258,7 +258,7 @@ function extractFirstAuthorFromCitation(string $sourceText): string {
     // Niektoré citácie začínajú názvom periodika a až potom uvedú autorov.
     // Ak je pred dvojbodkou príliš dlhý segment, skúšame časť za dvojbodkou.
     if (preg_match('/^.{25,120}:\s+(.+)$/u', $sourceText, $segmentMatch)) {
-        $sourceText = trim((string) ($segmentMatch[1] ?? $sourceText));
+        $sourceText = trim((string) $segmentMatch[1]);
     }
 
     $candidates = [
@@ -272,7 +272,7 @@ function extractFirstAuthorFromCitation(string $sourceText): string {
             continue;
         }
 
-        $author = trim((string) ($parts[1] ?? ''));
+        $author = trim((string) $parts[1]);
         if (isLikelyPersonalAuthorName($author)) {
             return $author;
         }
