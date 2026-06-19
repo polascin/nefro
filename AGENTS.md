@@ -10,7 +10,7 @@ This file provides guidance to WARP (warp.dev) when working with code in this re
 - Run newsletter queue worker manually: `php .\newsletter_worker.php --limit=50 --max-attempts=5`
 - Run archive cleanup manually: `php .\archive_cleanup.php [profile_days] [avatar_days]`
 - Run smoke test script (auth/mobile-verification flow + UTF-8 checks): `pwsh -File .\smoke_test.ps1`
-- Optional repo-wide checks (if Trunk CLI is installed): `trunk check`
+- Static analysis (PHAR, no Composer): `php tools\phpstan.phar analyse --no-progress` (baseline blocks only NEW issues); style: `php tools\php-cs-fixer.phar fix --dry-run --diff`. Install: `pwsh -File .\tools\install-dev-tools.ps1`.
 
 ## Runtime and configuration
 - App is plain PHP (no framework) with MariaDB via PDO.
@@ -70,3 +70,8 @@ This file provides guidance to WARP (warp.dev) when working with code in this re
 - Do not introduce PHPUnit.
 - Keep text and data handling UTF-8 safe; repository scripts include explicit UTF-8/BOM checks.
 - Treat `.agent.md` as historical project guidance for security/accessibility/GDPR audit expectations when making sensitive changes.
+- **Publishing/regenerating articles** (professional `odborne` and patient `popularne`),
+  including PDF generation/sync: follow `PUBLIKOVANIE_CLANKOV.md` (section "Pre AI agentov"
+  has the exact step-by-step) and `PUBLIKOVANIE_PRE_PACIENTOV.md`. Use the UPSERT templates
+  `add_TEMPLATE_article.php` / `add_TEMPLATE_popular_article.php`; re-running a script updates
+  content + PDF and sends the newsletter only on first insert.

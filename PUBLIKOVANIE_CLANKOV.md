@@ -39,6 +39,68 @@ poľom `category` a tým, kde sú vypísané.
 
 ---
 
+## Pre AI agentov — presný recept
+
+> Deterministický postup pre automatizované pridanie aj regeneráciu. Skript je
+> **idempotentný UPSERT** — ten istý súbor sa používa na vloženie aj na úpravu.
+
+### A) Pridať nový článok
+
+1. **Vyber šablónu podľa kategórie** a skopíruj na `add_<slug>_article.php`:
+   - odborný → `cp add_TEMPLATE_article.php add_<slug>_article.php`
+   - pre pacientov → `cp add_TEMPLATE_popular_article.php add_<slug>_article.php`
+   (kategória `popularne` je v popular šablóne napevno — needituj ju).
+2. **Slug:** len `a-z 0-9 -`, diakritika → ASCII (`á→a č→c š→s ž→z ľ→l ý→y í→i …`).
+   Názov súboru aj `slug` musia byť ASCII (SFTP deploy zlyhá na diakritike/medzerách).
+3. **Vyplň** `title`, `slug`, `excerpt` (~120–220 znakov, čistý text), `content` (HTML),
+   prípadne `is_top`, `published_at`. `author` ponechaj `MUDr. Ľubomír Polaščín`,
+   ak nie je dôvod inak. Obrázky do `img/`, relatívne `src="img/…"`, `loading="lazy"`.
+4. **Typografia (povinné):** slovenské úvodzovky `„…"`, pomlčka `–`, `≥`/`≤` namiesto
+   `>=`/`<=`, jednotky `µl`/`mg/dl`. Žiadny inline `style="…"` (CSP `style-src 'self'`
+   ho ticho zahodí — používaj triedy z `index.css`). `content` **nezačínaj `<h2>`**
+   zhodným s titulom. Externé odkazy `target="_blank" rel="noopener noreferrer"`.
+5. **Overenie pred commitom:** `php -l add_<slug>_article.php` a
+   `php tools/phpstan.phar analyse add_<slug>_article.php --no-progress`
+   (0 chýb nad baseline; v šablóne nechaj `?? '(bez titulu)'` — PHPStan ju neflaguje).
+6. **Commit** (post-commit hook nahrá SFTP na produkciu):
+   `git add add_<slug>_article.php img/… && git commit -m "content(<sekcia>): <titul>"`
+7. **Spusti na serveri** cez SSH (vloží do DB + pošle newsletter avízo + vygeneruje PDF):
+   ```bash
+   ssh -i "$HOME/.ssh/nefro_deploy" -p 26650 uid58858@shell.r1.websupport.sk \
+       "php /data/8/6/868f981d-e598-4e71-b7f5-246f2e180cef/polascin.net/sub/nefro/add_<slug>_article.php"
+   ```
+   Očakávaný výstup: `1 vložených, 0 aktualizovaných … Zaradených do fronty avíz: N`.
+8. **Sync PDF do gitu:** `sh sync_article_pdfs.sh` (stiahne PDF zo servera + commitne).
+9. **Over live:** `curl -s "https://nefro.polascin.net/article.php?slug=<slug>"` —
+   HTTP 200, žiadny `Fatal error`, jeden `<title>`, správna typografia.
+
+### B) Regenerovať / upraviť existujúci článok
+
+1. **Uprav `content`/`excerpt`/`title`** priamo v jeho `add_<slug>_article.php`
+   (alebo v šablóne, ak skript ešte neexistuje — vtedy ho najprv vytvor ako v A).
+2. Kroky **5–6** ako vyššie (lint + commit/deploy).
+3. **Spusti na serveri** ten istý skript (krok 7). UPSERT prepíše obsah; očakávaný
+   výstup: `0 vložených, 1 aktualizovaných` a **`Zaradených do fronty avíz: 0`**
+   (pri update sa newsletter zámerne neposiela). `updated_at` sa posunie.
+4. **Sync PDF:** `sh sync_article_pdfs.sh` — `--stale` na serveri preregeneruje PDF
+   (deteguje zmenu podľa `updated_at`), stiahne ho do `pdf/` a commitne.
+5. **Over live** (krok 9).
+
+> ⚠️ **Newsletter avíza** sa pošlú len pri **prvom** vložení článku (`rc === 1`).
+> Pri regenerácii (`rc === 2`) sa neposielajú — netreba sa báť opätovného spustenia.
+
+### C) Len preregenerovať PDF (bez zmeny obsahu)
+
+Ak je obsah v DB správny, ale PDF chýba/je neaktuálne:
+
+```bash
+sh sync_article_pdfs.sh          # všetky chýbajúce + neaktuálne (--stale)
+```
+
+Alebo cielene na serveri: `php generate_all_article_pdfs.php --slug=<slug> --force`.
+
+---
+
 ## Polia článku
 
 | Pole | Význam | Pravidlá |
@@ -51,8 +113,11 @@ poľom `category` a tým, kde sú vypísané.
 | `excerpt` | Perex | 1–2 vety, čistý text, ~120–220 znakov |
 | `content` | Telo (HTML) | Nezačínaj `<h2>` zhodným s titulom; nadpisy `<h2>/<h3>`, zoznamy `<ul>/<ol>`, odkazy `target="_blank" rel="noopener noreferrer"` |
 
-> `INSERT IGNORE`: ak `slug` už existuje, článok sa **nevloží**. Na úpravu už
-> publikovaného článku použi **Administrácia → Správa článkov**.
+> **UPSERT (idempotentné):** šablóny používajú `INSERT … ON DUPLICATE KEY UPDATE`.
+> Prvé spustenie článok **vloží** (a pošle newsletter avízo + vygeneruje PDF);
+> opätovné spustenie po úprave obsahu článok **prepíše** (regenerácia obsahu aj
+> PDF) a newsletter už **neposiela**. `published_at` ostáva zachované. Alternatíva
+> bez skriptu: **Administrácia → Správa článkov**.
 
 ---
 

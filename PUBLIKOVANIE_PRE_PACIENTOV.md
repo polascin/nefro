@@ -100,12 +100,15 @@ ssh -i "$HOME/.ssh/nefro_deploy" -p 26650 \
     "php /data/8/6/868f981d-e598-4e71-b7f5-246f2e180cef/polascin.net/sub/nefro/add_co-su-oblicky_article.php"
 ```
 
-Výpis ukáže, koľko článkov sa vložilo / preskočilo (slug už existuje) a koľko
-e-mailových avíz sa zaradilo do fronty pre odberateľov newslettera.
+Výpis ukáže, koľko článkov sa vložilo / aktualizovalo a koľko e-mailových avíz
+sa zaradilo do fronty pre odberateľov newslettera.
 
-> Skript používa `INSERT IGNORE` — ak má článok rovnaký `slug` ako existujúci,
-> **nevloží sa**. Pri oprave už vloženého článku zmeň obsah radšej cez
-> **Administrácia → Správa článkov**.
+> Skript je **idempotentný UPSERT** (`INSERT … ON DUPLICATE KEY UPDATE`). Prvé
+> spustenie článok **vloží** (avízo + PDF); ak ho po úprave obsahu spustíš znova,
+> článok sa **prepíše** (regenerácia obsahu aj PDF) a newsletter sa už neposiela.
+> Po úprave nezabudni `sh sync_article_pdfs.sh` (zosúladí PDF v gite). Alternatíva
+> bez skriptu: **Administrácia → Správa článkov**. Detailný recept pre AI agentov:
+> [PUBLIKOVANIE_CLANKOV.md](PUBLIKOVANIE_CLANKOV.md) → „Pre AI agentov".
 
 ## Krok 6 — Skontroluj výsledok
 
@@ -133,7 +136,7 @@ Takto vieš napr. preklopiť existujúci odborný článok do sekcie pre pacient
 
 | Problém | Príčina / riešenie |
 |---------|--------------------|
-| Článok sa nevložil, „preskočený“ | Slug už existuje — zmeň `slug` alebo uprav článok v admine |
+| Článok sa „neaktualizoval“ (0/0) | Obsah je identický s DB — žiadna zmena; uprav `content`/`excerpt` a spusti znova |
 | Náhľad karty je prázdny (ikona 🩺) | V obsahu nie je `<img>`, alebo cesta k obrázku je zlá |
 | Obrázok sa nezobrazuje | Súbor nie je commitnutý / chýba v `img/` na serveri |
 | Článok sa zobrazuje na úvodnej stránke | Má `category = 'odborne'` — preklop na *Pre pacientov* v admine |
