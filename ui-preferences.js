@@ -5,6 +5,8 @@
 
 const consentKey = 'nps_cookie_consent';
 const consentCookieMaxAgeDays = 365;
+const globalPrivacyControlEnabled = typeof navigator !== 'undefined'
+    && navigator.globalPrivacyControl === true;
 
 // Verzia Privacy Policy — pri zmene zásad aktualizovať tento reťazec.
 // MUSÍ sa zhodovať s `consentVersion` v legal_data.php (legalInfo()).
@@ -58,6 +60,10 @@ function readStoredConsentSync() {
             }
         }
     }
+    if (consent && globalPrivacyControlEnabled) {
+        consent = { ...consent, marketing: false };
+    }
+
     return consent;
 }
 
@@ -155,6 +161,9 @@ function initPrivacyManager() {
 
     if (!currentConsent) {
         currentConsent = { ...defaultSettings };
+    } else if (globalPrivacyControlEnabled) {
+        currentConsent.marketing = false;
+        persistConsent(currentConsent);
     }
 
     // Injektovanie HTML do body
@@ -168,6 +177,7 @@ function initPrivacyManager() {
                         Naša webová stránka používa súbory cookies na zabezpečenie základného fungovania (nevyhnutné cookies) a s vaším súhlasom aj na analytické, marketingové a personalizačné účely. Vaše údaje nám pomáhajú zlepšovať obsah a používateľský zážitok.
                         Viac v <a href="cookies.php">Cookie Policy</a> a <a href="privacy.php">Zásadách ochrany osobných údajov</a>.
                     </p>
+                    ${globalPrivacyControlEnabled ? '<p>Prehliadač odosiela signál Global Privacy Control. Marketingové spracúvanie preto zostáva vypnuté.</p>' : ''}
                 </div>
                 <div class="cookie-buttons">
                     <button id="btnAcceptAll" class="btn-primary">Prijať všetko</button>
@@ -217,11 +227,11 @@ function initPrivacyManager() {
                         <div class="cookie-category">
                             <div class="category-info">
                                 <h3 id="marketingCookiesTitle">Marketingové cookies (Marketing)</h3>
-                                <p>Používajú sa na sledovanie návštevníkov naprieč webmi s cieľom zobraziť relevantnú reklamu.</p>
+                                <p>Používajú sa na sledovanie návštevníkov naprieč webmi s cieľom zobraziť relevantnú reklamu.${globalPrivacyControlEnabled ? ' Váš signál Global Privacy Control túto kategóriu vypol.' : ''}</p>
                             </div>
                             <div class="category-toggle">
                                 <label class="switch">
-                                    <input type="checkbox" id="toggleMarketing" aria-labelledby="marketingCookiesTitle" ${currentConsent.marketing ? 'checked' : ''}>
+                                    <input type="checkbox" id="toggleMarketing" aria-labelledby="marketingCookiesTitle" ${currentConsent.marketing ? 'checked' : ''} ${globalPrivacyControlEnabled ? 'disabled' : ''}>
                                     <span class="slider round"></span>
                                 </label>
                             </div>
@@ -321,7 +331,8 @@ function initPrivacyManager() {
         const effectiveSettings = saved || defaultSettings;
 
         toggleAnalytics.checked = effectiveSettings.analytics;
-        toggleMarketing.checked = effectiveSettings.marketing;
+        toggleMarketing.checked = globalPrivacyControlEnabled ? false : effectiveSettings.marketing;
+        toggleMarketing.disabled = globalPrivacyControlEnabled;
         togglePreferences.checked = effectiveSettings.preferences;
 
         // Informácia o dátume posledného uloženého súhlasu
@@ -382,7 +393,7 @@ function initPrivacyManager() {
         saveConsent({
             necessary: true,
             analytics: true,
-            marketing: true,
+            marketing: !globalPrivacyControlEnabled,
             preferences: true
         });
     });
@@ -412,7 +423,7 @@ function initPrivacyManager() {
         saveConsent({
             necessary: true,
             analytics: toggleAnalytics.checked,
-            marketing: toggleMarketing.checked,
+            marketing: globalPrivacyControlEnabled ? false : toggleMarketing.checked,
             preferences: togglePreferences.checked
         });
     });
