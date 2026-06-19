@@ -77,12 +77,10 @@ if ((is_dir($projectSessionPath) || @mkdir($projectSessionPath, 0755, true)) && 
 }
 
 // Spustenie relácie
-if (session_status() === PHP_SESSION_NONE) {
-    if (!session_start()) {
-        error_log('Nepodarilo sa spustiť PHP session. Skontrolujte session.save_path a oprávnenia.');
-        http_response_code(500);
-        exit('Chyba: Nepodarilo sa spustiť reláciu.');
-    }
+if (session_status() === PHP_SESSION_NONE && !session_start()) {
+    error_log('Nepodarilo sa spustiť PHP session. Skontrolujte session.save_path a oprávnenia.');
+    http_response_code(500);
+    exit('Chyba: Nepodarilo sa spustiť reláciu.');
 }
 
 // Kontrola idle timeout: ak bol používateľ prihlásený a 1 hodinu nebol aktívny, odhlásiť ho.
@@ -269,7 +267,6 @@ function clearUserSession(): void {
     }
 
     session_destroy();
-    session_id('');
 }
 
 /**
@@ -543,27 +540,29 @@ function normalizeAccessLogText(string $value, int $maxLength): string {
  * Centrálna funkcia na získanie PDO pre audit logy, ak je dostupná.
  */
 function getAccessLogPdo(): ?\PDO {
+    $resolvedPdo = null;
+
     if (isset($GLOBALS['pdo']) && $GLOBALS['pdo'] instanceof \PDO) {
-        return $GLOBALS['pdo'];
+        $resolvedPdo = $GLOBALS['pdo'];
+    } else {
+        $configPath = __DIR__ . '/db_config.php';
+        if (is_file($configPath)) {
+            try {
+                require_once $configPath;
+            } catch (\Throwable $e) {
+                error_log('Access log DB load failed: ' . $e->getMessage());
+            }
+        }
+
+        if ($resolvedPdo === null && isset($pdo) && $pdo instanceof \PDO) {
+            $resolvedPdo = $pdo;
+        }
+        if ($resolvedPdo === null && isset($GLOBALS['pdo']) && $GLOBALS['pdo'] instanceof \PDO) {
+            $resolvedPdo = $GLOBALS['pdo'];
+        }
     }
 
-    $configPath = __DIR__ . '/db_config.php';
-    if (!is_file($configPath)) {
-        return null;
-    }
-
-    try {
-        require_once $configPath;
-    } catch (\Throwable $e) {
-        error_log('Access log DB load failed: ' . $e->getMessage());
-        return null;
-    }
-
-    if (isset($pdo) && $pdo instanceof \PDO) {
-        return $pdo;
-    }
-
-    return isset($GLOBALS['pdo']) && $GLOBALS['pdo'] instanceof \PDO ? $GLOBALS['pdo'] : null;
+    return $resolvedPdo;
 }
 
 /**
@@ -689,7 +688,9 @@ function recordAccessLogShutdown(): void {
  */
 function isKnownBotUserAgent(): bool {
     $ua = $_SERVER['HTTP_USER_AGENT'] ?? '';
-    if (empty($ua)) return true; // Požiadavky bez UA sú takmer vždy boti
+    if (empty($ua)) {
+        return true; // Požiadavky bez UA sú takmer vždy boti
+    }
 
     $botPatterns = [
         '/curl/i', '/Wget/i', '/libwww-perl/i', '/Python-urllib/i', '/php/i',
@@ -710,24 +711,17 @@ function isKnownBotUserAgent(): bool {
  * @return bool True ak doména existuje a môže prijímať poštu.
  */
 function isEmailDomainValid(string $email): bool {
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        return false;
+    $isValid = false;
+
+    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $domain = substr(strrchr($email, "@"), 1);
+        if (!empty($domain)) {
+            // MX záznamy sú preferované, A záznam je fallback.
+            $isValid = checkdnsrr($domain, 'MX') || checkdnsrr($domain, 'A');
+        }
     }
 
-    $domain = substr(strrchr($email, "@"), 1);
-    if (empty($domain)) return false;
-
-    // Skontrolujeme MX záznamy (poštové servery)
-    if (checkdnsrr($domain, 'MX')) {
-        return true;
-    }
-
-    // Fallback: Skontrolujeme A záznam (ak doména nemá MX, ale má IP, môže prijímať poštu)
-    if (checkdnsrr($domain, 'A')) {
-        return true;
-    }
-
-    return false;
+    return $isValid;
 }
 
 // ── 2FA helpre ────────────────────────────────────────────────────────────────
@@ -765,4 +759,3 @@ function completeTwoFactorLogin(array $user): void
     $_SESSION['email_verified'] = !empty($user['email_verified_at']) ? 1 : 0;
     $_SESSION['_last_activity'] = time();
 }
-?>

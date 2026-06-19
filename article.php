@@ -215,6 +215,7 @@ if ($article) {
 <!DOCTYPE html>
 <html lang="sk">
 <head>
+  <title><?= htmlspecialchars($articleTitleRaw, ENT_QUOTES, "UTF-8") ?></title>
   <?php
   // Mapovanie premenných pre head_meta.php — odovzdávame RAW (neescapované) hodnoty.
   // head_meta.php aplikuje htmlspecialchars() na každý výstup sám.
@@ -249,7 +250,7 @@ if ($article) {
       ],
   ];
 
-  include "head_meta.php";
+  include_once "head_meta.php";
   ?>
   <?php if ($article): ?>
   <meta property="article:published_time" content="<?= htmlspecialchars(
@@ -277,14 +278,14 @@ if ($article) {
   $headerIntro =
       "Dynamická renesancia nefrológie: Od molekulárnej biológie po umelú inteligenciu.";
   $showLogo = true;
-  include "header.php";
+  include_once "header.php";
   ?>
 
-  <?php include 'main_nav.php'; ?>
+  <?php include_once 'main_nav.php'; ?>
 
   <main id="main-content" class="container main-content" role="main">
     <div class="content-wrapper">
-      <?php if ($notFound || $article === null): ?>
+      <?php if ($notFound || $article === null) { ?>
         <article class="primary-article">
           <header>
             <h2>Článok nenájdený</h2>
@@ -293,8 +294,8 @@ if ($article) {
           <a href="index.php" class="btn-primary">← Späť na úvodnú stránku</a>
         </article>
 
-      <?php /* Dôverované HTML — správuje iba admin */
-          else:
+        <?php } else {
+          /* Dôverované HTML — správuje iba admin */
           $pubDate = (string) $article["published_at"];
           $pubDateIso = htmlspecialchars(date('c', strtotime($pubDate) ?: time()));
           $pubDateSk = formatArticleDate($pubDate, $months);
@@ -372,7 +373,7 @@ if ($article) {
               <input type="email" name="email" placeholder="váš@email.sk" class="form-control newsletter-cta__input" required aria-label="Vaša e-mailová adresa">
               <button type="submit" class="btn-primary newsletter-cta__btn">Prihlásiť na odber</button>
             </form>
-            <div class="newsletter-cta__msg" id="nl-msg-inline" hidden role="status"></div>
+            <output class="newsletter-cta__msg" id="nl-msg-inline" hidden aria-live="polite"></output>
           </div>
         </div>
 
@@ -384,10 +385,10 @@ if ($article) {
           <?php endif; ?>
         </nav>
 
-      <?php endif; ?>
+      <?php } ?>
     </div>
 
-    <aside class="sidebar">
+    <aside class="sidebar" aria-label="Bočný panel s doplnkovým obsahom">
       <div class="widget">
         <h3>O projekte</h3>
         <p>
@@ -451,7 +452,7 @@ if ($article) {
           <input type="email" name="email" placeholder="váš@email.sk" class="form-control" required aria-label="Vaša e-mailová adresa">
           <button type="submit" class="btn-primary newsletter-cta__btn--block">Prihlásiť na odber</button>
         </form>
-        <div id="nl-msg-sidebar" hidden role="status" class="newsletter-cta__status"></div>
+        <output id="nl-msg-sidebar" hidden class="newsletter-cta__status" aria-live="polite"></output>
       </div>
 
       <div class="widget">
@@ -698,6 +699,6 @@ if ($article) {
   })();
   </script>
 
-  <?php include "footer.php"; ?>
+  <?php include_once "footer.php"; ?>
 </body>
 </html>

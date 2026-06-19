@@ -167,6 +167,12 @@ $projectPublicStats = getProjectPublicStats($pdo);
 
 $siteName = "Nefro-projekt Slovensko";
 $baseUrl = "https://nefro.polascin.net/";
+$authorQueryPrefix = "?autor=";
+$pageQueryPrefix = "&page=";
+$pageOnlyQueryPrefix = "?page=";
+$schemaOrgUrl = "https://schema.org";
+$founderWebsiteUrl = "https://polascin.com/";
+$untitledArticleLabel = "Bez názvu článku";
 $isPaginated = $otherArticlesPage > 1;
 $firstArticleForSeo = $topArticles[0] ?? ($otherArticles[0] ?? null);
 $autorFilterUrl = $autorFilter !== "" ? urlencode($autorFilter) : "";
@@ -190,32 +196,38 @@ if ($autorFilter !== "") {
     $pageTitle = "Články autora: " . $autorFilter
         . ($isPaginated ? " – strana " . $otherArticlesPage : "")
         . " | " . $siteName;
-    $canonicalUrl = $baseUrl . "?autor=" . $autorFilterUrl
-        . ($isPaginated ? "&page=" . $otherArticlesPage : "");
-    $prevUrl = $otherArticlesPage > 1
-        ? ($otherArticlesPage === 2
-            ? $baseUrl . "?autor=" . $autorFilterUrl
-            : $baseUrl . "?autor=" . $autorFilterUrl . "&page=" . ($otherArticlesPage - 1))
-        : "";
+  $canonicalUrl = $baseUrl . $authorQueryPrefix . $autorFilterUrl;
+  if ($isPaginated) {
+    $canonicalUrl .= $pageQueryPrefix . $otherArticlesPage;
+  }
+
+  $prevUrl = "";
+  if ($otherArticlesPage > 1) {
+    $prevUrl = $baseUrl . $authorQueryPrefix . $autorFilterUrl;
+    if ($otherArticlesPage > 2) {
+      $prevUrl .= $pageQueryPrefix . ($otherArticlesPage - 1);
+    }
+  }
+
     $nextUrl = $otherArticlesPage < $otherArticlesTotalPages
-        ? $baseUrl . "?autor=" . $autorFilterUrl . "&page=" . ($otherArticlesPage + 1)
+    ? $baseUrl . $authorQueryPrefix . $autorFilterUrl . $pageQueryPrefix . ($otherArticlesPage + 1)
         : "";
 } else {
     $pageTitle = $isPaginated
         ? "Nefrologické články – strana " . $otherArticlesPage . " | " . $siteName
         : $siteName;
-    $canonicalUrl = $isPaginated
-        ? $baseUrl . "?page=" . $otherArticlesPage
-        : $baseUrl;
-    $prevUrl =
-        $otherArticlesPage > 1
-            ? ($otherArticlesPage === 2
-                ? $baseUrl
-                : $baseUrl . "?page=" . ($otherArticlesPage - 1))
-            : "";
+  $canonicalUrl = $isPaginated ? $baseUrl . $pageOnlyQueryPrefix . $otherArticlesPage : $baseUrl;
+
+  $prevUrl = "";
+  if ($otherArticlesPage > 1) {
+    $prevUrl = $otherArticlesPage === 2
+      ? $baseUrl
+      : $baseUrl . $pageOnlyQueryPrefix . ($otherArticlesPage - 1);
+  }
+
     $nextUrl =
         $otherArticlesPage < $otherArticlesTotalPages
-            ? $baseUrl . "?page=" . ($otherArticlesPage + 1)
+      ? $baseUrl . $pageOnlyQueryPrefix . ($otherArticlesPage + 1)
             : "";
 }
 
@@ -237,7 +249,7 @@ foreach ($allPageArticles as $idx => $art) {
 
 $structuredData = [
     [
-        "@context" => "https://schema.org",
+        "@context" => $schemaOrgUrl,
         "@type" => "MedicalOrganization",
         "name" => $siteName,
         "url" => $baseUrl,
@@ -251,13 +263,13 @@ $structuredData = [
             "Dynamická renesancia nefrológie: od molekulárnej biológie po umelú inteligenciu.",
         "medicalSpecialty" => "Nephrology",
         "inLanguage" => "sk-SK",
-        "sameAs" => ["https://polascin.com/", "https://nefro.sk/"],
+        "sameAs" => [$founderWebsiteUrl, "https://nefro.sk/"],
         "founder" => [
             "@type" => "Person",
             "name" => "MUDr. Ľubomír Polaščín",
             "jobTitle" => "Lekár, Nefrológ",
-            "url" => "https://polascin.com/",
-            "sameAs" => ["https://polascin.com/", "https://nefro.sk/"],
+            "url" => $founderWebsiteUrl,
+            "sameAs" => [$founderWebsiteUrl, "https://nefro.sk/"],
         ],
         "contactPoint" => [
             "@type" => "ContactPoint",
@@ -267,7 +279,7 @@ $structuredData = [
         ],
     ],
     [
-        "@context" => "https://schema.org",
+        "@context" => $schemaOrgUrl,
         "@type" => "WebSite",
         "name" => $siteName,
         "url" => $baseUrl,
@@ -286,7 +298,7 @@ $structuredData = [
 
 if (!empty($itemListElements)) {
     $structuredData[] = [
-        "@context" => "https://schema.org",
+        "@context" => $schemaOrgUrl,
         "@type" => "ItemList",
         "name" => $isPaginated
             ? "Články – strana " . $otherArticlesPage
@@ -299,10 +311,11 @@ if (!empty($itemListElements)) {
 <html lang="sk">
 
 <head>
+  <title><?= htmlspecialchars($pageTitle, ENT_QUOTES, "UTF-8") ?></title>
   <?php
   // Príprava pre head_meta.php
   $structuredData = $structuredData ?? [];
-  include "head_meta.php";
+  include_once "head_meta.php";
   ?>
   <?php if ($prevUrl !== ""): ?>
   <link rel="prev" href="<?= htmlspecialchars($prevUrl, ENT_QUOTES) ?>">
@@ -322,10 +335,10 @@ if (!empty($itemListElements)) {
   $headerIntro =
       "Dynamická renesancia nefrológie: Od molekulárnej biológie po umelú inteligenciu.";
   $showLogo = true;
-  include "header.php";
+  include_once "header.php";
   ?>
 
-  <?php include 'main_nav.php'; ?>
+  <?php include_once 'main_nav.php'; ?>
 
   <!-- <main>: Hlavný obsah stránky, ktorý je pre daný dokument unikátny -->
   <main id="main-content" class="container main-content" role="main">
@@ -342,10 +355,11 @@ if (!empty($itemListElements)) {
           <?php if (empty($otherArticles)): ?>
             <p>Tento autor nemá žiadne publikované články.</p>
           <?php else: ?>
-          <ul class="articles-list" role="list">
+              <ul class="articles-list">
             <?php foreach ($otherArticles as $art):
                 $artSlug = htmlspecialchars((string) $art["slug"], ENT_QUOTES);
-                $artTitle = htmlspecialchars((string) $art["title"]);
+                $artTitleRaw = trim((string) ($art["title"] ?? ""));
+                $artTitle = htmlspecialchars($artTitleRaw !== "" ? $artTitleRaw : $untitledArticleLabel);
                 $artExc = htmlspecialchars(buildSeoExcerpt((string) ($art["excerpt"] ?? ""), "", 220));
                 $artDate = htmlspecialchars(formatArticleDate((string) $art["published_at"]));
                 $artDateIso = htmlspecialchars(substr((string) $art["published_at"], 0, 10));
@@ -371,7 +385,7 @@ if (!empty($itemListElements)) {
                   <?php if ($p === $otherArticlesPage): ?>
                     <span class="articles-page-link is-active" aria-current="page"><?= $p ?></span>
                   <?php else: ?>
-                    <a class="articles-page-link" href="?autor=<?= $autorFilterUrl ?>&page=<?= $p ?>#autor-articles-heading"><?= $p ?></a>
+                    <a class="articles-page-link" href="?autor=<?= $autorFilterUrl ?>&page=<?= $p ?>#autor-articles-heading" aria-label="Strana <?= $p ?>"><?= $p ?></a>
                   <?php endif; ?>
                 <?php endfor; ?>
               </div>
@@ -389,7 +403,8 @@ if (!empty($itemListElements)) {
         <?php foreach ($topArticles as $art):
 
             $artSlug = htmlspecialchars((string) $art["slug"], ENT_QUOTES);
-            $artTitle = htmlspecialchars((string) $art["title"]);
+            $artTitleRaw = trim((string) ($art["title"] ?? ""));
+            $artTitle = htmlspecialchars($artTitleRaw !== "" ? $artTitleRaw : $untitledArticleLabel);
             $artExc = htmlspecialchars(
                 buildSeoExcerpt((string) ($art["excerpt"] ?? ""), "", 220),
             );
@@ -403,7 +418,7 @@ if (!empty($itemListElements)) {
         <article class="primary-article">
           <span class="badge-top" aria-label="Odporúčaný článok">&#9733; TOP</span>
           <header>
-            <h2><a href="article.php?slug=<?= $artSlug ?>" class="article-title-link"><?= $artTitle ?></a></h2>
+            <h2><a href="article.php?slug=<?= $artSlug ?>" class="article-title-link" aria-label="Článok: <?= $artTitle ?>"><?= $artTitle ?></a></h2>
             <p class="meta">
               Publikované:&nbsp; <time datetime="<?= $artDateIso ?>"><?= $artDate ?></time>
             </p>
@@ -421,11 +436,12 @@ if (!empty($itemListElements)) {
       <section class="articles-list-section" aria-labelledby="all-articles-heading">
         <div class="primary-article">
           <h2 id="all-articles-heading">Ďalšie články</h2>
-          <ul class="articles-list" role="list">
+            <ul class="articles-list">
             <?php foreach ($otherArticles as $art):
 
                 $artSlug = htmlspecialchars((string) $art["slug"], ENT_QUOTES);
-                $artTitle = htmlspecialchars((string) $art["title"]);
+              $artTitleRaw = trim((string) ($art["title"] ?? ""));
+                $artTitle = htmlspecialchars($artTitleRaw !== "" ? $artTitleRaw : $untitledArticleLabel);
                 $artExc = htmlspecialchars(
                     buildSeoExcerpt((string) ($art["excerpt"] ?? ""), "", 220),
                 );
@@ -438,7 +454,7 @@ if (!empty($itemListElements)) {
                 ?>
             <li class="article-list-item">
               <div class="article-list-item__header">
-                <a href="article.php?slug=<?= $artSlug ?>" class="article-list-item__title"><?= $artTitle ?></a>
+                <a href="article.php?slug=<?= $artSlug ?>" class="article-list-item__title" aria-label="Článok: <?= $artTitle ?>"><?= $artTitle ?></a>
                 <time class="article-list-item__date" datetime="<?= $artDateIso ?>"><?= $artDate ?></time>
               </div>
               <p class="article-list-item__excerpt"><?= $artExc ?></p>
@@ -455,7 +471,7 @@ if (!empty($itemListElements)) {
                   <?php if ($p === $otherArticlesPage): ?>
                     <span class="articles-page-link is-active" aria-current="page"><?= $p ?></span>
                   <?php else: ?>
-                    <a class="articles-page-link" href="?page=<?= $p ?>#all-articles-heading"><?= $p ?></a>
+                    <a class="articles-page-link" href="?page=<?= $p ?>#all-articles-heading" aria-label="Strana <?= $p ?>"><?= $p ?></a>
                   <?php endif; ?>
                 <?php endfor; ?>
               </div>
@@ -602,7 +618,7 @@ if (!empty($itemListElements)) {
               <input type="email" name="email" placeholder="váš@email.sk" class="form-control" required aria-label="Vaša e-mailová adresa">
               <button type="submit" class="btn-primary newsletter-cta__btn--block">Prihlásiť na odber</button>
             </form>
-            <div id="nl-msg-home" hidden role="status" class="newsletter-cta__status"></div>
+            <output id="nl-msg-home" hidden class="newsletter-cta__status" aria-live="polite"></output>
             <?php if (!isLoggedIn()): ?>
               <p class="contact-community__account">Chcete diskutovať k článkom? <a href="register.php">Vytvorte si účet</a> — stačí e-mail a heslo.</p>
             <?php else: ?>
@@ -615,13 +631,13 @@ if (!empty($itemListElements)) {
     </div>
 
     <!-- <aside>: Bočný panel, obsah, ktorý len okrajovo súvisí s hlavným obsahom -->
-    <aside class="sidebar">
+    <aside class="sidebar" aria-label="Bočný panel s doplnkovým obsahom">
       <div class="widget">
         <h3>Náhodný obrázok</h3>
         <?php
         // Získanie všetkých obrázkov zodpovedajúcich štruktúre
         $images = glob("./img/nefro_*.png");
-        if ($images && count($images) > 0) {
+        if (!empty($images)) {
             // Výber náhodného obrázka
             $randomIndex = array_rand($images);
             $randomImagePath = $images[$randomIndex];
@@ -903,4 +919,4 @@ if (!empty($itemListElements)) {
   </main>
 
   <script src="newsletter-cta.js?cb=<?= filemtime('newsletter-cta.js') ?>" defer></script>
-  <?php include "footer.php"; ?>
+  <?php include_once "footer.php"; ?>

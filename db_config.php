@@ -51,10 +51,22 @@ try {
  * @return array{published_articles:int,users_total:int,authors:array<int,array{author:string,articles:int}>}
  */
 function getProjectPublicStats(\PDO $pdo): array {
-    $stats = [
+    $baseCounts = fetchProjectBaseCounts($pdo);
+
+    return [
+        'published_articles' => $baseCounts['published_articles'],
+        'users_total' => $baseCounts['users_total'],
+        'authors' => fetchProjectAuthors($pdo),
+    ];
+}
+
+/**
+ * @return array{published_articles:int,users_total:int}
+ */
+function fetchProjectBaseCounts(\PDO $pdo): array {
+    $base = [
         'published_articles' => 0,
         'users_total' => 0,
-        'authors' => [],
     ];
 
     try {
@@ -64,11 +76,20 @@ function getProjectPublicStats(\PDO $pdo): array {
                 (SELECT COUNT(*) FROM users) AS users_total"
         );
         $row = $stmt->fetch(\PDO::FETCH_ASSOC) ?: [];
-        $stats['published_articles'] = max(0, (int) ($row['published_articles'] ?? 0));
-        $stats['users_total'] = max(0, (int) ($row['users_total'] ?? 0));
+        $base['published_articles'] = max(0, (int) ($row['published_articles'] ?? 0));
+        $base['users_total'] = max(0, (int) ($row['users_total'] ?? 0));
     } catch (\PDOException $e) {
         error_log('project stats: chyba načítania verejných štatistík: ' . $e->getMessage());
     }
+
+    return $base;
+}
+
+/**
+ * @return array<int,array{author:string,articles:int}>
+ */
+function fetchProjectAuthors(\PDO $pdo): array {
+    $authors = [];
 
     try {
         $authorsStmt = $pdo->query(
@@ -79,75 +100,94 @@ function getProjectPublicStats(\PDO $pdo): array {
 
         $authorBuckets = [];
         foreach ($authorsStmt->fetchAll(\PDO::FETCH_ASSOC) as $row) {
-            $articleAuthor = trim((string) ($row['author_name'] ?? ''));
-            if ($articleAuthor !== '') {
-                $articleAuthorKey = normalizeAuthorIdentity($articleAuthor);
-                if ($articleAuthorKey !== '') {
-                    if (!isset($authorBuckets[$articleAuthorKey])) {
-                        $authorBuckets[$articleAuthorKey] = [
-                            'author' => $articleAuthor,
-                            'articles' => 0,
-                        ];
-                    }
-                    $authorBuckets[$articleAuthorKey]['articles']++;
-                }
-            }
-
-            $sourceFirstAuthor = extractOriginalSourceFirstAuthor((string) ($row['content'] ?? ''));
-            if ($sourceFirstAuthor === '') {
-                continue;
-            }
-
-            $sourceAuthorKey = normalizeAuthorIdentity($sourceFirstAuthor);
-            if ($sourceAuthorKey === '') {
-                continue;
-            }
-
-            if (
-                $articleAuthor !== '' &&
-                isset($articleAuthorKey) &&
-                $articleAuthorKey !== '' &&
-                $sourceAuthorKey === $articleAuthorKey
-            ) {
-                continue;
-            }
-
-            if (!isset($authorBuckets[$sourceAuthorKey])) {
-                $authorBuckets[$sourceAuthorKey] = [
-                    'author' => $sourceFirstAuthor,
-                    'articles' => 0,
-                ];
-            }
-            $authorBuckets[$sourceAuthorKey]['articles']++;
+            registerArticleAuthors($authorBuckets, $row);
         }
 
-        uasort($authorBuckets, static function (array $left, array $right): int {
-            $leftCount = (int) ($left['articles'] ?? 0);
-            $rightCount = (int) ($right['articles'] ?? 0);
-
-            if ($leftCount !== $rightCount) {
-                return $rightCount <=> $leftCount;
-            }
-
-            return strcasecmp(
-                (string) ($left['author'] ?? ''),
-                (string) ($right['author'] ?? '')
-            );
-        });
-
-        foreach ($authorBuckets as $bucket) {
-            $authorName = trim((string) ($bucket['author'] ?? ''));
-            if ($authorName === '') {
-                continue;
-            }
-
-            $stats['authors'][] = [
-                'author' => $authorName,
-                'articles' => max(0, (int) ($bucket['articles'] ?? 0)),
-            ];
-        }
+        sortAuthorBuckets($authorBuckets);
+        $authors = mapAuthorBucketsToStats($authorBuckets);
     } catch (\PDOException $e) {
         error_log('project stats: chyba načítania autorov článkov: ' . $e->getMessage());
+    }
+
+    return $authors;
+}
+
+/**
+ * @param array<string,array{author:string,articles:int}> $authorBuckets
+ * @param array<string,mixed> $row
+ */
+function registerArticleAuthors(array &$authorBuckets, array $row): void {
+    $articleAuthor = trim((string) ($row['author_name'] ?? ''));
+    $articleAuthorKey = registerAuthorContribution($authorBuckets, $articleAuthor);
+
+    $sourceFirstAuthor = extractOriginalSourceFirstAuthor((string) ($row['content'] ?? ''));
+    $sourceAuthorKey = normalizeAuthorIdentity($sourceFirstAuthor);
+
+    if ($sourceAuthorKey === '' || ($articleAuthorKey !== '' && $sourceAuthorKey === $articleAuthorKey)) {
+        return;
+    }
+
+    registerAuthorContribution($authorBuckets, $sourceFirstAuthor);
+}
+
+/**
+ * @param array<string,array{author:string,articles:int}> $authorBuckets
+ */
+function registerAuthorContribution(array &$authorBuckets, string $authorName): string {
+    $authorName = trim($authorName);
+    $authorKey = normalizeAuthorIdentity($authorName);
+    if ($authorKey === '') {
+        return '';
+    }
+
+    if (!isset($authorBuckets[$authorKey])) {
+        $authorBuckets[$authorKey] = [
+            'author' => $authorName,
+            'articles' => 0,
+        ];
+    }
+
+    $authorBuckets[$authorKey]['articles']++;
+
+    return $authorKey;
+}
+
+/**
+ * @param array<string,array{author:string,articles:int}> $authorBuckets
+ */
+function sortAuthorBuckets(array &$authorBuckets): void {
+    uasort($authorBuckets, static function (array $left, array $right): int {
+        $leftCount = (int) ($left['articles'] ?? 0);
+        $rightCount = (int) ($right['articles'] ?? 0);
+
+        if ($leftCount !== $rightCount) {
+            return $rightCount <=> $leftCount;
+        }
+
+        return strcasecmp(
+            (string) ($left['author'] ?? ''),
+            (string) ($right['author'] ?? '')
+        );
+    });
+}
+
+/**
+ * @param array<string,array{author:string,articles:int}> $authorBuckets
+ * @return array<int,array{author:string,articles:int}>
+ */
+function mapAuthorBucketsToStats(array $authorBuckets): array {
+    $stats = [];
+
+    foreach ($authorBuckets as $bucket) {
+        $authorName = trim((string) ($bucket['author'] ?? ''));
+        if ($authorName === '') {
+            continue;
+        }
+
+        $stats[] = [
+            'author' => $authorName,
+            'articles' => max(0, (int) ($bucket['articles'] ?? 0)),
+        ];
     }
 
     return $stats;
@@ -157,27 +197,27 @@ function getProjectPublicStats(\PDO $pdo): array {
  * Pokúsi sa zo sekcie "Zdroj:" vyťažiť prvého autora originálneho zdroja.
  */
 function extractOriginalSourceFirstAuthor(string $content): string {
-    if (trim($content) === '') {
-        return '';
-    }
+    $result = '';
 
-    if (!preg_match_all('/Zdroj:\s*(.*?)(?:<\/p>|<\/li>|$)/isu', $content, $matches)) {
-        return '';
-    }
+    if (
+        trim($content) !== '' &&
+        preg_match_all('/Zdroj:\s*([^<]*(?:<(?!\/(?:p|li)>)[^<]*)*)(?:<\/p>|<\/li>|$)/isu', $content, $matches)
+    ) {
+        foreach (($matches[1] ?? []) as $rawSourceSnippet) {
+            $sourceText = normalizeSourceCitationText((string) $rawSourceSnippet);
+            if ($sourceText === '') {
+                continue;
+            }
 
-    foreach (($matches[1] ?? []) as $rawSourceSnippet) {
-        $sourceText = normalizeSourceCitationText((string) $rawSourceSnippet);
-        if ($sourceText === '') {
-            continue;
+            $author = extractFirstAuthorFromCitation($sourceText);
+            if ($author !== '') {
+                $result = $author;
+                break;
+            }
         }
-
-        $author = extractFirstAuthorFromCitation($sourceText);
-        if ($author !== '') {
-            return $author;
-        }
     }
 
-    return '';
+    return $result;
 }
 
 /**
@@ -236,24 +276,56 @@ function extractFirstAuthorFromCitation(string $sourceText): string {
  * Heuristika: overí, že extrahovaný autor je pravdepodobne osoba.
  */
 function isLikelyPersonalAuthorName(string $author): bool {
+    $isValid = true;
+
     if ($author === '' || preg_match('/\\d/u', $author)) {
-        return false;
+        $isValid = false;
     }
 
-    if (mb_strlen($author, 'UTF-8') < 2 || mb_strlen($author, 'UTF-8') > 80) {
-        return false;
+    if ($isValid && (mb_strlen($author, 'UTF-8') < 2 || mb_strlen($author, 'UTF-8') > 80)) {
+        $isValid = false;
     }
 
-    if (
-        preg_match(
-            '/medscape|american|european|international|society|association|group|collaborative|guideline|journal|ajkd|nejm|jama|kdigo|kdoqi|fda|ema|pubmed|cureus|diabetes care|core curriculum|review/i',
-            $author
-        )
-    ) {
-        return false;
+    if ($isValid) {
+        foreach (getNonPersonAuthorKeywords() as $keyword) {
+            if (stripos($author, $keyword) !== false) {
+                $isValid = false;
+                break;
+            }
+        }
     }
 
-    return true;
+    return $isValid;
+}
+
+/**
+ * @return string[]
+ */
+function getNonPersonAuthorKeywords(): array {
+    return [
+        'medscape',
+        'american',
+        'european',
+        'international',
+        'society',
+        'association',
+        'group',
+        'collaborative',
+        'guideline',
+        'journal',
+        'ajkd',
+        'nejm',
+        'jama',
+        'kdigo',
+        'kdoqi',
+        'fda',
+        'ema',
+        'pubmed',
+        'cureus',
+        'diabetes care',
+        'core curriculum',
+        'review',
+    ];
 }
 
 /**
@@ -269,24 +341,78 @@ function normalizeAuthorIdentity(string $author): string {
     $value = trim((string) preg_replace('/\s+/u', ' ', $value));
     $value = mb_strtolower($value, 'UTF-8');
 
-    // Odstránenie bežných titulov pred menom.
-    $value = preg_replace(
-        '/^(?:prof\.|doc\.|mudr\.|mddr\.|mvdr\.|rndr\.|phdr\.|judr\.|paeddr\.|phmr\.|mgr\.|mgr\.\s*art\.|ing\.|ing\.\s*arch\.|bc\.|bca\.|dr\.)\s+/u',
-        '',
-        $value
-    ) ?? $value;
-
-    // Odstránenie bežných titulov za menom.
-    $value = preg_replace(
-        '/,?\s*(?:phd\.|ph\.d\.|csc\.|drsc\.|dsc\.|mba|msc\.|ll\.m\.|mph|mha|dis\.|di\.s\.)$/u',
-        '',
-        $value
-    ) ?? $value;
+    $value = stripKnownTitlePrefixes($value);
+    $value = stripKnownTitleSuffixes($value);
 
     // Odstránenie bodiek pre porovnanie variantov titulov.
     $value = str_replace('.', '', $value);
 
     return trim($value);
+}
+
+function stripKnownTitlePrefixes(string $value): string {
+    $prefixes = [
+        'prof.',
+        'doc.',
+        'mudr.',
+        'mddr.',
+        'mvdr.',
+        'rndr.',
+        'phdr.',
+        'judr.',
+        'paeddr.',
+        'phmr.',
+        'mgr.',
+        'mgr. art.',
+        'ing.',
+        'ing. arch.',
+        'bc.',
+        'bca.',
+        'dr.',
+    ];
+
+    $trimmed = ltrim($value);
+    foreach ($prefixes as $prefix) {
+        $prefixWithSpace = $prefix . ' ';
+        if (str_starts_with($trimmed, $prefixWithSpace)) {
+            return ltrim(substr($trimmed, strlen($prefixWithSpace)) ?: '');
+        }
+    }
+
+    return $trimmed;
+}
+
+function stripKnownTitleSuffixes(string $value): string {
+    $suffixes = [
+        'phd.',
+        'ph.d.',
+        'csc.',
+        'drsc.',
+        'dsc.',
+        'mba',
+        'msc.',
+        'll.m.',
+        'mph',
+        'mha',
+        'dis.',
+        'di.s.',
+    ];
+
+    $trimmed = trim($value);
+    foreach ($suffixes as $suffix) {
+        $directSuffix = ' ' . $suffix;
+        $commaSuffix = ', ' . $suffix;
+
+        if (str_ends_with($trimmed, $commaSuffix)) {
+            return trim(substr($trimmed, 0, -strlen($commaSuffix)) ?: '');
+        }
+
+        if (str_ends_with($trimmed, $directSuffix)) {
+            return trim(substr($trimmed, 0, -strlen($directSuffix)) ?: '');
+        }
+    }
+
+    return $trimmed;
 }
 
 function formatProjectPublicCount(int $count): string {
@@ -317,10 +443,10 @@ function getTitlesBeforeName(\PDO $pdo): array {
         );
         $stmt->execute();
         $rows = $stmt->fetchAll(\PDO::FETCH_COLUMN);
-        return $rows ?: _getFallbackTitlesBefore();
+        return $rows ?: getFallbackTitlesBefore();
     } catch (\PDOException $e) {
         error_log('title_codebook: chyba načítania titulov pred menom: ' . $e->getMessage());
-        return _getFallbackTitlesBefore();
+        return getFallbackTitlesBefore();
     }
 }
 
@@ -335,15 +461,15 @@ function getTitlesAfterName(\PDO $pdo): array {
         );
         $stmt->execute();
         $rows = $stmt->fetchAll(\PDO::FETCH_COLUMN);
-        return $rows ?: _getFallbackTitlesAfter();
+        return $rows ?: getFallbackTitlesAfter();
     } catch (\PDOException $e) {
         error_log('title_codebook: chyba načítania titulov za menom: ' . $e->getMessage());
-        return _getFallbackTitlesAfter();
+        return getFallbackTitlesAfter();
     }
 }
 
 /** @internal Fallback zoznam titulov pred menom. */
-function _getFallbackTitlesBefore(): array {
+function getFallbackTitlesBefore(): array {
     return [
         'prof.', 'doc.', 'MUDr.', 'MDDr.', 'MVDr.', 'RNDr.', 'PhDr.', 'JUDr.',
         'PaedDr.', 'PhMr.', 'Mgr.', 'Mgr. art.', 'Ing.', 'Ing. arch.',
@@ -352,7 +478,7 @@ function _getFallbackTitlesBefore(): array {
 }
 
 /** @internal Fallback zoznam titulov za menom. */
-function _getFallbackTitlesAfter(): array {
+function getFallbackTitlesAfter(): array {
     return [
         'PhD.', 'Ph.D.', 'CSc.', 'DrSc.', 'DSc.', 'DBA', 'MBA', 'MSc.',
         'LL.M.', 'MPH', 'MHA', 'MPA', 'MPHA', 'MPM', 'FRCPS', 'FACP', 'FRCP',
@@ -496,4 +622,3 @@ function getRegionNameByCode(\PDO $pdo, string $code): string {
     }
     return $cache[$code];
 }
-?>

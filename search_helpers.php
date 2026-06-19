@@ -196,44 +196,47 @@ function searchFtIndexExists(PDO $pdo): bool
 
 function doArticleSearch(
     PDO $pdo,
-    string $rawQuery,
     array $tokens,
     int $page,
     int $perPage,
 ): array {
     $offset = ($page - 1) * $perPage;
+    $result = ["items" => [], "total" => 0, "strategy" => "none"];
 
     if (empty($tokens)) {
-        return ["items" => [], "total" => 0, "strategy" => "none"];
+        return $result;
     }
 
     if (searchFtIndexExists($pdo)) {
         $ftResult = searchViaFullText(
             $pdo,
-            $rawQuery,
             $tokens,
             $offset,
             $perPage,
         );
         if ($ftResult["total"] > 0) {
             $ftResult["strategy"] = "fulltext";
-            return $ftResult;
+            $result = $ftResult;
         }
     }
 
-    $likeResult = searchViaLike($pdo, $tokens, $offset, $perPage, false);
-    if ($likeResult["total"] > 0) {
-        $likeResult["strategy"] = "like";
-        return $likeResult;
+    if ($result["total"] === 0) {
+        $likeResult = searchViaLike($pdo, $tokens, $offset, $perPage, false);
+        if ($likeResult["total"] > 0) {
+            $likeResult["strategy"] = "like";
+            $result = $likeResult;
+        }
     }
 
-    $likeNormResult = searchViaLike($pdo, $tokens, $offset, $perPage, true);
-    if ($likeNormResult["total"] > 0) {
-        $likeNormResult["strategy"] = "like-normalized";
-        return $likeNormResult;
+    if ($result["total"] === 0) {
+        $likeNormResult = searchViaLike($pdo, $tokens, $offset, $perPage, true);
+        if ($likeNormResult["total"] > 0) {
+            $likeNormResult["strategy"] = "like-normalized";
+            $result = $likeNormResult;
+        }
     }
 
-    return ["items" => [], "total" => 0, "strategy" => "none"];
+    return $result;
 }
 
 function searchArticles(PDO $pdo, string $rawQuery, int $page, int $perPage): array
@@ -250,12 +253,12 @@ function searchArticles(PDO $pdo, string $rawQuery, int $page, int $perPage): ar
         ];
     }
 
-    $sr = doArticleSearch($pdo, $rawQuery, $tokens, $page, $perPage);
+    $sr = doArticleSearch($pdo, $tokens, $page, $perPage);
     $totalPages = max(1, (int) ceil($sr["total"] / $perPage));
 
     if ($page > $totalPages) {
         $page = $totalPages;
-        $sr = doArticleSearch($pdo, $rawQuery, $tokens, $page, $perPage);
+        $sr = doArticleSearch($pdo, $tokens, $page, $perPage);
     }
 
     return [
@@ -270,13 +273,13 @@ function searchArticles(PDO $pdo, string $rawQuery, int $page, int $perPage): ar
 
 function searchViaFullText(
     PDO $pdo,
-    string $rawQuery,
     array $tokens,
     int $offset,
     int $perPage,
 ): array {
+    $result = ["items" => [], "total" => 0];
     $ftParts = [];
-    foreach ($tokens as $norm => $orig) {
+    foreach ($tokens as $orig) {
         $safe = str_replace(
             ["*", "@", "~", "+", "-", "<", ">", "(", ")", '\"'],
             "",
@@ -287,7 +290,7 @@ function searchViaFullText(
         }
     }
     if (empty($ftParts)) {
-        return ["items" => [], "total" => 0];
+        return $result;
     }
 
     $ftQuery = implode(" ", $ftParts);
@@ -301,30 +304,29 @@ function searchViaFullText(
         $cntStmt->execute(["q" => $ftQuery]);
         $total = (int) $cntStmt->fetchColumn();
 
-        if ($total === 0) {
-            return ["items" => [], "total" => 0];
+        if ($total > 0) {
+            $stmt = $pdo->prepare(
+                "SELECT id, title, slug, author, excerpt, published_at,
+                        LEFT(content, 3000) AS content_preview
+                 FROM articles
+                 WHERE is_published = 1
+                   AND MATCH(title, excerpt, content) AGAINST(:q IN BOOLEAN MODE)
+                 ORDER BY MATCH(title, excerpt, content) AGAINST(:q IN BOOLEAN MODE) DESC,
+                          published_at DESC
+                 LIMIT :lim OFFSET :off",
+            );
+            $stmt->bindValue(":q", $ftQuery, PDO::PARAM_STR);
+            $stmt->bindValue(":lim", $perPage, PDO::PARAM_INT);
+            $stmt->bindValue(":off", $offset, PDO::PARAM_INT);
+            $stmt->execute();
+            $rows = $stmt->fetchAll();
+            $result = ["items" => $rows, "total" => $total];
         }
-
-        $stmt = $pdo->prepare(
-            "SELECT id, title, slug, author, excerpt, published_at,
-                    LEFT(content, 3000) AS content_preview
-             FROM articles
-             WHERE is_published = 1
-               AND MATCH(title, excerpt, content) AGAINST(:q IN BOOLEAN MODE)
-             ORDER BY MATCH(title, excerpt, content) AGAINST(:q IN BOOLEAN MODE) DESC,
-                      published_at DESC
-             LIMIT :lim OFFSET :off",
-        );
-        $stmt->bindValue(":q", $ftQuery, PDO::PARAM_STR);
-        $stmt->bindValue(":lim", $perPage, PDO::PARAM_INT);
-        $stmt->bindValue(":off", $offset, PDO::PARAM_INT);
-        $stmt->execute();
-        $rows = $stmt->fetchAll();
-
-        return ["items" => $rows, "total" => $total];
     } catch (\PDOException $e) {
-        return ["items" => [], "total" => 0];
+        $result = ["items" => [], "total" => 0];
     }
+
+    return $result;
 }
 
 function searchViaLike(
@@ -334,8 +336,9 @@ function searchViaLike(
     int $perPage,
     bool $useNormalized,
 ): array {
+    $result = ["items" => [], "total" => 0];
     if (empty($tokens)) {
-        return ["items" => [], "total" => 0];
+        return $result;
     }
 
     $whereParams = [];
@@ -379,36 +382,35 @@ function searchViaLike(
         $cntStmt->execute($whereParams);
         $total = (int) $cntStmt->fetchColumn();
 
-        if ($total === 0) {
-            return ["items" => [], "total" => 0];
-        }
+        if ($total > 0) {
+            $selSql = "SELECT id, title, slug, author, excerpt, published_at,
+                              LEFT(content, 3000) AS content_preview,
+                              ({$scoreExpr}) AS score
+                       FROM articles
+                       WHERE is_published = 1
+                         AND ({$whereClause})
+                       ORDER BY score DESC, published_at DESC
+                       LIMIT :lim OFFSET :off";
 
-        $selSql = "SELECT id, title, slug, author, excerpt, published_at,
-                          LEFT(content, 3000) AS content_preview,
-                          ({$scoreExpr}) AS score
-                   FROM articles
-                   WHERE is_published = 1
-                     AND ({$whereClause})
-                   ORDER BY score DESC, published_at DESC
-                   LIMIT :lim OFFSET :off";
-
-        $selStmt = $pdo->prepare($selSql);
-        foreach ($whereParams as $k => $v) {
-            $selStmt->bindValue(":" . $k, $v, PDO::PARAM_STR);
+            $selStmt = $pdo->prepare($selSql);
+            foreach ($whereParams as $k => $v) {
+                $selStmt->bindValue(":" . $k, $v, PDO::PARAM_STR);
+            }
+            foreach ($scoreParams as $k => $v) {
+                $selStmt->bindValue(":" . $k, $v, PDO::PARAM_STR);
+            }
+            $selStmt->bindValue(":lim", $perPage, PDO::PARAM_INT);
+            $selStmt->bindValue(":off", $offset, PDO::PARAM_INT);
+            $selStmt->execute();
+            $rows = $selStmt->fetchAll();
+            $result = ["items" => $rows, "total" => $total];
         }
-        foreach ($scoreParams as $k => $v) {
-            $selStmt->bindValue(":" . $k, $v, PDO::PARAM_STR);
-        }
-        $selStmt->bindValue(":lim", $perPage, PDO::PARAM_INT);
-        $selStmt->bindValue(":off", $offset, PDO::PARAM_INT);
-        $selStmt->execute();
-        $rows = $selStmt->fetchAll();
-
-        return ["items" => $rows, "total" => $total];
     } catch (\PDOException $e) {
         error_log("search_helpers.php LIKE error: " . $e->getMessage());
-        return ["items" => [], "total" => 0];
+        $result = ["items" => [], "total" => 0];
     }
+
+    return $result;
 }
 
 function buildSearchSnippet(

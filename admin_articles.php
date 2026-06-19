@@ -8,6 +8,14 @@ require_once __DIR__ . '/pdf_generator.php';
 
 requireAdmin();
 
+const DEFAULT_ARTICLE_AUTHOR = 'MUDr. Ľubomír Polaščín';
+const ERROR_INVALID_PUBLISH_DATE = 'Dátum publikácie je neplatný.';
+const ERROR_INVALID_ARTICLE_ID = 'Neplatné ID článku.';
+const ERROR_ARTICLE_NOT_FOUND = 'Článok nenájdený.';
+const ARTICLE_QUOTED_PREFIX = 'Článok „';
+const SQL_SELECT_SORT_ORDER_BY_ID = 'SELECT sort_order FROM articles WHERE id = :id';
+const SQL_UPDATE_SORT_ORDER_BY_ID = 'UPDATE articles SET sort_order = :sort WHERE id = :id';
+
 /**
  * Po vytvorení/úprave článku automaticky (pre)generuje jeho PDF verziu
  * a priradí ju (articles.pdf_file). Tiché zlyhanie (len log) — nesmie
@@ -23,7 +31,7 @@ function regenerateArticlePdfSafe(PDO $pdo, int $id, string $slug, string $title
             'id' => $id,
             'slug' => $slug,
             'title' => $title,
-            'author' => $author !== '' ? $author : 'MUDr. Ľubomír Polaščín',
+            'author' => $author !== '' ? $author : DEFAULT_ARTICLE_AUTHOR,
             'content' => $content,
             'published_at' => $pubAt,
         ], true);
@@ -192,7 +200,7 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
                 $title = trim((string) ($_POST["title"] ?? ""));
                 $slug = trim((string) ($_POST["slug"] ?? ""));
                 $author = trim(
-                    (string) ($_POST["author"] ?? "MUDr. Ľubomír Polaščín"),
+                    (string) ($_POST["author"] ?? DEFAULT_ARTICLE_AUTHOR),
                 );
                 $content = trim((string) ($_POST["content"] ?? ""));
                 $excerpt = trim((string) ($_POST["excerpt"] ?? ""));
@@ -223,13 +231,13 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
                     $pubAt === "" ||
                     !preg_match("/^\d{4}-\d{2}-\d{2}/", $pubAt)
                 ) {
-                    $actionError = "Dátum publikácie je neplatný.";
+                    $actionError = ERROR_INVALID_PUBLISH_DATE;
                     break;
                 }
                 // Normalizuj na MySQL DATETIME (akceptuje aj 'YYYY-MM-DDTHH:MM' z datetime-local).
                 $pubTs = strtotime($pubAt);
                 if ($pubTs === false) {
-                    $actionError = "Dátum publikácie je neplatný.";
+                    $actionError = ERROR_INVALID_PUBLISH_DATE;
                     break;
                 }
                 $pubAt = date("Y-m-d H:i:s", $pubTs);
@@ -250,7 +258,7 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
                         "title" => $title,
                         "slug" => $slug,
                         "author" =>
-                            $author !== "" ? $author : "MUDr. Ľubomír Polaščín",
+                            $author !== "" ? $author : DEFAULT_ARTICLE_AUTHOR,
                         "content" => $content,
                         "excerpt" => $excerpt,
                         "category" => $category,
@@ -314,7 +322,7 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
                 $excerpt = optimizeExcerptForSeo($excerpt, $content, 220);
 
                 if ($id <= 0) {
-                    $actionError = "Neplatné ID článku.";
+                    $actionError = ERROR_INVALID_ARTICLE_ID;
                     break;
                 }
                 if ($title === "") {
@@ -334,13 +342,13 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
                     $pubAt === "" ||
                     !preg_match("/^\d{4}-\d{2}-\d{2}/", $pubAt)
                 ) {
-                    $actionError = "Dátum publikácie je neplatný.";
+                    $actionError = ERROR_INVALID_PUBLISH_DATE;
                     break;
                 }
                 // Normalizuj na MySQL DATETIME (akceptuje aj 'YYYY-MM-DDTHH:MM' z datetime-local).
                 $pubTs = strtotime($pubAt);
                 if ($pubTs === false) {
-                    $actionError = "Dátum publikácie je neplatný.";
+                    $actionError = ERROR_INVALID_PUBLISH_DATE;
                     break;
                 }
                 $pubAt = date("Y-m-d H:i:s", $pubTs);
@@ -360,7 +368,7 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
                     $prevStmt->execute(["id" => $id]);
                     $prevRow = $prevStmt->fetch();
                     if (!$prevRow) {
-                        $actionError = "Článok nenájdený.";
+                        $actionError = ERROR_ARTICLE_NOT_FOUND;
                         break;
                     }
                     $previousPublished = (int) ($prevRow["is_published"] ?? 0);
@@ -383,7 +391,7 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
                         "title" => $title,
                         "slug" => $slug,
                         "author" =>
-                            $author !== "" ? $author : "MUDr. Ľubomír Polaščín",
+                            $author !== "" ? $author : DEFAULT_ARTICLE_AUTHOR,
                         "content" => $content,
                         "excerpt" => $excerpt,
                         "category" => $category,
@@ -444,7 +452,7 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
             case "enqueue_newsletter":
                 $id = (int) ($_POST["article_id"] ?? 0);
                 if ($id <= 0) {
-                    $actionError = "Neplatné ID článku.";
+                    $actionError = ERROR_INVALID_ARTICLE_ID;
                     break;
                 }
                 try {
@@ -471,7 +479,7 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
             case "requeue_failed_newsletter":
                 $id = (int) ($_POST["article_id"] ?? 0);
                 if ($id <= 0) {
-                    $actionError = "Neplatné ID článku.";
+                    $actionError = ERROR_INVALID_ARTICLE_ID;
                     break;
                 }
                 try {
@@ -587,7 +595,7 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
                 $id = (int) ($_POST["article_id"] ?? 0);
                 $setTop = (int) ($_POST["set_top"] ?? -1);
                 if ($id <= 0) {
-                    $actionError = "Neplatné ID článku.";
+                    $actionError = ERROR_INVALID_ARTICLE_ID;
                     break;
                 }
                 if (!in_array($setTop, [0, 1], true)) {
@@ -601,7 +609,7 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
                     $chk->execute(["id" => $id]);
                     $row = $chk->fetch();
                     if (!$row) {
-                        $actionError = "Článok nenájdený.";
+                        $actionError = ERROR_ARTICLE_NOT_FOUND;
                         break;
                     }
 
@@ -615,10 +623,10 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
                     );
                     $actionResult =
                         $setTop === 1
-                            ? "Článok „" .
+                            ? ARTICLE_QUOTED_PREFIX .
                                 $titleSafe .
                                 "“ bol označený ako TOP."
-                            : "Článok „" .
+                            : ARTICLE_QUOTED_PREFIX .
                                 $titleSafe .
                                 "“ bol vyradený z TOP sekcie.";
                 } catch (\PDOException $e) {
@@ -633,19 +641,19 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
             case "move_up":
                 $id = (int) ($_POST["article_id"] ?? 0);
                 if ($id <= 0) {
-                    $actionError = "Neplatné ID článku.";
+                    $actionError = ERROR_INVALID_ARTICLE_ID;
                     break;
                 }
                 try {
                     $pdo->beginTransaction();
                     $currentStmt = $pdo->prepare(
-                        "SELECT sort_order FROM articles WHERE id = :id",
+                        SQL_SELECT_SORT_ORDER_BY_ID,
                     );
                     $currentStmt->execute(["id" => $id]);
                     $current = $currentStmt->fetch();
                     if (!$current) {
                         $pdo->rollBack();
-                        $actionError = "Článok nenájdený.";
+                        $actionError = ERROR_ARTICLE_NOT_FOUND;
                         break;
                     }
                     $currentSort = (int) $current["sort_order"];
@@ -661,15 +669,15 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
                     }
                     $prevId = (int) $prev["id"];
                     $prevSortStmt = $pdo->prepare(
-                        "SELECT sort_order FROM articles WHERE id = :id",
+                        SQL_SELECT_SORT_ORDER_BY_ID,
                     );
                     $prevSortStmt->execute(["id" => $prevId]);
                     $prevSort = (int) $prevSortStmt->fetch()["sort_order"];
                     $pdo->prepare(
-                        "UPDATE articles SET sort_order = :sort WHERE id = :id",
+                        SQL_UPDATE_SORT_ORDER_BY_ID,
                     )->execute(["sort" => $prevSort, "id" => $id]);
                     $pdo->prepare(
-                        "UPDATE articles SET sort_order = :sort WHERE id = :id",
+                        SQL_UPDATE_SORT_ORDER_BY_ID,
                     )->execute(["sort" => $currentSort, "id" => $prevId]);
                     $pdo->commit();
                     $actionResult = "Článok bol presunutý vyššie.";
@@ -686,19 +694,19 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
             case "move_down":
                 $id = (int) ($_POST["article_id"] ?? 0);
                 if ($id <= 0) {
-                    $actionError = "Neplatné ID článku.";
+                    $actionError = ERROR_INVALID_ARTICLE_ID;
                     break;
                 }
                 try {
                     $pdo->beginTransaction();
                     $currentStmt = $pdo->prepare(
-                        "SELECT sort_order FROM articles WHERE id = :id",
+                        SQL_SELECT_SORT_ORDER_BY_ID,
                     );
                     $currentStmt->execute(["id" => $id]);
                     $current = $currentStmt->fetch();
                     if (!$current) {
                         $pdo->rollBack();
-                        $actionError = "Článok nenájdený.";
+                        $actionError = ERROR_ARTICLE_NOT_FOUND;
                         break;
                     }
                     $currentSort = (int) $current["sort_order"];
@@ -714,15 +722,15 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
                     }
                     $nextId = (int) $next["id"];
                     $nextSortStmt = $pdo->prepare(
-                        "SELECT sort_order FROM articles WHERE id = :id",
+                        SQL_SELECT_SORT_ORDER_BY_ID,
                     );
                     $nextSortStmt->execute(["id" => $nextId]);
                     $nextSort = (int) $nextSortStmt->fetch()["sort_order"];
                     $pdo->prepare(
-                        "UPDATE articles SET sort_order = :sort WHERE id = :id",
+                        SQL_UPDATE_SORT_ORDER_BY_ID,
                     )->execute(["sort" => $nextSort, "id" => $id]);
                     $pdo->prepare(
-                        "UPDATE articles SET sort_order = :sort WHERE id = :id",
+                        SQL_UPDATE_SORT_ORDER_BY_ID,
                     )->execute(["sort" => $currentSort, "id" => $nextId]);
                     $pdo->commit();
                     $actionResult = "Článok bol presunutý nižšie.";
@@ -739,7 +747,7 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
             case "delete":
                 $id = (int) ($_POST["article_id"] ?? 0);
                 if ($id <= 0) {
-                    $actionError = "Neplatné ID článku.";
+                    $actionError = ERROR_INVALID_ARTICLE_ID;
                     break;
                 }
                 try {
@@ -749,14 +757,14 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
                     $chk->execute(["id" => $id]);
                     $row = $chk->fetch();
                     if (!$row) {
-                        $actionError = "Článok nenájdený.";
+                        $actionError = ERROR_ARTICLE_NOT_FOUND;
                         break;
                     }
                     $pdo->prepare(
                         "DELETE FROM articles WHERE id = :id",
                     )->execute(["id" => $id]);
                     $actionResult =
-                        "Článok „" .
+                        ARTICLE_QUOTED_PREFIX .
                         htmlspecialchars((string) $row["title"]) .
                         '" bol odstránený.';
                 } catch (\PDOException $e) {
@@ -765,6 +773,9 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
                     );
                     $actionError = "Chyba pri mazaní článku.";
                 }
+                break;
+            default:
+                $actionError = "Neznáma akcia.";
                 break;
         }
     }
@@ -874,8 +885,8 @@ $pageTimeZone = date("T") . " (" . date_default_timezone_get() . ")";
   $headerTitle = "Správa článkov";
   $headerIntro = "CRUD rozhranie pre správu článkov";
   $showLogo = false;
-  include "header.php";
-  include 'admin_menu.php';
+    include_once "header.php";
+    include_once 'admin_menu.php';
   ?>
 
   <main id="main-content" class="container container--wide admin-page-main" role="main">
@@ -941,7 +952,7 @@ $pageTimeZone = date("T") . " (" . date_default_timezone_get() . ")";
               <input type="text" id="f_author" name="author" maxlength="255" list="article-author-options"
                      value="<?= htmlspecialchars(
                          (string) ($editArticle["author"] ??
-                             "MUDr. Ľubomír Polaščín"),
+                             DEFAULT_ARTICLE_AUTHOR),
                      ) ?>">
               <?php if (!empty($articleAuthorOptions)): ?>
                 <datalist id="article-author-options">
@@ -1216,7 +1227,7 @@ $filterArticleId
                   <td class="admin-article-title"><?= $idx +
                       1 ?></td>
                   <td>
-                    <a href="article.php?id=<?= $aId ?>" target="_blank"><?= $aTitle ?></a>
+                    <a href="article.php?id=<?= $aId ?>" target="_blank" aria-label="Zobraziť článok <?= $aTitle ?>"><?= $aTitle ?></a>
                     <?php if (
                         $aTop
                     ): ?><br><span class="badge-top-sm">★ TOP</span><?php endif; ?>
@@ -1321,7 +1332,7 @@ $filterArticleId
                                 <?php if ($p === $articlesPage): ?>
                                     <span class="articles-page-link is-active" aria-current="page"><?= $p ?></span>
                                 <?php else: ?>
-                                    <a class="articles-page-link" href="admin_articles.php?page=<?= $p ?>"><?= $p ?></a>
+                                    <a class="articles-page-link" href="admin_articles.php?page=<?= $p ?>" aria-label="Strana <?= $p ?>"><?= $p ?></a>
                                 <?php endif; ?>
                             <?php endfor; ?>
                         </div>
@@ -1332,7 +1343,7 @@ $filterArticleId
     </div><!-- /.auth-container -->
   </main>
 
-  <?php include "footer.php"; ?>
+    <?php include_once "footer.php"; ?>
 
 </body>
 </html>
