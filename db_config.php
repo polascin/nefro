@@ -744,6 +744,67 @@ function formatProjectArticleCountLabel(int $count): string {
     return formatProjectPublicCount($count) . ' ' . $unit;
 }
 
+/**
+ * Slovenský tvar počtu autorov (1 autor / 2–4 autori / 5+ autorov).
+ * Pre widget „Zúčastnení autori" (celkový počet).
+ */
+function formatParticipatingAuthorsLabel(int $count): string {
+    $count = max(0, $count);
+    $unit = match ($count) {
+        1 => 'autor',
+        2, 3, 4 => 'autori',
+        default => 'autorov',
+    };
+
+    return formatProjectPublicCount($count) . ' ' . $unit;
+}
+
+/**
+ * Mená autorov projektu — na odlíšenie od pôvodných autorov zdrojových článkov
+ * vo widgete „Zúčastnení autori". Zatiaľ jediný autor projektu.
+ *
+ * @return array<int,string>
+ */
+function getProjectAuthorNames(): array {
+    return ['MUDr. Ľubomír Polaščín'];
+}
+
+/**
+ * Rozdelí agregovaný zoznam zúčastnených autorov (z fetchProjectAuthors) na
+ * autora/autorov projektu a pôvodných autorov zdrojových článkov a uvedie
+ * celkový počet. Jednotný zdroj pre widget „Zúčastnení autori".
+ *
+ * @param array<int,array{author:string,articles:int}> $authors
+ * @return array{project:array<int,array{author:string,articles:int}>,sources:array<int,array{author:string,articles:int}>,total:int}
+ */
+function splitParticipatingAuthors(array $authors): array {
+    $projectKeys = [];
+    foreach (getProjectAuthorNames() as $name) {
+        $key = normalizeAuthorIdentity($name);
+        if ($key !== '') {
+            $projectKeys[$key] = true;
+        }
+    }
+
+    $project = [];
+    $sources = [];
+    $total = 0;
+    foreach ($authors as $authorStat) {
+        $name = trim($authorStat['author']);
+        if ($name === '') {
+            continue;
+        }
+        $total++;
+        if (isset($projectKeys[normalizeAuthorIdentity($name)])) {
+            $project[] = $authorStat;
+        } else {
+            $sources[] = $authorStat;
+        }
+    }
+
+    return ['project' => $project, 'sources' => $sources, 'total' => $total];
+}
+
 // ── Číselník akademických a iných titulov ───────────────────────────────────
 
 /**

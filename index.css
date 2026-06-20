@@ -1023,6 +1023,32 @@ code {
     font-weight: 700;
 }
 
+.project-authors__note {
+    margin: 0 0 12px;
+    color: var(--text-secondary);
+    font-size: 0.82rem;
+    line-height: 1.45;
+}
+
+.project-authors__note strong {
+    color: var(--text-primary);
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.project-authors__group-label {
+    margin: 14px 0 8px;
+    color: var(--text-primary);
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.project-authors__group-label:first-of-type {
+    margin-top: 0;
+}
+
 .project-authors ul {
     margin: 0;
     padding: 0;

@@ -430,35 +430,10 @@ if ($article) {
             ? $projectPublicStats["authors"]
             : [];
         ?>
-        <?php if (!empty($projectAuthors)): ?>
-        <div class="project-authors" aria-label="Autori článkov podľa počtu príspevkov">
-          <h4>Zúčastnení autori</h4>
-          <ul class="expandable-list" data-limit="8">
-            <?php foreach ($projectAuthors as $authorStat):
-                $authorName = trim((string) ($authorStat["author"] ?? ""));
-                if ($authorName === "") {
-                    continue;
-                }
-                $authorArticles = (int) ($authorStat["articles"] ?? 0);
-                ?>
-            <li>
-              <a href="index.php?autor=<?= urlencode($authorName) ?>#autor-articles-heading"
-                 class="author-filter-link"
-                 aria-label="Zobraziť články autora <?= htmlspecialchars($authorName, ENT_QUOTES, "UTF-8") ?>">
-                <?= htmlspecialchars($authorName, ENT_QUOTES, "UTF-8") ?>
-              </a>
-              <strong><?= htmlspecialchars(
-                  formatProjectArticleCountLabel($authorArticles),
-                  ENT_QUOTES,
-                  "UTF-8",
-              ) ?></strong>
-            </li>
-            <?php
-            endforeach; ?>
-          </ul>
-          <button class="show-more-btn no-print" type="button">Zobraziť viac</button>
-        </div>
-        <?php endif; ?>
+        <?php
+        $authorFilterBase = "index.php";
+        include "widget_participating_authors.php";
+        ?>
         <a href="index.php" class="btn-primary article-back-link">Všetky články</a>
       </div>
       <div class="widget newsletter-widget">
