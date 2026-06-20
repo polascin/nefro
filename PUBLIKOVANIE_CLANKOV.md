@@ -2,9 +2,9 @@
 
 Na portáli sú **dve kategórie** článkov:
 
-| Kategória | `category` | Kde sa zobrazí | Šablóna |
-|-----------|-----------|----------------|---------|
-| **Odborné** | `odborne` | Úvodná stránka ([index.php](index.php)) | `add_TEMPLATE_article.php` |
+| Kategória                          | `category`  | Kde sa zobrazí                                        | Šablóna                            |
+| ---------------------------------- | ----------- | ----------------------------------------------------- | ---------------------------------- |
+| **Odborné**                        | `odborne`   | Úvodná stránka ([index.php](index.php))               | `add_TEMPLATE_article.php`         |
 | **Pre pacientov** (populariza­čné) | `popularne` | Sekcia „Pre pacientov“ ([populars.php](populars.php)) | `add_TEMPLATE_popular_article.php` |
 
 Oba typy zdieľajú rovnakú databázovú tabuľku `articles`, rovnaké zobrazenie cez
@@ -49,7 +49,7 @@ poľom `category` a tým, kde sú vypísané.
 1. **Vyber šablónu podľa kategórie** a skopíruj na `add_<slug>_article.php`:
    - odborný → `cp add_TEMPLATE_article.php add_<slug>_article.php`
    - pre pacientov → `cp add_TEMPLATE_popular_article.php add_<slug>_article.php`
-   (kategória `popularne` je v popular šablóne napevno — needituj ju).
+     (kategória `popularne` je v popular šablóne napevno — needituj ju).
 2. **Slug:** len `a-z 0-9 -`, diakritika → ASCII (`á→a č→c š→s ž→z ľ→l ý→y í→i …`).
    Názov súboru aj `slug` musia byť ASCII (SFTP deploy zlyhá na diakritike/medzerách).
 3. **Vyplň** `title`, `slug`, `excerpt` (~120–220 znakov, čistý text), `content` (HTML),
@@ -103,15 +103,15 @@ Alebo cielene na serveri: `php generate_all_article_pdfs.php --slug=<slug> --for
 
 ## Polia článku
 
-| Pole | Význam | Pravidlá |
-|------|--------|----------|
-| `title` | Nadpis (`<h1>`) | Čistý text, bez HTML |
-| `slug` | Časť URL | Len `a-z 0-9 -`, unikátny, diakritika → ASCII (á→a, č→c, š→s, ž→z, ľ→l) |
-| `author` | Autor | Predvolene `MUDr. Ľubomír Polaščín` |
-| `published_at` | Dátum/čas | Predvolene teraz; uprav ak treba |
-| `is_top` | Odporúčaný | `0` bežný / `1` navrchu s odznakom |
-| `excerpt` | Perex | 1–2 vety, čistý text, ~120–220 znakov |
-| `content` | Telo (HTML) | Nezačínaj `<h2>` zhodným s titulom; nadpisy `<h2>/<h3>`, zoznamy `<ul>/<ol>`, odkazy `target="_blank" rel="noopener noreferrer"` |
+| Pole           | Význam          | Pravidlá                                                                                                                         |
+| -------------- | --------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `title`        | Nadpis (`<h1>`) | Čistý text, bez HTML                                                                                                             |
+| `slug`         | Časť URL        | Len `a-z 0-9 -`, unikátny, diakritika → ASCII (á→a, č→c, š→s, ž→z, ľ→l)                                                          |
+| `author`       | Autor           | Predvolene `MUDr. Ľubomír Polaščín`                                                                                              |
+| `published_at` | Dátum/čas       | Predvolene teraz; uprav ak treba                                                                                                 |
+| `is_top`       | Odporúčaný      | `0` bežný / `1` navrchu s odznakom                                                                                               |
+| `excerpt`      | Perex           | 1–2 vety, čistý text, ~120–220 znakov                                                                                            |
+| `content`      | Telo (HTML)     | Nezačínaj `<h2>` zhodným s titulom; nadpisy `<h2>/<h3>`, zoznamy `<ul>/<ol>`, odkazy `target="_blank" rel="noopener noreferrer"` |
 
 > **UPSERT (idempotentné):** šablóny používajú `INSERT … ON DUPLICATE KEY UPDATE`.
 > Prvé spustenie článok **vloží** (a pošle newsletter avízo + vygeneruje PDF);

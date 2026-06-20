@@ -5,11 +5,13 @@ This directory contains Git hooks configuration for automatic push on commit.
 ## Setup
 
 ### On Windows (PowerShell):
+
 ```powershell
 .\hooks\install.ps1
 ```
 
 ### On macOS/Linux:
+
 ```bash
 cp hooks/post-commit .git/hooks/post-commit
 chmod +x .git/hooks/post-commit
@@ -18,6 +20,7 @@ chmod +x .git/hooks/post-commit
 ## What it does
 
 The `post-commit` hook automatically runs `git push` after every local commit. This ensures:
+
 - Changes are always synchronized to the remote repository
 - No need to manually run `git push` after each commit
 - Workflow consistency across the team
@@ -32,6 +35,7 @@ The `post-commit` hook automatically runs `git push` after every local commit. T
 ## Disabling (if needed)
 
 To temporarily disable the hook:
+
 ```bash
 # Rename to disable
 mv .git/hooks/post-commit .git/hooks/post-commit.disabled

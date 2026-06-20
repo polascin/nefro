@@ -45,15 +45,15 @@ Odporúčaný pomer náhľadu je cca **16:9**; karta obrázok automaticky oreže
 
 V skopírovanom súbore uprav pole `$articles[]`:
 
-| Pole | Význam | Pravidlá |
-|------|--------|----------|
-| `title` | Nadpis (zobrazí sa ako `<h1>`) | Čistý text, bez HTML, zrozumiteľný laikovi |
-| `slug` | Časť URL (`article.php?slug=…`) | Len `a-z 0-9 -`, max ~80 znakov, **unikátny**. Diakritika → ASCII (á→a, č→c, š→s, ž→z, ľ→l) |
-| `author` | Autor | Predvolene `MUDr. Ľubomír Polaščín` |
-| `published_at` | Dátum a čas | Predvolene `date('Y-m-d H:i:s')` (teraz); uprav ak treba |
-| `is_top` | Odporúčaný | `0` = bežný, `1` = navrchu sekcie s odznakom „Odporúčané“ |
-| `excerpt` | Perex na karte | 1–2 vety, čistý text, cca 120–220 znakov |
-| `content` | Telo článku | HTML — pozri nižšie |
+| Pole           | Význam                          | Pravidlá                                                                                    |
+| -------------- | ------------------------------- | ------------------------------------------------------------------------------------------- |
+| `title`        | Nadpis (zobrazí sa ako `<h1>`)  | Čistý text, bez HTML, zrozumiteľný laikovi                                                  |
+| `slug`         | Časť URL (`article.php?slug=…`) | Len `a-z 0-9 -`, max ~80 znakov, **unikátny**. Diakritika → ASCII (á→a, č→c, š→s, ž→z, ľ→l) |
+| `author`       | Autor                           | Predvolene `MUDr. Ľubomír Polaščín`                                                         |
+| `published_at` | Dátum a čas                     | Predvolene `date('Y-m-d H:i:s')` (teraz); uprav ak treba                                    |
+| `is_top`       | Odporúčaný                      | `0` = bežný, `1` = navrchu sekcie s odznakom „Odporúčané“                                   |
+| `excerpt`      | Perex na karte                  | 1–2 vety, čistý text, cca 120–220 znakov                                                    |
+| `content`      | Telo článku                     | HTML — pozri nižšie                                                                         |
 
 Pole `category` netreba nastavovať — šablóna ho má napevno na `'popularne'`.
 
@@ -63,7 +63,12 @@ Pole `category` netreba nastavovať — šablóna ho má napevno na `'popularne'
 - Obrázok:
   ```html
   <figure>
-    <img src="img/subor.png" alt="Popis obrázka" loading="lazy" decoding="async">
+    <img
+      src="img/subor.png"
+      alt="Popis obrázka"
+      loading="lazy"
+      decoding="async"
+    />
     <figcaption>Popis pod obrázkom.</figcaption>
   </figure>
   ```
@@ -124,7 +129,7 @@ pacientov“ funguje.
 
 Cez **Administrácia → Správa článkov**:
 
-- Pole **Kategória** prepína *Odborný článok (Domov)* ↔ *Popularizačný – Pre pacientov*.
+- Pole **Kategória** prepína _Odborný článok (Domov)_ ↔ _Popularizačný – Pre pacientov_.
 - Tu vieš upraviť aj titul, perex, obsah, dátum a stav „Zverejnený“.
 
 Takto vieš napr. preklopiť existujúci odborný článok do sekcie pre pacientov
@@ -134,13 +139,13 @@ Takto vieš napr. preklopiť existujúci odborný článok do sekcie pre pacient
 
 ## Časté problémy
 
-| Problém | Príčina / riešenie |
-|---------|--------------------|
-| Článok sa „neaktualizoval“ (0/0) | Obsah je identický s DB — žiadna zmena; uprav `content`/`excerpt` a spusti znova |
-| Náhľad karty je prázdny (ikona 🩺) | V obsahu nie je `<img>`, alebo cesta k obrázku je zlá |
-| Obrázok sa nezobrazuje | Súbor nie je commitnutý / chýba v `img/` na serveri |
-| Článok sa zobrazuje na úvodnej stránke | Má `category = 'odborne'` — preklop na *Pre pacientov* v admine |
-| `Unknown column 'category'` | Na novom prostredí spusti `add_category_migration.php` na serveri |
+| Problém                                | Príčina / riešenie                                                               |
+| -------------------------------------- | -------------------------------------------------------------------------------- |
+| Článok sa „neaktualizoval“ (0/0)       | Obsah je identický s DB — žiadna zmena; uprav `content`/`excerpt` a spusti znova |
+| Náhľad karty je prázdny (ikona 🩺)     | V obsahu nie je `<img>`, alebo cesta k obrázku je zlá                            |
+| Obrázok sa nezobrazuje                 | Súbor nie je commitnutý / chýba v `img/` na serveri                              |
+| Článok sa zobrazuje na úvodnej stránke | Má `category = 'odborne'` — preklop na _Pre pacientov_ v admine                  |
+| `Unknown column 'category'`            | Na novom prostredí spusti `add_category_migration.php` na serveri                |
 
 ---
 

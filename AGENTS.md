@@ -3,6 +3,7 @@
 This file provides guidance to WARP (warp.dev) when working with code in this repository.
 
 ## Development commands
+
 - Install local git hooks (auto-push on commit): `pwsh -File .\hooks\install.ps1`
 - Initialise/update database schema and seed codebooks: `php .\setup_db.php`
 - Run PHP syntax lint across the repository: `php .\tools\lint_all.php`
@@ -13,18 +14,21 @@ This file provides guidance to WARP (warp.dev) when working with code in this re
 - Static analysis (PHAR, no Composer): `php tools\phpstan.phar analyse --no-progress` (baseline blocks only NEW issues); style: `php tools\php-cs-fixer.phar fix --dry-run --diff`. Install: `pwsh -File .\tools\install-dev-tools.ps1`.
 
 ## Runtime and configuration
+
 - App is plain PHP (no framework) with MariaDB via PDO.
 - Environment values are loaded via `config_loader.php`, with this practical priority:
-  1) `NEFRO_ENV_PATH`
-  2) `../nefro.env.ini`
-  3) `../private/nefro.env.ini`
-  4) `../private/env.ini`
-  5) local fallback `env.ini` in repo root
+  1. `NEFRO_ENV_PATH`
+  2. `../nefro.env.ini`
+  3. `../private/nefro.env.ini`
+  4. `../private/env.ini`
+  5. local fallback `env.ini` in repo root
 - `db_config.php` always uses `utf8mb4` and `PDO::ATTR_EMULATE_PREPARES = false`.
 - For newsletter unsubscribe signing, set `NEWSLETTER_UNSUBSCRIBE_SECRET` in env config.
 
 ## High-level architecture
+
 ### 1) Page-oriented PHP application
+
 - Each route is a top-level `*.php` file (for example `index.php`, `search.php`, `calculator_*.php`, `admin*.php`).
 - Shared bootstrap pattern on most pages:
   - `auth.php` for session/security/CSRF/auth helpers
@@ -32,12 +36,14 @@ This file provides guidance to WARP (warp.dev) when working with code in this re
   - shared layout includes: `header.php`, `main_nav.php`, `footer.php`, `head_meta.php`
 
 ### 2) Security and session layer (`auth.php`)
+
 - Centralises security headers (CSP nonce, HSTS, frame/content/referrer policies, etc.).
 - Starts and hardens session settings, applies idle timeout, and exposes auth guards:
   - `isLoggedIn()`, `requireLogin()`, `isAdmin()`, `requireAdmin()`
 - Provides CSRF token generation/validation with token rotation after POST validation.
 
 ### 3) Data model and migrations (`setup_db.php`)
+
 - Schema creation and migrations are code-driven and idempotent in one CLI script.
 - Core domains in schema:
   - Users/auth/security tables (`users`, `login_attempts`, `totp_attempts`, `password_resets`, `form_rate_limit`)
@@ -48,11 +54,12 @@ This file provides guidance to WARP (warp.dev) when working with code in this re
   - Slovak codebooks (`title_codebook`, insurance, country/region/district/municipality tables)
 
 ### 4) Main feature verticals
+
 - **Public content**: article listing and SEO-rich metadata in `index.php`; article detail in `article.php`.
 - **Search**: `search.php` + `search_helpers.php` implement tokenisation, Slovak normalisation, stop-word filtering, and search fallback order:
-  1) FULLTEXT (`ft_articles_search`) when available
-  2) LIKE search
-  3) normalised LIKE search
+  1. FULLTEXT (`ft_articles_search`) when available
+  2. LIKE search
+  3. normalised LIKE search
 - **Clinical calculators**:
   - catalogue in `calculators.php`
   - individual calculators in `calculator_*.php`
@@ -66,6 +73,7 @@ This file provides guidance to WARP (warp.dev) when working with code in this re
   - supports both registered users and anonymous subscribers.
 
 ## Non-obvious project constraints
+
 - There is no Composer/PHPUnit test harness in this repo; use the provided smoke and lint scripts for verification.
 - Do not introduce PHPUnit.
 - Keep text and data handling UTF-8 safe; repository scripts include explicit UTF-8/BOM checks.

@@ -33,7 +33,7 @@ cli:
 plugins:
   sources:
     - id: trunk
-      ref: v1.6.8
+      ref: v1.10.2
       uri: https://github.com/trunk-io/plugins
 
 # Runtimes (node/php/python/go) Trunk doplní a napne automaticky podľa potreby
@@ -42,14 +42,15 @@ plugins:
 
 lint:
   enabled:
+    - checkov@3.3.1
     - git-diff-check # konfliktné značky / poškodené diffy (vstavané)
-    - gitleaks@8.18.4 # detekcia tajomstiev (auth/GDPR/DB heslá) — kľúčové
-    - prettier@3.4.2 # formát MD/JSON/YAML (CSS/JS sú ignorované nižšie)
-    - markdownlint@0.43.0 # štruktúra Markdownu (PUBLIKOVANIE_*.md, AGENTS.md…)
-    - shellcheck@0.10.0 # deploy.sh, sync_article_pdfs.sh
+    - gitleaks@8.30.1 # detekcia tajomstiev (auth/GDPR/DB heslá) — kľúčové
+    - prettier@3.8.4 # formát MD/JSON/YAML (CSS/JS sú ignorované nižšie)
+    - markdownlint@0.49.0 # štruktúra Markdownu (PUBLIKOVANIE_*.md, AGENTS.md…)
+    - shellcheck@0.11.0 # deploy.sh, sync_article_pdfs.sh
     - shfmt@3.6.1 # formát shell skriptov
     - yamllint@1.38.0 # tento súbor + prípadné ďalšie YAML
-    - taplo@0.9.3 # TOML
+    - taplo@0.10.0 # TOML
 
   disabled:
     - phpstan # PHP rieši natívny PHAR (quality.ps1); v Trunku/WSL chýba PHP
@@ -85,6 +86,8 @@ lint:
 
 actions:
   enabled:
+    - trunk-check-pre-push
+    - trunk-fmt-pre-commit
     - trunk-announce
     - trunk-cache-prune
     - trunk-upgrade-available
@@ -94,5 +97,5 @@ actions:
 runtimes:
   enabled:
     - go@1.21.0
-    - node@18.20.5
-    - python@3.10.8
+    - node@22.16.0
+    - python@3.14.4

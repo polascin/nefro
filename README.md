@@ -25,14 +25,17 @@ Ak ziaden data-protection kluc nie je nastaveny, aplikacia jednorazovo vytvori `
 Použi krátky smoke test po zmenách v autentifikácii. Over minimálne tieto 3 scenáre:
 
 1. Overený používateľ
+
 - Prihlásenie s platným účtom a overeným e-mailom.
 - Očakávanie: úspešné prihlásenie a presmerovanie na `index.php`.
 
 2. Neoverený používateľ
+
 - Prihlásenie s platným účtom, kde `email_verified_at` je `NULL`.
 - Očakávanie: prihlásenie je povolené, ale po prihlásení sa zobrazí upozornenie o neoverenom e-maile a obmedzení služieb.
 
 3. Blokovaná IP
+
 - Simuluj viac neúspešných pokusov alebo nastav `blocked_until` do budúcnosti pre testovaciu IP.
 - Očakávanie: prihlásenie je odmietnuté a stránka zobrazí dôvod + zostávajúci čas blokácie.
 
@@ -62,9 +65,9 @@ Poznámka: `VA...` je Twilio Verify Service SID (nie Phone Number SID). Overovac
 Pri publikovaní článku v administrácii sa e-mailové novinky zapisujú do fronty `article_newsletter_queue`.
 
 - Posiela sa iba používateľom, ktorí majú:
-	- `newsletter_consent = 1`
-	- `is_active = 1`
-	- overený e-mail (`email_verified_at` nie je `NULL`)
+  - `newsletter_consent = 1`
+  - `is_active = 1`
+  - overený e-mail (`email_verified_at` nie je `NULL`)
 - SMS sa v tomto procese nepoužíva.
 - Každý newsletter obsahuje na konci jedinečný odkaz na odhlásenie odberu.
 - Odkaz otvorí potvrdzovací formulár; až CSRF-chránený POST nastaví `newsletter_consent = 0` a zruší čakajúce položky vo fronte (`pending`/`failed`).
@@ -93,4 +96,3 @@ if ($pyFiles.Count -gt 0) {
   Write-Host "No Python files found."
 }
 ```
-
