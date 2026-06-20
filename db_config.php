@@ -10,6 +10,7 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
  * Konfigurácia pripojenia k databáze
  */
 require_once __DIR__ . '/config_loader.php';
+require_once __DIR__ . '/source_authors.php';
 
 try {
     $env = loadAppConfig();
@@ -105,9 +106,15 @@ function fetchProjectStatsMeta(\PDO $pdo): array {
         $row = $stmt->fetch(\PDO::FETCH_ASSOC) ?: [];
         $meta['published_articles'] = max(0, (int) ($row['published_articles'] ?? 0));
         $meta['users_total'] = max(0, (int) ($row['users_total'] ?? 0));
+        // Fingerprint mapy zdrojových autorov — zmena source_authors.php
+        // automaticky invaliduje cache (inak by signatúra závisela len od článkov).
+        $sourceFingerprint = function_exists('getSourceArticleAuthors')
+            ? crc32((string) json_encode(getSourceArticleAuthors()))
+            : 0;
         $meta['signature'] = hash(
             'sha256',
-            $meta['published_articles'] . '|' . (string) ($row['max_updated'] ?? '') . '|' . $meta['users_total']
+            $meta['published_articles'] . '|' . (string) ($row['max_updated'] ?? '')
+                . '|' . $meta['users_total'] . '|' . $sourceFingerprint
         );
     } catch (\PDOException $e) {
         error_log('project stats: chyba načítania verejných štatistík: ' . $e->getMessage());
@@ -182,7 +189,7 @@ function fetchProjectAuthors(\PDO $pdo): array {
 
     try {
         $authorsStmt = $pdo->query(
-            "SELECT TRIM(author) AS author_name, content
+            "SELECT TRIM(author) AS author_name, slug, content
              FROM articles
              WHERE is_published = 1"
         );
@@ -235,6 +242,19 @@ function articleAuthorIdentities(array $row): array {
     $register($parsed['source']);
     // Pôvodný autor zdroja vyťažený zo značky "Zdroj:" v obsahu článku.
     $register(extractOriginalSourceFirstAuthor($content));
+
+    // Pôvodní autori zdrojového článku (z odkazu „Zdroj:") — doplnková mapa
+    // podľa slugu, vyťažená cez otvorené bibliografické API (source_authors.php).
+    static $sourceMap = null;
+    if ($sourceMap === null) {
+        $sourceMap = function_exists('getSourceArticleAuthors') ? getSourceArticleAuthors() : [];
+    }
+    $slug = (string) ($row['slug'] ?? '');
+    if ($slug !== '' && isset($sourceMap[$slug])) {
+        foreach ($sourceMap[$slug] as $sourceAuthor) {
+            $register((string) $sourceAuthor);
+        }
+    }
 
     return $identities;
 }
