@@ -762,6 +762,11 @@ p {
     font-size: 0.95rem;
 }
 
+.source-author {
+    color: var(--text-tertiary);
+    font-size: 0.85rem;
+}
+
 code {
     background-color: var(--code-bg);
     padding: 4px 8px;

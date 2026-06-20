@@ -126,9 +126,14 @@ $siteName = "Nefro-projekt Slovensko";
 $baseUrl = "https://nefro.polascin.net/";
 
 $articleTitleRaw = $article ? (string) ($article["title"] ?? "") : "";
-$articleAuthorRaw = $article
-    ? (string) ($article["author"] ?? "MUDr. Ľubomír Polaščín")
-    : "MUDr. Ľubomír Polaščín";
+// Autor projektu + pôvodní autori zdroja (odvodené z poľa author a citácie „Zdroj:").
+$bylineAuthors = $article
+    ? getArticleBylineAuthors(
+        (string) ($article["author"] ?? ""),
+        (string) ($article["content"] ?? ""),
+    )
+    : ["project" => "MUDr. Ľubomír Polaščín", "sources" => []];
+$articleAuthorPrimary = $bylineAuthors["project"];
 $canonicalUrlRaw = $article
     ? $baseUrl . "article.php?slug=" . (string) ($article["slug"] ?? "")
     : "";
@@ -185,11 +190,7 @@ if ($article) {
                     ? "Patient"
                     : "Clinician",
         ],
-        "author" => [
-            "@type" => "Person",
-            "name" => $articleAuthorRaw,
-            "sameAs" => "https://polascin.com/",
-        ],
+        "author" => buildArticleAuthorSchema($bylineAuthors),
         "publisher" => [
             "@type" => "MedicalOrganization",
             "name" => $siteName,
@@ -263,7 +264,7 @@ if ($article) {
       ENT_QUOTES,
   ) ?>">
   <meta property="article:author" content="<?= htmlspecialchars(
-      $articleAuthorRaw,
+      $articleAuthorPrimary,
       ENT_QUOTES,
   ) ?>">
   <?php endif; ?>
@@ -350,8 +351,20 @@ if ($article) {
           <footer>
             <p class="author">
               Autor: <span class="authorname"><?= htmlspecialchars(
-                  (string) $article["author"],
+                  $bylineAuthors["project"],
               ) ?></span>
+              <?php if (!empty($bylineAuthors["sources"])): ?>
+                <span class="source-author">·
+                  <?= count($bylineAuthors["sources"]) > 1
+                      ? "Pôvodní autori zdroja"
+                      : "Pôvodný autor zdroja" ?>:
+                  <?php foreach ($bylineAuthors["sources"] as $i => $sourceAuthor): ?><?= $i > 0
+                          ? ", "
+                          : "" ?><span class="authorname"><?= htmlspecialchars(
+                          $sourceAuthor,
+                      ) ?></span><?php endforeach; ?>
+                </span>
+              <?php endif; ?>
             </p>
             <?php if (isAdmin()): ?>
               <p class="article-admin-actions">

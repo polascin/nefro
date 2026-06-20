@@ -275,6 +275,78 @@ function parseArticleAuthorField(string $author): array {
 }
 
 /**
+ * Odvodí autorov pre byline článku: autora projektu (predvolene
+ * „MUDr. Ľubomír Polaščín") a zoznam pôvodných autorov zdroja (len osoby)
+ * z poľa `author` („… (Medscape); Autor: …") a z citácie „Zdroj:" v obsahu.
+ * Publikácie/časopisy ostávajú v citácii „Zdroj:" v tele článku.
+ *
+ * @return array{project:string,sources:array<int,string>}
+ */
+function getArticleBylineAuthors(string $author, string $content): array {
+    $parsed = parseArticleAuthorField($author);
+
+    $project = $parsed['project'];
+    if (!isLikelyPersonalAuthorName($project)) {
+        $project = 'MUDr. Ľubomír Polaščín';
+    }
+
+    $sources = [];
+    $seen = [normalizeAuthorIdentity($project) => true];
+
+    // Pole `author` („Meno (Medscape); Autor: …") je kurátorský zdroj autora;
+    // citáciu „Zdroj:" v obsahu použijeme len ako fallback, keď pole autora
+    // neobsahuje osobu — inak by sa tá istá osoba mohla zopakovať v dvoch
+    // notáciách („Batya Swift Yasgur" vs. „Yasgur BS").
+    $candidates = isLikelyPersonalAuthorName(trim($parsed['source']))
+        ? [$parsed['source']]
+        : [extractOriginalSourceFirstAuthor($content)];
+
+    foreach ($candidates as $candidate) {
+        $candidate = trim($candidate);
+        if ($candidate === '' || !isLikelyPersonalAuthorName($candidate)) {
+            continue;
+        }
+
+        $key = normalizeAuthorIdentity($candidate);
+        if ($key === '' || isset($seen[$key])) {
+            continue;
+        }
+
+        $sources[] = $candidate;
+        $seen[$key] = true;
+    }
+
+    return ['project' => $project, 'sources' => $sources];
+}
+
+/**
+ * Postaví schema.org `author` z výsledku getArticleBylineAuthors():
+ * jeden Person objekt (autor projektu), alebo pole Person pri viacerých
+ * (projekt + pôvodní autori zdroja).
+ *
+ * @param array{project:string,sources:array<int,string>} $bylineAuthors
+ * @return array<string,mixed>|array<int,array<string,mixed>>
+ */
+function buildArticleAuthorSchema(array $bylineAuthors): array {
+    $projectAuthor = [
+        '@type' => 'Person',
+        'name' => $bylineAuthors['project'],
+        'sameAs' => 'https://polascin.com/',
+    ];
+
+    if (empty($bylineAuthors['sources'])) {
+        return $projectAuthor;
+    }
+
+    $authors = [$projectAuthor];
+    foreach ($bylineAuthors['sources'] as $sourceName) {
+        $authors[] = ['@type' => 'Person', 'name' => $sourceName];
+    }
+
+    return $authors;
+}
+
+/**
  * @param array<string,array{author:string,articles:int}> $authorBuckets
  */
 function registerAuthorContribution(array &$authorBuckets, string $authorName): string {
