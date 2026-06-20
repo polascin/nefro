@@ -87,7 +87,9 @@ poľom `category` a tým, kde sú vypísané.
 > agregácii naprieč článkami. Bez mapy funguje len obmedzený fallback: prvý
 > autor z presnej značky `Zdroj:` v obsahu (zoznam `Zdroje` sa neparsuje).
 > Pôvodný (originálny) článok bez konkrétneho zdroja ostáva len pod autorom
-> projektu — to je správne.
+> projektu — to je správne. **NEpridávaj autorov štúdií/odporúčaní len
+> _citovaných_ v origináli** (napr. zoznam „Zdroje" pod pôvodným článkom) —
+> mapa je len pre autorov skutočného spracovaného zdroja.
 
 ### B) Regenerovať / upraviť existujúci článok
 

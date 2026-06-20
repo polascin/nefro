@@ -14,6 +14,11 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
  * za paywallom. Doplnkový zdroj identít pre widget „Zúčastnení autori"
  * a filter ?autor= (viď articleAuthorIdentities() v db_config.php).
  *
+ * LEN pre články, ktoré sú spracovaním JEDNÉHO konkrétneho zdrojového článku —
+ * uvádzaj jeho pôvodných autorov. NEUVÁDZAJ autorov štúdií/odporúčaní len
+ * citovaných v pôvodnom (originálnom) článku; pôvodný text bez konkrétneho
+ * zdroja ostáva len pod autorom projektu.
+ *
  * @return array<string,array<int,string>>  slug => zoznam mien autorov
  */
 function getSourceArticleAuthors(): array {
