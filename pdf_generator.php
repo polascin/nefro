@@ -138,6 +138,7 @@ HTML;
 const PROTECTED_PDF_SLUGS = [
     'diabeticka-choroba-obliciek-bez-zahad',
     'moderne-trendy-v-nefroprotekcii',
+    'obezita-a-oblicky',
 ];
 
 function articlePdfIsProtected(string $slug): bool
