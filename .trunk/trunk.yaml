@@ -1,0 +1,87 @@
+# ════════════════════════════════════════════════════════════════════════════
+# Trunk konfigurácia pre nefro.polascin.net
+# ─────────────────────────────────────────────────────────────────────────────
+# Optimalizované PRE TENTO PROJEKT (plochý PHP web na WebSupport hostingu):
+#   • PHP linting beží cez UŽ EXISTUJÚCE konfigy — Trunk auto-deteguje
+#     `phpstan.neon.dist` (+ `phpstan-baseline.neon`) a `.php-cs-fixer.dist.php`,
+#     takže sa nič neduplikuje a baseline naďalej blokuje len NOVÉ chyby.
+#   • Formátovanie je ZÁMERNE konzervatívne (rovnaká filozofia ako
+#     `.php-cs-fixer.dist.php`) — prettier sa púšťa len na MD/JSON/YAML, NIE na
+#     veľký ručný `index.css` ani na JS, aby prvý beh neprepísal celý kód.
+#   • Trunkove git-hook akcie sú VYPNUTÉ — projekt má vlastný `.git/hooks/pre-commit`
+#     (`php -l` staged súborov) a `post-commit` (SFTP deploy). Trunk by ich prepísal.
+#
+# Verzie nižšie sú „best-effort" pin. Po prvom nastavení spusti RUČNE:
+#     trunk upgrade        # zladí cli/plugins/lintre na aktuálne dostupné verzie
+#     trunk check          # jednorazová kontrola
+# (Sťahovanie a beh nástrojov blokuje auto-mode — spúšťa používateľ, nie agent.)
+# ════════════════════════════════════════════════════════════════════════════
+
+version: 0.1
+
+cli:
+  version: 1.22.15
+
+# Zdroj definícií lintrov/akcií. `trunk upgrade` posunie `ref` na novší.
+plugins:
+  sources:
+    - id: trunk
+      ref: v1.6.8
+      uri: https://github.com/trunk-io/plugins
+
+# Runtimes (node/php/python/go) Trunk doplní a napne automaticky podľa potreby
+# zapnutých lintrov pri prvom `trunk check`. Nepiniem ich ručne, aby nevznikol
+# konflikt verzií — `trunk upgrade` ich spravuje.
+
+lint:
+  enabled:
+    - git-diff-check               # konfliktné značky / poškodené diffy (vstavané)
+    - gitleaks@8.18.4              # detekcia tajomstiev (auth/GDPR/DB heslá) — kľúčové
+    - phpstan@1.12.7               # statická analýza PHP (reuse phpstan.neon.dist + baseline)
+    - php-cs-fixer@3.64.0          # PHP štýl (reuse .php-cs-fixer.dist.php)
+    - prettier@3.4.2               # formát MD/JSON/YAML (CSS/JS sú ignorované nižšie)
+    - markdownlint@0.43.0          # štruktúra Markdownu (PUBLIKOVANIE_*.md, AGENTS.md…)
+    - shellcheck@0.10.0            # deploy.sh, sync_article_pdfs.sh
+    - shfmt@3.6.1                  # formát shell skriptov
+    - yamllint@1.35.1             # tento súbor + prípadné ďalšie YAML
+    - taplo@0.9.3                  # TOML
+
+  disabled:
+    - eslint                       # bez eslint.config by zaplavil JS; syntax rieši `node --check`
+    - stylelint                    # index.css je 5000+ riadkov ručného CSS → priveľa šumu
+    - oxipng                       # NEPREPISOVAŤ commitnuté obrázky (churn + zbytočný redeploy)
+    - svgo                         #   to isté pre SVG
+    - trufflehog                   # prekrýva sa s gitleaks — netreba duplicitu
+
+  ignore:
+    # Binárne, nahrávané, generované a cudzie veci — nelintovať vôbec.
+    - linters: [ALL]
+      paths:
+        - pdf/**
+        - uploads/**
+        - img/**
+        - assets/**
+        - private/**
+        - scratch/**
+        - vendor/**
+        - node_modules/**
+        - tools/*.phar
+        - deploy_info.php
+        - "**/*.min.js"
+        - "**/*.min.css"
+    # Konzervatívne: neformátovať existujúce ručné CSS/JS (inak masívny prvý diff).
+    # Keď budeš chcieť jednorazový pass, zmaž tento blok a spusti `trunk fmt`.
+    - linters: [prettier]
+      paths:
+        - "**/*.css"
+        - "**/*.js"
+        - "**/*.mjs"
+
+actions:
+  enabled:
+    - trunk-announce
+    - trunk-cache-prune
+    - trunk-upgrade-available
+  # ZÁMERNE VYPNUTÉ (nezapínať): trunk-fmt-pre-commit, trunk-check-pre-push.
+  # Inštalujú Trunkove git hooky a prepísali by vlastný pre-commit (`php -l`) aj
+  # post-commit (SFTP deploy). Kontrolu spúšťaj ručne: `trunk check` / `trunk fmt`.
