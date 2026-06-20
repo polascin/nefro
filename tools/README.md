@@ -45,3 +45,32 @@ Inštalácia hookov: `.\hooks\install.ps1`
 
 Prejde `php -l` cez **celý** projekt naraz (nie len staged) — užitočné na jednorazovú
 revíziu: `php tools\lint_all.php`.
+
+## Trunk (voliteľné, len vo WSL)
+
+V repe je `.trunk/trunk.yaml` (meta-linter: gitleaks, prettier MD/JSON/YAML,
+markdownlint, shellcheck/shfmt, yamllint, taplo + PHPStan/PHP-CS-Fixer cez existujúce
+konfigy). **Trunk NEBEŽÍ natívne na Windows** (`Failed to resolve Windows
+dependencies`) — jeho lintre sú Linux/macOS binárky. Treba ho spúšťať vo **WSL2**:
+
+```powershell
+# raz: nainštaluj WSL2 + Ubuntu (PowerShell ako admin), reštart ak treba
+wsl --install -d Ubuntu
+```
+
+```bash
+# v Ubuntu termináli (WSL):
+curl https://get.trunk.io -fsSL | bash      # raz: inštalácia Trunku
+cd /mnt/d/OneDrive/www/nefro
+trunk upgrade        # zladí verzie cli/plugins/lintrov (spusti ako prvé)
+trunk check --all    # plný sken; bez --all len súbory zmenené oproti merge-base
+trunk fmt            # formátovanie MD/JSON/YAML
+```
+
+- **PHP kvalita aj bez Trunku:** natívne na Windowse funguje `quality.ps1` / PHAR
+  (vyššie) — Trunk je len doplnková jednotná vrstva pre nestPHP súbory a tajomstvá.
+- **Git hooky** (pre-commit `php -l`, post-commit SFTP deploy) zostávajú na Windows
+  strane; Trunkove hooky sú v configu zámerne vypnuté. Commit/deploy rob v PowerShelli,
+  `trunk check`/`trunk fmt` vo WSL.
+- **Pozn. (výkon/EOL):** repo na `/mnt/d/...` je vo WSL pomalšie (9p FS); pri `trunk fmt`
+  sleduj prípadný CRLF↔LF šum (git má `autocrlf`).

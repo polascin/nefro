@@ -11,16 +11,22 @@
 #   • Trunkove git-hook akcie sú VYPNUTÉ — projekt má vlastný `.git/hooks/pre-commit`
 #     (`php -l` staged súborov) a `post-commit` (SFTP deploy). Trunk by ich prepísal.
 #
-# Verzie nižšie sú „best-effort" pin. Po prvom nastavení spusti RUČNE:
+# ⚠️ WINDOWS: Trunk NEBEŽÍ natívne v PowerShelli ("Failed to resolve Windows
+# dependencies") — jeho lintre sú Linux/macOS binárky. Spúšťaj ho VO WSL2 (Ubuntu):
+#     wsl
+#     cd /mnt/d/OneDrive/www/nefro
 #     trunk upgrade        # zladí cli/plugins/lintre na aktuálne dostupné verzie
-#     trunk check          # jednorazová kontrola
+#     trunk check --all    # plný sken (bez --all len zmenené súbory)
+#     trunk fmt            # formátovanie (MD/JSON/YAML)
+# Git commit + SFTP deploy ostávajú na Windows strane (vlastné hooky). Návod:
+# tools/README.md → sekcia „Trunk (voliteľné, len vo WSL)".
 # (Sťahovanie a beh nástrojov blokuje auto-mode — spúšťa používateľ, nie agent.)
 # ════════════════════════════════════════════════════════════════════════════
 
 version: 0.1
 
 cli:
-  version: 1.22.15
+  version: 1.25.0
 
 # Zdroj definícií lintrov/akcií. `trunk upgrade` posunie `ref` na novší.
 plugins:
