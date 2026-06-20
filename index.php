@@ -100,13 +100,12 @@ $autorFilter = isset($_GET["autor"]) ? mb_substr(trim($_GET["autor"]), 0, 255) :
 
 try {
     if ($autorFilter !== "") {
-        // Režim filtrovania podľa autora — všetky jeho články, stránkované
-        $stmtCount = $pdo->prepare(
-            "SELECT COUNT(*) FROM articles
-             WHERE is_published = 1 AND category = 'odborne' AND TRIM(author) = :author",
-        );
-        $stmtCount->execute([":author" => $autorFilter]);
-        $otherArticlesTotal = (int) $stmtCount->fetchColumn();
+        // Režim filtrovania podľa autora — projektový aj pôvodný zdrojový autor.
+        // Zhoda podľa identity (rovnaká logika ako widget „Zúčastnení autori"),
+        // nie podľa presnej hodnoty stĺpca `author` — zdrojoví autori žijú
+        // v byline „… (Medscape); Autor:" alebo v citácii „Zdroj:" v obsahu.
+        $authorArticlesAll = fetchPublishedArticlesByAuthor($pdo, $autorFilter);
+        $otherArticlesTotal = count($authorArticlesAll);
         $otherArticlesTotalPages = max(
             1,
             (int) ceil($otherArticlesTotal / $otherArticlesPerPage),
@@ -115,18 +114,11 @@ try {
             $otherArticlesPage = $otherArticlesTotalPages;
         }
         $otherArticlesOffset = ($otherArticlesPage - 1) * $otherArticlesPerPage;
-        $stmtOther = $pdo->prepare(
-            "SELECT id, title, slug, author, excerpt, published_at
-             FROM articles
-             WHERE is_published = 1 AND category = 'odborne' AND TRIM(author) = :author
-             ORDER BY is_top DESC, sort_order ASC, published_at DESC
-             LIMIT :limit OFFSET :offset",
+        $otherArticles = array_slice(
+            $authorArticlesAll,
+            $otherArticlesOffset,
+            $otherArticlesPerPage,
         );
-        $stmtOther->bindValue(":author", $autorFilter);
-        $stmtOther->bindValue(":limit", $otherArticlesPerPage, \PDO::PARAM_INT);
-        $stmtOther->bindValue(":offset", $otherArticlesOffset, \PDO::PARAM_INT);
-        $stmtOther->execute();
-        $otherArticles = $stmtOther->fetchAll();
     } else {
         // Štandardný režim — top + ostatné články
         $stmtTop = $pdo->query(

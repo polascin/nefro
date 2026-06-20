@@ -202,50 +202,98 @@ function fetchProjectAuthors(\PDO $pdo): array {
 }
 
 /**
+ * Vráti množinu identít autorov článku — jednotný zdroj pravdy pre widget
+ * „Zúčastnení autori" (počítanie) aj pre filter `?autor=` (vyhľadávanie).
+ * Zahŕňa autora projektu a pôvodných zdrojových autorov (z poľa `author`
+ * aj z citácie „Zdroj:" v obsahu), len ak vyzerajú ako osoby; v rámci jedného
+ * článku je každá identita najviac raz.
+ *
+ * @param array<string,mixed> $row  očakáva 'author_name' alebo 'author' a 'content'
+ * @return array<string,string>  normalizovaný kľúč => zobrazované meno
+ */
+function articleAuthorIdentities(array $row): array {
+    $parsed = parseArticleAuthorField((string) ($row['author_name'] ?? $row['author'] ?? ''));
+    $content = (string) ($row['content'] ?? '');
+
+    /** @var array<string,string> $identities */
+    $identities = [];
+    $register = static function (string $name) use (&$identities): void {
+        $name = trim($name);
+        // Publikácie/zdroje (ReachMD, ScienceDaily, časopisy) neprejdú person-filtrom.
+        if ($name === '' || !isLikelyPersonalAuthorName($name)) {
+            return;
+        }
+        $key = normalizeAuthorIdentity($name);
+        if ($key !== '' && !isset($identities[$key])) {
+            $identities[$key] = $name;
+        }
+    };
+
+    // Autor projektu (pole author, prípadne časť za "… Autor: X").
+    $register($parsed['project']);
+    // Pôvodný autor zdroja zapísaný priamo v poli author ("Meno (Medscape); Autor: …").
+    $register($parsed['source']);
+    // Pôvodný autor zdroja vyťažený zo značky "Zdroj:" v obsahu článku.
+    $register(extractOriginalSourceFirstAuthor($content));
+
+    return $identities;
+}
+
+/**
  * @param array<string,array{author:string,articles:int}> $authorBuckets
  * @param array<string,mixed> $row
  */
 function registerArticleAuthors(array &$authorBuckets, array $row): void {
-    $parsed = parseArticleAuthorField((string) ($row['author_name'] ?? ''));
-
-    /** @var array<string,bool> $registeredKeys */
-    $registeredKeys = [];
-
-    // Autor projektu (pole author, prípadne časť za "… Autor: X"). Musí vyzerať
-    // ako osoba — publikácie/zdroje (ReachMD, ScienceDaily, časopisy) sa nepočítajú.
-    if (isLikelyPersonalAuthorName($parsed['project'])) {
-        $projectKey = registerAuthorContribution($authorBuckets, $parsed['project']);
-        if ($projectKey !== '') {
-            $registeredKeys[$projectKey] = true;
-        }
+    foreach (articleAuthorIdentities($row) as $authorName) {
+        registerAuthorContribution($authorBuckets, $authorName);
     }
-
-    // Pôvodný autor zdroja zapísaný priamo v poli author ("Meno (Medscape); Autor: …").
-    registerSourceAuthorOnce($authorBuckets, $parsed['source'], $registeredKeys);
-
-    // Pôvodný autor zdroja vyťažený zo značky "Zdroj:" v obsahu článku.
-    $sourceFromContent = extractOriginalSourceFirstAuthor((string) ($row['content'] ?? ''));
-    registerSourceAuthorOnce($authorBuckets, $sourceFromContent, $registeredKeys);
 }
 
 /**
- * Zapíše autora zdroja, ak je to pravdepodobne osoba a ešte nebol pre tento článok zapísaný.
+ * Načíta publikované články, kde je daný autor medzi identitami článku
+ * (autor projektu alebo pôvodný zdrojový autor). Používa rovnakú logiku ako
+ * widget „Zúčastnení autori", preto klik na ktoréhokoľvek autora vždy dopadne
+ * na reálny obsah a počty sedia. Zoradené ako hlavný výpis (top, poradie, dátum).
  *
- * @param array<string,array{author:string,articles:int}> $authorBuckets
- * @param array<string,bool> $registeredKeys
+ * @return array<int,array{id:int,title:string,slug:string,author:string,excerpt:string,published_at:string,is_top:int}>
  */
-function registerSourceAuthorOnce(array &$authorBuckets, string $sourceAuthor, array &$registeredKeys): void {
-    if ($sourceAuthor === '' || !isLikelyPersonalAuthorName($sourceAuthor)) {
-        return;
+function fetchPublishedArticlesByAuthor(\PDO $pdo, string $authorName): array {
+    $targetKey = normalizeAuthorIdentity($authorName);
+    if ($targetKey === '') {
+        return [];
     }
 
-    $key = normalizeAuthorIdentity($sourceAuthor);
-    if ($key === '' || isset($registeredKeys[$key])) {
-        return;
+    try {
+        $stmt = $pdo->query(
+            "SELECT id, title, slug, author, excerpt, published_at, content, is_top, sort_order
+             FROM articles
+             WHERE is_published = 1
+             ORDER BY is_top DESC, sort_order ASC, published_at DESC"
+        );
+    } catch (\PDOException $e) {
+        error_log('project stats: chyba filtra článkov podľa autora: ' . $e->getMessage());
+        return [];
     }
 
-    registerAuthorContribution($authorBuckets, $sourceAuthor);
-    $registeredKeys[$key] = true;
+    $matches = [];
+    foreach ($stmt->fetchAll(\PDO::FETCH_ASSOC) as $row) {
+        $identities = articleAuthorIdentities($row);
+        if (!isset($identities[$targetKey])) {
+            continue;
+        }
+
+        $matches[] = [
+            'id'           => (int) $row['id'],
+            'title'        => (string) $row['title'],
+            'slug'         => (string) $row['slug'],
+            'author'       => (string) $row['author'],
+            'excerpt'      => (string) $row['excerpt'],
+            'published_at' => (string) $row['published_at'],
+            'is_top'       => (int) $row['is_top'],
+        ];
+    }
+
+    return $matches;
 }
 
 /**
