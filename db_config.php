@@ -240,11 +240,11 @@ function articleAuthorIdentities(array $row): array {
     $register($parsed['project']);
     // Pôvodný autor zdroja zapísaný priamo v poli author ("Meno (Medscape); Autor: …").
     $register($parsed['source']);
-    // Pôvodný autor zdroja vyťažený zo značky "Zdroj:" v obsahu článku.
-    $register(extractOriginalSourceFirstAuthor($content));
 
-    // Pôvodní autori zdrojového článku (z odkazu „Zdroj:") — doplnková mapa
-    // podľa slugu, vyťažená cez otvorené bibliografické API (source_authors.php).
+    // Pôvodní autori zdrojového článku. Kurátorská mapa podľa slugu
+    // (source_authors.php, plné mená z otvorených bibliografických API) je
+    // AUTORITATÍVNA — ak existuje, použije sa namiesto skrátenej extrakcie z
+    // obsahu (predíde duplicitným notáciám „Ostermann M" vs „Marlies Ostermann").
     static $sourceMap = null;
     if ($sourceMap === null) {
         $sourceMap = function_exists('getSourceArticleAuthors') ? getSourceArticleAuthors() : [];
@@ -254,6 +254,9 @@ function articleAuthorIdentities(array $row): array {
         foreach ($sourceMap[$slug] as $sourceAuthor) {
             $register((string) $sourceAuthor);
         }
+    } else {
+        // Fallback: pôvodný autor zdroja vyťažený zo značky "Zdroj:" v obsahu.
+        $register(extractOriginalSourceFirstAuthor($content));
     }
 
     return $identities;
