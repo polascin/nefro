@@ -1,0 +1,10 @@
+title = "Nefro Gitleaks configuration"
+
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Public calculator identifier, not an API key"
+targetRules = ["generic-api-key"]
+regexTarget = "match"
+regexes = ['''egfr_ckd_epi_2021''']

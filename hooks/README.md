@@ -1,52 +1,52 @@
-# Git Hooks Configuration
+# Git hooky a SFTP deploy
 
-This directory contains Git hooks configuration for automatic push on commit.
+Repozitár používa verzované hooky priamo z adresára `hooks/`. Inštalácia nastaví
+lokálny Git `core.hooksPath=hooks`, takže po pullnutí netreba kopírovať nové verzie
+skriptov do `.git/hooks`.
 
-## Setup
-
-### On Windows (PowerShell):
+## Inštalácia
 
 ```powershell
-.\hooks\install.ps1
+pwsh -File .\hooks\install.ps1
 ```
 
-### On macOS/Linux:
+Overenie:
+
+```powershell
+git config --local --get core.hooksPath
+```
+
+Výsledok musí byť `hooks`.
+
+## Priebeh commitu
+
+1. `pre-commit` spustí `git diff --cached --check`, PHP syntax lint staged PHP
+   súborov a konverziu nových PNG na WebP.
+1. `post-commit` pushne aktuálnu vetvu na jej remote.
+1. Až po úspešnom pushi `deploy.sh` nasadí cez SFTP všetky nasaditeľné zmeny od
+   predchádzajúceho remote commitu po `HEAD`.
+1. `deploy_info.php` sa odošle v rovnakom SFTP batchi ako ostatné súbory.
+
+Ak push alebo SFTP zlyhá, hook vypíše chybu a deploy neoznačí ako úspešný. Stroj
+bez kľúča `~/.ssh/nefro_deploy` môže commitovať a pushovať, ale deploy preskočí.
+
+## Manuálny deploy
 
 ```bash
-cp hooks/post-commit .git/hooks/post-commit
-chmod +x .git/hooks/post-commit
+# Iba ukáž plán posledného commitu
+hooks/deploy.sh --dry-run
+
+# Dohnanie všetkých zmien od konkrétneho commitu
+hooks/deploy.sh <base-ref>
 ```
 
-## What it does
+Súbory v `hooks/deploy-ignore.txt` sa nikdy neposielajú do verejného web rootu.
+Host, port, používateľa, kľúč, remote cestu a ignore súbor možno pre test prepísať
+premennými `NEFRO_SFTP_HOST`, `NEFRO_SFTP_PORT`, `NEFRO_SFTP_USER`,
+`NEFRO_SFTP_KEY`, `NEFRO_REMOTE_PATH` a `NEFRO_DEPLOY_IGNORE_FILE`.
 
-The `post-commit` hook automatically runs `git push` after every local commit. This ensures:
+## Trunk
 
-- Changes are always synchronized to the remote repository
-- No need to manually run `git push` after each commit
-- Workflow consistency across the team
-
-## How it works
-
-1. After you commit changes (via VS Code or command line)
-2. The post-commit hook is triggered automatically
-3. Hook runs `git push origin <current-branch>`
-4. Changes are pushed to remote
-
-## Disabling (if needed)
-
-To temporarily disable the hook:
-
-```bash
-# Rename to disable
-mv .git/hooks/post-commit .git/hooks/post-commit.disabled
-
-# Rename back to enable
-mv .git/hooks/post-commit.disabled .git/hooks/post-commit
-```
-
-## Notes
-
-- Windows uses `post-commit.bat`, Unix/Mac uses `post-commit`
-- Both versions do the same thing
-- Hook silently fails if push fails (no blocking errors)
-- Check git log or terminal output to verify push status
+Trunk git-hook actions musia zostať vypnuté. Trunk podľa svojej dokumentácie pri
+zapnutej action s Git triggerom automaticky preberie správu `core.hooksPath`, čím
+by obišiel projektový push a deploy. Trunk kontroly sa spúšťajú ručne vo WSL.

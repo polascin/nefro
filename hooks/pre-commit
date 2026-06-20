@@ -1,23 +1,31 @@
-#!/bin/sh
+#!/usr/bin/env bash
 # Pre-commit kontroly:
 #   1) php -l syntax check staged PHP súborov (rýchle, bez falošných nálezov)
 #   2) automatická konverzia PNG → WebP
 
 # --- 1) PHP syntax check staged súborov ---
+if ! git diff --cached --check; then
+	echo "pre-commit: commit zastavený kvôli whitespace chybe." >&2
+	exit 1
+fi
+
 if command -v php >/dev/null 2>&1; then
-    php_files=$(git diff --cached --name-only --diff-filter=ACM -- '*.php')
-    if [ -n "$php_files" ]; then
-        syntax_ok=1
-        echo "$php_files" | while IFS= read -r f; do
-            [ -f "$f" ] || continue
-            if ! php -l "$f" >/dev/null 2>&1; then
-                echo "pre-commit: SYNTAX CHYBA v $f" >&2
-                php -l "$f" >&2
-                exit 1
-            fi
-        done || syntax_ok=0
-        [ "$syntax_ok" -eq 0 ] && { echo "pre-commit: commit zastavený kvôli PHP syntax chybe." >&2; exit 1; }
-    fi
+	php_files=$(git diff --cached --name-only --diff-filter=ACM -- '*.php')
+	if [ -n "$php_files" ]; then
+		syntax_ok=1
+		echo "$php_files" | while IFS= read -r f; do
+			[ -f "$f" ] || continue
+			if ! php -l "$f" >/dev/null 2>&1; then
+				echo "pre-commit: SYNTAX CHYBA v $f" >&2
+				php -l "$f" >&2
+				exit 1
+			fi
+		done || syntax_ok=0
+		[ "$syntax_ok" -eq 0 ] && {
+			echo "pre-commit: commit zastavený kvôli PHP syntax chybe." >&2
+			exit 1
+		}
+	fi
 fi
 # Pozn.: hlbšiu statickú analýzu (PHPStan + PHP-CS-Fixer) spúšťaj ručne:
 #   pwsh tools/quality.ps1   (-Fix na aplikovanie formátovania)
@@ -33,20 +41,20 @@ changed=$(git diff --cached --name-only --diff-filter=ACM -- 'img/*.png')
 
 # Bez PHP konverziu preskočíme (commit nezablokujeme).
 if ! command -v php >/dev/null 2>&1; then
-    echo "pre-commit: php nenájdený — preskakujem auto-konverziu PNG→WebP." >&2
-    exit 0
+	echo "pre-commit: php nenájdený — preskakujem auto-konverziu PNG→WebP." >&2
+	exit 0
 fi
 
 # Skonvertuj neaktuálne PNG v img/ (idempotentné — aktuálne preskočí).
 php tools/convert_images_webp.php || {
-    echo "pre-commit: konverzia PNG→WebP zlyhala — commit zastavený." >&2
-    exit 1
+	echo "pre-commit: konverzia PNG→WebP zlyhala — commit zastavený." >&2
+	exit 1
 }
 
 # Pridaj vygenerované .webp súrodence k staged PNG (robustné voči medzerám v názve).
 git diff --cached --name-only --diff-filter=ACM -z -- 'img/*.png' | while IFS= read -r -d '' f; do
-    webp="${f%.png}.webp"
-    [ -f "$webp" ] && git add "$webp"
+	webp="${f%.png}.webp"
+	[ -f "$webp" ] && git add "$webp"
 done
 
 exit 0

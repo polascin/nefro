@@ -1,55 +1,42 @@
-# Install Git hooks to .git/hooks directory
-# Run this script from project root: .\hooks\install.ps1
+# Run from anywhere inside the repository: pwsh -File .\hooks\install.ps1
 
-Write-Host "Installing Git hooks..." -ForegroundColor Green
+$ErrorActionPreference = "Stop"
 
-$gitHooksDir = ".git/hooks"
-$hooksSourceDir = "hooks"
-
-# Check if .git directory exists
-if (-not (Test-Path ".git" -PathType Container)) {
-    Write-Host "Error: .git directory not found. Run this from project root." -ForegroundColor Red
-    exit 1
+$repoRoot = (& git rev-parse --show-toplevel 2>$null)
+if (-not $repoRoot) {
+    throw "Git repository not found."
 }
 
-# Check if hooks directory exists
-if (-not (Test-Path $hooksSourceDir -PathType Container)) {
-    Write-Host "Error: $hooksSourceDir directory not found." -ForegroundColor Red
-    exit 1
+$repoRoot = $repoRoot.Trim()
+$hooksDir = Join-Path $repoRoot "hooks"
+$requiredHooks = @("pre-commit", "post-commit", "deploy.sh", "deploy-ignore.txt")
+
+foreach ($name in $requiredHooks) {
+    $path = Join-Path $hooksDir $name
+    if (-not (Test-Path -LiteralPath $path -PathType Leaf)) {
+        throw "Missing hook file: $path"
+    }
 }
 
-# Copy post-commit hook
-if (Test-Path "$hooksSourceDir/post-commit") {
-    Copy-Item "$hooksSourceDir/post-commit" "$gitHooksDir/post-commit" -Force
-    Write-Host "✓ Installed post-commit hook (Unix/Bash)" -ForegroundColor Green
-}
+Push-Location $repoRoot
+try {
+    # Tracked hooks stay current after every pull; no stale copies in .git/hooks.
+    & git config --local --replace-all core.hooksPath hooks
+    if ($LASTEXITCODE -ne 0) {
+        throw "Failed to configure core.hooksPath."
+    }
 
-# Copy pre-commit hook (automatic PNG → WebP conversion)
-if (Test-Path "$hooksSourceDir/pre-commit") {
-    Copy-Item "$hooksSourceDir/pre-commit" "$gitHooksDir/pre-commit" -Force
-    if ($PSVersionTable.Platform -eq "Unix") { chmod +x "$gitHooksDir/pre-commit" }
-    Write-Host "✓ Installed pre-commit hook (PNG to WebP)" -ForegroundColor Green
-}
+    if ($IsLinux -or $IsMacOS) {
+        & chmod +x hooks/pre-commit hooks/post-commit hooks/deploy.sh
+        if ($LASTEXITCODE -ne 0) {
+            throw "Failed to mark hooks as executable."
+        }
+    }
 
-# Copy deploy.sh (SFTP deploy na produkciu — volá ho post-commit)
-if (Test-Path "$hooksSourceDir/deploy.sh") {
-    Copy-Item "$hooksSourceDir/deploy.sh" "$gitHooksDir/deploy.sh" -Force
-    if ($PSVersionTable.Platform -eq "Unix") { chmod +x "$gitHooksDir/deploy.sh" }
-    Write-Host "✓ Installed deploy.sh (SFTP deploy)" -ForegroundColor Green
+    $configuredPath = (& git config --local --get core.hooksPath).Trim()
+    Write-Host "Git hooks enabled: $configuredPath" -ForegroundColor Green
+    Write-Host "Commits now run validation, push and SFTP deploy." -ForegroundColor Cyan
 }
-
-# For Windows, also create a .bat version
-if (Test-Path "$hooksSourceDir/post-commit") {
-    $batContent = "@echo off`r`nREM Automatický git push po commite`r`n`r`nfor /f %%i in ('git rev-parse --abbrev-ref HEAD') do set branch=%%i`r`ngit push origin %branch% 2>nul`r`n`r`nexit /b 0"
-    Set-Content "$gitHooksDir/post-commit.bat" $batContent -Force
-    Write-Host "✓ Installed post-commit hook (Windows Batch)" -ForegroundColor Green
+finally {
+    Pop-Location
 }
-
-# Make hooks executable on Unix-like systems
-if ($PSVersionTable.Platform -eq "Unix") {
-    chmod +x "$gitHooksDir/post-commit"
-    Write-Host "✓ Made hooks executable" -ForegroundColor Green
-}
-
-Write-Host "Git hooks installed successfully!" -ForegroundColor Green
-Write-Host "From now on, every commit will automatically push to remote." -ForegroundColor Cyan

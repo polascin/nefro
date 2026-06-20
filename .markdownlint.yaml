@@ -1,0 +1,10 @@
+---
+default: true
+
+# Dlhšie slovenské vety sú v projektovej dokumentácii čitateľnejšie bez
+# manuálneho zalamovania. Prettier naďalej udržiava štruktúru Markdownu.
+MD013: false
+
+# Rovnaký názov pod rôznymi nadradenými sekciami je povolený.
+MD024:
+  siblings_only: true

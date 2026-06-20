@@ -1,101 +1,82 @@
-# ════════════════════════════════════════════════════════════════════════════
-# Trunk konfigurácia pre nefro.polascin.net
-# ─────────────────────────────────────────────────────────────────────────────
-# Optimalizované PRE TENTO PROJEKT (plochý PHP web na WebSupport hostingu):
-#   • PHP kvalita NEBEŽÍ cez Trunk — phpstan/php-cs-fixer v Trunku vyžadujú PHP
-#     v tom istom prostredí (vo WSL PHP nie je, apt potrebuje sudo heslo) a navyše
-#     by duplikovali natívny PHAR beh. PHP rieši `quality.ps1` (PHPStan + PHP-CS-Fixer
-#     PHAR) priamo na Windowse. Trunk pokrýva len NE-PHP veci (secrets, MD/YAML/sh…).
-#   • Formátovanie je ZÁMERNE konzervatívne (rovnaká filozofia ako
-#     `.php-cs-fixer.dist.php`) — prettier sa púšťa len na MD/JSON/YAML, NIE na
-#     veľký ručný `index.css` ani na JS, aby prvý beh neprepísal celý kód.
-#   • Trunkove git-hook akcie sú VYPNUTÉ — projekt má vlastný `.git/hooks/pre-commit`
-#     (`php -l` staged súborov) a `post-commit` (SFTP deploy). Trunk by ich prepísal.
-#
-# ⚠️ WINDOWS: Trunk NEBEŽÍ natívne v PowerShelli ("Failed to resolve Windows
-# dependencies") — jeho lintre sú Linux/macOS binárky. Spúšťaj ho VO WSL2 (Ubuntu):
-#     wsl
-#     cd /mnt/d/OneDrive/www/nefro
-#     trunk upgrade        # zladí cli/plugins/lintre na aktuálne dostupné verzie
-#     trunk check --all    # plný sken (bez --all len zmenené súbory)
-#     trunk fmt            # formátovanie (MD/JSON/YAML)
-# Git commit + SFTP deploy ostávajú na Windows strane (vlastné hooky). Návod:
-# tools/README.md → sekcia „Trunk (voliteľné, len vo WSL)".
-# (Sťahovanie a beh nástrojov blokuje auto-mode — spúšťa používateľ, nie agent.)
-# ════════════════════════════════════════════════════════════════════════════
-
+---
+# Trunk beží vo WSL2 a pokrýva ne-PHP súbory. PHP kvalitu riešia PHAR nástroje
+# cez tools/quality.ps1. Projektové Git hooky spravuje core.hooksPath=hooks;
+# nezapínaj Trunk actions s git_hooks triggerom, pretože by túto cestu prepísali.
 version: 0.1
 
 cli:
   version: 1.25.0
 
-# Zdroj definícií lintrov/akcií. `trunk upgrade` posunie `ref` na novší.
 plugins:
   sources:
     - id: trunk
       ref: v1.10.2
       uri: https://github.com/trunk-io/plugins
 
-# Runtimes (node/php/python/go) Trunk doplní a napne automaticky podľa potreby
-# zapnutých lintrov pri prvom `trunk check`. Nepiniem ich ručne, aby nevznikol
-# konflikt verzií — `trunk upgrade` ich spravuje.
-
 lint:
-  enabled:
-    - checkov@3.3.1
-    - git-diff-check # konfliktné značky / poškodené diffy (vstavané)
-    - gitleaks@8.30.1 # detekcia tajomstiev (auth/GDPR/DB heslá) — kľúčové
-    - prettier@3.8.4 # formát MD/JSON/YAML (CSS/JS sú ignorované nižšie)
-    - markdownlint@0.49.0 # štruktúra Markdownu (PUBLIKOVANIE_*.md, AGENTS.md…)
-    - shellcheck@0.11.0 # deploy.sh, sync_article_pdfs.sh
-    - shfmt@3.6.1 # formát shell skriptov
-    - yamllint@1.38.0 # tento súbor + prípadné ďalšie YAML
-    - taplo@0.10.0 # TOML
+  definitions:
+    - name: gitleaks
+      environment:
+        - name: GITLEAKS_CONFIG
+          value: ${workspace}/.gitleaks.toml
 
+  enabled:
+    - gitleaks@8.30.1
+    - markdownlint@0.49.0
+    - prettier@3.8.4
+    - shellcheck@0.11.0
+    - shfmt@3.13.1
+    - taplo@0.10.0
+    - yamllint@1.38.0
+
+  # Explicitné disabled položky bránia ich opätovnému ponúkaniu pri upgrade.
   disabled:
-    - phpstan # PHP rieši natívny PHAR (quality.ps1); v Trunku/WSL chýba PHP
-    - php-cs-fixer #   to isté — netreba duplicitu a PHP vo WSL nie je
-    - eslint # bez eslint.config by zaplavil JS; syntax rieši `node --check`
-    - stylelint # index.css je 5000+ riadkov ručného CSS → priveľa šumu
-    - oxipng # NEPREPISOVAŤ commitnuté obrázky (churn + zbytočný redeploy)
-    - svgo #   to isté pre SVG
-    - trufflehog # prekrýva sa s gitleaks — netreba duplicitu
+    - black # Pyproject je historický; repo neobsahuje Python zdrojové súbory.
+    - checkov # Repo neobsahuje Terraform, Docker ani inú IaC konfiguráciu.
+    - eslint # Bez eslint.config by kontrola existujúceho JS vytvárala šum.
+    - git-diff-check # Vo WSL hlási CRLF ako whitespace; hook používa git diff --check.
+    - oxipng # Binárne assety sa nesmú automaticky prepisovať.
+    - php-cs-fixer # PHP rieši tools/quality.ps1 natívne na Windows.
+    - phpstan # PHP rieši tools/quality.ps1 natívne na Windows.
+    - stylelint # Ručne udržiavaný index.css zatiaľ nemá baseline.
+    - svgo # Binárne assety sa nesmú automaticky prepisovať.
+    - trufflehog # Gitleaks už pokrýva detekciu tajomstiev.
 
   ignore:
-    # Binárne, nahrávané, generované a cudzie veci — nelintovať vôbec.
+    # Vendored, binárne, privátne a generované súbory.
     - linters: [ALL]
       paths:
-        - pdf/**
-        - uploads/**
-        - img/**
         - assets/**
+        - extraction_results.json
+        - extracted_*.txt
+        - img/**
+        - node_modules/**
+        - pages_*.txt
+        - pdf/**
         - private/**
         - scratch/**
-        - vendor/**
-        - node_modules/**
         - tools/*.phar
-        - "**/*.min.js"
+        - uploads/**
+        - vendor/**
         - "**/*.min.css"
-    # Konzervatívne: neformátovať existujúce ručné CSS/JS (inak masívny prvý diff).
-    # Keď budeš chcieť jednorazový pass, zmaž tento blok a spusti `trunk fmt`.
+        - "**/*.min.js"
+
+    # Historické/publikačné návody majú zámerné Markdown rozloženie.
+    - linters: [markdownlint]
+      paths:
+        - .agent.md
+        - PUBLIKOVANIE_*.md
+
+    # Konzervatívne formátovanie: Prettier nemení ručný aplikačný CSS/JS.
     - linters: [prettier]
       paths:
         - "**/*.css"
         - "**/*.js"
         - "**/*.mjs"
 
-actions:
-  enabled:
-    - trunk-check-pre-push
-    - trunk-fmt-pre-commit
-    - trunk-announce
-    - trunk-cache-prune
-    - trunk-upgrade-available
-  # ZÁMERNE VYPNUTÉ (nezapínať): trunk-fmt-pre-commit, trunk-check-pre-push.
-  # Inštalujú Trunkove git hooky a prepísali by vlastný pre-commit (`php -l`) aj
-  # post-commit (SFTP deploy). Kontrolu spúšťaj ručne: `trunk check` / `trunk fmt`.
+# Piny zabezpečujú rovnaké nástroje lokálne aj v prípadnom CI.
 runtimes:
   enabled:
-    - go@1.21.0
+    - go@1.25.0
     - node@22.16.0
     - python@3.14.4

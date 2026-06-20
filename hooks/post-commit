@@ -1,17 +1,37 @@
-#!/bin/sh
-# Po commite: (1) push na GitHub, (2) SFTP deploy zmenených súborov na produkciu.
-# Deploy logika je v deploy.sh (vedľa tohto hooku) — inštaluje ju hooks/install.ps1.
+#!/usr/bin/env bash
 
-# Získaj aktuálnu branch
-current_branch=$(git rev-parse --abbrev-ref HEAD)
+set -uo pipefail
 
-# (1) Push na GitHub
-git push origin "$current_branch" 2>/dev/null
+REPO_ROOT=$(git rev-parse --show-toplevel 2>/dev/null) || exit 0
+cd "$REPO_ROOT" || exit 1
 
-# (2) SFTP deploy na produkčný server (ak je deploy.sh prítomný)
-HOOK_DIR=$(dirname "$0")
-if [ -f "$HOOK_DIR/deploy.sh" ]; then
-    sh "$HOOK_DIR/deploy.sh"
+BRANCH=$(git symbolic-ref --quiet --short HEAD 2>/dev/null) || {
+	echo "[post-commit] Detached HEAD; push a deploy preskakujem." >&2
+	exit 0
+}
+
+REMOTE=$(git config --get "branch.$BRANCH.remote" || true)
+REMOTE=${REMOTE:-origin}
+MERGE_REF=$(git config --get "branch.$BRANCH.merge" || true)
+REMOTE_BRANCH=${MERGE_REF#refs/heads/}
+REMOTE_BRANCH=${REMOTE_BRANCH:-$BRANCH}
+UPSTREAM_REF="refs/remotes/$REMOTE/$REMOTE_BRANCH"
+BASE_REF=$(git rev-parse --verify "$UPSTREAM_REF" 2>/dev/null || true)
+
+echo "[post-commit] Push $BRANCH -> $REMOTE/$REMOTE_BRANCH"
+if ! git push "$REMOTE" "HEAD:refs/heads/$REMOTE_BRANCH"; then
+	echo "[post-commit] Push zlyhal; produkcia nebola zmenená." >&2
+	exit 1
 fi
 
-exit 0
+DEPLOY_SCRIPT="$REPO_ROOT/hooks/deploy.sh"
+if [[ ! -f $DEPLOY_SCRIPT ]]; then
+	echo "[post-commit] Chýba deploy skript: $DEPLOY_SCRIPT" >&2
+	exit 1
+fi
+
+if [[ -n $BASE_REF ]]; then
+	"$DEPLOY_SCRIPT" "$BASE_REF"
+else
+	"$DEPLOY_SCRIPT"
+fi

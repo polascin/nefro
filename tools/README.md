@@ -46,12 +46,11 @@ Inštalácia hookov: `.\hooks\install.ps1`
 Prejde `php -l` cez **celý** projekt naraz (nie len staged) — užitočné na jednorazovú
 revíziu: `php tools\lint_all.php`.
 
-## Trunk (voliteľné, len vo WSL)
+## Trunk (len vo WSL)
 
-V repe je `.trunk/trunk.yaml` (meta-linter: gitleaks, prettier MD/JSON/YAML,
-markdownlint, shellcheck/shfmt, yamllint, taplo + PHPStan/PHP-CS-Fixer cez existujúce
-konfigy). **Trunk NEBEŽÍ natívne na Windows** (`Failed to resolve Windows
-dependencies`) — jeho lintre sú Linux/macOS binárky. Treba ho spúšťať vo **WSL2**:
+V repe je `.trunk/trunk.yaml` pre Gitleaks, Prettier, Markdownlint,
+ShellCheck/Shfmt, Yamllint a Taplo. **Trunk NEBEŽÍ natívne na Windows**
+(`Failed to resolve Windows dependencies`), preto sa spúšťa vo **WSL2**:
 
 ```powershell
 # raz: nainštaluj WSL2 + Ubuntu (PowerShell ako admin), reštart ak treba
@@ -62,15 +61,14 @@ wsl --install -d Ubuntu
 # v Ubuntu termináli (WSL):
 curl https://get.trunk.io -fsSL | bash      # raz: inštalácia Trunku
 cd /mnt/d/OneDrive/www/nefro
-trunk upgrade        # zladí verzie cli/plugins/lintrov (spusti ako prvé)
-trunk check --all    # plný sken; bez --all len súbory zmenené oproti merge-base
-trunk fmt            # formátovanie MD/JSON/YAML
+trunk upgrade --dry-run  # skontroluje aktualizácie bez zmeny configu
+trunk check --all        # plný sken; bez --all len zmenené súbory
+trunk fmt --all          # formátovanie podporovaných súborov
 ```
 
-- **PHP kvalita aj bez Trunku:** natívne na Windowse funguje `quality.ps1` / PHAR
-  (vyššie) — Trunk je len doplnková jednotná vrstva pre nestPHP súbory a tajomstvá.
-- **Git hooky** (pre-commit `php -l`, post-commit SFTP deploy) zostávajú na Windows
-  strane; Trunkove hooky sú v configu zámerne vypnuté. Commit/deploy rob v PowerShelli,
-  `trunk check`/`trunk fmt` vo WSL.
+- **PHP kvalita:** natívne na Windowse funguje `quality.ps1` / PHAR (vyššie).
+- **Git hooky:** `pwsh -File .\hooks\install.ps1` nastaví verzovaný adresár
+  `hooks/`. Trunk actions s Git hook triggerom musia zostať vypnuté, aby
+  neprepísali projektový pre-commit, push a SFTP deploy.
 - **Pozn. (výkon/EOL):** repo na `/mnt/d/...` je vo WSL pomalšie (9p FS); pri `trunk fmt`
   sleduj prípadný CRLF↔LF šum (git má `autocrlf`).

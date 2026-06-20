@@ -4,7 +4,7 @@ This file provides guidance to WARP (warp.dev) when working with code in this re
 
 ## Development commands
 
-- Install local git hooks (auto-push on commit): `pwsh -File .\hooks\install.ps1`
+- Install tracked git hooks (validation, auto-push and SFTP deploy): `pwsh -File .\hooks\install.ps1`
 - Initialise/update database schema and seed codebooks: `php .\setup_db.php`
 - Run PHP syntax lint across the repository: `php .\tools\lint_all.php`
 - Lint a single PHP file: `php -l .\path\to\file.php`
