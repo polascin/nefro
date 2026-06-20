@@ -66,7 +66,6 @@ lint:
         - vendor/**
         - node_modules/**
         - tools/*.phar
-        - deploy_info.php
         - "**/*.min.js"
         - "**/*.min.css"
     # Konzervatívne: neformátovať existujúce ručné CSS/JS (inak masívny prvý diff).
