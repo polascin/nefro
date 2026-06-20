@@ -2,9 +2,10 @@
 # Trunk konfigurácia pre nefro.polascin.net
 # ─────────────────────────────────────────────────────────────────────────────
 # Optimalizované PRE TENTO PROJEKT (plochý PHP web na WebSupport hostingu):
-#   • PHP linting beží cez UŽ EXISTUJÚCE konfigy — Trunk auto-deteguje
-#     `phpstan.neon.dist` (+ `phpstan-baseline.neon`) a `.php-cs-fixer.dist.php`,
-#     takže sa nič neduplikuje a baseline naďalej blokuje len NOVÉ chyby.
+#   • PHP kvalita NEBEŽÍ cez Trunk — phpstan/php-cs-fixer v Trunku vyžadujú PHP
+#     v tom istom prostredí (vo WSL PHP nie je, apt potrebuje sudo heslo) a navyše
+#     by duplikovali natívny PHAR beh. PHP rieši `quality.ps1` (PHPStan + PHP-CS-Fixer
+#     PHAR) priamo na Windowse. Trunk pokrýva len NE-PHP veci (secrets, MD/YAML/sh…).
 #   • Formátovanie je ZÁMERNE konzervatívne (rovnaká filozofia ako
 #     `.php-cs-fixer.dist.php`) — prettier sa púšťa len na MD/JSON/YAML, NIE na
 #     veľký ručný `index.css` ani na JS, aby prvý beh neprepísal celý kód.
@@ -41,23 +42,23 @@ plugins:
 
 lint:
   enabled:
-    - git-diff-check               # konfliktné značky / poškodené diffy (vstavané)
-    - gitleaks@8.18.4              # detekcia tajomstiev (auth/GDPR/DB heslá) — kľúčové
-    - phpstan@1.12.7               # statická analýza PHP (reuse phpstan.neon.dist + baseline)
-    - php-cs-fixer@3.64.0          # PHP štýl (reuse .php-cs-fixer.dist.php)
-    - prettier@3.4.2               # formát MD/JSON/YAML (CSS/JS sú ignorované nižšie)
-    - markdownlint@0.43.0          # štruktúra Markdownu (PUBLIKOVANIE_*.md, AGENTS.md…)
-    - shellcheck@0.10.0            # deploy.sh, sync_article_pdfs.sh
-    - shfmt@3.6.1                  # formát shell skriptov
-    - yamllint@1.35.1             # tento súbor + prípadné ďalšie YAML
-    - taplo@0.9.3                  # TOML
+    - git-diff-check # konfliktné značky / poškodené diffy (vstavané)
+    - gitleaks@8.18.4 # detekcia tajomstiev (auth/GDPR/DB heslá) — kľúčové
+    - prettier@3.4.2 # formát MD/JSON/YAML (CSS/JS sú ignorované nižšie)
+    - markdownlint@0.43.0 # štruktúra Markdownu (PUBLIKOVANIE_*.md, AGENTS.md…)
+    - shellcheck@0.10.0 # deploy.sh, sync_article_pdfs.sh
+    - shfmt@3.6.1 # formát shell skriptov
+    - yamllint@1.38.0 # tento súbor + prípadné ďalšie YAML
+    - taplo@0.9.3 # TOML
 
   disabled:
-    - eslint                       # bez eslint.config by zaplavil JS; syntax rieši `node --check`
-    - stylelint                    # index.css je 5000+ riadkov ručného CSS → priveľa šumu
-    - oxipng                       # NEPREPISOVAŤ commitnuté obrázky (churn + zbytočný redeploy)
-    - svgo                         #   to isté pre SVG
-    - trufflehog                   # prekrýva sa s gitleaks — netreba duplicitu
+    - phpstan # PHP rieši natívny PHAR (quality.ps1); v Trunku/WSL chýba PHP
+    - php-cs-fixer #   to isté — netreba duplicitu a PHP vo WSL nie je
+    - eslint # bez eslint.config by zaplavil JS; syntax rieši `node --check`
+    - stylelint # index.css je 5000+ riadkov ručného CSS → priveľa šumu
+    - oxipng # NEPREPISOVAŤ commitnuté obrázky (churn + zbytočný redeploy)
+    - svgo #   to isté pre SVG
+    - trufflehog # prekrýva sa s gitleaks — netreba duplicitu
 
   ignore:
     # Binárne, nahrávané, generované a cudzie veci — nelintovať vôbec.
@@ -90,3 +91,8 @@ actions:
   # ZÁMERNE VYPNUTÉ (nezapínať): trunk-fmt-pre-commit, trunk-check-pre-push.
   # Inštalujú Trunkove git hooky a prepísali by vlastný pre-commit (`php -l`) aj
   # post-commit (SFTP deploy). Kontrolu spúšťaj ručne: `trunk check` / `trunk fmt`.
+runtimes:
+  enabled:
+    - go@1.21.0
+    - node@18.20.5
+    - python@3.10.8
