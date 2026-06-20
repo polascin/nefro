@@ -74,6 +74,21 @@ poľom `category` a tým, kde sú vypísané.
 9. **Over live:** `curl -s "https://nefro.polascin.net/article.php?slug=<slug>"` —
    HTTP 200, žiadny `Fatal error`, jeden `<title>`, správna typografia.
 
+> 👥 **Pôvodní autori zdroja (krok navyše, ak je článok spracovaním cudzieho
+> zdroja).** Pole `author` je vždy len **autor projektu** (`MUDr. Ľubomír
+> Polaščín`), takže pôvodní autori zdrojového článku sa k autorom **nepridajú
+> sami**. Ak je článok slovenským spracovaním KONKRÉTNEHO zdrojového článku,
+> doplň jeho autorov do **[source_authors.php](source_authors.php)** (mapa
+> `slug => [mená]`) — je **autoritatívna** a zobrazí ich vo widgete „Zúčastnení
+> autori" aj vo filtri `?autor=`. Mená získavaj len z **otvorených
+> bibliografických API** (Crossref `filter=alternative-id:<PII>`, PubMed/eutils,
+> DOI) alebo verejných tlačových správ — **nikdy obchádzaním paywallu**
+> (Medscape a pod. doplní používateľ). Notácia „Meno Priezvisko" kvôli
+> agregácii naprieč článkami. Bez mapy funguje len obmedzený fallback: prvý
+> autor z presnej značky `Zdroj:` v obsahu (zoznam `Zdroje` sa neparsuje).
+> Pôvodný (originálny) článok bez konkrétneho zdroja ostáva len pod autorom
+> projektu — to je správne.
+
 ### B) Regenerovať / upraviť existujúci článok
 
 1. **Uprav `content`/`excerpt`/`title`** priamo v jeho `add_<slug>_article.php`

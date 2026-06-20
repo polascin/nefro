@@ -25,6 +25,19 @@
  *                Externé linky → <a href="…" target="_blank" rel="noopener noreferrer">
  *                Záver (zdroj) → <hr><p><em>Zdroj: …</em></p>
  *   • is_top   – 0 = bežný článok, 1 = odporúčaný (zobrazí sa vo featured sekcii)
+ *   • author   – autor projektu (predvolene 'MUDr. Ľubomír Polaščín').
+ *
+ *   ⚠ PÔVODNÍ AUTORI ZDROJA (widget „Zúčastnení autori" + filter ?autor=):
+ *      Pole `author` je VŽDY len autor projektu, preto sa pôvodní autori
+ *      zdrojového článku k autorom NEpridajú automaticky. Ak je článok
+ *      slovenským spracovaním KONKRÉTNEHO zdrojového článku, doplň jeho
+ *      pôvodných autorov do  source_authors.php  (mapa slug → [mená]) — tá je
+ *      autoritatívna a zobrazí ich vo widgete aj vo filtri.
+ *      • Mená zháňaj len z otvorených bibliografických API (Crossref/PubMed/
+ *        eutils) alebo verejných tlačových správ — NIE obchádzaním paywallu.
+ *      • Notácia „Meno Priezvisko" (kvôli agregácii naprieč článkami).
+ *      • Bez mapy funguje len obmedzený fallback: prvý autor z „Zdroj:" v obsahu
+ *        (značka musí byť presne „Zdroj:", nie zoznam „Zdroje").
  */
 
 // Ochrana – len admin alebo CLI
@@ -45,7 +58,7 @@ $articles = [];
 $articles[] = [
     'title'        => '',                    // ← VYPLNIŤ: napr. 'Hyperurikémia a CKD: nové odporúčania'
     'slug'         => '',                    // ← VYPLNIŤ: napr. 'hyperurikemia-ckd-nove-odporucania'
-    'author'       => 'MUDr. Ľubomír Polaščín',
+    'author'       => 'MUDr. Ľubomír Polaščín',  // autor projektu; pôvodných autorov zdroja pridaj do source_authors.php (slug → mená)
     'published_at' => date('Y-m-d H:i:s'),   // ← dátum + čas zverejnenia (upraviť ak treba)
     'is_top'       => 0,                     // ← 1 ak má byť featured
     'excerpt'      => '',                    // ← VYPLNIŤ: 1–2 vety, čistý text

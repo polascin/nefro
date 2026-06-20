@@ -30,6 +30,16 @@
  *                Nadpisy sekcií → <h2>; zoznam → <ul>/<ol> + <li>
  *   • category – 'popularne' (nastavené automaticky nižšie — needituj)
  *   • is_top   – 0 = bežný, 1 = odporúčaný (zobrazí sa s odznakom navrchu sekcie)
+ *   • author   – autor projektu (predvolene 'MUDr. Ľubomír Polaščín').
+ *
+ *   ⚠ PÔVODNÍ AUTORI ZDROJA (widget „Zúčastnení autori" + filter ?autor=):
+ *      Pole `author` je VŽDY len autor projektu, preto sa pôvodní autori
+ *      zdrojového článku k autorom NEpridajú automaticky. Ak je článok
+ *      slovenským spracovaním KONKRÉTNEHO zdrojového článku, doplň jeho
+ *      pôvodných autorov do  source_authors.php  (mapa slug → [mená]) — tá je
+ *      autoritatívna a zobrazí ich vo widgete aj vo filtri. Mená len z otvorených
+ *      bibliografických API (Crossref/PubMed) či verejných správ — NIE z paywallu.
+ *      Bez mapy funguje len fallback: prvý autor z presnej značky „Zdroj:" v obsahu.
  */
 
 // Ochrana – len admin alebo CLI
@@ -50,7 +60,7 @@ $articles = [];
 $articles[] = [
     'title'        => '',                    // ← VYPLNIŤ: napr. 'Čo sú obličky a prečo sú také dôležité'
     'slug'         => '',                    // ← VYPLNIŤ: napr. 'co-su-oblicky-preco-dolezite'
-    'author'       => 'MUDr. Ľubomír Polaščín',
+    'author'       => 'MUDr. Ľubomír Polaščín',  // autor projektu; pôvodných autorov zdroja pridaj do source_authors.php (slug → mená)
     'published_at' => date('Y-m-d H:i:s'),   // ← dátum + čas zverejnenia (upraviť ak treba)
     'is_top'       => 0,                     // ← 1 ak má byť odporúčaný navrchu sekcie
     'excerpt'      => '',                    // ← VYPLNIŤ: 1–2 vety, čistý text
