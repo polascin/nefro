@@ -42,8 +42,8 @@ ServerSignature Off
 <IfModule mod_rewrite.c>
     RewriteEngine On
 
-    # Blokovanie .git, scratch, hooks, tools, .vscode adresárov
-    RewriteRule ^(\.git|scratch|hooks|tools|\.vscode)(/.*)?$ - [F,L]
+    # Blokovanie .git, scratch, hooks, tools, .vscode, .kilo, .trunk adresárov
+    RewriteRule ^(\.git|scratch|hooks|tools|\.vscode|\.kilo|\.trunk)(/.*)?$ - [F,L]
 
     # Rewrite sitemap.xml → sitemap.php
     RewriteRule ^sitemap\.xml$ sitemap.php [L]

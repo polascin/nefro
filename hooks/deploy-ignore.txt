@@ -6,6 +6,7 @@
 .github/**
 .gitignore
 .gitleaks.toml
+.kilo/**
 .markdownlint.yaml
 .php-cs-fixer.dist.php
 .pylintrc
