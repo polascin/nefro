@@ -8,6 +8,7 @@ if (function_exists('isLoggedIn') && isLoggedIn() && isset($pdo)
 }
 $_calcSubnavItems = [
     ['file' => 'calculator_egfr.php',       'label' => 'eGFR'],
+    ['file' => 'calculator_egfr_cys.php',   'label' => 'eGFR (kr-cys)'],
     ['file' => 'calculator_kdigo_risk.php',  'label' => 'KDIGO G/A'],
     ['file' => 'calculator_kfre.php',        'label' => 'KFRE'],
     ['file' => 'calculator_ckdpc.php',       'label' => 'CKD-PC'],

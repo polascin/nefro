@@ -42,6 +42,11 @@ $schemaWebApp = [
         ],
         [
             "@type" => "WebApplication",
+            "name" => "eGFR (CKD-EPI kreatinín–cystatín C 2021)",
+            "url" => $baseUrl . "calculator_egfr_cys.php",
+        ],
+        [
+            "@type" => "WebApplication",
             "name" => "KDIGO G/A riziko CKD",
             "url" => $baseUrl . "calculator_kdigo_risk.php",
         ],
@@ -192,6 +197,12 @@ $schemaWebApp = [
                         <h3>eGFR (CKD-EPI 2021)</h3>
                         <p>Výpočet odhadovanej glomerulovej filtrácie z veku, pohlavia a kreatinínu.</p>
                         <a href="calculator_egfr.php" class="btn-primary">Otvoriť kalkulačku</a>
+                    </article>
+
+                    <article class="feature-card calculator-card">
+                        <h3>eGFR (kreatinín–cystatín C 2021)</h3>
+                        <p>Presnejší odhad filtrácie a potvrdenie CKD podľa KDIGO 2024 — kombinovaný vzorec CKD-EPI 2021 z kreatinínu a cystatínu C (bez rasy).</p>
+                        <a href="calculator_egfr_cys.php" class="btn-primary">Otvoriť kalkulačku</a>
                     </article>
 
                     <article class="feature-card calculator-card">
