@@ -60,15 +60,16 @@ git diff --cached --name-only --diff-filter=ACM -z -- 'img/*.png' 'img/*.jpg' 'i
 done
 [ -f tools/.watermark-manifest.json ] && git add tools/.watermark-manifest.json
 
-# 2b) Skonvertuj neaktuálne PNG v img/ na WebP (z už ovodoznakovaného PNG).
+# 2b) Skonvertuj neaktuálne PNG/JPEG v img/ na WebP (zo zdroja s vodoznakom).
 php tools/convert_images_webp.php || {
-	echo "pre-commit: konverzia PNG→WebP zlyhala — commit zastavený." >&2
+	echo "pre-commit: konverzia obrázok→WebP zlyhala — commit zastavený." >&2
 	exit 1
 }
 
-# Pridaj vygenerované .webp súrodence k staged PNG (robustné voči medzerám v názve).
-git diff --cached --name-only --diff-filter=ACM -z -- 'img/*.png' | while IFS= read -r -d '' f; do
-	webp="${f%.png}.webp"
+# Pridaj vygenerované .webp súrodence k staged obrázkom (robustné voči medzerám).
+git diff --cached --name-only --diff-filter=ACM -z -- 'img/*.png' 'img/*.jpg' 'img/*.jpeg' \
+	| while IFS= read -r -d '' f; do
+	webp="${f%.*}.webp"
 	[ -f "$webp" ] && git add "$webp"
 done
 

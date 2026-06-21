@@ -626,8 +626,8 @@ if (!empty($itemListElements)) {
       <div class="widget">
         <h3>Náhodný obrázok</h3>
         <?php
-        // Získanie všetkých obrázkov zodpovedajúcich štruktúre
-        $images = glob("./img/nefro_*.png");
+        // Získanie všetkých obrázkov — len WebP formát (nefro_*.webp)
+        $images = glob("./img/nefro_*.webp");
         if (!empty($images)) {
             // Výber náhodného obrázka
             $randomIndex = array_rand($images);

@@ -70,6 +70,11 @@ ServerSignature Off
     RewriteCond %{HTTP_ACCEPT} image/webp
     RewriteCond %{DOCUMENT_ROOT}/$1.webp -f
     RewriteRule ^(img/.+)\.png$ $1.webp [T=image/webp,E=WEBP_SERVED:1,L]
+
+    # To isté pre JPEG (foo.jpg/foo.jpeg → foo.webp, ak WebP súrodenec existuje).
+    RewriteCond %{HTTP_ACCEPT} image/webp
+    RewriteCond %{DOCUMENT_ROOT}/$1.webp -f
+    RewriteRule ^(img/.+)\.jpe?g$ $1.webp [T=image/webp,E=WEBP_SERVED:1,L]
 </IfModule>
 
 # ── WebP: MIME typ a korektné cachovanie ────────────────────────────────────
@@ -77,8 +82,8 @@ ServerSignature Off
     AddType image/webp .webp
 </IfModule>
 <IfModule mod_headers.c>
-    # Proxy/CDN musia cachovať PNG aj WebP variant podľa hlavičky Accept
-    <FilesMatch "\.(png|webp)$">
+    # Proxy/CDN musia cachovať pôvodný (PNG/JPEG) aj WebP variant podľa Accept
+    <FilesMatch "\.(png|jpe?g|webp)$">
         Header append Vary Accept
     </FilesMatch>
 </IfModule>

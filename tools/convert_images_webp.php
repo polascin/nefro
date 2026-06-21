@@ -3,14 +3,15 @@ declare(strict_types=1);
 /**
  * tools/convert_images_webp.php
  * ────────────────────────────────────────────────────────────────────────────
- * Konverzia PNG → WebP (GD, zachováva priehľadnosť). WebP sa ukladá ako súrodenec
- * vedľa PNG (foo.png → foo.webp). PNG zostáva ako fallback — web ho transparentne
- * nahrádza WebP cez content-negotiation pravidlo v .htaccess.
+ * Konverzia PNG/JPEG → WebP (GD, zachováva priehľadnosť). WebP sa ukladá ako
+ * súrodenec vedľa zdroja (foo.png → foo.webp, foo.jpeg → foo.webp). Originál
+ * zostáva ako fallback — web ho transparentne nahrádza WebP cez
+ * content-negotiation pravidlo v .htaccess.
  *
  * Použitie:
- *   php tools/convert_images_webp.php                # prejde img/ a skonvertuje neaktuálne
- *   php tools/convert_images_webp.php img/a.png b.png # skonvertuje konkrétne súbory
- *   php tools/convert_images_webp.php --force        # prekonvertuje aj aktuálne
+ *   php tools/convert_images_webp.php                 # prejde img/ a skonvertuje neaktuálne
+ *   php tools/convert_images_webp.php img/a.png b.jpeg # skonvertuje konkrétne súbory
+ *   php tools/convert_images_webp.php --force         # prekonvertuje aj aktuálne
  *
  * Beží len z CLI. Vracia 0 pri úspechu, 1 ak niektorá konverzia zlyhala.
  */
@@ -39,27 +40,33 @@ foreach (array_slice($argv, 1) as $arg) {
     $explicit[] = $arg;
 }
 
-// ── Zostav zoznam PNG na konverziu ───────────────────────────────────────────
-$pngs = [];
+// ── Zostav zoznam zdrojov na konverziu (PNG + JPEG) ──────────────────────────
+$sources = [];
 if ($explicit) {
     foreach ($explicit as $p) {
         $abs = (preg_match('#^(?:[A-Za-z]:|/)#', $p)) ? $p : $root . '/' . $p;
-        if (is_file($abs) && strtolower((string) pathinfo($abs, PATHINFO_EXTENSION)) === 'png') {
-            $pngs[] = $abs;
+        $ext = strtolower((string) pathinfo($abs, PATHINFO_EXTENSION));
+        if (is_file($abs) && in_array($ext, ['png', 'jpg', 'jpeg'], true)) {
+            $sources[] = $abs;
         }
     }
 } else {
-    foreach (glob($root . '/img/*.png') ?: [] as $p) {
-        $pngs[] = $p;
+    foreach (glob($root . '/img/*.{png,jpg,jpeg}', GLOB_BRACE) ?: [] as $p) {
+        $sources[] = $p;
     }
 }
 
 /**
- * Skonvertuje jeden PNG na WebP súrodenca. Zachováva alfa kanál.
+ * Skonvertuje jeden PNG/JPEG na WebP súrodenca. Pri PNG zachová alfa kanál.
  */
-function pngToWebp(string $src, string $dst, int $quality): bool
+function imageToWebp(string $src, string $dst, int $quality): bool
 {
-    $im = @imagecreatefrompng($src);
+    $ext = strtolower((string) pathinfo($src, PATHINFO_EXTENSION));
+    $im = match ($ext) {
+        'png'         => @imagecreatefrompng($src),
+        'jpg', 'jpeg' => @imagecreatefromjpeg($src),
+        default       => false,
+    };
     if ($im === false) {
         return false;
     }
@@ -76,29 +83,29 @@ $skipped   = 0;
 $failed    = [];
 $savedBytes = 0;
 
-foreach ($pngs as $png) {
-    $webp = preg_replace('/\.png$/i', '.webp', $png);
+foreach ($sources as $src) {
+    $webp = preg_replace('/\.(png|jpe?g)$/i', '.webp', $src);
 
-    // Preskoč, ak je WebP aktuálny (existuje a nie je starší ako PNG)
-    if (!$force && is_file($webp) && filemtime($webp) >= filemtime($png)) {
+    // Preskoč, ak je WebP aktuálny (existuje a nie je starší ako zdroj)
+    if (!$force && is_file($webp) && filemtime($webp) >= filemtime($src)) {
         $skipped++;
         continue;
     }
 
-    if (pngToWebp($png, $webp, WEBP_QUALITY)) {
+    if (imageToWebp($src, $webp, WEBP_QUALITY)) {
         $converted++;
-        $savedBytes += max(0, filesize($png) - filesize($webp));
+        $savedBytes += max(0, filesize($src) - filesize($webp));
         $name = basename($webp);
-        $pct  = filesize($png) > 0 ? round(100 * (1 - filesize($webp) / filesize($png))) : 0;
+        $pct  = filesize($src) > 0 ? round(100 * (1 - filesize($webp) / filesize($src))) : 0;
         echo "  ✓ {$name}  " . round(filesize($webp) / 1024) . " KB  (-{$pct}%)\n";
     } else {
-        $failed[] = $png;
-        fwrite(STDERR, "  ✗ ZLYHALO: {$png}\n");
+        $failed[] = $src;
+        fwrite(STDERR, "  ✗ ZLYHALO: {$src}\n");
     }
 }
 
 echo "──────────────────────────────────────────────────────\n";
-echo "PNG→WebP: skonvertovaných {$converted}, preskočených (aktuálne) {$skipped}, "
+echo "Obrázok→WebP: skonvertovaných {$converted}, preskočených (aktuálne) {$skipped}, "
     . "zlyhaní " . count($failed) . ". Ušetrené ~" . round($savedBytes / 1024 / 1024, 1) . " MB.\n";
 
 exit($failed ? 1 : 0);
