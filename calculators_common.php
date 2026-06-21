@@ -526,6 +526,44 @@ function calculatorHandleDeleteSaved(PDO $pdo, array &$errors, array &$messages,
 }
 
 /**
+ * Vykreslí výzvu na bezplatnú registráciu pre NEPRIHLÁSENÝCH používateľov.
+ * Pre prihlásených nevykreslí nič (volajúci ju môže volať bezpodmienečne).
+ *
+ * Soft-gate filozofia: samotný výpočet je vždy voľný a indexovateľný (SEO/dosah);
+ * účet odomyká pridanú hodnotu (ukladanie k pacientovi, história, tlač). CTA sa
+ * zobrazuje v momente najvyššieho záujmu — pri výsledku a v sekcii histórie.
+ *
+ * @param string $variant 'saved' (sekcia histórie) | 'hub' (prehľad kalkulačiek)
+ */
+function calculatorRenderRegisterCta(string $variant = 'saved'): void
+{
+    if (isLoggedIn()) {
+        return;
+    }
+    $title = $variant === 'hub'
+        ? 'Vyťažte z kalkulačiek maximum — vytvorte si bezplatný účet'
+        : 'Uložte si tento výpočet — vytvorte si bezplatný účet';
+    ?>
+    <aside class="calc-register-cta" aria-label="Výhody bezplatného účtu">
+        <h3 class="calc-register-cta__title"><?= htmlspecialchars($title) ?></h3>
+        <p class="calc-register-cta__lead">
+            Samotný výpočet je vždy zadarmo a bez prihlásenia. S&nbsp;bezplatným účtom navyše získate:
+        </p>
+        <ul class="calc-register-cta__benefits">
+            <li>Uloženie výsledkov k&nbsp;pacientovi a&nbsp;históriu výpočtov</li>
+            <li>Sledovanie vývoja v&nbsp;čase (napr. trajektória eGFR)</li>
+            <li>Tlač a&nbsp;PDF záznamu, opätovné použitie údajov pacienta</li>
+        </ul>
+        <div class="calc-register-cta__actions">
+            <a href="register.php" class="btn-primary calc-register-cta__btn">Vytvoriť bezplatný účet</a>
+            <a href="login.php" class="btn-secondary calc-register-cta__btn">Už mám účet</a>
+        </div>
+        <p class="calc-register-cta__note">Registrácia trvá ~30&nbsp;sekúnd — stačí e-mail a&nbsp;heslo.</p>
+    </aside>
+    <?php
+}
+
+/**
  * Vykreslí sekciu uložených výsledkov so štandardnou 4-stĺpcovou tabuľkou.
  * $renderResultCell(array $row): void — echos HTML pre stĺpec "Výsledok"
  */
@@ -535,18 +573,21 @@ function calculatorRenderSavedResultsTable(
     callable $renderResultCell,
     string $extraSectionClass = ''
 ): void {
-    $cls = 'auth-container auth-container--wide calc-saved-results';
+    // Hosť dostane CTA bez kartového orámovania (CTA si nesie vlastný box);
+    // prihlásený používateľ vidí klasickú kartu s tabuľkou histórie.
+    $cls = isLoggedIn() ? 'auth-container auth-container--wide calc-saved-results' : 'calc-saved-results';
     if ($extraSectionClass !== '') {
         $cls .= ' ' . $extraSectionClass;
     }
     ?>
     <section class="<?= htmlspecialchars($cls) ?>">
-        <h3>Uložené výsledky</h3>
         <?php if (!isLoggedIn()): ?>
-            <p>Pre ukladanie a históriu výpočtov je potrebné prihlásenie.</p>
+            <?php calculatorRenderRegisterCta('saved'); ?>
         <?php elseif (empty($savedResults)): ?>
+            <h3>Uložené výsledky</h3>
             <p>Zatiaľ nemáte uložené žiadne výsledky pre túto kalkulačku.</p>
         <?php else: ?>
+            <h3>Uložené výsledky</h3>
             <div class="admin-table-wrap">
                 <table class="admin-table">
                     <thead>

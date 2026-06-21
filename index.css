@@ -5844,6 +5844,78 @@ mark.search-hl {
     font-size: 0.9rem;
 }
 
+/* ── Výzva na bezplatný účet pri kalkulačkách ───────────────────────────────
+   Soft-gate: výpočet je vždy voľný (SEO/dosah), účet odomyká nadstavbu
+   (uloženie k pacientovi, história, tlač). Teal akcent odlišuje „účet"
+   od modrej „newsletter" CTA. Bez inline štýlov (CSP style-src 'self'). */
+.calc-register-cta {
+    background: linear-gradient(135deg, #0e7490 0%, #0ea5e9 100%);
+    border-radius: 16px;
+    padding: 28px 32px;
+    color: #fff;
+    margin: 28px 0;
+}
+
+.calc-register-cta__title {
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0 0 10px;
+}
+
+.calc-register-cta__lead {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.95rem;
+    margin: 0 0 12px;
+}
+
+.calc-register-cta__benefits {
+    margin: 0 0 18px;
+    padding-left: 1.2em;
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.calc-register-cta__benefits li {
+    margin-bottom: 4px;
+}
+
+.calc-register-cta__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.calc-register-cta__btn.btn-primary {
+    margin-top: 0;
+    background: #fff;
+    color: #0e7490;
+}
+
+.calc-register-cta__btn.btn-primary:hover {
+    background: #e0f7ff;
+    color: #0e7490;
+}
+
+.calc-register-cta__btn.btn-secondary {
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.calc-register-cta__btn.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #fff;
+}
+
+.calc-register-cta__note {
+    margin: 0;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
 .contact-community__account {
     margin-top: 14px;
     font-size: 0.9rem;

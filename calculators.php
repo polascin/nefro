@@ -2,6 +2,7 @@
 declare(strict_types=1);
 require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/db_config.php';
+require_once __DIR__ . '/calculators_common.php'; // calculatorRenderRegisterCta()
 /** @var \PDO $pdo */
 
 $pageLastUpdated = date("d.m.Y H:i", filemtime(__FILE__));
@@ -181,6 +182,8 @@ $schemaWebApp = [
                     v spodnej časti každej kalkulačky s možnosťou vytlačenia alebo vymazania.
                 </p>
             </section>
+
+            <?php calculatorRenderRegisterCta('hub'); ?>
 
             <section class="features-section" aria-labelledby="calculators-heading">
                 <h2 id="calculators-heading">Dostupné kalkulačky</h2>
