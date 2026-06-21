@@ -20,6 +20,12 @@ $bank = [
 // Voliteľný PAY by square QR — zobrazí sa iba ak existuje obrázok
 $qrImage = 'img/pay-by-square.png';
 $hasQr = is_file(__DIR__ . '/' . $qrImage);
+
+// PayPal — doplnkový spôsob podpory
+$paypalEmail = 'polascin@proton.me';
+$paypalUrl =
+    'https://www.paypal.com/donate/?business=polascin%40proton.me'
+    . '&no_recurring=0&item_name=Podpora+Nefro-projekt+Slovensko&currency_code=EUR';
 ?>
 <!DOCTYPE html>
 <html lang="sk">
@@ -137,12 +143,24 @@ $hasQr = is_file(__DIR__ . '/' . $qrImage);
                     <?php endif; ?>
                 </section>
 
+                <section class="form-section" aria-labelledby="paypal-heading">
+                    <h3 id="paypal-heading">PayPal</h3>
+                    <p>Prispieť môžete aj cez PayPal — rýchlo a bez zadávania bankových údajov.</p>
+                    <p class="donate-paypal-actions">
+                        <a href="<?= htmlspecialchars($paypalUrl) ?>" class="btn-primary" target="_blank" rel="noopener noreferrer">Podporiť cez PayPal</a>
+                    </p>
+                    <p class="donate-note">
+                        Prípadne pošlite príspevok priamo na PayPal účet
+                        <code><?= htmlspecialchars($paypalEmail) ?></code>.
+                    </p>
+                </section>
+
                 <div class="info-box-green">
                     <strong>Dôležité:</strong> príspevok je <strong>dobrovoľný dar</strong> na podporu
                     prevádzky a tvorby obsahu. Nejde o platbu za tovar ani službu a nezakladá nárok na
                     protiplnenie. Prevádzkovateľ nie je registrovaná nezisková organizácia, preto dar
                     nie je daňovo uznateľný. Platby sa nespracúvajú na tejto stránke — uskutočňujú sa
-                    priamo cez vašu banku.
+                    priamo cez vašu banku alebo službu PayPal.
                 </div>
 
                 <p>
