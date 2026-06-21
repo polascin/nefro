@@ -2559,6 +2559,9 @@ input:disabled + .slider:before {
 .donate-qr { margin: 16px 0 0; text-align: center; }
 .donate-qr img { border: 1px solid var(--border-color); border-radius: 8px; padding: 8px; background: #fff; }
 .donate-qr figcaption { font-size: 0.82rem; color: #6b7280; margin-top: 6px; }
+.donate-paypal-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.donate-paypal-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.donate-paypal-row code { font-size: 0.95rem; }
 @media (max-width: 480px) { .donate-bank { grid-template-columns: 1fr; gap: 2px 0; } .donate-bank dt { margin-top: 8px; } .donate-copy-btn { margin-left: 0; margin-top: 6px; display: inline-block; } }
 
 /* ── Doplnené pri inline-style sweepe (Beh 30, 2026-06-09) ──────────────── */

@@ -21,11 +21,16 @@ $bank = [
 $qrImage = 'img/pay-by-square.png';
 $hasQr = is_file(__DIR__ . '/' . $qrImage);
 
-// PayPal — doplnkový spôsob podpory
-$paypalEmail = 'polascin@proton.me';
-$paypalUrl =
-    'https://www.paypal.com/donate/?business=polascin%40proton.me'
-    . '&no_recurring=0&item_name=Podpora+Nefro-projekt+Slovensko&currency_code=EUR';
+// PayPal — doplnkové spôsoby podpory (jeden alebo viac účtov)
+$paypalAccounts = [
+    'polascin@proton.me',
+    'walter.csoelle@gmail.com',
+];
+$paypalDonateUrl = static function (string $email): string {
+    return 'https://www.paypal.com/donate/?business=' . rawurlencode($email)
+        . '&no_recurring=0&item_name=' . rawurlencode('Podpora Nefro-projekt Slovensko')
+        . '&currency_code=EUR';
+};
 ?>
 <!DOCTYPE html>
 <html lang="sk">
@@ -145,14 +150,16 @@ $paypalUrl =
 
                 <section class="form-section" aria-labelledby="paypal-heading">
                     <h3 id="paypal-heading">PayPal</h3>
-                    <p>Prispieť môžete aj cez PayPal — rýchlo a bez zadávania bankových údajov.</p>
-                    <p class="donate-paypal-actions">
-                        <a href="<?= htmlspecialchars($paypalUrl) ?>" class="btn-primary" target="_blank" rel="noopener noreferrer">Podporiť cez PayPal</a>
-                    </p>
-                    <p class="donate-note">
-                        Prípadne pošlite príspevok priamo na PayPal účet
-                        <code><?= htmlspecialchars($paypalEmail) ?></code>.
-                    </p>
+                    <p>Prispieť môžete aj cez PayPal — rýchlo a bez zadávania bankových údajov.
+                        Vyberte si ktorýkoľvek z účtov:</p>
+                    <ul class="donate-paypal-list">
+                        <?php foreach ($paypalAccounts as $ppEmail): ?>
+                        <li class="donate-paypal-row">
+                            <code><?= htmlspecialchars($ppEmail) ?></code>
+                            <a href="<?= htmlspecialchars($paypalDonateUrl($ppEmail)) ?>" class="btn-primary" target="_blank" rel="noopener noreferrer">Podporiť cez PayPal</a>
+                        </li>
+                        <?php endforeach; ?>
+                    </ul>
                 </section>
 
                 <div class="info-box-green">
