@@ -30,22 +30,37 @@ fi
 # Pozn.: hlbšiu statickú analýzu (PHPStan + PHP-CS-Fixer) spúšťaj ručne:
 #   pwsh tools/quality.ps1   (-Fix na aplikovanie formátovania)
 
-# --- 2) Automatická konverzia PNG → WebP pred commitom ---
-# Pre každý staged PNG v img/ vytvorí WebP súrodenca a pridá ho do commitu.
-# PNG zostáva ako fallback — web ho transparentne nahrádza WebP (content
-# negotiation v .htaccess). Pozri tools/convert_images_webp.php.
+# --- 2) Auto-vodoznak + konverzia PNG → WebP pred commitom ---
+# Pre staged obsahové obrázky v img/ sa najprv zapečie značkový vodoznak
+# (tools/watermark_images.php — idempotentné cez manifest; logá/avatary/OG sú
+# vylúčené v DENY_PATTERNS), potom sa pre PNG vytvorí WebP súrodenec. PNG
+# zostáva ako fallback (content negotiation v .htaccess).
 
-# Existujú staged PNG v img/?
-changed=$(git diff --cached --name-only --diff-filter=ACM -- 'img/*.png')
-[ -z "$changed" ] && exit 0
+# Existujú staged obsahové obrázky v img/?
+staged_count=$(git diff --cached --name-only --diff-filter=ACM -- 'img/*.png' 'img/*.jpg' 'img/*.jpeg' | wc -l)
+[ "$staged_count" -eq 0 ] && exit 0
 
-# Bez PHP konverziu preskočíme (commit nezablokujeme).
+# Bez PHP vodoznak aj konverziu preskočíme (commit nezablokujeme).
 if ! command -v php >/dev/null 2>&1; then
-	echo "pre-commit: php nenájdený — preskakujem auto-konverziu PNG→WebP." >&2
+	echo "pre-commit: php nenájdený — preskakujem vodoznak a PNG→WebP." >&2
 	exit 0
 fi
 
-# Skonvertuj neaktuálne PNG v img/ (idempotentné — aktuálne preskočí).
+# 2a) Zapeč vodoznak do staged obrázkov (in-place, idempotentné cez manifest).
+git diff --cached --name-only --diff-filter=ACM -z -- 'img/*.png' 'img/*.jpg' 'img/*.jpeg' \
+	| xargs -0 -r php tools/watermark_images.php --stage || {
+	echo "pre-commit: vodoznak zlyhal — commit zastavený." >&2
+	exit 1
+}
+
+# Re-add ovodoznakované obrázky + manifest (working-tree verzia ≠ index).
+git diff --cached --name-only --diff-filter=ACM -z -- 'img/*.png' 'img/*.jpg' 'img/*.jpeg' \
+	| while IFS= read -r -d '' f; do
+	[ -f "$f" ] && git add "$f"
+done
+[ -f tools/.watermark-manifest.json ] && git add tools/.watermark-manifest.json
+
+# 2b) Skonvertuj neaktuálne PNG v img/ na WebP (z už ovodoznakovaného PNG).
 php tools/convert_images_webp.php || {
 	echo "pre-commit: konverzia PNG→WebP zlyhala — commit zastavený." >&2
 	exit 1

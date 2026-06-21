@@ -48,6 +48,22 @@ ServerSignature Off
     # Rewrite sitemap.xml → sitemap.php
     RewriteRule ^sitemap\.xml$ sitemap.php [L]
 
+    # ── Hotlink protection (ochrana proti vkladaniu obrázkov cudzími webmi) ──
+    # Cieľ NIE JE zabrániť stiahnutiu (to sa nedá) — bráni cudzím stránkam
+    # priamo vkladať naše obrázky a míňať nám prenos. Stiahnutý súbor aj tak
+    # nesie zapečený vodoznak (pozri tools/watermark_images.php).
+    #
+    # Povolené (request prejde):
+    #   • prázdny Referer — priame otvorenie, OG/sociálne crawlery, súkromné prehliadače
+    #   • vlastné domény (nefro.polascin.net + subdomény, lokálny vývoj)
+    #   • veľké vyhľadávače — aby obrázky ostali viditeľné v Google/Bing Images (dosah)
+    # Všetko ostatné s cudzím Refererom dostane 403 pre obrázkové prípony.
+    RewriteCond %{HTTP_REFERER} !^$
+    RewriteCond %{HTTP_REFERER} !^https?://([^/]+\.)?nefro\.polascin\.net(:[0-9]+)?(/|$) [NC]
+    RewriteCond %{HTTP_REFERER} !^https?://(localhost|127\.0\.0\.1)(:[0-9]+)?(/|$) [NC]
+    RewriteCond %{HTTP_REFERER} !^https?://([^/]+\.)?(google|bing|duckduckgo|yahoo|yandex|ecosia)\. [NC]
+    RewriteRule \.(png|webp|jpe?g|gif|svg)$ - [F,NC,L]
+
     # Transparentné servírovanie WebP namiesto PNG (content negotiation).
     # Ak prehliadač akceptuje image/webp a vedľa PNG existuje .webp súrodenec,
     # pošle sa WebP. HTML naďalej odkazuje na .png; PNG ostáva ako fallback.
