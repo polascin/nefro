@@ -139,6 +139,7 @@ const PROTECTED_PDF_SLUGS = [
     'diabeticka-choroba-obliciek-bez-zahad',
     'moderne-trendy-v-nefroprotekcii',
     'obezita-a-oblicky',
+    'zivot-s-diabetom-a-nefropatiou',
 ];
 
 function articlePdfIsProtected(string $slug): bool
