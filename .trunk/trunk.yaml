@@ -46,6 +46,7 @@ lint:
     # Vendored, binárne, privátne a generované súbory.
     - linters: [ALL]
       paths:
+        - .kilo/** # Workspace VS Code rozšírenia (Kilo) — nie projektový zdroj.
         - assets/**
         - extraction_results.json
         - extracted_*.txt
@@ -56,13 +57,15 @@ lint:
         - private/**
         - scratch/**
         - tools/*.phar
+        - tools/.watermark-manifest.json # Generované (json_encode); nie ručne udržiavané.
         - uploads/**
         - vendor/**
         - "**/*.min.css"
         - "**/*.min.js"
 
-    # Historické/publikačné návody majú zámerné Markdown rozloženie.
-    - linters: [markdownlint]
+    # Historické/publikačné návody majú zámerné Markdown rozloženie —
+    # ani markdownlint, ani prettier ich nesmú meniť.
+    - linters: [markdownlint, prettier]
       paths:
         - .agent.md
         - PUBLIKOVANIE_*.md

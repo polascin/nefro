@@ -8,3 +8,7 @@ rules:
   line-length:
     max: 120
     level: warning
+  truthy:
+    # GitHub Actions vyžadujú kľúč `on:`, ktorý YAML inak číta ako boolean true.
+    # Hodnoty (yes/no/on/off) sa stále kontrolujú; vypnutá je len kontrola kľúčov.
+    check-keys: false

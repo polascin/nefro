@@ -1,0 +1,29 @@
+---
+name: Trunk Check
+
+# Continuous quality cez Trunk. Beží na Linux runneri (žiadny WSL problém ako
+# lokálne na Windows). Lokálne git hooky (core.hooksPath=hooks) tým nerušíme —
+# Trunk zámerne nie je v git hookoch, kontroluje sa tu na strane GitHubu.
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  checks: write # Trunk posiela inline anotácie k nálezom.
+
+jobs:
+  trunk-check:
+    name: Trunk Check Runner
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Trunk Check
+        uses: trunk-io/trunk-action@v1

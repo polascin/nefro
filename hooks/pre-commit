@@ -47,17 +47,17 @@ if ! command -v php >/dev/null 2>&1; then
 fi
 
 # 2a) Zapeč vodoznak do staged obrázkov (in-place, idempotentné cez manifest).
-git diff --cached --name-only --diff-filter=ACM -z -- 'img/*.png' 'img/*.jpg' 'img/*.jpeg' \
-	| xargs -0 -r php tools/watermark_images.php --stage || {
+git diff --cached --name-only --diff-filter=ACM -z -- 'img/*.png' 'img/*.jpg' 'img/*.jpeg' |
+	xargs -0 -r php tools/watermark_images.php --stage || {
 	echo "pre-commit: vodoznak zlyhal — commit zastavený." >&2
 	exit 1
 }
 
 # Re-add ovodoznakované obrázky + manifest (working-tree verzia ≠ index).
-git diff --cached --name-only --diff-filter=ACM -z -- 'img/*.png' 'img/*.jpg' 'img/*.jpeg' \
-	| while IFS= read -r -d '' f; do
-	[ -f "$f" ] && git add "$f"
-done
+git diff --cached --name-only --diff-filter=ACM -z -- 'img/*.png' 'img/*.jpg' 'img/*.jpeg' |
+	while IFS= read -r -d '' f; do
+		[ -f "$f" ] && git add "$f"
+	done
 [ -f tools/.watermark-manifest.json ] && git add tools/.watermark-manifest.json
 
 # 2b) Skonvertuj neaktuálne PNG/JPEG v img/ na WebP (zo zdroja s vodoznakom).
@@ -67,10 +67,10 @@ php tools/convert_images_webp.php || {
 }
 
 # Pridaj vygenerované .webp súrodence k staged obrázkom (robustné voči medzerám).
-git diff --cached --name-only --diff-filter=ACM -z -- 'img/*.png' 'img/*.jpg' 'img/*.jpeg' \
-	| while IFS= read -r -d '' f; do
-	webp="${f%.*}.webp"
-	[ -f "$webp" ] && git add "$webp"
-done
+git diff --cached --name-only --diff-filter=ACM -z -- 'img/*.png' 'img/*.jpg' 'img/*.jpeg' |
+	while IFS= read -r -d '' f; do
+		webp="${f%.*}.webp"
+		[ -f "$webp" ] && git add "$webp"
+	done
 
 exit 0
