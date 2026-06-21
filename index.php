@@ -697,6 +697,7 @@ if (!empty($itemListElements)) {
         </ul>
         <h4 class="subheading-secondary">Kalkulačky</h4>
         <ul>
+          <li><a href="https://nephroresource.com/" target="_blank" rel="noopener noreferrer">NephroResource (kalkulačky, interaktívne nástroje, cheat sheets)</a></li>
           <li><a href="https://www.mdcalc.com/specialties/nephrology" target="_blank" rel="noopener noreferrer">MDCalc Nephrology</a></li>
           <li><a href="https://qxmd.com/calculate/" target="_blank" rel="noopener noreferrer">Calculate by QxMD</a></li>
           <li><a href="https://nephcalc.com/" target="_blank" rel="noopener noreferrer">NephCalc</a></li>
