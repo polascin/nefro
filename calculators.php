@@ -62,6 +62,11 @@ $schemaWebApp = [
         ],
         [
             "@type" => "WebApplication",
+            "name" => "nPCR / nPNA (katabolizmus bielkovín pri dialýze)",
+            "url" => $baseUrl . "calculator_npcr.php",
+        ],
+        [
+            "@type" => "WebApplication",
             "name" => "KDIGO G/A riziko CKD",
             "url" => $baseUrl . "calculator_kdigo_risk.php",
         ],
@@ -236,6 +241,12 @@ $schemaWebApp = [
                         <h3>Prevodník jednotiek (SI ⇄ konvenčné)</h3>
                         <p>Obojsmerná živá konverzia laboratórnych jednotiek — kreatinín, urea/BUN, glukóza, vápnik, fosfát, cholesterol, urát a ďalšie.</p>
                         <a href="calculator_units.php" class="btn-primary">Otvoriť kalkulačku</a>
+                    </article>
+
+                    <article class="feature-card calculator-card">
+                        <h3>nPCR / nPNA (dialýza)</h3>
+                        <p>Normalizovaná miera katabolizmu bielkovín z dvoch hodnôt močoviny a Watsonovho objemu — nutričný ukazovateľ, ktorý dopĺňa Kt/V.</p>
+                        <a href="calculator_npcr.php" class="btn-primary">Otvoriť kalkulačku</a>
                     </article>
 
                     <article class="feature-card calculator-card">

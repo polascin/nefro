@@ -137,6 +137,12 @@ $urls = [
         'priority'   => '0.8',
     ],
     [
+        'loc'        => $baseUrl . 'calculator_npcr.php',
+        'lastmod'    => _sitemapLastmod('calculator_npcr.php'),
+        'changefreq' => 'monthly',
+        'priority'   => '0.8',
+    ],
+    [
         'loc'        => $baseUrl . 'calculator_uacr.php',
         'lastmod'    => _sitemapLastmod('calculator_uacr.php'),
         'changefreq' => 'monthly',
