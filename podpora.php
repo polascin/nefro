@@ -49,11 +49,9 @@ $payMethods = [
         'cta' => 'Podporiť cez Ko‑fi',
     ],
     [
-        // Pozn.: doplň PLATOBNÝ ODKAZ zo Stripe (Payment Link), nie e-mail účtu.
-        // Vytvor v Stripe dashboarde: Payment links → New → výsledok https://buy.stripe.com/...
         'name' => 'Platobná karta (Stripe)',
         'desc' => 'Karta, Apple Pay, Google Pay aj BLIK cez zabezpečenú bránu.',
-        'url' => '', // napr. https://buy.stripe.com/...
+        'url' => 'https://donate.stripe.com/8x2fZb0bo3Xxdm4cOGfMA00',
         'cta' => 'Zaplatiť kartou',
     ],
 ];
