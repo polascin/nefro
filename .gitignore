@@ -131,3 +131,7 @@ private/
 tools/*.phar
 .php-cs-fixer.cache
 .phpstan.cache/
+
+# Python (lokálne nástroje, napr. tools/gen_pay_by_square.py)
+__pycache__/
+*.pyc
