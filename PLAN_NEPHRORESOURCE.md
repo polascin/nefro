@@ -200,10 +200,12 @@ korekcia Na + ODS strop) ✅.
 
 **Fáza 3 — Interaktívne nástroje** (najväčší diferenciátor). 🟡 PREBIEHA.
 Nová kategória „Nástroje": hub `nastroje.php` + položka v navigácii/pätičke +
-znovupoužiteľný engine rozhodovacieho stromu (`NefroDecisionTree` v `nastroj_aki.js`,
+zdieľaný znovupoužiteľný engine rozhodovacieho stromu (`NefroDecisionTree`
+v `nastroj_engine.js`; jednotlivé nástroje sú už len dátové stromy `nastroj_*.js`,
 bez inline štýlov, no-JS statická referencia).
 AKI sprievodca ✅ (`nastroj_aki.php` — diferenciálna dg. podľa KDIGO) ·
-algoritmus hyponatrémie ⏳ · hypokaliémia ⏳ · plánovač diéty ⏳.
+algoritmus hyponatrémie ✅ (`nastroj_hyponatremia.php` — tonicita → závažnosť →
+objem → U-Na/U-osm, SIADH, ODS limity) · hypokaliémia ⏳ · plánovač diéty ⏳.
 
 **Fáza 4 — Cheat sheety** (tlačiteľné, využijú PDF pipeline):
 acidobáza · elektrolyty · diuretiká · infúzne roztoky (najprv tie, ku ktorým už

@@ -166,6 +166,7 @@ $baseUrl = "https://nefro.polascin.net/";
         </div>
     </main>
 
+    <script src="nastroj_engine.js?v=<?= filemtime(__DIR__ . '/nastroj_engine.js') ?>" defer></script>
     <script src="nastroj_aki.js?v=<?= filemtime(__DIR__ . '/nastroj_aki.js') ?>" defer></script>
     <?php include "footer.php"; ?>
 </body>
