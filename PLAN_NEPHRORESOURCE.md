@@ -189,12 +189,14 @@ z primárnych autoritatívnych zdrojov** (nie kopírovaním cudzej databázy —
 
 ## 7. Fázovanie a priority
 
-**Fáza 1 — Darovacia stránka (priorita).**
-`podpora.php` + odkaz v pätičke (a voliteľne v navigácii).
+**Fáza 1 — Darovacia stránka (priorita). ✅ HOTOVÉ.**
+`podpora.php` (bankový prevod + PAY by square QR, Viamo, payme.sk, PayPal, Revolut,
+Stripe/BLIK, Ko-fi, crypto Uphold) + odkaz v pätičke.
 
-**Fáza 2 — Rýchle doplnenia kalkulačiek** (dopĺňajú existujúce):
-CKD-EPI kreatinín–cystatín C · Mehran · 24-h klírens kreatinínu · nPCR ·
-všeobecný prevodník jednotiek · rozšírenie hyponatrémie (ODS + Katz).
+**Fáza 2 — Rýchle doplnenia kalkulačiek (dopĺňajú existujúce). ✅ HOTOVÉ.**
+CKD-EPI kreatinín–cystatín C ✅ · Mehran (CI-AKI) ✅ · 24-h klírens kreatinínu ✅ ·
+nPCR ✅ · všeobecný prevodník jednotiek ✅ · rozšírenie hyponatrémie (Katz/Hillier
+korekcia Na + ODS strop) ✅.
 
 **Fáza 3 — Interaktívne nástroje** (najväčší diferenciátor):
 AKI · algoritmus hyponatrémie · hypokaliémia · plánovač diéty.
