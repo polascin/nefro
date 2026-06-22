@@ -58,6 +58,7 @@ const DENY_PATTERNS = [
     '/^favicon/i',                   // favicony
     '/^apple-touch-icon/i',
     '/^TikTok /i',                   // sociálne cover obrázky (značkové)
+    '/^pay-by-square$/i',            // platobný QR — vodoznak by znehodnotil čitateľnosť
 ];
 
 // Fonty: najprv systémové (dev Windows / Linux server), potom bundled fallback.
