@@ -73,6 +73,10 @@ $viamo = [
 // IBAN sa berie z $bank, aby ostal konzistentný s prevodom aj QR.
 $paymeUrl = 'https://payme.sk/2/q/PME?IBAN=' . rawurlencode($bank['iban_raw'])
     . '&AM=0.00&CC=EUR&PI=&MSG=&CN=MUDr.+Lubomir+Polascin';
+// QR kód odkazu vyššie (vygeneruj: python tools/gen_payme_qr.py). Pri zmene IBAN
+// regeneruj, inak QR povedie na starý účet.
+$paymeQrImage = 'img/payme-qr.png';
+$hasPaymeQr = is_file(__DIR__ . '/' . $paymeQrImage);
 ?>
 <!DOCTYPE html>
 <html lang="sk">
@@ -185,15 +189,17 @@ $paymeUrl = 'https://payme.sk/2/q/PME?IBAN=' . rawurlencode($bank['iban_raw'])
                     <?php if ($hasQr): ?>
                         <figure class="donate-qr">
                             <img src="<?= htmlspecialchars($qrImage) ?>" alt="PAY by square QR kód pre platbu na účet projektu" width="220" height="220" loading="lazy">
-                            <figcaption>Naskenujte QR kód (PAY by square) v mobilnej aplikácii vašej banky — funguje aj pre Viamo.</figcaption>
+                            <figcaption>Naskenujte QR kód (PAY by square) v mobilnej aplikácii vašej banky — predvyplní platbu bankovým prevodom.</figcaption>
                         </figure>
                     <?php endif; ?>
                 </section>
 
                 <section class="form-section" aria-labelledby="viamo-heading">
                     <h3 id="viamo-heading">Viamo — platba na telefónne číslo</h3>
-                    <p>V mobilnej aplikácii vašej banky zvoľte <em>Platbu na telefónne číslo</em> (Viamo)
-                        a zadajte číslo príjemcu. Platba je okamžitá a funguje medzi slovenskými bankami.</p>
+                    <p>Viamo je okamžitá platba <strong>na telefónne číslo</strong> (bez IBAN); podporujú
+                        ju Tatra banka, VÚB a OTP. V aplikácii banky zvoľte <em>Platbu na telefónne číslo</em>
+                        a zadajte číslo príjemcu. Viamo nemá samostatný QR na príjem — pre platbu
+                        naskenovaním použite payme.sk nižšie.</p>
                     <div class="info-box-blue">
                         <dl class="donate-bank">
                             <dt>Telefónne číslo</dt>
@@ -205,8 +211,19 @@ $paymeUrl = 'https://payme.sk/2/q/PME?IBAN=' . rawurlencode($bank['iban_raw'])
                             </dd>
                         </dl>
                     </div>
-                    <p class="no-print">Pohodlná alternatíva: <strong>payme.sk</strong> otvorí platobnú
-                        stránku s QR kódom a tlačidlami (Viamo, karta) pre ten istý účet.</p>
+                </section>
+
+                <section class="form-section" aria-labelledby="payme-heading">
+                    <h3 id="payme-heading">Rýchla platba cez QR (payme.sk)</h3>
+                    <p>payme.sk (služba Slovenskej bankovej asociácie) otvorí platobnú stránku, z ktorej
+                        zaplatíte priamo v aplikácii svojej banky — vrátane platby na telefónne číslo.
+                        Naskenujte QR kód telefónom alebo kliknite na tlačidlo.</p>
+                    <?php if ($hasPaymeQr): ?>
+                        <figure class="donate-qr">
+                            <img src="<?= htmlspecialchars($paymeQrImage) ?>" alt="QR kód odkazu payme.sk pre platbu na účet projektu" width="220" height="220" loading="lazy">
+                            <figcaption>Naskenujte QR kód fotoaparátom telefónu — otvorí platobnú stránku payme.sk.</figcaption>
+                        </figure>
+                    <?php endif; ?>
                     <p class="no-print">
                         <a href="<?= htmlspecialchars($paymeUrl) ?>" class="btn-primary" target="_blank" rel="noopener noreferrer">Zaplatiť cez payme.sk</a>
                     </p>

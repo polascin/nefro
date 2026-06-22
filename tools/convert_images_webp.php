@@ -32,7 +32,7 @@ const WEBP_QUALITY = 82;
 // Obrázky, ktoré sa NESMÚ konvertovať na (stratový) WebP — napr. QR kódy,
 // kde by kompresné artefakty okolo ostrých hrán zhoršili čitateľnosť. Servíruje
 // sa len PNG (.htaccess pri chýbajúcom .webp spadne späť na PNG).
-const WEBP_SKIP = ['pay-by-square'];
+const WEBP_SKIP = ['pay-by-square', 'payme-qr'];
 $root = dirname(__DIR__);
 
 // ── Spracuj argumenty ────────────────────────────────────────────────────────

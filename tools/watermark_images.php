@@ -59,6 +59,7 @@ const DENY_PATTERNS = [
     '/^apple-touch-icon/i',
     '/^TikTok /i',                   // sociálne cover obrázky (značkové)
     '/^pay-by-square$/i',            // platobný QR — vodoznak by znehodnotil čitateľnosť
+    '/^payme-qr$/i',                 // payme.sk QR — to isté
 ];
 
 // Fonty: najprv systémové (dev Windows / Linux server), potom bundled fallback.
