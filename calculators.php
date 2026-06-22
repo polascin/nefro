@@ -47,6 +47,11 @@ $schemaWebApp = [
         ],
         [
             "@type" => "WebApplication",
+            "name" => "24-h klírens kreatinínu (meraný)",
+            "url" => $baseUrl . "calculator_crcl_24h.php",
+        ],
+        [
+            "@type" => "WebApplication",
             "name" => "KDIGO G/A riziko CKD",
             "url" => $baseUrl . "calculator_kdigo_risk.php",
         ],
@@ -203,6 +208,12 @@ $schemaWebApp = [
                         <h3>eGFR (kreatinín–cystatín C 2021)</h3>
                         <p>Presnejší odhad filtrácie a potvrdenie CKD podľa KDIGO 2024 — kombinovaný vzorec CKD-EPI 2021 z kreatinínu a cystatínu C (bez rasy).</p>
                         <a href="calculator_egfr_cys.php" class="btn-primary">Otvoriť kalkulačku</a>
+                    </article>
+
+                    <article class="feature-card calculator-card">
+                        <h3>24-h klírens kreatinínu (meraný)</h3>
+                        <p>Meraný klírens kreatinínu zo zberu moču a séra, s voliteľnou normalizáciou na povrch tela (1,73 m²). Vhodný pri atypickej svalovej hmote či neistom eGFR.</p>
+                        <a href="calculator_crcl_24h.php" class="btn-primary">Otvoriť kalkulačku</a>
                     </article>
 
                     <article class="feature-card calculator-card">

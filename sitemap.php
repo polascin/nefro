@@ -35,6 +35,12 @@ $urls = [
         'priority'   => '0.8',
     ],
     [
+        'loc'        => $baseUrl . 'calculator_egfr_cys.php',
+        'lastmod'    => _sitemapLastmod('calculator_egfr_cys.php'),
+        'changefreq' => 'monthly',
+        'priority'   => '0.8',
+    ],
+    [
         'loc'        => $baseUrl . 'calculator_kdigo_risk.php',
         'lastmod'    => _sitemapLastmod('calculator_kdigo_risk.php'),
         'changefreq' => 'monthly',
@@ -79,6 +85,12 @@ $urls = [
     [
         'loc'        => $baseUrl . 'calculator_cg.php',
         'lastmod'    => _sitemapLastmod('calculator_cg.php'),
+        'changefreq' => 'monthly',
+        'priority'   => '0.8',
+    ],
+    [
+        'loc'        => $baseUrl . 'calculator_crcl_24h.php',
+        'lastmod'    => _sitemapLastmod('calculator_crcl_24h.php'),
         'changefreq' => 'monthly',
         'priority'   => '0.8',
     ],
