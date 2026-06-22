@@ -65,10 +65,7 @@ $schemaWebApp = [
       "interaktívne nástroje, AKI, akútne poškodenie obličiek, diagnostický algoritmus, KDIGO, nefrológia, rozhodovací strom, Slovensko";
   $canonicalUrl = $pageUrl;
 
-  $structuredData = [];
-  if (isset($schemaWebApp)) {
-      $structuredData[] = $schemaWebApp;
-  }
+  $structuredData = [$schemaWebApp];
   $structuredData[] = [
       "@context" => "https://schema.org",
       "@type" => "BreadcrumbList",

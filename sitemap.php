@@ -149,6 +149,48 @@ $urls = [
         'priority'   => '0.8',
     ],
     [
+        'loc'        => $baseUrl . 'nastroje.php',
+        'lastmod'    => _sitemapLastmod('nastroje.php'),
+        'changefreq' => 'monthly',
+        'priority'   => '0.8',
+    ],
+    [
+        'loc'        => $baseUrl . 'nastroj_aki.php',
+        'lastmod'    => _sitemapLastmod('nastroj_aki.php'),
+        'changefreq' => 'monthly',
+        'priority'   => '0.7',
+    ],
+    [
+        'loc'        => $baseUrl . 'nastroj_hyponatremia.php',
+        'lastmod'    => _sitemapLastmod('nastroj_hyponatremia.php'),
+        'changefreq' => 'monthly',
+        'priority'   => '0.7',
+    ],
+    [
+        'loc'        => $baseUrl . 'nastroj_hypokalemia.php',
+        'lastmod'    => _sitemapLastmod('nastroj_hypokalemia.php'),
+        'changefreq' => 'monthly',
+        'priority'   => '0.7',
+    ],
+    [
+        'loc'        => $baseUrl . 'nastroj_dieta.php',
+        'lastmod'    => _sitemapLastmod('nastroj_dieta.php'),
+        'changefreq' => 'monthly',
+        'priority'   => '0.7',
+    ],
+    [
+        'loc'        => $baseUrl . 'populars.php',
+        'lastmod'    => _sitemapLastmod('populars.php'),
+        'changefreq' => 'weekly',
+        'priority'   => '0.7',
+    ],
+    [
+        'loc'        => $baseUrl . 'podpora.php',
+        'lastmod'    => _sitemapLastmod('podpora.php'),
+        'changefreq' => 'yearly',
+        'priority'   => '0.5',
+    ],
+    [
         'loc'        => $baseUrl . 'privacy.php',
         'lastmod'    => _sitemapLastmod('privacy.php'),
         'changefreq' => 'yearly',
@@ -208,10 +250,10 @@ echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
 echo "<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n";
 
 foreach ($urls as $url) {
-    $loc = htmlspecialchars((string) ($url['loc'] ?? ''), ENT_XML1 | ENT_QUOTES, 'UTF-8');
-    $lastmod = htmlspecialchars((string) ($url['lastmod'] ?? ''), ENT_XML1 | ENT_QUOTES, 'UTF-8');
-    $changefreq = htmlspecialchars((string) ($url['changefreq'] ?? 'monthly'), ENT_XML1 | ENT_QUOTES, 'UTF-8');
-    $priority = htmlspecialchars((string) ($url['priority'] ?? '0.5'), ENT_XML1 | ENT_QUOTES, 'UTF-8');
+    $loc = htmlspecialchars((string) $url['loc'], ENT_XML1 | ENT_QUOTES, 'UTF-8');
+    $lastmod = htmlspecialchars((string) $url['lastmod'], ENT_XML1 | ENT_QUOTES, 'UTF-8');
+    $changefreq = htmlspecialchars((string) $url['changefreq'], ENT_XML1 | ENT_QUOTES, 'UTF-8');
+    $priority = htmlspecialchars((string) $url['priority'], ENT_XML1 | ENT_QUOTES, 'UTF-8');
 
     if ($loc === '') {
         continue;

@@ -473,27 +473,3 @@ parameters:
 			identifier: nullCoalesce.offset
 			count: 1
 			path: search.php
-
-		-
-			message: '#^Offset ''changefreq'' on array\{loc\: ''https\://nefro…'', lastmod\: string, changefreq\: ''daily'', priority\: ''1\.0''\}\|array\{loc\: ''https\://nefro…'', lastmod\: string, changefreq\: ''yearly'', priority\: ''0\.3''\}\|array\{loc\: non\-falsy\-string, lastmod\: string, changefreq\: ''monthly'', priority\: ''0\.7''\|''0\.8''\|''0\.9''\} on left side of \?\? always exists and is not nullable\.$#'
-			identifier: nullCoalesce.offset
-			count: 1
-			path: sitemap.php
-
-		-
-			message: '#^Offset ''lastmod'' on array\{loc\: ''https\://nefro…'', lastmod\: string, changefreq\: ''daily'', priority\: ''1\.0''\}\|array\{loc\: ''https\://nefro…'', lastmod\: string, changefreq\: ''yearly'', priority\: ''0\.3''\}\|array\{loc\: non\-falsy\-string, lastmod\: string, changefreq\: ''monthly'', priority\: ''0\.7''\|''0\.8''\|''0\.9''\} on left side of \?\? always exists and is not nullable\.$#'
-			identifier: nullCoalesce.offset
-			count: 1
-			path: sitemap.php
-
-		-
-			message: '#^Offset ''loc'' on array\{loc\: ''https\://nefro…'', lastmod\: string, changefreq\: ''daily'', priority\: ''1\.0''\}\|array\{loc\: ''https\://nefro…'', lastmod\: string, changefreq\: ''yearly'', priority\: ''0\.3''\}\|array\{loc\: non\-falsy\-string, lastmod\: string, changefreq\: ''monthly'', priority\: ''0\.7''\|''0\.8''\|''0\.9''\} on left side of \?\? always exists and is not nullable\.$#'
-			identifier: nullCoalesce.offset
-			count: 1
-			path: sitemap.php
-
-		-
-			message: '#^Offset ''priority'' on array\{loc\: ''https\://nefro…'', lastmod\: string, changefreq\: ''daily'', priority\: ''1\.0''\}\|array\{loc\: ''https\://nefro…'', lastmod\: string, changefreq\: ''yearly'', priority\: ''0\.3''\}\|array\{loc\: non\-falsy\-string, lastmod\: string, changefreq\: ''monthly'', priority\: ''0\.7''\|''0\.8''\|''0\.9''\} on left side of \?\? always exists and is not nullable\.$#'
-			identifier: nullCoalesce.offset
-			count: 1
-			path: sitemap.php
