@@ -2019,6 +2019,36 @@ input:disabled + .slider:before {
     font-weight: 500;
 }
 
+/* Skupina zaškrtávacích rizikových faktorov (napr. Mehran skóre) */
+.form-fieldset {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 0.5rem 1.25rem 1.25rem;
+    margin-top: 1.5rem;
+}
+
+.form-fieldset legend {
+    font-weight: 600;
+    padding: 0 0.5rem;
+    color: var(--text-secondary);
+}
+
+.form-check-pts {
+    color: var(--text-secondary);
+    font-size: 0.85em;
+}
+
+/* Nenápadný „— voliteľné" hint vedľa labelu (CrCl, Mehran) */
+.optional {
+    color: var(--text-secondary);
+    font-weight: 400;
+    font-size: 0.85em;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
 .form-actions {
     margin-top: 2rem;
     text-align: center;

@@ -16,6 +16,7 @@ $_calcSubnavItems = [
     ['file' => 'calculator_igan.php',        'label' => 'IgAN'],
     ['file' => 'calculator_adpkd.php',       'label' => 'Mayo ADPKD'],
     ['file' => 'calculator_aki.php',         'label' => 'AKI (FENa/FEUrea)'],
+    ['file' => 'calculator_mehran.php',      'label' => 'Mehran (CI-AKI)'],
     ['file' => 'calculator_cg.php',          'label' => 'Cockcroft-Gault'],
     ['file' => 'calculator_crcl_24h.php',    'label' => 'CrCl 24-h'],
     ['file' => 'calculator_ca.php',          'label' => 'Vápnik'],

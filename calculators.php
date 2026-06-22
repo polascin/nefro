@@ -52,6 +52,11 @@ $schemaWebApp = [
         ],
         [
             "@type" => "WebApplication",
+            "name" => "Mehran skóre (kontrastom indukované AKI)",
+            "url" => $baseUrl . "calculator_mehran.php",
+        ],
+        [
+            "@type" => "WebApplication",
             "name" => "KDIGO G/A riziko CKD",
             "url" => $baseUrl . "calculator_kdigo_risk.php",
         ],
@@ -214,6 +219,12 @@ $schemaWebApp = [
                         <h3>24-h klírens kreatinínu (meraný)</h3>
                         <p>Meraný klírens kreatinínu zo zberu moču a séra, s voliteľnou normalizáciou na povrch tela (1,73 m²). Vhodný pri atypickej svalovej hmote či neistom eGFR.</p>
                         <a href="calculator_crcl_24h.php" class="btn-primary">Otvoriť kalkulačku</a>
+                    </article>
+
+                    <article class="feature-card calculator-card">
+                        <h3>Mehran skóre (CI-AKI)</h3>
+                        <p>Predprocedurálne riziko kontrastom indukovaného akútneho poškodenia obličiek pred koronarografiou/PCI alebo CT s kontrastom (Mehran 2004).</p>
+                        <a href="calculator_mehran.php" class="btn-primary">Otvoriť kalkulačku</a>
                     </article>
 
                     <article class="feature-card calculator-card">
