@@ -32,6 +32,7 @@ $unitRows = [
   $canonicalUrl = "https://nefro.polascin.net/calculator_units.php";
   $seoDescription =
       "Nefrologický prevodník laboratórnych jednotiek medzi SI a konvenčnými (kreatinín, urea/BUN, glukóza, vápnik, fosfát, cholesterol a ďalšie). Obojsmerná živá konverzia pre lekárov na Slovensku.";
+  $baseUrl = "https://nefro.polascin.net/";
   $structuredData = [
       [
           "@context" => "https://schema.org",

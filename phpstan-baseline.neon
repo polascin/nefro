@@ -187,22 +187,10 @@ parameters:
 			path: add_tnf-inhibitor-vcasna-periferna-spondyloartritida-spartacus_article.php
 
 		-
-			message: '#^Offset ''title'' on array\{title\: ''Telitacicept v IgA…'', slug\: ''telitacicept\-iga…'', author\: ''MUDr\. Ľubomír…'', published_at\: non\-falsy\-string, is_top\: 0, excerpt\: ''Interim analýza…'', content\: ''\<p\>IgA nefropatia …''\} on left side of \?\? always exists and is not nullable\.$#'
-			identifier: nullCoalesce.offset
-			count: 1
-			path: add_telitacicept-iga-nefropatia-teligan-faza-3-interim_article.php
-
-		-
 			message: '#^Offset ''title'' on array\{title\: ''Uviaznutí na…'', slug\: ''uviaznuti\-na…'', author\: ''MUDr\. Ľubomír…'', published_at\: ''2026\-05\-27'', is_top\: 0, excerpt\: ''Antihistaminiká pri…'', content\: ''\<p\>Chronické…''\} on left side of \?\? always exists and is not nullable\.$#'
 			identifier: nullCoalesce.offset
 			count: 1
 			path: add_uviaznuti-na-antihistaminikach-pri-ckd-ap_article.php
-
-		-
-			message: '#^Offset ''title'' on array\{title\: ''VICTORY\:…'', slug\: ''victory\-vitamin\-c…'', author\: ''MUDr\. Ľubomír…'', published_at\: non\-falsy\-string, is_top\: 0, excerpt\: ''Štúdia fázy 3…'', content\: ''\<p\>Vysokodávkovaný…''\} on left side of \?\? always exists and is not nullable\.$#'
-			identifier: nullCoalesce.offset
-			count: 1
-			path: add_victory-vitamin-c-tazke-popaleniny-nefrologicke-signaly_article.php
 
 		-
 			message: '#^Offset ''title'' on array\{title\: ''Wearables pri…'', slug\: ''wearables\-chronicke…'', author\: ''MUDr\. Ľubomír…'', published_at\: non\-falsy\-string, is_top\: 0, excerpt\: ''Nositeľné…'', content\: ''\<p\>Nositeľné…''\} on left side of \?\? always exists and is not nullable\.$#'
@@ -231,18 +219,6 @@ parameters:
 		-
 			message: '#^Function formatArticleDate invoked with 2 parameters, 1 required\.$#'
 			identifier: arguments.count
-			count: 1
-			path: article.php
-
-		-
-			message: '#^Offset ''articles'' on array\{author\: string, articles\: int\} on left side of \?\? always exists and is not nullable\.$#'
-			identifier: nullCoalesce.offset
-			count: 1
-			path: article.php
-
-		-
-			message: '#^Offset ''author'' on array\{author\: string, articles\: int\} on left side of \?\? always exists and is not nullable\.$#'
-			identifier: nullCoalesce.offset
 			count: 1
 			path: article.php
 
@@ -415,18 +391,6 @@ parameters:
 			path: index.php
 
 		-
-			message: '#^Offset ''articles'' on array\{author\: string, articles\: int\} on left side of \?\? always exists and is not nullable\.$#'
-			identifier: nullCoalesce.offset
-			count: 1
-			path: index.php
-
-		-
-			message: '#^Offset ''author'' on array\{author\: string, articles\: int\} on left side of \?\? always exists and is not nullable\.$#'
-			identifier: nullCoalesce.offset
-			count: 1
-			path: index.php
-
-		-
 			message: '#^Offset ''authors'' on array\{published_articles\: int, users_total\: int, authors\: array\<int, array\{author\: string, articles\: int\}\>\} on left side of \?\? always exists and is not nullable\.$#'
 			identifier: nullCoalesce.offset
 			count: 1
@@ -449,6 +413,18 @@ parameters:
 			identifier: nullCoalesce.variable
 			count: 1
 			path: index.php
+
+		-
+			message: '#^If condition is always true\.$#'
+			identifier: if.alwaysTrue
+			count: 1
+			path: podpora.php
+
+		-
+			message: '#^Strict comparison using \!\=\= between ''https\://donate…''\|''https\://ko\-fi\.com…''\|''https\://revolut\.me…'' and '''' will always evaluate to true\.$#'
+			identifier: notIdentical.alwaysTrue
+			count: 1
+			path: podpora.php
 
 		-
 			message: '#^Strict comparison using \!\=\= between mixed and null will always evaluate to true\.$#'
@@ -499,25 +475,25 @@ parameters:
 			path: search.php
 
 		-
-			message: '#^Offset ''changefreq'' on array\{loc\: ''https\://nefro…'', lastmod\: string, changefreq\: ''daily'', priority\: ''1\.0''\}\|array\{loc\: ''https\://nefro…'', lastmod\: string, changefreq\: ''yearly'', priority\: ''0\.3''\}\|array\{loc\: non\-falsy\-string, lastmod\: string, changefreq\: ''monthly'', priority\: ''0\.8''\|''0\.9''\} on left side of \?\? always exists and is not nullable\.$#'
+			message: '#^Offset ''changefreq'' on array\{loc\: ''https\://nefro…'', lastmod\: string, changefreq\: ''daily'', priority\: ''1\.0''\}\|array\{loc\: ''https\://nefro…'', lastmod\: string, changefreq\: ''yearly'', priority\: ''0\.3''\}\|array\{loc\: non\-falsy\-string, lastmod\: string, changefreq\: ''monthly'', priority\: ''0\.7''\|''0\.8''\|''0\.9''\} on left side of \?\? always exists and is not nullable\.$#'
 			identifier: nullCoalesce.offset
 			count: 1
 			path: sitemap.php
 
 		-
-			message: '#^Offset ''lastmod'' on array\{loc\: ''https\://nefro…'', lastmod\: string, changefreq\: ''daily'', priority\: ''1\.0''\}\|array\{loc\: ''https\://nefro…'', lastmod\: string, changefreq\: ''yearly'', priority\: ''0\.3''\}\|array\{loc\: non\-falsy\-string, lastmod\: string, changefreq\: ''monthly'', priority\: ''0\.8''\|''0\.9''\} on left side of \?\? always exists and is not nullable\.$#'
+			message: '#^Offset ''lastmod'' on array\{loc\: ''https\://nefro…'', lastmod\: string, changefreq\: ''daily'', priority\: ''1\.0''\}\|array\{loc\: ''https\://nefro…'', lastmod\: string, changefreq\: ''yearly'', priority\: ''0\.3''\}\|array\{loc\: non\-falsy\-string, lastmod\: string, changefreq\: ''monthly'', priority\: ''0\.7''\|''0\.8''\|''0\.9''\} on left side of \?\? always exists and is not nullable\.$#'
 			identifier: nullCoalesce.offset
 			count: 1
 			path: sitemap.php
 
 		-
-			message: '#^Offset ''loc'' on array\{loc\: ''https\://nefro…'', lastmod\: string, changefreq\: ''daily'', priority\: ''1\.0''\}\|array\{loc\: ''https\://nefro…'', lastmod\: string, changefreq\: ''yearly'', priority\: ''0\.3''\}\|array\{loc\: non\-falsy\-string, lastmod\: string, changefreq\: ''monthly'', priority\: ''0\.8''\|''0\.9''\} on left side of \?\? always exists and is not nullable\.$#'
+			message: '#^Offset ''loc'' on array\{loc\: ''https\://nefro…'', lastmod\: string, changefreq\: ''daily'', priority\: ''1\.0''\}\|array\{loc\: ''https\://nefro…'', lastmod\: string, changefreq\: ''yearly'', priority\: ''0\.3''\}\|array\{loc\: non\-falsy\-string, lastmod\: string, changefreq\: ''monthly'', priority\: ''0\.7''\|''0\.8''\|''0\.9''\} on left side of \?\? always exists and is not nullable\.$#'
 			identifier: nullCoalesce.offset
 			count: 1
 			path: sitemap.php
 
 		-
-			message: '#^Offset ''priority'' on array\{loc\: ''https\://nefro…'', lastmod\: string, changefreq\: ''daily'', priority\: ''1\.0''\}\|array\{loc\: ''https\://nefro…'', lastmod\: string, changefreq\: ''yearly'', priority\: ''0\.3''\}\|array\{loc\: non\-falsy\-string, lastmod\: string, changefreq\: ''monthly'', priority\: ''0\.8''\|''0\.9''\} on left side of \?\? always exists and is not nullable\.$#'
+			message: '#^Offset ''priority'' on array\{loc\: ''https\://nefro…'', lastmod\: string, changefreq\: ''daily'', priority\: ''1\.0''\}\|array\{loc\: ''https\://nefro…'', lastmod\: string, changefreq\: ''yearly'', priority\: ''0\.3''\}\|array\{loc\: non\-falsy\-string, lastmod\: string, changefreq\: ''monthly'', priority\: ''0\.7''\|''0\.8''\|''0\.9''\} on left side of \?\? always exists and is not nullable\.$#'
 			identifier: nullCoalesce.offset
 			count: 1
 			path: sitemap.php

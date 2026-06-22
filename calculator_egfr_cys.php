@@ -240,6 +240,7 @@ if (isLoggedIn()) {
   $canonicalUrl = "https://nefro.polascin.net/calculator_egfr_cys.php";
   $seoDescription =
       "Nefrologická kalkulačka eGFR podľa CKD-EPI 2021 z kreatinínu a cystatínu C (bez rasy, Inker 2021). Presnejší odhad filtrácie a potvrdenie CKD podľa KDIGO 2024 pre lekárov na Slovensku.";
+  $baseUrl = "https://nefro.polascin.net/";
   $structuredData = [
       [
           "@context" => "https://schema.org",

@@ -228,6 +228,7 @@ if (isLoggedIn()) {
   $canonicalUrl = "https://nefro.polascin.net/calculator_npcr.php";
   $seoDescription =
       "Nefrologická kalkulačka nPCR / nPNA (normalizovaná miera katabolizmu bielkovín) z dvoch hodnôt močoviny a Watsonovho objemu — nutričný ukazovateľ pri hemodialýze. Pre lekárov na Slovensku.";
+  $baseUrl = "https://nefro.polascin.net/";
   $structuredData = [
       [
           "@context" => "https://schema.org",

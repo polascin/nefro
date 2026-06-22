@@ -247,6 +247,7 @@ if (isLoggedIn()) {
   $canonicalUrl = "https://nefro.polascin.net/calculator_crcl_24h.php";
   $seoDescription =
       "Nefrologická kalkulačka meraného 24-hodinového klírensu kreatinínu z moču a séra, s voliteľnou normalizáciou na povrch tela (1,73 m²) podľa Du Bois. Pre lekárov na Slovensku.";
+  $baseUrl = "https://nefro.polascin.net/";
   $structuredData = [
       [
           "@context" => "https://schema.org",

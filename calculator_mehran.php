@@ -221,6 +221,7 @@ if (isLoggedIn()) {
   $canonicalUrl = "https://nefro.polascin.net/calculator_mehran.php";
   $seoDescription =
       "Nefrologická kalkulačka Mehran skóre pre riziko kontrastom indukovaného akútneho poškodenia obličiek (CI-AKI/CIN) pred koronarografiou a CT s kontrastom. Pre lekárov na Slovensku.";
+  $baseUrl = "https://nefro.polascin.net/";
   $structuredData = [
       [
           "@context" => "https://schema.org",
