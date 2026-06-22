@@ -48,6 +48,7 @@ $swatchBeat = '@' . number_format($beatValue, 2, '.', '');
           <li><a href="index.php#o-mne" class="site-footer__link">O mne</a></li>
           <li><a href="index.php#kontakt" class="site-footer__link">Kontakt</a></li>
           <li><a href="calculators.php" class="site-footer__link">Kalkulačky</a></li>
+          <li><a href="nastroje.php" class="site-footer__link">Nástroje</a></li>
           <li><a href="podpora.php" class="site-footer__link">Podporiť projekt</a></li>
         </ul>
       </nav>

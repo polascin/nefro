@@ -6188,3 +6188,272 @@ mark.search-hl {
         grid-template-columns: 1fr;
     }
 }
+
+/* ── Interaktívne nástroje (rozhodovacie stromy) ──────────────────────── */
+.tool-widget {
+    margin: 24px 0;
+}
+
+.tool-mount {
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    background: var(--card-gradient);
+    padding: 22px;
+    box-shadow: var(--shadow-sm);
+}
+
+.tool-mount:empty {
+    display: none;
+}
+
+/* Prejdené kroky (breadcrumb odpovedí) */
+.tool-trail {
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed var(--border-color);
+}
+
+.tool-trail__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tool-trail__item {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    padding: 3px 10px;
+}
+
+/* Krok s otázkou */
+.tool-step__kicker {
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0 0 4px;
+}
+
+.tool-step__title {
+    margin: 0 0 10px;
+    font-size: 1.2rem;
+    line-height: 1.35;
+    color: var(--text-primary);
+    outline: none;
+}
+
+.tool-step__text {
+    margin: 0 0 10px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.tool-step__list {
+    margin: 0 0 12px;
+    padding-left: 1.3em;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.tool-step__list li {
+    margin-bottom: 4px;
+}
+
+.tool-step__prompt {
+    margin: 14px 0 10px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* Voľby (tlačidlá odpovedí) */
+.tool-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tool-option {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    text-align: left;
+    width: 100%;
+    padding: 14px 16px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: var(--transition-fast);
+    color: var(--text-primary);
+}
+
+.tool-option:hover {
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-sm);
+    transform: translateY(-1px);
+}
+
+.tool-option:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+.tool-option__label {
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.tool-option__hint {
+    font-size: 0.84rem;
+    color: var(--text-secondary);
+    line-height: 1.45;
+}
+
+/* Výstup (záver) */
+.tool-outcome {
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 18px;
+    border-left: 5px solid var(--primary-color);
+    background: rgba(59, 130, 246, 0.08);
+}
+
+.tool-outcome--warn {
+    border-left-color: #f59e0b;
+    background: rgba(245, 158, 11, 0.10);
+}
+
+.tool-outcome--urgent {
+    border-left-color: #dc2626;
+    background: rgba(220, 38, 38, 0.10);
+}
+
+.tool-outcome__badge {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 2px 9px;
+    border-radius: 999px;
+    margin-bottom: 8px;
+    color: #fff;
+    background: var(--primary-color);
+}
+
+.tool-outcome--warn .tool-outcome__badge {
+    background: #b45309;
+}
+
+.tool-outcome--urgent .tool-outcome__badge {
+    background: #b91c1c;
+}
+
+.tool-outcome__title {
+    margin: 0 0 6px;
+    font-size: 1.25rem;
+    color: var(--text-primary);
+    outline: none;
+}
+
+.tool-outcome__summary {
+    margin: 0;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.tool-result-section {
+    margin-bottom: 14px;
+}
+
+.tool-result-section__heading {
+    margin: 0 0 6px;
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+.tool-result-link {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.tool-result-link:hover {
+    text-decoration: underline;
+}
+
+.tool-outcome__note {
+    margin-top: 14px;
+    font-size: 0.82rem;
+    font-style: italic;
+    color: var(--text-tertiary);
+    line-height: 1.55;
+}
+
+/* Ovládacie tlačidlá pod krokom */
+.tool-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 18px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border-color);
+}
+
+/* Statická referenčná tabuľka (štádiá KDIGO) */
+.tool-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 0.9rem;
+}
+
+.tool-table th,
+.tool-table td {
+    border: 1px solid var(--border-color);
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+    color: var(--text-secondary);
+}
+
+.tool-table thead th {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+.tool-table tbody th[scope="row"] {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    text-align: center;
+    width: 4em;
+}
+
+/* Karty „Pripravujeme" na hube nástrojov */
+.calculator-card--soon {
+    opacity: 0.72;
+}
+
+.calculator-card--soon:hover {
+    transform: none;
+    border-color: var(--border-color);
+    box-shadow: none;
+}
+
+.tool-soon-badge {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    background: var(--bg-secondary);
+    border: 1px dashed var(--border-color);
+    border-radius: 999px;
+    padding: 4px 12px;
+}

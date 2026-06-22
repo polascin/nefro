@@ -198,8 +198,12 @@ CKD-EPI kreatinín–cystatín C ✅ · Mehran (CI-AKI) ✅ · 24-h klírens kre
 nPCR ✅ · všeobecný prevodník jednotiek ✅ · rozšírenie hyponatrémie (Katz/Hillier
 korekcia Na + ODS strop) ✅.
 
-**Fáza 3 — Interaktívne nástroje** (najväčší diferenciátor):
-AKI · algoritmus hyponatrémie · hypokaliémia · plánovač diéty.
+**Fáza 3 — Interaktívne nástroje** (najväčší diferenciátor). 🟡 PREBIEHA.
+Nová kategória „Nástroje": hub `nastroje.php` + položka v navigácii/pätičke +
+znovupoužiteľný engine rozhodovacieho stromu (`NefroDecisionTree` v `nastroj_aki.js`,
+bez inline štýlov, no-JS statická referencia).
+AKI sprievodca ✅ (`nastroj_aki.php` — diferenciálna dg. podľa KDIGO) ·
+algoritmus hyponatrémie ⏳ · hypokaliémia ⏳ · plánovač diéty ⏳.
 
 **Fáza 4 — Cheat sheety** (tlačiteľné, využijú PDF pipeline):
 acidobáza · elektrolyty · diuretiká · infúzne roztoky (najprv tie, ku ktorým už

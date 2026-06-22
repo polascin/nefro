@@ -9,6 +9,9 @@ $_navCurrent = isset($navActiveItem) ? $navActiveItem : basename((string) ($_SER
 // Kalkulačky sú aktívne pre všetky calculator_* stránky aj pre calculators.php
 $_navCalcActive = $_navCurrent === 'calculators.php' || str_starts_with($_navCurrent, 'calculator_');
 
+// Nástroje sú aktívne pre nastroje.php aj pre všetky nastroj_* stránky
+$_navToolsActive = $_navCurrent === 'nastroje.php' || str_starts_with($_navCurrent, 'nastroj_');
+
 // Na hlavnej stránke odkazujeme na vlastné sekcie (hash), inde na index.php
 $_navOnIndex = $_navCurrent === 'index.php';
 
@@ -34,6 +37,7 @@ if (!function_exists('_navA')) {
             <li><a href="<?= $_navOnIndex ? '#kontakt' : 'index.php#kontakt' ?>">Kontakt</a></li>
             <li><?= _navA('populars.php', 'Pre pacientov', $_navCurrent === 'populars.php') ?></li>
             <li><?= _navA('calculators.php', 'Kalkulačky', $_navCalcActive) ?></li>
+            <li><?= _navA('nastroje.php', 'Nástroje', $_navToolsActive) ?></li>
             <li><?= _navA('search.php', 'Vyhľadávanie', $_navCurrent === 'search.php') ?></li>
             <?php if (function_exists('isLoggedIn') && isLoggedIn()): ?>
                 <li><?= _navA('discussion.php', 'Diskusia', $_navCurrent === 'discussion.php') ?></li>
