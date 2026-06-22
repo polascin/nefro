@@ -69,22 +69,22 @@ dobrovoľná a neviaže sa na prístup k obsahu.
 Dnešný stav: 15 kalkulačiek (`calculator_*.php`, register v `calculators.php`
 a `calc_subnav.php`). Mapovanie voči 25 kalkulačkám NephroResource:
 
-| NephroResource | Stav u nás |
-|---|---|
-| eGFR, KFRE, IgA risk, CKD risk (KDIGO G/A), Kt/V, frakčná exkrécia (FENa/FEUrea), acidobáza, deficit voľnej vody | ✅ **Máme** |
-| Hyponatrémia, elektrolyty, prevodník jednotiek | 🟡 **Čiastočne** (máme `calculator_na.php`, `_ca`, `_acidbase`, `_uacr`; chýba riziko ODS, Katzova korekcia na glukózu a všeobecný prevodník jednotiek) |
-| **CKD-EPI kreatinín–cystatín C (2021)** | ❌ Chýba — naša eGFR je len kreatinínová; KDIGO 2024 odporúča potvrdenie cystatínom C |
-| **Mehran** / **Thakkar** (kontrastom indukované AKI) | ❌ Chýba — časté pred CT a koronarografiou |
-| **CRRT dávkovanie** (efluentová dávka mL/kg/h) | ❌ Chýba — intenzívna starostlivosť |
-| **24-h klírens kreatinínu** (meraný CrCl) | ❌ Chýba |
-| **nPCR / PNA** (nutrícia pri dialýze) | ❌ Chýba — vhodne dopĺňa Kt/V |
-| **Recirkulácia** cievneho prístupu | ❌ Chýba — dialýza |
-| **Klírens voľnej vody** (bez elektrolytov) | ❌ Chýba |
-| **Furstova rovnica** | ❌ Chýba — pokročilá CKD |
-| **Gupta — cisplatinové AKI riziko** | ❌ Chýba — onkonefrológia |
-| **MGRS**, **MGUS / ľahké reťazce** | ❌ Chýba — paraproteíny |
-| **Staging CKM** (AHA) | ❌ Chýba ako kalkulačka (článok už máme) |
-| **KDPI** (Kidney Donor Profile Index) | ❌ Chýba — transplantácia |
+| NephroResource                                                                                                   | Stav u nás                                                                                                                                              |
+| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| eGFR, KFRE, IgA risk, CKD risk (KDIGO G/A), Kt/V, frakčná exkrécia (FENa/FEUrea), acidobáza, deficit voľnej vody | ✅ **Máme**                                                                                                                                             |
+| Hyponatrémia, elektrolyty, prevodník jednotiek                                                                   | 🟡 **Čiastočne** (máme `calculator_na.php`, `_ca`, `_acidbase`, `_uacr`; chýba riziko ODS, Katzova korekcia na glukózu a všeobecný prevodník jednotiek) |
+| **CKD-EPI kreatinín–cystatín C (2021)**                                                                          | ❌ Chýba — naša eGFR je len kreatinínová; KDIGO 2024 odporúča potvrdenie cystatínom C                                                                   |
+| **Mehran** / **Thakkar** (kontrastom indukované AKI)                                                             | ❌ Chýba — časté pred CT a koronarografiou                                                                                                              |
+| **CRRT dávkovanie** (efluentová dávka mL/kg/h)                                                                   | ❌ Chýba — intenzívna starostlivosť                                                                                                                     |
+| **24-h klírens kreatinínu** (meraný CrCl)                                                                        | ❌ Chýba                                                                                                                                                |
+| **nPCR / PNA** (nutrícia pri dialýze)                                                                            | ❌ Chýba — vhodne dopĺňa Kt/V                                                                                                                           |
+| **Recirkulácia** cievneho prístupu                                                                               | ❌ Chýba — dialýza                                                                                                                                      |
+| **Klírens voľnej vody** (bez elektrolytov)                                                                       | ❌ Chýba                                                                                                                                                |
+| **Furstova rovnica**                                                                                             | ❌ Chýba — pokročilá CKD                                                                                                                                |
+| **Gupta — cisplatinové AKI riziko**                                                                              | ❌ Chýba — onkonefrológia                                                                                                                               |
+| **MGRS**, **MGUS / ľahké reťazce**                                                                               | ❌ Chýba — paraproteíny                                                                                                                                 |
+| **Staging CKM** (AHA)                                                                                            | ❌ Chýba ako kalkulačka (článok už máme)                                                                                                                |
+| **KDPI** (Kidney Donor Profile Index)                                                                            | ❌ Chýba — transplantácia                                                                                                                               |
 
 ### Prioritizácia kalkulačiek
 
@@ -105,15 +105,15 @@ Nemáme **žiadny** interaktívny krok-za-krokom nástroj (algoritmy máme len a
 statické články). Toto je **najväčší diferenciátor** — premena existujúcich
 článkových algoritmov (IgA, anémia) na interaktívne rozhodovacie stromy.
 
-| Nástroj | Klinická funkcia |
-|---|---|
+| Nástroj                           | Klinická funkcia                                                        |
+| --------------------------------- | ----------------------------------------------------------------------- |
 | **Plánovač diéty** (Diet Builder) | Renálna diéta — sodík/draslík/fosfor/bielkoviny (pacientsky + edukačný) |
-| **Hyponatrémia** | Interaktívny diagnostický algoritmus |
-| **Hypokaliémia** | Diagnostický a manažmentový postup |
-| **AKI** | Diferenciálny diagnostický sprievodca |
-| **TLS** | Syndróm rozpadu nádoru (riziko a manažment) |
-| **TMA** | Trombotická mikroangiopatia — diagnostický sprievodca |
-| **Sprievodca GN** | Diferenciálna diagnostika glomerulonefritíd |
+| **Hyponatrémia**                  | Interaktívny diagnostický algoritmus                                    |
+| **Hypokaliémia**                  | Diagnostický a manažmentový postup                                      |
+| **AKI**                           | Diferenciálny diagnostický sprievodca                                   |
+| **TLS**                           | Syndróm rozpadu nádoru (riziko a manažment)                             |
+| **TMA**                           | Trombotická mikroangiopatia — diagnostický sprievodca                   |
+| **Sprievodca GN**                 | Diferenciálna diagnostika glomerulonefritíd                             |
 
 ---
 
@@ -123,14 +123,14 @@ Máme príbuzný obsah (checklistové články „anémia CKD A4", infografiky) 
 PDF pipeline (`wkhtmltopdf`, automatická regenerácia), no nemáme dedikované
 jednostránkové tlačiteľné referencie.
 
-| Cheat sheet | Obsah |
-|---|---|
-| **Infúzne roztoky** | Zloženie a výber roztokov |
-| **Diuretiká** | Triedy, dávkovanie, ekvivalencie |
-| **Elektrolyty** | Rýchla referencia porúch |
-| **Acidobáza** | Rýchla referencia porúch |
-| **Komplement** | Dráha komplementu a komplementom sprostredkované choroby |
-| **Membranózna nefropatia** | Antigény / vyšetrenie / liečba |
+| Cheat sheet                | Obsah                                                    |
+| -------------------------- | -------------------------------------------------------- |
+| **Infúzne roztoky**        | Zloženie a výber roztokov                                |
+| **Diuretiká**              | Triedy, dávkovanie, ekvivalencie                         |
+| **Elektrolyty**            | Rýchla referencia porúch                                 |
+| **Acidobáza**              | Rýchla referencia porúch                                 |
+| **Komplement**             | Dráha komplementu a komplementom sprostredkované choroby |
+| **Membranózna nefropatia** | Antigény / vyšetrenie / liečba                           |
 
 ---
 
@@ -151,7 +151,7 @@ z primárnych autoritatívnych zdrojov** (nie kopírovaním cudzej databázy —
 - **Aktualizácia:** pravidelný `cron` (napr. týždenne), ktorý obnoví stav štúdií
   (nábor / ukončené / výsledky) a sleduje rozsah tém podľa NephroResource.
 - **Zobrazenie:** prehľadová stránka s filtrami (ochorenie, fáza, stav, lokalita)
-  + detail štúdie. Slovenské popisy a kontext pri vybraných štúdiách.
+  - detail štúdie. Slovenské popisy a kontext pri vybraných štúdiách.
 
 ### 5.2 Databáza liekov (Drug Database)
 
