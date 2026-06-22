@@ -43,6 +43,11 @@ $schemaWebApp = [
             "name" => "Algoritmus hyponatrémie",
             "url" => $baseUrl . "nastroj_hyponatremia.php",
         ],
+        [
+            "@type" => "WebApplication",
+            "name" => "Sprievodca hypokaliémiou",
+            "url" => $baseUrl . "nastroj_hypokalemia.php",
+        ],
     ],
 ];
 ?>
@@ -123,6 +128,11 @@ $schemaWebApp = [
                         <p>Diagnostický postup pri hyponatrémii — tonicita (osmolalita), závažnosť/symptómy, objemový stav a močové parametre (U-Na, U-osm) s diferenciálnou diagnostikou (SIADH, hypovolémia, hypervolémia) a limitmi korekcie (ODS).</p>
                         <a href="nastroj_hyponatremia.php" class="btn-primary">Otvoriť nástroj</a>
                     </article>
+                    <article class="feature-card calculator-card">
+                        <h3>Sprievodca hypokaliémiou</h3>
+                        <p>Diagnostika a manažment hypokaliémie — závažnosť/EKG, transcelulárny presun, močový draslík, acidobáza, krvný tlak a močový chlorid; diferenciálna diagnostika (RTA, hyperaldosteronizmus, Bartter/Gitelman) s dôrazom na korekciu magnézia.</p>
+                        <a href="nastroj_hypokalemia.php" class="btn-primary">Otvoriť nástroj</a>
+                    </article>
                 </div>
             </section>
 
@@ -130,11 +140,6 @@ $schemaWebApp = [
                 <h2 id="tools-soon-heading">Pripravujeme</h2>
                 <p class="calc-intro-text">Ďalšie interaktívne sprievodcovia, na ktorých pracujeme:</p>
                 <div class="features-grid calculators-grid">
-                    <article class="feature-card calculator-card calculator-card--soon">
-                        <h3>Hypokaliémia</h3>
-                        <p>Diagnostický a manažmentový postup pri hypokaliémii — TTKG/močový draslík, acidobáza a krvný tlak.</p>
-                        <span class="tool-soon-badge" aria-label="Pripravujeme">Pripravujeme</span>
-                    </article>
                     <article class="feature-card calculator-card calculator-card--soon">
                         <h3>Plánovač renálnej diéty</h3>
                         <p>Sodík, draslík, fosfor a bielkoviny v renálnej diéte — pacientsky aj edukačný nástroj.</p>

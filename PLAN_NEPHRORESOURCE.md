@@ -205,7 +205,10 @@ v `nastroj_engine.js`; jednotlivé nástroje sú už len dátové stromy `nastro
 bez inline štýlov, no-JS statická referencia).
 AKI sprievodca ✅ (`nastroj_aki.php` — diferenciálna dg. podľa KDIGO) ·
 algoritmus hyponatrémie ✅ (`nastroj_hyponatremia.php` — tonicita → závažnosť →
-objem → U-Na/U-osm, SIADH, ODS limity) · hypokaliémia ⏳ · plánovač diéty ⏳.
+objem → U-Na/U-osm, SIADH, ODS limity) ·
+hypokaliémia ✅ (`nastroj_hypokalemia.php` — závažnosť → presun → U-K → acidobáza →
+TK → U-Cl; RTA, hyperaldosteronizmus, Bartter/Gitelman, dôraz na Mg) ·
+plánovač diéty ⏳.
 
 **Fáza 4 — Cheat sheety** (tlačiteľné, využijú PDF pipeline):
 acidobáza · elektrolyty · diuretiká · infúzne roztoky (najprv tie, ku ktorým už
