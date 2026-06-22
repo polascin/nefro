@@ -25,6 +25,7 @@ $_calcSubnavItems = [
     ['file' => 'calculator_egfr_slope.php',  'label' => 'eGFR Slope'],
     ['file' => 'calculator_ktv.php',         'label' => 'Kt/V a URR'],
     ['file' => 'calculator_uacr.php',        'label' => 'UACR'],
+    ['file' => 'calculator_units.php',       'label' => 'Jednotky'],
 ];
 ?>
 <nav class="quick-nav-calculators" aria-label="Kalkulačky — rýchla navigácia">

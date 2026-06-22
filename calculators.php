@@ -57,6 +57,11 @@ $schemaWebApp = [
         ],
         [
             "@type" => "WebApplication",
+            "name" => "Prevodník laboratórnych jednotiek (SI ⇄ konvenčné)",
+            "url" => $baseUrl . "calculator_units.php",
+        ],
+        [
+            "@type" => "WebApplication",
             "name" => "KDIGO G/A riziko CKD",
             "url" => $baseUrl . "calculator_kdigo_risk.php",
         ],
@@ -225,6 +230,12 @@ $schemaWebApp = [
                         <h3>Mehran skóre (CI-AKI)</h3>
                         <p>Predprocedurálne riziko kontrastom indukovaného akútneho poškodenia obličiek pred koronarografiou/PCI alebo CT s kontrastom (Mehran 2004).</p>
                         <a href="calculator_mehran.php" class="btn-primary">Otvoriť kalkulačku</a>
+                    </article>
+
+                    <article class="feature-card calculator-card">
+                        <h3>Prevodník jednotiek (SI ⇄ konvenčné)</h3>
+                        <p>Obojsmerná živá konverzia laboratórnych jednotiek — kreatinín, urea/BUN, glukóza, vápnik, fosfát, cholesterol, urát a ďalšie.</p>
+                        <a href="calculator_units.php" class="btn-primary">Otvoriť kalkulačku</a>
                     </article>
 
                     <article class="feature-card calculator-card">

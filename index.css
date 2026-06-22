@@ -2049,6 +2049,52 @@ input:disabled + .slider:before {
     margin-bottom: 0;
 }
 
+/* Prevodník jednotiek (SI ⇄ konvenčné) */
+.unit-converter {
+    margin-top: 1rem;
+}
+
+.unit-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 0.75rem;
+    padding: 0.65rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.unit-row__label {
+    flex: 1 1 150px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.unit-row__cell {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.unit-row__cell input {
+    width: 7rem;
+}
+
+.unit-row__unit {
+    color: var(--text-secondary);
+    min-width: 4rem;
+}
+
+.unit-row__eq {
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+@media (max-width: 600px) {
+    .unit-row__label {
+        flex-basis: 100%;
+    }
+}
+
 .form-actions {
     margin-top: 2rem;
     text-align: center;

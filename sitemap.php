@@ -101,6 +101,12 @@ $urls = [
         'priority'   => '0.8',
     ],
     [
+        'loc'        => $baseUrl . 'calculator_units.php',
+        'lastmod'    => _sitemapLastmod('calculator_units.php'),
+        'changefreq' => 'monthly',
+        'priority'   => '0.7',
+    ],
+    [
         'loc'        => $baseUrl . 'calculator_ca.php',
         'lastmod'    => _sitemapLastmod('calculator_ca.php'),
         'changefreq' => 'monthly',
