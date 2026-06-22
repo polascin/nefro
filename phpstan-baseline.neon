@@ -187,6 +187,12 @@ parameters:
 			path: add_tnf-inhibitor-vcasna-periferna-spondyloartritida-spartacus_article.php
 
 		-
+			message: '#^Offset ''title'' on array\{title\: ''Telitacicept v IgA…'', slug\: ''telitacicept\-iga…'', author\: ''MUDr\. Ľubomír…'', published_at\: non\-falsy\-string, is_top\: 0, excerpt\: ''Interim analýza…'', content\: ''\<p\>IgA nefropatia …''\} on left side of \?\? always exists and is not nullable\.$#'
+			identifier: nullCoalesce.offset
+			count: 1
+			path: add_telitacicept-iga-nefropatia-teligan-faza-3-interim_article.php
+
+		-
 			message: '#^Offset ''title'' on array\{title\: ''Uviaznutí na…'', slug\: ''uviaznuti\-na…'', author\: ''MUDr\. Ľubomír…'', published_at\: ''2026\-05\-27'', is_top\: 0, excerpt\: ''Antihistaminiká pri…'', content\: ''\<p\>Chronické…''\} on left side of \?\? always exists and is not nullable\.$#'
 			identifier: nullCoalesce.offset
 			count: 1
