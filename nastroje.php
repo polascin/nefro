@@ -48,6 +48,11 @@ $schemaWebApp = [
             "name" => "Sprievodca hypokaliémiou",
             "url" => $baseUrl . "nastroj_hypokalemia.php",
         ],
+        [
+            "@type" => "WebApplication",
+            "name" => "Plánovač renálnej diéty",
+            "url" => $baseUrl . "nastroj_dieta.php",
+        ],
     ],
 ];
 ?>
@@ -133,17 +138,10 @@ $schemaWebApp = [
                         <p>Diagnostika a manažment hypokaliémie — závažnosť/EKG, transcelulárny presun, močový draslík, acidobáza, krvný tlak a močový chlorid; diferenciálna diagnostika (RTA, hyperaldosteronizmus, Bartter/Gitelman) s dôrazom na korekciu magnézia.</p>
                         <a href="nastroj_hypokalemia.php" class="btn-primary">Otvoriť nástroj</a>
                     </article>
-                </div>
-            </section>
-
-            <section class="features-section" aria-labelledby="tools-soon-heading">
-                <h2 id="tools-soon-heading">Pripravujeme</h2>
-                <p class="calc-intro-text">Ďalšie interaktívne sprievodcovia, na ktorých pracujeme:</p>
-                <div class="features-grid calculators-grid">
-                    <article class="feature-card calculator-card calculator-card--soon">
+                    <article class="feature-card calculator-card">
                         <h3>Plánovač renálnej diéty</h3>
-                        <p>Sodík, draslík, fosfor a bielkoviny v renálnej diéte — pacientsky aj edukačný nástroj.</p>
-                        <span class="tool-soon-badge" aria-label="Pripravujeme">Pripravujeme</span>
+                        <p>Z telesnej hmotnosti a kategórie (CKD bez dialýzy, hemodialýza, peritoneálna dialýza) vypočíta orientačné denné cieľové limity bielkovín, energie, sodíka, draslíka a fosforu podľa KDOQI 2020.</p>
+                        <a href="nastroj_dieta.php" class="btn-primary">Otvoriť nástroj</a>
                     </article>
                 </div>
             </section>

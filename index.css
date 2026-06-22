@@ -6457,3 +6457,36 @@ mark.search-hl {
     border-radius: 999px;
     padding: 4px 12px;
 }
+
+/* Plánovač diéty — výsledky a formulár */
+.dieta-result__value {
+    margin: 0 0 6px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.dieta-error {
+    margin-top: 10px;
+    color: var(--error-color);
+    font-weight: 600;
+}
+
+.dieta-error:empty {
+    display: none;
+}
+
+.form-group--check label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.form-group--check input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    flex: 0 0 auto;
+    cursor: pointer;
+}

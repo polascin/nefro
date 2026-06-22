@@ -198,7 +198,7 @@ CKD-EPI kreatinín–cystatín C ✅ · Mehran (CI-AKI) ✅ · 24-h klírens kre
 nPCR ✅ · všeobecný prevodník jednotiek ✅ · rozšírenie hyponatrémie (Katz/Hillier
 korekcia Na + ODS strop) ✅.
 
-**Fáza 3 — Interaktívne nástroje** (najväčší diferenciátor). 🟡 PREBIEHA.
+**Fáza 3 — Interaktívne nástroje** (najväčší diferenciátor). ✅ HOTOVÉ.
 Nová kategória „Nástroje": hub `nastroje.php` + položka v navigácii/pätičke +
 zdieľaný znovupoužiteľný engine rozhodovacieho stromu (`NefroDecisionTree`
 v `nastroj_engine.js`; jednotlivé nástroje sú už len dátové stromy `nastroj_*.js`,
@@ -208,7 +208,8 @@ algoritmus hyponatrémie ✅ (`nastroj_hyponatremia.php` — tonicita → záva�
 objem → U-Na/U-osm, SIADH, ODS limity) ·
 hypokaliémia ✅ (`nastroj_hypokalemia.php` — závažnosť → presun → U-K → acidobáza →
 TK → U-Cl; RTA, hyperaldosteronizmus, Bartter/Gitelman, dôraz na Mg) ·
-plánovač diéty ⏳.
+plánovač diéty ✅ (`nastroj_dieta.php` — formulár hmotnosť+kategória → denné limity
+bielkovín/energie/Na/K/P podľa KDOQI 2020; klientsky výpočet, nie rozhodovací strom).
 
 **Fáza 4 — Cheat sheety** (tlačiteľné, využijú PDF pipeline):
 acidobáza · elektrolyty · diuretiká · infúzne roztoky (najprv tie, ku ktorým už
