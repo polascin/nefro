@@ -62,6 +62,12 @@ $enabledPayMethods = array_values(array_filter(
 
 // Kryptomeny — Uphold účet (príjem na e-mail účtu).
 $upholdAccount = 'lubomir@polascin.net';
+
+// Viamo — platba na telefónne číslo (okamžitá platba medzi SK bankami).
+$viamo = [
+    'phone_raw' => '+421917370474',
+    'phone_pretty' => '+421 917 370 474',
+];
 ?>
 <!DOCTYPE html>
 <html lang="sk">
@@ -177,6 +183,23 @@ $upholdAccount = 'lubomir@polascin.net';
                             <figcaption>Naskenujte QR kód (PAY by square) v mobilnej aplikácii vašej banky.</figcaption>
                         </figure>
                     <?php endif; ?>
+                </section>
+
+                <section class="form-section" aria-labelledby="viamo-heading">
+                    <h3 id="viamo-heading">Viamo — platba na telefónne číslo</h3>
+                    <p>V mobilnej aplikácii vašej banky zvoľte <em>Platbu na telefónne číslo</em> (Viamo)
+                        a zadajte číslo príjemcu. Platba je okamžitá a funguje medzi slovenskými bankami.</p>
+                    <div class="info-box-blue">
+                        <dl class="donate-bank">
+                            <dt>Telefónne číslo</dt>
+                            <dd>
+                                <code id="donate-viamo"><?= htmlspecialchars($viamo['phone_pretty']) ?></code>
+                                <button type="button" class="btn-secondary donate-copy-btn no-print"
+                                        data-copy="<?= htmlspecialchars($viamo['phone_raw']) ?>"
+                                        aria-label="Kopírovať telefónne číslo do schránky">Kopírovať</button>
+                            </dd>
+                        </dl>
+                    </div>
                 </section>
 
                 <section class="form-section" aria-labelledby="paypal-heading">
