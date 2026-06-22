@@ -31,6 +31,39 @@ $paypalDonateUrl = static function (string $email): string {
         . '&no_recurring=0&item_name=' . rawurlencode('Podpora Nefro-projekt Slovensko')
         . '&currency_code=EUR';
 };
+
+// Doplnkové platobné kanály (karta, Apple Pay, Google Pay, BLIK …).
+// Zobrazia sa len tie, ktoré majú vyplnený odkaz — prázdny reťazec = skryté.
+// Jeden odkaz na bránu/peňaženku spravidla pokryje kartu aj Apple/Google Pay naraz.
+$payMethods = [
+    [
+        'name' => 'Revolut',
+        'desc' => 'Karta, Apple Pay aj Google Pay jedným odkazom.',
+        'url' => 'https://revolut.me/polascin',
+        'cta' => 'Podporiť cez Revolut',
+    ],
+    [
+        'name' => 'Ko‑fi',
+        'desc' => 'Jednorazový aj opakovaný príspevok kartou alebo cez peňaženku.',
+        'url' => '', // napr. https://ko-fi.com/tvoj-profil
+        'cta' => 'Podporiť cez Ko‑fi',
+    ],
+    [
+        // Pozn.: doplň PLATOBNÝ ODKAZ zo Stripe (Payment Link), nie e-mail účtu.
+        // Vytvor v Stripe dashboarde: Payment links → New → výsledok https://buy.stripe.com/...
+        'name' => 'Platobná karta (Stripe)',
+        'desc' => 'Karta, Apple Pay, Google Pay aj BLIK cez zabezpečenú bránu.',
+        'url' => '', // napr. https://buy.stripe.com/...
+        'cta' => 'Zaplatiť kartou',
+    ],
+];
+$enabledPayMethods = array_values(array_filter(
+    $payMethods,
+    static fn (array $m): bool => $m['url'] !== ''
+));
+
+// Kryptomeny — Uphold účet (príjem na e-mail účtu).
+$upholdAccount = 'lubomir@polascin.net';
 ?>
 <!DOCTYPE html>
 <html lang="sk">
@@ -118,7 +151,7 @@ $paypalDonateUrl = static function (string $email): string {
                             <dd>
                                 <code class="donate-iban" id="donate-iban"><?= htmlspecialchars($bank['iban_pretty']) ?></code>
                                 <button type="button" class="btn-secondary donate-copy-btn no-print"
-                                        data-iban="<?= htmlspecialchars($bank['iban_raw']) ?>"
+                                        data-copy="<?= htmlspecialchars($bank['iban_raw']) ?>"
                                         aria-label="Kopírovať IBAN do schránky">Kopírovať IBAN</button>
                             </dd>
 
@@ -162,12 +195,50 @@ $paypalDonateUrl = static function (string $email): string {
                     </ul>
                 </section>
 
+                <?php if ($enabledPayMethods): ?>
+                <section class="form-section" aria-labelledby="karta-heading">
+                    <h3 id="karta-heading">Platobná karta, Apple Pay a Google Pay</h3>
+                    <p>Rýchly príspevok platobnou kartou alebo cez mobilnú peňaženku — bez zadávania
+                        bankových údajov. Vyberte si službu:</p>
+                    <ul class="donate-paypal-list">
+                        <?php foreach ($enabledPayMethods as $m): ?>
+                        <li class="donate-paypal-row">
+                            <span><strong><?= htmlspecialchars($m['name']) ?></strong> — <?= htmlspecialchars($m['desc']) ?></span>
+                            <a href="<?= htmlspecialchars($m['url']) ?>" class="btn-primary" target="_blank" rel="noopener noreferrer"><?= htmlspecialchars($m['cta']) ?></a>
+                        </li>
+                        <?php endforeach; ?>
+                    </ul>
+                </section>
+                <?php endif; ?>
+
+                <section class="form-section" aria-labelledby="crypto-heading">
+                    <h3 id="crypto-heading">Kryptomeny (Uphold)</h3>
+                    <p>Ak používate <a href="https://uphold.com/" target="_blank" rel="noopener noreferrer">Uphold</a>,
+                        môžete poslať príspevok v kryptomene priamo na účet zadaním e-mailu príjemcu:</p>
+                    <div class="info-box-blue">
+                        <dl class="donate-bank">
+                            <dt>Uphold účet</dt>
+                            <dd>
+                                <code id="donate-uphold"><?= htmlspecialchars($upholdAccount) ?></code>
+                                <button type="button" class="btn-secondary donate-copy-btn no-print"
+                                        data-copy="<?= htmlspecialchars($upholdAccount) ?>"
+                                        aria-label="Kopírovať Uphold účet do schránky">Kopírovať</button>
+                            </dd>
+                        </dl>
+                        <p class="donate-note">
+                            V aplikácii Uphold zvoľte <em>Send</em>, zadajte uvedený e-mail a vyberte
+                            kryptomenu. Príjem na e-mail účtu nevyžaduje zverejnenie konkrétnej adresy peňaženky.
+                        </p>
+                    </div>
+                </section>
+
                 <div class="info-box-green">
                     <strong>Dôležité:</strong> príspevok je <strong>dobrovoľný dar</strong> na podporu
                     prevádzky a tvorby obsahu. Nejde o platbu za tovar ani službu a nezakladá nárok na
                     protiplnenie. Prevádzkovateľ nie je registrovaná nezisková organizácia, preto dar
                     nie je daňovo uznateľný. Platby sa nespracúvajú na tejto stránke — uskutočňujú sa
-                    priamo cez vašu banku alebo službu PayPal.
+                    priamo cez vašu banku, peňaženku alebo platobnú službu (napr. PayPal, Revolut,
+                    Ko‑fi, Stripe či Uphold).
                 </div>
 
                 <p>
@@ -186,14 +257,15 @@ $paypalDonateUrl = static function (string $email): string {
 
     <script nonce="<?= htmlspecialchars(function_exists('getScriptNonce') ? getScriptNonce() : '', ENT_QUOTES) ?>">
     (function () {
-        var btn = document.querySelector('.donate-copy-btn');
-        if (!btn || !navigator.clipboard) { return; }
-        btn.addEventListener('click', function () {
-            navigator.clipboard.writeText(btn.getAttribute('data-iban') || '').then(function () {
-                var original = btn.textContent;
-                btn.textContent = 'Skopírované ✓';
-                setTimeout(function () { btn.textContent = original; }, 2000);
-            }).catch(function () {});
+        if (!navigator.clipboard) { return; }
+        document.querySelectorAll('.donate-copy-btn').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                navigator.clipboard.writeText(btn.getAttribute('data-copy') || '').then(function () {
+                    var original = btn.textContent;
+                    btn.textContent = 'Skopírované ✓';
+                    setTimeout(function () { btn.textContent = original; }, 2000);
+                }).catch(function () {});
+            });
         });
     })();
     </script>
