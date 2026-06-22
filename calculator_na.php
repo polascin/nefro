@@ -18,6 +18,8 @@ $form = [
     "target_na" => (string) ($_POST["target_na"] ?? "140"),
     "infusion_na" => (string) ($_POST["infusion_na"] ?? "154"), // 0.9% NaCl has 154 mmol/L
     "infusion_k" => (string) ($_POST["infusion_k"] ?? "0"),
+    "s_glucose" => (string) ($_POST["s_glucose"] ?? ""),
+    "glucose_unit" => (string) ($_POST["glucose_unit"] ?? "mmol_l"),
     "patient_first_name" => (string) ($_POST["patient_first_name"] ?? ""),
     "patient_last_name" => (string) ($_POST["patient_last_name"] ?? ""),
     "patient_birth_date" => (string) ($_POST["patient_birth_date"] ?? ""),
@@ -86,6 +88,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $infK = 0.0;
         }
 
+        $sGlucose = null;
+        if (trim($form["s_glucose"]) !== "") {
+            $sGlucose = calculatorParsePositiveFloat($form["s_glucose"]);
+            if ($sGlucose === null) {
+                $errors[] = "Glykémia musí byť kladné číslo (mmol/L alebo mg/dL).";
+            }
+        }
+        $glucoseUnit = in_array($form["glucose_unit"], ["mmol_l", "mg_dl"], true)
+            ? $form["glucose_unit"]
+            : "mmol_l";
+
         if (empty($errors)) {
             // Výpočet celkovej telesnej vody (TBW)
             $factor = 0.5;
@@ -108,6 +121,26 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 $changePerL = ($infNa + $infK - $sNa) / ($tbw + 1);
             }
 
+            // Korekcia Na na hyperglykémiu (Katz 1973: 1,6 ; Hillier 1999: 2,4)
+            $glucoseMgDl = null;
+            $correctedNaKatz = null;
+            $correctedNaHillier = null;
+            if ($sGlucose !== null) {
+                $glucoseMgDl = $glucoseUnit === "mmol_l"
+                    ? (float) $sGlucose * 18.0182
+                    : (float) $sGlucose;
+                $correctedNaKatz = (float) $sNa + 1.6 * ($glucoseMgDl - 100.0) / 100.0;
+                $correctedNaHillier = (float) $sNa + 2.4 * ($glucoseMgDl - 100.0) / 100.0;
+            }
+
+            // Bezpečná rýchlosť korekcie hyponatrémie (prevencia ODS) — strop za 24 h
+            $safeNa24h = null;
+            $safeNa24hHighRisk = null;
+            if ((float) $sNa < 135.0) {
+                $safeNa24h = (float) $sNa + 8.0;        // bežný limit ≤ 8 mmol/L/24 h
+                $safeNa24hHighRisk = (float) $sNa + 6.0; // vysoké riziko ODS ≤ 6 mmol/L/24 h
+            }
+
             $calculated = [
                 "tbw" => round($tbw, 1),
                 "fwd" => $fwd !== null ? round($fwd, 2) : null,
@@ -115,6 +148,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     $changePerL !== null ? round($changePerL, 2) : null,
                 "s_na" => round($sNa, 1),
                 "target_na" => round($targetNa, 1),
+                "corrected_na_katz" =>
+                    $correctedNaKatz !== null ? round($correctedNaKatz, 1) : null,
+                "corrected_na_hillier" =>
+                    $correctedNaHillier !== null ? round($correctedNaHillier, 1) : null,
+                "glucose_mg_dl" =>
+                    $glucoseMgDl !== null ? round($glucoseMgDl, 0) : null,
+                "safe_na_24h" => $safeNa24h !== null ? round($safeNa24h, 1) : null,
+                "safe_na_24h_high_risk" =>
+                    $safeNa24hHighRisk !== null ? round($safeNa24hHighRisk, 1) : null,
             ];
 
             if ($action === "save") {
@@ -131,6 +173,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                             "target_na" => round($targetNa, 1),
                             "infusion_na" => $infNa,
                             "infusion_k" => $infK,
+                            "s_glucose" => $sGlucose,
+                            "glucose_unit" => $glucoseUnit,
                         ];
 
                         if (
@@ -181,7 +225,7 @@ if (isLoggedIn()) {
   $pageTitle = "Poruchy sodíka a vody | Kalkulačky | Nefro-projekt Slovensko";
   $canonicalUrl = "https://nefro.polascin.net/calculator_na.php";
   $seoDescription =
-      "Nefrologická kalkulačka a nástroj: Poruchy sodíka a vody. Deficit voľnej vody a Adrogué-Madias. Presné klinické výpočty podľa najnovších odporúčaní pre lekárov na Slovensku.";
+      "Nefrologická kalkulačka: poruchy sodíka a vody — deficit voľnej vody, Adrogué-Madias, korekcia sodíka na hyperglykémiu (Katz/Hillier) a bezpečná rýchlosť korekcie hyponatrémie (prevencia ODS). Pre lekárov na Slovensku.";
   $structuredData = [
       [
           "@context" => "https://schema.org",
@@ -233,9 +277,12 @@ if (isLoggedIn()) {
                         <div class="calc-formula-line">\[ \text{TBW} = \text{Hmotnosť} \times (0.45 \text{ až } 0.6 \text{ podľa pohlavia a veku}) \]</div>
                         <div class="calc-formula-line">\[ \text{Deficit vody [L]} = \text{TBW} \times \left( \frac{\text{S-Na}}{\text{Cieľové Na}} - 1 \right) \]</div>
                         <div class="calc-formula-line">\[ \text{Adrogué-Madias} = \frac{\text{Infúzia Na} + \text{Infúzia K} - \text{S-Na}}{\text{TBW} + 1} \]</div>
+                        <div class="calc-formula-line">\[ \text{Korigované Na} = \text{S-Na} + k \times \frac{\text{glykémia [mg/dL]} - 100}{100}, \quad k = 1{,}6\,(\text{Katz}) \text{ / } 2{,}4\,(\text{Hillier}) \]</div>
                         <div class="calc-formula-vars">
                             <strong>TBW:</strong> Celková telesná voda v litroch.<br>
-                            <strong>Adrogué-Madias:</strong> Odhaduje, o koľko mmol/L sa zmení sérový sodík po podaní 1 litra konkrétneho infúzneho roztoku. Upozornenie: Rýchlosť korekcie by nemala presiahnuť 8-10 mmol/L za 24h, inak hrozí osmotický demyelinizačný syndróm!
+                            <strong>Adrogué-Madias:</strong> Odhaduje, o koľko mmol/L sa zmení sérový sodík po podaní 1 litra konkrétneho infúzneho roztoku.<br>
+                            <strong>Korekcia na glykémiu:</strong> hyperglykémia zrieďuje sérový sodík — korigované Na odhaduje skutočnú nátriémiu (Katz 1973 / Hillier 1999).<br>
+                            <strong>Upozornenie (ODS):</strong> pri hyponatrémii nemá rýchlosť korekcie presiahnuť <strong>≤ 8 mmol/L za 24 h</strong> (pri vysokom riziku ≤ 6), inak hrozí osmotický demyelinizačný syndróm.
                         </div>
                     </div>
                 </details>
@@ -297,6 +344,10 @@ if (isLoggedIn()) {
                             <div class="form-group"><label for="target_na">Cieľový S-Na (mmol/L) [Pre hypernatrémiu]</label><input type="text" id="target_na" name="target_na" required class="form-control" value="<?= htmlspecialchars(
                                 $form["target_na"],
                             ) ?>"></div>
+                            <div class="form-group"><label for="s_glucose">Glykémia <span class="optional">— korekcia Na na hyperglykémiu</span></label><input type="text" id="s_glucose" name="s_glucose" class="form-control" value="<?= htmlspecialchars(
+                                $form["s_glucose"],
+                            ) ?>" placeholder="voliteľné"></div>
+                            <div class="form-group"><label for="glucose_unit">Jednotka glykémie</label><select id="glucose_unit" name="glucose_unit" class="form-control"><option value="mmol_l" <?= $form["glucose_unit"] === "mmol_l" ? "selected" : "" ?>>mmol/L</option><option value="mg_dl" <?= $form["glucose_unit"] === "mg_dl" ? "selected" : "" ?>>mg/dL</option></select></div>
                         </div>
                     </div>
 
@@ -354,6 +405,22 @@ if (isLoggedIn()) {
                                 ),
                             ) ?> mmol/L</p>
                             <p class="calc-note-opacity">Ak je hodnota kladná, S-Na stúpne. Ak je záporná, S-Na klesne.</p>
+                        <?php endif; ?>
+                        <?php if ($calculated["corrected_na_katz"] !== null): ?>
+                            <p class="calc-result-mt8"><strong>Korigovaný S-Na na hyperglykémiu</strong>
+                                (glykémia <?= htmlspecialchars(number_format((float) $calculated["glucose_mg_dl"], 0, ",", " ")) ?> mg/dL):
+                                Katz <strong><?= htmlspecialchars(number_format((float) $calculated["corrected_na_katz"], 1, ",", " ")) ?></strong> mmol/L
+                                &bull; Hillier <strong><?= htmlspecialchars(number_format((float) $calculated["corrected_na_hillier"], 1, ",", " ")) ?></strong> mmol/L</p>
+                            <p class="calc-note-opacity">Hillier (faktor 2,4) býva presnejší pri výraznej hyperglykémii; Katz (1,6) je klasická korekcia.</p>
+                        <?php endif; ?>
+                        <?php if ($calculated["safe_na_24h"] !== null): ?>
+                            <div class="info-box-green calc-result-mt8">
+                                <strong>Bezpečná korekcia hyponatrémie (prevencia ODS):</strong>
+                                S-Na by za 24 h nemal presiahnuť <strong>≈ <?= htmlspecialchars(number_format((float) $calculated["safe_na_24h"], 1, ",", " ")) ?> mmol/L</strong>
+                                (limit ≤ 8 mmol/L/24 h). Pri vysokom riziku ODS (S-Na &lt; 105, hypokaliémia, malnutrícia,
+                                alkoholizmus, pokročilé ochorenie pečene) len <strong>≈ <?= htmlspecialchars(number_format((float) $calculated["safe_na_24h_high_risk"], 1, ",", " ")) ?> mmol/L</strong>
+                                (≤ 6 mmol/L/24 h).
+                            </div>
                         <?php endif; ?>
                         <div class="form-actions no-print calc-formula-mt24">
                             <button type="button" class="btn-primary js-print">Vytlačiť výpočet</button>
