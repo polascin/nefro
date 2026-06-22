@@ -29,6 +29,10 @@ if (!function_exists('imagewebp')) {
 }
 
 const WEBP_QUALITY = 82;
+// Obrázky, ktoré sa NESMÚ konvertovať na (stratový) WebP — napr. QR kódy,
+// kde by kompresné artefakty okolo ostrých hrán zhoršili čitateľnosť. Servíruje
+// sa len PNG (.htaccess pri chýbajúcom .webp spadne späť na PNG).
+const WEBP_SKIP = ['pay-by-square'];
 $root = dirname(__DIR__);
 
 // ── Spracuj argumenty ────────────────────────────────────────────────────────
@@ -85,6 +89,12 @@ $savedBytes = 0;
 
 foreach ($sources as $src) {
     $webp = preg_replace('/\.(png|jpe?g)$/i', '.webp', $src);
+
+    // Preskoč obrázky vylúčené z WebP (napr. QR kódy — bezstratovosť)
+    if (in_array(strtolower((string) pathinfo($src, PATHINFO_FILENAME)), WEBP_SKIP, true)) {
+        $skipped++;
+        continue;
+    }
 
     // Preskoč, ak je WebP aktuálny (existuje a nie je starší ako zdroj)
     if (!$force && is_file($webp) && filemtime($webp) >= filemtime($src)) {

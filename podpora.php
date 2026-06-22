@@ -68,6 +68,11 @@ $viamo = [
     'phone_raw' => '+421917370474',
     'phone_pretty' => '+421 917 370 474',
 ];
+
+// payme.sk — hostovaná platobná stránka (QR + Viamo + karta) na TEN ISTÝ účet.
+// IBAN sa berie z $bank, aby ostal konzistentný s prevodom aj QR.
+$paymeUrl = 'https://payme.sk/2/q/PME?IBAN=' . rawurlencode($bank['iban_raw'])
+    . '&AM=0.00&CC=EUR&PI=&MSG=&CN=MUDr.+Lubomir+Polascin';
 ?>
 <!DOCTYPE html>
 <html lang="sk">
@@ -180,7 +185,7 @@ $viamo = [
                     <?php if ($hasQr): ?>
                         <figure class="donate-qr">
                             <img src="<?= htmlspecialchars($qrImage) ?>" alt="PAY by square QR kód pre platbu na účet projektu" width="220" height="220" loading="lazy">
-                            <figcaption>Naskenujte QR kód (PAY by square) v mobilnej aplikácii vašej banky.</figcaption>
+                            <figcaption>Naskenujte QR kód (PAY by square) v mobilnej aplikácii vašej banky — funguje aj pre Viamo.</figcaption>
                         </figure>
                     <?php endif; ?>
                 </section>
@@ -200,6 +205,11 @@ $viamo = [
                             </dd>
                         </dl>
                     </div>
+                    <p class="no-print">Pohodlná alternatíva: <strong>payme.sk</strong> otvorí platobnú
+                        stránku s QR kódom a tlačidlami (Viamo, karta) pre ten istý účet.</p>
+                    <p class="no-print">
+                        <a href="<?= htmlspecialchars($paymeUrl) ?>" class="btn-primary" target="_blank" rel="noopener noreferrer">Zaplatiť cez payme.sk</a>
+                    </p>
                 </section>
 
                 <section class="form-section" aria-labelledby="paypal-heading">
