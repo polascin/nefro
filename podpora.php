@@ -45,7 +45,7 @@ $payMethods = [
     [
         'name' => 'Ko‑fi',
         'desc' => 'Jednorazový aj opakovaný príspevok kartou alebo cez peňaženku.',
-        'url' => '', // napr. https://ko-fi.com/tvoj-profil
+        'url' => 'https://ko-fi.com/lubomirpolascin',
         'cta' => 'Podporiť cez Ko‑fi',
     ],
     [
