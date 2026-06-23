@@ -80,7 +80,7 @@ a `calc_subnav.php`). Mapovanie voči 25 kalkulačkám NephroResource:
 | **nPCR / PNA** (nutrícia pri dialýze)                                                                            | ❌ Chýba — vhodne dopĺňa Kt/V                                                                                                                           |
 | **Recirkulácia** cievneho prístupu                                                                               | ❌ Chýba — dialýza                                                                                                                                      |
 | **Klírens voľnej vody** (bez elektrolytov)                                                                       | ❌ Chýba                                                                                                                                                |
-| **Furstova rovnica**                                                                                             | ❌ Chýba — pokročilá CKD                                                                                                                                |
+| **Furstov pomer** (U/S elektrolytový pomer)                                                                      | ❌ Chýba — predikcia reštrikcie tekutín pri hyponatriémii (nie „pokročilá CKD", ako sa pôvodne uvádzalo)                                                |
 | **Gupta — cisplatinové AKI riziko**                                                                              | ❌ Chýba — onkonefrológia                                                                                                                               |
 | **MGRS**, **MGUS / ľahké reťazce**                                                                               | ❌ Chýba — paraproteíny                                                                                                                                 |
 | **Staging CKM** (AHA)                                                                                            | ❌ Chýba ako kalkulačka (článok už máme)                                                                                                                |
@@ -226,7 +226,9 @@ CRRT ✅ (`calculator_crrt.php` — efluentová dávka mL/kg/h, cieľ KDIGO 20�
 dodanej dávky pri výpadkoch) · klírens voľnej vody ✅ (`calculator_free_water.php` —
 klasický CH₂O z osmolality + elektrolytový EFWC z Na/K) · recirkulácia cievneho
 prístupu ✅ (`calculator_recirculation.php` — ureová trojvzorková metóda
-R = (C_P−C_A)/(C_P−C_V)×100, hranica KDOQI 5–10 %) · Furst ·
+R = (C_P−C_A)/(C_P−C_V)×100, hranica KDOQI 5–10 %) · Furstov pomer ✅
+(`calculator_furst.php` — (U_Na+U_K)/S_Na predikuje účinnosť reštrikcie tekutín
+pri hyponatriémii: <0,5 <1000 mL, 0,5–1,0 <500 mL, >1,0 neúčinná; Furst 2000) ·
 Gupta · MGRS · MGUS / ľahké reťazce · staging CKM · KDPI · TLS · TMA · sprievodca GN ·
 cheat sheety komplement a membranózna nefropatia.
 

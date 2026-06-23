@@ -23,6 +23,7 @@ $_calcSubnavItems = [
     ['file' => 'calculator_na.php',          'label' => 'Poruchy sodíka'],
     ['file' => 'calculator_acidbase.php',    'label' => 'Aniónová medzera'],
     ['file' => 'calculator_free_water.php',  'label' => 'Voľná voda'],
+    ['file' => 'calculator_furst.php',       'label' => 'Furst (tekutiny)'],
     ['file' => 'calculator_egfr_slope.php',  'label' => 'eGFR Slope'],
     ['file' => 'calculator_ktv.php',         'label' => 'Kt/V a URR'],
     ['file' => 'calculator_recirculation.php', 'label' => 'Recirkulácia'],

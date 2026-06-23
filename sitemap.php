@@ -137,6 +137,12 @@ $urls = [
         'priority'   => '0.8',
     ],
     [
+        'loc'        => $baseUrl . 'calculator_furst.php',
+        'lastmod'    => _sitemapLastmod('calculator_furst.php'),
+        'changefreq' => 'monthly',
+        'priority'   => '0.8',
+    ],
+    [
         'loc'        => $baseUrl . 'calculator_egfr_slope.php',
         'lastmod'    => _sitemapLastmod('calculator_egfr_slope.php'),
         'changefreq' => 'monthly',

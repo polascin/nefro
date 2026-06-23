@@ -132,6 +132,11 @@ $schemaWebApp = [
         ],
         [
             "@type" => "WebApplication",
+            "name" => "Furstov pomer (reštrikcia tekutín pri hyponatriémii)",
+            "url" => $baseUrl . "calculator_furst.php",
+        ],
+        [
+            "@type" => "WebApplication",
             "name" => "Recirkulácia cievneho prístupu (ureová metóda)",
             "url" => $baseUrl . "calculator_recirculation.php",
         ],
@@ -345,6 +350,11 @@ $schemaWebApp = [
                         <h3>Klírens voľnej vody (CH₂O / EFWC)</h3>
                         <p>Klasický klírens voľnej vody z osmolality a elektrolytový klírens (EFWC) z Na/K — či obličky čistú vodu vylučujú alebo zadržiavajú. Pomôcka pri hyponatrémii a hypernatrémii.</p>
                         <a href="calculator_free_water.php" class="btn-primary">Otvoriť kalkulačku</a>
+                    </article>
+                    <article class="feature-card calculator-card">
+                        <h3>Furstov pomer (reštrikcia tekutín)</h3>
+                        <p>Pomer (U<sub>Na</sub>+U<sub>K</sub>)/S<sub>Na</sub> predpovedá, či pri hyponatrémii (SIADH) postačí reštrikcia tekutín: &lt; 0,5 účinná &lt; 1000 mL/deň, 0,5 – 1,0 prísna &lt; 500 mL/deň, &gt; 1,0 neúčinná.</p>
+                        <a href="calculator_furst.php" class="btn-primary">Otvoriť kalkulačku</a>
                     </article>
                 </div>
             </section>
