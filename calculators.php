@@ -52,6 +52,11 @@ $schemaWebApp = [
         ],
         [
             "@type" => "WebApplication",
+            "name" => "CRRT — efluentová dávka",
+            "url" => $baseUrl . "calculator_crrt.php",
+        ],
+        [
+            "@type" => "WebApplication",
             "name" => "Mehran skóre (kontrastom indukované AKI)",
             "url" => $baseUrl . "calculator_mehran.php",
         ],
@@ -229,6 +234,12 @@ $schemaWebApp = [
                         <h3>24-h klírens kreatinínu (meraný)</h3>
                         <p>Meraný klírens kreatinínu zo zberu moču a séra, s voliteľnou normalizáciou na povrch tela (1,73 m²). Vhodný pri atypickej svalovej hmote či neistom eGFR.</p>
                         <a href="calculator_crcl_24h.php" class="btn-primary">Otvoriť kalkulačku</a>
+                    </article>
+
+                    <article class="feature-card calculator-card">
+                        <h3>CRRT — efluentová dávka</h3>
+                        <p>Dávka kontinuálnej náhrady funkcie obličiek v mL/kg/h z prietokov dialyzátu, substitúcie a ultrafiltrácie; cieľ KDIGO 20–25 mL/kg/h a odhad dodanej dávky pri výpadkoch.</p>
+                        <a href="calculator_crrt.php" class="btn-primary">Otvoriť kalkulačku</a>
                     </article>
 
                     <article class="feature-card calculator-card">

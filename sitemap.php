@@ -95,6 +95,12 @@ $urls = [
         'priority'   => '0.8',
     ],
     [
+        'loc'        => $baseUrl . 'calculator_crrt.php',
+        'lastmod'    => _sitemapLastmod('calculator_crrt.php'),
+        'changefreq' => 'monthly',
+        'priority'   => '0.8',
+    ],
+    [
         'loc'        => $baseUrl . 'calculator_mehran.php',
         'lastmod'    => _sitemapLastmod('calculator_mehran.php'),
         'changefreq' => 'monthly',

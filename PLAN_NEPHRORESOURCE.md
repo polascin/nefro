@@ -221,10 +221,11 @@ infúzne roztoky ✅ (zloženie, tonicita, balansované vs. 0,9 % NaCl).
 Pri vložení ťaháka sa NEodosiela newsletter avízo (referenčný, nie spravodajský
 obsah); PDF na stiahnutie/tlač sa generuje automaticky.
 
-**Fáza 5 — Špecializované kalkulačky a nástroje:**
-CRRT · recirkulácia · klírens voľnej vody · Furst · Gupta · MGRS · MGUS / ľahké
-reťazce · staging CKM · KDPI · TLS · TMA · sprievodca GN · cheat sheety komplement
-a membranózna nefropatia.
+**Fáza 5 — Špecializované kalkulačky a nástroje** (prebieha):
+CRRT ✅ (`calculator_crrt.php` — efluentová dávka mL/kg/h, cieľ KDIGO 20–25, odhad
+dodanej dávky pri výpadkoch) · recirkulácia · klírens voľnej vody · Furst · Gupta ·
+MGRS · MGUS / ľahké reťazce · staging CKM · KDPI · TLS · TMA · sprievodca GN ·
+cheat sheety komplement a membranózna nefropatia.
 
 **Fáza 6 — Klinické štúdie a databáza liekov** (s pravidelnou aktualizáciou):
 najprv klinické štúdie (jednoduchší a bezpečnejší dátový tok cez ClinicalTrials.gov),
