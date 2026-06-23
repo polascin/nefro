@@ -132,6 +132,11 @@ $schemaWebApp = [
         ],
         [
             "@type" => "WebApplication",
+            "name" => "Recirkulácia cievneho prístupu (ureová metóda)",
+            "url" => $baseUrl . "calculator_recirculation.php",
+        ],
+        [
+            "@type" => "WebApplication",
             "name" => "Rýchlosť poklesu eGFR (Slope)",
             "url" => $baseUrl . "calculator_egfr_slope.php",
         ],
@@ -356,6 +361,11 @@ $schemaWebApp = [
                         <h3>Kt/V a URR</h3>
                         <p>Hodnotenie adekvátnosti hemodialýzy podľa Daugirdasovej rovnice (2. generácia) a pomeru redukcie urey.</p>
                         <a href="calculator_ktv.php" class="btn-primary">Otvoriť kalkulačku</a>
+                    </article>
+                    <article class="feature-card calculator-card">
+                        <h3>Recirkulácia prístupu</h3>
+                        <p>Ureová trojvzorková metóda (systémová/arteriálna/venózna koncentrácia) na detekciu recirkulácie cievneho prístupu, ktorá znižuje účinnú dávku dialýzy. Hranica významnosti 5 – 10 %.</p>
+                        <a href="calculator_recirculation.php" class="btn-primary">Otvoriť kalkulačku</a>
                     </article>
                 </div>
             </section>

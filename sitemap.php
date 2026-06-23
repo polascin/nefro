@@ -149,6 +149,12 @@ $urls = [
         'priority'   => '0.8',
     ],
     [
+        'loc'        => $baseUrl . 'calculator_recirculation.php',
+        'lastmod'    => _sitemapLastmod('calculator_recirculation.php'),
+        'changefreq' => 'monthly',
+        'priority'   => '0.8',
+    ],
+    [
         'loc'        => $baseUrl . 'calculator_npcr.php',
         'lastmod'    => _sitemapLastmod('calculator_npcr.php'),
         'changefreq' => 'monthly',

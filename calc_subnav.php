@@ -25,6 +25,7 @@ $_calcSubnavItems = [
     ['file' => 'calculator_free_water.php',  'label' => 'Voľná voda'],
     ['file' => 'calculator_egfr_slope.php',  'label' => 'eGFR Slope'],
     ['file' => 'calculator_ktv.php',         'label' => 'Kt/V a URR'],
+    ['file' => 'calculator_recirculation.php', 'label' => 'Recirkulácia'],
     ['file' => 'calculator_npcr.php',        'label' => 'nPCR'],
     ['file' => 'calculator_crrt.php',        'label' => 'CRRT dávka'],
     ['file' => 'calculator_uacr.php',        'label' => 'UACR'],

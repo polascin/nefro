@@ -224,7 +224,9 @@ obsah); PDF na stiahnutie/tlač sa generuje automaticky.
 **Fáza 5 — Špecializované kalkulačky a nástroje** (prebieha):
 CRRT ✅ (`calculator_crrt.php` — efluentová dávka mL/kg/h, cieľ KDIGO 20–25, odhad
 dodanej dávky pri výpadkoch) · klírens voľnej vody ✅ (`calculator_free_water.php` —
-klasický CH₂O z osmolality + elektrolytový EFWC z Na/K) · recirkulácia · Furst ·
+klasický CH₂O z osmolality + elektrolytový EFWC z Na/K) · recirkulácia cievneho
+prístupu ✅ (`calculator_recirculation.php` — ureová trojvzorková metóda
+R = (C_P−C_A)/(C_P−C_V)×100, hranica KDOQI 5–10 %) · Furst ·
 Gupta · MGRS · MGUS / ľahké reťazce · staging CKM · KDPI · TLS · TMA · sprievodca GN ·
 cheat sheety komplement a membranózna nefropatia.
 
