@@ -155,6 +155,11 @@ $schemaWebApp = [
             "name" => "UACR a KDIGO klasifikácia",
             "url" => $baseUrl . "calculator_uacr.php",
         ],
+        [
+            "@type" => "WebApplication",
+            "name" => "MGUS — Mayo riziková stratifikácia a κ/λ pomer",
+            "url" => $baseUrl . "calculator_mgus.php",
+        ],
     ],
 ];
 ?>
@@ -387,6 +392,11 @@ $schemaWebApp = [
                         <h3>UACR a KDIGO klasifikácia</h3>
                         <p>Univerzálny prevodník jednotiek pre UACR s okamžitým zaradením do KDIGO kategórií (A1-A3).</p>
                         <a href="calculator_uacr.php" class="btn-primary">Otvoriť kalkulačku</a>
+                    </article>
+                    <article class="feature-card calculator-card">
+                        <h3>MGUS — riziko progresie a κ/λ</h3>
+                        <p>Mayo riziková stratifikácia (Rajkumar 2005): M-proteín, izotyp a pomer voľných ľahkých reťazcov → 20-ročné riziko progresie. S poznámkou k MGRS (renálny význam) a renálnemu rozpätiu FLC.</p>
+                        <a href="calculator_mgus.php" class="btn-primary">Otvoriť kalkulačku</a>
                     </article>
                 </div>
             </section>

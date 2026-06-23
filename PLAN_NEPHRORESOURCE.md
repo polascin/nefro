@@ -229,7 +229,12 @@ prístupu ✅ (`calculator_recirculation.php` — ureová trojvzorková metóda
 R = (C_P−C_A)/(C_P−C_V)×100, hranica KDOQI 5–10 %) · Furstov pomer ✅
 (`calculator_furst.php` — (U_Na+U_K)/S_Na predikuje účinnosť reštrikcie tekutín
 pri hyponatriémii: <0,5 <1000 mL, 0,5–1,0 <500 mL, >1,0 neúčinná; Furst 2000) ·
-Gupta · MGRS · MGUS / ľahké reťazce · staging CKM · KDPI · TLS · TMA · sprievodca GN ·
+MGUS / ľahké reťazce ✅ (`calculator_mgus.php` — Mayo riziková stratifikácia
+Rajkumar 2005: M-proteín ≥15 g/L + non-IgG + abnormálny κ/λ → 20-ročné riziko
+5/21/37/58 %; κ/λ pomer z voľných reťazcov; poznámka k MGRS a renálnemu rozpätiu FLC) ·
+**Gupta — odložené** (presné bodové hodnoty „simple risk score" sú v BMJ 2024 len ako
+obrázok Fig 2, nedostupné v texte; sekundárne zdroje sa rozchádzajú — neimplementovať
+bez overenej bodovej tabuľky) · MGRS · staging CKM · KDPI · TLS · TMA · sprievodca GN ·
 cheat sheety komplement a membranózna nefropatia.
 
 **Fáza 6 — Klinické štúdie a databáza liekov** (s pravidelnou aktualizáciou):
