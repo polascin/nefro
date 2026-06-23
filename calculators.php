@@ -127,6 +127,11 @@ $schemaWebApp = [
         ],
         [
             "@type" => "WebApplication",
+            "name" => "Klírens voľnej vody (CH₂O a EFWC)",
+            "url" => $baseUrl . "calculator_free_water.php",
+        ],
+        [
+            "@type" => "WebApplication",
             "name" => "Rýchlosť poklesu eGFR (Slope)",
             "url" => $baseUrl . "calculator_egfr_slope.php",
         ],
@@ -330,6 +335,11 @@ $schemaWebApp = [
                         <h3>Aniónová medzera a &Delta;/&Delta;</h3>
                         <p>Základný nástroj na diferenciálnu diagnostiku a identifikáciu zmiešaných porúch acidobázickej rovnováhy.</p>
                         <a href="calculator_acidbase.php" class="btn-primary">Otvoriť kalkulačku</a>
+                    </article>
+                    <article class="feature-card calculator-card">
+                        <h3>Klírens voľnej vody (CH₂O / EFWC)</h3>
+                        <p>Klasický klírens voľnej vody z osmolality a elektrolytový klírens (EFWC) z Na/K — či obličky čistú vodu vylučujú alebo zadržiavajú. Pomôcka pri hyponatrémii a hypernatrémii.</p>
+                        <a href="calculator_free_water.php" class="btn-primary">Otvoriť kalkulačku</a>
                     </article>
                 </div>
             </section>
