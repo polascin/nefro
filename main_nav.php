@@ -38,6 +38,7 @@ if (!function_exists('_navA')) {
             <li><?= _navA('nastroje.php', 'Nástroje', $_navToolsActive) ?></li>
             <li><?= _navA('cheatsheets.php', 'Ťaháky', $_navCurrent === 'cheatsheets.php') ?></li>
             <li><?= _navA('search.php', 'Vyhľadávanie', $_navCurrent === 'search.php') ?></li>
+            <li class="main-nav__break" role="presentation" aria-hidden="true"></li>
             <li><a href="<?= $_navOnIndex ? '#sluzby' : 'index.php#sluzby' ?>">Služby</a></li>
             <li><a href="<?= $_navOnIndex ? '#kontakt' : 'index.php#kontakt' ?>">Kontakt</a></li>
             <?php if (function_exists('isLoggedIn') && isLoggedIn()): ?>
