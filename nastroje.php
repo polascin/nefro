@@ -104,7 +104,7 @@ $schemaWebApp = [
     <main id="main-content" class="container main-content main-content--single-col" role="main">
         <div class="content-wrapper">
             <section class="calculator-hero">
-                <img src="img/nefro_14.png" alt="Interaktívne nefrologické nástroje - rozhodovacie sprievodcovia" class="calculator-hero__img" loading="eager">
+                <img src="img/nephrotools.png" alt="Interaktívne nefrologické nástroje - rozhodovacie sprievodcovia" class="calculator-hero__img" loading="eager">
             </section>
 
             <section class="primary-article">
