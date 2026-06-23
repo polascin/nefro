@@ -17,13 +17,18 @@ require_once __DIR__ . '/pdf_generator.php';
 $articles = [];
 
 $articles[] = [
-    'title'        => 'Elektrolyty — ťahák (cheat sheet)',
+    'title'        => 'Elektrolyty — ťahák',
     'slug'         => 'cheatsheet-elektrolyty',
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 1,
     'excerpt'      => 'Prehľad porúch elektrolytov (Na, K, Ca, Mg, P): normálne hodnoty, najčastejšie príčiny, EKG nálezy a kľúčové limity rýchlosti korekcie na jednej strane.',
     'content'      => <<<'HTML'
+<figure>
+  <img src="img/cheatsheet-elektrolyty.svg" alt="Dlaždice elektrolytov so sérovými referenčnými rozsahmi: sodík 135 – 145, draslík 3,5 – 5,0, vápnik 2,15 – 2,55, magnézium 0,70 – 1,00 a fosfát 0,80 – 1,45 mmol/l." loading="lazy" decoding="async">
+  <figcaption>Sérové referenčné rozsahy hlavných elektrolytov (mmol/l).</figcaption>
+</figure>
+
 <p>Ťahák k poruchám <strong>sodíka, draslíka, vápnika, magnézia a fosfátov</strong> — normálne hodnoty, hlavné príčiny, EKG nálezy a bezpečné limity korekcie. Interaktívne postupy: <a href="nastroj_hyponatremia.php">algoritmus hyponatrémie</a>, <a href="nastroj_hypokalemia.php">sprievodca hypokaliémiou</a>. Kalkulačky: <a href="calculator_na.php">sodík/korekcia</a>, <a href="calculator_ca.php">korigovaný vápnik</a>.</p>
 
 <h2>Normálne hodnoty (sérum)</h2>
@@ -64,7 +69,7 @@ $articles[] = [
 </table>
 
 <h2>Vápnik</h2>
-<p><strong>Korekcia na albumín:</strong> Ca<sub>korig</sub> = Ca<sub>celk</sub> + 0,02 × (40 − albumín g/l). Pri poruche acidobázy alebo kriticky chorých uprednostni <strong>ionizovaný vápnik</strong>.</p>
+<p><strong>Korekcia na albumín:</strong> Ca<sub>korig</sub> = Ca<sub>celk</sub> + 0,02 × (40 − albumín g/l). Pri poruche acidobázy alebo u kriticky chorých pacientov uprednostni <strong>ionizovaný vápnik</strong>.</p>
 <table>
   <thead>
     <tr><th scope="col">Porucha</th><th scope="col">Hlavné príčiny</th><th scope="col">EKG / poznámka</th></tr>
@@ -81,7 +86,7 @@ $articles[] = [
     <tr><th scope="col">Porucha</th><th scope="col">Hlavné príčiny</th><th scope="col">Poznámka</th></tr>
   </thead>
   <tbody>
-    <tr><td>Hypomagneziémia</td><td>Diuretiká, PPI, alkohol, GIT straty, inhibítory EGFR</td><td>Spôsobuje refraktérnu hypokaliémiu a hypokalciémiu — koriguj prvý</td></tr>
+    <tr><td>Hypomagneziémia</td><td>Diuretiká, PPI, alkohol, GIT straty, inhibítory EGFR</td><td>Spôsobuje refraktérnu hypokaliémiu a hypokalciémiu — koriguj ho ako prvé</td></tr>
     <tr><td>Hypermagneziémia</td><td>CKD + suplementácia/antacidá, eklampsia (liečba MgSO<sub>4</sub>)</td><td>Hyporeflexia, hypotenzia, zástava dychu; antidotum kalcium i.v.</td></tr>
     <tr><td>Hypofosfatémia</td><td>Refeeding syndróm, alkohol, DKA pri liečbe, renálne straty (Fanconi)</td><td>Ťažká (&lt; 0,3 mmol/l): svalová slabosť, rabdomyolýza, respiračné zlyhanie</td></tr>
     <tr><td>Hyperfosfatémia</td><td>CKD (najčastejšie), syndróm rozpadu nádoru, rabdomyolýza</td><td>CKD-MBD: diétne obmedzenie + viazače fosfátov; rieš príčinu</td></tr>
@@ -90,7 +95,7 @@ $articles[] = [
 
 <h2>Zlaté pravidlá</h2>
 <ul>
-  <li><strong>Magnézium ako prvé:</strong> refraktérna hypokaliémia aj hypokalciémia sa často neupraví bez korekcie Mg.</li>
+  <li><strong>Magnézium ako prvé:</strong> refraktérna hypokaliémia aj hypokalciémia sa často neupravia bez korekcie Mg.</li>
   <li><strong>Rýchlosť, nie cieľ:</strong> pri Na<sup>+</sup> rozhoduje rýchlosť korekcie (ODS vs. edém mozgu), nie cieľová hodnota.</li>
   <li>Pri hyperkaliémii s EKG zmenami je <strong>kalcium</strong> prvý krok (stabilizácia membrány), nezníži však kaliémiu.</li>
   <li>Vápnik vždy hodnoť <strong>korigovaný na albumín</strong> alebo ako ionizovaný.</li>
@@ -98,7 +103,7 @@ $articles[] = [
 
 <hr>
 
-<p><em><strong>Zdroj:</strong> KDIGO a štandardné interné/nefrologické odporúčania; Sterns RH. <em>Disorders of Plasma Sodium</em>, N Engl J Med 2015; UpToDate-konzistentné princípy. Orientačná pomôcka — nenahrádza klinický úsudok.</em></p>
+<p><em><strong>Zdroj:</strong> KDIGO a štandardné interné/nefrologické odporúčania; Sterns RH. <em>Disorders of Plasma Sodium</em>, N Engl J Med 2015. Orientačná pomôcka — nenahrádza klinický úsudok.</em></p>
 HTML,
 ];
 
@@ -165,7 +170,7 @@ $total = count($articles);
 if (php_sapi_name() === 'cli') {
     echo "\n";
     echo "──────────────────────────────────────────────────────\n";
-    echo "Migrácia ťaháka: " . ($articles[0]['title'] ?? '(bez titulu)') . "\n";
+    echo "Migrácia ťaháka: " . $articles[0]['title'] . "\n";
     echo "──────────────────────────────────────────────────────\n";
     echo "Výsledok: $inserted vložených, $updated aktualizovaných z $total ťahákov.\n";
     echo "Preskočené (bez zmeny):        $skipped\n";

@@ -17,13 +17,18 @@ require_once __DIR__ . '/pdf_generator.php';
 $articles = [];
 
 $articles[] = [
-    'title'        => 'Acidobáza — ťahák (cheat sheet)',
+    'title'        => 'Acidobáza — ťahák',
     'slug'         => 'cheatsheet-acidobaza',
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 1,
-    'excerpt'      => 'Jednostranová referencia na interpretáciu acidobázy: normálne hodnoty, primárne poruchy a očakávaná kompenzácia, aniónové okno, delta ratio a diferenciálna diagnostika.',
+    'excerpt'      => 'Rýchla referencia na interpretáciu acidobázy: normálne hodnoty, primárne poruchy a očakávaná kompenzácia, aniónové okno, delta ratio a diferenciálna diagnostika.',
     'content'      => <<<'HTML'
+<figure>
+  <img src="img/cheatsheet-acidobaza.svg" alt="Schéma acidobázy: pH škála od acidémie po alkalémiu s normou 7,35 – 7,45 a príspevkom respiračnej (pCO₂) a metabolickej (HCO₃⁻) zložky." loading="lazy" decoding="async">
+  <figcaption>pH škála: respiračná zložka (pCO₂, pľúca) a metabolická zložka (HCO₃⁻, obličky).</figcaption>
+</figure>
+
 <p>Kompaktná pomôcka na <strong>systematickú interpretáciu artériovej acidobázy</strong>. Postupuj v krokoch: pH → primárna porucha → kompenzácia → aniónové okno (AG) → delta ratio → klinický kontext. Výpočty si overíš v <a href="calculator_acidbase.php">kalkulačke acidobázy</a>.</p>
 
 <h2>Normálne hodnoty (artériová krv)</h2>
@@ -72,9 +77,9 @@ $articles[] = [
 
 <h2>Krok 3 — Aniónové okno (AG)</h2>
 <p><strong>AG = Na<sup>+</sup> − (Cl<sup>−</sup> + HCO<sub>3</sub><sup>−</sup>)</strong>, norma 8 – 12 mmol/l.</p>
-<p><strong>Korekcia na albumín:</strong> AG stúpa o ~2,5 mmol/l na každých 10 g/l (1 g/dl), o ktoré je albumín pod 40 g/l (4 g/dl). Pri hypoalbuminémii sa „skryje" zvýšené AG — vždy koriguj.</p>
+<p><strong>Korekcia na albumín:</strong> AG stúpa o ~2,5 mmol/l na každých 10 g/l (1 g/dl), o ktoré je albumín pod 40 g/l (4 g/dl). Pri hypoalbuminémii môže zvýšené AG zostať zamaskované — vždy koriguj.</p>
 
-<h3>Metabolická acidóza so zvýšeným AG (HAGMA) — „GOLD MARK"</h3>
+<h3>Metabolická acidóza so zvýšeným AG (HAGMA) — mnemotechnika GOLD MARK</h3>
 <ul>
   <li><strong>G</strong>lykoly (etylénglykol, propylénglykol)</li>
   <li><strong>O</strong>xoprolín (pyroglutamát — chronický paracetamol)</li>
@@ -83,7 +88,7 @@ $articles[] = [
   <li><strong>M</strong>etanol</li>
   <li><strong>A</strong>spirín (salicyláty)</li>
   <li><strong>R</strong>enálne zlyhanie (urémia)</li>
-  <li><strong>K</strong>etoacidóza (diabetická, alkoholová, hladovka)</li>
+  <li><strong>K</strong>etoacidóza (diabetická, alkoholová, z hladovania)</li>
 </ul>
 
 <h3>Metabolická acidóza s normálnym AG (NAGMA, hyperchloremická)</h3>
@@ -122,7 +127,7 @@ $articles[] = [
 <ul>
   <li><strong>Osmolárne okno</strong> (vypočítaná vs. meraná osmolalita &gt; 10 mosm/kg) podporuje intoxikáciu toxickým alkoholom (metanol, etylénglykol).</li>
   <li>Vždy <strong>koriguj AG na albumín</strong> — inak ti unikne zvýšené AG u kriticky chorých.</li>
-  <li>Pri zmiešaných poruchách porovnaj namerané hodnoty s <strong>očakávanou kompenzáciou</strong>, nie s „normou".</li>
+  <li>Pri zmiešaných poruchách porovnaj namerané hodnoty s <strong>očakávanou kompenzáciou</strong>, nie s normálnymi referenčnými hodnotami.</li>
   <li>Klinický kontext (anamnéza, lieky, glykémia, laktát, ketolátky) má prednosť pred samotnými číslami.</li>
 </ul>
 
@@ -195,7 +200,7 @@ $total = count($articles);
 if (php_sapi_name() === 'cli') {
     echo "\n";
     echo "──────────────────────────────────────────────────────\n";
-    echo "Migrácia ťaháka: " . ($articles[0]['title'] ?? '(bez titulu)') . "\n";
+    echo "Migrácia ťaháka: " . $articles[0]['title'] . "\n";
     echo "──────────────────────────────────────────────────────\n";
     echo "Výsledok: $inserted vložených, $updated aktualizovaných z $total ťahákov.\n";
     echo "Preskočené (bez zmeny):        $skipped\n";

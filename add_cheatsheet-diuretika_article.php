@@ -17,13 +17,18 @@ require_once __DIR__ . '/pdf_generator.php';
 $articles = [];
 
 $articles[] = [
-    'title'        => 'Diuretiká — ťahák (cheat sheet)',
+    'title'        => 'Diuretiká — ťahák',
     'slug'         => 'cheatsheet-diuretika',
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
     'excerpt'      => 'Triedy diuretík a miesto účinku, dávkové ekvivalencie (slučkové, tiazidy, MRA), zásady pri diuretickej rezistencii a monitorovanie na jednej strane.',
     'content'      => <<<'HTML'
+<figure>
+  <img src="img/cheatsheet-diuretika.svg" alt="Schéma nefrónu so štyrmi miestami účinku diuretík: acetazolamid v proximálnom tubule, slučkové diuretiká v hrubom vzostupnom raménku, tiazidy v distálnom tubule a MRA/amilorid v zbernom kanáliku." loading="lazy" decoding="async">
+  <figcaption>Miesta účinku diuretík pozdĺž nefrónu.</figcaption>
+</figure>
+
 <p>Prehľad <strong>tried diuretík, miesta účinku, dávkových ekvivalencií</strong> a zásad pri diuretickej rezistencii. Pri renálnej diéte pozri <a href="nastroj_dieta.php">plánovač renálnej diéty</a>.</p>
 
 <h2>Triedy a miesto účinku</h2>
@@ -33,7 +38,7 @@ $articles[] = [
   </thead>
   <tbody>
     <tr><td>Slučkové</td><td>Furosemid, torasemid, bumetanid</td><td>Hrubé vzostupné raménko (NKCC2)</td></tr>
-    <tr><td>Tiazidové / tiazidám podobné</td><td>Hydrochlorotiazid, chlortalidón, indapamid, metolazón</td><td>Distálny stočený tubulus (NCC)</td></tr>
+    <tr><td>Tiazidové / tiazidom podobné</td><td>Hydrochlorotiazid, chlortalidón, indapamid, metolazón</td><td>Distálny stočený tubulus (NCC)</td></tr>
     <tr><td>Antagonisty mineralokortikoidov (MRA)</td><td>Spironolaktón, eplerenón, finerenón*</td><td>Zberný kanálik — aldosterónový receptor</td></tr>
     <tr><td>Blokátory ENaC</td><td>Amilorid, triamterén</td><td>Zberný kanálik — epitelový Na kanál</td></tr>
     <tr><td>Inhibítory karboanhydrázy</td><td>Acetazolamid</td><td>Proximálny tubulus</td></tr>
@@ -71,7 +76,7 @@ $articles[] = [
 
 <h2>Diuretická rezistencia — princípy</h2>
 <ul>
-  <li><strong>Prekročiť prah:</strong> slučkové diuretiká majú prahovú dávku — poddávkovanie nezaberie. Pri CKD/sŕdcovom zlyhaní treba vyššiu jednorazovú dávku.</li>
+  <li><strong>Prekročiť prah:</strong> slučkové diuretiká majú prahovú dávku — poddávkovanie nezaberie. Pri CKD/srdcovom zlyhaní treba vyššiu jednorazovú dávku.</li>
   <li><strong>Sekvenčná blokáda nefrónu:</strong> pridaj tiazid (napr. metolazón alebo chlortalidón) k slučkovému pri rezistencii.</li>
   <li><strong>Tiazidy pri nízkom eGFR:</strong> tradične menej účinné pri eGFR &lt; 30 ml/min/1,73 m²; metolazón a chlortalidón si časť účinku zachovávajú, využívajú sa v kombinácii.</li>
   <li><strong>Kontinuálna infúzia</strong> slučkového diuretika môže byť účinnejšia než bolusy pri ťažkom edéme.</li>
@@ -161,7 +166,7 @@ $total = count($articles);
 if (php_sapi_name() === 'cli') {
     echo "\n";
     echo "──────────────────────────────────────────────────────\n";
-    echo "Migrácia ťaháka: " . ($articles[0]['title'] ?? '(bez titulu)') . "\n";
+    echo "Migrácia ťaháka: " . $articles[0]['title'] . "\n";
     echo "──────────────────────────────────────────────────────\n";
     echo "Výsledok: $inserted vložených, $updated aktualizovaných z $total ťahákov.\n";
     echo "Preskočené (bez zmeny):        $skipped\n";

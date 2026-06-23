@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="t d" font-family="'Inter','Segoe UI',Arial,sans-serif">
+  <title id="t">Diuretiká — miesta účinku v nefróne</title>
+  <desc id="d">Schéma nefrónu so štyrmi miestami účinku diuretík: acetazolamid v proximálnom tubule, slučkové diuretiká v hrubom vzostupnom raménku, tiazidy v distálnom tubule a antagonisty mineralokortikoidov či blokátory ENaC v zbernom kanáliku.</desc>
+  <rect width="1200" height="630" fill="#f8fafc"/>
+  <rect x="0" y="0" width="1200" height="120" fill="#4338ca"/>
+  <text x="60" y="62" fill="#ffffff" font-size="46" font-weight="700">Diuretiká</text>
+  <text x="60" y="98" fill="#c7d2fe" font-size="26" font-weight="500">Miesta účinku v nefróne</text>
+
+  <!-- nefrón (tubulus) -->
+  <path d="M 240 255 C 345 255 330 300 380 300 L 380 470 Q 420 535 460 470 L 460 300 C 525 300 530 360 605 360 L 605 545"
+        fill="none" stroke="#cbd5e1" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 240 255 C 345 255 330 300 380 300 L 380 470 Q 420 535 460 470 L 460 300 C 525 300 530 360 605 360 L 605 545"
+        fill="none" stroke="#eef2ff" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- glomerulus -->
+  <circle cx="225" cy="255" r="44" fill="#fecaca" stroke="#ef4444" stroke-width="4"/>
+  <circle cx="225" cy="255" r="22" fill="#fca5a5"/>
+  <text x="225" y="335" text-anchor="middle" font-size="20" fill="#64748b">glomerulus</text>
+
+  <!-- miesta účinku + popisky -->
+  <g font-family="'Inter','Segoe UI',Arial,sans-serif">
+    <!-- acetazolamid (PCT) -->
+    <circle cx="352" cy="288" r="16" fill="#d97706"/>
+    <line x1="368" y1="288" x2="700" y2="210" stroke="#94a3b8" stroke-width="2"/>
+    <text x="710" y="204" font-size="27" font-weight="700" fill="#0f172a">Acetazolamid</text>
+    <text x="710" y="234" font-size="22" fill="#64748b">proximálny tubulus</text>
+
+    <!-- slučkové (TAL) -->
+    <circle cx="460" cy="400" r="16" fill="#2563eb"/>
+    <line x1="476" y1="400" x2="700" y2="318" stroke="#94a3b8" stroke-width="2"/>
+    <text x="710" y="312" font-size="27" font-weight="700" fill="#0f172a">Slučkové (furosemid)</text>
+    <text x="710" y="342" font-size="22" fill="#64748b">hrubé vzostupné raménko</text>
+
+    <!-- tiazidy (DCT) -->
+    <circle cx="565" cy="356" r="16" fill="#16a34a"/>
+    <line x1="581" y1="356" x2="700" y2="426" stroke="#94a3b8" stroke-width="2"/>
+    <text x="710" y="420" font-size="27" font-weight="700" fill="#0f172a">Tiazidy</text>
+    <text x="710" y="450" font-size="22" fill="#64748b">distálny tubulus</text>
+
+    <!-- MRA / ENaC (CD) -->
+    <circle cx="605" cy="475" r="16" fill="#7c3aed"/>
+    <line x1="621" y1="475" x2="700" y2="534" stroke="#94a3b8" stroke-width="2"/>
+    <text x="710" y="528" font-size="27" font-weight="700" fill="#0f172a">MRA / amilorid</text>
+    <text x="710" y="558" font-size="22" fill="#64748b">zberný kanálik</text>
+  </g>
+</svg>

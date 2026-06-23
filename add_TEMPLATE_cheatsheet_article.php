@@ -3,7 +3,7 @@
  * add_TEMPLATE_cheatsheet_article.php
  * ════════════════════════════════════════════════════════════════════════════
  * ŠABLÓNA pre ŤAHÁK / CHEAT SHEET (sekcia „Ťaháky"
- * → cheatsheets.php, category = 'cheatsheet'). Tlačiteľný jednostránkový
+ * → cheatsheets.php, category = 'cheatsheet'). Tlačiteľný kompaktný
  * prehľad pre klinickú prax (acidobáza, elektrolyty, diuretiká, infúzne
  * roztoky …). Renderuje sa cez article.php (spoločná infraštruktúra + PDF).
  *
@@ -53,7 +53,7 @@ require_once __DIR__ . '/pdf_generator.php';
 $articles = [];
 
 $articles[] = [
-    'title'        => '',                    // ← VYPLNIŤ: napr. 'Acidobáza — ťahák (cheat sheet)'
+    'title'        => '',                    // ← VYPLNIŤ: napr. 'Acidobáza — ťahák'
     'slug'         => '',                    // ← VYPLNIŤ: napr. 'cheatsheet-acidobaza'
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),   // ← dátum + čas zverejnenia (upraviť ak treba)
@@ -152,7 +152,7 @@ $total = count($articles);
 if (php_sapi_name() === 'cli') {
     echo "\n";
     echo "──────────────────────────────────────────────────────\n";
-    echo "Migrácia ťaháka: " . ($articles[0]['title'] ?? '(bez titulu)') . "\n";
+    echo "Migrácia ťaháka: " . $articles[0]['title'] . "\n";
     echo "──────────────────────────────────────────────────────\n";
     echo "Výsledok: $inserted vložených, $updated aktualizovaných z $total ťahákov.\n";
     echo "Preskočené (bez zmeny):        $skipped\n";

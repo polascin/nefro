@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 /**
- * cheatsheets.php — Sekcia „Ťaháky" (cheat sheets)
+ * cheatsheets.php — Sekcia „Ťaháky"
  * ────────────────────────────────────────────────────────────────────────────
- * Zoznam tlačiteľných jednostránkových ťahákov (category = 'cheatsheet') —
+ * Zoznam tlačiteľných ťahákov (category = 'cheatsheet') —
  * rýchle prehľady pre klinickú prax (acidobáza, elektrolyty, diuretiká,
  * infúzne roztoky a ďalšie). Renderujú sa cez article.php (spoločná
  * infraštruktúra vrátane automatického PDF pipeline na stiahnutie/tlač).
@@ -43,6 +43,15 @@ function csExcerpt(string $text, int $maxLen = 200): string
     return rtrim($slice, " \t\n\r\0\x0B,.;:-") . "…";
 }
 
+/** Vyberie URL prvého <img> z HTML obsahu ťaháka (ilustrácia pre náhľad karty). */
+function csFirstImage(string $html): string
+{
+    if (preg_match('/<img[^>]+src\s*=\s*["\']([^"\']+)["\']/i', $html, $m)) {
+        return trim($m[1]);
+    }
+    return "";
+}
+
 // ── Načítanie ťahákov ────────────────────────────────────────────────────────
 $articles = [];
 
@@ -63,8 +72,8 @@ $siteName = "Nefro-projekt Slovensko";
 $baseUrl = "https://nefro.polascin.net/";
 $schemaOrgUrl = "https://schema.org";
 
-$pageTitle = "Ťaháky (cheat sheets) | " . $siteName;
-$seoDescription = "Tlačiteľné jednostránkové ťaháky (cheat sheets) pre nefrológiu a internú medicínu — acidobáza, elektrolyty, diuretiká, infúzne roztoky a ďalšie. Rýchly prehľad k dispozícii aj ako PDF na stiahnutie a tlač.";
+$pageTitle = "Ťaháky | " . $siteName;
+$seoDescription = "Tlačiteľné ťaháky pre nefrológiu a internú medicínu — acidobáza, elektrolyty, diuretiká, infúzne roztoky a ďalšie. Rýchly prehľad k dispozícii aj ako PDF na stiahnutie a tlač.";
 $seoKeywords = "ťahák, cheat sheet, rýchla referencia, acidobáza, elektrolyty, diuretiká, infúzne roztoky, nefrológia, tlačiteľná pomôcka, Slovensko";
 $canonicalUrl = $baseUrl . "cheatsheets.php";
 $robotsMeta = "index, follow, max-image-preview:large";
@@ -74,7 +83,7 @@ $structuredData = [
     [
         "@context" => $schemaOrgUrl,
         "@type" => "CollectionPage",
-        "name" => "Ťaháky (cheat sheets)",
+        "name" => "Ťaháky",
         "description" => $seoDescription,
         "url" => $canonicalUrl,
         "inLanguage" => "sk-SK",
@@ -106,7 +115,7 @@ if (!empty($itemListElements)) {
     $structuredData[] = [
         "@context" => $schemaOrgUrl,
         "@type" => "ItemList",
-        "name" => "Ťaháky (cheat sheets)",
+        "name" => "Ťaháky",
         "itemListElement" => $itemListElements,
     ];
 }
@@ -123,7 +132,7 @@ if (!empty($itemListElements)) {
 
   <?php
   $headerTitle = "Ťaháky";
-  $headerIntro = "Tlačiteľné jednostránkové ťaháky (cheat sheets) pre klinickú prax.";
+  $headerIntro = "Tlačiteľné ťaháky pre klinickú prax.";
   $showLogo = true;
   include_once "header.php";
   ?>
@@ -134,11 +143,11 @@ if (!empty($itemListElements)) {
     <div class="content-wrapper content-wrapper--full">
 
       <section class="populars-intro" aria-labelledby="cheatsheets-heading">
-        <h1 id="cheatsheets-heading" class="section-heading">Ťaháky (cheat sheets)</h1>
+        <h1 id="cheatsheets-heading" class="section-heading">Ťaháky</h1>
         <p class="populars-lead">
-          Stručné, tlačiteľné jednostránkové prehľady pre klinickú prax — kľúčové
-          čísla, klasifikácie a postupy na jednom mieste. Každý ťahák si možno
-          vytlačiť priamo z prehliadača alebo stiahnuť ako PDF (pre prihlásených).
+          Stručné, tlačiteľné prehľady pre klinickú prax — kľúčové čísla,
+          klasifikácie a postupy na jednom mieste. Každý ťahák si možno vytlačiť
+          priamo z prehliadača alebo stiahnuť ako PDF (pre prihlásených).
           Sú orientačnou pomôckou a <strong>nenahrádzajú</strong> klinický úsudok.
         </p>
       </section>
@@ -163,11 +172,16 @@ if (!empty($itemListElements)) {
                 $artDate = htmlspecialchars(csFormatDate((string) $art["published_at"], $months));
                 $artDateIso = htmlspecialchars(substr((string) $art["published_at"], 0, 10));
                 $artIsTop = !empty($art["is_top"]);
+                $artImg = csFirstImage((string) ($art["content"] ?? ""));
                 ?>
             <li class="popular-card">
               <a href="article.php?slug=<?= $artSlug ?>" class="popular-card__link" aria-label="Otvoriť ťahák: <?= $artTitle ?>">
                 <div class="popular-card__media">
-                  <span class="popular-card__placeholder" aria-hidden="true">📋</span>
+                  <?php if ($artImg !== ""): ?>
+                    <img src="<?= htmlspecialchars($artImg, ENT_QUOTES) ?>" alt="" loading="lazy" decoding="async" class="popular-card__img">
+                  <?php else: ?>
+                    <span class="popular-card__placeholder" aria-hidden="true">📋</span>
+                  <?php endif; ?>
                   <?php if ($artIsTop): ?><span class="popular-card__badge">★ Odporúčané</span><?php endif; ?>
                 </div>
                 <div class="popular-card__body">

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="t d" font-family="'Inter','Segoe UI',Arial,sans-serif">
+  <title id="t">Infúzne roztoky</title>
+  <desc id="d">Štyri infúzne vaky s obsahom sodíka a tonicitou: 0,9 % NaCl, Ringer-laktát, Plasma-Lyte a 5 % glukóza.</desc>
+  <rect width="1200" height="630" fill="#f8fafc"/>
+  <rect x="0" y="0" width="1200" height="120" fill="#0369a1"/>
+  <text x="60" y="62" fill="#ffffff" font-size="46" font-weight="700">Infúzne roztoky</text>
+  <text x="60" y="98" fill="#bae6fd" font-size="26" font-weight="500">Zloženie a tonicita najčastejších kryštaloidov</text>
+
+  <!-- vak (šablóna cez translate) -->
+  <g>
+    <!-- 0,9 % NaCl -->
+    <g transform="translate(70,170)">
+      <ellipse cx="90" cy="6" rx="15" ry="7" fill="none" stroke="#94a3b8" stroke-width="4"/>
+      <rect x="12" y="16" width="156" height="250" rx="18" fill="#ffffff" stroke="#0ea5e9" stroke-width="4"/>
+      <path d="M16 150 H164 V244 a14 14 0 0 1 -14 14 H30 a14 14 0 0 1 -14 -14 Z" fill="#e0f2fe"/>
+      <rect x="80" y="266" width="20" height="16" fill="#94a3b8"/>
+      <text x="90" y="70" text-anchor="middle" font-size="25" font-weight="700" fill="#0c4a6e">0,9 %</text>
+      <text x="90" y="100" text-anchor="middle" font-size="25" font-weight="700" fill="#0c4a6e">NaCl</text>
+      <text x="90" y="200" text-anchor="middle" font-size="26" font-weight="700" fill="#0369a1">Na 154</text>
+      <text x="90" y="230" text-anchor="middle" font-size="20" fill="#475569">Cl 154</text>
+      <text x="90" y="312" text-anchor="middle" font-size="22" font-weight="600" fill="#0f172a">izotonický</text>
+    </g>
+    <!-- Ringer-laktát -->
+    <g transform="translate(350,170)">
+      <ellipse cx="90" cy="6" rx="15" ry="7" fill="none" stroke="#94a3b8" stroke-width="4"/>
+      <rect x="12" y="16" width="156" height="250" rx="18" fill="#ffffff" stroke="#16a34a" stroke-width="4"/>
+      <path d="M16 150 H164 V244 a14 14 0 0 1 -14 14 H30 a14 14 0 0 1 -14 -14 Z" fill="#dcfce7"/>
+      <rect x="80" y="266" width="20" height="16" fill="#94a3b8"/>
+      <text x="90" y="70" text-anchor="middle" font-size="24" font-weight="700" fill="#14532d">Ringer-</text>
+      <text x="90" y="100" text-anchor="middle" font-size="24" font-weight="700" fill="#14532d">laktát</text>
+      <text x="90" y="200" text-anchor="middle" font-size="26" font-weight="700" fill="#15803d">Na 130</text>
+      <text x="90" y="230" text-anchor="middle" font-size="20" fill="#475569">K 4 · Ca · laktát</text>
+      <text x="90" y="312" text-anchor="middle" font-size="22" font-weight="600" fill="#0f172a">balansovaný</text>
+    </g>
+    <!-- Plasma-Lyte -->
+    <g transform="translate(630,170)">
+      <ellipse cx="90" cy="6" rx="15" ry="7" fill="none" stroke="#94a3b8" stroke-width="4"/>
+      <rect x="12" y="16" width="156" height="250" rx="18" fill="#ffffff" stroke="#0d9488" stroke-width="4"/>
+      <path d="M16 150 H164 V244 a14 14 0 0 1 -14 14 H30 a14 14 0 0 1 -14 -14 Z" fill="#ccfbf1"/>
+      <rect x="80" y="266" width="20" height="16" fill="#94a3b8"/>
+      <text x="90" y="70" text-anchor="middle" font-size="24" font-weight="700" fill="#134e4a">Plasma-</text>
+      <text x="90" y="100" text-anchor="middle" font-size="24" font-weight="700" fill="#134e4a">Lyte</text>
+      <text x="90" y="200" text-anchor="middle" font-size="26" font-weight="700" fill="#0f766e">Na 140</text>
+      <text x="90" y="230" text-anchor="middle" font-size="20" fill="#475569">K 5 · Mg · acetát</text>
+      <text x="90" y="312" text-anchor="middle" font-size="22" font-weight="600" fill="#0f172a">balansovaný</text>
+    </g>
+    <!-- 5 % glukóza -->
+    <g transform="translate(910,170)">
+      <ellipse cx="90" cy="6" rx="15" ry="7" fill="none" stroke="#94a3b8" stroke-width="4"/>
+      <rect x="12" y="16" width="156" height="250" rx="18" fill="#ffffff" stroke="#d97706" stroke-width="4"/>
+      <path d="M16 150 H164 V244 a14 14 0 0 1 -14 14 H30 a14 14 0 0 1 -14 -14 Z" fill="#fef3c7"/>
+      <rect x="80" y="266" width="20" height="16" fill="#94a3b8"/>
+      <text x="90" y="70" text-anchor="middle" font-size="25" font-weight="700" fill="#78350f">5 %</text>
+      <text x="90" y="100" text-anchor="middle" font-size="25" font-weight="700" fill="#78350f">glukóza</text>
+      <text x="90" y="200" text-anchor="middle" font-size="24" font-weight="700" fill="#b45309">voľná voda</text>
+      <text x="90" y="230" text-anchor="middle" font-size="20" fill="#475569">bez elektrolytov</text>
+      <text x="90" y="312" text-anchor="middle" font-size="22" font-weight="600" fill="#0f172a">hypotonický efekt</text>
+    </g>
+  </g>
+</svg>

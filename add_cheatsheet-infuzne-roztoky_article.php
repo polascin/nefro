@@ -17,13 +17,18 @@ require_once __DIR__ . '/pdf_generator.php';
 $articles = [];
 
 $articles[] = [
-    'title'        => 'Infúzne roztoky — ťahák (cheat sheet)',
+    'title'        => 'Infúzne roztoky — ťahák',
     'slug'         => 'cheatsheet-infuzne-roztoky',
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
     'excerpt'      => 'Zloženie a výber infúznych roztokov: kryštaloidy vs. koloidy, tonicita, obsah elektrolytov, balansované roztoky vs. fyziologický roztok a zásady pri náhrade objemu a udržiavacej terapii.',
     'content'      => <<<'HTML'
+<figure>
+  <img src="img/cheatsheet-infuzne-roztoky.svg" alt="Štyri infúzne vaky s obsahom sodíka a tonicitou: 0,9 % NaCl (Na 154, izotonický), Ringer-laktát (Na 130, balansovaný), Plasma-Lyte (Na 140, balansovaný) a 5 % glukóza (voľná voda, hypotonický efekt)." loading="lazy" decoding="async">
+  <figcaption>Najčastejšie kryštaloidy — obsah sodíka a tonicita.</figcaption>
+</figure>
+
 <p>Prehľad <strong>zloženia a výberu infúznych roztokov</strong> — koncentrácie elektrolytov, tonicita a klinické zásady. Súvisí s <a href="calculator_na.php">poruchami sodíka</a> a <a href="nastroj_hyponatremia.php">algoritmom hyponatrémie</a>.</p>
 
 <h2>Zloženie bežných roztokov (na 1 liter)</h2>
@@ -59,7 +64,7 @@ $articles[] = [
   <tbody>
     <tr><td>Izotonické</td><td>0,9 % NaCl, Ringer-laktát, Plasma-Lyte</td><td>Náhrada objemu, resuscitácia, udržiavacia terapia</td></tr>
     <tr><td>Hypotonické</td><td>0,45 % NaCl, G5</td><td>Náhrada voľnej vody (hypernatrémia); v udržiavacej terapii u dospelých opatrne (riziko hyponatrémie)</td></tr>
-    <tr><td>Hypertonické</td><td>3 % NaCl</td><td>Symptomatická ťažká hyponatrémia (boly 100–150 ml), edém mozgu</td></tr>
+    <tr><td>Hypertonické</td><td>3 % NaCl</td><td>Symptomatická ťažká hyponatrémia (bolusy 100–150 ml), edém mozgu</td></tr>
   </tbody>
 </table>
 
@@ -81,7 +86,7 @@ $articles[] = [
     <tr><td>Hypernatrémia (náhrada voľnej vody)</td><td>G5 alebo 0,45 % NaCl, pomalá korekcia (≤ 10–12 mmol/l/24 h)</td></tr>
     <tr><td>Symptomatická ťažká hyponatrémia</td><td>3 % NaCl 100–150 ml bolus, kontrola Na<sup>+</sup>, limit ≤ 8 mmol/l/24 h</td></tr>
     <tr><td>Diabetická ketoacidóza</td><td>Najprv 0,9 % NaCl, potom balansovaný; pridať glukózu pri glykémii &lt; 14 mmol/l</td></tr>
-    <tr><td>Hyperkalciémia</td><td>Izotonický roztok (0,9 % NaCl) na obnovu volémie a kalciuréziu</td></tr>
+    <tr><td>Hyperkalciémia</td><td>Izotonický roztok (0,9 % NaCl) na obnovu volémie a kalciurézu</td></tr>
     <tr><td>Udržiavacia terapia (dospelí)</td><td>Izotonický roztok (vyhni sa hypotonickým — riziko nozokomiálnej hyponatrémie)</td></tr>
   </tbody>
 </table>
@@ -163,7 +168,7 @@ $total = count($articles);
 if (php_sapi_name() === 'cli') {
     echo "\n";
     echo "──────────────────────────────────────────────────────\n";
-    echo "Migrácia ťaháka: " . ($articles[0]['title'] ?? '(bez titulu)') . "\n";
+    echo "Migrácia ťaháka: " . $articles[0]['title'] . "\n";
     echo "──────────────────────────────────────────────────────\n";
     echo "Výsledok: $inserted vložených, $updated aktualizovaných z $total ťahákov.\n";
     echo "Preskočené (bez zmeny):        $skipped\n";
