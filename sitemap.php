@@ -185,6 +185,12 @@ $urls = [
         'priority'   => '0.7',
     ],
     [
+        'loc'        => $baseUrl . 'cheatsheets.php',
+        'lastmod'    => _sitemapLastmod('cheatsheets.php'),
+        'changefreq' => 'monthly',
+        'priority'   => '0.7',
+    ],
+    [
         'loc'        => $baseUrl . 'podpora.php',
         'lastmod'    => _sitemapLastmod('podpora.php'),
         'changefreq' => 'yearly',

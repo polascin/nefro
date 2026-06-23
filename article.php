@@ -300,12 +300,16 @@ if ($article) {
           $pubDateIso = htmlspecialchars(date('c', strtotime($pubDate) ?: time()));
           $pubDateSk = formatArticleDate($pubDate, $months);
           $isTop = (int) $article["is_top"] === 1;
-          $isPopular = ($article["category"] ?? "odborne") === "popularne";
+          $articleCategory = $article["category"] ?? "odborne";
+          $isPopular = $articleCategory === "popularne";
+          $isCheatsheet = $articleCategory === "cheatsheet";
           ?>
 
         <article class="primary-article" itemscope itemtype="https://schema.org/Article">
           <?php if ($isPopular): ?>
             <a href="populars.php" class="badge-popular" aria-label="Sekcia Pre pacientov">Pre pacientov</a>
+          <?php elseif ($isCheatsheet): ?>
+            <a href="cheatsheets.php" class="badge-popular" aria-label="Sekcia Ťaháky">Ťahák</a>
           <?php endif; ?>
           <?php if ($isTop): ?>
             <span class="badge-top" aria-label="Odporúčaný článok">★ TOP</span>
@@ -392,6 +396,8 @@ if ($article) {
         <nav class="article-nav" aria-label="Navigácia článkov">
           <?php if ($isPopular): ?>
             <a href="populars.php" class="btn-secondary-small">← Späť na články pre pacientov</a>
+          <?php elseif ($isCheatsheet): ?>
+            <a href="cheatsheets.php" class="btn-secondary-small">← Späť na ťaháky</a>
           <?php else: ?>
             <a href="index.php" class="btn-secondary-small">← Späť na zoznam článkov</a>
           <?php endif; ?>

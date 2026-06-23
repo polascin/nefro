@@ -211,9 +211,15 @@ TK → U-Cl; RTA, hyperaldosteronizmus, Bartter/Gitelman, dôraz na Mg) ·
 plánovač diéty ✅ (`nastroj_dieta.php` — formulár hmotnosť+kategória → denné limity
 bielkovín/energie/Na/K/P podľa KDOQI 2020; klientsky výpočet, nie rozhodovací strom).
 
-**Fáza 4 — Cheat sheety** (tlačiteľné, využijú PDF pipeline):
-acidobáza · elektrolyty · diuretiká · infúzne roztoky (najprv tie, ku ktorým už
-máme kalkulačky).
+**Fáza 4 — Cheat sheety („Ťaháky"). ✅ HOTOVÉ.**
+Nová kategória `category = 'cheatsheet'` (znovupoužíva `article.php` aj PDF
+pipeline) + hub `cheatsheets.php` („Ťaháky") + položka v navigácii/pätičke +
+šablóna `add_TEMPLATE_cheatsheet_article.php`. Prvé štyri tlačiteľné ťaháky:
+acidobáza ✅ (kompenzácia, AG, delta ratio) · elektrolyty ✅ (Na/K/Ca/Mg/P,
+EKG, limity korekcie) · diuretiká ✅ (triedy, ekvivalencie, rezistencia) ·
+infúzne roztoky ✅ (zloženie, tonicita, balansované vs. 0,9 % NaCl).
+Pri vložení ťaháka sa NEodosiela newsletter avízo (referenčný, nie spravodajský
+obsah); PDF na stiahnutie/tlač sa generuje automaticky.
 
 **Fáza 5 — Špecializované kalkulačky a nástroje:**
 CRRT · recirkulácia · klírens voľnej vody · Furst · Gupta · MGRS · MGUS / ľahké
