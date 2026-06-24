@@ -24,6 +24,11 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Cieľové antigény (PLA2R, THSD7A, NELL1, EXT1/2…), primárne vs sekundárne príčiny, vyšetrenie, riziková stratifikácia (KDIGO) a liečba membranóznej nefropatie na jednej strane.',
     'content'      => <<<'HTML'
+<figure>
+  <img src="img/cheatsheet-membranozna-nefropatia.svg" alt="Rez glomerulovou filtračnou bariérou: podocytové pedicely, subepiteliálne imunodepozity (anti-PLA2R) so spikami bazálnej membrány, fenestrovaný endotel a kapilárny lúmen." loading="lazy" decoding="async">
+  <figcaption>Subepiteliálne imunodepozity a „spiky“ GBM — histologický znak membranóznej nefropatie.</figcaption>
+</figure>
+
 <p>Ťahák k <strong>membranóznej nefropatii</strong> — najčastejšej príčine nefrotického syndrómu u nediabetických dospelých. Podklad: subepiteliálne imunokomplexy a aktivácia komplementu. Diferenciálnu diagnostiku nefrotického syndrómu rieši <a href="nastroj_gn.php">interaktívny sprievodca GN</a>.</p>
 
 <h2>Cieľové antigény (fáza podocytu)</h2>
@@ -85,7 +90,13 @@ $articles[] = [
 
 <hr>
 
-<p><em><strong>Zdroj:</strong> KDIGO 2024 (a 2021) Clinical Practice Guideline for the Management of Glomerular Diseases. Orientačná pomôcka — nenahrádza klinický úsudok ani biopsiu.</em></p>
+<p><strong>Zdroje a odkazy:</strong></p>
+<ul>
+  <li><a href="https://kdigo.org/guidelines/gd/" target="_blank" rel="noopener noreferrer">KDIGO — Glomerular Diseases (klinické odporúčania)</a></li>
+  <li><a href="https://pubmed.ncbi.nlm.nih.gov/19571279/" target="_blank" rel="noopener noreferrer">Beck LH Jr a kol. PLA2R ako cieľový antigén pri membranóznej nefropatii. N Engl J Med 2009;361:11–21</a></li>
+  <li><a href="https://clinicaltrials.gov/" target="_blank" rel="noopener noreferrer">ClinicalTrials.gov — membranózna nefropatia</a></li>
+</ul>
+<p><em>Orientačná pomôcka — nenahrádza klinický úsudok ani biopsiu.</em></p>
 HTML,
 ];
 

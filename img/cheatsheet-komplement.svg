@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="t d" font-family="'Inter','Segoe UI',Arial,sans-serif">
+  <title id="t">Komplement — tri aktivačné dráhy</title>
+  <desc id="d">Schéma troch dráh komplementu (klasická, lektínová, alternatívna), ktoré konvergujú na C3 konvertázu, štiepenie C3, ďalej C5 a membránový atakový komplex C5b-9.</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475569"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" fill="#f8fafc"/>
+  <rect x="0" y="0" width="1200" height="120" fill="#0f766e"/>
+  <text x="60" y="62" fill="#ffffff" font-size="46" font-weight="700">Komplement</text>
+  <text x="60" y="98" fill="#99f6e4" font-size="26" font-weight="500">Tri aktivačné dráhy → C3 → C5 → MAC (C5b-9)</text>
+
+  <!-- Klasická -->
+  <g>
+    <rect x="40" y="150" width="340" height="150" rx="16" fill="#ffffff" stroke="#0ea5e9" stroke-width="4"/>
+    <text x="210" y="195" text-anchor="middle" font-size="30" font-weight="800" fill="#0ea5e9">Klasická</text>
+    <text x="210" y="232" text-anchor="middle" font-size="22" fill="#0f172a">Imunokomplexy (C1q → IgG/IgM)</text>
+    <text x="210" y="268" text-anchor="middle" font-size="22" font-weight="600" fill="#334155">C1, C4, C2</text>
+  </g>
+  <!-- Lektínová -->
+  <g>
+    <rect x="430" y="150" width="340" height="150" rx="16" fill="#ffffff" stroke="#16a34a" stroke-width="4"/>
+    <text x="600" y="195" text-anchor="middle" font-size="30" font-weight="800" fill="#16a34a">Lektínová</text>
+    <text x="600" y="232" text-anchor="middle" font-size="22" fill="#0f172a">Sacharidy patogénov (MBL)</text>
+    <text x="600" y="268" text-anchor="middle" font-size="22" font-weight="600" fill="#334155">MBL, MASP, C4, C2</text>
+  </g>
+  <!-- Alternatívna -->
+  <g>
+    <rect x="820" y="150" width="340" height="150" rx="16" fill="#ffffff" stroke="#d97706" stroke-width="4"/>
+    <text x="990" y="195" text-anchor="middle" font-size="30" font-weight="800" fill="#d97706">Alternatívna</text>
+    <text x="990" y="232" text-anchor="middle" font-size="22" fill="#0f172a">Spontánna „tick-over“ + amplifikácia</text>
+    <text x="990" y="268" text-anchor="middle" font-size="22" font-weight="600" fill="#334155">Faktor B, faktor D, properdín</text>
+  </g>
+
+  <!-- Konvergenčné šípky -->
+  <line x1="210" y1="305" x2="560" y2="360" stroke="#475569" stroke-width="3" marker-end="url(#arr)"/>
+  <line x1="600" y1="305" x2="600" y2="360" stroke="#475569" stroke-width="3" marker-end="url(#arr)"/>
+  <line x1="990" y1="305" x2="640" y2="360" stroke="#475569" stroke-width="3" marker-end="url(#arr)"/>
+
+  <!-- C3 uzol -->
+  <rect x="410" y="368" width="380" height="74" rx="14" fill="#7c3aed"/>
+  <text x="600" y="404" text-anchor="middle" font-size="27" font-weight="800" fill="#ffffff">C3 konvertáza</text>
+  <text x="600" y="430" text-anchor="middle" font-size="21" fill="#e9d5ff">štiepenie C3 → C3a + C3b</text>
+
+  <line x1="600" y1="442" x2="600" y2="478" stroke="#475569" stroke-width="3" marker-end="url(#arr)"/>
+
+  <!-- C5 / MAC uzol -->
+  <rect x="360" y="486" width="480" height="74" rx="14" fill="#db2777"/>
+  <text x="600" y="522" text-anchor="middle" font-size="27" font-weight="800" fill="#ffffff">C5 → MAC (C5b-9)</text>
+  <text x="600" y="548" text-anchor="middle" font-size="21" fill="#fbcfe8">membránový atakový komplex → lýza bunky</text>
+
+  <text x="600" y="600" text-anchor="middle" font-size="23" fill="#475569">Sérum: ↓C3 + normálny C4 → alternatívna (C3G, postinfekčná) &#8226; ↓C3 aj ↓C4 → klasická (lupus, kryo)</text>
+</svg>

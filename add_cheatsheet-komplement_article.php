@@ -24,6 +24,11 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Tri dráhy komplementu, interpretácia sérového C3/C4, komplementom sprostredkované glomerulopatie (C3G, aHUS, lupus, kryo) a komplement-cielené lieky na jednej strane.',
     'content'      => <<<'HTML'
+<figure>
+  <img src="img/cheatsheet-komplement.svg" alt="Schéma troch dráh komplementu (klasická, lektínová, alternatívna) konvergujúcich na C3 konvertázu, štiepenie C3, ďalej C5 a membránový atakový komplex C5b-9." loading="lazy" decoding="async">
+  <figcaption>Tri aktivačné dráhy komplementu konvergujú na C3 → C5 → MAC (C5b-9).</figcaption>
+</figure>
+
 <p>Ťahák k <strong>systému komplementu</strong> v nefrológii — tri aktivačné dráhy, interpretácia sérového C3/C4, komplementom sprostredkované choroby obličiek a cielené lieky. Diferenciálnu diagnostiku nefritíd podľa komplementu rieši <a href="nastroj_gn.php">interaktívny sprievodca GN</a>.</p>
 
 <h2>Tri aktivačné dráhy</h2>
@@ -89,7 +94,13 @@ $articles[] = [
 
 <hr>
 
-<p><em><strong>Zdroj:</strong> KDIGO 2024 Glomerular Diseases; Noris M, Remuzzi G. <em>Overview of Complement Activation and Regulation.</em> Semin Nephrol 2013. Orientačná pomôcka — nenahrádza klinický úsudok ani aktuálne SPC liekov.</em></p>
+<p><strong>Zdroje a odkazy:</strong></p>
+<ul>
+  <li><a href="https://kdigo.org/guidelines/gd/" target="_blank" rel="noopener noreferrer">KDIGO — Glomerular Diseases (klinické odporúčania)</a></li>
+  <li><a href="https://pubmed.ncbi.nlm.nih.gov/24161035/" target="_blank" rel="noopener noreferrer">Noris M, Remuzzi G. Overview of Complement Activation and Regulation. Semin Nephrol 2013;33(6):479–92</a></li>
+  <li><a href="https://clinicaltrials.gov/" target="_blank" rel="noopener noreferrer">ClinicalTrials.gov — komplement-cielené terapie</a></li>
+</ul>
+<p><em>Orientačná pomôcka — nenahrádza klinický úsudok ani aktuálne SPC liekov.</em></p>
 HTML,
 ];
 

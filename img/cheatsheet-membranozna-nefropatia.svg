@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="t d" font-family="'Inter','Segoe UI',Arial,sans-serif">
+  <title id="t">Membranózna nefropatia — filtračná bariéra</title>
+  <desc id="d">Schematický rez glomerulovou filtračnou bariérou: podocytové pedicely, subepiteliálne imunodepozity (anti-PLA2R) so „spikami“ bazálnej membrány, fenestrovaný endotel a kapilárny lúmen.</desc>
+  <rect width="1200" height="630" fill="#f8fafc"/>
+  <rect x="0" y="0" width="1200" height="120" fill="#0f766e"/>
+  <text x="60" y="62" fill="#ffffff" font-size="46" font-weight="700">Membranózna nefropatia</text>
+  <text x="60" y="98" fill="#99f6e4" font-size="26" font-weight="500">Subepiteliálne imunodepozity a „spiky“ GBM</text>
+
+  <!-- Močový priestor -->
+  <text x="400" y="172" text-anchor="middle" font-size="20" fill="#94a3b8">močový priestor</text>
+
+  <!-- Podocytové pedicely -->
+  <g fill="#38bdf8">
+    <rect x="96" y="190" width="60" height="52" rx="10"/>
+    <rect x="176" y="190" width="60" height="52" rx="10"/>
+    <rect x="256" y="190" width="60" height="52" rx="10"/>
+    <rect x="336" y="190" width="60" height="52" rx="10"/>
+    <rect x="416" y="190" width="60" height="52" rx="10"/>
+    <rect x="496" y="190" width="60" height="52" rx="10"/>
+    <rect x="576" y="190" width="60" height="52" rx="10"/>
+    <rect x="656" y="190" width="60" height="52" rx="10"/>
+  </g>
+
+  <!-- GBM -->
+  <rect x="80" y="300" width="660" height="60" fill="#fbbf24"/>
+  <!-- Spiky GBM (medzi depozitmi) -->
+  <g fill="#fbbf24">
+    <path d="M196,300 L216,262 L236,300 z"/>
+    <path d="M276,300 L296,262 L316,300 z"/>
+    <path d="M356,300 L376,262 L396,300 z"/>
+    <path d="M436,300 L456,262 L476,300 z"/>
+    <path d="M516,300 L536,262 L556,300 z"/>
+    <path d="M596,300 L616,262 L636,300 z"/>
+  </g>
+  <!-- Subepiteliálne depozity -->
+  <g fill="#7c3aed">
+    <circle cx="176" cy="284" r="14"/>
+    <circle cx="256" cy="284" r="14"/>
+    <circle cx="336" cy="284" r="14"/>
+    <circle cx="416" cy="284" r="14"/>
+    <circle cx="496" cy="284" r="14"/>
+    <circle cx="576" cy="284" r="14"/>
+    <circle cx="656" cy="284" r="14"/>
+  </g>
+
+  <!-- Endotel (fenestrovaný) -->
+  <rect x="80" y="360" width="660" height="26" fill="#f87171"/>
+  <g fill="#ffffff">
+    <rect x="120" y="368" width="14" height="10"/>
+    <rect x="200" y="368" width="14" height="10"/>
+    <rect x="280" y="368" width="14" height="10"/>
+    <rect x="360" y="368" width="14" height="10"/>
+    <rect x="440" y="368" width="14" height="10"/>
+    <rect x="520" y="368" width="14" height="10"/>
+    <rect x="600" y="368" width="14" height="10"/>
+    <rect x="680" y="368" width="14" height="10"/>
+  </g>
+  <!-- Kapilárny lúmen -->
+  <rect x="80" y="386" width="660" height="84" rx="0" fill="#fee2e2"/>
+  <text x="410" y="436" text-anchor="middle" font-size="22" fill="#b91c1c">kapilárny lúmen (krv)</text>
+
+  <!-- Popisky s vodiacimi čiarami -->
+  <g stroke="#94a3b8" stroke-width="2">
+    <line x1="765" y1="200" x2="660" y2="186"/>
+    <line x1="765" y1="250" x2="700" y2="216"/>
+    <line x1="765" y1="300" x2="668" y2="284"/>
+    <line x1="765" y1="350" x2="620" y2="276"/>
+    <line x1="765" y1="400" x2="700" y2="372"/>
+    <line x1="765" y1="450" x2="700" y2="420"/>
+  </g>
+  <g font-size="22" fill="#0f172a">
+    <text x="775" y="206">Močový priestor</text>
+    <text x="775" y="256" font-weight="600">Podocyt — pedicely (fáza)</text>
+    <text x="775" y="306" font-weight="700" fill="#7c3aed">Subepiteliálne depozity</text>
+    <text x="775" y="356" font-weight="600" fill="#b45309">GBM + „spiky“ (strieborné farbenie)</text>
+    <text x="775" y="406">Endotel (fenestrovaný)</text>
+    <text x="775" y="456">Kapilárny lúmen</text>
+  </g>
+  <text x="985" y="284" font-size="19" fill="#7c3aed">anti-PLA2R ~70 %, IgG4</text>
+
+  <text x="600" y="600" text-anchor="middle" font-size="23" fill="#475569">Subepiteliálne depozity + „spiky“ = histologický znak &#8226; anti-PLA2R určuje aktivitu a prognózu</text>
+</svg>
