@@ -232,9 +232,13 @@ pri hyponatriémii: <0,5 <1000 mL, 0,5–1,0 <500 mL, >1,0 neúčinná; Furst 20
 MGUS / ľahké reťazce ✅ (`calculator_mgus.php` — Mayo riziková stratifikácia
 Rajkumar 2005: M-proteín ≥15 g/L + non-IgG + abnormálny κ/λ → 20-ročné riziko
 5/21/37/58 %; κ/λ pomer z voľných reťazcov; poznámka k MGRS a renálnemu rozpätiu FLC) ·
+syndróm rozpadu nádoru ✅ (`calculator_tls.php` — Cairo–Bishop klasifikácia: laboratórny
+TLS = ≥ 2 z kys. močová ≥ 476 µmol/L / K ≥ 6,0 / fosfát ≥ 1,45 dospelí–2,1 deti /
+Ca ≤ 1,75 mmol/L; klinický TLS + kreatinín ≥ 1,5× ULN, arytmia alebo kŕče; absolútne
+prahy, poznámka k Howard NEJM 2011) ·
 **Gupta — odložené** (presné bodové hodnoty „simple risk score" sú v BMJ 2024 len ako
 obrázok Fig 2, nedostupné v texte; sekundárne zdroje sa rozchádzajú — neimplementovať
-bez overenej bodovej tabuľky) · MGRS · staging CKM · KDPI · TLS · TMA · sprievodca GN ·
+bez overenej bodovej tabuľky) · MGRS · staging CKM · KDPI · TMA · sprievodca GN ·
 cheat sheety komplement a membranózna nefropatia.
 
 **Fáza 6 — Klinické štúdie a databáza liekov** (s pravidelnou aktualizáciou):

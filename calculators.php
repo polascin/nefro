@@ -160,6 +160,11 @@ $schemaWebApp = [
             "name" => "MGUS — Mayo riziková stratifikácia a κ/λ pomer",
             "url" => $baseUrl . "calculator_mgus.php",
         ],
+        [
+            "@type" => "WebApplication",
+            "name" => "Syndróm rozpadu nádoru (TLS) — Cairo–Bishop klasifikácia",
+            "url" => $baseUrl . "calculator_tls.php",
+        ],
     ],
 ];
 ?>
@@ -360,6 +365,11 @@ $schemaWebApp = [
                         <h3>Furstov pomer (reštrikcia tekutín)</h3>
                         <p>Pomer (U<sub>Na</sub>+U<sub>K</sub>)/S<sub>Na</sub> predpovedá, či pri hyponatrémii (SIADH) postačí reštrikcia tekutín: &lt; 0,5 účinná &lt; 1000 mL/deň, 0,5 – 1,0 prísna &lt; 500 mL/deň, &gt; 1,0 neúčinná.</p>
                         <a href="calculator_furst.php" class="btn-primary">Otvoriť kalkulačku</a>
+                    </article>
+                    <article class="feature-card calculator-card">
+                        <h3>Syndróm rozpadu nádoru (TLS)</h3>
+                        <p>Cairo–Bishop klasifikácia: laboratórny TLS = ≥ 2 metabolické odchýlky (kys. močová, draslík, fosfát, vápnik); klinický TLS + obličkové postihnutie, arytmia alebo kŕče. Častá príčina akútneho poškodenia obličiek v onko-nefrológii.</p>
+                        <a href="calculator_tls.php" class="btn-primary">Otvoriť kalkulačku</a>
                     </article>
                 </div>
             </section>
