@@ -58,7 +58,7 @@ $articles[] = [
 <h2>Vyšetrenie</h2>
 <ul>
   <li><strong>Anti-PLA2R protilátky</strong> (sérum, ELISA/IFA) — pozitivita podporuje primárnu MN a často umožní diagnózu aj bez biopsie; titer slúži na monitoring odpovede.</li>
-  <li><strong>Renálna biopsia:</strong> subepiteliálne depozity, „spikes" na striebornom farbení; IF granulárny IgG (IgG4 pri primárnej); EM štádiá I–IV (Ehrenreich–Churg). Tkanivový PLA2R/THSD7A/NELL1 farbením.</li>
+  <li><strong>Renálna biopsia:</strong> subepiteliálne depozity, „spikes“ na striebornom farbení; IF granulárny IgG (IgG4 pri primárnej); EM štádiá I–IV (Ehrenreich–Churg). Tkanivový PLA2R/THSD7A/NELL1 farbením.</li>
   <li><strong>Skríning sekundárnych príčin</strong> podľa veku a kontextu: malignita, sérológie hepatitíd, ANA/anti-dsDNA, TSH.</li>
   <li>Kvantifikácia proteinúrie, albumín, eGFR; posúdenie rizika trombózy.</li>
 </ul>

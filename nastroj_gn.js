@@ -20,7 +20,7 @@
                     + 'Prvým krokom je zaradiť dominujúci obraz podľa močového sedimentu a veľkosti proteinúrie.'],
                 bullets: [
                     'Nefritický: hematúria s dysmorfnými erytrocytmi a erytrocytovými valcami, hypertenzia, pokles GFR, proteinúria zvyčajne < 3,5 g/deň.',
-                    'Nefrotický: proteinúria ≥ 3,5 g/deň, hypoalbuminémia, edémy, hyperlipidémia, neaktívny („bland") sediment.'
+                    'Nefrotický: proteinúria ≥ 3,5 g/deň, hypoalbuminémia, edémy, hyperlipidémia, neaktívny („bland“) sediment.'
                 ],
                 prompt: 'Vyberte dominujúci obraz:',
                 options: [

@@ -363,7 +363,7 @@ if (isLoggedIn()) {
                 <div class="info-box-green">
                     <strong>Zdroj:</strong>
                     <a href="https://pubmed.ncbi.nlm.nih.gov/19623019/" target="_blank" rel="noopener noreferrer">Rao P.S. et&nbsp;al., Transplantation 2009;88(2):231–6</a>
-                    &ensp;&bull;&ensp; operacionalizácia a KDPI mapovanie: OPTN „Guide to Calculating and Interpreting the KDPI"
+                    &ensp;&bull;&ensp; operacionalizácia a KDPI mapovanie: OPTN „Guide to Calculating and Interpreting the KDPI“
                 </div>
 
                 <?php foreach ($messages as $message): ?>

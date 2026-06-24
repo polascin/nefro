@@ -34,7 +34,7 @@ $articles[] = [
   <tbody>
     <tr><td>Klasická</td><td>Imunokomplexy (C1q viaže IgG/IgM)</td><td>C1, <strong>C4</strong>, C2 → C3 konvertáza (C4b2a)</td></tr>
     <tr><td>Lektínová</td><td>Sacharidy patogénov (MBL/fikolíny)</td><td>MBL, MASP, <strong>C4</strong>, C2</td></tr>
-    <tr><td>Alternatívna</td><td>Spontánna „tick-over" + amplifikácia</td><td>Faktor B, faktor D, properdín → C3 konvertáza (C3bBb)</td></tr>
+    <tr><td>Alternatívna</td><td>Spontánna „tick-over“ + amplifikácia</td><td>Faktor B, faktor D, properdín → C3 konvertáza (C3bBb)</td></tr>
   </tbody>
 </table>
 <p>Všetky dráhy konvergujú na <strong>C3 → C5 → membránový atakový komplex (MAC, C5b-9)</strong>. Alternatívna dráha funguje aj ako <strong>amplifikačná slučka</strong> ostatných dvoch.</p>

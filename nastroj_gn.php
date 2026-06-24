@@ -114,7 +114,7 @@ $baseUrl = "https://nefro.polascin.net/";
                         </thead>
                         <tbody>
                             <tr><th scope="row">Proteinúria</th><td>zvyčajne &lt; 3,5 g/deň</td><td>≥ 3,5 g/deň</td></tr>
-                            <tr><th scope="row">Sediment</th><td>aktívny: dysmorfné ERY, ERY valce</td><td>neaktívny („bland"), tukové telieska</td></tr>
+                            <tr><th scope="row">Sediment</th><td>aktívny: dysmorfné ERY, ERY valce</td><td>neaktívny („bland“), tukové telieska</td></tr>
                             <tr><th scope="row">Hematúria</th><td>výrazná (glomerulárna)</td><td>mierna alebo žiadna</td></tr>
                             <tr><th scope="row">Hypertenzia / pokles GFR</th><td>časté</td><td>premenlivé</td></tr>
                             <tr><th scope="row">Albumín / lipidy / edémy</th><td>premenlivé</td><td>hypoalbuminémia, hyperlipidémia, edémy</td></tr>
