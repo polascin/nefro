@@ -191,6 +191,12 @@ $urls = [
         'priority'   => '0.8',
     ],
     [
+        'loc'        => $baseUrl . 'calculator_ckm.php',
+        'lastmod'    => _sitemapLastmod('calculator_ckm.php'),
+        'changefreq' => 'monthly',
+        'priority'   => '0.8',
+    ],
+    [
         'loc'        => $baseUrl . 'nastroje.php',
         'lastmod'    => _sitemapLastmod('nastroje.php'),
         'changefreq' => 'monthly',

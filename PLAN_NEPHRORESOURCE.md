@@ -240,9 +240,13 @@ PLASMIC skóre ✅ (`calculator_plasmic.php` — Bendapudi 2017: 7-zložkové sk
 ťažkého deficitu ADAMTS13 / TTP pri trombotickej mikroangiopatii — trombocyty < 30, hemolýza,
 bez nádoru, bez transplantácie, MCV < 90 fL, INR < 1,5, kreatinín < 176,8 µmol/L; 0–4 nízke,
 5 stredné, 6–7 vysoké riziko; pomôcka pred testom ADAMTS13) ·
+staging CKM ✅ (`calculator_ckm.php` — kardio-renálno-metabolický syndróm, AHA 2023 Ndumele:
+hierarchické štádium 0–4 — adipozita → metabolické RF a/alebo CKD (stredné–vysoké) →
+subklinické CVD / veľmi vysoké riziko CKD → klinické CVD (4a bez / 4b so zlyhaním obličiek);
+riziko CKD podľa KDIGO, zlyhanie obličiek = veľmi vysoké riziko) ·
 **Gupta — odložené** (presné bodové hodnoty „simple risk score" sú v BMJ 2024 len ako
 obrázok Fig 2, nedostupné v texte; sekundárne zdroje sa rozchádzajú — neimplementovať
-bez overenej bodovej tabuľky) · MGRS · staging CKM · KDPI · sprievodca GN ·
+bez overenej bodovej tabuľky) · MGRS · KDPI · sprievodca GN ·
 cheat sheety komplement a membranózna nefropatia.
 
 **Fáza 6 — Klinické štúdie a databáza liekov** (s pravidelnou aktualizáciou):

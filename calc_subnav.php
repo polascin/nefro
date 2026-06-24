@@ -13,6 +13,7 @@ $_calcSubnavItems = [
     ['file' => 'calculator_kfre.php',        'label' => 'KFRE'],
     ['file' => 'calculator_ckdpc.php',       'label' => 'CKD-PC'],
     ['file' => 'calculator_prevent.php',     'label' => 'PREVENT'],
+    ['file' => 'calculator_ckm.php',         'label' => 'CKM staging'],
     ['file' => 'calculator_igan.php',        'label' => 'IgAN'],
     ['file' => 'calculator_adpkd.php',       'label' => 'Mayo ADPKD'],
     ['file' => 'calculator_aki.php',         'label' => 'AKI (FENa/FEUrea)'],

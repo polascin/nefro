@@ -170,6 +170,11 @@ $schemaWebApp = [
             "name" => "PLASMIC skóre (TTP / ADAMTS13)",
             "url" => $baseUrl . "calculator_plasmic.php",
         ],
+        [
+            "@type" => "WebApplication",
+            "name" => "Staging CKM syndrómu (AHA 2023)",
+            "url" => $baseUrl . "calculator_ckm.php",
+        ],
     ],
 ];
 ?>
@@ -317,6 +322,11 @@ $schemaWebApp = [
                         <h3>PREVENT — AHA 2024</h3>
                         <p>10- a 30-ročné riziko pre Total CVD, ASCVD a srdcové zlyhávanie (Khan 2024). Nahrádza starý PCE; zahŕňa eGFR a voliteľne UACR, HbA1c a SDI. S interpretáciou rizikovej kategórie a cieľa LDL podľa odporúčaní 2026.</p>
                         <a href="calculator_prevent.php" class="btn-primary">Otvoriť kalkulačku</a>
+                    </article>
+                    <article class="feature-card calculator-card">
+                        <h3>Staging CKM syndrómu</h3>
+                        <p>Kardiovaskulárno-renálno-metabolický syndróm, štádium 0 – 4 (AHA 2023): adipozita → metabolické RF a/alebo CKD → subklinické → klinické KV ochorenie (4a/4b). Hierarchická klasifikácia s integráciou CKD pre prevenciu.</p>
+                        <a href="calculator_ckm.php" class="btn-primary">Otvoriť kalkulačku</a>
                     </article>
                 </div>
             </section>
