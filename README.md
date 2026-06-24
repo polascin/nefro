@@ -108,6 +108,29 @@ Príklad crontab (WebSupport, pondelok 03:30):
 Každý beh zapíše súhrn (`seen/stored/skipped/errors`) do PHP error logu. Migráciu
 schémy (`add_clinical_trials_migration.php`) treba spustiť pred prvým syncom.
 
+## Lieky (databáza s ChEMBL)
+
+Kurátorská databáza liekov relevantných v nefrológii. Verejné zobrazenie:
+`lieky.php` (hub) a `liek.php` (detail). Admin kurácia: `admin_drugs.php`.
+
+### Synchronizácia farmakológie
+
+CLI skript stiahne farmakológiu z ChEMBL (EMBL-EBI) REST API pre kurátorský zoznam
+liekov (podľa ChEMBL ID) a upsertne do tabuľky `drugs`. **Lieky vznikajú ako
+nezverejnené** (`is_published = 0`).
+
+```bash
+php sync_drugs.php
+```
+
+**Hranica kurácie:** ChEMBL vlastní technické polia (name_intl, atc_code, routes,
+max_phase, first_approval, black_box_warning, withdrawn, mechanism, synonyms) a
+aktualizuje ich pri každom behu. Klinické polia (renal_dosing, nephrotoxicity,
+dialyzability, warnings, monitoring, indications, sk_note) a `is_published` sú
+**čisto ručné** — odborník ich dopĺňa a liek zverejní v `admin_drugs.php` až po
+kontrole (lieková bezpečnosť). Odporúčaný cron: týždenne (analogicky štúdiám).
+Migráciu `add_drugs_migration.php` spusti pred prvým syncom.
+
 ## Python code quality (Black + Pylint)
 
 This repository is primarily PHP, but Black and Pylint are configured for any Python files you add.

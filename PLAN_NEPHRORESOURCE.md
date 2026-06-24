@@ -281,10 +281,14 @@ hub `studie.php` / detail `studia.php` + **admin kurácia `admin_trials.php`** (
 `is_published`, kategória, slovenský kontext `sk_note` zobrazený vo verejnom detaile) +
 týždenný cron (server) s logom behu. Zapojené v nav/pätičke/sitemape/robots.
 
-**Databáza liekov — ďalší krok** (vyžaduje kurátorský dohľad): plánovaný prístup —
-mechanizmus/farmakológiu ťahať z **ChEMBL** (MCP), renálne dávkovanie a upozornenia
-dopĺňať ručne z SPC (ŠÚKL/EMA); samostatná tabuľka `drugs`, migrácia commitnutá zvlášť
-pred kódom; karta lieku prepojená na eGFR/Cockcroft-Gault kalkulačky a súvisiace články.
+**Databáza liekov ✅ HOTOVÉ (pipeline a kurácia)** — migrácia `drugs` (is_published
+DEFAULT 0) + ChEMBL REST sync (`sync_drugs.php`, 10 nefrologických liekov, vytvára
+nezverejnené) + hub `lieky.php` / detail `liek.php` (renálne dávkovanie, mechanizmus,
+nefrotoxicita, dialyzovateľnosť, prepojenie na eGFR/Cockcroft-Gault) + admin kurácia
+`admin_drugs.php` (create/edit/publish). Hranica: ChEMBL vlastní technické polia,
+klinické polia + zverejnenie sú ručné (lieková bezpečnosť). Zapojené v
+nav/pätičke/sitemape/robots/.htaccess. **Ostáva (priebežne):** odborné doplnenie
+renálneho dávkovania z SPC (ŠÚKL/EMA) a zverejnenie liekov; rozšírenie zoznamu.
 
 ---
 
