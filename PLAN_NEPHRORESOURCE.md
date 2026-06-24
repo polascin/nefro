@@ -221,7 +221,7 @@ infúzne roztoky ✅ (zloženie, tonicita, balansované vs. 0,9 % NaCl).
 Pri vložení ťaháka sa NEodosiela newsletter avízo (referenčný, nie spravodajský
 obsah); PDF na stiahnutie/tlač sa generuje automaticky.
 
-**Fáza 5 — Špecializované kalkulačky a nástroje** (HOTOVÉ; odložené ostáva len Gupta):
+**Fáza 5 — Špecializované kalkulačky a nástroje** (HOTOVÉ — kompletné):
 CRRT ✅ (`calculator_crrt.php` — efluentová dávka mL/kg/h, cieľ KDIGO 20–25, odhad
 dodanej dávky pri výpadkoch) · klírens voľnej vody ✅ (`calculator_free_water.php` —
 klasický CH₂O z osmolality + elektrolytový EFWC z Na/K) · recirkulácia cievneho
@@ -249,9 +249,11 @@ odlíši MGRS od MGUS a od hematologickej malignity vyžadujúcej liečbu; MGRS 
 a zároveň renálne postihnutie pripísateľné paraproteínu bez kritérií malignity → renálna
 biopsia, hematológ, klon-cielená liečba napriek nízkej náloži; biopsia s monoklonálnymi depozitmi
 dokladá klon aj pri negatívnom sére/moči ~30 %) ·
-**Gupta — odložené** (presné bodové hodnoty „simple risk score" sú v BMJ 2024 len ako
-obrázok Fig 2, nedostupné v texte; sekundárne zdroje sa rozchádzajú — neimplementovať
-bez overenej bodovej tabuľky) ·
+Gupta ✅ (`calculator_gupta.php` — simple risk score pre ťažké cisplatínom indukované AKI,
+Gupta BMJ 2024;385:e077169; 9 faktorov: vek/HTN/DM/Hb/leuko/trombo/albumín/Mg/dávka cisplatiny,
+súčet 0–22,5 → nízke 0–5,5 / stredné 6–9,5 / vysoké 10–15,5 / veľmi vysoké ≥16; SK jednotky
+g/l a mmol/l s prepínačmi, dávka v absolútnych mg; bodové hodnoty z Fig 2 doplnené z externej
+validácie + MDCalc, prah trombocytov <150 potvrdený používateľom; kontrola maxima 22,5 ✓) ·
 KDRI/KDPI ✅ (`calculator_kdpi.php` — **bod 1**: exaktný KDRI (Rao 2009, fixné koeficienty,
 10 darcovských faktorov, kreatinín stropovaný na 8 mg/dL) ako HR vs. referenčný darca;
 KDPI percentil zámerne neuvádzaný — vyžaduje ročný škálovací faktor a mapovaciu tabuľku

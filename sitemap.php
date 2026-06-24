@@ -107,6 +107,12 @@ $urls = [
         'priority'   => '0.8',
     ],
     [
+        'loc'        => $baseUrl . 'calculator_gupta.php',
+        'lastmod'    => _sitemapLastmod('calculator_gupta.php'),
+        'changefreq' => 'monthly',
+        'priority'   => '0.8',
+    ],
+    [
         'loc'        => $baseUrl . 'calculator_units.php',
         'lastmod'    => _sitemapLastmod('calculator_units.php'),
         'changefreq' => 'monthly',

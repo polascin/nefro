@@ -62,6 +62,11 @@ $schemaWebApp = [
         ],
         [
             "@type" => "WebApplication",
+            "name" => "Gupta — riziko cisplatínového AKI (CP-AKI, BMJ 2024)",
+            "url" => $baseUrl . "calculator_gupta.php",
+        ],
+        [
+            "@type" => "WebApplication",
             "name" => "Prevodník laboratórnych jednotiek (SI ⇄ konvenčné)",
             "url" => $baseUrl . "calculator_units.php",
         ],
@@ -348,6 +353,11 @@ $schemaWebApp = [
                         <h3>FENa a FEUrea</h3>
                         <p>Frakčná exkrécia sodíka a urey pre diferenciálnu diagnostiku AKI (prerenálne vs. renálne zlyhanie).</p>
                         <a href="calculator_aki.php" class="btn-primary">Otvoriť kalkulačku</a>
+                    </article>
+                    <article class="feature-card calculator-card">
+                        <h3>Gupta — riziko cisplatínového AKI</h3>
+                        <p>Simple risk score (Gupta, BMJ 2024): z 9 faktorov pred podaním cisplatiny (vek, hypertenzia, diabetes, hemoglobín, leukocyty, trombocyty, albumín, magnézium, dávka) odhadne riziko ťažkého CP-AKI. Skóre 0 – 22,5 → nízke/stredné/vysoké/veľmi vysoké.</p>
+                        <a href="calculator_gupta.php" class="btn-primary">Otvoriť kalkulačku</a>
                     </article>
                 </div>
             </section>
