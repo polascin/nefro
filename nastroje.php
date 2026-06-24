@@ -53,6 +53,11 @@ $schemaWebApp = [
             "name" => "Plánovač renálnej diéty",
             "url" => $baseUrl . "nastroj_dieta.php",
         ],
+        [
+            "@type" => "WebApplication",
+            "name" => "Sprievodca diagnostikou glomerulonefritíd",
+            "url" => $baseUrl . "nastroj_gn.php",
+        ],
     ],
 ];
 ?>
@@ -139,6 +144,11 @@ $schemaWebApp = [
                         <h3>Plánovač renálnej diéty</h3>
                         <p>Z telesnej hmotnosti a kategórie (CKD bez dialýzy, hemodialýza, peritoneálna dialýza) vypočíta orientačné denné cieľové limity bielkovín, energie, sodíka, draslíka a fosforu podľa KDOQI 2020.</p>
                         <a href="nastroj_dieta.php" class="btn-primary">Otvoriť nástroj</a>
+                    </article>
+                    <article class="feature-card calculator-card">
+                        <h3>Sprievodca diagnostikou GN</h3>
+                        <p>Diferenciálna diagnostika glomerulonefritíd — nefritický vs nefrotický obraz, RPGN (ANCA, anti-GBM, imunokomplexová), rozdelenie podľa komplementu (postinfekčná, lupus, MPGN/C3G, kryoglobulinemická, IgA) a nefrotické jednotky (MCD, membranózna, FSGS, diabetická, sekundárne).</p>
+                        <a href="nastroj_gn.php" class="btn-primary">Otvoriť nástroj</a>
                     </article>
                 </div>
             </section>

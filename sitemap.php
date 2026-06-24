@@ -239,6 +239,12 @@ $urls = [
         'priority'   => '0.7',
     ],
     [
+        'loc'        => $baseUrl . 'nastroj_gn.php',
+        'lastmod'    => _sitemapLastmod('nastroj_gn.php'),
+        'changefreq' => 'monthly',
+        'priority'   => '0.7',
+    ],
+    [
         'loc'        => $baseUrl . 'populars.php',
         'lastmod'    => _sitemapLastmod('populars.php'),
         'changefreq' => 'weekly',

@@ -255,7 +255,13 @@ bez overenej bodovej tabuľky) ·
 KDRI/KDPI ✅ (`calculator_kdpi.php` — **bod 1**: exaktný KDRI (Rao 2009, fixné koeficienty,
 10 darcovských faktorov, kreatinín stropovaný na 8 mg/dL) ako HR vs. referenčný darca;
 KDPI percentil zámerne neuvádzaný — vyžaduje ročný škálovací faktor a mapovaciu tabuľku
-OPTN — namiesto toho odkaz na oficiálnu OPTN kalkulačku) · sprievodca GN ·
+OPTN — namiesto toho odkaz na oficiálnu OPTN kalkulačku) ·
+sprievodca GN ✅ (`nastroj_gn.php` + `nastroj_gn.js` — interaktívny rozhodovací strom nad
+`NefroDecisionTree`: nefritický vs nefrotický → tempo/RPGN (ANCA, anti-GBM, imunokomplexová)
+→ komplement (postinfekčná, lupus, MPGN/C3G, kryoglobulinemická) / normálny komplement (IgA,
+hereditárne) a nefrotická vetva (diabetická, MCD, membranózna/anti-PLA2R, FSGS, sekundárne
+amyloid/paraproteín); no-JS statická referencia, prepojenie na IgAN/UACR/KFRE/MGRS/MGUS
+kalkulačky; KDIGO 2024) ·
 cheat sheety komplement a membranózna nefropatia.
 
 **Fáza 6 — Klinické štúdie a databáza liekov** (s pravidelnou aktualizáciou):
