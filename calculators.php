@@ -180,6 +180,11 @@ $schemaWebApp = [
             "name" => "Staging CKM syndrómu (AHA 2023)",
             "url" => $baseUrl . "calculator_ckm.php",
         ],
+        [
+            "@type" => "WebApplication",
+            "name" => "KDRI — index rizika darcu obličky (Rao 2009; základ KDPI)",
+            "url" => $baseUrl . "calculator_kdpi.php",
+        ],
     ],
 ];
 ?>
@@ -450,6 +455,12 @@ $schemaWebApp = [
                         <h3>Mayo ADPKD klasifikácia</h3>
                         <p>Zaradenie pacienta s ADPKD do tried 1A–1E podľa HtTKV a veku (Irazabal 2015). Pomáha pri indikácii tolvaptanu a sledovaní progresie.</p>
                         <a href="calculator_adpkd.php" class="btn-primary">Otvoriť kalkulačku</a>
+                    </article>
+
+                    <article class="feature-card calculator-card">
+                        <h3>KDRI — index rizika darcu obličky</h3>
+                        <p>Kidney Donor Risk Index (Rao 2009): relatívne riziko zlyhania štepu zomretého darcu z 10 faktorov (HR vs. referenčný darca). KDPI percentil vyžaduje ročnú referenciu OPTN — odkaz na oficiálnu kalkulačku.</p>
+                        <a href="calculator_kdpi.php" class="btn-primary">Otvoriť kalkulačku</a>
                     </article>
                 </div>
             </section>

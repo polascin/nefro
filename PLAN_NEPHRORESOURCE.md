@@ -251,7 +251,11 @@ biopsia, hematológ, klon-cielená liečba napriek nízkej náloži; biopsia s m
 dokladá klon aj pri negatívnom sére/moči ~30 %) ·
 **Gupta — odložené** (presné bodové hodnoty „simple risk score" sú v BMJ 2024 len ako
 obrázok Fig 2, nedostupné v texte; sekundárne zdroje sa rozchádzajú — neimplementovať
-bez overenej bodovej tabuľky) · KDPI · sprievodca GN ·
+bez overenej bodovej tabuľky) ·
+KDRI/KDPI ✅ (`calculator_kdpi.php` — **bod 1**: exaktný KDRI (Rao 2009, fixné koeficienty,
+10 darcovských faktorov, kreatinín stropovaný na 8 mg/dL) ako HR vs. referenčný darca;
+KDPI percentil zámerne neuvádzaný — vyžaduje ročný škálovací faktor a mapovaciu tabuľku
+OPTN — namiesto toho odkaz na oficiálnu OPTN kalkulačku) · sprievodca GN ·
 cheat sheety komplement a membranózna nefropatia.
 
 **Fáza 6 — Klinické štúdie a databáza liekov** (s pravidelnou aktualizáciou):
