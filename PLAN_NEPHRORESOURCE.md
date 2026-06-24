@@ -236,9 +236,13 @@ syndróm rozpadu nádoru ✅ (`calculator_tls.php` — Cairo–Bishop klasifiká
 TLS = ≥ 2 z kys. močová ≥ 476 µmol/L / K ≥ 6,0 / fosfát ≥ 1,45 dospelí–2,1 deti /
 Ca ≤ 1,75 mmol/L; klinický TLS + kreatinín ≥ 1,5× ULN, arytmia alebo kŕče; absolútne
 prahy, poznámka k Howard NEJM 2011) ·
+PLASMIC skóre ✅ (`calculator_plasmic.php` — Bendapudi 2017: 7-zložkové skóre pravdepodobnosti
+ťažkého deficitu ADAMTS13 / TTP pri trombotickej mikroangiopatii — trombocyty < 30, hemolýza,
+bez nádoru, bez transplantácie, MCV < 90 fL, INR < 1,5, kreatinín < 176,8 µmol/L; 0–4 nízke,
+5 stredné, 6–7 vysoké riziko; pomôcka pred testom ADAMTS13) ·
 **Gupta — odložené** (presné bodové hodnoty „simple risk score" sú v BMJ 2024 len ako
 obrázok Fig 2, nedostupné v texte; sekundárne zdroje sa rozchádzajú — neimplementovať
-bez overenej bodovej tabuľky) · MGRS · staging CKM · KDPI · TMA · sprievodca GN ·
+bez overenej bodovej tabuľky) · MGRS · staging CKM · KDPI · sprievodca GN ·
 cheat sheety komplement a membranózna nefropatia.
 
 **Fáza 6 — Klinické štúdie a databáza liekov** (s pravidelnou aktualizáciou):

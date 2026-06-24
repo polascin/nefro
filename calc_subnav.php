@@ -32,6 +32,7 @@ $_calcSubnavItems = [
     ['file' => 'calculator_uacr.php',        'label' => 'UACR'],
     ['file' => 'calculator_mgus.php',        'label' => 'MGUS / FLC'],
     ['file' => 'calculator_tls.php',         'label' => 'TLS (Cairo–Bishop)'],
+    ['file' => 'calculator_plasmic.php',     'label' => 'PLASMIC (TTP)'],
     ['file' => 'calculator_units.php',       'label' => 'Jednotky'],
 ];
 ?>

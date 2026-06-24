@@ -165,6 +165,11 @@ $schemaWebApp = [
             "name" => "Syndróm rozpadu nádoru (TLS) — Cairo–Bishop klasifikácia",
             "url" => $baseUrl . "calculator_tls.php",
         ],
+        [
+            "@type" => "WebApplication",
+            "name" => "PLASMIC skóre (TTP / ADAMTS13)",
+            "url" => $baseUrl . "calculator_plasmic.php",
+        ],
     ],
 ];
 ?>
