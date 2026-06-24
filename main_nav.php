@@ -12,6 +12,9 @@ $_navCalcActive = $_navCurrent === 'calculators.php' || str_starts_with($_navCur
 // Nástroje sú aktívne pre nastroje.php aj pre všetky nastroj_* stránky
 $_navToolsActive = $_navCurrent === 'nastroje.php' || str_starts_with($_navCurrent, 'nastroj_');
 
+// Štúdie sú aktívne pre hub aj detail
+$_navStudiesActive = $_navCurrent === 'studie.php' || $_navCurrent === 'studia.php';
+
 // Na hlavnej stránke odkazujeme na vlastné sekcie (hash), inde na index.php
 $_navOnIndex = $_navCurrent === 'index.php';
 
@@ -37,6 +40,7 @@ if (!function_exists('_navA')) {
             <li><?= _navA('calculators.php', 'Kalkulačky', $_navCalcActive) ?></li>
             <li><?= _navA('nastroje.php', 'Nástroje', $_navToolsActive) ?></li>
             <li><?= _navA('cheatsheets.php', 'Ťaháky', $_navCurrent === 'cheatsheets.php') ?></li>
+            <li><?= _navA('studie.php', 'Štúdie', $_navStudiesActive) ?></li>
             <li><?= _navA('search.php', 'Vyhľadávanie', $_navCurrent === 'search.php') ?></li>
             <li class="main-nav__break" role="presentation" aria-hidden="true"></li>
             <li><a href="<?= $_navOnIndex ? '#sluzby' : 'index.php#sluzby' ?>">Služby</a></li>
