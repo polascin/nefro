@@ -179,6 +179,12 @@ $urls = [
         'priority'   => '0.8',
     ],
     [
+        'loc'        => $baseUrl . 'calculator_mgrs.php',
+        'lastmod'    => _sitemapLastmod('calculator_mgrs.php'),
+        'changefreq' => 'monthly',
+        'priority'   => '0.8',
+    ],
+    [
         'loc'        => $baseUrl . 'calculator_tls.php',
         'lastmod'    => _sitemapLastmod('calculator_tls.php'),
         'changefreq' => 'monthly',

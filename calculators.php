@@ -162,6 +162,11 @@ $schemaWebApp = [
         ],
         [
             "@type" => "WebApplication",
+            "name" => "MGRS — klasifikácia (monoklonálna gamapatia renálneho významu)",
+            "url" => $baseUrl . "calculator_mgrs.php",
+        ],
+        [
+            "@type" => "WebApplication",
             "name" => "Syndróm rozpadu nádoru (TLS) — Cairo–Bishop klasifikácia",
             "url" => $baseUrl . "calculator_tls.php",
         ],
@@ -422,6 +427,11 @@ $schemaWebApp = [
                         <h3>MGUS — riziko progresie a κ/λ</h3>
                         <p>Mayo riziková stratifikácia (Rajkumar 2005): M-proteín, izotyp a pomer voľných ľahkých reťazcov → 20-ročné riziko progresie. S poznámkou k MGRS (renálny význam) a renálnemu rozpätiu FLC.</p>
                         <a href="calculator_mgus.php" class="btn-primary">Otvoriť kalkulačku</a>
+                    </article>
+                    <article class="feature-card calculator-card">
+                        <h3>MGRS — klasifikácia (renálny význam)</h3>
+                        <p>Konsenzus IKMG (Leung 2019): odlíši MGRS od MGUS a od hematologickej malignity. MGRS = klon spôsobujúci obličkové poškodenie bez kritérií malignity — vyžaduje renálnu biopsiu, hematológa a klon-cielenú liečbu napriek nízkej náloži.</p>
+                        <a href="calculator_mgrs.php" class="btn-primary">Otvoriť kalkulačku</a>
                     </article>
                 </div>
             </section>

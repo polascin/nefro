@@ -254,7 +254,8 @@ if (isLoggedIn()) {
                     nefrotoxickým paraproteínom <strong>bez ohľadu na tento skóring</strong>.
                     Aj pri nízkom skóre, ak je prítomné renálne postihnutie (proteinúria, pokles
                     eGFR, akcelerovaná CKD), je indikovaná <strong>renálna biopsia a hematologická
-                    konzultácia</strong>. Tento nástroj nenahrádza vyšetrenie na MGRS.
+                    konzultácia</strong>. Použi <a href="calculator_mgrs.php">klasifikátor MGRS</a> —
+                    tento nástroj odhaduje len hematologickú progresiu, nie renálny význam.
                 </div>
 
                 <details open class="calc-formula-box">
@@ -365,7 +366,7 @@ if (isLoggedIn()) {
                         <?php if ((float)$calculated["m_protein"] >= 30.0): ?>
                             <p class="calc-result-detail"><strong>Upozornenie:</strong> M-proteín ≥ 30 g/L prekračuje definíciu MGUS — zváž smoldering myelóm / mnohopočetný myelóm (potrebné CRAB kritériá, kostná dreň, zobrazenie).</p>
                         <?php endif; ?>
-                        <p class="calc-result-detail">Model odhaduje <strong>hematologickú</strong> progresiu, nie renálne riziko. Pri obličkovom postihnutí postupuj podľa algoritmu MGRS (biopsia, hematológ) bez ohľadu na skóre.</p>
+                        <p class="calc-result-detail">Model odhaduje <strong>hematologickú</strong> progresiu, nie renálne riziko. Pri obličkovom postihnutí postupuj podľa <a href="calculator_mgrs.php">algoritmu MGRS</a> (biopsia, hematológ) bez ohľadu na skóre.</p>
                         <div class="form-actions no-print">
                             <button type="button" class="btn-primary js-print">Vytlačiť výpočet</button>
                             <a href="calculator_history.php?calc=mgus_risk" class="btn-secondary">História MGUS</a>
