@@ -221,7 +221,7 @@ infúzne roztoky ✅ (zloženie, tonicita, balansované vs. 0,9 % NaCl).
 Pri vložení ťaháka sa NEodosiela newsletter avízo (referenčný, nie spravodajský
 obsah); PDF na stiahnutie/tlač sa generuje automaticky.
 
-**Fáza 5 — Špecializované kalkulačky a nástroje** (prebieha):
+**Fáza 5 — Špecializované kalkulačky a nástroje** (HOTOVÉ; odložené ostáva len Gupta):
 CRRT ✅ (`calculator_crrt.php` — efluentová dávka mL/kg/h, cieľ KDIGO 20–25, odhad
 dodanej dávky pri výpadkoch) · klírens voľnej vody ✅ (`calculator_free_water.php` —
 klasický CH₂O z osmolality + elektrolytový EFWC z Na/K) · recirkulácia cievneho
@@ -262,7 +262,12 @@ sprievodca GN ✅ (`nastroj_gn.php` + `nastroj_gn.js` — interaktívny rozhodov
 hereditárne) a nefrotická vetva (diabetická, MCD, membranózna/anti-PLA2R, FSGS, sekundárne
 amyloid/paraproteín); no-JS statická referencia, prepojenie na IgAN/UACR/KFRE/MGRS/MGUS
 kalkulačky; KDIGO 2024) ·
-cheat sheety komplement a membranózna nefropatia.
+cheat sheety ✅ — komplement (`cheatsheet-komplement` — tri dráhy, interpretácia C3/C4,
+komplementom sprostredkované choroby obličiek C3G/aHUS/lupus/kryo, regulátory a genetika,
+komplement-cielené lieky) a membranózna nefropatia (`cheatsheet-membranozna-nefropatia` —
+cieľové antigény PLA2R/THSD7A/NELL1/EXT1-2…, primárna vs sekundárna, vyšetrenie, riziková
+stratifikácia KDIGO a liečba) — vložené cez DB článkový workflow (`add_cheatsheet-*_article.php`),
+auto-PDF, bez newsletter avíza.
 
 **Fáza 6 — Klinické štúdie a databáza liekov** (s pravidelnou aktualizáciou):
 najprv klinické štúdie (jednoduchší a bezpečnejší dátový tok cez ClinicalTrials.gov),
