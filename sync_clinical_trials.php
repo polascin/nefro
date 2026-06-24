@@ -27,7 +27,15 @@ $categories = [
     'dialysis'   => 'dialysis',
     'transplant' => 'kidney transplantation',
     'glomerular' => 'glomerulonephritis',
-    'onco'       => 'onconephrology',
+    // Onkonefrológia: jednotka „onconephrology" nie je indexovaná ako podmienka —
+    // mierime na reálne renálne onko-hematologické jednotky (viac termínov).
+    'onco'       => [
+        'tumor lysis syndrome',
+        'myeloma cast nephropathy',
+        'monoclonal gammopathy of renal significance',
+        'renal amyloidosis',
+        'cisplatin nephrotoxicity',
+    ],
 ];
 
 /** Bezpečné čítanie zanorenej hodnoty z poľa cez cestu kľúčov. */
@@ -115,7 +123,17 @@ $totalStored = 0;
 $totalSkipped = 0;
 $errors = [];
 
-foreach ($categories as $cat => $cond) {
+// Rozbalenie kategórií (slug → jeden alebo viac termínov) do plochého zoznamu dotazov.
+$queries = [];
+foreach ($categories as $cat => $condList) {
+    foreach ((array) $condList as $cond) {
+        $queries[] = ['cat' => (string) $cat, 'cond' => (string) $cond];
+    }
+}
+
+foreach ($queries as $q) {
+    $cat = $q['cat'];
+    $cond = $q['cond'];
     $url = CT_API . '?' . http_build_query([
         'query.cond'           => $cond,
         'filter.overallStatus' => 'RECRUITING',
