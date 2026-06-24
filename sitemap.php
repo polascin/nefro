@@ -269,6 +269,12 @@ $urls = [
         'priority'   => '0.7',
     ],
     [
+        'loc'        => $baseUrl . 'lieky.php',
+        'lastmod'    => _sitemapLastmod('lieky.php'),
+        'changefreq' => 'weekly',
+        'priority'   => '0.7',
+    ],
+    [
         'loc'        => $baseUrl . 'podpora.php',
         'lastmod'    => _sitemapLastmod('podpora.php'),
         'changefreq' => 'yearly',
