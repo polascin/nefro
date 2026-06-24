@@ -82,6 +82,32 @@ php newsletter_worker.php --limit=50 --max-attempts=5
 
 Odporúčanie: spúšťať cez plánovač úloh (Task Scheduler/cron) každú 1 minútu.
 
+## Klinické štúdie (register ClinicalTrials.gov)
+
+Kurátorský register nefrologicky relevantných štúdií. Verejné zobrazenie: `studie.php`
+(hub) a `studia.php` (detail). Admin kurácia: `admin_trials.php` (viditeľnosť,
+kategória, slovenský kontext `sk_note`).
+
+### Synchronizácia
+
+CLI skript stiahne najnovšie náborové intervenčné štúdie z oficiálneho API v2 a
+upsertne ich do tabuľky `clinical_trials` (podľa `nct_id`). **Neprepisuje** ručné
+kurátorské polia `sk_note` a `is_published`; `category` nastaví len pri prvom vložení.
+
+```bash
+php sync_clinical_trials.php
+```
+
+Odporúčanie: spúšťať na serveri cez cron **týždenne** (register sa nemení často).
+Príklad crontab (WebSupport, pondelok 03:30):
+
+```cron
+30 3 * * 1 php /cesta/k/projektu/sync_clinical_trials.php >/dev/null 2>&1
+```
+
+Každý beh zapíše súhrn (`seen/stored/skipped/errors`) do PHP error logu. Migráciu
+schémy (`add_clinical_trials_migration.php`) treba spustiť pred prvým syncom.
+
 ## Python code quality (Black + Pylint)
 
 This repository is primarily PHP, but Black and Pylint are configured for any Python files you add.

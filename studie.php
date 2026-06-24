@@ -162,6 +162,7 @@ $totalCount = array_sum($counts);
                                     <strong><?= htmlspecialchars(ctCategoryLabel((string) $t['category'])) ?></strong>
                                     &ensp;&bull;&ensp; <?= htmlspecialchars(ctStatusLabel($t['overall_status'] ?? null)) ?>
                                     &ensp;&bull;&ensp; <?= htmlspecialchars(ctPhaseLabel($t['phase'] ?? null)) ?>
+                                    <?php if (!empty($t['sk_note'])): ?> &ensp;&bull;&ensp; <span class="badge-top-sm" title="Obsahuje slovenský kontext">SK kontext</span><?php endif; ?>
                                 </p>
                                 <?php if ($conds !== []): ?>
                                     <p><strong>Ochorenia:</strong> <?= htmlspecialchars(implode(', ', array_slice(array_map('strval', $conds), 0, 4))) ?><?= count($conds) > 4 ? '…' : '' ?></p>

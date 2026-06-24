@@ -85,7 +85,7 @@ function ctSourceUrl(string $nctId): string
 function ctFetchTrials(\PDO $pdo, string $category = '', string $query = '', int $limit = 200): array
 {
     $sql = "SELECT nct_id, brief_title, overall_status, phase, study_type, conditions,
-                   lead_sponsor, enrollment, last_update_posted, countries, category
+                   lead_sponsor, enrollment, last_update_posted, countries, category, sk_note
             FROM clinical_trials
             WHERE is_published = 1";
     $params = [];

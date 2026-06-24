@@ -4,6 +4,7 @@ $adminNavItems = [
     'index.php' => 'Domov',
     'admin.php' => 'Administrácia',
     'admin_articles.php' => 'Správa článkov',
+    'admin_trials.php' => 'Štúdie',
     'admin_newsletter.php' => 'Newsletter',
     'admin_discussion.php' => 'Diskusia',
 ];

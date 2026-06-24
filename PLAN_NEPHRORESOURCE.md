@@ -275,6 +275,17 @@ auto-PDF, bez newsletter avíza.
 najprv klinické štúdie (jednoduchší a bezpečnejší dátový tok cez ClinicalTrials.gov),
 potom databáza liekov (vyžaduje kurátorský dohľad).
 
+**Klinické štúdie ✅ HOTOVÉ** — migrácia `clinical_trials` + sync z ClinicalTrials.gov v2
+(`sync_clinical_trials.php`, náborové intervenčné štúdie, zachováva kurátorské polia) +
+hub `studie.php` / detail `studia.php` + **admin kurácia `admin_trials.php`** (viditeľnosť
+`is_published`, kategória, slovenský kontext `sk_note` zobrazený vo verejnom detaile) +
+týždenný cron (server) s logom behu. Zapojené v nav/pätičke/sitemape/robots.
+
+**Databáza liekov — ďalší krok** (vyžaduje kurátorský dohľad): plánovaný prístup —
+mechanizmus/farmakológiu ťahať z **ChEMBL** (MCP), renálne dávkovanie a upozornenia
+dopĺňať ručne z SPC (ŠÚKL/EMA); samostatná tabuľka `drugs`, migrácia commitnutá zvlášť
+pred kódom; karta lieku prepojená na eGFR/Cockcroft-Gault kalkulačky a súvisiace články.
+
 ---
 
 ## 8. Právne a licenčné poznámky

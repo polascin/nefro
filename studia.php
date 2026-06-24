@@ -101,6 +101,13 @@ if ($trial === null) {
                         &ensp;&bull;&ensp; <abbr title="ClinicalTrials.gov identifikátor"><?= htmlspecialchars($nct) ?></abbr>
                     </div>
 
+                    <?php if (!empty($trial['sk_note'])): ?>
+                        <section class="info-box-blue" aria-labelledby="sknote-h">
+                            <h3 id="sknote-h">Slovenský kontext</h3>
+                            <p><?= nl2br(htmlspecialchars((string) $trial['sk_note'])) ?></p>
+                        </section>
+                    <?php endif; ?>
+
                     <?php if (!empty($trial['brief_summary'])): ?>
                         <section class="form-section" aria-labelledby="sum-h">
                             <h3 id="sum-h">Stručný súhrn</h3>

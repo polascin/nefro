@@ -274,3 +274,13 @@ if ($errors !== []) {
     }
 }
 echo "Dokončené: $now\n";
+
+// Trvalý záznam o behu (cron výstup do stdout sa nezachová) — dohľadateľnosť plánovaných synchronizácií.
+error_log(sprintf(
+    'sync_clinical_trials: seen=%d stored=%d skipped=%d errors=%d at %s',
+    $totalSeen,
+    $totalStored,
+    $totalSkipped,
+    count($errors),
+    $now
+));

@@ -303,6 +303,7 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
 
             <p class="admin-p-intro">
                 <a href="admin_articles.php" class="btn-admin-action">📝 Správa článkov</a>
+                <a href="admin_trials.php" class="btn-admin-action">🔬 Klinické štúdie</a>
             </p>
 
             <?php if ($actionResult !== null): ?>

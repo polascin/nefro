@@ -11,6 +11,7 @@ Disallow: /admin.php
 Disallow: /admin_articles.php
 Disallow: /admin_discussion.php
 Disallow: /admin_newsletter.php
+Disallow: /admin_trials.php
 Disallow: /admin_users_notice.php
 Disallow: /query_article.php
 Disallow: /setup_db.php
