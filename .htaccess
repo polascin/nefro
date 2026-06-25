@@ -149,6 +149,9 @@ ServerSignature Off
 <Files "sync_drugs.php">
     Require all denied
 </Files>
+<Files "seed_drugs_curation.php">
+    Require all denied
+</Files>
 
 # Knižničné PHP súbory — prístupné len ako include, nie priamo cez web
 <FilesMatch "^(db_config|config_loader|auth|phone_utils|calculators_common|clinical_trials_common|drugs_common|header|header_profile|footer|head_meta|calculator_disclaimer|email_verification|mobile_verification|pdf_generator|source_authors)\.php$">
