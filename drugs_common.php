@@ -12,9 +12,11 @@ function dgCategoryLabels(): array
 {
     return [
         'nephroprotect' => 'Nefroprotektíva',
+        'diuretic'      => 'Diuretiká',
         'dose_adjust'   => 'Úprava dávky podľa obličiek',
         'nephrotoxic'   => 'Nefrotoxické lieky',
         'dialysis'      => 'Lieky a dialýza',
+        'transplant'    => 'Transplantácia / imunosupresia',
         'other'         => 'Ostatné',
     ];
 }

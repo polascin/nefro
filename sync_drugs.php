@@ -43,6 +43,25 @@ $seed = [
     ['chembl' => 'CHEMBL1431',    'slug' => 'metformin',     'name_sk' => 'Metformín',     'category' => 'dose_adjust',   'drug_class' => 'Biguanid'],
     ['chembl' => 'CHEMBL6067485', 'slug' => 'gentamicin',    'name_sk' => 'Gentamicín',    'category' => 'nephrotoxic',   'drug_class' => 'Aminoglykozid'],
     ['chembl' => 'CHEMBL269732',  'slug' => 'tacrolimus',    'name_sk' => 'Takrolimus',    'category' => 'nephrotoxic',   'drug_class' => 'Kalcineurínový inhibítor'],
+    // Diuretiká
+    ['chembl' => 'CHEMBL35',      'slug' => 'furosemid',         'name_sk' => 'Furosemid',          'category' => 'diuretic',      'drug_class' => 'Slučkové diuretikum'],
+    ['chembl' => 'CHEMBL1148',    'slug' => 'torazemid',         'name_sk' => 'Torazemid',          'category' => 'diuretic',      'drug_class' => 'Slučkové diuretikum'],
+    ['chembl' => 'CHEMBL435',     'slug' => 'hydrochlorotiazid', 'name_sk' => 'Hydrochlorotiazid',  'category' => 'diuretic',      'drug_class' => 'Tiazidové diuretikum'],
+    // Nefroprotektíva
+    ['chembl' => 'CHEMBL1069',    'slug' => 'valsartan',         'name_sk' => 'Valsartan',          'category' => 'nephroprotect', 'drug_class' => 'ARB (sartan)'],
+    // Úprava dávky podľa obličiek
+    ['chembl' => 'CHEMBL1467',    'slug' => 'alopurinol',        'name_sk' => 'Alopurinol',         'category' => 'dose_adjust',   'drug_class' => 'Inhibítor xantínoxidázy'],
+    ['chembl' => 'CHEMBL940',     'slug' => 'gabapentin',        'name_sk' => 'Gabapentín',         'category' => 'dose_adjust',   'drug_class' => 'Antikonvulzívum / analgetikum'],
+    // Nefrotoxické lieky
+    ['chembl' => 'CHEMBL262777',  'slug' => 'vankomycin',        'name_sk' => 'Vankomycín',         'category' => 'nephrotoxic',   'drug_class' => 'Glykopeptidové antibiotikum'],
+    ['chembl' => 'CHEMBL11359',   'slug' => 'cisplatina',        'name_sk' => 'Cisplatina',         'category' => 'nephrotoxic',   'drug_class' => 'Platinové cytostatikum'],
+    ['chembl' => 'CHEMBL521',     'slug' => 'ibuprofen',         'name_sk' => 'Ibuprofén',          'category' => 'nephrotoxic',   'drug_class' => 'NSAID'],
+    // Lieky a dialýza / CKD-MBD
+    ['chembl' => 'CHEMBL1201492', 'slug' => 'sevelamer',         'name_sk' => 'Sevelamer',          'category' => 'dialysis',      'drug_class' => 'Viazač fosfátov'],
+    ['chembl' => 'CHEMBL1201284', 'slug' => 'cinakalcet',        'name_sk' => 'Cinakalcet',         'category' => 'dialysis',      'drug_class' => 'Kalcimimetikum'],
+    // Transplantácia / imunosupresia
+    ['chembl' => 'CHEMBL160',     'slug' => 'cyklosporin',       'name_sk' => 'Cyklosporín',        'category' => 'transplant',    'drug_class' => 'Kalcineurínový inhibítor'],
+    ['chembl' => 'CHEMBL866',     'slug' => 'mykofenolat',       'name_sk' => 'Mykofenolát mofetil', 'category' => 'transplant',   'drug_class' => 'Inhibítor IMPDH'],
 ];
 
 /** Stiahne JSON z ChEMBL REST; vráti dekódované pole alebo null pri chybe. */
@@ -157,7 +176,7 @@ function dgExtractSources(array $m): ?string
 function dgCleanInn(string $name): string
 {
     $name = trim($name);
-    return preg_replace('/\s+(ANHYDROUS|HYDRATE|MONOHYDRATE|DIHYDRATE|TRIHYDRATE|HEMIHYDRATE)$/i', '', $name) ?? $name;
+    return preg_replace('/\s+(ANHYDROUS|HYDRATE|MONOHYDRATE|DIHYDRATE|TRIHYDRATE|HEMIHYDRATE|HYDROCHLORIDE|MESYLATE|MESILATE|MALEATE|SULFATE|SULPHATE|BESYLATE|FUMARATE|SUCCINATE|TARTRATE)$/i', '', $name) ?? $name;
 }
 
 /**
