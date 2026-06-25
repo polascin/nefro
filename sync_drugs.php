@@ -189,7 +189,7 @@ $insert = $pdo->prepare(
         max_phase = VALUES(max_phase), first_approval = VALUES(first_approval),
         black_box_warning = VALUES(black_box_warning), withdrawn = VALUES(withdrawn),
         mechanism = VALUES(mechanism), synonyms = VALUES(synonyms),
-        chembl_synced_at = VALUES(synced_at)"
+        chembl_synced_at = VALUES(chembl_synced_at)"
 );
 
 $now = date('Y-m-d H:i:s');
