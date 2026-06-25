@@ -42,25 +42,25 @@ $seed = [
     ['chembl' => 'CHEMBL1393',    'slug' => 'spironolakton', 'name_sk' => 'Spironolaktón', 'category' => 'nephroprotect', 'drug_class' => 'Steroidný MRA'],
     ['chembl' => 'CHEMBL1431',    'slug' => 'metformin',     'name_sk' => 'Metformín',     'category' => 'dose_adjust',   'drug_class' => 'Biguanid'],
     ['chembl' => 'CHEMBL6067485', 'slug' => 'gentamicin',    'name_sk' => 'Gentamicín',    'category' => 'nephrotoxic',   'drug_class' => 'Aminoglykozid'],
-    ['chembl' => 'CHEMBL269732',  'slug' => 'tacrolimus',    'name_sk' => 'Takrolimus',    'category' => 'nephrotoxic',   'drug_class' => 'Kalcineurínový inhibítor'],
+    ['chembl' => 'CHEMBL269732',  'slug' => 'tacrolimus',    'name_sk' => 'Takrolimus',    'category' => 'nephrotoxic',   'drug_class' => 'Kalcineurínový inhibítor', 'atc' => 'L04AD02'],
     // Diuretiká
     ['chembl' => 'CHEMBL35',      'slug' => 'furosemid',         'name_sk' => 'Furosemid',          'category' => 'diuretic',      'drug_class' => 'Slučkové diuretikum'],
     ['chembl' => 'CHEMBL1148',    'slug' => 'torazemid',         'name_sk' => 'Torazemid',          'category' => 'diuretic',      'drug_class' => 'Slučkové diuretikum'],
-    ['chembl' => 'CHEMBL435',     'slug' => 'hydrochlorotiazid', 'name_sk' => 'Hydrochlorotiazid',  'category' => 'diuretic',      'drug_class' => 'Tiazidové diuretikum'],
+    ['chembl' => 'CHEMBL435',     'slug' => 'hydrochlorotiazid', 'name_sk' => 'Hydrochlorotiazid',  'category' => 'diuretic',      'drug_class' => 'Tiazidové diuretikum', 'atc' => 'C03AA03'],
     // Nefroprotektíva
     ['chembl' => 'CHEMBL1069',    'slug' => 'valsartan',         'name_sk' => 'Valsartan',          'category' => 'nephroprotect', 'drug_class' => 'ARB (sartan)'],
     // Úprava dávky podľa obličiek
     ['chembl' => 'CHEMBL1467',    'slug' => 'alopurinol',        'name_sk' => 'Alopurinol',         'category' => 'dose_adjust',   'drug_class' => 'Inhibítor xantínoxidázy'],
     ['chembl' => 'CHEMBL940',     'slug' => 'gabapentin',        'name_sk' => 'Gabapentín',         'category' => 'dose_adjust',   'drug_class' => 'Antikonvulzívum / analgetikum'],
     // Nefrotoxické lieky
-    ['chembl' => 'CHEMBL262777',  'slug' => 'vankomycin',        'name_sk' => 'Vankomycín',         'category' => 'nephrotoxic',   'drug_class' => 'Glykopeptidové antibiotikum'],
+    ['chembl' => 'CHEMBL262777',  'slug' => 'vankomycin',        'name_sk' => 'Vankomycín',         'category' => 'nephrotoxic',   'drug_class' => 'Glykopeptidové antibiotikum', 'atc' => 'J01XA01'],
     ['chembl' => 'CHEMBL11359',   'slug' => 'cisplatina',        'name_sk' => 'Cisplatina',         'category' => 'nephrotoxic',   'drug_class' => 'Platinové cytostatikum'],
-    ['chembl' => 'CHEMBL521',     'slug' => 'ibuprofen',         'name_sk' => 'Ibuprofén',          'category' => 'nephrotoxic',   'drug_class' => 'NSAID'],
+    ['chembl' => 'CHEMBL521',     'slug' => 'ibuprofen',         'name_sk' => 'Ibuprofén',          'category' => 'nephrotoxic',   'drug_class' => 'NSAID', 'atc' => 'M01AE01'],
     // Lieky a dialýza / CKD-MBD
-    ['chembl' => 'CHEMBL1201492', 'slug' => 'sevelamer',         'name_sk' => 'Sevelamer',          'category' => 'dialysis',      'drug_class' => 'Viazač fosfátov'],
+    ['chembl' => 'CHEMBL1201492', 'slug' => 'sevelamer',         'name_sk' => 'Sevelamer',          'category' => 'dialysis',      'drug_class' => 'Viazač fosfátov', 'atc' => 'V03AE02'],
     ['chembl' => 'CHEMBL1201284', 'slug' => 'cinakalcet',        'name_sk' => 'Cinakalcet',         'category' => 'dialysis',      'drug_class' => 'Kalcimimetikum'],
     // Transplantácia / imunosupresia
-    ['chembl' => 'CHEMBL160',     'slug' => 'cyklosporin',       'name_sk' => 'Cyklosporín',        'category' => 'transplant',    'drug_class' => 'Kalcineurínový inhibítor'],
+    ['chembl' => 'CHEMBL160',     'slug' => 'cyklosporin',       'name_sk' => 'Cyklosporín',        'category' => 'transplant',    'drug_class' => 'Kalcineurínový inhibítor', 'atc' => 'L04AD01'],
     ['chembl' => 'CHEMBL866',     'slug' => 'mykofenolat',       'name_sk' => 'Mykofenolát mofetil', 'category' => 'transplant',   'drug_class' => 'Inhibítor IMPDH'],
 ];
 
@@ -248,7 +248,7 @@ foreach ($seed as $drug) {
             'drug_class'        => $drug['drug_class'],
             'chembl_id'         => $chemblId,
             'name_intl'         => (($p = dgCleanInn((string) ($mol['pref_name'] ?? ''))) !== '') ? mb_substr($p, 0, 200) : null,
-            'atc_code'          => dgExtractAtc($mol),
+            'atc_code'          => $drug['atc'] ?? dgExtractAtc($mol),
             'routes'            => dgBuildRoutes($mol),
             'max_phase'         => $maxPhase,
             'first_approval'    => $approval,
