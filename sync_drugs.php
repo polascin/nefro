@@ -153,10 +153,21 @@ function dgExtractSources(array $m): ?string
     return $out !== [] ? (json_encode($out, JSON_UNESCAPED_UNICODE) ?: null) : null;
 }
 
-/** Mechanizmus účinku z mechanism endpointu (spojí unikátne MoA). */
+/** Očistí koncový hydrátový/anhydridový deskriptor z INN (napr. „TACROLIMUS ANHYDROUS"). */
+function dgCleanInn(string $name): string
+{
+    $name = trim($name);
+    return preg_replace('/\s+(ANHYDROUS|HYDRATE|MONOHYDRATE|DIHYDRATE|TRIHYDRATE|HEMIHYDRATE)$/i', '', $name) ?? $name;
+}
+
+/**
+ * Mechanizmus účinku z mechanism endpointu (spojí unikátne MoA).
+ * Filtruje cez parent_molecule_chembl_id — ChEMBL ukladá mechanizmus pod dávkovú/soľnú
+ * formu (napr. losartan pod CHEMBL995, metformín pod CHEMBL1703), nie pod parent ID.
+ */
 function dgFetchMechanism(string $chemblId): ?string
 {
-    $data = dgFetch(DG_API . '/mechanism.json?molecule_chembl_id=' . rawurlencode($chemblId) . '&limit=20');
+    $data = dgFetch(DG_API . '/mechanism.json?parent_molecule_chembl_id=' . rawurlencode($chemblId) . '&limit=20');
     $list = is_array($data) ? ($data['mechanisms'] ?? null) : null;
     if (!is_array($list)) {
         return null;
@@ -217,7 +228,7 @@ foreach ($seed as $drug) {
             'category'          => $drug['category'],
             'drug_class'        => $drug['drug_class'],
             'chembl_id'         => $chemblId,
-            'name_intl'         => (($p = trim((string) ($mol['pref_name'] ?? ''))) !== '') ? mb_substr($p, 0, 200) : null,
+            'name_intl'         => (($p = dgCleanInn((string) ($mol['pref_name'] ?? ''))) !== '') ? mb_substr($p, 0, 200) : null,
             'atc_code'          => dgExtractAtc($mol),
             'routes'            => dgBuildRoutes($mol),
             'max_phase'         => $maxPhase,
