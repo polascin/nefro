@@ -18,6 +18,10 @@ declare(strict_types=1);
  * HD pri intoxikácii). Zdroje: štandardná klinická farmakológia (SPC/EMA/ŠÚKL), KDIGO a
  * pri intoxikáciách odporúčania EXTRIP. Hodnoty sú orientačné — vždy overte v aktuálnom SPC.
  *
+ * ZDROJE (source_refs): skript po kurácii pridá ku každému lieku overený odkaz na SPC v
+ * registri DailyMed (NIH) — MERGE, ktorý zachová EMA EPAR odkazy doplnené synchronizáciou
+ * z ChEMBL aj prípadné ručné admin úpravy (dedup, idempotentné).
+ *
  * POZNÁMKA: údaje NEPREBERÁME z cudzích databáz (vrátane nephroresource.com) — staviame
  * z primárnych autoritatívnych zdrojov (pozri PLAN_NEPHRORESOURCE.md, časť 8).
  *
@@ -487,6 +491,87 @@ $curation = [
         'warnings'       => 'Hypokalciémia (parestézie, kŕče, predĺženie QT, zriedkavo arytmie a kŕče), nauzea/vracanie; opatrne pri rizikových arytmiách a súbehu liekov predlžujúcich QT.',
         'monitoring'     => 'Kalcium (vrátane korigovaného), PTH, fosfát.',
     ],
+    // ── Renálne dávkovanie a nefrotoxíny (5. vlna) ────────────────────────────
+    'enoxaparin' => [
+        'indications'    => 'Profylaxia a liečba venózneho tromboembolizmu, akútny koronárny syndróm; antikoagulácia dialyzačného okruhu.',
+        'renal_dosing'   => "Renálne eliminovaný — pri CrCl < 30 ml/min sa kumuluje (riziko krvácania). Liečebná dávka pri CrCl 15–30: redukcia na 1 mg/kg 1×/d (namiesto 2×/d), profylaxia 20 mg 1×/d. Pri ťažkej CKD zvážiť nefrakcionovaný heparín (lepšie riaditeľný) alebo monitorovať anti-Xa.",
+        'nephrotoxicity' => 'Nie je nefrotoxický.',
+        'dialyzability'  => 'Slabo dialyzovateľný — pri zlyhaní obličiek sa kumuluje a antikoagulačný účinok pretrváva; HD ho účinne neodstráni. Protamín neutralizuje účinok len čiastočne (~ 60 %).',
+        'warnings'       => 'Krvácanie (zvýšené pri kumulácii v CKD), heparínom indukovaná trombocytopénia (HIT), hyperkaliémia (supresia aldosterónu pri dlhšom podaní).',
+        'monitoring'     => 'Anti-Xa pri CKD/extrémnej hmotnosti/gravidite; trombocyty, kálium pri dlhšom podaní, funkcia obličiek.',
+    ],
+    'kotrimoxazol' => [
+        'indications'    => 'Infekcie močových ciest, pneumocystová pneumónia (PJP — liečba a profylaxia), niektoré ďalšie infekcie.',
+        'renal_dosing'   => "Renálne eliminovaný — pri CrCl 15–30 redukovať dávku na polovicu; pri CrCl < 15 sa zvyčajne neodporúča. Pri vysokodávkovej PJP liečbe a CKD dôsledne sledovať kálium a kreatinín.",
+        'nephrotoxicity' => 'Trimetoprim blokuje epitelové sodíkové kanály (ENaC) → hyperkaliémia (najmä pri CKD, vysokých dávkach, súbehu s ACEi/ARB) a blokuje tubulárnu sekréciu kreatinínu → „pseudo-AKI“ (vzostup kreatinínu bez poklesu GFR). Sulfametoxazol: kryštalúria a akútna intersticiálna nefritída.',
+        'dialyzability'  => 'Obe zložky sú dialyzovateľné (trimetoprim aj sulfametoxazol majú strednú väzbu na bielkoviny) — pri HD dávkovať po procedúre.',
+        'warnings'       => 'Hyperkaliémia, vzostup kreatinínu (často benígny — pseudo-AKI), kryštalúria/AIN, kožné reakcie (SJS/TEN), myelosupresia; interakcie s warfarínom a metotrexátom.',
+        'monitoring'     => 'Kálium a kreatinín (najmä pri CKD a vysokých dávkach), krvný obraz, hydratácia.',
+    ],
+    'ciprofloxacin' => [
+        'indications'    => 'Komplikované infekcie močových ciest, pyelonefritída, niektoré gramnegatívne infekcie.',
+        'renal_dosing'   => "Čiastočne renálne eliminovaný — pri CrCl < 30 redukovať dávku (predĺžiť interval/znížiť dávku). Zabezpečiť hydratáciu (prevencia kryštalúrie). Pri hemodialýze podať po procedúre.",
+        'nephrotoxicity' => 'Kryštalúria pri alkalickom moči a dehydratácii; zriedkavo akútna intersticiálna nefritída a kryštálová nefropatia.',
+        'dialyzability'  => 'Len mierne dialyzovateľný (~ 10–30 %; čiastočná väzba na bielkoviny a stredný distribučný objem) — pri HD doplniť dávku po procedúre.',
+        'warnings'       => 'Tendinopatia/ruptúra šľachy (vyššie riziko pri CKD a súbehu s kortikoidmi), predĺženie QT, aneuryzma aorty, dysglykémia, CNS účinky; katióny (vrátane viazačov fosfátov) znižujú vstrebávanie.',
+        'monitoring'     => 'Funkcia obličiek, hydratácia; EKG pri rizikových.',
+    ],
+    'omeprazol' => [
+        'indications'    => 'Refluxová choroba, peptický vred, profylaxia stresového vredu, eradikácia H. pylori.',
+        'renal_dosing'   => "Hepatálne metabolizovaný — bez úpravy podľa eGFR. Riziko súvisí skôr s dĺžkou užívania než s dávkou (deprescribing pri nejasnej indikácii).",
+        'nephrotoxicity' => 'Akútna intersticiálna nefritída (idiosynkratická, môže viesť k AKI a prejsť do CKD); pri dlhodobom užívaní spájaný s rizikom CKD a hypomagneziémie.',
+        'dialyzability'  => 'Nedialyzovateľný — vysoká väzba na bielkoviny (~ 95 %), krátky polčas a hepatálna eliminácia; HD ho neodstráni (ani to nie je potrebné).',
+        'warnings'       => 'Akútna intersticiálna nefritída (môže byť bez eozinofílie), hypomagneziémia (a sekundárna hypokalciémia/hypokaliémia), pri dlhodobom užívaní riziko CKD.',
+        'monitoring'     => 'Pri dlhodobom užívaní horčík; funkcia obličiek pri klinickom podozrení na AIN.',
+    ],
+    'nitrofurantoin' => [
+        'indications'    => 'Nekomplikované infekcie dolných močových ciest (cystitída), profylaxia rekurentných UTI.',
+        'renal_dosing'   => "Kontraindikovaný pri CrCl < 45 ml/min (podľa niektorých zdrojov < 30) — pri zníženej funkcii sa nedosahuje účinná koncentrácia v moči a rastie systémová toxicita. Vhodný len pri zachovanej funkcii obličiek.",
+        'nephrotoxicity' => 'Nie je priamo nefrotoxický, no pri zlyhaní obličiek je neúčinný a toxický (kumulácia).',
+        'dialyzability'  => 'Pri ESRD neúčinný a kontraindikovaný — do moču sa nevylúči dostatočne; HD ho síce odstráni, ale liek je u dialyzovaných nevhodný.',
+        'warnings'       => 'Pri CKD neúčinný a toxický; akútna a chronická pľúcna toxicita (fibróza), periférna neuropatia (riziko rastie pri CKD), hepatotoxicita, hemolýza pri deficite G6PD.',
+        'monitoring'     => 'Funkcia obličiek pred predpisom (vylúčiť nízky eGFR); pri dlhodobej profylaxii pľúcne a pečeňové prejavy.',
+    ],
+    'baklofen' => [
+        'indications'    => 'Spasticita (skleróza multiplex, poranenie miechy a i.); v nefrológii dôležitý pre riziko toxicity pri CKD.',
+        'renal_dosing'   => "Takmer výhradne renálne eliminovaný — pri CKD výrazne znížiť dávku; pri eGFR < 30 a u dialyzovaných hrozí ťažká neurotoxicita aj pri nízkych dávkach (odporúča sa vyhnúť sa alebo extrémna opatrnosť).",
+        'nephrotoxicity' => 'Nie je nefrotoxický.',
+        'dialyzability'  => 'Dialyzovateľný — nízka MW (~ 214 Da), nízka väzba na bielkoviny; hemodialýza je účinnou liečbou baklofénovej neurotoxicity/predávkovania pri CKD.',
+        'warnings'       => 'Neurotoxicita pri CKD (encefalopatia, somnolencia až kóma, útlm dychu) — častá a podceňovaná komplikácia; náhle vysadenie po dlhšom podaní → abstinenčný syndróm.',
+        'monitoring'     => 'Neurologický stav pri CKD; funkcia obličiek.',
+    ],
+    'sitagliptin' => [
+        'indications'    => 'Diabetes 2. typu (DPP-4 inhibítor).',
+        'renal_dosing'   => "Prevažne renálne eliminovaný — redukovať dávku: 100 mg/d pri eGFR ≥ 45; 50 mg/d pri eGFR 30–45; 25 mg/d pri eGFR < 30 a u dialyzovaných.",
+        'nephrotoxicity' => 'Nie je nefrotoxický.',
+        'dialyzability'  => 'Mierne dialyzovateľný (~ 13 % počas 3–4 h HD) — dávka 25 mg/d, podanie nezávisí od času dialýzy.',
+        'warnings'       => 'Pankreatitída, bolesti kĺbov, zriedkavo bulózny pemfigoid.',
+        'monitoring'     => 'Funkcia obličiek (na úpravu dávky), glykémia.',
+    ],
+    'linagliptin' => [
+        'indications'    => 'Diabetes 2. typu (DPP-4 inhibítor) — vhodný pri CKD bez úpravy dávky.',
+        'renal_dosing'   => "Prevažne biliárna/enterohepatálna eliminácia — JEDINÝ gliptín BEZ potreby úpravy dávky podľa funkcie obličiek (vrátane ťažkej CKD a dialýzy). Praktická voľba pri pokročilej CKD.",
+        'nephrotoxicity' => 'Nie je nefrotoxický.',
+        'dialyzability'  => 'Nedialyzovateľný a bez potreby doplnkovej dávky — vysoká väzba na bielkoviny a prevažne nerenálna eliminácia; podáva sa nezávisle od dialýzy.',
+        'warnings'       => 'Pankreatitída, bolesti kĺbov, zriedkavo bulózny pemfigoid.',
+        'monitoring'     => 'Glykémia (úprava dávky podľa obličiek nie je potrebná).',
+    ],
+    'rivaroxaban' => [
+        'indications'    => 'Prevencia NCMP pri nevalvulárnej fibrilácii predsiení, liečba a prevencia venózneho tromboembolizmu.',
+        'renal_dosing'   => "Čiastočne renálne eliminovaný (~ 1/3) — pri fibrilácii predsiení a CrCl 15–50 redukcia na 15 mg/d; pri CrCl < 15 sa neodporúča. Pri liečbe VTE opatrnosť pri CrCl < 30. Tablety 15/20 mg užívať s jedlom.",
+        'nephrotoxicity' => 'Nie priamo nefrotoxický; opísaná antikoagulanciami asociovaná nefropatia (glomerulárne krvácanie).',
+        'dialyzability'  => 'Nedialyzovateľný — vysoká väzba na bielkoviny (~ 92–95 %); HD ho neodstráni. Antidotum andexanet alfa (alt. PCC).',
+        'warnings'       => 'Krvácanie (zvýšené pri CKD); antidotum andexanet alfa.',
+        'monitoring'     => 'Funkcia obličiek (CrCl) pravidelne, známky krvácania, krvný obraz.',
+    ],
+    'rosuvastatin' => [
+        'indications'    => 'Dyslipidémia, kardiovaskulárna prevencia (vrátane pacientov s CKD).',
+        'renal_dosing'   => "Pri ťažkej CKD (eGFR < 30) začať 5 mg a NEPREKROČIŤ 10 mg/d (zvýšená expozícia, riziko myopatie). Pri miernej–stredne ťažkej CKD bez špecifickej úpravy; pri dialýze opatrne.",
+        'nephrotoxicity' => 'Nie priamo nefrotoxický; dávkovo závislá (tubulárna, zvyčajne benígna) proteinúria a zriedkavo myoglobinúrické AKI pri rabdomyolýze.',
+        'dialyzability'  => 'Nedialyzovateľný — vysoká väzba na bielkoviny (~ 90 %); HD ho neodstráni.',
+        'warnings'       => 'Myopatia/rabdomyolýza (riziko rastie pri CKD, vyšších dávkach a interakciách — napr. cyklosporín, gemfibrozil), hepatopatia; pri CKD preferovať nižšiu dávku.',
+        'monitoring'     => 'CK pri svalových príznakoch, lipidy, pečeňové testy; funkcia obličiek.',
+    ],
 ];
 
 $updated = 0;
@@ -524,12 +609,45 @@ foreach ($curation as $slug => $fields) {
     }
 }
 
+// ── source_refs: pridá overený odkaz na SPC (DailyMed, NIH) ku každému lieku ───
+// MERGE, nie prepis: zachová existujúce odkazy (EMA EPAR zo sync, ručné admin úpravy),
+// pridá DailyMed len ak ešte chýba (dedup podľa hostiteľa). Idempotentné. DailyMed je
+// verejný register SPC/PI (https://dailymed.nlm.nih.gov); dotaz podľa INN názvu lieku.
+// Pre EU/SK kontext ostávajú EMA EPAR odkazy doplnené synchronizáciou z ChEMBL.
+$srcAdded = 0;
+$srcStmt = $pdo->prepare('UPDATE drugs SET source_refs = :src WHERE id = :id');
+foreach ($pdo->query('SELECT id, name_intl, source_refs FROM drugs')->fetchAll(\PDO::FETCH_ASSOC) as $d) {
+    $name = trim((string) ($d['name_intl'] ?? ''));
+    if ($name === '') {
+        continue; // bez INN nevieme spoľahlivo dotazovať DailyMed
+    }
+    $refs = json_decode((string) ($d['source_refs'] ?? ''), true);
+    if (!is_array($refs)) {
+        $refs = [];
+    }
+    foreach ($refs as $r) {
+        if (is_array($r) && isset($r['url']) && str_contains((string) $r['url'], 'dailymed.nlm.nih.gov')) {
+            continue 2; // už má DailyMed odkaz — preskočiť (idempotentné)
+        }
+    }
+    $refs[] = [
+        'label' => 'DailyMed – SPC (NIH)',
+        'url'   => 'https://dailymed.nlm.nih.gov/dailymed/search.cfm?query=' . rawurlencode(mb_strtolower($name)),
+    ];
+    $srcStmt->execute([
+        'src' => json_encode($refs, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) ?: null,
+        'id'  => $d['id'],
+    ]);
+    $srcAdded++;
+}
+
 echo "──────────────────────────────────────────────────────\n";
 echo "Kurácia liekov (NÁVRH — overte pred zverejnením)\n";
 echo "──────────────────────────────────────────────────────\n";
 echo 'V zozname:       ' . count($curation) . "\n";
 echo 'Aktualizovaných: ' . $updated . "\n";
 echo 'Bez polí:        ' . $skipped . "\n";
+echo 'Zdroje (+DailyMed): ' . $srcAdded . "\n";
 if ($missing !== []) {
     echo 'Chýbajúci slug (spustite najprv sync_drugs.php): ' . implode(', ', $missing) . "\n";
 }

@@ -104,6 +104,17 @@ $seed = [
     ['chembl' => 'CHEMBL2108597', 'slug' => 'zelezo-karboxymaltoza', 'name_sk' => 'Železitá karboxymaltóza', 'category' => 'dialysis', 'drug_class' => 'Železo (i.v.)'],
     ['chembl' => 'CHEMBL1200800', 'slug' => 'kalciumacetat',     'name_sk' => 'Kalciumacetát',      'category' => 'dialysis',      'drug_class' => 'Viazač fosfátov (kalciový)', 'atc' => 'V03AE07'],
     ['chembl' => 'CHEMBL3545184', 'slug' => 'etelkalcetid',      'name_sk' => 'Etelkalcetid',       'category' => 'dialysis',      'drug_class' => 'Kalcimimetikum (i.v.)', 'atc' => 'H05BX04'],
+    // ── 5. vlna — renálne dávkovanie a nefrotoxíny ────────────────────────────
+    ['chembl' => 'CHEMBL1201476', 'slug' => 'enoxaparin',        'name_sk' => 'Enoxaparín',         'category' => 'dose_adjust',   'drug_class' => 'Nízkomolekulový heparín (LMWH)', 'atc' => 'B01AB05'],
+    ['chembl' => 'CHEMBL22',      'slug' => 'kotrimoxazol',      'name_sk' => 'Kotrimoxazol (TMP-SMX)', 'category' => 'nephrotoxic', 'drug_class' => 'Antibiotikum (DHFR inhibítor + sulfónamid)', 'atc' => 'J01EE01'],
+    ['chembl' => 'CHEMBL8',       'slug' => 'ciprofloxacin',     'name_sk' => 'Ciprofloxacín',      'category' => 'dose_adjust',   'drug_class' => 'Fluorochinolón', 'atc' => 'J01MA02'],
+    ['chembl' => 'CHEMBL1503',    'slug' => 'omeprazol',         'name_sk' => 'Omeprazol',          'category' => 'nephrotoxic',   'drug_class' => 'Inhibítor protónovej pumpy', 'atc' => 'A02BC01'],
+    ['chembl' => 'CHEMBL572',     'slug' => 'nitrofurantoin',    'name_sk' => 'Nitrofurantoín',     'category' => 'dose_adjust',   'drug_class' => 'Uroantiseptikum', 'atc' => 'J01XE01'],
+    ['chembl' => 'CHEMBL701',     'slug' => 'baklofen',          'name_sk' => 'Baklofén',           'category' => 'dose_adjust',   'drug_class' => 'Centrálne myorelaxans (GABA-B agonista)', 'atc' => 'M03BX01'],
+    ['chembl' => 'CHEMBL1422',    'slug' => 'sitagliptin',       'name_sk' => 'Sitagliptín',        'category' => 'dose_adjust',   'drug_class' => 'DPP-4 inhibítor', 'atc' => 'A10BH01'],
+    ['chembl' => 'CHEMBL237500',  'slug' => 'linagliptin',       'name_sk' => 'Linagliptín',        'category' => 'dose_adjust',   'drug_class' => 'DPP-4 inhibítor', 'atc' => 'A10BH05'],
+    ['chembl' => 'CHEMBL198362',  'slug' => 'rivaroxaban',       'name_sk' => 'Rivaroxaban',        'category' => 'dose_adjust',   'drug_class' => 'Inhibítor faktora Xa (DOAC)', 'atc' => 'B01AF01'],
+    ['chembl' => 'CHEMBL1496',    'slug' => 'rosuvastatin',      'name_sk' => 'Rosuvastatín',       'category' => 'dose_adjust',   'drug_class' => 'Statín (inhibítor HMG-CoA reduktázy)', 'atc' => 'C10AA07'],
 ];
 
 /** Stiahne JSON z ChEMBL REST; vráti dekódované pole alebo null pri chybe. */

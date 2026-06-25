@@ -282,7 +282,7 @@ hub `studie.php` / detail `studia.php` + **admin kurácia `admin_trials.php`** (
 týždenný cron (server) s logom behu. Zapojené v nav/pätičke/sitemape/robots.
 
 **Databáza liekov ✅ HOTOVÉ (pipeline a kurácia)** — migrácia `drugs` (is_published
-DEFAULT 0) + ChEMBL REST sync (`sync_drugs.php`, kurátorský zoznam **~54 nefrologických
+DEFAULT 0) + ChEMBL REST sync (`sync_drugs.php`, kurátorský zoznam **~64 nefrologických
 liekov** naprieč 6 kategóriami, vytvára nezverejnené) + návrh klinickej kurácie
 (`seed_drugs_curation.php` — renálne dávkovanie, nefrotoxicita, dialyzovateľnosť…) + hub `lieky.php` / detail `liek.php` (renálne dávkovanie, mechanizmus,
 nefrotoxicita, dialyzovateľnosť, prepojenie na eGFR/Cockcroft-Gault) + admin kurácia
@@ -307,6 +307,17 @@ nephroresource.com) — staviame z primárnych zdrojov (časť 8).
 (viazač fosfátov) a etelkalcetid (i.v. kalcimimetikum — dialyzovateľný, podáva sa po
 HD). Popis kategórie `dialysis` rozšírený o „elektrolyty". Spustené na serveri cez
 WebSupport SSH: sync 54/54 OK, kurácia 54/54, všetko nezverejnené.
+
+**5. vlna (+10 liekov):** renálne dávkovanie a nefrotoxíny — enoxaparín (LMWH),
+kotrimoxazol (hyperkaliémia/pseudo-AKI), ciprofloxacín, omeprazol (AIN), nitrofurantoín
+(KI pri nízkom eGFR), baklofén (neurotoxicita pri CKD, dialyzovateľný), sitagliptín vs
+linagliptín (gliptín bez úpravy dávky), rivaroxaban (DOAC), rosuvastatín.
+
+**Zdroje (`source_refs`):** kuračný seed pridá ku každému lieku overený odkaz na SPC
+v registri **DailyMed (NIH)** — MERGE zachová EMA EPAR odkazy zo synchronizácie aj ručné
+admin úpravy (idempotentné). ŠÚKL nemá stabilný odkaz na konkrétny liek (len JS
+vyhľadávanie), preto sa nepoužíva; EU/SK kontext pokrývajú EMA EPAR odkazy.
+Spustené na serveri: sync 64/64 OK, kurácia 64/64, source_refs doplnené, nezverejnené.
 
 **Ostáva (priebežne):** odborné doplnenie renálneho dávkovania z SPC (ŠÚKL/EMA) a
 zverejnenie liekov v `admin_drugs.php`; ďalšie rozšírenie zoznamu.
