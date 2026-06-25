@@ -282,8 +282,8 @@ hub `studie.php` / detail `studia.php` + **admin kurácia `admin_trials.php`** (
 týždenný cron (server) s logom behu. Zapojené v nav/pätičke/sitemape/robots.
 
 **Databáza liekov ✅ HOTOVÉ (pipeline a kurácia)** — migrácia `drugs` (is_published
-DEFAULT 0) + ChEMBL REST sync (`sync_drugs.php`, kurátorský zoznam **~64 nefrologických
-liekov** naprieč 6 kategóriami, vytvára nezverejnené) + návrh klinickej kurácie
+DEFAULT 0) + ChEMBL REST sync (`sync_drugs.php`, kurátorský zoznam **~74 nefrologických
+liekov** naprieč 7 kategóriami, vytvára nezverejnené) + návrh klinickej kurácie
 (`seed_drugs_curation.php` — renálne dávkovanie, nefrotoxicita, dialyzovateľnosť…) + hub `lieky.php` / detail `liek.php` (renálne dávkovanie, mechanizmus,
 nefrotoxicita, dialyzovateľnosť, prepojenie na eGFR/Cockcroft-Gault) + admin kurácia
 `admin_drugs.php` (create/edit/publish). Hranica: ChEMBL vlastní technické polia,
@@ -318,6 +318,12 @@ v registri **DailyMed (NIH)** — MERGE zachová EMA EPAR odkazy zo synchronizá
 admin úpravy (idempotentné). ŠÚKL nemá stabilný odkaz na konkrétny liek (len JS
 vyhľadávanie), preto sa nepoužíva; EU/SK kontext pokrývajú EMA EPAR odkazy.
 Spustené na serveri: sync 64/64 OK, kurácia 64/64, source_refs doplnené, nezverejnené.
+
+**6. vlna (+10 liekov):** transplantácia/imunosupresia — everolimus, prednizón, rituximab,
+belatacept · nefroprotektíva — tolvaptan (ADPKD, prepojené na Mayo ADPKD kalkulačku),
+sakubitril/valsartan (ARNI) · dna — febuxostat · diuretikum — bumetanid · CKD-MBD —
+alfakalcidol · onkonefrológia — rasburikáza (TLS, prepojené na TLS kalkulačku; nová
+kategória „Ostatné"). Spustené na serveri: sync 74/74 OK, kurácia 74/74, nezverejnené.
 
 **Ostáva (priebežne):** odborné doplnenie renálneho dávkovania z SPC (ŠÚKL/EMA) a
 zverejnenie liekov v `admin_drugs.php`; ďalšie rozšírenie zoznamu.

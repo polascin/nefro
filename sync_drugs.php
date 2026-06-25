@@ -115,6 +115,17 @@ $seed = [
     ['chembl' => 'CHEMBL237500',  'slug' => 'linagliptin',       'name_sk' => 'Linagliptín',        'category' => 'dose_adjust',   'drug_class' => 'DPP-4 inhibítor', 'atc' => 'A10BH05'],
     ['chembl' => 'CHEMBL198362',  'slug' => 'rivaroxaban',       'name_sk' => 'Rivaroxaban',        'category' => 'dose_adjust',   'drug_class' => 'Inhibítor faktora Xa (DOAC)', 'atc' => 'B01AF01'],
     ['chembl' => 'CHEMBL1496',    'slug' => 'rosuvastatin',      'name_sk' => 'Rosuvastatín',       'category' => 'dose_adjust',   'drug_class' => 'Statín (inhibítor HMG-CoA reduktázy)', 'atc' => 'C10AA07'],
+    // ── 6. vlna — transplantácia, ADPKD/ARNI, dna, CKD-MBD, onkonefrológia ─────
+    ['chembl' => 'CHEMBL1908360', 'slug' => 'everolimus',        'name_sk' => 'Everolimus',         'category' => 'transplant',    'drug_class' => 'mTOR inhibítor', 'atc' => 'L04AH02'],
+    ['chembl' => 'CHEMBL635',     'slug' => 'prednizon',         'name_sk' => 'Prednizón',          'category' => 'transplant',    'drug_class' => 'Kortikosteroid (glukokortikoid)', 'atc' => 'H02AB07'],
+    ['chembl' => 'CHEMBL1201576', 'slug' => 'rituximab',         'name_sk' => 'Rituximab',          'category' => 'transplant',    'drug_class' => 'Anti-CD20 monoklonálna protilátka', 'atc' => 'L01FA01'],
+    ['chembl' => 'CHEMBL1742990', 'slug' => 'belatacept',        'name_sk' => 'Belatacept',         'category' => 'transplant',    'drug_class' => 'Blokátor kostimulácie (CTLA-4 Ig)', 'atc' => 'L04AA28'],
+    ['chembl' => 'CHEMBL344159',  'slug' => 'tolvaptan',         'name_sk' => 'Tolvaptan',          'category' => 'nephroprotect', 'drug_class' => 'Vaptan (antagonista V2 receptora)', 'atc' => 'C03XA01'],
+    ['chembl' => 'CHEMBL3137301', 'slug' => 'sakubitril-valsartan', 'name_sk' => 'Sakubitril/valsartan', 'category' => 'nephroprotect', 'drug_class' => 'ARNI (inhibítor neprilyzínu + ARB)', 'atc' => 'C09DX04'],
+    ['chembl' => 'CHEMBL1164729', 'slug' => 'febuxostat',        'name_sk' => 'Febuxostat',         'category' => 'dose_adjust',   'drug_class' => 'Inhibítor xantínoxidázy', 'atc' => 'M04AA03'],
+    ['chembl' => 'CHEMBL1072',    'slug' => 'bumetanid',         'name_sk' => 'Bumetanid',          'category' => 'diuretic',      'drug_class' => 'Slučkové diuretikum', 'atc' => 'C03CA02'],
+    ['chembl' => 'CHEMBL1601669', 'slug' => 'alfakalcidol',      'name_sk' => 'Alfakalcidol',       'category' => 'dialysis',      'drug_class' => 'Analóg vitamínu D (1α-OH-D₃)', 'atc' => 'A11CC03'],
+    ['chembl' => 'CHEMBL1201594', 'slug' => 'rasburikaza',       'name_sk' => 'Rasburikáza',        'category' => 'other',         'drug_class' => 'Rekombinantná urátoxidáza', 'atc' => 'M04AX01'],
 ];
 
 /** Stiahne JSON z ChEMBL REST; vráti dekódované pole alebo null pri chybe. */
