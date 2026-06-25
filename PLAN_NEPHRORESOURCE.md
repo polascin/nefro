@@ -282,8 +282,8 @@ hub `studie.php` / detail `studia.php` + **admin kurácia `admin_trials.php`** (
 týždenný cron (server) s logom behu. Zapojené v nav/pätičke/sitemape/robots.
 
 **Databáza liekov ✅ HOTOVÉ (pipeline a kurácia)** — migrácia `drugs` (is_published
-DEFAULT 0) + ChEMBL REST sync (`sync_drugs.php`, kurátorský zoznam **~47 nefrologických
-liekov** naprieč 7 kategóriami, vytvára nezverejnené) + návrh klinickej kurácie
+DEFAULT 0) + ChEMBL REST sync (`sync_drugs.php`, kurátorský zoznam **~54 nefrologických
+liekov** naprieč 6 kategóriami, vytvára nezverejnené) + návrh klinickej kurácie
 (`seed_drugs_curation.php` — renálne dávkovanie, nefrotoxicita, dialyzovateľnosť…) + hub `lieky.php` / detail `liek.php` (renálne dávkovanie, mechanizmus,
 nefrotoxicita, dialyzovateľnosť, prepojenie na eGFR/Cockcroft-Gault) + admin kurácia
 `admin_drugs.php` (create/edit/publish). Hranica: ChEMBL vlastní technické polia,
@@ -300,6 +300,13 @@ väzba na plazmatické bielkoviny, distribučný objem — a praktický dôsledo
 dávka po HD, použitie HD pri intoxikácii: metformín, lítium, dabigatrán…). Zdroje:
 SPC/EMA/ŠÚKL, KDIGO, EXTRIP. **Nepreberáme cudzie databázy** (vrátane
 nephroresource.com) — staviame z primárnych zdrojov (časť 8).
+
+**4. vlna (+7 liekov):** viazače draslíka patiromér a nátrium-zirkónium-cyklosilikát
+(hyperkaliémia pri RAASi) · ESA epoetín a darbepoetín alfa (anémia) · i.v. železo
+(železitá karboxymaltóza, vrátane hypofosfatémie po FCM) · CKD-MBD kalciumacetát
+(viazač fosfátov) a etelkalcetid (i.v. kalcimimetikum — dialyzovateľný, podáva sa po
+HD). Popis kategórie `dialysis` rozšírený o „elektrolyty". Spustené na serveri cez
+WebSupport SSH: sync 54/54 OK, kurácia 54/54, všetko nezverejnené.
 
 **Ostáva (priebežne):** odborné doplnenie renálneho dávkovania z SPC (ŠÚKL/EMA) a
 zverejnenie liekov v `admin_drugs.php`; ďalšie rozšírenie zoznamu.
