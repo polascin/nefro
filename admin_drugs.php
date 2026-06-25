@@ -357,6 +357,7 @@ function dgEditVal(?array $drug, string $key): string
         z SPC a liek zverejnite až po odbornej kontrole.
         <?php if ($lastSync !== null): ?> Posledná synchronizácia: <strong><?= htmlspecialchars($lastSync) ?></strong>.<?php endif; ?>
       </p>
+      <p><a href="admin_drugs_review.php" class="btn-primary">📋 Kontrola a zverejňovanie (prehľad + tlač)</a></p>
 
       <?php if ($actionResult !== null): ?>
         <div class="alert alert-success"><p><?= htmlspecialchars((string) $actionResult) ?></p></div>

@@ -339,6 +339,11 @@ basiliximab (indukcia) · sparsentan (IgAN/FSGS — prepojené na IgAN kalkulač
 eculizumab (inhibítor C5 — aHUS/C3G; prepojené na komplement ťahák a TMA/PLASMIC).
 Spustené na serveri: sync 96/96 OK, kurácia 96/96, nezverejnené.
 
+**Podpora zverejňovania:** `admin_drugs_review.php` — kontrolný a tlačiteľný prehľad
+všetkých liekov (predvolene nezverejnených) s celým kurátorským obsahom naraz,
+indikátorom úplnosti (kurácia x/6), priamym zverejnením/skrytím a tlačou (print CSS).
+Odborník skontroluje proti SPC a rovno zverejní. Odkaz zo `admin_drugs.php`.
+
 **Ostáva (priebežne):** odborné doplnenie renálneho dávkovania z SPC (ŠÚKL/EMA) a
 zverejnenie liekov v `admin_drugs.php`; ďalšie rozšírenie zoznamu.
 
