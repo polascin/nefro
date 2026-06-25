@@ -138,6 +138,18 @@ $seed = [
     ['chembl' => 'CHEMBL70',      'slug' => 'morfin',            'name_sk' => 'Morfín',             'category' => 'dose_adjust',   'drug_class' => 'Opioidné analgetikum', 'atc' => 'N02AA01'],
     ['chembl' => 'CHEMBL4802224', 'slug' => 'sukroferik',        'name_sk' => 'Sukroferik-oxyhydroxid', 'category' => 'dialysis',  'drug_class' => 'Viazač fosfátov (na báze železa)', 'atc' => 'V03AE05'],
     ['chembl' => 'CHEMBL1487',    'slug' => 'atorvastatin',      'name_sk' => 'Atorvastatín',       'category' => 'dose_adjust',   'drug_class' => 'Statín (inhibítor HMG-CoA reduktázy)', 'atc' => 'C10AA05'],
+    // ── 8. vlna — DOAC, antivirotiká/antimykotiká, glomerulopatie, indukcia ────
+    ['chembl' => 'CHEMBL1269025', 'slug' => 'edoxaban',          'name_sk' => 'Edoxaban',           'category' => 'dose_adjust',   'drug_class' => 'Inhibítor faktora Xa (DOAC)', 'atc' => 'B01AF03'],
+    ['chembl' => 'CHEMBL1201314', 'slug' => 'valganciklovir',    'name_sk' => 'Valganciklovir',     'category' => 'dose_adjust',   'drug_class' => 'Antivirotikum (anti-CMV, perorálny prekurzor)', 'atc' => 'J05AB14'],
+    ['chembl' => 'CHEMBL596',     'slug' => 'fentanyl',          'name_sk' => 'Fentanyl',           'category' => 'dose_adjust',   'drug_class' => 'Opioidné analgetikum', 'atc' => 'N02AB03'],
+    ['chembl' => 'CHEMBL106',     'slug' => 'flukonazol',        'name_sk' => 'Flukonazol',         'category' => 'dose_adjust',   'drug_class' => 'Azolové antimykotikum', 'atc' => 'J02AC01'],
+    ['chembl' => 'CHEMBL139',     'slug' => 'diklofenak',        'name_sk' => 'Diklofenak',         'category' => 'nephrotoxic',   'drug_class' => 'NSAID', 'atc' => 'M01AB05'],
+    ['chembl' => 'CHEMBL3544988', 'slug' => 'daprodustat',       'name_sk' => 'Daprodustat',        'category' => 'dialysis',      'drug_class' => 'HIF-PHI (anémia pri CKD)', 'atc' => 'B03XA07'],
+    ['chembl' => 'CHEMBL1200539', 'slug' => 'kalciumkarbonat',   'name_sk' => 'Kalciumkarbonát',    'category' => 'dialysis',      'drug_class' => 'Viazač fosfátov (kalciový) / suplement kalcia', 'atc' => 'A12AA04'],
+    ['chembl' => 'CHEMBL650',     'slug' => 'metylprednizolon',  'name_sk' => 'Metylprednizolón',   'category' => 'transplant',    'drug_class' => 'Kortikosteroid (i.v. pulz)', 'atc' => 'H02AB04'],
+    ['chembl' => 'CHEMBL1201828', 'slug' => 'eculizumab',        'name_sk' => 'Eculizumab',         'category' => 'other',         'drug_class' => 'Inhibítor komplementu C5 (monoklonálna protilátka)', 'atc' => 'L04AJ01'],
+    ['chembl' => 'CHEMBL539423',  'slug' => 'sparsentan',        'name_sk' => 'Sparsentan',         'category' => 'nephroprotect', 'drug_class' => 'Duálny antagonista endotelínu a angiotenzínu (ERA/ARB)', 'atc' => 'C09XX01'],
+    ['chembl' => 'CHEMBL1201439', 'slug' => 'basiliximab',       'name_sk' => 'Basiliximab',        'category' => 'transplant',    'drug_class' => 'Anti-IL-2R monoklonálna protilátka (indukcia)', 'atc' => 'L04AC02'],
 ];
 
 /** Stiahne JSON z ChEMBL REST; vráti dekódované pole alebo null pri chybe. */

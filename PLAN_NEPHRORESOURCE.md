@@ -282,7 +282,7 @@ hub `studie.php` / detail `studia.php` + **admin kurácia `admin_trials.php`** (
 týždenný cron (server) s logom behu. Zapojené v nav/pätičke/sitemape/robots.
 
 **Databáza liekov ✅ HOTOVÉ (pipeline a kurácia)** — migrácia `drugs` (is_published
-DEFAULT 0) + ChEMBL REST sync (`sync_drugs.php`, kurátorský zoznam **~85 nefrologických
+DEFAULT 0) + ChEMBL REST sync (`sync_drugs.php`, kurátorský zoznam **~96 nefrologických
 liekov** naprieč 7 kategóriami, vytvára nezverejnené) + návrh klinickej kurácie
 (`seed_drugs_curation.php` — renálne dávkovanie, nefrotoxicita, dialyzovateľnosť…) + hub `lieky.php` / detail `liek.php` (renálne dávkovanie, mechanizmus,
 nefrotoxicita, dialyzovateľnosť, prepojenie na eGFR/Cockcroft-Gault) + admin kurácia
@@ -331,6 +331,13 @@ acidobáza — hydrogenuhličitan sodný (KDIGO ≥ 22 mmol/l) · diuretická re
 chlórtalidon (CLICK), metolazón · analgézia — morfín (kumulácia M6G pri CKD) · CKD-MBD —
 sukroferik-oxyhydroxid · statín bez renálnej úpravy — atorvastatín (kontrast s rosuvastatínom).
 Spustené na serveri: sync 85/85 OK, kurácia 85/85, nezverejnené.
+
+**8. vlna (+11 liekov):** edoxaban (DOAC set kompletný; caveat pri vysokom CrCl) ·
+valganciklovir, fentanyl (preferovaný opioid pri CKD), flukonazol (azol) · diklofenak
+(NSAID) · daprodustat (HIF-PHI), kalciumkarbonát (viazač) · metylprednizolón (i.v. pulz),
+basiliximab (indukcia) · sparsentan (IgAN/FSGS — prepojené na IgAN kalkulačku) ·
+eculizumab (inhibítor C5 — aHUS/C3G; prepojené na komplement ťahák a TMA/PLASMIC).
+Spustené na serveri: sync 96/96 OK, kurácia 96/96, nezverejnené.
 
 **Ostáva (priebežne):** odborné doplnenie renálneho dávkovania z SPC (ŠÚKL/EMA) a
 zverejnenie liekov v `admin_drugs.php`; ďalšie rozšírenie zoznamu.
