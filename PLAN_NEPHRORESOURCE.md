@@ -210,6 +210,12 @@ hypokaliémia ✅ (`nastroj_hypokalemia.php` — závažnosť → presun → U-K
 TK → U-Cl; RTA, hyperaldosteronizmus, Bartter/Gitelman, dôraz na Mg) ·
 plánovač diéty ✅ (`nastroj_dieta.php` — formulár hmotnosť+kategória → denné limity
 bielkovín/energie/Na/K/P podľa KDOQI 2020; klientsky výpočet, nie rozhodovací strom).
+Neskôr doplnené (kompletizácia 7 nástrojov podľa NephroResource): sprievodca GN ✅
+(Fáza 5), **TMA** ✅ (`nastroj_tma.php`/`.js` — potvrdenie MAHA → TTP/STEC-HUS/aHUS/
+sekundárna, prepojené na PLASMIC a komplement ťahák) a **TLS** ✅ (`nastroj_tls.php`/`.js`
+— stratifikácia rizika → profylaxia/manažment, prepojené na Cairo–Bishop kalkulačku).
+Pridaná **podponuka nástrojov** `nastroj_subnav.php` (analógia `calc_subnav.php`, zahŕňa ju
+`main_nav.php` pri aktívnej sekcii Nástroje).
 
 **Fáza 4 — Cheat sheety („Ťaháky"). ✅ HOTOVÉ.**
 Nová kategória `category = 'cheatsheet'` (znovupoužíva `article.php` aj PDF

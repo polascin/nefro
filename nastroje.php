@@ -9,7 +9,7 @@ $baseUrl = "https://nefro.polascin.net/";
 $pageUrl = $baseUrl . "nastroje.php";
 $pageTitle = "Interaktívne nefrologické nástroje | " . $siteName;
 $pageDesc =
-    "Interaktívne klinické nástroje pre nefrológiu — krok-za-krokom diagnostické a rozhodovacie sprievodcovia. Diferenciálna diagnostika akútneho poškodenia obličiek (AKI) podľa KDIGO; ďalšie nástroje pripravujeme.";
+    "Interaktívne klinické nástroje pre nefrológiu — krok-za-krokom diagnostické a rozhodovacie sprievodcovia: akútne poškodenie obličiek (AKI), hyponatrémia, hypokaliémia, trombotická mikroangiopatia (TMA), syndróm rozpadu nádoru (TLS), glomerulonefritídy (GN) a plánovač renálnej diéty.";
 
 $schemaWebApp = [
     "@context" => "https://schema.org",
@@ -47,6 +47,16 @@ $schemaWebApp = [
             "@type" => "WebApplication",
             "name" => "Sprievodca hypokaliémiou",
             "url" => $baseUrl . "nastroj_hypokalemia.php",
+        ],
+        [
+            "@type" => "WebApplication",
+            "name" => "Sprievodca trombotickou mikroangiopatiou (TMA)",
+            "url" => $baseUrl . "nastroj_tma.php",
+        ],
+        [
+            "@type" => "WebApplication",
+            "name" => "Sprievodca syndrómom rozpadu nádoru (TLS)",
+            "url" => $baseUrl . "nastroj_tls.php",
         ],
         [
             "@type" => "WebApplication",
@@ -139,6 +149,16 @@ $schemaWebApp = [
                         <h3>Sprievodca hypokaliémiou</h3>
                         <p>Diagnostika a manažment hypokaliémie — závažnosť/EKG, transcelulárny presun, močový draslík, acidobáza, krvný tlak a močový chlorid; diferenciálna diagnostika (RTA, hyperaldosteronizmus, Bartter/Gitelman) s dôrazom na korekciu magnézia.</p>
                         <a href="nastroj_hypokalemia.php" class="btn-primary">Otvoriť nástroj</a>
+                    </article>
+                    <article class="feature-card calculator-card">
+                        <h3>Sprievodca TMA</h3>
+                        <p>Diferenciálna diagnostika trombotickej mikroangiopatie — potvrdenie MAHA a trombocytopénie, odlíšenie TTP (ADAMTS13/PLASMIC), STEC-HUS, atypického HUS (komplement) a sekundárnej TMA s princípmi urgentného manažmentu (plazmaferéza, eculizumab).</p>
+                        <a href="nastroj_tma.php" class="btn-primary">Otvoriť nástroj</a>
+                    </article>
+                    <article class="feature-card calculator-card">
+                        <h3>Sprievodca TLS</h3>
+                        <p>Syndróm rozpadu nádoru — stratifikácia rizika podľa typu a nálože nádoru aj faktorov pacienta, voľba profylaxie (hydratácia, alopurinol, rasburikáza) a manažment etablovaného TLS vrátane indikácií dialýzy.</p>
+                        <a href="nastroj_tls.php" class="btn-primary">Otvoriť nástroj</a>
                     </article>
                     <article class="feature-card calculator-card">
                         <h3>Plánovač renálnej diéty</h3>

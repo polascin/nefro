@@ -69,6 +69,7 @@ if (!function_exists('_navA')) {
     </div>
 </nav>
 <?php if ($_navCalcActive): include 'calc_subnav.php'; endif; ?>
+<?php if ($_navToolsActive): include 'nastroj_subnav.php'; endif; ?>
 <script nonce="<?= htmlspecialchars(function_exists('getScriptNonce') ? getScriptNonce() : '', ENT_QUOTES) ?>">
 (function () {
     // Hamburger toggle

@@ -251,6 +251,18 @@ $urls = [
         'priority'   => '0.7',
     ],
     [
+        'loc'        => $baseUrl . 'nastroj_tma.php',
+        'lastmod'    => _sitemapLastmod('nastroj_tma.php'),
+        'changefreq' => 'monthly',
+        'priority'   => '0.7',
+    ],
+    [
+        'loc'        => $baseUrl . 'nastroj_tls.php',
+        'lastmod'    => _sitemapLastmod('nastroj_tls.php'),
+        'changefreq' => 'monthly',
+        'priority'   => '0.7',
+    ],
+    [
         'loc'        => $baseUrl . 'populars.php',
         'lastmod'    => _sitemapLastmod('populars.php'),
         'changefreq' => 'weekly',
