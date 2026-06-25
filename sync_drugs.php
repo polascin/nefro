@@ -73,6 +73,29 @@ $seed = [
     // Úprava dávky / nefroprotektíva (2. vlna)
     ['chembl' => 'CHEMBL107',     'slug' => 'kolchicin',         'name_sk' => 'Kolchicín',          'category' => 'dose_adjust',   'drug_class' => 'Inhibítor mikrotubulov'],
     ['chembl' => 'CHEMBL2108027', 'slug' => 'dulaglutid',        'name_sk' => 'Dulaglutid',         'category' => 'nephroprotect', 'drug_class' => 'GLP-1 receptorový agonista'],
+    // ── 3. vlna ───────────────────────────────────────────────────────────────
+    // Nefroprotektíva
+    ['chembl' => 'CHEMBL2048484', 'slug' => 'kanagliflozin',     'name_sk' => 'Kanagliflozín',      'category' => 'nephroprotect', 'drug_class' => 'SGLT2 inhibítor', 'atc' => 'A10BK02'],
+    ['chembl' => 'CHEMBL578',     'slug' => 'enalapril',         'name_sk' => 'Enalapril',          'category' => 'nephroprotect', 'drug_class' => 'ACE inhibítor', 'atc' => 'C09AA02'],
+    ['chembl' => 'CHEMBL1095097', 'slug' => 'eplerenon',         'name_sk' => 'Eplerenón',          'category' => 'nephroprotect', 'drug_class' => 'Selektívny steroidný MRA', 'atc' => 'C03DA04'],
+    // Diuretiká
+    ['chembl' => 'CHEMBL406',     'slug' => 'indapamid',         'name_sk' => 'Indapamid',          'category' => 'diuretic',      'drug_class' => 'Tiazidu podobné diuretikum', 'atc' => 'C03BA11'],
+    ['chembl' => 'CHEMBL945',     'slug' => 'amilorid',          'name_sk' => 'Amilorid',           'category' => 'diuretic',      'drug_class' => 'Kálium-šetriace diuretikum', 'atc' => 'C03DB01'],
+    ['chembl' => 'CHEMBL20',      'slug' => 'acetazolamid',      'name_sk' => 'Acetazolamid',       'category' => 'diuretic',      'drug_class' => 'Inhibítor karboanhydrázy', 'atc' => 'S01EC01'],
+    // Úprava dávky podľa obličiek
+    ['chembl' => 'CHEMBL539697',  'slug' => 'dabigatran',        'name_sk' => 'Dabigatran-etexilát', 'category' => 'dose_adjust',  'drug_class' => 'Priamy inhibítor trombínu (DOAC)', 'atc' => 'B01AE07'],
+    ['chembl' => 'CHEMBL231779',  'slug' => 'apixaban',          'name_sk' => 'Apixaban',           'category' => 'dose_adjust',   'drug_class' => 'Inhibítor faktora Xa (DOAC)', 'atc' => 'B01AF02'],
+    ['chembl' => 'CHEMBL1751',    'slug' => 'digoxin',           'name_sk' => 'Digoxín',            'category' => 'dose_adjust',   'drug_class' => 'Srdcový glykozid', 'atc' => 'C01AA05'],
+    ['chembl' => 'CHEMBL1059',    'slug' => 'pregabalin',        'name_sk' => 'Pregabalín',         'category' => 'dose_adjust',   'drug_class' => 'Antikonvulzívum (α2δ ligand)', 'atc' => 'N02BF02'],
+    // Nefrotoxické lieky
+    ['chembl' => 'CHEMBL1200826', 'slug' => 'litium',            'name_sk' => 'Lítium (uhličitan)', 'category' => 'nephrotoxic',   'drug_class' => 'Stabilizátor nálady', 'atc' => 'N05AN01'],
+    ['chembl' => 'CHEMBL177',     'slug' => 'amikacin',          'name_sk' => 'Amikacín',           'category' => 'nephrotoxic',   'drug_class' => 'Aminoglykozid', 'atc' => 'J01GB06'],
+    ['chembl' => 'CHEMBL34259',   'slug' => 'metotrexat',        'name_sk' => 'Metotrexát',         'category' => 'nephrotoxic',   'drug_class' => 'Antimetabolit (antagonista folátu)', 'atc' => 'L04AX03'],
+    // CKD-MBD a dialýza
+    ['chembl' => 'CHEMBL2096647', 'slug' => 'lantan',            'name_sk' => 'Lantán-karbonát',    'category' => 'dialysis',      'drug_class' => 'Viazač fosfátov (bez kalcia)', 'atc' => 'V03AE03'],
+    // Transplantácia / imunosupresia
+    ['chembl' => 'CHEMBL413',     'slug' => 'sirolimus',         'name_sk' => 'Sirolimus',          'category' => 'transplant',    'drug_class' => 'mTOR inhibítor', 'atc' => 'L04AH01'],
+    ['chembl' => 'CHEMBL1542',    'slug' => 'azatioprin',        'name_sk' => 'Azatioprín',         'category' => 'transplant',    'drug_class' => 'Purínový antimetabolit', 'atc' => 'L04AX01'],
 ];
 
 /** Stiahne JSON z ChEMBL REST; vráti dekódované pole alebo null pri chybe. */

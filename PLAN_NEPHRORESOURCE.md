@@ -282,14 +282,27 @@ hub `studie.php` / detail `studia.php` + **admin kurácia `admin_trials.php`** (
 týždenný cron (server) s logom behu. Zapojené v nav/pätičke/sitemape/robots.
 
 **Databáza liekov ✅ HOTOVÉ (pipeline a kurácia)** — migrácia `drugs` (is_published
-DEFAULT 0) + ChEMBL REST sync (`sync_drugs.php`, kurátorský zoznam ~31 nefrologických
-liekov naprieč 7 kategóriami, vytvára nezverejnené) + návrh klinickej kurácie
+DEFAULT 0) + ChEMBL REST sync (`sync_drugs.php`, kurátorský zoznam **~47 nefrologických
+liekov** naprieč 7 kategóriami, vytvára nezverejnené) + návrh klinickej kurácie
 (`seed_drugs_curation.php` — renálne dávkovanie, nefrotoxicita, dialyzovateľnosť…) + hub `lieky.php` / detail `liek.php` (renálne dávkovanie, mechanizmus,
 nefrotoxicita, dialyzovateľnosť, prepojenie na eGFR/Cockcroft-Gault) + admin kurácia
 `admin_drugs.php` (create/edit/publish). Hranica: ChEMBL vlastní technické polia,
 klinické polia + zverejnenie sú ručné (lieková bezpečnosť). Zapojené v
-nav/pätičke/sitemape/robots/.htaccess. **Ostáva (priebežne):** odborné doplnenie
-renálneho dávkovania z SPC (ŠÚKL/EMA) a zverejnenie liekov; rozšírenie zoznamu.
+nav/pätičke/sitemape/robots/.htaccess.
+
+**3. vlna (+16 liekov, ChEMBL ID overené cez API):** kanagliflozín, enalapril,
+eplerenón (nefroprotektíva) · indapamid, amilorid, acetazolamid (diuretiká) ·
+dabigatran, apixaban, digoxín, pregabalín (úprava dávky / DOAC) · lítium, amikacín,
+metotrexát (nefrotoxíny) · lantán-karbonát (viazač fosfátov) · sirolimus, azatioprín
+(transplantácia). **Odborná revízia dialyzovateľnosti všetkých liekov:** pole
+`dialyzability` doplnené o determinanty odstrániteľnosti pri HD — molekulová hmotnosť,
+väzba na plazmatické bielkoviny, distribučný objem — a praktický dôsledok (doplnková
+dávka po HD, použitie HD pri intoxikácii: metformín, lítium, dabigatrán…). Zdroje:
+SPC/EMA/ŠÚKL, KDIGO, EXTRIP. **Nepreberáme cudzie databázy** (vrátane
+nephroresource.com) — staviame z primárnych zdrojov (časť 8).
+
+**Ostáva (priebežne):** odborné doplnenie renálneho dávkovania z SPC (ŠÚKL/EMA) a
+zverejnenie liekov v `admin_drugs.php`; ďalšie rozšírenie zoznamu.
 
 ---
 
