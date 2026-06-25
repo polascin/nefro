@@ -96,6 +96,14 @@ $seed = [
     // Transplantácia / imunosupresia
     ['chembl' => 'CHEMBL413',     'slug' => 'sirolimus',         'name_sk' => 'Sirolimus',          'category' => 'transplant',    'drug_class' => 'mTOR inhibítor', 'atc' => 'L04AH01'],
     ['chembl' => 'CHEMBL1542',    'slug' => 'azatioprin',        'name_sk' => 'Azatioprín',         'category' => 'transplant',    'drug_class' => 'Purínový antimetabolit', 'atc' => 'L04AX01'],
+    // ── 4. vlna — viazače draslíka, ESA, železo, CKD-MBD ───────────────────────
+    ['chembl' => 'CHEMBL5315081', 'slug' => 'patiromer',         'name_sk' => 'Patiromér',          'category' => 'dialysis',      'drug_class' => 'Viazač draslíka (hyperkaliémia)', 'atc' => 'V03AE09'],
+    ['chembl' => 'CHEMBL3301592', 'slug' => 'szc',               'name_sk' => 'Nátrium-zirkónium-cyklosilikát', 'category' => 'dialysis', 'drug_class' => 'Viazač draslíka (hyperkaliémia)', 'atc' => 'V03AE10'],
+    ['chembl' => 'CHEMBL1201565', 'slug' => 'epoetin',           'name_sk' => 'Epoetín alfa',       'category' => 'dialysis',      'drug_class' => 'Erytropoetín (ESA)', 'atc' => 'B03XA01'],
+    ['chembl' => 'CHEMBL1201566', 'slug' => 'darbepoetin',       'name_sk' => 'Darbepoetín alfa',   'category' => 'dialysis',      'drug_class' => 'Erytropoetín (ESA, dlhodobý)', 'atc' => 'B03XA02'],
+    ['chembl' => 'CHEMBL2108597', 'slug' => 'zelezo-karboxymaltoza', 'name_sk' => 'Železitá karboxymaltóza', 'category' => 'dialysis', 'drug_class' => 'Železo (i.v.)'],
+    ['chembl' => 'CHEMBL1200800', 'slug' => 'kalciumacetat',     'name_sk' => 'Kalciumacetát',      'category' => 'dialysis',      'drug_class' => 'Viazač fosfátov (kalciový)', 'atc' => 'V03AE07'],
+    ['chembl' => 'CHEMBL3545184', 'slug' => 'etelkalcetid',      'name_sk' => 'Etelkalcetid',       'category' => 'dialysis',      'drug_class' => 'Kalcimimetikum (i.v.)', 'atc' => 'H05BX04'],
 ];
 
 /** Stiahne JSON z ChEMBL REST; vráti dekódované pole alebo null pri chybe. */

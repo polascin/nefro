@@ -430,6 +430,63 @@ $curation = [
         'warnings'       => 'Myelosupresia (pred liečbou skríning aktivity TPMT/NUDT15), hepatotoxicita, pankreatitída, infekcie, dlhodobé riziko malignít; závažná interakcia s alopurinolom/febuxostatom (inhibícia xantínoxidázy → výrazné zvýšenie toxicity — dávku výrazne redukovať).',
         'monitoring'     => 'Krvný obraz pravidelne, pečeňové testy; TPMT pred začatím.',
     ],
+    // ── Viazače draslíka, ESA, železo a CKD-MBD (4. vlna) ──────────────────────
+    'patiromer' => [
+        'indications'    => 'Chronická hyperkaliémia pri CKD a srdcovom zlyhaní (umožňuje pokračovať v RAAS inhibícii).',
+        'renal_dosing'   => "Pôsobí v GIT, bez úpravy podľa eGFR. Začať 8,4 g 1×/d, titrovať podľa kália à ~ 1 týždeň. Užívať s odstupom ≥ 3 h od iných perorálnych liekov (viaže ich vstrebávanie). Nevhodný na akútnu/život ohrozujúcu hyperkaliémiu (pomalý nástup).",
+        'nephrotoxicity' => 'Nie je nefrotoxický.',
+        'dialyzability'  => 'Neaplikovateľné — nevstrebáva sa, viaže draslík v lúmene čreva (výmenou za kalcium); v krvi necirkuluje.',
+        'warnings'       => 'Hypokaliémia a hypomagneziémia (sledovať horčík), GI ťažkosti (zápcha); môže viazať súbežné lieky — dodržať časový odstup.',
+        'monitoring'     => 'Kálium a horčík, klinická odpoveď.',
+    ],
+    'szc' => [
+        'indications'    => 'Chronická hyperkaliémia (vrátane CKD a pri RAAS inhibícii).',
+        'renal_dosing'   => "Pôsobí v GIT, bez úpravy podľa eGFR. Korekčná fáza 10 g 3×/d do 48 h, potom udržiavacia ~ 5 g/d (titrovať podľa kália). Obsahuje sodík — pozor pri objemovom preťažení a hypertenzii. Odstup od iných perorálnych liekov.",
+        'nephrotoxicity' => 'Nie je nefrotoxický.',
+        'dialyzability'  => 'Neaplikovateľné — anorganický katexový sorbent, nevstrebáva sa a pôsobí v čreve.',
+        'warnings'       => 'Edémy a hypertenzia (nálož sodíka), hypokaliémia; GI ťažkosti. U dialyzovaných sa dávkuje len v dňoch bez dialýzy (podľa SPC).',
+        'monitoring'     => 'Kálium, objemový stav/edémy, krvný tlak.',
+    ],
+    'epoetin' => [
+        'indications'    => 'Anémia pri chronickej chorobe obličiek (dialyzovaní aj nedialyzovaní).',
+        'renal_dosing'   => "Dávka podľa hemoglobínu a telesnej hmotnosti (i.v./s.c.), titrovať podľa odpovede; cieľ Hb ~ 100–115 g/l (neprestreľovať > 115–120). Bez úpravy podľa eGFR, ale pred začatím a počas liečby zabezpečiť dostatok železa.",
+        'nephrotoxicity' => 'Nie je nefrotoxický; nadmerná korekcia Hb a hypertenzia zvyšujú KV riziko.',
+        'dialyzability'  => 'Nedialyzovateľný — veľký glykoproteín (~30 kDa); podáva sa i.v./s.c., u HD pacientov často počas dialýzy (do návratovej linky).',
+        'warnings'       => 'Hypertenzia, trombembolické príhody; zriedkavo čistá aplázia červenej rady (anti-EPO protilátky). Cieľový Hb neprestreľovať (zvýšená mortalita a KV riziko).',
+        'monitoring'     => 'Hemoglobín pravidelne, zásoby železa (feritín, saturácia transferínu), krvný tlak.',
+    ],
+    'darbepoetin' => [
+        'indications'    => 'Anémia pri chronickej chorobe obličiek; dlhšie dávkovacie intervaly ako epoetín.',
+        'renal_dosing'   => "Dlhší polčas → menej časté dávkovanie (1×/1–2 týždne, i.v./s.c.). Cieľ Hb ako pri epoetíne; titrovať podľa odpovede. Pred začatím doplniť deficit železa.",
+        'nephrotoxicity' => 'Nie je nefrotoxický; nadmerná korekcia Hb a hypertenzia zvyšujú KV riziko.',
+        'dialyzability'  => 'Nedialyzovateľný — veľký glykoproteín (~37 kDa, hyperglykozylovaný); HD ho neodstráni.',
+        'warnings'       => 'Hypertenzia, trombembolické príhody, zriedkavo aplázia červenej rady; neprestreľovať cieľový Hb (KV riziko, mortalita).',
+        'monitoring'     => 'Hemoglobín, zásoby železa, krvný tlak.',
+    ],
+    'zelezo-karboxymaltoza' => [
+        'indications'    => 'Deficit železa pri CKD (vrátane funkčného deficitu počas ESA liečby), keď perorálne železo nestačí alebo nie je tolerované.',
+        'renal_dosing'   => "I.v. železo — dávka podľa veľkosti deficitu a telesnej hmotnosti; bez úpravy podľa eGFR. Umožňuje podať veľkú dávku v jednej infúzii. Nepodávať pri aktívnej infekcii.",
+        'nephrotoxicity' => 'Nie je nefrotoxický.',
+        'dialyzability'  => 'Nedialyzovateľný — veľký komplex železa s karbohydrátom; podáva sa i.v. vrátane HD pacientov.',
+        'warnings'       => 'Hypersenzitívne/infúzne reakcie; hypofosfatémia (pri železitej karboxymaltóze môže byť ťažká a pretrvávajúca — sledovať fosfát); riziko preťaženia železom.',
+        'monitoring'     => 'Parametre železa (feritín, saturácia transferínu), sérový fosfát po podaní.',
+    ],
+    'kalciumacetat' => [
+        'indications'    => 'Hyperfosfatémia pri CKD/dialýze (kalciový viazač fosfátov).',
+        'renal_dosing'   => "Dávkovať podľa sérového fosfátu; užívať s jedlom. Sledovať celkovú nálož kalcia — KDIGO odporúča obmedziť kalciové viazače pre riziko cievnych kalcifikácií.",
+        'nephrotoxicity' => 'Nie priamo; hyperkalciémia môže zhoršiť funkciu obličiek a podporiť kalcifikácie/nefrokalcinózu.',
+        'dialyzability'  => 'Neaplikovateľné — viazač pôsobí v lúmene čreva; časť kalcia sa však vstrebáva a prispieva k riziku hyperkalciémie.',
+        'warnings'       => 'Hyperkalciémia (najmä so súbehom aktívnych analógov vitamínu D), zápcha; riziko cievnych kalcifikácií pri vysokej nálcii kalcia.',
+        'monitoring'     => 'Sérový fosfát a kalcium, PTH.',
+    ],
+    'etelkalcetid' => [
+        'indications'    => 'Sekundárna hyperparatyreóza u dospelých na hemodialýze.',
+        'renal_dosing'   => "Len pre pacientov na hemodialýze — i.v. na konci dialyzačnej procedúry 3×/týždeň. Titrácia podľa PTH a kalcia; nezačínať pri kalciu pod dolnou hranicou normy.",
+        'nephrotoxicity' => 'Nie je nefrotoxický.',
+        'dialyzability'  => 'Dialyzovateľný — odstraňuje sa hemodialýzou, preto sa podáva i.v. až na konci dialyzačnej procedúry (nie medzi dialýzami).',
+        'warnings'       => 'Hypokalciémia (parestézie, kŕče, predĺženie QT, zriedkavo arytmie a kŕče), nauzea/vracanie; opatrne pri rizikových arytmiách a súbehu liekov predlžujúcich QT.',
+        'monitoring'     => 'Kalcium (vrátane korigovaného), PTH, fosfát.',
+    ],
 ];
 
 $updated = 0;
