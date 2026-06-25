@@ -219,6 +219,73 @@ $curation = [
         'warnings'       => 'Myelosupresia (leukopénia), GI intolerancia (hnačka), infekcie/PML; silná teratogenita — nutná spoľahlivá antikoncepcia.',
         'monitoring'     => 'Krvný obraz, infekčné prejavy.',
     ],
+    // ── Nefrotoxické lieky (2. vlna) ──────────────────────────────────────────
+    'aciklovir' => [
+        'indications'    => 'Herpetické infekcie (HSV, VZV).',
+        'renal_dosing'   => "Renálne eliminovaný — dávkovať podľa CrCl (znížiť dávku/predĺžiť interval). Pri i.v. podaní zabezpečiť dostatočnú hydratáciu a pomalú infúziu (prevencia kryštálovej nefropatie). Pri hemodialýze doplniť dávku po procedúre.",
+        'nephrotoxicity' => 'Kryštálová nefropatia (intratubulárna precipitácia acikloviru) — najmä pri rýchlom i.v. boluse, dehydratácii a vysokých dávkach; zriedkavejšie akútna intersticiálna nefritída. Zvyčajne reverzibilná pri hydratácii.',
+        'dialyzability'  => 'Dialyzovateľný — doplnková dávka po HD.',
+        'warnings'       => 'Neurotoxicita (zmätenosť, myoklonus) pri kumulácii u CKD; pred i.v. podaním zabezpečiť hydratáciu.',
+        'monitoring'     => 'Funkcia obličiek, hydratácia, neurologické príznaky.',
+    ],
+    'tenofovir' => [
+        'indications'    => 'HIV infekcia, chronická hepatitída B.',
+        'renal_dosing'   => "Tenofovir-dizoproxil (TDF) sa renálne eliminuje — dávkovať podľa CrCl (predĺžiť interval pri zníženej funkcii). Pri proximálnej tubulopatii zvážiť prechod na tenofovir-alafenamid (TAF, nižšia renálna/kostná toxicita).",
+        'nephrotoxicity' => 'Proximálna tubulopatia (Fanconiho syndróm — glykozúria, fosfatúria, proteinúria, hypofosfatémia), pokles eGFR, nefrogénny diabetes insipidus; TDF > TAF.',
+        'dialyzability'  => 'Dialyzovateľný — dávkovať podľa CrCl, pri HD upraviť interval.',
+        'warnings'       => 'Sledovať fosfát, glykozúriu a proteinúriu; kostná demineralizácia.',
+        'monitoring'     => 'eGFR, sérový fosfát, moč (glukóza, bielkovina) periodicky.',
+    ],
+    'amfotericin' => [
+        'indications'    => 'Závažné systémové mykózy.',
+        'renal_dosing'   => "Sám výrazne nefrotoxický — preferovať lipozomálnu formuláciu (nižšia nefrotoxicita), zabezpečiť hydratáciu a soľnú nálož; dávkovanie sa neriadi primárne podľa eGFR, liečbu však treba viesť opatrne.",
+        'nephrotoxicity' => 'Renálna vazokonstrikcia a priame tubulárne poškodenie → pokles eGFR, renálne straty kália a horčíka (hypokaliémia, hypomagneziémia), renálna tubulárna acidóza, polyúria. Lipozomálna forma menej nefrotoxická.',
+        'dialyzability'  => 'Nedialyzovateľný (veľká, viazaná molekula).',
+        'warnings'       => 'Infúzne reakcie (horúčka, triaška), elektrolytové straty; pri renálnom riziku preferovať lipozomálnu formu.',
+        'monitoring'     => 'Kreatinín, kálium a horčík často; bilancia tekutín.',
+    ],
+    // ── CKD-MBD, anémia a dialýza (2. vlna) ───────────────────────────────────
+    'kalcitriol' => [
+        'indications'    => 'Sekundárna hyperparatyreóza a hypokalciémia pri CKD; renálna osteodystrofia.',
+        'renal_dosing'   => "Aktívny vitamín D (nevyžaduje renálnu 1α-hydroxyláciu) — dávka sa titruje podľa kalcia, fosfátu a PTH, nie podľa eGFR.",
+        'nephrotoxicity' => 'Nie priamo; hyperkalciémia môže zhoršiť funkciu obličiek a podporiť nefrokalcinózu.',
+        'dialyzability'  => 'Neaplikovateľné na dávkovanie (titrácia podľa laboratórnych hodnôt).',
+        'warnings'       => 'Hyperkalciémia a hyperfosfatémia (riziko cievnej kalcifikácie) — pred začatím korigovať fosfát.',
+        'monitoring'     => 'Kalcium, fosfát a PTH (najmä na začiatku a po titrácii).',
+    ],
+    'parikalcitol' => [
+        'indications'    => 'Sekundárna hyperparatyreóza pri CKD (vrátane dialýzy).',
+        'renal_dosing'   => "Selektívny aktivátor receptora pre vitamín D — titrácia podľa PTH a kalcia, bez úpravy podľa eGFR.",
+        'nephrotoxicity' => 'Nie priamo; hyperkalciémia môže zhoršiť funkciu obličiek.',
+        'dialyzability'  => 'Titrácia podľa laboratórnych hodnôt.',
+        'warnings'       => 'Hyperkalciémia/hyperfosfatémia (menej výrazné ako kalcitriol); riziko adynamickej kostnej choroby pri nadmernej supresii PTH.',
+        'monitoring'     => 'Kalcium, fosfát, PTH.',
+    ],
+    'roxadustat' => [
+        'indications'    => 'Anémia pri chronickej chorobe obličiek (dialyzovaní aj nedialyzovaní).',
+        'renal_dosing'   => "Perorálny inhibítor HIF-prolylhydroxylázy — dávka podľa hemoglobínu a telesnej hmotnosti, titrácia podľa odpovede; bez primárnej úpravy podľa eGFR.",
+        'nephrotoxicity' => 'Nie je nefrotoxický.',
+        'dialyzability'  => 'Podľa SPC bez potreby doplnkovej dávky pri hemodialýze.',
+        'warnings'       => 'Trombembolické príhody, hypertenzia; pred začatím doplniť deficit železa; cieľový hemoglobín neprestreľovať (KV riziko ako pri ESA).',
+        'monitoring'     => 'Hemoglobín, zásoby železa, krvný tlak.',
+    ],
+    // ── Úprava dávky / nefroprotektíva (2. vlna) ──────────────────────────────
+    'kolchicin' => [
+        'indications'    => 'Dnavý záchvat a profylaxia, familiárna stredomorská horúčka (FMF), perikarditída.',
+        'renal_dosing'   => "Pri zníženej funkcii obličiek znížiť dávku a predĺžiť interval; pri ťažkej CKD/dialýze sa kumuluje — opatrnosť, vyhnúť sa kumulatívnej profylaxii. Nebezpečné interakcie s inhibítormi CYP3A4/P-gp (makrolidy, azoly, cyklosporín, statíny).",
+        'nephrotoxicity' => 'Nie je priamo nefrotoxický.',
+        'dialyzability'  => 'Nedialyzovateľný (veľký distribučný objem) — HD pri toxicite neúčinná.',
+        'warnings'       => 'Úzke terapeutické okno — pri CKD a liekových interakciách riziko ťažkej toxicity (myelosupresia, neuromyopatia, multiorgánové zlyhanie).',
+        'monitoring'     => 'Krvný obraz, svalové príznaky (CK), liekové interakcie.',
+    ],
+    'dulaglutid' => [
+        'indications'    => 'Diabetes 2. typu; kardiovaskulárny benefit (REWIND).',
+        'renal_dosing'   => "Úprava dávky podľa funkcie obličiek nie je potrebná; obmedzené skúsenosti pri terminálnom zlyhaní obličiek. Titrovať pre GI toleranciu.",
+        'nephrotoxicity' => 'Nie je nefrotoxický; ťažké GI nežiaduce účinky môžu dehydratáciou vyvolať prerenálne AKI.',
+        'dialyzability'  => 'Nedialyzovateľný (veľká, viazaná molekula).',
+        'warnings'       => 'Nauzea/vracanie → riziko hypovolémie a AKI; pankreatitída.',
+        'monitoring'     => 'Funkcia obličiek pri výrazných GI ťažkostiach.',
+    ],
 ];
 
 $updated = 0;

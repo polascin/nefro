@@ -62,6 +62,17 @@ $seed = [
     // Transplantácia / imunosupresia
     ['chembl' => 'CHEMBL160',     'slug' => 'cyklosporin',       'name_sk' => 'Cyklosporín',        'category' => 'transplant',    'drug_class' => 'Kalcineurínový inhibítor', 'atc' => 'L04AD01'],
     ['chembl' => 'CHEMBL866',     'slug' => 'mykofenolat',       'name_sk' => 'Mykofenolát mofetil', 'category' => 'transplant',   'drug_class' => 'Inhibítor IMPDH'],
+    // Nefrotoxické lieky (2. vlna)
+    ['chembl' => 'CHEMBL184',     'slug' => 'aciklovir',         'name_sk' => 'Aciklovir',          'category' => 'nephrotoxic',   'drug_class' => 'Antivirotikum'],
+    ['chembl' => 'CHEMBL1538',    'slug' => 'tenofovir',         'name_sk' => 'Tenofovir-dizoproxil', 'category' => 'nephrotoxic', 'drug_class' => 'Antivirotikum (NtRTI)', 'atc' => 'J05AF07'],
+    ['chembl' => 'CHEMBL267345',  'slug' => 'amfotericin',       'name_sk' => 'Amfotericín B',      'category' => 'nephrotoxic',   'drug_class' => 'Polyénové antimykotikum'],
+    // CKD-MBD, anémia a dialýza (2. vlna)
+    ['chembl' => 'CHEMBL846',     'slug' => 'kalcitriol',        'name_sk' => 'Kalcitriol',         'category' => 'dialysis',      'drug_class' => 'Aktívny vitamín D'],
+    ['chembl' => 'CHEMBL1200622', 'slug' => 'parikalcitol',      'name_sk' => 'Parikalcitol',       'category' => 'dialysis',      'drug_class' => 'Analóg vitamínu D'],
+    ['chembl' => 'CHEMBL2338329', 'slug' => 'roxadustat',        'name_sk' => 'Roxadustat',         'category' => 'dialysis',      'drug_class' => 'HIF-PHI (anémia pri CKD)'],
+    // Úprava dávky / nefroprotektíva (2. vlna)
+    ['chembl' => 'CHEMBL107',     'slug' => 'kolchicin',         'name_sk' => 'Kolchicín',          'category' => 'dose_adjust',   'drug_class' => 'Inhibítor mikrotubulov'],
+    ['chembl' => 'CHEMBL2108027', 'slug' => 'dulaglutid',        'name_sk' => 'Dulaglutid',         'category' => 'nephroprotect', 'drug_class' => 'GLP-1 receptorový agonista'],
 ];
 
 /** Stiahne JSON z ChEMBL REST; vráti dekódované pole alebo null pri chybe. */

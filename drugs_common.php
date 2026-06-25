@@ -15,7 +15,7 @@ function dgCategoryLabels(): array
         'diuretic'      => 'Diuretiká',
         'dose_adjust'   => 'Úprava dávky podľa obličiek',
         'nephrotoxic'   => 'Nefrotoxické lieky',
-        'dialysis'      => 'Lieky a dialýza',
+        'dialysis'      => 'CKD-MBD, anémia a dialýza',
         'transplant'    => 'Transplantácia / imunosupresia',
         'other'         => 'Ostatné',
     ];
