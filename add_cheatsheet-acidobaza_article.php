@@ -133,7 +133,12 @@ $articles[] = [
 
 <hr>
 
-<p><em><strong>Zdroj:</strong> Berend K. et al. <em>Physiological Approach to Assessment of Acid–Base Disturbances</em>, N Engl J Med 2014; Kraut JA, Madias NE. <em>Serum Anion Gap</em>, Clin J Am Soc Nephrol 2007. Orientačná pomôcka — nenahrádza klinický úsudok.</em></p>
+<p><strong>Zdroje a odkazy:</strong></p>
+<ul>
+  <li><a href="https://pubmed.ncbi.nlm.nih.gov/25295502/" target="_blank" rel="noopener noreferrer">Berend K, et al. Physiological Approach to Assessment of Acid–Base Disturbances. N Engl J Med 2014;371:1434–45</a></li>
+  <li><a href="https://pubmed.ncbi.nlm.nih.gov/17699401/" target="_blank" rel="noopener noreferrer">Kraut JA, Madias NE. Serum Anion Gap: Its Uses and Limitations in Clinical Medicine. Clin J Am Soc Nephrol 2007;2(1):162–74</a></li>
+</ul>
+<p><em>Orientačná pomôcka — nenahrádza klinický úsudok.</em></p>
 HTML,
 ];
 

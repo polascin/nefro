@@ -99,7 +99,12 @@ $articles[] = [
 
 <hr>
 
-<p><em><strong>Zdroj:</strong> Ellison DH, Felker GM. <em>Diuretic Treatment in Heart Failure</em>, N Engl J Med 2017; ESC a štandardné nefrologické/kardiologické odporúčania. Dávky over vždy podľa platného SPC. Orientačná pomôcka — nenahrádza klinický úsudok.</em></p>
+<p><strong>Zdroje a odkazy:</strong></p>
+<ul>
+  <li><a href="https://pubmed.ncbi.nlm.nih.gov/29141174/" target="_blank" rel="noopener noreferrer">Ellison DH, Felker GM. Diuretic Treatment in Heart Failure. N Engl J Med 2017;377:1964–75</a></li>
+  <li><a href="https://www.escardio.org/Guidelines/Clinical-Practice-Guidelines" target="_blank" rel="noopener noreferrer">ESC — Clinical Practice Guidelines (srdcové zlyhávanie)</a></li>
+</ul>
+<p><em>Dávky over vždy podľa platného SPC. Orientačná pomôcka — nenahrádza klinický úsudok.</em></p>
 HTML,
 ];
 

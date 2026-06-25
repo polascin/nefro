@@ -103,7 +103,12 @@ $articles[] = [
 
 <hr>
 
-<p><em><strong>Zdroj:</strong> KDIGO a štandardné interné/nefrologické odporúčania; Sterns RH. <em>Disorders of Plasma Sodium</em>, N Engl J Med 2015. Orientačná pomôcka — nenahrádza klinický úsudok.</em></p>
+<p><strong>Zdroje a odkazy:</strong></p>
+<ul>
+  <li><a href="https://pubmed.ncbi.nlm.nih.gov/25551526/" target="_blank" rel="noopener noreferrer">Sterns RH. Disorders of Plasma Sodium — Causes, Consequences, and Correction. N Engl J Med 2015;372:55–65</a></li>
+  <li><a href="https://kdigo.org/guidelines/" target="_blank" rel="noopener noreferrer">KDIGO — klinické odporúčania (poruchy elektrolytov a CKD)</a></li>
+</ul>
+<p><em>Orientačná pomôcka — nenahrádza klinický úsudok.</em></p>
 HTML,
 ];
 

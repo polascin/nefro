@@ -101,7 +101,12 @@ $articles[] = [
 
 <hr>
 
-<p><em><strong>Zdroj:</strong> Semler MW et al. <em>Balanced Crystalloids versus Saline (SMART)</em>, N Engl J Med 2018; Finfer S et al. <em>Balanced Multielectrolyte Solution (PLUS)</em>, N Engl J Med 2022; štandardné odporúčania intenzívnej a internej medicíny. Orientačná pomôcka — nenahrádza klinický úsudok.</em></p>
+<p><strong>Zdroje a odkazy:</strong></p>
+<ul>
+  <li><a href="https://pubmed.ncbi.nlm.nih.gov/29485925/" target="_blank" rel="noopener noreferrer">Semler MW, et al. Balanced Crystalloids versus Saline in Critically Ill Adults (SMART). N Engl J Med 2018;378:829–39</a></li>
+  <li><a href="https://pubmed.ncbi.nlm.nih.gov/35041780/" target="_blank" rel="noopener noreferrer">Finfer S, et al. Balanced Multielectrolyte Solution versus Saline in the Critically Ill (PLUS). N Engl J Med 2022;386:815–26</a></li>
+</ul>
+<p><em>Orientačná pomôcka — nenahrádza klinický úsudok.</em></p>
 HTML,
 ];
 
