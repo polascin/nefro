@@ -126,6 +126,18 @@ $seed = [
     ['chembl' => 'CHEMBL1072',    'slug' => 'bumetanid',         'name_sk' => 'Bumetanid',          'category' => 'diuretic',      'drug_class' => 'Slučkové diuretikum', 'atc' => 'C03CA02'],
     ['chembl' => 'CHEMBL1601669', 'slug' => 'alfakalcidol',      'name_sk' => 'Alfakalcidol',       'category' => 'dialysis',      'drug_class' => 'Analóg vitamínu D (1α-OH-D₃)', 'atc' => 'A11CC03'],
     ['chembl' => 'CHEMBL1201594', 'slug' => 'rasburikaza',       'name_sk' => 'Rasburikáza',        'category' => 'other',         'drug_class' => 'Rekombinantná urátoxidáza', 'atc' => 'M04AX01'],
+    // ── 7. vlna — antimikrobiká, acidobáza, diuretická rezistencia, analgézia ──
+    ['chembl' => 'CHEMBL1353',    'slug' => 'natriumbikarbonat', 'name_sk' => 'Hydrogenuhličitan sodný', 'category' => 'dialysis',  'drug_class' => 'Alkalizans (korekcia metabolickej acidózy)', 'atc' => 'B05XA02'],
+    ['chembl' => 'CHEMBL1055',    'slug' => 'chlortalidon',      'name_sk' => 'Chlórtalidon',       'category' => 'diuretic',      'drug_class' => 'Tiazidu podobné diuretikum', 'atc' => 'C03BA04'],
+    ['chembl' => 'CHEMBL878',     'slug' => 'metolazon',         'name_sk' => 'Metolazón',          'category' => 'diuretic',      'drug_class' => 'Tiazidu podobné diuretikum', 'atc' => 'C03BA08'],
+    ['chembl' => 'CHEMBL127',     'slug' => 'meropenem',         'name_sk' => 'Meropeném',          'category' => 'dose_adjust',   'drug_class' => 'Karbapenémové antibiotikum', 'atc' => 'J01DH02'],
+    ['chembl' => 'CHEMBL702',     'slug' => 'piperacilin-tazobaktam', 'name_sk' => 'Piperacilín/tazobaktám', 'category' => 'nephrotoxic', 'drug_class' => 'Penicilínové antibiotikum (s tazobaktámom)', 'atc' => 'J01CR05'],
+    ['chembl' => 'CHEMBL666',     'slug' => 'foscarnet',         'name_sk' => 'Foskarnet',          'category' => 'nephrotoxic',   'drug_class' => 'Antivirotikum (analóg pyrofosfátu)', 'atc' => 'J05AD01'],
+    ['chembl' => 'CHEMBL182',     'slug' => 'ganciklovir',       'name_sk' => 'Ganciklovir',        'category' => 'dose_adjust',   'drug_class' => 'Antivirotikum (anti-CMV)', 'atc' => 'J05AB06'],
+    ['chembl' => 'CHEMBL6067481', 'slug' => 'kolistin',          'name_sk' => 'Kolistín (kolistimetát)', 'category' => 'nephrotoxic', 'drug_class' => 'Polymyxínové antibiotikum', 'atc' => 'J01XB01'],
+    ['chembl' => 'CHEMBL70',      'slug' => 'morfin',            'name_sk' => 'Morfín',             'category' => 'dose_adjust',   'drug_class' => 'Opioidné analgetikum', 'atc' => 'N02AA01'],
+    ['chembl' => 'CHEMBL4802224', 'slug' => 'sukroferik',        'name_sk' => 'Sukroferik-oxyhydroxid', 'category' => 'dialysis',  'drug_class' => 'Viazač fosfátov (na báze železa)', 'atc' => 'V03AE05'],
+    ['chembl' => 'CHEMBL1487',    'slug' => 'atorvastatin',      'name_sk' => 'Atorvastatín',       'category' => 'dose_adjust',   'drug_class' => 'Statín (inhibítor HMG-CoA reduktázy)', 'atc' => 'C10AA05'],
 ];
 
 /** Stiahne JSON z ChEMBL REST; vráti dekódované pole alebo null pri chybe. */
