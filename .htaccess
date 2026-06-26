@@ -131,6 +131,9 @@ ServerSignature Off
 <Files "newsletter_worker.php">
     Require all denied
 </Files>
+<Files "legal_notice_worker.php">
+    Require all denied
+</Files>
 <Files "newsletter_weekly_digest.php">
     Require all denied
 </Files>

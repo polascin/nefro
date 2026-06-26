@@ -11,6 +11,7 @@ Disallow: /admin.php
 Disallow: /admin_articles.php
 Disallow: /admin_discussion.php
 Disallow: /admin_newsletter.php
+Disallow: /admin_legal_notice.php
 Disallow: /admin_trials.php
 Disallow: /admin_drugs.php
 Disallow: /admin_drugs_review.php

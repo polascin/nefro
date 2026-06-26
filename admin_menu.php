@@ -7,6 +7,7 @@ $adminNavItems = [
     'admin_trials.php' => 'Štúdie',
     'admin_drugs.php' => 'Lieky',
     'admin_newsletter.php' => 'Newsletter',
+    'admin_legal_notice.php' => 'Právne oznámenia',
     'admin_discussion.php' => 'Diskusia',
 ];
 $currentPage = basename($_SERVER['PHP_SELF']);

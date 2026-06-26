@@ -2779,6 +2779,13 @@ input:disabled + .slider:before {
     border-left: 4px solid var(--accent-color);
 }
 
+.legal-change-list {
+    margin: 0;
+    padding-left: 18px;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
 .legal-regions {
     display: grid;
     gap: 12px;
