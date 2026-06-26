@@ -31,29 +31,29 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Extrémne horúčavy zasahujú viac orgánových systémov naraz a ich dopad sa často podceňuje, lebo sa zriedka uvádzajú ako priama príčina ochorenia. Pre nefrológiu je kľúčové, že teplo ľahšie spúšťa dehydratáciu, elektrolytové poruchy a krehkú obehovú rovnováhu — najmä u pacientov s ochorením obličiek a pri liečbe diuretikami.',
+    'excerpt'      => 'Extrémne horúčavy zasahujú viac orgánových systémov naraz a ich dôsledky sa často podceňujú, lebo sa zriedka uvádzajú ako priama príčina ochorenia. Pre nefrológiu je kľúčové, že teplo ľahšie spúšťa dehydratáciu, elektrolytové poruchy a krehkú obehovú rovnováhu — najmä u pacientov s ochorením obličiek a pri liečbe diuretikami.',
     'content'      => <<<'HTML'
-<p>Extrémne teploty už nie sú len „letná nepríjemnosť“. Nové údaje podľa prehľadu Medscape ukazujú, že horúčavy výrazne zasahujú viac orgánových systémov naraz a sú spojené s vyššou chorobnosťou aj s počtom hospitalizácií. Zdôrazňuje sa aj to, že presné dopady sa často ťažko merajú, lebo horúčavy nebývajú v záznamoch uvádzané ako priama príčina ochorenia či úmrtia, takže sa používajú štatistické modely.</p>
+<p>Extrémne teploty už nie sú len „letná nepríjemnosť“. Nové údaje podľa prehľadu Medscape ukazujú, že horúčavy výrazne zasahujú viac orgánových systémov naraz a sú spojené s vyššou chorobnosťou aj s vyšším počtom hospitalizácií. Zdôrazňuje sa aj to, že presný dosah sa často ťažko meria, lebo horúčavy nebývajú v záznamoch uvádzané ako priama príčina ochorenia či úmrtia, a preto sa používajú štatistické modely.</p>
 
-<p>Článok rámcuje horúčavy ako významné environmentálne zdravotné riziko, ktoré rastie spolu s frekvenciou a dĺžkou epizód.</p>
+<p>Článok predstavuje horúčavy ako významné environmentálne zdravotné riziko, ktoré narastá spolu s frekvenciou a dĺžkou horúčavových epizód.</p>
 
 <h2>Prečo je riziko „podceňované“</h2>
 
-<p>Horúčavy sa v praxi zriedkavo deklarujú ako jedinečná príčina diagnózy. Preto sa odhad dopadu robí nepriamo. Ako príklad sa uvádza, že Inštitút Roberta Kocha odhadoval približne 2500 úmrtí v Nemecku v roku 2025, ktoré možno pripísať horúčavám, pričom ide o modelovaný odhad.</p>
+<p>Horúčavy sa v praxi zriedkavo označujú ako jediná príčina diagnózy. Ich dosah sa preto odhaduje nepriamo. Ako príklad sa uvádza, že Inštitút Roberta Kocha odhadol približne 2 500 úmrtí v Nemecku v roku 2025, ktoré možno pripísať horúčavám, pričom ide o modelovaný odhad.</p>
 
-<p>Okrem úmrtnosti sa v prácach objavujú aj ukazovatele chorobnosti. Po jednom dni s teplotami nad 30 °C sa uvádza nárast hlásení práceneschopnosti o 3,5 %, po 5 po sebe idúcich dňoch sa nárast zvyšoval a po 7 dňoch dosiahol 10,8 %.</p>
+<p>Okrem úmrtnosti sa v prácach objavujú aj ukazovatele chorobnosti. Po jednom dni s teplotami nad 30 °C sa uvádza nárast hlásení práceneschopnosti o 3,5 %, po piatich po sebe nasledujúcich dňoch bol nárast vyšší a po siedmich dňoch dosiahol 10,8 %.</p>
 
 <h2>Mechanizmy: prečo horúčavy poškodzujú orgány</h2>
 
-<p>Prehľad zdôrazňuje, že horúčavy spôsobujú záťaž na kardiovaskulárny systém, dýchanie aj nervový systém, a zároveň zvyšujú riziká spojené s dehydratáciou.</p>
+<p>Prehľad zdôrazňuje, že horúčavy zaťažujú kardiovaskulárny, dýchací aj nervový systém a zároveň zvyšujú riziká spojené s dehydratáciou.</p>
 
 <p>Kľúčové mechanizmy, ktoré článok opisuje:</p>
 
 <ul>
-  <li><strong>Kardiovaskulárna záťaž:</strong> pri rozšírení ciev klesá krvný tlak a srdce musí pracovať intenzívnejšie. U ľudí s pridruženými ochoreniami to zvyšuje riziko angíny, infarktu, srdcového zlyhávania a arytmií.</li>
-  <li><strong>Dehydratácia a poruchy elektrolytov:</strong> nadmerné potenie a strata tekutín môžu viesť k dehydratácii a elektrolytovým odchýlkam, čím sa zvyšuje riziko kolapsu obehovej stability a trombózy.</li>
-  <li><strong>Konkurencia faktorov:</strong> horúčavy často prebiehajú spolu so zvýšenou koncentráciou ozónu a častíc, čo môže zhoršovať respiračné ochorenia vrátane CHOCHP a astmy.</li>
-  <li><strong>Lieky ako zosilňujúci faktor:</strong> spomínajú sa najmä diuretiká a beta-blokátory, ktoré môžu riziká spojené s obehovou stabilitou a hydratáciou zhoršiť.</li>
+  <li><strong>Kardiovaskulárna záťaž:</strong> pri rozšírení ciev klesá krvný tlak a srdce musí pracovať intenzívnejšie. U ľudí s pridruženými ochoreniami to zvyšuje riziko angíny pektoris, infarktu myokardu, srdcového zlyhávania a arytmií.</li>
+  <li><strong>Dehydratácia a poruchy elektrolytov:</strong> nadmerné potenie a strata tekutín môžu viesť k dehydratácii a elektrolytovým odchýlkam, čím sa zvyšuje riziko obehového kolapsu a trombózy.</li>
+  <li><strong>Súbeh faktorov:</strong> horúčavy často prebiehajú súčasne so zvýšenou koncentráciou ozónu a tuhých častíc, čo môže zhoršovať respiračné ochorenia vrátane CHOCHP a astmy.</li>
+  <li><strong>Lieky ako zosilňujúci faktor:</strong> spomínajú sa najmä diuretiká a betablokátory, ktoré môžu obehovú stabilitu a hydratáciu ešte zhoršiť.</li>
 </ul>
 
 <h3>Osobitne zraniteľné skupiny</h3>
@@ -62,37 +62,37 @@ $articles[] = [
 
 <h2>Mozog, nervový systém a psychika</h2>
 
-<p>Horúčavy môžu ovplyvniť nervový systém viacerými cestami. V texte sa uvádza napríklad oxidačný stres, zápalové zmeny a porucha krvno-mozgovej bariéry. Zvyšuje sa riziko cievnej mozgovej príhody, môžu sa zhoršovať symptómy pri Parkinsonovej chorobe a roztrúsenej skleróze, a existujú dôkazy, že teplo môže vyvolávať záchvaty alebo zhoršovať priebeh pri epilepsii či migréne. Pri demencii sa uvádza súvislosť s vyšším počtom hospitalizácií a úmrtí.</p>
+<p>Horúčavy môžu ovplyvniť nervový systém viacerými mechanizmami. V texte sa uvádza napríklad oxidačný stres, zápalové zmeny a porucha hematoencefalickej bariéry. Zvyšuje sa riziko cievnej mozgovej príhody, môžu sa zhoršovať príznaky pri Parkinsonovej chorobe a roztrúsenej skleróze a existujú dôkazy, že teplo môže vyvolávať záchvaty alebo zhoršovať priebeh epilepsie či migrény. Pri demencii sa uvádza súvislosť s vyšším počtom hospitalizácií a úmrtí.</p>
 
-<p>Článok zároveň spomína aj psychické dopady: zníženú schopnosť sústrediť sa, horší spánok, podráždenosť a v niektorých prípadoch agresívne správanie.</p>
+<p>Článok zároveň spomína aj psychické dôsledky: zníženú schopnosť sústrediť sa, horší spánok, podráždenosť a v niektorých prípadoch agresívne správanie.</p>
 
 <h2>Prečo je horúčava relevantná aj v nefrológii</h2>
 
-<p>V prehľade je jasne uvedené, že <strong>ľudia s ochorením obličiek</strong> patria medzi obzvlášť zraniteľných pacientov. Argumentačný rámec stojí na mechanizmoch, ktoré sú v nefrológii klinicky veľmi známe:</p>
+<p>V prehľade je jasne uvedené, že <strong>ľudia s ochorením obličiek</strong> patria medzi obzvlášť zraniteľných pacientov. Toto tvrdenie sa opiera o mechanizmy, ktoré sú v nefrológii klinicky dobre známe:</p>
 
 <ol>
-  <li><strong>Dehydratácia a pokles perfúzie.</strong> Pri strate tekutín a rozkolísaní cirkulácie sa môže zhoršiť obličková perfúzia a rastie riziko akútnej destabilizácie obličkových funkcií. Článok to priamo neprezentuje ako „AKI pri horúčavách“, ale popisuje dehydratáciu a elektrolytové poruchy ako rizikové faktory, ktoré môžu u pacientov s chronickým ochorením obličiek rýchlejšie viesť ku klinickej zhoršenosti.</li>
-  <li><strong>Elektrolytové poruchy.</strong> Horúčavy môžu zvyšovať riziko porúch elektrolytov. U nefrologických pacientov je rezerva často menšia, preto je dôležitejšie cieliť na včasné rozpoznanie prejavov a skorú úpravu režimu.</li>
-  <li><strong>Lieky a ich „teplotná“ stránka.</strong> Diuretiká sú v texte explicitne spomenuté. Prakticky to znamená, že v horúčavách sa môže ľahšie dostať pacient do situácie, kde je obehová rovnováha krehká: na jednej strane potreba kontroly retencie, na druhej strane riziko intravaskulárneho zlyhania z dehydratácie. Pri nefrologických diagnózach sa preto režim liečby nesmie v horúčavách automatizovať, ale vyžaduje individuálne posúdenie ošetrujúcim tímom.</li>
+  <li><strong>Dehydratácia a pokles perfúzie.</strong> Pri strate tekutín a rozkolísaní cirkulácie sa môže zhoršiť perfúzia obličiek a rastie riziko akútneho zhoršenia obličkových funkcií. Článok to priamo neoznačuje ako „AKI pri horúčavách“, ale opisuje dehydratáciu a elektrolytové poruchy ako rizikové faktory, ktoré môžu u pacientov s chronickým ochorením obličiek rýchlejšie viesť ku klinickému zhoršeniu.</li>
+  <li><strong>Elektrolytové poruchy.</strong> Horúčavy môžu zvyšovať riziko porúch elektrolytov. U nefrologických pacientov je fyziologická rezerva často menšia, a preto je o to dôležitejšie zamerať sa na včasné rozpoznanie prejavov a skorú úpravu režimu.</li>
+  <li><strong>Lieky a ich „teplotná“ stránka.</strong> Diuretiká sú v texte explicitne spomenuté. Prakticky to znamená, že počas horúčav sa pacient môže ľahšie dostať do situácie, v ktorej je obehová rovnováha krehká: na jednej strane potreba kontroly retencie tekutín, na druhej strane riziko hypovolémie z dehydratácie. Pri nefrologických diagnózach sa preto liečebný režim počas horúčav nesmie upravovať paušálne, ale vyžaduje individuálne posúdenie ošetrujúcim tímom.</li>
 </ol>
 
 <h2>Čo by mali riešiť ambulancie a oddelenia (prakticky)</h2>
 
-<p>Keďže článok zdôrazňuje rastúce zdravotné bremeno a potrebu adaptačných opatrení, dá sa z textu vyčítať viacero praktických smerovaní. V nefrológii sa to dá preložiť do troch úrovní: prevencia, včasné rozpoznanie a systémová pripravenosť.</p>
+<p>Keďže článok zdôrazňuje rastúce zdravotné bremeno a potrebu adaptačných opatrení, dá sa z neho odvodiť viacero praktických odporúčaní. V nefrológii ich možno rozčleniť do troch rovín: prevencia, včasné rozpoznanie a systémová pripravenosť.</p>
 
 <ul>
-  <li><strong>Prevencia pred horúčavou:</strong> identifikovať pacientov s ochorením obličiek, ktorí majú vyššie riziko dekompenzácie pri teplotnom strese, a pripraviť im jednoduchý plán režimu (tekutiny, monitoring subjektívnych príznakov, kedy kontaktovať lekára).</li>
-  <li><strong>Včasné rozpoznanie:</strong> zhoršenie hydratácie, slabosť, závraty, zmeny v močení, zhoršenie stavu pri známom chronickom ochorení obličiek, prípadne zhoršenie základných sprievodných ochorení treba vnímať ako potenciálne časové okno pre intervenciu.</li>
-  <li><strong>Systémová úroveň:</strong> článok uvádza, že do konca roka 2024 mali iba 20 nemeckých obcí (z viacerých tisíc) heat-health action plan. Zároveň sa spomína povinnosť vypracovať plány a pravidelne aktualizovať systémy varovania a akčné plány. Pre nefrologické zariadenia to znamená mať pripravené postupy pre rizikové skupiny, dostupnosť podpory a včasnú komunikáciu pri výstrahách.</li>
+  <li><strong>Prevencia pred horúčavou:</strong> identifikovať pacientov s ochorením obličiek, ktorí majú vyššie riziko dekompenzácie pri tepelnej záťaži, a pripraviť im jednoduchý režimový plán (príjem tekutín, sledovanie subjektívnych príznakov, kedy kontaktovať lekára).</li>
+  <li><strong>Včasné rozpoznanie:</strong> zhoršenie stavu hydratácie, slabosť, závraty, zmeny v močení, zhoršenie stavu pri známom chronickom ochorení obličiek, prípadne dekompenzáciu pridružených ochorení treba vnímať ako potenciálne časové okno na intervenciu.</li>
+  <li><strong>Systémová úroveň:</strong> článok uvádza, že do konca roka 2024 malo iba 20 nemeckých obcí (z viacerých tisíc) vypracovaný akčný plán ochrany zdravia počas horúčav (tzv. heat-health action plan). Zároveň sa spomína povinnosť takéto plány vypracovať a pravidelne aktualizovať výstražné systémy aj akčné plány. Pre nefrologické zariadenia to znamená mať pripravené postupy pre rizikové skupiny, zabezpečenú dostupnosť podpory a včasnú komunikáciu pri výstrahách.</li>
 </ul>
 
 <h2>Deti, gravidita a dlhodobá záťaž</h2>
 
-<p>Aj keď toto nie je primárne nefrologická téma, článok uvádza dôležité informácie: deti sú citlivejšie, lebo ich termoregulácia sa ešte vyvíja a sú viac závislé od starostlivosti. V gravidite sa spomína, že horúčava môže viesť k dehydratácii a kardiovaskulárnej záťaži a viaceré štúdie spájajú stres z horúčav s predčasným pôrodom.</p>
+<p>Hoci nejde primárne o nefrologickú tému, článok uvádza dôležité informácie: deti sú citlivejšie, lebo ich termoregulácia sa ešte vyvíja a sú viac odkázané na starostlivosť iných. V súvislosti s graviditou sa uvádza, že horúčava môže viesť k dehydratácii a kardiovaskulárnej záťaži; viaceré štúdie navyše spájajú tepelný stres s predčasným pôrodom.</p>
 
 <h2>Záver</h2>
 
-<p>Extrémne horúčavy sa podľa zdroja menia na stabilnú zdravotnú hrozbu, ktorá zasahuje srdce, pľúca, obličky aj mozog. Pre nefrológiu je kľúčové vnímať horúčavu ako situáciu, kde sa ľahšie aktivujú mechanizmy dehydratácie a elektrolytových porúch a kde niektoré lieky môžu riziko zosilniť. Klinicky to znamená včasnú prevenciu, jasné „kedy kontaktovať lekára“ a pripravenosť na rýchlu reakciu pri výstrahách.</p>
+<p>Extrémne horúčavy sa podľa zdroja menia na trvalú zdravotnú hrozbu, ktorá zasahuje srdce, pľúca, obličky aj mozog. Pre nefrológiu je kľúčové vnímať horúčavu ako situáciu, v ktorej sa ľahšie aktivujú mechanizmy dehydratácie a elektrolytových porúch a v ktorej môžu niektoré lieky riziko ešte zosilniť. Klinicky to znamená včasnú prevenciu, jasné pravidlo „kedy kontaktovať lekára“ a pripravenosť na rýchlu reakciu pri výstrahách.</p>
 
 <hr>
 
