@@ -874,6 +874,7 @@ foreach ($curation as $slug => $fields) {
 // verejný register SPC/PI (https://dailymed.nlm.nih.gov); dotaz podľa INN názvu lieku.
 // Pre EU/SK kontext ostávajú EMA EPAR odkazy doplnené synchronizáciou z ChEMBL.
 $srcAdded = 0;
+/** @var \PDO $pdo */
 $srcStmt = $pdo->prepare('UPDATE drugs SET source_refs = :src WHERE id = :id');
 foreach ($pdo->query('SELECT id, name_intl, source_refs FROM drugs')->fetchAll(\PDO::FETCH_ASSOC) as $d) {
     $name = trim((string) ($d['name_intl'] ?? ''));
