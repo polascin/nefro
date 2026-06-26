@@ -40,8 +40,8 @@ function legalInfo(): array
         'jurisdiction'             => 'Slovenskej republiky (EÚ)',
         'supervisoryAuthority'     => 'Úrad na ochranu osobných údajov Slovenskej republiky',
         'supervisoryAuthorityUrl'  => 'https://www.uoou.sk',
-        'effectiveDate'            => '2026-06-10',
-        'version'                  => '2.2',
+        'effectiveDate'            => '2026-06-26',
+        'version'                  => '2.3',
         'consentVersion'           => '2026-06-02',
     ];
 }
@@ -253,6 +253,7 @@ function legalStoredItems(): array
 function legalRecentUpdates(): array
 {
     return [
+        'Rozšírili sme Službu o informačnú databázu liekov v nefrológii, register klinických štúdií (dáta z verejného registra ClinicalTrials.gov) a ďalšie interaktívne nástroje; všetko slúži výhradne na informačné a vzdelávacie účely a nespracúva žiadne osobné údaje návštevníkov.',
         'Do zoznamu sprostredkovateľov sme doplnili Twilio Inc. (USA), ktoré odosiela overovacie SMS kódy pri overení telefónneho čísla; prenos do USA je krytý štandardnými zmluvnými doložkami (SCC).',
         'Webové písmo (Inter) sme presunuli na vlastný server — pri jeho načítaní sa už neprenáša žiadny údaj (IP adresa) do Google LLC (USA).',
         'Právne dokumenty sme rozdelili do troch samostatných stránok: Zásady ochrany osobných údajov, Cookie Policy a Podmienky používania.',

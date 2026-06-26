@@ -40,7 +40,8 @@ include 'legal_head.php';
                 <section class="legal-callout" aria-labelledby="medical-disclaimer-heading">
                     <h3 id="medical-disclaimer-heading">Dôležité zdravotnícke upozornenie</h3>
                     <p>
-                        Obsah a kalkulačky na tejto Službe slúžia výhradne na
+                        Obsah, kalkulačky, interaktívne nástroje, databáza liekov a register
+                        klinických štúdií na tejto Službe slúžia výhradne na
                         <strong>informačné a vzdelávacie účely a ako podporný nástroj</strong> pre
                         zdravotníckych pracovníkov a informovaných pacientov.
                         <strong>Nenahrádzajú odborný lekársky úsudok, vyšetrenie, diagnózu ani liečbu.</strong>
@@ -73,7 +74,8 @@ include 'legal_head.php';
                 <p>
                     <?= htmlspecialchars($info['entity'], ENT_QUOTES, 'UTF-8') ?> je odborný
                     portál o nefrológii, dialýze a internej medicíne. Poskytuje články,
-                    medicínske kalkulačky a diskusiu pre prihlásených používateľov. Služba
+                    medicínske kalkulačky a interaktívne nástroje, informačnú databázu liekov
+                    a register klinických štúdií, ako aj diskusiu pre prihlásených používateľov. Služba
                     <strong>nie je poskytovateľom zdravotnej starostlivosti</strong> a
                     neposkytuje individuálne lekárske poradenstvo. Obsah môže byť neúplný alebo
                     sa môže časom meniť; nezaručujeme jeho bezchybnosť ani vhodnosť pre
