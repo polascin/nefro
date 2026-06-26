@@ -755,6 +755,45 @@ p {
     text-align: left;
 }
 
+/* Zoznamy v obsahu článku — konzistentný rytmus a dostatočná medzera za
+   zoznamom pred nasledujúcim textom/nadpisom (predtým len UA default, ktorý sa
+   zlučoval s margin nasledujúceho prvku → tesné). */
+.primary-article ul,
+.primary-article ol,
+.primary-article dl {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin: 0 0 24px;
+}
+
+.primary-article li {
+    margin-bottom: 8px;
+}
+
+.primary-article li:last-child {
+    margin-bottom: 0;
+}
+
+.primary-article li > ul,
+.primary-article li > ol {
+    margin: 8px 0 0;
+}
+
+.primary-article dt {
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.primary-article dd {
+    margin: 0 0 12px;
+    padding-left: 18px;
+}
+
+.primary-article dd:last-child {
+    margin-bottom: 0;
+}
+
 .primary-article .meta {
     font-size: 0.85rem;
     color: #8b9eb5;

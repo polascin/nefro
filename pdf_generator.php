@@ -93,8 +93,11 @@ function buildArticlePdfHtml(array $article): string
   h2 { font-size: 14pt; color: #1e40af; margin: 20px 0 6px; }
   h3 { font-size: 12pt; color: #1e3a8a; margin: 14px 0 4px; }
   p { margin: 8px 0; }
-  ul, ol { margin: 8px 0 8px 20px; }
-  li { margin: 3px 0; }
+  ul, ol { margin: 8px 0 14px 20px; }
+  li { margin: 4px 0; }
+  dl { margin: 8px 0 14px; }
+  dt { font-weight: bold; margin-bottom: 3px; }
+  dd { margin: 0 0 8px 18px; }
   img { max-width: 100%; height: auto; }
   figure { margin: 14px 0; text-align: center; }
   figure img { border: 1px solid #e2e8f0; border-radius: 6px; }
