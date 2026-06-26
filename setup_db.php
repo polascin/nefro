@@ -522,6 +522,63 @@ try {
     $pdo->exec($nlSubQueueSql);
     $cliOut("Tabuľka 'nl_sub_queue' bola úspešne vytvorená alebo už existuje.\n");
 
+    // Upozornenia na zmenu právnych dokumentov (Privacy/Cookie/Terms).
+    // Pozri add_legal_notice_migration.php a legal_notifications.php.
+    $legalNoticeRunsSql = "CREATE TABLE IF NOT EXISTS legal_notice_runs (
+        id BIGINT AUTO_INCREMENT PRIMARY KEY,
+        legal_version VARCHAR(20) NOT NULL,
+        effective_date DATE NULL,
+        change_summary TEXT NULL,
+        users_queued INT NOT NULL DEFAULT 0,
+        subscribers_queued INT NOT NULL DEFAULT 0,
+        dispatched_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        UNIQUE KEY uq_legal_notice_runs_version (legal_version),
+        INDEX idx_legal_notice_runs_dispatched (dispatched_at)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";
+    $pdo->exec($legalNoticeRunsSql);
+    $cliOut("Tabuľka 'legal_notice_runs' bola úspešne vytvorená alebo už existuje.\n");
+
+    $legalNoticeQueueSql = "CREATE TABLE IF NOT EXISTS legal_notice_queue (
+        id BIGINT AUTO_INCREMENT PRIMARY KEY,
+        legal_version VARCHAR(20) NOT NULL,
+        user_id INT NOT NULL,
+        email VARCHAR(255) NOT NULL,
+        status ENUM('pending','sent','failed','cancelled') NOT NULL DEFAULT 'pending',
+        attempts INT NOT NULL DEFAULT 0,
+        next_attempt_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        sent_at DATETIME NULL,
+        last_error TEXT NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        UNIQUE KEY uq_legal_notice_queue_version_user (legal_version, user_id),
+        INDEX idx_legal_notice_queue_status_next (status, next_attempt_at),
+        INDEX idx_legal_notice_queue_user_id (user_id),
+        CONSTRAINT fk_legal_notice_queue_user FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";
+    $pdo->exec($legalNoticeQueueSql);
+    $cliOut("Tabuľka 'legal_notice_queue' bola úspešne vytvorená alebo už existuje.\n");
+
+    $legalNoticeSubQueueSql = "CREATE TABLE IF NOT EXISTS legal_notice_sub_queue (
+        id BIGINT AUTO_INCREMENT PRIMARY KEY,
+        legal_version VARCHAR(20) NOT NULL,
+        subscriber_id INT NOT NULL,
+        email VARCHAR(255) NOT NULL,
+        status ENUM('pending','sent','failed','cancelled') NOT NULL DEFAULT 'pending',
+        attempts INT NOT NULL DEFAULT 0,
+        next_attempt_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        sent_at DATETIME NULL,
+        last_error TEXT NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        UNIQUE KEY uq_legal_notice_sub_queue_version_sub (legal_version, subscriber_id),
+        INDEX idx_legal_notice_sub_queue_status_next (status, next_attempt_at),
+        INDEX idx_legal_notice_sub_queue_sub_id (subscriber_id),
+        CONSTRAINT fk_legal_notice_sub_queue_sub FOREIGN KEY (subscriber_id) REFERENCES newsletter_subscribers(id) ON DELETE CASCADE
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";
+    $pdo->exec($legalNoticeSubQueueSql);
+    $cliOut("Tabuľka 'legal_notice_sub_queue' bola úspešne vytvorená alebo už existuje.\n");
+
     $calculatorResultsSql = "CREATE TABLE IF NOT EXISTS calculator_results (
         id BIGINT AUTO_INCREMENT PRIMARY KEY,
         user_id INT NOT NULL,
