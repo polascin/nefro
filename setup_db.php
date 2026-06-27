@@ -31,6 +31,7 @@ try {
         username VARCHAR(255) UNIQUE NOT NULL,
         gender VARCHAR(50),
         pronouns VARCHAR(50),
+        user_type VARCHAR(50),
         avatar_path VARCHAR(255),
         email VARCHAR(255) UNIQUE NOT NULL,
         email_verified_at DATETIME NULL,
@@ -98,6 +99,12 @@ try {
 
     if (!columnExists($pdo, 'users', 'mobile_phone')) {
         $pdo->exec("ALTER TABLE users ADD COLUMN mobile_phone VARCHAR(50) NULL AFTER work_email");
+    }
+
+    // ── Migrácia: voliteľný typ používateľa (lekár, sestra, pacient, …) ───────
+    if (!columnExists($pdo, 'users', 'user_type')) {
+        $pdo->exec("ALTER TABLE users ADD COLUMN user_type VARCHAR(50) NULL AFTER pronouns");
+        $cliOut("Migrácia: user_type pridané.\n");
     }
 
     $emailVerifiedAtAdded = false;
