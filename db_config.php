@@ -861,6 +861,62 @@ function getFallbackTitlesAfter(): array {
     ];
 }
 
+// ── Číselník typov používateľa ───────────────────────────────────────────────
+
+/**
+ * Vráti zoskupený číselník typov používateľa (voliteľné pole v registrácii a profile).
+ *
+ * Kľúč poľa = názov skupiny (HTML <optgroup>); prázdny kľúč '' znamená možnosti bez skupiny.
+ * Hodnoty = popisy možností, ktoré sú zároveň hodnotami ukladanými do stĺpca users.user_type.
+ * Toto je jediný zdroj pravdy — používa ho formulár (render) aj serverová validácia (whitelist).
+ *
+ * @return array<string, string[]>
+ */
+function getUserTypeGroups(): array {
+    return [
+        'Zdravotnícki pracovníci' => [
+            'Lekár/lekárka',
+            'Sestra/brat',
+            'Zdravotník/zdravotníčka',
+            'Zdravotnícky záchranár/záchranárka',
+            'Farmaceut/farmaceutka',
+            'Nutričný terapeut/nutričná terapeutka',
+            'Fyzioterapeut/fyzioterapeutka',
+            'Psychológ/psychologička',
+            'Sociálny pracovník/sociálna pracovníčka',
+            'Laborant/laborantka',
+        ],
+        'Veda a vzdelávanie' => [
+            'Vedecký/výskumný pracovník',
+            'Učiteľ/učiteľka',
+            'Lektor/lektorka',
+            'Študent/študentka medicíny',
+        ],
+        'Pacienti a verejnosť' => [
+            'Pacient/pacientka',
+            'Rodinný príslušník/opatrujúca osoba',
+        ],
+        '' => [
+            'Iné',
+        ],
+    ];
+}
+
+/**
+ * Plochý whitelist povolených hodnôt user_type pre serverovú validáciu.
+ *
+ * @return string[]
+ */
+function getUserTypeWhitelist(): array {
+    $flat = [];
+    foreach (getUserTypeGroups() as $options) {
+        foreach ($options as $opt) {
+            $flat[] = $opt;
+        }
+    }
+    return $flat;
+}
+
 // ── Číselník adries ──────────────────────────────────────────────────────────
 
 /**

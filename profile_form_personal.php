@@ -44,6 +44,7 @@ declare(strict_types=1); /* Uses $user, $pdo from calling scope */ ?>
                             <label for="pronouns">Identifikačné zámená (napr. on/jeho)</label>
                             <input type="text" id="pronouns" name="pronouns" class="form-control" value="<?= htmlspecialchars($user['pronouns'] ?? '') ?>" autocomplete="off">
                         </div>
+                        <?php $selectedUserType = $user['user_type'] ?? ''; include 'user_type_field.php'; ?>
                         <div class="form-group">
                             <label for="title_before">Titul pred menom</label>
                             <?php $titlesBefore = getTitlesBeforeName($pdo); ?>

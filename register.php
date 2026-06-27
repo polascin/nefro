@@ -192,6 +192,10 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     $pronounsRaw     = trim($_POST['pronouns'] ?? '');
                     $pronouns        = mb_substr($pronounsRaw, 0, 50, 'UTF-8');
 
+                    // Whitelist pre typ používateľa — hodnoty musia zodpovedať getUserTypeGroups()
+                    $userTypeRaw     = trim($_POST['user_type'] ?? '');
+                    $userType        = in_array($userTypeRaw, getUserTypeWhitelist(), true) ? $userTypeRaw : '';
+
                     // Dĺžkové limity pre textové polia (prevencia pred oversized vstupmi)
                     $fieldLimits = [
                         'username'         => 255,
@@ -261,13 +265,13 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 
                     if (empty($errors)) {
                         $sql = "INSERT INTO users (
-                            username, email, password_hash, gender, pronouns, avatar_path, title_before, first_name, middle_name, last_name,
+                            username, email, password_hash, gender, pronouns, user_type, avatar_path, title_before, first_name, middle_name, last_name,
                             title_after, name_note, organization, job_function, work_mobile_phone, org_website,
                             work_email, mobile_phone, other_phone, social_linkedin, social_x, social_facebook, social_instagram, social_other, other_contact, website, birth_date,
                             street, house_number, orientation_number, zip_code, city, district, region, country, address_note, newsletter_consent, theme_auto, email_verified_at,
                             email_verification_token_hash, email_verification_expires_at, email_verification_sent_at
                         ) VALUES (
-                            :username, :email, :password_hash, :gender, :pronouns, :avatar_path, :title_before, :first_name, :middle_name, :last_name,
+                            :username, :email, :password_hash, :gender, :pronouns, :user_type, :avatar_path, :title_before, :first_name, :middle_name, :last_name,
                             :title_after, :name_note, :organization, :job_function, :work_mobile_phone, :org_website,
                             :work_email, :mobile_phone, :other_phone, :social_linkedin, :social_x, :social_facebook, :social_instagram, :social_other, :other_contact, :website, :birth_date,
                             :street, :house_number, :orientation_number, :zip_code, :city, :district, :region, :country, :address_note, :newsletter_consent, :theme_auto, NULL,
@@ -282,6 +286,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                             'password_hash' => $passwordHash,
                             'gender' => $gender,
                             'pronouns' => $pronouns,
+                            'user_type' => $userType,
                             'avatar_path' => $avatarPath,
                             'title_before' => trim($_POST['title_before'] ?? ''),
                             'first_name' => trim($_POST['first_name'] ?? ''),
@@ -510,6 +515,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                                 <label for="pronouns">Identifikačné zámená (napr. on/jeho, ona/jej)</label>
                                 <input type="text" id="pronouns" name="pronouns" class="form-control" value="<?= htmlspecialchars($_POST['pronouns'] ?? '') ?>" placeholder="napr. on/jeho">
                             </div>
+                            <?php $selectedUserType = $_POST['user_type'] ?? ''; include 'user_type_field.php'; ?>
                             <div class="form-group">
                                 <label for="title_before">Titul pred menom</label>
                                 <?php $titlesBefore = getTitlesBeforeName($pdo); ?>

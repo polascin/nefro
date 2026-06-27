@@ -31,6 +31,7 @@ $columnLabelMap = [
     'username' => 'Používateľské meno',
     'gender' => 'Pohlavie',
     'pronouns' => 'Zámená',
+    'user_type' => 'Typ používateľa',
     'avatar_path' => 'Cesta avatara',
     'email' => 'E-mail',
     'email_verified_at' => 'E-mail overený',

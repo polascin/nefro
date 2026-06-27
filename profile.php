@@ -124,7 +124,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && ($_POST['action'] ?? '') !=
     } else {
         // Zber polí
         $fields = [
-            'username', 'gender', 'pronouns', 'title_before', 'first_name',
+            'username', 'gender', 'pronouns', 'user_type', 'title_before', 'first_name',
             'middle_name', 'last_name', 'title_after', 'name_note',
             'organization', 'job_function', 'work_mobile_phone', 'org_website',
             'work_email', 'mobile_phone', 'other_phone', 'social_linkedin',
@@ -144,6 +144,8 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && ($_POST['action'] ?? '') !=
         // Whitelist pre gender — ochrana pred vložením ľubovoľného reťazca
         $allowedGenders = ['Muž', 'Žena', 'Transgender muž', 'Transgender žena', 'Nebinárna osoba', 'Iné', 'Nechcem uviesť', null];
         if (!in_array($data['gender'], $allowedGenders, true)) { $data['gender'] = null; }
+        // Whitelist pre typ používateľa — hodnoty musia zodpovedať getUserTypeGroups()
+        if (!in_array($data['user_type'], getUserTypeWhitelist(), true)) { $data['user_type'] = null; }
         // Pronouns sú voľný text (input type="text") — dĺžkovo obmedzíme (50 znakov)
         if ($data['pronouns'] !== null) {
             $data['pronouns'] = mb_substr((string) $data['pronouns'], 0, 50, 'UTF-8') ?: null;
@@ -362,6 +364,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && ($_POST['action'] ?? '') !=
             try {
                 $sql = "UPDATE users SET
                     username = :username, gender = :gender, pronouns = :pronouns,
+                    user_type = :user_type,
                     title_before = :title_before, first_name = :first_name,
                     middle_name = :middle_name, last_name = :last_name,
                     title_after = :title_after, name_note = :name_note,
