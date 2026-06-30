@@ -495,6 +495,7 @@ if (!empty($itemListElements)) {
               <li>Ultrasonografia obličiek, cievnych prístupov a brucha</li>
               <li>Konziliárna nefrológia a manažment CKD</li>
             </ul>
+            <p class="service-card__cta-link"><a href="dialyza-bratislava.php">Dialyzačné stredisko Bratislava →</a></p>
           </div>
 
           <div class="feature-card service-card service-card--green">

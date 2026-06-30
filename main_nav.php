@@ -40,6 +40,7 @@ if (!function_exists('_navA')) {
         <ul>
             <li><?= _navA($_navOnIndex ? '#domov' : 'index.php', 'Domov', $_navCurrent === 'index.php') ?></li>
             <li><?= _navA('populars.php', 'Pre pacientov', $_navCurrent === 'populars.php') ?></li>
+            <li><?= _navA('dialyza-bratislava.php', 'Dialýza', $_navCurrent === 'dialyza-bratislava.php') ?></li>
             <li><?= _navA('calculators.php', 'Kalkulačky', $_navCalcActive) ?></li>
             <li><?= _navA('nastroje.php', 'Nástroje', $_navToolsActive) ?></li>
             <li><?= _navA('cheatsheets.php', 'Ťaháky', $_navCurrent === 'cheatsheets.php') ?></li>

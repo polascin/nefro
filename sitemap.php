@@ -269,6 +269,12 @@ $urls = [
         'priority'   => '0.7',
     ],
     [
+        'loc'        => $baseUrl . 'dialyza-bratislava.php',
+        'lastmod'    => _sitemapLastmod('dialyza-bratislava.php'),
+        'changefreq' => 'monthly',
+        'priority'   => '0.9',
+    ],
+    [
         'loc'        => $baseUrl . 'cheatsheets.php',
         'lastmod'    => _sitemapLastmod('cheatsheets.php'),
         'changefreq' => 'monthly',
