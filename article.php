@@ -380,6 +380,8 @@ if ($article) {
           </footer>
         </article>
 
+        <?php include __DIR__ . '/medimpax_cta.php'; ?>
+
         <div class="newsletter-cta-inline" id="nl-cta-inline">
           <div class="newsletter-cta__inner">
             <h3 class="newsletter-cta__title">Dostávajte nové odborné články priamo do e-mailu</h3>

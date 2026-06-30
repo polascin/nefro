@@ -40,7 +40,7 @@ function escapeEmailHtml(string $text): string {
     return htmlspecialchars($text, ENT_QUOTES | ENT_HTML5, 'UTF-8');
 }
 
-function renderEmailHtmlLayout(string $contentHtml, string $actionLabel = '', string $actionUrl = ''): string {
+function renderEmailHtmlLayout(string $contentHtml, string $actionLabel = '', string $actionUrl = '', string $extraFooterHtml = ''): string {
     $brand = EMAIL_BRAND_NAME;
     $buttonHtml = '';
     if ($actionLabel !== '' && $actionUrl !== '') {
@@ -59,8 +59,20 @@ function renderEmailHtmlLayout(string $contentHtml, string $actionLabel = '', st
         . '<p style="margin:28px 0 0;color:#6b7280;font-size:13px;line-height:20px;">Ak tento e-mail nevyžadujete, ignorujte ho.</p>'
         . '</td></tr>'
         . '<tr><td style="background:#f3f4f6;padding:18px 30px 22px 30px;color:#64748b;font-size:13px;line-height:20px;text-align:center;">'
+        . $extraFooterHtml
         . 'Nefro-projekt Slovensko • <a href="' . escapeEmailHtml(getAppBaseUrl()) . '" style="color:#64748b;text-decoration:underline;">Navštívte web</a>'
         . '</td></tr></table></td></tr></table></body></html>';
+}
+
+/**
+ * Nenásilná zmienka o Dialyzačnom stredisku Medimpax do pätičky newsletter e-mailov.
+ * Odovzdáva sa do renderEmailHtmlLayout() ako $extraFooterHtml — len pre newsletter,
+ * NIE pre transakčné e-maily (overenie, reset hesla a pod.).
+ */
+function medimpaxEmailFooterHtml(): string {
+    $url = escapeEmailHtml(getAppBaseUrl() . '/dialyza-bratislava.php');
+    return '<div style="margin:0 0 10px;">Dialyzačná a nefrologická starostlivosť v Bratislave: '
+        . '<a href="' . $url . '" style="color:#64748b;text-decoration:underline;">Dialyzačné stredisko Medimpax (Dúbravka)</a></div>';
 }
 
 function smtpReadResponse($socket): array {

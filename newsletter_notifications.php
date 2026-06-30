@@ -586,7 +586,7 @@ if (!function_exists('processNlSubQueue')) {
                 . 'Ak už nechcete dostávať novinky, otvorte odkaz a potvrďte odhlásenie:<br>'
                 . '<a href="' . $unsubscribeUrlEsc . '" style="color:#1d4ed8;text-decoration:underline;">Odhlásiť sa</a></p>';
 
-            $message = renderEmailHtmlLayout($messageBody, 'Zobraziť článok', $articleUrl);
+            $message = renderEmailHtmlLayout($messageBody, 'Zobraziť článok', $articleUrl, medimpaxEmailFooterHtml());
             $cfg     = getEmailEnvConfig();
             $sent    = sendViaSmtp($recipientEmail, $subject, $message, $cfg, 'text/html; charset=UTF-8');
 
@@ -772,7 +772,7 @@ if (!function_exists('processArticleNewsletterQueue')) {
                 . 'Nastavenie môžete zmeniť vo svojom profile.</p>'
                 . '<p style="margin:0 0 16px;color:#475569;line-height:22px;">Ak už nechcete dostávať novinky, otvorte odkaz a potvrďte odhlásenie:<br>'
                 . '<a href="' . $unsubscribeUrlEscaped . '" style="color:#1d4ed8;text-decoration:underline;">Odhlásiť sa</a></p>';
-            $message = renderEmailHtmlLayout($messageBody, 'Zobraziť článok', $articleUrl);
+            $message = renderEmailHtmlLayout($messageBody, 'Zobraziť článok', $articleUrl, medimpaxEmailFooterHtml());
 
             $cfg = getEmailEnvConfig();
             $sent = sendViaSmtp($recipientEmail, $subject, $message, $cfg, 'text/html; charset=UTF-8');
@@ -960,7 +960,7 @@ if (!function_exists('sendWeeklyNewsletterDigest')) {
                 . '<p style="margin:24px 0 16px;color:#475569;line-height:22px;">Tento prehľad ste dostali, pretože odoberáte novinky z webu Nefro-projekt Slovensko.<br>'
                 . 'Ak už nechcete dostávať novinky, otvorte odkaz a potvrďte odhlásenie:<br>'
                 . '<a href="' . $unsubEsc . '" style="color:#1d4ed8;text-decoration:underline;">Odhlásiť sa</a></p>';
-            $message = renderEmailHtmlLayout($body, 'Zobraziť všetky články', getAppBaseUrl());
+            $message = renderEmailHtmlLayout($body, 'Zobraziť všetky články', getAppBaseUrl(), medimpaxEmailFooterHtml());
 
             $sent = sendViaSmtp($email, $subject, $message, $cfg, 'text/html; charset=UTF-8');
             if (!$sent) {
