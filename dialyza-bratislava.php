@@ -15,6 +15,19 @@ $center = [
     'seatAddress'  => 'Dúbravská cesta 9, 842 36 Bratislava',
     'siteAddress'  => 'Na vrátkach 2/A, 841 01 Bratislava-Dúbravka',
     'email'        => 'medimpax@impax.sk',
+    'website'      => 'https://www.impax.sk/',
+    'ico'          => '17320097',
+    'dic'          => '2020300447',
+    'icdph'        => 'SK2020300447',
+    'register'     => 'Mestský súd Bratislava III, oddiel: Sro, vložka č. 1032/B',
+];
+
+// Odkazy na verejné registre prevádzkovateľa
+$registryLinks = [
+    ['label' => 'Obchodný register SR (ORSR)', 'url' => 'https://www.orsr.sk/hladaj_ico.asp?ICO=17320097&SID=0'],
+    ['label' => 'FinStat', 'url' => 'https://finstat.sk/17320097'],
+    ['label' => 'Register účtovných závierok', 'url' => 'https://www.registeruz.sk/cruz-public/domain/accountingentity/simplesearch?ico=17320097'],
+    ['label' => 'Poskytovateľ ZS (e-VUC)', 'url' => 'https://www.e-vuc.sk/e-vuc/poskytovatelia/impax-trading-spol.-s-r.-o..html?page_id=107502'],
 ];
 
 // Pacientske kontakty (zobrazené prominentne)
@@ -34,6 +47,8 @@ $patientContacts = [
 // Mapový odkaz (bez embed iframe — CSP default-src 'self' blokuje frame-src)
 $mapUrl = 'https://www.google.com/maps/search/?api=1&query='
     . rawurlencode('Na vrátkach 2/A, 841 01 Bratislava-Dúbravka');
+// Street View / fotka miesta na Google Mapách (zdieľaný odkaz strediska)
+$streetViewUrl = 'https://maps.app.goo.gl/8UkFRAYMvbkr5PT26';
 
 // --- Služby ------------------------------------------------------------------
 $services = [
@@ -163,6 +178,11 @@ $businessContacts = [
               'postalCode'      => '841 01',
               'addressCountry'  => 'SK',
           ],
+          'geo'             => [
+              '@type'     => 'GeoCoordinates',
+              'latitude'  => 48.1903299,
+              'longitude' => 17.0442423,
+          ],
           'hasMap'          => $mapUrl,
           'availableService' => [
               ['@type' => 'MedicalProcedure', 'name' => 'Hemodialýza'],
@@ -177,9 +197,12 @@ $businessContacts = [
               'telephone' => '+421940609480',
           ],
           'provider'        => [
-              '@type'   => 'Organization',
-              'name'    => $center['operator'],
-              'address' => [
+              '@type'      => 'Organization',
+              'name'       => $center['operator'],
+              'url'        => $center['website'],
+              'identifier' => $center['ico'],
+              'vatID'      => $center['icdph'],
+              'address'    => [
                   '@type'           => 'PostalAddress',
                   'streetAddress'   => 'Dúbravská cesta 9',
                   'addressLocality' => 'Bratislava',
@@ -236,6 +259,8 @@ $businessContacts = [
                             <?= htmlspecialchars($center['siteAddress']) ?>
                             &nbsp;·&nbsp;
                             <a href="<?= htmlspecialchars($mapUrl) ?>" target="_blank" rel="noopener noreferrer">Zobraziť na mape</a>
+                            &nbsp;·&nbsp;
+                            <a href="<?= htmlspecialchars($streetViewUrl) ?>" target="_blank" rel="noopener noreferrer">Street View</a>
                         </dd>
                     </dl>
                 </div>
@@ -339,9 +364,25 @@ $businessContacts = [
                         <dd><?= htmlspecialchars($center['seatAddress']) ?></dd>
                         <dt>Prevádzka</dt>
                         <dd><?= htmlspecialchars($center['siteAddress']) ?></dd>
+                        <dt>IČO</dt>
+                        <dd><?= htmlspecialchars($center['ico']) ?></dd>
+                        <dt>DIČ</dt>
+                        <dd><?= htmlspecialchars($center['dic']) ?></dd>
+                        <dt>IČ DPH</dt>
+                        <dd><?= htmlspecialchars($center['icdph']) ?></dd>
+                        <dt>Zápis</dt>
+                        <dd><?= htmlspecialchars($center['register']) ?></dd>
+                        <dt>Web</dt>
+                        <dd><a href="<?= htmlspecialchars($center['website']) ?>" target="_blank" rel="noopener noreferrer"><?= htmlspecialchars($center['website']) ?></a></dd>
                         <dt>E-mail</dt>
                         <dd><a href="mailto:<?= htmlspecialchars($center['email']) ?>"><?= htmlspecialchars($center['email']) ?></a></dd>
                     </dl>
+                    <p class="donate-note">
+                        Verejné registre:
+                        <?php foreach ($registryLinks as $i => $r): ?>
+                            <?= $i > 0 ? ' · ' : '' ?><a href="<?= htmlspecialchars($r['url']) ?>" target="_blank" rel="noopener noreferrer"><?= htmlspecialchars($r['label']) ?></a>
+                        <?php endforeach; ?>
+                    </p>
                 </div>
 
                 <div class="features-grid">
