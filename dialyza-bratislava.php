@@ -56,12 +56,12 @@ $services = [
         'icon'  => '🩸',
         'color' => 'service-card--blue',
         'title' => 'Hemodialýza a hemodiafiltrácia',
-        'desc'  => 'Pravidelná chronická aj akútna náhrada funkcie obličiek na dialyzačných monitoroch B. Braun Dialog iQ®.',
+        'desc'  => 'Pravidelná chronická aj akútna náhrada funkcie obličiek — hemodialýza aj hemodiafiltrácia (HDF).',
         'list'  => [
             'Hemodialýza (HD)',
             'Hemodiafiltrácia (HDF) — vyššia eliminácia urémických toxínov',
             'Jednoihlový (single-needle) režim podľa potreby',
-            'Biofeedback BioLogic Fusion pre hemodynamickú stabilitu',
+            'Biofeedback pre hemodynamickú stabilitu počas liečby',
         ],
     ],
     [
@@ -125,24 +125,16 @@ $services = [
     ],
 ];
 
-// --- Firemné / obchodné kontakty (zverejnené v plnom rozsahu) ----------------
+// --- Obchodný / administratívny kontakt (bez súkromných mobilov) --------------
+// Pacientom slúžia klinické linky vyššie; tu je len administratívny kontakt.
 $businessContacts = [
     [
         'name'  => 'Ing. Branislav Halanda',
         'role'  => 'Konateľ',
         'lines' => [
-            ['display' => '02/54789192',      'tel' => '+421254789192'],
-            ['display' => '+421 903 210 584', 'tel' => '+421903210584'],
+            ['display' => '02/54789192', 'tel' => '+421254789192'],
         ],
         'email' => 'halanda@impax.sk',
-    ],
-    [
-        'name'  => 'Robert Velmovský',
-        'role'  => 'Logistika, rozvoz',
-        'lines' => [
-            ['display' => '+421 904 027 527', 'tel' => '+421904027527'],
-        ],
-        'email' => '',
     ],
 ];
 ?>
@@ -355,9 +347,9 @@ $businessContacts = [
                     <p>
                         <strong>Medimpax Dialysis Centre</strong> in Bratislava-Dúbravka, Slovakia, welcomes
                         visiting patients for <strong>holiday (guest) dialysis</strong>. We provide
-                        <strong>haemodialysis and haemodiafiltration (HDF)</strong> on B. Braun Dialog iQ®
-                        machines, as well as <strong>peritoneal dialysis</strong> support and a nephrology
-                        out-patient clinic.
+                        <strong>haemodialysis and haemodiafiltration (HDF)</strong>, <strong>peritoneal
+                        dialysis</strong> support and a nephrology out-patient clinic. Treatments run on
+                        modern dialysis monitors (B. Braun Dialog iQ®).
                     </p>
                     <p>
                         Planning a stay in Bratislava and need a dialysis session? Please contact us in advance

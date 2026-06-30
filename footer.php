@@ -38,6 +38,13 @@ $swatchBeat = '@' . number_format($beatValue, 2, '.', '');
         <img src="./img/nps.gif" alt="Nefro-projekt Slovensko" class="site-footer__logo" loading="lazy" width="48" height="48">
         <p class="site-footer__brand-name">Nefro-projekt Slovensko</p>
         <p class="site-footer__brand-desc">Odborný portál o nefrológii, dialýze a internej medicíne pre zdravotníkov aj informovaných pacientov.</p>
+        <p class="site-footer__clinic">
+          <strong>Dialyzačné stredisko Medimpax</strong><br>
+          Na vrátkach 2/A, Bratislava-Dúbravka<br>
+          <a href="tel:+421940609480" class="site-footer__link">0940&nbsp;609&nbsp;480</a>
+          &middot; <a href="mailto:medimpax@impax.sk" class="site-footer__link">medimpax@impax.sk</a><br>
+          <a href="dialyza-bratislava.php" class="site-footer__link">Dialýza Bratislava →</a>
+        </p>
       </div>
 
       <nav class="site-footer__col site-footer__col--nav" aria-label="Rýchla navigácia v pätičke">
