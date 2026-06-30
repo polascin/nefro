@@ -266,6 +266,22 @@ $businessContacts = [
                 </div>
             </section>
 
+            <section class="features-section" id="mapa" aria-labelledby="mapa-heading">
+                <h2 id="mapa-heading">Kde nás nájdete</h2>
+                <figure class="place-figure">
+                    <img src="img/impax.png" alt="Dialyzačné stredisko a nefrologická ambulancia Medimpax, Na vrátkach 2/A, Bratislava-Dúbravka" width="1108" height="826" loading="lazy" decoding="async">
+                    <figcaption><?= htmlspecialchars($center['siteAddress']) ?></figcaption>
+                </figure>
+                <iframe class="map-embed" title="Mapa — Dialyzačné stredisko Medimpax, Na vrátkach 2/A, Bratislava-Dúbravka"
+                        src="https://maps.google.com/maps?q=48.1903299,17.0442423&amp;hl=sk&amp;z=17&amp;output=embed"
+                        width="100%" height="380" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                <p class="donate-note">
+                    <a href="<?= htmlspecialchars($mapUrl) ?>" target="_blank" rel="noopener noreferrer">Otvoriť v Google Mapách</a>
+                    &nbsp;·&nbsp;
+                    <a href="<?= htmlspecialchars($streetViewUrl) ?>" target="_blank" rel="noopener noreferrer">Street View</a>
+                </p>
+            </section>
+
             <section class="features-section" aria-labelledby="sluzby-heading">
                 <h2 id="sluzby-heading">Naše služby</h2>
                 <div class="features-grid">

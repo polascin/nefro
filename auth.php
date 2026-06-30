@@ -44,6 +44,7 @@ function sendSecurityHeaders(): void {
         "script-src 'self' 'nonce-{$nonce}' https://www.googletagmanager.com https://www.google-analytics.com; " .
         "connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com " .
             "https://analytics.google.com https://*.analytics.google.com https://stats.g.doubleclick.net; " .
+        "frame-src https://www.google.com https://maps.google.com; " .
         "base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; upgrade-insecure-requests";
     header('Content-Security-Policy: ' . $csp);
     $cspRO = $csp . '; report-uri /csp-report.php';

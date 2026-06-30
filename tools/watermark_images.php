@@ -60,6 +60,7 @@ const DENY_PATTERNS = [
     '/^TikTok /i',                   // sociálne cover obrázky (značkové)
     '/^pay-by-square$/i',            // platobný QR — vodoznak by znehodnotil čitateľnosť
     '/^payme-qr$/i',                 // payme.sk QR — to isté
+    '/^impax$/i',                    // fotka dialyzačného strediska Medimpax — bez vodoznaku
 ];
 
 // Fonty: najprv systémové (dev Windows / Linux server), potom bundled fallback.
