@@ -240,9 +240,16 @@ $businessContacts = [
                 <h2 id="uvod-heading">Dialýza a nefrologická starostlivosť v Bratislave</h2>
                 <p>
                     <strong><?= htmlspecialchars($center['fullName']) ?></strong> poskytuje komplexnú
-                    starostlivosť pacientom s ochorením obličiek — od preventívnej a klinickej nefrológie
-                    cez prípravu na dialýzu až po samotnú dialyzačnú liečbu. Pracovisko sídli na adrese
-                    <strong><?= htmlspecialchars($center['siteAddress']) ?></strong>.
+                    starostlivosť <strong>dospelým pacientom</strong> s ochorením obličiek — od preventívnej
+                    a klinickej nefrológie cez prípravu na dialýzu až po samotnú dialyzačnú liečbu.
+                    Pracovisko sídli na adrese <strong><?= htmlspecialchars($center['siteAddress']) ?></strong>
+                    a je dobre dostupné pre <strong>západnú Bratislavu a Záhorie</strong>. Kladieme dôraz
+                    na dostupnosť, blízkosť a osobný prístup.
+                </p>
+                <p class="donate-note">
+                    Máte právo na <strong>slobodný výber poskytovateľa</strong> zdravotnej starostlivosti —
+                    o nefrologické vyšetrenie alebo dialýzu v našom stredisku môžete požiadať bez ohľadu na to,
+                    kde ste boli doteraz sledovaní.
                 </p>
 
                 <div class="info-box-blue">
@@ -366,6 +373,33 @@ $businessContacts = [
                         <dt>Address</dt>
                         <dd><?= htmlspecialchars($center['siteAddress']) ?></dd>
                     </dl>
+                </div>
+            </section>
+
+            <section class="features-section" id="odosielatelia" aria-labelledby="odosielatelia-heading">
+                <h2 id="odosielatelia-heading">Pre odosielajúcich lekárov</h2>
+                <p>Posielate pacienta na nefrologické vyšetrenie alebo do dialyzačného programu?
+                   Nižšie nájdete praktické informácie ku spolupráci.</p>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h3>Koho odoslať</h3>
+                        <ul class="service-card__list">
+                            <li>Chronické ochorenie obličiek (CKD), najmä pokročilejšie štádiá</li>
+                            <li>Albuminúria/proteinúria alebo hematúria nejasného pôvodu</li>
+                            <li>Rezistentná hypertenzia s podozrením na renálnu príčinu</li>
+                            <li>Pacient pred zaradením do dialyzačného alebo transplantačného programu</li>
+                            <li>Potreba hosťovskej (dovolenkovej) dialýzy v Bratislave</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Ako objednať</h3>
+                        <ul class="service-card__list">
+                            <li>Nefrologická ambulancia: <a href="tel:+421940609480">0940 609 480</a></li>
+                            <li>E-mail: <a href="mailto:<?= htmlspecialchars($center['email']) ?>"><?= htmlspecialchars($center['email']) ?></a></li>
+                            <li>Priložte prosím aktuálne laboratórne výsledky a stručný súhrn anamnézy</li>
+                            <li>Pacient má právo na slobodný výber poskytovateľa</li>
+                        </ul>
+                    </div>
                 </div>
             </section>
 
