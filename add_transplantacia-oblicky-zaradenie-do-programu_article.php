@@ -37,7 +37,7 @@ $articles[] = [
     'excerpt'      => 'Transplantácia je pre mnohých najlepšou formou náhrady funkcie obličiek. Vysvetľujeme, kto môže byť zaradený, aké vyšetrenia to vyžaduje a ako prebieha čakacia listina.',
     'content'      => <<<'HTML'
 <figure>
-  <img src="img/impax.png" alt="Nefrologická ambulancia Medimpax v Bratislave-Dúbravke" loading="lazy" decoding="async">
+  <img src="img/medimpax.png" alt="Nefrologická ambulancia Medimpax v Bratislave-Dúbravke" loading="lazy" decoding="async">
   <figcaption>Nefrologická ambulancia Medimpax, Bratislava-Dúbravka — príprava a odoslanie do transplantačného centra.</figcaption>
 </figure>
 

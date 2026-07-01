@@ -38,7 +38,7 @@ $articles[] = [
     'excerpt'      => 'Čo robí nefrologická ambulancia v oblasti klinickej a preventívnej nefrológie a ako pripravuje pacientov na zaradenie do hemodialyzačného programu alebo programu peritoneálnej dialýzy.',
     'content'      => <<<'HTML'
 <figure>
-  <img src="img/impax.png" alt="Nefrologická ambulancia Medimpax v Bratislave-Dúbravke" loading="lazy" decoding="async">
+  <img src="img/medimpax.png" alt="Nefrologická ambulancia Medimpax v Bratislave-Dúbravke" loading="lazy" decoding="async">
   <figcaption>Nefrologická ambulancia Medimpax, Bratislava-Dúbravka.</figcaption>
 </figure>
 

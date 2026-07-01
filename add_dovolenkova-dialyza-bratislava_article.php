@@ -37,7 +37,7 @@ $articles[] = [
     'excerpt'      => 'Cestujete a potrebujete dialýzu mimo domáceho strediska? Vysvetľujeme, čo je hosťovská (dovolenková) dialýza, ako si ju vopred zariadiť a čo si pripraviť.',
     'content'      => <<<'HTML'
 <figure>
-  <img src="img/impax.png" alt="Dialyzačné stredisko Medimpax v Bratislave-Dúbravke, kde je možná hosťovská dialýza" loading="lazy" decoding="async">
+  <img src="img/medimpax.png" alt="Dialyzačné stredisko Medimpax v Bratislave-Dúbravke, kde je možná hosťovská dialýza" loading="lazy" decoding="async">
   <figcaption>Dialyzačné stredisko Medimpax, Na vrátkach 2/A, Bratislava-Dúbravka.</figcaption>
 </figure>
 
