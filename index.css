@@ -4387,6 +4387,12 @@ input:disabled + .slider:before {
     height: auto;
 }
 
+/* Klik na obsahový obrázok otvorí plnú veľkosť v novom tabe (image-fullview.js).
+   Odkaz obaľuje inline <img>, preto needituje rozloženie — len signalizuje kurzor. */
+.img-fullview-link {
+    cursor: zoom-in;
+}
+
 /* Figúry vložené v tele článku (bare <figure> z obsahu; hero má .article-figure):
    popis (figcaption) ostáva nalepený tesne pod obrázkom, no okolo celého bloku
    obrázok + popis je väčšia medzera oproti textu článku. */

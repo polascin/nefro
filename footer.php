@@ -122,5 +122,6 @@ $swatchBeat = '@' . number_format($beatValue, 2, '.', '');
   <?php endif; ?>
 
   <script src="form-submit-enter.js?v=20260512-1&cb=<?= filemtime('form-submit-enter.js') ?>" defer></script>
+  <script src="image-fullview.js?v=<?= filemtime(__DIR__ . '/image-fullview.js') ?>" defer></script>
 </body>
 </html>

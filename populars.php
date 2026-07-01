@@ -9,104 +9,21 @@ declare(strict_types=1);
  *
  * Články sa delia na dve podsekcie: všeobecné pacientske články a samostatnú
  * podsekciu „Dialýza a stredisko Medimpax" (články spomínajúce Medimpax).
+ * Zdieľané pomôcky a dopyty sú v patient_articles_common.php.
  */
 require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
+require_once __DIR__ . '/patient_articles_common.php';
 
-// ── Pomocné funkcie ──────────────────────────────────────────────────────────
-$months = [
-    1 => "januára", 2 => "februára", 3 => "marca", 4 => "apríla",
-    5 => "mája", 6 => "júna", 7 => "júla", 8 => "augusta",
-    9 => "septembra", 10 => "októbra", 11 => "novembra", 12 => "decembra",
-];
+$months = popSkMonths();
 
-function popFormatDate(string $datetime, array $months): string
-{
-    $ts = strtotime($datetime);
-    if (!$ts) {
-        return htmlspecialchars($datetime);
-    }
-    return (int) date("j", $ts) . ". " . ($months[(int) date("n", $ts)] ?? "") . " " . date("Y", $ts);
-}
-
-function popExcerpt(string $text, int $maxLen = 200): string
-{
-    $decoded = html_entity_decode($text, ENT_QUOTES | ENT_HTML5, "UTF-8");
-    $plain = trim(preg_replace("/\s+/u", " ", strip_tags($decoded)) ?? "");
-    if ($plain === "") {
-        return "";
-    }
-    if (mb_strlen($plain) <= $maxLen) {
-        return $plain;
-    }
-    $slice = mb_substr($plain, 0, $maxLen + 1);
-    $slice = preg_replace('/\s+\S*$/u', "", $slice) ?? $slice;
-    return rtrim($slice, " \t\n\r\0\x0B,.;:-") . "…";
-}
-
-/** Vyberie URL prvého <img> z HTML obsahu článku (pre náhľad karty). */
-function popFirstImage(string $html): string
-{
-    if (preg_match('/<img[^>]+src\s*=\s*["\']([^"\']+)["\']/i', $html, $m)) {
-        return trim($m[1]);
-    }
-    return "";
-}
-
-/** Vyrenderuje jednu kartu článku (položka gridu). */
-function popRenderCard(array $art, array $months): void
-{
-    $artSlug = htmlspecialchars((string) $art["slug"], ENT_QUOTES);
-    $artTitle = htmlspecialchars((string) $art["title"]);
-    $artExc = htmlspecialchars(popExcerpt((string) ($art["excerpt"] ?? ($art["content"] ?? "")), 200));
-    $artDate = htmlspecialchars(popFormatDate((string) $art["published_at"], $months));
-    $artDateIso = htmlspecialchars(substr((string) $art["published_at"], 0, 10));
-    $artImg = popFirstImage((string) ($art["content"] ?? ""));
-    $artIsTop = !empty($art["is_top"]);
-    ?>
-    <li class="popular-card">
-      <a href="article.php?slug=<?= $artSlug ?>" class="popular-card__link" aria-label="Čítať článok: <?= $artTitle ?>">
-        <div class="popular-card__media">
-          <?php if ($artImg !== ""): ?>
-            <img src="<?= htmlspecialchars($artImg, ENT_QUOTES) ?>" alt="" loading="lazy" decoding="async" class="popular-card__img">
-          <?php else: ?>
-            <span class="popular-card__placeholder" aria-hidden="true">🩺</span>
-          <?php endif; ?>
-          <?php if ($artIsTop): ?><span class="popular-card__badge">★ Odporúčané</span><?php endif; ?>
-        </div>
-        <div class="popular-card__body">
-          <h3 class="popular-card__title"><?= $artTitle ?></h3>
-          <p class="popular-card__excerpt"><?= $artExc ?></p>
-          <div class="popular-card__footer">
-            <time class="popular-card__date" datetime="<?= $artDateIso ?>"><?= $artDate ?></time>
-            <span class="popular-card__more">Čítať ďalej &rarr;</span>
-          </div>
-        </div>
-      </a>
-    </li>
-    <?php
-}
-
-// ── Načítanie článkov (bez stránkovania — malý dataset, delíme do podsekcií) ──
-$allArticles = [];
-try {
-    $stmt = $pdo->query(
-        "SELECT id, title, slug, author, content, excerpt, published_at, is_top
-         FROM articles
-         WHERE is_published = 1 AND category = 'popularne'
-         ORDER BY is_top DESC, sort_order ASC, published_at DESC"
-    );
-    $allArticles = $stmt->fetchAll();
-} catch (\PDOException $e) {
-    error_log("populars.php – chyba pri načítaní článkov: " . $e->getMessage());
-}
-
-// Rozdelenie: články o stredisku Medimpax (spomínajú „Medimpax") vs. ostatné.
+// ── Načítanie a rozdelenie článkov (bez stránkovania — malý dataset) ──────────
+$allArticles      = getPopularArticles($pdo);
 $medimpaxArticles = [];
 $generalArticles  = [];
 foreach ($allArticles as $art) {
-    if (stripos((string) ($art["content"] ?? ""), "Medimpax") !== false) {
+    if (isMedimpaxPatientArticle($art)) {
         $medimpaxArticles[] = $art;
     } else {
         $generalArticles[] = $art;

@@ -3,6 +3,7 @@ declare(strict_types=1);
 require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
+require_once __DIR__ . '/patient_articles_common.php';
 
 $siteName = 'Nefro-projekt Slovensko';
 $baseUrl  = 'https://nefro.polascin.net/';
@@ -407,6 +408,21 @@ $businessContacts = [
                     </dl>
                 </div>
             </section>
+
+            <?php $medimpaxArticles = getMedimpaxPatientArticles($pdo); ?>
+            <?php if (!empty($medimpaxArticles)): $popMonths = popSkMonths(); ?>
+            <section class="features-section" id="clanky-pacienti" aria-labelledby="clanky-pacienti-heading">
+                <h2 id="clanky-pacienti-heading">Pre pacientov: dialýza a naše stredisko</h2>
+                <p>Zrozumiteľné články o dialýze, nefrologickej ambulancii, príprave na liečbu
+                   a transplantácii — čo vás čaká a ako to u nás prebieha.</p>
+                <ul class="populars-grid">
+                    <?php foreach ($medimpaxArticles as $art) {
+                        popRenderCard($art, $popMonths);
+                    } ?>
+                </ul>
+                <p class="mt-30"><a href="populars.php" class="btn-secondary">Všetky články pre pacientov →</a></p>
+            </section>
+            <?php endif; ?>
 
             <section class="features-section" id="odosielatelia" aria-labelledby="odosielatelia-heading">
                 <h2 id="odosielatelia-heading">Pre odosielajúcich lekárov</h2>
