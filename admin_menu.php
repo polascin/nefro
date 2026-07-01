@@ -17,7 +17,7 @@ if (!empty($_SESSION['username'])) {
     $logoutLabel .= ' (' . htmlspecialchars($_SESSION['username']) . ')';
 }
 ?>
-<nav class="main-nav" aria-label="Administrátorská navigácia">
+<nav class="main-nav no-print" aria-label="Administrátorská navigácia">
     <div class="container">
         <ul>
             <?php foreach ($adminNavItems as $href => $label): ?>

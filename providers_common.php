@@ -58,6 +58,26 @@ if (!function_exists('ppOutreachLabel')) {
     }
 }
 
+if (!function_exists('ppPriorityLabels')) {
+    /** Priorita odporúčateľa (cielenie akvizície). */
+    function ppPriorityLabels(): array
+    {
+        return [
+            'A' => 'A (vysoká)',
+            'B' => 'B (stredná)',
+            'C' => 'C (nízka)',
+        ];
+    }
+}
+
+if (!function_exists('ppPriorityLabel')) {
+    function ppPriorityLabel(?string $v): string
+    {
+        $v = (string) $v;
+        return ppPriorityLabels()[$v] ?? '';
+    }
+}
+
 if (!function_exists('ppLocalitySuggestions')) {
     /** Návrhy lokalít v pracovnom dosahu Dúbravky (západná BA + Záhorie). */
     function ppLocalitySuggestions(): array

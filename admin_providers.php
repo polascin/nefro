@@ -49,9 +49,18 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 if (!array_key_exists($outreach, ppOutreachLabels())) {
                     $outreach = 'nekontaktovany';
                 }
-                $contacted = trim((string) ($_POST['contacted_at'] ?? ''));
-                if ($contacted !== '' && !preg_match('/^\d{4}-\d{2}-\d{2}$/', $contacted)) {
-                    $contacted = '';
+                $priority = strtoupper((string) ($_POST['priority'] ?? ''));
+                if (!array_key_exists($priority, ppPriorityLabels())) {
+                    $priority = null;
+                }
+                $contactedRaw = trim((string) ($_POST['contacted_at'] ?? ''));
+                $contactedVal = null;
+                if ($contactedRaw !== '') {
+                    if (preg_match('/^(\d{4}-\d{2}-\d{2})T(\d{2}:\d{2})(:\d{2})?$/', $contactedRaw, $m)) {
+                        $contactedVal = $m[1] . ' ' . $m[2] . ':00';
+                    } elseif (preg_match('/^\d{4}-\d{2}-\d{2}$/', $contactedRaw)) {
+                        $contactedVal = $contactedRaw . ' 00:00:00';
+                    }
                 }
 
                 if ($name === '') {
@@ -84,7 +93,8 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     'source'         => ppClean((string) ($_POST['source'] ?? ''), 255),
                     'ico'            => ppClean((string) ($_POST['ico'] ?? ''), 20),
                     'outreach_status' => $outreach,
-                    'contacted_at'   => $contacted !== '' ? $contacted : null,
+                    'contacted_at'   => $contactedVal,
+                    'priority'       => $priority,
                     'is_active'      => $active,
                 ];
 
@@ -97,7 +107,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                                 locality = :locality, address = :address, phone = :phone, email = :email,
                                 website = :website, contact_person = :contact_person, notes = :notes,
                                 source = :source, ico = :ico, outreach_status = :outreach_status,
-                                contacted_at = :contacted_at, is_active = :is_active
+                                contacted_at = :contacted_at, priority = :priority, is_active = :is_active
                              WHERE id = :id'
                         );
                         $upd->execute($data);
@@ -106,10 +116,10 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                         $ins = $pdo->prepare(
                             'INSERT INTO partner_providers
                                 (name, provider_type, specialization, locality, address, phone, email,
-                                 website, contact_person, notes, source, ico, outreach_status, contacted_at, is_active)
+                                 website, contact_person, notes, source, ico, outreach_status, contacted_at, priority, is_active)
                              VALUES
                                 (:name, :provider_type, :specialization, :locality, :address, :phone, :email,
-                                 :website, :contact_person, :notes, :source, :ico, :outreach_status, :contacted_at, :is_active)'
+                                 :website, :contact_person, :notes, :source, :ico, :outreach_status, :contacted_at, :priority, :is_active)'
                         );
                         $ins->execute($data);
                         $actionResult = 'Poskytovateľ „' . $name . '“ bol pridaný.';
@@ -153,6 +163,25 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 }
                 break;
 
+            // Rýchle označenie „Oslovený teraz" — nastaví stav + dátum a čas kontaktu.
+            case 'mark_contacted':
+                $id = (int) ($_POST['provider_id'] ?? 0);
+                if ($id <= 0) {
+                    $actionError = 'Neplatné ID.';
+                    break;
+                }
+                try {
+                    $upd = $pdo->prepare(
+                        "UPDATE partner_providers SET outreach_status = 'osloveny', contacted_at = NOW() WHERE id = :id"
+                    );
+                    $upd->execute(['id' => $id]);
+                    $actionResult = 'Označené ako oslovené (' . date('d.m.Y H:i') . ').';
+                } catch (\PDOException $e) {
+                    error_log('admin_providers mark_contacted error: ' . $e->getMessage());
+                    $actionError = 'Chyba pri označení kontaktu.';
+                }
+                break;
+
             default:
                 $actionError = 'Neznáma akcia.';
                 break;
@@ -186,6 +215,10 @@ if (!in_array($fActive, ['', 'active', 'inactive'], true)) {
 $fOutreach = (string) ($_GET['outreach'] ?? '');
 if ($fOutreach !== '' && !array_key_exists($fOutreach, ppOutreachLabels())) {
     $fOutreach = '';
+}
+$fPriority = strtoupper((string) ($_GET['priority'] ?? ''));
+if ($fPriority !== '' && !array_key_exists($fPriority, ppPriorityLabels())) {
+    $fPriority = '';
 }
 $fGroup = (string) ($_GET['group'] ?? '');
 if (!in_array($fGroup, ['', 'type', 'locality', 'spec'], true)) {
@@ -226,27 +259,75 @@ if ($fOutreach !== '') {
     $where .= ' AND outreach_status = :outreach';
     $params['outreach'] = $fOutreach;
 }
+if ($fPriority !== '') {
+    $where .= ' AND priority = :priority';
+    $params['priority'] = $fPriority;
+}
 if ($fQuery !== '') {
     $where .= ' AND (name LIKE :q OR email LIKE :q OR contact_person LIKE :q OR notes LIKE :q OR address LIKE :q)';
     $params['q'] = '%' . $fQuery . '%';
 }
 
-// ── CSV export (bod 1) — rešpektuje aktuálne filtre; vyžaduje admin (už overený) ──
-if (($_GET['export'] ?? '') === 'csv') {
-    $expStmt = $pdo->prepare(
-        'SELECT name, provider_type, specialization, locality, address, phone, email, website,
-                ico, contact_person, outreach_status, contacted_at, is_active, notes, source
-         FROM partner_providers' . $where . ' ORDER BY provider_type ASC, name ASC'
-    );
+// ── Export (bod 1) — CSV / JSON / vCard; rešpektuje aktuálne filtre; admin už overený ──
+$exportFmt = strtolower((string) ($_GET['export'] ?? ''));
+if (in_array($exportFmt, ['csv', 'json', 'vcard'], true)) {
+    $expStmt = $pdo->prepare('SELECT * FROM partner_providers' . $where . ' ORDER BY provider_type ASC, name ASC');
     $expStmt->execute($params);
+    $rows  = $expStmt->fetchAll(\PDO::FETCH_ASSOC);
+    $stamp = date('Y-m-d');
 
+    if ($exportFmt === 'json') {
+        header('Content-Type: application/json; charset=UTF-8');
+        header('Content-Disposition: attachment; filename="poskytovatelia_' . $stamp . '.json"');
+        echo json_encode($rows, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+        exit;
+    }
+
+    if ($exportFmt === 'vcard') {
+        header('Content-Type: text/vcard; charset=UTF-8');
+        header('Content-Disposition: attachment; filename="poskytovatelia_' . $stamp . '.vcf"');
+        $esc = static fn (string $v): string => str_replace(["\\", "\n", ',', ';'], ['\\\\', '\\n', '\\,', '\\;'], $v);
+        foreach ($rows as $r) {
+            $name = (string) $r['name'];
+            echo "BEGIN:VCARD\r\nVERSION:3.0\r\n";
+            echo 'FN:' . $esc($name) . "\r\n";
+            echo 'ORG:' . $esc($name) . "\r\n";
+            if (!empty($r['specialization'])) {
+                echo 'TITLE:' . $esc((string) $r['specialization']) . "\r\n";
+            }
+            if (!empty($r['phone'])) {
+                echo 'TEL;TYPE=work,voice:' . $esc((string) $r['phone']) . "\r\n";
+            }
+            if (!empty($r['email'])) {
+                echo 'EMAIL;TYPE=work:' . $esc((string) $r['email']) . "\r\n";
+            }
+            if (!empty($r['website'])) {
+                echo 'URL:' . $esc((string) $r['website']) . "\r\n";
+            }
+            if (!empty($r['address']) || !empty($r['locality'])) {
+                echo 'ADR;TYPE=work:;;' . $esc((string) ($r['address'] ?? '')) . ';' . $esc((string) ($r['locality'] ?? '')) . ';;;Slovensko' . "\r\n";
+            }
+            $noteParts = array_filter([
+                ppTypeLabel((string) $r['provider_type']),
+                'Stav: ' . ppOutreachLabel((string) $r['outreach_status']),
+                !empty($r['notes']) ? (string) $r['notes'] : '',
+            ]);
+            if ($noteParts) {
+                echo 'NOTE:' . $esc(implode(' | ', $noteParts)) . "\r\n";
+            }
+            echo "END:VCARD\r\n";
+        }
+        exit;
+    }
+
+    // CSV (predvolené) — UTF-8 BOM pre Excel
     header('Content-Type: text/csv; charset=UTF-8');
-    header('Content-Disposition: attachment; filename="poskytovatelia_' . date('Y-m-d') . '.csv"');
+    header('Content-Disposition: attachment; filename="poskytovatelia_' . $stamp . '.csv"');
     $out = fopen('php://output', 'w');
-    fwrite($out, "\xEF\xBB\xBF"); // UTF-8 BOM pre Excel
+    fwrite($out, "\xEF\xBB\xBF");
     fputcsv($out, ['Nazov', 'Typ', 'Odbornost', 'Lokalita', 'Adresa', 'Telefon', 'Email', 'Web',
-        'ICO', 'Kontaktna osoba', 'Stav oslovenia', 'Datum kontaktu', 'Aktivny', 'Poznamky', 'Zdroj']);
-    foreach ($expStmt as $r) {
+        'ICO', 'Kontaktna osoba', 'Priorita', 'Stav oslovenia', 'Datum a cas kontaktu', 'Aktivny', 'Poznamky', 'Zdroj']);
+    foreach ($rows as $r) {
         fputcsv($out, [
             $r['name'],
             ppTypeLabel((string) $r['provider_type']),
@@ -258,6 +339,7 @@ if (($_GET['export'] ?? '') === 'csv') {
             $r['website'],
             $r['ico'],
             $r['contact_person'],
+            (string) ($r['priority'] ?? ''),
             ppOutreachLabel((string) $r['outreach_status']),
             $r['contacted_at'],
             ((int) $r['is_active'] === 1 ? 'ano' : 'nie'),
@@ -321,13 +403,14 @@ $csrfToken = generateCsrfToken();
 /** Query string pre stránkovanie so zachovaním filtrov. */
 function ppAdminQs(array $extra = []): string
 {
-    global $fType, $fLoc, $fSpec, $fActive, $fOutreach, $fGroup, $fQuery;
+    global $fType, $fLoc, $fSpec, $fActive, $fOutreach, $fPriority, $fGroup, $fQuery;
     $qs = array_filter([
         'type'     => $fType,
         'loc'      => $fLoc,
         'spec'     => $fSpec,
         'active'   => $fActive,
         'outreach' => $fOutreach,
+        'priority' => $fPriority,
         'group'    => $fGroup,
         'q'        => $fQuery,
     ], static fn ($v): bool => $v !== '');
@@ -460,8 +543,25 @@ $isEdit = $editProvider !== null;
             </div>
 
             <div class="form-row">
-              <label for="f_contacted">Dátum kontaktu</label>
-              <input type="date" id="f_contacted" name="contacted_at" class="form-control" value="<?= $fv('contacted_at') ?>">
+              <label for="f_priority">Priorita</label>
+              <?php $curPriority = (string) ($editProvider['priority'] ?? ''); ?>
+              <select id="f_priority" name="priority" class="form-control">
+                <option value="">(žiadna)</option>
+                <?php foreach (ppPriorityLabels() as $slug => $label): ?>
+                  <option value="<?= htmlspecialchars($slug) ?>" <?= $curPriority === $slug ? 'selected' : '' ?>><?= htmlspecialchars($label) ?></option>
+                <?php endforeach; ?>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <label for="f_contacted">Dátum a čas kontaktu</label>
+              <?php
+              $contactedInput = '';
+              if (!empty($editProvider['contacted_at'])) {
+                  $contactedInput = substr(str_replace(' ', 'T', (string) $editProvider['contacted_at']), 0, 16);
+              }
+              ?>
+              <input type="datetime-local" id="f_contacted" name="contacted_at" class="form-control" value="<?= htmlspecialchars($contactedInput) ?>">
             </div>
 
             <div class="form-row">
@@ -505,7 +605,7 @@ $isEdit = $editProvider !== null;
           </p>
         <?php endif; ?>
 
-        <form method="GET" action="admin_providers.php" class="form-row-inline admin-filter-form">
+        <form method="GET" action="admin_providers.php" class="form-row-inline admin-filter-form no-print">
           <label for="type">Typ:</label>
           <select id="type" name="type" class="form-control admin-select-md">
             <option value="">Všetky</option>
@@ -535,6 +635,14 @@ $isEdit = $editProvider !== null;
             <?php endforeach; ?>
           </select>
 
+          <label for="priority">Priorita:</label>
+          <select id="priority" name="priority" class="form-control admin-select-sm">
+            <option value="">Všetky</option>
+            <?php foreach (ppPriorityLabels() as $slug => $label): ?>
+              <option value="<?= htmlspecialchars($slug) ?>" <?= $fPriority === $slug ? 'selected' : '' ?>><?= htmlspecialchars($label) ?></option>
+            <?php endforeach; ?>
+          </select>
+
           <label for="group">Zoskupiť:</label>
           <select id="group" name="group" class="form-control admin-select-md">
             <option value="" <?= $fGroup === '' ? 'selected' : '' ?>>(bez zoskupenia)</option>
@@ -548,7 +656,10 @@ $isEdit = $editProvider !== null;
 
           <button type="submit" class="btn-secondary-small">Filtrovať</button>
           <a href="admin_providers.php" class="btn-secondary-small">Reset</a>
-          <a href="admin_providers.php<?= ppAdminQs(['export' => 'csv']) ?>" class="btn-secondary-small" title="Exportovať aktuálny výber do CSV">⬇ Export CSV</a>
+          <a href="admin_providers.php<?= ppAdminQs(['export' => 'csv']) ?>" class="btn-secondary-small" title="Export do CSV (Excel)">⬇ CSV</a>
+          <a href="admin_providers.php<?= ppAdminQs(['export' => 'json']) ?>" class="btn-secondary-small" title="Export do JSON">⬇ JSON</a>
+          <a href="admin_providers.php<?= ppAdminQs(['export' => 'vcard']) ?>" class="btn-secondary-small" title="Export do vCard (kontakty .vcf)">⬇ vCard</a>
+          <button type="button" id="btnPrintProviders" class="btn-secondary-small" title="Vytlačiť aktuálny výber">🖨 Tlačiť</button>
         </form>
 
         <?php if (empty($providers)): ?>
@@ -588,7 +699,7 @@ $isEdit = $editProvider !== null;
                   <th scope="col">Lokalita</th>
                   <th scope="col">Kontakt</th>
                   <th scope="col">Stav</th>
-                  <th scope="col">Akcie</th>
+                  <th scope="col" class="no-print">Akcie</th>
                 </tr>
               </thead>
               <tbody>
@@ -608,6 +719,7 @@ $isEdit = $editProvider !== null;
                 <tr>
                   <td>
                     <strong><?= htmlspecialchars((string) $p['name']) ?></strong>
+                    <?php if (!empty($p['priority'])): ?> <span class="badge-top-sm" title="Priorita">Priorita <?= htmlspecialchars((string) $p['priority']) ?></span><?php endif; ?>
                     <?php if (!empty($p['contact_person'])): ?><br><span class="calc-result-detail"><?= htmlspecialchars((string) $p['contact_person']) ?></span><?php endif; ?>
                     <?php if (!empty($p['address'])): ?><br><span class="calc-result-detail"><?= htmlspecialchars((string) $p['address']) ?></span><?php endif; ?>
                   </td>
@@ -625,10 +737,16 @@ $isEdit = $editProvider !== null;
                     <?php else: ?>
                       <span class="badge-draft">Neaktívny</span>
                     <?php endif; ?>
-                    <br><span class="calc-result-detail"><?= htmlspecialchars(ppOutreachLabel((string) ($p['outreach_status'] ?? ''))) ?><?php if (!empty($p['contacted_at'])): ?> · <?= htmlspecialchars((string) $p['contacted_at']) ?><?php endif; ?></span>
+                    <br><span class="calc-result-detail"><?= htmlspecialchars(ppOutreachLabel((string) ($p['outreach_status'] ?? ''))) ?><?php if (!empty($p['contacted_at'])): $_ct = strtotime((string) $p['contacted_at']); ?> · <?= htmlspecialchars($_ct ? date('d.m.Y H:i', $_ct) : (string) $p['contacted_at']) ?><?php endif; ?></span>
                   </td>
-                  <td>
+                  <td class="no-print">
                     <a href="admin_providers.php?action=edit&id=<?= $pId ?>" class="btn-secondary-small">✏️ Upraviť</a>
+                    <form method="POST" action="admin_providers.php" class="d-inline">
+                      <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
+                      <input type="hidden" name="action" value="mark_contacted">
+                      <input type="hidden" name="provider_id" value="<?= $pId ?>">
+                      <button type="submit" class="btn-secondary-small" title="Nastaviť stav Oslovený s dnešným dátumom a časom">✅ Oslovený teraz</button>
+                    </form>
                     <form method="POST" action="admin_providers.php" class="d-inline">
                       <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
                       <input type="hidden" name="action" value="toggle_active">
@@ -668,6 +786,13 @@ $isEdit = $editProvider !== null;
 
     </div><!-- /.auth-container -->
   </main>
+
+  <script nonce="<?= htmlspecialchars(getScriptNonce()) ?>">
+  (function () {
+    var b = document.getElementById('btnPrintProviders');
+    if (b) { b.addEventListener('click', function () { window.print(); }); }
+  })();
+  </script>
 
   <?php include_once 'footer.php'; ?>
 
