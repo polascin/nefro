@@ -4387,6 +4387,16 @@ input:disabled + .slider:before {
     height: auto;
 }
 
+/* Figúry vložené v tele článku (bare <figure> z obsahu; hero má .article-figure):
+   popis (figcaption) ostáva nalepený tesne pod obrázkom, no okolo celého bloku
+   obrázok + popis je väčšia medzera oproti textu článku. */
+.primary-article figure:not([class]) {
+    margin: 24px 0 40px;
+}
+.primary-article figure:not([class]) figcaption {
+    margin-top: 0;
+}
+
 .article-figure {
     margin: 24px auto;
     text-align: center;

@@ -20,7 +20,7 @@ require_once __DIR__ . '/newsletter_notifications.php';
 $articles = [];
 
 $articles[] = [
-    'title'        => 'Vitajte v sekcii Pre pacientov',
+    'title'        => 'Vitajte v sekcii „Pre pacientov“',
     'slug'         => 'pre-pacientov-uvod',
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
@@ -58,6 +58,11 @@ nižšie na tejto stránke.</p>
 
 <p><em><strong>Upozornenie:</strong> Obsah má informačný a vzdelávací charakter a nenahrádza
 konzultáciu s lekárom.</em></p>
+
+<figure>
+  <img src="img/pre_pacientov_2.png" alt="Ilustrácia zdravých obličiek a okolo nich zdravý životný štýl a rodina — srdce, laboratórne vyšetrenia, vyvážená strava, pitný režim, pohyb, lieky a podpora blízkych" loading="lazy" decoding="async">
+  <figcaption>O svoje obličky sa dá starať každý deň — a nie ste v tom sami.</figcaption>
+</figure>
 HTML,
 ];
 
