@@ -37,8 +37,7 @@ $articles[] = [
     'excerpt'      => 'Krok za krokom vysvetľujeme, ako vyzerá jedno hemodialyzačné sedenie, ako často sa opakuje, čo je cievny prístup a ako sa môžete po dialýze cítiť.',
     'content'      => <<<'HTML'
 <figure>
-  <img src="img/medimpax.webp" alt="Dialyzačné stredisko Medimpax v Bratislave-Dúbravke" loading="lazy" decoding="async">
-  <figcaption>Dialyzačné stredisko Medimpax, Na vrátkach 2/A, Bratislava-Dúbravka.</figcaption>
+  <img src="img/ako-prebieha-hemodialyza.webp" alt="Infografika: ako prebieha hemodialýza — priebeh sedenia, cievny prístup a čo môžete čakať" loading="lazy" decoding="async">
 </figure>
 
 <p>Ak vám lekár oznámil, že budete potrebovať hemodialýzu, je prirodzené mať otázky a obavy.

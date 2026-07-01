@@ -37,8 +37,7 @@ $articles[] = [
     'excerpt'      => 'Ako vyzerá bežný týždeň na dialýze, na čo myslieť pri strave a pitnom režime a ako sa dá popri liečbe pracovať aj cestovať.',
     'content'      => <<<'HTML'
 <figure>
-  <img src="img/medimpax.webp" alt="Dialyzačné stredisko Medimpax v Bratislave-Dúbravke" loading="lazy" decoding="async">
-  <figcaption>Dialyzačné stredisko Medimpax, Na vrátkach 2/A, Bratislava-Dúbravka.</figcaption>
+  <img src="img/zivot-na-dialyze.webp" alt="Infografika: život na dialýze — bežný týždeň, strava a pitný režim, práca, cestovanie, psychika a praktické tipy" loading="lazy" decoding="async">
 </figure>
 
 <p>Dialýza je síce pravidelná súčasť života, no neznamená, že sa musíte vzdať toho, čo máte radi.

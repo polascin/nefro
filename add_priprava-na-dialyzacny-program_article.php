@@ -37,8 +37,7 @@ $articles[] = [
     'excerpt'      => 'Kedy je dialýza potrebná, ako sa vyberá medzi hemodialýzou a peritoneálnou dialýzou, prečo treba myslieť na cievny prístup vopred a v čom pomáha poradňa pred dialýzou.',
     'content'      => <<<'HTML'
 <figure>
-  <img src="img/medimpax.webp" alt="Nefrologická ambulancia a dialyzačné stredisko Medimpax v Bratislave-Dúbravke" loading="lazy" decoding="async">
-  <figcaption>Nefrologická ambulancia a dialyzačné stredisko Medimpax, Bratislava-Dúbravka.</figcaption>
+  <img src="img/priprava-na-dialyzacny-program.webp" alt="Infografika: príprava na zaradenie do dialyzačného programu — voľba metódy a cievny prístup" loading="lazy" decoding="async">
 </figure>
 
 <p>Ak vaše obličky postupne strácajú funkciu, lekár s vami môže začať hovoriť o príprave na dialýzu.

@@ -38,8 +38,7 @@ $articles[] = [
     'excerpt'      => 'Ultrazvuk je rýchle a nebolestivé vyšetrenie. Poradíme, ako prebieha a ako sa naň pripraviť — kedy treba prísť nalačno a kedy s plným močovým mechúrom.',
     'content'      => <<<'HTML'
 <figure>
-  <img src="img/medimpax.webp" alt="Nefrologická ambulancia Medimpax v Bratislave-Dúbravke" loading="lazy" decoding="async">
-  <figcaption>Nefrologická ambulancia Medimpax, Bratislava-Dúbravka.</figcaption>
+  <img src="img/usg-obliciek-mocovych-ciest-brucha.webp" alt="Infografika: USG vyšetrenie obličiek, močových ciest a brucha a príprava naň" loading="lazy" decoding="async">
 </figure>
 
 <p>Ultrazvuk (USG) je bežné, rýchle a <strong>nebolestivé</strong> vyšetrenie bez žiarenia.

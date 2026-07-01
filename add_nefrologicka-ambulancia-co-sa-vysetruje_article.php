@@ -38,8 +38,7 @@ $articles[] = [
     'excerpt'      => 'Čo robí nefrologická ambulancia v oblasti klinickej a preventívnej nefrológie a ako pripravuje pacientov na zaradenie do hemodialyzačného programu alebo programu peritoneálnej dialýzy.',
     'content'      => <<<'HTML'
 <figure>
-  <img src="img/medimpax.webp" alt="Nefrologická ambulancia Medimpax v Bratislave-Dúbravke" loading="lazy" decoding="async">
-  <figcaption>Nefrologická ambulancia Medimpax, Bratislava-Dúbravka.</figcaption>
+  <img src="img/nefrologicka-ambulancia-co-sa-vysetruje.webp" alt="Infografika: čo sa vyšetruje a sleduje v nefrologickej ambulancii" loading="lazy" decoding="async">
 </figure>
 
 <p>Nefrologická ambulancia sa stará o <strong>zdravie obličiek</strong> — od včasného záchytu

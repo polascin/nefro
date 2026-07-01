@@ -1,7 +1,10 @@
 {
     "version": 1,
     "files": {
+        "img/ako-prebieha-hemodialyza.png": "4815e86a1de54f0a2e1b3ccdd61f3adf4a69d75804cc23e1cedd8c12371f1138",
+        "img/ako-prebieha-peritonealna-dialyza.png": "84eeb02f82a048a82fe6bb467dafa4a7f885cfc58e13e241bd472ed18e868976",
         "img/ckd-pacienti-infografika.png": "5d71299f5b3893d3752197409f896936e467fc7eefb17112e35f1e8a2da258be",
+        "img/co-je-dialyza.png": "d996ec583f92c4739bff41e8df00bbd51f35162dbc3a8de4eea03d78e012aa86",
         "img/dkd-01.png": "11650a904716ac5c414747eeaeec3bacec65480bd70652fec9d69071591e9078",
         "img/dkd-02.png": "1d37d33de8f73cd63ec00375008bd6b4423f655e24a3c75016959f4adf9ee891",
         "img/dkd-03.png": "2d516f8dc109225c2a2859116bed14c4c52aec42d991f0222b6014fd0261a906",
@@ -21,6 +24,8 @@
         "img/dkd-17.png": "81b41aa89a98c71a1221f9ed65f0a49477382394a99e5b6496aceabf81f10070",
         "img/dkd-18.png": "d0988fb8d977fa77d2914af8d4af8f31a3f485fc29e89140ae4cc29bdf131b4c",
         "img/dkd-19.jpeg": "48d84c52fda43c143441bf77c1cadcfeac9644e029b83a5c4864d2d26f4b18a7",
+        "img/doprava-a-zvoz-na-dialyzu.png": "35645579ed04ca21dfce229fcc1c673db549ce85323506e3face82cc7ba77fb4",
+        "img/dovolenkova-dialyza-bratislava.png": "a8bdb8e8dea25d180d959afefe55de66a1c6bedf155515679aa59122ba857537",
         "img/medimpax.png": "3188d680b07de3b166a598414c7ecc8d214dda1a43460c573e6b3be0b04843c5",
         "img/nefro_0.png": "fb60abfa4861d9f15dc4af4c17d453f8c86188e2109ca48d70312d4e09069869",
         "img/nefro_1.png": "eac4df39fab1f142d181aa52b37f97833edeb39f66f0e2ea386c91e4d8e65318",
@@ -164,6 +169,7 @@
         "img/nefro_97.png": "9854864f29b98ec0b46c4c8a77e402aa2bddd5655395ac492ebc8f89e2b7a1b2",
         "img/nefro_98.png": "b2d014582849df4837353df94114f9812714dd966b6c14f9fbb1880de5449e3b",
         "img/nefro_99.png": "d487452cdf16c8de97f20a43fd35331bfe608c6322b0a7319d5350b2defe13f1",
+        "img/nefrologicka-ambulancia-co-sa-vysetruje.png": "7a4bfb9dd4e5ccbc41a6aef810ede8172f967821d76d57babc66039ab0cd1eeb",
         "img/nephrotools.png": "3afcf265bad00bd390086e4590961668f9aa392a18ed09ebd067bc9f37761745",
         "img/obob-01.png": "bb694c11d50980f893eddfa69c5bd1cdf6d7383044580603640cb3cb5bf5e6e1",
         "img/obob-02.png": "46a3faacac859db036dac51adc164563eb2dc292ce6e72c6f792c042d4ec5622",
@@ -178,6 +184,9 @@
         "img/pre_pacientov_0.png": "08422553cbd6b22def74bec37b12cd8d95a175fb262f4c2f1c46e8fd0b864444",
         "img/pre_pacientov_1.png": "2777cddc3f21265cf1af45201270a2323bd35ddd769ffcbcf7e25ccfa2df6a80",
         "img/pre_pacientov_2.png": "70d0c1f39ab641b14fb6944a47685f11057eac9d045db6729bdbb2af5835bd7f",
+        "img/priprava-na-dialyzacny-program.png": "1e651421d71775b86abb56a32339331420601ffaac88758310f415317763c5de",
+        "img/transplantacia-oblicky-zaradenie-do-programu.png": "861bf5a20fa83d89b3956ca2a0ce1ac29c095cb38ff0f0b01063c96e8114b4b4",
+        "img/usg-obliciek-mocovych-ciest-brucha.png": "b4bffa94a20e5b081007f4f9b7805aca5253311f9ced755e547f20f5d3e18016",
         "img/vetry-denne-infografika.png": "8290c00c651db7f7b38121477c5d24e7b2859f6a8cf4a05c441580fe4dbabfe6",
         "img/zdn-01.png": "e616a4ea7c10461afa625c15f2892f8a06ade21106d0e650a24cd46a41d14400",
         "img/zdn-02.png": "5ab7a4882391b675463f5ced04159fa5acb6d43208f5e3c151b2990af5751cf3",
@@ -196,6 +205,7 @@
         "img/zdn-15.png": "3046bbd1784de4c272fb14959f7db93f7c3b463fe383103a15124590c83aee06",
         "img/zdn-16.png": "31c872b2f449bcd029f3e7dd2e653bc33d916b756107ec1ea1628fb920f09ebb",
         "img/zdn-17.png": "bba18c025491bc2c833efb92087101c67a182f31ba1c42d21022d33480dd1f64",
-        "img/zelenina-infografika.png": "b6edcbc351731123210c90a6972bc283a88fd643499346afc2a67f942113c644"
+        "img/zelenina-infografika.png": "b6edcbc351731123210c90a6972bc283a88fd643499346afc2a67f942113c644",
+        "img/zivot-na-dialyze.png": "85af2e992f63c66afe49eb738366a83026f237f46716c877beff830aed8768bd"
     }
 }

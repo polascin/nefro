@@ -37,8 +37,7 @@ $articles[] = [
     'excerpt'      => 'Jednoduché vysvetlenie, čo je dialýza, aké sú jej dva hlavné druhy, kedy je potrebná a čo znamená pre bežný život.',
     'content'      => <<<'HTML'
 <figure>
-  <img src="img/medimpax.webp" alt="Dialyzačné stredisko Medimpax v Bratislave-Dúbravke" loading="lazy" decoding="async">
-  <figcaption>Dialyzačné stredisko Medimpax, Na vrátkach 2/A, Bratislava-Dúbravka.</figcaption>
+  <img src="img/co-je-dialyza.webp" alt="Infografika: čo je dialýza — zdravá funkcia obličiek, ich zlyhanie, hemodialýza v centre a peritoneálna dialýza doma" loading="lazy" decoding="async">
 </figure>
 
 <p>Slovo „dialýza" znie pre mnohých ľudí znepokojivo. V skutočnosti ide o liečbu, ktorá za
