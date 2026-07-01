@@ -28,7 +28,7 @@ $articles[] = [
     'excerpt'      => 'Nová sekcia, kde o obličkách, ich ochoreniach a liečbe píšeme jednoducho a zrozumiteľne — pre pacientov a ich blízkych.',
     'content'      => <<<'HTML'
 <figure>
-  <img src="img/nefro_1.png" alt="Ilustrácia obličiek a ich úlohy v tele" loading="lazy" decoding="async">
+  <img src="img/pre_pacientov_1.png" alt="Ilustrácia obličiek a okolo nich symboly starostlivosti o ne — pohár vody, pohyb, ovocie a zelenina, srdce a laboratórne hodnoty (kreatinín, eGFR)" loading="lazy" decoding="async">
   <figcaption>Obličky sú malé, no pre naše zdravie nenahraditeľné orgány.</figcaption>
 </figure>
 
