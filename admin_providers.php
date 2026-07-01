@@ -586,6 +586,77 @@ if (!empty($providers)) {
     }
 }
 
+// ── Akvizičný prehľad (funnel + follow-up) — nezávislé od filtrov, len aktívni ──
+$FOLLOWUP_DAYS  = 14;   // prah „bez odozvy" v dňoch
+$activeTotal    = 0;
+$funnelCounts   = [];   // outreach_status => počet (aktívni)
+$priorityCounts = [];   // priority (A/B/C/'') => počet (aktívni)
+$followUps      = [];   // položky na follow-up
+try {
+    foreach (array_keys(ppOutreachLabels()) as $slug) {
+        $funnelCounts[$slug] = 0;
+    }
+    foreach (array_keys(ppPriorityLabels()) as $slug) {
+        $priorityCounts[$slug] = 0;
+    }
+    $priorityCounts[''] = 0;
+
+    $ovStmt = $pdo->query(
+        'SELECT id, name, provider_type, locality, priority, outreach_status, contacted_at,
+                DATEDIFF(NOW(), contacted_at) AS days_since
+         FROM partner_providers WHERE is_active = 1'
+    );
+    foreach ($ovStmt as $r) {
+        $activeTotal++;
+        $st = (string) $r['outreach_status'];
+        if (array_key_exists($st, $funnelCounts)) {
+            $funnelCounts[$st]++;
+        }
+        $pr = (string) ($r['priority'] ?? '');
+        $priorityCounts[array_key_exists($pr, $priorityCounts) ? $pr : '']++;
+
+        $days   = $r['days_since'] !== null ? (int) $r['days_since'] : null;
+        $reason = null;
+        $urg    = null;
+        if ($st === 'nekontaktovany' && $pr !== '') {
+            $reason = 'Neoslovený — priorita ' . $pr;
+            $urg    = ['A' => 0, 'B' => 1, 'C' => 2][$pr] ?? 2;
+        } elseif ($st === 'osloveny' && ($days === null || $days >= $FOLLOWUP_DAYS)) {
+            $reason = $days === null ? 'Oslovený — bez dátumu, pripomenúť'
+                                     : 'Oslovený — ' . $days . ' dní bez odozvy';
+            $urg    = 3;
+        } elseif ($st === 'odpovedal' && ($days === null || $days >= $FOLLOWUP_DAYS)) {
+            $reason = 'Odpovedal — dotiahnuť spoluprácu';
+            $urg    = 4;
+        }
+        if ($reason !== null) {
+            $followUps[] = [
+                'id'       => (int) $r['id'],
+                'name'     => (string) $r['name'],
+                'locality' => (string) ($r['locality'] ?? ''),
+                'type'     => (string) $r['provider_type'],
+                'priority' => $pr,
+                'days'     => $days,
+                'reason'   => $reason,
+                'urg'      => $urg,
+            ];
+        }
+    }
+    usort($followUps, static function (array $a, array $b): int {
+        if ($a['urg'] !== $b['urg']) {
+            return $a['urg'] <=> $b['urg'];
+        }
+        $da = $a['days'] ?? -1;
+        $db = $b['days'] ?? -1;
+        if ($da !== $db) {
+            return $db <=> $da; // najstaršie kontakty hore
+        }
+        return strcasecmp($a['name'], $b['name']);
+    });
+} catch (\PDOException $e) {
+    error_log('admin_providers overview error: ' . $e->getMessage());
+}
+
 $csrfToken = generateCsrfToken();
 
 /** Query string pre stránkovanie so zachovaním filtrov. */
@@ -848,6 +919,79 @@ $isEdit = $editProvider !== null;
       </div>
       <?php endif; ?>
       <hr class="section-divider">
+
+      <!-- ── AKVIZIČNÝ PREHĽAD (funnel + follow-up) ─────────────────────── -->
+      <div class="primary-article">
+        <h3>Akvizičný prehľad</h3>
+        <?php if ($activeTotal === 0): ?>
+          <p class="helper-text">Zatiaľ žiadni aktívni poskytovatelia v sieti.</p>
+        <?php else: ?>
+          <p class="helper-text">
+            Aktívna sieť: <strong><?= (int) $activeTotal ?></strong> &nbsp;|&nbsp; Stav oslovenia:
+            <?php
+            $fp = [];
+            foreach (ppOutreachLabels() as $slug => $label) {
+                $fp[] = '<a href="admin_providers.php?active=active&amp;outreach=' . urlencode($slug) . '">'
+                    . htmlspecialchars($label) . ': ' . (int) ($funnelCounts[$slug] ?? 0) . '</a>';
+            }
+            echo implode(' &middot; ', $fp);
+            ?>
+          </p>
+          <p class="helper-text">
+            Priorita:
+            <?php
+            $pp = [];
+            foreach (ppPriorityLabels() as $slug => $label) {
+                $pp[] = '<a href="admin_providers.php?active=active&amp;priority=' . urlencode($slug) . '">'
+                    . htmlspecialchars($slug) . ': ' . (int) ($priorityCounts[$slug] ?? 0) . '</a>';
+            }
+            $pp[] = 'bez priority: ' . (int) $priorityCounts[''];
+            echo implode(' &middot; ', $pp);
+            ?>
+          </p>
+
+          <h4 class="calc-result-mt12">Potrebuje follow-up (<?= count($followUps) ?>)</h4>
+          <?php if (empty($followUps)): ?>
+            <p class="helper-text">Nič nečaká na follow-up — všetci prioritní sú oslovení a bez podlžností. 👍</p>
+          <?php else: ?>
+            <div class="overflow-x-auto">
+              <table class="admin-articles-table" aria-label="Poskytovatelia na follow-up">
+                <thead>
+                  <tr>
+                    <th scope="col">Poskytovateľ</th>
+                    <th scope="col">Lokalita</th>
+                    <th scope="col">Priorita</th>
+                    <th scope="col">Dôvod</th>
+                    <th scope="col" class="no-print">Akcie</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <?php foreach ($followUps as $f): ?>
+                  <tr>
+                    <td>
+                      <strong><?= htmlspecialchars($f['name']) ?></strong>
+                      <br><span class="calc-result-detail"><?= htmlspecialchars(ppTypeLabel($f['type'])) ?></span>
+                    </td>
+                    <td><?= htmlspecialchars($f['locality']) ?></td>
+                    <td><?= $f['priority'] !== '' ? '<span class="badge-top-sm">' . htmlspecialchars($f['priority']) . '</span>' : '<span class="calc-result-detail">—</span>' ?></td>
+                    <td><?= htmlspecialchars($f['reason']) ?></td>
+                    <td class="no-print">
+                      <a href="admin_providers.php?action=edit&amp;id=<?= (int) $f['id'] ?>" class="btn-secondary-small">✏️ Upraviť</a>
+                      <form method="POST" action="admin_providers.php" class="d-inline">
+                        <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
+                        <input type="hidden" name="action" value="mark_contacted">
+                        <input type="hidden" name="provider_id" value="<?= (int) $f['id'] ?>">
+                        <button type="submit" class="btn-secondary-small" title="Označiť ako oslovené teraz + zápis do histórie">✅ Oslovený teraz</button>
+                      </form>
+                    </td>
+                  </tr>
+                  <?php endforeach; ?>
+                </tbody>
+              </table>
+            </div>
+          <?php endif; ?>
+        <?php endif; ?>
+      </div>
 
       <!-- ── FILTRE + ZOZNAM ───────────────────────────────────────────── -->
       <div class="primary-article">
