@@ -38,8 +38,7 @@ $articles[] = [
     'excerpt'      => 'Prierezová analýza francúzskej kohorty CKD (2389 dospelých): vyššie hladiny indoxyl sulfátu nezávisle súviseli s kognitívnym poškodením (MMSE ≤ 26/30), kým kynurenín a indole-3-acetát nie. Signál pre biomarkery a rizikovú stratifikáciu, nie terapeutické odporúčanie.',
     'content'      => <<<'HTML'
 <p>Pacienti s chronickou chorobou obličiek (CKD) majú vyššie riziko neurologických komplikácií,
-ale biologické mechanizmy a využiteľné biomarkery nie sú úplne jasné. V poslednom Medscape
-prehľade sa rieši súvislosť medzi metabolitmi odvodenými od tryptofánu, najmä uremickým toxínom
+ale biologické mechanizmy a využiteľné biomarkery nie sú úplne jasné. V poslednom prehľade na Medscape sa rieši súvislosť medzi metabolitmi odvodenými od tryptofánu, najmä uremickým toxínom
 <strong>indoxyl sulfátom (IS)</strong>, a kognitívnym poškodením u pacientov s CKD.</p>
 
 <h2>Cieľ štúdie</h2>
@@ -65,7 +64,7 @@ pričom za poškodenie sa považovalo <strong>MMSE skóre ≤ 26/30</strong>.</p
   <li><strong>vyššie sérové hladiny indoxyl sulfátu</strong> boli <strong>nezávisle</strong> spojené
       s vyššou pravdepodobnosťou kognitívneho poškodenia (upravené OR <strong>1,11</strong>,
       <em>P</em> = 0,03),</li>
-  <li>v citlivostnej analýze (porovnanie s najnižšou skupinou IS) bola skupina s najvyšším IS spojená
+  <li>v analýze citlivosti (porovnanie s najnižšou skupinou IS) bola skupina s najvyšším IS spojená
       s <strong>viac než 40 % vyššou pravdepodobnosťou</strong> MMSE ≤ 26/30 (upravené OR
       <strong>1,43</strong>, <em>P</em> = 0,02).</li>
 </ul>
@@ -108,7 +107,7 @@ vyvodiť kauzalitu ani to, že zníženie IS automaticky zlepší kogníciu.</p>
 <p>V tejto francúzskej kohorte pacientov s CKD vyššie hladiny <strong>indoxyl sulfátu</strong>
 nezávisle súviseli s vyššou pravdepodobnosťou <strong>kognitívneho poškodenia</strong>, zatiaľ čo
 <strong>kynurenín</strong> a <strong>indole-3-acetát</strong> asociáciu nepreukázali. Pre klinickú
-prax je to zaujímavý signál, ale zatiaľ skôr smer na výskum biomarkerov a rizikovej stratifikácie
+prax je to zaujímavý signál, ale zatiaľ skôr podnet pre výskum biomarkerov a rizikovej stratifikácie
 než hotové terapeutické odporúčanie.</p>
 
 <hr>

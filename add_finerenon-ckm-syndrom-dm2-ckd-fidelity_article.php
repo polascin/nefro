@@ -35,7 +35,7 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Post-hoc pooled analýza FIDELITY (12 990 pacientov s DM2 a CKD): finerenón znižoval kardiovaskulárne aj renálne príhody konzistentne naprieč štádiami CKM syndrómu, s priaznivejšou dynamikou CKM (regresia III→II) a porovnateľnou bezpečnosťou vrátane hyperkaliémie.',
+    'excerpt'      => 'Post-hoc združená analýza FIDELITY (12 990 pacientov s DM2 a CKD): finerenón znižoval kardiovaskulárne aj renálne príhody konzistentne naprieč štádiami CKM syndrómu, s priaznivejšou dynamikou CKM (regresia III→II) a porovnateľnou bezpečnosťou vrátane hyperkaliémie.',
     'content'      => <<<'HTML'
 <p>Pacienti s diabetes mellitus 2. typu (DM2) a chronickou chorobou obličiek (CKD) tvoria skupinu
 s vysokým rizikom kardiovaskulárnych aj renálnych príhod. V praxi je však diagnostika a riziková
@@ -49,9 +49,9 @@ sa hodnotilo, či liečba finerenónom prináša konzistentný prínos naprieč 
 
 <h2>Dizajn a populácia</h2>
 <ul>
-  <li>Ide o <strong>post-hoc pooled analýzu dvoch fáz 3 randomizovaných, dvojito zaslepených, placebom
+  <li>Ide o <strong>post-hoc združenú (pooled) analýzu dvoch fáz 3 randomizovaných, dvojito zaslepených, placebom
       kontrolovaných štúdií FIDELITY</strong>.</li>
-  <li>Zaradených bolo <strong>12 990 pacientov</strong> (priemerný vek 64,8 rokov; 70 % muži), so sérovým
+  <li>Zaradených bolo <strong>12 990 pacientov</strong> (priemerný vek 64,8 roka; 70 % mužov), so sérovým
       <strong>K+ ≤ 4,8 mmol/l</strong> a liečených <strong>maximálne tolerovanou inhibíciou RAAS</strong>.</li>
   <li>Symptomatické <strong>HFrEF</strong> boli zo štúdií vylúčené.</li>
   <li>Pacienti boli podľa <strong>CKM štádia východiskovo</strong> rozdelení na:
@@ -81,7 +81,7 @@ sa hodnotilo, či liečba finerenónom prináša konzistentný prínos naprieč 
   <li><strong>renálny kompozit</strong>: aHR <strong>1,96</strong> (95 % IS 1,43–2,69)</li>
 </ul>
 <p>To zodpovedá klinickému očakávaniu, ale dôležité je, že rámec CKM štádia sa správa konzistentne aj
-v klinickom trial prostredí.</p>
+v prostredí klinického skúšania.</p>
 
 <h3>2) Finerenón znižoval riziko nezávisle od CKM štádia</h3>
 <p>Finerenón znížil:</p>
@@ -89,9 +89,9 @@ v klinickom trial prostredí.</p>
   <li><strong>kardiovaskulárny kompozit</strong> aj pri rôznych CKM štádiách (P pre interakciu <strong>0,86</strong>)</li>
   <li><strong>renálny kompozit</strong> naprieč CKM štádiami (P pre interakciu <strong>0,65</strong>)</li>
 </ul>
-<p>Čiže benefit bol „robustný" naprieč východiskovým rizikovým profilom podľa CKM.</p>
+<p>Čiže prínos bol „robustný" naprieč východiskovým rizikovým profilom podľa CKM.</p>
 
-<h3>3) Okrem benefitu v príhodách: aj priaznivejšia dynamika CKM</h3>
+<h3>3) Okrem prínosu v príhodách: aj priaznivejšia dynamika CKM</h3>
 <p>V skupine na finerenóne sa pozorovala priaznivejšia zmena CKM stavu v čase:</p>
 <ul>
   <li><strong>CKM regresia zo štádia III do II</strong>: vyššia pravdepodobnosť pri finerenóne
@@ -109,7 +109,7 @@ diferencovaný nárast rizika <strong>hyperkaliémie podľa štádia</strong>.</
 nie je „len renálny" liek alebo „len kardiálny" liek, ale pravdepodobne zasahuje spoločné dráhy, ktoré
 vedú k renálnym aj kardiovaskulárnym príhodám. CKM rámec navyše naznačuje, že pacient môže mať komplexné
 riziko aj bez toho, aby bolo v klinickej dokumentácii explicitne pomenované ako jedna jednotka.</p>
-<p>Napriek tomu treba mať na pamäti, že ide o post-hoc analýzu a nie primárny trial endpoint pre CKM
+<p>Napriek tomu treba mať na pamäti, že ide o post-hoc analýzu a nie primárny cieľový ukazovateľ štúdie pre CKM
 štádiá.</p>
 
 <h2>Limity a interpretácia opatrne</h2>
@@ -123,9 +123,9 @@ riziko aj bez toho, aby bolo v klinickej dokumentácii explicitne pomenované ak
 </ul>
 
 <h2>Záver</h2>
-<p>V post-hoc pooled analýze FIDELITY finerenón <strong>znižoval kardiovaskulárne aj renálne príhody
+<p>V post-hoc združenej analýze FIDELITY finerenón <strong>znižoval kardiovaskulárne aj renálne príhody
 konzistentne naprieč CKM štádiami</strong> u pacientov s DM2 a CKD. Štádium IV bolo spojené s vyšším
-rizikom, no benefit finerenónu sa ukázal aj u pacientov s vyššou východiskovou záťažou. Navyše sa
+rizikom, no prínos finerenónu sa ukázal aj u pacientov s vyššou východiskovou záťažou. Navyše sa
 pozorovala priaznivejšia dynamika CKM (regresia zo štádia III do II) a bezpečnosť vrátane rizika
 hyperkaliémie bola porovnateľná naprieč štádiami.</p>
 

@@ -39,24 +39,24 @@ $articles[] = [
     'content'      => <<<'HTML'
 <p>Pacient s dýchavičnosťou, edémom dolných končatín a únavou často smeruje k otázke, či ide
 o srdcové zlyhávanie, významnú chlopňovú patológiu, alebo problém mimo srdca. V praxi je však
-častým úzkym hrdlom dostupnosť echokardiografie. Podľa Medscape článku môže byť echokardiogram
+častým úzkym hrdlom dostupnosť echokardiografie. Podľa článku na Medscape môže byť echokardiogram
 dostupný až o hodiny, niekedy aj neskôr (dni), čo komplikuje včasné triedenie a rozhodovanie.</p>
 
-<p>Téma, ktorá sa rieši v najnovšom Medscape spracovaní, je využitie AI-asistovaného
+<p>Téma, ktorá sa rieši v najnovšom spracovaní na portáli Medscape, je využitie AI-asistovaného
 point-of-care ultrazvuku (POCUS) na pracoviskách, kde potrebujete rýchlu orientačnú informáciu
 o srdcovej funkcii a štrukturálnych/chlopňových nálezoch.</p>
 
 <h2>Prečo práve POCUS a prečo k tomu pribudla AI vrstva</h2>
-<p>Článok popisuje, že pre pokročilých praktikov (nurse practitioners, physician assistants) je
-POCUS užitočný najmä v situáciách ako urgentná starostlivosť, hospital medicine, ambulancie
-a dlhodobá starostlivosť. Kľúčový problém ale nie je len „nasnímať" obraz. Najväčšie oneskorenie
+<p>Článok opisuje, že pre pokročilých praktikov (nurse practitioners, physician assistants) je
+POCUS užitočný najmä v situáciách ako urgentná starostlivosť, nemocničná medicína, ambulancie
+a dlhodobá starostlivosť. Kľúčovým problémom však nie je len „nasnímať" obraz. Najväčšie oneskorenie
 vzniká pri interpretácii, keď:</p>
 <ul>
   <li>jemné chlopňové abnormality a hodnotenie srdcovej funkcie často vyžadujú špecializovaný dohľad,</li>
   <li>kvantitatívne merania a spoľahlivé závery potrebujú čas alebo experta,</li>
-  <li>vznikajú praktické dopady na tok pacientov a načasovanie liečby.</li>
+  <li>vznikajú praktické dôsledky pre tok pacientov a načasovanie liečby.</li>
 </ul>
-<p>AI-asistované POCUS má byť podľa článku spôsob, ako skrátiť cestu od vyšetrenia k akčným
+<p>AI-asistované POCUS má byť podľa článku spôsob, ako skrátiť cestu od vyšetrenia k prakticky využiteľným
 informáciám pri lôžku. Riešenie je prezentované ako „triážny" nástroj, nie náhrada formálnej
 echokardiografie.</p>
 
@@ -67,22 +67,22 @@ ultrazvukové obrazy a poskytuje:</p>
   <li>automatizované merania,</li>
   <li>diagnostické odporúčania súvisiace so štrukturálnym ochorením srdca, chlopňovými
       abnormalitami a srdcovým zlyhávaním,</li>
-  <li>štruktúrované výstupy podporujúce klinický workflow.</li>
+  <li>štruktúrované výstupy podporujúce klinický pracovný postup (workflow).</li>
 </ul>
 <p>Z pohľadu rozhodovania ide o otázky, ktoré treba zodpovedať skôr:</p>
 <ul>
   <li>Je potrebné urgentné kardiologické vyšetrenie?</li>
   <li>Sú prítomné známky srdcového zlyhávania?</li>
   <li>Je pravdepodobná významná chlopňová patológia?</li>
-  <li>Môže pacient zostať v komunite, alebo je potrebná eskalácia starostlivosti?</li>
+  <li>Môže pacient zostať v ambulantnej starostlivosti, alebo je potrebná eskalácia?</li>
 </ul>
 <p>Článok výslovne zdôrazňuje, že cieľom nie je nahradiť detailné vyšetrenia, ktoré v plnom
 rozsahu robia kardiológovia.</p>
 
 <h2>Znižovanie bariéry učenia: od akvizície k spoľahlivej interpretácii</h2>
-<p>Jedna obava pri ultrazvuku býva technická zručnosť potrebná na kvalitnú akvizíciu. V článku
-je popísané, že pokroky v AI-asistovanom vedení môžu znižovať bariéru pri získavaní obrazov.</p>
-<p>Konkrétne na Sheba Medical Center sa podľa textu časť fokálnych vyšetrení robí aj vyškolený
+<p>Jednou z obáv pri ultrazvuku býva technická zručnosť potrebná na kvalitnú akvizíciu. V článku
+je opísané, že pokroky v AI-asistovanom vedení môžu znižovať bariéru pri získavaní obrazov.</p>
+<p>Konkrétne na Sheba Medical Center časť fokálnych vyšetrení podľa textu vykonáva aj vyškolený
 personál, pričom niekoľko dní zahŕňa teoretickú výučbu a následne supervíziu počas snímania.
 V praxi sa má čas na vyšetrenie pohybovať v rádoch minút (článok uvádza, že to môže byť aj
 približne 2 minúty).</p>
@@ -94,15 +94,15 @@ spoľahlivá interpretácia, ktorá podporí rozhodovanie.</p>
 a kardiálne zobrazovanie, pričom rôzne firmy sa zameriavajú buď na:</p>
 <ul>
   <li>hardvér a point-of-care akvizíciu,</li>
-  <li>AI analýzu echokardiografických dát,</li>
-  <li>AI-guided získavanie obrazov pre neexpertov,</li>
-  <li>alternatívne prístupy (napríklad AI-enhanced digitálne stethoskopy a analýza srdcových zvukov).</li>
+  <li>analýzu echokardiografických dát pomocou AI,</li>
+  <li>získavanie obrazov s navádzaním AI pre neodborníkov,</li>
+  <li>alternatívne prístupy (napríklad digitálne stetoskopy s podporou AI a analýza srdcových zvukov).</li>
 </ul>
 <p>Spoločný cieľ je rozširovať prístup ku kardiovaskulárnemu posúdeniu mimo tradičných
 echokardiografických laboratórií a špecializovaných pracovísk.</p>
 
 <h2>Prečo by to mohlo zaujímať nefrológa (praktická rovina)</h2>
-<p>U nefrologickej praxe, najmä pri dialyzovaných a pacientov s kardiorenálnym syndrómom, sa
+<p>V nefrologickej praxi, najmä pri dialyzovaných a pacientov s kardiorenálnym syndrómom, sa
 dýchavičnosť, edémy a kolísanie objemového statusu často prelínajú s kardiálnou patológiou.
 Ak má byť AI-asistované POCUS skutočne spoľahlivé ako triážny nástroj, môže to teoreticky:</p>
 <ul>
@@ -110,13 +110,13 @@ Ak má byť AI-asistované POCUS skutočne spoľahlivé ako triážny nástroj, 
   <li>urýchliť eskaláciu na echokardiografiu, keď je to potrebné,</li>
   <li>podporiť rýchlejšie rozhodnutia o následnom postupe (napr. hospitalizácia vs. ambulantný plán).</li>
 </ul>
-<p>Toto je však skôr praktická úvaha z logiky workflow, nie dôkaz špecificky pre nefrológiu.
-Na nefrologickom pracovisku je rozumné zavádzať takéto nástroje s lokálnymi protokolmi, audítom
+<p>Toto je však skôr praktická úvaha z logiky pracovného postupu, nie dôkaz špecificky pre nefrológiu.
+Na nefrologickom pracovisku je rozumné zavádzať takéto nástroje s lokálnymi protokolmi, auditom
 kvality a jasnými pravidlami, kedy musí nasledovať formálna echokardiografia.</p>
 
 <h2>Dôležitá poznámka k záujmom</h2>
-<p>V texte sa uvádza, že Robert Klempfner je co-founder a medical director AISAP, a teda má
-finančný vzťah ku spoločnosti. Tamar Kupfer nemá disclosure.</p>
+<p>V texte sa uvádza, že Robert Klempfner je spoluzakladateľ a medicínsky riaditeľ spoločnosti AISAP, a teda má
+finančný vzťah ku spoločnosti. Tamar Kupfer neuvádza konflikt záujmov.</p>
 
 <hr>
 
