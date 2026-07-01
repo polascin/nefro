@@ -45,6 +45,14 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 $email  = trim((string) ($_POST['email'] ?? ''));
                 $web    = trim((string) ($_POST['website'] ?? ''));
                 $active = isset($_POST['is_active']) ? 1 : 0;
+                $outreach = (string) ($_POST['outreach_status'] ?? 'nekontaktovany');
+                if (!array_key_exists($outreach, ppOutreachLabels())) {
+                    $outreach = 'nekontaktovany';
+                }
+                $contacted = trim((string) ($_POST['contacted_at'] ?? ''));
+                if ($contacted !== '' && !preg_match('/^\d{4}-\d{2}-\d{2}$/', $contacted)) {
+                    $contacted = '';
+                }
 
                 if ($name === '') {
                     $actionError = 'Názov je povinný.';
@@ -74,6 +82,9 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     'contact_person' => ppClean((string) ($_POST['contact_person'] ?? ''), 190),
                     'notes'          => ppClean((string) ($_POST['notes'] ?? ''), 20000),
                     'source'         => ppClean((string) ($_POST['source'] ?? ''), 255),
+                    'ico'            => ppClean((string) ($_POST['ico'] ?? ''), 20),
+                    'outreach_status' => $outreach,
+                    'contacted_at'   => $contacted !== '' ? $contacted : null,
                     'is_active'      => $active,
                 ];
 
@@ -85,7 +96,8 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                                 name = :name, provider_type = :provider_type, specialization = :specialization,
                                 locality = :locality, address = :address, phone = :phone, email = :email,
                                 website = :website, contact_person = :contact_person, notes = :notes,
-                                source = :source, is_active = :is_active
+                                source = :source, ico = :ico, outreach_status = :outreach_status,
+                                contacted_at = :contacted_at, is_active = :is_active
                              WHERE id = :id'
                         );
                         $upd->execute($data);
@@ -94,10 +106,10 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                         $ins = $pdo->prepare(
                             'INSERT INTO partner_providers
                                 (name, provider_type, specialization, locality, address, phone, email,
-                                 website, contact_person, notes, source, is_active)
+                                 website, contact_person, notes, source, ico, outreach_status, contacted_at, is_active)
                              VALUES
                                 (:name, :provider_type, :specialization, :locality, :address, :phone, :email,
-                                 :website, :contact_person, :notes, :source, :is_active)'
+                                 :website, :contact_person, :notes, :source, :ico, :outreach_status, :contacted_at, :is_active)'
                         );
                         $ins->execute($data);
                         $actionResult = 'Poskytovateľ „' . $name . '“ bol pridaný.';
@@ -171,6 +183,15 @@ $fActive = (string) ($_GET['active'] ?? '');
 if (!in_array($fActive, ['', 'active', 'inactive'], true)) {
     $fActive = '';
 }
+$fOutreach = (string) ($_GET['outreach'] ?? '');
+if ($fOutreach !== '' && !array_key_exists($fOutreach, ppOutreachLabels())) {
+    $fOutreach = '';
+}
+$fGroup = (string) ($_GET['group'] ?? '');
+if (!in_array($fGroup, ['', 'type', 'locality', 'spec'], true)) {
+    $fGroup = '';
+}
+$grouped = $fGroup !== '';
 $fQuery = trim((string) ($_GET['q'] ?? ''));
 foreach (['fLoc', 'fSpec', 'fQuery'] as $vn) {
     if (mb_strlen($$vn) > 120) {
@@ -201,9 +222,51 @@ if ($fActive === 'active') {
 } elseif ($fActive === 'inactive') {
     $where .= ' AND is_active = 0';
 }
+if ($fOutreach !== '') {
+    $where .= ' AND outreach_status = :outreach';
+    $params['outreach'] = $fOutreach;
+}
 if ($fQuery !== '') {
     $where .= ' AND (name LIKE :q OR email LIKE :q OR contact_person LIKE :q OR notes LIKE :q OR address LIKE :q)';
     $params['q'] = '%' . $fQuery . '%';
+}
+
+// ── CSV export (bod 1) — rešpektuje aktuálne filtre; vyžaduje admin (už overený) ──
+if (($_GET['export'] ?? '') === 'csv') {
+    $expStmt = $pdo->prepare(
+        'SELECT name, provider_type, specialization, locality, address, phone, email, website,
+                ico, contact_person, outreach_status, contacted_at, is_active, notes, source
+         FROM partner_providers' . $where . ' ORDER BY provider_type ASC, name ASC'
+    );
+    $expStmt->execute($params);
+
+    header('Content-Type: text/csv; charset=UTF-8');
+    header('Content-Disposition: attachment; filename="poskytovatelia_' . date('Y-m-d') . '.csv"');
+    $out = fopen('php://output', 'w');
+    fwrite($out, "\xEF\xBB\xBF"); // UTF-8 BOM pre Excel
+    fputcsv($out, ['Nazov', 'Typ', 'Odbornost', 'Lokalita', 'Adresa', 'Telefon', 'Email', 'Web',
+        'ICO', 'Kontaktna osoba', 'Stav oslovenia', 'Datum kontaktu', 'Aktivny', 'Poznamky', 'Zdroj']);
+    foreach ($expStmt as $r) {
+        fputcsv($out, [
+            $r['name'],
+            ppTypeLabel((string) $r['provider_type']),
+            $r['specialization'],
+            $r['locality'],
+            $r['address'],
+            $r['phone'],
+            $r['email'],
+            $r['website'],
+            $r['ico'],
+            $r['contact_person'],
+            ppOutreachLabel((string) $r['outreach_status']),
+            $r['contacted_at'],
+            ((int) $r['is_active'] === 1 ? 'ano' : 'nie'),
+            $r['notes'],
+            $r['source'],
+        ]);
+    }
+    fclose($out);
+    exit;
 }
 
 $providers = [];
@@ -215,17 +278,26 @@ try {
     $total      = (int) $countStmt->fetchColumn();
     $totalPages = max(1, (int) ceil($total / $perPage));
 
-    $listStmt = $pdo->prepare(
-        'SELECT * FROM partner_providers' . $where . '
-         ORDER BY is_active DESC, locality ASC, name ASC
-         LIMIT :limit OFFSET :offset'
-    );
-    foreach ($params as $k => $v) {
-        $listStmt->bindValue(':' . $k, $v);
+    $orderBy = match ($fGroup) {
+        'type'     => 'provider_type ASC, name ASC',
+        'locality' => 'locality ASC, name ASC',
+        'spec'     => 'specialization ASC, name ASC',
+        default    => 'is_active DESC, locality ASC, name ASC',
+    };
+
+    if ($grouped) {
+        // Zoskupené zobrazenie — bez stránkovania (dataset je malý).
+        $listStmt = $pdo->prepare('SELECT * FROM partner_providers' . $where . ' ORDER BY ' . $orderBy . ' LIMIT 2000');
+        $listStmt->execute($params);
+    } else {
+        $listStmt = $pdo->prepare('SELECT * FROM partner_providers' . $where . ' ORDER BY ' . $orderBy . ' LIMIT :limit OFFSET :offset');
+        foreach ($params as $k => $v) {
+            $listStmt->bindValue(':' . $k, $v);
+        }
+        $listStmt->bindValue(':limit', $perPage, \PDO::PARAM_INT);
+        $listStmt->bindValue(':offset', $offset, \PDO::PARAM_INT);
+        $listStmt->execute();
     }
-    $listStmt->bindValue(':limit', $perPage, \PDO::PARAM_INT);
-    $listStmt->bindValue(':offset', $offset, \PDO::PARAM_INT);
-    $listStmt->execute();
     $providers = $listStmt->fetchAll(\PDO::FETCH_ASSOC);
 } catch (\PDOException $e) {
     error_log('admin_providers list error: ' . $e->getMessage());
@@ -249,13 +321,15 @@ $csrfToken = generateCsrfToken();
 /** Query string pre stránkovanie so zachovaním filtrov. */
 function ppAdminQs(array $extra = []): string
 {
-    global $fType, $fLoc, $fSpec, $fActive, $fQuery;
+    global $fType, $fLoc, $fSpec, $fActive, $fOutreach, $fGroup, $fQuery;
     $qs = array_filter([
-        'type'   => $fType,
-        'loc'    => $fLoc,
-        'spec'   => $fSpec,
-        'active' => $fActive,
-        'q'      => $fQuery,
+        'type'     => $fType,
+        'loc'      => $fLoc,
+        'spec'     => $fSpec,
+        'active'   => $fActive,
+        'outreach' => $fOutreach,
+        'group'    => $fGroup,
+        'q'        => $fQuery,
     ], static fn ($v): bool => $v !== '');
     $qs = array_merge($qs, $extra);
     return $qs === [] ? '' : '?' . http_build_query($qs);
@@ -366,8 +440,28 @@ $isEdit = $editProvider !== null;
             </div>
 
             <div class="form-row">
+              <label for="f_ico">IČO</label>
+              <input type="text" id="f_ico" name="ico" class="form-control" maxlength="20" value="<?= $fv('ico') ?>">
+            </div>
+
+            <div class="form-row">
               <label for="f_person">Kontaktná osoba</label>
               <input type="text" id="f_person" name="contact_person" class="form-control" maxlength="190" value="<?= $fv('contact_person') ?>">
+            </div>
+
+            <div class="form-row">
+              <label for="f_outreach">Stav oslovenia</label>
+              <?php $curOutreach = (string) ($editProvider['outreach_status'] ?? 'nekontaktovany'); ?>
+              <select id="f_outreach" name="outreach_status" class="form-control">
+                <?php foreach (ppOutreachLabels() as $slug => $label): ?>
+                  <option value="<?= htmlspecialchars($slug) ?>" <?= $curOutreach === $slug ? 'selected' : '' ?>><?= htmlspecialchars($label) ?></option>
+                <?php endforeach; ?>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <label for="f_contacted">Dátum kontaktu</label>
+              <input type="date" id="f_contacted" name="contacted_at" class="form-control" value="<?= $fv('contacted_at') ?>">
             </div>
 
             <div class="form-row">
@@ -433,16 +527,57 @@ $isEdit = $editProvider !== null;
             <option value="inactive" <?= $fActive === 'inactive' ? 'selected' : '' ?>>Neaktívni</option>
           </select>
 
+          <label for="outreach">Oslovenie:</label>
+          <select id="outreach" name="outreach" class="form-control admin-select-md">
+            <option value="">Všetky</option>
+            <?php foreach (ppOutreachLabels() as $slug => $label): ?>
+              <option value="<?= htmlspecialchars($slug) ?>" <?= $fOutreach === $slug ? 'selected' : '' ?>><?= htmlspecialchars($label) ?></option>
+            <?php endforeach; ?>
+          </select>
+
+          <label for="group">Zoskupiť:</label>
+          <select id="group" name="group" class="form-control admin-select-md">
+            <option value="" <?= $fGroup === '' ? 'selected' : '' ?>>(bez zoskupenia)</option>
+            <option value="type" <?= $fGroup === 'type' ? 'selected' : '' ?>>podľa typu</option>
+            <option value="locality" <?= $fGroup === 'locality' ? 'selected' : '' ?>>podľa lokality</option>
+            <option value="spec" <?= $fGroup === 'spec' ? 'selected' : '' ?>>podľa odbornosti</option>
+          </select>
+
           <label for="q">Hľadať:</label>
           <input type="search" id="q" name="q" class="form-control admin-select-md" maxlength="120" value="<?= htmlspecialchars($fQuery) ?>" placeholder="názov, e-mail, osoba">
 
           <button type="submit" class="btn-secondary-small">Filtrovať</button>
           <a href="admin_providers.php" class="btn-secondary-small">Reset</a>
+          <a href="admin_providers.php<?= ppAdminQs(['export' => 'csv']) ?>" class="btn-secondary-small" title="Exportovať aktuálny výber do CSV">⬇ Export CSV</a>
         </form>
 
         <?php if (empty($providers)): ?>
           <p class="calc-result-mt12">Pre zvolený filter sa nenašli žiadni poskytovatelia.</p>
         <?php else: ?>
+          <?php
+          $groupValOf = static function (array $p) use ($fGroup): string {
+              return match ($fGroup) {
+                  'type'     => (string) $p['provider_type'],
+                  'locality' => (string) ($p['locality'] ?? ''),
+                  'spec'     => (string) ($p['specialization'] ?? ''),
+                  default    => '',
+              };
+          };
+          $groupLabelOf = static function (string $v) use ($fGroup): string {
+              if ($fGroup === 'type') {
+                  return ppTypeLabel($v);
+              }
+              return $v !== '' ? $v : '(neuvedené)';
+          };
+          $groupCounts = [];
+          if ($grouped) {
+              foreach ($providers as $gp) {
+                  $gv = $groupValOf($gp);
+                  $groupCounts[$gv] = ($groupCounts[$gv] ?? 0) + 1;
+              }
+          }
+          $curGroup = null;
+          ?>
           <div class="overflow-x-auto">
             <table class="admin-articles-table" aria-label="Zoznam poskytovateľov">
               <thead>
@@ -460,6 +595,15 @@ $isEdit = $editProvider !== null;
                 <?php foreach ($providers as $p):
                     $pId = (int) $p['id'];
                     $pActive = (int) ($p['is_active'] ?? 0) === 1;
+                    if ($grouped):
+                        $gv = $groupValOf($p);
+                        if ($gv !== $curGroup):
+                            $curGroup = $gv;
+                ?>
+                <tr class="admin-group-row"><th colspan="7" scope="colgroup"><?= htmlspecialchars($groupLabelOf($gv)) ?> <span class="calc-result-detail">(<?= (int) $groupCounts[$gv] ?>)</span></th></tr>
+                <?php
+                        endif;
+                    endif;
                 ?>
                 <tr>
                   <td>
@@ -481,6 +625,7 @@ $isEdit = $editProvider !== null;
                     <?php else: ?>
                       <span class="badge-draft">Neaktívny</span>
                     <?php endif; ?>
+                    <br><span class="calc-result-detail"><?= htmlspecialchars(ppOutreachLabel((string) ($p['outreach_status'] ?? ''))) ?><?php if (!empty($p['contacted_at'])): ?> · <?= htmlspecialchars((string) $p['contacted_at']) ?><?php endif; ?></span>
                   </td>
                   <td>
                     <a href="admin_providers.php?action=edit&id=<?= $pId ?>" class="btn-secondary-small">✏️ Upraviť</a>
@@ -504,7 +649,7 @@ $isEdit = $editProvider !== null;
             </table>
           </div>
 
-          <?php if ($totalPages > 1): ?>
+          <?php if (!$grouped && $totalPages > 1): ?>
             <nav class="articles-pagination admin-pagination" aria-label="Stránkovanie poskytovateľov">
               <span class="articles-pagination__label">Stránky:</span>
               <div class="articles-pagination__links">

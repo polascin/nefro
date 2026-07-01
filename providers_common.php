@@ -35,6 +35,29 @@ if (!function_exists('ppTypeLabel')) {
     }
 }
 
+if (!function_exists('ppOutreachLabels')) {
+    /** Stav oslovenia odporúčateľa (slug => popis) — sledovanie akvizície. */
+    function ppOutreachLabels(): array
+    {
+        return [
+            'nekontaktovany' => 'Nekontaktovaný',
+            'osloveny'       => 'Oslovený',
+            'odpovedal'      => 'Odpovedal',
+            'spolupracuje'   => 'Spolupracuje',
+            'odmietol'       => 'Odmietol',
+        ];
+    }
+}
+
+if (!function_exists('ppOutreachLabel')) {
+    function ppOutreachLabel(?string $slug): string
+    {
+        $labels = ppOutreachLabels();
+        $slug = (string) $slug;
+        return $labels[$slug] ?? 'Nekontaktovaný';
+    }
+}
+
 if (!function_exists('ppLocalitySuggestions')) {
     /** Návrhy lokalít v pracovnom dosahu Dúbravky (západná BA + Záhorie). */
     function ppLocalitySuggestions(): array
