@@ -83,7 +83,7 @@ a bez zbytočného stresu.</p>
 
 <h2>Čo si pripraviť</h2>
 <ul>
-  <li>otázky, ktoré vás zaujímajú (kľudne si ich vopred zapíšte);</li>
+  <li>otázky, ktoré vás zaujímajú (pokojne si ich vopred zapíšte);</li>
   <li>zoznam liekov a prípadných alergií;</li>
   <li>informácie o vašom doterajšom priebehu ochorenia obličiek;</li>
   <li>podporu blízkej osoby — môže ísť s vami a pomôcť zapamätať si informácie.</li>

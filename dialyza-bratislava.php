@@ -152,6 +152,37 @@ $businessContacts = [
       . 'peritoneálna dialýza Bratislava, dovolenková dialýza, holiday dialysis Bratislava, '
       . 'nefrologická ambulancia Bratislava, Medimpax';
   $ogType = 'website';
+  $ogImage = $baseUrl . 'img/impax.png';
+  $ogImageWidth = 1108;
+  $ogImageHeight = 826;
+
+  // Časté otázky — zobrazené na stránke aj v FAQPage schéme (long-tail SEO).
+  $faqs = [
+      [
+          'q' => 'Kde sídli dialyzačné stredisko Medimpax?',
+          'a' => 'Na vrátkach 2/A, 841 01 Bratislava-Dúbravka. Pracovisko je dobre dostupné pre západnú Bratislavu a Záhorie.',
+      ],
+      [
+          'q' => 'Aké dialyzačné služby poskytujete?',
+          'a' => 'Hemodialýzu, hemodiafiltráciu (HDF), peritoneálnu dialýzu (CAPD aj APD) a prázdninové (dovolenkové) dialýzy pre dospelých pacientov.',
+      ],
+      [
+          'q' => 'Ponúkate dovolenkovú (hosťovskú) dialýzu v Bratislave?',
+          'a' => 'Áno. Hosťovskú hemodialýzu aj hemodiafiltráciu vieme zabezpečiť po predchádzajúcej dohode podľa voľnej kapacity. Kontaktujte nás vopred.',
+      ],
+      [
+          'q' => 'Ako sa objednať na nefrologické vyšetrenie?',
+          'a' => 'Zavolajte na nefrologickú ambulanciu 0940 609 480 alebo napíšte na medimpax@impax.sk.',
+      ],
+      [
+          'q' => 'Potrebujem odporúčanie, aby ste ma prijali?',
+          'a' => 'Máte právo na slobodný výber poskytovateľa zdravotnej starostlivosti. O nefrologické vyšetrenie alebo dialýzu môžete požiadať bez ohľadu na to, kde ste boli doteraz sledovaní.',
+      ],
+      [
+          'q' => 'Robíte ultrazvuk obličiek?',
+          'a' => 'Áno, v rámci nefrologickej ambulancie vykonávame ultrazvuk obličiek, močových ciest a brucha.',
+      ],
+  ];
 
   $structuredData = [
       [
@@ -210,6 +241,15 @@ $businessContacts = [
               ['@type' => 'ListItem', 'position' => 1, 'name' => 'Domov', 'item' => $baseUrl],
               ['@type' => 'ListItem', 'position' => 2, 'name' => 'Dialýza Bratislava', 'item' => $canonicalUrl],
           ],
+      ],
+      [
+          '@context'   => 'https://schema.org',
+          '@type'      => 'FAQPage',
+          'mainEntity' => array_map(static fn (array $f): array => [
+              '@type'          => 'Question',
+              'name'           => $f['q'],
+              'acceptedAnswer' => ['@type' => 'Answer', 'text' => $f['a']],
+          ], $faqs),
       ],
   ];
   include 'head_meta.php';
@@ -371,7 +411,7 @@ $businessContacts = [
             <section class="features-section" id="odosielatelia" aria-labelledby="odosielatelia-heading">
                 <h2 id="odosielatelia-heading">Pre odosielajúcich lekárov</h2>
                 <p>Posielate pacienta na nefrologické vyšetrenie alebo do dialyzačného programu?
-                   Nižšie nájdete praktické informácie ku spolupráci.</p>
+                   Nižšie nájdete praktické informácie k spolupráci.</p>
                 <div class="features-grid">
                     <div class="feature-card">
                         <h3>Koho odoslať</h3>
@@ -393,6 +433,14 @@ $businessContacts = [
                         </ul>
                     </div>
                 </div>
+            </section>
+
+            <section class="features-section" id="faq" aria-labelledby="faq-heading">
+                <h2 id="faq-heading">Časté otázky</h2>
+                <?php foreach ($faqs as $f): ?>
+                    <h3><?= htmlspecialchars($f['q']) ?></h3>
+                    <p><?= htmlspecialchars($f['a']) ?></p>
+                <?php endforeach; ?>
             </section>
 
             <section class="features-section" id="prevadzkovatel" aria-labelledby="prevadzkovatel-heading">

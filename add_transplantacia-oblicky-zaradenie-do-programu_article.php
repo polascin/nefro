@@ -42,8 +42,8 @@ $articles[] = [
 </figure>
 
 <p>Transplantácia obličky je pre mnohých pacientov s pokročilým ochorením obličiek
-<strong>najlepšou formou náhrady ich funkcie</strong> — umožňuje život bez dialýzy alebo s jej
-ukončením. Cesta k nej vedie cez dôkladnú prípravu a zaradenie do transplantačného programu.
+<strong>často preferovanou formou náhrady ich funkcie</strong> — umožňuje život bez dialýzy alebo
+s jej ukončením. Cesta k nej vedie cez dôkladnú prípravu a zaradenie do transplantačného programu.
 V tomto článku zrozumiteľne vysvetlíme, ako to prebieha.</p>
 
 <h2>Prečo transplantácia</h2>
@@ -79,7 +79,7 @@ a chodíte na pravidelné kontroly.</p>
 
 <h2>Úloha nefrológa a dialyzačného strediska</h2>
 <p>Samotnú transplantáciu vykonáva špecializované transplantačné centrum, no <strong>cesta k nej
-začína u nefrológa</strong>. Nefrologická ambulancia s vami možnosť transplantácie prebrať,
+začína u nefrológa</strong>. Nefrologická ambulancia s vami preberie možnosť transplantácie,
 zabezpečí potrebné vyšetrenia, pripraví dokumentáciu a <strong>odošle vás do transplantačného
 centra</strong>. Sprevádza vás aj počas čakania.</p>
 
