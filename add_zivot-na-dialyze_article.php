@@ -37,7 +37,7 @@ $articles[] = [
     'excerpt'      => 'Ako vyzerá bežný týždeň na dialýze, na čo myslieť pri strave a pitnom režime a ako sa dá popri liečbe pracovať aj cestovať.',
     'content'      => <<<'HTML'
 <figure>
-  <img src="img/medimpax.png" alt="Dialyzačné stredisko Medimpax v Bratislave-Dúbravke" loading="lazy" decoding="async">
+  <img src="img/medimpax.webp" alt="Dialyzačné stredisko Medimpax v Bratislave-Dúbravke" loading="lazy" decoding="async">
   <figcaption>Dialyzačné stredisko Medimpax, Na vrátkach 2/A, Bratislava-Dúbravka.</figcaption>
 </figure>
 

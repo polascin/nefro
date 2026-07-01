@@ -65,6 +65,8 @@ function buildArticlePdfHtml(array $article): string
     $author = htmlspecialchars((string) ($article['author'] ?? 'MUDr. Ľubomír Polaščín'), ENT_QUOTES, 'UTF-8');
     $slug   = htmlspecialchars((string) ($article['slug'] ?? ''), ENT_QUOTES, 'UTF-8');
     $content = (string) ($article['content'] ?? '');
+    // wkhtmltopdf 0.12.6 (staré WebKit) nevykreslí WebP — v PDF použi PNG variant obrázka.
+    $content = preg_replace('/((?:src|srcset)="[^"]*?)\.webp"/i', '$1.png"', $content) ?? $content;
 
     $dateRaw = (string) ($article['published_at'] ?? '');
     $date = $dateRaw !== '' ? date('d.m.Y', strtotime($dateRaw)) : '';

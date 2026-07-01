@@ -37,7 +37,7 @@ $articles[] = [
     'excerpt'      => 'Krok za krokom vysvetľujeme, ako vyzerá jedno hemodialyzačné sedenie, ako často sa opakuje, čo je cievny prístup a ako sa môžete po dialýze cítiť.',
     'content'      => <<<'HTML'
 <figure>
-  <img src="img/medimpax.png" alt="Dialyzačné stredisko Medimpax v Bratislave-Dúbravke" loading="lazy" decoding="async">
+  <img src="img/medimpax.webp" alt="Dialyzačné stredisko Medimpax v Bratislave-Dúbravke" loading="lazy" decoding="async">
   <figcaption>Dialyzačné stredisko Medimpax, Na vrátkach 2/A, Bratislava-Dúbravka.</figcaption>
 </figure>
 

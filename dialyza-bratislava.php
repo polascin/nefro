@@ -152,9 +152,9 @@ $businessContacts = [
       . 'peritoneálna dialýza Bratislava, dovolenková dialýza, holiday dialysis Bratislava, '
       . 'nefrologická ambulancia Bratislava, Medimpax';
   $ogType = 'website';
-  $ogImage = $baseUrl . 'img/medimpax.png';
-  $ogImageWidth = 1108;
-  $ogImageHeight = 826;
+  $ogImage = $baseUrl . 'img/medimpax.webp';
+  $ogImageWidth = 2400;
+  $ogImageHeight = 1792;
 
   // Časté otázky — zobrazené na stránke aj v FAQPage schéme (long-tail SEO).
   $faqs = [
@@ -308,7 +308,7 @@ $businessContacts = [
             <section class="features-section" id="mapa" aria-labelledby="mapa-heading">
                 <h2 id="mapa-heading">Kde nás nájdete</h2>
                 <figure class="place-figure">
-                    <img src="img/medimpax.png" alt="Dialyzačné stredisko a nefrologická ambulancia Medimpax, Na vrátkach 2/A, Bratislava-Dúbravka" width="1108" height="826" loading="lazy" decoding="async">
+                    <img src="img/medimpax.webp" alt="Dialyzačné stredisko a nefrologická ambulancia Medimpax, Na vrátkach 2/A, Bratislava-Dúbravka" width="1108" height="826" loading="lazy" decoding="async">
                     <figcaption><?= htmlspecialchars($center['siteAddress']) ?></figcaption>
                 </figure>
                 <iframe class="map-embed" title="Mapa — Dialyzačné stredisko Medimpax, Na vrátkach 2/A, Bratislava-Dúbravka"

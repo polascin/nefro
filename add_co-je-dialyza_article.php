@@ -37,7 +37,7 @@ $articles[] = [
     'excerpt'      => 'Jednoduché vysvetlenie, čo je dialýza, aké sú jej dva hlavné druhy, kedy je potrebná a čo znamená pre bežný život.',
     'content'      => <<<'HTML'
 <figure>
-  <img src="img/medimpax.png" alt="Dialyzačné stredisko Medimpax v Bratislave-Dúbravke" loading="lazy" decoding="async">
+  <img src="img/medimpax.webp" alt="Dialyzačné stredisko Medimpax v Bratislave-Dúbravke" loading="lazy" decoding="async">
   <figcaption>Dialyzačné stredisko Medimpax, Na vrátkach 2/A, Bratislava-Dúbravka.</figcaption>
 </figure>
 

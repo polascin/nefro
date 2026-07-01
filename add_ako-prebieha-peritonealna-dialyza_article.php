@@ -37,7 +37,7 @@ $articles[] = [
     'excerpt'      => 'Peritoneálna dialýza prebieha doma. Vysvetľujeme, ako funguje, aký je rozdiel medzi CAPD a APD, ako vyzerá výmena a ako sa na liečbu pripraviť.',
     'content'      => <<<'HTML'
 <figure>
-  <img src="img/medimpax.png" alt="Dialyzačné stredisko Medimpax v Bratislave-Dúbravke" loading="lazy" decoding="async">
+  <img src="img/medimpax.webp" alt="Dialyzačné stredisko Medimpax v Bratislave-Dúbravke" loading="lazy" decoding="async">
   <figcaption>Dialyzačné stredisko Medimpax, Na vrátkach 2/A, Bratislava-Dúbravka.</figcaption>
 </figure>
 

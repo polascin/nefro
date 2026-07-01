@@ -38,7 +38,7 @@ $articles[] = [
     'excerpt'      => 'Ultrazvuk je rýchle a nebolestivé vyšetrenie. Poradíme, ako prebieha a ako sa naň pripraviť — kedy treba prísť nalačno a kedy s plným močovým mechúrom.',
     'content'      => <<<'HTML'
 <figure>
-  <img src="img/medimpax.png" alt="Nefrologická ambulancia Medimpax v Bratislave-Dúbravke" loading="lazy" decoding="async">
+  <img src="img/medimpax.webp" alt="Nefrologická ambulancia Medimpax v Bratislave-Dúbravke" loading="lazy" decoding="async">
   <figcaption>Nefrologická ambulancia Medimpax, Bratislava-Dúbravka.</figcaption>
 </figure>
 

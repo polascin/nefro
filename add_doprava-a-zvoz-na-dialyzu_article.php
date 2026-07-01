@@ -40,7 +40,7 @@ $articles[] = [
     'excerpt'      => 'Pravidelné cesty na hemodialýzu sú dôležitou praktickou témou. Prinášame prehľad možností dopravy vrátane zvozu organizovaného strediskom a ako si ju zariadiť.',
     'content'      => <<<'HTML'
 <figure>
-  <img src="img/medimpax.png" alt="Dialyzačné stredisko Medimpax v Bratislave-Dúbravke" loading="lazy" decoding="async">
+  <img src="img/medimpax.webp" alt="Dialyzačné stredisko Medimpax v Bratislave-Dúbravke" loading="lazy" decoding="async">
   <figcaption>Dialyzačné stredisko Medimpax, Na vrátkach 2/A, Bratislava-Dúbravka.</figcaption>
 </figure>
 
