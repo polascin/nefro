@@ -211,6 +211,18 @@ parameters:
 			path: admin_articles.php
 
 		-
+			message: '#^If condition is always true\.$#'
+			identifier: if.alwaysTrue
+			count: 1
+			path: admin_providers.php
+
+		-
+			message: '#^Strict comparison using \!\=\= between non\-empty\-list\<int\> and array\{\} will always evaluate to true\.$#'
+			identifier: notIdentical.alwaysTrue
+			count: 1
+			path: admin_providers.php
+
+		-
 			message: '#^Call to function is_array\(\) with array\<int, array\{author\: string, articles\: int\}\> will always evaluate to true\.$#'
 			identifier: function.alreadyNarrowedType
 			count: 1
@@ -365,6 +377,12 @@ parameters:
 			identifier: nullCoalesce.expr
 			count: 2
 			path: config_loader.php
+
+		-
+			message: '#^Strict comparison using \!\=\= between ''halanda@impax\.sk'' and '''' will always evaluate to true\.$#'
+			identifier: notIdentical.alwaysTrue
+			count: 1
+			path: dialyza-bratislava.php
 
 		-
 			message: '#^Offset 1\|2\|3\|4\|5\|6\|7\|8\|9\|10\|11\|12 on array\{1\: ''januára'', 2\: ''februára'', 3\: ''marca'', 4\: ''apríla'', 5\: ''mája'', 6\: ''júna'', 7\: ''júla'', 8\: ''augusta'', \.\.\.\} on left side of \?\? always exists and is not nullable\.$#'
