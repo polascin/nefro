@@ -35,7 +35,7 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Čo robí nefrologická ambulancia v oblasti klinickej a preventívnej nefrológie a ako pripravuje pacientov na zaradenie do hemodialyzačného alebo peritoneálne dialyzačného programu.',
+    'excerpt'      => 'Čo robí nefrologická ambulancia v oblasti klinickej a preventívnej nefrológie a ako pripravuje pacientov na zaradenie do hemodialyzačného programu alebo programu peritoneálnej dialýzy.',
     'content'      => <<<'HTML'
 <figure>
   <img src="img/impax.png" alt="Nefrologická ambulancia Medimpax v Bratislave-Dúbravke" loading="lazy" decoding="async">
@@ -71,7 +71,7 @@ zmeny skôr, než narobia škodu.</p>
 
 <h2>Príprava na zaradenie do dialyzačného programu</h2>
 <p>Ak ochorenie postupuje, ambulancia pripravuje pacienta na <strong>chronický intermitentný
-hemodialyzačný alebo peritoneálne dialyzačný program</strong>. To zahŕňa rozhovor o voľbe metódy
+hemodialyzačný program alebo program peritoneálnej dialýzy</strong>. To zahŕňa rozhovor o voľbe metódy
 (hemodialýza vs. peritoneálna dialýza), <strong>včasné plánovanie cievneho prístupu alebo PD
 katétra</strong>, vysvetlenie priebehu liečby a sprevádzanie pri rozhodovaní. Tam, kde je
 vhodná transplantácia, ambulancia zabezpečí vyšetrenia a odoslanie do transplantačného centra.</p>
