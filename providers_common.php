@@ -58,6 +58,28 @@ if (!function_exists('ppOutreachLabel')) {
     }
 }
 
+if (!function_exists('ppContactChannelLabels')) {
+    /** Kanály kontaktu (história) — slug => popis. */
+    function ppContactChannelLabels(): array
+    {
+        return [
+            'email'   => 'E-mail',
+            'telefon' => 'Telefón',
+            'osobne'  => 'Osobne',
+            'list'    => 'List',
+            'other'   => 'Iné',
+        ];
+    }
+}
+
+if (!function_exists('ppContactChannelLabel')) {
+    function ppContactChannelLabel(?string $slug): string
+    {
+        $slug = (string) $slug;
+        return ppContactChannelLabels()[$slug] ?? 'Iné';
+    }
+}
+
 if (!function_exists('ppPriorityLabels')) {
     /** Priorita odporúčateľa (cielenie akvizície). */
     function ppPriorityLabels(): array

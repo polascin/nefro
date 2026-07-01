@@ -18,6 +18,8 @@ requireAdmin();
 $actionResult   = null; // plain text — escapuje sa pri výpise
 $actionError    = null;
 $editProvider   = null;
+$editContacts   = [];
+$stayEditId     = null; // po zápise kontaktu ostaň v editačnom pohľade
 
 $typeLabels = ppTypeLabels();
 
@@ -163,7 +165,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 }
                 break;
 
-            // Rýchle označenie „Oslovený teraz" — nastaví stav + dátum a čas kontaktu.
+            // Rýchle označenie „Oslovený teraz" — nastaví stav + dátum a čas + zápis do histórie.
             case 'mark_contacted':
                 $id = (int) ($_POST['provider_id'] ?? 0);
                 if ($id <= 0) {
@@ -171,14 +173,71 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     break;
                 }
                 try {
-                    $upd = $pdo->prepare(
-                        "UPDATE partner_providers SET outreach_status = 'osloveny', contacted_at = NOW() WHERE id = :id"
-                    );
-                    $upd->execute(['id' => $id]);
-                    $actionResult = 'Označené ako oslovené (' . date('d.m.Y H:i') . ').';
+                    $pdo->beginTransaction();
+                    $pdo->prepare("UPDATE partner_providers SET outreach_status = 'osloveny', contacted_at = NOW() WHERE id = :id")
+                        ->execute(['id' => $id]);
+                    $pdo->prepare("INSERT INTO provider_contacts (provider_id, contacted_at, channel, outcome, note)
+                                   VALUES (:pid, NOW(), 'other', 'osloveny', :note)")
+                        ->execute(['pid' => $id, 'note' => 'Rýchle označenie „Oslovený teraz"']);
+                    $pdo->commit();
+                    $actionResult = 'Označené ako oslovené (' . date('d.m.Y H:i') . ') — zapísané do histórie.';
                 } catch (\PDOException $e) {
+                    if ($pdo->inTransaction()) {
+                        $pdo->rollBack();
+                    }
                     error_log('admin_providers mark_contacted error: ' . $e->getMessage());
                     $actionError = 'Chyba pri označení kontaktu.';
+                }
+                break;
+
+            // Zápis kontaktu do histórie (z editačného pohľadu).
+            case 'add_contact':
+                $id = (int) ($_POST['provider_id'] ?? 0);
+                if ($id <= 0) {
+                    $actionError = 'Neplatné ID.';
+                    break;
+                }
+                $stayEditId = $id;
+                $ch = (string) ($_POST['channel'] ?? 'other');
+                if (!array_key_exists($ch, ppContactChannelLabels())) {
+                    $ch = 'other';
+                }
+                $outc = (string) ($_POST['outcome'] ?? '');
+                if ($outc !== '' && !array_key_exists($outc, ppOutreachLabels())) {
+                    $outc = '';
+                }
+                $cnote = ppClean((string) ($_POST['contact_note'] ?? ''), 20000);
+                $craw  = trim((string) ($_POST['contact_at'] ?? ''));
+                $cval  = null;
+                if ($craw !== '' && preg_match('/^(\d{4}-\d{2}-\d{2})T(\d{2}:\d{2})(:\d{2})?$/', $craw, $m2)) {
+                    $cval = $m2[1] . ' ' . $m2[2] . ':00';
+                }
+                try {
+                    $pdo->beginTransaction();
+                    $pdo->prepare("INSERT INTO provider_contacts (provider_id, contacted_at, channel, outcome, note)
+                                   VALUES (:pid, COALESCE(:cat, NOW()), :ch, :outc, :note)")
+                        ->execute([
+                            'pid'  => $id,
+                            'cat'  => $cval,
+                            'ch'   => $ch,
+                            'outc' => $outc !== '' ? $outc : null,
+                            'note' => $cnote,
+                        ]);
+                    if ($outc !== '') {
+                        $pdo->prepare("UPDATE partner_providers SET contacted_at = COALESCE(:cat, NOW()), outreach_status = :outc WHERE id = :id")
+                            ->execute(['cat' => $cval, 'outc' => $outc, 'id' => $id]);
+                    } else {
+                        $pdo->prepare("UPDATE partner_providers SET contacted_at = COALESCE(:cat, NOW()) WHERE id = :id")
+                            ->execute(['cat' => $cval, 'id' => $id]);
+                    }
+                    $pdo->commit();
+                    $actionResult = 'Kontakt bol zapísaný do histórie.';
+                } catch (\PDOException $e) {
+                    if ($pdo->inTransaction()) {
+                        $pdo->rollBack();
+                    }
+                    error_log('admin_providers add_contact error: ' . $e->getMessage());
+                    $actionError = 'Chyba pri zápise kontaktu.';
                 }
                 break;
 
@@ -189,13 +248,22 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
     }
 }
 
-// ── Načítanie na editáciu (GET) ───────────────────────────────────────────────
+// ── Načítanie na editáciu (GET alebo po zápise kontaktu) ──────────────────────
 $editId = (int) ($_GET['id'] ?? 0);
-if (($_GET['action'] ?? '') === 'edit' && $editId > 0) {
+if ($stayEditId !== null) {
+    $editId = $stayEditId;
+}
+if (($stayEditId !== null || ($_GET['action'] ?? '') === 'edit') && $editId > 0) {
     try {
         $stmt = $pdo->prepare('SELECT * FROM partner_providers WHERE id = :id LIMIT 1');
         $stmt->execute(['id' => $editId]);
         $editProvider = $stmt->fetch(\PDO::FETCH_ASSOC) ?: null;
+
+        if ($editProvider !== null) {
+            $cs = $pdo->prepare('SELECT * FROM provider_contacts WHERE provider_id = :id ORDER BY contacted_at DESC, id DESC');
+            $cs->execute(['id' => (int) $editProvider['id']]);
+            $editContacts = $cs->fetchAll(\PDO::FETCH_ASSOC);
+        }
     } catch (\PDOException $e) {
         error_log('admin_providers edit load error: ' . $e->getMessage());
     }
@@ -326,7 +394,7 @@ if (in_array($exportFmt, ['csv', 'json', 'vcard'], true)) {
     $out = fopen('php://output', 'w');
     fwrite($out, "\xEF\xBB\xBF");
     fputcsv($out, ['Nazov', 'Typ', 'Odbornost', 'Lokalita', 'Adresa', 'Telefon', 'Email', 'Web',
-        'ICO', 'Kontaktna osoba', 'Priorita', 'Stav oslovenia', 'Datum a cas kontaktu', 'Aktivny', 'Poznamky', 'Zdroj']);
+        'ICO', 'Kontaktna osoba', 'Priorita', 'Stav oslovenia', 'Datum a cas kontaktu', 'Aktivny', 'Poznamky', 'Zdroj', 'Posledna zmena']);
     foreach ($rows as $r) {
         fputcsv($out, [
             $r['name'],
@@ -345,6 +413,7 @@ if (in_array($exportFmt, ['csv', 'json', 'vcard'], true)) {
             ((int) $r['is_active'] === 1 ? 'ano' : 'nie'),
             $r['notes'],
             $r['source'],
+            $r['updated_at'] ?? '',
         ]);
     }
     fclose($out);
@@ -396,6 +465,22 @@ try {
     }
 } catch (\PDOException $e) {
     error_log('admin_providers typecount error: ' . $e->getMessage());
+}
+
+// Počet zaznamenaných kontaktov pre zobrazených poskytovateľov (história).
+$contactCounts = [];
+if (!empty($providers)) {
+    $ids = array_map('intval', array_column($providers, 'id'));
+    if ($ids !== []) {
+        $inList = implode(',', $ids);
+        try {
+            foreach ($pdo->query("SELECT provider_id, COUNT(*) c FROM provider_contacts WHERE provider_id IN ($inList) GROUP BY provider_id") as $r) {
+                $contactCounts[(int) $r['provider_id']] = (int) $r['c'];
+            }
+        } catch (\PDOException $e) {
+            error_log('admin_providers contactcount error: ' . $e->getMessage());
+        }
+    }
 }
 
 $csrfToken = generateCsrfToken();
@@ -590,6 +675,54 @@ $isEdit = $editProvider !== null;
           </div>
         </form>
       </div>
+
+      <?php if ($isEdit): ?>
+      <div class="primary-article">
+        <h3>História kontaktov</h3>
+        <form method="POST" action="admin_providers.php" class="form-row-inline admin-filter-form">
+          <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
+          <input type="hidden" name="action" value="add_contact">
+          <input type="hidden" name="provider_id" value="<?= (int) $editProvider['id'] ?>">
+          <label for="c_at">Dátum/čas:</label>
+          <input type="datetime-local" id="c_at" name="contact_at" class="form-control admin-select-md">
+          <label for="c_ch">Kanál:</label>
+          <select id="c_ch" name="channel" class="form-control admin-select-sm">
+            <?php foreach (ppContactChannelLabels() as $slug => $label): ?>
+              <option value="<?= htmlspecialchars($slug) ?>"><?= htmlspecialchars($label) ?></option>
+            <?php endforeach; ?>
+          </select>
+          <label for="c_out">Výsledok:</label>
+          <select id="c_out" name="outcome" class="form-control admin-select-md">
+            <option value="">(nemeniť stav)</option>
+            <?php foreach (ppOutreachLabels() as $slug => $label): ?>
+              <option value="<?= htmlspecialchars($slug) ?>"><?= htmlspecialchars($label) ?></option>
+            <?php endforeach; ?>
+          </select>
+          <input type="text" name="contact_note" class="form-control admin-select-md" maxlength="1000" placeholder="Poznámka">
+          <button type="submit" class="btn-secondary-small">➕ Zapísať kontakt</button>
+        </form>
+
+        <?php if (empty($editContacts)): ?>
+          <p class="helper-text">Zatiaľ žiadny zaznamenaný kontakt. Prázdny dátum = teraz.</p>
+        <?php else: ?>
+          <div class="overflow-x-auto">
+            <table class="admin-articles-table" aria-label="História kontaktov">
+              <thead><tr><th scope="col">Dátum a čas</th><th scope="col">Kanál</th><th scope="col">Výsledok</th><th scope="col">Poznámka</th></tr></thead>
+              <tbody>
+                <?php foreach ($editContacts as $c): $ct = strtotime((string) $c['contacted_at']); ?>
+                <tr>
+                  <td><?= htmlspecialchars($ct ? date('d.m.Y H:i', $ct) : (string) $c['contacted_at']) ?></td>
+                  <td><?= htmlspecialchars(ppContactChannelLabel((string) $c['channel'])) ?></td>
+                  <td><?= !empty($c['outcome']) ? htmlspecialchars(ppOutreachLabel((string) $c['outcome'])) : '<span class="calc-result-detail">—</span>' ?></td>
+                  <td><?= nl2br(htmlspecialchars((string) ($c['note'] ?? ''))) ?></td>
+                </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+          </div>
+        <?php endif; ?>
+      </div>
+      <?php endif; ?>
       <hr class="section-divider">
 
       <!-- ── FILTRE + ZOZNAM ───────────────────────────────────────────── -->
@@ -738,6 +871,8 @@ $isEdit = $editProvider !== null;
                       <span class="badge-draft">Neaktívny</span>
                     <?php endif; ?>
                     <br><span class="calc-result-detail"><?= htmlspecialchars(ppOutreachLabel((string) ($p['outreach_status'] ?? ''))) ?><?php if (!empty($p['contacted_at'])): $_ct = strtotime((string) $p['contacted_at']); ?> · <?= htmlspecialchars($_ct ? date('d.m.Y H:i', $_ct) : (string) $p['contacted_at']) ?><?php endif; ?></span>
+                    <?php $cc = $contactCounts[$pId] ?? 0; if ($cc > 0): ?><br><span class="calc-result-detail">🗒 <?= (int) $cc ?> kontakt(ov)</span><?php endif; ?>
+                    <?php if (!empty($p['updated_at'])): $_ut = strtotime((string) $p['updated_at']); ?><br><span class="calc-result-detail">Zmenené: <?= htmlspecialchars($_ut ? date('d.m.Y H:i', $_ut) : (string) $p['updated_at']) ?></span><?php endif; ?>
                   </td>
                   <td class="no-print">
                     <a href="admin_providers.php?action=edit&id=<?= $pId ?>" class="btn-secondary-small">✏️ Upraviť</a>
