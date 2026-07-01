@@ -18,10 +18,10 @@ declare(strict_types=1);
  *            php fix_slovak_close_quotes.php apply     (zapíše do DB)
  */
 
-require __DIR__ . '/config.php';
+require __DIR__ . '/db_config.php';
+/** @var \PDO $pdo */
 
 $apply = (($argv[1] ?? '') === 'apply');
-$pdo   = db();
 
 /** Konverzia ASCII zatváracej úvodzovky na U+201C len v čistom „…" spane. */
 function fixCloseQuotes(string $s, int &$count): string
