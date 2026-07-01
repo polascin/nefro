@@ -118,9 +118,16 @@ if (!function_exists('getPopularArticles')) {
 }
 
 if (!function_exists('isMedimpaxPatientArticle')) {
-    /** Článok patrí do podsekcie „Dialýza a stredisko Medimpax", ak spomína „Medimpax". */
+    /**
+     * Článok patrí do podsekcie „Dialýza a stredisko Medimpax", ak spomína „Medimpax".
+     * Úvod sekcie („pre-pacientov-uvod") sem patrí tiež — a vďaka is_top=1 / sort_order
+     * vyjde na prvé miesto podsekcie.
+     */
     function isMedimpaxPatientArticle(array $art): bool
     {
+        if ((string) ($art["slug"] ?? "") === "pre-pacientov-uvod") {
+            return true;
+        }
         return stripos((string) ($art["content"] ?? ""), "Medimpax") !== false;
     }
 }
