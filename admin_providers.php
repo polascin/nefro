@@ -1,0 +1,530 @@
+<?php
+
+declare(strict_types=1);
+/**
+ * admin_providers.php
+ * Kurátorská správa internej databázy spolupracujúcich poskytovateľov
+ * (partner_providers) — sieť odporúčateľov okolo Medimpax Dúbravka.
+ * Plný CRUD: pridať, upraviť, zmazať, prepnúť aktívnosť; filtre podľa lokality,
+ * typu, odbornosti a vyhľadávanie.
+ */
+require_once __DIR__ . '/auth.php';
+require_once __DIR__ . '/db_config.php';
+/** @var \PDO $pdo */
+require_once __DIR__ . '/providers_common.php';
+
+requireAdmin();
+
+$actionResult   = null; // plain text — escapuje sa pri výpise
+$actionError    = null;
+$editProvider   = null;
+
+$typeLabels = ppTypeLabels();
+
+/** Orežanie na max dĺžku stĺpca; prázdny reťazec → null. */
+function ppClean(string $v, int $max): ?string
+{
+    $v = trim($v);
+    if ($v === '') {
+        return null;
+    }
+    return mb_substr($v, 0, $max);
+}
+
+// ── Spracovanie POST akcií ────────────────────────────────────────────────────
+if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
+    if (!validateCsrfToken((string) ($_POST['csrf_token'] ?? ''))) {
+        $actionError = 'Neplatný CSRF token.';
+    } else {
+        $action = (string) ($_POST['action'] ?? '');
+        switch ($action) {
+            case 'save':
+                $id     = (int) ($_POST['provider_id'] ?? 0);
+                $name   = trim((string) ($_POST['name'] ?? ''));
+                $type   = (string) ($_POST['provider_type'] ?? 'specialista');
+                $email  = trim((string) ($_POST['email'] ?? ''));
+                $web    = trim((string) ($_POST['website'] ?? ''));
+                $active = isset($_POST['is_active']) ? 1 : 0;
+
+                if ($name === '') {
+                    $actionError = 'Názov je povinný.';
+                    break;
+                }
+                if (!array_key_exists($type, $typeLabels)) {
+                    $actionError = 'Neplatný typ poskytovateľa.';
+                    break;
+                }
+                if ($email !== '' && !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                    $actionError = 'Neplatný formát e-mailu.';
+                    break;
+                }
+                if ($web !== '' && !preg_match('~^https?://~i', $web)) {
+                    $web = 'https://' . $web;
+                }
+
+                $data = [
+                    'name'           => mb_substr($name, 0, 255),
+                    'provider_type'  => $type,
+                    'specialization' => ppClean((string) ($_POST['specialization'] ?? ''), 255),
+                    'locality'       => ppClean((string) ($_POST['locality'] ?? ''), 120),
+                    'address'        => ppClean((string) ($_POST['address'] ?? ''), 255),
+                    'phone'          => ppClean((string) ($_POST['phone'] ?? ''), 120),
+                    'email'          => $email !== '' ? mb_substr($email, 0, 190) : null,
+                    'website'        => $web !== '' ? mb_substr($web, 0, 255) : null,
+                    'contact_person' => ppClean((string) ($_POST['contact_person'] ?? ''), 190),
+                    'notes'          => ppClean((string) ($_POST['notes'] ?? ''), 20000),
+                    'source'         => ppClean((string) ($_POST['source'] ?? ''), 255),
+                    'is_active'      => $active,
+                ];
+
+                try {
+                    if ($id > 0) {
+                        $data['id'] = $id;
+                        $upd = $pdo->prepare(
+                            'UPDATE partner_providers SET
+                                name = :name, provider_type = :provider_type, specialization = :specialization,
+                                locality = :locality, address = :address, phone = :phone, email = :email,
+                                website = :website, contact_person = :contact_person, notes = :notes,
+                                source = :source, is_active = :is_active
+                             WHERE id = :id'
+                        );
+                        $upd->execute($data);
+                        $actionResult = 'Poskytovateľ „' . $name . '“ bol aktualizovaný.';
+                    } else {
+                        $ins = $pdo->prepare(
+                            'INSERT INTO partner_providers
+                                (name, provider_type, specialization, locality, address, phone, email,
+                                 website, contact_person, notes, source, is_active)
+                             VALUES
+                                (:name, :provider_type, :specialization, :locality, :address, :phone, :email,
+                                 :website, :contact_person, :notes, :source, :is_active)'
+                        );
+                        $ins->execute($data);
+                        $actionResult = 'Poskytovateľ „' . $name . '“ bol pridaný.';
+                    }
+                } catch (\PDOException $e) {
+                    error_log('admin_providers save error: ' . $e->getMessage());
+                    $actionError = 'Chyba pri ukladaní poskytovateľa.';
+                }
+                break;
+
+            case 'delete':
+                $id = (int) ($_POST['provider_id'] ?? 0);
+                if ($id <= 0) {
+                    $actionError = 'Neplatné ID.';
+                    break;
+                }
+                try {
+                    $del = $pdo->prepare('DELETE FROM partner_providers WHERE id = :id');
+                    $del->execute(['id' => $id]);
+                    $actionResult = 'Poskytovateľ bol zmazaný.';
+                } catch (\PDOException $e) {
+                    error_log('admin_providers delete error: ' . $e->getMessage());
+                    $actionError = 'Chyba pri mazaní poskytovateľa.';
+                }
+                break;
+
+            case 'toggle_active':
+                $id     = (int) ($_POST['provider_id'] ?? 0);
+                $setVal = (int) ($_POST['set_active'] ?? -1);
+                if ($id <= 0 || !in_array($setVal, [0, 1], true)) {
+                    $actionError = 'Neplatný vstup.';
+                    break;
+                }
+                try {
+                    $upd = $pdo->prepare('UPDATE partner_providers SET is_active = :a WHERE id = :id');
+                    $upd->execute(['a' => $setVal, 'id' => $id]);
+                    $actionResult = $setVal === 1 ? 'Poskytovateľ je aktívny.' : 'Poskytovateľ je neaktívny.';
+                } catch (\PDOException $e) {
+                    error_log('admin_providers toggle error: ' . $e->getMessage());
+                    $actionError = 'Chyba pri zmene stavu.';
+                }
+                break;
+
+            default:
+                $actionError = 'Neznáma akcia.';
+                break;
+        }
+    }
+}
+
+// ── Načítanie na editáciu (GET) ───────────────────────────────────────────────
+$editId = (int) ($_GET['id'] ?? 0);
+if (($_GET['action'] ?? '') === 'edit' && $editId > 0) {
+    try {
+        $stmt = $pdo->prepare('SELECT * FROM partner_providers WHERE id = :id LIMIT 1');
+        $stmt->execute(['id' => $editId]);
+        $editProvider = $stmt->fetch(\PDO::FETCH_ASSOC) ?: null;
+    } catch (\PDOException $e) {
+        error_log('admin_providers edit load error: ' . $e->getMessage());
+    }
+}
+
+// ── Filtre + zoznam ───────────────────────────────────────────────────────────
+$fType = (string) ($_GET['type'] ?? '');
+if ($fType !== '' && !array_key_exists($fType, $typeLabels)) {
+    $fType = '';
+}
+$fLoc    = trim((string) ($_GET['loc'] ?? ''));
+$fSpec   = trim((string) ($_GET['spec'] ?? ''));
+$fActive = (string) ($_GET['active'] ?? '');
+if (!in_array($fActive, ['', 'active', 'inactive'], true)) {
+    $fActive = '';
+}
+$fQuery = trim((string) ($_GET['q'] ?? ''));
+foreach (['fLoc', 'fSpec', 'fQuery'] as $vn) {
+    if (mb_strlen($$vn) > 120) {
+        $$vn = mb_substr($$vn, 0, 120);
+    }
+}
+
+$perPage = 50;
+$page    = max(1, (int) ($_GET['page'] ?? 1));
+$offset  = ($page - 1) * $perPage;
+
+$where  = ' WHERE 1=1';
+$params = [];
+if ($fType !== '') {
+    $where .= ' AND provider_type = :type';
+    $params['type'] = $fType;
+}
+if ($fLoc !== '') {
+    $where .= ' AND locality LIKE :loc';
+    $params['loc'] = '%' . $fLoc . '%';
+}
+if ($fSpec !== '') {
+    $where .= ' AND specialization LIKE :spec';
+    $params['spec'] = '%' . $fSpec . '%';
+}
+if ($fActive === 'active') {
+    $where .= ' AND is_active = 1';
+} elseif ($fActive === 'inactive') {
+    $where .= ' AND is_active = 0';
+}
+if ($fQuery !== '') {
+    $where .= ' AND (name LIKE :q OR email LIKE :q OR contact_person LIKE :q OR notes LIKE :q OR address LIKE :q)';
+    $params['q'] = '%' . $fQuery . '%';
+}
+
+$providers = [];
+$total      = 0;
+$totalPages = 1;
+try {
+    $countStmt = $pdo->prepare('SELECT COUNT(*) FROM partner_providers' . $where);
+    $countStmt->execute($params);
+    $total      = (int) $countStmt->fetchColumn();
+    $totalPages = max(1, (int) ceil($total / $perPage));
+
+    $listStmt = $pdo->prepare(
+        'SELECT * FROM partner_providers' . $where . '
+         ORDER BY is_active DESC, locality ASC, name ASC
+         LIMIT :limit OFFSET :offset'
+    );
+    foreach ($params as $k => $v) {
+        $listStmt->bindValue(':' . $k, $v);
+    }
+    $listStmt->bindValue(':limit', $perPage, \PDO::PARAM_INT);
+    $listStmt->bindValue(':offset', $offset, \PDO::PARAM_INT);
+    $listStmt->execute();
+    $providers = $listStmt->fetchAll(\PDO::FETCH_ASSOC);
+} catch (\PDOException $e) {
+    error_log('admin_providers list error: ' . $e->getMessage());
+    $actionError = $actionError ?? 'Chyba pri načítaní zoznamu (existuje tabuľka partner_providers?).';
+}
+
+// Súhrn podľa typu (informatívne).
+$typeCounts = [];
+try {
+    $rows = $pdo->query('SELECT provider_type, COUNT(*) c FROM partner_providers GROUP BY provider_type')
+        ->fetchAll(\PDO::FETCH_ASSOC);
+    foreach ($rows as $r) {
+        $typeCounts[(string) $r['provider_type']] = (int) $r['c'];
+    }
+} catch (\PDOException $e) {
+    error_log('admin_providers typecount error: ' . $e->getMessage());
+}
+
+$csrfToken = generateCsrfToken();
+
+/** Query string pre stránkovanie so zachovaním filtrov. */
+function ppAdminQs(array $extra = []): string
+{
+    global $fType, $fLoc, $fSpec, $fActive, $fQuery;
+    $qs = array_filter([
+        'type'   => $fType,
+        'loc'    => $fLoc,
+        'spec'   => $fSpec,
+        'active' => $fActive,
+        'q'      => $fQuery,
+    ], static fn ($v): bool => $v !== '');
+    $qs = array_merge($qs, $extra);
+    return $qs === [] ? '' : '?' . http_build_query($qs);
+}
+
+// Hodnoty pre formulár (edit alebo prázdne).
+$fv = static function (string $key) use ($editProvider): string {
+    return htmlspecialchars((string) ($editProvider[$key] ?? ''), ENT_QUOTES);
+};
+$isEdit = $editProvider !== null;
+?>
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spolupracujúci poskytovatelia – Nefro-projekt Slovensko</title>
+  <meta name="robots" content="noindex, nofollow">
+  <script src="theme.js?v=20260509-1&cb=<?= filemtime('theme.js') ?>"></script>
+  <link rel="stylesheet" href="index.css?v=20260509-1&cb=<?= filemtime('index.css') ?>">
+  <script src="ui-preferences.js?v=20260511-1&cb=<?= filemtime('ui-preferences.js') ?>" defer></script>
+  <script src="ui-preferences-fallback.js?v=20260511-1&cb=<?= filemtime('ui-preferences-fallback.js') ?>" defer></script>
+  <script src="nefro-ui.js?v=<?= filemtime('nefro-ui.js') ?>" defer></script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>
+  <?php
+  $headerTitle = 'Spolupracujúci poskytovatelia';
+  $headerIntro = 'Sieť odporúčateľov okolo Medimpax Dúbravka';
+  $showLogo = false;
+  include_once 'header.php';
+  include_once 'admin_menu.php';
+  ?>
+
+  <main id="main-content" class="container container--wide admin-page-main" role="main">
+    <div class="auth-container auth-container--wide">
+      <h2>Spolupracujúci lekári a poskytovatelia</h2>
+      <p class="auth-subtitle">
+        Interná databáza siete odporúčateľov (zdravotná a sociálna starostlivosť) v pracovnom dosahu
+        dialyzačného strediska a nefrologickej ambulancie Medimpax, Dúbravka. Nie je verejná.
+      </p>
+
+      <?php if ($actionResult !== null): ?>
+        <div class="alert alert-success"><p><?= htmlspecialchars((string) $actionResult) ?></p></div>
+      <?php endif; ?>
+      <?php if ($actionError !== null): ?>
+        <div class="alert alert-error"><p><?= htmlspecialchars($actionError) ?></p></div>
+      <?php endif; ?>
+
+      <!-- ── FORMULÁR: pridať / upraviť ─────────────────────────────────── -->
+      <div class="primary-article">
+        <h3><?= $isEdit ? 'Upraviť poskytovateľa' : 'Pridať poskytovateľa' ?></h3>
+        <form method="POST" action="admin_providers.php">
+          <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
+          <input type="hidden" name="action" value="save">
+          <input type="hidden" name="provider_id" value="<?= $isEdit ? (int) $editProvider['id'] : 0 ?>">
+
+          <div class="article-form-grid">
+            <div class="form-row">
+              <label for="f_name">Názov / meno *</label>
+              <input type="text" id="f_name" name="name" class="form-control" maxlength="255" required value="<?= $fv('name') ?>">
+            </div>
+
+            <div class="form-row">
+              <label for="f_type">Typ poskytovateľa</label>
+              <?php $curType = (string) ($editProvider['provider_type'] ?? 'specialista'); ?>
+              <select id="f_type" name="provider_type" class="form-control">
+                <?php foreach ($typeLabels as $slug => $label): ?>
+                  <option value="<?= htmlspecialchars($slug) ?>" <?= $curType === $slug ? 'selected' : '' ?>><?= htmlspecialchars($label) ?></option>
+                <?php endforeach; ?>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <label for="f_spec">Odbornosť / špecializácia</label>
+              <input type="text" id="f_spec" name="specialization" class="form-control" maxlength="255" list="spec_suggestions" value="<?= $fv('specialization') ?>">
+              <datalist id="spec_suggestions">
+                <?php foreach (ppSpecializationSuggestions() as $s): ?><option value="<?= htmlspecialchars($s) ?>"></option><?php endforeach; ?>
+              </datalist>
+            </div>
+
+            <div class="form-row">
+              <label for="f_loc">Lokalita</label>
+              <input type="text" id="f_loc" name="locality" class="form-control" maxlength="120" list="loc_suggestions" value="<?= $fv('locality') ?>">
+              <datalist id="loc_suggestions">
+                <?php foreach (ppLocalitySuggestions() as $s): ?><option value="<?= htmlspecialchars($s) ?>"></option><?php endforeach; ?>
+              </datalist>
+            </div>
+
+            <div class="form-row">
+              <label for="f_addr">Adresa</label>
+              <input type="text" id="f_addr" name="address" class="form-control" maxlength="255" value="<?= $fv('address') ?>">
+            </div>
+
+            <div class="form-row">
+              <label for="f_phone">Telefón</label>
+              <input type="text" id="f_phone" name="phone" class="form-control" maxlength="120" value="<?= $fv('phone') ?>">
+            </div>
+
+            <div class="form-row">
+              <label for="f_email">E-mail</label>
+              <input type="email" id="f_email" name="email" class="form-control" maxlength="190" value="<?= $fv('email') ?>">
+            </div>
+
+            <div class="form-row">
+              <label for="f_web">Web</label>
+              <input type="text" id="f_web" name="website" class="form-control" maxlength="255" value="<?= $fv('website') ?>">
+            </div>
+
+            <div class="form-row">
+              <label for="f_person">Kontaktná osoba</label>
+              <input type="text" id="f_person" name="contact_person" class="form-control" maxlength="190" value="<?= $fv('contact_person') ?>">
+            </div>
+
+            <div class="form-row">
+              <label for="f_source">Zdroj údaja</label>
+              <input type="text" id="f_source" name="source" class="form-control" maxlength="255" placeholder="napr. evuc.sk, web poskytovateľa" value="<?= $fv('source') ?>">
+            </div>
+
+            <div class="form-row">
+              <label for="f_notes">Poznámky</label>
+              <textarea id="f_notes" name="notes" class="form-control" rows="3"><?= htmlspecialchars((string) ($editProvider['notes'] ?? '')) ?></textarea>
+            </div>
+
+            <div class="form-row-inline">
+              <label>
+                <input type="checkbox" name="is_active" value="1" <?= (!$isEdit || (int) ($editProvider['is_active'] ?? 1) === 1) ? 'checked' : '' ?>>
+                Aktívny (v sieti odporúčateľov)
+              </label>
+            </div>
+          </div>
+
+          <div class="form-actions admin-action-mt">
+            <button type="submit" class="btn-primary"><?= $isEdit ? '💾 Uložiť zmeny' : '➕ Pridať' ?></button>
+            <?php if ($isEdit): ?>
+              <a href="admin_providers.php<?= ppAdminQs() ?>" class="btn-secondary-small">Zrušiť editáciu</a>
+            <?php endif; ?>
+          </div>
+        </form>
+      </div>
+      <hr class="section-divider">
+
+      <!-- ── FILTRE + ZOZNAM ───────────────────────────────────────────── -->
+      <div class="primary-article">
+        <h3>Poskytovatelia (<?= (int) $total ?>)</h3>
+        <?php if (!empty($typeCounts)): ?>
+          <p class="helper-text">
+            <?php $parts = [];
+            foreach ($typeCounts as $tt => $cc) {
+                $parts[] = htmlspecialchars(ppTypeLabel($tt)) . ': ' . (int) $cc;
+            }
+            echo implode(' &middot; ', $parts); ?>
+          </p>
+        <?php endif; ?>
+
+        <form method="GET" action="admin_providers.php" class="form-row-inline admin-filter-form">
+          <label for="type">Typ:</label>
+          <select id="type" name="type" class="form-control admin-select-md">
+            <option value="">Všetky</option>
+            <?php foreach ($typeLabels as $slug => $label): ?>
+              <option value="<?= htmlspecialchars($slug) ?>" <?= $fType === $slug ? 'selected' : '' ?>><?= htmlspecialchars($label) ?></option>
+            <?php endforeach; ?>
+          </select>
+
+          <label for="loc">Lokalita:</label>
+          <input type="search" id="loc" name="loc" class="form-control admin-select-md" maxlength="120" value="<?= htmlspecialchars($fLoc) ?>" placeholder="napr. Dúbravka">
+
+          <label for="spec">Odbornosť:</label>
+          <input type="search" id="spec" name="spec" class="form-control admin-select-md" maxlength="120" value="<?= htmlspecialchars($fSpec) ?>" placeholder="napr. diabetológia">
+
+          <label for="active">Stav:</label>
+          <select id="active" name="active" class="form-control admin-select-sm">
+            <option value="" <?= $fActive === '' ? 'selected' : '' ?>>Všetky</option>
+            <option value="active" <?= $fActive === 'active' ? 'selected' : '' ?>>Aktívni</option>
+            <option value="inactive" <?= $fActive === 'inactive' ? 'selected' : '' ?>>Neaktívni</option>
+          </select>
+
+          <label for="q">Hľadať:</label>
+          <input type="search" id="q" name="q" class="form-control admin-select-md" maxlength="120" value="<?= htmlspecialchars($fQuery) ?>" placeholder="názov, e-mail, osoba">
+
+          <button type="submit" class="btn-secondary-small">Filtrovať</button>
+          <a href="admin_providers.php" class="btn-secondary-small">Reset</a>
+        </form>
+
+        <?php if (empty($providers)): ?>
+          <p class="calc-result-mt12">Pre zvolený filter sa nenašli žiadni poskytovatelia.</p>
+        <?php else: ?>
+          <div class="overflow-x-auto">
+            <table class="admin-articles-table" aria-label="Zoznam poskytovateľov">
+              <thead>
+                <tr>
+                  <th scope="col">Názov</th>
+                  <th scope="col">Typ</th>
+                  <th scope="col">Odbornosť</th>
+                  <th scope="col">Lokalita</th>
+                  <th scope="col">Kontakt</th>
+                  <th scope="col">Stav</th>
+                  <th scope="col">Akcie</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php foreach ($providers as $p):
+                    $pId = (int) $p['id'];
+                    $pActive = (int) ($p['is_active'] ?? 0) === 1;
+                ?>
+                <tr>
+                  <td>
+                    <strong><?= htmlspecialchars((string) $p['name']) ?></strong>
+                    <?php if (!empty($p['contact_person'])): ?><br><span class="calc-result-detail"><?= htmlspecialchars((string) $p['contact_person']) ?></span><?php endif; ?>
+                    <?php if (!empty($p['address'])): ?><br><span class="calc-result-detail"><?= htmlspecialchars((string) $p['address']) ?></span><?php endif; ?>
+                  </td>
+                  <td><?= htmlspecialchars(ppTypeLabel((string) $p['provider_type'])) ?></td>
+                  <td><?= htmlspecialchars((string) ($p['specialization'] ?? '')) ?></td>
+                  <td><?= htmlspecialchars((string) ($p['locality'] ?? '')) ?></td>
+                  <td>
+                    <?php if (!empty($p['phone'])): ?><?= htmlspecialchars((string) $p['phone']) ?><br><?php endif; ?>
+                    <?php if (!empty($p['email'])): ?><a href="mailto:<?= htmlspecialchars((string) $p['email']) ?>"><?= htmlspecialchars((string) $p['email']) ?></a><br><?php endif; ?>
+                    <?php if (!empty($p['website'])): ?><a href="<?= htmlspecialchars((string) $p['website']) ?>" target="_blank" rel="noopener noreferrer">web ↗</a><?php endif; ?>
+                  </td>
+                  <td>
+                    <?php if ($pActive): ?>
+                      <span class="badge-pub">Aktívny</span>
+                    <?php else: ?>
+                      <span class="badge-draft">Neaktívny</span>
+                    <?php endif; ?>
+                  </td>
+                  <td>
+                    <a href="admin_providers.php?action=edit&id=<?= $pId ?>" class="btn-secondary-small">✏️ Upraviť</a>
+                    <form method="POST" action="admin_providers.php" class="d-inline">
+                      <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
+                      <input type="hidden" name="action" value="toggle_active">
+                      <input type="hidden" name="provider_id" value="<?= $pId ?>">
+                      <input type="hidden" name="set_active" value="<?= $pActive ? 0 : 1 ?>">
+                      <button type="submit" class="btn-secondary-small"><?= $pActive ? '🙈 Deaktivovať' : '👁 Aktivovať' ?></button>
+                    </form>
+                    <form method="POST" action="admin_providers.php" class="d-inline" onsubmit="return confirm('Naozaj zmazať tohto poskytovateľa?');">
+                      <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
+                      <input type="hidden" name="action" value="delete">
+                      <input type="hidden" name="provider_id" value="<?= $pId ?>">
+                      <button type="submit" class="btn-secondary-small" title="Zmazať">🗑 Zmazať</button>
+                    </form>
+                  </td>
+                </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
+          </div>
+
+          <?php if ($totalPages > 1): ?>
+            <nav class="articles-pagination admin-pagination" aria-label="Stránkovanie poskytovateľov">
+              <span class="articles-pagination__label">Stránky:</span>
+              <div class="articles-pagination__links">
+                <?php for ($p = 1; $p <= $totalPages; $p++): ?>
+                  <?php if ($p === $page): ?>
+                    <span class="articles-page-link is-active" aria-current="page"><?= $p ?></span>
+                  <?php else: ?>
+                    <a class="articles-page-link" href="admin_providers.php<?= ppAdminQs(['page' => $p]) ?>"><?= $p ?></a>
+                  <?php endif; ?>
+                <?php endfor; ?>
+              </div>
+            </nav>
+          <?php endif; ?>
+        <?php endif; ?>
+      </div>
+
+    </div><!-- /.auth-container -->
+  </main>
+
+  <?php include_once 'footer.php'; ?>
+
+</body>
+</html>
