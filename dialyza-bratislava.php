@@ -416,10 +416,11 @@ $businessContacts = [
                     <div class="feature-card">
                         <h3>Koho odoslať</h3>
                         <ul class="service-card__list">
-                            <li>Chronické ochorenie obličiek (CKD), najmä pokročilejšie štádiá</li>
-                            <li>Albuminúria/proteinúria alebo hematúria nejasného pôvodu</li>
-                            <li>Rezistentná hypertenzia s podozrením na renálnu príčinu</li>
-                            <li>Pacient pred zaradením do dialyzačného alebo transplantačného programu</li>
+                            <li>CKD G3b–G5 (eGFR &lt; 45), najmä s progresiou</li>
+                            <li>Diabetická nefropatia / albuminúria</li>
+                            <li>Rezistentná alebo sekundárna hypertenzia s renálnym postihnutím</li>
+                            <li>Opakované poruchy vnútorného prostredia, nejasná proteinúria/hematúria</li>
+                            <li>Príprava na dialyzačný alebo transplantačný program</li>
                             <li>Potreba hosťovskej (dovolenkovej) dialýzy v Bratislave</li>
                         </ul>
                     </div>
