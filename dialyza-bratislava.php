@@ -294,6 +294,8 @@ $businessContacts = [
                         <?php endforeach; ?>
                         <dt>E-mail</dt>
                         <dd><a href="mailto:<?= htmlspecialchars($center['email']) ?>"><?= htmlspecialchars($center['email']) ?></a></dd>
+                        <dt>Web</dt>
+                        <dd><a href="<?= htmlspecialchars($center['website']) ?>" target="_blank" rel="noopener noreferrer">www.impax.sk</a></dd>
                         <dt>Adresa</dt>
                         <dd>
                             <?= htmlspecialchars($center['siteAddress']) ?>
@@ -403,6 +405,8 @@ $businessContacts = [
                         <dd><a href="tel:+421940609480">+421 940 609 480</a></dd>
                         <dt>E-mail</dt>
                         <dd><a href="mailto:<?= htmlspecialchars($center['email']) ?>"><?= htmlspecialchars($center['email']) ?></a></dd>
+                        <dt>Website</dt>
+                        <dd><a href="<?= htmlspecialchars($center['website']) ?>" target="_blank" rel="noopener noreferrer">www.impax.sk</a></dd>
                         <dt>Address</dt>
                         <dd><?= htmlspecialchars($center['siteAddress']) ?></dd>
                     </dl>
