@@ -6,6 +6,9 @@ declare(strict_types=1);
  * Zoznam popularizačných článkov (category = 'popularne') pre poučených
  * pacientov a verejnosť. Jednoduchý jazyk, obrázky, žiadny odborný žargón.
  * Články sa renderujú cez article.php (spoločná infraštruktúra).
+ *
+ * Články sa delia na dve podsekcie: všeobecné pacientske články a samostatnú
+ * podsekciu „Dialýza a stredisko Medimpax" (články spomínajúce Medimpax).
  */
 require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/db_config.php';
@@ -51,53 +54,74 @@ function popFirstImage(string $html): string
     return "";
 }
 
-// ── Stránkovanie ─────────────────────────────────────────────────────────────
-$perPage = 9;
-$page = isset($_GET["page"]) ? (int) $_GET["page"] : 1;
-if ($page < 1) {
-    $page = 1;
+/** Vyrenderuje jednu kartu článku (položka gridu). */
+function popRenderCard(array $art, array $months): void
+{
+    $artSlug = htmlspecialchars((string) $art["slug"], ENT_QUOTES);
+    $artTitle = htmlspecialchars((string) $art["title"]);
+    $artExc = htmlspecialchars(popExcerpt((string) ($art["excerpt"] ?? ($art["content"] ?? "")), 200));
+    $artDate = htmlspecialchars(popFormatDate((string) $art["published_at"], $months));
+    $artDateIso = htmlspecialchars(substr((string) $art["published_at"], 0, 10));
+    $artImg = popFirstImage((string) ($art["content"] ?? ""));
+    $artIsTop = !empty($art["is_top"]);
+    ?>
+    <li class="popular-card">
+      <a href="article.php?slug=<?= $artSlug ?>" class="popular-card__link" aria-label="Čítať článok: <?= $artTitle ?>">
+        <div class="popular-card__media">
+          <?php if ($artImg !== ""): ?>
+            <img src="<?= htmlspecialchars($artImg, ENT_QUOTES) ?>" alt="" loading="lazy" decoding="async" class="popular-card__img">
+          <?php else: ?>
+            <span class="popular-card__placeholder" aria-hidden="true">🩺</span>
+          <?php endif; ?>
+          <?php if ($artIsTop): ?><span class="popular-card__badge">★ Odporúčané</span><?php endif; ?>
+        </div>
+        <div class="popular-card__body">
+          <h3 class="popular-card__title"><?= $artTitle ?></h3>
+          <p class="popular-card__excerpt"><?= $artExc ?></p>
+          <div class="popular-card__footer">
+            <time class="popular-card__date" datetime="<?= $artDateIso ?>"><?= $artDate ?></time>
+            <span class="popular-card__more">Čítať ďalej &rarr;</span>
+          </div>
+        </div>
+      </a>
+    </li>
+    <?php
 }
 
-$articles = [];
-$total = 0;
-$totalPages = 1;
-
+// ── Načítanie článkov (bez stránkovania — malý dataset, delíme do podsekcií) ──
+$allArticles = [];
 try {
-    $cntStmt = $pdo->query(
-        "SELECT COUNT(*) FROM articles WHERE is_published = 1 AND category = 'popularne'"
-    );
-    $total = (int) $cntStmt->fetchColumn();
-    $totalPages = max(1, (int) ceil($total / $perPage));
-    if ($page > $totalPages) {
-        $page = $totalPages;
-    }
-    $offset = ($page - 1) * $perPage;
-
-    $stmt = $pdo->prepare(
+    $stmt = $pdo->query(
         "SELECT id, title, slug, author, content, excerpt, published_at, is_top
          FROM articles
          WHERE is_published = 1 AND category = 'popularne'
-         ORDER BY is_top DESC, sort_order ASC, published_at DESC
-         LIMIT :limit OFFSET :offset"
+         ORDER BY is_top DESC, sort_order ASC, published_at DESC"
     );
-    $stmt->bindValue(":limit", $perPage, \PDO::PARAM_INT);
-    $stmt->bindValue(":offset", $offset, \PDO::PARAM_INT);
-    $stmt->execute();
-    $articles = $stmt->fetchAll();
+    $allArticles = $stmt->fetchAll();
 } catch (\PDOException $e) {
     error_log("populars.php – chyba pri načítaní článkov: " . $e->getMessage());
+}
+
+// Rozdelenie: články o stredisku Medimpax (spomínajú „Medimpax") vs. ostatné.
+$medimpaxArticles = [];
+$generalArticles  = [];
+foreach ($allArticles as $art) {
+    if (stripos((string) ($art["content"] ?? ""), "Medimpax") !== false) {
+        $medimpaxArticles[] = $art;
+    } else {
+        $generalArticles[] = $art;
+    }
 }
 
 // ── SEO ──────────────────────────────────────────────────────────────────────
 $siteName = "Nefro-projekt Slovensko";
 $baseUrl = "https://nefro.polascin.net/";
 $schemaOrgUrl = "https://schema.org";
-$isPaginated = $page > 1;
 
-$pageTitle = ($isPaginated ? "Pre pacientov – strana " . $page . " | " : "Pre pacientov – zrozumiteľne o obličkách | ") . $siteName;
+$pageTitle = "Pre pacientov – zrozumiteľne o obličkách | " . $siteName;
 $seoDescription = "Popularizačné články o obličkách, ich ochoreniach a liečbe — jednoduchým jazykom, s obrázkami, pre poučených pacientov a verejnosť.";
 $seoKeywords = "obličky, chronické ochorenie obličiek, dialýza, pre pacientov, zrozumiteľne, zdravie obličiek, prevencia, edukácia pacientov";
-$canonicalUrl = $baseUrl . "populars.php" . ($isPaginated ? "?page=" . $page : "");
+$canonicalUrl = $baseUrl . "populars.php";
 $robotsMeta = "index, follow, max-image-preview:large";
 $ogType = "website";
 
@@ -125,10 +149,11 @@ $structuredData = [
 ];
 
 $itemListElements = [];
-foreach ($articles as $i => $art) {
+$pos = 0;
+foreach ($allArticles as $art) {
     $itemListElements[] = [
         "@type" => "ListItem",
-        "position" => $i + 1,
+        "position" => ++$pos,
         "url" => $baseUrl . "article.php?slug=" . rawurlencode((string) $art["slug"]),
         "name" => (string) $art["title"],
     ];
@@ -137,7 +162,7 @@ if (!empty($itemListElements)) {
     $structuredData[] = [
         "@context" => $schemaOrgUrl,
         "@type" => "ItemList",
-        "name" => $isPaginated ? "Pre pacientov – strana " . $page : "Pre pacientov",
+        "name" => "Pre pacientov",
         "itemListElement" => $itemListElements,
     ];
 }
@@ -173,7 +198,7 @@ if (!empty($itemListElements)) {
         </p>
       </section>
 
-      <?php if (empty($articles)): ?>
+      <?php if (empty($allArticles)): ?>
         <section class="populars-empty">
           <div class="primary-article">
             <p>Zatiaľ tu nie sú žiadne články. Čoskoro pribudnú prvé popularizačné príspevky — vráťte sa, prosím, neskôr.</p>
@@ -184,55 +209,34 @@ if (!empty($itemListElements)) {
           </div>
         </section>
       <?php else: ?>
-        <section class="populars-grid-section" aria-label="Zoznam článkov pre pacientov">
-          <ul class="populars-grid">
-            <?php foreach ($articles as $art):
-                $artSlug = htmlspecialchars((string) $art["slug"], ENT_QUOTES);
-                $artTitle = htmlspecialchars((string) $art["title"]);
-                $artExc = htmlspecialchars(popExcerpt((string) ($art["excerpt"] ?? ($art["content"] ?? "")), 200));
-                $artDate = htmlspecialchars(popFormatDate((string) $art["published_at"], $months));
-                $artDateIso = htmlspecialchars(substr((string) $art["published_at"], 0, 10));
-                $artImg = popFirstImage((string) ($art["content"] ?? ""));
-                $artIsTop = !empty($art["is_top"]);
-                ?>
-            <li class="popular-card">
-              <a href="article.php?slug=<?= $artSlug ?>" class="popular-card__link" aria-label="Čítať článok: <?= $artTitle ?>">
-                <div class="popular-card__media">
-                  <?php if ($artImg !== ""): ?>
-                    <img src="<?= htmlspecialchars($artImg, ENT_QUOTES) ?>" alt="" loading="lazy" decoding="async" class="popular-card__img">
-                  <?php else: ?>
-                    <span class="popular-card__placeholder" aria-hidden="true">🩺</span>
-                  <?php endif; ?>
-                  <?php if ($artIsTop): ?><span class="popular-card__badge">★ Odporúčané</span><?php endif; ?>
-                </div>
-                <div class="popular-card__body">
-                  <h2 class="popular-card__title"><?= $artTitle ?></h2>
-                  <p class="popular-card__excerpt"><?= $artExc ?></p>
-                  <div class="popular-card__footer">
-                    <time class="popular-card__date" datetime="<?= $artDateIso ?>"><?= $artDate ?></time>
-                    <span class="popular-card__more">Čítať ďalej &rarr;</span>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <?php endforeach; ?>
-          </ul>
 
-          <?php if ($totalPages > 1): ?>
-            <nav class="articles-pagination" aria-label="Stránkovanie článkov pre pacientov">
-              <span class="articles-pagination__label">Stránky:</span>
-              <div class="articles-pagination__links">
-                <?php for ($p = 1; $p <= $totalPages; $p++): ?>
-                  <?php if ($p === $page): ?>
-                    <span class="articles-page-link is-active" aria-current="page"><?= $p ?></span>
-                  <?php else: ?>
-                    <a class="articles-page-link" href="?page=<?= $p ?>#populars-heading" aria-label="Strana <?= $p ?>"><?= $p ?></a>
-                  <?php endif; ?>
-                <?php endfor; ?>
-              </div>
-            </nav>
-          <?php endif; ?>
+        <?php if (!empty($generalArticles)): ?>
+        <section class="populars-grid-section" aria-label="Články pre pacientov">
+          <ul class="populars-grid">
+            <?php foreach ($generalArticles as $art) {
+                popRenderCard($art, $months);
+            } ?>
+          </ul>
         </section>
+        <?php endif; ?>
+
+        <?php if (!empty($medimpaxArticles)): ?>
+        <section class="populars-grid-section populars-subsection" aria-labelledby="medimpax-subheading">
+          <h2 id="medimpax-subheading" class="populars-subheading">Dialýza a stredisko Medimpax</h2>
+          <p class="populars-sublead">
+            Praktické články o dialýze, nefrologickej ambulancii a transplantácii —
+            a o tom, ako túto starostlivosť poskytuje
+            <a href="dialyza-bratislava.php">Dialyzačné stredisko a nefrologická ambulancia Medimpax</a>
+            v Bratislave-Dúbravke.
+          </p>
+          <ul class="populars-grid">
+            <?php foreach ($medimpaxArticles as $art) {
+                popRenderCard($art, $months);
+            } ?>
+          </ul>
+        </section>
+        <?php endif; ?>
+
       <?php endif; ?>
 
       <div class="newsletter-cta-inline" id="nl-cta-inline">
@@ -254,4 +258,5 @@ if (!empty($itemListElements)) {
   <script src="newsletter-cta.js?v=<?= filemtime(__DIR__ . '/newsletter-cta.js') ?>" defer></script>
   <?php include_once "footer.php"; ?>
 </body>
+
 </html>
