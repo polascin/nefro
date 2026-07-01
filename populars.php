@@ -103,7 +103,7 @@ if (!empty($itemListElements)) {
 
   <?php include_once 'main_nav.php'; ?>
 
-  <main id="main-content" class="container main-content" role="main">
+  <main id="main-content" class="container main-content main-content--single-col" role="main">
     <div class="content-wrapper content-wrapper--full">
 
       <section class="populars-intro" aria-labelledby="populars-heading">
