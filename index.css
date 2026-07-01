@@ -31,6 +31,10 @@
 
     --primary-gradient: linear-gradient(135deg, #1e40af, #3b82f6);
     --accent-color: #0ea5e9;
+    /* Obsahové odkazy (prozaický text v tele článkov a pod.) */
+    --link-color: #1d4ed8;
+    --link-hover-color: #1e40af;
+    --link-visited-color: #6d28d9;
     --white: #ffffff;
     --border-color: rgba(229, 231, 235, 0.7);
 
@@ -79,6 +83,10 @@
     --primary-light: #93c5fd;
     --primary-gradient: linear-gradient(135deg, #1d4ed8, #60a5fa);
     --accent-color: #38bdf8;
+    /* Obsahové odkazy — svetlejšie odtiene pre čitateľnosť na tmavom pozadí */
+    --link-color: #93c5fd;
+    --link-hover-color: #bfdbfe;
+    --link-visited-color: #c4b5fd;
     --white: #1e293b;
     --border-color: rgba(255, 255, 255, 0.1);
 
@@ -128,6 +136,26 @@ textarea:focus-visible,
     outline: 3px solid var(--primary-color);
     outline-offset: 3px;
     border-radius: 4px;
+}
+
+/* Obsahové (prozaické) odkazy bez triedy — čitateľné v svetlom aj tmavom režime.
+   Komponentové odkazy (nav, karty, tlačidlá…) majú vlastnú triedu, preto ich
+   selektor :not([class]) zámerne nezasiahne. Základné pravidlo je tu vyššie, aby
+   ho špecifickejšie komponentové pravidlá nižšie mohli prebiť. */
+a:not([class]) {
+    color: var(--link-color);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    text-decoration-thickness: 1px;
+    transition: color 0.15s ease;
+}
+a:not([class]):visited {
+    color: var(--link-visited-color);
+}
+a:not([class]):hover,
+a:not([class]):focus-visible {
+    color: var(--link-hover-color);
+    text-decoration-thickness: 2px;
 }
 
 .visually-hidden {
