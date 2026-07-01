@@ -19,6 +19,7 @@ $actionResult   = null; // plain text — escapuje sa pri výpise
 $actionError    = null;
 $editProvider   = null;
 $editContacts   = [];
+$editContact    = null; // konkrétny záznam histórie na úpravu (?contact=id)
 $stayEditId     = null; // po zápise kontaktu ostaň v editačnom pohľade
 
 $typeLabels = ppTypeLabels();
@@ -241,6 +242,68 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 }
                 break;
 
+            // Úprava existujúceho záznamu histórie (needituje stav poskytovateľa).
+            case 'update_contact':
+                $cid = (int) ($_POST['contact_id'] ?? 0);
+                $id  = (int) ($_POST['provider_id'] ?? 0);
+                if ($cid <= 0 || $id <= 0) {
+                    $actionError = 'Neplatné ID.';
+                    break;
+                }
+                $stayEditId = $id;
+                $ch = (string) ($_POST['channel'] ?? 'other');
+                if (!array_key_exists($ch, ppContactChannelLabels())) {
+                    $ch = 'other';
+                }
+                $outc = (string) ($_POST['outcome'] ?? '');
+                if ($outc !== '' && !array_key_exists($outc, ppOutreachLabels())) {
+                    $outc = '';
+                }
+                $cnote = ppClean((string) ($_POST['contact_note'] ?? ''), 20000);
+                $craw  = trim((string) ($_POST['contact_at'] ?? ''));
+                $cval  = null;
+                if ($craw !== '' && preg_match('/^(\d{4}-\d{2}-\d{2})T(\d{2}:\d{2})(:\d{2})?$/', $craw, $m3)) {
+                    $cval = $m3[1] . ' ' . $m3[2] . ':00';
+                }
+                try {
+                    $pdo->prepare("UPDATE provider_contacts
+                                   SET contacted_at = COALESCE(:cat, contacted_at), channel = :ch,
+                                       outcome = :outc, note = :note
+                                   WHERE id = :cid AND provider_id = :pid")
+                        ->execute([
+                            'cat'  => $cval,
+                            'ch'   => $ch,
+                            'outc' => $outc !== '' ? $outc : null,
+                            'note' => $cnote,
+                            'cid'  => $cid,
+                            'pid'  => $id,
+                        ]);
+                    $actionResult = 'Záznam kontaktu bol upravený.';
+                } catch (\PDOException $e) {
+                    error_log('admin_providers update_contact error: ' . $e->getMessage());
+                    $actionError = 'Chyba pri úprave kontaktu.';
+                }
+                break;
+
+            // Zmazanie záznamu histórie.
+            case 'delete_contact':
+                $cid = (int) ($_POST['contact_id'] ?? 0);
+                $id  = (int) ($_POST['provider_id'] ?? 0);
+                if ($cid <= 0 || $id <= 0) {
+                    $actionError = 'Neplatné ID.';
+                    break;
+                }
+                $stayEditId = $id;
+                try {
+                    $pdo->prepare('DELETE FROM provider_contacts WHERE id = :cid AND provider_id = :pid')
+                        ->execute(['cid' => $cid, 'pid' => $id]);
+                    $actionResult = 'Záznam kontaktu bol zmazaný.';
+                } catch (\PDOException $e) {
+                    error_log('admin_providers delete_contact error: ' . $e->getMessage());
+                    $actionError = 'Chyba pri mazaní kontaktu.';
+                }
+                break;
+
             default:
                 $actionError = 'Neznáma akcia.';
                 break;
@@ -263,6 +326,16 @@ if (($stayEditId !== null || ($_GET['action'] ?? '') === 'edit') && $editId > 0)
             $cs = $pdo->prepare('SELECT * FROM provider_contacts WHERE provider_id = :id ORDER BY contacted_at DESC, id DESC');
             $cs->execute(['id' => (int) $editProvider['id']]);
             $editContacts = $cs->fetchAll(\PDO::FETCH_ASSOC);
+
+            $contactEditId = (int) ($_GET['contact'] ?? 0);
+            if ($contactEditId > 0) {
+                foreach ($editContacts as $c) {
+                    if ((int) $c['id'] === $contactEditId) {
+                        $editContact = $c;
+                        break;
+                    }
+                }
+            }
         }
     } catch (\PDOException $e) {
         error_log('admin_providers edit load error: ' . $e->getMessage());
@@ -414,6 +487,36 @@ if (in_array($exportFmt, ['csv', 'json', 'vcard'], true)) {
             $r['notes'],
             $r['source'],
             $r['updated_at'] ?? '',
+        ]);
+    }
+    fclose($out);
+    exit;
+}
+
+// ── Export histórie kontaktov (aktivít) do CSV ────────────────────────────────
+if ($exportFmt === 'history') {
+    $hstmt = $pdo->query(
+        'SELECT pc.contacted_at, pp.name AS provider_name, pp.provider_type, pp.locality,
+                pc.channel, pc.outcome, pc.note, pc.created_at
+         FROM provider_contacts pc
+         JOIN partner_providers pp ON pp.id = pc.provider_id
+         ORDER BY pc.contacted_at DESC, pc.id DESC'
+    );
+    header('Content-Type: text/csv; charset=UTF-8');
+    header('Content-Disposition: attachment; filename="historia_kontaktov_' . date('Y-m-d') . '.csv"');
+    $out = fopen('php://output', 'w');
+    fwrite($out, "\xEF\xBB\xBF");
+    fputcsv($out, ['Datum a cas', 'Poskytovatel', 'Typ', 'Lokalita', 'Kanal', 'Vysledok', 'Poznamka', 'Zaznamenane']);
+    foreach ($hstmt as $r) {
+        fputcsv($out, [
+            $r['contacted_at'],
+            $r['provider_name'],
+            ppTypeLabel((string) $r['provider_type']),
+            $r['locality'],
+            ppContactChannelLabel((string) $r['channel']),
+            !empty($r['outcome']) ? ppOutreachLabel((string) $r['outcome']) : '',
+            $r['note'],
+            $r['created_at'],
         ]);
     }
     fclose($out);
@@ -679,27 +782,38 @@ $isEdit = $editProvider !== null;
       <?php if ($isEdit): ?>
       <div class="primary-article">
         <h3>História kontaktov</h3>
+        <?php
+        $isContactEdit = $editContact !== null;
+        $pidEdit = (int) $editProvider['id'];
+        $ceAt = ($isContactEdit && !empty($editContact['contacted_at']))
+            ? substr(str_replace(' ', 'T', (string) $editContact['contacted_at']), 0, 16) : '';
+        $ceCh   = (string) ($editContact['channel'] ?? '');
+        $ceOut  = (string) ($editContact['outcome'] ?? '');
+        $ceNote = (string) ($editContact['note'] ?? '');
+        ?>
         <form method="POST" action="admin_providers.php" class="form-row-inline admin-filter-form">
           <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
-          <input type="hidden" name="action" value="add_contact">
-          <input type="hidden" name="provider_id" value="<?= (int) $editProvider['id'] ?>">
+          <input type="hidden" name="action" value="<?= $isContactEdit ? 'update_contact' : 'add_contact' ?>">
+          <input type="hidden" name="provider_id" value="<?= $pidEdit ?>">
+          <?php if ($isContactEdit): ?><input type="hidden" name="contact_id" value="<?= (int) $editContact['id'] ?>"><?php endif; ?>
           <label for="c_at">Dátum/čas:</label>
-          <input type="datetime-local" id="c_at" name="contact_at" class="form-control admin-select-md">
+          <input type="datetime-local" id="c_at" name="contact_at" class="form-control admin-select-md" value="<?= htmlspecialchars($ceAt) ?>">
           <label for="c_ch">Kanál:</label>
           <select id="c_ch" name="channel" class="form-control admin-select-sm">
             <?php foreach (ppContactChannelLabels() as $slug => $label): ?>
-              <option value="<?= htmlspecialchars($slug) ?>"><?= htmlspecialchars($label) ?></option>
+              <option value="<?= htmlspecialchars($slug) ?>" <?= $ceCh === $slug ? 'selected' : '' ?>><?= htmlspecialchars($label) ?></option>
             <?php endforeach; ?>
           </select>
           <label for="c_out">Výsledok:</label>
           <select id="c_out" name="outcome" class="form-control admin-select-md">
             <option value="">(nemeniť stav)</option>
             <?php foreach (ppOutreachLabels() as $slug => $label): ?>
-              <option value="<?= htmlspecialchars($slug) ?>"><?= htmlspecialchars($label) ?></option>
+              <option value="<?= htmlspecialchars($slug) ?>" <?= $ceOut === $slug ? 'selected' : '' ?>><?= htmlspecialchars($label) ?></option>
             <?php endforeach; ?>
           </select>
-          <input type="text" name="contact_note" class="form-control admin-select-md" maxlength="1000" placeholder="Poznámka">
-          <button type="submit" class="btn-secondary-small">➕ Zapísať kontakt</button>
+          <input type="text" name="contact_note" class="form-control admin-select-md" maxlength="1000" placeholder="Poznámka" value="<?= htmlspecialchars($ceNote) ?>">
+          <button type="submit" class="btn-secondary-small"><?= $isContactEdit ? '💾 Uložiť kontakt' : '➕ Zapísať kontakt' ?></button>
+          <?php if ($isContactEdit): ?><a href="admin_providers.php?action=edit&id=<?= $pidEdit ?>" class="btn-secondary-small">Zrušiť</a><?php endif; ?>
         </form>
 
         <?php if (empty($editContacts)): ?>
@@ -707,14 +821,24 @@ $isEdit = $editProvider !== null;
         <?php else: ?>
           <div class="overflow-x-auto">
             <table class="admin-articles-table" aria-label="História kontaktov">
-              <thead><tr><th scope="col">Dátum a čas</th><th scope="col">Kanál</th><th scope="col">Výsledok</th><th scope="col">Poznámka</th></tr></thead>
+              <thead><tr><th scope="col">Dátum a čas</th><th scope="col">Kanál</th><th scope="col">Výsledok</th><th scope="col">Poznámka</th><th scope="col">Akcie</th></tr></thead>
               <tbody>
-                <?php foreach ($editContacts as $c): $ct = strtotime((string) $c['contacted_at']); ?>
+                <?php foreach ($editContacts as $c): $ct = strtotime((string) $c['contacted_at']); $ccId = (int) $c['id']; ?>
                 <tr>
                   <td><?= htmlspecialchars($ct ? date('d.m.Y H:i', $ct) : (string) $c['contacted_at']) ?></td>
                   <td><?= htmlspecialchars(ppContactChannelLabel((string) $c['channel'])) ?></td>
                   <td><?= !empty($c['outcome']) ? htmlspecialchars(ppOutreachLabel((string) $c['outcome'])) : '<span class="calc-result-detail">—</span>' ?></td>
                   <td><?= nl2br(htmlspecialchars((string) ($c['note'] ?? ''))) ?></td>
+                  <td>
+                    <a href="admin_providers.php?action=edit&id=<?= $pidEdit ?>&contact=<?= $ccId ?>" class="btn-secondary-small" title="Upraviť záznam">✏️</a>
+                    <form method="POST" action="admin_providers.php" class="d-inline" onsubmit="return confirm('Zmazať tento záznam histórie?');">
+                      <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
+                      <input type="hidden" name="action" value="delete_contact">
+                      <input type="hidden" name="provider_id" value="<?= $pidEdit ?>">
+                      <input type="hidden" name="contact_id" value="<?= $ccId ?>">
+                      <button type="submit" class="btn-secondary-small" title="Zmazať">🗑</button>
+                    </form>
+                  </td>
                 </tr>
                 <?php endforeach; ?>
               </tbody>
@@ -792,6 +916,7 @@ $isEdit = $editProvider !== null;
           <a href="admin_providers.php<?= ppAdminQs(['export' => 'csv']) ?>" class="btn-secondary-small" title="Export do CSV (Excel)">⬇ CSV</a>
           <a href="admin_providers.php<?= ppAdminQs(['export' => 'json']) ?>" class="btn-secondary-small" title="Export do JSON">⬇ JSON</a>
           <a href="admin_providers.php<?= ppAdminQs(['export' => 'vcard']) ?>" class="btn-secondary-small" title="Export do vCard (kontakty .vcf)">⬇ vCard</a>
+          <a href="admin_providers.php?export=history" class="btn-secondary-small" title="Export celej histórie kontaktov do CSV">⬇ História CSV</a>
           <button type="button" id="btnPrintProviders" class="btn-secondary-small" title="Vytlačiť aktuálny výber">🖨 Tlačiť</button>
         </form>
 
