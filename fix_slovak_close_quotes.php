@@ -10,9 +10,10 @@ declare(strict_types=1);
  * táto migrácia zosúladí zlé so správnou väčšinou.
  *
  * Bezpečnosť: konverzia sa robí LEN v čistom textovom spane „…", teda regex
- *   /\x{201E}([^"<>\r\n]*?)"/u  → „$1“ (U+201C)
- * Vylúčené sú <, >, " a nové riadky vo vnútri → HTML atribúty (href="…") sa
- * NIKDY nedotkne (medzi „ a jej ASCII zatváračkou nesmie byť < ani ďalší ").
+ *   /\x{201E}([^"„“<>\r\n]*?)"/u  → „$1“ (U+201C)
+ * Vo vnútri spanu sú vylúčené <, >, ", „ (U+201E), “ (U+201C) a nové riadky →
+ * HTML atribúty (alt="…„X“…") sa NIKDY nedotkne: keď je „ už správne zatvorená
+ * cez “ (U+201C), regex sa NEpreskočí cez ňu k zatváracej ASCII " atribútu.
  *
  * Použitie:  php fix_slovak_close_quotes.php          (DRY-RUN, len report)
  *            php fix_slovak_close_quotes.php apply     (zapíše do DB)
@@ -27,7 +28,7 @@ $apply = (($argv[1] ?? '') === 'apply');
 function fixCloseQuotes(string $s, int &$count): string
 {
     return (string) preg_replace_callback(
-        '/\x{201E}([^"<>\r\n]*?)"/u',
+        '/\x{201E}([^"\x{201E}\x{201C}<>\r\n]*?)"/u',
         static function (array $m) use (&$count): string {
             $count++;
             return "\u{201E}" . $m[1] . "\u{201C}";
