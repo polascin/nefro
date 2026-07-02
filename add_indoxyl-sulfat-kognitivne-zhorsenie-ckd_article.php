@@ -113,7 +113,7 @@ než hotové terapeutické odporúčanie.</p>
 <hr>
 
 <p><em><strong>Zdroj:</strong> Gaye Hafez et al., „Tryptophan Metabolite Indoxyl Sulphate Levels Tied
-to Cognitive Impairment in CKD", <em>Clinical Kidney Journal</em> (spracované v <em>Medscape Medical
+to Cognitive Impairment in CKD“, <em>Clinical Kidney Journal</em> (spracované v <em>Medscape Medical
 News</em>, 2026).
 <a href="https://www.medscape.com/viewarticle/tryptophan-metabolite-indoxyl-sulphate-levels-tied-cognitive-2026a1000l83" target="_blank" rel="noopener noreferrer">Link na zdroj</a>.</em></p>
 HTML,

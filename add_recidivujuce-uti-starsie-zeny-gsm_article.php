@@ -88,7 +88,7 @@ baktériúria nemusí korelovať s klinickým obrazom dyzúrie.</p>
 podávaní antibiotík. Cieľom nie je len „vyhnúť sa <em>C. difficile</em>", ale mať širší pohľad na vplyv
 antibiotík na mikrobiotu vrátane možných dlhodobých následkov.</p>
 <p>Prakticky sa to prejaví tak, že podľa rozhovoru nie je podporený prístup „len to predĺžim, rozšírim
-spektrum alebo zvýšim dávku" pri recidívach, pokiaľ na to nie sú dôkazy. Ide práve o ten typ manažmentu,
+spektrum alebo zvýšim dávku“ pri recidívach, pokiaľ na to nie sú dôkazy. Ide práve o ten typ manažmentu,
 ktorý môže zvyšovať selekčný tlak a zhoršovať rezistenciu.</p>
 
 <h2>5) Prevencia recidivujúcich UTI bez (automatického) antibiotika</h2>
@@ -133,12 +133,12 @@ z dvoch dôvodov:</p>
 <p>Pri nefrologickej starostlivosti preto dáva zmysel prepojiť urologické odporúčania s nefrologickým
 princípom rozvážnosti: potvrdiť infekciu čo najpresnejšie podľa kliniky a výsledkov moču a pri
 recidívach aktívne riešiť prispievajúce stavy, najmä GSM, aby sa antibiotiká nemuseli používať „len
-zo zvyku".</p>
+zo zvyku“.</p>
 
 <hr>
 
 <p><em><strong>Zdroj:</strong> Anne Lenore Ackerman, Melissa R. Kaufman, „Recurrent UTIs in Older Women
-and Association With Genitourinary Syndrome of Menopause (GSM)", <em>Medscape InDiscussion: UTI
+and Association With Genitourinary Syndrome of Menopause (GSM)“, <em>Medscape InDiscussion: UTI
 podcast</em> (2026).
 <a href="https://www.medscape.com/ca8/p04/podcast-uti-s1-ep2-2026a1000hdf" target="_blank" rel="noopener noreferrer">Link na zdroj</a>.</em></p>
 HTML,

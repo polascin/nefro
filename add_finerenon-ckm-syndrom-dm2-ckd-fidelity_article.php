@@ -133,7 +133,7 @@ hyperkaliémie bola porovnateľná naprieč štádiami.</p>
 
 <p><em><strong>Zdroj:</strong> Kevin Bryan Lo, John W. Ostrominski, et al. (FIDELITY post-hoc analýza),
 <em>JAMA Cardiology</em> (2026) — spracované v <em>Medscape Medical News</em>: „Finerenone Benefits
-Patients With T2D, CKD Across Cardiovascular-Kidney-Metabolic…".
+Patients With T2D, CKD Across Cardiovascular-Kidney-Metabolic…“.
 <a href="https://www.medscape.com/viewarticle/finerenone-benefits-patients-t2d-ckd-across-cardiovascular-2026a1000m3s" target="_blank" rel="noopener noreferrer">Medscape</a> ·
 <a href="https://pubmed.ncbi.nlm.nih.gov/42234437/" target="_blank" rel="noopener noreferrer">PubMed</a>.</em></p>
 HTML,

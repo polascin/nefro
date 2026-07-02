@@ -38,7 +38,7 @@ $articles[] = [
     'excerpt'      => 'Kreatín sa z oblasti športu presúva aj do neurologickej debaty (kognícia, nálada, spánok). Dôkazy sú zatiaľ variabilné a skôr krátkodobé, pre demenciu nepevné. Prehľad Medscape doplnený o praktickú nefrologickú poznámku: pozor na interpretáciu kreatinínu a opatrnosť pri CKD.',
     'content'      => <<<'HTML'
 <p>Pacienti často prídu s otázkou „čo by som mohol zlepšiť pri zhoršenej pozornosti, únave, spánku
-alebo myslení?". V posledných rokoch sa kreatín presúva z oblasti športu aj do neurologickej debaty,
+alebo myslení?“. V posledných rokoch sa kreatín presúva z oblasti športu aj do neurologickej debaty,
 najmä preto, že sa objavujú dáta o jeho možnom vplyve na kogníciu, náladu a spánok. Medscape článok
 zároveň zdôrazňuje, že dôkazy pre demenciu zatiaľ nie sú pevné a bezpečnostné otázky nie sú úplne
 uzavreté.</p>
@@ -103,7 +103,7 @@ najmä na neurologické aspekty, nefrologická interpretácia musí byť opatrn�
 <hr>
 
 <p><em><strong>Zdroj:</strong> Heidi Moawad, „Is Creatine Supplementation for Brain Health Worth
-a Try?", <em>Medscape Medical News</em> (2026).
+a Try?“, <em>Medscape Medical News</em> (2026).
 <a href="https://www.medscape.com/viewarticle/creatine-supplementation-brain-health-worth-try-2026a1000kuz" target="_blank" rel="noopener noreferrer">Link na zdroj</a>.</em></p>
 HTML,
 ];

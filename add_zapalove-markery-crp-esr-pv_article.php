@@ -121,7 +121,7 @@ symptómami, vyšetrením a ďalšími testami, nie izolovane.</p>
 <hr>
 
 <p><em><strong>Zdroj:</strong> „Interpreting Inflammatory Marker Tests in Primary Care (Primary Care
-Hack)" — časť k CRP, ESR a PV, <em>Medscape Reference</em> (2026).
+Hack)“ — časť k CRP, ESR a PV, <em>Medscape Reference</em> (2026).
 <a href="https://reference.medscape.com/cc2/p10/interpreting-inflammatory-marker-primary-care-hack-2026a1000j8k" target="_blank" rel="noopener noreferrer">Link na zdroj</a>.</em></p>
 HTML,
 ];
