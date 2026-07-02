@@ -45,7 +45,7 @@ $patientContacts = [
     ],
 ];
 
-// Mapový odkaz (bez embed iframe — CSP default-src 'self' blokuje frame-src)
+// Mapový odkaz (interaktívna mapa sa vkladá click-to-load — bez prenosu IP do Google pred kliknutím)
 $mapUrl = 'https://www.google.com/maps/search/?api=1&query='
     . rawurlencode('Na vrátkach 2/A, 841 01 Bratislava-Dúbravka');
 // Street View / fotka miesta na Google Mapách (zdieľaný odkaz strediska)
@@ -314,9 +314,34 @@ $businessContacts = [
                     <img src="img/medimpax.webp" alt="Dialyzačné stredisko a nefrologická ambulancia Medimpax, Na vrátkach 2/A, Bratislava-Dúbravka" width="1108" height="826" loading="lazy" decoding="async">
                     <figcaption><?= htmlspecialchars($center['siteAddress']) ?></figcaption>
                 </figure>
-                <iframe class="map-embed" title="Mapa — Dialyzačné stredisko Medimpax, Na vrátkach 2/A, Bratislava-Dúbravka"
-                        src="https://maps.google.com/maps?q=48.1903299,17.0442423&amp;hl=sk&amp;z=17&amp;output=embed"
-                        width="100%" height="380" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                <div class="map-embed-consent" id="map-embed-consent">
+                    <p>
+                        Interaktívna mapa sa načítava zo serverov spoločnosti Google až po kliknutí —
+                        dovtedy sa do Google neprenášajú žiadne údaje. Kliknutím súhlasíte s prenosom
+                        IP adresy spoločnosti Google LLC (<a href="https://policies.google.com/privacy"
+                        target="_blank" rel="noopener noreferrer">zásady ochrany súkromia Google</a>).
+                    </p>
+                    <button type="button" class="btn-primary" id="map-embed-load">Načítať interaktívnu mapu</button>
+                </div>
+                <script nonce="<?= htmlspecialchars(getScriptNonce(), ENT_QUOTES) ?>">
+                (function () {
+                    var btn = document.getElementById('map-embed-load');
+                    if (!btn) { return; }
+                    btn.addEventListener('click', function () {
+                        var wrap = document.getElementById('map-embed-consent');
+                        var iframe = document.createElement('iframe');
+                        iframe.className = 'map-embed';
+                        iframe.title = 'Mapa — Dialyzačné stredisko Medimpax, Na vrátkach 2/A, Bratislava-Dúbravka';
+                        iframe.src = 'https://maps.google.com/maps?q=48.1903299,17.0442423&hl=sk&z=17&output=embed';
+                        iframe.width = '100%';
+                        iframe.height = '380';
+                        iframe.loading = 'lazy';
+                        iframe.referrerPolicy = 'no-referrer-when-downgrade';
+                        iframe.allowFullscreen = true;
+                        wrap.replaceWith(iframe);
+                    });
+                })();
+                </script>
                 <p class="donate-note">
                     <a href="<?= htmlspecialchars($mapUrl) ?>" target="_blank" rel="noopener noreferrer">Otvoriť v Google Mapách</a>
                     &nbsp;·&nbsp;

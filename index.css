@@ -2729,6 +2729,8 @@ input:disabled + .slider:before {
 .place-figure img { max-width: 100%; height: auto; border-radius: 8px; display: block; }
 .place-figure figcaption { font-size: 0.82rem; color: #6b7280; margin-top: 6px; }
 .map-embed { border: 0; width: 100%; max-width: 100%; border-radius: 8px; display: block; }
+.map-embed-consent { border: 1px dashed var(--border-color, #d1d5db); border-radius: 8px; padding: 24px 16px; text-align: center; background: var(--card-bg, #f9fafb); }
+.map-embed-consent p { max-width: 60ch; margin: 0 auto 14px; font-size: 0.92rem; color: var(--text-muted, #4b5563); }
 .admin-group-row th { background: #eef2ff; color: #1e3a8a; text-align: left; padding: 8px 12px; font-weight: 700; font-size: 0.95rem; }
 .donate-paypal-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
 .donate-paypal-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
