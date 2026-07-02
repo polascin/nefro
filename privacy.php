@@ -222,7 +222,7 @@ include 'legal_head.php';
                 <h3>11. Zmeny týchto Zásad</h3>
                 <p>
                     Tieto Zásady môžeme aktualizovať. Podstatné zmeny zvýrazníme v sekcii
-                    „Súhrn posledných zmien" vyššie a zmení sa dátum poslednej aktualizácie.
+                    „Súhrn posledných zmien“ vyššie a zmení sa dátum poslednej aktualizácie.
                     Náš systém správy cookies uchováva verziu platného súhlasu — pri každej
                     podstatnej zmene sa verzia aktualizuje a všetkým návštevníkom sa znova
                     zobrazí banner na potvrdenie nových podmienok (v súlade s čl. 7 ods. 3 GDPR).

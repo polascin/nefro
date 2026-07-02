@@ -166,7 +166,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 }
                 break;
 
-            // Rýchle označenie „Oslovený teraz" — nastaví stav + dátum a čas + zápis do histórie.
+            // Rýchle označenie „Oslovený teraz“ — nastaví stav + dátum a čas + zápis do histórie.
             case 'mark_contacted':
                 $id = (int) ($_POST['provider_id'] ?? 0);
                 if ($id <= 0) {
@@ -179,7 +179,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                         ->execute(['id' => $id]);
                     $pdo->prepare("INSERT INTO provider_contacts (provider_id, contacted_at, channel, outcome, note)
                                    VALUES (:pid, NOW(), 'other', 'osloveny', :note)")
-                        ->execute(['pid' => $id, 'note' => 'Rýchle označenie „Oslovený teraz"']);
+                        ->execute(['pid' => $id, 'note' => 'Rýchle označenie „Oslovený teraz“']);
                     $pdo->commit();
                     $actionResult = 'Označené ako oslovené (' . date('d.m.Y H:i') . ') — zapísané do histórie.';
                 } catch (\PDOException $e) {

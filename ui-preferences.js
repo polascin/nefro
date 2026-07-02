@@ -196,7 +196,7 @@ function initPrivacyManager() {
                         <button id="btnCloseModal" class="btn-close" aria-label="Zatvoriť">&times;</button>
                     </div>
                     <div class="cookie-modal-body">
-                        <p>Tu môžete povoliť alebo zakázať jednotlivé kategórie cookies. Pre fungovanie stránky sú kľúčové „Nevyhnutné" cookies, ktoré nie je možné vypnúť. Viac v <a href="cookies.php">Cookie Policy</a>.</p>
+                        <p>Tu môžete povoliť alebo zakázať jednotlivé kategórie cookies. Pre fungovanie stránky sú kľúčové „Nevyhnutné“ cookies, ktoré nie je možné vypnúť. Viac v <a href="cookies.php">Cookie Policy</a>.</p>
 
                         <div class="cookie-category">
                             <div class="category-info">

@@ -182,7 +182,7 @@ $hasPaymeQr = is_file(__DIR__ . '/' . $paymeQrImage);
                         </dl>
                         <p class="donate-note">
                             Pri platbe zo zahraničia použite IBAN a SWIFT/BIC. Do poznámky pre prijímateľa
-                            môžete uviesť napríklad <em>„Podpora projektu"</em>.
+                            môžete uviesť napríklad <em>„Podpora projektu“</em>.
                         </p>
                     </div>
 

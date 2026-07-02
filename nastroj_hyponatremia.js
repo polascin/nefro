@@ -15,7 +15,7 @@
             tonicity: {
                 id: 'tonicity', kind: 'q', step: 'Krok 1 — Potvrdiť pravú (hypotonickú) hyponatrémiu',
                 title: 'Aká je sérová osmolalita?',
-                body: ['Hyponatrémia = S-Na < 135 mmol/l. Najprv vylúčime „falošnú" a hypertonickú hyponatrémiu zmeraním sérovej osmolality:'],
+                body: ['Hyponatrémia = S-Na < 135 mmol/l. Najprv vylúčime „falošnú“ a hypertonickú hyponatrémiu zmeraním sérovej osmolality:'],
                 bullets: [
                     'normálna osmolalita (275–295) → pseudohyponatrémia (ťažká hyperlipidémia, paraproteinémia),',
                     'vysoká osmolalita (> 295) → hypertonická (hyperglykémia, manitol) — Na treba korigovať na glykémiu,',
@@ -134,7 +134,7 @@
                     ] },
                     { heading: 'Manažment', items: [
                         'Doplnenie objemu izotonickým kryštaloidom (0,9 % NaCl).',
-                        'Pozor: po doplnení objemu sa „vypne" stimul pre ADH a hrozí rýchla autokorekcia S-Na → riziko ODS; monitorovať a v prípade potreby spomaliť (desmopresín).',
+                        'Pozor: po doplnení objemu sa „vypne“ stimul pre ADH a hrozí rýchla autokorekcia S-Na → riziko ODS; monitorovať a v prípade potreby spomaliť (desmopresín).',
                         'Liečiť vyvolávajúcu príčinu.'
                     ] }
                 ],
@@ -195,7 +195,7 @@
                 sections: [
                     { heading: 'Časté príčiny', items: [
                         'Primárna (psychogénna) polydipsia — nadmerný príjem vody.',
-                        '„Beer potomania" a diéta „tea and toast" — nízky príjem solútov obmedzuje vylučovanie voľnej vody.'
+                        '„Beer potomania“ a diéta „tea and toast“ — nízky príjem solútov obmedzuje vylučovanie voľnej vody.'
                     ] },
                     { heading: 'Manažment', items: [
                         'Pri primárnej polydipsii reštrikcia tekutín; pri nízkom príjme solútov opatrné doplnenie príjmu (soľ, bielkoviny).',

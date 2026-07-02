@@ -221,7 +221,7 @@ if (isLoggedIn()) {
                     <strong>Technika odberu:</strong> všetky tri vzorky odoberaj v rovnakej jednotke
                     (urea mmol/L alebo BUN mg/dL — výsledok je pomer, takže jednotka sa skráti).
                     <strong>P</strong> je systémová koncentrácia (z periférnej žily druhej ruky alebo
-                    technikou spomalenia pumpy / „slow-flow"), <strong>A</strong> z arteriálnej linky
+                    technikou spomalenia pumpy / „slow-flow“), <strong>A</strong> z arteriálnej linky
                     (krv vstupujúca do dialyzátora) a <strong>V</strong> z venóznej linky (vyčistená
                     krv vracajúca sa do pacienta).
                 </div>

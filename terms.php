@@ -28,10 +28,10 @@ include 'legal_head.php';
                         <time datetime="<?= htmlspecialchars($info['effectiveDate'], ENT_QUOTES, 'UTF-8') ?>"><?= htmlspecialchars($pageLastUpdated, ENT_QUOTES, 'UTF-8') ?></time>
                     </p>
                     <p>
-                        Tieto Podmienky používania („Podmienky") sú zmluvou medzi vami a
+                        Tieto Podmienky používania („Podmienky“) sú zmluvou medzi vami a
                         prevádzkovateľom webovej lokality <?= htmlspecialchars($info['entity'], ENT_QUOTES, 'UTF-8') ?>
                         a upravujú vaše používanie lokality <code><?= htmlspecialchars($info['url'], ENT_QUOTES, 'UTF-8') ?></code>
-                        (ďalej len „Služba"). Vytvorením konta alebo používaním Služby súhlasíte
+                        (ďalej len „Služba“). Vytvorením konta alebo používaním Služby súhlasíte
                         s týmito Podmienkami a s našimi <a href="privacy.php">Zásadami ochrany osobných údajov</a>.
                     </p>
                 </header>
@@ -138,7 +138,7 @@ include 'legal_head.php';
                 <!-- 9. VYHLÁSENIA -->
                 <h3>9. Vyhlásenia (Disclaimers)</h3>
                 <p>
-                    Služba sa poskytuje „tak, ako je" a „ako je dostupná". V rozsahu povolenom
+                    Služba sa poskytuje „tak, ako je“ a „ako je dostupná“. V rozsahu povolenom
                     zákonom odmietame záruky presnosti, dostupnosti a vhodnosti na konkrétny
                     účel, vrátane výsledkov kalkulačiek a odborného obsahu. Nič v týchto
                     Podmienkach nevylučuje zodpovednosť, ktorú nemožno zákonne vylúčiť.

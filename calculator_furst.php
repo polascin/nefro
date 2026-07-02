@@ -218,7 +218,7 @@ if (isLoggedIn()) {
                     <strong>Načo to je:</strong> pri hyponatriémii (najmä SIADH) Furstov pomer
                     z pomeru elektrolytov v moči a sére predpovedá, či <em>samotná</em> reštrikcia
                     tekutín stačí na zvýšenie nátriémie. Vychádza z fyziológie <strong>klírensu
-                    voľnej vody</strong>: ak je moč „koncentrovanejší" elektrolytmi než sérum
+                    voľnej vody</strong>: ak je moč „koncentrovanejší“ elektrolytmi než sérum
                     (pomer &gt; 1), obličky nedokážu vylúčiť voľnú vodu a obmedzenie príjmu
                     tekutín nátriémiu nezvýši.
                 </div>

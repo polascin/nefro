@@ -15,6 +15,7 @@ Disallow: /admin_legal_notice.php
 Disallow: /admin_trials.php
 Disallow: /admin_drugs.php
 Disallow: /admin_drugs_review.php
+Disallow: /admin_providers.php
 Disallow: /admin_users_notice.php
 Disallow: /query_article.php
 Disallow: /setup_db.php

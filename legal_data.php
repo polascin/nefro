@@ -154,7 +154,7 @@ function legalRightsRegions(): array
         [
             'region' => 'Spojené štáty americké (CA/CPRA, VA, CO, CT, UT, TX, OR, MT a ďalšie štátne zákony)',
             'law'    => 'CCPA/CPRA, VCDPA, CPA, CTDPA, UCPA, TDPSA, …',
-            'rights' => 'Právo vedieť o údajoch a získať k nim prístup, vymazať ich, opraviť a odhlásiť sa z „predaja" alebo „zdieľania" osobných údajov a z cielenej reklamy. Vaše údaje nepredávame za peniaze; rešpektujeme signál Global Privacy Control (GPC) a možnosť „Odmietnuť / Nepredávať ani nezdieľať". Proti zamietnutej žiadosti sa môžete odvolať a za uplatnenie práv nebudete diskriminovaní.',
+            'rights' => 'Právo vedieť o údajoch a získať k nim prístup, vymazať ich, opraviť a odhlásiť sa z „predaja“ alebo „zdieľania“ osobných údajov a z cielenej reklamy. Vaše údaje nepredávame za peniaze; rešpektujeme signál Global Privacy Control (GPC) a možnosť „Odmietnuť / Nepredávať ani nezdieľať“. Proti zamietnutej žiadosti sa môžete odvolať a za uplatnenie práv nebudete diskriminovaní.',
         ],
         [
             'region' => 'Brazília',
@@ -212,7 +212,7 @@ function legalCookieCategories(): array
         [
             'id'          => 'marketing',
             'title'       => 'Marketingové (Marketing)',
-            'description' => 'Slúžia na meranie kampaní a zobrazenie relevantných ponúk. V režimoch opt-out (USA) ich vypína voľba „Nepredávať ani nezdieľať". Aktuálne nie sú aktívne žiadne reklamné kampane.',
+            'description' => 'Slúžia na meranie kampaní a zobrazenie relevantných ponúk. V režimoch opt-out (USA) ich vypína voľba „Nepredávať ani nezdieľať“. Aktuálne nie sú aktívne žiadne reklamné kampane.',
             'required'    => false,
         ],
     ];

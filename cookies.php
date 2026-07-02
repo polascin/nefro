@@ -123,7 +123,7 @@ include 'legal_head.php';
                     cookie <code>nps_cookie_consent</code> s platnosťou <strong>365 dní</strong>
                     (<code>SameSite=Lax; Secure</code>). Pri opakovanej návšteve sa banner
                     nezobrazuje, kým je súhlas platný. Súhlas môžete kedykoľvek zmeniť alebo
-                    odvolať tlačidlom vyššie alebo odkazom „Nastavenia cookies" v päte stránky;
+                    odvolať tlačidlom vyššie alebo odkazom „Nastavenia cookies“ v päte stránky;
                     pri odvolaní sa analytické cookies deaktivujú.
                 </p>
 
@@ -142,7 +142,7 @@ include 'legal_head.php';
                 <!-- 7. UPLATNENIE PRÁV -->
                 <h3>7. Uplatnenie práv</h3>
                 <p>
-                    Na okamžitú zmenu súhlasu použite tlačidlo „Otvoriť nastavenia cookies"
+                    Na okamžitú zmenu súhlasu použite tlačidlo „Otvoriť nastavenia cookies“
                     vyššie. Pri akejkoľvek inej žiadosti o súkromie nás kontaktujte na
                     <a href="mailto:<?= htmlspecialchars($info['contactEmail'], ENT_QUOTES, 'UTF-8') ?>"><?= htmlspecialchars($info['contactEmail'], ENT_QUOTES, 'UTF-8') ?></a>.
                     Odpovieme v lehote, ktorú vyžaduje vaše miestne právo. Pozrite si aj naše
