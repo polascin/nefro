@@ -10,7 +10,12 @@ declare(strict_types=1);
  * štandardnej renálnej farmakológie a SPC/KDIGO; pred zverejnením ho odborne overte
  * proti aktuálnemu SPC. Skript len UPSERTuje kurátorské textové polia podľa slugu a
  * NEMENÍ is_published (lieky ostávajú nezverejnené, kým ich admin neskontroluje a
- * nezverejní v admin_drugs.php). Idempotentné — prepíše uvedené polia hodnotami nižšie.
+ * nezverejní v admin_drugs.php).
+ *
+ * OCHRANA RUČNÝCH ÚPRAV (predvolené správanie): re-run seedu NEPREPÍŠE úpravy
+ * z admin_drugs.php — zverejnené lieky (is_published = 1) sa preskočia úplne
+ * a pri nezverejnených sa doplnia LEN prázdne polia (NULL alebo ''). Úplný
+ * prepis všetkých polí hodnotami zo seedu vyžaduje explicitné `--force`.
  *
  * DIALYZOVATEĽNOSŤ: pole `dialyzability` je zostavené z determinantov odstrániteľnosti
  * pri hemodialýze — molekulová hmotnosť (MW), väzba na plazmatické bielkoviny (PB) a
@@ -26,7 +31,8 @@ declare(strict_types=1);
  * z primárnych autoritatívnych zdrojov (pozri PLAN_NEPHRORESOURCE.md, časť 8).
  *
  * Predpoklad: liek už existuje v `drugs` (najprv spustite sync_drugs.php).
- * Spustenie:  php seed_drugs_curation.php
+ * Spustenie:  php seed_drugs_curation.php            (bezpečné — len prázdne polia)
+ *             php seed_drugs_curation.php --force    (prepíše aj vyplnené/zverejnené)
  */
 if (php_sapi_name() !== 'cli') {
     http_response_code(403);
@@ -833,39 +839,50 @@ $curation = [
     ],
 ];
 
+// Predvolený (bezpečný) režim: zverejnené lieky preskočiť, doplniť len prázdne
+// polia — re-run tak neprepíše ručné úpravy z admin_drugs.php. `--force` = prepis.
+$force = in_array('--force', $argv ?? [], true);
+
 $updated = 0;
-$skipped = 0;
+$skippedPublished = 0;
+$unchanged = 0;
 $missing = [];
 
+/** @var \PDO $pdo */
+$curStmt = $pdo->prepare(
+    'SELECT is_published, ' . implode(', ', DG_CUR_COLS) . ' FROM drugs WHERE slug = :slug LIMIT 1'
+);
+
 foreach ($curation as $slug => $fields) {
+    $curStmt->execute(['slug' => $slug]);
+    $row = $curStmt->fetch(\PDO::FETCH_ASSOC);
+    if ($row === false) {
+        $missing[] = $slug;
+        continue;
+    }
+    if (!$force && (int) $row['is_published'] === 1) {
+        $skippedPublished++;
+        continue;
+    }
     $set = [];
     $params = ['slug' => $slug];
     foreach ($fields as $col => $val) {
         if (!in_array($col, DG_CUR_COLS, true)) {
             continue;
         }
+        if (!$force && trim((string) ($row[$col] ?? '')) !== '') {
+            continue; // pole už má obsah (skorší seed alebo ručná úprava) — nechať
+        }
         $set[] = "$col = :$col";
         $params[$col] = $val;
     }
     if ($set === []) {
-        $skipped++;
+        $unchanged++;
         continue;
     }
-    /** @var \PDO $pdo */
     $stmt = $pdo->prepare('UPDATE drugs SET ' . implode(', ', $set) . ' WHERE slug = :slug');
     $stmt->execute($params);
-    if ($stmt->rowCount() > 0) {
-        $updated++;
-    } else {
-        // rowCount 0 = buď slug neexistuje, alebo hodnoty rovnaké (idempotentné spustenie).
-        $chk = $pdo->prepare('SELECT 1 FROM drugs WHERE slug = :slug LIMIT 1');
-        $chk->execute(['slug' => $slug]);
-        if ($chk->fetchColumn() === false) {
-            $missing[] = $slug;
-        } else {
-            $updated++; // existuje, len bez zmeny
-        }
-    }
+    $updated++;
 }
 
 // ── source_refs: pridá overený odkaz na SPC (DailyMed, NIH) ku každému lieku ───
@@ -904,9 +921,11 @@ foreach ($pdo->query('SELECT id, name_intl, source_refs FROM drugs')->fetchAll(\
 echo "──────────────────────────────────────────────────────\n";
 echo "Kurácia liekov (NÁVRH — overte pred zverejnením)\n";
 echo "──────────────────────────────────────────────────────\n";
+echo 'Režim:           ' . ($force ? '--force (prepis všetkých polí)' : 'bezpečný (len prázdne polia, zverejnené preskočené)') . "\n";
 echo 'V zozname:       ' . count($curation) . "\n";
 echo 'Aktualizovaných: ' . $updated . "\n";
-echo 'Bez polí:        ' . $skipped . "\n";
+echo 'Preskočené (zverejnené): ' . $skippedPublished . "\n";
+echo 'Bez zmeny (už vyplnené): ' . $unchanged . "\n";
 echo 'Zdroje (+DailyMed): ' . $srcAdded . "\n";
 if ($missing !== []) {
     echo 'Chýbajúci slug (spustite najprv sync_drugs.php): ' . implode(', ', $missing) . "\n";
