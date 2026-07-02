@@ -161,7 +161,7 @@ $businessContacts = [
   $faqs = [
       [
           'q' => 'Kde sídli dialyzačné stredisko Medimpax?',
-          'a' => 'Na vrátkach 2/A, 841 01 Bratislava-Dúbravka. Pracovisko je dobre dostupné pre západnú Bratislavu a Záhorie.',
+          'a' => 'Na vrátkach 2/A, 841 01 Bratislava-Dúbravka. Pracovisko je najlepšie dostupné pre západnú Bratislavu a Záhorie, slúži však pacientom z celej Bratislavy aj okolitých okresov.',
       ],
       [
           'q' => 'Aké dialyzačné služby poskytujete?',
@@ -276,7 +276,8 @@ $businessContacts = [
                     starostlivosť <strong>dospelým pacientom</strong> s ochorením obličiek — od preventívnej
                     a klinickej nefrológie cez prípravu na dialýzu až po samotnú dialyzačnú liečbu.
                     Pracovisko sídli na adrese <strong><?= htmlspecialchars($center['siteAddress']) ?></strong>
-                    a je dobre dostupné pre <strong>západnú Bratislavu a Záhorie</strong>. Kladieme dôraz
+                    a najlepšie dostupné je pre <strong>západnú Bratislavu a Záhorie</strong> — slúži však
+                    pacientom z <strong>celej Bratislavy aj okolitých okresov</strong>. Kladieme dôraz
                     na dostupnosť, blízkosť a osobný prístup.
                 </p>
                 <p class="donate-note">
