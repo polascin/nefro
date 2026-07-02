@@ -30,7 +30,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Renálna denervácia môže u vybraných pacientov s rezistentnou hypertenziou znížiť systolický tlak o 5–10 mmHg. Nie je však náhradou diagnostiky, režimových opatrení ani farmakoterapie — má byť súčasťou systému, nie skratkou.',
     'content'      => <<<'HTML'
-<p>Rezistentná hypertenzia patrí medzi klinicky najrizikovejšie formy vysokého krvného tlaku. Nejde iba o „vyššie čísla" na tlakomere. Pacienti s rezistentnou hypertenziou majú vyššie riziko infarktu myokardu, cievnej mozgovej príhody, srdcového zlyhávania, chronickej choroby obličiek a predčasnej kardiovaskulárnej mortality.</p>
+<p>Rezistentná hypertenzia patrí medzi klinicky najrizikovejšie formy vysokého krvného tlaku. Nejde iba o „vyššie čísla“ na tlakomere. Pacienti s rezistentnou hypertenziou majú vyššie riziko infarktu myokardu, cievnej mozgovej príhody, srdcového zlyhávania, chronickej choroby obličiek a predčasnej kardiovaskulárnej mortality.</p>
 
 <p>V posledných rokoch sa do popredia opäť dostáva <strong>renálna denervácia</strong>. Ide o intervenčný postup, ktorého cieľom je znížiť aktivitu sympatických nervových vlákien v okolí renálnych artérií. Tým môže dôjsť k poklesu krvného tlaku. Podľa diskusie odborníkov v podcaste Medscape <em>InDiscussion</em> sa renálna denervácia postupne začleňuje do štruktúrovaného prístupu k liečbe pacientov s rezistentnou alebo nedostatočne kontrolovanou hypertenziou.</p>
 
@@ -48,7 +48,7 @@ $articles[] = [
 
 <h2>Kedy má byť pacient odoslaný k špecialistovi</h2>
 
-<p>Pacient s podozrením na rezistentnú hypertenziu by nemal čakať roky, kým sa jeho stav „nejako vyvinie". Odoslanie k špecialistovi na hypertenziu je vhodné najmä vtedy, keď krvný tlak zostáva nekontrolovaný napriek racionálnej úprave liečby, keď je podozrenie na sekundárnu hypertenziu, pri intolerancii viacerých liekov alebo pri známkach poškodenia cieľových orgánov.</p>
+<p>Pacient s podozrením na rezistentnú hypertenziu by nemal čakať roky, kým sa jeho stav „nejako vyvinie“. Odoslanie k špecialistovi na hypertenziu je vhodné najmä vtedy, keď krvný tlak zostáva nekontrolovaný napriek racionálnej úprave liečby, keď je podozrenie na sekundárnu hypertenziu, pri intolerancii viacerých liekov alebo pri známkach poškodenia cieľových orgánov.</p>
 
 <p>Medzi situácie, ktoré majú urýchliť špecializované vyšetrenie, patria najmä:</p>
 
@@ -102,7 +102,7 @@ $articles[] = [
 
 <h2>Čo možno od výkonu očakávať</h2>
 
-<p>Pacient musí byť pred výkonom realisticky informovaný. Renálna denervácia nie je „vyliečenie hypertenzie" a väčšina pacientov bude pokračovať v antihypertenzívnej liečbe.</p>
+<p>Pacient musí byť pred výkonom realisticky informovaný. Renálna denervácia nie je „vyliečenie hypertenzie“ a väčšina pacientov bude pokračovať v antihypertenzívnej liečbe.</p>
 
 <p>Priemerný očakávaný pokles krvného tlaku býva skôr mierny. Často sa hovorí o poklese systolického tlaku približne o 5 až 10 mmHg. Klinický význam takého poklesu však netreba podceňovať, najmä u pacientov s vysokým kardiovaskulárnym rizikom.</p>
 
@@ -148,7 +148,7 @@ $articles[] = [
 
 <hr>
 
-<p><em><strong>Zdroj:</strong> Medscape, „Renal Denervation and Resistant Hypertension". <a href="https://www.medscape.com/viewarticle/1003189" target="_blank" rel="noopener noreferrer">medscape.com</a>.</em></p>
+<p><em><strong>Zdroj:</strong> Medscape, „Renal Denervation and Resistant Hypertension“. <a href="https://www.medscape.com/viewarticle/1003189" target="_blank" rel="noopener noreferrer">medscape.com</a>.</em></p>
 HTML,
 ];
 
@@ -187,7 +187,7 @@ foreach ($articles as $a) {
             $skipped++;
         }
     } catch (\PDOException $e) {
-        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '": ' . $e->getMessage();
+        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '“: ' . $e->getMessage();
         error_log('add_article migration error: ' . $e->getMessage());
     }
 }

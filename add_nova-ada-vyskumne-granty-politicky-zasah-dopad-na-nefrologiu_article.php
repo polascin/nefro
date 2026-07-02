@@ -163,7 +163,7 @@ foreach ($articles as $a) {
             error_log('add_article pdf gen error: ' . $pe->getMessage());
         }
     } catch (\PDOException $e) {
-        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '": ' . $e->getMessage();
+        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '“: ' . $e->getMessage();
         error_log('add_article migration error: ' . $e->getMessage());
     }
 }

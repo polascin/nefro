@@ -1,8 +1,8 @@
 <?php
 /**
  * add_zivot-s-diabetom-a-nefropatiou_article.php
- * Popularizačný článok (sekcia „Pre pacientov") — spracované z DOCX
- * „Život s diabetom a nefropatiou s AI ilustráciami" vrátane 17 AI ilustrácií
+ * Popularizačný článok (sekcia „Pre pacientov“) — spracované z DOCX
+ * „Život s diabetom a nefropatiou s AI ilustráciami“ vrátane 17 AI ilustrácií
  * (img/zdn-01..zdn-17). Obrázky sú klikateľné (nová karta). PDF verzia je
  * ručne pripravený kurátorovaný súbor (pdf/zivot-s-diabetom-a-nefropatiou.pdf)
  * — slug je v PROTECTED_PDF_SLUGS, takže sa automaticky neprepisuje.
@@ -309,7 +309,7 @@ foreach ($articles as $a) {
             $updated++;
         }
     } catch (\PDOException $e) {
-        $errors[] = 'Chyba pri článku „' . $a['title'] . '": ' . $e->getMessage();
+        $errors[] = 'Chyba pri článku „' . $a['title'] . '“: ' . $e->getMessage();
         error_log('add_zivot_nefropatia migration error: ' . $e->getMessage());
     }
 }

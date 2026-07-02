@@ -22,21 +22,21 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Antihistaminiká pri CKD-aP (svrbenie pri chronickom obličkovom ochorení) zvyčajne nepomáhajú, lebo signál svrbenia ide cez nehistamínové dráhy. Čo dnes vieme o mechanizmoch a ako difelikefalin mení prax pri liečbe svrbenia u hemodialyzovaných pacientov.',
     'content'      => <<<'HTML'
-<p>Chronické svrbenie u pacientov s chronickým obličkovým ochorením (CKD) alebo u dialyzovaných je príliš často prehliadané. A keď sa už zistí, stále sa neraz siahne po antihistaminikách ako po „prvom riešení". V praxi však môže ísť o úplne iný mechanizmus svrbenia, takže aj dobrý úmysel skončí bez účinku.</p>
+<p>Chronické svrbenie u pacientov s chronickým obličkovým ochorením (CKD) alebo u dialyzovaných je príliš často prehliadané. A keď sa už zistí, stále sa neraz siahne po antihistaminikách ako po „prvom riešení“. V praxi však môže ísť o úplne iný mechanizmus svrbenia, takže aj dobrý úmysel skončí bez účinku.</p>
 
 <p>V tomto článku vychádzam zo vzdelávacej aktivity zameranej na CKD-aP (CKD-associated pruritus, svrbenie pri CKD) a na to, prečo antihistaminiká často netrafia podstatu problému.</p>
 
-<h2>Prípad z praxe: silné svrbenie, ktoré nikto „nechytil" včas</h2>
+<h2>Prípad z praxe: silné svrbenie, ktoré nikto „nechytil“ včas</h2>
 
 <p>V dialyzačnej jednotke bol identifikovaný 62-ročný muž s polycystickým ochorením obličiek na hemodialýze približne 1 rok. Svrbenie bolo závažné a trvalo minimálne 3 mesiace, pričom pacient o ňom nikdy nehovoril ani zdravotníkom na vizitách.</p>
 
 <p>Pri vyšetrení boli kožné lézie zjavne druhotné, typicky z následkov škrabania (excoriácie, prurigo lézie). Po vylúčení iných príčin chronického pruritu sa potvrdilo CKD-aP. Pacient dosiahol WI-NRS 7/10 a svrbenie výrazne znižovalo kvalitu života, sprevádzal ho aj spánkový deficit, úzkosť a výrazná spoločenská izolácia. Antihistaminiká boli predtým nasadené, ale bez efektu.</p>
 
-<p>Tento prípad dobre ilustruje dve veci: CKD-aP môže byť „neviditeľné", ak sa aktívne nepýta, a antihistaminiká nemusia zasiahnuť správnu dráhu svrbenia.<sup><a href="https://reachmd.com/programs/cme/stuck-on-antihistamines-for-managing-patients-with-ckd-ap-time-to-reconsider/37607/transcript/83434/" target="_blank" rel="noopener noreferrer">[1]</a></sup></p>
+<p>Tento prípad dobre ilustruje dve veci: CKD-aP môže byť „neviditeľné“, ak sa aktívne nepýta, a antihistaminiká nemusia zasiahnuť správnu dráhu svrbenia.<sup><a href="https://reachmd.com/programs/cme/stuck-on-antihistamines-for-managing-patients-with-ckd-ap-time-to-reconsider/37607/transcript/83434/" target="_blank" rel="noopener noreferrer">[1]</a></sup></p>
 
 <h2>Prečo antihistaminiká pri CKD-aP zvyčajne nepomáhajú</h2>
 
-<p>Kľúčové posolstvo je, že svrbenie pri CKD-aP nie je primárne histamínom sprostredkované. Svrbiaci signál ide skôr cez nehistamínové nervové dráhy. Preto antihistaminiká síce môžu u niektorých pacientov navodiť sedáciu, ale „nezasiahnu jadro" patofyziológie CKD-aP.<sup><a href="https://reachmd.com/programs/cme/stuck-on-antihistamines-for-managing-patients-with-ckd-ap-time-to-reconsider/37607/transcript/83434/" target="_blank" rel="noopener noreferrer">[1]</a></sup></p>
+<p>Kľúčové posolstvo je, že svrbenie pri CKD-aP nie je primárne histamínom sprostredkované. Svrbiaci signál ide skôr cez nehistamínové nervové dráhy. Preto antihistaminiká síce môžu u niektorých pacientov navodiť sedáciu, ale „nezasiahnu jadro“ patofyziológie CKD-aP.<sup><a href="https://reachmd.com/programs/cme/stuck-on-antihistamines-for-managing-patients-with-ckd-ap-time-to-reconsider/37607/transcript/83434/" target="_blank" rel="noopener noreferrer">[1]</a></sup></p>
 
 <p>Ďalší praktický detail: väčšina pacientov má generalizované svrbenie, nie lokálny problém. To znižuje pravdepodobnosť, že by pomohli len lokálne opatrenia, a ešte viac to zvyšuje potrebu cielenejšej liečby.<sup><a href="https://reachmd.com/programs/cme/stuck-on-antihistamines-for-managing-patients-with-ckd-ap-time-to-reconsider/37607/transcript/83434/" target="_blank" rel="noopener noreferrer">[1]</a></sup></p>
 
@@ -50,11 +50,11 @@ $articles[] = [
   <li><strong>nerovnováha medzi mu a kappa opioidnými receptormi</strong>, kde prevláda mu-sprostredkovaná pro-svrbivá signalizácia.<sup><a href="https://reachmd.com/programs/cme/stuck-on-antihistamines-for-managing-patients-with-ckd-ap-time-to-reconsider/37607/transcript/83434/" target="_blank" rel="noopener noreferrer">[1]</a></sup></li>
 </ul>
 
-<p>Táto zmena paradigmy otvorila priestor pre liečby, ktoré nie sú „len antihistamínový zvyk", ale cielene zasahujú príslušné dráhy.</p>
+<p>Táto zmena paradigmy otvorila priestor pre liečby, ktoré nie sú „len antihistamínový zvyk“, ale cielene zasahujú príslušné dráhy.</p>
 
 <h2>Základ, ktorý treba zvládnuť každopádne</h2>
 
-<p>Aj pri cielenej liečbe platí, že „univerzálne" opatrenia sa nepodceňujú. V aktivite zaznelo:</p>
+<p>Aj pri cielenej liečbe platí, že „univerzálne“ opatrenia sa nepodceňujú. V aktivite zaznelo:</p>
 
 <ol>
   <li><strong>denné používanie emoliencií a zvlhčovanie kože</strong> (moisturizers),</li>
@@ -63,9 +63,9 @@ $articles[] = [
 
 <p>Tieto kroky nevyriešia všetko, ale znižujú premenlivé faktory, ktoré môžu svrbenie zhoršovať.</p>
 
-<h2>Difelikefalin: presun od symptomatických „skúšok" k cielenej terapii</h2>
+<h2>Difelikefalin: presun od symptomatických „skúšok“ k cielenej terapii</h2>
 
-<p>V rozhovore sa difelikefalin (DFK) predstavuje ako liečba s odporúčaním v európskych smerniciach pre chronický pruritus a ako „štandard of care" pri CKD-aP u hemodialyzovaných. Hlavný dôvod je, že cieli <strong>kappa-opioidné receptory</strong> a obnovuje rovnováhu voči mu-receptorom.<sup><a href="https://reachmd.com/programs/cme/stuck-on-antihistamines-for-managing-patients-with-ckd-ap-time-to-reconsider/37607/transcript/83434/" target="_blank" rel="noopener noreferrer">[1]</a></sup></p>
+<p>V rozhovore sa difelikefalin (DFK) predstavuje ako liečba s odporúčaním v európskych smerniciach pre chronický pruritus a ako „štandard of care“ pri CKD-aP u hemodialyzovaných. Hlavný dôvod je, že cieli <strong>kappa-opioidné receptory</strong> a obnovuje rovnováhu voči mu-receptorom.<sup><a href="https://reachmd.com/programs/cme/stuck-on-antihistamines-for-managing-patients-with-ckd-ap-time-to-reconsider/37607/transcript/83434/" target="_blank" rel="noopener noreferrer">[1]</a></sup></p>
 
 <h3>Mechanizmus účinku v skratke</h3>
 
@@ -91,7 +91,7 @@ $articles[] = [
 
 <h3>Bezpečnosť a obava z opioidov</h3>
 
-<p>V diskusii sa explicitne rieši obava z „opioidov" v kontexte závislosti. V aktivite zaznelo, že kappa-opioidy <strong>nie sú návykové</strong> (neaktivujú „reward" mechanizmus) a majú dobrý bezpečnostný profil, pričom nečakáte typické centrálne opioidné nežiadúce účinky.<sup><a href="https://reachmd.com/programs/cme/stuck-on-antihistamines-for-managing-patients-with-ckd-ap-time-to-reconsider/37607/transcript/83434/" target="_blank" rel="noopener noreferrer">[1]</a></sup></p>
+<p>V diskusii sa explicitne rieši obava z „opioidov“ v kontexte závislosti. V aktivite zaznelo, že kappa-opioidy <strong>nie sú návykové</strong> (neaktivujú „reward“ mechanizmus) a majú dobrý bezpečnostný profil, pričom nečakáte typické centrálne opioidné nežiadúce účinky.<sup><a href="https://reachmd.com/programs/cme/stuck-on-antihistamines-for-managing-patients-with-ckd-ap-time-to-reconsider/37607/transcript/83434/" target="_blank" rel="noopener noreferrer">[1]</a></sup></p>
 
 <h2>Praktický záver: pravidelne sa pýtaj, meraj a lieč cielene</h2>
 
@@ -104,7 +104,7 @@ $articles[] = [
 
 <hr>
 
-<p><em><strong>Zdroj:</strong> Medtelligence CE na ReachMD, „Stuck on Antihistamines for Managing Patients With CKD-aP? Time to Reconsider!" (transkript aktivity). <a href="https://reachmd.com/programs/cme/stuck-on-antihistamines-for-managing-patients-with-ckd-ap-time-to-reconsider/37607/transcript/83434/" target="_blank" rel="noopener noreferrer">Zdroj aktivity</a>.</em></p>
+<p><em><strong>Zdroj:</strong> Medtelligence CE na ReachMD, „Stuck on Antihistamines for Managing Patients With CKD-aP? Time to Reconsider!“ (transkript aktivity). <a href="https://reachmd.com/programs/cme/stuck-on-antihistamines-for-managing-patients-with-ckd-ap-time-to-reconsider/37607/transcript/83434/" target="_blank" rel="noopener noreferrer">Zdroj aktivity</a>.</em></p>
 HTML,
 ];
 
@@ -143,7 +143,7 @@ foreach ($articles as $a) {
             $skipped++;
         }
     } catch (\PDOException $e) {
-        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '": ' . $e->getMessage();
+        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '“: ' . $e->getMessage();
         error_log('add_article migration error: ' . $e->getMessage());
     }
 }

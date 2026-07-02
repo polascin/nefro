@@ -163,7 +163,7 @@ foreach ($articles as $a) {
             error_log('add_cheatsheet pdf gen error: ' . $pe->getMessage());
         }
     } catch (\PDOException $e) {
-        $errors[] = 'Chyba pri ťaháku „' . htmlspecialchars($a['title']) . '": ' . $e->getMessage();
+        $errors[] = 'Chyba pri ťaháku „' . htmlspecialchars($a['title']) . '“: ' . $e->getMessage();
         error_log('add_cheatsheet migration error: ' . $e->getMessage());
     }
 }

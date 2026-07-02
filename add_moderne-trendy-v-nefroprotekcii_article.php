@@ -1,7 +1,7 @@
 <?php
 /**
  * add_moderne-trendy-v-nefroprotekcii_article.php
- * Popularizačný článok (sekcia „Pre pacientov") — spracované z DOCX vrátane
+ * Popularizačný článok (sekcia „Pre pacientov“) — spracované z DOCX vrátane
  * 22 AI ilustrácií (img/nefroprot-01..nefroprot-22). Obrázky sú klikateľné (nová karta).
  * Spustenie cez SSH:
  *   ssh -i "$HOME/.ssh/nefro_deploy" -p 26650 \
@@ -500,7 +500,7 @@ foreach ($articles as $a) {
             $skipped++;
         }
     } catch (\PDOException $e) {
-        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '": ' . $e->getMessage();
+        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '“: ' . $e->getMessage();
         error_log('add_popular_article migration error: ' . $e->getMessage());
     }
 }

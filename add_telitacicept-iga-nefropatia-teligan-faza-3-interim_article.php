@@ -71,7 +71,7 @@ $articles[] = [
 
 <h3>Funkcia obličiek</h3>
 
-<p>Z pohľadu nefrologicky významného „tvrdého" cieľa je dôležité, že v 39. týždni bol signál priaznivejší pre telitacicept:</p>
+<p>Z pohľadu nefrologicky významného „tvrdého“ cieľa je dôležité, že v 39. týždni bol signál priaznivejší pre telitacicept:</p>
 
 <ul>
   <li>zmena odhadovanej glomerulárnej filtrácie (eGFR) od východiskovej hodnoty:
@@ -118,7 +118,7 @@ $articles[] = [
 
 <hr>
 
-<p><em><strong>Zdroj:</strong> Lv J, Liu L, Wang W, et al.; TELIGAN Investigators. Telitacicept for IgA Nephropathy — Interim Analysis of a Phase 3 Trial. <em>N Engl J Med</em>. 2026;394(19):1916–1924. <a href="https://doi.org/10.1056/NEJMoa2514415" target="_blank" rel="noopener noreferrer">doi:10.1056/NEJMoa2514415</a> (TELIGAN, ClinicalTrials.gov NCT05799287). Spracované aj podľa súhrnu na portáli ReachMD „Telitacicept Interim Phase 3 Trial in IgA Nephropathy": <a href="https://reachmd.com/news/telitacicept-iga-nephropathy/2487417/" target="_blank" rel="noopener noreferrer">reachmd.com</a>.</em></p>
+<p><em><strong>Zdroj:</strong> Lv J, Liu L, Wang W, et al.; TELIGAN Investigators. Telitacicept for IgA Nephropathy — Interim Analysis of a Phase 3 Trial. <em>N Engl J Med</em>. 2026;394(19):1916–1924. <a href="https://doi.org/10.1056/NEJMoa2514415" target="_blank" rel="noopener noreferrer">doi:10.1056/NEJMoa2514415</a> (TELIGAN, ClinicalTrials.gov NCT05799287). Spracované aj podľa súhrnu na portáli ReachMD „Telitacicept Interim Phase 3 Trial in IgA Nephropathy“: <a href="https://reachmd.com/news/telitacicept-iga-nephropathy/2487417/" target="_blank" rel="noopener noreferrer">reachmd.com</a>.</em></p>
 HTML,
 ];
 
@@ -184,7 +184,7 @@ foreach ($articles as $a) {
             error_log('add_article pdf gen error: ' . $pe->getMessage());
         }
     } catch (\PDOException $e) {
-        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '": ' . $e->getMessage();
+        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '“: ' . $e->getMessage();
         error_log('add_article migration error: ' . $e->getMessage());
     }
 }

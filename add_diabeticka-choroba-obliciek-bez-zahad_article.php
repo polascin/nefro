@@ -1,7 +1,7 @@
 <?php
 /**
  * add_diabeticka-choroba-obliciek-bez-zahad_article.php
- * Popularizačný článok (sekcia „Pre pacientov") — spracované z DOCX vrátane
+ * Popularizačný článok (sekcia „Pre pacientov“) — spracované z DOCX vrátane
  * 19 AI ilustrácií (img/dkd-01..dkd-19). Obrázky sú klikateľné (nová karta).
  * Spustenie cez SSH:
  *   ssh -i "$HOME/.ssh/nefro_deploy" -p 26650 \

@@ -2,7 +2,7 @@
 /**
  * add_nefrologicka-ambulancia-co-sa-vysetruje_article.php
  * ════════════════════════════════════════════════════════════════════════════
- * DRAFT popularizačného článku (sekcia „Pre pacientov" → populars.php) o tom,
+ * DRAFT popularizačného článku (sekcia „Pre pacientov“ → populars.php) o tom,
  * čo sa vyšetruje a sleduje v nefrologickej ambulancii (klinická a preventívna
  * nefrológia, príprava na dialyzačný program). Podpora strediska Medimpax.
  *
@@ -153,7 +153,7 @@ foreach ($articles as $a) {
             error_log('add_nefro_ambulancia pdf gen error: ' . $pe->getMessage());
         }
     } catch (\PDOException $e) {
-        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '": ' . $e->getMessage();
+        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '“: ' . $e->getMessage();
         error_log('add_nefro_ambulancia migration error: ' . $e->getMessage());
     }
 }

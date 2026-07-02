@@ -2,7 +2,7 @@
 /**
  * add_TEMPLATE_cheatsheet_article.php
  * ════════════════════════════════════════════════════════════════════════════
- * ŠABLÓNA pre ŤAHÁK / CHEAT SHEET (sekcia „Ťaháky"
+ * ŠABLÓNA pre ŤAHÁK / CHEAT SHEET (sekcia „Ťaháky“
  * → cheatsheets.php, category = 'cheatsheet'). Tlačiteľný kompaktný
  * prehľad pre klinickú prax (acidobáza, elektrolyty, diuretiká, infúzne
  * roztoky …). Renderuje sa cez article.php (spoločná infraštruktúra + PDF).
@@ -20,14 +20,14 @@
  * PRAVIDLÁ PRE OBSAH ŤAHÁKA (CHEAT SHEET):
  *   • Účel    – ťahák (rýchla referencia), nie naratívny článok. Kľúčové čísla,
  *               klasifikácie a postupy v kompaktnej, tlačiteľnej forme.
- *   • title    – čistý text, bez HTML; napr. „Acidobáza — ťahák (cheat sheet)"
+ *   • title    – čistý text, bez HTML; napr. „Acidobáza — ťahák (cheat sheet)“
  *   • slug     – len [a-z0-9-], max 80 znakov, unikátny. Diakritika → ASCII.
  *   • excerpt  – 1–2 vety, čo ťahák obsahuje; zobrazí sa na karte v sekcii
  *   • content  – HTML; NEZAČÍNAJ <h2> zhodným s titulom (duplikát)
  *                Preferuj <table> (s <thead>/<th scope="col">), <ul>/<ol>,
  *                <strong> pre kľúčové hodnoty. Žiadne inline style="" (CSP).
  *                Nadpisy sekcií → <h2>; pododdiely → <h3>.
- *                Vždy uveď zdroj/odporúčanie na konci (<hr> + „Zdroj:").
+ *                Vždy uveď zdroj/odporúčanie na konci (<hr> + „Zdroj:“).
  *   • category – 'cheatsheet' (nastavené automaticky nižšie — needituj)
  *   • is_top   – 0 = bežný, 1 = odporúčaný (zobrazí sa s odznakom navrchu sekcie)
  *   • author   – autor projektu (predvolene 'MUDr. Ľubomír Polaščín').
@@ -142,7 +142,7 @@ foreach ($articles as $a) {
             error_log('add_cheatsheet pdf gen error: ' . $pe->getMessage());
         }
     } catch (\PDOException $e) {
-        $errors[] = 'Chyba pri ťaháku „' . htmlspecialchars($a['title']) . '": ' . $e->getMessage();
+        $errors[] = 'Chyba pri ťaháku „' . htmlspecialchars($a['title']) . '“: ' . $e->getMessage();
         error_log('add_cheatsheet migration error: ' . $e->getMessage());
     }
 }

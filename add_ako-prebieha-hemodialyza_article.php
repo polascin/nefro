@@ -2,7 +2,7 @@
 /**
  * add_ako-prebieha-hemodialyza_article.php
  * ════════════════════════════════════════════════════════════════════════════
- * DRAFT popularizačného článku (sekcia „Pre pacientov" → populars.php) o tom,
+ * DRAFT popularizačného článku (sekcia „Pre pacientov“ → populars.php) o tom,
  * ako prebieha hemodialýza (podpora strediska Medimpax).
  *
  * ⚠ NEPUBLIKOVANÉ AUTOMATICKY. Spustenie tohto skriptu článok ZVEREJNÍ,
@@ -166,7 +166,7 @@ foreach ($articles as $a) {
             error_log('add_ako_prebieha_hemodialyza pdf gen error: ' . $pe->getMessage());
         }
     } catch (\PDOException $e) {
-        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '": ' . $e->getMessage();
+        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '“: ' . $e->getMessage();
         error_log('add_ako_prebieha_hemodialyza migration error: ' . $e->getMessage());
     }
 }

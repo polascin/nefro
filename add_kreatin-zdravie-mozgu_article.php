@@ -43,7 +43,7 @@ najmä preto, že sa objavujú dáta o jeho možnom vplyve na kogníciu, náladu
 zároveň zdôrazňuje, že dôkazy pre demenciu zatiaľ nie sú pevné a bezpečnostné otázky nie sú úplne
 uzavreté.</p>
 
-<h2>Čo je kreatín a prečo vôbec „robí mozgu"</h2>
+<h2>Čo je kreatín a prečo vôbec „robí mozgu“</h2>
 <p>Kreatín je endogénna látka: tvorí sa v pečeni a obličkách a jeho prekurzory sa získavajú aj
 z potravy. Väčšina kreatínu sa nachádza vo svaloch ako fosfokreatín, kde slúži na rýchle dopĺňanie
 ATP počas záťaže.</p>
@@ -60,7 +60,7 @@ variabilné a skôr nekonzistentné.</p>
 <p>Článok spomína aj konkrétnu štúdiu z roku 2026: u 29 spánkovo deprivovaných dospelých viedol
 kreatín monohydrát (0,2 g/kg) až k približne 12 % zmierneniu zhoršenia kognitívnych schopností
 vyvolaného nedostatkom spánku. Dôležité je, že ide o krátkodobý kontext a neznamená to automaticky
-„prevenciu demencie".</p>
+„prevenciu demencie“.</p>
 
 <h2>Kreatín pri neurologických ochoreniach: čo sa už skúšalo</h2>
 <p>Medscape uvádza, že kreatín má potenciál aj ako prídavná (adjunktná) liečba v niektorých stavoch,
@@ -76,11 +76,11 @@ no dôkazy sú zatiaľ obmedzené:</p>
 
 <h2>Je kreatín bezpečný a aké sú limity dôkazov</h2>
 <p>Článok je opatrný: aj keď sa kreatín ako doplnok v súvislosti s cvičením a budovaním svalov zdá
-byť relatívne bezpečný, bezpečnostné obavy „nie sú úplne vyriešené". Zároveň spomína, že nie sú jasne
+byť relatívne bezpečný, bezpečnostné obavy „nie sú úplne vyriešené“. Zároveň spomína, že nie sú jasne
 stanovené štandardné dávky a chýbajú pevne dané výživové odporúčania pre tento konkrétny účel
 (zdravie mozgu).</p>
 <p>Takisto platí, že kľúčová výhoda, o ktorej článok hovorí, je skôr v <strong>krátkodobých</strong>
-účinkoch, nie v dlhodobom „ochrannom" vplyve na mozog.</p>
+účinkoch, nie v dlhodobom „ochrannom“ vplyve na mozog.</p>
 
 <h2>Praktická rovina: ako k tomu pristupovať u pacienta</h2>
 <p>Medscape v kontexte zdravých ľudí aj ľudí s kognitívnymi ťažkosťami pripúšťa, že vyskúšať kreatín
@@ -94,10 +94,10 @@ najmä na neurologické aspekty, nefrologická interpretácia musí byť opatrn�
 <ul>
   <li>Kreatín sa v tele mení na kreatinín, takže môže <strong>skomplikovať interpretáciu
       kreatinínu</strong> v laboratórnych výsledkoch (najmä pri vysokej dávke alebo ak sa funkcia
-      obličiek sleduje „len podľa kreatinínu").</li>
+      obličiek sleduje „len podľa kreatinínu“).</li>
   <li>U pacientov s pokročilou CKD býva bezpečnostný profil doplnkov (najmä vo vyšších dávkach) menej
       jasný. V praxi preto dáva zmysel postupovať konzervatívne: pred nasadením sa poradiť, nastaviť
-      monitoring a vyhnúť sa „empirickému" zvyšovaniu dávky bez opodstatnenia.</li>
+      monitoring a vyhnúť sa „empirickému“ zvyšovaniu dávky bez opodstatnenia.</li>
 </ul>
 
 <hr>
@@ -170,7 +170,7 @@ foreach ($articles as $a) {
             error_log('add_kreatin pdf gen error: ' . $pe->getMessage());
         }
     } catch (\PDOException $e) {
-        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '": ' . $e->getMessage();
+        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '“: ' . $e->getMessage();
         error_log('add_kreatin migration error: ' . $e->getMessage());
     }
 }

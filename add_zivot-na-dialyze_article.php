@@ -2,7 +2,7 @@
 /**
  * add_zivot-na-dialyze_article.php
  * ════════════════════════════════════════════════════════════════════════════
- * DRAFT popularizačného článku (sekcia „Pre pacientov" → populars.php):
+ * DRAFT popularizačného článku (sekcia „Pre pacientov“ → populars.php):
  * život na dialýze — bežný týždeň, strava, práca, cestovanie (Medimpax).
  *
  * ⚠ NEPUBLIKOVANÉ AUTOMATICKY. Spustenie tohto skriptu článok ZVEREJNÍ,
@@ -149,7 +149,7 @@ foreach ($articles as $a) {
             error_log('add_zivot_na_dialyze pdf gen error: ' . $pe->getMessage());
         }
     } catch (\PDOException $e) {
-        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '": ' . $e->getMessage();
+        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '“: ' . $e->getMessage();
         error_log('add_zivot_na_dialyze migration error: ' . $e->getMessage());
     }
 }

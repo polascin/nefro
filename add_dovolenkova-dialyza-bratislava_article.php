@@ -2,7 +2,7 @@
 /**
  * add_dovolenkova-dialyza-bratislava_article.php
  * ════════════════════════════════════════════════════════════════════════════
- * DRAFT popularizačného článku (sekcia „Pre pacientov" → populars.php) o
+ * DRAFT popularizačného článku (sekcia „Pre pacientov“ → populars.php) o
  * dovolenkovej / hosťovskej dialýze v Bratislave (podpora strediska Medimpax).
  *
  * ⚠ NEPUBLIKOVANÉ AUTOMATICKY. Spustenie tohto skriptu článok ZVEREJNÍ,
@@ -162,7 +162,7 @@ foreach ($articles as $a) {
             error_log('add_dovolenkova_dialyza pdf gen error: ' . $pe->getMessage());
         }
     } catch (\PDOException $e) {
-        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '": ' . $e->getMessage();
+        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '“: ' . $e->getMessage();
         error_log('add_dovolenkova_dialyza migration error: ' . $e->getMessage());
     }
 }

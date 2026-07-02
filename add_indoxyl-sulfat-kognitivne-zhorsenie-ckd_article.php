@@ -74,17 +74,17 @@ pričom za poškodenie sa považovalo <strong>MMSE skóre ≤ 26/30</strong>.</p
       asociáciu s kognitívnym poškodením.</li>
 </ul>
 
-<h3>„Takeaway" z článku</h3>
+<h3>„Takeaway“ z článku</h3>
 <p>V rámci tryptofánových cirkulujúcich derivátov vychádza, že <strong>IS</strong> je ten, ktorý sa
 viaže ku kognitívnemu zhoršeniu pri CKD, zatiaľ čo <strong>KYN</strong> (kynurenín) a
 <strong>IAA</strong> (indole-3-acetát) nie.</p>
 
 <h2>Preklad do nefrologickej praxe: čo to môže znamenať</h2>
 <p>Ak je táto asociácia stabilná aj v prospektívnych štúdiách, IS by sa mohol stať praktickým
-biomarkerom „biologického rizika" neurologických komplikácií pri CKD. Z praktického pohľadu to
+biomarkerom „biologického rizika“ neurologických komplikácií pri CKD. Z praktického pohľadu to
 otvára dve roviny:</p>
 <ol>
-  <li><strong>Riziková stratifikácia.</strong> Pacienti s vyšším IS môžu byť „viac ohrození", čo môže
+  <li><strong>Riziková stratifikácia.</strong> Pacienti s vyšším IS môžu byť „viac ohrození“, čo môže
       byť užitočné pri plánovaní sledovania kognície alebo pri práci s rizikami, ktoré kogníciu
       zhoršujú (napr. vaskulárne faktory, zápal, anémia, urémia).</li>
   <li><strong>Mechanistické prepojenie.</strong> Keďže ide o uremický toxín, výsledok podporuje úvahu,
@@ -181,7 +181,7 @@ foreach ($articles as $a) {
             error_log('add_indoxyl pdf gen error: ' . $pe->getMessage());
         }
     } catch (\PDOException $e) {
-        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '": ' . $e->getMessage();
+        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '“: ' . $e->getMessage();
         error_log('add_indoxyl migration error: ' . $e->getMessage());
     }
 }

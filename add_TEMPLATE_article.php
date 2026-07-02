@@ -27,7 +27,7 @@
  *   • is_top   – 0 = bežný článok, 1 = odporúčaný (zobrazí sa vo featured sekcii)
  *   • author   – autor projektu (predvolene 'MUDr. Ľubomír Polaščín').
  *
- *   ⚠ PÔVODNÍ AUTORI ZDROJA (widget „Zúčastnení autori" + filter ?autor=):
+ *   ⚠ PÔVODNÍ AUTORI ZDROJA (widget „Zúčastnení autori“ + filter ?autor=):
  *      Pole `author` je VŽDY len autor projektu, preto sa pôvodní autori
  *      zdrojového článku k autorom NEpridajú automaticky. Ak je článok
  *      slovenským spracovaním KONKRÉTNEHO zdrojového článku, doplň jeho
@@ -35,9 +35,9 @@
  *      autoritatívna a zobrazí ich vo widgete aj vo filtri.
  *      • Mená zháňaj len z otvorených bibliografických API (Crossref/PubMed/
  *        eutils) alebo verejných tlačových správ — NIE obchádzaním paywallu.
- *      • Notácia „Meno Priezvisko" (kvôli agregácii naprieč článkami).
- *      • Bez mapy funguje len obmedzený fallback: prvý autor z „Zdroj:" v obsahu
- *        (značka musí byť presne „Zdroj:", nie zoznam „Zdroje").
+ *      • Notácia „Meno Priezvisko“ (kvôli agregácii naprieč článkami).
+ *      • Bez mapy funguje len obmedzený fallback: prvý autor z „Zdroj:“ v obsahu
+ *        (značka musí byť presne „Zdroj:“, nie zoznam „Zdroje“).
  */
 
 // Ochrana – len admin alebo CLI
@@ -145,7 +145,7 @@ foreach ($articles as $a) {
             error_log('add_article pdf gen error: ' . $pe->getMessage());
         }
     } catch (\PDOException $e) {
-        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '": ' . $e->getMessage();
+        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '“: ' . $e->getMessage();
         error_log('add_article migration error: ' . $e->getMessage());
     }
 }

@@ -49,7 +49,7 @@ o srdcovej funkcii a štrukturálnych/chlopňových nálezoch.</p>
 <h2>Prečo práve POCUS a prečo k tomu pribudla AI vrstva</h2>
 <p>Článok opisuje, že pre pokročilých praktikov (nurse practitioners, physician assistants) je
 POCUS užitočný najmä v situáciách ako urgentná starostlivosť, nemocničná medicína, ambulancie
-a dlhodobá starostlivosť. Kľúčovým problémom však nie je len „nasnímať" obraz. Najväčšie oneskorenie
+a dlhodobá starostlivosť. Kľúčovým problémom však nie je len „nasnímať“ obraz. Najväčšie oneskorenie
 vzniká pri interpretácii, keď:</p>
 <ul>
   <li>jemné chlopňové abnormality a hodnotenie srdcovej funkcie často vyžadujú špecializovaný dohľad,</li>
@@ -57,11 +57,11 @@ vzniká pri interpretácii, keď:</p>
   <li>vznikajú praktické dôsledky pre tok pacientov a načasovanie liečby.</li>
 </ul>
 <p>AI-asistované POCUS má byť podľa článku spôsob, ako skrátiť cestu od vyšetrenia k prakticky využiteľným
-informáciám pri lôžku. Riešenie je prezentované ako „triážny" nástroj, nie náhrada formálnej
+informáciám pri lôžku. Riešenie je prezentované ako „triážny“ nástroj, nie náhrada formálnej
 echokardiografie.</p>
 
 <h2>Ako to má vyzerať v klinickej rutine</h2>
-<p>Podľa textu „cloud-based" platforma analyzuje fokálne (špecificky zamerané) srdcové
+<p>Podľa textu „cloud-based“ platforma analyzuje fokálne (špecificky zamerané) srdcové
 ultrazvukové obrazy a poskytuje:</p>
 <ul>
   <li>automatizované merania,</li>
@@ -106,7 +106,7 @@ echokardiografických laboratórií a špecializovaných pracovísk.</p>
 dýchavičnosť, edémy a kolísanie objemového statusu často prelínajú s kardiálnou patológiou.
 Ak má byť AI-asistované POCUS skutočne spoľahlivé ako triážny nástroj, môže to teoreticky:</p>
 <ul>
-  <li>pomôcť rýchlejšie odlíšiť „pravdepodobné kardiálne zlyhávanie" vs. iné príčiny dýchavice,</li>
+  <li>pomôcť rýchlejšie odlíšiť „pravdepodobné kardiálne zlyhávanie“ vs. iné príčiny dýchavice,</li>
   <li>urýchliť eskaláciu na echokardiografiu, keď je to potrebné,</li>
   <li>podporiť rýchlejšie rozhodnutia o následnom postupe (napr. hospitalizácia vs. ambulantný plán).</li>
 </ul>
@@ -120,7 +120,7 @@ finančný vzťah ku spoločnosti. Tamar Kupfer neuvádza konflikt záujmov.</p>
 
 <hr>
 
-<p><em><strong>Zdroj:</strong> Tamar Kupfer, „AI-Assisted POCUS Helps NPs, PAs Make Faster Cardiac Calls",
+<p><em><strong>Zdroj:</strong> Tamar Kupfer, „AI-Assisted POCUS Helps NPs, PAs Make Faster Cardiac Calls“,
 <em>Medscape Medical News</em> (2026).
 <a href="https://www.medscape.com/viewarticle/how-ai-assisted-pocus-helping-nps-and-pas-make-faster-2026a1000m1m" target="_blank" rel="noopener noreferrer">Link na zdroj</a>.</em></p>
 HTML,
@@ -188,7 +188,7 @@ foreach ($articles as $a) {
             error_log('add_ai_pocus pdf gen error: ' . $pe->getMessage());
         }
     } catch (\PDOException $e) {
-        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '": ' . $e->getMessage();
+        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '“: ' . $e->getMessage();
         error_log('add_ai_pocus migration error: ' . $e->getMessage());
     }
 }

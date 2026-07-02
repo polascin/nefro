@@ -30,7 +30,7 @@ require_once __DIR__ . '/pdf_generator.php';
 $articles = [];
 
 $articles[] = [
-    'title'        => 'CKM syndróm konečne ako „jeden rámec": čo znamenajú nové ACC/AHA/ADA/ASN usmernenia pre nefrologickú prax',
+    'title'        => 'CKM syndróm konečne ako „jeden rámec“: čo znamenajú nové ACC/AHA/ADA/ASN usmernenia pre nefrologickú prax',
     'slug'         => 'ckm-syndrom-usmernenia-acc-aha-ada-asn-nefrologia',
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
@@ -39,7 +39,7 @@ $articles[] = [
     'content'      => <<<'HTML'
 <p>Chronické ochorenie obličiek (CKD) zriedka existuje izolovane. U väčšiny pacientov sa prelína
 s diabetom, metabolickými rizikami, obezitou, dyslipidémiou a kardiovaskulárnym ochorením. V praxi
-potom vzniká typický problém: každý odbor rieši „svoje" diagnózy, ale pacientovo riziko je spoločné
+potom vzniká typický problém: každý odbor rieši „svoje“ diagnózy, ale pacientovo riziko je spoločné
 a rastie naprieč orgánmi.</p>
 
 <p>Nové usmernenia pre <strong>kardiovaskulárno-obličkovo-metabolický (cardiovascular-kidney-metabolic,
@@ -49,7 +49,7 @@ renálny koniec reťazca, ale ako súčasť širšieho kardiovaskulárno-metabol
 <h2>Čo je cieľom CKM usmernení</h2>
 <p>Podľa spracovania na Medscape sú publikované dve súvisiace časti:</p>
 <ol>
-  <li><strong>„Guideline-at-a-glance" v JACC</strong> (pre rýchlu orientáciu) pre CKM syndróm.</li>
+  <li><strong>„Guideline-at-a-glance“ v JACC</strong> (pre rýchlu orientáciu) pre CKM syndróm.</li>
   <li><strong>Komplexné usmernenie AHA/ACC/ADA/ASN</strong> pre prevenciu, detekciu, vyhodnotenie
       a manažment CKM syndrómu.</li>
 </ol>
@@ -66,9 +66,9 @@ renálny koniec reťazca, ale ako súčasť širšieho kardiovaskulárno-metabol
 <p>CKM prístup v zásade podporuje pracovný model, v ktorom sa u pacienta mapa rizika nebuduje oddelene,
 ale naraz. Prakticky to môže znamenať:</p>
 <ul>
-  <li>mať pri každej významnej návšteve „spoločný cieľ" (CKD nie je len cieľová hodnota eGFR, ale aj
+  <li>mať pri každej významnej návšteve „spoločný cieľ“ (CKD nie je len cieľová hodnota eGFR, ale aj
       rizikový marker pre kardiovaskulárnu a metabolickú os),</li>
-  <li>pri hodnotení pacienta zvažovať, či ide skôr o „čisto renálny problém", alebo o CKM obraz
+  <li>pri hodnotení pacienta zvažovať, či ide skôr o „čisto renálny problém“, alebo o CKM obraz
       s dominantnou kardiometabolickou zložkou,</li>
   <li>plánovať následné kroky v tom istom logickom slede (detekcia a triedenie rizika → hodnotenie →
       manažment a sledovanie).</li>
@@ -80,11 +80,11 @@ ale naraz. Prakticky to môže znamenať:</p>
       renálny cieľový ukazovateľ (endpoint), môžete prehliadnuť dominantnú zložku rizika.</li>
   <li><strong>Liečba je komplexná a interdisciplinárna.</strong> CKM rámec prirodzene vytvára priestor
       na koordináciu cieľov s diabetológom a kardiológom.</li>
-  <li><strong>Zmysel dávajú „spoločné" ukazovatele.</strong> Nielen eGFR, ale aj rizikové profily,
+  <li><strong>Zmysel dávajú „spoločné“ ukazovatele.</strong> Nielen eGFR, ale aj rizikové profily,
       albuminúria, krvný tlak, metabolické parametre a celkové kardiovaskulárne riziko.</li>
 </ol>
 
-<h2>Čo si z usmernení odniesť ako „nefrologický pracovný postup"</h2>
+<h2>Čo si z usmernení odniesť ako „nefrologický pracovný postup“</h2>
 <p>Keďže ide o CKM usmernenia zamerané na prevenciu, detekciu, vyhodnotenie a manažment, užitočné je
 premeniť ich do vlastného interného postupu. Ten si môžete nastaviť napríklad takto:</p>
 <ul>
@@ -99,7 +99,7 @@ premeniť ich do vlastného interného postupu. Ten si môžete nastaviť naprí
 <hr>
 
 <p><em><strong>Zdroj:</strong> Chiadi E. Ndumele, Fatima Rodriguez, Gurusher S. Panjrath a kol.,
-„Cardiovascular-Kidney-Metabolic (CKM) Guidelines (ACC/ADA/AHA/ASN)", <em>JACC</em> (2026); spracované
+„Cardiovascular-Kidney-Metabolic (CKM) Guidelines (ACC/ADA/AHA/ASN)“, <em>JACC</em> (2026); spracované
 v <em>Medscape Reference</em>.
 <a href="https://reference.medscape.com/cc2/p10/cardiovascular-kidney-metabolic-ckm-guidelines-acc-ada-2026a1000jfz" target="_blank" rel="noopener noreferrer">Medscape</a> ·
 <a href="https://doi.org/10.1016/j.jacc.2026.05.008" target="_blank" rel="noopener noreferrer">JACC – guideline-at-a-glance</a> ·
@@ -169,7 +169,7 @@ foreach ($articles as $a) {
             error_log('add_ckm_guidelines pdf gen error: ' . $pe->getMessage());
         }
     } catch (\PDOException $e) {
-        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '": ' . $e->getMessage();
+        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '“: ' . $e->getMessage();
         error_log('add_ckm_guidelines migration error: ' . $e->getMessage());
     }
 }

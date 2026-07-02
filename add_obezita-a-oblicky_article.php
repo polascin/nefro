@@ -1,8 +1,8 @@
 <?php
 /**
  * add_obezita-a-oblicky_article.php
- * Popularizačný článok (sekcia „Pre pacientov") — spracované z DOCX
- * „Obezita a obličky s AI ilustráciami" vrátane 10 AI ilustrácií
+ * Popularizačný článok (sekcia „Pre pacientov“) — spracované z DOCX
+ * „Obezita a obličky s AI ilustráciami“ vrátane 10 AI ilustrácií
  * (img/obob-01..obob-10). Obrázky sú klikateľné (nová karta). PDF verzia je
  * ručne pripravený kurátorovaný súbor (pdf/obezita-a-oblicky.pdf) — slug je
  * v PROTECTED_PDF_SLUGS, takže sa automaticky neprepisuje.
@@ -213,7 +213,7 @@ foreach ($articles as $a) {
             $updated++;
         }
     } catch (\PDOException $e) {
-        $errors[] = 'Chyba pri článku „' . $a['title'] . '": ' . $e->getMessage();
+        $errors[] = 'Chyba pri článku „' . $a['title'] . '“: ' . $e->getMessage();
         error_log('add_obezita_oblicky migration error: ' . $e->getMessage());
     }
 }

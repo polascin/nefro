@@ -29,7 +29,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Nová austrálska štúdia v JAMA Network Open priniesla normatívne dáta: priemerný človek vypúšťa črevné plyny približne päťkrát denne. Kedy ide o bežný fyziologický prejav a kedy treba spozornieť?',
     'content'      => <<<'HTML'
-<p>Nadúvanie a odchod črevných plynov patria medzi bežné telesné prejavy, o ktorých sa v ambulancii často hovorí opatrne, niekedy s rozpakmi. Napriek tomu ide o medicínsky relevantnú tému. Pacienti sa často pýtajú, či majú „príliš veľa plynov", či je ich trávenie v poriadku a kedy už môže ísť o príznak ochorenia.</p>
+<p>Nadúvanie a odchod črevných plynov patria medzi bežné telesné prejavy, o ktorých sa v ambulancii často hovorí opatrne, niekedy s rozpakmi. Napriek tomu ide o medicínsky relevantnú tému. Pacienti sa často pýtajú, či majú „príliš veľa plynov“, či je ich trávenie v poriadku a kedy už môže ísť o príznak ochorenia.</p>
 
 <p>Nová štúdia publikovaná v časopise <em>JAMA Network Open</em> prináša zaujímavé normatívne údaje o tom, ako často ľudia bežne vypúšťajú črevné plyny. Hoci téma môže pôsobiť úsmevne, jej praktický význam je jasný: aby sme vedeli hovoriť o nadmernej plynatosti, musíme najskôr vedieť, čo je ešte normálne.</p>
 
@@ -87,7 +87,7 @@ $articles[] = [
   <li>rodinná záťaž kolorektálnym karcinómom alebo zápalovým ochorením čreva.</li>
 </ul>
 
-<p>V takýchto prípadoch už nejde iba o otázku „normálneho počtu vetrov", ale o potrebu cielene hľadať príčinu ťažkostí.</p>
+<p>V takýchto prípadoch už nejde iba o otázku „normálneho počtu vetrov“, ale o potrebu cielene hľadať príčinu ťažkostí.</p>
 
 <h2>Praktický záver</h2>
 
@@ -97,7 +97,7 @@ $articles[] = [
 
 <hr>
 
-<p><em><strong>Zdroj:</strong> Medscape, „Flatus Status: How Many Farts a Day Is Normal?". <a href="https://www.medscape.com/viewarticle/flatus-status-how-many-farts-day-normal-2026a1000i7w" target="_blank" rel="noopener noreferrer">medscape.com</a>.</em></p>
+<p><em><strong>Zdroj:</strong> Medscape, „Flatus Status: How Many Farts a Day Is Normal?“. <a href="https://www.medscape.com/viewarticle/flatus-status-how-many-farts-day-normal-2026a1000i7w" target="_blank" rel="noopener noreferrer">medscape.com</a>.</em></p>
 HTML,
 ];
 
@@ -136,7 +136,7 @@ foreach ($articles as $a) {
             $skipped++;
         }
     } catch (\PDOException $e) {
-        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '": ' . $e->getMessage();
+        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '“: ' . $e->getMessage();
         error_log('add_article migration error: ' . $e->getMessage());
     }
 }

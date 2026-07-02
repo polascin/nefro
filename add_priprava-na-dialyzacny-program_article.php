@@ -2,7 +2,7 @@
 /**
  * add_priprava-na-dialyzacny-program_article.php
  * ════════════════════════════════════════════════════════════════════════════
- * DRAFT popularizačného článku (sekcia „Pre pacientov" → populars.php) o
+ * DRAFT popularizačného článku (sekcia „Pre pacientov“ → populars.php) o
  * príprave na zaradenie do dialyzačného programu (podpora strediska Medimpax).
  *
  * ⚠ NEPUBLIKOVANÉ AUTOMATICKY. Spustenie tohto skriptu článok ZVEREJNÍ,
@@ -68,7 +68,7 @@ laboratórnych výsledkov a príznakov — nie podľa jediného čísla, ale pod
 <p>Aby dialýza fungovala, treba si vopred pripraviť prístup:</p>
 <ul>
   <li>pri hemodialýze najčastejšie <strong>arteriovenóznu fistulu</strong>, ktorá potrebuje čas,
-      aby „dozrela" — preto sa zakladá s predstihom;</li>
+      aby „dozrela“ — preto sa zakladá s predstihom;</li>
   <li>pri peritoneálnej dialýze <strong>PD katéter</strong> v bruchu.</li>
 </ul>
 <p>Včasné plánovanie prístupu je jedným z najdôležitejších krokov hladkého štartu dialýzy.</p>
@@ -163,7 +163,7 @@ foreach ($articles as $a) {
             error_log('add_priprava_dialyzacny_program pdf gen error: ' . $pe->getMessage());
         }
     } catch (\PDOException $e) {
-        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '": ' . $e->getMessage();
+        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '“: ' . $e->getMessage();
         error_log('add_priprava_dialyzacny_program migration error: ' . $e->getMessage());
     }
 }

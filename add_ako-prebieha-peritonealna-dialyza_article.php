@@ -2,7 +2,7 @@
 /**
  * add_ako-prebieha-peritonealna-dialyza_article.php
  * ════════════════════════════════════════════════════════════════════════════
- * DRAFT popularizačného článku (sekcia „Pre pacientov" → populars.php) o tom,
+ * DRAFT popularizačného článku (sekcia „Pre pacientov“ → populars.php) o tom,
  * ako prebieha peritoneálna dialýza a príprava na ňu (podpora strediska Medimpax).
  *
  * ⚠ NEPUBLIKOVANÉ AUTOMATICKY. Spustenie tohto skriptu článok ZVEREJNÍ,
@@ -48,7 +48,7 @@ pripraviť.</p>
 
 <p>Na čistenie krvi využíva vašu vlastnú <strong>pobrušnicu</strong> (tenkú blanu vystielajúcu
 brušnú dutinu). Cez tenkú hadičku — <strong>PD katéter</strong> — sa do brucha napustí čistý
-dialyzačný roztok. Ten počas niekoľkých hodín „nasáva" odpadové látky a prebytočnú vodu z krvi.
+dialyzačný roztok. Ten počas niekoľkých hodín „nasáva“ odpadové látky a prebytočnú vodu z krvi.
 Potom sa použitý roztok vypustí a nahradí čerstvým. Tomuto cyklu sa hovorí <strong>výmena</strong>.</p>
 
 <h2>CAPD a APD — dve formy</h2>
@@ -155,7 +155,7 @@ foreach ($articles as $a) {
             error_log('add_peritonealna_dialyza pdf gen error: ' . $pe->getMessage());
         }
     } catch (\PDOException $e) {
-        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '": ' . $e->getMessage();
+        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '“: ' . $e->getMessage();
         error_log('add_peritonealna_dialyza migration error: ' . $e->getMessage());
     }
 }

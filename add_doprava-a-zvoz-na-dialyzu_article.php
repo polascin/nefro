@@ -2,7 +2,7 @@
 /**
  * add_doprava-a-zvoz-na-dialyzu_article.php
  * ════════════════════════════════════════════════════════════════════════════
- * DRAFT popularizačného článku (sekcia „Pre pacientov" → populars.php):
+ * DRAFT popularizačného článku (sekcia „Pre pacientov“ → populars.php):
  * doprava a zvoz na dialýzu (podpora strediska Medimpax).
  *
  * Pozn.: kontakt na organizáciu dopravy smeruje na všeobecné číslo strediska
@@ -153,7 +153,7 @@ foreach ($articles as $a) {
             error_log('add_doprava_zvoz pdf gen error: ' . $pe->getMessage());
         }
     } catch (\PDOException $e) {
-        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '": ' . $e->getMessage();
+        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '“: ' . $e->getMessage();
         error_log('add_doprava_zvoz migration error: ' . $e->getMessage());
     }
 }

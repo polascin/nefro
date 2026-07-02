@@ -29,7 +29,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Nové experimentálne práce naznačujú, že mRNA vakcíny aktivujú imunitu širšie, než sa predpokladalo — okrem dendritických buniek sa zapájajú aj svalové bunky a mechanizmy cross-presentation a cross-dressing.',
     'content'      => <<<'HTML'
-<p>Vedci dlhé roky predpokladali, že kľúčom účinku mRNA vakcín je ich vstup do dendritických buniek. Tieto bunky patria medzi hlavné „prezentátory" antigénu a dokážu účinne aktivovať T-lymfocyty. Nové experimentálne práce však naznačujú, že tento mechanizmus je zrejme širší a biologicky pestrejší.</p>
+<p>Vedci dlhé roky predpokladali, že kľúčom účinku mRNA vakcín je ich vstup do dendritických buniek. Tieto bunky patria medzi hlavné „prezentátory“ antigénu a dokážu účinne aktivovať T-lymfocyty. Nové experimentálne práce však naznačujú, že tento mechanizmus je zrejme širší a biologicky pestrejší.</p>
 
 <p>Podľa článku publikovaného na Medscape, ktorý vychádza najmä zo štúdie v časopise <em>Nature Biotechnology</em>, môže mRNA vyvolať imunitnú odpoveď aj vtedy, keď sa jej expresia odohráva v bunkách, ktoré tradične nepovažujeme za imunitné. Významnú úlohu môžu mať napríklad svalové bunky.</p>
 
@@ -61,7 +61,7 @@ $articles[] = [
 
 <h2>Rozšírený pohľad na mRNA technológie</h2>
 
-<p>Výskumy publikované v <em>Nature Biotechnology</em>, <em>Nature</em> a <em>Nature Communications</em> spoločne ukazujú, že spracovanie a prezentácia antigénov pri mRNA vakcínach je zložitejšia, než sa pôvodne predpokladalo. Nejde iba o jednoduchú cestu „mRNA vstúpi do dendritickej bunky a tá aktivuje imunitu".</p>
+<p>Výskumy publikované v <em>Nature Biotechnology</em>, <em>Nature</em> a <em>Nature Communications</em> spoločne ukazujú, že spracovanie a prezentácia antigénov pri mRNA vakcínach je zložitejšia, než sa pôvodne predpokladalo. Nejde iba o jednoduchú cestu „mRNA vstúpi do dendritickej bunky a tá aktivuje imunitu“.</p>
 
 <p>mRNA platforma sa javí ako flexibilnejší biologický nástroj. Dokáže zapojiť rôzne typy buniek a rôzne mechanizmy imunitnej prezentácie. Práve táto variabilita môže byť jedným z dôvodov, prečo má mRNA technológia potenciál nielen vo vakcinológii, ale aj v onkológii, imunoterapii a liečbe genetických ochorení.</p>
 
@@ -69,7 +69,7 @@ $articles[] = [
 
 <hr>
 
-<p><em><strong>Zdroj:</strong> Medscape, „mRNA Works Differently Than We Thought and That's Good". <a href="https://www.medscape.com/viewarticle/mrna-works-differently-than-we-thought-and-s-good-2026a1000gzv" target="_blank" rel="noopener noreferrer">medscape.com</a>.</em></p>
+<p><em><strong>Zdroj:</strong> Medscape, „mRNA Works Differently Than We Thought and That's Good“. <a href="https://www.medscape.com/viewarticle/mrna-works-differently-than-we-thought-and-s-good-2026a1000gzv" target="_blank" rel="noopener noreferrer">medscape.com</a>.</em></p>
 HTML,
 ];
 
@@ -108,7 +108,7 @@ foreach ($articles as $a) {
             $skipped++;
         }
     } catch (\PDOException $e) {
-        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '": ' . $e->getMessage();
+        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '“: ' . $e->getMessage();
         error_log('add_article migration error: ' . $e->getMessage());
     }
 }

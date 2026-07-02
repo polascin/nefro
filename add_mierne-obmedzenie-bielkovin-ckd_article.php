@@ -107,7 +107,7 @@ $articles[] = [
 
 <hr>
 
-<p><em><strong>Zdroj:</strong> Medscape, „Modest Protein Restriction Tied to Better Outcomes in CKD". <a href="https://www.medscape.com/viewarticle/modest-protein-restriction-tied-better-outcomes-ckd-2026a1000i3l" target="_blank" rel="noopener noreferrer">medscape.com</a>.</em></p>
+<p><em><strong>Zdroj:</strong> Medscape, „Modest Protein Restriction Tied to Better Outcomes in CKD“. <a href="https://www.medscape.com/viewarticle/modest-protein-restriction-tied-better-outcomes-ckd-2026a1000i3l" target="_blank" rel="noopener noreferrer">medscape.com</a>.</em></p>
 HTML,
 ];
 
@@ -146,7 +146,7 @@ foreach ($articles as $a) {
             $skipped++;
         }
     } catch (\PDOException $e) {
-        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '": ' . $e->getMessage();
+        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '“: ' . $e->getMessage();
         error_log('add_article migration error: ' . $e->getMessage());
     }
 }

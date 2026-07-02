@@ -34,7 +34,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Štúdia fázy 3 VICTORY (n = 238): vysokodávkovaný IV vitamín C pri ťažkých popáleninách neprináša benefit a zvyšuje 28-dňovú aj nemocničnú mortalitu — s dôležitými nefrologickými signálmi (AKI, vyššia potreba KRT).',
     'content'      => <<<'HTML'
-<p>Vysokodávkovaný intravenózny vitamín C (HD IV vitamín C) sa v intenzívnej medicíne a v popáleninovej starostlivosti skúmal ako potenciálny modulátor zápalovej odpovede a oxidačného stresu. V praxi však existuje aj „tiché" nefrologické riziko: vitamín C sa metabolizuje na oxalát, takže pri zhoršenej renálnej funkcii, rizikovej hydratácii a u kriticky chorých pacientov sa tradične diskutovala možnosť zvýšeného výskytu oxalátovej nefropatie a zhoršenia akútneho poškodenia obličiek (AKI). Doteraz slabé alebo nekonzistentné dôkazy vyústili do veľkej randomizovanej štúdie VICTORY.</p>
+<p>Vysokodávkovaný intravenózny vitamín C (HD IV vitamín C) sa v intenzívnej medicíne a v popáleninovej starostlivosti skúmal ako potenciálny modulátor zápalovej odpovede a oxidačného stresu. V praxi však existuje aj „tiché“ nefrologické riziko: vitamín C sa metabolizuje na oxalát, takže pri zhoršenej renálnej funkcii, rizikovej hydratácii a u kriticky chorých pacientov sa tradične diskutovala možnosť zvýšeného výskytu oxalátovej nefropatie a zhoršenia akútneho poškodenia obličiek (AKI). Doteraz slabé alebo nekonzistentné dôkazy vyústili do veľkej randomizovanej štúdie VICTORY.</p>
 
 <h2>Kto sú autori zdrojovej štúdie?</h2>
 
@@ -116,7 +116,7 @@ $articles[] = [
   <li><strong>refraktérna hypoglykémia</strong>: nebola hlásená.</li>
 </ul>
 
-<p>Štúdia však zároveň uvádza, že <strong>nebola dimenzovaná na zachytenie zriedkavých nežiaducich udalostí</strong> (riziká spojené s oxalátovou nefropatiou sa typicky považujú za „nízkofrekvenčné, ale s vysokou závažnosťou" — <em>low frequency, high concern</em>), takže „negatívny" záchyt v rámci štúdie automaticky neznamená absenciu rizika.</p>
+<p>Štúdia však zároveň uvádza, že <strong>nebola dimenzovaná na zachytenie zriedkavých nežiaducich udalostí</strong> (riziká spojené s oxalátovou nefropatiou sa typicky považujú za „nízkofrekvenčné, ale s vysokou závažnosťou“ — <em>low frequency, high concern</em>), takže „negatívny“ záchyt v rámci štúdie automaticky neznamená absenciu rizika.</p>
 
 <h2>Klinické implikácie pre nefrológiu v popáleninovej starostlivosti</h2>
 
@@ -133,7 +133,7 @@ $articles[] = [
       <li>a zvážiť individuálne riziko (najmä výrazne zníženú renálnu funkciu, rizikovú hydratáciu a faktory podporujúce oxalátovú záťaž).</li>
     </ul>
   </li>
-  <li><strong>Rizikové signály komunikovať</strong> multidisciplinárne (intenzivista, popáleninový tím, nefrológ), pretože nejde o „jemnú" metabolickú diskusiu, ale o štúdiou podložený signál vyššej mortality v aktívnom ramene.</li>
+  <li><strong>Rizikové signály komunikovať</strong> multidisciplinárne (intenzivista, popáleninový tím, nefrológ), pretože nejde o „jemnú“ metabolickú diskusiu, ale o štúdiou podložený signál vyššej mortality v aktívnom ramene.</li>
 </ol>
 
 <h2>Zhrnutie v jednej vete</h2>
@@ -142,7 +142,7 @@ $articles[] = [
 
 <hr>
 
-<p><em><strong>Zdroj:</strong> Stoppe C, Hill A, Cancio LC, et al. High-Dose Intravenous Vitamin C and Mortality and Organ Dysfunction in Severe Burn Injury: The VICTORY Randomized Clinical Trial. <em>JAMA</em> (2026). <a href="https://doi.org/10.1001/jama.2026.10616" target="_blank" rel="noopener noreferrer">doi:10.1001/jama.2026.10616</a> (ClinicalTrials.gov NCT04138394). Spracované aj podľa súhrnu na portáli ReachMD „High-Dose Intravenous Vitamin C Fails To Improve Burn Outcomes": <a href="https://reachmd.com/news/high-dose-intravenous-vitamin-c-fails-to-improve-burn-outcomes/2487460/" target="_blank" rel="noopener noreferrer">reachmd.com</a>.</em></p>
+<p><em><strong>Zdroj:</strong> Stoppe C, Hill A, Cancio LC, et al. High-Dose Intravenous Vitamin C and Mortality and Organ Dysfunction in Severe Burn Injury: The VICTORY Randomized Clinical Trial. <em>JAMA</em> (2026). <a href="https://doi.org/10.1001/jama.2026.10616" target="_blank" rel="noopener noreferrer">doi:10.1001/jama.2026.10616</a> (ClinicalTrials.gov NCT04138394). Spracované aj podľa súhrnu na portáli ReachMD „High-Dose Intravenous Vitamin C Fails To Improve Burn Outcomes“: <a href="https://reachmd.com/news/high-dose-intravenous-vitamin-c-fails-to-improve-burn-outcomes/2487460/" target="_blank" rel="noopener noreferrer">reachmd.com</a>.</em></p>
 HTML,
 ];
 
@@ -208,7 +208,7 @@ foreach ($articles as $a) {
             error_log('add_article pdf gen error: ' . $pe->getMessage());
         }
     } catch (\PDOException $e) {
-        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '": ' . $e->getMessage();
+        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '“: ' . $e->getMessage();
         error_log('add_article migration error: ' . $e->getMessage());
     }
 }

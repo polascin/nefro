@@ -118,7 +118,7 @@ $articles[] = [
 
 <hr>
 
-<p><em><strong>Zdroj:</strong> Medscape, „Genetic Testing for Kidney Disease Often Not Discussed". <a href="https://www.medscape.com/viewarticle/genetic-testing-kidney-disease-often-not-discussed-2026a1000hf6" target="_blank" rel="noopener noreferrer">medscape.com</a>.</em></p>
+<p><em><strong>Zdroj:</strong> Medscape, „Genetic Testing for Kidney Disease Often Not Discussed“. <a href="https://www.medscape.com/viewarticle/genetic-testing-kidney-disease-often-not-discussed-2026a1000hf6" target="_blank" rel="noopener noreferrer">medscape.com</a>.</em></p>
 HTML,
 ];
 
@@ -157,7 +157,7 @@ foreach ($articles as $a) {
             $skipped++;
         }
     } catch (\PDOException $e) {
-        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '": ' . $e->getMessage();
+        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '“: ' . $e->getMessage();
         error_log('add_article migration error: ' . $e->getMessage());
     }
 }

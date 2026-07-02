@@ -32,7 +32,7 @@ $articles[] = [
 
 <p>RAASi (ACEi/ARB) a MRA (mineralokortikoidový receptorový antagonista) patria medzi základné liečivá v manažmente pacientov so srdcovým zlyhávaním a srdcovo-obličkovým prepojením. V reálnej praxi však často narážame na bariéru, ktorou je hyperkaliémia. Namiesto automatického znižovania dávok alebo vysadenia liečby je cieľom moderného prístupu: udržať pacienta na účinnej RAASi/MRA schéme, pričom hyperkaliémiu riešime aktívne, systematicky a predvídateľne.</p>
 
-<h2>Prečo RAASi/MRA „padá" kvôli draslíku</h2>
+<h2>Prečo RAASi/MRA „padá“ kvôli draslíku</h2>
 
 <p>Najčastejšie dôvody, prečo sa RAASi/MRA v praxi nedosahuje v cielenej dávke alebo sa prerušuje:</p>
 
@@ -41,7 +41,7 @@ $articles[] = [
 <li>zhoršená funkcia obličiek, dehydratácia alebo interkurentné zhoršenie,</li>
 <li>liekové interakcie zvyšujúce draslík (napr. kombinácie s inými látkami ovplyvňujúcimi renín-angiotenzín-aldosterónovú os),</li>
 <li>nedostatočná preventívna stratégia pre normalizáciu K<sup>+</sup> pred titráciou,</li>
-<li>nedostatočné alebo príliš „neskoré" laboratórne monitorovanie po úprave terapie.</li>
+<li>nedostatočné alebo príliš „neskoré“ laboratórne monitorovanie po úprave terapie.</li>
 </ul>
 
 <p><strong>Pointa:</strong> hyperkaliémia nie je dôvod na rezignáciu na RAASi/MRA, ale signál na aktívnu optimalizáciu stratégie manažmentu draslíka.</p>
@@ -55,7 +55,7 @@ $articles[] = [
 <li><strong>Draslík:</strong> znížiť riziko a liečiť hyperkaliémiu tak, aby bolo možné udržať a prípadne zvyšovať dávky RAASi/MRA.</li>
 </ol>
 
-<p>Tento „dvojkoľajný" prístup znižuje počet situácií, keď pacient skončí na suboptimálnej dávke len preto, že K<sup>+</sup> sa zvyšuje.</p>
+<p>Tento „dvojkoľajný“ prístup znižuje počet situácií, keď pacient skončí na suboptimálnej dávke len preto, že K<sup>+</sup> sa zvyšuje.</p>
 
 <h2>Praktický postup na ambulancii (odporúčanie ako pracovný rámec)</h2>
 
@@ -66,7 +66,7 @@ $articles[] = [
 <ul>
 <li>aktuálne a trendové hodnoty K<sup>+</sup>,</li>
 <li>odhad GFR a dynamiku kreatinínu,</li>
-<li>hydratáciu, diuretický režim a prípadné „skryté" zhoršenie stavu,</li>
+<li>hydratáciu, diuretický režim a prípadné „skryté“ zhoršenie stavu,</li>
 <li>aktuálne lieky, ktoré môžu draslík zvyšovať,</li>
 <li>ďalšie faktory: metabolická acidóza, diétne excesy draslíka (aspoň orientačne), pridružené ochorenia.</li>
 </ul>
@@ -85,7 +85,7 @@ $articles[] = [
 
 <ul>
 <li><strong>Liečebné úpravy podporujúce kaliurézu:</strong> optimalizuj diuretiká tam, kde dávajú klinický zmysel (najmä u pacientov so sklonom k retencii tekutín).</li>
-<li><strong>Preskúmaj diétu draslíka:</strong> nie ako jednorazové „zakázanie", ale ako praktické obmedzenie vysoko draslíkových zdrojov a edukácia, aby pacient vedel, čo reálne riešiť.</li>
+<li><strong>Preskúmaj diétu draslíka:</strong> nie ako jednorazové „zakázanie“, ale ako praktické obmedzenie vysoko draslíkových zdrojov a edukácia, aby pacient vedel, čo reálne riešiť.</li>
 <li><strong>Metabolická acidóza:</strong> ak je prítomná, jej korekcia môže zlepšiť acidobázickú situáciu a nepriamo ovplyvniť draslík (riešiť v súlade s lokálnou praxou a stavom pacienta).</li>
 <li><strong>Novšie stratégie pre chronickú kontrolu draslíka:</strong> v situáciách, kde sa bez toho RAASi/MRA nedarí udržať v požadovaných dávkach, sa v medzinárodných odporúčaniach spomínajú aj väzbové liečivá na draslík ako nástroj, ktorý umožní pokračovať v RAASi/MRA. To je obzvlášť relevantné, ak ide o opakované alebo perzistujúce zvyšovanie K<sup>+</sup>.</li>
 </ul>
@@ -109,18 +109,18 @@ $articles[] = [
 <ol>
 <li>Reagovanie až v momente výrazného vzostupu draslíka.</li>
 <li>Úplné vysadenie RAASi/MRA bez paralelného plánu, ako draslík zvládnuť.</li>
-<li>Nezohľadnenie liekových interakcií a „neviditeľnej" dynamiky renálnej funkcie.</li>
+<li>Nezohľadnenie liekových interakcií a „neviditeľnej“ dynamiky renálnej funkcie.</li>
 <li>Slabá edukácia pacienta o praktických dietetických a režimových veciach.</li>
 <li>Nedostatočné monitorovanie po každej úprave dávky.</li>
 </ol>
 
 <h2>Záver</h2>
 
-<p>Hyperkaliémia je v cardiorenálnom manažmente čestou prekážkou, ale nemá byť dôvodom na trvalé podliečenie pacienta RAASi/MRA terapiou. Praktický cieľ je udržať a optimalizovať RAASi/MRA tak, že súčasne proaktívne riešime príčiny a máme si pripravený plán na kontrolu draslíka. V článkoch a vzdelávacích programoch tejto témy sa opakovane zdôrazňuje, že „udržanie liečby" je často uskutočniteľné práve vďaka včasnej stratifikácii rizika a cielenej intervencii pri hyperkaliémii.</p>
+<p>Hyperkaliémia je v cardiorenálnom manažmente čestou prekážkou, ale nemá byť dôvodom na trvalé podliečenie pacienta RAASi/MRA terapiou. Praktický cieľ je udržať a optimalizovať RAASi/MRA tak, že súčasne proaktívne riešime príčiny a máme si pripravený plán na kontrolu draslíka. V článkoch a vzdelávacích programoch tejto témy sa opakovane zdôrazňuje, že „udržanie liečby“ je často uskutočniteľné práve vďaka včasnej stratifikácii rizika a cielenej intervencii pri hyperkaliémii.</p>
 
 <hr>
 
-<p><em><strong>Zdroj:</strong> Global Kidney Academy, mikrolearning kurz „Optimizing RAASi/MRA therapy in patients with heart failure, CKD and hyperkalemia: a microlearning curriculum approach". <a href="https://www.globalkidneyacademy.org" target="_blank" rel="noopener noreferrer">Navštíviť zdroj</a>.</em></p>
+<p><em><strong>Zdroj:</strong> Global Kidney Academy, mikrolearning kurz „Optimizing RAASi/MRA therapy in patients with heart failure, CKD and hyperkalemia: a microlearning curriculum approach“. <a href="https://www.globalkidneyacademy.org" target="_blank" rel="noopener noreferrer">Navštíviť zdroj</a>.</em></p>
 HTML,
 ];
 
@@ -159,7 +159,7 @@ foreach ($articles as $a) {
             $skipped++;
         }
     } catch (\PDOException $e) {
-        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '": ' . $e->getMessage();
+        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '“: ' . $e->getMessage();
     }
 }
 

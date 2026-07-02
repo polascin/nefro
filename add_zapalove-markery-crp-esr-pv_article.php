@@ -35,11 +35,11 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Praktické čítanie zápalových markerov v ambulancii: CRP (rýchly, ale nešpecifický), ESR (pomalšia, ovplyvnená „fyzikou krvi") a plazmatická viskozita (PV). Všetky sú citlivé, no nízko špecifické — výsledok treba interpretovať v kontexte, nie izolovane.',
+    'excerpt'      => 'Praktické čítanie zápalových markerov v ambulancii: CRP (rýchly, ale nešpecifický), ESR (pomalšia, ovplyvnená „fyzikou krvi“) a plazmatická viskozita (PV). Všetky sú citlivé, no nízko špecifické — výsledok treba interpretovať v kontexte, nie izolovane.',
     'content'      => <<<'HTML'
 <p>Zápalové markery sa v bežnej ambulantnej praxi používajú často, no niekedy sa s nimi robí jedna
-z dvoch chýb: buď sa berú ako „diagnóza sama o sebe", alebo sa interpretujú bez kontextu klinického
-obrazu. Medscape „Primary Care Hack" sa zameriava najmä na praktické čítanie výsledkov <strong>CRP</strong>,
+z dvoch chýb: buď sa berú ako „diagnóza sama o sebe“, alebo sa interpretujú bez kontextu klinického
+obrazu. Medscape „Primary Care Hack“ sa zameriava najmä na praktické čítanie výsledkov <strong>CRP</strong>,
 <strong>ESR</strong> a <strong>plazmatickej viskozity (PV)</strong> ako markerov zápalu a infekcie.</p>
 
 <h2>CRP (C-reaktívny proteín): rýchly indikátor, ale málo špecifický</h2>
@@ -49,7 +49,7 @@ infekcii, zápale alebo aj pri malignite.</p>
 <p>Praktické prahy a interpretácia:</p>
 <ul>
   <li><strong>&lt; 5 mg/l</strong> je bežná referenčná hodnota u dospelých.</li>
-  <li><strong>CRP &gt; 10 mg/l</strong> (t. j. <strong>&gt; 1,0 mg/dl</strong>) „takmer vždy" indikuje
+  <li><strong>CRP &gt; 10 mg/l</strong> (t. j. <strong>&gt; 1,0 mg/dl</strong>) „takmer vždy“ indikuje
       prítomnosť akútneho ochorenia, typicky infekcie alebo iného zápalového procesu.</li>
   <li>CRP má kratší biologický polčas (uvádza sa približne <strong>19 hodín</strong>), takže ak sa
       spúšťač vyrieši, hodnoty sa normalizujú <strong>v priebehu dní</strong>.</li>
@@ -59,19 +59,19 @@ liečbu</strong>, napríklad pri respiračnej alebo urologickej sepse.</p>
 <p>Poznámka k interpretácii:</p>
 <ul>
   <li>CRP je síce užitočné na detekciu bakteriálnej infekcie, no zostáva <strong>nešpecifické</strong>.</li>
-  <li>„Mierne" zvýšenia CRP sa môžu objaviť aj pri stavoch ako <strong>obezita, gravidita, depresia,
+  <li>„Mierne“ zvýšenia CRP sa môžu objaviť aj pri stavoch ako <strong>obezita, gravidita, depresia,
       diabetes a kardiovaskulárne ochorenie</strong>.</li>
   <li>Pri neistote sa odporúča interpretovať CRP spolu s <strong>feritínom</strong>, pretože feritín je
-      tiež reaktant akútnej fázy. Ak sú zvýšené oba, ide skôr o zápal než o čisté „preťaženie železom".</li>
+      tiež reaktant akútnej fázy. Ak sú zvýšené oba, ide skôr o zápal než o čisté „preťaženie železom“.</li>
 </ul>
 
-<h2>ESR (sedimentácia erytrocytov): pomalšia, ovplyvnená „fyzikou krvi"</h2>
+<h2>ESR (sedimentácia erytrocytov): pomalšia, ovplyvnená „fyzikou krvi“</h2>
 <p>ESR meria rýchlosť poklesu erytrocytov v štandardizovanej skúmavke. Závisí od toho, do akej miery
 erytrocyty tvoria tzv. rouleaux (zhluky), čo urýchľujú proteíny akútnej fázy pri infekcii, zápale alebo
 malignite.</p>
 <p>Kľúčové praktické body z Medscape:</p>
 <ul>
-  <li>ESR nemá univerzálne štandardné „normy": normálne hodnoty sa menia s <strong>vekom a pohlavím</strong>
+  <li>ESR nemá univerzálne štandardné „normy“: normálne hodnoty sa menia s <strong>vekom a pohlavím</strong>
       a výsledok závisí od metódy v konkrétnom laboratóriu.</li>
   <li>Ako orientačné pravidlo pre hornú hranicu normy (ULN) sa uvádza:
     <ul>
@@ -84,7 +84,7 @@ malignite.</p>
 </ul>
 <p>Dynamika: ESR typicky stúpa v priebehu <strong>24 až 48 hodín</strong> a normalizuje sa
 <strong>pomaly</strong>, často až <strong>v priebehu týždňov</strong>.</p>
-<p>Špecifickosť a „kedy myslieť na významnú príčinu":</p>
+<p>Špecifickosť a „kedy myslieť na významnú príčinu“:</p>
 <ul>
   <li>ESR je menej citlivé aj menej špecifické než CRP.</li>
   <li>Pri vysokej ESR sa spomína najmä súvis s diagnózami ako <strong>malignita</strong> (napr.
@@ -96,7 +96,7 @@ alebo polycytémia), tehotenstvo, životný štýl (alkohol, fajčenie, pravidel
 oneskorenie pri analýze vzorky.</p>
 
 <h2>PV (plazmatická viskozita): podobná ESR, ale technicky náročnejšia</h2>
-<p>PV hodnotí „hrúbku" plazmy, ktorá súvisí hlavne s koncentráciou plazmatických proteínov (najmä
+<p>PV hodnotí „hrúbku“ plazmy, ktorá súvisí hlavne s koncentráciou plazmatických proteínov (najmä
 fibrinogénu a niektorých imunoglobulínov). Preto môže stúpať pri infekcii, zápale a niektorých
 malignitách.</p>
 <p>Medscape uvádza:</p>
@@ -108,7 +108,7 @@ malignitách.</p>
 </ul>
 <p>Dôležité praktické vlastnosti:</p>
 <ul>
-  <li>PV vo všeobecnosti „rastie" podobne ako ESR,</li>
+  <li>PV vo všeobecnosti „rastie“ podobne ako ESR,</li>
   <li>je však uvedené, že je <strong>spoľahlivejším markerom</strong> než ESR,</li>
   <li>zároveň je technicky náročnejšia a nákladnejšia, preto ju veľa laboratórií rutinne neponúka.</li>
 </ul>
@@ -188,7 +188,7 @@ foreach ($articles as $a) {
             error_log('add_zapalove_markery pdf gen error: ' . $pe->getMessage());
         }
     } catch (\PDOException $e) {
-        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '": ' . $e->getMessage();
+        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '“: ' . $e->getMessage();
         error_log('add_zapalove_markery migration error: ' . $e->getMessage());
     }
 }

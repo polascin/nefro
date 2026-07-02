@@ -39,7 +39,7 @@ $articles[] = [
     'content'      => <<<'HTML'
 <p>Pacienti s diabetes mellitus 2. typu (DM2) a chronickou chorobou obličiek (CKD) tvoria skupinu
 s vysokým rizikom kardiovaskulárnych aj renálnych príhod. V praxi je však diagnostika a riziková
-stratifikácia často „fragmentovaná": nefrológ rieši obličky, kardiológ srdce a metabolické faktory
+stratifikácia často „fragmentovaná“: nefrológ rieši obličky, kardiológ srdce a metabolické faktory
 idú mimo hlavného rozhodovacieho rámca.</p>
 
 <p>V tomto kontexte dáva zmysel koncept CKM syndrómu (cardiovascular-kidney-metabolic), ktorý spája
@@ -89,7 +89,7 @@ v prostredí klinického skúšania.</p>
   <li><strong>kardiovaskulárny kompozit</strong> aj pri rôznych CKM štádiách (P pre interakciu <strong>0,86</strong>)</li>
   <li><strong>renálny kompozit</strong> naprieč CKM štádiami (P pre interakciu <strong>0,65</strong>)</li>
 </ul>
-<p>Čiže prínos bol „robustný" naprieč východiskovým rizikovým profilom podľa CKM.</p>
+<p>Čiže prínos bol „robustný“ naprieč východiskovým rizikovým profilom podľa CKM.</p>
 
 <h3>3) Okrem prínosu v príhodách: aj priaznivejšia dynamika CKM</h3>
 <p>V skupine na finerenóne sa pozorovala priaznivejšia zmena CKM stavu v čase:</p>
@@ -106,7 +106,7 @@ diferencovaný nárast rizika <strong>hyperkaliémie podľa štádia</strong>.</
 
 <h2>Prečo je to zaujímavé pre nefrológiu</h2>
 <p>Z nefrologického pohľadu je prakticky dôležité, že tento výsledok podporuje myšlienku, že finerenón
-nie je „len renálny" liek alebo „len kardiálny" liek, ale pravdepodobne zasahuje spoločné dráhy, ktoré
+nie je „len renálny“ liek alebo „len kardiálny“ liek, ale pravdepodobne zasahuje spoločné dráhy, ktoré
 vedú k renálnym aj kardiovaskulárnym príhodám. CKM rámec navyše naznačuje, že pacient môže mať komplexné
 riziko aj bez toho, aby bolo v klinickej dokumentácii explicitne pomenované ako jedna jednotka.</p>
 <p>Napriek tomu treba mať na pamäti, že ide o post-hoc analýzu a nie primárny cieľový ukazovateľ štúdie pre CKM
@@ -119,7 +119,7 @@ riziko aj bez toho, aby bolo v klinickej dokumentácii explicitne pomenované ak
       syndróm</strong>, takže niektoré podskupiny majú obmedzené počty a nie všetky potrebné premenné
       boli systematicky zbierané pre úplnú klasifikáciu CKM štádií.</li>
   <li>Post-hoc charakter znižuje istotu kauzality a robí z výsledkov skôr potvrdenie konzistencie než
-      „definitívny dôkaz" pre CKM rámec ako liečebný cieľ.</li>
+      „definitívny dôkaz“ pre CKM rámec ako liečebný cieľ.</li>
 </ul>
 
 <h2>Záver</h2>
@@ -201,7 +201,7 @@ foreach ($articles as $a) {
             error_log('add_finerenon_ckm pdf gen error: ' . $pe->getMessage());
         }
     } catch (\PDOException $e) {
-        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '": ' . $e->getMessage();
+        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '“: ' . $e->getMessage();
         error_log('add_finerenon_ckm migration error: ' . $e->getMessage());
     }
 }

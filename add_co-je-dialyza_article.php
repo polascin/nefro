@@ -2,7 +2,7 @@
 /**
  * add_co-je-dialyza_article.php
  * ════════════════════════════════════════════════════════════════════════════
- * DRAFT popularizačného článku (sekcia „Pre pacientov" → populars.php):
+ * DRAFT popularizačného článku (sekcia „Pre pacientov“ → populars.php):
  * základné vysvetlenie, čo je dialýza (podpora strediska Medimpax).
  *
  * ⚠ NEPUBLIKOVANÉ AUTOMATICKY. Spustenie tohto skriptu článok ZVEREJNÍ,
@@ -40,7 +40,7 @@ $articles[] = [
   <img src="img/co-je-dialyza.webp" alt="Infografika: čo je dialýza — zdravá funkcia obličiek, ich zlyhanie, hemodialýza v centre a peritoneálna dialýza doma" loading="lazy" decoding="async">
 </figure>
 
-<p>Slovo „dialýza" znie pre mnohých ľudí znepokojivo. V skutočnosti ide o liečbu, ktorá za
+<p>Slovo „dialýza“ znie pre mnohých ľudí znepokojivo. V skutočnosti ide o liečbu, ktorá za
 zlyhávajúce obličky preberá ich najdôležitejšiu úlohu — čistiť krv. V tomto článku jednoducho
 vysvetlíme, čo dialýza je a kedy je potrebná.</p>
 
@@ -141,7 +141,7 @@ foreach ($articles as $a) {
             error_log('add_co_je_dialyza pdf gen error: ' . $pe->getMessage());
         }
     } catch (\PDOException $e) {
-        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '": ' . $e->getMessage();
+        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '“: ' . $e->getMessage();
         error_log('add_co_je_dialyza migration error: ' . $e->getMessage());
     }
 }

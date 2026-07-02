@@ -28,7 +28,7 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d'),
     'is_top'       => 0,
-    'excerpt'      => 'Zrozumiteľná komunikácia nie je to isté ako infantilizácia. Článok na Medscape upozorňuje, že prehnane zjednodušený alebo povýšenecký jazyk vrátane „elderspeak" môže pacienta podceniť a narušiť dôveru.',
+    'excerpt'      => 'Zrozumiteľná komunikácia nie je to isté ako infantilizácia. Článok na Medscape upozorňuje, že prehnane zjednodušený alebo povýšenecký jazyk vrátane „elderspeak“ môže pacienta podceniť a narušiť dôveru.',
     'content'      => <<<'HTML'
 <p>Komunikácia medzi lekárom a pacientom patrí medzi najdôležitejšie časti medicíny. Správne vysvetlenie diagnózy, liečby a ďalšieho postupu môže rozhodnúť o tom, či pacient porozumie svojmu stavu, bude spolupracovať a bude sa cítiť bezpečne. Zároveň však platí, že komunikácia nie je iba o jednoduchosti. Je aj o dôstojnosti, rešpekte a citlivom odhade konkrétneho človeka.</p>
 
@@ -38,7 +38,7 @@ $articles[] = [
 
 <p>Medicína dlhodobo učí lekárov, aby sa vyhýbali odbornému žargónu. Tento prístup má dobrý dôvod. Pacient, ktorý nerozumie tomu, čo mu lekár hovorí, nemusí správne pochopiť diagnózu, odporúčania ani prepúšťacie pokyny. To môže mať priamy dopad na bezpečnosť liečby.</p>
 
-<p>Odborné termíny môžu byť navyše zavádzajúce. Slovo „chronický" znamená v medicíne dlhodobý alebo pretrvávajúci, kým pacient ho môže chápať ako „ťažký" alebo „vážny". Preto má zmysel hovoriť pomaly, jasne, overovať porozumenie a nepoužívať odborný jazyk tam, kde nie je potrebný.</p>
+<p>Odborné termíny môžu byť navyše zavádzajúce. Slovo „chronický“ znamená v medicíne dlhodobý alebo pretrvávajúci, kým pacient ho môže chápať ako „ťažký“ alebo „vážny“. Preto má zmysel hovoriť pomaly, jasne, overovať porozumenie a nepoužívať odborný jazyk tam, kde nie je potrebný.</p>
 
 <p>Problém vzniká vtedy, keď sa z rozumného odporúčania stane nemenné pravidlo. Nie každý pacient potrebuje rovnaké vysvetlenie. Nie každý pacient chce rovnakú mieru detailu. A nie každý pacient vníma extrémne zjednodušenie ako pomoc.</p>
 
@@ -46,23 +46,23 @@ $articles[] = [
 
 <p>Dôležité je rozlišovať medzi zdravotnou gramotnosťou a inteligenciou. Človek môže byť vysoko vzdelaný, analytický a schopný chápať zložité súvislosti, ale nemusí poznať medicínsku terminológiu.</p>
 
-<p>Ak lekár povie pacientovi, že má „parestézie", pacient nemusí vedieť, čo tento pojem znamená. Ak však povie, že ide o „mravčenie alebo brnenie súvisiace s nervami", informácia je zrozumiteľná bez toho, aby bola detinská. To je presne rozdiel medzi jasným vysvetlením a zbytočným zjednodušovaním.</p>
+<p>Ak lekár povie pacientovi, že má „parestézie“, pacient nemusí vedieť, čo tento pojem znamená. Ak však povie, že ide o „mravčenie alebo brnenie súvisiace s nervami“, informácia je zrozumiteľná bez toho, aby bola detinská. To je presne rozdiel medzi jasným vysvetlením a zbytočným zjednodušovaním.</p>
 
 <p>Zrozumiteľnosť neznamená infantilizáciu. Pacientovi možno vysvetliť aj náročnú diagnózu dospelým, rešpektujúcim jazykom.</p>
 
 <h2>Keď sa pacient cíti podceňovaný</h2>
 
-<p>Autor článku upozorňuje, že na internetových fórach a v komentároch možno nájsť veľa skúseností vzdelaných, artikulovaných ľudí, ktorí opisujú, že s nimi zdravotníci hovorili ako s malými deťmi. Ako príklad uvádza situáciu, v ktorej lekár vysvetľoval chemoterapiu ako liečbu „nezbedných buniek".</p>
+<p>Autor článku upozorňuje, že na internetových fórach a v komentároch možno nájsť veľa skúseností vzdelaných, artikulovaných ľudí, ktorí opisujú, že s nimi zdravotníci hovorili ako s malými deťmi. Ako príklad uvádza situáciu, v ktorej lekár vysvetľoval chemoterapiu ako liečbu „nezbedných buniek“.</p>
 
 <p>Takéto vyjadrenie môže byť myslené dobre, ale u dospelého pacienta môže pôsobiť ponižujúco. Pacient nemusí odísť z ambulancie s pocitom bezpečia, ale s pocitom, že jeho schopnosť chápať bola podcenená.</p>
 
 <p>A to je dôležitý bod. Komunikačný štýl lekára neovplyvňuje len porozumenie informáciám. Ovplyvňuje aj dôveru, ochotu pýtať sa, spoluprácu a celkový vzťah pacienta k zdravotníckemu systému.</p>
 
-<h2>Problém „jednoduchosti za každú cenu"</h2>
+<h2>Problém „jednoduchosti za každú cenu“</h2>
 
 <p>V posledných rokoch sa v medicíne silno zdôrazňuje potreba humanizovať zdravotnú starostlivosť. Často sa predpokladá, že cestou k tomu je jednoduchý jazyk. V zásade je to správne. Medicína nesmie byť neprístupná, odmeraná a uzavretá za odbornými pojmami.</p>
 
-<p>Lenže aj dobrý princíp sa dá prehnať. Ak sa každý odborný výraz považuje za chybu a ak sa lekár bojí použiť bežné slová s mierne odborným významom, komunikácia sa môže stať neprirodzenou. Autor spomína, že počas štúdia medicíny dostával spätnú väzbu, podľa ktorej sa mal vyhýbať aj slovám ako „vyžarovať" pri opise bolesti. Otázkou je, či takéto slovo naozaj väčšinu pacientov mätie.</p>
+<p>Lenže aj dobrý princíp sa dá prehnať. Ak sa každý odborný výraz považuje za chybu a ak sa lekár bojí použiť bežné slová s mierne odborným významom, komunikácia sa môže stať neprirodzenou. Autor spomína, že počas štúdia medicíny dostával spätnú väzbu, podľa ktorej sa mal vyhýbať aj slovám ako „vyžarovať“ pri opise bolesti. Otázkou je, či takéto slovo naozaj väčšinu pacientov mätie.</p>
 
 <p>Cieľom nemá byť sterilný jazyk zbavený každého odborného odtieňa. Cieľom má byť porozumenie.</p>
 
@@ -70,7 +70,7 @@ $articles[] = [
 
 <p>Osobitnou formou nevhodnej komunikácie je takzvaný <strong>elderspeak</strong>. Ide o spôsob hovorenia so staršími ľuďmi, ktorý pripomína detskú reč alebo neprimerané zjednodušovanie.</p>
 
-<p>Môže sa prejaviť používaním zdrobnenín, oslovení ako „zlatíčko" alebo „miláčik", zvýšenou hlasitosťou bez dôvodu, príliš krátkymi vetami alebo používaním plurálu tam, kde nie je namieste. Typický príklad je otázka: „Už sme pripravení ísť na vyšetrenie?"</p>
+<p>Môže sa prejaviť používaním zdrobnenín, oslovení ako „zlatíčko“ alebo „miláčik“, zvýšenou hlasitosťou bez dôvodu, príliš krátkymi vetami alebo používaním plurálu tam, kde nie je namieste. Typický príklad je otázka: „Už sme pripravení ísť na vyšetrenie?“</p>
 
 <p>Takáto reč býva často myslená láskavo. Z pohľadu pacienta však môže pôsobiť falošne, povýšenecky alebo ponižujúco. Štúdie dokonca ukazujú, že elderspeak môže zvyšovať odpor voči starostlivosti a zhoršovať spoluprácu s liečbou.</p>
 
@@ -78,7 +78,7 @@ $articles[] = [
 
 <p>Najlepší lekári podľa autora nehovoria so všetkými pacientmi rovnako. Sledujú reakcie pacienta, jeho otázky, slovník, neistotu, mieru záujmu a podľa toho upravujú spôsob vysvetľovania.</p>
 
-<p>Niekedy môže byť najlepšou otázkou hneď na začiatku: „Čo by ste dnes chceli vedieť?" Alebo: „Chcete stručné vysvetlenie, alebo podrobnejšie prejsť možnosti liečby?" Takýto prístup rešpektuje pacienta ako dospelého partnera.</p>
+<p>Niekedy môže byť najlepšou otázkou hneď na začiatku: „Čo by ste dnes chceli vedieť?“ Alebo: „Chcete stručné vysvetlenie, alebo podrobnejšie prejsť možnosti liečby?“ Takýto prístup rešpektuje pacienta ako dospelého partnera.</p>
 
 <p>Pacient nemusí poznať medicínu. To však neznamená, že je neschopný chápať súvislosti. Úlohou lekára je preložiť odbornú informáciu do jazyka, ktorému pacient rozumie, nie znížiť úroveň rozhovoru na karikatúru jednoduchosti.</p>
 
@@ -92,7 +92,7 @@ $articles[] = [
 
 <hr>
 
-<p><em><strong>Zdroj:</strong> Medscape, „Patronising Doctor Culture Is a Problem". <a href="https://www.medscape.com/viewarticle/patronising-doctor-culture-problem-2026a1000gpm" target="_blank" rel="noopener noreferrer">medscape.com</a>.</em></p>
+<p><em><strong>Zdroj:</strong> Medscape, „Patronising Doctor Culture Is a Problem“. <a href="https://www.medscape.com/viewarticle/patronising-doctor-culture-problem-2026a1000gpm" target="_blank" rel="noopener noreferrer">medscape.com</a>.</em></p>
 HTML,
 ];
 
@@ -131,7 +131,7 @@ foreach ($articles as $a) {
             $skipped++;
         }
     } catch (\PDOException $e) {
-        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '": ' . $e->getMessage();
+        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '“: ' . $e->getMessage();
         error_log('add_article migration error: ' . $e->getMessage());
     }
 }

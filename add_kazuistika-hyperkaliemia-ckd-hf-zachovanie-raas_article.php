@@ -24,11 +24,11 @@ $articles[] = [
     'content'      => <<<'HTML'
 <p>V praxi narážame na rovnaký problém znova a znova: pacient má chronické obličkové ochorenie a zároveň srdcové zlyhávanie, je kandidát na liečbu založenú na RAAS inhibícii (ACEi/ARB) a často aj MRA (napr. spironolaktón). Lenže. Hyperkaliémia naháňa strach, klinici liečbu obmedzujú alebo prerušujú a tým pacient prichádza o liečbu, ktorá zlepšuje prognózu.</p>
 
-<p>Tento článok vychádza zo vzdelávacej aktivity „Case-Based Approach: Managing Hyperkalemia in Patients With CKD and Heart Failure" a prekladá jej hlavné myšlienky do praktického, kazuistického rámca.<sup><a href="https://reachmd.com/programs/cme/case-based-approach-managing-hyperkalemia-in-patients-with-ckd-and-heart-failure/37617/" target="_blank" rel="noopener noreferrer">[1]</a></sup></p>
+<p>Tento článok vychádza zo vzdelávacej aktivity „Case-Based Approach: Managing Hyperkalemia in Patients With CKD and Heart Failure“ a prekladá jej hlavné myšlienky do praktického, kazuistického rámca.<sup><a href="https://reachmd.com/programs/cme/case-based-approach-managing-hyperkalemia-in-patients-with-ckd-and-heart-failure/37617/" target="_blank" rel="noopener noreferrer">[1]</a></sup></p>
 
 <h2>Kazuistika na začiatok: 45-ročná žena s CKD 3b a HFrEF (NYHA II)</h2>
 
-<p>V aktivite sa začína prípadom 45-ročnej ženy s CKD 3b, eGFR &lt; 40 ml/min, proteinúriou a súbežným srdcovým zlyhávaním NYHA II. Pacientka prichádza s veľkou obavou: „Mám CKD aj srdce. A keď mi stúpne draslík, čo potom?"</p>
+<p>V aktivite sa začína prípadom 45-ročnej ženy s CKD 3b, eGFR &lt; 40 ml/min, proteinúriou a súbežným srdcovým zlyhávaním NYHA II. Pacientka prichádza s veľkou obavou: „Mám CKD aj srdce. A keď mi stúpne draslík, čo potom?“</p>
 
 <p>Pointa kazuistiky je, že obava z hyperkaliémie vedie k podliečeniu. V aktivite sa zdôrazňuje, že RAAS inhibítory sú základ znižovania kardiorenálneho rizika, no hyperkaliémia často bráni ich optimálnemu nasadeniu či udržaniu.<sup><a href="https://reachmd.com/programs/cme/case-based-approach-managing-hyperkalemia-in-patients-with-ckd-and-heart-failure/37617/" target="_blank" rel="noopener noreferrer">[1]</a></sup></p>
 
@@ -42,11 +42,11 @@ $articles[] = [
   <li>praktický postup je <strong>udržať RAAS/MRA</strong> a k tomu pridať <strong>liečbu viažucu draslík</strong> (plus tam, kde dáva zmysel, aj diuretiká na podporu exkrécie draslíka).<sup><a href="https://reachmd.com/programs/cme/case-based-approach-managing-hyperkalemia-in-patients-with-ckd-and-heart-failure/37617/" target="_blank" rel="noopener noreferrer">[1]</a></sup></li>
 </ol>
 
-<p>V tejto logike sa hyperkaliémia prestáva riešiť ako „dôvod stopnúť", a začína sa riešiť ako „dôvod doplniť správny nástroj".</p>
+<p>V tejto logike sa hyperkaliémia prestáva riešiť ako „dôvod stopnúť“, a začína sa riešiť ako „dôvod doplniť správny nástroj“.</p>
 
 <h2>Prečo je problém aj v poddiagnostikovaní a nedostatočnej eskalácii liečby</h2>
 
-<p>Jedným z „tvrdých" argumentov v aktivite je register CARE-HK v populácii s HFrEF a častým pokročilejším CKD (napr. CKD 3b, eGFR &lt; 40). V kazuistickej časti sa interpretuje, že:</p>
+<p>Jedným z „tvrdých“ argumentov v aktivite je register CARE-HK v populácii s HFrEF a častým pokročilejším CKD (napr. CKD 3b, eGFR &lt; 40). V kazuistickej časti sa interpretuje, že:</p>
 
 <ul>
   <li><strong>RAASi alebo MRA neboli adekvátne využité u zhruba jednej tretiny</strong> pacientov,</li>
@@ -55,7 +55,7 @@ $articles[] = [
   <li>s poklesom renálnych funkcií ďalej klesá optimalizácia GDMT a v pokročilých štádiách je podiel pacientov na odporúčanej liečbe alarmujúco nízky.<sup><a href="https://reachmd.com/programs/cme/case-based-approach-managing-hyperkalemia-in-patients-with-ckd-and-heart-failure/37617/" target="_blank" rel="noopener noreferrer">[1]</a></sup></li>
 </ul>
 
-<p>Kazuistický záver je teda dvojitý: nie je to len otázka „čo urobiť pri jednej epizóde", ale aj „čo urobiť, aby sa pacient nedostal do začarovaného kruhu podliečenia".</p>
+<p>Kazuistický záver je teda dvojitý: nie je to len otázka „čo urobiť pri jednej epizóde“, ale aj „čo urobiť, aby sa pacient nedostal do začarovaného kruhu podliečenia“.</p>
 
 <h2>Potassium bindery: mechanizmy nie sú rovnaké, preto sa líšia aj bezpečnostné signály</h2>
 
@@ -96,7 +96,7 @@ $articles[] = [
 
 <hr>
 
-<p><em><strong>Zdroj:</strong> Medtelligence CE na ReachMD, „Case-Based Approach: Managing Hyperkalemia in Patients With CKD and Heart Failure". <a href="https://reachmd.com/programs/cme/case-based-approach-managing-hyperkalemia-in-patients-with-ckd-and-heart-failure/37617/" target="_blank" rel="noopener noreferrer">Zdroj aktivity</a>.</em></p>
+<p><em><strong>Zdroj:</strong> Medtelligence CE na ReachMD, „Case-Based Approach: Managing Hyperkalemia in Patients With CKD and Heart Failure“. <a href="https://reachmd.com/programs/cme/case-based-approach-managing-hyperkalemia-in-patients-with-ckd-and-heart-failure/37617/" target="_blank" rel="noopener noreferrer">Zdroj aktivity</a>.</em></p>
 HTML,
 ];
 
@@ -135,7 +135,7 @@ foreach ($articles as $a) {
             $skipped++;
         }
     } catch (\PDOException $e) {
-        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '": ' . $e->getMessage();
+        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '“: ' . $e->getMessage();
         error_log('add_article migration error: ' . $e->getMessage());
     }
 }

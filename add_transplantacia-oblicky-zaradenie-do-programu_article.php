@@ -2,7 +2,7 @@
 /**
  * add_transplantacia-oblicky-zaradenie-do-programu_article.php
  * ════════════════════════════════════════════════════════════════════════════
- * DRAFT popularizačného článku (sekcia „Pre pacientov" → populars.php) o tom,
+ * DRAFT popularizačného článku (sekcia „Pre pacientov“ → populars.php) o tom,
  * ako prebieha zaradenie do transplantačného programu na transplantáciu obličky.
  *
  * ⚠ NEPUBLIKOVANÉ AUTOMATICKY. Spustenie tohto skriptu článok ZVEREJNÍ,
@@ -157,7 +157,7 @@ foreach ($articles as $a) {
             error_log('add_transplantacia_oblicky pdf gen error: ' . $pe->getMessage());
         }
     } catch (\PDOException $e) {
-        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '": ' . $e->getMessage();
+        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '“: ' . $e->getMessage();
         error_log('add_transplantacia_oblicky migration error: ' . $e->getMessage());
     }
 }

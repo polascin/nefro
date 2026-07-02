@@ -39,7 +39,7 @@ $articles[] = [
     'excerpt'      => 'Praktický prístup k recidivujúcim infekciám močových ciest u starších žien: kedy potvrdiť infekciu a kedy nie, prečo pozitívny nález automaticky neznamená antibiotiká, a prevencia bez antibiotík — vrátane kľúčovej úlohy lokálnych vaginálnych estrogénov pri urogenitálnom syndróme menopauzy (GSM).',
     'content'      => <<<'HTML'
 <p>Opakované infekcie močových ciest (recurrent UTI) sú u starších žien časté a klinicky náročné.
-Problém nie je len v tom, že je potrebné „potvrdiť infekciu", ale aj v tom, že časť ťažkostí
+Problém nie je len v tom, že je potrebné „potvrdiť infekciu“, ale aj v tom, že časť ťažkostí
 napodobňuje infekciu bez toho, aby išlo o aktívnu bakteriálnu cystitídu. Z toho vyplýva riziko
 zbytočnej antibiotickej liečby, ktorá má nepriaznivé dôsledky pre pacientku aj pre antimikrobiálnu
 rezistenciu.</p>
@@ -65,7 +65,7 @@ divertikulum alebo prolaps panvových orgánov.</p>
 <p>Rozhovor zdôrazňuje, že pri podozrení na akútnu cystitídu má <strong>negatívny výsledok moču</strong>
 (bez nitritov a bez leukocytov v moči) významnú negatívnu prediktívnu hodnotu, takže môže pomôcť
 infekciu skôr vylúčiť.</p>
-<p>Zároveň sa rieši, že pri vzorkách zo stredného prúdu moču („clean catch") je kontaminácia častá,
+<p>Zároveň sa rieši, že pri vzorkách zo stredného prúdu moču („clean catch“) je kontaminácia častá,
 čo môže viesť k zbytočnej antibiotickej liečbe. Pri nejasnosti rozhovor odporúča zvážiť
 <strong>katetrizačný odber</strong> pre presnejšie posúdenie.</p>
 <p>Pri hodnotení močového nálezu sa uvádza význam pyúrie, konkrétne <strong>viac ako 5 leukocytov/HPF</strong>
@@ -76,11 +76,11 @@ pri mikroskopii, a pozornosť na rozdiel medzi:</p>
       myofasciálne panvové ťažkosti, hyperaktívny močový mechúr).</li>
 </ul>
 
-<h2>3) Prečo antibiotiká pri „pozitívnom náleze" nie sú automaticky správne</h2>
+<h2>3) Prečo antibiotiká pri „pozitívnom náleze“ nie sú automaticky správne</h2>
 <p>Jednou z hlavných myšlienok rozhovoru je, že aj pozitívny nález v moči (napr. nitrity + leukocyty)
 nemusí znamenať klinicky relevantnú infekciu. Podľa expertky môže ísť aj o bežnú komenzálnu prítomnosť
 baktérií v prostredí dolných močových ciest.</p>
-<p>Zároveň sa rieši, že starší pacienti môžu mať zmenené vnímanie symptómov, takže ani „zjavná"
+<p>Zároveň sa rieši, že starší pacienti môžu mať zmenené vnímanie symptómov, takže ani „zjavná“
 baktériúria nemusí korelovať s klinickým obrazom dyzúrie.</p>
 
 <h2>4) Nadužívanie antibiotík treba riešiť systémovo: urobióm, stewardship a nadmerná diagnostika</h2>
@@ -125,7 +125,7 @@ premnoženie patogénov a ich prístup do močových ciest.</p>
 <p>Aj keď podcast rieši primárne urologickú a gynekologickú perspektívu, nefrologicky je to relevantné
 z dvoch dôvodov:</p>
 <ol>
-  <li>U starších pacientov s CKD často opakovane vznikajú epizódy symptómov „podobných UTI", kde
+  <li>U starších pacientov s CKD často opakovane vznikajú epizódy symptómov „podobných UTI“, kde
       rozhodnutie antibiotiká verzus neinfekčný stav býva zásadné.</li>
   <li>Pacienti s CKD môžu byť zraniteľnejší voči nežiaducim účinkom antibiotík, polyfarmácii a zmenám
       nutričného alebo mikrobiómového prostredia.</li>
@@ -206,7 +206,7 @@ foreach ($articles as $a) {
             error_log('add_uti_gsm pdf gen error: ' . $pe->getMessage());
         }
     } catch (\PDOException $e) {
-        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '": ' . $e->getMessage();
+        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '“: ' . $e->getMessage();
         error_log('add_uti_gsm migration error: ' . $e->getMessage());
     }
 }

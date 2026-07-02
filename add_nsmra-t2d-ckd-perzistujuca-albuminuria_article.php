@@ -33,7 +33,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'U pacienta s T2D a CKD s pretrvávajúcou albuminúriou napriek maximálne tolerovanej RAS inhibícii je nsMRA logickým ďalším krokom. Praktický prehľad indikačného rámca, work-upu pred nasadením a ambulantného algoritmu vrátane monitorovania K⁺.',
     'content'      => <<<'HTML'
-<p>U pacienta s <strong>diabetom 2. typu (T2D)</strong> a <strong>chronickým ochorením obličiek (CKD)</strong>, ktorý má <strong>pretrvávajúcu albuminúriu napriek maximálne tolerovanej liečbe v osi RAS</strong>, dáva zmysel zvážiť prídavok <strong>nesteroidného antagonistu mineralokortikoidového receptora (nsMRA)</strong>. Výsledkom má byť zlepšenie „cardio-kidney" dopadov a spomalenie nepriaznivého priebehu.</p>
+<p>U pacienta s <strong>diabetom 2. typu (T2D)</strong> a <strong>chronickým ochorením obličiek (CKD)</strong>, ktorý má <strong>pretrvávajúcu albuminúriu napriek maximálne tolerovanej liečbe v osi RAS</strong>, dáva zmysel zvážiť prídavok <strong>nesteroidného antagonistu mineralokortikoidového receptora (nsMRA)</strong>. Výsledkom má byť zlepšenie „cardio-kidney“ dopadov a spomalenie nepriaznivého priebehu.</p>
 
 <h2>Indikačný rámec (prakticky)</h2>
 
@@ -43,9 +43,9 @@ $articles[] = [
   <li><strong>pretrvávajúca albuminúria</strong></li>
   <li>pacient už dostáva <strong>maximálne tolerovanú liečbu v osi RAS</strong> (ACE inhibítor alebo AT1 blokátor) a albuminúria pretrváva</li>
 </ol>
-<p>Toto je situácia, kde sa nsMRA považujú za ďalší krok v „treatment pillar" prístupe.</p>
+<p>Toto je situácia, kde sa nsMRA považujú za ďalší krok v „treatment pillar“ prístupe.</p>
 
-<h2>Rýchly „work-up" pred nasadením</h2>
+<h2>Rýchly „work-up“ pred nasadením</h2>
 
 <p>Skôr než začneš, nastav si kontrolný rámec tak, aby si minimalizoval riziko nežiaducich účinkov (najmä hyperkaliémie) a aby dávalo zmysel aj časovanie kontrol.</p>
 
@@ -73,7 +73,7 @@ $articles[] = [
   <li>pracuj s trendom (opakované merania, ak máte nastavený systém v poradni)</li>
 </ul>
 
-<h3>Krok B: zabezpečíš „core" liečbu</h3>
+<h3>Krok B: zabezpečíš „core“ liečbu</h3>
 <p>Títo antagonisti sa zvyčajne pridávajú až vtedy, keď:</p>
 <ul>
   <li>RAS inhibícia je už v maximálne tolerovanej podobe,</li>
@@ -92,12 +92,12 @@ $articles[] = [
 <h3>Krok E: úprava pri nežiaducich účinkoch</h3>
 <ul>
   <li>ak K⁺ stúpne, postupuj podľa lokálnych pravidiel (redukcia, dočasné prerušenie, úprava sprievodnej medikácie, riešenie precipitujúcich faktorov)</li>
-  <li>dôležité je mať v ambulancii pripravený „plan B", aby sa pacient nedostal do dlhého čakania bez monitorovania</li>
+  <li>dôležité je mať v ambulancii pripravený „plan B“, aby sa pacient nedostal do dlhého čakania bez monitorovania</li>
 </ul>
 
 <h2>Praktický príklad zo vzdelávacieho materiálu</h2>
 
-<p>V materiáli je uvedený pacient „Mark" (52 rokov) s <strong>T2D a CKD</strong>, ktorý už má:</p>
+<p>V materiáli je uvedený pacient „Mark“ (52 rokov) s <strong>T2D a CKD</strong>, ktorý už má:</p>
 <ul>
   <li><strong>empagliflozín</strong>,</li>
   <li><strong>ramipril</strong>,</li>
@@ -108,11 +108,11 @@ $articles[] = [
   <li><strong>semaglutid</strong> (metabolický cieľ, úprava hmotnosti),</li>
   <li><strong>finerenone</strong> (nsMRA) ako ďalší krok pri pretrvávajúcej albuminúrii, aj keď je RAS inhibícia už zavedená.</li>
 </ul>
-<p>Tento príklad ukazuje, že nsMRA je „doplnok do stratégie", nie izolovaný zásah.</p>
+<p>Tento príklad ukazuje, že nsMRA je „doplnok do stratégie“, nie izolovaný zásah.</p>
 
 <h2>Mechanistické pozadie (pre pochopenie)</h2>
 
-<p>Nadmerná aktivácia MR sa spája s nepriaznivými procesmi v obličkách a srdci. Preto sa nsMRA prezentujú ako lieky, ktoré zasahujú do „škodlivých dráh" pri kardioreálnom prepojení.</p>
+<p>Nadmerná aktivácia MR sa spája s nepriaznivými procesmi v obličkách a srdci. Preto sa nsMRA prezentujú ako lieky, ktoré zasahujú do „škodlivých dráh“ pri kardioreálnom prepojení.</p>
 <p>Pri ambulantnom vysvetľovaní pacientovi stačí povedať v jednoduchej forme:</p>
 <ul>
   <li>liek cieli nepriaznivé signály v tkanivách,</li>
@@ -126,7 +126,7 @@ $articles[] = [
 
 <hr>
 
-<p><em><strong>Zdroj:</strong> Medscape Education Cardiology, „The Evolving Role of Nonsteroidal MRAs for Heart and Kidney Disease", uverejnené 30. 5. 2025. <a href="https://www.medscape.org/viewarticle/1002559" target="_blank" rel="noopener noreferrer">https://www.medscape.org/viewarticle/1002559</a>.</em></p>
+<p><em><strong>Zdroj:</strong> Medscape Education Cardiology, „The Evolving Role of Nonsteroidal MRAs for Heart and Kidney Disease“, uverejnené 30. 5. 2025. <a href="https://www.medscape.org/viewarticle/1002559" target="_blank" rel="noopener noreferrer">https://www.medscape.org/viewarticle/1002559</a>.</em></p>
 HTML,
 ];
 
@@ -165,7 +165,7 @@ foreach ($articles as $a) {
             $skipped++;
         }
     } catch (\PDOException $e) {
-        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '": ' . $e->getMessage();
+        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '“: ' . $e->getMessage();
         error_log('add_article migration error: ' . $e->getMessage());
     }
 }

@@ -1,7 +1,7 @@
 <?php
 /**
  * add_pre-pacientov-uvod_article.php
- * Prvý (uvítací) popularizačný článok sekcie „Pre pacientov".
+ * Prvý (uvítací) popularizačný článok sekcie „Pre pacientov“.
  * Spustenie cez SSH:
  *   ssh -i "$HOME/.ssh/nefro_deploy" -p 26650 \
  *       uid58858@shell.r1.websupport.sk \
@@ -99,7 +99,7 @@ foreach ($articles as $a) {
             $skipped++;
         }
     } catch (\PDOException $e) {
-        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '": ' . $e->getMessage();
+        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '“: ' . $e->getMessage();
         error_log('add_popular_article migration error: ' . $e->getMessage());
     }
 }

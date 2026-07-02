@@ -2,7 +2,7 @@
 /**
  * add_TEMPLATE_popular_article.php
  * ════════════════════════════════════════════════════════════════════════════
- * ŠABLÓNA pre POPULARIZAČNÝ článok (sekcia „Pre pacientov" → populars.php).
+ * ŠABLÓNA pre POPULARIZAČNÝ článok (sekcia „Pre pacientov“ → populars.php).
  * Určené pre poučených pacientov a verejnosť — jednoduchý jazyk, obrázky.
  *
  * Postup:
@@ -18,7 +18,7 @@
  *
  * PRAVIDLÁ PRE POPULARIZAČNÝ OBSAH:
  *   • Jazyk    – jednoduchý, priateľský, bez odborného žargónu. Skratky (CKD, eGFR)
- *                vždy raz vysvetli ľudskou rečou. Krátke vety, „vykajte" čitateľovi.
+ *                vždy raz vysvetli ľudskou rečou. Krátke vety, „vykajte“ čitateľovi.
  *   • title    – čistý text, bez HTML; zrozumiteľný aj laikovi
  *   • slug     – len [a-z0-9-], max 80 znakov, unikátny. Diakritika → ASCII.
  *   • excerpt  – 1–2 vety, čo sa čitateľ dozvie; zobrazí sa na karte v sekcii
@@ -32,14 +32,14 @@
  *   • is_top   – 0 = bežný, 1 = odporúčaný (zobrazí sa s odznakom navrchu sekcie)
  *   • author   – autor projektu (predvolene 'MUDr. Ľubomír Polaščín').
  *
- *   ⚠ PÔVODNÍ AUTORI ZDROJA (widget „Zúčastnení autori" + filter ?autor=):
+ *   ⚠ PÔVODNÍ AUTORI ZDROJA (widget „Zúčastnení autori“ + filter ?autor=):
  *      Pole `author` je VŽDY len autor projektu, preto sa pôvodní autori
  *      zdrojového článku k autorom NEpridajú automaticky. Ak je článok
  *      slovenským spracovaním KONKRÉTNEHO zdrojového článku, doplň jeho
  *      pôvodných autorov do  source_authors.php  (mapa slug → [mená]) — tá je
  *      autoritatívna a zobrazí ich vo widgete aj vo filtri. Mená len z otvorených
  *      bibliografických API (Crossref/PubMed) či verejných správ — NIE z paywallu.
- *      Bez mapy funguje len fallback: prvý autor z presnej značky „Zdroj:" v obsahu.
+ *      Bez mapy funguje len fallback: prvý autor z presnej značky „Zdroj:“ v obsahu.
  */
 
 // Ochrana – len admin alebo CLI
@@ -153,7 +153,7 @@ foreach ($articles as $a) {
             error_log('add_popular_article pdf gen error: ' . $pe->getMessage());
         }
     } catch (\PDOException $e) {
-        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '": ' . $e->getMessage();
+        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '“: ' . $e->getMessage();
         error_log('add_popular_article migration error: ' . $e->getMessage());
     }
 }

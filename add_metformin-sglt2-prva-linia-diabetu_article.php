@@ -50,7 +50,7 @@ $articles[] = [
 
 <p>Práve preto sa inhibítory SGLT2 dostávajú v odporúčaniach čoraz skôr do liečebného algoritmu. Nejde iba o lieky na zníženie cukru v krvi. Sú súčasťou modernej kardiorenálno-metabolickej ochrany.</p>
 
-<h2>Nie je to iba „liečba cukru"</h2>
+<h2>Nie je to iba „liečba cukru“</h2>
 
 <p>Podľa odborníkov citovaných v článku Medscape sa manažment diabetu 2. typu mení. Starší prístup sa sústreďoval najmä na dosiahnutie cieľovej hodnoty HbA1c. Novší prístup je komplexnejší.</p>
 
@@ -99,7 +99,7 @@ $articles[] = [
 
 <h2>Pacient nemá mať pocit zlyhania</h2>
 
-<p>Diabetes 2. typu je progresívne ochorenie. Mnohí pacienti budú časom potrebovať intenzifikáciu liečby, niekedy aj inzulín. To neznamená, že pacient „zlyhal". Znamená to, že ochorenie sa biologicky vyvíja a liečbu treba prispôsobiť jeho aktuálnemu stavu.</p>
+<p>Diabetes 2. typu je progresívne ochorenie. Mnohí pacienti budú časom potrebovať intenzifikáciu liečby, niekedy aj inzulín. To neznamená, že pacient „zlyhal“. Znamená to, že ochorenie sa biologicky vyvíja a liečbu treba prispôsobiť jeho aktuálnemu stavu.</p>
 
 <p>Otvorená komunikácia je preto kľúčová. Pacient má rozumieť, prečo sa liek pridáva, aký má očakávaný prínos, aké sú riziká a kedy má vyhľadať lekára.</p>
 
@@ -113,7 +113,7 @@ $articles[] = [
 
 <hr>
 
-<p><em><strong>Zdroj:</strong> Medscape, „MR Metformin and SGLT2i Now First-Line for Type 2 Diabetes". <a href="https://www.medscape.com/viewarticle/mr-metformin-and-sglt2i-now-first-line-type-2-diabetes-2026a1000h4s" target="_blank" rel="noopener noreferrer">medscape.com</a>.</em></p>
+<p><em><strong>Zdroj:</strong> Medscape, „MR Metformin and SGLT2i Now First-Line for Type 2 Diabetes“. <a href="https://www.medscape.com/viewarticle/mr-metformin-and-sglt2i-now-first-line-type-2-diabetes-2026a1000h4s" target="_blank" rel="noopener noreferrer">medscape.com</a>.</em></p>
 HTML,
 ];
 
@@ -152,7 +152,7 @@ foreach ($articles as $a) {
             $skipped++;
         }
     } catch (\PDOException $e) {
-        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '": ' . $e->getMessage();
+        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '“: ' . $e->getMessage();
         error_log('add_article migration error: ' . $e->getMessage());
     }
 }

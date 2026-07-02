@@ -30,54 +30,54 @@ require_once __DIR__ . '/pdf_generator.php';
 $articles = [];
 
 $articles[] = [
-    'title'        => 'Post-kongresová analýza ERA 2026 pre nefrológiu: ako preniesť „highlights" do praxe pri CKD, dialýze, transplantácii a kardiovaskulárnom riziku',
+    'title'        => 'Post-kongresová analýza ERA 2026 pre nefrológiu: ako preniesť „highlights“ do praxe pri CKD, dialýze, transplantácii a kardiovaskulárnom riziku',
     'slug'         => 'era-2026-post-kongres-nefrologia',
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Post-kongresový rámec ERA 2026 pre nefrológiu: ako preniesť highlights v oblasti CKD, dialýzy, transplantácie a kardiovaskulárneho rizika do každodenného rozhodovania — praktické „check" body pre ambulanciu, dialýzu aj sledovanie po transplantácii.',
+    'excerpt'      => 'Post-kongresový rámec ERA 2026 pre nefrológiu: ako preniesť highlights v oblasti CKD, dialýzy, transplantácie a kardiovaskulárneho rizika do každodenného rozhodovania — praktické „check“ body pre ambulanciu, dialýzu aj sledovanie po transplantácii.',
     'content'      => <<<'HTML'
-<p>Často sa stáva, že po veľkých odborných kongresoch (ERA) máme pocit „bolo toho veľa", no v ambulancii
+<p>Často sa stáva, že po veľkých odborných kongresoch (ERA) máme pocit „bolo toho veľa“, no v ambulancii
 potrebujeme rýchlo určiť, čo z toho má praktický dosah. Tento post-kongresový materiál uvádza highlights
 so zameraním na <strong>manažment kardiovaskulárneho rizika, transplantáciu, dialýzu a chronické ochorenie
-obličiek (CKD)</strong>. To je dobrý rámec na tvorbu vlastného „post-kongresového" protokolu pre
+obličiek (CKD)</strong>. To je dobrý rámec na tvorbu vlastného „post-kongresového“ protokolu pre
 nefrologickú prax.</p>
 
 <p>Nižšie rozoberám, ako by mal vyzerať prenos týchto tém do každodenného rozhodovania. Materiál je
 zámerne rámcový: konkrétne štúdie, dávky a presné odporúčania si treba overiť priamo v zázname z kongresu
 — tu sa sústredím na to, ako highlights preniesť do praxe.</p>
 
-<h2>1) Kardiovaskulárne riziko pri CKD: z „renálneho rizika" sa stáva CKM prístup</h2>
+<h2>1) Kardiovaskulárne riziko pri CKD: z „renálneho rizika“ sa stáva CKM prístup</h2>
 <p>Pri CKD je kardiovaskulárne riziko často dominantné a rozhodnutia nie sú len o eGFR. V post-kongresovom
 duchu je užitočné zadefinovať si v praxi tri veci:</p>
 <ol>
-  <li><strong>Ktorý pacient je „KV dominantný"?</strong> Nielen podľa diagnózy, ale aj podľa klinických
+  <li><strong>Ktorý pacient je „KV dominantný“?</strong> Nielen podľa diagnózy, ale aj podľa klinických
       znakov (anamnéza KV príhod, krvný tlak, albuminúria, priebeh ochorenia, metabolické faktory).</li>
   <li><strong>Čo je cieľ a ako ho budem sledovať?</strong> Aj keď sa ciele medzi pracoviskami líšia,
       dôležité je, aby sa nefrológ nestratil v reťazci meraní a liekov a mal vlastnú logiku sledovania
       (follow-upu).</li>
-  <li><strong>Kde je rozhodovanie najčastejšie „rozbité" medzi odbormi?</strong> Typicky ide o koordináciu
+  <li><strong>Kde je rozhodovanie najčastejšie „rozbité“ medzi odbormi?</strong> Typicky ide o koordináciu
       medzi nefrológiou, diabetológiou a kardiológiou, aby pacient nemal paralelné, ale nekonzistentné
       plány.</li>
 </ol>
-<p>Prakticky: v ambulancii je dobré vytvoriť „CKD-KV check" pre každú kontrolu, ktorý sa neopiera len
+<p>Prakticky: v ambulancii je dobré vytvoriť „CKD-KV check“ pre každú kontrolu, ktorý sa neopiera len
 o laboratóriá, ale aj o komorbiditu a rizikový profil.</p>
 
 <h2>2) Transplantácia: od jednotlivých príhod k systému sledovania a prevencie</h2>
 <p>V oblasti transplantácie býva najväčší prínos kongresových highlightov v dvoch typoch tém:</p>
 <ul>
-  <li><strong>monitorovanie</strong> (čo a ako často, čo je „varovný signál"),</li>
+  <li><strong>monitorovanie</strong> (čo a ako často, čo je „varovný signál“),</li>
   <li><strong>prevencia</strong> (infekcie, metabolické komplikácie, dlhodobé riziko funkcie štepu).</li>
 </ul>
 <p>Post-kongresový prístup by preto mal viesť k jednoduchým zmenám protokolu, napríklad:</p>
 <ul>
-  <li>spresnenie, čo presne sa hodnotí pri zhoršení (neuspokojiť sa len s „trendom" kreatinínu),</li>
-  <li>jasné „rozhodovacie body", kedy eskalovať (pacient, laboratóriá, zobrazovanie, biopsia alebo iná
+  <li>spresnenie, čo presne sa hodnotí pri zhoršení (neuspokojiť sa len s „trendom“ kreatinínu),</li>
+  <li>jasné „rozhodovacie body“, kedy eskalovať (pacient, laboratóriá, zobrazovanie, biopsia alebo iná
       diagnostika podľa lokálneho algoritmu).</li>
 </ul>
 
 <h2>3) Dialýza: kvalita liečby nie je len dávka, ale aj výsledok a bezpečnosť</h2>
-<p>Pri dialýze často chceme „čo najviac" parametrov, no klinicky rozhodujú:</p>
+<p>Pri dialýze často chceme „čo najviac“ parametrov, no klinicky rozhodujú:</p>
 <ul>
   <li><strong>stabilita pacienta</strong> (interdialytické ťažkosti, hypotenzné epizódy, tolerancia),</li>
   <li><strong>bezpečnosť a riziká</strong> (infekcie, vaskulárny prístup, elektrolytové výkyvy),</li>
@@ -87,24 +87,24 @@ o laboratóriá, ale aj o komorbiditu a rizikový profil.</p>
 <p>Ak sa highlights z ERA v týchto oblastiach potvrdzujú, post-kongresovo odporúčam prepracovať protokol
 na dialyzačnom lôžku tak, aby:</p>
 <ul>
-  <li>bolo jasné, ktoré parametre sú „actionable" (vyžadujú zásah),</li>
+  <li>bolo jasné, ktoré parametre sú „actionable“ (vyžadujú zásah),</li>
   <li>bolo jasné, čo je prvá línia úpravy (a čo nie),</li>
   <li>a aby dialyzačný tím a nefrologický tím komunikovali v tej istej logike.</li>
 </ul>
 
 <h2>4) CKD: ako zabrániť tomu, aby sa sledovanie zmenilo na samoúčelné meranie</h2>
-<p>Pri CKD je najčastejšia chyba „meriam všetko, ale neviem, čo to mení". Post-kongresová disciplína by
+<p>Pri CKD je najčastejšia chyba „meriam všetko, ale neviem, čo to mení“. Post-kongresová disciplína by
 mala viesť k otázkam:</p>
 <ul>
   <li>Ktoré výsledky sú pre mňa signálom na zmenu terapie?</li>
   <li>Kedy opakujem vyšetrenie a s akým cieľom?</li>
-  <li>Čo robím, keď sa cieľ nedarí (a nielen „čakám na ďalšiu kontrolu")?</li>
+  <li>Čo robím, keď sa cieľ nedarí (a nielen „čakám na ďalšiu kontrolu“)?</li>
 </ul>
 <p>Práve tu má nefrológ najväčší vplyv: v pretavení dát do rozhodovania.</p>
 
 <hr>
 
-<p><em><strong>Zdroj:</strong> „Post-Kongress: ERA 2026", <em>STREAMED UP / NephroLive</em> (2026).
+<p><em><strong>Zdroj:</strong> „Post-Kongress: ERA 2026“, <em>STREAMED UP / NephroLive</em> (2026).
 <a href="https://streamed-up.com/video/post-kongress-era-2026" target="_blank" rel="noopener noreferrer">Link na zdroj (video)</a>.</em></p>
 HTML,
 ];
@@ -171,7 +171,7 @@ foreach ($articles as $a) {
             error_log('add_era2026 pdf gen error: ' . $pe->getMessage());
         }
     } catch (\PDOException $e) {
-        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '": ' . $e->getMessage();
+        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '“: ' . $e->getMessage();
         error_log('add_era2026 migration error: ' . $e->getMessage());
     }
 }
