@@ -478,7 +478,7 @@ if ($article) {
           <li><a href="https://www.nefro.sk/" target="_blank" rel="noopener noreferrer">Slovensko (SNS)</a></li>
           <li><a href="https://www.nefrol.cz/" target="_blank" rel="noopener noreferrer">Česko (ČNS)</a></li>
           <li><a href="https://www.asn-online.org/" target="_blank" rel="noopener noreferrer">USA (ASN)</a></li>
-          <li><a href="https://www.csn-scn.ca/" target="_blank" rel="noopener noreferrer">Kanada (CSN)</a></li>
+          <li><a href="https://www.csnscn.ca/" target="_blank" rel="noopener noreferrer">Kanada (CSN)</a></li>
           <!-- Susedia Slovenska podľa počtu obyvateľov -->
           <li><a href="https://ptnefro.com.pl/" target="_blank" rel="noopener noreferrer">Poľsko (PTN)</a></li>
           <li><a href="http://www.nephrologia.hu/" target="_blank" rel="noopener noreferrer">Maďarsko (MANET)</a></li>
@@ -535,11 +535,11 @@ if ($article) {
           <!-- Ostatné krajiny podľa počtu obyvateľov -->
           <li><a href="https://ndthd.org.tr/" target="_blank" rel="noopener noreferrer">Turecko (TNDTHD)</a></li>
           <li><a href="https://www.afidtn.com/" target="_blank" rel="noopener noreferrer">Francúzsko (AFIDTN)</a></li>
-          <li><a href="https://annuk.org/" target="_blank" rel="noopener noreferrer">Spojené kráľovstvo (ANN-UK)</a></li>
+          <li><a href="https://ann-uk.org/" target="_blank" rel="noopener noreferrer">Spojené kráľovstvo (ANN-UK)</a></li>
           <li><a href="https://www.seden.org/" target="_blank" rel="noopener noreferrer">Španielsko (SEDEN)</a></li>
           <li><a href="https://www.srnefro.ro/" target="_blank" rel="noopener noreferrer">Rumunsko (SRN)</a></li>
           <li><a href="https://www.venvn.nl/afdelingen/nefrologie/" target="_blank" rel="noopener noreferrer">Holandsko (V&VN)</a></li>
-          <li><a href="https://www.bvnv.be/" target="_blank" rel="noopener noreferrer">Belgicko (BVNV)</a></li>
+          <li><a href="https://bvnv.peepl.be/nl/site/" target="_blank" rel="noopener noreferrer">Belgicko (BVNV)</a></li>
           <li><a href="https://helina.gr/" target="_blank" rel="noopener noreferrer">Grécko (HELNNA)</a></li>
           <li><a href="https://www.snsf.eu/" target="_blank" rel="noopener noreferrer">Švédsko (SNSF)</a></li>
           <li><a href="https://nursing-bg.com/" target="_blank" rel="noopener noreferrer">Bulharsko (BAHPN)</a></li>
@@ -612,7 +612,7 @@ if ($article) {
           <li><a href="https://www.lfhk.cuni.cz/" target="_blank" rel="noopener noreferrer">Česko (LF UK Hradec Králové)</a></li>
           <li><a href="https://lf.osu.cz/" target="_blank" rel="noopener noreferrer">Česko (LF OU Ostrava)</a></li>
           <li><a href="https://www.asn-online.org/education/" target="_blank" rel="noopener noreferrer">USA (ASN Education)</a></li>
-          <li><a href="https://www.csn-scn.ca/education/" target="_blank" rel="noopener noreferrer">Kanada (CSN Education)</a></li>
+          <li><a href="https://www.csnscn.ca/_education/" target="_blank" rel="noopener noreferrer">Kanada (CSN Education)</a></li>
           <!-- Susedia Slovenska podľa počtu obyvateľov -->
           <li><a href="https://www.gov.pl/web/zdrowie/ksztalcenie-podyplomowe-kadr-medycznych" target="_blank" rel="noopener noreferrer">Poľsko (CMKP)</a></li>
           <li><a href="https://semmelweis.hu/" target="_blank" rel="noopener noreferrer">Maďarsko (Semmelweis University)</a></li>
@@ -626,7 +626,7 @@ if ($article) {
           <li><a href="https://www.senefro.org/modules.php?name=webinar" target="_blank" rel="noopener noreferrer">Španielsko (S.E.N. Formación)</a></li>
           <li><a href="https://www.srnefro.ro/" target="_blank" rel="noopener noreferrer">Rumunsko (SRN)</a></li>
           <li><a href="https://www.nefro.nl/nascholing" target="_blank" rel="noopener noreferrer">Holandsko (NfN Nascholing)</a></li>
-          <li><a href="https://www.bvnv.be/education/" target="_blank" rel="noopener noreferrer">Belgicko (BVNV Education)</a></li>
+          <li><a href="https://bvnv.peepl.be/nl/site/" target="_blank" rel="noopener noreferrer">Belgicko (BVNV Education)</a></li>
           <li><a href="https://www.ene.gr/" target="_blank" rel="noopener noreferrer">Grécko (ENE)</a></li>
           <li><a href="https://njurmed.com/utbildning/" target="_blank" rel="noopener noreferrer">Švédsko (SNF Utbildning)</a></li>
           <li><a href="https://www.spnefro.pt/" target="_blank" rel="noopener noreferrer">Portugalsko (SPN)</a></li>

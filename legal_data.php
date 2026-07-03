@@ -39,7 +39,7 @@ function legalInfo(): array
         'establishment'            => 'Slovenskej republike (EÚ)',
         'jurisdiction'             => 'Slovenskej republiky (EÚ)',
         'supervisoryAuthority'     => 'Úrad na ochranu osobných údajov Slovenskej republiky',
-        'supervisoryAuthorityUrl'  => 'https://www.uoou.sk',
+        'supervisoryAuthorityUrl'  => 'https://dataprotection.gov.sk/sk/',
         'effectiveDate'            => '2026-06-26',
         'version'                  => '2.3',
         'consentVersion'           => '2026-06-02',

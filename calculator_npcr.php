@@ -302,8 +302,7 @@ if (isLoggedIn()) {
 
                 <div class="info-box-green">
                     <strong>Súvisiace:</strong>
-                    <a href="calculator_ktv.php">Kt/V a URR</a> &ensp;&bull;&ensp;
-                    <a href="https://www.mdcalc.com/calc/3886/protein-catabolic-rate-pcr" target="_blank" rel="noopener noreferrer">MDCalc — PCR</a>
+                    <a href="calculator_ktv.php">Kt/V a URR</a>
                 </div>
 
                 <?php foreach ($messages as $message): ?>
