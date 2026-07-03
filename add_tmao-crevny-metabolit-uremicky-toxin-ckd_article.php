@@ -107,7 +107,7 @@ $articles[] = [
 <ol>
   <li>TMAO je urémický toxín, ktorého hladiny stúpajú s poklesom funkcie obličiek a ktorý sa spája s vyšším kardiovaskulárnym rizikom aj s progresiou CKD.</li>
   <li>Jeho tvorba je ovplyvniteľná stravou — najmä príjmom prekurzorov z červeného mäsa, vajec a doplnkov s karnitínom.</li>
-  <li>Cielené „proti-TMAO" intervencie zatiaľ nie sú súčasťou štandardnej starostlivosti, pretože chýbajú dôkazy o benefite na klinicky tvrdých ukazovateľoch.</li>
+  <li>Cielené „proti-TMAO“ intervencie zatiaľ nie sú súčasťou štandardnej starostlivosti, pretože chýbajú dôkazy o benefite na klinicky tvrdých ukazovateľoch.</li>
   <li>V praxi preto ostávajú kľúčové osvedčené opatrenia — primeraná úprava príjmu bielkovín u nedialyzovaných pacientov, vyvážený jedálniček a komplexná kontrola kardiovaskulárneho rizika — do ktorých téma TMAO zapadá ako doplnkový, no zatiaľ nie samostatne cieliteľný faktor.</li>
 </ol>
 
