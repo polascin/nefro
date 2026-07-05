@@ -918,7 +918,7 @@ if (!function_exists('sendWeeklyNewsletterDigest')) {
 
         // SEED: iba nastaví základňu okna (zaznamená beh bez odoslania), aby ďalší
         // (týždenný) beh posielal len články pridané po tomto bode. Použité na
-        // „presunutie" prvého prehľadu na ďalší cyklus bez zopakovania už avizovaných článkov.
+        // „presunutie“ prvého prehľadu na ďalší cyklus bez zopakovania už avizovaných článkov.
         if ($seed) {
             if (!$dryRun) {
                 $logStmt = $pdo->prepare("INSERT INTO newsletter_digest_runs

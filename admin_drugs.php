@@ -67,7 +67,7 @@ function dgSynonymsToJson(string $raw): ?string
     return json_encode(array_slice($parts, 0, 40), JSON_UNESCAPED_UNICODE) ?: null;
 }
 
-/** Zdroje: vstup „názov|url" na riadok → JSON pole {label,url} (len https). */
+/** Zdroje: vstup „názov|url“ na riadok → JSON pole {label,url} (len https). */
 function dgSourcesToJson(string $raw): ?string
 {
     $out = [];
@@ -95,7 +95,7 @@ function dgSynonymsToText(?string $json): string
     return implode(', ', array_map('strval', $d));
 }
 
-/** JSON pole {label,url} → „názov|url" na riadok pre formulár. */
+/** JSON pole {label,url} → „názov|url“ na riadok pre formulár. */
 function dgSourcesToText(?string $json): string
 {
     $lines = [];

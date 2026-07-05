@@ -853,7 +853,7 @@ try {
     );
 }
 
-// CSRF token: volať AŽ PO spracovaní POST — po rotacíach bude v session nový token,
+// CSRF token: volať AŽ PO spracovaní POST — po rotáciách bude v session nový token,
 // ale $csrfToken v PHP získa správnu (aktuálnu) hodnotu pre všetky formuláre na stránke.
 $csrfToken = generateCsrfToken();
 

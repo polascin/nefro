@@ -17,6 +17,7 @@ if (php_sapi_name() !== 'cli') {
 require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
 require_once __DIR__ . '/newsletter_notifications.php';
+require_once __DIR__ . '/pdf_generator.php';
 $articles = [];
 
 $articles[] = [
@@ -68,9 +69,9 @@ $articles[] = [
   <figcaption>Kreatinín: užitočný, ale nie dokonalý ukazovateľ</figcaption>
 </figure>
 <h2>Kreatín ako doplnok výživy môže skresliť kreatinín</h2>
-<p>Pri hodnotení kreatinínu je dôležité vedieť aj to, či pacient neužíva potravinový doplnok kreatín. Kreatín sa dlhé roky používal najmä vo fitnes a silovom tréningu, no v poslednom období sa o ňom čoraz viac hovorí aj v súvislosti so starnutím, udržiavaním svalovej hmoty a možným vplyvom na kognitívne funkcie. Dôkazy o priaznivom účinku na kogníciu u starších ľudí sú zatiaľ sľubné, ale nie úplne jednoznačné.</p>
-<p>Z pohľadu obličkových výsledkov je podstatné, že kreatín je metabolický substrát, z ktorého v tele vzniká kreatinín. Ak človek užíva kreatín, môže sa zvýšiť hladina kreatinínu v krvi bez toho, aby to automaticky znamenalo skutočné zhoršenie funkcie obličiek. Keďže sa z kreatinínu počíta aj eGFR, teda odhadovaná glomerulová filtrácia, kreatín môže nepriamo spôsobiť aj zdanlivé zníženie eGFR. Výsledok potom môže navodiť falošný dojem, že sa obličky zhoršili.</p>
-<p>Preto je dôležité, aby pacient lekárovi povedal, že kreatín užíva. Platí to najmä vtedy, ak sa kreatinín náhle zvýši alebo eGFR nečakane klesne bez iného vysvetlenia. V takých situáciách môže lekár zvážiť opakované vyšetrenie po dočasnom vysadení doplnku alebo použiť alternatívne spôsoby odhadu funkcie obličiek, napríklad výpočet eGFR podľa cystatínu C. Cystatín C je marker, ktorý nie je priamo závislý od príjmu kreatínu a svalového metabolizmu v takej miere ako kreatinín.</p>
+<p>Pri hodnotení kreatinínu je dôležité vedieť aj to, či pacient neužíva potravinový doplnok kreatín. Kreatín sa dlhé roky používal najmä vo fitnes a silovom tréningu, no v poslednom období sa o ňom čoraz viac hovorí aj v súvislosti so starnutím, udržiavaním svalovej hmoty a možným vplyvom na kognitívne funkcie. Dôkazy o priaznivom účinku na kogníciu u starších ľudí sú zatiaľ sľubné, ale nie úplne jednoznačné.</p>
+<p>Z pohľadu obličkových výsledkov je podstatné, že kreatín je metabolický substrát, z ktorého v tele vzniká kreatinín. Ak človek užíva kreatín, môže sa zvýšiť hladina kreatinínu v krvi bez toho, aby to automaticky znamenalo skutočné zhoršenie funkcie obličiek. Keďže sa z kreatinínu počíta aj eGFR, teda odhadovaná glomerulová filtrácia, kreatín môže nepriamo spôsobiť aj zdanlivé zníženie eGFR. Výsledok potom môže navodiť falošný dojem, že sa obličky zhoršili.</p>
+<p>Preto je dôležité, aby pacient lekárovi povedal, že kreatín užíva. Platí to najmä vtedy, ak sa kreatinín náhle zvýši alebo eGFR nečakane klesne bez iného vysvetlenia. V takých situáciách môže lekár zvážiť opakované vyšetrenie po dočasnom vysadení doplnku alebo použiť alternatívne spôsoby odhadu funkcie obličiek, napríklad výpočet eGFR podľa cystatínu C. Cystatín C je marker, ktorý nie je priamo závislý od príjmu kreatínu a svalového metabolizmu v takej miere ako kreatinín.</p>
 <p>Dôležité je rozlišovať medzi laboratórnym skreslením a skutočným poškodením obličiek. Súčasné dostupné dôkazy neukazujú, že by primerané užívanie kreatínu u ľudí so zdravými obličkami samo osebe poškodzovalo obličky. Opatrnosť je však namieste u pacientov s už známou chronickou chorobou obličiek, pri cukrovke, vysokom krvnom tlaku, dehydratácii alebo pri súčasnom užívaní liekov, ktoré môžu obličky zaťažovať. V týchto prípadoch je rozumné užívanie kreatínu vopred konzultovať s lekárom.</p>
 <figure class="article-figure">
   <a href="img/dkd-05.png" target="_blank" rel="noopener noreferrer">
@@ -313,11 +314,15 @@ NEFRO_HTML,
 ];
 
 $stmt = $pdo->prepare(
-    "INSERT IGNORE INTO articles (title, slug, author, content, excerpt, category, published_at, is_top, is_published)
-     VALUES (:title, :slug, :author, :content, :excerpt, 'popularne', :published_at, :is_top, 1)"
+    "INSERT INTO articles (title, slug, author, content, excerpt, category, published_at, is_top, is_published)
+     VALUES (:title, :slug, :author, :content, :excerpt, 'popularne', :published_at, :is_top, 1)
+     ON DUPLICATE KEY UPDATE
+        title = VALUES(title), author = VALUES(author),
+        content = VALUES(content), excerpt = VALUES(excerpt),
+        category = 'popularne', is_top = VALUES(is_top)"
 );
 
-$inserted = 0; $skipped = 0; $errors = []; $queuedTotal = 0;
+$inserted = 0; $updated = 0; $skipped = 0; $errors = []; $queuedTotal = 0;
 foreach ($articles as $a) {
     try {
         $stmt->execute([
@@ -325,12 +330,35 @@ foreach ($articles as $a) {
             'content' => $a['content'], 'excerpt' => $a['excerpt'],
             'published_at' => $a['published_at'], 'is_top' => $a['is_top'],
         ]);
-        if ($stmt->rowCount() > 0) {
+        $rc = $stmt->rowCount();
+        if ($rc === 0) {
+            $skipped++;
+            continue;
+        }
+
+        $articleId = (int) $pdo->lastInsertId();
+        if ($articleId === 0) {
+            $idStmt = $pdo->prepare("SELECT id FROM articles WHERE slug = :slug");
+            $idStmt->execute(['slug' => $a['slug']]);
+            $articleId = (int) $idStmt->fetchColumn();
+        }
+
+        if ($rc === 1) {
             $inserted++;
-            $newId = (int) $pdo->lastInsertId();
-            try { $queuedTotal += enqueueArticleNewsletterEmails($pdo, $newId); }
+            try { $queuedTotal += enqueueArticleNewsletterEmails($pdo, $articleId); }
             catch (\Throwable $qe) { error_log('add_article newsletter enqueue error: ' . $qe->getMessage()); }
-        } else { $skipped++; }
+        } else {
+            $updated++;
+        }
+
+        try {
+            $pdfRes = generateArticlePdf($pdo, $a + ['id' => $articleId], true);
+            if (!$pdfRes['ok'] && !empty($pdfRes['error'])) {
+                error_log('add_article pdf gen: ' . $pdfRes['error']);
+            }
+        } catch (\Throwable $pe) {
+            error_log('add_article pdf gen error: ' . $pe->getMessage());
+        }
     } catch (\PDOException $e) {
         $errors[] = 'Chyba: ' . $e->getMessage();
         error_log('add_article migration error: ' . $e->getMessage());
@@ -338,10 +366,10 @@ foreach ($articles as $a) {
 }
 
 if (php_sapi_name() === 'cli') {
-    echo "\nVložené: $inserted | Preskočené (slug existuje): $skipped | Avíza: $queuedTotal\n";
+    echo "\nVložené: $inserted | Aktualizované: $updated | Preskočené (bez zmeny): $skipped | Avíza: $queuedTotal\n";
     foreach ($errors as $e) { echo "  - $e\n"; }
 } else {
     header('Content-Type: text/plain; charset=utf-8');
-    echo "Vložené: $inserted | Preskočené: $skipped | Avíza: $queuedTotal\n";
+    echo "Vložené: $inserted | Aktualizované: $updated | Preskočené: $skipped | Avíza: $queuedTotal\n";
     foreach ($errors as $e) { echo "  - $e\n"; }
 }

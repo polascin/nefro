@@ -12,7 +12,7 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
  * Mená sú vyťažené z odkazu „Zdroj:" cez otvorené bibliografické API
  * (Crossref/PubMed/eutils) a z verejných tlačových správ — nie scrapovaním
  * za paywallom. Doplnkový zdroj identít pre widget „Zúčastnení autori"
- * a filter ?autor= (viď articleAuthorIdentities() v db_config.php).
+ * a filter ?autor= (pozri articleAuthorIdentities() v db_config.php).
  *
  * LEN pre články, ktoré sú spracovaním JEDNÉHO konkrétneho zdrojového článku —
  * uvádzaj jeho pôvodných autorov. NEUVÁDZAJ autorov štúdií/odporúčaní len

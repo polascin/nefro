@@ -4,8 +4,8 @@ declare(strict_types=1);
  * add_ckd_pacienti_infographic_2026-06-13.php
  * ────────────────────────────────────────────────────────────────────────────
  * Vloží úvodnú infografiku do článku „Chronická choroba obličiek podľa KDIGO 2024:
- * čo môže pacient urobiť…". Obrázok sa pridá na začiatok obsahu → stane sa aj
- * náhľadom karty v sekcii „Pre pacientov". Obrázok je obalený odkazom
+ * čo môže pacient urobiť…“. Obrázok sa pridá na začiatok obsahu → stane sa aj
+ * náhľadom karty v sekcii „Pre pacientov“. Obrázok je obalený odkazom
  * (klik = nová karta). Idempotentné — ak už obrázok v obsahu je, nič nemení.
  *
  * PREDPOKLAD: súbor img/ckd-pacienti-infografika.png je nahraný na serveri.

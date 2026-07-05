@@ -1,7 +1,7 @@
 /**
  * image-fullview.js
  * Klik na obsahový obrázok otvorí jeho plnú veľkosť v novom tabe/okne —
- * rovnako ako v sekcii „Náhodný obrázok". Obsahové <img> v <main> sa obalia
+ * rovnako ako v sekcii „Náhodný obrázok“. Obsahové <img> v <main> sa obalia
  * do <a target="_blank">, ak už nie sú v odkaze alebo tlačidle.
  */
 (function () {

@@ -2,7 +2,7 @@
 /**
  * add_mikroplasty-tpe-odstranenie-z-krvi-prva-klinicka-studia_article.php
  * ════════════════════════════════════════════════════════════════════════════
- * Jednorazový skript na vloženie článku do DB (INSERT IGNORE -> idempotentný).
+ * Jednorazový skript na vloženie alebo aktualizáciu článku v DB (idempotentný UPSERT).
  * Spustenie cez SSH:
  *   ssh -i "$HOME/.ssh/nefro_deploy" -p 26650 \
  *       uid58858@shell.r1.websupport.sk \
@@ -14,14 +14,14 @@
 if (php_sapi_name() !== 'cli') {
     require_once __DIR__ . '/auth.php';
     requireAdmin();
-    requireAdminMutationConfirmation('Vlozit alebo aktualizovat clanok');
+    requireAdminMutationConfirmation('Vložiť alebo aktualizovať článok');
 }
 require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
 require_once __DIR__ . '/newsletter_notifications.php';
 require_once __DIR__ . '/pdf_generator.php';
 
-// -- Data clanku ---------------------------------------------------------------
+// -- Dáta článku ---------------------------------------------------------------
 
 $articles = [];
 
@@ -114,7 +114,7 @@ $articles[] = [
 HTML,
 ];
 
-// -- Vkladanie do databazy -----------------------------------------------------
+// -- Vkladanie do databázy -----------------------------------------------------
 
 $inserted    = 0;
 $updated     = 0;
@@ -141,7 +141,7 @@ foreach ($articles as $a) {
             'published_at' => $a['published_at'],
             'is_top'       => $a['is_top'],
         ]);
-        // rowCount(): 1 = novy INSERT, 2 = UPDATE existujuceho clanku, 0 = bez zmeny.
+        // rowCount(): 1 = nový INSERT, 2 = UPDATE existujúceho článku, 0 = bez zmeny.
         $rc = $stmt->rowCount();
         if ($rc === 0) {
             $skipped++;
@@ -150,7 +150,7 @@ foreach ($articles as $a) {
 
         $articleId = (int) $pdo->lastInsertId();
         if ($articleId === 0) {
-            // UPDATE: lastInsertId nemusi vratit existujuce id -> dohladaj podla slug.
+            // UPDATE: lastInsertId nemusí vrátiť existujúce id -> dohľadaj podľa slugu.
             $idStmt = $pdo->prepare("SELECT id FROM articles WHERE slug = :slug");
             $idStmt->execute(['slug' => $a['slug']]);
             $articleId = (int) $idStmt->fetchColumn();
@@ -158,7 +158,7 @@ foreach ($articles as $a) {
 
         if ($rc === 1) {
             $inserted++;
-            // Newsletter avizo LEN pri novom clanku (rc === 1), nikdy pri update.
+            // Newsletter avízo LEN pri novom článku (rc === 1), nikdy pri update.
             try {
                 $queuedTotal += enqueueArticleNewsletterEmails($pdo, $articleId);
             } catch (\Throwable $qe) {
@@ -178,7 +178,7 @@ foreach ($articles as $a) {
             error_log('add_article pdf gen error: ' . $pe->getMessage());
         }
     } catch (\PDOException $e) {
-        $errors[] = 'Chyba pri clanku "' . htmlspecialchars($a['title']) . '": ' . $e->getMessage();
+        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '“: ' . $e->getMessage();
         error_log('add_article migration error: ' . $e->getMessage());
     }
 }
@@ -188,11 +188,11 @@ $total = count($articles);
 if (php_sapi_name() === 'cli') {
     echo "\n";
     echo "----------------------------------------------\n";
-    echo 'Migracia clanku: ' . ($articles[0]['title']) . "\n";
+    echo 'Migrácia článku: ' . ($articles[0]['title']) . "\n";
     echo "----------------------------------------------\n";
-    echo "Vysledok: $inserted vlozenych, $updated aktualizovanych z $total clankov.\n";
-    echo "Preskoceni (bez zmeny):        $skipped\n";
-    echo "Zaradenych do fronty aviz:     $queuedTotal\n";
+    echo "Výsledok: $inserted vložených, $updated aktualizovaných z $total článkov.\n";
+    echo "Preskočení (bez zmeny):        $skipped\n";
+    echo "Zaradených do fronty avíz:     $queuedTotal\n";
     if (!empty($errors)) {
         echo "\nChyby:\n";
         foreach ($errors as $err) {
@@ -207,13 +207,13 @@ if (php_sapi_name() === 'cli') {
     <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Migracia clanku</title>
+      <title>Migrácia článku</title>
       <link rel="stylesheet" href="index.css?v=20260509-1&cb=<?= filemtime('index.css') ?>">
     </head>
     <body>
       <main class="container pt-60 pb-60">
         <div class="auth-container">
-          <h2>Migracia clanku</h2>
+          <h2>Migrácia článku</h2>
 
           <?php if (!empty($errors)): ?>
             <div class="alert alert-error">
@@ -222,9 +222,9 @@ if (php_sapi_name() === 'cli') {
           <?php endif; ?>
 
           <div class="alert <?= ($inserted + $updated) > 0 ? 'alert-success' : 'alert-info' ?>">
-            <p><strong>Vysledok:</strong> <?= $inserted ?> vlozenych, <?= $updated ?> aktualizovanych z <?= $total ?> clankov. <?= $skipped ?> bez zmeny.</p>
+            <p><strong>Výsledok:</strong> <?= $inserted ?> vložených, <?= $updated ?> aktualizovaných z <?= $total ?> článkov. <?= $skipped ?> bez zmeny.</p>
             <?php if ($queuedTotal > 0): ?>
-              <p>Do fronty aviz zaradenych: <strong><?= $queuedTotal ?></strong> e-mailov.</p>
+              <p>Do fronty avíz zaradených: <strong><?= $queuedTotal ?></strong> e-mailov.</p>
             <?php endif; ?>
           </div>
 
@@ -235,9 +235,9 @@ if (php_sapi_name() === 'cli') {
           </ul>
 
           <p class="mt-30">
-            <a href="index.php" class="btn-primary">← Spat na hlavnu stranku</a>
+            <a href="index.php" class="btn-primary">← Späť na hlavnú stránku</a>
             &nbsp;
-            <a href="admin_articles.php" class="btn-secondary-small">Sprava clankov</a>
+            <a href="admin_articles.php" class="btn-secondary-small">Správa článkov</a>
           </p>
         </div>
       </main>

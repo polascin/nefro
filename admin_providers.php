@@ -466,8 +466,8 @@ if (in_array($exportFmt, ['csv', 'json', 'vcard'], true)) {
     header('Content-Disposition: attachment; filename="poskytovatelia_' . $stamp . '.csv"');
     $out = fopen('php://output', 'w');
     fwrite($out, "\xEF\xBB\xBF");
-    fputcsv($out, ['Nazov', 'Typ', 'Odbornost', 'Lokalita', 'Adresa', 'Telefon', 'Email', 'Web',
-        'ICO', 'Kontaktna osoba', 'Priorita', 'Stav oslovenia', 'Datum a cas kontaktu', 'Aktivny', 'Poznamky', 'Zdroj', 'Posledna zmena']);
+    fputcsv($out, ['Názov', 'Typ', 'Odbornosť', 'Lokalita', 'Adresa', 'Telefón', 'Email', 'Web',
+        'IČO', 'Kontaktná osoba', 'Priorita', 'Stav oslovenia', 'Dátum a čas kontaktu', 'Aktívny', 'Poznámky', 'Zdroj', 'Posledná zmena']);
     foreach ($rows as $r) {
         fputcsv($out, [
             $r['name'],
@@ -483,7 +483,7 @@ if (in_array($exportFmt, ['csv', 'json', 'vcard'], true)) {
             (string) ($r['priority'] ?? ''),
             ppOutreachLabel((string) $r['outreach_status']),
             $r['contacted_at'],
-            ((int) $r['is_active'] === 1 ? 'ano' : 'nie'),
+            ((int) $r['is_active'] === 1 ? 'áno' : 'nie'),
             $r['notes'],
             $r['source'],
             $r['updated_at'] ?? '',
@@ -506,7 +506,7 @@ if ($exportFmt === 'history') {
     header('Content-Disposition: attachment; filename="historia_kontaktov_' . date('Y-m-d') . '.csv"');
     $out = fopen('php://output', 'w');
     fwrite($out, "\xEF\xBB\xBF");
-    fputcsv($out, ['Datum a cas', 'Poskytovatel', 'Typ', 'Lokalita', 'Kanal', 'Vysledok', 'Poznamka', 'Zaznamenane']);
+    fputcsv($out, ['Dátum a čas', 'Poskytovateľ', 'Typ', 'Lokalita', 'Kanál', 'Výsledok', 'Poznámka', 'Zaznamenané']);
     foreach ($hstmt as $r) {
         fputcsv($out, [
             $r['contacted_at'],
@@ -587,7 +587,7 @@ if (!empty($providers)) {
 }
 
 // ── Akvizičný prehľad (funnel + follow-up) — nezávislé od filtrov, len aktívni ──
-$FOLLOWUP_DAYS  = 14;   // prah „bez odozvy" v dňoch
+$FOLLOWUP_DAYS  = 14;   // prah „bez odozvy“ v dňoch
 $activeTotal    = 0;
 $funnelCounts   = [];   // outreach_status => počet (aktívni)
 $priorityCounts = [];   // priority (A/B/C/'') => počet (aktívni)

@@ -196,7 +196,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 }
 
 // Novo vygenerované záložné kódy na zobrazenie (len raz po aktivácii).
-// Načítavame až tu — po POST bloku — aby ich CSRF redirect nesmazal skôr, než sa zobrazia.
+// Načítavame až tu — po POST bloku — aby ich CSRF redirect nevymazal skôr, než sa zobrazia.
 $newPlainBackupCodes = $_SESSION['2fa_new_backup_codes'] ?? null;
 if ($newPlainBackupCodes !== null) {
     unset($_SESSION['2fa_new_backup_codes']);

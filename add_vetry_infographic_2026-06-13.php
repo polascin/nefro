@@ -3,9 +3,9 @@ declare(strict_types=1);
 /**
  * add_vetry_infographic_2026-06-13.php
  * ────────────────────────────────────────────────────────────────────────────
- * Vloží úvodnú infografiku do článku „Koľko vetrov denne je ešte normálne?".
+ * Vloží úvodnú infografiku do článku „Koľko vetrov denne je ešte normálne?“.
  * Obrázok sa pridá na začiatok obsahu → stane sa aj náhľadom karty v sekcii
- * „Pre pacientov". Idempotentné — ak už obrázok v obsahu je, nič nemení.
+ * „Pre pacientov“. Idempotentné — ak už obrázok v obsahu je, nič nemení.
  *
  * PREDPOKLAD: súbor img/vetry-denne-infografika.png je nahraný na serveri.
  *

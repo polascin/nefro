@@ -60,7 +60,7 @@ zaužívanom režime — spravidla trikrát týždenne — len na inom mieste. D
   <li><strong>Dohodnite termíny.</strong> So strediskom si potvrďte konkrétne dni a časy dialýz
       počas vášho pobytu.</li>
   <li><strong>Zabezpečte zdravotnú dokumentáciu.</strong> Vaše domovské stredisko pripraví výpis
-      s dialyzačným predpisom a aktuálnymi výsledkami (viď zoznam nižšie).</li>
+      s dialyzačným predpisom a aktuálnymi výsledkami (pozri zoznam nižšie).</li>
   <li><strong>Overte si úhradu.</strong> Pri poistencoch slovenských zdravotných poisťovní je liečba
       hradená; pri zahraničných pacientoch sa vopred informujte o spôsobe úhrady a potrebných
       dokladoch (napr. európsky preukaz poistenca).</li>

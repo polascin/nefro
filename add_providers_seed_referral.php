@@ -9,7 +9,7 @@ declare(strict_types=1);
  * ani neprepíše ručné úpravy v admin_providers.php.
  *
  * Pozn.: e-maily z oficiálnych stránok subjektov sú spoľahlivé; e-maily z katalógov
- * majú v poznámke „overiť". Čisté dialyzačné konkurencie (B. Braun Avitum, KMI, FMC)
+ * majú v poznámke „overiť“. Čisté dialyzačné konkurencie (B. Braun Avitum, KMI, FMC)
  * do siete odporúčateľov nezaraďujeme; Nemocnica Bory je uvedená kvôli jej internistom/
  * VLD/špecialistom (nie kvôli dialýze) — s poznámkou.
  *

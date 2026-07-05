@@ -5,7 +5,7 @@
  * Vloženie článku: Extrémne horúčavy a podceňovanie zdravotných rizík (nefrológia).
  * Autor projektu: MUDr. Ľubomír Polaščín. Slovenské spracovanie jedného zdroja
  * (Medscape). Menovaní ľudia v zdroji sú odborníci CITOVANÍ v texte (interviewovaní),
- * nie bylinoví autori → source_authors.php sa needopĺňa (viď pravidlo v ňom).
+ * nie bylinoví autori → source_authors.php sa nedopĺňa (pozri pravidlo v ňom).
  * Postup: git commit (SFTP deploy) → spustenie cez SSH (php …/add_…php).
  * ════════════════════════════════════════════════════════════════════════════
  */

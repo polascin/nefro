@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 /**
- * Partial: voliteľné pole „Typ používateľa" pre registráciu aj profil.
+ * Partial: voliteľné pole „Typ používateľa“ pre registráciu aj profil.
  *
  * Očakáva v scope volajúceho premennú $selectedUserType (string|null) — aktuálne zvolenú hodnotu.
  * Možnosti aj ich poradie definuje getUserTypeGroups() v db_config.php (jediný zdroj pravdy).

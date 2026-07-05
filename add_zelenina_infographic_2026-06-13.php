@@ -4,8 +4,8 @@ declare(strict_types=1);
  * add_zelenina_infographic_2026-06-13.php
  * ────────────────────────────────────────────────────────────────────────────
  * Vloží úvodnú infografiku do článku „Zelenina pre lepšie zdravie obličiek (CKD):
- * 5 druhov…". Obrázok sa pridá na začiatok obsahu → stane sa aj náhľadom karty
- * v sekcii „Pre pacientov". Obrázok je obalený odkazom (klik = nová karta).
+ * 5 druhov…“. Obrázok sa pridá na začiatok obsahu → stane sa aj náhľadom karty
+ * v sekcii „Pre pacientov“. Obrázok je obalený odkazom (klik = nová karta).
  * Idempotentné — ak už obrázok v obsahu je, nič nemení.
  *
  * PREDPOKLAD: súbor img/zelenina-infografika.png je nahraný na serveri.

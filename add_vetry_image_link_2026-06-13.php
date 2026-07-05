@@ -3,7 +3,7 @@ declare(strict_types=1);
 /**
  * add_vetry_image_link_2026-06-13.php
  * ────────────────────────────────────────────────────────────────────────────
- * Obalí infografiku v článku „Koľko vetrov denne je ešte normálne?" odkazom,
+ * Obalí infografiku v článku „Koľko vetrov denne je ešte normálne?“ odkazom,
  * ktorý po kliknutí otvorí plný obrázok v novej karte. Idempotentné.
  *
  * Spustenie cez SSH:

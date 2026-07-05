@@ -3,7 +3,7 @@
  * add_ai-nefrologia-hands-on-primer-klinicka-integracia_article.php
  * ════════════════════════════════════════════════════════════════════════════
  * Odborný článok — slovenské spracovanie zdroja „AI in Nephrology Hands-On
- * Primer“ (Kidney News, ASN). Idempotentný UPSERT (viď add_TEMPLATE_article.php).
+ * Primer“ (Kidney News, ASN). Idempotentný UPSERT (pozri add_TEMPLATE_article.php).
  * Pôvodní autori zdroja sú v source_authors.php (mapa slug → mená).
  * ════════════════════════════════════════════════════════════════════════════
  */

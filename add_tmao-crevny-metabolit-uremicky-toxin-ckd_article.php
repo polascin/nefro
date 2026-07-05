@@ -13,7 +13,7 @@
  * (PubMed/Crossref, autori a DOI overené pri tvorbe), nie spracovanie JEDNÉHO
  * zdrojového článku — preto ostáva pod autorom projektu a do source_authors.php
  * sa NEpridáva (v súlade s pravidlom v tom súbore). Všetky zdroje sú uvedené
- * s autormi a DOI v sekcii „Zdroje" na konci obsahu.
+ * s autormi a DOI v sekcii „Zdroje“ na konci obsahu.
  */
 
 // Ochrana – len admin alebo CLI

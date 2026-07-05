@@ -4,7 +4,7 @@
  * ════════════════════════════════════════════════════════════════════════════
  * Vloženie článku: Postmarketingové bezpečnostné zlyhania liekov (FDA/EMA).
  * Autor projektu: MUDr. Ľubomír Polaščín. Pôvodná syntéza (nie preklad jedného
- * zdroja) → source_authors.php sa needopĺňa.
+ * zdroja) → source_authors.php sa nedopĺňa.
  * Postup: git commit (SFTP deploy) → spustenie cez SSH (php …/add_…php).
  * ════════════════════════════════════════════════════════════════════════════
  */
