@@ -285,7 +285,7 @@ $totpUri = $pendingSecret ? getTotpUri($pendingSecret, (string) ($user['email'] 
                 <code id="totp-secret-display" class="totp-secret"><?= htmlspecialchars(formatTotpSecret($pendingSecret)) ?></code>
                 <button type="button" id="copy-secret-btn" class="btn-secondary totp-copy-btn">Kopírovať kľúč</button>
                 <p class="avatar-upload-hint">
-                  V aplikácii zvoľte <em>„Pridať účet → Zadať kód ručne"</em> a vložte kľúč bez medzier.
+                  V aplikácii zvoľte <em>„Pridať účet → Zadať kód ručne“</em> a vložte kľúč bez medzier.
                 </p>
               </div>
             </div>
