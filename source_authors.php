@@ -41,6 +41,7 @@ function getSourceArticleAuthors(): array {
         'farmakologicka-liecba-obezity-pokrocile-ckd-dialyza' => ['Pooja Budhiraja', 'Babak J. Orandi'],
         'finerenon-ckm-syndrom-dm2-ckd-fidelity' => ['Kevin Bryan Lo', 'John W Ostrominski', 'Yasuhiro Hamatani', 'Brian L Claggett', 'Rajiv Agarwal', 'Stefan D Anker', 'Gerasimos Filippatos', 'Peter Rossing', 'Luis M Ruilope', 'Bertram Pitt', 'Alexandros Briasoulis', 'Kimon Stamatelopoulos', 'Meike Brinker', 'Patrick Schloemer', 'Andrea Glasauer', 'Scott D Solomon', 'Muthiah Vaduganathan'],
         'finerenon-zakladna-liecba-ckd-glomerularne-ochorenia' => ['Brendon L. Neuen', 'Hiddo J.L. Heerspink', 'Vlado Perkovic'],
+        'frailty-ckd-vyziva-pohyb-stisk-ruky' => ['Fang-Ru Yueh', 'Dongjuan Xu', 'Huan-Fang Lee', 'Junne-Ming Sung', 'Miaofen Yen'],
         'glp1-era-novy-model-starostlivosti-o-obezitu-nefrologia' => ['Manuela Callari'],
         'glp1-kompulzivne-spravanie-food-noise-nefrologia' => ['Eric Spitznagel'],
         'iga-nefropatia-algoritmus-kdigo-2025-kdoqi' => ['Isabelle Ayoub', 'Gaia Coppock', 'Shikha Wadhwani', 'Timothy Yau'],
