@@ -5554,11 +5554,14 @@ mark.search-hl {
    RÝCHLA NAVIGÁCIA NA KALKULAČKY
    ============================================================ */
 .quick-nav-calculators {
-    background: linear-gradient(135deg, #0055a5 0%, #003d7a 100%);
+    background: rgba(255, 255, 255, 0.92);
     padding: 1.5rem 0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
     margin-bottom: 2rem;
-    border-bottom: 3px solid #0043a1;
+    border-top: 1px solid rgba(148, 163, 184, 0.24);
+    border-bottom: 1px solid rgba(37, 99, 235, 0.22);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .quick-nav-list {
@@ -5572,28 +5575,59 @@ mark.search-hl {
 }
 
 .quick-nav-calculators a {
-    color: #fff;
+    color: #0f172a;
     text-decoration: none;
     font-size: 0.95rem;
-    font-weight: 500;
+    font-weight: 650;
     padding: 0.5rem 1rem;
     border-radius: 6px;
     transition: all 0.3s ease;
     display: inline-block;
-    background: rgba(255, 255, 255, 0.15);
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
 }
 
 .quick-nav-calculators a:hover {
-    background: rgba(255, 255, 255, 0.3);
+    background: #dbeafe;
+    border-color: #60a5fa;
+    color: #1d4ed8;
     transform: translateY(-2px);
 }
 
 .quick-nav-calculators a.active {
-    background: rgba(255, 255, 255, 0.95);
-    color: #003d7a;
+    background: #1d4ed8;
+    border-color: #1d4ed8;
+    color: #fff;
     font-weight: 700;
     transform: none;
     cursor: default;
+}
+
+[data-theme="dark"] .quick-nav-calculators {
+    background: linear-gradient(135deg, #0055a5 0%, #003d7a 100%);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.28);
+    border-top: 1px solid rgba(147, 197, 253, 0.16);
+    border-bottom: 3px solid #0043a1;
+}
+
+[data-theme="dark"] .quick-nav-calculators a {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.16);
+    box-shadow: none;
+}
+
+[data-theme="dark"] .quick-nav-calculators a:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.32);
+    color: #fff;
+}
+
+[data-theme="dark"] .quick-nav-calculators a.active {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: rgba(255, 255, 255, 0.95);
+    color: #003d7a;
 }
 
 /* Mobilný dizajn */
