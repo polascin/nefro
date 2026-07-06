@@ -6720,6 +6720,26 @@ mark.search-hl {
     color: var(--primary-color);
 }
 
+.dieta-print-header {
+    display: none;
+}
+
+.tool-export-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-top: 18px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border-color);
+}
+
+.tool-export-status {
+    min-height: 1.3em;
+    color: var(--text-secondary);
+    font-size: 0.88rem;
+}
+
 .dieta-error {
     margin-top: 10px;
     color: var(--error-color);
@@ -6743,4 +6763,95 @@ mark.search-hl {
     height: 18px;
     flex: 0 0 auto;
     cursor: pointer;
+}
+
+@media print {
+    .tool-page--dieta {
+        background: #fff !important;
+        color: #000 !important;
+    }
+
+    .tool-page--dieta .auth-container {
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+    }
+
+    .tool-page--dieta .auth-container > h2,
+    .tool-page--dieta .auth-subtitle,
+    .tool-page--dieta .auth-container > p,
+    .tool-page--dieta #dieta-form,
+    .tool-page--dieta .dieta-reference-section,
+    .tool-page--dieta .dieta-sources-section,
+    .tool-page--dieta .calc-disclaimer {
+        display: none !important;
+    }
+
+    .tool-page--dieta #dieta-result {
+        display: block !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .tool-page--dieta .dieta-print-header {
+        display: block !important;
+        margin: 0 0 8mm !important;
+        padding-bottom: 4mm !important;
+        border-bottom: 2px solid #000 !important;
+        color: #000 !important;
+        page-break-inside: avoid;
+    }
+
+    .tool-page--dieta .dieta-print-header h2 {
+        margin: 0 0 2mm !important;
+        color: #000 !important;
+        font-size: 16pt !important;
+        line-height: 1.25 !important;
+    }
+
+    .tool-page--dieta .dieta-print-header p {
+        margin: 0 !important;
+        color: #222 !important;
+        font-size: 9.5pt !important;
+        line-height: 1.45 !important;
+    }
+
+    .tool-page--dieta .tool-outcome {
+        margin: 0 0 6mm !important;
+        padding: 5mm !important;
+        border: 1px solid #999 !important;
+        border-left: 4px solid #000 !important;
+        border-radius: 0 !important;
+        background: #fff !important;
+        page-break-inside: avoid;
+    }
+
+    .tool-page--dieta .tool-outcome__badge {
+        color: #000 !important;
+        background: #fff !important;
+        border: 1px solid #000 !important;
+    }
+
+    .tool-page--dieta .tool-outcome__title,
+    .tool-page--dieta .tool-result-section__heading {
+        color: #000 !important;
+    }
+
+    .tool-page--dieta .tool-outcome__summary,
+    .tool-page--dieta .tool-step__text,
+    .tool-page--dieta .tool-outcome__note {
+        color: #222 !important;
+    }
+
+    .tool-page--dieta .tool-result-section {
+        margin: 0 0 4mm !important;
+        padding: 3mm 0 !important;
+        border-bottom: 1px solid #ddd !important;
+        page-break-inside: avoid;
+    }
+
+    .tool-page--dieta .dieta-result__value {
+        color: #000 !important;
+        font-size: 12pt !important;
+    }
 }

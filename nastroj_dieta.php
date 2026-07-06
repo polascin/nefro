@@ -67,7 +67,7 @@ $baseUrl = "https://nefro.polascin.net/";
   include "head_meta.php";
   ?>
 </head>
-<body>
+<body class="tool-page tool-page--dieta">
     <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>
 
     <?php
@@ -127,7 +127,7 @@ $baseUrl = "https://nefro.polascin.net/";
                     </div>
                 </form>
 
-                <div id="dieta-result" class="tool-mount" role="status" aria-live="polite" aria-label="Vypočítané cieľové limity"></div>
+                <div id="dieta-result" class="tool-mount dieta-result-mount" role="status" aria-live="polite" aria-label="Vypočítané cieľové limity"></div>
 
                 <noscript>
                     <div class="alert alert-error">
@@ -137,7 +137,7 @@ $baseUrl = "https://nefro.polascin.net/";
                 </noscript>
 
                 <!-- Statická referencia -->
-                <section class="form-section" aria-labelledby="ref-heading">
+                <section class="form-section dieta-reference-section" aria-labelledby="ref-heading">
                     <h3 id="ref-heading">Referenčné cieľové limity (KDOQI 2020)</h3>
                     <table class="tool-table">
                         <caption class="visually-hidden">Cieľové denné limity živín podľa kategórie</caption>
@@ -171,7 +171,7 @@ $baseUrl = "https://nefro.polascin.net/";
 
             <?php include "calculator_disclaimer.php"; ?>
 
-            <section class="form-section" aria-labelledby="zdroje-heading">
+            <section class="form-section dieta-sources-section" aria-labelledby="zdroje-heading">
                 <h3 id="zdroje-heading">Zdroje</h3>
                 <ul class="tool-step__list">
                     <li>Ikizler TA, et al. KDOQI Clinical Practice Guideline for Nutrition in CKD: 2020 Update. <em>Am J Kidney Dis.</em> 2020;76(3 Suppl 1):S1–S107.</li>
