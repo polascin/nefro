@@ -5659,6 +5659,25 @@ mark.search-hl {
     max-width: 800px;
     margin: 0 auto;
     padding: 0 0 3rem;
+    --disc-surface: #ffffff;
+    --disc-surface-muted: #f8fafc;
+    --disc-surface-reply: #eef6ff;
+    --disc-text: #0f172a;
+    --disc-text-muted: #334155;
+    --disc-text-subtle: #475569;
+    --disc-border: #cbd5e1;
+    --disc-border-soft: #dbeafe;
+}
+
+[data-theme="dark"] .disc-page {
+    --disc-surface: #1e293b;
+    --disc-surface-muted: #0f172a;
+    --disc-surface-reply: rgba(255, 255, 255, 0.04);
+    --disc-text: #f8fafc;
+    --disc-text-muted: #cbd5e1;
+    --disc-text-subtle: #94a3b8;
+    --disc-border: rgba(255, 255, 255, 0.1);
+    --disc-border-soft: rgba(255, 255, 255, 0.08);
 }
 
 /* Uvítacia správa */
@@ -5706,14 +5725,15 @@ mark.search-hl {
 
 /* Výzva na prihlásenie */
 .disc-login-prompt {
-    background: var(--bg-secondary);
-    border: 1px solid var(--border-color);
+    background: var(--disc-surface);
+    border: 1px solid var(--disc-border);
     border-radius: 10px;
     padding: 1.25rem 1.5rem;
     margin-bottom: 2rem;
-    color: var(--text-secondary);
+    color: var(--disc-text-muted);
     font-size: 0.95rem;
     line-height: 1.6;
+    box-shadow: var(--shadow-sm);
 }
 
 .disc-login-prompt a {
@@ -5728,8 +5748,8 @@ mark.search-hl {
 
 /* Formulár nového príspevku */
 .disc-new-post {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
+    background: var(--disc-surface);
+    border: 1px solid var(--disc-border);
     border-radius: 12px;
     padding: 1.5rem;
     margin-bottom: 2rem;
@@ -5740,7 +5760,7 @@ mark.search-hl {
     font-size: 1.1rem;
     font-weight: 600;
     margin: 0 0 1rem;
-    color: var(--text-primary);
+    color: var(--disc-text);
 }
 
 /* Formuláre */
@@ -5752,23 +5772,32 @@ mark.search-hl {
     display: block;
     font-size: 0.875rem;
     font-weight: 500;
-    color: var(--text-secondary);
+    color: var(--disc-text-muted);
     margin-bottom: 0.4rem;
 }
 
 .disc-form__textarea {
     width: 100%;
     padding: 0.75rem 1rem;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--disc-border);
     border-radius: 8px;
     font-size: 0.95rem;
     font-family: inherit;
-    color: var(--text-primary);
-    background: var(--surface-color);
+    color: var(--disc-text);
+    background: var(--disc-surface);
     resize: vertical;
     transition: var(--transition-fast);
     box-sizing: border-box;
     line-height: 1.5;
+}
+
+.disc-form__textarea::placeholder {
+    color: #64748b;
+    opacity: 1;
+}
+
+[data-theme="dark"] .disc-form__textarea::placeholder {
+    color: #94a3b8;
 }
 
 .disc-form__textarea:focus {
@@ -5783,7 +5812,7 @@ mark.search-hl {
 
 .disc-form__counter {
     font-size: 0.8rem;
-    color: var(--text-tertiary);
+    color: var(--disc-text-subtle);
     text-align: right;
     margin-top: 0.3rem;
     transition: color 0.15s;
@@ -5813,7 +5842,7 @@ mark.search-hl {
 .disc-posts__heading {
     font-size: 1.2rem;
     font-weight: 700;
-    color: var(--text-primary);
+    color: var(--disc-text);
     margin-bottom: 1.25rem;
     display: flex;
     align-items: baseline;
@@ -5823,15 +5852,16 @@ mark.search-hl {
 .disc-posts__count {
     font-size: 0.95rem;
     font-weight: 400;
-    color: var(--text-tertiary);
+    color: var(--disc-text-subtle);
 }
 
 .disc-empty {
-    color: var(--text-tertiary);
+    color: var(--disc-text-muted);
     font-size: 0.95rem;
     padding: 1.5rem;
     text-align: center;
-    background: var(--bg-secondary);
+    background: var(--disc-surface);
+    border: 1px solid var(--disc-border);
     border-radius: 10px;
 }
 
@@ -5847,8 +5877,8 @@ mark.search-hl {
 
 /* Jednotlivý príspevok */
 .disc-post {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
+    background: var(--disc-surface);
+    border: 1px solid var(--disc-border);
     border-radius: 12px;
     padding: 1.25rem 1.5rem 1rem;
     box-shadow: var(--shadow-sm);
@@ -5874,8 +5904,8 @@ mark.search-hl {
     border-radius: 50%;
     object-fit: cover;
     flex-shrink: 0;
-    border: 2px solid var(--border-color);
-    background: var(--bg-secondary);
+    border: 2px solid var(--disc-border);
+    background: var(--disc-surface-muted);
 }
 
 .disc-post__avatar--sm {
@@ -5894,7 +5924,7 @@ mark.search-hl {
 .disc-post__author {
     font-size: 0.9rem;
     font-weight: 600;
-    color: var(--text-primary);
+    color: var(--disc-text);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -5902,13 +5932,13 @@ mark.search-hl {
 
 .disc-post__date {
     font-size: 0.78rem;
-    color: var(--text-tertiary);
+    color: var(--disc-text-subtle);
 }
 
 .disc-post__permalink {
     margin-left: auto;
     font-size: 0.85rem;
-    color: var(--text-tertiary);
+    color: var(--disc-text-subtle);
     text-decoration: none;
     opacity: 0.4;
     flex-shrink: 0;
@@ -5926,7 +5956,7 @@ mark.search-hl {
 /* Obsah príspevku */
 .disc-post__body {
     font-size: 0.95rem;
-    color: var(--text-primary);
+    color: var(--disc-text);
     line-height: 1.65;
     word-break: break-word;
     white-space: pre-wrap;
@@ -5938,7 +5968,7 @@ mark.search-hl {
 .disc-replies {
     margin-top: 0.75rem;
     margin-left: 1.5rem;
-    border-left: 3px solid var(--primary-light);
+    border-left: 3px solid #60a5fa;
     padding-left: 1rem;
     display: flex;
     flex-direction: column;
@@ -5946,7 +5976,8 @@ mark.search-hl {
 }
 
 .disc-reply {
-    background: var(--bg-secondary);
+    background: var(--disc-surface-reply);
+    border: 1px solid var(--disc-border-soft);
     border-radius: 8px;
     padding: 0.85rem 1rem 0.75rem;
 }
@@ -5960,16 +5991,16 @@ mark.search-hl {
 .disc-reply-section {
     margin-top: 0.75rem;
     padding-top: 0.75rem;
-    border-top: 1px solid var(--border-color);
+    border-top: 1px solid var(--disc-border);
 }
 
 .disc-reply-toggle {
-    background: none;
-    border: 1px solid var(--btn-outline-border);
+    background: var(--disc-surface-muted);
+    border: 1px solid var(--disc-border);
     border-radius: 6px;
     padding: 0.35rem 0.9rem;
     font-size: 0.85rem;
-    color: var(--text-secondary);
+    color: var(--disc-text-muted);
     cursor: pointer;
     font-family: inherit;
     font-weight: 500;
@@ -5977,14 +6008,21 @@ mark.search-hl {
 }
 
 .disc-reply-toggle:hover {
-    background: var(--btn-outline-hover-bg);
-    border-color: var(--btn-outline-hover-border);
+    background: #dbeafe;
+    border-color: #93c5fd;
     color: var(--primary-color);
+}
+
+[data-theme="dark"] .disc-reply-toggle:hover {
+    background: rgba(59, 130, 246, 0.16);
+    border-color: rgba(147, 197, 253, 0.35);
+    color: #bfdbfe;
 }
 
 .disc-reply-form-wrap {
     margin-top: 0.85rem;
-    background: var(--bg-secondary);
+    background: var(--disc-surface-muted);
+    border: 1px solid var(--disc-border);
     border-radius: 8px;
     padding: 1rem;
 }
@@ -6022,10 +6060,12 @@ mark.search-hl {
 
 [data-theme="dark"] .disc-reply-form-wrap {
     background: rgba(255,255,255,0.04);
+    border-color: transparent;
 }
 
 [data-theme="dark"] .disc-reply {
     background: rgba(255,255,255,0.04);
+    border-color: transparent;
 }
 
 /* ── Newsletter CTA ────────────────────────────────────────────────────────── */
