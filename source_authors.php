@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 // Ochrana pred priamym prístupom k súboru
@@ -76,6 +77,7 @@ function getSourceArticleAuthors(): array {
         'ttv-biomarker-imunosupresia-transplantacia-oblicky' => ['Gregor Bond', 'Frederik Haupenthal', 'Felix Herkner', 'Sebastian Kapps', 'Konstantin Doberer', 'Jette Rahn', 'Carole Janis', 'Marta del Álamo', 'Georg Melzer-Venturi', 'Fabrizio Maggi', 'Hannes Neuwirt', 'Kathrin Eller', 'Daniel Cejka', 'Christian Hugo', 'Miriam Banas', 'Klemens Budde', 'Ondřej Viklický', 'Paolo Malvezzi', 'Sophie Caillard', 'Joris Rotmans', 'Jip Jonker', 'Isabel Beneyto', 'David Navarro', 'David Rodriguez-Arias', 'Heinz Regele', 'Matthias Vossen', 'Franz König'],
         'udrzatelna-peritonealna-dialyza-pacienti-zelena-nefrologia' => ['Filipa Trigo', 'João Bessa', 'Joana Tavares', 'Rita Alves', 'Maria João Carvalho', 'Hernâni Gonçalves', 'Paulo Santos', 'Anabela Rodrigues'],
         'umela-inteligencia-nefrologia-co-vieme-limity' => ['Prabhat Singh', 'Lokesh Goyal', 'Deobrat C Mallick', 'Salim R Surani', 'Nayanjyoti Kaushik', 'Deepak Chandramohan', 'Prathap K Simhadri'],
+        'umela-inteligencia-sucha-hmotnost-hemodialyza' => ['Hae Ri Kim', 'Hong Jin Bae', 'Jae Wan Jeon', 'Young Rok Ham', 'Ki Ryang Na', 'Kang Wook Lee', 'Yun Kyong Hyon', 'Dae Eun Choi'],
         'vasopresin-nezavisla-cesta-regulacie-vody-adpkd' => ['Mohamad Hadla', 'Jean Marc Mardirossian', 'Daniel G. Bichet', 'Abdul Hamid Borghol', 'Georges Abboud', 'Ahmad Ghanem', 'Eduardo N. Chini', 'Peter C. Harris', 'Vicente E. Torres', 'Seth L. Alper', 'Volker Vallon', 'Fouad T. Chebib'],
         'victory-vitamin-c-tazke-popaleniny-nefrologicke-signaly' => ['Christian Stoppe', 'Aileen Hill', 'Leopoldo C. Cancio', 'Andrew G. Day', 'Kaitlin A. Pruskowski', 'Alexis F. Turgeon', 'Daren K. Heyland'],
     ];
