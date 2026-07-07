@@ -44,9 +44,9 @@ $articles[] = [
 <table>
   <thead>
     <tr>
-      <th>Cieľový ukazovateľ (108. týždeň)</th>
-      <th>Sparsentan</th>
-      <th>Irbesartan</th>
+      <th scope="col">Cieľový ukazovateľ (108. týždeň)</th>
+      <th scope="col">Sparsentan</th>
+      <th scope="col">Irbesartan</th>
     </tr>
   </thead>
   <tbody>
@@ -106,9 +106,9 @@ $articles[] = [
 <table>
   <thead>
     <tr>
-      <th>Liek</th>
-      <th>Mechanizmus</th>
-      <th>Stav</th>
+      <th scope="col">Liek</th>
+      <th scope="col">Mechanizmus</th>
+      <th scope="col">Stav</th>
     </tr>
   </thead>
   <tbody>
@@ -159,9 +159,9 @@ $articles[] = [
 <table>
   <thead>
     <tr>
-      <th>Cieľový ukazovateľ</th>
-      <th>Inhibítory SGLT2</th>
-      <th>Agonisty GLP-1</th>
+      <th scope="col">Cieľový ukazovateľ</th>
+      <th scope="col">Inhibítory SGLT2</th>
+      <th scope="col">Agonisty GLP-1</th>
     </tr>
   </thead>
   <tbody>
@@ -194,8 +194,8 @@ $articles[] = [
 <table>
   <thead>
     <tr>
-      <th>Cieľový ukazovateľ</th>
-      <th>Finerénon vs. spironolaktón</th>
+      <th scope="col">Cieľový ukazovateľ</th>
+      <th scope="col">Finerénon vs. spironolaktón</th>
     </tr>
   </thead>
   <tbody>

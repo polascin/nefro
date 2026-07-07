@@ -60,12 +60,12 @@ $articles[] = [
 <table>
   <thead>
     <tr>
-      <th>Liek (INN)</th>
-      <th>Indikácia</th>
-      <th>Rok schválenia</th>
-      <th>Závažné riziká</th>
-      <th>Regulačné opatrenie</th>
-      <th>Istota kauzality</th>
+      <th scope="col">Liek (INN)</th>
+      <th scope="col">Indikácia</th>
+      <th scope="col">Rok schválenia</th>
+      <th scope="col">Závažné riziká</th>
+      <th scope="col">Regulačné opatrenie</th>
+      <th scope="col">Istota kauzality</th>
     </tr>
   </thead>
   <tbody>
@@ -442,8 +442,8 @@ $articles[] = [
 <table>
   <thead>
     <tr>
-      <th>Aspekt</th>
-      <th>Zistenie</th>
+      <th scope="col">Aspekt</th>
+      <th scope="col">Zistenie</th>
     </tr>
   </thead>
   <tbody>

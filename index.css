@@ -6500,7 +6500,6 @@ mark.search-hl {
     font-size: 1.2rem;
     line-height: 1.35;
     color: var(--text-primary);
-    outline: none;
 }
 
 .tool-step__text {
@@ -6614,7 +6613,13 @@ mark.search-hl {
     margin: 0 0 6px;
     font-size: 1.25rem;
     color: var(--text-primary);
-    outline: none;
+}
+
+.tool-step__title:focus,
+.tool-outcome__title:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 4px;
+    border-radius: 6px;
 }
 
 .tool-outcome__summary {

@@ -164,9 +164,9 @@ $articles[] = [
 <table>
   <thead>
     <tr>
-      <th>Infekcia</th>
-      <th>Kedy je indikované</th>
-      <th>Schéma podľa prehľadu</th>
+      <th scope="col">Infekcia</th>
+      <th scope="col">Kedy je indikované</th>
+      <th scope="col">Schéma podľa prehľadu</th>
     </tr>
   </thead>
   <tbody>
@@ -223,9 +223,9 @@ $articles[] = [
 <table>
   <thead>
     <tr>
-      <th>Infekcia</th>
-      <th>Kedy začať po transplantácii</th>
-      <th>Schéma podľa prehľadu</th>
+      <th scope="col">Infekcia</th>
+      <th scope="col">Kedy začať po transplantácii</th>
+      <th scope="col">Schéma podľa prehľadu</th>
     </tr>
   </thead>
   <tbody>
@@ -290,13 +290,17 @@ HTML,
 // ── Vkladanie do databázy ──────────────────────────────────────────────────────
 
 $inserted    = 0;
+$updated     = 0;
 $skipped     = 0;
 $errors      = [];
 $queuedTotal = 0;
 
 $stmt = $pdo->prepare(
-    "INSERT IGNORE INTO articles (title, slug, author, content, excerpt, published_at, is_top, is_published)
-     VALUES (:title, :slug, :author, :content, :excerpt, :published_at, :is_top, 1)"
+    "INSERT INTO articles (title, slug, author, content, excerpt, published_at, is_top, is_published)
+     VALUES (:title, :slug, :author, :content, :excerpt, :published_at, :is_top, 1)
+     ON DUPLICATE KEY UPDATE
+        title = VALUES(title), author = VALUES(author),
+        content = VALUES(content), excerpt = VALUES(excerpt), is_top = VALUES(is_top)"
 );
 
 foreach ($articles as $a) {
@@ -310,26 +314,40 @@ foreach ($articles as $a) {
             'published_at' => $a['published_at'],
             'is_top'       => $a['is_top'],
         ]);
-        if ($stmt->rowCount() > 0) {
+        // rowCount(): 1 = nový INSERT, 2 = UPDATE existujúceho článku, 0 = bez zmeny.
+        $rc = $stmt->rowCount();
+        if ($rc === 0) {
+            $skipped++;
+            continue;
+        }
+
+        $articleId = (int) $pdo->lastInsertId();
+        if ($articleId === 0) {
+            $idStmt = $pdo->prepare("SELECT id FROM articles WHERE slug = :slug");
+            $idStmt->execute(['slug' => $a['slug']]);
+            $articleId = (int) $idStmt->fetchColumn();
+        }
+
+        if ($rc === 1) {
             $inserted++;
-            $newId = (int) $pdo->lastInsertId();
             try {
-                $queuedTotal += enqueueArticleNewsletterEmails($pdo, $newId);
+                $queuedTotal += enqueueArticleNewsletterEmails($pdo, $articleId);
             } catch (\Throwable $qe) {
                 error_log('add_article newsletter enqueue error: ' . $qe->getMessage());
             }
-            // Vygeneruj PDF verziu článku (bonus na stiahnutie pre prihlásených).
-            // Beží len ak je dostupné wkhtmltopdf (na produkčnom serveri áno).
-            try {
-                $pdfRes = generateArticlePdf($pdo, $a + ['id' => $newId], true);
-                if (!$pdfRes['ok'] && !empty($pdfRes['error'])) {
-                    error_log('add_article pdf gen: ' . $pdfRes['error']);
-                }
-            } catch (\Throwable $pe) {
-                error_log('add_article pdf gen error: ' . $pe->getMessage());
-            }
         } else {
-            $skipped++;
+            $updated++;
+        }
+
+        // Vygeneruj/preregeneruj PDF verziu článku (bonus na stiahnutie pre prihlásených).
+        // Beží len ak je dostupné wkhtmltopdf (na produkčnom serveri áno).
+        try {
+            $pdfRes = generateArticlePdf($pdo, $a + ['id' => $articleId], true);
+            if (!$pdfRes['ok'] && !empty($pdfRes['error'])) {
+                error_log('add_article pdf gen: ' . $pdfRes['error']);
+            }
+        } catch (\Throwable $pe) {
+            error_log('add_article pdf gen error: ' . $pe->getMessage());
         }
     } catch (\PDOException $e) {
         $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '“: ' . $e->getMessage();
@@ -344,8 +362,8 @@ if (php_sapi_name() === 'cli') {
     echo "──────────────────────────────────────────────────────\n";
     echo "Migrácia článku: " . ($articles[0]['title']) . "\n";
     echo "──────────────────────────────────────────────────────\n";
-    echo "Výsledok: $inserted z $total článkov bolo vložených.\n";
-    echo "Preskočení (slug už existuje): $skipped\n";
+    echo "Výsledok: $inserted vložených, $updated aktualizovaných z $total článkov.\n";
+    echo "Preskočení (bez zmeny):        $skipped\n";
     echo "Zaradených do fronty avíz:     $queuedTotal\n";
     if (!empty($errors)) {
         echo "\nChyby:\n";
@@ -375,8 +393,8 @@ if (php_sapi_name() === 'cli') {
             </div>
           <?php endif; ?>
 
-          <div class="alert <?= $inserted > 0 ? 'alert-success' : 'alert-info' ?>">
-            <p><strong>Výsledok:</strong> <?= $inserted ?> z <?= $total ?> článkov bolo vložených. <?= $skipped ?> preskočených (slug už existuje).</p>
+          <div class="alert <?= ($inserted + $updated) > 0 ? 'alert-success' : 'alert-info' ?>">
+            <p><strong>Výsledok:</strong> <?= $inserted ?> vložených, <?= $updated ?> aktualizovaných z <?= $total ?> článkov. <?= $skipped ?> bez zmeny.</p>
             <?php if ($queuedTotal > 0): ?>
               <p>Do fronty avíz zaradených: <strong><?= $queuedTotal ?></strong> e-mailov.</p>
             <?php endif; ?>

@@ -115,10 +115,10 @@ $articles[] = [
 <table class="admin-articles-table">
   <thead>
     <tr>
-      <th>Metóda</th>
-      <th>Silná stránka</th>
-      <th>Slabé miesto</th>
-      <th>Najlepšie použitie</th>
+      <th scope="col">Metóda</th>
+      <th scope="col">Silná stránka</th>
+      <th scope="col">Slabé miesto</th>
+      <th scope="col">Najlepšie použitie</th>
     </tr>
   </thead>
   <tbody>
