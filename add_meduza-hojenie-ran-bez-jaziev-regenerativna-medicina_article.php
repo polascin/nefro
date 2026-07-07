@@ -42,6 +42,11 @@ $articles[] = [
 
 <p>Pre biomedicínu je zaujímavé najmä to, že nejde o úplne exotický mechanizmus vzdialený človeku. Základné prvky pozorované pri hojení v <em>Clytia hemisphaerica</em> – lamelipódiá, aktomyozínový kontrakčný aparát, kolektívna migrácia buniek a úloha bazálnej membrány – patria k všeobecným mechanizmom epitelovej biológie. Hodnota modelu preto nespočíva v priamom návode na liečbu ľudských rán, ale v možnosti sledovať základnú bunkovú mechaniku bez prekrytia cievnou a zápalovou odpoveďou cicavcov.</p>
 
+<figure>
+  <img src="img/nefro_172.webp" alt="Ilustrácia epitelového defektu s bunkami, bazálnou membránou a medúzou Clytia hemisphaerica ako modelom hojenia bez jazvenia" loading="lazy" decoding="async">
+  <figcaption>Jednoduchý epitelový model umožňuje oddeliť základnú mechaniku uzáveru rany od zložitej cicavčej zápalovej a cievnej odpovede.</figcaption>
+</figure>
+
 <h2>Prečo práve <em>Clytia hemisphaerica</em></h2>
 
 <p><em>Clytia hemisphaerica</em> je drobný, priehľadný hydrozoán. Medúzové štádium má veľkosť malej mince a jednoduchá stavba povrchového epitelu umožňuje pozorovať živé bunky v reálnom čase. Pri poranení tak možno priamo sledovať, ako sa bunky na okraji defektu rozhodujú medzi plazením po podklade, kontrakciou okraja rany a zapojením širšieho bunkového listu.</p>
@@ -69,6 +74,11 @@ $articles[] = [
 <h2>Tri mechanizmy epitelového uzáveru</h2>
 
 <p>Autori analyzovali hojenie naprieč rôznymi typmi a veľkosťami defektov. Výsledkom je zjednotený model, podľa ktorého sa tri mechanizmy kombinujú v predvídateľnom poradí a s významnou mierou redundancie.</p>
+
+<figure>
+  <img src="img/nefro_173.webp" alt="Schéma mechanizmov epitelového hojenia: lamelipodiálne plazenie, aktomyozínová kontrakcia a kolektívna migrácia buniek" loading="lazy" decoding="async">
+  <figcaption>Tri koordinované mechanizmy epitelového uzáveru: lamelipodiálne plazenie po bazálnej membráne, aktomyozínová kontrakcia a kolektívna migrácia bunkového listu.</figcaption>
+</figure>
 
 <h3>1. Lamelipodiálne plazenie buniek</h3>
 
