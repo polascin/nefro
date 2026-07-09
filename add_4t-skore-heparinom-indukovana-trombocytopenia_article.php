@@ -69,6 +69,8 @@ $articles[] = [
 
 <p>Nasledujúca tabuľka slúži ako praktická orientačná pomôcka. V konkrétnej situácii treba jednotlivé položky hodnotiť podľa celého klinického kontextu, nie iba podľa jedného laboratórneho čísla.</p>
 
+<div class="pdf-page-break" aria-hidden="true"></div>
+
 <table>
   <thead>
     <tr>
