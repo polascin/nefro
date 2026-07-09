@@ -67,6 +67,8 @@ $articles[] = [
 
 <p>4T skóre hodnotí štyri klinické oblasti. Každá sa boduje 0, 1 alebo 2 bodmi. Celkový výsledok sa pohybuje od 0 do 8 bodov.</p>
 
+<p>Nasledujúca tabuľka slúži ako praktická orientačná pomôcka. V konkrétnej situácii treba jednotlivé položky hodnotiť podľa celého klinického kontextu, nie iba podľa jedného laboratórneho čísla.</p>
+
 <table>
   <thead>
     <tr>
