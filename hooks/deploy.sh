@@ -45,6 +45,13 @@ REPO_ROOT=$(git rev-parse --show-toplevel 2>/dev/null) || {
 }
 cd "$REPO_ROOT" || exit 1
 
+DEPLOY_CONFIG=${NEFRO_DEPLOY_CONFIG:-"$HOME/.config/nefro/deploy.env"}
+if [[ -r $DEPLOY_CONFIG ]]; then
+	# Strojovo lokálne nastavenie zostáva mimo synchronizovaného repozitára.
+	# shellcheck source=/dev/null
+	source "$DEPLOY_CONFIG"
+fi
+
 if [[ -n $BASE_REF ]] && ! git rev-parse --verify "${BASE_REF}^{commit}" >/dev/null 2>&1; then
 	echo "[deploy] Neplatný base-ref: $BASE_REF" >&2
 	exit 1
@@ -68,21 +75,21 @@ declare -a UPLOADS=()
 declare -a DELETES=()
 
 if [[ -n $BASE_REF ]]; then
-	mapfile -d '' -t UPLOADS < <(
-		git diff --name-only -z --diff-filter=ACMR "$BASE_REF" HEAD -- "${PATHSPECS[@]}"
-	)
-	mapfile -d '' -t DELETES < <(
-		git diff --name-only -z --diff-filter=D "$BASE_REF" HEAD -- "${PATHSPECS[@]}"
-	)
+	while IFS= read -r -d '' path; do
+		UPLOADS+=("$path")
+	done < <(git diff --name-only -z --diff-filter=ACMR "$BASE_REF" HEAD -- "${PATHSPECS[@]}")
+	while IFS= read -r -d '' path; do
+		DELETES+=("$path")
+	done < <(git diff --name-only -z --diff-filter=D "$BASE_REF" HEAD -- "${PATHSPECS[@]}")
 else
-	mapfile -d '' -t UPLOADS < <(
-		git diff-tree --root --no-commit-id -r -z --diff-filter=ACMR \
-			--name-only HEAD -- "${PATHSPECS[@]}"
-	)
-	mapfile -d '' -t DELETES < <(
-		git diff-tree --root --no-commit-id -r -z --diff-filter=D \
-			--name-only HEAD -- "${PATHSPECS[@]}"
-	)
+	while IFS= read -r -d '' path; do
+		UPLOADS+=("$path")
+	done < <(git diff-tree --root --no-commit-id -r -z --diff-filter=ACMR \
+		--name-only HEAD -- "${PATHSPECS[@]}")
+	while IFS= read -r -d '' path; do
+		DELETES+=("$path")
+	done < <(git diff-tree --root --no-commit-id -r -z --diff-filter=D \
+		--name-only HEAD -- "${PATHSPECS[@]}")
 fi
 
 if ((${#UPLOADS[@]} == 0 && ${#DELETES[@]} == 0)); then
@@ -109,32 +116,41 @@ sftp_escape() {
 	printf '%s' "$value"
 }
 
-for path in "${UPLOADS[@]}" "${DELETES[@]}"; do
+for path in ${UPLOADS[@]+"${UPLOADS[@]}"} ${DELETES[@]+"${DELETES[@]}"}; do
 	validate_path "$path" || exit 1
 done
 
 echo "[deploy] Upload: ${#UPLOADS[@]}, zmazanie: ${#DELETES[@]}"
 
 if ((DRY_RUN)); then
-	for path in "${UPLOADS[@]}"; do
+	for path in ${UPLOADS[@]+"${UPLOADS[@]}"}; do
 		printf '[deploy] PUT %s\n' "$path"
 	done
-	for path in "${DELETES[@]}"; do
+	for path in ${DELETES[@]+"${DELETES[@]}"}; do
 		printf '[deploy] RM  %s\n' "$path"
 	done
 	exit 0
 fi
 
-SFTP_KEY=${NEFRO_SFTP_KEY:-"$HOME/.ssh/nefro_deploy"}
-SFTP_HOST=${NEFRO_SFTP_HOST:-"shell.r1.websupport.sk"}
-SFTP_USER=${NEFRO_SFTP_USER:-"uid58858"}
-SFTP_PORT=${NEFRO_SFTP_PORT:-"26650"}
+SFTP_TARGET=${NEFRO_SFTP_TARGET:-""}
 REMOTE_PATH=${NEFRO_REMOTE_PATH:-"/data/8/6/868f981d-e598-4e71-b7f5-246f2e180cef/polascin.net/sub/nefro"}
 REMOTE_PATH=${REMOTE_PATH%/}
 
-if [[ ! -f $SFTP_KEY ]]; then
-	echo "[deploy] SSH kľúč nenájdený; tento stroj nemá deploy oprávnenie: $SFTP_KEY"
-	exit 0
+declare -a SFTP_OPTIONS=(-q -o BatchMode=yes -o ConnectTimeout=20 -o StrictHostKeyChecking=accept-new)
+
+# Bez strojovo lokálneho cieľa zostáva zachovaný pôvodný explicitný prístup.
+# Vďaka tomu konfigurácia Macu nemení správanie na synchronizovanom Windows stroji.
+if [[ -z $SFTP_TARGET ]]; then
+	SFTP_HOST=${NEFRO_SFTP_HOST:-"shell.r1.websupport.sk"}
+	SFTP_USER=${NEFRO_SFTP_USER:-"uid58858"}
+	SFTP_TARGET="${SFTP_USER}@${SFTP_HOST}"
+	SFTP_OPTIONS+=(-P "${NEFRO_SFTP_PORT:-26650}")
+	SFTP_KEY=${NEFRO_SFTP_KEY:-"$HOME/.ssh/nefro_deploy"}
+	if [[ ! -f $SFTP_KEY ]]; then
+		echo "[deploy] SSH kľúč nenájdený; tento stroj nemá deploy oprávnenie: $SFTP_KEY"
+		exit 0
+	fi
+	SFTP_OPTIONS+=(-i "$SFTP_KEY")
 fi
 
 for command in sftp mktemp; do
@@ -144,8 +160,8 @@ for command in sftp mktemp; do
 	fi
 done
 
-BATCH_FILE=$(mktemp "${TMPDIR:-/tmp}/nefro_deploy_XXXXX.sftp") || exit 1
-DEPLOY_INFO=$(mktemp "${TMPDIR:-/tmp}/nefro_deploy_info_XXXXX.php") || {
+BATCH_FILE=$(mktemp "${TMPDIR:-/tmp}/nefro_deploy_batch_XXXXXX") || exit 1
+DEPLOY_INFO=$(mktemp "${TMPDIR:-/tmp}/nefro_deploy_info_XXXXXX") || {
 	rm -f "$BATCH_FILE"
 	exit 1
 }
@@ -165,27 +181,34 @@ define('DEPLOY_COMMIT', '$COMMIT');
 define('DEPLOY_BRANCH', '$BRANCH');
 PHPEOF
 
-for path in "${DELETES[@]}"; do
+for path in ${DELETES[@]+"${DELETES[@]}"}; do
 	remote=$(sftp_escape "$REMOTE_PATH/$path")
 	printf -- '-rm "%s"\n' "$remote" >>"$BATCH_FILE"
 done
 
-declare -A SEEN_DIRS=()
-for path in "${UPLOADS[@]}"; do
+declare -a SEEN_DIRS=()
+for path in ${UPLOADS[@]+"${UPLOADS[@]}"}; do
 	[[ $path == */* ]] || continue
 	directory=${path%/*}
 	current=""
 	IFS='/' read -r -a parts <<<"$directory"
 	for part in "${parts[@]}"; do
 		current=${current:+"$current/"}$part
-		[[ -n ${SEEN_DIRS[$current]:-} ]] && continue
-		SEEN_DIRS[$current]=1
+		seen=0
+		for seen_directory in ${SEEN_DIRS[@]+"${SEEN_DIRS[@]}"}; do
+			if [[ $seen_directory == "$current" ]]; then
+				seen=1
+				break
+			fi
+		done
+		((seen)) && continue
+		SEEN_DIRS+=("$current")
 		remote=$(sftp_escape "$REMOTE_PATH/$current")
 		printf -- '-mkdir "%s"\n' "$remote" >>"$BATCH_FILE"
 	done
 done
 
-for path in "${UPLOADS[@]}"; do
+for path in ${UPLOADS[@]+"${UPLOADS[@]}"}; do
 	local_path=$(sftp_escape "$path")
 	remote=$(sftp_escape "$REMOTE_PATH/$path")
 	printf 'put "%s" "%s"\n' "$local_path" "$remote" >>"$BATCH_FILE"
@@ -196,15 +219,11 @@ remote_info=$(sftp_escape "$REMOTE_PATH/deploy_info.php")
 printf 'put "%s" "%s"\n' "$local_info" "$remote_info" >>"$BATCH_FILE"
 printf 'quit\n' >>"$BATCH_FILE"
 
-echo "[deploy] Uploading na $SFTP_HOST..."
+echo "[deploy] Uploading cez SSH profil $SFTP_TARGET..."
 SFTP_OUTPUT=$(
-	sftp -q -i "$SFTP_KEY" \
-		-P "$SFTP_PORT" \
-		-o BatchMode=yes \
-		-o ConnectTimeout=20 \
-		-o StrictHostKeyChecking=accept-new \
+	sftp "${SFTP_OPTIONS[@]}" \
 		-b "$BATCH_FILE" \
-		"${SFTP_USER}@${SFTP_HOST}" 2>&1
+		"$SFTP_TARGET" 2>&1
 )
 RC=$?
 

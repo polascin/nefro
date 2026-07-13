@@ -27,8 +27,10 @@ Výsledok musí byť `hooks`.
    predchádzajúceho remote commitu po `HEAD`.
 1. `deploy_info.php` sa odošle v rovnakom SFTP batchi ako ostatné súbory.
 
-Ak push alebo SFTP zlyhá, hook vypíše chybu a deploy neoznačí ako úspešný. Stroj
-bez kľúča `~/.ssh/nefro_deploy` môže commitovať a pushovať, ale deploy preskočí.
+Ak push alebo SFTP zlyhá, hook vypíše chybu a deploy neoznačí ako úspešný.
+Strojovo lokálne nastavenie sa číta z `~/.config/nefro/deploy.env`, takže Mac
+a Windows môžu používať odlišné SSH identity bez synchronizácie cez repozitár.
+Na Macu je v tomto súbore nastavený host `websupport` z `~/.ssh/config`.
 
 ## Manuálny deploy
 
@@ -41,9 +43,11 @@ hooks/deploy.sh <base-ref>
 ```
 
 Súbory v `hooks/deploy-ignore.txt` sa nikdy neposielajú do verejného web rootu.
-Host, port, používateľa, kľúč, remote cestu a ignore súbor možno pre test prepísať
-premennými `NEFRO_SFTP_HOST`, `NEFRO_SFTP_PORT`, `NEFRO_SFTP_USER`,
-`NEFRO_SFTP_KEY`, `NEFRO_REMOTE_PATH` a `NEFRO_DEPLOY_IGNORE_FILE`.
+SSH cieľ, remote cestu a ignore súbor možno pre test prepísať premennými
+`NEFRO_SFTP_TARGET`, `NEFRO_REMOTE_PATH` a `NEFRO_DEPLOY_IGNORE_FILE`. Pre spätnú
+kompatibilitu sú podporované aj `NEFRO_SFTP_HOST`, `NEFRO_SFTP_PORT`,
+`NEFRO_SFTP_USER` a `NEFRO_SFTP_KEY`. Iný konfiguračný súbor možno určiť
+cez `NEFRO_DEPLOY_CONFIG`.
 
 ## Trunk
 
