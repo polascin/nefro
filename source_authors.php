@@ -61,6 +61,7 @@ function getSourceArticleAuthors(): array {
         'nova-ada-vyskumne-granty-politicky-zasah-dopad-na-nefrologiu' => ['Irl B. Hirsch'],
         'obezita-nakladova-diagnoza-glp1-pristup-nefrologia' => ['Amy Faith Ho'],
         'obezita-v-nefrologii-skrining-manazment-dialyza-transplantacia' => ['Holly J. Kramer', 'Linda-Marie Lavenburg', 'Sankar D. Navaneethan'],
+        'oblicka-v-centre-ckm-syndromu-kdigo' => ['Adeera Levin', 'Nisha Bansal', 'Ian H de Boer', 'Morgan E Grams', 'Michel Jadoul', 'Jozine M Ter Maaten', 'Reem A Mustafa', 'Peter Rossing', 'Michael Cheung', 'Jennifer M King', 'Amy Earley', 'Paul E Stevens'],
         'ochorenie-obliciek-tehotenstvo-multidisciplinarna-starostlivost' => ['Manal E Alotaibi', 'Ghada Ankawi'],
         'ockovanie-ckd-transplantacia-oblicky-vakciny-nacasovanie' => ['Matthias Girndt'],
         'pentoxifylin-diabeticka-choroba-obliciek-mini-review' => ['David J. Leehey', 'Rajiv Agarwal'],
