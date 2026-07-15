@@ -53,6 +53,7 @@ function getSourceArticleAuthors(): array {
         'glp1-kompulzivne-spravanie-food-noise-nefrologia' => ['Eric Spitznagel'],
         'iga-nefropatia-algoritmus-kdigo-2025-kdoqi' => ['Isabelle Ayoub', 'Gaia Coppock', 'Shikha Wadhwani', 'Timothy Yau'],
         'implementacia-intenzivnej-kontroly-tlaku-esprit-nefrologia' => ['Yu-Jie Zuo', 'Ji-Guang Wang'],
+        'inhibicia-tmao-fmc-regresia-fibrozy-ckd-model' => ['Joseph A DiDonato', 'Taylor L Weeks', 'Nilaksh Gupta', 'Deepthi P Mallela', 'Jennifer A Buffa', 'Zeneng Wang', 'Xinmin S Li', 'James T Anderson', 'Xiaoming Fu', 'Naseer Sangwan', 'Ina Nemet', 'Scott J Cameron', 'Stanley L Hazen'],
         'iga-nefropatia-kdigo-2025-kdoqi' => ['Isabelle Ayoub', 'Gaia Coppock', 'Shikha Wadhwani', 'Timothy Yau'],
         'ked-sa-citime-chori-co-medicina-prehliada-nefrologia' => ['Arya Anthony Kamyab'],
         'kedy-zacat-krt-pri-aki' => ['Marlies Ostermann', 'Sean M Bagshaw', 'Nuttha Lumlertgul', 'Ron Wald'],
