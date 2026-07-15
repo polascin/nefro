@@ -231,7 +231,7 @@ $articles[] = [
 
 <hr>
 
-<p><em><strong>Hlavný zdroj:</strong> Mosakowska M, Jędrych E, Kotwica-Strzałek E, Dorywalska A, Lubas A, Niemczyk S. How pre-education affects patients choosing appropriate renal replacement treatment: a retrospective study. <em>BMC Nephrology</em>. Publikované online 27. júna 2026. Akceptovaný rukopis pred finálnou redakčnou úpravou. <a href="https://doi.org/10.1186/s12882-026-05160-0" target="_blank" rel="noopener noreferrer">DOI</a>.</em></p>
+<p><em><strong>Hlavný zdroj:</strong> Mosakowska M, Jędrych E, Kotwica-Strzałek E, Dorywalska A, Lubas A, Niemczyk S. How pre-education affects patients choosing appropriate renal replacement treatment: a retrospective study. <em>BMC Nephrology</em>. Publikované online 27. júna 2026. Akceptovaný rukopis pred finálnou redakčnou úpravou. DOI: 10.1186/s12882-026-05160-0. <a href="https://doi.org/10.1186/s12882-026-05160-0" target="_blank" rel="noopener noreferrer">Odkaz na štúdiu</a>.</em></p>
 
 <p><em><strong>Odporúčania a kontext:</strong> <a href="https://kdigo.org/wp-content/uploads/2017/02/KDIGO-Dialysis-Initiation-conf-report-FINAL.pdf" target="_blank" rel="noopener noreferrer">KDIGO: Dialysis initiation, modality choice, access, and prescription</a> · <a href="https://kdigo.org/wp-content/uploads/2023/04/Home-Dialysis-Conclusions-from-a-KDIGO-Controversies-Conference.pdf" target="_blank" rel="noopener noreferrer">KDIGO: Home dialysis</a> · <a href="https://ispd.org/wp-content/uploads/Assisted-PD-PP-2024.pdf" target="_blank" rel="noopener noreferrer">ISPD Position Paper on Assisted Peritoneal Dialysis</a>.</em></p>
 HTML,
