@@ -159,7 +159,7 @@ $articles[] = [
   <li><strong>Potvrdiť klinický kontext:</strong> štádium a chronicitu CKD, UACR, prítomnosť ASCVD, diabetes, dialýzu alebo transplantáciu, prognózu a krehkosť.</li>
   <li><strong>Zhodnotiť lipidy a sekundárne príčiny:</strong> LDL-C, non-HDL-C, triglyceridy, adherenciu, hypotyreózu, nefrotický syndróm, lieky a výživu; Lp(a) zmerať aspoň raz a apoB podľa indikácie.</li>
   <li><strong>Vybrať primeranú intenzitu liečby:</strong> statín zostáva základom; pri nedostatočnom účinku alebo tolerancii sa pridáva liek s preukázaným prínosom podľa rizika a dostupných údajov pri danej eGFR.</li>
-  <li><strong>Skontrolovať odpoveď a bezpečnosť:</strong> po začatí alebo úprave liečby overiť lipidový profil, adherenciu, nežiaduce účinky a interakcie. Kreatínkináza sa rutinne nesleduje bez symptómov alebo osobitného rizika.</li>
+  <li><strong>Skontrolovať odpoveď a bezpečnosť:</strong> po začatí alebo úprave liečby overiť lipidový profil, adherenciu, nežiaduce účinky a interakcie. Kreatínkináza sa bez svalových príznakov rutinne nesleduje.</li>
   <li><strong>Neizolovať cholesterol od kardiorenálnej prevencie:</strong> súčasne liečiť krvný tlak, diabetes, albuminúriu, fajčenie, obezitu a ďalšie ovplyvniteľné rizikové faktory.</li>
 </ol>
 
