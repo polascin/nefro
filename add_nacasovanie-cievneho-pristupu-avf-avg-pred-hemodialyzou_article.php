@@ -117,7 +117,7 @@ $articles[] = [
 <ol>
   <li><strong>Pravidelne prehodnocovať prognózu:</strong> sledovať trend eGFR, riziko zlyhania obličiek, urémiu, objemový stav a metabolické komplikácie.</li>
   <li><strong>Najprv dohodnúť modalitu:</strong> prebrať transplantáciu, peritoneálnu dialýzu, hemodialýzu aj konzervatívnu starostlivosť.</li>
-  <li><strong>Chrániť budúce možnosti:</strong> vyhýbať sa zbytočným periférnym kanylám a periférne zavádzaným centrálnym katétrom (PICC) v žilách potenciálne vhodných na prístup; postup koordinovať s nefrológom.</li>
+  <li><strong>Chrániť žily:</strong> periférne kanyly a periférne zavádzané centrálne katétre koordinovať s nefrológom.</li>
   <li><strong>Vybrať prístup podľa pacienta:</strong> klinicky posúdiť cievy a ultrazvukové mapovanie použiť podľa rizika, anatómie a lokálneho postupu.</li>
   <li><strong>Ponechať rezervu:</strong> pri AVF počítať s maturáciou a možnou korekciou; pri kratšom horizonte zvážiť vhodný AVG alebo inú premosťujúcu stratégiu.</li>
   <li><strong>Po výkone aktívne sledovať:</strong> kontrolovať ranu, šelest a vír, včas rozpoznať nematurujúcu AVF a kanylovať až po zhodnotení vhodnosti.</li>
