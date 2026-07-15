@@ -203,9 +203,9 @@ $articles[] = [
 
 <h2>Limity zdrojového materiálu</h2>
 
-<p>Hlavný zdroj je spravodajský článok Medscape News Europe založený na diskusii z podujatia francúzskej Lekárskej komory. Verejný program potvrdzuje, že podujatie o vzťahu lekára a pacienta sa konalo 8. apríla 2026 a zahŕňalo panel o vytváraní vzťahu v čase nadbytku informácií. Nejde však o klinickú štúdiu, systematický prehľad ani odborné odporúčanie.</p>
+<p>Hlavný zdroj je spravodajský článok Medscape News Europe založený na diskusii francúzskej Lekárskej komory z 8. apríla 2026. Nejde o klinickú štúdiu, systematický prehľad ani odborné odporúčanie.</p>
 
-<p>Zo zdroja preto nemožno určiť prevalenciu používania AI pacientmi, presnosť konkrétnych modelov ani vplyv na morbiditu, adherenciu alebo počet vyšetrení. Názor, že lekári nepoužívajúci AI budú nahradení, je postoj diskutujúceho, nie vedecky potvrdený výsledok. Všeobecné riziká generatívnej AI sú doplnené podľa WHO, nefrologické tvrdenia podľa KDIGO a ochrana údajov podľa európskych a francúzskych materiálov o súkromí chatbotov.</p>
+<p>Zo zdroja nemožno určiť prevalenciu používania AI pacientmi, presnosť modelov ani vplyv na morbiditu, adherenciu či počet vyšetrení. Výrok, že lekári nepoužívajúci AI budú nahradení, je názor diskutujúceho, nie vedecky potvrdený výsledok. Všeobecné riziká AI sú preto doplnené podľa WHO, nefrologické tvrdenia podľa KDIGO a ochrana údajov podľa európskych a francúzskych materiálov.</p>
 
 <h2>Záver</h2>
 
