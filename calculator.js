@@ -9,6 +9,11 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
+    function hasPreferenceConsent() {
+        return typeof window.npsHasConsent === 'function'
+            && window.npsHasConsent('preferences');
+    }
+
     // ── 1. AUTO-SAVE TOGGLE ───────────────────────────────────────────────────
     var saveBtn = document.querySelector('button[name="action"][value="save"]');
     var calcBtn = document.querySelector('button[name="action"][value="calculate"]');
@@ -32,11 +37,39 @@ document.addEventListener('DOMContentLoaded', function () {
             actionsDiv.appendChild(toggleLabel);
 
             var autoCb = document.getElementById('calc_autosave_toggle');
-            // Obnov preferenciu
-            autoCb.checked = localStorage.getItem('calc_autosave') === '1';
+            // Obnov preferenciu iba pri platnom preferenčnom súhlase.
+            try {
+                autoCb.checked = hasPreferenceConsent()
+                    && localStorage.getItem('calc_autosave') === '1';
+            } catch (e) {
+                autoCb.checked = false;
+            }
 
             autoCb.addEventListener('change', function () {
-                localStorage.setItem('calc_autosave', this.checked ? '1' : '0');
+                if (!hasPreferenceConsent()) {
+                    this.checked = false;
+                    if (typeof window.openCookiePreferences === 'function') {
+                        window.openCookiePreferences();
+                    }
+                    return;
+                }
+
+                try {
+                    localStorage.setItem('calc_autosave', this.checked ? '1' : '0');
+                } catch (e) {}
+            });
+
+            window.addEventListener('nps:consent-changed', function (event) {
+                if (!event.detail || event.detail.preferences !== true) {
+                    autoCb.checked = false;
+                    return;
+                }
+
+                try {
+                    autoCb.checked = localStorage.getItem('calc_autosave') === '1';
+                } catch (e) {
+                    autoCb.checked = false;
+                }
             });
 
             // Pri submite formulára — spoľahlivejšie ako click (form submit handler)
@@ -197,11 +230,48 @@ document.addEventListener('DOMContentLoaded', function () {
         // Kľúč kalkulačky z URL (napr. "calculator_egfr")
         var calcPageKey = window.location.pathname.replace(/.*\//, '').replace('.php', '');
 
+        function showLocalHistoryDisabled() {
+            while (savedSection.firstChild) { savedSection.removeChild(savedSection.firstChild); }
+
+            var message = document.createElement('p');
+            message.textContent = 'Lokálna história bola vypnutá a vymazaná. Zapnúť ju môžete v nastaveniach cookies.';
+            savedSection.appendChild(message);
+
+            var settingsButton = document.createElement('button');
+            settingsButton.type = 'button';
+            settingsButton.className = 'cookie-settings-trigger btn-outline';
+            settingsButton.textContent = 'Nastavenia cookies';
+            settingsButton.setAttribute('aria-haspopup', 'dialog');
+            settingsButton.setAttribute('aria-controls', 'cookieConsentModal');
+            savedSection.appendChild(settingsButton);
+        }
+
         // Vykresli lokálnu históriu pre neprihlásených
         function renderLocal() {
-            var list = [];
-            try { list = JSON.parse(localStorage.getItem('calc_local_history') || '[]'); } catch (e) {}
-            list = list.filter(function (r) { return r.key === calcPageKey; });
+            if (!hasPreferenceConsent()) return;
+
+            var allHistory = [];
+            try {
+                allHistory = JSON.parse(localStorage.getItem('calc_local_history') || '[]');
+                if (!Array.isArray(allHistory)) allHistory = [];
+            } catch (e) {}
+
+            // Staršie verzie zbytočne uchovávali aj formulárové vstupy vrátane
+            // možných identifikátorov pacienta. Na zobrazenie histórie nie sú potrebné.
+            var minimized = false;
+            allHistory.forEach(function (record) {
+                if (record && Object.prototype.hasOwnProperty.call(record, 'inputs')) {
+                    delete record.inputs;
+                    minimized = true;
+                }
+            });
+            if (minimized) {
+                try {
+                    localStorage.setItem('calc_local_history', JSON.stringify(allHistory));
+                } catch (e) {}
+            }
+
+            var list = allHistory.filter(function (r) { return r.key === calcPageKey; });
 
             if (!list.length) {
                 if (isGuest) {
@@ -291,39 +361,50 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
 
-        // Uložiť výsledok ak je výpočet zobrazený A používateľ je hosť
+        // Uložiť výsledok, ak je zobrazený, používateľ je hosť a udelil súhlas.
         var resultBlock = document.querySelector('.calculator-result-block');
-        if (resultBlock && isGuest) {
-            var formEl   = document.querySelector('form');
-            var inputs   = {};
-            if (formEl) {
-                try {
-                    new FormData(formEl).forEach(function (v, k) {
-                        if (k !== 'csrf_token' && k !== 'action' && k !== 'js_token') {
-                            inputs[k] = v;
-                        }
-                    });
-                } catch (e) {}
-            }
+        var currentResultStored = false;
+
+        function storeCurrentGuestResult() {
+            if (!resultBlock || !isGuest || !hasPreferenceConsent() || currentResultStored) return;
 
             var entry = {
                 key:        calcPageKey,
                 label:      document.title.split('|')[0].trim(),
                 resultHtml: resultBlock.outerHTML,
-                inputs:     inputs,
                 timestamp:  new Date().toISOString(),
             };
 
             try {
                 var all = JSON.parse(localStorage.getItem('calc_local_history') || '[]');
-                all.unshift(entry);
+                if (!Array.isArray(all)) all = [];
+
+                var latest = all[0];
+                if (!latest || latest.key !== entry.key || latest.resultHtml !== entry.resultHtml) {
+                    all.unshift(entry);
+                }
                 all = all.slice(0, 50);
                 localStorage.setItem('calc_local_history', JSON.stringify(all));
+                currentResultStored = true;
             } catch (e) {}
         }
 
         // Vždy vykresli lokálnu históriu pre hostí
-        if (isGuest) renderLocal();
+        if (isGuest) {
+            storeCurrentGuestResult();
+            renderLocal();
+        }
+
+        window.addEventListener('nps:consent-changed', function (event) {
+            if (!isGuest || !event.detail) return;
+
+            if (event.detail.preferences === true) {
+                storeCurrentGuestResult();
+                renderLocal();
+            } else {
+                showLocalHistoryDisabled();
+            }
+        });
     })();
 
 });

@@ -58,7 +58,8 @@ include 'legal_head.php';
                     Pomáhajú stránke fungovať (napr. udržať vaše prihlásenie), zapamätať si vaše
                     nastavenia a — len s vaším súhlasom — merať návštevnosť. Podobne funguje
                     aj <code>localStorage</code>, ktoré používame na uloženie vášho súhlasu
-                    a preferencie vzhľadu.
+                    a po udelení preferenčného súhlasu aj na nastavenia vzhľadu, automatické
+                    ukladanie a lokálnu históriu výsledkov kalkulačiek.
                 </p>
 
                 <!-- 2. KATEGÓRIE -->
@@ -124,7 +125,8 @@ include 'legal_head.php';
                     (<code>SameSite=Lax; Secure</code>). Pri opakovanej návšteve sa banner
                     nezobrazuje, kým je súhlas platný. Súhlas môžete kedykoľvek zmeniť alebo
                     odvolať tlačidlom vyššie alebo odkazom „Nastavenia cookies“ v päte stránky;
-                    pri odvolaní sa analytické cookies deaktivujú.
+                    pri odvolaní sa analytické cookies deaktivujú a údaje z voliteľného
+                    preferenčného úložiska sa vymažú.
                 </p>
 
                 <!-- 6. PRÁVA PODĽA REGIÓNU -->

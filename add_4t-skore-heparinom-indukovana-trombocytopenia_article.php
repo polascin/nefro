@@ -74,10 +74,10 @@ $articles[] = [
 <table>
   <thead>
     <tr>
-      <th>Zložka</th>
-      <th>2 body</th>
-      <th>1 bod</th>
-      <th>0 bodov</th>
+      <th scope="col">Zložka</th>
+      <th scope="col">2 body</th>
+      <th scope="col">1 bod</th>
+      <th scope="col">0 bodov</th>
     </tr>
   </thead>
   <tbody>

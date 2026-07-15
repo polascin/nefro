@@ -82,8 +82,12 @@ include 'legal_head.php';
                 <p>
                     Spracúvame údaje, ktoré nám poskytnete (napr. pri registrácii), údaje
                     vznikajúce pri používaní služby a obmedzené technické údaje zbierané
-                    automaticky. Údaje o zdraví (výsledky kalkulačiek s pacientskymi
-                    identifikátormi) vkladá výhradne prihlásený lekár a sú asociované s jeho kontom.
+                    automaticky. Údaje o zdraví uložené na serveri (výsledky kalkulačiek
+                    s pacientskymi identifikátormi) vkladá výhradne prihlásený lekár a sú
+                    asociované s jeho kontom. Neprihlásenému používateľovi sa po udelení
+                    preferenčného súhlasu môže lokálne v prehliadači uložiť najviac 50
+                    zobrazených výsledkov; formulárové vstupy ani identifikátory pacienta
+                    sa do tejto histórie neukladajú a záznamy sa neodosielajú na server.
                 </p>
 
                 <!-- 3. ÚČELY A PRÁVNE ZÁKLADY -->
@@ -159,7 +163,8 @@ include 'legal_head.php';
                 <h3>6. Ako dlho údaje uchovávame</h3>
                 <ul>
                     <li><strong>Používateľské kontá:</strong> po dobu aktívneho používania; na žiadosť možné okamžité vymazanie.</li>
-                    <li><strong>Výsledky kalkulačiek:</strong> kým ich používateľ nevymaže alebo nepožiada o zmazanie konta.</li>
+                    <li><strong>Výsledky kalkulačiek uložené v konte:</strong> kým ich používateľ nevymaže alebo nepožiada o zmazanie konta.</li>
+                    <li><strong>Lokálna história kalkulačiek pre neprihlásených:</strong> najviac 50 výsledkov v prehliadači, kým ich používateľ nevymaže, neodvolá preferenčný súhlas alebo nevymaže údaje stránky.</li>
                     <li><strong>Server logy:</strong> maximálne 90 dní, potom automaticky mazané.</li>
                     <li><strong>Bezpečnostné záznamy (pokusy o prihlásenie, rate-limiting):</strong> priebežne mazané po uplynutí ich účelu.</li>
                     <li><strong>GA4 dáta:</strong> štandardne 14 mesiacov v Google Analytics; Google ich môže anonymizovať po uplynutí lehoty.</li>

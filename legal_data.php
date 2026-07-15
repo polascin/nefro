@@ -40,9 +40,9 @@ function legalInfo(): array
         'jurisdiction'             => 'Slovenskej republiky (EÚ)',
         'supervisoryAuthority'     => 'Úrad na ochranu osobných údajov Slovenskej republiky',
         'supervisoryAuthorityUrl'  => 'https://dataprotection.gov.sk/sk/',
-        'effectiveDate'            => '2026-06-26',
-        'version'                  => '2.3',
-        'consentVersion'           => '2026-06-02',
+        'effectiveDate'            => '2026-07-15',
+        'version'                  => '2.4',
+        'consentVersion'           => '2026-07-15',
     ];
 }
 
@@ -69,6 +69,10 @@ function legalDataCategories(): array
         [
             'category' => 'Klinické výsledky kalkulačiek',
             'examples' => 'Výsledky výpočtov uložené na žiadosť lekára spolu s pacientskymi identifikátormi (meno, dátum narodenia, rodné číslo, kód poisťovne) — vkladá ich výhradne prihlásený lekár. Ide o údaje o zdraví (osobitná kategória podľa čl. 9 GDPR).',
+        ],
+        [
+            'category' => 'Lokálna história kalkulačiek pre neprihlásených',
+            'examples' => 'Po udelení preferenčného súhlasu môže prehliadač lokálne uchovať najviac 50 zobrazených výsledkov. Formulárové vstupy ani identifikátory pacienta sa neukladajú a údaje sa neodosielajú na server.',
         ],
         [
             'category' => 'Komunikácia',
@@ -200,7 +204,7 @@ function legalCookieCategories(): array
         [
             'id'          => 'preferences',
             'title'       => 'Preferenčné (Preferences)',
-            'description' => 'Zapamätajú si vaše nastavenia rozhrania (napr. svetlý/tmavý režim). Nepoužívajú sa na sledovanie.',
+            'description' => 'Zapamätajú si nastavenia rozhrania, automatické ukladanie a lokálnu históriu výsledkov kalkulačiek. Lokálna história neobsahuje formulárové vstupy ani identifikátory pacienta a nepoužíva sa na sledovanie.',
             'required'    => false,
         ],
         [
@@ -241,6 +245,18 @@ function legalStoredItems(): array
             'duration' => 'Trvalé (kým ich nevymažete)',
         ],
         [
+            'name'     => 'calc_autosave',
+            'category' => 'Preferenčné',
+            'purpose'  => 'Zapamätá si, či si prihlásený používateľ zapol automatické uloženie výsledkov kalkulačiek (localStorage).',
+            'duration' => 'Trvalé (kým ho nevypnete, neodvoláte súhlas alebo nevymažete)',
+        ],
+        [
+            'name'     => 'calc_local_history',
+            'category' => 'Preferenčné',
+            'purpose'  => 'Pre neprihláseného používateľa uchová najviac 50 zobrazených výsledkov iba v prehliadači; bez formulárových vstupov a identifikátorov pacienta.',
+            'duration' => 'Do vymazania záznamov, odvolania súhlasu alebo vymazania úložiska prehliadača',
+        ],
+        [
             'name'     => '_ga, _ga_0JT5VMQ61K',
             'category' => 'Analytické',
             'purpose'  => 'Google Analytics 4 — rozlíšenie návštevníkov a relácií. Nastavené len so súhlasom.',
@@ -253,7 +269,8 @@ function legalStoredItems(): array
 function legalRecentUpdates(): array
 {
     return [
-        'Rozšírili sme Službu o informačnú databázu liekov v nefrológii, register klinických štúdií (dáta z verejného registra ClinicalTrials.gov) a ďalšie interaktívne nástroje; všetko slúži výhradne na informačné a vzdelávacie účely a nespracúva žiadne osobné údaje návštevníkov.',
+        'Lokálna história kalkulačiek pre neprihlásených sa odteraz vytvára iba po preferenčnom súhlase, neuchováva formulárové vstupy ani identifikátory pacienta a pri odvolaní súhlasu sa vymaže.',
+        'Rozšírili sme Službu o informačnú databázu liekov v nefrológii, register klinických štúdií (dáta z verejného registra ClinicalTrials.gov) a ďalšie informačné nástroje, ktoré samy nespracúvajú osobné údaje návštevníkov.',
         'Do zoznamu sprostredkovateľov sme doplnili Twilio Inc. (USA), ktoré odosiela overovacie SMS kódy pri overení telefónneho čísla; prenos do USA je krytý štandardnými zmluvnými doložkami (SCC).',
         'Webové písmo (Inter) sme presunuli na vlastný server — pri jeho načítaní sa už neprenáša žiadny údaj (IP adresa) do Google LLC (USA).',
         'Právne dokumenty sme rozdelili do troch samostatných stránok: Zásady ochrany osobných údajov, Cookie Policy a Podmienky používania.',

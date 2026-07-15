@@ -136,7 +136,7 @@ $fieldLabels = [
   <?php endif; ?>
 </head>
 <body>
-  <a href="#search-results" class="skip-link">Preskočiť na výsledky</a>
+  <a href="#main-content" class="skip-link">Preskočiť na obsah</a>
 
   <?php
   $headerTitle = "Nefro-projekt Slovensko";
@@ -146,7 +146,7 @@ $fieldLabels = [
 
   <?php include_once 'main_nav.php'; ?>
 
-  <main id="search-results" class="container search-main" role="main">
+  <main id="main-content" class="container search-main" role="main">
     <div class="main-content main-content--single-col">
       <div class="primary-article">
 

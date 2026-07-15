@@ -42,9 +42,9 @@ $articles[] = [
 <table>
   <thead>
     <tr>
-      <th>Štádium</th>
-      <th>Charakteristika</th>
-      <th>Ťažisko starostlivosti</th>
+      <th scope="col">Štádium</th>
+      <th scope="col">Charakteristika</th>
+      <th scope="col">Ťažisko starostlivosti</th>
     </tr>
   </thead>
   <tbody>
@@ -95,9 +95,9 @@ $articles[] = [
 <table>
   <thead>
     <tr>
-      <th>Kategória</th>
-      <th>UACR</th>
-      <th>Význam</th>
+      <th scope="col">Kategória</th>
+      <th scope="col">UACR</th>
+      <th scope="col">Význam</th>
     </tr>
   </thead>
   <tbody>
@@ -200,9 +200,9 @@ $articles[] = [
 <table>
   <thead>
     <tr>
-      <th>Situácia</th>
-      <th>Čo hodnotiť</th>
-      <th>Na čo nezabudnúť</th>
+      <th scope="col">Situácia</th>
+      <th scope="col">Čo hodnotiť</th>
+      <th scope="col">Na čo nezabudnúť</th>
     </tr>
   </thead>
   <tbody>

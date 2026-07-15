@@ -56,10 +56,10 @@ $articles[] = [
 <table>
   <thead>
     <tr>
-      <th>Oblasť</th>
-      <th>Kvantitatívny výskum</th>
-      <th>Kvalitatívny výskum</th>
-      <th>Zmiešané metódy</th>
+      <th scope="col">Oblasť</th>
+      <th scope="col">Kvantitatívny výskum</th>
+      <th scope="col">Kvalitatívny výskum</th>
+      <th scope="col">Zmiešané metódy</th>
     </tr>
   </thead>
   <tbody>
@@ -119,9 +119,9 @@ $articles[] = [
 <table>
   <thead>
     <tr>
-      <th>Oblasť</th>
-      <th>Čo overiť</th>
-      <th>Varovný signál</th>
+      <th scope="col">Oblasť</th>
+      <th scope="col">Čo overiť</th>
+      <th scope="col">Varovný signál</th>
     </tr>
   </thead>
   <tbody>

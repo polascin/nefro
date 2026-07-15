@@ -12,7 +12,7 @@ const globalPrivacyControlEnabled = typeof navigator !== 'undefined'
 // MUSÍ sa zhodovať s `consentVersion` v legal_data.php (legalInfo()).
 // Všetky uložené súhlasy zo staršej verzie sa automaticky invalidujú
 // a banner sa zobrazí znova (GDPR čl. 7 ods. 3 — nový súhlas pri zmene podmienok).
-const consentVersion = '2026-06-02';
+const consentVersion = '2026-07-15';
 
 // Predvolené nastavenia
 const defaultSettings = {
@@ -68,6 +68,17 @@ function readStoredConsentSync() {
 }
 
 const initialConsent = readStoredConsentSync() || defaultSettings;
+
+// Jednotné rozhranie pre skripty, ktoré smú používať voliteľné úložisko
+// až po platnom súhlase pre aktuálnu verziu zásad.
+window.npsHasConsent = function (category) {
+    if (category === 'necessary') {
+        return true;
+    }
+
+    const consent = readStoredConsentSync();
+    return Boolean(consent && consent[category] === true);
+};
 
 // Inicializácia Google Analytics 4 (Google Consent Mode v2)
 window.dataLayer = window.dataLayer || [];
@@ -240,7 +251,7 @@ function initPrivacyManager() {
                         <div class="cookie-category">
                             <div class="category-info">
                                 <h3 id="preferencesCookiesTitle">Preferenčné cookies (Preferences)</h3>
-                                <p>Umožňujú stránke zapamätať si informácie, ktoré menia, ako sa stránka správa alebo vyzerá (napr. preferovaný jazyk).</p>
+                                <p>Umožňujú zapamätať vzhľad, automatické ukladanie a lokálnu históriu výsledkov kalkulačiek. História ostáva iba vo vašom prehliadači a neobsahuje formulárové vstupy ani identifikátory pacienta.</p>
                             </div>
                             <div class="category-toggle">
                                 <label class="switch">
@@ -310,6 +321,25 @@ function initPrivacyManager() {
         if (consentData.analytics || consentData.marketing) {
             initializeGA4();
         }
+
+        if (!consentData.preferences) {
+            try {
+                localStorage.removeItem('nps_theme');
+                localStorage.removeItem('nps_theme_auto');
+                localStorage.removeItem('calc_autosave');
+                localStorage.removeItem('calc_local_history');
+            } catch (e) {
+                // Prehliadač môže lokálne úložisko blokovať.
+            }
+        }
+
+        window.dispatchEvent(new CustomEvent('nps:consent-changed', {
+            detail: {
+                preferences: consentData.preferences === true,
+                analytics: consentData.analytics === true,
+                marketing: consentData.marketing === true
+            }
+        }));
         // GA4 consent update applied
     }
 

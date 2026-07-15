@@ -64,9 +64,9 @@ $articles[] = [
 <table>
   <thead>
     <tr>
-      <th>Ukazovateľ</th>
-      <th>Darcovia v kategórii Black</th>
-      <th>Darcovia v kategórii White</th>
+      <th scope="col">Ukazovateľ</th>
+      <th scope="col">Darcovia v kategórii Black</th>
+      <th scope="col">Darcovia v kategórii White</th>
     </tr>
   </thead>
   <tbody>
@@ -106,9 +106,9 @@ $articles[] = [
 <table>
   <thead>
     <tr>
-      <th>Analýza primárneho výsledku</th>
-      <th>Výsledok</th>
-      <th>Interpretácia</th>
+      <th scope="col">Analýza primárneho výsledku</th>
+      <th scope="col">Výsledok</th>
+      <th scope="col">Interpretácia</th>
     </tr>
   </thead>
   <tbody>

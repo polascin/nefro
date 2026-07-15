@@ -38,8 +38,8 @@ $articles[] = [
 <table>
   <thead>
     <tr>
-      <th>Oblasť</th>
-      <th>Regulačný údaj</th>
+      <th scope="col">Oblasť</th>
+      <th scope="col">Regulačný údaj</th>
     </tr>
   </thead>
   <tbody>
@@ -179,8 +179,8 @@ $articles[] = [
 <table>
   <thead>
     <tr>
-      <th>Podložené dostupnými údajmi</th>
-      <th>Zatiaľ nepotvrdené</th>
+      <th scope="col">Podložené dostupnými údajmi</th>
+      <th scope="col">Zatiaľ nepotvrdené</th>
     </tr>
   </thead>
   <tbody>

@@ -50,8 +50,8 @@ $articles[] = [
 <table>
   <thead>
     <tr>
-      <th>Ukazovateľ</th>
-      <th>Výsledok</th>
+      <th scope="col">Ukazovateľ</th>
+      <th scope="col">Výsledok</th>
     </tr>
   </thead>
   <tbody>
@@ -97,10 +97,10 @@ $articles[] = [
 <table>
   <thead>
     <tr>
-      <th>Kategória centra</th>
-      <th>Počet</th>
-      <th>Podiel</th>
-      <th>Praktický význam</th>
+      <th scope="col">Kategória centra</th>
+      <th scope="col">Počet</th>
+      <th scope="col">Podiel</th>
+      <th scope="col">Praktický význam</th>
     </tr>
   </thead>
   <tbody>

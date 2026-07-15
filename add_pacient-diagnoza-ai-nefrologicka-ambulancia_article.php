@@ -48,9 +48,9 @@ $articles[] = [
 <table>
   <thead>
     <tr>
-      <th>Typ nástroja</th>
-      <th>Čo môže priniesť</th>
-      <th>Čo nemožno predpokladať</th>
+      <th scope="col">Typ nástroja</th>
+      <th scope="col">Čo môže priniesť</th>
+      <th scope="col">Čo nemožno predpokladať</th>
     </tr>
   </thead>
   <tbody>
@@ -104,8 +104,8 @@ $articles[] = [
 <table>
   <thead>
     <tr>
-      <th>Možný záver chatbota</th>
-      <th>Čo musí overiť klinik</th>
+      <th scope="col">Možný záver chatbota</th>
+      <th scope="col">Čo musí overiť klinik</th>
     </tr>
   </thead>
   <tbody>

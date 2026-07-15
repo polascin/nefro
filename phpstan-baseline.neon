@@ -145,12 +145,6 @@ parameters:
 			path: add_pre-pacientov-uvod_article.php
 
 		-
-			message: '#^Offset ''title'' on array\{title\: ''Prehľad najnovšieho…'', slug\: ''prehlad\-vyskum\-fsgs…'', author\: ''MUDr\. Ľubomír…'', published_at\: non\-falsy\-string, is_top\: 0, excerpt\: ''Sparsentan ako prvý…'', content\: ''\<p\>Posledné mesiace…''\} on left side of \?\? always exists and is not nullable\.$#'
-			identifier: nullCoalesce.offset
-			count: 1
-			path: add_prehlad-vyskum-fsgs-diabeticka-nefropatia-2025-2026_article.php
-
-		-
 			message: '#^Offset ''title'' on array\{title\: ''Proteinúria pri…'', slug\: ''proteinuria…'', author\: ''MUDr\. Ľubomír…'', published_at\: non\-falsy\-string, is_top\: 0, excerpt\: ''Dánska populačná…'', content\: ''\<p\>Preeklampsia sa…''\} on left side of \?\? always exists and is not nullable\.$#'
 			identifier: nullCoalesce.offset
 			count: 1
