@@ -115,7 +115,7 @@ $articles[] = [
   <li><strong>Vyšetriť železo a krvné straty:</strong> feritín, saturáciu transferínu, krvácanie z cievneho prístupu, gastrointestinálne a iné chronické straty.</li>
   <li><strong>Hľadať zápal a nedostatočnú dialýzu:</strong> infekciu, chronický zápal, adekvátnosť dialýzy, stav cievneho prístupu a recirkuláciu podľa klinickej situácie.</li>
   <li><strong>Posúdiť ďalšie príčiny:</strong> malnutríciu, vitamín B12, folát, hyperparatyreózu, hemolýzu, hematologické ochorenie, lieky a malignitu.</li>
-  <li><strong>Individualizovať ďalšiu liečbu:</strong> po odstránení korigovateľných príčin zvážiť prínosy a riziká ESA, HIF-PHI alebo transfúzie podľa symptómov, transplantability, komorbidít a preferencií pacienta.</li>
+  <li><strong>Individualizovať liečbu:</strong> po odstránení korigovateľných príčin zvážiť ESA, HIF-PHI alebo transfúziu podľa symptómov, komorbidít a preferencií pacienta.</li>
 </ol>
 
 <h2>Limity štúdie</h2>
