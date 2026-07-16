@@ -73,7 +73,7 @@ $legalFullTitle   = $legalTitle . ' | ' . $legalSiteName;
     <title><?= htmlspecialchars($legalFullTitle, ENT_QUOTES, 'UTF-8') ?></title>
 
     <!-- JSON-LD Štruktúrované dáta -->
-    <script type="application/ld+json">
+    <script type="application/ld+json" nonce="<?= htmlspecialchars(getScriptNonce(), ENT_QUOTES, 'UTF-8') ?>">
         <?= json_encode([
             '@context'    => 'https://schema.org',
             '@type'       => 'WebPage',
@@ -101,10 +101,6 @@ $legalFullTitle   = $legalTitle . ' | ' . $legalSiteName;
 
     <!-- Cookie Consent & GA4 Consent Mode v2 -->
     <script src="ui-preferences-fallback.js?v=20260511-1&cb=<?= filemtime('ui-preferences-fallback.js') ?>" defer></script>
-    <?php if (isLoggedIn()): ?>
-    <script nonce="<?= htmlspecialchars(getScriptNonce(), ENT_QUOTES, 'UTF-8') ?>">window.npsSessionTimeoutSeconds=<?= (int) SESSION_IDLE_TIMEOUT ?>;window.npsSessionKeepaliveToken=<?= json_encode(generateSessionKeepaliveToken(), JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?>;</script>
-    <script src="session-timeout.js?v=<?= filemtime('session-timeout.js') ?>" defer></script>
-    <?php endif; ?>
 </head>
 
 <body>

@@ -317,7 +317,7 @@ if (isLoggedIn()) {
                             </div>
                             <?php if ($i > EGFR_SLOPE_MIN_ROWS): ?>
                             <div class="form-group align-self-end">
-                                <button type="button" class="btn-secondary" onclick="removeEgfrRow(<?= $i ?>)" title="Odstrániť tento riadok" aria-label="Odstrániť riadok <?= $i ?>">−</button>
+                                <button type="button" class="btn-secondary js-remove-egfr-row" data-row-id="<?= $i ?>" title="Odstrániť tento riadok" aria-label="Odstrániť riadok <?= $i ?>">−</button>
                             </div>
                             <?php endif; ?>
                         </div>
@@ -325,7 +325,7 @@ if (isLoggedIn()) {
                         </div>
 
                         <div class="form-actions mt-05rem">
-                            <button type="button" id="btn-add-egfr-row" class="btn-secondary" onclick="addEgfrRow()">+ Pridať meranie</button>
+                            <button type="button" id="btn-add-egfr-row" class="btn-secondary">+ Pridať meranie</button>
                         </div>
                     </div>
 
@@ -412,7 +412,7 @@ if (isLoggedIn()) {
             if (inp) inp.value = maxRow;
         }
 
-        window.addEgfrRow = function () {
+        function addEgfrRow() {
             if (maxRow >= maxAllowed) {
                 alert('Maximálny počet meraní (' + maxAllowed + ') bol dosiahnutý.');
                 return;
@@ -435,19 +435,32 @@ if (isLoggedIn()) {
                     '<input type="text" id="egfr_' + idx + '" name="egfr_' + idx + '" class="form-control" inputmode="decimal" placeholder="napr. 45.2">' +
                 '</div>' +
                 '<div class="form-group align-self-end">' +
-                    '<button type="button" class="btn-secondary" onclick="removeEgfrRow(' + idx + ')" title="Odstrániť" aria-label="Odstrániť riadok ' + idx + '">−</button>' +
+                    '<button type="button" class="btn-secondary js-remove-egfr-row" data-row-id="' + idx + '" title="Odstrániť" aria-label="Odstrániť riadok ' + idx + '">−</button>' +
                 '</div>';
             container.appendChild(row);
             row.querySelector('input[type="date"]').focus();
-        };
+        }
 
-        window.removeEgfrRow = function (idx) {
+        function removeEgfrRow(idx) {
             var row = document.getElementById('row-' + idx);
             if (row) {
                 row.remove();
                 // Nedecrementujeme maxRow — server preskočí prázdne riadky
             }
-        };
+        }
+
+        var addButton = document.getElementById('btn-add-egfr-row');
+        var rows = document.getElementById('egfr-rows');
+        if (addButton) {
+            addButton.addEventListener('click', addEgfrRow);
+        }
+        if (rows) {
+            rows.addEventListener('click', function (event) {
+                var button = event.target.closest('.js-remove-egfr-row');
+                if (!button) return;
+                removeEgfrRow(parseInt(button.dataset.rowId || '0', 10));
+            });
+        }
     })();
     </script>
 

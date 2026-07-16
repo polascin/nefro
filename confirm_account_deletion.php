@@ -1,12 +1,22 @@
 <?php
 declare(strict_types=1);
 require_once __DIR__ . '/auth.php';
+header('Referrer-Policy: no-referrer');
 require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
 require_once __DIR__ . '/email_verification.php';
 
+$requestMethod = strtoupper((string) ($_SERVER['REQUEST_METHOD'] ?? 'GET'));
+if (!in_array($requestMethod, ['GET', 'POST'], true)) {
+    http_response_code(405);
+    header('Allow: GET, POST');
+    exit;
+}
+
 $errors = [];
 $token = trim((string) ($_GET['token'] ?? $_POST['token'] ?? ''));
+$tokenFormatValid = preg_match('/^[A-Za-z0-9_-]{32,128}$/D', $token) === 1;
+$token = $tokenFormatValid ? $token : '';
 $tokenHash = $token !== '' ? hash('sha256', $token) : '';
 $deletionRequest = null;
 
@@ -28,7 +38,7 @@ if ($tokenHash !== '') {
     }
 }
 
-if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
+if ($requestMethod === 'POST') {
     $postedCsrfToken = $_POST['csrf_token'] ?? '';
     if (!validateCsrfToken($postedCsrfToken)) {
         $errors[] = "Neplatný CSRF token. Skúste to znova.";
@@ -45,6 +55,29 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 
         try {
             $pdo->beginTransaction();
+
+            // Token aj účet opätovne načítame pod riadkovým zámkom. Súbežné
+            // požiadavky tak nemôžu ten istý mazací token spracovať dvakrát.
+            $lockStmt = $pdo->prepare(
+                "SELECT adt.user_id, u.email, u.avatar_path,
+                        u.is_admin, u.newsletter_consent, u.created_at
+                 FROM account_deletion_tokens adt
+                 INNER JOIN users u ON u.id = adt.user_id
+                 WHERE adt.token_hash = :token_hash
+                   AND adt.expires_at >= NOW()
+                 LIMIT 1
+                 FOR UPDATE"
+            );
+            $lockStmt->execute(['token_hash' => $tokenHash]);
+            $lockedDeletionRequest = $lockStmt->fetch();
+            if (!is_array($lockedDeletionRequest)) {
+                throw new \DomainException('Potvrdzovací odkaz už bol použitý alebo jeho platnosť vypršala.');
+            }
+            if (!empty($lockedDeletionRequest['is_admin'])) {
+                throw new \DomainException('Administrátorský účet nie je možné zrušiť týmto spôsobom.');
+            }
+            $deletionRequest = $lockedDeletionRequest;
+            $userId = (int) $deletionRequest['user_id'];
 
             // Štatistiky pred mazaním (pre audit log)
             $stCalcStmt = $pdo->prepare("SELECT COUNT(*) FROM calculator_results WHERE user_id = :uid");
@@ -125,7 +158,11 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
             // DB: CASCADE vymaže users_profile_archive, users_avatar_archive,
             //     password_resets, account_deletion_tokens, calculator_results, article_newsletter_queue,
             //     access_logs (user_id FK = SET NULL), admin_users_notice_audit (CASCADE)
-            $pdo->prepare("DELETE FROM users WHERE id = :id")->execute(['id' => $userId]);
+            $deleteUserStmt = $pdo->prepare("DELETE FROM users WHERE id = :id");
+            $deleteUserStmt->execute(['id' => $userId]);
+            if ($deleteUserStmt->rowCount() !== 1) {
+                throw new \RuntimeException('Uzamknutý používateľský účet sa nepodarilo vymazať.');
+            }
 
             $pdo->commit();
 
@@ -140,7 +177,9 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 
             // Fallback súborový log
             $logDir = __DIR__ . '/private/logs';
-            @mkdir($logDir, 0755, true);
+            @mkdir($logDir, 0750, true);
+            @chmod($logDir, 0750);
+            $logFile = $logDir . '/account_deletions.log';
             $logLine = implode("\t", [
                 date('Y-m-d H:i:s'),
                 'account_deleted',
@@ -149,15 +188,23 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 'user_self',
                 $clientIp,
             ]) . "\n";
-            @file_put_contents($logDir . '/account_deletions.log', $logLine, FILE_APPEND | LOCK_EX);
+            if (@file_put_contents($logFile, $logLine, FILE_APPEND | LOCK_EX) !== false) {
+                @chmod($logFile, 0640);
+            }
 
             // Zničenie relácie (pokiaľ bol používateľ prihlásený)
             clearUserSession();
 
-            header('Location: login.php?account_deleted=1');
+            header('Location: login.php?account_deleted=1', true, 303);
             exit;
 
-        } catch (\PDOException $e) {
+        } catch (\DomainException $e) {
+            if ($pdo->inTransaction()) {
+                $pdo->rollBack();
+            }
+            $errors[] = $e->getMessage();
+            $deletionRequest = null;
+        } catch (\Throwable $e) {
             if ($pdo->inTransaction()) {
                 $pdo->rollBack();
             }

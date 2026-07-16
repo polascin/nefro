@@ -1,4 +1,5 @@
 <?php
+
 /**
  * prevent_coefficients.php — oficiálne koeficienty AHA PREVENT
  * (Khan SS et al., Circulation 2024;149:430-449, supplement Table S12).

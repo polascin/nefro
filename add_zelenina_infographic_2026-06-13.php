@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 /**
  * add_zelenina_infographic_2026-06-13.php

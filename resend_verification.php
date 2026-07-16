@@ -5,16 +5,29 @@ require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
 require_once __DIR__ . '/email_verification.php';
 
+$requestMethod = strtoupper((string) ($_SERVER['REQUEST_METHOD'] ?? 'GET'));
+if (!in_array($requestMethod, ['GET', 'POST'], true)) {
+    http_response_code(405);
+    header('Allow: GET, POST');
+    exit;
+}
+header('Referrer-Policy: no-referrer');
+
 $errors     = [];
 $success    = null;
-$loginValue = trim((string) ($_GET['login'] ?? $_POST['login'] ?? ''));
+$loginValue = trim((string) ($_POST['login'] ?? ''));
+
+if ($requestMethod === 'GET' && isset($_SESSION['resend_verification_flash'])) {
+    $success = (string) $_SESSION['resend_verification_flash'];
+    unset($_SESSION['resend_verification_flash']);
+}
 
 // Konštanty rate limitingu
 const RESEND_MAX_ATTEMPTS  = 5;    // max pokusov per IP
 const RESEND_WINDOW_SECS   = 3600; // okno 1 hodina
 const RESEND_COOLDOWN_SECS = 300;  // 5 minút medzi jednotlivými odoslaniami
 
-if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
+if ($requestMethod === 'POST') {
     $postedCsrf = $_POST['csrf_token'] ?? '';
     if (!validateCsrfToken($postedCsrf)) {
         $errors[] = 'Neplatný CSRF token. Skúste to znova.';
@@ -127,6 +140,11 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
             }
         }
     }
+}
+if ($requestMethod === 'POST' && $success !== null && empty($errors)) {
+    $_SESSION['resend_verification_flash'] = $success;
+    header('Location: resend_verification.php?sent=1', true, 303);
+    exit;
 }
 ?>
 <!DOCTYPE html>

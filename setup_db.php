@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 // Ochrana pred priamym prístupom z webu
 if (basename($_SERVER['PHP_SELF']) === basename(__FILE__) && php_sapi_name() !== 'cli') {

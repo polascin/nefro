@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 /**
  * add_vetry_image_link_2026-06-13.php

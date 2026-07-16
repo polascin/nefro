@@ -127,7 +127,7 @@ if ($isCalculatorPage && !empty($currentUser)):
 
     $email = trim((string)($currentUser['email'] ?? ''));
     $mobile = trim((string)($currentUser['mobile_phone'] ?? ''));
-    
+
     $line2Parts = array_filter([$email, $mobile]);
     $line2 = implode(' | ', $line2Parts);
 

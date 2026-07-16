@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 /**
  * archive_cleanup.php — CLI-only retenčný cleanup skript
@@ -43,6 +44,8 @@ $accountAuditDeleted = 0;
 $adminAuditDeleted = 0;
 $fallbackAccessDeleted = 0;
 $fallbackDeletionDeleted = 0;
+$cspReportDeleted = 0;
+$cspRateLimitDeleted = 0;
 
 /**
  * Vyčistí riadky staršie než cutoff z tab-delimited fallback logu.
@@ -221,6 +224,30 @@ $fallbackDeletionDeleted = cleanupTimestampedLogFile(
     $fallbackCutoff,
     $errors
 );
+$cspReportDeleted += cleanupTimestampedLogFile(
+    __DIR__ . '/private/logs/csp-violations.log',
+    $fallbackCutoff,
+    $errors
+);
+$cspReportDeleted += cleanupTimestampedLogFile(
+    __DIR__ . '/private/logs/csp-violations.log.old',
+    $fallbackCutoff,
+    $errors
+);
+
+// CSP rate-limit súbory obsahujú iba počítadlo a čas okna, názov je však
+// pseudonym odvodený z IP. Po dvoch dňoch už nemajú prevádzkový účel.
+$cspRateLimitCutoff = time() - 2 * 86400;
+foreach (['nefro_csp_rl_*.json', 'csp_rl_*.json'] as $pattern) {
+    foreach (glob(sys_get_temp_dir() . DIRECTORY_SEPARATOR . $pattern) ?: [] as $rateLimitFile) {
+        if (is_file($rateLimitFile)
+            && filemtime($rateLimitFile) < $cspRateLimitCutoff
+            && @unlink($rateLimitFile)
+        ) {
+            $cspRateLimitDeleted++;
+        }
+    }
+}
 
 echo "Výsledky:\n";
 echo "  Zmaz. záznamy z histórie profilov:  {$profileDeleted}\n";
@@ -236,6 +263,8 @@ echo "  Vyčistené account deletion audity:  {$accountAuditDeleted}\n";
 echo "  Vyčistené admin export audity:      {$adminAuditDeleted}\n";
 echo "  Vyčistené fallback access logy:     {$fallbackAccessDeleted}\n";
 echo "  Vyčistené fallback deletion logy:   {$fallbackDeletionDeleted}\n";
+echo "  Vyčistené CSP reporty:              {$cspReportDeleted}\n";
+echo "  Vyčistené CSP rate-limit súbory:    {$cspRateLimitDeleted}\n";
 
 if (!empty($errors)) {
     echo "\nUpozornenia:\n";

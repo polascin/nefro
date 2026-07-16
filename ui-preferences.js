@@ -7,6 +7,43 @@ const consentKey = 'nps_cookie_consent';
 const consentCookieMaxAgeDays = 365;
 const globalPrivacyControlEnabled = typeof navigator !== 'undefined'
     && navigator.globalPrivacyControl === true;
+const analyticsSuppressedForPage = (() => {
+    const sensitivePages = new Set([
+        'verify_email.php',
+        'newsletter_verify_sub.php',
+        'newsletter_unsubscribe.php',
+        'confirm_account_deletion.php',
+        'reset_password.php'
+    ]);
+    const sensitiveParameters = new Set([
+        'token', 'sig', 'signature', 'secret', 'password',
+        'csrf', 'csrftoken', 'code', 'email', 'login', 'username', 'phone', 'mobile',
+        'patient', 'birthnumber'
+    ]);
+
+    try {
+        const page = window.location.pathname.split('/').pop().toLowerCase();
+        if (sensitivePages.has(page)) {
+            return true;
+        }
+
+        for (const key of new URLSearchParams(window.location.search).keys()) {
+            const normalized = key.toLowerCase().replace(/[^a-z0-9]+/g, '');
+            if (sensitiveParameters.has(normalized)
+                || normalized.includes('token')
+                || normalized.includes('password')
+                || normalized.includes('secret')
+                || normalized.includes('birthnumber')
+            ) {
+                return true;
+            }
+        }
+    } catch (_) {
+        return true;
+    }
+
+    return false;
+})();
 
 // Verzia Privacy Policy — pri zmene zásad aktualizovať tento reťazec.
 // MUSÍ sa zhodovať s `consentVersion` v legal_data.php (legalInfo()).
@@ -86,7 +123,7 @@ window.gtag = function(){ dataLayer.push(arguments); };
 window.gtagInitialized = false;
 
 function initializeGA4() {
-    if (window.gtagInitialized) {
+    if (analyticsSuppressedForPage || window.gtagInitialized) {
         return;
     }
     window.gtagInitialized = true;
@@ -293,7 +330,10 @@ function initPrivacyManager() {
                     </div>
                     <div class="cookie-modal-footer">
                         <p id="cookieConsentSavedInfo" class="cookie-modal-saved" hidden></p>
-                        <button id="btnSavePreferences" class="btn-primary">Uložiť moje nastavenia</button>
+                        <div class="cookie-modal-actions">
+                            <button id="btnRejectAllModal" class="btn-secondary">Odmietnuť voliteľné</button>
+                            <button id="btnSavePreferences" class="btn-primary">Uložiť moje nastavenia</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -316,6 +356,7 @@ function initPrivacyManager() {
     const btnRejectAll = document.getElementById('btnRejectAll');
     const btnCustomize = document.getElementById('btnCustomize');
     const btnCloseModal = document.getElementById('btnCloseModal');
+    const btnRejectAllModal = document.getElementById('btnRejectAllModal');
     const btnSavePreferences = document.getElementById('btnSavePreferences');
 
     // Toggles
@@ -462,14 +503,17 @@ function initPrivacyManager() {
         });
     });
 
-    btnRejectAll.addEventListener('click', () => {
+    function rejectOptionalConsent() {
         saveConsent({
             necessary: true,
             analytics: false,
             marketing: false,
             preferences: false
         });
-    });
+    }
+
+    btnRejectAll.addEventListener('click', rejectOptionalConsent);
+    btnRejectAllModal.addEventListener('click', rejectOptionalConsent);
 
     btnCustomize.addEventListener('click', openModal);
     btnCloseModal.addEventListener('click', closeModal);

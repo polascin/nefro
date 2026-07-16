@@ -1,4 +1,5 @@
 <?php
+
 /**
  * add_elekoglipron-peroralny-glp1-agonista-faza-2_article.php
  * Odborný článok (úvodná stránka, kategória 'odborne').

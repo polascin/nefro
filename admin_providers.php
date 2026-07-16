@@ -690,11 +690,10 @@ $isEdit = $editProvider !== null;
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Spolupracujúci poskytovatelia – Nefro-projekt Slovensko</title>
   <meta name="robots" content="noindex, nofollow">
-  <script src="theme.js?v=20260509-1&cb=<?= filemtime('theme.js') ?>"></script>
   <link rel="stylesheet" href="index.css?v=20260509-1&cb=<?= filemtime('index.css') ?>">
-  <script src="ui-preferences.js?v=20260511-1&cb=<?= filemtime('ui-preferences.js') ?>" defer></script>
+  <script src="ui-preferences.js?v=20260511-1&cb=<?= filemtime('ui-preferences.js') ?>"></script>
+  <script src="theme.js?v=20260509-1&cb=<?= filemtime('theme.js') ?>"></script>
   <script src="ui-preferences-fallback.js?v=20260511-1&cb=<?= filemtime('ui-preferences-fallback.js') ?>" defer></script>
-  <script src="nefro-ui.js?v=<?= filemtime('nefro-ui.js') ?>" defer></script>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>
@@ -903,7 +902,7 @@ $isEdit = $editProvider !== null;
                   <td><?= nl2br(htmlspecialchars((string) ($c['note'] ?? ''))) ?></td>
                   <td>
                     <a href="admin_providers.php?action=edit&id=<?= $pidEdit ?>&contact=<?= $ccId ?>" class="btn-secondary-small" title="Upraviť záznam">✏️</a>
-                    <form method="POST" action="admin_providers.php" class="d-inline" onsubmit="return confirm('Zmazať tento záznam histórie?');">
+                    <form method="POST" action="admin_providers.php" class="d-inline" data-confirm="Zmazať tento záznam histórie?">
                       <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
                       <input type="hidden" name="action" value="delete_contact">
                       <input type="hidden" name="provider_id" value="<?= $pidEdit ?>">
@@ -1159,7 +1158,7 @@ $isEdit = $editProvider !== null;
                       <input type="hidden" name="set_active" value="<?= $pActive ? 0 : 1 ?>">
                       <button type="submit" class="btn-secondary-small"><?= $pActive ? '🙈 Deaktivovať' : '👁 Aktivovať' ?></button>
                     </form>
-                    <form method="POST" action="admin_providers.php" class="d-inline" onsubmit="return confirm('Naozaj zmazať tohto poskytovateľa?');">
+                    <form method="POST" action="admin_providers.php" class="d-inline" data-confirm="Naozaj zmazať tohto poskytovateľa?">
                       <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
                       <input type="hidden" name="action" value="delete">
                       <input type="hidden" name="provider_id" value="<?= $pId ?>">

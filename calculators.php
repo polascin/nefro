@@ -456,6 +456,12 @@ $schemaWebApp = [
                 <p class="calc-intro-text">KDIGO 2024 odporúča pre niektoré ochorenia obličiek použiť externálne validované, diagnózovo špecifické prognostické nástroje.</p>
                 <div class="features-grid calculators-grid">
                     <article class="feature-card calculator-card">
+                        <h3>PLASMIC skóre pri podozrení na TTP</h3>
+                        <p>Odhad pravdepodobnosti závažného deficitu ADAMTS13 pri trombotickej mikroangiopatii podľa siedmich klinických a laboratórnych kritérií.</p>
+                        <a href="calculator_plasmic.php" class="btn-primary">Otvoriť kalkulačku</a>
+                    </article>
+
+                    <article class="feature-card calculator-card">
                         <h3>IgAN Prediction Tool</h3>
                         <p>Odhad 5-ročného rizika poklesu eGFR o ≥50 % alebo ESKD pri IgA nefropatii. Klinický model (Barbour 2019) bez požiadavky na histológiu.</p>
                         <a href="calculator_igan.php" class="btn-primary">Otvoriť kalkulačku</a>

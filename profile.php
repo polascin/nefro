@@ -11,6 +11,13 @@ require_once __DIR__ . '/profile_account_deletion.php';
 
 requireLogin();
 
+$requestMethod = strtoupper((string) ($_SERVER['REQUEST_METHOD'] ?? 'GET'));
+if (!in_array($requestMethod, ['GET', 'POST'], true)) {
+    http_response_code(405);
+    header('Allow: GET, POST');
+    exit;
+}
+
 $user_id = $_SESSION['user_id'];
 $errors = [];
 $success = false;
@@ -24,8 +31,10 @@ $stmt->execute(['id' => $user_id]);
 $user = $stmt->fetch();
 
 if (!$user) {
-    // Používateľ nebol nájdený, mal by byť odhlásený
-    header("Location: logout.php");
+    // Záznam účtu už neexistuje. Priame GET presmerovanie na logout.php
+    // reláciu nezruší, pretože odhlásenie správne prijíma iba POST+CSRF.
+    clearUserSession();
+    header("Location: login.php");
     exit;
 }
 
@@ -60,9 +69,9 @@ $deleteAvatarFile = function (?string $relativePath): void {
     }
 };
 
-$archiveAvatarVersion = function (int $userId, string $action, ?string $originalPath, ?string $replacementPath) use ($pdo): void {
+$archiveAvatarVersion = function (int $userId, string $action, ?string $originalPath, ?string $replacementPath) use ($pdo): ?string {
     if (empty($originalPath)) {
-        return;
+        return null;
     }
 
     $uploadsRoot = realpath(__DIR__ . '/uploads/avatars');
@@ -72,8 +81,9 @@ $archiveAvatarVersion = function (int $userId, string $action, ?string $original
     if ($uploadsRoot !== false && $originalAbsolute !== false && str_starts_with($originalAbsolute, $uploadsRoot . DIRECTORY_SEPARATOR) && is_file($originalAbsolute)) {
         $archiveDirAbsolute = __DIR__ . '/uploads/avatars/archive/' . $userId;
         if (!is_dir($archiveDirAbsolute)) {
-            mkdir($archiveDirAbsolute, 0755, true);
+            mkdir($archiveDirAbsolute, 0750, true);
         }
+        @chmod($archiveDirAbsolute, 0750);
 
         if (is_dir($archiveDirAbsolute)) {
             $safeBaseName = preg_replace('/[^A-Za-z0-9._-]/', '_', basename($originalPath));
@@ -81,6 +91,7 @@ $archiveAvatarVersion = function (int $userId, string $action, ?string $original
             $archiveAbsolute = $archiveDirAbsolute . '/' . $archiveFileName;
 
             if (@copy($originalAbsolute, $archiveAbsolute)) {
+                @chmod($archiveAbsolute, 0640);
                 $archivedPath = 'uploads/avatars/archive/' . $userId . '/' . $archiveFileName;
             }
         }
@@ -94,18 +105,24 @@ $archiveAvatarVersion = function (int $userId, string $action, ?string $original
         'archived_path' => $archivedPath,
         'replacement_path' => $replacementPath,
     ]);
+
+    return $archivedPath;
 };
 
 $deleteErrors   = [];
 $showDeleteForm = false;
 
-if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && ($_POST['action'] ?? '') === 'delete_account') {
+if ($requestMethod === 'POST' && ($_POST['action'] ?? '') === 'delete_account') {
     $result = profileHandleDeleteAccount($pdo, $user, $user_id);
     $deleteErrors   = $result['errors'];
     $showDeleteForm = $result['showForm'];
+    if (empty($deleteErrors) && !$showDeleteForm) {
+        header('Location: profile.php?deletion_requested=1', true, 303);
+        exit;
+    }
 }
 
-if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && ($_POST['action'] ?? '') !== 'delete_account') {
+if ($requestMethod === 'POST' && ($_POST['action'] ?? '') !== 'delete_account') {
     $postedCsrfToken = $_POST['csrf_token'] ?? '';
     if (!validateCsrfToken($postedCsrfToken)) {
         $errors[] = "Neplatný CSRF token. Skúste to znova.";
@@ -130,7 +147,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && ($_POST['action'] ?? '') !=
             'work_email', 'mobile_phone', 'other_phone', 'social_linkedin',
             'social_x', 'social_facebook', 'social_instagram', 'social_other',
             'other_contact', 'website', 'birth_date', 'street', 'house_number',
-            'orientation_number', 'zip_code', 'city', 'district', 'region', 'country', 'address_note'
+            'orientation_number', 'zip_code', 'city', 'district', 'region', 'country', 'address_note',
         ];
 
         $data = [];
@@ -305,6 +322,9 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && ($_POST['action'] ?? '') !=
                 } elseif ($bd < $minDate) {
                     $errors[] = "Dátum narodenia je mimo povolený rozsah.";
                     $data['birth_date'] = null;
+                } elseif ($today->diff($bd)->y < 16) {
+                    $errors[] = "Účet môžu používať len osoby vo veku aspoň 16 rokov.";
+                    $data['birth_date'] = null;
                 }
             }
         }
@@ -361,6 +381,9 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && ($_POST['action'] ?? '') !=
         }
 
         if (empty($errors)) {
+            $archivedAvatarPath = null;
+            $oldAvatarToDeleteAfterCommit = null;
+            $profileSaveCompleted = false;
             try {
                 $sql = "UPDATE users SET
                     username = :username, gender = :gender, pronouns = :pronouns,
@@ -419,6 +442,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && ($_POST['action'] ?? '') !=
 
                 if (empty($changedFields)) {
                     $success = true;
+                    $profileSaveCompleted = true;
                 } else {
                     $pdo->beginTransaction();
 
@@ -448,11 +472,15 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && ($_POST['action'] ?? '') !=
                     $oldAvatarPath = $user['avatar_path'] ?? null;
                     $avatarChanged = $oldAvatarPath !== $avatar_path;
                     if ($avatarChanged && !empty($oldAvatarPath) && ($avatarAction === 'updated' || $avatarAction === 'deleted')) {
-                        $archiveAvatarVersion($user_id, $avatarAction, $oldAvatarPath, $avatar_path);
-                        $deleteAvatarFile($oldAvatarPath);
+                        $archivedAvatarPath = $archiveAvatarVersion($user_id, $avatarAction, $oldAvatarPath, $avatar_path);
+                        $oldAvatarToDeleteAfterCommit = $oldAvatarPath;
                     }
 
                     $pdo->commit();
+                    $profileSaveCompleted = true;
+                    if ($oldAvatarToDeleteAfterCommit !== null) {
+                        $deleteAvatarFile($oldAvatarToDeleteAfterCommit);
+                    }
                     $success = true;
                 }
 
@@ -475,19 +503,38 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && ($_POST['action'] ?? '') !=
                     $pdo->rollBack();
                 }
 
-                if (!empty($newUploadedAvatarPath)) {
-                    $deleteAvatarFile($newUploadedAvatarPath);
-                }
-
-                if ((string) $e->getCode() === '23000') {
-                    $errors[] = "Toto používateľské meno už niekto používa.";
+                if ($profileSaveCompleted) {
+                    // Databázová zmena už bola commitnutá; následné zlyhanie
+                    // obnovenia zobrazenia nesmie vymazať práve uložený avatar.
+                    $success = true;
+                    error_log("Profile reload error after successful save: " . $e->getMessage());
                 } else {
-                    $errors[] = "Chyba pri ukladaní do databázy.";
-                    error_log("Profile error: " . $e->getMessage());
+                    if (!empty($newUploadedAvatarPath)) {
+                        $deleteAvatarFile($newUploadedAvatarPath);
+                    }
+                    if ($archivedAvatarPath !== null) {
+                        $deleteAvatarFile($archivedAvatarPath);
+                    }
+
+                    if ((string) $e->getCode() === '23000') {
+                        $errors[] = "Toto používateľské meno už niekto používa.";
+                    } else {
+                        $errors[] = "Chyba pri ukladaní do databázy.";
+                        error_log("Profile error: " . $e->getMessage());
+                    }
                 }
             }
         }
     }
+}
+if ($requestMethod === 'POST' && $success && empty($errors)) {
+    $successMessage = 'Profil bol úspešne aktualizovaný.';
+    if ($mobileVerificationNotice !== null) {
+        $successMessage .= ' ' . $mobileVerificationNotice;
+    }
+    setFlashMessage('success', $successMessage);
+    header('Location: profile.php?updated=1', true, 303);
+    exit;
 }
 ?>
 <!DOCTYPE html>
@@ -863,3 +910,5 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && ($_POST['action'] ?? '') !=
 
     <script src="address-autofill.js?cb=<?= filemtime('address-autofill.js') ?>" defer></script>
     <?php include 'footer.php'; ?>
+</body>
+</html>

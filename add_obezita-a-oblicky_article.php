@@ -1,4 +1,5 @@
 <?php
+
 /**
  * add_obezita-a-oblicky_article.php
  * Popularizačný článok (sekcia „Pre pacientov“) — spracované z DOCX

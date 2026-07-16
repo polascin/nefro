@@ -1,4 +1,5 @@
 <?php
+
 /**
  * add_implementacia-intenzivnej-kontroly-tlaku-esprit-nefrologia_article.php
  * Odborný článok (úvodná stránka, kategória 'odborne') — spracovanie zdrojového

@@ -11,6 +11,10 @@ $robotsMeta = 'noindex, nofollow';
 $canonicalUrl = getAppBaseUrl() . '/calculator_history.php';
 $errors    = [];
 $messages  = [];
+if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_SESSION['calculator_history_flash'])) {
+    $messages[] = (string) $_SESSION['calculator_history_flash'];
+    unset($_SESSION['calculator_history_flash']);
+}
 
 const CALC_LABELS = [
     'egfr_ckd_epi_2021'   => 'eGFR (CKD-EPI 2021)',
@@ -106,7 +110,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
     } elseif ($_POST['action'] === 'delete' && isLoggedIn()) {
         $rid = (int)($_POST['result_id'] ?? 0);
         if ($rid > 0 && calculatorDeleteSavedResult($pdo, $rid, (int)$_SESSION['user_id'])) {
-            $messages[] = 'Záznam bol vymazaný.';
+            $_SESSION['calculator_history_flash'] = 'Záznam bol vymazaný.';
+            $redirectQuery = http_build_query(array_filter([
+                'calc' => trim((string) ($_GET['calc'] ?? '')),
+                'patient' => trim((string) ($_GET['patient'] ?? '')),
+            ], static fn (string $value): bool => $value !== ''));
+            header('Location: calculator_history.php' . ($redirectQuery !== '' ? '?' . $redirectQuery : ''), true, 303);
+            exit;
         } else {
             $errors[] = 'Záznam sa nepodarilo vymazať.';
         }
@@ -312,11 +322,10 @@ $totalCount = array_sum(array_column($statsByCalc, 'count'));
           <span class="calc-patient-summary-actions">
             <?php if ($filterPat === '' && !$isAnon): ?>
               <a href="?patient=<?= urlencode($pkey) ?><?= $filterKey ? '&calc='.urlencode($filterKey) : '' ?>"
-                 class="calc-patient-filter-link" onclick="event.stopPropagation()">Len tento</a>
+                 class="calc-patient-filter-link">Len tento</a>
             <?php endif; ?>
             <button type="button" class="calc-patient-print-btn btn-secondary"
                     data-patient-idx="<?= $patIdx ?>"
-                    onclick="event.stopPropagation(); printPatient(<?= $patIdx ?>)"
                     title="Vytlačiť históriu tohto pacienta">🖨 Tlačiť</button>
           </span>
         </summary>
@@ -462,8 +471,14 @@ $totalCount = array_sum(array_column($statsByCalc, 'count'));
         });
       })();
 
+      document.querySelectorAll('.calc-patient-summary-actions').forEach(function(actions) {
+        actions.addEventListener('click', function(event) {
+          event.stopPropagation();
+        });
+      });
+
       // Tlač histórie jedného pacienta
-      window.printPatient = function(patIdx) {
+      function printPatient(patIdx) {
         var all = document.querySelectorAll('.calc-patient-section');
         // Zabezpeč, že cieľová sekcia je otvorená
         all.forEach(function(s) {
@@ -489,7 +504,13 @@ $totalCount = array_sum(array_column($statsByCalc, 'count'));
         });
         if (header)  header.classList.remove('no-print');
         if (toolbar) toolbar.classList.remove('no-print');
-      };
+      }
+
+      document.querySelectorAll('.calc-patient-print-btn').forEach(function(button) {
+        button.addEventListener('click', function() {
+          printPatient(parseInt(button.dataset.patientIdx || '0', 10));
+        });
+      });
       </script>
 
     </form>

@@ -1412,6 +1412,18 @@ code {
     text-decoration: underline;
 }
 
+.site-footer__logout-form {
+    display: inline;
+}
+
+.site-footer__logout-button {
+    padding: 0;
+    border: 0;
+    background: none;
+    font-family: inherit;
+    cursor: pointer;
+}
+
 .site-footer__bottom {
     border-top: 1px solid #1e293b;
     padding: 16px 0;
@@ -1728,7 +1740,15 @@ input:disabled + .slider:before {
     border-radius: 0 0 16px 16px;
 }
 
-.cookie-modal-footer .btn-primary {
+.cookie-modal-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.cookie-modal-actions .btn-primary,
+.cookie-modal-actions .btn-secondary {
     padding: 10px 24px;
 }
 
@@ -2951,6 +2971,53 @@ input:disabled + .slider:before {
 .link-unstyled { text-decoration: none; cursor: pointer; }
 .link-chip { text-decoration: none; cursor: pointer; font-size: 0.9rem; padding: 5px 12px; }
 .admin-page-main { padding-top: 40px; padding-bottom: 60px; }
+
+.review-drug {
+    border: 1px solid var(--border-color, #ccc);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    margin: 0 0 1.25rem;
+}
+
+.review-drug h3 {
+    margin: 0 0 0.35rem;
+}
+
+.review-meta {
+    font-size: 0.9rem;
+    opacity: 0.85;
+    margin-bottom: 0.6rem;
+}
+
+.review-section {
+    margin: 0.45rem 0;
+}
+
+.review-complete {
+    font-weight: 700;
+}
+
+.review-complete.ok {
+    color: #1a7f37;
+}
+
+.review-complete.warn {
+    color: #9a6700;
+}
+
+.review-cat-h {
+    margin-top: 1.5rem;
+    border-bottom: 2px solid var(--border-color, #ccc);
+    padding-bottom: 0.25rem;
+}
+
+.review-actions {
+    margin-top: 0.75rem;
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
 .admin-p-intro { margin-bottom: 1.2rem; }
 .admin-action-mt { margin-top: 20px; }
 .admin-filter-form { margin-top: 10px; margin-bottom: 12px; }
@@ -5597,6 +5664,10 @@ mark.search-hl {
     min-height: 44px;
 }
 
+.session-timeout-warning__logout-form {
+    display: contents;
+}
+
 @media (max-width: 480px) {
     .session-timeout-warning {
         right: 16px;
@@ -6811,6 +6882,24 @@ mark.search-hl {
 }
 
 @media print {
+    .drug-review-page .no-print {
+        display: none !important;
+    }
+
+    .drug-review-page .review-drug {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        border-color: #999;
+    }
+
+    .drug-review-page a[href]::after {
+        content: "";
+    }
+
+    .drug-review-page {
+        font-size: 11pt;
+    }
+
     .tool-page--dieta {
         background: #fff !important;
         color: #000 !important;

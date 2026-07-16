@@ -4,6 +4,13 @@ require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
 
+$requestMethod = strtoupper((string) ($_SERVER['REQUEST_METHOD'] ?? 'GET'));
+if (!in_array($requestMethod, ['GET', 'POST'], true)) {
+    http_response_code(405);
+    header('Allow: GET, POST');
+    exit;
+}
+
 $isLoggedIn   = isLoggedIn();
 $currentUserId = $isLoggedIn ? (int) $_SESSION['user_id'] : 0;
 
@@ -11,7 +18,7 @@ $discFlash    = popFlashMessage();
 $errorMessage = null;
 
 // ── POST: nový príspevok alebo odpoveď (len pre prihlásených) ──────────────
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && $isLoggedIn) {
+if ($requestMethod === 'POST' && $isLoggedIn) {
     $action    = trim((string) ($_POST['action'] ?? ''));
     $csrfToken = (string) ($_POST['csrf_token'] ?? '');
 

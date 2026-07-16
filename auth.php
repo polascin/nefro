@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 require_once __DIR__ . '/config_loader.php';
 
@@ -67,12 +68,14 @@ ini_set('session.cookie_samesite', 'Strict');
 
 // Priorita: projektovo-lokálne sessions > temp > default
 $projectSessionPath = __DIR__ . DIRECTORY_SEPARATOR . 'private' . DIRECTORY_SEPARATOR . 'sessions';
-if ((is_dir($projectSessionPath) || @mkdir($projectSessionPath, 0755, true)) && is_writable($projectSessionPath)) {
+if ((is_dir($projectSessionPath) || @mkdir($projectSessionPath, 0700, true)) && is_writable($projectSessionPath)) {
+    @chmod($projectSessionPath, 0700);
     session_save_path($projectSessionPath);
 } else {
     // Fallback na sys_get_temp_dir() ak projektovo-lokálne cesta zlyhá
     $tempSessionPath = sys_get_temp_dir() . DIRECTORY_SEPARATOR . 'nefro_sessions';
-    if ((is_dir($tempSessionPath) || @mkdir($tempSessionPath, 0755, true)) && is_writable($tempSessionPath)) {
+    if ((is_dir($tempSessionPath) || @mkdir($tempSessionPath, 0700, true)) && is_writable($tempSessionPath)) {
+        @chmod($tempSessionPath, 0700);
         session_save_path($tempSessionPath);
     }
 }
@@ -175,11 +178,11 @@ function generateCsrfToken(): string {
  * Po úspešnej validácii sa token automaticky rotuje — ochráni pred opakovaným
  * použitím a pred CSRF-token-fixation útokmi.
  *
- * @param string $token Token z POST požiadavky ($_POST['csrf_token'])
+ * @param mixed $token Token z POST požiadavky; ne-reťazcové vstupy sa bezpečne odmietnu.
  * @return bool True ak je token platný, inak False
  */
-function validateCsrfToken(string $token): bool {
-    if (!isset($_SESSION['csrf_token']) || $token === '') {
+function validateCsrfToken(mixed $token): bool {
+    if (!is_string($token) || !isset($_SESSION['csrf_token']) || $token === '') {
         return false;
     }
     $valid = hash_equals($_SESSION['csrf_token'], $token);
@@ -232,14 +235,18 @@ function requireAdminMutationConfirmation(string $title = 'Spustiť administrač
     $safeTitle = htmlspecialchars($title, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
     $csrfToken = htmlspecialchars(generateCsrfToken(), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
     $cssVersion = is_file(__DIR__ . '/index.css') ? (string) filemtime(__DIR__ . '/index.css') : '1';
+    $preferencesVersion = is_file(__DIR__ . '/ui-preferences.js') ? (string) filemtime(__DIR__ . '/ui-preferences.js') : '1';
+    $preferencesFallbackVersion = is_file(__DIR__ . '/ui-preferences-fallback.js') ? (string) filemtime(__DIR__ . '/ui-preferences-fallback.js') : '1';
     $themeVersion = is_file(__DIR__ . '/theme.js') ? (string) filemtime(__DIR__ . '/theme.js') : '1';
 
     echo '<!DOCTYPE html><html lang="sk"><head><meta charset="UTF-8">'
         . '<meta name="viewport" content="width=device-width, initial-scale=1.0">'
         . '<meta name="robots" content="noindex, nofollow">'
         . '<title>' . $safeTitle . '</title>'
-        . '<script src="theme.js?v=' . rawurlencode($themeVersion) . '"></script>'
         . '<link rel="stylesheet" href="index.css?v=' . rawurlencode($cssVersion) . '">'
+        . '<script src="ui-preferences.js?v=' . rawurlencode($preferencesVersion) . '"></script>'
+        . '<script src="theme.js?v=' . rawurlencode($themeVersion) . '"></script>'
+        . '<script src="ui-preferences-fallback.js?v=' . rawurlencode($preferencesFallbackVersion) . '" defer></script>'
         . '</head><body><a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>'
         . '<main id="main-content" class="container" role="main">'
         . '<div class="auth-container"><h1>' . $safeTitle . '</h1>'
@@ -476,7 +483,7 @@ function isSensitiveAccessLogParameter(string $name): bool {
     $exact = [
         'token', 'sig', 'signature', 'secret', 'password', 'passwd',
         'csrf', 'csrftoken', 'jstoken', 'code', 'totpcode',
-        'email', 'phone', 'mobile', 'patient', 'birthnumber',
+        'email', 'login', 'username', 'phone', 'mobile', 'patient', 'birthnumber',
         'patientbirthnumber', 'rodnecislo',
     ];
     if (in_array($normalized, $exact, true)) {
@@ -634,7 +641,8 @@ function saveAccessLog(array $record): bool {
  */
 function fallbackAccessLog(array $record): void {
     $logDir = __DIR__ . '/private/logs';
-    @mkdir($logDir, 0755, true);
+    @mkdir($logDir, 0750, true);
+    @chmod($logDir, 0750);
     $logFile = $logDir . '/access.log';
     $line = sprintf(
         "%s\t%s\t%s\t%s\t%s\t%d\t%s\t%s\t%s\t%s\t%s\t%s\t%d\t%d\n",
@@ -653,7 +661,9 @@ function fallbackAccessLog(array $record): void {
         $record['response_time_ms'],
         $record['is_bot'],
     );
-    @file_put_contents($logFile, $line, FILE_APPEND | LOCK_EX);
+    if (@file_put_contents($logFile, $line, FILE_APPEND | LOCK_EX) !== false) {
+        @chmod($logFile, 0640);
+    }
 }
 
 /**
@@ -712,7 +722,7 @@ function isKnownBotUserAgent(): bool {
 
     $botPatterns = [
         '/curl/i', '/Wget/i', '/libwww-perl/i', '/Python-urllib/i', '/php/i',
-        '/Go-http-client/i', '/Java\//i', '/PostmanRuntime/i', '/axios/i'
+        '/Go-http-client/i', '/Java\//i', '/PostmanRuntime/i', '/axios/i',
     ];
 
     foreach ($botPatterns as $pattern) {

@@ -5,6 +5,13 @@ require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
 require_once __DIR__ . '/email_verification.php';
 
+$requestMethod = strtoupper((string) ($_SERVER['REQUEST_METHOD'] ?? 'GET'));
+if (!in_array($requestMethod, ['GET', 'POST'], true)) {
+    http_response_code(405);
+    header('Allow: GET, POST');
+    exit;
+}
+
 if (isLoggedIn()) {
     header("Location: index.php");
     exit;
@@ -14,8 +21,12 @@ $errors = [];
 $notice = null;
 
 $isLocalDev = isAppLocalDev();
+if ($requestMethod === 'GET' && isset($_SESSION['forgot_password_flash'])) {
+    $notice = (string) $_SESSION['forgot_password_flash'];
+    unset($_SESSION['forgot_password_flash']);
+}
 
-if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
+if ($requestMethod === 'POST') {
     $postedCsrfToken = $_POST['csrf_token'] ?? '';
     if (!validateCsrfToken($postedCsrfToken)) {
         $errors[] = "Neplatný CSRF token. Skúste to znova.";
@@ -176,6 +187,11 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 } else {
     // GET požiadavka: zaznamenaj čas načítania
     markFormLoadTime('forgot_password');
+}
+if ($requestMethod === 'POST' && $notice !== null && empty($errors)) {
+    $_SESSION['forgot_password_flash'] = $notice;
+    header('Location: forgot_password.php?sent=1', true, 303);
+    exit;
 }
 ?>
 <!DOCTYPE html>

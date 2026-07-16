@@ -768,7 +768,7 @@ function sexLabel(string $v): string
                             <div class="form-group">
                                 <label for="diabetes">Diabetes mellitus</label>
                                 <select id="diabetes" name="diabetes" class="form-control"
-                                        onchange="document.getElementById('dm-fields').classList.toggle('d-none', this.value !== '1')">
+                                        data-toggle-target="dm-fields" data-toggle-value="1">
                                     <option value="0" <?= $form["diabetes"] ===
                                     "0"
                                         ? "selected"

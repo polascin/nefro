@@ -157,3 +157,5 @@ include 'legal_head.php';
     </main>
 
     <?php include 'footer.php'; ?>
+</body>
+</html>

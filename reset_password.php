@@ -1,8 +1,16 @@
 <?php
 declare(strict_types=1);
 require_once __DIR__ . '/auth.php';
+header('Referrer-Policy: no-referrer');
 require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
+
+$requestMethod = strtoupper((string) ($_SERVER['REQUEST_METHOD'] ?? 'GET'));
+if (!in_array($requestMethod, ['GET', 'POST'], true)) {
+    http_response_code(405);
+    header('Allow: GET, POST');
+    exit;
+}
 
 $errors = [];
 $token = trim((string) ($_GET['token'] ?? $_POST['token'] ?? ''));
@@ -32,7 +40,7 @@ if ($tokenHash !== '') {
 
 $isLocalDev = isAppLocalDev();
 
-if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
+if ($requestMethod === 'POST') {
     $postedCsrfToken = $_POST['csrf_token'] ?? '';
     if (!validateCsrfToken($postedCsrfToken)) {
         $errors[] = "Neplatný CSRF token. Skúste to znova.";
@@ -99,7 +107,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     $pdo->commit();
 
                     setFlashMessage('success', 'Heslo bolo úspešne zmenené. Môžete sa prihlásiť novým heslom.');
-                    header('Location: login.php');
+                    header('Location: login.php', true, 303);
                     exit;
                 }
             } catch (\PDOException $e) {

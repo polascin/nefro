@@ -7,6 +7,13 @@ require_once __DIR__ . '/totp.php';
 
 requireLogin();
 
+$requestMethod = strtoupper((string) ($_SERVER['REQUEST_METHOD'] ?? 'GET'));
+if (!in_array($requestMethod, ['GET', 'POST'], true)) {
+    http_response_code(405);
+    header('Allow: GET, POST');
+    exit;
+}
+
 $userId     = $_SESSION['user_id'];
 $isLocalDev = isAppLocalDev();
 $errors     = [];
@@ -26,7 +33,8 @@ try {
 }
 
 if (!$user) {
-    header("Location: logout.php");
+    clearUserSession();
+    header("Location: login.php");
     exit;
 }
 
@@ -52,7 +60,7 @@ $pendingSecret = $_SESSION['2fa_setup_secret'] ?? null;
 // CSRF kontrola ide ako prvá — pred načítaním záložných kódov zo session.
 // Ak CSRF zlyhá, presmerujeme cez PRG; záložné kódy ostanú v session a zobrazia
 // sa používateľovi správne po presmerovaní na GET, nie zmätene vedľa chybovej hlášky.
-if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
+if ($requestMethod === 'POST') {
     $postedCsrfToken = $_POST['csrf_token'] ?? '';
     $action          = $_POST['action'] ?? '';
 

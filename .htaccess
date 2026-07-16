@@ -45,6 +45,12 @@ ServerSignature Off
     # Blokovanie .git, scratch, hooks, tools, .vscode, .kilo, .trunk adresárov
     RewriteRule ^(\.git|scratch|hooks|tools|\.vscode|\.kilo|\.trunk)(/.*)?$ - [F,L]
 
+    # Defense-in-depth pre runtime dáta a interný archív avatarov. Oba
+    # adresáre majú aj vlastný .htaccess, no koreňové pravidlo ich chráni
+    # aj pri neúplnom prenose vnorených konfiguračných súborov.
+    RewriteRule ^private(/.*)?$ - [F,L]
+    RewriteRule ^uploads/avatars/archive(/.*)?$ - [F,L]
+
     # Rewrite sitemap.xml → sitemap.php
     RewriteRule ^sitemap\.xml$ sitemap.php [L]
 

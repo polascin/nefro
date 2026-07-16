@@ -129,28 +129,12 @@ function dgrSection(string $title, ?string $body, bool $highlight = false): void
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kontrola a zverejňovanie liekov – Nefro-projekt Slovensko</title>
   <meta name="robots" content="noindex, nofollow">
-  <script src="theme.js?v=20260509-1&cb=<?= filemtime('theme.js') ?>"></script>
   <link rel="stylesheet" href="index.css?v=20260509-1&cb=<?= filemtime('index.css') ?>">
-  <script src="nefro-ui.js?v=<?= filemtime('nefro-ui.js') ?>" defer></script>
-  <style>
-    .review-drug { border: 1px solid var(--border-color, #ccc); border-radius: 8px; padding: 1rem 1.25rem; margin: 0 0 1.25rem; }
-    .review-drug h3 { margin: 0 0 .35rem; }
-    .review-meta { font-size: .9rem; opacity: .85; margin-bottom: .6rem; }
-    .review-section { margin: .45rem 0; }
-    .review-complete { font-weight: 700; }
-    .review-complete.ok { color: #1a7f37; }
-    .review-complete.warn { color: #9a6700; }
-    .review-cat-h { margin-top: 1.5rem; border-bottom: 2px solid var(--border-color, #ccc); padding-bottom: .25rem; }
-    .review-actions { margin-top: .75rem; display: flex; gap: .5rem; flex-wrap: wrap; align-items: center; }
-    @media print {
-      .no-print { display: none !important; }
-      .review-drug { break-inside: avoid; page-break-inside: avoid; border-color: #999; }
-      a[href]::after { content: ""; }
-      body { font-size: 11pt; }
-    }
-  </style>
+  <script src="ui-preferences.js?v=20260511-1&cb=<?= filemtime('ui-preferences.js') ?>"></script>
+  <script src="theme.js?v=20260509-1&cb=<?= filemtime('theme.js') ?>"></script>
+  <script src="ui-preferences-fallback.js?v=20260511-1&cb=<?= filemtime('ui-preferences-fallback.js') ?>" defer></script>
 </head>
-<body>
+<body class="drug-review-page">
   <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>
   <?php
   $headerTitle = 'Kontrola a zverejňovanie liekov';
@@ -199,7 +183,7 @@ function dgrSection(string $title, ?string $body, bool $highlight = false): void
         </select>
         <button type="submit" class="btn-secondary-small">Filtrovať</button>
         <a href="admin_drugs_review.php" class="btn-secondary-small">Reset</a>
-        <button type="button" class="btn-secondary-small" onclick="window.print()">🖨 Vytlačiť</button>
+        <button type="button" class="btn-secondary-small js-print">🖨 Vytlačiť</button>
       </form>
 
       <p class="helper-text">Zobrazených: <strong><?= count($drugs) ?></strong> liekov<?= $fPub === 'hidden' ? ' (nezverejnené)' : '' ?>.</p>

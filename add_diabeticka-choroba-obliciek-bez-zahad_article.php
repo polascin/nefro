@@ -1,4 +1,5 @@
 <?php
+
 /**
  * add_diabeticka-choroba-obliciek-bez-zahad_article.php
  * Popularizačný článok (sekcia „Pre pacientov“) — spracované z DOCX vrátane

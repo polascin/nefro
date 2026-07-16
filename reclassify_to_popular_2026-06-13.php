@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 /**
  * reclassify_to_popular_2026-06-13.php

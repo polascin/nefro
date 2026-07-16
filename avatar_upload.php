@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 if (!function_exists('npsCreateImageResourceFromFile')) {
@@ -107,15 +108,26 @@ if (!function_exists('processAvatarUpload')) {
      */
     function processAvatarUpload(array $file, int $maxFileSize = 2097152): array
     {
-        if (($file['error'] ?? UPLOAD_ERR_NO_FILE) !== UPLOAD_ERR_OK) {
+        $uploadError = (int) ($file['error'] ?? UPLOAD_ERR_NO_FILE);
+        if ($uploadError === UPLOAD_ERR_NO_FILE) {
             return ['path' => null, 'error' => null];
+        }
+        if ($uploadError !== UPLOAD_ERR_OK) {
+            $message = in_array($uploadError, [UPLOAD_ERR_INI_SIZE, UPLOAD_ERR_FORM_SIZE], true)
+                ? 'Nahraný obrázok prekračuje povolenú veľkosť servera.'
+                : 'Nahrávanie obrázka sa nepodarilo. Skúste to znova.';
+            return ['path' => null, 'error' => $message];
         }
 
         $tmpPath = (string) ($file['tmp_name'] ?? '');
-        $fileSize = (int) ($file['size'] ?? 0);
-        if ($tmpPath === '' || !is_uploaded_file($tmpPath) || $fileSize <= 0) {
+        if ($tmpPath === '' || !is_uploaded_file($tmpPath)) {
             return ['path' => null, 'error' => 'Nahraný súbor je neplatný.'];
         }
+        $actualFileSize = filesize($tmpPath);
+        if ($actualFileSize === false || $actualFileSize <= 0) {
+            return ['path' => null, 'error' => 'Nahraný súbor je prázdny alebo sa nedá prečítať.'];
+        }
+        $fileSize = (int) $actualFileSize;
 
         $imageMeta = @getimagesize($tmpPath);
         if ($imageMeta === false || empty($imageMeta[0]) || empty($imageMeta[1])) {
@@ -131,6 +143,7 @@ if (!function_exists('processAvatarUpload')) {
         }
 
         $mime = (string) mime_content_type($tmpPath);
+        $imageMime = (string) $imageMeta['mime'];
         $mimeToExt = [
             'image/jpeg' => 'jpg',
             'image/png' => 'png',
@@ -138,7 +151,7 @@ if (!function_exists('processAvatarUpload')) {
             'image/webp' => 'webp',
         ];
 
-        if (!isset($mimeToExt[$mime])) {
+        if (!isset($mimeToExt[$mime]) || $imageMime !== $mime) {
             return ['path' => null, 'error' => 'Nepodporovaný formát avatara. Povolené sú JPG, PNG, GIF a WebP.'];
         }
 
@@ -154,7 +167,7 @@ if (!function_exists('processAvatarUpload')) {
         }
 
         $extension = $mimeToExt[$mime];
-        $newFileName = uniqid('avatar_', true) . '.' . $extension;
+        $newFileName = 'avatar_' . bin2hex(random_bytes(16)) . '.' . $extension;
         $destinationAbs = $uploadDir . $newFileName;
         $destinationRel = 'uploads/avatars/' . $newFileName;
 

@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 // Ochrana: súbor je určený iba pre CLI použitie
 if (php_sapi_name() !== 'cli') { http_response_code(403); exit('Forbidden'); }

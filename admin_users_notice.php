@@ -85,7 +85,18 @@ if ($includeSensitive) {
     if ($requestMethod !== 'POST' || !validateCsrfToken($postedCsrf)) {
         http_response_code(403);
         header('Content-Type: text/html; charset=UTF-8');
-        echo '<!DOCTYPE html><html lang="sk"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Citlivý export vyžaduje POST</title><style>body{font-family:Arial,Helvetica,sans-serif;background:#f4f6f8;color:#111;margin:0;padding:0;} .container{max-width:720px;margin:52px auto;padding:24px;background:#fff;border-radius:14px;box-shadow:0 18px 40px rgba(15,23,42,0.08);} h1{margin-top:0;color:#0f172a;} p{line-height:1.7;color:#475569;} .btn{display:inline-block;margin-top:20px;padding:12px 18px;background:#0055a5;color:#fff;text-decoration:none;border-radius:10px;}</style></head><body><div class="container"><h1>Citlivý export vyžaduje POST</h1><p>Pre otvorenie citlivého exportu zoznamu používateľov sa musí použiť formulár a platný CSRF token. Toto je bezpečnostná ochrana, ktorá zabraňuje neautorizovanému spusteniu exportu.</p><p>Vráťte sa prosím na <a href="admin.php">Administráciu</a> a skúste export znova cez ovládacie prvky v sekcii "Zoznam používateľov".</p></div></body></html>';
+        $cssVersion = is_file(__DIR__ . '/index.css') ? (string) filemtime(__DIR__ . '/index.css') : '1';
+        echo '<!DOCTYPE html><html lang="sk"><head><meta charset="UTF-8">'
+            . '<meta name="viewport" content="width=device-width, initial-scale=1.0">'
+            . '<title>Citlivý export vyžaduje POST</title>'
+            . '<link rel="stylesheet" href="index.css?v=' . rawurlencode($cssVersion) . '">'
+            . '</head><body><a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>'
+            . '<main id="main-content" class="auth-container auth-container--wide admin-page-main" role="main">'
+            . '<h1>Citlivý export vyžaduje POST</h1>'
+            . '<p>Pre otvorenie citlivého exportu zoznamu používateľov sa musí použiť formulár a platný CSRF token. '
+            . 'Toto je bezpečnostná ochrana, ktorá zabraňuje neautorizovanému spusteniu exportu.</p>'
+            . '<p>Vráťte sa prosím na <a href="admin.php">Administráciu</a> a skúste export znova cez ovládacie prvky '
+            . 'v sekcii „Zoznam používateľov“.</p></main></body></html>';
         exit;
     }
 }
@@ -280,10 +291,13 @@ $modeLabel = $includeSensitive
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zoznam používateľov - Nefro</title>
     <meta name="robots" content="noindex, nofollow">
-    <script src="theme.js?v=20260511-1&cb=<?= filemtime('theme.js') ?>"></script>
     <link rel="stylesheet" href="index.css?v=20260509-1&cb=<?= filemtime('index.css') ?>">
-    <script src="ui-preferences.js?v=20260511-1&cb=<?= filemtime('ui-preferences.js') ?>" defer></script>
+    <script src="ui-preferences.js?v=20260511-1&cb=<?= filemtime('ui-preferences.js') ?>"></script>
+    <script src="theme.js?v=20260511-1&cb=<?= filemtime('theme.js') ?>"></script>
     <script src="ui-preferences-fallback.js?v=20260511-1&cb=<?= filemtime('ui-preferences-fallback.js') ?>" defer></script>
+    <script src="nefro-ui.js?v=<?= filemtime('nefro-ui.js') ?>" defer></script>
+    <script nonce="<?= htmlspecialchars(getScriptNonce(), ENT_QUOTES, 'UTF-8') ?>">window.npsSessionTimeoutSeconds=<?= (int) SESSION_IDLE_TIMEOUT ?>;window.npsSessionKeepaliveToken=<?= json_encode(generateSessionKeepaliveToken(), JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?>;window.npsLogoutCsrfToken=<?= json_encode(generateCsrfToken(), JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?>;</script>
+    <script src="session-timeout.js?v=<?= filemtime('session-timeout.js') ?>" defer></script>
 </head>
 <body class="admin-notice-page">
     <a href="#main-notice-content" class="skip-link">Preskočiť na hlavný obsah</a>

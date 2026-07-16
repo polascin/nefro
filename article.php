@@ -669,15 +669,16 @@ if ($article) {
         btn.textContent = 'Odosielam…';
         fetch('newsletter_subscribe.php', {
           method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'X-NPS-Newsletter': '1'
+          },
           body: 'email=' + encodeURIComponent(email)
                 + '&website=' + encodeURIComponent(form.querySelector('input[name="website"]') ? form.querySelector('input[name="website"]').value : '')
         })
         .then(function (r) { return r.json(); })
         .then(function (data) {
-          // innerHTML je zámerné: jedna zo správ obsahuje <a> odkaz (registered user flow).
-          // Invariant: server NIKDY nevkladá user-supplied dáta do poľa message.
-          msg.innerHTML = data.message || '';
+          msg.textContent = data.message || '';
           msg.hidden    = false;
           if (data.success) {
             form.hidden = true;

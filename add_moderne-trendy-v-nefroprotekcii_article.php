@@ -1,4 +1,5 @@
 <?php
+
 /**
  * add_moderne-trendy-v-nefroprotekcii_article.php
  * Popularizačný článok (sekcia „Pre pacientov“) — spracované z DOCX vrátane

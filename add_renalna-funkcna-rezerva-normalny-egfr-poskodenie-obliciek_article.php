@@ -80,7 +80,7 @@ $articles[] = [
 
 <p>To neznamená, že eGFR je „neskorý“ alebo málo hodnotný parameter v každej situácii. Je základom klasifikácie CKD, dávkovania mnohých liekov a sledovania priebehu ochorenia. Jeho limitom je, že <strong>zachovaná celková filtrácia nevylučuje súčasné poškodenie obličiek</strong> a izolovaná hodnota nevystihuje dynamiku ochorenia.</p>
 
-<p>Ak presnosť odhadu ovplyvňuje zásadné klinické rozhodnutie a kreatinín môže byť skreslený, KDIGO odporúča podľa dostupnosti využiť kombinovaný odhad z kreatinínu a cystatínu C. Vo vybraných situáciách môže byť potrebné aj meranie GFR exogénnym filtračným markerom. Ani presne zmeraná celková GFR však sama osebe neurčí počet nefrónov alebo rozsah glomerulosklerózy.</p>
+<p class="pdf-avoid-break">Ak presnosť odhadu ovplyvňuje zásadné klinické rozhodnutie a kreatinín môže byť skreslený, KDIGO odporúča podľa dostupnosti využiť kombinovaný odhad z kreatinínu a cystatínu C. Vo vybraných situáciách môže byť potrebné aj meranie GFR exogénnym filtračným markerom. Ani presne zmeraná celková GFR však sama osebe neurčí počet nefrónov alebo rozsah glomerulosklerózy.</p>
 
 <h2>Normálny eGFR nevylučuje CKD</h2>
 
@@ -117,7 +117,7 @@ $articles[] = [
 
 <p>Spoľahlivé vyšetrenie vyžaduje presné bazálne aj stimulované meranie GFR, kontrolu diéty, hydratácie, času a ďalších hemodynamických vplyvov. Výsledok môžu ovplyvniť zvolený stimul, spôsob merania, vek, strava, tehotenstvo, diabetes, obezita, liečba aj predchádzajúca nefrektómia.</p>
 
-<p>Zníženú alebo neprítomnú odpoveď nemožno jednoducho preložiť na konkrétny percentuálny úbytok nefrónov. Môže znamenať, že časť filtračnej kapacity je využitá už v pokoji, že schopnosť ďalšej vazodilatácie je obmedzená, alebo že výsledok ovplyvnila metodika. <strong>Testovanie renálnej funkčnej rezervy preto zatiaľ nie je štandardizovanou súčasťou bežnej nefrologickej ambulancie a nemá validovanú úlohu pri rutinnom výbere liečby.</strong></p>
+<p>Zníženú alebo neprítomnú odpoveď nemožno jednoducho preložiť na konkrétny percentuálny úbytok nefrónov. Môže znamenať, že časť filtračnej kapacity je využitá už v pokoji, že schopnosť ďalšej vazodilatácie je obmedzená, alebo že výsledok ovplyvnila metodika. <strong class="pdf-keep-together">Testovanie renálnej funkčnej rezervy preto zatiaľ nie je štandardizovanou súčasťou bežnej nefrologickej ambulancie a nemá validovanú úlohu pri rutinnom výbere liečby.</strong></p>
 
 <h2>Praktický postup pri zachovanom eGFR a podozrení na poškodenie</h2>
 

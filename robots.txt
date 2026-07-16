@@ -24,6 +24,7 @@ Disallow: /newsletter_worker.php
 Disallow: /newsletter_weekly_digest.php
 Disallow: /resend_verification.php
 Disallow: /verify_email.php
+Disallow: /newsletter_verify_sub.php
 Disallow: /newsletter_unsubscribe.php
 Disallow: /newsletter_subscribe.php
 Disallow: /logout.php

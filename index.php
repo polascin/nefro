@@ -889,3 +889,5 @@ if (!empty($itemListElements)) {
 
   <script src="newsletter-cta.js?cb=<?= filemtime('newsletter-cta.js') ?>" defer></script>
   <?php include_once "footer.php"; ?>
+</body>
+</html>

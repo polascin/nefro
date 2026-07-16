@@ -7,6 +7,13 @@ require_once __DIR__ . '/avatar_upload.php';
 require_once __DIR__ . '/email_verification.php';
 require_once __DIR__ . '/phone_utils.php';
 
+$requestMethod = strtoupper((string) ($_SERVER['REQUEST_METHOD'] ?? 'GET'));
+if (!in_array($requestMethod, ['GET', 'POST'], true)) {
+    http_response_code(405);
+    header('Allow: GET, POST');
+    exit;
+}
+
 $errors = [];
 $success = false;
 $registeredData = [];
@@ -14,7 +21,7 @@ $verificationNotice = null;
 
 $isLocalDev = isAppLocalDev();
 
-if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
+if ($requestMethod === 'POST') {
     $postedCsrfToken = $_POST['csrf_token'] ?? '';
     if (!validateCsrfToken($postedCsrfToken)) {
         $errors[] = "Neplatný CSRF token. Skúste to znova.";
@@ -240,7 +247,12 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                         }
                     }
 
-                    // Validácia dátumu narodenia (nepovinné pole, ale ak zadané, musí byť platné a vek min. 18 rokov)
+                    if ((string) ($_POST['age_confirm'] ?? '') !== '1') {
+                        $errors[] = 'Pre registráciu potvrďte, že máte aspoň 16 rokov alebo vyšší minimálny vek požadovaný právom vašej krajiny.';
+                    }
+
+                    // Dátum narodenia je nepovinný, ale ak je zadaný, musí
+                    // zodpovedať vekovej podmienke uvedenej v Podmienkach používania.
                     $birthDateRaw = trim($_POST['birth_date'] ?? '');
                     if ($birthDateRaw !== '') {
                         $bd = DateTime::createFromFormat('Y-m-d', $birthDateRaw);
@@ -251,8 +263,8 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                             $errors[] = 'Dátum narodenia nemôže byť v budúcnosti.';
                         } elseif ($bd < (new DateTime())->modify('-120 years')) {
                             $errors[] = 'Dátum narodenia je mimo povolený rozsah (max. 120 rokov).';
-                        } elseif ($today->diff($bd)->y < 18) {
-                            $errors[] = 'Registrácia je povolená len osobám starším ako 18 rokov.';
+                        } elseif ($today->diff($bd)->y < 16) {
+                            $errors[] = 'Registrácia je povolená len osobám vo veku aspoň 16 rokov.';
                         }
                     }
 
@@ -374,7 +386,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                             setFlashMessage('warning', 'Registrácia prebehla úspešne, ale overovací e-mail sa nepodarilo odoslať. Skúste ho odoslať znova.');
                         }
 
-                        header('Location: register.php?registered=1');
+                        header('Location: register.php?registered=1', true, 303);
                         exit;
                     }
                 }
@@ -422,7 +434,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
             <h2>Registrácia</h2>
             <p class="auth-subtitle">Vytvorte si účet za pár sekúnd — stačí e-mail a heslo. Ostatné údaje sú nepovinné a môžete ich kedykoľvek doplniť vo svojom profile.</p>
 
-            <?php if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && !$success): ?>
+            <?php if ($requestMethod === 'POST' && !$success): ?>
                 <div class="alert alert-error">
                     Registrácia nebola úspešná. Skontrolujte chyby nižšie a skúste formulár odoslať znova.
                 </div>
@@ -761,10 +773,15 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 
 
                     <div class="form-check">
-                        <input type="checkbox" id="theme_auto" name="theme_auto" value="1" <?= (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST' || isset($_POST['theme_auto'])) ? 'checked' : '' ?>>
+                        <input type="checkbox" id="theme_auto" name="theme_auto" value="1" <?= ($requestMethod !== 'POST' || isset($_POST['theme_auto'])) ? 'checked' : '' ?>>
                         <label for="theme_auto">Automaticky prispôsobovať tému (svetlá/tmavá) podľa nastavenia systému</label>
                     </div>
                     </details>
+
+                    <div class="form-check">
+                        <input type="checkbox" id="age_confirm" name="age_confirm" value="1" required <?= isset($_POST['age_confirm']) ? 'checked' : '' ?>>
+                        <label for="age_confirm">Potvrdzujem, že mám aspoň 16 rokov alebo vyšší minimálny vek požadovaný právom mojej krajiny.</label>
+                    </div>
 
                     <p class="auth-consent-note">
                         Registráciou súhlasíte s našimi <a href="terms.php">Podmienkami používania</a>
@@ -784,3 +801,5 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
     </main>
     <script src="address-autofill.js?cb=<?= filemtime('address-autofill.js') ?>" defer></script>
     <?php include 'footer.php'; ?>
+</body>
+</html>

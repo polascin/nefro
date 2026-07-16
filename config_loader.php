@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 // Ochrana pred priamym prístupom k súboru
 if (basename($_SERVER['PHP_SELF'] ?? '') === basename(__FILE__)) {

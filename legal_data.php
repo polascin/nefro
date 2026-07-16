@@ -41,7 +41,7 @@ function legalInfo(): array
         'supervisoryAuthority'     => 'Úrad na ochranu osobných údajov Slovenskej republiky',
         'supervisoryAuthorityUrl'  => 'https://dataprotection.gov.sk/sk/',
         'effectiveDate'            => '2026-07-16',
-        'version'                  => '2.5',
+        'version'                  => '2.6',
         'consentVersion'           => '2026-07-16',
     ];
 }
@@ -269,6 +269,7 @@ function legalStoredItems(): array
 function legalRecentUpdates(): array
 {
     return [
+        'Registráciu sme obmedzili na osoby vo veku aspoň 16 rokov; ak miestne právo vyžaduje vyšší minimálny vek, platí tento vyšší vek.',
         'Spresnili sme úplný rozsah nepovinných profilových údajov, pseudonymný charakter analytiky GA4, minimalizovaný audit po zrušení účtu, jeho 90-dňovú retenčnú lehotu a informáciu, že služba nevykonáva právne významné výlučne automatizované rozhodovanie ani profilovanie.',
         'Lokálna história kalkulačiek pre neprihlásených sa odteraz vytvára iba po preferenčnom súhlase, neuchováva formulárové vstupy ani identifikátory pacienta a pri odvolaní súhlasu sa vymaže.',
         'Rozšírili sme Službu o informačnú databázu liekov v nefrológii, register klinických štúdií (dáta z verejného registra ClinicalTrials.gov) a ďalšie informačné nástroje, ktoré samy nespracúvajú osobné údaje návštevníkov.',

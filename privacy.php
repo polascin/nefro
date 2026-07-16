@@ -214,8 +214,9 @@ include 'legal_head.php';
                 <!-- 10. DETI -->
                 <h3>10. Deti</h3>
                 <p>
-                    Služba nie je určená deťom mladším ako 16 rokov (alebo vek stanovený vaším
-                    miestnym právom) a ich údaje vedome nezhromažďujeme. Ak sa domnievate, že nám
+                    Služba nie je určená osobám mladším ako 16 rokov; ak vaše miestne právo
+                    vyžaduje vyšší minimálny vek, platí tento vyšší vek. Údaje mladších osôb
+                    vedome nezhromažďujeme. Ak sa domnievate, že nám
                     dieťa poskytlo údaje, kontaktujte nás na
                     <a href="mailto:<?= htmlspecialchars($info['contactEmail'], ENT_QUOTES, 'UTF-8') ?>"><?= htmlspecialchars($info['contactEmail'], ENT_QUOTES, 'UTF-8') ?></a>.
                 </p>
@@ -259,3 +260,5 @@ include 'legal_head.php';
     </main>
 
     <?php include 'footer.php'; ?>
+</body>
+</html>

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * add_zivot-s-diabetom-a-nefropatiou_article.php
  * Popularizačný článok (sekcia „Pre pacientov“) — spracované z DOCX

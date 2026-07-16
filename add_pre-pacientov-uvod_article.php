@@ -1,4 +1,5 @@
 <?php
+
 /**
  * add_pre-pacientov-uvod_article.php
  * Prvý (uvítací) popularizačný článok sekcie „Pre pacientov“.

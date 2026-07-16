@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 /**
  * smoke_seed_pdf.php — pomocník pre smoke_test.ps1 (PDF download flow).

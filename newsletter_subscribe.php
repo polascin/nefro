@@ -1,7 +1,24 @@
 <?php
+
 declare(strict_types=1);
 
 header('Content-Type: application/json; charset=UTF-8');
+header('Cache-Control: no-store, max-age=0');
+
+if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') {
+    header('Allow: POST');
+    http_response_code(405);
+    echo json_encode(['success' => false, 'message' => 'Nepovolená metóda.']);
+    exit;
+}
+
+// Vlastná hlavička sa nedá odoslať cez cross-site HTML formulár a cross-site
+// JavaScript by pred POST požiadavkou potreboval úspešný CORS preflight.
+if (!hash_equals('1', (string) ($_SERVER['HTTP_X_NPS_NEWSLETTER'] ?? ''))) {
+    http_response_code(403);
+    echo json_encode(['success' => false, 'message' => 'Neplatná požiadavka.']);
+    exit;
+}
 
 require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */

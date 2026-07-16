@@ -622,4 +622,3 @@ function calculatorRenderSavedResultsTable(
     </section>
     <?php
 }
-

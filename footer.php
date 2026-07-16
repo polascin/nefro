@@ -61,12 +61,17 @@ $swatchBeat = '@' . number_format($beatValue, 2, '.', '');
         <p class="site-footer__col-heading">Kontakt</p>
         <ul class="site-footer__nav-list">
           <li><a href="mailto:nefro@polascin.net" class="site-footer__link">nefro@polascin.net</a></li>
-          <?php if (function_exists('isLoggedIn') && !isLoggedIn()): ?>
+          <?php if (!function_exists('isLoggedIn') || !isLoggedIn()): ?>
             <li><a href="register.php" class="site-footer__link">Registrácia</a></li>
             <li><a href="login.php" class="site-footer__link">Prihlásenie</a></li>
           <?php else: ?>
             <li><a href="profile.php" class="site-footer__link">Môj profil</a></li>
-            <li><a href="logout.php" class="site-footer__link">Odhlásiť sa</a></li>
+            <li>
+              <form action="logout.php" method="post" class="site-footer__logout-form">
+                <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken(), ENT_QUOTES, 'UTF-8') ?>">
+                <button type="submit" class="site-footer__link site-footer__logout-button">Odhlásiť sa</button>
+              </form>
+            </li>
           <?php endif; ?>
           <li><a href="privacy.php" class="site-footer__link">Ochrana osobných údajov</a></li>
           <li><a href="cookies.php" class="site-footer__link">Cookie Policy</a></li>
@@ -90,9 +95,15 @@ $swatchBeat = '@' . number_format($beatValue, 2, '.', '');
   </footer>
 
   <!-- Tlačidlo Späť nahor -->
-  <button id="backToTop" class="back-to-top no-print" aria-label="Späť nahor" title="Späť nahor">
+  <button type="button" id="backToTop" class="back-to-top no-print" aria-label="Späť nahor" title="Späť nahor">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
   </button>
+
+  <script src="nefro-ui.js?v=<?= filemtime(__DIR__ . '/nefro-ui.js') ?>" defer></script>
+  <?php if (function_exists('isLoggedIn') && isLoggedIn()): ?>
+  <script nonce="<?= htmlspecialchars(getScriptNonce(), ENT_QUOTES, 'UTF-8') ?>">window.npsSessionTimeoutSeconds=<?= (int) SESSION_IDLE_TIMEOUT ?>;window.npsSessionKeepaliveToken=<?= json_encode(generateSessionKeepaliveToken(), JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?>;window.npsLogoutCsrfToken=<?= json_encode(generateCsrfToken(), JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?>;</script>
+  <script src="session-timeout.js?v=<?= filemtime(__DIR__ . '/session-timeout.js') ?>" defer></script>
+  <?php endif; ?>
 
   <!-- Tlačová pätička -->
   <?php
@@ -116,5 +127,3 @@ $swatchBeat = '@' . number_format($beatValue, 2, '.', '');
 
   <script src="form-submit-enter.js?v=20260512-1&cb=<?= filemtime('form-submit-enter.js') ?>" defer></script>
   <script src="image-fullview.js?v=<?= filemtime(__DIR__ . '/image-fullview.js') ?>" defer></script>
-</body>
-</html>

@@ -5,6 +5,13 @@ require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
 require_once __DIR__ . '/totp.php';
 
+$requestMethod = strtoupper((string) ($_SERVER['REQUEST_METHOD'] ?? 'GET'));
+if (!in_array($requestMethod, ['GET', 'POST'], true)) {
+    http_response_code(405);
+    header('Allow: GET, POST');
+    exit;
+}
+
 // Ak je používateľ už prihlásený (2FA dokončené), presmerovať
 if (isLoggedIn()) {
     header("Location: index.php");
@@ -27,7 +34,7 @@ $maxAttempts = 5;
 $blockSecs   = 900;
 $clientIp    = getClientIpAddress();
 
-if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
+if ($requestMethod === 'POST') {
     $postedCsrfToken = $_POST['csrf_token'] ?? '';
 
     if (!validateCsrfToken($postedCsrfToken)) {

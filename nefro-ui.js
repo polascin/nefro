@@ -1,5 +1,5 @@
 /**
- * nefro-ui.js — Centralizované UI správanie bez inline handlerv
+ * nefro-ui.js — Centralizované UI správanie bez inline handlerov
  * Nefro-projekt Slovensko
  */
 'use strict';
@@ -29,7 +29,14 @@ document.addEventListener('click', function (e) {
     }
 });
 
-// ── 4. Toggle visibility na základe select hodnoty (data-toggle-target) ───────
+// ── 4. Zatvorenie samostatného okna bez javascript: URL ──────────────────────
+document.addEventListener('click', function (e) {
+    if (e.target.closest('.js-window-close')) {
+        window.close();
+    }
+});
+
+// ── 5. Toggle visibility na základe select hodnoty (data-toggle-target) ───────
 function applyToggleTargets() {
     document.querySelectorAll('[data-toggle-target]').forEach(function (sel) {
         var target = document.getElementById(sel.dataset.toggleTarget);
@@ -46,7 +53,7 @@ document.addEventListener('change', function (e) {
     }
 });
 
-// ── 5. Avatar preview pre register.php (bez PHP hodnôt) ───────────────────────
+// ── 6. Avatar preview pre register.php (bez PHP hodnôt) ───────────────────────
 (function () {
     var preview = document.getElementById('avatarPreview');
     var input   = document.getElementById('avatar');
@@ -82,7 +89,7 @@ document.addEventListener('change', function (e) {
     });
 })();
 
-// ── 6. Auto-print pre výsledkové stránky (data-auto-print="1" na <body>) ─────
+// ── 7. Auto-print pre výsledkové stránky (data-auto-print="1" na <body>) ─────
 (function () {
     if (document.body && document.body.dataset.autoPrint === '1'
             && !document.querySelector('.alert-error')) {
@@ -96,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Inicializácia toggle targets (select-controlled visibility)
     applyToggleTargets();
 
-    // ── 7. Password toggle ────────────────────────────────────────────────────
+    // ── 8. Password toggle ────────────────────────────────────────────────────
     var passwordInputs = document.querySelectorAll('input[type="password"]');
     passwordInputs.forEach(function (input, index) {
         if (input.dataset.passwordToggleReady === 'true') return;
@@ -129,7 +136,7 @@ document.addEventListener('DOMContentLoaded', function () {
         input.dataset.passwordToggleReady = 'true';
     });
 
-    // ── 8. Back-to-top tlačidlo ───────────────────────────────────────────────
+    // ── 9. Back-to-top tlačidlo ───────────────────────────────────────────────
     var backToTopBtn = document.getElementById('backToTop');
     if (backToTopBtn) {
         window.addEventListener('scroll', function () {
@@ -140,7 +147,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // ── 9. Validácia zhody hesiel (reset_password.php) ────────────────────────
+    // ── 10. Validácia zhody hesiel (reset_password.php) ───────────────────────
     var resetForm    = document.querySelector('form[action="reset_password.php"]');
     var newPass      = document.getElementById('new_password');
     var newPassConf  = document.getElementById('new_password_confirm');
@@ -154,7 +161,7 @@ document.addEventListener('DOMContentLoaded', function () {
         resetForm.addEventListener('submit', validatePasswords);
     }
 
-    // ── 10. Slug generator + SEO counter (admin_articles.php) ─────────────────
+    // ── 11. Slug generator + SEO counter (admin_articles.php) ─────────────────
     var titleInput   = document.getElementById('f_title');
     var slugInput    = document.getElementById('f_slug');
     var excerptInput = document.getElementById('f_excerpt');

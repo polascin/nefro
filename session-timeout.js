@@ -26,13 +26,20 @@
             <p id="sessionTimeoutMessage">Z bezpečnostných dôvodov sa neaktívna relácia automaticky ukončí.</p>
             <div class="session-timeout-warning__actions">
                 <button type="button" class="btn-primary" id="sessionTimeoutExtend">Predĺžiť reláciu</button>
-                <a href="logout.php" class="btn-secondary">Odhlásiť sa</a>
+                <form action="logout.php" method="post" class="session-timeout-warning__logout-form">
+                    <input type="hidden" name="csrf_token" id="sessionTimeoutLogoutToken">
+                    <button type="submit" class="btn-secondary">Odhlásiť sa</button>
+                </form>
             </div>
         `;
         document.body.appendChild(panel);
 
         const message = document.getElementById('sessionTimeoutMessage');
         const extendButton = document.getElementById('sessionTimeoutExtend');
+        const logoutToken = document.getElementById('sessionTimeoutLogoutToken');
+        if (logoutToken) {
+            logoutToken.value = String(window.npsLogoutCsrfToken || '');
+        }
 
         function updateCountdown() {
             const remainingSeconds = Math.max(0, Math.ceil((expiresAt - Date.now()) / 1000));

@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 function profileHandleDeleteAccount(PDO $pdo, array $user, int $userId): array

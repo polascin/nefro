@@ -280,11 +280,10 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administrácia - Nefro-projekt Slovensko</title>
     <meta name="robots" content="noindex, nofollow">
-    <script src="theme.js?v=20260511-1&cb=<?= filemtime('theme.js') ?>"></script>
     <link rel="stylesheet" href="index.css?v=20260509-1&cb=<?= filemtime('index.css') ?>">
-    <script src="ui-preferences.js?v=20260511-1&cb=<?= filemtime('ui-preferences.js') ?>" defer></script>
+    <script src="ui-preferences.js?v=20260511-1&cb=<?= filemtime('ui-preferences.js') ?>"></script>
+    <script src="theme.js?v=20260511-1&cb=<?= filemtime('theme.js') ?>"></script>
     <script src="ui-preferences-fallback.js?v=20260511-1&cb=<?= filemtime('ui-preferences-fallback.js') ?>" defer></script>
-    <script src="nefro-ui.js?v=<?= filemtime('nefro-ui.js') ?>" defer></script>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>
@@ -661,7 +660,13 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
             </div>
 
             <div class="auth-links auth-links--spaced">
-                <p><a href="index.php">Späť na domovskú stránku</a> | <a href="logout.php" class="link-error">Odhlásiť sa</a></p>
+                <div>
+                    <a href="index.php">Späť na domovskú stránku</a> |
+                    <form action="logout.php" method="post" class="d-inline">
+                        <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
+                        <button type="submit" class="link-error link-error--btn">Odhlásiť sa</button>
+                    </form>
+                </div>
             </div>
         </div>
     </main>

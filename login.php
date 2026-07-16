@@ -4,6 +4,13 @@ require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
 
+$requestMethod = strtoupper((string) ($_SERVER['REQUEST_METHOD'] ?? 'GET'));
+if (!in_array($requestMethod, ['GET', 'POST'], true)) {
+    http_response_code(405);
+    header('Allow: GET, POST');
+    exit;
+}
+
 // Ak už je prihlásený, presmerovať
 if (isLoggedIn()) {
     header("Location: index.php");
@@ -212,7 +219,7 @@ function handleLoginPost(PDO $pdo, bool $isLocalDev): array
 $errors             = [];
 $loginFailureDetails = [];
 
-if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
+if ($requestMethod === 'POST') {
     $result              = handleLoginPost($pdo, $isLocalDev);
     $errors              = $result['errors'];
     $loginFailureDetails = $result['loginFailureDetails'];
@@ -320,3 +327,5 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
         </div>
     </main>
     <?php include 'footer.php'; ?>
+</body>
+</html>

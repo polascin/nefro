@@ -1,14 +1,22 @@
 <?php
 declare(strict_types=1);
 require_once __DIR__ . '/auth.php';
+header('Referrer-Policy: no-referrer');
 require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
 require_once __DIR__ . '/newsletter_notifications.php';
 
+$requestMethod = strtoupper((string) ($_SERVER['REQUEST_METHOD'] ?? 'GET'));
+if (!in_array($requestMethod, ['GET', 'POST'], true)) {
+    http_response_code(405);
+    header('Allow: GET, POST');
+    exit;
+}
+
 $status = 'error';
 $message = 'Neplatný alebo neúplný odhlasovací odkaz.';
 $showConfirmation = false;
-$isPost = strtoupper((string) ($_SERVER['REQUEST_METHOD'] ?? 'GET')) === 'POST';
+$isPost = $requestMethod === 'POST';
 $request = $isPost ? $_POST : $_GET;
 
 $uid = (int) ($request['uid'] ?? 0);
@@ -164,6 +172,18 @@ if ($isPost && !validateCsrfToken((string) ($_POST['csrf_token'] ?? ''))) {
     }
 }
 
+if ($isPost && $status === 'success') {
+    $_SESSION['newsletter_unsubscribe_flash'] = $message;
+    header('Location: newsletter_unsubscribe.php?done=1', true, 303);
+    exit;
+}
+if (!$isPost && isset($_SESSION['newsletter_unsubscribe_flash'])) {
+    $status = 'success';
+    $message = (string) $_SESSION['newsletter_unsubscribe_flash'];
+    $showConfirmation = false;
+    unset($_SESSION['newsletter_unsubscribe_flash']);
+}
+
 $pageClass = match ($status) {
     'success' => 'alert-success',
     'confirm' => 'alert-success',
@@ -177,9 +197,9 @@ $pageClass = match ($status) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
     <title>Odhlásenie noviniek - Nefro-projekt Slovensko</title>
-    <script src="theme.js?v=<?= filemtime('theme.js') ?>"></script>
     <link rel="stylesheet" href="index.css?v=<?= filemtime('index.css') ?>">
-    <script src="ui-preferences.js?v=<?= filemtime('ui-preferences.js') ?>" defer></script>
+    <script src="ui-preferences.js?v=<?= filemtime('ui-preferences.js') ?>"></script>
+    <script src="theme.js?v=<?= filemtime('theme.js') ?>"></script>
     <script src="ui-preferences-fallback.js?v=<?= filemtime('ui-preferences-fallback.js') ?>" defer></script>
 </head>
 <body>

@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 // Ochrana pred priamym prístupom k súboru
 if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
@@ -169,16 +170,20 @@ function readProjectStatsCache(string $signature): ?array {
  */
 function writeProjectStatsCache(string $signature, array $stats): void {
     $dir = __DIR__ . '/private/cache';
-    if (!is_dir($dir) && !@mkdir($dir, 0775, true) && !is_dir($dir)) {
+    if (!is_dir($dir) && !@mkdir($dir, 0750, true) && !is_dir($dir)) {
         return; // cache je best-effort — pri zlyhaní sa len prepočíta nabudúce
     }
+    @chmod($dir, 0750);
 
     $payload = json_encode(['signature' => $signature, 'stats' => $stats], JSON_UNESCAPED_UNICODE);
     if ($payload === false) {
         return;
     }
 
-    @file_put_contents(projectStatsCachePath(), $payload, LOCK_EX);
+    $cachePath = projectStatsCachePath();
+    if (@file_put_contents($cachePath, $payload, LOCK_EX) !== false) {
+        @chmod($cachePath, 0640);
+    }
 }
 
 /**

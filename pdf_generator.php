@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 /**
  * pdf_generator.php
@@ -96,7 +97,7 @@ function buildArticlePdfHtml(array $article): string
   h3 { font-size: 12pt; color: #1e3a8a; margin: 14px 0 4px; }
   p { margin: 8px 0; }
   ul, ol { margin: 8px 0 14px 20px; }
-  li { margin: 4px 0; }
+  li { margin: 4px 0; page-break-inside: avoid; break-inside: avoid; }
   dl { margin: 8px 0 14px; }
   dt { font-weight: bold; margin-bottom: 3px; }
   dd { margin: 0 0 8px 18px; }
@@ -116,6 +117,8 @@ function buildArticlePdfHtml(array $article): string
   .info-box-gray   { border-color: #94a3b8; background: #f8fafc; }
   .pdf-footer-note { margin-top: 24px; padding-top: 10px; border-top: 1px solid #e2e8f0; color: #94a3b8; font-size: 8.5pt; line-height: 1.5; }
   .pdf-page-break { page-break-before: always; break-before: page; height: 0; margin: 0; padding: 0; }
+  .pdf-avoid-break { page-break-inside: avoid; break-inside: avoid; }
+  .pdf-keep-together { display: block; page-break-inside: avoid; break-inside: avoid; }
   table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 10pt; }
   th { text-align: left; padding: 7px 9px; border-bottom: 2px solid #cbd5e1; background: #f1f5f9; }
   td { padding: 7px 9px; border-bottom: 1px solid #e2e8f0; vertical-align: top; }

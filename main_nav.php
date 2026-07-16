@@ -33,7 +33,7 @@ if (!function_exists('_navA')) {
 ?>
 <nav class="main-nav" aria-label="Hlavná navigácia">
     <div class="container">
-        <button class="menu-toggle" id="menuToggle" aria-label="Otvoriť menu" aria-expanded="false">
+        <button type="button" class="menu-toggle" id="menuToggle" aria-label="Otvoriť menu" aria-expanded="false">
             <span>Menu</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
         </button>

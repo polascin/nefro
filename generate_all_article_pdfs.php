@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 /**
  * generate_all_article_pdfs.php
