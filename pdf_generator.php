@@ -115,7 +115,16 @@ function buildArticlePdfHtml(array $article): string
   .info-box-yellow { border-color: #d97706; background: #fffbeb; }
   .info-box-green  { border-color: #16a34a; background: #f0fdf4; }
   .info-box-gray   { border-color: #94a3b8; background: #f8fafc; }
-  .pdf-footer-note { margin-top: 24px; padding-top: 10px; border-top: 1px solid #e2e8f0; color: #94a3b8; font-size: 8.5pt; line-height: 1.5; }
+  .pdf-footer-note {
+    margin-top: 8px;
+    padding-top: 5px;
+    border-top: 1px solid #e2e8f0;
+    color: #94a3b8;
+    font-size: 7.5pt;
+    line-height: 1.35;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
   .pdf-page-break { page-break-before: always; break-before: page; height: 0; margin: 0; padding: 0; }
   .pdf-avoid-break { page-break-inside: avoid; break-inside: avoid; }
   .pdf-keep-together { display: block; page-break-inside: avoid; break-inside: avoid; }
