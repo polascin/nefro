@@ -398,11 +398,11 @@ try {
     // ── Audit log pre zrušenie/vymazanie účtov ───────────────────────────────
     // Zámerne BEZ FK na users(id) — záznam musí pretrvať po vymazaní používateľa.
     // E-mail je uložený ako SHA-256 hash (GDPR — možnosť overenia bez uchovávania plaintextu).
-    // IP adresa a username podliehajú retenčnej politike (odporúčané vymazanie po 90 dňoch).
+    // Audit neuchováva používateľské meno; ostatné identifikátory sa mažú najneskôr po 90 dňoch.
     $accountDeletionLogSql = "CREATE TABLE IF NOT EXISTS account_deletion_log (
         id BIGINT AUTO_INCREMENT PRIMARY KEY,
         deleted_user_id INT NOT NULL COMMENT 'ID vymazaného používateľa (bez FK)',
-        username VARCHAR(255) NOT NULL COMMENT 'Meno v čase vymazania (retenčná politika: 90 dní)',
+        username VARCHAR(255) NOT NULL COMMENT 'Neutrálny marker; používateľské meno sa po vymazaní neuchováva',
         email_hash CHAR(64) NOT NULL COMMENT 'SHA-256 hex hash e-mailu',
         email_domain VARCHAR(255) NOT NULL COMMENT 'Doména e-mailu pre štatistiky',
         is_admin TINYINT(1) NOT NULL DEFAULT 0,

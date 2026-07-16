@@ -37,6 +37,9 @@ $legalFullTitle   = $legalTitle . ' | ' . $legalSiteName;
     <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
+    <!-- Consent gate musí byť dostupný skôr, než téma číta voliteľné úložisko. -->
+    <script src="ui-preferences.js?v=20260511-1&cb=<?= filemtime('ui-preferences.js') ?>"></script>
+    <script nonce="<?= htmlspecialchars(getScriptNonce(), ENT_QUOTES, 'UTF-8') ?>">window.npsServerThemeAuto=1;</script>
     <!-- Logika pre Tmavý režim (na začiatku kvôli prevencii FOUC) -->
     <script src="theme.js?v=20260509-1&cb=<?= filemtime('theme.js') ?>"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -97,8 +100,11 @@ $legalFullTitle   = $legalTitle . ' | ' . $legalSiteName;
     <link rel="stylesheet" href="index.css?v=20260509-1&cb=<?= filemtime('index.css') ?>">
 
     <!-- Cookie Consent & GA4 Consent Mode v2 -->
-    <script src="ui-preferences.js?v=20260511-1&cb=<?= filemtime('ui-preferences.js') ?>" defer></script>
     <script src="ui-preferences-fallback.js?v=20260511-1&cb=<?= filemtime('ui-preferences-fallback.js') ?>" defer></script>
+    <?php if (isLoggedIn()): ?>
+    <script nonce="<?= htmlspecialchars(getScriptNonce(), ENT_QUOTES, 'UTF-8') ?>">window.npsSessionTimeoutSeconds=<?= (int) SESSION_IDLE_TIMEOUT ?>;window.npsSessionKeepaliveToken=<?= json_encode(generateSessionKeepaliveToken(), JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?>;</script>
+    <script src="session-timeout.js?v=<?= filemtime('session-timeout.js') ?>" defer></script>
+    <?php endif; ?>
 </head>
 
 <body>

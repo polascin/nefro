@@ -22,9 +22,10 @@ if ($uid > 0 && $token !== '') {
     $rateLimitBlocked = false;
     try {
         $pdo->prepare(
-            "DELETE FROM form_rate_limit
+             "DELETE FROM form_rate_limit
              WHERE action = 'verify_email'
-               AND first_attempt < DATE_SUB(NOW(), INTERVAL 1 DAY)"
+               AND first_attempt < DATE_SUB(NOW(), INTERVAL 15 MINUTE)
+               AND (blocked_until IS NULL OR blocked_until <= NOW())"
         )->execute();
 
         $rlStmt = $pdo->prepare(
@@ -56,7 +57,7 @@ if ($uid > 0 && $token !== '') {
     if (!$rateLimitBlocked) {
         try {
             $stmt = $pdo->prepare(
-                "SELECT id, username, email, email_verified_at,
+                "SELECT id, email_verified_at,
                         email_verification_token_hash, email_verification_expires_at
                  FROM users WHERE id = :id LIMIT 1"
             );
@@ -128,7 +129,6 @@ if ($uid > 0 && $token !== '') {
 
                     error_log(
                         'verify_email: success uid=' . $uid .
-                        ' email=' . ($user['email'] ?? '?') .
                         '; ip=' . $clientIp
                     );
 

@@ -74,13 +74,18 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
         // ── 4. IP Rate Limiting (max 5 pokusov/hodina per IP) ────────────────
         $clientIpReg = getClientIpAddress();
         $maxRegAttempts = 5;    // max registrácií za okno
-        $regWindowSecs  = 3600; // okno: 1 hodina
         $regBlockSecs   = 3600; // blokácia: 1 hodina
         $regIsBlocked   = false;
 
         try {
-            // Odstrán expirované bloky staršie ako 1 deň
-            $pdo->prepare("DELETE FROM form_rate_limit WHERE action = 'register' AND blocked_until IS NOT NULL AND blocked_until < DATE_SUB(NOW(), INTERVAL 1 DAY)")
+            // Po uplynutí pevného hodinového okna začína počítadlo odznova;
+            // aktívnu blokáciu však neskracujeme.
+            $pdo->prepare(
+                "DELETE FROM form_rate_limit
+                 WHERE action = 'register'
+                   AND first_attempt < DATE_SUB(NOW(), INTERVAL 1 HOUR)
+                   AND (blocked_until IS NULL OR blocked_until <= NOW())"
+            )
                 ->execute();
 
             $rlStmt = $pdo->prepare("SELECT attempt_count, blocked_until FROM form_rate_limit WHERE ip = :ip AND action = 'register'");
@@ -112,6 +117,27 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
         }
 
         if (!$regIsBlocked) {
+        // Počítame každú legitímne spracovanú požiadavku ešte pred validáciou
+        // a DNS kontrolou e-mailovej domény.
+        try {
+            $pdo->prepare(
+                "INSERT INTO form_rate_limit (ip, action, attempt_count, first_attempt)
+                 VALUES (:ip, 'register', 1, NOW())
+                 ON DUPLICATE KEY UPDATE attempt_count = attempt_count + 1, last_attempt = NOW()"
+            )->execute(['ip' => $clientIpReg]);
+
+            $cntStmt = $pdo->prepare("SELECT attempt_count FROM form_rate_limit WHERE ip = :ip AND action = 'register'");
+            $cntStmt->execute(['ip' => $clientIpReg]);
+            $regCurrentCount = (int) ($cntStmt->fetchColumn() ?? 0);
+
+            if ($regCurrentCount >= $maxRegAttempts) {
+                $pdo->prepare("UPDATE form_rate_limit SET blocked_until = DATE_ADD(NOW(), INTERVAL :secs SECOND) WHERE ip = :ip AND action = 'register'")
+                    ->execute(['secs' => $regBlockSecs, 'ip' => $clientIpReg]);
+            }
+        } catch (\PDOException $rlEx) {
+            error_log('Register rate limit update error: ' . $rlEx->getMessage());
+        }
+
         $email = trim($_POST['email'] ?? '');
 
         $mobilePhone = normalizeUserMobilePhone($_POST['mobile_phone'] ?? null);
@@ -146,28 +172,9 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
         }
 
         if (empty($errors)) {
+            $avatarPath = null;
+            $registrationInserted = false;
             try {
-                // Zaznamenať pokus o registráciu pre rate limiting
-                try {
-                    $pdo->prepare(
-                        "INSERT INTO form_rate_limit (ip, action, attempt_count, first_attempt)
-                         VALUES (:ip, 'register', 1, NOW())
-                         ON DUPLICATE KEY UPDATE attempt_count = attempt_count + 1, last_attempt = NOW()"
-                    )->execute(['ip' => $clientIpReg]);
-
-                    $cntStmt = $pdo->prepare("SELECT attempt_count FROM form_rate_limit WHERE ip = :ip AND action = 'register'");
-                    $cntStmt->execute(['ip' => $clientIpReg]);
-                    $regCurrentCount = (int) ($cntStmt->fetchColumn() ?? 0);
-
-                    if ($regCurrentCount >= $maxRegAttempts) {
-                        $pdo->prepare("UPDATE form_rate_limit SET blocked_until = DATE_ADD(NOW(), INTERVAL :secs SECOND) WHERE ip = :ip AND action = 'register'")
-                            ->execute(['secs' => $regBlockSecs, 'ip' => $clientIpReg]);
-                    }
-                } catch (\PDOException $rlEx) {
-                    error_log('Register rate limit update error: ' . $rlEx->getMessage());
-                }
-
-
                 $stmt = $pdo->prepare("SELECT email, username FROM users WHERE email = :email OR username = :username LIMIT 1");
                 $stmt->execute([
                     'email' => $email,
@@ -249,8 +256,6 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                         }
                     }
 
-                    $avatarPath = null;
-
                     if (empty($errors)) {
                         // Spracovanie avatara — až po overení ostatných polí, aby sme neprijímali súbory pri chybách formulára
                         if (isset($_FILES['avatar']) && $_FILES['avatar']['error'] === UPLOAD_ERR_OK) {
@@ -329,6 +334,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                             'email_verification_expires_at' => $tokenData['expires_at'],
                         ];
                         $stmt->execute($registrationParams);
+                        $registrationInserted = true;
 
                         $newUserId = (int) $pdo->lastInsertId();
                         $newUserRow = null;
@@ -373,6 +379,9 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     }
                 }
             } catch (\PDOException $e) {
+                if (!$registrationInserted && $avatarPath !== null && !deleteManagedAvatarFile($avatarPath)) {
+                    error_log('Registrácia: nepodarilo sa odstrániť osirelý avatar po zlyhanom INSERT-e.');
+                }
                 error_log("Chyba registrácie: " . $e->getMessage());
                 if ((string) $e->getCode() === '23000') {
                     $errors[] = 'Registrácia sa nepodarila. Zadajte iný e-mail alebo používateľské meno.';

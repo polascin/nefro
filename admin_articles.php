@@ -1030,7 +1030,7 @@ $pageTimeZone = date("T") . " (" . date_default_timezone_get() . ")";
               <a href="admin_articles.php" class="btn-secondary-small">Zrušiť editáciu</a>
               <a href="article.php?id=<?= (int) $editArticle[
                   "id"
-              ] ?>" target="_blank" class="btn-secondary-small">👁 Zobraziť</a>
+              ] ?>" target="_blank" rel="noopener" class="btn-secondary-small">👁 Zobraziť</a>
             <?php endif; ?>
           </div>
         </form>
@@ -1227,7 +1227,7 @@ $filterArticleId
                   <td class="admin-article-title"><?= $idx +
                       1 ?></td>
                   <td>
-                    <a href="article.php?id=<?= $aId ?>" target="_blank" aria-label="Zobraziť článok <?= $aTitle ?>"><?= $aTitle ?></a>
+                    <a href="article.php?id=<?= $aId ?>" target="_blank" rel="noopener" aria-label="Zobraziť článok <?= $aTitle ?>"><?= $aTitle ?></a>
                     <?php if (
                         $aTop
                     ): ?><br><span class="badge-top-sm">★ TOP</span><?php endif; ?>

@@ -12,7 +12,7 @@ const globalPrivacyControlEnabled = typeof navigator !== 'undefined'
 // MUSÍ sa zhodovať s `consentVersion` v legal_data.php (legalInfo()).
 // Všetky uložené súhlasy zo staršej verzie sa automaticky invalidujú
 // a banner sa zobrazí znova (GDPR čl. 7 ods. 3 — nový súhlas pri zmene podmienok).
-const consentVersion = '2026-07-15';
+const consentVersion = '2026-07-16';
 
 // Predvolené nastavenia
 const defaultSettings = {
@@ -103,6 +103,34 @@ function initializeGA4() {
     gtag('config', 'G-0JT5VMQ61K');
 }
 
+function deleteGoogleAnalyticsCookies() {
+    const cookieNames = document.cookie
+        .split(';')
+        .map(part => part.split('=')[0].trim())
+        .filter(name => /^_ga(?:_|$)|^_gid$|^_gat(?:_|$)/.test(name));
+
+    if (cookieNames.length === 0) {
+        return;
+    }
+
+    const hostname = window.location.hostname;
+    const labels = hostname.split('.').filter(Boolean);
+    const parentDomain = labels.length >= 2 && !/^\d+(?:\.\d+){3}$/.test(hostname)
+        ? '.' + labels.slice(-2).join('.')
+        : null;
+    const domainVariants = [null, hostname, parentDomain].filter((value, index, all) =>
+        value === null || all.indexOf(value) === index
+    );
+    const securePart = window.location.protocol === 'https:' ? '; Secure' : '';
+
+    cookieNames.forEach(name => {
+        domainVariants.forEach(domain => {
+            const domainPart = domain ? `; Domain=${domain}` : '';
+            document.cookie = `${name}=; Path=/; Max-Age=0; SameSite=Lax${domainPart}${securePart}`;
+        });
+    });
+}
+
 try {
     // Nastavenie defaultného súhlasu podľa uložených preferencií (zabráni strate dát pri prvom zobrazení pre vracajúcich sa návštevníkov)
     gtag('consent', 'default', {
@@ -114,6 +142,8 @@ try {
 
     if (initialConsent.analytics || initialConsent.marketing) {
         initializeGA4();
+    } else {
+        deleteGoogleAnalyticsCookies();
     }
 } catch (error) {
     console.warn("NPS Privacy Manager: GA4 inicializácia zlyhala.", error);
@@ -225,7 +255,7 @@ function initPrivacyManager() {
                         <div class="cookie-category">
                             <div class="category-info">
                                 <h3 id="analyticsCookiesTitle">Analytické cookies (Analytics)</h3>
-                                <p>Pomáhajú nám pochopiť, ako návštevníci používajú náš web. Dáta sú zbierané anonymne.</p>
+                                <p>Pomáhajú nám pochopiť, ako návštevníci používajú náš web. Údaje sa spracúvajú pod pseudonymným identifikátorom uloženým v cookie.</p>
                             </div>
                             <div class="category-toggle">
                                 <label class="switch">
@@ -320,6 +350,10 @@ function initPrivacyManager() {
 
         if (consentData.analytics || consentData.marketing) {
             initializeGA4();
+        }
+
+        if (!consentData.analytics) {
+            deleteGoogleAnalyticsCookies();
         }
 
         if (!consentData.preferences) {

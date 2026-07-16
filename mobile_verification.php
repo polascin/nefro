@@ -146,11 +146,10 @@ function twilioVerifyExecuteRequest(string $url, string $accountSid, string $aut
     $decoded = json_decode((string) $rawResponse, true);
     $ok = $statusCode >= 200 && $statusCode < 300;
     if (!$ok) {
-        $message = '';
-        if (is_array($decoded) && !empty($decoded['message'])) {
-            $message = (string) $decoded['message'];
-        }
-        error_log('Twilio Verify API error HTTP ' . $statusCode . ($message !== '' ? (': ' . $message) : ''));
+        $providerCode = is_array($decoded) && isset($decoded['code'])
+            ? (string) $decoded['code']
+            : 'unknown';
+        error_log('Twilio Verify API error HTTP ' . $statusCode . '; provider_code=' . $providerCode);
     }
 
     return ['ok' => $ok, 'status_code' => $statusCode, 'json' => $decoded];
@@ -235,7 +234,7 @@ function sendMobileVerificationCode(string $mobilePhone, ?string $code = null): 
         }
     } else {
         // Zástupné miesto pre budúce SMS providéry.
-        error_log('SMS provider not implemented: ' . $provider . ' for ' . $mobilePhone . ', sender=' . $cfg['sms_sender']);
+        error_log('SMS provider not implemented: ' . $provider . ', sender=' . $cfg['sms_sender']);
     }
 
     return $sent;

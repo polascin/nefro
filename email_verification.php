@@ -106,6 +106,11 @@ function smtpLogError(string $stage, string $reason, array $context = []): void 
     if (!empty($context['response'])) {
         $responseOneLine = preg_replace('/\s+/', ' ', trim((string) $context['response']));
         if ($responseOneLine !== '') {
+            $responseOneLine = preg_replace(
+                '/[A-Z0-9._%+\-]+@[A-Z0-9.\-]+\.[A-Z]{2,}/iu',
+                '[redacted-email]',
+                $responseOneLine
+            );
             $parts[] = 'response="' . $responseOneLine . '"';
         }
     }
@@ -359,7 +364,7 @@ function sendVerificationEmail(string $toEmail, string $username, int $userId, s
         return true;
     }
 
-    error_log('sendVerificationEmail: SMTP zlyhalo pre ' . $toEmail);
+    error_log('sendVerificationEmail: SMTP zlyhalo.');
     return false;
 }
 
@@ -388,7 +393,7 @@ function sendPasswordResetEmail(string $toEmail, string $username, string $rawTo
         return true;
     }
 
-    error_log('sendPasswordResetEmail: SMTP zlyhalo pre ' . $toEmail);
+    error_log('sendPasswordResetEmail: SMTP zlyhalo.');
     return false;
 }
 
@@ -466,7 +471,7 @@ function sendAdminNewRegistrationEmail(array $dbUserRow, array $registrationCont
         return true;
     }
 
-    error_log('sendAdminNewRegistrationEmail: SMTP zlyhalo pre ' . $toEmail);
+    error_log('sendAdminNewRegistrationEmail: SMTP zlyhalo.');
     return false;
 }
 
@@ -514,7 +519,7 @@ function sendUserRegistrationNotificationEmail(string $toEmail, string $username
         return true;
     }
 
-    error_log('sendUserRegistrationNotificationEmail: SMTP zlyhalo pre ' . $toEmail);
+    error_log('sendUserRegistrationNotificationEmail: SMTP zlyhalo.');
     return false;
 }
 
@@ -538,7 +543,8 @@ function sendAccountDeletionConfirmationEmail(string $toEmail, string $username,
         . $confirmUrl . "\n\n"
         . "Platnosť odkazu je 24 hodín.\n\n"
         . "UPOZORNENIE: Táto akcia je nezvratná. Po potvrdení budú natrvalo vymazané "
-        . "všetky vaše údaje vrátane výsledkov kalkulačiek a nastavení profilu.\n\n"
+        . "váš účet, profil, avatary a uložené výsledky kalkulačiek. Minimalizovaný bezpečnostný "
+        . "audit vykonania žiadosti bez používateľského mena môžeme uchovať najviac 90 dní.\n\n"
         . "Ak ste o zrušenie účtu nežiadali, tento e-mail ignorujte. "
         . "Váš účet zostane zachovaný.\n\n"
         . EMAIL_BRAND_NAME;
@@ -547,7 +553,7 @@ function sendAccountDeletionConfirmationEmail(string $toEmail, string $username,
         . '<p style="margin:0 0 16px;">Prijali sme žiadosť o zrušenie vášho účtu v ' . EMAIL_BRAND_NAME . '.</p>'
         . '<p style="margin:0 0 16px;">Pre dokončenie a trvalé vymazanie účtu kliknite na tlačidlo nižšie.</p>'
         . '<p style="margin:0 0 16px;color:#334155;">Odkaz je platný 24 hodín.</p>'
-        . '<p style="margin:0 0 16px;color:#334155;font-size:14px;line-height:22px;">Táto akcia je nezvratná. Po potvrdení budú natrvalo vymazané všetky vaše údaje vrátane výsledkov kalkulačiek a nastavení profilu.</p>';
+        . '<p style="margin:0 0 16px;color:#334155;font-size:14px;line-height:22px;">Táto akcia je nezvratná. Po potvrdení budú natrvalo vymazané váš účet, profil, avatary a uložené výsledky kalkulačiek. Minimalizovaný bezpečnostný audit vykonania žiadosti bez používateľského mena môžeme uchovať najviac 90 dní.</p>';
     $htmlMessage = renderEmailHtmlLayout($htmlBody, 'Potvrdiť zrušenie účtu', $confirmUrl);
 
     $cfg = getEmailEnvConfig();
@@ -555,7 +561,7 @@ function sendAccountDeletionConfirmationEmail(string $toEmail, string $username,
         return true;
     }
 
-    error_log('sendAccountDeletionConfirmationEmail: SMTP zlyhalo pre ' . $toEmail);
+    error_log('sendAccountDeletionConfirmationEmail: SMTP zlyhalo.');
     return false;
 }
 

@@ -41,6 +41,7 @@ Disallow: /mobile_verification.php
 Disallow: /forgot_password.php
 Disallow: /reset_password.php
 Disallow: /confirm_account_deletion.php
+Disallow: /session_keepalive.php
 Disallow: /calculator_history.php
 
 # Privátne adresáre

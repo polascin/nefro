@@ -166,8 +166,9 @@ include 'legal_head.php';
                     <li><strong>Výsledky kalkulačiek uložené v konte:</strong> kým ich používateľ nevymaže alebo nepožiada o zmazanie konta.</li>
                     <li><strong>Lokálna história kalkulačiek pre neprihlásených:</strong> najviac 50 výsledkov v prehliadači, kým ich používateľ nevymaže, neodvolá preferenčný súhlas alebo nevymaže údaje stránky.</li>
                     <li><strong>Server logy:</strong> maximálne 90 dní, potom automaticky mazané.</li>
+                    <li><strong>Minimalizovaný audit zrušenia účtu:</strong> maximálne 90 dní; neobsahuje používateľské meno a slúži na bezpečnostnú kontrolu a preukázanie vykonania žiadosti.</li>
                     <li><strong>Bezpečnostné záznamy (pokusy o prihlásenie, rate-limiting):</strong> priebežne mazané po uplynutí ich účelu.</li>
-                    <li><strong>GA4 dáta:</strong> štandardne 14 mesiacov v Google Analytics; Google ich môže anonymizovať po uplynutí lehoty.</li>
+                    <li><strong>GA4 dáta:</strong> používateľské a udalostné údaje viazané na pseudonymný identifikátor sa v Google Analytics uchovávajú najviac 14 mesiacov.</li>
                     <li><strong>Cookie súhlas:</strong> 365 dní (po uplynutí sa banner znova zobrazí).</li>
                 </ul>
 
@@ -200,8 +201,18 @@ include 'legal_head.php';
                     profile a v nastaveniach cookies.
                 </p>
 
-                <!-- 9. DETI -->
-                <h3>9. Deti</h3>
+                <!-- 9. AUTOMATIZOVANÉ ROZHODOVANIE -->
+                <h3>9. Automatizované rozhodovanie a profilovanie</h3>
+                <p>
+                    Služba nevykonáva rozhodnutia založené výlučne na automatizovanom spracúvaní,
+                    ktoré by mali voči vám právne účinky alebo vás podobne významne ovplyvňovali,
+                    ani nevytvára marketingové či zdravotné profily používateľov. Klinické kalkulačky
+                    poskytujú iba podporný informatívny výpočet; neurčujú diagnózu ani liečbu a ich
+                    výsledok musí vždy posúdiť zdravotnícky pracovník.
+                </p>
+
+                <!-- 10. DETI -->
+                <h3>10. Deti</h3>
                 <p>
                     Služba nie je určená deťom mladším ako 16 rokov (alebo vek stanovený vaším
                     miestnym právom) a ich údaje vedome nezhromažďujeme. Ak sa domnievate, že nám
@@ -209,8 +220,8 @@ include 'legal_head.php';
                     <a href="mailto:<?= htmlspecialchars($info['contactEmail'], ENT_QUOTES, 'UTF-8') ?>"><?= htmlspecialchars($info['contactEmail'], ENT_QUOTES, 'UTF-8') ?></a>.
                 </p>
 
-                <!-- 10. COOKIES -->
-                <h3>10. Cookies a podobné technológie</h3>
+                <!-- 11. COOKIES -->
+                <h3>11. Cookies a podobné technológie</h3>
                 <p>
                     Predvolene používame iba nevyhnutné úložisko; voliteľné cookies nastavujeme
                     len s vaším súhlasom. Podrobnosti a správu volieb nájdete v našej
@@ -223,8 +234,8 @@ include 'legal_head.php';
                     Otvoriť nastavenia cookies
                 </button>
 
-                <!-- 11. ZMENY -->
-                <h3>11. Zmeny týchto Zásad</h3>
+                <!-- 12. ZMENY -->
+                <h3>12. Zmeny týchto Zásad</h3>
                 <p>
                     Tieto Zásady môžeme aktualizovať. Podstatné zmeny zvýrazníme v sekcii
                     „Súhrn posledných zmien“ vyššie a zmení sa dátum poslednej aktualizácie.
@@ -233,8 +244,8 @@ include 'legal_head.php';
                     zobrazí banner na potvrdenie nových podmienok (v súlade s čl. 7 ods. 3 GDPR).
                 </p>
 
-                <!-- 12. KONTAKT -->
-                <h3>12. Kontakt</h3>
+                <!-- 13. KONTAKT -->
+                <h3>13. Kontakt</h3>
                 <p>
                     Ochrana súkromia:
                     <a href="mailto:<?= htmlspecialchars($info['contactEmail'], ENT_QUOTES, 'UTF-8') ?>"><?= htmlspecialchars($info['contactEmail'], ENT_QUOTES, 'UTF-8') ?></a>

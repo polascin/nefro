@@ -5564,6 +5564,46 @@ mark.search-hl {
     -webkit-backdrop-filter: blur(10px);
 }
 
+.session-timeout-warning {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 11000;
+    width: min(420px, calc(100vw - 32px));
+    padding: 20px;
+    border: 2px solid var(--warning-color, #b45309);
+    border-radius: 8px;
+    background: var(--card-bg, #fff);
+    color: var(--text-primary, #111827);
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.25);
+}
+
+.session-timeout-warning h2 {
+    margin: 0 0 8px;
+    font-size: 1.2rem;
+}
+
+.session-timeout-warning p {
+    margin: 0 0 16px;
+}
+
+.session-timeout-warning__actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.session-timeout-warning__actions > * {
+    min-height: 44px;
+}
+
+@media (max-width: 480px) {
+    .session-timeout-warning {
+        right: 16px;
+        bottom: 16px;
+    }
+}
+
 .quick-nav-list {
     display: flex;
     flex-wrap: wrap;

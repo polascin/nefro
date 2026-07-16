@@ -371,13 +371,13 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
                 </div>
                 <h4>Režim: vrátane technických a citlivých polí</h4>
                 <div class="admin-notice-actions">
-                    <form method="POST" action="admin_users_notice.php" target="_blank" class="d-inline" data-confirm="Naozaj otvoriť citlivý výstup používateľov?">
+                    <form method="POST" action="admin_users_notice.php" target="_blank" rel="noopener" class="d-inline" data-confirm="Naozaj otvoriť citlivý výstup používateľov?">
                         <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
                         <input type="hidden" name="format" value="view">
                         <input type="hidden" name="include_sensitive" value="1">
                         <button type="submit" class="btn-admin-action btn-admin-action--warn">Zobraziť dokument</button>
                     </form>
-                    <form method="POST" action="admin_users_notice.php" target="_blank" class="d-inline" data-confirm="Naozaj otvoriť citlivý výstup používateľov?">
+                    <form method="POST" action="admin_users_notice.php" target="_blank" rel="noopener" class="d-inline" data-confirm="Naozaj otvoriť citlivý výstup používateľov?">
                         <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrfToken) ?>">
                         <input type="hidden" name="format" value="print">
                         <input type="hidden" name="include_sensitive" value="1">

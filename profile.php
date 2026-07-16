@@ -738,7 +738,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && ($_POST['action'] ?? '') !=
             <div class="danger-zone" id="danger-zone">
                 <h3 class="danger-zone__title">Nebezpečná zóna</h3>
                 <p class="danger-zone__desc">
-                    Zrušenie účtu je <strong>nezvratné</strong>. Po vymazaní nie je možné obnoviť žiadne vaše dáta.
+                    Zrušenie účtu je <strong>nezvratné</strong>. Vymazaný účet, profil ani uložené výsledky nie je možné obnoviť.
                 </p>
                 <button type="button" class="btn-danger-outline" data-toggle-btn="delete-account-confirm">
                     Zrušiť môj účet
@@ -749,12 +749,13 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST' && ($_POST['action'] ?? '') !=
                         <p><strong>Upozornenie — táto akcia je nezvratná!</strong></p>
                         <p>Po potvrdení budú <strong>natrvalo vymazané</strong>:</p>
                         <ul>
-                            <li>Váš účet a všetky osobné údaje</li>
+                            <li>Váš účet a profilové osobné údaje</li>
                             <li>Profilová fotografia a jej zálohy</li>
                             <li>Všetky uložené výsledky kalkulačiek</li>
                             <li>História zmien profilu</li>
-                            <li>Záznamy o prístupe viazané na váš účet</li>
+                            <li>Väzba prístupových záznamov na váš účet a používateľské meno</li>
                         </ul>
+                        <p>Minimalizovaný bezpečnostný audit zrušenia účtu bez používateľského mena môžeme uchovať najviac 90 dní.</p>
                     </div>
 
                     <?php if (!empty($deleteErrors)): ?>

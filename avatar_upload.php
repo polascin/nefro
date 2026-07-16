@@ -210,3 +210,23 @@ if (!function_exists('processAvatarUpload')) {
         return ['path' => $destinationRel, 'error' => null];
     }
 }
+
+if (!function_exists('deleteManagedAvatarFile')) {
+    /** Odstráni iba súbor, ktorého reálna cesta ostáva v spravovanom adresári avatarov. */
+    function deleteManagedAvatarFile(?string $relativePath): bool
+    {
+        if ($relativePath === null || trim($relativePath) === '') {
+            return true;
+        }
+
+        $uploadsRoot = realpath(__DIR__ . '/uploads/avatars');
+        $candidate = realpath(__DIR__ . '/' . ltrim(str_replace('\\', '/', $relativePath), '/'));
+        if ($uploadsRoot === false || $candidate === false
+            || !str_starts_with($candidate, $uploadsRoot . DIRECTORY_SEPARATOR)
+        ) {
+            return false;
+        }
+
+        return !is_file($candidate) || @unlink($candidate);
+    }
+}

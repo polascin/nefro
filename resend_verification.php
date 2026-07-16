@@ -31,7 +31,8 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 $pdo->prepare(
                     "DELETE FROM form_rate_limit
                      WHERE action = 'resend_verification'
-                       AND first_attempt < DATE_SUB(NOW(), INTERVAL 1 DAY)"
+                       AND first_attempt < DATE_SUB(NOW(), INTERVAL 1 HOUR)
+                       AND (blocked_until IS NULL OR blocked_until <= NOW())"
                 )->execute();
 
                 $rlStmt = $pdo->prepare(

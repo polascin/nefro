@@ -882,7 +882,8 @@ $isEdit = $editProvider !== null;
               <option value="<?= htmlspecialchars($slug) ?>" <?= $ceOut === $slug ? 'selected' : '' ?>><?= htmlspecialchars($label) ?></option>
             <?php endforeach; ?>
           </select>
-          <input type="text" name="contact_note" class="form-control admin-select-md" maxlength="1000" placeholder="Poznámka" value="<?= htmlspecialchars($ceNote) ?>">
+          <label for="c_note">Poznámka:</label>
+          <input type="text" id="c_note" name="contact_note" class="form-control admin-select-md" maxlength="1000" placeholder="Poznámka" value="<?= htmlspecialchars($ceNote) ?>">
           <button type="submit" class="btn-secondary-small"><?= $isContactEdit ? '💾 Uložiť kontakt' : '➕ Zapísať kontakt' ?></button>
           <?php if ($isContactEdit): ?><a href="admin_providers.php?action=edit&id=<?= $pidEdit ?>" class="btn-secondary-small">Zrušiť</a><?php endif; ?>
         </form>

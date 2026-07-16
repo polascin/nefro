@@ -40,9 +40,9 @@ function legalInfo(): array
         'jurisdiction'             => 'Slovenskej republiky (EÚ)',
         'supervisoryAuthority'     => 'Úrad na ochranu osobných údajov Slovenskej republiky',
         'supervisoryAuthorityUrl'  => 'https://dataprotection.gov.sk/sk/',
-        'effectiveDate'            => '2026-07-15',
-        'version'                  => '2.4',
-        'consentVersion'           => '2026-07-15',
+        'effectiveDate'            => '2026-07-16',
+        'version'                  => '2.5',
+        'consentVersion'           => '2026-07-16',
     ];
 }
 
@@ -52,7 +52,7 @@ function legalDataCategories(): array
     return [
         [
             'category' => 'Identifikačné a kontaktné údaje',
-            'examples' => 'Meno, priezvisko, používateľské meno, e-mailová adresa, voliteľne mobilné telefónne číslo.',
+            'examples' => 'Meno, priezvisko, používateľské meno, súkromný e-mail a voliteľne telefónne čísla, dátum narodenia, rod, zámená, poštová adresa, osobná webová stránka, profily na sociálnych sieťach a iné kontaktné alebo menné poznámky.',
         ],
         [
             'category' => 'Profesijné údaje',
@@ -60,7 +60,7 @@ function legalDataCategories(): array
         ],
         [
             'category' => 'Autentifikačné a bezpečnostné údaje',
-            'examples' => 'Hašované heslo (bcrypt), čas posledného prihlásenia, IP adresa pri prihlásení, pokusy o prihlásenie (rate-limiting).',
+            'examples' => 'Hašované heslo (bcrypt), údaje dvojfaktorového overenia, čas posledného prihlásenia, IP adresa, používateľský agent, pokusy o prihlásenie a iné rate-limit záznamy. Po zrušení účtu sa najviac 90 dní uchováva minimalizovaný bezpečnostný audit bez používateľského mena; môže obsahovať pôvodné číselné ID, jednosmerný odtlačok a doménu e-mailu, IP adresu, používateľský agent a súhrnné počty vymazaných záznamov.',
         ],
         [
             'category' => 'Avatar',
@@ -80,7 +80,7 @@ function legalDataCategories(): array
         ],
         [
             'category' => 'Technické a prevádzkové údaje',
-            'examples' => 'Server logy: IP adresa, typ prehliadača, operačný systém, URL požiadavky a čas prístupu.',
+            'examples' => 'Serverové a prístupové logy: IP adresa, typ prehliadača, operačný systém, URL požiadavky a čas prístupu. Pri zrušení účtu sa väzba prístupových logov na účet a používateľské meno odstráni.',
         ],
     ];
 }
@@ -210,7 +210,7 @@ function legalCookieCategories(): array
         [
             'id'          => 'analytics',
             'title'       => 'Analytické (Analytics)',
-            'description' => 'Pomáhajú nám pochopiť, ako sa web používa, aby sme ho mohli zlepšovať. Údaje sú agregované a anonymizované — nepoužívajú sa na vašu identifikáciu.',
+            'description' => 'Pomáhajú nám pochopiť, ako sa web používa, aby sme ho mohli zlepšovať. Google Analytics používa pseudonymný identifikátor klienta; službe neposielame mená, e-mailové adresy ani iné priame identifikátory.',
             'required'    => false,
         ],
         [
@@ -269,6 +269,7 @@ function legalStoredItems(): array
 function legalRecentUpdates(): array
 {
     return [
+        'Spresnili sme úplný rozsah nepovinných profilových údajov, pseudonymný charakter analytiky GA4, minimalizovaný audit po zrušení účtu, jeho 90-dňovú retenčnú lehotu a informáciu, že služba nevykonáva právne významné výlučne automatizované rozhodovanie ani profilovanie.',
         'Lokálna história kalkulačiek pre neprihlásených sa odteraz vytvára iba po preferenčnom súhlase, neuchováva formulárové vstupy ani identifikátory pacienta a pri odvolaní súhlasu sa vymaže.',
         'Rozšírili sme Službu o informačnú databázu liekov v nefrológii, register klinických štúdií (dáta z verejného registra ClinicalTrials.gov) a ďalšie informačné nástroje, ktoré samy nespracúvajú osobné údaje návštevníkov.',
         'Do zoznamu sprostredkovateľov sme doplnili Twilio Inc. (USA), ktoré odosiela overovacie SMS kódy pri overení telefónneho čísla; prenos do USA je krytý štandardnými zmluvnými doložkami (SCC).',

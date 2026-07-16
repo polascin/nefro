@@ -64,7 +64,12 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
         $fpIsBlocked   = false;
 
         try {
-            $pdo->prepare("DELETE FROM form_rate_limit WHERE action = 'forgot_password' AND blocked_until IS NOT NULL AND blocked_until < DATE_SUB(NOW(), INTERVAL 1 DAY)")
+            $pdo->prepare(
+                "DELETE FROM form_rate_limit
+                 WHERE action = 'forgot_password'
+                   AND first_attempt < DATE_SUB(NOW(), INTERVAL 1 HOUR)
+                   AND (blocked_until IS NULL OR blocked_until <= NOW())"
+            )
                 ->execute();
 
             $fpRlStmt = $pdo->prepare("SELECT attempt_count, blocked_until FROM form_rate_limit WHERE ip = :ip AND action = 'forgot_password'");

@@ -13,8 +13,8 @@ $deletionRequest = null;
 if ($tokenHash !== '') {
     try {
         $stmt = $pdo->prepare(
-            "SELECT adt.user_id, u.email, u.username, u.password_hash, u.avatar_path,
-                    u.is_admin, u.created_at
+            "SELECT adt.user_id, u.email, u.avatar_path,
+                    u.is_admin, u.newsletter_consent, u.created_at
              FROM account_deletion_tokens adt
              INNER JOIN users u ON u.id = adt.user_id
              WHERE adt.token_hash = :token_hash
@@ -76,11 +76,11 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     :age_days, 'user_self', NULL,
                     :client_ip, :user_agent,
                     :calc_results, :profile_changes,
-                    :had_avatar, 0
+                    :had_avatar, :had_newsletter_consent
                 )"
             )->execute([
                 ':uid'            => $userId,
-                ':username'       => mb_substr((string) ($deletionRequest['username'] ?? ''), 0, 255),
+                ':username'       => '(vymazané)',
                 ':email_hash'     => $emailHash,
                 ':email_domain'   => mb_substr($emailDomain, 0, 255),
                 ':is_admin'       => 0,
@@ -90,6 +90,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 ':calc_results'   => $statCalc,
                 ':profile_changes'=> $statProfile,
                 ':had_avatar'     => empty($deletionRequest['avatar_path']) ? 0 : 1,
+                ':had_newsletter_consent' => (int) ($deletionRequest['newsletter_consent'] ?? 0) === 1 ? 1 : 0,
             ]);
 
             // Cesty k avatarom pripravíme v transakcii, ale súbory zmažeme až po commite.
@@ -115,6 +116,11 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 $avatarArchiveDir = $archiveDir;
             }
 
+            // Prístupové logy ostanú len ako minimalizované technické záznamy bez väzby na účet.
+            $pdo->prepare(
+                "UPDATE access_logs SET user_id = NULL, username = NULL WHERE user_id = :id"
+            )->execute(['id' => $userId]);
+
             // Vymazanie záznamu tokenu (FK CASCADE zmažú aj account_deletion_tokens)
             // DB: CASCADE vymaže users_profile_archive, users_avatar_archive,
             //     password_resets, account_deletion_tokens, calculator_results, article_newsletter_queue,
@@ -139,7 +145,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 date('Y-m-d H:i:s'),
                 'account_deleted',
                 $userId,
-                mb_substr((string) ($deletionRequest['username'] ?? ''), 0, 255),
+                '(vymazané)',
                 'user_self',
                 $clientIp,
             ]) . "\n";
@@ -207,7 +213,9 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     <p><strong>Upozornenie — táto akcia je nezvratná!</strong></p>
                     <p>Kliknutím na tlačidlo nižšie natrvalo vymažete účet
                         <strong><?= htmlspecialchars((string) ($deletionRequest['email'] ?? '')) ?></strong>
-                        vrátane všetkých uložených údajov.
+                        vrátane profilu, avatarov a uložených výsledkov kalkulačiek. Minimalizovaný
+                        bezpečnostný audit vykonania žiadosti bez používateľského mena môžeme uchovať
+                        najviac 90 dní podľa Zásad ochrany osobných údajov.
                     </p>
                 </div>
 

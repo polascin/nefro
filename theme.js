@@ -4,12 +4,18 @@
  */
 
 (function() {
-    var isAuto = true;
+    var hasPreferenceConsent = typeof window.npsHasConsent === 'function'
+        && window.npsHasConsent('preferences');
+    var isAuto = window.npsServerThemeAuto !== 0;
     var storedTheme = null;
-    try {
-        isAuto = localStorage.getItem('nps_theme_auto') !== '0';
-        storedTheme = localStorage.getItem('nps_theme');
-    } catch (e) {}
+    if (hasPreferenceConsent) {
+        try {
+            isAuto = localStorage.getItem('nps_theme_auto') !== '0';
+            storedTheme = localStorage.getItem('nps_theme');
+        } catch (e) {}
+    }
+
+    window.npsThemeAutoActive = isAuto;
 
     var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
@@ -48,12 +54,15 @@ document.addEventListener('DOMContentLoaded', () => {
         const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
 
         document.documentElement.setAttribute('data-theme', newTheme);
-        try {
-            localStorage.setItem('nps_theme', newTheme);
-            // Manuálne prepnutie deaktivuje auto režim lokálne;
-            // trvalé nastavenie sa mení v profile.php
-            localStorage.setItem('nps_theme_auto', '0');
-        } catch (e) {}
+        window.npsThemeAutoActive = false;
+        if (typeof window.npsHasConsent === 'function' && window.npsHasConsent('preferences')) {
+            try {
+                localStorage.setItem('nps_theme', newTheme);
+                // Manuálne prepnutie deaktivuje auto režim lokálne;
+                // trvalé nastavenie sa mení v profile.php
+                localStorage.setItem('nps_theme_auto', '0');
+            } catch (e) {}
+        }
 
         setToggleAccessibility(newTheme);
         updateToggleIcon(newTheme);
@@ -64,9 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeMq = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)');
     if (themeMq && typeof themeMq.addEventListener === 'function') {
         themeMq.addEventListener('change', (e) => {
-            let isAuto = true;
-            try { isAuto = localStorage.getItem('nps_theme_auto') !== '0'; } catch (_) {}
-            if (!isAuto) return;
+            if (!window.npsThemeAutoActive) return;
             const newTheme = e.matches ? 'dark' : 'light';
             document.documentElement.setAttribute('data-theme', newTheme);
             setToggleAccessibility(newTheme);
@@ -74,6 +81,27 @@ document.addEventListener('DOMContentLoaded', () => {
             updateAvatars(newTheme);
         });
     }
+
+    window.addEventListener('nps:consent-changed', (event) => {
+        const preferencesAllowed = event.detail && event.detail.preferences === true;
+        const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+
+        if (preferencesAllowed) {
+            try {
+                localStorage.setItem('nps_theme', currentTheme);
+                localStorage.setItem('nps_theme_auto', window.npsThemeAutoActive ? '1' : '0');
+            } catch (_) {}
+            return;
+        }
+
+        window.npsThemeAutoActive = window.npsServerThemeAuto !== 0;
+        const prefersDarkNow = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const resetTheme = prefersDarkNow ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', resetTheme);
+        setToggleAccessibility(resetTheme);
+        updateToggleIcon(resetTheme);
+        updateAvatars(resetTheme);
+    });
 
     function updateAvatars(theme) {
         // Aktualizuj header avatar

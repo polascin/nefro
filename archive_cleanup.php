@@ -17,7 +17,7 @@ if (php_sapi_name() !== 'cli') {
 
 $profileRetentionDays = max(30, (int) ($argv[1] ?? 365));
 $avatarRetentionDays  = max(30, (int) ($argv[2] ?? 365));
-$accessLogRetentionDays = max(30, (int) ($argv[3] ?? 90));
+$accessLogRetentionDays = min(90, max(30, (int) ($argv[3] ?? 90)));
 
 require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
@@ -210,19 +210,17 @@ try {
 }
 
 $fallbackCutoff = strtotime("-{$accessLogRetentionDays} days");
-if ($fallbackCutoff !== false) {
-    $fallbackAccessDeleted = cleanupTimestampedLogFile(
-        __DIR__ . '/private/logs/access.log',
-        $fallbackCutoff,
-        $errors,
-        true
-    );
-    $fallbackDeletionDeleted = cleanupTimestampedLogFile(
-        __DIR__ . '/private/logs/account_deletions.log',
-        $fallbackCutoff,
-        $errors
-    );
-}
+$fallbackAccessDeleted = cleanupTimestampedLogFile(
+    __DIR__ . '/private/logs/access.log',
+    $fallbackCutoff,
+    $errors,
+    true
+);
+$fallbackDeletionDeleted = cleanupTimestampedLogFile(
+    __DIR__ . '/private/logs/account_deletions.log',
+    $fallbackCutoff,
+    $errors
+);
 
 echo "Výsledky:\n";
 echo "  Zmaz. záznamy z histórie profilov:  {$profileDeleted}\n";

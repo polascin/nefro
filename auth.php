@@ -190,6 +190,21 @@ function validateCsrfToken(string $token): bool {
     return $valid;
 }
 
+/** Nerotujúci token pre keepalive, aby predĺženie relácie nezneplatnilo rozpracované formuláre. */
+function generateSessionKeepaliveToken(): string {
+    if (empty($_SESSION['_keepalive_token'])) {
+        $_SESSION['_keepalive_token'] = bin2hex(random_bytes(32));
+    }
+
+    return (string) $_SESSION['_keepalive_token'];
+}
+
+function validateSessionKeepaliveToken(string $token): bool {
+    return $token !== ''
+        && isset($_SESSION['_keepalive_token'])
+        && hash_equals((string) $_SESSION['_keepalive_token'], $token);
+}
+
 /**
  * Webové spustenie administračného mutačného skriptu povoľuje iba cez POST.
  * GET zobrazí potvrdenie, CLI beh ostáva bez zmeny.
