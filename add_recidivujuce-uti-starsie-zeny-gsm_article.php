@@ -85,7 +85,7 @@ baktériúria nemusí korelovať s klinickým obrazom dyzúrie.</p>
 
 <h2>4) Nadužívanie antibiotík treba riešiť systémovo: urobióm, stewardship a nadmerná diagnostika</h2>
 <p>Rozhovor dáva do súvisu urobióm (mikrobióm močových ciest) a riziko systémovej dysbiózy pri častom
-podávaní antibiotík. Cieľom nie je len „vyhnúť sa <em>C. difficile</em>", ale mať širší pohľad na vplyv
+podávaní antibiotík. Cieľom nie je len „vyhnúť sa <em>C. difficile</em>“, ale mať širší pohľad na vplyv
 antibiotík na mikrobiotu vrátane možných dlhodobých následkov.</p>
 <p>Prakticky sa to prejaví tak, že podľa rozhovoru nie je podporený prístup „len to predĺžim, rozšírim
 spektrum alebo zvýšim dávku“ pri recidívach, pokiaľ na to nie sú dôkazy. Ide práve o ten typ manažmentu,

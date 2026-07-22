@@ -44,7 +44,7 @@ require_once __DIR__ . '/calculators_common.php';
  * @param float  $hba1c       HbA1c v % (len pri DM, default 7.0)
  * @param bool   $insulin     Inzulínová liečba (len pri DM)
  * @param bool   $oralDm      Perorálna antidiabetická liečba (len pri DM)
- * @return array{risk_3yr: float, model: string}
+ * @return array{risk_3yr: float, model_name: string}
  */
 function ckdpcRisk(
     int $age,

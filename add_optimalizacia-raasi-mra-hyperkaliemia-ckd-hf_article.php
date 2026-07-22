@@ -91,7 +91,7 @@ $articles[] = [
 <li><strong>Novšie stratégie pre chronickú kontrolu draslíka:</strong> v situáciách, kde sa bez toho RAASi/MRA nedarí udržať v požadovaných dávkach, sa v medzinárodných odporúčaniach spomínajú aj väzbové liečivá na draslík ako nástroj, ktorý umožní pokračovať v RAASi/MRA. To je obzvlášť relevantné, ak ide o opakované alebo perzistujúce zvyšovanie K<sup>+</sup>.</li>
 </ul>
 
-<p><strong>Dôležité:</strong> cieľ nie je „iba dostať K<sup>+</sup> na číslo", ale dostať pacienta do stavu, kde môže dlhodobo profitovať z RAASi/MRA.</p>
+<p><strong>Dôležité:</strong> cieľ nie je „iba dostať K<sup>+</sup> na číslo“, ale dostať pacienta do stavu, kde môže dlhodobo profitovať z RAASi/MRA.</p>
 
 <h2>Ako nastaviť cieľ a úspech</h2>
 
