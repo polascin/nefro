@@ -56,6 +56,22 @@ try {
     exit("Chyba: Pripojenie k databáze zlyhalo.");
 }
 
+// Autentifikačný stav sa kontroluje voči DB pri každom webovom požiadavku.
+// Zmena hesla, roly, aktivity účtu alebo 2FA tak okamžite zruší staré relácie.
+if (php_sapi_name() !== 'cli' && function_exists('synchronizeAuthenticatedSession')) {
+    try {
+        synchronizeAuthenticatedSession($pdo);
+    } catch (\Throwable $e) {
+        error_log('Synchronizácia autentifikovanej relácie zlyhala: ' . $e->getMessage());
+        clearUserSession();
+        if (!session_start()) {
+            http_response_code(500);
+            exit('Chyba: Nepodarilo sa obnoviť reláciu.');
+        }
+        setFlashMessage('warning', 'Reláciu sa nepodarilo bezpečne overiť. Prihláste sa znova.');
+    }
+}
+
 /**
  * Vráti verejne zobraziteľné štatistiky projektu.
  *
