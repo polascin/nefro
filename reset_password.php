@@ -1,7 +1,6 @@
 <?php
 declare(strict_types=1);
 require_once __DIR__ . '/auth.php';
-header('Referrer-Policy: no-referrer');
 require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
 
@@ -64,15 +63,15 @@ if ($requestMethod === 'POST') {
             $errors[] = 'Odkaz na obnovenie hesla je neplatný alebo jeho platnosť vypršala.';
         }
 
-        if (strlen($newPassword) < 8 || strlen($newPassword) > 1024 || !preg_match('/[A-Z]/', $newPassword) || !preg_match('/[a-z]/', $newPassword) || !preg_match('/[0-9]/', $newPassword)) {
-            $errors[] = 'Heslo musí mať 8–1024 znakov, obsahovať aspoň jedno veľké písmeno, malé písmeno a číslicu.';
+        if (!isAppPasswordValid($newPassword)) {
+            $errors[] = 'Heslo musí mať 8–72 bajtov, obsahovať aspoň jedno veľké písmeno, malé písmeno a číslicu.';
         } elseif ($newPassword !== $newPasswordConfirm) {
             $errors[] = 'Heslá sa nezhodujú.';
         }
 
         if (empty($errors) && $resetRequest !== null) {
             try {
-                $newPasswordHash = password_hash($newPassword, PASSWORD_DEFAULT);
+                $newPasswordHash = hashAppPassword($newPassword);
                 $pdo->beginTransaction();
 
                 // Opätovne načítaj a uzamkni token v transakcii. Dve súbežné

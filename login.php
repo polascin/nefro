@@ -121,7 +121,8 @@ function handleLoginPost(PDO $pdo, bool $isLocalDev): array
 
     try {
         $stmt = $pdo->prepare(
-            "SELECT id, email, password_hash, username, is_admin, is_active, email_verified_at, totp_enabled, totp_secret
+            "SELECT id, email, password_hash, username, is_admin, is_active, email_verified_at,
+                    totp_enabled, totp_secret, totp_backup_codes
              FROM users WHERE email = :email OR username = :username"
         );
         $stmt->execute(['email' => $loginInput, 'username' => $loginInput]);
@@ -129,10 +130,9 @@ function handleLoginPost(PDO $pdo, bool $isLocalDev): array
 
         // Vždy voláme password_verify (aj pre neexistujúceho používateľa)
         // aby sme zabránili timing útoku na enumeráciu e-mailov.
-        // Dummy hash sa generuje dynamicky — žiadny hardcoded reťazec v kóde.
-        $hashToVerify = $user
-            ? (string) $user['password_hash']
-            : password_hash(bin2hex(random_bytes(8)), PASSWORD_DEFAULT);
+        // Konštantný bcrypt dummy hash zachová presne jednu drahú operáciu aj
+        // pri neexistujúcom účte a neprezradí existenciu účtu časovaním.
+        $hashToVerify = $user ? (string) $user['password_hash'] : APP_DUMMY_PASSWORD_HASH;
         $passwordOk = password_verify($password, $hashToVerify);
 
         if (!$user || !$passwordOk) {
@@ -169,6 +169,15 @@ function handleLoginPost(PDO $pdo, bool $isLocalDev): array
             return compact('errors', 'loginFailureDetails');
         }
 
+        if (password_needs_rehash((string) $user['password_hash'], PASSWORD_DEFAULT)) {
+            $rehash = password_hash($password, PASSWORD_DEFAULT);
+            if (is_string($rehash) && $rehash !== '') {
+                $pdo->prepare('UPDATE users SET password_hash = :hash WHERE id = :id')
+                    ->execute(['hash' => $rehash, 'id' => (int) $user['id']]);
+                $user['password_hash'] = $rehash;
+            }
+        }
+
         // Prihlásenie úspešné — vyčisti IP záznamy
         try {
             clearIpRateLimit($pdo, 'login_attempts', $clientIp);
@@ -202,6 +211,7 @@ function handleLoginPost(PDO $pdo, bool $isLocalDev): array
         $_SESSION['is_admin']        = (int) ($user['is_admin'] ?? 0);
         $_SESSION['email_verified']  = $emailVerified;
         $_SESSION['_last_activity']  = time();
+        refreshCurrentSessionAuthFingerprint($user);
 
         header("Location: index.php");
         exit;

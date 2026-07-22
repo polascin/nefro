@@ -23,7 +23,8 @@ $successes  = [];
 $user = null;
 try {
     $stmt = $pdo->prepare(
-        "SELECT id, email, username, password_hash, totp_secret, totp_enabled, totp_backup_codes
+        "SELECT id, email, username, password_hash, is_admin, is_active, email_verified_at,
+                totp_secret, totp_enabled, totp_backup_codes
          FROM users WHERE id = :id"
     );
     $stmt->execute(['id' => $userId]);
@@ -75,10 +76,23 @@ if ($requestMethod === 'POST') {
             if ($totpEnabled) {
                 $errors[] = "2FA je už aktivované.";
             } else {
-                $secret = generateTotpSecret();
-                $_SESSION['2fa_setup_secret'] = $secret;
-                header("Location: 2fa_setup.php");
-                exit;
+                $reauth = verifySensitiveActionPassword(
+                    $pdo,
+                    (int) $userId,
+                    (string) ($_POST['enable_password'] ?? ''),
+                    (string) $user['password_hash']
+                );
+                if (!$reauth['ok']) {
+                    $errors[] = $reauth['blocked']
+                        ? 'Opätovné overenie je dočasne zablokované. Skúste to znova o 15 minút.'
+                        : 'Aktuálne heslo nie je správne.';
+                } else {
+                    $secret = generateTotpSecret();
+                    $_SESSION['2fa_setup_secret'] = $secret;
+                    $_SESSION['2fa_setup_attempts'] = 0;
+                    header("Location: 2fa_setup.php");
+                    exit;
+                }
             }
         }
 
@@ -88,24 +102,18 @@ if ($requestMethod === 'POST') {
                 $errors[] = "2FA je už aktivované.";
             } elseif (empty($_SESSION['2fa_setup_secret'])) {
                 $errors[] = "Relačné údaje nastavenia vypršali. Začnite aktiváciu znova.";
+            } elseif (!hasRecentSensitiveReauthentication()) {
+                unset($_SESSION['2fa_setup_secret'], $_SESSION['2fa_setup_attempts']);
+                $errors[] = 'Platnosť opätovného overenia vypršala. Začnite aktiváciu znova.';
+            } elseif ((int) ($_SESSION['2fa_setup_attempts'] ?? 0) >= 5) {
+                unset($_SESSION['2fa_setup_secret'], $_SESSION['2fa_setup_attempts']);
+                $errors[] = 'Príliš veľa nesprávnych kódov. Začnite aktiváciu znova.';
             } else {
                 $confirmCode    = trim($_POST['totp_confirm_code'] ?? '');
                 $matchedCounter = verifyTotpCodeGetCounter($_SESSION['2fa_setup_secret'], $confirmCode, 2);
                 if ($matchedCounter === false) {
+                    $_SESSION['2fa_setup_attempts'] = (int) ($_SESSION['2fa_setup_attempts'] ?? 0) + 1;
                     $errors[] = "Nesprávny overovací kód. Skontrolujte čas v aplikácii a skúste znova.";
-                    // Admin diagnostika — pomáha zistiť, či je problém v synchronizácii hodín
-                    if (!empty($_SESSION['is_admin'])) {
-                        $diagKey = totpBase32Decode($_SESSION['2fa_setup_secret']);
-                        if ($diagKey !== false && $diagKey !== '') {
-                            $diagCounter = (int) floor(time() / 30);
-                            $diagCodes = [];
-                            for ($diagW = -2; $diagW <= 2; $diagW++) {
-                                $diagCode = totpComputeCode($diagKey, $diagCounter + $diagW);
-                                $diagCodes[] = ($diagW === 0) ? "[{$diagCode}]" : $diagCode;
-                            }
-                            $errors[] = "[Diagnostika] Server: " . date('H:i:s T') . " | Akceptované kódy: " . implode('  ', $diagCodes) . " (stredný = aktuálny)";
-                        }
-                    }
                 } else {
                     // Kód je správny — ulož tajný kľúč, záložné kódy a počiatočný counter
                     $backup       = generateBackupCodes();
@@ -120,9 +128,13 @@ if ($requestMethod === 'POST') {
                             'counter' => $matchedCounter,
                             'id'      => $userId,
                         ]);
-                        unset($_SESSION['2fa_setup_secret']);
+                        unset($_SESSION['2fa_setup_secret'], $_SESSION['2fa_setup_attempts']);
                         $pendingSecret = null;
                         $totpEnabled   = true;
+                        $user['totp_secret'] = $storage['secret_field'];
+                        $user['totp_enabled'] = 1;
+                        $user['totp_backup_codes'] = $storage['backup_json'];
+                        refreshCurrentSessionAuthFingerprint($user);
                         // Záložné kódy zobrazíme jednoraz — uložíme do session, po načítaní stránky ich zobrazíme a vymažeme
                         $_SESSION['2fa_new_backup_codes'] = $backup['plain'];
                         $newPlainBackupCodes = $backup['plain'];
@@ -143,16 +155,26 @@ if ($requestMethod === 'POST') {
                 $errors[] = "2FA nie je aktivované.";
             } else {
                 $confirmPassword = $_POST['disable_password'] ?? '';
-                if (empty($confirmPassword)) {
-                    $errors[] = "Pre deaktiváciu zadajte svoje aktuálne heslo.";
-                } elseif (!password_verify($confirmPassword, (string) $user['password_hash'])) {
-                    $errors[] = "Zadané heslo nie je správne.";
+                $reauth = verifySensitiveActionPassword(
+                    $pdo,
+                    (int) $userId,
+                    (string) $confirmPassword,
+                    (string) $user['password_hash']
+                );
+                if (!$reauth['ok']) {
+                    $errors[] = $reauth['blocked']
+                        ? 'Opätovné overenie je dočasne zablokované. Skúste to znova o 15 minút.'
+                        : 'Zadané heslo nie je správne.';
                 } else {
                     try {
                         $pdo->prepare(
                             "UPDATE users SET totp_secret = NULL, totp_enabled = 0, totp_backup_codes = NULL, totp_last_counter = NULL WHERE id = :id"
                         )->execute(['id' => $userId]);
                         unset($_SESSION['2fa_setup_secret']);
+                        $user['totp_secret'] = null;
+                        $user['totp_enabled'] = 0;
+                        $user['totp_backup_codes'] = null;
+                        refreshCurrentSessionAuthFingerprint($user);
                         setFlashMessage('success', 'Dvojfaktorové overenie bolo deaktivované.');
                         header("Location: 2fa_setup.php");
                         exit;
@@ -170,10 +192,16 @@ if ($requestMethod === 'POST') {
                 $errors[] = "2FA nie je aktivované.";
             } else {
                 $confirmPassword = $_POST['regen_password'] ?? '';
-                if (empty($confirmPassword)) {
-                    $errors[] = "Pre obnovu záložných kódov zadajte svoje aktuálne heslo.";
-                } elseif (!password_verify($confirmPassword, (string) $user['password_hash'])) {
-                    $errors[] = "Zadané heslo nie je správne.";
+                $reauth = verifySensitiveActionPassword(
+                    $pdo,
+                    (int) $userId,
+                    (string) $confirmPassword,
+                    (string) $user['password_hash']
+                );
+                if (!$reauth['ok']) {
+                    $errors[] = $reauth['blocked']
+                        ? 'Opätovné overenie je dočasne zablokované. Skúste to znova o 15 minút.'
+                        : 'Zadané heslo nie je správne.';
                 } else {
                     $backup = generateBackupCodes();
                     try {
@@ -189,6 +217,9 @@ if ($requestMethod === 'POST') {
                             'codes'  => $storage['backup_json'],
                             'id'     => $userId,
                         ]);
+                        $user['totp_secret'] = $storage['secret_field'];
+                        $user['totp_backup_codes'] = $storage['backup_json'];
+                        refreshCurrentSessionAuthFingerprint($user);
                         $_SESSION['2fa_new_backup_codes'] = $backup['plain'];
                         setFlashMessage('success', 'Záložné kódy boli úspešne obnovené.');
                         header("Location: 2fa_setup.php");
@@ -339,6 +370,10 @@ $totpUri = $pendingSecret ? getTotpUri($pendingSecret, (string) ($user['email'] 
           <form method="POST" action="2fa_setup.php" class="mt-075rem">
             <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
             <input type="hidden" name="action" value="enable_start">
+            <div class="form-group">
+              <label for="enable_password_regenerate">Aktuálne heslo</label>
+              <input type="password" id="enable_password_regenerate" name="enable_password" class="form-control" required autocomplete="current-password">
+            </div>
             <button type="submit" class="btn-secondary">Vygenerovať nový kľúč</button>
           </form>
 
@@ -351,6 +386,10 @@ $totpUri = $pendingSecret ? getTotpUri($pendingSecret, (string) ($user['email'] 
           <form method="POST" action="2fa_setup.php">
             <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
             <input type="hidden" name="action" value="enable_start">
+            <div class="form-group">
+              <label for="enable_password">Aktuálne heslo</label>
+              <input type="password" id="enable_password" name="enable_password" class="form-control" required autocomplete="current-password">
+            </div>
             <div class="form-actions">
               <button type="submit" class="btn-primary">Aktivovať 2FA</button>
             </div>

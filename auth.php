@@ -15,6 +15,40 @@ function getScriptNonce(): string {
     return $nonce;
 }
 
+/** Citlivé tokeny a exporty nesmú opustiť stránku v hlavičke Referer. */
+function requestNeedsNoReferrer(): bool {
+    $script = basename((string) ($_SERVER['SCRIPT_NAME'] ?? $_SERVER['PHP_SELF'] ?? ''));
+    $sensitiveScripts = [
+        'verify_email.php',
+        'newsletter_verify_sub.php',
+        'newsletter_unsubscribe.php',
+        'confirm_account_deletion.php',
+        'reset_password.php',
+        'profile_export.php',
+    ];
+    if (in_array($script, $sensitiveScripts, true)) {
+        return true;
+    }
+
+    foreach (array_keys($_GET) as $name) {
+        $normalized = strtolower(rawurldecode((string) $name));
+        $normalized = preg_replace('/[^a-z0-9]+/', '', $normalized) ?? '';
+        if (in_array($normalized, [
+            'token', 'sig', 'signature', 'secret', 'password', 'passwd',
+            'csrf', 'csrftoken', 'jstoken', 'code', 'totpcode',
+            'verificationtoken', 'resettoken', 'deletiontoken',
+        ], true)) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+function getRequestReferrerPolicy(): string {
+    return requestNeedsNoReferrer() ? 'no-referrer' : 'strict-origin-when-cross-origin';
+}
+
 /**
  * Odosiela kompletný set bezpečnostných HTTP hlavičiek.
  * Volá sa automaticky pri každej web požiadavke cez auth.php.
@@ -28,7 +62,7 @@ function sendSecurityHeaders(): void {
     header('X-XSS-Protection: 0');
     header('X-Content-Type-Options: nosniff');
     header('Strict-Transport-Security: max-age=31536000; includeSubDomains; preload');
-    header('Referrer-Policy: strict-origin-when-cross-origin');
+    header('Referrer-Policy: ' . getRequestReferrerPolicy());
     header('Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=()');
     header('Cross-Origin-Opener-Policy: same-origin');
     header('X-Permitted-Cross-Domain-Policies: none');
@@ -54,6 +88,9 @@ function sendSecurityHeaders(): void {
 
 // Kontrola idle timeout a GC – konštanta musí byť definovaná pred prvým použitím
 const SESSION_IDLE_TIMEOUT = 3600;
+const APP_PASSWORD_MIN_BYTES = 8;
+const APP_PASSWORD_MAX_BYTES = 72; // PASSWORD_DEFAULT je aktuálne bcrypt.
+const APP_DUMMY_PASSWORD_HASH = '$2y$12$1tNSCTWlgcAYigjqkJKc4uj2t22PGxoKeDa2ajFJz1Bxb.I5bYPQy';
 
 // Zabezpečené nastavenia relácie
 ini_set('session.cookie_httponly', 1);
@@ -125,6 +162,26 @@ function isEmailVerified(): bool {
  */
 function isAdmin(): bool {
     return !empty($_SESSION['is_admin']) && (int) $_SESSION['is_admin'] === 1;
+}
+
+function isAppPasswordValid(string $password): bool {
+    $length = strlen($password);
+    return $length >= APP_PASSWORD_MIN_BYTES
+        && $length <= APP_PASSWORD_MAX_BYTES
+        && preg_match('/[A-Z]/', $password) === 1
+        && preg_match('/[a-z]/', $password) === 1
+        && preg_match('/[0-9]/', $password) === 1;
+}
+
+function hashAppPassword(string $password): string {
+    if (!isAppPasswordValid($password)) {
+        throw new \InvalidArgumentException('Heslo nespĺňa bezpečnostné pravidlá.');
+    }
+    $hash = password_hash($password, PASSWORD_DEFAULT);
+    if (!is_string($hash) || $hash === '') {
+        throw new \RuntimeException('Heslo sa nepodarilo bezpečne zahashovať.');
+    }
+    return $hash;
 }
 
 /**
@@ -290,6 +347,174 @@ function clearUserSession(): void {
     }
 
     session_destroy();
+}
+
+/**
+ * Podpis autentifikačného stavu invaliduje staré relácie po zmene hesla,
+ * administrátorskej roly, aktivity účtu alebo 2FA údajov bez ukladania tajomstiev
+ * do samostatnej session tabuľky.
+ */
+function buildUserAuthFingerprint(array $user): string {
+    $parts = [
+        (string) ($user['id'] ?? ''),
+        (string) ($user['password_hash'] ?? ''),
+        (string) ((int) ($user['is_admin'] ?? 0)),
+        (string) ((int) ($user['is_active'] ?? 0)),
+        (string) ($user['email_verified_at'] ?? ''),
+        (string) ((int) ($user['totp_enabled'] ?? 0)),
+        (string) ($user['totp_secret'] ?? ''),
+        (string) ($user['totp_backup_codes'] ?? ''),
+    ];
+
+    return hash_hmac(
+        'sha256',
+        'nefro:session-auth:v1|' . implode("\x1f", $parts),
+        getAppDataProtectionKey()
+    );
+}
+
+function refreshCurrentSessionAuthFingerprint(array $user): void {
+    $_SESSION['_auth_fingerprint'] = buildUserAuthFingerprint($user);
+}
+
+/**
+ * Porovná reláciu s aktuálnym stavom účtu v DB. Staré relácie bez podpisu sa
+ * zámerne ukončia pri prvom požiadavku po nasadení tejto ochrany.
+ */
+function synchronizeAuthenticatedSession(PDO $pdo): bool {
+    if (!isLoggedIn()) {
+        return true;
+    }
+
+    $stmt = $pdo->prepare(
+        'SELECT id, username, email, password_hash, is_admin, is_active,
+                email_verified_at, totp_enabled, totp_secret, totp_backup_codes
+         FROM users WHERE id = :id LIMIT 1'
+    );
+    $stmt->execute(['id' => (int) $_SESSION['user_id']]);
+    $user = $stmt->fetch();
+    $stored = (string) ($_SESSION['_auth_fingerprint'] ?? '');
+    $valid = is_array($user)
+        && (int) ($user['is_active'] ?? 0) === 1
+        && $stored !== ''
+        && hash_equals(buildUserAuthFingerprint($user), $stored);
+
+    if (!$valid) {
+        clearUserSession();
+        if (!session_start()) {
+            http_response_code(500);
+            exit('Chyba: Nepodarilo sa obnoviť reláciu.');
+        }
+        setFlashMessage('warning', 'Vaša relácia bola z bezpečnostných dôvodov ukončená. Prihláste sa znova.');
+        return false;
+    }
+
+    $_SESSION['username'] = (string) ($user['username'] ?? '');
+    $_SESSION['email'] = (string) ($user['email'] ?? '');
+    $_SESSION['is_admin'] = (int) ($user['is_admin'] ?? 0);
+    $_SESSION['email_verified'] = !empty($user['email_verified_at']) ? 1 : 0;
+    return true;
+}
+
+/**
+ * Overenie aktuálneho hesla s dvoma atómovými limitmi: na IP a na účet.
+ * @return array{ok:bool,blocked:bool}
+ */
+function verifySensitiveActionPassword(
+    PDO $pdo,
+    int $userId,
+    string $password,
+    string $passwordHash,
+    int $maxAttempts = 5,
+    int $blockSecs = 900
+): array {
+    $keys = [
+        ['ip' => mb_substr(getClientIpAddress(), 0, 45), 'action' => 'sensitive_reauth'],
+        ['ip' => 'user:' . $userId, 'action' => 'sensitive_reauth'],
+    ];
+    $startedTransaction = !$pdo->inTransaction();
+
+    try {
+        if ($startedTransaction) {
+            $pdo->beginTransaction();
+        }
+        foreach ($keys as $key) {
+            $pdo->prepare(
+                'INSERT INTO form_rate_limit (ip, action, attempt_count, first_attempt, last_attempt)
+                 VALUES (:ip, :action, 0, NOW(), NOW())
+                 ON DUPLICATE KEY UPDATE id = id'
+            )->execute($key);
+        }
+
+        $rows = [];
+        foreach ($keys as $key) {
+            $stmt = $pdo->prepare(
+                'SELECT attempt_count, first_attempt, blocked_until
+                 FROM form_rate_limit WHERE ip = :ip AND action = :action FOR UPDATE'
+            );
+            $stmt->execute($key);
+            $rows[] = $stmt->fetch() ?: [];
+        }
+
+        $now = time();
+        foreach ($rows as $row) {
+            $blockedUntil = !empty($row['blocked_until']) ? strtotime((string) $row['blocked_until']) : false;
+            if ($blockedUntil !== false && $blockedUntil > $now) {
+                if ($startedTransaction) {
+                    $pdo->commit();
+                }
+                return ['ok' => false, 'blocked' => true];
+            }
+        }
+
+        $ok = $password !== '' && password_verify($password, $passwordHash);
+        if ($ok) {
+            foreach ($keys as $key) {
+                $pdo->prepare('DELETE FROM form_rate_limit WHERE ip = :ip AND action = :action')->execute($key);
+            }
+            $_SESSION['_reauthenticated_at'] = $now;
+        } else {
+            foreach ($keys as $index => $key) {
+                $firstAttempt = !empty($rows[$index]['first_attempt'])
+                    ? strtotime((string) $rows[$index]['first_attempt'])
+                    : false;
+                $expiredWindow = $firstAttempt === false || ($now - $firstAttempt) >= $blockSecs;
+                $newCount = $expiredWindow ? 1 : ((int) ($rows[$index]['attempt_count'] ?? 0) + 1);
+                $stmt = $pdo->prepare(
+                    'UPDATE form_rate_limit
+                     SET attempt_count = :count,
+                         first_attempt = IF(:reset_window = 1, NOW(), first_attempt),
+                         last_attempt = NOW(),
+                         blocked_until = IF(:blocked = 1, DATE_ADD(NOW(), INTERVAL :secs SECOND), NULL)
+                     WHERE ip = :ip AND action = :action'
+                );
+                $stmt->execute([
+                    'count' => $newCount,
+                    'reset_window' => $expiredWindow ? 1 : 0,
+                    'blocked' => $newCount >= $maxAttempts ? 1 : 0,
+                    'secs' => $blockSecs,
+                    'ip' => $key['ip'],
+                    'action' => $key['action'],
+                ]);
+            }
+        }
+
+        if ($startedTransaction) {
+            $pdo->commit();
+        }
+        return ['ok' => $ok, 'blocked' => false];
+    } catch (\Throwable $e) {
+        if ($startedTransaction && $pdo->inTransaction()) {
+            $pdo->rollBack();
+        }
+        error_log('Citlivé opätovné overenie zlyhalo: ' . $e->getMessage());
+        return ['ok' => false, 'blocked' => true];
+    }
+}
+
+function hasRecentSensitiveReauthentication(int $ttlSeconds = 300): bool {
+    $verifiedAt = (int) ($_SESSION['_reauthenticated_at'] ?? 0);
+    return $verifiedAt > 0 && (time() - $verifiedAt) <= $ttlSeconds;
 }
 
 /**
@@ -786,4 +1011,5 @@ function completeTwoFactorLogin(array $user): void
     $_SESSION['is_admin']       = (int) ($user['is_admin'] ?? 0);
     $_SESSION['email_verified'] = !empty($user['email_verified_at']) ? 1 : 0;
     $_SESSION['_last_activity'] = time();
+    refreshCurrentSessionAuthFingerprint($user);
 }

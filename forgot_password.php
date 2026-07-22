@@ -139,10 +139,8 @@ if ($requestMethod === 'POST') {
                 $user = $stmt->fetch();
 
                 if ($user && (int) ($user['is_active'] ?? 1) === 1) {
-                    $rawToken = rtrim(strtr(base64_encode(random_bytes(32)), '+/', '-_'), '=');
-                    $tokenHash = hash('sha256', $rawToken);
-                    $expiresAt = date('Y-m-d H:i:s', time() + 3600); // 60 min
                     $clientIp = getClientIpAddress();
+                    $rawToken = null;
 
                     // Uzamknutie používateľa serializuje súbežné požiadavky. Samotná
                     // transakcia bez riadkového zámku by mohla vytvoriť dva platné tokeny.
@@ -152,20 +150,35 @@ if ($requestMethod === 'POST') {
                     if (!$lockUser->fetchColumn()) {
                         throw new \RuntimeException('Používateľ počas vytvárania reset tokenu prestal existovať.');
                     }
-                    $pdo->prepare("DELETE FROM password_resets WHERE user_id = :user_id AND used_at IS NULL")
-                        ->execute(['user_id' => (int) $user['id']]);
-                    $pdo->prepare(
-                        "INSERT INTO password_resets (user_id, token_hash, expires_at, requested_ip)
-                         VALUES (:user_id, :token_hash, :expires_at, :requested_ip)"
-                    )->execute([
-                        'user_id'      => (int) $user['id'],
-                        'token_hash'   => $tokenHash,
-                        'expires_at'   => $expiresAt,
-                        'requested_ip' => $clientIp,
-                    ]);
+                    $recentReset = $pdo->prepare(
+                        "SELECT created_at FROM password_resets
+                         WHERE user_id = :user_id AND used_at IS NULL AND expires_at >= NOW()
+                         ORDER BY created_at DESC LIMIT 1 FOR UPDATE"
+                    );
+                    $recentReset->execute(['user_id' => (int) $user['id']]);
+                    $createdAt = $recentReset->fetchColumn();
+                    $cooldownActive = is_string($createdAt)
+                        && (strtotime($createdAt) ?: 0) > (time() - 600);
+
+                    if (!$cooldownActive) {
+                        $rawToken = rtrim(strtr(base64_encode(random_bytes(32)), '+/', '-_'), '=');
+                        $tokenHash = hash('sha256', $rawToken);
+                        $expiresAt = date('Y-m-d H:i:s', time() + 3600); // 60 min
+                        $pdo->prepare("DELETE FROM password_resets WHERE user_id = :user_id AND used_at IS NULL")
+                            ->execute(['user_id' => (int) $user['id']]);
+                        $pdo->prepare(
+                            "INSERT INTO password_resets (user_id, token_hash, expires_at, requested_ip)
+                             VALUES (:user_id, :token_hash, :expires_at, :requested_ip)"
+                        )->execute([
+                            'user_id'      => (int) $user['id'],
+                            'token_hash'   => $tokenHash,
+                            'expires_at'   => $expiresAt,
+                            'requested_ip' => $clientIp,
+                        ]);
+                    }
                     $pdo->commit();
 
-                    if (!sendPasswordResetEmail((string) $user['email'], (string) ($user['username'] ?? ''), $rawToken)) {
+                    if ($rawToken !== null && !sendPasswordResetEmail((string) $user['email'], (string) ($user['username'] ?? ''), $rawToken)) {
                         error_log('Password reset email send failed for user_id=' . (int) $user['id']);
                     }
                 }

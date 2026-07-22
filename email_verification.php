@@ -148,21 +148,47 @@ function smtpHasRequiredConfig(array $cfg): bool {
     return $cfg['smtp_host'] !== ''
         && $cfg['smtp_user'] !== ''
         && $cfg['smtp_pass'] !== ''
-        && $cfg['from_email'] !== '';
+        && $cfg['from_email'] !== ''
+        && in_array($cfg['smtp_secure'], ['tls', 'ssl'], true);
+}
+
+function smtpTlsCryptoMethod(): int {
+    $method = STREAM_CRYPTO_METHOD_TLSv1_2_CLIENT;
+    if (defined('STREAM_CRYPTO_METHOD_TLSv1_3_CLIENT')) {
+        $method |= (int) constant('STREAM_CRYPTO_METHOD_TLSv1_3_CLIENT');
+    }
+    return $method;
 }
 
 function smtpOpenSocket(array $cfg) {
+    if (!in_array($cfg['smtp_secure'], ['tls', 'ssl'], true)) {
+        smtpLogError('config', 'smtp_secure_must_be_tls_or_ssl');
+        return null;
+    }
+
     $transportHost = $cfg['smtp_host'];
     if ($cfg['smtp_secure'] === 'ssl') {
         $transportHost = 'ssl://' . $transportHost;
     }
+
+    $context = stream_context_create([
+        'ssl' => [
+            'verify_peer' => true,
+            'verify_peer_name' => true,
+            'allow_self_signed' => false,
+            'peer_name' => $cfg['smtp_host'],
+            'SNI_enabled' => true,
+            'crypto_method' => smtpTlsCryptoMethod(),
+        ],
+    ]);
 
     $socket = @stream_socket_client(
         $transportHost . ':' . (int) $cfg['smtp_port'],
         $errno,
         $errstr,
         (int) $cfg['smtp_timeout'],
-        STREAM_CLIENT_CONNECT
+        STREAM_CLIENT_CONNECT,
+        $context
     );
     if (!$socket) {
         error_log('SMTP connect failed: ' . $errstr . ' (' . $errno . ')');
@@ -196,8 +222,7 @@ function smtpStartTlsAndReEhlo($socket, string $ehloHost): bool {
         return false;
     }
 
-    $tlsMethod = STREAM_CRYPTO_METHOD_TLSv1_2_CLIENT | STREAM_CRYPTO_METHOD_TLSv1_3_CLIENT;
-    $cryptoEnabled = @stream_socket_enable_crypto($socket, true, $tlsMethod) === true;
+    $cryptoEnabled = @stream_socket_enable_crypto($socket, true, smtpTlsCryptoMethod()) === true;
     if (!$cryptoEnabled) {
         smtpLogError('starttls_crypto', 'tls_handshake_failed');
         return false;
@@ -209,7 +234,11 @@ function smtpStartTlsAndReEhlo($socket, string $ehloHost): bool {
 function smtpOpenAndHandshake(array $cfg) {
     $socket = null;
 
-    if (smtpHasRequiredConfig($cfg)) {
+    if (!smtpHasRequiredConfig($cfg)) {
+        if ($cfg['smtp_host'] !== '' && !in_array($cfg['smtp_secure'], ['tls', 'ssl'], true)) {
+            smtpLogError('config', 'unencrypted_or_unknown_transport_rejected');
+        }
+    } else {
         $socket = smtpOpenSocket($cfg);
         if ($socket) {
             $ehloHost = $_SERVER['SERVER_NAME'] ?? 'localhost';

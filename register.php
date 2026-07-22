@@ -159,8 +159,8 @@ if ($requestMethod === 'POST') {
         } elseif (!isEmailDomainValid($email)) {
             $errors[] = "Doména e-mailovej adresy neexistuje alebo nemôže prijímať poštu.";
         }
-        if (strlen($password) < 8 || strlen($password) > 1024 || !preg_match('/[A-Z]/', $password) || !preg_match('/[a-z]/', $password) || !preg_match('/[0-9]/', $password)) {
-            $errors[] = "Heslo musí mať 8–1024 znakov, obsahovať aspoň jedno veľké písmeno, malé písmeno a číslicu.";
+        if (!isAppPasswordValid($password)) {
+            $errors[] = "Heslo musí mať 8–72 bajtov, obsahovať aspoň jedno veľké písmeno, malé písmeno a číslicu.";
         } elseif ($password !== $passwordConfirm) {
             $errors[] = "Heslá sa nezhodujú. Skontrolujte potvrdenie hesla.";
         }
@@ -182,10 +182,17 @@ if ($requestMethod === 'POST') {
             $avatarPath = null;
             $registrationInserted = false;
             try {
-                $stmt = $pdo->prepare("SELECT email, username FROM users WHERE email = :email OR username = :username LIMIT 1");
+                $stmt = $pdo->prepare(
+                    "SELECT email, username FROM users
+                     WHERE email = :email_email OR username = :email_username
+                        OR email = :username_email OR username = :username_username
+                     LIMIT 1"
+                );
                 $stmt->execute([
-                    'email' => $email,
-                    'username' => $username,
+                    'email_email' => $email,
+                    'email_username' => $email,
+                    'username_email' => $username,
+                    'username_username' => $username,
                 ]);
                 $existingUser = $stmt->fetch();
                 if ($existingUser) {
@@ -194,7 +201,7 @@ if ($requestMethod === 'POST') {
                     // (Konkrétne hlásenie by umožňovalo aut. harvestovanie existujúcich účtov.)
                     $errors[] = 'Registrácia sa nepodarila. Zadajte iný e-mail alebo používateľské meno.';
                 } else {
-                    $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+                    $passwordHash = hashAppPassword($password);
                     $newsletterConsent = isset($_POST['newsletter_consent']) ? 1 : 0;
                     $themeAuto = isset($_POST['theme_auto']) ? 1 : 0;
 
