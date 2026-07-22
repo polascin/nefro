@@ -128,13 +128,19 @@ HTML,
 // ── Vkladanie do databázy ──────────────────────────────────────────────────────
 
 $inserted    = 0;
+$updated     = 0;
 $skipped     = 0;
 $errors      = [];
 $queuedTotal = 0;
 
+// UPSERT: re-spustenie po úprave obsahu prepíše článok (regenerácia).
+// Newsletter avízo LEN pri prvom vložení (rc === 1).
 $stmt = $pdo->prepare(
-    "INSERT IGNORE INTO articles (title, slug, author, content, excerpt, published_at, is_top, is_published)
-     VALUES (:title, :slug, :author, :content, :excerpt, :published_at, :is_top, 1)"
+    "INSERT INTO articles (title, slug, author, content, excerpt, published_at, is_top, is_published)
+     VALUES (:title, :slug, :author, :content, :excerpt, :published_at, :is_top, 1)
+     ON DUPLICATE KEY UPDATE
+        title = VALUES(title), author = VALUES(author),
+        content = VALUES(content), excerpt = VALUES(excerpt), is_top = VALUES(is_top)"
 );
 
 foreach ($articles as $a) {
@@ -148,16 +154,28 @@ foreach ($articles as $a) {
             'published_at' => $a['published_at'],
             'is_top'       => $a['is_top'],
         ]);
-        if ($stmt->rowCount() > 0) {
+        $rc = $stmt->rowCount();
+        if ($rc === 0) {
+            $skipped++;
+            continue;
+        }
+
+        $articleId = (int) $pdo->lastInsertId();
+        if ($articleId === 0) {
+            $idStmt = $pdo->prepare("SELECT id FROM articles WHERE slug = :slug");
+            $idStmt->execute(['slug' => $a['slug']]);
+            $articleId = (int) $idStmt->fetchColumn();
+        }
+
+        if ($rc === 1) {
             $inserted++;
-            $newId = (int) $pdo->lastInsertId();
             try {
-                $queuedTotal += enqueueArticleNewsletterEmails($pdo, $newId);
+                $queuedTotal += enqueueArticleNewsletterEmails($pdo, $articleId);
             } catch (\Throwable $qe) {
                 error_log('add_article newsletter enqueue error: ' . $qe->getMessage());
             }
         } else {
-            $skipped++;
+            $updated++;
         }
     } catch (\PDOException $e) {
         $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '“: ' . $e->getMessage();
@@ -170,7 +188,8 @@ echo "\n════════════════════════
 echo "VÝSLEDOK VLOŽENIA ČLÁNKOV\n";
 echo "═══════════════════════════════════════════════════════════════════════════\n";
 echo "Vložené:         " . $inserted . "\n";
-echo "Preskočené:      " . $skipped . " (už existuje)\n";
+echo "Aktualizované:   " . $updated . "\n";
+echo "Preskočené:      " . $skipped . " (bez zmeny)\n";
 echo "Chyby:          " . count($errors) . "\n";
 echo "Newsletter:     " . $queuedTotal . " e-mailov zaradených\n";
 
@@ -182,5 +201,5 @@ if (!empty($errors)) {
 }
 
 echo "\n═══════════════════════════════════════════════════════════════════════════\n";
-echo ($inserted > 0 ? "✓ Hotovo!" : "✗ Žiadne články neboli vložené") . "\n";
+echo (($inserted > 0 || $updated > 0) ? "✓ Hotovo!" : "✗ Žiadne články neboli vložené/aktualizované") . "\n";
 echo "═══════════════════════════════════════════════════════════════════════════\n";
