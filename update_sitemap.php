@@ -15,9 +15,10 @@ if (php_sapi_name() !== 'cli') { http_response_code(403); exit('Forbidden'); }
  */
 
 $baseDir = __DIR__;
-foreach ($argv as $i => $arg) {
-    if ($arg === '--base-dir' && isset($argv[$i + 1])) {
-        $baseDir = rtrim($argv[$i + 1], '/\\');
+$arguments = isset($_SERVER['argv']) && is_array($_SERVER['argv']) ? $_SERVER['argv'] : [];
+foreach ($arguments as $i => $arg) {
+    if ($arg === '--base-dir' && isset($arguments[$i + 1])) {
+        $baseDir = rtrim($arguments[$i + 1], '/\\');
     }
 }
 

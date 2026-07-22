@@ -7,16 +7,19 @@ parameters:
 
     # Plochý projekt s množstvom jednorazových skriptov — vylúč generované/cudzie veci.
     excludePaths:
-        - .trunk/*
-        - tools/*.phar
-        - scratch/*
-        - private/*
-        - pdf/*
-        - uploads/*
-        - img/*
-        - assets/*
-        - vendor/*
-        - node_modules/*
+        # Úvodný wildcard udrží vylúčenia funkčné aj v cestách, ktoré
+        # macOS/OneDrive reprezentuje inou Unicode normalizáciou.
+        - */.trunk/*
+        - */tools/*.phar
+        - phar://*/tools/phpstan.phar/*
+        - */scratch/*
+        - */private/*
+        - */pdf/*
+        - */uploads/*
+        - */img/*
+        - */assets/*
+        - */vendor/*
+        - */node_modules/*
 
     # Existujúce nálezy sú v baseline — blokujú len NOVÉ chyby.
     # (Súbor vytvorí install-dev-tools.ps1; placeholder je v repe, aby include nezlyhal.)

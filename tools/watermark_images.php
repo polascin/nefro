@@ -81,7 +81,8 @@ $root = dirname(__DIR__);
 $force   = false;
 $outDir  = null;
 $explicit = [];
-foreach (array_slice($argv, 1) as $arg) {
+$arguments = isset($_SERVER['argv']) && is_array($_SERVER['argv']) ? $_SERVER['argv'] : [];
+foreach (array_slice($arguments, 1) as $arg) {
     if ($arg === '--force') { $force = true; continue; }
     if ($arg === '--stage') { continue; } // pre-commit kompatibilita (no-op)
     if (str_starts_with($arg, '--out-dir=')) { $outDir = substr($arg, 10); continue; }

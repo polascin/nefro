@@ -28,7 +28,8 @@ require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
 require_once __DIR__ . '/newsletter_notifications.php';
 
-$dryRun = in_array('--dry-run', $argv, true);
+$arguments = isset($_SERVER['argv']) && is_array($_SERVER['argv']) ? $_SERVER['argv'] : [];
+$dryRun = in_array('--dry-run', $arguments, true);
 
 $subject = 'Ospravedlnenie za nefunkčné odkazy v prvom týždennom prehľade – Nefro-projekt Slovensko';
 $cfg     = getEmailEnvConfig();

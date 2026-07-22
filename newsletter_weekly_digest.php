@@ -32,7 +32,8 @@ require_once __DIR__ . '/newsletter_notifications.php';
 
 $opts = ['days' => 7, 'dry_run' => false, 'ignore_last_run' => false, 'seed' => false];
 
-foreach ($argv as $arg) {
+$arguments = isset($_SERVER['argv']) && is_array($_SERVER['argv']) ? $_SERVER['argv'] : [];
+foreach ($arguments as $arg) {
     if (preg_match('/^--days=(\d+)$/', (string) $arg, $m)) {
         $opts['days'] = (int) $m[1];
     } elseif ($arg === '--dry-run') {

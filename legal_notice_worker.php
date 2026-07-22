@@ -31,7 +31,8 @@ $maxAttempts = 5;
 $enqueueOnly = false;
 $noEnqueue = false;
 
-foreach ($argv as $arg) {
+$arguments = isset($_SERVER['argv']) && is_array($_SERVER['argv']) ? $_SERVER['argv'] : [];
+foreach ($arguments as $arg) {
     if (preg_match('/^--limit=(\d+)$/', (string) $arg, $m)) {
         $limit = (int) $m[1];
     } elseif (preg_match('/^--max-attempts=(\d+)$/', (string) $arg, $m)) {

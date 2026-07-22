@@ -14,7 +14,8 @@ require_once __DIR__ . '/newsletter_notifications.php';
 $limit = 50;
 $maxAttempts = 5;
 
-foreach ($argv as $arg) {
+$arguments = isset($_SERVER['argv']) && is_array($_SERVER['argv']) ? $_SERVER['argv'] : [];
+foreach ($arguments as $arg) {
     if (preg_match('/^--limit=(\d+)$/', (string) $arg, $m)) {
         $limit = (int) $m[1];
     }

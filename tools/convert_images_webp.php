@@ -38,7 +38,8 @@ $root = dirname(__DIR__);
 // ── Spracuj argumenty ────────────────────────────────────────────────────────
 $force = false;
 $explicit = [];
-foreach (array_slice($argv, 1) as $arg) {
+$arguments = isset($_SERVER['argv']) && is_array($_SERVER['argv']) ? $_SERVER['argv'] : [];
+foreach (array_slice($arguments, 1) as $arg) {
     if ($arg === '--force') { $force = true; continue; }
     if ($arg === '--stage') { continue; } // akceptované kvôli pre-commit hooku (no-op)
     $explicit[] = $arg;
