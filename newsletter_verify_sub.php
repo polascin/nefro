@@ -3,7 +3,6 @@
 declare(strict_types=1);
 
 require_once __DIR__ . '/auth.php';
-header('Referrer-Policy: no-referrer');
 require_once __DIR__ . '/db_config.php';
 if (!isset($pdo) || !$pdo instanceof \PDO) {
     throw new \RuntimeException('Databázové pripojenie nie je dostupné.');

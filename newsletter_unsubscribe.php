@@ -1,7 +1,6 @@
 <?php
 declare(strict_types=1);
 require_once __DIR__ . '/auth.php';
-header('Referrer-Policy: no-referrer');
 require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
 require_once __DIR__ . '/newsletter_notifications.php';

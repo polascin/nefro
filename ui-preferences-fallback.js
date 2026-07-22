@@ -42,6 +42,12 @@
             return;
         }
 
+        if (typeof window.openCookiePreferences === 'function') {
+            // Primárny správca má vlastný bubble handler; dvojité otvorenie by
+            // prepísalo element, na ktorý sa má po zatvorení vrátiť fokus.
+            return;
+        }
+
         event.preventDefault();
         forceOpenCookieSettings();
     }

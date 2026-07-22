@@ -257,23 +257,46 @@ document.addEventListener('DOMContentLoaded', () => {
     const mainNavList = document.querySelector('.main-nav ul');
     
     if (menuToggle && mainNavList) {
+        const setMenuState = (open, returnFocus = false) => {
+            mainNavList.classList.toggle('is-open', open);
+            menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+            menuToggle.setAttribute('aria-label', open ? 'Zavrieť menu' : 'Otvoriť menu');
+            const label = menuToggle.querySelector('span');
+            if (label) label.textContent = open ? 'Zavrieť menu' : 'Menu';
+            if (!open && returnFocus) menuToggle.focus();
+        };
+
         menuToggle.addEventListener('click', () => {
-            const isOpen = mainNavList.classList.toggle('is-open');
-            menuToggle.setAttribute('aria-expanded', isOpen);
-            menuToggle.innerHTML = isOpen 
-                ? '<span>Zavrieť menu</span> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>'
-                : '<span>Menu</span> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>';
+            setMenuState(!mainNavList.classList.contains('is-open'));
         });
 
         // Zatvoriť menu po kliknutí na odkaz (najmä pre kotvy na tej istej stránke)
         mainNavList.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
-                if (mainNavList.classList.contains('is-open')) {
-                    mainNavList.classList.remove('is-open');
-                    menuToggle.setAttribute('aria-expanded', 'false');
-                    menuToggle.innerHTML = '<span>Menu</span> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>';
-                }
+                setMenuState(false);
             });
         });
+
+        document.addEventListener('click', (event) => {
+            if (mainNavList.classList.contains('is-open')
+                && !menuToggle.contains(event.target)
+                && !mainNavList.contains(event.target)) {
+                setMenuState(false);
+            }
+        });
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && mainNavList.classList.contains('is-open')) {
+                setMenuState(false, true);
+            }
+        });
+        const desktopQuery = window.matchMedia('(min-width: 961px)');
+        const closeOnDesktop = (event) => {
+            if (event.matches) setMenuState(false);
+        };
+        if (typeof desktopQuery.addEventListener === 'function') {
+            desktopQuery.addEventListener('change', closeOnDesktop);
+        } else if (typeof desktopQuery.addListener === 'function') {
+            desktopQuery.addListener(closeOnDesktop);
+        }
     }
 });

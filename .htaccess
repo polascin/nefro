@@ -11,7 +11,6 @@ ServerSignature Off
     Header always set X-Frame-Options "SAMEORIGIN"
     Header always set X-Content-Type-Options "nosniff"
     Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
-    Header always set Referrer-Policy "strict-origin-when-cross-origin"
     Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), payment=(), usb=()"
     Header always unset X-Powered-By
     Header unset X-Powered-By
@@ -163,7 +162,7 @@ ServerSignature Off
 </Files>
 
 # Knižničné PHP súbory — prístupné len ako include, nie priamo cez web
-<FilesMatch "^(db_config|config_loader|auth|phone_utils|calculators_common|clinical_trials_common|drugs_common|header|header_profile|footer|head_meta|calculator_disclaimer|email_verification|mobile_verification|pdf_generator|source_authors|legal_notifications|newsletter_notifications)\.php$">
+<FilesMatch "^(db_config|config_loader|auth|phone_utils|calculators_common|clinical_trials_common|drugs_common|header|header_profile|footer|head_meta|calculator_disclaimer|email_verification|mobile_verification|pdf_generator|source_authors|legal_notifications|newsletter_notifications|profile_archive)\.php$">
     Require all denied
 </FilesMatch>
 

@@ -50,6 +50,8 @@ const analyticsSuppressedForPage = (() => {
 // Všetky uložené súhlasy zo staršej verzie sa automaticky invalidujú
 // a banner sa zobrazí znova (GDPR čl. 7 ods. 3 — nový súhlas pri zmene podmienok).
 const consentVersion = '2026-07-16';
+const consentMaxAgeMs = consentCookieMaxAgeDays * 24 * 60 * 60 * 1000;
+const consentFutureToleranceMs = 5 * 60 * 1000;
 
 // Predvolené nastavenia
 const defaultSettings = {
@@ -75,9 +77,10 @@ function readStoredConsentSync() {
         const fromLocalStorage = localStorage.getItem(consentKey);
         if (fromLocalStorage) {
             const parsed = JSON.parse(fromLocalStorage);
-            // Verzia sa musí zhodovať s aktuálnou consentVersion
-            if (parsed && parsed.version === consentVersion) {
+            if (isStoredConsentValid(parsed)) {
                 consent = parsed;
+            } else {
+                localStorage.removeItem(consentKey);
             }
         }
     } catch (e) {
@@ -89,11 +92,13 @@ function readStoredConsentSync() {
         if (cookieVal) {
             try {
                 const parsed = JSON.parse(cookieVal);
-                if (parsed && parsed.version === consentVersion) {
+                if (isStoredConsentValid(parsed)) {
                     consent = parsed;
+                } else {
+                    expireConsentCookieSync();
                 }
             } catch (e) {
-                // Ignorovať chyby
+                expireConsentCookieSync();
             }
         }
     }
@@ -138,6 +143,29 @@ function initializeGA4() {
 
     gtag('js', new Date());
     gtag('config', 'G-0JT5VMQ61K');
+}
+
+function expireConsentCookieSync() {
+    const securePart = window.location.protocol === 'https:' ? '; Secure' : '';
+    document.cookie = `${consentKey}=; Path=/; Max-Age=0; SameSite=Lax${securePart}`;
+}
+
+function isStoredConsentValid(value, nowMs = Date.now()) {
+    if (!value || typeof value !== 'object' || Array.isArray(value) || value.version !== consentVersion) {
+        return false;
+    }
+    if (value.necessary !== true
+        || typeof value.analytics !== 'boolean'
+        || typeof value.marketing !== 'boolean'
+        || typeof value.preferences !== 'boolean') {
+        return false;
+    }
+    const timestampMs = Date.parse(value.timestamp);
+    if (!Number.isFinite(timestampMs)) {
+        return false;
+    }
+    const ageMs = nowMs - timestampMs;
+    return ageMs >= -consentFutureToleranceMs && ageMs <= consentMaxAgeMs;
 }
 
 function deleteGoogleAnalyticsCookies() {
