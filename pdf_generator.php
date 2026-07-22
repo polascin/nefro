@@ -57,6 +57,90 @@ function articlePdfAvailable(): bool
 }
 
 /**
+ * Z PDF vstupu odstráni aktívny obsah a všetky zdroje okrem existujúcich
+ * obrázkov v lokálnom /img. Generátor tak nemôže čítať konfiguráciu ani robiť
+ * HTTP požiadavky podľa HTML uloženého administrátorom.
+ */
+function sanitizeArticlePdfContent(string $content): string
+{
+    if (!class_exists('DOMDocument')) {
+        return '<p>' . nl2br(htmlspecialchars(strip_tags($content), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8')) . '</p>';
+    }
+
+    $document = new DOMDocument('1.0', 'UTF-8');
+    $previous = libxml_use_internal_errors(true);
+    $loaded = $document->loadHTML(
+        '<?xml encoding="UTF-8"><div id="nps-pdf-content">' . $content . '</div>',
+        LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD | LIBXML_NONET
+    );
+    libxml_clear_errors();
+    libxml_use_internal_errors($previous);
+    if (!$loaded) {
+        return '<p>' . nl2br(htmlspecialchars(strip_tags($content), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8')) . '</p>';
+    }
+
+    $xpath = new DOMXPath($document);
+    foreach ($xpath->query('//script|//style|//iframe|//object|//embed|//link|//base|//meta|//svg|//form|//input|//button|//textarea|//select') ?: [] as $node) {
+        $node->parentNode?->removeChild($node);
+    }
+
+    $imgRoot = realpath(__DIR__ . '/img');
+    foreach ($xpath->query('//*') ?: [] as $element) {
+        if (!$element instanceof DOMElement) {
+            continue;
+        }
+        $attributeNames = [];
+        foreach ($element->attributes as $attribute) {
+            $attributeNames[] = $attribute->name;
+        }
+        foreach ($attributeNames as $name) {
+            $lower = strtolower($name);
+            if (str_starts_with($lower, 'on') || in_array($lower, [
+                'style', 'srcset', 'poster', 'background', 'data', 'formaction', 'xlink:href',
+            ], true)) {
+                $element->removeAttribute($name);
+            }
+        }
+
+        if (strtolower($element->tagName) === 'img') {
+            $src = rawurldecode(trim($element->getAttribute('src')));
+            $safeShape = preg_match('#^img/[A-Za-z0-9._/-]+\.(?:png|jpe?g|gif|webp|svg)$#iD', $src) === 1
+                && !str_contains($src, '..')
+                && !str_contains($src, '\\');
+            $candidate = $safeShape ? realpath(__DIR__ . '/' . $src) : false;
+            $safePath = $imgRoot !== false
+                && $candidate !== false
+                && str_starts_with($candidate, $imgRoot . DIRECTORY_SEPARATOR)
+                && is_file($candidate);
+            if (!$safePath) {
+                $element->removeAttribute('src');
+            } else {
+                $element->setAttribute('src', $src);
+            }
+        } elseif ($element->hasAttribute('src')) {
+            $element->removeAttribute('src');
+        }
+
+        if ($element->hasAttribute('href')) {
+            $href = trim($element->getAttribute('href'));
+            if (preg_match('#^https?://#i', $href) !== 1 && preg_match('~^[A-Za-z0-9_./?&=%#-]+$~D', $href) !== 1) {
+                $element->removeAttribute('href');
+            }
+        }
+    }
+
+    $wrapper = $document->getElementById('nps-pdf-content');
+    if (!$wrapper) {
+        return '';
+    }
+    $safe = '';
+    foreach ($wrapper->childNodes as $child) {
+        $safe .= $document->saveHTML($child);
+    }
+    return $safe;
+}
+
+/**
  * Zostaví tlačové HTML článku pre wkhtmltopdf.
  * Obrázky sa načítavajú lokálne cez <base href="file://…"> (rýchle, bez siete).
  */
@@ -65,7 +149,7 @@ function buildArticlePdfHtml(array $article): string
     $title  = htmlspecialchars((string) ($article['title'] ?? ''), ENT_QUOTES, 'UTF-8');
     $author = htmlspecialchars((string) ($article['author'] ?? 'MUDr. Ľubomír Polaščín'), ENT_QUOTES, 'UTF-8');
     $slug   = htmlspecialchars((string) ($article['slug'] ?? ''), ENT_QUOTES, 'UTF-8');
-    $content = (string) ($article['content'] ?? '');
+    $content = sanitizeArticlePdfContent((string) ($article['content'] ?? ''));
     // wkhtmltopdf 0.12.6 (staré WebKit) nevykreslí WebP — v PDF použi PNG variant obrázka.
     $content = preg_replace('/((?:src|srcset)="[^"]*?)\.webp"/i', '$1.png"', $content) ?? $content;
 
@@ -205,8 +289,15 @@ function generateArticlePdf(PDO $pdo, array $article, bool $updateDb = true, boo
     file_put_contents($tmpHtml, $html);
     @unlink($tmp);
 
+    $allowedImages = realpath(__DIR__ . '/img');
+    if ($allowedImages === false) {
+        @unlink($tmpHtml);
+        return ['ok' => false, 'file' => null, 'error' => 'priečinok povolených PDF obrázkov nie je dostupný'];
+    }
+
     $cmd = escapeshellarg(wkhtmltopdfBin())
-        . ' --enable-local-file-access --encoding utf-8 --image-quality 88'
+        . ' --disable-javascript --disable-local-file-access --allow ' . escapeshellarg($allowedImages)
+        . ' --encoding utf-8 --image-quality 88'
         . ' --margin-top 16 --margin-bottom 16 --margin-left 15 --margin-right 15'
         . ' --footer-center ' . escapeshellarg('[page] / [topage]')
         . ' --footer-font-size 8 --footer-font-name ' . escapeshellarg('DejaVu Sans') . ' --footer-spacing 5'

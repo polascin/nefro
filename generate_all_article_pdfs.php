@@ -33,7 +33,8 @@ $onlySlug = null;
 $limit = 0;
 $force = false;
 $stale = false;
-foreach (array_slice($argv, 1) as $arg) {
+$arguments = isset($_SERVER['argv']) && is_array($_SERVER['argv']) ? $_SERVER['argv'] : [];
+foreach (array_slice($arguments, 1) as $arg) {
     if ($arg === '--force') { $force = true; }
     elseif ($arg === '--stale') { $stale = true; }
     elseif (str_starts_with($arg, '--slug=')) { $onlySlug = substr($arg, 7); }
