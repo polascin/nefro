@@ -16,12 +16,14 @@ if (php_sapi_name() !== 'cli') {
     exit("Prístup odmietnutý. Tento skript je dostupný iba z príkazového riadku.\n");
 }
 
-$profileRetentionDays = max(30, (int) ($argv[1] ?? 365));
-$avatarRetentionDays  = max(30, (int) ($argv[2] ?? 365));
-$accessLogRetentionDays = min(90, max(30, (int) ($argv[3] ?? 90)));
+$arguments = isset($_SERVER['argv']) && is_array($_SERVER['argv']) ? $_SERVER['argv'] : [];
+$profileRetentionDays = max(30, (int) ($arguments[1] ?? 365));
+$avatarRetentionDays  = max(30, (int) ($arguments[2] ?? 365));
+$accessLogRetentionDays = min(90, max(30, (int) ($arguments[3] ?? 90)));
 
 require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
+require_once __DIR__ . '/profile_archive.php';
 
 echo "Nefro Archív Cleanup\n";
 echo "====================\n";
@@ -32,6 +34,8 @@ echo "Retenčná lehota logov: {$accessLogRetentionDays} dní\n\n";
 
 $errors          = [];
 $profileDeleted  = 0;
+$profileSanitized = 0;
+$profileEmptyDeleted = 0;
 $avatarDeleted   = 0;
 $filesDeleted    = 0;
 $laDeleted       = 0;
@@ -115,7 +119,11 @@ function cleanupTimestampedLogFile(
 }
 
 try {
-    // 1. Zmaž staré záznamy z histórie profilov
+    // 1. Minimalizuj aj historické záznamy a potom aplikuj retenčnú lehotu.
+    $profileScrub = npsScrubProfileArchive($pdo);
+    $profileSanitized = $profileScrub['updated'];
+    $profileEmptyDeleted = $profileScrub['deleted'];
+
     $stmt = $pdo->prepare("DELETE FROM users_profile_archive WHERE changed_at < DATE_SUB(NOW(), INTERVAL :days DAY)");
     $stmt->execute(['days' => $profileRetentionDays]);
     $profileDeleted = $stmt->rowCount();
@@ -250,6 +258,8 @@ foreach (['nefro_csp_rl_*.json', 'csp_rl_*.json'] as $pattern) {
 }
 
 echo "Výsledky:\n";
+echo "  Minimalizované profilové archívy:      {$profileSanitized}\n";
+echo "  Zmaz. prázdne/neplatné prof. archívy: {$profileEmptyDeleted}\n";
 echo "  Zmaz. záznamy z histórie profilov:  {$profileDeleted}\n";
 echo "  Zmaz. záznamy z histórie avatarov:  {$avatarDeleted}\n";
 echo "  Zmazané archívne súbory:            {$filesDeleted}\n";

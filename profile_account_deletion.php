@@ -10,15 +10,35 @@ function profileHandleDeleteAccount(PDO $pdo, array $user, int $userId): array
 
     if (!validateCsrfToken($postedCsrfToken)) {
         $deleteErrors[] = "Neplatný CSRF token. Skúste to znova.";
-    } elseif (isAdmin()) {
-        $deleteErrors[] = "Administrátorský účet nie je možné zrušiť z profilu. Požiadajte iného administrátora o zrušenie.";
     } else {
+        if (isAdmin()) {
+            $adminStmt = $pdo->prepare(
+                'SELECT COUNT(*) FROM users WHERE is_admin = 1 AND is_active = 1 AND id <> :id'
+            );
+            $adminStmt->execute(['id' => $userId]);
+            if ((int) $adminStmt->fetchColumn() < 1) {
+                $deleteErrors[] = 'Posledný aktívny administrátorský účet nie je možné zrušiť.';
+                return ['errors' => $deleteErrors, 'showForm' => $showDeleteForm];
+            }
+        }
+
         $confirmPassword = (string) ($_POST['delete_confirm_password'] ?? '');
         if ($confirmPassword === '') {
             $deleteErrors[] = "Pre potvrdenie zadajte svoje aktuálne heslo.";
-        } elseif (!password_verify($confirmPassword, (string) $user['password_hash'])) {
-            $deleteErrors[] = "Zadané heslo nie je správne. Účet nebol zrušený.";
         } else {
+            $reauth = verifySensitiveActionPassword(
+                $pdo,
+                $userId,
+                $confirmPassword,
+                (string) $user['password_hash']
+            );
+            if (!$reauth['ok']) {
+                $deleteErrors[] = $reauth['blocked']
+                    ? 'Opätovné overenie je dočasne zablokované. Skúste to znova o 15 minút.'
+                    : 'Zadané heslo nie je správne. Účet nebol zrušený.';
+                return ['errors' => $deleteErrors, 'showForm' => $showDeleteForm];
+            }
+
             try {
                 $rawToken  = rtrim(strtr(base64_encode(random_bytes(32)), '+/', '-_'), '=');
                 $tokenHash = hash('sha256', $rawToken);

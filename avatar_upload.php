@@ -22,6 +22,63 @@ if (!function_exists('npsCreateImageResourceFromFile')) {
     }
 }
 
+if (!function_exists('npsIniBytes')) {
+    function npsIniBytes(string $value): int
+    {
+        $value = trim($value);
+        if ($value === '' || $value === '-1') {
+            return -1;
+        }
+        $unit = strtolower(substr($value, -1));
+        $number = (float) $value;
+        return match ($unit) {
+            'g' => (int) ($number * 1024 * 1024 * 1024),
+            'm' => (int) ($number * 1024 * 1024),
+            'k' => (int) ($number * 1024),
+            default => (int) $number,
+        };
+    }
+}
+
+if (!function_exists('npsApplyExifOrientation')) {
+    /** Aplikuje EXIF orientáciu JPEG pred novým zakódovaním bez metadát. */
+    function npsApplyExifOrientation($source, string $filePath, string $mime)
+    {
+        if ($mime !== 'image/jpeg' || !function_exists('exif_read_data')) {
+            return $source;
+        }
+
+        $exif = @exif_read_data($filePath, 'IFD0', true, false);
+        $orientation = is_array($exif)
+            ? (int) ($exif['IFD0']['Orientation'] ?? $exif['Orientation'] ?? 1)
+            : 1;
+
+        if ($orientation === 2) {
+            imageflip($source, IMG_FLIP_HORIZONTAL);
+        } elseif ($orientation === 3) {
+            $rotated = imagerotate($source, 180, 0);
+            if ($rotated !== false) {
+                imagedestroy($source);
+                $source = $rotated;
+            }
+        } elseif ($orientation === 4) {
+            imageflip($source, IMG_FLIP_VERTICAL);
+        } elseif (in_array($orientation, [5, 6, 7, 8], true)) {
+            if ($orientation === 5 || $orientation === 7) {
+                imageflip($source, IMG_FLIP_HORIZONTAL);
+            }
+            $degrees = in_array($orientation, [5, 6], true) ? 270 : 90;
+            $rotated = imagerotate($source, $degrees, 0);
+            if ($rotated !== false) {
+                imagedestroy($source);
+                $source = $rotated;
+            }
+        }
+
+        return $source;
+    }
+}
+
 if (!function_exists('npsResizeImageResource')) {
     function npsResizeImageResource($source, int $srcW, int $srcH, int $dstW, int $dstH, string $mime)
     {
@@ -37,10 +94,7 @@ if (!function_exists('npsResizeImageResource')) {
             imagefilledrectangle($canvas, 0, 0, $dstW, $dstH, $transparent);
         }
 
-        if (!imagecopyresampled($canvas, $source, 0, 0, 0, 0, $dstW, $dstH, $srcW, $srcH)) {
-            imagedestroy($canvas);
-            return false;
-        }
+        imagecopyresampled($canvas, $source, 0, 0, 0, 0, $dstW, $dstH, $srcW, $srcH);
 
         return $canvas;
     }
@@ -127,8 +181,9 @@ if (!function_exists('processAvatarUpload')) {
         if ($actualFileSize === false || $actualFileSize <= 0) {
             return ['path' => null, 'error' => 'Nahraný súbor je prázdny alebo sa nedá prečítať.'];
         }
-        $fileSize = (int) $actualFileSize;
-
+        if ($actualFileSize > $maxFileSize) {
+            return ['path' => null, 'error' => 'Nahraný obrázok prekračuje maximálnu veľkosť 2 MB.'];
+        }
         $imageMeta = @getimagesize($tmpPath);
         if ($imageMeta === false || empty($imageMeta[0]) || empty($imageMeta[1])) {
             return ['path' => null, 'error' => 'Nahraný súbor nie je validný obrázok.'];
@@ -136,10 +191,21 @@ if (!function_exists('processAvatarUpload')) {
 
         $imgWidth = (int) $imageMeta[0];
         $imgHeight = (int) $imageMeta[1];
-        $maxPixels = 25000000; // 25 MP
-        $maxSide = 8000;
-        if ($imgWidth > $maxSide || $imgHeight > $maxSide || ($imgWidth * $imgHeight) > $maxPixels) {
-            return ['path' => null, 'error' => 'Obrázok má príliš veľké rozmery. Maximálne 8000x8000 px a 25 MP.'];
+        $maxPixels = 8000000; // Avatary sa ukladajú najviac ako 1600 px.
+        $maxSide = 4096;
+        $pixelLimitExceeded = $imgHeight <= 0 || $imgWidth > intdiv($maxPixels, $imgHeight);
+        $targetScale = min(1, 1600 / max($imgWidth, $imgHeight));
+        $targetPixels = max(1, (int) round($imgWidth * $targetScale))
+            * max(1, (int) round($imgHeight * $targetScale));
+        // Konzervatívny odhad GD: RGBA pixely + interná réžia zdroja/cieľa.
+        $estimatedDecodeBytes = ($imgWidth * $imgHeight * 6) + ($targetPixels * 6) + (8 * 1024 * 1024);
+        $memoryLimit = npsIniBytes((string) ini_get('memory_limit'));
+        $availableMemory = $memoryLimit > 0
+            ? max(0, $memoryLimit - memory_get_usage(true) - (16 * 1024 * 1024))
+            : 80 * 1024 * 1024;
+        $decodeBudget = min(80 * 1024 * 1024, $availableMemory);
+        if ($imgWidth > $maxSide || $imgHeight > $maxSide || $pixelLimitExceeded || $estimatedDecodeBytes > $decodeBudget) {
+            return ['path' => null, 'error' => 'Obrázok má príliš veľké rozmery na bezpečné spracovanie. Maximum je 4096 px na stranu a 8 MP.'];
         }
 
         $mime = (string) mime_content_type($tmpPath);
@@ -171,21 +237,15 @@ if (!function_exists('processAvatarUpload')) {
         $destinationAbs = $uploadDir . $newFileName;
         $destinationRel = 'uploads/avatars/' . $newFileName;
 
-        if ($fileSize <= $maxFileSize) {
-            if (move_uploaded_file($tmpPath, $destinationAbs)) {
-                return ['path' => $destinationRel, 'error' => null];
-            }
-            return ['path' => null, 'error' => 'Nastala chyba pri nahrávaní obrázka.'];
-        }
-
         if (!extension_loaded('gd')) {
-            return ['path' => null, 'error' => 'Obrázok je väčší ako 2 MB a server nepodporuje automatické zmenšenie (chýba GD).'];
+            return ['path' => null, 'error' => 'Server nepodporuje bezpečné spracovanie obrázka (chýba GD).'];
         }
 
         $source = npsCreateImageResourceFromFile($tmpPath, $mime);
         if ($source === false) {
             return ['path' => null, 'error' => 'Nepodarilo sa spracovať nahraný obrázok.'];
         }
+        $source = npsApplyExifOrientation($source, $tmpPath, $mime);
 
         $srcW = imagesx($source);
         $srcH = imagesy($source);

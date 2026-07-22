@@ -3,6 +3,7 @@ declare(strict_types=1);
 require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
+require_once __DIR__ . '/profile_archive.php';
 
 requireAdmin();
 
@@ -81,6 +82,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
             case 'run_cleanup':
                 $retDays = max(30, min(3650, (int) ($_POST['retention_days'] ?? 365)));
                 try {
+                    $profileScrub = npsScrubProfileArchive($pdo);
                     $s1 = $pdo->prepare("DELETE FROM users_profile_archive WHERE changed_at < DATE_SUB(NOW(), INTERVAL :days DAY)");
                     $s1->execute(['days' => $retDays]);
                     $cntProfile = $s1->rowCount();
@@ -108,7 +110,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     $s3->execute(['days' => $retDays]);
                     $cntAvatar = $s3->rowCount();
 
-                    $actionResult = "Čistenie dokončené: {$cntProfile} prof. záznamov, {$cntAvatar} avatar záznamov, {$cntFiles} súborov zmazaných (retenčná lehota: {$retDays} dní).";
+                    $actionResult = "Čistenie dokončené: {$profileScrub['updated']} prof. záznamov minimalizovaných, {$profileScrub['deleted']} prázdnych zmazaných, {$cntProfile} prof. záznamov po lehote, {$cntAvatar} avatar záznamov a {$cntFiles} súborov zmazaných (retenčná lehota: {$retDays} dní).";
                 } catch (\PDOException $e) {
                     error_log('Cleanup error: ' . $e->getMessage());
                     $actionError = 'Chyba počas cleanup operácie.';

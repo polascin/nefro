@@ -1,7 +1,6 @@
 <?php
 declare(strict_types=1);
 require_once __DIR__ . '/auth.php';
-header('Referrer-Policy: no-referrer');
 require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
 require_once __DIR__ . '/email_verification.php';
@@ -44,8 +43,6 @@ if ($requestMethod === 'POST') {
         $errors[] = "Neplatný CSRF token. Skúste to znova.";
     } elseif (empty($deletionRequest)) {
         $errors[] = "Potvrdzovací odkaz je neplatný alebo expiroval.";
-    } elseif (!empty($deletionRequest['is_admin'])) {
-        $errors[] = "Administrátorský účet nie je možné zrušiť týmto spôsobom.";
     } else {
         $userId   = (int) $deletionRequest['user_id'];
         $clientIp = getClientIpAddress();
@@ -73,11 +70,21 @@ if ($requestMethod === 'POST') {
             if (!is_array($lockedDeletionRequest)) {
                 throw new \DomainException('Potvrdzovací odkaz už bol použitý alebo jeho platnosť vypršala.');
             }
-            if (!empty($lockedDeletionRequest['is_admin'])) {
-                throw new \DomainException('Administrátorský účet nie je možné zrušiť týmto spôsobom.');
-            }
             $deletionRequest = $lockedDeletionRequest;
             $userId = (int) $deletionRequest['user_id'];
+
+            if (!empty($deletionRequest['is_admin'])) {
+                // Všetky aktívne admin riadky uzamkneme v rovnakom poradí.
+                // Dve súbežné samodeštrukcie tak nikdy nevymažú posledného admina.
+                $adminsStmt = $pdo->query(
+                    'SELECT id FROM users WHERE is_admin = 1 AND is_active = 1 ORDER BY id FOR UPDATE'
+                );
+                $activeAdminIds = array_map('intval', $adminsStmt->fetchAll(PDO::FETCH_COLUMN));
+                $otherAdmins = array_filter($activeAdminIds, static fn (int $id): bool => $id !== $userId);
+                if ($otherAdmins === []) {
+                    throw new \DomainException('Posledný aktívny administrátorský účet nie je možné zrušiť.');
+                }
+            }
 
             // Štatistiky pred mazaním (pre audit log)
             $stCalcStmt = $pdo->prepare("SELECT COUNT(*) FROM calculator_results WHERE user_id = :uid");
@@ -116,7 +123,7 @@ if ($requestMethod === 'POST') {
                 ':username'       => '(vymazané)',
                 ':email_hash'     => $emailHash,
                 ':email_domain'   => mb_substr($emailDomain, 0, 255),
-                ':is_admin'       => 0,
+                ':is_admin'       => !empty($deletionRequest['is_admin']) ? 1 : 0,
                 ':age_days'       => $ageDays,
                 ':client_ip'      => mb_substr($clientIp, 0, 45),
                 ':user_agent'     => $userAgent,

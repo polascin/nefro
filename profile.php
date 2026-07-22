@@ -8,6 +8,7 @@ require_once __DIR__ . '/phone_utils.php';
 require_once __DIR__ . '/mobile_verification.php';
 require_once __DIR__ . '/email_verification.php';
 require_once __DIR__ . '/profile_account_deletion.php';
+require_once __DIR__ . '/profile_archive.php';
 
 requireLogin();
 
@@ -340,15 +341,41 @@ if ($requestMethod === 'POST' && ($_POST['action'] ?? '') !== 'delete_account') 
         $password_params = [];
 
         if (!empty($current_password) || !empty($new_password) || !empty($new_password_confirm)) {
-            if (!password_verify($current_password, $user['password_hash'])) {
-                $errors[] = "Súčasné heslo nie je správne.";
-            } elseif (strlen($new_password) < 8 || strlen($new_password) > 1024 || !preg_match('/[A-Z]/', $new_password) || !preg_match('/[a-z]/', $new_password) || !preg_match('/[0-9]/', $new_password)) {
-                $errors[] = "Nové heslo musí mať 8–1024 znakov, obsahovať aspoň jedno veľké písmeno, malé písmeno a číslicu.";
+            $reauth = verifySensitiveActionPassword(
+                $pdo,
+                $user_id,
+                (string) $current_password,
+                (string) $user['password_hash']
+            );
+            if (!$reauth['ok']) {
+                $errors[] = $reauth['blocked']
+                    ? "Opätovné overenie je dočasne zablokované. Skúste to znova o 15 minút."
+                    : "Súčasné heslo nie je správne.";
+            } elseif (!isAppPasswordValid($new_password)) {
+                $errors[] = "Nové heslo musí mať 8–72 bajtov, obsahovať aspoň jedno veľké písmeno, malé písmeno a číslicu.";
             } elseif ($new_password !== $new_password_confirm) {
                 $errors[] = "Nové heslá sa nezhodujú.";
             } else {
                 $password_query = ", password_hash = :password_hash";
-                $password_params['password_hash'] = password_hash($new_password, PASSWORD_DEFAULT);
+                $password_params['password_hash'] = hashAppPassword($new_password);
+            }
+        }
+
+        // Prihlasovací identifikátor musí byť jednoznačný aj naprieč stĺpcami:
+        // používateľské meno nesmie byť e-mailom ani menom iného účtu.
+        if (empty($errors) && !empty($data['username'])) {
+            $identityStmt = $pdo->prepare(
+                'SELECT id FROM users
+                 WHERE id <> :id AND (email = :username_email OR username = :username_name)
+                 LIMIT 1'
+            );
+            $identityStmt->execute([
+                'id' => $user_id,
+                'username_email' => $data['username'],
+                'username_name' => $data['username'],
+            ]);
+            if ($identityStmt->fetchColumn()) {
+                $errors[] = 'Toto používateľské meno nie je dostupné.';
             }
         }
 
@@ -446,25 +473,17 @@ if ($requestMethod === 'POST' && ($_POST['action'] ?? '') !== 'delete_account') 
                 } else {
                     $pdo->beginTransaction();
 
-                    // BEZPEČnosŤ: Audit log nesmie obsahovať citlivé pole (password_hash, tokeny).
-                    // Odfiltrujeme všetky bezpečnostné polia pred serializovaním do JSON.
-                    $AUDIT_SENSITIVE_KEYS = [
-                        'password_hash',
-                        'email_verification_token_hash',
-                        'email_verification_expires_at',
-                        'email_verification_sent_at',
-                        'mobile_verification_code_hash',
-                        'mobile_verification_expires_at',
-                        'mobile_verification_sent_at',
-                    ];
-                    $safeUserSnapshot = array_diff_key($user, array_flip($AUDIT_SENSITIVE_KEYS));
-
-                    $historyStmt = $pdo->prepare("INSERT INTO users_profile_archive (user_id, changed_fields, previous_data) VALUES (:user_id, :changed_fields, :previous_data)");
-                    $historyStmt->execute([
-                        'user_id'        => $user_id,
-                        'changed_fields' => json_encode(array_values(array_unique($changedFields)), JSON_UNESCAPED_UNICODE),
-                        'previous_data'  => json_encode($safeUserSnapshot, JSON_UNESCAPED_UNICODE),
-                    ]);
+                    // Archivujeme iba predchádzajúce hodnoty reálne zmenených
+                    // profilových polí; autentifikačné a 2FA údaje sú mimo allowlistu.
+                    $archivePayload = npsSanitizeProfileArchivePayload($user, $changedFields);
+                    if ($archivePayload['changed_fields'] !== []) {
+                        $historyStmt = $pdo->prepare("INSERT INTO users_profile_archive (user_id, changed_fields, previous_data) VALUES (:user_id, :changed_fields, :previous_data)");
+                        $historyStmt->execute([
+                            'user_id'        => $user_id,
+                            'changed_fields' => json_encode($archivePayload['changed_fields'], JSON_UNESCAPED_UNICODE),
+                            'previous_data'  => json_encode($archivePayload['previous_data'], JSON_UNESCAPED_UNICODE),
+                        ]);
+                    }
 
                     $stmt = $pdo->prepare($sql);
                     $stmt->execute($params);
@@ -497,6 +516,9 @@ if ($requestMethod === 'POST' && ($_POST['action'] ?? '') !== 'delete_account') 
                 $stmt = $pdo->prepare("SELECT * FROM users WHERE id = :id");
                 $stmt->execute(['id' => $user_id]);
                 $user = $stmt->fetch();
+                if (is_array($user) && $success) {
+                    refreshCurrentSessionAuthFingerprint($user);
+                }
 
             } catch (\PDOException $e) {
                 if ($pdo->inTransaction()) {
