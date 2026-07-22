@@ -4,6 +4,8 @@ require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
 
+requireLogin();
+
 $requestMethod = strtoupper((string) ($_SERVER['REQUEST_METHOD'] ?? 'GET'));
 if (!in_array($requestMethod, ['GET', 'POST'], true)) {
     http_response_code(405);
@@ -11,14 +13,13 @@ if (!in_array($requestMethod, ['GET', 'POST'], true)) {
     exit;
 }
 
-$isLoggedIn   = isLoggedIn();
-$currentUserId = $isLoggedIn ? (int) $_SESSION['user_id'] : 0;
+$currentUserId = (int) $_SESSION['user_id'];
 
 $discFlash    = popFlashMessage();
 $errorMessage = null;
 
 // ── POST: nový príspevok alebo odpoveď (len pre prihlásených) ──────────────
-if ($requestMethod === 'POST' && $isLoggedIn) {
+if ($requestMethod === 'POST') {
     $action    = trim((string) ($_POST['action'] ?? ''));
     $csrfToken = (string) ($_POST['csrf_token'] ?? '');
 
@@ -248,18 +249,6 @@ function discAvatarSrc(array $row): string
         </div>
         <?php endif; ?>
 
-        <?php if (!$isLoggedIn): ?>
-        <!-- Výzva na prihlásenie -->
-        <div class="disc-login-prompt">
-          <p>
-            Pre pridávanie príspevkov a odpovedí sa prosím
-            <a href="login.php">prihláste</a>
-            alebo
-            <a href="register.php">zaregistrujte</a>.
-          </p>
-          <p>Príspevky môžete čítať bez prihlásenia.</p>
-        </div>
-        <?php else: ?>
         <!-- Formulár nového príspevku -->
         <section class="disc-new-post" aria-labelledby="newPostHeading">
           <h2 class="disc-new-post__title" id="newPostHeading">Nový príspevok</h2>
@@ -292,7 +281,6 @@ function discAvatarSrc(array $row): string
             </div>
           </form>
         </section>
-        <?php endif; ?>
 
         <!-- Zoznam príspevkov -->
         <section class="disc-posts" aria-labelledby="discPostsHeading">
@@ -387,8 +375,7 @@ function discAvatarSrc(array $row): string
                 </div>
                 <?php endif; ?>
 
-                <!-- Tlačidlo a formulár odpovede (len pre prihlásených) -->
-                <?php if ($isLoggedIn): ?>
+                <!-- Tlačidlo a formulár odpovede -->
                 <div class="disc-reply-section">
                   <button
                     type="button"
@@ -439,7 +426,6 @@ function discAvatarSrc(array $row): string
                     </form>
                   </div>
                 </div>
-                <?php endif; ?>
 
               </li>
               <?php endforeach; ?>

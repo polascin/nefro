@@ -33,11 +33,11 @@ if (!function_exists('_navA')) {
 ?>
 <nav class="main-nav" aria-label="Hlavná navigácia">
     <div class="container">
-        <button type="button" class="menu-toggle" id="menuToggle" aria-label="Otvoriť menu" aria-expanded="false">
+        <button type="button" class="menu-toggle" id="menuToggle" aria-label="Otvoriť menu" aria-expanded="false" aria-controls="mainNavigationList">
             <span>Menu</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
         </button>
-        <ul>
+        <ul id="mainNavigationList">
             <li><?= _navA($_navOnIndex ? '#domov' : 'index.php', 'Domov', $_navCurrent === 'index.php') ?></li>
             <li><?= _navA('populars.php', 'Pre pacientov', $_navCurrent === 'populars.php') ?></li>
             <li><?= _navA('dialyza-bratislava.php', 'Dialýza', $_navCurrent === 'dialyza-bratislava.php') ?></li>
@@ -73,29 +73,6 @@ if (!function_exists('_navA')) {
 <?php if ($_navToolsActive): include 'nastroj_subnav.php'; endif; ?>
 <script nonce="<?= htmlspecialchars(function_exists('getScriptNonce') ? getScriptNonce() : '', ENT_QUOTES) ?>">
 (function () {
-    // Hamburger toggle
-    var navBtn = document.getElementById('menuToggle');
-    var navUl  = navBtn ? navBtn.parentNode.querySelector('ul') : null;
-    if (navBtn && navUl) {
-        navBtn.addEventListener('click', function (e) {
-            e.stopPropagation();
-            var open = navUl.style.display !== 'flex';
-            navUl.style.display       = open ? 'flex'   : 'none';
-            navUl.style.flexDirection = open ? 'column' : '';
-            navUl.style.gap           = open ? '0'      : '';
-            navUl.style.width         = open ? '100%'   : '';
-            navBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
-            navBtn.setAttribute('aria-label',    open ? 'Zavrieť menu' : 'Otvoriť menu');
-        });
-        document.addEventListener('click', function (e) {
-            if (navUl.style.display === 'flex' && !navBtn.contains(e.target) && !navUl.contains(e.target)) {
-                navUl.style.display = 'none';
-                navBtn.setAttribute('aria-expanded', 'false');
-                navBtn.setAttribute('aria-label', 'Otvoriť menu');
-            }
-        });
-    }
-
     // is-stuck IntersectionObserver
     var nav = document.querySelector('.main-nav');
     if (nav && window.IntersectionObserver) {
