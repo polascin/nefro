@@ -28,6 +28,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
     } elseif (!validateCsrfToken((string) ($_POST['csrf_token'] ?? ''))) {
         $actionError = 'Neplatný CSRF token.';
     } elseif (($_POST['action'] ?? '') === 'toggle_publish') {
+        requireAdminReauth();
         $id = (int) ($_POST['drug_id'] ?? 0);
         $setPub = (int) ($_POST['set_pub'] ?? -1);
         if ($id <= 0 || !in_array($setPub, [0, 1], true)) {

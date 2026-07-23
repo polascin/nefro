@@ -31,6 +31,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 
         switch ($action) {
             case 'toggle_admin':
+                requireAdminReauth();
                 if ($targetUserId === $currentAdminId) {
                     $actionError = 'Nemôžete zmeniť vlastnú rolu.';
                     break;
@@ -51,6 +52,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 break;
 
             case 'toggle_active':
+                requireAdminReauth();
                 if ($targetUserId === $currentAdminId) {
                     $actionError = 'Nemôžete deaktivovať vlastný účet.';
                     break;
@@ -71,6 +73,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 break;
 
             case 'reset_password':
+                requireAdminReauth();
                 try {
                     $tStmt = $pdo->prepare("SELECT username FROM users WHERE id = :id");
                     $tStmt->execute(['id' => $targetUserId]);
@@ -90,6 +93,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 break;
 
             case 'run_cleanup':
+                requireAdminReauth();
                 $retDays = max(30, min(3650, (int) ($_POST['retention_days'] ?? 365)));
                 try {
                     $profileScrub = npsScrubProfileArchive($pdo);

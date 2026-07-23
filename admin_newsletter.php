@@ -23,6 +23,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
         $action = $_POST['action'] ?? '';
         $subId  = (int) ($_POST['sub_id'] ?? 0);
 
+        requireAdminReauth();
         switch ($action) {
             case 'delete_subscriber':
                 if ($subId <= 0) { $actionError = ERROR_INVALID_ID; break; }

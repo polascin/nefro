@@ -80,6 +80,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 
             // ── Rýchle prepnutie viditeľnosti ──────────────────────────────
             case 'toggle_publish':
+                requireAdminReauth();
                 $id     = (int) ($_POST['trial_id'] ?? 0);
                 $setPub = (int) ($_POST['set_pub'] ?? -1);
                 if ($id <= 0) {

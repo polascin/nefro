@@ -34,6 +34,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
         if ($postId <= 0) {
             $actionError = 'Neplatné ID príspevku.';
         } else {
+            requireAdminReauth();
             try {
                 switch ($action) {
                     case 'delete':

@@ -222,6 +222,20 @@ function requireAdmin(): void {
 }
 
 /**
+ * Pre citlivé admin akcie vyžaduje nedávne opätovné overenie heslom.
+ * Ak uplynulo viac ako $graceSeconds od posledného overenia, presmeruje na admin_reauth.php.
+ */
+function requireAdminReauth(int $graceSeconds = 300): void {
+    requireAdmin();
+    if (!hasRecentSensitiveReauthentication($graceSeconds)) {
+        $_SESSION['reauth_return_url'] = (string) ($_SERVER['REQUEST_URI'] ?? 'admin.php');
+        setFlashMessage('warning', 'Pre túto akciu zadajte svoje aktuálne heslo.');
+        header('Location: admin_reauth.php');
+        exit;
+    }
+}
+
+/**
  * Audit log pre kritické admin operácie.
  * Bezpečne zlyháva — chyba zápisu nezastaví aplikáciu, len sa zapíše do error logu.
  *

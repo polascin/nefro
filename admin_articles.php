@@ -510,6 +510,7 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
 
             // ── NEWSLETTER: ODOSLAŤ DUE NOW POLOŽKY ───────────────────
             case "send_newsletter_queue":
+                requireAdminReauth();
                 $limit = (int) ($_POST["send_limit"] ?? 50);
                 $limit = max(1, min(200, $limit));
                 $newsletterLockAcquired = false;
@@ -560,6 +561,7 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
 
             // ── NEWSLETTER: ZMAZAŤ ČAKAJÚCE ─────────────────────────────
             case "delete_pending_newsletter":
+                requireAdminReauth();
                 $articleId = (int) ($_POST["article_id"] ?? 0);
                 $confirmAll = (int) ($_POST["confirm_delete_all"] ?? 0);
                 if ($articleId <= 0 && $confirmAll !== 1) {
@@ -767,6 +769,7 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
 
             // ── DELETE ──────────────────────────────────────────────────────
             case "delete":
+                requireAdminReauth();
                 $id = (int) ($_POST["article_id"] ?? 0);
                 if ($id <= 0) {
                     $actionError = ERROR_INVALID_ARTICLE_ID;

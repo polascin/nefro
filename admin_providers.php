@@ -140,6 +140,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 break;
 
             case 'delete':
+                requireAdminReauth();
                 $id = (int) ($_POST['provider_id'] ?? 0);
                 if ($id <= 0) {
                     $actionError = 'Neplatné ID.';
@@ -157,6 +158,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 break;
 
             case 'toggle_active':
+                requireAdminReauth();
                 $id     = (int) ($_POST['provider_id'] ?? 0);
                 $setVal = (int) ($_POST['set_active'] ?? -1);
                 if ($id <= 0 || !in_array($setVal, [0, 1], true)) {
@@ -176,6 +178,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 
             // Rýchle označenie „Oslovený teraz“ — nastaví stav + dátum a čas + zápis do histórie.
             case 'mark_contacted':
+                requireAdminReauth();
                 $id = (int) ($_POST['provider_id'] ?? 0);
                 if ($id <= 0) {
                     $actionError = 'Neplatné ID.';
@@ -298,6 +301,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 
             // Zmazanie záznamu histórie.
             case 'delete_contact':
+                requireAdminReauth();
                 $cid = (int) ($_POST['contact_id'] ?? 0);
                 $id  = (int) ($_POST['provider_id'] ?? 0);
                 if ($cid <= 0 || $id <= 0) {

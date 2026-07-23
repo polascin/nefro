@@ -206,6 +206,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 break;
 
             case 'toggle_publish':
+                requireAdminReauth();
                 $id = (int) ($_POST['drug_id'] ?? 0);
                 $setPub = (int) ($_POST['set_pub'] ?? -1);
                 if ($id <= 0) {
@@ -228,6 +229,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 break;
 
             case 'delete':
+                requireAdminReauth();
                 $id = (int) ($_POST['drug_id'] ?? 0);
                 if ($id <= 0) {
                     $actionError = DG_ERR_INVALID_ID;

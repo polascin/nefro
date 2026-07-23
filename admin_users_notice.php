@@ -105,6 +105,7 @@ if ($includeSensitive) {
         echo 'Príliš veľa pokusov o citlivý export. Skúste to neskôr.';
         exit;
     }
+    requireAdminReauth();
 }
 
 try {
