@@ -34,12 +34,34 @@ require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
 
 try {
+    $metaStmt = $pdo->prepare('SELECT id, pdf_file FROM articles WHERE slug = :slug LIMIT 1');
+    $metaStmt->execute(['slug' => $slug]);
+    $articleMeta = $metaStmt->fetch();
+
+    if ($articleMeta) {
+        $articleId = (int) $articleMeta['id'];
+        $pdfFile = (string) ($articleMeta['pdf_file'] ?? '');
+
+        $pdo->prepare(
+            "UPDATE article_newsletter_queue
+             SET status = 'cancelled', last_error = 'Článok bol zmazaný (refresh_article).'
+             WHERE article_id = :article_id AND status = 'pending'"
+        )->execute(['article_id' => $articleId]);
+
+        if ($pdfFile !== '') {
+            $pdfPath = __DIR__ . '/pdf/' . basename($pdfFile);
+            if (is_file($pdfPath)) {
+                @unlink($pdfPath);
+            }
+        }
+    }
+
     $stmt = $pdo->prepare('DELETE FROM articles WHERE slug = :slug');
     $stmt->execute(['slug' => $slug]);
     $deleted = $stmt->rowCount();
 
     if (!$isCli && isLoggedIn()) {
-        logAdminAction($pdo, 'refresh_article', 'article_slug', null, ['slug' => $slug, 'deleted_rows' => $deleted]);
+        logAdminAction($pdo, 'refresh_article', 'article_slug', $articleMeta ? (int) $articleMeta['id'] : null, ['slug' => $slug, 'deleted_rows' => $deleted]);
     }
 
     if ($isCli) {

@@ -6,6 +6,21 @@ require_once __DIR__ . '/email_verification.php';
 
 const NEWSLETTER_UNSUBSCRIBE_DEFAULT_TTL = 2592000; // 30 dní
 const NEWSLETTER_UNSUBSCRIBE_MAX_TTL     = 2592000; // 30 dní
+const NEWSLETTER_RETRY_BASE_SECONDS      = 60;
+const NEWSLETTER_RETRY_MAX_SECONDS       = 86400; // 24 hodín
+
+if (!function_exists('newsletterRetryDelay')) {
+    function newsletterRetryDelay(int $attempt): int
+    {
+        $attempt = max(1, $attempt);
+        // Exponenciálny backoff: 60 * 2^(attempt-1) s vrcholom 24 h
+        $delay = NEWSLETTER_RETRY_BASE_SECONDS * (int) pow(2, min($attempt - 1, 10));
+        $delay = min($delay, NEWSLETTER_RETRY_MAX_SECONDS);
+        // Jitter ±20 % proti thundering herd
+        $jitter = (int) round($delay * 0.2 * ((mt_rand() / mt_getrandmax()) * 2 - 1));
+        return max(0, $delay + $jitter);
+    }
+}
 
 if (!function_exists('acquireNewsletterProcessLock')) {
     function acquireNewsletterProcessLock(PDO $pdo, string $lockName, int $timeoutSeconds = 0): bool
@@ -127,9 +142,10 @@ if (!function_exists('enqueueArticleNewsletterEmails')) {
             return 0;
         }
 
-        $articleStmt = $pdo->prepare("SELECT id FROM articles WHERE id = :id AND is_published = 1 LIMIT 1");
+        $articleStmt = $pdo->prepare("SELECT id, category FROM articles WHERE id = :id AND is_published = 1 LIMIT 1");
         $articleStmt->execute(['id' => $articleId]);
-        if (!$articleStmt->fetch()) {
+        $article = $articleStmt->fetch();
+        if (!$article || in_array((string) ($article['category'] ?? ''), ['cheatsheet', 'tool'], true)) {
             return 0;
         }
 
@@ -569,7 +585,7 @@ if (!function_exists('processNlSubQueue')) {
             $recipientEmail = trim((string) ($item['email'] ?? ''));
             if ($recipientEmail === '' || !filter_var($recipientEmail, FILTER_VALIDATE_EMAIL)) {
                 $failAttempt    = (int) ($item['attempts'] ?? 0) + 1;
-                $nextAttemptAt  = date('Y-m-d H:i:s', time() + min(3600, (int) pow(2, min($failAttempt, 10)) * 60));
+                $nextAttemptAt  = date('Y-m-d H:i:s', time() + newsletterRetryDelay($failAttempt));
                 $failStmt->execute(['id' => $queueId, 'attempts' => $failAttempt, 'next_attempt_at' => $nextAttemptAt, 'last_error' => 'Neplatný e-mail.']);
                 $stats['failed']++;
                 continue;
@@ -611,8 +627,8 @@ if (!function_exists('processNlSubQueue')) {
                 $stats['sent']++;
             } else {
                 $failAttempt   = (int) ($item['attempts'] ?? 0) + 1;
-                $nextAttemptAt = date('Y-m-d H:i:s', time() + min(3600, (int) pow(2, min($failAttempt, 10)) * 60));
-                $failStmt->execute(['id' => $queueId, 'attempts' => $failAttempt, 'next_attempt_at' => $nextAttemptAt, 'last_error' => 'SMTP zlyhalo.']);
+                $nextAttemptAt = date('Y-m-d H:i:s', time() + newsletterRetryDelay($failAttempt));
+                $failStmt->execute(['id' => $queueId, 'attempts' => $failAttempt, 'next_attempt_at' => $nextAttemptAt, 'last_error' => smtpGetLastError()]);
                 $stats['failed']++;
             }
         }
@@ -733,7 +749,7 @@ if (!function_exists('processArticleNewsletterQueue')) {
             $recipientEmail = trim((string) ($item['user_email'] ?? $item['email'] ?? ''));
             if ($recipientEmail === '' || !filter_var($recipientEmail, FILTER_VALIDATE_EMAIL)) {
                 $failAttempt = (int) ($item['attempts'] ?? 0) + 1;
-                $nextAttemptAt = date('Y-m-d H:i:s', time() + min(3600, (int) pow(2, min($failAttempt, 10)) * 60));
+                $nextAttemptAt = date('Y-m-d H:i:s', time() + newsletterRetryDelay($failAttempt));
 
                 $failStmt->execute([
                     'id' => $queueId,
@@ -817,13 +833,13 @@ if (!function_exists('processArticleNewsletterQueue')) {
                 $stats['sent']++;
             } else {
                 $failAttempt = (int) ($item['attempts'] ?? 0) + 1;
-                $nextAttemptAt = date('Y-m-d H:i:s', time() + min(3600, (int) pow(2, min($failAttempt, 10)) * 60));
+                $nextAttemptAt = date('Y-m-d H:i:s', time() + newsletterRetryDelay($failAttempt));
 
                 $failStmt->execute([
                     'id' => $queueId,
                     'attempts' => $failAttempt,
                     'next_attempt_at' => $nextAttemptAt,
-                    'last_error' => 'SMTP odoslanie zlyhalo.',
+                    'last_error' => smtpGetLastError(),
                 ]);
                 $stats['failed']++;
             }
@@ -991,6 +1007,24 @@ if (!function_exists('sendWeeklyNewsletterDigest')) {
                 . '<a href="' . $unsubEsc . '" style="color:#1d4ed8;text-decoration:underline;">Odhlásiť sa</a></p>';
             $message = renderEmailHtmlLayout($body, 'Zobraziť všetky články', getAppBaseUrl(), medimpaxEmailFooterHtml());
 
+            // Throttle: max 120 e-mailov za minútu, aby sa neprekročili SMTP limity
+            static $digestMinuteStart = 0.0;
+            static $digestSentInMinute = 0;
+            $now = microtime(true);
+            if (($now - $digestMinuteStart) >= 60.0) {
+                $digestMinuteStart = $now;
+                $digestSentInMinute = 0;
+            }
+            if ($digestSentInMinute >= 120) {
+                $sleep = (int) ceil(60.0 - ($now - $digestMinuteStart));
+                if ($sleep > 0) {
+                    sleep($sleep);
+                }
+                $digestMinuteStart = microtime(true);
+                $digestSentInMinute = 0;
+            }
+            $digestSentInMinute++;
+
             $sent = sendViaSmtp($email, $subject, $message, $cfg, 'text/html; charset=UTF-8');
             if (!$sent) {
                 $fallbackFrom     = $cfg['from_email'] !== '' ? $cfg['from_email'] : 'no-reply@nefro.polascin.net';
@@ -1009,7 +1043,7 @@ if (!function_exists('sendWeeklyNewsletterDigest')) {
             FROM users
             WHERE newsletter_consent = 1 AND is_active = 1 AND email_verified_at IS NOT NULL
               AND email IS NOT NULL AND email <> ''");
-        foreach ($userStmt->fetchAll() as $u) {
+        while ($u = $userStmt->fetch()) {
             $email = trim((string) ($u['email'] ?? ''));
             if ($email === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
                 $result['failed']++;
@@ -1051,7 +1085,7 @@ if (!function_exists('sendWeeklyNewsletterDigest')) {
         $subStmt = $pdo->query("SELECT id, email FROM newsletter_subscribers
             WHERE verified_at IS NOT NULL AND unsubscribed_at IS NULL
               AND email IS NOT NULL AND email <> ''");
-        foreach ($subStmt->fetchAll() as $s) {
+        while ($s = $subStmt->fetch()) {
             $email = trim((string) ($s['email'] ?? ''));
             if ($email === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
                 $result['failed']++;

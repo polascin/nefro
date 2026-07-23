@@ -89,11 +89,12 @@ $queuedTotal = 0;
 // UPSERT: re-spustenie skriptu po úprave obsahu prepíše existujúci článok
 // (regenerácia). Newsletter avízo sa pošle LEN pri prvom vložení (rc === 1).
 $stmt = $pdo->prepare(
-    "INSERT INTO articles (title, slug, author, content, excerpt, published_at, is_top, is_published)
-     VALUES (:title, :slug, :author, :content, :excerpt, :published_at, :is_top, 1)
+    "INSERT INTO articles (title, slug, author, content, excerpt, category, published_at, is_top, is_published)
+     VALUES (:title, :slug, :author, :content, :excerpt, 'odborne', :published_at, :is_top, 1)
      ON DUPLICATE KEY UPDATE
         title = VALUES(title), author = VALUES(author),
-        content = VALUES(content), excerpt = VALUES(excerpt), is_top = VALUES(is_top)"
+        content = VALUES(content), excerpt = VALUES(excerpt),
+        category = 'odborne', is_top = VALUES(is_top)"
 );
 
 foreach ($articles as $a) {

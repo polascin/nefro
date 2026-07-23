@@ -229,14 +229,6 @@ function doArticleSearch(
         }
     }
 
-    if ($result["total"] === 0) {
-        $likeNormResult = searchViaLike($pdo, $tokens, $offset, $perPage, true);
-        if ($likeNormResult["total"] > 0) {
-            $likeNormResult["strategy"] = "like-normalized";
-            $result = $likeNormResult;
-        }
-    }
-
     return $result;
 }
 
@@ -280,21 +272,18 @@ function searchViaFullText(
 ): array {
     $result = ["items" => [], "total" => 0];
     $ftParts = [];
-    foreach ($tokens as $orig) {
-        $safe = str_replace(
-            ["*", "@", "~", "+", "-", "<", ">", "(", ")", '\"'],
-            "",
-            $orig,
-        );
-        if ($safe !== "") {
-            $ftParts[] = $safe . "*";
+    foreach ($tokens as $norm => $orig) {
+        $safe = preg_replace('/[^\p{L}\p{N}\s]/u', ' ', $orig) ?? '';
+        $safe = preg_replace('/\s+/u', ' ', trim($safe)) ?? $safe;
+        if (mb_strlen($safe, 'UTF-8') >= SEARCH_MIN_LEN) {
+            $ftParts[] = $safe . '*';
         }
     }
     if (empty($ftParts)) {
         return $result;
     }
 
-    $ftQuery = implode(" ", $ftParts);
+    $ftQuery = implode(' ', $ftParts);
 
     try {
         $cntStmt = $pdo->prepare(
@@ -350,26 +339,26 @@ function searchViaLike(
 
     foreach ($tokens as $norm => $orig) {
         $term = $useNormalized ? $norm : $orig;
-        $term = str_replace(["\\", "%", "_"], ["\\\\", "\\%", "\\_"], $term);
-        $pattern = "%" . $term . "%";
+        $term = str_replace(['!', '%', '_'], ['!!', '!%', '!_'], $term);
+        $pattern = '%' . $term . '%';
 
-        $wT = "wt" . $idx;
-        $wE = "we" . $idx;
-        $wC = "wc" . $idx;
+        $wT = 'wt' . $idx;
+        $wE = 'we' . $idx;
+        $wC = 'wc' . $idx;
         $whereParams[$wT] = $pattern;
         $whereParams[$wE] = $pattern;
         $whereParams[$wC] = $pattern;
-        $whereParts[] = "(title LIKE :{$wT} ESCAPE '\\\\' OR excerpt LIKE :{$wE} ESCAPE '\\\\' OR content LIKE :{$wC} ESCAPE '\\\\')";
+        $whereParts[] = "(title LIKE :{$wT} ESCAPE '!' OR excerpt LIKE :{$wE} ESCAPE '!' OR content LIKE :{$wC} ESCAPE '!')";
 
-        $sT = "st" . $idx;
-        $sE = "se" . $idx;
-        $sC = "sc" . $idx;
+        $sT = 'st' . $idx;
+        $sE = 'se' . $idx;
+        $sC = 'sc' . $idx;
         $scoreParams[$sT] = $pattern;
         $scoreParams[$sE] = $pattern;
         $scoreParams[$sC] = $pattern;
-        $scoreParts[] = "(CASE WHEN title   LIKE :{$sT} ESCAPE '\\\\' THEN 10 ELSE 0 END)";
-        $scoreParts[] = "(CASE WHEN excerpt LIKE :{$sE} ESCAPE '\\\\' THEN  5 ELSE 0 END)";
-        $scoreParts[] = "(CASE WHEN content LIKE :{$sC} ESCAPE '\\\\' THEN  1 ELSE 0 END)";
+        $scoreParts[] = "(CASE WHEN title   LIKE :{$sT} ESCAPE '!' THEN 10 ELSE 0 END)";
+        $scoreParts[] = "(CASE WHEN excerpt LIKE :{$sE} ESCAPE '!' THEN  5 ELSE 0 END)";
+        $scoreParts[] = "(CASE WHEN content LIKE :{$sC} ESCAPE '!' THEN  1 ELSE 0 END)";
 
         $idx++;
     }

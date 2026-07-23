@@ -478,8 +478,17 @@ try {
         INDEX idx_articles_published_at (published_at),
         INDEX idx_articles_is_top (is_top),
         INDEX idx_articles_is_published (is_published),
-        INDEX idx_articles_category (category)
+        INDEX idx_articles_category (category),
+        FULLTEXT INDEX ft_articles_search (title, excerpt, content)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";
+
+    // Pre existujúce tabuľky vytvorené pred pridaním FULLTEXT indexu do schémy:
+    try {
+        $pdo->exec("ALTER TABLE articles ADD FULLTEXT INDEX IF NOT EXISTS ft_articles_search (title, excerpt, content)");
+    } catch (\PDOException $e) {
+        $cliOut('FULLTEXT index: ' . $e->getMessage() . "\n");
+    }
+
     $pdo->exec($articlesSql);
     $cliOut("Tabuľka 'articles' bola úspešne vytvorená alebo už existuje.\n");
 

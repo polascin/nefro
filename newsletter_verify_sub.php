@@ -52,69 +52,13 @@ if ($requestMethod === 'POST') {
         $message = 'Overovací odkaz nie je platný.';
     } else {
         $clientIp = getClientIpAddress();
-        $rateLimitBlocked = false;
-
-        try {
-            $pdo->prepare(
-                "DELETE FROM form_rate_limit
-                 WHERE action = 'newsletter_verify'
-                   AND first_attempt < DATE_SUB(NOW(), INTERVAL 15 MINUTE)
-                   AND (blocked_until IS NULL OR blocked_until <= NOW())"
-            )->execute();
-
-            $rlStmt = $pdo->prepare(
-                "SELECT blocked_until
-                 FROM form_rate_limit
-                 WHERE ip = :ip AND action = 'newsletter_verify'"
-            );
-            $rlStmt->execute(['ip' => $clientIp]);
-            $blockedUntil = $rlStmt->fetchColumn();
-
-            if ($blockedUntil !== false && $blockedUntil !== null) {
-                $blockedUntilTs = strtotime((string) $blockedUntil);
-                if ($blockedUntilTs !== false && $blockedUntilTs > time()) {
-                    $rateLimitBlocked = true;
-                } else {
-                    $pdo->prepare(
-                        "UPDATE form_rate_limit
-                         SET attempt_count = 0, first_attempt = NOW(),
-                             last_attempt = NOW(), blocked_until = NULL
-                         WHERE ip = :ip AND action = 'newsletter_verify'"
-                    )->execute(['ip' => $clientIp]);
-                }
-            }
-
-            if (!$rateLimitBlocked) {
-                $pdo->prepare(
-                    "INSERT INTO form_rate_limit (ip, action, attempt_count, first_attempt)
-                     VALUES (:ip, 'newsletter_verify', 1, NOW())
-                     ON DUPLICATE KEY UPDATE
-                         attempt_count = attempt_count + 1,
-                         last_attempt = NOW()"
-                )->execute(['ip' => $clientIp]);
-
-                $countStmt = $pdo->prepare(
-                    "SELECT attempt_count
-                     FROM form_rate_limit
-                     WHERE ip = :ip AND action = 'newsletter_verify'"
-                );
-                $countStmt->execute(['ip' => $clientIp]);
-                $currentCount = (int) ($countStmt->fetchColumn() ?? 0);
-
-                if ($currentCount >= NEWSLETTER_VERIFY_MAX_ATTEMPTS) {
-                    $pdo->prepare(
-                        "UPDATE form_rate_limit
-                         SET blocked_until = DATE_ADD(NOW(), INTERVAL :secs SECOND)
-                         WHERE ip = :ip AND action = 'newsletter_verify'"
-                    )->execute([
-                        'secs' => NEWSLETTER_VERIFY_WINDOW_SECS,
-                        'ip' => $clientIp,
-                    ]);
-                }
-            }
-        } catch (\PDOException $e) {
-            error_log('Newsletter verification rate-limit error: ' . $e->getMessage());
-        }
+        $rateLimitBlocked = !checkFormRateLimit(
+            $pdo,
+            'newsletter_verify',
+            $clientIp,
+            NEWSLETTER_VERIFY_MAX_ATTEMPTS,
+            NEWSLETTER_VERIFY_WINDOW_SECS
+        );
 
         if ($rateLimitBlocked) {
             $message = 'Príliš veľa pokusov. Skúste to znova neskôr.';

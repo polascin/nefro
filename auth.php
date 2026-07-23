@@ -559,6 +559,82 @@ function hasRecentSensitiveReauthentication(int $ttlSeconds = 300): bool {
 }
 
 /**
+ * Atomický rate-limit pre verejné formuláre (newsletter, kontakt, ...).
+ * Vráti true ak je požiadavka povolená, false ak je IP zablokovaná
+ * alebo prekročila limit. Záznam sa vytvorí/inkrementuje v rámci transakcie.
+ *
+ * @param PDO $pdo
+ * @param string $action    Identifikátor akcie (napr. 'nl_subscribe')
+ * @param string $ip        IP adresa klienta
+ * @param int $maxAttempts  Max povolených pokusov v okne
+ * @param int $windowSeconds Dĺžka okna v sekundách (aj dĺžka blokácie)
+ * @return bool
+ */
+function checkFormRateLimit(PDO $pdo, string $action, string $ip, int $maxAttempts, int $windowSeconds): bool
+{
+    $pdo->beginTransaction();
+    try {
+        $pdo->prepare(
+            "DELETE FROM form_rate_limit
+             WHERE action = :action
+               AND blocked_until IS NOT NULL
+               AND blocked_until < NOW()"
+        )->execute(['action' => $action]);
+
+        $pdo->prepare(
+            "INSERT INTO form_rate_limit (ip, action, attempt_count, first_attempt, last_attempt)
+             VALUES (:ip, :action, 0, NOW(), NOW())
+             ON DUPLICATE KEY UPDATE id = id"
+        )->execute(['ip' => $ip, 'action' => $action]);
+
+        $rowStmt = $pdo->prepare(
+            "SELECT attempt_count, first_attempt, blocked_until
+             FROM form_rate_limit
+             WHERE ip = :ip AND action = :action
+             FOR UPDATE"
+        );
+        $rowStmt->execute(['ip' => $ip, 'action' => $action]);
+        $row = $rowStmt->fetch();
+
+        $now = time();
+        if ($row && !empty($row['blocked_until']) && strtotime((string) $row['blocked_until']) > $now) {
+            $pdo->commit();
+            return false;
+        }
+
+        $firstAttempt = !empty($row['first_attempt']) ? strtotime((string) $row['first_attempt']) : $now;
+        $windowExpired = ($now - $firstAttempt) >= $windowSeconds;
+        $count = $windowExpired ? 1 : ((int) ($row['attempt_count'] ?? 0) + 1);
+        $blockedUntil = ($count > $maxAttempts) ? date('Y-m-d H:i:s', $now + $windowSeconds) : null;
+
+        $updStmt = $pdo->prepare(
+            "UPDATE form_rate_limit
+             SET attempt_count = :count,
+                 first_attempt = IF(:reset_window = 1, NOW(), first_attempt),
+                 last_attempt = NOW(),
+                 blocked_until = :blocked_until
+             WHERE ip = :ip AND action = :action"
+        );
+        $updStmt->execute([
+            'count' => $count,
+            'reset_window' => $windowExpired ? 1 : 0,
+            'blocked_until' => $blockedUntil,
+            'ip' => $ip,
+            'action' => $action,
+        ]);
+
+        $pdo->commit();
+        return $count <= $maxAttempts;
+    } catch (\Throwable $e) {
+        if ($pdo->inTransaction()) {
+            $pdo->rollBack();
+        }
+        error_log('Rate-limit chyba (' . $action . '): ' . $e->getMessage());
+        return true;
+    }
+}
+
+/**
  * Uloženie jednorazovej hlášky do relácie
  */
 function setFlashMessage(string $type, string $message): void {

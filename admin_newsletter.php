@@ -31,6 +31,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     if (!$sub) { $actionError = ERROR_SUBSCRIBER_NOT_FOUND; break; }
                     $pdo->prepare("DELETE FROM newsletter_subscribers WHERE id = :id")->execute(['id' => $subId]);
                     $actionResult = 'Odberateľ ' . $sub['email'] . ' bol natrvalo zmazaný.';
+                    logAdminAction($pdo, 'delete_subscriber', 'newsletter_subscriber', $subId, ['email' => $sub['email']]);
                 } catch (\PDOException $e) {
                     error_log('admin_newsletter delete error: ' . $e->getMessage());
                     $actionError = 'Chyba pri mazaní odberateľa.';
@@ -48,6 +49,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     $pdo->prepare("UPDATE newsletter_subscribers SET verified_at = NOW(), unsubscribed_at = NULL WHERE id = :id")
                         ->execute(['id' => $subId]);
                     $actionResult = 'E-mail ' . $sub['email'] . ' bol manuálne overený.';
+                    logAdminAction($pdo, 'force_verify', 'newsletter_subscriber', $subId, ['email' => $sub['email']]);
                 } catch (\PDOException $e) {
                     error_log('admin_newsletter force_verify error: ' . $e->getMessage());
                     $actionError = 'Chyba pri manuálnom overení.';
@@ -72,6 +74,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     )->execute(['id' => $subId]);
                     $pdo->commit();
                     $actionResult = 'Odberateľ ' . $sub['email'] . ' bol odhlásený z odberu.';
+                    logAdminAction($pdo, 'force_unsubscribe', 'newsletter_subscriber', $subId, ['email' => $sub['email']]);
                 } catch (\PDOException $e) {
                     if ($pdo->inTransaction()) { $pdo->rollBack(); }
                     error_log('admin_newsletter force_unsubscribe error: ' . $e->getMessage());
@@ -90,6 +93,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     $newToken = bin2hex(random_bytes(32));
                     $pdo->prepare("UPDATE newsletter_subscribers SET verify_token = :token_hash, updated_at = NOW() WHERE id = :id")
                         ->execute(['token_hash' => hash('sha256', $newToken), 'id' => $subId]);
+                    logAdminAction($pdo, 'resend_verification', 'newsletter_subscriber', $subId, ['email' => $sub['email']]);
                     $sent = sendSubscriberVerifyEmail((string) $sub['email'], $newToken);
                     if ($sent) {
                         $actionResult = 'Overovací e-mail bol znovu odoslaný na ' . $sub['email'] . '.';
@@ -113,6 +117,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     $pdo->prepare("UPDATE newsletter_subscribers SET unsubscribed_at = NULL WHERE id = :id")
                         ->execute(['id' => $subId]);
                     $actionResult = 'Odber pre ' . $sub['email'] . ' bol obnovený.';
+                    logAdminAction($pdo, 'reactivate', 'newsletter_subscriber', $subId, ['email' => $sub['email']]);
                 } catch (\PDOException $e) {
                     error_log('admin_newsletter reactivate error: ' . $e->getMessage());
                     $actionError = 'Chyba pri obnovení odberu.';

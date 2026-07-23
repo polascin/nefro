@@ -5,41 +5,6 @@ require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
 require_once __DIR__ . '/calculators_common.php';
 
-function crclCategory(float $value): string
-{
-    if ($value >= 90.0) {
-        return "G1";
-    }
-    if ($value >= 60.0) {
-        return "G2";
-    }
-    if ($value >= 45.0) {
-        return "G3a";
-    }
-    if ($value >= 30.0) {
-        return "G3b";
-    }
-    if ($value >= 15.0) {
-        return "G4";
-    }
-
-    return "G5";
-}
-
-function crclCategoryDescription(string $category): string
-{
-    $map = [
-        "G1" => "normálna alebo vysoká filtrácia",
-        "G2" => "mierne znížená filtrácia",
-        "G3a" => "mierne až stredne znížená filtrácia",
-        "G3b" => "stredne až výrazne znížená filtrácia",
-        "G4" => "výrazne znížená filtrácia",
-        "G5" => "zlyhanie obličiek",
-    ];
-
-    return $map[$category] ?? "";
-}
-
 /** Prepočet koncentrácie kreatinínu na mg/dL (jednotky sa vo vzorci krátia, ale konvertujeme pre istotu). */
 function crclCreatinineToMgDl(float $value, string $unit): float
 {
@@ -157,8 +122,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 // Du Bois BSA
                 $bsa = 0.007184 * pow((float) $heightCm, 0.725) * pow((float) $weightKg, 0.425);
                 $crclNorm = round($crcl * 1.73 / $bsa, 1);
-                $gCategory = crclCategory($crclNorm);
-                $gDescription = crclCategoryDescription($gCategory);
+                $gCategory = ckdGCategory($crclNorm);
+                $gDescription = ckdGCategoryDescription($gCategory);
             }
 
             $calculated = [

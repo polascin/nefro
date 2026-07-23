@@ -37,11 +37,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $patient = calculatorPatientDataFromRequest($_POST);
         calculatorValidateOptionalPatientData($patient, $errors);
 
-        $ualb = calculatorParsePositiveFloat($form["u_alb"]);
+        $ualb = calculatorParseNonNegativeFloat($form["u_alb"]);
         $ucr = calculatorParsePositiveFloat($form["u_cr"]);
 
         if ($ualb === null || $ucr === null) {
-            $errors[] = "Zadajte platné kladné čísla pre albumín aj kreatinín.";
+            $errors[] = "Zadajte platné nezáporné číslo pre albumín a kladné číslo pre kreatinín.";
+        } elseif ($ucr <= 0) {
+            $errors[] = "Kreatinín v moči musí byť kladné číslo.";
         } else {
             $alb_mg_l = $ualb;
             if ($form["u_alb_unit"] === "mg_dl") {

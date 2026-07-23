@@ -11,6 +11,9 @@ const EMAIL_GREETING_PREFIX = 'Dobrý deň, ';
 const EMAIL_PLAIN_PARAGRAPH_BREAK = ",\n\n";
 const EMAIL_SENTENCE_PARAGRAPH_SUFFIX = ".\n\n";
 
+/** @var string $GLOBALS['__smtpLastError'] */
+$GLOBALS['__smtpLastError'] = '';
+
 function getEmailEnvConfig(): array {
     static $config = null;
     if ($config !== null) {
@@ -116,7 +119,18 @@ function smtpLogError(string $stage, string $reason, array $context = []): void 
         }
     }
 
-    error_log(implode('; ', $parts));
+    $line = implode('; ', $parts);
+    error_log($line);
+    $GLOBALS['__smtpLastError'] .= ($GLOBALS['__smtpLastError'] !== '' ? ' | ' : '') . $line;
+}
+
+function smtpGetLastError(): string {
+    $error = (string) ($GLOBALS['__smtpLastError'] ?? '');
+    if ($error === '') {
+        return 'SMTP zlyhalo.';
+    }
+    $error = mb_substr($error, 0, 500);
+    return $error;
 }
 
 function smtpSendCommand($socket, string $command, array $expectedCodes, string $stage): array {
@@ -329,6 +343,7 @@ function smtpWritePayloadAndFinish($socket, string $payload): bool {
 }
 
 function sendViaSmtp(string $toEmail, string $subject, string $messageBody, array $cfg, string $contentType = 'text/plain; charset=UTF-8', ?string $plainTextAlt = null): bool {
+    $GLOBALS['__smtpLastError'] = '';
     $socket = smtpOpenAndHandshake($cfg);
     if (!$socket) {
         return false;

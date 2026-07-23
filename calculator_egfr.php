@@ -5,41 +5,6 @@ require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
 require_once __DIR__ . '/calculators_common.php';
 
-function egfrCategory(float $egfr): string
-{
-    if ($egfr >= 90.0) {
-        return "G1";
-    }
-    if ($egfr >= 60.0) {
-        return "G2";
-    }
-    if ($egfr >= 45.0) {
-        return "G3a";
-    }
-    if ($egfr >= 30.0) {
-        return "G3b";
-    }
-    if ($egfr >= 15.0) {
-        return "G4";
-    }
-
-    return "G5";
-}
-
-function egfrCategoryDescription(string $category): string
-{
-    $map = [
-        "G1" => "normálna alebo vysoká filtrácia",
-        "G2" => "mierne znížená filtrácia",
-        "G3a" => "mierne až stredne znížená filtrácia",
-        "G3b" => "stredne až výrazne znížená filtrácia",
-        "G4" => "výrazne znížená filtrácia",
-        "G5" => "zlyhanie obličiek",
-    ];
-
-    return $map[$category] ?? "";
-}
-
 $errors = [];
 $messages = [];
 $calculated = null;
@@ -135,8 +100,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             }
 
             $egfrRounded = round($egfr, 1);
-            $gCategory = egfrCategory($egfrRounded);
-            $gDescription = egfrCategoryDescription($gCategory);
+            $gCategory = ckdGCategory($egfrRounded);
+            $gDescription = ckdGCategoryDescription($gCategory);
 
             $calculated = [
                 "egfr" => $egfrRounded,

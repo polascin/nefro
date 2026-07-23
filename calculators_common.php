@@ -215,6 +215,56 @@ function calculatorParsePositiveFloat(string $value): ?float
     return $number;
 }
 
+function calculatorParseNonNegativeFloat(string $value): ?float
+{
+    $normalized = str_replace(',', '.', trim($value));
+    if ($normalized === '' || !is_numeric($normalized)) {
+        return null;
+    }
+
+    $number = (float) $normalized;
+    if (!is_finite($number) || $number < 0) {
+        return null;
+    }
+
+    return $number;
+}
+
+function ckdGCategory(float $value): string
+{
+    if ($value >= 90.0) {
+        return 'G1';
+    }
+    if ($value >= 60.0) {
+        return 'G2';
+    }
+    if ($value >= 45.0) {
+        return 'G3a';
+    }
+    if ($value >= 30.0) {
+        return 'G3b';
+    }
+    if ($value >= 15.0) {
+        return 'G4';
+    }
+
+    return 'G5';
+}
+
+function ckdGCategoryDescription(string $category): string
+{
+    $map = [
+        'G1' => 'normálna alebo vysoká filtrácia',
+        'G2' => 'mierne znížená filtrácia',
+        'G3a' => 'mierne až stredne znížená filtrácia',
+        'G3b' => 'stredne až výrazne znížená filtrácia',
+        'G4' => 'výrazne znížená filtrácia',
+        'G5' => 'zlyhanie obličiek',
+    ];
+
+    return $map[$category] ?? '';
+}
+
 function calculatorSaveResult(
     PDO $pdo,
     int $userId,

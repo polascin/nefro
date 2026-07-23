@@ -339,7 +339,7 @@ $totalCount = array_sum(array_column($statsByCalc, 'count'));
           </div>
           <script nonce="<?= htmlspecialchars(getScriptNonce()) ?>">
           (function() {
-            var data = <?= json_encode(array_values($egfrTrend), JSON_UNESCAPED_UNICODE) ?>;
+            var data = <?= json_encode(array_values($egfrTrend), JSON_UNESCAPED_UNICODE | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?>;
             var canvas = document.getElementById('<?= htmlspecialchars($canvasId) ?>');
             if (!canvas || !canvas.getContext || data.length < 2) return;
             var ctx = canvas.getContext('2d');

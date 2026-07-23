@@ -42,10 +42,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $upost = calculatorParsePositiveFloat($form["u_post"]);
         $w = calculatorParsePositiveFloat($form["weight_post"]);
         $t = calculatorParsePositiveFloat($form["time_hours"]);
-        $uf = calculatorParsePositiveFloat($form["uf_volume"]);
+        $uf = calculatorParseNonNegativeFloat($form["uf_volume"]);
 
-        if (!$upre || !$upost || !$w || !$t || $uf === null) {
+        if ($upre === null || $upost === null || $w === null || $t === null || $uf === null) {
             $errors[] = "Vyplňte všetky hodnoty platnými číslami.";
+        } elseif ($upost >= $upre) {
+            $errors[] = "S-Urea PO dialýze musí byť nižšia ako PRED dialýzou.";
         } else {
             $r = $upost / $upre;
             $urr = (1 - $r) * 100;

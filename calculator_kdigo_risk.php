@@ -5,27 +5,6 @@ require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
 require_once __DIR__ . '/calculators_common.php';
 
-function kdigoGCategory(float $egfr): string
-{
-    if ($egfr >= 90.0) {
-        return "G1";
-    }
-    if ($egfr >= 60.0) {
-        return "G2";
-    }
-    if ($egfr >= 45.0) {
-        return "G3a";
-    }
-    if ($egfr >= 30.0) {
-        return "G3b";
-    }
-    if ($egfr >= 15.0) {
-        return "G4";
-    }
-
-    return "G5";
-}
-
 function kdigoACategory(float $uacr): string
 {
     if ($uacr < 30.0) {
@@ -121,7 +100,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $uacrInput = (float) $uacr;
             // Prepočet UACR: [mg/g] = [mg/mmol] × 8.84
             $uacrMgG = $uacrUnit === "mg_mmol" ? $uacrInput * 8.84 : $uacrInput;
-            $gCategory = kdigoGCategory($egfrValue);
+            $gCategory = ckdGCategory($egfrValue);
             $aCategory = kdigoACategory($uacrMgG);
             $riskInfo = kdigoRisk($gCategory, $aCategory);
 

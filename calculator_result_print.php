@@ -270,7 +270,7 @@ function formatResultKey(string $key): string {
                             <?php foreach ($inputPayload as $key => $value): ?>
                                 <div class="admin-notice-print-row">
                                     <strong><?= htmlspecialchars(formatInputKey((string) $key)) ?></strong>
-                                    <span><?= htmlspecialchars(formatInputValue((string) $key, is_bool($value) ? ($value ? '1' : '0') : (is_scalar($value) ? (string) $value : json_encode($value, JSON_UNESCAPED_UNICODE)))) ?></span>
+                                    <span><?= htmlspecialchars(formatInputValue((string) $key, is_bool($value) ? ($value ? '1' : '0') : (is_scalar($value) ? (string) $value : json_encode($value, JSON_UNESCAPED_UNICODE | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT))), ENT_QUOTES | ENT_HTML5, 'UTF-8') ?></span>
                                 </div>
                             <?php endforeach; ?>
                         <?php endif; ?>
@@ -285,7 +285,7 @@ function formatResultKey(string $key): string {
                             <?php foreach ($resultPayload as $key => $value): ?>
                                 <div class="admin-notice-print-row">
                                     <strong><?= htmlspecialchars(formatResultKey((string) $key)) ?></strong>
-                                    <span><?= htmlspecialchars(is_bool($value) ? ($value ? 'Áno' : 'Nie') : (is_scalar($value) ? (string) $value : json_encode($value, JSON_UNESCAPED_UNICODE))) ?></span>
+                                    <span><?= htmlspecialchars(is_bool($value) ? ($value ? 'Áno' : 'Nie') : (is_scalar($value) ? (string) $value : json_encode($value, JSON_UNESCAPED_UNICODE | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT)), ENT_QUOTES | ENT_HTML5, 'UTF-8') ?></span>
                                 </div>
                             <?php endforeach; ?>
                         <?php endif; ?>
