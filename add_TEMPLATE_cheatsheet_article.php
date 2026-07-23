@@ -46,7 +46,7 @@ if (php_sapi_name() !== 'cli') {
 }
 require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
-require_once __DIR__ . '/pdf_generator.php';
+require_once __DIR__ . '/article_publisher.php';
 
 // ── Dáta ťaháka ───────────────────────────────────────────────────────────────
 
@@ -84,68 +84,16 @@ HTML,
 
 // ── Vkladanie do databázy ──────────────────────────────────────────────────────
 
-$inserted = 0;
-$updated  = 0;
-$skipped  = 0;
-$errors   = [];
+$result = upsertArticles($pdo, $articles, 'cheatsheet', [
+    'enqueue_newsletter' => false,
+    'regenerate_pdf' => true,
+    'log_prefix' => 'add_TEMPLATE_cheatsheet_article',
+]);
 
-// UPSERT: re-spustenie skriptu po úprave obsahu prepíše existujúci ťahák
-// (regenerácia). `category` ostáva 'cheatsheet' aj pri update (needituj).
-$stmt = $pdo->prepare(
-    "INSERT INTO articles (title, slug, author, content, excerpt, category, published_at, is_top, is_published)
-     VALUES (:title, :slug, :author, :content, :excerpt, 'cheatsheet', :published_at, :is_top, 1)
-     ON DUPLICATE KEY UPDATE
-        title = VALUES(title), author = VALUES(author),
-        content = VALUES(content), excerpt = VALUES(excerpt),
-        category = 'cheatsheet', is_top = VALUES(is_top)"
-);
-
-foreach ($articles as $a) {
-    try {
-        $stmt->execute([
-            'title'        => $a['title'],
-            'slug'         => $a['slug'],
-            'author'       => $a['author'],
-            'content'      => $a['content'],
-            'excerpt'      => $a['excerpt'],
-            'published_at' => $a['published_at'],
-            'is_top'       => $a['is_top'],
-        ]);
-        // rowCount(): 1 = nový INSERT, 2 = UPDATE existujúceho ťaháka, 0 = bez zmeny.
-        $rc = $stmt->rowCount();
-        if ($rc === 0) {
-            $skipped++;
-            continue;
-        }
-
-        $articleId = (int) $pdo->lastInsertId();
-        if ($articleId === 0) {
-            // UPDATE: lastInsertId nemusí vrátiť existujúce id → dohľadaj podľa slug.
-            $idStmt = $pdo->prepare("SELECT id FROM articles WHERE slug = :slug");
-            $idStmt->execute(['slug' => $a['slug']]);
-            $articleId = (int) $idStmt->fetchColumn();
-        }
-
-        if ($rc === 1) {
-            $inserted++;
-        } else {
-            $updated++;
-        }
-
-        // Vygeneruj/preregeneruj PDF verziu (bonus na stiahnutie a tlač).
-        try {
-            $pdfRes = generateArticlePdf($pdo, $a + ['id' => $articleId], true);
-            if (!$pdfRes['ok'] && !empty($pdfRes['error'])) {
-                error_log('add_cheatsheet pdf gen: ' . $pdfRes['error']);
-            }
-        } catch (\Throwable $pe) {
-            error_log('add_cheatsheet pdf gen error: ' . $pe->getMessage());
-        }
-    } catch (\PDOException $e) {
-        $errors[] = 'Chyba pri ťaháku „' . htmlspecialchars($a['title']) . '“: ' . $e->getMessage();
-        error_log('add_cheatsheet migration error: ' . $e->getMessage());
-    }
-}
+$inserted = $result['inserted'];
+$updated  = $result['updated'];
+$skipped  = $result['skipped'];
+$errors   = $result['errors'];
 
 $total = count($articles);
 

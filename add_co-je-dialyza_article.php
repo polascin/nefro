@@ -20,6 +20,7 @@ if (php_sapi_name() !== 'cli') {
     requireAdminMutationConfirmation('Vložiť alebo aktualizovať popularizačný článok');
 }
 require_once __DIR__ . '/db_config.php';
+require_once __DIR__ . '/article_publisher.php';
 /** @var \PDO $pdo */
 require_once __DIR__ . '/newsletter_notifications.php';
 require_once __DIR__ . '/pdf_generator.php';
@@ -82,69 +83,18 @@ HTML,
 
 // ── Vkladanie do databázy ──────────────────────────────────────────────────────
 
-$inserted    = 0;
-$updated     = 0;
-$skipped     = 0;
-$errors      = [];
-$queuedTotal = 0;
+$__articleLogPrefix = basename(__FILE__, '.php');
+$result = upsertArticles($pdo, $articles, 'popularne', [
+    'enqueue_newsletter' => true,
+    'regenerate_pdf' => true,
+    'log_prefix' => $__articleLogPrefix,
+]);
 
-$stmt = $pdo->prepare(
-    "INSERT INTO articles (title, slug, author, content, excerpt, category, published_at, is_top, is_published)
-     VALUES (:title, :slug, :author, :content, :excerpt, 'popularne', :published_at, :is_top, 1)
-     ON DUPLICATE KEY UPDATE
-        title = VALUES(title), author = VALUES(author),
-        content = VALUES(content), excerpt = VALUES(excerpt),
-        category = 'popularne', is_top = VALUES(is_top)"
-);
-
-foreach ($articles as $a) {
-    try {
-        $stmt->execute([
-            'title'        => $a['title'],
-            'slug'         => $a['slug'],
-            'author'       => $a['author'],
-            'content'      => $a['content'],
-            'excerpt'      => $a['excerpt'],
-            'published_at' => $a['published_at'],
-            'is_top'       => $a['is_top'],
-        ]);
-        $rc = $stmt->rowCount();
-        if ($rc === 0) {
-            $skipped++;
-            continue;
-        }
-
-        $articleId = (int) $pdo->lastInsertId();
-        if ($articleId === 0) {
-            $idStmt = $pdo->prepare("SELECT id FROM articles WHERE slug = :slug");
-            $idStmt->execute(['slug' => $a['slug']]);
-            $articleId = (int) $idStmt->fetchColumn();
-        }
-
-        if ($rc === 1) {
-            $inserted++;
-            try {
-                $queuedTotal += enqueueArticleNewsletterEmails($pdo, $articleId);
-            } catch (\Throwable $qe) {
-                error_log('add_co_je_dialyza newsletter enqueue error: ' . $qe->getMessage());
-            }
-        } else {
-            $updated++;
-        }
-
-        try {
-            $pdfRes = generateArticlePdf($pdo, $a + ['id' => $articleId], true);
-            if (!$pdfRes['ok'] && !empty($pdfRes['error'])) {
-                error_log('add_co_je_dialyza pdf gen: ' . $pdfRes['error']);
-            }
-        } catch (\Throwable $pe) {
-            error_log('add_co_je_dialyza pdf gen error: ' . $pe->getMessage());
-        }
-    } catch (\PDOException $e) {
-        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '“: ' . $e->getMessage();
-        error_log('add_co_je_dialyza migration error: ' . $e->getMessage());
-    }
-}
+$inserted    = $result['inserted'];
+$updated     = $result['updated'];
+$skipped     = $result['skipped'];
+$queuedTotal = $result['queued'];
+$errors      = $result['errors'];
 
 $total = count($articles);
 

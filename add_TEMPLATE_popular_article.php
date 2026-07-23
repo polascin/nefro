@@ -50,8 +50,7 @@ if (php_sapi_name() !== 'cli') {
 }
 require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
-require_once __DIR__ . '/newsletter_notifications.php';
-require_once __DIR__ . '/pdf_generator.php';
+require_once __DIR__ . '/article_publisher.php';
 
 // ── Dáta článku ───────────────────────────────────────────────────────────────
 
@@ -87,76 +86,17 @@ HTML,
 
 // ── Vkladanie do databázy ──────────────────────────────────────────────────────
 
-$inserted    = 0;
-$updated     = 0;
-$skipped     = 0;
-$errors      = [];
-$queuedTotal = 0;
+$result = upsertArticles($pdo, $articles, 'popularne', [
+    'enqueue_newsletter' => true,
+    'regenerate_pdf' => true,
+    'log_prefix' => 'add_TEMPLATE_popular_article',
+]);
 
-// UPSERT: re-spustenie skriptu po úprave obsahu prepíše existujúci článok
-// (regenerácia). Newsletter avízo sa pošle LEN pri prvom vložení (rc === 1).
-// `category` ostáva 'popularne' aj pri update (needituj).
-$stmt = $pdo->prepare(
-    "INSERT INTO articles (title, slug, author, content, excerpt, category, published_at, is_top, is_published)
-     VALUES (:title, :slug, :author, :content, :excerpt, 'popularne', :published_at, :is_top, 1)
-     ON DUPLICATE KEY UPDATE
-        title = VALUES(title), author = VALUES(author),
-        content = VALUES(content), excerpt = VALUES(excerpt),
-        category = 'popularne', is_top = VALUES(is_top)"
-);
-
-foreach ($articles as $a) {
-    try {
-        $stmt->execute([
-            'title'        => $a['title'],
-            'slug'         => $a['slug'],
-            'author'       => $a['author'],
-            'content'      => $a['content'],
-            'excerpt'      => $a['excerpt'],
-            'published_at' => $a['published_at'],
-            'is_top'       => $a['is_top'],
-        ]);
-        // rowCount(): 1 = nový INSERT, 2 = UPDATE existujúceho článku, 0 = bez zmeny.
-        $rc = $stmt->rowCount();
-        if ($rc === 0) {
-            $skipped++;
-            continue;
-        }
-
-        $articleId = (int) $pdo->lastInsertId();
-        if ($articleId === 0) {
-            // UPDATE: lastInsertId nemusí vrátiť existujúce id → dohľadaj podľa slug.
-            $idStmt = $pdo->prepare("SELECT id FROM articles WHERE slug = :slug");
-            $idStmt->execute(['slug' => $a['slug']]);
-            $articleId = (int) $idStmt->fetchColumn();
-        }
-
-        if ($rc === 1) {
-            $inserted++;
-            // Newsletter avízo LEN pri novom článku, nikdy pri regenerácii/update.
-            try {
-                $queuedTotal += enqueueArticleNewsletterEmails($pdo, $articleId);
-            } catch (\Throwable $qe) {
-                error_log('add_popular_article newsletter enqueue error: ' . $qe->getMessage());
-            }
-        } else {
-            $updated++;
-        }
-
-        // Vygeneruj/preregeneruj PDF verziu článku (bonus na stiahnutie pre prihlásených).
-        try {
-            $pdfRes = generateArticlePdf($pdo, $a + ['id' => $articleId], true);
-            if (!$pdfRes['ok'] && !empty($pdfRes['error'])) {
-                error_log('add_popular_article pdf gen: ' . $pdfRes['error']);
-            }
-        } catch (\Throwable $pe) {
-            error_log('add_popular_article pdf gen error: ' . $pe->getMessage());
-        }
-    } catch (\PDOException $e) {
-        $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '“: ' . $e->getMessage();
-        error_log('add_popular_article migration error: ' . $e->getMessage());
-    }
-}
+$inserted    = $result['inserted'];
+$updated     = $result['updated'];
+$skipped     = $result['skipped'];
+$queuedTotal = $result['queued'];
+$errors      = $result['errors'];
 
 $total = count($articles);
 
