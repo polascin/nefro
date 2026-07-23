@@ -480,29 +480,54 @@ NEFRO_HTML,
 ];
 
 $stmt = $pdo->prepare(
-    "INSERT IGNORE INTO articles (title, slug, author, content, excerpt, category, published_at, is_top, is_published)
-     VALUES (:title, :slug, :author, :content, :excerpt, 'popularne', :published_at, :is_top, 1)"
+    "INSERT INTO articles (title, slug, author, content, excerpt, category, published_at, is_top, is_published)
+     VALUES (:title, :slug, :author, :content, :excerpt, 'popularne', :published_at, :is_top, 1)
+     ON DUPLICATE KEY UPDATE
+        title = VALUES(title), author = VALUES(author), content = VALUES(content),
+        excerpt = VALUES(excerpt), category = VALUES(category), is_top = VALUES(is_top),
+        is_published = VALUES(is_published), updated_at = NOW()"
 );
 
 $inserted = 0; $skipped = 0; $errors = []; $queuedTotal = 0;
 foreach ($articles as $a) {
     try {
         $stmt->execute([
-            'title' => $a['title'], 'slug' => $a['slug'], 'author' => $a['author'],
-            'content' => $a['content'], 'excerpt' => $a['excerpt'],
-            'published_at' => $a['published_at'], 'is_top' => $a['is_top'],
+            'title'        => $a['title'],
+            'slug'         => $a['slug'],
+            'author'       => $a['author'],
+            'content'      => $a['content'],
+            'excerpt'      => $a['excerpt'],
+            'published_at' => $a['published_at'],
+            'is_top'       => $a['is_top'],
         ]);
-        if ($stmt->rowCount() > 0) {
-            $inserted++;
-            $newId = (int) $pdo->lastInsertId();
-            try { $queuedTotal += enqueueArticleNewsletterEmails($pdo, $newId); }
-            catch (\Throwable $qe) { error_log('add_popular_article newsletter enqueue error: ' . $qe->getMessage()); }
-        } else {
+        // rowCount(): 1 = nový INSERT, 2 = UPDATE existujúceho článku, 0 = bez zmeny.
+        $rc = $stmt->rowCount();
+        if ($rc === 0) {
             $skipped++;
+            continue;
         }
+
+        $articleId = (int) $pdo->lastInsertId();
+        if ($articleId === 0) {
+            // UPDATE: lastInsertId nemusí vrátiť existujúce id → dohľadaj podľa slug.
+            $idStmt = $pdo->prepare("SELECT id FROM articles WHERE slug = :slug");
+            $idStmt->execute(['slug' => $a['slug']]);
+            $articleId = (int) $idStmt->fetchColumn();
+        }
+
+        // Newsletter avízo LEN pri prvom vložení, nikdy pri regenerácii/update.
+        if ($rc === 1) {
+            $inserted++;
+            try {
+                $queuedTotal += enqueueArticleNewsletterEmails($pdo, $articleId);
+            } catch (\Throwable $qe) {
+                error_log('add_article newsletter enqueue error: ' . $qe->getMessage());
+            }
+        }
+
     } catch (\PDOException $e) {
         $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '“: ' . $e->getMessage();
-        error_log('add_popular_article migration error: ' . $e->getMessage());
+        error_log('add_article migration error: ' . $e->getMessage());
     }
 }
 

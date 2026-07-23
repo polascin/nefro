@@ -74,8 +74,12 @@ $errors      = [];
 $queuedTotal = 0;
 
 $stmt = $pdo->prepare(
-    "INSERT IGNORE INTO articles (title, slug, author, content, excerpt, published_at, is_top, is_published)
-     VALUES (:title, :slug, :author, :content, :excerpt, :published_at, :is_top, 1)"
+    "INSERT INTO articles (title, slug, author, content, excerpt, published_at, is_top, is_published)
+     VALUES (:title, :slug, :author, :content, :excerpt, :published_at, :is_top, 1)
+     ON DUPLICATE KEY UPDATE
+        title = VALUES(title), author = VALUES(author), content = VALUES(content),
+        excerpt = VALUES(excerpt), is_top = VALUES(is_top), is_published = VALUES(is_published),
+        updated_at = NOW()"
 );
 
 foreach ($articles as $a) {
@@ -89,27 +93,41 @@ foreach ($articles as $a) {
             'published_at' => $a['published_at'],
             'is_top'       => $a['is_top'],
         ]);
-        if ($stmt->rowCount() > 0) {
+        // rowCount(): 1 = nový INSERT, 2 = UPDATE existujúceho článku, 0 = bez zmeny.
+        $rc = $stmt->rowCount();
+        if ($rc === 0) {
+            $skipped++;
+            continue;
+        }
+
+        $articleId = (int) $pdo->lastInsertId();
+        if ($articleId === 0) {
+            // UPDATE: lastInsertId nemusí vrátiť existujúce id → dohľadaj podľa slug.
+            $idStmt = $pdo->prepare("SELECT id FROM articles WHERE slug = :slug");
+            $idStmt->execute(['slug' => $a['slug']]);
+            $articleId = (int) $idStmt->fetchColumn();
+        }
+
+        // Newsletter avízo LEN pri prvom vložení, nikdy pri regenerácii/update.
+        if ($rc === 1) {
             $inserted++;
-            $newId = (int) $pdo->lastInsertId();
             try {
-                $queuedTotal += enqueueArticleNewsletterEmails($pdo, $newId);
+                $queuedTotal += enqueueArticleNewsletterEmails($pdo, $articleId);
             } catch (\Throwable $qe) {
                 error_log('add_article newsletter enqueue error: ' . $qe->getMessage());
             }
-            // Vygeneruj PDF verziu článku (bonus na stiahnutie pre prihlásených).
+        }
+
+            // Vygeneruj/preregeneruj PDF verziu článku (bonus na stiahnutie pre prihlásených).
             // Beží len ak je dostupné wkhtmltopdf (na produkčnom serveri áno).
             try {
-                $pdfRes = generateArticlePdf($pdo, $a + ['id' => $newId], true);
+                $pdfRes = generateArticlePdf($pdo, $a + ['id' => $articleId], true);
                 if (!$pdfRes['ok'] && !empty($pdfRes['error'])) {
                     error_log('add_article pdf gen: ' . $pdfRes['error']);
                 }
             } catch (\Throwable $pe) {
                 error_log('add_article pdf gen error: ' . $pe->getMessage());
             }
-        } else {
-            $skipped++;
-        }
     } catch (\PDOException $e) {
         $errors[] = 'Chyba pri článku „' . htmlspecialchars($a['title']) . '“: ' . $e->getMessage();
         error_log('add_article migration error: ' . $e->getMessage());
