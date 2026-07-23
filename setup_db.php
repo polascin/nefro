@@ -351,6 +351,24 @@ try {
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";
     $pdo->exec($adminExportsAuditSql);
 
+    $adminAuditLogSql = "CREATE TABLE IF NOT EXISTS admin_audit_log (
+        id BIGINT AUTO_INCREMENT PRIMARY KEY,
+        admin_user_id INT NOT NULL,
+        action VARCHAR(120) NOT NULL,
+        target_type VARCHAR(60) NULL,
+        target_id INT NULL,
+        details TEXT NULL,
+        client_ip VARCHAR(45) NULL,
+        user_agent VARCHAR(500) NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        INDEX idx_admin_audit_log_created_at (created_at),
+        INDEX idx_admin_audit_log_admin_user_id (admin_user_id),
+        INDEX idx_admin_audit_log_action (action),
+        CONSTRAINT fk_admin_audit_log_user FOREIGN KEY (admin_user_id) REFERENCES users(id) ON DELETE CASCADE
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";
+    $pdo->exec($adminAuditLogSql);
+    $cliOut("Tabuľka 'admin_audit_log' bola úspešne vytvorená alebo už existuje.\n");
+
     // ── Rate limiting pre formuláre (registrácia, reset hesla, atď.) ────────
     // UNIQUE KEY na (ip, action) je nevyhnutný pre správne fungovanie
     // ON DUPLICATE KEY UPDATE v register.php, resend_verification.php a verify_email.php.
@@ -837,9 +855,27 @@ try {
         country_code CHAR(2) NOT NULL DEFAULT 'SK',
         sort_order TINYINT NOT NULL DEFAULT 10,
         UNIQUE KEY uq_codebook_regions_code (code),
-        INDEX idx_codebook_regions_country (country_code)
+        INDEX idx_codebook_regions_country (country_code),
+        CONSTRAINT fk_codebook_regions_country FOREIGN KEY (country_code) REFERENCES codebook_countries(code) ON DELETE RESTRICT ON UPDATE CASCADE
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci");
     $cliOut("Tabuľka 'codebook_regions' bola úspešne vytvorená alebo už existuje.\n");
+
+    // Idempotentné pridanie FK na existujúcich DB
+    try {
+        $fkCheck = $pdo->prepare(
+            "SELECT 1 FROM information_schema.TABLE_CONSTRAINTS
+             WHERE TABLE_SCHEMA = DATABASE()
+               AND TABLE_NAME = 'codebook_regions'
+               AND CONSTRAINT_NAME = 'fk_codebook_regions_country'"
+        );
+        $fkCheck->execute();
+        if (!$fkCheck->fetch()) {
+            $pdo->exec("ALTER TABLE codebook_regions ADD CONSTRAINT fk_codebook_regions_country FOREIGN KEY (country_code) REFERENCES codebook_countries(code) ON DELETE RESTRICT ON UPDATE CASCADE");
+            $cliOut("FK codebook_regions(country_code) -> codebook_countries(code) pridané.\n");
+        }
+    } catch (\PDOException $e) {
+        error_log('setup_db codebook_regions FK migration error: ' . $e->getMessage());
+    }
 
     $pdo->exec("INSERT IGNORE INTO codebook_regions (code, name, country_code, sort_order) VALUES
         ('BL','Bratislavský kraj','SK',1),

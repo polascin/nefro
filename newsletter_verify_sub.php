@@ -8,8 +8,8 @@ if (!isset($pdo) || !$pdo instanceof \PDO) {
     throw new \RuntimeException('Databázové pripojenie nie je dostupné.');
 }
 
-const NEWSLETTER_VERIFY_MAX_ATTEMPTS = 20;
-const NEWSLETTER_VERIFY_WINDOW_SECS = 900;
+const NEWSLETTER_VERIFY_MAX_ATTEMPTS = 5;
+const NEWSLETTER_VERIFY_WINDOW_SECS = 3600;
 
 $requestMethod = strtoupper((string) ($_SERVER['REQUEST_METHOD'] ?? 'GET'));
 if (!in_array($requestMethod, ['GET', 'POST'], true)) {

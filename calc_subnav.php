@@ -63,6 +63,6 @@ $_calcSubnavItems = [
 <script nonce="<?= htmlspecialchars(function_exists('getScriptNonce') ? getScriptNonce() : '', ENT_QUOTES) ?>">
 window.calcIsGuest = <?= (function_exists('isLoggedIn') && isLoggedIn()) ? 'false' : 'true' ?>;
 <?php if (!empty($_calcProfile) && !empty(array_filter($_calcProfile))): ?>
-window.calcProfileData = <?= json_encode($_calcProfile, JSON_UNESCAPED_UNICODE) ?>;
+window.calcProfileData = <?= json_encode($_calcProfile, JSON_UNESCAPED_UNICODE | JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?>;
 <?php endif; ?>
 </script>

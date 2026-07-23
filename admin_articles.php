@@ -554,6 +554,11 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
             // ── NEWSLETTER: ZMAZAŤ ČAKAJÚCE ─────────────────────────────
             case "delete_pending_newsletter":
                 $articleId = (int) ($_POST["article_id"] ?? 0);
+                $confirmAll = (int) ($_POST["confirm_delete_all"] ?? 0);
+                if ($articleId <= 0 && $confirmAll !== 1) {
+                    $actionError = "Pre zmazanie všetkých čakajúcich avíz je potrebné explicitné potvrdenie.";
+                    break;
+                }
                 try {
                     if ($articleId > 0) {
                         $delStmt = $pdo->prepare(
@@ -581,6 +586,13 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
                         " čakajúcich avíz" .
                         ($articleId > 0 ? " pre daný článok" : "") .
                         ".";
+                    logAdminAction(
+                        $pdo,
+                        'delete_pending_newsletter',
+                        $articleId > 0 ? 'article' : null,
+                        $articleId > 0 ? $articleId : null,
+                        ['deleted_count' => $deletedCount, 'scope' => $articleId > 0 ? 'article' : 'all'],
+                    );
                 } catch (\PDOException $e) {
                     error_log(
                         "admin_articles delete_pending_newsletter error: " .
@@ -1131,6 +1143,8 @@ $filterArticleId
             <input type="hidden" name="action" value="delete_pending_newsletter">
             <?php if ($queueFilterArticleId > 0): ?>
               <input type="hidden" name="article_id" value="<?= $queueFilterArticleId ?>">
+            <?php else: ?>
+              <input type="hidden" name="confirm_delete_all" value="1">
             <?php endif; ?>
             <button type="submit" class="btn-secondary-small btn-danger-sm"
                     title="Natrvalo zmazať čakajúce avíza<?= $queueFilterArticleId > 0 ? ' pre daný článok' : '' ?>"

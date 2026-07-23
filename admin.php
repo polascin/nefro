@@ -12,7 +12,12 @@ const ERROR_USER_NOT_FOUND = 'Používateľ nenájdený.';
 $currentAdminId     = (int) ($_SESSION['user_id'] ?? 0);
 $actionResult       = null;
 $actionError        = null;
-$actionTempPassword = null;
+
+$adminTempPassword = null;
+if (!empty($_SESSION['admin_temp_password_flash'])) {
+    $adminTempPassword = $_SESSION['admin_temp_password_flash'];
+    unset($_SESSION['admin_temp_password_flash']);
+}
 
 if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
     $postedCsrf = $_POST['csrf_token'] ?? '';
@@ -36,6 +41,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     $newRole = ((int) $tUser['is_admin']) ? 0 : 1;
                     $pdo->prepare("UPDATE users SET is_admin = :role WHERE id = :id")->execute(['role' => $newRole, 'id' => $targetUserId]);
                     $actionResult = ($newRole ? 'Rola Admin udelená' : 'Rola Admin odňatá') . ' — ' . htmlspecialchars((string) $tUser['username']) . '.';
+                    logAdminAction($pdo, 'toggle_admin', 'user', $targetUserId, ['new_is_admin' => $newRole]);
                 } catch (\PDOException $e) {
                     error_log('Admin toggle_admin error: ' . $e->getMessage());
                     $actionError = 'Chyba pri zmene roly.';
@@ -55,6 +61,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     $newActive = ((int) $tUser['is_active']) ? 0 : 1;
                     $pdo->prepare("UPDATE users SET is_active = :active WHERE id = :id")->execute(['active' => $newActive, 'id' => $targetUserId]);
                     $actionResult = ($newActive ? 'Účet aktivovaný' : 'Účet deaktivovaný') . ' — ' . htmlspecialchars((string) $tUser['username']) . '.';
+                    logAdminAction($pdo, 'toggle_active', 'user', $targetUserId, ['new_is_active' => $newActive]);
                 } catch (\PDOException $e) {
                     error_log('Admin toggle_active error: ' . $e->getMessage());
                     $actionError = 'Chyba pri zmene stavu účtu.';
@@ -70,9 +77,10 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     $tempPwd = bin2hex(random_bytes(8));
                     $pdo->prepare("UPDATE users SET password_hash = :hash WHERE id = :id")
                         ->execute(['hash' => password_hash($tempPwd, PASSWORD_DEFAULT), 'id' => $targetUserId]);
-                    // Dočasné heslo uložené oddelene — výpis cez htmlspecialchars() + <code> v šablóne
                     $actionResult = 'Heslo resetované — ' . htmlspecialchars((string) $tUser['username']) . '.';
-                    $actionTempPassword = $tempPwd;
+                    // Heslo sa zobrazí iba raz cez session flash, nie v trvalej premennej šablóny
+                    $_SESSION['admin_temp_password_flash'] = $tempPwd;
+                    logAdminAction($pdo, 'reset_password', 'user', $targetUserId, []);
                 } catch (\PDOException $e) {
                     error_log('Admin reset_password error: ' . $e->getMessage());
                     $actionError = 'Chyba pri resete hesla.';
@@ -111,6 +119,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     $cntAvatar = $s3->rowCount();
 
                     $actionResult = "Čistenie dokončené: {$profileScrub['updated']} prof. záznamov minimalizovaných, {$profileScrub['deleted']} prázdnych zmazaných, {$cntProfile} prof. záznamov po lehote, {$cntAvatar} avatar záznamov a {$cntFiles} súborov zmazaných (retenčná lehota: {$retDays} dní).";
+                    logAdminAction($pdo, 'run_cleanup', null, null, ['retention_days' => $retDays, 'deleted_profile' => $cntProfile, 'deleted_avatar' => $cntAvatar, 'deleted_files' => $cntFiles]);
                 } catch (\PDOException $e) {
                     error_log('Cleanup error: ' . $e->getMessage());
                     $actionError = 'Chyba počas cleanup operácie.';
@@ -311,8 +320,8 @@ $pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
             <?php if ($actionResult !== null): ?>
                 <div class="alert alert-success">
                     <p><?= htmlspecialchars($actionResult) ?></p>
-                    <?php if ($actionTempPassword !== null): ?>
-                        <p>Dočasné heslo: <code><?= htmlspecialchars($actionTempPassword) ?></code></p>
+                    <?php if ($adminTempPassword !== null): ?>
+                        <p>Dočasné heslo: <code><?= htmlspecialchars($adminTempPassword) ?></code></p>
                         <p><em>Heslo sa zobrazí iba raz. Odovzdajte ho používateľovi bezpečným kanálom.</em></p>
                     <?php endif; ?>
                 </div>

@@ -217,6 +217,47 @@ function requireAdmin(): void {
 }
 
 /**
+ * Audit log pre kritické admin operácie.
+ * Bezpečne zlyháva — chyba zápisu nezastaví aplikáciu, len sa zapíše do error logu.
+ *
+ * @param PDO $pdo            Aktívne PDO pripojenie
+ * @param string $action      Identifikátor akcie (napr. 'delete_pending_newsletter')
+ * @param string|null $targetType Typ cieľovej entity (napr. 'article', 'user')
+ * @param int|null $targetId  ID cieľovej entity
+ * @param array $details      Voliteľné štruktúrované detaily (ukladá sa JSON)
+ */
+function logAdminAction(
+    PDO $pdo,
+    string $action,
+    ?string $targetType = null,
+    ?int $targetId = null,
+    array $details = [],
+): void {
+    if (!isLoggedIn() || empty($_SESSION['user_id'])) {
+        return;
+    }
+
+    try {
+        $stmt = $pdo->prepare(
+            "INSERT INTO admin_audit_log
+                (admin_user_id, action, target_type, target_id, details, client_ip, user_agent)
+             VALUES (:admin_user_id, :action, :target_type, :target_id, :details, :client_ip, :user_agent)"
+        );
+        $stmt->execute([
+            ':admin_user_id' => (int) $_SESSION['user_id'],
+            ':action'        => substr($action, 0, 120),
+            ':target_type'   => $targetType !== null ? substr($targetType, 0, 60) : null,
+            ':target_id'     => $targetId,
+            ':details'       => empty($details) ? null : json_encode($details, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES),
+            ':client_ip'     => $_SERVER['REMOTE_ADDR'] ?? null,
+            ':user_agent'    => $_SERVER['HTTP_USER_AGENT'] ?? null,
+        ]);
+    } catch (\Throwable $e) {
+        error_log('logAdminAction failed: ' . $e->getMessage());
+    }
+}
+
+/**
  * Generovanie CSRF tokenu (Synchronizer Token Pattern).
  * Token je generovaný raz za reláciu a uložený v session.
  * Po úspešnej validácii POST formulára sa token rotuje (pozri validateCsrfToken).

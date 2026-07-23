@@ -410,7 +410,13 @@ if ($fQuery !== '') {
 }
 
 // ── Export (bod 1) — CSV / JSON / vCard; rešpektuje aktuálne filtre; admin už overený ──
-$exportFmt = strtolower((string) ($_GET['export'] ?? ''));
+$exportFmt = '';
+if (
+    $_SERVER['REQUEST_METHOD'] === 'POST'
+    && validateCsrfToken((string) ($_POST['csrf_token'] ?? ''))
+) {
+    $exportFmt = strtolower((string) ($_GET['export'] ?? $_POST['export'] ?? ''));
+}
 if (in_array($exportFmt, ['csv', 'json', 'vcard'], true)) {
     $expStmt = $pdo->prepare('SELECT * FROM partner_providers' . $where . ' ORDER BY provider_type ASC, name ASC');
     $expStmt->execute($params);
@@ -575,9 +581,11 @@ $contactCounts = [];
 if (!empty($providers)) {
     $ids = array_map('intval', array_column($providers, 'id'));
     if ($ids !== []) {
-        $inList = implode(',', $ids);
+        $placeholders = rtrim(str_repeat('?,', count($ids)), ',');
         try {
-            foreach ($pdo->query("SELECT provider_id, COUNT(*) c FROM provider_contacts WHERE provider_id IN ($inList) GROUP BY provider_id") as $r) {
+            $ccStmt = $pdo->prepare("SELECT provider_id, COUNT(*) c FROM provider_contacts WHERE provider_id IN ($placeholders) GROUP BY provider_id");
+            $ccStmt->execute($ids);
+            foreach ($ccStmt->fetchAll(\PDO::FETCH_ASSOC) as $r) {
                 $contactCounts[(int) $r['provider_id']] = (int) $r['c'];
             }
         } catch (\PDOException $e) {
@@ -1057,10 +1065,23 @@ $isEdit = $editProvider !== null;
 
           <button type="submit" class="btn-secondary-small">Filtrovať</button>
           <a href="admin_providers.php" class="btn-secondary-small">Reset</a>
-          <a href="admin_providers.php<?= ppAdminQs(['export' => 'csv']) ?>" class="btn-secondary-small" title="Export do CSV (Excel)">⬇ CSV</a>
-          <a href="admin_providers.php<?= ppAdminQs(['export' => 'json']) ?>" class="btn-secondary-small" title="Export do JSON">⬇ JSON</a>
-          <a href="admin_providers.php<?= ppAdminQs(['export' => 'vcard']) ?>" class="btn-secondary-small" title="Export do vCard (kontakty .vcf)">⬇ vCard</a>
-          <a href="admin_providers.php?export=history" class="btn-secondary-small" title="Export celej histórie kontaktov do CSV">⬇ História CSV</a>
+          <?php $exportCsrf = htmlspecialchars(generateCsrfToken(), ENT_QUOTES); ?>
+          <form method="POST" action="admin_providers.php<?= ppAdminQs(['export' => 'csv']) ?>" class="d-inline">
+            <input type="hidden" name="csrf_token" value="<?= $exportCsrf ?>">
+            <button type="submit" class="btn-secondary-small" title="Export do CSV (Excel)">⬇ CSV</button>
+          </form>
+          <form method="POST" action="admin_providers.php<?= ppAdminQs(['export' => 'json']) ?>" class="d-inline">
+            <input type="hidden" name="csrf_token" value="<?= $exportCsrf ?>">
+            <button type="submit" class="btn-secondary-small" title="Export do JSON">⬇ JSON</button>
+          </form>
+          <form method="POST" action="admin_providers.php<?= ppAdminQs(['export' => 'vcard']) ?>" class="d-inline">
+            <input type="hidden" name="csrf_token" value="<?= $exportCsrf ?>">
+            <button type="submit" class="btn-secondary-small" title="Export do vCard (kontakty .vcf)">⬇ vCard</button>
+          </form>
+          <form method="POST" action="admin_providers.php?export=history" class="d-inline">
+            <input type="hidden" name="csrf_token" value="<?= $exportCsrf ?>">
+            <button type="submit" class="btn-secondary-small" title="Export celej histórie kontaktov do CSV">⬇ História CSV</button>
+          </form>
           <button type="button" id="btnPrintProviders" class="btn-secondary-small" title="Vytlačiť aktuálny výber">🖨 Tlačiť</button>
         </form>
 

@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/email_verification.php';
 
+const NEWSLETTER_UNSUBSCRIBE_DEFAULT_TTL = 2592000; // 30 dní
+const NEWSLETTER_UNSUBSCRIBE_MAX_TTL     = 2592000; // 30 dní
+
 if (!function_exists('acquireNewsletterProcessLock')) {
     function acquireNewsletterProcessLock(PDO $pdo, string $lockName, int $timeoutSeconds = 0): bool
     {
@@ -29,10 +32,6 @@ if (!function_exists('releaseNewsletterProcessLock')) {
 if (!function_exists('getNewsletterUnsubscribeSecret')) {
     function getNewsletterUnsubscribeSecret(): string
     {
-        if (!function_exists('isAppLocalDev')) {
-            require_once __DIR__ . '/auth.php';
-        }
-
         static $secret = null;
         if ($secret !== null) {
             return $secret;
@@ -41,39 +40,41 @@ if (!function_exists('getNewsletterUnsubscribeSecret')) {
         $rawSecret = '';
         try {
             $env = loadAppConfig();
-            // Povolené zdroje kľúča: iba dedikované aplikačné tajomstvá.
-            // DB_PASS a SMTP_PASS sú zámerne vynechané — ich únik by umožnil
-            // falšovanie odhlasovacích odkazov.
-            $candidates = [
-                (string) ($env['NEWSLETTER_UNSUBSCRIBE_SECRET'] ?? ''),
-                (string) ($env['APP_KEY'] ?? ''),
-                (string) ($env['APP_SECRET'] ?? ''),
-            ];
-            foreach ($candidates as $candidate) {
-                $candidate = trim($candidate);
-                if ($candidate !== '') {
-                    $rawSecret = $candidate;
-                    break;
-                }
-            }
+            $rawSecret = trim((string) ($env['NEWSLETTER_UNSUBSCRIBE_SECRET'] ?? ''));
         } catch (\RuntimeException $e) {
             error_log('Newsletter secret config loading failed: ' . $e->getMessage());
         }
 
         if ($rawSecret === '') {
-            $isLocal = function_exists('isAppLocalDev') && isAppLocalDev();
-            if ($isLocal) {
-                error_log('SECURITY WARNING: NEWSLETTER_UNSUBSCRIBE_SECRET is not set in env.ini. Using a temporary, insecure development key.');
-                $rawSecret = 'dev-insecure-newsletter-secret';
+            if (isAppLocalDev()) {
+                $rawSecret = _getDevNewsletterUnsubscribeSecret();
             } else {
-                // V produkcii je dedikovaný kľúč povinný. Pád aplikácie je v tomto prípade
-                // bezpečnostné opatrenie, ktoré núti administrátora nakonfigurovať kľúč.
-                throw new \RuntimeException('NEWSLETTER_UNSUBSCRIBE_SECRET is not configured in env.ini. This is mandatory for production environments.');
+                throw new \RuntimeException(
+                    'NEWSLETTER_UNSUBSCRIBE_SECRET is not configured in env.ini. ' .
+                    'This is mandatory for production environments.'
+                );
             }
         }
 
         $secret = hash('sha256', $rawSecret);
         return $secret;
+    }
+}
+
+if (!function_exists('_getDevNewsletterUnsubscribeSecret')) {
+    function _getDevNewsletterUnsubscribeSecret(): string
+    {
+        $path = sys_get_temp_dir() . '/nefro-newsletter-unsub-' . md5(__DIR__) . '.secret';
+        if (is_file($path)) {
+            $stored = @file_get_contents($path);
+            if ($stored !== false && trim($stored) !== '') {
+                return trim($stored);
+            }
+        }
+        $raw = bin2hex(random_bytes(32));
+        @file_put_contents($path, $raw, LOCK_EX);
+        error_log('SECURITY WARNING: NEWSLETTER_UNSUBSCRIBE_SECRET is not set in env.ini. Generated temporary dev key: ' . $path);
+        return $raw;
     }
 }
 
@@ -87,9 +88,9 @@ if (!function_exists('buildNewsletterUnsubscribeSignature')) {
 }
 
 if (!function_exists('buildNewsletterUnsubscribeUrl')) {
-    function buildNewsletterUnsubscribeUrl(int $userId, string $email, int $ttlSeconds = 2592000): string
+    function buildNewsletterUnsubscribeUrl(int $userId, string $email, int $ttlSeconds = NEWSLETTER_UNSUBSCRIBE_DEFAULT_TTL): string
     {
-        $ttlSeconds = max(3600, min(31536000, $ttlSeconds));
+        $ttlSeconds = max(3600, min(NEWSLETTER_UNSUBSCRIBE_MAX_TTL, $ttlSeconds));
         $expiresAt = time() + $ttlSeconds;
         $signature = buildNewsletterUnsubscribeSignature($userId, $email, $expiresAt);
 
@@ -110,7 +111,7 @@ if (!function_exists('verifyNewsletterUnsubscribeSignature')) {
             return false;
         }
 
-        if ($expiresAt > (time() + 31536000)) {
+        if ($expiresAt > (time() + NEWSLETTER_UNSUBSCRIBE_MAX_TTL)) {
             return false;
         }
 
@@ -437,9 +438,9 @@ if (!function_exists('buildSubscriberUnsubscribeUrl')) {
 }
 
 if (!function_exists('buildSubscriberUnsubscribeHmacUrl')) {
-    function buildSubscriberUnsubscribeHmacUrl(int $subscriberId, string $email, int $ttlSeconds = 315360000): string
+    function buildSubscriberUnsubscribeHmacUrl(int $subscriberId, string $email, int $ttlSeconds = NEWSLETTER_UNSUBSCRIBE_DEFAULT_TTL): string
     {
-        $ttlSeconds      = max(86400, min(315360000, $ttlSeconds));
+        $ttlSeconds      = max(86400, min(NEWSLETTER_UNSUBSCRIBE_MAX_TTL, $ttlSeconds));
         $expiresAt       = time() + $ttlSeconds;
         $normalizedEmail = strtolower(trim($email));
         $payload         = $subscriberId . '|' . $normalizedEmail . '|' . $expiresAt;
@@ -458,6 +459,9 @@ if (!function_exists('verifySubscriberUnsubscribeHmac')) {
             return false;
         }
         if ($expiresAt < time()) {
+            return false;
+        }
+        if ($expiresAt > (time() + NEWSLETTER_UNSUBSCRIBE_MAX_TTL)) {
             return false;
         }
         $normalizedEmail = strtolower(trim($email));
@@ -510,13 +514,17 @@ if (!function_exists('processNlSubQueue')) {
 
         $stats = ['selected' => 0, 'sent' => 0, 'failed' => 0, 'cancelled' => 0, 'skipped' => 0];
 
-        $selectStmt = $pdo->prepare("SELECT id FROM nl_sub_queue
-            WHERE status IN ('pending','failed')
-              AND attempts < :max_attempts
-              AND next_attempt_at <= NOW()
-              AND sent_at IS NULL
-            ORDER BY next_attempt_at ASC, id ASC
-            LIMIT :limit_rows");
+        try {
+            $pdo->beginTransaction();
+
+            $selectStmt = $pdo->prepare("SELECT id FROM nl_sub_queue
+                WHERE status IN ('pending','failed')
+                  AND attempts < :max_attempts
+                  AND next_attempt_at <= NOW()
+                  AND sent_at IS NULL
+                ORDER BY next_attempt_at ASC, id ASC
+                LIMIT :limit_rows
+                FOR UPDATE");
         $selectStmt->bindValue(':max_attempts', $maxAttempts, PDO::PARAM_INT);
         $selectStmt->bindValue(':limit_rows', $limit, PDO::PARAM_INT);
         $selectStmt->execute();
@@ -609,8 +617,16 @@ if (!function_exists('processNlSubQueue')) {
             }
         }
 
+        $pdo->commit();
+        return $stats;
+    } catch (\Throwable $e) {
+        if ($pdo->inTransaction()) {
+            $pdo->rollBack();
+        }
+        error_log('processNlSubQueue error: ' . $e->getMessage());
         return $stats;
     }
+}
 }
 
 if (!function_exists('processArticleNewsletterQueue')) {
@@ -627,14 +643,18 @@ if (!function_exists('processArticleNewsletterQueue')) {
             'skipped' => 0,
         ];
 
-        $selectStmt = $pdo->prepare("SELECT id
-            FROM article_newsletter_queue
-            WHERE status IN ('pending', 'failed')
-              AND attempts < :max_attempts
-              AND next_attempt_at <= NOW()
-              AND sent_at IS NULL
-            ORDER BY next_attempt_at ASC, id ASC
-            LIMIT :limit_rows");
+        try {
+            $pdo->beginTransaction();
+
+            $selectStmt = $pdo->prepare("SELECT id
+                FROM article_newsletter_queue
+                WHERE status IN ('pending', 'failed')
+                  AND attempts < :max_attempts
+                  AND next_attempt_at <= NOW()
+                  AND sent_at IS NULL
+                ORDER BY next_attempt_at ASC, id ASC
+                LIMIT :limit_rows
+                FOR UPDATE");
         $selectStmt->bindValue(':max_attempts', $maxAttempts, PDO::PARAM_INT);
         $selectStmt->bindValue(':limit_rows', $limit, PDO::PARAM_INT);
         $selectStmt->execute();
@@ -809,8 +829,16 @@ if (!function_exists('processArticleNewsletterQueue')) {
             }
         }
 
+        $pdo->commit();
+        return $stats;
+    } catch (\Throwable $e) {
+        if ($pdo->inTransaction()) {
+            $pdo->rollBack();
+        }
+        error_log('processArticleNewsletterQueue error: ' . $e->getMessage());
         return $stats;
     }
+}
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
