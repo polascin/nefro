@@ -86,7 +86,7 @@ $canonicalUrl = 'https://nefro.polascin.net/admin_reauth.php';
       <?php endif; ?>
 
       <form method="POST" action="admin_reauth.php" class="form-section">
-        <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(getCsrfToken()) ?>">
+        <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
         <div class="form-group">
           <label for="password">Heslo</label>
           <input type="password" id="password" name="password" class="form-control" required autocomplete="current-password" autofocus>

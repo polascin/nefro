@@ -8,14 +8,14 @@ if (file_exists($deployInfoFile)) {
 
 // DEPLOY_TIME má prednosť pred filemtime nastavovaným jednotlivými stránkami,
 // okrem stránok, ktoré explicitne žiadajú vlastný dátum (napr. article.php).
-$pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
+$pageTimeZone = getUserTimezoneAbbr() . ' (' . getUserTimezone() . ')';
 if (!isset($usePageLastUpdated) && defined('DEPLOY_TIME')) {
-    $pageLastUpdated = DEPLOY_TIME;
+    $pageLastUpdated = formatUserDateTime(DEPLOY_TIME, 'd.m.Y H:i', 'd.m.Y H:i');
 } elseif (!isset($pageLastUpdated)) {
     $currentFile     = $_SERVER['SCRIPT_FILENAME'] ?? '';
     $pageLastUpdated = ($currentFile !== '' && file_exists($currentFile))
-        ? date('d.m.Y H:i', (int) filemtime($currentFile))
-        : date('d.m.Y H:i');
+        ? formatUserTimestamp((int) filemtime($currentFile))
+        : formatUserTimestamp(time());
 }
 
 $isHomePage = basename($_SERVER['PHP_SELF']) === 'index.php';

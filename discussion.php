@@ -171,7 +171,12 @@ function formatDiscDate(string $datetime): string
         7  => 'júla',     8  => 'augusta',   9  => 'septembra',
         10 => 'októbra',  11 => 'novembra', 12 => 'decembra',
     ];
-    return (int) date('j', $ts) . '. ' . ($months[(int) date('n', $ts)] ?? '') . ' ' . date('Y', $ts);
+    try {
+        $dt = (new DateTimeImmutable("@{$ts}"))->setTimezone(new DateTimeZone(getUserTimezone()));
+    } catch (\Throwable) {
+        return (int) date('j', $ts) . '. ' . ($months[(int) date('n', $ts)] ?? '') . ' ' . date('Y', $ts);
+    }
+    return (int) $dt->format('j') . '. ' . ($months[(int) $dt->format('n')] ?? '') . ' ' . $dt->format('Y');
 }
 
 function discDisplayName(array $row): string

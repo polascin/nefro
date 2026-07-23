@@ -24,11 +24,13 @@ if (!function_exists('popSkMonths')) {
 if (!function_exists('popFormatDate')) {
     function popFormatDate(string $datetime, array $months): string
     {
-        $ts = strtotime($datetime);
-        if (!$ts) {
+        try {
+            $dt = new DateTimeImmutable($datetime, new DateTimeZone(date_default_timezone_get() ?: 'Europe/Bratislava'));
+            $dt = $dt->setTimezone(new DateTimeZone(getUserTimezone()));
+        } catch (\Throwable) {
             return htmlspecialchars($datetime);
         }
-        return (int) date("j", $ts) . ". " . ($months[(int) date("n", $ts)] ?? "") . " " . date("Y", $ts);
+        return (int) $dt->format("j") . ". " . ($months[(int) $dt->format("n")] ?? "") . " " . $dt->format("Y");
     }
 }
 

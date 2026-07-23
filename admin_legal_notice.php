@@ -13,7 +13,8 @@ $current = legalNoticeCurrentVersionInfo();
 $currentDispatched = $current['version'] !== '' && legalNoticeRunExists($pdo, $current['version']);
 $runs = getLegalNoticeOverview($pdo);
 
-$pageLastUpdated = date('d.m.Y H:i', filemtime(__FILE__));
+$pageLastUpdated = formatUserTimestamp((int) filemtime(__FILE__));
+$pageTimeZone = getUserTimezoneAbbr() . ' (' . getUserTimezone() . ')';
 ?>
 <!DOCTYPE html>
 <html lang="sk">

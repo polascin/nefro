@@ -45,7 +45,8 @@ if ($requestMethod === 'POST') {
         try {
             $stmt = $pdo->prepare(
                 "SELECT id, email, username, is_admin, is_active, email_verified_at,
-                        totp_secret, totp_enabled, totp_backup_codes, totp_last_counter, password_hash
+                        totp_secret, totp_enabled, totp_backup_codes, totp_last_counter, password_hash,
+                        timezone
                  FROM users WHERE id = :id"
             );
             $stmt->execute(['id' => $pendingUserId]);
@@ -113,7 +114,8 @@ if ($requestMethod === 'POST') {
                     $pdo->beginTransaction();
                     $lockStmt = $pdo->prepare(
                         "SELECT id, email, username, is_admin, is_active, email_verified_at,
-                                totp_secret, totp_enabled, totp_backup_codes, totp_last_counter, password_hash
+                                totp_secret, totp_enabled, totp_backup_codes, totp_last_counter, password_hash,
+                                timezone
                          FROM users WHERE id = :id FOR UPDATE"
                     );
                     $lockStmt->execute(['id' => $pendingUserId]);

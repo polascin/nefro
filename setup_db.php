@@ -80,6 +80,7 @@ try {
         is_admin TINYINT(1) DEFAULT 0,
         is_active TINYINT(1) DEFAULT 1,
         newsletter_consent TINYINT(1) DEFAULT 0,
+        timezone VARCHAR(64) NOT NULL DEFAULT 'Europe/Bratislava' COMMENT 'Preferované časové pásmo používateľa',
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";
@@ -158,6 +159,12 @@ try {
     if (!columnExists($pdo, 'users', 'theme_auto')) {
         $pdo->exec("ALTER TABLE users ADD COLUMN theme_auto TINYINT(1) NOT NULL DEFAULT 1 COMMENT 'Automaticky sledovať systémovú tému (1=áno, 0=manuálne)' AFTER newsletter_consent");
         $cliOut("Migrácia: theme_auto pridané.\n");
+    }
+
+    // ── Migrácia: preferované časové pásmo používateľa ───────────────────────
+    if (!columnExists($pdo, 'users', 'timezone')) {
+        $pdo->exec("ALTER TABLE users ADD COLUMN timezone VARCHAR(64) NOT NULL DEFAULT 'Europe/Bratislava' COMMENT 'Preferované časové pásmo používateľa' AFTER theme_auto");
+        $cliOut("Migrácia: timezone pridané.\n");
     }
 
     // ── Migrácia: rate-limit stĺpce pre SMS overovanie ───────────────────────

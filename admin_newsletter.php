@@ -181,7 +181,8 @@ try {
 }
 
 $csrfToken = generateCsrfToken();
-$pageLastUpdated = date('d.m.Y H:i', filemtime(__FILE__));
+$pageLastUpdated = formatUserTimestamp((int) filemtime(__FILE__));
+$pageTimeZone = getUserTimezoneAbbr() . ' (' . getUserTimezone() . ')';
 ?>
 <!DOCTYPE html>
 <html lang="sk">

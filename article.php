@@ -64,21 +64,23 @@ $months = [
     12 => "decembra",
 ];
 
-function formatArticleDate(string $datetime, array $months): string
+function formatArticlePageDate(string $datetime, array $months): string
 {
-    $ts = strtotime($datetime);
-    if (!$ts) {
+    try {
+        $dt = new DateTimeImmutable($datetime, new DateTimeZone(date_default_timezone_get() ?: 'Europe/Bratislava'));
+        $dt = $dt->setTimezone(new DateTimeZone(getUserTimezone()));
+    } catch (\Throwable) {
         return htmlspecialchars($datetime);
     }
-    $formatted = (int) date("j", $ts) .
+    $formatted = (int) $dt->format("j") .
         ". " .
-        ($months[(int) date("n", $ts)] ?? "") .
+        $months[(int) $dt->format("n")] .
         " " .
-        date("Y", $ts);
+        $dt->format("Y");
     // Čas pripoj len ak je zmysluplný (nie polnoc) — staršie články bez času
     // (00:00) tak zostanú zobrazené len dátumom.
-    if (date("H:i", $ts) !== "00:00") {
-        $formatted .= " o " . date("H:i", $ts);
+    if ($dt->format("H:i") !== "00:00") {
+        $formatted .= " o " . $dt->format("H:i");
     }
     return $formatted;
 }
@@ -178,9 +180,9 @@ $pageTitle = $pageTitleRaw; // head_meta.php: htmlspecialchars($pageTitle)
 $canonicalUrl = $canonicalUrlRaw; // head_meta.php: htmlspecialchars($canonicalUrl)
 // $metaDescriptionRaw sa odovzdá priamo ako $seoDescription (pozri nižšie v <head>)
 $pageLastUpdated     = $article
-    ? date("d.m.Y H:i", strtotime((string) $article["updated_at"]))
-    : date("d.m.Y H:i", filemtime(__FILE__));
-$pageTimeZone        = date("T") . " (" . date_default_timezone_get() . ")";
+    ? formatUserDateTime((string) $article["updated_at"])
+    : formatUserTimestamp((int) filemtime(__FILE__));
+$pageTimeZone        = getUserTimezoneAbbr() . " (" . getUserTimezone() . ")";
 $usePageLastUpdated  = true; // zachovaj dátum článku, nie deploy timestamp
 $robotsMeta = $article
     ? "index, follow, max-image-preview:large"
@@ -333,8 +335,8 @@ if ($article) {
         <?php } else {
           /* Dôverované HTML — správuje iba admin */
           $pubDate = (string) $article["published_at"];
-          $pubDateIso = htmlspecialchars(date('c', strtotime($pubDate) ?: time()));
-          $pubDateSk = formatArticleDate($pubDate, $months);
+          $pubDateIso = htmlspecialchars(formatUserDateTime($pubDate, 'c'));
+          $pubDateSk = formatArticlePageDate($pubDate, $months);
           $isTop = (int) $article["is_top"] === 1;
           $articleCategory = $article["category"] ?? "odborne";
           $isPopular = $articleCategory === "popularne";

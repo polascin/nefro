@@ -149,6 +149,7 @@ if ($requestMethod === 'POST' && ($_POST['action'] ?? '') !== 'delete_account') 
             'social_x', 'social_facebook', 'social_instagram', 'social_other',
             'other_contact', 'website', 'birth_date', 'street', 'house_number',
             'orientation_number', 'zip_code', 'city', 'district', 'region', 'country', 'address_note',
+            'timezone',
         ];
 
         $data = [];
@@ -164,6 +165,10 @@ if ($requestMethod === 'POST' && ($_POST['action'] ?? '') !== 'delete_account') 
         if (!in_array($data['gender'], $allowedGenders, true)) { $data['gender'] = null; }
         // Whitelist pre typ používateľa — hodnoty musia zodpovedať getUserTypeGroups()
         if (!in_array($data['user_type'], getUserTypeWhitelist(), true)) { $data['user_type'] = null; }
+        // Whitelist pre časové pásmo — iba schválené IANA identifikátory
+        if (!array_key_exists((string) $data['timezone'], getAllowedUserTimezones())) {
+            $data['timezone'] = getUserTimezone();
+        }
         // Pronouns sú voľný text (input type="text") — dĺžkovo obmedzíme (50 znakov)
         if ($data['pronouns'] !== null) {
             $data['pronouns'] = mb_substr((string) $data['pronouns'], 0, 50, 'UTF-8') ?: null;
@@ -431,6 +436,7 @@ if ($requestMethod === 'POST' && ($_POST['action'] ?? '') !== 'delete_account') 
                     address_note = :address_note, newsletter_consent = :newsletter_consent,
                     avatar_path = :avatar_path,
                     theme_auto = :theme_auto,
+                    timezone = :timezone,
                     mobile_verified_at = :mobile_verified_at,
                     mobile_verification_code_hash = :mobile_verification_code_hash,
                     mobile_verification_expires_at = :mobile_verification_expires_at,
@@ -511,12 +517,13 @@ if ($requestMethod === 'POST' && ($_POST['action'] ?? '') !== 'delete_account') 
                     $_SESSION['username'] = $data['username'];
                 }
                 $_SESSION['theme_auto'] = $data['theme_auto'];
+                $_SESSION['timezone'] = $data['timezone'];
 
                 // Obnova údajov
                 $stmt = $pdo->prepare("SELECT * FROM users WHERE id = :id");
                 $stmt->execute(['id' => $user_id]);
                 $user = $stmt->fetch();
-                if (is_array($user) && $success) {
+                if (is_array($user)) {
                     refreshCurrentSessionAuthFingerprint($user);
                 }
 

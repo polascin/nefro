@@ -5,7 +5,8 @@ declare(strict_types=1);
 require_once __DIR__ . '/legal_data.php';
 
 $info = legalInfo();
-$pageLastUpdated = date('d.m.Y', strtotime($info['effectiveDate']));
+$pageLastUpdated = formatUserDateTime($info['effectiveDate'], 'd.m.Y');
+$pageTimeZone = getUserTimezoneAbbr() . ' (' . getUserTimezone() . ')';
 
 $legalTitle       = 'Podmienky používania';
 $legalDescription = 'Podmienky používania webovej lokality Nefro-projekt Slovensko — kontá, prijateľné používanie, zdravotnícky disclaimer, zodpovednosť a vaše spotrebiteľské práva.';

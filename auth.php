@@ -148,6 +148,9 @@ if (!empty($_SESSION['user_id'])) {
 sendSecurityHeaders();
 registerAccessLogger();
 
+// Referenčné časové pásmo aplikácie je CET/SEČ prípadne CEST/LSEČ.
+date_default_timezone_set('Europe/Bratislava');
+
 /**
  * Funkcia na overenie, či má používateľ overený e-mail
  * @return bool
@@ -177,11 +180,7 @@ function hashAppPassword(string $password): string {
     if (!isAppPasswordValid($password)) {
         throw new \InvalidArgumentException('Heslo nespĺňa bezpečnostné pravidlá.');
     }
-    $hash = password_hash($password, PASSWORD_DEFAULT);
-    if (!is_string($hash) || $hash === '') {
-        throw new \RuntimeException('Heslo sa nepodarilo bezpečne zahashovať.');
-    }
-    return $hash;
+    return password_hash($password, PASSWORD_DEFAULT);
 }
 
 /**
@@ -448,7 +447,8 @@ function synchronizeAuthenticatedSession(PDO $pdo): bool {
 
     $stmt = $pdo->prepare(
         'SELECT id, username, email, password_hash, is_admin, is_active,
-                email_verified_at, totp_enabled, totp_secret, totp_backup_codes
+                email_verified_at, totp_enabled, totp_secret, totp_backup_codes,
+                timezone
          FROM users WHERE id = :id LIMIT 1'
     );
     $stmt->execute(['id' => (int) $_SESSION['user_id']]);
@@ -474,6 +474,7 @@ function synchronizeAuthenticatedSession(PDO $pdo): bool {
     $_SESSION['is_admin'] = (int) ($user['is_admin'] ?? 0);
     $_SESSION['email_verified'] = !empty($user['email_verified_at']) ? 1 : 0;
     $_SESSION['totp_enabled'] = (int) ($user['totp_enabled'] ?? 0);
+    $_SESSION['timezone'] = getUserTimezone($user);
     if (empty($_SESSION['totp_verified_at'])) {
         $_SESSION['totp_verified_at'] = time();
     }
@@ -1163,5 +1164,126 @@ function completeTwoFactorLogin(array $user): void
     $_SESSION['totp_enabled']     = (int) ($user['totp_enabled'] ?? 0);
     $_SESSION['totp_verified_at'] = time();
     $_SESSION['_last_activity']   = time();
+    $_SESSION['timezone']         = getUserTimezone($user);
     refreshCurrentSessionAuthFingerprint($user);
+}
+
+/**
+ * Zoznam podporovaných časových pásiem, ktoré používateľ môže zvoliť v profile.
+ * Predvolené je CET/CEST (Europe/Bratislava).
+ */
+function getAllowedUserTimezones(): array
+{
+    return [
+        'Europe/Bratislava'  => 'CET/CEST — Bratislava, Praha, Viedeň, Budapešť',
+        'Europe/Prague'      => 'CET/CEST — Praha',
+        'Europe/Vienna'      => 'CET/CEST — Viedeň',
+        'Europe/Budapest'    => 'CET/CEST — Budapešť',
+        'Europe/Berlin'      => 'CET/CEST — Berlín',
+        'Europe/Warsaw'      => 'CET/CEST — Varšava',
+        'Europe/Paris'       => 'CET/CEST — Paríž',
+        'Europe/Rome'        => 'CET/CEST — Rím',
+        'Europe/Zurich'      => 'CET/CEST — Zürich',
+        'Europe/London'      => 'GMT/BST — Londýn',
+        'Europe/Dublin'      => 'GMT/IST — Dublin',
+        'Europe/Moscow'      => 'MSK — Moskva',
+        'UTC'                => 'UTC',
+        'America/New_York'   => 'ET — New York',
+        'America/Chicago'    => 'CT — Chicago',
+        'America/Denver'     => 'MT — Denver',
+        'America/Los_Angeles'=> 'PT — Los Angeles',
+        'America/Toronto'    => 'ET — Toronto',
+        'America/Sao_Paulo'  => 'BRT — São Paulo',
+        'Asia/Tokyo'         => 'JST — Tokio',
+        'Asia/Shanghai'      => 'CST — Šanghaj',
+        'Asia/Dubai'         => 'GST — Dubaj',
+        'Asia/Kolkata'       => 'IST — India',
+        'Australia/Sydney'   => 'AEDT/AEST — Sydney',
+        'Pacific/Auckland'   => 'NZDT/NZST — Auckland',
+    ];
+}
+
+/**
+ * Vráti platný identifikátor časového pásma pre používateľa.
+ * @param array<string,mixed>|null $user
+ */
+function getUserTimezone(?array $user = null): string
+{
+    $allowed = array_keys(getAllowedUserTimezones());
+    $timezone = '';
+    if (is_array($user) && isset($user['timezone'])) {
+        $timezone = trim((string) $user['timezone']);
+    } elseif (isset($_SESSION['timezone'])) {
+        $timezone = trim((string) $_SESSION['timezone']);
+    }
+    if ($timezone !== '' && in_array($timezone, $allowed, true)) {
+        return $timezone;
+    }
+    return 'Europe/Bratislava';
+}
+
+/**
+ * Nastaví PHP časové pásmo podľa preferencie používateľa (alebo predvolené CET/CEST).
+ */
+/**
+ * Vráti aktuálnu skratku zvoleného časového pásma (napr. CET, CEST, UTC).
+ * @param string|null $tz Identifikátor IANA časového pásma.
+ */
+function getUserTimezoneAbbr(?string $tz = null): string
+{
+    $tz = $tz ?: getUserTimezone();
+    try {
+        return (new DateTime('now', new DateTimeZone($tz)))->format('T');
+    } catch (\Throwable) {
+        return 'CET';
+    }
+}
+
+/**
+ * Sformátuje Unix timestamp podľa preferovaného časového pásma používateľa.
+ * @param int $timestamp Unix timestamp.
+ */
+function formatUserTimestamp(int $timestamp, string $format = 'd.m.Y H:i', ?string $userTz = null): string
+{
+    $userTz = $userTz ?: getUserTimezone();
+    try {
+        $dt = (new DateTimeImmutable("@{$timestamp}"))->setTimezone(new DateTimeZone($userTz));
+        return $dt->format($format);
+    } catch (\Throwable) {
+        return date($format, $timestamp);
+    }
+}
+
+/**
+ * Sformátuje dátum/čas (predpokladané v serverovom časovom pásme) podľa preferencie používateľa.
+ *
+ * @param string|null $datetime   Dátumový reťazec v serverovom časovom pásme (napr. 'Y-m-d H:i:s' alebo 'd.m.Y H:i').
+ * @param string      $format     Výstupný formát.
+ * @param string|null $inputFormat Ak je zadaný, použije sa DateTimeImmutable::createFromFormat().
+ */
+function formatUserDateTime(
+    ?string $datetime,
+    string $format = 'd.m.Y H:i',
+    ?string $inputFormat = null,
+    ?string $userTz = null,
+    ?string $sourceTz = null,
+): string {
+    if (empty($datetime)) {
+        return '';
+    }
+    $userTz = $userTz ?: getUserTimezone();
+    $sourceTz = $sourceTz ?: (date_default_timezone_get() ?: 'Europe/Bratislava');
+    try {
+        if ($inputFormat !== null) {
+            $dt = DateTimeImmutable::createFromFormat($inputFormat, $datetime, new DateTimeZone($sourceTz));
+            if ($dt === false) {
+                return (string) $datetime;
+            }
+        } else {
+            $dt = new DateTimeImmutable((string) $datetime, new DateTimeZone($sourceTz));
+        }
+        return $dt->setTimezone(new DateTimeZone($userTz))->format($format);
+    } catch (\Throwable) {
+        return (string) $datetime;
+    }
 }

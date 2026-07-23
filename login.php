@@ -122,7 +122,7 @@ function handleLoginPost(PDO $pdo, bool $isLocalDev): array
     try {
         $stmt = $pdo->prepare(
             "SELECT id, email, password_hash, username, is_admin, is_active, email_verified_at,
-                    totp_enabled, totp_secret, totp_backup_codes
+                    totp_enabled, totp_secret, totp_backup_codes, timezone
              FROM users WHERE email = :email OR username = :username"
         );
         $stmt->execute(['email' => $loginInput, 'username' => $loginInput]);
@@ -171,11 +171,9 @@ function handleLoginPost(PDO $pdo, bool $isLocalDev): array
 
         if (password_needs_rehash((string) $user['password_hash'], PASSWORD_DEFAULT)) {
             $rehash = password_hash($password, PASSWORD_DEFAULT);
-            if (is_string($rehash) && $rehash !== '') {
-                $pdo->prepare('UPDATE users SET password_hash = :hash WHERE id = :id')
-                    ->execute(['hash' => $rehash, 'id' => (int) $user['id']]);
-                $user['password_hash'] = $rehash;
-            }
+            $pdo->prepare('UPDATE users SET password_hash = :hash WHERE id = :id')
+                ->execute(['hash' => $rehash, 'id' => (int) $user['id']]);
+            $user['password_hash'] = $rehash;
         }
 
         // Prihlásenie úspešné — vyčisti IP záznamy
@@ -213,6 +211,7 @@ function handleLoginPost(PDO $pdo, bool $isLocalDev): array
         $_SESSION['totp_enabled']     = (int) ($user['totp_enabled'] ?? 0);
         $_SESSION['totp_verified_at'] = time();
         $_SESSION['_last_activity']   = time();
+        $_SESSION['timezone']         = getUserTimezone($user);
         refreshCurrentSessionAuthFingerprint($user);
 
         header("Location: index.php");

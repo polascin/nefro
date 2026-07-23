@@ -287,8 +287,8 @@ try {
     $noticeAuditAdminOptions = [];
 }
 
-$pageLastUpdated = date('d.m.Y H:i', filemtime(__FILE__));
-$pageTimeZone = date('T') . ' (' . date_default_timezone_get() . ')';
+$pageLastUpdated = formatUserTimestamp((int) filemtime(__FILE__));
+$pageTimeZone = getUserTimezoneAbbr() . ' (' . getUserTimezone() . ')';
 ?>
 <!DOCTYPE html>
 <html lang="sk">

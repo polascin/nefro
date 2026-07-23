@@ -5,7 +5,8 @@ declare(strict_types=1);
 require_once __DIR__ . '/legal_data.php';
 
 $info = legalInfo();
-$pageLastUpdated = date('d.m.Y', strtotime($info['effectiveDate']));
+$pageLastUpdated = formatUserDateTime($info['effectiveDate'], 'd.m.Y');
+$pageTimeZone = getUserTimezoneAbbr() . ' (' . getUserTimezone() . ')';
 
 $legalTitle       = 'Ochrana osobných údajov';
 $legalDescription = 'Zásady ochrany osobných údajov pre Nefro-projekt Slovensko — aké údaje spracúvame, na akom právnom základe, sprostredkovatelia a vaše práva podľa GDPR a zákonov sveta.';

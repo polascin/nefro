@@ -5,8 +5,8 @@ require_once __DIR__ . '/db_config.php';
 require_once __DIR__ . '/calculators_common.php'; // calculatorRenderRegisterCta()
 /** @var \PDO $pdo */
 
-$pageLastUpdated = date("d.m.Y H:i", filemtime(__FILE__));
-$pageTimeZone = date("T") . " (" . date_default_timezone_get() . ")";
+$pageLastUpdated = formatUserTimestamp((int) filemtime(__FILE__));
+$pageTimeZone = getUserTimezoneAbbr() . " (" . getUserTimezone() . ")";
 
 $siteName = "Nefro-projekt Slovensko";
 $baseUrl = "https://nefro.polascin.net/";

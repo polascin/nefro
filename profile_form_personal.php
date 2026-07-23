@@ -91,6 +91,16 @@ declare(strict_types=1); /* Uses $user, $pdo from calling scope */ ?>
                             <label for="birth_date">Dátum narodenia</label>
                             <input type="date" id="birth_date" name="birth_date" class="form-control" value="<?= htmlspecialchars($user['birth_date'] ?? '') ?>" autocomplete="bday">
                         </div>
+                        <div class="form-group">
+                            <label for="timezone">Časové pásmo</label>
+                            <select id="timezone" name="timezone" class="form-control">
+                                <?php $currentTz = (string) ($user['timezone'] ?? 'Europe/Bratislava'); ?>
+                                <?php foreach (getAllowedUserTimezones() as $tz => $label): ?>
+                                    <option value="<?= htmlspecialchars($tz) ?>" <?= $currentTz === $tz ? 'selected' : '' ?>><?= htmlspecialchars($label) ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                            <small class="avatar-upload-hint">Predvolené pásmo je CET (SEČ) / CEST (LSEČ).</small>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="name_note">Poznámka k menu</label>

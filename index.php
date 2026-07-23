@@ -21,8 +21,8 @@ $currentMonth = (int) date("n");
 $currentYear = date("Y");
 $currentMonthYearLocative =
     ($monthsLocative[$currentMonth] ?? "") . " " . $currentYear;
-$pageLastUpdated = date("d.m.Y H:i", filemtime(__FILE__));
-$pageTimeZone = date("T") . " (" . date_default_timezone_get() . ")";
+$pageLastUpdated = formatUserTimestamp((int) filemtime(__FILE__));
+$pageTimeZone = getUserTimezoneAbbr() . " (" . getUserTimezone() . ")";
 
 function formatArticleDate(string $datetime): string
 {
@@ -40,19 +40,21 @@ function formatArticleDate(string $datetime): string
         11 => "novembra",
         12 => "decembra",
     ];
-    $ts = strtotime($datetime);
-    if (!$ts) {
+    try {
+        $dt = new DateTimeImmutable($datetime, new DateTimeZone(date_default_timezone_get() ?: 'Europe/Bratislava'));
+        $dt = $dt->setTimezone(new DateTimeZone(getUserTimezone()));
+    } catch (\Throwable) {
         return htmlspecialchars($datetime);
     }
-    $formatted = (int) date("j", $ts) .
+    $formatted = (int) $dt->format("j") .
         ". " .
-        ($months[(int) date("n", $ts)] ?? "") .
+        $months[(int) $dt->format("n")] .
         " " .
-        date("Y", $ts);
+        $dt->format("Y");
     // Čas pripoj len ak je zmysluplný (nie polnoc) — staršie články bez času
     // (00:00) tak zostanú zobrazené len dátumom.
-    if (date("H:i", $ts) !== "00:00") {
-        $formatted .= " o " . date("H:i", $ts);
+    if ($dt->format("H:i") !== "00:00") {
+        $formatted .= " o " . $dt->format("H:i");
     }
     return $formatted;
 }

@@ -44,6 +44,7 @@ const NPS_PROFILE_ARCHIVE_ALLOWED_FIELDS = [
     'address_note',
     'newsletter_consent',
     'theme_auto',
+    'timezone',
     'avatar_path',
 ];
 

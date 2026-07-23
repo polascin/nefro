@@ -5,7 +5,8 @@ declare(strict_types=1);
 require_once __DIR__ . '/legal_data.php';
 
 $info = legalInfo();
-$pageLastUpdated = date('d.m.Y', strtotime($info['effectiveDate']));
+$pageLastUpdated = formatUserDateTime($info['effectiveDate'], 'd.m.Y');
+$pageTimeZone = getUserTimezoneAbbr() . ' (' . getUserTimezone() . ')';
 
 $legalTitle       = 'Cookie Policy';
 $legalDescription = 'Ako Nefro-projekt Slovensko používa súbory cookies a podobné technológie, aké máte voľby a aké sú vaše práva na súkromie podľa regiónu.';

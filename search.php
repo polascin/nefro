@@ -107,15 +107,17 @@ function formatSearchDate(string $datetime): string
         11 => "novembra",
         12 => "decembra",
     ];
-    $ts = strtotime($datetime);
-    if (!$ts) {
+    try {
+        $dt = new DateTimeImmutable($datetime, new DateTimeZone(date_default_timezone_get() ?: 'Europe/Bratislava'));
+        $dt = $dt->setTimezone(new DateTimeZone(getUserTimezone()));
+    } catch (\Throwable) {
         return htmlspecialchars($datetime);
     }
-    return (int) date("j", $ts) .
+    return (int) $dt->format("j") .
         ". " .
-        ($months[(int) date("n", $ts)] ?? "") .
+        ($months[(int) $dt->format("n")] ?? "") .
         " " .
-        date("Y", $ts);
+        $dt->format("Y");
 }
 
 $fieldLabels = [

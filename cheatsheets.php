@@ -21,11 +21,13 @@ $months = [
 
 function csFormatDate(string $datetime, array $months): string
 {
-    $ts = strtotime($datetime);
-    if (!$ts) {
+    try {
+        $dt = new DateTimeImmutable($datetime, new DateTimeZone(date_default_timezone_get() ?: 'Europe/Bratislava'));
+        $dt = $dt->setTimezone(new DateTimeZone(getUserTimezone()));
+    } catch (\Throwable) {
         return htmlspecialchars($datetime);
     }
-    return (int) date("j", $ts) . ". " . ($months[(int) date("n", $ts)] ?? "") . " " . date("Y", $ts);
+    return (int) $dt->format("j") . ". " . ($months[(int) $dt->format("n")] ?? "") . " " . $dt->format("Y");
 }
 
 function csExcerpt(string $text, int $maxLen = 200): string

@@ -223,12 +223,6 @@ parameters:
 			path: article.php
 
 		-
-			message: '#^Function formatArticleDate invoked with 2 parameters, 1 required\.$#'
-			identifier: arguments.count
-			count: 1
-			path: article.php
-
-		-
 			message: '#^Offset ''authors'' on array\{published_articles\: int, users_total\: int, authors\: array\<int, array\{author\: string, articles\: int\}\>\} on left side of \?\? always exists and is not nullable\.$#'
 			identifier: nullCoalesce.offset
 			count: 1
@@ -243,6 +237,12 @@ parameters:
 		-
 			message: '#^Result of && is always false\.$#'
 			identifier: booleanAnd.alwaysFalse
+			count: 1
+			path: auth.php
+
+		-
+			message: '#^Right side of && is always false\.$#'
+			identifier: booleanAnd.rightAlwaysFalse
 			count: 1
 			path: auth.php
 
@@ -263,6 +263,12 @@ parameters:
 			identifier: isset.variable
 			count: 1
 			path: auth.php
+
+		-
+			message: '#^Comparison operation "\<\=" between int\<1, max\> and 0 is always false\.$#'
+			identifier: smallerOrEqual.alwaysFalse
+			count: 1
+			path: avatar_upload.php
 
 		-
 			message: '#^Variable \$baseUrl might not be defined\.$#'
@@ -287,18 +293,6 @@ parameters:
 			identifier: variable.undefined
 			count: 3
 			path: calculator_cg.php
-
-		-
-			message: '#^Function ckdpcRisk\(\) should return array\{risk_3yr\: float, model\: string\} but returns array\{risk_3yr\: float, model_name\: ''Bez DM, eGFR \< 60…''\|''Bez DM, eGFR ≥ 60…''\|''DM, eGFR \< 60 ml…''\|''DM, eGFR ≥ 60 ml…''\}\.$#'
-			identifier: return.type
-			count: 1
-			path: calculator_ckdpc.php
-
-		-
-			message: '#^Offset ''model_name'' does not exist on array\{risk_3yr\: float, model\: string\}\.$#'
-			identifier: offsetAccess.notFound
-			count: 1
-			path: calculator_ckdpc.php
 
 		-
 			message: '#^Variable \$baseUrl might not be defined\.$#'
@@ -381,7 +375,7 @@ parameters:
 		-
 			message: '#^Offset 1\|2\|3\|4\|5\|6\|7\|8\|9\|10\|11\|12 on array\{1\: ''januára'', 2\: ''februára'', 3\: ''marca'', 4\: ''apríla'', 5\: ''mája'', 6\: ''júna'', 7\: ''júla'', 8\: ''augusta'', \.\.\.\} on left side of \?\? always exists and is not nullable\.$#'
 			identifier: nullCoalesce.offset
-			count: 1
+			count: 2
 			path: discussion.php
 
 		-
@@ -404,12 +398,6 @@ parameters:
 
 		-
 			message: '#^Offset ''authors'' on array\{published_articles\: int, users_total\: int, authors\: array\<int, array\{author\: string, articles\: int\}\>\} on left side of \?\? always exists and is not nullable\.$#'
-			identifier: nullCoalesce.offset
-			count: 1
-			path: index.php
-
-		-
-			message: '#^Offset 1\|2\|3\|4\|5\|6\|7\|8\|9\|10\|11\|12 on array\{1\: ''januára'', 2\: ''februára'', 3\: ''marca'', 4\: ''apríla'', 5\: ''mája'', 6\: ''júna'', 7\: ''júla'', 8\: ''augusta'', \.\.\.\} on left side of \?\? always exists and is not nullable\.$#'
 			identifier: nullCoalesce.offset
 			count: 1
 			path: index.php
