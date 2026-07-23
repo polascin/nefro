@@ -99,6 +99,12 @@ if ($includeSensitive) {
             . 'v sekcii „Zoznam používateľov“.</p></main></body></html>';
         exit;
     }
+    if (!checkFormRateLimit($pdo, 'admin_post_' . basename(__FILE__), getClientIpAddress(), 30, 300)) {
+        http_response_code(429);
+        header('Content-Type: text/plain; charset=utf-8');
+        echo 'Príliš veľa pokusov o citlivý export. Skúste to neskôr.';
+        exit;
+    }
 }
 
 try {

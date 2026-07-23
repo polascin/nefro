@@ -23,7 +23,9 @@ $actionError = null;
 
 // ── Akcia: zverejniť / skryť jeden liek (rovnaký kontrakt ako admin_drugs.php) ──
 if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
-    if (!validateCsrfToken((string) ($_POST['csrf_token'] ?? ''))) {
+    if (!checkFormRateLimit($pdo, 'admin_post_' . basename(__FILE__), getClientIpAddress(), 60, 300)) {
+        $actionError = 'Príliš veľa požiadaviek. Skúste to neskôr.';
+    } elseif (!validateCsrfToken((string) ($_POST['csrf_token'] ?? ''))) {
         $actionError = 'Neplatný CSRF token.';
     } elseif (($_POST['action'] ?? '') === 'toggle_publish') {
         $id = (int) ($_POST['drug_id'] ?? 0);
@@ -34,6 +36,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
             try {
                 $pdo->prepare('UPDATE drugs SET is_published = :pub WHERE id = :id')
                     ->execute(['pub' => $setPub, 'id' => $id]);
+                logAdminAction($pdo, 'drug_review_toggle_publish', 'drug', $id, ['is_published' => $setPub]);
                 $actionResult = $setPub === 1 ? 'Liek bol zverejnený.' : 'Liek bol skrytý.';
             } catch (\PDOException $e) {
                 error_log('admin_drugs_review toggle error: ' . $e->getMessage());

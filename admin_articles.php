@@ -189,7 +189,9 @@ function optimizeExcerptForSeo(
 // ── Spracovanie POST akcií ────────────────────────────────────────────────────
 if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
     $postedCsrf = $_POST["csrf_token"] ?? "";
-    if (!validateCsrfToken($postedCsrf)) {
+    if (!checkFormRateLimit($pdo, 'admin_post_' . basename(__FILE__), getClientIpAddress(), 60, 300)) {
+        $actionError = "Príliš veľa požiadaviek. Skúste to neskôr.";
+    } elseif (!validateCsrfToken($postedCsrf)) {
         $actionError = "Neplatný CSRF token.";
     } else {
         $action = $_POST["action"] ?? "";
@@ -267,6 +269,7 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
                         "is_published" => $isPub,
                     ]);
                     $newId = (int) $pdo->lastInsertId();
+                    logAdminAction($pdo, 'article_create', 'article', $newId, ['title' => $title, 'slug' => $slug, 'category' => $category]);
                     $actionResult = "Článok bol úspešne vytvorený.";
                     $actionResultLink =
                         '<a href="article.php?id=' .
@@ -400,6 +403,7 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
                         "is_published" => $isPub,
                         "id" => $id,
                     ]);
+                    logAdminAction($pdo, 'article_update', 'article', $id, ['title' => $title, 'slug' => $slug, 'category' => $category, 'is_published' => $isPub]);
                     $actionResult = "Článok bol úspešne aktualizovaný.";
                     $actionResultLink =
                         '<a href="article.php?id=' .
@@ -457,6 +461,7 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
                 }
                 try {
                     $result = enqueueArticleNewsletterEmailsNow($pdo, $id);
+                    logAdminAction($pdo, 'enqueue_newsletter', 'article', $id, ['recipients' => (int) ($result['total'] ?? 0)]);
                     if (($result["total"] ?? 0) > 0) {
                         $actionResult =
                             "Avízo bolo ručne zaradené pre článok. Počet príjemcov vo fronte: " .
@@ -484,6 +489,7 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
                 }
                 try {
                     $requeuedCount = requeueFailedArticleNewsletter($pdo, $id);
+                    logAdminAction($pdo, 'requeue_failed_newsletter', 'article', $id, ['requeued_count' => $requeuedCount]);
                     if ($requeuedCount > 0) {
                         $actionResult =
                             "Neodoslané avíza boli znovu zaradené do fronty. Počet: " .
@@ -521,6 +527,7 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
                     $cancelled = (int) ($stats["cancelled"] ?? 0) + (int) ($subStats["cancelled"] ?? 0);
                     $skipped   = (int) ($stats["skipped"] ?? 0) + (int) ($subStats["skipped"] ?? 0);
 
+                    logAdminAction($pdo, 'send_newsletter_queue', null, null, ['selected' => $selected, 'sent' => $sent, 'failed' => $failed, 'cancelled' => $cancelled, 'skipped' => $skipped]);
                     if ($selected === 0) {
                         $actionResult =
                             "Vo fronte nie sú žiadne položky pripravené na odoslanie.";
@@ -629,6 +636,7 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
                         "UPDATE articles SET is_top = :is_top WHERE id = :id",
                     );
                     $upd->execute(["is_top" => $setTop, "id" => $id]);
+                    logAdminAction($pdo, 'article_set_top', 'article', $id, ['is_top' => $setTop]);
 
                     $titleSafe = htmlspecialchars(
                         (string) ($row["title"] ?? ""),
@@ -692,6 +700,7 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
                         SQL_UPDATE_SORT_ORDER_BY_ID,
                     )->execute(["sort" => $currentSort, "id" => $prevId]);
                     $pdo->commit();
+                    logAdminAction($pdo, 'article_move_up', 'article', $id, ['sort_order' => $currentSort]);
                     $actionResult = "Článok bol presunutý vyššie.";
                 } catch (\PDOException $e) {
                     $pdo->rollBack();
@@ -745,6 +754,7 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
                         SQL_UPDATE_SORT_ORDER_BY_ID,
                     )->execute(["sort" => $currentSort, "id" => $nextId]);
                     $pdo->commit();
+                    logAdminAction($pdo, 'article_move_down', 'article', $id, ['sort_order' => $currentSort]);
                     $actionResult = "Článok bol presunutý nižšie.";
                 } catch (\PDOException $e) {
                     $pdo->rollBack();
@@ -775,6 +785,7 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
                     $pdo->prepare(
                         "DELETE FROM articles WHERE id = :id",
                     )->execute(["id" => $id]);
+                    logAdminAction($pdo, 'article_delete', 'article', $id, ['title' => (string) $row['title']]);
                     $actionResult =
                         ARTICLE_QUOTED_PREFIX .
                         htmlspecialchars((string) $row["title"]) .

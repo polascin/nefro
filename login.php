@@ -205,12 +205,14 @@ function handleLoginPost(PDO $pdo, bool $isLocalDev): array
         }
 
         regenerateSession();
-        $_SESSION['user_id']         = $user['id'];
-        $_SESSION['username']        = $user['username'];
-        $_SESSION['email']           = (string) ($user['email'] ?? '');
-        $_SESSION['is_admin']        = (int) ($user['is_admin'] ?? 0);
-        $_SESSION['email_verified']  = $emailVerified;
-        $_SESSION['_last_activity']  = time();
+        $_SESSION['user_id']          = $user['id'];
+        $_SESSION['username']         = $user['username'];
+        $_SESSION['email']            = (string) ($user['email'] ?? '');
+        $_SESSION['is_admin']         = (int) ($user['is_admin'] ?? 0);
+        $_SESSION['email_verified']   = $emailVerified;
+        $_SESSION['totp_enabled']     = (int) ($user['totp_enabled'] ?? 0);
+        $_SESSION['totp_verified_at'] = time();
+        $_SESSION['_last_activity']   = time();
         refreshCurrentSessionAuthFingerprint($user);
 
         header("Location: index.php");

@@ -214,6 +214,11 @@ function requireAdmin(): void {
         header("HTTP/1.1 403 Forbidden");
         exit("Prístup len pre administrátora.");
     }
+    if (empty($_SESSION['totp_enabled'])) {
+        setFlashMessage('warning', 'Admin prístup vyžaduje dvojfaktorové overenie. Najprv si ho nastavte.');
+        header('Location: 2fa_setup.php');
+        exit;
+    }
 }
 
 /**
@@ -454,6 +459,10 @@ function synchronizeAuthenticatedSession(PDO $pdo): bool {
     $_SESSION['email'] = (string) ($user['email'] ?? '');
     $_SESSION['is_admin'] = (int) ($user['is_admin'] ?? 0);
     $_SESSION['email_verified'] = !empty($user['email_verified_at']) ? 1 : 0;
+    $_SESSION['totp_enabled'] = (int) ($user['totp_enabled'] ?? 0);
+    if (empty($_SESSION['totp_verified_at'])) {
+        $_SESSION['totp_verified_at'] = time();
+    }
     return true;
 }
 
@@ -570,6 +579,16 @@ function hasRecentSensitiveReauthentication(int $ttlSeconds = 300): bool {
  * @param int $windowSeconds Dĺžka okna v sekundách (aj dĺžka blokácie)
  * @return bool
  */
+/**
+ * Escapuje znaky % a _ v reťazci pre bezpečné použitie v LIKE s ESCAPE '!'
+ * a opačne ho obalí do %...%.
+ */
+function likeSearchPattern(string $text): string
+{
+    $escaped = str_replace(['!', '%', '_', '\\'], ['!!', '!%', '!_', '!!\\'], $text);
+    return '%' . $escaped . '%';
+}
+
 function checkFormRateLimit(PDO $pdo, string $action, string $ip, int $maxAttempts, int $windowSeconds): bool
 {
     $pdo->beginTransaction();
@@ -1122,11 +1141,13 @@ function completeTwoFactorLogin(array $user): void
 {
     unset($_SESSION['2fa_pending']);
     regenerateSession();
-    $_SESSION['user_id']        = $user['id'];
-    $_SESSION['username']       = $user['username'];
-    $_SESSION['email']          = (string) ($user['email'] ?? '');
-    $_SESSION['is_admin']       = (int) ($user['is_admin'] ?? 0);
-    $_SESSION['email_verified'] = !empty($user['email_verified_at']) ? 1 : 0;
-    $_SESSION['_last_activity'] = time();
+    $_SESSION['user_id']          = $user['id'];
+    $_SESSION['username']         = $user['username'];
+    $_SESSION['email']            = (string) ($user['email'] ?? '');
+    $_SESSION['is_admin']         = (int) ($user['is_admin'] ?? 0);
+    $_SESSION['email_verified']   = !empty($user['email_verified_at']) ? 1 : 0;
+    $_SESSION['totp_enabled']     = (int) ($user['totp_enabled'] ?? 0);
+    $_SESSION['totp_verified_at'] = time();
+    $_SESSION['_last_activity']   = time();
     refreshCurrentSessionAuthFingerprint($user);
 }

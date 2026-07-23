@@ -23,7 +23,9 @@ if (!in_array($filter, $allowedFilters, true)) {
 // ── Spracovanie POST akcií ────────────────────────────────────────────────────
 if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
     $postedCsrf = (string) ($_POST['csrf_token'] ?? '');
-    if (!validateCsrfToken($postedCsrf)) {
+    if (!checkFormRateLimit($pdo, 'admin_post_' . basename(__FILE__), getClientIpAddress(), 60, 300)) {
+        $actionError = 'Príliš veľa požiadaviek. Skúste to neskôr.';
+    } elseif (!validateCsrfToken($postedCsrf)) {
         $actionError = 'Neplatný CSRF token.';
     } else {
         $action = (string) ($_POST['action'] ?? '');
@@ -37,24 +39,28 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     case 'delete':
                         $pdo->prepare("UPDATE discussion_posts SET is_deleted = 1 WHERE id = :id")
                             ->execute(['id' => $postId]);
+                        logAdminAction($pdo, 'discussion_delete', 'discussion_post', $postId, []);
                         $actionResult = 'Príspevok bol vymazaný (soft-delete).';
                         break;
 
                     case 'undelete':
                         $pdo->prepare("UPDATE discussion_posts SET is_deleted = 0 WHERE id = :id")
                             ->execute(['id' => $postId]);
+                        logAdminAction($pdo, 'discussion_undelete', 'discussion_post', $postId, []);
                         $actionResult = 'Príspevok bol obnovený.';
                         break;
 
                     case 'hide':
                         $pdo->prepare("UPDATE discussion_posts SET is_hidden = 1 WHERE id = :id")
                             ->execute(['id' => $postId]);
+                        logAdminAction($pdo, 'discussion_hide', 'discussion_post', $postId, []);
                         $actionResult = 'Príspevok bol skrytý pred verejnosťou.';
                         break;
 
                     case 'unhide':
                         $pdo->prepare("UPDATE discussion_posts SET is_hidden = 0, moderation_note = NULL WHERE id = :id")
                             ->execute(['id' => $postId]);
+                        logAdminAction($pdo, 'discussion_unhide', 'discussion_post', $postId, []);
                         $actionResult = 'Príspevok je opäť viditeľný.';
                         break;
 
@@ -62,12 +68,14 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                         // Pin len pre top-level príspevky
                         $pdo->prepare("UPDATE discussion_posts SET is_pinned = 1 WHERE id = :id AND parent_id IS NULL")
                             ->execute(['id' => $postId]);
+                        logAdminAction($pdo, 'discussion_pin', 'discussion_post', $postId, []);
                         $actionResult = 'Príspevok bol pripnutý na vrch diskusie.';
                         break;
 
                     case 'unpin':
                         $pdo->prepare("UPDATE discussion_posts SET is_pinned = 0 WHERE id = :id")
                             ->execute(['id' => $postId]);
+                        logAdminAction($pdo, 'discussion_unpin', 'discussion_post', $postId, []);
                         $actionResult = 'Príspevok bol odopnutý.';
                         break;
 
@@ -75,6 +83,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                         $note = trim(mb_substr((string) ($_POST['moderation_note'] ?? ''), 0, 500));
                         $pdo->prepare("UPDATE discussion_posts SET moderation_note = :note WHERE id = :id")
                             ->execute(['id' => $postId, 'note' => $note !== '' ? $note : null]);
+                        logAdminAction($pdo, 'discussion_set_note', 'discussion_post', $postId, ['note_length' => mb_strlen($note)]);
                         $actionResult = 'Moderátorská poznámka bola uložená.';
                         break;
 

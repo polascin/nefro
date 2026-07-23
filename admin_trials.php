@@ -29,7 +29,9 @@ $catLabels = ctCategoryLabels();
 
 // ── Spracovanie POST akcií ────────────────────────────────────────────────────
 if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
-    if (!validateCsrfToken((string) ($_POST['csrf_token'] ?? ''))) {
+    if (!checkFormRateLimit($pdo, 'admin_post_' . basename(__FILE__), getClientIpAddress(), 60, 300)) {
+        $actionError = 'Príliš veľa požiadaviek. Skúste to neskôr.';
+    } elseif (!validateCsrfToken((string) ($_POST['csrf_token'] ?? ''))) {
         $actionError = 'Neplatný CSRF token.';
     } else {
         $action = (string) ($_POST['action'] ?? '');
@@ -68,6 +70,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                         'note' => $skNote !== '' ? $skNote : null,
                         'id'   => $id,
                     ]);
+                    logAdminAction($pdo, 'trial_save', 'clinical_trial', $id, ['category' => $category, 'is_published' => $isPub]);
                     $actionResult = 'Štúdia „' . (string) $row['brief_title'] . '“ bola aktualizovaná.';
                 } catch (\PDOException $e) {
                     error_log('admin_trials save error: ' . $e->getMessage());
@@ -90,6 +93,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 try {
                     $upd = $pdo->prepare('UPDATE clinical_trials SET is_published = :pub WHERE id = :id');
                     $upd->execute(['pub' => $setPub, 'id' => $id]);
+                    logAdminAction($pdo, 'trial_toggle_publish', 'clinical_trial', $id, ['is_published' => $setPub]);
                     $actionResult = $setPub === 1
                         ? 'Štúdia bola zverejnená.'
                         : 'Štúdia bola skrytá z verejného registra.';
@@ -148,8 +152,8 @@ if ($fPub === 'published') {
     $where .= ' AND is_published = 0';
 }
 if ($fQuery !== '') {
-    $where .= ' AND (brief_title LIKE :q OR conditions LIKE :q OR lead_sponsor LIKE :q OR nct_id LIKE :q)';
-    $params['q'] = '%' . $fQuery . '%';
+    $where .= ' AND (brief_title LIKE :q ESCAPE \'!\' OR conditions LIKE :q ESCAPE \'!\' OR lead_sponsor LIKE :q ESCAPE \'!\' OR nct_id LIKE :q ESCAPE \'!\')';
+    $params['q'] = likeSearchPattern($fQuery);
 }
 
 $trials = [];

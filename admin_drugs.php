@@ -150,7 +150,9 @@ function dgReadForm(array $catLabels): array
 
 // ── Spracovanie POST akcií ────────────────────────────────────────────────────
 if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
-    if (!validateCsrfToken((string) ($_POST['csrf_token'] ?? ''))) {
+    if (!checkFormRateLimit($pdo, 'admin_post_' . basename(__FILE__), getClientIpAddress(), 60, 300)) {
+        $actionError = 'Príliš veľa požiadaviek. Skúste to neskôr.';
+    } elseif (!validateCsrfToken((string) ($_POST['csrf_token'] ?? ''))) {
         $actionError = 'Neplatný CSRF token.';
     } else {
         $action = (string) ($_POST['action'] ?? '');
@@ -180,6 +182,8 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                             'INSERT INTO drugs (' . implode(', ', $cols) . ') VALUES (' . implode(', ', $place) . ')'
                         );
                         $stmt->execute($data);
+                        $newDrugId = (int) $pdo->lastInsertId();
+                        logAdminAction($pdo, 'drug_create', 'drug', $newDrugId, ['name_sk' => $data['name_sk'], 'slug' => $data['slug']]);
                         $actionResult = 'Liek „' . $data['name_sk'] . '“ bol vytvorený' . ($data['is_published'] ? ' a zverejnený.' : ' (nezverejnený).');
                     } else {
                         $chk = $pdo->prepare('SELECT id FROM drugs WHERE id = :id LIMIT 1');
@@ -192,6 +196,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                         $data['id'] = $id;
                         $stmt = $pdo->prepare("UPDATE drugs SET $set WHERE id = :id");
                         $stmt->execute($data);
+                        logAdminAction($pdo, 'drug_update', 'drug', $id, ['name_sk' => $data['name_sk'], 'slug' => $data['slug']]);
                         $actionResult = 'Liek „' . $data['name_sk'] . '“ bol aktualizovaný.';
                     }
                 } catch (\PDOException $e) {
@@ -214,6 +219,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 try {
                     $pdo->prepare('UPDATE drugs SET is_published = :pub WHERE id = :id')
                         ->execute(['pub' => $setPub, 'id' => $id]);
+                    logAdminAction($pdo, 'drug_toggle_publish', 'drug', $id, ['is_published' => $setPub]);
                     $actionResult = $setPub === 1 ? 'Liek bol zverejnený.' : 'Liek bol skrytý.';
                 } catch (\PDOException $e) {
                     error_log('admin_drugs toggle error: ' . $e->getMessage());
@@ -236,6 +242,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                         break;
                     }
                     $pdo->prepare('DELETE FROM drugs WHERE id = :id')->execute(['id' => $id]);
+                    logAdminAction($pdo, 'drug_delete', 'drug', $id, ['name_sk' => (string) $row['name_sk']]);
                     $actionResult = 'Liek „' . (string) $row['name_sk'] . '“ bol odstránený.';
                 } catch (\PDOException $e) {
                     error_log('admin_drugs delete error: ' . $e->getMessage());
@@ -288,8 +295,8 @@ if ($fPub === 'published') {
     $where .= ' AND is_published = 0';
 }
 if ($fQuery !== '') {
-    $where .= ' AND (name_sk LIKE :q OR name_intl LIKE :q OR drug_class LIKE :q OR atc_code LIKE :q)';
-    $params['q'] = '%' . $fQuery . '%';
+    $where .= ' AND (name_sk LIKE :q ESCAPE \'!\' OR name_intl LIKE :q ESCAPE \'!\' OR drug_class LIKE :q ESCAPE \'!\' OR atc_code LIKE :q ESCAPE \'!\')';
+    $params['q'] = likeSearchPattern($fQuery);
 }
 
 $drugs = [];

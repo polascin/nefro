@@ -36,7 +36,9 @@ function ppClean(string $v, int $max): ?string
 
 // ── Spracovanie POST akcií ────────────────────────────────────────────────────
 if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
-    if (!validateCsrfToken((string) ($_POST['csrf_token'] ?? ''))) {
+    if (!checkFormRateLimit($pdo, 'admin_post_' . basename(__FILE__), getClientIpAddress(), 60, 300)) {
+        $actionError = 'Príliš veľa požiadaviek. Skúste to neskôr.';
+    } elseif (!validateCsrfToken((string) ($_POST['csrf_token'] ?? ''))) {
         $actionError = 'Neplatný CSRF token.';
     } else {
         $action = (string) ($_POST['action'] ?? '');
@@ -104,6 +106,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 try {
                     if ($id > 0) {
                         $data['id'] = $id;
+                        $data['id'] = $id;
                         $upd = $pdo->prepare(
                             'UPDATE partner_providers SET
                                 name = :name, provider_type = :provider_type, specialization = :specialization,
@@ -114,6 +117,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                              WHERE id = :id'
                         );
                         $upd->execute($data);
+                        logAdminAction($pdo, 'provider_update', 'partner_provider', $id, ['name' => $name]);
                         $actionResult = 'Poskytovateľ „' . $name . '“ bol aktualizovaný.';
                     } else {
                         $ins = $pdo->prepare(
@@ -125,6 +129,8 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                                  :website, :contact_person, :notes, :source, :ico, :outreach_status, :contacted_at, :priority, :is_active)'
                         );
                         $ins->execute($data);
+                        $newProviderId = (int) $pdo->lastInsertId();
+                        logAdminAction($pdo, 'provider_create', 'partner_provider', $newProviderId, ['name' => $name]);
                         $actionResult = 'Poskytovateľ „' . $name . '“ bol pridaný.';
                     }
                 } catch (\PDOException $e) {
@@ -142,6 +148,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 try {
                     $del = $pdo->prepare('DELETE FROM partner_providers WHERE id = :id');
                     $del->execute(['id' => $id]);
+                    logAdminAction($pdo, 'provider_delete', 'partner_provider', $id, []);
                     $actionResult = 'Poskytovateľ bol zmazaný.';
                 } catch (\PDOException $e) {
                     error_log('admin_providers delete error: ' . $e->getMessage());
@@ -159,6 +166,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 try {
                     $upd = $pdo->prepare('UPDATE partner_providers SET is_active = :a WHERE id = :id');
                     $upd->execute(['a' => $setVal, 'id' => $id]);
+                    logAdminAction($pdo, 'provider_toggle_active', 'partner_provider', $id, ['is_active' => $setVal]);
                     $actionResult = $setVal === 1 ? 'Poskytovateľ je aktívny.' : 'Poskytovateľ je neaktívny.';
                 } catch (\PDOException $e) {
                     error_log('admin_providers toggle error: ' . $e->getMessage());
@@ -181,6 +189,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                                    VALUES (:pid, NOW(), 'other', 'osloveny', :note)")
                         ->execute(['pid' => $id, 'note' => 'Rýchle označenie „Oslovený teraz“']);
                     $pdo->commit();
+                    logAdminAction($pdo, 'provider_mark_contacted', 'partner_provider', $id, []);
                     $actionResult = 'Označené ako oslovené (' . date('d.m.Y H:i') . ') — zapísané do histórie.';
                 } catch (\PDOException $e) {
                     if ($pdo->inTransaction()) {
@@ -232,6 +241,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                             ->execute(['cat' => $cval, 'id' => $id]);
                     }
                     $pdo->commit();
+                    logAdminAction($pdo, 'provider_add_contact', 'partner_provider', $id, ['channel' => $ch, 'outcome' => $outc]);
                     $actionResult = 'Kontakt bol zapísaný do histórie.';
                 } catch (\PDOException $e) {
                     if ($pdo->inTransaction()) {
@@ -278,6 +288,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                             'cid'  => $cid,
                             'pid'  => $id,
                         ]);
+                    logAdminAction($pdo, 'provider_update_contact', 'partner_provider', $id, ['contact_id' => $cid]);
                     $actionResult = 'Záznam kontaktu bol upravený.';
                 } catch (\PDOException $e) {
                     error_log('admin_providers update_contact error: ' . $e->getMessage());
@@ -297,6 +308,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 try {
                     $pdo->prepare('DELETE FROM provider_contacts WHERE id = :cid AND provider_id = :pid')
                         ->execute(['cid' => $cid, 'pid' => $id]);
+                    logAdminAction($pdo, 'provider_delete_contact', 'partner_provider', $id, ['contact_id' => $cid]);
                     $actionResult = 'Záznam kontaktu bol zmazaný.';
                 } catch (\PDOException $e) {
                     error_log('admin_providers delete_contact error: ' . $e->getMessage());
@@ -384,12 +396,12 @@ if ($fType !== '') {
     $params['type'] = $fType;
 }
 if ($fLoc !== '') {
-    $where .= ' AND locality LIKE :loc';
-    $params['loc'] = '%' . $fLoc . '%';
+    $where .= ' AND locality LIKE :loc ESCAPE \'!\'';
+    $params['loc'] = likeSearchPattern($fLoc);
 }
 if ($fSpec !== '') {
-    $where .= ' AND specialization LIKE :spec';
-    $params['spec'] = '%' . $fSpec . '%';
+    $where .= ' AND specialization LIKE :spec ESCAPE \'!\'';
+    $params['spec'] = likeSearchPattern($fSpec);
 }
 if ($fActive === 'active') {
     $where .= ' AND is_active = 1';
@@ -405,8 +417,8 @@ if ($fPriority !== '') {
     $params['priority'] = $fPriority;
 }
 if ($fQuery !== '') {
-    $where .= ' AND (name LIKE :q OR email LIKE :q OR contact_person LIKE :q OR notes LIKE :q OR address LIKE :q)';
-    $params['q'] = '%' . $fQuery . '%';
+    $where .= ' AND (name LIKE :q ESCAPE \'!\' OR email LIKE :q ESCAPE \'!\' OR contact_person LIKE :q ESCAPE \'!\' OR notes LIKE :q ESCAPE \'!\' OR address LIKE :q ESCAPE \'!\')';
+    $params['q'] = likeSearchPattern($fQuery);
 }
 
 // ── Export (bod 1) — CSV / JSON / vCard; rešpektuje aktuálne filtre; admin už overený ──
