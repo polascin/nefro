@@ -11,7 +11,6 @@ const EMAIL_GREETING_PREFIX = 'Dobrý deň, ';
 const EMAIL_PLAIN_PARAGRAPH_BREAK = ",\n\n";
 const EMAIL_SENTENCE_PARAGRAPH_SUFFIX = ".\n\n";
 
-/** @var string $GLOBALS['__smtpLastError'] */
 $GLOBALS['__smtpLastError'] = '';
 
 function getEmailEnvConfig(): array {
@@ -285,7 +284,7 @@ function smtpOpenEnvelope($socket, string $fromEmail, string $toEmail): bool {
         && smtpSendCommand($socket, 'DATA', [354], 'data')['ok'];
 }
 
-function smtpBuildPayload(string $toEmail, string $subject, string $messageBody, array $cfg, string $contentType, ?string $plainTextAlt): string {
+function smtpBuildPayload(string $toEmail, string $subject, string $messageBody, array $cfg, string $contentType, ?string $plainTextAlt, array $extraHeaders = []): string {
     $encodedSubject = mb_encode_mimeheader($subject, 'UTF-8', 'B', "\r\n ");
     $encodedFromName = mb_encode_mimeheader($cfg['from_name'], 'UTF-8', 'B', "\r\n ");
     $useMultipart = ($plainTextAlt !== null && stripos($contentType, 'text/html') !== false);
@@ -297,6 +296,12 @@ function smtpBuildPayload(string $toEmail, string $subject, string $messageBody,
         'MIME-Version: 1.0',
         'Date: ' . date(DATE_RFC2822),
     ];
+
+    foreach ($extraHeaders as $headerName => $headerValue) {
+        if ($headerValue !== '' && $headerValue !== null) {
+            $headers[] = $headerName . ': ' . $headerValue;
+        }
+    }
 
     if ($useMultipart) {
         $boundary = '=_nps_' . bin2hex(random_bytes(16));
@@ -322,10 +327,12 @@ function smtpBuildPayload(string $toEmail, string $subject, string $messageBody,
     return $payload . "\r\n.\r\n";
 }
 
-function smtpWritePayloadAndFinish($socket, string $payload): bool {
+function smtpWritePayloadAndFinish($socket, string $payload, bool $quit = true): bool {
     if (@fwrite($socket, $payload) === false) {
         smtpLogError('data_payload', 'write_failed');
-        smtpSendCommand($socket, 'QUIT', [221], 'quit');
+        if ($quit) {
+            smtpSendCommand($socket, 'QUIT', [221], 'quit');
+        }
         return false;
     }
 
@@ -338,26 +345,64 @@ function smtpWritePayloadAndFinish($socket, string $payload): bool {
         ]);
     }
 
-    smtpSendCommand($socket, 'QUIT', [221], 'quit');
+    if ($quit) {
+        smtpSendCommand($socket, 'QUIT', [221], 'quit');
+    }
     return $dataCode === 250;
 }
 
-function sendViaSmtp(string $toEmail, string $subject, string $messageBody, array $cfg, string $contentType = 'text/plain; charset=UTF-8', ?string $plainTextAlt = null): bool {
+function sendViaSmtp(string $toEmail, string $subject, string $messageBody, array $cfg, string $contentType = 'text/plain; charset=UTF-8', ?string $plainTextAlt = null, array $extraHeaders = [], &$persistentSocket = null, bool &$socketAuthenticated = false): bool {
     $GLOBALS['__smtpLastError'] = '';
-    $socket = smtpOpenAndHandshake($cfg);
-    if (!$socket) {
-        return false;
+
+    $ownedSocket = false;
+    $socket = $persistentSocket;
+    if (!$socket || !is_resource($socket) || get_resource_type($socket) !== 'stream') {
+        $socket = smtpOpenAndHandshake($cfg);
+        $socketAuthenticated = false;
+        $ownedSocket = true;
+        if (!$socket) {
+            $persistentSocket = null;
+            return false;
+        }
     }
 
-    $ok = smtpAuthenticate($socket, $cfg)
+    if (!$socketAuthenticated) {
+        $socketAuthenticated = smtpAuthenticate($socket, $cfg);
+        if (!$socketAuthenticated) {
+            if ($ownedSocket) {
+                smtpCloseSocket($socket);
+            } else {
+                smtpSendCommand($socket, 'QUIT', [221], 'quit');
+                smtpCloseSocket($socket);
+                $persistentSocket = null;
+            }
+            return false;
+        }
+    }
+
+    // RSET pred novou transakciou zabezpečí čistý stav pri zdieľanom spojení
+    $ok = smtpSendCommand($socket, 'RSET', [250], 'rset')['ok']
         && smtpOpenEnvelope($socket, (string) $cfg['from_email'], $toEmail);
     if ($ok) {
-        $payload = smtpBuildPayload($toEmail, $subject, $messageBody, $cfg, $contentType, $plainTextAlt);
-        $ok = smtpWritePayloadAndFinish($socket, $payload);
+        $payload = smtpBuildPayload($toEmail, $subject, $messageBody, $cfg, $contentType, $plainTextAlt, $extraHeaders);
+        $ok = smtpWritePayloadAndFinish($socket, $payload, false);
     }
 
-    smtpCloseSocket($socket);
-    return $ok;
+    if ($ok) {
+        $persistentSocket = $socket;
+        return true;
+    }
+
+    if ($ownedSocket) {
+        smtpSendCommand($socket, 'QUIT', [221], 'quit');
+        smtpCloseSocket($socket);
+    } else {
+        smtpSendCommand($socket, 'QUIT', [221], 'quit');
+        smtpCloseSocket($socket);
+        $persistentSocket = null;
+    }
+    $socketAuthenticated = false;
+    return false;
 }
 
 function generateEmailVerificationToken(): array {

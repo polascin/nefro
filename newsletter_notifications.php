@@ -22,6 +22,16 @@ if (!function_exists('newsletterRetryDelay')) {
     }
 }
 
+if (!function_exists('newsletterShouldShutdown')) {
+    function newsletterShouldShutdown(): bool
+    {
+        if (function_exists('pcntl_signal_dispatch')) {
+            pcntl_signal_dispatch();
+        }
+        return (bool) ($GLOBALS['__newsletterShutdown'] ?? false);
+    }
+}
+
 if (!function_exists('acquireNewsletterProcessLock')) {
     function acquireNewsletterProcessLock(PDO $pdo, string $lockName, int $timeoutSeconds = 0): bool
     {
@@ -530,6 +540,9 @@ if (!function_exists('processNlSubQueue')) {
 
         $stats = ['selected' => 0, 'sent' => 0, 'failed' => 0, 'cancelled' => 0, 'skipped' => 0];
 
+        $socket = null;
+        $socketAuth = false;
+
         try {
             $pdo->beginTransaction();
 
@@ -560,6 +573,9 @@ if (!function_exists('processNlSubQueue')) {
         $successStmt = $pdo->prepare("UPDATE nl_sub_queue SET status='sent', attempts=attempts+1, sent_at=NOW(), last_error=NULL WHERE id=:id AND sent_at IS NULL");
 
         foreach ($ids as $queueIdRaw) {
+            if (newsletterShouldShutdown()) {
+                break;
+            }
             $queueId = (int) $queueIdRaw;
             if ($queueId <= 0) { $stats['skipped']++; continue; }
 
@@ -613,12 +629,19 @@ if (!function_exists('processNlSubQueue')) {
 
             $message = renderEmailHtmlLayout($messageBody, 'Zobraziť článok', $articleUrl, medimpaxEmailFooterHtml());
             $cfg     = getEmailEnvConfig();
-            $sent    = sendViaSmtp($recipientEmail, $subject, $message, $cfg, 'text/html; charset=UTF-8');
+            $extraHeaders = ['List-Unsubscribe' => '<' . $unsubscribeUrl . '>'];
+            $sent    = sendViaSmtp($recipientEmail, $subject, $message, $cfg, 'text/html; charset=UTF-8', null, $extraHeaders, $socket, $socketAuth);
 
             if (!$sent) {
                 $fallbackFrom     = $cfg['from_email'] !== '' ? $cfg['from_email'] : 'no-reply@nefro.polascin.net';
                 $fallbackFromName = mb_encode_mimeheader($cfg['from_name'] ?: 'Nefro-projekt', 'UTF-8', 'B', "\r\n ");
-                $headers = ['MIME-Version: 1.0', 'Content-Type: text/html; charset=UTF-8', 'Content-Transfer-Encoding: quoted-printable', 'From: ' . $fallbackFromName . ' <' . $fallbackFrom . '>'];
+                $headers = [
+                    'MIME-Version: 1.0',
+                    'Content-Type: text/html; charset=UTF-8',
+                    'Content-Transfer-Encoding: quoted-printable',
+                    'From: ' . $fallbackFromName . ' <' . $fallbackFrom . '>',
+                    'List-Unsubscribe: <' . $unsubscribeUrl . '>',
+                ];
                 $sent    = @mail($recipientEmail, mb_encode_mimeheader($subject, 'UTF-8', 'B', "\r\n "), quoted_printable_encode($message), implode("\r\n", $headers));
             }
 
@@ -641,6 +664,11 @@ if (!function_exists('processNlSubQueue')) {
         }
         error_log('processNlSubQueue error: ' . $e->getMessage());
         return $stats;
+    } finally {
+        if ($socket && is_resource($socket) && get_resource_type($socket) === 'stream') {
+            smtpSendCommand($socket, 'QUIT', [221], 'quit');
+            smtpCloseSocket($socket);
+        }
     }
 }
 }
@@ -658,6 +686,9 @@ if (!function_exists('processArticleNewsletterQueue')) {
             'cancelled' => 0,
             'skipped' => 0,
         ];
+
+        $socket = null;
+        $socketAuth = false;
 
         try {
             $pdo->beginTransaction();
@@ -712,6 +743,9 @@ if (!function_exists('processArticleNewsletterQueue')) {
             WHERE id = :id AND sent_at IS NULL");
 
         foreach ($ids as $queueIdRaw) {
+            if (newsletterShouldShutdown()) {
+                break;
+            }
             $queueId = (int) $queueIdRaw;
             if ($queueId <= 0) {
                 $stats['skipped']++;
@@ -812,7 +846,8 @@ if (!function_exists('processArticleNewsletterQueue')) {
             $message = renderEmailHtmlLayout($messageBody, 'Zobraziť článok', $articleUrl, medimpaxEmailFooterHtml());
 
             $cfg = getEmailEnvConfig();
-            $sent = sendViaSmtp($recipientEmail, $subject, $message, $cfg, 'text/html; charset=UTF-8');
+            $extraHeaders = ['List-Unsubscribe' => '<' . $unsubscribeUrl . '>'];
+            $sent = sendViaSmtp($recipientEmail, $subject, $message, $cfg, 'text/html; charset=UTF-8', null, $extraHeaders, $socket, $socketAuth);
             if (!$sent) {
                 $fallbackFrom = $cfg['from_email'] !== ''
                     ? $cfg['from_email']
@@ -824,6 +859,7 @@ if (!function_exists('processArticleNewsletterQueue')) {
                     'Content-Type: text/html; charset=UTF-8',
                     'Content-Transfer-Encoding: quoted-printable',
                     'From: ' . $fallbackFromName . ' <' . $fallbackFrom . '>',
+                    'List-Unsubscribe: <' . $unsubscribeUrl . '>',
                 ];
                 $sent = @mail($recipientEmail, $fallbackSubject, quoted_printable_encode($message), implode("\r\n", $headers));
             }
@@ -853,6 +889,11 @@ if (!function_exists('processArticleNewsletterQueue')) {
         }
         error_log('processArticleNewsletterQueue error: ' . $e->getMessage());
         return $stats;
+    } finally {
+        if ($socket && is_resource($socket) && get_resource_type($socket) === 'stream') {
+            smtpSendCommand($socket, 'QUIT', [221], 'quit');
+            smtpCloseSocket($socket);
+        }
     }
 }
 }
@@ -990,8 +1031,10 @@ if (!function_exists('sendWeeklyNewsletterDigest')) {
             ? 'Týždenný prehľad: 1 nový článok – Nefro-projekt Slovensko'
             : 'Týždenný prehľad: ' . $count . ' nových článkov – Nefro-projekt Slovensko';
         $cfg          = getEmailEnvConfig();
+        $socket       = null;
+        $socketAuth   = false;
 
-        $sendOne = static function (string $email, string $unsubscribeUrl, string $greetingName) use ($articlesHtml, $intro, $subject, $cfg, $dryRun): bool {
+        $sendOne = static function (string $email, string $unsubscribeUrl, string $greetingName) use ($articlesHtml, $intro, $subject, $cfg, $dryRun, &$socket, &$socketAuth): bool {
             if ($dryRun) {
                 return true;
             }
@@ -1025,11 +1068,18 @@ if (!function_exists('sendWeeklyNewsletterDigest')) {
             }
             $digestSentInMinute++;
 
-            $sent = sendViaSmtp($email, $subject, $message, $cfg, 'text/html; charset=UTF-8');
+            $extraHeaders = ['List-Unsubscribe' => '<' . $unsubscribeUrl . '>'];
+            $sent = sendViaSmtp($email, $subject, $message, $cfg, 'text/html; charset=UTF-8', null, $extraHeaders, $socket, $socketAuth);
             if (!$sent) {
                 $fallbackFrom     = $cfg['from_email'] !== '' ? $cfg['from_email'] : 'no-reply@nefro.polascin.net';
                 $fallbackFromName = mb_encode_mimeheader($cfg['from_name'] ?: 'Nefro-projekt', 'UTF-8', 'B', "\r\n ");
-                $headers = ['MIME-Version: 1.0', 'Content-Type: text/html; charset=UTF-8', 'Content-Transfer-Encoding: quoted-printable', 'From: ' . $fallbackFromName . ' <' . $fallbackFrom . '>'];
+                $headers = [
+                    'MIME-Version: 1.0',
+                    'Content-Type: text/html; charset=UTF-8',
+                    'Content-Transfer-Encoding: quoted-printable',
+                    'From: ' . $fallbackFromName . ' <' . $fallbackFrom . '>',
+                    'List-Unsubscribe: <' . $unsubscribeUrl . '>',
+                ];
                 $sent = @mail($email, mb_encode_mimeheader($subject, 'UTF-8', 'B', "\r\n "), quoted_printable_encode($message), implode("\r\n", $headers));
             }
             return $sent;
@@ -1044,6 +1094,9 @@ if (!function_exists('sendWeeklyNewsletterDigest')) {
             WHERE newsletter_consent = 1 AND is_active = 1 AND email_verified_at IS NOT NULL
               AND email IS NOT NULL AND email <> ''");
         while ($u = $userStmt->fetch()) {
+            if (newsletterShouldShutdown()) {
+                break;
+            }
             $email = trim((string) ($u['email'] ?? ''));
             if ($email === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
                 $result['failed']++;
@@ -1086,6 +1139,9 @@ if (!function_exists('sendWeeklyNewsletterDigest')) {
             WHERE verified_at IS NOT NULL AND unsubscribed_at IS NULL
               AND email IS NOT NULL AND email <> ''");
         while ($s = $subStmt->fetch()) {
+            if (newsletterShouldShutdown()) {
+                break;
+            }
             $email = trim((string) ($s['email'] ?? ''));
             if ($email === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
                 $result['failed']++;
@@ -1102,6 +1158,12 @@ if (!function_exists('sendWeeklyNewsletterDigest')) {
             } else {
                 $result['failed']++;
             }
+        }
+
+        // Uzavri zdieľané SMTP spojenie
+        if ($socket && is_resource($socket) && get_resource_type($socket) === 'stream') {
+            smtpSendCommand($socket, 'QUIT', [221], 'quit');
+            smtpCloseSocket($socket);
         }
 
         // Zaznamenaj beh (pri dry-run neukladáme, aby sa okno neposunulo).

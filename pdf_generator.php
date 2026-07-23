@@ -57,6 +57,30 @@ function articlePdfAvailable(): bool
 }
 
 /**
+ * Pre WebP obrázok vytvorí PNG variant ak existuje GD podpora a PNG ešte neexistuje.
+ * Vráti cestu k PNG alebo null ak konverzia nie je možná.
+ */
+function webpToPngFallbackPath(string $webpPath): ?string
+{
+    if (!function_exists('imagecreatefromwebp') || !function_exists('imagepng')) {
+        return null;
+    }
+    $dir = dirname($webpPath);
+    $name = pathinfo($webpPath, PATHINFO_FILENAME);
+    $pngPath = $dir . DIRECTORY_SEPARATOR . $name . '.png';
+    if (is_file($pngPath)) {
+        return $pngPath;
+    }
+    $img = @imagecreatefromwebp($webpPath);
+    if (!$img) {
+        return null;
+    }
+    $ok = @imagepng($img, $pngPath, 6);
+    imagedestroy($img);
+    return $ok ? $pngPath : null;
+}
+
+/**
  * Z PDF vstupu odstráni aktívny obsah a všetky zdroje okrem existujúcich
  * obrázkov v lokálnom /img. Generátor tak nemôže čítať konfiguráciu ani robiť
  * HTTP požiadavky podľa HTML uloženého administrátorom.
@@ -115,7 +139,17 @@ function sanitizeArticlePdfContent(string $content): string
             if (!$safePath) {
                 $element->removeAttribute('src');
             } else {
-                $element->setAttribute('src', $src);
+                // wkhtmltopdf 0.12.6 nepodporuje WebP → použij PNG fallback
+                if (strtolower((string) pathinfo($candidate, PATHINFO_EXTENSION)) === 'webp') {
+                    $pngCandidate = webpToPngFallbackPath($candidate);
+                    if ($pngCandidate !== null && str_starts_with($pngCandidate, $imgRoot . DIRECTORY_SEPARATOR)) {
+                        $element->setAttribute('src', 'img/' . substr($pngCandidate, strlen($imgRoot . DIRECTORY_SEPARATOR)));
+                    } else {
+                        $element->removeAttribute('src');
+                    }
+                } else {
+                    $element->setAttribute('src', $src);
+                }
             }
         } elseif ($element->hasAttribute('src')) {
             $element->removeAttribute('src');
@@ -150,8 +184,6 @@ function buildArticlePdfHtml(array $article): string
     $author = htmlspecialchars((string) ($article['author'] ?? 'MUDr. Ľubomír Polaščín'), ENT_QUOTES, 'UTF-8');
     $slug   = htmlspecialchars((string) ($article['slug'] ?? ''), ENT_QUOTES, 'UTF-8');
     $content = sanitizeArticlePdfContent((string) ($article['content'] ?? ''));
-    // wkhtmltopdf 0.12.6 (staré WebKit) nevykreslí WebP — v PDF použi PNG variant obrázka.
-    $content = preg_replace('/((?:src|srcset)="[^"]*?)\.webp"/i', '$1.png"', $content) ?? $content;
 
     $dateRaw = (string) ($article['published_at'] ?? '');
     $date = $dateRaw !== '' ? date('d.m.Y', strtotime($dateRaw)) : '';
@@ -277,17 +309,20 @@ function generateArticlePdf(PDO $pdo, array $article, bool $updateDb = true, boo
         return ['ok' => false, 'file' => null, 'error' => 'priečinok /pdf sa nedá vytvoriť'];
     }
 
+    $tmpDir = $pdfDir . '/.tmp';
+    if (!is_dir($tmpDir) && !@mkdir($tmpDir, 0770, true) && !is_dir($tmpDir)) {
+        return ['ok' => false, 'file' => null, 'error' => 'priečinok pre dočasné PDF sa nedá vytvoriť'];
+    }
+
     $outFile = $slug . '.pdf';
     $outPath = $pdfDir . '/' . $outFile;
 
     $html = buildArticlePdfHtml($article);
-    $tmp = tempnam(sys_get_temp_dir(), 'artpdf_');
-    if ($tmp === false) {
-        return ['ok' => false, 'file' => null, 'error' => 'dočasný súbor sa nedá vytvoriť'];
+    $tmpBase = $tmpDir . '/artpdf_' . bin2hex(random_bytes(8));
+    $tmpHtml = $tmpBase . '.html';
+    if (@file_put_contents($tmpHtml, $html) === false) {
+        return ['ok' => false, 'file' => null, 'error' => 'dočasný HTML súbor pre PDF sa nedá zapísať'];
     }
-    $tmpHtml = $tmp . '.html';
-    file_put_contents($tmpHtml, $html);
-    @unlink($tmp);
 
     $allowedImages = realpath(__DIR__ . '/img');
     if ($allowedImages === false) {

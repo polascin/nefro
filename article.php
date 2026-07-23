@@ -125,6 +125,25 @@ function toIso8601(string $datetime): string
 $siteName = "Nefro-projekt Slovensko";
 $baseUrl = "https://nefro.polascin.net/";
 
+function findFirstArticleImage(string $content): ?string
+{
+    if (!preg_match_all('#<img[^>]+src=["\'](img/[A-Za-z0-9._/-]+\.(?:png|jpe?g|gif|webp|svg))["\']#i', $content, $matches, PREG_SET_ORDER)) {
+        return null;
+    }
+    $imgRoot = realpath(__DIR__ . '/img');
+    foreach ($matches as $m) {
+        $src = $m[1];
+        if (str_contains($src, '..') || str_contains($src, '\\')) {
+            continue;
+        }
+        $path = realpath(__DIR__ . '/' . $src);
+        if ($path !== false && $imgRoot !== false && str_starts_with($path, $imgRoot . DIRECTORY_SEPARATOR) && is_file($path)) {
+            return $src;
+        }
+    }
+    return null;
+}
+
 $articleTitleRaw = $article ? (string) ($article["title"] ?? "") : "";
 // Autor projektu + pôvodní autori zdroja (odvodené z poľa author a citácie „Zdroj:").
 $bylineAuthors = $article
@@ -211,6 +230,23 @@ if ($article) {
             "height" => 630,
         ],
     ];
+
+    // OG/Twitter obrázok: ak článok obsahuje vlastný obrázok široký aspoň 1200 px, použi ho
+    $ogImage = $baseUrl . "img/og-default.jpg";
+    $ogImageWidth = 1200;
+    $ogImageHeight = 630;
+    $firstArticleImage = findFirstArticleImage((string) ($article["content"] ?? ""));
+    if ($firstArticleImage !== null) {
+        $imgInfo = @getimagesize(__DIR__ . '/' . $firstArticleImage);
+        if ($imgInfo !== false && $imgInfo[0] >= 1200) {
+            $ogImage = $baseUrl . $firstArticleImage;
+            $ogImageWidth = $imgInfo[0];
+            $ogImageHeight = $imgInfo[1];
+            $articleSchema["image"]["url"] = $ogImage;
+            $articleSchema["image"]["width"] = $ogImageWidth;
+            $articleSchema["image"]["height"] = $ogImageHeight;
+        }
+    }
 }
 ?>
 <!DOCTYPE html>

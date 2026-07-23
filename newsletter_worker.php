@@ -30,13 +30,23 @@ $maxAttempts = max(1, min(20, $maxAttempts));
 $lockAcquired = false;
 $exitCode = 0;
 
+$GLOBALS['__newsletterShutdown'] = false;
+if (function_exists('pcntl_signal')) {
+    pcntl_signal(SIGTERM, static function (): void { $GLOBALS['__newsletterShutdown'] = true; });
+    pcntl_signal(SIGINT, static function (): void { $GLOBALS['__newsletterShutdown'] = true; });
+}
+
 try {
     $lockAcquired = acquireNewsletterProcessLock($pdo, 'newsletter_worker');
     if (!$lockAcquired) {
         echo "Newsletter worker už spracúva iný proces; tento beh sa preskočil.\n";
     } else {
         $stats = processArticleNewsletterQueue($pdo, $limit, $maxAttempts);
-        $subStats = processNlSubQueue($pdo, $limit, $maxAttempts);
+
+        $subStats = ['selected' => 0, 'sent' => 0, 'failed' => 0, 'cancelled' => 0, 'skipped' => 0];
+        if (!newsletterShouldShutdown()) {
+            $subStats = processNlSubQueue($pdo, $limit, $maxAttempts);
+        }
 
         echo "Newsletter worker dokončený.\n";
         echo "\n-- Registrovaní používatelia --\n";
