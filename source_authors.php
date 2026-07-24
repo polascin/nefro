@@ -60,6 +60,7 @@ function getSourceArticleAuthors(): array {
         'iga-nefropatia-kdigo-2025-kdoqi' => ['Isabelle Ayoub', 'Gaia Coppock', 'Shikha Wadhwani', 'Timothy Yau'],
         'ked-sa-citime-chori-co-medicina-prehliada-nefrologia' => ['Arya Anthony Kamyab'],
         'kedy-zacat-krt-pri-aki' => ['Marlies Ostermann', 'Sean M Bagshaw', 'Nuttha Lumlertgul', 'Ron Wald'],
+        'ketoacidoza-nefrologicka-prax-hladovanie-euglykemicka-dka' => ['Biff F. Palmer', 'Deborah J. Clegg'],
         'kvalitativny-vyskum-nefrologia-rozhodovanie-pacientov-ckd' => ['Lisa O\'Mary'],
         'kreatin-zdravie-mozgu' => ['Heidi Moawad'],
         'malignity-transplantacia-oblicky-skrining-ptld' => ['Christopher D. Blosser', 'Elena-Bianca Barbir', 'Salma Shaikhouni', 'Naoka Murakami'],
