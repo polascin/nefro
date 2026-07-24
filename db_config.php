@@ -13,6 +13,9 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
 require_once __DIR__ . '/config_loader.php';
 require_once __DIR__ . '/source_authors.php';
 
+// Referenčné časové pásmo pre celú aplikáciu (vrátane CLI publikovania článkov).
+date_default_timezone_set('Europe/Bratislava');
+
 try {
     $env = loadAppConfig();
 } catch (\RuntimeException $e) {
