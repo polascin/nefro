@@ -101,5 +101,6 @@ function getSourceArticleAuthors(): array {
         'umela-inteligencia-sucha-hmotnost-hemodialyza' => ['Hae Ri Kim', 'Hong Jin Bae', 'Jae Wan Jeon', 'Young Rok Ham', 'Ki Ryang Na', 'Kang Wook Lee', 'Yun Kyong Hyon', 'Dae Eun Choi'],
         'vasopresin-nezavisla-cesta-regulacie-vody-adpkd' => ['Mohamad Hadla', 'Jean Marc Mardirossian', 'Daniel G. Bichet', 'Abdul Hamid Borghol', 'Georges Abboud', 'Ahmad Ghanem', 'Eduardo N. Chini', 'Peter C. Harris', 'Vicente E. Torres', 'Seth L. Alper', 'Volker Vallon', 'Fouad T. Chebib'],
         'victory-vitamin-c-tazke-popaleniny-nefrologicke-signaly' => ['Christian Stoppe', 'Aileen Hill', 'Leopoldo C. Cancio', 'Andrew G. Day', 'Kaitlin A. Pruskowski', 'Alexis F. Turgeon', 'Daren K. Heyland'],
+        'vona-cokolady-vykon-pri-silovom-treningu' => ['Xiaohan Fan', 'Hengzhi Deng', 'Jia Yang Ng', 'Ahmad Amirul Hazim bin Ab Aziz', 'Mohamed Nashrudin bin Naharudin'],
     ];
 }
