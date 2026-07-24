@@ -103,5 +103,6 @@ function getSourceArticleAuthors(): array {
         'vasopresin-nezavisla-cesta-regulacie-vody-adpkd' => ['Mohamad Hadla', 'Jean Marc Mardirossian', 'Daniel G. Bichet', 'Abdul Hamid Borghol', 'Georges Abboud', 'Ahmad Ghanem', 'Eduardo N. Chini', 'Peter C. Harris', 'Vicente E. Torres', 'Seth L. Alper', 'Volker Vallon', 'Fouad T. Chebib'],
         'victory-vitamin-c-tazke-popaleniny-nefrologicke-signaly' => ['Christian Stoppe', 'Aileen Hill', 'Leopoldo C. Cancio', 'Andrew G. Day', 'Kaitlin A. Pruskowski', 'Alexis F. Turgeon', 'Daren K. Heyland'],
         'vona-cokolady-vykon-pri-silovom-treningu' => ['Xiaohan Fan', 'Hengzhi Deng', 'Jia Yang Ng', 'Ahmad Amirul Hazim bin Ab Aziz', 'Mohamed Nashrudin bin Naharudin'],
+        'xenotransplantacia-oblicky-prasa-imunologia-zivy-prijemca' => ['Zhouqi Tang', 'Fadi G. Lakkis', 'Guilherme T. Ribas', 'André F. Cunha', 'Jonathan P. Avila', 'Alessia Giarraputo', 'Leela Morena', 'Karina Lima', 'Rodrigo B. Gassen', 'Jia-Yun Chen', 'Jia-Ren Lin', 'Sandro Santagata', 'Claire T. Avillach', 'Birgitta A. Ryback', 'Martin S. Lindner', 'Sivan Bercovici', 'Ivy A. Rosales', 'Tatsuo Kawai', 'Helder I. Nakaya', 'Robert B. Colvin', 'Thiago J. Borges', 'Leonardo V. Riella'],
     ];
 }
