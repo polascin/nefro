@@ -162,10 +162,11 @@ HTML,
 
 // ── Vkladanie do databázy ──────────────────────────────────────────────────────
 
+$__articleLogPrefix = basename(__FILE__, '.php');
 $result = upsertArticles($pdo, $articles, 'odborne', [
     'enqueue_newsletter' => true,
     'regenerate_pdf' => true,
-    'log_prefix' => 'add_vona-cokolady',
+    'log_prefix' => $__articleLogPrefix,
 ]);
 
 $inserted    = $result['inserted'];
