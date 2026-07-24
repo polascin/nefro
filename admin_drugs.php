@@ -434,7 +434,7 @@ function dgEditVal(?array $drug, string $key): string
             </div>
             <div class="form-row">
               <label for="f_approval">Rok schválenia</label>
-              <input type="number" id="f_approval" name="first_approval" min="1900" max="<?= (int) date('Y') + 1 ?>" value="<?= dgEditVal($editDrug, 'first_approval') ?>">
+              <input type="number" id="f_approval" name="first_approval" min="1900" max="<?= (int) formatUserTimestamp(time(), 'Y') + 1 ?>" value="<?= dgEditVal($editDrug, 'first_approval') ?>">
             </div>
 
             <div class="form-row">

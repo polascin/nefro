@@ -920,7 +920,7 @@ $isEdit = $editProvider !== null;
               <tbody>
                 <?php foreach ($editContacts as $c): $ct = strtotime((string) $c['contacted_at']); $ccId = (int) $c['id']; ?>
                 <tr>
-                  <td><?= htmlspecialchars($ct ? date('d.m.Y H:i', $ct) : (string) $c['contacted_at']) ?></td>
+                  <td><?= htmlspecialchars(formatUserDateTime((string) $c['contacted_at'], 'd.m.Y H:i')) ?></td>
                   <td><?= htmlspecialchars(ppContactChannelLabel((string) $c['channel'])) ?></td>
                   <td><?= !empty($c['outcome']) ? htmlspecialchars(ppOutreachLabel((string) $c['outcome'])) : '<span class="calc-result-detail">—</span>' ?></td>
                   <td><?= nl2br(htmlspecialchars((string) ($c['note'] ?? ''))) ?></td>
@@ -1176,9 +1176,9 @@ $isEdit = $editProvider !== null;
                     <?php else: ?>
                       <span class="badge-draft">Neaktívny</span>
                     <?php endif; ?>
-                    <br><span class="calc-result-detail"><?= htmlspecialchars(ppOutreachLabel((string) ($p['outreach_status'] ?? ''))) ?><?php if (!empty($p['contacted_at'])): $_ct = strtotime((string) $p['contacted_at']); ?> · <?= htmlspecialchars($_ct ? date('d.m.Y H:i', $_ct) : (string) $p['contacted_at']) ?><?php endif; ?></span>
+                    <br><span class="calc-result-detail"><?= htmlspecialchars(ppOutreachLabel((string) ($p['outreach_status'] ?? ''))) ?><?php if (!empty($p['contacted_at'])): ?> · <?= htmlspecialchars(formatUserDateTime((string) $p['contacted_at'], 'd.m.Y H:i')) ?><?php endif; ?></span>
                     <?php $cc = $contactCounts[$pId] ?? 0; if ($cc > 0): ?><br><span class="calc-result-detail">🗒 <?= (int) $cc ?> kontakt(ov)</span><?php endif; ?>
-                    <?php if (!empty($p['updated_at'])): $_ut = strtotime((string) $p['updated_at']); ?><br><span class="calc-result-detail">Zmenené: <?= htmlspecialchars($_ut ? date('d.m.Y H:i', $_ut) : (string) $p['updated_at']) ?></span><?php endif; ?>
+                    <?php if (!empty($p['updated_at'])): ?><br><span class="calc-result-detail">Zmenené: <?= htmlspecialchars(formatUserDateTime((string) $p['updated_at'], 'd.m.Y H:i')) ?></span><?php endif; ?>
                   </td>
                   <td class="no-print">
                     <a href="admin_providers.php?action=edit&id=<?= $pId ?>" class="btn-secondary-small">✏️ Upraviť</a>

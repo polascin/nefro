@@ -303,7 +303,7 @@ if (isLoggedIn()) {
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="examination_date">Dátum vyšetrenia <span class="required">*</span></label>
-                                <input type="date" id="examination_date" name="examination_date" required class="form-control" max="<?= date('Y-m-d') ?>" value="<?= htmlspecialchars($form['examination_date']) ?>">
+                                <input type="date" id="examination_date" name="examination_date" required class="form-control" max="<?= htmlspecialchars(formatUserTimestamp(time(), 'Y-m-d')) ?>" value="<?= htmlspecialchars($form['examination_date']) ?>">
                             </div>
                             <div class="form-group">
                                 <label for="m_protein">Sérový M-proteín (g/L) <span class="required">*</span></label>

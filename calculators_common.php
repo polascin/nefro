@@ -648,8 +648,8 @@ function calculatorRenderSavedResultsTable(
                             $_examD = (string) ($row['input_payload']['examination_date'] ?? ''); ?>
                             <tr>
                                 <td>
-                                    <?= $_examD ? htmlspecialchars(date('d.m.Y', strtotime($_examD))) : '—' ?>
-                                    <small class="d-block saved-meta">ulo.: <?= htmlspecialchars(date('d.m.Y H:i', strtotime((string) ($row['created_at'] ?? '')))) ?></small>
+                                    <?= $_examD ? htmlspecialchars(formatUserDate($_examD, 'd.m.Y')) : '—' ?>
+                                    <small class="d-block saved-meta">ulo.: <?= htmlspecialchars(formatUserDateTime((string) ($row['created_at'] ?? ''), 'd.m.Y H:i')) ?></small>
                                 </td>
                                 <td><?= htmlspecialchars(calculatorBuildPatientDisplay($row)) ?></td>
                                 <td><?php $renderResultCell($row); ?></td>

@@ -199,7 +199,7 @@ if (isLoggedIn()) {
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="examination_date">Dátum vyšetrenia <span class="required">*</span></label>
-                                <input type="date" id="examination_date" name="examination_date" required class="form-control" max="<?= date('Y-m-d') ?>" value="<?= htmlspecialchars($form['examination_date']) ?>">
+                                <input type="date" id="examination_date" name="examination_date" required class="form-control" max="<?= htmlspecialchars(formatUserTimestamp(time(), 'Y-m-d')) ?>" value="<?= htmlspecialchars($form['examination_date']) ?>">
                             </div>
                                                         <div class="form-group"><label for="u_pre">S-Urea PRED dialýzou (mmol/L)</label><input type="text" id="u_pre" name="u_pre" class="form-control" value="<?= htmlspecialchars(
                                 $form["u_pre"],

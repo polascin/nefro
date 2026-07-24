@@ -613,7 +613,7 @@ function sexLabel(string $v): string
 
                             <div class="form-group">
                                 <label for="examination_date">Dátum vyšetrenia <span class="required">*</span></label>
-                                <input type="date" id="examination_date" name="examination_date" required class="form-control" max="<?= date('Y-m-d') ?>" value="<?= htmlspecialchars($form['examination_date']) ?>">
+                                <input type="date" id="examination_date" name="examination_date" required class="form-control" max="<?= htmlspecialchars(formatUserTimestamp(time(), 'Y-m-d')) ?>" value="<?= htmlspecialchars($form['examination_date']) ?>">
                             </div>
                                                         <div class="form-group">
                                 <label for="age_years">Vek (roky, 20–80)</label>
@@ -1066,8 +1066,8 @@ function sexLabel(string $v): string
                                             <tr>
                                                 <td>
                                                     <?php $_examD = (string) ($row["input_payload"]["examination_date"] ?? ""); ?>
-                                                    <?= $_examD ? htmlspecialchars(date("d.m.Y", strtotime($_examD))) : '—' ?>
-                                                    <small class="d-block saved-meta">ulo.: <?= htmlspecialchars(date("d.m.Y H:i", strtotime($row["created_at"] ?? ""))) ?></small>
+                                                    <?= $_examD ? htmlspecialchars(formatUserDate($_examD, "d.m.Y")) : '—' ?>
+                                                    <small class="d-block saved-meta">ulo.: <?= htmlspecialchars(formatUserDateTime((string) ($row["created_at"] ?? ""), "d.m.Y H:i")) ?></small>
                                                 </td>
                                                 <td><?= htmlspecialchars(
                                                     calculatorBuildPatientDisplay(

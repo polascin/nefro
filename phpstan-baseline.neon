@@ -403,12 +403,6 @@ parameters:
 			path: index.php
 
 		-
-			message: '#^Offset 1\|2\|3\|4\|5\|6\|7\|8\|9\|10\|11\|12 on array\{1\: ''januári'', 2\: ''februári'', 3\: ''marci'', 4\: ''apríli'', 5\: ''máji'', 6\: ''júni'', 7\: ''júli'', 8\: ''auguste'', \.\.\.\} on left side of \?\? always exists and is not nullable\.$#'
-			identifier: nullCoalesce.offset
-			count: 1
-			path: index.php
-
-		-
 			message: '#^Variable \$structuredData on left side of \?\? always exists and is not nullable\.$#'
 			identifier: nullCoalesce.variable
 			count: 1

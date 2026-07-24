@@ -96,11 +96,9 @@ function patientHeading(array $row): string {
 function calcDisplayDate(array $row, bool $withTime = false): string {
     $examDate = trim((string)($row['input_payload']['examination_date'] ?? ''));
     if ($examDate !== '') {
-        $ts = strtotime($examDate);
-        return $ts ? date('d.m.Y', $ts) : $examDate;
+        return formatUserDate($examDate, 'd.m.Y') ?: $examDate;
     }
-    $ts = strtotime((string)($row['created_at'] ?? ''));
-    return $ts ? date($withTime ? 'd.m.Y H:i' : 'd.m.Y', $ts) : '—';
+    return formatUserDateTime((string)($row['created_at'] ?? ''), $withTime ? 'd.m.Y H:i' : 'd.m.Y') ?: '—';
 }
 
 // POST akcie
@@ -418,7 +416,7 @@ $totalCount = array_sum(array_column($statsByCalc, 'count'));
             <td>
               <?= htmlspecialchars(calcDisplayDate($row)) ?>
               <?php if (isset($row['input_payload']['examination_date']) && $row['input_payload']['examination_date'] !== ''): ?>
-                <small class="d-block saved-meta">ulo.: <?= htmlspecialchars(date('d.m.Y H:i', strtotime($row['created_at'] ?? ''))) ?></small>
+                <small class="d-block saved-meta">ulo.: <?= htmlspecialchars(formatUserDateTime((string) ($row['created_at'] ?? ''), 'd.m.Y H:i')) ?></small>
               <?php endif; ?>
             </td>
             <td><?= htmlspecialchars($row['calculator_label'] ?? CALC_LABELS[$key] ?? $key) ?></td>

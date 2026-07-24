@@ -315,7 +315,7 @@ if (isLoggedIn()) {
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="examination_date">Dátum vyšetrenia <span class="required">*</span></label>
-                                <input type="date" id="examination_date" name="examination_date" required class="form-control" max="<?= date('Y-m-d') ?>" value="<?= htmlspecialchars($form['examination_date']) ?>">
+                                <input type="date" id="examination_date" name="examination_date" required class="form-control" max="<?= htmlspecialchars(formatUserTimestamp(time(), 'Y-m-d')) ?>" value="<?= htmlspecialchars($form['examination_date']) ?>">
                             </div>
                                                         <div class="form-group"><label for="sex">Pohlavie</label><select id="sex" name="sex" class="form-control" required><option value="female" <?= $form[
                                 "sex"
@@ -446,8 +446,8 @@ if (isLoggedIn()) {
                                     <tr>
                                         <td>
                                             <?php $_examD = (string) ($row["input_payload"]["examination_date"] ?? ""); ?>
-                                            <?= $_examD ? htmlspecialchars(date("d.m.Y", strtotime($_examD))) : '—' ?>
-                                            <small class="d-block saved-meta">ulo.: <?= htmlspecialchars(date("d.m.Y H:i", strtotime($row["created_at"] ?? ""))) ?></small>
+                                            <?= $_examD ? htmlspecialchars(formatUserDate($_examD, "d.m.Y")) : '—' ?>
+                                            <small class="d-block saved-meta">ulo.: <?= htmlspecialchars(formatUserDateTime((string) ($row["created_at"] ?? ""), "d.m.Y H:i")) ?></small>
                                         </td>
                                         <td>
                                             TBW: <?= number_format(

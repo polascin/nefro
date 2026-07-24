@@ -309,7 +309,7 @@ if (isLoggedIn()) {
                         <div class="form-grid calc-item-separator egfr-slope-row" id="row-<?= $i ?>">
                             <div class="form-group">
                                 <label for="date_<?= $i ?>">Dátum merania <?= $i ?></label>
-                                <input type="date" id="date_<?= $i ?>" name="date_<?= $i ?>" class="form-control" max="<?= date('Y-m-d') ?>" value="<?= htmlspecialchars($form["date_$i"]) ?>">
+                                <input type="date" id="date_<?= $i ?>" name="date_<?= $i ?>" class="form-control" max="<?= htmlspecialchars(formatUserTimestamp(time(), 'Y-m-d')) ?>" value="<?= htmlspecialchars($form["date_$i"]) ?>">
                             </div>
                             <div class="form-group">
                                 <label for="egfr_<?= $i ?>">eGFR <?= $i ?> (ml/min/1,73&thinsp;m²)</label>
@@ -375,8 +375,8 @@ if (isLoggedIn()) {
                                     <tr>
                                         <td>
                                             <?php $_examD = (string)($row["input_payload"]["examination_date"] ?? ""); ?>
-                                            <?= $_examD ? htmlspecialchars(date("d.m.Y", strtotime($_examD))) : "—" ?>
-                                            <small class="d-block saved-meta">ulo.: <?= htmlspecialchars(date("d.m.Y H:i", strtotime($row["created_at"] ?? ""))) ?></small>
+                                            <?= $_examD ? htmlspecialchars(formatUserDate($_examD, "d.m.Y")) : "—" ?>
+                                            <small class="d-block saved-meta">ulo.: <?= htmlspecialchars(formatUserDateTime((string) ($row["created_at"] ?? ""), "d.m.Y H:i")) ?></small>
                                         </td>
                                         <td><?= htmlspecialchars(calculatorBuildPatientDisplay($row)) ?></td>
                                         <td><?= number_format((float)($row["result_payload"]["slope"] ?? 0), 2, ",", " ") ?> ml/min/rok</td>
@@ -428,7 +428,7 @@ if (isLoggedIn()) {
             row.innerHTML =
                 '<div class="form-group">' +
                     '<label for="date_' + idx + '">Dátum merania ' + idx + '</label>' +
-                    '<input type="date" id="date_' + idx + '" name="date_' + idx + '" class="form-control" max="<?= date('Y-m-d') ?>">' +
+                    '<input type="date" id="date_' + idx + '" name="date_' + idx + '" class="form-control" max="<?= htmlspecialchars(formatUserTimestamp(time(), 'Y-m-d')) ?>">' +
                 '</div>' +
                 '<div class="form-group">' +
                     '<label for="egfr_' + idx + '">eGFR ' + idx + ' (ml/min/1,73 m²)</label>' +

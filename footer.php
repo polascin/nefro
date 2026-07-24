@@ -83,7 +83,7 @@ $swatchBeat = '@' . number_format($beatValue, 2, '.', '');
 
     <div class="site-footer__bottom">
       <div class="container site-footer__bottom-inner">
-        <span>&copy; <?= date('Y') ?> Ľubomír Polaščín</span>
+        <span>&copy; <?= htmlspecialchars(formatUserTimestamp(time(), 'Y')) ?> Ľubomír Polaščín</span>
         <span class="site-footer__bottom-sep" aria-hidden="true">·</span>
         <a href="#cookie-settings" role="button" class="cookie-settings-trigger site-footer__link" aria-haspopup="dialog" aria-controls="cookieConsentModal">Nastavenia cookies</a>
         <span class="site-footer__bottom-sep" aria-hidden="true">·</span>
@@ -107,7 +107,7 @@ $swatchBeat = '@' . number_format($beatValue, 2, '.', '');
 
   <!-- Tlačová pätička -->
   <?php
-  $printDateTime = date('d.m.Y H:i:s');
+  $printDateTime = formatUserTimestamp(time(), 'd.m.Y H:i:s');
   $isCalculatorPageFooter = str_starts_with(basename($_SERVER['PHP_SELF']), 'calculator');
   ?>
   <?php if ($isCalculatorPageFooter && (!empty($currentUser) || !isLoggedIn())): ?>
@@ -116,7 +116,7 @@ $swatchBeat = '@' . number_format($beatValue, 2, '.', '');
   <?php endif; ?>
 
   <div class="global-print-footer print-only" aria-hidden="true">
-    <div>Vytlačené z webovej lokality Nefro-projekt Slovensko - https://nefro.polascin.net/ &copy; <?= date('Y') ?> Ľubomír Polaščín</div>
+    <div>Vytlačené z webovej lokality Nefro-projekt Slovensko - https://nefro.polascin.net/ &copy; <?= htmlspecialchars(formatUserTimestamp(time(), 'Y')) ?> Ľubomír Polaščín</div>
     <div class="mt-2">Dátum a čas tlače: <?= $printDateTime ?> (<?= htmlspecialchars($pageTimeZone, ENT_QUOTES, 'UTF-8') ?>)</div>
   </div>
 

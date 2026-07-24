@@ -261,7 +261,7 @@ if ($format === 'txt') {
     header('Expires: 0');
 
     echo "Zoznam používateľov\n";
-    echo "Generované: " . date('d.m.Y H:i:s') . "\n";
+    echo "Generované: " . formatUserTimestamp(time(), 'd.m.Y H:i:s') . "\n";
     echo "Počet používateľov: " . count($users) . "\n\n";
 
     if (empty($users)) {
@@ -285,7 +285,7 @@ if ($format === 'txt') {
 }
 
 $isPrintMode = ($format === 'print');
-$nowHuman = date('d.m.Y H:i:s');
+$nowHuman = formatUserTimestamp(time(), 'd.m.Y H:i:s');
 $totalUsers = count($users);
 $modeLabel = $includeSensitive
     ? 'Rozšírený režim (bez hash/token polí)'

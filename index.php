@@ -17,8 +17,8 @@ $monthsLocative = [
     11 => "novembri",
     12 => "decembri",
 ];
-$currentMonth = (int) date("n");
-$currentYear = date("Y");
+$currentMonth = (int) formatUserTimestamp(time(), 'n');
+$currentYear = formatUserTimestamp(time(), 'Y');
 $currentMonthYearLocative =
     ($monthsLocative[$currentMonth] ?? "") . " " . $currentYear;
 $pageLastUpdated = formatUserTimestamp((int) filemtime(__FILE__));

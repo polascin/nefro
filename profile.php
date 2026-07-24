@@ -617,14 +617,14 @@ if ($requestMethod === 'POST' && $success && empty($errors)) {
                                 <strong><?= $isMobileVerified ? 'Overený' : 'Neoverený' ?></strong>
                                 <?php if (!empty($user['mobile_phone']) && !$isMobileVerified): ?>
                                     <?php if (!empty($mobileExpiresAt) && strtotime((string) $mobileExpiresAt) >= time()): ?>
-                                        (kód aktívny do <?= htmlspecialchars(date('d.m.Y H:i', strtotime((string) $mobileExpiresAt))) ?>)
+                                        (kód aktívny do <?= htmlspecialchars(formatUserDateTime((string) $mobileExpiresAt, 'd.m.Y H:i')) ?>)
                                     <?php elseif (!empty($mobileSentAt)): ?>
-                                        (posledný kód odoslaný <?= htmlspecialchars(date('d.m.Y H:i', strtotime((string) $mobileSentAt))) ?>)
+                                        (posledný kód odoslaný <?= htmlspecialchars(formatUserDateTime((string) $mobileSentAt, 'd.m.Y H:i')) ?>)
                                     <?php endif; ?>
                                 <?php endif; ?>
                                 <?php if ($mobileVerifyLocked): ?>
                                     <span class="badge-draft">
-                                        SMS overenie zablokované do <?= htmlspecialchars(date('H:i', strtotime((string) ($user['mobile_verify_locked_until'] ?? '')))) ?>
+                                        SMS overenie zablokované do <?= htmlspecialchars(formatUserDateTime((string) ($user['mobile_verify_locked_until'] ?? ''), 'H:i')) ?>
                                     </span>
                                 <?php endif; ?>
                             </p>

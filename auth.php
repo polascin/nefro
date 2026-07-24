@@ -1287,3 +1287,24 @@ function formatUserDateTime(
         return (string) $datetime;
     }
 }
+
+/**
+ * Sformátuje kalendárny dátum (bez časovej zložky) v časovom pásme používateľa.
+ * Použiť pre dátumy uložené ako `Y-m-d`, kde sa má zachovať kalendárny deň,
+ * nie absolútny okamih (napr. dátum vyšetrenia v kalkulačkách).
+ *
+ * @param string|null $date Dátumový reťazec, najčastejšie `Y-m-d`.
+ */
+function formatUserDate(?string $date, string $format = 'd.m.Y', ?string $userTz = null): string
+{
+    if (empty($date)) {
+        return '';
+    }
+    $userTz = $userTz ?: getUserTimezone();
+    try {
+        $dt = new DateTimeImmutable((string) $date, new DateTimeZone($userTz));
+        return $dt->format($format);
+    } catch (\Throwable) {
+        return (string) $date;
+    }
+}
