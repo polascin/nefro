@@ -45,6 +45,7 @@ function getSourceArticleAuthors(): array {
         'dyslipidemia-ckd-acc-aha-2026-nefrologicka-prax' => ['Amaryllis H Van Craenenbroeck', 'Patrick B Mark', 'Jose M Valdivielso', 'EuReCa-m Working Group of the European Renal Association'],
         'egfr-diabetes-ekfc-ckd-epi-stadia-ckd' => ['YuXia Zi', 'WenXing Fan'],
         'ema-zrusenie-povolenia-tavneos-avacopan-anca-vaskulitida' => ['Rob Hicks'],
+        'environmentalne-toxiny-poskodenie-obliciek-nefrolog' => ['Anna Strasma', 'Nishad Jayasundara', 'Shuchi Anand'],
         'extremne-horucavy-riziko-ckd-dialyza' => ['Roberta Villa'],
         'farmakologicka-liecba-obezity-pokrocile-ckd-dialyza' => ['Pooja Budhiraja', 'Babak J. Orandi'],
         'finerenon-ckm-syndrom-dm2-ckd-fidelity' => ['Kevin Bryan Lo', 'John W Ostrominski', 'Yasuhiro Hamatani', 'Brian L Claggett', 'Rajiv Agarwal', 'Stefan D Anker', 'Gerasimos Filippatos', 'Peter Rossing', 'Luis M Ruilope', 'Bertram Pitt', 'Alexandros Briasoulis', 'Kimon Stamatelopoulos', 'Meike Brinker', 'Patrick Schloemer', 'Andrea Glasauer', 'Scott D Solomon', 'Muthiah Vaduganathan'],
