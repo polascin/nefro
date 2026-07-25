@@ -75,6 +75,7 @@ function getSourceArticleAuthors(): array {
         'oblicka-v-centre-ckm-syndromu-kdigo' => ['Adeera Levin', 'Nisha Bansal', 'Ian H de Boer', 'Morgan E Grams', 'Michel Jadoul', 'Jozine M Ter Maaten', 'Reem A Mustafa', 'Peter Rossing', 'Michael Cheung', 'Jennifer M King', 'Amy Earley', 'Paul E Stevens'],
         'ochorenie-obliciek-tehotenstvo-multidisciplinarna-starostlivost' => ['Manal E Alotaibi', 'Ghada Ankawi'],
         'ockovanie-ckd-transplantacia-oblicky-vakciny-nacasovanie' => ['Matthias Girndt'],
+        'online-hemodiafiltracia-mco-dialyzatory-stredne-molekuly' => ['Karin Bergling', 'Peter J. Blankestijn'],
         'pentoxifylin-diabeticka-choroba-obliciek-mini-review' => ['David J. Leehey', 'Rajiv Agarwal'],
         'perzistujuca-hyperparatyreoza-po-transplantacii-oblicky' => ['Daniele Vetrano', 'Simona Barbuto', 'Francesco Aguanno', 'Paolo Mastromauro', 'Valeria Grandinetti', 'Giorgia Comai', 'Gaetano La Manna', 'Giuseppe Cianciolo'],
         'predialyzacna-edukacia-volba-peritonealnej-dialyzy' => ['Magdalena Mosakowska', 'Ewelina Jędrych', 'Ewa Kotwica-Strzałek', 'Agnieszka Dorywalska', 'Arkadiusz Lubas', 'Stanisław Niemczyk'],
