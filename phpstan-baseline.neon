@@ -461,3 +461,15 @@ parameters:
 			identifier: nullCoalesce.offset
 			count: 1
 			path: search.php
+
+		-
+			message: '#^Result of && is always false\.$#'
+			identifier: booleanAnd.alwaysFalse
+			count: 1
+			path: totp.php
+
+		-
+			message: '#^Strict comparison using === between 0 and 16 will always evaluate to false\.$#'
+			identifier: identical.alwaysFalse
+			count: 1
+			path: totp.php
