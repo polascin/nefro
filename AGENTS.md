@@ -77,7 +77,7 @@ This file provides guidance to WARP (warp.dev) when working with code in this re
 - There is no Composer/PHPUnit test harness in this repo; use the provided smoke and lint scripts for verification.
 - Do not introduce PHPUnit.
 - Keep text and data handling UTF-8 safe; repository scripts include explicit UTF-8/BOM checks.
-- Treat `.agent.md` as historical project guidance for security/accessibility/GDPR audit expectations when making sensitive changes.
+- Treat `.audit.md` as historical project guidance for security/accessibility/GDPR audit expectations when making sensitive changes.
 - **Publishing/regenerating articles** (professional `odborne` and patient `popularne`),
   including PDF generation/sync: follow `PUBLIKOVANIE_CLANKOV.md` (section "Pre AI agentov"
   has the exact step-by-step) and `PUBLIKOVANIE_PRE_PACIENTOV.md`. Use the UPSERT templates

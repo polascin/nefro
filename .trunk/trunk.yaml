@@ -67,7 +67,7 @@ lint:
     # ani markdownlint, ani prettier ich nesmú meniť.
     - linters: [markdownlint, prettier]
       paths:
-        - .agent.md
+        - .audit.md
         - PUBLIKOVANIE_*.md
 
     # Konzervatívne formátovanie: Prettier nemení ručný aplikačný CSS/JS.

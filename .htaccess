@@ -30,7 +30,7 @@ ServerSignature Off
     Require all denied
 </FilesMatch>
 
-# Interné Markdown dokumenty (.agent.md, AGENTS.md, README, PUBLIKOVANIE_*) —
+# Interné Markdown dokumenty (.audit.md, AGENTS.md, README, PUBLIKOVANIE_*) —
 # obsahujú vývojársku/bezpečnostnú dokumentáciu, nikdy cez web
 <FilesMatch "\.md$">
     Require all denied

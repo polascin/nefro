@@ -7,7 +7,7 @@ declare(strict_types=1);
  * Zásady ochrany osobných údajov (privacy.php), Cookie Policy (cookies.php)
  * a Podmienky používania (terms.php).
  *
- * Audit `.agent.md` (sekcia „Súkromie, súhlas a právne dokumenty") kontroluje
+ * Audit `.audit.md` (sekcia „Súkromie, súhlas a právne dokumenty") kontroluje
  * tieto polia pri každom behu — aktualizuj ich tu a všetky tri stránky ostanú
  * konzistentné.
  *

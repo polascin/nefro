@@ -1,5 +1,5 @@
 # Git globy, ktoré nikdy nepatria do verejného web rootu.
-.agent.md
+.audit.md
 .agents/**
 .claude/**
 .gitattributes
