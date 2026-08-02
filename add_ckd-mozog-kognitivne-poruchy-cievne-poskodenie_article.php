@@ -92,7 +92,7 @@ $articles[] = [
   </thead>
   <tbody>
     <tr>
-      <td>Cefepím, ďalšie betalaktámy</td>
+      <td>Cefepím, ďalšie<br>betalaktámy</td>
       <td>Encefalopatia, myoklonus, afázia, záchvaty</td>
       <td>Upraviť dávku a interval podľa funkcie obličiek; pri nových neurologických príznakoch liek aktívne zaradiť do diferenciálnej diagnostiky</td>
     </tr>
