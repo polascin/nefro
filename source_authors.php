@@ -24,6 +24,7 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
  */
 function getSourceArticleAuthors(): array {
     return [
+        '12-knih-lekar-choroba-pacient-narativna-medicina' => ['Ted Spiker'],
         '5-kritickych-chyb-manazment-ckm-syndromu-nefrologia' => ['Lisa O\'Mary'],
         'ai-nefrologia-hands-on-primer-klinicka-integracia' => ['Noppawit Aiumtrakul', 'Arjunmohan Mohan', 'Harshil A. Fichadiya', 'Wisit Cheungpasitporn'],
         'ai-scribe-pravne-nastrahy-ambulancia-nefrologia' => ['Ericka L. Adler'],
