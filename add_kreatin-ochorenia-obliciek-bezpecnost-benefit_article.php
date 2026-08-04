@@ -87,6 +87,8 @@ $articles[] = [
   <li>paralelný pokles eGFR odvodenej od cystatínu C alebo nepriaznivá zmena meranej GFR.</li>
 </ul>
 
+<h3>Kedy je pravdepodobnejšie skreslenie kreatinínu</h3>
+
 <p>Naopak, izolovaný stabilný vzostup kreatinínu bez albuminúrie, bez patologického sedimentu, bez poruchy vnútorného prostredia a bez poklesu cystatínovej alebo meranej GFR podporuje vysvetlenie nezávislé od zmeny GFR. Ani tento obraz však nenahrádza klinické posúdenie.</p>
 
 <h2>Cystatín C pomáha, ale nie je neomylný</h2>
