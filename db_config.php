@@ -599,7 +599,9 @@ function isLikelyPersonalAuthorName(string $author): bool {
 
     if ($isValid) {
         foreach (getNonPersonAuthorKeywords() as $keyword) {
-            if (stripos($author, $keyword) !== false) {
+            $keywordPattern = '/(?:^|[^\p{L}\p{N}])' . preg_quote($keyword, '/')
+                . '(?:$|[^\p{L}\p{N}])/iu';
+            if (preg_match($keywordPattern, $author) === 1) {
                 $isValid = false;
                 break;
             }
