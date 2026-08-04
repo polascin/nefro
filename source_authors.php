@@ -64,6 +64,7 @@ function getSourceArticleAuthors(): array {
         'ked-sa-citime-chori-co-medicina-prehliada-nefrologia' => ['Arya Anthony Kamyab'],
         'kedy-zacat-krt-pri-aki' => ['Marlies Ostermann', 'Sean M Bagshaw', 'Nuttha Lumlertgul', 'Ron Wald'],
         'ketoacidoza-nefrologicka-prax-hladovanie-euglykemicka-dka' => ['Biff F. Palmer', 'Deborah J. Clegg'],
+        'kreatin-ochorenia-obliciek-bezpecnost-benefit' => ['Juliana Paula Pereira', 'Viviane O Leal', 'Pricilla Trigueira', 'Natália A Borges', 'Ludmila F M F Cardozo', 'Denise Mafra'],
         'kreatin-zdravie-mozgu' => ['Heidi Moawad'],
         'krvna-skupina-a-mortalita-hemodialyza' => ['Masafumi Kurajoh', 'Tetsuo Shoji', 'Shinya Nakatani', 'Yuki Nagata', 'Hisako Fujii', 'Yasuo Imanishi', 'Masanori Emoto', 'Tomoaki Morioka'],
         'kvalitativny-vyskum-nefrologia-rozhodovanie-pacientov-ckd' => ['Lisa O\'Mary'],
