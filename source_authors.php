@@ -82,6 +82,7 @@ function getSourceArticleAuthors(): array {
         'online-hemodiafiltracia-mco-dialyzatory-stredne-molekuly' => ['Karin Bergling', 'Peter J. Blankestijn'],
         'pentoxifylin-diabeticka-choroba-obliciek-mini-review' => ['David J. Leehey', 'Rajiv Agarwal'],
         'perzistujuca-hyperparatyreoza-po-transplantacii-oblicky' => ['Daniele Vetrano', 'Simona Barbuto', 'Francesco Aguanno', 'Paolo Mastromauro', 'Valeria Grandinetti', 'Giorgia Comai', 'Gaetano La Manna', 'Giuseppe Cianciolo'],
+        'prader-willi-syndrom-genetika-hyperfagia-starostlivost' => ['Jessica Duis', 'Ashley Shoemaker', 'Anthony P. Goldstone'],
         'predialyzacna-edukacia-volba-peritonealnej-dialyzy' => ['Magdalena Mosakowska', 'Ewelina Jędrych', 'Ewa Kotwica-Strzałek', 'Agnieszka Dorywalska', 'Arkadiusz Lubas', 'Stanisław Niemczyk'],
         'prehlad-vyskum-fsgs-diabeticka-nefropatia-2025-2026' => ['Howard Trachtman', 'Sean Eddy', 'Matthias Kretzler'],
         'protein-kreatin-uz-nie-su-len-fitness-tema-nefrologia' => ['Lou Schuler'],
