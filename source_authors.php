@@ -73,6 +73,7 @@ function getSourceArticleAuthors(): array {
         'liecba-ckd-2026-vrstvena-nefroprotekcia-post-aki' => ['Pranav Garimella', 'Marc Richards', 'Matthew Breeggemann'],
         'malignity-transplantacia-oblicky-skrining-ptld' => ['Christopher D. Blosser', 'Elena-Bianca Barbir', 'Salma Shaikhouni', 'Naoka Murakami'],
         'meduza-hojenie-ran-bez-jaziev-regenerativna-medicina' => ['Jocelyn E. Malamy', 'Maxwell Sassaman', 'Manjula P. Mony'],
+        'monoklonalna-gamapatia-klinickeho-vyznamu-mgcs-mimo-mgrs' => ['Patrick Hofmann', 'Sujal I. Shah', 'Helmut G. Rennke', 'Rahel Schwotzer', 'David B. Sykes', 'Nelson Leung', 'Raad B. Chowdhury'],
         'moderne-trendy-v-nefroprotekcii' => ['Hiddo J.L. Heerspink', 'Bergur V. Stefánsson', 'Ricardo Correa-Rotter', 'Glenn M. Chertow', 'Tom Greene', 'Fan-Fan Hou', 'Johannes F.E. Mann', 'John J.V. McMurray', 'Magnus Lindberg', 'Peter Rossing', 'C. David Sjöström', 'Roberto D. Toto', 'Anna-Maria Langkilde', 'David C. Wheeler'],
         'nacasovanie-cievneho-pristupu-avf-avg-pred-hemodialyzou' => ['Jooyeon Yoon', 'Kyungjun Shon', 'Hayne Cho Park', 'Sua Lee', 'Young-Ki Lee', 'Hyungseok Lee', 'Eun Jung Kim', 'Hoon Suk Park', 'Min-Ho Kim', 'Do Hyoung Kim'],
         'nediabeticka-ckd-nehemodynamicke-mechanizmy-nsmra-finerenon' => ['Brendon L. Neuen', 'Beatriz Fernandez-Fernandez'],
