@@ -53,6 +53,7 @@ function getSourceArticleAuthors(): array {
         'egfr-diabetes-ekfc-ckd-epi-stadia-ckd' => ['YuXia Zi', 'WenXing Fan'],
         'ema-zrusenie-povolenia-tavneos-avacopan-anca-vaskulitida' => ['Rob Hicks'],
         'environmentalne-toxiny-poskodenie-obliciek-nefrolog' => ['Anna Strasma', 'Nishad Jayasundara', 'Shuchi Anand'],
+        'estop-aki-strojove-ucenie-vcasna-konzultacia-nefrologa' => ['Matthew M. Churpek', 'Aiman Fatima', 'Olasunkanmi Anjorin', 'Ananya Saravanan', 'Benjamin S. Ko', 'Samantha Gunning', 'Megan L. Prochaska', 'Tipu S. Puri', 'Anna L. Zisman', 'Dana P. Edelson', 'Mihai C. Giurcanu', 'Jay L. Koyner'],
         'extremne-horucavy-riziko-ckd-dialyza' => ['Roberta Villa'],
         'farmakologicka-liecba-obezity-pokrocile-ckd-dialyza' => ['Pooja Budhiraja', 'Babak J. Orandi'],
         'finerenon-ckm-syndrom-dm2-ckd-fidelity' => ['Kevin Bryan Lo', 'John W Ostrominski', 'Yasuhiro Hamatani', 'Brian L Claggett', 'Rajiv Agarwal', 'Stefan D Anker', 'Gerasimos Filippatos', 'Peter Rossing', 'Luis M Ruilope', 'Bertram Pitt', 'Alexandros Briasoulis', 'Kimon Stamatelopoulos', 'Meike Brinker', 'Patrick Schloemer', 'Andrea Glasauer', 'Scott D Solomon', 'Muthiah Vaduganathan'],
