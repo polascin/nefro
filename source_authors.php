@@ -93,6 +93,7 @@ function getSourceArticleAuthors(): array {
         'perzistujuca-mikroskopicka-hematuria-podocytopatie-prognoza' => ['Gabriel Ștefan', 'Nicoleta Petre', 'Adrian Zugravu', 'Simona Stancu'],
         'prader-willi-syndrom-genetika-hyperfagia-starostlivost' => ['Jessica Duis', 'Ashley Shoemaker', 'Anthony P. Goldstone'],
         'predialyzacna-edukacia-volba-peritonealnej-dialyzy' => ['Magdalena Mosakowska', 'Ewelina Jędrych', 'Ewa Kotwica-Strzałek', 'Agnieszka Dorywalska', 'Arkadiusz Lubas', 'Stanisław Niemczyk'],
+        'predikcia-vhodnosti-peritonealnej-dialyzy-validacia' => ['Emre Cankaya', 'Yang Yang', 'Helen H. Chen', 'Robert R. Quinn', 'Joel A. Dubin', 'Matthew J. Oliver'],
         'prehlad-vyskum-fsgs-diabeticka-nefropatia-2025-2026' => ['Howard Trachtman', 'Sean Eddy', 'Matthias Kretzler'],
         'protein-kreatin-uz-nie-su-len-fitness-tema-nefrologia' => ['Lou Schuler'],
         'prukaloprid-brain-fog-depresia-kognicia-nefrologia' => ['Pauline Anderson'],
