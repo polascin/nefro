@@ -76,6 +76,7 @@ function getSourceArticleAuthors(): array {
         'krvna-skupina-a-mortalita-hemodialyza' => ['Masafumi Kurajoh', 'Tetsuo Shoji', 'Shinya Nakatani', 'Yuki Nagata', 'Hisako Fujii', 'Yasuo Imanishi', 'Masanori Emoto', 'Tomoaki Morioka'],
         'krce-kostroveho-svalstva-dialyza-prevalencia-metaanalyza' => ['Seda Babroudi', 'Marcelle Tuttle', 'Eduardo K. Lacson Jr.'],
         'kvalitativny-vyskum-nefrologia-rozhodovanie-pacientov-ckd' => ['Lisa O\'Mary'],
+        'lekari-cas-autonomia-vyhorenie-pracovne-podmienky' => ['Jennifer Nelson'],
         'liecba-ckd-2026-vrstvena-nefroprotekcia-post-aki' => ['Pranav Garimella', 'Marc Richards', 'Matthew Breeggemann'],
         'malignity-transplantacia-oblicky-skrining-ptld' => ['Christopher D. Blosser', 'Elena-Bianca Barbir', 'Salma Shaikhouni', 'Naoka Murakami'],
         'meduza-hojenie-ran-bez-jaziev-regenerativna-medicina' => ['Jocelyn E. Malamy', 'Maxwell Sassaman', 'Manjula P. Mony'],
