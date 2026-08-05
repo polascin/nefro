@@ -102,6 +102,7 @@ function getSourceArticleAuthors(): array {
         'predialyzacna-edukacia-volba-peritonealnej-dialyzy' => ['Magdalena Mosakowska', 'Ewelina Jędrych', 'Ewa Kotwica-Strzałek', 'Agnieszka Dorywalska', 'Arkadiusz Lubas', 'Stanisław Niemczyk'],
         'predikcia-vhodnosti-peritonealnej-dialyzy-validacia' => ['Emre Cankaya', 'Yang Yang', 'Helen H. Chen', 'Robert R. Quinn', 'Joel A. Dubin', 'Matthew J. Oliver'],
         'prehlad-vyskum-fsgs-diabeticka-nefropatia-2025-2026' => ['Howard Trachtman', 'Sean Eddy', 'Matthias Kretzler'],
+        'primarna-alebo-latkou-vyvolana-psychoza-diagnostika' => ['Adjoa Smalls-Mantey'],
         'protein-kreatin-uz-nie-su-len-fitness-tema-nefrologia' => ['Lou Schuler'],
         'prukaloprid-brain-fog-depresia-kognicia-nefrologia' => ['Pauline Anderson'],
         'rastlinna-strava-nizsia-mortalita-ckd' => ['Guido Gembillo'],
