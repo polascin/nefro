@@ -68,6 +68,7 @@ function getSourceArticleAuthors(): array {
         'kreatin-ochorenia-obliciek-bezpecnost-benefit' => ['Juliana Paula Pereira', 'Viviane O Leal', 'Pricilla Trigueira', 'Natália A Borges', 'Ludmila F M F Cardozo', 'Denise Mafra'],
         'kreatin-zdravie-mozgu' => ['Heidi Moawad'],
         'krvna-skupina-a-mortalita-hemodialyza' => ['Masafumi Kurajoh', 'Tetsuo Shoji', 'Shinya Nakatani', 'Yuki Nagata', 'Hisako Fujii', 'Yasuo Imanishi', 'Masanori Emoto', 'Tomoaki Morioka'],
+        'krce-kostroveho-svalstva-dialyza-prevalencia-metaanalyza' => ['Seda Babroudi', 'Marcelle Tuttle', 'Eduardo K. Lacson Jr.'],
         'kvalitativny-vyskum-nefrologia-rozhodovanie-pacientov-ckd' => ['Lisa O\'Mary'],
         'liecba-ckd-2026-vrstvena-nefroprotekcia-post-aki' => ['Pranav Garimella', 'Marc Richards', 'Matthew Breeggemann'],
         'malignity-transplantacia-oblicky-skrining-ptld' => ['Christopher D. Blosser', 'Elena-Bianca Barbir', 'Salma Shaikhouni', 'Naoka Murakami'],
