@@ -60,7 +60,7 @@ wsl --install -d Ubuntu
 ```bash
 # v Ubuntu termináli (WSL):
 curl https://get.trunk.io -fsSL | bash      # raz: inštalácia Trunku
-cd /mnt/d/OneDrive/www/nefro
+cd /mnt/d/www/nefro
 trunk upgrade --dry-run  # skontroluje aktualizácie bez zmeny configu
 trunk check --all        # plný sken; bez --all len zmenené súbory
 trunk fmt --all          # formátovanie podporovaných súborov
