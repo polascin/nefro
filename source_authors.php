@@ -28,6 +28,7 @@ function getSourceArticleAuthors(): array {
         '5-kritickych-chyb-manazment-ckm-syndromu-nefrologia' => ['Lisa O\'Mary'],
         'ai-nefrologia-hands-on-primer-klinicka-integracia' => ['Noppawit Aiumtrakul', 'Arjunmohan Mohan', 'Harshil A. Fichadiya', 'Wisit Cheungpasitporn'],
         'ai-scribe-pravne-nastrahy-ambulancia-nefrologia' => ['Ericka L. Adler'],
+        'ambulantna-parenteralna-antimikrobialna-liecba-opat' => ['Ann L. Noble', 'Sanjay Patel', 'Ellie Birnie', 'Eileen Dorgan', 'Oyewole C. Durojaiye', 'Caroline Emilie', 'Achyut Guleri', 'Helen Green', 'Sara Hedderwick', 'Lucy Hinds', 'Monica V. Mahoney', 'Katie McIntyre', 'Fekade B. Sime', 'Owen Seddon', 'Julie Statham', 'Marie Woodley', 'Mark Gilchrist', 'R. Andrew Seaton'],
         'anemia-ckd-2026-prakticky-algoritmus-esa-hif-phi' => ['Diana I. Jalal', 'Nisha Bansal', 'Monique E. Cho', 'Steven Fishbane', 'Orlando M. Gutierrez', 'Csaba P. Kovesdy', 'Abhijit Kshirsagar', 'Bruce Spinowitz', 'Jay Wish'],
         'anemia-ckd-checklist-a4-hd-nonhd' => ['Diana I. Jalal', 'Nisha Bansal', 'Monique E. Cho', 'Steven Fishbane', 'Orlando M. Gutierrez', 'Csaba P. Kovesdy', 'Abhijit Kshirsagar', 'Bruce Spinowitz', 'Jay Wish'],
         'anemia-ckd-checklist-kdigo-2026-kdoqi' => ['Diana I. Jalal', 'Nisha Bansal', 'Monique E. Cho', 'Steven Fishbane', 'Orlando M. Gutierrez', 'Csaba P. Kovesdy', 'Abhijit Kshirsagar', 'Bruce Spinowitz', 'Jay Wish'],
