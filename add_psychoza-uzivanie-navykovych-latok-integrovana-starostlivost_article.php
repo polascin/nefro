@@ -78,14 +78,14 @@ $articles[] = [
 
 <p>Vyšetrenie moču alebo krvi môže pomôcť pri akútnej intoxikácii, neistej anamnéze, podozrení na liekové interakcie alebo pri sledovaní dohodnutého liečebného plánu. NICE však neodporúča rutinné biologické testovanie všetkých pacientov s psychózou bez konkrétnej klinickej otázky.</p>
 
+<p>Testovanie má byť transparentnou súčasťou diagnostického alebo liečebného plánu, nie trestom a nie náhradou terapeutického vzťahu.</p>
+
 <ul>
   <li>Pozitívny nález nemusí dokazovať aktuálnu intoxikáciu ani príčinu psychózy.</li>
   <li>Negatívny výsledok nevylučuje syntetické látky, látky mimo panelu ani už ukončenú expozíciu.</li>
   <li>Detekčné okno závisí od látky, dávky, času, testu a niekedy aj od funkcie obličiek.</li>
   <li>Imunochemické skríningové metódy môžu mať skrížené reakcie a nečakaný výsledok môže vyžadovať konfirmačné vyšetrenie.</li>
 </ul>
-
-<p>Testovanie má byť transparentnou súčasťou diagnostického alebo liečebného plánu, nie trestom a nie náhradou terapeutického vzťahu.</p>
 
 <h2>Integrovaná liečba oboch porúch</h2>
 
@@ -176,6 +176,7 @@ $articles[] = [
 
 <p>Telesné riziká sú súčasťou jadra starostlivosti. Hypertermia, rabdomyolýza, akútne poškodenie obličiek, hyponatriémia, respiračný útlm, liekové interakcie a toxicita lítia môžu byť bezprostredne život ohrozujúce. Ročná kontrola je iba minimálnym rámcom; rizikový pacient potrebuje kontroly podstatne častejšie.</p>
 
+<div class="pdf-avoid-break">
 <h3>Súvisiace články</h3>
 
 <ul>
@@ -183,6 +184,7 @@ $articles[] = [
   <li><a href="article.php?slug=ckd-samostatny-faktor-polyfarmacie">Chronická choroba obličiek ako samostatný faktor polyfarmácie</a>.</li>
   <li><a href="article.php?slug=cheatsheet-elektrolyty">Elektrolytové poruchy</a> – praktický prehľad diagnostiky a liečby.</li>
 </ul>
+</div>
 
 <hr>
 
