@@ -57,9 +57,11 @@ $articles[] = [
 
 <p>Albuminúria má významnú biologickú variabilitu. Zvýšiť ju môžu intenzívna fyzická námaha, infekcia, horúčka, dekompenzované srdcové zlyhávanie, výrazná hyperglykémia alebo hypertenzia a menštruačná kontaminácia. Pri neprítomnosti urgentného klinického dôvodu sa stredne alebo výrazne zvýšená albuminúria potvrdzuje aspoň dvoma abnormálnymi výsledkami z troch vzoriek odobratých počas troch až šiestich mesiacov. Preferovaná je prvá ranná stredná vzorka moču, hoci náhodná jednorazová vzorka je v praxi prijateľná.</p>
 
+<div class="pdf-avoid-break">
 <h2>Nie každá CKD u človeka s diabetom je diabetická nefropatia</h2>
 
 <p>Diabetes nevylučuje glomerulonefritídu, paraproteínové ochorenie, obštrukciu, liekové poškodenie ani inú renálnu diagnózu. Bez histologického dôkazu je často presnejšie hovoriť o <strong>CKD u človeka s diabetom</strong> alebo o predpokladanej diabetickej chorobe obličiek, nie o definitívne dokázanej diabetickej nefropatii.</p>
+</div>
 
 <p>Alternatívnu alebo kombinovanú príčinu treba cielene hľadať najmä pri:</p>
 
@@ -157,7 +159,9 @@ $articles[] = [
 
 <p>Najväčšou rezervou v starostlivosti o CKD pri diabete zostáva neskorý záchyt a chýbajúce vyšetrenie albuminúrie. eGFR a UACR treba hodnotiť spoločne, abnormálny nález potvrdiť v čase a pri atypickom priebehu aktívne hľadať inú alebo pridruženú renálnu diagnózu.</p>
 
+<div class="pdf-avoid-break">
 <p>Pri diabete 2. typu sa kardiorenálna liečba vrství z optimalizácie rizikových faktorov, indikovaných inhibítorov RAS, inhibítora SGLT2, finerenónu a agonistu receptora GLP-1. Poradie a tempo určujú fenotyp, absolútne riziko a bezpečnosť. CONFIDENCE podporuje súbežné začatie finerenónu a empagliflozínu vo vymedzenej populácii, no zatiaľ najmä na základe albuminúrie. FINE-ONE priniesla sľubné údaje pri diabete 1. typu, ale nepreukázala dlhodobé klinické výsledky a európska CKD indikácia finerenónu zostáva viazaná na diabetes 2. typu.</p>
+</div>
 
 <div class="pdf-avoid-break">
 <h3>Súvisiace články</h3>
