@@ -124,7 +124,7 @@ $articles[] = [
 
 <p>Riziko rastie pri CKD, vyššom veku, objemovej deplécii, vracaní alebo hnačke, sepse, srdcovom zlyhávaní, cirhóze a pri súbežnom užívaní diuretika alebo blokátora systému renín-angiotenzín. Kombinácia NSAID, diuretika a inhibítora ACE alebo blokátora receptorov angiotenzínu vytvára osobitne rizikové podmienky pre hemodynamické AKI.</p>
 
-<p>Pri aktívnom AKI, objemovej deplécii, hyperkaliémii, dekompenzovanom srdcovom zlyhávaní alebo pokročilej nestabilnej CKD sa systémovým NSAID treba spravidla vyhnúť. Ani pri stabilnej CKD s nižším individuálnym rizikom nemožno rozhodnutie založiť iba na jedinom prahu eGFR.</p>
+<p class="pdf-avoid-break">Pri aktívnom AKI, objemovej deplécii, hyperkaliémii, dekompenzovanom srdcovom zlyhávaní alebo pokročilej nestabilnej CKD sa systémovým NSAID treba spravidla vyhnúť. Ani pri stabilnej CKD s nižším individuálnym rizikom nemožno rozhodnutie založiť iba na jedinom prahu eGFR.</p>
 
 <p class="pdf-avoid-break">KDIGO upozorňuje na škodlivosť nekontrolovaného chronického užívania, zároveň však pripúšťa, že starostlivo indikované NSAID pod dohľadom môžu byť v niektorých situáciách menej rizikové než opioidy.</p>
 
