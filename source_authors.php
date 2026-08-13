@@ -36,6 +36,7 @@ function getSourceArticleAuthors(): array {
         'anemia-ckd-kdigo-2026-kdoqi-komentar' => ['Diana I. Jalal', 'Nisha Bansal', 'Monique E. Cho', 'Steven Fishbane', 'Orlando M. Gutierrez', 'Csaba P. Kovesdy', 'Abhijit Kshirsagar', 'Bruce Spinowitz', 'Jay Wish'],
         'atacicept-trutakna-iga-nefropatia-fda-proteinuria' => ['Siddhi Mahatole', 'Puyaan Singh'],
         'antimikrobialna-rezistencia-infekcie-mocovych-ciest-nefrologia' => ['Sibylle von Vietinghoff', 'Olga Shevchuk', 'Ulrich Dobrindt', 'Daniel Robert Engel', 'Selina K. Jorch', 'Christian Kurts', 'Thomas Miethke', 'Florian Wagenlehner'],
+        'bartterov-syndrom-diagnostika-geneticke-formy-liecba' => ['Martin Konrad', 'Tom Nijenhuis', 'Gema Ariceta', 'Aurelia Bertholet-Thomas', 'Lorenzo A. Calò', 'Giovambattista Capasso', 'Francesco Emma', 'Karl P. Schlingmann', 'Mandeep Singh', 'Francesco Trepiccione', 'Stephen B. Walsh', 'Kirsty Whitton', 'Rosa Vargas-Poussou', 'Detlef Bockenhauer'],
         'betablokatory-ckd-bez-kardiovaskularneho-ochorenia' => ['Seung Hyun Han', 'Mina Kim', 'Jungkuk Lee', 'Sang Youb Han'],
         'c3-glomerulopatia-c3g-liecba-inhibicia-komplementu' => ['Manuel Praga', 'Richard J. Smith', 'Andrew S. Bomback'],
         'ckd-mozog-kognitivne-poruchy-cievne-poskodenie' => ['Mickaël Bobot'],
