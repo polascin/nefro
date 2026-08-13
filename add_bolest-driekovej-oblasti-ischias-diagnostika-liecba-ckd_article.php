@@ -158,7 +158,7 @@ $articles[] = [
 
 <p>Rádiofrekvenčná denervácia je možnosťou iba pri starostlivo vybranej chronickej lokalizovanej bolesti po zlyhaní konzervatívnej liečby a po pozitívnej odpovedi na diagnostický blok mediálnej vetvy. Ani pozitívny blok nie je dokonalým potvrdením zdroja bolesti alebo zárukou dlhodobého úspechu.</p>
 
-<p>Spinálnu dekompresiu možno zvážiť, keď neoperačná liečba nezlepšila bolesť alebo funkciu a zobrazovací nález zodpovedá ischiasu. Samotná hernia disku na MRI nie je indikáciou operácie. BMI, fajčenie ani psychická záťaž nemajú byť automatickou prekážkou odoslania na chirurgické posúdenie, hoci môžu meniť perioperačné riziko a výsledok.</p>
+<p>Spinálnu dekompresiu možno zvážiť, keď neoperačná liečba nezlepšila bolesť alebo funkciu a zobrazovací nález zodpovedá ischiasu. Samotná hernia disku na MRI nie je indikáciou operácie. BMI, fajčenie ani psychická záťaž nemajú automaticky brániť chirurgickému posúdeniu, hoci môžu meniť perioperačné riziko a výsledok.</p>
 
 <div class="pdf-keep-together">
   <h2>Praktický ambulantný algoritmus</h2>
