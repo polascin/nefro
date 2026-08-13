@@ -55,9 +55,8 @@ $articles[] = [
 
 <p>Takzvané červené vlajky nie sú samostatným diagnostickým testom. Mnohé jednotlivé príznaky, napríklad nočná bolesť alebo vyšší vek, majú nízku špecificitu. Ich význam rastie pri relevantnej kombinácii, vysokej intenzite, progresii a rizikovom kontexte. Závažnú diagnózu nemožno vylúčiť iba preto, že chýba jedna typická červená vlajka.</p>
 
-<h2>Stavy, pri ktorých rozhoduje čas</h2>
-
 <div class="pdf-keep-together">
+  <h2>Stavy, pri ktorých rozhoduje čas</h2>
   <h3>Syndróm caudae equinae</h3>
   <p>Urgentné nemocničné posúdenie vyžaduje najmä nová retencia moču alebo inkontinencia, strata citlivosti v sedlovej oblasti, nová porucha análneho zvierača alebo sexuálnej funkcie, obojstranný ischias a závažný alebo progresívny motorický deficit. Pri dôvodnom podozrení je potrebná urgentná magnetická rezonancia a bezodkladné spinálne chirurgické posúdenie. Neprítomnosť jedného príznaku ani zachované spontánne močenie nevylučujú skorú fázu syndrómu.</p>
 </div>
@@ -91,7 +90,9 @@ $articles[] = [
 
 <p>NICE neodporúča rutinné zobrazovanie nekomplikovanej bolesti v driekovej oblasti ani ischiasu v nešpecializovanej starostlivosti. V špecializovanom prostredí sa má zvažovať iba vtedy, keď výsledok pravdepodobne zmení liečbu.</p>
 
-<p>Okamžité alebo urgentné zobrazenie je odôvodnené pri podozrení na syndróm caudae equinae, infekciu, malignitu, fraktúru alebo iný časovo kritický stav. MRI je spravidla preferovanou metódou pri neurologickom útlaku, infekcii a malignite; konkrétny protokol a použitie kontrastnej látky závisia od klinickej otázky. Pri podozrení na fraktúru alebo na ochorenie mimo chrbtice môže byť vhodný iný zobrazovací algoritmus.</p>
+<p>Okamžité alebo urgentné zobrazenie je odôvodnené pri podozrení na syndróm caudae equinae, infekciu, malignitu, fraktúru alebo iný časovo kritický stav. MRI je spravidla preferovanou metódou pri neurologickom útlaku, infekcii a malignite; konkrétny protokol a použitie kontrastnej látky závisia od klinickej otázky.</p>
+
+<p class="pdf-avoid-break">Pri podozrení na fraktúru alebo na ochorenie mimo chrbtice môže byť vhodný iný zobrazovací algoritmus.</p>
 
 <p>Pri pretrvávajúcich alebo progredujúcich príznakoch po približne šiestich týždňoch primeranej liečby odporúča ACR MRI najmä vtedy, keď je pacient kandidátom na operáciu alebo intervenčný výkon a výsledok ovplyvní ďalší postup. Šesť týždňov nie je čakacia lehota pri červených vlajkách.</p>
 
@@ -123,7 +124,9 @@ $articles[] = [
 
 <p>Riziko rastie pri CKD, vyššom veku, objemovej deplécii, vracaní alebo hnačke, sepse, srdcovom zlyhávaní, cirhóze a pri súbežnom užívaní diuretika alebo blokátora systému renín-angiotenzín. Kombinácia NSAID, diuretika a inhibítora ACE alebo blokátora receptorov angiotenzínu vytvára osobitne rizikové podmienky pre hemodynamické AKI.</p>
 
-<p>Pri aktívnom AKI, objemovej deplécii, hyperkaliémii, dekompenzovanom srdcovom zlyhávaní alebo pokročilej nestabilnej CKD sa systémovým NSAID treba spravidla vyhnúť. Ani pri stabilnej CKD s nižším individuálnym rizikom nemožno rozhodnutie založiť iba na jedinom prahu eGFR. KDIGO upozorňuje na škodlivosť nekontrolovaného chronického užívania, zároveň však pripúšťa, že starostlivo indikované NSAID pod dohľadom môžu byť v niektorých situáciách menej rizikové než opioidy.</p>
+<p>Pri aktívnom AKI, objemovej deplécii, hyperkaliémii, dekompenzovanom srdcovom zlyhávaní alebo pokročilej nestabilnej CKD sa systémovým NSAID treba spravidla vyhnúť. Ani pri stabilnej CKD s nižším individuálnym rizikom nemožno rozhodnutie založiť iba na jedinom prahu eGFR.</p>
+
+<p class="pdf-avoid-break">KDIGO upozorňuje na škodlivosť nekontrolovaného chronického užívania, zároveň však pripúšťa, že starostlivo indikované NSAID pod dohľadom môžu byť v niektorých situáciách menej rizikové než opioidy.</p>
 
 <p class="pdf-avoid-break">Ak očakávaný prínos preváži, treba zvážiť východiskovú a skorú kontrolu kreatinínu alebo eGFR, draslíka, krvného tlaku a hydratácie podľa individuálneho rizika.</p>
 
@@ -157,7 +160,10 @@ $articles[] = [
 
 <p>Spinálnu dekompresiu možno zvážiť, keď neoperačná liečba nezlepšila bolesť alebo funkciu a zobrazovací nález zodpovedá ischiasu. Samotná hernia disku na MRI nie je indikáciou operácie. BMI, fajčenie ani psychická záťaž nemajú byť automatickou prekážkou odoslania na chirurgické posúdenie, hoci môžu meniť perioperačné riziko a výsledok.</p>
 
-<h2>Praktický ambulantný algoritmus</h2>
+<div class="pdf-keep-together">
+  <h2>Praktický ambulantný algoritmus</h2>
+  <p>Postup možno zhrnúť do siedmich nadväzujúcich krokov:</p>
+</div>
 
 <ol>
   <li><strong>Najprv vyhľadať časovo kritický stav:</strong> syndróm caudae equinae, progresívny deficit, infekciu, malignitu, fraktúru, cievnu alebo inú viscerálnu príčinu.</li>
