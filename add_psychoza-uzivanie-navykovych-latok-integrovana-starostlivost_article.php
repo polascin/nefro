@@ -186,11 +186,15 @@ $articles[] = [
 
 <hr>
 
-<div class="pdf-page-break" aria-hidden="true"></div>
+<div class="pdf-avoid-break">
 <h2>Zdroje</h2>
 
 <ol>
   <li><strong>National Institute for Health and Care Excellence.</strong> <em>Coexisting severe mental illness (psychosis) and substance misuse: assessment and management in healthcare settings.</em> NICE Clinical Guideline CG120. Publikované 23. marca 2011, naposledy posúdené 7. mája 2024. <a href="https://www.nice.org.uk/guidance/cg120" target="_blank" rel="noopener noreferrer">NICE</a>.</li>
+</ol>
+</div>
+
+<ol start="2">
   <li><strong>National Institute for Health and Care Excellence.</strong> <em>Coexisting severe mental illness and substance misuse: community health and social care services.</em> NICE Guideline NG58. Publikované 30. novembra 2016, naposledy posúdené 14. augusta 2024. <a href="https://www.nice.org.uk/guidance/ng58" target="_blank" rel="noopener noreferrer">NICE</a>.</li>
   <li><strong>National Institute for Health and Care Excellence.</strong> <em>Psychosis and schizophrenia in adults: prevention and management.</em> NICE Clinical Guideline CG178. <a href="https://www.nice.org.uk/guidance/cg178" target="_blank" rel="noopener noreferrer">NICE</a>.</li>
   <li><strong>Glenn E. Hunt, Nandi Siegfried, Kirsten Morley, Carrie Brooke-Sumner, Michelle Cleary.</strong> <em>Psychosocial interventions for people with both severe mental illness and substance misuse.</em> Cochrane Database of Systematic Reviews. 2019;(12):CD001088. doi: 10.1002/14651858.CD001088.pub4. <a href="https://pubmed.ncbi.nlm.nih.gov/31829430/" target="_blank" rel="noopener noreferrer">PubMed</a>.</li>
