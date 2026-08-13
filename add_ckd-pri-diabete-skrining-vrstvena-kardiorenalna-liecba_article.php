@@ -94,7 +94,9 @@ $articles[] = [
 
 <p>Malý skorý pokles eGFR po začatí býva hemodynamický a reverzibilný. Sám osebe zvyčajne neznamená AKI. Treba však posúdiť hypovolémiu, tlak a dávku diuretika. Pacienta treba poučiť o genitálnych mykotických infekciách a o príznakoch ketoacidózy, ktorá môže vzniknúť aj bez výraznej hyperglykémie. Počas kritického ochorenia, dlhšieho hladovania a pred plánovanou operáciou sa inhibítor SGLT2 dočasne prerušuje podľa konkrétneho perioperačného alebo akútneho protokolu a musí existovať aj plán jeho opätovného nasadenia.</p>
 
+<div class="pdf-avoid-break">
 <p>Pri diabete 1. typu inhibítory SGLT2 nie sú štandardnou nefroprotektívnou liečbou. Riziko diabetickej ketoacidózy je v tejto populácii podstatne vyššie a výsledky štúdií pri diabete 2. typu nemožno automaticky prenášať.</p>
+</div>
 
 <h2>Finerenón cieli na reziduálne albuminurické riziko</h2>
 
