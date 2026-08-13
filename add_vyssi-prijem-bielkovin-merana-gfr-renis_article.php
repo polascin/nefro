@@ -46,13 +46,13 @@ $articles[] = [
 
 <p>Analýza zahŕňala <strong>1 324 účastníkov</strong>. Priemerný vek bol 63,6 roka, ženy tvorili 50,4 % súboru a priemerná vstupná mGFR dosahovala 89,1 ml/min/1,73 m². Medián času medzi prvým a posledným meraním mGFR bol 10,0 roka.</p>
 
-<p>Pôvodná kohorta vylučovala ľudí so samostatne uvádzaným diabetom, ochorením obličiek alebo kardiovaskulárnym ochorením. Do času východiskového vyšetrenia pre túto analýzu však časť účastníkov tieto stavy získala. Diabetes malo 2,0 %, kardiovaskulárne ochorenie 4,1 % a mGFR pod 60 ml/min/1,73 m² 2,5 % účastníkov. Hypertenziu podľa definície štúdie malo 52,1 %, prediabetes 47,8 % a obezitu 21,7 % súboru.</p>
+<p>Pôvodná kohorta vylučovala ľudí, ktorí sami uviedli diabetes, ochorenie obličiek alebo kardiovaskulárne ochorenie. Do času východiskového vyšetrenia pre túto analýzu však časť účastníkov tieto stavy získala. Diabetes malo 2,0 %, kardiovaskulárne ochorenie 4,1 % a mGFR pod 60 ml/min/1,73 m² 2,5 % účastníkov. Hypertenziu podľa definície štúdie malo 52,1 %, prediabetes 47,8 % a obezitu 21,7 % súboru.</p>
 
 <p>Preto je presnejšie hovoriť o všeobecnej populácii s <strong>prevažne zachovanou funkciou obličiek</strong> než o homogénnej skupine úplne zdravých ľudí.</p>
 
 <h2>Ako sa hodnotil príjem bielkovín</h2>
 
-<p>Účastníci vyplnili validovaný frekvenčný dotazník zachytávajúci obvyklý príjem 261 potravinových položiek počas predchádzajúceho roka. Priemerný uvádzaný príjem bielkovín bol 1,2 ± 0,5 g/kg/deň. Priemerné hodnoty v jednotlivých kvartiloch boli približne 0,8; 1,0; 1,3 a 1,8 g/kg/deň, pričom hranica najvyššieho kvartilu bola najmenej 1,4 g/kg/deň.</p>
+<p>Účastníci vyplnili validovaný dotazník frekvencie konzumácie potravín, ktorý zachytával obvyklý príjem 261 potravinových položiek počas predchádzajúceho roka. Priemerný uvádzaný príjem bielkovín bol 1,2 ± 0,5 g/kg/deň. Priemerné hodnoty v jednotlivých kvartiloch boli približne 0,8; 1,0; 1,3 a 1,8 g/kg/deň, pričom hranica najvyššieho kvartilu bola najmenej 1,4 g/kg/deň.</p>
 
 <p>Dotazník sa však vypĺňal iba raz a jeho vyplnenie bolo od vstupného merania mGFR vzdialené v mediáne 20,5 mesiaca. U 233 účastníkov chýbali údaje o príjme bielkovín a energie; autori ich doplnili viacnásobnou imputáciou. Štúdia nemala 24-hodinový zber moču s dusíkom močoviny, ktorý by poskytol objektívnejšiu kontrolu príjmu, ani validované údaje o podiele živočíšnych a rastlinných bielkovín.</p>
 
@@ -69,7 +69,7 @@ $articles[] = [
 <p>Posledný ukazovateľ nemožno bez ďalšieho nazývať novou CKD. Diagnóza CKD vyžaduje chronickú abnormalitu trvajúcu najmenej tri mesiace alebo iný marker poškodenia obličiek; jednorazový pokles mGFR pod túto hranicu podmienku chronicity sám osebe nespĺňa.</p>
 
 <div class="pdf-avoid-break">
-<h2>Čo ukázali plne upravené analýzy</h2>
+<h2>Čo ukázali plne adjustované modely</h2>
 
 <div class="table-responsive">
 <table>
@@ -109,15 +109,15 @@ $articles[] = [
 
 <p>V analýze novozistenej mGFR pod 60 bolo 1 064 účastníkov s úplnými údajmi a východiskovou mGFR aspoň 60; udalosť sa zaznamenala u 118 z nich (11,1 %). Výsledky sa významne nemenili ani pri analýze kvartilov, pri použití absolútnej neindexovanej GFR, po zohľadnení východiskovej GFR alebo vo viacerých analýzach citlivosti.</p>
 
-<p>Autori nezistili štatisticky významnú modifikáciu vzťahu podľa pohlavia, albuminúrie, obezity, hypertenzie ani prediabetu. Tieto podskupinové výsledky však nemajú rovnakú výpovednú silu ako samostatne navrhnuté štúdie vo vysoko rizikových populáciách.</p>
+<p>Autori nezistili, že by sa asociácia štatisticky významne líšila podľa pohlavia, albuminúrie, obezity, hypertenzie ani prediabetu. Tieto podskupinové výsledky však nemajú rovnakú výpovednú silu ako samostatne navrhnuté štúdie vo vysoko rizikových populáciách.</p>
 
-<h2>Nulový výsledok nie je dôkaz absolútnej bezpečnosti</h2>
+<h2>Neprítomnosť asociácie nie je dôkaz absolútnej bezpečnosti</h2>
 
 <p>Výsledok podporuje záver, že obvyklý príjem bielkovín v rozmedzí zastúpenom v tejto kohorte pravdepodobne nie je významným samostatným cieľom primárnej prevencie poklesu GFR. Neznamená však, že akékoľvek množstvo bielkovín je dlhodobo bezpečné pre každého človeka.</p>
 
-<p>Pozorovacia štúdia nedokáže odstrániť všetky rozdiely medzi ľuďmi s nižším a vyšším príjmom. V najvyššom kvartile boli účastníci napríklad v priemere štíhlejší a mali nižšiu prevalenciu hypertenzie a prediabetu. Štatistické modely sa tieto rozdiely snažili zohľadniť, reziduálne skreslenie však nemožno vylúčiť.</p>
+<p>Observačná štúdia nedokáže odstrániť všetky rozdiely medzi ľuďmi s nižším a vyšším príjmom. V najvyššom kvartile boli účastníci napríklad v priemere štíhlejší a mali nižšiu prevalenciu hypertenzie a prediabetu. Štatistické modely sa tieto rozdiely snažili zohľadniť, reziduálne skreslenie však nemožno vylúčiť.</p>
 
-<p>Neistotu zvyšuje jednorazové sebahodnotenie stravy, časový odstup od vstupnej mGFR, chýbajúca objektívna validácia príjmu a neznáme zdroje bielkovín. Kohorta pozostávala prevažne z obyvateľov nórskeho mesta Tromsø vo veku približne 55 až 70 rokov. Výsledok sa preto nemusí prenášať na iné geografické a etnické skupiny, veľmi starých ľudí, osoby s nižším počtom nefrónov alebo populácie s vyšším výskytom CKD.</p>
+<p>Neistotu zvyšuje jednorazové zhodnotenie stravy dotazníkom, časový odstup od vstupnej mGFR, chýbajúca objektívna validácia príjmu a neznáme zdroje bielkovín. Kohorta pozostávala prevažne z obyvateľov nórskeho mesta Tromsø vo veku približne 55 až 70 rokov. Výsledok sa preto nemusí prenášať na iné geografické a etnické skupiny, veľmi starých ľudí, osoby s nižším počtom nefrónov alebo populácie s vyšším výskytom CKD.</p>
 
 <h2>Štúdia nehodnotila extrémny príjem ani doplnky</h2>
 
@@ -150,7 +150,7 @@ $articles[] = [
 <div class="pdf-avoid-break">
 <h2>Záver</h2>
 
-<p>Kohorta RENIS poskytuje metodologicky mimoriadne hodnotné dlhodobé observačné údaje o príjme bielkovín a skutočne meranej GFR. Počas desiatich rokov nezistila, že by vyšší obvyklý príjem bielkovín udávaný účastníkmi súvisel s rýchlejším poklesom mGFR u ľudí stredného a vyššieho veku s prevažne zachovanou funkciou obličiek.</p>
+<p>Kohorta RENIS poskytuje metodologicky hodnotné dlhodobé observačné údaje o príjme bielkovín a skutočne meranej GFR. Počas desiatich rokov nezistila, že by vyšší obvyklý príjem bielkovín udávaný účastníkmi súvisel s rýchlejším poklesom mGFR u ľudí stredného a vyššieho veku s prevažne zachovanou funkciou obličiek.</p>
 
 <p>Primeraný záver nie je „čím viac bielkovín, tým lepšie“, ale užšie tvrdenie: dostupné údaje nepodporujú preventívne obmedzovanie bežného príjmu bielkovín ako významnú stratégiu ochrany obličiek u ľudí bez CKD. Extrémne dávky, doplnky, konkrétne zdroje bielkovín a vysoko rizikové populácie zostávajú neisté. Pri CKD sa naďalej postupuje podľa individuálneho nefrologického a nutričného plánu.</p>
 </div>
@@ -178,7 +178,7 @@ $articles[] = [
 </ol>
 </div>
 
-<p><em><strong>Poznámka k interpretácii:</strong> Primárna publikácia bola vecne overená v plnom texte vydavateľa a bibliografické údaje i úplný zoznam autorov v Crossref. Číselné výsledky sú uvádzané z plne upravených modelov. Praktické rozlíšenie populácie bez CKD a pacientov s CKD vychádza z KDIGO 2024; štúdia RENIS nemení odporúčania pre CKD ani neurčuje bezpečnú hornú hranicu príjmu bielkovín.</em></p>
+<p><em><strong>Poznámka k interpretácii:</strong> Primárna publikácia bola vecne overená v plnom texte vydavateľa a bibliografické údaje i úplný zoznam autorov v Crossref. Číselné výsledky sú uvádzané z plne adjustovaných modelov. Praktické rozlíšenie populácie bez CKD a pacientov s CKD vychádza z KDIGO 2024; štúdia RENIS nemení odporúčania pre CKD ani neurčuje bezpečnú hornú hranicu príjmu bielkovín.</em></p>
 HTML,
 ];
 
