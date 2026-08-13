@@ -92,7 +92,9 @@ $articles[] = [
 
 <p>Kľučkové diuretiká napodobňujú poruchu NKCC2 a tiazidy Gitelmanov syndróm. Nedávne užitie diuretika môže prechodne zvýšiť močový chlorid, zatiaľ čo pri kolísavom užívaní sa výsledky menia. Ak je anamnéza nejasná, má zmysel toxikologický skríning moču na diuretiká, podľa možnosti z čerstvej a niekedy opakovanej vzorky.</p>
 
-<p>Pseudo-Bartterov fenotyp môže vzniknúť pri chronickom vracaní, kongenitálnej chloridovej hnačke, cystickej fibróze s veľkými stratami chloridov potom, zneužívaní diuretík alebo laxatív, poruchách príjmu potravy, závažnej podvýžive či pri výžive s nedostatočným obsahom chloridov. Pri hypertenzii treba uprednostniť diagnostiku mineralokortikoidového nadbytku, Liddleovho syndrómu, zdanlivého nadbytku mineralokortikoidov alebo Cushingovho syndrómu.</p>
+<p>Pseudo-Bartterov fenotyp môže vzniknúť pri chronickom vracaní, kongenitálnej chloridovej hnačke, cystickej fibróze s veľkými stratami chloridov potom, zneužívaní diuretík alebo laxatív, poruchách príjmu potravy, závažnej podvýžive či pri výžive s nedostatočným obsahom chloridov.</p>
+
+<p class="pdf-avoid-break">Pri hypertenzii treba uprednostniť diagnostiku mineralokortikoidového nadbytku, Liddleovho syndrómu, zdanlivého nadbytku mineralokortikoidov alebo Cushingovho syndrómu.</p>
 
 <h3>3. Využiť kalciúriu a magnézium, ale nepreceňovať ich</h3>
 
@@ -126,7 +128,7 @@ $articles[] = [
 
 <p>Riziká zahŕňajú poškodenie gastrointestinálnej sliznice a krvácanie, zníženie glomerulovej filtrácie, akútne poškodenie obličiek pri dehydratácii, retenciu tekutín a kardiovaskulárne komplikácie. U predčasne narodených detí treba myslieť aj na črevnú perforáciu a nekrotizujúcu enterokolitídu. Pri neselektívnom inhibítore COX konsenzus odporúča gastroprotekciu. Jej voľba má zohľadniť, že inhibítory protónovej pumpy môžu zhoršovať hypomagneziémiu.</p>
 
-<p>Pred začatím a počas liečby treba sledovať hydratáciu, krvný tlak, funkciu obličiek, elektrolyty a gastrointestinálne ťažkosti. NSAID môžu tlmiť horúčku a zakryť závažnosť infekcie. Pri vracaní, hnačke alebo dehydratácii je potrebný vopred dohodnutý postup vrátane dočasného prerušenia rizikových liekov a včasnej kontroly.</p>
+<p class="pdf-avoid-break">Pred začatím a počas liečby treba sledovať hydratáciu, krvný tlak, funkciu obličiek, elektrolyty a gastrointestinálne ťažkosti. NSAID môžu tlmiť horúčku a zakryť závažnosť infekcie. Pri vracaní, hnačke alebo dehydratácii je potrebný vopred dohodnutý postup vrátane dočasného prerušenia rizikových liekov a včasnej kontroly.</p>
 
 <h3>Draslík šetriace diuretiká a blokáda RAAS</h3>
 
@@ -165,7 +167,7 @@ $articles[] = [
 
 <p>Bartterov syndróm nemožno automaticky považovať za benígne ochorenie. V multicentrickej retrospektívnej kórejskej kohorte 54 pacientov malo po mediáne ôsmich rokov sledovania 11&nbsp;% pacientov CKD G3 až G5 a 41&nbsp;% nízky vzrast pod tretím percentilom. Kohorta bola malá, geneticky neúplná a dominoval v nej typ 3, preto tieto podiely nemožno preniesť na každého pacienta ani na všetky genotypy.</p>
 
-<p>Medzi možné mechanizmy renálneho poškodenia patria prematurita a nižší počet nefrónov, opakovaná dehydratácia a akútne poškodenie obličiek, nefrokalcinóza, chronická hyperfiltrácia a proteinúria, dlhodobá expozícia NSAID a závažný genetický fenotyp. Úloha samotnej chronickej hypokaliémie nie je u ľudí spoľahlivo dokázaná a pozorované asociácie nepreukazujú kauzalitu.</p>
+<p class="pdf-avoid-break">Medzi možné mechanizmy renálneho poškodenia patria prematurita a nižší počet nefrónov, opakovaná dehydratácia a akútne poškodenie obličiek, nefrokalcinóza, chronická hyperfiltrácia a proteinúria, dlhodobá expozícia NSAID a závažný genetický fenotyp. Úloha samotnej chronickej hypokaliémie nie je u ľudí spoľahlivo dokázaná a pozorované asociácie nepreukazujú kauzalitu.</p>
 
 <p>Pri zlyhaní obličiek transplantácia nahradí tubuly s genetickým defektom a v publikovaných prípadoch odstránila polyúriu aj elektrolytové poruchy bez recidívy základnej tubulopatie. Preventívna nefrektómia a transplantácia pred rozvojom zlyhania obličiek sa však rutinne neodporúčajú.</p>
 
