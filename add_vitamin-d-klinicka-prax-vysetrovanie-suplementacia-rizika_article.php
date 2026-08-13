@@ -68,11 +68,11 @@ $articles[] = [
 
 <h2>Neexistuje jeden univerzálny cieľ pre všetkých</h2>
 
-<p>Endocrine Society už pri zdravých osobách nepresadzuje cieľ 25(OH)D aspoň 30 ng/ml, teda 75 nmol/l. Klinické štúdie neurčili jednu koncentráciu, ktorá by maximalizovala všetky kostné aj extraskeletálne výsledky. To však neznamená, že celé koncentračné spektrum je biologicky rovnocenné.</p>
+<p>Endocrine Society už pri zdravých osobách nepresadzuje cieľ 25(OH)D aspoň 30&nbsp;ng/ml, teda 75&nbsp;nmol/l. Klinické štúdie neurčili jednu koncentráciu, ktorá by maximalizovala všetky kostné aj extraskeletálne výsledky. To však neznamená, že celé koncentračné spektrum je biologicky rovnocenné.</p>
 
-<p>Výbor pre výživu a potraviny (Food and Nutrition Board) amerických National Academies of Sciences, Engineering, and Medicine používa pre zdravú populáciu ako orientačný rámec hodnotu pod 12 ng/ml, teda pod 30 nmol/l, pri ktorej rastie riziko deficitu, a hodnotu aspoň 20 ng/ml, teda 50 nmol/l, ktorá je dostatočná pre väčšinu zdravých ľudí. Tieto hranice nie sú ostrými diagnostickými čiarami, univerzálnym liečebným cieľom ani cieľom pre CKD-MBD. Rozličné odborné autority a laboratóriá môžu používať odlišné kategórie.</p>
+<p>Výbor pre výživu a potraviny (Food and Nutrition Board) amerických National Academies of Sciences, Engineering, and Medicine používa pre zdravú populáciu ako orientačný rámec hodnotu pod 12&nbsp;ng/ml, teda pod 30&nbsp;nmol/l, pri ktorej rastie riziko deficitu, a hodnotu aspoň 20&nbsp;ng/ml, teda 50&nbsp;nmol/l, ktorá je dostatočná pre väčšinu zdravých ľudí. Tieto hranice nie sú ostrými diagnostickými čiarami, univerzálnym liečebným cieľom ani cieľom pre CKD-MBD. Rozličné odborné autority a laboratóriá môžu používať odlišné kategórie.</p>
 
-<p>Prepočet jednotiek je <strong>1 ng/ml = 2,5 nmol/l</strong>. Výsledok treba hodnotiť spolu s klinickým obrazom, vápnikom, fosfátmi, PTH, alkalickou fosfatázou, funkciou obličiek, nutričným stavom, absorpciou a užívanými prípravkami. Pri akútnom ochorení alebo výraznom zápale môže byť interpretácia jednorazovej hodnoty obzvlášť neistá.</p>
+<p>Prepočet jednotiek je <strong>1&nbsp;ng/ml = 2,5&nbsp;nmol/l</strong>. Výsledok treba hodnotiť spolu s klinickým obrazom, vápnikom, fosfátmi, PTH, alkalickou fosfatázou, funkciou obličiek, nutričným stavom, absorpciou a užívanými prípravkami. Pri akútnom ochorení alebo výraznom zápale môže byť interpretácia jednorazovej hodnoty obzvlášť neistá.</p>
 
 <h2>1,25(OH)<sub>2</sub>D nie je testom zásob vitamínu D</h2>
 
@@ -94,7 +94,7 @@ $articles[] = [
 
 <h3>Osoby vo veku 75 rokov a viac</h3>
 
-<p>Empirická suplementácia sa navrhuje pre možný mierny pokles mortality. Ide o podmienené odporúčanie, nie o dôkaz výrazného predĺženia života. Denný ekvivalent dávok v analyzovaných štúdiách sa pohyboval od 400 do 3 333 IU a vážený priemer bol približne 900 IU. Tento priemer opisuje štúdie, nie individuálne predpísanú cieľovú dávku.</p>
+<p>Empirická suplementácia sa navrhuje pre možný mierny pokles mortality. Ide o podmienené odporúčanie, nie o dôkaz výrazného predĺženia života. Denný ekvivalent dávok v analyzovaných štúdiách sa pohyboval od 400 do 3&nbsp;333&nbsp;IU a vážený priemer bol približne 900&nbsp;IU. Tento priemer opisuje štúdie, nie individuálne predpísanú cieľovú dávku.</p>
 
 <h3>Dospelí s vysokorizikovým prediabetom</h3>
 
@@ -102,7 +102,7 @@ $articles[] = [
 
 <h2>Zdraví dospelí mladší ako 75 rokov</h2>
 
-<p>U zdravých dospelých mladších ako 75 rokov sa neodporúča empirická suplementácia nad referenčný nutričný príjem iba na prevenciu kardiovaskulárnych, nádorových, metabolických alebo renálnych ochorení. Veľká štúdia VITAL nepreukázala pri dávke 2 000 IU cholekalciferolu denne nižší výskyt invazívnych nádorov ani závažných kardiovaskulárnych príhod oproti placebu.</p>
+<p>U zdravých dospelých mladších ako 75 rokov sa neodporúča empirická suplementácia nad referenčný nutričný príjem iba na prevenciu kardiovaskulárnych, nádorových, metabolických alebo renálnych ochorení. Veľká štúdia VITAL nepreukázala pri dávke 2&nbsp;000&nbsp;IU cholekalciferolu denne nižší výskyt invazívnych nádorov ani závažných kardiovaskulárnych príhod oproti placebu.</p>
 
 <p>Treba rozlišovať medzi:</p>
 
@@ -118,7 +118,7 @@ $articles[] = [
 
 <p>U netehotných osôb vo veku 50 rokov a viac, ktoré majú indikáciu na suplementáciu alebo liečbu, Endocrine Society navrhuje nižšie denné dávky namiesto vysokých dávok podávaných v dlhších intervaloch. Odporúčanie je podmienené a nevylučuje každý týždenný či mesačný režim. Upozorňuje však, že pohodlnejší bolus nemusí znamenať lepší klinický výsledok.</p>
 
-<p>V randomizovanej štúdii u 2 256 komunitne žijúcich žien vo veku najmenej 70 rokov zvýšila jednorazová ročná dávka 500 000 IU cholekalciferolu výskyt pádov aj zlomenín. Tento výsledok nemožno prenášať na každý nedenný režim, jednoznačne však vyvracia predstavu, že čím vyššia jednorazová dávka, tým väčší úžitok.</p>
+<p>V randomizovanej štúdii u 2&nbsp;256 komunitne žijúcich žien vo veku najmenej 70 rokov zvýšila jednorazová ročná dávka 500&nbsp;000&nbsp;IU cholekalciferolu výskyt pádov aj zlomenín. Tento výsledok nemožno prenášať na každý nedenný režim, jednoznačne však vyvracia predstavu, že čím vyššia jednorazová dávka, tým väčší úžitok.</p>
 
 <p>Konkrétny liečebný režim musí zohľadniť závažnosť deficitu, vek, absorpciu, schopnosť dodržiavať liečbu, telesné zloženie, funkciu pečene a obličiek, riziko hyperkalciémie a použitý prípravok. Krátkodobá liečebná dávka pod odborným dohľadom nie je to isté ako dlhodobé nekontrolované užívanie rovnakej dávky.</p>
 
@@ -147,7 +147,7 @@ $articles[] = [
 
 <p>Nízke koncentrácie 25(OH)D sa v observačných štúdiách spájajú s albuminúriou, rýchlejším poklesom glomerulovej filtrácie a vyššou mortalitou. Asociáciu však môžu vysvetľovať alebo zosilňovať zápal, obezita, nižšia fyzická aktivita, proteinúria, malnutrícia a samotná závažnosť ochorenia.</p>
 
-<p>V štúdii VITAL-DKD u 1 312 dospelých s diabetom 2. typu neviedlo podávanie 2 000 IU vitamínu D<sub>3</sub> denne počas piatich rokov k významnému zachovaniu eGFR oproti placebu. Rutinnú suplementáciu preto nemožno prezentovať ako renoprotektívnu liečbu porovnateľnú s kontrolou krvného tlaku, blokádou systému renín – angiotenzín, inhibítormi SGLT2 alebo účinnou liečbou diabetu.</p>
+<p>V štúdii VITAL-DKD u 1&nbsp;312 dospelých s diabetom 2. typu neviedlo podávanie 2&nbsp;000&nbsp;IU vitamínu D<sub>3</sub> denne počas piatich rokov k významnému zachovaniu eGFR oproti placebu. Rutinnú suplementáciu preto nemožno prezentovať ako renoprotektívnu liečbu porovnateľnú s kontrolou krvného tlaku, blokádou systému renín – angiotenzín, inhibítormi SGLT2 alebo účinnou liečbou diabetu.</p>
 
 <p>Pri CKD má vitamín D jasné miesto v korekcii deficitu a v individualizovanom manažmente CKD-MBD. To je odlišný terapeutický cieľ od všeobecnej prevencie progresie CKD.</p>
 
@@ -163,7 +163,7 @@ $articles[] = [
   <li>poruchy rytmu a kalcifikáciu mäkkých tkanív pri ťažkej intoxikácii.</li>
 </ul>
 
-<p>Horná tolerovateľná hranica dlhodobého príjmu pre zdravého dospelého podľa uvedeného výboru je 4 000 IU denne. Nie je to hranica, pod ktorou je každý režim bezpečný, ani zákaz krátkodobej vyššej liečebnej dávky pod dohľadom. Toxicita sa typicky spája s veľmi vysokou koncentráciou 25(OH)D, často nad 150 ng/ml, teda 375 nmol/l, ale klinické rozhodovanie sa má riadiť najmä hyperkalciémiou, dávkou, trvaním a individuálnou náchylnosťou.</p>
+<p>Horná tolerovateľná hranica dlhodobého príjmu pre zdravého dospelého podľa uvedeného výboru je 4&nbsp;000&nbsp;IU denne. Nie je to hranica, pod ktorou je každý režim bezpečný, ani zákaz krátkodobej vyššej liečebnej dávky pod dohľadom. Toxicita sa typicky spája s veľmi vysokou koncentráciou 25(OH)D, často nad 150&nbsp;ng/ml, teda 375&nbsp;nmol/l, ale klinické rozhodovanie sa má riadiť najmä hyperkalciémiou, dávkou, trvaním a individuálnou náchylnosťou.</p>
 
 <p>Zvýšenú opatrnosť vyžadujú granulomatózne ochorenia a niektoré lymfómy s extrarenálnou tvorbou kalcitriolu, primárna hyperparatyreóza, poruchy degradácie vitamínu D, nefrolitiáza, súbežné vysoké dávky vápnika, liečba tiazidmi a pokročilá CKD. Pri CKD je riziková najmä nekontrolovaná kombinácia cholekalciferolu, kalcitriolu alebo analógov vitamínu D a kalciových viazačov fosfátov.</p>
 
