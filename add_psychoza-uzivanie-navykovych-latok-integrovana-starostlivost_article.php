@@ -143,9 +143,11 @@ $articles[] = [
 
 <p>Dehydratácia, vracanie, hnačka, znížený príjem sodíka, NSAID, inhibítory ACE, blokátory receptorov angiotenzínu a niektoré diuretiká môžu znížiť renálny klírens lítia a zvýšiť riziko toxicity. Pri poruche vedomia, novom hrubom tremore, ataxii, dysartrii, vracaní alebo inom neurologickom náleze treba vyšetriť koncentráciu lítia, elektrolyty a funkciu obličiek. Klinická závažnosť, najmä pri chronickej toxicite, nemusí presne zodpovedať jednej sérovej hodnote. Ťažká intoxikácia môže vyžadovať urgentnú konzultáciu klinického toxikológa a nefrológa a posúdenie mimotelovej eliminačnej liečby.</p>
 
+<div class="pdf-avoid-break">
 <h2>Rodina, ochrana detí a dospievajúci</h2>
 
 <p>Rodinná intervencia môže zlepšiť porozumenie ochoreniu, rozpoznávanie relapsu a podporu liečby. Zapojenie rodiny musí rešpektovať dôvernosť informácií, bezpečnosť pacienta a jeho rozhodovaciu spôsobilosť. Ak je pacient rodičom alebo opatrovateľom dieťaťa či inej zraniteľnej osoby, posudzuje sa konkrétne fungovanie domácnosti a reálne riziká. Samotná psychiatrická diagnóza ani užívanie látok automaticky nedokazujú nespôsobilosť starať sa o dieťa.</p>
+</div>
 
 <p>U dospievajúcich treba zohľadniť vývojovú úroveň, telesnú hmotnosť, školské fungovanie, rodinné prostredie, traumu a schopnosť informovane rozhodovať. Britské organizačné stupne CAMHS ani odkazy NICE na britské právne predpisy nemožno mechanicky prenášať do slovenskej praxe.</p>
 
@@ -184,6 +186,7 @@ $articles[] = [
 
 <hr>
 
+<div class="pdf-page-break" aria-hidden="true"></div>
 <h2>Zdroje</h2>
 
 <ol>
@@ -193,6 +196,9 @@ $articles[] = [
   <li><strong>Glenn E. Hunt, Nandi Siegfried, Kirsten Morley, Carrie Brooke-Sumner, Michelle Cleary.</strong> <em>Psychosocial interventions for people with both severe mental illness and substance misuse.</em> Cochrane Database of Systematic Reviews. 2019;(12):CD001088. doi: 10.1002/14651858.CD001088.pub4. <a href="https://pubmed.ncbi.nlm.nih.gov/31829430/" target="_blank" rel="noopener noreferrer">PubMed</a>.</li>
   <li><strong>Reza Rafizadeh, Marlon Danilewitz, Chad A. Bousman, Nickie Mathew, Randall F. White, Anees Bahji, William G. Honer, Christian G. Schütz.</strong> <em>Effects of clozapine treatment on the improvement of substance use disorders other than nicotine in individuals with schizophrenia spectrum disorders: a systematic review and meta-analysis.</em> Journal of Psychopharmacology. 2023;37(2):135–143. doi: 10.1177/02698811221142575. <a href="https://pubmed.ncbi.nlm.nih.gov/36507548/" target="_blank" rel="noopener noreferrer">PubMed</a>.</li>
   <li><strong>William F. Pendergraft III, Leal C. Herlitz, Denyse Thornley-Brown, Mitchell Rosner, John L. Niles.</strong> <em>Nephrotoxic effects of common and emerging drugs of abuse.</em> Clinical Journal of the American Society of Nephrology. 2014;9(11):1996–2005. doi: 10.2215/CJN.00360114. <a href="https://pubmed.ncbi.nlm.nih.gov/25035273/" target="_blank" rel="noopener noreferrer">PubMed</a>.</li>
+</ol>
+
+<ol start="7">
   <li><strong>National Institute for Health and Care Excellence.</strong> <em>Bipolar disorder: assessment and management.</em> NICE Clinical Guideline CG185, časť monitorovania lítia. <a href="https://www.nice.org.uk/guidance/cg185" target="_blank" rel="noopener noreferrer">NICE</a>.</li>
   <li><strong>Brian S. Decker, David S. Goldfarb, Paul I. Dargan a kol.; EXTRIP Workgroup.</strong> <em>Extracorporeal Treatment for Lithium Poisoning: Systematic Review and Recommendations from the EXTRIP Workgroup.</em> Clinical Journal of the American Society of Nephrology. 2015;10(5):875–887. doi: 10.2215/CJN.10021014. <a href="https://pubmed.ncbi.nlm.nih.gov/25583292/" target="_blank" rel="noopener noreferrer">PubMed</a>.</li>
 </ol>
