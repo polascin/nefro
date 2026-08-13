@@ -122,7 +122,9 @@ $articles[] = [
 
 <p>Východiskový vzdelávací program opisoval FINE-ONE ako takmer dokončenú štúdiu. To už nie je aktuálne. Výsledky štúdie 3. fázy boli publikované v marci 2026. Randomizovaných bolo 242 dospelých s diabetom 1. typu, eGFR 25 až menej ako 90 ml/min/1,73 m² a UACR 200 až menej ako 5 000 mg/g, ktorí dostávali inhibítor ACE alebo ARB.</p>
 
+<div class="pdf-avoid-break">
 <p>Za šesť mesiacov sa UACR znížil o 34 % pri finerenóne a o 12 % pri placebe; relatívny pokles bol pri finerenóne o 25 % väčší. Hyperkaliémia sa vyskytla u 10,1 % účastníkov s finerenónom a u 3,3 % s placebom, pričom 1,7 % účastníkov finerenón pre hyperkaliémiu vysadilo. Počas liečby bol pokles eGFR väčší pri finerenóne, po vymývacom období sa hodnoty približovali k východiskovým hodnotám.</p>
+</div>
 
 <p>FINE-ONE preukázala účinok na albuminúriu a poskytla krátkodobé bezpečnostné údaje. Nebola navrhnutá na dôkaz prevencie zlyhania obličiek, kardiovaskulárnych príhod alebo mortality. Európska lieková agentúra na aktuálnej stránke lieku uvádza CKD indikáciu finerenónu pre dospelých s diabetom 2. typu a albuminúriou, nie pre diabetes 1. typu. Výsledok FINE-ONE je preto významným krokom, ale nie dôvodom prezentovať finerenón ako už schválený štandard liečby CKD pri diabete 1. typu v Európskej únii.</p>
 
@@ -157,9 +159,11 @@ $articles[] = [
 
 <p>Financovanie ani konflikty záujmov automaticky neznehodnocujú odborný obsah, vyžadujú však transparentnosť a kontrolu proti nezávislým usmerneniam a primárnym štúdiám. Osobitne dôležité je, že program zachytáva stav pred publikovaním FINE-ONE. Tento článok je preto aktualizovanou odbornou syntézou, nie prepisom programu.</p>
 
+<div class="pdf-avoid-break">
 <h2>Záver</h2>
 
 <p>Najväčšou rezervou v starostlivosti o CKD pri diabete zostáva neskorý záchyt a chýbajúce vyšetrenie albuminúrie. eGFR a UACR treba hodnotiť spoločne, abnormálny nález potvrdiť v čase a pri atypickom priebehu aktívne hľadať inú alebo pridruženú renálnu diagnózu.</p>
+</div>
 
 <div class="pdf-avoid-break">
 <p>Pri diabete 2. typu sa kardiorenálna liečba vrství z optimalizácie rizikových faktorov, indikovaných inhibítorov RAS, inhibítora SGLT2, finerenónu a agonistu receptora GLP-1. Poradie a tempo určujú fenotyp, absolútne riziko a bezpečnosť. CONFIDENCE podporuje súbežné začatie finerenónu a empagliflozínu vo vymedzenej populácii, no zatiaľ najmä na základe albuminúrie. FINE-ONE priniesla sľubné údaje pri diabete 1. typu, ale nepreukázala dlhodobé klinické výsledky a európska CKD indikácia finerenónu zostáva viazaná na diabetes 2. typu.</p>
