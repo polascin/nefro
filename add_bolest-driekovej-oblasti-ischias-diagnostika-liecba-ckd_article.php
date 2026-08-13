@@ -57,9 +57,10 @@ $articles[] = [
 
 <h2>Stavy, pri ktorých rozhoduje čas</h2>
 
-<h3>Syndróm caudae equinae</h3>
-
-<p>Urgentné nemocničné posúdenie vyžaduje najmä nová retencia moču alebo inkontinencia, strata citlivosti v sedlovej oblasti, nová porucha análneho zvierača alebo sexuálnej funkcie, obojstranný ischias a závažný alebo progresívny motorický deficit. Pri dôvodnom podozrení je potrebná urgentná magnetická rezonancia a bezodkladné spinálne chirurgické posúdenie. Neprítomnosť jedného príznaku ani zachované spontánne močenie nevylučujú skorú fázu syndrómu.</p>
+<div class="pdf-keep-together">
+  <h3>Syndróm caudae equinae</h3>
+  <p>Urgentné nemocničné posúdenie vyžaduje najmä nová retencia moču alebo inkontinencia, strata citlivosti v sedlovej oblasti, nová porucha análneho zvierača alebo sexuálnej funkcie, obojstranný ischias a závažný alebo progresívny motorický deficit. Pri dôvodnom podozrení je potrebná urgentná magnetická rezonancia a bezodkladné spinálne chirurgické posúdenie. Neprítomnosť jedného príznaku ani zachované spontánne močenie nevylučujú skorú fázu syndrómu.</p>
+</div>
 
 <h3>Infekcia chrbtice</h3>
 
@@ -122,7 +123,9 @@ $articles[] = [
 
 <p>Riziko rastie pri CKD, vyššom veku, objemovej deplécii, vracaní alebo hnačke, sepse, srdcovom zlyhávaní, cirhóze a pri súbežnom užívaní diuretika alebo blokátora systému renín-angiotenzín. Kombinácia NSAID, diuretika a inhibítora ACE alebo blokátora receptorov angiotenzínu vytvára osobitne rizikové podmienky pre hemodynamické AKI.</p>
 
-<p>Pri aktívnom AKI, objemovej deplécii, hyperkaliémii, dekompenzovanom srdcovom zlyhávaní alebo pokročilej nestabilnej CKD sa systémovým NSAID treba spravidla vyhnúť. Ani pri stabilnej CKD s nižším individuálnym rizikom nemožno rozhodnutie založiť iba na jedinom prahu eGFR. KDIGO upozorňuje na škodlivosť nekontrolovaného chronického užívania, zároveň však pripúšťa, že starostlivo indikované NSAID pod dohľadom môžu byť v niektorých situáciách menej rizikové než opioidy. Ak očakávaný prínos preváži, treba zvážiť východiskovú a skorú kontrolu kreatinínu alebo eGFR, draslíka, krvného tlaku a hydratácie podľa individuálneho rizika.</p>
+<p>Pri aktívnom AKI, objemovej deplécii, hyperkaliémii, dekompenzovanom srdcovom zlyhávaní alebo pokročilej nestabilnej CKD sa systémovým NSAID treba spravidla vyhnúť. Ani pri stabilnej CKD s nižším individuálnym rizikom nemožno rozhodnutie založiť iba na jedinom prahu eGFR. KDIGO upozorňuje na škodlivosť nekontrolovaného chronického užívania, zároveň však pripúšťa, že starostlivo indikované NSAID pod dohľadom môžu byť v niektorých situáciách menej rizikové než opioidy.</p>
+
+<p class="pdf-avoid-break">Ak očakávaný prínos preváži, treba zvážiť východiskovú a skorú kontrolu kreatinínu alebo eGFR, draslíka, krvného tlaku a hydratácie podľa individuálneho rizika.</p>
 
 <p>Inhibítor protónovej pumpy môže znížiť niektoré gastrointestinálne komplikácie, ale nechráni obličky ani kardiovaskulárny systém. Ani lokálny NSAID nie je úplne bez systémovej absorpcie; jeho riziko je spravidla nižšie, nie nulové.</p>
 
