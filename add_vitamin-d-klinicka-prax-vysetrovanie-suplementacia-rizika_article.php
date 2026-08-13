@@ -48,7 +48,7 @@ $articles[] = [
 
 <p>Endocrine Society navrhuje nevykonávať rutinné stanovenie 25(OH)D u zdravých asymptomatických dospelých. Rovnaký záver platí pre inak zdravých dospelých s obezitou alebo tmavšou pigmentáciou kože, ak nemajú ďalšiu klinickú indikáciu. Dôvodom nie je tvrdenie, že veľmi nízka koncentrácia nemá význam, ale chýbajúci dôkaz, že populačný skríning a následná liečba podľa laboratórneho prahu zlepšujú klinické výsledky.</p>
 
-<p>Koncentráciu 25(OH)D ovplyvňujú ročné obdobie, zemepisná poloha, pobyt na slnku, pigmentácia kože, telesné zloženie, príjem vitamínu D, zápal, strata väzbových proteínov, ochorenia pečene a obličiek aj použitá analytická metóda. Pri obezite môže nižšia hodnota súvisieť najmä s väčším distribučným objemom a odlišnou distribúciou vitamínu rozpustného v tukoch. Samotný výsledok preto nemožno interpretovať bez klinického kontextu.</p>
+<p>Koncentráciu 25(OH)D ovplyvňujú ročné obdobie, zemepisná poloha, pobyt na slnku, pigmentácia kože, telesné zloženie, príjem vitamínu D, zápal, strata väzbových proteínov, ochorenia pečene a obličiek aj použitá analytická metóda. Pri obezite môže nižšia hodnota súvisieť najmä s väčším distribučným objemom vitamínu rozpustného v tukoch. Výsledok preto nemožno interpretovať bez klinického kontextu.</p>
 
 <h2>Kedy má stanovenie 25(OH)D klinický význam</h2>
 
