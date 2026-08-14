@@ -103,6 +103,7 @@ function getSourceArticleAuthors(): array {
         'pentoxifylin-diabeticka-choroba-obliciek-mini-review' => ['David J. Leehey', 'Rajiv Agarwal'],
         'perzistujuca-hyperparatyreoza-po-transplantacii-oblicky' => ['Daniele Vetrano', 'Simona Barbuto', 'Francesco Aguanno', 'Paolo Mastromauro', 'Valeria Grandinetti', 'Giorgia Comai', 'Gaetano La Manna', 'Giuseppe Cianciolo'],
         'perzistujuca-mikroskopicka-hematuria-podocytopatie-prognoza' => ['Gabriel Ștefan', 'Nicoleta Petre', 'Adrian Zugravu', 'Simona Stancu'],
+        'pohybova-aktivita-fibrilacia-predsieni-cmp-mortalita' => ['Kristoffer Robin Johansen', 'Bjarne Martens Nes', 'Vegard Malmo', 'Marius Myrstad', 'Dag S Thelle', 'Kim Arne Heitmann', 'Ellisiv Bøgeberg Mathiesen', 'Anne Elise Eggen', 'Tom Wilsgaard', 'Maja-Lisa Løchen', 'Bente Morseth', 'Norwegian Exercise and Atrial Fibrillation Initiative Investigators'],
         'prader-willi-syndrom-genetika-hyperfagia-starostlivost' => ['Jessica Duis', 'Ashley Shoemaker', 'Anthony P. Goldstone'],
         'predialyzacna-edukacia-volba-peritonealnej-dialyzy' => ['Magdalena Mosakowska', 'Ewelina Jędrych', 'Ewa Kotwica-Strzałek', 'Agnieszka Dorywalska', 'Arkadiusz Lubas', 'Stanisław Niemczyk'],
         'predikcia-vhodnosti-peritonealnej-dialyzy-validacia' => ['Emre Cankaya', 'Yang Yang', 'Helen H. Chen', 'Robert R. Quinn', 'Joel A. Dubin', 'Matthew J. Oliver'],
