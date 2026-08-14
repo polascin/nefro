@@ -204,6 +204,8 @@ $articles[] = [
 <div class="pdf-avoid-break">
 <h2>Zdroje</h2>
 
+<p><em><strong>Poznámka k interpretácii:</strong> Článok bol vecne overený podľa európskeho odporúčania ESsCD 2025, odborných alergologických odporúčaní, primárnych provokačných štúdií a aktuálnych nefrologických odporúčaní. Východiskový článok Medscape je sekundárny klinický prehľad a jeho chybný údaj „46 týždňov“ bol nahradený aktuálnym režimom gluténovej provokácie pre dospelých. Diagnostika aj diétna intervencia sa musia prispôsobiť veku, závažnosti príznakov, nutričnému stavu a miestnym odborným postupom.</em></p>
+
 <ol>
   <li><strong>Medscape Professional Network; Univadis Italy.</strong> <em>Wheat Sensitivity: Is Gluten the Only Trigger?</em> Medscape. 2026. Individuálny autor nebol vo verejne dostupnom zobrazení spoľahlivo uvedený. <a href="https://www.medscape.com/viewarticle/wheat-sensitivity-gluten-only-trigger-2026a1000rnd" target="_blank" rel="noopener noreferrer">Východiskový odborný článok</a>.</li>
   <li><strong>Al-Toma A, Volta U, Auricchio R, et al.</strong> <em>European Society for the Study of Coeliac Disease 2025 Updated Guidelines on the Diagnosis and Management of Coeliac Disease in Adults. Part 1: Diagnostic Approach.</em> United European Gastroenterol J. 2025. doi: 10.1002/ueg2.70119. <a href="https://doi.org/10.1002/ueg2.70119" target="_blank" rel="noopener noreferrer">Odporúčanie ESsCD 2025</a>.</li>
@@ -219,8 +221,6 @@ $articles[] = [
   <li><strong>Kidney Disease: Improving Global Outcomes.</strong> <em>KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease.</em> Kidney Int. 2024;105(Suppl 4S):S117–S314. <a href="https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf" target="_blank" rel="noopener noreferrer">Odporúčanie KDIGO 2024</a>.</li>
 </ol>
 </div>
-
-<p><em><strong>Poznámka k interpretácii:</strong> Článok bol vecne overený podľa európskeho odporúčania ESsCD 2025, odborných alergologických odporúčaní, primárnych provokačných štúdií a aktuálnych nefrologických odporúčaní. Východiskový článok Medscape je sekundárny klinický prehľad a jeho chybný údaj „46 týždňov“ bol nahradený aktuálnym režimom gluténovej provokácie pre dospelých. Diagnostika aj diétna intervencia sa musia prispôsobiť veku, závažnosti príznakov, nutričnému stavu a miestnym odborným postupom.</em></p>
 HTML,
 ];
 
