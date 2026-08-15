@@ -68,7 +68,9 @@ $articles[] = [
 <!-- POZOR: nezačínaj <h2> zhodným s titulom — ten sa generuje automaticky -->
 
 <figure>
-  <img src="img/.png" alt="" loading="lazy" decoding="async">
+  <!-- alt POVINNE vyplň: čo je na obrázku vidieť (nie „obrázok“/„foto“).
+       Prázdne alt="" nechaj len pri čisto dekoratívnom obrázku + aria-hidden="true". -->
+  <img src="img/.png" alt="← VYPLNIŤ: popis obrázka" loading="lazy" decoding="async">
   <figcaption>Popis hlavného obrázka.</figcaption>
 </figure>
 
