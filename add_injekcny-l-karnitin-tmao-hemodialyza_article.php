@@ -74,6 +74,7 @@ $articles[] = [
 
 <h2>Dávkovanie a klinické usmernenia</h2>
 
+<div class="table-responsive" role="region" aria-label="Dávkovanie a klinické usmernenia" tabindex="0">
 <table>
   <thead>
     <tr><th scope="col">Parameter</th><th scope="col">Údaj</th></tr>
@@ -85,6 +86,7 @@ $articles[] = [
     <tr><td>Podmienka úhrady (US/ESRD)</td><td>minimálne 3 mesiace na dialýze + definovaná indikácia</td></tr>
   </tbody>
 </table>
+</div>
 
 <p>Zdroje dávkovania: <a href="https://kidneyfoundation.cachefly.net/professionals/KDOQI/guidelines_nutrition/nut_appx10a.html" target="_blank" rel="noopener noreferrer">KDOQI, Appendix X</a>, <a href="https://www.cms.gov/medicare-coverage-database/view/ncacal-decision-memo.aspx?proposed=N&amp;ncaid=44" target="_blank" rel="noopener noreferrer">CMS NCD pre ESRD</a> a <a href="https://www.mdpi.com/2077-0383/14/14/5052" target="_blank" rel="noopener noreferrer">Kljajić a kol. (JCM 2025)</a>.</p>
 

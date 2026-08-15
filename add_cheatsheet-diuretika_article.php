@@ -32,6 +32,7 @@ $articles[] = [
 <p>Prehľad <strong>tried diuretík, miesta účinku, dávkových ekvivalencií</strong> a zásad pri diuretickej rezistencii. Pri renálnej diéte pozri <a href="nastroj_dieta.php">plánovač renálnej diéty</a>.</p>
 
 <h2>Triedy a miesto účinku</h2>
+<div class="table-responsive" role="region" aria-label="Triedy a miesto účinku" tabindex="0">
 <table>
   <thead>
     <tr><th scope="col">Trieda</th><th scope="col">Zástupcovia</th><th scope="col">Miesto / cieľ</th></tr>
@@ -46,9 +47,11 @@ $articles[] = [
     <tr><td>Vaptany (akvaretiká)</td><td>Tolvaptan</td><td>Zberný kanálik — V2 receptor (voľná voda)</td></tr>
   </tbody>
 </table>
+</div>
 <p><em>* Finerenón je nesteroidný MRA — používa sa primárne ako <strong>nefroprotektívum</strong> pri CKD (nie ako diuretikum).</em></p>
 
 <h2>Dávkové ekvivalencie — slučkové diuretiká</h2>
+<div class="table-responsive" role="region" aria-label="Dávkové ekvivalencie — slučkové diuretiká" tabindex="0">
 <table>
   <thead>
     <tr><th scope="col">Liek</th><th scope="col">Ekvivalentná dávka</th><th scope="col">Biologická dostupnosť (p.o.)</th></tr>
@@ -59,9 +62,11 @@ $articles[] = [
     <tr><td>Bumetanid</td><td>1 mg</td><td>~80–100 %</td></tr>
   </tbody>
 </table>
+</div>
 <p><strong>Furosemid p.o. : i.v. = 2 : 1</strong> (40 mg p.o. ≈ 20 mg i.v.). Pri kolísavej absorpcii uprednostni torasemid alebo i.v. podanie.</p>
 
 <h2>Dávkové ekvivalencie — tiazidy a MRA</h2>
+<div class="table-responsive" role="region" aria-label="Dávkové ekvivalencie — tiazidy a MRA" tabindex="0">
 <table>
   <thead>
     <tr><th scope="col">Liek</th><th scope="col">Približná ekvivalencia / poznámka</th></tr>
@@ -73,6 +78,7 @@ $articles[] = [
     <tr><td>Spironolaktón 25–50 mg</td><td>≈ eplerenón 50 mg; spironolaktón má antiandrogénne NÚ (gynekomastia)</td></tr>
   </tbody>
 </table>
+</div>
 
 <h2>Diuretická rezistencia — princípy</h2>
 <ul>
@@ -84,6 +90,7 @@ $articles[] = [
 </ul>
 
 <h2>Monitorovanie a nežiaduce účinky</h2>
+<div class="table-responsive" role="region" aria-label="Monitorovanie a nežiaduce účinky" tabindex="0">
 <table>
   <thead>
     <tr><th scope="col">Trieda</th><th scope="col">Sledovať</th></tr>
@@ -96,6 +103,7 @@ $articles[] = [
     <tr><td>Tolvaptan</td><td>Rýchla korekcia Na<sup>+</sup> (riziko ODS), smäd, hepatotoxicita (ADPKD)</td></tr>
   </tbody>
 </table>
+</div>
 
 <hr>
 

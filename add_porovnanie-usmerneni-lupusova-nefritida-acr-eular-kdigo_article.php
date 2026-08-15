@@ -115,6 +115,7 @@ $articles[] = [
 
 <h2>Súhrnné porovnanie</h2>
 
+<div class="table-responsive" role="region" aria-label="Súhrnné porovnanie" tabindex="0">
 <table>
   <thead>
     <tr>
@@ -187,6 +188,7 @@ $articles[] = [
     </tr>
   </tbody>
 </table>
+</div>
 
 <h2>Membranózna (trieda V) LN: najväčšie medzery v dôkazoch</h2>
 

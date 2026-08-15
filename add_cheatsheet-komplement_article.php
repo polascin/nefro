@@ -32,6 +32,7 @@ $articles[] = [
 <p>Ťahák k <strong>systému komplementu</strong> v nefrológii — tri aktivačné dráhy, interpretácia sérového C3/C4, komplementom sprostredkované choroby obličiek a cielené lieky. Diferenciálnu diagnostiku nefritíd podľa komplementu rieši <a href="nastroj_gn.php">interaktívny sprievodca GN</a>.</p>
 
 <h2>Tri aktivačné dráhy</h2>
+<div class="table-responsive" role="region" aria-label="Tri aktivačné dráhy" tabindex="0">
 <table>
   <thead>
     <tr><th scope="col">Dráha</th><th scope="col">Spúšťač</th><th scope="col">Kľúčové zložky</th></tr>
@@ -42,9 +43,11 @@ $articles[] = [
     <tr><td>Alternatívna</td><td>Spontánna „tick-over“ + amplifikácia</td><td>Faktor B, faktor D, properdín → C3 konvertáza (C3bBb)</td></tr>
   </tbody>
 </table>
+</div>
 <p>Všetky dráhy konvergujú na <strong>C3 → C5 → membránový atakový komplex (MAC, C5b-9)</strong>. Alternatívna dráha funguje aj ako <strong>amplifikačná slučka</strong> ostatných dvoch.</p>
 
 <h2>Interpretácia sérového komplementu</h2>
+<div class="table-responsive" role="region" aria-label="Interpretácia sérového komplementu" tabindex="0">
 <table>
   <thead>
     <tr><th scope="col">Vzor C3/C4</th><th scope="col">Aktivovaná dráha</th><th scope="col">Typické jednotky</th></tr>
@@ -55,8 +58,10 @@ $articles[] = [
     <tr><td><strong>Normálny C3 aj C4</strong></td><td>—</td><td>IgA nefropatia, ANCA-asociovaná, anti-GBM</td></tr>
   </tbody>
 </table>
+</div>
 
 <h2>Komplementom sprostredkované choroby obličiek</h2>
+<div class="table-responsive" role="region" aria-label="Komplementom sprostredkované choroby obličiek" tabindex="0">
 <table>
   <thead>
     <tr><th scope="col">Jednotka</th><th scope="col">Komplement</th><th scope="col">Kľúč</th></tr>
@@ -69,6 +74,7 @@ $articles[] = [
     <tr><td>Imunokomplexová MPGN</td><td>↓C3 ± C4</td><td>Infekcie, autoimunita, monoklonálna gamapatia</td></tr>
   </tbody>
 </table>
+</div>
 
 <h2>Regulátory a genetika (aHUS / C3G)</h2>
 <ul>
@@ -79,6 +85,7 @@ $articles[] = [
 </ul>
 
 <h2>Komplement-cielené lieky</h2>
+<div class="table-responsive" role="region" aria-label="Komplement-cielené lieky" tabindex="0">
 <table>
   <thead>
     <tr><th scope="col">Cieľ</th><th scope="col">Liek</th><th scope="col">Indikácia (nefrológia)</th></tr>
@@ -90,6 +97,7 @@ $articles[] = [
     <tr><td>C3</td><td>Pegcetakoplan</td><td>C3 glomerulopatia (klinické skúšky)</td></tr>
   </tbody>
 </table>
+</div>
 <p><strong>Pozor:</strong> pred inhibíciou C5 <strong>očkovanie proti meningokokom</strong> (riziko invazívnej infekcie Neisseria); zváž antibiotickú profylaxiu.</p>
 
 <hr>

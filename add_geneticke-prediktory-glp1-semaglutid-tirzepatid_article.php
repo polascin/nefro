@@ -37,6 +37,7 @@ $articles[] = [
 
 <p>Semaglutid je agonista receptora pre glukagónu podobný peptid 1 (GLP-1). Tirzepatid je duálny agonista receptorov pre GLP-1 a glukózodependentný inzulínotropný polypeptid (GIP). Označenie všetkých skúmaných prípravkov ako „GLP-1 liekov“ je preto praktická skratka, nie úplne presná farmakologická klasifikácia.</p>
 
+<div class="table-responsive" role="region" aria-label="Čo autori skúmali" tabindex="0">
 <table>
   <thead>
     <tr>
@@ -83,6 +84,7 @@ $articles[] = [
     </tr>
   </tbody>
 </table>
+</div>
 
 <p>Genotypizácia vychádzala zo vzoriek slín a z imputovaných genetických údajov. Po vylúčení účastníkov s neúplnými údajmi, po kontrole kvality a odstránení blízko príbuzných zahŕňala hlavná GWAS percentuálnej zmeny BMI 15 237 účastníkov európskeho genetického pôvodu. Číslo 27 885 preto nemožno bez spresnenia uvádzať ako veľkosť každej genetickej analýzy.</p>
 

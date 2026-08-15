@@ -32,6 +32,7 @@ $articles[] = [
 <p>Kompaktná pomôcka na <strong>systematickú interpretáciu artériovej acidobázy</strong>. Postupuj v krokoch: pH → primárna porucha → kompenzácia → aniónové okno (AG) → delta ratio → klinický kontext. Výpočty si overíš v <a href="calculator_acidbase.php">kalkulačke acidobázy</a>.</p>
 
 <h2>Normálne hodnoty (artériová krv)</h2>
+<div class="table-responsive" role="region" aria-label="Normálne hodnoty (artériová krv)" tabindex="0">
 <table>
   <thead>
     <tr><th scope="col">Parameter</th><th scope="col">Rozsah</th></tr>
@@ -44,8 +45,10 @@ $articles[] = [
     <tr><td>Aniónové okno (AG)</td><td>8 – 12 mmol/l (bez K<sup>+</sup>)</td></tr>
   </tbody>
 </table>
+</div>
 
 <h2>Krok 1 — Primárna porucha</h2>
+<div class="table-responsive" role="region" aria-label="Krok 1 — Primárna porucha" tabindex="0">
 <table>
   <thead>
     <tr><th scope="col">pH</th><th scope="col">Primárna zmena</th><th scope="col">Porucha</th></tr>
@@ -57,10 +60,12 @@ $articles[] = [
     <tr><td>&gt; 7,45 (alkalémia)</td><td>↓ pCO<sub>2</sub></td><td>Respiračná alkalóza</td></tr>
   </tbody>
 </table>
+</div>
 <p><em>pH v norme + abnormálne pCO<sub>2</sub>/HCO<sub>3</sub><sup>−</sup> → zmiešaná porucha.</em></p>
 
 <h2>Krok 2 — Očakávaná kompenzácia</h2>
 <p>Kompenzácia <strong>nikdy nekoriguje pH úplne</strong> do normy. Odchýlka od očakávanej hodnoty = ďalšia (zmiešaná) porucha.</p>
+<div class="table-responsive" role="region" aria-label="Krok 2 — Očakávaná kompenzácia" tabindex="0">
 <table>
   <thead>
     <tr><th scope="col">Primárna porucha</th><th scope="col">Očakávaná kompenzácia</th></tr>
@@ -74,6 +79,7 @@ $articles[] = [
     <tr><td>Respiračná alkalóza — chronická</td><td>HCO<sub>3</sub><sup>−</sup> ↓ o 4 – 5 na každých 10 mmHg ↓ pCO<sub>2</sub></td></tr>
   </tbody>
 </table>
+</div>
 
 <h2>Krok 3 — Aniónové okno (AG)</h2>
 <p><strong>AG = Na<sup>+</sup> − (Cl<sup>−</sup> + HCO<sub>3</sub><sup>−</sup>)</strong>, norma 8 – 12 mmol/l.</p>
@@ -100,6 +106,7 @@ $articles[] = [
 
 <h2>Krok 4 — Delta ratio (ΔAG / ΔHCO<sub>3</sub><sup>−</sup>)</h2>
 <p>Pri HAGMA odhalí <strong>skrytú zmiešanú poruchu</strong>: Δratio = (AG − 12) / (24 − HCO<sub>3</sub><sup>−</sup>).</p>
+<div class="table-responsive" role="region" aria-label="Krok 4 — Delta ratio (ΔAG / ΔHCO3−)" tabindex="0">
 <table>
   <thead>
     <tr><th scope="col">Delta ratio</th><th scope="col">Interpretácia</th></tr>
@@ -111,8 +118,10 @@ $articles[] = [
     <tr><td>&gt; 2,0</td><td>Súčasná metabolická alkalóza alebo chronická respiračná acidóza</td></tr>
   </tbody>
 </table>
+</div>
 
 <h2>Metabolická alkalóza — podľa močového chloridu</h2>
+<div class="table-responsive" role="region" aria-label="Metabolická alkalóza — podľa močového chloridu" tabindex="0">
 <table>
   <thead>
     <tr><th scope="col">U-Cl</th><th scope="col">Typ</th><th scope="col">Príčiny</th></tr>
@@ -122,6 +131,7 @@ $articles[] = [
     <tr><td>&gt; 20 mmol/l</td><td>Rezistentná na chlorid</td><td>Hyperaldosteronizmus, Cushing, ťažká hypokaliémia, Bartter/Gitelman, aktuálne diuretiká</td></tr>
   </tbody>
 </table>
+</div>
 
 <h2>Pomôcky a úskalia</h2>
 <ul>

@@ -40,12 +40,13 @@ $articles[] = [
 
 <p>Autori analyzovali údaje z prospektívnej Osaka Dialysis Complication Study. Do pôvodnej kohorty zaradili 1 696 pacientov z 17 dialyzačných pracovísk v prefektúre Osaka. Po vylúčení 25 osôb s chýbajúcimi údajmi zahŕňala analýza 1 671 pacientov, ktorí už pri vstupe podstupovali udržiavaciu hemodialýzu. Sledovanie prebiehalo v rokoch 2012 až 2017, najviac päť rokov; medián dosiahol 1 826 dní.</p>
 
+<div class="table-responsive" role="region" aria-label="Ako bola štúdia navrhnutá" tabindex="0">
 <table>
   <thead>
     <tr>
-      <th>Krvná skupina</th>
-      <th>Počet pacientov</th>
-      <th>Podiel</th>
+      <th scope="col">Krvná skupina</th>
+      <th scope="col">Počet pacientov</th>
+      <th scope="col">Podiel</th>
     </tr>
   </thead>
   <tbody>
@@ -55,6 +56,7 @@ $articles[] = [
     <tr><td>O</td><td>487</td><td>29,1 %</td></tr>
   </tbody>
 </table>
+</div>
 
 <p>Hodnotenými výsledkami boli celková, kardiovaskulárna a nekardiovaskulárna mortalita. Pri analýze príčin úmrtia autori zohľadnili konkurenčné riziká pomocou Fineovho–Grayovho modelu. Pacienti po transplantácii obličky, prechode na peritoneálnu dialýzu, presťahovaní alebo preložení na iné pracovisko boli cenzorovaní pri poslednom potvrdenom sledovaní.</p>
 

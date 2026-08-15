@@ -75,10 +75,10 @@ $articles[] = [
 <table>
   <thead>
     <tr>
-      <th>Výsledok pri zvýšení príjmu o 0,1 g/kg/deň</th>
-      <th>Odhad</th>
-      <th>95 % interval spoľahlivosti</th>
-      <th>Interpretácia</th>
+      <th scope="col">Výsledok pri zvýšení príjmu o 0,1 g/kg/deň</th>
+      <th scope="col">Odhad</th>
+      <th scope="col">95 % interval spoľahlivosti</th>
+      <th scope="col">Interpretácia</th>
     </tr>
   </thead>
   <tbody>

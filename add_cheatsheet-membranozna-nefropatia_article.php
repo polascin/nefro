@@ -32,6 +32,7 @@ $articles[] = [
 <p>Ťahák k <strong>membranóznej nefropatii</strong> — najčastejšej príčine nefrotického syndrómu u nediabetických dospelých. Podklad: subepiteliálne imunokomplexy a aktivácia komplementu. Diferenciálnu diagnostiku nefrotického syndrómu rieši <a href="nastroj_gn.php">interaktívny sprievodca GN</a>.</p>
 
 <h2>Cieľové antigény (fáza podocytu)</h2>
+<div class="table-responsive" role="region" aria-label="Cieľové antigény (fáza podocytu)" tabindex="0">
 <table>
   <thead>
     <tr><th scope="col">Antigén</th><th scope="col">Podiel / kontext</th><th scope="col">Asociácia</th></tr>
@@ -45,8 +46,10 @@ $articles[] = [
     <tr><td>PCDH7, NCAM1</td><td>zriedkavé</td><td>PCDH7 často bez imunosupresie; NCAM1 pri lupuse</td></tr>
   </tbody>
 </table>
+</div>
 
 <h2>Primárna vs sekundárna</h2>
+<div class="table-responsive" role="region" aria-label="Primárna vs sekundárna" tabindex="0">
 <table>
   <thead>
     <tr><th scope="col">Kategória</th><th scope="col">Príčiny</th></tr>
@@ -59,6 +62,7 @@ $articles[] = [
     <tr><td>Lieky</td><td>NSA, penicilamín, zlato, anti-TNF</td></tr>
   </tbody>
 </table>
+</div>
 
 <h2>Vyšetrenie</h2>
 <ul>
@@ -69,6 +73,7 @@ $articles[] = [
 </ul>
 
 <h2>Riziková stratifikácia (KDIGO) a liečba</h2>
+<div class="table-responsive" role="region" aria-label="Riziková stratifikácia (KDIGO) a liečba" tabindex="0">
 <table>
   <thead>
     <tr><th scope="col">Riziko</th><th scope="col">Znaky (orientačne)</th><th scope="col">Liečba</th></tr>
@@ -80,6 +85,7 @@ $articles[] = [
     <tr><td>Veľmi vysoké</td><td>Život ohrozujúci nefrotický syndróm alebo rýchly pokles funkcie</td><td>Cyklofosfamid + glukokortikoidy; urýchlene</td></tr>
   </tbody>
 </table>
+</div>
 
 <h2>Podporná liečba a komplikácie</h2>
 <ul>

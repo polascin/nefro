@@ -32,6 +32,7 @@ $articles[] = [
 <p>Ťahák k poruchám <strong>sodíka, draslíka, vápnika, magnézia a fosfátov</strong> — normálne hodnoty, hlavné príčiny, EKG nálezy a bezpečné limity korekcie. Interaktívne postupy: <a href="nastroj_hyponatremia.php">algoritmus hyponatrémie</a>, <a href="nastroj_hypokalemia.php">sprievodca hypokaliémiou</a>. Kalkulačky: <a href="calculator_na.php">sodík/korekcia</a>, <a href="calculator_ca.php">korigovaný vápnik</a>.</p>
 
 <h2>Normálne hodnoty (sérum)</h2>
+<div class="table-responsive" role="region" aria-label="Normálne hodnoty (sérum)" tabindex="0">
 <table>
   <thead>
     <tr><th scope="col">Elektrolyt</th><th scope="col">Rozsah</th></tr>
@@ -45,8 +46,10 @@ $articles[] = [
     <tr><td>Fosfát (PO<sub>4</sub>)</td><td>0,80 – 1,45 mmol/l</td></tr>
   </tbody>
 </table>
+</div>
 
 <h2>Sodík</h2>
+<div class="table-responsive" role="region" aria-label="Sodík" tabindex="0">
 <table>
   <thead>
     <tr><th scope="col">Porucha</th><th scope="col">Hlavné príčiny</th><th scope="col">Kľúč k manažmentu</th></tr>
@@ -56,8 +59,10 @@ $articles[] = [
     <tr><td>Hypernatrémia</td><td>Strata vody (hnačka, horúčka, diabetes insipidus), nedostatočný príjem, hypertonické roztoky</td><td>Vypočítaj deficit vody; pokles Na<sup>+</sup> <strong>≤ 10–12 mmol/l/24 h</strong> — prevencia edému mozgu</td></tr>
   </tbody>
 </table>
+</div>
 
 <h2>Draslík</h2>
+<div class="table-responsive" role="region" aria-label="Draslík" tabindex="0">
 <table>
   <thead>
     <tr><th scope="col">Porucha</th><th scope="col">Hlavné príčiny</th><th scope="col">EKG / manažment</th></tr>
@@ -67,9 +72,11 @@ $articles[] = [
     <tr><td>Hyperkaliémia</td><td>CKD/AKI, RAAS-blokátory + nsMRA, deštrukcia buniek, acidóza, pseudohyperkaliémia</td><td>EKG: vysoké hrotnaté T, široký QRS, strata P, sínusoida. Pri zmenách: <strong>kalcium i.v.</strong> (membrána) + inzulín/glukóza + β<sub>2</sub>-agonista; odstránenie (diuretiká, viazače, dialýza)</td></tr>
   </tbody>
 </table>
+</div>
 
 <h2>Vápnik</h2>
 <p><strong>Korekcia na albumín:</strong> Ca<sub>korig</sub> = Ca<sub>celk</sub> + 0,02 × (40 − albumín g/l). Pri poruche acidobázy alebo u kriticky chorých pacientov uprednostni <strong>ionizovaný vápnik</strong>.</p>
+<div class="table-responsive" role="region" aria-label="Vápnik" tabindex="0">
 <table>
   <thead>
     <tr><th scope="col">Porucha</th><th scope="col">Hlavné príčiny</th><th scope="col">EKG / poznámka</th></tr>
@@ -79,8 +86,10 @@ $articles[] = [
     <tr><td>Hyperkalciémia</td><td>Primárna hyperparatyreóza, malignita (PTHrP, osteolýza), granulomatózy, lieky (tiazidy, lítium)</td><td>Skrátené QT. Liečba: <strong>i.v. izotonický roztok</strong> ± bisfosfonát/denosumab, kalcitonín; rieš príčinu</td></tr>
   </tbody>
 </table>
+</div>
 
 <h2>Magnézium a fosfát</h2>
+<div class="table-responsive" role="region" aria-label="Magnézium a fosfát" tabindex="0">
 <table>
   <thead>
     <tr><th scope="col">Porucha</th><th scope="col">Hlavné príčiny</th><th scope="col">Poznámka</th></tr>
@@ -92,6 +101,7 @@ $articles[] = [
     <tr><td>Hyperfosfatémia</td><td>CKD (najčastejšie), syndróm rozpadu nádoru, rabdomyolýza</td><td>CKD-MBD: diétne obmedzenie + viazače fosfátov; rieš príčinu</td></tr>
   </tbody>
 </table>
+</div>
 
 <h2>Zlaté pravidlá</h2>
 <ul>

@@ -94,9 +94,10 @@ $articles[] = [
 
 <p>Toto je otázka s prekvapivo dobrými dátami. Systematický prehľad a metaanalýza Benjamina Murrieho a spolupracovníkov zahrnula 50 štúdií so 79 odhadmi prechodu u 40 783 osôb. Látkou vyvolaná psychóza prešla do schizofrénie u <strong>25 % (95 % IS 18–35 %)</strong>. Rozdiely podľa látky sú však podstatné:</p>
 
+<div class="table-responsive" role="region" aria-label="Ako často látková psychóza prejde do schizofrénie" tabindex="0">
 <table>
   <thead>
-    <tr><th>Látka</th><th>Podiel s prechodom do schizofrénie</th><th>95 % IS</th></tr>
+    <tr><th scope="col">Látka</th><th scope="col">Podiel s prechodom do schizofrénie</th><th scope="col">95 % IS</th></tr>
   </thead>
   <tbody>
     <tr><td><strong>Kanabis</strong></td><td><strong>34 %</strong></td><td>25–46 %</td></tr>
@@ -107,6 +108,7 @@ $articles[] = [
     <tr><td>Sedatíva</td><td>9 %</td><td>—</td></tr>
   </tbody>
 </table>
+</div>
 
 <p>Klinicky použiteľný záver je teda diferencovaný: psychóza po kanabise, halucinogénoch a amfetamínoch nesie podstatné riziko neskoršieho prechodu k schizofrénii a zasluhuje si aktívne psychiatrické sledovanie, kým po alkohole a sedatívach je riziko rádovo nižšie.</p>
 

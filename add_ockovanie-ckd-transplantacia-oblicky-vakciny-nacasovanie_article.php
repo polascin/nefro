@@ -161,6 +161,7 @@ $articles[] = [
 
 <h3>1) Dospelý s CKD (chronické ochorenie obličiek)</h3>
 
+<div class="table-responsive" role="region" aria-label="Dospelý s CKD (chronické ochorenie obličiek)" tabindex="0">
 <table>
   <thead>
     <tr>
@@ -217,9 +218,11 @@ $articles[] = [
     </tr>
   </tbody>
 </table>
+</div>
 
 <h3>2) Pacient po transplantácii obličky</h3>
 
+<div class="table-responsive" role="region" aria-label="Pacient po transplantácii obličky" tabindex="0">
 <table>
   <thead>
     <tr>
@@ -271,6 +274,7 @@ $articles[] = [
     </tr>
   </tbody>
 </table>
+</div>
 
 <h3>Rýchly „workflow“ v ambulancii (1 minúta)</h3>
 

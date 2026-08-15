@@ -71,6 +71,7 @@ $articles[] = [
 
 <div class="pdf-page-break" aria-hidden="true"></div>
 
+<div class="table-responsive" role="region" aria-label="Štyri zložky 4T skóre" tabindex="0">
 <table>
   <thead>
     <tr>
@@ -107,6 +108,7 @@ $articles[] = [
     </tr>
   </tbody>
 </table>
+</div>
 
 <h2>Pokles trombocytov: nestačí pozerať absolútne číslo</h2>
 

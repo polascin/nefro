@@ -26,6 +26,9 @@
  *   • content  – HTML; NEZAČÍNAJ <h2> zhodným s titulom (duplikát)
  *                Preferuj <table> (s <thead>/<th scope="col">), <ul>/<ol>,
  *                <strong> pre kľúčové hodnoty. Žiadne inline style="" (CSP).
+ *                KAŽDÚ <table> obaľ do
+ *                <div class="table-responsive" role="region" aria-label="…" tabindex="0">
+ *                — bez toho široká tabuľka roztiahne stránku na mobile (RES/ACC).
  *                Nadpisy sekcií → <h2>; pododdiely → <h3>.
  *                Vždy uveď zdroj/odporúčanie na konci (<hr> + „Zdroj:“).
  *   • category – 'cheatsheet' (nastavené automaticky nižšie — needituj)
@@ -67,6 +70,7 @@ $articles[] = [
 
 <h2>Prvá sekcia</h2>
 
+<div class="table-responsive" role="region" aria-label="Prvá sekcia" tabindex="0">
 <table>
   <thead>
     <tr><th scope="col">Parameter</th><th scope="col">Hodnota</th></tr>
@@ -75,6 +79,7 @@ $articles[] = [
     <tr><td>…</td><td>…</td></tr>
   </tbody>
 </table>
+</div>
 
 <hr>
 

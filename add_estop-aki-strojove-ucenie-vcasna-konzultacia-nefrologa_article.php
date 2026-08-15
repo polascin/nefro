@@ -52,9 +52,10 @@ $articles[] = [
 
 <p>Výber populácie pritom fungoval: AKI ktoréhokoľvek štádia vzniklo počas siedmich dní u <strong>70 pacientov, teda u 38,9 %</strong> celej kohorty. Model teda skutočne vybral vysokorizikový súbor.</p>
 
+<div class="table-responsive" role="region" aria-label="Výsledky" tabindex="0">
 <table>
   <thead>
-    <tr><th>Ukazovateľ</th><th>Včasná konzultácia</th><th>Štandardná starostlivosť</th><th>P</th></tr>
+    <tr><th scope="col">Ukazovateľ</th><th scope="col">Včasná konzultácia</th><th scope="col">Štandardná starostlivosť</th><th scope="col">P</th></tr>
   </thead>
   <tbody>
     <tr><td>AKI 1. alebo vyššieho štádia</td><td>42 %</td><td>36 %</td><td>0,47</td></tr>
@@ -63,6 +64,7 @@ $articles[] = [
     <tr><td>Rehospitalizácia do 90 dní</td><td>34,1 %</td><td>44,4 %</td><td>0,21</td></tr>
   </tbody>
 </table>
+</div>
 
 <p>Číselne bola incidencia AKI vyššia v intervenčnej skupine, zatiaľ čo mortalita a rehospitalizácie boli nižšie. Ani jeden z týchto rozdielov nebol štatisticky významný a pri súbore 180 pacientov ide o hodnoty plne zlučiteľné s náhodou. <strong>Nemožno z nich vyvodiť, že konzultácia AKI zvyšovala, ani že znižovala mortalitu.</strong> Štúdia nemala silu na posúdenie tvrdých ukazovateľov.</p>
 

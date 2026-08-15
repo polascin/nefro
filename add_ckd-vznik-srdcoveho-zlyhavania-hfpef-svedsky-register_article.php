@@ -62,9 +62,10 @@ $articles[] = [
 
 <p>Pri definícii kódmi MKCH-10 bola chronická choroba obličiek spojená približne s <strong>dvojnásobne vyššou pravdepodobnosťou srdcového zlyhávania</strong> oproti kontrolám bez neho. Sila väzby sa však medzi fenotypmi výrazne líšila:</p>
 
+<div class="table-responsive" role="region" aria-label="Hlavné výsledky" tabindex="0">
 <table>
   <thead>
-    <tr><th>Fenotyp</th><th>Pomer šancí oproti osobám bez srdcového zlyhávania</th></tr>
+    <tr><th scope="col">Fenotyp</th><th scope="col">Pomer šancí oproti osobám bez srdcového zlyhávania</th></tr>
   </thead>
   <tbody>
     <tr><td><strong>HFpEF</strong></td><td><strong>2,46</strong></td></tr>
@@ -72,6 +73,7 @@ $articles[] = [
     <tr><td>HFmrEF</td><td>1,30</td></tr>
   </tbody>
 </table>
+</div>
 
 <p>Rozdiel medzi fenotypmi bol štatisticky významný (P pre interakciu = 0,001).</p>
 

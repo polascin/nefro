@@ -53,9 +53,9 @@ $articles[] = [
 <table>
   <thead>
     <tr>
-      <th>Vlastnosť</th>
-      <th>ReadyFlow</th>
-      <th>On-body Infusor</th>
+      <th scope="col">Vlastnosť</th>
+      <th scope="col">ReadyFlow</th>
+      <th scope="col">On-body Infusor</th>
     </tr>
   </thead>
   <tbody>

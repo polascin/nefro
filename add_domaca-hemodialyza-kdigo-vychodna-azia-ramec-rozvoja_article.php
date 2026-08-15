@@ -218,9 +218,10 @@ $articles[] = [
 
 <h2>Sila dôkazov: čo je doložené a čo nie</h2>
 
+<div class="table-responsive" role="region" aria-label="Sila dôkazov: čo je doložené a čo nie" tabindex="0">
 <table>
   <thead>
-    <tr><th>Tvrdenie</th><th>Stav dôkazov</th></tr>
+    <tr><th scope="col">Tvrdenie</th><th scope="col">Stav dôkazov</th></tr>
   </thead>
   <tbody>
     <tr><td>Domáca hemodialýza zvyšuje flexibilitu a autonómiu</td><td>Dobre odôvodnené; individuálny prínos závisí od režimu a okolností pacienta</td></tr>
@@ -234,6 +235,7 @@ $articles[] = [
     <tr><td>Správa KDIGO predstavuje klinické odporúčanie</td><td>Nie; ide o konsenzuálnu správu z pracovného stretnutia a implementačný rámec</td></tr>
   </tbody>
 </table>
+</div>
 
 <h2>Záver</h2>
 

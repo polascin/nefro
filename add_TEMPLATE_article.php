@@ -23,6 +23,11 @@
  *                Zoznam        → <ul>/<ol> + <li>
  *                Tučné         → <strong>, kurzíva → <em>
  *                Externé linky → <a href="…" target="_blank" rel="noopener noreferrer">
+ *                Tabuľka       → <th scope="col"> v <thead>, <th scope="row">
+ *                                v <tbody>; CELÚ <table> obaľ do
+ *                                <div class="table-responsive" role="region"
+ *                                     aria-label="…" tabindex="0">
+ *                                (bez wrapperu široká tabuľka rozbije mobil)
  *                Záver (zdroj) → <hr><p><em>Zdroj: …</em></p>
  *   • is_top   – 0 = bežný článok, 1 = odporúčaný (zobrazí sa vo featured sekcii)
  *   • author   – autor projektu (predvolene 'MUDr. Ľubomír Polaščín').

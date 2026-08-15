@@ -59,19 +59,23 @@ poľom `category` a tým, kde sú vypísané.
    `>=`/`<=`, jednotky `µl`/`mg/dl`. Žiadny inline `style="…"` (CSP `style-src 'self'`
    ho ticho zahodí — používaj triedy z `index.css`). `content` **nezačínaj `<h2>`**
    zhodným s titulom. Externé odkazy `target="_blank" rel="noopener noreferrer"`.
-5. **Overenie pred commitom:** `php -l add_<slug>_article.php` a
+5. **Tabuľky (povinné, RES/ACC):** každá `<table>` musí byť obalená v
+   `<div class="table-responsive" role="region" aria-label="…" tabindex="0">`,
+   inak široká tabuľka spôsobí horizontálne rolovanie celej stránky na mobile.
+   Hlavičky `<thead>` majú mať `<th scope="col">`, riadkové hlavičky `<th scope="row">`.
+6. **Overenie pred commitom:** `php -l add_<slug>_article.php` a
    `php tools/phpstan.phar analyse add_<slug>_article.php --no-progress`
    (0 chýb nad baseline; v šablóne nechaj `?? '(bez titulu)'` — PHPStan ju neflaguje).
-6. **Commit** (post-commit hook nahrá SFTP na produkciu):
+7. **Commit** (post-commit hook nahrá SFTP na produkciu):
    `git add add_<slug>_article.php img/… && git commit -m "content(<sekcia>): <titul>"`
-7. **Spusti na serveri** cez SSH (vloží do DB + pošle newsletter avízo + vygeneruje PDF):
+8. **Spusti na serveri** cez SSH (vloží do DB + pošle newsletter avízo + vygeneruje PDF):
    ```bash
    ssh -i "$HOME/.ssh/nefro_deploy" -p 26650 uid58858@shell.r1.websupport.sk \
        "php /data/8/6/868f981d-e598-4e71-b7f5-246f2e180cef/polascin.net/sub/nefro/add_<slug>_article.php"
    ```
    Očakávaný výstup: `1 vložených, 0 aktualizovaných … Zaradených do fronty avíz: N`.
-8. **Sync PDF do gitu:** `sh sync_article_pdfs.sh` (stiahne PDF zo servera + commitne).
-9. **Over live:** `curl -s "https://nefro.polascin.net/article.php?slug=<slug>"` —
+9. **Sync PDF do gitu:** `sh sync_article_pdfs.sh` (stiahne PDF zo servera + commitne).
+10. **Over live:** `curl -s "https://nefro.polascin.net/article.php?slug=<slug>"` —
    HTTP 200, žiadny `Fatal error`, jeden `<title>`, správna typografia.
 
 > 👥 **Pôvodní autori zdroja (krok navyše, ak je článok spracovaním cudzieho
@@ -95,13 +99,13 @@ poľom `category` a tým, kde sú vypísané.
 
 1. **Uprav `content`/`excerpt`/`title`** priamo v jeho `add_<slug>_article.php`
    (alebo v šablóne, ak skript ešte neexistuje — vtedy ho najprv vytvor ako v A).
-2. Kroky **5–6** ako vyššie (lint + commit/deploy).
-3. **Spusti na serveri** ten istý skript (krok 7). UPSERT prepíše obsah; očakávaný
+2. Kroky **6–7** ako vyššie (lint + commit/deploy).
+3. **Spusti na serveri** ten istý skript (krok 8). UPSERT prepíše obsah; očakávaný
    výstup: `0 vložených, 1 aktualizovaných` a **`Zaradených do fronty avíz: 0`**
    (pri update sa newsletter zámerne neposiela). `updated_at` sa posunie.
 4. **Sync PDF:** `sh sync_article_pdfs.sh` — `--stale` na serveri preregeneruje PDF
    (deteguje zmenu podľa `updated_at`), stiahne ho do `pdf/` a commitne.
-5. **Over live** (krok 9).
+5. **Over live** (krok 10).
 
 > ⚠️ **Newsletter avíza** sa pošlú len pri **prvom** vložení článku (`rc === 1`).
 > Pri regenerácii (`rc === 2`) sa neposielajú — netreba sa báť opätovného spustenia.

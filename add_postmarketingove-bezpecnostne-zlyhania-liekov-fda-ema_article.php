@@ -57,6 +57,7 @@ $articles[] = [
 
 <h2 id="prehlad">2. Prehľadová tabuľka analyzovaných liekov</h2>
 
+<div class="table-responsive" role="region" aria-label="Prehľadová tabuľka analyzovaných liekov" tabindex="0">
 <table>
   <thead>
     <tr>
@@ -151,6 +152,7 @@ $articles[] = [
     </tr>
   </tbody>
 </table>
+</div>
 
 <h2 id="analyzy">3. Hĺbkové analýzy jednotlivých liekov</h2>
 
@@ -439,6 +441,7 @@ $articles[] = [
 
 <h3>Kľúčové zistenia</h3>
 
+<div class="table-responsive" role="region" aria-label="Kľúčové zistenia" tabindex="0">
 <table>
   <thead>
     <tr>
@@ -481,6 +484,7 @@ $articles[] = [
     </tr>
   </tbody>
 </table>
+</div>
 
 <h3>Záverečné odporúčania</h3>
 <ol>

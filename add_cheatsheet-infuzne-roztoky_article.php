@@ -32,6 +32,7 @@ $articles[] = [
 <p>Prehľad <strong>zloženia a výberu infúznych roztokov</strong> — koncentrácie elektrolytov, tonicita a klinické zásady. Súvisí s <a href="calculator_na.php">poruchami sodíka</a> a <a href="nastroj_hyponatremia.php">algoritmom hyponatrémie</a>.</p>
 
 <h2>Zloženie bežných roztokov (na 1 liter)</h2>
+<div class="table-responsive" role="region" aria-label="Zloženie bežných roztokov (na 1 liter)" tabindex="0">
 <table>
   <thead>
     <tr>
@@ -54,9 +55,11 @@ $articles[] = [
     <tr><td>8,4 % NaHCO<sub>3</sub></td><td>1000</td><td>0</td><td>0</td><td>HCO<sub>3</sub><sup>−</sup> 1000 (1 mmol/ml)</td><td>~2000</td></tr>
   </tbody>
 </table>
+</div>
 <p><em>* G5 je in vitro takmer izotonická, no po metabolizme glukózy poskytuje <strong>voľnú vodu</strong> — pôsobí hypotonicky.</em></p>
 
 <h2>Tonicita — praktické dôsledky</h2>
+<div class="table-responsive" role="region" aria-label="Tonicita — praktické dôsledky" tabindex="0">
 <table>
   <thead>
     <tr><th scope="col">Tonicita</th><th scope="col">Príklady</th><th scope="col">Použitie</th></tr>
@@ -67,6 +70,7 @@ $articles[] = [
     <tr><td>Hypertonické</td><td>3 % NaCl</td><td>Symptomatická ťažká hyponatrémia (bolusy 100–150 ml), edém mozgu</td></tr>
   </tbody>
 </table>
+</div>
 
 <h2>Balansované roztoky vs. 0,9 % NaCl</h2>
 <ul>
@@ -77,6 +81,7 @@ $articles[] = [
 </ul>
 
 <h2>Výber podľa situácie</h2>
+<div class="table-responsive" role="region" aria-label="Výber podľa situácie" tabindex="0">
 <table>
   <thead>
     <tr><th scope="col">Situácia</th><th scope="col">Voľba</th></tr>
@@ -90,6 +95,7 @@ $articles[] = [
     <tr><td>Udržiavacia terapia (dospelí)</td><td>Izotonický roztok (vyhni sa hypotonickým — riziko nozokomiálnej hyponatrémie)</td></tr>
   </tbody>
 </table>
+</div>
 
 <h2>Úskalia</h2>
 <ul>
