@@ -120,6 +120,9 @@ function getSourceArticleAuthors(): array {
         'regulacne-t-lymfocyty-transplantacia-oblicky-tolerancia' => ['Jeffrey A. Bluestone', 'Megan K. Levings', 'Frederick J. Ramsdell', 'Alexander Y. Rudensky', 'Qizhi Tang', 'Piotr Trzonkowski', 'Fadi Issa', 'Kathryn Wood'],
         'renalna-funkcna-rezerva-normalny-egfr-poskodenie-obliciek' => ['Jai Radhakrishnan', 'Leal C. Herlitz'],
         'renalne-riziko-po-preeklampsii-detekcia-albuminuria' => ['Shiuan-Chih Chen', 'Ming-Cheng Lin', 'Jennifer H. Yo', 'Anna Sara Oberg', 'Juan-Jesús Carrero'],
+        // Autori studie AL-DON (Kidney360, publikovane online 3.8.2026, doi 10.34067/KID.0000001313,
+        // PMID 42545761) - overene cez PubMed eutils a Crossref 2026-08-19.
+        'alopurinol-zivi-darcovia-oblicky-lvm-al-don' => ['Nina Elisabeth Langberg', 'Trond Geir Jenssen', 'Einar Hopp', 'Anders Haugen', 'Anders Åsberg', 'Kåre I. Birkeland', 'Anders Hartmann', 'Dag Olav Dahle'],
         // Autori studie o zavaznosti CKD a vysledkoch na JIS (JAMA Netw Open 2026;9(6):e2620192,
         // doi 10.1001/jamanetworkopen.2026.20192, PMID 42348209) - overene cez PubMed eutils 2026-08-19.
         // Prva autorka je Hajar El Wadia, Gregory L. Hundemer je poslednym (seniornym) autorom.
