@@ -120,6 +120,10 @@ function getSourceArticleAuthors(): array {
         'regulacne-t-lymfocyty-transplantacia-oblicky-tolerancia' => ['Jeffrey A. Bluestone', 'Megan K. Levings', 'Frederick J. Ramsdell', 'Alexander Y. Rudensky', 'Qizhi Tang', 'Piotr Trzonkowski', 'Fadi Issa', 'Kathryn Wood'],
         'renalna-funkcna-rezerva-normalny-egfr-poskodenie-obliciek' => ['Jai Radhakrishnan', 'Leal C. Herlitz'],
         'renalne-riziko-po-preeklampsii-detekcia-albuminuria' => ['Shiuan-Chih Chen', 'Ming-Cheng Lin', 'Jennifer H. Yo', 'Anna Sara Oberg', 'Juan-Jesús Carrero'],
+        // Autori studie CREATION (JAMA Netw Open 2026;9(8):e2627376, doi 10.1001/jamanetworkopen.2026.27376,
+        // PMID 42560674) - overene cez PubMed eutils 2026-08-19. Skupinovy autor CREATION group
+        // nie je v zazname rozvinuty na jednotlivych spolupracovnikov.
+        'role-play-vzdelavanie-lekarov-diabetes-creation' => ['Yifei Zhang', 'Ying Peng', 'Yufei Chen', 'Tingyu Ke', 'Fengmei Xu', 'Shengli Wu', 'Yuancheng Dai', 'Lin Sun', 'Qidong Zheng', 'Zhuomeng Hu', 'Qijuan Dong', 'Juan Shi', 'Xueyi Wu', 'Yu Shi', 'Rong Tang', 'Yubo Sha', 'Rongyue Chen', 'Bin Xu', 'Shu Li', 'Lianyong Liu', 'Mingdian Gao', 'Dong Zhao', 'Qinghua Yi', 'Zhiqiang Kang', 'Weiqing Wang'],
         'retatrutid-mimo-schvalenia-neregulovane-pouzivanie' => ['Marilynn Larkin'],
         // Autori studie TRANSCEND-T2D-1 (Lancet 2026;407(10546):2402-2413, doi 10.1016/S0140-6736(26)00967-0,
         // PMID 42250575) - overene cez PubMed eutils 2026-08-19.
