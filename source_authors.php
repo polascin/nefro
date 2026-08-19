@@ -120,6 +120,9 @@ function getSourceArticleAuthors(): array {
         'regulacne-t-lymfocyty-transplantacia-oblicky-tolerancia' => ['Jeffrey A. Bluestone', 'Megan K. Levings', 'Frederick J. Ramsdell', 'Alexander Y. Rudensky', 'Qizhi Tang', 'Piotr Trzonkowski', 'Fadi Issa', 'Kathryn Wood'],
         'renalna-funkcna-rezerva-normalny-egfr-poskodenie-obliciek' => ['Jai Radhakrishnan', 'Leal C. Herlitz'],
         'renalne-riziko-po-preeklampsii-detekcia-albuminuria' => ['Shiuan-Chih Chen', 'Ming-Cheng Lin', 'Jennifer H. Yo', 'Anna Sara Oberg', 'Juan-Jesús Carrero'],
+        // Autori zdruzenej analyzy SPRINT MIND + ACCORD MIND (Neurology 2026;107(3):e218302,
+        // doi 10.1212/WNL.0000000000218302, PMID 42430676) - overene cez PubMed a Crossref 2026-08-19.
+        'variabilita-tlaku-lezie-bielej-hmoty-sprint-accord' => ['Wenbo Zhao', 'Yue Qiao', 'Zihan Sun', 'Eric L. Harshfield', 'Lupei Cai', 'Xunming Ji', 'Hugh S. Markus'],
         // Autori studie AL-DON (Kidney360, publikovane online 3.8.2026, doi 10.34067/KID.0000001313,
         // PMID 42545761) - overene cez PubMed eutils a Crossref 2026-08-19.
         'alopurinol-zivi-darcovia-oblicky-lvm-al-don' => ['Nina Elisabeth Langberg', 'Trond Geir Jenssen', 'Einar Hopp', 'Anders Haugen', 'Anders Åsberg', 'Kåre I. Birkeland', 'Anders Hartmann', 'Dag Olav Dahle'],
