@@ -120,6 +120,10 @@ function getSourceArticleAuthors(): array {
         'regulacne-t-lymfocyty-transplantacia-oblicky-tolerancia' => ['Jeffrey A. Bluestone', 'Megan K. Levings', 'Frederick J. Ramsdell', 'Alexander Y. Rudensky', 'Qizhi Tang', 'Piotr Trzonkowski', 'Fadi Issa', 'Kathryn Wood'],
         'renalna-funkcna-rezerva-normalny-egfr-poskodenie-obliciek' => ['Jai Radhakrishnan', 'Leal C. Herlitz'],
         'renalne-riziko-po-preeklampsii-detekcia-albuminuria' => ['Shiuan-Chih Chen', 'Ming-Cheng Lin', 'Jennifer H. Yo', 'Anna Sara Oberg', 'Juan-Jesús Carrero'],
+        // Autori studie o zavaznosti CKD a vysledkoch na JIS (JAMA Netw Open 2026;9(6):e2620192,
+        // doi 10.1001/jamanetworkopen.2026.20192, PMID 42348209) - overene cez PubMed eutils 2026-08-19.
+        // Prva autorka je Hajar El Wadia, Gregory L. Hundemer je poslednym (seniornym) autorom.
+        'zavaznost-ckd-prognoza-jis-populacna-studia' => ['Hajar El Wadia', 'Nickolas Beauregard', 'Samuel A. Silver', 'Ron Wald', 'Ayub Akbari', 'Deena Fremont', 'Tim Ramsay', 'Gregory A. Knoll', 'Edward G. Clark', 'Gregory L. Hundemer'],
         // Autori studie CREATION (JAMA Netw Open 2026;9(8):e2627376, doi 10.1001/jamanetworkopen.2026.27376,
         // PMID 42560674) - overene cez PubMed eutils 2026-08-19. Skupinovy autor CREATION group
         // nie je v zazname rozvinuty na jednotlivych spolupracovnikov.
