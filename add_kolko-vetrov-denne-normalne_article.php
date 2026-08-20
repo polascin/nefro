@@ -29,6 +29,10 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Nová austrálska štúdia v JAMA Network Open priniesla normatívne dáta: priemerný človek vypúšťa črevné plyny približne päťkrát denne. Kedy ide o bežný fyziologický prejav a kedy treba spozornieť?',
     'content'      => <<<'HTML'
+<figure class="article-figure">
+  <a href="img/vetry-denne-infografika.png" target="_blank" rel="noopener noreferrer"><img src="img/vetry-denne-infografika.png" alt="Infografika: priemerne približne 5× denne je normálne; frekvenciu ovplyvňuje strava, vláknina, črevná mikrobiota, pohyb a lieky. Kedy spozornieť: krv v stolici, úbytok hmotnosti, nočné bolesti, zmena stolice, chronická hnačka alebo zápcha, anémia, horúčka." loading="lazy" decoding="async"></a>
+  <figcaption>Koľko vetrov denne je ešte normálne — priemer, čo frekvenciu ovplyvňuje a kedy spozornieť. Plynatosť je normálna; výrazná zmena alebo varovné príznaky patria k lekárovi.</figcaption>
+</figure>
 <p>Nadúvanie a odchod črevných plynov patria medzi bežné telesné prejavy, o ktorých sa v ambulancii často hovorí opatrne, niekedy s rozpakmi. Napriek tomu ide o medicínsky relevantnú tému. Pacienti sa často pýtajú, či majú „príliš veľa plynov“, či je ich trávenie v poriadku a kedy už môže ísť o príznak ochorenia.</p>
 
 <p>Nová štúdia publikovaná v časopise <em>JAMA Network Open</em> prináša zaujímavé normatívne údaje o tom, ako často ľudia bežne vypúšťajú črevné plyny. Hoci téma môže pôsobiť úsmevne, jej praktický význam je jasný: aby sme vedeli hovoriť o nadmernej plynatosti, musíme najskôr vedieť, čo je ešte normálne.</p>

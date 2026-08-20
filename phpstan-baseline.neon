@@ -61,7 +61,7 @@ parameters:
 			path: add_klucove-intervencie-peritonealna-dialyza-prevencia-infekcii_article.php
 
 		-
-			message: '#^Offset ''title'' on array\{title\: ''Koľko vetrov denne…'', slug\: ''kolko\-vetrov\-denne…'', author\: ''MUDr\. Ľubomír…'', published_at\: non\-falsy\-string, is_top\: 0, excerpt\: ''Nová austrálska…'', content\: ''\<p\>Nadúvanie a…''\} on left side of \?\? always exists and is not nullable\.$#'
+			message: '#^Offset ''title'' on array\{title\: ''Koľko vetrov denne…'', slug\: ''kolko\-vetrov\-denne…'', author\: ''MUDr\. Ľubomír…'', published_at\: non\-falsy\-string, is_top\: 0, excerpt\: ''Nová austrálska…'', content\: ''\<figure class\=…''\} on left side of \?\? always exists and is not nullable\.$#'
 			identifier: nullCoalesce.offset
 			count: 1
 			path: add_kolko-vetrov-denne-normalne_article.php
