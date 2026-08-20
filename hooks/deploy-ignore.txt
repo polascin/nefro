@@ -2,6 +2,7 @@
 .audit.md
 .agents/**
 .claude/**
+.doaudit.md
 .gitattributes
 .github/**
 .gitignore
@@ -14,6 +15,7 @@
 .vscode/**
 .yamllint.yaml
 AGENTS.md
+PLAN_NEPHRORESOURCE.md
 PUBLIKOVANIE_*.md
 README.md
 code_ext.txt
