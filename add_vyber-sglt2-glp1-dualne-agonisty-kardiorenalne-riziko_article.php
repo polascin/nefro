@@ -27,7 +27,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Praktický rámec, ako pri diabete 2. typu s CKD, srdcovým zlyhávaním alebo aterosklerózou vybrať a kombinovať inhibítor SGLT2, agonistu GLP-1 a duálneho agonistu. Postavený na piatich randomizovaných štúdiách s overenými pomermi rizík.',
     'content'      => <<<'HTML'
-<p class="article-dek"><em>Pri diabete 2. typu s obličkovým alebo srdcovým postihnutím sa prínos liečby už neposudzuje podľa poklesu HbA1c, ale podľa tvrdých kardiovaskulárnych a obličkových výsledkov. Tento článok prekladá dostupnú randomizovanú evidenciu do rozhodovacieho rámca použiteľného v nefrologickej ambulancii — vrátane toho, čo o kombináciách vieme a čo zatiaľ nie.</em></p>
+<p class="article-dek"><em>Pri diabete 2. typu s obličkovým alebo srdcovým postihnutím sa prínos liečby už neposudzuje podľa poklesu HbA1c, ale podľa tvrdých kardiovaskulárnych a obličkových výsledkov. Tento článok prekladá dostupné randomizované dôkazy do rozhodovacieho rámca použiteľného v nefrologickej ambulancii — vrátane toho, čo o kombináciách vieme a čo zatiaľ nie.</em></p>
 
 <h2>Prečo výber lieku prestal byť otázkou glykémie</h2>
 
@@ -36,7 +36,7 @@ $articles[] = [
 <p>Dôsledok je zásadný: <strong>rovnaká „diabetologická“ schéma nemusí byť optimálna, ak je pre pacienta dominantné obličkové alebo srdcové riziko.</strong> Výber sa preto riadi fenotypom komorbidít, nie cieľovou hodnotou HbA1c.</p>
 
 <div class="pdf-avoid-break">
-<h2>Evidenčný základ: čo presne štúdie ukázali</h2>
+<h2>Dôkazový základ: čo presne štúdie ukázali</h2>
 
 <p>Nasledujúca tabuľka zhŕňa randomizované štúdie, o ktoré sa rozhodovanie opiera. Všetky hodnoty sú prevzaté z publikovaných abstraktov.</p>
 
@@ -139,7 +139,7 @@ $articles[] = [
 
 <h2>Kombinácie: čo je dokázané a čo sa iba predpokladá</h2>
 
-<p>Toto je miesto, kde sa v praxi najviac improvizuje — a kde je evidencia najtenšia.</p>
+<p>Toto je miesto, kde sa v praxi najviac improvizuje — a kde sú dôkazy najtenšie.</p>
 
 <h3>Čo je doložené randomizovanou štúdiou</h3>
 
