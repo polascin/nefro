@@ -68,6 +68,7 @@ lint:
     - linters: [markdownlint, prettier]
       paths:
         - .audit.md
+        - .audit-history.md
         - PUBLIKOVANIE_*.md
 
     # Konzervatívne formátovanie: Prettier nemení ručný aplikačný CSS/JS.

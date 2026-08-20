@@ -144,7 +144,7 @@ $articles[] = [
 <h3>Ostatné rádionuklidy</h3>
 <p>Tórium, polónium, rádionuklidy cézia a stroncia či transurány majú odlišnú biokinetiku. Stroncium a rádium sú prevažne kostné depozitá, cézium sa distribuuje v mäkkých tkanivách a niektoré izotopy polónia alebo plutónia sa hromadia v pečeni, kostiach a ďalších orgánoch. Pri veľkej vnútornej kontaminácii alebo celotelovom ožiarení môže vzniknúť multiorgánové poškodenie vrátane AKI. To však nie je dôkaz, že nízka prirodzená koncentrácia týchto prvkov v prostredí je častou samostatnou príčinou chronického zlyhania obličiek.</p>
 <h2>Porovnanie s ďalšími nefrotoxickými kovmi</h2>
-<div aria-label="Odborná porovnávacia tabuľka" class="table-responsive" role="region"><div class="table-responsive" role="region" aria-label="Porovnanie s ďalšími nefrotoxickými kovmi" tabindex="0">
+<div class="table-responsive" role="region" aria-label="Porovnanie s ďalšími nefrotoxickými kovmi" tabindex="0">
 <table>
 <thead>
 <tr>
@@ -193,12 +193,12 @@ $articles[] = [
 </tr>
 </tbody>
 </table>
-</div></div>
+</div>
 <p>Zmesi kovov môžu pôsobiť aditívne, synergicky alebo niekedy menej než aditívne. Pri kontaminovanej vode preto nestačí vyšetriť iba urán; podľa geologického a priemyselného kontextu treba zvážiť arzén, kadmium, olovo, chróm, mangán, rádium a ďalšie látky.</p>
 <h2>Praktický návod pre klinického nefrológa</h2>
 <h3>U ktorých pacientov treba cielene myslieť na environmentálnu alebo pracovnú nefrotoxicitu</h3>
 <p>Plošný skríning uránu alebo všetkých kovov u každého pacienta s CKD nie je odôvodnený. Cielené vyšetrenie má najvyššiu výťažnosť vtedy, keď sa spája <strong>kompatibilný obličkový fenotyp</strong> s <strong>vierohodnou expozičnou cestou</strong> a primeraným časovým vzťahom.</p>
-<div aria-label="Odborná porovnávacia tabuľka" class="table-responsive" role="region"><div class="table-responsive" role="region" aria-label="U ktorých pacientov treba cielene myslieť na environmentálnu alebo pracovnú nefrotoxicitu" tabindex="0">
+<div class="table-responsive" role="region" aria-label="U ktorých pacientov treba cielene myslieť na environmentálnu alebo pracovnú nefrotoxicitu" tabindex="0">
 <table>
 <thead>
 <tr>
@@ -270,7 +270,7 @@ $articles[] = [
 </tr>
 </tbody>
 </table>
-</div></div>
+</div>
 <p>Samotné bývanie v oblasti označenej na mape ako uránonosná alebo radónová, nešpecifická únava, izolovane zvýšený kreatinín alebo pozitívny komerčný vlasový test predstavujú <strong>nízku predtestovú pravdepodobnosť</strong>. Bez kompatibilného fenotypu a overenej expozičnej cesty môžu široké panely viesť k falošne pozitívnym výsledkom a nesprávnej chelatácii.</p>
 <h3>Expozičná anamnéza, ktorú sa oplatí viesť systematicky</h3>
 <p>Nefrológ má zaznamenať nielen názov povolania, ale konkrétnu činnosť, materiál, ochranné pomôcky, vetranie, dĺžku práce a čas od poslednej expozície. Dôležité sú najmä:</p>
@@ -297,7 +297,7 @@ $articles[] = [
 <li><strong>Naplánovať dynamiku.</strong> Opakovať kreatinín, elektrolyty, ACR/PCR a tubulárne ukazovatele po odstránení zdroja. Zlepšenie po deexpozícii podporuje kauzalitu, ale nie je samo osebe špecifické.</li>
 </ol>
 <h3>Cielený biomonitoring podľa podozrivej látky</h3>
-<div aria-label="Odborná porovnávacia tabuľka" class="table-responsive" role="region"><div class="table-responsive" role="region" aria-label="Cielený biomonitoring podľa podozrivej látky" tabindex="0">
+<div class="table-responsive" role="region" aria-label="Cielený biomonitoring podľa podozrivej látky" tabindex="0">
 <table>
 <thead>
 <tr>
@@ -364,7 +364,7 @@ $articles[] = [
 </tr>
 </tbody>
 </table>
-</div></div>
+</div>
 <h3>Ako formulovať záver o príčinnej súvislosti</h3>
 <p>Za <strong>silnú klinickú podporu</strong> uránovej alebo kovovej nefrotoxicity možno považovať kompatibilný tubulárny či glomerulový fenotyp, analyticky potvrdenú vnútornú expozíciu, jasný zdroj, vhodný časový vzťah, vyššiu expozíciu než v referenčnej populácii a neprítomnosť pravdepodobnejšej príčiny. <strong>Možná súvislosť</strong> znamená kompatibilný fenotyp a zdroj, ale chýbajúce alebo oneskorené biomonitorovanie. <strong>Nepravdepodobná súvislosť</strong> je vtedy, keď existuje iba geologická lokalita alebo nevalidovaný test bez expozičnej cesty a bez typického obličkového obrazu.</p>
 <p>Negatívny močový urán mesiace po jednorazovej expozícii nemusí historickú udalosť vylúčiť. Naopak, merateľný urán v moči môže pochádzať z bežnej potravy a vody a sám nedokazuje poškodenie. Kauzálny záver sa preto nemá opierať o jeden výsledok.</p>
@@ -372,7 +372,7 @@ $articles[] = [
 <p>Urgentná toxikologická a nefrologická koordinácia je potrebná pri oligoanúrii, rýchlom vzostupe kreatinínu, ťažkej acidóze, hyperkaliémii, symptomatickej hypokalémii alebo hypofosfatémii, pľúcnom poškodení po inhalácii kovového dymu, neurologických príznakoch, hemolýze, šoku, masívnom požití alebo kontaminovanej rane. Dialýza sa indikuje podľa klinických komplikácií AKI; nemožno predpokladať, že spoľahlivo odstráni kov uložený v tkanivách. Chelátor alebo alkalinizácia moču sa nemajú začínať empiricky bez identifikácie látky a toxikologickej konzultácie.</p>
 <h2>Laboratórne vyšetrenia a biomonitorovanie na Slovensku</h2>
 <p>Nasledujúci prehľad vychádza z verejne dostupných katalógov a laboratórnych príručiek slovenských nemocničných a súkromných pracovísk, skontrolovaných k 11. júlu 2026. Dostupnosť sa môže meniť podľa odberového miesta, indikujúcej odbornosti, zmluvy so zdravotnou poisťovňou a preanalytických podmienok. Uvedenie vyšetrenia v katalógu preto nie je zárukou, že ho možno vykonať bez žiadanky alebo v každom odberovom mieste.</p>
-<div aria-label="Odborná porovnávacia tabuľka" class="table-responsive" role="region"><div class="table-responsive" role="region" aria-label="Laboratórne vyšetrenia a biomonitorovanie na Slovensku" tabindex="0">
+<div class="table-responsive" role="region" aria-label="Laboratórne vyšetrenia a biomonitorovanie na Slovensku" tabindex="0">
 <table>
 <thead>
 <tr>
@@ -451,7 +451,7 @@ $articles[] = [
 </tr>
 </tbody>
 </table>
-</div></div>
+</div>
 <p>Analýza uránu v pitnej vode je na Slovensku dostupnejšia prostredníctvom akreditovaných environmentálnych laboratórií, ale výsledok vody nemožno zameniť za biomonitorovanie človeka. Voda dokladá možný zdroj a koncentráciu v čase odberu; moč dokladá vnútornú expozíciu ovplyvnenú príjmom, absorpciou, časom a funkciou obličiek. Pri klinickom podozrení je preto praktické najprv zabezpečiť rutinný nefrologický a proximálny tubulárny profil, uchovať vhodnú vzorku podľa pokynov toxikológa a až potom organizovať špecializované stanovenie uránu.</p>
 <h3>Biomonitorovanie uránu</h3>
 <p>Urán v moči, ideálne stanovený metódou ICP-MS, je najpraktickejší marker vnútornej expozície. Pri akútnej expozícii má zmysel časovaný alebo 24-hodinový zber po konzultácii s toxikológom. Izotopový pomer môže odlíšiť prírodný, ochudobnený a obohatený urán. Interpretácia musí zohľadniť čas od expozície, koncentráciu moču a funkciu obličiek. Bežné nemocničné laboratóriá vyšetrenie spravidla nevykonávajú.</p>

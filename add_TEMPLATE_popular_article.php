@@ -28,6 +28,11 @@
  *                PRVÝ <img> v obsahu sa automaticky použije ako náhľad karty.
  *                Vždy vyplň zmysluplný alt text (prístupnosť + SEO).
  *                Nadpisy sekcií → <h2>; zoznam → <ul>/<ol> + <li>
+ *                Tabuľka → <th scope="col"> v <thead>, <th scope="row"> v <tbody>;
+ *                          CELÚ <table> obaľ do
+ *                          <div class="table-responsive" role="region"
+ *                               aria-label="…" tabindex="0">
+ *                          (bez wrapperu široká tabuľka rozbije mobil)
  *   • category – 'popularne' (nastavené automaticky nižšie — needituj)
  *   • is_top   – 0 = bežný, 1 = odporúčaný (zobrazí sa s odznakom navrchu sekcie)
  *   • author   – autor projektu (predvolene 'MUDr. Ľubomír Polaščín').

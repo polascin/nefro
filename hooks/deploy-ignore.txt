@@ -1,5 +1,6 @@
 # Git globy, ktoré nikdy nepatria do verejného web rootu.
 .audit.md
+.audit-history.md
 .agents/**
 .claude/**
 .doaudit.md

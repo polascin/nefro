@@ -111,8 +111,8 @@ $articles[] = [
 
 <h2>Porovnanie metód</h2>
 
-<div class="admin-table-overflow">
-<table class="admin-articles-table">
+<div class="table-responsive" role="region" aria-label="Porovnanie metód stanovenia suchej hmotnosti" tabindex="0">
+<table>
   <thead>
     <tr>
       <th scope="col">Metóda</th>
