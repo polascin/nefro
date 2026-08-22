@@ -164,6 +164,8 @@ function getSourceArticleAuthors(): array {
         'vitamin-d-klinicka-prax-vysetrovanie-suplementacia-rizika' => ['Marie B. Demay', 'Anastassios G. Pittas', 'Daniel D. Bikle', 'Dima L. Diab', 'Mairead E. Kiely', 'Marise Lazaretti-Castro', 'Paul Lips', 'Deborah M. Mitchell', 'M. Hassan Murad', 'Shelley Powers', 'Sudhaker D. Rao', 'Robert Scragg', 'John A. Tayek', 'Amy M. Valent', 'Judith M. E. Walsh', 'Christopher R. McCartney'],
         'vona-cokolady-vykon-pri-silovom-treningu' => ['Xiaohan Fan', 'Hengzhi Deng', 'Jia Yang Ng', 'Ahmad Amirul Hazim bin Ab Aziz', 'Mohamed Nashrudin bin Naharudin'],
         'vyssi-prijem-bielkovin-merana-gfr-renis' => ['Ludvig Balteskard Rinde', 'Laila A Hopstock', 'Marie W Lundblad', 'Nikoline Balteskard Rinde', 'Karl-Marius Brobak', 'Jon Viljar Norvik', 'Inger-Therese Enoksen', 'Marit D Solbu', 'Ole-Martin Fuskevåg', 'Juan-Jesus Carrero', 'Monica Hauger Carlsen', 'Bjørn Odvar Eriksen', 'Toralf Melsom'],
+        // Autori spracovaného komentára Medscape z 19.8.2026 - overené vo verejných metadátach článku.
+        'vyzivove-odporucania-usa-2025-2030-masld-ckd' => ['Winston Dunn', 'Ashwani K. Singal'],
         'xenotransplantacia-oblicky-prasa-imunologia-zivy-prijemca' => ['Zhouqi Tang', 'Fadi G. Lakkis', 'Guilherme T. Ribas', 'André F. Cunha', 'Jonathan P. Avila', 'Alessia Giarraputo', 'Leela Morena', 'Karina Lima', 'Rodrigo B. Gassen', 'Jia-Yun Chen', 'Jia-Ren Lin', 'Sandro Santagata', 'Claire T. Avillach', 'Birgitta A. Ryback', 'Martin S. Lindner', 'Sivan Bercovici', 'Ivy A. Rosales', 'Tatsuo Kawai', 'Helder I. Nakaya', 'Robert B. Colvin', 'Thiago J. Borges', 'Leonardo V. Riella'],
     ];
 }
