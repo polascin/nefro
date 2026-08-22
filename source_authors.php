@@ -86,6 +86,7 @@ function getSourceArticleAuthors(): array {
         'kvalitativny-vyskum-nefrologia-rozhodovanie-pacientov-ckd' => ['Lisa O\'Mary'],
         'lekari-cas-autonomia-vyhorenie-pracovne-podmienky' => ['Jennifer Nelson'],
         'liecba-ckd-2026-vrstvena-nefroprotekcia-post-aki' => ['Pranav Garimella', 'Marc Richards', 'Matthew Breeggemann'],
+        'lipoprotein-a-kardiovaskularne-riziko-primarna-starostlivost' => ['Rajdeep Dhami'],
         'lokalny-finasterid-muzska-androgenova-alopecia' => ['Giuseppe Gallo', 'Luca Mastorino', 'Pietro Quaglino', 'Simone Ribero'],
         'malignity-transplantacia-oblicky-skrining-ptld' => ['Christopher D. Blosser', 'Elena-Bianca Barbir', 'Salma Shaikhouni', 'Naoka Murakami'],
         'meduza-hojenie-ran-bez-jaziev-regenerativna-medicina' => ['Jocelyn E. Malamy', 'Maxwell Sassaman', 'Manjula P. Mony'],
