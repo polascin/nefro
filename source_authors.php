@@ -169,6 +169,8 @@ function getSourceArticleAuthors(): array {
         'xenotransplantacia-oblicky-prasa-imunologia-zivy-prijemca' => ['Zhouqi Tang', 'Fadi G. Lakkis', 'Guilherme T. Ribas', 'André F. Cunha', 'Jonathan P. Avila', 'Alessia Giarraputo', 'Leela Morena', 'Karina Lima', 'Rodrigo B. Gassen', 'Jia-Yun Chen', 'Jia-Ren Lin', 'Sandro Santagata', 'Claire T. Avillach', 'Birgitta A. Ryback', 'Martin S. Lindner', 'Sivan Bercovici', 'Ivy A. Rosales', 'Tatsuo Kawai', 'Helder I. Nakaya', 'Robert B. Colvin', 'Thiago J. Borges', 'Leonardo V. Riella'],
         // Autorky spracovaného komentára CodeBlue (Galen Centre) z augusta 2026 - lektorky
         // Fakulty ošetrovateľstva Univerzity Malaya, uvedené v tiráži pôvodného textu.
+        // Autori spracovaného prehľadu Sensors 2023;23(3):1361 (PMID 36772401).
+        'wearables-dialyza-nefrologia-dokazy-a-limity' => ['Madelena Stauss', 'Htay Htay', 'Jeroen P. Kooman', 'Thomas Lindsay', 'Alexander Woywodt'],
         'zastava-obehu-pocas-hemodialyzy-mimotelovy-okruh' => ['Noor Hanita Zaini', 'Noor Hasliza Che Seman'],
     ];
 }
