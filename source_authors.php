@@ -167,6 +167,9 @@ function getSourceArticleAuthors(): array {
         // Autori spracovaného komentára Medscape z 19.8.2026 - overené vo verejných metadátach článku.
         'vyzivove-odporucania-usa-2025-2030-masld-ckd' => ['Winston Dunn', 'Ashwani K. Singal'],
         'xenotransplantacia-oblicky-prasa-imunologia-zivy-prijemca' => ['Zhouqi Tang', 'Fadi G. Lakkis', 'Guilherme T. Ribas', 'André F. Cunha', 'Jonathan P. Avila', 'Alessia Giarraputo', 'Leela Morena', 'Karina Lima', 'Rodrigo B. Gassen', 'Jia-Yun Chen', 'Jia-Ren Lin', 'Sandro Santagata', 'Claire T. Avillach', 'Birgitta A. Ryback', 'Martin S. Lindner', 'Sivan Bercovici', 'Ivy A. Rosales', 'Tatsuo Kawai', 'Helder I. Nakaya', 'Robert B. Colvin', 'Thiago J. Borges', 'Leonardo V. Riella'],
+        // Autori spracovanej prierezovej štúdie Cureus 2026;18(8):e114700 (doi 10.7759/cureus.114700) -
+        // overené v metaúdajoch vydavateľa a v registri Crossref 2026-08-23.
+        'krehkost-negeriatricki-dialyzovani-pacienti-frail-skala' => ['Arwa Fareah Ansar', 'Nino Tsertsvadze', 'Barbare Kashibadze', 'Tasnim Tabassum Taundra', 'Vasanthapriya Jeevanandam', 'Mariam Giuashvili', 'Irma Tchokhonelidze'],
         // Autorky spracovaného komentára CodeBlue (Galen Centre) z augusta 2026 - lektorky
         // Fakulty ošetrovateľstva Univerzity Malaya, uvedené v tiráži pôvodného textu.
         // Autori spracovaného prehľadu Sensors 2023;23(3):1361 (PMID 36772401).
