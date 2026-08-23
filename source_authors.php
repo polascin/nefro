@@ -126,6 +126,9 @@ function getSourceArticleAuthors(): array {
         'variabilita-tlaku-lezie-bielej-hmoty-sprint-accord' => ['Wenbo Zhao', 'Yue Qiao', 'Zihan Sun', 'Eric L. Harshfield', 'Lupei Cai', 'Xunming Ji', 'Hugh S. Markus'],
         // Autori studie AL-DON (Kidney360, publikovane online 3.8.2026, doi 10.34067/KID.0000001313,
         // PMID 42545761) - overene cez PubMed eutils a Crossref 2026-08-19.
+        // Autori spracovaného editoriálu Braz J Nephrol 2026;48(3):e2026E011 (PMID 42599773) -
+        // overené cez PubMed eutils a Crossref 2026-08-23.
+        'alopurinol-ckd-asymptomaticka-hyperurikemia-dokazy' => ['Ana Beatriz Vargas-Santos', 'Rosa Weiss Telles', 'Geraldo da Rocha Castelar-Pinheiro'],
         'alopurinol-zivi-darcovia-oblicky-lvm-al-don' => ['Nina Elisabeth Langberg', 'Trond Geir Jenssen', 'Einar Hopp', 'Anders Haugen', 'Anders Åsberg', 'Kåre I. Birkeland', 'Anders Hartmann', 'Dag Olav Dahle'],
         // Autori studie o zavaznosti CKD a vysledkoch na JIS (JAMA Netw Open 2026;9(6):e2620192,
         // doi 10.1001/jamanetworkopen.2026.20192, PMID 42348209) - overene cez PubMed eutils 2026-08-19.
