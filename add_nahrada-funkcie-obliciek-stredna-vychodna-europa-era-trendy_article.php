@@ -33,6 +33,7 @@ $articles[] = [
 
 <h2>Čo presne merajú incidencia, prevalencia, pmp a AAPC</h2>
 
+<div class="table-responsive" role="region" aria-label="Čo presne merajú incidencia, prevalencia, pmp a AAPC" tabindex="0">
 <table>
   <thead>
     <tr>
@@ -64,6 +65,7 @@ $articles[] = [
     </tr>
   </tbody>
 </table>
+</div>
 
 <p>Všetky porovnávané miery boli <strong>neupravené</strong>. Neboli štandardizované na vek ani pohlavie. Rozdiely medzi krajinami preto čiastočne odrážajú aj odlišnú demografickú štruktúru.</p>
 
@@ -77,6 +79,7 @@ $articles[] = [
 
 <h2>Regionálne trendy: mierny rast incidencie, rýchlejší rast prevalencie</h2>
 
+<div class="table-responsive" role="region" aria-label="Regionálne trendy: mierny rast incidencie, rýchlejší rast prevalencie" tabindex="0">
 <table>
   <thead>
     <tr>
@@ -118,6 +121,7 @@ $articles[] = [
     </tr>
   </tbody>
 </table>
+</div>
 
 <p>Incidencia KRT v strednej a východnej Európe teda rástla približne rovnakým tempom ako v západnej Európe. Absolútna úroveň však bola nižšia a rozdiely medzi jednotlivými krajinami podstatne väčšie. V roku 2019 sa pohybovala od 39,9 pmp na Ukrajine po 283,8 pmp na Cypre; v Grécku dosiahla 268,9 pmp. Rozpätie bolo približne sedemnásobné, kým v západnej Európe približne trojnásobné.</p>
 
@@ -149,6 +153,7 @@ $articles[] = [
 
 <p>Slovenské výsledky si vyžadujú osobitnú pozornosť. Údaje o incidencii počas celého obdobia 2010–2021 zahŕňali iba pacientov začínajúcich dialýzu, nie preemptívne transplantácie. Pri celkovej prevalencii neboli transplantovaní pacienti zahrnutí v rokoch 2010, 2011 a 2021. Zdanlivý skok medzi rokmi 2011 a 2012 a pokles medzi rokmi 2020 a 2021 preto nemožno interpretovať ako klinickú zmenu – ide o zmenu hranice súboru. Na sledovanie slovenského vývoja je spoľahlivejšia samostatná dialyzačná séria.</p>
 
+<div class="table-responsive" role="region" aria-label="Slovensko: porovnateľná je dialyzačná séria, nie každý súčet KRT" tabindex="0">
 <table>
   <thead>
     <tr>
@@ -190,6 +195,7 @@ $articles[] = [
     </tr>
   </tbody>
 </table>
+</div>
 
 <p>Po rozšírení do roku 2021 zostala incidencia začatia dialýzy štatisticky stabilná (AAPC −0,7 %; 95 % IS −3,1 až +1,6), pričom hodnota v roku 2021 dosiahla 186,0 pmp. Dialyzačná prevalencia v tom roku predstavovala 777,9 pmp. Pokrytie slovenského registra pritom kleslo na 82,0 % v roku 2019, 79,2 % v roku 2020 a 81,8 % v roku 2021. Autori upravili populačný menovateľ podľa odhadovaného pokrytia, no pri porovnávaní posledných rokov je potrebná opatrnosť.</p>
 
@@ -225,7 +231,7 @@ $articles[] = [
 
 <p>V rokoch 2010–2019 rástla v strednej a východnej Európe neupravená incidencia KRT priemerne o 1,5 % ročne a prevalencia o 5,1 % ročne. Incidencia sa vyvíjala podobným tempom ako v západnej Európe, prevalencia však rástla približne dvojnásobným tempom. Za regionálnym priemerom sa skrývali veľké rozdiely medzi krajinami a odlišné zastúpenie dialýzy a transplantácie.</p>
 
-<p style="page-break-inside: avoid;">Pre Slovensko je najistejším zistením štatisticky stabilná incidencia začatia dialýzy, rastúca prevalencia dialýzy a klesajúca prevalencia peritoneálnej dialýzy. Celkovú slovenskú epidemiológiu KRT z publikovaných časových radov nemožno bez výhrad rekonštruovať, pretože v niektorých rokoch chýbali pacienti s funkčným transplantátom. Najpraktickejším dôsledkom práce je preto požiadavka na úplný, kontinuálny a transparentne definovaný register, ktorý umožní bezpečne plánovať prevenciu, modality liečby, transplantácie aj podpornú starostlivosť.</p>
+<p class="pdf-avoid-break">Pre Slovensko je najistejším zistením štatisticky stabilná incidencia začatia dialýzy, rastúca prevalencia dialýzy a klesajúca prevalencia peritoneálnej dialýzy. Celkovú slovenskú epidemiológiu KRT z publikovaných časových radov nemožno bez výhrad rekonštruovať, pretože v niektorých rokoch chýbali pacienti s funkčným transplantátom. Najpraktickejším dôsledkom práce je preto požiadavka na úplný, kontinuálny a transparentne definovaný register, ktorý umožní bezpečne plánovať prevenciu, modality liečby, transplantácie aj podpornú starostlivosť.</p>
 
 <hr>
 

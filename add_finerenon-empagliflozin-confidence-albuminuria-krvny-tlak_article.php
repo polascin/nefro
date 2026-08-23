@@ -51,6 +51,7 @@ $articles[] = [
 
 <h2>Výsledok: výraznejší pokles UACR, nie zatiaľ menej zlyhaní obličiek</h2>
 
+<div class="table-responsive" role="region" aria-label="Výsledok: výraznejší pokles UACR, nie zatiaľ menej zlyhaní obličiek" tabindex="0">
 <table>
   <thead>
     <tr>
@@ -81,6 +82,7 @@ $articles[] = [
     </tr>
   </tbody>
 </table>
+</div>
 
 <p><em>IS – interval spoľahlivosti. Percentá v posledných dvoch riadkoch vyjadrujú porovnanie relatívnych zmien UACR, nie rozdiel v percentuálnych bodoch.</em></p>
 
@@ -135,6 +137,7 @@ $articles[] = [
 
 <h2>Bezpečnosť: priaznivý 180-dňový obraz, nie dôvod poľaviť v monitorovaní</h2>
 
+<div class="table-responsive" role="region" aria-label="Bezpečnosť: priaznivý 180-dňový obraz, nie dôvod poľaviť v monitorovaní" tabindex="0">
 <table>
   <thead>
     <tr>
@@ -177,6 +180,7 @@ $articles[] = [
     </tr>
   </tbody>
 </table>
+</div>
 
 <p>Pre hyperkaliémiu natrvalo ukončil liečbu jeden pacient v každej skupine. Kombinácia teda počas 180 dní neodhalila neočakávaný bezpečnostný signál, ale riziko hyperkaliémie neodstránila. Výsledky navyše nemožno bezvýhradne preniesť na pacientov so vstupnou koncentráciou draslíka nad 4,8 mmol/L, symptomatickým srdcovým zlyhávaním so zníženou ejekčnou frakciou alebo nedávnou závažnou kardiovaskulárnou príhodou, pretože takíto pacienti boli zo štúdie vylúčení.</p>
 

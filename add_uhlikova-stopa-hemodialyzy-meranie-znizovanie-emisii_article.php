@@ -56,6 +56,7 @@ $articles[] = [
 
 <p>Priemer za všetky dostupné obdobia predstavoval <strong>3,72 ± 0,44 t CO₂e na pacienta za rok</strong>. V roku 2023 sa celková hodnota jednotlivých centier pohybovala od 3,22 do 4,15 t CO₂e na pacienta za rok. Výroba spotrebného materiálu a spracovanie odpadu tvorili približne 40 % celku; významný podiel mali aj energie, vykurovanie, voda a doprava.</p>
 
+<div class="table-responsive" role="region" aria-label="Aká bola nameraná uhlíková stopa" tabindex="0">
 <table>
   <thead>
     <tr>
@@ -104,6 +105,7 @@ $articles[] = [
     </tr>
   </tbody>
 </table>
+</div>
 
 <p>Pokles celkovej stopy medzi rokmi 2021 a 2023 bol teda 0,356 ± 0,257 t CO₂e na pacienta za rok. Rozdiel sa koncentroval najmä v kategórii energie, vykurovania a vody. Keďže neexistovali kontrolné centrá a súčasne sa mohli meniť počasie, energetický mix, stavebná prevádzka, počet výkonov či obsadenosť, <strong>9,1-percentný pokles nemožno kauzálne pripísať jednej intervencii ani jednoduchému súčtu opatrení</strong>. Presné je povedať, že pokles bol časovo spojený s prevádzkovými zmenami.</p>
 
@@ -139,6 +141,7 @@ $articles[] = [
 
 <p>Autori zostavili „najlepší možný“ scenár z čiastkových pozorovaní, výsledku najlepšieho centra, literatúry a modelových predpokladov. Zo základnej hodnoty 3,86 t CO₂e na pacienta za rok odhadli pokles na 2,38 t, teda o 1,47 t alebo 38,7 %.</p>
 
+<div class="table-responsive" role="region" aria-label="Model zníženia o 38,7 %: hypotéza, nie nameraný výsledok" tabindex="0">
 <table>
   <thead>
     <tr>
@@ -158,6 +161,7 @@ $articles[] = [
     <tr><td>Modelovaná inkrementálna HD</td><td>0,062</td><td>1,6 %</td></tr>
   </tbody>
 </table>
+</div>
 
 <p>Scenár nie je predpoveďou ani dôkazom, že každé centrum môže dosiahnuť rovnaký výsledok. Pri jednoduchom sčítaní sa môžu úspory prekrývať: po prechode časti pacientov na domácu modalitu sa na nich už neuplatní úspora dopravy, Qd ani prevádzky strediskovej HD a fixná spotreba budovy neklesá lineárne, kým sa skutočne nezníži kapacita alebo počet zmien.</p>
 

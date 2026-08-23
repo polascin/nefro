@@ -39,6 +39,7 @@ $articles[] = [
 
 <p>Pojem štvorpilierová liečba je najužitočnejší pri <strong>diabete 2. typu s albuminurickou CKD</strong>, pretože práve v tejto populácii sa indikácie jednotlivých tried najčastejšie prekrývajú. Odporúčanie <a href="https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf" target="_blank" rel="noopener noreferrer">KDIGO 2024</a> používa holistický liečebný prístup: podľa fenotypu pacienta zahŕňa RASi, inhibítor SGLT2, nesteroidového antagonistu mineralokortikoidového receptora (nsMRA) a agonistu receptora GLP-1. Neprikazuje však automatické nasadenie všetkých štyroch tried každému pacientovi s CKD.</p>
 
+<div class="table-responsive" role="region" aria-label="Štyri piliere sú rámec, nie univerzálny predpis" tabindex="0">
 <table>
   <thead>
     <tr>
@@ -70,6 +71,7 @@ $articles[] = [
     </tr>
   </tbody>
 </table>
+</div>
 
 <p><em>ACE – enzým konvertujúci angiotenzín; ARB – blokátor receptora AT1; eGFR – odhadovaná glomerulová filtrácia. Konkrétna indikácia a dávkovanie sa musia riadiť aktuálnym súhrnom charakteristických vlastností lieku, odporúčaniami a klinickým stavom pacienta.</em></p>
 

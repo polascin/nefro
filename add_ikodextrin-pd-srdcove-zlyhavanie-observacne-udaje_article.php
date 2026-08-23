@@ -47,6 +47,7 @@ $articles[] = [
 
 <p>Primárnymi sledovanými výsledkami boli celková mortalita, kardiovaskulárna mortalita, náhla smrť a veľké nežiaduce kardiovaskulárne príhody (MACE). Kompozit MACE zahŕňal kardiovaskulárne úmrtie, hospitalizáciu pre srdcové zlyhávanie, infarkt myokardu a ischemickú cievnu mozgovú príhodu.</p>
 
+<div class="table-responsive" role="region" aria-label="Hlavné výsledky" tabindex="0">
 <table>
   <thead>
     <tr>
@@ -78,6 +79,7 @@ $articles[] = [
     </tr>
   </tbody>
 </table>
+</div>
 
 <p><em>HR – pomer okamžitých rizík (z angl. <span lang="en">hazard ratio</span>); IS – interval spoľahlivosti.</em></p>
 

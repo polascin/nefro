@@ -46,6 +46,7 @@ $articles[] = [
 
 <p>Nasledujúce hodnoty nie sú deklarovaným zložením roztokov vo vaku. Ide o koncentrácie namerané v peritoneálnej tekutine tri minúty po skončení napúšťania, teda už po zmiešaní so zvyškovou tekutinou v dutine:</p>
 
+<div class="table-responsive" role="region" aria-label="Údaje zo šiestich pacientov a dve oddelené výmeny" tabindex="0">
 <table>
   <thead>
     <tr>
@@ -72,6 +73,7 @@ $articles[] = [
     </tr>
   </tbody>
 </table>
+</div>
 
 <p>Rozdiely v týchto troch tlmivých zložkách boli očakávané a všetky boli štatisticky významné (p &lt; 0,05). Z ostatných meraných zložiek sa na začiatku líšil iba sodík, ktorého koncentrácia bola pri PD4 o 1,3 % vyššia. Rýchlosť peritoneálnej absorpcie dosiahla 3,66 ± 1,48 mL/min pri B/L a 2,79 ± 1,02 mL/min pri PD4; rozdiel nebol štatisticky významný (p = 0,11).</p>
 
@@ -83,6 +85,7 @@ $articles[] = [
 
 <p>Model odhadoval hydraulickú vodivosť membrány, podiel ultramalých pórov a súčin permeability a plochy (PS) pre desať rozpustených látok. Peritoneálna perfúzia bola pevne nastavená na 55 mL/min a absorpcia sa pre každú výmenu zadala podľa údajov RISA. Pri viacerých neacidobázických látkach sa plazmatické koncentrácie považovali za známe vstupy a medzi odbermi sa lineárne interpolovali.</p>
 
+<div class="table-responsive" role="region" aria-label="Čo spája model 3PM/ABE" tabindex="0">
 <table>
   <thead>
     <tr>
@@ -109,6 +112,7 @@ $articles[] = [
     </tr>
   </tbody>
 </table>
+</div>
 
 <h2>Ako dobre model reprodukoval údaje</h2>
 
@@ -124,6 +128,7 @@ $articles[] = [
 
 <p>Odhadnuté transportné parametre boli medzi roztokmi zväčša podobné. Štatisticky významne vyšší PS pri B/L sa zistil iba pre chloridy a laktát. Pri bikarbonáte a CO₂ bol rozptyl PS, najmä pri B/L, veľký, pravdepodobne preto, že ich koncentrácie v krvi a peritoneálnej tekutine boli blízko rovnováhy. Štúdia preto nepodporuje záver, že tlmivá zložka zásadne mení všeobecné transportné vlastnosti membrány. Zároveň však nemerala Kt/V, dlhodobú ultrafiltráciu, zlyhanie techniky ani klinické výsledky, a preto nepreukazuje zachovanie dialyzačnej adekvátnosti po zmene roztoku.</p>
 
+<div class="table-responsive" role="region" aria-label="Odlišná kinetika bikarbonátu a laktátu" tabindex="0">
 <table>
   <thead>
     <tr>
@@ -172,6 +177,7 @@ $articles[] = [
     </tr>
   </tbody>
 </table>
+</div>
 
 <p>Plazmatické koncentrácie väčšiny sledovaných látok boli počas výmeny stabilné. Viac než jeden časový bod odlišný od východiskovej hodnoty sa našiel iba pri glukóze a pri chloridoch a draslíku počas PD4. Ani tento krátkodobý laboratórny profil však nenahrádza meranie celkovej týždennej adekvátnosti alebo klinického účinku.</p>
 
@@ -214,7 +220,7 @@ $articles[] = [
 
 <p>Integrovaný model 3PM/ABE presvedčivo ukazuje, prečo pri peritoneálnej dialýze nestačí sledovať iba koncentrácie v dialyzáte. Krátkodobý transperitoneálny tok bikarbonátu, laktátu a CO₂ treba zasadiť do celotelovej acidobázickej regulácie. Model po kalibrácii dobre reprodukoval údaje zo šiestich pacientov a pri oboch roztokoch odhadol prevažne podobné parametre transportu, hoci samotná kinetika tlmivých látok sa výrazne líšila.</p>
 
-<p style="page-break-inside: avoid;">Najbezpečnejší klinický záver je úzky: práca podporuje fyziologickú vierohodnosť integrovaného modelovania a poskytuje základ pre ďalšiu validáciu. Nepreukazuje klinickú ekvivalenciu, nadradenosť, dlhodobú bezpečnosť ani vhodnosť konkrétneho roztoku pre pacienta s poruchou pečene alebo pľúc. Na takéto rozhodnutia sú potrebné klinické údaje a individuálne zhodnotenie pacienta, nie iba simulácia.</p>
+<p class="pdf-avoid-break">Najbezpečnejší klinický záver je úzky: práca podporuje fyziologickú vierohodnosť integrovaného modelovania a poskytuje základ pre ďalšiu validáciu. Nepreukazuje klinickú ekvivalenciu, nadradenosť, dlhodobú bezpečnosť ani vhodnosť konkrétneho roztoku pre pacienta s poruchou pečene alebo pľúc. Na takéto rozhodnutia sú potrebné klinické údaje a individuálne zhodnotenie pacienta, nie iba simulácia.</p>
 
 <hr>
 
@@ -222,7 +228,7 @@ $articles[] = [
 
 <p><em><strong>Všetci autori zdrojovej štúdie:</strong> Mauro Pietribiasi; Joanna Stachowska-Pietka; Jacek Waniewski; Bengt Lindholm; Olof Heimbürger.</em></p>
 
-<p style="page-break-inside: avoid;"><em><strong>Financovanie a vyhlásenia zdroja:</strong> Výskum pracovísk Renal Medicine a Baxter Novum vznikol vďaka grantu spoločnosti Vantive (predtým Baxter Healthcare Corporation) pre Department of Clinical Science, Intervention and Technology, Karolinska Institutet. Oba skúmané roztoky vyrábala spoločnosť Baxter; článok bližšie nešpecifikuje úlohu poskytovateľa grantu pri dizajne, analýze alebo publikovaní. Otvorený prístup financoval Karolinska Institutet. Autori deklarovali, že nemajú konflikty záujmov. Údaje sú dostupné na základe odôvodnenej žiadosti.</em></p>
+<p class="pdf-avoid-break"><em><strong>Financovanie a vyhlásenia zdroja:</strong> Výskum pracovísk Renal Medicine a Baxter Novum vznikol vďaka grantu spoločnosti Vantive (predtým Baxter Healthcare Corporation) pre Department of Clinical Science, Intervention and Technology, Karolinska Institutet. Oba skúmané roztoky vyrábala spoločnosť Baxter; článok bližšie nešpecifikuje úlohu poskytovateľa grantu pri dizajne, analýze alebo publikovaní. Otvorený prístup financoval Karolinska Institutet. Autori deklarovali, že nemajú konflikty záujmov. Údaje sú dostupné na základe odôvodnenej žiadosti.</em></p>
 
 <p><em><strong>Doplnkový materiál a zdroje použité pri vecnej kontrole:</strong> <a href="https://static-content.springer.com/esm/art%3A10.1038%2Fs41598-026-53800-0/MediaObjects/41598_2026_53800_MOESM1_ESM.docx" target="_blank" rel="noopener noreferrer">doplnkový materiál k originálnej štúdii</a>; <a href="https://pubmed.ncbi.nlm.nih.gov/14870876/" target="_blank" rel="noopener noreferrer">pôvodná publikácia časti klinických údajov</a>; <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6517187/" target="_blank" rel="noopener noreferrer">Cochrane – biokompatibilné roztoky pre peritoneálnu dialýzu</a>; <a href="https://ispd.org/guidelines/" target="_blank" rel="noopener noreferrer">prehľad odporúčaní ISPD</a>; <a href="https://pubmed.ncbi.nlm.nih.gov/33267747/" target="_blank" rel="noopener noreferrer">ISPD – akútna peritoneálna dialýza u dospelých</a>.</em></p>
 HTML,
