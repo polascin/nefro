@@ -173,6 +173,9 @@ function getSourceArticleAuthors(): array {
         // Autorky spracovaného komentára CodeBlue (Galen Centre) z augusta 2026 - lektorky
         // Fakulty ošetrovateľstva Univerzity Malaya, uvedené v tiráži pôvodného textu.
         // Autori spracovaného prehľadu Sensors 2023;23(3):1361 (PMID 36772401).
+        // Autori odporúčaní Talianskej nefrologickej spoločnosti (J Nephrol 2026, doi
+        // 10.1093/joneph/aajag225, PMID 42614082) - 20 mien overených cez PubMed eutils 2026-08-23.
+        'online-hemodiafiltracia-davkovana-liecba-odporucania-sin' => ['Giovanni F. M. Strippoli', 'Giovanni Pellegrino', 'Jörgen Hegbrant', 'Paolo Fabbrini', 'Paolo Luca Maria Lentini', 'Filippo Aucella', 'Vincenzo Panichi', 'Maurizio Gallieni', 'Bernard Canaud', 'Andrew Davenport', 'Alberto Ortiz', 'Rosa Ramos', 'Jolanta Malyszko', 'Rümeyza Kazancıoğlu', 'Martin Kuhlman', 'Ana Carina Ferreira', 'Krister Cromm', 'Sagar Nigwekar', 'Allen R. Nissenson', 'Luca De Nicola'],
         'wearables-dialyza-nefrologia-dokazy-a-limity' => ['Madelena Stauss', 'Htay Htay', 'Jeroen P. Kooman', 'Thomas Lindsay', 'Alexander Woywodt'],
         'zastava-obehu-pocas-hemodialyzy-mimotelovy-okruh' => ['Noor Hanita Zaini', 'Noor Hasliza Che Seman'],
     ];
