@@ -85,7 +85,7 @@ $articles[] = [
 
 <p>Smer, ktorý pôvodný text naznačuje, je správny, formulácia o „presnom koktaile“ však zastiera dôležité rozdiely v úlohe jednotlivých liekov. Pri zástave obehu s podozrením na ťažkú hyperkaliémiu ERC odporúča:</p>
 
-<div class="table-responsive" role="region" aria-label="Liečba hyperkaliemickej zástavy obehu podľa odporúčaní ERC" tabindex="0">
+<div class="table-responsive pdf-keep-together" role="region" aria-label="Liečba hyperkaliemickej zástavy obehu podľa odporúčaní ERC" tabindex="0">
 <table>
   <thead>
     <tr>

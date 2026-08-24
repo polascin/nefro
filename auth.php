@@ -15,7 +15,69 @@ function getScriptNonce(): string {
     return $nonce;
 }
 
-/** Citlivé tokeny a exporty nesmú opustiť stránku v hlavičke Referer. */
+/** Normalizuje názov query parametra pre jednotnú privacy kontrolu. */
+function normalizeSensitiveRequestParameterName(string $name): string {
+    $normalized = strtolower(rawurldecode($name));
+    return preg_replace('/[^a-z0-9]+/', '', $normalized) ?? '';
+}
+
+/**
+ * Určí, či query parameter môže obsahovať autentifikačný alebo osobný údaj.
+ * Predikát zdieľa Referrer-Policy aj redakcia prístupových logov, aby sa
+ * ich ochranné zoznamy nemohli rozísť.
+ */
+function isSensitiveRequestParameter(string $name): bool {
+    $normalized = normalizeSensitiveRequestParameterName($name);
+    if ($normalized === '') {
+        return false;
+    }
+
+    static $exact = [
+        'token' => true,
+        'sig' => true,
+        'signature' => true,
+        'secret' => true,
+        'password' => true,
+        'passwd' => true,
+        'csrf' => true,
+        'csrftoken' => true,
+        'jstoken' => true,
+        'code' => true,
+        'totpcode' => true,
+        'verificationtoken' => true,
+        'resettoken' => true,
+        'deletiontoken' => true,
+        'email' => true,
+        'login' => true,
+        'username' => true,
+        'phone' => true,
+        'mobile' => true,
+        'patient' => true,
+        'birthnumber' => true,
+        'patientbirthnumber' => true,
+        'rodnecislo' => true,
+        'resultid' => true,
+        'loadid' => true,
+        'compare' => true,
+    ];
+    if (isset($exact[$normalized])) {
+        return true;
+    }
+
+    foreach ([
+        'token', 'password', 'secret', 'email', 'login', 'username',
+        'phone', 'mobile', 'patient', 'birthnumber', 'rodnecislo',
+        'resultid', 'loadid',
+    ] as $fragment) {
+        if (str_contains($normalized, $fragment)) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+/** Citlivé tokeny, identifikátory a exporty nesmú opustiť stránku v hlavičke Referer. */
 function requestNeedsNoReferrer(): bool {
     $script = basename((string) ($_SERVER['SCRIPT_NAME'] ?? $_SERVER['PHP_SELF'] ?? ''));
     $sensitiveScripts = [
@@ -25,19 +87,15 @@ function requestNeedsNoReferrer(): bool {
         'confirm_account_deletion.php',
         'reset_password.php',
         'profile_export.php',
+        'calculator_history.php',
+        'calculator_result_print.php',
     ];
     if (in_array($script, $sensitiveScripts, true)) {
         return true;
     }
 
     foreach (array_keys($_GET) as $name) {
-        $normalized = strtolower(rawurldecode((string) $name));
-        $normalized = preg_replace('/[^a-z0-9]+/', '', $normalized) ?? '';
-        if (in_array($normalized, [
-            'token', 'sig', 'signature', 'secret', 'password', 'passwd',
-            'csrf', 'csrftoken', 'jstoken', 'code', 'totpcode',
-            'verificationtoken', 'resettoken', 'deletiontoken',
-        ], true)) {
+        if (isSensitiveRequestParameter((string) $name)) {
             return true;
         }
     }
@@ -849,27 +907,7 @@ function clearIpRateLimit(PDO $pdo, string $table, string $ip): void
  * Určí, či query parameter nesmie byť uložený do prístupového logu.
  */
 function isSensitiveAccessLogParameter(string $name): bool {
-    $normalized = strtolower(rawurldecode($name));
-    $normalized = preg_replace('/[^a-z0-9]+/', '', $normalized) ?? '';
-
-    if ($normalized === '') {
-        return false;
-    }
-
-    $exact = [
-        'token', 'sig', 'signature', 'secret', 'password', 'passwd',
-        'csrf', 'csrftoken', 'jstoken', 'code', 'totpcode',
-        'email', 'login', 'username', 'phone', 'mobile', 'patient', 'birthnumber',
-        'patientbirthnumber', 'rodnecislo',
-    ];
-    if (in_array($normalized, $exact, true)) {
-        return true;
-    }
-
-    return str_contains($normalized, 'token')
-        || str_contains($normalized, 'password')
-        || str_contains($normalized, 'secret')
-        || str_contains($normalized, 'birthnumber');
+    return isSensitiveRequestParameter($name);
 }
 
 /**

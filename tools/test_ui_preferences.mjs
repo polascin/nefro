@@ -16,11 +16,18 @@ function validConsent(timestamp = new Date().toISOString()) {
     return { necessary: true, analytics: true, marketing: true, preferences: false, timestamp, version };
 }
 
-function makeContext({ localValue = null, cookieValue = null, gpc = false } = {}) {
+function makeContext({
+    localValue = null,
+    cookieValue = null,
+    gpc = false,
+    pathname = '/index.php',
+    search = '',
+} = {}) {
     const storage = new Map();
     if (localValue !== null) storage.set(key, localValue);
     const cookies = new Map();
     if (cookieValue !== null) cookies.set(key, encodeURIComponent(cookieValue));
+    const appendedScripts = [];
 
     const localStorage = {
         getItem: name => storage.has(name) ? storage.get(name) : null,
@@ -31,7 +38,7 @@ function makeContext({ localValue = null, cookieValue = null, gpc = false } = {}
         readyState: 'loading',
         addEventListener() {},
         createElement() { return {}; },
-        head: { appendChild() {} },
+        head: { appendChild(element) { appendedScripts.push(element.src ?? ''); } },
     };
     Object.defineProperty(document, 'cookie', {
         get() {
@@ -51,7 +58,7 @@ function makeContext({ localValue = null, cookieValue = null, gpc = false } = {}
     });
 
     const window = {
-        location: { pathname: '/index.php', search: '', protocol: 'https:', hostname: 'nefro.polascin.net' },
+        location: { pathname, search, protocol: 'https:', hostname: 'nefro.polascin.net' },
         dataLayer: [],
         addEventListener() {},
     };
@@ -64,9 +71,10 @@ function makeContext({ localValue = null, cookieValue = null, gpc = false } = {}
         console: { warn() {}, error() {}, log() {} },
         setTimeout,
         clearTimeout,
+        gtag(...args) { window.dataLayer.push(args); },
     });
     vm.runInContext(source, context, { filename: 'ui-preferences.js' });
-    return { context, storage, cookies };
+    return { context, storage, cookies, appendedScripts };
 }
 
 function read(context) {
@@ -103,6 +111,65 @@ for (const payload of [
     const consent = read(context);
     assert.equal(consent.analytics, true, 'GPC nemení analytický súhlas');
     assert.equal(consent.marketing, false, 'GPC musí vynútiť vypnutý marketing');
+}
+
+for (const pathname of [
+    '/calculator_history.php',
+    '/calculator_result_print.php',
+    '/profile_export.php',
+]) {
+    const payload = validConsent();
+    const { context, appendedScripts } = makeContext({
+        localValue: JSON.stringify(payload),
+        pathname,
+    });
+    assert.equal(
+        vm.runInContext('analyticsSuppressedForPage', context),
+        true,
+        `analytika musí byť potlačená na ${pathname}`,
+    );
+    assert.equal(appendedScripts.length, 0, `GA skript sa nesmie načítať na ${pathname}`);
+}
+
+for (const search of [
+    '?result_id=123',
+    '?load_id=123',
+    '?compare=1%2C2',
+    '?patient_id=abc',
+    '?user_email=user%40example.test',
+    '?reset-token=secret',
+]) {
+    const payload = validConsent();
+    const { context, appendedScripts } = makeContext({
+        localValue: JSON.stringify(payload),
+        pathname: '/calculator_ckdpc.php',
+        search,
+    });
+    assert.equal(
+        vm.runInContext('analyticsSuppressedForPage', context),
+        true,
+        `analytika musí byť potlačená pre citlivé query ${search}`,
+    );
+    assert.equal(appendedScripts.length, 0, `GA skript sa nesmie načítať pre ${search}`);
+}
+
+{
+    const payload = validConsent();
+    const { context, appendedScripts } = makeContext({
+        localValue: JSON.stringify(payload),
+        pathname: '/calculator_ckdpc.php',
+        search: '?calc=egfr&sort=desc',
+    });
+    assert.equal(
+        vm.runInContext('analyticsSuppressedForPage', context),
+        false,
+        'bežné query parametre nesmú potlačiť analytiku',
+    );
+    assert.deepEqual(
+        appendedScripts,
+        ['https://www.googletagmanager.com/gtag/js?id=G-0JT5VMQ61K'],
+        'po platnom analytickom súhlase sa GA na bežnej URL načíta',
+    );
 }
 
 console.log('ui-preferences: všetky testy prešli');

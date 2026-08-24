@@ -7,34 +7,51 @@ const consentKey = 'nps_cookie_consent';
 const consentCookieMaxAgeDays = 365;
 const globalPrivacyControlEnabled = typeof navigator !== 'undefined'
     && navigator.globalPrivacyControl === true;
-const analyticsSuppressedForPage = (() => {
-    const sensitivePages = new Set([
-        'verify_email.php',
-        'newsletter_verify_sub.php',
-        'newsletter_unsubscribe.php',
-        'confirm_account_deletion.php',
-        'reset_password.php'
-    ]);
-    const sensitiveParameters = new Set([
-        'token', 'sig', 'signature', 'secret', 'password',
-        'csrf', 'csrftoken', 'code', 'email', 'login', 'username', 'phone', 'mobile',
-        'patient', 'birthnumber'
-    ]);
+const sensitiveAnalyticsPages = new Set([
+    'verify_email.php',
+    'newsletter_verify_sub.php',
+    'newsletter_unsubscribe.php',
+    'confirm_account_deletion.php',
+    'reset_password.php',
+    'profile_export.php',
+    'calculator_history.php',
+    'calculator_result_print.php'
+]);
+const sensitiveAnalyticsParameters = new Set([
+    'token', 'sig', 'signature', 'secret', 'password', 'passwd',
+    'csrf', 'csrftoken', 'jstoken', 'code', 'totpcode',
+    'verificationtoken', 'resettoken', 'deletiontoken',
+    'email', 'login', 'username', 'phone', 'mobile', 'patient',
+    'birthnumber', 'patientbirthnumber', 'rodnecislo',
+    'resultid', 'loadid', 'compare'
+]);
+const sensitiveAnalyticsParameterFragments = [
+    'token', 'password', 'secret', 'email', 'login', 'username',
+    'phone', 'mobile', 'patient', 'birthnumber', 'rodnecislo',
+    'resultid', 'loadid'
+];
 
+function normalizeSensitiveAnalyticsParameterName(name) {
+    return String(name).toLowerCase().replace(/[^a-z0-9]+/g, '');
+}
+
+function isSensitiveAnalyticsParameter(name) {
+    const normalized = normalizeSensitiveAnalyticsParameterName(name);
+    return normalized !== '' && (
+        sensitiveAnalyticsParameters.has(normalized)
+        || sensitiveAnalyticsParameterFragments.some(fragment => normalized.includes(fragment))
+    );
+}
+
+const analyticsSuppressedForPage = (() => {
     try {
         const page = window.location.pathname.split('/').pop().toLowerCase();
-        if (sensitivePages.has(page)) {
+        if (sensitiveAnalyticsPages.has(page)) {
             return true;
         }
 
         for (const key of new URLSearchParams(window.location.search).keys()) {
-            const normalized = key.toLowerCase().replace(/[^a-z0-9]+/g, '');
-            if (sensitiveParameters.has(normalized)
-                || normalized.includes('token')
-                || normalized.includes('password')
-                || normalized.includes('secret')
-                || normalized.includes('birthnumber')
-            ) {
+            if (isSensitiveAnalyticsParameter(key)) {
                 return true;
             }
         }
