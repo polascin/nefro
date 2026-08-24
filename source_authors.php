@@ -35,6 +35,9 @@ function getSourceArticleAuthors(): array {
         'anemia-ckd-dialyza-ambulancia-checklist' => ['Diana I. Jalal', 'Nisha Bansal', 'Monique E. Cho', 'Steven Fishbane', 'Orlando M. Gutierrez', 'Csaba P. Kovesdy', 'Abhijit Kshirsagar', 'Bruce Spinowitz', 'Jay Wish'],
         'anemia-ckd-kdigo-2026-kdoqi-komentar' => ['Diana I. Jalal', 'Nisha Bansal', 'Monique E. Cho', 'Steven Fishbane', 'Orlando M. Gutierrez', 'Csaba P. Kovesdy', 'Abhijit Kshirsagar', 'Bruce Spinowitz', 'Jay Wish'],
         'atacicept-trutakna-iga-nefropatia-fda-proteinuria' => ['Siddhi Mahatole', 'Puyaan Singh'],
+        // Autori spracovanej práce J Nephrol 2026, doi 10.1093/joneph/aajag121 (PMID 42598914) -
+        // 10 mien overených cez PubMed eutils a Crossref 2026-08-23.
+        'anti-pla2r-trombozy-membranozna-nefropatia-hypoalbuminemia' => ['Ayman Al Jurdi', 'Christopher El Mouhayyar', 'Karim Yatim', 'Orhan Efe', 'Saif A. Muhsin', 'Leonardo V. Riella', 'Reza Zonozi', 'Karen Laliberte', 'John L. Niles', 'Anushya Jeyabalan'],
         'antimikrobialna-rezistencia-infekcie-mocovych-ciest-nefrologia' => ['Sibylle von Vietinghoff', 'Olga Shevchuk', 'Ulrich Dobrindt', 'Daniel Robert Engel', 'Selina K. Jorch', 'Christian Kurts', 'Thomas Miethke', 'Florian Wagenlehner'],
         'bartterov-syndrom-diagnostika-geneticke-formy-liecba' => ['Martin Konrad', 'Tom Nijenhuis', 'Gema Ariceta', 'Aurelia Bertholet-Thomas', 'Lorenzo A. Calò', 'Giovambattista Capasso', 'Francesco Emma', 'Karl P. Schlingmann', 'Mandeep Singh', 'Francesco Trepiccione', 'Stephen B. Walsh', 'Kirsty Whitton', 'Rosa Vargas-Poussou', 'Detlef Bockenhauer'],
         'betablokatory-ckd-bez-kardiovaskularneho-ochorenia' => ['Seung Hyun Han', 'Mina Kim', 'Jungkuk Lee', 'Sang Youb Han'],
