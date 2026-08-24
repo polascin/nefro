@@ -39,6 +39,9 @@ function getSourceArticleAuthors(): array {
         'bartterov-syndrom-diagnostika-geneticke-formy-liecba' => ['Martin Konrad', 'Tom Nijenhuis', 'Gema Ariceta', 'Aurelia Bertholet-Thomas', 'Lorenzo A. Calò', 'Giovambattista Capasso', 'Francesco Emma', 'Karl P. Schlingmann', 'Mandeep Singh', 'Francesco Trepiccione', 'Stephen B. Walsh', 'Kirsty Whitton', 'Rosa Vargas-Poussou', 'Detlef Bockenhauer'],
         'betablokatory-ckd-bez-kardiovaskularneho-ochorenia' => ['Seung Hyun Han', 'Mina Kim', 'Jungkuk Lee', 'Sang Youb Han'],
         'c3-glomerulopatia-c3g-liecba-inhibicia-komplementu' => ['Manuel Praga', 'Richard J. Smith', 'Andrew S. Bomback'],
+        // Autorky spracovanej štúdie J Ren Care 2026;52(3):e70075 (PMID 42522761) - presne dve,
+        // overené cez PubMed eutils a Crossref 2026-08-23. Priezvisko druhej autorky je dvojslovné.
+        'ckd-ap-pruritus-hemodialyza-prevalencia-meranie' => ['Gülay Turgay', 'Çiğdem Özdemir Eler'],
         'ckd-mozog-kognitivne-poruchy-cievne-poskodenie' => ['Mickaël Bobot'],
         'ckd-pri-diabete-skrining-vrstvena-kardiorenalna-liecba' => ['Paola Fioretto', 'Peter Rossing', 'Hiddo J.L. Heerspink'],
         'ckd-samostatny-faktor-polyfarmacie' => ['Rafael Santamaria', 'Carlos Escobar', 'Ignacio Hernández', 'Beatriz Palacios', 'Unai Aranda', 'Roberto Alcázar'],
