@@ -123,6 +123,9 @@ function getSourceArticleAuthors(): array {
         'renalne-riziko-po-preeklampsii-detekcia-albuminuria' => ['Shiuan-Chih Chen', 'Ming-Cheng Lin', 'Jennifer H. Yo', 'Anna Sara Oberg', 'Juan-Jesús Carrero'],
         // Autori zdruzenej analyzy SPRINT MIND + ACCORD MIND (Neurology 2026;107(3):e218302,
         // doi 10.1212/WNL.0000000000218302, PMID 42430676) - overene cez PubMed a Crossref 2026-08-19.
+        // Autori spracovanej štúdie PLOS One 2026;21(7):e0347975 (PMID 42490553) - 10 mien
+        // overených z otvoreného plného textu, PubMed eutils a Crossref 2026-08-23.
+        'urinarny-podocalyxin-diabeticka-nefropatia-biomarker' => ['Md. Sabbir Hossain', 'Shamsia Tasnim Dwipi', 'Nazma Ahmed', 'Khaled Mahbub Murshed', 'Kazi Ali Aftab', 'Abdullah Al Mahdi', 'Md. Mojibul Hoque', 'Md. Jobayer Hossain Taraq', 'Md. Zakir Hussain', 'Md. Abul Kalam Azad'],
         'variabilita-tlaku-lezie-bielej-hmoty-sprint-accord' => ['Wenbo Zhao', 'Yue Qiao', 'Zihan Sun', 'Eric L. Harshfield', 'Lupei Cai', 'Xunming Ji', 'Hugh S. Markus'],
         // Autori studie AL-DON (Kidney360, publikovane online 3.8.2026, doi 10.34067/KID.0000001313,
         // PMID 42545761) - overene cez PubMed eutils a Crossref 2026-08-19.
