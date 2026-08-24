@@ -78,6 +78,9 @@ function getSourceArticleAuthors(): array {
         'glp1-era-novy-model-starostlivosti-o-obezitu-nefrologia' => ['Manuela Callari'],
         'glp1-kompulzivne-spravanie-food-noise-nefrologia' => ['Eric Spitznagel'],
         'hypertenzia-v-tehotenstve-a-po-porode-nefrologicka-rola' => ['Line Malha', 'Phyllis August'],
+        // Autori spracovanej práce J Nephrol 2026, doi 10.1093/joneph/aajag149 (PMID 42599085) -
+        // 16 mien overených cez PubMed eutils a Crossref 2026-08-23.
+        'hyperkaliemia-ckd-realna-prax-recidiva-raasi' => ['María Marques', 'Paula López-Sánchez', 'Enrique Morales', 'M. Auxiliadora Bajo', 'Antolina Rodriguez', 'Milagros Fernández Lucas', 'Vicente Paraiso', 'Laura Bucalo', 'Yolanda Hernandez', 'José C. De La Flor', 'Maite Padrón', 'Hanane Bouarich', 'Fabio Procaccini', 'Coraima Nava Chavez', 'Jose Herrero', 'Fernando Tornero'],
         'iga-nefropatia-algoritmus-kdigo-2025-kdoqi' => ['Isabelle Ayoub', 'Gaia Coppock', 'Shikha Wadhwani', 'Timothy Yau'],
         'implementacia-intenzivnej-kontroly-tlaku-esprit-nefrologia' => ['Yu-Jie Zuo', 'Ji-Guang Wang'],
         'inhibicia-tmao-fmc-regresia-fibrozy-ckd-model' => ['Joseph A DiDonato', 'Taylor L Weeks', 'Nilaksh Gupta', 'Deepthi P Mallela', 'Jennifer A Buffa', 'Zeneng Wang', 'Xinmin S Li', 'James T Anderson', 'Xiaoming Fu', 'Naseer Sangwan', 'Ina Nemet', 'Scott J Cameron', 'Stanley L Hazen'],
