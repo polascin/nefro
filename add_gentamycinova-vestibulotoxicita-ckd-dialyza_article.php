@@ -117,9 +117,11 @@ $articles[] = [
 
 <p>Pre prvé dva varianty je úroveň dôkazu vysoká, pre m.1095T&gt;C stredná. CPIC dôrazne odporúča vyhnúť sa aminoglykozidom u nositeľov variantu spojeného so zvýšeným rizikom, okrem situácie, keď závažnosť infekcie a nedostupnosť bezpečnej alebo účinnej alternatívy prevážia zvýšené riziko trvalej straty sluchu. Toto odporúčanie sa týka predovšetkým kochleárneho poškodenia; nepredstavuje dôkaz rovnako silnej genetickej predispozície k vestibulotoxicite. <a href="#odborny-zdroj-7">[7]</a></p>
 
-<h2>Diagnostika: normálny audiogram vestibulotoxicitu nevylučuje</h2>
+<div class="pdf-keep-together">
+  <h2>Diagnostika: normálny audiogram vestibulotoxicitu nevylučuje</h2>
 
-<p>Základom je časová súvislosť medzi expozíciou gentamycínu a novými ťažkosťami spolu s objektívnym vestibulárnym vyšetrením. Audiometria je dôležitá, ale relatívne zachovaný sluch nevylučuje ťažkú obojstrannú stratu vestibulárnej funkcie.</p>
+  <p>Základom je časová súvislosť medzi expozíciou gentamycínu a novými ťažkosťami spolu s objektívnym vestibulárnym vyšetrením. Audiometria je dôležitá, ale relatívne zachovaný sluch nevylučuje ťažkú obojstrannú stratu vestibulárnej funkcie.</p>
+</div>
 
 <h3>Klinický impulzný test hlavy a vHIT</h3>
 
@@ -155,9 +157,11 @@ $articles[] = [
 
 <p>Nie je k dispozícii antidotum ani farmakologická liečba s preukázanou schopnosťou obnoviť už stratenú periférnu vestibulárnu funkciu. Po závažnom poškodení môže deficit pretrvávať. Funkčné zlepšenie závisí najmä od centrálnej adaptácie a kompenzačného využívania zrakových a somatosenzorických podnetov. <a href="#odborny-zdroj-10">[10]</a> <a href="#odborny-zdroj-11">[11]</a></p>
 
-<h2>N-acetylcysteín: kochleárna prevencia nie je liečbou vestibulárnej straty</h2>
+<div class="pdf-keep-together">
+  <h2>N-acetylcysteín: kochleárna prevencia nie je liečbou vestibulárnej straty</h2>
 
-<p>N-acetylcysteín (NAC) je antioxidant a prekurzor glutatiónu. Feldman a spoluautori náhodne zaradili 53 hemodialyzovaných pacientov, ktorí dostávali gentamycín pre infekciu spojenú s dialyzačným katétrom, do skupiny so samotným gentamycínom alebo do skupiny s gentamycínom a NAC <strong>600 mg perorálne dvakrát denne</strong>. Protokol dokončilo 40 pacientov a priemerná dĺžka liečby bola takmer 15 dní. V skupine s NAC bola audiometricky definovaná ototoxicita menej častá. Štúdia však hodnotila sluch pomocou čistotónovej audiometrie, nie vestibulárnu funkciu. <a href="#odborny-zdroj-9">[9]</a></p>
+  <p>N-acetylcysteín (NAC) je antioxidant a prekurzor glutatiónu. Feldman a spoluautori náhodne zaradili 53 hemodialyzovaných pacientov, ktorí dostávali gentamycín pre infekciu spojenú s dialyzačným katétrom, do skupiny so samotným gentamycínom alebo do skupiny s gentamycínom a NAC <strong>600 mg perorálne dvakrát denne</strong>. Protokol dokončilo 40 pacientov a priemerná dĺžka liečby bola takmer 15 dní. V skupine s NAC bola audiometricky definovaná ototoxicita menej častá. Štúdia však hodnotila sluch pomocou čistotónovej audiometrie, nie vestibulárnu funkciu. <a href="#odborny-zdroj-9">[9]</a></p>
+</div>
 
 <p>ISPD v odporúčaniach z roku 2022 navrhuje (stupeň <strong>2B</strong>) zvážiť doplnkové perorálne podávanie NAC na prevenciu aminoglykozidovej ototoxicity u pacientov s peritoneálnou dialýzou, ktorí aminoglykozid potrebujú. Podkladom sú malé randomizované štúdie hodnotiace sluchové prahy; ani jedna nehodnotila vestibulárnu funkciu. Toto odporúčanie nemožno zovšeobecniť na prevenciu gentamycínovej vestibulotoxicity ani na liečbu už vzniknutej vestibulárnej straty. <a href="#odborny-zdroj-10">[10]</a></p>
 
@@ -234,7 +238,7 @@ $articles[] = [
 
 <p id="odborny-zdroj-6"><small><em><strong>6. Prospektívna štúdia jednorazovej dávky:</strong> Chatterton S, Wang C, Satyan H, et al. A Prospective Study on the Vestibular Toxicity of Gentamicin in a Clinical Setting. <em>Otol Neurotol.</em> 2022;43(9):e1029–e1033. doi: <a href="https://doi.org/10.1097/MAO.0000000000003663" target="_blank" rel="noopener noreferrer">10.1097/MAO.0000000000003663</a>. PMID 36026605. <a href="https://pubmed.ncbi.nlm.nih.gov/36026605/" target="_blank" rel="noopener noreferrer">PubMed</a>.</em></small></p>
 
-<p id="odborny-zdroj-7"><small><em><strong>7. Farmakogenetické odporúčanie:</strong> McDermott JH, Wolf J, Hoshitsuki K, et al. Clinical Pharmacogenetics Implementation Consortium Guideline for the Use of Aminoglycosides Based on MT-RNR1 Genotype. <em>Clin Pharmacol Ther.</em> 2022;111(2):366–372. doi: <a href="https://doi.org/10.1002/cpt.2309" target="_blank" rel="noopener noreferrer">10.1002/cpt.2309</a>. PMID 34032273, PMCID PMC8613315. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8613315/" target="_blank" rel="noopener noreferrer">Plný text</a>.</em></small></p>
+<p id="odborny-zdroj-7" class="pdf-keep-together"><small><em><strong>7. Farmakogenetické odporúčanie:</strong> McDermott JH, Wolf J, Hoshitsuki K, et al. Clinical Pharmacogenetics Implementation Consortium Guideline for the Use of Aminoglycosides Based on MT-RNR1 Genotype. <em>Clin Pharmacol Ther.</em> 2022;111(2):366–372. doi: <a href="https://doi.org/10.1002/cpt.2309" target="_blank" rel="noopener noreferrer">10.1002/cpt.2309</a>. PMID 34032273, PMCID PMC8613315. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8613315/" target="_blank" rel="noopener noreferrer">Plný text</a>.</em></small></p>
 
 <p id="odborny-zdroj-8"><small><em><strong>8. Impulzný test hlavy:</strong> Weber KP, Aw ST, Todd MJ, et al. Horizontal head impulse test detects gentamicin vestibulotoxicity. <em>Neurology.</em> 2009;72(16):1417–1424. doi: <a href="https://doi.org/10.1212/WNL.0b013e3181a18652" target="_blank" rel="noopener noreferrer">10.1212/WNL.0b013e3181a18652</a>. PMID 19380701. <a href="https://pubmed.ncbi.nlm.nih.gov/19380701/" target="_blank" rel="noopener noreferrer">PubMed</a>.</em></small></p>
 
