@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 require_once __DIR__ . '/legal_data.php';
+require_once __DIR__ . '/auth.php';
 
 $info = legalInfo();
 $pageLastUpdated = formatUserDateTime($info['effectiveDate'], 'd.m.Y');
