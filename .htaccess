@@ -162,7 +162,7 @@ ServerSignature Off
 </Files>
 
 # Knižničné PHP súbory — prístupné len ako include, nie priamo cez web
-<FilesMatch "^(admin_menu|article_publisher|auth|avatar_upload|calc_subnav|calculator_disclaimer|calculator_patient_fields|calculators_common|clinical_trials_common|config_loader|db_config|drugs_common|email_verification|footer|head_meta|header|header_profile|insurance_codes|legal_data|legal_head|legal_notifications|legal_related|main_nav|medimpax_cta|mobile_verification|nastroj_subnav|newsletter_notifications|patient_articles_common|patient_insurance_select|pdf_generator|phone_utils|prevent_coefficients|prevent_model|profile_account_deletion|profile_archive|profile_form_address|profile_form_personal|providers_common|search_helpers|source_authors|totp|user_type_field)\.php$">
+<FilesMatch "^(admin_menu|article_publisher|auth|avatar_upload|calc_subnav|calculator_disclaimer|calculator_patient_fields|calculators_common|clinical_trials_common|config_loader|db_config|drugs_common|email_verification|footer|head_meta|header|header_profile|insurance_codes|legal_data|legal_head|legal_notifications|legal_related|main_nav|medimpax_cta|mobile_verification|nastroj_subnav|newsletter_notifications|patient_articles_common|patient_insurance_select|pdf_generator|phone_utils|prevent_coefficients|prevent_model|profile_account_deletion|profile_archive|profile_form_address|profile_form_personal|providers_common|search_helpers|source_authors|title_codebook|totp|user_type_field)\.php$">
     Require all denied
 </FilesMatch>
 
