@@ -9,7 +9,7 @@ if (-not $repoRoot) {
 
 $repoRoot = $repoRoot.Trim()
 $hooksDir = Join-Path $repoRoot "hooks"
-$requiredHooks = @("pre-commit", "post-commit", "deploy.sh", "deploy-ignore.txt")
+$requiredHooks = @("pre-commit", "post-commit", "post-merge", "deploy.sh", "deploy-ignore.txt")
 
 foreach ($name in $requiredHooks) {
     $path = Join-Path $hooksDir $name
@@ -27,7 +27,7 @@ try {
     }
 
     if ($IsLinux -or $IsMacOS) {
-        & chmod +x hooks/pre-commit hooks/post-commit hooks/deploy.sh
+        & chmod +x hooks/pre-commit hooks/post-commit hooks/post-merge hooks/deploy.sh
         if ($LASTEXITCODE -ne 0) {
             throw "Failed to mark hooks as executable."
         }
@@ -35,7 +35,7 @@ try {
 
     $configuredPath = (& git config --local --get core.hooksPath).Trim()
     Write-Host "Git hooks enabled: $configuredPath" -ForegroundColor Green
-    Write-Host "Commits now run validation, push and SFTP deploy." -ForegroundColor Cyan
+    Write-Host "Commits run validation, push and SFTP deploy; pulls/merges deploy too." -ForegroundColor Cyan
 }
 finally {
     Pop-Location

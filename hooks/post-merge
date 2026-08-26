@@ -1,0 +1,100 @@
+#!/usr/bin/env bash
+#
+# post-merge: nasadí zmeny, ktoré prišli cez `git pull` / `git merge`.
+#
+# Dôvod: `post-commit` sa viaže výlučne na LOKÁLNY `git commit`, takže commit
+# prijatý cez GitHub PR merge + `git pull` nikdy nespustil deploy. Produkcia
+# potom ticho driftovala (PR #3 2026-07-24, PR #4 2026-08-25 — fix právnych
+# stránok ležal 2 dni v gite, kým server vracal fatal error).
+#
+# Bázu deployu berieme prednostne z produkčného `deploy_info.php`, takže sa
+# dobehne aj drift nazbieraný skôr, nie len práve pullnuté commity.
+
+set -uo pipefail
+
+# Squash merge ($1 == 1) nechá zmeny len v indexe, HEAD ich ešte neobsahuje.
+if [[ ${1:-0} == 1 ]]; then
+	echo "[post-merge] Squash merge — deploy až po commite."
+	exit 0
+fi
+
+REPO_ROOT=$(git rev-parse --show-toplevel 2>/dev/null) || exit 0
+cd "$REPO_ROOT" || exit 1
+
+if ! git symbolic-ref --quiet --short HEAD >/dev/null 2>&1; then
+	echo "[post-merge] Detached HEAD; deploy preskakujem." >&2
+	exit 0
+fi
+BRANCH=$(git symbolic-ref --quiet --short HEAD)
+
+DEPLOY_SCRIPT="$REPO_ROOT/hooks/deploy.sh"
+if [[ ! -x $DEPLOY_SCRIPT && ! -f $DEPLOY_SCRIPT ]]; then
+	echo "[post-merge] Chýba deploy skript: $DEPLOY_SCRIPT" >&2
+	exit 1
+fi
+
+HEAD_SHA=$(git rev-parse HEAD)
+
+# Merge commit vzniknutý pullom ešte nie je na remote; produkcia nesmie bežať
+# na kóde, ktorý nie je pushnutý (rovnaké pravidlo ako v post-commit).
+REMOTE=$(git config --get "branch.$BRANCH.remote" || true)
+REMOTE=${REMOTE:-origin}
+MERGE_REF=$(git config --get "branch.$BRANCH.merge" || true)
+REMOTE_BRANCH=${MERGE_REF#refs/heads/}
+REMOTE_BRANCH=${REMOTE_BRANCH:-$BRANCH}
+UPSTREAM_REF="refs/remotes/$REMOTE/$REMOTE_BRANCH"
+
+if git rev-parse --verify "$UPSTREAM_REF" >/dev/null 2>&1; then
+	AHEAD=$(git rev-list --count "$UPSTREAM_REF..HEAD" 2>/dev/null || echo 0)
+	if ((AHEAD > 0)); then
+		echo "[post-merge] Vetva je $AHEAD commitov pred $REMOTE/$REMOTE_BRANCH; pushujem."
+		if ! git push "$REMOTE" "HEAD:refs/heads/$REMOTE_BRANCH"; then
+			echo "[post-merge] Push zlyhal; produkcia nebola zmenená." >&2
+			echo "[post-merge] Po oprave spusti: hooks/deploy.sh <base-ref>" >&2
+			exit 1
+		fi
+	fi
+fi
+
+# 1) Báza = commit, na ktorom reálne stojí produkcia (self-healing).
+BASE_REF=""
+REMOTE_COMMIT=$("$DEPLOY_SCRIPT" --remote-commit 2>/dev/null) || REMOTE_COMMIT=""
+# Prijmi len čistý hex SHA, nech sa prípadná hláška nikdy nevydáva za commit.
+if [[ $REMOTE_COMMIT =~ ^[0-9a-fA-F]{4,40}$ ]]; then
+	if git rev-parse --verify "${REMOTE_COMMIT}^{commit}" >/dev/null 2>&1; then
+		BASE_REF=$REMOTE_COMMIT
+		if [[ $(git rev-parse "$REMOTE_COMMIT") == "$HEAD_SHA" ]]; then
+			echo "[post-merge] Produkcia je v súlade s HEAD ($REMOTE_COMMIT); niet čo nasadiť."
+			exit 0
+		fi
+		# Zámerne bez slova "drift": commit, ktorý menil len ignorované cesty
+		# (napr. hooks/**), deploy_info.php neaktualizuje, takže server smie
+		# legitímne zaostávať. Rozdiel voči tejto báze je presne to, čo ešte
+		# nie je nasadené — či je prázdny, rozhodne deploy.sh.
+		BEHIND=$(git rev-list --count "$REMOTE_COMMIT..HEAD" 2>/dev/null || echo "?")
+		echo "[post-merge] Server je na $REMOTE_COMMIT, HEAD $(git rev-parse --short HEAD) (+$BEHIND commitov); dobieham rozdiel."
+	else
+		echo "[post-merge] Server hlási neznámy commit $REMOTE_COMMIT; použijem ORIG_HEAD." >&2
+	fi
+else
+	echo "[post-merge] Stav servera sa nepodarilo zistiť; použijem ORIG_HEAD." >&2
+fi
+
+# 2) Fallback = stav pred mergom.
+if [[ -z $BASE_REF ]]; then
+	if git rev-parse --verify ORIG_HEAD >/dev/null 2>&1; then
+		BASE_REF=$(git rev-parse ORIG_HEAD)
+		[[ $BASE_REF == "$HEAD_SHA" ]] && {
+			echo "[post-merge] Merge nezmenil HEAD; niet čo nasadiť."
+			exit 0
+		}
+	else
+		echo "[post-merge] Chýba ORIG_HEAD; nasadím len posledný commit." >&2
+	fi
+fi
+
+if [[ -n $BASE_REF ]]; then
+	"$DEPLOY_SCRIPT" "$BASE_REF"
+else
+	"$DEPLOY_SCRIPT"
+fi

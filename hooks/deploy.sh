@@ -4,20 +4,25 @@ set -uo pipefail
 
 usage() {
 	cat <<'EOF'
-Použitie: hooks/deploy.sh [--dry-run] [base-ref]
+Použitie: hooks/deploy.sh [--dry-run | --remote-commit] [base-ref]
 
 Bez base-ref nasadí zmeny z posledného commitu. S base-ref nasadí všetky
 zmeny od daného commitu po HEAD. --dry-run iba vypíše plán bez pripojenia.
+--remote-commit vypíše DEPLOY_COMMIT zo servera (na kontrolu driftu) a skončí.
 EOF
 }
 
 DRY_RUN=0
+REMOTE_COMMIT_ONLY=0
 BASE_REF=""
 
 while (($# > 0)); do
 	case "$1" in
 	--dry-run)
 		DRY_RUN=1
+		;;
+	--remote-commit)
+		REMOTE_COMMIT_ONLY=1
 		;;
 	-h | --help)
 		usage
@@ -55,6 +60,80 @@ fi
 if [[ -n $BASE_REF ]] && ! git rev-parse --verify "${BASE_REF}^{commit}" >/dev/null 2>&1; then
 	echo "[deploy] Neplatný base-ref: $BASE_REF" >&2
 	exit 1
+fi
+
+sftp_escape() {
+	local value=$1
+	value=${value//\\/\\\\}
+	value=${value//\"/\\\"}
+	printf '%s' "$value"
+}
+
+# Pripojenie sa rozlisuje len tu, aby --remote-commit aj samotny deploy pouzivali
+# rovnaky ciel, kluc aj remote cestu.
+setup_sftp() {
+	SFTP_TARGET=${NEFRO_SFTP_TARGET:-""}
+	REMOTE_PATH=${NEFRO_REMOTE_PATH:-"/data/8/6/868f981d-e598-4e71-b7f5-246f2e180cef/polascin.net/sub/nefro"}
+	REMOTE_PATH=${REMOTE_PATH%/}
+
+	declare -g -a SFTP_OPTIONS=(-q -o BatchMode=yes -o ConnectTimeout=20 -o StrictHostKeyChecking=accept-new)
+
+	# Bez strojovo lokálneho cieľa zostáva zachovaný pôvodný explicitný prístup.
+	# Vďaka tomu konfigurácia Macu nemení správanie na synchronizovanom Windows stroji.
+	if [[ -z $SFTP_TARGET ]]; then
+		SFTP_HOST=${NEFRO_SFTP_HOST:-"shell.r1.websupport.sk"}
+		SFTP_USER=${NEFRO_SFTP_USER:-"uid58858"}
+		SFTP_TARGET="${SFTP_USER}@${SFTP_HOST}"
+		SFTP_OPTIONS+=(-P "${NEFRO_SFTP_PORT:-26650}")
+		SFTP_KEY=${NEFRO_SFTP_KEY:-"$HOME/.ssh/nefro_deploy"}
+		if [[ ! -f $SFTP_KEY ]]; then
+			# Pri --remote-commit musí na stdout ísť výlučne SHA, inak by volajúci
+			# dostal ako "commit" túto hlášku; nenulový koniec ho pošle na fallback.
+			if ((REMOTE_COMMIT_ONLY)); then
+				echo "[deploy] SSH kľúč nenájdený: $SFTP_KEY" >&2
+				exit 1
+			fi
+			echo "[deploy] SSH kľúč nenájdený; tento stroj nemá deploy oprávnenie: $SFTP_KEY"
+			exit 0
+		fi
+		SFTP_OPTIONS+=(-i "$SFTP_KEY")
+	fi
+
+	for command in sftp mktemp; do
+		if ! command -v "$command" >/dev/null 2>&1; then
+			echo "[deploy] Chýba príkaz: $command" >&2
+			exit 1
+		fi
+	done
+}
+
+# Vypíše DEPLOY_COMMIT z produkčného deploy_info.php a skončí. Pri neúspechu
+# končí nenulovo, aby si volajúci mohol zvoliť vlastný fallback.
+if ((REMOTE_COMMIT_ONLY)); then
+	setup_sftp
+	RC_BATCH=$(mktemp "${TMPDIR:-/tmp}/nefro_rc_batch_XXXXXX") || exit 1
+	RC_INFO=$(mktemp "${TMPDIR:-/tmp}/nefro_rc_info_XXXXXX") || {
+		rm -f "$RC_BATCH"
+		exit 1
+	}
+	trap 'rm -f "$RC_BATCH" "$RC_INFO"' EXIT
+	{
+		printf 'get "%s" "%s"\n' \
+			"$(sftp_escape "$REMOTE_PATH/deploy_info.php")" \
+			"$(sftp_escape "$RC_INFO")"
+		printf 'quit\n'
+	} >"$RC_BATCH"
+	if ! sftp "${SFTP_OPTIONS[@]}" -b "$RC_BATCH" "$SFTP_TARGET" >/dev/null 2>&1; then
+		echo "[deploy] Nepodarilo sa načítať vzdialený deploy_info.php." >&2
+		exit 1
+	fi
+	REMOTE_COMMIT=$(sed -n "s/.*DEPLOY_COMMIT'[[:space:]]*,[[:space:]]*'\([0-9a-fA-F]\{4,40\}\)'.*/\1/p" "$RC_INFO" | head -1)
+	if [[ -z $REMOTE_COMMIT ]]; then
+		echo "[deploy] Vo vzdialenom deploy_info.php chýba DEPLOY_COMMIT." >&2
+		exit 1
+	fi
+	printf '%s\n' "$REMOTE_COMMIT"
+	exit 0
 fi
 
 IGNORE_FILE=${NEFRO_DEPLOY_IGNORE_FILE:-"$REPO_ROOT/hooks/deploy-ignore.txt"}
@@ -109,13 +188,6 @@ validate_path() {
 	fi
 }
 
-sftp_escape() {
-	local value=$1
-	value=${value//\\/\\\\}
-	value=${value//\"/\\\"}
-	printf '%s' "$value"
-}
-
 for path in ${UPLOADS[@]+"${UPLOADS[@]}"} ${DELETES[@]+"${DELETES[@]}"}; do
 	validate_path "$path" || exit 1
 done
@@ -132,33 +204,7 @@ if ((DRY_RUN)); then
 	exit 0
 fi
 
-SFTP_TARGET=${NEFRO_SFTP_TARGET:-""}
-REMOTE_PATH=${NEFRO_REMOTE_PATH:-"/data/8/6/868f981d-e598-4e71-b7f5-246f2e180cef/polascin.net/sub/nefro"}
-REMOTE_PATH=${REMOTE_PATH%/}
-
-declare -a SFTP_OPTIONS=(-q -o BatchMode=yes -o ConnectTimeout=20 -o StrictHostKeyChecking=accept-new)
-
-# Bez strojovo lokálneho cieľa zostáva zachovaný pôvodný explicitný prístup.
-# Vďaka tomu konfigurácia Macu nemení správanie na synchronizovanom Windows stroji.
-if [[ -z $SFTP_TARGET ]]; then
-	SFTP_HOST=${NEFRO_SFTP_HOST:-"shell.r1.websupport.sk"}
-	SFTP_USER=${NEFRO_SFTP_USER:-"uid58858"}
-	SFTP_TARGET="${SFTP_USER}@${SFTP_HOST}"
-	SFTP_OPTIONS+=(-P "${NEFRO_SFTP_PORT:-26650}")
-	SFTP_KEY=${NEFRO_SFTP_KEY:-"$HOME/.ssh/nefro_deploy"}
-	if [[ ! -f $SFTP_KEY ]]; then
-		echo "[deploy] SSH kľúč nenájdený; tento stroj nemá deploy oprávnenie: $SFTP_KEY"
-		exit 0
-	fi
-	SFTP_OPTIONS+=(-i "$SFTP_KEY")
-fi
-
-for command in sftp mktemp; do
-	if ! command -v "$command" >/dev/null 2>&1; then
-		echo "[deploy] Chýba príkaz: $command" >&2
-		exit 1
-	fi
-done
+setup_sftp
 
 BATCH_FILE=$(mktemp "${TMPDIR:-/tmp}/nefro_deploy_batch_XXXXXX") || exit 1
 DEPLOY_INFO=$(mktemp "${TMPDIR:-/tmp}/nefro_deploy_info_XXXXXX") || {

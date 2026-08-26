@@ -32,6 +32,37 @@ Strojovo lokálne nastavenie sa číta z `~/.config/nefro/deploy.env`, takže Ma
 a Windows môžu používať odlišné SSH identity bez synchronizácie cez repozitár.
 Na Macu je v tomto súbore nastavený host `websupport` z `~/.ssh/config`.
 
+## Priebeh pullu / mergu
+
+`post-commit` sa viaže výlučne na **lokálny** `git commit`. Commit prijatý cez
+GitHub PR merge + `git pull` ho teda nikdy nespustil a produkcia ticho driftovala
+(PR #3 2026-07-24; PR #4 2026-08-25 — oprava právnych stránok ležala dva dni
+v gite, kým `privacy.php`, `terms.php` a `cookies.php` vracali fatal error).
+
+`post-merge` túto medzeru zatvára:
+
+1. Squash merge preskočí (zmeny sú zatiaľ len v indexe, nie v `HEAD`).
+1. Ak je vetva pred svojím upstreamom (merge commit z non-fast-forward pullu),
+   najprv pushne; pri zlyhaní pushu produkciu nemení.
+1. Bázu deployu zistí cez `deploy.sh --remote-commit`, teda z commitu, na ktorom
+   produkcia **reálne** stojí. Dobehne tak aj drift nazbieraný skôr, nie len
+   práve pullnuté commity. Ak sa server nepodarí osloviť (alebo hlási commit,
+   ktorý lokálne neexistuje), padá na `ORIG_HEAD`.
+1. Ak sa server rovná `HEAD`, nerobí nič.
+
+Pozn.: `post-merge` nevzniká pri `git pull --rebase` — tam Git spúšťa
+`post-rewrite`. Projekt má `pull.rebase=false`, takže bežný pull hook spustí.
+
+## Kontrola driftu
+
+```bash
+# Na akom commite reálne stojí produkcia?
+hooks/deploy.sh --remote-commit
+
+# Porovnanie s lokálnym HEAD
+test "$(hooks/deploy.sh --remote-commit)" = "$(git rev-parse --short HEAD)" && echo "v súlade" || echo "DRIFT"
+```
+
 ## Manuálny deploy
 
 ```bash
@@ -40,6 +71,9 @@ hooks/deploy.sh --dry-run
 
 # Dohnanie všetkých zmien od konkrétneho commitu
 hooks/deploy.sh <base-ref>
+
+# Commit, na ktorom stojí produkcia (číta vzdialený deploy_info.php)
+hooks/deploy.sh --remote-commit
 ```
 
 Súbory v `hooks/deploy-ignore.txt` sa nikdy neposielajú do verejného web rootu.
