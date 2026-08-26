@@ -3,6 +3,7 @@
 .audit-history.md
 .agents/**
 .claude/**
+.deployignore
 .doaudit.md
 .gitattributes
 .github/**
@@ -16,6 +17,7 @@
 .vscode/**
 .yamllint.yaml
 AGENTS.md
+DEPLOY.md
 PLAN_NEPHRORESOURCE.md
 PUBLIKOVANIE_*.md
 README.md
@@ -33,3 +35,4 @@ scratch/**
 *.ps1
 sync_article_pdfs.sh
 tools/**
+trunk.yaml
