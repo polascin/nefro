@@ -65,7 +65,13 @@ poľom `category` a tým, kde sú vypísané.
    Hlavičky `<thead>` majú mať `<th scope="col">`, riadkové hlavičky `<th scope="row">`.
 6. **Overenie pred commitom:** `php -l add_<slug>_article.php` a
    `php tools/phpstan.phar analyse add_<slug>_article.php --no-progress`
-   (0 chýb nad baseline; v šablóne nechaj `?? '(bez titulu)'` — PHPStan ju neflaguje).
+   Riadok `?? '(bez titulu)'` v šablóne **nechaj** — PHPStan ho však pri každom
+   novom článku nahlási (`nullCoalesce.offset`), pretože pozná presný tvar poľa.
+   Je to očakávané: pridaj pre nový súbor položku do `phpstan-baseline.neon`.
+   Najrýchlejšie: `php tools/phpstan.phar analyse add_<slug>_article.php \
+   --generate-baseline <tmp>.neon --no-progress`, z výsledku prepíš absolútnu
+   cestu na relatívnu a blok pripoj na koniec `phpstan-baseline.neon`.
+   (Celoprojektové `--generate-baseline` zlyháva na internej chybe — nepoužívaj ho.)
 7. **Commit** (post-commit hook nahrá SFTP na produkciu):
    `git add add_<slug>_article.php img/… && git commit -m "content(<sekcia>): <titul>"`
 8. **Spusti na serveri** cez SSH (vloží do DB + pošle newsletter avízo + vygeneruje PDF):
@@ -75,7 +81,10 @@ poľom `category` a tým, kde sú vypísané.
    ```
    Očakávaný výstup: `1 vložených, 0 aktualizovaných … Zaradených do fronty avíz: N`.
 9. **Sync PDF do gitu:** `sh sync_article_pdfs.sh` (stiahne PDF zo servera + commitne).
-10. **Over live:** `curl -s "https://nefro.polascin.net/article.php?slug=<slug>"` —
+10. **Over live:** ⚠️ `curl` na produkciu vracia **HTTP 466 „Access Forbidden"** —
+   blokuje ho WAF hostingu, nejde o chybu článku. Over radšej priamo v prehliadači,
+   alebo dotazom do DB cez SSH (`SELECT id, is_published, LENGTH(content), pdf_file
+   FROM articles WHERE slug = ...`). Ak predsa použiješ HTTP, čakaj —
    HTTP 200, žiadny `Fatal error`, jeden `<title>`, správna typografia.
 
 > 👥 **Pôvodní autori zdroja (krok navyše, ak je článok spracovaním cudzieho
