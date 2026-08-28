@@ -200,7 +200,7 @@ $total = count($articles);
 if (php_sapi_name() === 'cli') {
     echo "\n";
     echo "──────────────────────────────────────────────────────\n";
-    echo "Migrácia článku: " . ($articles[0]['title'] ?? '(bez titulu)') . "\n";
+    echo "Migrácia článku: " . $articles[0]['title'] . "\n";
     echo "──────────────────────────────────────────────────────\n";
     echo "Výsledok: $inserted z $total článkov bolo vložených.\n";
     echo "Preskočení (slug už existuje): $skipped\n";

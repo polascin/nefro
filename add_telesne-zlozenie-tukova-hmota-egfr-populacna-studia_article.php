@@ -158,7 +158,7 @@ $total = count($articles);
 if (php_sapi_name() === 'cli') {
     echo "\n";
     echo "──────────────────────────────────────────────────────\n";
-    echo "Migrácia článku: " . ($articles[0]['title'] ?? '(bez titulu)') . "\n";
+    echo "Migrácia článku: " . $articles[0]['title'] . "\n";
     echo "──────────────────────────────────────────────────────\n";
     echo "Výsledok: $inserted vložených, $updated aktualizovaných z $total článkov.\n";
     echo "Preskočení (bez zmeny):        $skipped\n";

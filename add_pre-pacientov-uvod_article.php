@@ -127,7 +127,7 @@ $total = count($articles);
 
 if (php_sapi_name() === 'cli') {
     echo "\n──────────────────────────────────────────────────────\n";
-    echo "Popularizačný článok: " . ($articles[0]['title'] ?? '(bez titulu)') . "\n";
+    echo "Popularizačný článok: " . $articles[0]['title'] . "\n";
     echo "──────────────────────────────────────────────────────\n";
     echo "Výsledok: $inserted z $total vložených. Preskočené: $skipped. Avíza: $queuedTotal\n";
     if (!empty($errors)) {
