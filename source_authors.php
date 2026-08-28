@@ -188,6 +188,9 @@ function getSourceArticleAuthors(): array {
         'umela-inteligencia-nefrologia-co-vieme-limity' => ['Prabhat Singh', 'Lokesh Goyal', 'Deobrat C Mallick', 'Salim R Surani', 'Nayanjyoti Kaushik', 'Deepak Chandramohan', 'Prathap K Simhadri'],
         'umela-inteligencia-sucha-hmotnost-hemodialyza' => ['Hae Ri Kim', 'Hong Jin Bae', 'Jae Wan Jeon', 'Young Rok Ham', 'Ki Ryang Na', 'Kang Wook Lee', 'Yun Kyong Hyon', 'Dae Eun Choi'],
         'vasopresin-nezavisla-cesta-regulacie-vody-adpkd' => ['Mohamad Hadla', 'Jean Marc Mardirossian', 'Daniel G. Bichet', 'Abdul Hamid Borghol', 'Georges Abboud', 'Ahmad Ghanem', 'Eduardo N. Chini', 'Peter C. Harris', 'Vicente E. Torres', 'Seth L. Alper', 'Volker Vallon', 'Fouad T. Chebib'],
+        // Autori spracovanej práce Sci Rep 2026;16(1), doi 10.1038/s41598-026-62827-2
+        // (PMID 42547796) — 8 mien overených cez PubMed eutils 2026-08-28.
+        'vegetarianska-strava-riziko-ckd-uk-biobank' => ['Catharina J. Candussi', 'William Bell', 'Marko Mutapcic', 'Alysha S. Thompson', 'Sabine Rohrmann', 'Aedín Cassidy', 'Tilman Kühn', 'Martina Gaggl'],
         'victory-vitamin-c-tazke-popaleniny-nefrologicke-signaly' => ['Christian Stoppe', 'Aileen Hill', 'Leopoldo C. Cancio', 'Andrew G. Day', 'Kaitlin A. Pruskowski', 'Alexis F. Turgeon', 'Daren K. Heyland'],
         'vitamin-d-klinicka-prax-vysetrovanie-suplementacia-rizika' => ['Marie B. Demay', 'Anastassios G. Pittas', 'Daniel D. Bikle', 'Dima L. Diab', 'Mairead E. Kiely', 'Marise Lazaretti-Castro', 'Paul Lips', 'Deborah M. Mitchell', 'M. Hassan Murad', 'Shelley Powers', 'Sudhaker D. Rao', 'Robert Scragg', 'John A. Tayek', 'Amy M. Valent', 'Judith M. E. Walsh', 'Christopher R. McCartney'],
         'vona-cokolady-vykon-pri-silovom-treningu' => ['Xiaohan Fan', 'Hengzhi Deng', 'Jia Yang Ng', 'Ahmad Amirul Hazim bin Ab Aziz', 'Mohamed Nashrudin bin Naharudin'],
