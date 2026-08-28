@@ -224,7 +224,10 @@ HTML,
 ];
 
 $result = upsertArticles($pdo, $articles, 'odborne', [
-    'enqueue_newsletter' => true,
+    // Publikované dodatočne pri audite (Beh 99) — pôvodný beh skriptu na serveri
+    // chýbal, článok vracal 404. Avízo sa neposiela, aby nešlo o oneskorené
+    // upozornenie na článok spred niekoľkých dní.
+    'enqueue_newsletter' => false,
     'regenerate_pdf' => true,
     'log_prefix' => 'add_nekontrolovana_rezistentna_hypertenzia_aldosteronova_os',
 ]);

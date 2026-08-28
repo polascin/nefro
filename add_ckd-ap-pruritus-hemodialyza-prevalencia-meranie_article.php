@@ -18,8 +18,8 @@ require_once __DIR__ . '/article_publisher.php';
 $articles = [];
 
 $articles[] = [
-    'title'        => 'Svrbenie na dialýze: prečo sa udávaná prevalencia líši dvojnásobne a čo pacient sám nepovie',
-    'slug'         => 'ckd-ap-pruritus-hemodialyza-prevalencia-meranie',
+    'title'        => 'Svrbenie (pruritus) na dialýze: prečo sa udávaná prevalencia líši dvojnásobne a čo pacient sám nepovie',
+    'slug'         => 'svrbenie-pruritus-na-dialyze-preco-sa-udavana-prevalencia-lisi-dvojnasobne-a-co-pacient-sam-nepovie',
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
@@ -85,18 +85,18 @@ $articles[] = [
 <h2>Prečo 16,3 % nie je „prevalencia svrbenia pri dialýze“</h2>
 
 <ol>
-  <li><strong>Kategória „bez pruritu“ neznamená, že pacient nesvrbí.</strong> Znamená skóre 5 až 8 na škále, ktorej minimum je 5. Pacient, ktorý svrbí občas a mierne, sa do tejto kategórie dostane bez ťažkostí.</li>
-  <li><strong>Hranica pre „stredne ťažký až ťažký“ nepochádza z pôvodnej publikácie škály.</strong> Práca, ktorá 5-D zaviedla, uvádza len teoretický rozsah 5 až 25 a žiadne kategórie závažnosti nedefinuje. Použitý prah pochádza z neskoršej taiwanskej práce, ktorá kategórie odvodila lineárnou regresiou voči číselnej škále u 409 dialyzovaných v jedinom centre – bez analýzy ROC a bez uvedenia senzitivity či špecificity. V tejto štúdii sa navyše skóre 11,5 zaokrúhľovalo nahor na 12, takže skutočný prah bol 11,5.</li>
+  <li><strong>Kategória „bez pruritu“ neznamená, že pacienta nesvrbí.</strong> Znamená skóre 5 až 8 na škále, ktorej minimum je 5. Pacient, ktorého občas a mierne svrbí, sa do tejto kategórie dostane bez ťažkostí.</li>
+  <li><strong>Hranica pre „stredne ťažký až ťažký“ nepochádza z pôvodnej publikácie škály.</strong> Práca, ktorá 5-D zaviedla, uvádza len teoretický rozsah 5 až 25 a žiadne kategórie závažnosti nedefinuje. Použitý prah pochádza z neskoršej taiwanskej práce, ktorá kategórie odvodila lineárnou regresiou na číselnej škále u 409 dialyzovaných v jedinom centre – bez analýzy ROC a bez uvedenia senzitivity či špecificity. V tejto štúdii sa navyše skóre 11,5 zaokrúhľovalo nahor na 12, takže skutočný prah bol 11,5.</li>
   <li><strong>Škála 5-D bola vyvinutá na meranie zmeny, nie na skríning.</strong> Jej pôvodným určením bolo sledovať vývoj svrbenia v čase v klinických skúšaniach u pacientov, ktorí pruritus <em>majú</em> – prítomnosť svrbenia bola vstupným kritériom. Použitie ako prevalenčného skríningu v neselektovanej dialyzačnej populácii je mimo overeného účelu nástroja.</li>
   <li><strong>Vylučovacie kritériá súbor systematicky očistili.</strong> Vyradení boli pacienti s psychiatrickou diagnózou alebo klinicky zjavným psychiatrickým stavom, s aktívnym dermatologickým ochorením, s cholestázou, s malignitou, s akútnou infekciou a tí, ktorí v poslednom mesiaci začali novú systémovú antipruritickú liečbu. Vzniká tak „čistý“ obraz, ktorý sa vzďaľuje bežnej ambulancii – a vylúčenie psychiatrickej komorbidity pravdepodobne záťaž symptómom podhodnocuje, keďže depresia a úzkosť vnímanie aj hlásenie svrbenia priamo ovplyvňujú.</li>
   <li><strong>Iné kohorty udávajú výrazne viac.</strong> Francúzska prospektívna multicentrická štúdia so systematickým skríningom udáva stredne ťažký až ťažký pruritus u 23,5 %, novšie európske prehľady 31 až 40 %. Rozdiel autorky samy pripisujú odlišným nástrojom a prahom.</li>
 </ol>
 
-<p>Praktický dôsledok: <strong>prevalencia symptómu je funkciou toho, čím a s akou hranicou ho meriame.</strong> Číslo 16,3 % platí pre túto škálu, tento prah a tento súbor. Prenášať ho na slovenskú dialyzačnú populáciu ako „každý šiesty“ by bolo nepresné oboma smermi.</p>
+<p>Praktický dôsledok: <strong>prevalencia symptómu je funkciou toho, čím a s akou hranicou ho meriame.</strong> Číslo 16,3 % platí pre túto škálu, tento prah a tento súbor. Prenášať ho na slovenskú dialyzačnú populáciu ako „každý šiesty“ by bolo nepresné v oboch smeroch.</p>
 
 <h2>Čo je na práci naozaj cenné</h2>
 
-<p>Ťažisko hodnoty nie je v prevalencii, ale v dvoch iných zisteniach.</p>
+<p>Ťažisko hodnoty nie je v prevalencii, ale v dvoch ďalších zisteniach.</p>
 
 <p><strong>Prvé: liečba, ktorú pacienti dostávajú, im väčšinou nepomáha.</strong> Nejaký liek na svrbenie pravidelne užívalo 212 z 294 pacientov (72,1 %), z toho perorálne antihistaminiká 143 (48,6 %) a krémy alebo emolienciá 96 (32,7 %). Účinok hodnotili takto:</p>
 
@@ -131,7 +131,7 @@ $articles[] = [
 
 <p>Takmer polovica liečených teda nemá zo svojej liečby žiaden úžitok, pričom najčastejšie predpisovanou skupinou sú antihistaminiká – lieky, ktorých neúčinnosť pri uremickom prurite je patofyziologicky očakávaná, pretože svrbenie tu nie je histamínovo sprostredkované.</p>
 
-<p><em>Poznámka k údajom: pôvodná tabuľka uvádza tieto podiely vztiahnuté na celý súbor 294 pacientov (34,0 %, 26,5 % a 11,6 %). Vyššie uvedené podiely sú prepočítané na 212 skutočných užívateľov liekov, čo je klinicky zmysluplnejší menovateľ.</em></p>
+<p><em>Poznámka k údajom: pôvodná tabuľka uvádza tieto podiely vzťahované na celý súbor 294 pacientov (34,0 %, 26,5 % a 11,6 %). Vyššie uvedené podiely sú prepočítané na 212 skutočných užívateľov liekov, čo je klinicky zmysluplnejší menovateľ.</em></p>
 
 <p><strong>Druhé: pacienti symptóm nehlásia.</strong> Kvalitatívna fáza zahrnula všetkých 48 osôb so stredne ťažkým až ťažkým svrbením, každú aspoň v dvoch pološtruktúrovaných rozhovoroch. Vynorili sa štyri témy: bremeno pruritu (narušený spánok, emočná záťaž, stigma, kolísanie intenzity a jeho prijímanie ako nevyhnutnej súčasti liečby), zvládacie stratégie (chlad, emolienciá, lieky s útlmom), <strong>bariéry v komunikácii</strong> (váhanie ozvať sa, keď je personál zaneprázdnený, alebo keď má pacient pocit, že sa symptóm zľahčuje) a očakávania od starostlivosti (rozpor medzi očakávaným riešením a vnímaným dočasným efektom).</p>
 
@@ -142,8 +142,8 @@ $articles[] = [
 <p>Vo viacrozmernom modeli boli s vyšším rizikom stredne ťažkého až ťažkého svrbenia spojené komorbidné chronické ochorenie (pomer šancí 2,399; 95 % IS 1,126–5,112) a <em>predchádzajúca edukácia o prurite</em> (3,145; 1,258–7,859), s nižším rizikom manželský stav (0,418; 0,202–0,867). Pohlavie ani vek významné neboli.</p>
 
 <ul>
-  <li><strong>Edukácia svrbenie nezhoršuje.</strong> Ide o učebnicovú protopatickú zaujatosť: edukáciu dostali práve tí, ktorí mali ťažšie príznaky. Autorky to samy pripúšťajú a označujú za reaktívne poskytovanie starostlivosti. Číslo nemožno interpretovať prognosticky ani kauzálne.</li>
-  <li><strong>Manželstvo je zástupná premenná</strong> pre psychosociálnu podporu, možno aj pre ochotu symptóm nahlásiť – nie ochranný faktor.</li>
+  <li><strong>Edukácia svrbenie nezhoršuje.</strong> Ide o učebnicovú protopatickú zaujatosť: edukáciu dostali práve tí, ktorí mali ťažšie príznaky. Autorky to samé pripúšťajú a označujú to za reaktívne poskytovanie starostlivosti. Číslo nemožno interpretovať prognosticky ani kauzálne.</li>
+  <li><strong>Manželstvo je zástupná premenná</strong> pre psychosociálnu podporu, možno aj pre ochotu nahlásiť symptómy – nie je to ochranný faktor.</li>
   <li><strong>„Komorbidita“ je binárny súhrn</strong> spájajúci diabetes, hypertenziu a srdcové ochorenie; nehovorí, ktorá z nich je relevantná.</li>
   <li><strong>Model je poddimenzovaný.</strong> Na 48 udalostí pripadá šesť prediktorových stupňov voľnosti a odhad pre edukáciu stojí na deviatich udalostiach v 27-člennej exponovanej skupine, čomu zodpovedajú aj široké intervaly.</li>
   <li><strong>Chýba adjustácia na klinické determinanty.</strong> V práci sa nevyskytuje Kt/V, fosfát, vápnik, parathormón, albumín, β2-mikroglobulín, hemoglobín ani xeróza – teda presne tie premenné, ktoré pri uremickom prurite zvažujeme ako prvé.</li>
@@ -184,7 +184,7 @@ $articles[] = [
     <tr>
       <th scope="row">Predchádzajúca edukácia je spojená s ťažším svrbením</th>
       <td>Potvrdené, ale zavádzajúco</td>
-      <td>Ide o obrátenú príčinnosť: edukáciu dostali pacienti s horšími príznakmi. Autorky to samy uvádzajú.</td>
+      <td>Ide o obrátenú príčinnosť: edukáciu dostali pacienti s horšími príznakmi. Autorky to samé uvádzajú.</td>
     </tr>
     <tr>
       <th scope="row">Takmer polovica liečených nemá zo svojej liečby účinok</th>
@@ -203,9 +203,9 @@ $articles[] = [
 <h2>Čo z toho vyplýva pre dialyzačnú ambulanciu</h2>
 
 <ol>
-  <li><strong>Pýtať sa aktívne a pravidelne.</strong> Bez cielenej otázky sa symptóm nedozvieme – to je najlepšie doložené zistenie celej práce. Stačí jedna otázka pri mesačnej kontrole.</li>
-  <li><strong>Použiť jeden nástroj a držať sa ho.</strong> Číselná škála 0 až 10 alebo 5-D sú obe použiteľné; dôležitejšie než výber je, aby sa u toho istého pacienta nemenil a aby sa hodnota zaznamenávala.</li>
-  <li><strong>Nezostať pri antihistaminikách.</strong> Ich rozšírené podávanie je zvyk, nie dôkaz; polovica liečených z nich nemá úžitok a u starších pacientov prinášajú útlm a riziko pádov.</li>
+  <li><strong>Pýtať sa aktívne a pravidelne.Bez cielenej otázky sa o symptóme nedozvieme – to je najlepšie doložené zistenie celej práce. Stačí jedna otázka pri mesačnej kontrole.</li>
+  <li><strong>Použiť jeden nástroj a držať sa ho.</strong> Číselná škála 0 až 10 alebo 5-D sú obe použiteľné; dôležitejšie než výber je, aby sa u toho istého pacienta nemenila a aby sa hodnota zaznamenávala.</li>
+  <li><strong>Nezostať pri antihistaminikách.</strong> Ich rozšírené podávanie je zvyk, nie dôkaz; polovica liečených z nich nemá úžitok a u starších pacientov prináša útlm a riziko pádov.</li>
   <li><strong>Prejsť odstrániteľné príčiny.</strong> Xerózu, dávku dialýzy, fosfátovo-kalciovú rovnováhu a parathormón, anémiu, liekovú anamnézu a kožné ochorenie, ktoré s obličkami nesúvisí.</li>
   <li><strong>Vedieť, že existujú cielené možnosti.</strong> Súčasné európske prehľady k liečbe pruritu pri dialýze uvádzajú aj gabapentinoidy, fototerapiu a agonisty κ-opioidných receptorov – tieto údaje však pochádzajú z inej literatúry než z opisovanej štúdie.</li>
   <li><strong>Zmeniť prostredie rozhovoru.</strong> Ak pacient váha ozvať sa, keď je personál zaneprázdnený, pomôže zaradiť otázku na svrbenie do pevnej štruktúry kontroly, nie ju ponechať na jeho iniciatívu.</li>
@@ -213,11 +213,11 @@ $articles[] = [
 
 <h2>Poznámka k spoľahlivosti zdroja</h2>
 
-<p>Práca je voľne dostupná a jej kvalitatívna časť je poctivo urobená, obsahuje však aj nezrovnalosti, ktoré redakčná kontrola nezachytila: vekové kategórie sú v dvoch tabuľkách obsadené navzájom opačne a časť podielov v tabuľke liečby má odlišné menovatele bez upozornenia. Z tohto dôvodu tento text nepreberá zo štúdie žiadne vekové údaje. Sekundárna spravodajská správa o štúdii navyše pripisuje autorkám tvrdenie o prenositeľnosti na severoamerickú populáciu, ktoré sa v pôvodnom článku nenachádza.</p>
+<p>Práca je voľne dostupná a jej kvalitatívna časť je poctivo urobená, obsahuje však aj nezrovnalosti, ktoré redakčná kontrola nezachytila: vekové kategórie sú v dvoch tabuľkách obsadené navzájom opačne a časť podielov v tabuľke liečby má odlišné menovatele bez upozornenia. Z tohto dôvodu tento text nepreberá zo štúdie žiadne vekové údaje. Sekundárna spravodajská správa o štúdii navyše autorkám pripisuje tvrdenie o prenositeľnosti na severoamerickú populáciu, ktoré sa v pôvodnom článku nenachádza.</p>
 
 <h2>Záver</h2>
 
-<p>Zo štúdie si netreba odniesť číslo, ale mechanizmus. Prevalencia symptómu závisí od nástroja a prahu, takže rozdiel medzi 16 a 40 % nie je sporom o pacientov, ale o meranie. Klinicky použiteľné zistenie je iné a nemenej dôležité: <strong>pacienti o svrbení nehovoria, dostávajú liečbu, ktorá im v polovici prípadov nepomáha, a s oboma vecami vieme niečo urobiť hneď.</strong></p>
+<p>Zo štúdie si netreba odniesť číslo, ale mechanizmus. Prevalencia symptómu závisí od nástroja a prahu, takže rozdiel medzi 16 a 40 % nie je sporom o pacientov, ale o meraní. Klinicky použiteľné zistenie je iné a nemenej dôležité: <strong>pacienti o svrbení nehovoria, dostávajú liečbu, ktorá im v polovici prípadov nepomáha, a s oboma vecami vieme niečo urobiť hneď.</strong></p>
 
 <h2>Súvisiace články</h2>
 
@@ -239,7 +239,7 @@ $articles[] = [
 
 <p><small><em><strong>Súčasný prehľad diagnostiky a liečby:</strong> Latus J, Lanot A, Ständer S, Sanchez-Alvarez E, Aucella F, Yosipovitch G. CKD-associated pruritus in haemodialysis: a road map for diagnosis and treatment. <em>Clinical Kidney Journal</em>. 2025;18(5):sfaf096. doi: 10.1093/ckj/sfaf096. <a href="https://doi.org/10.1093/ckj/sfaf096" target="_blank" rel="noopener noreferrer">Plný text</a>.</em></small></p>
 
-<p><small><em><strong>Poznámka k dôkazovému základu:</strong> Bibliografické údaje, autorstvo aj všetky číselné výsledky boli overené 23. augusta 2026 z otvoreného plného textu spracovanej práce, z PubMedu a z Crossrefu. Podiely vnímaného účinku liečby sú vlastným prepočtom na počet skutočných užívateľov liekov; pôvodná práca ich vzťahuje na celý súbor. Vekové údaje sa z dôvodu vnútornej nezrovnalosti v pôvodných tabuľkách neuvádzajú.</em></small></p>
+<p><small><em><strong>Poznámka k dôkazovému základu:</strong> Bibliografické údaje, autorstvo aj všetky číselné výsledky boli overené 23. augusta 2026 z otvoreného plného textu spracovanej práce, z PubMedu a z Crossrefu. Podiely vnímaného účinku liečby sú vlastným prepočtom na počet skutočných užívateľov liekov; pôvodná práca ich vzťahuje na celý súbor užívateľov. Vekové údaje sa z dôvodu vnútornej nezrovnalosti v pôvodných tabuľkách neuvádzajú.</em></small></p>
 HTML,
 ];
 
