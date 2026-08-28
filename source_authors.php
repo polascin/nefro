@@ -87,6 +87,9 @@ function getSourceArticleAuthors(): array {
         'iga-nefropatia-kdigo-2025-kdoqi' => ['Isabelle Ayoub', 'Gaia Coppock', 'Shikha Wadhwani', 'Timothy Yau'],
         'ked-sa-citime-chori-co-medicina-prehliada-nefrologia' => ['Arya Anthony Kamyab'],
         'kedy-zacat-krt-pri-aki' => ['Marlies Ostermann', 'Sean M Bagshaw', 'Nuttha Lumlertgul', 'Ron Wald'],
+        // Autori spracovanej práce Clin Gastroenterol Hepatol 2026, doi 10.1016/j.cgh.2026.04.035
+        // (PMID 42385787) — 23 mien overených cez PubMed 2026-08-28.
+        'kava-pecen-cirhoza-hcc-uk-biobank-nefrologia' => ['Hyun-Seok Kim', 'Mohammad Saeid Rezaee-Zavareh', 'Yufeng Wang', 'Abdelrahman M. Attia', 'Minsun Kwak', 'Seungwon Burm', 'Derin Celtik', 'Daniel Legaspi', 'Osama Khattab', 'Naomy Kim', 'Beza M. Mengistu', 'Kelsey N. Larios', 'David Sooik Kim', 'Walid Ayoub', 'Alexandar Kuo', 'Paul Martin', 'Aarshi Vipani', 'Yun Wang', 'Suthat Liangpunsakul', 'Debiao Li', 'Shelly C. Lu', 'Stephen Pandol', 'Ju Dong Yang'],
         'ketoacidoza-nefrologicka-prax-hladovanie-euglykemicka-dka' => ['Biff F. Palmer', 'Deborah J. Clegg'],
         'kreatin-ochorenia-obliciek-bezpecnost-benefit' => ['Juliana Paula Pereira', 'Viviane O Leal', 'Pricilla Trigueira', 'Natália A Borges', 'Ludmila F M F Cardozo', 'Denise Mafra'],
         'kreatin-zdravie-mozgu' => ['Heidi Moawad'],

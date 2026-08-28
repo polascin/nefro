@@ -497,3 +497,15 @@ parameters:
 			identifier: nullCoalesce.offset
 			count: 1
 			path: add_vychodiskova-egfr-biopsia-imputacia-glomerulove-ochorenia_article.php
+
+		-
+			message: '#^Offset ''title'' on array\{title\: ''„Fibermaxxing“\:…'', slug\: ''fibermaxxing…'', author\: ''MUDr\. Ľubomír…'', published_at\: non\-falsy\-string, is_top\: 0, excerpt\: ''Najväčšie zníženie…'', content\: ''\<p\>Online trend…''\} on left side of \?\? always exists and is not nullable\.$#'
+			identifier: nullCoalesce.offset
+			count: 1
+			path: add_fibermaxxing-vlaknina-davka-odpoved-ckd_article.php
+
+		-
+			message: '#^Offset ''title'' on array\{title\: ''Káva a pečeň v UK…'', slug\: ''kava\-pecen\-cirhoza…'', author\: ''MUDr\. Ľubomír…'', published_at\: non\-falsy\-string, is_top\: 0, excerpt\: ''U 354 957…'', content\: ''\<p\>Súvislosť medzi…''\} on left side of \?\? always exists and is not nullable\.$#'
+			identifier: nullCoalesce.offset
+			count: 1
+			path: add_kava-pecen-cirhoza-hcc-uk-biobank-nefrologia_article.php
