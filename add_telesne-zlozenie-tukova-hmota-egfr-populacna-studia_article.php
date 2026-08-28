@@ -140,7 +140,9 @@ HTML,
 // ── Vkladanie do databázy ──────────────────────────────────────────────────────
 
 $result = upsertArticles($pdo, $articles, 'odborne', [
-    'enqueue_newsletter' => true,
+    // Publikované v dávke šiestich článkov naraz — newsletterové avízo sa zámerne
+    // neposiela, aby odberatelia nedostali šesť samostatných e-mailov v tej istej chvíli.
+    'enqueue_newsletter' => false,
     'regenerate_pdf' => true,
     'log_prefix' => 'add_telesne_zlozenie_tukova_hmota_egfr',
 ]);
