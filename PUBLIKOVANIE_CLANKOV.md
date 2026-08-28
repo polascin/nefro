@@ -81,10 +81,10 @@ poľom `category` a tým, kde sú vypísané.
    ```
    Očakávaný výstup: `1 vložených, 0 aktualizovaných … Zaradených do fronty avíz: N`.
 9. **Sync PDF do gitu:** `sh sync_article_pdfs.sh` (stiahne PDF zo servera + commitne).
-10. **Over live:** ⚠️ `curl` na produkciu vracia **HTTP 466 „Access Forbidden"** —
-   blokuje ho WAF hostingu, nejde o chybu článku. Over radšej priamo v prehliadači,
-   alebo dotazom do DB cez SSH (`SELECT id, is_published, LENGTH(content), pdf_file
-   FROM articles WHERE slug = ...`). Ak predsa použiješ HTTP, čakaj —
+10. **Over live:** `curl -s "https://nefro.polascin.net/article.php?slug=<slug>"` —
+   ⚠️ **nepoužívaj skrátené `-A "Mozilla/5.0"`** — WAF hostingu tento reťazec vyhodnotí
+   ako skener a vráti **HTTP 466 „Access Forbidden"**. Predvolený `curl` UA aj úplný
+   prehliadačový UA prechádzajú (HTTP 200). Hodnoť **telo**, nie stavový kód —
    HTTP 200, žiadny `Fatal error`, jeden `<title>`, správna typografia.
 
 > 👥 **Pôvodní autori zdroja (krok navyše, ak je článok spracovaním cudzieho
