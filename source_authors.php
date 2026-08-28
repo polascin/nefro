@@ -157,8 +157,14 @@ function getSourceArticleAuthors(): array {
         'retatrutid-transcend-t2d-1-hba1c-hmotnost-nefrologia' => ['Harpreet S. Bajaj', 'Michelle Welch', 'Parag Shah', 'Eduardo Luna', 'Fatima-Zahra Jaouimaa', 'Bing Liu', 'Rong Liu', 'Yanyun Chen', 'Hiren Patel', 'Amy Bartee'],
         'rodove-rozdiely-dialyza-transplantacia-era-usrds' => ['Vianda S Stel', 'Nicholas C Chesnaye', 'Rianne Boenink', 'Brittany A Boerstra', 'Megan E Astley', 'Shona Methven', 'Line Heylen', 'Halima Resic', 'Marc A G J ten Dam', 'Kristine Hommel', 'Marit D Solbu', 'Maria F Slon Roblero', 'Nuria Aresté-Fosalba', 'Danilo Radunovic', 'Héctor García López', 'Lukas Buchwinkler', 'Rebecca Guidotti', 'Mathilde Lassalle', 'Carmen Santiuste', 'Maria Stendahl', 'Olafur S Indridason', 'Almudena Escribá', 'María Encarnación Bouzas-Caamaño', 'Olga Lucía Rodriguez Arévalo', 'George Moustakas', 'Hermann Hernández Vargas', 'Alberto Ortiz', 'Anneke Kramer'],
         'roxadustat-esa-hyporesponzivita-opakovany-ciel-hb' => ['Mehmet Demir', 'Ilyas Ozturk', 'Merve Aktar', 'Cihan Heybeli', 'Can Huzmeli', 'Orhan Ozdemir', 'Seda Safak Ozturk', 'Tulin Akagun', 'Neriman Sila Koc', 'Mehmet Tuncay', 'Ekrem Kara', 'Tuncay Sahutoglu'],
+        // Menovaní diskutujúci spracovanej Medscape aktivity (ADA 2026); nejde o autorov
+        // primárnych štúdií citovaných v článku.
+        'sekvencna-simultanna-kombinovana-liecba-diabetes-ckd' => ['Ian de Boer', 'Amy Mottl'],
         'semaglutid-ckd-porovnanie-glp1-realna-prax' => ['Joshua J Neumiller', 'Yihong Deng', 'Kavya Sindhu Swarna', 'Eric C Polley', 'Jeph Herrin', 'Rodolfo J Galindo', 'Guillermo E Umpierrez', 'Joseph S Ross', 'Mindy M Mickelson', 'Kate Dryden', 'Katherine R Tuttle', 'Rozalina G McCoy'],
         'semaglutid-wernickeho-encefalopatia-deficit-tiaminu' => ['Janice Bidesie', 'Erik Oudman'],
+        // Autori spracovanej práce Diabetes Res Clin Pract 2026;239:113476 (PMID 42537913) —
+        // 9 mien overených cez PubMed 2026-08-28.
+        'serove-ketolatky-oblickove-udalosti-diabetes-2-typu' => ['Soo Myoung Shin', 'Jiyoon Lee', 'Young-Eun Kim', 'Jung A Kim', 'Kyoung Jin Kim', 'Kyeong Jin Kim', 'Hee Young Kim', 'Sin Gon Kim', 'Nam Hoon Kim'],
         'spolupraca-vseobecny-lekar-nefrolog-ckd-g5-joint-kd' => ['Minoru Murakami', 'Takuya Aoki', 'Yoshifumi Sugiyama', 'Sho Sasaki', 'Hiroki Nishiwaki', 'Masahiko Yazawa', 'Yoshihiko Raita', 'Hiroo Kawarazaki', 'Hideaki Shimizu', 'Yoshihiro Nakamura', 'Yosuke Saka', 'Masato Matsushima'],
         'swam-technika-tromboza-hemodialyzacneho-pristupu' => ['Lin Li', 'Zhongwang Zhang', 'Hongjie Wang', 'Mingdi Zhu', 'Kun Wang', 'Zheng Liu'],
         'subkutanny-furosemid-readyflow-edemy-hf-ckd' => ['Lois Anzelowitz Levine'],
@@ -166,6 +172,9 @@ function getSourceArticleAuthors(): array {
         'styridsat-rokov-transplantat-oblicky-ultra-dlhodobe-prezivanie' => ['Michelle Madden', 'Gavin Comerford', 'Patrick O\'Kelly', 'Anne Cooney', 'Liam O\'Neill', 'Elhussein A E Elhassan', 'Alaeldin Abdalla', 'Carol Traynor', 'Peter J Conlon', 'Leonard Browne', 'Julio Chevarria', 'Mike Clarkson', 'David Keane', 'Sarah Cormican', 'Catherine Godson', 'Matt Griffin', 'Luke Harris', 'John Holian', 'Conor Judge', 'Mark Little', 'Liam Martin', 'Sarah Moran', 'Eithne Nic An Riogh', 'Conall O\'Seaghdha', 'Michelle O\'Shaughnessy', 'Liam Plant', 'Brendan Reddy', 'Colm Rowan', 'Jennifer Scott', 'Donal Sexton', 'Andrew Smyth', 'Oonagh Smith', 'Austin Stack', 'Sinead Stoneman', 'Vicki Sandys', 'Jia Wei Teh', 'Vladimir Stoyanov'],
         'taurolidin-relapsujuca-peritonitida-peritonealna-dialyza' => ['Jack Rycen', 'Sofia Santagada', 'Vikas Srivastava'],
         'teclistamab-pred-transplantaciou-oblicky-hla-senzibilizacia' => ['Martina Schatzl', 'Katharina A. Mayer', 'Hermine Agis', 'Susanne Haindl', 'Daniela Kriks', 'Gottfried Fischer', 'Markus Exner', 'Gideon Hönger', 'Nikolina Veljancic', 'Daniela M. Allmer', 'Irene Graf', 'Matthias Diebold', 'Philip F. Halloran', 'Anne Halpin', 'Caishun Li', 'Lori West', 'Nicolas Kozakowski', 'Georg A. Böhmig'],
+        // Autori spracovanej práce Clin Kidney J 2026, doi 10.1093/ckj/sfag261 — 11 mien overených
+        // cez Crossref 2026-08-28.
+        'telesne-zlozenie-tukova-hmota-egfr-populacna-studia' => ['Marlene Agnes Günther', 'Till Ittermann', 'Henry Völzke', 'Sylvia Stracke', 'Karlhans Endlich', 'Robin Bülow', 'Matthias Nauck', 'Mats Wiese', 'Ali Aghdassi', 'Marcello Ricardo Paulista Markus', 'Sabrina von Rheinbaben'],
         'telitacicept-iga-nefropatia-teligan-faza-3-interim' => ['Jicheng Lv', 'Lijun Liu', 'Wenxiang Wang', 'Xinyue Wang', 'Qing Zuraw', 'Vlado Perkovic', 'Jianmin Fang', 'Hong Zhang'],
         'terapie-cielene-na-b-bunky-imunitne-ochorenia-obliciek-kdigo' => ['Jürgen Floege', 'Isabelle Ayoub', 'Silke R. Brix', 'Kirk N. Campbell', 'Richard Furie', 'Patrick H. Nachman', 'Sydney C.W. Tang', 'Nicola M. Tomas', 'Marina Vivarelli', 'Michael Cheung', 'Jennifer M. King', 'Morgan E. Grams', 'Michel Jadoul', 'Brad H. Rovin'],
         'tirzepatid-oblickove-vysledky-surpass-nefrologia' => ['Stephen J. Nicholls'],
@@ -179,6 +188,9 @@ function getSourceArticleAuthors(): array {
         'victory-vitamin-c-tazke-popaleniny-nefrologicke-signaly' => ['Christian Stoppe', 'Aileen Hill', 'Leopoldo C. Cancio', 'Andrew G. Day', 'Kaitlin A. Pruskowski', 'Alexis F. Turgeon', 'Daren K. Heyland'],
         'vitamin-d-klinicka-prax-vysetrovanie-suplementacia-rizika' => ['Marie B. Demay', 'Anastassios G. Pittas', 'Daniel D. Bikle', 'Dima L. Diab', 'Mairead E. Kiely', 'Marise Lazaretti-Castro', 'Paul Lips', 'Deborah M. Mitchell', 'M. Hassan Murad', 'Shelley Powers', 'Sudhaker D. Rao', 'Robert Scragg', 'John A. Tayek', 'Amy M. Valent', 'Judith M. E. Walsh', 'Christopher R. McCartney'],
         'vona-cokolady-vykon-pri-silovom-treningu' => ['Xiaohan Fan', 'Hengzhi Deng', 'Jia Yang Ng', 'Ahmad Amirul Hazim bin Ab Aziz', 'Mohamed Nashrudin bin Naharudin'],
+        // Autori spracovanej práce Nephrol Dial Transplant 2026, doi 10.1093/ndt/gfag194 (PMID 42627408) —
+        // 4 mená overené cez PubMed 2026-08-28.
+        'vychodiskova-egfr-biopsia-imputacia-glomerulove-ochorenia' => ['Jialin Han', 'Mark Canney', 'Lee Er', 'Sean J. Barbour'],
         'vyssi-prijem-bielkovin-merana-gfr-renis' => ['Ludvig Balteskard Rinde', 'Laila A Hopstock', 'Marie W Lundblad', 'Nikoline Balteskard Rinde', 'Karl-Marius Brobak', 'Jon Viljar Norvik', 'Inger-Therese Enoksen', 'Marit D Solbu', 'Ole-Martin Fuskevåg', 'Juan-Jesus Carrero', 'Monica Hauger Carlsen', 'Bjørn Odvar Eriksen', 'Toralf Melsom'],
         // Autori spracovaného komentára Medscape z 19.8.2026 - overené vo verejných metadátach článku.
         'vyzivove-odporucania-usa-2025-2030-masld-ckd' => ['Winston Dunn', 'Ashwani K. Singal'],

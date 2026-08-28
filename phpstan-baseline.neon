@@ -461,3 +461,39 @@ parameters:
 			identifier: nullCoalesce.offset
 			count: 1
 			path: search.php
+
+		-
+			message: '#^Offset ''title'' on array\{title\: ''„Gutmaxxing“\: keď…'', slug\: ''gutmaxxing\-rigidny…'', author\: ''MUDr\. Ľubomír…'', published_at\: non\-falsy\-string, is_top\: 0, excerpt\: ''Online trend…'', content\: ''\<p\>Pojmom…''\} on left side of \?\? always exists and is not nullable\.$#'
+			identifier: nullCoalesce.offset
+			count: 1
+			path: add_gutmaxxing-rigidny-dietny-protokol-nefrologia_article.php
+
+		-
+			message: '#^Offset ''title'' on array\{title\: ''Sekvenčne, alebo…'', slug\: ''sekvencna…'', author\: ''MUDr\. Ľubomír…'', published_at\: non\-falsy\-string, is_top\: 0, excerpt\: ''Postupne pridávať…'', content\: ''\<p\>Pri diabete 2\.…''\} on left side of \?\? always exists and is not nullable\.$#'
+			identifier: nullCoalesce.offset
+			count: 1
+			path: add_sekvencna-simultanna-kombinovana-liecba-diabetes-ckd_article.php
+
+		-
+			message: '#^Offset ''title'' on array\{title\: ''Sérové ketolátky a…'', slug\: ''serove\-ketolatky…'', author\: ''MUDr\. Ľubomír…'', published_at\: non\-falsy\-string, is_top\: 0, excerpt\: ''V kórejskej kohorte…'', content\: ''\<p\>Ketolátky sa v…''\} on left side of \?\? always exists and is not nullable\.$#'
+			identifier: nullCoalesce.offset
+			count: 1
+			path: add_serove-ketolatky-oblickove-udalosti-diabetes-2-typu_article.php
+
+		-
+			message: '#^Offset ''title'' on array\{title\: ''Šesť inhibítorov…'', slug\: ''sglt2\-inhibitory…'', author\: ''MUDr\. Ľubomír…'', published_at\: non\-falsy\-string, is_top\: 0, excerpt\: ''Spoločný…'', content\: ''\<p\>V bežnej…''\} on left side of \?\? always exists and is not nullable\.$#'
+			identifier: nullCoalesce.offset
+			count: 1
+			path: add_sglt2-inhibitory-rozdiely-schvalene-indikacie-srdce-oblicky_article.php
+
+		-
+			message: '#^Offset ''title'' on array\{title\: ''Telesné zloženie a…'', slug\: ''telesne\-zlozenie…'', author\: ''MUDr\. Ľubomír…'', published_at\: non\-falsy\-string, is_top\: 0, excerpt\: ''V nemeckej kohorte…'', content\: ''\<p\>Vzťah medzi…''\} on left side of \?\? always exists and is not nullable\.$#'
+			identifier: nullCoalesce.offset
+			count: 1
+			path: add_telesne-zlozenie-tukova-hmota-egfr-populacna-studia_article.php
+
+		-
+			message: '#^Offset ''title'' on array\{title\: ''Východisková eGFR…'', slug\: ''vychodiskova\-egfr…'', author\: ''MUDr\. Ľubomír…'', published_at\: non\-falsy\-string, is_top\: 0, excerpt\: ''Ak sa východisková…'', content\: ''\<p\>Východisková …''\} on left side of \?\? always exists and is not nullable\.$#'
+			identifier: nullCoalesce.offset
+			count: 1
+			path: add_vychodiskova-egfr-biopsia-imputacia-glomerulove-ochorenia_article.php
