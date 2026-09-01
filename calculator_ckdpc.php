@@ -4,161 +4,7 @@ require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
 require_once __DIR__ . '/calculators_common.php';
-
-/**
- * CKD-PC model — Grams et al. Diabetes Care 2022;45:2055–2063.
- * doi: 10.2337/dc22-0698 | PMID: 35856507
- *
- * Predikuje 3-ročné riziko kompozitného endpointu:
- *   ≥40 % pokles eGFR ALEBO zlyhanie obličiek (KRT).
- *
- * Metóda: complementary log-log (clog-log) regresia.
- * Vzorec: P = 1 - exp(-exp(η))
- *
- * 4 sub-modely podľa: prítomnosti DM × eGFR (≥60 vs <60).
- *
- * Model 3 (DM, eGFR≥60) bol overený oproti ckdpcrisk.org/gfrdecline40/
- * s defaultnými hodnotami (60r, M, DM, eGFR=85, ACR=30mg/g, SBP=130, BMI=30,
- * HbA1c=7, bez komorbidít) → výsledok 1,9 % ✓
- *
- * Poznámka: Koeficienty modelov 1, 2 a 4 sú odvodené z publikovaných dát
- * a neboli nezávisle overené. Pre klinické rozhodovanie odporúčame použiť
- * oficiálny kalkulátor na https://ckdpcrisk.org/gfrdecline40/
- */
-
-/**
- * Vypočíta 3-ročné riziko pomocou Grams 2022 clog-log modelu.
- *
- * @param int    $age         Vek (20–80)
- * @param string $sex         'male' alebo 'female'
- * @param float  $egfr        eGFR v ml/min/1,73 m²
- * @param float  $uacrMgG     uACR v mg/g (pozitívna hodnota)
- * @param bool   $diabetes    Prítomnosť DM
- * @param float  $sbp         Systolický TK (mmHg)
- * @param bool   $antihtn     Antihypertenzívna liečba
- * @param bool   $hf          Anamnéza srdcového zlyhania
- * @param bool   $chd         Anamnéza ICHS
- * @param bool   $afib        Anamnéza fibrilácie predsiení
- * @param float  $bmi         BMI (kg/m²)
- * @param string $smoking     'never', 'former' alebo 'current'
- * @param float  $hba1c       HbA1c v % (len pri DM, default 7.0)
- * @param bool   $insulin     Inzulínová liečba (len pri DM)
- * @param bool   $oralDm      Perorálna antidiabetická liečba (len pri DM)
- * @return array{risk_3yr: float, model_name: string}
- */
-function ckdpcRisk(
-    int $age,
-    string $sex,
-    float $egfr,
-    float $uacrMgG,
-    bool $diabetes,
-    float $sbp,
-    bool $antihtn,
-    bool $hf,
-    bool $chd,
-    bool $afib,
-    float $bmi,
-    string $smoking,
-    float $hba1c = 7.0,
-    bool $insulin = false,
-    bool $oralDm = false,
-): array {
-    $male = $sex === "male" ? 1 : 0;
-    $lnEgfr = log($egfr);
-    $lnUacr = log($uacrMgG);
-    $antihtnV = $antihtn ? 1 : 0;
-    $hfV = $hf ? 1 : 0;
-    $chdV = $chd ? 1 : 0;
-    $afibV = $afib ? 1 : 0;
-    $smokCurrent = $smoking === "current" ? 1 : 0;
-    $smokFormer = $smoking === "former" ? 1 : 0;
-    $insulinV = $insulin ? 1 : 0;
-    $oralDmV = $oralDm ? 1 : 0;
-
-    if (!$diabetes && $egfr >= 60.0) {
-        // Model 1: Bez DM, eGFR ≥ 60
-        $modelName = "Bez DM, eGFR ≥ 60 ml/min/1,73 m²";
-        $eta =
-            -4.9505 +
-            0.0172 * $age +
-            0.1546 * $male +
-            -0.8767 * $lnEgfr +
-            0.2861 * $lnUacr +
-            0.009 * $sbp +
-            0.1894 * $antihtnV +
-            0.4359 * $hfV +
-            0.1871 * $chdV +
-            0.1623 * $afibV +
-            0.0136 * $bmi +
-            0.2356 * $smokCurrent +
-            0.0894 * $smokFormer;
-    } elseif (!$diabetes && $egfr < 60.0) {
-        // Model 2: Bez DM, eGFR < 60
-        $modelName = "Bez DM, eGFR < 60 ml/min/1,73 m²";
-        $eta =
-            -2.9083 +
-            0.0038 * $age +
-            0.211 * $male +
-            -0.557 * $lnEgfr +
-            0.3262 * $lnUacr +
-            0.004 * $sbp +
-            0.0795 * $antihtnV +
-            0.3462 * $hfV +
-            0.139 * $chdV +
-            0.113 * $afibV +
-            0.0108 * $bmi +
-            0.1983 * $smokCurrent +
-            0.058 * $smokFormer;
-    } elseif ($diabetes && $egfr >= 60.0) {
-        // Model 3: DM, eGFR ≥ 60  [OVERENÝ: default ckdpcrisk.org → 1,9 %]
-        $modelName = "DM, eGFR ≥ 60 ml/min/1,73 m²";
-        $eta =
-            -5.9015 +
-            0.0161 * $age +
-            0.1229 * $male +
-            -0.5023 * $lnEgfr +
-            0.2902 * $lnUacr +
-            0.0083 * $sbp +
-            0.1335 * $antihtnV +
-            0.4174 * $hfV +
-            0.1398 * $chdV +
-            0.1596 * $afibV +
-            0.0139 * $bmi +
-            0.2289 * $smokCurrent +
-            0.0768 * $smokFormer +
-            0.0877 * $hba1c +
-            0.1551 * $insulinV +
-            -0.026 * $oralDmV;
-    } else {
-        // Model 4: DM, eGFR < 60
-        $modelName = "DM, eGFR < 60 ml/min/1,73 m²";
-        $eta =
-            -2.3985 +
-            0.001 * $age +
-            0.2025 * $male +
-            -0.4527 * $lnEgfr +
-            0.3323 * $lnUacr +
-            0.0039 * $sbp +
-            0.0502 * $antihtnV +
-            0.3378 * $hfV +
-            0.1234 * $chdV +
-            0.1262 * $afibV +
-            0.0089 * $bmi +
-            0.1925 * $smokCurrent +
-            0.0446 * $smokFormer +
-            0.0603 * $hba1c +
-            0.1288 * $insulinV +
-            -0.0079 * $oralDmV;
-    }
-
-    $risk3yr = (1.0 - exp(-exp($eta))) * 100.0;
-    $risk3yr = max(0.0, min(99.9, $risk3yr));
-
-    return [
-        "risk_3yr" => round($risk3yr, 1),
-        "model_name" => $modelName,
-    ];
-}
+require_once __DIR__ . '/ckd_risk_models.php';
 
 /**
  * Klinická interpretácia 3-ročného rizika.
@@ -559,20 +405,22 @@ function sexLabel(string $v): string
                 <div class="info-box-blue">
                     <strong>Zdroj:</strong> Grams ME et al. <em>Diabetes Care.</em> 2022;45(9):2055–2063.
                     <a href="https://pubmed.ncbi.nlm.nih.gov/35856507/" target="_blank" rel="noopener noreferrer">PMID 35856507</a>.
+                    <a href="https://doi.org/10.2337/figshare.20061143" target="_blank" rel="noopener noreferrer">Rovnice v Supplemental Table S5</a>.
                     Oficiálny kalkulátor:
                     <a href="https://ckdpcrisk.org/gfrdecline40/" target="_blank" rel="noopener noreferrer">ckdpcrisk.org/gfrdecline40/</a>.
                 </div>
 
                 <details open class="calc-formula-box">
-                    <summary>Vzorec — CKD-PC / Grams 2022 (clog-log)</summary>
+                    <summary>Vzorec — CKD-PC / Grams 2022 (logistická regresia)</summary>
                     <div class="calc-formula-content">
-                        <div class="calc-formula-line">\[ P = 1 - \exp(-\exp(\eta)) \]</div>
-                        <div class="calc-formula-line">\[ \begin{aligned} \eta = \beta_0 &+ \beta_1 \cdot \text{Vek} + \beta_2 \cdot \text{muž} + \beta_3 \cdot \ln(\text{eGFR}) \\ &+ \beta_4 \cdot \ln(\text{uACR}) + \beta_5 \cdot \text{SBP} + \beta_6 \cdot \text{antihyp} + \beta_7 \cdot \text{SZ} \\ &+ \beta_8 \cdot \text{ICHS} + \beta_9 \cdot \text{FP} + \beta_{10} \cdot \text{BMI} + \beta_{11} \cdot \text{fajč.} \\ &+ [\beta_{12} \cdot \text{HbA1c} + \beta_{13} \cdot \text{inzulín} + \beta_{14} \cdot \text{PAD}] \text{ (len pri DM)} \end{aligned} \]</div>
+                        <div class="calc-formula-line">\[ P = \frac{\exp(\eta)}{1 + \exp(\eta)} \]</div>
+                        <div class="calc-formula-line">\[ \begin{aligned} \eta = \beta_0 &+ \sum_i \beta_i x_i, \\ x_i &\in \{(\text{vek}-60)/10,\; \text{muž}-0{,}5,\; (\text{eGFR}-E)/5,\; \ln(\text{uACR}/10), \\ &(\text{SBP}-130)/20,\; \text{antihyp},\; \text{SBP}\!\times\!\text{antihyp},\; \text{SZ}-0{,}05,\; \text{ICHS}-0{,}15, \\ &\text{FP},\; \text{fajčenie},\; (\text{BMI}-30)/5,\; \text{HbA1c}-7,\; \text{liečba DM}\}. \end{aligned} \]</div>
                         <div class="calc-formula-line">\[ \text{UACR [mg/g]} = \text{UACR [mg/mmol]} \times 8.84 \]</div>
                         <div class="calc-formula-vars">
                             $P = \text{3-ročné riziko (}\ge 40\% \text{ pokles eGFR alebo zlyhanie obličiek)}$ &bull;
                             4 sub-modely: DM / bez DM $\times$ eGFR $\ge 60$ / $\lt 60$ &bull;
-                            uACR v mg/g, SBP v mmHg
+                            $E = 85$ pri eGFR $ge 60$, $E = 45$ pri eGFR $\lt 60$ &bull;
+                            koeficienty podľa Supplemental Table S5
                         </div>
                     </div>
                 </details>

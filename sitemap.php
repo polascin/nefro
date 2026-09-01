@@ -30,6 +30,12 @@ $urls = [
         'priority'   => '0.9',
     ],
     [
+        'loc'        => $baseUrl . 'calculator_ambulatory.php',
+        'lastmod'    => _sitemapLastmod('calculator_ambulatory.php'),
+        'changefreq' => 'monthly',
+        'priority'   => '0.9',
+    ],
+    [
         'loc'        => $baseUrl . 'calculator_egfr.php',
         'lastmod'    => _sitemapLastmod('calculator_egfr.php'),
         'changefreq' => 'monthly',

@@ -7,6 +7,7 @@ if (function_exists('isLoggedIn') && isLoggedIn() && isset($pdo)
     $_calcProfile = calculatorGetUserProfile($pdo, (int) $_SESSION['user_id']);
 }
 $_calcSubnavItems = [
+    ['file' => 'calculator_ambulatory.php', 'label' => 'Ambulantná'],
     ['file' => 'calculator_egfr.php',       'label' => 'eGFR'],
     ['file' => 'calculator_egfr_cys.php',   'label' => 'eGFR (kr-cys)'],
     ['file' => 'calculator_kdigo_risk.php',  'label' => 'KDIGO G/A'],

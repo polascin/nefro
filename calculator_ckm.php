@@ -4,6 +4,7 @@ require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
 require_once __DIR__ . '/calculators_common.php';
+require_once __DIR__ . '/ckd_risk_models.php';
 
 /** Nezáporné desatinné číslo; prázdny vstup = null (vyžiada chybu). Vráti null pri neplatnom/zápornom. */
 function ckmParseNonNeg(string $value): ?float
@@ -26,54 +27,6 @@ function ckmStageClass(int $num): string
         return 'risk-moderate';
     }
     return 'risk-low';
-}
-
-/** Slovný opis štádia CKM podľa kódu. */
-function ckmStageLabel(string $code): string
-{
-    switch ($code) {
-        case '1':
-            return 'nadmerná / dysfunkčná adipozita';
-        case '2':
-            return 'metabolické rizikové faktory a/alebo CKD';
-        case '3':
-            return 'subklinické kardiovaskulárne ochorenie';
-        case '4a':
-            return 'klinické KV ochorenie (bez zlyhania obličiek)';
-        case '4b':
-            return 'klinické KV ochorenie so zlyhaním obličiek';
-        default:
-            return 'bez rizikových faktorov CKM';
-    }
-}
-
-/**
- * Hierarchické určenie najvyššieho štádia CKM (AHA 2023).
- * @return array{code: string, num: int}
- */
-function ckmComputeStage(
-    bool $adiposity,
-    bool $dysAdiposity,
-    bool $metabolicRF,
-    bool $ckdModHigh,
-    bool $ckdVeryHigh,
-    bool $subclinicalCvd,
-    bool $clinicalCvd,
-    bool $kidneyFailure
-): array {
-    if ($clinicalCvd) {
-        return ['code' => $kidneyFailure ? '4b' : '4a', 'num' => 4];
-    }
-    if ($subclinicalCvd || $ckdVeryHigh) {
-        return ['code' => '3', 'num' => 3];
-    }
-    if ($metabolicRF || $ckdModHigh) {
-        return ['code' => '2', 'num' => 2];
-    }
-    if ($adiposity || $dysAdiposity) {
-        return ['code' => '1', 'num' => 1];
-    }
-    return ['code' => '0', 'num' => 0];
 }
 
 $errors = [];

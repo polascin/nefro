@@ -4,53 +4,7 @@ require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
 require_once __DIR__ . '/calculators_common.php';
-
-function kfreRisk(int $ageYears, string $sex, float $egfr, float $uacr): array
-{
-    // KFRE — Tangri et al. JAMA 2011;305(15):1553–1559 — 4-premenná verzia
-    // Cox proportional hazards model, North American kohorta
-    // Overené oproti kidneyfailurerisk.com (Tangri group, 2024)
-    //
-    // Lineárny prediktor (centrovaný na kohortné priemery):
-    //   X = −0.2201·(vek/10 − 7.036) + 0.2467·(pohlavie − 0.5642)
-    //       −0.5567·(eGFR/5 − 7.222) + 0.4510·(ln(uACR) − 5.137)
-    //       + 0.4013  (bias korekcia pre North American kalibráciu)
-    // kde pohlavie: muž=1, žena=0
-    //
-    // Riziko = 1 − S₀(t)^exp(X)
-    //   S₀(2 roky) = 0.9832   [overené na 4 scenároch]
-    //   S₀(5 rokov) = 0.9485  [overené na 4 scenároch]
-    //
-    // Overené scenáre (ref. kidneyfailurerisk.com):
-    //   M 60r eGFR=25 uACR=300:   2r=14,6% / 5r=38,8%
-    //   Z 55r eGFR=15 uACR=1000:  2r=51,3% / 5r=89,4%
-    //   M 70r eGFR=40 uACR=150:   2r= 1,7% / 5r= 5,3%
-    //   Z 50r eGFR=30 uACR=500:   2r=10,5% / 5r=29,2%
-
-    $maleV = $sex === "male" ? 1 : 0;
-
-    // Centrovaný lineárny prediktor + North American kalibrácia (+0.4013)
-    $X =
-        -0.2201 * ($ageYears / 10.0 - 7.036) +
-        0.2467 * ($maleV - 0.5642) -
-        0.5567 * ($egfr / 5.0 - 7.222) +
-        0.451 * log($uacr) -
-        0.451 * 5.137 +
-        0.4013;
-
-    // Cox survival funkcia: P(t) = 1 − S₀(t)^exp(X)
-    $expX = exp($X);
-    $risk2yr = (1.0 - pow(0.9832, $expX)) * 100.0;
-    $risk5yr = (1.0 - pow(0.9485, $expX)) * 100.0;
-
-    $risk2yr = max(0.0, min(100.0, $risk2yr));
-    $risk5yr = max(0.0, min(100.0, $risk5yr));
-
-    return [
-        "risk_2yr" => round($risk2yr, 1),
-        "risk_5yr" => round($risk5yr, 1),
-    ];
-}
+require_once __DIR__ . '/ckd_risk_models.php';
 
 function kfreInterpretation(float $risk2yr, float $risk5yr): array
 {

@@ -13,7 +13,7 @@ $baseUrl = "https://nefro.polascin.net/";
 $pageUrl = $baseUrl . "calculators.php";
 $pageTitle = "Nefrologické kalkulačky | " . $siteName;
 $pageDesc =
-    "Klinické kalkulačky pre nefrológiu podľa KDIGO 2024: eGFR (CKD-EPI 2021), KDIGO G/A riziko, KFRE predikcia dialýzy, CKD-PC Grams 2022, IgAN Prediction Tool a Mayo ADPKD klasifikácia. Pre zdravotníckych pracovníkov na Slovensku.";
+    "Klinické kalkulačky pre nefrológiu podľa KDIGO 2024: ambulantný CKD súhrn do správy, eGFR, KDIGO G/A riziko, KFRE, CKD-PC, IgAN Prediction Tool a Mayo ADPKD klasifikácia. Pre zdravotníckych pracovníkov na Slovensku.";
 $schemaWebApp = [
     "@context" => "https://schema.org",
     "@type" => ["WebApplication", "MedicalWebPage"],
@@ -35,6 +35,11 @@ $schemaWebApp = [
         "logo" => ["@type" => "ImageObject", "url" => $baseUrl . "img/nps-logo.png"],
     ],
     "hasPart" => [
+        [
+            "@type" => "WebApplication",
+            "name" => "Ambulantná kalkulačka CKD",
+            "url" => $baseUrl . "calculator_ambulatory.php",
+        ],
         [
             "@type" => "WebApplication",
             "name" => "eGFR kalkulačka (CKD-EPI 2021)",
@@ -268,6 +273,12 @@ $schemaWebApp = [
             <section class="features-section" aria-labelledby="calculators-heading">
                 <h2 id="calculators-heading">Dostupné kalkulačky</h2>
                 <div class="features-grid calculators-grid">
+                    <article class="feature-card calculator-card">
+                        <h3>Ambulantná kalkulačka</h3>
+                        <p>Súhrnný CKD nástroj pre ambulanciu: KDIGO 2024 CGA, KFRE, CKD-PC, CKM stage, eGFR slope, MKCH-10 štádium a čistý text pripravený na vloženie do lekárskej správy v Nefrise.</p>
+                        <a href="calculator_ambulatory.php" class="btn-primary">Otvoriť kalkulačku</a>
+                    </article>
+
                     <article class="feature-card calculator-card">
                         <h3>eGFR (CKD-EPI 2021)</h3>
                         <p>Výpočet odhadovanej glomerulovej filtrácie z veku, pohlavia a kreatinínu.</p>

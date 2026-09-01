@@ -4,47 +4,7 @@ require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
 require_once __DIR__ . '/calculators_common.php';
-
-function kdigoACategory(float $uacr): string
-{
-    if ($uacr < 30.0) {
-        return "A1";
-    }
-    if ($uacr <= 300.0) {
-        return "A2";
-    }
-
-    return "A3";
-}
-
-function kdigoRisk(string $g, string $a): array
-{
-    $risk = "Veľmi vysoké riziko";
-    $note = "Potrebná zvýšená vigilancia a špecializované vedenie.";
-
-    if (($g === "G1" || $g === "G2") && $a === "A1") {
-        $risk = "Nízke riziko";
-        $note =
-            "Ak CKD trvá <3 mesiace alebo bez markerov, CKD nemusí byť potvrdená.";
-    } elseif (($g === "G1" || $g === "G2") && $a === "A2") {
-        $risk = "Stredné riziko";
-        $note = "Odporúčané pravidelné sledovanie a nefroprotektívna liečba.";
-    } elseif (($g === "G1" || $g === "G2") && $a === "A3") {
-        $risk = "Vysoké riziko";
-        $note = "Odporúčané intenzívnejšie sledovanie a úprava terapie.";
-    } elseif ($g === "G3a" && $a === "A1") {
-        $risk = "Stredné riziko";
-        $note = "Sledovanie funkcie obličiek a rizikových faktorov.";
-    } elseif (($g === "G3a" && $a === "A2") || ($g === "G3b" && $a === "A1")) {
-        $risk = "Vysoké riziko";
-        $note = "Vysoké riziko progresie, zvážiť nefrologickú konzultáciu.";
-    }
-
-    return [
-        "risk" => $risk,
-        "note" => $note,
-    ];
-}
+require_once __DIR__ . '/ckd_risk_models.php';
 
 $errors = [];
 $messages = [];
