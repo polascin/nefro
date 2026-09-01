@@ -69,6 +69,17 @@ if ($slope === null) {
 testApprox(-10.0, $slope['slope'], 0.02, 'eGFR slope za jeden rok');
 testSame(2, $slope['count'], 'Počet bodov eGFR slope');
 
+testSame('N18.3, I12.00', ambulatoryPostedCodeList(['N18.3', 'I12.00']), 'Kódy z poľa');
+testSame('N18.3, I12.00', ambulatoryPostedCodeList('N18.3, I12.00'), 'Kódy z reťazca');
+testSame(
+    'E11.21, N08; diabetická choroba obličiek',
+    ambulatoryFormatCause(['E11.21', 'N08'], 'diabetická choroba obličiek'),
+    'Príčina kódy + text'
+);
+testSame('neurčená', ambulatoryFormatCause([], 'neurčená'), 'Príčina len text');
+testSame('N08', ambulatoryFormatCause(['N08'], ''), 'Príčina len kód');
+testSame('', ambulatoryFormatCause([], ''), 'Príčina prázdna');
+
 $output = ambulatoryBuildPlainText([
     'main_diagnosis' => 'N18.3 CKD G3b',
     'cga' => 'príčina (Cause) test, kategória G3b, kategória A2',
@@ -81,6 +92,7 @@ $output = ambulatoryBuildPlainText([
 ]);
 testSame(true, str_starts_with($output, 'Hlavná Dg (MKCH-10): N18.3 CKD G3b'), 'Začiatok čistého textu');
 testSame(true, str_contains($output, 'Poznámka k eGFR:'), 'Povinná poznámka k eGFR');
+testSame(true, str_contains($output, 'Pridružené Dg (MKCH-10): E11.2'), 'Riadok pridružených Dg');
 testSame(9, count(explode("\n", $output)), 'Počet riadkov čistého textu');
 
 $kdigoHeatmap = [

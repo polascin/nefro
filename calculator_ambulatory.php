@@ -30,17 +30,10 @@ $checkboxFields = [
     'other_clinical_cvd',
 ];
 
-$postedRelatedDiagnoses = $_POST['related_diagnoses'] ?? '';
-if (is_array($postedRelatedDiagnoses)) {
-    $postedRelatedDiagnoses = implode(', ', array_filter(
-        $postedRelatedDiagnoses,
-        static fn(mixed $code): bool => is_string($code)
-    ));
-}
-
 $form = [
     'examination_date' => (string) ($_POST['examination_date'] ?? date('Y-m-d')),
-    'cause' => (string) ($_POST['cause'] ?? ''),
+    'cause_diagnoses' => ambulatoryPostedCodeList($_POST['cause_diagnoses'] ?? ''),
+    'cause_note' => (string) ($_POST['cause_note'] ?? ''),
     'age_years' => (string) ($_POST['age_years'] ?? ''),
     'sex' => (string) ($_POST['sex'] ?? 'female'),
     'egfr' => (string) ($_POST['egfr'] ?? ''),
@@ -48,7 +41,7 @@ $form = [
     'uacr_unit' => (string) ($_POST['uacr_unit'] ?? 'mg_mmol'),
     'chronicity' => (string) ($_POST['chronicity'] ?? 'confirmed'),
     'repeat_date' => (string) ($_POST['repeat_date'] ?? date('Y-m-d', strtotime('+3 months'))),
-    'related_diagnoses' => (string) $postedRelatedDiagnoses,
+    'related_diagnoses' => ambulatoryPostedCodeList($_POST['related_diagnoses'] ?? ''),
     'sbp' => (string) ($_POST['sbp'] ?? ''),
     'bmi' => (string) ($_POST['bmi'] ?? ''),
     'smoking' => (string) ($_POST['smoking'] ?? 'never'),
@@ -86,11 +79,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!validateCsrfToken((string) ($_POST['csrf_token'] ?? ''))) {
         $errors[] = 'Neplatný CSRF token.';
     } else {
-        $cause = ambulatoryNormalizeSingleLine($form['cause'], 200);
+        $causeDiagnosisCodes = mkch10NormalizeCodeList($form['cause_diagnoses']);
+        $form['cause_diagnoses'] = implode(', ', $causeDiagnosisCodes);
+        $causeNoteRaw = $form['cause_note'];
+        $causeNote = ambulatoryNormalizeSingleLine($causeNoteRaw, 200);
+        $form['cause_note'] = $causeNote;
+        $cause = ambulatoryFormatCause($causeDiagnosisCodes, $causeNote);
         if ($cause === '') {
-            $errors[] = 'Uveďte príčinu CKD; ak nie je známa, zadajte „neurčená“.';
-        } elseif (mb_strlen($form['cause'], 'UTF-8') > 200) {
-            $errors[] = 'Príčina CKD môže mať najviac 200 znakov.';
+            $errors[] = 'Uveďte príčinu CKD výberom z číselníka MKCH-10 alebo vlastným textom; ak nie je známa, zadajte „neurčená“.';
+        }
+        if (mb_strlen($causeNoteRaw, 'UTF-8') > 200) {
+            $errors[] = 'Doplnenie príčiny CKD môže mať najviac 200 znakov.';
+        }
+        if (mb_strlen($form['cause_diagnoses'], 'UTF-8') > 300) {
+            $errors[] = 'Kódy príčin CKD môžu mať najviac 300 znakov.';
+        } elseif (count($causeDiagnosisCodes) > 8) {
+            $errors[] = 'Vyberte najviac 8 diagnóz ako príčinu CKD.';
         }
 
         $relatedDiagnosisCodes = mkch10NormalizeCodeList($form['related_diagnoses']);
@@ -99,10 +103,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (mb_strlen($form['related_diagnoses'], 'UTF-8') > 300) {
             $errors[] = 'Pridružené diagnózy môžu mať najviac 300 znakov.';
         } elseif (count($relatedDiagnosisCodes) > 12) {
-            $errors[] = 'Vyberte najviac 12 príčinných alebo pridružených diagnóz.';
-        } elseif ($relatedDiagnosisCodes !== []) {
+            $errors[] = 'Vyberte najviac 12 pridružených diagnóz.';
+        }
+
+        $codesToValidate = array_values(array_unique(array_merge(
+            $causeDiagnosisCodes,
+            $relatedDiagnosisCodes,
+        )));
+        if ($codesToValidate !== []) {
             try {
-                $unknownDiagnosisCodes = mkch10FindUnknownCodes($relatedDiagnosisCodes);
+                $unknownDiagnosisCodes = mkch10FindUnknownCodes($codesToValidate);
                 if ($unknownDiagnosisCodes !== []) {
                     $errors[] = 'Číselník MKCH-10-SK neobsahuje kódy: ' . implode(', ', $unknownDiagnosisCodes) . '.';
                 }
@@ -450,14 +460,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                     <section class="form-section" aria-labelledby="ambulatory-core-heading">
                         <h3 id="ambulatory-core-heading">Základné údaje a KDIGO CGA</h3>
+                        <div class="form-group mkch10-picker" id="mkch10-cause-picker" data-source="assets/data/mkch10-sk.json" data-max-items="8" data-field-name="cause_diagnoses[]" data-selected="<?= htmlspecialchars($form['cause_diagnoses']) ?>" data-empty-status="Nie je vybraná žiadna príčina CKD." data-count-status="Vybrané príčiny CKD">
+                            <label for="cause_diagnosis_search">Príčina CKD (Cause) <span class="required">*</span></label>
+                            <input type="search" id="cause_diagnosis_search" class="form-control" autocomplete="off" role="combobox" aria-autocomplete="list" aria-haspopup="listbox" aria-controls="cause_diagnosis_results" aria-expanded="false" aria-describedby="cause_diagnosis_help cause_diagnosis_status" placeholder="Začnite písať kód alebo názov diagnózy">
+                            <div id="cause_diagnosis_results" class="mkch10-results" role="listbox" aria-label="Výsledky vyhľadávania príčin CKD" hidden></div>
+                            <div id="cause_diagnosis_selected" class="mkch10-selected" aria-label="Vybrané príčiny CKD"></div>
+                            <small id="cause_diagnosis_help">Vyhľadávajte podľa kódu alebo slovenského názvu. Možno vybrať viac diagnóz, najviac 8. Povinný je aspoň jeden kód alebo doplnenie vlastnými slovami; ak príčina nie je známa, do doplnenia napíšte „neurčená“.</small>
+                            <small id="cause_diagnosis_status" class="mkch10-status" role="status" aria-live="polite"></small>
+                            <noscript>
+                                <label for="cause_diagnoses_noscript">Kódy príčin CKD (MKCH-10-SK, oddelené čiarkou)</label>
+                                <input type="text" id="cause_diagnoses_noscript" name="cause_diagnoses" maxlength="300" class="form-control" value="<?= htmlspecialchars($form['cause_diagnoses']) ?>" placeholder="napr. E11.21†, N08.3*">
+                                <small>Bez JavaScriptu zadajte kódy ručne. Server overí ich prítomnosť v číselníku.</small>
+                            </noscript>
+                            <div class="form-group mkch10-note">
+                                <label for="cause_note">Doplnenie vlastnými slovami</label>
+                                <input type="text" id="cause_note" name="cause_note" maxlength="200" class="form-control" placeholder="napr. diabetická choroba obličiek; neurčená" value="<?= htmlspecialchars($form['cause_note']) ?>" aria-describedby="cause_note_help">
+                                <small id="cause_note_help">Voliteľné, ak ste vybrali aspoň jeden kód MKCH-10. Ak kód nevyberiete, toto pole je povinné.</small>
+                            </div>
+                        </div>
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="examination_date">Dátum vyšetrenia <span class="required">*</span></label>
                                 <input type="date" id="examination_date" name="examination_date" required class="form-control" max="<?= htmlspecialchars(date('Y-m-d')) ?>" value="<?= htmlspecialchars($form['examination_date']) ?>">
-                            </div>
-                            <div class="form-group">
-                                <label for="cause">Príčina CKD (Cause) <span class="required">*</span></label>
-                                <input type="text" id="cause" name="cause" required maxlength="200" class="form-control" placeholder="napr. diabetická choroba obličiek" value="<?= htmlspecialchars($form['cause']) ?>">
                             </div>
                             <div class="form-group">
                                 <label for="age_years">Vek (roky) <span class="required">*</span></label>
@@ -501,12 +525,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <input type="checkbox" name="other_kidney_marker" value="1" <?= $form['other_kidney_marker'] === '1' ? 'checked' : '' ?>>
                             Iný potvrdený marker poškodenia obličiek (napr. močový sediment, zobrazovací alebo histologický nález)
                         </label>
-                        <div class="form-group mkch10-picker" id="mkch10-related-picker" data-source="assets/data/mkch10-sk.json" data-max-items="12" data-selected="<?= htmlspecialchars($form['related_diagnoses']) ?>">
-                            <label for="related_diagnosis_search">Príčinné / pridružené diagnózy (MKCH-10-SK)</label>
+                        <div class="form-group mkch10-picker" id="mkch10-related-picker" data-source="assets/data/mkch10-sk.json" data-max-items="12" data-field-name="related_diagnoses[]" data-selected="<?= htmlspecialchars($form['related_diagnoses']) ?>" data-empty-status="Nie je vybraná žiadna pridružená diagnóza." data-count-status="Vybrané pridružené diagnózy">
+                            <label for="related_diagnosis_search">Pridružené diagnózy (MKCH-10-SK)</label>
                             <input type="search" id="related_diagnosis_search" class="form-control" autocomplete="off" role="combobox" aria-autocomplete="list" aria-haspopup="listbox" aria-controls="related_diagnosis_results" aria-expanded="false" aria-describedby="related_diagnosis_help related_diagnosis_status" placeholder="Začnite písať kód alebo názov diagnózy">
-                            <div id="related_diagnosis_results" class="mkch10-results" role="listbox" aria-label="Výsledky vyhľadávania diagnóz" hidden></div>
-                            <div id="related_diagnosis_selected" class="mkch10-selected" aria-label="Vybrané diagnózy"></div>
-                            <small id="related_diagnosis_help">Vyhľadávajte podľa kódu alebo slovenského názvu a diagnózu pridajte výberom z výsledkov. Možno vybrať najviac 12 kódov.</small>
+                            <div id="related_diagnosis_results" class="mkch10-results" role="listbox" aria-label="Výsledky vyhľadávania pridružených diagnóz" hidden></div>
+                            <div id="related_diagnosis_selected" class="mkch10-selected" aria-label="Vybrané pridružené diagnózy"></div>
+                            <small id="related_diagnosis_help">Ďalšie diagnózy okrem príčiny CKD. Vyhľadávajte podľa kódu alebo slovenského názvu. Možno vybrať najviac 12 kódov.</small>
                             <small id="related_diagnosis_status" class="mkch10-status" role="status" aria-live="polite"></small>
                             <noscript>
                                 <label for="related_diagnoses_noscript">Kódy diagnóz MKCH-10-SK (oddelené čiarkou)</label>
@@ -624,7 +648,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <li>CKD vyžaduje abnormalitu štruktúry alebo funkcie obličiek trvajúcu najmenej 3 mesiace. Jediný abnormálny eGFR alebo uACR chronicitu nepotvrdzuje.</li>
                     <li>Pri G1–G2 a A1 bez iného markera poškodenia obličiek nie sú z uvedených údajov splnené kritériá CKD.</li>
                     <li>KFRE sa tu počíta iba pri eGFR 10 až &lt;60 ml/min/1,73 m². CKD-PC sa počíta pri veku 20–80 rokov a predikuje iný endpoint: ≥40 % pokles eGFR alebo zlyhanie obličiek v horizonte 2–3 rokov.</li>
-                    <li>Automatický kód N18.x vyjadruje štádium CKD. Príčinné a pridružené diagnózy sa vyberajú z importovaného číselníka MKCH-10-SK verzie 26, platného od 1. 1. 2026; klinickú správnosť výberu musí potvrdiť lekár.</li>
+                    <li>Automatický kód N18.x vyjadruje štádium CKD. Príčinu CKD a pridružené diagnózy vyberáte z importovaného číselníka MKCH-10-SK verzie 26, platného od 1. 1. 2026; k príčine možno doplniť vlastný text. Klinickú správnosť výberu musí potvrdiť lekár.</li>
                 </ul>
 
                 <h3>Primárne zdroje</h3>

@@ -75,31 +75,61 @@
         updateHba1cRequirement();
     }
 
-    var diagnosisPicker = document.getElementById('mkch10-related-picker');
-    if (diagnosisPicker) {
-        var diagnosisSearch = document.getElementById('related_diagnosis_search');
-        var diagnosisResults = document.getElementById('related_diagnosis_results');
-        var diagnosisSelected = document.getElementById('related_diagnosis_selected');
-        var diagnosisStatus = document.getElementById('related_diagnosis_status');
-        var diagnosisSource = diagnosisPicker.dataset.source || '';
-        var initiallySelectedDiagnosisCodes = diagnosisPicker.dataset.selected || '';
-        var maximumDiagnoses = Number.parseInt(diagnosisPicker.dataset.maxItems || '12', 10);
-        var diagnosisItems = [];
+    var ambulatoryForm = document.getElementById('ambulatory-calculator-form');
+    if (ambulatoryForm) {
+        ambulatoryForm.addEventListener('submit', function (event) {
+            var causePicker = document.getElementById('mkch10-cause-picker');
+            var causeNote = document.getElementById('cause_note');
+            var causeStatus = document.getElementById('cause_diagnosis_status');
+            var causeSearch = document.getElementById('cause_diagnosis_search');
+            var hasCauseCodes = causePicker && causePicker.querySelector('input[name="cause_diagnoses[]"]');
+            var hasCauseNote = causeNote && causeNote.value.trim() !== '';
+            if (hasCauseCodes || hasCauseNote) {
+                return;
+            }
+
+            event.preventDefault();
+            if (causeStatus) {
+                causeStatus.textContent = 'Uveďte príčinu CKD výberom z číselníka MKCH-10 alebo vlastným textom.';
+            }
+            if (causeSearch && !causeSearch.disabled) {
+                causeSearch.focus();
+            } else if (causeNote) {
+                causeNote.focus();
+            }
+        });
+    }
+
+    function normalizeDiagnosisText(value) {
+        return value.toLocaleLowerCase('sk-SK')
+            .normalize('NFD')
+            .replace(/[\u0300-\u036f]/g, '')
+            .replace(/\s+/g, ' ')
+            .trim();
+    }
+
+    function compactDiagnosisCode(value) {
+        return value.toLocaleUpperCase('sk-SK').replace(/[^A-Z0-9]/g, '');
+    }
+
+    function bindMkch10Picker(picker, diagnosisItems, codebookStatusSuffix) {
+        var diagnosisSearch = picker.querySelector('input[type="search"]');
+        var diagnosisResults = picker.querySelector('.mkch10-results');
+        var diagnosisSelected = picker.querySelector('.mkch10-selected');
+        var diagnosisStatus = picker.querySelector('.mkch10-status');
+        if (!diagnosisSearch || !diagnosisResults || !diagnosisSelected || !diagnosisStatus) {
+            return;
+        }
+
+        var fieldName = picker.dataset.fieldName || 'related_diagnoses[]';
+        var initiallySelectedDiagnosisCodes = picker.dataset.selected || '';
+        var maximumDiagnoses = Number.parseInt(picker.dataset.maxItems || '12', 10);
+        var emptyStatus = picker.dataset.emptyStatus || 'Nie je vybraná žiadna diagnóza.';
+        var countStatus = picker.dataset.countStatus || 'Vybrané diagnózy';
+        var resultIdPrefix = (picker.id || 'mkch10-picker') + '-result-';
         var selectedDiagnoses = new Map();
         var visibleDiagnoses = [];
         var activeDiagnosisIndex = -1;
-
-        function normalizeDiagnosisText(value) {
-            return value.toLocaleLowerCase('sk-SK')
-                .normalize('NFD')
-                .replace(/[\u0300-\u036f]/g, '')
-                .replace(/\s+/g, ' ')
-                .trim();
-        }
-
-        function compactDiagnosisCode(value) {
-            return value.toLocaleUpperCase('sk-SK').replace(/[^A-Z0-9]/g, '');
-        }
 
         function setDiagnosisResultsOpen(open) {
             diagnosisResults.hidden = !open;
@@ -108,8 +138,8 @@
 
         function updateDiagnosisValue() {
             diagnosisStatus.textContent = selectedDiagnoses.size === 0
-                ? 'Nie je vybraná žiadna pridružená diagnóza.'
-                : 'Vybrané diagnózy: ' + selectedDiagnoses.size + ' z ' + maximumDiagnoses + '.';
+                ? emptyStatus
+                : countStatus + ': ' + selectedDiagnoses.size + ' z ' + maximumDiagnoses + '.';
         }
 
         function renderSelectedDiagnoses() {
@@ -125,7 +155,7 @@
 
                 var formValue = document.createElement('input');
                 formValue.type = 'hidden';
-                formValue.name = 'related_diagnoses[]';
+                formValue.name = fieldName;
                 formValue.value = code;
                 formValue.setAttribute('value', code);
                 item.appendChild(formValue);
@@ -182,7 +212,7 @@
                 var option = document.createElement('button');
                 option.type = 'button';
                 option.className = 'mkch10-result';
-                option.id = 'mkch10-result-' + index;
+                option.id = resultIdPrefix + index;
                 option.setAttribute('role', 'option');
                 option.setAttribute('aria-selected', index === activeDiagnosisIndex ? 'true' : 'false');
 
@@ -202,7 +232,7 @@
 
             setDiagnosisResultsOpen(true);
             if (activeDiagnosisIndex >= 0) {
-                diagnosisSearch.setAttribute('aria-activedescendant', 'mkch10-result-' + activeDiagnosisIndex);
+                diagnosisSearch.setAttribute('aria-activedescendant', resultIdPrefix + activeDiagnosisIndex);
             } else {
                 diagnosisSearch.removeAttribute('aria-activedescendant');
             }
@@ -260,12 +290,41 @@
         });
         diagnosisSearch.addEventListener('blur', function () {
             window.setTimeout(function () {
-                if (!diagnosisPicker.contains(document.activeElement)) {
-                    setDiagnosisResultsOpen(false);
+                var active = document.activeElement;
+                if (active === diagnosisSearch || diagnosisResults.contains(active)) {
+                    return;
                 }
+                setDiagnosisResultsOpen(false);
             }, 100);
         });
 
+        var index = new Map(diagnosisItems.map(function (item) {
+            return [item.code, item];
+        }));
+        initiallySelectedDiagnosisCodes.split(',').map(function (code) {
+            return code.trim().toLocaleUpperCase('sk-SK');
+        }).filter(Boolean).forEach(function (code) {
+            if (index.has(code) && selectedDiagnoses.size < maximumDiagnoses) {
+                selectedDiagnoses.set(code, index.get(code).name);
+            }
+        });
+
+        renderSelectedDiagnoses();
+        updateDiagnosisValue();
+        diagnosisStatus.textContent += codebookStatusSuffix;
+    }
+
+    var diagnosisPickers = Array.prototype.slice.call(document.querySelectorAll('.mkch10-picker')).filter(function (picker) {
+        return picker.querySelector('input[type="search"]');
+    });
+    var diagnosisSource = '';
+    diagnosisPickers.forEach(function (picker) {
+        if (!diagnosisSource && picker.dataset.source) {
+            diagnosisSource = picker.dataset.source;
+        }
+    });
+
+    if (diagnosisPickers.length > 0 && diagnosisSource) {
         fetch(diagnosisSource, {headers: {'Accept': 'application/json'}})
             .then(function (response) {
                 if (!response.ok) {
@@ -278,7 +337,7 @@
                     throw new Error('Neplatný formát číselníka.');
                 }
 
-                diagnosisItems = data.items.filter(function (item) {
+                var diagnosisItems = data.items.filter(function (item) {
                     return Array.isArray(item) && typeof item[0] === 'string' && typeof item[1] === 'string';
                 }).map(function (item) {
                     var code = item[0];
@@ -291,25 +350,25 @@
                         search: normalizeDiagnosisText(code + ' ' + name)
                     };
                 });
+                var codebookStatusSuffix = ' Číselník MKCH-10-SK v' +
+                    String(data.meta && data.meta.version ? data.meta.version : '') +
+                    ' je načítaný.';
 
-                var index = new Map(diagnosisItems.map(function (item) {
-                    return [item.code, item];
-                }));
-                initiallySelectedDiagnosisCodes.split(',').map(function (code) {
-                    return code.trim().toLocaleUpperCase('sk-SK');
-                }).filter(Boolean).forEach(function (code) {
-                    if (index.has(code) && selectedDiagnoses.size < maximumDiagnoses) {
-                        selectedDiagnoses.set(code, index.get(code).name);
-                    }
+                diagnosisPickers.forEach(function (picker) {
+                    bindMkch10Picker(picker, diagnosisItems, codebookStatusSuffix);
                 });
-
-                renderSelectedDiagnoses();
-                updateDiagnosisValue();
-                diagnosisStatus.textContent += ' Číselník MKCH-10-SK v' + String(data.meta && data.meta.version ? data.meta.version : '') + ' je načítaný.';
             })
             .catch(function () {
-                diagnosisSearch.disabled = true;
-                diagnosisStatus.textContent = 'Číselník MKCH-10-SK sa nepodarilo načítať. Obnovte stránku.';
+                diagnosisPickers.forEach(function (picker) {
+                    var search = picker.querySelector('input[type="search"]');
+                    var status = picker.querySelector('.mkch10-status');
+                    if (search) {
+                        search.disabled = true;
+                    }
+                    if (status) {
+                        status.textContent = 'Číselník MKCH-10-SK sa nepodarilo načítať. Obnovte stránku.';
+                    }
+                });
             });
     }
 })();

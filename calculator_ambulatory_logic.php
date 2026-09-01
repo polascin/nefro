@@ -17,6 +17,39 @@ function ambulatoryNormalizeSingleLine(string $value, int $maxLength): string
 
     return mb_substr($normalized, 0, $maxLength, 'UTF-8');
 }
+
+function ambulatoryPostedCodeList(mixed $posted): string
+{
+    if (is_array($posted)) {
+        $codes = [];
+        foreach ($posted as $code) {
+            if (is_string($code) && $code !== '') {
+                $codes[] = $code;
+            }
+        }
+
+        return implode(', ', $codes);
+    }
+
+    return is_string($posted) ? $posted : '';
+}
+
+/**
+ * @param list<string> $codes
+ */
+function ambulatoryFormatCause(array $codes, string $note): string
+{
+    $parts = [];
+    if ($codes !== []) {
+        $parts[] = implode(', ', $codes);
+    }
+    if ($note !== '') {
+        $parts[] = $note;
+    }
+
+    return implode('; ', $parts);
+}
+
 function ambulatoryIcd10CodeForGCategory(string $gCategory): string
 {
     return match ($gCategory) {
@@ -116,7 +149,7 @@ function ambulatoryBuildPlainText(array $summary): string
         'eGFR Slope: ' . $summary['slope'],
         'Orientačné riziko podľa kombinácie G + A: ' . $summary['ga_risk'],
         'Chronicita abnormalít (≥ 3 mesiace): ' . $summary['chronicity'],
-        'Príčinné / pridružené Dg (MKCH-10): ' . $summary['related_diagnoses'],
+        'Pridružené Dg (MKCH-10): ' . $summary['related_diagnoses'],
         'Komplikácie CKD: ' . $summary['complications'],
         'Poznámka k eGFR: pri nesúlade eGFRcr s klinickým obrazom zvážiť eGFRcr-cys (kreatinín + cystatín C).',
     ]);

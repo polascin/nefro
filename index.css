@@ -7095,6 +7095,11 @@ mark.search-hl {
   margin-top: 0.35rem;
 }
 
+.mkch10-picker .mkch10-note {
+  margin-top: 0.9rem;
+  margin-bottom: 0;
+}
+
 @media (max-width: 768px) {
   .ambulatory-check-grid {
     grid-template-columns: 1fr;
