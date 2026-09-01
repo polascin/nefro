@@ -169,6 +169,11 @@ function getSourceArticleAuthors(): array {
         // 9 mien overených cez PubMed 2026-08-28.
         'serove-ketolatky-oblickove-udalosti-diabetes-2-typu' => ['Soo Myoung Shin', 'Jiyoon Lee', 'Young-Eun Kim', 'Jung A Kim', 'Kyoung Jin Kim', 'Kyeong Jin Kim', 'Hee Young Kim', 'Sin Gon Kim', 'Nam Hoon Kim'],
         'spolupraca-vseobecny-lekar-nefrolog-ckd-g5-joint-kd' => ['Minoru Murakami', 'Takuya Aoki', 'Yoshifumi Sugiyama', 'Sho Sasaki', 'Hiroki Nishiwaki', 'Masahiko Yazawa', 'Yoshihiko Raita', 'Hiroo Kawarazaki', 'Hideaki Shimizu', 'Yoshihiro Nakamura', 'Yosuke Saka', 'Masato Matsushima'],
+        // Písací výbor konferenčnej správy KDIGO o HF a CKD (Kidney Int 2026;109:1095–1113,
+        // PMID 41791738; súčasne JACC Heart Fail 2026;14:102943, PMID 41793402) — 14 menovaných
+        // autorov overených cez PubMed/Europe PMC. Skupinové spoluautorstvo „Conference Participants“
+        // sa nerozvíja (účastníci sú v appendixe správy).
+        'srdcove-zlyhavanie-ckd-kdigo-kontroverzie-2026' => ['Carolyn S. P. Lam', 'Biykem Bozkurt', 'David Z. I. Cherney', 'Justin A. Ezekowitz', 'Meg J. Jardine', 'Sadiya S. Khan', 'Magdalena Madero', 'Mark J. Sarnak', 'Jozine M. Ter Maaten', 'Michael Cheung', 'Jennifer M. King', 'Morgan E. Grams', 'Michel Jadoul', 'Nisha Bansal'],
         'swam-technika-tromboza-hemodialyzacneho-pristupu' => ['Lin Li', 'Zhongwang Zhang', 'Hongjie Wang', 'Mingdi Zhu', 'Kun Wang', 'Zheng Liu'],
         'subkutanny-furosemid-readyflow-edemy-hf-ckd' => ['Lois Anzelowitz Levine'],
         'synteticke-wnt-organizatory-oblickove-organoidy' => ['Connor C. Fausto', 'Fokion Glykofrydis', 'Navneet Kumar', 'Jack Schnell', 'Reka L. Csipan', 'Faith De Kuyper', 'Minnal Kunnan', 'Brendan Grubbs', 'Matthew Thornton', 'Michael Thompson', 'Enmian Chang', 'Xuduo Wen', 'Manuel Pelayo', 'MaryAnne Achieng', 'Anoothi Seth', 'Kelly Street', 'Leonardo Morsut', 'Nils O. Lindström'],
