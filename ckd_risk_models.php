@@ -108,7 +108,7 @@ function kdigoRisk(string $g, string $a): array
  *
  * Lineárny prediktor je z Tangri JAMA 2011. Základné prežitie S₀ je z oficiálneho
  * kalkulátora kidneyfailurerisk.com (rovnaké hodnoty ako Tangri JAMA 2016):
- * mimo Severnú Ameriku S₀(2)=0,9832, S₀(5)=0,9365; NA S₀(2)=0,975, S₀(5)=0,924.
+ * mimo Severnej Ameriky S₀(2)=0,9832, S₀(5)=0,9365; NA S₀(2)=0,975, S₀(5)=0,924.
  * Predvolená je mimoNA kalibrácia (vhodná pre SR). UACR v mg/g.
  *
  * @return array{risk_2yr: float, risk_5yr: float, calibration: string}

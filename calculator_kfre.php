@@ -176,7 +176,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     } else {
                         try {
                             $inputPayload = [
-                            "examination_date" => $form["examination_date"],
+                                "examination_date" => $form["examination_date"],
                                 "age_years" => (int) $ageYears,
                                 "sex" => $sex,
                                 "egfr" => round((float) $egfr, 1),
@@ -248,7 +248,7 @@ if (isLoggedIn()) {
       "KFRE — Kidney Failure Risk Equation | Kalkulačky | Nefro-projekt Slovensko";
   $canonicalUrl = "https://nefro.polascin.net/calculator_kfre.php";
   $seoDescription =
-      "Nefrologická kalkulačka a nástroj: KFRE — Kidney Failure Risk Equation. Kidney Failure Risk Equation — Predikcia zlyhania obličiek (Tangri 2024). Presné klinické výpočty podľa najnovších odporúčaní pre lekárov na Slovensku.";
+      "Nefrologická kalkulačka KFRE (Kidney Failure Risk Equation, Tangri 2011/2016): 2- a 5-ročné riziko zlyhania obličiek s kalibráciou mimo Severnej Ameriky predvolene pre Slovensko.";
   $structuredData = [
       [
           "@context" => "https://schema.org",
@@ -284,7 +284,7 @@ if (isLoggedIn()) {
     <?php
     $headerTitle = "Kalkulačka KFRE";
     $headerIntro =
-        "Kidney Failure Risk Equation — Predikcia zlyhania obličiek (Tangri 2024)";
+        "Kidney Failure Risk Equation — predikcia zlyhania obličiek (Tangri 2011/2016)";
     $showLogo = false;
     include "header.php";
     ?>
@@ -307,7 +307,7 @@ if (isLoggedIn()) {
                         <div class="calc-formula-line">\[ \text{UACR [mg/g]} = \text{UACR [mg/mmol]} \times 8.84 \]</div>
                         <div class="calc-formula-vars">
                             $\text{Muž} = 1, \text{Žena} = 0$ &bull; $\text{UACR v mg/g}$ &bull;
-                            predvolená kalibrácia mimo Severnú Ameriku (Tangri 2016; vhodná pre SR) &bull;
+                            predvolená kalibrácia mimo Severnej Ameriky (Tangri 2016; vhodná pre SR) &bull;
                             Zdroj: Tangri N et al. <em>JAMA.</em> 2011;305(15):1553–9; Tangri N et al. <em>JAMA.</em> 2016;315(2):164–74.
                         </div>
                     </div>
@@ -398,10 +398,10 @@ if (isLoggedIn()) {
                             <div class="form-group">
                                 <label for="kfre_region">Kalibrácia</label>
                                 <select id="kfre_region" name="kfre_region" class="form-control" required>
-                                    <option value="non_na" <?= $form["kfre_region"] === "non_na" ? "selected" : "" ?>>Mimo Severnú Ameriku (Tangri 2016, predvolené pre SR)</option>
+                                    <option value="non_na" <?= $form["kfre_region"] === "non_na" ? "selected" : "" ?>>Mimo Severnej Ameriky (Tangri 2016, predvolená pre SR)</option>
                                     <option value="na" <?= $form["kfre_region"] === "na" ? "selected" : "" ?>>Severná Amerika (Tangri 2011)</option>
                                 </select>
-                                <small class="helper-text">Mimo NA kalibrácia znižuje nadhodnotenie rizika v európskych kohortách. Čísla na kidneyfailurerisk.com pri voľbe North America zodpovedajú druhej možnosti.</small>
+                                <small class="helper-text">Kalibrácia mimo Severnej Ameriky znižuje nadhodnotenie rizika v európskych kohortách. Čísla na kidneyfailurerisk.com pri voľbe North America zodpovedajú druhej možnosti.</small>
                             </div>
                         </div>
                     </div>
@@ -420,7 +420,7 @@ if (isLoggedIn()) {
                         <h3>Výsledok KFRE</h3>
                         <p class="helper-text"><?= $calculated["kfre_region"] === "na"
                             ? "Kalibrácia: Severná Amerika (S₀ 2 r. = 0,975; 5 r. = 0,924)."
-                            : "Kalibrácia: mimo Severnú Ameriku (S₀ 2 r. = 0,9832; 5 r. = 0,9365)." ?></p>
+                            : "Kalibrácia: mimo Severnej Ameriky (S₀ 2 r. = 0,9832; 5 r. = 0,9365)." ?></p>
                         <div class="kfre-risk-display">
                             <div class="risk-item risk-2yr">
                                 <div class="risk-label">2-ročné riziko</div>
@@ -531,7 +531,14 @@ if (isLoggedIn()) {
                     $risk2yr = (float) ($result['risk_2yr'] ?? 0);
                     $risk5yr = (float) ($result['risk_5yr'] ?? 0);
                     echo '2r: ' . htmlspecialchars(number_format($risk2yr, 1, ',', ' ')) . ' %, ';
-                    echo '5r: ' . htmlspecialchars(number_format($risk5yr, 1, ',', ' ')) . ' %';                }
+                    echo '5r: ' . htmlspecialchars(number_format($risk5yr, 1, ',', ' ')) . ' %';
+                    $cal = (string) ($result['kfre_region'] ?? '');
+                    if ($cal === 'na') {
+                        echo ' (Severná Amerika)';
+                    } elseif ($cal === 'non_na') {
+                        echo ' (mimo Severnej Ameriky)';
+                    }
+                }
             ); ?>
         </div>
     </main>
