@@ -115,7 +115,7 @@ try {
             throw new \RuntimeException('XML číselníka sa nepodarilo otvoriť.');
         }
 
-        $header = [];
+        $header = null;
         $items = [];
 
         try {
@@ -176,10 +176,14 @@ try {
         }
     }
 
-    if (($header['oid'] ?? '') !== MKCH10_OID || ($header['name'] ?? '') !== 'Zoznam diagnóz') {
+    if (
+        $header === null
+        || $header['oid'] !== MKCH10_OID
+        || $header['name'] !== 'Zoznam diagnóz'
+    ) {
         throw new \RuntimeException('Vybrané XML nie je očakávaný číselník diagnóz.');
     }
-    if (($header['version'] ?? '') !== (string) $selectedVersion) {
+    if ($header['version'] !== (string) $selectedVersion) {
         throw new \RuntimeException('Verzia v názve XML sa nezhoduje s hlavičkou číselníka.');
     }
     if ($items === []) {

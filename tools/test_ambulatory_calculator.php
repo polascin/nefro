@@ -83,4 +83,19 @@ testSame(true, str_starts_with($output, 'Hlavná Dg (MKCH-10): N18.3 CKD G3b'), 
 testSame(true, str_contains($output, 'Poznámka k eGFR:'), 'Povinná poznámka k eGFR');
 testSame(9, count(explode("\n", $output)), 'Počet riadkov čistého textu');
 
+$kdigoHeatmap = [
+    'G1' => ['A1' => 'Nízke riziko', 'A2' => 'Stredné riziko', 'A3' => 'Vysoké riziko'],
+    'G2' => ['A1' => 'Nízke riziko', 'A2' => 'Stredné riziko', 'A3' => 'Vysoké riziko'],
+    'G3a' => ['A1' => 'Stredné riziko', 'A2' => 'Vysoké riziko', 'A3' => 'Veľmi vysoké riziko'],
+    'G3b' => ['A1' => 'Vysoké riziko', 'A2' => 'Veľmi vysoké riziko', 'A3' => 'Veľmi vysoké riziko'],
+    'G4' => ['A1' => 'Vysoké riziko', 'A2' => 'Veľmi vysoké riziko', 'A3' => 'Veľmi vysoké riziko'],
+    'G5' => ['A1' => 'Veľmi vysoké riziko', 'A2' => 'Veľmi vysoké riziko', 'A3' => 'Veľmi vysoké riziko'],
+];
+foreach ($kdigoHeatmap as $gCategory => $albuminRows) {
+    foreach ($albuminRows as $aCategory => $expectedRisk) {
+        $actual = kdigoRisk($gCategory, $aCategory);
+        testSame($expectedRisk, $actual['risk'], 'KDIGO ' . $gCategory . '×' . $aCategory);
+    }
+}
+
 echo 'Ambulantná kalkulačka: ' . $assertions . " kontrol prešlo.\n";

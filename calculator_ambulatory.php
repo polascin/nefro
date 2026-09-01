@@ -445,7 +445,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </div>
                 <?php endif; ?>
 
-                <form method="POST" action="calculator_ambulatory.php" id="ambulatory-calculator-form">
+                <form method="POST" action="calculator_ambulatory.php" id="ambulatory-calculator-form" autocomplete="off">
                     <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
 
                     <section class="form-section" aria-labelledby="ambulatory-core-heading">
@@ -503,12 +503,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         </label>
                         <div class="form-group mkch10-picker" id="mkch10-related-picker" data-source="assets/data/mkch10-sk.json" data-max-items="12" data-selected="<?= htmlspecialchars($form['related_diagnoses']) ?>">
                             <label for="related_diagnosis_search">Príčinné / pridružené diagnózy (MKCH-10-SK)</label>
-                            <input type="search" id="related_diagnosis_search" class="form-control" autocomplete="off" aria-autocomplete="list" aria-controls="related_diagnosis_results" aria-expanded="false" aria-describedby="related_diagnosis_help related_diagnosis_status" placeholder="Začnite písať kód alebo názov diagnózy">
+                            <input type="search" id="related_diagnosis_search" class="form-control" autocomplete="off" role="combobox" aria-autocomplete="list" aria-haspopup="listbox" aria-controls="related_diagnosis_results" aria-expanded="false" aria-describedby="related_diagnosis_help related_diagnosis_status" placeholder="Začnite písať kód alebo názov diagnózy">
                             <div id="related_diagnosis_results" class="mkch10-results" role="listbox" aria-label="Výsledky vyhľadávania diagnóz" hidden></div>
                             <div id="related_diagnosis_selected" class="mkch10-selected" aria-label="Vybrané diagnózy"></div>
                             <small id="related_diagnosis_help">Vyhľadávajte podľa kódu alebo slovenského názvu a diagnózu pridajte výberom z výsledkov. Možno vybrať najviac 12 kódov.</small>
                             <small id="related_diagnosis_status" class="mkch10-status" role="status" aria-live="polite"></small>
-                            <noscript><small class="alert alert-warning">Vyhľadávanie v číselníku vyžaduje zapnutý JavaScript.</small></noscript>
+                            <noscript>
+                                <label for="related_diagnoses_noscript">Kódy diagnóz MKCH-10-SK (oddelené čiarkou)</label>
+                                <input type="text" id="related_diagnoses_noscript" name="related_diagnoses" maxlength="300" class="form-control" value="<?= htmlspecialchars($form['related_diagnoses']) ?>" placeholder="napr. N18.3, I12.00">
+                                <small>Bez JavaScriptu zadajte kódy ručne. Server overí ich prítomnosť v číselníku.</small>
+                            </noscript>
                         </div>
                     </section>
 

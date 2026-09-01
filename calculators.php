@@ -263,8 +263,8 @@ $schemaWebApp = [
                     Údaje potrebné pre výpočet sú povinné.
                 </p>
                 <p>
-                    Prihlásený používateľ môže výsledok uložiť do databázy. Uložené výsledky sa zobrazia
-                    v spodnej časti každej kalkulačky s možnosťou vytlačenia alebo vymazania.
+                    Prihlásený používateľ môže výsledok väčšiny kalkulačiek uložiť do databázy. Uložené výsledky sa zobrazia
+                    v spodnej časti príslušnej kalkulačky s možnosťou vytlačenia alebo vymazania. Ambulantná kalkulačka výsledok zámerne neukladá.
                 </p>
             </section>
 

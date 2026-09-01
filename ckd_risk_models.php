@@ -46,30 +46,60 @@ function kdigoACategory(float $uacr): string
  */
 function kdigoRisk(string $g, string $a): array
 {
-    $risk = "Veľmi vysoké riziko";
-    $note = "Potrebná zvýšená vigilancia a špecializované vedenie.";
-
-    if (($g === "G1" || $g === "G2") && $a === "A1") {
-        $risk = "Nízke riziko";
-        $note =
-            "Ak CKD trvá <3 mesiace alebo bez markerov, CKD nemusí byť potvrdená.";
-    } elseif (($g === "G1" || $g === "G2") && $a === "A2") {
-        $risk = "Stredné riziko";
-        $note = "Odporúčané pravidelné sledovanie a nefroprotektívna liečba.";
-    } elseif (($g === "G1" || $g === "G2") && $a === "A3") {
-        $risk = "Vysoké riziko";
-        $note = "Odporúčané intenzívnejšie sledovanie a úprava terapie.";
-    } elseif ($g === "G3a" && $a === "A1") {
-        $risk = "Stredné riziko";
-        $note = "Sledovanie funkcie obličiek a rizikových faktorov.";
-    } elseif (($g === "G3a" && $a === "A2") || ($g === "G3b" && $a === "A1")) {
-        $risk = "Vysoké riziko";
-        $note = "Vysoké riziko progresie, zvážiť nefrologickú konzultáciu.";
-    }
+    // KDIGO 2024 heatmapa prognózy CKD (G × A). G4×A1 je oranžová = vysoké,
+    // nie červená; predchádzajúci fallback „veľmi vysoké“ ju nesprávne zaraďoval
+    // a v Ambulantnej kalkulačke tým posúval CKM staging na stupeň 3.
+    $heatmap = [
+        'G1' => [
+            'A1' => 'Nízke riziko',
+            'A2' => 'Stredné riziko',
+            'A3' => 'Vysoké riziko',
+        ],
+        'G2' => [
+            'A1' => 'Nízke riziko',
+            'A2' => 'Stredné riziko',
+            'A3' => 'Vysoké riziko',
+        ],
+        'G3a' => [
+            'A1' => 'Stredné riziko',
+            'A2' => 'Vysoké riziko',
+            'A3' => 'Veľmi vysoké riziko',
+        ],
+        'G3b' => [
+            'A1' => 'Vysoké riziko',
+            'A2' => 'Veľmi vysoké riziko',
+            'A3' => 'Veľmi vysoké riziko',
+        ],
+        'G4' => [
+            'A1' => 'Vysoké riziko',
+            'A2' => 'Veľmi vysoké riziko',
+            'A3' => 'Veľmi vysoké riziko',
+        ],
+        'G5' => [
+            'A1' => 'Veľmi vysoké riziko',
+            'A2' => 'Veľmi vysoké riziko',
+            'A3' => 'Veľmi vysoké riziko',
+        ],
+    ];
+    $risk = $heatmap[$g][$a] ?? 'Veľmi vysoké riziko';
+    $note = match (true) {
+        $risk === 'Nízke riziko' =>
+            'Ak CKD trvá <3 mesiace alebo bez markerov, CKD nemusí byť potvrdená.',
+        $g === 'G3a' && $a === 'A1' =>
+            'Sledovanie funkcie obličiek a rizikových faktorov.',
+        $risk === 'Stredné riziko' =>
+            'Odporúčané pravidelné sledovanie a nefroprotektívna liečba.',
+        ($g === 'G1' || $g === 'G2') && $a === 'A3' =>
+            'Odporúčané intenzívnejšie sledovanie a úprava terapie.',
+        $risk === 'Vysoké riziko' =>
+            'Vysoké riziko progresie, zvážiť nefrologickú konzultáciu.',
+        default =>
+            'Potrebná zvýšená vigilancia a špecializované vedenie.',
+    };
 
     return [
-        "risk" => $risk,
-        "note" => $note,
+        'risk' => $risk,
+        'note' => $note,
     ];
 }
 

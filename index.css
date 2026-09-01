@@ -7035,10 +7035,8 @@ mark.search-hl {
 }
 
 .mkch10-result:hover,
-.mkch10-result:focus,
 .mkch10-result[aria-selected="true"] {
   background: var(--surface-hover, #eff6ff);
-  outline: 2px solid transparent;
 }
 
 .mkch10-results__empty {
@@ -7068,14 +7066,23 @@ mark.search-hl {
 .mkch10-chip__remove {
   display: inline-grid;
   place-items: center;
-  width: 1.6rem;
-  height: 1.6rem;
+  position: relative;
+  width: 1.75rem;
+  height: 1.75rem;
   padding: 0;
   color: inherit;
   background: transparent;
   border: 0;
   border-radius: 50%;
   cursor: pointer;
+}
+.mkch10-chip__remove::before {
+  position: absolute;
+  inset: 50%;
+  width: 44px;
+  height: 44px;
+  content: "";
+  transform: translate(-50%, -50%);
 }
 
 .mkch10-chip__remove:hover,
@@ -7088,7 +7095,7 @@ mark.search-hl {
   margin-top: 0.35rem;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .ambulatory-check-grid {
     grid-template-columns: 1fr;
   }
