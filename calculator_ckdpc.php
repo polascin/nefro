@@ -873,9 +873,10 @@ function sexLabel(string $v): string
                     <div class="kfre-threshold info-box-gray">
                         <h4>Obmedzenia a disclaimer</h4>
                         <p>
-                            Koeficienty modelov 1, 2 a 4 (Bez DM a DM eGFR&lt;60) sú odvodené z
-                            publikovaných dát Grams 2022. <strong>Model 3 (DM, eGFR≥60)</strong> bol
-                            overený oproti ckdpcrisk.org/gfrdecline40/ (default scenario → 1,9 %).
+                            Koeficienty všetkých štyroch submodelov boli 1. 9. 2026 zhodné
+                            s oficiálnym <code>gfrdecline.php</code> na
+                            ckdpcrisk.org/gfrdecline40/ (vrátane predvoleného scenára 1,9 %
+                            a priemeru submodelov pri eGFR presne 60).
                             Pre klinické rozhodovanie odporúčame validovať výsledky oproti
                             <a href="https://ckdpcrisk.org/gfrdecline40/" target="_blank" rel="noopener noreferrer">
                                 oficiálnemu kalkulátoru CKD-PC

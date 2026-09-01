@@ -659,7 +659,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <ul>
                     <li>CKD vyžaduje abnormalitu štruktúry alebo funkcie obličiek trvajúcu najmenej 3 mesiace. Jediný abnormálny eGFR alebo uACR chronicitu nepotvrdzuje.</li>
                     <li>Pri G1–G2 a A1 bez iného markera poškodenia obličiek nie sú z uvedených údajov splnené kritériá CKD.</li>
-                    <li>KFRE sa tu počíta iba pri eGFR 10 až &lt;60 ml/min/1,73 m². CKD-PC sa počíta pri veku 20–80 rokov a predikuje iný endpoint: ≥40 % pokles eGFR alebo zlyhanie obličiek v horizonte 2–3 rokov.</li>
+                    <li>KFRE sa tu počíta iba pri eGFR 10 až &lt;60 ml/min/1,73 m², s kalibráciou mimo Severnú Ameriku (Tangri 2016). CKD-PC sa počíta pri veku 20–80 rokov a predikuje iný endpoint: ≥40 % pokles eGFR alebo zlyhanie obličiek v horizonte 2–3 rokov.</li>
                     <li>Automatický kód N18.x vyjadruje štádium CKD. Príčinu CKD a pridružené diagnózy vyberáte z importovaného číselníka MKCH-10-SK verzie 26, platného od 1. 1. 2026; k príčine možno doplniť vlastný text. Klinickú správnosť výberu musí potvrdiť lekár.</li>
                 </ul>
 
@@ -667,6 +667,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <ul class="reference-list">
                     <li><small><em><a href="https://kdigo.org/wp-content/uploads/2024/03/KDIGO-2024-CKD-Guideline.pdf" target="_blank" rel="noopener noreferrer">KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of CKD</a>.</em></small></li>
                     <li><small><em><a href="https://jamanetwork.com/journals/jama/fullarticle/897102" target="_blank" rel="noopener noreferrer">Tangri N et al. A Predictive Model for Progression of CKD to Kidney Failure. JAMA. 2011</a>.</em></small></li>
+                    <li><small><em><a href="https://jamanetwork.com/journals/jama/fullarticle/2481159" target="_blank" rel="noopener noreferrer">Tangri N et al. Multinational Assessment of Accuracy of Equations for Predicting Risk of Kidney Failure. JAMA. 2016</a>.</em></small></li>
                     <li><small><em><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9472501/" target="_blank" rel="noopener noreferrer">Grams ME et al. Development and Validation of Prediction Models of Adverse Kidney Outcomes. Diabetes Care. 2022</a>.</em></small></li>
                     <li><small><em><a href="https://professional.heart.org/en/science-news/cardiovascular-kidney-metabolic-health-a-presidential-advisory" target="_blank" rel="noopener noreferrer">AHA 2023 Presidential Advisory on Cardiovascular-Kidney-Metabolic Health</a>.</em></small></li>
                     <li><small><em><a href="https://nczisk.sk/Standardy-v-zdravotnictve/Pages/Medzinarodna-klasifikacia-chorob-MKCH-10.aspx" target="_blank" rel="noopener noreferrer">NCZI: aktuálna Medzinárodná klasifikácia chorôb MKCH-10-SK</a>.</em></small></li>

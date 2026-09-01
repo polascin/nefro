@@ -43,6 +43,32 @@ foreach ($ckdpcScenarios as $index => [$expected, $arguments]) {
     testApprox($expected, $result['risk_3yr'], 0.05, 'CKD-PC scenár ' . ($index + 1));
 }
 
+$ckdpcEgfr60 = ckdpcRisk(60, 'male', 60.0, 30.0, true, 130.0, false, false, false, false, 30.0, 'never', 7.0, false, false);
+testApprox(3.3, $ckdpcEgfr60['risk_3yr'], 0.05, 'CKD-PC eGFR presne 60');
+testSame(
+    'DM, priemer submodelov eGFR ≥60 a <60',
+    $ckdpcEgfr60['model_name'],
+    'CKD-PC názov modelu pri eGFR 60'
+);
+
+$kfreCases = [
+    [60, 'male', 25.0, 300.0, false, 10.0, 33.5],
+    [55, 'female', 15.0, 1000.0, false, 38.2, 84.5],
+    [70, 'male', 40.0, 150.0, false, 1.2, 4.4],
+    [50, 'female', 30.0, 500.0, false, 7.1, 24.9],
+    [60, 'male', 25.0, 300.0, true, 14.6, 38.8],
+    [55, 'female', 15.0, 1000.0, true, 51.3, 89.4],
+    [70, 'male', 40.0, 150.0, true, 1.7, 5.3],
+    [50, 'female', 30.0, 500.0, true, 10.5, 29.2],
+];
+foreach ($kfreCases as $index => [$age, $sex, $egfr, $uacr, $northAmerica, $expected2, $expected5]) {
+    $result = kfreRisk($age, $sex, $egfr, $uacr, $northAmerica);
+    $label = 'KFRE scenár ' . ($index + 1) . ($northAmerica ? ' NA' : ' mimo NA');
+    testApprox($expected2, $result['risk_2yr'], 0.05, $label . ' 2r');
+    testApprox($expected5, $result['risk_5yr'], 0.05, $label . ' 5r');
+    testSame($northAmerica ? 'na' : 'non_na', $result['calibration'], $label . ' kalibrácia');
+}
+
 testSame('N18.1', ambulatoryIcd10CodeForGCategory('G1'), 'MKCH G1');
 testSame('N18.3', ambulatoryIcd10CodeForGCategory('G3a'), 'MKCH G3a');
 testSame('N18.3', ambulatoryIcd10CodeForGCategory('G3b'), 'MKCH G3b');

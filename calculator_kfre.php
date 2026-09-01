@@ -64,6 +64,7 @@ $form = [
     "egfr" => (string) ($_POST["egfr"] ?? ""),
     "uacr_value" => (string) ($_POST["uacr_value"] ?? ""),
     "uacr_unit" => (string) ($_POST["uacr_unit"] ?? "mg_g"),
+    "kfre_region" => (string) ($_POST["kfre_region"] ?? "non_na"),
     "patient_first_name" => (string) ($_POST["patient_first_name"] ?? ""),
     "patient_last_name" => (string) ($_POST["patient_last_name"] ?? ""),
     "patient_birth_date" => (string) ($_POST["patient_birth_date"] ?? ""),
@@ -124,6 +125,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $errors[] = "Vyberte jednotku UACR.";
         }
 
+        $kfreRegion = in_array($form["kfre_region"], ["non_na", "na"], true)
+            ? $form["kfre_region"]
+            : "";
+        if ($kfreRegion === "") {
+            $errors[] = "Vyberte kalibráciu KFRE.";
+        }
+
         $uacrValue = calculatorParsePositiveFloat($form["uacr_value"]);
         if ($uacrValue === null || $uacrValue > 10000) {
             $errors[] = "UACR musí byť kladné číslo v rozumnom rozsahu.";
@@ -140,6 +148,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     $sex,
                     (float) $egfr,
                     $uacrMgG,
+                    $kfreRegion === "na",
                 );
                 $interpretationResult = kfreInterpretation(
                     $riskResult["risk_2yr"],
@@ -153,6 +162,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     "uacr_input" => round((float) $uacrValue, 2),
                     "uacr_unit" => $uacrUnit,
                     "uacr_mg_g" => round($uacrMgG, 2),
+                    "kfre_region" => $kfreRegion,
                     "risk_2yr" => $riskResult["risk_2yr"],
                     "risk_5yr" => $riskResult["risk_5yr"],
                     "interpretation" => $interpretationResult["interpretation"],
@@ -172,12 +182,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                                 "egfr" => round((float) $egfr, 1),
                                 "uacr_value" => round((float) $uacrValue, 2),
                                 "uacr_unit" => $uacrUnit,
+                                "kfre_region" => $kfreRegion,
                             ];
 
                             $resultPayload = [
                                 "risk_2yr" => $riskResult["risk_2yr"],
                                 "risk_5yr" => $riskResult["risk_5yr"],
                                 "uacr_mg_g" => round($uacrMgG, 2),
+                                "kfre_region" => $kfreRegion,
                                 "interpretation" =>
                                     $interpretationResult["interpretation"],
                                 "warnings" => $interpretationResult["warnings"],
@@ -290,12 +302,13 @@ if (isLoggedIn()) {
                     <div class="calc-formula-content">
                         <div class="calc-formula-line">\[ \begin{aligned} X = &-0.2201 \cdot (\text{Vek}/10 - 7.036) + 0.2467 \cdot (\text{Muž} - 0.5642) \\ &- 0.5567 \cdot (\text{eGFR}/5 - 7.222) \\ &+ 0.4510 \cdot (\ln(\text{UACR}) - 5.137) \end{aligned} \]</div>
                         <div class="calc-formula-line">\[ \text{Riziko}(t) = (1 - S_0(t)^{\exp(X)}) \times 100\% \]</div>
-                        <div class="calc-formula-line">\[ S_0(2 \text{ roky}) = 0.9832 \quad S_0(5 \text{ rokov}) = 0.9485 \]</div>
+                        <div class="calc-formula-line">\[ S_0(2 \text{ roky}) = 0.9832 \quad S_0(5 \text{ rokov}) = 0.9365 \quad \text{(mimo NA)} \]</div>
+                        <div class="calc-formula-line">\[ S_0(2 \text{ roky}) = 0.975 \quad S_0(5 \text{ rokov}) = 0.924 \quad \text{(Severná Amerika)} \]</div>
                         <div class="calc-formula-line">\[ \text{UACR [mg/g]} = \text{UACR [mg/mmol]} \times 8.84 \]</div>
                         <div class="calc-formula-vars">
                             $\text{Muž} = 1, \text{Žena} = 0$ &bull; $\text{UACR v mg/g}$ &bull;
-                            Cox proportional hazards, North American kohorta &bull;
-                            Zdroj: Tangri N et al. <em>JAMA.</em> 2011;305(15):1553–9.
+                            predvolená kalibrácia mimo Severnú Ameriku (Tangri 2016; vhodná pre SR) &bull;
+                            Zdroj: Tangri N et al. <em>JAMA.</em> 2011;305(15):1553–9; Tangri N et al. <em>JAMA.</em> 2016;315(2):164–74.
                         </div>
                     </div>
                 </details>
@@ -382,6 +395,14 @@ if (isLoggedIn()) {
                                     </select>
                                 </div>
                             </div>
+                            <div class="form-group">
+                                <label for="kfre_region">Kalibrácia</label>
+                                <select id="kfre_region" name="kfre_region" class="form-control" required>
+                                    <option value="non_na" <?= $form["kfre_region"] === "non_na" ? "selected" : "" ?>>Mimo Severnú Ameriku (Tangri 2016, predvolené pre SR)</option>
+                                    <option value="na" <?= $form["kfre_region"] === "na" ? "selected" : "" ?>>Severná Amerika (Tangri 2011)</option>
+                                </select>
+                                <small class="helper-text">Mimo NA kalibrácia znižuje nadhodnotenie rizika v európskych kohortách. Čísla na kidneyfailurerisk.com pri voľbe North America zodpovedajú druhej možnosti.</small>
+                            </div>
                         </div>
                     </div>
 
@@ -397,6 +418,9 @@ if (isLoggedIn()) {
                 ?>
                     <div class="form-section calculator-result-block kfre-result <?= htmlspecialchars($kfRiskCls) ?>" role="status" aria-live="polite">
                         <h3>Výsledok KFRE</h3>
+                        <p class="helper-text"><?= $calculated["kfre_region"] === "na"
+                            ? "Kalibrácia: Severná Amerika (S₀ 2 r. = 0,975; 5 r. = 0,924)."
+                            : "Kalibrácia: mimo Severnú Ameriku (S₀ 2 r. = 0,9832; 5 r. = 0,9365)." ?></p>
                         <div class="kfre-risk-display">
                             <div class="risk-item risk-2yr">
                                 <div class="risk-label">2-ročné riziko</div>
