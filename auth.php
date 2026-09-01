@@ -55,6 +55,9 @@ function isSensitiveRequestParameter(string $name): bool {
         'patient' => true,
         'birthnumber' => true,
         'patientbirthnumber' => true,
+        'birthdate' => true,
+        'birthinput' => true,
+        'dateofbirth' => true,
         'rodnecislo' => true,
         'resultid' => true,
         'loadid' => true,
@@ -66,7 +69,7 @@ function isSensitiveRequestParameter(string $name): bool {
 
     foreach ([
         'token', 'password', 'secret', 'email', 'login', 'username',
-        'phone', 'mobile', 'patient', 'birthnumber', 'rodnecislo',
+        'phone', 'mobile', 'patient', 'birth', 'rodnecislo',
         'resultid', 'loadid',
     ] as $fragment) {
         if (str_contains($normalized, $fragment)) {

@@ -34,7 +34,7 @@ $form = [
     'examination_date' => (string) ($_POST['examination_date'] ?? date('Y-m-d')),
     'cause_diagnoses' => ambulatoryPostedCodeList($_POST['cause_diagnoses'] ?? ''),
     'cause_note' => (string) ($_POST['cause_note'] ?? ''),
-    'age_years' => (string) ($_POST['age_years'] ?? ''),
+    'birth_input' => (string) ($_POST['birth_input'] ?? ''),
     'sex' => (string) ($_POST['sex'] ?? 'female'),
     'egfr' => (string) ($_POST['egfr'] ?? ''),
     'uacr_value' => (string) ($_POST['uacr_value'] ?? ''),
@@ -133,11 +133,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $errors[] = 'Dátum vyšetrenia nemôže byť v budúcnosti.';
         }
 
-        $ageYears = filter_var($form['age_years'], FILTER_VALIDATE_INT, [
-            'options' => ['min_range' => 18, 'max_range' => 120],
-        ]);
-        if ($ageYears === false) {
-            $errors[] = 'Vek musí byť celé číslo v intervale 18 až 120 rokov.';
+        $birthInput = ambulatoryNormalizeSingleLine($form['birth_input'], 16);
+        $form['birth_input'] = $birthInput;
+        $birthParts = $birthInput === '' ? null : ambulatoryParseBirthInput($birthInput);
+        $ageYears = null;
+        if ($birthInput === '') {
+            $errors[] = 'Zadajte rok narodenia alebo dátum narodenia.';
+        } elseif ($birthParts === null) {
+            $errors[] = 'Dátum narodenia je neplatný. Použite rok (1965), mesiac a rok (6/1965) alebo celý dátum (15.6.1965).';
+        } elseif ($examinationDate instanceof \DateTimeImmutable) {
+            $ageYears = ambulatoryAgeAtExamination($birthParts, $examinationDate);
+            if ($ageYears === null) {
+                $errors[] = 'Dátum narodenia nemôže byť po dátume vyšetrenia.';
+            } elseif ($ageYears < 18 || $ageYears > 120) {
+                $errors[] = 'Vek k dátumu vyšetrenia musí byť v intervale 18 až 120 rokov.';
+            }
         }
 
         $sex = in_array($form['sex'], ['female', 'male'], true) ? $form['sex'] : '';
@@ -442,7 +452,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <p class="auth-subtitle">Z jedného formulára vytvorí KDIGO CGA klasifikáciu, prognostické riziká a čistý text vhodný na skopírovanie do ambulantnej správy.</p>
 
                 <div class="info-box-blue">
-                    Kalkulačka nevyžaduje identifikačné údaje pacienta a výsledok neukladá do databázy. Príčinu CKD, chronicitu, pridružené diagnózy a komplikácie potvrdzuje lekár; nástroj ich neurčuje zo samotných laboratórnych hodnôt.
+                    Kalkulačka nevyžaduje identifikačné údaje pacienta a výsledok neukladá do databázy. Dátum alebo rok narodenia slúži len na výpočet veku k dátumu vyšetrenia a na serveri sa neukladá. Príčinu CKD, chronicitu, pridružené diagnózy a komplikácie potvrdzuje lekár; nástroj ich neurčuje zo samotných laboratórnych hodnôt.
                 </div>
 
                 <?php if ($errors !== []): ?>
@@ -484,8 +494,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 <input type="date" id="examination_date" name="examination_date" required class="form-control" max="<?= htmlspecialchars(date('Y-m-d')) ?>" value="<?= htmlspecialchars($form['examination_date']) ?>">
                             </div>
                             <div class="form-group">
-                                <label for="age_years">Vek (roky) <span class="required">*</span></label>
-                                <input type="number" id="age_years" name="age_years" min="18" max="120" required class="form-control" value="<?= htmlspecialchars($form['age_years']) ?>">
+                                <label for="birth_input">Dátum alebo rok narodenia <span class="required">*</span></label>
+                                <input type="text" id="birth_input" name="birth_input" required maxlength="16" class="form-control" autocomplete="off" placeholder="napr. 1965, 6/1965 alebo 15.6.1965" value="<?= htmlspecialchars($form['birth_input']) ?>" aria-describedby="birth_input_help birth_age_status">
+                                <small id="birth_input_help">Vek sa dopočíta k dátumu vyšetrenia. Stačí rok, mesiac a rok, alebo celý dátum. Pri neúplnom údaji sa chýbajúce časti berú ako 1. január, resp. 1. deň mesiaca.</small>
+                                <small id="birth_age_status" class="ambulatory-age-status" role="status" aria-live="polite"></small>
                             </div>
                             <div class="form-group">
                                 <label for="sex">Pohlavie použité v rovniciach <span class="required">*</span></label>

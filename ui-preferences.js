@@ -22,12 +22,13 @@ const sensitiveAnalyticsParameters = new Set([
     'csrf', 'csrftoken', 'jstoken', 'code', 'totpcode',
     'verificationtoken', 'resettoken', 'deletiontoken',
     'email', 'login', 'username', 'phone', 'mobile', 'patient',
-    'birthnumber', 'patientbirthnumber', 'rodnecislo',
+    'birthnumber', 'patientbirthnumber', 'birthdate', 'birthinput',
+    'dateofbirth', 'rodnecislo',
     'resultid', 'loadid', 'compare'
 ]);
 const sensitiveAnalyticsParameterFragments = [
     'token', 'password', 'secret', 'email', 'login', 'username',
-    'phone', 'mobile', 'patient', 'birthnumber', 'rodnecislo',
+    'phone', 'mobile', 'patient', 'birth', 'rodnecislo',
     'resultid', 'loadid'
 ];
 

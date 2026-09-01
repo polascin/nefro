@@ -6997,6 +6997,12 @@ mark.search-hl {
   resize: vertical;
 }
 
+.ambulatory-age-status {
+  display: block;
+  margin-top: 0.35rem;
+  font-weight: 600;
+}
+
 .ambulatory-check-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

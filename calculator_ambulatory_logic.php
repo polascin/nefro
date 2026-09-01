@@ -50,6 +50,97 @@ function ambulatoryFormatCause(array $codes, string $note): string
     return implode('; ', $parts);
 }
 
+/**
+ * @return array{year: int, month: int, day: int, precision: 'year'|'month'|'day'}|null
+ */
+function ambulatoryParseBirthInput(string $raw): ?array
+{
+    $normalized = preg_replace('/[\s\x{00A0}]+/u', '', trim($raw));
+    if (!is_string($normalized) || $normalized === '') {
+        return null;
+    }
+    $normalized = str_replace(['–', '—', '\\'], '-', $normalized);
+
+    $year = 0;
+    $month = 1;
+    $day = 1;
+    $precision = 'year';
+
+    if (preg_match('/^(\d{4})$/', $normalized, $match) === 1) {
+        $year = (int) $match[1];
+    } elseif (preg_match('/^(\d{4})[.\/-](\d{1,2})$/', $normalized, $match) === 1) {
+        $year = (int) $match[1];
+        $month = (int) $match[2];
+        $precision = 'month';
+    } elseif (preg_match('/^(\d{1,2})[.\/-](\d{4})$/', $normalized, $match) === 1) {
+        $year = (int) $match[2];
+        $month = (int) $match[1];
+        $precision = 'month';
+    } elseif (preg_match('/^(\d{4})[.\/-](\d{1,2})[.\/-](\d{1,2})$/', $normalized, $match) === 1) {
+        $year = (int) $match[1];
+        $month = (int) $match[2];
+        $day = (int) $match[3];
+        $precision = 'day';
+    } elseif (preg_match('/^(\d{1,2})[.\/-](\d{1,2})[.\/-](\d{4})$/', $normalized, $match) === 1) {
+        $year = (int) $match[3];
+        $month = (int) $match[2];
+        $day = (int) $match[1];
+        $precision = 'day';
+    } else {
+        return null;
+    }
+
+    if ($year < 1880 || $year > 2100 || !checkdate($month, $day, $year)) {
+        return null;
+    }
+
+    return [
+        'year' => $year,
+        'month' => $month,
+        'day' => $day,
+        'precision' => $precision,
+    ];
+}
+
+/**
+ * @param array{year: int, month: int, day: int, precision?: string} $birth
+ */
+function ambulatoryAgeAtExamination(array $birth, \DateTimeImmutable $examinationDate): ?int
+{
+    if (!checkdate($birth['month'], $birth['day'], $birth['year'])) {
+        return null;
+    }
+
+    $birthDate = \DateTimeImmutable::createFromFormat(
+        '!Y-m-d',
+        sprintf('%04d-%02d-%02d', $birth['year'], $birth['month'], $birth['day']),
+    );
+    if (!$birthDate instanceof \DateTimeImmutable) {
+        return null;
+    }
+
+    $diff = $birthDate->diff($examinationDate);
+    if ($diff->invert === 1) {
+        return null;
+    }
+
+    return (int) $diff->y;
+}
+
+function ambulatoryYearsWord(int $years): string
+{
+    if ($years === 1) {
+        return 'rok';
+    }
+    $mod100 = $years % 100;
+    $mod10 = $years % 10;
+    if ($mod10 >= 2 && $mod10 <= 4 && ($mod100 < 12 || $mod100 > 14)) {
+        return 'roky';
+    }
+
+    return 'rokov';
+}
+
 function ambulatoryIcd10CodeForGCategory(string $gCategory): string
 {
     return match ($gCategory) {

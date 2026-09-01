@@ -43,12 +43,117 @@
 
     var examinationDate = document.getElementById('examination_date');
     var slopeDates = document.querySelectorAll('[id^="slope_date_"]');
+    var birthInput = document.getElementById('birth_input');
+    var birthAgeStatus = document.getElementById('birth_age_status');
+
+    function parseBirthInput(raw) {
+        var normalized = String(raw || '').trim().replace(/[\s\u00a0]+/g, '').replace(/[–—\\]/g, '-');
+        if (!normalized) {
+            return null;
+        }
+
+        var year = 0;
+        var month = 1;
+        var day = 1;
+        var match;
+
+        if ((match = /^(\d{4})$/.exec(normalized))) {
+            year = Number.parseInt(match[1], 10);
+        } else if ((match = /^(\d{4})[.\/-](\d{1,2})$/.exec(normalized))) {
+            year = Number.parseInt(match[1], 10);
+            month = Number.parseInt(match[2], 10);
+        } else if ((match = /^(\d{1,2})[.\/-](\d{4})$/.exec(normalized))) {
+            year = Number.parseInt(match[2], 10);
+            month = Number.parseInt(match[1], 10);
+        } else if ((match = /^(\d{4})[.\/-](\d{1,2})[.\/-](\d{1,2})$/.exec(normalized))) {
+            year = Number.parseInt(match[1], 10);
+            month = Number.parseInt(match[2], 10);
+            day = Number.parseInt(match[3], 10);
+        } else if ((match = /^(\d{1,2})[.\/-](\d{1,2})[.\/-](\d{4})$/.exec(normalized))) {
+            year = Number.parseInt(match[3], 10);
+            month = Number.parseInt(match[2], 10);
+            day = Number.parseInt(match[1], 10);
+        } else {
+            return null;
+        }
+
+        if (year < 1880 || year > 2100 || month < 1 || month > 12 || day < 1 || day > 31) {
+            return null;
+        }
+        var daysInMonth = new Date(year, month, 0).getDate();
+        if (day > daysInMonth) {
+            return null;
+        }
+
+        return {year: year, month: month, day: day};
+    }
+
+    function yearsWord(years) {
+        if (years === 1) {
+            return 'rok';
+        }
+        var mod100 = years % 100;
+        var mod10 = years % 10;
+        if (mod10 >= 2 && mod10 <= 4 && (mod100 < 12 || mod100 > 14)) {
+            return 'roky';
+        }
+        return 'rokov';
+    }
+
+    function ageAtExamination(birth, examValue) {
+        var examParts = /^(\d{4})-(\d{2})-(\d{2})$/.exec(examValue);
+        if (!examParts) {
+            return null;
+        }
+        var examYear = Number.parseInt(examParts[1], 10);
+        var examMonth = Number.parseInt(examParts[2], 10);
+        var examDay = Number.parseInt(examParts[3], 10);
+        var age = examYear - birth.year;
+        if (examMonth < birth.month || (examMonth === birth.month && examDay < birth.day)) {
+            age--;
+        }
+        return age;
+    }
+
+    function updateBirthAgeStatus() {
+        if (!birthAgeStatus) {
+            return;
+        }
+        var raw = birthInput ? birthInput.value.trim() : '';
+        if (raw === '') {
+            birthAgeStatus.textContent = '';
+            return;
+        }
+        var birth = parseBirthInput(raw);
+        if (!birth) {
+            birthAgeStatus.textContent = 'Dátum narodenia je neplatný.';
+            return;
+        }
+        var examValue = examinationDate ? examinationDate.value : '';
+        var age = ageAtExamination(birth, examValue);
+        if (age === null) {
+            birthAgeStatus.textContent = 'Vek sa dopočíta po zadaní dátumu vyšetrenia.';
+            return;
+        }
+        if (age < 0) {
+            birthAgeStatus.textContent = 'Dátum narodenia je po dátume vyšetrenia.';
+            return;
+        }
+        birthAgeStatus.textContent = 'Vek k dátumu vyšetrenia: ' + age + ' ' + yearsWord(age) + '.';
+    }
+
     if (examinationDate) {
         examinationDate.addEventListener('change', function () {
             slopeDates.forEach(function (field) {
                 field.max = examinationDate.value;
             });
+            updateBirthAgeStatus();
         });
+    }
+    if (birthInput) {
+        birthInput.addEventListener('input', updateBirthAgeStatus);
+        birthInput.addEventListener('change', updateBirthAgeStatus);
+        updateBirthAgeStatus();
     }
 
     var chronicity = document.getElementById('chronicity');

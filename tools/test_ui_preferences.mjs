@@ -138,6 +138,8 @@ for (const search of [
     '?patient_id=abc',
     '?user_email=user%40example.test',
     '?reset-token=secret',
+    '?birth_input=1965',
+    '?birth_date=1965-06-15',
 ]) {
     const payload = validConsent();
     const { context, appendedScripts } = makeContext({

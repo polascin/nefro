@@ -69,6 +69,60 @@ if ($slope === null) {
 testApprox(-10.0, $slope['slope'], 0.02, 'eGFR slope za jeden rok');
 testSame(2, $slope['count'], 'Počet bodov eGFR slope');
 
+testSame(
+    ['year' => 1965, 'month' => 1, 'day' => 1, 'precision' => 'year'],
+    ambulatoryParseBirthInput('1965'),
+    'Len rok narodenia'
+);
+testSame(
+    ['year' => 1965, 'month' => 6, 'day' => 1, 'precision' => 'month'],
+    ambulatoryParseBirthInput('6/1965'),
+    'Mesiac a rok'
+);
+testSame(
+    ['year' => 1965, 'month' => 6, 'day' => 1, 'precision' => 'month'],
+    ambulatoryParseBirthInput('1965-06'),
+    'ISO mesiac a rok'
+);
+testSame(
+    ['year' => 1965, 'month' => 6, 'day' => 15, 'precision' => 'day'],
+    ambulatoryParseBirthInput('15. 6. 1965'),
+    'Celý dátum s medzerami'
+);
+testSame(
+    ['year' => 1965, 'month' => 6, 'day' => 15, 'precision' => 'day'],
+    ambulatoryParseBirthInput('1965-06-15'),
+    'ISO dátum'
+);
+testSame(null, ambulatoryParseBirthInput('29.2.1965'), 'Neplatný prestupný deň');
+testSame(
+    ['year' => 1964, 'month' => 2, 'day' => 29, 'precision' => 'day'],
+    ambulatoryParseBirthInput('29.2.1964'),
+    'Platný prestupný deň'
+);
+
+$examDate = new \DateTimeImmutable('2026-09-01');
+testSame(61, ambulatoryAgeAtExamination(
+    ['year' => 1965, 'month' => 6, 'day' => 15],
+    $examDate
+), 'Vek z celého dátumu po narodeninách');
+testSame(60, ambulatoryAgeAtExamination(
+    ['year' => 1965, 'month' => 6, 'day' => 15],
+    new \DateTimeImmutable('2026-06-14')
+), 'Vek deň pred narodeninami');
+testSame(61, ambulatoryAgeAtExamination(
+    ['year' => 1965, 'month' => 1, 'day' => 1],
+    $examDate
+), 'Vek z roku narodenia k 1. januáru');
+testSame(null, ambulatoryAgeAtExamination(
+    ['year' => 2027, 'month' => 1, 'day' => 1],
+    $examDate
+), 'Narodenie po vyšetrení');
+testSame('rok', ambulatoryYearsWord(1), '1 rok');
+testSame('roky', ambulatoryYearsWord(22), '22 roky');
+testSame('rokov', ambulatoryYearsWord(21), '21 rokov');
+testSame('rokov', ambulatoryYearsWord(11), '11 rokov');
+
 testSame('N18.3, I12.00', ambulatoryPostedCodeList(['N18.3', 'I12.00']), 'Kódy z poľa');
 testSame('N18.3, I12.00', ambulatoryPostedCodeList('N18.3, I12.00'), 'Kódy z reťazca');
 testSame(
