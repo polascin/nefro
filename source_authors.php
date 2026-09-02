@@ -76,6 +76,7 @@ function getSourceArticleAuthors(): array {
         'geneticke-prediktory-glp1-semaglutid-tirzepatid' => ['Qiaojuan Jane Su', 'James R. Ashenhurst', 'Wanwan Xu', 'Vinh Tran', 'R. Ryanne Wu', 'Catherine H. Weldon', 'Jingchunzi Shi', 'Barry Hicks', 'Noura S. Abul-Husn', 'Stella Aslibekyan', 'Michael V. Holmes', 'Bertram L. Koelsch', 'Adam Auton'],
         'genotypizacia-apol1-zivy-darca-oblicky' => ['Chi-Yuan Hsu', 'Ying Gao', 'Barry I Freedman', 'Mitchell R Lunn', 'Anthony N Muiru', 'Mark A Schnitzler', 'Jasmin Divers', 'Roslyn B Mannon', 'Nicholette D Palmer', 'Amy B Karger', 'Krista L Lentine', 'Meyeon Park'],
         'glp1-era-novy-model-starostlivosti-o-obezitu-nefrologia' => ['Manuela Callari'],
+        'glp1-lieky-renalne-benefity-dokazy-prax-nefrologia' => ['Kashif J. Piracha'],
         'glp1-kompulzivne-spravanie-food-noise-nefrologia' => ['Eric Spitznagel'],
         'hypertenzia-v-tehotenstve-a-po-porode-nefrologicka-rola' => ['Line Malha', 'Phyllis August'],
         // Autori spracovanej práce J Nephrol 2026, doi 10.1093/joneph/aajag149 (PMID 42599085) -
