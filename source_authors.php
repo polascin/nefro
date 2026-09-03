@@ -85,6 +85,9 @@ function getSourceArticleAuthors(): array {
         'iga-nefropatia-algoritmus-kdigo-2025-kdoqi' => ['Isabelle Ayoub', 'Gaia Coppock', 'Shikha Wadhwani', 'Timothy Yau'],
         'implementacia-intenzivnej-kontroly-tlaku-esprit-nefrologia' => ['Yu-Jie Zuo', 'Ji-Guang Wang'],
         'inhibicia-tmao-fmc-regresia-fibrozy-ckd-model' => ['Joseph A DiDonato', 'Taylor L Weeks', 'Nilaksh Gupta', 'Deepthi P Mallela', 'Jennifer A Buffa', 'Zeneng Wang', 'Xinmin S Li', 'James T Anderson', 'Xiaoming Fu', 'Naseer Sangwan', 'Ina Nemet', 'Scott J Cameron', 'Stanley L Hazen'],
+        // Autori spracovanej práce JAMA Dermatol. 2026, doi 10.1001/jamadermatol.2026.2853
+        // (PMID 42584887) — 22 mien, AuthorList CompleteYN=Y, overené cez PubMed eutils 2026-09-03.
+        'inhibitor-jak1-upadacitinib-tazka-alopecia-areata-faza-3' => ['Arash Mostaghimi', 'Melinda J. Gooderham', 'Charles Lynde', 'Rodney Sinclair', 'Brett King', 'Maria Hordinsky', 'Lidia Rudnicka', 'Emma Guttman-Yassky', 'Rocco Serrao', 'Manabu Ohyama', 'Xingqi Zhang', 'Nina Magnolo', 'Ohsang Kwon', 'Cristina Oddi', 'Sebastian Meerwein', 'Ahmed M. Soliman', 'Xianwei Bu', 'Chenyang Duan', 'Tianshuang Wu', 'Henrique D. Teixeira', 'Andreas Lazar', 'Thierry Passeron'],
         'iga-nefropatia-kdigo-2025-kdoqi' => ['Isabelle Ayoub', 'Gaia Coppock', 'Shikha Wadhwani', 'Timothy Yau'],
         'ked-sa-citime-chori-co-medicina-prehliada-nefrologia' => ['Arya Anthony Kamyab'],
         'kedy-zacat-krt-pri-aki' => ['Marlies Ostermann', 'Sean M Bagshaw', 'Nuttha Lumlertgul', 'Ron Wald'],
