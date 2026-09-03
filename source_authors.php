@@ -105,6 +105,11 @@ function getSourceArticleAuthors(): array {
         'kvalitativny-vyskum-nefrologia-rozhodovanie-pacientov-ckd' => ['Lisa O\'Mary'],
         'lekari-cas-autonomia-vyhorenie-pracovne-podmienky' => ['Jennifer Nelson'],
         'liecba-ckd-2026-vrstvena-nefroprotekcia-post-aki' => ['Pranav Garimella', 'Marc Richards', 'Matthew Breeggemann'],
+        // Medscape správa ICO 2026 (verejný byline Astrid Rivera) + kompletné autorstvo
+        // US Standard of Care (Herbst et al., Phlebology 2021, PMID 34049453, PMC8652358) —
+        // 21 mien overených cez PubMed eutils, PMC a Crossref 2026-09-03; klinický rámec
+        // článku sa oň opiera. Autori pacientskych stránok Cleveland Clinic sa neuvádzajú.
+        'lipedem-multidisciplinarny-manazment-chirurgia' => ['Astrid Rivera', 'Karen L Herbst', 'Linda Anne Kahn', 'Emily Iker', 'Chuck Ehrlich', 'Thomas Wright', 'Lindy McHutchison', 'Jaime Schwartz', 'Molly Sleigh', 'Paula MC Donahue', 'Kathleen H Lisson', 'Tami Faris', 'Janis Miller', 'Erik Lontok', 'Michael S Schwartz', 'Steven M Dean', 'John R Bartholomew', 'Polly Armour', 'Margarita Correa-Perez', 'Nicholas Pennings', 'Edely L Wallace', 'Ethan Larson'],
         'lipoprotein-a-kardiovaskularne-riziko-primarna-starostlivost' => ['Rajdeep Dhami'],
         'lokalny-finasterid-muzska-androgenova-alopecia' => ['Giuseppe Gallo', 'Luca Mastorino', 'Pietro Quaglino', 'Simone Ribero'],
         'malignity-transplantacia-oblicky-skrining-ptld' => ['Christopher D. Blosser', 'Elena-Bianca Barbir', 'Salma Shaikhouni', 'Naoka Murakami'],
@@ -164,6 +169,11 @@ function getSourceArticleAuthors(): array {
         // PMID 42560674) - overene cez PubMed eutils 2026-08-19. Skupinovy autor CREATION group
         // nie je v zazname rozvinuty na jednotlivych spolupracovnikov.
         'role-play-vzdelavanie-lekarov-diabetes-creation' => ['Yifei Zhang', 'Ying Peng', 'Yufei Chen', 'Tingyu Ke', 'Fengmei Xu', 'Shengli Wu', 'Yuancheng Dai', 'Lin Sun', 'Qidong Zheng', 'Zhuomeng Hu', 'Qijuan Dong', 'Juan Shi', 'Xueyi Wu', 'Yu Shi', 'Rong Tang', 'Yubo Sha', 'Rongyue Chen', 'Bin Xu', 'Shu Li', 'Lianyong Liu', 'Mingdian Gao', 'Dong Zhao', 'Qinghua Yi', 'Zhiqiang Kang', 'Weiqing Wang'],
+        // Autorka spracovaného komentára Medscape Gastroenterology (19. 8. 2026) —
+        // Caroline Messer, MD; meno z verejnej sekcie Authors and Disclosures
+        // (citácia „Messer C.“), nie obchádzaním paywallu. Autori štúdií o
+        // účinnosti retatrutidu sa neuvádzajú — článok spracúva procesný komentár.
+        'retatrutid-expanded-access-lekar-pacient-bariery' => ['Caroline Messer'],
         'retatrutid-mimo-schvalenia-neregulovane-pouzivanie' => ['Marilynn Larkin'],
         // Autori studie TRANSCEND-T2D-1 (Lancet 2026;407(10546):2402-2413, doi 10.1016/S0140-6736(26)00967-0,
         // PMID 42250575) - overene cez PubMed eutils 2026-08-19.
