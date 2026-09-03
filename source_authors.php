@@ -99,6 +99,10 @@ function getSourceArticleAuthors(): array {
         // (PMID 42584887) — 22 mien, AuthorList CompleteYN=Y, overené cez PubMed eutils 2026-09-03.
         'inhibitor-jak1-upadacitinib-tazka-alopecia-areata-faza-3' => ['Arash Mostaghimi', 'Melinda J. Gooderham', 'Charles Lynde', 'Rodney Sinclair', 'Brett King', 'Maria Hordinsky', 'Lidia Rudnicka', 'Emma Guttman-Yassky', 'Rocco Serrao', 'Manabu Ohyama', 'Xingqi Zhang', 'Nina Magnolo', 'Ohsang Kwon', 'Cristina Oddi', 'Sebastian Meerwein', 'Ahmed M. Soliman', 'Xianwei Bu', 'Chenyang Duan', 'Tianshuang Wu', 'Henrique D. Teixeira', 'Andreas Lazar', 'Thierry Passeron'],
         'iga-nefropatia-kdigo-2025-kdoqi' => ['Isabelle Ayoub', 'Gaia Coppock', 'Shikha Wadhwani', 'Timothy Yau'],
+        // Autori spracovanej práce JACC 2026, doi 10.1016/j.jacc.2026.07.014
+        // (PMID 42584385, NCT06021613) — 13 mien, AuthorList CompleteYN=Y,
+        // overené cez PubMed eutils a Crossref 2026-09-03. Nie sú to novinári Medscape.
+        'kanabis-inhalacia-kardialna-ektopia-randomizovana-crossover' => ['Adi Elias', 'Gabrielle C. Montenegro', 'Hannah H. Oo', 'Isabella J. Peña', 'Dylan A. Lowe', 'Catherine Lee', 'Janet Tang', 'Kara L. Lynch', 'Lilly Lim', 'Mirna Maamou', 'Nhung Nguyen', 'Matthew L. Springer', 'Gregory M. Marcus'],
         'ked-sa-citime-chori-co-medicina-prehliada-nefrologia' => ['Arya Anthony Kamyab'],
         'kedy-zacat-krt-pri-aki' => ['Marlies Ostermann', 'Sean M Bagshaw', 'Nuttha Lumlertgul', 'Ron Wald'],
         // Autori spracovanej práce Clin Gastroenterol Hepatol 2026, doi 10.1016/j.cgh.2026.04.035
@@ -185,6 +189,11 @@ function getSourceArticleAuthors(): array {
         // účinnosti retatrutidu sa neuvádzajú — článok spracúva procesný komentár.
         'retatrutid-expanded-access-lekar-pacient-bariery' => ['Caroline Messer'],
         'retatrutid-mimo-schvalenia-neregulovane-pouzivanie' => ['Marilynn Larkin'],
+        // Autori spracovaného preprintu nference / Preprints.org (doi 10.20944/preprints202608.1193.v1,
+        // posted 18. 8. 2026) — 3 mená overené v PDF, na stránke nference a v Crossref 2026-09-03.
+        // Novinárka Medscape (Marilynn Larkin) ani Endpoints News sa neuvádzajú: spracovaný zdroj
+        // je RWE analýza, nie spravodajský text.
+        'retatrutid-sivy-trh-chudnutie-kardiovaskularne-symptomy' => ['Karthik Murugadoss', 'A. J. Venkatakrishnan', 'Venky Soundararajan'],
         // Autori studie TRANSCEND-T2D-1 (Lancet 2026;407(10546):2402-2413, doi 10.1016/S0140-6736(26)00967-0,
         // PMID 42250575) - overene cez PubMed eutils 2026-08-19.
         'retatrutid-transcend-t2d-1-hba1c-hmotnost-nefrologia' => ['Harpreet S. Bajaj', 'Michelle Welch', 'Parag Shah', 'Eduardo Luna', 'Fatima-Zahra Jaouimaa', 'Bing Liu', 'Rong Liu', 'Yanyun Chen', 'Hiren Patel', 'Amy Bartee'],
