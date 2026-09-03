@@ -125,6 +125,9 @@ function getSourceArticleAuthors(): array {
         'ockovanie-ckd-transplantacia-oblicky-vakciny-nacasovanie' => ['Matthias Girndt'],
         'online-hemodiafiltracia-mco-dialyzatory-stredne-molekuly' => ['Karin Bergling', 'Peter J. Blankestijn'],
         'paliativna-starostlivost-nefrologia-krehki-starsi-eskd' => ['Judith Böhm', 'Martin Windpessl', 'Matthias Huemer', 'Eva K. Masel', 'Marcus Säemann', 'Andreas Kronbichler', 'Balazs Odler'],
+        // Autor spracovaného Medscape článku Five Steps to Earlier Heart Failure Detection;
+        // meno je verejne uvedené na stránke (overené 2026-09-03). Nie sú to autori ESC task force.
+        'pat-krokov-vcasne-odhalenie-srdcoveho-zlyhavania-ps' => ['Michael van den Heuvel'],
         'pentoxifylin-diabeticka-choroba-obliciek-mini-review' => ['David J. Leehey', 'Rajiv Agarwal'],
         'perzistujuca-hyperparatyreoza-po-transplantacii-oblicky' => ['Daniele Vetrano', 'Simona Barbuto', 'Francesco Aguanno', 'Paolo Mastromauro', 'Valeria Grandinetti', 'Giorgia Comai', 'Gaetano La Manna', 'Giuseppe Cianciolo'],
         'perzistujuca-mikroskopicka-hematuria-podocytopatie-prognoza' => ['Gabriel Ștefan', 'Nicoleta Petre', 'Adrian Zugravu', 'Simona Stancu'],
