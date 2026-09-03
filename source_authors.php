@@ -125,6 +125,10 @@ function getSourceArticleAuthors(): array {
         // článku sa oň opiera. Autori pacientskych stránok Cleveland Clinic sa neuvádzajú.
         'lipedem-multidisciplinarny-manazment-chirurgia' => ['Astrid Rivera', 'Karen L Herbst', 'Linda Anne Kahn', 'Emily Iker', 'Chuck Ehrlich', 'Thomas Wright', 'Lindy McHutchison', 'Jaime Schwartz', 'Molly Sleigh', 'Paula MC Donahue', 'Kathleen H Lisson', 'Tami Faris', 'Janis Miller', 'Erik Lontok', 'Michael S Schwartz', 'Steven M Dean', 'John R Bartholomew', 'Polly Armour', 'Margarita Correa-Perez', 'Nicholas Pennings', 'Edely L Wallace', 'Ethan Larson'],
         'lipoprotein-a-kardiovaskularne-riziko-primarna-starostlivost' => ['Rajdeep Dhami'],
+        // Autor spracovaného komentára Medscape „Lithium: 7 Myths That May Be Keeping It Underused“
+        // (28. 8. 2026); byline Nassir Ghaemi overený vo verejnej tiráži 2026-09-03.
+        // Nie sú to autori citovaných štúdií (BALANCE, Shine, Aiff, Gomes-da-Costa).
+        'litium-sedem-mytov-nefrologicka-perspektiva' => ['Nassir Ghaemi'],
         'lokalny-finasterid-muzska-androgenova-alopecia' => ['Giuseppe Gallo', 'Luca Mastorino', 'Pietro Quaglino', 'Simone Ribero'],
         'malignity-transplantacia-oblicky-skrining-ptld' => ['Christopher D. Blosser', 'Elena-Bianca Barbir', 'Salma Shaikhouni', 'Naoka Murakami'],
         'meduza-hojenie-ran-bez-jaziev-regenerativna-medicina' => ['Jocelyn E. Malamy', 'Maxwell Sassaman', 'Manjula P. Mony'],
