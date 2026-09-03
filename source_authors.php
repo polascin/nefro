@@ -228,6 +228,11 @@ function getSourceArticleAuthors(): array {
         'telesne-zlozenie-tukova-hmota-egfr-populacna-studia' => ['Marlene Agnes Günther', 'Till Ittermann', 'Henry Völzke', 'Sylvia Stracke', 'Karlhans Endlich', 'Robin Bülow', 'Matthias Nauck', 'Mats Wiese', 'Ali Aghdassi', 'Marcello Ricardo Paulista Markus', 'Sabrina von Rheinbaben'],
         'telitacicept-iga-nefropatia-teligan-faza-3-interim' => ['Jicheng Lv', 'Lijun Liu', 'Wenxiang Wang', 'Xinyue Wang', 'Qing Zuraw', 'Vlado Perkovic', 'Jianmin Fang', 'Hong Zhang'],
         'terapie-cielene-na-b-bunky-imunitne-ochorenia-obliciek-kdigo' => ['Jürgen Floege', 'Isabelle Ayoub', 'Silke R. Brix', 'Kirk N. Campbell', 'Richard Furie', 'Patrick H. Nachman', 'Sydney C.W. Tang', 'Nicola M. Tomas', 'Marina Vivarelli', 'Michael Cheung', 'Jennifer M. King', 'Morgan E. Grams', 'Michel Jadoul', 'Brad H. Rovin'],
+        // Autori spracovanej primárnej práce SURPASS-CVOT, N Engl J Med 2025;393:2409-2420
+        // (PMID 41406444, doi 10.1056/NEJMoa2505928) — 27 menovaných autorov z PubMed efetch
+        // CompleteYN=Y (bez skupinového spoluautorstva SURPASS-CVOT Investigators). Overené 2026-09-03.
+        // Medscape (Larkin) nie je spracovaný vedecký zdroj.
+        'tirzepatid-mounjaro-fda-kardiovaskularne-riziko-t2d-surpass-cvot' => ['Stephen J. Nicholls', 'Imre Pavo', 'Deepak L. Bhatt', 'John B. Buse', 'Stefano Del Prato', 'Steven E. Kahn', 'A. Michael Lincoff', 'Darren K. McGuire', 'Debra Miller', 'Michael A. Nauck', 'Hiroshi Nishiyama', 'Steven E. Nissen', 'Naveed Sattar', 'Govinda Weerakkody', 'Russell J. Wiese', 'Bernard Zinman', 'Sophia Zoungas', 'Jan Basile', 'Melanie J. Davies', 'Francesco Giorgino', 'Monika Kellerer', 'Linong Ji', 'Tamas Varkonyi', 'Venu Menon', 'Jonathan C. Broder', 'Alan Herschtal', 'David D\'Alessio'],
         'tirzepatid-oblickove-vysledky-surpass-nefrologia' => ['Stephen J. Nicholls'],
         'trpc6-inhibicia-fsgs-faza-2-precizna-nefrologia' => ['Luis Sanchez-Russo', 'George Vasquez-Rios', 'Kirk N. Campbell'],
         'tukove-tkanivo-obezita-kardiorenalne-riziko-biologia' => ['Yazmín Macotela', 'Marcelo A. Mori', 'Armando R. Tovar'],
