@@ -148,6 +148,9 @@ function getSourceArticleAuthors(): array {
         'ockovanie-ckd-transplantacia-oblicky-vakciny-nacasovanie' => ['Matthias Girndt'],
         'online-hemodiafiltracia-mco-dialyzatory-stredne-molekuly' => ['Karin Bergling', 'Peter J. Blankestijn'],
         'paliativna-starostlivost-nefrologia-krehki-starsi-eskd' => ['Judith Böhm', 'Martin Windpessl', 'Matthias Huemer', 'Eva K. Masel', 'Marcus Säemann', 'Andreas Kronbichler', 'Balazs Odler'],
+        // Autor spracovaného prehľadového článku Postgraduální nefrologie 2026;24(2):3–8
+        // (verejne dostupný na postgradualninefrologie.cz) — meno overené z titulnej stránky článku.
+        'preemptivna-transplantacia-optimalny-sposob-nahrady-funkcie-ledvin' => ['Tomáš Reischig'],
         // Autor spracovaného Medscape článku Five Steps to Earlier Heart Failure Detection;
         // meno je verejne uvedené na stránke (overené 2026-09-03). Nie sú to autori ESC task force.
         'pat-krokov-vcasne-odhalenie-srdcoveho-zlyhavania-ps' => ['Michael van den Heuvel'],
