@@ -167,6 +167,10 @@ function getSourceArticleAuthors(): array {
         'retatrutid-transcend-t2d-1-hba1c-hmotnost-nefrologia' => ['Harpreet S. Bajaj', 'Michelle Welch', 'Parag Shah', 'Eduardo Luna', 'Fatima-Zahra Jaouimaa', 'Bing Liu', 'Rong Liu', 'Yanyun Chen', 'Hiren Patel', 'Amy Bartee'],
         'rodove-rozdiely-dialyza-transplantacia-era-usrds' => ['Vianda S Stel', 'Nicholas C Chesnaye', 'Rianne Boenink', 'Brittany A Boerstra', 'Megan E Astley', 'Shona Methven', 'Line Heylen', 'Halima Resic', 'Marc A G J ten Dam', 'Kristine Hommel', 'Marit D Solbu', 'Maria F Slon Roblero', 'Nuria Aresté-Fosalba', 'Danilo Radunovic', 'Héctor García López', 'Lukas Buchwinkler', 'Rebecca Guidotti', 'Mathilde Lassalle', 'Carmen Santiuste', 'Maria Stendahl', 'Olafur S Indridason', 'Almudena Escribá', 'María Encarnación Bouzas-Caamaño', 'Olga Lucía Rodriguez Arévalo', 'George Moustakas', 'Hermann Hernández Vargas', 'Alberto Ortiz', 'Anneke Kramer'],
         'roxadustat-esa-hyporesponzivita-opakovany-ciel-hb' => ['Mehmet Demir', 'Ilyas Ozturk', 'Merve Aktar', 'Cihan Heybeli', 'Can Huzmeli', 'Orhan Ozdemir', 'Seda Safak Ozturk', 'Tulin Akagun', 'Neriman Sila Koc', 'Mehmet Tuncay', 'Ekrem Kara', 'Tuncay Sahutoglu'],
+        // Autori spracovanej prierezovej štúdie Neurogastroenterol Motil 2026;38(5):e70335
+        // (PMID 42087489, doi 10.1111/nmo.70335) — 7 mien, AuthorList CompleteYN=Y,
+        // overené cez PubMed eutils a Crossref 2026-09-03. Nie sú to autori Rome V.
+        'rome-kriteria-ibs-dgbi-dalsie-testovanie-medici' => ['Manuel Linares', 'Catalina Grimaldi', 'Natalia Palma', 'Bryan Vintimilla', 'Sofia Candal', 'David Estrella', 'Miguel Saps'],
         // Menovaní diskutujúci spracovanej Medscape aktivity (ADA 2026); nejde o autorov
         // primárnych štúdií citovaných v článku.
         'sekvencna-simultanna-kombinovana-liecba-diabetes-ckd' => ['Ian de Boer', 'Amy Mottl'],
