@@ -92,6 +92,9 @@ function getSourceArticleAuthors(): array {
         // (PMID 42385787) — 23 mien overených cez PubMed 2026-08-28.
         'kava-pecen-cirhoza-hcc-uk-biobank-nefrologia' => ['Hyun-Seok Kim', 'Mohammad Saeid Rezaee-Zavareh', 'Yufeng Wang', 'Abdelrahman M. Attia', 'Minsun Kwak', 'Seungwon Burm', 'Derin Celtik', 'Daniel Legaspi', 'Osama Khattab', 'Naomy Kim', 'Beza M. Mengistu', 'Kelsey N. Larios', 'David Sooik Kim', 'Walid Ayoub', 'Alexandar Kuo', 'Paul Martin', 'Aarshi Vipani', 'Yun Wang', 'Suthat Liangpunsakul', 'Debiao Li', 'Shelly C. Lu', 'Stephen Pandol', 'Ju Dong Yang'],
         'ketoacidoza-nefrologicka-prax-hladovanie-euglykemicka-dka' => ['Biff F. Palmer', 'Deborah J. Clegg'],
+        // Autori spracovanej meta-analýzy Lancet Public Health 2025;10(8):e668-e681
+        // (PMID 40713949, doi 10.1016/S2468-2667(25)00164-1) — 20 mien overených cez PubMed eutils 2026-09-03.
+        'kolko-krokov-denne-staci-davkovo-odpovedova-analyza-nefrologia' => ['Ding Ding', 'Binh Nguyen', 'Tracy Nau', 'Mengyun Luo', 'Borja Del Pozo Cruz', 'Paddy C. Dempsey', 'Zachary Munn', 'Barbara J. Jefferis', 'Cathie Sherrington', 'Elizabeth A. Calleja', 'Kar Hau Chong', 'Rochelle Davis', 'Monique E. Francois', 'Anne Tiedemann', 'Stuart J. H. Biddle', 'Anthony Okely', 'Adrian Bauman', 'Ulf Ekelund', 'Philip Clare', 'Katherine Owen'],
         'kreatin-ochorenia-obliciek-bezpecnost-benefit' => ['Juliana Paula Pereira', 'Viviane O Leal', 'Pricilla Trigueira', 'Natália A Borges', 'Ludmila F M F Cardozo', 'Denise Mafra'],
         'kreatin-zdravie-mozgu' => ['Heidi Moawad'],
         'krvna-skupina-a-mortalita-hemodialyza' => ['Masafumi Kurajoh', 'Tetsuo Shoji', 'Shinya Nakatani', 'Yuki Nagata', 'Hisako Fujii', 'Yasuo Imanishi', 'Masanori Emoto', 'Tomoaki Morioka'],
