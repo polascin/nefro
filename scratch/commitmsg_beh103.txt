@@ -1,0 +1,3 @@
+audit(beh103): doplnenie výsledku kola 2 (konvergencia)
+
+Kolo 2 na produkcii (`8542ee9`): genitív mimo Severnej Ameriky, žiadne Tangri 2024, knižnice 403, drift 0.
