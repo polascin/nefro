@@ -138,7 +138,7 @@ $articles[] = [
 
 <p>Dávky ESA sú prepočítané na ekvivalent metoxy-polyetylénglykol-epoetínu beta (Mircera): darbepoetín µg/1,28; epoetín alfa µg/244,51. ERI autori počítali z týždennej dávky ESA delenej hmotnosťou a priemerným hemoglobínom; ide o kompozitnú mieru odpovede na ESA, nie o percento. NLR sa začal rozchádzať už v 2. mesiaci a rozdiel pretrval do 12. mesiaca. Leukocyty boli nižšie od 6. mesiaca. ERI sa oddelil od 3. mesiaca (3,26 oproti 3,60) a v 12. mesiaci zostal nižší.</p>
 
-<p>Hemoglobín bol v liečenej skupine vyšší v 2. a 3. mesiaci; v 12. mesiaci interval spoľahlivosti stredného rozdielu nulu zahŕňa. Tvrdosť „zlepšenia anémie“ sa teda nemôže opierať o trvalý vzostup hemoglobínu, ale nanajvýš o podobný hemoglobín pri nižšej kumulatívnej spotrebe ESA a nižšom ERI.</p>
+<p>Hemoglobín bol v liečenej skupine vyšší v 2. a 3. mesiaci; v 12. mesiaci interval spoľahlivosti stredného rozdielu nulu zahŕňa. Tvrdenie o „zlepšení anémie“ sa teda nemôže opierať o trvalý vzostup hemoglobínu, ale nanajvýš o podobný hemoglobín pri nižšej kumulatívnej spotrebe ESA a nižšom ERI.</p>
 
 <p>Analýzy citlivosti s časovo premenlivou úpravou na telesnú hmotnosť a dávku intravenózneho železa trajektórie podstatne nezmenili.</p>
 
