@@ -78,6 +78,16 @@ function getSourceArticleAuthors(): array {
         'glp1-era-novy-model-starostlivosti-o-obezitu-nefrologia' => ['Manuela Callari'],
         'glp1-lieky-renalne-benefity-dokazy-prax-nefrologia' => ['Kashif J. Piracha'],
         'glp1-kompulzivne-spravanie-food-noise-nefrologia' => ['Eric Spitznagel'],
+        // Autorka spracovaného článku Medscape Medical News „Weight Down, Steps Down: The GLP-1 Catch“
+        // (2026); byline overená vo verejnej tiráži 2026-09-03. Nie sú to autori citovaných štúdií
+        // (Maharjan/ENDO 2026, Chae et al., Lieberman/JAMA Perspective).
+        'glp1-pokles-krokov-fyzicka-aktivita-nefro-kardiometabolicka-prax' => ['Nancy A. Melville'],
+        // Autori spracovanej práce Kidney Medicine 2026, doi 10.1016/j.xkme.2026.101476
+        // (article 101476, PII S2590-0595(26)00238-4). Sedem mien overených cez Crossref
+        // a sekciu Authors’ Full Names v otvorenom plnom texte 2026-09-03. PMID v PubMed
+        // k tomuto dátumu ešte nebolo pridelené (journal pre-proof). Medscape (Javed Choudhury)
+        // nie je spracovaný zdroj.
+        'glp1-zapal-anemia-hemodialyza-real-world-evidencia' => ['Suman Lama', 'Sheetal Chaudhuri', 'Derek Blankenship', 'Andrea Nandorine Ban', 'Len Usvyat', 'Roberto Pecoits-Filho', 'Benjamin E. Hippen'],
         'hypertenzia-v-tehotenstve-a-po-porode-nefrologicka-rola' => ['Line Malha', 'Phyllis August'],
         // Autori spracovanej práce J Nephrol 2026, doi 10.1093/joneph/aajag149 (PMID 42599085) -
         // 16 mien overených cez PubMed eutils a Crossref 2026-08-23.
