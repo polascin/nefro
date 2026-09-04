@@ -48,7 +48,7 @@ $articles[] = [
 <p>Je nevyhnutné zdôrazniť, že <strong>všetky dostupné štúdie majú observačný charakter</strong>. Randomizovaná štúdia porovnávajúca dĺžku dialyzačnej liečby pred transplantáciou nie je eticky uskutočniteľná. Observačné dáta sú preto zaťažené viacerými typmi skreslenia:</p>
 
 <ul>
-  <li><strong>Lead-time bias (skreslenie načasovania sledovania):</strong> Pacienti po preemptívnej transplantácii sú sledovaní od skoršieho časového bodu ako pacienti transplantovaní po dialýze. Toto asymetrické zahrnutie predtransplantačného obdobia môže nadhodnocovať benefit preemptívnej transplantácie. Austrálska registrová analýza naznačila, že po korekcii na lead-time bias nebol rozdíl v prežívaní pacientov po preemptívnej transplantácii od živého darcu oproti veľmi krátkej dobe dialýzy štatisticky významný.</li>
+  <li><strong>Lead-time bias (skreslenie načasovania sledovania):</strong> Pacienti po preemptívnej transplantácii sú sledovaní od skoršieho časového bodu ako pacienti transplantovaní po dialýze. Toto asymetrické zahrnutie predtransplantačného obdobia môže nadhodnocovať benefit preemptívnej transplantácie. Austrálska registrová analýza naznačila, že po korekcii na lead-time bias nebol rozdiel v prežívaní pacientov po preemptívnej transplantácii od živého darcu oproti veľmi krátkej dobe dialýzy štatisticky významný.</li>
   <li><strong>Selekčné skreslenie:</strong> Pacienti indikovaní k preemptívnej transplantácii sú spravidla mladší, s menej závažnými komorbiditami, s polycystickou chorobou obličiek a s vyšším socioekonomickým statusom. Napriek korekcii na dostupné kovariáty zostáva pravdepodobné reziduálne skreslenie.</li>
   <li><strong>Heterogenita štúdií:</strong> Definície, populácie a metodiky sa medzi štúdiami líšia, čo sťažuje priame porovnania.</li>
 </ul>
@@ -60,7 +60,7 @@ $articles[] = [
 <p>Prečo je preemptívna transplantácia asociovaná s lepšími výsledkami? Navrhovaných mechanizmov je viacero, hoci ich relatívny podiel nie je definitívne objasnený:</p>
 
 <ul>
-  <li><strong>Prevencia kardiovaskulárnych komplikácií dialýzy:</strong> Hemodialyzačné procedúry sú asociované so subklinickými epizódami segmentárnej myokardiálnej ischémie, kumulatívnou fibróznou prestavbou myokardu a poklesom systolickej funkce ľavej komory. Podobné hemodynamické efekty boli popísané aj pri peritoneálnej dialýze. Prevencia expozície dialýze môže znižovať kardiovaskulárnu mortalitu.</li>
+  <li><strong>Prevencia kardiovaskulárnych komplikácií dialýzy:</strong> Hemodialyzačné procedúry sú asociované so subklinickými epizódami segmentárnej myokardiálnej ischémie, kumulatívnou fibróznou prestavbou myokardu a poklesom systolickej funkcie ľavej komory. Podobné hemodynamické efekty boli popísané aj pri peritoneálnej dialýze. Prevencia expozície dialýze môže znižovať kardiovaskulárnu mortalitu.</li>
   <li><strong>Urémia a systémový zápal:</strong> Dlhodobá urémia vedie k malnutrícii, chronickému zápalu a kostnej chorobe, ktoré nepriaznivo ovplyvňujú výsledky transplantácie.</li>
   <li><strong>Imunologické faktory:</strong> Niektoré pilotné štúdie naznačili nižší výskyt akútnej rejekcie pri preemptívnej transplantácii od živého darcu, čo nebolo konzistentne potvrdené pri transplantáciách od zosnulých darcov ani novšími metaanalýzami.</li>
   <li><strong>Lead-time bias</strong> (viď vyššie) – čiastočne prispieva k zdanlivému benefitu.</li>

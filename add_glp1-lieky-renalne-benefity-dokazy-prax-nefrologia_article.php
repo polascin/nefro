@@ -23,7 +23,7 @@ require_once __DIR__ . '/article_publisher.php';
 $articles = [];
 
 $articles[] = [
-    'title'        => 'Sú GLP-1 lieky už „lieky na obličky"? Renálne benefity v dôkazoch posledných rokov (a ako to premeniť na prax)',
+    'title'        => 'Sú GLP-1 lieky už „lieky na obličky“? Renálne benefity v dôkazoch posledných rokov (a ako to premeniť na prax)',
     'slug'         => 'glp1-lieky-renalne-benefity-dokazy-prax-nefrologia',
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
