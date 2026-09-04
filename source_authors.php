@@ -92,6 +92,10 @@ function getSourceArticleAuthors(): array {
         // Autori spracovanej práce J Nephrol 2026, doi 10.1093/joneph/aajag149 (PMID 42599085) -
         // 16 mien overených cez PubMed eutils a Crossref 2026-08-23.
         'hyperkaliemia-ckd-realna-prax-recidiva-raasi' => ['María Marques', 'Paula López-Sánchez', 'Enrique Morales', 'M. Auxiliadora Bajo', 'Antolina Rodriguez', 'Milagros Fernández Lucas', 'Vicente Paraiso', 'Laura Bucalo', 'Yolanda Hernandez', 'José C. De La Flor', 'Maite Padrón', 'Hanane Bouarich', 'Fabio Procaccini', 'Coraima Nava Chavez', 'Jose Herrero', 'Fernando Tornero'],
+        // Autori primárnej štúdie SYMPHONY-2 (NEJM Evidence 2026;5(7):EVIDoa2500317,
+        // PMID 42251702) - 17 mien, AuthorList CompleteYN=Y, overené cez PubMed eutils
+        // a Crossref 2026-09-05. Autori doplnkových citácií sa nepridávajú.
+        'htd1801-berberin-ursodeoxycholat-diabetes-2-typu' => ['Linong Ji', 'Zhifeng Cheng', 'Jianhua Ma', 'Dexue Liu', 'Xin Zhang', 'Xiaolin Dong', 'Yang Lin', 'Mingming Yang', 'Shenglian Gan', 'Hanqing Cai', 'Xiaomei Wang', 'Yan Liu', 'Xiaoguang Shi', 'Kui Liu', 'Leigh MacConell', 'Meng Yu', 'Liping Liu'],
         'iga-nefropatia-algoritmus-kdigo-2025-kdoqi' => ['Isabelle Ayoub', 'Gaia Coppock', 'Shikha Wadhwani', 'Timothy Yau'],
         'implementacia-intenzivnej-kontroly-tlaku-esprit-nefrologia' => ['Yu-Jie Zuo', 'Ji-Guang Wang'],
         'inhibicia-tmao-fmc-regresia-fibrozy-ckd-model' => ['Joseph A DiDonato', 'Taylor L Weeks', 'Nilaksh Gupta', 'Deepthi P Mallela', 'Jennifer A Buffa', 'Zeneng Wang', 'Xinmin S Li', 'James T Anderson', 'Xiaoming Fu', 'Naseer Sangwan', 'Ina Nemet', 'Scott J Cameron', 'Stanley L Hazen'],
