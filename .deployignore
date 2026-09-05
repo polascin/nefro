@@ -11,6 +11,7 @@ DEPLOY.md
 .audit-history.md
 .agents
 .claude
+.cursor
 .doaudit.md
 .kilo
 .markdownlint.yaml

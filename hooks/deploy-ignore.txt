@@ -3,6 +3,7 @@
 .audit-history.md
 .agents/**
 .claude/**
+.cursor/**
 .deployignore
 .doaudit.md
 .gitattributes

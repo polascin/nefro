@@ -1,0 +1,17 @@
+---
+description: Po každej zmene vždy commit, push na main a verifikácia WebSupport deployu
+alwaysApply: true
+---
+
+# Commit → push → WebSupport deploy (povinné)
+
+Po **každej** dokončenej práci so zmenami v repozitári (nielen po `.doaudit.md`):
+
+1. **Commitni** všetky relevantné zmeny (konvenčný SK commit message). Scratch/dočasné súbory (`scratch/`, dump JSON a pod.) necommituj.
+2. **Pushni na `main`.** Hooky (`post-commit`) spustia SFTP deploy na WebSupport; ak zlyhajú, oprav a zopakuj — nenechávaj zmeny len lokálne.
+3. **Verifikuj deploy:**
+   - `DEPLOY_COMMIT` z produkčného `deploy_info.php` (SFTP get; súbor je web-deny) vs. `git rev-parse --short HEAD`. Drift smie byť len pri commitoch meniacich výhradne ignore cesty (`.audit.md`, `.doaudit.md`, `.cursor/**`, `hooks/**`, …).
+   - Živá kontrola tela na **`https://nefro.polascin.net/`** (nie `nefro.sk`): dotknuté stránky, knižnice 403, absencia `Fatal error` / `/data/8/`.
+4. Pri zmene publikovaného článku: po nasadení skriptu UPSERT cez `ssh -4` + sync PDF (`sync_article_pdfs.sh` alebo ekvivalent) a PDF tiež commitni/pushni.
+
+Práca nie je hotová, kým nie je `main` na remote aktuálny a produkcia zodpovedá nasaditeľným zmenám.
