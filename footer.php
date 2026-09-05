@@ -85,6 +85,10 @@ $swatchBeat = '@' . number_format($beatValue, 2, '.', '');
       <div class="container site-footer__bottom-inner">
         <span>&copy; <?= htmlspecialchars(formatUserTimestamp(time(), 'Y')) ?> Ľubomír Polaščín</span>
         <span class="site-footer__bottom-sep" aria-hidden="true">·</span>
+        <a href="privacy.php" class="site-footer__link">Ochrana osobných údajov</a>
+        <span class="site-footer__bottom-sep" aria-hidden="true">·</span>
+        <a href="terms.php" class="site-footer__link">Podmienky používania</a>
+        <span class="site-footer__bottom-sep" aria-hidden="true">·</span>
         <a href="#cookie-settings" role="button" class="cookie-settings-trigger site-footer__link" aria-haspopup="dialog" aria-controls="cookieConsentModal">Nastavenia cookies</a>
         <span class="site-footer__bottom-sep" aria-hidden="true">·</span>
         <span class="site-footer__updated">Aktualizované: <a href="https://time.is/" target="_blank" rel="noopener noreferrer" class="site-footer__link"><?= htmlspecialchars($pageLastUpdated, ENT_QUOTES, 'UTF-8') ?> (<?= htmlspecialchars($pageTimeZone, ENT_QUOTES, 'UTF-8') ?>)</a></span>
