@@ -135,3 +135,6 @@ tools/*.phar
 # Python (lokálne nástroje, napr. tools/gen_pay_by_square.py)
 __pycache__/
 *.pyc
+
+# Pracovný priečinok auditov a rešeršov — NIKDY necommitovať (pravidlo .doaudit.md)
+scratch/
