@@ -50,6 +50,9 @@ ServerSignature Off
     RewriteRule ^private(/.*)?$ - [F,L]
     RewriteRule ^uploads/avatars/archive(/.*)?$ - [F,L]
 
+    # Alias bez prípony: /privacy a /terms → kanonické .php stránky
+    RewriteRule ^(privacy|terms)/?$ /$1.php [R=301,L,NE]
+
     # Rewrite sitemap.xml → sitemap.php
     RewriteRule ^sitemap\.xml$ sitemap.php [L]
 
