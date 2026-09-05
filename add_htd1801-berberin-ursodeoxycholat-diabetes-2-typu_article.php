@@ -136,7 +136,7 @@ $articles[] = [
 
 <ul>
   <li><a href="article.php?slug=ckd-pri-diabete-skrining-vrstvena-kardiorenalna-liecba">Chronická choroba obličiek pri diabete: včasný skríning a vrstvená kardiorenálna liečba</a></li>
-  <li><a href="article.php?slug=metformin-sglt2-prva-linia-diabetu">Metformín s predĺženým uvoľňovaním a inhibítor SGLT2 ako nová prvá línia liečby diabetu 2. typu</a></li>
+  <li><a href="article.php?slug=metformin-sglt2-prva-linia-diabetu-2-typu">Metformín s predĺženým uvoľňovaním a inhibítor SGLT2 ako nová prvá línia liečby diabetu 2. typu</a></li>
   <li><a href="article.php?slug=vyber-sglt2-glp1-dualne-agonisty-kardiorenalne-riziko">Výber a kombinovanie inhibítorov SGLT2, agonistov GLP-1 a duálnych agonistov pri diabete 2. typu s kardiorenálnym rizikom</a></li>
   <li><a href="article.php?slug=sglt2-inhibitory-rozdiely-schvalene-indikacie-srdce-oblicky">Šesť inhibítorov SGLT2 nie je šesť zameniteľných liekov</a></li>
 </ul>
