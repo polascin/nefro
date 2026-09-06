@@ -275,6 +275,9 @@ function getSourceArticleAuthors(): array {
         // 10.1093/joneph/aajag225, PMID 42614082) - 20 mien overených cez PubMed eutils 2026-08-23.
         'online-hemodiafiltracia-davkovana-liecba-odporucania-sin' => ['Giovanni F. M. Strippoli', 'Giovanni Pellegrino', 'Jörgen Hegbrant', 'Paolo Fabbrini', 'Paolo Luca Maria Lentini', 'Filippo Aucella', 'Vincenzo Panichi', 'Maurizio Gallieni', 'Bernard Canaud', 'Andrew Davenport', 'Alberto Ortiz', 'Rosa Ramos', 'Jolanta Malyszko', 'Rümeyza Kazancıoğlu', 'Martin Kuhlman', 'Ana Carina Ferreira', 'Krister Cromm', 'Sagar Nigwekar', 'Allen R. Nissenson', 'Luca De Nicola'],
         'wearables-dialyza-nefrologia-dokazy-a-limity' => ['Madelena Stauss', 'Htay Htay', 'Jeroen P. Kooman', 'Thomas Lindsay', 'Alexander Woywodt'],
+        // Autori spracovanej suhrnnej analyzy PLOS ONE 2026;21(8):e0356873
+        // (doi 10.1371/journal.pone.0356873) - 5 mien overenych cez Crossref 2026-09-06.
+        'tenapanor-vyssia-davka-kostna-resorpcia-crevna-pasaz' => ['Nobuo Nagano', 'Shin Tokunaga', 'Shinji Asada', 'Masafumi Fukagawa', 'Tadao Akizawa'],
         'zastava-obehu-pocas-hemodialyzy-mimotelovy-okruh' => ['Noor Hanita Zaini', 'Noor Hasliza Che Seman'],
     ];
 }
