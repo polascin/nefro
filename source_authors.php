@@ -287,6 +287,9 @@ function getSourceArticleAuthors(): array {
         // Autori spracovanej studie Circ Popul Health Outcomes 2026;e013042
         // (doi 10.1161/circoutcomes.125.013042) - 8 mien overenych cez Crossref 2026-09-06.
         'ckm-riziko-mladi-dospeli-79-percent-vyznam' => ['Vaishnavi Krishnan', 'Hongyan Ning', 'Daniel A. Notterman', 'Noreen Goldman', 'Sadiya S. Khan', 'Nilay S. Shah', 'Norrina B. Allen', 'Donald M. Lloyd-Jones'],
+        // Autori spracovanej studie REVEAL-CKD (BMJ Open 2023;13:e067386,
+        // doi 10.1136/bmjopen-2022-067386, PMID 37217263) - 12 mien overenych cez PubMed 2026-09-06.
+        'nerozpoznana-ckd-hypertenzia-kardiovaskularne-ochorenie' => ['Navdeep Tangri', 'Takahito Moriyama', 'Markus P. Schneider', 'Jean Baptiste Virgitti', 'Luca De Nicola', 'Michael Arnold', 'Salvatore Barone', 'Elizabeth Peach', 'Eric Wittbrodt', 'Hungta Chen', 'Krister Jarbrink', 'Pamela Kushner'],
         'zastava-obehu-pocas-hemodialyzy-mimotelovy-okruh' => ['Noor Hanita Zaini', 'Noor Hasliza Che Seman'],
     ];
 }
