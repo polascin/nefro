@@ -281,6 +281,9 @@ function getSourceArticleAuthors(): array {
         // Autori spracovanej kohortovej studie CJASN 2026;21(7):1198-1206
         // (doi 10.2215/CJN.0000001063, PMID 42133950) - 7 mien overenych cez PubMed 2026-09-06.
         'vysokoobjemova-hdf-mortalita-incidentni-dialyzovani-pacienti' => ['Yan Zhang', 'Anke Winter', 'Linda H. Ficociello', 'Smriti Arya', 'Stefano Stuard', 'Len A. Usvyat', 'Kamyar Kalantar-Zadeh'],
+        // Autori spracovaneho prehladu Nature Reviews Nephrology 2026
+        // (doi 10.1038/s41581-026-01117-6) - 11 mien overenych cez Crossref 2026-09-06.
+        'zapal-terapeuticky-ciel-ckd-renalne-kardiovaskularne-vysledky' => ['Katherine R. Tuttle', 'Mehmet Kanbay', 'Radica Z. Alicic', 'Juan Jesus Carrero', 'Sidar Copur', 'Ann Marie Navar', 'Brendon L. Neuen', 'Vlado Perkovic', 'Peter Rossing', 'Nikolaus Marx', 'Paul M. Ridker'],
         'zastava-obehu-pocas-hemodialyzy-mimotelovy-okruh' => ['Noor Hanita Zaini', 'Noor Hasliza Che Seman'],
     ];
 }
