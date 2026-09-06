@@ -278,6 +278,9 @@ function getSourceArticleAuthors(): array {
         // Autori spracovanej suhrnnej analyzy PLOS ONE 2026;21(8):e0356873
         // (doi 10.1371/journal.pone.0356873) - 5 mien overenych cez Crossref 2026-09-06.
         'tenapanor-vyssia-davka-kostna-resorpcia-crevna-pasaz' => ['Nobuo Nagano', 'Shin Tokunaga', 'Shinji Asada', 'Masafumi Fukagawa', 'Tadao Akizawa'],
+        // Autori spracovanej kohortovej studie CJASN 2026;21(7):1198-1206
+        // (doi 10.2215/CJN.0000001063, PMID 42133950) - 7 mien overenych cez PubMed 2026-09-06.
+        'vysokoobjemova-hdf-mortalita-incidentni-dialyzovani-pacienti' => ['Yan Zhang', 'Anke Winter', 'Linda H. Ficociello', 'Smriti Arya', 'Stefano Stuard', 'Len A. Usvyat', 'Kamyar Kalantar-Zadeh'],
         'zastava-obehu-pocas-hemodialyzy-mimotelovy-okruh' => ['Noor Hanita Zaini', 'Noor Hasliza Che Seman'],
     ];
 }
