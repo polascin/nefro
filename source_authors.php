@@ -293,6 +293,9 @@ function getSourceArticleAuthors(): array {
         // Autori spracovanej post hoc analyzy PROTECT (CJASN 2026;21(4):578-592,
         // doi 10.2215/CJN.0000000961, PMID 41428405) - 8 mien overenych cez Crossref a PubMed 2026-09-06.
         'kompletna-remisia-proteinurie-igan-protect-post-hoc' => ['Hiddo J. L. Heerspink', 'Brad H. Rovin', 'Radko Komers', 'Bruce Hendry', 'Alex Mercer', 'Priscila Preciado', 'Edward Murphy', 'Vladimir Tesar'],
+        // Autori spracovanej studie APPLAUSE-IgAN (N Engl J Med 2026;395(5):465-477,
+        // doi 10.1056/NEJMoa2600743, PMID 41910396) - 29 mien overenych cez PubMed 2026-09-06.
+        'iptakopan-iga-nefropatia-applause-igan-24-mesiacov' => ['Jonathan Barratt', 'Necmi Eren', 'Naoki Kashihara', 'Bart Maes', 'Dana V. Rizk', 'Brad Rovin', 'Hernan Trimarchi', 'Hong Zhang', 'Weiming Wang', 'Ismail Kocyigit', 'Chuanming Hao', 'Vladimir Tesar', 'Kenan Turgutalp', 'Li Yang', 'Guangqun Xing', 'Valter Duro Garcia', 'Seung Hyeok Han', 'Wanhong Lu', 'Antonio Pisani', 'Julia Weinmann-Menke', 'Frank Eitner', 'Nicolas Guerard', 'Dmytro Butylin', 'Luca Monaco', 'Emil Scosyrev', 'Annabel Magirr', 'Ronny Renfurm', 'Thomas Hach', 'Vlado Perkovic'],
         'zastava-obehu-pocas-hemodialyzy-mimotelovy-okruh' => ['Noor Hanita Zaini', 'Noor Hasliza Che Seman'],
     ];
 }
