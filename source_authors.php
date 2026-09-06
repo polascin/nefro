@@ -296,6 +296,10 @@ function getSourceArticleAuthors(): array {
         // Autori spracovanej studie APPLAUSE-IgAN (N Engl J Med 2026;395(5):465-477,
         // doi 10.1056/NEJMoa2600743, PMID 41910396) - 29 mien overenych cez PubMed 2026-09-06.
         'iptakopan-iga-nefropatia-applause-igan-24-mesiacov' => ['Jonathan Barratt', 'Necmi Eren', 'Naoki Kashihara', 'Bart Maes', 'Dana V. Rizk', 'Brad Rovin', 'Hernan Trimarchi', 'Hong Zhang', 'Weiming Wang', 'Ismail Kocyigit', 'Chuanming Hao', 'Vladimir Tesar', 'Kenan Turgutalp', 'Li Yang', 'Guangqun Xing', 'Valter Duro Garcia', 'Seung Hyeok Han', 'Wanhong Lu', 'Antonio Pisani', 'Julia Weinmann-Menke', 'Frank Eitner', 'Nicolas Guerard', 'Dmytro Butylin', 'Luca Monaco', 'Emil Scosyrev', 'Annabel Magirr', 'Ronny Renfurm', 'Thomas Hach', 'Vlado Perkovic'],
+        // Autori spracovanej studie Bax24 (Lancet 2026;407(10532):988-999,
+        // doi 10.1016/S0140-6736(25)02549-8, PMID 41794437) - 14 mien overenych cez PubMed
+        // a Crossref 2026-09-06. Spolupracujuci skusajuci (Bax24 investigators) nie su autori.
+        'baxdrostat-rezistentna-hypertenzia-bax24' => ['Michel Azizi', 'Jenifer M. Brown', 'Jamie P. Dwyer', 'John M. Flack', 'Erica S. W. Jones', 'Raisa Kurlyandskaya', 'Hongjian Li', 'Filip Birve', 'Aina S. Lihn', 'Shira Perl', 'Markus P. Schlaich', 'Hirotaka Shibata', 'Ji-Guang Wang', 'Bryan Williams'],
         'zastava-obehu-pocas-hemodialyzy-mimotelovy-okruh' => ['Noor Hanita Zaini', 'Noor Hasliza Che Seman'],
     ];
 }
