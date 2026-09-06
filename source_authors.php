@@ -300,6 +300,12 @@ function getSourceArticleAuthors(): array {
         // doi 10.1016/S0140-6736(25)02549-8, PMID 41794437) - 14 mien overenych cez PubMed
         // a Crossref 2026-09-06. Spolupracujuci skusajuci (Bax24 investigators) nie su autori.
         'baxdrostat-rezistentna-hypertenzia-bax24' => ['Michel Azizi', 'Jenifer M. Brown', 'Jamie P. Dwyer', 'John M. Flack', 'Erica S. W. Jones', 'Raisa Kurlyandskaya', 'Hongjian Li', 'Filip Birve', 'Aina S. Lihn', 'Shira Perl', 'Markus P. Schlaich', 'Hirotaka Shibata', 'Ji-Guang Wang', 'Bryan Williams'],
+        // Autori spracovanej studie Ecotoxicol Environ Saf 2026;309:119529
+        // (doi 10.1016/j.ecoenv.2025.119529, PMID 41353804) - 7 mien overenych cez Crossref a PubMed 2026-09-06.
+        'mmp2-mmp9-toxicke-kovy-chronicka-choroba-obliciek' => ['Hsi-Hsien Chen', 'Chih-Yin Wu', 'Sheng-Lun Hsu', 'Horng-Sheng Shiue', 'Mei-Chieh Chen', 'Wei-Jen Chen', 'Yu-Mei Hsueh'],
+        // Autori spracovanej studie Clin Kidney J 2026;19(4):sfag052
+        // (doi 10.1093/ckj/sfag052, PMID 42027896) - 12 mien overenych cez PubMed 2026-09-06.
+        'rbv-monitorovanie-intradialyzacna-hypotenzia-predikcia' => ['Julien Aniort', 'Thomas Bachelet', 'Pascal Seris', 'Thibault Dolley-Hitze', 'Marc Bouiller', 'Camilia Beji', 'Valerie Batel', 'Bruno Pereira', 'David Attaf', 'Pascal Kopperschmidt', 'Anne-Elisabeth Heng', 'Bernard Canaud'],
         'zastava-obehu-pocas-hemodialyzy-mimotelovy-okruh' => ['Noor Hanita Zaini', 'Noor Hasliza Che Seman'],
     ];
 }
