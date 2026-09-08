@@ -73,9 +73,9 @@ $swatchBeat = '@' . number_format($beatValue, 2, '.', '');
               </form>
             </li>
           <?php endif; ?>
-          <li><a href="privacy.php" class="site-footer__link">Ochrana osobných údajov</a></li>
-          <li><a href="cookies.php" class="site-footer__link">Cookie Policy</a></li>
-          <li><a href="terms.php" class="site-footer__link">Podmienky používania</a></li>
+          <li><a href="/privacy" class="site-footer__link">Ochrana osobných údajov</a></li>
+          <li><a href="/cookies" class="site-footer__link">Cookie Policy</a></li>
+          <li><a href="/terms" class="site-footer__link">Podmienky používania</a></li>
         </ul>
       </div>
 
@@ -85,9 +85,9 @@ $swatchBeat = '@' . number_format($beatValue, 2, '.', '');
       <div class="container site-footer__bottom-inner">
         <span>&copy; <?= htmlspecialchars(formatUserTimestamp(time(), 'Y')) ?> Ľubomír Polaščín</span>
         <span class="site-footer__bottom-sep" aria-hidden="true">·</span>
-        <a href="privacy.php" class="site-footer__link">Ochrana osobných údajov</a>
+        <a href="/privacy" class="site-footer__link">Ochrana osobných údajov</a>
         <span class="site-footer__bottom-sep" aria-hidden="true">·</span>
-        <a href="terms.php" class="site-footer__link">Podmienky používania</a>
+        <a href="/terms" class="site-footer__link">Podmienky používania</a>
         <span class="site-footer__bottom-sep" aria-hidden="true">·</span>
         <a href="#cookie-settings" role="button" class="cookie-settings-trigger site-footer__link" aria-haspopup="dialog" aria-controls="cookieConsentModal">Nastavenia cookies</a>
         <span class="site-footer__bottom-sep" aria-hidden="true">·</span>

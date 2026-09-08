@@ -228,7 +228,7 @@ include 'legal_head.php';
                 <p>
                     Predvolene používame iba nevyhnutné úložisko; voliteľné cookies nastavujeme
                     len s vaším súhlasom. Podrobnosti a správu volieb nájdete v našej
-                    <a href="cookies.php">Cookie Policy</a>. Súhlas môžete kedykoľvek zmeniť:
+                    <a href="/cookies">Cookie Policy</a>. Súhlas môžete kedykoľvek zmeniť:
                 </p>
                 <button class="cookie-settings-trigger btn-outline btn-outline--mt"
                         type="button"
@@ -252,11 +252,11 @@ include 'legal_head.php';
                 <p>
                     Ochrana súkromia:
                     <a href="mailto:<?= htmlspecialchars($info['contactEmail'], ENT_QUOTES, 'UTF-8') ?>"><?= htmlspecialchars($info['contactEmail'], ENT_QUOTES, 'UTF-8') ?></a>
-                    · Pozrite si aj naše <a href="terms.php">Podmienky používania</a> a
-                    <a href="cookies.php">Cookie Policy</a>.
+                    · Pozrite si aj naše <a href="/terms">Podmienky používania</a> a
+                    <a href="/cookies">Cookie Policy</a>.
                 </p>
 
-                <?php $legalCurrent = 'privacy.php'; include 'legal_related.php'; ?>
+                <?php $legalCurrent = 'privacy'; include 'legal_related.php'; ?>
             </article>
         </div>
     </main>

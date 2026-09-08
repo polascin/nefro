@@ -10,16 +10,16 @@ declare(strict_types=1);
 $legalCurrent = $legalCurrent ?? '';
 
 $legalRelated = [
-    'privacy.php' => 'Ochrana osobných údajov',
-    'cookies.php' => 'Cookie Policy',
-    'terms.php'   => 'Podmienky používania',
+    'privacy' => 'Ochrana osobných údajov',
+    'cookies' => 'Cookie Policy',
+    'terms'   => 'Podmienky používania',
 ];
 ?>
 <nav class="legal-related" aria-label="Súvisiace právne dokumenty">
     <span class="legal-related__label">Súvisiace dokumenty:</span>
     <?php foreach ($legalRelated as $slug => $label): ?>
         <?php if ($slug !== $legalCurrent): ?>
-            <a href="<?= htmlspecialchars($slug, ENT_QUOTES, 'UTF-8') ?>" class="legal-related__link"><?= htmlspecialchars($label, ENT_QUOTES, 'UTF-8') ?></a>
+            <a href="/<?= htmlspecialchars($slug, ENT_QUOTES, 'UTF-8') ?>" class="legal-related__link"><?= htmlspecialchars($label, ENT_QUOTES, 'UTF-8') ?></a>
         <?php endif; ?>
     <?php endforeach; ?>
 </nav>

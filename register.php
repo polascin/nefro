@@ -791,8 +791,8 @@ if ($requestMethod === 'POST') {
                     </div>
 
                     <p class="auth-consent-note">
-                        Registráciou súhlasíte s našimi <a href="terms.php">Podmienkami používania</a>
-                        a <a href="privacy.php">Zásadami ochrany osobných údajov</a>.
+                        Registráciou súhlasíte s našimi <a href="/terms">Podmienkami používania</a>
+                        a <a href="/privacy">Zásadami ochrany osobných údajov</a>.
                     </p>
 
                     <div class="form-actions">

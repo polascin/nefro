@@ -150,10 +150,10 @@ include 'legal_head.php';
                     vyššie. Pri akejkoľvek inej žiadosti o súkromie nás kontaktujte na
                     <a href="mailto:<?= htmlspecialchars($info['contactEmail'], ENT_QUOTES, 'UTF-8') ?>"><?= htmlspecialchars($info['contactEmail'], ENT_QUOTES, 'UTF-8') ?></a>.
                     Odpovieme v lehote, ktorú vyžaduje vaše miestne právo. Pozrite si aj naše
-                    <a href="privacy.php">Zásady ochrany osobných údajov</a>.
+                    <a href="/privacy">Zásady ochrany osobných údajov</a>.
                 </p>
 
-                <?php $legalCurrent = 'cookies.php'; include 'legal_related.php'; ?>
+                <?php $legalCurrent = 'cookies'; include 'legal_related.php'; ?>
             </article>
         </div>
     </main>

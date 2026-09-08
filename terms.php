@@ -34,7 +34,7 @@ include 'legal_head.php';
                         prevádzkovateľom webovej lokality <?= htmlspecialchars($info['entity'], ENT_QUOTES, 'UTF-8') ?>
                         a upravujú vaše používanie lokality <code><?= htmlspecialchars($info['url'], ENT_QUOTES, 'UTF-8') ?></code>
                         (ďalej len „Služba“). Vytvorením konta alebo používaním Služby súhlasíte
-                        s týmito Podmienkami a s našimi <a href="privacy.php">Zásadami ochrany osobných údajov</a>.
+                        s týmito Podmienkami a s našimi <a href="/privacy">Zásadami ochrany osobných údajov</a>.
                     </p>
                 </header>
 
@@ -135,7 +135,7 @@ include 'legal_head.php';
                     od WebSupport) a môže na ne odkazovať. Na vaše používanie týchto služieb sa
                     vzťahujú ich vlastné podmienky a zásady súkromia; za ich obsah
                     nezodpovedáme. Zoznam sprostredkovateľov nájdete v
-                    <a href="privacy.php">Zásadách ochrany osobných údajov</a>.
+                    <a href="/privacy">Zásadách ochrany osobných údajov</a>.
                 </p>
 
                 <!-- 9. VYHLÁSENIA -->
@@ -191,7 +191,7 @@ include 'legal_head.php';
                     <a href="mailto:<?= htmlspecialchars($info['contactEmail'], ENT_QUOTES, 'UTF-8') ?>"><?= htmlspecialchars($info['contactEmail'], ENT_QUOTES, 'UTF-8') ?></a>.
                 </p>
 
-                <?php $legalCurrent = 'terms.php'; include 'legal_related.php'; ?>
+                <?php $legalCurrent = 'terms'; include 'legal_related.php'; ?>
             </article>
         </div>
     </main>

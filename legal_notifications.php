@@ -150,9 +150,9 @@ if (!function_exists('buildLegalNoticeEmailHtml')) {
 
         $docs = '<p style="margin:0 0 8px;">Úplné znenie nájdete tu:</p>'
             . '<ul style="margin:0 0 16px;padding-left:20px;">'
-            . '<li style="margin:0 0 6px;"><a href="' . $esc($base . '/privacy.php') . '" style="color:#1d4ed8;text-decoration:underline;">Zásady ochrany osobných údajov</a></li>'
-            . '<li style="margin:0 0 6px;"><a href="' . $esc($base . '/cookies.php') . '" style="color:#1d4ed8;text-decoration:underline;">Cookie Policy</a></li>'
-            . '<li style="margin:0 0 6px;"><a href="' . $esc($base . '/terms.php') . '" style="color:#1d4ed8;text-decoration:underline;">Podmienky používania</a></li>'
+            . '<li style="margin:0 0 6px;"><a href="' . $esc($base . '/privacy') . '" style="color:#1d4ed8;text-decoration:underline;">Zásady ochrany osobných údajov</a></li>'
+            . '<li style="margin:0 0 6px;"><a href="' . $esc($base . '/cookies') . '" style="color:#1d4ed8;text-decoration:underline;">Cookie Policy</a></li>'
+            . '<li style="margin:0 0 6px;"><a href="' . $esc($base . '/terms') . '" style="color:#1d4ed8;text-decoration:underline;">Podmienky používania</a></li>'
             . '</ul>';
 
         if ($isSubscriber) {
