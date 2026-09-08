@@ -288,12 +288,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             /** @var \DateTimeImmutable $examinationDate */
             $uacrMgG = $uacrUnit === 'mg_mmol' ? $uacrValue * 8.84 : $uacrValue;
             $gCategory = ckdGCategory($egfr);
-            $aCategory = kdigoACategory($uacrMgG);
+            $aCategory = kdigoACategory($uacrValue, $uacrUnit);
             $riskInfo = kdigoRisk($gCategory, $aCategory);
 
             $otherKidneyMarker = $form['other_kidney_marker'] === '1';
             $chronicityConfirmed = $chronicity === 'confirmed';
-            $meetsCkdCriteria = $egfr < 60.0 || $uacrMgG >= 30.0 || $otherKidneyMarker;
+            $meetsCkdCriteria = $egfr < 60.0 || $aCategory !== 'A1' || $otherKidneyMarker;
             $hasConfirmedCkd = $chronicityConfirmed && $meetsCkdCriteria;
 
             $mainDiagnosis = ambulatoryMainDiagnosis($gCategory, $chronicityConfirmed, $meetsCkdCriteria);
