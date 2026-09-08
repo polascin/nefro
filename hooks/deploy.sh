@@ -69,12 +69,51 @@ sftp_escape() {
 	printf '%s' "$value"
 }
 
+resolve_sftp_bin() {
+	SFTP_BIN=${NEFRO_SFTP_BIN:-""}
+	SFTP_WINDOWS_CLIENT=0
+
+	if [[ -z $SFTP_BIN ]]; then
+		case $(uname -s 2>/dev/null || true) in
+		MINGW* | MSYS* | CYGWIN*)
+			# Git for Windows dodáva nepodpísané sftp.exe, ktoré môže blokovať
+			# Windows Application Control. Systémový OpenSSH klient je podpísaný.
+			if [[ -x /c/Windows/System32/OpenSSH/sftp.exe ]]; then
+				SFTP_BIN=/c/Windows/System32/OpenSSH/sftp.exe
+				SFTP_WINDOWS_CLIENT=1
+			fi
+			;;
+		esac
+	fi
+
+	if [[ -z $SFTP_BIN ]]; then
+		SFTP_BIN=$(command -v sftp 2>/dev/null || true)
+	fi
+	if [[ -z $SFTP_BIN || ! -x $SFTP_BIN ]]; then
+		echo "[deploy] Chýba spustiteľný SFTP klient." >&2
+		return 1
+	fi
+
+	if [[ $SFTP_BIN == *.exe ]] && command -v cygpath >/dev/null 2>&1; then
+		SFTP_WINDOWS_CLIENT=1
+	fi
+}
+
+sftp_local_path() {
+	local value=$1
+	if ((SFTP_WINDOWS_CLIENT)); then
+		value=$(cygpath -m "$value") || return 1
+	fi
+	sftp_escape "$value"
+}
+
 # Pripojenie sa rozlisuje len tu, aby --remote-commit aj samotny deploy pouzivali
 # rovnaky ciel, kluc aj remote cestu.
 setup_sftp() {
 	SFTP_TARGET=${NEFRO_SFTP_TARGET:-""}
 	REMOTE_PATH=${NEFRO_REMOTE_PATH:-"/data/8/6/868f981d-e598-4e71-b7f5-246f2e180cef/polascin.net/sub/nefro"}
 	REMOTE_PATH=${REMOTE_PATH%/}
+	resolve_sftp_bin || exit 1
 
 	declare -g -a SFTP_OPTIONS=(-q -o BatchMode=yes -o ConnectTimeout=20 -o StrictHostKeyChecking=accept-new)
 
@@ -99,7 +138,7 @@ setup_sftp() {
 		SFTP_OPTIONS+=(-i "$SFTP_KEY")
 	fi
 
-	for command in sftp mktemp; do
+	for command in mktemp; do
 		if ! command -v "$command" >/dev/null 2>&1; then
 			echo "[deploy] Chýba príkaz: $command" >&2
 			exit 1
@@ -120,10 +159,10 @@ if ((REMOTE_COMMIT_ONLY)); then
 	{
 		printf 'get "%s" "%s"\n' \
 			"$(sftp_escape "$REMOTE_PATH/deploy_info.php")" \
-			"$(sftp_escape "$RC_INFO")"
+			"$(sftp_local_path "$RC_INFO")"
 		printf 'quit\n'
 	} >"$RC_BATCH"
-	if ! sftp "${SFTP_OPTIONS[@]}" -b "$RC_BATCH" "$SFTP_TARGET" >/dev/null 2>&1; then
+	if ! "$SFTP_BIN" "${SFTP_OPTIONS[@]}" -b "$RC_BATCH" "$SFTP_TARGET" >/dev/null 2>&1; then
 		echo "[deploy] Nepodarilo sa načítať vzdialený deploy_info.php." >&2
 		exit 1
 	fi
@@ -255,19 +294,19 @@ for path in ${UPLOADS[@]+"${UPLOADS[@]}"}; do
 done
 
 for path in ${UPLOADS[@]+"${UPLOADS[@]}"}; do
-	local_path=$(sftp_escape "$path")
+	local_path=$(sftp_local_path "$path") || exit 1
 	remote=$(sftp_escape "$REMOTE_PATH/$path")
 	printf 'put "%s" "%s"\n' "$local_path" "$remote" >>"$BATCH_FILE"
 done
 
-local_info=$(sftp_escape "$DEPLOY_INFO")
+local_info=$(sftp_local_path "$DEPLOY_INFO") || exit 1
 remote_info=$(sftp_escape "$REMOTE_PATH/deploy_info.php")
 printf 'put "%s" "%s"\n' "$local_info" "$remote_info" >>"$BATCH_FILE"
 printf 'quit\n' >>"$BATCH_FILE"
 
 echo "[deploy] Uploading cez SSH profil $SFTP_TARGET..."
 SFTP_OUTPUT=$(
-	sftp "${SFTP_OPTIONS[@]}" \
+	"$SFTP_BIN" "${SFTP_OPTIONS[@]}" \
 		-b "$BATCH_FILE" \
 		"$SFTP_TARGET" 2>&1
 )
