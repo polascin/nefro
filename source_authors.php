@@ -341,5 +341,8 @@ function getSourceArticleAuthors(): array {
         // Autori spracovanej studie J Nephrol 2026 (doi 10.1093/joneph/aajag186,
         // PMID 42687747) - 5 mien overenych cez PubMed 2026-09-09.
         'porucha-cuchu-hemodialyza-kognicia-albumin' => ['Saliha Yıldırım', 'Gülay Turgay', 'Ayşe Zeynep Bal', 'Emre Tutal', 'Siren Sezer'],
+        // Autorky spracovanej studie J Nephrol 2026 (doi 10.1093/joneph/aajag176,
+        // PMID 42687760) - presne dve, overene cez PubMed 2026-09-09.
+        'ppi-h2-antihistaminika-nsaid-ckd-progresia' => ['Susin Park', 'Pusoon Chun'],
     ];
 }
