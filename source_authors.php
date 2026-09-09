@@ -307,5 +307,16 @@ function getSourceArticleAuthors(): array {
         // (doi 10.1093/ckj/sfag052, PMID 42027896) - 12 mien overenych cez PubMed 2026-09-06.
         'rbv-monitorovanie-intradialyzacna-hypotenzia-predikcia' => ['Julien Aniort', 'Thomas Bachelet', 'Pascal Seris', 'Thibault Dolley-Hitze', 'Marc Bouiller', 'Camilia Beji', 'Valerie Batel', 'Bruno Pereira', 'David Attaf', 'Pascal Kopperschmidt', 'Anne-Elisabeth Heng', 'Bernard Canaud'],
         'zastava-obehu-pocas-hemodialyzy-mimotelovy-okruh' => ['Noor Hanita Zaini', 'Noor Hasliza Che Seman'],
+        // Autori spracovanej studie J Antimicrob Chemother 2026;81(10)
+        // (doi 10.1093/jac/dkag304, PMID 42683513) - 10 mien overenych cez PubMed a Crossref
+        // 2026-09-09. Bibliograficky zaznam uvadza iba iniciialy krstnych mien.
+        'flukloxacilin-cefazolin-aki-stafylokokova-bakteriemia' => ['F. S. Sinkeler', 'I. J. E. Kouijzer', 'N. G. L. Jager', 'J. ten Oever', 'E. Leegwater', 'J. Gisolf', 'D. Reuling', 'Z. M. Spoel', 'M. P. M. Hensgens', 'R. J. Brüggemann'],
+        // Autori spracovanej studie Kidney Medicine 2026;101510
+        // (doi 10.1016/j.xkme.2026.101510) - 8 mien overenych cez Crossref a Semantic Scholar
+        // 2026-09-09; praca este nema PMID.
+        'klinicka-krehkost-cfs-mortalita-dialyza-validacia' => ['Maxime Ingwiller', 'François Chantrel', 'Thierry Krummel', 'Clotilde Muller', 'Yves Dimitrov', 'Nadia Honoré', 'Sophie Brokhès-Le Calvez', 'Thierry Hannedouche'],
+        // Autori spracovanej studie Clin Kidney J 2026;19(8):sfag233
+        // (doi 10.1093/ckj/sfag233, PMID 42564550) - 17 mien overenych cez PubMed 2026-09-09.
+        'dialyzacna-modalita-prezivanie-oktogenari-pd-hd' => ['Néstor Toapanta', 'María Antonieta Azancot', 'Jordi Comas', 'Natalia Ramos', 'Juan León-Román', 'Marc Patricio-Liébana', 'Jorge Sánchez Olaya', 'Tiffany Alvarez', 'Efraín Tatis', 'Sara Nuñez', 'Natalia Padron', 'Héctor Bedoya', 'Iván Zamora', 'Jaume Tort', 'Oriol Bestard', 'Francesc Moreso', 'María José Soler'],
     ];
 }
