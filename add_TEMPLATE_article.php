@@ -84,8 +84,12 @@ HTML,
 
 // ── Vkladanie do databázy ──────────────────────────────────────────────────────
 
+// POZOR: každý vložený článok zaradí samostatné avízo pre KAŽDÉHO odberateľa.
+// Pri dávke N článkov to znamená N × počet odberateľov e-mailov naraz
+// (2026-09-09: 12 článkov = 144 e-mailov). Preto je predvolená hodnota `false`.
+// Na `true` prepni vedome — pri jednom článku, ktorý má ísť do newslettera.
 $result = upsertArticles($pdo, $articles, 'odborne', [
-    'enqueue_newsletter' => true,
+    'enqueue_newsletter' => false,
     'regenerate_pdf' => true,
     'log_prefix' => 'add_TEMPLATE_article',
 ]);
