@@ -327,5 +327,16 @@ function getSourceArticleAuthors(): array {
         // (doi 10.1038/s41574-026-01300-6, PMID 42680831) - 6 mien overenych cez PubMed
         // a Crossref 2026-09-09.
         'obezita-multifaktorialne-ochorenie-skrining-nefrologia' => ['Elisabeth F. C. van Rossum', 'Mariëtte R. Boon', 'Renate E. H. Meeusen', 'Caroline B. Terwee', 'Aart-Jan Boor', 'Erica L. T. van den Akker'],
+        // Autorka spracovaneho spravodajskeho textu Medscape Medical News (4. 9. 2026);
+        // primarnym dokumentom je diskusny material FDA/CDRH s institucionalnym autorstvom,
+        // ktore sa v tomto zozname neuvadza.
+        'regulacia-medicinskej-umelej-inteligencie-fda-nefrologia' => ['Steph Weber'],
+        // Autori spracovanej studie Hemodial Int 2026 (doi 10.1111/hdi.70122, PMID 42702583) -
+        // 6 mien overenych cez PubMed 2026-09-09.
+        'cievny-pristup-nemozny-avf-avg-planovanie-dialyzy' => ['Rafael Figueiredo', 'Hugo Diniz', 'Joana Ferreira', 'Jorge Costa Lima', 'Armando Mansilha', 'Luís Coentrão'],
+        // Autori spracovanej kazuistiky J Nephrol 2026 (doi 10.1093/joneph/aajag235,
+        // PMID 42700380) - 5 mien overenych cez PubMed 2026-09-09. Slovenska praca
+        // (Kosice, Martin) v spolupraci s NRL pre mykobakterie v Prahe.
+        'mycobacterium-fortuitum-kultivacne-negativna-peritonitida-pd' => ['Eva Schreterová', 'Jaroslav Rosenberger', 'Tatiana Baltesová', 'Matúš Dohál', 'Věra Dvořáková'],
     ];
 }
