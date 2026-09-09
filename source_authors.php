@@ -318,5 +318,14 @@ function getSourceArticleAuthors(): array {
         // Autori spracovanej studie Clin Kidney J 2026;19(8):sfag233
         // (doi 10.1093/ckj/sfag233, PMID 42564550) - 17 mien overenych cez PubMed 2026-09-09.
         'dialyzacna-modalita-prezivanie-oktogenari-pd-hd' => ['Néstor Toapanta', 'María Antonieta Azancot', 'Jordi Comas', 'Natalia Ramos', 'Juan León-Román', 'Marc Patricio-Liébana', 'Jorge Sánchez Olaya', 'Tiffany Alvarez', 'Efraín Tatis', 'Sara Nuñez', 'Natalia Padron', 'Héctor Bedoya', 'Iván Zamora', 'Jaume Tort', 'Oriol Bestard', 'Francesc Moreso', 'María José Soler'],
+        // Autori spracovanej post hoc analyzy ACCORD (Am J Kidney Dis 2026,
+        // doi 10.1053/j.ajkd.2026.05.009, PMID 42468834) - 17 mien overenych cez PubMed
+        // a Crossref 2026-09-09. Prvym autorom je Xi Meng; sekundarny zdroj Medscape
+        // nespravne uvadzal ako prveho autora korespondujuceho Guanga Ninga.
+        'cas-v-cielovom-rozmedzi-hba1c-tlak-renalne-vysledky-accord' => ['Xi Meng', 'Yueyue Wang', 'Xiaoyun Zhang', 'Siyu Wang', 'Zhiping Tan', 'Kan Wang', 'Xuan Zhao', 'Mian Li', 'Tiange Wang', 'Zhiyun Zhao', 'Jieli Lu', 'Min Xu', 'Jie Zheng', 'Weiqing Wang', 'Guang Ning', 'Yufang Bi', 'Yu Xu'],
+        // Autori spracovaneho textu Nat Rev Endocrinol 2026
+        // (doi 10.1038/s41574-026-01300-6, PMID 42680831) - 6 mien overenych cez PubMed
+        // a Crossref 2026-09-09.
+        'obezita-multifaktorialne-ochorenie-skrining-nefrologia' => ['Elisabeth F. C. van Rossum', 'Mariëtte R. Boon', 'Renate E. H. Meeusen', 'Caroline B. Terwee', 'Aart-Jan Boor', 'Erica L. T. van den Akker'],
     ];
 }
