@@ -338,5 +338,8 @@ function getSourceArticleAuthors(): array {
         // PMID 42700380) - 5 mien overenych cez PubMed 2026-09-09. Slovenska praca
         // (Kosice, Martin) v spolupraci s NRL pre mykobakterie v Prahe.
         'mycobacterium-fortuitum-kultivacne-negativna-peritonitida-pd' => ['Eva Schreterová', 'Jaroslav Rosenberger', 'Tatiana Baltesová', 'Matúš Dohál', 'Věra Dvořáková'],
+        // Autori spracovanej studie J Nephrol 2026 (doi 10.1093/joneph/aajag186,
+        // PMID 42687747) - 5 mien overenych cez PubMed 2026-09-09.
+        'porucha-cuchu-hemodialyza-kognicia-albumin' => ['Saliha Yıldırım', 'Gülay Turgay', 'Ayşe Zeynep Bal', 'Emre Tutal', 'Siren Sezer'],
     ];
 }
