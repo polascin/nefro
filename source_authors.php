@@ -344,5 +344,9 @@ function getSourceArticleAuthors(): array {
         // Autorky spracovanej studie J Nephrol 2026 (doi 10.1093/joneph/aajag176,
         // PMID 42687760) - presne dve, overene cez PubMed 2026-09-09.
         'ppi-h2-antihistaminika-nsaid-ckd-progresia' => ['Susin Park', 'Pusoon Chun'],
+        // Autorka spracovaneho pacientskeho komentara CJASN 2026
+        // (doi 10.2215/CJN.0000001228, PMID 42709610) - jedina autorka, overene
+        // cez PubMed 2026-09-09.
+        'retransplantacia-obliciek-po-zlyhani-stepu-prekazky' => ['Kimberly Brown Marsh'],
     ];
 }
