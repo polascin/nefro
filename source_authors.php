@@ -348,5 +348,8 @@ function getSourceArticleAuthors(): array {
         // (doi 10.2215/CJN.0000001228, PMID 42709610) - jedina autorka, overene
         // cez PubMed 2026-09-09.
         'retransplantacia-obliciek-po-zlyhani-stepu-prekazky' => ['Kimberly Brown Marsh'],
+        // Autori spracovaneho prehladu JASN 2026 (doi 10.1681/ASN.0000001272,
+        // PMID 42709582) - 5 mien overenych cez PubMed 2026-09-09.
+        'oblicka-na-cipe-organoidy-mechanicke-sily' => ['Abigail Daily', 'Nanditha Anandakrishnan', 'Jonathan Haydak', 'Jonathan Himmelfarb', 'Evren U. Azeloglu'],
     ];
 }
