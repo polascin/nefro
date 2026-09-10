@@ -23,7 +23,7 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Turecká štúdia udáva stredne ťažký až ťažký pruritus u 16,3 % dialyzovaných, iné kohorty u 23 až 40 %. Rozdiel nevzniká v pacientoch, ale v použitom nástroji – a najcennejšia časť práce je celkom inde než v číslach.',
+    'excerpt'      => 'Turecká štúdia udáva stredne ťažký až ťažký pruritus u 16,3 % dialyzovaných, iné kohorty u 23 až 40 %. Veľkú časť rozdielu vysvetľuje použitý nástroj a prah, bez priameho porovnania v tej istej kohorte ho však nemožno pripísať iba meraniu – a najcennejšia časť práce je celkom inde než v číslach.',
     'content'      => <<<'HTML'
 <p>Pruritus spojený s chronickou chorobou obličiek patrí k symptómom, ktoré dialyzovaného pacienta obťažujú najviac a v ambulancii sa spomenú najmenej. Nová turecká štúdia s kombinovaným kvantitatívno-kvalitatívnym dizajnom priniesla údaj, ktorý sa rýchlo rozšíril: stredne ťažké až ťažké svrbenie malo <strong>16,3 %</strong> hemodialyzovaných.</p>
 
@@ -31,7 +31,7 @@ $articles[] = [
 
 <h2>Čo štúdia urobila</h2>
 
-<p>Autorky použili sekvenčný vysvetľujúci zmiešaný dizajn: prierezovú kvantitatívnu fázu a na ňu nadväzujúcu kvalitatívnu fázu s reflexívnou tematickou analýzou. Prebehla v troch dialyzačných strediskách pridružených k univerzitnej nemocnici v Ankare od októbra 2025 do januára 2026. Z približne 520 dialyzovaných dospelých sa zúčastnilo <strong>294 (56,5 %)</strong>; dôvody neúčasti zvyšných pacientov práca neuvádza.</p>
+<p>Autorky použili sekvenčný vysvetľujúci zmiešaný dizajn: prierezovú kvantitatívnu fázu a na ňu nadväzujúcu kvalitatívnu fázu s reflexívnou tematickou analýzou. Prebehla v troch dialyzačných strediskách pridružených k univerzitnej nemocnici v Ankare od októbra 2025 do januára 2026. Z približne 520 dialyzovaných dospelých sa zúčastnilo <strong>294, teda približne 57 %</strong> (vlastný orientačný prepočet z približného menovateľa); dôvody neúčasti zvyšných pacientov práca neuvádza.</p>
 
 <p>Závažnosť sa merala tureckou verziou päťdimenzionálnej škály svrbenia (5-D), ktorá hodnotí trvanie, intenzitu, vývoj, obmedzenie činností a rozsah postihnutia. Priemerné skóre bolo 8,00 ± 3,21 pri nameranom rozsahu 5,00 až 19,75 a vnútornej konzistencii 0,77.</p>
 
@@ -80,7 +80,7 @@ $articles[] = [
 </table>
 </div>
 
-<p>Svrbenie akéhokoľvek stupňa teda malo 101 pacientov (34,4 %) a stredne ťažké až ťažké 48 pacientov (16,3 %). Údaj 34,4 % pritom v abstrakte nie je – kto cituje len abstrakt, nájde tam iba 16,3 %.</p>
+<p>Aspoň mierne svrbenie (5-D ≥ 9) teda malo 101 pacientov (34,4 %) a stredne ťažké až ťažké 48 pacientov (16,3 %). Údaj 34,4 % pritom v abstrakte nie je – kto cituje len abstrakt, nájde tam iba 16,3 %.</p>
 
 <h2>Prečo 16,3 % nie je „prevalencia svrbenia pri dialýze“</h2>
 
@@ -129,7 +129,7 @@ $articles[] = [
 </table>
 </div>
 
-<p>Takmer polovica liečených teda nemá zo svojej liečby žiaden úžitok, pričom najčastejšie predpisovanou skupinou sú antihistaminiká – lieky, ktorých neúčinnosť pri uremickom prurite je patofyziologicky očakávaná, pretože svrbenie tu nie je histamínovo sprostredkované.</p>
+<p>Takmer polovica liečených teda nemá zo svojej liečby žiaden úžitok. Údaj sa vzťahuje na akúkoľvek antipruritickú liečbu, nie osobitne na antihistaminiká — tie sú len najčastejšie predpisovanou skupinou – lieky, ktorých neúčinnosť pri uremickom prurite je patofyziologicky očakávaná, pretože svrbenie tu nie je histamínovo sprostredkované.</p>
 
 <p><em>Poznámka k údajom: pôvodná tabuľka uvádza tieto podiely vzťahované na celý súbor 294 pacientov (34,0 %, 26,5 % a 11,6 %). Vyššie uvedené podiely sú prepočítané na 212 skutočných užívateľov liekov, čo je klinicky zmysluplnejší menovateľ.</em></p>
 
@@ -168,8 +168,8 @@ $articles[] = [
     </tr>
     <tr>
       <th scope="row">Svrbenie akéhokoľvek stupňa malo 34,4 %</th>
-      <td>Potvrdené</td>
-      <td>101 z 294. Údaj je len v plnom texte, nie v abstrakte.</td>
+      <td>Číslo potvrdené, formulácia nepresná</td>
+      <td>101 z 294 zodpovedá 5-D ≥ 9, teda <strong>aspoň miernemu</strong> svrbeniu podľa Laiových kategórií (9 – 11 mierne, 12 – 17 stredne ťažké). Nejde o „akýkoľvek stupeň“: škála má minimum 5 a pásmo 5 – 8 zodpovedá NRS = 0. Údaj je len v plnom texte, nie v abstrakte.</td>
     </tr>
     <tr>
       <th scope="row">Zvyšných 65,6 % pacientov nesvrbí</th>
@@ -179,7 +179,7 @@ $articles[] = [
     <tr>
       <th scope="row">Prah ≥ 12 pochádza z pôvodnej publikácie škály 5-D</th>
       <td>Nesprávne</td>
-      <td>Pôvodná práca kategórie závažnosti nedefinuje. Prah pochádza z neskoršej jednocentrickej taiwanskej práce bez analýzy ROC.</td>
+      <td>Pôvodná práca kategórie závažnosti nedefinuje. Prah pochádza z neskoršej jednocentrickej taiwanskej práce (409 pacientov). Tá ROC analýzu urobila — plocha pod krivkou bola 0,915 (95 % IS 0,889 – 0,941) pre stredne ťažký pruritus podľa NRS ≥ 4 —, samotné deliace body však odvodila z rovnice lineárnej regresie, nie z ROC. Pri prahu 12 mala senzitivitu 75 % a špecificitu 89,3 %; autori sami žiadajú externú validáciu.</td>
     </tr>
     <tr>
       <th scope="row">Predchádzajúca edukácia je spojená s ťažším svrbením</th>
@@ -189,7 +189,7 @@ $articles[] = [
     <tr>
       <th scope="row">Takmer polovica liečených nemá zo svojej liečby účinok</th>
       <td>Potvrdené</td>
-      <td>100 z 212 užívateľov liekov; najčastejšie sa podávajú antihistaminiká, ktoré pri uremickom prurite nemajú patofyziologické opodstatnenie.</td>
+      <td>100 z 212 užívateľov <strong>akejkoľvek</strong> antipruritickej liečby — údaj sa nevzťahuje osobitne na antihistaminiká. Tie sú len najčastejšie predpisovanou skupinou (143 z 294) a pri uremickom prurite nemajú patofyziologické opodstatnenie; štúdia však ich samostatnú účinnosť nehodnotila.</td>
     </tr>
     <tr>
       <th scope="row">Štúdia hodnotí modernú liečbu (difelikefalín, gabapentinoidy, fototerapiu)</th>
@@ -217,7 +217,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>Zo štúdie si netreba odniesť číslo, ale mechanizmus. Prevalencia symptómu závisí od nástroja a prahu, takže rozdiel medzi 16 a 40 % nie je sporom o pacientov, ale o meraní. Klinicky použiteľné zistenie je iné a nemenej dôležité: <strong>pacienti o svrbení nehovoria, dostávajú liečbu, ktorá im v polovici prípadov nepomáha, a s oboma vecami vieme niečo urobiť hneď.</strong></p>
+<p>Zo štúdie si netreba odniesť číslo, ale mechanizmus. Prevalencia symptómu závisí od nástroja a prahu, takže rozdiel medzi 16 a 40 % je do veľkej miery sporom o meraní. Pripísať ho <em>výlučne</em> nástroju by však bolo predčasné: nijaká z týchto prác neporovnávala škály head-to-head v tej istej kohorte, takže skutočné rozdiely medzi populáciami (skladba pacientov, ročné obdobie, dialyzačná prax, komorbidity) sa vylúčiť nedajú. Klinicky použiteľné zistenie je iné a nemenej dôležité: <strong>pacienti o svrbení nehovoria, dostávajú liečbu, ktorá im v polovici prípadov nepomáha, a s oboma vecami vieme niečo urobiť hneď.</strong></p>
 
 <h2>Súvisiace články</h2>
 
@@ -235,7 +235,7 @@ $articles[] = [
 
 <p><small><em><strong>Zdroj použitých hraníc závažnosti:</strong> Lai JW, Chen HC, Chou CY, Yen HR, Li TC, Sun MF, Chang HH, Huang CC, Tsai FJ, Tschen J, Chang CT. Transformation of 5-D itch scale and numerical rating scale in chronic hemodialysis patients. <em>BMC Nephrology</em>. 2017;18(1):56. doi: 10.1186/s12882-017-0475-z. <a href="https://pubmed.ncbi.nlm.nih.gov/28178931/" target="_blank" rel="noopener noreferrer">PubMed</a>.</em></small></p>
 
-<p><small><em><strong>Porovnávacia prevalencia:</strong> Lanot A, Bataille S, Rostoker G, Bataille P, Chauveau P, Touzot M, Misery L. Moderate-to-severe pruritus in untreated or non-responsive hemodialysis patients: results of the French prospective multicenter observational study Prurit-HD. <em>Clinical Kidney Journal</em>. 2023;16(7):1102–1112. doi: 10.1093/ckj/sfad032. <a href="https://pubmed.ncbi.nlm.nih.gov/37398693/" target="_blank" rel="noopener noreferrer">PubMed</a>.</em></small></p>
+<p><small><em><strong>Porovnávacia prevalencia:</strong> Lanot A, Bataille S, Rostoker G, Bataille P, Chauveau P, Touzot M, Misery L. Moderate-to-severe pruritus in untreated or non-responsive hemodialysis patients: results of the French prospective multicenter observational study Pruripreva. <em>Clinical Kidney Journal</em>. 2023;16(7):1102–1112. doi: 10.1093/ckj/sfad032. <a href="https://pubmed.ncbi.nlm.nih.gov/37398693/" target="_blank" rel="noopener noreferrer">PubMed</a>.</em></small></p>
 
 <p><small><em><strong>Súčasný prehľad diagnostiky a liečby:</strong> Latus J, Lanot A, Ständer S, Sanchez-Alvarez E, Aucella F, Yosipovitch G. CKD-associated pruritus in haemodialysis: a road map for diagnosis and treatment. <em>Clinical Kidney Journal</em>. 2025;18(5):sfaf096. doi: 10.1093/ckj/sfaf096. <a href="https://doi.org/10.1093/ckj/sfaf096" target="_blank" rel="noopener noreferrer">Plný text</a>.</em></small></p>
 

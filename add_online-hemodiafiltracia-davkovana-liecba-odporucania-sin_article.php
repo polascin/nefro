@@ -70,7 +70,7 @@ $articles[] = [
       <th scope="row">Metaanalýza individuálnych údajov (2024)</th>
       <td>5 štúdií, 4 153 pacientov</td>
       <td>HR 0,84 (95 % IS 0,74–0,95)</td>
-      <td>Úmrtnosť 23,3 % oproti 27,0 %. <strong>Stupňovitý vzťah medzi konvektívnym objemom a rizikom úmrtia</strong>; bez rozdielu účinku medzi podskupinami.</td>
+      <td>Úmrtnosť 23,3 % oproti 27,0 %. <strong>Stupňovitý vzťah medzi konvektívnym objemom a rizikom úmrtia</strong>; v podskupinách sa nepreukázala heterogenita účinku.</td>
     </tr>
     <tr>
       <th scope="row">Odporúčania (2026)</th>
@@ -88,7 +88,7 @@ $articles[] = [
 
 <p>Kľúčovým zistením metaanalýzy individuálnych údajov nie je samotný pomer rizík, ale <strong>tvar vzťahu</strong>: s rastúcim konvektívnym objemom riziko úmrtia klesá plynulo. Zároveň sa nenašiel rozdiel účinku podľa veku, pohlavia, diabetu, trvania dialýzy ani ďalších vopred určených charakteristík.</p>
 
-<p>To má dva praktické dôsledky. Prvý: prepnutie prístroja do režimu HDF bez dosiahnutia potrebného objemu neprinesie očakávaný prínos, hoci v dokumentácii bude modalita zapísaná ako hemodiafiltrácia. Druhý: neexistuje podskupina, ktorú by bolo možné vopred vylúčiť ako „nevhodnú“ – rozhodujúce je, či sa u konkrétneho pacienta dá dávka technicky dodať.</p>
+<p>To má dva praktické dôsledky. Prvý: prepnutie prístroja do režimu HDF bez dosiahnutia potrebného objemu neprinesie očakávaný prínos, hoci v dokumentácii bude modalita zapísaná ako hemodiafiltrácia. Druhý: v skúšaní sa nepreukázala heterogenita účinku medzi podskupinami — to však nie je dôkaz, že nevhodná podskupina neexistuje. CONVINCE totiž zaraďovala <strong>iba pacientov, ktorí boli považovaní za kandidátov na konvekčný objem ≥ 23 l na sedenie</strong>. Tí, u ktorých sa taká dávka dodať nedá, teda v skúšaní vôbec neboli a jeho výsledky o nich nič nehovoria. Rozhodujúce preto zostáva, či sa u konkrétneho pacienta dá dávka technicky dodať.</p>
 
 <h2>Čo obmedzuje dosiahnutý konvektívny objem</h2>
 

@@ -108,7 +108,7 @@ $articles[] = [
   <li>vek, pohlavie ani podiel sekundárnej membranóznej nefropatie.</li>
 </ul>
 
-<p>Plný text je za platobnou stenou a nemá otvorenú verziu, takže autorské limity nemožno citovať. Výhrady uvedené v tomto texte sú preto odvodené z dizajnu opísaného v abstrakte, nie prevzaté od autorov. Označenie „multicentrická“ je navyše mierne nadnesené: podľa afiliácií ide o dve bostonské nemocnice jedného zdravotníckeho systému, prevažne o terciárne centrum pre vaskulitídy a glomerulonefritídy.</p>
+<p>Plný text je za platobnou stenou a nemá otvorenú verziu, takže autorské limity nemožno citovať. Výhrady uvedené v tomto texte sú preto odvodené z dizajnu opísaného v abstrakte, nie prevzaté od autorov. Označenie „multicentrická“ je podľa afiliácií správne — ide o dve pracoviská. Podstatné však je, že obe patria do jedného bostonského zdravotníckeho systému a ide prevažne o terciárne centrum pre vaskulitídy a glomerulonefritídy, takže závery treba obmedziť na takto vyberanú populáciu, nie na multicentrickosť ako takú.</p>
 
 <h2>Vecná kontrola tvrdení</h2>
 
@@ -149,8 +149,8 @@ $articles[] = [
     </tr>
     <tr>
       <th scope="row">Ide o multicentrickú štúdiu</th>
-      <td>Nepresné</td>
-      <td>Podľa afiliácií dve nemocnice jedného bostonského systému, prevažne terciárne referenčné pracovisko.</td>
+      <td>Potvrdené</td>
+      <td>Práca sa sama označuje za multicentrickú a podľa afiliácií zahŕňa dve pracoviská (Massachusetts General Hospital a Brigham and Women’s Hospital). Označenie teda spochybniť nemožno; obmedzená je <strong>generalizácia</strong> — obe centrá sú v jednom bostonskom systéme a ide prevažne o terciárne referenčné pracovisko pre vaskulitídy a glomerulonefritídy.</td>
     </tr>
     <tr>
       <th scope="row">Aktivita ochorenia môže súvisieť s trombogenézou</th>
