@@ -2247,6 +2247,17 @@ input:disabled + .slider:before {
     color: #86efac;
 }
 
+.alert-info {
+    background-color: #eff6ff;
+    border-left-color: #2563eb;
+    color: #1e40af;
+}
+
+[data-theme="dark"] .alert-info {
+    background-color: rgba(37, 99, 235, 0.2);
+    color: #93c5fd;
+}
+
 .auth-links {
     text-align: center;
     margin-top: 1.5rem;
