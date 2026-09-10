@@ -43,8 +43,20 @@ function escapeEmailHtml(string $text): string {
     return htmlspecialchars($text, ENT_QUOTES | ENT_HTML5, 'UTF-8');
 }
 
-function renderEmailHtmlLayout(string $contentHtml, string $actionLabel = '', string $actionUrl = '', string $extraFooterHtml = ''): string {
+function renderEmailHtmlLayout(string $contentHtml, string $actionLabel = '', string $actionUrl = '', string $extraFooterHtml = '', bool $plain = false): string {
     $brand = EMAIL_BRAND_NAME;
+    // Režim `$plain` je pre e-maily, ktoré plnia právnu povinnosť a nesmú pôsobiť
+    // ako obchodná komunikácia. Vypúšťa dve veci: výzvu „Navštívte web“ (v oznámení
+    // podľa čl. 14 GDPR by to bola presne tá výzva na kontakt, ktorá z informácie robí
+    // marketing) a vetu „Ak tento e-mail nevyžadujete, ignorujte ho.“ (tá si s právnym
+    // oznámením protirečí — ignorovať sa nemá, práve naopak). Identifikácia odosielateľa
+    // v pätičke zostáva, tú vyžaduje § 116 zákona č. 452/2021 Z. z.
+    $ignoreNote = $plain
+        ? ''
+        : '<p style="margin:28px 0 0;color:#6b7280;font-size:13px;line-height:20px;">Ak tento e-mail nevyžadujete, ignorujte ho.</p>';
+    $footerIdentity = $plain
+        ? escapeEmailHtml($brand) . ' • ' . escapeEmailHtml(getAppBaseUrl())
+        : 'Nefro-projekt Slovensko • <a href="' . escapeEmailHtml(getAppBaseUrl()) . '" style="color:#64748b;text-decoration:underline;">Navštívte web</a>';
     $buttonHtml = '';
     if ($actionLabel !== '' && $actionUrl !== '') {
         $buttonHtml = '<p style="text-align:center;margin:28px 0 0;">'
@@ -59,11 +71,10 @@ function renderEmailHtmlLayout(string $contentHtml, string $actionLabel = '', st
         . '<tr><td style="background:#0055a5;padding:30px;text-align:center;color:#ffffff;font-size:22px;font-weight:700;">'
         . escapeEmailHtml($brand) . '</td></tr>'
         . '<tr><td style="padding:30px;">' . $contentHtml . $buttonHtml
-        . '<p style="margin:28px 0 0;color:#6b7280;font-size:13px;line-height:20px;">Ak tento e-mail nevyžadujete, ignorujte ho.</p>'
+        . $ignoreNote
         . '</td></tr>'
         . '<tr><td style="background:#f3f4f6;padding:18px 30px 22px 30px;color:#64748b;font-size:13px;line-height:20px;text-align:center;">'
-        . $extraFooterHtml
-        . 'Nefro-projekt Slovensko • <a href="' . escapeEmailHtml(getAppBaseUrl()) . '" style="color:#64748b;text-decoration:underline;">Navštívte web</a>'
+        . $extraFooterHtml . $footerIdentity
         . '</td></tr></table></td></tr></table></body></html>';
 }
 

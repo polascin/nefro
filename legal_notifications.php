@@ -204,9 +204,9 @@ if (!function_exists('legalNoticeDisplayName')) {
 
 if (!function_exists('legalNoticeSendOne')) {
     /** Odošle jeden e-mail (SMTP + fallback @mail). Vráti true pri úspechu. */
-    function legalNoticeSendOne(string $email, string $subject, string $bodyHtml): bool
+    function legalNoticeSendOne(string $email, string $subject, string $bodyHtml, bool $plain = false): bool
     {
-        $message = renderEmailHtmlLayout($bodyHtml);
+        $message = renderEmailHtmlLayout($bodyHtml, '', '', '', $plain);
         $cfg = getEmailEnvConfig();
         $sent = sendViaSmtp($email, $subject, $message, $cfg, 'text/html; charset=UTF-8');
         if ($sent) {

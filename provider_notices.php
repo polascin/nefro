@@ -126,8 +126,13 @@ if (!function_exists('providerNoticeDescribeSource')) {
         $date = preg_match('/(\d{4}-\d{2}-\d{2})/', $source, $m) === 1 ? $m[1] : '';
 
         if (stripos($source, 'e-VÚC') !== false || stripos($source, 'e-VUC') !== false) {
-            return 'Verejne dostupný register poskytovateľov zdravotnej starostlivosti e-VÚC'
-                . ($date !== '' ? ', stav k ' . $date : '') . '.';
+            // Zámerne kategória zdrojov, nie „stav registra k dátumu“. Poznámka v dátach
+            // odkazuje na zostavený pracovný dokument, ktorý z e-VÚC vychádza, ale nie je
+            // jeho snímkou; tvrdiť konkrétny stav registra by bolo viac, než vieme doložiť.
+            return 'Verejne dostupné profesijné zdroje'
+                . ($date !== '' ? ', zhromaždené k ' . $date : '')
+                . ': register poskytovateľov zdravotnej starostlivosti e-VÚC, webové stránky '
+                . 'zdravotníckych zariadení a verejné katalógy poskytovateľov.';
         }
 
         // Zvyšné záznamy pochádzajú z webu samotného zariadenia; v poznámke je doména.
@@ -188,9 +193,12 @@ Kontakt vo veciach ochrany údajov: <a href="mailto:{$contact}">{$contact}</a></
 <p>{$sourceText}</p>
 
 <h3>Aké údaje evidujeme</h3>
-<p>Názov zariadenia, typ a odbornosť, adresa, telefón, e-mail, webová stránka, IČO
-a prípadná pracovná poznámka. <strong>Neevidujeme žiadne údaje pacientov</strong>
-a údaje nepoužívame na profilovanie ani automatizované rozhodovanie.</p>
+<p>Názov zariadenia, typ a odbornosť, lokalitu a adresu, telefón, e-mail, webovú stránku,
+IČO, meno kontaktnej osoby (ak bolo uvedené vo verejnom zdroji) a prípadnú pracovnú
+poznámku. Ku každému záznamu si ďalej vedieme internú evidenciu vlastnej komunikácie:
+stav a dátum oslovenia, interné poradie dôležitosti a stav odoslania tohto oznámenia.
+<strong>Neevidujeme žiadne údaje pacientov</strong> a údaje nepoužívame na profilovanie
+ani na automatizované rozhodovanie.</p>
 
 <h3>Na aký účel a na akom právnom základe</h3>
 <p>Účelom je vedenie prehľadu nefrologických a súvisiacich pracovísk na Slovensku
@@ -206,11 +214,15 @@ Sú uložené na hostingu poskytovateľa WebSupport, s. r. o., ktorý pre nás v
 ako sprostredkovateľ.</p>
 
 <h3>Ako dlho ich uchovávame</h3>
-<p>Kým trvá uvedený účel, alebo do vašej námietky — podľa toho, čo nastane skôr.</p>
+<p>Záznam vedieme, kým adresár používame na uvedený účel a kým zariadenie v odbore
+pôsobí. Pri revízii adresára vymažeme záznamy, pri ktorých k odbornej spolupráci
+nedošlo, aj tie, pri ktorých zistíme, že zariadenie už nepôsobí alebo že kontaktný
+údaj nie je platný. Ak namietnete, vymažeme záznam bez zbytočného odkladu bez ohľadu
+na uvedené.</p>
 
 <h3>Vaše práva</h3>
-<p>Máte právo na prístup k údajom, na ich opravu, výmaz, obmedzenie spracúvania,
-na prenosnosť a právo namietať. Máte tiež právo podať sťažnosť dozornému úradu:
+<p>Máte právo na prístup k údajom, na ich opravu, výmaz, obmedzenie spracúvania
+a právo namietať. Máte tiež právo podať sťažnosť dozornému úradu:
 <a href="{$authorityUrl}">{$authority}</a>. Ktorékoľvek z týchto práv môžete uplatniť
 odpoveďou na tento e-mail alebo na adrese <a href="mailto:{$contact}">{$contact}</a>.</p>
 
@@ -222,6 +234,10 @@ odkladu vymažeme a znova vás neoslovíme. Stačí kliknúť:</p>
 <p><a href="{$objection}">Namietam — vymažte môj záznam z adresára</a></p>
 
 <p>Rovnaký účinok má aj obyčajná odpoveď na tento e-mail so slovom „namietam“.</p>
+
+<p>Aby sa ten istý kontakt nedostal do adresára znova pri jeho ďalšej aktualizácii,
+ponecháme si po výmaze jedinú vec — nezvratný odtlačok (hash) vašej e-mailovej adresy,
+nie adresu samotnú. Slúži výhradne na to, aby sme vás znova neoslovili.</p>
 HTML;
     }
 }
@@ -415,7 +431,9 @@ if (!function_exists('processProviderNoticeQueue')) {
 
             $ok = false;
             try {
-                $ok = legalNoticeSendOne($email, $subject, $bodyHtml);
+                // `true` = režim bez výzvy „Navštívte web“ a bez vety „ignorujte ho“;
+                // pozri renderEmailHtmlLayout().
+                $ok = legalNoticeSendOne($email, $subject, $bodyHtml, true);
             } catch (Throwable $e) {
                 $ok = false;
                 $error = $e->getMessage();
