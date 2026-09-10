@@ -105,6 +105,42 @@ if (!function_exists('verifyProviderObjectionSignature')) {
     }
 }
 
+if (!function_exists('providerNoticeDescribeSource')) {
+    /**
+     * Prevedie internú poznámku o zdroji na vetu zrozumiteľnú adresátovi.
+     *
+     * V `partner_providers.source` je pracovný zápis („master dokument (Littlebird)
+     * / e-VÚC, 2026-06-30“), ktorý mimo projektu nikomu nič nepovie. Čl. 14 ods. 2
+     * písm. f) však žiada uviesť zdroj tak, aby mu dotknutá osoba rozumela — ide
+     * o to, aby vedela, kde sa jej údaje vzali, nie o presný názov nášho súboru.
+     * Prekladáme preto na kategóriu zdroja a dátum ponechávame, ak je v zápise.
+     */
+    function providerNoticeDescribeSource(string $source): string
+    {
+        $source = trim($source);
+        if ($source === '') {
+            return 'Verejne dostupné profesijné zdroje — register poskytovateľov zdravotnej '
+                . 'starostlivosti e-VÚC a webové stránky zdravotníckych zariadení.';
+        }
+
+        $date = preg_match('/(\d{4}-\d{2}-\d{2})/', $source, $m) === 1 ? $m[1] : '';
+
+        if (stripos($source, 'e-VÚC') !== false || stripos($source, 'e-VUC') !== false) {
+            return 'Verejne dostupný register poskytovateľov zdravotnej starostlivosti e-VÚC'
+                . ($date !== '' ? ', stav k ' . $date : '') . '.';
+        }
+
+        // Zvyšné záznamy pochádzajú z webu samotného zariadenia; v poznámke je doména.
+        if (preg_match('/([a-z0-9-]+\.[a-z]{2,})/i', $source, $m) === 1) {
+            return 'Verejne dostupná webová stránka zariadenia (' . $m[1] . ')'
+                . ($date !== '' ? ', stav k ' . $date : '') . '.';
+        }
+
+        return 'Verejne dostupné profesijné zdroje — register poskytovateľov zdravotnej '
+            . 'starostlivosti e-VÚC a webové stránky zdravotníckych zariadení.';
+    }
+}
+
 if (!function_exists('buildProviderNoticeEmailHtml')) {
     /**
      * Telo oznámenia podľa čl. 14 GDPR.
@@ -122,13 +158,8 @@ if (!function_exists('buildProviderNoticeEmailHtml')) {
         $info = legalInfo();
         $e    = static fn(?string $s): string => htmlspecialchars((string) $s, ENT_QUOTES, 'UTF-8');
 
-        $name   = $e($provider['name']);
-        $source = trim((string) ($provider['source'] ?? ''));
-        // Zdroj sa v adresári eviduje pri každom zázname; ak by chýbal, uvedieme
-        // pravdivo aspoň kategóriu zdrojov, nie vymyslenú konkrétnu položku.
-        $sourceText = $source !== ''
-            ? $e($source)
-            : 'verejne dostupné profesijné zdroje (register poskytovateľov e-VÚC, webové stránky zdravotníckych zariadení)';
+        $name       = $e($provider['name']);
+        $sourceText = $e(providerNoticeDescribeSource((string) ($provider['source'] ?? '')));
 
         $operator = $e($info['operator']);
         $companyId = $e($info['companyId']);
@@ -166,8 +197,8 @@ a údaje nepoužívame na profilovanie ani automatizované rozhodovanie.</p>
 a prípadné oslovenie vo veci odbornej spolupráce. Právnym základom je
 <strong>oprávnený záujem</strong> podľa čl. 6 ods. 1 písm. f) GDPR — konkrétne záujem
 udržiavať aktuálny prehľad pracovísk v odbore a nadviazať odbornú spoluprácu.
-Ide o profesijné kontaktné údaje, ktoré ste sami zverejnili na profesijné účely,
-takže zásah do súkromia je minimálny.</p>
+Ide o profesijné kontaktné údaje zverejnené na profesijné účely, nie o údaje
+súkromnej povahy, takže zásah do súkromia je minimálny.</p>
 
 <h3>Komu údaje poskytujeme</h3>
 <p>Nikomu. Údaje neposkytujeme tretím stranám ani ich neprenášame mimo Európskej únie.
