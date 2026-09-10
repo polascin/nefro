@@ -68,11 +68,15 @@ function legalDataCategories(): array
         ],
         [
             'category' => 'Klinické výsledky kalkulačiek',
-            'examples' => 'Výsledky výpočtov uložené na žiadosť lekára spolu s pacientskymi identifikátormi (meno, dátum narodenia, rodné číslo, kód poisťovne) — vkladá ich výhradne prihlásený lekár. Ide o údaje o zdraví (osobitná kategória podľa čl. 9 GDPR).',
+            'examples' => 'Výsledky výpočtov uložené na žiadosť lekára spolu s pacientskymi identifikátormi (meno, dátum narodenia, rodné číslo, kód poisťovne) — vkladá ich výhradne prihlásený lekár. Ide o údaje o zdraví (osobitná kategória podľa čl. 9 GDPR). Záznam vymaže ten, kto ho zadal, priamo vo svojom konte; na žiadosť používateľa ho vymaže prevádzkovateľ. Všetky záznamy sa odstránia aj pri zrušení konta.',
         ],
         [
             'category' => 'Lokálna história kalkulačiek pre neprihlásených',
             'examples' => 'Po udelení preferenčného súhlasu môže prehliadač lokálne uchovať najviac 50 zobrazených výsledkov. Formulárové vstupy ani identifikátory pacienta sa neukladajú a údaje sa neodosielajú na server.',
+        ],
+        [
+            'category' => 'Kontakty spolupracujúcich poskytovateľov',
+            'examples' => 'Interný pracovný adresár zdravotníckych zariadení a ambulancií (názov, typ, odbornosť, adresa, telefón, e-mail, web, IČO, kontaktná osoba, poznámka). Nejde o údaje pacientov. Kontakty pochádzajú z verejne dostupných profesijných zdrojov — registra poskytovateľov e-VÚC a webových stránok zdravotníckych zariadení — a pri každom zázname evidujeme jeho zdroj. Dotknuté osoby informujeme e-mailom podľa čl. 14 GDPR pri prvom oslovení.',
         ],
         [
             'category' => 'Komunikácia',
@@ -104,6 +108,10 @@ function legalProcessingPurposes(): array
         [
             'purpose' => 'Overenie e-mailovej adresy a telefónneho čísla',
             'basis'   => 'Zmluva — čl. 6 ods. 1 písm. b); oprávnený záujem na bezpečnosti — písm. f)',
+        ],
+        [
+            'purpose' => 'Vedenie interného adresára zdravotníckych zariadení a oslovenie ohľadom odbornej spolupráce',
+            'basis'   => 'Oprávnený záujem — čl. 6 ods. 1 písm. f). Ide o profesijné kontaktné údaje z verejne dostupných zdrojov, nie o údaje pacientov. Dotknutú osobu informujeme e-mailom podľa čl. 14 pri prvom oslovení; údaje spracúvame, kým trvá účel oslovenia, a na námietku podľa čl. 21 ich bez zbytočného odkladu vymažeme.',
         ],
         [
             'purpose' => 'Bezpečnosť služby: rate-limiting, prevencia zneužitia a podvodov, audit',
