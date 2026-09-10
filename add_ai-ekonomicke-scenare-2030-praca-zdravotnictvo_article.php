@@ -25,7 +25,7 @@ $articles[] = [
     'content'      => <<<'HTML'
 <p>Ako veľmi zmení umelá inteligencia ekonomiku do roku 2030 a čo to znamená pre ľudí, ktorí v nej pracujú? Pracovný dokument <em>Economic Scenarios for Transformative AI</em> ponúka na túto otázku netradičnú odpoveď: namiesto jednej predpovede stavia jednoduchý model, ktorý prevádza malý počet predpokladov o vývoji umelej inteligencie na dôsledky pre produktivitu, rast, mzdy, podiel práce na príjmoch, presuny pracovných miest a nezamestnanosť.</p>
 
-<p>Autori svoj zámer formulujú jednoznačne: <strong>„Scenáre nie sú predpovede a nepripisujeme im pravdepodobnosti; ich účelom je urobiť dôsledky rôznych predpokladov porovnateľnými."</strong> Model je sprístupnený aj ako interaktívny prehliadač scenárov.</p>
+<p>Autori svoj zámer formulujú jednoznačne: <strong>„Scenáre nie sú predpovede a nepripisujeme im pravdepodobnosti; ich účelom je urobiť dôsledky rôznych predpokladov porovnateľnými.“</strong> Model je sprístupnený aj ako interaktívny prehliadač scenárov.</p>
 
 <h3>Poznámka k pôvodu zdroja</h3>
 
@@ -109,7 +109,7 @@ $articles[] = [
 
 <h2>Prekvapivé zistenie: inovačný kanál je malý</h2>
 
-<p>Za pozornosť stojí nález, ktorý ide proti častému očakávaniu. Ak umelá inteligencia zrýchli samotný výskum, mala by ekonomiku poháňať aj týmto druhým kanálom. Podľa modelu je však toto zrýchlenie <strong>relatívne malé aj v extrémnom scenári</strong>: produktivita práce cez inovačný kanál rastie „výrazne menej než o jedno percento" vo všetkých troch scenároch.</p>
+<p>Za pozornosť stojí nález, ktorý ide proti častému očakávaniu. Ak umelá inteligencia zrýchli samotný výskum, mala by ekonomiku poháňať aj týmto druhým kanálom. Podľa modelu je však toto zrýchlenie <strong>relatívne malé aj v extrémnom scenári</strong>: produktivita práce cez inovačný kanál rastie „výrazne menej než o jedno percento“ vo všetkých troch scenároch.</p>
 
 <p>Dôvodom je, že automatizácia výskumu síce zvyšuje množstvo vstupov do tvorby nových poznatkov, výskum však zostáva limitovaný fyzickými úlohami. Autori zároveň priznávajú, že model neobsahuje niektoré dôležité spätné väzby medzi výskumom a automatizáciou, a preto nedokáže vygenerovať scenáre explozívneho zrýchlenia. Inovačné efekty v modeli sú teda skôr <strong>dolným odhadom</strong>.</p>
 
@@ -140,7 +140,7 @@ $articles[] = [
 
 <h2>Obmedzenia, ktoré autori priznávajú</h2>
 
-<p>Výsledky modelu nemožno oddeliť od predpokladov, z ktorých vychádza. Autori sami uvádzajú, že model je „výrazným zjednodušením zložitej reality" a vynecháva:</p>
+<p>Výsledky modelu nemožno oddeliť od predpokladov, z ktorých vychádza. Autori sami uvádzajú, že model je „výrazným zjednodušením zložitej reality“ a vynecháva:</p>
 
 <ol>
   <li><strong>Jednotlivých pracovníkov.</strong> Model nesleduje osobné náklady straty zamestnania, dĺžku rekvalifikácie, regionálne rozdiely ani sociálne dôsledky nútenej zmeny povolania.</li>
@@ -203,7 +203,7 @@ $articles[] = [
 
 <ol>
   <li><small><em>Korinek A, Jones CI, Sacher S, Cotter T, McCrory P. Economic Scenarios for Transformative AI. The Anthropic Institute Working Paper No. 2026-02, september 2026. <a href="https://www-cdn.anthropic.com/files/4zrzovbb/website/cf58f84d46a4a76bf5a5b039ac695fba6b80041c.pdf" target="_blank" rel="noopener noreferrer">plný text (PDF)</a>. Hlavný spracovaný zdroj; nerecenzovaný pracovný dokument.</em></small></li>
-  <li><small><em>Scenarios for our Economic Future — interaktívny prehliadač scenárov. The Anthropic Institute. <a href="https://www.anthropic.com/institute/econ-scenarios" target="_blank" rel="noopener noreferrer">anthropic.com</a>. Zdroj číselných hodnôt HDP a podielu práce. Na stránke je druhý autor uvedený ako „Chad Jones", v pracovnom dokumente ako „Charles I. Jones" — ide o tú istú osobu.</em></small></li>
+  <li><small><em>Scenarios for our Economic Future — interaktívny prehliadač scenárov. The Anthropic Institute. <a href="https://www.anthropic.com/institute/econ-scenarios" target="_blank" rel="noopener noreferrer">anthropic.com</a>. Zdroj číselných hodnôt HDP a podielu práce. Na stránke je druhý autor uvedený ako „Chad Jones“, v pracovnom dokumente ako „Charles I. Jones“ — ide o tú istú osobu.</em></small></li>
   <li><small><em>Acemoglu D. The Simple Macroeconomics of AI. NBER Working Paper No. 32487, máj 2024; publikované v Economic Policy. 2025;40(121):13–58. <a href="https://www.nber.org/papers/w32487" target="_blank" rel="noopener noreferrer">NBER</a>. Zdroj jedného z konzervatívnejších odhadov, s ktorým autori porovnávajú mierny scenár.</em></small></li>
   <li><small><em>Acemoglu D, Restrepo P. Artificial Intelligence, Automation and Work. NBER Working Paper No. 24196, január 2018. <a href="https://www.nber.org/papers/w24196" target="_blank" rel="noopener noreferrer">NBER</a>. Rámec vytláčacieho a produktivitného efektu, z ktorého vychádzajú modely založené na úlohách.</em></small></li>
   <li><small><em>Eloundou T, Manning S, Mishkin P, Rock D. GPTs are GPTs: An Early Look at the Labor Market Impact Potential of Large Language Models. arXiv:2303.10130, 17. marca 2023. <a href="https://arxiv.org/abs/2303.10130" target="_blank" rel="noopener noreferrer">arXiv</a>. Práca o expozícii povolaní voči veľkým jazykovým modelom.</em></small></li>
