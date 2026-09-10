@@ -323,13 +323,30 @@ if (!function_exists('processProviderNoticeQueue')) {
     /**
      * Odošle frontu oznámení.
      *
-     * @param bool $dryRun neodosiela ani nemení stav; len vypíše, čo by sa stalo
+     * @param bool   $dryRun neodosiela ani nemení stav; len vypíše, čo by sa stalo
+     * @param string $only   ak je uvedená, spracuje sa výhradne táto e-mailová adresa
      * @return array{selected:int,sent:int,failed:int,skipped:int}
      */
-    function processProviderNoticeQueue(PDO $pdo, int $limit = 25, int $maxAttempts = 5, bool $dryRun = true): array
-    {
+    function processProviderNoticeQueue(
+        PDO $pdo,
+        int $limit = 25,
+        int $maxAttempts = 5,
+        bool $dryRun = true,
+        string $only = ''
+    ): array {
         $version = PROVIDER_NOTICE_VERSION;
         $stats   = ['selected' => 0, 'sent' => 0, 'failed' => 0, 'skipped' => 0];
+
+        // Cielenie na jednu adresu existuje kvôli prvému ostrému kusu: bez neho by
+        // `--limit=1` poslal tomu, kto je vo fronte prvý podľa id, nie tomu, koho
+        // si odosielateľ vybral na skúšku.
+        $only   = providerNoticeNormalizeEmail($only);
+        $params = [':v' => $version];
+        $filter = '';
+        if ($only !== '') {
+            $filter            = ' AND LOWER(q.email) = :only';
+            $params[':only']   = $only;
+        }
 
         $select = $pdo->prepare(
             "SELECT q.id, q.provider_id, q.email, q.attempts, p.name, p.source
@@ -338,10 +355,11 @@ if (!function_exists('processProviderNoticeQueue')) {
               WHERE q.notice_version = :v
                 AND q.status = 'pending'
                 AND q.next_attempt_at <= NOW()
+                {$filter}
               ORDER BY q.id
               LIMIT {$limit}"
         );
-        $select->execute([':v' => $version]);
+        $select->execute($params);
         $items = $select->fetchAll(PDO::FETCH_ASSOC);
 
         $stats['selected'] = count($items);

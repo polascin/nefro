@@ -19,11 +19,13 @@ declare(strict_types=1);
  * Použitie:
  *   php provider_notice_worker.php                  # nasucho — vypíše, čo by sa stalo
  *   php provider_notice_worker.php --status         # len prehľad stavu
- *   php provider_notice_worker.php --send --limit=5 # skutočné odoslanie, prvých 5
- *   php provider_notice_worker.php --send           # skutočné odoslanie, dávka 25
+ *   php provider_notice_worker.php --send --only=a@b.sk  # jediná konkrétna adresa
+ *   php provider_notice_worker.php --send --limit=5      # skutočné odoslanie, prvých 5
+ *   php provider_notice_worker.php --send                # skutočné odoslanie, dávka 25
  *
- * Odporúčaný postup: najprv `--status`, potom beh nasucho, potom `--send --limit=1`
- * na vlastnú adresu pridanú do adresára, a až potom celá dávka.
+ * Odporúčaný postup: najprv `--status`, potom beh nasucho, potom `--send --only=`
+ * na vlastnú adresu, a až potom celá dávka. `--only` je dôležité: bez neho by
+ * `--limit=1` poslal tomu, kto je vo fronte prvý, nie tomu, koho si vyberieš.
  */
 
 if (php_sapi_name() !== 'cli') {
@@ -40,6 +42,7 @@ $maxAttempts = 5;
 $send        = false;
 $statusOnly  = false;
 $enqueueOnly = false;
+$only        = '';
 
 $arguments = isset($_SERVER['argv']) && is_array($_SERVER['argv']) ? $_SERVER['argv'] : [];
 foreach ($arguments as $arg) {
@@ -53,7 +56,14 @@ foreach ($arguments as $arg) {
         $statusOnly = true;
     } elseif ($arg === '--enqueue-only') {
         $enqueueOnly = true;
+    } elseif (preg_match('/^--only=(.+)$/', (string) $arg, $m)) {
+        $only = trim($m[1]);
     }
+}
+
+if ($only !== '' && filter_var($only, FILTER_VALIDATE_EMAIL) === false) {
+    fwrite(STDERR, "Neplatná adresa v --only: {$only}\n");
+    exit(2);
 }
 
 // Horná hranica dávky je nízka zámerne. Pri 35 schránkach nie je dôvod posielať
@@ -123,11 +133,19 @@ try {
         exit(0);
     }
 
+    if ($only !== '') {
+        echo "Obmedzené na jedinú adresu: {$only}\n";
+    }
     if (!$send) {
         echo "\n--- BEH NASUCHO (bez --send sa nič neodosiela) ---\n";
     }
 
-    $stats = processProviderNoticeQueue($pdo, $limit, $maxAttempts, !$send);
+    $stats = processProviderNoticeQueue($pdo, $limit, $maxAttempts, !$send, $only);
+
+    if ($only !== '' && $stats['selected'] === 0) {
+        echo "Pre túto adresu nie je vo fronte nič čakajúce "
+            . "(už odoslané, alebo nie je medzi kandidátmi).\n";
+    }
 
     echo "\nVybraných z fronty: {$stats['selected']}";
     if ($send) {
