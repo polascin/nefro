@@ -31,7 +31,7 @@ function legalInfo(): array
 {
     return [
         'entity'                   => 'Nefro-projekt Slovensko',
-        'operator'                 => 'MUDr. Ľubomír Polaščín',
+        'operator'                 => 'MUDr. Ľubomír Polaščín - Nephroctor',
         'companyId'                => '57 646 856',
         'site'                     => 'nefro.polascin.net',
         'url'                      => 'https://nefro.polascin.net',
@@ -99,7 +99,7 @@ function legalProcessingPurposes(): array
         ],
         [
             'purpose' => 'Ukladanie a zobrazovanie výsledkov klinických kalkulačiek na žiadosť lekára',
-            'basis'   => 'Zmluva — čl. 6 ods. 1 písm. b); pri údajoch o zdraví navyše čl. 9 ods. 2 písm. h) (zdravotná starostlivosť), resp. výslovný súhlas písm. a)',
+            'basis'   => 'Zmluva — čl. 6 ods. 1 písm. b); pri údajoch o zdraví navyše čl. 9 ods. 2 písm. h) (zdravotná starostlivosť), resp. výslovný súhlas písm. a). Pri týchto údajoch vystupuje prevádzkovateľ v postavení prevádzkovateľa (nie sprostredkovateľa ambulancie), pretože sám určuje účely a prostriedky ich spracúvania; sprostredkovateľská zmluva podľa čl. 28 sa preto neuzatvára.',
         ],
         [
             'purpose' => 'Zasielanie newslettera a notifikácií o nových článkoch',
