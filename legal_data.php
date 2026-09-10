@@ -40,8 +40,8 @@ function legalInfo(): array
         'jurisdiction'             => 'Slovenskej republiky (EÚ)',
         'supervisoryAuthority'     => 'Úrad na ochranu osobných údajov Slovenskej republiky',
         'supervisoryAuthorityUrl'  => 'https://dataprotection.gov.sk/sk/',
-        'effectiveDate'            => '2026-07-16',
-        'version'                  => '2.6',
+        'effectiveDate'            => '2026-09-10',
+        'version'                  => '2.7',
         'consentVersion'           => '2026-07-16',
     ];
 }
@@ -277,6 +277,10 @@ function legalStoredItems(): array
 function legalRecentUpdates(): array
 {
     return [
+        'Doplnili sme opis interného pracovného adresára zdravotníckych zariadení — aké kontaktné údaje v ňom vedieme, že pochádzajú z verejne dostupných profesijných zdrojov (register poskytovateľov e-VÚC a weby zariadení), že právnym základom je oprávnený záujem podľa čl. 6 ods. 1 písm. f) a že dotknuté osoby informujeme e-mailom podľa čl. 14 GDPR. Nejde o údaje pacientov.',
+        'Spresnili sme, kto maže uložené výsledky klinických kalkulačiek: záznam vymaže ten, kto ho zadal, priamo vo svojom konte, na žiadosť používateľa ho vymaže prevádzkovateľ a všetky záznamy sa odstránia aj pri zrušení konta.',
+        'Určili sme, že pri zdravotných údajoch zadaných lekárom vystupuje prevádzkovateľ v postavení prevádzkovateľa, nie sprostredkovateľa ambulancie, pretože sám určuje účely a prostriedky spracúvania; sprostredkovateľská zmluva podľa čl. 28 sa preto neuzatvára.',
+        'Zjednotili sme označenie prevádzkovateľa na „MUDr. Ľubomír Polaščín - Nephroctor“ naprieč všetkými dokumentmi.',
         'Registráciu sme obmedzili na osoby vo veku aspoň 16 rokov; ak miestne právo vyžaduje vyšší minimálny vek, platí tento vyšší vek.',
         'Spresnili sme úplný rozsah nepovinných profilových údajov, pseudonymný charakter analytiky GA4, minimalizovaný audit po zrušení účtu, jeho 90-dňovú retenčnú lehotu a informáciu, že služba nevykonáva právne významné výlučne automatizované rozhodovanie ani profilovanie.',
         'Lokálna história kalkulačiek pre neprihlásených sa odteraz vytvára iba po preferenčnom súhlase, neuchováva formulárové vstupy ani identifikátory pacienta a pri odvolaní súhlasu sa vymaže.',
