@@ -274,6 +274,9 @@ function getSourceArticleAuthors(): array {
         // Autori odporúčaní Talianskej nefrologickej spoločnosti (J Nephrol 2026, doi
         // 10.1093/joneph/aajag225, PMID 42614082) - 20 mien overených cez PubMed eutils 2026-08-23.
         'online-hemodiafiltracia-davkovana-liecba-odporucania-sin' => ['Giovanni F. M. Strippoli', 'Giovanni Pellegrino', 'Jörgen Hegbrant', 'Paolo Fabbrini', 'Paolo Luca Maria Lentini', 'Filippo Aucella', 'Vincenzo Panichi', 'Maurizio Gallieni', 'Bernard Canaud', 'Andrew Davenport', 'Alberto Ortiz', 'Rosa Ramos', 'Jolanta Malyszko', 'Rümeyza Kazancıoğlu', 'Martin Kuhlman', 'Ana Carina Ferreira', 'Krister Cromm', 'Sagar Nigwekar', 'Allen R. Nissenson', 'Luca De Nicola'],
+        // Autori spracovanej studie JASN 2026;37(8):1764-1772 (doi 10.1681/ASN.0000001046,
+        // PMID 41719070) - 7 mien overenych cez PubMed 2026-09-11.
+        'cielovy-systolicky-tlak-120-ckd-kdigo-realna-prax' => ['Hyeok-Hee Lee', 'So Mi Jemma Cho', 'Cian P. McCarthy', 'Tae-Hyun Yoo', 'Rishi K. Wadhera', 'Eric A. Secemsky', 'Pradeep Natarajan'],
         'wearables-dialyza-nefrologia-dokazy-a-limity' => ['Madelena Stauss', 'Htay Htay', 'Jeroen P. Kooman', 'Thomas Lindsay', 'Alexander Woywodt'],
         // Autori spracovanej studie Ren Fail 2026;48(1):2656545 (doi 10.1080/0886022X.2026.2656545,
         // PMID 42613737) - 12 mien overenych cez PubMed 2026-09-11.
