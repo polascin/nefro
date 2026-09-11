@@ -50,6 +50,7 @@ jobs:
         uses: actions/checkout@v5
         with:
           persist-credentials: false
+          fetch-depth: 0
 
       - name: Check deploy configuration
         id: cfg
@@ -121,6 +122,41 @@ jobs:
             --exclude-from=.deployignore \
             -e "ssh -i ~/.ssh/deploy_key -p $PORT -o BatchMode=yes" \
             ./ "$DEPLOY_USER@$DEPLOY_HOST:$REMOTE_PATH/"
+
+      # UPSERT zmenených článkov: rsync nahrá add_*_article.php, ale obsah v DB
+      # sa zmení až jeho spustením na serveri. Zámerne len --diff-filter=M
+      # (upravené), nie A (nové) — pri prvom vložení šablóna rozosiela newsletter
+      # avízo, a to nesmie spustiť CI bez dozoru. Nové články publikuj ručne.
+      - name: Upsert changed articles
+        if: steps.cfg.outputs.configured == 'true' && github.event_name == 'push'
+        env:
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
+          DEPLOY_PORT: ${{ secrets.DEPLOY_PORT }}
+          REMOTE_PATH: ${{ steps.cfg.outputs.remote_path }}
+          BEFORE_SHA: ${{ github.event.before }}
+          AFTER_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          PORT="${DEPLOY_PORT:-22}"
+          SSH="ssh -i $HOME/.ssh/deploy_key -p $PORT -o BatchMode=yes $DEPLOY_USER@$DEPLOY_HOST"
+          if ! git cat-file -e "${BEFORE_SHA}^{commit}" 2>/dev/null; then
+            echo "::notice::Predchádzajúci commit nie je dostupný — upsert preskočený."
+            exit 0
+          fi
+          mapfile -t FILES < <(git diff --name-only --diff-filter=M "$BEFORE_SHA" "$AFTER_SHA" -- 'add_*_article.php' || true)
+          if [[ ${#FILES[@]} -eq 0 ]]; then
+            echo "Žiadny upravený článok — upsert netreba."
+            exit 0
+          fi
+          for f in "${FILES[@]}"; do
+            echo "::group::UPSERT $f"
+            $SSH "php '$REMOTE_PATH/$f'"
+            echo "::endgroup::"
+          done
+          echo "::group::Regenerácia neaktuálnych PDF"
+          $SSH "php '$REMOTE_PATH/generate_all_article_pdfs.php' --stale"
+          echo "::endgroup::"
 
       - name: Smoke test
         if: steps.cfg.outputs.configured == 'true'
