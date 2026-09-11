@@ -277,6 +277,9 @@ function getSourceArticleAuthors(): array {
         // Autori spracovanej studie JASN 2026;37(8):1764-1772 (doi 10.1681/ASN.0000001046,
         // PMID 41719070) - 7 mien overenych cez PubMed 2026-09-11.
         'cielovy-systolicky-tlak-120-ckd-kdigo-realna-prax' => ['Hyeok-Hee Lee', 'So Mi Jemma Cho', 'Cian P. McCarthy', 'Tae-Hyun Yoo', 'Rishi K. Wadhera', 'Eric A. Secemsky', 'Pradeep Natarajan'],
+        // Autori spracovanej studie Ren Fail 2026;48(1):2687223 (doi 10.1080/0886022X.2026.2687223,
+        // PMID 42556871) - 6 mien overenych cez PubMed 2026-09-11.
+        'bmi-hematokrit-diabetes-2-typu-riziko-zlyhania-obliciek' => ['Yakun Wang', 'Xinjia Guo', 'Yanhong Li', 'Qiyu Fu', 'Chong Zhang', 'Shoujun Bai'],
         'wearables-dialyza-nefrologia-dokazy-a-limity' => ['Madelena Stauss', 'Htay Htay', 'Jeroen P. Kooman', 'Thomas Lindsay', 'Alexander Woywodt'],
         // Autori spracovanej studie Ren Fail 2026;48(1):2656545 (doi 10.1080/0886022X.2026.2656545,
         // PMID 42613737) - 12 mien overenych cez PubMed 2026-09-11.
