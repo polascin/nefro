@@ -280,6 +280,9 @@ function getSourceArticleAuthors(): array {
         // Autori spracovanej studie Ren Fail 2026;48(1):2687223 (doi 10.1080/0886022X.2026.2687223,
         // PMID 42556871) - 6 mien overenych cez PubMed 2026-09-11.
         'bmi-hematokrit-diabetes-2-typu-riziko-zlyhania-obliciek' => ['Yakun Wang', 'Xinjia Guo', 'Yanhong Li', 'Qiyu Fu', 'Chong Zhang', 'Shoujun Bai'],
+        // Autori spracovanej randomizovanej studie Cell Metab 2026 (doi 10.1016/j.cmet.2026.07.020,
+        // PMID 42660124, NCT02706262) - 8 mien overenych cez PubMed 2026-09-11.
+        'ketogenna-dieta-metabolicke-zdravie-pecen-randomizovana-studia' => ['Max C. Petersen', 'Gordon I. Smith', 'Sarah S. Farabi', 'Hector H. Palacios', 'Mahalakshmi Shankaran', 'Marc K. Hellerstein', 'Bruce W. Patterson', 'Samuel Klein'],
         'wearables-dialyza-nefrologia-dokazy-a-limity' => ['Madelena Stauss', 'Htay Htay', 'Jeroen P. Kooman', 'Thomas Lindsay', 'Alexander Woywodt'],
         // Autori spracovanej studie Ren Fail 2026;48(1):2656545 (doi 10.1080/0886022X.2026.2656545,
         // PMID 42613737) - 12 mien overenych cez PubMed 2026-09-11.
