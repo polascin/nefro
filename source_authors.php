@@ -98,6 +98,8 @@ function getSourceArticleAuthors(): array {
         'htd1801-berberin-ursodeoxycholat-diabetes-2-typu' => ['Linong Ji', 'Zhifeng Cheng', 'Jianhua Ma', 'Dexue Liu', 'Xin Zhang', 'Xiaolin Dong', 'Yang Lin', 'Mingming Yang', 'Shenglian Gan', 'Hanqing Cai', 'Xiaomei Wang', 'Yan Liu', 'Xiaoguang Shi', 'Kui Liu', 'Leigh MacConell', 'Meng Yu', 'Liping Liu'],
         'iga-nefropatia-algoritmus-kdigo-2025-kdoqi' => ['Isabelle Ayoub', 'Gaia Coppock', 'Shikha Wadhwani', 'Timothy Yau'],
         'implementacia-intenzivnej-kontroly-tlaku-esprit-nefrologia' => ['Yu-Jie Zuo', 'Ji-Guang Wang'],
+        // Autori spracovanej štúdie Nature Communications 2026;17:7581, overení cez Crossref.
+        'inhibicia-saga-pghi-4-vankomycin-rezistentny-enterococcus-faecium' => ['Kyong T. Fam', 'Pavan Kumar Chodisetti', 'Zifei Wang', 'Joshua A. Homer', 'Christopher J. Smedley', 'Seiya Kitamura', 'Benjamin Silva', 'Yijun Xiong', 'Althea Hansel-Harris', 'Matthew Holcomb', 'Simeon Babarinde', 'Adrianna M. Turner', 'Daria Van Tyne', 'Ian A. Wilson', 'Stefano Forli', 'Benjamin F. Cravatt', 'Donghyun Park', 'Dennis W. Wolan', 'John E. Moses', 'Howard C. Hang'],
         'inhibicia-tmao-fmc-regresia-fibrozy-ckd-model' => ['Joseph A DiDonato', 'Taylor L Weeks', 'Nilaksh Gupta', 'Deepthi P Mallela', 'Jennifer A Buffa', 'Zeneng Wang', 'Xinmin S Li', 'James T Anderson', 'Xiaoming Fu', 'Naseer Sangwan', 'Ina Nemet', 'Scott J Cameron', 'Stanley L Hazen'],
         // Autori spracovanej práce JAMA Dermatol. 2026, doi 10.1001/jamadermatol.2026.2853
         // (PMID 42584887) — 22 mien, AuthorList CompleteYN=Y, overené cez PubMed eutils 2026-09-03.
