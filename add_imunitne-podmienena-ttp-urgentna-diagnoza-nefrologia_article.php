@@ -69,6 +69,7 @@ $articles[] = [
 <p>Na odhad pravdepodobnosti závažného deficitu ADAMTS13 možno u dospelých použiť <strong>skóre PLASMIC</strong>. Hodnotí počet trombocytov, známky hemolýzy, neprítomnosť aktívneho nádorového ochorenia, neprítomnosť transplantácie, stredný objem erytrocytov, INR a kreatinín. Hodnoty 0–4 zodpovedajú nízkemu, 5 strednému a 6–7 vysokému riziku závažného deficitu ADAMTS13. Skóre nenahrádza jeho meranie ani klinický úsudok a neurčuje imunitnú či vrodenú etiológiu. Jeho spoľahlivosť je obmedzená najmä u detí, v gravidite a pri závažných pridružených ochoreniach, ako sú sepsa, malignita alebo stav po transplantácii. <a href="#zdroj-2">[2]</a></p>
 <p><strong>Pri vysokej klinickej pravdepodobnosti TTP sa TPE a kortikosteroidy začínajú bez čakania na výsledok ADAMTS13.</strong> Začatie kaplacizumabu pred potvrdením diagnózy má osobitné podmienky: rozhoduje skúsené pracovisko podľa pravdepodobnosti iTTP, krvácavého rizika a dostupnosti rýchleho výsledku ADAMTS13. Pri nízkej alebo strednej pravdepodobnosti sa na potvrdenie závažného deficitu pred jeho podaním čaká. Ak test ADAMTS13 vôbec nie je dostupný, diagnostické odporúčania ISTH empirické podanie kaplacizumabu neodporúčajú. <a href="#zdroj-2">[2]</a></p>
 
+<div class="pdf-avoid-break">
 <h2>Diferenciálna diagnostika trombotickej mikroangiopatie</h2>
 <p>Trombotická mikroangiopatia (TMA) je syndróm, nie konečná etiologická diagnóza. Orientačné znaky pomáhajú určiť ďalší postup, ale žiadny z nich sám osebe spoľahlivo nerozlíši všetky príčiny. <a href="#zdroj-1">[1]</a> <a href="#zdroj-11">[11]</a></p>
 <div class="table-responsive" role="region" aria-label="Diferenciálna diagnostika trombotickej mikroangiopatie" tabindex="0">
@@ -85,6 +86,7 @@ $articles[] = [
     <tr><th scope="row">Ťažký deficit vitamínu B12 s obrazom pseudo-TMA</th><td>Neefektívna krvotvorba, neprimerane nízka retikulocytová odpoveď a často veľmi vysoká LDH. <a href="#zdroj-12">[12]</a></td></tr>
   </tbody>
 </table>
+</div>
 </div>
 <p>Normálne koncentrácie C3 a C4 <strong>nevylučujú</strong> komplementom sprostredkovanú TMA. Samotná hnačka nepotvrdzuje HUS asociovaný so Shiga toxínom a neprítomnosť hnačky ho úplne nevylučuje. Pri podozrení na komplementom sprostredkovanú TMA sa liečebné rozhodnutie neopiera iba o koncentrácie komplementových zložiek alebo čakanie na genetický výsledok. <a href="#zdroj-1">[1]</a> <a href="#zdroj-11">[11]</a></p>
 
