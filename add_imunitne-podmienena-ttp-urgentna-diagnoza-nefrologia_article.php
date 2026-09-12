@@ -121,8 +121,10 @@ $articles[] = [
 <p>V otvorenej jednoramennej štúdii fázy 3 MAYARI bolo podľa registra zaradených 51 účastníkov. Primárny výsledok sa vyhodnocoval u 46: remisiu bez potreby TPE dosiahlo 93,5 % (95 % interval spoľahlivosti 82,5–97,8 %). Výsledky registra boli zverejnené 30. decembra 2025. Štúdia vylučovala okrem iného pacientov so závažným neurologickým alebo srdcovým postihnutím, potrebou okamžitého invazívneho výkonu či klinicky významným aktívnym krvácaním. <strong>Chýbala randomizovaná kontrolná skupina a výsledok nemožno preniesť na všetkých pacientov s akútnou iTTP.</strong> <a href="#zdroj-8">[8]</a></p>
 <p>Režim bez TPE preto patrí do špecializovaného rozhodovania s rýchlym potvrdením diagnózy, dôsledným sledovaním ADAMTS13 a okamžite dostupnou záchrannou TPE. Pre bežný urgentný postup zostáva základom bezodkladné zabezpečenie štandardnej kombinovanej liečby podľa odporúčaní a SPC. <a href="#zdroj-4">[4]</a> <a href="#zdroj-5">[5]</a> <a href="#zdroj-8">[8]</a></p>
 
+<div class="pdf-avoid-break">
 <h2>Podporná starostlivosť</h2>
 <p>Pacient potrebuje priebežné sledovanie neurologického stavu, srdcovej činnosti, diurézy, krvného obrazu, hemolýzy a funkcie obličiek. Dôležité sú tieto zásady: <a href="#zdroj-1">[1]</a> <a href="#zdroj-4">[4]</a> <a href="#zdroj-9">[9]</a></p>
+</div>
 <ul>
   <li><strong>Trombocyty sa profylakticky nepodávajú iba pre nízky počet.</strong> Transfúzia môže byť odôvodnená pri život ohrozujúcom krvácaní alebo výnimočne pri neodkladnom výkone po individuálnom odbornom posúdení. Zavedenie centrálneho venózneho katétra samo osebe neznamená automatickú potrebu transfúzie trombocytov.</li>
   <li>Transfúzia erytrocytov sa riadi klinickým stavom a závažnosťou anémie.</li>
