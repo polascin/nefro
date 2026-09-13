@@ -304,6 +304,10 @@ function getSourceArticleAuthors(): array {
         // Autori spracovanej studie REVEAL-CKD (BMJ Open 2023;13:e067386,
         // doi 10.1136/bmjopen-2022-067386, PMID 37217263) - 12 mien overenych cez PubMed 2026-09-06.
         'nerozpoznana-ckd-hypertenzia-kardiovaskularne-ochorenie' => ['Navdeep Tangri', 'Takahito Moriyama', 'Markus P. Schneider', 'Jean Baptiste Virgitti', 'Luca De Nicola', 'Michael Arnold', 'Salvatore Barone', 'Elizabeth Peach', 'Eric Wittbrodt', 'Hungta Chen', 'Krister Jarbrink', 'Pamela Kushner'],
+        // Autori spracovanej retrospektívnej štúdie CJASN 2026;21(6):1048-1050
+        // (doi 10.2215/CJN.0000001042, PMID 41848790) - 10 mien overených cez
+        // PubMed a Crossref 2026-09-13.
+        'negativny-geneticky-test-oblicky-sekvenovanie-exomu' => ['Shwetha Bindhu', 'Euyn Lim', 'Chloe Borden', 'Michael George', 'Xin Yee Tan', 'Mary-Beth Roberts', 'Sarah Mazzola', 'Fang Zhao', 'Yu-Wei Cheng', 'Xiangling Wang'],
         // Autori spracovanej post hoc analyzy PROTECT (CJASN 2026;21(4):578-592,
         // doi 10.2215/CJN.0000000961, PMID 41428405) - 8 mien overenych cez Crossref a PubMed 2026-09-06.
         'kompletna-remisia-proteinurie-igan-protect-post-hoc' => ['Hiddo J. L. Heerspink', 'Brad H. Rovin', 'Radko Komers', 'Bruce Hendry', 'Alex Mercer', 'Priscila Preciado', 'Edward Murphy', 'Vladimir Tesar'],
