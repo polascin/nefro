@@ -301,6 +301,9 @@ function getSourceArticleAuthors(): array {
         // Autori spracovaneho prehladu Via practica 2026;23(2):62-65 - mena a titul
         // overene na verejnej stranke vydavatela SOLEN 2026-09-13.
         'inkretinove-agonisty-masld-mash-pecen-ckd' => ['Ľubomír Horák', 'Anna Šarocká'],
+        // Autori spracovaneho prehladu Curr Opin Nephrol Hypertens 2026
+        // (doi 10.1097/MNH.0000000000001225) - mena overene cez PubMed 2026-09-13.
+        'steatoticke-ochorenie-pecene-riziko-ckd' => ['William R. Marshall', 'Smeeta Sinha', 'Darren Green', 'Philip A. Kalra'],
         // Autori spracovanej studie Circ Popul Health Outcomes 2026;e013042
         // (doi 10.1161/circoutcomes.125.013042) - 8 mien overenych cez Crossref 2026-09-06.
         'ckm-riziko-mladi-dospeli-79-percent-vyznam' => ['Vaishnavi Krishnan', 'Hongyan Ning', 'Daniel A. Notterman', 'Noreen Goldman', 'Sadiya S. Khan', 'Nilay S. Shah', 'Norrina B. Allen', 'Donald M. Lloyd-Jones'],
