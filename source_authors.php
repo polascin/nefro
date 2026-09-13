@@ -298,6 +298,9 @@ function getSourceArticleAuthors(): array {
         // Autori spracovaneho prehladu Nature Reviews Nephrology 2026
         // (doi 10.1038/s41581-026-01117-6) - 11 mien overenych cez Crossref 2026-09-06.
         'zapal-terapeuticky-ciel-ckd-renalne-kardiovaskularne-vysledky' => ['Katherine R. Tuttle', 'Mehmet Kanbay', 'Radica Z. Alicic', 'Juan Jesus Carrero', 'Sidar Copur', 'Ann Marie Navar', 'Brendon L. Neuen', 'Vlado Perkovic', 'Peter Rossing', 'Nikolaus Marx', 'Paul M. Ridker'],
+        // Autori spracovaneho prehladu Via practica 2026;23(2):62-65 - mena a titul
+        // overene na verejnej stranke vydavatela SOLEN 2026-09-13.
+        'inkretinove-agonisty-masld-mash-pecen-ckd' => ['Ľubomír Horák', 'Anna Šarocká'],
         // Autori spracovanej studie Circ Popul Health Outcomes 2026;e013042
         // (doi 10.1161/circoutcomes.125.013042) - 8 mien overenych cez Crossref 2026-09-06.
         'ckm-riziko-mladi-dospeli-79-percent-vyznam' => ['Vaishnavi Krishnan', 'Hongyan Ning', 'Daniel A. Notterman', 'Noreen Goldman', 'Sadiya S. Khan', 'Nilay S. Shah', 'Norrina B. Allen', 'Donald M. Lloyd-Jones'],
