@@ -10,6 +10,7 @@ require_once __DIR__ . '/mkch10_codebook.php';
 $baseUrl = 'https://nefro.polascin.net/';
 $errors = [];
 $plainTextOutput = null;
+$skippedOutput = [];
 
 $checkboxFields = [
     'other_kidney_marker',
@@ -35,7 +36,7 @@ $form = [
     'cause_diagnoses' => ambulatoryPostedCodeList($_POST['cause_diagnoses'] ?? ''),
     'cause_note' => (string) ($_POST['cause_note'] ?? ''),
     'birth_input' => (string) ($_POST['birth_input'] ?? ''),
-    'sex' => (string) ($_POST['sex'] ?? 'female'),
+    'sex' => (string) ($_POST['sex'] ?? ''),
     'egfr' => (string) ($_POST['egfr'] ?? ''),
     'uacr_value' => (string) ($_POST['uacr_value'] ?? ''),
     'uacr_unit' => (string) ($_POST['uacr_unit'] ?? 'mg_mmol'),
@@ -44,7 +45,7 @@ $form = [
     'related_diagnoses' => ambulatoryPostedCodeList($_POST['related_diagnoses'] ?? ''),
     'sbp' => (string) ($_POST['sbp'] ?? ''),
     'bmi' => (string) ($_POST['bmi'] ?? ''),
-    'smoking' => (string) ($_POST['smoking'] ?? 'never'),
+    'smoking' => (string) ($_POST['smoking'] ?? ''),
     'hba1c' => (string) ($_POST['hba1c'] ?? ''),
 ];
 
@@ -85,9 +86,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $causeNote = ambulatoryNormalizeSingleLine($causeNoteRaw, 200);
         $form['cause_note'] = $causeNote;
         $cause = ambulatoryFormatCause($causeDiagnosisCodes, $causeNote);
-        if ($cause === '') {
-            $errors[] = 'Uveďte príčinu CKD výberom z číselníka MKCH-10 alebo vlastným textom; ak nie je známa, zadajte „neurčená“.';
-        }
         if (mb_strlen($causeNoteRaw, 'UTF-8') > 200) {
             $errors[] = 'Doplnenie príčiny CKD môže mať najviac 200 znakov.';
         }
@@ -122,26 +120,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
         }
 
-        $examinationDate = \DateTimeImmutable::createFromFormat('!Y-m-d', $form['examination_date']);
-        if (
-            !$examinationDate instanceof \DateTimeImmutable ||
-            $examinationDate->format('Y-m-d') !== $form['examination_date']
-        ) {
-            $errors[] = 'Zadajte platný dátum vyšetrenia.';
-            $examinationDate = null;
-        } elseif ($examinationDate > new \DateTimeImmutable('today')) {
-            $errors[] = 'Dátum vyšetrenia nemôže byť v budúcnosti.';
+        $examinationDate = null;
+        if (trim($form['examination_date']) !== '') {
+            $examinationDate = \DateTimeImmutable::createFromFormat('!Y-m-d', $form['examination_date']);
+            if (
+                !$examinationDate instanceof \DateTimeImmutable ||
+                $examinationDate->format('Y-m-d') !== $form['examination_date']
+            ) {
+                $errors[] = 'Zadajte platný dátum vyšetrenia.';
+                $examinationDate = null;
+            } elseif ($examinationDate > new \DateTimeImmutable('today')) {
+                $errors[] = 'Dátum vyšetrenia nemôže byť v budúcnosti.';
+            }
         }
 
         $birthInput = ambulatoryNormalizeSingleLine($form['birth_input'], 16);
         $form['birth_input'] = $birthInput;
         $birthParts = $birthInput === '' ? null : ambulatoryParseBirthInput($birthInput);
         $ageYears = null;
-        if ($birthInput === '') {
-            $errors[] = 'Zadajte rok narodenia alebo dátum narodenia.';
-        } elseif ($birthParts === null) {
+        if ($birthInput !== '' && $birthParts === null) {
             $errors[] = 'Dátum narodenia je neplatný. Použite rok (1965), mesiac a rok (6/1965) alebo celý dátum (15.6.1965).';
-        } elseif ($examinationDate instanceof \DateTimeImmutable) {
+        } elseif ($birthParts !== null && $examinationDate instanceof \DateTimeImmutable) {
             $ageYears = ambulatoryAgeAtExamination($birthParts, $examinationDate);
             if ($ageYears === null) {
                 $errors[] = 'Dátum narodenia nemôže byť po dátume vyšetrenia.';
@@ -150,43 +149,51 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
         }
 
-        $sex = in_array($form['sex'], ['female', 'male'], true) ? $form['sex'] : '';
-        if ($sex === '') {
+        $sex = in_array($form['sex'], ['female', 'male'], true) ? $form['sex'] : null;
+        if ($form['sex'] !== '' && $sex === null) {
             $errors[] = 'Vyberte pohlavie použité v prognostických rovniciach.';
         }
 
-        $egfr = calculatorParsePositiveFloat($form['egfr']);
-        if ($egfr === null || $egfr > 200.0) {
-            $errors[] = 'eGFR musí byť kladné číslo najviac 200 ml/min/1,73 m².';
+        $egfr = null;
+        if (trim($form['egfr']) !== '') {
+            $egfr = calculatorParsePositiveFloat($form['egfr']);
+            if ($egfr === null || $egfr > 200.0) {
+                $errors[] = 'eGFR musí byť kladné číslo najviac 200 ml/min/1,73 m².';
+                $egfr = null;
+            }
         }
 
         $uacrUnit = in_array($form['uacr_unit'], ['mg_g', 'mg_mmol'], true)
             ? $form['uacr_unit']
-            : '';
-        if ($uacrUnit === '') {
+            : null;
+        if ($uacrUnit === null) {
             $errors[] = 'Vyberte jednotku uACR.';
         }
 
-        $uacrValue = calculatorParsePositiveFloat($form['uacr_value']);
-        if ($uacrValue === null || $uacrValue > 15000.0) {
-            $errors[] = 'uACR musí byť kladné číslo v realistickom rozsahu.';
+        $uacrValue = null;
+        if (trim($form['uacr_value']) !== '') {
+            $uacrValue = calculatorParsePositiveFloat($form['uacr_value']);
+            if ($uacrValue === null || $uacrValue > 15000.0) {
+                $errors[] = 'uACR musí byť kladné číslo v realistickom rozsahu.';
+                $uacrValue = null;
+            }
         }
 
         $chronicity = in_array($form['chronicity'], ['confirmed', 'unconfirmed'], true)
             ? $form['chronicity']
-            : '';
-        if ($chronicity === '') {
+            : null;
+        if ($chronicity === null) {
             $errors[] = 'Vyberte stav chronicity abnormalít.';
         }
 
         $repeatDate = null;
-        if ($chronicity === 'unconfirmed') {
+        if ($chronicity === 'unconfirmed' && trim($form['repeat_date']) !== '') {
             $repeatDate = \DateTimeImmutable::createFromFormat('!Y-m-d', $form['repeat_date']);
             if (
                 !$repeatDate instanceof \DateTimeImmutable ||
                 $repeatDate->format('Y-m-d') !== $form['repeat_date']
             ) {
-                $errors[] = 'Pri nepotvrdenej chronicite zadajte platný dátum opakovanej kontroly.';
+                $errors[] = 'Dátum opakovanej kontroly je neplatný.';
                 $repeatDate = null;
             } elseif (
                 $examinationDate instanceof \DateTimeImmutable &&
@@ -196,29 +203,37 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
         }
 
-        $sbp = calculatorParsePositiveFloat($form['sbp']);
-        if ($sbp === null || $sbp < 70.0 || $sbp > 250.0) {
-            $errors[] = 'Systolický TK musí byť v rozsahu 70 až 250 mmHg.';
+        $sbp = null;
+        if (trim($form['sbp']) !== '') {
+            $sbp = calculatorParsePositiveFloat($form['sbp']);
+            if ($sbp === null || $sbp < 70.0 || $sbp > 250.0) {
+                $errors[] = 'Systolický TK musí byť v rozsahu 70 až 250 mmHg.';
+                $sbp = null;
+            }
         }
 
-        $bmi = calculatorParsePositiveFloat($form['bmi']);
-        if ($bmi === null || $bmi < 10.0 || $bmi > 80.0) {
-            $errors[] = 'BMI musí byť v rozsahu 10 až 80 kg/m².';
+        $bmi = null;
+        if (trim($form['bmi']) !== '') {
+            $bmi = calculatorParsePositiveFloat($form['bmi']);
+            if ($bmi === null || $bmi < 10.0 || $bmi > 80.0) {
+                $errors[] = 'BMI musí byť v rozsahu 10 až 80 kg/m².';
+                $bmi = null;
+            }
         }
 
         $smoking = in_array($form['smoking'], ['never', 'former', 'current'], true)
             ? $form['smoking']
-            : '';
-        if ($smoking === '') {
+            : null;
+        if ($form['smoking'] !== '' && $smoking === null) {
             $errors[] = 'Vyberte stav fajčenia.';
         }
 
         $diabetes = $form['diabetes'] === '1';
-        $hba1c = 7.0;
-        if ($diabetes) {
+        $hba1c = null;
+        if (trim($form['hba1c']) !== '') {
             $parsedHba1c = calculatorParsePositiveFloat($form['hba1c']);
             if ($parsedHba1c === null || $parsedHba1c < 4.0 || $parsedHba1c > 20.0) {
-                $errors[] = 'Pri diabete zadajte HbA1c v rozsahu 4 až 20 %.';
+                $errors[] = 'HbA1c musí byť v rozsahu 4 až 20 %.';
             } else {
                 $hba1c = $parsedHba1c;
             }
@@ -280,138 +295,55 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
 
         if (empty($errors)) {
-            /** @var int $ageYears */
-            /** @var float $egfr */
-            /** @var float $uacrValue */
-            /** @var float $sbp */
-            /** @var float $bmi */
-            /** @var \DateTimeImmutable $examinationDate */
-            $uacrMgG = $uacrUnit === 'mg_mmol' ? $uacrValue * 8.84 : $uacrValue;
-            $gCategory = ckdGCategory($egfr);
-            $aCategory = kdigoACategory($uacrMgG);
-            $riskInfo = kdigoRisk($gCategory, $aCategory);
-
-            $otherKidneyMarker = $form['other_kidney_marker'] === '1';
-            $chronicityConfirmed = $chronicity === 'confirmed';
-            $meetsCkdCriteria = $egfr < 60.0 || $uacrMgG >= 30.0 || $otherKidneyMarker;
-            $hasConfirmedCkd = $chronicityConfirmed && $meetsCkdCriteria;
-
-            $mainDiagnosis = ambulatoryMainDiagnosis($gCategory, $chronicityConfirmed, $meetsCkdCriteria);
-
-            $kfreText = 'nevypočítané (model je určený pre eGFR 10 až <60)';
-            if ($egfr >= 10.0 && $egfr < 60.0 && $ageYears <= 100) {
-                $kfre = kfreRisk($ageYears, $sex, $egfr, $uacrMgG);
-                $kfreText = '2 r.: ' . ambulatoryFormatNumber($kfre['risk_2yr']) .
-                    ' % | 5 r.: ' . ambulatoryFormatNumber($kfre['risk_5yr']) . ' %';
-            }
-
-            $ckdpcText = 'nevypočítané (vek mimo validačného rozsahu 20–80 rokov)';
-            if ($ageYears >= 20 && $ageYears <= 80) {
-                $ckdpc = ckdpcRisk(
-                    $ageYears,
-                    $sex,
-                    $egfr,
-                    $uacrMgG,
-                    $diabetes,
-                    $sbp,
-                    $form['antihtn'] === '1',
-                    $form['hf'] === '1',
-                    $form['chd'] === '1',
-                    $form['afib'] === '1',
-                    $bmi,
-                    $smoking,
-                    $hba1c,
-                    $form['insulin'] === '1',
-                    $form['oral_dm'] === '1',
-                );
-                $ckdpcText = '3 r.: ' . ambulatoryFormatNumber($ckdpc['risk_3yr']) . ' %';
-            }
-
-            $gaRiskKey = match ($riskInfo['risk']) {
-                'Nízke riziko' => 'low',
-                'Stredné riziko' => 'moderate',
-                'Vysoké riziko' => 'high',
-                default => 'veryhigh',
-            };
-            $gaRiskText = match ($gaRiskKey) {
-                'low' => 'nízke',
-                'moderate' => 'stredné',
-                'high' => 'vysoké',
-                default => 'veľmi vysoké',
-            };
-
-            $isAsian = $form['asian_ancestry'] === '1';
-            $adiposity = $bmi >= ($isAsian ? 23.0 : 25.0) || $form['increased_waist'] === '1';
-            $dysAdiposity = $form['prediabetes'] === '1';
-            $metabolicRisk =
-                $form['hypertension'] === '1' ||
-                $diabetes ||
-                $form['hypertriglyceridemia'] === '1' ||
-                $form['metabolic_syndrome'] === '1';
-            $ckdModerateHigh = $hasConfirmedCkd && $gaRiskKey !== 'low';
-            $kidneyFailure = $hasConfirmedCkd && $egfr < 15.0;
-            $ckdVeryHigh = $hasConfirmedCkd && ($gaRiskKey === 'veryhigh' || $kidneyFailure);
-            $clinicalCvd =
-                $form['hf'] === '1' ||
-                $form['chd'] === '1' ||
-                $form['afib'] === '1' ||
-                $form['other_clinical_cvd'] === '1';
-
-            $ckmStage = ckmComputeStage(
-                $adiposity,
-                $dysAdiposity,
-                $metabolicRisk,
-                $ckdModerateHigh,
-                $ckdVeryHigh,
-                $form['subclinical_cvd'] === '1',
-                $clinicalCvd,
-                $kidneyFailure,
-            );
-            $ckmText = $ckmStage['code'] . ' (' . ckmStageLabel($ckmStage['code']) . ')';
-
-            $slopeResult = ambulatoryCalculateEgfrSlope($slopePoints);
-            $slopeText = 'nedostupný – zadajte aspoň jedno predchádzajúce meranie';
-            if ($slopeResult !== null) {
-                $slopeText = ambulatoryFormatNumber($slopeResult['slope'], 2) .
-                    ' ml/min/1,73 m²/rok (počet meraní: ' . $slopeResult['count'] .
-                    '; obdobie: ' . ambulatoryFormatNumber($slopeResult['duration_years'], 1) . ' roka)';
-            }
-
-            $chronicityText = 'potvrdená';
-            if (!$chronicityConfirmed && $repeatDate instanceof \DateTimeImmutable) {
-                $chronicityText = 'nepotvrdená – opakovať eGFR/uACR dňa ' .
-                    $repeatDate->format('d.m.Y') . ' (pri podozrení na AKI skôr)';
-            }
-
-            $complicationText = 'neuvedené';
+            $complicationText = '';
             if ($selectedComplications !== []) {
                 $labels = array_map(
                     static fn(string $key): string => $complicationLabels[$key],
                     $selectedComplications,
                 );
-                $complicationText = implode(' / ', $labels);
+                $complicationText = implode(', ', $labels);
             }
 
-            $uacrDisplay = ambulatoryFormatNumber($uacrValue, 2) . ' ' .
-                ($uacrUnit === 'mg_mmol' ? 'mg/mmol' : 'mg/g');
-            if ($uacrUnit === 'mg_mmol') {
-                $uacrDisplay .= ' = ' . ambulatoryFormatNumber($uacrMgG, 1) . ' mg/g';
-            }
-
-            $summary = [
-                'main_diagnosis' => $mainDiagnosis,
-                'cga' => 'príčina (Cause) ' . $cause . ', kategória ' . $gCategory .
-                    ' (eGFR ' . ambulatoryFormatNumber($egfr, 1) .
-                    ' ml/min/1,73 m²), kategória ' . $aCategory . ' (uACR ' . $uacrDisplay . ')',
-                'risks' => 'KFRE (' . $kfreText . ') | CKD-PC (' . $ckdpcText .
-                    ') | CKM Stage (AHA 2023): ' . $ckmText,
-                'slope' => $slopeText,
-                'ga_risk' => $gaRiskText,
-                'chronicity' => $chronicityText,
-                'related_diagnoses' => $relatedDiagnoses !== '' ? $relatedDiagnoses : 'neuvedené',
+            $report = ambulatoryComputeReport([
+                'cause' => $cause,
+                'age_years' => $ageYears,
+                'sex' => $sex,
+                'egfr' => $egfr,
+                'uacr_value' => $uacrValue,
+                'uacr_unit' => $uacrValue !== null ? $uacrUnit : null,
+                'chronicity' => $chronicity,
+                'repeat_date' => $repeatDate,
+                'other_kidney_marker' => $form['other_kidney_marker'] === '1',
+                'related_diagnoses' => $relatedDiagnoses,
+                'sbp' => $sbp,
+                'bmi' => $bmi,
+                'smoking' => $smoking,
+                'diabetes' => $diabetes,
+                'hba1c' => $hba1c,
+                'antihtn' => $form['antihtn'] === '1',
+                'hf' => $form['hf'] === '1',
+                'chd' => $form['chd'] === '1',
+                'afib' => $form['afib'] === '1',
+                'insulin' => $form['insulin'] === '1',
+                'oral_dm' => $form['oral_dm'] === '1',
+                'asian_ancestry' => $form['asian_ancestry'] === '1',
+                'increased_waist' => $form['increased_waist'] === '1',
+                'prediabetes' => $form['prediabetes'] === '1',
+                'hypertension' => $form['hypertension'] === '1',
+                'hypertriglyceridemia' => $form['hypertriglyceridemia'] === '1',
+                'metabolic_syndrome' => $form['metabolic_syndrome'] === '1',
+                'subclinical_cvd' => $form['subclinical_cvd'] === '1',
+                'other_clinical_cvd' => $form['other_clinical_cvd'] === '1',
+                'slope_points' => $slopePoints,
                 'complications' => $complicationText,
-            ];
-            $plainTextOutput = ambulatoryBuildPlainText($summary);
+            ]);
+            $plainTextOutput = ambulatoryBuildPlainText($report['summary']);
+            $skippedOutput = $report['skipped'];
+            if (trim($plainTextOutput) === '') {
+                $errors[] = 'Zadajte aspoň jeden údaj, z ktorého možno zostaviť súhrn (napr. eGFR, uACR, príčinu CKD, BMI alebo komplikácie).';
+                $plainTextOutput = null;
+                $skippedOutput = [];
+            }
         }
     }
 }
@@ -422,7 +354,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   <?php
   $pageTitle = 'Ambulantná kalkulačka CKD | Nefro-projekt Slovensko';
   $canonicalUrl = 'https://nefro.polascin.net/calculator_ambulatory.php';
-  $seoDescription = 'Ambulantná CKD kalkulačka pre lekárov: KDIGO 2024 CGA, KFRE, CKD-PC, CKM stage, eGFR slope a kopírovateľný text do lekárskej správy.';
+  $seoDescription = 'Ambulantná CKD kalkulačka pre lekárov: KDIGO 2024 CGA, KFRE, CKD-PC, štádium CKM, eGFR slope a kopírovateľný text do lekárskej správy. Počíta len z vyplnených údajov.';
   $structuredData = [[
       '@context' => 'https://schema.org',
       '@type' => 'BreadcrumbList',
@@ -449,10 +381,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="content-wrapper">
             <div class="auth-container auth-container--wide">
                 <h2>Ambulantná kalkulačka</h2>
-                <p class="auth-subtitle">Z jedného formulára vytvorí KDIGO CGA klasifikáciu, prognostické riziká a čistý text vhodný na skopírovanie do ambulantnej správy.</p>
+                <p class="auth-subtitle">Z dostupných údajov zostaví KDIGO CGA klasifikáciu, prognostické riziká a čistý text na skopírovanie do ambulantnej správy. Vyplňte len to, čo máte — vypočíta sa iba to, na čo stačia zadané parametre.</p>
 
                 <div class="info-box-blue">
-                    Kalkulačka nevyžaduje identifikačné údaje pacienta a výsledok neukladá do databázy. Dátum alebo rok narodenia slúži len na výpočet veku k dátumu vyšetrenia a na serveri sa neukladá. Príčinu CKD, chronicitu, pridružené diagnózy a komplikácie potvrdzuje lekár; nástroj ich neurčuje zo samotných laboratórnych hodnôt.
+                    Kalkulačka nevyžaduje identifikačné údaje pacienta a výsledok neukladá do databázy. Dátum alebo rok narodenia slúži len na výpočet veku k dátumu vyšetrenia a na serveri sa neukladá. Príčinu CKD, chronicitu, pridružené diagnózy a komplikácie potvrdzuje lekár; nástroj ich neurčuje zo samotných laboratórnych hodnôt. Chýbajúce vstupy sa vo výstupe vynechajú.
                 </div>
 
                 <?php if ($errors !== []): ?>
@@ -471,11 +403,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <section class="form-section" aria-labelledby="ambulatory-core-heading">
                         <h3 id="ambulatory-core-heading">Základné údaje a KDIGO CGA</h3>
                         <div class="form-group mkch10-picker" id="mkch10-cause-picker" data-source="assets/data/mkch10-sk.json" data-max-items="8" data-field-name="cause_diagnoses[]" data-selected="<?= htmlspecialchars($form['cause_diagnoses']) ?>" data-empty-status="Nie je vybraná žiadna príčina CKD." data-count-status="Vybrané príčiny CKD">
-                            <label for="cause_diagnosis_search">Príčina CKD (Cause) <span class="required">*</span></label>
+                            <label for="cause_diagnosis_search">Príčina CKD (Cause)</label>
                             <input type="search" id="cause_diagnosis_search" class="form-control" autocomplete="off" role="combobox" aria-autocomplete="list" aria-haspopup="listbox" aria-controls="cause_diagnosis_results" aria-expanded="false" aria-describedby="cause_diagnosis_help cause_diagnosis_status" placeholder="Začnite písať kód alebo názov diagnózy">
                             <div id="cause_diagnosis_results" class="mkch10-results" role="listbox" aria-label="Výsledky vyhľadávania príčin CKD" hidden></div>
                             <div id="cause_diagnosis_selected" class="mkch10-selected" aria-label="Vybrané príčiny CKD"></div>
-                            <small id="cause_diagnosis_help">Vyhľadávajte podľa kódu alebo slovenského názvu. Možno vybrať viac diagnóz, najviac 8. Povinný je aspoň jeden kód alebo doplnenie vlastnými slovami; ak príčina nie je známa, do doplnenia napíšte „neurčená“.</small>
+                            <small id="cause_diagnosis_help">Vyhľadávajte podľa kódu alebo slovenského názvu. Možno vybrať viac diagnóz, najviac 8. Ak príčina nie je známa, do doplnenia napíšte „neurčená“. Bez príčiny sa tento riadok vo výstupe vynechá.</small>
                             <small id="cause_diagnosis_status" class="mkch10-status" role="status" aria-live="polite"></small>
                             <noscript>
                                 <label for="cause_diagnoses_noscript">Kódy príčin CKD (MKCH-10-SK, oddelené čiarkou)</label>
@@ -485,35 +417,36 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <div class="form-group mkch10-note">
                                 <label for="cause_note">Doplnenie vlastnými slovami</label>
                                 <input type="text" id="cause_note" name="cause_note" maxlength="200" class="form-control" placeholder="napr. diabetická choroba obličiek; neurčená" value="<?= htmlspecialchars($form['cause_note']) ?>" aria-describedby="cause_note_help">
-                                <small id="cause_note_help">Voliteľné, ak ste vybrali aspoň jeden kód MKCH-10. Ak kód nevyberiete, toto pole je povinné.</small>
+                                <small id="cause_note_help">Voliteľné. Ak kód nevyberiete, stačí vlastný text. Bez oboch sa príčina vo výstupe neobjaví.</small>
                             </div>
                         </div>
                         <div class="form-grid">
                             <div class="form-group">
-                                <label for="examination_date">Dátum vyšetrenia <span class="required">*</span></label>
-                                <input type="date" id="examination_date" name="examination_date" required class="form-control" max="<?= htmlspecialchars(date('Y-m-d')) ?>" value="<?= htmlspecialchars($form['examination_date']) ?>">
+                                <label for="examination_date">Dátum vyšetrenia</label>
+                                <input type="date" id="examination_date" name="examination_date" class="form-control" max="<?= htmlspecialchars(date('Y-m-d')) ?>" value="<?= htmlspecialchars($form['examination_date']) ?>">
                             </div>
                             <div class="form-group">
-                                <label for="birth_input">Dátum alebo rok narodenia <span class="required">*</span></label>
-                                <input type="text" id="birth_input" name="birth_input" required maxlength="16" class="form-control" autocomplete="off" placeholder="napr. 1965, 6/1965 alebo 15.6.1965" value="<?= htmlspecialchars($form['birth_input']) ?>" aria-describedby="birth_input_help birth_age_status">
-                                <small id="birth_input_help">Vek sa dopočíta k dátumu vyšetrenia. Stačí rok, mesiac a rok, alebo celý dátum. Pri neúplnom údaji sa chýbajúce časti berú ako 1. január, resp. 1. deň mesiaca.</small>
+                                <label for="birth_input">Dátum alebo rok narodenia</label>
+                                <input type="text" id="birth_input" name="birth_input" maxlength="16" class="form-control" autocomplete="off" placeholder="napr. 1965, 6/1965 alebo 15.6.1965" value="<?= htmlspecialchars($form['birth_input']) ?>" aria-describedby="birth_input_help birth_age_status">
+                                <small id="birth_input_help">Vek sa dopočíta k dátumu vyšetrenia a použije sa v KFRE a CKD-PC. Stačí rok, mesiac a rok, alebo celý dátum. Pri neúplnom údaji sa chýbajúce časti berú ako 1. január, resp. 1. deň mesiaca.</small>
                                 <small id="birth_age_status" class="ambulatory-age-status" role="status" aria-live="polite"></small>
                             </div>
                             <div class="form-group">
-                                <label for="sex">Pohlavie použité v rovniciach <span class="required">*</span></label>
-                                <select id="sex" name="sex" required class="form-control">
+                                <label for="sex">Pohlavie použité v rovniciach</label>
+                                <select id="sex" name="sex" class="form-control">
+                                    <option value="" <?= $form['sex'] === '' ? 'selected' : '' ?>>Neuvedené</option>
                                     <option value="female" <?= $form['sex'] === 'female' ? 'selected' : '' ?>>Žena</option>
                                     <option value="male" <?= $form['sex'] === 'male' ? 'selected' : '' ?>>Muž</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="egfr">Aktuálne eGFR (ml/min/1,73 m²) <span class="required">*</span></label>
-                                <input type="text" id="egfr" name="egfr" required inputmode="decimal" class="form-control" placeholder="napr. 38,5" value="<?= htmlspecialchars($form['egfr']) ?>">
+                                <label for="egfr">Aktuálne eGFR (ml/min/1,73 m²)</label>
+                                <input type="text" id="egfr" name="egfr" inputmode="decimal" class="form-control" placeholder="napr. 38,5" value="<?= htmlspecialchars($form['egfr']) ?>">
                             </div>
                             <div class="form-group">
-                                <label for="uacr_value">Aktuálne uACR <span class="required">*</span></label>
+                                <label for="uacr_value">Aktuálne uACR</label>
                                 <div class="input-with-unit">
-                                    <input type="text" id="uacr_value" name="uacr_value" required inputmode="decimal" class="form-control" placeholder="napr. 12,4" value="<?= htmlspecialchars($form['uacr_value']) ?>">
+                                    <input type="text" id="uacr_value" name="uacr_value" inputmode="decimal" class="form-control" placeholder="napr. 12,4" value="<?= htmlspecialchars($form['uacr_value']) ?>">
                                     <select id="uacr_unit" name="uacr_unit" class="form-control flex-08" aria-label="Jednotka uACR">
                                         <option value="mg_mmol" <?= $form['uacr_unit'] === 'mg_mmol' ? 'selected' : '' ?>>mg/mmol</option>
                                         <option value="mg_g" <?= $form['uacr_unit'] === 'mg_g' ? 'selected' : '' ?>>mg/g</option>
@@ -554,19 +487,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                     <section class="form-section" aria-labelledby="ambulatory-risk-heading">
                         <h3 id="ambulatory-risk-heading">Vstupy pre KFRE, CKD-PC a CKM</h3>
-                        <p class="helper-text">KFRE používa vek, pohlavie, eGFR a uACR. Nasledujúce údaje dopĺňajú CKD-PC a staging CKM.</p>
+                        <p class="helper-text">KFRE potrebuje vek, pohlavie, eGFR a uACR. CKD-PC navyše systolický TK, BMI a fajčenie; pri diabete aj HbA1c. CKM využije zadané metabolické a KV údaje. Nevyplnené polia sa vo výstupe vynechajú.</p>
                         <div class="form-grid">
                             <div class="form-group">
-                                <label for="sbp">Systolický TK (mmHg) <span class="required">*</span></label>
-                                <input type="text" id="sbp" name="sbp" required inputmode="decimal" class="form-control" placeholder="napr. 135" value="<?= htmlspecialchars($form['sbp']) ?>">
+                                <label for="sbp">Systolický TK (mmHg)</label>
+                                <input type="text" id="sbp" name="sbp" inputmode="decimal" class="form-control" placeholder="napr. 135" value="<?= htmlspecialchars($form['sbp']) ?>">
                             </div>
                             <div class="form-group">
-                                <label for="bmi">BMI (kg/m²) <span class="required">*</span></label>
-                                <input type="text" id="bmi" name="bmi" required inputmode="decimal" class="form-control" placeholder="napr. 29,4" value="<?= htmlspecialchars($form['bmi']) ?>">
+                                <label for="bmi">BMI (kg/m²)</label>
+                                <input type="text" id="bmi" name="bmi" inputmode="decimal" class="form-control" placeholder="napr. 29,4" value="<?= htmlspecialchars($form['bmi']) ?>">
                             </div>
                             <div class="form-group">
-                                <label for="smoking">Fajčenie <span class="required">*</span></label>
-                                <select id="smoking" name="smoking" required class="form-control">
+                                <label for="smoking">Fajčenie</label>
+                                <select id="smoking" name="smoking" class="form-control">
+                                    <option value="" <?= $form['smoking'] === '' ? 'selected' : '' ?>>Neuvedené</option>
                                     <option value="never" <?= $form['smoking'] === 'never' ? 'selected' : '' ?>>Nikdy nefajčil/a</option>
                                     <option value="former" <?= $form['smoking'] === 'former' ? 'selected' : '' ?>>Bývalý/á fajčiar/ka</option>
                                     <option value="current" <?= $form['smoking'] === 'current' ? 'selected' : '' ?>>Aktívne fajčí</option>
@@ -608,7 +542,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                     <section class="form-section" aria-labelledby="ambulatory-slope-heading">
                         <h3 id="ambulatory-slope-heading">Predchádzajúce eGFR pre výpočet slope</h3>
-                        <p class="helper-text">Aktuálne eGFR a dátum vyšetrenia sa pridajú automaticky. Zadajte aspoň jedno staršie meranie; pri viacerých bodoch sa použije lineárna regresia.</p>
+                        <p class="helper-text">Aktuálne eGFR a dátum vyšetrenia sa pridajú automaticky, ak sú zadané. Pre slope uveďte aspoň jedno staršie meranie; pri viacerých bodoch sa použije lineárna regresia.</p>
                         <?php for ($index = 1; $index <= 3; $index++): ?>
                             <div class="form-grid calc-item-separator">
                                 <div class="form-group">
@@ -644,8 +578,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <?php if ($plainTextOutput !== null): ?>
                     <section class="form-section calculator-result-block" role="status" aria-live="polite" aria-labelledby="ambulatory-result-heading">
                         <h3 id="ambulatory-result-heading">Text do lekárskej správy</h3>
-                        <label for="ambulatory-output">Pred vložením do Nefrisu text skontrolujte a podľa potreby upravte</label>
-                        <textarea id="ambulatory-output" class="form-control ambulatory-output" rows="13" readonly><?= htmlspecialchars($plainTextOutput) ?></textarea>
+                        <label for="ambulatory-output">Pred vložením do Nefrisu text skontrolujte a podľa potreby upravte. Sekcie, na ktoré nestačili vstupy, sú vynechané.</label>
+                        <textarea id="ambulatory-output" class="form-control ambulatory-output" rows="<?= max(14, min(28, substr_count($plainTextOutput, "\n") + 3)) ?>" readonly><?= htmlspecialchars($plainTextOutput) ?></textarea>
+                        <?php if ($skippedOutput !== []): ?>
+                            <div class="info-box-blue ambulatory-skipped" role="note" aria-labelledby="ambulatory-skipped-heading">
+                                <p id="ambulatory-skipped-heading">Z dostupných údajov sa nevypočítalo:</p>
+                                <ul>
+                                    <?php foreach ($skippedOutput as $skippedItem): ?>
+                                        <li><?= htmlspecialchars($skippedItem) ?></li>
+                                    <?php endforeach; ?>
+                                </ul>
+                            </div>
+                        <?php endif; ?>
                         <div class="form-actions no-print">
                             <button type="button" id="copy-ambulatory-output" class="btn-primary">Skopírovať text</button>
                             <span id="ambulatory-copy-status" class="helper-text" role="status" aria-live="polite"></span>
@@ -659,7 +603,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <ul>
                     <li>CKD vyžaduje abnormalitu štruktúry alebo funkcie obličiek trvajúcu najmenej 3 mesiace. Jediný abnormálny eGFR alebo uACR chronicitu nepotvrdzuje.</li>
                     <li>Pri G1–G2 a A1 bez iného markera poškodenia obličiek nie sú z uvedených údajov splnené kritériá CKD.</li>
-                    <li>KFRE sa tu počíta iba pri eGFR 10 až &lt;60 ml/min/1,73 m², s kalibráciou mimo Severnej Ameriky (Tangri 2016). CKD-PC sa počíta pri veku 20–80 rokov a predikuje iný endpoint: ≥40 % pokles eGFR alebo zlyhanie obličiek v horizonte 2–3 rokov.</li>
+                    <li>KFRE sa tu počíta iba pri eGFR 10 až &lt;60 ml/min/1,73 m², s kalibráciou mimo Severnej Ameriky (Tangri 2016). CKD-PC sa počíta pri veku 20–80 rokov a predikuje iný endpoint: ≥40 % pokles eGFR alebo zlyhanie obličiek v horizonte 2–3 rokov. Ak niektorý vstup chýba, príslušný model sa vo výstupe vynechá.</li>
                     <li>Automatický kód N18.x vyjadruje štádium CKD. Príčinu CKD a pridružené diagnózy vyberáte z importovaného číselníka MKCH-10-SK verzie 26, platného od 1. 1. 2026; k príčine možno doplniť vlastný text. Klinickú správnosť výberu musí potvrdiť lekár.</li>
                 </ul>
 

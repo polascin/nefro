@@ -7001,11 +7001,25 @@ mark.search-hl {
     }
 }
 .ambulatory-output {
-  min-height: 20rem;
+  min-height: 24rem;
   font-family: "Courier New", Courier, monospace;
   font-size: 0.95rem;
   line-height: 1.55;
   resize: vertical;
+  white-space: pre-wrap;
+}
+
+.ambulatory-skipped {
+  margin-top: 1rem;
+}
+
+.ambulatory-skipped p {
+  margin: 0 0 0.4rem;
+}
+
+.ambulatory-skipped ul {
+  margin: 0;
+  padding-left: 1.25rem;
 }
 
 .ambulatory-age-status {
@@ -7123,7 +7137,7 @@ mark.search-hl {
   }
 
   .ambulatory-output {
-    min-height: 26rem;
+    min-height: 30rem;
     font-size: 0.88rem;
   }
 }

@@ -168,12 +168,8 @@ try {
             $reader->close();
         }
     } finally {
-        if (is_resource($sourceStream)) {
-            fclose($sourceStream);
-        }
-        if (is_resource($temporaryXml)) {
-            fclose($temporaryXml);
-        }
+        fclose($sourceStream);
+        fclose($temporaryXml);
     }
 
     if (

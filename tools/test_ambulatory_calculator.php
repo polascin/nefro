@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+require_once __DIR__ . '/../calculators_common.php';
 require_once __DIR__ . '/../ckd_risk_models.php';
 require_once __DIR__ . '/../calculator_ambulatory_logic.php';
 
@@ -160,20 +161,113 @@ testSame('neurčená', ambulatoryFormatCause([], 'neurčená'), 'Príčina len t
 testSame('N08', ambulatoryFormatCause(['N08'], ''), 'Príčina len kód');
 testSame('', ambulatoryFormatCause([], ''), 'Príčina prázdna');
 
+testSame('vek a pohlavie', ambulatoryJoinSlovakList(['vek', 'pohlavie']), 'Spojka a pri dvoch položkách');
+testSame('vek, pohlavie a uACR', ambulatoryJoinSlovakList(['vek', 'pohlavie', 'uACR']), 'Čiarka a spojka pri troch');
+
 $output = ambulatoryBuildPlainText([
     'main_diagnosis' => 'N18.3 CKD G3b',
-    'cga' => 'príčina (Cause) test, kategória G3b, kategória A2',
-    'risks' => 'KFRE (...) | CKD-PC (...) | CKM Stage (AHA 2023): 2',
-    'slope' => '-2,00 ml/min/1,73 m²/rok',
-    'ga_risk' => 'vysoké',
+    'cause' => 'test',
+    'g_category' => 'G3b (eGFR 38,5 ml/min/1,73 m²) – stredne až výrazne znížená filtrácia',
+    'a_category' => 'A2 (uACR 12,40 mg/mmol = 109,6 mg/g) – stredne zvýšená albuminúria',
     'chronicity' => 'potvrdená',
+    'ga_risk' => 'vysoké',
+    'kfre' => '2-ročné 4,2 %; 5-ročné 15,1 %',
+    'ckdpc' => '3-ročné 8,4 % (≥40 % pokles eGFR alebo zlyhanie obličiek)',
+    'ckm' => '2 – metabolické rizikové faktory a/alebo CKD',
+    'slope' => '-2,00 ml/min/1,73 m²/rok (merania: 2; obdobie: 1,0 r.)',
     'related_diagnoses' => 'E11.2',
     'complications' => 'anémia',
+    'egfr_note' => true,
 ]);
-testSame(true, str_starts_with($output, 'Hlavná Dg (MKCH-10): N18.3 CKD G3b'), 'Začiatok čistého textu');
+testSame(true, str_starts_with($output, 'Hlavná diagnóza (MKCH-10): N18.3 CKD G3b'), 'Začiatok čistého textu');
+testSame(true, str_contains($output, "\n\nKDIGO 2024 – CGA\n"), 'Oddelená sekcia CGA');
+testSame(true, str_contains($output, "\n\nPrognóza\nKFRE: "), 'Oddelená sekcia prognózy');
+testSame(true, str_contains($output, 'Pridružené diagnózy (MKCH-10): E11.2'), 'Riadok pridružených diagnóz');
 testSame(true, str_contains($output, 'Poznámka k eGFR:'), 'Povinná poznámka k eGFR');
-testSame(true, str_contains($output, 'Pridružené Dg (MKCH-10): E11.2'), 'Riadok pridružených Dg');
-testSame(9, count(explode("\n", $output)), 'Počet riadkov čistého textu');
+testSame(false, str_contains($output, ' | '), 'Riziká nie sú v jednom riadku s rúrami');
+testSame(5, count(preg_split("/\n\n/", $output)), 'Počet blokov čistého textu');
+
+$partialOutput = ambulatoryBuildPlainText([
+    'g_category' => 'G3b (eGFR 38,5 ml/min/1,73 m²) – stredne až výrazne znížená filtrácia',
+    'egfr_note' => true,
+]);
+testSame(true, str_contains($partialOutput, "KDIGO 2024 – CGA\nKategória G:"), 'Čiastočný výstup má len kategóriu G');
+testSame(false, str_contains($partialOutput, 'KFRE:'), 'Čiastočný výstup vynechá KFRE');
+testSame(false, str_contains($partialOutput, 'Pridružené diagnózy'), 'Čiastočný výstup vynechá prázdne diagnózy');
+testSame(false, str_contains($partialOutput, 'Hlavná diagnóza'), 'Čiastočný výstup bez kódu N18');
+
+/**
+ * @param array<string, mixed> $overrides
+ * @return array<string, mixed>
+ */
+function ambulatoryTestInput(array $overrides = []): array
+{
+    return array_merge([
+        'cause' => '',
+        'age_years' => null,
+        'sex' => null,
+        'egfr' => null,
+        'uacr_value' => null,
+        'uacr_unit' => null,
+        'chronicity' => 'confirmed',
+        'repeat_date' => null,
+        'other_kidney_marker' => false,
+        'related_diagnoses' => '',
+        'sbp' => null,
+        'bmi' => null,
+        'smoking' => null,
+        'diabetes' => false,
+        'hba1c' => null,
+        'antihtn' => false,
+        'hf' => false,
+        'chd' => false,
+        'afib' => false,
+        'insulin' => false,
+        'oral_dm' => false,
+        'asian_ancestry' => false,
+        'increased_waist' => false,
+        'prediabetes' => false,
+        'hypertension' => false,
+        'hypertriglyceridemia' => false,
+        'metabolic_syndrome' => false,
+        'subclinical_cvd' => false,
+        'other_clinical_cvd' => false,
+        'slope_points' => [],
+        'complications' => '',
+    ], $overrides);
+}
+
+$egfrOnly = ambulatoryComputeReport(ambulatoryTestInput([
+    'egfr' => 38.5,
+]));
+testSame('N18.3 CKD G3b', $egfrOnly['summary']['main_diagnosis'] ?? null, 'Len eGFR určí N18.3');
+testSame(true, isset($egfrOnly['summary']['g_category']), 'Len eGFR vyplní kategóriu G');
+testSame(false, isset($egfrOnly['summary']['a_category']), 'Len eGFR nevyplní kategóriu A');
+testSame(false, isset($egfrOnly['summary']['kfre']), 'Len eGFR nespočíta KFRE');
+testSame(false, isset($egfrOnly['summary']['ckdpc']), 'Len eGFR nespočíta CKD-PC');
+testSame(true, isset($egfrOnly['summary']['ckm']), 'Potvrdená CKD G3b zaradí CKM');
+testSame(true, in_array('Orientačné riziko G+A — chýba uACR', $egfrOnly['skipped'], true), 'Upozornenie na chýbajúce uACR');
+testSame(true, in_array('eGFR slope — chýba predchádzajúce meranie', $egfrOnly['skipped'], true), 'Upozornenie na chýbajúci slope');
+
+$kfreReady = ambulatoryComputeReport(ambulatoryTestInput([
+    'age_years' => 60,
+    'sex' => 'male',
+    'egfr' => 25.0,
+    'uacr_value' => 300.0,
+    'uacr_unit' => 'mg_g',
+]));
+testSame('2-ročné 10,0 %; 5-ročné 33,5 %', $kfreReady['summary']['kfre'] ?? null, 'KFRE pri kompletných vstupoch');
+testSame(false, isset($kfreReady['summary']['ckdpc']), 'CKD-PC bez BMI a TK sa nespočíta');
+testSame(true, str_contains(implode(' ', $kfreReady['skipped']), 'CKD-PC — chýba'), 'CKD-PC nahlási chýbajúce vstupy');
+
+$bmiOnly = ambulatoryComputeReport(ambulatoryTestInput([
+    'bmi' => 29.4,
+    'chronicity' => 'confirmed',
+]));
+testSame(false, isset($bmiOnly['summary']['main_diagnosis']), 'Samotné BMI neurčí N18');
+testSame(false, isset($bmiOnly['summary']['chronicity']), 'Chronicita bez obličkových údajov sa do textu nedá');
+testSame(true, str_starts_with((string) ($bmiOnly['summary']['ckm'] ?? ''), '1 –'), 'BMI ≥25 zaradí CKM stage 1');
+testSame(false, str_contains(ambulatoryBuildPlainText($bmiOnly['summary']), 'KDIGO'), 'BMI-only text nemá sekciu CGA');
 
 $kdigoHeatmap = [
     'G1' => ['A1' => 'Nízke riziko', 'A2' => 'Stredné riziko', 'A3' => 'Vysoké riziko'],

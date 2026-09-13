@@ -275,7 +275,7 @@ $schemaWebApp = [
                 <div class="features-grid calculators-grid">
                     <article class="feature-card calculator-card">
                         <h3>Ambulantná kalkulačka</h3>
-                        <p>Súhrnný CKD nástroj pre ambulanciu: KDIGO 2024 CGA, KFRE, CKD-PC, CKM stage, eGFR slope, MKCH-10 štádium a čistý text pripravený na vloženie do lekárskej správy v Nefrise.</p>
+                        <p>Súhrnný CKD nástroj pre ambulanciu: KDIGO 2024 CGA, KFRE, CKD-PC, štádium CKM, eGFR slope, MKCH-10 štádium a čistý text pripravený na vloženie do lekárskej správy v Nefrise. Vyplňte len dostupné údaje — vypočíta sa to, na čo stačia zadané parametre.</p>
                         <a href="calculator_ambulatory.php" class="btn-primary">Otvoriť kalkulačku</a>
                     </article>
 

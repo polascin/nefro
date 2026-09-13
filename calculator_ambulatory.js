@@ -156,55 +156,6 @@
         updateBirthAgeStatus();
     }
 
-    var chronicity = document.getElementById('chronicity');
-    var repeatDate = document.getElementById('repeat_date');
-    function updateRepeatDateRequirement() {
-        if (chronicity && repeatDate) {
-            repeatDate.required = chronicity.value === 'unconfirmed';
-        }
-    }
-    if (chronicity) {
-        chronicity.addEventListener('change', updateRepeatDateRequirement);
-        updateRepeatDateRequirement();
-    }
-
-    var diabetes = document.querySelector('input[name="diabetes"]');
-    var hba1c = document.getElementById('hba1c');
-    function updateHba1cRequirement() {
-        if (diabetes && hba1c) {
-            hba1c.required = diabetes.checked;
-        }
-    }
-    if (diabetes) {
-        diabetes.addEventListener('change', updateHba1cRequirement);
-        updateHba1cRequirement();
-    }
-
-    var ambulatoryForm = document.getElementById('ambulatory-calculator-form');
-    if (ambulatoryForm) {
-        ambulatoryForm.addEventListener('submit', function (event) {
-            var causePicker = document.getElementById('mkch10-cause-picker');
-            var causeNote = document.getElementById('cause_note');
-            var causeStatus = document.getElementById('cause_diagnosis_status');
-            var causeSearch = document.getElementById('cause_diagnosis_search');
-            var hasCauseCodes = causePicker && causePicker.querySelector('input[name="cause_diagnoses[]"]');
-            var hasCauseNote = causeNote && causeNote.value.trim() !== '';
-            if (hasCauseCodes || hasCauseNote) {
-                return;
-            }
-
-            event.preventDefault();
-            if (causeStatus) {
-                causeStatus.textContent = 'Uveďte príčinu CKD výberom z číselníka MKCH-10 alebo vlastným textom.';
-            }
-            if (causeSearch && !causeSearch.disabled) {
-                causeSearch.focus();
-            } else if (causeNote) {
-                causeNote.focus();
-            }
-        });
-    }
-
     function normalizeDiagnosisText(value) {
         return value.toLocaleLowerCase('sk-SK')
             .normalize('NFD')
