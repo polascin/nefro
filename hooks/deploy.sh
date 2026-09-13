@@ -115,7 +115,9 @@ setup_sftp() {
 	REMOTE_PATH=${REMOTE_PATH%/}
 	resolve_sftp_bin || exit 1
 
-	declare -g -a SFTP_OPTIONS=(-q -o BatchMode=yes -o ConnectTimeout=20 -o StrictHostKeyChecking=accept-new)
+	# Bez `declare -g`: systémový macOS Bash 3.2 tento prepínač nepodporuje.
+	# Premenná bez `local` zostáva globálna aj po návrate z funkcie.
+	SFTP_OPTIONS=(-q -o BatchMode=yes -o ConnectTimeout=20 -o StrictHostKeyChecking=accept-new)
 
 	# Bez strojovo lokálneho cieľa zostáva zachovaný pôvodný explicitný prístup.
 	# Vďaka tomu konfigurácia Macu nemení správanie na synchronizovanom Windows stroji.
