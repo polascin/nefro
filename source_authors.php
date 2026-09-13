@@ -71,6 +71,11 @@ function getSourceArticleAuthors(): array {
         'extremne-horucavy-riziko-ckd-dialyza' => ['Roberta Villa'],
         'farmakologicka-liecba-obezity-pokrocile-ckd-dialyza' => ['Pooja Budhiraja', 'Babak J. Orandi'],
         'finerenon-ckm-syndrom-dm2-ckd-fidelity' => ['Kevin Bryan Lo', 'John W Ostrominski', 'Yasuhiro Hamatani', 'Brian L Claggett', 'Rajiv Agarwal', 'Stefan D Anker', 'Gerasimos Filippatos', 'Peter Rossing', 'Luis M Ruilope', 'Bertram Pitt', 'Alexandros Briasoulis', 'Kimon Stamatelopoulos', 'Meike Brinker', 'Patrick Schloemer', 'Andrea Glasauer', 'Scott D Solomon', 'Muthiah Vaduganathan'],
+        // Autori prespecifikovanej podskupinovej analýzy FIND-CKD (Eur Heart J 2026,
+        // doi 10.1093/eurheartj/ehag729, PMID 42669052) – 26 mien, AuthorList CompleteYN=Y,
+        // overené cez PubMed eutils a Crossref 2026-09-13. Kolektív FIND-CKD Investigators
+        // sa bez rozvinutého zoznamu jednotlivých členov nepridáva.
+        'finerenon-hypertenzna-nefropatia-bez-diabetu-find-ckd' => ['Hiddo J. L. Heerspink', 'Jelle M. Beernink', 'Rajiv Agarwal', 'David Z. I. Cherney', 'Carolyn S. P. Lam', 'Brendon L. Neuen', 'Vlado Perkovic', 'Katherine R. Tuttle', 'Pantelis Sarafidis', 'Rita Birne', 'Xiangmei Chen', 'Mads Hornum', 'Rafael A. Maldonado', 'Masaomi Nangaku', 'Susanne B. Nicholas', 'Atsuki Ohashi', 'Pablo E. Pergola', 'See Cheng Yeo', 'Niels Jongs', 'J. David Smeijer', 'Carolina Aldworth', 'Meike Brinker', 'Peter Kolkhof', 'Juliana D. Reis', 'Andrea Scalise', 'Christoph Wanner'],
         'finerenon-zakladna-liecba-ckd-glomerularne-ochorenia' => ['Brendon L. Neuen', 'Hiddo J.L. Heerspink', 'Vlado Perkovic'],
         'frailty-ckd-vyziva-pohyb-stisk-ruky' => ['Fang-Ru Yueh', 'Dongjuan Xu', 'Huan-Fang Lee', 'Junne-Ming Sung', 'Miaofen Yen'],
         'geneticke-prediktory-glp1-semaglutid-tirzepatid' => ['Qiaojuan Jane Su', 'James R. Ashenhurst', 'Wanwan Xu', 'Vinh Tran', 'R. Ryanne Wu', 'Catherine H. Weldon', 'Jingchunzi Shi', 'Barry Hicks', 'Noura S. Abul-Husn', 'Stella Aslibekyan', 'Michael V. Holmes', 'Bertram L. Koelsch', 'Adam Auton'],
