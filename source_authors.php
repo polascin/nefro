@@ -232,6 +232,9 @@ function getSourceArticleAuthors(): array {
         // Autori spracovanej práce Diabetes Res Clin Pract 2026;239:113476 (PMID 42537913) —
         // 9 mien overených cez PubMed 2026-08-28.
         'serove-ketolatky-oblickove-udalosti-diabetes-2-typu' => ['Soo Myoung Shin', 'Jiyoon Lee', 'Young-Eun Kim', 'Jung A Kim', 'Kyoung Jin Kim', 'Kyeong Jin Kim', 'Hee Young Kim', 'Sin Gon Kim', 'Nam Hoon Kim'],
+        // Autori spracovanej práce NDT 2026 gfag211 (PMID 42726023) —
+        // 10 mien overených cez PubMed eutils a Crossref 2026-09-14.
+        'sparsentan-sglt2-inhibitor-iga-nefropatia-spartacus-protect' => ['Isabelle Ayoub', 'Gabriela Alperovich', 'Radko Komers', 'Laura Ann Kooienga', 'Alex Mercer', 'Stephanie Moody', 'Ingrid Prkačin', 'Brad H. Rovin', 'Hira Siktel', 'Sydney C. W. Tang'],
         'spolupraca-vseobecny-lekar-nefrolog-ckd-g5-joint-kd' => ['Minoru Murakami', 'Takuya Aoki', 'Yoshifumi Sugiyama', 'Sho Sasaki', 'Hiroki Nishiwaki', 'Masahiko Yazawa', 'Yoshihiko Raita', 'Hiroo Kawarazaki', 'Hideaki Shimizu', 'Yoshihiro Nakamura', 'Yosuke Saka', 'Masato Matsushima'],
         // Písací výbor konferenčnej správy KDIGO o HF a CKD (Kidney Int 2026;109:1095–1113,
         // PMID 41791738; súčasne JACC Heart Fail 2026;14:102943, PMID 41793402) — 14 menovaných
