@@ -391,5 +391,8 @@ function getSourceArticleAuthors(): array {
         // Interaktivny prehliadac uvadza druheho autora ako "Chad Jones", pracovny
         // dokument ako "Charles I. Jones" - ta ista osoba.
         'ai-ekonomicke-scenare-2030-praca-zdravotnictvo' => ['Anton Korinek', 'Charles I. Jones', 'Szymon Sacher', 'Tess Cotter', 'Peter McCrory'],
+        // Autori spracovaného Core Curriculum 2026 (Am J Kidney Dis, doi 10.1053/j.ajkd.2026.06.008,
+        // PMID 42726032) — presne dvaja, AuthorList CompleteYN=Y, overené cez PubMed eutils 2026-09-14.
+        'komplement-oblicky-iga-nefropatia-inhibicia-klinik' => ['Joshua M. Thurman', 'Felix Poppelaars'],
     ];
 }
