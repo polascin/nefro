@@ -633,7 +633,14 @@ function ambulatoryComputeReport(array $input): array
             $ckdModerateHigh = $hasConfirmedCkd && $gaRiskKey !== 'low';
             $ckdVeryHigh = $hasConfirmedCkd && ($gaRiskKey === 'veryhigh' || $kidneyFailure);
         } else {
-            $ckdModerateHigh = $hasConfirmedCkd && $egfr !== null && $egfr < 60.0;
+            // Bez kompletného G×A: AHA CKM štádium 2 je stredné/vysoké KDIGO riziko.
+            // Albuminúria A2/A3 to spĺňa aj bez eGFR (G1A2 je stredné). Samotné
+            // eGFR <60 tiež. Neznáma A pri G1/G2 (len iný marker) nie.
+            $ckdModerateHigh = $hasConfirmedCkd && (
+                ($egfr !== null && $egfr < 60.0)
+                || $aCategory === 'A2'
+                || $aCategory === 'A3'
+            );
             $ckdVeryHigh = $kidneyFailure;
         }
         $ckmStage = ckmComputeStage(
