@@ -235,6 +235,9 @@ function getSourceArticleAuthors(): array {
         // Autori spracovanej práce NDT 2026 gfag211 (PMID 42726023) —
         // 10 mien overených cez PubMed eutils a Crossref 2026-09-14.
         'sparsentan-sglt2-inhibitor-iga-nefropatia-spartacus-protect' => ['Isabelle Ayoub', 'Gabriela Alperovich', 'Radko Komers', 'Laura Ann Kooienga', 'Alex Mercer', 'Stephanie Moody', 'Ingrid Prkačin', 'Brad H. Rovin', 'Hira Siktel', 'Sydney C. W. Tang'],
+        // Autori spracovanej multicentrickej kohorty CKJ 2026, DOI 10.1093/ckj/sfag298,
+        // overení cez PubMed eutils a Crossref 2026-09-17.
+        'sparsentan-realna-prax-iga-nefropatia-12-mesiacov' => ['Clara García-Carro', 'Antolina Rodríguez-Moreno', 'Lucía Cordero', 'María Vanessa Pérez-Gómez', 'Helena Marco Rusiñol', 'Enrique Pasache', 'Alejandro Morales', 'Rocío Zamora', 'Diego Parra', 'Juan Villa', 'Elena Guillén-Olmos', 'Verónica Coll-Brito', 'Álvaro Álvarez', 'Juliana Bordignon', 'Carola Arcal', 'Olga Gracia', 'Patricia Delgado', 'María José Soler', 'Ana I. Sánchez-Fructuoso'],
         'spolupraca-vseobecny-lekar-nefrolog-ckd-g5-joint-kd' => ['Minoru Murakami', 'Takuya Aoki', 'Yoshifumi Sugiyama', 'Sho Sasaki', 'Hiroki Nishiwaki', 'Masahiko Yazawa', 'Yoshihiko Raita', 'Hiroo Kawarazaki', 'Hideaki Shimizu', 'Yoshihiro Nakamura', 'Yosuke Saka', 'Masato Matsushima'],
         // Písací výbor konferenčnej správy KDIGO o HF a CKD (Kidney Int 2026;109:1095–1113,
         // PMID 41791738; súčasne JACC Heart Fail 2026;14:102943, PMID 41793402) — 14 menovaných
@@ -379,6 +382,12 @@ function getSourceArticleAuthors(): array {
         // Autorky spracovanej studie J Nephrol 2026 (doi 10.1093/joneph/aajag176,
         // PMID 42687760) - presne dve, overene cez PubMed 2026-09-09.
         'ppi-h2-antihistaminika-nsaid-ckd-progresia' => ['Susin Park', 'Pusoon Chun'],
+        // Autori ACG guideline 2022, PMID 34807007, a systematickeho prehladu
+        // Pharmacol Res Perspect 2020, DOI 10.1002/prp2.651, overeni cez PubMed/PMC 2026-09-17.
+        'ppi-dlhodobe-uzivanie-dokazy-prax' => ['Philip O. Katz', 'Kerry Dunbar', 'Felice H. Schnoll-Sussman', 'Katarina B. Greer', 'Rena Yadlapati', 'Stuart Jon Spechler', 'Mohamed Ben-Eltriki', 'Carolyn J. Green', 'Malcolm Maclure', 'Vijaya Musini', 'Ken L. Bassett', 'James M. Wright'],
+        // Autori spracovanej meta-analyzy Clinical Obesity 2026, DOI 10.1111/cob.70111,
+        // PMID 42670242, overeni cez Crossref/OpenAlex 2026-09-17.
+        'tirzepatid-vs-semaglutid-ucinnost-bezpecnost-nefro' => ['Giovanna Pagani Paccola', 'Roberta Fernandes de Oliveira', 'Matheus Menão Mochetti', 'Fernanda Pataro Marsola Razera', 'Rafael Vecchi', 'Renan Canale Peres Montanher'],
         // Autorka spracovaneho pacientskeho komentara CJASN 2026
         // (doi 10.2215/CJN.0000001228, PMID 42709610) - jedina autorka, overene
         // cez PubMed 2026-09-09.
