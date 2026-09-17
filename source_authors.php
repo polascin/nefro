@@ -61,6 +61,9 @@ function getSourceArticleAuthors(): array {
         'dapagliflozin-kardiochirurgia-aki-mercuri-2' => ['Maartina J. P. Oosterom-Eijmael', 'Abraham H. Hulst', 'Nelson P. Monteiro de Oliveira', 'Ed D. Niesten', 'Nicobert E. Wietsma', 'Bastiaan M. Gerritse', 'Thierry V. Scohy', 'Thijs C. D. Rettig', 'Ferdinand T. F. Snellen', 'Magiel F. Voogd', 'Marc B. Godfried', 'Rients N. de Boer', 'Jeroen Wink', 'Lisa M. M. van der Werff', 'Christa M. Cobbaert', 'L. Renee Ruhaak', 'Susanne Eberl', 'Benedikt Preckel', 'Markus W. Hollmann', 'Jimmy Schenk', 'Jeroen Hermanides', 'Daniel H. van Raalte'],
         'dennik-semafor-objemovy-manazment-hemodialyza-rct' => ['Amin Li', 'Di Zhang', 'Liheng Zhou', 'Wenwen Lu'],
         'dialyzacny-dysekvilibracny-syndrom-zaciatok-hemodialyzy' => ['Théo Servan-Schreiber', 'Guillaume Lano', 'Matthieu Giot', 'Océane Jehel', 'Marion Pelletier', 'Marion Sallée', 'Philippe Brunet', 'Stéphane Burtey', 'Thomas Robert'],
+        // Autori spracovanej review Nephron 2026, doi 10.1159/nef/adtag007 (PMID 42731064) —
+        // 4 mená overené cez PubMed eutils a Karger 2026-09-14.
+        'diurnalna-exkrecia-sodika-nocna-hypertenzia-casovanie-soli' => ['Artemios G. Karagiannidis', 'Marieta Theodorakopoulou', 'Fotini Iatridi', 'Pantelis Sarafidis'],
         'domaca-hemodialyza-kdigo-vychodna-azia-ramec-rozvoja' => ['Ikuto Masakane', 'Paul N. Bennett', 'Chia-Ter Chao', 'Michael Cheung', 'Tsutomu Furuzono', 'Masaki Hara', 'Yung-Ho Hsu', 'Chiu-Ching Huang', 'Sayaka Ishigaki', 'Michel Jadoul', 'Eunjeong Kang', 'Seong Geun Kim', 'Kenichi Kokubo', 'Hirotaka Komaba', 'Huey-Liang Kuo', 'Ki Jeong Kwon', 'Vickie Kwong', 'Wai-Yan Lau', 'Titus Lau', 'Dong Hyung Lee', 'Philip Kam-Tao Li', 'Mark Marshall', 'Sandip Mitra', 'Kojiro Nagai', 'Tomonari Ogawa', 'Hyeong Cheon Park', 'Clara Poon', 'Naoko Tsuji', 'Joseph Wong', 'Po Kwan Wong', 'Sunny Wong', 'Hung-Lai Wu', 'Mei-Yi Wu', 'Kyung Don Yoo', 'Christopher T. Chan'],
         'dress-alopurinol-granulomatozna-ain-pankreatitida' => ['Said Al Zein'],
         'dyslipidemia-ckd-acc-aha-2026-nefrologicka-prax' => ['Amaryllis H Van Craenenbroeck', 'Patrick B Mark', 'Jose M Valdivielso', 'EuReCa-m Working Group of the European Renal Association'],
@@ -71,6 +74,11 @@ function getSourceArticleAuthors(): array {
         'extremne-horucavy-riziko-ckd-dialyza' => ['Roberta Villa'],
         'farmakologicka-liecba-obezity-pokrocile-ckd-dialyza' => ['Pooja Budhiraja', 'Babak J. Orandi'],
         'finerenon-ckm-syndrom-dm2-ckd-fidelity' => ['Kevin Bryan Lo', 'John W Ostrominski', 'Yasuhiro Hamatani', 'Brian L Claggett', 'Rajiv Agarwal', 'Stefan D Anker', 'Gerasimos Filippatos', 'Peter Rossing', 'Luis M Ruilope', 'Bertram Pitt', 'Alexandros Briasoulis', 'Kimon Stamatelopoulos', 'Meike Brinker', 'Patrick Schloemer', 'Andrea Glasauer', 'Scott D Solomon', 'Muthiah Vaduganathan'],
+        // Autori prespecifikovanej podskupinovej analýzy FIND-CKD (Eur Heart J 2026,
+        // doi 10.1093/eurheartj/ehag729, PMID 42669052) – 26 mien, AuthorList CompleteYN=Y,
+        // overené cez PubMed eutils a Crossref 2026-09-13. Kolektív FIND-CKD Investigators
+        // sa bez rozvinutého zoznamu jednotlivých členov nepridáva.
+        'finerenon-hypertenzna-nefropatia-bez-diabetu-find-ckd' => ['Hiddo J. L. Heerspink', 'Jelle M. Beernink', 'Rajiv Agarwal', 'David Z. I. Cherney', 'Carolyn S. P. Lam', 'Brendon L. Neuen', 'Vlado Perkovic', 'Katherine R. Tuttle', 'Pantelis Sarafidis', 'Rita Birne', 'Xiangmei Chen', 'Mads Hornum', 'Rafael A. Maldonado', 'Masaomi Nangaku', 'Susanne B. Nicholas', 'Atsuki Ohashi', 'Pablo E. Pergola', 'See Cheng Yeo', 'Niels Jongs', 'J. David Smeijer', 'Carolina Aldworth', 'Meike Brinker', 'Peter Kolkhof', 'Juliana D. Reis', 'Andrea Scalise', 'Christoph Wanner'],
         'finerenon-zakladna-liecba-ckd-glomerularne-ochorenia' => ['Brendon L. Neuen', 'Hiddo J.L. Heerspink', 'Vlado Perkovic'],
         'frailty-ckd-vyziva-pohyb-stisk-ruky' => ['Fang-Ru Yueh', 'Dongjuan Xu', 'Huan-Fang Lee', 'Junne-Ming Sung', 'Miaofen Yen'],
         'geneticke-prediktory-glp1-semaglutid-tirzepatid' => ['Qiaojuan Jane Su', 'James R. Ashenhurst', 'Wanwan Xu', 'Vinh Tran', 'R. Ryanne Wu', 'Catherine H. Weldon', 'Jingchunzi Shi', 'Barry Hicks', 'Noura S. Abul-Husn', 'Stella Aslibekyan', 'Michael V. Holmes', 'Bertram L. Koelsch', 'Adam Auton'],
@@ -98,6 +106,8 @@ function getSourceArticleAuthors(): array {
         'htd1801-berberin-ursodeoxycholat-diabetes-2-typu' => ['Linong Ji', 'Zhifeng Cheng', 'Jianhua Ma', 'Dexue Liu', 'Xin Zhang', 'Xiaolin Dong', 'Yang Lin', 'Mingming Yang', 'Shenglian Gan', 'Hanqing Cai', 'Xiaomei Wang', 'Yan Liu', 'Xiaoguang Shi', 'Kui Liu', 'Leigh MacConell', 'Meng Yu', 'Liping Liu'],
         'iga-nefropatia-algoritmus-kdigo-2025-kdoqi' => ['Isabelle Ayoub', 'Gaia Coppock', 'Shikha Wadhwani', 'Timothy Yau'],
         'implementacia-intenzivnej-kontroly-tlaku-esprit-nefrologia' => ['Yu-Jie Zuo', 'Ji-Guang Wang'],
+        // Autori spracovanej štúdie Nature Communications 2026;17:7581, overení cez Crossref.
+        'inhibicia-saga-pghi-4-vankomycin-rezistentny-enterococcus-faecium' => ['Kyong T. Fam', 'Pavan Kumar Chodisetti', 'Zifei Wang', 'Joshua A. Homer', 'Christopher J. Smedley', 'Seiya Kitamura', 'Benjamin Silva', 'Yijun Xiong', 'Althea Hansel-Harris', 'Matthew Holcomb', 'Simeon Babarinde', 'Adrianna M. Turner', 'Daria Van Tyne', 'Ian A. Wilson', 'Stefano Forli', 'Benjamin F. Cravatt', 'Donghyun Park', 'Dennis W. Wolan', 'John E. Moses', 'Howard C. Hang'],
         'inhibicia-tmao-fmc-regresia-fibrozy-ckd-model' => ['Joseph A DiDonato', 'Taylor L Weeks', 'Nilaksh Gupta', 'Deepthi P Mallela', 'Jennifer A Buffa', 'Zeneng Wang', 'Xinmin S Li', 'James T Anderson', 'Xiaoming Fu', 'Naseer Sangwan', 'Ina Nemet', 'Scott J Cameron', 'Stanley L Hazen'],
         // Autori spracovanej práce JAMA Dermatol. 2026, doi 10.1001/jamadermatol.2026.2853
         // (PMID 42584887) — 22 mien, AuthorList CompleteYN=Y, overené cez PubMed eutils 2026-09-03.
@@ -222,6 +232,9 @@ function getSourceArticleAuthors(): array {
         // Autori spracovanej práce Diabetes Res Clin Pract 2026;239:113476 (PMID 42537913) —
         // 9 mien overených cez PubMed 2026-08-28.
         'serove-ketolatky-oblickove-udalosti-diabetes-2-typu' => ['Soo Myoung Shin', 'Jiyoon Lee', 'Young-Eun Kim', 'Jung A Kim', 'Kyoung Jin Kim', 'Kyeong Jin Kim', 'Hee Young Kim', 'Sin Gon Kim', 'Nam Hoon Kim'],
+        // Autori spracovanej práce NDT 2026 gfag211 (PMID 42726023) —
+        // 10 mien overených cez PubMed eutils a Crossref 2026-09-14.
+        'sparsentan-sglt2-inhibitor-iga-nefropatia-spartacus-protect' => ['Isabelle Ayoub', 'Gabriela Alperovich', 'Radko Komers', 'Laura Ann Kooienga', 'Alex Mercer', 'Stephanie Moody', 'Ingrid Prkačin', 'Brad H. Rovin', 'Hira Siktel', 'Sydney C. W. Tang'],
         'spolupraca-vseobecny-lekar-nefrolog-ckd-g5-joint-kd' => ['Minoru Murakami', 'Takuya Aoki', 'Yoshifumi Sugiyama', 'Sho Sasaki', 'Hiroki Nishiwaki', 'Masahiko Yazawa', 'Yoshihiko Raita', 'Hiroo Kawarazaki', 'Hideaki Shimizu', 'Yoshihiro Nakamura', 'Yosuke Saka', 'Masato Matsushima'],
         // Písací výbor konferenčnej správy KDIGO o HF a CKD (Kidney Int 2026;109:1095–1113,
         // PMID 41791738; súčasne JACC Heart Fail 2026;14:102943, PMID 41793402) — 14 menovaných
@@ -296,12 +309,22 @@ function getSourceArticleAuthors(): array {
         // Autori spracovaneho prehladu Nature Reviews Nephrology 2026
         // (doi 10.1038/s41581-026-01117-6) - 11 mien overenych cez Crossref 2026-09-06.
         'zapal-terapeuticky-ciel-ckd-renalne-kardiovaskularne-vysledky' => ['Katherine R. Tuttle', 'Mehmet Kanbay', 'Radica Z. Alicic', 'Juan Jesus Carrero', 'Sidar Copur', 'Ann Marie Navar', 'Brendon L. Neuen', 'Vlado Perkovic', 'Peter Rossing', 'Nikolaus Marx', 'Paul M. Ridker'],
+        // Autori spracovaneho prehladu Via practica 2026;23(2):62-65 - mena a titul
+        // overene na verejnej stranke vydavatela SOLEN 2026-09-13.
+        'inkretinove-agonisty-masld-mash-pecen-ckd' => ['Ľubomír Horák', 'Anna Šarocká'],
+        // Autori spracovaneho prehladu Curr Opin Nephrol Hypertens 2026
+        // (doi 10.1097/MNH.0000000000001225) - mena overene cez PubMed 2026-09-13.
+        'steatoticke-ochorenie-pecene-riziko-ckd' => ['William R. Marshall', 'Smeeta Sinha', 'Darren Green', 'Philip A. Kalra'],
         // Autori spracovanej studie Circ Popul Health Outcomes 2026;e013042
         // (doi 10.1161/circoutcomes.125.013042) - 8 mien overenych cez Crossref 2026-09-06.
         'ckm-riziko-mladi-dospeli-79-percent-vyznam' => ['Vaishnavi Krishnan', 'Hongyan Ning', 'Daniel A. Notterman', 'Noreen Goldman', 'Sadiya S. Khan', 'Nilay S. Shah', 'Norrina B. Allen', 'Donald M. Lloyd-Jones'],
         // Autori spracovanej studie REVEAL-CKD (BMJ Open 2023;13:e067386,
         // doi 10.1136/bmjopen-2022-067386, PMID 37217263) - 12 mien overenych cez PubMed 2026-09-06.
         'nerozpoznana-ckd-hypertenzia-kardiovaskularne-ochorenie' => ['Navdeep Tangri', 'Takahito Moriyama', 'Markus P. Schneider', 'Jean Baptiste Virgitti', 'Luca De Nicola', 'Michael Arnold', 'Salvatore Barone', 'Elizabeth Peach', 'Eric Wittbrodt', 'Hungta Chen', 'Krister Jarbrink', 'Pamela Kushner'],
+        // Autori spracovanej retrospektívnej štúdie CJASN 2026;21(6):1048-1050
+        // (doi 10.2215/CJN.0000001042, PMID 41848790) - 10 mien overených cez
+        // PubMed a Crossref 2026-09-13.
+        'negativny-geneticky-test-oblicky-sekvenovanie-exomu' => ['Shwetha Bindhu', 'Euyn Lim', 'Chloe Borden', 'Michael George', 'Xin Yee Tan', 'Mary-Beth Roberts', 'Sarah Mazzola', 'Fang Zhao', 'Yu-Wei Cheng', 'Xiangling Wang'],
         // Autori spracovanej post hoc analyzy PROTECT (CJASN 2026;21(4):578-592,
         // doi 10.2215/CJN.0000000961, PMID 41428405) - 8 mien overenych cez Crossref a PubMed 2026-09-06.
         'kompletna-remisia-proteinurie-igan-protect-post-hoc' => ['Hiddo J. L. Heerspink', 'Brad H. Rovin', 'Radko Komers', 'Bruce Hendry', 'Alex Mercer', 'Priscila Preciado', 'Edward Murphy', 'Vladimir Tesar'],
@@ -368,5 +391,8 @@ function getSourceArticleAuthors(): array {
         // Interaktivny prehliadac uvadza druheho autora ako "Chad Jones", pracovny
         // dokument ako "Charles I. Jones" - ta ista osoba.
         'ai-ekonomicke-scenare-2030-praca-zdravotnictvo' => ['Anton Korinek', 'Charles I. Jones', 'Szymon Sacher', 'Tess Cotter', 'Peter McCrory'],
+        // Autori spracovaného Core Curriculum 2026 (Am J Kidney Dis, doi 10.1053/j.ajkd.2026.06.008,
+        // PMID 42726032) — presne dvaja, AuthorList CompleteYN=Y, overené cez PubMed eutils 2026-09-14.
+        'komplement-oblicky-iga-nefropatia-inhibicia-klinik' => ['Joshua M. Thurman', 'Felix Poppelaars'],
     ];
 }
