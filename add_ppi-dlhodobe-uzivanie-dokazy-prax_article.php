@@ -66,7 +66,7 @@ $articles[] = [
 
 <h2>Randomizované bezpečnostné dáta: pantoprazol v COMPASS</h2>
 
-<p>V štúdii COMPASS boli pacienti so stabilným kardiovaskulárnym alebo periférnym arteriálnym ochorením, ktorí nemali schválenú indikáciu na PPI, sekundárne randomizovaní na pantoprazol 40 mg denne alebo placebo. Po mediáne približne 3 rokov sa celková mortalita významne nelíšila: <strong>HR 1,03; 95 % interval spoľahlivosti 0,92–1,15</strong>. V štúdii sa zistilo mierne zvýšenie črevných infekcií, približne 1,4 % oproti 1,0 % pri placebe.</p>
+<p>V štúdii COMPASS boli pacienti so stabilným kardiovaskulárnym alebo periférnym arteriálnym ochorením, ktorí nemali schválenú indikáciu na PPI, sekundárne randomizovaní na pantoprazol 40 mg denne alebo placebo. Po mediáne približne 3 rokov sa celková mortalita významne nelíšila: <strong>HR 1,03; 95 % interval spoľahlivosti 0,92–1,15</strong>. Jediným ukazovateľom s významným rozdielom boli črevné infekcie: <strong>1,4 % oproti 1,0 %</strong> pri placebe (pomer šancí 1,33; 95 % IS 1,01–1,75). Infekcia <em>Clostridioides difficile</em> bola v skupine s pantoprazolom približne dvakrát častejšia, celkovo však bolo zaznamenaných len 13 prípadov, takže rozdiel nedosiahol štatistickú významnosť.</p>
 
 <p>COMPASS však nebola štúdia navrhnutá primárne na zachytenie zriedkavých alebo veľmi neskorých nežiaducich účinkov. Výsledok preto podporuje upokojenie pri niekoľkoročnej expozícii, ale nemôže definitívne vylúčiť malý účinok pri dlhšom sledovaní, v inej populácii alebo pri inom klinickom kontexte.</p>
 
@@ -144,7 +144,7 @@ $articles[] = [
 <ul>
   <li><a href="article.php?slug=ppi-h2-antihistaminika-nsaid-ckd-progresia">PPI verzus H2-antihistaminiká u pacientov s CKD užívajúcich NSAID</a></li>
   <li><a href="article.php?slug=ckd-samostatny-faktor-polyfarmacie">Chronická choroba obličiek ako samostatný faktor polyfarmácie</a></li>
-  <li><a href="article.php?slug=optimalizacia-raasi-mra-hyperkaliemia-ckd">Optimalizácia RAAS blokády a manažment hyperkaliémie pri CKD</a></li>
+  <li><a href="article.php?slug=optimalizacia-raasi-mra-hyperkaliemia-ckd-hf">Optimalizácia RAASi/MRA terapie pri srdcovom zlyhávaní, CKD a hyperkaliémii</a></li>
 </ul>
 
 <hr>
