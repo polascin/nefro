@@ -321,7 +321,7 @@ if (isLoggedIn()) {
                         <div class="form-grid calc-item-separator">
                             <div class="form-group">
                                 <label for="egfr_unit">Jednotka eGFR (platí pre všetky merania)</label>
-                                <?php calculatorRenderEgfrUnitSelect($form["egfr_unit"], 'egfr_unit', ''); ?>
+                                <?php calculatorRenderEgfrUnitSelect($form["egfr_unit"], 'egfr_unit', '', true); ?>
                             </div>
                         </div>
 

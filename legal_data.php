@@ -40,8 +40,8 @@ function legalInfo(): array
         'jurisdiction'             => 'Slovenskej republiky (EÚ)',
         'supervisoryAuthority'     => 'Úrad na ochranu osobných údajov Slovenskej republiky',
         'supervisoryAuthorityUrl'  => 'https://dataprotection.gov.sk/sk/',
-        'effectiveDate'            => '2026-09-10',
-        'version'                  => '2.7',
+        'effectiveDate'            => '2026-09-17',
+        'version'                  => '2.8',
         'consentVersion'           => '2026-07-16',
     ];
 }
@@ -80,7 +80,7 @@ function legalDataCategories(): array
         ],
         [
             'category' => 'Komunikácia',
-            'examples' => 'Newsletter, notifikácie o článkoch, overovacie e-maily/SMS a príspevky v diskusii.',
+            'examples' => 'Newsletter (nové články aj novinky na portáli), notifikácie o článkoch, overovacie e-maily/SMS a príspevky v diskusii.',
         ],
         [
             'category' => 'Technické a prevádzkové údaje',
@@ -102,7 +102,7 @@ function legalProcessingPurposes(): array
             'basis'   => 'Zmluva — čl. 6 ods. 1 písm. b); pri údajoch o zdraví navyše čl. 9 ods. 2 písm. h) (zdravotná starostlivosť), resp. výslovný súhlas písm. a). Pri týchto údajoch vystupuje prevádzkovateľ v postavení prevádzkovateľa (nie sprostredkovateľa ambulancie), pretože sám určuje účely a prostriedky ich spracúvania; sprostredkovateľská zmluva podľa čl. 28 sa preto neuzatvára.',
         ],
         [
-            'purpose' => 'Zasielanie newslettera a notifikácií o nových článkoch',
+            'purpose' => 'Zasielanie newslettera a notifikácií o nových článkoch a o novinkách na portáli (nové kalkulačky, nástroje a zmeny v službe)',
             'basis'   => 'Súhlas — čl. 6 ods. 1 písm. a) (kedykoľvek odvolateľný odhlásením)',
         ],
         [
@@ -277,6 +277,7 @@ function legalStoredItems(): array
 function legalRecentUpdates(): array
 {
     return [
+        'Týždenný newsletter odteraz okrem nových odborných článkov obsahuje aj krátky prehľad noviniek na portáli — nové kalkulačky, interaktívne nástroje a zmeny v ostatných častiach služby. Účel spracúvania a text súhlasu sme tomu prispôsobili; odber je stále dobrovoľný a kedykoľvek odvolateľný odhlásením.',
         'Doplnili sme opis interného pracovného adresára zdravotníckych zariadení — aké kontaktné údaje v ňom vedieme, že pochádzajú z verejne dostupných profesijných zdrojov (register poskytovateľov e-VÚC a weby zariadení), že právnym základom je oprávnený záujem podľa čl. 6 ods. 1 písm. f) a že dotknuté osoby informujeme e-mailom podľa čl. 14 GDPR. Nejde o údaje pacientov.',
         'Spresnili sme, kto maže uložené výsledky klinických kalkulačiek: záznam vymaže ten, kto ho zadal, priamo vo svojom konte, na žiadosť používateľa ho vymaže prevádzkovateľ a všetky záznamy sa odstránia aj pri zrušení konta.',
         'Určili sme, že pri zdravotných údajoch zadaných lekárom vystupuje prevádzkovateľ v postavení prevádzkovateľa, nie sprostredkovateľa ambulancie, pretože sám určuje účely a prostriedky spracúvania; sprostredkovateľská zmluva podľa čl. 28 sa preto neuzatvára.',

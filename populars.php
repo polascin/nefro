@@ -158,7 +158,7 @@ if (!empty($itemListElements)) {
 
       <div class="newsletter-cta-inline" id="nl-cta-inline">
         <div class="newsletter-cta__inner">
-          <h3 class="newsletter-cta__title">Nové články pre pacientov priamo do e-mailu</h3>
+          <h3 class="newsletter-cta__title">Nové články pre pacientov a novinky z portálu do e-mailu</h3>
           <p class="newsletter-cta__desc">Bezplatný odber. Odhlásite sa kedykoľvek jedným klikom.</p>
           <form class="newsletter-cta__form" id="nl-form-inline" novalidate>
             <div class="honeypot" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>

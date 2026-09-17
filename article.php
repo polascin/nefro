@@ -422,7 +422,7 @@ if ($article) {
 
         <div class="newsletter-cta-inline" id="nl-cta-inline">
           <div class="newsletter-cta__inner">
-            <h3 class="newsletter-cta__title">Dostávajte nové odborné články priamo do e-mailu</h3>
+            <h3 class="newsletter-cta__title">Dostávajte nové odborné články a novinky z portálu do e-mailu</h3>
             <p class="newsletter-cta__desc">Bezplatný odber. Odhlásite sa kedykoľvek jedným klikom.</p>
             <form class="newsletter-cta__form" id="nl-form-inline" novalidate>
               <div class="honeypot" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
@@ -484,7 +484,7 @@ if ($article) {
       </div>
       <div class="widget newsletter-widget">
         <h3>Odber noviniek</h3>
-        <p>Dostávajte nové odborné články priamo do e-mailu — zadarmo.</p>
+        <p>Dostávajte nové odborné články a novinky z portálu priamo do e-mailu — zadarmo.</p>
         <form class="newsletter-cta__form" id="nl-form-sidebar" novalidate>
           <div class="honeypot" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
           <input type="email" name="email" placeholder="váš@email.sk" class="form-control" required aria-label="Vaša e-mailová adresa">

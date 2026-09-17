@@ -606,7 +606,7 @@ if (!empty($itemListElements)) {
           <div class="feature-card contact-community">
             <div class="contact-community__icon" aria-hidden="true">✉</div>
             <h3>Odoberajte novinky</h3>
-            <p>Dostávajte nové odborné články priamo do e-mailu — nové štúdie, zmeny v odporúčaniach a praktické závery pre prax. Zadarmo, kedykoľvek sa odhlásite.</p>
+            <p>Dostávajte nové odborné články a novinky z portálu priamo do e-mailu — nové štúdie, zmeny v odporúčaniach, praktické závery pre prax a nové kalkulačky či nástroje. Zadarmo, kedykoľvek sa odhlásite.</p>
             <form class="newsletter-cta__form" id="nl-form-home" novalidate>
               <div class="honeypot" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
               <input type="email" name="email" placeholder="váš@email.sk" class="form-control" required aria-label="Vaša e-mailová adresa">

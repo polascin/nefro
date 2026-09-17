@@ -767,17 +767,24 @@ function calculatorParseEgfrToMlMin(
     return $mlMin;
 }
 
-/** Vykreslí <select> s jednotkou eGFR (ml/min vs. ml/s). */
+/**
+ * Vykreslí <select> s jednotkou eGFR (ml/min vs. ml/s).
+ *
+ * $hasVisibleLabel = true, ak je k poľu vykreslený <label for>. Vtedy sa
+ * aria-label NEpridáva — prepísal by prístupný názov a ten by potom
+ * neobsahoval viditeľný text (WCAG 2.5.3 Label in Name).
+ */
 function calculatorRenderEgfrUnitSelect(
     string $selected,
     string $name = 'egfr_unit',
-    string $extraClass = 'flex-08'
+    string $extraClass = 'flex-08',
+    bool $hasVisibleLabel = false
 ): void {
     $selected = calculatorNormalizeEgfrUnit($selected);
     $classAttr = trim('form-control ' . $extraClass);
     ?>
     <select name="<?= htmlspecialchars($name) ?>" id="<?= htmlspecialchars($name) ?>"
-            aria-label="Jednotka eGFR" class="<?= htmlspecialchars($classAttr) ?>">
+            <?= $hasVisibleLabel ? '' : 'aria-label="Jednotka eGFR"' ?> class="<?= htmlspecialchars($classAttr) ?>">
         <option value="<?= EGFR_UNIT_ML_MIN ?>"<?= $selected === EGFR_UNIT_ML_MIN ? ' selected' : '' ?>>ml/min/1,73 m²</option>
         <option value="<?= EGFR_UNIT_ML_S ?>"<?= $selected === EGFR_UNIT_ML_S ? ' selected' : '' ?>>ml/s/1,73 m²</option>
     </select>
