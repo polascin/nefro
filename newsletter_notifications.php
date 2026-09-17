@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 require_once __DIR__ . '/email_verification.php';
+require_once __DIR__ . '/site_changelog.php';
 
 const NEWSLETTER_UNSUBSCRIBE_DEFAULT_TTL = 2592000; // 30 dní
 const NEWSLETTER_UNSUBSCRIBE_MAX_TTL     = 2592000; // 30 dní
@@ -957,10 +958,76 @@ if (!function_exists('buildWeeklyDigestArticlesHtml')) {
     }
 }
 
+if (!function_exists('buildWeeklyDigestUpdatesHtml')) {
+    /**
+     * Zostaví sekciu „Novinky na portáli“ — nové kalkulačky, nástroje a ďalšie
+     * zmeny mimo článkov, zoskupené podľa kategórie zo site_changelog.php.
+     *
+     * @param list<array{date: string, category: string, title: string, description: string, url: string}> $updates
+     * @param bool $withHeading false, keď sekciu uvádza už samotný intro odstavec
+     */
+    function buildWeeklyDigestUpdatesHtml(array $updates, bool $withHeading = true): string
+    {
+        if ($updates === []) {
+            return '';
+        }
+
+        $baseUrl = getAppBaseUrl();
+        $labels  = siteChangelogCategoryLabels();
+
+        $grouped = [];
+        foreach ($updates as $u) {
+            $category = (string) $u['category'];
+            $grouped[isset($labels[$category]) ? $category : 'portal'][] = $u;
+        }
+
+        $html = $withHeading
+            ? '<h2 style="margin:32px 0 4px;font-size:18px;line-height:24px;color:#0f172a;">Novinky na portáli</h2>'
+                . '<p style="margin:0 0 8px;color:#475569;font-size:14px;line-height:20px;">Okrem článkov pribudlo aj toto:</p>'
+            : '';
+
+        foreach ($labels as $key => $label) {
+            if (empty($grouped[$key])) {
+                continue;
+            }
+            $html .= '<p style="margin:16px 0 0;font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#64748b;">'
+                . htmlspecialchars($label, ENT_QUOTES | ENT_HTML5, 'UTF-8') . '</p>';
+
+            foreach ($grouped[$key] as $u) {
+                $title = htmlspecialchars((string) $u['title'], ENT_QUOTES | ENT_HTML5, 'UTF-8');
+                $desc  = trim(strip_tags((string) $u['description']));
+                $path  = ltrim((string) $u['url'], '/');
+
+                $titleHtml = $path !== ''
+                    ? '<a href="' . htmlspecialchars($baseUrl . '/' . $path, ENT_QUOTES | ENT_HTML5, 'UTF-8')
+                        . '" style="color:#0f172a;font-size:16px;font-weight:700;text-decoration:none;line-height:22px;">' . $title . '</a>'
+                    : '<span style="color:#0f172a;font-size:16px;font-weight:700;line-height:22px;">' . $title . '</span>';
+
+                $descHtml = $desc !== ''
+                    ? '<p style="margin:6px 0 0;color:#475569;font-size:14px;line-height:20px;">'
+                        . htmlspecialchars(mb_substr($desc, 0, 320), ENT_QUOTES | ENT_HTML5, 'UTF-8') . '</p>'
+                    : '';
+
+                $linkHtml = $path !== ''
+                    ? '<p style="margin:8px 0 0;"><a href="' . htmlspecialchars($baseUrl . '/' . $path, ENT_QUOTES | ENT_HTML5, 'UTF-8')
+                        . '" style="color:#1d4ed8;text-decoration:none;font-weight:600;font-size:14px;">Otvoriť →</a></p>'
+                    : '';
+
+                $html .= '<div style="padding:12px 0;border-bottom:1px solid #e5e7eb;">'
+                    . $titleHtml . $descHtml . $linkHtml . '</div>';
+            }
+        }
+
+        return $html;
+    }
+}
+
 if (!function_exists('sendWeeklyNewsletterDigest')) {
     /**
-     * Pošle týždenný prehľad nových článkov všetkým overeným príjemcom
-     * (registrovaní používatelia so súhlasom + anonymní odberatelia).
+     * Pošle týždenný prehľad novým overeným príjemcom (registrovaní používatelia
+     * so súhlasom + anonymní odberatelia). Okrem nových článkov obsahuje aj
+     * sekciu „Novinky na portáli“ zo site_changelog.php — nové kalkulačky,
+     * interaktívne nástroje a ďalšie zmeny mimo článkov.
      *
      * @param array $opts  days (int, predvolené 7), dry_run (bool), ignore_last_run (bool)
      * @return array  Súhrn behu.
@@ -989,11 +1056,13 @@ if (!function_exists('sendWeeklyNewsletterDigest')) {
         }
 
         $articles = getWeeklyDigestArticles($pdo, $since, $until);
+        $updates  = siteChangelogEntriesBetween($since, $until);
 
         $result = [
             'window_start'     => $since,
             'window_end'       => $until,
             'articles'         => count($articles),
+            'updates'          => count($updates),
             'users_sent'       => 0,
             'subscribers_sent' => 0,
             'failed'           => 0,
@@ -1016,25 +1085,38 @@ if (!function_exists('sendWeeklyNewsletterDigest')) {
             return $result;
         }
 
-        if (empty($articles)) {
+        if (empty($articles) && empty($updates)) {
             // Prázdny prehľad neposielame; beh ani nezaznamenávame, aby sa okno neposunulo.
             $result['skipped_empty'] = true;
             return $result;
         }
 
-        $articlesHtml = buildWeeklyDigestArticlesHtml($articles);
         $count        = count($articles);
-        $intro        = $count === 1
-            ? 'Za uplynulé obdobie pribudol nový článok:'
-            : 'Za uplynulé obdobie pribudli nové články (' . $count . '):';
-        $subject      = $count === 1
-            ? 'Týždenný prehľad: 1 nový článok – Nefro-projekt Slovensko'
-            : 'Týždenný prehľad: ' . $count . ' nových článkov – Nefro-projekt Slovensko';
+        $updateCount  = count($updates);
+        $articlesHtml = $count > 0 ? buildWeeklyDigestArticlesHtml($articles) : '';
+        $updatesHtml  = buildWeeklyDigestUpdatesHtml($updates, $count > 0);
+
+        if ($count === 0) {
+            $intro = 'Za uplynulé obdobie nepribudli nové články, zato sa na portáli zmenilo toto:';
+        } else {
+            $intro = $count === 1
+                ? 'Za uplynulé obdobie pribudol nový článok:'
+                : 'Za uplynulé obdobie pribudli nové články (' . $count . '):';
+        }
+
+        $subjectParts = [];
+        if ($count > 0) {
+            $subjectParts[] = $count === 1 ? '1 nový článok' : $count . ' nových článkov';
+        }
+        if ($updateCount > 0) {
+            $subjectParts[] = $updateCount === 1 ? '1 novinka na portáli' : $updateCount . ' noviniek na portáli';
+        }
+        $subject = 'Týždenný prehľad: ' . implode(' a ', $subjectParts) . ' – Nefro-projekt Slovensko';
         $cfg          = getEmailEnvConfig();
         $socket       = null;
         $socketAuth   = false;
 
-        $sendOne = static function (string $email, string $unsubscribeUrl, string $greetingName) use ($articlesHtml, $intro, $subject, $cfg, $dryRun, &$socket, &$socketAuth): bool {
+        $sendOne = static function (string $email, string $unsubscribeUrl, string $greetingName) use ($articlesHtml, $updatesHtml, $intro, $subject, $cfg, $dryRun, &$socket, &$socketAuth): bool {
             if ($dryRun) {
                 return true;
             }
@@ -1045,6 +1127,7 @@ if (!function_exists('sendWeeklyNewsletterDigest')) {
             $body = '<p style="margin:0 0 16px;">' . $greeting . '</p>'
                 . '<p style="margin:0 0 8px;">' . $intro . '</p>'
                 . $articlesHtml
+                . $updatesHtml
                 . '<p style="margin:24px 0 16px;color:#475569;line-height:22px;">Tento prehľad ste dostali, pretože odoberáte novinky z webu Nefro-projekt Slovensko.<br>'
                 . 'Ak už nechcete dostávať novinky, otvorte odkaz a potvrďte odhlásenie:<br>'
                 . '<a href="' . $unsubEsc . '" style="color:#1d4ed8;text-decoration:underline;">Odhlásiť sa</a></p>';

@@ -62,12 +62,13 @@ try {
             echo "ZÁKLADŇA NASTAVENÁ — neodoslalo sa nič. Najbližší prehľad bude obsahovať iba\n";
             echo "články pridané po " . $r['window_end'] . " (" . (int) $r['articles'] . " dnešných článkov sa preskočí).\n";
         } elseif (!empty($r['skipped_empty'])) {
-            echo "Za toto obdobie nepribudli žiadne nové články — prehľad sa neposlal.\n";
+            echo "Za toto obdobie nepribudli žiadne nové články ani novinky na portáli — prehľad sa neposlal.\n";
         } else {
-            echo "Nových článkov v prehľade: " . (int) $r['articles'] . "\n";
-            echo "Odoslané registrovaným:    " . (int) $r['users_sent'] . "\n";
-            echo "Odoslané odberateľom:      " . (int) $r['subscribers_sent'] . "\n";
-            echo "Zlyhané odoslania:         " . (int) $r['failed'] . "\n";
+            echo "Nových článkov v prehľade:  " . (int) $r['articles'] . "\n";
+            echo "Noviniek na portáli:        " . (int) ($r['updates'] ?? 0) . "\n";
+            echo "Odoslané registrovaným:     " . (int) $r['users_sent'] . "\n";
+            echo "Odoslané odberateľom:       " . (int) $r['subscribers_sent'] . "\n";
+            echo "Zlyhané odoslania:          " . (int) $r['failed'] . "\n";
         }
     }
 } catch (Throwable $e) {

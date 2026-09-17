@@ -70,6 +70,8 @@ This file provides guidance to WARP (warp.dev) when working with code in this re
 - **Newsletter pipeline**:
   - enqueue and queue-management logic in `newsletter_notifications.php`
   - delivery worker in `newsletter_worker.php` (CLI)
+  - weekly digest in `newsletter_weekly_digest.php` (CLI): new articles **plus** a
+    "Novinky na portáli" section fed by `site_changelog.php`
   - supports both registered users and anonymous subscribers.
 
 ## Non-obvious project constraints
@@ -78,6 +80,11 @@ This file provides guidance to WARP (warp.dev) when working with code in this re
 - Do not introduce PHPUnit.
 - Keep text and data handling UTF-8 safe; repository scripts include explicit UTF-8/BOM checks.
 - Treat `.audit.md` as historical project guidance for security/accessibility/GDPR audit expectations when making sensitive changes.
+- **Shipping anything user-facing that is not an article** (new calculator, tool,
+  database, or a change elsewhere on the portal): add an entry to
+  `site_changelog.php` in the same commit, with the date/time the change goes live.
+  The weekly digest announces only entries that fall inside its window, so a
+  back-dated entry may never be sent.
 - **Publishing/regenerating articles** (professional `odborne` and patient `popularne`),
   including PDF generation/sync: follow `PUBLIKOVANIE_CLANKOV.md` (section "Pre AI agentov"
   has the exact step-by-step) and `PUBLIKOVANIE_PRE_PACIENTOV.md`. Use the UPSERT templates
