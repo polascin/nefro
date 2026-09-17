@@ -546,6 +546,11 @@ function calculatorHandleLoadId(PDO $pdo, array &$form, array &$messages): void
             }
         }
     }
+    // eGFR sa v histórii ukladá vždy v kanonických ml/min/1,73 m² — jednotku
+    // vo formulári preto po načítaní vrátime na ml/min, nech hodnota sedí.
+    if (array_key_exists('egfr_unit', $form)) {
+        $form['egfr_unit'] = EGFR_UNIT_ML_MIN;
+    }
     $messages[] = 'Údaje z histórie boli načítané do formulára. Môžete ich upraviť a vykonať nový výpočet.';
 }
 
@@ -670,5 +675,111 @@ function calculatorRenderSavedResultsTable(
             </div>
         <?php endif; ?>
     </section>
+    <?php
+}
+
+/*
+ * eGFR v dvoch jednotkách
+ * ----------------------
+ * Kanonická jednotka pre všetky výpočty je ml/min/1,73 m².
+ * SI alternatíva ml/s/1,73 m² sa pred výpočtom prepočíta faktorom 60
+ * (1 ml/s = 60 ml/min). Zadané hodnoty sa uchovávajú v kanonickej jednotke,
+ * pôvodná jednotka len pre zobrazenie.
+ */
+
+const EGFR_UNIT_ML_MIN = 'ml_min';
+const EGFR_UNIT_ML_S = 'ml_s';
+const EGFR_ML_S_PER_ML_MIN = 60.0;
+
+/** Vráti platnú jednotku eGFR; pri neznámej hodnote kanonickú ml/min/1,73 m². */
+function calculatorNormalizeEgfrUnit(string $unit): string
+{
+    return $unit === EGFR_UNIT_ML_S ? EGFR_UNIT_ML_S : EGFR_UNIT_ML_MIN;
+}
+
+/** Popisok jednotky pre zobrazenie (bez zalomenia medzery pred m²). */
+function calculatorEgfrUnitLabel(string $unit): string
+{
+    return calculatorNormalizeEgfrUnit($unit) === EGFR_UNIT_ML_S
+        ? 'ml/s/1,73 m²'
+        : 'ml/min/1,73 m²';
+}
+
+/** Prepočet zadanej hodnoty na kanonické ml/min/1,73 m². */
+function calculatorEgfrToMlMin(float $value, string $unit): float
+{
+    return calculatorNormalizeEgfrUnit($unit) === EGFR_UNIT_ML_S
+        ? $value * EGFR_ML_S_PER_ML_MIN
+        : $value;
+}
+
+/** Prepočet z kanonických ml/min/1,73 m² do zvolenej jednotky. */
+function calculatorEgfrFromMlMin(float $value, string $unit): float
+{
+    return calculatorNormalizeEgfrUnit($unit) === EGFR_UNIT_ML_S
+        ? $value / EGFR_ML_S_PER_ML_MIN
+        : $value;
+}
+
+/**
+ * Naformátuje eGFR v kanonických ml/min/1,73 m² spolu s ekvivalentom v ml/s/1,73 m².
+ * Napr. "45,2 ml/min/1,73 m² (0,753 ml/s/1,73 m²)".
+ */
+function calculatorFormatEgfrBothUnits(float $mlMin, int $decimals = 1): string
+{
+    return number_format($mlMin, $decimals, ',', ' ') . ' ml/min/1,73 m² (' .
+        number_format($mlMin / EGFR_ML_S_PER_ML_MIN, 3, ',', ' ') . ' ml/s/1,73 m²)';
+}
+
+/**
+ * Prečíta hodnotu eGFR z formulára a prepočíta ju na ml/min/1,73 m².
+ * Rozsah $min/$max sa kontroluje v kanonickej jednotke.
+ * Vracia null a doplní $errors, ak je hodnota neplatná.
+ */
+function calculatorParseEgfrToMlMin(
+    string $rawValue,
+    string $rawUnit,
+    array &$errors,
+    float $min = 0.0,
+    float $max = 200.0,
+    string $fieldLabel = 'eGFR'
+): ?float {
+    $unit = calculatorNormalizeEgfrUnit($rawUnit);
+    $value = calculatorParsePositiveFloat($rawValue);
+    if ($value === null) {
+        $errors[] = $fieldLabel . ' musí byť kladné číslo.';
+        return null;
+    }
+
+    $mlMin = calculatorEgfrToMlMin($value, $unit);
+    if ($mlMin <= $min || $mlMin > $max) {
+        $errors[] = sprintf(
+            '%s musí byť v rozsahu %s–%s ml/min/1,73 m² (t. j. %s–%s ml/s/1,73 m²).',
+            $fieldLabel,
+            rtrim(rtrim(number_format($min, 1, ',', ' '), '0'), ','),
+            rtrim(rtrim(number_format($max, 1, ',', ' '), '0'), ','),
+            number_format($min / EGFR_ML_S_PER_ML_MIN, 3, ',', ' '),
+            number_format($max / EGFR_ML_S_PER_ML_MIN, 3, ',', ' ')
+        );
+        return null;
+    }
+
+    return $mlMin;
+}
+
+/** Vykreslí <select> s jednotkou eGFR (ml/min vs. ml/s). */
+function calculatorRenderEgfrUnitSelect(
+    string $selected,
+    string $name = 'egfr_unit',
+    string $extraClass = 'flex-08'
+): void {
+    $selected = calculatorNormalizeEgfrUnit($selected);
+    $classAttr = trim('form-control ' . $extraClass);
+    ?>
+    <select name="<?= htmlspecialchars($name) ?>" id="<?= htmlspecialchars($name) ?>"
+            aria-label="Jednotka eGFR" class="<?= htmlspecialchars($classAttr) ?>">
+        <option value="<?= EGFR_UNIT_ML_MIN ?>"<?= $selected === EGFR_UNIT_ML_MIN ? ' selected' : '' ?>>ml/min/1,73 m²</option>
+        <option value="<?= EGFR_UNIT_ML_S ?>"<?= $selected === EGFR_UNIT_ML_S ? ' selected' : '' ?>>ml/s/1,73 m²</option>
+    </select>
     <?php
 }

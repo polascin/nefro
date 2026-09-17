@@ -28,6 +28,7 @@ $form = [
     'smoking'          => (string) ($_POST['smoking'] ?? '0'),
     'bmi'              => (string) ($_POST['bmi'] ?? ''),
     'egfr'             => (string) ($_POST['egfr'] ?? ''),
+    'egfr_unit'        => (string) ($_POST['egfr_unit'] ?? EGFR_UNIT_ML_MIN),
     'uacr_value'       => (string) ($_POST['uacr_value'] ?? ''),
     'uacr_unit'        => (string) ($_POST['uacr_unit'] ?? 'mg_g'),
     'hba1c'            => (string) ($_POST['hba1c'] ?? ''),
@@ -112,10 +113,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $errors[] = 'BMI musí byť v rozsahu 15–60 kg/m².';
         }
 
-        $egfr = calculatorParsePositiveFloat($form['egfr']);
-        if ($egfr === null || $egfr < 15 || $egfr > 140) {
-            $errors[] = 'eGFR musí byť v rozsahu 15–140 ml/min/1,73 m².';
-        }
+        $form['egfr_unit'] = calculatorNormalizeEgfrUnit($form['egfr_unit']);
+        $egfr = calculatorParseEgfrToMlMin(
+            $form['egfr'],
+            $form['egfr_unit'],
+            $errors,
+            15.0,
+            140.0,
+        );
 
         $bpTx    = $form['bp_tx'] === '1';
         $statin  = $form['statin'] === '1';
@@ -205,6 +210,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             'smoking'   => $smoking ? 1 : 0,
                             'bmi'       => (float) $bmi,
                             'egfr'      => (float) $egfr,
+                            'egfr_unit' => $form['egfr_unit'],
                             'uacr_mg_g' => $uacrMgG !== null ? round($uacrMgG, 2) : null,
                             'hba1c'     => $hba1c,
                             'sdi'       => $sdi,
@@ -388,8 +394,11 @@ function preventRenderOutcome(string $title, array $pair, bool $show30): void
                                 <input type="text" id="sbp" name="sbp" required class="form-control" value="<?= htmlspecialchars($form['sbp']) ?>">
                             </div>
                             <div class="form-group">
-                                <label for="egfr">eGFR (ml/min/1,73 m²)</label>
-                                <input type="text" id="egfr" name="egfr" required class="form-control" value="<?= htmlspecialchars($form['egfr']) ?>">
+                                <label for="egfr">eGFR</label>
+                                <div class="flex-gap-8-end">
+                                    <input type="text" id="egfr" name="egfr" inputmode="decimal" required class="form-control flex-1 js-egfr-value" value="<?= htmlspecialchars($form['egfr']) ?>">
+                                    <?php calculatorRenderEgfrUnitSelect($form['egfr_unit']); ?>
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label for="bmi">BMI (kg/m²)</label>
@@ -554,6 +563,7 @@ function preventRenderOutcome(string $title, array $pair, bool $show30): void
         });
     })();
     </script>
+    <script src="egfr-units.js?cb=<?= filemtime(__DIR__ . '/egfr-units.js') ?>" defer></script>
     <script src="patient_autofill.js?v=20260515-1&cb=<?= filemtime('patient_autofill.js') ?>" defer></script>
     <?php include 'footer.php'; ?>
 </body>

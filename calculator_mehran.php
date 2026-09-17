@@ -48,6 +48,7 @@ $savedResults = [];
 $form = [
     "age_years" => (string) ($_POST["age_years"] ?? ""),
     "egfr" => (string) ($_POST["egfr"] ?? ""),
+    "egfr_unit" => (string) ($_POST["egfr_unit"] ?? EGFR_UNIT_ML_MIN),
     "contrast_volume_ml" => (string) ($_POST["contrast_volume_ml"] ?? ""),
     "hypotension" => ($_POST["hypotension"] ?? "") === "1" ? "1" : "0",
     "iabp" => ($_POST["iabp"] ?? "") === "1" ? "1" : "0",
@@ -95,12 +96,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $errors[] = "Vek musí byť celé číslo v intervale 18 až 120 rokov.";
         }
 
-        $egfr = calculatorParsePositiveFloat($form["egfr"]);
-        if ($egfr === null) {
-            $errors[] = "eGFR musí byť kladné číslo (mL/min/1,73 m²).";
-        } elseif ($egfr > 200.0) {
-            $errors[] = "eGFR mimo očakávaného rozsahu (≤ 200 mL/min/1,73 m²).";
-        }
+        $form["egfr_unit"] = calculatorNormalizeEgfrUnit($form["egfr_unit"]);
+        $egfr = calculatorParseEgfrToMlMin(
+            $form["egfr"],
+            $form["egfr_unit"],
+            $errors,
+            0.0,
+            200.0,
+        );
 
         // Objem kontrastu je voliteľný (0, ak sa ešte nepodal / neznámy)
         $contrastVolume = 0.0;
@@ -159,6 +162,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                             "examination_date" => $form["examination_date"],
                             "age_years" => (int) $ageYears,
                             "egfr" => round((float) $egfr, 1),
+                            "egfr_unit" => $form["egfr_unit"],
                             "contrast_volume_ml" => round($contrastVolume, 0),
                             "hypotension" => $hypo ? "1" : "0",
                             "iabp" => $iabp ? "1" : "0",
@@ -333,8 +337,11 @@ if (isLoggedIn()) {
                                 <input type="number" id="age_years" name="age_years" min="18" max="120" required class="form-control" value="<?= htmlspecialchars($form["age_years"]) ?>" placeholder="automaticky z dát. nar. / RČ">
                             </div>
                             <div class="form-group">
-                                <label for="egfr">eGFR (mL/min/1,73 m²)</label>
-                                <input type="text" id="egfr" name="egfr" required class="form-control" value="<?= htmlspecialchars($form["egfr"]) ?>" placeholder="napr. 55">
+                                <label for="egfr">eGFR</label>
+                                <div class="flex-gap-8-end">
+                                    <input type="text" id="egfr" name="egfr" inputmode="decimal" required class="form-control flex-1 js-egfr-value" value="<?= htmlspecialchars($form["egfr"]) ?>" placeholder="napr. 55">
+                                    <?php calculatorRenderEgfrUnitSelect($form["egfr_unit"]); ?>
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label for="contrast_volume_ml">Objem kontrastu (mL) <span class="optional">— voliteľné</span></label>
@@ -381,7 +388,7 @@ if (isLoggedIn()) {
                             <?= htmlspecialchars((string) $calculated["dialysis_pct"]) ?>
                         </p>
                         <p class="calc-result-detail"><strong>Body — vek:</strong> <?= (int) $calculated["age_pts"] ?>
-                            &ensp;&bull;&ensp;<strong>renálne (eGFR <?= htmlspecialchars(number_format((float)$calculated["egfr"], 1, ",", " ")) ?>):</strong> <?= (int) $calculated["renal_pts"] ?>
+                            &ensp;&bull;&ensp;<strong>renálne (eGFR <?= htmlspecialchars(calculatorFormatEgfrBothUnits((float) $calculated["egfr"])) ?>):</strong> <?= (int) $calculated["renal_pts"] ?>
                             &ensp;&bull;&ensp;<strong>kontrast (<?= htmlspecialchars(number_format((float)$calculated["contrast_volume_ml"], 0, ",", " ")) ?> mL):</strong> <?= (int) $calculated["contrast_pts"] ?>
                         </p>
                         <div class="form-actions no-print">
@@ -408,6 +415,7 @@ if (isLoggedIn()) {
             ); ?>
         </div>
     </main>
+    <script src="egfr-units.js?cb=<?= filemtime(__DIR__ . '/egfr-units.js') ?>" defer></script>
     <script src="patient_autofill.js?v=20260515-1&cb=<?= filemtime(
         "patient_autofill.js",
     ) ?>" defer></script>

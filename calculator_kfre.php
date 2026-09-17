@@ -62,6 +62,7 @@ $form = [
     "age_years" => (string) ($_POST["age_years"] ?? ""),
     "sex" => (string) ($_POST["sex"] ?? "female"),
     "egfr" => (string) ($_POST["egfr"] ?? ""),
+    "egfr_unit" => (string) ($_POST["egfr_unit"] ?? EGFR_UNIT_ML_MIN),
     "uacr_value" => (string) ($_POST["uacr_value"] ?? ""),
     "uacr_unit" => (string) ($_POST["uacr_unit"] ?? "mg_g"),
     "kfre_region" => (string) ($_POST["kfre_region"] ?? "non_na"),
@@ -112,11 +113,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $errors[] = "Vyberte pohlavie.";
         }
 
-        $egfr = calculatorParsePositiveFloat($form["egfr"]);
-        if ($egfr === null || $egfr > 200) {
-            $errors[] =
-                "eGFR musí byť kladné číslo v realistickom rozsahu (0–200).";
-        }
+        $form["egfr_unit"] = calculatorNormalizeEgfrUnit($form["egfr_unit"]);
+        $egfr = calculatorParseEgfrToMlMin(
+            $form["egfr"],
+            $form["egfr_unit"],
+            $errors,
+            0.0,
+            200.0,
+        );
 
         $uacrUnit = in_array($form["uacr_unit"], ["mg_g", "mg_mmol"], true)
             ? $form["uacr_unit"]
@@ -180,6 +184,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                                 "age_years" => (int) $ageYears,
                                 "sex" => $sex,
                                 "egfr" => round((float) $egfr, 1),
+                                "egfr_unit" => $form["egfr_unit"],
                                 "uacr_value" => round((float) $uacrValue, 2),
                                 "uacr_unit" => $uacrUnit,
                                 "kfre_region" => $kfreRegion,
@@ -370,10 +375,13 @@ if (isLoggedIn()) {
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="egfr">eGFR (ml/min/1,73 m²)</label>
-                                <input type="text" id="egfr" name="egfr" required class="form-control" value="<?= htmlspecialchars(
-                                    $form["egfr"],
-                                ) ?>">
+                                <label for="egfr">eGFR</label>
+                                <div class="flex-gap-8-end">
+                                    <input type="text" id="egfr" name="egfr" inputmode="decimal" required class="form-control flex-1 js-egfr-value" value="<?= htmlspecialchars(
+                                        $form["egfr"],
+                                    ) ?>">
+                                    <?php calculatorRenderEgfrUnitSelect($form["egfr_unit"]); ?>
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label for="uacr_value">UACR</label>
@@ -542,6 +550,7 @@ if (isLoggedIn()) {
             ); ?>
         </div>
     </main>
+    <script src="egfr-units.js?cb=<?= filemtime(__DIR__ . '/egfr-units.js') ?>" defer></script>
     <script src="patient_autofill.js?v=20260515-1&cb=<?= filemtime(
         "patient_autofill.js",
     ) ?>" defer></script>

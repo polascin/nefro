@@ -61,6 +61,7 @@ $form = [
     "age_years" => (string) ($_POST["age_years"] ?? ""),
     "sex" => (string) ($_POST["sex"] ?? "female"),
     "egfr" => (string) ($_POST["egfr"] ?? ""),
+    "egfr_unit" => (string) ($_POST["egfr_unit"] ?? EGFR_UNIT_ML_MIN),
     "uacr_value" => (string) ($_POST["uacr_value"] ?? ""),
     "uacr_unit" => (string) ($_POST["uacr_unit"] ?? "mg_g"),
     "diabetes" => (string) ($_POST["diabetes"] ?? "0"),
@@ -122,12 +123,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $errors[] = "Vyberte pohlavie.";
         }
 
-        // eGFR
-        $egfr = calculatorParsePositiveFloat($form["egfr"]);
-        if ($egfr === null || $egfr > 200) {
-            $errors[] =
-                "eGFR musí byť kladné číslo v rozsahu 0–200 ml/min/1,73 m².";
-        }
+        // eGFR (prijíma ml/min/1,73 m² aj ml/s/1,73 m²)
+        $form["egfr_unit"] = calculatorNormalizeEgfrUnit($form["egfr_unit"]);
+        $egfr = calculatorParseEgfrToMlMin(
+            $form["egfr"],
+            $form["egfr_unit"],
+            $errors,
+            0.0,
+            200.0,
+        );
 
         // uACR
         $uacrUnit = in_array($form["uacr_unit"], ["mg_g", "mg_mmol"], true)
@@ -249,6 +253,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                             "age_years" => $calculated["age_years"],
                             "sex" => $calculated["sex"],
                             "egfr" => $calculated["egfr"],
+                            "egfr_unit" => $form["egfr_unit"],
                             "uacr_value" => $calculated["uacr_input"],
                             "uacr_unit" => $calculated["uacr_unit"],
                             "diabetes" => $calculated["diabetes"],
@@ -488,11 +493,14 @@ function sexLabel(string $v): string
                             </div>
 
                             <div class="form-group">
-                                <label for="egfr">eGFR (ml/min/1,73 m²)</label>
-                                <input type="text" id="egfr" name="egfr" required class="form-control"
-                                       value="<?= htmlspecialchars(
-                                           $form["egfr"],
-                                       ) ?>">
+                                <label for="egfr">eGFR</label>
+                                <div class="flex-gap-8-end">
+                                    <input type="text" id="egfr" name="egfr" inputmode="decimal" required class="form-control flex-1 js-egfr-value"
+                                           value="<?= htmlspecialchars(
+                                               $form["egfr"],
+                                           ) ?>">
+                                    <?php calculatorRenderEgfrUnitSelect($form["egfr_unit"]); ?>
+                                </div>
                             </div>
 
                             <div class="form-group">
@@ -749,8 +757,8 @@ function sexLabel(string $v): string
                                     sexLabel($calculated["sex"]),
                                 ) ?></td></tr>
                                 <tr><th scope="row">eGFR</th><td><?= htmlspecialchars(
-                                    (string) $calculated["egfr"],
-                                ) ?> ml/min/1,73 m²</td></tr>
+                                    calculatorFormatEgfrBothUnits((float) $calculated["egfr"]),
+                                ) ?></td></tr>
                                 <tr><th scope="row">UACR</th><td>
                                     <?= htmlspecialchars(
                                         number_format(
@@ -973,6 +981,7 @@ function sexLabel(string $v): string
 
         </div><!-- /.content-wrapper -->
     </main>
+    <script src="egfr-units.js?cb=<?= filemtime(__DIR__ . '/egfr-units.js') ?>" defer></script>
     <script src="patient_autofill.js?v=20260515-1&cb=<?= filemtime(
         "patient_autofill.js",
     ) ?>" defer></script>

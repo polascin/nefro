@@ -16,7 +16,11 @@ $savedResults = [];
 // Počet viditeľných riadkov (JS alebo históriou ovplyvnený)
 $maxRow = min(EGFR_SLOPE_MAX_ROWS, max(EGFR_SLOPE_MIN_ROWS, (int)($_POST["max_row"] ?? EGFR_SLOPE_MIN_ROWS)));
 
-$form = ["max_row" => (string)$maxRow];
+$form = [
+    "max_row" => (string)$maxRow,
+    // Jednotka platí pre všetky riadky merania naraz.
+    "egfr_unit" => calculatorNormalizeEgfrUnit((string)($_POST["egfr_unit"] ?? EGFR_UNIT_ML_MIN)),
+];
 for ($i = 1; $i <= EGFR_SLOPE_MAX_ROWS; $i++) {
     $form["date_$i"] = (string)($_POST["date_$i"] ?? "");
     $form["egfr_$i"] = (string)($_POST["egfr_$i"] ?? "");
@@ -104,6 +108,8 @@ if (isLoggedIn() && isset($_GET["load_id"])) {
         }
         $form["max_row"] = (string)max(EGFR_SLOPE_MIN_ROWS, $pCount);
         $maxRow = (int)$form["max_row"];
+        // Uložené hodnoty sú vždy v kanonických ml/min/1,73 m².
+        $form["egfr_unit"] = EGFR_UNIT_ML_MIN;
         $messages[] = "Údaje z histórie boli načítané do formulára.";
     }
 }
@@ -113,6 +119,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $action = (string)($_POST["action"] ?? "");
     $maxRow = min(EGFR_SLOPE_MAX_ROWS, max(EGFR_SLOPE_MIN_ROWS, (int)($_POST["max_row"] ?? EGFR_SLOPE_MIN_ROWS)));
     $form["max_row"] = (string)$maxRow;
+    $form["egfr_unit"] = calculatorNormalizeEgfrUnit((string)($_POST["egfr_unit"] ?? EGFR_UNIT_ML_MIN));
 
     if (!validateCsrfToken((string)($_POST["csrf_token"] ?? ""))) {
         $errors[] = "Neplatný CSRF token.";
@@ -155,6 +162,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                         $newMax = max(EGFR_SLOPE_MIN_ROWS, count($history));
                         $form["max_row"] = (string)$newMax;
                         $maxRow = $newMax;
+                        // Hodnoty z histórie sú v kanonických ml/min/1,73 m².
+                        $form["egfr_unit"] = EGFR_UNIT_ML_MIN;
                         $messages[] = "Načítaných " . count($history) . " meraní eGFR z histórie pacienta. Môžete pridať ďalšie hodnoty a vypočítať trend.";
                     }
                 } catch (\Throwable $e) {
@@ -172,6 +181,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         for ($i = 1; $i <= $maxRow; $i++) {
             $d = $form["date_$i"];
             $e = calculatorParsePositiveFloat($form["egfr_$i"]);
+            if ($e !== null) {
+                $e = calculatorEgfrToMlMin($e, $form["egfr_unit"]);
+                if ($e > 200.0) {
+                    $errors[] = "eGFR v riadku $i je mimo realistického rozsahu (0–200 ml/min/1,73 m²).";
+                    $e = null;
+                }
+            }
             if ($d !== "" && $e !== null) {
                 $dt = \DateTime::createFromFormat("Y-m-d", $d);
                 if ($dt && $dt->format("Y-m-d") === $d) {
@@ -302,6 +318,13 @@ if (isLoggedIn()) {
 
                     <?php include __DIR__ . '/calculator_patient_fields.php'; ?>
 
+                        <div class="form-grid calc-item-separator">
+                            <div class="form-group">
+                                <label for="egfr_unit">Jednotka eGFR (platí pre všetky merania)</label>
+                                <?php calculatorRenderEgfrUnitSelect($form["egfr_unit"], 'egfr_unit', ''); ?>
+                            </div>
+                        </div>
+
                         <div id="egfr-rows">
                         <?php for ($i = 1; $i <= max(EGFR_SLOPE_MIN_ROWS, $maxRow); $i++):
                             $hasValue = $form["date_$i"] !== "" || $form["egfr_$i"] !== "";
@@ -312,8 +335,8 @@ if (isLoggedIn()) {
                                 <input type="date" id="date_<?= $i ?>" name="date_<?= $i ?>" class="form-control" max="<?= htmlspecialchars(formatUserTimestamp(time(), 'Y-m-d')) ?>" value="<?= htmlspecialchars($form["date_$i"]) ?>">
                             </div>
                             <div class="form-group">
-                                <label for="egfr_<?= $i ?>">eGFR <?= $i ?> (ml/min/1,73&thinsp;m²)</label>
-                                <input type="text" id="egfr_<?= $i ?>" name="egfr_<?= $i ?>" class="form-control" inputmode="decimal" placeholder="napr. 45.2" value="<?= htmlspecialchars($form["egfr_$i"]) ?>">
+                                <label for="egfr_<?= $i ?>">eGFR <?= $i ?> (<span class="js-egfr-unit-label"><?= htmlspecialchars(calculatorEgfrUnitLabel($form["egfr_unit"])) ?></span>)</label>
+                                <input type="text" id="egfr_<?= $i ?>" name="egfr_<?= $i ?>" class="form-control js-egfr-value" inputmode="decimal" placeholder="<?= $form["egfr_unit"] === EGFR_UNIT_ML_S ? 'napr. 0,75' : 'napr. 45,2' ?>" value="<?= htmlspecialchars($form["egfr_$i"]) ?>">
                             </div>
                             <?php if ($i > EGFR_SLOPE_MIN_ROWS): ?>
                             <div class="form-group align-self-end">
@@ -407,6 +430,19 @@ if (isLoggedIn()) {
         var maxAllowed = <?= EGFR_SLOPE_MAX_ROWS ?>;
         var minRows   = <?= EGFR_SLOPE_MIN_ROWS ?>;
 
+        var unitSelect = document.getElementById('egfr_unit');
+
+        function currentUnit() {
+            return unitSelect ? unitSelect.value : '<?= EGFR_UNIT_ML_MIN ?>';
+        }
+        function currentUnitLabel() {
+            return currentUnit() === '<?= EGFR_UNIT_ML_S ?>' ? 'ml/s/1,73 m²' : 'ml/min/1,73 m²';
+        }
+        function currentUnitPlaceholder() {
+            return currentUnit() === '<?= EGFR_UNIT_ML_S ?>' ? 'napr. 0,75' : 'napr. 45,2';
+        }
+        // Prepnutie jednotky rieši egfr-units.js; tu len popisky nových riadkov.
+
         function updateMaxRowInput() {
             var inp = document.getElementById('max_row');
             if (inp) inp.value = maxRow;
@@ -431,8 +467,8 @@ if (isLoggedIn()) {
                     '<input type="date" id="date_' + idx + '" name="date_' + idx + '" class="form-control" max="<?= htmlspecialchars(formatUserTimestamp(time(), 'Y-m-d')) ?>">' +
                 '</div>' +
                 '<div class="form-group">' +
-                    '<label for="egfr_' + idx + '">eGFR ' + idx + ' (ml/min/1,73 m²)</label>' +
-                    '<input type="text" id="egfr_' + idx + '" name="egfr_' + idx + '" class="form-control" inputmode="decimal" placeholder="napr. 45.2">' +
+                    '<label for="egfr_' + idx + '">eGFR ' + idx + ' (<span class="js-egfr-unit-label">' + currentUnitLabel() + '</span>)</label>' +
+                    '<input type="text" id="egfr_' + idx + '" name="egfr_' + idx + '" class="form-control js-egfr-value" inputmode="decimal" placeholder="' + currentUnitPlaceholder() + '">' +
                 '</div>' +
                 '<div class="form-group align-self-end">' +
                     '<button type="button" class="btn-secondary js-remove-egfr-row" data-row-id="' + idx + '" title="Odstrániť" aria-label="Odstrániť riadok ' + idx + '">−</button>' +
@@ -464,6 +500,7 @@ if (isLoggedIn()) {
     })();
     </script>
 
+    <script src="egfr-units.js?cb=<?= filemtime("egfr-units.js") ?>" defer></script>
     <script src="patient_autofill.js?v=20260515-1&cb=<?= filemtime("patient_autofill.js") ?>" defer></script>
     <?php include "footer.php"; ?>
 </body>

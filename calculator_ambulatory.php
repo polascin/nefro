@@ -38,6 +38,8 @@ $form = [
     'birth_input' => (string) ($_POST['birth_input'] ?? ''),
     'sex' => (string) ($_POST['sex'] ?? ''),
     'egfr' => (string) ($_POST['egfr'] ?? ''),
+    // Jednotka platí pre aktuálne eGFR aj pre predchádzajúce merania slope.
+    'egfr_unit' => calculatorNormalizeEgfrUnit((string) ($_POST['egfr_unit'] ?? EGFR_UNIT_ML_MIN)),
     'uacr_value' => (string) ($_POST['uacr_value'] ?? ''),
     'uacr_unit' => (string) ($_POST['uacr_unit'] ?? 'mg_mmol'),
     'chronicity' => (string) ($_POST['chronicity'] ?? 'confirmed'),
@@ -157,8 +159,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $egfr = null;
         if (trim($form['egfr']) !== '') {
             $egfr = calculatorParsePositiveFloat($form['egfr']);
+            if ($egfr !== null) {
+                $egfr = calculatorEgfrToMlMin($egfr, $form['egfr_unit']);
+            }
             if ($egfr === null || $egfr > 200.0) {
-                $errors[] = 'eGFR musí byť kladné číslo najviac 200 ml/min/1,73 m².';
+                $errors[] = 'eGFR musí byť kladné číslo najviac 200 ml/min/1,73 m² (t. j. 3,333 ml/s/1,73 m²).';
                 $egfr = null;
             }
         }
@@ -264,6 +269,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             $pointDate = \DateTimeImmutable::createFromFormat('!Y-m-d', $dateValue);
             $pointEgfr = calculatorParsePositiveFloat($egfrValue);
+            if ($pointEgfr !== null) {
+                $pointEgfr = calculatorEgfrToMlMin($pointEgfr, $form['egfr_unit']);
+            }
             if (
                 !$pointDate instanceof \DateTimeImmutable ||
                 $pointDate->format('Y-m-d') !== $dateValue
@@ -440,8 +448,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="egfr">Aktuálne eGFR (ml/min/1,73 m²)</label>
-                                <input type="text" id="egfr" name="egfr" inputmode="decimal" class="form-control" placeholder="napr. 38,5" value="<?= htmlspecialchars($form['egfr']) ?>">
+                                <label for="egfr">Aktuálne eGFR</label>
+                                <div class="flex-gap-8-end">
+                                    <input type="text" id="egfr" name="egfr" inputmode="decimal" class="form-control flex-1 js-egfr-value" placeholder="<?= $form['egfr_unit'] === EGFR_UNIT_ML_S ? 'napr. 0,642' : 'napr. 38,5' ?>" value="<?= htmlspecialchars($form['egfr']) ?>">
+                                    <?php calculatorRenderEgfrUnitSelect($form['egfr_unit']); ?>
+                                </div>
+                                <p class="form-hint">Zvolená jednotka platí aj pre predchádzajúce merania eGFR nižšie.</p>
                             </div>
                             <div class="form-group">
                                 <label for="uacr_value">Aktuálne uACR</label>
@@ -550,8 +562,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                     <input type="date" id="slope_date_<?= $index ?>" name="slope_date_<?= $index ?>" class="form-control" max="<?= htmlspecialchars($form['examination_date']) ?>" value="<?= htmlspecialchars($form['slope_date_' . $index]) ?>">
                                 </div>
                                 <div class="form-group">
-                                    <label for="slope_egfr_<?= $index ?>">eGFR pri meraní <?= $index ?></label>
-                                    <input type="text" id="slope_egfr_<?= $index ?>" name="slope_egfr_<?= $index ?>" inputmode="decimal" class="form-control" placeholder="ml/min/1,73 m²" value="<?= htmlspecialchars($form['slope_egfr_' . $index]) ?>">
+                                    <label for="slope_egfr_<?= $index ?>">eGFR pri meraní <?= $index ?> (<span class="js-egfr-unit-label"><?= htmlspecialchars(calculatorEgfrUnitLabel($form['egfr_unit'])) ?></span>)</label>
+                                    <input type="text" id="slope_egfr_<?= $index ?>" name="slope_egfr_<?= $index ?>" inputmode="decimal" class="form-control js-egfr-value" data-egfr-placeholder="unit" placeholder="<?= htmlspecialchars(calculatorEgfrUnitLabel($form['egfr_unit'])) ?>" value="<?= htmlspecialchars($form['slope_egfr_' . $index]) ?>">
                                 </div>
                             </div>
                         <?php endfor; ?>
@@ -622,6 +634,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
     </main>
 
+    <script src="egfr-units.js?cb=<?= filemtime(__DIR__ . '/egfr-units.js') ?>" defer></script>
     <script src="calculator_ambulatory.js?v=<?= filemtime(__DIR__ . '/calculator_ambulatory.js') ?>" defer></script>
     <?php include 'footer.php'; ?>
 </body>

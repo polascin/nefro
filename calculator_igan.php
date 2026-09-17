@@ -76,6 +76,7 @@ $savedResults = [];
 
 $form = [
     "egfr" => (string) ($_POST["egfr"] ?? ""),
+    "egfr_unit" => (string) ($_POST["egfr_unit"] ?? EGFR_UNIT_ML_MIN),
     "uprot_g_day" => (string) ($_POST["uprot_g_day"] ?? ""),
     "map_mmhg" => (string) ($_POST["map_mmhg"] ?? ""),
     "rasb" => (string) ($_POST["rasb"] ?? "0"),
@@ -102,17 +103,18 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $patient = calculatorPatientDataFromRequest($_POST);
         calculatorValidateOptionalPatientData($patient, $errors);
 
-        $egfr = calculatorParsePositiveFloat($form["egfr"]);
+        $form["egfr_unit"] = calculatorNormalizeEgfrUnit($form["egfr_unit"]);
+        $egfr = calculatorParseEgfrToMlMin(
+            $form["egfr"],
+            $form["egfr_unit"],
+            $errors,
+            0.0,
+            150.0,
+        );
         $uprotGDay = calculatorParsePositiveFloat($form["uprot_g_day"]);
         $mapMmhg = calculatorParsePositiveFloat($form["map_mmhg"]);
         $rasbBool = $form["rasb"] === "1";
         $immunoBool = $form["immuno"] === "1";
-
-        if ($egfr === null) {
-            $errors[] = "eGFR musí byť kladné číslo (napr. 45).";
-        } elseif ($egfr > 150) {
-            $errors[] = "eGFR musí byť ≤ 150 mL/min/1,73 m².";
-        }
 
         if ($uprotGDay === null) {
             $errors[] = "Proteinúria musí byť kladné číslo (napr. 1.5).";
@@ -157,6 +159,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                         [
                             "examination_date" => $form["examination_date"],
                             "egfr" => $egfr,
+                            "egfr_unit" => $form["egfr_unit"],
                             "uprot_g_day" => $uprotGDay,
                             "map_mmhg" => $mapMmhg,
                             "rasb" => $rasbBool,
@@ -316,10 +319,13 @@ if (isLoggedIn()) {
                                 <input type="date" id="examination_date" name="examination_date" required class="form-control" max="<?= htmlspecialchars(formatUserTimestamp(time(), 'Y-m-d')) ?>" value="<?= htmlspecialchars($form['examination_date']) ?>">
                             </div>
                                                         <div class="form-group">
-                                <label for="igan_egfr">eGFR (mL/min/1,73&thinsp;m²) <span class="required">*</span></label>
-                                <input type="number" id="igan_egfr" name="egfr" min="1" max="150" step="0.1" required class="form-control" value="<?= htmlspecialchars(
-                                    $form["egfr"],
-                                ) ?>">
+                                <label for="igan_egfr">eGFR <span class="required">*</span></label>
+                                <div class="flex-gap-8-end">
+                                    <input type="text" id="igan_egfr" name="egfr" inputmode="decimal" required class="form-control flex-1 js-egfr-value" value="<?= htmlspecialchars(
+                                        $form["egfr"],
+                                    ) ?>">
+                                    <?php calculatorRenderEgfrUnitSelect($form["egfr_unit"]); ?>
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label for="igan_uprot">Proteinúria (g/deň) <span class="required">*</span></label>
@@ -380,6 +386,7 @@ if (isLoggedIn()) {
             ); ?>
         </div>
     </main>
+    <script src="egfr-units.js?cb=<?= filemtime(__DIR__ . '/egfr-units.js') ?>" defer></script>
     <script src="patient_autofill.js?v=20260515-1&cb=<?= filemtime("patient_autofill.js") ?>" defer></script>
     <?php include "footer.php"; ?>
 </body>

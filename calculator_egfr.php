@@ -342,6 +342,7 @@ if (isLoggedIn()) {
                             <div class="calc-result-value-block">
                                 <span class="calc-result-big-value"><?= htmlspecialchars(number_format((float)$calculated["egfr"], 1, ",", " ")) ?></span>
                                 <span class="calc-result-unit">ml/min/1,73 m²</span>
+                                <span class="calc-result-unit">= <?= htmlspecialchars(number_format((float) $calculated["egfr"] / EGFR_ML_S_PER_ML_MIN, 3, ",", " ")) ?> ml/s/1,73 m²</span>
                             </div>
                             <div class="calc-result-badge <?= htmlspecialchars($riskCls) ?>">
                                 <?= htmlspecialchars($calculated["g_category"]) ?>

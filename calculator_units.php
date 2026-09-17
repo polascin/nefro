@@ -22,6 +22,8 @@ $unitRows = [
     ["Hemoglobín", "g/dL", "g/L", 10.0, 1, 0],
     ["Albumín", "g/dL", "g/L", 10.0, 1, 0],
     ["Bilirubín", "mg/dL", "µmol/L", 17.1, 1, 0],
+    // eGFR: SI = ml/s/1,73 m² = ml/min/1,73 m² ÷ 60.
+    ["eGFR", "ml/min/1,73 m²", "ml/s/1,73 m²", 1 / 60, 1, 3],
 ];
 ?>
 <!DOCTYPE html>
@@ -31,7 +33,7 @@ $unitRows = [
   $pageTitle = "Prevodník jednotiek (SI ⇄ konvenčné) | Kalkulačky | Nefro-projekt Slovensko";
   $canonicalUrl = "https://nefro.polascin.net/calculator_units.php";
   $seoDescription =
-      "Nefrologický prevodník laboratórnych jednotiek medzi SI a konvenčnými (kreatinín, urea/BUN, glukóza, vápnik, fosfát, cholesterol a ďalšie). Obojsmerná živá konverzia pre lekárov na Slovensku.";
+      "Nefrologický prevodník laboratórnych jednotiek medzi SI a konvenčnými (kreatinín, urea/BUN, glukóza, vápnik, fosfát, cholesterol, eGFR ml/min ⇄ ml/s a ďalšie). Obojsmerná živá konverzia pre lekárov na Slovensku.";
   $baseUrl = "https://nefro.polascin.net/";
   $structuredData = [
       [
@@ -78,7 +80,7 @@ $unitRows = [
         <div class="content-wrapper">
             <div class="auth-container auth-container--wide">
                 <h2>Prevodník laboratórnych jednotiek</h2>
-                <p class="auth-subtitle">Obojsmerná konverzia medzi SI a konvenčnými (US) jednotkami — píšte do ktoréhokoľvek poľa.</p>
+                <p class="auth-subtitle">Obojsmerná konverzia medzi SI a konvenčnými (US) jednotkami vrátane eGFR (ml/min ⇄ ml/s) — píšte do ktoréhokoľvek poľa.</p>
 
                 <div class="info-box">
                     <strong>Ako to funguje:</strong> zadajte hodnotu do ľavého alebo pravého poľa
