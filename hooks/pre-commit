@@ -1,7 +1,19 @@
 #!/usr/bin/env bash
 # Pre-commit kontroly:
+#   0) ggshield sken tajomstiev (cez pre-commit framework, verzia pinnutá v configu)
 #   1) php -l syntax check staged PHP súborov (rýchle, bez falošných nálezov)
 #   2) automatická konverzia PNG → WebP
+
+# --- 0) Sken tajomstiev ---
+# POZOR: `pre-commit install` prepisuje .git/hooks/pre-commit a ruší core.hooksPath,
+# čím vypne VŠETKY hooky v hooks/ (vodoznak, post-commit deploy). Preto ggshield
+# voláme odtiaľto a `pre-commit install` NEspúšťaj — stačí `pre-commit install-hooks`.
+if [ -f .pre-commit-config.yaml ] && command -v pre-commit >/dev/null 2>&1; then
+	if ! pre-commit run --hook-stage pre-commit ggshield; then
+		echo "pre-commit: ggshield zastavil commit (tajomstvo alebo chyba skenu)." >&2
+		exit 1
+	fi
+fi
 
 # --- 1) PHP syntax check staged súborov ---
 if ! git diff --cached --check; then
