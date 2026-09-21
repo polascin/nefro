@@ -752,7 +752,10 @@ function calculatorParseEgfrToMlMin(
     }
 
     $mlMin = calculatorEgfrToMlMin($value, $unit);
-    if ($mlMin <= $min || $mlMin > $max) {
+    // Rozsah je uzavretý z oboch strán ([min, max]), rovnako ako pôvodné
+    // kontroly (PREVENT: eGFR 15–140; ostatné: >0 až max). `<= $min` by
+    // pri min>0 odmietlo platnú dolnú hranicu (napr. eGFR 15 v PREVENT).
+    if ($mlMin < $min || $mlMin > $max) {
         $errors[] = sprintf(
             '%s musí byť v rozsahu %s–%s ml/min/1,73 m² (t. j. %s–%s ml/s/1,73 m²).',
             $fieldLabel,
