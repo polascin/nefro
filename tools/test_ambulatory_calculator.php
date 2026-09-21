@@ -284,4 +284,21 @@ foreach ($kdigoHeatmap as $gCategory => $albuminRows) {
     }
 }
 
+// calculatorParseEgfrToMlMin: rozsah [min, max] v kanonických ml/min/1,73 m².
+$egfrErrors = [];
+testSame(15.0, calculatorParseEgfrToMlMin('15', EGFR_UNIT_ML_MIN, $egfrErrors, 15.0, 140.0), 'PREVENT eGFR 15 ml/min je v rozsahu');
+testSame([], $egfrErrors, 'PREVENT eGFR 15 nepridá chybu');
+$egfrErrors = [];
+testSame(140.0, calculatorParseEgfrToMlMin('140', EGFR_UNIT_ML_MIN, $egfrErrors, 15.0, 140.0), 'PREVENT eGFR 140 ml/min je v rozsahu');
+$egfrErrors = [];
+testSame(null, calculatorParseEgfrToMlMin('14,9', EGFR_UNIT_ML_MIN, $egfrErrors, 15.0, 140.0), 'PREVENT eGFR 14,9 je mimo rozsahu');
+testSame(true, $egfrErrors !== [], 'PREVENT eGFR 14,9 pridá chybu');
+$egfrErrors = [];
+// 0,25 ml/s/1,73 m² = 15 ml/min/1,73 m²
+testSame(15.0, calculatorParseEgfrToMlMin('0,25', EGFR_UNIT_ML_S, $egfrErrors, 15.0, 140.0), 'PREVENT eGFR 0,25 ml/s (=15) je v rozsahu');
+$egfrErrors = [];
+testSame(45.0, calculatorParseEgfrToMlMin('45', EGFR_UNIT_ML_MIN, $egfrErrors, 0.0, 200.0), 'Bežné eGFR 45 pri min=0');
+$egfrErrors = [];
+testSame(null, calculatorParseEgfrToMlMin('0', EGFR_UNIT_ML_MIN, $egfrErrors, 0.0, 200.0), 'eGFR 0 nie je kladné číslo');
+
 echo 'Ambulantná kalkulačka: ' . $assertions . " kontrol prešlo.\n";
