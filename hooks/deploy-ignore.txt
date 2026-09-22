@@ -13,6 +13,7 @@
 .kilo/**
 .markdownlint.yaml
 .php-cs-fixer.dist.php
+.pre-commit-config.yaml
 .pylintrc
 .trunk/**
 .vscode/**
