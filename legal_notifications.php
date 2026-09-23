@@ -6,7 +6,7 @@ declare(strict_types=1);
  * Upozornenia na zmenu právnych dokumentov (Privacy / Cookie / Terms).
  *
  * Zdroj pravdy o verzii a popise zmien je legal_data.php: legalInfo()['version'],
- * ['effectiveDate'] a legalRecentUpdates(). Pri každej zmene verzie sa pošle
+ * ['effectiveDate'] a legalRecentUpdates($version). Pri každej zmene verzie sa pošle
  * e-mail s popisom zmien VŠETKÝM registrovaným členom (bez ohľadu na
  * newsletter_consent — ide o transparenčnú povinnosť, GDPR čl. 13–14) a
  * anonymným odberateľom newslettera (verified, neodhlásení).
@@ -29,7 +29,7 @@ if (!function_exists('legalNoticeCurrentVersionInfo')) {
     {
         $info = legalInfo();
         $updates = array_values(array_filter(
-            array_map(static fn ($u): string => trim((string) $u), legalRecentUpdates()),
+            array_map(static fn ($u): string => trim((string) $u), legalRecentUpdates((string) $info['version'])),
             static fn (string $u): bool => $u !== ''
         ));
 
@@ -37,6 +37,38 @@ if (!function_exists('legalNoticeCurrentVersionInfo')) {
             'version'       => trim((string) ($info['version'] ?? '')),
             'effectiveDate' => trim((string) ($info['effectiveDate'] ?? '')),
             'updates'       => $updates,
+        ];
+    }
+}
+
+if (!function_exists('legalNoticeQueuedVersionInfo')) {
+    /**
+     * Staré fronty môžu mať uložený kumulatívny súhrn: pre známe verzie
+     * použijeme ich vlastnú skupinu zmien. Neznáma verzia (napr. po rollbacku)
+     * používa svoj uložený súhrn, nikdy obsah aktuálnej verzie.
+     * @param array<string, mixed> $item
+     * @return array{version: string, effectiveDate: string, updates: list<string>}
+     */
+    function legalNoticeQueuedVersionInfo(array $item): array
+    {
+        $version = (string) ($item['legal_version'] ?? '');
+        if ($version === '' || !is_string($item['change_summary'] ?? null)) {
+            throw new RuntimeException('Chýba uložený súhrn právneho oznámenia.');
+        }
+        $stored = json_decode($item['change_summary'], false, 512, JSON_THROW_ON_ERROR);
+        if (!is_array($stored) || !array_is_list($stored)) {
+            throw new RuntimeException('Neplatný uložený súhrn právneho oznámenia.');
+        }
+        foreach ($stored as $update) {
+            if (!is_string($update)) {
+                throw new RuntimeException('Neplatná položka súhrnu právneho oznámenia.');
+            }
+        }
+        $byVersion = legalUpdatesByVersion();
+        return [
+            'version' => $version,
+            'effectiveDate' => (string) ($item['effective_date'] ?? ''),
+            'updates' => $byVersion[$version] ?? $stored,
         ];
     }
 }
@@ -256,9 +288,10 @@ if (!function_exists('processLegalNoticeQueue')) {
             "SELECT q.id, q.legal_version, q.user_id, q.email, q.attempts,
                     u.username, u.title_before, u.first_name, u.middle_name,
                     u.last_name, u.title_after, u.email AS user_email,
-                    u.is_active, u.email_verified_at
+                    u.is_active, u.email_verified_at, r.effective_date, r.change_summary
              FROM legal_notice_queue q
              LEFT JOIN users u ON u.id = q.user_id
+             LEFT JOIN legal_notice_runs r ON r.legal_version = q.legal_version
              WHERE q.id = :id LIMIT 1"
         );
         $cancelStmt = $pdo->prepare(
@@ -274,8 +307,6 @@ if (!function_exists('processLegalNoticeQueue')) {
             "UPDATE legal_notice_queue SET status='sent', attempts=attempts+1, sent_at=NOW(), last_error=NULL
              WHERE id=:id AND sent_at IS NULL"
         );
-
-        $info = legalNoticeCurrentVersionInfo();
 
         foreach ($ids as $queueIdRaw) {
             $queueId = (int) $queueIdRaw;
@@ -315,7 +346,8 @@ if (!function_exists('processLegalNoticeQueue')) {
                 continue;
             }
 
-            $version = (string) ($item['legal_version'] ?? $info['version']);
+            $info = legalNoticeQueuedVersionInfo($item);
+            $version = $info['version'];
             $subject = 'Aktualizácia právnych podmienok (verzia ' . $version . ') - Nefro-projekt Slovensko';
             $displayName = legalNoticeDisplayName($item, $recipientEmail);
             $body = buildLegalNoticeEmailHtml($displayName, $version, $info['effectiveDate'], $info['updates'], false);
@@ -364,9 +396,10 @@ if (!function_exists('processLegalNoticeSubQueue')) {
 
         $itemStmt = $pdo->prepare(
             "SELECT q.id, q.legal_version, q.subscriber_id, q.email, q.attempts,
-                    s.email AS sub_email, s.verified_at, s.unsubscribed_at
+                    s.email AS sub_email, s.verified_at, s.unsubscribed_at, r.effective_date, r.change_summary
              FROM legal_notice_sub_queue q
              LEFT JOIN newsletter_subscribers s ON s.id = q.subscriber_id
+             LEFT JOIN legal_notice_runs r ON r.legal_version = q.legal_version
              WHERE q.id = :id LIMIT 1"
         );
         $cancelStmt = $pdo->prepare(
@@ -382,8 +415,6 @@ if (!function_exists('processLegalNoticeSubQueue')) {
             "UPDATE legal_notice_sub_queue SET status='sent', attempts=attempts+1, sent_at=NOW(), last_error=NULL
              WHERE id=:id AND sent_at IS NULL"
         );
-
-        $info = legalNoticeCurrentVersionInfo();
 
         foreach ($ids as $queueIdRaw) {
             $queueId = (int) $queueIdRaw;
@@ -423,7 +454,8 @@ if (!function_exists('processLegalNoticeSubQueue')) {
                 continue;
             }
 
-            $version = (string) ($item['legal_version'] ?? $info['version']);
+            $info = legalNoticeQueuedVersionInfo($item);
+            $version = $info['version'];
             $subject = 'Aktualizácia právnych podmienok (verzia ' . $version . ') - Nefro-projekt Slovensko';
             $unsubscribeUrl = buildSubscriberUnsubscribeHmacUrl((int) ($item['subscriber_id'] ?? 0), $recipientEmail);
             $body = buildLegalNoticeEmailHtml($recipientEmail, $version, $info['effectiveDate'], $info['updates'], true, $unsubscribeUrl);

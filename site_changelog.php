@@ -55,6 +55,13 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-09-24 00:38',
+                'category' => 'portal',
+                'title' => 'Prehľadnejšie oznámenia o právnych zmenách',
+                'description' => 'E-mailové oznámenia obsahujú iba zmeny príslušnej verzie právnych dokumentov. Aj pri oneskorenom doručení zostáva zachovaný správny dátum účinnosti a príslušný súhrn zmien.',
+                'url' => 'privacy.php',
+            ],
+            [
                 'date' => '2026-09-17 18:11',
                 'category' => 'calculators',
                 'title' => 'eGFR sa dá zadávať aj v ml/s/1,73 m²',

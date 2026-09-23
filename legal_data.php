@@ -273,25 +273,58 @@ function legalStoredItems(): array
     ];
 }
 
-/** Krátky súhrn „čo sa zmenilo" zobrazený na vrchu Zásad ochrany údajov. */
-function legalRecentUpdates(): array
+/**
+ * Zmeny podľa verzie, najnovšie ako prvé. Pri zvýšení legalInfo()['version']
+ * pridaj novú skupinu; staršie skupiny zachovaj pre čakajúce oznámenia.
+ * @return array<string, list<string>>
+ */
+function legalUpdatesByVersion(): array
 {
     return [
-        'Týždenný newsletter odteraz okrem nových odborných článkov obsahuje aj krátky prehľad noviniek na portáli — nové kalkulačky, interaktívne nástroje a zmeny v ostatných častiach služby. Účel spracúvania a text súhlasu sme tomu prispôsobili; odber je stále dobrovoľný a kedykoľvek odvolateľný odhlásením.',
-        'Doplnili sme opis interného pracovného adresára zdravotníckych zariadení — aké kontaktné údaje v ňom vedieme, že pochádzajú z verejne dostupných profesijných zdrojov (register poskytovateľov e-VÚC a weby zariadení), že právnym základom je oprávnený záujem podľa čl. 6 ods. 1 písm. f) a že dotknuté osoby informujeme e-mailom podľa čl. 14 GDPR. Nejde o údaje pacientov.',
-        'Spresnili sme, kto maže uložené výsledky klinických kalkulačiek: záznam vymaže ten, kto ho zadal, priamo vo svojom konte, na žiadosť používateľa ho vymaže prevádzkovateľ a všetky záznamy sa odstránia aj pri zrušení konta.',
-        'Určili sme, že pri zdravotných údajoch zadaných lekárom vystupuje prevádzkovateľ v postavení prevádzkovateľa, nie sprostredkovateľa ambulancie, pretože sám určuje účely a prostriedky spracúvania; sprostredkovateľská zmluva podľa čl. 28 sa preto neuzatvára.',
-        'Zjednotili sme označenie prevádzkovateľa na „MUDr. Ľubomír Polaščín - Nephroctor“ naprieč všetkými dokumentmi.',
-        'Registráciu sme obmedzili na osoby vo veku aspoň 16 rokov; ak miestne právo vyžaduje vyšší minimálny vek, platí tento vyšší vek.',
-        'Spresnili sme úplný rozsah nepovinných profilových údajov, pseudonymný charakter analytiky GA4, minimalizovaný audit po zrušení účtu, jeho 90-dňovú retenčnú lehotu a informáciu, že služba nevykonáva právne významné výlučne automatizované rozhodovanie ani profilovanie.',
-        'Lokálna história kalkulačiek pre neprihlásených sa odteraz vytvára iba po preferenčnom súhlase, neuchováva formulárové vstupy ani identifikátory pacienta a pri odvolaní súhlasu sa vymaže.',
-        'Rozšírili sme Službu o informačnú databázu liekov v nefrológii, register klinických štúdií (dáta z verejného registra ClinicalTrials.gov) a ďalšie informačné nástroje, ktoré samy nespracúvajú osobné údaje návštevníkov.',
-        'Do zoznamu sprostredkovateľov sme doplnili Twilio Inc. (USA), ktoré odosiela overovacie SMS kódy pri overení telefónneho čísla; prenos do USA je krytý štandardnými zmluvnými doložkami (SCC).',
-        'Webové písmo (Inter) sme presunuli na vlastný server — pri jeho načítaní sa už neprenáša žiadny údaj (IP adresa) do Google LLC (USA).',
-        'Právne dokumenty sme rozdelili do troch samostatných stránok: Zásady ochrany osobných údajov, Cookie Policy a Podmienky používania.',
-        'Doplnili sme prehľad práv podľa regiónu (USA – CCPA/CPRA a GPC, Brazília – LGPD, Ázia, Austrália a Nový Zéland).',
-        'Spresnili sme účely a právne základy spracúvania (prehľadná tabuľka) a zoznam sprostredkovateľov vrátane medzinárodných prenosov.',
-        'Pridali sme sekcie o medzinárodných prenosoch a o ochrane údajov detí.',
-        'Vykonali sme drobné jazykové spresnenia naprieč všetkými dokumentmi.',
+        '2.8' => [
+            'Týždenný newsletter odteraz okrem nových odborných článkov obsahuje aj krátky prehľad noviniek na portáli — nové kalkulačky, interaktívne nástroje a zmeny v ostatných častiach služby. Účel spracúvania a text súhlasu sme tomu prispôsobili; odber je stále dobrovoľný a kedykoľvek odvolateľný odhlásením.',
+        ],
+        '2.7' => [
+            'Doplnili sme opis interného pracovného adresára zdravotníckych zariadení — aké kontaktné údaje v ňom vedieme, že pochádzajú z verejne dostupných profesijných zdrojov (register poskytovateľov e-VÚC a weby zariadení), že právnym základom je oprávnený záujem podľa čl. 6 ods. 1 písm. f) a že dotknuté osoby informujeme e-mailom podľa čl. 14 GDPR. Nejde o údaje pacientov.',
+            'Spresnili sme, kto maže uložené výsledky klinických kalkulačiek: záznam vymaže ten, kto ho zadal, priamo vo svojom konte, na žiadosť používateľa ho vymaže prevádzkovateľ a všetky záznamy sa odstránia aj pri zrušení konta.',
+            'Určili sme, že pri zdravotných údajoch zadaných lekárom vystupuje prevádzkovateľ v postavení prevádzkovateľa, nie sprostredkovateľa ambulancie, pretože sám určuje účely a prostriedky spracúvania; sprostredkovateľská zmluva podľa čl. 28 sa preto neuzatvára.',
+            'Zjednotili sme označenie prevádzkovateľa na „MUDr. Ľubomír Polaščín - Nephroctor“ naprieč všetkými dokumentmi.',
+        ],
+        '2.6' => [
+            'Registráciu sme obmedzili na osoby vo veku aspoň 16 rokov; ak miestne právo vyžaduje vyšší minimálny vek, platí tento vyšší vek.',
+        ],
+        '2.5' => [
+            'Spresnili sme úplný rozsah nepovinných profilových údajov, pseudonymný charakter analytiky GA4, minimalizovaný audit po zrušení účtu, jeho 90-dňovú retenčnú lehotu a informáciu, že služba nevykonáva právne významné výlučne automatizované rozhodovanie ani profilovanie.',
+        ],
+        '2.4' => [
+            'Lokálna história kalkulačiek pre neprihlásených sa odteraz vytvára iba po preferenčnom súhlase, neuchováva formulárové vstupy ani identifikátory pacienta a pri odvolaní súhlasu sa vymaže.',
+        ],
+        '2.3' => [
+            'Rozšírili sme Službu o informačnú databázu liekov v nefrológii, register klinických štúdií (dáta z verejného registra ClinicalTrials.gov) a ďalšie informačné nástroje, ktoré samy nespracúvajú osobné údaje návštevníkov.',
+        ],
+        '2.2' => [
+            'Do zoznamu sprostredkovateľov sme doplnili Twilio Inc. (USA), ktoré odosiela overovacie SMS kódy pri overení telefónneho čísla; prenos do USA je krytý štandardnými zmluvnými doložkami (SCC).',
+        ],
+        '2.1' => [
+            'Webové písmo (Inter) sme presunuli na vlastný server — pri jeho načítaní sa už neprenáša žiadny údaj (IP adresa) do Google LLC (USA).',
+        ],
+        '2.0' => [
+            'Právne dokumenty sme rozdelili do troch samostatných stránok: Zásady ochrany osobných údajov, Cookie Policy a Podmienky používania.',
+            'Doplnili sme prehľad práv podľa regiónu (USA – CCPA/CPRA a GPC, Brazília – LGPD, Ázia, Austrália a Nový Zéland).',
+            'Spresnili sme účely a právne základy spracúvania (prehľadná tabuľka) a zoznam sprostredkovateľov vrátane medzinárodných prenosov.',
+            'Pridali sme sekcie o medzinárodných prenosoch a o ochrane údajov detí.',
+            'Vykonali sme drobné jazykové spresnenia naprieč všetkými dokumentmi.',
+        ],
     ];
+}
+
+/**
+ * Bez verzie zachová celý prehľad na právnych stránkach.
+ * S verziou vráti iba jej zmeny; neznáma verzia nemá žiadne položky.
+ * @return list<string>
+ */
+function legalRecentUpdates(?string $version = null): array
+{
+    $byVersion = legalUpdatesByVersion();
+    return $version === null ? array_merge(...array_values($byVersion)) : ($byVersion[$version] ?? []);
 }
