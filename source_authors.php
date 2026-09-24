@@ -25,6 +25,10 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
 function getSourceArticleAuthors(): array {
     return [
         'esc-era-2026-kardiorenalne-odporucania' => ['Kevin Damman', 'Jozine M ter Maaten', 'Kaitlin J Mayne', 'Davide Bolignano', 'Elizabeth M Brown', 'Bruno R da Costa', 'Anna Dagre', 'Ron T Gansevoort', 'Cristina Gavina', 'Andreas Goette', 'Diana A Gorog', 'Nina Nikolova Gotcheva', 'Marta Kaluzna-Oleksy', 'Dearbhla M Kelly', 'Oleksii Korzh', 'Jennifer S Lees', 'Olivia Manfrini', 'Pieter Martens', 'Julio Nunez', 'Eugenio Stabile', 'Isabella Sudano', 'Marieta P Theodorakopoulou', 'Simon Winther', 'William G Herrington'],
+        // Menovaní členovia pracovnej skupiny ESC 2026 pre srdcové zlyhávanie
+        // (PMID 42661420, doi 10.1093/eurheartj/ehag100) – 23 mien overených
+        // cez PubMed eutils, Crossref a oficiálny súbor snímok ESC 2026-09-24.
+        'esc-2026-srdcove-zlyhavanie-nefrologicky-pohlad' => ['Lars Køber', 'Marianna Adamo', 'Anne-Christine Ruwald', 'Daniela Tomasoni', 'Lisa J. Anderson', 'Charlotte Andersson', 'Jasper J. Brugts', 'Ovidiu Chioncel', 'Erwan Donal', 'Peter Ferdinandy', 'Pardeep S. Jhund', 'Francisco Leyva', 'Roberto Lorusso', 'Michael Madigan', 'Wilfried Mullens', 'Stefania Paolillo', 'Nicola Ryan', 'Maggie Simpson', 'Holger Thiele', 'Jens Jakob Thune', 'Emeline M. Van Craenenbroeck', 'Linda W. Van Laake', 'Mariette Verbakel'],
         '12-knih-lekar-choroba-pacient-narativna-medicina' => ['Ted Spiker'],
         '5-kritickych-chyb-manazment-ckm-syndromu-nefrologia' => ['Lisa O\'Mary'],
         'ai-nefrologia-hands-on-primer-klinicka-integracia' => ['Noppawit Aiumtrakul', 'Arjunmohan Mohan', 'Harshil A. Fichadiya', 'Wisit Cheungpasitporn'],
