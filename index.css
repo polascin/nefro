@@ -7141,3 +7141,10 @@ mark.search-hl {
     font-size: 0.88rem;
   }
 }
+
+/* Honeypot odkaz v pätičke — pasca na crawlery ignorujúce robots.txt.
+   display:none skryje odkaz aj pred čítačkami obrazovky, takže ho nasleduje
+   len automat, ktorý parsuje HTML. Pozri bot_trap.php a bot_guard.php. */
+.bot-honeypot {
+  display: none !important;
+}

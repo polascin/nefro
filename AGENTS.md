@@ -41,6 +41,27 @@ This file provides guidance to WARP (warp.dev) when working with code in this re
 - Starts and hardens session settings, applies idle timeout, and exposes auth guards:
   - `isLoggedIn()`, `requireLogin()`, `isAdmin()`, `requireAdmin()`
 - Provides CSRF token generation/validation with token rotation after POST validation.
+- Requires `bot_guard.php`, which self-executes on include (no-op under CLI).
+
+### 2b) Anti-scraping layer (`bot_guard.php`, `bot_trap.php`)
+
+Three coordinated layers — keep their agent lists in sync when editing any one:
+
+1. `robots.txt` — declarative; blocks SEO harvesters and AI *training* crawlers.
+   AI *search* agents (OAI-SearchBot, ChatGPT-User, Claude-User, PerplexityBot)
+   stay allowed: they cite and send readers back.
+2. `.htaccess` — User-Agent blocklist evaluated before PHP starts, plus
+   `X-Robots-Tag: noai, noimageai` (`append`, never `set` — pages set their own).
+3. `bot_guard.php` — per-IP sliding-window rate limits (tiers: verified search
+   bot / browser / CLI tool), burst bans, and forward-confirmed rDNS to unmask
+   agents that merely claim to be Googlebot. State lives in files under
+   `private/cache/botguard/`, deliberately not in the DB — a DB-backed limiter
+   would amplify the very floods it is meant to absorb.
+
+`bot_trap.php` is a honeypot: linked from the footer behind `display:none`,
+disallowed in `robots.txt`, and it temporarily bans whoever follows it anyway.
+Verified search bots are exempt. Never block `curl`/`wget` (used for QA) or
+`wkhtmltopdf` (fetches its own images while rendering article PDFs).
 
 ### 3) Data model and migrations (`setup_db.php`)
 

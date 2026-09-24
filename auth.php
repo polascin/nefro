@@ -2,6 +2,10 @@
 
 declare(strict_types=1);
 require_once __DIR__ . '/config_loader.php';
+// Ochrana pred scrapingom a agresívnymi crawlermi. Modul sa vyhodnotí už pri
+// includovaní (v CLI kontexte je bez efektu), takže beží skôr, než stránka
+// siahne na databázu. auth.php je prvým require prakticky každej stránky.
+require_once __DIR__ . '/bot_guard.php';
 
 /**
  * Vráti CSP nonce pre aktuálnu HTTP požiadavku (lazy singleton per-request).

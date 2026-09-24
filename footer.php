@@ -76,6 +76,11 @@ $swatchBeat = '@' . number_format($beatValue, 2, '.', '');
           <li><a href="/privacy" class="site-footer__link">Ochrana osobných údajov</a></li>
           <li><a href="/cookies" class="site-footer__link">Cookie Policy</a></li>
           <li><a href="/terms" class="site-footer__link">Podmienky používania</a></li>
+          <?php /* Honeypot: odkaz je skrytý cez display:none (neviditeľný aj pre
+                   čítačky obrazovky) a zakázaný v robots.txt. Kto ho nasleduje,
+                   prezradil, že je crawler ignorujúci robots.txt — pozri
+                   bot_trap.php. Bežný návštevník sa naň nikdy nedostane. */ ?>
+          <li class="bot-honeypot" aria-hidden="true"><a href="bot_trap.php" rel="nofollow" tabindex="-1">Archív zdrojov</a></li>
         </ul>
       </div>
 
