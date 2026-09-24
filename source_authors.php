@@ -66,6 +66,10 @@ function getSourceArticleAuthors(): array {
         // overené cez PubMed eutils 2026-08-19. Skupinové spoluautorstvo „MERCURI-2 Study Group“
         // nie je v bibliografickom zázname rozvinuté, preto sa jednotliví členovia neuvádzajú.
         'dapagliflozin-kardiochirurgia-aki-mercuri-2' => ['Maartina J. P. Oosterom-Eijmael', 'Abraham H. Hulst', 'Nelson P. Monteiro de Oliveira', 'Ed D. Niesten', 'Nicobert E. Wietsma', 'Bastiaan M. Gerritse', 'Thierry V. Scohy', 'Thijs C. D. Rettig', 'Ferdinand T. F. Snellen', 'Magiel F. Voogd', 'Marc B. Godfried', 'Rients N. de Boer', 'Jeroen Wink', 'Lisa M. M. van der Werff', 'Christa M. Cobbaert', 'L. Renee Ruhaak', 'Susanne Eberl', 'Benedikt Preckel', 'Markus W. Hollmann', 'Jimmy Schenk', 'Jeroen Hermanides', 'Daniel H. van Raalte'],
+        // Autori spracovanej sekundárnej analýzy DASH4D (Diabetes Care 2026,
+        // doi 10.2337/dc26-1062, PMID 42663510) – 10 mien overených cez PubMed
+        // eutils a Crossref 2026-09-24.
+        'dash4d-diabetes-2-typu-glykemia-tlak' => ['Michael Fang', 'Dan Wang', 'Casey M. Rebholz', 'Justin B. Echouffo-Tcheugui', 'Christopher Farnsworth', 'Jennifer Powers Carson', 'Christine M. Mitchell', 'Scott J. Pilla', 'Lawrence J. Appel', 'Elizabeth Selvin'],
         'dennik-semafor-objemovy-manazment-hemodialyza-rct' => ['Amin Li', 'Di Zhang', 'Liheng Zhou', 'Wenwen Lu'],
         'dialyzacny-dysekvilibracny-syndrom-zaciatok-hemodialyzy' => ['Théo Servan-Schreiber', 'Guillaume Lano', 'Matthieu Giot', 'Océane Jehel', 'Marion Pelletier', 'Marion Sallée', 'Philippe Brunet', 'Stéphane Burtey', 'Thomas Robert'],
         // Autori spracovanej review Nephron 2026, doi 10.1159/nef/adtag007 (PMID 42731064) —
