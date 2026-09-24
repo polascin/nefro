@@ -1,0 +1,26 @@
+{
+  "@context": [
+    "http://www.w3.org/ns/odrl.jsonld",
+    "http://www.w3.org/ns/tdmrep.jsonld"
+  ],
+  "@type": "Offer",
+  "profile": "http://www.w3.org/ns/tdmrep",
+  "uid": "https://nefro.polascin.net/tdm-policy.json",
+  "assigner": {
+    "uid": "https://nefro.polascin.net/",
+    "vcard:fn": "Nefro-projekt Slovensko — MUDr. Ľubomír Polaščín, Nephroctor",
+    "vcard:hasEmail": "mailto:nefro@polascin.net",
+    "vcard:hasURL": "https://nefro.polascin.net/terms.php#tdm"
+  },
+  "permission": [
+    {
+      "target": "https://nefro.polascin.net/",
+      "action": "tdm:mine",
+      "duty": [
+        {
+          "action": "obtainConsent"
+        }
+      ]
+    }
+  ]
+}

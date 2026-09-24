@@ -63,6 +63,39 @@ disallowed in `robots.txt`, and it temporarily bans whoever follows it anyway.
 Verified search bots are exempt. Never block `curl`/`wget` (used for QA) or
 `wkhtmltopdf` (fetches its own images while rendering article PDFs).
 
+### 2c) TDM / AI-training reservation
+
+Blocking crawlers controls *access*; this layer reserves *rights*. Under
+§ 51c of the Slovak Copyright Act (185/2015 Z. z., transposing Art. 4 of
+Directive (EU) 2019/790) the general text-and-data-mining exception applies
+only where the use has not been **expressly reserved** — so the reservation is
+what makes training on this content unlawful rather than merely unwelcome.
+Note § 51b (scientific-research TDM) cannot be reserved; do not claim otherwise.
+
+The same reservation is declared through four independent channels. **Change
+them together or they will contradict each other:**
+
+| Channel | File |
+| --- | --- |
+| `/.well-known/tdmrep.json` (W3C TDMRep) | `.well-known/tdmrep.json` |
+| `tdm-reservation` / `tdm-policy` / `Content-Usage` HTTP headers | `.htaccess` |
+| `<meta name="tdm-reservation">`, `noai, noimageai` | `head_meta.php` |
+| Binding legal text | `terms.php#tdm` |
+
+`tdm-policy.json` is the ODRL offer the first three point at (`tdm:mine` with an
+`obtainConsent` duty). `Content-Usage: train-ai=n, search=y` follows the IETF
+aipref drafts; `ai-use` is deliberately left unstated so citing AI search agents
+stay allowed, consistent with the crawler allowlist.
+
+`noai, noimageai` is appended to the single existing `<meta name="robots">` tag
+— never add a second robots meta, some parsers take the last one as binding and
+`index, follow` would be lost.
+
+Editing the Terms does **not** require bumping `legalInfo()['version']`; the
+reservation is a unilateral act effective on publication. Bumping the version
+makes `legal_notice_worker.php` email every member and subscriber on its next
+cron run, so that is the owner's decision, not a routine edit.
+
 ### 3) Data model and migrations (`setup_db.php`)
 
 - Schema creation and migrations are code-driven and idempotent in one CLI script.

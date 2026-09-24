@@ -17,6 +17,25 @@ ServerSignature Off
     # `append`, nie `set`: stránky si nastavujú vlastný X-Robots-Tag
     # (napr. "noindex, follow" na 404) a `set` by im ho prepísalo.
     Header always append X-Robots-Tag "noai, noimageai"
+
+    # ── Výhrada práv na čerpanie údajov (TDM) ──────────────────────────────
+    # TDM Reservation Protocol (W3C CG, Final Report 2024-05-10). Strojovo
+    # čitateľná výhrada podľa čl. 4 ods. 3 smernice (EÚ) 2019/790; v SR
+    # zodpovedá „výslovnému vyhradeniu" podľa § 51c autorského zákona, ktoré
+    # vylučuje uplatnenie všeobecnej výnimky čerpania údajov.
+    # Tú istú výhradu nesie /.well-known/tdmrep.json a <meta> v head_meta.php
+    # — pri zmene upraviť všetky tri miesta naraz.
+    Header always set tdm-reservation "1"
+    Header always set tdm-policy "https://nefro.polascin.net/tdm-policy.json"
+
+    # Preferencie použitia obsahu AI systémami (IETF aipref, draft).
+    # train-ai=n — obsah sa nesmie použiť na trénovanie generatívnych modelov.
+    # search=y   — indexovanie a odkazovanie je vítané (dosah portálu).
+    # Kategória `ai-use` je zámerne nevyjadrená: citujúce AI-vyhľadávacie
+    # agenty (Perplexity, ChatGPT-User) posielajú čitateľov späť a sú
+    # povolené aj v robots.txt a bot_guard.php.
+    Header always set Content-Usage "train-ai=n, search=y"
+
     Header always unset X-Powered-By
     Header unset X-Powered-By
 </IfModule>
@@ -75,6 +94,8 @@ ServerSignature Off
     RewriteRule ^ - [F,L]
 
     # Blokovanie .git, scratch, hooks, tools, .vscode, .kilo, .trunk adresárov
+    # (.well-known zámerne NIE je v zozname — hostí tdmrep.json, ktorý musí
+    # byť verejne čitateľný, inak je výhrada práv bezzubá.)
     RewriteRule ^(\.git|scratch|hooks|tools|\.vscode|\.kilo|\.trunk)(/.*)?$ - [F,L]
 
     # Defense-in-depth pre runtime dáta a interný archív avatarov. Oba

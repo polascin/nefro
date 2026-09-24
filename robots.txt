@@ -6,6 +6,14 @@
 User-agent: *
 Allow: /
 
+# ── Preferencie použitia obsahu AI systémami ───────────────────────────────
+# IETF aipref (draft-ietf-aipref-attach).
+#   train-ai=n — obsah sa nesmie použiť na trénovanie generatívnych modelov
+#   search=y   — indexovanie a odkazovanie je vítané
+# Tú istú výhradu nesú HTTP hlavičky (Content-Usage, tdm-reservation),
+# /.well-known/tdmrep.json a Podmienky používania (/terms.php#tdm).
+Content-Usage: train-ai=n, search=y
+
 # Administratívne a vývojové stránky
 Disallow: /admin.php
 Disallow: /admin_articles.php

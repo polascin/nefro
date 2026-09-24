@@ -102,6 +102,11 @@ include 'legal_head.php';
                 <ul>
                     <li>preťažovať, skenovať ani narúšať Službu, jej rozhrania či bezpečnostné prvky;</li>
                     <li>obchádzať zabezpečenie, rate-limity alebo prístupové kontroly;</li>
+                    <li>
+                        hromadne sťahovať obsah Služby (scraping) ani ho používať na
+                        trénovanie, doladenie či vyhodnocovanie modelov umelej
+                        inteligencie — pozri výhradu práv v <a href="#tdm">bode 7.1</a>;
+                    </li>
                     <li>používať Službu nezákonne ani na zásah do práv iných;</li>
                     <li>zneužívať klinické nástroje na účely, na ktoré nie sú určené;</li>
                     <li>zadávať osobné údaje pacientov bez náležitého právneho základu a poučenia;</li>
@@ -126,6 +131,60 @@ include 'legal_head.php';
                     zákonom a patrí nám alebo našim poskytovateľom licencií. Udeľujeme vám
                     obmedzenú, odvolateľnú a nevýhradnú licenciu na používanie Služby na jej
                     zamýšľaný účel. Odborné zdroje a citácie patria ich príslušným autorom.
+                </p>
+
+                <h4 id="tdm">7.1 Výhrada práv na čerpanie údajov (text a data mining)</h4>
+                <p>
+                    Prevádzkovateľ si <strong>výslovne vyhradzuje</strong> práva na čerpanie
+                    údajov (text and data mining) zo všetkého obsahu tejto Služby v zmysle
+                    § 51c autorského zákona č. 185/2015 Z. z. a čl. 4 ods. 3 smernice (EÚ)
+                    2019/790 o autorskom práve na digitálnom jednotnom trhu. Uplatnenie
+                    zákonnej výnimky pre čerpanie údajov je týmto vylúčené.
+                </p>
+                <p>
+                    Táto výhrada sa vzťahuje najmä na <strong>trénovanie, dolaďovanie
+                    a vyhodnocovanie modelov umelej inteligencie</strong> vrátane
+                    generatívnych jazykových modelov, a to pre všetky formy obsahu —
+                    články, klinické nástroje a kalkulačky, databázu liekov, obrázky, ako
+                    aj PDF verzie článkov.
+                </p>
+                <p>
+                    Výhrada je popri tomto texte deklarovaná aj strojovo čitateľne, aby
+                    ju bolo možné zistiť automatizovane:
+                </p>
+                <ul>
+                    <li>
+                        súborom
+                        <a href="/.well-known/tdmrep.json"><code>/.well-known/tdmrep.json</code></a>
+                        podľa protokolu TDMRep (W3C Community Group);
+                    </li>
+                    <li>
+                        HTTP hlavičkami <code>tdm-reservation: 1</code>,
+                        <code>tdm-policy</code> a <code>Content-Usage: train-ai=n</code>
+                        pri každej odpovedi servera;
+                    </li>
+                    <li>
+                        značkami <code>&lt;meta name="tdm-reservation" content="1"&gt;</code>
+                        a <code>noai, noimageai</code> v hlavičke každej stránky;
+                    </li>
+                    <li>
+                        zákazom príslušných crawlerov v súbore
+                        <a href="/robots.txt"><code>/robots.txt</code></a>.
+                    </li>
+                </ul>
+                <p>
+                    Podmienky, za ktorých možno získať súhlas s čerpaním údajov, sú uvedené
+                    v strojovo čitateľnej politike
+                    <a href="/tdm-policy.json"><code>/tdm-policy.json</code></a>.
+                    O súhlas žiadajte na adrese
+                    <a href="mailto:<?= htmlspecialchars($info['contactEmail'], ENT_QUOTES, 'UTF-8') ?>"><?= htmlspecialchars($info['contactEmail'], ENT_QUOTES, 'UTF-8') ?></a>.
+                    Bez udeleného súhlasu je použitie obsahu na uvedené účely porušením
+                    autorských práv.
+                </p>
+                <p>
+                    Výhradou nie je dotknutá výnimka čerpania údajov na účely vedeckého
+                    výskumu podľa § 51b autorského zákona, ktorú si zákon vyhradiť
+                    neumožňuje a ktorá svedčí vymedzeným výskumným a pamäťovým inštitúciám.
                 </p>
 
                 <!-- 8. TRETIE STRANY -->

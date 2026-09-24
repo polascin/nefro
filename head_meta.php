@@ -45,7 +45,26 @@ $katexAutoRender = $katexBase . '/contrib/auto-render.min.js';
 <meta name="description" content="<?= htmlspecialchars($seoDescription, ENT_QUOTES) ?>">
 <meta name="keywords" content="<?= htmlspecialchars($seoKeywords, ENT_QUOTES) ?>">
 <meta name="author" content="MUDr. Ľubomír Polaščín">
-<meta name="robots" content="<?= htmlspecialchars($robotsMeta, ENT_QUOTES) ?>">
+<?php /* `noai, noimageai` (konvencia DeviantArt) sa pripája do JEDNÉHO robots
+     meta tagu. Dva samostatné <meta name="robots"> by boli nejednoznačné —
+     časť parserov berie posledný ako záväzný, čím by sa stratilo
+     „index, follow" a s ním dosah portálu. Neznáme tokeny vyhľadávače
+     ignorujú, takže pripojenie je bezpečné. */ ?>
+<meta name="robots" content="<?= htmlspecialchars($robotsMeta . ', noai, noimageai', ENT_QUOTES) ?>">
+
+<?php /* ── Výhrada práv na čerpanie údajov (text & data mining) ─────────────
+     Strojovo čitateľná výhrada podľa čl. 4 ods. 3 smernice (EÚ) 2019/790;
+     v SR „výslovné vyhradenie" podľa § 51c autorského zákona, ktoré vylučuje
+     uplatnenie všeobecnej výnimky čerpania údajov. Právne záväzné znenie je
+     v Podmienkach používania (terms.php#tdm).
+
+     Tá istá výhrada je deklarovaná ešte dvoma nezávislými kanálmi — HTTP
+     hlavičkami v .htaccess a súborom /.well-known/tdmrep.json. Spec TDMRep
+     ráta s tým, že crawler si vyberie ktorýkoľvek z nich; pri zmene treba
+     upraviť všetky tri miesta naraz, inak si budú protirečiť. */ ?>
+<meta name="tdm-reservation" content="1">
+<meta name="tdm-policy" content="<?= htmlspecialchars($baseUrl, ENT_QUOTES) ?>tdm-policy.json">
+
 <link rel="canonical" href="<?= htmlspecialchars($canonicalUrl, ENT_QUOTES) ?>">
 <link rel="alternate" hreflang="sk" href="<?= htmlspecialchars($canonicalUrl, ENT_QUOTES) ?>">
 <link rel="alternate" hreflang="x-default" href="<?= htmlspecialchars($canonicalUrl, ENT_QUOTES) ?>">
