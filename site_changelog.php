@@ -55,6 +55,13 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-09-24 13:10',
+                'category' => 'calculators',
+                'title' => 'PREVENT po načítaní z histórie zachová UACR',
+                'description' => 'Pri uložení a opätovnom načítaní výpočtu PREVENT sa voliteľné UACR znova vyplní do formulára. Prepočet ostane v rozšírenom modeli a nezníži sa ticho na základný odhad bez albuminúrie.',
+                'url' => 'calculator_prevent.php',
+            ],
+            [
                 'date' => '2026-09-24 00:38',
                 'category' => 'portal',
                 'title' => 'Prehľadnejšie oznámenia o právnych zmenách',

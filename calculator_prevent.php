@@ -211,6 +211,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             'bmi'       => (float) $bmi,
                             'egfr'      => (float) $egfr,
                             'egfr_unit' => $form['egfr_unit'],
+                            'uacr_value' => trim($form['uacr_value']),
+                            'uacr_unit' => in_array($form['uacr_unit'], ['mg_g', 'mg_mmol'], true)
+                                ? $form['uacr_unit']
+                                : 'mg_g',
                             'uacr_mg_g' => $uacrMgG !== null ? round($uacrMgG, 2) : null,
                             'hba1c'     => $hba1c,
                             'sdi'       => $sdi,
