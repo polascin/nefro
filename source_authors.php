@@ -77,6 +77,9 @@ function getSourceArticleAuthors(): array {
         'extremne-horucavy-riziko-ckd-dialyza' => ['Roberta Villa'],
         'farmakologicka-liecba-obezity-pokrocile-ckd-dialyza' => ['Pooja Budhiraja', 'Babak J. Orandi'],
         'finerenon-ckm-syndrom-dm2-ckd-fidelity' => ['Kevin Bryan Lo', 'John W Ostrominski', 'Yasuhiro Hamatani', 'Brian L Claggett', 'Rajiv Agarwal', 'Stefan D Anker', 'Gerasimos Filippatos', 'Peter Rossing', 'Luis M Ruilope', 'Bertram Pitt', 'Alexandros Briasoulis', 'Kimon Stamatelopoulos', 'Meike Brinker', 'Patrick Schloemer', 'Andrea Glasauer', 'Scott D Solomon', 'Muthiah Vaduganathan'],
+        // Menovaní autori štúdie FINE-ONE (NEJM 2026;394:947–957, PMID 41780000) –
+        // 19 mien overených cez PubMed/Europe PMC, Crossref a vydavateľa 2026-09-24.
+        'finerenon-dm1-ckd-fda-fine-one' => ['Hiddo J. L. Heerspink', 'Andreas L. Birkenfeld', 'David Z. I. Cherney', 'Helen M. Colhoun', 'Per-Henrik Groop', 'Linong Ji', 'Niels Jongs', 'Chantal Mathieu', 'Richard E. Pratley', 'Sylvia E. Rosas', 'Peter Rossing', 'Jay S. Skyler', 'Katherine R. Tuttle', 'Robert Lawatscheck', 'Meike Brinker', 'Markus F. Scheerer', 'Julie Russell', 'Patrick Schloemer', 'Janet B. McGill'],
         // Autori prespecifikovanej podskupinovej analýzy FIND-CKD (Eur Heart J 2026,
         // doi 10.1093/eurheartj/ehag729, PMID 42669052) – 26 mien, AuthorList CompleteYN=Y,
         // overené cez PubMed eutils a Crossref 2026-09-13. Kolektív FIND-CKD Investigators
