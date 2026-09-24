@@ -31,6 +31,9 @@ function getSourceArticleAuthors(): array {
         'esc-2026-srdcove-zlyhavanie-nefrologicky-pohlad' => ['Lars Køber', 'Marianna Adamo', 'Anne-Christine Ruwald', 'Daniela Tomasoni', 'Lisa J. Anderson', 'Charlotte Andersson', 'Jasper J. Brugts', 'Ovidiu Chioncel', 'Erwan Donal', 'Peter Ferdinandy', 'Pardeep S. Jhund', 'Francisco Leyva', 'Roberto Lorusso', 'Michael Madigan', 'Wilfried Mullens', 'Stefania Paolillo', 'Nicola Ryan', 'Maggie Simpson', 'Holger Thiele', 'Jens Jakob Thune', 'Emeline M. Van Craenenbroeck', 'Linda W. Van Laake', 'Mariette Verbakel'],
         '12-knih-lekar-choroba-pacient-narativna-medicina' => ['Ted Spiker'],
         '5-kritickych-chyb-manazment-ckm-syndromu-nefrologia' => ['Lisa O\'Mary'],
+        // Jediný autor spracovanej práce Federal Practitioner 2026;43(Suppl 3):e1-e5
+        // (doi 10.12788/fp.0744), overený cez plný text a Crossref 2026-09-24.
+        '60-minutova-infuzia-dextranu-zeleza-bezpecnost-prax' => ['Jay Tieri'],
         'ai-nefrologia-hands-on-primer-klinicka-integracia' => ['Noppawit Aiumtrakul', 'Arjunmohan Mohan', 'Harshil A. Fichadiya', 'Wisit Cheungpasitporn'],
         'ai-scribe-pravne-nastrahy-ambulancia-nefrologia' => ['Ericka L. Adler'],
         'alogliptin-dpp4-inhibitory-oblickove-vysledky-diabetes' => ['Stacey M. Sklepinski', 'Jeph Herrin', 'Joshua J. Neumiller', 'Eric C. Polley', 'Kavya Sindhu Swarna', 'Yihong Deng', 'Rodolfo J. Galindo', 'Guillermo E. Umpierrez', 'Joseph S. Ross', 'Juan P. Brito', 'Victor M. Montori', 'Mindy M. Mickelson', 'Rozalina G. McCoy'],
