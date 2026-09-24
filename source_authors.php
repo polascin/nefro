@@ -24,6 +24,7 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
  */
 function getSourceArticleAuthors(): array {
     return [
+        'esc-era-2026-kardiorenalne-odporucania' => ['Kevin Damman', 'Jozine M ter Maaten', 'Kaitlin J Mayne', 'Davide Bolignano', 'Elizabeth M Brown', 'Bruno R da Costa', 'Anna Dagre', 'Ron T Gansevoort', 'Cristina Gavina', 'Andreas Goette', 'Diana A Gorog', 'Nina Nikolova Gotcheva', 'Marta Kaluzna-Oleksy', 'Dearbhla M Kelly', 'Oleksii Korzh', 'Jennifer S Lees', 'Olivia Manfrini', 'Pieter Martens', 'Julio Nunez', 'Eugenio Stabile', 'Isabella Sudano', 'Marieta P Theodorakopoulou', 'Simon Winther', 'William G Herrington'],
         '12-knih-lekar-choroba-pacient-narativna-medicina' => ['Ted Spiker'],
         '5-kritickych-chyb-manazment-ckm-syndromu-nefrologia' => ['Lisa O\'Mary'],
         'ai-nefrologia-hands-on-primer-klinicka-integracia' => ['Noppawit Aiumtrakul', 'Arjunmohan Mohan', 'Harshil A. Fichadiya', 'Wisit Cheungpasitporn'],
