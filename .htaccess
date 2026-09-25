@@ -75,8 +75,12 @@ ServerSignature Off
     # Claude-User, PerplexityBot — posielajú návštevníkov späť), curl/wget
     # (vlastné QA) a wkhtmltopdf (generuje PDF verzie článkov).
 
+    # robots.txt a výhrada TDM musia zostať čitateľné aj pre blokovaných
+    # agentov — 4xx na robots.txt znamená podľa RFC 9309 „bez obmedzení"
+    # a strojovo čitateľnú výhradu by nemal kto prečítať.
+    RewriteCond %{REQUEST_URI} !^/(robots\.txt|\.well-known/tdmrep\.json|tdm-policy\.json)$
     # SEO/backlink harvestery
-    RewriteCond %{HTTP_USER_AGENT} (SemrushBot|AhrefsBot|AhrefsSiteAudit|MJ12bot|DotBot|BLEXBot|PetalBot|DataForSeoBot|Barkrowler|SeekportBot|serpstatbot|ZoominfoBot|MegaIndex|SEOkicks|BacklinkCrawler|SiteAuditBot|Riddler|magpie-crawler|trendictionbot|VelenPublicWebCrawler|SurdotlyBot|aiHitBot|Screaming.Frog|Sitebulb|Sogou|YisouSpider|SputnikBot|Mail\.RU_Bot) [NC,OR]
+    RewriteCond %{HTTP_USER_AGENT} (SemrushBot|AhrefsBot|AhrefsSiteAudit|MJ12bot|DotBot|BLEXBot|PetalBot|DataForSeoBot|Barkrowler|SeekportBot|serpstatbot|ZoominfoBot|MegaIndex|SEOkicks|BacklinkCrawler|SiteAuditBot|Riddler|magpie-crawler|trendictionbot|VelenPublicWebCrawler|SurdotlyBot|aiHitBot|Screaming.Frog|Sitebulb|Sogou|YisouSpider|SputnikBot|Mail\.RU_Bot|LinkpadBot|netEstate|Mediatoolkitbot|DomainStatsBot|SiteCheckerBotCrawler|AwarioBot|Onalyticabot|grapeshot|ADmantX|Linguee|seolyt) [NC,OR]
     # Crawlery zbierajúce dáta na trénovanie jazykových modelov
     RewriteCond %{HTTP_USER_AGENT} (GPTBot|ClaudeBot|Claude-Web|anthropic-ai|CCBot|Google-Extended|Bytespider|Amazonbot|Applebot-Extended|FacebookBot|Meta-ExternalAgent|Meta-ExternalFetcher|Diffbot|omgili|ImagesiftBot|YouBot|Timpibot|Webzio|cohere-ai|cohere-training-data-crawler|AI2Bot|PanguBot|Kangaroo.Bot|ICC-Crawler|img2dataset|iaskspider|Firecrawl|Bedrockbot) [NC,OR]
     # Hromadné sťahovače, skenery zraniteľností a scrapovacie knižnice

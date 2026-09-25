@@ -50,7 +50,11 @@ $legalFullTitle   = $legalTitle . ' | ' . $legalSiteName;
 
     <!-- SEO & Metadata -->
     <meta name="description" content="<?= htmlspecialchars($legalDescription, ENT_QUOTES, 'UTF-8') ?>">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow, noai, noimageai">
+    <!-- Výhrada TDM — rovnaká ako v head_meta.php (AGENTS.md § 2c); právne stránky
+         head_meta.php nepoužívajú, preto ju treba udržiavať aj tu. -->
+    <meta name="tdm-reservation" content="1">
+    <meta name="tdm-policy" content="<?= htmlspecialchars($info['url'] . '/tdm-policy.json', ENT_QUOTES, 'UTF-8') ?>">
     <link rel="canonical" href="<?= htmlspecialchars($legalCanonical, ENT_QUOTES, 'UTF-8') ?>">
     <link rel="alternate" hreflang="sk-SK" href="<?= htmlspecialchars($legalCanonical, ENT_QUOTES, 'UTF-8') ?>">
 

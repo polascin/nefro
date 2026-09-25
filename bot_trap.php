@@ -21,8 +21,21 @@ $ua = botGuardUserAgent();
 $isSearch = $ua !== '' && preg_match(botGuardSearchPattern(), $ua) === 1;
 $verified = $isSearch ? botGuardVerifySearchBot($ip, $ua) : null;
 
-if ($verified !== true) {
+// Prehliadač posiela Sec-Fetch-* hlavičky. Ak požiadavka prišla z cudzej
+// stránky (napr. <img src="…/bot_trap.php"> vložený do fóra či e-mailu),
+// nejde o crawler sledujúci náš skrytý odkaz — ban by inak vedel ktokoľvek
+// nanútiť čitateľom (celej NAT sieti ambulancie). Scrapery tieto hlavičky
+// väčšinou neposielajú, headless prehliadač pri sledovaní odkazu pošle
+// same-origin + document a ban dostane.
+$sfSite = $_SERVER['HTTP_SEC_FETCH_SITE'] ?? null;
+$sfDest = $_SERVER['HTTP_SEC_FETCH_DEST'] ?? null;
+$foreignBrowserRequest = $sfSite !== null
+    && ($sfSite !== 'same-origin' || ($sfDest !== null && $sfDest !== 'document'));
+
+if ($verified !== true && !$foreignBrowserRequest) {
     botGuardBan($ip, BOT_GUARD_TRAP_BAN, 'honeypot');
+} elseif ($foreignBrowserRequest) {
+    botGuardLog('honeypot-skip', 'cudzí pôvod (Sec-Fetch-Site: ' . substr((string) preg_replace('/[^a-z-]/', '', (string) $sfSite), 0, 20) . ') — bez banu');
 } else {
     botGuardLog('honeypot-skip', 'overený vyhľadávač — bez banu');
 }

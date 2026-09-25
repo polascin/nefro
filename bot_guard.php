@@ -407,7 +407,7 @@ function botGuardReject(string $reason): void
         "403 — Prístup odmietnutý.\n\n"
         . "Obsah Nefro-projektu Slovensko je chránený autorským právom a nie je\n"
         . "určený na automatizovaný zber ani na trénovanie jazykových modelov.\n"
-        . "Ak ide o omyl, napíšte na info@nefro.polascin.net.\n"
+        . "Ak ide o omyl, napíšte na nefro@polascin.net.\n"
     );
 }
 

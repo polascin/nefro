@@ -1,6 +1,6 @@
 # robots.txt — Nefro-projekt Slovensko
 # https://nefro.polascin.net/
-# Aktualizované: 2026-09-24
+# Aktualizované: 2026-09-25
 
 # ── Všeobecné pravidlá pre všetkých robotov ────────────────────────────────
 User-agent: *
@@ -148,6 +148,48 @@ User-agent: YisouSpider
 Disallow: /
 
 User-agent: Mail.RU_Bot
+Disallow: /
+
+User-agent: LinkpadBot
+Disallow: /
+
+User-agent: SiteAuditBot
+Disallow: /
+
+User-agent: netEstate
+Disallow: /
+
+User-agent: Mediatoolkitbot
+Disallow: /
+
+User-agent: DomainStatsBot
+Disallow: /
+
+User-agent: SiteCheckerBotCrawler
+Disallow: /
+
+User-agent: AwarioBot
+Disallow: /
+
+User-agent: Onalyticabot
+Disallow: /
+
+User-agent: grapeshot
+Disallow: /
+
+User-agent: ADmantX
+Disallow: /
+
+User-agent: Linguee
+Disallow: /
+
+User-agent: Sitebulb
+Disallow: /
+
+User-agent: seolyt
+Disallow: /
+
+User-agent: SputnikBot
 Disallow: /
 
 # ── Crawlery zbierajúce dáta na trénovanie jazykových modelov ──────────────

@@ -79,7 +79,7 @@ them together or they will contradict each other:**
 | --- | --- |
 | `/.well-known/tdmrep.json` (W3C TDMRep) | `.well-known/tdmrep.json` |
 | `tdm-reservation` / `tdm-policy` / `Content-Usage` HTTP headers | `.htaccess` |
-| `<meta name="tdm-reservation">`, `noai, noimageai` | `head_meta.php` |
+| `<meta name="tdm-reservation">`, `noai, noimageai` | `head_meta.php` + `legal_head.php` (právne stránky) |
 | Binding legal text | `terms.php#tdm` |
 
 `tdm-policy.json` is the ODRL offer the first three point at (`tdm:mine` with an
