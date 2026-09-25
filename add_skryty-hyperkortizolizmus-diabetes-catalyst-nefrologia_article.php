@@ -52,7 +52,7 @@ $articles[] = [
 
 <h2>Výsledok 23,8 %: pozitívny DST, nie 252 potvrdených Cushingových syndrómov</h2>
 
-<p>Do prevalenčnej analýzy vstúpilo 1 057 pacientov s dostatočnou koncentráciou dexametazónu. Kortizol po DST zostal nad 1,8 µg/dl (50 nmol/l) u 252 pacientov, teda u <strong>23,8 %</strong> (95 % interval spoľahlivosti 21,3 až 26,5 %). U pacientov užívajúcich najmenej tri triedy antihypertenzív bola nesupresia prítomná u <strong>36,6 %</strong>.</p>
+<p>Do prevalenčnej analýzy vstúpilo 1 057 pacientov s dostatočnou koncentráciou dexametazónu. Kortizol po DST zostal nad 1,8 µg/dl (50 nmol/l) u 252 pacientov, teda u <strong>23,8 %</strong> (95 % interval spoľahlivosti 21,3 až 26,5 %). U pacientov užívajúcich najmenej tri antihypertenzíva bola nesupresia prítomná u <strong>36,6 %</strong>.</p>
 
 <p>Tieto čísla treba čítať presne:</p>
 
