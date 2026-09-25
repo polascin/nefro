@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Odborny prehlad ketaminom asociovanej uropatie u deti a adolescentov.
  */
