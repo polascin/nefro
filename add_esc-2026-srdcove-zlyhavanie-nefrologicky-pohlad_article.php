@@ -102,7 +102,7 @@ $articles[] = [
 
 <p>Vyšší vek, fibrilácia predsiení, renálna dysfunkcia a viaceré ďalšie stavy môžu koncentráciu zvýšiť; obezita ju môže znížiť. Znížená eGFR preto nie je dôvodom NT-proBNP ignorovať, ale dôvodom interpretovať výsledok v širšom kontexte. Vekové prahy zlepšujú špecificitu, nekorigujú však automaticky všetky účinky CKD, rytmu, telesnej hmotnosti a akútneho klinického stavu.</p>
 
-<h2>Dekompensácia: kongescia, diuretiká a obličková funkcia</h2>
+<h2>Dekompenzácia: kongescia, diuretiká a obličková funkcia</h2>
 
 <p>ESC používa pojem dekompenzované srdcové zlyhávanie namiesto predchádzajúceho širokého označenia akútne srdcové zlyhávanie. Pri preťažení tekutinami zostávajú základom slučkové diuretiká a dynamická úprava dávky podľa kongescie. Pri nedostatočnej odpovedi sa môže pridať krátkodobý intravenózny acetazolamid alebo perorálny hydrochlorotiazid. Riadenie diuretickej liečby podľa sodíka v moči počas prvých dní možno zvážiť na zlepšenie natriurézy a diurézy. [1, 2]</p>
 
