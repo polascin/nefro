@@ -33,6 +33,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Liečba komplement 3 glomerulopatie (C3G) podľa KDIGO 2021: od podpornej terapie (ACEi/ARB, MMF) cez terminálnu blokádu komplementu po cielenú inhibíciu alternatívnej dráhy – iptakopan a pegcetakoplan.',
     'content'      => <<<'HTML'
+<figure><a href="img/c3-glomerulopatia-c3g-liecba-inhibicia-komplementu.webp" rel="noopener noreferrer" target="_blank"><img src="img/c3-glomerulopatia-c3g-liecba-inhibicia-komplementu.webp" alt="Glomerulus zanesený depozitmi komplementu a presný svetelný blokátor zastavujúci jeden krok kaskády" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Nešpecifická liečba tlmí následky; cielená inhibícia zasahuje priamo krok, ktorý poškodenie spúšťa.</figcaption></figure>
+
 <p>U pacientov s <strong>komplement 3 glomerulopatiou (C3G)</strong> sa dlhodobo ťažko vytvára jednotný „štandard starostlivosti“, a to najmä pre <strong>relatívne nedávne vyčlenenie diagnózy</strong> a <strong>nedostatok randomizovaných kontrolovaných štúdií</strong>. KDIGO 2021 preto svoje odporúčania stavia prevažne na <strong>klinickej skúsenosti a expertnom konsenze</strong>, pričom dôkazy často pochádzajú z <strong>retrospektívnych kohortových štúdií</strong>.</p>
 
 <p>Zároveň sa ukazuje, že C3G nie je jedna homogénna jednotka. <strong>C3G spojená s monoklonálnymi imunoglobulínmi</strong> je odlišná situácia, v ktorej majú prednosť postupy <strong>cielené na klon</strong> (clone-targeted); tento prehľad sa však venuje najmä širšiemu rámcu liečby C3G bez tejto špecifickej klonovej cesty.</p>

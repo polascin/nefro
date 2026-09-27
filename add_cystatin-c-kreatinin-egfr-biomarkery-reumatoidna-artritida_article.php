@@ -33,6 +33,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Sekundárna analýza randomizovanej štúdie pri aktívnej reumatoidnej artritíde: eGFR z cystatínu C je konzistentne nižší než z kreatinínu už na začiatku a zmena TNFR1 súvisí so zmenou eGFRcys, nie eGFRcr.',
     'content'      => <<<'HTML'
+<figure><a href="img/cystatin-c-kreatinin-egfr-biomarkery-reumatoidna-artritida.webp" rel="noopener noreferrer" target="_blank"><img src="img/cystatin-c-kreatinin-egfr-biomarkery-reumatoidna-artritida.webp" alt="Dva meracie ukazovatele stúpajúce z obličky, pričom do jedného zasahuje signál zo zapálených kĺbov" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Zápal môže ovplyvniť jeden z odhadov viac než druhý — a tým skresliť obraz funkcie obličiek.</figcaption></figure>
+
 <p>Reumatoidná artritída (RA) je chronické systémové zápalové ochorenie, ktoré okrem kĺbov zasahuje aj ďalšie orgánové systémy vrátane obličiek. V klinickej praxi sa funkcia obličiek najčastejšie monitoruje nepriamo – prostredníctvom odhadov glomerulárnej filtrácie z koncentrácií kreatinínu a cystatínu C. Pri RA však môže byť interpretácia týchto testov problematická: samotný chronický zápal, zmeny svalovej hmoty (sarkopénia) aj liečba môžu ovplyvňovať tvorbu alebo hladiny týchto markerov, a tým aj výsledné odhady eGFR.</p>
 
 <p>Cieľom práce, z ktorej tento prehľad vychádza, bolo charakterizovať, ako sa v čase menia odhady glomerulárnej filtrácie založené na cystatíne C (eGFRcys) a na kreatiníne (eGFRcr), a následne zhodnotiť ich vzťah k biomarkerom aktivity RA meraným v rámci randomizovanej klinickej štúdie.</p>

@@ -33,6 +33,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Dostupnosť agonistov GLP-1 zjednodušila prístup k liečbe, no priniesla aj riziko nevhodných žiadostí. Ako rozpoznať poruchy príjmu potravy v anamnéze a prečo musí skríning a jasne stanovený cieľ liečby predchádzať predpisu.',
     'content'      => <<<'HTML'
+<figure><a href="img/glp1-poruchy-prijmu-potravy-nevhodne-pouzivanie.webp" rel="noopener noreferrer" target="_blank"><img src="img/glp1-poruchy-prijmu-potravy-nevhodne-pouzivanie.webp" alt="Svetelný lúč zužujúci siluetu ďalej, než je zdravé, s výstražným svetlom na okraji" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Ten istý účinok, ktorý pomáha, sa u rizikového pacienta môže stať nástrojom poruchy príjmu potravy.</figcaption></figure>
+
 <p>V posledných rokoch sa dostupnosť agonistov GLP-1 receptorov výrazne zjednodušila. Perorálne prípravky a rýchly prístup cez telemedicínske siete zvyšujú pravdepodobnosť, že o tieto lieky požiadajú aj ľudia mimo okruhu pacientov, pre ktorých sú určené. Medzi odborníkmi sa opakovane objavujú obavy, že časť žiadostí o GLP-1 môže súvisieť s nedostatočným zhodnotením porúch príjmu potravy alebo so skrytou anamnézou, ktorá sa pri „rýchlych“ predpisoch neodhalí.</p>
 
 <p>Nasledujúci prehľad zhŕňa, na čo upozorňujú klinici, a ponúka praktický rámec, ako k indikácii GLP-1 pristupovať obozretne.</p>

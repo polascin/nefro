@@ -50,6 +50,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Iniciatíva Klug entscheiden (DGIM) v nefrológii: ktoré laboratórne vyšetrenia naozaj menia manažment pacienta. Pozitívne odporúčania (kreatinín/eGFR, ACR, parametre CKD-MBD) aj to, čomu sa pri CKD vyhnúť.',
     'content'      => <<<'HTML'
+<figure><a href="img/klug-entscheiden-nefrologia-laboratorne-vysetrenia.webp" rel="noopener noreferrer" target="_blank"><img src="img/klug-entscheiden-nefrologia-laboratorne-vysetrenia.webp" alt="Dlhý rad laboratórnych skúmaviek, z ktorých len niekoľko zostáva rozsvietených a smeruje svetlo k obličke" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Viac vyšetrení neznamená lepšie rozhodnutie — hodnotu má len to, čo skutočne mení postup.</figcaption></figure>
+
 <p>Iniciatíva <strong>„Klug entscheiden“</strong> (v preklade „rozumne sa rozhodovať“) – vedená spoločnosťou DGIM (Nemecká spoločnosť pre vnútorné lekárstvo) spolu s odbornými spoločnosťami – sa zameriava na to, aby sa v medicíne nerobil zbytočný „laboratórny skríning“ bez jasného klinického dôvodu, ale zároveň sa neprehliadli vyšetrenia, ktoré reálne menia manažment pacienta. V nefrológii je jadrom prístupu skoré zachytenie ochorenia a stratifikácia rizika pri CKD pomocou jednoduchých krvných a močových testov a vybraných parametrov minerálovo-kostného metabolizmu.</p>
 
 <h2>1) Pre koho to platí (praktický rámec)</h2>
