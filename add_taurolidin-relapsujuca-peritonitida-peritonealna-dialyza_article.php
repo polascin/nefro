@@ -35,6 +35,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Taurolidín môže byť u vybraných pacientov s relapsujúcou PD peritonitídou zaujímavou adjuvantnou stratégiou proti katétrovému biofilmu. Nemá však nahradiť antibiotiká ani odkladať odstránenie katétra, keď je klinicky indikované.',
     'content'      => <<<'HTML'
+<figure><a href="img/taurolidin-relapsujuca-peritonitida-peritonealna-dialyza.webp" rel="noopener noreferrer" target="_blank"><img src="img/taurolidin-relapsujuca-peritonitida-peritonealna-dialyza.webp" alt="Katéter s tmavým biofilmom na vnútornej stene, ktorý svetlý antiseptický zámok čiastočne vyčistí" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Biofilm je dôvod, prečo sa peritonitída vracia — otázkou zostáva, či ho zámok zvládne odstrániť.</figcaption></figure>
+
 <p>Peritonitída zostáva jednou z najzávažnejších komplikácií peritoneálnej dialýzy (PD). Nie je to len akútna infekčná epizóda. Opakované, relapsujúce alebo refraktérne peritonitídy zvyšujú riziko poškodenia peritoneálnej membrány, zlyhania techniky, hospitalizácie, prechodu na hemodialýzu a u krehkých pacientov aj celkovej morbidity.</p>
 
 <p>Článok v <em>Journal of Nephrology</em> zo série „Lessons for the clinical nephrologist“ sa venuje použitiu <strong>taurolidínu</strong> ako adjuvantnej stratégie u starostlivo vybraných pacientov s relapsujúcou PD peritonitídou. Ide o prakticky zaujímavú tému, najmä v situáciách, keď štandardná antibiotická liečba opakovane prinesie len dočasné zlepšenie a infekcia sa vracia.</p>

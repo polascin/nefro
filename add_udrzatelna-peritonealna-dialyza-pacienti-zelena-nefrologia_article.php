@@ -35,6 +35,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Pacienti na peritoneálnej dialýze sú ochotní zapájať sa do udržateľnejšej starostlivosti. Potrebujú však jasné pravidlá pre odpad, stabilnú logistiku a digitálne nástroje, ktoré nenahradia klinicky potrebný osobný kontakt.',
     'content'      => <<<'HTML'
+<figure><a href="img/udrzatelna-peritonealna-dialyza-pacienti-zelena-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/udrzatelna-peritonealna-dialyza-pacienti-zelena-nefrologia.webp" alt="Dialyzačný vak, ktorého odtok sa vracia späť do uzavretej svetelnej slučky namiesto odpadu" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Zelená nefrológia znamená uzavrieť cyklus tam, kde to ide — bez toho, aby liečba stratila kvalitu.</figcaption></figure>
+
 <p>Peritoneálna dialýza (PD) je z klinického hľadiska cenná domáca dialyzačná metóda. Pacientovi prináša väčšiu autonómiu, menšiu potrebu pravidelného dochádzania do dialyzačného strediska a pri správnej indikácii aj dobrú kvalitu života. Menej viditeľnou, ale čoraz dôležitejšou témou je jej environmentálna stopa.</p>
 
 <p>Nová práca publikovaná v <em>Journal of Nephrology</em> skúma zelenú nefrológiu priamo z pohľadu pacientov liečených peritoneálnou dialýzou. Autori sa nezamerali iba na technické riešenia, ale na každodennú realitu: čo pacienti doma recyklujú, ako vnímajú dodávky dialyzačného materiálu a aký majú postoj k digitálnej zdravotnej starostlivosti.</p>

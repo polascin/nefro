@@ -35,6 +35,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Írska kohorta pacientov s funkčným obličkovým štepom po viac ako 40 rokoch ukazuje význam živého darcovstva, nízko nastavenej individualizovanej imunosupresie a celoživotného skríningu kožných nádorov.',
     'content'      => <<<'HTML'
+<figure><a href="img/styridsat-rokov-transplantat-oblicky-ultra-dlhodobe-prezivanie.webp" rel="noopener noreferrer" target="_blank"><img src="img/styridsat-rokov-transplantat-oblicky-ultra-dlhodobe-prezivanie.webp" alt="Oblička žiariaca na konci veľmi dlhého svetelného koridoru zloženého z ustupujúcich prstencov" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Štyri desaťročia funkcie štepu nie sú náhoda — ukazujú, čo je pri priaznivej kombinácii faktorov možné.</figcaption></figure>
+
 <p>Transplantácia obličky je pre mnohých pacientov s terminálnym zlyhaním obličiek najlepšou formou náhrady funkcie obličiek. Pri hodnotení úspechu sa často sleduje jednoročné, päťročné alebo desaťročné prežívanie štepu. Osobitne cennú skupinu však tvoria pacienti, u ktorých transplantovaná oblička funguje štyridsať rokov a viac.</p>
 
 <p>Nová štúdia publikovaná v <em>Journal of Nephrology</em> analyzuje írsku kohortu pacientov s extrémne dlhým prežívaním obličkového štepu. Je to prakticky dôležitá práca: ukazuje, že veľmi dlhodobá funkcia transplantovanej obličky nie je len historická kuriozita, ale klinicky dosiahnuteľný výsledok pri priaznivých podmienkach, dôslednej dispenzarizácii a individualizovanej imunosupresii.</p>

@@ -35,6 +35,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'U pacientov s diabetom 2. typu môže výber kreatinínovej rovnice pre eGFR meniť zaradenie do G kategórií CKD. Rozdiel medzi CKD-EPI 2021 a EKFC preto nie je len matematický, ale môže ovplyvniť rizikovú stratifikáciu a načasovanie nefroprotekcie.',
     'content'      => <<<'HTML'
+<figure><a href="img/egfr-diabetes-ekfc-ckd-epi-stadia-ckd.webp" rel="noopener noreferrer" target="_blank"><img src="img/egfr-diabetes-ekfc-ckd-epi-stadia-ckd.webp" alt="Oblička na rozhraní dvoch svetelných zón, cez ktoré prechádzajú dve mierne odlišné meracie krivky" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Pacient sa nezmení — no podľa použitej rovnice môže skončiť v inom štádiu CKD.</figcaption></figure>
+
 <p>Odhad glomerulovej filtrácie patrí medzi základné nástroje nefrologickej aj diabetologickej praxe. U pacientov s diabetes mellitus 2. typu má osobitný význam, pretože práve táto skupina má vysoké riziko chronickej choroby obličiek, progresie albuminúrie, poklesu eGFR a napokon aj zlyhania obličiek.</p>
 
 <p>Krátky článok publikovaný v <em>Journal of Nephrology</em> upozorňuje na prakticky dôležitý problém: rôzne kreatinínové rovnice na výpočet eGFR nemusia toho istého pacienta zaradiť do rovnakej G kategórie. Pri diabete to môže mať priamy dosah na stratifikáciu rizika, frekvenciu kontrol, indikáciu nefroprotektívnej liečby aj načasovanie odoslania pacienta k nefrológovi.</p>

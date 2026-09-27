@@ -35,6 +35,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Japonská kohorta JOINT-KD naznačuje, že spolupráca primárnej starostlivosti a nefrológa pri CKD G5 síce neoddialila dialýzu, ale bola spojená s nižším rizikom infekčných hospitalizácií.',
     'content'      => <<<'HTML'
+<figure><a href="img/spolupraca-vseobecny-lekar-nefrolog-ckd-g5-joint-kd.webp" rel="noopener noreferrer" target="_blank"><img src="img/spolupraca-vseobecny-lekar-nefrolog-ckd-g5-joint-kd.webp" alt="Dve svetelné cesty, ktoré sa spájajú do jedného jasnejšieho prúdu nesúceho obličku v pokročilom štádiu" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Ani jedna zo strán nestačí sama — v pokročilom štádiu rozhoduje, či starostlivosť pokračuje spoločne.</figcaption></figure>
+
 <p>Manažment pacienta s chronickou chorobou obličiek v štádiu G5 nie je iba otázkou rozhodnutia, kedy začať dialýzu. Ide o komplexnú starostlivosť o človeka s vysokým rizikom hospitalizácie, infekcií, kardiovaskulárnych komplikácií, nutričných problémov, polyfarmácie, frailty a zhoršenej kvality života.</p>
 
 <p>Štúdia JOINT-KD publikovaná v <em>Journal of Nephrology</em> sa venovala prakticky dôležitej otázke: má spolupráca medzi lekárom primárnej starostlivosti a nefrológom merateľný klinický prínos u pacientov s CKD v štádiu G5?</p>

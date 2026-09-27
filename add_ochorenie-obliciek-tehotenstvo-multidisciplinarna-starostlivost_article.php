@@ -35,6 +35,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Tehotenstvo pri ochorení obličiek vyžaduje plánovanie ešte pred koncepciou, úpravu rizikových liekov, správnu interpretáciu renálnych parametrov a úzku spoluprácu nefrológa s materno-fetálnym tímom.',
     'content'      => <<<'HTML'
+<figure><a href="img/ochorenie-obliciek-tehotenstvo-multidisciplinarna-starostlivost.webp" rel="noopener noreferrer" target="_blank"><img src="img/ochorenie-obliciek-tehotenstvo-multidisciplinarna-starostlivost.webp" alt="Silueta tehotenského brucha a vedľa nej oblička pod zvýšenou záťažou, obe nasvietené zbiehajúcimi sa lúčmi" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Tehotenstvo kladie na obličky vyššie nároky — a práve preto sa o pacientku stará viac odborností naraz.</figcaption></figure>
+
 <p>Tehotenstvo u ženy s ochorením obličiek patrí medzi klinicky náročné situácie. Nejde iba o graviditu s pridruženou diagnózou. Ide o dynamický stav, v ktorom sa fyziologické zmeny tehotenstva prekrývajú s chronickým alebo akútnym poškodením obličiek, hypertenziou, proteinúriou, imunologickou aktivitou ochorenia, rizikom preeklampsie a možnými komplikáciami pre plod.</p>
 
 <p>Pre nefrológa je táto téma praktická a každodenná. Chronická choroba obličiek (CKD) môže znižovať fertilitu, zvyšovať riziko komplikácií v tehotenstve a u časti pacientok urýchliť pokles renálnej funkcie. Na druhej strane správne načasovanie gravidity, predkoncepčné poradenstvo, úprava liečby a koordinovaná starostlivosť s perinatológom môžu výsledky významne zlepšiť.</p>
