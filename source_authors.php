@@ -200,6 +200,9 @@ function getSourceArticleAuthors(): array {
         'primarna-alebo-latkou-vyvolana-psychoza-diagnostika' => ['Adjoa Smalls-Mantey'],
         'protein-kreatin-uz-nie-su-len-fitness-tema-nefrologia' => ['Lou Schuler'],
         'prukaloprid-brain-fog-depresia-kognicia-nefrologia' => ['Pauline Anderson'],
+        // Autori spracovanej kvalitatívnej štúdie AJKD 2026;88(4):508-520.e1
+        // (doi 10.1053/j.ajkd.2026.04.004, PMID 42140343), overené cez PubMed E-utilities 2026-09-27.
+        'rady-hemodialyza-starsi-pacienti-partneri-starostlivosti' => ['Nicole DePasquale', 'Casey J. Powell', 'Francisca A. Hammond', 'Jessica M. Alvarez', 'Rasheeda K. Hall', 'C. Barrett Bowling'],
         'rastlinna-strava-nizsia-mortalita-ckd' => ['Guido Gembillo'],
         'recidivujuce-uti-starsie-zeny-gsm' => ['Anne Lenore Ackerman', 'Melissa R. Kaufman'],
         'regulacne-t-lymfocyty-transplantacia-oblicky-tolerancia' => ['Jeffrey A. Bluestone', 'Megan K. Levings', 'Frederick J. Ramsdell', 'Alexander Y. Rudensky', 'Qizhi Tang', 'Piotr Trzonkowski', 'Fadi Issa', 'Kathryn Wood'],
