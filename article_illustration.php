@@ -114,18 +114,25 @@ if ($mode === 'local') {
             continue;
         }
 
-        // Niektore skripty maju zmiesane konce riadkov, preto skus oba varianty.
-        $base = "'content'      => <<<'HTML'";
+        // Skripty pouzivaju rozne heredoc stitky (HTML, NEFRO_HTML) a maju
+        // miestami zmiesane konce riadkov, preto skus vsetky kombinacie.
+        $pos = false;
         $eol = "\r\n";
-        $anchor = $base . $eol;
-        $pos = strpos($src, $anchor);
-        if ($pos === false) {
-            $eol = "\n";
-            $anchor = $base . $eol;
-            $pos = strpos($src, $anchor);
+        $anchor = '';
+        foreach (['HTML', 'NEFRO_HTML'] as $label) {
+            foreach (["\r\n", "\n"] as $candidateEol) {
+                $candidate = "'content'      => <<<'" . $label . "'" . $candidateEol;
+                $found = strpos($src, $candidate);
+                if ($found !== false) {
+                    $pos = $found;
+                    $eol = $candidateEol;
+                    $anchor = $candidate;
+                    break 2;
+                }
+            }
         }
         if ($pos === false) {
-            fwrite(STDERR, "  ✗ {$slug}: kotva 'content' => <<<'HTML' nenájdená v " . basename($file) . "\n");
+            fwrite(STDERR, "  ✗ {$slug}: kotva 'content' => <<<'…' nenájdená v " . basename($file) . "\n");
             $failed++;
             continue;
         }

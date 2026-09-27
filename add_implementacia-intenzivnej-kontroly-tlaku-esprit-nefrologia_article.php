@@ -34,6 +34,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Post hoc analýza štúdie ESPRIT ukazuje, že systolický cieľ pod 120 mm Hg je dosiahnuteľný aj v primárnej starostlivosti – ak sa implementuje protokolovo. Čo si z toho odniesť pre nefrologickú a internú prax.',
     'content'      => <<<'NEFRO_HTML'
+<figure><a href="img/implementacia-intenzivnej-kontroly-tlaku-esprit-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/implementacia-intenzivnej-kontroly-tlaku-esprit-nefrologia.webp" alt="Tlakomerová manžeta, ktorej krivka klesá po malých svetelných schodoch až k obličke" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Prísnejší cieľ sa nedosahuje jedným zásahom, ale postupnosťou krokov, ktoré musia vydržať v čase.</figcaption></figure>
+
 <p class="article-dek"><em>Post hoc analýza štúdie ESPRIT ukazuje, že systolický cieľ pod 120 mm Hg je dosiahnuteľný aj v primárnej starostlivosti – ak sa implementuje štruktúrovane a protokolovo. Kľúčové posolstvo neznie „aké lieky“, ale „ako sa robí proces“.</em></p>
 
 <h2>1. Prečo je téma intenzívnej kontroly tlaku dnes taká aktuálna</h2>
