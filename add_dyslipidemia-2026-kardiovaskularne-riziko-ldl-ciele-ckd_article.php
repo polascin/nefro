@@ -27,6 +27,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Aktualizácia ESC/EAS z roku 2025 ponechala cieľové hodnoty LDL cholesterolu, ale spresnila hodnotenie rizika, skorú kombinovanú liečbu po akútnom koronárnom syndróme aj nové lieky. Čo z toho platí pri CKD a dialýze?',
     'content'      => <<<'HTML'
+<figure><a href="img/dyslipidemia-2026-kardiovaskularne-riziko-ldl-ciele-ckd.webp" rel="noopener noreferrer" target="_blank"><img src="img/dyslipidemia-2026-kardiovaskularne-riziko-ldl-ciele-ckd.webp" alt="Cieva s plakom a dve prahové čiary nad sebou; nižšia z nich prechádza popri obličke" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Prítomnosť chronickej choroby obličiek posúva cieľovú hodnotu nižšie — riziko sa neposudzuje izolovane od obličiek.</figcaption></figure>
+
 <p class="article-dek"><em>Aterogénne lipoproteíny obsahujúce apolipoproteín B majú kauzálnu úlohu pri vzniku aterosklerotického kardiovaskulárneho ochorenia. Aktualizácia odporúčaní ESC a EAS z októbra 2025 nemení cieľové hodnoty LDL cholesterolu z roku 2019, ale spresňuje hodnotenie rizika, zavádza skorú kombinovanú liečbu po akútnom koronárnom syndróme a rozširuje liekové možnosti. Chronická choroba obličiek pritom zostáva osobitnou situáciou, v ktorej sa rozhodnutie nemôže opierať iba o koncentráciu LDL cholesterolu.</em></p>
 
 <h2>Ateroskleróza je dôsledkom kumulatívnej expozície aterogénnym časticiam</h2>

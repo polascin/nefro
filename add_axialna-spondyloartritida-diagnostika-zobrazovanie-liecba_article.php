@@ -27,6 +27,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Revízia klasifikačných kritérií ASAS-SPARTAN z roku 2025 a odporúčania ACR z roku 2026 menia váhu magnetickej rezonancie aj poradie cielenej liečby. Prehľad diagnostiky, zobrazovania a bezpečného výberu liekov.',
     'content'      => <<<'HTML'
+<figure><a href="img/axialna-spondyloartritida-diagnostika-zobrazovanie-liecba.webp" rel="noopener noreferrer" target="_blank"><img src="img/axialna-spondyloartritida-diagnostika-zobrazovanie-liecba.webp" alt="Sakroiliakálne kĺby, v ktorých zobrazovací lúč odhaľuje prvé jemné zápalové žiarenie" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia, nie nález konkrétneho pacienta. Včasný zápal je vidieť skôr, než vznikne štrukturálne poškodenie — ak sa naň cielene pozrieme.</figcaption></figure>
+
 <p class="article-dek"><em>Axiálna spondyloartritída sa nedá diagnostikovať jedným testom. Revidované klasifikačné kritériá ASAS-SPARTAN z roku 2025 znížili váhu izolovaného edému kostnej drene a odporúčania ACR, SAA a SPARTAN z roku 2026 postavili inhibítory TNF a interleukínu 17 na rovnakú úroveň ako prvú biologickú voľbu. Nasledujúci prehľad zhŕňa, čo z toho vyplýva pre včasnú diagnostiku, interpretáciu zobrazovania a bezpečný výber liečby vrátane pacientov s obličkovým rizikom.</em></p>
 
 <h2>Čo je axiálna spondyloartritída</h2>

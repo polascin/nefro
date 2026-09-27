@@ -27,6 +27,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Populačná kohorta z Hongkongu spája hraničnú poruchu osobnosti s 5,65-násobným rizikom úmrtia a stratou 13 rokov života. Prehľad somatických rizík, diagnostického zatienenia a nefrologických súvislostí.',
     'content'      => <<<'HTML'
+<figure><a href="img/hranicna-porucha-osobnosti-telesne-zdravie-somaticke-riziko.webp" rel="noopener noreferrer" target="_blank"><img src="img/hranicna-porucha-osobnosti-telesne-zdravie-somaticke-riziko.webp" alt="Svietiaca nervová štruktúra v hornej časti a pod ňou samostatne žiariace pečeň, srdce a oblička" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Telesné ochorenia tu nie sú len odrazom psychiky — majú vlastnú váhu a zaslúžia si vlastné vyšetrenie.</figcaption></figure>
+
 <p class="article-dek"><em>Ľudia s hraničnou poruchou osobnosti majú zvýšené riziko predčasného úmrtia, kardiometabolických ochorení, chronickej bolesti, závislostí a nedostatočne diagnostikovaných telesných chorôb. Väčšina dostupných údajov je však observačná a nedokazuje, že samotná porucha priamo vyvoláva konkrétne somatické ochorenie. Rozdiel medzi „je to spojené“ a „je to spôsobené“ tu má priame klinické dôsledky.</em></p>
 
 <h2>O akej poruche hovoríme</h2>

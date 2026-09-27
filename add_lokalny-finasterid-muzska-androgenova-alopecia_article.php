@@ -23,6 +23,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Lokálny finasterid zlepšil vlasové parametre aj po 52 týždňoch, no nekontrolovaná štúdia nevylučuje systémové riziká ani nedokazuje rovnocennosť rôznych formulácií.',
     'content'      => <<<'HTML'
+<figure><a href="img/lokalny-finasterid-muzska-androgenova-alopecia.webp" rel="noopener noreferrer" target="_blank"><img src="img/lokalny-finasterid-muzska-androgenova-alopecia.webp" alt="Kvapka roztoku rozsvecujúca ostro ohraničený kruh, v ktorom ožívajú folikuly; za hranicou je úplná tma" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Účinok je doložený presne po hranicu, po ktorú siahalo sledovanie — za ňou dôkazy chýbajú.</figcaption></figure>
+
 <p class="article-dek"><em>Nová 52-týždňová retrospektívna štúdia prináša doteraz chýbajúce dlhodobejšie údaje o lokálnom finasteride v monoterapii. Výsledky sú priaznivé, ale ich klinický význam treba oddeliť od toho, čo štúdia pre svoj dizajn nemohla dokázať: rovnocennosť s perorálnym finasteridom, vzájomnú zameniteľnosť rôznych roztokov ani neprítomnosť zriedkavých systémových nežiaducich účinkov.</em></p>
 
 <h2>Čo je mužská androgénová alopécia</h2>

@@ -23,6 +23,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Nórske kohorty HUNT a Tromsø spájajú už nízku pohybovú aktivitu s nižším rizikom cievnej mozgovej príhody a úmrtia pri fibrilácii predsiení. Observačný výsledok však nenahrádza antikoaguláciu.',
     'content'      => <<<'HTML'
+<figure><a href="img/pohybova-aktivita-fibrilacia-predsieni-cmp-mortalita.webp" rel="noopener noreferrer" target="_blank"><img src="img/pohybova-aktivita-fibrilacia-predsieni-cmp-mortalita.webp" alt="Srdce s nepravidelným rytmom; zlatý prúd pohybu ho posilňuje, k zrazenine však vedie samostatné modré vlákno" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Pohyb znižuje riziko, no zrazeniny nerieši — antikoagulácia zostáva samostatnou a nenahraditeľnou vetvou.</figcaption></figure>
+
 <p class="article-dek"><em>Analýza 87 340 účastníkov štúdií HUNT a Tromsø spája aj nízku úroveň pohybovej aktivity s nižším rizikom cievnej mozgovej príhody a úmrtia. Podobná asociácia sa pozorovala u ľudí s fibriláciou predsiení aj bez nej. Výsledok je klinicky povzbudivý, ale observačná štúdia nedokazuje kauzalitu a pohybová aktivita nenahrádza antikoagulačnú liečbu indikovanú podľa tromboembolického rizika.</em></p>
 
 <h2>Prečo je táto otázka dôležitá</h2>

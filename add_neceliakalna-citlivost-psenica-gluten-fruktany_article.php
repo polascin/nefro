@@ -24,6 +24,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Neceliakálna citlivosť na pšenicu nemá validovaný biomarker. Príznaky môžu súvisieť s gluténom, fruktánmi, ďalšími zložkami pšenice aj nocebo efektom.',
     'content'      => <<<'HTML'
+<figure><a href="img/neceliakalna-citlivost-psenica-gluten-fruktany.webp" rel="noopener noreferrer" target="_blank"><img src="img/neceliakalna-citlivost-psenica-gluten-fruktany.webp" alt="Zrno pšenice, z ktorého vychádzajú tri rôzne molekulové formy a všetky vedú vlákna k podráždenému črevu" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Vinníkom nemusí byť glutén — podiel môžu mať aj fruktány a ďalšie zložky pšenice.</figcaption></figure>
+
 <p class="article-dek"><em>Zlepšenie po vylúčení pšenice samo osebe nepotvrdzuje „gluténovú intoleranciu“. Neceliakálna citlivosť na pšenicu je heterogénny klinický syndróm bez validovaného biomarkera. Uvažovať o nej možno až po riadnom vylúčení celiakie, alergie na pšenicu a iných relevantných ochorení, ideálne ešte počas konzumácie gluténu.</em></p>
 
 <p>Mnohí ľudia opisujú nafukovanie, bolesti brucha, zmenu stolice, únavu alebo „mozgovú hmlu“ po jedle s obsahom pšenice. Po bezgluténovej diéte sa môžu cítiť lepšie, ale súčasne z jedálneho lístka odstránia viacero ďalších látok, zmenia množstvo vlákniny, fermentovateľných sacharidov aj skladbu priemyselne spracovaných potravín. Otvorená eliminačná skúška preto nedokáže určiť, ktorá zmena pomohla.</p>
