@@ -28,6 +28,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Ako bezpečne reagovať na diagnózu alebo liečebný návrh z chatbota: nefrologický kontext, urgentná triáž, ochrana údajov a praktický postup konzultácie.',
     'content'      => <<<'HTML'
+<figure><a href="img/pacient-diagnoza-ai-nefrologicka-ambulancia.webp" rel="noopener noreferrer" target="_blank"><img src="img/pacient-diagnoza-ai-nefrologicka-ambulancia.webp" alt="Dve stoličky oproti sebe; zo strany pacienta prichádza hotový svetelný záver, z druhej strany mu vychádza v ústrety teplé svetlo" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Konzultácia už nezačína od nuly — začína pri hotovom závere, ktorý treba spoločne preveriť, nie zhodiť.</figcaption></figure>
+
 <p>Pacient môže dnes vstúpiť do ambulancie nielen so zoznamom príznakov a výsledkov, ale aj s ucelenou „diagnózou“, prognózou alebo návrhom liečby vytvoreným generatívnou umelou inteligenciou. Takýto výstup môže obsahovať užitočné všeobecné informácie, no môže byť aj nepresný, neaktuálny alebo neprimerane sebavedomý. Pre lekára preto nie je správnou reakciou ani automatické odmietnutie, ani nekritické potvrdenie.</p>
 
 <p>V nefrológii je riziko nesprávnej interpretácie osobitne vysoké. Jednorazová eGFR, kreatinín, albuminúria, proteinúria alebo sonografický opis nemajú spoľahlivý význam bez časového vývoja, klinického stavu, liekov, hydratácie a ďalších nálezov. Chatbot môže z hodnoty eGFR 52 ml/min/1,73 m² vytvoriť záver o „zlyhávaní obličiek“, hoci ešte nie je potvrdená chronicita; rovnako môže podceniť význam pretrvávajúcej albuminúrie pri relatívne zachovanej eGFR.</p>

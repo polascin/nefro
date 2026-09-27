@@ -28,6 +28,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'V poľskej kohorte si po individuálnej edukácii zvolilo peritoneálnu dialýzu 62,7 % pacientov. Výsledok ukazuje potenciál spoločného rozhodovania, nie kauzálny účinok programu.',
     'content'      => <<<'HTML'
+<figure><a href="img/predialyzacna-edukacia-volba-peritonealnej-dialyzy.webp" rel="noopener noreferrer" target="_blank"><img src="img/predialyzacna-edukacia-volba-peritonealnej-dialyzy.webp" alt="Rozdvojená svetelná cesta, ktorej obe vetvy sú vďaka svetlu pred rázcestím rovnako dobre viditeľné" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Edukácia druhú možnosť nevnucuje — iba ju spraví viditeľnou dosť včas na to, aby sa dala zvoliť.</figcaption></figure>
+
 <p>Voľba liečby pri zlyhaní obličiek patrí medzi rozhodnutia, ktoré zásadne menia každodenný život pacienta aj jeho blízkych. Rozhovor nemá byť obmedzený na otázku, kedy vytvoriť cievny prístup. Pacient potrebuje včas a zrozumiteľne poznať preemptívnu transplantáciu, peritoneálnu dialýzu (PD), strediskovú a tam, kde je dostupná, domácu hemodialýzu, ako aj komplexnú konzervatívnu starostlivosť bez dialýzy.</p>
 
 <p>Retrospektívna štúdia z jedného varšavského centra sledovala 118 pacientov s CKD G4–G5, ktorí absolvovali individuálnu predialyzačnú edukáciu. PD si po stretnutí zvolilo 74 pacientov (62,7 %) a 61 pacientov, teda 51,7 % celého súboru, ju napokon začalo. Čísla ukazujú, že domáca liečba môže byť pre vhodne vybraných a informovaných pacientov prijateľnou možnosťou.</p>

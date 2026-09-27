@@ -28,6 +28,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Observačné porovnanie štyroch agonistov receptora GLP-1 nezistilo rozdiel v primárnom obličkovom ukazovateli. Priaznivé asociácie semaglutidu sa týkali sekundárneho ukazovateľa zahŕňajúceho úmrtie.',
     'content'      => <<<'HTML'
+<figure><a href="img/semaglutid-ckd-porovnanie-glp1-realna-prax.webp" rel="noopener noreferrer" target="_blank"><img src="img/semaglutid-ckd-porovnanie-glp1-realna-prax.webp" alt="Tri injekčné perá a za nimi oblička; ochranné závoje z nich majú viditeľne rôzny dosah a hustotu" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna, nie zobrazenie konkrétnych prípravkov. Porovnanie z reálnej praxe naznačuje rozdiely v rámci triedy — ide však o observačné údaje.</figcaption></figure>
+
 <p>Chronická choroba obličiek (CKD) patrí medzi najzávažnejšie komplikácie diabetu 2. typu. Agonisty receptora glukagónu podobného peptidu 1 (GLP-1) sa v posledných rokoch etablovali ako lieky, ktoré znižujú glykémiu, podporujú redukciu telesnej hmotnosti a pri vybraných prípravkoch znižujú kardiovaskulárne aj obličkové riziko.</p>
 
 <p>Randomizovaná štúdia FLOW preukázala obličkový prínos semaglutidu oproti placebu u pacientov s diabetom 2. typu a už prítomnou CKD. Neodpovedala však na inú klinicky dôležitú otázku: <strong>líšia sa obličkové výsledky medzi jednotlivými agonistami receptora GLP-1?</strong> Priame randomizované porovnanie jednotlivých prípravkov s obličkovými ukazovateľmi zatiaľ chýba.</p>

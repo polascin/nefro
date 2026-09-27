@@ -28,6 +28,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Štúdia s mediánom sledovania 18,5 roka spája dve rizikové alely APOL1 s nižšou funkciou obličiek po darovaní. Čo výsledok znamená pre výber, súhlas a sledovanie darcu.',
     'content'      => <<<'HTML'
+<figure><a href="img/genotypizacia-apol1-zivy-darca-oblicky.webp" rel="noopener noreferrer" target="_blank"><img src="img/genotypizacia-apol1-zivy-darca-oblicky.webp" alt="Závitnica DNA s jantárovo svietiacim variantom a pod ňou plynulý farebný pás rizika bez akejkoľvek závory" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Výsledok posúva darcu po škále rizika; nie je to prepínač, ktorý by darovanie automaticky zakázal.</figcaption></figure>
+
 <p>Darovanie obličky od živého darcu prináša príjemcovi významný klinický prínos, zároveň však zaväzuje transplantačný tím čo najpresnejšie posúdiť celoživotné zdravotné riziko zdravého človeka, ktorý z darovania nemá medicínsky prospech. Osobitne citlivou otázkou je dlhodobé renálne riziko u osôb s nedávnym africkým genetickým pôvodom, u ktorých sa častejšie vyskytujú rizikové varianty génu <strong>APOL1</strong>.</p>
 
 <p>Americká retrospektívna kohortová štúdia Living Donor Extended Time Outcomes (LETO), publikovaná v <em>JAMA Internal Medicine</em>, zistila, že darcovia s dvoma rizikovými alelami APOL1 mali takmer dve desaťročia po darovaní viac než dvojnásobné neupravené relatívne riziko eGFR &lt;45 ml/min/1,73 m<sup>2</sup> oproti darcom s nulou alebo jednou rizikovou alelou. Po zohľadnení eGFR pred darovaním sa však odhad znížil a štatistická významnosť sa stratila.</p>

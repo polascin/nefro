@@ -28,6 +28,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'FDA schválila Trutaknu na zníženie proteinúrie pri primárnej IgA nefropatii. Čo ukázala štúdia ORIGIN 3, aké sú bezpečnostné riziká a čo ešte nevieme.',
     'content'      => <<<'HTML'
+<figure><a href="img/atacicept-trutakna-iga-nefropatia-fda-proteinuria.webp" rel="noopener noreferrer" target="_blank"><img src="img/atacicept-trutakna-iga-nefropatia-fda-proteinuria.webp" alt="Glomerulus so zastaveným únikom bielkoviny a v diaľke ešte rozostavané svetelné dvere s lešením" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Zrýchlené schválenie stojí na znížení proteinúrie — potvrdenie tvrdých obličkových výsledkov ešte len má prísť.</figcaption></figure>
+
 <p>Americký Úrad pre kontrolu potravín a liečiv (FDA) udelil 7. júla 2026 lieku Trutakna (atacicept-vymj) zrýchlené schválenie na zníženie proteinúrie u dospelých s primárnou IgA nefropatiou, ktorí sú ohrození progresiou ochorenia. Odporúčaná dávka je 150 mg podkožne raz týždenne; liek sa podáva pomocou jednodávkového naplneného autoinjektora.</p>
 
 <p>Ide o prvý liek schválený FDA pri IgA nefropatii, ktorý súčasne inhibuje signálne dráhy BAFF a APRIL. Regulačné rozhodnutie však neznamená, že atacicept už preukázal spomalenie dlhodobého poklesu glomerulovej filtrácie alebo prevenciu zlyhania obličiek. Schválená indikácia je založená na redukcii proteinúrie a jej ďalšie trvanie môže závisieť od potvrdenia klinického prínosu v pokračujúcej štúdii ORIGIN 3.</p>

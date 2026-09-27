@@ -28,6 +28,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Rozhovory, pozorovanie a tematická analýza odhaľujú, ako pacienti prežívajú liečbu. Ako kvalitatívne dôkazy správne čítať a používať v nefrologickej praxi.',
     'content'      => <<<'HTML'
+<figure><a href="img/kvalitativny-vyskum-nefrologia-rozhodovanie-pacientov-ckd.webp" rel="noopener noreferrer" target="_blank"><img src="img/kvalitativny-vyskum-nefrologia-rozhodovanie-pacientov-ckd.webp" alt="Pravidelná mriežka chladných bodov a nad ňou bohatý vrstevnatý vír teplo svietiacej hmoty, ktorý ju presahuje" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. To, prečo sa pacient rozhodne tak či onak, sa do mriežky premenných nezmestí — a pritom práve to rozhoduje.</figcaption></figure>
+
 <p>Randomizovaná štúdia môže ukázať, či intervencia znižuje riziko klinickej udalosti. Register odhalí, ako často sa udalosť vyskytuje a s čím súvisí. Ani jeden prístup však sám osebe nemusí vysvetliť, ako pacient chápe svoje ochorenie, prečo odmieta navrhovanú liečbu alebo čo mu bráni uskutočniť plán, s ktorým v ambulancii súhlasil.</p>
 
 <p>Práve na takéto otázky je určený kvalitatívny výskum. Skúma významy, skúsenosti, vzťahy a kontext, v ktorom ľudia konajú a rozhodujú sa. V nefrológii môže objasniť liečebnú záťaž, voľbu dialyzačnej modality, prijatie cievneho prístupu, skúsenosť s transplantáciou, obavy darcov, postoje k medikácii alebo rozhodovanie o konzervatívnej starostlivosti.</p>
