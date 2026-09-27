@@ -33,6 +33,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Praktický algoritmus manažmentu anémie pri CKD podľa KDOQI US Commentary ku KDIGO 2026: potvrdenie anémie, hľadanie korektibilných príčin, racionálne dopĺňanie železa s jasnými hranicami, opatrnosť pri ferric carboxymaltose a zdieľané rozhodovanie pri ESA/HIF-PHI.',
     'content'      => <<<'HTML'
+<figure><a href="img/anemia-ckd-2026-prakticky-algoritmus-esa-hif-phi.webp" rel="noopener noreferrer" target="_blank"><img src="img/anemia-ckd-2026-prakticky-algoritmus-esa-hif-phi.webp" alt="Cesta od krvnej vzorky rozdelená na dve liečebné vetvy — injekčnú a tabletkovú — obe končia pri jasných krvinkách" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Dve liečebné cesty vedú k rovnakému cieľu — líšia sa spôsobom podania aj profilom rizík.</figcaption></figure>
+
 <p>Anémia pri chronickom ochorení obličiek (CKD) nie je len problém „nízkeho Hb“. Zmysluplný postup začína potvrdením anémie a hľadaním jej príčiny, pokračuje cieleným doplnením železa a až potom sa rozhoduje o ESA alebo HIF-PHI tak, aby sa minimalizovalo riziko aj počet zbytočných transfúzií.</p>
 
 <p>Nižšie je praktická verzia komentára k odporúčaniam KDIGO 2026, upravená do podoby, ktorá sa dá použiť v ambulancii aj na dialýze ako krok za krokom vedený postup.</p>

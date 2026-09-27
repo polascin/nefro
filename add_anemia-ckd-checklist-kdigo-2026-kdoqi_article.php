@@ -33,6 +33,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Praktický checklist pre anémiu pri CKD podľa KDIGO 2026 a KDOQI US Commentary: potvrdenie anémie, základný laboratórny panel, hľadanie korektibilnej príčiny, rozhodovanie o železe, opatrnosť pri ferric carboxymaltose, ESA/HIF-PHI a auditovateľná dokumentácia.',
     'content'      => <<<'HTML'
+<figure><a href="img/anemia-ckd-checklist-kdigo-2026-kdoqi.webp" rel="noopener noreferrer" target="_blank"><img src="img/anemia-ckd-checklist-kdigo-2026-kdoqi.webp" alt="Dve svetelné tabule usmernení, ktorých lúče splývajú do jednej cesty vedúcej k obličke" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Medzinárodné odporúčanie a národný komentár sa dajú spojiť do jedného použiteľného postupu.</figcaption></figure>
+
 <p>Tento checklist zhŕňa praktický postup pri anémii u pacientov s CKD podľa KDIGO 2026 a KDOQI US Commentary. Cieľ je jednoduchý: najprv potvrdiť anémiu, potom nájsť a korigovať príčinu, následne cielene riešiť železo a až potom zvažovať ESA alebo HIF-PHI.</p>
 
 <h2>1) Potvrdenie a základné zhodnotenie</h2>

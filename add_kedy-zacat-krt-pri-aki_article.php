@@ -33,6 +33,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Kedy nasadiť náhradnú liečbu obličiek pri závažnom AKI: urgentné vs. relatívne indikácie, furosemidový stress test, biomarkery a hlavne to, čo ukázali randomizované skúšania ELAIN, AKIKI, IDEAL-ICU, STARRT-AKI a AKIKI-2 — bez urgentnej komplikácie okamžité spustenie KRT spravidla neprináša benefit, no priveľký odklad nie je bezpečný.',
     'content'      => <<<'HTML'
+<figure><a href="img/kedy-zacat-krt-pri-aki.webp" rel="noopener noreferrer" target="_blank"><img src="img/kedy-zacat-krt-pri-aki.webp" alt="Akútne zlyhávajúca oblička pri dialyzačnom prístroji, medzi nimi svetelný oblúkový ciferník" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Načasovanie je samotné rozhodnutie — skoré začatie neprináša automaticky lepší výsledok.</figcaption></figure>
+
 <h2>Úvod: čo KRT vie a čo nie</h2>
 
 <p>Náhradná liečba obličiek (KRT) je súčasťou modernej intenzívnej starostlivosti pri závažnom AKI. Ide o kontinuálne, prerušované alebo hybridné techniky a v niektorých situáciách aj o akútnu peritoneálnu dialýzu. Dôležité je uvedomiť si, že KRT v prvom rade odstraňuje prebytočnú tekutinu, koriguje vybrané elektrolytové a metabolické poruchy a pomáha udržiavať acidobázickú rovnováhu. Neobnovuje však vnútorné funkcie obličiek (napríklad reabsorpciu aminokyselín, produkciu erytropoetínu či aktiváciu vitamínu D).</p>

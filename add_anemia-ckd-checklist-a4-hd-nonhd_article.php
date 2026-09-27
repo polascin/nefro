@@ -33,6 +33,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Jednostranový checklist pre anémiu pri CKD: potvrdenie anémie, základné laboratórium, rozhodnutie o železe podľa skupiny, opatrnosť pri ferric carboxymaltose, ESA/HIF-PHI, intervaly monitorovania a dokumentácia pre audit.',
     'content'      => <<<'HTML'
+<figure><a href="img/anemia-ckd-checklist-a4-hd-nonhd.webp" rel="noopener noreferrer" target="_blank"><img src="img/anemia-ckd-checklist-a4-hd-nonhd.webp" alt="Svetelný list, z ktorého sa oddeľujú dve vetvy — jedna k dialyzačnému filtru, druhá k obličke" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Jedna strana, dve situácie — hemodialyzovaný a nedialyzovaný pacient potrebujú odlišné kroky.</figcaption></figure>
+
 <p>Tento checklist je určený na rýchle použitie v ambulancii aj na dialýze. Zmysel je praktický: potvrdiť anémiu, vyhodnotiť železo, rozhodnúť o liečbe podľa skupiny pacienta a mať jasne zapísané, prečo bol zvolený konkrétny postup.</p>
 
 <h2>1) Potvrdenie anémie a rýchle zhodnotenie</h2>

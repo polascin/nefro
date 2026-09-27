@@ -33,6 +33,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Dva krátke checklisty pre anémiu pri CKD: verzia pre dialýzu (HD/PD) a verzia pre ambulanciu (non-HD). Obsahujú diagnostiku, hranice pre železo, FCM a fosfát, ESA/HIF-PHI, monitoring aj dokumentáciu pre audit.',
     'content'      => <<<'HTML'
+<figure><a href="img/anemia-ckd-dialyza-ambulancia-checklist.webp" rel="noopener noreferrer" target="_blank"><img src="img/anemia-ckd-dialyza-ambulancia-checklist.webp" alt="Riedke bledé červené krvinky pri obličke a rad svetelných zaškrtnutí vedľa nich" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Anémia pri CKD sa rieši postupnosťou krokov, ktorú má zmysel mať poruke — na dialýze aj v ambulancii.</figcaption></figure>
+
 <p>Tento článok je pripravený ako dvojica praktických checklistov na rýchle použitie v ambulancii aj na dialýze. Zmysel je rovnaký v oboch prostrediach: potvrdiť anémiu, zhodnotiť železo, rozlíšiť korigovateľné príčiny a potom bezpečne rozhodnúť o liečbe.</p>
 
 <h2>Checklist do praxe A4: Anémia pri CKD pre dialýzu (HD/PD)</h2>

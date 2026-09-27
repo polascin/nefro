@@ -33,6 +33,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'KDOQI komentár ku KDIGO 2026 ponúka praktickú „logiku v krokoch“ pri manažmente anémie v CKD: dôkladnú diagnostiku (CBC, retikulocyty, ferritín, TSAT), aktívne hľadanie reverzibilných príčin a manažment deficitu železa s dôrazom na bezpečnostné hranice a riziko hypofosfatémie pri FCM. Pri ESA a HIF-PHI sa posilňuje zdieľané rozhodovanie a dôraz na riziká, nie len na číslo Hb.',
     'content'      => <<<'HTML'
+<figure><a href="img/anemia-ckd-kdigo-2026-kdoqi-komentar.webp" rel="noopener noreferrer" target="_blank"><img src="img/anemia-ckd-kdigo-2026-kdoqi-komentar.webp" alt="Oblička so zoslabnutým hormonálnym signálom ku kostnej dreni, ktorá tvorí len málo červených krviniek" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Chýbajúci signál z obličky je jadro problému — liečba sa odvíja práve od neho.</figcaption></figure>
+
 <p>Anémia je u pacientov s chronickým ochorením obličiek (CKD) veľmi častá a spojená so zvýšeným rizikom morbidity a mortality. KDOQI zvolalo pracovnú skupinu, ktorá revidovala KDIGO 2026 klinickú smernicu pre manažment anémie v CKD a pripravila komentár k odporúčaniam a praktickým bodom, vrátane poznámok k implementácii v klinickej praxi.</p>
 
 <p>V tomto článku zhrniem praktické jadro odporúčaní z pohľadu nefrológie: ako nastaviť diagnostiku, kedy a ako liečiť deficit železa, a ako pristupovať k ESA (erytropoézu stimulujúcim látkam) a HIF-PHI (inhibítory HIF-prolyl hydroxylázy).</p>
