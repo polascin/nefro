@@ -26,6 +26,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Takmer šesť z desiatich lekárov v prieskume uviedlo, že by zvážili nižší príjem výmenou za viac voľného času. Metaanalýzy pritom ukazujú, že vyhorenie je predovšetkým problémom organizácie práce — nie nedostatočnej odolnosti jednotlivca.',
     'content'      => <<<'HTML'
+<figure><a href="img/lekari-cas-autonomia-vyhorenie-pracovne-podmienky.webp" rel="noopener noreferrer" target="_blank"><img src="img/lekari-cas-autonomia-vyhorenie-pracovne-podmienky.webp" alt="Presýpacie hodiny v ochrannom kruhu svetla na tmavom stole; mince okolo nich zostávajú neosvetlené, v pozadí stetoskop a stoh papierov" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Peniaze nie sú jadrom problému — jadrom je, kto rozhoduje o lekárovom čase.</figcaption></figure>
+
 <p class="article-dek"><em>Prieskum medzi lekármi ukazuje, že čas, predvídateľnosť a autonómia sa stávajú súčasťou toho, ako lekári hodnotia pracovné miesto. Zaujímavejšia než samotné percento je však otázka, čo s tým robiť — a tu dostupné dôkazy hovoria pomerne jednoznačne, že riešenie neleží na strane jednotlivca.</em></p>
 
 <p>Takmer šesť z desiatich lekárov oslovených v prieskume spoločnosti Medscape uviedlo, že by boli ochotní prijať nižší plat výmenou za lepšie zosúladenie pracovného a osobného života alebo za viac voľného času. Podľa prezentovaných výsledkov by nižší príjem zvážilo <strong>59 % lekárov</strong>, kým v predchádzajúcom prieskume to bolo 63 %. Súčasne <strong>46 % respondentov</strong> uviedlo vyhorenie, depresiu alebo kombináciu oboch stavov.</p>

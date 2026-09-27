@@ -26,6 +26,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Nie každý monoklonálny proteín je nevinný nález a nie každé jeho poškodenie postihuje len obličky. Prehľad v NDT triedi MGCS podľa patogenity paraproteínu a upozorňuje na štyri jednotky, ktoré nefrológ nesmie prehliadnuť: POEMS, TEMPI, kapilárny leak syndróm a autoprotilátkami sprostredkované poruchy.',
     'content'      => <<<'HTML'
+<figure><a href="img/monoklonalna-gamapatia-klinickeho-vyznamu-mgcs-mimo-mgrs.webp" rel="noopener noreferrer" target="_blank"><img src="img/monoklonalna-gamapatia-klinickeho-vyznamu-mgcs-mimo-mgrs.webp" alt="Malý zhluk buniek vysielajúci tenké vlákna k viacerým rôznym cieľom v tme; oblička je len jedným z nich" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Malý klon môže škodiť ďaleko za obličkou — nerv, koža aj cievy patria do rovnakého obrazu.</figcaption></figure>
+
 <p class="article-dek"><em>Monoklonálny proteín u staršieho pacienta býva náhodným a nevýznamným nálezom. V zriedkavých prípadoch je však priamou príčinou ochorenia — a to aj vtedy, keď klon nespĺňa kritériá malignity. Prehľad v <em>Nephrology Dialysis Transplantation</em> triedi tieto stavy podľa patogenity paraproteínu, nie podľa veľkosti klonu, a upozorňuje na štyri jednotky mimo klasickej MGRS.</em></p>
 
 <h2>Od MGUS k MGCS: prečo na názvosloví záleží</h2>

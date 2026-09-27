@@ -26,6 +26,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Švédsky register srdcového zlyhávania so 103 696 osobami ukazuje, že chronická choroba obličiek súvisí so všetkými fenotypmi srdcového zlyhávania, najsilnejšie však so zachovanou ejekčnou frakciou. Väzba sa zvýrazňuje s poklesom eGFR — dizajn štúdie však vyžaduje opatrné čítanie.',
     'content'      => <<<'HTML'
+<figure><a href="img/ckd-vznik-srdcoveho-zlyhavania-hfpef-svedsky-register.webp" rel="noopener noreferrer" target="_blank"><img src="img/ckd-vznik-srdcoveho-zlyhavania-hfpef-svedsky-register.webp" alt="Oblička a srdce so zhrubnutou stenou spojené tromi vláknami, z ktorých jedno je výrazne silnejšie než ostatné" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Cesta od chorých obličiek k srdcovému zlyhávaniu vedie najsilnejšie k forme so zachovanou ejekčnou frakciou.</figcaption></figure>
+
 <p class="article-dek"><em>Chronická choroba obličiek a srdcové zlyhávanie sa vyskytujú spoločne tak často, že sa ich vzťah považuje za samozrejmý. Analýza švédskeho registra však ukazuje niečo špecifickejšie: väzba nie je rovnako silná pre všetky fenotypy srdcového zlyhávania. Najvýraznejšia je pri zachovanej ejekčnej frakcii a zvýrazňuje sa s pokročilosťou renálnej dysfunkcie.</em></p>
 
 <p>Srdcové zlyhávanie nie je jednotné ochorenie. Podľa ejekčnej frakcie ľavej komory sa delí na tri fenotypy, ktoré sa líšia dominantnými mechanizmami, pridruženými ochoreniami, prognózou aj silou dôkazov pre jednotlivé liečivá:</p>

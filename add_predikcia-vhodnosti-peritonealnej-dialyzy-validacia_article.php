@@ -26,6 +26,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Kanadský model predpovedá, ktorý pacient bude uznaný za vhodného na peritoneálnu dialýzu. Jeho rozlišovacia schopnosť je však len mierna — a hlavne: model predpovedá rozhodnutie lekára, nie osud pacienta. Tomu zodpovedá aj kritika v liste redakcii.',
     'content'      => <<<'HTML'
+<figure><a href="img/predikcia-vhodnosti-peritonealnej-dialyzy-validacia.webp" rel="noopener noreferrer" target="_blank"><img src="img/predikcia-vhodnosti-peritonealnej-dialyzy-validacia.webp" alt="Svietiaca predikčná mriežka a jej priemet, ktorý sa so skutočným objektom pod ňou celkom neprekrýva" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Model má zmysel až vtedy, keď obstojí vo validácii a pridá niečo nad to, čo sa dá posúdiť aj bez neho.</figcaption></figure>
+
 <p class="article-dek"><em>Peritoneálna dialýza zostáva v mnohých krajinách nedostatočne využívaná a prediktívne modely sľubujú pomoc pri výbere vhodných pacientov. List redakcii <em>Peritoneal Dialysis International</em> upozorňuje, že bez externej validácie a bez preukázanej prírastkovej hodnoty ide skôr o zdanie objektivity. Pohľad na samotný model ukazuje, že výhrada je opodstatnená — a že skutočné úzke miesto leží inde.</em></p>
 
 <p>Rozhodovanie o vhodnosti peritoneálnej dialýzy je v praxi zložité. Vstupuje doň kognitívny a funkčný stav pacienta, manuálna zručnosť, podmienky v domácnosti, dostupnosť pomoci, predchádzajúce brušné operácie, očakávania pacienta — a napokon aj kapacita programu na zaškolenie a na riešenie komplikácií. Časť týchto faktorov sa dá zaznamenať, časť nie.</p>

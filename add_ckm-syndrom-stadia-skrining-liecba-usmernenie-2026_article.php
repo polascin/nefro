@@ -26,6 +26,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Systematický prehľad všetkých piatich štádií CKM syndrómu vrátane často opomínaného štádia 0, konkrétnych prahov pre štádium 3, skríningového panelu a liečby podľa jednotlivých liekových skupín — a toho, čo staging nedokáže.',
     'content'      => <<<'HTML'
+<figure><a href="img/ckm-syndrom-stadia-skrining-liecba-usmernenie-2026.webp" rel="noopener noreferrer" target="_blank"><img src="img/ckm-syndrom-stadia-skrining-liecba-usmernenie-2026.webp" alt="Päť stúpajúcich svetelných stupňov od sotva viditeľného žiarenia po prudko červený záver" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Zmyslom štádií je zasiahnuť na nižšom stupni — tam, kde je zmena ešte lacná a vratná.</figcaption></figure>
+
 <p class="article-dek"><em>Usmernenie AHA, ACC, ADA a ASN z roku 2026 nahradilo pohľad na obezitu, diabetes, chronickú chorobu obličiek a kardiovaskulárne ochorenie ako na samostatné diagnózy jedným kontinuom rizika. Tento článok prechádza systematicky celý rámec — všetkých päť štádií vrátane často vynechávaného štádia 0, konkrétne prahové hodnoty, skríningový panel aj hranice použiteľnosti stagingu.</em></p>
 
 <p>Kardiovaskulárne ochorenia, chronická choroba obličiek, obezita, diabetes mellitus 2. typu, artériová hypertenzia a poruchy metabolizmu lipidov sa tradične hodnotili oddelene. V skutočnosti ich spája spoločná patofyziológia: rovnaké mechanizmy poškodzujú cievy, srdce, obličky aj pečeň a spoločne zvyšujú riziko predčasného úmrtia.</p>

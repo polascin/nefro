@@ -24,6 +24,7 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
  */
 function getSourceArticleAuthors(): array {
     return [
+        'vysetrenie-hematurie-nefrologicka-prax-algoritmus' => ['Megan Prochaska', 'Luke F. Reynolds', 'Anna Zisman'],
         'esc-era-2026-kardiorenalne-odporucania' => ['Kevin Damman', 'Jozine M ter Maaten', 'Kaitlin J Mayne', 'Davide Bolignano', 'Elizabeth M Brown', 'Bruno R da Costa', 'Anna Dagre', 'Ron T Gansevoort', 'Cristina Gavina', 'Andreas Goette', 'Diana A Gorog', 'Nina Nikolova Gotcheva', 'Marta Kaluzna-Oleksy', 'Dearbhla M Kelly', 'Oleksii Korzh', 'Jennifer S Lees', 'Olivia Manfrini', 'Pieter Martens', 'Julio Nunez', 'Eugenio Stabile', 'Isabella Sudano', 'Marieta P Theodorakopoulou', 'Simon Winther', 'William G Herrington'],
         // Menovaní členovia pracovnej skupiny ESC 2026 pre srdcové zlyhávanie
         // (PMID 42661420, doi 10.1093/eurheartj/ehag100) – 23 mien overených
