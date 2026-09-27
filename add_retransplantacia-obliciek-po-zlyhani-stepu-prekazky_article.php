@@ -23,6 +23,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Kanadská kvalitatívna štúdia identifikovala štyri prekážky opakovanej transplantácie a ďalšie štyri pri darcovstve od žijúceho darcu. Komentár pacientky po troch transplantáciách ukazuje, ako sa prejavujú v praxi.',
     'content'      => <<<'HTML'
+<figure><a href="img/retransplantacia-obliciek-po-zlyhani-stepu-prekazky.webp" rel="noopener noreferrer" target="_blank"><img src="img/retransplantacia-obliciek-po-zlyhani-stepu-prekazky.webp" alt="Svetelná chodba s niekoľkými tmavými prekážkami, na jej konci žiari oblička" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Cesta k opakovanej transplantácii nie je uzavretá, ale je opakovane prerušovaná — a prekážky vidia pacienti, blízki aj lekári inak.</figcaption></figure>
+
 <p>Zlyhanie transplantovanej obličky neznamená iba návrat k dialýze. Pacient sa musí vyrovnať so stratou fungujúceho orgánu, obnovením uremických ťažkostí, zmenou imunosupresívnej liečby, neistotou ďalšej prognózy a často aj s podstatne zložitejšou cestou k opakovanej transplantácii.</p>
 
 <p>Význam témy podčiarkujú dve skutočnosti, ktoré uvádzajú autori kanadskej kvalitatívnej štúdie publikovanej v <em>Clinical Journal of the American Society of Nephrology</em>: opakovaná transplantácia prináša oproti zotrvaniu na čakacej listine <strong>významný prínos v prežívaní</strong>, a zlyhanie štepu zostáva <strong>jednou z hlavných príčin začatia dialýzy</strong>. Trendy v preemptívnom opätovnom zaradení na čakaciu listinu sú pritom podľa autorov neuspokojivé.</p>

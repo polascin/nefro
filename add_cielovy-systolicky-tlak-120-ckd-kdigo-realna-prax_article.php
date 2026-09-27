@@ -31,6 +31,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'V roku 2024 malo priemerný systolický tlak pod 120 mm Hg iba 21,9 % pacientov s CKD G3 až G4. Číslo však nemeria dodržiavanie odporúčania KDIGO: to sa viaže na štandardizované meranie, štúdia použila rutinné ambulantné hodnoty.',
     'content'      => <<<'HTML'
+<figure><a href="img/cielovy-systolicky-tlak-120-ckd-kdigo-realna-prax.webp" rel="noopener noreferrer" target="_blank"><img src="img/cielovy-systolicky-tlak-120-ckd-kdigo-realna-prax.webp" alt="Úzky zelený cieľový pás nízko nad tmavou plochou a vysoko nad ním hustý zhluk modrých značiek, ktoré naň nedosiahli" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Medzi odporúčaným cieľom a tým, čo sa dosahuje v bežnej ambulancii, zostáva viditeľná medzera.</figcaption></figure>
+
 <p>Analýza zdravotných záznamov zo siete Mass General Brigham ukázala, že v roku 2024 malo priemerný systolický krvný tlak pod 120 mm Hg iba <strong>21,9 %</strong> pacientov s chronickou chorobou obličiek v štádiu G3 až G4. Oproti roku 2020 išlo len o mierny nárast.</p>
 
 <p>Výsledok však nemožno interpretovať tak, že takmer štyria z piatich pacientov boli liečení nesprávne. Odporúčanie KDIGO sa vzťahuje na <strong>štandardizované</strong> meranie krvného tlaku, zatiaľ čo štúdia analyzovala bežné ambulantné merania. Ide o dva rôzne ukazovatele, ktoré nie sú zameniteľné.</p>

@@ -35,6 +35,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Jednocentrová retrospektívna štúdia zo 184 biopsií uvádza, že transverzálna koaxiálna technika je výťažnejšia, rýchlejšia aj bezpečnejšia. Kontrola primárnych údajov však odhalila štyri vnútorné rozpory publikácie.',
     'content'      => <<<'HTML'
+<figure><a href="img/transverzalna-koaxialna-biopsia-nativnej-oblicky-vytaznost.webp" rel="noopener noreferrer" target="_blank"><img src="img/transverzalna-koaxialna-biopsia-nativnej-oblicky-vytaznost.webp" alt="Koaxiálna bioptická ihla s dlhým neporušeným valcom tkaniva, vedľa nej fragmentovaná vzorka, v pozadí neurčitá tma" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna, nie snímka výkonu. Lepšia vzorka je merateľný zisk; že by mala zmeniť prax, z doterajších dôkazov zatiaľ nevyplýva.</figcaption></figure>
+
 <p>Jednocentrová retrospektívna štúdia porovnala tri techniky ultrazvukom navigovanej perkutánnej biopsie natívnej obličky. Transverzálna koaxiálna technika dosiahla najvyšší počet glomerulov, stopercentnú úspešnosť podľa vopred určeného prahu a najkratší čas od punkcie kože po ukončenie odberu. Výsledky sú zaujímavé, ale nemožno z nich zatiaľ vyvodiť, že táto technika je všeobecne bezpečnejšia alebo že by mala nahradiť zavedené postupy.</p>
 
 <p>Porovnanie tabuliek publikácie s jej abstraktom a slovným opisom výsledkov navyše odhalilo <strong>štyri vnútorné rozpory</strong>. Najzávažnejší z nich obracia smer rozdielu vo výskyte makroskopickej hematúrie a prevzal ho aj sprievodný článok na portáli ReachMD.</p>

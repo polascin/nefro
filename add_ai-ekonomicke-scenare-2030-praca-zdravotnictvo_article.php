@@ -23,6 +23,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Model troch scenárov do roku 2030 ukazuje, že hospodársky rast a mzdy nemusia ísť rovnakým smerom. Autori výslovne uvádzajú, že nejde o predpovede a nepripisujú im pravdepodobnosti.',
     'content'      => <<<'HTML'
+<figure><a href="img/ai-ekonomicke-scenare-2030-praca-zdravotnictvo.webp" rel="noopener noreferrer" target="_blank"><img src="img/ai-ekonomicke-scenare-2030-praca-zdravotnictvo.webp" alt="Jedna cesta svetla sa štiepi na tri rozbiehajúce sa lúče — stúpajúci zlatý, vodorovný biely a klesajúci červený" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Nejde o predpoveď, ale o scenáre: tá istá technológia môže viesť k veľmi odlišným dopadom na prácu aj na zdravotníctvo.</figcaption></figure>
+
 <p>Ako veľmi zmení umelá inteligencia ekonomiku do roku 2030 a čo to znamená pre ľudí, ktorí v nej pracujú? Pracovný dokument <em>Economic Scenarios for Transformative AI</em> ponúka na túto otázku netradičnú odpoveď: namiesto jednej predpovede stavia jednoduchý model, ktorý prevádza malý počet predpokladov o vývoji umelej inteligencie na dôsledky pre produktivitu, rast, mzdy, podiel práce na príjmoch, presuny pracovných miest a nezamestnanosť.</p>
 
 <p>Autori svoj zámer formulujú jednoznačne: <strong>„Scenáre nie sú predpovede a nepripisujeme im pravdepodobnosti; ich účelom je urobiť dôsledky rôznych predpokladov porovnateľnými.“</strong> Model je sprístupnený aj ako interaktívny prehliadač scenárov.</p>

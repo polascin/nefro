@@ -23,6 +23,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Mikrofluidné modely a organoidy z indukovaných pluripotentných kmeňových buniek umožňujú oddeliť mechanické účinky od biochemických. Celý orgán zatiaľ nenahrádzajú a regulačné využitie si žiada validáciu.',
     'content'      => <<<'HTML'
+<figure><a href="img/oblicka-na-cipe-organoidy-mechanicke-sily.webp" rel="noopener noreferrer" target="_blank"><img src="img/oblicka-na-cipe-organoidy-mechanicke-sily.webp" alt="Priehľadný mikrofluidný čip so svietiacimi kanálikmi, v jednej komôrke obličkový organoid deformovaný prúdom tekutiny" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Mechanické sily nie sú pri týchto modeloch vedľajšou okolnosťou — práve ony rozhodujú, ako sa tkanivo vyvíja.</figcaption></figure>
+
 <p>Modely obličky na čipe a obličkové organoidy odvodené z indukovaných pluripotentných kmeňových buniek (iPSC) sú rýchlo sa rozvíjajúce experimentálne platformy. Umožňujú skúmať ľudské obličkové bunky v prostredí, ktoré je fyziologicky relevantnejšie než bežná statická kultúra — s kontrolovaným prietokom, tlakovými pomermi, mechanickým napätím, zložením extracelulárnej matrix a vzájomným pôsobením viacerých bunkových populácií.</p>
 
 <p>Prehľadová práca publikovaná v <em>Journal of the American Society of Nephrology</em> zhŕňa, ako tieto systémy prispievajú k modelovaniu nefrotoxicity, vývoja obličiek a patofyziológie. Jej ťažiskovým argumentom je práve mechanika: zvieracie modely síce umožňujú skúmať ochorenie na úrovni celého organizmu, <strong>neumožňujú však oddeliť biomechanické účinky od biochemických</strong> — a práve to je pri ochoreniach obličiek podstatné.</p>

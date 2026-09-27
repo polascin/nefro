@@ -23,6 +23,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'V juhokórejskej kohorte bolo užívanie PPI spojené s 38 % vyšším relatívnym rizikom progresie CKD než H2-antihistaminiká. Hlavným modifikovateľným problémom však zostáva samotné nesteroidové antiflogistikum.',
     'content'      => <<<'HTML'
+<figure><a href="img/ppi-h2-antihistaminika-nsaid-ckd-progresia.webp" rel="noopener noreferrer" target="_blank"><img src="img/ppi-h2-antihistaminika-nsaid-ckd-progresia.webp" alt="Oblička pod dvoma rôznymi štítmi, pod každým iný vzor poškodenia od dopadajúcich úlomkov" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Voľba medzi dvoma spôsobmi ochrany žalúdka nie je pri CKD a nesteroidových antiflogistikách nevinná — ani jedna nechráni úplne.</figcaption></figure>
+
 <p>Tradičné nesteroidové antiflogistiká (NSAID) patria medzi lieky, ktoré si pri chronickej chorobe obličiek (CKD) vyžadujú mimoriadnu opatrnosť. Inhibícia renálnej syntézy prostaglandínov môže znížiť prietok krvi obličkami, vyvolať retenciu sodíka a vody, zhoršiť hypertenziu a prispieť k akútnemu poškodeniu obličiek. Riziko stúpa pri vyššom veku, dehydratácii, srdcovom zlyhávaní a pri súbežnom užívaní diuretík alebo inhibítorov systému renín-angiotenzín.</p>
 
 <p>Na prevenciu alebo liečbu gastrointestinálnych komplikácií sa k NSAID často pridávajú inhibítory protónovej pumpy (PPI). Ich dlhodobé používanie sa však v observačných štúdiách spája s akútnou tubulointersticiálnou nefritídou, akútnym poškodením obličiek aj s vyšším rizikom vzniku a progresie CKD.</p>
