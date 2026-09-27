@@ -23,6 +23,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'FDA nereguluje umelú inteligenciu, ale zdravotnícke pomôcky. Diskusný dokument z augusta 2026 navrhuje dvojosový rizikový rámec a kompetenčné hodnotenie generatívnej AI. Čo to znamená pre nefrologickú prax.',
     'content'      => <<<'HTML'
+<figure><a href="img/regulacia-medicinskej-umelej-inteligencie-fda-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/regulacia-medicinskej-umelej-inteligencie-fda-nefrologia.webp" alt="Svietiaci nepokojný oblak neurónovej siete uzavretý v presnom geometrickom ráme zo svetla" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Regulácia nemá algoritmus zhasnúť, ale vymedziť — a lekár je ten, kto v ráme zostáva zodpovedný.</figcaption></figure>
+
 <p>Umelá inteligencia sa rýchlo začleňuje do klinickej praxe — pri analýze obrazových vyšetrení, klinickej dokumentácii, predikcii rizika, podpore diagnostiky, triedení pacientov, monitorovaní vitálnych funkcií aj vo výskume. Podľa údajov Americkej lekárskej asociácie (AMA), ktoré cituje odborné spravodajstvo, viac než 80 % lekárov dnes uvádza profesionálne používanie takýchto nástrojov, zatiaľ čo v roku 2023 to bolo 38 %.</p>
 
 <p>Regulačný rámec za technológiou zaostáva. Nie každý nástroj využívajúci umelú inteligenciu je zdravotníckou pomôckou, nie každý prešiel hodnotením bezpečnosti a účinnosti a povolenie uvedenia na trh neznamená, že nástroj je vhodný pre každého pacienta a každé pracovisko.</p>

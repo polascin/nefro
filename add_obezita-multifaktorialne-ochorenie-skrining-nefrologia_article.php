@@ -23,6 +23,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Digitálny nástroj CheckCausesObesity.com hodnotí viac než 30 možných prispievajúcich faktorov obezity v siedmich oblastiach. Z 62 809 používateľov holandskej verzie ich 91,2 % uviedlo faktory v dvoch a viacerých oblastiach.',
     'content'      => <<<'HTML'
+<figure><a href="img/obezita-multifaktorialne-ochorenie-skrining-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/obezita-multifaktorialne-ochorenie-skrining-nefrologia.webp" alt="Guľa tukového tkaniva, do ktorej z rôznych strán vstupujú desiatky rôznofarebných svetelných vlákien" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Žiadne jednotlivé vlákno nevysvetlí celok — preto skríning, ktorý stavia len na jednom čísle, nestačí.</figcaption></figure>
+
 <p>Obezita nie je výsledkom jedinej príčiny ani iba dôsledkom nedostatku pohybu a nadmerného príjmu energie. Je multifaktoriálnym chronickým ochorením, na ktorom sa podieľajú biologické, genetické, endokrinné, psychologické, sociálne, behaviorálne aj iatrogénne faktory. Bežná klinická prax sa napriek tomu často zastaví pri všeobecnej rade o strave a pohybe.</p>
 
 <p>Tento pohľad má priamy význam aj v nefrológii. Obezita zvyšuje riziko hypertenzie, albuminúrie, glomerulárnej hyperfiltrácie, chronickej choroby obličiek (CKD), obličkových kameňov, obštrukčného spánkového apnoe a kardiovaskulárnych komplikácií. Súčasne môže komplikovať interpretáciu telesnej hmotnosti, svalovej hmoty aj renálnych parametrov.</p>

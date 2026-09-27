@@ -23,6 +23,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'V tureckej prospektívnej štúdii malo poruchu identifikácie pachov 91 % hemodialyzovaných pacientov. Lepší čuch súvisel s vyššou kogníciou a albumínom, nie s dialyzačnou primeranosťou Kt/V.',
     'content'      => <<<'HTML'
+<figure><a href="img/porucha-cuchu-hemodialyza-kognicia-albumin.webp" rel="noopener noreferrer" target="_blank"><img src="img/porucha-cuchu-hemodialyza-kognicia-albumin.webp" alt="Stuhy vône stúpajúce tmou, ktoré sa strácajú skôr, než dosiahnu svietiacu nervovú štruktúru; v pozadí dialyzačné hadičky" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Porucha čuchu sa pri dialýze málokedy spomenie, hoci súvisí s výživou, kogníciou aj celkovou chorobnosťou.</figcaption></figure>
+
 <p>Porucha čuchu patrí medzi najmenej sledované komplikácie chronickej choroby obličiek (CKD). U pacientov na pravidelnej hemodialýze (HD) môže znižovať pôžitok z jedla, meniť výber potravín, prispievať k nechutenstvu a zhoršovať kvalitu života. Potenciálne súvisí aj s kognitívnou poruchou, zápalom, nutričným stavom a celkovou záťažou ochorenia.</p>
 
 <p>Prospektívna observačná štúdia z Ankary, publikovaná v <em>Journal of Nephrology</em>, porovnala schopnosť identifikovať pachy u 100 hemodialyzovaných pacientov a 52 zdravých kontrolných osôb. U časti pacientov sa vyšetrenie zopakovalo približne po roku.</p>

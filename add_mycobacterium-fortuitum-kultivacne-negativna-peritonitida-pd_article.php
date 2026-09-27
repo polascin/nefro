@@ -23,6 +23,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Slovenská kazuistika pripomína netuberkulózne mykobaktérie ako príčinu peritonitídy, ktorá nereaguje na liečbu a zostáva kultivačne negatívna. Podľa ISPD sa lieči kombináciou antibiotík a odstránením katétra.',
     'content'      => <<<'HTML'
+<figure><a href="img/mycobacterium-fortuitum-kultivacne-negativna-peritonitida-pd.webp" rel="noopener noreferrer" target="_blank"><img src="img/mycobacterium-fortuitum-kultivacne-negativna-peritonitida-pd.webp" alt="Prázdna kultivačná miska v kuželi svetla, mimo osvetleného kruhu svieti zhluk tyčinkovitých baktérií" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Negatívna kultivácia neznamená, že pôvodca chýba — znamená, že ho použitá metóda nezachytila.</figcaption></figure>
+
 <p>Peritonitída zostáva jednou z najzávažnejších komplikácií peritoneálnej dialýzy (PD). Väčšinu epizód spôsobujú bežné grampozitívne alebo gramnegatívne baktérie a pôvodcu možno určiť štandardnou kultiváciou. Osobitný diagnostický problém predstavuje peritonitída s opakovane negatívnymi kultiváciami, ktorá nereaguje na empirickú antibiotickú liečbu.</p>
 
 <p>V takom prípade treba prehodnotiť pôvodnú diagnózu, správnosť odberu a kultivačného postupu, predchádzajúcu expozíciu antibiotikám aj možnosť infekcie neobvyklým mikroorganizmom. Jedným z klinicky významných, hoci zriedkavých pôvodcov je <em>Mycobacterium fortuitum</em>, rýchlo rastúca netuberkulózna mykobaktéria.</p>

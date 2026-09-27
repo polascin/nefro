@@ -23,6 +23,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Dlhší čas HbA1c aj systolického tlaku v cieľovom rozmedzí počas prvého roka bol v post hoc analýze ACCORD spojený s nižším rizikom kombinovaného renálneho výsledku. Ide o asociáciu, nie o dôkaz kauzality.',
     'content'      => <<<'HTML'
+<figure><a href="img/cas-v-cielovom-rozmedzi-hba1c-tlak-renalne-vysledky-accord.webp" rel="noopener noreferrer" target="_blank"><img src="img/cas-v-cielovom-rozmedzi-hba1c-tlak-renalne-vysledky-accord.webp" alt="Dve rovnobežné zelené cieľové pásma, v každom krivka striedavo biela vnútri a červená mimo pásma" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna, nie záznam konkrétneho pacienta. Rozhoduje podiel času v cieľovom rozmedzí — a to, ako často sa obe hodnoty míňajú cieľa súčasne.</figcaption></figure>
+
 <p>Metabolická a tlaková kompenzácia sa v praxi zvyčajne posudzuje podľa poslednej nameranej hodnoty glykovaného hemoglobínu (HbA1c) alebo krvného tlaku. Jediné meranie však nevystihuje dlhodobú stabilitu ochorenia ani kolísanie liečebnej odpovede. Post hoc analýza randomizovanej štúdie ACCORD, publikovaná v <em>American Journal of Kidney Diseases</em>, preto skúmala, či dlhšie zotrvanie HbA1c a systolického krvného tlaku (STK) v cieľovom rozmedzí súvisí s nižším rizikom nepriaznivých renálnych výsledkov.</p>
 
 <p>Ukazovateľ „čas v cieľovom rozmedzí“ (<em>time in target range</em>, TTR) spája do jedného čísla informáciu o priemernej úrovni aj o variabilite hodnôt v čase. Najvýraznejšia asociácia sa v tejto analýze pozorovala u pacientov, ktorí mali <strong>obe</strong> hodnoty v cieľovom rozmedzí počas viac než 80 % prvého roka sledovania.</p>

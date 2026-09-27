@@ -23,6 +23,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Zo 647 pacientov posúdených tímom pre cievne prístupy dostalo 40 (6,2 %) negatívne odporúčanie. Deväť z desiatich začalo hemodialýzu neplánovane a 43 % pacientov počas sledovania zomrelo.',
     'content'      => <<<'HTML'
+<figure><a href="img/cievny-pristup-nemozny-avf-avg-planovanie-dialyzy.webp" rel="noopener noreferrer" target="_blank"><img src="img/cievny-pristup-nemozny-avf-avg-planovanie-dialyzy.webp" alt="Vyčerpaná sieť tenkých ciev s tupo ukončenými vetvami, chirurgický nástroj sa nezapája" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Vyjadrenie, že arteriovenózny prístup už nie je možný, nie je len technickým záverom — nesie prognostickú informáciu.</figcaption></figure>
+
 <p>Arteriovenózna fistula (AVF) a arteriovenózny graft (AVG) sú preferovanými formami cievneho prístupu pri hemodialýze. Nie u každého pacienta s pokročilou chronickou chorobou obličiek (CKD) ich však možno vytvoriť. Dôvodom býva vyčerpanie vhodného cievneho riečiska, centrálna venózna stenóza alebo oklúzia, opakované zlyhanie predchádzajúcich prístupov, závažné kardiovaskulárne ochorenie, vysoké operačné riziko alebo celkový stav pacienta.</p>
 
 <p>Retrospektívna kohortová štúdia z portugalskej nemocnice Unidade Local de Saúde de São João v Porte, publikovaná v časopise <em>Hemodialysis International</em>, sledovala, ako sa vyvinul stav pacientov, ktorým multidisciplinárny tím pre cievne prístupy <strong>neodporučil</strong> vytvorenie autológnej ani protetickej arteriovenóznej spojky.</p>
