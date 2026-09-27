@@ -28,6 +28,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Sekundárna analýza spájala roxadustat s častejším opakovaným dosiahnutím Hb ≥10 g/dl pri hyporesponzivite na ESA, nie však s preukázateľne nižšou variabilitou Hb.',
     'content'      => <<<'HTML'
+<figure><a href="img/roxadustat-esa-hyporesponzivita-opakovany-ciel-hb.webp" rel="noopener noreferrer" target="_blank"><img src="img/roxadustat-esa-hyporesponzivita-opakovany-ciel-hb.webp" alt="Krivka, ktorá často vstupuje do zeleného cieľového pásma, jej výkyvy nad a pod pásmom však zostávajú rovnako široké" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Cieľ sa dosahuje častejšie, priebeh však nie je pokojnejší — a práve kolísanie hemoglobínu je to, čo pacientovi škodí.</figcaption></figure>
+
 <p>Hyporesponzivita na erytropoézu stimulujúce látky (ESA) je pri udržiavacej hemodialýze klinickým signálom, nie samostatnou diagnózou. Môže sprevádzať deficit železa, zápal, chronické straty krvi, nedostatočnú dialýzu, malnutríciu, hyperparatyreózu, hematologické ochorenie alebo iný korigovateľný problém. Zvyšovanie dávky ESA bez hľadania príčiny môže zvýšiť liekovú záťaž bez primeraného hematologického účinku.</p>
 
 <p>Demir a spoluautori publikovali sekundárnu analýzu multicentrickej retrospektívnej kohorty, v ktorej porovnali roxadustat s pokračovaním ESA u hemodialyzovaných pacientov s hyporesponzívnou anémiou. Roxadustat bol spojený s vyššou upravenou pravdepodobnosťou opakovaného dosiahnutia hemoglobínu (Hb) ≥10 g/dl, ale nepreukázal štatisticky významné zníženie medzimesačnej variability Hb.</p>

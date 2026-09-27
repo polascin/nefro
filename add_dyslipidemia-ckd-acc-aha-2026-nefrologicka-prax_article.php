@@ -28,6 +28,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Presný nefrologický výklad odporúčaní ACC/AHA 2026: koho liečiť bez skóre PREVENT, aké ciele platia pri CKD s ASCVD a prečo je dialýza osobitnou situáciou.',
     'content'      => <<<'HTML'
+<figure><a href="img/dyslipidemia-ckd-acc-aha-2026-nefrologicka-prax.webp" rel="noopener noreferrer" target="_blank"><img src="img/dyslipidemia-ckd-acc-aha-2026-nefrologicka-prax.webp" alt="Cieva s plakom a prahová čiara posunutá nižšie, pôvodná poloha zostáva ako slabý odtlačok; pod novou čiarou svieti oblička" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Nové odporúčania posúvajú latku nižšie práve pre pacientov s chorobou obličiek — a to mení prax, nie len text.</figcaption></figure>
+
 <p>Kardiovaskulárne ochorenia patria medzi hlavné príčiny chorobnosti a úmrtnosti pacientov s chronickou chorobou obličiek (CKD). Riziko stúpa s poklesom odhadovanej glomerulovej filtrácie (eGFR), albuminúriou, diabetom, artériovou hypertenziou a už prítomným aterosklerotickým kardiovaskulárnym ochorením (ASCVD). Manažment dyslipidémie je preto dôležitou súčasťou kardiorenálnej prevencie, jeho prínos však nie je rovnaký v predialyzačnej CKD, počas dialýzy a po transplantácii obličky.</p>
 
 <p>Van Craenenbroeck a spoluautori v časopise <em>Nephrology Dialysis Transplantation</em> komentovali nové multidisciplinárne odporúčania ACC/AHA pre manažment dyslipidémie z roku 2026 z pohľadu nefrológa. Najvýznamnejšou zmenou je návrat k explicitným cieľovým hodnotám LDL cholesterolu (LDL-C) a non-HDL cholesterolu, používanie modelu PREVENT a presné odporúčania pre pacientov s CKD v štádiu G3 alebo vyššom.</p>

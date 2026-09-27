@@ -28,6 +28,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Kórejská kohorta 24 713 pacientov spájala vytvorenie AVF menej než 3 mesiace a AVG menej než 1 mesiac pred hemodialýzou s horšími výsledkami; nejde však o univerzálny termín výkonu.',
     'content'      => <<<'HTML'
+<figure><a href="img/nacasovanie-cievneho-pristupu-avf-avg-pred-hemodialyzou.webp" rel="noopener noreferrer" target="_blank"><img src="img/nacasovanie-cievneho-pristupu-avf-avg-pred-hemodialyzou.webp" alt="Dve cievne štruktúry s rôzne dlhými časovými osami smerujúcimi k tomu istému bodu; horná sa cestou postupne rozširuje a spevňuje" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Natívna fistula potrebuje čas na dozretie; protéza ho potrebuje podstatne menej — a podľa toho sa plánuje.</figcaption></figure>
+
 <p>Načasovanie cievneho prístupu pred začatím hemodialýzy je rozhodovanie pod neistotou. Neskorý výkon môže viesť k začatiu liečby cez centrálny venózny katéter, kým príliš skorý výkon vystavuje pacienta riziku operácie a komplikácií prístupu, ktorý napokon nemusí nikdy použiť.</p>
 
 <p>Yoon a spoluautori analyzovali celoštátne kórejské údaje a ukázali, že asociácia medzi predstihom vytvorenia prístupu a výsledkami sa líši podľa jeho typu. Pri arteriovenóznej fistule (AVF) boli menej priaznivé výsledky spojené s vytvorením menej než tri mesiace pred hemodialýzou. Pri arteriovenóznom grafte (AVG; cievnej protéze) sa väčšina nepriaznivých asociácií sústreďovala do posledného mesiaca.</p>

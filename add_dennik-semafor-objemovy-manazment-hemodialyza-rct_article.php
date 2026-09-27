@@ -28,6 +28,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'V 12-týždňovej randomizovanej štúdii s 80 hemodialyzovanými pacientmi denník „semafor“ zlepšil vedomosti a dodržiavanie odporúčaní a priaznivo ovplyvnil krátkodobé ukazovatele riadenia tekutín.',
     'content'      => <<<'HTML'
+<figure><a href="img/dennik-semafor-objemovy-manazment-hemodialyza-rct.webp" rel="noopener noreferrer" target="_blank"><img src="img/dennik-semafor-objemovy-manazment-hemodialyza-rct.webp" alt="Otvorený papierový zápisník pod lampou a nad ním tri svetlá — zelené, jantárové a červené; od zápisníka vedie pokojnejšia čiara bilancie" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Jednoduchý nástroj v rukách pacienta zlepšil krátkodobé riadenie tekutín — ide však o malú randomizovanú štúdiu.</figcaption></figure>
+
 <p>Riadenie objemu tekutín pri udržiavacej hemodialýze je rovnováha medzi dvoma rizikami. Pretrvávajúce objemové preťaženie podporuje hypertenziu, dýchavicu, pľúcnu kongesciu a srdcové zlyhávanie. Príliš rýchle alebo nadmerné odstránenie tekutiny môže viesť k intradialytickej hypotenzii, kŕčom a orgánovej hypoperfúzii.</p>
 
 <p>Li a spoluautori skúmali jednoduchý denník založený na princípe dopravného semaforu, ktorý spájal sebamonitorovanie, spätnú väzbu a odbornú edukáciu. V malej 12-týždňovej randomizovanej štúdii bol tento postup spojený s lepšími vedomosťami, postojmi a návykmi, vyššou mierou dodržiavania odporúčaní a priaznivejšími krátkodobými klinickými ukazovateľmi než bežná edukácia.</p>

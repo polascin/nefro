@@ -28,6 +28,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Fluorometylcholín v myšom modeli etablovanej CKD potlačil tvorbu TMAO a sprevádzala ho regresia fibrózy. Výsledok je sľubný, zatiaľ však výlučne experimentálny.',
     'content'      => <<<'HTML'
+<figure><a href="img/inhibicia-tmao-fmc-regresia-fibrozy-ckd-model.webp" rel="noopener noreferrer" target="_blank"><img src="img/inhibicia-tmao-fmc-regresia-fibrozy-ckd-model.webp" alt="Oblička s ustupujúcimi fibróznymi pruhmi vo vnútri laboratórnej nádoby; modrý lúč stlmil mikróby produkujúce signálny prúd" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Regresia fibrózy je pozoruhodná, ale odohráva sa v modeli — sklenená stena je tu podstatnou súčasťou výpovede.</figcaption></figure>
+
 <p>Chronická choroba obličiek (CKD) mení črevný mikrobióm a zároveň znižuje vylučovanie viacerých mikrobiálnych metabolitov. Medzi najviac skúmané patrí trimetylamín-N-oxid (TMAO), ktorého vyššie koncentrácie sa u ľudí spájajú s horšou funkciou obličiek, kardiovaskulárnym rizikom a nepriaznivou prognózou. Samotná asociácia však nerozlišuje, či je TMAO príčinou poškodenia, jeho následkom alebo oboma súčasne.</p>
 
 <p>Experimentálna práca DiDonata a spoluautorov v časopise <em>Journal of the American Society of Nephrology</em> sa preto nepýtala iba na prevenciu CKD. Autori začali cielenú inhibíciu mikrobiálnej tvorby TMAO až po rozvinutí funkčného a histologického poškodenia obličiek. Liečba fluorometylcholínom (FMC) zastavila ďalšiu progresiu a v myšom modeli ju sprevádzala čiastočná regresia tubulointersticiálnej fibrózy.</p>

@@ -29,6 +29,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Zachovaný eGFR nevylučuje CKD ani chronické histologické poškodenie. Renálna funkčná rezerva a kompenzačná hyperfiltrácia vysvetľujú časť tohto nesúladu, ich testovanie však zatiaľ nie je rutinným nástrojom.',
     'content'      => <<<'HTML'
+<figure><a href="img/renalna-funkcna-rezerva-normalny-egfr-poskodenie-obliciek.webp" rel="noopener noreferrer" target="_blank"><img src="img/renalna-funkcna-rezerva-normalny-egfr-poskodenie-obliciek.webp" alt="Oblička s pokojným vonkajším žiarením, no vo vnútri sú mnohé jednotky zhasnuté a zvyšné svietia preťažene; merací lúč sníma len vonkajší jas" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Normálna hodnota môže byť výsledkom preťaženia zvyšných nefrónov — rezerva je vyčerpaná skôr, než sa filtrácia zmení.</figcaption></figure>
+
 <p>Normálna koncentrácia kreatinínu ani zachovaný odhad glomerulovej filtrácie (eGFR) samy osebe nevylučujú ochorenie obličiek. Pacient môže mať albuminúriu, glomerulárnu hematúriu, štrukturálnu abnormalitu alebo chronické histologické zmeny, hoci celková glomerulová filtrácia zostáva v referenčnom rozmedzí.</p>
 
 <p>Jedným z fyziologických vysvetlení je schopnosť zostávajúcich nefrónov zvýšiť svoju individuálnu filtráciu. Táto kompenzácia môže určitý čas udržiavať celkovú GFR, ale neposkytuje informáciu o počte funkčných nefrónov ani o rozsahu jazvenia. <strong>Normálny eGFR preto treba interpretovať spolu s markermi poškodenia obličiek a klinickým kontextom, nie ako samostatné potvrdenie zdravých obličiek.</strong></p>
