@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Odborne a jazykovo revidovany clanok o vysetreni hematurie.
  */
