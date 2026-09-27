@@ -32,6 +32,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Štúdia v časopise JAMA naznačuje, že 4 % tetrasodný EDTA lock roztok môže na JIS znížiť komplikácie centrálnych venóznych katétrov. Prínos sa však týkal najmä poklesu oklúzií, nie jednoznačného zníženia katétrových infekcií.',
     'content'      => <<<'HTML'
+<figure><a href="img/edta-lock-roztoky-priechodnost-cvk.webp" rel="noopener noreferrer" target="_blank"><img src="img/edta-lock-roztoky-priechodnost-cvk.webp" alt="Katéter naplnený čírym svetelným roztokom, ktorý rozpúšťa tmavé usadeniny a obnovuje prietok" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Zámok pôsobí priamo v lúmene — otázkou zostáva, ako dlho priechodnosť udrží.</figcaption></figure>
+
 <p>Komplikácie spojené s centrálnymi venóznymi katétrami zostávajú v intenzívnej medicíne významným problémom. Centrálne venózne vstupy sú pre kriticky chorých pacientov často nevyhnutné, no prinášajú riziko krvnej infekcie, oklúzie katétra a trombózy súvisiacej s katétrom. Tieto komplikácie zvyšujú morbiditu, predlžujú hospitalizáciu a zvyšujú náklady na zdravotnú starostlivosť.</p>
 
 <p>Jednou z možností prevencie sú takzvané lock roztoky, teda roztoky ponechávané v lúmene katétra v čase, keď sa daný vstup nepoužíva. Cieľom je znížiť riziko upchatia katétra, obmedziť tvorbu biofilmu a zachovať funkčnosť cievneho vstupu.</p>

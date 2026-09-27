@@ -32,6 +32,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Hyperkaliémia pri pokročilom ochorení obličiek je vážny problém, no moderný prístup nestavia na strašení zoznamom zakázaných potravín. Kľúčom je individuálna edukácia, práca s veľkosťou porcie, správna úprava jedla a riešenie zápchy.',
     'content'      => <<<'HTML'
+<figure><a href="img/kontrola-draslika-ckd-edukovat-nie-strasit.webp" rel="noopener noreferrer" target="_blank"><img src="img/kontrola-draslika-ckd-edukovat-nie-strasit.webp" alt="Potraviny bohaté na draslík pokojne rozložené vedľa obličky s vyrovnanou svetelnou hladinou" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Plošné zakazovanie ochudobňuje stravu — cieľom je vedieť, čo a koľko, nie sa báť.</figcaption></figure>
+
 <p>Hyperkaliémia môže byť pri pokročilom ochorení obličiek vážnym a rýchlo sa rozvíjajúcim problémom. To však neznamená, že každého pacienta treba automaticky vystrašiť dlhým zoznamom zakázaných potravín. Práve naopak. Moderný prístup k diétnym odporúčaniam pri chronickom ochorení obličiek a dialýze by mal byť individuálny, praktický a zrozumiteľný.</p>
 
 <p>Starší spôsob edukácie často stál na jednoduchom odkaze: nejedzte banány, nepite pomarančový džús, vyhýbajte sa zemiakom, strukovinám a ďalším potravinám s vyšším obsahom draslíka. Takýto prístup síce vychádzal zo snahy predísť hyperkaliémii, no u mnohých pacientov vyvolával strach, rezignáciu alebo zbytočné obmedzenia. Pacient, ktorý sa bojí jedla, často lepšie nespolupracuje. Skôr sa stratí v zákazoch.</p>

@@ -32,6 +32,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Diskutuje sa o možnej súvislosti medzi agonistami GLP-1 receptorov a neartériitickou prednou ischemickou optickou neuropatiou (NAION). Dostupné dáta sú observačné a nepreukazujú kauzalitu — namieste je informovaná ostražitosť, nie panika.',
     'content'      => <<<'HTML'
+<figure><a href="img/glp1-ischemicka-opticka-neuropatia-naion.webp" rel="noopener noreferrer" target="_blank"><img src="img/glp1-ischemicka-opticka-neuropatia-naion.webp" alt="Jedna slabá výstražná iskra pri terči zrakového nervu v inak pokojnom tmavom poli" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Signál je zriedkavý, no reálny — patrí do sledovania, nie do paniky.</figcaption></figure>
+
 <p>Agonisty GLP-1 receptorov sa čoraz širšie používajú pri liečbe diabetu 2. typu a obezity. S rastúcim počtom pacientov sa prirodzene objavuje aj väčšia pozornosť voči zriedkavým nežiaducim účinkom. Jedným z diskutovaných bezpečnostných signálov je možná súvislosť medzi liekmi zo skupiny GLP-1 a neartériitickou prednou ischemickou optickou neuropatiou, známou ako NAION.</p>
 
 <p>NAION je akútne ischemické poškodenie prednej časti zrakového nervu. Môže viesť k náhlej strate zraku, najčastejšie na jednom oku. Aktuálne dostupné údaje však nepreukazujú jasný kauzálny vzťah medzi GLP-1 liečbou a NAION. Ide najmä o observačné štúdie, farmakovigilančné dáta a kazuistiky.</p>

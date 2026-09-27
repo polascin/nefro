@@ -30,6 +30,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Štúdia CONNECT (ADA 2026) ukazuje, že kontinuálne monitorovanie glukózy (CGM) výrazne zlepšuje glykémiu aj u dospelých s diabetom 2. typu, ktorí nepoužívajú inzulín — väčší pokles HbA1c, viac času v cieľovom rozmedzí a vyššia spokojnosť. Najviac profitujú pacienti s vysokým HbA1c.',
     'content'      => <<<'HTML'
+<figure><a href="img/kontinualne-monitorovanie-glukozy-diabetes-2-typu-bez-inzulinu.webp" rel="noopener noreferrer" target="_blank"><img src="img/kontinualne-monitorovanie-glukozy-diabetes-2-typu-bez-inzulinu.webp" alt="Senzor na ramene vysielajúci svetelnú glykemickú krivku, ktorá sa z ostrých špičiek vyrovnáva" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Aj bez inzulínu môže priebežný obraz glykémie zmeniť každodenné rozhodnutia pacienta.</figcaption></figure>
+
 <p>Kontinuálne monitorovanie glukózy, známe ako CGM, sa už roky považuje za štandardnú súčasť starostlivosti pri diabete 1. typu a pri diabete 2. typu liečenom inzulínom. Nové údaje zo štúdie CONNECT však ukazujú, že významný prínos môže mať aj u dospelých s diabetom 2. typu, ktorí inzulín nepoužívajú.</p>
 
 <p>Výsledky boli prezentované na vedeckom kongrese <strong>American Diabetes Association 2026 Scientific Sessions</strong> v New Orleans. Podľa autorov štúdie môže CGM zlepšiť kontrolu hyperglykémie, pomôcť pacientom lepšie pochopiť vplyv stravy, pohybu a liekov na glykémiu a potenciálne znížiť riziko dlhodobých komplikácií diabetu.</p>

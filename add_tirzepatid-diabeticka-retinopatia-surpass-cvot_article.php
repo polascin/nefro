@@ -32,6 +32,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Retina substúdia SURPASS-CVOT ukázala, že tirzepatid nebol spojený so zvýšeným rizikom vzniku ani progresie diabetickej retinopatie u vysokorizikových pacientov s diabetom 2. typu — napriek výraznejšiemu poklesu HbA1c oproti dulaglutidu.',
     'content'      => <<<'HTML'
+<figure><a href="img/tirzepatid-diabeticka-retinopatia-surpass-cvot.webp" rel="noopener noreferrer" target="_blank"><img src="img/tirzepatid-diabeticka-retinopatia-surpass-cvot.webp" alt="Molekula vedľa oka, ktorého sieť sietnicových ciev zostáva pokojná a rovnomerne nasvietená" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Obava z rýchleho zhoršenia sietnice sa v sledovaní rizikových pacientov nepotvrdila.</figcaption></figure>
+
 <p>Tirzepatid, známy aj pod obchodným názvom Mounjaro, nebol v retina substúdii SURPASS-CVOT spojený so zvýšeným rizikom vzniku alebo progresie diabetickej retinopatie u vysokorizikových pacientov s diabetom 2. typu. Výsledky boli prezentované na kongrese American Diabetes Association 2026 Scientific Sessions.</p>
 
 <p>Tento výsledok je klinicky dôležitý, pretože tirzepatid dokáže viesť k výraznému a pomerne rýchlemu poklesu HbA1c. Práve rýchle zlepšenie glykemickej kontroly bolo v minulosti v niektorých štúdiách spojené s prechodným zhoršením diabetickej retinopatie. Pri tirzepatide sa preto prirodzene objavila otázka, či intenzívna metabolická účinnosť nemôže mať nepriaznivý dopad na sietnicu.</p>
