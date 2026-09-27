@@ -35,6 +35,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'SWAM kombinuje veľkolúmenovú aspiráciu so separátorom trombu pri trombóze AV fistúl, graftov a katétrov. Sľubná technika, zatiaľ však nie univerzálny štandard.',
     'content'      => <<<'HTML'
+<figure><a href="img/swam-technika-tromboza-hemodialyzacneho-pristupu.webp" rel="noopener noreferrer" target="_blank"><img src="img/swam-technika-tromboza-hemodialyzacneho-pristupu.webp" alt="Katétrový nástroj rozrušujúci trombus v cievnom prístupe; za jeho hrotom sa obnovuje jasný prietok" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Mechanické odstránenie trombu môže prístup zachrániť — rozhoduje však rýchlosť, s akou sa k nemu pacient dostane.</figcaption></figure>
+
 <p>Trombóza cievneho prístupu patrí medzi najčastejšie a klinicky najzávažnejšie príčiny zlyhania hemodialyzačného prístupu. Pre pacienta znamená okamžité riziko prerušenia dialyzačnej liečby, potrebu urgentného riešenia, zavedenie dočasného alebo tunelizovaného centrálneho venózneho katétra a vyššie riziko infekčných, trombotických aj hospitalizačných komplikácií.</p>
 
 <p>Článok publikovaný v časopise <em>Hemodialysis International</em> predstavuje techniku <strong>SWAM</strong>, teda <strong>Separator With Aspirator for Mechanical Thrombectomy</strong>, ako novú endovaskulárnu možnosť mechanickej trombektómie hemodialyzačných prístupov. Ide o technický opis a prvé klinické skúsenosti s použitím veľkolúmenového aspiračného katétra v kombinácii so separátorom, ktorý mechanicky narúša intraluminálny trombus a pomáha udržať priechodnosť aspiračného systému.</p>

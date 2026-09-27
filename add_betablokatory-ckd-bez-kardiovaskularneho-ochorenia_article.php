@@ -31,6 +31,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Kórejská kohortová štúdia v Clinical Kidney Journal ukazuje asociáciu betablokátorov s vyššou mortalitou a MACE u pacientov s CKD bez známeho kardiovaskulárneho ochorenia.',
     'content'      => <<<'HTML'
+<figure><a href="img/betablokatory-ckd-bez-kardiovaskularneho-ochorenia.webp" rel="noopener noreferrer" target="_blank"><img src="img/betablokatory-ckd-bez-kardiovaskularneho-ochorenia.webp" alt="Tabletka so štítom svetla mieriacim do prázdna; oblička stojí mimo jeho dosahu a v mieste okraja stmavne" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Bez kardiovaskulárnej indikácie ochrana nemá kam dopadnúť — zostáva len riziko nežiaducich účinkov.</figcaption></figure>
+
 <p>Chronická choroba obličiek (CKD) je významným rizikovým faktorom kardiovaskulárnej morbidity a mortality. Pacienti so zníženou eGFR majú vyššie riziko ischemickej choroby srdca, srdcového zlyhávania, cievnej mozgovej príhody aj náhlej smrti. V klinickej praxi sa preto často používa intenzívna kardiovaskulárna prevencia vrátane antihypertenzívnej liečby.</p>
 
 <p>Betablokátory majú pevné miesto pri viacerých kardiologických indikáciách, najmä po infarkte myokardu, pri srdcovom zlyhávaní so zníženou ejekčnou frakciou, pri niektorých arytmiách a pri symptomatickej ischemickej chorobe srdca. Menej jasná je však ich úloha u pacientov s CKD, ktorí ešte nemajú preukázané kardiovaskulárne ochorenie.</p>

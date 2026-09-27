@@ -31,6 +31,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Polyfarmácia pri CKD nie je len dôsledkom veku a komorbidít. Samotná chronická choroba obličiek zvyšuje liekovú záťaž, riziko interakcií a potrebu pravidelnej liekovej revízie.',
     'content'      => <<<'HTML'
+<figure><a href="img/ckd-samostatny-faktor-polyfarmacie.webp" rel="noopener noreferrer" target="_blank"><img src="img/ckd-samostatny-faktor-polyfarmacie.webp" alt="Oblička, ktorá svetelným vláknom sama pridáva ďalšie tabletky do už dlhého radu na tmavej ploche" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Choroba obličiek pridáva lieky aj sama za seba — nielen cez pridružené diagnózy.</figcaption></figure>
+
 <p>Polyfarmácia je u pacientov s chronickou chorobou obličiek bežná, často nevyhnutná a zároveň riziková. Pacient s CKD má často arteriálnu hypertenziu, diabetes, dyslipidémiu, srdcové zlyhávanie, anémiu, poruchu minerálovo-kostného metabolizmu, metabolickú acidózu, hyperkaliémiu alebo hyperurikémiu. Každá z týchto diagnóz môže viesť k pridaniu ďalšieho lieku.</p>
 
 <p>Krátky odborný list publikovaný v <em>Clinical Kidney Journal</em> upozorňuje na dôležitú myšlienku: chronická choroba obličiek nemá byť chápaná iba ako jedna z komorbidít, ktoré sa náhodne spájajú s polyfarmáciou. CKD môže byť <strong>samostatným a aktívnym motorom polyfarmácie</strong>. Samotné zníženie funkcie obličiek a komplikácie s ním spojené vytvárajú liečebnú záťaž, ktorá zvyšuje počet predpisovaných liekov, náklady, riziko interakcií aj pravdepodobnosť nežiaducich účinkov.</p>

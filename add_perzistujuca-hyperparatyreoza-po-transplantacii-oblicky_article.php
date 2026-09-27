@@ -31,6 +31,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Metaanalýza v Clinical Kidney Journal ukazuje, že perzistujúca posttransplantačná hyperparatyreóza je konzistentným rizikovým markerom mortality a zlyhania štepu.',
     'content'      => <<<'HTML'
+<figure><a href="img/perzistujuca-hyperparatyreoza-po-transplantacii-oblicky.webp" rel="noopener noreferrer" target="_blank"><img src="img/perzistujuca-hyperparatyreoza-po-transplantacii-oblicky.webp" alt="Zdravá transplantovaná oblička a nad ňou prištítne telieska, ktoré stále intenzívne žiaria a vysielajú signál nadol" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Štep pracuje, no žľazy pokračujú v pôvodnom režime — a táto zotrvačnosť nesie riziko pre kosť, cievy aj samotný štep.</figcaption></figure>
+
 <p>Hyperparatyreóza patrí medzi najčastejšie prejavy poruchy minerálovo-kostného metabolizmu pri chronickej chorobe obličiek. U časti pacientov pretrváva aj po úspešnej transplantácii obličky. Klinicky nejde len o laboratórnu odchýlku: pretrvávajúca posttransplantačná hyperparatyreóza môže byť spojená s hyperkalcémiou, hypofosfatémiou, kostnými komplikáciami, vaskulárnou kalcifikáciou a potenciálne aj horšími výsledkami štepu.</p>
 
 <p>Systematický prehľad a metaanalýza publikovaná v <em>Clinical Kidney Journal</em> hodnotili, či hyperparatyreóza pred transplantáciou a perzistujúca hyperparatyreóza po transplantácii súvisia s mortalitou a výsledkami transplantovanej obličky. Téma je prakticky dôležitá, pretože definície posttransplantačnej hyperparatyreózy nie sú jednotné a rozhodovanie o liečbe, vrátane cinakalcetu alebo paratyreoidektómie, zostáva v mnohých situáciách nejednoznačné.</p>

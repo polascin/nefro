@@ -31,6 +31,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'FIFA na MS 2026 zaviedla trojminútové hydratačné prestávky v každom polčase. Pri horúčave nejde len o komfort, ale o prevenciu hypertermie, dehydratácie, hyponatriémie a AKI.',
     'content'      => <<<'HTML'
+<figure><a href="img/hydratacne-prestavky-futbal-ms-2026.webp" rel="noopener noreferrer" target="_blank"><img src="img/hydratacne-prestavky-futbal-ms-2026.webp" alt="Fľaša vody na trávniku pod spaľujúcim svetlom, nad plochou sa chveje horúci vzduch" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Pri extrémnej záťaži teplom nejde o komfort — prestávka na pitie je ochranou pred zlyhaním termoregulácie a obličiek.</figcaption></figure>
+
 <p>FIFA na majstrovstvách sveta vo futbale 2026 zaviedla trojminútové hydratačné prestávky uprostred každého polčasu. Na prvý pohľad ide o organizačný detail, ktorý prerušuje plynulosť hry a prirodzene vyvoláva otázky o taktike, televíznom priestore a komerčnom využití. Z medicínskeho hľadiska však nejde o kozmetickú úpravu pravidiel. Pri kombinácii tepla, vlhkosti, slnečného žiarenia, cestovania a vysokej intenzity výkonu ide o racionálne preventívne opatrenie.</p>
 
 <p>Oficiálne pravidlo FIFA stanovuje prestávku v každom zápase bez ohľadu na konkrétne počasie alebo typ štadióna. Hra sa prerušuje približne v 22. minúte prvého polčasu a v 67. minúte zápasu, teda uprostred druhého polčasu. Prestávka trvá tri minúty „od hvizdu po hvizd“ a čas sa pripočítava k nadstaveniu. Tento jednotný prístup má zabezpečiť rovnaké podmienky pre všetky tímy, ale jeho zdravotný význam je najväčší práve v horúcom a vlhkom prostredí.</p>

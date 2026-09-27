@@ -31,6 +31,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Prospektívna štúdia v Clinical Kidney Journal naznačuje, že dialyzačný dysekvilibračný syndróm môže byť častejší a že kľúčovým signálom je intradialyzačná hypertenzia.',
     'content'      => <<<'HTML'
+<figure><a href="img/dialyzacny-dysekvilibracny-syndrom-zaciatok-hemodialyzy.webp" rel="noopener noreferrer" target="_blank"><img src="img/dialyzacny-dysekvilibracny-syndrom-zaciatok-hemodialyzy.webp" alt="Cieva s rýchlo vyčistenými časticami a vedľa nej opuchnuté mozgové tkanivo, v ktorom častice zostali husté" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Príliš rýchle očistenie krvi vytvorí rozdiel medzi krvou a mozgom — a práve ten vedie k opuchu.</figcaption></figure>
+
 <p>Dialyzačný dysekvilibračný syndróm je neurologická komplikácia, ktorá sa môže objaviť počas iniciácie hemodialýzy alebo krátko po nej. Tradične sa vysvetľoval najmä rýchlym poklesom urey v krvi pri pomalšej úprave osmotických pomerov v centrálnom nervovom systéme. Novšia práca publikovaná v <em>Clinical Kidney Journal</em> však naznačuje, že tento pohľad môže byť príliš zjednodušený.</p>
 
 <p>Prospektívna observačná štúdia francúzskych autorov ukázala, že dialyzačný dysekvilibračný syndróm môže byť častejší, než sa v bežnej klinickej praxi predpokladá. Zároveň identifikovala <strong>intradialyzačnú hypertenziu</strong> ako nezávislý rizikový faktor. To je prakticky významné: pri začiatku hemodialyzačnej liečby sa pozornosť často sústreďuje na ureu, ultrafiltráciu a dĺžku prvej dialýzy, zatiaľ čo vývoj krvného tlaku počas výkonu môže zostať v úzadí.</p>
