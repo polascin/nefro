@@ -22,6 +22,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt' => 'Alogliptín sa v observačnej štúdii spájal s priaznivejšími obličkovými výsledkami. Čo ukázali doplnkové analýzy a prečo nález zatiaľ nepreukazuje nefroprotekciu?',
     'content'      => <<<'HTML'
+<figure><a href="img/alogliptin-dpp4-inhibitory-oblickove-vysledky-diabetes.webp" rel="noopener noreferrer" target="_blank"><img src="img/alogliptin-dpp4-inhibitory-oblickove-vysledky-diabetes.webp" alt="Štyri na pohľad rovnaké tabletky v rade na tmavej oceli, každá však vrhá inak dlhý tieň, v pozadí silueta obličky" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Lieky jednej triedy vyzerajú zameniteľne; rozdiel sa ukáže až v tom, aký tieň vrhajú na obličkové výsledky.</figcaption></figure>
+
 <p>Alogliptín sa v americkej observačnej štúdii spájal s nižším výskytom novozaznamenaného stredne závažného až závažného ochorenia obličiek než linagliptín, saxagliptín a sitagliptín. Štúdia však nepreukazuje priamy nefroprotektívny účinok ani nadradenosť alogliptínu v prevencii dialýzy. Chýbajúce laboratórne údaje, rozdiely medzi skupinami a menej presvedčivé doplnkové analýzy vyžadujú opatrnú interpretáciu. [1, 2]</p>
 
 <h2>Čo autori porovnávali</h2>

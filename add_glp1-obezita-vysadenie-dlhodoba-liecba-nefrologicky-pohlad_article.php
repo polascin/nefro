@@ -26,6 +26,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Po vysadení liečby obezity sa hmotnosť často vracia. Čo dokazujú STEP 1, SELECT a SURMOUNT-MAINTAIN a ako plánovať udržiavaciu liečbu pri chronickom ochorení obličiek?',
     'content'      => <<<'HTML'
+<figure><a href="img/glp1-obezita-vysadenie-dlhodoba-liecba-nefrologicky-pohlad.webp" rel="noopener noreferrer" target="_blank"><img src="img/glp1-obezita-vysadenie-dlhodoba-liecba-nefrologicky-pohlad.webp" alt="Injekčné pero na tmavej ploche, nad ním svetelná krivka prudko stúpa a po skončení lúča sa láme a padá v iskrách" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Otázka pri liečbe obezity nie je len ako dosiahnuť pokles hmotnosti, ale čo nasleduje po vysadení.</figcaption></figure>
+
 <p>Liečba obezity agonistami receptora pre glukagónu podobný peptid 1 (GLP-1) sa má plánovať ako súčasť dlhodobej starostlivosti. Po jej ukončení sa často vracia významná časť stratenej hmotnosti. To však neznamená, že každý pacient musí celoživotne užívať rovnaký liek v rovnakej dávke. Rozhodnutie o pokračovaní, úprave alebo ukončení má vychádzať z účinnosti, tolerancie, pridružených ochorení a možností pacienta. WHO dlhodobé použitie podmienečne odporúča, pričom upozorňuje aj na neistoty týkajúce sa udržiavania a ukončovania liečby. [1]</p>
 <p>Semaglutid je agonista receptora GLP-1. Tirzepatid pôsobí súčasne na receptory glukózovo dependentného inzulinotropného polypeptidu (GIP) a GLP-1; výsledky jeho udržiavacích štúdií preto nemožno automaticky prenášať na všetky agonisty GLP-1. Nasledujúci prehľad odlišuje dôkazy o hmotnosti od dôkazov o kardiovaskulárnych a obličkových príhodách. Stav poznatkov je posúdený k 20. septembru 2026. [7, 8]</p>
 

@@ -26,6 +26,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Finálna analýza ORIGIN 3 priniesla priaznivé výsledky eGFR a progresie IgA nefropatie. Čo údaje o atacicepte dokazujú a prečo ich nemožno zamieňať za dôkaz zníženia úmrtnosti?',
     'content'      => <<<'HTML'
+<figure><a href="img/trutakna-atacicept-iga-nefropatia-origin-3-finalna-analyza.webp" rel="noopener noreferrer" target="_blank"><img src="img/trutakna-atacicept-iga-nefropatia-origin-3-finalna-analyza.webp" alt="Svietiaci glomerulus zasiahnutý úzkym modrým lúčom, ktorý rozpúšťa tmavé depozity, zdravé kapilárne kľučky zostávajú nedotknuté" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia, nie mikroskopický nález. Cielená liečba sa posudzuje podľa toho, ako presne zasiahne mechanizmus ochorenia a čoho sa nedotkne.</figcaption></figure>
+
 <p>Finálna analýza účinnosti štúdie ORIGIN 3, oznámená 15. septembra 2026, rozširuje poznatky o atacicepte (Trutakna, atacicept-vymj) pri primárnej IgA nefropatii. Popri predtým publikovanom znížení proteinúrie priniesla priaznivé výsledky odhadovanej glomerulovej filtrácie (eGFR) a kombinovaného ukazovateľa progresie. Septembrové údaje však zatiaľ pochádzajú z oznámenia zadávateľa a jeho prezentácie, nie z tu overenej recenzovanej publikácie finálnej analýzy. [1, 2]</p>
 <p><strong>Stav poznatkov k 20. septembru 2026:</strong> treba odlíšiť recenzovanú priebežnú analýzu proteinúrie, novšie firemné výsledky a platnú americkú indikáciu. Každý z týchto zdrojov odpovedá na inú otázku.</p>
 

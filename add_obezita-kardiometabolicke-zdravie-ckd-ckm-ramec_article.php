@@ -26,6 +26,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Prehľad v CJASN zhŕňa, ako obezita poškodzuje obličku priamo aj nepriamo a prečo sa jej manažment pri CKD posunul od prevažne režimového prístupu k viaczložkovej stratégii s inkretínovou liečbou. Nové je aj poznanie, že rozhoduje rozloženie tuku – nielen hmotnosť.',
     'content'      => <<<'HTML'
+<figure><a href="img/obezita-kardiometabolicke-zdravie-ckd-ckm-ramec.webp" rel="noopener noreferrer" target="_blank"><img src="img/obezita-kardiometabolicke-zdravie-ckd-ckm-ramec.webp" alt="Guľa tukového tkaniva zasahovaná štyrmi rôznofarebnými lúčmi z rôznych strán, v pozadí presvitajú srdce a oblička" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Obezita pri chorobe obličiek zriedka ustúpi jednému opatreniu — účinok prichádza zo súbehu viacerých zložiek naraz.</figcaption></figure>
+
 <p>Obezita už dávno nie je len sprievodným javom chronickej choroby obličiek (CKD). Je samostatným patofyziologickým činiteľom, ktorý zvyšuje riziko vzniku aj progresie ochorenia obličiek, urýchľuje kardiovaskulárne komplikácie a zhoršuje metabolický profil pacienta. Prehľadová práca Mathewa a kolektívu, publikovaná v roku 2026 v časopise <em>Clinical Journal of the American Society of Nephrology</em>, tieto väzby zhŕňa v rámci <strong>kardio-obličkovo-metabolického (CKM) rámca</strong>.</p>
 
 <p>Pre nefrologickú prax je podstatný posun v uvažovaní: obezitu netreba vnímať ako komorbiditu vedľa CKD, ale ako stav, ktorý priamo ovplyvňuje hemodynamiku obličky, zápal, glomerulárny tlak, albuminúriu aj dlhodobú prognózu.</p>

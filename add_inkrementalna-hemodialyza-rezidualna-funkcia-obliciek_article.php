@@ -22,6 +22,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt' => 'Hemodialýza dvakrát týždenne môže znížiť liečebnú záťaž. Prehľad kohort, randomizovaných štúdií a metaanalýz vysvetľuje neistotu ochrany reziduálnej funkcie aj podmienky bezpečného výberu pacientov.',
     'content'      => <<<'HTML'
+<figure><a href="img/inkrementalna-hemodialyza-rezidualna-funkcia-obliciek.webp" rel="noopener noreferrer" target="_blank"><img src="img/inkrementalna-hemodialyza-rezidualna-funkcia-obliciek.webp" alt="Oblička s teplým vnútorným žiarením v zámerne neúplnej modrej svetelnej mriežke, vedľa nezapojená slučka dialyzačnej hadičky" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Zmysel inkrementálneho prístupu je nechať zvyšnej funkcii obličiek priestor pracovať, nie ju hneď nahradiť v plnom rozsahu.</figcaption></figure>
+
 <p>Inkrementálna hemodialýza prispôsobuje dialyzačnú dávku reziduálnej funkcii obličiek a postupne ju zvyšuje pri jej poklese. U vybraných pacientov môže začínať dvoma procedúrami týždenne. Observačné štúdie naznačujú pomalší úbytok reziduálnej funkcie, randomizované skúšania však zatiaľ neposkytli presvedčivý dôkaz, že samotná nižšia frekvencia túto funkciu chráni lepšie než liečba trikrát týždenne. Rozhodujúce sú výber pacienta, celková účinnosť liečby a včasná úprava predpisu.</p>
 
 <h2>Čo znamená inkrementálny začiatok dialýzy</h2>
