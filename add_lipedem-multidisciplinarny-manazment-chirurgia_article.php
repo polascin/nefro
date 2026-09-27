@@ -26,6 +26,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Lipedém je chronické ochorenie podkožného tuku s bolesťou, disproporciou končatín a neskorším lymfatickým postihnutím. Diagnóza je klinická; liečba multidisciplinárna a chirurgia redukčná, nie kozmetická.',
     'content'      => <<<'HTML'
+<figure><a href="img/lipedem-multidisciplinarny-manazment-chirurgia.webp" rel="noopener noreferrer" target="_blank"><img src="img/lipedem-multidisciplinarny-manazment-chirurgia.webp" alt="Zväčšené nodulárne tukové lalôčiky s bolestivým červeným presvitaním, zasahované tromi rôznymi lúčmi svetla" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia, nie nález konkrétneho pacienta. Lipedém nie je obezita a nezvládne ho jediný odbor — chirurgia je jednou zo zložiek, nie náhradou ostatných.</figcaption></figure>
+
 <p class="article-dek"><em>Lipedém nie je „len obezita nôh“. Ide o chronické, prevažne u žien sa vyskytujúce ochorenie podkožného tuku s bolesťou, obmedzením hybnosti a psychosociálnou záťažou. Diagnóza ostáva klinická. Liečba je multidisciplinárna; chirurgia je redukčná, nie kozmetická, a nie je vyliečením.</em></p>
 
 <p>Text spracúva kongresovú správu portálu Medscape z Medzinárodného kongresu o obezite (International Congress on Obesity, ICO) 2026, americký štandard starostlivosti o lipedém (Herbst a spol., 2021) a medzinárodný Delphi konsenzus Lipedema World Alliance (Kruppa a spol., 2026). Pacientsky prehľad Cleveland Clinic uvádzam len ako sekundárny, verejne dostupný opis klinického obrazu – nie ako zdroj dávkovania ani operačných percent.</p>
