@@ -25,6 +25,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Dve veľké randomizované štúdie nepreukázali, že alopurinol spomalí pokles eGFR. Retrospektívna kohorta pritom hlási vzostup filtrácie o 12 ml/min. Rozbor toho, prečo je rozpor zdanlivý a ktorý výsledok platí.',
     'content'      => <<<'HTML'
+<figure><a href="img/alopurinol-ckd-asymptomaticka-hyperurikemia-dokazy.webp" rel="noopener noreferrer" target="_blank"><img src="img/alopurinol-ckd-asymptomaticka-hyperurikemia-dokazy.webp" alt="Tabletka a z nej dve rovnako silné šípky svetla mieriace presne opačnými smermi" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Randomizované štúdie a retrospektívne dáta tu ukazujú opačne — a rozhodnúť treba podľa toho, ktorý typ dôkazu unesie danú otázku.</figcaption></figure>
+
 <p>Kyselina močová je pri chronickej chorobe obličiek (CKD) lákavý terapeutický cieľ. Urát poškodzuje endotel, aktivuje renín-angiotenzínový systém, podieľa sa na arteriolopatii aferentnej arterioly a jeho hladina stúpa už v skorých štádiách CKD. Hypotéza, že jeho zníženie spomalí progresiu, je preto biologicky vierohodná a merateľný cieľ liečby je k dispozícii.</p>
 
 <p>Klinické dôkazy však hovoria inak. Editoriál publikovaný v <em>Brazilian Journal of Nephrology</em> v roku 2026 túto nezhodu formuluje presne: dve veľké randomizované štúdie renoprotektívny účinok nepreukázali, no retrospektívna kohorta z rovnakého čísla časopisu opisuje zlepšenie funkcie obličiek. Práve tento rozpor stojí za rozbor, pretože sa v praxi opakuje pri každom biomarkeri, ktorý sa dá liečebne ovplyvniť.</p>

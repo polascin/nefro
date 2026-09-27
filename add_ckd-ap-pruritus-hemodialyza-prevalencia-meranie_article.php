@@ -25,6 +25,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Turecká štúdia udáva stredne ťažký až ťažký pruritus u 16,3 % dialyzovaných, iné kohorty u 23 až 40 %. Veľkú časť rozdielu vysvetľuje použitý nástroj a prah, bez priameho porovnania v tej istej kohorte ho však nemožno pripísať iba meraniu – a najcennejšia časť práce je celkom inde než v číslach.',
     'content'      => <<<'HTML'
+<figure><a href="img/svrbenie-pruritus-na-dialyze-preco-sa-udavana-prevalencia-lisi-dvojnasobne-a-co-pacient-sam-nepovie.webp" rel="noopener noreferrer" target="_blank"><img src="img/svrbenie-pruritus-na-dialyze-preco-sa-udavana-prevalencia-lisi-dvojnasobne-a-co-pacient-sam-nepovie.webp" alt="Koža s dráždivými červenými čiarami a iskrami na nervových zakončeniach, nad ňou prázdna tichá tma" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Pod kožou sa deje veľa, v dokumentácii nič — preto sa udávaná prevalencia líši podľa toho, ako sa pýtame.</figcaption></figure>
+
 <p>Pruritus spojený s chronickou chorobou obličiek patrí k symptómom, ktoré dialyzovaného pacienta obťažujú najviac a v ambulancii sa spomenú najmenej. Nová turecká štúdia s kombinovaným kvantitatívno-kvalitatívnym dizajnom priniesla údaj, ktorý sa rýchlo rozšíril: stredne ťažké až ťažké svrbenie malo <strong>16,3 %</strong> hemodialyzovaných.</p>
 
 <p>To číslo je vecne správne – a zároveň sa nedá použiť ako odpoveď na otázku „koľko našich pacientov svrbí“. Dôvod je poučný a týka sa každého symptómového ukazovateľa, ktorý meriame dotazníkom.</p>

@@ -25,6 +25,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Prínos online hemodiafiltrácie nie je vlastnosťou metódy, ale dosiahnutého konvektívneho objemu. Nové odporúčania to formulujú priamo a spresňujú, čo musí pracovisko splniť, aby dávka zo štúdií vôbec vznikla.',
     'content'      => <<<'HTML'
+<figure><a href="img/online-hemodiafiltracia-davkovana-liecba-odporucania-sin.webp" rel="noopener noreferrer" target="_blank"><img src="img/online-hemodiafiltracia-davkovana-liecba-odporucania-sin.webp" alt="Dialyzátor a vedľa neho presne odmeraná nádoba so svietiacou tekutinou" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Konvekčný objem prestáva byť vedľajším parametrom a stáva sa dávkou, ktorú treba predpísať a kontrolovať.</figcaption></figure>
+
 <p>Online hemodiafiltrácia (OL-HDF) sa v európskych dialyzačných strediskách používa už dve desaťročia, no otázka, či pacientovi skutočne predĺži život, mala dlho rozporuplné odpovede. Rozuzlenie neprišlo z porovnania metód, ale z pochopenia, že ide o <strong>dávkovanú liečbu</strong>: rozhoduje objem konvekcie, ktorý sa počas sedenia naozaj dosiahne.</p>
 
 <p>Odporúčania, ktoré v auguste 2026 zverejnil medzinárodný multidisciplinárny panel zvolaný Talianskou nefrologickou spoločnosťou, túto tézu formulujú priamo a prekladajú ju do prevádzkových požiadaviek. Pre nefrológa je to užitočnejší dokument než ďalšie porovnanie modalít – hovorí totiž o tom, čo musí pracovisko urobiť, aby prínos vôbec vznikol.</p>

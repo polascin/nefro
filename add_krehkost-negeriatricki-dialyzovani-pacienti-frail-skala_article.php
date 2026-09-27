@@ -25,6 +25,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'V súbore 50 hemodialyzovaných pacientov vo veku 18–64 rokov bolo krehkých 20 % a predkrehkých 44 %. Skríning krehkosti teda nepatrí len do geriatrie – jednotlivé asociácie zo štúdie však treba čítať veľmi opatrne.',
     'content'      => <<<'HTML'
+<figure><a href="img/krehkost-negeriatricki-dialyzovani-pacienti-frail-skala.webp" rel="noopener noreferrer" target="_blank"><img src="img/krehkost-negeriatricki-dialyzovani-pacienti-frail-skala.webp" alt="Mladá vzpriamená presklená konštrukcia, v ktorej už presvitajú jemné vlasové praskliny" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Krehkosť nie je vyhradená starobe — u dialyzovaných sa objavuje podstatne skôr, než by vek napovedal.</figcaption></figure>
+
 <p>Krehkosť sa v nefrológii stále vníma ako téma starších pacientov. Prierezová štúdia publikovaná v auguste 2026 v časopise <em>Cureus</em> to spochybňuje: v jednocentrovom súbore hemodialyzovaných dospelých vo veku 18 až 64 rokov bola krehkosť alebo predkrehkosť prítomná u takmer dvoch tretín pacientov.</p>
 
 <p>Posolstvo o skríningu je správne a zodpovedá doterajšej literatúre. Niektoré jednotlivé výsledky štúdie však vyplývajú z veľmi malej vzorky a jeden z nich je biologicky nepravdepodobný natoľko, že by sa nemal preberať bez komentára.</p>

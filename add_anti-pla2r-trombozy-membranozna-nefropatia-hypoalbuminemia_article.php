@@ -25,6 +25,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Pri ťažkej hypoalbuminémii sa vyššie hladiny anti-PLA2R spájali s vyšším rizikom trombózy aj po úprave na albumín a vek. Odhad však stojí na najviac desiatich príhodách a nemožno ho extrapolovať na bežné titre.',
     'content'      => <<<'HTML'
+<figure><a href="img/anti-pla2r-trombozy-membranozna-nefropatia-hypoalbuminemia.webp" rel="noopener noreferrer" target="_blank"><img src="img/anti-pla2r-trombozy-membranozna-nefropatia-hypoalbuminemia.webp" alt="Dva rôzne ukazovatele, ktorých lúče osvetľujú cievu len čiastočne; až v mieste prekrytia je vidieť vznikajúcu zrazeninu" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Samotný albumín nevysvetlí celé riziko — protilátka pridáva časť obrazu, ktorá mu chýba.</figcaption></figure>
+
 <p>Membranózna nefropatia patrí k tým glomerulopatiám, kde trombóza nie je zriedkavou komplikáciou, ale očakávaným rizikom. Rozhodovanie o profylaxii pritom stojí prakticky na jedinom ukazovateli – na koncentrácii sérového albumínu – a na odhade rizika krvácania. Otázka, či existuje aj marker <em>aktivity ochorenia</em>, ktorý by riziko spresnil, je preto legitímna.</p>
 
 <p>Retrospektívna kohortová štúdia publikovaná v auguste 2026 na ňu odpovedá opatrne kladne: pri ťažkej hypoalbuminémii sa vyššie hladiny protilátok proti receptoru pre fosfolipázu A2 (anti-PLA2R) spájali s vyšším rizikom trombotických komplikácií. Váha tohto zistenia sa však dá pochopiť až vtedy, keď sa pozrieme, na koľkých príhodách stojí.</p>
