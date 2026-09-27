@@ -27,6 +27,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'V randomizovanej štúdii AL-DON deväť mesiacov alopurinolu 300 mg u zdravých darcov obličky výrazne znížilo urikémiu, ale nezmenilo hmotnosť ľavej komory na magnetickej rezonancii, krvný tlak ani inzulínovú citlivosť. Nežiaduce udalosti boli častejšie v aktívnej vetve.',
     'content'      => <<<'HTML'
+<figure><a href="img/alopurinol-zivi-darcovia-oblicky-lvm-al-don.webp" rel="noopener noreferrer" target="_blank"><img src="img/alopurinol-zivi-darcovia-oblicky-lvm-al-don.webp" alt="Zreteľne klesajúci stĺpec svetla a vedľa neho nezmenené srdce so zhrubnutou stenou" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Laboratórna hodnota klesla, štruktúra srdca sa nezmenila — a práve to je výsledok, ktorý rozhoduje.</figcaption></figure>
+
 <p class="article-dek"><em>V randomizovanej, dvojito zaslepenej, placebom kontrolovanej štúdii fázy 2b u zdravých živých darcov obličky deväťmesačná liečba alopurinolom 300 mg denne výrazne znížila sérovú kyselinu močovú, ale nezmenila hmotnosť ľavej komory meranú magnetickou rezonanciou, krvný tlak ani inzulínovú citlivosť. Výsledok pripomína, že zníženie biomarkera samo osebe nezaručuje zmenu orgánovej štruktúry.</em></p>
 
 <h2>Prečo sa téma skúmala</h2>

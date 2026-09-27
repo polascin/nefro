@@ -27,6 +27,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Prehľad WHO pre európsky región zistil systematicky vyššie využívanie digitálnych zdravotníckych technológií u ľudí s vyšším vzdelaním, príjmom, v mestách a u mladších. Ak sa rovnosť prístupu nemeria, digitálne nástroje môžu rozdiely v zdraví zväčšiť.',
     'content'      => <<<'HTML'
+<figure><a href="img/digitalne-zdravotnictvo-nerovnosti-who-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/digitalne-zdravotnictvo-nerovnosti-who-nefrologia.webp" alt="Hustá svietiaca sieť, ktorá sa končí ostrou hranou nad tmavou priepasťou s niekoľkými osamelými bodmi" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Digitálny nástroj pomôže tým, ktorí sa k nemu dostanú — a o to viac vzdiali tých ostatných.</figcaption></figure>
+
 <p class="article-dek"><em>Digitálne technológie sa často predstavujú ako cesta k spravodlivejšiemu prístupu k zdravotnej starostlivosti. Prehľadová správa Regionálneho úradu WHO pre Európu však ukazuje, že ich využívanie je systematicky vyššie práve u skupín, ktoré sú aj inak zvýhodnené. Ak sa nerovnosť v prístupe, používaní a zapojení nesleduje a nemeria, digitálny manažment môže rozdiely v zdraví zväčšiť namiesto toho, aby ich zmenšil.</em></p>
 
 <h2>Prečo sa o rovnosti v digitálnom zdravotníctve vedie spor</h2>

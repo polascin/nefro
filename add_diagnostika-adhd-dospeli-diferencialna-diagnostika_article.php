@@ -27,6 +27,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'ADHD v dospelosti sa nedá potvrdiť ani vylúčiť na základe nepozornosti. Skríningová škála ASRS má senzitivitu iba 68,7 %, takže negatívny výsledok diagnózu nevylučuje. Pri chronickej chorobe obličiek treba navyše zvážiť medicínske príčiny poruchy pozornosti.',
     'content'      => <<<'HTML'
+<figure><a href="img/diagnostika-adhd-dospeli-diferencialna-diagnostika.webp" rel="noopener noreferrer" target="_blank"><img src="img/diagnostika-adhd-dospeli-diferencialna-diagnostika.webp" alt="Rozptýlené svetelné úlomky, ktoré sa v lúči presného nástroja usporiadajú do zrozumiteľnej štruktúry" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Rozptýlenosť má mnoho príčin; diagnózu z nej robí až štruktúrované vyšetrenie a vylúčenie alternatív.</figcaption></figure>
+
 <p class="article-dek"><em>Dospelí s podozrením na ADHD opisujú nepozornosť, zabúdanie, ťažkosti s organizáciou, vnútorný nepokoj alebo impulzivitu. Samotná nepozornosť však diagnózu nezakladá. ADHD je neurovývinová porucha definovaná trvalým vzorcom príznakov s funkčným dopadom vo viacerých prostrediach a s nutnosťou odlíšiť iné medicínske, psychiatrické a environmentálne príčiny. Posudzovacie škály hodnotenie podporujú — nenahrádzajú ho.</em></p>
 
 <h2>Prečo je téma dôležitá aj pre nefrológa</h2>

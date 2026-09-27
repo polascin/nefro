@@ -27,6 +27,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Štyri opakujúce sa mýty o strave a čreve narážajú pri chronickej chorobe obličiek na tvrdé čísla: fitness prah 1,62 g bielkovín na kilogram leží nad stropom 1,3 g, ktorý KDIGO neodporúča prekračovať, a „čistenie čriev“ má doložené renálne riziko.',
     'content'      => <<<'HTML'
+<figure><a href="img/strava-a-zdravie-creva-myty-influencerov-ckd.webp" rel="noopener noreferrer" target="_blank"><img src="img/strava-a-zdravie-creva-myty-influencerov-ckd.webp" alt="Lesklá vrstvená veža superpotravín pod ostrým svetlom, stojaca na tenkom popraskanom podklade" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Presvedčivá forma ešte nie je dôkaz — a pri chorobe obličiek môže byť „zdravá“ rada priamo riziková.</figcaption></figure>
+
 <p class="article-dek"><em>Tvrdenia influencerov o strave a „zdraví čreva“ bývajú presvedčivé preto, že majú pravdivé jadro — ktoré sa potom neprimerane zovšeobecní. Pri chronickej chorobe obličiek však tieto zovšeobecnenia narážajú na konkrétne čísla a konkrétne riziká. Tento článok prechádza štyri najčastejšie mýty a ukazuje, kde presne sa pri nefrologickom pacientovi lámu.</em></p>
 
 <h2>Prečo sa tým má nefrológ zaoberať</h2>

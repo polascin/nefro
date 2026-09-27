@@ -27,6 +27,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Kanadská populačná štúdia s vyše 531 000 pacientmi ukázala stupňovitý nárast mortality, potreby náhrady funkcie obličiek aj dlhodobej dialyzačnej závislosti podľa závažnosti CKD. Prekvapením je nižšia upravená mortalita dialyzovaných než pacientov s nedialyzovaným štádiom G5.',
     'content'      => <<<'HTML'
+<figure><a href="img/zavaznost-ckd-prognoza-jis-populacna-studia.webp" rel="noopener noreferrer" target="_blank"><img src="img/zavaznost-ckd-prognoza-jis-populacna-studia.webp" alt="Rad obličiek s narastajúcim zjazvením a nad nimi čoraz kratšie svetelné čiary" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. To, s akou obličkou pacient na jednotku prichádza, spoluurčuje, ako z nej odíde.</figcaption></figure>
+
 <p class="article-dek"><em>Rozsiahla retrospektívna kohortová štúdia z kanadskej provincie Ontário ukázala, že s klesajúcou východiskovou glomerulovou filtráciou stúpali pravdepodobnosť úmrtia, potreba akútnej náhrady funkcie obličiek aj riziko pretrvávajúcej dialyzačnej závislosti. Výsledky pomáhajú pri odhade prognózy a v komunikácii s pacientom a rodinou, ale neumožňujú záver, že samotná chronická choroba obličiek pozorované výsledky kauzálne spôsobila.</em></p>
 
 <h2>Prečo je téma dôležitá</h2>

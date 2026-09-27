@@ -28,6 +28,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Združená analýza štúdií SPRINT MIND a ACCORD MIND spojila vyššiu variabilitu systolického tlaku medzi návštevami s rýchlejšou progresiou lézií bielej hmoty. Variabilita však vysvetlila iba asi 9 % ochranného účinku intenzívnej kontroly tlaku.',
     'content'      => <<<'HTML'
+<figure><a href="img/variabilita-tlaku-lezie-bielej-hmoty-sprint-accord.webp" rel="noopener noreferrer" target="_blank"><img src="img/variabilita-tlaku-lezie-bielej-hmoty-sprint-accord.webp" alt="Prudko kolísajúca svetelná čiara a pod jej najväčšími výkyvmi svetlé ložiská v tmavom tkanive" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna, nie záznam konkrétneho pacienta. Nezáleží len na priemernej hodnote tlaku, ale aj na tom, ako veľmi kolíše medzi návštevami.</figcaption></figure>
+
 <p class="article-dek"><em>V združenej analýze individuálnych údajov z dvoch randomizovaných štúdií bola vyššia variabilita systolického krvného tlaku medzi návštevami nezávisle spojená s rýchlejšou progresiou abnormalít bielej hmoty. Intenzívne znižovanie systolického tlaku progresiu spomalilo, pričom variabilita tlaku tento účinok sprostredkovala iba čiastočne — podľa autorov približne z deviatich percent.</em></p>
 
 <h2>Prečo je téma zaujímavá</h2>
