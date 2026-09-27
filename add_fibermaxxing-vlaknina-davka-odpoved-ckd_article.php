@@ -28,6 +28,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Najväčšie zníženie rizika sa v rozsiahlom prehľade pozorovalo pri 25 – 29 g vlákniny denne. Kľúčová veta pre nefrológiu je však iná: tieto zistenia sa výslovne netýkajú ľudí s chronickým ochorením.',
     'content'      => <<<'HTML'
+<figure><a href="img/fibermaxxing-vlaknina-davka-odpoved-ckd.webp" rel="noopener noreferrer" target="_blank"><img src="img/fibermaxxing-vlaknina-davka-odpoved-ckd.webp" alt="Rastúca kopa vlákniny a nad ňou svetelná krivka, ktorá po strmom vzostupe prechádza do rovného plateau" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Prvé navýšenie vlákniny prinesie najviac; ďalšie pridávanie už krivku nedvíha — a pri CKD môže pridať iné problémy.</figcaption></figure>
+
 <p>Online trend označovaný ako „fibermaxxing“ vychádza z jednoduchej premisy: vláknina je zdravá, teda čím viac, tým lepšie. Prvá časť tejto premisy je dobre doložená. Druhá časť je problematická — a pri pacientovi s chronickou chorobou obličiek (CKD) je problematická dvojnásobne, pretože dôkazová základňa, o ktorú sa trend opiera, ľudí s chronickým ochorením výslovne nezahŕňa.</p>
 
 <h2>Čo dôkazy skutočne ukazujú</h2>

@@ -29,6 +29,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Postupne pridávať lieky, alebo začať viacerými naraz? Priamo na túto otázku odpovedá zatiaľ jediná randomizovaná štúdia — CONFIDENCE. Ostatné argumenty pochádzajú z diabetológie a ich prenos na obličkové ukazovatele má hranice.',
     'content'      => <<<'HTML'
+<figure><a href="img/sekvencna-simultanna-kombinovana-liecba-diabetes-ckd.webp" rel="noopener noreferrer" target="_blank"><img src="img/sekvencna-simultanna-kombinovana-liecba-diabetes-ckd.webp" alt="Oblička zasahovaná na jednej strane postupne prichádzajúcimi lúčmi a na druhej strane štyrmi lúčmi naraz" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Postupné pridávanie je bezpečnejšie na titráciu, súbežný začiatok prináša účinok skôr — voľba patrí ku konkrétnemu pacientovi.</figcaption></figure>
+
 <p>Pri diabete 2. typu s chronickou chorobou obličiek (CKD) dnes máme štyri triedy liekov s dokázaným kardiorenálnym prínosom: blokátor systému renín-angiotenzín, inhibítor SGLT2, nesteroidový antagonista mineralokortikoidového receptora a agonistu receptora GLP-1. Otázka už nie je, či ich kombinovať, ale <strong>ako začať</strong> — postupne, s odstupom medzi jednotlivými liekmi, alebo viacerými naraz. Diskusia na kongrese ADA 2026 postavila proti sebe obidva prístupy. Pri kritickom čítaní argumentov je však potrebné rozlíšiť, ktoré z nich pochádzajú z priamych dôkazov a ktoré z analógie.</p>
 
 <h2>O čo v spore vlastne ide</h2>

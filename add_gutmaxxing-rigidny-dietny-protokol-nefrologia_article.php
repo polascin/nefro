@@ -29,6 +29,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Online trend „gutmaxxing“ spája vysoký príjem bielkovín, vlákninové a suplementačné režimy a vyraďovanie skupín potravín. Pre pacienta s chronickou chorobou obličiek sú pritom bežne odporúčané cieľové hodnoty nevhodné až rizikové.',
     'content'      => <<<'HTML'
+<figure><a href="img/gutmaxxing-rigidny-dietny-protokol-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/gutmaxxing-rigidny-dietny-protokol-nefrologia.webp" alt="Svietiace črevo zovreté klietkou z tvrdých rovných geometrických mreží svetla, ktoré ho v miestach dotyku deformujú" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Keď sa zo starostlivosti o črevo stane nemenný protokol, obmedzenie začne škodiť skôr než pomáhať.</figcaption></figure>
+
 <p>Pojmom „gutmaxxing“ sa v online komunitách označuje snaha o maximálne „optimalizované“ trávenie: vysoký príjem vlákniny a bielkovín, sledovanie makroživín, kombinácie výživových doplnkov, opakované „detoxikačné“ a „očistné“ cykly a vyraďovanie celých skupín potravín. Je súčasťou širšieho javu, ktorý spája sebazlepšovanie s číselnými cieľmi. Z pohľadu ambulancie nejde v prvom rade o to, čo pacient je — ale o to, <strong>ako prísne dodržiava pravidlá, ktoré si stanovil</strong>. A pre pacienta s chronickou chorobou obličiek (CKD) sú tieto pravidlá spravidla prevzaté z odporúčaní, ktoré preňho neplatia.</p>
 
 <h2>Čo taký protokol zvyčajne obsahuje</h2>

@@ -23,6 +23,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Krvný tlak nad cieľom ešte neznamená skutočnú rezistentnú hypertenziu. Článok vysvetľuje rozdiel medzi zdanlivou a skutočnou rezistenciou, rozoberá sekundárne príčiny a hodnotí inhibítory aldosterónsyntázy.',
     'content'      => <<<'HTML'
+<figure><a href="img/nekontrolovana-rezistentna-hypertenzia-aldosteronova-os.webp" rel="noopener noreferrer" target="_blank"><img src="img/nekontrolovana-rezistentna-hypertenzia-aldosteronova-os.webp" alt="Stiahnutá cieva, ktorej zvierajúci pás napína zlaté vlákno vedené od nadobličky; pod ňou rozsypané nezaúčinkované tabletky" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Ak tlak nereaguje na štandardnú liečbu, oplatí sa hľadať ťah, ktorý ju obchádza — často vedie cez aldosterónovú os.</figcaption></figure>
+
 <p>Nekontrolovaná, zdanlivo rezistentná a skutočne rezistentná hypertenzia nie sú synonymá. Zvýšený krvný tlak napriek predpísanej liečbe môže súvisieť s nesprávnym meraním, fenoménom bieleho plášťa, nedostatočnou adherenciou, suboptimálnym liečebným režimom, látkami zvyšujúcimi krvný tlak alebo sekundárnou príčinou, ktorá môže byť podkladom skutočnej rezistencie na liečbu. Rozlíšenie týchto situácií rozhoduje o ďalšom vyšetrení aj liečbe.</p>
 
 <h2>Tri rozdielne klinické situácie</h2>

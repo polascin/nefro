@@ -30,6 +30,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'U 416 584 dospelých sa počas priemerne 12,9 roka sledovania vegetariánska strava spájala s o 19 % nižším rizikom vzniku chronickej choroby obličiek. Ide o asociáciu a o tému primárnej prevencie, nie o liečebné odporúčanie.',
     'content'      => <<<'HTML'
+<figure><a href="img/vegetarianska-strava-riziko-ckd-uk-biobank.webp" rel="noopener noreferrer" target="_blank"><img src="img/vegetarianska-strava-riziko-ckd-uk-biobank.webp" alt="Pestrá rastlinná strava na tmavej bridlici a nad ňou modrozelená ochranná kupola svetla klenúca sa nad obličkou" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Ochrana nie je absolútna a na okrajoch slabne — observačný nález z veľkej kohorty ukazuje smer, nie záruku.</figcaption></figure>
+
 <p>Vplyv rastlinnej stravy na obličky sa doteraz skúmal prevažne cez skóre kvality stravy, ktoré si výskumník definuje dodatočne — napríklad index zdravej rastlinnej stravy. Takéto skóre je analyticky elegantné, ale nezodpovedá tomu, ako o svojom jedálničku uvažuje pacient. Analýza z kohorty UK Biobank ide inou cestou: pracuje s <strong>habituálnymi stravovacími skupinami</strong>, teda so vzorcami, ktoré v populácii reálne existujú a ktoré človek o sebe vie povedať jednou vetou. Práve to robí jej výsledok priamočiarejšie prenosným do ambulancie — a zároveň zraniteľnejším voči zavádzajúcim faktorom.</p>
 
 <h2>Dizajn</h2>

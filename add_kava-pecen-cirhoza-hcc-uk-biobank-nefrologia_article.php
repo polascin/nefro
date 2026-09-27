@@ -29,6 +29,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'U 354 957 účastníkov sa vyšší príjem kávy spájal s nižším rizikom cirhózy, hepatocelulárneho karcinómu aj úmrtia z pečeňovej príčiny. Pri chorobe obličiek rozhoduje skôr to, čo je v šálke okrem kávy.',
     'content'      => <<<'HTML'
+<figure><a href="img/kava-pecen-cirhoza-hcc-uk-biobank-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/kava-pecen-cirhoza-hcc-uk-biobank-nefrologia.webp" alt="Šálka čiernej kávy, ktorej para vytvára ochranný závoj cez pečeň; na okraji závoja presvitá hrubšia fibrózna štruktúra" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Nález z veľkej kohorty sa týka pečene; pre pacienta s chorobou obličiek treba pripočítať draslík, fosfor a krvný tlak.</figcaption></figure>
+
 <p>Súvislosť medzi pitím kávy a zdravím pečene je opakovane opisovaná, väčšinou však na základe jedného typu údajov. Analýza z kohorty UK Biobank je zaujímavá tým, že spája tri vrstvy naraz: klinické ukazovatele, zobrazovacie markery z magnetickej rezonancie a proteomický profil. Výsledok je konzistentný naprieč všetkými tromi — čo posilňuje biologickú vierohodnosť, no nemení observačnú povahu zistenia.</p>
 
 <h2>Dizajn</h2>
