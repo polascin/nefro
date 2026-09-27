@@ -34,6 +34,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Štúdia fázy 3 VICTORY (n = 238): vysokodávkovaný IV vitamín C pri ťažkých popáleninách neprináša benefit a zvyšuje 28-dňovú aj nemocničnú mortalitu — s dôležitými nefrologickými signálmi (AKI, vyššia potreba KRT).',
     'content'      => <<<'HTML'
+<figure><a href="img/victory-vitamin-c-tazke-popaleniny-nefrologicke-signaly.webp" rel="noopener noreferrer" target="_blank"><img src="img/victory-vitamin-c-tazke-popaleniny-nefrologicke-signaly.webp" alt="Infúzia klesajúca k popálenému tkanivu, pričom v obličke pod ňou vznikajú kryštalické usadeniny" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Očakávaný prínos sa nedostavil — a pre obličku pribudlo riziko, s ktorým treba počítať.</figcaption></figure>
+
 <p>Vysokodávkovaný intravenózny vitamín C (HD IV vitamín C) sa v intenzívnej medicíne a v popáleninovej starostlivosti skúmal ako potenciálny modulátor zápalovej odpovede a oxidačného stresu. V praxi však existuje aj „tiché“ nefrologické riziko: vitamín C sa metabolizuje na oxalát, takže pri zhoršenej renálnej funkcii, rizikovej hydratácii a u kriticky chorých pacientov sa tradične diskutovala možnosť zvýšeného výskytu oxalátovej nefropatie a zhoršenia akútneho poškodenia obličiek (AKI). Doteraz slabé alebo nekonzistentné dôkazy vyústili do veľkej randomizovanej štúdie VICTORY.</p>
 
 <h2>Kto sú autori zdrojovej štúdie?</h2>

@@ -31,6 +31,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Workshop ASN ukázal, že AI je v nefrológii prítomná už dnes. Praktické aplikácie generatívnej AI – syntéza literatúry, dokumentácia, analýza obrazu – aj jej limity: halucinácie, nereprodukovateľnosť a nutnosť ľudskej kontroly.',
     'content'      => <<<'HTML'
+<figure><a href="img/ai-nefrologia-hands-on-primer-klinicka-integracia.webp" rel="noopener noreferrer" target="_blank"><img src="img/ai-nefrologia-hands-on-primer-klinicka-integracia.webp" alt="Ľudská ruka a výpočtová mriežka pracujúce na tej istej obličke, pričom ruka určuje smer" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Nástroj rozširuje možnosti lekára — rozhodnutie a zodpovednosť však zostávajú na ňom.</figcaption></figure>
+
 <p>Rýchly nástup umelej inteligencie (AI) v medicíne už nie je len technologická kuriozita. Mení spôsob, akým klinici vyhľadávajú informácie, syntetizujú dôkazy a pracujú s klinickými dátami. Článok „AI in Nephrology Hands-On Primer: Practical Applications and Clinical Integration“ sa zameriava na praktickú rovinu tejto zmeny – na skúsenosti z workshopu venovaného práci s dátovou a generatívnou AI v nefrológii, teda na to, ako sa tieto nástroje premietajú do bežných pracovných tokov.</p>
 
 <h2>Prečo je „hands-on“ prístup dôležitý</h2>

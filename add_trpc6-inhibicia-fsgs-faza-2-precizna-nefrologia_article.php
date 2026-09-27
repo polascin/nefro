@@ -33,6 +33,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Randomizovaná fáza 2 s perorálnym inhibítorom TRPC6 (BI 764198) pri FSGS: placebom korigované zníženie proteinúrie v 12. týždni a 100 % odpoveď u pacientov s patogénnymi variantmi TRPC6 – krok k precíznej nefrológii.',
     'content'      => <<<'HTML'
+<figure><a href="img/trpc6-inhibicia-fsgs-faza-2-precizna-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/trpc6-inhibicia-fsgs-faza-2-precizna-nefrologia.webp" alt="Iónový kanál na podocyte presne uzatváraný malým svetelným kľúčom, okolité zjazvené tkanivo prestáva tmavnúť" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Zásah mieri na konkrétny kanál v podocyte — to je podstata precíznej nefrológie.</figcaption></figure>
+
 <p>Fokálna segmentálna glomeruloskleróza (FSGS) je histopatologický vzorec poškodenia obličkových glomerulov, no klinicky ide najčastejšie o <strong>primárnu podocytopatiu</strong>. Podocyty sú terminálne diferencované bunky tvoriace filtračnú bariéru, takže ich priame poškodenie vedie k <strong>proteinúrii až nefrotickému syndrómu</strong>. Dôležité je, že poškodenie podocytov má rôzne spúšťače: od imunitne sprostredkovaných mechanizmov cez maladaptívnu hemodynamiku až po genetické príčiny.</p>
 
 <p>Klasifikácia podocytopatií podľa KDIGO umožňuje presnejšie triedenie príčin (primárne, genetické, sekundárne a nejasné), čo otvára cestu k <strong>mechanizmovo cielenej liečbe namiesto necielenej imunosupresie</strong> vo vybraných skupinách pacientov.</p>

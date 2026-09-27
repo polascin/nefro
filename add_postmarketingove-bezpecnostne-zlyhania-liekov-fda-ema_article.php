@@ -32,6 +32,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Hĺbková analýza desiatich liekov stiahnutých z trhu pre závažné postmarketingové bezpečnostné zlyhania — od Vioxxu po Zantac. Rozoberá kauzalitu, typy dôkazov, časové intervaly do stiahnutia a rozdiely v prístupe FDA a EMA, vrátane odporúčaní pre farmakovigilanciu.',
     'content'      => <<<'HTML'
+<figure><a href="img/postmarketingove-bezpecnostne-zlyhania-liekov-fda-ema.webp" rel="noopener noreferrer" target="_blank"><img src="img/postmarketingove-bezpecnostne-zlyhania-liekov-fda-ema.webp" alt="Rad liekových kapsúl za schvaľovacou bránou, z ktorých viaceré postupne blednú a praskajú" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Schválenie nie je koniec overovania — časť rizík sa ukáže až v bežnom používaní.</figcaption></figure>
+
 <p>Schválenie lieku regulačným orgánom nie je zárukou jeho dlhodobej bezpečnosti. Táto hĺbková analýza desiatich liekov s fatálnymi postmarketingovými zlyhaniami ukazuje, kde a prečo zlyháva dohľad nad liekmi po ich uvedení na trh — a čo z toho vyplýva pre prax.</p>
 
 <nav aria-label="Obsah článku">
