@@ -31,6 +31,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Mierne pitie alkoholu nemožno odporúčať ako prevenciu. Novšie dôkazy spresňujú onkologické a kardiovaskulárne riziká aj praktický prístup u pacientov s CKD.',
     'content'      => <<<'HTML'
+<figure><a href="img/alkohol-zdravy-napoj-medicinske-odporucania.webp" rel="noopener noreferrer" target="_blank"><img src="img/alkohol-zdravy-napoj-medicinske-odporucania.webp" alt="Pohár červeného vína s doznievajúcou zlatou svätožiarou okolo pätky, nasvietený chladnejším svetlom z inej strany" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Predstava o ochrannom účinku sa rozplýva — novšie analýzy ukazujú, že sa opierala o skreslené porovnania.</figcaption></figure>
+
 <p>Predstava, že jeden pohár vína denne prospieva srdcu, patrila desaťročia medzi najrozšírenejšie zdravotné mýty. Podporovali ju médiá, pojem „francúzsky paradox“ aj observačné štúdie, v ktorých mali ľahkí až mierni konzumenti alkoholu priaznivejšie výsledky než abstinenti. Novšie analýzy však ukazujú, že podstatnú časť zdanlivého prínosu možno vysvetliť metodickými skresleniami. Alkohol preto nemožno odporúčať ako súčasť prevencie kardiovaskulárnych ani iných ochorení.</p>
 
 <p>Zdrojový článok Medscape sa venuje praktickej otázke, ako túto zmenu vysvetliť pacientovi bez moralizovania. Pre internistu a nefrológa je téma osobitne dôležitá: pacienti s chronickou chorobou obličiek (CKD) majú často hypertenziu, diabetes mellitus, vysoké kardiovaskulárne riziko, polyfarmáciu a menšiu rezervu pri poruchách hydratácie či hemodynamiky.</p>

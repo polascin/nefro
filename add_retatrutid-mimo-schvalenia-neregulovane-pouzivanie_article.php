@@ -31,6 +31,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Retatrutid zostáva neschváleným skúšaným liekom, no na internete sa predávajú produkty s jeho názvom. Ako má lekár reagovať bez legitimizácie rizikového trhu?',
     'content'      => <<<'HTML'
+<figure><a href="img/retatrutid-mimo-schvalenia-neregulovane-pouzivanie.webp" rel="noopener noreferrer" target="_blank"><img src="img/retatrutid-mimo-schvalenia-neregulovane-pouzivanie.webp" alt="Neoznačená liekovka uháňajúca vpred so svetelnou stopou a ďaleko za ňou pomaly sa skladajúci geometrický útvar regulácie" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Keď sa liek dostane k ľuďom skôr než pravidlá, riziko nesie pacient — a lekár ho spravidla nezachytí včas.</figcaption></figure>
+
 <p><strong>Retatrutid</strong> patrí medzi najsledovanejšie skúšané lieky na liečbu obezity a diabetu 2. typu. Prvé výsledky klinického programu sú sľubné, no rozhodujúci fakt zostáva nezmenený: retatrutid zatiaľ <strong>neschválila žiadna regulačná autorita pre nijakú indikáciu</strong>. Podľa spoločnosti Eli Lilly je pre pacientov dostupný iba v rámci jej riadne vedených klinických skúšaní.</p>
 
 <p>Napriek tomu sa na internete a sociálnych sieťach predávajú injekčné produkty označené ako retatrutid. Niektoré ich ponúkajú ako „výskumný peptid“, hoci sú zjavne propagované na humánne použitie. Lekár sa preto môže stretnúť s pacientom, ktorý si látku podáva bez štandardizovaného predpisu, overiteľného pôvodu a farmaceutickej kontroly kvality.</p>
