@@ -25,6 +25,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Americké DGA odporúčajú 1,2–1,6 g bielkovín/kg/deň, no tento populačný cieľ nie je vhodný pre každého pacienta s CKD. Čo ukázala analýza NHANES a ako ju bezpečne čítať pri MASLD.',
     'content'      => <<<'HTML'
+<figure><a href="img/vyzivove-odporucania-usa-2025-2030-masld-ckd.webp" rel="noopener noreferrer" target="_blank"><img src="img/vyzivove-odporucania-usa-2025-2030-masld-ckd.webp" alt="Tanier bežného jedla pod širokým svetlom, cez ktorý prechádza úzky lúč zvýrazňujúci problémové položky" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Odporúčanie pre populáciu nie je odporúčaním pre konkrétneho pacienta — pri MASLD a CKD platia iné dôrazy.</figcaption></figure>
+
 <p>Americké <em>Dietary Guidelines for Americans 2025–2030</em> (DGA), zverejnené v januári 2026, prinášajú zrozumiteľné populačné posolstvo: uprednostňovať nutrične hodnotné, málo spracované potraviny a obmedziť sladené nápoje, pridané cukry, nadbytok sodíka a ultraspracované výrobky. Dve časti dokumentu však vyžadujú v klinickej praxi osobitnú opatrnosť: cieľový príjem bielkovín 1,2–1,6 g/kg/deň a všeobecná formulácia „konzumujte menej alkoholu“ bez číselného limitu.</p>
 
 <p>Pre pacienta s metabolicky asociovanou steatotickou chorobou pečene (MASLD), chronickou chorobou obličiek (CKD), cirhózou, dialyzačnou liečbou, krehkosťou alebo sarkopéniou nemožno tieto vety premeniť na univerzálny jedálny lístok. DGA sú americké populačné odporúčania, nie klinické usmernenie pre konkrétne ochorenie a už vôbec nie náhrada odporúčaní KDIGO, KDOQI alebo EASL.</p>

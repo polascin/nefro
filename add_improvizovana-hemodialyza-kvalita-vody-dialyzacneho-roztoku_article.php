@@ -26,6 +26,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Príbeh muža, ktorý si po vyčerpaní úspor zostrojil vlastný dialyzačný prístroj, obieha internet znova. Ukazuje reálnu nerovnosť v prístupe k liečbe – a zároveň to, čo v improvizácii chýba: kontrolu kvality vody a dialyzačného roztoku.',
     'content'      => <<<'HTML'
+<figure><a href="img/improvizovana-hemodialyza-kvalita-vody-dialyzacneho-roztoku.webp" rel="noopener noreferrer" target="_blank"><img src="img/improvizovana-hemodialyza-kvalita-vody-dialyzacneho-roztoku.webp" alt="Improvizovaná filtračná zostava so zakalenou vodou; jedno vlákno z nej vychádza celé, ostatné v tme končia pretrhnuté" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Jeden prežitý prípad je vidieť, tie ostatné nie — a práve preto nie je príbeh dôkazom bezpečnosti.</figcaption></figure>
+
 <p>Príbeh čínskeho pacienta, ktorý si po finančnom vyčerpaní rodiny zostrojil vlastnú hemodialyzačnú zostavu a prežil na nej trinásť rokov, sa v posledných týždňoch znova šíri po sociálnych sieťach. Stojí za to hneď na úvod uviesť jednu vec, ktorú nová vlna zdieľaní vynecháva: <strong>nejde o novú udalosť</strong>. Prípad opísali čínske médiá v januári 2013 a dnešné príspevky sú jeho recykláciou bez akéhokoľvek nového klinického údaja.</p>
 
 <p>Príbeh má napriek tomu dve legitímne roviny. Prvou je nerovnosť v prístupe k liečbe, ktorá človeka dotlačí k improvizácii. Druhou je otázka, ktorú si nefrológ položí okamžite: čo presne v takejto zostave chýba a prečo to nemožno nahradiť šikovnosťou.</p>

@@ -25,6 +25,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Resuscitácia na dialyzačnej sále má vlastné pravidlá. Európske odporúčania žiadajú krv z mimotelového okruhu vrátiť, nie ju opustiť – a hyperkaliémia nie je jediná príčina, na ktorú treba myslieť.',
     'content'      => <<<'HTML'
+<figure><a href="img/zastava-obehu-pocas-hemodialyzy-mimotelovy-okruh.webp" rel="noopener noreferrer" target="_blank"><img src="img/zastava-obehu-pocas-hemodialyzy-mimotelovy-okruh.webp" alt="Mimotelový okruh so zastaveným prúdom krvi a nad ním krivka, ktorá prešla do rovnej čiary" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Pri zástave počas dialýzy treba riešiť pacienta aj okruh naraz — a bremeno prvých minút nesie sestra.</figcaption></figure>
+
 <p>Dialyzačná sála pôsobí na prvý pohľad pokojne: pacienti v polohovateľných kreslách, tichý chod prístrojov, sestra prechádzajúca od monitora k monitoru. Za týmto obrazom sa však skrýva prostredie s vysokou akútnosťou. Zástava obehu počas hemodialýzy nie je bežná resuscitácia – popri pacientovi treba súčasne zvládnuť mimotelový okruh, cievny prístup aj prístroj pripojený k elektrickej sieti.</p>
 
 <p>Komentár dvoch vysokoškolských učiteliek ošetrovateľstva z Malajzie tento problém pomenúva presne v rovine personálnej a organizačnej záťaže. Časť jeho klinických odporúčaní sa však rozchádza s platnými európskymi usmerneniami. Práve preto stojí za to prejsť jednotlivé tvrdenia po jednom – nie ako polemiku, ale ako podklad pre miestny protokol.</p>

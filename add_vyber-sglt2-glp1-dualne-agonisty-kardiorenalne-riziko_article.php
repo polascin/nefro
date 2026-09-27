@@ -27,6 +27,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Praktický rámec, ako pri diabete 2. typu s CKD, srdcovým zlyhávaním alebo aterosklerózou vybrať a kombinovať inhibítor SGLT2, agonistu GLP-1 a duálneho agonistu. Postavený na piatich randomizovaných štúdiách s overenými pomermi rizík.',
     'content'      => <<<'HTML'
+<figure><a href="img/vyber-sglt2-glp1-dualne-agonisty-kardiorenalne-riziko.webp" rel="noopener noreferrer" target="_blank"><img src="img/vyber-sglt2-glp1-dualne-agonisty-kardiorenalne-riziko.webp" alt="Tri farebné prúdy smerujúce k obličke a srdcu — dva sa prepletajú do jedného, tretí ide samostatne, štvrtý sa odkláňa" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Nie každá kombinácia dáva zmysel; rozhoduje, čo sa pri danom pacientovi dopĺňa a čo sa len prekrýva.</figcaption></figure>
+
 <p class="article-dek"><em>Pri diabete 2. typu s obličkovým alebo srdcovým postihnutím sa prínos liečby už neposudzuje podľa poklesu HbA1c, ale podľa tvrdých kardiovaskulárnych a obličkových výsledkov. Tento článok prekladá dostupné randomizované dôkazy do rozhodovacieho rámca použiteľného v nefrologickej ambulancii — vrátane toho, čo o kombináciách vieme a čo zatiaľ nie.</em></p>
 
 <h2>Prečo výber lieku prestal byť otázkou glykémie</h2>
