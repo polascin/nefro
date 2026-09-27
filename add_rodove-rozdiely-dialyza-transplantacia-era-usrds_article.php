@@ -33,6 +33,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Porovnanie Európy a USA podľa ERA Registry a USRDS ukazuje výrazné rozdiely v incidencii a prevalencii KRT, v miere transplantácií aj v mortalite. Rozdiely medzi regiónmi sa zdajú byť nápadnejšie u žien než u mužov.',
     'content'      => <<<'HTML'
+<figure><a href="img/rodove-rozdiely-dialyza-transplantacia-era-usrds.webp" rel="noopener noreferrer" target="_blank"><img src="img/rodove-rozdiely-dialyza-transplantacia-era-usrds.webp" alt="Dve nerovnako široké svetelné cesty od dialyzačného filtra k transplantovanej obličke" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Cesta k transplantácii nie je pre všetkých rovnako priechodná — registre ten rozdiel dokumentujú.</figcaption></figure>
+
 <p>Chronické zlyhávanie obličiek vedie k potrebe liečby obličkovej náhrady (KRT, <em>kidney replacement therapy</em>). V klinickej praxi však narážame na rozdiely medzi pohlaviami aj medzi krajinami, najmä v tom, kto sa na KRT dostane, aké sú šance na transplantáciu a aká je následná mortalita. Analýza publikovaná v <em>Nephrology Dialysis Transplantation</em> porovnáva Európu a USA práve v týchto parametroch a ukazuje, že rozdiely sú výraznejšie najmä u žien.</p>
 
 <h2>Čo porovnávali</h2>

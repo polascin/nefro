@@ -33,6 +33,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Jednostranový praktický algoritmus manažmentu IgA nefropatie podľa KDIGO 2025 a KDOQI US Commentary: kedy myslieť na biopsiu, ako nastaviť riziko, aké sú základné renoprotektívne kroky a ako sa rozhodovať medzi Nefeconom a systémovými kortikoidmi.',
     'content'      => <<<'HTML'
+<figure><a href="img/iga-nefropatia-algoritmus-kdigo-2025-kdoqi.webp" rel="noopener noreferrer" target="_blank"><img src="img/iga-nefropatia-algoritmus-kdigo-2025-kdoqi.webp" alt="Svetelný rozhodovací strom vychádzajúci z obličky a postupne sa vetviaci na ďalšie cesty" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Algoritmus nenahrádza úsudok — usporadúva ho do krokov, ktoré sa dajú zopakovať.</figcaption></figure>
+
 <p>Tento algoritmus je upravený do podoby stručnej praktickej prílohy na jednu stranu A4. Zmysel je jednoduchý: správne rozpoznať podozrenie na IgA nefropatiu, potvrdiť diagnózu biopsiou, odhadnúť riziko progresie a zvoliť liečbu, ktorá cieli na mechanizmy ochorenia a na spomalenie straty funkcie obličiek.</p>
 
 <h2>0) Keď uvažovať o ďalšom kroku</h2>

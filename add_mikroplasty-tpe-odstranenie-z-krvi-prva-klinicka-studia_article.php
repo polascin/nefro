@@ -33,6 +33,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Prvá klinická štúdia ukazuje, že terapeutická plazmová výmena môže znížiť merateľnú koncentráciu mikroplastov v krvi, najmä pri vyššom zaťažení. Zatiaľ však ide predovšetkým o dôkaz mechanizmu, nie o dôkaz klinického benefitu.',
     'content'      => <<<'HTML'
+<figure><a href="img/mikroplasty-tpe-odstranenie-z-krvi-prva-klinicka-studia.webp" rel="noopener noreferrer" target="_blank"><img src="img/mikroplasty-tpe-odstranenie-z-krvi-prva-klinicka-studia.webp" alt="Plazma prechádzajúca separačným zariadením, v ktorom sa zachytávajú drobné tmavé plastové čiastočky" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Odstrániť častice z plazmy je technicky možné — či to prinesie klinický úžitok, zostáva otvorené.</figcaption></figure>
+
 <p>Mikroplasty a nanoplasty už nie sú iba témou ekológie. Ich prítomnosť v biologických tekutinách otvára praktickú klinickú otázku: <strong>má zníženie cirkulujúcich častíc v krvi reálny zdravotný význam</strong>?</p>
 
 <p>Medscape zverejnil sumár štúdie, ktorá predstavuje dôležitý míľnik: <strong>terapeutická plazmová výmena (TPE) dokázala znížiť množstvo merateľných mikroplastov v krvi</strong>. Zároveň však ide predovšetkým o dôkaz mechanizmu, nie o preukázanie klinického prínosu pre pacienta.</p>

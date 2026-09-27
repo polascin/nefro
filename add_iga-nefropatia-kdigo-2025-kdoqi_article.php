@@ -33,6 +33,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Praktický prehľad manažmentu IgA nefropatie podľa KDIGO 2025 a KDOQI US Commentary: biopsia ako základ diagnózy, prognostická stratifikácia podľa eGFR a proteinúrie, nefarmakologické opatrenia, Nefecon, systémové kortikoidy a bezpečnostné body pre prax.',
     'content'      => <<<'HTML'
+<figure><a href="img/iga-nefropatia-kdigo-2025-kdoqi.webp" rel="noopener noreferrer" target="_blank"><img src="img/iga-nefropatia-kdigo-2025-kdoqi.webp" alt="Bioptická ihla odoberajúca svietiaci valček z obličky, ktorého svetlo sa mení na cielený lúč k zapálenému glomerulu" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Biopsia nie je formalita — z nej sa odvíja, ktorá cielená liečba má pre pacienta zmysel.</figcaption></figure>
+
 <p>IgA nefropatia (IgAN) je heterogénne imunitne podmienené ochorenie s variabilným klinickým priebehom. Praktický prínos KDIGO 2025 spočíva v tom, že posúva manažment smerom k včasnému rozpoznaniu rizikových pacientov a k liečbe zameranej na hlavné mechanizmy ochorenia. KDOQI US Commentary zároveň spresňuje, ako tieto odporúčania implementovať v každodennej klinickej praxi.</p>
 
 <h2>1) Diagnóza IgAN: kľúčová je biopsia</h2>

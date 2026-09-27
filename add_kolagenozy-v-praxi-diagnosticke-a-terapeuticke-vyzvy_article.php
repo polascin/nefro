@@ -50,6 +50,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Kolagenózy sú systémové autoimunitné ochorenia s rôznorodými prejavmi. Orgánovo orientovaný prístup k diagnostike (moč, svaly, autoprotilátky) aj k bezpečnej terapii – ako včas zachytiť orgánové ohrozenie a liečiť podľa rizika.',
     'content'      => <<<'HTML'
+<figure><a href="img/kolagenozy-v-praxi-diagnosticke-a-terapeuticke-vyzvy.webp" rel="noopener noreferrer" target="_blank"><img src="img/kolagenozy-v-praxi-diagnosticke-a-terapeuticke-vyzvy.webp" alt="Prekrývajúce sa priesvitné autoimunitné vzory, ktorých hranice nie je možné jednoznačne určiť" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Prekryvy medzi jednotkami sú pravidlom — a práve preto je diagnóza aj liečba v praxi náročná.</figcaption></figure>
+
 <p>Streamed Up v sérii <strong>RheumaLive</strong> venovanej téme <strong>„Kollagenosen 2026“</strong> zdôrazňuje, že ide o skupinu chorôb s výrazne odlišnými klinickými prejavmi a s diagnostickými aj terapeutickými rozhodnutiami, ktoré musia reflektovať postihnutie orgánov a individuálnu dynamiku ochorenia. V tomto článku to rozoberám „klinicky“: ako pristupovať k podozreniu na kolagenózu, ako rýchlo zachytiť orgánové ohrozenie a ako rozumne nastaviť liečbu tak, aby zodpovedala riziku.</p>
 
 <h2>1) Čo sú kolagenózy a prečo sú „ťažké“</h2>

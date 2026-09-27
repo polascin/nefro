@@ -50,6 +50,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Klinický pohľad nefrológa na kolagenózy: diagnostika ako posúdenie orgánového rizika (obličky, svaly), autoprotilátky ako smerovník a rozhodovanie o liečbe podľa rizika pre orgány.',
     'content'      => <<<'HTML'
+<figure><a href="img/kolagenozy-klinicky-pohlad-nefrologa-diagnostika-organy.webp" rel="noopener noreferrer" target="_blank"><img src="img/kolagenozy-klinicky-pohlad-nefrologa-diagnostika-organy.webp" alt="Jeden autoimunitný zdroj svetla vysielajúci vlákna k viacerým orgánom, najsilnejšie k obličke" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Ochorenie je jedno, orgánov zasiahnutých viac — a oblička často rozhoduje o prognóze.</figcaption></figure>
+
 <p>Pri kolagenózach sa v praxi často naráža na dve veci: diagnóza nie je „jednovstupová“ a priebeh vie byť orgánovo rizikový skôr, než sa klinický obraz jasne „zafarbí“ do jednej konkrétnej nozologickej jednotky. Už to, ako si reumatológ systematicky mapuje symptómy, laboratóriá, zobrazenie a funkciu orgánov, je podstatou diagnostického úspechu.</p>
 
 <p>Streamed Up v kontexte RheumaLive pre Kollagenosen 2026 vystihuje, že ide o oblasť s výraznými <strong>diagnostickými aj terapeutickými výzvami</strong> naprieč rôznymi formami ochorení. Nižšie to zhrniem „operačne“, teda tak, aby sa to dalo použiť pri každodennom uvažovaní na ambulancii aj na internom oddelení.</p>
