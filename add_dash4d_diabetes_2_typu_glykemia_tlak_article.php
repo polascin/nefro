@@ -23,6 +23,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Kontrolovaná kŕmna štúdia DASH4D ukázala malé zlepšenie laboratórnych markerov glykémie, priaznivejší profil CGM a pokles tlaku. Výsledky však nemožno bez ďalšieho preniesť na pokročilé CKD.',
     'content'      => <<<'HTML'
+<figure><a href="img/dash4d-diabetes-2-typu-glykemia-tlak.webp" rel="noopener noreferrer" target="_blank"><img src="img/dash4d-diabetes-2-typu-glykemia-tlak.webp" alt="Zelenina a bobuľové ovocie usporiadané do oblúkovej stupnice na tmavej bridlici, v pozadí hadička tlakomerovej manžety" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. DASH4D pripomína, že strava zostáva aj pri diabete 2. typu nástrojom, ktorý pôsobí súčasne na glykémiu aj na krvný tlak.</figcaption></figure>
+
 <p><strong>DASH4D</strong> je stravovací model odvodený od diéty DASH a upravený pre dospelých s diabetes mellitus 2. typu. V randomizovanej kontrolovanej kŕmnej štúdii zlepšil oproti typickej americkej strave viaceré krátkodobé ukazovatele glykémie. Kombinácia DASH4D s nižším príjmom sodíka zároveň znížila krvný tlak. Výsledky sú presvedčivým dôkazom biologickej účinnosti pri presne dodanej strave, neposkytujú však dôkaz o prevencii renálnych alebo kardiovaskulárnych príhod.</p>
 <p>Najnovšia sekundárna analýza biomarkerov bola publikovaná online v časopise <em>Diabetes Care</em> 28. augusta 2026. Ide o ďalšiu analýzu tej istej štúdie DASH4D, nie o novú nezávislú randomizovanú štúdiu. Pri interpretácii preto nemožno výsledky jednotlivých publikácií počítať ako opakované nezávislé potvrdenie účinku.</p>
 

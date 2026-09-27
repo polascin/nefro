@@ -23,6 +23,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Ketamínom asociovaná uropatia môže u mladých užívateľov viesť od dráždivých symptómov dolných močových ciest ku kontrahovanému močovému mechúru, obštrukcii močovodov a sekundárnemu poškodeniu obličiek.',
     'content'      => <<<'HTML'
+<figure><a href="img/ketaminom-asociovana-uropatia-deti-adolescenti.webp" rel="noopener noreferrer" target="_blank"><img src="img/ketaminom-asociovana-uropatia-deti-adolescenti.webp" alt="Polopriesvitné zobrazenie zmršteného močového mechúra so zhrubnutou stenou v chladnom modrozelenom svetle, okolo úlomky skla a kryštalický prášok" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vedecká vizualizácia, nie histologický ani zobrazovací nález konkrétneho pacienta. Ketamínom asociovaná uropatia vedie k zmršteniu mechúra a zhrubnutiu jeho steny.</figcaption></figure>
+
 <p><strong>Ketamínom asociovaná uropatia (KAU)</strong> je závažný syndróm poškodenia močového mechúra a horných močových ciest, ktorý sa najčastejšie opisuje pri opakovanom neterapeutickom užívaní ketamínu. U detí a adolescentov ide o osobitne citlivú problematiku: príznaky môžu byť bagatelizované, užívanie drogy zatajené a obštrukčné poškodenie obličiek sa môže rozvinúť ešte pred stanovením diagnózy.</p>
 <p>Dostupné dôkazy pozostávajú najmä z retrospektívnych kohort, kazuistík, mechanistických experimentov a konsenzuálnych odporúčaní. Preto treba odlišovať dobre opísané klinické prejavy od hypotéz o mechanizme a od liečebných postupov, ktorých účinnosť nebola potvrdená randomizovanými štúdiami.</p>
 

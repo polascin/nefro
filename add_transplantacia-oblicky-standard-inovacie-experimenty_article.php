@@ -24,6 +24,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Hypotermická perfúzia, normotermická perfúzia, inhibícia komplementu, belatacept a tegoprubart nemajú rovnakú úroveň dôkazov. Článok oddeľuje rutinnú prax od výskumu.',
     'content'      => <<<'HTML'
+<figure><a href="img/transplantacia-oblicky-standard-inovacie-experimenty.webp" rel="noopener noreferrer" target="_blank"><img src="img/transplantacia-oblicky-standard-inovacie-experimenty.webp" alt="Tri obličky v rade — najbližšia realistická, prostredná sa rozpadá do modrej mriežky, najvzdialenejšia je len svetelný drôtený model" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Od overeného štandardu cez inováciu až po to, čo je stále experiment — hranicu medzi nimi treba pomenovať skôr, než sa o nej hovorí s pacientom.</figcaption></figure>
+
 <p class="article-dek"><em>Transplantačná medicína sa mení rýchlo, no nie každá technicky pôsobivá novinka už zlepšuje klinické výsledky. Hypotermická strojová perfúzia má randomizované dôkazy, krátka normotermická perfúzia v doterajšej veľkej štúdii neznížila oneskorený nástup funkcie štepu a lokálne podanie inhibítora C1 esterázy prinieslo iba malý pilotný signál. Podobne treba odlišovať etablovaný belatacept od experimentálnej blokády CD154 tegoprubartom.</em></p>
 
 <p>Transplantácia obličky je pre vhodného pacienta so zlyhaním obličiek spravidla najúčinnejšou formou náhrady funkcie obličiek. Výsledok však neurčuje jedna technológia. Závisí od správneho výberu príjemcu a darcu, imunologického rizika, kvality orgánu, času ischémie, chirurgického výkonu, imunosupresie, prevencie infekcií, adherencie a dlhodobého manažmentu kardiometabolických komplikácií.</p>

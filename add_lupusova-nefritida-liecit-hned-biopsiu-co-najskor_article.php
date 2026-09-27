@@ -32,6 +32,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Biopsiu obličky urobiť vždy, keď sa dá – ale nečakať na ňu so začiatkom liečby. Prehľad dôkazov za skorú imunosupresiu, miesto opakovanej biopsie, limitov konvenčných biomarkerov a rozdielov medzi odporúčaniami ACR, EULAR a KDIGO.',
     'content'      => <<<'HTML'
+<figure><a href="img/lupusova-nefritida-liecit-hned-biopsiu-co-najskor.webp" rel="noopener noreferrer" target="_blank"><img src="img/lupusova-nefritida-liecit-hned-biopsiu-co-najskor.webp" alt="Polopriesvitná oblička so zápalovým žiarením zvnútra, k jej povrchu smeruje bioptická ihla, v pozadí presýpacie hodiny" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia, nie snímka konkrétneho pacienta. Pri lupusovej nefritíde rozhoduje čas: liečba sa začína hneď a biopsia má nasledovať čo najskôr, nie naopak.</figcaption></figure>
+
 <p>Otázka „biopsia najprv, alebo liečba najprv?“ patrí pri lupusovej nefritíde (LN) medzi najdiskutovanejšie v klinickej praxi. Odpoveď, ku ktorej sa v posledných rokoch priklonili odborné spoločnosti aj panelové diskusie, znie nepríjemne prakticky: <strong>biopsiu urobiť vždy, keď sa dá – ale nečakať na ňu s liečbou</strong>. Nasledujúci text zhŕňa dôkazy, o ktoré sa toto stanovisko opiera, aktuálne odporúčania ACR, EULAR a KDIGO, ako aj miesto opakovanej biopsie, biomarkerov a nových kombinovaných režimov.</p>
 
 <h2>Prečo na tom záleží: rozsah problému</h2>
