@@ -26,6 +26,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Kazuistika v NEJM opisuje transplantáciu po experimentálnom znížení anti-HLA protilátok teclistamabom. Ide o dôležitý dôkaz konceptu, nie o potvrdený desenzibilizačný štandard.',
     'content'      => <<<'HTML'
+<figure><a href="img/teclistamab-pred-transplantaciou-oblicky-hla-senzibilizacia.webp" rel="noopener noreferrer" target="_blank"><img src="img/teclistamab-pred-transplantaciou-oblicky-hla-senzibilizacia.webp" alt="Hustá stena protilátok s úzkym prielomom, ktorý otvoril modrý lúč; za ňou čaká pripravená oblička" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Ide o prvý klinický signál, nie o zavedený postup — prielom je úzky a stena zostáva inde neporušená.</figcaption></figure>
+
 <p class="article-dek"><em>List publikovaný v New England Journal of Medicine opisuje úspešnú transplantáciu obličky po experimentálnom použití teclistamabu u extrémne HLA senzibilizovaného pacienta. Výsledok je biologicky presvedčivý a klinicky významný, ale zostáva dôkazom konceptu u jediného človeka.</em></p>
 
 <p>Preformované anti-HLA protilátky patria medzi najťažšie imunologické prekážky transplantácie obličky. Predchádzajúca transplantácia, transfúzie alebo gravidita môžu vytvoriť široké spektrum protilátok proti HLA antigénom potenciálnych darcov. Čím väčšiu časť darcovskej populácie tieto protilátky vylučujú, tým menšia je pravdepodobnosť vhodnej ponuky orgánu a tým dlhšie môže pacient zostať na dialýze.</p>

@@ -26,6 +26,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Šesť kazuistík a nezávislá analýza hlásení vo VigiBase upozorňujú na deficit tiamínu pri liečbe agonistami receptora GLP-1. Signál je zriedkavý, pri oneskorenej liečbe však nezvratný.',
     'content'      => <<<'HTML'
+<figure><a href="img/semaglutid-wernickeho-encefalopatia-deficit-tiaminu.webp" rel="noopener noreferrer" target="_blank"><img src="img/semaglutid-wernickeho-encefalopatia-deficit-tiaminu.webp" alt="Strmo klesajúca krivka a pozdĺž nej pretrhnuté zlaté vlákno rezervy; mozgová štruktúra nad ním v tom mieste hasne" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Rýchly úbytok hmotnosti môže vyčerpať zásobu tiamínu skôr, než na ňu niekto pomyslí — komplikácia je zriedkavá, ale odvrátiteľná.</figcaption></figure>
+
 <p class="article-dek"><em>Publikované kazuistiky aj analýza spontánnych hlásení ukazujú na to isté miesto zlyhania: dlhodobé gastrointestinálne ťažkosti a rýchly úbytok hmotnosti počas liečby agonistom receptora GLP-1 môžu vyčerpať zásoby tiamínu. Semaglutid pritom podľa dostupných údajov nie je priamym neurotoxínom. Rozhoduje včasné rozpoznanie rizikovej situácie a bezodkladné parenterálne podanie tiamínu.</em></p>
 
 <p>Semaglutid patrí medzi agonisty receptora pre glukagónu podobný peptid 1 (GLP-1 RA). Používa sa pri diabetes mellitus 2. typu a pri obezite. S rozširujúcim sa používaním sa dostávajú do popredia aj zriedkavé komplikácie, ktoré nemusia byť priamym toxickým účinkom lieku, ale môžu vzniknúť sekundárne — v dôsledku výrazného potlačenia apetítu, vracania, obmedzeného príjmu potravy a rýchleho poklesu telesnej hmotnosti.</p>

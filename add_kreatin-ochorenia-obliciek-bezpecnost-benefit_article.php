@@ -26,6 +26,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Kontrolované štúdie u ľudí bez CKD sú prevažne upokojujúce, pri etablovanej chorobe obličiek však chýbajú spoľahlivé dlhodobé údaje. Kreatín môže navyše skresliť kreatinínovú eGFR.',
     'content'      => <<<'HTML'
+<figure><a href="img/kreatin-ochorenia-obliciek-bezpecnost-benefit.webp" rel="noopener noreferrer" target="_blank"><img src="img/kreatin-ochorenia-obliciek-bezpecnost-benefit.webp" alt="Kôpka bieleho prášku, z ktorej jedno vlákno posilní svalové vlákna a druhé falošne vychýli laboratórny ukazovateľ" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Kreatín môže svalu pomôcť a zároveň posunúť kreatinín — bez tohto rozlíšenia hrozí, že sa zdravý človek začne liečiť na obličky.</figcaption></figure>
+
 <p class="article-dek"><em>Kreatín môže zvýšiť sérový kreatinín bez skutočného poklesu glomerulovej filtrácie. Z toho však nevyplýva, že každý vzostup kreatinínu počas suplementácie je neškodný ani že bezpečnostné údaje zo zdravých dospelých možno automaticky preniesť na pacientov s chronickou chorobou obličiek. Klinicky rozhoduje kontext, viacmarkerové hodnotenie a poctivé priznanie neistoty.</em></p>
 
 <p>Kreatín patrí medzi najpoužívanejšie výživové doplnky. Jeho účinok na krátkodobý výkon pri vysokej intenzite a na prírastok svalovej hmoty pri odporovom tréningu je dobre preskúmaný. Záujem sa preto rozšíril aj na starnutie, sarkopéniu, kognitívne poruchy a chronické ochorenia. Práve v týchto populáciách je však častá chronická choroba obličiek (CKD), pri ktorej máme podstatne menej údajov než u mladých zdravých účastníkov športových štúdií.</p>
