@@ -33,6 +33,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Trend „internal shower“ sľubuje „vyčistenie“ čriev pomocou chia semienok vo vode. Nutričná hodnota chia (najmä vláknina) je reálna, no klinické dôkazy o „čistení“ čreva nad rámec účinku bežnej vlákniny chýbajú — a náhle zvýšenie dávky môže symptómy zhoršiť.',
     'content'      => <<<'HTML'
+<figure><a href="img/chia-seed-internal-shower-medicina-vs-marketing.webp" rel="noopener noreferrer" target="_blank"><img src="img/chia-seed-internal-shower-medicina-vs-marketing.webp" alt="Napučané semená v pohári vody s prehnaným leskom, zatiaľ čo svetlo vstupujúce do čreva je obyčajné" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Vláknina s vodou má svoj zmysel — účinok je však bežný, nie zázračný.</figcaption></figure>
+
 <p>Keď pacienti prídu do ambulancie, často si nesú konkrétnu otázku: „Pomohlo by mi pitie chia semienok na vyčistenie čriev?“ Trend „internal shower“ (ráno zjesť alebo zaliať chia semienka vodou, aby sa „vypláchol“ tráviaci systém) sa šíri online neuveriteľne rýchlo. Zároveň však existuje výrazný rozdiel medzi tým, čo je na chia nutrične pravdivé, a tým, čo trend sľubuje.</p>
 
 <h2>Čo je na chia semienkach reálne dobré</h2>

@@ -33,6 +33,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Pentoxifylín (PTX) ako „re-purposed“ liek v diabetickej chorobe obličiek: biologické zdôvodnenie cez zápalové dráhy existuje, klinické signály sú najmä na úrovni albuminúrie/proteinúrie a poklesu eGFR, no dôkazy na tvrdé konce (ESKD, mortalita) zatiaľ chýbajú. Prehľad podľa mini review AJKD vrátane štúdií PREDIAN a prebiehajúcej VA PTXRx.',
     'content'      => <<<'HTML'
+<figure><a href="img/pentoxifylin-diabeticka-choroba-obliciek-mini-review.webp" rel="noopener noreferrer" target="_blank"><img src="img/pentoxifylin-diabeticka-choroba-obliciek-mini-review.webp" alt="Staršia opotrebovaná svetelná tabletka vysielajúca mierny lúč k zapálenému glomerulu diabetickej obličky" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Starší liek s protizápalovým účinkom — otázkou je, či jeho prínos obstojí vedľa dnešných možností.</figcaption></figure>
+
 <p>Diabetická choroba obličiek (DKD, dnes často aj CKD spojené s diabetes mellitus 2. typu) ostáva aj napriek moderným „základným pilierom“ liečby významnou príčinou progresie do terminálneho zlyhania obličiek. Popri blokáde RAAS, inhibítoroch SGLT2, nesteroidných antagonistoch mineralokortikoidových receptorov a agonistoch GLP-1 sa skúšajú doplnkové cesty, najmä cez zápalové a oxidačné mechanizmy.</p>
 
 <p>Tento článok AJKD sa venuje otázke, či má pentoxifylín (PTX) rolu v DKD ako „re-purposed“ liek, teda starší liek s potenciálne novým využitím.</p>

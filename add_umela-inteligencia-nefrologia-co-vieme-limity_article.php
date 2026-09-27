@@ -33,6 +33,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Prehľad praktického využitia umelej inteligencie a strojového učenia v nefrológii: skoré zachytenie AKI, odhad progresie CKD, predikcia dialýznych udalostí, podpora transplantácie a automatizácia patológie — spolu s limitmi ako bias, kvalita dát, „black box“, bezpečnosť a etika. Podľa prehľadového článku na PMC.',
     'content'      => <<<'HTML'
+<figure><a href="img/umela-inteligencia-nefrologia-co-vieme-limity.webp" rel="noopener noreferrer" target="_blank"><img src="img/umela-inteligencia-nefrologia-co-vieme-limity.webp" alt="Výpočtová mriežka obopínajúca obličku, hustá v strede a rozplývajúca sa na okrajoch" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. V jadre úloh je algoritmus spoľahlivý; na okrajoch sa istota rozplýva — a tam začína zodpovednosť lekára.</figcaption></figure>
+
 <h2>Úvod: prečo je nefrológia pre AI prirodzené pole</h2>
 
 <p>Umelá inteligencia (AI) sa v medicíne rozširuje naprieč odbormi, no nefrológia podľa dostupných prehľadov doteraz zaostávala v adopcii a praktickej integrácii. Dôvod je praktický: nefrológia pracuje s veľkým množstvom štruktúrovaných dát, ktoré sú zároveň matematicky „čitateľné“. Navyše v klinickej praxi ide často o rozhodovania v časovom tlaku (napríklad skoré zachytenie AKI) a o riziká s jasnými parametrami (progresia CKD, komplikácie, dialyzačné udalosti).</p>

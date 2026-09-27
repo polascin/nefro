@@ -33,6 +33,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Pacienti s CKD a najmä po transplantácii obličky majú vyššie riziko závažných infekcií. Praktický prehľad indikácií, načasovania a typu vakcín podľa prehľadu AJKD — vrátane ambulantnej pomôcky s tabuľkami pre CKD aj transplantovaných pacientov.',
     'content'      => <<<'HTML'
+<figure><a href="img/ockovanie-ckd-transplantacia-oblicky-vakciny-nacasovanie.webp" rel="noopener noreferrer" target="_blank"><img src="img/ockovanie-ckd-transplantacia-oblicky-vakciny-nacasovanie.webp" alt="Vakcinačná liekovka vytvárajúca ochrannú svetelnú kupolu nad obličkou nad svetelnou časovou osou" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Ochrana je najsilnejšia, keď sa očkuje včas — po transplantácii je odpoveď imunitného systému slabšia.</figcaption></figure>
+
 <p>Pacienti s chronickým ochorením obličiek a najmä po transplantácii obličky majú vyššie riziko závažných infekcií. Dôvodom je kombinácia zhoršenej imunitnej odpovede pri CKD a imunosupresie po transplantácii, plus časté zdravotnícke kontakty (dialýza, ambulantné sledovanie). Očkovanie preto patrí medzi základné preventívne kroky.</p>
 
 <p>Nižšie sumarizujem odporúčania uvedené v prehľade „Vaccinations to Prevent Infections in Adult Individuals With CKD and After Kidney Transplantation“ so zameraním na indikácie, načasovanie a typ vakcíny.</p>

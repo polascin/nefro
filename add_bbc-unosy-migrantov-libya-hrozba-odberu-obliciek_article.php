@@ -33,6 +33,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'BBC informuje, že vyše 300 migrantov bolo v Líbyi unesených, mučených a zastrašovaných vyhrážkami odobratia obličiek pri nezaplatení výkupného. Samotnú BBC sa odber orgánov nepodarilo úplne overiť. Z pohľadu nefrológie pripomíname, čo zachytiť u obetí násilia s možným poškodením obličiek.',
     'content'      => <<<'HTML'
+<figure><a href="img/bbc-unosy-migrantov-libya-hrozba-odberu-obliciek.webp" rel="noopener noreferrer" target="_blank"><img src="img/bbc-unosy-migrantov-libya-hrozba-odberu-obliciek.webp" alt="Nočná púštna scéna so vzdialenými zatvorenými dverami a slabým svetelným obrysom obličky nad nimi" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Zdržanlivá ilustračná scéna. Za správou stoja konkrétni ľudia v bezmocnom postavení — a orgán ako predmet vydierania.</figcaption></figure>
+
 <p>Britská BBC priniesla zistenia, podľa ktorých bolo <strong>vyše 300 migrantov</strong> smerujúcich do Spojeného kráľovstva <strong>unesených v Líbyi</strong>, mučených a zastrašovaných vyhrážkami, že im budú <strong>odobraté obličky</strong>, ak ich rodiny nezaplatia výkupné.</p>
 
 <h2>Čo BBC uvádza</h2>
