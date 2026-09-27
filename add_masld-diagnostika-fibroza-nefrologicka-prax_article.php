@@ -27,6 +27,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'MASLD je systémové metabolické ochorenie. Praktický prehľad ukazuje, koho cielene vyšetrovať, ako hodnotiť fibrózu a čo sa mení pri súčasnej CKD.',
     'content'      => <<<'HTML'
+<figure><a href="img/masld-diagnostika-fibroza-nefrologicka-prax.webp" rel="noopener noreferrer" target="_blank"><img src="img/masld-diagnostika-fibroza-nefrologicka-prax.webp" alt="Pečeň s prechodom od hladkého tkaniva k uzlovitej fibróze, cez ktorú prechádza spomaľujúci sa merací lúč" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Podstatné nie je len to, že steatóza je prítomná, ale ako ďaleko pokročila fibróza — a to platí aj pre nefrológa.</figcaption></figure>
+
 <p>Metabolicky asociovaná steatotická choroba pečene (MASLD) patrí medzi najčastejšie chronické choroby pečene. Je úzko prepojená s abdominálnou obezitou, diabetom 2. typu, dyslipidémiou, artériovou hypertenziou, kardiovaskulárnymi ochoreniami a chronickou chorobou obličiek (CKD).</p>
 
 <p>Klinické riziko neurčuje iba množstvo tuku v pečeni. Najdôležitejším prognostickým ukazovateľom pečeňových komplikácií je štádium fibrózy, zatiaľ čo celkovú prognózu často ovplyvňujú kardiovaskulárne príhody, malignity a ochorenie obličiek. Súčasný prístup sa preto nesústreďuje na plošné vyhľadávanie steatózy, ale na cielené rozpoznanie pacientov s pokročilou fibrózou.</p>

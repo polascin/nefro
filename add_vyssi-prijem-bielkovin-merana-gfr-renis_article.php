@@ -24,6 +24,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'V kohorte RENIS nebol vyšší obvyklý príjem bielkovín počas desiatich rokov spojený s rýchlejším poklesom GFR meranej iohexolom. Výsledok sa však nevzťahuje na extrémny príjem ani na pacientov s CKD.',
     'content'      => <<<'HTML'
+<figure><a href="img/vyssi-prijem-bielkovin-merana-gfr-renis.webp" rel="noopener noreferrer" target="_blank"><img src="img/vyssi-prijem-bielkovin-merana-gfr-renis.webp" alt="Bohatá ponuka bielkovinových potravín a od nej takmer vodorovná svetelná čiara miznúca v diaľke, v pozadí pokojná oblička" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Desaťročné sledovanie s meranou glomerulovou filtráciou nezachytilo rýchlejší pokles — obava z bielkovín tu potvrdenie nenašla.</figcaption></figure>
+
 <p class="article-dek"><em>V populačnej kohorte RENIS nebol vyšší obvyklý príjem bielkovín udávaný účastníkmi počas mediánu desiatich rokov spojený s rýchlejším poklesom glomerulovej filtrácie meranej iohexolom. Výsledok oslabuje argument pre preventívne obmedzovanie bielkovín u ľudí bez chronickej choroby obličiek (CKD), nie je však povolením extrémneho príjmu ani zmenou výživových odporúčaní pre pacientov s CKD.</em></p>
 
 <p>Otázka, či vyšší príjem bielkovín dlhodobo poškodzuje zdravé obličky, zostáva častým zdrojom obáv. Bielkovinová záťaž prechodne zvyšuje prietok krvi obličkami a glomerulovú filtráciu. Z fyziologickej odpovede však nemožno automaticky vyvodiť, že bežný vyšší príjem spôsobuje progresívne poškodenie obličiek.</p>

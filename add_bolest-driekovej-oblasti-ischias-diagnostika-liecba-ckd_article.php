@@ -27,6 +27,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Bolesť v driekovej oblasti spravidla nevyžaduje okamžité MRI. Praktický algoritmus odlišuje urgentné príčiny, ischias a bezpečnú liečbu pri CKD.',
     'content'      => <<<'HTML'
+<figure><a href="img/bolest-driekovej-oblasti-ischias-diagnostika-liecba-ckd.webp" rel="noopener noreferrer" target="_blank"><img src="img/bolest-driekovej-oblasti-ischias-diagnostika-liecba-ckd.webp" alt="Driekova chrbtica so zapáleným nervovým koreňom a vyžarujúcou bolesťou; tieň tabletky dopadá na obličku v pozadí" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Úľava od bolesti je legitímny cieľ — pri zníženej funkcii obličiek však treba vedieť, čo za ňu platíme.</figcaption></figure>
+
 <p>Bolesť v driekovej oblasti patrí medzi najčastejšie príčiny obmedzenia pohyblivosti, pracovnej neschopnosti a užívania analgetík. Vo väčšine prípadov ide o nešpecifickú muskuloskeletálnu bolesť s priaznivým prirodzeným priebehom. Menšia časť pacientov má radikulárny syndróm alebo konkrétne ochorenie, pri ktorom treba diagnostiku a liečbu zásadne zmeniť.</p>
 
 <p>Správny prvý krok preto nie je automatické zobrazenie chrbtice ani kombinovanie viacerých liekov. Rozhodujúce je vylúčiť časovo kritickú príčinu, klasifikovať klinický syndróm, posúdiť prognostické faktory a vybrať intervencie s primeraným pomerom prínosu a rizika. Pri chronickej chorobe obličiek (CKD) treba navyše pred každým analgetickým plánom zohľadniť funkciu obličiek, objemový stav, súbežnú liečbu a riziko kumulácie liekov alebo ich metabolitov.</p>
