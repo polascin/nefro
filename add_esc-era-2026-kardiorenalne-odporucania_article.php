@@ -22,6 +22,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt' => 'Čo prinášajú odporúčania ESC/ERA 2026: spoločné hodnotenie eGFR a albuminúrie, liečba podľa indikácie, ciele tlaku a bezpečné monitorovanie.',
     'content'      => <<<'HTML'
+<figure><a href="img/esc-era-2026-kardiorenalne-odporucania.webp" rel="noopener noreferrer" target="_blank"><img src="img/esc-era-2026-kardiorenalne-odporucania.webp" alt="Červená a modrá cesta svetla prichádzajú z opačných strán a zbiehajú sa do jedného spoločného jasného lúča" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Kardiológia a nefrológia prichádzajú z opačných strán; hodnota spoločných odporúčaní je v tom, že ďalej pokračujú jednou cestou.</figcaption></figure>
+
 <p>Prvé odporúčania Európskej kardiologickej spoločnosti (ESC) venované kardiovaskulárnym ochoreniam a chronickej chorobe obličiek (CKD), vypracované v spolupráci s Európskou nefrologickou asociáciou (ERA), boli publikované 28. augusta 2026. Ich praktickým posolstvom je včas rozpoznať CKD, vyhodnotiť obličkové aj kardiovaskulárne riziko a zosúladiť liečbu medzi odbormi. Nejde o jednotnú kombináciu liekov pre každého pacienta. [1, 2]</p>
 <h2>Vyšetrovať eGFR aj albuminúriu</h2>
 <p>Pri diagnostikovaní kardiovaskulárneho ochorenia sa má CKD aktívne vyhľadávať pomocou odhadovanej glomerulovej filtrácie (eGFR) a pomeru albumínu ku kreatinínu v moči (UACR). Samotný kreatinín nezachytí všetkých rizikových pacientov: albuminúria môže byť prítomná aj pri zachovanej eGFR a poskytuje samostatnú prognostickú informáciu. [1, 2]</p>

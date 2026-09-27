@@ -67,6 +67,8 @@ $articles[] = [
     'is_top'       => 0,                     // ← 1 ak má byť featured
     'excerpt'      => 'FDA rozšírila indikáciu finerenónu na dospelých s CKD a diabetom 1. typu. Základom je pokles albuminúrie v FINE-ONE, nie priamy dôkaz prevencie zlyhania obličiek.',
     'content'      => <<<'HTML'
+<figure><a href="img/finerenon-dm1-ckd-fda-fine-one.webp" rel="noopener noreferrer" target="_blank"><img src="img/finerenon-dm1-ckd-fda-fine-one.webp" alt="Tabletka na tmavej oceli pred úzkymi otvorenými dverami zo svetla, v nich presvitá silueta obličky" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Schválenie otvára dvere — nehovorí však samo osebe, pre ktorého pacienta a s akým očakávaným prínosom cez ne prejsť.</figcaption></figure>
+
 <p>Americký Úrad pre kontrolu potravín a liečiv (FDA) rozšíril v septembri 2026 indikáciu finerenónu (Kerendia) na dospelých s chronickou chorobou obličiek (CKD) asociovanou s diabetes mellitus 1. typu. Presná formulácia je podstatná: liek je v USA indikovaný na <strong>zníženie pomeru albumínu ku kreatinínu v moči (UACR), od ktorého sa očakáva zníženie rizika trvalého poklesu eGFR a terminálneho zlyhania obličiek</strong>. Štúdia FINE-ONE priamo preukázala pokles albuminúrie, nie zníženie počtu prípadov zlyhania obličiek, kardiovaskulárnych príhod alebo úmrtí. [1–3]</p>
 
 <h2>Regulačné rozhodnutie nie je dôkazom všetkých klinických výsledkov</h2>

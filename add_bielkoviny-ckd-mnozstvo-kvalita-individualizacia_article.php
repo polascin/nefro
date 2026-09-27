@@ -24,6 +24,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Pri CKD nerozhoduje len cieľ v g/kg/deň. Správny plán rozlišuje nedialyzovanú CKD, dialýzu, nutričný stav, vek a zdroj bielkovín; vysvetľuje hranice nízko- a veľmi nízkobielkovinových diét.',
     'content'      => <<<'HTML'
+<figure><a href="img/bielkoviny-ckd-mnozstvo-kvalita-individualizacia.webp" rel="noopener noreferrer" target="_blank"><img src="img/bielkoviny-ckd-mnozstvo-kvalita-individualizacia.webp" alt="Bielkovinové potraviny na tmavom tanieri v kuželi svetla, nad nimi sa svetelné vlákno rozdeľuje do viacerých smerov, v pozadí silueta obličky" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Tá istá porcia bielkovín vedie u rôznych pacientov k rôznej odpovedi — otázka nie je len „koľko“, ale aj „pre koho“.</figcaption></figure>
+
 <p class="article-dek"><em>Pri chronickej chorobe obličiek (CKD) nie je príjem bielkovín jediným číslom. Rovnaký cieľ môže byť primeraný pre metabolicky stabilného človeka s progredujúcou nedialyzovanou CKD, ale nevhodný pre pacienta na dialýze, po akútnom ochorení alebo s proteínovo-energetickým chradnutím. Klinický cieľ nie je „jesť čo najmenej bielkovín“, ale chrániť funkciu obličiek bez straty výživového a funkčného stavu.</em></p>
 
 <p>Otázka príjmu bielkovín pri CKD vyvoláva zdanlivo jednoduchú odpoveď: menej bielkovín má znížiť tvorbu dusíkatých metabolitov, fosfátovú nálož a glomerulárnu hyperfiltráciu. Takáto skratka je však nebezpečná. Pri nedostatočnom energetickom príjme, anorexii, zápale alebo krehkosti môže reštrikcia urýchliť úbytok svalovej hmoty, zhoršiť fyzickú výkonnosť a viesť k proteínovo-energetickému chradnutiu (PEW).</p>

@@ -23,6 +23,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'ESC 2026 mení klasifikáciu srdcového zlyhávania, zavádza rámec FMT–AMT–GDIT a zaraďuje eGFR aj UACR do vstupného vyšetrenia. Čo z toho prakticky vyplýva pre nefrológa?',
     'content'      => <<<'HTML'
+<figure><a href="img/esc-2026-srdcove-zlyhavanie-nefrologicky-pohlad.webp" rel="noopener noreferrer" target="_blank"><img src="img/esc-2026-srdcove-zlyhavanie-nefrologicky-pohlad.webp" alt="Srdce a oblička oproti sebe, spojené obojsmerným prúdom červeného a modrého svetla, ktoré sa v strede zlieva" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Srdcové zlyhávanie a obličky netvoria dva oddelené problémy, ale jeden obeh — zmena na jednej strane sa vždy prejaví na druhej.</figcaption></figure>
+
 <p>Odporúčania Európskej kardiologickej spoločnosti (ESC) z roku 2026 menia klasifikáciu, diagnostiku aj pomenovanie liečby srdcového zlyhávania. Pre nefrológa nejde iba o terminologickú úpravu. Dokument zaraďuje <strong>eGFR a pomer albumínu ku kreatinínu v moči (UACR)</strong> do vstupného laboratórneho vyšetrenia, posilňuje postavenie inhibítorov SGLT2 a antagonistov mineralokortikoidového receptora (MRA) naprieč spektrom ejekčnej frakcie a zdôrazňuje titráciu liečby podľa klinického stavu a laboratórnych výsledkov. [1–3]</p>
 
 <h2>Dve skupiny podľa LVEF namiesto troch</h2>

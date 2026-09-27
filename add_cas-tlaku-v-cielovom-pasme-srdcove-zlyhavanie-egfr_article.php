@@ -22,6 +22,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt' => 'Vyšší odhadovaný čas so systolickým tlakom 110 až 130 mm Hg sa spájal s priaznivejšou prognózou po hospitalizácii pre srdcové zlyhávanie. Čo výsledok znamená a čo nepreukazuje?',
     'content'      => <<<'HTML'
+<figure><a href="img/cas-tlaku-v-cielovom-pasme-srdcove-zlyhavanie-egfr.webp" rel="noopener noreferrer" target="_blank"><img src="img/cas-tlaku-v-cielovom-pasme-srdcove-zlyhavanie-egfr.webp" alt="Svietiaca krivka prechádzajúca dnu a von zo zeleného cieľového pásma, mimo pásma sa mení na červenú" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna, nie záznam konkrétneho pacienta. Nerozhoduje len hodnota pri jednom meraní, ale podiel času, ktorý tlak strávi v cieľovom pásme.</figcaption></figure>
+
 <p>Vyšší odhadovaný podiel času so systolickým tlakom v pásme 110 až 130 mm Hg sa v čínskej prospektívnej kohorte pacientov po hospitalizácii pre srdcové zlyhávanie spájal s nižšou pravdepodobnosťou poklesu funkcie obličiek a s nižšou dlhodobou mortalitou. Výsledok podporuje záujem o priebeh tlaku v čase, ale nepreukazuje, že cielené zvyšovanie tohto ukazovateľa zlepší prognózu. Pásmo použité vo výskume nemožno automaticky prevziať ako liečebný cieľ. [1]</p>
 
 <h2>Populácia a spôsob hodnotenia tlaku</h2>
