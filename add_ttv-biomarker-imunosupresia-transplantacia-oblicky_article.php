@@ -33,6 +33,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Randomizovaná štúdia fázy II (TTVguideIT) testovala, či možno bezpečne individualizovať imunosupresiu po transplantácii obličky pomocou biomarkera Torque teno vírus (TTV). U stabilných nízkorizikových príjemcov nebolo TTV-riadené dávkovanie takrolimu horšie než štandard — a viedlo k nižším dávkam.',
     'content'      => <<<'HTML'
+<figure><a href="img/ttv-biomarker-imunosupresia-transplantacia-oblicky.webp" rel="noopener noreferrer" target="_blank"><img src="img/ttv-biomarker-imunosupresia-transplantacia-oblicky.webp" alt="Svetelný ciferník z vírusových častíc spojený s imunitným štítom nad transplantovanou obličkou" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Množstvo neškodného vírusu prezrádza, ako hlboko je imunita potlačená — a podľa toho sa dá dávka upraviť.</figcaption></figure>
+
 <p>Lekárska univerzita vo Viedni (MedUni Wien) informuje o klinickom skúšaní, v ktorom medzinárodný tím otestoval, či možno bezpečne individualizovať imunosupresiu po transplantácii obličky pomocou biomarkera <strong>Torque teno vírus (TTV)</strong>.</p>
 
 <p>Cieľ je praktický: pri klasickom prístupe sa dávka imunosupresie riadi najmä <strong>cieľovými hladinami liekov v krvi</strong> (napr. takrolimu). Tieto hodnoty však nemusia presne odrážať, ako silno je daný pacient imunologicky tlmený. TTV má slúžiť ako nepriamy ukazovateľ aktivity imunitného systému.</p>

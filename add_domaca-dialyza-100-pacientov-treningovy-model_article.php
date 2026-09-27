@@ -33,6 +33,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Clínic Barcelona dosiahol 100 pacientov na domácej dialýze a konsoliduje model tréningu a domáceho monitorovania. Úspech domácich modalít stojí menej na technike a viac na organizačných pilieroch — spojitom tréningu, zdieľanej infraštruktúre pre PD aj domácu HD a aktívnej edukácii.',
     'content'      => <<<'HTML'
+<figure><a href="img/domaca-dialyza-100-pacientov-treningovy-model.webp" rel="noopener noreferrer" target="_blank"><img src="img/domaca-dialyza-100-pacientov-treningovy-model.webp" alt="Domáci interiér s dialyzačným prístrojom pri okne a tenkým vláknom monitorovacieho svetla do diaľky" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Liečba doma funguje vtedy, keď za ňou stojí tréning pacienta a spoľahlivé sledovanie na diaľku.</figcaption></figure>
+
 <p>Nemocnica Clínic Barcelona informuje, že dosiahla <strong>100 pacientov na domácej dialýze</strong> a zároveň konsoliduje priekopnícky model <strong>tréningu a domáceho monitorovania</strong>. Cieľom je urobiť z domácej liečby bezpečnú, efektívnu a do bežného života integrovanú alternatívu.</p>
 
 <h2>Aktuálne počty a trend rastu</h2>
