@@ -27,6 +27,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Pri IgA nefropatii výmena RASi za sparsentan pri stabilnom SGLT2i v SPARTACUS výrazne znížila albuminúriu; v PROTECT OLE pridanie SGLT2i k sparsentanu prinieslo ďalší mierny pokles proteinúrie.',
     'content'      => <<<'HTML'
+<figure><a href="img/sparsentan-sglt2-inhibitor-iga-nefropatia-spartacus-protect.webp" rel="noopener noreferrer" target="_blank"><img src="img/sparsentan-sglt2-inhibitor-iga-nefropatia-spartacus-protect.webp" alt="Glomerulus obtočený dvoma prepletenými svetelnými stuhami, fialovou a azúrovou, pod ním sa prúd častíc stenčuje" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Dva mechanizmy sa tu nenahrádzajú, ale vrstvia — otázkou pre prax je, koľko navyše prinesie druhá vrstva.</figcaption></figure>
+
 <p><strong>Sparsentan</strong> (duálny antagonista endotelínového a angiotenzínového receptora, DEARA) a <strong>inhibítory sodíkovo-glukózového kotransportéra 2 (SGLT2i)</strong> znižujú proteinúriu pri IgA nefropatii (IgAN). V <em>Nephrology Dialysis Transplantation</em> (2026) Ayoub a kol. zhrnuli účinnosť a bezpečnosť ich kombinácie v dvoch komplementárnych nastaveniach: v otvorenej štúdii fázy 2 <strong>SPARTACUS</strong> a v randomizovanej substúdii otvoreného predĺženia (OLE) štúdie <strong>PROTECT</strong>. Text vychádza z publikačného abstraktu a má sa čítať opatrne – najmä pri extrapolácii na tvrdé obličkové alebo kardiovaskulárne ukazovatele.</p>
 
 <h2>Najdôležitejšie odkazy</h2>

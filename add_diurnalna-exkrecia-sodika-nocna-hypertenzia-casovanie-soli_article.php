@@ -27,6 +27,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Porušená denná natriuréza a relatívne zvýšená nočná exkrécia sodíka súvisia s nočnou hypertenziou a oslabeným dippingom. Review v Nephron 2026 ukazuje, prečo má časovanie soli a ABPM klinický význam.',
     'content'      => <<<'HTML'
+<figure><a href="img/diurnalna-exkrecia-sodika-nocna-hypertenzia-casovanie-soli.webp" rel="noopener noreferrer" target="_blank"><img src="img/diurnalna-exkrecia-sodika-nocna-hypertenzia-casovanie-soli.webp" alt="Soľné kryštály riedke na osvetlenej dennej strane a nakopené v nočnej tme, nad tmavou časťou krivka namiesto poklesu stúpa" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Rovnaký denný príjem soli môže mať odlišný dopad podľa toho, kedy telo sodík vylučuje — a či tlak v noci klesne.</figcaption></figure>
+
 <p>Za fyziologických podmienok má arteriálny tlak cirkadiánny rytmus. Počas spánku typicky klesá oproti bdelosti približne o <strong>10 až 20&nbsp;%</strong> („nocturnal dipping“). Ak sa tento pokles stratí (blunted / non-dipping) alebo sa objaví <strong>nočná hypertenzia</strong>, stúpa kardiovaskulárne aj renálne riziko. Súbežne má vlastný diurnálny rytmus aj renálne hospodárenie so sodíkom: za normy prevažuje <strong>exkrécia sodíka cez deň</strong>.</p>
 
 <p>Review v <em>Nephron</em> (2026) syntetizuje dôkazy, že <strong>porušená diurnálna exkrécia sodíka</strong> – oslabená denná a/alebo relatívne zvýšená nočná natriuréza – prispieva k abnormálnemu nočnému profilu krvného tlaku. Nasledujúci text rozoberá mechanizmy, klinickú logiku aj limity interpretácie; nie je to univerzálny liečebný algoritmus.</p>

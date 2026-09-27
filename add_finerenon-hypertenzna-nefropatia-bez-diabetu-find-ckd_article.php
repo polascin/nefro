@@ -26,6 +26,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Prespecifikovaná analýza FIND-CKD naznačuje renálny prínos finerenónu aj pri nediabetickej CKD pripísanej hypertenznej nefropatii. Výsledok je klinicky podnetný, no nepreukazuje účinok nezávislý od tlaku ani sám osebe nemení európsku indikáciu.',
     'content'      => <<<'HTML'
+<figure><a href="img/finerenon-hypertenzna-nefropatia-bez-diabetu-find-ckd.webp" rel="noopener noreferrer" target="_blank"><img src="img/finerenon-hypertenzna-nefropatia-bez-diabetu-find-ckd.webp" alt="Oblička stláčaná tmavým pásom sily, chránená modrozeleným štítom svetla v mieste najväčšieho tlaku" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Aj bez diabetu poškodzuje obličku mechanické preťaženie — a nefroprotekcia má zmysel práve tam, kde tlak zaberá najviac.</figcaption></figure>
+
 <p><strong>Prespecifikovaná podskupinová analýza štúdie FIND-CKD</strong> prináša randomizované údaje osobitne pre pacientov s <strong>nediabetickou chronickou chorobou obličiek (CKD) pripísanou hypertenznej nefropatii</strong>. Finerenón v tejto skupine spomalil celkový sklon odhadovanej glomerulovej filtrácie (eGFR) a znížil výskyt kompozitného obličkovo-kardiovaskulárneho ukazovateľa oproti placebu. Výsledky sú sľubné, ale treba ich čítať v kontexte podskupinovej analýzy, vybranej albuminurickej populácie, mierneho poklesu krvného tlaku a súčasnej európskej registrácie lieku.</p>
 
 <h2>Najdôležitejší odkaz</h2>

@@ -27,6 +27,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Semaglutid, tirzepatid a retatrutid nemajú pri MASH rovnakú úroveň dôkazov ani registračné postavenie. Čo ukázali ESSENCE a SYNERGY-NASH a čo musí zohľadniť nefrológ?',
     'content'      => <<<'HTML'
+<figure><a href="img/inkretinove-agonisty-masld-mash-pecen-ckd.webp" rel="noopener noreferrer" target="_blank"><img src="img/inkretinove-agonisty-masld-mash-pecen-ckd.webp" alt="Modrý lúč prechádza stukovatenou pečeňou a rozpúšťa tukové kvapky, v pozadí presvitá oblička v rovnakom svetle" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Prínos pre pečeň sa pri týchto liekoch nezastaví na hranici orgánu — preto téma patrí aj nefrológovi.</figcaption></figure>
+
 <p class="article-dek"><em>Semaglutid, tirzepatid a retatrutid predstavujú tri rozdielne receptorové stratégie. Nemožno ich však zoradiť podľa počtu cieľových receptorov ani podľa úbytku hmotnosti v navzájom odlišných štúdiách. Pre klinické rozhodnutie treba oddeliť zníženie obsahu tuku v pečeni, histologickú odpoveď, prevenciu pečeňových komplikácií a kardiorenálny prínos. Pri chronickej chorobe obličiek navyše rozhodujú hydratácia, glykémia, nutričný stav a presná indikácia konkrétneho lieku.</em></p>
 
 <p>Východiskom tohto článku je prehľad Ľubomíra Horáka a Anny Šarockej publikovaný vo <em>Via practica</em> 2/2026. Jeho téma je aktuálna, ale niektoré údaje a závery si vyžadujú opravu alebo doplnenie. Odlišné úrovne dôkazov priniesli najmä štúdie ESSENCE so semaglutidom, SYNERGY-NASH s tirzepatidom a obrazová podštúdia retatrutidu. Zmenilo sa aj regulačné prostredie: v Európskej únii už existujú lieky osobitne povolené pre vymedzenú populáciu s MASH.</p>

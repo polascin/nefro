@@ -27,6 +27,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'MASLD nie je iba náhodný ultrazvukový nález. Ako hodnotiť pečeňovú fibrózu pri CKD, čo znamená návrh CRHM a kde sa končí dôkaz a začína hypotéza?',
     'content'      => <<<'HTML'
+<figure><a href="img/steatoticke-ochorenie-pecene-riziko-ckd.webp" rel="noopener noreferrer" target="_blank"><img src="img/steatoticke-ochorenie-pecene-riziko-ckd.webp" alt="Stukovatená pečeň spojená svetelným vláknom s obličkou, po vlákne putujú častice smerom k obličke" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Nález na pečeni nie je vedľajšou poznámkou — patrí priamo do hodnotenia obličkového a kardiometabolického rizika.</figcaption></figure>
+
 <p class="article-dek"><em>Steatotické ochorenie pečene spojené s metabolickou dysfunkciou môže dlho prebiehať bez príznakov. Nie je však iba náhodným ultrazvukovým nálezom. Súvisí s kardiovaskulárnym a obličkovým rizikom, najmä v prítomnosti ďalších metabolických porúch a pokročilej pečeňovej fibrózy. Pre nefrológa z toho vyplýva potreba cielene hodnotiť aj pečeň — nie automaticky predpisovať ďalší liek každému pacientovi so steatózou.</em></p>
 
 <p>Nový prehľad Williama R. Marshalla, Smeety Sinha, Darrena Greena a Philipa A. Kalru v časopise <em>Current Opinion in Nephrology and Hypertension</em> navrhuje začleniť pečeň do kardiovaskulárno-obličkovo-metabolického rámca. Autori používajú pracovný názov <strong>kardiovaskulárny, renálny, hepatálny a metabolický syndróm (CRHM)</strong>. Myšlienka je klinicky podnetná, ale vyžaduje presné čítanie: ide o recenzovaný naratívny prehľad a koncepčný návrh, nie o novú randomizovanú štúdiu, metaanalýzu ani všeobecne prijatú diagnostickú klasifikáciu.</p>
