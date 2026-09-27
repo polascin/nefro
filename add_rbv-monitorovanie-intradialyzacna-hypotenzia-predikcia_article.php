@@ -27,6 +27,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Pokles relatívneho objemu krvi predpovedal hypotenziu s AUC 0,77 pri validácii podľa procedúr — ale iba 0,62 pri nových pacientoch. Rozdiel medzi týmito dvoma číslami je celý príbeh tejto štúdie.',
     'content'      => <<<'HTML'
+<figure><a href="img/rbv-monitorovanie-intradialyzacna-hypotenzia-predikcia.webp" rel="noopener noreferrer" target="_blank"><img src="img/rbv-monitorovanie-intradialyzacna-hypotenzia-predikcia.webp" alt="Svetelná krivka sa mierne prehýba a až ďalej prudko padá; v mieste prehnutia svieti varovný bod, v pozadí dialyzačný set" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna, nie záznam konkrétneho pacienta. Hodnota kontinuálneho merania je v tom, že signál prichádza skôr než samotný pokles tlaku.</figcaption></figure>
+
 <p class="article-dek"><em>Model, ktorý pozná predchádzajúce dialýzy toho istého pacienta, funguje dobre. Ten istý model u pacienta, ktorého nikdy nevidel, funguje sotva lepšie než náhoda. To nie je chyba štúdie — je to jej najužitočnejšie zistenie.</em></p>
 
 <p>Intradialyzačná hypotenzia patrí medzi najčastejšie komplikácie hemodialýzy. Francúzska prospektívna multicentrická štúdia ukázala, že pokles relatívneho objemu krvi (RBV) počas dialýzy súvisí s výskytom hypotenzie a môže pomôcť predpovedať hypotenznú príhodu v nasledujúcich 10 až 60 minútach.</p>

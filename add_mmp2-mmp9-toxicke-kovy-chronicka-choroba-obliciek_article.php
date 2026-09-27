@@ -27,6 +27,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Vyššie plazmatické MMP-2 a MMP-9 boli spojené s CKD s pomerom šancí 12,45 a 3,77. Prípadovo-kontrolný dizajn však neumožňuje určiť, či ide o príčinu alebo o následok zníženej funkcie obličiek.',
     'content'      => <<<'HTML'
+<figure><a href="img/mmp2-mmp9-toxicke-kovy-chronicka-choroba-obliciek.webp" rel="noopener noreferrer" target="_blank"><img src="img/mmp2-mmp9-toxicke-kovy-chronicka-choroba-obliciek.webp" alt="Zhluk tmavých kovových zŕn a oblička s fibróznymi vláknami, spojené jasným vláknom svetla, ktoré sa ani jedného nedotýka" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Asociácia môže byť silná a napriek tomu nedokazuje príčinnosť — spojnica sa oboch koncov nedotýka.</figcaption></figure>
+
 <p class="article-dek"><em>Pomer šancí 12,45 vyzerá ohromujúco. V prípadovo-kontrolnej štúdii, v ktorej sa marker aj ochorenie merali v ten istý deň, však toto číslo nehovorí o riziku vzniku ochorenia — hovorí o tom, ako dobre marker odlišuje chorých od zdravých. To je iná otázka a iná úroveň dôkazu.</em></p>
 
 <p>Taiwanská prípadovo-kontrolná štúdia zistila výraznú asociáciu medzi vyššími plazmatickými koncentráciami matrixových metaloproteináz MMP-2 a MMP-9 a chronickou chorobou obličiek. Súvislosť bola výraznejšia pri súčasne zvýšených koncentráciách arzénu, kadmia alebo olova a pri nižšej koncentrácii selénu.</p>

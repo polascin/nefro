@@ -27,6 +27,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Inhibítor faktora B spomalil ročný pokles eGFR o polovicu a znížil riziko kombinovaného obličkového ukazovateľa o 43 %. Bezpečnostný profil však nie je totožný s placebom: závažné infekcie 6,7 % oproti 2,1 %.',
     'content'      => <<<'HTML'
+<figure><a href="img/iptakopan-iga-nefropatia-applause-igan-24-mesiacov.webp" rel="noopener noreferrer" target="_blank"><img src="img/iptakopan-iga-nefropatia-applause-igan-24-mesiacov.webp" alt="Dve klesajúce krivky z rovnakého bodu — jedna strmá a tmavnúca, druhá mierna a stále jasne svietiaca" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Cieľom nie je návrat na východiskovú hodnotu, ale zmena sklonu — pomalší pokles funkcie obličiek v čase.</figcaption></figure>
+
 <p class="article-dek"><em>Prvý raz máme z dlhodobej štúdie fázy III dôkaz, že selektívna inhibícia alternatívnej cesty komplementu pri IgA nefropatii ovplyvní nielen proteinúriu, ale aj stratu funkcie obličiek. Cenou je trojnásobný výskyt závažných infekcií — a to je pri komplementovej blokáde údaj, ktorý sa nedá odbiť poznámkou o „porovnateľnej bezpečnosti“.</em></p>
 
 <p>Konečná analýza randomizovanej štúdie fázy III APPLAUSE-IgAN preukázala, že pridanie iptakopanu k podpornej liečbe významne spomalilo pokles odhadovanej glomerulovej filtrácie (eGFR) u dospelých pacientov s IgA nefropatiou a pretrvávajúcou proteinúriou. Liečba zároveň znížila riziko kombinovaného ukazovateľa progresie ochorenia obličiek.</p>

@@ -27,6 +27,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Pacienti štúdie PROTECT, ktorí dosiahli proteinúriu pod 0,3 g/deň, strácali eGFR šesťkrát pomalšie. Ide však o post hoc analýzu, v ktorej remisia nebola randomizovaná — a u tretiny z nich sa proteinúria vrátila.',
     'content'      => <<<'HTML'
+<figure><a href="img/kompletna-remisia-proteinurie-igan-protect-post-hoc.webp" rel="noopener noreferrer" target="_blank"><img src="img/kompletna-remisia-proteinurie-igan-protect-post-hoc.webp" alt="Glomerulus, z ktorého sa únik zlatých častíc úplne zastavil, a takmer vodorovná čiara svetla mieriaca do diaľky" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Úplné zastavenie úniku bielkoviny nie je len laboratórny údaj — súvisí s pomalším poklesom filtrácie.</figcaption></figure>
+
 <p class="article-dek"><em>Rozdiel je pôsobivý: −0,7 oproti −4,2 ml/min/1,73 m² za rok. Skupiny však nevznikli randomizáciou, ale podľa toho, ako pacient na liečbu odpovedal — a odpoveď je zároveň prognostickým znakom. Čo z toho zostane, keď sa to zohľadní?</em></p>
 
 <p>Proteinúria patrí medzi najvýznamnejšie prognostické ukazovatele progresie IgA nefropatie. Nová <em>post hoc</em> analýza štúdie PROTECT ukázala, že pacienti, ktorí počas liečby dosiahli proteinúriu nižšiu ako 0,3 g/deň, mali podstatne pomalší pokles odhadovanej glomerulovej filtrácie (eGFR) a menej kombinovaných obličkových príhod než pacienti bez takejto odpovede.</p>

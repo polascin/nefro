@@ -27,6 +27,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Selektívny inhibítor aldosterónsyntázy znížil 24-hodinový ambulantný systolický tlak o 14,0 mm Hg viac než placebo. Za 12 týždňov, u 217 pacientov a s hyperkaliémiou nad 6,0 mmol/l u 3 % liečených.',
     'content'      => <<<'HTML'
+<figure><a href="img/baxdrostat-rezistentna-hypertenzia-bax24.webp" rel="noopener noreferrer" target="_blank"><img src="img/baxdrostat-rezistentna-hypertenzia-bax24.webp" alt="Pretiahnutá cieva, ktorou prechádza modrá vlna svetla a uvoľňuje jej stenu po celej dĺžke, nad ňou neprerušený pás svetla" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Pri rezistentnej hypertenzii nejde len o hodnotu v ambulancii, ale o to, či zníženie vydrží celých 24 hodín.</figcaption></figure>
+
 <p class="article-dek"><em>Štrnásť milimetrov ortuti navyše v 24-hodinovom ambulantnom meraní je pri rezistentnej hypertenzii veľké číslo. Štúdia však trvala tri mesiace, primárny výsledok bol dostupný len u 85 % randomizovaných pacientov a chýba porovnanie so spironolaktónom — teda s liečbou, ktorú by baxdrostat mal nahradiť.</em></p>
 
 <p>Selektívny inhibítor aldosterónsyntázy baxdrostat znížil v štúdii Bax24 priemerný 24-hodinový ambulantný systolický krvný tlak o <strong>14,0 mm Hg viac než placebo</strong>. Účinok sa dosiahol u pacientov s rezistentnou hypertenziou napriek súbežnej liečbe najmenej tromi antihypertenzívami vrátane diuretika.</p>
