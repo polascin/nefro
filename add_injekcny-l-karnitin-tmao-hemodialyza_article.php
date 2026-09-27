@@ -39,6 +39,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Medzi nefrológmi koluje úvaha, že keď perorálny L-karnitín zvyšuje TMAO, stačí ho podať injekčne (i.v.) po dialýze a problém zmizne. Mechanisticky je to podložené, no slovo „zabráni“ je nadhodnotené: parenterálna cesta mikrobiálnu tvorbu TMAO výrazne tlmí, no neruší ju úplne — a dôkaz o zlepšení tvrdých kardiovaskulárnych výsledkov u ľudí zatiaľ chýba.',
     'content'      => <<<'HTML'
+<figure><a href="img/injekcny-l-karnitin-tmao-hemodialyza.webp" rel="noopener noreferrer" target="_blank"><img src="img/injekcny-l-karnitin-tmao-hemodialyza.webp" alt="Infúzna kvapka vstupujúca do krvného riečiska, zatiaľ čo črevné baktérie ďalej produkujú tmavé častice" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Injekčná cesta obchádza črevo — a práve to je dôvod, prečo sa od nej očakávalo menej TMAO.</figcaption></figure>
+
 <p>Medzi nefrológmi koluje elegantná úvaha: keďže perorálny L-karnitín zvyšuje hladinu TMAO, stačí ho podať injekčne (intravenózne, i.v.) po dialýze a problém s TMAO zmizne. Mechanisticky je táto úvaha reálne podložená, no slovo <strong>„zabráni“</strong> je nadhodnotené. Injekčná cesta produkciu TMAO výrazne tlmí, no neruší ju úplne — a klinický dosah na tvrdé kardiovaskulárne výsledky zostáva nepreukázaný.</p>
 
 <p>Článok nadväzuje na širší rámec dráhy, ktorú približujeme v texte o <a href="article.php?slug=tmao-crevny-metabolit-uremicky-toxin-ckd">TMAO ako uremickom toxíne pri CKD</a>, a na tému <a href="article.php?slug=cholin-l-karnitin-doplnky-diabeticka-nefropatia-tmao">doplnkov s cholínom a L-karnitínom pri diabetickej nefropatii</a>. Tu sa sústredíme na jednu praktickú otázku — na cestu podania.</p>

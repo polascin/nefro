@@ -39,6 +39,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'TMAO je metabolit cholínu a karnitínu, ktorý tvorí črevný mikrobióm a vylučujú obličky. Pri chronickej obličkovej chorobe sa hromadí ako urémický toxín a spája sa s progresiou CKD aj s vyšším kardiovaskulárnym rizikom — prehľad mechanizmov, prognostického významu a výživových možností.',
     'content'      => <<<'HTML'
+<figure><a href="img/tmao-crevny-metabolit-uremicky-toxin-ckd.webp" rel="noopener noreferrer" target="_blank"><img src="img/tmao-crevny-metabolit-uremicky-toxin-ckd.webp" alt="Molekula vznikajúca medzi črevnými baktériami a putujúca cievnou cestou k obličke, kde sa hromadí" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Metabolit vzniká v čreve, no hromadí sa tam, kde ho oblička už nedokáže odstrániť.</figcaption></figure>
+
 <p>Trimetylamín-N-oxid (TMAO) je malá, biologicky aktívna molekula, ktorá vzniká z bežných zložiek potravy činnosťou črevného mikrobiómu a následnou premenou v pečeni. V posledných rokoch sa dostala do centra pozornosti nefrológie aj kardiológie, pretože sa hromadí pri zhoršujúcej sa funkcii obličiek a spája sa s progresiou chronickej obličkovej choroby (CKD) i s vyšším kardiovaskulárnym rizikom. Tento článok zhŕňa, odkiaľ sa TMAO berie, prečo sa pri CKD hromadí, akými mechanizmami škodí a čo z aktuálnych poznatkov reálne vyplýva pre klinickú prax.</p>
 
 <h2>Odkiaľ sa TMAO berie</h2>

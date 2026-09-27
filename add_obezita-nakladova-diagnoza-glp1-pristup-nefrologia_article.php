@@ -33,6 +33,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Amy Faith Ho na Medscape rozoberá dilemu, či má Medicare platiť za obezitu ako za prevenciu (liekmi GLP-1), alebo naďalej za jej neskoršie následky. Model BALANCE a dočasný program GLP-1 Bridge ukazujú, prečo je nestabilná dostupnosť liečby aj nefrologickým problémom — dotýka sa CKD a kardiometabolického rizika.',
     'content'      => <<<'HTML'
+<figure><a href="img/obezita-nakladova-diagnoza-glp1-pristup-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/obezita-nakladova-diagnoza-glp1-pristup-nefrologia.webp" alt="Váhy so svietiacim injekčným perom na jednej strane a ťažkým tmavým závažím nákladov na druhej; pod perom oblička v tieni" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. O dostupnosti liečby nerozhoduje len účinok — a dôsledky nesie aj nefrológia.</figcaption></figure>
+
 <p>Obezita sa v systémoch zdravotnej starostlivosti čoraz častejšie posudzuje aj cez optiku nákladov — nielen ako klinická diagnóza, ale ako položka, ktorá generuje ďalšie a ďalšie výdavky. Článok na Medscape od Amy Faith Ho (MD, MPH) rozoberá dilemu, či má systém platiť za obezitu ako za prevenciu (drahými liekmi zo skupiny GLP-1), alebo bude aj naďalej hradiť najmä jej neskoršie následky. Hoci ide o americkú zdravotnú politiku (Medicare a Medicaid), otázka má priamy dosah aj na nefrológiu.</p>
 
 <h2>Prečo by sa nefrológ mal zaujímať</h2>

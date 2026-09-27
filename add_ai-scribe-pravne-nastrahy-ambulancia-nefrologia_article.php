@@ -33,6 +33,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Ericka L. Adler na Medscape zhŕňa právne riziká AI scribov v ambulancii: súlad dodávateľa s ochranou dát, preukázateľný súhlas pacienta a zodpovednosť lekára za presnosť záznamu. V nefrológii to platí dvojnásobne — dokumentácia ovplyvňuje dlhodobé rozhodovanie aj bezpečnosť liečby.',
     'content'      => <<<'HTML'
+<figure><a href="img/ai-scribe-pravne-nastrahy-ambulancia-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/ai-scribe-pravne-nastrahy-ambulancia-nefrologia.webp" alt="Zvuková vlna z rozhovoru prechádzajúca do digitálneho záznamu, cez prúd dopadá tieň právnej pečate" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Pohodlie prepisu má právnu cenu — zodpovednosť za záznam zostáva na lekárovi.</figcaption></figure>
+
 <p>AI scriby (nástroje na automatický prepis a tvorbu zdravotnej dokumentácie pomocou umelej inteligencie) sa dnes používajú preto, aby znížili administratívnu záťaž a zrýchlili zápis priamo počas vyšetrenia. V nefrológii býva dokumentácia obzvlášť časovo náročná — chronické ochorenie, liečba, dávkovanie, laboratórne trendy, záznamy z dialyzačnej či pred-dialyzačnej fázy. To robí z AI scribov praktický nástroj, no zároveň oblasť s právnymi rizikami, na ktoré sa sústreďuje článok z Medscape.</p>
 
 <h2>1) Zvoľte riešenie pripravené na zdravotnícke dáta, nie „len“ na nahrávanie</h2>
