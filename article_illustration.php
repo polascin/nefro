@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /**
- * tools/article_illustration.php
+ * article_illustration.php
  * ────────────────────────────────────────────────────────────────────────────
  * Hromadné začlenenie ilustračného obrázka do článkov podľa manifestu.
  *
@@ -21,8 +21,8 @@ declare(strict_types=1);
  * Oba režimy sú IDEMPOTENTNÉ: ak článok už `<figure` obsahuje, preskočia ho.
  *
  * Použitie:
- *   php tools/article_illustration.php --local --manifest=tmp/ilu.json
- *   php tools/article_illustration.php --db    --manifest=tmp/ilu.json
+ *   php article_illustration.php --local --manifest=tmp/ilu.json
+ *   php article_illustration.php --db    --manifest=tmp/ilu.json
  *
  * Beží len z CLI. Vracia 0 pri úspechu, 1 ak niektorá položka zlyhala.
  */
@@ -32,7 +32,7 @@ if (php_sapi_name() !== 'cli') {
     exit("Len CLI.\n");
 }
 
-$root = dirname(__DIR__);
+$root = __DIR__;
 
 // ── Argumenty ────────────────────────────────────────────────────────────────
 $mode = null;
@@ -47,7 +47,7 @@ foreach (array_slice($arguments, 1) as $arg) {
 }
 
 if ($mode === null || $manifestPath === null) {
-    fwrite(STDERR, "Použitie: php tools/article_illustration.php --local|--db --manifest=<cesta.json>\n");
+    fwrite(STDERR, "Použitie: php article_illustration.php --local|--db --manifest=<cesta.json>\n");
     exit(1);
 }
 
