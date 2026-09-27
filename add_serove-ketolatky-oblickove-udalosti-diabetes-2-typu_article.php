@@ -29,6 +29,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'V kórejskej kohorte 1 392 pacientov s diabetom 2. typu bez inzulínu a tiazolidíndiónov sa vyššie sérové ketolátky spájali s nižším rizikom obličkových udalostí. Ide o asociáciu, ktorej hlavným otáznikom je liečba inhibítormi SGLT2.',
     'content'      => <<<'HTML'
+<figure><a href="img/serove-ketolatky-oblickove-udalosti-diabetes-2-typu.webp" rel="noopener noreferrer" target="_blank"><img src="img/serove-ketolatky-oblickove-udalosti-diabetes-2-typu.webp" alt="Prúd ketolátkových častíc a presne rovnobežná červená čiara rizika, medzi ktorými zostáva tmavá medzera" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Obe krivky stúpajú spolu, nič ich však nespája — kohortová štúdia ukazuje súbeh, nie príčinu.</figcaption></figure>
+
 <p>Ketolátky sa v nefrológii dlho spomínali najmä v súvislosti s ketoacidózou. Posledné roky ich však posunuli aj do inej roly — ako možný ukazovateľ metabolického stavu, prípadne ako mediátor účinku inhibítorov SGLT2. Prospektívna kohortová štúdia z Kórey teraz sleduje, či cirkulujúce ketolátky súvisia s ďalším osudom obličiek u ambulantných pacientov s diabetom 2. typu. Výsledok je zaujímavý, no jeho interpretácia si vyžaduje väčšiu opatrnosť, než akú naznačuje záver samotnej práce.</p>
 
 <h2>Dizajn a populácia</h2>

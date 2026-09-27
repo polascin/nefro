@@ -28,6 +28,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Spoločný mechanizmus účinku neznamená spoločnú indikáciu. V Európskej únii má indikáciu pre srdcové zlyhávanie aj chronickú chorobu obličiek bez ohľadu na diabetes iba dapagliflozín a empagliflozín — ostatné molekuly triedy nie.',
     'content'      => <<<'HTML'
+<figure><a href="img/sglt2-inhibitory-rozdiely-schvalene-indikacie-srdce-oblicky.webp" rel="noopener noreferrer" target="_blank"><img src="img/sglt2-inhibitory-rozdiely-schvalene-indikacie-srdce-oblicky.webp" alt="Šesť na pohľad rovnakých tabletiek, ktorých lúče dopadajú nerovnomerne — niektoré na srdce, niektoré na obličku, jeden nedosiahne ani na jedno" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Trieda je spoločná, schválené indikácie nie — a práve tie rozhodujú, čo možno pacientovi sľúbiť.</figcaption></figure>
+
 <p>V bežnej rozprave o „gliflozínoch“ sa trieda inhibítorov SGLT2 často berie ako jeden celok: spoločný mechanizmus, spoločný kardiorenálny prínos, výber podľa dostupnosti. Registračná realita je iná. Jednotlivé molekuly majú výrazne odlišné schválené indikácie a odlišné cieľové populácie štúdií, ktoré k tým indikáciám viedli. Rozdiel nie je formálny: rozhoduje o tom, či pacient s chronickou chorobou obličiek (CKD) alebo srdcovým zlyhávaním (HF) bez diabetu dostane liek v súlade s registráciou, alebo mimo nej.</p>
 
 <h2>Čo trieda skutočne zdieľa</h2>

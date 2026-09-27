@@ -29,6 +29,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Ak sa východisková eGFR pri biopsii určí z merania vzdialeného od výkonu, môže ísť o iný časový bod choroby. Kanadská kohorta ukazuje, že longitudinálne dáta v zmiešanom modeli zlepšujú kvalitu doplnenia chýbajúcej hodnoty.',
     'content'      => <<<'HTML'
+<figure><a href="img/vychodiskova-egfr-biopsia-imputacia-glomerulove-ochorenia.webp" rel="noopener noreferrer" target="_blank"><img src="img/vychodiskova-egfr-biopsia-imputacia-glomerulove-ochorenia.webp" alt="Trajektórie vychádzajúce z tesne vzdialených štartových bodov, ktoré sa vejárovito rozchádzajú; niektoré body sú len duté obrysy" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Malý rozdiel vo východiskovej hodnote — najmä ak je doplnená a nie meraná — rozhodne o tom, kam analýza dôjde.</figcaption></figure>
+
 <p>Východisková („baseline“) odhadovaná glomerulová filtrácia pri biopsii obličky patrí medzi najčastejšie používané premenné v observačných štúdiách glomerulových ochorení. Vstupuje do stratifikácie závažnosti, do prognostických modelov, do definícií progresie aj do úvah o účinku liečby. V praxi sa pritom určuje pomerne voľne — typicky ako prvé dostupné meranie v okne šiestich mesiacov okolo biopsie — a ak žiadna hodnota k dispozícii nie je, býva doplnená (imputovaná). Analýza z populačnej kanadskej kohorty ukazuje, že táto zdanlivo technická voľba nie je neutrálna: čím ďalej od biopsie hodnotu vezmeme, tým väčšia je odchýlka od skutočného východiskového stavu.</p>
 
 <h2>Prečo nejde len o metodický detail</h2>

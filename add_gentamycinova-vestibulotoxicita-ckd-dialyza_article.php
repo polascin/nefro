@@ -27,6 +27,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Gentamycín môže poškodiť vestibulárny systém aj bez poruchy sluchu. U pacientov s chronickou chorobou obličiek a u dialyzovaných pacientov sú kľúčové kumulatívna expozícia, včasná diagnostika a rehabilitácia.',
     'content'      => <<<'HTML'
+<figure><a href="img/gentamycinova-vestibulotoxicita-ckd-dialyza.webp" rel="noopener noreferrer" target="_blank"><img src="img/gentamycinova-vestibulotoxicita-ckd-dialyza.webp" alt="Vnútorné ucho s polkruhovitými kanálikmi, v ktorých svetlo preskakuje a okolie sa nakláňa" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Poškodenie rovnovážneho ústrojenstva nebolí a často sa prehliadne — pacient len prestane bezpečne chodiť.</figcaption></figure>
+
 <p><strong>Gentamycín môže poškodiť periférny vestibulárny systém a vyvolať závažnú, niekedy trvalú obojstrannú poruchu rovnováhy.</strong> Nemusí ju sprevádzať strata sluchu, tinnitus ani typické rotačné vertigo. Varovnými príznakmi sú najmä novovzniknutá neistota pri chôdzi, zhoršenie stability v tme alebo na nerovnom povrchu a oscilopsia – ilúzia rozmazávania, poskakovania alebo pohybu zrakového obrazu pri chôdzi či pohybe hlavy.</p>
 
 <p>U pacientov s chronickou chorobou obličiek (CKD) a u dialyzovaných pacientov treba riziko posudzovať podľa dávkovacieho režimu, správne načasovaných sérových koncentrácií, trvania liečby a kumulatívnej dávky. Jednotlivá koncentrácia v cieľovom rozmedzí toxicitu nevylučuje. Pri podozrení je potrebné bezodkladne prehodnotiť ďalšie podávanie gentamycínu, objektivizovať vestibulárny deficit, predchádzať pádom a začať individuálne vedenú vestibulárnu rehabilitáciu.</p>

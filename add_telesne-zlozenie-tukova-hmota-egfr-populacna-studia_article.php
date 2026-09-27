@@ -29,6 +29,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'V nemeckej kohorte 4 211 dospelých sa vyššia tuková hmota spájala s nižšou eGFR, výraznejšie u žien a v staršom veku. Ide o prierezovú analýzu ovplyvnenú aj pôsobením telesného zloženia na samotné biomarkery.',
     'content'      => <<<'HTML'
+<figure><a href="img/telesne-zlozenie-tukova-hmota-egfr-populacna-studia.webp" rel="noopener noreferrer" target="_blank"><img src="img/telesne-zlozenie-tukova-hmota-egfr-populacna-studia.webp" alt="Rez telom s tukovou a svalovou vrstvou, z ktorého vychádza svetelná spojnica k obličke, no cestou sa rozpadá" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. eGFR odhaduje filtráciu z kreatinínu, a ten závisí od svalovej hmoty — pri extrémnom telesnom zložení preto odhad stráca výpovednú hodnotu.</figcaption></figure>
+
 <p>Vzťah medzi obezitou a funkciou obličiek sa zvyčajne opisuje priamočiaro: viac tuku, horšie obličky. Analýza z nemeckej populačnej kohorty <em>Study of Health in Pomerania</em> (SHIP) ukazuje, že obraz je zložitejší — smer asociácie sa mení podľa veku a jej sila podľa pohlavia. Pre nefrológa je pritom rovnako zaujímavá druhá otázka, ktorú práca otvára: nakoľko meriame funkciu obličiek a nakoľko meriame vplyv telesného zloženia na biomarkery, z ktorých ju odhadujeme.</p>
 
 <h2>Čo analýza zahŕňala</h2>

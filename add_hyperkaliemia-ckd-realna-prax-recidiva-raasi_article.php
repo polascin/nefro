@@ -25,6 +25,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Po epizóde hyperkaliémie sa u 429 pacientov vysadili antagonisty mineralokortikoidného receptora takmer u každého piateho, hoci ide o liečbu s najsilnejším dôkazovým základom. Recidíva postihla 43,8 %.',
     'content'      => <<<'HTML'
+<figure><a href="img/hyperkaliemia-ckd-realna-prax-recidiva-raasi.webp" rel="noopener noreferrer" target="_blank"><img src="img/hyperkaliemia-ckd-realna-prax-recidiva-raasi.webp" alt="Krivka opakovane stúpajúca do červeného pásma; pri každom zásahu sa rad tabletiek vedľa nej skráti" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Hyperkaliémia sa spravidla vracia — a cenu za to platí práve tá liečba, ktorú by pacient mal udržať.</figcaption></figure>
+
 <p>Skutočná cena hyperkaliémie pri chronickej chorobe obličiek sa málokedy meria hodnotou kália. Meria sa tým, čo po epizóde vysadíme. Blokáda systému renín–angiotenzín–aldosterón a antagonisty mineralokortikoidného receptora patria k liečbe s najlepšie doloženým kardiorenálnym prínosom a zároveň k najčastejším „obetiam“ jedného zvýšeného laboratórneho výsledku.</p>
 
 <p>Španielska prospektívna observačná štúdia publikovaná v auguste 2026 túto prax zdokumentovala u 429 pacientov v pätnástich nemocniciach. Jej hodnota nie je v odpovedi na otázku, čo funguje – na to nemá dizajn. Je v tom, že ukazuje, <em>čo sa naozaj deje</em>.</p>
