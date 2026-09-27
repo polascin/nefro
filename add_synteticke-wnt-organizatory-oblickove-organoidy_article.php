@@ -36,6 +36,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Štúdia v Science ukazuje, že lokálne WNT signály zo syntetických bunkových organizátorov dokážu lepšie usporiadať ľudské obličkové organoidy a zvýšiť ich výpovednú hodnotu pre nefrologický výskum.',
     'content'      => <<<'HTML'
+<figure><a href="img/synteticke-wnt-organizatory-oblickove-organoidy.webp" rel="noopener noreferrer" target="_blank"><img src="img/synteticke-wnt-organizatory-oblickove-organoidy.webp" alt="Neusporiadaný zhluk buniek a vedľa neho tie isté bunky usporiadané do pravidelnej obličkovej štruktúry" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Bunky samy o sebe nestačia — chýba im signál, ktorý im povie, kam patria.</figcaption></figure>
+
 <p>Obličkový organoid nie je len zhluk „správnych“ buniek. Aby bol biologicky a experimentálne použiteľný, bunky sa musia objaviť aj v správnej polohe, v správnej orientácii a v správnom vzťahu k susedným štruktúram. Práve priestorové vzorovanie zostáva jednou z hlavných slabín súčasných obličkových organoidov odvodených z ľudských pluripotentných kmeňových buniek.</p>
 
 <p>Nová práca publikovaná v časopise <em>Science</em> ukazuje, že túto slabinu možno cielene ovplyvniť. Autori využili synteticky navrhnuté bunky, ktoré fungujú ako lokálny zdroj WNT signálu, a zaviedli ich do ľudských obličkových organoidov. Výsledkom bolo organizovanejšie usporiadanie vyvíjajúcich sa nefrónových štruktúr, najmä lepšia orientácia morfogenézy smerom k zdroju signálu a podpora distálnej nefrónovej diferenciácie.</p>

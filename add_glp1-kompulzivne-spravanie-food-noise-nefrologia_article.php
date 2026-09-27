@@ -35,6 +35,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Agonisty GLP-1 receptorov môžu u časti pacientov tlmiť nielen hlad, ale aj naliehavosť cravingu a „food noise“. Pre nefrológiu je dôležité rozlíšiť sľubný neurobiologický signál od neschválených indikácií a sledovať bezpečnosť pri CKD.',
     'content'      => <<<'HTML'
+<figure><a href="img/glp1-kompulzivne-spravanie-food-noise-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/glp1-kompulzivne-spravanie-food-noise-nefrologia.webp" alt="Chaotické zvukové vlny okolo hlavy, ktoré sa na druhej strane upokoja pri svietiacej molekule; bokom oblička" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Ak lieky stíšia nutkavé myšlienky na jedlo, zasahujú mechanizmus, ktorý sa neobmedzuje len na chuť do jedla.</figcaption></figure>
+
 <p>Lieky pôsobiace cez receptor GLP-1 boli pôvodne vyvíjané ako antidiabetiká. Neskôr zásadne zmenili liečbu obezity a postupne vstúpili aj do diskusie o kardiorenálnej ochrane. Dnes sa okolo nich otvára ďalšia, zatiaľ opatrná, ale vedecky veľmi zaujímavá otázka: môžu ovplyvňovať aj kompulzívne správanie, craving a nutkavé vyhľadávanie odmeňujúcich podnetov?</p>
 
 <p>Medscape túto tému približuje cez pacientsky pojem <strong>„food noise“</strong>. Nejde o bežný hlad, ale o vnútorný mentálny hluk spojený s jedlom: vtieravé, opakované a ťažko ovládateľné myšlienky najmä na vysoko odmeňujúce ultraprocesované potraviny. U časti pacientov sa po nasadení GLP-1 liečby tento „hluk“ výrazne stíši. Klinicky zaujímavé je, že pacienti často nehovoria iba o menšom hlade, ale o menšej naliehavosti impulzu.</p>

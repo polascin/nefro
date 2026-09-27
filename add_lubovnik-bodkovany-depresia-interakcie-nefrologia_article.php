@@ -35,6 +35,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Ľubovník bodkovaný môže mať miesto pri miernej až stredne ťažkej depresii, ale len pri štandardizovanom prípravku a po dôslednej kontrole interakcií. V nefrológii je kritický najmä transplantovaný pacient, polyfarmácia a kombinácia so serotonergnými liekmi.',
     'content'      => <<<'HTML'
+<figure><a href="img/lubovnik-bodkovany-depresia-interakcie-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/lubovnik-bodkovany-depresia-interakcie-nefrologia.webp" alt="Žltokvetá bylina, ktorej svetlo sa delí na upokojujúci prúd a rušivý lúč mieriaci na liekovú kapsulu pri obličke" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Rastlinný pôvod tu nič negarantuje — práve interakcie robia z ľubovníka v nefrológii riziko.</figcaption></figure>
+
 <p>Ľubovník bodkovaný (<em>Hypericum perforatum</em>, St. John’s wort) sa v ambulancii často objaví nenápadne: pacient ho uvedie ako „čaj na nervy“, „prírodné antidepresívum“ alebo doplnok, ktorý „nemôže škodiť“. Práve toto je problém. Pri ľubovníku nie je najväčším rizikom samotná bylinková povesť, ale to, že ide o biologicky aktívnu látku s klinicky významnými liekovými interakciami.</p>
 
 <p>Medscape v aktuálnom prehľade zdôrazňuje dve paralelné skutočnosti: pri vhodne vybraných dospelých s miernou až stredne ťažkou depresiou môže mať štandardizovaný prípravok racionálne miesto, no rozhodujúce je, aby nešlo o neštandardizovaný doplnok s nejasným obsahom účinných látok. V nefrologickej praxi sa k tomu pridáva tretia podmienka: pred akýmkoľvek odporúčaním musí prebehnúť poctivá revízia medikácie.</p>

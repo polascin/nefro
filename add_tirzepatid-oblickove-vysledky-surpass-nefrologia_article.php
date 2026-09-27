@@ -35,6 +35,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Tirzepatid prináša v programe SURPASS priaznivé signály pre eGFR, albuminúriu a renálne endpointy. Pre nefrológiu je dôležité rozlíšiť sľubný kardiorenálny účinok od definitívne dokázanej renoprotekcie.',
     'content'      => <<<'HTML'
+<figure><a href="img/tirzepatid-oblickove-vysledky-surpass-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/tirzepatid-oblickove-vysledky-surpass-nefrologia.webp" alt="Dva receptorové kľúče spojené do jednej molekuly, z ktorej vychádza silný lúč k obličke" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Dvojitý receptorový účinok sa premieta aj do obličkových ukazovateľov — otázkou zostáva sila dôkazov.</figcaption></figure>
+
 <p>Tirzepatid sa pôvodne dostal do klinickej pozornosti najmä ako veľmi účinný liek na zníženie HbA1c a telesnej hmotnosti u pacientov s diabetes mellitus 2. typu. Postupne sa však ukazuje, že jeho význam môže presahovať samotnú glykemickú kontrolu a manažment obezity. Obličkové analýzy z programu SURPASS naznačujú priaznivý vplyv na albuminúriu, rýchlosť poklesu eGFR a zložené renálne ukazovatele.</p>
 
 <p>Z nefrologického hľadiska ide o mimoriadne praktickú tému. Diabetes mellitus 2. typu zostáva jednou z hlavných príčin chronickej choroby obličiek (CKD) a zlyhania obličiek. Každá liečba, ktorá okrem zlepšenia metabolického profilu dokáže priaznivo ovplyvniť albuminúriu, pokles eGFR alebo riziko progresie CKD, môže mať veľký klinický význam. Zároveň však platí, že „renálny signál“ zo sekundárnych alebo exploračných analýz ešte nie je to isté ako definitívne dokázaná renoprotekcia v špecializovanej výsledkovej štúdii zameranej na obličky.</p>
