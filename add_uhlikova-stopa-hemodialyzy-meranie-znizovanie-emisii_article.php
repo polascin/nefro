@@ -27,6 +27,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Pilotná štúdia piatich nemeckých stredísk odhadla priemernú stopu hemodialýzy na 3,72 t CO₂e na pacienta za rok. Ukazuje, čo možno zmeniť hneď a prečo klinická bezpečnosť musí zostať nadradená úspore emisií.',
     'content'      => <<<'HTML'
+<figure><a href="img/uhlikova-stopa-hemodialyzy-meranie-znizovanie-emisii.webp" rel="noopener noreferrer" target="_blank"><img src="img/uhlikova-stopa-hemodialyzy-meranie-znizovanie-emisii.webp" alt="Dialyzačný prístroj s vlečúcou sa parou a odtokom vody; merací lúč časť oblaku prejasňuje, zvyšok pokračuje ďalej" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Časť záťaže sa dá zmerať a znížiť; zvyšok je cenou za liečbu, ktorá udržuje pacienta pri živote.</figcaption></figure>
+
 <p>Hemodialýza je život zachraňujúca liečba, zároveň však spotrebúva veľké množstvo elektriny, tepla a vody, vyžaduje pravidelnú dopravu a používa množstvo jednorazových pomôcok. Znižovanie jej environmentálnej záťaže preto patrí do moderného riadenia kvality. Ekologický ukazovateľ však nesmie stáť proti bezpečnosti pacienta: zmyslom merania je odhaliť zbytočnú spotrebu a emisie, nie obmedziť účinnú liečbu.</p>
 
 <p><strong>Uhlíková stopa</strong> vyjadruje emisie rôznych skleníkových plynov po prepočte na ekvivalent oxidu uhličitého (CO₂e). Pri dialýze ju možno uvádzať napríklad v tonách CO₂e na pacienta za rok alebo v kilogramoch CO₂e na jedno liečebné sedenie. Výsledok má význam iba vtedy, ak je jasné, ktoré zdroje emisií výpočet zahŕňa, aké emisné faktory používa a aký je menovateľ.</p>

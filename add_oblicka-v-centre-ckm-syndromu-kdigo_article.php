@@ -28,6 +28,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Prehľad prepája CKD s kardiovaskulárnym a metabolickým rizikom a premieňa KDIGO 2024 na praktický rámec: eGFR, UACR, KFRE, RAS blokáda, SGLT2 inhibítory, finerenón a GLP-1 RA.',
     'content'      => <<<'HTML'
+<figure><a href="img/oblicka-v-centre-ckm-syndromu-kdigo.webp" rel="noopener noreferrer" target="_blank"><img src="img/oblicka-v-centre-ckm-syndromu-kdigo.webp" alt="Oblička v strede rámu, cez ktorú prechádzajú tri prepletené oblúky — červený so srdcom, zlatý s metabolickými časticami a modrozelený s obličkovými štruktúrami" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Žiadna z troch zložiek nepokračuje bez obličky — preto ju KDIGO stavia do stredu spoločného rámca.</figcaption></figure>
+
 <p>Chronická choroba obličiek (CKD) nie je izolovaným ochorením jedného orgánu. V klinickej praxi sa tesne prelína s obezitou, diabetes mellitus 2. typu, artériovou hypertenziou, dyslipidémiou, srdcovým zlyhávaním a aterosklerotickým kardiovaskulárnym ochorením. Americká kardiologická asociácia (AHA) tieto vzájomne prepojené procesy v roku 2023 zastrešila pojmom <strong>kardiovaskulárno-obličkovo-metabolický syndróm</strong> (cardiovascular-kidney-metabolic syndrome, CKM syndróm).</p>
 
 <p>Pre nefrológa má tento koncept zásadný význam. CKD zvyšuje kardiovaskulárne riziko už v skorých štádiách, pričom prognózu neurčuje iba pokles odhadovanej glomerulovej filtrácie (eGFR), ale aj albuminúria, príčina nefropatie, hypertenzia, diabetes, obezita, anémia, poruchy minerálového a kostného metabolizmu či retencia sodíka a tekutín. Metabolické a kardiovaskulárne ochorenia zároveň urýchľujú poškodenie obličiek.</p>
