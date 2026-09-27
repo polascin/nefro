@@ -26,6 +26,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Ako rozpoznať imunitne podmienenú TTP, odlíšiť ju od iných mikroangiopatií a bezodkladne začať liečbu. ADAMTS13, výmena plazmy, kaplacizumab a sledovanie po remisii.',
     'content'      => <<<'HTML'
+<figure><a href="img/imunitne-podmienena-ttp-urgentna-diagnoza-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/imunitne-podmienena-ttp-urgentna-diagnoza-nefrologia.webp" alt="Cieva upchatá zhlukmi doštičiek a vláknami, ktoré trhajú prechádzajúce červené krvinky; v pozadí tmavnúca oblička a mozog" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Pri imunitne podmienenej TTP sa hodiny počítajú — mikrotromby poškodzujú obličky aj mozog ešte predtým, než dorazí potvrdenie diagnózy.</figcaption></figure>
+
 <p class="article-dek"><strong>Trombotická trombocytopenická purpura je život ohrozujúca trombotická mikroangiopatia. Včasné rozpoznanie a bezodkladná liečba rozhodujú o prežití aj rozsahu orgánového poškodenia. Pre nefrológa je zásadné odlíšiť ju od hemolyticko-uremických syndrómov a ďalších príčin trombotickej mikroangiopatie, pretože podobný klinický obraz môže vyžadovať odlišnú liečbu.</strong></p>
 
 <h2>Čo znamenajú označenia aTTP a iTTP?</h2>

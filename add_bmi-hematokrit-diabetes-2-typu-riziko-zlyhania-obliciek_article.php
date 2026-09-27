@@ -31,6 +31,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Štúdia spojila mendelovskú randomizáciu s klinickým súborom a zostavila nomogram s AUC 0,88. Model však neobsahuje eGFR ani albuminúriu a abstrakt štúdie si protirečí s jej vlastnými výsledkami.',
     'content'      => <<<'HTML'
+<figure><a href="img/bmi-hematokrit-diabetes-2-typu-riziko-zlyhania-obliciek.webp" rel="noopener noreferrer" target="_blank"><img src="img/bmi-hematokrit-diabetes-2-typu-riziko-zlyhania-obliciek.webp" alt="Dva jednoduché meracie valce na tmavej oceli, ktorých tiene nedosiahnu na obličku stojacu v pozadí v šere" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Dva jednoduché ukazovatele vysvetlia len časť rizika — zvyšok zostáva mimo ich dosahu.</figcaption></figure>
+
 <p>Vyšší index telesnej hmotnosti a nižší hematokrit môžu u ľudí s diabetom 2. typu upozorňovať na zvýšené riziko zlyhania obličiek. Nová štúdia spojila analýzu genetických údajov s retrospektívnym sledovaním klinického súboru a vytvorila predikčný model s dobrou rozlišovacou schopnosťou.</p>
 
 <p>Jej výsledky však nemožno interpretovať ako dôkaz, že samotné zvýšenie hematokritu zabráni progresii chronickej choroby obličiek. A hoci model dosiahol plochu pod krivkou 0,88, <strong>neobsahuje eGFR ani albuminúriu</strong> — teda práve tie dva ukazovatele, o ktoré sa opiera zavedené hodnotenie rizika.</p>

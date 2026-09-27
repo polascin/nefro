@@ -31,6 +31,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Pri rovnakom 10 % úbytku hmotnosti zlepšila ketogénna strava pečeňovú citlivosť na inzulín dvoj- až trojnásobne viac. Druhý spoločný hlavný cieľ — svalová citlivosť — sa však medzi diétami vôbec nelíšil.',
     'content'      => <<<'HTML'
+<figure><a href="img/ketogenna-dieta-metabolicke-zdravie-pecen-randomizovana-studia.webp" rel="noopener noreferrer" target="_blank"><img src="img/ketogenna-dieta-metabolicke-zdravie-pecen-randomizovana-studia.webp" alt="Úzky zlatý lúč osvetľuje pečeň, okolo neho zostáva úplná nepreskúmaná tma" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Výsledok je presvedčivý presne v tom mieste, kam štúdia posvietila; mimo neho nevzniká dôkaz o univerzálnej prevahe.</figcaption></figure>
+
 <p>Zníženie telesnej hmotnosti spravidla zlepšuje viaceré metabolické ukazovatele. Menej jednoznačná je otázka, do akej miery výsledok závisí od samotného energetického deficitu a do akej miery od pomeru sacharidov, tukov a bielkovín.</p>
 
 <p>Randomizovaná klinická štúdia publikovaná v časopise <em>Cell Metabolism</em> túto otázku riešila nezvyčajne dôsledne: účastníkom poskytovala <strong>všetko jedlo</strong> a porovnávala tri diéty pri <strong>rovnakom, približne desaťpercentnom úbytku hmotnosti</strong>. Ketogénna strava zlepšila pečeňový metabolizmus výraznejšie než stredomorská a veľmi nízkotučná.</p>

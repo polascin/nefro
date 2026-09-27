@@ -26,6 +26,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Experimentálna látka pghi-4 zvyšuje aktivitu vankomycínu proti VREfm. Čo ukázala predklinická štúdia a aké otázky účinnosti a renálnej bezpečnosti zostávajú otvorené?',
     'content'      => <<<'HTML'
+<figure><a href="img/inhibicia-saga-pghi-4-vankomycin-rezistentny-enterococcus-faecium.webp" rel="noopener noreferrer" target="_blank"><img src="img/inhibicia-saga-pghi-4-vankomycin-rezistentny-enterococcus-faecium.webp" alt="Baktéria, ktorej vonkajšia stena sa pod modrým lúčom odlupuje, a do vzniknutého prielomu vteká prúd antibiotika" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia, nie mikroskopický snímok. Rezistenciu tu neprekonáva silnejšie antibiotikum, ale odstránenie ochrany, ktorá mu bránila zabrať.</figcaption></figure>
+
 <p><strong>Inhibícia prestavby bakteriálnej bunkovej steny môže posilniť účinok antibiotika, voči ktorému je mikroorganizmus rezistentný. Štúdia publikovaná v júni 2026 v časopise Nature Communications ukazuje takýto účinok experimentálnej látky pghi-4 v kombinácii s vankomycínom proti vankomycín-rezistentnému Enterococcus faecium. Ide o predklinický výskum: zatiaľ nepreukazuje účinnosť ani bezpečnosť tejto kombinácie u pacientov.</strong> <a href="#zdroj-1">[1]</a> </p>
 
 <p>Pre nefrológiu je tento výskumný smer významný najmä v súvislosti s infekciami u dialyzovaných a transplantovaných pacientov. Prípadné rozšírenie účinnosti vankomycínu by však samo osebe neodstránilo jeho nefrotoxický potenciál. Pri novej látke treba ešte charakterizovať farmakokinetiku, toxicitu aj správanie pri poruche funkcie obličiek.</p>
