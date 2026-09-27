@@ -29,6 +29,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Preemptívna transplantácia obličky – vykonaná pred začatím dialyzačnej liečby pri poklese eGFR pod 10 ml/min/1,73 m² – je asociovaná s lepším prežívaním pacientov aj štepu v porovnaní s transplantáciou po dialýze. Zastúpenie preemptívnych transplantácií zostáva napriek priaznivým dôkazom v celej Európe nízke, kľúčom je včasná edukácia pacienta.',
     'content'      => <<<'HTML'
+<figure><a href="img/preemptivna-transplantacia-optimalny-sposob-nahrady-funkcie-ledvin.webp" rel="noopener noreferrer" target="_blank"><img src="img/preemptivna-transplantacia-optimalny-sposob-nahrady-funkcie-ledvin.webp" alt="Žiariaca oblička na krátkej priamej svetelnej ceste, vedľa nej nepoužitá tmavá chodba s dialyzačnými hadičkami" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Preemptívna transplantácia nie je skratkou navyše — je cestou, ktorá dialyzačné obdobie obchádza celé.</figcaption></figure>
+
 <p>Transplantácia obličky predstavuje optimálny spôsob náhrady funkcie obličiek u pacientov s chronickým zlyhávaním obličiek (CKD – chronic kidney disease). Z pohľadu prežívania pacientov, kvality života aj ekonomickej efektívnosti prekonáva hemodialýzu aj peritoneálnu dialýzu. Benefit transplantácie je zrejmý naprieč všetkými vekovými skupinami v porovnaní s pacientmi na čakacej listine.</p>
 
 <p>Preemptívna transplantácia je transplantácia vykonaná <em>pred</em> zahájením akejkoľvek dialyzačnej liečby. Tento prehľad vychádza z českého odborného článku prof. MUDr. Tomáša Reischiga, Ph.D. (Postgraduální nefrologie, 2026) a sumarizuje dostupné dôkazy, vrátane ich limitácií.</p>

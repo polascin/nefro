@@ -29,6 +29,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Pielotax sa propaguje ako orgánovo špecifický peptidový bioregulátor obličiek. Rozbor označenia produktu a jedinej dostupnej klinickej správy ukazuje, prečo dostupné údaje nepodporujú tvrdenie o nefroprotektívnom účinku.',
     'content'      => <<<'HTML'
+<figure><a href="img/pielotax-oblickove-peptidy-zlozenie-ucinnost-bezpecnost.webp" rel="noopener noreferrer" target="_blank"><img src="img/pielotax-oblickove-peptidy-zlozenie-ucinnost-bezpecnost.webp" alt="Prevrátená liekovka, z ktorej uniká len slabý opar, vedľa analytická miska s niekoľkými zrnkami, v pozadí nedotknutá oblička" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna, nie snímka konkrétneho výrobku. Pri doplnkoch tohto typu je rozhodujúca otázka, čo v nich naozaj je a čo z toho môže mať účinok.</figcaption></figure>
+
 <p class="article-dek"><em>Pielotax je výživový doplnok propagovaný ako orgánovo špecifický peptidový bioregulátor obličiek. Dostupné údaje však neposkytujú spoľahlivý dôkaz, že prípravok zvyšuje glomerulovú filtráciu, spomaľuje progresiu chronickej choroby obličiek (CKD) alebo znižuje riziko zlyhania obličiek. Jediná dohľadaná klinická správa má závažné metodologické nedostatky a nestačí na formulovanie liečebného odporúčania.</em></p>
 
 <p>Otázky na doplnky tohto typu prichádzajú do nefrologickej ambulancie čoraz častejšie. Pacient s dnou, hyperurikémiou alebo poklesom glomerulovej filtrácie hľadá „niečo na obličky“ a nájde produkt, ktorý sľubuje obnovu obličkového tkaniva. Cieľom tohto rozboru nie je odsúdiť výživové doplnky ako kategóriu, ale ukázať konkrétne, kde sa v prípade Pielotaxu končia dostupné údaje a kde začína interpretácia predajcu.</p>
