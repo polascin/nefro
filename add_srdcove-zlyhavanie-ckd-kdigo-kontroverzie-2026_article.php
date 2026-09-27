@@ -31,6 +31,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Závery konferencie KDIGO 2024 o srdcovom zlyhávaní a CKD: obojsmerné zaťaženie, GDMT s duálnym prínosom a hemodynamický pokles eGFR, ktorý sám osebe nie je dôvodom na vysadenie liečby.',
     'content'      => <<<'HTML'
+<figure><a href="img/srdcove-zlyhavanie-ckd-kdigo-kontroverzie-2026.webp" rel="noopener noreferrer" target="_blank"><img src="img/srdcove-zlyhavanie-ckd-kdigo-kontroverzie-2026.webp" alt="Srdce a oblička spojené káblom svetla, v ktorom prúdia dva prúdy súčasne opačnými smermi" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Záťaž ide oboma smermi naraz — preto sa liečba jedného orgánu nedá plánovať bez ohľadu na druhý.</figcaption></figure>
+
 <p class="article-dek"><em>Konferencia KDIGO o chorobe obličiek a srdcovom zlyhávaní (marec 2024) bola v roku 2026 uverejnená súčasne v Kidney International a v JACC: Heart Failure. Správa nie je novým usmernením KDIGO, ale konsenzuálnym prehľadom dôkazov, diagnostických dilem a praktických princípov liečby tam, kde sa srdce a obličky stretávajú. Tento článok je slovenské spracovanie tejto správy pre nefrologickú prax.</em></p>
 
 <p>Srdcové zlyhávanie (HF) a chronická choroba obličiek (CKD) sa často vyskytujú spolu, zdieľajú rizikové faktory aj hemodynamické, neurohormonálne a zápalové mechanizmy a navzájom zhoršujú prognózu. Podľa konferenčnej správy má približne <strong>10–30 % pacientov s CKD srdcové zlyhávanie</strong> a približne <strong>30–60 % pacientov so srdcovým zlyhávaním má CKD</strong>. Súčasný výskyt oboch stavov je spojený s vyšším rizikom straty funkcie obličiek, hospitalizácií aj úmrtia.</p>

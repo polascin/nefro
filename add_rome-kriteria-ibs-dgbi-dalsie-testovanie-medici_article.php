@@ -28,6 +28,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'U 238 medikov v Latinskej Amerike znalosť kritérií Rome nestačila na diagnostickú zdržanlivosť pri IBS bez varovných príznakov. Pozitívna diagnóza DGBI nie je diagnóza vylúčením.',
     'content'      => <<<'HTML'
+<figure><a href="img/rome-kriteria-ibs-dgbi-dalsie-testovanie-medici.webp" rel="noopener noreferrer" target="_blank"><img src="img/rome-kriteria-ibs-dgbi-dalsie-testovanie-medici.webp" alt="Svietiace črevo spojené vláknom svetla s mozgom, za pokojnou priečnou čiarou svetla sa rozprestiera prázdna tma" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Ak kritériá sedia a varovné príznaky chýbajú, ďalšie testovanie spravidla neprinesie nový poznatok — len odklad diagnózy.</figcaption></figure>
+
 <p class="article-dek"><em>Kritériá Rome umožňujú stanoviť syndróm dráždivého čreva ako pozitívnu, symptómovú diagnózu, ak chýbajú varovné príznaky. Multicentrická štúdia na medikoch v Latinskej Amerike ukázala, že samotná znalosť týchto kritérií nestačí na racionálne testovanie. Pre nefrológiu je to poučné tam, kde sú gastrointestinálne ťažkosti časté a nešpecifické.</em></p>
 
 <p>Funkčné gastrointestinálne ťažkosti – najmä syndróm dráždivého čreva (IBS) – sa v praxi ešte stále často uzatvárajú až po „vylúčení všetkého ostatného“. Takýto postup predlžuje cestu k liečbe, zvyšuje úzkosť pacienta a zbytočne zaťažuje diagnostiku. Kritériá Rome tento model zámerne otáčajú: pri typickom obraze a absencii varovných príznakov má ísť o <strong>pozitívnu klinickú diagnózu</strong>, nie o diagnózu vylúčením.</p>

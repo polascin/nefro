@@ -30,6 +30,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Agonisty GLP-1 už nie sú len diabetologická téma. FLOW, SELECT, analýzy so SGLT2 a signál z SURMOUNT ukazujú renálnu ochranu v randomizovaných dátach – s dôležitými rozdielmi medzi tvrdými endpointmi a biomarkermi.',
     'content'      => <<<'HTML'
+<figure><a href="img/glp1-lieky-renalne-benefity-dokazy-prax-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/glp1-lieky-renalne-benefity-dokazy-prax-nefrologia.webp" alt="Injekčné pero, ktorého lúč mieri priamo na obličku a rozsvecuje jej vnútorné štruktúry" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Ťažisko sa presúva z metabolického účinku na priamu nefroprotekciu — otázkou pre prax zostáva, komu ju ponúknuť.</figcaption></figure>
+
 <p class="article-dek"><em>Srdcovocievne a metabolické liečby sa v CKD takmer vždy premietnu do obličiek. Posledné dva roky však priniesli silný signál, že agonisty receptora GLP-1 (a v širšom kontexte aj duálne incretinové látky) v klinických štúdiách opakovane prinášajú renálnu ochranu – nielen u diabetu 2. typu, ale aj u vybraných populácií bez diabetu.</em></p>
 
 <p>V komentári na Medscape nefrológ Kashif J. Piracha upozorňuje, že väčšina lekárov stále zaradzuje agonisty GLP-1 do kategórie „diabetologických“ alebo „obezitologických“ liekov. Randomizované dáta z posledných 24 mesiacov však podporujú iný klinický rámec: pri vhodných pacientoch ide o lieky s preukázaným renálnym prínosom, ktoré sa v CKD manažmente majú uvažovať popri blokáde renínovo-angiotenzínového systému (RAS) a inhibítoroch SGLT2.</p>

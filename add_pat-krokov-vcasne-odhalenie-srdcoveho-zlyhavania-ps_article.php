@@ -30,6 +30,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Päťkrokový rámec včasného záchytu srdcového zlyhávania v primárnej starostlivosti: anamnéza, natriuretické peptidy s výhradou pri CKD, rizikové skupiny, včasná echokardiografia a komorbidity.',
     'content'      => <<<'HTML'
+<figure><a href="img/pat-krokov-vcasne-odhalenie-srdcoveho-zlyhavania-ps.webp" rel="noopener noreferrer" target="_blank"><img src="img/pat-krokov-vcasne-odhalenie-srdcoveho-zlyhavania-ps.webp" alt="Päť svetelných schodov stúpajúcich tmou k srdcu, ktoré je zachytené vo včasnom štádiu" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Hodnota rámca je v poradí krokov — práve ono robí nález viditeľným dosť skoro na to, aby sa dalo konať.</figcaption></figure>
+
 <p class="article-dek"><em>Srdcové zlyhávanie sa často rozvíja postupne a v primárnej starostlivosti ostáva dlho nediagnostikované — najmä fenotyp so zachovanou ejekčnou frakciou. Tento článok je slovenské spracovanie praktického päťkrokového rámca z Medscape pre včasný záchyt. Ide o diagnostickú triáž pri podozrení na srdcové zlyhávanie, nie o dôkaz príčiny ťažkostí. Prahové hodnoty natriuretických peptidov sú overené proti otvoreným zdrojom; pri chronickej chorobe obličiek žiadny univerzálny prah nestačí.</em></p>
 
 <p>Srdcové zlyhávanie (HF, z angl. <em>heart failure</em>) často vzniká pozvoľna. Mnohí pacienti si ho uvedomia až vtedy, keď je funkcia srdca už výrazne zhoršená alebo keď sa opakujú epizódy dekompenzácie. Včasná diagnóza pritom umožňuje skôr začať liečbu podľa odporúčaní, zlepšiť kvalitu života a znížiť riziko hospitalizácií.</p>
