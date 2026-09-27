@@ -26,6 +26,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Dvanásť diel o bolesti, smrti, vede, transplantácii a profesijnej identite. Kriticky hodnotený výber ukazuje, čo môže literatúra priniesť lekárovi a kde sa končí jej dôkazná hodnota.',
     'content'      => <<<'HTML'
+<figure><a href="img/12-knih-lekar-choroba-pacient-narativna-medicina.webp" rel="noopener noreferrer" target="_blank"><img src="img/12-knih-lekar-choroba-pacient-narativna-medicina.webp" alt="Otvorená kniha na tmavom stole pod lampou, z jej strán stúpajú svetelné obrysy troch postáv; vedľa leží stetoskop" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Časť toho, čomu sa lekár potrebuje naučiť, nie je v odbornej literatúre — a predsa to pri lôžku rozhoduje.</figcaption></figure>
+
 <p>Medicína sa nedá redukovať na diagnostické algoritmy, laboratórne hodnoty a terapeutické odporúčania. Lekár pracuje aj s neistotou, utrpením, nádejou, stratou, vzťahmi a etickými konfliktmi. Odborné časopisy poskytujú vedecké poznatky; literatúra môže sprostredkovať skúsenosť choroby spôsobom, ktorý štatistika zachytáva iba čiastočne.</p>
 
 <p><strong>Čítanie beletrie ani medicínsko-historickej literatúry samo osebe nezaručuje lepšiu klinickú prax.</strong> Systematicky vedená naratívna medicína však môže podporovať sebareflexiu, vnímanie perspektívy pacienta a niektoré komunikačné či empatické zručnosti. Dôkazy sú heterogénne a výsledky vzdelávacích intervencií nemožno automaticky prenášať na rekreačné čítanie bez pedagogického vedenia.</p>

@@ -26,6 +26,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Japonská kohorta spojila krvnú skupinu A s nižšou celkovou a kardiovaskulárnou mortalitou pri hemodialýze. Nález je observačný, má minimálny predikčný prínos a liečbu nemení.',
     'content'      => <<<'HTML'
+<figure><a href="img/krvna-skupina-a-mortalita-hemodialyza.webp" rel="noopener noreferrer" target="_blank"><img src="img/krvna-skupina-a-mortalita-hemodialyza.webp" alt="Kvapka krvi v ostrom svetle a od nej vlákno, ktoré sa vo vzduchu stráca bez napojenia na vzdialenú svetelnú čiaru" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Nález je zaujímavý, no na liečbu nemá dosah — spojnicu k rozhodnutiu pri lôžku nemá kde nadviazať.</figcaption></figure>
+
 <p>Japonská multicentrická kohortová štúdia zistila, že pacienti s krvnou skupinou A liečení udržiavacou hemodialýzou mali nižšiu celkovú a kardiovaskulárnu mortalitu než pacienti s krvnou skupinou O. Výsledok je prekvapujúci, pretože v nedialyzovanej populácii sa s nižším trombotickým a kardiovaskulárnym rizikom zvyčajne spája skôr krvná skupina O.</p>
 
 <p><strong>Ide však o observačnú asociáciu, nie o dôkaz ochranného účinku krvnej skupiny A.</strong> Štúdia pochádza z geograficky aj etnicky pomerne homogénnej skupiny pacientov, nepreukázala mechanizmus a zaradenie krvnej skupiny do prognostického modelu zlepšilo jeho diskriminačnú schopnosť iba minimálne. Nález preto nemení prevenciu ani liečbu pacientov na hemodialýze.</p>

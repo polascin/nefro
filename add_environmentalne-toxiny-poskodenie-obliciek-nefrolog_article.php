@@ -32,6 +32,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Praktický rámec pre nefrológa: kedy pri nevysvetlenej tubulopatii, kryštálovej nefropatii či neprimerane rýchlom poklese eGFR cielene pátrať po environmentálnej a pracovnej expozícii. A prečo zvýšená hladina chemickej látky sama osebe nie je dôkazom príčiny CKD.',
     'content'      => <<<'HTML'
+<figure><a href="img/environmentalne-toxiny-poskodenie-obliciek-nefrolog.webp" rel="noopener noreferrer" target="_blank"><img src="img/environmentalne-toxiny-poskodenie-obliciek-nefrolog.webp" alt="Oblička a tenké vlákna environmentálnych stôp — kovové zrná, prach, postrek, výpary — ktoré zviditeľní až cielený lúč" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Tieto expozície sa v anamnéze samy neobjavia; zviditeľní ich len cielená otázka.</figcaption></figure>
+
 <h2>Úvod</h2>
 
 <p>Obličky sú voči environmentálnym toxínom mimoriadne zraniteľné. Dostáva sa k nim veľká časť minútového srdcového výdaja, filtrujú značný objem plazmy a prostredníctvom tubulárnej sekrécie a reabsorpcie koncentrujú viaceré chemické látky. Niektoré toxíny sa navyše v organizme kumulujú alebo sa z neho eliminujú veľmi pomaly.</p>

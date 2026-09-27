@@ -32,6 +32,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Vysokodávková online hemodiafiltrácia má randomizovaný dôkaz o znížení mortality (štúdia CONVINCE); MCO dialyzátory zatiaľ preukázali len lepší klírens stredných molekúl. Prečo lepší laboratórny výsledok neznamená rovnaký klinický prínos a ako vybrať modalitu.',
     'content'      => <<<'HTML'
+<figure><a href="img/online-hemodiafiltracia-mco-dialyzatory-stredne-molekuly.webp" rel="noopener noreferrer" target="_blank"><img src="img/online-hemodiafiltracia-mco-dialyzatory-stredne-molekuly.webp" alt="Dialyzátor, cez ktorého membránu prechádzajú spolu s drobnými časticami aj výrazne väčšie molekulové zhluky" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Difúzia sama stredné molekuly neodstráni — potrebný je konvekčný prenos alebo membrána s väčšími pórmi.</figcaption></figure>
+
 <p>Konvenčná hemodialýza účinne odstraňuje malé vo vode rozpustné látky, napríklad močovinu, draslík a kreatinín. Podstatne menej účinná je pri odstraňovaní väčších uremických toxínov označovaných ako stredné molekuly. Online hemodiafiltrácia a dialýza s medium cut-off membránami rozširujú možnosti mimotelovej eliminačnej liečby práve zvýšením transportu týchto látok.</p>
 
 <p>Obe metódy však využívajú odlišné mechanizmy a nemožno ich považovať za klinicky rovnocenné. Kým pri vysokodávkovej online hemodiafiltrácii už existuje randomizovaný dôkaz o znížení celkovej mortality, pri MCO dialyzátoroch sú zatiaľ preukázané najmä priaznivé účinky na laboratórne ukazovatele odstránenia stredných molekúl. Dôkazy o zlepšení prežívania alebo o znížení počtu závažných klinických príhod pri MCO dialyzátoroch chýbajú.</p>

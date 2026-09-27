@@ -29,6 +29,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Moderná liečba CKD vrství blokádu RAS, inhibítory SGLT2, finerenón a agonisty GLP-1 podľa fenotypu. Rozhodujú albuminúria, eGFR, komorbidity, tolerancia a plán sledovania po AKI.',
     'content'      => <<<'HTML'
+<figure><a href="img/liecba-ckd-2026-vrstvena-nefroprotekcia-post-aki.webp" rel="noopener noreferrer" target="_blank"><img src="img/liecba-ckd-2026-vrstvena-nefroprotekcia-post-aki.webp" alt="Oblička obalená niekoľkými sústrednými vrstvami svetla, z jednej strany merací lúč, v pozadí stopa po staršom poškodení so stálym dohľadom" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Ochrana sa vrství podľa zmeraného rizika — a epizóda akútneho poškodenia sa nezavrie, ale sleduje ďalej.</figcaption></figure>
+
 <p class="article-dek"><em>Moderná nefroprotekcia nie je univerzálna kombinácia štyroch liekov. Je to postupné vrstvenie terapií s preukázaným prínosom podľa príčiny CKD, kategórie eGFR a albuminúrie, pridružených ochorení, tolerancie a priorít pacienta.</em></p>
 
 <p>Liečba chronickej choroby obličiek (CKD) sa za posledné roky zásadne zmenila. Popri blokáde renínovo-angiotenzínového systému (RAS) sú k dispozícii inhibítory sodíkovo-glukózového kotransportéra 2 (SGLT2), nesteroidný antagonista mineralokortikoidového receptora finerenón a agonisty receptora pre glukagónu podobný peptid 1 (GLP-1). Výzvou v roku 2026 už nie je iba dostupnosť účinnej liečby, ale najmä správny výber pacienta, bezpečné poradie jej nasadenia a dôsledné sledovanie.</p>
