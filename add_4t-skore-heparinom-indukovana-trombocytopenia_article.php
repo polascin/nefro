@@ -35,6 +35,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => '4T skóre pomáha odhadnúť predtestovú pravdepodobnosť HIT. V nefrologickej a dialyzačnej praxi je cenné najmä tým, že nízke skóre HIT spoľahlivo vylučuje.',
     'content'      => <<<'HTML'
+<figure><a href="img/4t-skore-heparinom-indukovana-trombocytopenia.webp" rel="noopener noreferrer" target="_blank"><img src="img/4t-skore-heparinom-indukovana-trombocytopenia.webp" alt="Stúpajúca škála svetelných stĺpcov a vedľa nej cieva s ubúdajúcimi krvnými doštičkami a tvoriacim sa trombom" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Jednoduché skóre rozhoduje, či ide o nevinný pokles doštičiek alebo o stav, ktorý paradoxne hrozí trombózou.</figcaption></figure>
+
 <p>Heparínom indukovaná trombocytopénia (<strong>HIT</strong>) patrí medzi diagnózy, ktoré nemožno podceniť. Môže viesť k život ohrozujúcim trombózam, ale jej zbytočné nadhodnotenie je tiež škodlivé: vedie k prerušeniu heparínu, podaniu alternatívnej antikoagulácie, vyššiemu riziku krvácania, rastu nákladov a diagnostickej neistote.</p>
 
 <p>Práve preto má v praxi veľký význam <strong>4T skóre</strong> – jednoduchý klinický nástroj na odhad predtestovej pravdepodobnosti HIT. Jeho najväčšia sila nie je v tom, že by samo potvrdilo diagnózu, ale v tom, že pri nízkom výsledku HIT veľmi spoľahlivo vylučuje a chráni pacienta pred zbytočnou liečbou.</p>

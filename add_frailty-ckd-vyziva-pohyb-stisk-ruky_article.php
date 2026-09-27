@@ -35,6 +35,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Frailty pri CKD je dynamický viacrozmerný syndróm. Popri eGFR a albuminúrii má zmysel sledovať výživu, fyzickú aktivitu, svalovú silu, psychickú rezervu a sociálne fungovanie pacienta.',
     'content'      => <<<'HTML'
+<figure><a href="img/frailty-ckd-vyziva-pohyb-stisk-ruky.webp" rel="noopener noreferrer" target="_blank"><img src="img/frailty-ckd-vyziva-pohyb-stisk-ruky.webp" alt="Ruka zvierajúca svietiacu tyč, ktorej svetlo slabne, a vedľa nej pokojne žiariaca oblička" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Ubúdajúca sila sa v hodnote eGFR neukáže — krehkosť treba hľadať samostatne.</figcaption></figure>
+
 <p>Chronická choroba obličiek nie je len ochorenie glomerulovej filtrácie. U mnohých pacientov ide o systémový stav, ktorý zasahuje svalovú silu, výživu, psychickú odolnosť, sociálne fungovanie a schopnosť zvládať bežné denné aktivity. Práve preto sa v nefrológii čoraz viac diskutuje o pojme <em>frailty</em>, teda krehkosť alebo zraniteľnosť pacienta.</p>
 
 <p>Článok publikovaný v <em>Journal of Nephrology</em> sa venuje longitudinálnemu sledovaniu viacrozmernej frailty u pacientov s chronickou chorobou obličiek. Autori skúmali, ako sa počas 12 mesiacov menia jednotlivé zložky frailty u pacientov s CKD, ktorí ešte neboli liečení dialýzou, a aký význam majú nutričný stav, fyzická aktivita a sila stisku ruky.</p>

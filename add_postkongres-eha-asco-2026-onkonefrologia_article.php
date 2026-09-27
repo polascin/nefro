@@ -35,6 +35,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Moderná onkologická a hematoonkologická liečba zvyšuje potrebu onkonefrologického dohľadu: ICI nefritída, anti-VEGF toxicita, myelómová oblička, CAR-T, TLS aj dávkovanie liekov pri CKD.',
     'content'      => <<<'HTML'
+<figure><a href="img/postkongres-eha-asco-2026-onkonefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/postkongres-eha-asco-2026-onkonefrologia.webp" alt="Dva prúdy svetla — hematologický a onkologický — zbiehajúce sa do jedného kanála smerujúceho do obličky" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Onkologické aj hematologické novinky sa zbiehajú v tom istom bode — pri obličke, ktorá ich účinky znáša.</figcaption></figure>
+
 <p>Onkológia a nefrológia sa čoraz výraznejšie prelínajú. Dôvodom nie je iba vyšší vek pacientov a častejšia polymorbidita, ale aj samotná povaha modernej protinádorovej liečby. Imunoterapia, cielené lieky, bunkové terapie, bispecifické protilátky, konjugáty protilátka–liek a intenzívne kombinované režimy prinášajú pacientom významný benefit, no zároveň zvyšujú nároky na sledovanie renálnych nežiaducich účinkov.</p>
 
 <p>Postkongresové onkologické formáty po EHA a ASCO sú preto relevantné aj pre nefrológa. Nie preto, že by mal preberať rolu onkológa alebo hematológa, ale preto, že úspech modernej liečby často závisí od schopnosti bezpečne zvládnuť akútne poškodenie obličiek, proteinúriu, hypertenziu, elektrolytové poruchy, syndróm nádorového rozpadu a dávkovanie liekov pri zníženej funkcii obličiek.</p>

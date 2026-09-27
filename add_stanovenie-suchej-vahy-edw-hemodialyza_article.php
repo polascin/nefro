@@ -35,6 +35,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Suchá váha (odborne presnejšie suchá hmotnosť) pri hemodialýze nie je číslo z jedného vzorca. Praktický postup kombinuje klinický trend, toleranciu ultrafiltrácie, krvný tlak, bioimpedanciu, BVM/RBV krivky a POCUS.',
     'content'      => <<<'HTML'
+<figure><a href="img/stanovenie-suchej-vahy-edw-hemodialyza.webp" rel="noopener noreferrer" target="_blank"><img src="img/stanovenie-suchej-vahy-edw-hemodialyza.webp" alt="Štyri rôzne meracie lúče zbiehajúce sa na jednu svietiacu hladinu tekutín vnútri priesvitného tela" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Žiadna metóda sama nestačí — suchá váha vzniká zo zhody klinického odhadu a prístrojových meraní.</figcaption></figure>
+
 <p>Stanovenie „suchej váhy“ (odborne presnejšie suchej hmotnosti) pri hemodialýze patrí medzi najťažšie rutinné rozhodnutia v nefrológii. Na prvý pohľad ide iba o číslo v kilogramoch. V skutočnosti je to klinický odhad objemového stavu, ktorý sa mení podľa výživy, svalovej hmoty, sodíkovej bilancie, reziduálnej diurézy, zápalu, srdcovej funkcie, cievnej poddajnosti a tolerancie ultrafiltrácie.</p>
 
 <p>EDW (<em>estimated dry weight</em>) preto nie je výsledok jedného univerzálneho matematického vzorca. V praxi ide skôr o <strong>dynamický terapeutický cieľ</strong>: čo najnižšiu dlhodobo tolerovanú postdialyzačnú hmotnosť, pri ktorej pacient nemá klinicky významné známky hypervolémie ani hypovolémie. Bioimpedančná spektroskopia, napríklad BCM od spoločnosti Fresenius Medical Care, vie rozhodovanie objektivizovať, ale ani ona nenahrádza klinický úsudok.</p>
