@@ -41,6 +41,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Prvý živý príjemca obličky z prasaťa so 69 genetickými úpravami: xenoštep poskytol klinicky významnú funkciu, no ani intenzívna imunosupresia nezabránila včasnej T-bunkovej rejekcii ani pretrvávajúcej aktivácii vrodenej imunity. Čo z toho vyplýva pre nefrológiu.',
     'content'      => <<<'HTML'
+<figure><a href="img/xenotransplantacia-oblicky-prasa-imunologia-zivy-prijemca.webp" rel="noopener noreferrer" target="_blank"><img src="img/xenotransplantacia-oblicky-prasa-imunologia-zivy-prijemca.webp" alt="Funkčná oblička s čistým prúdom filtrátu, obliehaná zo všetkých strán hustými rojmi imunitných buniek" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Štep môže pracovať a byť pritom pod trvalým imunologickým tlakom — funkcia a pokoj nie sú to isté.</figcaption></figure>
+
 <h2>Úvod</h2>
 
 <p>Nedostatok darcovských obličiek zostáva jedným z hlavných limitov transplantačnej medicíny. Mnohí pacienti so zlyhaním obličiek sa transplantácie nedočkajú alebo sa počas čakania stanú pre výkon nevhodnými. Xenotransplantácia obličky z geneticky upraveného prasaťa preto predstavuje potenciálny spôsob, ako v budúcnosti rozšíriť dostupnosť orgánov.</p>

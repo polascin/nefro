@@ -27,6 +27,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Extrémne horúčavy zvyšujú renálne riziko pri CKD aj dialýze, no prevencia neznamená paušálne „viac piť“ ani svojvoľne vysádzať lieky. Rozhoduje individuálny objemový a liekový plán.',
     'content'      => <<<'HTML'
+<figure><a href="img/extremne-horucavy-riziko-ckd-dialyza.webp" rel="noopener noreferrer" target="_blank"><img src="img/extremne-horucavy-riziko-ckd-dialyza.webp" alt="Oblička v rozpálenom opare s vysušeným popraskaným tkanivom, v diaľke nedosiahnuteľný dialyzačný prístroj" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Horúčava zasahuje pacientov s ochorením obličiek dvojnásobne — cez dehydratáciu aj cez dostupnosť starostlivosti.</figcaption></figure>
+
 <p>Extrémne horúčavy nie sú iba otázkou komfortu. U zraniteľného pacienta môžu viesť k dehydratácii, hypotenzii, akútnemu poškodeniu obličiek (AKI), poruchám vnútorného prostredia alebo dekompenzácii srdcového zlyhávania. Riziko narastá s vekom, polymorbiditou, chronickou chorobou obličiek (CKD), diabetom, kardiovaskulárnym ochorením a potrebou dialyzačnej liečby.</p>
 
 <p>Komentár Roberty Villovej v portáli Medscape upozorňuje na rastúci zdravotný dosah horúčav v Európe. Pre nefrologickú prax je jeho najdôležitejším odkazom potreba pripraviť rizikových pacientov ešte pred vlnou horúčav. <strong>Prevencia však nesmie byť redukovaná na univerzálne „pite viac“ ani na paušálne vysadzovanie liekov.</strong> Rozhodujú objemový stav, diuréza, reziduálna funkcia obličiek, srdcové zlyhávanie, dialyzačný režim a vopred dohodnutý postup pri akútnom ochorení.</p>

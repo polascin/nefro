@@ -39,6 +39,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Praktický prehľad ketoacidózy pre nefrológa: od hladovej a alkoholovej formy cez diabetickú a euglykemickú DKA až po graviditu a dialýzu. S dôrazom na acidobázickú interpretáciu, kaliémiu, β-hydroxybutyrát a individualizáciu liečby pri chronickej chorobe obličiek.',
     'content'      => <<<'HTML'
+<figure><a href="img/ketoacidoza-nefrologicka-prax-hladovanie-euglykemicka-dka.webp" rel="noopener noreferrer" target="_blank"><img src="img/ketoacidoza-nefrologicka-prax-hladovanie-euglykemicka-dka.webp" alt="Nádoba s nebezpečne narastajúcimi ketolátkovými kryštálmi a vedľa nej pokojný ukazovateľ na nenápadnej hodnote" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Normálna glykémia ketoacidózu nevylučuje — práve táto nezhoda robí euglykemickú formu ľahko prehliadnuteľnou.</figcaption></figure>
+
 <h2>Klinický význam</h2>
 
 <p>Ketoacidóza je život ohrozujúca metabolická acidóza spôsobená nadmernou tvorbou ketolátok, predovšetkým β-hydroxybutyrátu a acetoacetátu. Hoci sa najčastejšie spája s diabetickou ketoacidózou (DKA), vzniká aj pri hladovaní, nadmernom požívaní alkoholu, v gravidite, pri veľmi nízkosacharidových diétach a pri liečbe inhibítormi SGLT2.</p>

@@ -27,6 +27,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Veľká štúdia 23andMe spojila varianty GLP1R a GIPR s úbytkom hmotnosti, nauzeou a vracaním pri semaglutide a tirzepatide. Účinky sú však malé a zatiaľ neopodstatňujú liečbu podľa genotypu.',
     'content'      => <<<'HTML'
+<figure><a href="img/geneticke-prediktory-glp1-semaglutid-tirzepatid.webp" rel="noopener noreferrer" target="_blank"><img src="img/geneticke-prediktory-glp1-semaglutid-tirzepatid.webp" alt="Závitnica DNA s farebnými markermi; len niektoré vlákna dosiahnu k injekčným perám, ostatné končia v opare" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Niektoré súvislosti sú doložené, iné zostávajú nepotvrdené — na výber liečby podľa genotypu je zatiaľ skoro.</figcaption></figure>
+
 <p>Myšlienka, že genetický test pred začatím liečby predpovie úbytok hmotnosti alebo gastrointestinálne nežiaduce účinky semaglutidu a tirzepatidu, je klinicky príťažlivá. Priložený text spoločnosti 23andMe ju však predstavuje súčasne ako vedeckú novinku aj ako podporu vlastného komerčného produktu. Vecné posúdenie preto musí vychádzať predovšetkým z pôvodnej práce publikovanej v časopise <em>Nature</em>, nie z jej marketingovej interpretácie.</p>
 
 <p>Štúdia priniesla biologicky vierohodné a štatisticky presvedčivé asociácie v génoch <em>GLP1R</em> a <em>GIPR</em>. Ich účinky na úbytok hmotnosti boli malé, väčšina údajov pochádzala zo sebahlásenia a predikčné modely neboli overené v prospektívnej štúdii liečby riadenej genotypom. Výsledky preto zatiaľ neopodstatňujú rutinné farmakogenetické testovanie, výber medzi semaglutidom a tirzepatidom, zmenu dávky ani rýchlosti titrácie podľa týchto variantov.</p>

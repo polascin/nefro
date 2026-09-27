@@ -32,6 +32,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Regulačné T-lymfocyty (Treg) sľubujú cielenú transplantačnú toleranciu namiesto plošnej imunosupresie. Prvé klinické štúdie potvrdili uskutočniteľnosť a krátkodobú bezpečnosť, zatiaľ však nedokázali, že po transplantácii obličky dokážu spoľahlivo nahradiť celoživotnú imunosupresiu.',
     'content'      => <<<'HTML'
+<figure><a href="img/regulacne-t-lymfocyty-transplantacia-oblicky-tolerancia.webp" rel="noopener noreferrer" target="_blank"><img src="img/regulacne-t-lymfocyty-transplantacia-oblicky-tolerancia.webp" alt="Transplantovaná oblička v pokojnom kruhu fialových regulačných buniek, agresívne bunky sa pred ním odkláňajú; vedľa blednúci rad tabletiek" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Cieľom nie je imunitu potlačiť, ale naučiť ju štep tolerovať — a tým postupne znížiť potrebu celoživotnej liečby.</figcaption></figure>
+
 <h2>Úvod</h2>
 
 <p>Súčasná transplantácia obličky je založená na dlhodobej kombinovanej imunosupresii. Tá účinne znižuje riziko akútnej rejekcie, ale zároveň zvyšuje výskyt závažných infekcií, malignít, metabolických komplikácií, kardiovaskulárnych príhod a liekovej nefrotoxicity. Ani moderná imunosupresia navyše spoľahlivo nezabráni chronickému poškodzovaniu aloštepu.</p>
