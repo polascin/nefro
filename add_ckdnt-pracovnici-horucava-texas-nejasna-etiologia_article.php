@@ -25,6 +25,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Tepelný stres a akútne poškodenie obličiek u poľnohospodárskych pracovníkov v USA sú dobre doložené. Populačný dôkaz rozsiahlej epidémie chronickej CKDnt v Texase zatiaľ chýba. Čo z toho vyplýva pre nefrológiu.',
     'content'      => <<<'HTML'
+<figure><a href="img/ckdnt-pracovnici-horucava-texas-nejasna-etiologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/ckdnt-pracovnici-horucava-texas-nejasna-etiologia.webp" alt="Oblička v horúcom opare nad popraskanou vyprahnutou zemou, praskliny žiaria tlejúcou červenou" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Opakovaná záťaž horúčavou a dehydratáciou poškodzuje obličky aj tam, kde sa klasická príčina nenájde.</figcaption></figure>
+
 <p class="article-dek"><em>Reportáž z Texasu opisuje reálny a pravdepodobne rastúci problém. Medzi „u pracovníkov v horúčave stúpa kreatinín“ a „do Texasu prišla epidémia záhadnej choroby obličiek“ však leží značná evidenčná vzdialenosť. Práve tá je pri tejto téme najzaujímavejšia — a najviac sa prehliada.</em></p>
 
 <p>Chronická choroba obličiek nejasnej alebo netradičnej etiológie, označovaná skratkami <strong>CKDu</strong> alebo <strong>CKDnt</strong>, bola najprv opísaná medzi pracovníkmi v poľnohospodárstve v Strednej Amerike a na Srí Lanke. Postihuje prevažne mladších mužov vykonávajúcich namáhavú fyzickú prácu v horúcom prostredí, často bez diabetu, závažnej hypertenzie alebo iného bežného vysvetlenia poškodenia obličiek.</p>

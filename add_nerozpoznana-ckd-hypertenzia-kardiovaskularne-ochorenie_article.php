@@ -27,6 +27,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Dve tretiny rizikových pacientov bez diabetu s opakovane zníženou eGFR nemali zaznamenanú diagnózu CKD. Recenzovaná štúdia REVEAL-CKD ukazuje, že v Európe je situácia ešte horšia — a že najčastejšie unikajú ženy.',
     'content'      => <<<'HTML'
+<figure><a href="img/nerozpoznana-ckd-hypertenzia-kardiovaskularne-ochorenie.webp" rel="noopener noreferrer" target="_blank"><img src="img/nerozpoznana-ckd-hypertenzia-kardiovaskularne-ochorenie.webp" alt="Jasne nasvietené srdce a cieva v popredí, oblička za nimi zostáva takmer celá v tieni" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Pozornosť pri týchto pacientoch prirodzene patrí srdcu a tlaku; oblička zostáva v tieni, hoci býva postihnutá súčasne.</figcaption></figure>
+
 <p class="article-dek"><em>Diagnostický kód sám osebe nikoho nevylieči. Je však podmienkou toho, aby bola choroba obličiek viditeľná pre všetkých, ktorí o pacientovi rozhodujú — od predpisovania dávok po indikáciu kontrastného vyšetrenia. Práve v tomto bode zlyhávame najčastejšie u pacientov, ktorí nemajú diabetes.</em></p>
 
 <p>Chronická choroba obličiek patrí medzi najčastejšie, ale zároveň najčastejšie nerozpoznané chronické ochorenia. Analýza amerických elektronických zdravotných záznamov prezentovaná na Kidney Week ukázala, že diagnóza nebola zaznamenaná približne u <strong>dvoch tretín</strong> pacientov, ktorí mali hypertenziu alebo kardiovaskulárne ochorenie a súčasne opakovane zníženú odhadovanú glomerulovú filtráciu. Poddiagnostikovanie bolo výraznejšie u pacientov bez diabetu 2. typu.</p>

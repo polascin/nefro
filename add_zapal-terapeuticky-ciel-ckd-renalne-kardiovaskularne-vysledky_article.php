@@ -27,6 +27,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Zápal pri CKD súvisí s renálnym aj kardiovaskulárnym rizikom, no samotné zníženie CRP nie je liečebným cieľom. Čo ukázali CANTOS, ZEUS, BEACON, MOSAIC a ďalšie štúdie?',
     'content'      => <<<'HTML'
+<figure><a href="img/zapal-terapeuticky-ciel-ckd-renalne-kardiovaskularne-vysledky.webp" rel="noopener noreferrer" target="_blank"><img src="img/zapal-terapeuticky-ciel-ckd-renalne-kardiovaskularne-vysledky.webp" alt="Tlejúci zápal prestupujúci obličkovým tkanivom, do ktorého mieri chladný modrý lúč a uhlíky v jeho dosahu hasnú" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Zápal sa pri CKD posúva z roly ukazovateľa rizika do roly cieľa, na ktorý sa dá zamieriť.</figcaption></figure>
+
 <p class="article-dek"><em>Chronický zápal patrí medzi mechanizmy spájajúce poškodenie obličiek, kardiovaskulárne ochorenia a metabolické komplikácie. Jeho prítomnosť však sama osebe neurčuje konkrétnu liečbu. Pre nefrologickú prax je rozhodujúce rozlišovať medzi zápalom ako ukazovateľom rizika, zápalom ako príčinou poškodenia a zápalovou dráhou, ktorej ovplyvnenie preukázateľne zlepšuje klinické výsledky.</em></p>
 
 <p>Chronická choroba obličiek nie je iba dôsledkom straty nefrónov a poruchy vylučovacej funkcie. Je to systémové ochorenie sprevádzané aktiváciou vrodenej aj adaptívnej imunity, oxidačným stresom, endotelovou dysfunkciou, poruchou metabolizmu a chronickým nízkostupňovým zápalom.</p>

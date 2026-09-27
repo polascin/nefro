@@ -27,6 +27,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Štyria z piatich dvadsaťtrojročných spĺňali kritériá aspoň prvého štádia CKM syndrómu. Väčšinou však išlo o nadmernú adipozitu — a rozdiel v hrúbke karotíd predstavoval 14 mikrometrov.',
     'content'      => <<<'HTML'
+<figure><a href="img/ckm-riziko-mladi-dospeli-79-percent-vyznam.webp" rel="noopener noreferrer" target="_blank"><img src="img/ckm-riziko-mladi-dospeli-79-percent-vyznam.webp" alt="Mladý svietiaci strom z ciev, v ktorého koreňoch už tlie varovné oranžové svetlo" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Vysoký podiel mladých s nálezom neznamená, že sú chorí — znamená, že pochod sa začína skôr, než sa na neho pomyslí.</figcaption></figure>
+
 <p class="article-dek"><em>Titulok hovorí o poškodení tepien u dvadsiatnikov. Publikované čísla hovoria o rozdiele 0,014 mm v hrúbke intimy-médie. Obidve tvrdenia sa opierajú o tú istú štúdiu — a rozdiel medzi nimi je presne tým, čo stojí za vysvetlenie.</em></p>
 
 <p>Nová americká štúdia upozornila, že približne <strong>štyria z piatich</strong> ľudí vo veku okolo 23 rokov spĺňali kritériá najmenej prvého štádia kardiovaskulárno-obličkovo-metabolického syndrómu. Tento výsledok však neznamená, že 79 % mladých dospelých už má ochorenie srdca alebo obličiek. Vo väčšine prípadov išlo o prítomnosť nadmerného alebo dysfunkčného tukového tkaniva, prípadne o metabolické rizikové faktory.</p>

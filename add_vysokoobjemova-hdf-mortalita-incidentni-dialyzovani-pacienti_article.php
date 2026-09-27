@@ -27,6 +27,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Kohorta 18 515 incidentných dialyzovaných pacientov spája online hemodiafiltráciu s o 20 % nižšou celkovou a o 29 % nižšou kardiovaskulárnou mortalitou. Prečo tlačová správa uvádza 28 % a prečo ide o inú štúdiu.',
     'content'      => <<<'HTML'
+<figure><a href="img/vysokoobjemova-hdf-mortalita-incidentni-dialyzovani-pacienti.webp" rel="noopener noreferrer" target="_blank"><img src="img/vysokoobjemova-hdf-mortalita-incidentni-dialyzovani-pacienti.webp" alt="Veľký objem tekutiny prúdiaci dialyzátorom a v diaľke svetelná čiara, ktorá s ním nie je priamo spojená" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Asociácia je presvedčivá, priame prepojenie však chýba — a práve to odlišuje pozorovanie od dôkazu príčinnosti.</figcaption></figure>
+
 <p class="article-dek"><em>Vysokoobjemová hemodiafiltrácia má randomizovaný dôkaz prínosu u prevalentných pacientov. Nová kohorta prináša chýbajúci diel: čo sa deje v prvých dvoch rokoch po začatí dialýzy. Výsledok je priaznivý a konzistentný — a zároveň je príkladom toho, ako sa to isté číslo dá v tlačovej správe a v publikácii vzťahovať na dve rôzne veci.</em></p>
 
 <p>Online hemodiafiltrácia (HDF) kombinuje difúzny transport klasickej hemodialýzy s konvektívnym transportom. V porovnaní s konvenčnou vysokoprietokovou hemodialýzou preto účinnejšie odstraňuje širšie spektrum uremických látok vrátane stredne veľkých molekúl.</p>

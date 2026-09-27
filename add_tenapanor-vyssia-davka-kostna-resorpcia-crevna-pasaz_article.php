@@ -27,6 +27,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Súhrnná analýza troch japonských štúdií fázy 3 (212 pacientov) našla dva faktory spojené s vyššou konečnou dávkou tenapanoru: vyššiu kostnú resorpciu a tvrdšiu stolicu. Ide o prieskumné nálezy, nie o dávkovací algoritmus.',
     'content'      => <<<'HTML'
+<figure><a href="img/tenapanor-vyssia-davka-kostna-resorpcia-crevna-pasaz.webp" rel="noopener noreferrer" target="_blank"><img src="img/tenapanor-vyssia-davka-kostna-resorpcia-crevna-pasaz.webp" alt="Svietiaca črevná trubica s nerovnomernou pasážou a kostná mriežka uvoľňujúca minerálne častice" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Potrebná dávka nezávisí len od príjmu fosforu — spoluurčuje ju rýchlosť črevnej pasáže aj uvoľňovanie minerálu z kosti.</figcaption></figure>
+
 <p class="article-dek"><em>Tenapanor nie je viazač fosfátov — znižuje ich vstrebávanie v čreve. Nová súhrnná analýza troch japonských štúdií fázy 3 sa pýta prakticky: čím sa líšia pacienti, ktorí po titrácii skončili na najvyšších dávkach. Odpoveďou sú dva signály — kostná resorpcia a črevná pasáž. Oba sú zaujímavé, ani jeden zatiaľ nie je prediktorom.</em></p>
 
 <p>Hyperfosfatémia patrí medzi základné prejavy minerálovej a kostnej poruchy pri chronickej chorobe obličiek (CKD-MBD). U dialyzovaných pacientov sú možnosti odstránenia fosfátov obmedzené: bežný dialyzačný režim odstráni približne <strong>1 800 až 2 520 mg fosfátov týždenne</strong>, čo je výrazne menej, než koľko sa priemerne prijme a vstrebe z potravy. Liečba preto stojí na troch pilieroch — primeranej dialyzačnej dávke, nutričnej intervencii a farmakoterapii.</p>
