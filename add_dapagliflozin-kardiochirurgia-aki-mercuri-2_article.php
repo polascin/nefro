@@ -27,6 +27,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'V randomizovanej štúdii MERCURI-2 znížili štyri dávky dapagliflozínu výskyt pooperačného akútneho poškodenia obličiek z 52 % na 28 %. Výsledok však do veľkej miery určilo kritérium nízkej diurézy. Mortalita, dĺžka hospitalizácie ani závažné kardiorenálne príhody sa nezmenili.',
     'content'      => <<<'HTML'
+<figure><a href="img/dapagliflozin-kardiochirurgia-aki-mercuri-2.webp" rel="noopener noreferrer" target="_blank"><img src="img/dapagliflozin-kardiochirurgia-aki-mercuri-2.webp" alt="Oblička za tenkým modrozeleným štítom svetla, proti ktorému smerujú chirurgické nástroje" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Ochrana pred operáciou vyzerá sľubne, no štít je zatiaľ tenký — na zmenu perioperačnej praxe to nestačí.</figcaption></figure>
+
 <p class="article-dek"><em>Štyri dávky dapagliflozínu podané okolo elektívnej operácie srdca znížili v štúdii MERCURI-2 výskyt akútneho poškodenia obličiek z 52 % na 28 %. Rozsah účinku je nezvyčajne veľký, no podstatnú časť rozdielu tvorili prípady definované krátkodobou oligúriou — a dapagliflozín diurézu sám zvyšuje. Mortalita, potreba náhrady funkcie obličiek, dĺžka hospitalizácie ani závažné kardiorenálne príhody sa nezmenili a bezpečnostný súbor bol príliš malý a príliš selektovaný na vylúčenie perioperačnej ketoacidózy.</em></p>
 
 <h2>Prečo je téma dôležitá</h2>

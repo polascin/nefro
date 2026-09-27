@@ -27,6 +27,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Čínska klastrová randomizovaná štúdia CREATION zistila, že po týždňovom zážitkovom školení lekárov dosiahlo HbA1c pod 7 % o 17 percentuálnych bodov viac pacientov. Dôkaz sa týka celého programu, nie samotného hrania rolí, a nezahŕňa klinické komplikácie ani obličkové výsledky.',
     'content'      => <<<'HTML'
+<figure><a href="img/role-play-vzdelavanie-lekarov-diabetes-creation.webp" rel="noopener noreferrer" target="_blank"><img src="img/role-play-vzdelavanie-lekarov-diabetes-creation.webp" alt="Dve prázdne stoličky oproti sebe v šere; na jednej leží stetoskop, na druhej zápisník, medzi nimi svetelná cesta" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Zážitkové vzdelávanie prenáša lekára na druhú stoličku — otázkou pre prax je, či sa to prejaví na kompenzácii pacienta.</figcaption></figure>
+
 <p class="article-dek"><em>Nedostatočná kompenzácia diabetu 2. typu nie je iba dôsledkom nízkej účinnosti liekov alebo slabej adherencie pacienta. Významnú úlohu majú klinická zotrvačnosť, komunikačné nedostatky a rozdiel medzi znalosťou odporúčaní a ich uplatňovaním v praxi. Čínska klastrová randomizovaná štúdia skúmala, či tento rozdiel možno zmenšiť intenzívnym zážitkovým vzdelávaním lekárov, ktorého súčasťou bolo hranie úlohy pacienta.</em></p>
 
 <h2>Prečo je téma dôležitá</h2>

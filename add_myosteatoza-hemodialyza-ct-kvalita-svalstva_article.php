@@ -27,6 +27,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Japonská štúdia u 114 hemodialyzovaných pacientov spája CT ukazovatele tukovej infiltrácie svalstva so silou stisku ruky. Prierezový dizajn a chýbajúca externá validácia však bránia rutinnému použitiu.',
     'content'      => <<<'HTML'
+<figure><a href="img/myosteatoza-hemodialyza-ct-kvalita-svalstva.webp" rel="noopener noreferrer" target="_blank"><img src="img/myosteatoza-hemodialyza-ct-kvalita-svalstva.webp" alt="Rez svalom so zachovaným objemom, ale s vláknami premramorovanými tukom; vedľa nepoužitý dynamometer v tieni" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Objem svalu môže zostať zachovaný, kvalita nie — a zobrazenie zatiaľ nenahradí to, čo ukáže funkčný test.</figcaption></figure>
+
 <p class="article-dek"><em>Tuková infiltrácia kostrového svalstva môže byť spojená so zníženou svalovou silou aj vtedy, keď celková svalová plocha ešte nie je výrazne redukovaná. Nová štúdia u 114 pacientov na udržiavacej hemodialýze ukázala súvislosť medzi CT ukazovateľmi myosteatózy a silou stisku ruky. Prierezový dizajn, malý počet účastníkov a chýbajúca externá validácia však neumožňujú zaviesť tieto ukazovatele ako samostatné diagnostické testy.</em></p>
 
 <h2>Prečo nestačí merať množstvo svalstva</h2>

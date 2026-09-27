@@ -27,6 +27,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Pätnásťročná írska štúdia zaznamenala pokles podielu stafylokokových infekcií a relatívny vzostup gramnegatívnych paličiek. Najvýznamnejším modifikovateľným rizikom zostáva centrálny venózny katéter.',
     'content'      => <<<'HTML'
+<figure><a href="img/infekcie-krvneho-rieciska-hemodialyza-mikrobiologicke-spektrum.webp" rel="noopener noreferrer" target="_blank"><img src="img/infekcie-krvneho-rieciska-hemodialyza-mikrobiologicke-spektrum.webp" alt="Katétrový nadstavec a okolo neho riedky, no druhovo pestrý roj mikroorganizmov rôznych tvarov" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia, nie mikroskopický nález. Prípadov ubúda, no skladba pôvodcov sa mení — a to mení aj úvodnú voľbu liečby.</figcaption></figure>
+
 <p class="article-dek"><em>Pätnásťročná írska štúdia zaznamenala pokles podielu stafylokokových infekcií a relatívny vzostup gramnegatívnych baktérií. Najvýznamnejším modifikovateľným rizikovým faktorom zostáva centrálny venózny katéter. Časová súvislosť s otvorením novej dialyzačnej jednotky je zaujímavá, ale sama osebe nedokazuje príčinný účinok.</em></p>
 
 <h2>Prečo je téma dôležitá</h2>

@@ -27,6 +27,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Modifikovaný kreatinínový index obstojí ako jednorazový odhad svalovej hmoty pri peritoneálnej dialýze, jeho sériové zmeny však skutočný vývoj svalstva nesledujú. Prehľad praktického hodnotenia sarkopénie.',
     'content'      => <<<'HTML'
+<figure><a href="img/sarkopenia-peritonealna-dialyza-modifikovany-kreatininovy-index.webp" rel="noopener noreferrer" target="_blank"><img src="img/sarkopenia-peritonealna-dialyza-modifikovany-kreatininovy-index.webp" alt="Ubúdajúci sval a pred ním príliš krátky merací prvok, ktorý ho celý nepokryje" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Jeden odvodený index zachytí len časť úbytku svalovej hmoty; zvyšok zostane nezmeraný.</figcaption></figure>
+
 <p class="article-dek"><em>Jednoduché výpočtové ukazovatele môžu upozorniť na úbytok svalovej hmoty, nemôžu však nahradiť hodnotenie svalovej sily, množstva svalstva, fyzickej výkonnosti, hydratácie a reziduálnej funkcie obličiek. Pri modifikovanom kreatinínovom indexe je rozhodujúce rozlíšiť dve odlišné otázky: ako dobre odhadne svalovú hmotu v jednom časovom bode a či dokáže zachytiť jej zmenu v čase. Odpoveď na tieto dve otázky nie je rovnaká.</em></p>
 
 <h2>Čo presne znamená sarkopénia</h2>

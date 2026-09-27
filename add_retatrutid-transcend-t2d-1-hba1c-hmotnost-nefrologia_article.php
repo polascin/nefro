@@ -27,6 +27,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Trojitý agonista receptorov GIP, GLP-1 a glukagónu znížil v štúdii fázy 3 TRANSCEND-T2D-1 HbA1c o 1,94 percentuálneho bodu a hmotnosť o 15,3 %. Ide o selektovanú populáciu s včasným diabetom, 40-týždňové sledovanie a porovnanie iba s placebom, bez kardiorenálnych výsledkov.',
     'content'      => <<<'HTML'
+<figure><a href="img/retatrutid-transcend-t2d-1-hba1c-hmotnost-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/retatrutid-transcend-t2d-1-hba1c-hmotnost-nefrologia.webp" alt="Dva strmo klesajúce stĺpce svetla, za ktorými sa plocha končí a ďalej je úplná neosvetlená tma" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Pokles glykémie aj hmotnosti je presvedčivý; o tom, čo to znamená pre srdce a obličky, zatiaľ dôkazy chýbajú.</figcaption></figure>
+
 <p class="article-dek"><em>Retatrutid dosiahol v prvej štúdii fázy 3 pri diabete 2. typu výrazné metabolické účinky. Výsledky sa však týkajú selektovanej populácie s včasným diabetom liečeným iba režimovými opatreniami, krátkeho 40-týždňového sledovania a porovnania s placebom, nie s aktívnou liečbou. Retatrutid zostáva skúšaným liekom bez preukázanej ochrany obličiek alebo kardiovaskulárneho systému.</em></p>
 
 <p>Tento článok je podrobným kritickým rozborom štúdie TRANSCEND-T2D-1 so zameraním na nefrologické súvislosti. Prehľadové spracovanie oboch retatrutidových štúdií prezentovaných na kongrese ADA 2026 nájdete v článku <a href="article.php?slug=retatrutid-ubytok-hmotnosti-metabolicke-benefity">Retatrutid prináša výrazný úbytok hmotnosti aj metabolické benefity</a>.</p>
