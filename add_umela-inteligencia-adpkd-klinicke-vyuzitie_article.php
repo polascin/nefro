@@ -57,6 +57,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Umelá inteligencia môže pri ADPKD automatizovať meranie celkového objemu obličiek. Kde už prináša klinický úžitok, čo zostáva výskumné a prečo nenahrádza odbornú interpretáciu?',
     'content'      => <<<'HTML'
+<figure><a href="img/umela-inteligencia-adpkd-klinicke-vyuzitie.webp" rel="noopener noreferrer" target="_blank"><img src="img/umela-inteligencia-adpkd-klinicke-vyuzitie.webp" alt="Oblička plná cýst obkreslená presnou výpočtovou mriežkou, ktorá sa končí ostrou hranou a ďalej je tma" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Merať objem cýst algoritmus zvládne spoľahlivo; rozhodnutie o pacientovi leží za hranicou, kam nedosiahne.</figcaption></figure>
+
 <p><strong>Autozómovo dominantná polycystická choroba obličiek (ADPKD)</strong> je najčastejším monogénovým ochorením obličiek spojeným so zlyhaním obličiek. Jej priebeh je veľmi variabilný: u niektorých pacientov zostáva funkcia obličiek dlho stabilná, u iných ochorenie progreduje rýchlo. Odhad individuálneho rizika je preto rozhodujúci pre intenzitu sledovania, výber pacientov vhodných na liečbu tolvaptánom aj plánovanie dlhodobej starostlivosti.</p>
 
 <p>Prehľadový článok publikovaný v časopise <em>Nephrology Dialysis Transplantation</em> sumarizuje, ako môže umelá inteligencia (AI) podporiť zobrazovaciu analýzu, prognostickú stratifikáciu, interpretáciu genetických nálezov a klinický výskum pri ADPKD. Najbližšie k reálnemu klinickému využitiu je automatizované meranie celkového objemu obličiek (TKV). Ostatné aplikácie zostávajú prevažne vo fáze vývoja a validácie.</p>

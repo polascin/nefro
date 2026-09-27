@@ -114,9 +114,16 @@ if ($mode === 'local') {
             continue;
         }
 
-        $eol = str_contains($src, "\r\n") ? "\r\n" : "\n";
-        $anchor = "'content'      => <<<'HTML'" . $eol;
+        // Niektore skripty maju zmiesane konce riadkov, preto skus oba varianty.
+        $base = "'content'      => <<<'HTML'";
+        $eol = "\r\n";
+        $anchor = $base . $eol;
         $pos = strpos($src, $anchor);
+        if ($pos === false) {
+            $eol = "\n";
+            $anchor = $base . $eol;
+            $pos = strpos($src, $anchor);
+        }
         if ($pos === false) {
             fwrite(STDERR, "  ✗ {$slug}: kotva 'content' => <<<'HTML' nenájdená v " . basename($file) . "\n");
             $failed++;
