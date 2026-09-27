@@ -37,6 +37,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'AI-asistovaný point-of-care ultrazvuk (POCUS) ako triážny nástroj pre rýchlejšie kardiálne rozhodnutia mimo echolaboratórií — a čo z toho môže vyplynúť pre nefrológiu pri dýchavičnosti, edémoch a kardiorenálnom syndróme.',
     'content'      => <<<'HTML'
+<figure><a href="img/ai-asistovane-pocus-kardialne-rozhodnutia-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/ai-asistovane-pocus-kardialne-rozhodnutia-nefrologia.webp" alt="Ultrazvuková sonda vysielajúca lúč na srdce, odraz spracúvaný výpočtovou mriežkou do jednej jasnej odpovede" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Zrýchlenie rozhodnutia pri lôžku je hlavný prísľub — presnosť však zostáva na tom, kto vyšetruje.</figcaption></figure>
+
 <p>Pacient s dýchavičnosťou, edémom dolných končatín a únavou často smeruje k otázke, či ide
 o srdcové zlyhávanie, významnú chlopňovú patológiu, alebo problém mimo srdca. V praxi je však
 častým úzkym hrdlom dostupnosť echokardiografie. Podľa článku na Medscape môže byť echokardiogram

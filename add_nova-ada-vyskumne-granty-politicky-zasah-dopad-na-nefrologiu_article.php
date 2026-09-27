@@ -33,6 +33,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Reflexia Irla B. Hirscha (MD) na Medscape kritizuje smerovanie ADA a spája ho so škrtmi vo financovaní výskumu (NIH) a s politizáciou vedy. Pre nefrológiu je odkaz jasný: stabilita výskumu je podmienkou, aby sa nové poznatky o diabetickej chorobe obličiek včas premenili na lepšiu starostlivosť.',
     'content'      => <<<'HTML'
+<figure><a href="img/nova-ada-vyskumne-granty-politicky-zasah-dopad-na-nefrologiu.webp" rel="noopener noreferrer" target="_blank"><img src="img/nova-ada-vyskumne-granty-politicky-zasah-dopad-na-nefrologiu.webp" alt="Prúd svetla výskumného financovania zúžený tmavou inštitucionálnou prekážkou pred obličkou" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Keď sa zúži financovanie výskumu, dôsledky sa prejavia až o roky — a nesie ich pacient.</figcaption></figure>
+
 <h2>Prečo je to relevantné pre nefrológiu</h2>
 
 <p>Klinická nefrológia sa často diskutuje cez diagnózy, liečbu a komplikácie. To podstatné však býva aj „mimo ambulancie“: stabilita výskumného ekosystému, dostupnosť grantov a schopnosť vedeckej komunity rýchlo pretavovať výsledky do praxe. Diabetes mellitus, najmä jeho chronické mikrovaskulárne poškodenie, je pritom jedným z hlavných motorov chronického ochorenia obličiek.</p>

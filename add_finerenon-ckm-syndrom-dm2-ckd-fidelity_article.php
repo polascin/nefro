@@ -37,6 +37,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Post-hoc združená analýza FIDELITY (12 990 pacientov s DM2 a CKD): finerenón znižoval kardiovaskulárne aj renálne príhody konzistentne naprieč štádiami CKM syndrómu, s priaznivejšou dynamikou CKM (regresia III→II) a porovnateľnou bezpečnosťou vrátane hyperkaliémie.',
     'content'      => <<<'HTML'
+<figure><a href="img/finerenon-ckm-syndrom-dm2-ckd-fidelity.webp" rel="noopener noreferrer" target="_blank"><img src="img/finerenon-ckm-syndrom-dm2-ckd-fidelity.webp" alt="Molekula vysielajúca tri rovnako silné lúče k srdcu, metabolickým časticiam a obličke" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Účinok nemieri na jediný orgán — a práve preto dáva zmysel hodnotiť ho naprieč celým CKM syndrómom.</figcaption></figure>
+
 <p>Pacienti s diabetes mellitus 2. typu (DM2) a chronickou chorobou obličiek (CKD) tvoria skupinu
 s vysokým rizikom kardiovaskulárnych aj renálnych príhod. V praxi je však diagnostika a riziková
 stratifikácia často „fragmentovaná“: nefrológ rieši obličky, kardiológ srdce a metabolické faktory

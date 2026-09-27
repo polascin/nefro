@@ -37,6 +37,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Prierezová analýza francúzskej kohorty CKD (2389 dospelých): vyššie hladiny indoxyl sulfátu nezávisle súviseli s kognitívnym poškodením (MMSE ≤ 26/30), kým kynurenín a indole-3-acetát nie. Signál pre biomarkery a rizikovú stratifikáciu, nie terapeutické odporúčanie.',
     'content'      => <<<'HTML'
+<figure><a href="img/indoxyl-sulfat-kognitivne-zhorsenie-ckd.webp" rel="noopener noreferrer" target="_blank"><img src="img/indoxyl-sulfat-kognitivne-zhorsenie-ckd.webp" alt="Tmavá molekula stúpajúca zo zlyhávajúcej obličky a dopadajúca ako tieň na mozog, ktorého svetlo sa stlmí" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Toxín, ktorý oblička neodstráni, nezostáva bez následku — zasahuje aj myslenie.</figcaption></figure>
+
 <p>Pacienti s chronickou chorobou obličiek (CKD) majú vyššie riziko neurologických komplikácií,
 ale biologické mechanizmy a využiteľné biomarkery nie sú úplne jasné. V poslednom prehľade na Medscape sa rieši súvislosť medzi metabolitmi odvodenými od tryptofánu, najmä uremickým toxínom
 <strong>indoxyl sulfátom (IS)</strong>, a kognitívnym poškodením u pacientov s CKD.</p>

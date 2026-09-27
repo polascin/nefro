@@ -33,6 +33,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Proteín a kreatín sa z okrajovej „fitness témy“ presunuli do bežných rozhovorov v ambulancii. Medscape zhŕňa päť praktických otázok o bezpečnosti, dávkovaní a výbere. Pre nefrológiu je kľúčové inak odpovedať pacientovi bez ochorenia obličiek a inak pacientovi s CKD (vrátane opatrnej interpretácie kreatinínu).',
     'content'      => <<<'HTML'
+<figure><a href="img/protein-kreatin-uz-nie-su-len-fitness-tema-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/protein-kreatin-uz-nie-su-len-fitness-tema-nefrologia.webp" alt="Odmerka proteínového prášku a kryštalického doplnku, ktorých svetlo siaha až k obličke pod záťažou" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Doplnky sa presunuli z posilňovne do bežnej výživy — a tým aj do nefrologickej ordinácie.</figcaption></figure>
+
 <h2>Prečo sa to dnes týka takmer každého pacienta</h2>
 
 <p>Medicína sa v posledných rokoch stretáva s novou realitou: doplnky výživy, ktoré boli kedysi doménou športu, sa stali súčasťou bežných rozhovorov v ambulancii. V praxi to znamená, že lekár sa čoraz častejšie pýta na dve otázky naraz: „Je to bezpečné?“ a „Ako to správne dávkovať?“</p>

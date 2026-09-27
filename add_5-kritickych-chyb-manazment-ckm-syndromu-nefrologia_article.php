@@ -33,6 +33,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Päť typických chýb v manažmente kardiovaskulárno-renálno-metabolického (CKM) syndrómu podľa Medscape — od vynechania skríningu uACR cez ignorovanie štádia 0 až po pasivitu pri úhradách. Praktické kroky, ako CKM premeniť z konceptu na rutinu v nefrologickej praxi.',
     'content'      => <<<'HTML'
+<figure><a href="img/5-kritickych-chyb-manazment-ckm-syndromu-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/5-kritickych-chyb-manazment-ckm-syndromu-nefrologia.webp" alt="Svetelný oblúk starostlivosti spájajúci srdce, metabolizmus a obličku, prerušený niekoľkými medzerami" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Nie je to jedna veľká chyba — starostlivosť sa stráca v medzerách medzi jednotlivými krokmi.</figcaption></figure>
+
 <h2>Prečo sa o CKM hovorí častejšie</h2>
 
 <p>Kardiovaskulárno-renálno-metabolický (CKM) syndróm predstavuje rámec, ktorý má pomôcť prepojiť tri často „oddelené“ oblasti starostlivosti: kardiovaskulárne riziko, metabolické faktory a obličkové poškodenie. Článok na Medscape zdôrazňuje, že aj keď sa CKM rýchlo presadzuje a existujú naň prvé odporúčania, bežná prax naráža na staré zvyky a fragmentované myslenie.</p>
