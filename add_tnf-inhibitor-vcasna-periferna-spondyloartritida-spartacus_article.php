@@ -32,6 +32,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Štúdia fázy 3 SPARTACUS ukázala, že u pacientov s včasnou aktívnou periférnou spondyloartritídou viedlo okamžité nasadenie golimumabu k vyššej miere klinickej remisie po 24 týždňoch (60 %) než postupná stratégia s metotrexátom (33 %).',
     'content'      => <<<'HTML'
+<figure><a href="img/tnf-inhibitor-vcasna-periferna-spondyloartritida-spartacus.webp" rel="noopener noreferrer" target="_blank"><img src="img/tnf-inhibitor-vcasna-periferna-spondyloartritida-spartacus.webp" alt="Zapálený periférny kĺb upokojený jedným silným včasným lúčom a vedľa neho kĺb pod slabšími postupnými lúčmi" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Včasný rázny zásah priniesol viac remisií než postupné pridávanie liekov.</figcaption></figure>
+
 <p>Pri včasnej periférnej spondyloartritíde môže byť rozhodujúce, ako rýchlo sa podarí potlačiť zápal. Výsledky fázy 3 štúdie SPARTACUS naznačujú, že okamžité nasadenie TNF inhibítora môže viesť k vyššej miere klinickej remisie než štandardný postup s konvenčným syntetickým chorobu modifikujúcim liekom, konkrétne metotrexátom.</p>
 
 <p>V štúdii dosiahlo klinickú remisiu po 24 týždňoch 60 % pacientov liečených golimumabom, zatiaľ čo v skupine s postupnou liečbou metotrexátom to bolo 33 %. Rozdiel bol štatisticky významný. Klinická remisia bola definovaná prísne: ako úplná neprítomnosť artritídy, daktylitídy alebo entezitídy pri klinickom vyšetrení.</p>

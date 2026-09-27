@@ -32,6 +32,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Nositeľné zariadenia majú pri chronických ochoreniach veľký potenciál, no samy osebe medicínu nezlepšia. Užitočným nástrojom sa stávajú až ako súčasť systému s validovanými meraniami, klinickými protokolmi, edukáciou pacienta a jasnou zodpovednosťou za reakciu na abnormality.',
     'content'      => <<<'HTML'
+<figure><a href="img/wearables-chronicke-ochorenia-protokoly-klinicky-zmysel.webp" rel="noopener noreferrer" target="_blank"><img src="img/wearables-chronicke-ochorenia-protokoly-klinicky-zmysel.webp" alt="Roj dátových bodov z náramku prechádzajúci filtrom a meniaci sa na jeden jasný lúč" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Dáta samy nič nevyriešia — hodnotu dostanú až vtedy, keď prejdú cez jasne stanovený postup.</figcaption></figure>
+
 <p>Nositeľné zariadenia už nie sú iba doplnkom pre športovcov a technologických nadšencov. Smart hodinky, fitness náramky, kontinuálne glukózové senzory a ďalšie zariadenia dnes dokážu priebežne zbierať údaje o pulze, fyzickej aktivite, krvnom tlaku, saturácii kyslíka, teplote, spánku či glykemických trendoch. Pri chronických ochoreniach to otvára novú možnosť: sledovať pacienta nielen počas ambulantnej návštevy, ale aj v jeho bežnom živote.</p>
 
 <p>Hlavné klinické posolstvo je však triezve. Wearable technológie majú veľký potenciál, ale samy osebe medicínu nezlepšia. Ak sa z nich má stať užitočný nástroj chronickej starostlivosti, musia byť súčasťou premysleného systému, ktorý zahŕňa edukáciu pacienta, validované merania, klinické protokoly, bezpečné spracovanie dát a jasnú zodpovednosť za reakciu na abnormality.</p>

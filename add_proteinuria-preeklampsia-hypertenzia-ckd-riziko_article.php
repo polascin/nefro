@@ -32,6 +32,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Dánska populačná kohortová štúdia naznačuje, že stredne ťažká alebo ťažká proteinúria pri preeklampsii pomáha identifikovať ženy s vyšším dlhodobým rizikom hypertenzie a chronickej choroby obličiek. Jasná súvislosť s kardiovaskulárnym rizikom sa nepotvrdila.',
     'content'      => <<<'HTML'
+<figure><a href="img/proteinuria-preeklampsia-hypertenzia-ckd-riziko.webp" rel="noopener noreferrer" target="_blank"><img src="img/proteinuria-preeklampsia-hypertenzia-ckd-riziko.webp" alt="Únik bielkoviny z glomerulu, z ktorého vedie svetelné vlákno dopredu k stúpajúcej tlakovej krivke a blednúcej obličke" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Preeklampsia sa pôrodom nekončí — proteinúria môže ukazovať na riziko o roky neskôr.</figcaption></figure>
+
 <p>Preeklampsia sa nemá chápať len ako akútna komplikácia gravidity. Čoraz viac údajov ukazuje, že môže byť aj varovným signálom budúceho kardiometabolického a renálneho rizika. Nová dánska populačná kohortová štúdia pridáva dôležitý detail: závažnosť proteinúrie pri preeklampsii môže pomôcť odhadnúť, ktoré ženy majú po pôrode vyššie riziko neskoršej hypertenzie a chronickej choroby obličiek.</p>
 
 <p>Hlavné posolstvo je praktické. Ženy s preeklampsiou a stredne ťažkou alebo ťažkou proteinúriou mali v dlhodobom sledovaní vyššie riziko novovzniknutej hypertenzie a CKD než ženy bez preeklampsie. Naopak, jasná súvislosť medzi mierou proteinúrie a rizikom kardiovaskulárneho ochorenia sa v tejto analýze nepotvrdila.</p>

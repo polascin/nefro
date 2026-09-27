@@ -32,6 +32,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Nové epidemiologické údaje z francúzskej kohorty NutriNet-Santé spájajú vysoký príjem niektorých potravinových farbív a konzervantov s vyšším rizikom diabetu 2. typu, rakoviny, hypertenzie a kardiovaskulárnych ochorení. Ide o observačné dáta, nie o dôkaz kauzality.',
     'content'      => <<<'HTML'
+<figure><a href="img/potravinove-aditiva-farbiva-konzervanty-chronicke-ochorenia.webp" rel="noopener noreferrer" target="_blank"><img src="img/potravinove-aditiva-farbiva-konzervanty-chronicke-ochorenia.webp" alt="Neprirodzene žiarivé farebné kvapky a konzervačné čiastočky vstupujúce do krvi so zápalovými iskrami" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Prídavné látky sa posudzovali jednotlivo — nové dáta však ukazujú na ich súhrnný vplyv.</figcaption></figure>
+
 <p>Potravinové aditíva sú bežnou súčasťou priemyselne spracovaných a najmä ultraprocesovaných potravín. Farbivá, konzervanty, antioxidanty a ďalšie látky pomáhajú zlepšiť vzhľad, trvanlivosť, chuť alebo technologické vlastnosti výrobkov. Nové epidemiologické údaje z francúzskej kohorty NutriNet-Santé však znovu otvárajú otázku, či ich dlhodobá konzumácia vo vysokých množstvách nemôže súvisieť so zvýšeným rizikom diabetu 2. typu, nádorových ochorení, hypertenzie a kardiovaskulárnych chorôb.</p>
 
 <p>Nejde o dôkaz, že konkrétne aditívum priamo spôsobuje konkrétne ochorenie. Ide o observačné dáta. Napriek tomu sú výsledky dôležité, pretože sa týkajú látok, ktorým je vystavená veľká časť populácie.</p>

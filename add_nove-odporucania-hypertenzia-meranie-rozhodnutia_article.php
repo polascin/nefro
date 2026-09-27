@@ -32,6 +32,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Nové odporúčania pre hypertenziu kladú dôraz na presné meranie krvného tlaku, rozhodovanie podľa celkového kardiovaskulárneho rizika a racionálne skoršie použitie kombinovanej liečby. Bezmanžetové technológie zatiaľ nemajú nahrádzať validované manžetové meranie.',
     'content'      => <<<'HTML'
+<figure><a href="img/nove-odporucania-hypertenzia-meranie-rozhodnutia.webp" rel="noopener noreferrer" target="_blank"><img src="img/nove-odporucania-hypertenzia-meranie-rozhodnutia.webp" alt="Tlakomerová manžeta na pokojne položenom ramene s ostrým stabilným údajom a miznúcim rozmazaným dvojobrazom" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Nepresné meranie vedie k nesprávnemu rozhodnutiu — technika merania je súčasťou diagnózy.</figcaption></figure>
+
 <p>Liečba hypertenzie sa často začína jedným číslom v ambulancii. Problém je, že toto číslo nemusí byť spoľahlivé. Nové odporúčania a ich praktická interpretácia pripomínajú jednoduchú, ale zásadnú vec: ak krvný tlak meriame zle, môžeme nesprávne diagnostikovať, zbytočne liečiť alebo neprimerane zvyšovať dávky liekov.</p>
 
 <p>Hlavné posolstvo je veľmi praktické. Predtým, než pacienta označíme za hypertonika alebo mu pridáme ďalší liek, musíme sa uistiť, že meranie bolo technicky správne. Až potom má zmysel hovoriť o životnom štýle, diéte, alkohole, sodíku, draslíku a farmakoterapii.</p>

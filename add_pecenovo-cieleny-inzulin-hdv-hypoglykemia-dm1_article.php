@@ -32,6 +32,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Štúdia fázy 2b OPTI-2 naznačuje, že pečeňovo cielená formulácia rýchlo pôsobiaceho inzulínu (HDV-lispro) by mohla pri diabete 1. typu znížiť riziko hypoglykémie bez zhoršenia glykemickej kontroly. Ide o investigatívnu liečbu, ktorá potrebuje potvrdenie vo fáze 3.',
     'content'      => <<<'HTML'
+<figure><a href="img/pecenovo-cieleny-inzulin-hdv-hypoglykemia-dm1.webp" rel="noopener noreferrer" target="_blank"><img src="img/pecenovo-cieleny-inzulin-hdv-hypoglykemia-dm1.webp" alt="Inzulínová molekula vedená cievnou cestou priamo do pečene, periférne tkanivá zostávajú pokojne nasvietené" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Ak účinok smeruje prednostne do pečene, môže sa znížiť riziko hypoglykémie v periférii.</figcaption></figure>
+
 <p>Hypoglykémia zostáva jedným z najväčších praktických problémov liečby diabetu 1. typu. Aj pri moderných inzulínoch, kontinuálnom monitorovaní glukózy a dôslednej edukácii pacient stále balansuje medzi hyperglykémiou a hypoglykémiou. Nové údaje zo štúdie fázy 2b naznačujú, že pečeňovo cielená formulácia rýchlo pôsobiaceho inzulínu by mohla toto riziko znížiť bez zhoršenia glykemickej kontroly.</p>
 
 <p>Nejde ešte o liek pripravený na bežnú klinickú prax. Ide o investigatívnu liečbu, ktorá potrebuje potvrdenie vo fáze 3. Výsledky sú však klinicky zaujímavé, pretože sa nesnažia len o ďalšie znižovanie HbA1c, ale o bezpečnejšie dosahovanie glykemických cieľov.</p>
