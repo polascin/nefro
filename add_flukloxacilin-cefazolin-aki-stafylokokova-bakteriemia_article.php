@@ -23,6 +23,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Holandská kohorta 1408 pacientov: akútne poškodenie obličiek vzniklo u 35,2 % pacientov na flukloxacilíne a u 20,2 % na cefazolíne. Väčšina epizód sa objavila do týždňa a zníženie dávky riziko neodstránilo.',
     'content'      => <<<'HTML'
+<figure><a href="img/flukloxacilin-cefazolin-aki-stafylokokova-bakteriemia.webp" rel="noopener noreferrer" target="_blank"><img src="img/flukloxacilin-cefazolin-aki-stafylokokova-bakteriemia.webp" alt="Dve liekovky na tmavej oceli; pod jednou zostáva plocha čistá, spod druhej sa šíri tmavá škvrna k obličke v pozadí" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna, nie zobrazenie konkrétnych prípravkov. Rovnako účinná liečba nemusí mať rovnakú cenu pre obličky.</figcaption></figure>
+
 <p>Bakteriémia spôsobená <em>Staphylococcus aureus</em> (<em>S. aureus</em> bacteraemia, SAB) je závažná infekcia s vysokou mortalitou a širokým spektrom komplikácií. Jednou z nich je akútne poškodenie obličiek (<em>acute kidney injury</em>, AKI). Retrospektívna multicentrická kohortová štúdia z troch holandských nemocníc, publikovaná v <em>Journal of Antimicrobial Chemotherapy</em>, sledovala jeho výskyt, načasovanie, závažnosť a zotavenie u pacientov liečených flukloxacilínom alebo cefazolínom.</p>
 
 <p>Z 1408 zaradených pacientov vzniklo AKI u 483 (34,3 %). Pri flukloxacilíne to bolo 466 z 1324 pacientov (35,2 %), pri cefazolíne 17 z 84 (20,2 %); rozdiel bol štatisticky významný (P = 0,004). Po multivariabilnej úprave zostal flukloxacilín spojený s vyššou šancou na AKI (upravený pomer šancí 2,37; 95 % interval spoľahlivosti 1,30 – 4,55).</p>

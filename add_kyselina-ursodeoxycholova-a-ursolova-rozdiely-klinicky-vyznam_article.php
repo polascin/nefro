@@ -29,6 +29,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Kyselina ursodeoxycholová je liečivo zo skupiny žlčových kyselín s etablovaným využitím pri PBC. Kyselina ursolová je rastlinný triterpenoid bez porovnateľne preukázaného klinického účinku.',
     'content'      => <<<'HTML'
+<figure><a href="img/kyselina-ursodeoxycholova-a-ursolova-rozdiely-klinicky-vyznam.webp" rel="noopener noreferrer" target="_blank"><img src="img/kyselina-ursodeoxycholova-a-ursolova-rozdiely-klinicky-vyznam.webp" alt="Dve na pohľad podobné molekulové štruktúry, každá nasvietená inou farbou, oddelené ostrou čiarou svetla" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Podobný názov zvádza k zámene; klinický význam oboch látok je pritom zásadne odlišný.</figcaption></figure>
+
 <p class="article-dek"><em>Kyselina ursodeoxycholová (UDCA) a kyselina ursolová (UA) nie sú synonymá ani terapeuticky zameniteľné látky. UDCA je žlčová kyselina a liečivo obsiahnuté v liekoch registrovaných na Slovensku s presne vymedzenými indikáciami. UA je rastlinný pentacyklický triterpenoid, ktorého biologické účinky sa skúmajú prevažne v predklinických modeloch a malých klinických štúdiách. Podobnosť názvov preto nesmie viesť k náhrade predpísanej liečby výživovým doplnkom.</em></p>
 
 <p>Názvy oboch látok sa podobajú pre spoločný prvok <em>urso-</em>. Táto názvová podobnosť však neznamená chemickú, farmakologickú ani klinickú príbuznosť. UDCA a UA majú odlišnú chemickú štruktúru, pôvod, metabolizmus aj možnosti použitia.</p>

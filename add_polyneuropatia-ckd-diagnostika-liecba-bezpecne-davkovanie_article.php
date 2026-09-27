@@ -27,6 +27,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Uremická neuropatia vyžaduje diferenciálnu diagnostiku, optimalizáciu nefrologickej liečby a opatrnú farmakoterapiu. HTEMS je sľubný intradialytický doplnok, jeho dôkazy a dostupnosť však zostávajú obmedzené.',
     'content'      => <<<'HTML'
+<figure><a href="img/polyneuropatia-ckd-diagnostika-liecba-bezpecne-davkovanie.webp" rel="noopener noreferrer" target="_blank"><img src="img/polyneuropatia-ckd-diagnostika-liecba-bezpecne-davkovanie.webp" alt="Nervové vlákna so strapkanými obalmi, z ktorých uniká svetlo; vedľa nich zámerne malá kvapka lieku" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Pri zníženej funkcii obličiek rozhoduje nielen voľba lieku, ale aj to, aká malá má byť dávka.</figcaption></figure>
+
 <p class="article-dek"><em>Polyneuropatia u pacienta s chronickou chorobou obličiek nemusí byť automaticky uremická. Diagnostika musí zohľadniť diabetes, lieky, nutričné deficity, paraproteinémiu, zápalové neuropatie aj komplikácie cievneho prístupu. Liečba stojí na ovplyvnení príčiny, bezpečnom zvládnutí neuropatickej bolesti a rehabilitácii. Vysokotónová externá svalová stimulácia počas hemodialýzy priniesla v malých nekontrolovaných štúdiách zlepšenie symptómov, zatiaľ však nie je štandardnou liečbou.</em></p>
 
 <h2>Čo je uremická neuropatia</h2>

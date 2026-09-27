@@ -23,6 +23,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'V katalánskom registri 4205 pacientov vo veku 80 rokov a viac sa päťročné prežívanie podľa úvodnej modality nelíšilo. Prechod z peritoneálnej dialýzy na hemodialýzu bol spojený s vyššou mortalitou, najskôr ako marker zhoršenia stavu.',
     'content'      => <<<'HTML'
+<figure><a href="img/dialyzacna-modalita-prezivanie-oktogenari-pd-hd.webp" rel="noopener noreferrer" target="_blank"><img src="img/dialyzacna-modalita-prezivanie-oktogenari-pd-hd.webp" alt="Dve svetelné cesty, modrá a jantárová, ktoré sa opakovane prepletajú a končia takmer v tom istom bode" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. U najstarších pacientov nerozhoduje ani tak úvodná voľba modality, ako to, čo sa deje počas liečby.</figcaption></figure>
+
 <p>Pacienti vo veku 80 rokov a viac tvoria rýchlo rastúcu časť dialyzovanej populácie, porovnávacích údajov o prežívaní podľa dialyzačnej modality je však v tejto vekovej skupine málo. Populačná kohortová štúdia z Katalánskeho obličkového registra (<em>Registre de Malalts Renals de Catalunya</em>, RMRC), publikovaná v <em>Clinical Kidney Journal</em>, sa preto zamerala práve na nich.</p>
 
 <p>Hlavný výsledok je dvojaký. Po štatistickej úprave <strong>sa päťročné prežívanie nelíšilo</strong> podľa toho, či pacient začal hemodialýzou (HD) alebo peritoneálnou dialýzou (PD). Prechod z peritoneálnej dialýzy na hemodialýzu však bol nezávisle spojený s vyššou mortalitou: pomer hazardu 1,46 (95 % interval spoľahlivosti 1,02 – 2,08; P = 0,038).</p>
