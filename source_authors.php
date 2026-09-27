@@ -311,6 +311,10 @@ function getSourceArticleAuthors(): array {
         // Autori odporúčaní Talianskej nefrologickej spoločnosti (J Nephrol 2026, doi
         // 10.1093/joneph/aajag225, PMID 42614082) - 20 mien overených cez PubMed eutils 2026-08-23.
         'online-hemodiafiltracia-davkovana-liecba-odporucania-sin' => ['Giovanni F. M. Strippoli', 'Giovanni Pellegrino', 'Jörgen Hegbrant', 'Paolo Fabbrini', 'Paolo Luca Maria Lentini', 'Filippo Aucella', 'Vincenzo Panichi', 'Maurizio Gallieni', 'Bernard Canaud', 'Andrew Davenport', 'Alberto Ortiz', 'Rosa Ramos', 'Jolanta Malyszko', 'Rümeyza Kazancıoğlu', 'Martin Kuhlman', 'Ana Carina Ferreira', 'Krister Cromm', 'Sagar Nigwekar', 'Allen R. Nissenson', 'Luca De Nicola'],
+        // Autori oboch častí AUA guideline 2026 pre medicínsky manažment nefrolitiázy
+        // (doi 10.1097/JU.0000000000005227 a 10.1097/JU.0000000000005228;
+        // PMID 42529981 a 42529979) - 19 mien overených cez PubMed a Crossref 2026-09-27.
+        'oblickove-kamene-aua-2026-prevencia-liecba' => ['Margaret S. Pearle', 'Brian R. Matlaga', 'Jodi A. Antonelli', 'Gary N. Asher', 'Thomas Chi', 'Ryan S. Hsi', 'Sennett K. Kim', 'Erin Kirkby', 'Bodo Knudsen', 'Kevin Koo', 'Naim M. Maalouf', 'Vernon M. Pais Jr', 'Ann Paris', 'Kristina L. Penniston', 'Kymora B. Scotland', 'Necole Streeper', 'Gregory Tasian', 'Kyle D. Wood', 'Justin B. Ziemba'],
         // Autori spracovanej studie JASN 2026;37(8):1764-1772 (doi 10.1681/ASN.0000001046,
         // PMID 41719070) - 7 mien overenych cez PubMed 2026-09-11.
         'cielovy-systolicky-tlak-120-ckd-kdigo-realna-prax' => ['Hyeok-Hee Lee', 'So Mi Jemma Cho', 'Cian P. McCarthy', 'Tae-Hyun Yoo', 'Rishi K. Wadhera', 'Eric A. Secemsky', 'Pradeep Natarajan'],
