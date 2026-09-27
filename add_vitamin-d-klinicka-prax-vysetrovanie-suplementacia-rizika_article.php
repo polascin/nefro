@@ -26,6 +26,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Vitamín D nemožno riadiť jediným laboratórnym prahom. Článok oddeľuje populačnú prevenciu od liečby deficitu a CKD-MBD a vysvetľuje, kedy testovať, koho suplementovať a ako predísť hyperkalciémii.',
     'content'      => <<<'HTML'
+<figure><a href="img/vitamin-d-klinicka-prax-vysetrovanie-suplementacia-rizika.webp" rel="noopener noreferrer" target="_blank"><img src="img/vitamin-d-klinicka-prax-vysetrovanie-suplementacia-rizika.webp" alt="Pás zlatého svetla pokojný v strede, na oboch koncoch prepálený do bieleho žiaru s prasklinami a minerálnymi usadeninami" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Škodiť môže nedostatok aj nadbytok — preto má zmysel vyšetrovať cielene a nesuplementovať plošne.</figcaption></figure>
+
 <p class="article-dek"><em>Koncentrácia 25(OH)D nie je diagnóza sama osebe a vyššia dávka nie je automaticky účinnejšia. Bezpečné rozhodovanie sa začína otázkou, prečo vitamín D vyšetrujeme alebo podávame: či ide o zabezpečenie nutričného príjmu, liečbu preukázaného deficitu, prevenciu v osobitnej skupine alebo manažment minerálovej a kostnej poruchy pri chronickej chorobe obličiek.</em></p>
 
 <p>Vitamín D je nevyhnutný pre absorpciu vápnika, homeostázu vápnika a fosfátov, mineralizáciu kostí a fyziologickú reguláciu prištítnych teliesok. Receptor pre vitamín D sa nachádza aj v mnohých ďalších tkanivách a experimentálne údaje podporujú jeho úlohu v imunite, bunkovej diferenciácii či metabolizme. Biologická vierohodnosť však sama osebe nedokazuje, že suplementácia predchádza infekciám, nádorovým ochoreniam, kardiovaskulárnym príhodám, diabetu alebo chronickej chorobe obličiek.</p>

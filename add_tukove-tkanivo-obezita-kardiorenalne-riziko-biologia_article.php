@@ -26,6 +26,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Rozloženie tuku a jeho funkčná kvalita určujú metabolické riziko viac než index telesnej hmotnosti. Prehľad poznatkov o viscerálnom a podkožnom tuku, komunikácii cez mikroRNA a termogenéze — s dôrazom na to, čo z toho pre prax zatiaľ nevyplýva.',
     'content'      => <<<'HTML'
+<figure><a href="img/tukove-tkanivo-obezita-kardiorenalne-riziko-biologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/tukove-tkanivo-obezita-kardiorenalne-riziko-biologia.webp" alt="Aktívne tukové tkanivo s vnútorným pohybom buniek, vysielajúce signálne prúdy k srdcu a obličke" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Tukové tkanivo nie je sklad — je zdrojom signálov, ktoré menia srdce aj obličky.</figcaption></figure>
+
 <p class="article-dek"><em>Metabolické riziko neurčuje len celkové množstvo tuku, ale aj jeho rozloženie, schopnosť bezpečne ukladať energetický nadbytok a endokrinná aktivita. Nové výskumné smery — pohlavne špecifické profily tukového tkaniva, komunikácia so srdcom cez mikroRNA a ovplyvňovanie termogenézy výživou — sú biologicky zaujímavé. Pre klinickú prax však zatiaľ nepredstavujú podklad na zmenu postupov.</em></p>
 
 <p>Obezita sa tradične posudzuje podľa telesnej hmotnosti a indexu telesnej hmotnosti. Takýto prístup je praktický, ale biologicky neúplný. Význam má aj anatomické rozloženie tuku, schopnosť tukového tkaniva bezpečne ukladať energetický nadbytok, jeho zápalová a endokrinná aktivita, pohlavie, vek a interakcia s ďalšími orgánmi.</p>

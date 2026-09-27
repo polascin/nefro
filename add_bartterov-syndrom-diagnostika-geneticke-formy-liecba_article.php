@@ -25,6 +25,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Bartterov syndróm je geneticky heterogénna tubulopatia. Článok spája genotyp s fenotypom, ponúka diagnostický algoritmus a vysvetľuje suplementáciu, úlohu NSAID aj riziká dlhodobej liečby.',
     'content'      => <<<'HTML'
+<figure><a href="img/bartterov-syndrom-diagnostika-geneticke-formy-liecba.webp" rel="noopener noreferrer" target="_blank"><img src="img/bartterov-syndrom-diagnostika-geneticke-formy-liecba.webp" alt="Obličkový tubulus s prelomeným transportným kanálom, ktorým unikajú soľné kryštály do tmy; v pozadí závitnica DNA s jedným stlmeným úsekom" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Porucha jedného transportéra stačí na to, aby oblička trvalo strácala soli — a genetická forma určuje, ktorý to je.</figcaption></figure>
+
 <p class="article-dek"><em>Bartterov syndróm nie je jediná choroba, ale skupina zriedkavých dedičných tubulopatií. Spája ich renálna strata chloridu sodného, sekundárna aktivácia systému renín – angiotenzín – aldosterón, hypokaliemická hypochloremická metabolická alkalóza a spravidla normálny alebo nízky krvný tlak. Genetický typ však zásadne ovplyvňuje vek manifestácie, kalciúriu, sluch, závažnosť liečby aj dlhodobé renálne riziko.</em></p>
 
 <p>Tradičné delenie na „antenatálny“ a „klasický“ Bartterov syndróm už na presnú diagnostiku nestačí. Fenotypy sa prekrývajú, ten istý gén môže viesť k rozdielne závažnému obrazu a pacient s variantmi <em>CLCNKB</em> môže klinicky pripomínať Gitelmanov syndróm. Diagnóza preto vyžaduje spojenie klinického obrazu, acidobázických pomerov, dôkazu renálnej straty chloridov, zobrazovacích nálezov a molekulárno-genetického vyšetrenia.</p>

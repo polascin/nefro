@@ -26,6 +26,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Rozlíšenie primárnej a látkou vyvolanej psychózy nestojí na toxikologickom teste ani na pevnej časovej hranici. Po psychóze vyvolanej kanabisom prejde k schizofrénii asi tretina pacientov — po alkohole a sedatívach približne desatina.',
     'content'      => <<<'HTML'
+<figure><a href="img/primarna-alebo-latkou-vyvolana-psychoza-diagnostika.webp" rel="noopener noreferrer" target="_blank"><img src="img/primarna-alebo-latkou-vyvolana-psychoza-diagnostika.webp" alt="Dve na pohľad rovnaké fialové polia; diagnostický lúč prechádza jedným nezmenený a v druhom sa rozloží na farebné zložky" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Oba obrazy vyzerajú navonok rovnako — rozlíši ich až cielené vyšetrenie a čas.</figcaption></figure>
+
 <p class="article-dek"><em>Psychóza je syndróm, nie etiologická diagnóza. Rozlíšenie primárnej psychotickej poruchy od psychózy vyvolanej psychoaktívnou látkou nemožno založiť na jedinom príznaku, toxikologickom teste ani na pevnej časovej hranici. Rozhoduje časová os, objektívna anamnéza, vylúčenie delíria a sledovanie vývoja po ukončení expozície.</em></p>
 
 <p>Psychotické príznaky sa môžu objaviť pri schizofréniovom spektre, afektívnych poruchách, intoxikácii alebo abstinenčnom syndróme, v súvislosti s liekmi, pri delíriu a pri neurologických, metabolických, endokrinných, infekčných či autoimunitných ochoreniach. Pre nefrológa je táto téma relevantnejšia, než by sa zdalo — u pacienta s pokročilou chorobou obličiek je psychotický obraz spravidla prejavom niečoho iného než primárnej psychiatrickej poruchy.</p>

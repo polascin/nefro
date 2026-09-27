@@ -26,6 +26,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Nová správa KDIGO z pracovného stretnutia v japonskom Kawagoe navrhuje trojfázový rámec rozvoja domácej hemodialýzy. Randomizované údaje však ukazujú, že rozhodujúci nie je samotný presun dialýzy domov — a že intenzívnejšie režimy majú aj vlastné riziká.',
     'content'      => <<<'HTML'
+<figure><a href="img/domaca-hemodialyza-kdigo-vychodna-azia-ramec-rozvoja.webp" rel="noopener noreferrer" target="_blank"><img src="img/domaca-hemodialyza-kdigo-vychodna-azia-ramec-rozvoja.webp" alt="Domáci dialyzačný prístroj svieti isto, no podporné linky od neho do tmy sú tenké, blikajúce a jedna pretrhnutá" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Bez zásobovania, zaškolenia a servisu zostane autonómia pacienta len na papieri.</figcaption></figure>
+
 <p class="article-dek"><em>Domáca hemodialýza dáva vybraným pacientom väčšiu kontrolu nad časom, miestom a často aj frekvenciou liečby. Nová správa organizácie KDIGO navrhuje, ako jej program bezpečne vybudovať vo východnej Ázii. Randomizované štúdie však ukazujú niečo, čo sa v diskusii o domácej dialýze ľahko stráca: klinický prínos neurčuje miesto liečby, ale predpis, podpora a bezpečnostné zázemie.</em></p>
 
 <p>Domáca hemodialýza umožňuje pacientom s <a href="article.php?slug=co-je-dialyza">terminálnym zlyhaním obličiek</a> vykonávať liečbu vo vlastnom prostredí, spravidla častejšie alebo dlhšie, než dovoľuje rozvrh dialyzačného strediska. Jej dostupnosť napriek tomu zostáva v mnohých krajinách veľmi obmedzená.</p>

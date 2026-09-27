@@ -26,6 +26,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'OPAT môže bezpečne skrátiť alebo nahradiť hospitalizáciu, iba ak je súčasťou riadeného programu. Pri CKD navyše vyžaduje ochranu žilového riečiska, dynamické dávkovanie a individualizované monitorovanie toxicity.',
     'content'      => <<<'HTML'
+<figure><a href="img/ambulantna-parenteralna-antimikrobialna-liecba-opat.webp" rel="noopener noreferrer" target="_blank"><img src="img/ambulantna-parenteralna-antimikrobialna-liecba-opat.webp" alt="Infúzia s prenosnou pumpou v domácom prostredí, spojená úzkym svetelným mostom s nemocnicou v pozadí" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Most domov existuje, no je úzky — bezpečnosť tejto cesty stojí a padá na výbere pacienta.</figcaption></figure>
+
 <p class="article-dek"><em>Ambulantná parenterálna antimikrobiálna liečba môže vybraným pacientom umožniť dokončenie terapie mimo nemocnice. Bez formálneho programu, odbornej zodpovednosti a včasnej reakcie na komplikácie však nejde o bezpečnú alternatívu hospitalizácie, ale iba o presun jej rizík do domácnosti.</em></p>
 
 <p>Ambulantná parenterálna antimikrobiálna liečba, označovaná skratkou <strong>OPAT</strong> z anglického <em>outpatient parenteral antimicrobial therapy</em>, znamená podávanie parenterálneho antimikrobiálneho lieku bez nepretržitej hospitalizácie. Najčastejšie ide o intravenóznu liečbu, podľa lieku a programu však môže byť parenterálne podanie aj intramuskulárne alebo subkutánne.</p>
