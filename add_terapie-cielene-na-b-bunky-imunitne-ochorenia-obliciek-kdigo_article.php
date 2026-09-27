@@ -34,6 +34,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Konferencia KDIGO Controversies ukazuje, že cielenie na B bunky pri imunitne sprostredkovaných ochoreniach obličiek nie je jedna stratégia, ale súbor diferencovaných prístupov. Účinnosť aj bezpečnosť závisia od diagnózy a od toho, ako hlboko a akým mechanizmom sa zasiahne B bunková os — od anti-CD20 cez inhibíciu BAFF/APRIL až po terapiu CAR T bunkami.',
     'content'      => <<<'HTML'
+<figure><a href="img/terapie-cielene-na-b-bunky-imunitne-ochorenia-obliciek-kdigo.webp" rel="noopener noreferrer" target="_blank"><img src="img/terapie-cielene-na-b-bunky-imunitne-ochorenia-obliciek-kdigo.webp" alt="Cielený lúč zasahujúci jednu imunitnú bunku spomedzi mnohých, za ňou sa upokojuje zapálený glomerulus" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Zásah mieri na zdroj protilátok — otázkou zostáva, u koho a ako dlho sa oplatí.</figcaption></figure>
+
 <h2>Úvod</h2>
 
 <p>KDIGO (Kidney Disease: Improving Global Outcomes) zorganizovalo v júni 2025 v meste Panama City konferenciu typu „Controversies“ venovanú terapiám, ktoré sa zameriavajú na B bunky pri imunitne sprostredkovaných ochoreniach obličiek. Cieľom bolo zhodnotiť dostupné dôkazy, upozorniť na kontroverzie a identifikovať zásadné medzery v poznatkoch tak, aby sa tieto stratégie dali v praxi využívať cielene a bezpečne.</p>

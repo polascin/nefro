@@ -34,6 +34,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Medicína vie spoľahlivo pomenovať chorobu (disease), no často prehliada chorobnosť (illness) — subjektívnu skúsenosť, že „nie som sám sebou“. Tento rozdiel nie je v nefrológii filozofiou, ale každodenným rozhodovacím rámcom: prežívanie pacienta je relevantný klinický signál aj vtedy, keď laboratórne hodnoty zostávajú stabilné.',
     'content'      => <<<'HTML'
+<figure><a href="img/ked-sa-citime-chori-co-medicina-prehliada-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/ked-sa-citime-chori-co-medicina-prehliada-nefrologia.webp" alt="Postava obklopená rozptýlenou aurou choroby, cez ktorú presný prístrojový lúč prechádza bez povšimnutia" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. To, čo pacient cíti, sa do meraní nepremietne — a predsa to o jeho stave hovorí veľa.</figcaption></figure>
+
 <h2>Úvod</h2>
 
 <p>Medicína je v praxi veľmi úspešná pri identifikovaní toho, „čo je zle“ v tele. Dokáže pomenovať poruchy funkcie orgánov, vysvetliť nálezy a zvoliť liečbu podľa biologického mechanizmu. Zároveň však existuje druhá vrstva, ktorú je len ťažko možné zachytiť vyšetreniami. Ide o <strong>chorobnosť (illness)</strong>, teda skúsenosť, že nie som „svoj“, že moje bežné fungovanie sa narušilo a svet okolo mňa sa začal správať inak.</p>

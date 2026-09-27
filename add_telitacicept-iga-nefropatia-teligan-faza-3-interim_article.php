@@ -33,6 +33,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Interim analýza fázy 3 TELIGAN (n = 318): telitacicept znížil 24-hodinovú proteinúriu o 58,9 % vs 8,8 % pri placebe (relatívne −55 %; p < 0,001) a eGFR klesalo menej; nežiaducich udalostí bolo viac, závažných AE menej.',
     'content'      => <<<'HTML'
+<figure><a href="img/telitacicept-iga-nefropatia-teligan-faza-3-interim.webp" rel="noopener noreferrer" target="_blank"><img src="img/telitacicept-iga-nefropatia-teligan-faza-3-interim.webp" alt="Glomerulus s únikom bielkoviny zúženým na tenký prameň pod svetelným lúčom, okolo ktorého poletujú výstražné iskry" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Výrazný pokles proteinúrie je sprevádzaný vyšším počtom nežiaducich udalostí — obe patria do rovnice.</figcaption></figure>
+
 <p>IgA nefropatia (IgAN) patrí medzi najčastejšie primárne glomerulárne ochorenia vedúce k chronickému zlyhaniu obličiek. Kľúčovou biologickou osou jej patogenézy je okrem iného dysregulácia B buniek a signálnej dráhy sprostredkovanej faktorom aktivujúcim B bunky (BAFF, <em>B-cell activating factor</em>) a ligandom indukujúcim proliferáciu (APRIL, <em>a proliferation-inducing ligand</em>). Telitacicept je fúzny proteín, ktorý cieli a neutralizuje BAFF aj APRIL, a preto predstavuje racionálnu terapeutickú stratégiu pre IgAN.</p>
 
 <h2>Autori zdrojovej štúdie</h2>

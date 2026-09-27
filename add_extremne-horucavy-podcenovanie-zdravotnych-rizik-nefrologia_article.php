@@ -33,6 +33,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Extrémne horúčavy zasahujú viac orgánových systémov naraz a ich dôsledky sa často podceňujú, lebo sa zriedka uvádzajú ako priama príčina ochorenia. Pre nefrológiu je kľúčové, že teplo ľahšie spúšťa dehydratáciu, elektrolytové poruchy a krehkú obehovú rovnováhu — najmä u pacientov s ochorením obličiek a pri liečbe diuretikami.',
     'content'      => <<<'HTML'
+<figure><a href="img/extremne-horucavy-podcenovanie-zdravotnych-rizik-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/extremne-horucavy-podcenovanie-zdravotnych-rizik-nefrologia.webp" alt="Oblička žiariaca nebezpečne horúco uprostred chvejúcich sa vĺn horúceho vzduchu" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Horúčava nezasiahne len obehový systém — oblička je orgán, ktorý dopláca ako jeden z prvých.</figcaption></figure>
+
 <p>Extrémne teploty už nie sú len „letná nepríjemnosť“. Nové údaje podľa prehľadu Medscape ukazujú, že horúčavy výrazne zasahujú viac orgánových systémov naraz a sú spojené s vyššou chorobnosťou aj s vyšším počtom hospitalizácií. Zdôrazňuje sa aj to, že presný dosah sa často ťažko meria, lebo horúčavy nebývajú v záznamoch uvádzané ako priama príčina ochorenia či úmrtia, a preto sa používajú štatistické modely.</p>
 
 <p>Článok predstavuje horúčavy ako významné environmentálne zdravotné riziko, ktoré narastá spolu s frekvenciou a dĺžkou horúčavových epizód.</p>

@@ -33,6 +33,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Medscape upozorňuje, že samotný recept na agonisty GLP-1 receptorov nestačí. Obezita je chronické metabolické ochorenie s relapsom po vysadení a vyžaduje dlhodobý program: metabolické ciele, výživu a svaly, kontinuitu aj riešenie bariér prístupu. Pre nefrológiu jasný signál o kardiometabolickom riziku.',
     'content'      => <<<'HTML'
+<figure><a href="img/glp1-era-novy-model-starostlivosti-o-obezitu-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/glp1-era-novy-model-starostlivosti-o-obezitu-nefrologia.webp" alt="Injekčné pero v strede kruhu podporných prvkov starostlivosti, na vonkajšom okruhu oblička" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Liek je len stredom systému — bez výživy, pohybu a sledovania sa jeho prínos stráca.</figcaption></figure>
+
 <p>Tlak na predpisovanie agonistov GLP-1 receptorov (GLP-1 RA) sa v posledných mesiacoch a rokoch výrazne zrýchlil. Medscape však v kontexte konferencie HLTH Europe 2026 upozorňuje na problém, ktorý je väčší než samotný liek: medzi tým, čo pacienti spravidla potrebujú dlhodobo, tým, ako je nastavená zdravotnícka infraštruktúra, a tým, ako spoločnosť vníma obezitu, vznikol výrazný nesúlad.</p>
 
 <p>Ak chceme z liečby GLP-1 RA získať reálne a udržateľné metabolické benefity, nestačí „napísať recept“. Potrebujeme nový model chronickej starostlivosti o obezitu, ktorý bude riešiť správanie, výživu, udržanie svalovej hmoty, adherenciu aj bariéry prístupu.</p>
