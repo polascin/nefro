@@ -33,6 +33,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Moderná antitrombotická liečba sa posúva od plošného zvyšovania intenzity, ktoré zvyšuje krvácanie, k cielenejšiemu zásahu do trombózy pri zachovaní hemostázy. Najväčšie očakávania sa viažu na inhibítory faktora XI (asundexián, milvexián) v sekundárnej prevencii cievnej mozgovej príhody aj pri fibrilácii predsiení.',
     'content'      => <<<'HTML'
+<figure><a href="img/antitromboticka-liecba-faktor-xi-bezpecnejsia-prevencia.webp" rel="noopener noreferrer" target="_blank"><img src="img/antitromboticka-liecba-faktor-xi-bezpecnejsia-prevencia.webp" alt="Škodlivý trombus rozpúšťaný presným lúčom, zatiaľ čo menšia ochranná zrazenina zostáva nedotknutá" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Cieľom je zasiahnuť patologickú zrazeninu a pritom zachovať hojivú — tam smeruje inhibícia faktora XI.</figcaption></figure>
+
 <p>Antitrombotická liečba dlhodobo naráža na ten istý kompromis: čím účinnejšie potláčame tvorbu zrazenín, tým vyššie je riziko krvácania. Nasledujúci prehľad vychádza z odborného stretnutia venovaného moderným trendom v prevencii tromboembolických príhod. V centre diskusie stáli dve veľké témy — ako zlepšiť sekundárnu prevenciu cievnej mozgovej príhody najmä u pacientov bez fibrilácie predsiení a ako zvládnuť situácie, v ktorých sa v praxi stretáva potreba antikoagulácie pri fibrilácii predsiení s potrebou protidoštičkovej liečby po koronárnych výkonoch, pričom riziko krvácania výrazne limituje dlhodobú kombinovanú terapiu.</p>
 
 <h2>Keď nerozhoduje fibrilácia predsiení, no riziko zrazenín treba aj tak liečiť</h2>

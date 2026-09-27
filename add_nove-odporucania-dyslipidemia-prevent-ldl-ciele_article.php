@@ -32,6 +32,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Odporúčania ACC/AHA/ADA pre dyslipidémiu z roku 2026 zavádzajú kalkulátor PREVENT, hodnotenie 10- aj 30-ročného rizika, jasnejšie cieľové hodnoty LDL a väčší dôraz na ApoB, Lp(a) a koronárne kalciové skóre. Pri sekundárnej prevencii sa kľúčovou hodnotou stáva LDL pod 55 mg/dl (1,4 mmol/l).',
     'content'      => <<<'HTML'
+<figure><a href="img/nove-odporucania-dyslipidemia-prevent-ldl-ciele.webp" rel="noopener noreferrer" target="_blank"><img src="img/nove-odporucania-dyslipidemia-prevent-ldl-ciele.webp" alt="Starý miznúci ciferník nahrádzaný novým a vedľa nich klesajúca hladina tukových častíc v cieve" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Mení sa nástroj odhadu rizika aj cieľová hodnota — obe zmeny posúvajú prah liečby nižšie.</figcaption></figure>
+
 <p>Nové odporúčania ACC/AHA/ADA pre manažment dyslipidémie z roku 2026 prinášajú viacero prakticky dôležitých zmien. Nejde len o kozmetickú úpravu starých pravidiel. Mení sa spôsob odhadu kardiovaskulárneho rizika, zavádzajú sa jasnejšie rizikové kategórie, viac sa pracuje s celoživotným rizikom a pri vyššom riziku sa cieľové hodnoty LDL cholesterolu posúvajú nižšie.</p>
 
 <p>Hlavné posolstvo pre prax je jednoduché: liečba dyslipidémie má byť viac individualizovaná, viac založená na aktuálnejšom odhade rizika a pri rizikových pacientoch dostatočne intenzívna. Zároveň platí, že samotné číslo LDL nestačí. Treba ho interpretovať v kontexte veku, diabetu, chronickej choroby obličiek, aterosklerotického ochorenia, rodinnej anamnézy a ďalších rizikových markerov.</p>

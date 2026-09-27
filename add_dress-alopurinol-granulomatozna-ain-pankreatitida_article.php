@@ -33,6 +33,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Kazuistika ťažkého DRESS syndrómu po alopurinole komplikovaného granulomatóznou akútnou intersticiálnou nefritídou a akútnou pankreatitídou. Ukazuje, prečo má v diagnosticky neprehľadných situáciách s konkurujúcimi príčinami AKI rozhodujúcu hodnotu renálna biopsia.',
     'content'      => <<<'HTML'
+<figure><a href="img/dress-alopurinol-granulomatozna-ain-pankreatitida.webp" rel="noopener noreferrer" target="_blank"><img src="img/dress-alopurinol-granulomatozna-ain-pankreatitida.webp" alt="Tabletka, ktorej svetlo vyvoláva zápal súčasne v obličke aj v podžalúdkovej žľaze" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Jeden liek, viac zasiahnutých orgánov naraz — práve to robí z DRESS diagnostickú pascu.</figcaption></figure>
+
 <p>DRESS syndróm (Drug Reaction with Eosinophilia and Systemic Symptoms, lieková reakcia s eozinofíliou a systémovými príznakmi) je zriedkavá, no potenciálne život ohrozujúca oneskorená hypersenzitívna reakcia. Alopurinol patrí medzi jej najčastejšie spúšťače, pričom renálne postihnutie býva v rámci DRESS pomerne časté — najčastejšie vo forme akútnej intersticiálnej nefritídy (AIN). V bežnej praxi však DRESS môže maskovať alebo napodobňovať infekčné, autoimunitné či metabolické stavy, najmä ak sa pridruží ďalšia komplikácia.</p>
 
 <p>Nasledujúca kazuistika je cenná tým, že ukazuje kombináciu, ktorá robí diagnostiku mimoriadne zložitou: <strong>granulomatózna AIN</strong> spolu s <strong>akútnou pankreatitídou</strong> po alopurinole, doplnená o neurologické prejavy.</p>

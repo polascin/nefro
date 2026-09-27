@@ -33,6 +33,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Tri veľké medzinárodné odporúčania pre lupusovú nefritídu (ACR, EULAR, KDIGO) vychádzajú zo spoločného dôkazového základu, no v niekoľkých bodoch sa významne rozchádzajú — najmä pri výbere úvodného režimu (trojkombinácia verzus dvojkombinácia), miere využitia klinického profilu a tempe hodnotenia liečebnej odpovede.',
     'content'      => <<<'HTML'
+<figure><a href="img/porovnanie-usmerneni-lupusova-nefritida-acr-eular-kdigo.webp" rel="noopener noreferrer" target="_blank"><img src="img/porovnanie-usmerneni-lupusova-nefritida-acr-eular-kdigo.webp" alt="Tri svetelné tabule usmernení mieriace na ten istý glomerulus pod mierne odlišnými uhlami" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Cieľ je spoločný, cesty sa mierne líšia — a rozdiely medzi usmerneniami treba poznať.</figcaption></figure>
+
 <p>Nedávna komparatívna analýza ukazuje, že tri „veľké“ medzinárodné odporúčania pre lupusovú nefritídu (LN) vychádzajú zo spoločného dôkazového základu, no v niekoľkých miestach sa významne rozchádzajú. Tieto rozdiely následne menia praktické rozhodovanie pri výbere režimu, miere využitia klinického profilu pacienta aj pri cieľoch liečby v čase. Nasledujúci text sumarizuje hlavné zhody a odlišnosti z hľadiska klinickej použiteľnosti.</p>
 
 <h2>Diagnostika a sledovanie: rovnaký princíp, odlišná operacionalizácia</h2>

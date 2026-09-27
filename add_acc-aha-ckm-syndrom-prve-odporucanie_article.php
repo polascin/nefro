@@ -34,6 +34,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Americká kardiologická spoločnosť a Americká asociácia srdca vydali prvé spoločné odporúčanie pre kardiovaskulárno-renálno-metabolický (CKM) syndróm. Nový rámec prepája obezitu, metabolické poruchy, chronickú chorobu obličiek a kardiovaskulárne ochorenia do jedného kontinuálneho modelu rizika a starostlivosti so štyrmi štádiami.',
     'content'      => <<<'HTML'
+<figure><a href="img/acc-aha-ckm-syndrom-prve-odporucanie.webp" rel="noopener noreferrer" target="_blank"><img src="img/acc-aha-ckm-syndrom-prve-odporucanie.webp" alt="Novo uzavretý svetelný prstenec spájajúci srdce, metabolické častice a obličku" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Prvé spoločné odporúčanie uzatvára kruh, ktorý sa doteraz hodnotil po častiach.</figcaption></figure>
+
 <p>Americká kardiologická spoločnosť a Americká asociácia srdca vydali prvé spoločné odporúčanie zamerané na <strong>kardiovaskulárno-renálno-metabolický syndróm</strong>, označovaný ako <strong>CKM syndróm</strong>. Ide o nový koncepčný rámec, ktorý prepája obezitu, metabolické poruchy, chronickú chorobu obličiek a kardiovaskulárne ochorenia do jedného kontinuálneho modelu rizika a starostlivosti.</p>
 
 <p>Odporúčanie vzniklo v spolupráci viacerých odborných spoločností vrátane American Diabetes Association, Obesity Association a American Society of Nephrology. Nahrádza staršie odporúčanie AHA/ACC z roku 2013 pre manažment nadváhy a obezity u dospelých.</p>

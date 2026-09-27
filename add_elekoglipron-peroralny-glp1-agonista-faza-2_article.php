@@ -28,6 +28,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Elekoglipron, perorálny malomolekulový GLP-1 agonista, dosiahol v dvoch štúdiách fázy 2 (SOLSTICE a VISTA) klinicky významné zníženie HbA1c a redukciu hmotnosti. Dlhodobé renálne outcome zatiaľ preukázané nie sú.',
     'content'      => <<<'HTML'
+<figure><a href="img/elekoglipron-peroralny-glp1-agonista-faza-2.webp" rel="noopener noreferrer" target="_blank"><img src="img/elekoglipron-peroralny-glp1-agonista-faza-2.webp" alt="Perorálna kapsula, z ktorej vedie svetelné vlákno cez črevo do krvi, kde sa krivka cukru vyrovnáva" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Tabletka namiesto injekcie mení dostupnosť liečby — fáza 2 je však stále len medzikrok.</figcaption></figure>
+
 <p><strong>Elekoglipron</strong> je nový perorálny agonista receptora pre GLP-1 (malá molekula). V dvoch štúdiách fázy 2 dosiahol <strong>klinicky významné zníženie HbA1c a glukózy</strong> u ľudí s diabetom 2. typu a zároveň <strong>významnú redukciu hmotnosti</strong> u populácie s obezitou alebo nadváhou (bez diabetu 2. typu).</p>
 
 <h2>Prečo je to zaujímavé aj z nefrologického pohľadu</h2>
