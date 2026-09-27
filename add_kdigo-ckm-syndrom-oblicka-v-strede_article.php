@@ -25,6 +25,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Prehľad v Kidney International ukazuje, že KDIGO už dnes ponúka ucelený rámec pre manažment kardiovaskulárno-obličkovo-metabolického syndrómu. Nejde o jednu smernicu, ale o sieť odporúčaní a konferenčných správ, v ktorých stojí oblička v strede – nie na okraji.',
     'content'      => <<<'HTML'
+<figure><a href="img/kdigo-ckm-syndrom-oblicka-v-strede.webp" rel="noopener noreferrer" target="_blank"><img src="img/kdigo-ckm-syndrom-oblicka-v-strede.webp" alt="Oblička v strede troch prepletených svetelných oblúkov nesúcich srdce, cievu a metabolické častice" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Kardiovaskulárna, obličková a metabolická zložka sú navzájom prepojené a všetky prechádzajú cez obličku — preto stojí v strede rámca KDIGO.</figcaption></figure>
+
 <p>Chronická choroba obličiek (CKD) už dávno nie je izolovaným nefrologickým problémom. Úzko súvisí s obezitou, diabetom 2. typu, artériovou hypertenziou, dyslipidémiou a kardiovaskulárnym ochorením. V roku 2023 tieto väzby Americká kardiologická asociácia (AHA) formálne pomenovala jednotným pojmom <strong>kardiovaskulárno-obličkovo-metabolický syndróm</strong> (cardiovascular-kidney-metabolic, CKM). Koncept zdôrazňuje, že prevencia a liečba jedného orgánového postihnutia si vyžaduje súčasné zohľadnenie ostatných zložiek.</p>
 
 <p>Prehľadová práca Levina a kolektívu, publikovaná v roku 2026 v časopise <em>Kidney International</em>, ukazuje, že organizácia KDIGO už dnes poskytuje pre túto oblasť ucelený a dôkazmi podložený rámec. Nejde o jedinú „CKM smernicu“. Ide o sieť dokumentov, ktoré sa navzájom dopĺňajú a na ochorenie sa pozerajú optikou obličky.</p>

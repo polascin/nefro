@@ -26,6 +26,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Nová analýza kohort CLSA a EPIC-Norfolk spája vyššie hladiny xylitolu v krvi s vyšším výskytom závažných kardiovaskulárnych udalostí. Ide o zatiaľ nepublikovaný kongresový abstrakt s dôležitými obmedzeniami. Skutočná nefrologická súvislosť xylitolu je pritom iná, než sa zvyčajne uvádza – a týka sa oxalátovej nefropatie.',
     'content'      => <<<'HTML'
+<figure><a href="img/xylitol-kardiovaskularne-riziko-nefrologicka-prax.webp" rel="noopener noreferrer" target="_blank"><img src="img/xylitol-kardiovaskularne-riziko-nefrologicka-prax.webp" alt="Kôpka bielych kryštálov na tmavej oceli, spod ktorej sa ako praskliny šíria tmavočervené vlákna zhlukujúce sa do uzlíkov" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Sladidlo vnímané ako neutrálna náhrada cukru nesie signál, ktorý sa netýka glykémie, ale ciev a zrážania.</figcaption></figure>
+
 <p><strong>Xylitol</strong> (takzvaný „brezový cukor“) je cukrový alkohol – polyol – používaný ako náhrada sacharózy v potravinách, žuvačkách a prostriedkoch ústnej hygieny. Na kongrese Európskej kardiologickej spoločnosti (ESC Congress 2026, Mníchov) boli prezentované údaje, podľa ktorých sú vyššie cirkulujúce hladiny xylitolu spojené s vyšším dlhodobým výskytom závažných nežiaducich kardiovaskulárnych udalostí (major adverse cardiovascular events, MACE) v bežnej populácii.</p>
 
 <p>Téma si zaslúži presné zaobchádzanie, pretože v mediálnych zhrnutiach sa opakovane miešajú <strong>dve rozdielne štúdie</strong> s odlišnými počtami účastníkov, odlišným rozdelením expozície aj odlišnou dĺžkou sledovania. Tento text ich preto oddeľuje a osobitne pomenúva, čo z nich pre nefrologickú prax vyplýva a čo nie.</p>
