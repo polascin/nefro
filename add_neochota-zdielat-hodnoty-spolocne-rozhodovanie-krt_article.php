@@ -26,6 +26,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Takmer štvrtina pacientov pred voľbou náhrady funkcie obličiek nie je ochotná hovoriť o tom, čo je pre nich dôležité. Japonská štúdia so 474 účastníkmi ukazuje, že za mlčaním stojí najmä nedôvera a depresia — nie neochota spolupracovať.',
     'content'      => <<<'HTML'
+<figure><a href="img/neochota-zdielat-hodnoty-spolocne-rozhodovanie-krt.webp" rel="noopener noreferrer" target="_blank"><img src="img/neochota-zdielat-hodnoty-spolocne-rozhodovanie-krt.webp" alt="Dve stoličky oproti sebe a svetlo medzi nimi zastavené mliečnou bariérou, za ktorou niečo nejasne svieti" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Spoločné rozhodovanie predpokladá, že pacient svoje hodnoty vysloví — a to nie je samozrejmosť.</figcaption></figure>
+
 <p class="article-dek"><em>Spoločné rozhodovanie o modalite náhrady funkcie obličiek predpokladá, že pacient povie, čo je pre neho dôležité. Japonská štúdia ukazuje, že takmer štvrtina pacientov to urobiť nechce — a že za mlčaním nestojí odmietanie spolupráce, ale najmä miera dôvery k lekárovi a prítomnosť depresívnych príznakov.</em></p>
 
 <p>Model spoločného rozhodovania (<em>shared decision-making</em>, SDM) sa pri voľbe medzi hemodialýzou, peritoneálnou dialýzou, transplantáciou a konzervatívnym postupom stal štandardom. Jeho logika je jednoduchá: lekár prináša odborné informácie o možnostiach, pacient prináša informácie o tom, čo je pre neho v živote dôležité, a rozhodnutie vzniká zo spojenia oboch.</p>

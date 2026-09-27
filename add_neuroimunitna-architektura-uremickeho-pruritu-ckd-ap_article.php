@@ -26,6 +26,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Pruritus pri chronickej chorobe obličiek trápi vyše tretinu dialyzovaných pacientov a liečba býva empirická. Nový prehľad navrhuje model štyroch neuroimunitných uzlov, ktorý vysvetľuje, prečo antihistaminiká zlyhávajú a prečo gabapentinoidy a difelikefalín zaberajú.',
     'content'      => <<<'HTML'
+<figure><a href="img/neuroimunitna-architektura-uremickeho-pruritu-ckd-ap.webp" rel="noopener noreferrer" target="_blank"><img src="img/neuroimunitna-architektura-uremickeho-pruritu-ckd-ap.webp" alt="Štyri rozdielne uzly prepojené do uzavretého samoposilňujúceho okruhu nad podráždeným tkanivom" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Svrbenie tu nie je reťazec, ale uzavretý okruh — a liečba musí zasiahnuť ten uzol, ktorý ho u daného pacienta poháňa.</figcaption></figure>
+
 <p class="article-dek"><em>Svrbenie pri chronickej chorobe obličiek nemá jednu dominantnú príčinu — a práve preto naň zlyháva liečba postavená na jednom mechanizme. Brazílsky prehľadový článok navrhuje rámec štyroch neuroimunitných uzlov, ktorý mechanistickú zložitosť prekladá do klinicky uchopiteľných domén. Autori ho výslovne označujú za pragmatický a generujúci hypotézy, nie za validovaný systém endotypizácie.</em></p>
 
 <p>Pruritus asociovaný s chronickou chorobou obličiek (v anglickej literatúre <em>CKD-associated pruritus</em>, CKD-aP; staršie „uremický pruritus“) patrí medzi symptómy, ktoré sa v ambulancii ľahko prehliadnu — pacient ich sám nespomenie a lekár sa na ne nespýta. Pritom ide o jeden z najzaťažujúcejších prejavov pokročilého ochorenia obličiek.</p>

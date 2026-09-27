@@ -26,6 +26,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Hypertenzné ochorenia komplikujú približne 9 % tehotenstiev a kardiovaskulárne príčiny tvoria vyše tretiny úmrtí súvisiacich s tehotenstvom. Tlak krvi po pôrode vrcholí medzi 3. a 6. dňom — teda v čase, keď je pacientka spravidla už doma a bez dohľadu.',
     'content'      => <<<'HTML'
+<figure><a href="img/hypertenzia-v-tehotenstve-a-po-porode-nefrologicka-rola.webp" rel="noopener noreferrer" target="_blank"><img src="img/hypertenzia-v-tehotenstve-a-po-porode-nefrologicka-rola.webp" alt="Svetelná cesta s jednou osvetlenou zastávkou, ktorá ďalej pokračuje do tmy už bez ďalších bodov; pozdĺž nej napnutá cieva" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Popôrodná kontrola je zastávkou na ceste, nie jej koncom — riziko pokračuje aj po nej.</figcaption></figure>
+
 <p class="article-dek"><em>Pôrodom sa preeklampsia nekončí. Endotelové a kardiorenálne poškodenie po ňom úplne neustúpi, tlak krvi vrcholí až na tretí až šiesty deň po pôrode a práve toto obdobie nesie najvyššie riziko odvrátiteľného úmrtia matky. Prehľad v <em>JASN</em> označuje popôrodnú kontrolu za kritickú, no nedostatočne využívanú príležitosť — a nefrológovi v nej prisudzuje konkrétnu úlohu.</em></p>
 
 <p>Hypertenzné ochorenia v tehotenstve postihujú podľa prehľadu Line Malhy a Phyllis August približne <strong>9 % tehotenstiev v USA</strong> a patria medzi hlavné príčiny materskej chorobnosti a úmrtnosti. Kardiovaskulárne príčiny pritom tvoria <strong>vyše tretiny všetkých úmrtí súvisiacich s tehotenstvom</strong>.</p>

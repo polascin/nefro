@@ -26,6 +26,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Metaanalýza 94 štúdií s 32 223 pacientmi z 36 krajín zistila kŕče u 55 % dialyzovaných pacientov a intradialytické kŕče u 33 %. Široké predikčné intervaly však hovoria rovnako veľa ako samotné čísla — meranie tohto symptómu nie je zjednotené.',
     'content'      => <<<'HTML'
+<figure><a href="img/krce-kostroveho-svalstva-dialyza-prevalencia-metaanalyza.webp" rel="noopener noreferrer" target="_blank"><img src="img/krce-kostroveho-svalstva-dialyza-prevalencia-metaanalyza.webp" alt="Svalové vlákna stiahnuté do tvrdého bolestivého uzla s vyžarujúcimi líniami napätia, v pozadí dialyzačná linka" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Kŕče postihujú väčšinu dialyzovaných — patria medzi najčastejšie a zároveň najmenej riešené ťažkosti.</figcaption></figure>
+
 <p class="article-dek"><em>Svalové kŕče patria medzi symptómy, ktoré pacienti na dialýze uvádzajú medzi najhoršími, no ktoré sa v ambulancii systematicky nezisťujú. Prvá globálna metaanalýza ukazuje, že sa týkajú viac než polovice pacientov. Jej najpoučnejším nálezom však nie je samotné číslo, ale to, aké je neisté.</em></p>
 
 <p>Kŕče kostrového svalstva sú pri dialýze dlho známym problémom, ktorý sa napriek tomu ocitá na okraji pozornosti. Nemajú vlastný diagnostický kód, nevstupujú do ukazovateľov kvality a v porovnaní s anémiou či fosfátmi nemajú vlastný liečebný algoritmus. Pritom môžu viesť k predčasnému ukončeniu dialyzačnej procedúry, k nedostatočnému odstráneniu tekutín a v konečnom dôsledku k horšej kontrole objemu — teda k dôsledkom, ktoré už tvrdé ukazovatele ovplyvňujú.</p>

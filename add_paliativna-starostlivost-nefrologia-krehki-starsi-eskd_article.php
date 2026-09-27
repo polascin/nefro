@@ -26,6 +26,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Zásady paliatívnej starostlivosti odporúčania uznávajú, no do praxe sa premietajú nedostatočne. Rakúsky prehľad ukazuje, že nefrológ ich môže používať aj bez špecializovaného výcviku — od prognostiky cez depreskripciu až po ukončenie dialýzy.',
     'content'      => <<<'HTML'
+<figure><a href="img/paliativna-starostlivost-nefrologia-krehki-starsi-eskd.webp" rel="noopener noreferrer" target="_blank"><img src="img/paliativna-starostlivost-nefrologia-krehki-starsi-eskd.webp" alt="Nízky široký vchod s teplým svetlom, ku ktorému sa nakláňa krehká svetelná štruktúra; prah je takmer v úrovni zeme" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Paliatívna starostlivosť tu nie je poslednou zastávkou, ale nízkym prahom — vstúpiť sa dá skôr a bez veľkého rozhodnutia.</figcaption></figure>
+
 <p class="article-dek"><em>Pacientov, ktorí sa do konečného štádia obličkového ochorenia dostávajú vo vysokom veku a s výraznou krehkosťou, pribúda. Prehľad v <em>Nephrology Dialysis Transplantation</em> upozorňuje, že paliatívne zásady síce odporúčania uznávajú, no ich praktické zavedenie zostáva nedostatočné — a že nefrológ nepotrebuje na ich používanie špecializovaný výcvik.</em></p>
 
 <p>Nefrológia sa dlho definovala schopnosťou nahradiť zlyhávajúcu funkciu. Táto schopnosť je mimoriadna, no prináša so sebou aj tichý predpoklad: že ak náhrada existuje, má sa použiť. U staršieho a krehkého pacienta tento predpoklad prestáva platiť automaticky.</p>

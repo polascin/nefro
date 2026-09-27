@@ -26,6 +26,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Kanadská kvalitatívna štúdia opisuje, ako nefrológovia volia medzi jednou zjednocujúcou diagnózou a súbehom viacerých. Najznepokojivejší nález: časový tlak a tlak na hospodárnosť systematicky tlačia k najjednoduchšej obhájiteľnej diagnóze bez ohľadu na zložitosť prípadu.',
     'content'      => <<<'HTML'
+<figure><a href="img/occam-hickam-diagnosticke-uvazovanie-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/occam-hickam-diagnosticke-uvazovanie-nefrologia.webp" alt="Lúč sa delí — jedno vlákno vedie k jedinému bodu, viacero vlákien k viacerým samostatným bodom" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Jedna úsporná diagnóza aj viacero súbežných je legitímna odpoveď; zručnosť je vedieť, kedy medzi rámcami prepnúť.</figcaption></figure>
+
 <p class="article-dek"><em>Dve protichodné diagnostické zásady sprevádzajú medicínu už desaťročia: hľadaj jedno vysvetlenie — alebo počítaj s tým, že pacient môže mať naraz viac chorôb. Kanadská kvalitatívna štúdia sa pýtala nefrológov, kedy medzi nimi prepínajú. Najzávažnejší nález sa netýka uvažovania jednotlivca, ale prostredia, v ktorom pracuje.</em></p>
 
 <p>Occamova britva odporúča nehromadiť vysvetlenia nad rámec nevyhnutnosti — hľadať jednu diagnózu, ktorá vysvetlí čo najviac nálezov. Hickamov diktát, pripisovaný americkému internistovi Johnovi Hickamovi, stojí proti nej v často citovanej podobe: pacient môže mať toľko chorôb, koľko sa mu zachce.</p>
