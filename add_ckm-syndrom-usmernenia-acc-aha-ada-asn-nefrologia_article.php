@@ -37,6 +37,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Nové usmernenia ACC/AHA/ADA/ASN zavádzajú kardiovaskulárno-obličkovo-metabolický (CKM) syndróm ako jeden rámec. Čo to znamená pre nefrologickú prax: prepojiť renálne, kardiovaskulárne a metabolické riziko do spoločného postupu detekcie, hodnotenia, manažmentu a sledovania.',
     'content'      => <<<'HTML'
+<figure><a href="img/ckm-syndrom-usmernenia-acc-aha-ada-asn-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/ckm-syndrom-usmernenia-acc-aha-ada-asn-nefrologia.webp" alt="Jeden svetelný rámec spájajúci srdce, metabolické častice a obličku, ktorá je v jeho strede" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Spoločný rámec znamená, že sa už nehodnotí každý orgán zvlášť — a oblička stojí v jeho strede.</figcaption></figure>
+
 <p>Chronické ochorenie obličiek (CKD) zriedka existuje izolovane. U väčšiny pacientov sa prelína
 s diabetom, metabolickými rizikami, obezitou, dyslipidémiou a kardiovaskulárnym ochorením. V praxi
 potom vzniká typický problém: každý odbor rieši „svoje“ diagnózy, ale pacientovo riziko je spoločné

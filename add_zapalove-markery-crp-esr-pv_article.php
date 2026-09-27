@@ -37,6 +37,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Praktické čítanie zápalových markerov v ambulancii: CRP (rýchly, ale nešpecifický), ESR (pomalšia, ovplyvnená „fyzikou krvi“) a plazmatická viskozita (PV). Všetky sú citlivé, no nízko špecifické — výsledok treba interpretovať v kontexte, nie izolovane.',
     'content'      => <<<'HTML'
+<figure><a href="img/zapalove-markery-crp-esr-pv.webp" rel="noopener noreferrer" target="_blank"><img src="img/zapalove-markery-crp-esr-pv.webp" alt="Tri skúmavky krvi, každá s iným fyzikálnym signálom, ukazujúce na to isté skryté zápalové svetlo" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Tri ukazovatele merajú ten istý dej odlišne — a líšia sa najmä rýchlosťou, akou reagujú.</figcaption></figure>
+
 <p>Zápalové markery sa v bežnej ambulantnej praxi používajú často, no niekedy sa s nimi robí jedna
 z dvoch chýb: buď sa berú ako „diagnóza sama o sebe“, alebo sa interpretujú bez kontextu klinického
 obrazu. Medscape „Primary Care Hack“ sa zameriava najmä na praktické čítanie výsledkov <strong>CRP</strong>,

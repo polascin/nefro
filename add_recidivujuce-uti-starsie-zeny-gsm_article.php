@@ -38,6 +38,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Praktický prístup k recidivujúcim infekciám močových ciest u starších žien: kedy potvrdiť infekciu a kedy nie, prečo pozitívny nález automaticky neznamená antibiotiká, a prevencia bez antibiotík — vrátane kľúčovej úlohy lokálnych vaginálnych estrogénov pri urogenitálnom syndróme menopauzy (GSM).',
     'content'      => <<<'HTML'
+<figure><a href="img/recidivujuce-uti-starsie-zeny-gsm.webp" rel="noopener noreferrer" target="_blank"><img src="img/recidivujuce-uti-starsie-zeny-gsm.webp" alt="Stenčená ochranná slizničná bariéra, cez ktorú opakovane prenikajú baktérie, a vedľa nej obnovujúce sa tkanivo" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Kým sa neobnoví bariéra, infekcie sa vracajú — antibiotikum rieši epizódu, nie príčinu.</figcaption></figure>
+
 <p>Opakované infekcie močových ciest (recurrent UTI) sú u starších žien časté a klinicky náročné.
 Problém nie je len v tom, že je potrebné „potvrdiť infekciu“, ale aj v tom, že časť ťažkostí
 napodobňuje infekciu bez toho, aby išlo o aktívnu bakteriálnu cystitídu. Z toho vyplýva riziko

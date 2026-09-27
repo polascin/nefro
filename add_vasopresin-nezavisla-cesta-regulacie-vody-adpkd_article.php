@@ -29,6 +29,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Objav dráhy urát – AMPK – AQP2 v zberných kanálikoch odhaľuje, ako oblička vstrebáva vodu nezávisle od vazopresínu. Sľubuje zmiernenie akvaretickej záťaže tolvaptanu pri ADPKD a lepšiu toleranciu liečby.',
     'content'      => <<<'HTML'
+<figure><a href="img/vasopresin-nezavisla-cesta-regulacie-vody-adpkd.webp" rel="noopener noreferrer" target="_blank"><img src="img/vasopresin-nezavisla-cesta-regulacie-vody-adpkd.webp" alt="Cystami prestúpená oblička so stlmenou hormonálnou cestou a druhým, novo otvoreným svetelným kanálom" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Ak hospodárenie s vodou riadi aj druhá cesta, otvára sa liečebný cieľ mimo doterajšieho mechanizmu.</figcaption></figure>
+
 <p>Autozomálne dominantná polycystická choroba obličiek (ADPKD) patrí k ochoreniam, kde je jedným z hlavných cieľov liečby obmedziť rast cýst — to sa však darí len za cenu nežiaducich účinkov. Nový translačný poznatok tímu z Mayo Clinic opisuje doplnkový, od vazopresínu nezávislý mechanizmus, ktorým oblička reguluje spätné vstrebávanie vody. V budúcnosti by mohol zmierniť akvaretickú záťaž liečby tolvaptanom a zlepšiť tak jej toleranciu.</p>
 
 <h2>Prečo je to dôležité pre nefrológov</h2>

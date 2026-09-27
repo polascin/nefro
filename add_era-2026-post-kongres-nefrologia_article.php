@@ -37,6 +37,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Post-kongresový rámec ERA 2026 pre nefrológiu: ako preniesť highlights v oblasti CKD, dialýzy, transplantácie a kardiovaskulárneho rizika do každodenného rozhodovania — praktické „check“ body pre ambulanciu, dialýzu aj sledovanie po transplantácii.',
     'content'      => <<<'HTML'
+<figure><a href="img/era-2026-post-kongres-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/era-2026-post-kongres-nefrologia.webp" alt="Široký rozptyl svetelných bodov zužujúci sa do niekoľkých silných lúčov mieriacich na obličku" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Z množstva kongresových výstupov sa do praxe dostane len to, čo vydrží zúženie na konkrétne rozhodnutie.</figcaption></figure>
+
 <p>Často sa stáva, že po veľkých odborných kongresoch (ERA) máme pocit „bolo toho veľa“, no v ambulancii
 potrebujeme rýchlo určiť, čo z toho má praktický dosah. Tento post-kongresový materiál uvádza highlights
 so zameraním na <strong>manažment kardiovaskulárneho rizika, transplantáciu, dialýzu a chronické ochorenie
