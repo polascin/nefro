@@ -2,6 +2,7 @@
     "version": 1,
     "files": {
         "./img/ckm-syndrom-mitochondrie-zapal-organy.png": "7485d5a504927dc7ab5f4e74d2895be5d2e160434a9e87d898d0a4e90707813a",
+        "img/10-najcastejsich-chyb-pri-predpisovani-sglt2-inhibitorov-a-glp-1-agonistov.png": "b50d08f0ff2146ff55af61b90fca1bc161a46fa03311c645d2aad15e0336c397",
         "img/12-knih-lekar-choroba-pacient-narativna-medicina.png": "0da8f23bb630535d74240559032d954edb774327f8b089c80fc377d22c411fbc",
         "img/4t-skore-heparinom-indukovana-trombocytopenia.png": "57f91b9a6bcd9d1a1697ac70920562494d44a3a1f5f04dd7c3147605353f155d",
         "img/5-kritickych-chyb-manazment-ckm-syndromu-nefrologia.png": "e14d51fee20ec043e46174ad584bcf71264ba7b4332836a04905971922d68659",
@@ -127,6 +128,7 @@
         "img/genotypizacia-apol1-zivy-darca-oblicky.png": "8ee59af24f105d4e9f9cbdd4a1d64605e4d3c8ec746ba3d577ae6394ee44c3f3",
         "img/genotypizacia-receptora-pre-vitamin-d-nova-cesta-k-prevencii-diabetu-2-typu.png": "31cc7d9952bec1914f97e259329e7611c2de9065a2d68d435bc23daa53614701",
         "img/gentamycinova-vestibulotoxicita-ckd-dialyza.png": "2e5223e691767f01db129b3d60a96e056a4d929052c4dda4a9aa0cfdaca63b01",
+        "img/glp-1-agonisty-pred-operaciou-vysadit-alebo-pokracovat.png": "81b7381d1e75d27d59609b09769d00080c065559e79edaa04870f13dbce660fb",
         "img/glp1-era-novy-model-starostlivosti-o-obezitu-nefrologia.png": "518c5b032190929252f06d82f9d923011e644639f00988c30f6467dbbd5b3cc8",
         "img/glp1-ischemicka-opticka-neuropatia-naion.png": "dcfcf806f3c766ccfc8a512023223294010ddbf8e2b68d9a79f82e9dfc895260",
         "img/glp1-kompulzivne-spravanie-food-noise-nefrologia.png": "8cd0f208146761009bc5a54e40bea4c0c4572974a74261a1e2351fbac075597f",
@@ -145,6 +147,7 @@
         "img/iga-nefropatia-kdigo-2025-kdoqi.png": "a218e84818e61e35f5300a6233c984ff3c2c0e9b6d05ebd40650858faac717bb",
         "img/iga-nefropatia-kdigo-komentar-komplement-b-bunky-endotelin.png": "a8777ad0fd5fed1e6243936c32c7282362b905a5f7fc1724c76d101e2cc2df28",
         "img/iga-nefropatia-nove-cielene-terapie.png": "a7e149a14d8ec8c97e16b6684584f4c98edd71d3f75905f68d294f9eaa25be70",
+        "img/iga-nefropatia-uloha-april-v-stvorzasahovom-modeli-patogeneze.png": "f4ca22d0394b62fcaa7036230b852cc90d9ba72bc2c07498d294fa0de3ba88db",
         "img/iga-nefropatia-v-ere-novych-terapeutickych-moznosti.png": "b1bf1ff65103074b4ab6b42ed4854bb12b823bb2f71d2f4615494becda454046",
         "img/ikodextrin-pd-srdcove-zlyhavanie-observacne-udaje.png": "d12d302327a8b9eb2e7c99a96b0a7ea0697fb710fab15e35b8ce7bbe0f8ecd1f",
         "img/implementacia-intenzivnej-kontroly-tlaku-esprit-nefrologia.png": "1260624b444b60f588f7990070c4d05a5d743ffc730afe80f7d3178490f48fbd",
@@ -490,6 +493,7 @@
         "img/pohybova-aktivita-fibrilacia-predsieni-cmp-mortalita.png": "132eca2e53f9620390e323c16419ecb8f99b04a0ec4df23a7cd01b3ca14e8564",
         "img/polyneuropatia-ckd-diagnostika-liecba-bezpecne-davkovanie.png": "346af7bf021d10f87b43491dfd37658ac8eacff0f336a37d0d9892c458c44562",
         "img/porovnanie-usmerneni-lupusova-nefritida-acr-eular-kdigo.png": "aa95311bdd1ef0ec8493aa92490a8008e4a35e88d03fe5902e945a1b879fe29e",
+        "img/porovnavacia-ucinnost-liecby-iga-nefropatie-sietova-metaanalaza.png": "ae392eff0154de508b96dd090939bc4a80cb680944bb63790427ea0b1a61831e",
         "img/porucha-cuchu-hemodialyza-kognicia-albumin.png": "ce852e4431416abff4ea82c738bd7344a4e9491de570b030fb7cf25ee7f0d082",
         "img/postkongres-eha-asco-2026-onkonefrologia.png": "5dd1bc300199a14fcdedd6fe8d39fb2b1d3cde783791ed880273e41beb1e3346",
         "img/postmarketingove-bezpecnostne-zlyhania-liekov-fda-ema.png": "d863c89433351637d0975f8912ce5c5e656c6686429b779808eb9b832b58b51a",
@@ -573,6 +577,7 @@
         "img/tirzepatid-diabeticka-retinopatia-surpass-cvot.png": "5c1e6dd097eef55aef94e90e76e839900e1234eb9e468426cc127935ed6de3ed",
         "img/tirzepatid-mounjaro-fda-kardiovaskularne-riziko-t2d-surpass-cvot.png": "7ac6a8da4690226d2d44fb1dd3fa49eaae91a1531d27b0fb50fdb36db6ee3272",
         "img/tirzepatid-oblickove-vysledky-surpass-nefrologia.png": "4ac2ef57616a3b480e5efb6264e2a6715c29df32a7a1b6bca11c7e2b97ea8ce3",
+        "img/tirzepatid-verzus-semaglutid-nizsia-mortalita-a-menej-gi-komplikacii.png": "cac35facfa0832f194cfe109c0145ec2b708985cfba08f899bbd2126841a99b4",
         "img/tirzepatid-vs-semaglutid-ucinnost-bezpecnost-nefro.png": "5acbdea9b94971780d02c6d0a22c69aa32bc4da402457a5f1b6d32090f9c0e07",
         "img/tmao-crevny-metabolit-uremicky-toxin-ckd.png": "090f7c3dfce4498205e90bd314088e9fa93e631ca559a84b90228f51ce865876",
         "img/tnf-inhibitor-vcasna-periferna-spondyloartritida-spartacus.png": "e27c45313e2c6f9b31a0f2c47e9030ca29ab408868477053bee0813ee2e2e859",
@@ -639,6 +644,7 @@
         "img/zdn-16.png": "31c872b2f449bcd029f3e7dd2e653bc33d916b756107ec1ea1628fb920f09ebb",
         "img/zdn-17.png": "bba18c025491bc2c833efb92087101c67a182f31ba1c42d21022d33480dd1f64",
         "img/zelenina-infografika.png": "b6edcbc351731123210c90a6972bc283a88fd643499346afc2a67f942113c644",
-        "img/zivot-na-dialyze.png": "85af2e992f63c66afe49eb738366a83026f237f46716c877beff830aed8768bd"
+        "img/zivot-na-dialyze.png": "85af2e992f63c66afe49eb738366a83026f237f46716c877beff830aed8768bd",
+        "img/znizovanie-krvneho-tlaku-u-pacientov-s-ckd-metaanalaza.png": "7fa55f287059b9d59edf969ac06f08092e6a894cf5b19ecf8c32f46edcba61f2"
     }
 }
