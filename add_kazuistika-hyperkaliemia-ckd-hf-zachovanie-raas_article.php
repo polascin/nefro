@@ -22,6 +22,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Hyperkaliémia je najčastejší dôvod prerušenia RAAS inhibície u pacientov s CKD a srdcovým zlyhávaním, no GDMT liečba zlepšuje prognózu. Ako myslieť inak: draslík-viažuce lieky namiesto odstavenia liečby, a prečo patiromer a SZC nie sú navzájom zameniteľné.',
     'content'      => <<<'HTML'
+<figure><a href="img/kazuistika-hyperkaliemia-ckd-hf-zachovanie-raas.webp" rel="noopener noreferrer" target="_blank"><img src="img/kazuistika-hyperkaliemia-ckd-hf-zachovanie-raas.webp" alt="Draslíkové častice odvádzané bokom viazačom, zatiaľ čo hlavný liečebný lúč k srdcu a obličke zostáva v plnej sile" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Draslík sa dá riešiť samostatne — účinnú liečbu tak nie je nutné oslabiť.</figcaption></figure>
+
 <p>V praxi narážame na rovnaký problém znova a znova: pacient má chronické obličkové ochorenie a zároveň srdcové zlyhávanie, je kandidát na liečbu založenú na RAAS inhibícii (ACEi/ARB) a často aj MRA (napr. spironolaktón). Lenže. Hyperkaliémia naháňa strach, klinici liečbu obmedzujú alebo prerušujú a tým pacient prichádza o liečbu, ktorá zlepšuje prognózu.</p>
 
 <p>Tento článok vychádza zo vzdelávacej aktivity „Case-Based Approach: Managing Hyperkalemia in Patients With CKD and Heart Failure“ a prekladá jej hlavné myšlienky do praktického, kazuistického rámca.<sup><a href="https://reachmd.com/programs/cme/case-based-approach-managing-hyperkalemia-in-patients-with-ckd-and-heart-failure/37617/" target="_blank" rel="noopener noreferrer">[1]</a></sup></p>

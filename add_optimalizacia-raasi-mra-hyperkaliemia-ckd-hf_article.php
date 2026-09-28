@@ -29,6 +29,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'RAASi a MRA patria medzi základné liečivá v cardiorenálnom manažmente, ale hyperkaliémia ich často bráni v optimálnom dávkovaní. Namiesto rezignácie je cieľom aktívne riešiť hyperkaliémiu paralelne s titráciou liečby.',
     'content'      => <<<'HTML'
+<figure><a href="img/optimalizacia-raasi-mra-hyperkaliemia-ckd-hf.webp" rel="noopener noreferrer" target="_blank"><img src="img/optimalizacia-raasi-mra-hyperkaliemia-ckd-hf.webp" alt="Váhy so srdcom a obličkou na jednej strane a stúpajúcim stĺpcom draslíkových častíc na druhej" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Vysadiť liečbu je najjednoduchšie riešenie — a spravidla najhoršie pre pacienta.</figcaption></figure>
+
 <h2>Úvod</h2>
 
 <p>RAASi (ACEi/ARB) a MRA (mineralokortikoidový receptorový antagonista) patria medzi základné liečivá v manažmente pacientov so srdcovým zlyhávaním a srdcovo-obličkovým prepojením. V reálnej praxi však často narážame na bariéru, ktorou je hyperkaliémia. Namiesto automatického znižovania dávok alebo vysadenia liečby je cieľom moderného prístupu: udržať pacienta na účinnej RAASi/MRA schéme, pričom hyperkaliémiu riešime aktívne, systematicky a predvídateľne.</p>

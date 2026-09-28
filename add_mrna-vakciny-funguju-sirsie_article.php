@@ -29,6 +29,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Nové experimentálne práce naznačujú, že mRNA vakcíny aktivujú imunitu širšie, než sa predpokladalo — okrem dendritických buniek sa zapájajú aj svalové bunky a mechanizmy cross-presentation a cross-dressing.',
     'content'      => <<<'HTML'
+<figure><a href="img/mrna-vakciny-funguju-sirsie-nez-sme-mysleli.webp" rel="noopener noreferrer" target="_blank"><img src="img/mrna-vakciny-funguju-sirsie-nez-sme-mysleli.webp" alt="Vlákno mRNA v lipidovej guličke, ktorej svetlo siaha širšie než na jeden cieľ a aktivuje okolité imunitné bunky" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Okrem cielenej odpovede sa aktivuje aj širšia vrstva imunity — a to otvára ďalšie využitie.</figcaption></figure>
+
 <p>Vedci dlhé roky predpokladali, že kľúčom účinku mRNA vakcín je ich vstup do dendritických buniek. Tieto bunky patria medzi hlavné „prezentátory“ antigénu a dokážu účinne aktivovať T-lymfocyty. Nové experimentálne práce však naznačujú, že tento mechanizmus je zrejme širší a biologicky pestrejší.</p>
 
 <p>Podľa článku publikovaného na Medscape, ktorý vychádza najmä zo štúdie v časopise <em>Nature Biotechnology</em>, môže mRNA vyvolať imunitnú odpoveď aj vtedy, keď sa jej expresia odohráva v bunkách, ktoré tradične nepovažujeme za imunitné. Významnú úlohu môžu mať napríklad svalové bunky.</p>

@@ -30,6 +30,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Nový prieskum z NKF 2026: hoci 20–30 % chronických ochorení obličiek môže mať genetický základ, len s každým piatym indikovaným pacientom lekár o genetickom testovaní vôbec hovoril.',
     'content'      => <<<'HTML'
+<figure><a href="img/geneticke-testovanie-obliciek-zriedkavo.webp" rel="noopener noreferrer" target="_blank"><img src="img/geneticke-testovanie-obliciek-zriedkavo.webp" alt="Svetelná špirála DNA pri obličke, do ktorej dopadá len jeden tenký lúč, zvyšok zostáva v tme" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Časť diagnóz zostáva neobjasnená len preto, že sa test jednoducho neindikuje.</figcaption></figure>
+
 <p>Genetické príčiny chronickej choroby obličiek sú častejšie, než sa v bežnej klinickej praxi predpokladá. Napriek tomu sa o genetickom testovaní a genetickom poradenstve s pacientmi hovorí len zriedka, dokonca aj v situáciách, keď by takéto vyšetrenie bolo podľa odporúčaní opodstatnené.</p>
 
 <p>Na tento problém upozorňuje nový prieskum prezentovaný na <strong>National Kidney Foundation 2026 Spring Clinical Meetings</strong>. Podľa údajov zverejnených na portáli Medscape iba približne <strong>jeden z piatich pacientov s chronickou chorobou obličiek</strong>, u ktorých bolo genetické testovanie indikované, uviedol, že s ním zdravotnícky pracovník o tejto možnosti vôbec hovoril.</p>

@@ -30,6 +30,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Retrospektívna kohortová štúdia v JAMA Network Open: mierne obmedzenie príjmu bielkovín pod 1,0 g/kg/deň pri CKD v štádiu III–IV bolo spojené s 23 % nižším rizikom nepriaznivých výsledkov a 35 % nižším rizikom dialýzy.',
     'content'      => <<<'HTML'
+<figure><a href="img/mierne-obmedzenie-bielkovin-ckd-prognoza.webp" rel="noopener noreferrer" target="_blank"><img src="img/mierne-obmedzenie-bielkovin-ckd-prognoza.webp" alt="Mierne zúžený prúd bielkovinových častíc vstupujúci do obličky, glomerulus sa viditeľne uvoľňuje" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Cieľom je odľahčiť obličku, nie pacienta vyživovo ochudobniť — rozdiel je v miere.</figcaption></figure>
+
 <p>Diétne odporúčania pri chronickej chorobe obličiek patria medzi najdiskutovanejšie oblasti nefrologickej starostlivosti. Osobitne citlivou témou je príjem bielkovín. Na jednej strane môže nadmerný príjem bielkovín zvyšovať glomerulárnu hyperfiltráciu a urýchľovať progresiu ochorenia obličiek. Na druhej strane príliš prísna restrikcia môže viesť k podvýžive, úbytku svalovej hmoty a horším klinickým výsledkom.</p>
 
 <p>Nová retrospektívna kohortová štúdia publikovaná v časopise <em>JAMA Network Open</em> naznačuje, že <strong>mierne obmedzenie príjmu bielkovín u pacientov s chronickou chorobou obličiek v štádiu III a IV môže byť spojené s lepšími klinickými výsledkami</strong>, najmä s nižším rizikom začatia dialyzačnej liečby.</p>
