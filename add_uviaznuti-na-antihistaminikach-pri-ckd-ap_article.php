@@ -22,6 +22,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Antihistaminiká pri CKD-aP (svrbenie pri chronickom obličkovom ochorení) zvyčajne nepomáhajú, lebo signál svrbenia ide cez nehistamínové dráhy. Čo dnes vieme o mechanizmoch a ako difelikefalin mení prax pri liečbe svrbenia u hemodialyzovaných pacientov.',
     'content'      => <<<'HTML'
+<figure><a href="img/uviaznuti-na-antihistaminikach-pri-ckd-ap-cas-na-prehodnotenie.webp" rel="noopener noreferrer" target="_blank"><img src="img/uviaznuti-na-antihistaminikach-pri-ckd-ap-cas-na-prehodnotenie.webp" alt="Pretrvávajúce svetelné signály svrbenia z kože, ktoré svetlo opakovane podávanej tabletky nepreruší" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Svrbenie pri CKD nevzniká histamínom — preto antihistaminikum spravidla nezaberá.</figcaption></figure>
+
 <p>Chronické svrbenie u pacientov s chronickým obličkovým ochorením (CKD) alebo u dialyzovaných je príliš často prehliadané. A keď sa už zistí, stále sa neraz siahne po antihistaminikách ako po „prvom riešení“. V praxi však môže ísť o úplne iný mechanizmus svrbenia, takže aj dobrý úmysel skončí bez účinku.</p>
 
 <p>V tomto článku vychádzam zo vzdelávacej aktivity zameranej na CKD-aP (CKD-associated pruritus, svrbenie pri CKD) a na to, prečo antihistaminiká často netrafia podstatu problému.</p>
