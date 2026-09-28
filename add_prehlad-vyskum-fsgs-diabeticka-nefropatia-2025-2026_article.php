@@ -30,6 +30,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Sparsentan ako prvý liek schválený špecificky na FSGS, autoprotilátky proti nefrínu v úlohe nového biomarkera a etablovanie trojkombinácie SGLT2i + GLP-1 + finerénon pri diabetickej chorobe obličiek — prehľad kľúčových zistení z rokov 2025–2026.',
     'content'      => <<<'HTML'
+<figure><a href="img/prehlad-vyskum-fsgs-diabeticka-nefropatia-2025-2026.webp" rel="noopener noreferrer" target="_blank"><img src="img/prehlad-vyskum-fsgs-diabeticka-nefropatia-2025-2026.webp" alt="Dva glomeruly vedľa seba — jeden so zjazvením, druhý zhrubnutý cukrovými depozitmi — nasvietené tým istým svetlom" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Dve odlišné cesty poškodenia, ktoré dnes sleduje ten istý prúd výskumu.</figcaption></figure>
+
 <p>Posledné mesiace priniesli v nefrológii niekoľko zásadných posunov. V oblasti fokálnej segmentálnej glomerulosklerózy (FSGS) ide o historicky prvé cielené schválenie liečby a o rýchle dozrievanie nových biomarkerov, pri diabetickej chorobe obličiek o postupné etablovanie kombinovanej kardiorenálnej ochrany. Nasledujúci prehľad sumarizuje najvýznamnejšie zistenia z rokov 2025 – 2026 spolu s ich dopadom na klinickú prax.</p>
 
 <h2>FSGS – fokálna segmentálna glomeruloskleróza</h2>

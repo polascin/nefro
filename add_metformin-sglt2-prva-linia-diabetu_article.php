@@ -30,6 +30,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Aktualizované odporúčanie NICE posúva liečbu diabetu 2. typu ku kardiorenálnej ochrane: metformín s predĺženým uvoľňovaním plus inhibítor SGLT2 v prvej línii u väčšiny pacientov, nasadzované postupne.',
     'content'      => <<<'HTML'
+<figure><a href="img/metformin-sglt2-prva-linia-diabetu-2-typu.webp" rel="noopener noreferrer" target="_blank"><img src="img/metformin-sglt2-prva-linia-diabetu-2-typu.webp" alt="Dve tabletky na začiatku liečebnej cesty, ktorých svetlo dopadá na vyrovnávajúcu sa krivku cukru aj na obličku" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Kombinácia hneď na začiatku mieri nielen na glykémiu, ale aj na ochranu obličiek.</figcaption></figure>
+
 <p>Liečba diabetu 2. typu sa posúva od úzkeho zamerania na glykémiu k širšiemu prístupu, ktorý berie do úvahy kardiovaskulárne, renálne a metabolické riziko pacienta. Tento posun dobre ilustruje aktualizované odporúčanie britského <strong>National Institute for Health and Care Excellence</strong>, známeho ako NICE.</p>
 
 <p>Podľa správy publikovanej na portáli Medscape by u väčšiny ľudí s diabetom 2. typu mala byť liečba začatá <strong>metformínom s predĺženým uvoľňovaním</strong> a následne doplnená o <strong>inhibítor SGLT2</strong>. Ide o zmenu, ktorá môže mať významný dopad na každodennú klinickú prax.</p>

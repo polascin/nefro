@@ -30,6 +30,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Renálna denervácia môže u vybraných pacientov s rezistentnou hypertenziou znížiť systolický tlak o 5–10 mmHg. Nie je však náhradou diagnostiky, režimových opatrení ani farmakoterapie — má byť súčasťou systému, nie skratkou.',
     'content'      => <<<'HTML'
+<figure><a href="img/renalna-denervacia-rezistentna-hypertenzia.webp" rel="noopener noreferrer" target="_blank"><img src="img/renalna-denervacia-rezistentna-hypertenzia.webp" alt="Katéter pôsobiaci na stenu obličkovej tepny a stíšujúci nervové vlákna; vedľa zostáva rad tabletiek" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Zákrok tlak zníži, no lieky spravidla nenahradí — preto nejde o skratku.</figcaption></figure>
+
 <p>Rezistentná hypertenzia patrí medzi klinicky najrizikovejšie formy vysokého krvného tlaku. Nejde iba o „vyššie čísla“ na tlakomere. Pacienti s rezistentnou hypertenziou majú vyššie riziko infarktu myokardu, cievnej mozgovej príhody, srdcového zlyhávania, chronickej choroby obličiek a predčasnej kardiovaskulárnej mortality.</p>
 
 <p>V posledných rokoch sa do popredia opäť dostáva <strong>renálna denervácia</strong>. Ide o intervenčný postup, ktorého cieľom je znížiť aktivitu sympatických nervových vlákien v okolí renálnych artérií. Tým môže dôjsť k poklesu krvného tlaku. Podľa diskusie odborníkov v podcaste Medscape <em>InDiscussion</em> sa renálna denervácia postupne začleňuje do štruktúrovaného prístupu k liečbe pacientov s rezistentnou alebo nedostatočne kontrolovanou hypertenziou.</p>

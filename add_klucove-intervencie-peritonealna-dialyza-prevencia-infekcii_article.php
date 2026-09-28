@@ -30,6 +30,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Podcast American Society of Nephrology s Dr. Jeffreym Perlom o prevencii infekčných komplikácií pri peritoneálnej dialýze — peritonitídy aj infekcií katétra. Kľúčom je tímová spolupráca, edukácia pacienta, sledovanie trendov a kultúra kvality v každodennej starostlivosti.',
     'content'      => <<<'HTML'
+<figure><a href="img/klucove-intervencie-peritonealna-dialyza-prevencia-infekcii.webp" rel="noopener noreferrer" target="_blank"><img src="img/klucove-intervencie-peritonealna-dialyza-prevencia-infekcii.webp" alt="Výstupné miesto katétra chránené niekoľkými prekrývajúcimi sa svetelnými prstencami, baktérie zostávajú vonku" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Žiadne jedno opatrenie nestačí — ochranu tvoria vrstvy, o ktoré sa stará celý tím.</figcaption></figure>
+
 <p>Peritoneálna dialýza patrí medzi dôležité formy náhrady funkcie obličiek. Pacientovi poskytuje väčšiu mieru samostatnosti, často umožňuje domácu liečbu a môže priaznivo ovplyvniť kvalitu života. Jej úspech však nestojí iba na technickom zvládnutí výkonu. Jedným z rozhodujúcich faktorov je prevencia infekcií.</p>
 
 <p>Podcast American Society of Nephrology s názvom <strong>Core Interventions for Peritoneal Dialysis</strong> sa venuje práve tejto téme. Hosťom je <strong>Dr. Jeffrey Perl</strong>, ktorý spolu s moderátorom <strong>Dr. Tusharom Choprom</strong> diskutuje o stratégiách na znižovanie infekčných komplikácií pri peritoneálnej dialýze, o medzerách v klinickej praxi, trendoch infekcií a možnostiach zlepšenia prostredníctvom spolupráce a tímovej starostlivosti.</p>

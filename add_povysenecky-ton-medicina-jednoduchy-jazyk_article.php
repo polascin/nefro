@@ -30,6 +30,8 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Zrozumiteľná komunikácia nie je to isté ako infantilizácia. Článok na Medscape upozorňuje, že prehnane zjednodušený alebo povýšenecký jazyk vrátane „elderspeak“ môže pacienta podceniť a narušiť dôveru.',
     'content'      => <<<'HTML'
+<figure><a href="img/povysenecky-ton-medicina-jednoduchy-jazyk.webp" rel="noopener noreferrer" target="_blank"><img src="img/povysenecky-ton-medicina-jednoduchy-jazyk.webp" alt="Dva svetelné útvary v nerovnakej výške, zhora nadol prúdi zjednodušené svetlo a spodný pod ním stmavne" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Zrozumiteľnosť a rešpekt nestoja proti sebe — rozdiel robí tón, nie slovná zásoba.</figcaption></figure>
+
 <p>Komunikácia medzi lekárom a pacientom patrí medzi najdôležitejšie časti medicíny. Správne vysvetlenie diagnózy, liečby a ďalšieho postupu môže rozhodnúť o tom, či pacient porozumie svojmu stavu, bude spolupracovať a bude sa cítiť bezpečne. Zároveň však platí, že komunikácia nie je iba o jednoduchosti. Je aj o dôstojnosti, rešpekte a citlivom odhade konkrétneho človeka.</p>
 
 <p>Na tento problém upozorňuje článok Aryu Anthonyho Kamyaba publikovaný na portáli Medscape. Autor kriticky opisuje jav, ktorý mnohí pacienti poznajú z vlastnej skúsenosti: lekár síce hovorí zrozumiteľne, ale zároveň tak zjednodušene, že pacient má pocit, akoby sa s ním hovorilo ako s dieťaťom.</p>
