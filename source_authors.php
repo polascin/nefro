@@ -362,7 +362,7 @@ function getSourceArticleAuthors(): array {
         'kompletna-remisia-proteinurie-igan-protect-post-hoc' => ['Hiddo J. L. Heerspink', 'Brad H. Rovin', 'Radko Komers', 'Bruce Hendry', 'Alex Mercer', 'Priscila Preciado', 'Edward Murphy', 'Vladimir Tesar'],
         // Autori spracovanej studie APPLAUSE-IgAN (N Engl J Med 2026;395(5):465-477,
         // doi 10.1056/NEJMoa2600743, PMID 41910396) - 29 mien overenych cez PubMed 2026-09-06.
-        'iptakopan-iga-nefropatia-applause-igan-24-mesiacov' => ['Jonathan Barratt', 'Necmi Eren', 'Naoki Kashihara', 'Bart Maes', 'Dana V. Rizk', 'Brad Rovin', 'Hernan Trimarchi', 'Hong Zhang', 'Weiming Wang', 'Ismail Kocyigit', 'Chuanming Hao', 'Vladimir Tesar', 'Kenan Turgutalp', 'Li Yang', 'Guangqun Xing', 'Valter Duro Garcia', 'Seung Hyeok Han', 'Wanhong Lu', 'Antonio Pisani', 'Julia Weinmann-Menke', 'Frank Eitner', 'Nicolas Guerard', 'Dmytro Butylin', 'Luca Monaco', 'Emil Scosyrev', 'Annabel Magirr', 'Ronny Renfurm', 'Thomas Hach', 'Vlado Perkovic'],
+        'iptakopan-iga-nefropatia-applause-igan-24-mesiacov' => ['Jonathan Barratt', 'Necmi Eren', 'Naoki Kashihara', 'Bart Maes', 'Dana V. Rizk', 'Brad H. Rovin', 'Hernan Trimarchi', 'Hong Zhang', 'Weiming Wang', 'Ismail Kocyigit', 'Chuanming Hao', 'Vladimir Tesar', 'Kenan Turgutalp', 'Li Yang', 'Guangqun Xing', 'Valter Duro Garcia', 'Seung Hyeok Han', 'Wanhong Lu', 'Antonio Pisani', 'Julia Weinmann-Menke', 'Frank Eitner', 'Nicolas Guerard', 'Dmytro Butylin', 'Luca Monaco', 'Emil Scosyrev', 'Annabel Magirr', 'Ronny Renfurm', 'Thomas Hach', 'Vlado Perkovic'],
         // Autori spracovanej studie Bax24 (Lancet 2026;407(10532):988-999,
         // doi 10.1016/S0140-6736(25)02549-8, PMID 41794437) - 14 mien overenych cez PubMed
         // a Crossref 2026-09-06. Spolupracujuci skusajuci (Bax24 investigators) nie su autori.
@@ -432,5 +432,14 @@ function getSourceArticleAuthors(): array {
         // Autori spracovaného Core Curriculum 2026 (Am J Kidney Dis, doi 10.1053/j.ajkd.2026.06.008,
         // PMID 42726032) — presne dvaja, AuthorList CompleteYN=Y, overené cez PubMed eutils 2026-09-14.
         'komplement-oblicky-iga-nefropatia-inhibicia-klinik' => ['Joshua M. Thurman', 'Felix Poppelaars'],
+        // KÓD-01 (Beh 117): tieto články neboli v kurátorskej mape, preto sa pôvodný autor
+        // vyťažoval fallbackom z „Zdroj:“ v skrátenej notácii („Rovin BH“, „Floege J“),
+        // čím tá istá osoba dostala dve identity vo widgete aj vo filtri ?autor=.
+        // Plné mená z PubMed efetch (AuthorList), overené 2026-09-29.
+        'cielenie-b-buniek-imunitne-podmienene-nefropatie-kdigo' => ['Jürgen Floege', 'Isabelle Ayoub', 'Silke R. Brix', 'Kirk N. Campbell', 'Richard Furie', 'Patrick H. Nachman', 'Sydney C.W. Tang', 'Nicola M. Tomas', 'Marina Vivarelli', 'Michael Cheung', 'Jennifer M. King', 'Morgan E. Grams', 'Michel Jadoul', 'Brad H. Rovin'],
+        'iga-nefropatia-kdigo-komentar-komplement-b-bunky-endotelin' => ['Brad H. Rovin', 'Jonathan Barratt', 'H. Terence Cook', 'Irene L. Noronha', 'Heather N. Reich', 'Yusuke Suzuki', 'Sydney C.W. Tang', 'Hernán Trimarchi', 'Jürgen Floege'],
+        'kdigo-ckm-syndrom-oblicka-v-strede' => ['Adeera Levin', 'Nisha Bansal', 'Ian H. de Boer', 'Morgan E. Grams', 'Michel Jadoul', 'Jozine M. ter Maaten', 'Reem A. Mustafa', 'Peter Rossing', 'Michael Cheung', 'Jennifer M. King', 'Amy Earley', 'Paul E. Stevens'],
+        'obezita-kardiometabolicke-zdravie-ckd-ckm-ramec' => ['Roy O. Mathew', 'Annie Hong', 'Yoko Narasaki', 'Enrica Fung', 'Dianne Cheung', 'Jennifer Han', 'Matthew S. Durstenfeld', 'Priscilla Y. Hsue', 'Connie M. Rhee'],
+        'umela-inteligencia-adpkd-klinicke-vyuzitie' => ['Niloufar Ebrahimi', 'Wisit Cheungpasitporn', 'Fouad T. Chebib', 'Abdul Hamid Borghol', 'Zohreh Gholizadeh Ghozloujeh', 'Sayna Norouzi', 'Amir Abdipour'],
     ];
 }
