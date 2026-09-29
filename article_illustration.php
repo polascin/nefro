@@ -18,7 +18,8 @@ declare(strict_types=1);
  *   --db      (spúšťa sa na serveri) vloží figúru do `articles.content` a
  *             preregeneruje PDF článku.
  *
- * Oba režimy sú IDEMPOTENTNÉ: ak článok už `<figure` obsahuje, preskočia ho.
+ * Oba režimy sú IDEMPOTENTNÉ: ak článok už odkazuje na `img/<img>.webp`
+ * z manifestu, preskočia ho (iné `<figure>` v článku kontrolu neovplyvnia).
  *
  * Použitie:
  *   php article_illustration.php --local --manifest=tmp/ilu.json
