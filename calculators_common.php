@@ -518,11 +518,25 @@ function kfreRiskClass(float $risk5yr): string
 }
 
 /**
+ * load_id je navigácia (GET). Pri POST ho ignoruj — formuláre bez action
+ * (a bookmarky s ?load_id=) by inak pred výpočtom prepísali odoslané hodnoty
+ * históriou a mohli uložiť / zobraziť starý klinický výsledok.
+ */
+function calculatorIsHistoryLoadRequest(): bool
+{
+    if (strtoupper((string) ($_SERVER['REQUEST_METHOD'] ?? 'GET')) === 'POST') {
+        return false;
+    }
+
+    return isset($_GET['load_id']) && (int) $_GET['load_id'] > 0;
+}
+
+/**
  * Načíta uložený výsledok do $form podľa GET parametra load_id.
  */
 function calculatorHandleLoadId(PDO $pdo, array &$form, array &$messages): void
 {
-    if (!isLoggedIn() || !isset($_GET['load_id'])) {
+    if (!isLoggedIn() || !calculatorIsHistoryLoadRequest()) {
         return;
     }
     $loadId = (int) $_GET['load_id'];

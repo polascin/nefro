@@ -55,6 +55,13 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-10-02 13:05',
+                'category' => 'calculators',
+                'title' => 'Načítanie z histórie už neprepíše nový výpočet',
+                'description' => 'Po načítaní uloženého výsledku eGFR Slope, UACR alebo Kt/V môžete hodnoty upraviť a prepočítať. Predtým formulár poslal aj load_id a prepočet (aj uloženie) použil staré údaje z histórie.',
+                'url' => 'calculators.php',
+            ],
+            [
                 'date' => '2026-09-24 00:38',
                 'category' => 'portal',
                 'title' => 'Prehľadnejšie oznámenia o právnych zmenách',

@@ -284,4 +284,24 @@ foreach ($kdigoHeatmap as $gCategory => $albuminRows) {
     }
 }
 
+// load_id sa aplikuje len na GET — POST s ?load_id= nesmie prepisovať odoslané hodnoty.
+$prevGet = $_GET;
+$prevMethod = $_SERVER['REQUEST_METHOD'] ?? null;
+$_GET['load_id'] = '12';
+$_SERVER['REQUEST_METHOD'] = 'GET';
+testSame(true, calculatorIsHistoryLoadRequest(), 'GET ?load_id= je načítanie histórie');
+$_SERVER['REQUEST_METHOD'] = 'POST';
+testSame(false, calculatorIsHistoryLoadRequest(), 'POST ?load_id= nesmie načítať históriu');
+$_GET['load_id'] = '0';
+$_SERVER['REQUEST_METHOD'] = 'GET';
+testSame(false, calculatorIsHistoryLoadRequest(), 'GET s load_id=0 nie je načítanie');
+unset($_GET['load_id']);
+testSame(false, calculatorIsHistoryLoadRequest(), 'GET bez load_id nie je načítanie');
+$_GET = $prevGet;
+if ($prevMethod === null) {
+    unset($_SERVER['REQUEST_METHOD']);
+} else {
+    $_SERVER['REQUEST_METHOD'] = $prevMethod;
+}
+
 echo 'Ambulantná kalkulačka: ' . $assertions . " kontrol prešlo.\n";

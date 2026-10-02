@@ -200,7 +200,7 @@ if (isLoggedIn()) {
     $e,
 ) ?></li><?php endforeach; ?></ul></div><?php endif; ?>
 
-                <form method="POST">
+                <form method="POST" action="calculator_uacr.php">
                     <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(
                         generateCsrfToken(),
                     ) ?>">
