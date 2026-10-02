@@ -81,8 +81,8 @@ function fetchPatientEgfrHistory(PDO $pdo, int $userId, string $birthNumber): ar
     return $result;
 }
 
-// ── load_id: načítanie uloženého slope výsledku ───────────────────────────
-if (isLoggedIn() && isset($_GET["load_id"])) {
+// ── load_id: načítanie uloženého slope výsledku (len GET) ─────────────────
+if (isLoggedIn() && calculatorIsHistoryLoadRequest()) {
     $loadId  = (int)$_GET["load_id"];
     $loadedRow = calculatorFetchSavedResultById($pdo, $loadId, (int)$_SESSION["user_id"]);
     if ($loadedRow) {
@@ -312,7 +312,7 @@ if (isLoggedIn()) {
                     <div class="alert alert-error"><ul><?php foreach ($errors as $e): ?><li><?= htmlspecialchars($e) ?></li><?php endforeach; ?></ul></div>
                 <?php endif; ?>
 
-                <form method="POST" id="egfr-slope-form">
+                <form method="POST" action="calculator_egfr_slope.php" id="egfr-slope-form">
                     <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
                     <input type="hidden" name="max_row"    id="max_row" value="<?= (int)$form["max_row"] ?>">
 
