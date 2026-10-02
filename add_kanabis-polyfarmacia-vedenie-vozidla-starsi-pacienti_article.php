@@ -168,7 +168,7 @@ $articles[] = [
 <ol>
   <li>McCartney D, Arkell TR, Irwin C, McGregor IS. <em>Determining the magnitude and duration of acute Δ<sup>9</sup>-tetrahydrocannabinol (Δ<sup>9</sup>-THC)-induced driving and cognitive impairment: A systematic and meta-analytic review.</em> Neurosci Biobehav Rev 2021;126:175–193. <a href="https://doi.org/10.1016/j.neubiorev.2021.01.003" target="_blank" rel="noopener noreferrer">doi:10.1016/j.neubiorev.2021.01.003</a> (PMID 33497784).</li>
   <li>Di Ciano P, Rajji TK, Hong L a kol. <em>Cannabis and Driving in Older Adults.</em> JAMA Netw Open 2024;7(1):e2352233. <a href="https://doi.org/10.1001/jamanetworkopen.2023.52233" target="_blank" rel="noopener noreferrer">doi:10.1001/jamanetworkopen.2023.52233</a> (PMID 38236599).</li>
-  <li>Hetland A, Carr DB. <em>Medications and impaired driving.</em> Ann Pharmacother 2014;48(4):494–506. <a href="https://pubmed.ncbi.nlm.nih.gov/24473486/" target="_blank" rel="noopener noreferrer">PubMed 24473486</a>.</li>
+  <li>Hetland A, Carr DB. <em>Medications and Impaired Driving.</em> Ann Pharmacother 2014;48(4):494–506. <a href="https://doi.org/10.1177/1060028014520882" target="_blank" rel="noopener noreferrer">doi:10.1177/1060028014520882</a> (PMID 24473486).</li>
 </ol>
 
 <p><em>Bibliografické údaje všetkých citovaných prác boli overené v databáze PubMed.</em></p>

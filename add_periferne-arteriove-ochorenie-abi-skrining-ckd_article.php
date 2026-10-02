@@ -194,7 +194,7 @@ $articles[] = [
 <p><em><strong>Zdroje:</strong></em></p>
 
 <ol>
-  <li><em>Global, regional, and national prevalence of peripheral arterial disease in 2023: an updated systematic review and modelling study.</em> Lancet Glob Health 2026. <a href="https://pubmed.ncbi.nlm.nih.gov/42480579/" target="_blank" rel="noopener noreferrer">PubMed 42480579</a>.</li>
+  <li>Zhou J, Liu X, Shan S a kol. <em>Global, regional, and national prevalence of peripheral arterial disease in 2023: an updated systematic review and modelling study.</em> Lancet Glob Health 2026;14(9):103983. <a href="https://doi.org/10.1016/j.langlo.2026.103983" target="_blank" rel="noopener noreferrer">doi:10.1016/j.langlo.2026.103983</a> (PMID 42480579).</li>
   <li>Chen J, Mohler ER, Garimella PS a kol. <em>Ankle Brachial Index and Subsequent Cardiovascular Disease Risk in Patients With Chronic Kidney Disease</em> (kohorta CRIC). J Am Heart Assoc 2016;5(6):e003339. <a href="https://doi.org/10.1161/JAHA.116.003339" target="_blank" rel="noopener noreferrer">doi:10.1161/JAHA.116.003339</a> (PMID 27247339).</li>
   <li>Hazique M, Surana A, Patel KN a kol. <em>Abnormal Ankle-Brachial Index and Risk of Cardiovascular and all-cause mortality in Patients With Chronic Kidney Disease: An Updated Systematic Review and Meta-analysis.</em> Crit Pathw Cardiol 2025;24(3):e0396. <a href="https://doi.org/10.1097/HPC.0000000000000396" target="_blank" rel="noopener noreferrer">doi:10.1097/HPC.0000000000000396</a> (PMID 40397761).</li>
 </ol>
