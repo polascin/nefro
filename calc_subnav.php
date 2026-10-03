@@ -10,6 +10,7 @@ $_calcSubnavItems = [
     ['file' => 'calculator_ambulatory.php', 'label' => 'Ambulantná'],
     ['file' => 'calculator_egfr.php',       'label' => 'eGFR'],
     ['file' => 'calculator_egfr_cys.php',   'label' => 'eGFR (kr-cys)'],
+    ['file' => 'calculator_ekfc.php',       'label' => 'eGFR (EKFC)'],
     ['file' => 'calculator_kdigo_risk.php',  'label' => 'KDIGO G/A'],
     ['file' => 'calculator_kfre.php',        'label' => 'KFRE'],
     ['file' => 'calculator_ckdpc.php',       'label' => 'CKD-PC'],

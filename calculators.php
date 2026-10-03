@@ -52,6 +52,11 @@ $schemaWebApp = [
         ],
         [
             "@type" => "WebApplication",
+            "name" => "eGFR podľa EKFC (European Kidney Function Consortium)",
+            "url" => $baseUrl . "calculator_ekfc.php",
+        ],
+        [
+            "@type" => "WebApplication",
             "name" => "24-h klírens kreatinínu (meraný)",
             "url" => $baseUrl . "calculator_crcl_24h.php",
         ],
@@ -289,6 +294,12 @@ $schemaWebApp = [
                         <h3>eGFR (kreatinín–cystatín C 2021)</h3>
                         <p>Presnejší odhad filtrácie a potvrdenie CKD podľa KDIGO 2024 — kombinovaný vzorec CKD-EPI 2021 z kreatinínu a cystatínu C (bez rasy).</p>
                         <a href="calculator_egfr_cys.php" class="btn-primary">Otvoriť kalkulačku</a>
+                    </article>
+
+                    <article class="feature-card calculator-card">
+                        <h3>eGFR podľa EKFC (full age spectrum)</h3>
+                        <p>Rovnica European Kidney Function Consortium (Pottel 2021/2023) z kreatinínu, cystatínu C alebo kombinovane. Reškálovanie na hodnotu Q namiesto rasového koeficientu, jediná rovnica pre vek 2 – 120 rokov bez skoku pri prechode z pediatrie, presnejšia v hornom pásme filtrácie než CKD-EPI 2021. S rozpisom výpočtu krok po kroku a porovnaním s CKD-EPI.</p>
+                        <a href="calculator_ekfc.php" class="btn-primary">Otvoriť kalkulačku</a>
                     </article>
 
                     <article class="feature-card calculator-card">

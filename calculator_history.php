@@ -18,6 +18,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_SESSION['calculator_history_
 
 const CALC_LABELS = [
     'egfr_ckd_epi_2021'   => 'eGFR (CKD-EPI 2021)',
+    'egfr_ckd_epi_cr_cys_2021' => 'eGFR (CKD-EPI kr-cys 2021)',
+    'egfr_ekfc'           => 'eGFR (EKFC)',
     'kdigo_risk'          => 'KDIGO G/A riziko',
     'kfre'                => 'KFRE – Kidney Failure Risk',
     'ckd_pc_grams_2022'   => 'CKD-PC (Grams 2022)',
@@ -36,6 +38,8 @@ const CALC_LABELS = [
 
 const CALC_URLS = [
     'egfr_ckd_epi_2021'   => 'calculator_egfr.php',
+    'egfr_ckd_epi_cr_cys_2021' => 'calculator_egfr_cys.php',
+    'egfr_ekfc'           => 'calculator_ekfc.php',
     'kdigo_risk'          => 'calculator_kdigo_risk.php',
     'kfre'                => 'calculator_kfre.php',
     'ckd_pc_grams_2022'   => 'calculator_ckdpc.php',

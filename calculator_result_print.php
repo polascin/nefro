@@ -38,6 +38,8 @@ function formatInputKey(string $key): string {
         'creatinine_value'    => 'Kreatinín',
         'creatinine_unit'     => 'Jednotka kreatinínu',
         'creatinine_mg_dl'    => 'Kreatinín (mg/dL)',
+        'cystatin_value'      => 'Cystatín C (mg/L)',
+        'mode'                => 'Variant rovnice',
         's_cr_value'          => 'S-Kreatinín',
         's_cr_unit'           => 'Jednotka S-kreatinínu',
         'u_cr_value'          => 'U-Kreatinín',
