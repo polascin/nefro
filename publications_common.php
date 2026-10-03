@@ -468,28 +468,40 @@ function publicationStripeUrl(float $amount, string $variableSymbol, string $buy
 }
 
 /**
- * PayPal „Buy Now“ odkaz s pevnou sumou. Variabilný symbol ide do `custom`
- * aj do názvu položky, takže ho predávajúci vidí v transakcii.
+ * PayPal „Buy Now“ — polia formulára s pevnou sumou. Variabilný symbol ide
+ * do `custom`, `item_number` aj do názvu položky, takže ho predávajúci vidí
+ * v transakcii a objednávku spáruje bez pýtania sa kupujúceho.
  *
- * Endpoint `_xclick` (PayPal Payments Standard) PayPal označuje za zastaraný,
- * stále však funguje a nevyžaduje serverovú integráciu ani API kľúče. Ak ho
- * PayPal vypne, stačí `paypal_account` v publicationPaymentConfig() vyprázdniť a možnosť
+ * PayPal Payments Standard je navrhnutý ako **POST formulár** na
+ * `cgi-bin/webscr`, nie ako odkaz s query stringom — tá istá kombinácia polí
+ * poslaná GETom vracia 403. Preto sa vracajú polia, ktoré stránka vykreslí
+ * ako formulár, a nie hotová URL.
+ *
+ * Endpoint PayPal označuje za zastaraný, stále však funguje a nevyžaduje
+ * serverovú integráciu ani API kľúče. Ak ho PayPal vypne, stačí
+ * `paypal_account` v publicationPaymentConfig() vyprázdniť a možnosť
  * zo stránky zmizne.
+ *
+ * @return array{action: string, fields: array<string, string>}
  */
-function publicationPaypalUrl(float $amount, string $variableSymbol, string $title): string
+function publicationPaypalForm(float $amount, string $variableSymbol, string $title): array
 {
-    return 'https://www.paypal.com/cgi-bin/webscr?' . http_build_query([
-        'cmd'           => '_xclick',
-        'business'      => (string) publicationPaymentConfig()['paypal_account'],
-        'item_name'     => $title . ' (obj. ' . $variableSymbol . ')',
-        'item_number'   => $variableSymbol,
-        'custom'        => $variableSymbol,
-        'amount'        => number_format($amount, 2, '.', ''),
-        'currency_code' => 'EUR',
-        'no_shipping'   => '1',
-        'no_note'       => '0',
-        'charset'       => 'utf-8',
-    ]);
+    return [
+        'action' => 'https://www.paypal.com/cgi-bin/webscr',
+        'fields' => [
+            'cmd'           => '_xclick',
+            'business'      => (string) publicationPaymentConfig()['paypal_account'],
+            'item_name'     => $title . ' (obj. ' . $variableSymbol . ')',
+            'item_number'   => $variableSymbol,
+            'custom'        => $variableSymbol,
+            'amount'        => number_format($amount, 2, '.', ''),
+            'currency_code' => 'EUR',
+            'no_shipping'   => '1',
+            'no_note'       => '0',
+            'charset'       => 'utf-8',
+            'lc'            => 'SK',
+        ],
+    ];
 }
 
 /**
@@ -498,7 +510,8 @@ function publicationPaypalUrl(float $amount, string $variableSymbol, string $tit
  *
  * Kľúče položky:
  *   name, desc  — čo to je a pre koho
- *   url         — odkaz na platbu (null pri metódach, kde sa len kopíruje údaj)
+ *   url         — odkaz na platbu (null pri formulári alebo kopírovanom údaji)
+ *   form        — POST formulár {action, fields} pre brány, ktoré GET odmietajú
  *   cta         — text tlačidla
  *   copy        — hodnota na skopírovanie (telefón, e-mail účtu)
  *   copy_label  — popis kopírovanej hodnoty
@@ -542,7 +555,8 @@ function publicationPaymentMethods(array $order): array
             'name'     => 'PayPal',
             'desc'     => 'Platba z PayPal zostatku alebo kartou. Suma ' . $price
                 . ' aj číslo objednávky sú predvyplnené.',
-            'url'      => publicationPaypalUrl($amount, $vs, $title),
+            'url'      => null,
+            'form'     => publicationPaypalForm($amount, $vs, $title),
             'cta'      => 'Zaplatiť cez PayPal',
             'auto_ref' => true,
             'exact'    => true,

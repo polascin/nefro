@@ -135,7 +135,24 @@ function sendSecurityHeaders(): void {
     header('Pragma: no-cache');
     header('Expires: 0');
     header('Surrogate-Control: no-store');
+    sendContentSecurityPolicy();
+}
+
+/**
+ * Zloží a odošle CSP hlavičky.
+ *
+ * `$extraFormAction` rozširuje `form-action` o ďalšie cieľové originy. Default
+ * je `'self'` — formulár, ktorý odchádza na cudziu doménu, je presne to, čo
+ * chceme pri injektáži zablokovať. Výnimku preto nedávame globálne, ale len
+ * stránka, ktorá ju naozaj potrebuje, si politiku znovu odošle (pozri
+ * `cspAllowFormActionOrigins()`); `header()` hlavičku s rovnakým názvom
+ * prepíše, takže platí posledná.
+ *
+ * @param array<int, string> $extraFormAction
+ */
+function sendContentSecurityPolicy(array $extraFormAction = []): void {
     $nonce = getScriptNonce();
+    $formAction = trim("'self' " . implode(' ', $extraFormAction));
     $csp =
         "default-src 'self'; " .
         "img-src 'self' data: https:; " .
@@ -145,10 +162,27 @@ function sendSecurityHeaders(): void {
         "connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com " .
             "https://analytics.google.com https://*.analytics.google.com https://stats.g.doubleclick.net; " .
         "frame-src https://www.google.com https://maps.google.com; " .
-        "base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; upgrade-insecure-requests";
+        "base-uri 'self'; object-src 'none'; frame-ancestors 'self'; " .
+        "form-action {$formAction}; upgrade-insecure-requests";
     header('Content-Security-Policy: ' . $csp);
     $cspRO = $csp . '; report-uri /csp-report.php';
     header('Content-Security-Policy-Report-Only: ' . $cspRO);
+}
+
+/**
+ * Povolí odoslanie formulára na uvedené externé originy pre aktuálnu stránku.
+ *
+ * Používa sa pri platobných bránach, ktoré prijímajú len POST (PayPal Payments
+ * Standard). Volaj až po `sendSecurityHeaders()` a pred prvým výstupom.
+ *
+ * @param array<int, string> $origins  napríklad ['https://www.paypal.com']
+ */
+function cspAllowFormActionOrigins(array $origins): void {
+    if ($origins === [] || headers_sent()) {
+        return;
+    }
+
+    sendContentSecurityPolicy($origins);
 }
 
 // Kontrola idle timeout a GC – konštanta musí byť definovaná pred prvým použitím

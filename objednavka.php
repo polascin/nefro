@@ -59,6 +59,12 @@ $paymeUrl     = $order !== null ? publicationPaymeUrl($amount, (string) $order['
 $payMethods = ($order !== null && $status === 'awaiting_payment')
     ? publicationPaymentMethods($order)
     : [];
+
+// PayPal prijíma len POST na vlastnú doménu, čo globálne `form-action 'self'`
+// blokuje. Výnimku dávame len tejto stránke a len pre PayPal — nie celému webu.
+if (array_filter($payMethods, static fn (array $m): bool => !empty($m['form'])) !== []) {
+    cspAllowFormActionOrigins(['https://www.paypal.com']);
+}
 ?>
 <!DOCTYPE html>
 <html lang="sk">
@@ -332,6 +338,19 @@ $payMethods = ($order !== null && $status === 'awaiting_payment')
                                                class="btn-primary" target="_blank" rel="noopener noreferrer">
                                                 <?= htmlspecialchars((string) $method['cta']) ?>
                                             </a>
+                                        <?php elseif (!empty($method['form'])): ?>
+                                            <?php /* PayPal Payments Standard prijíma len POST — tá istá
+                                                     sada polí poslaná GETom vracia 403, preto formulár
+                                                     a nie odkaz. */ ?>
+                                            <form action="<?= htmlspecialchars((string) $method['form']['action'], ENT_QUOTES) ?>"
+                                                  method="post" target="_blank" rel="noopener noreferrer">
+                                                <?php foreach ($method['form']['fields'] as $fieldName => $fieldValue): ?>
+                                                    <input type="hidden"
+                                                           name="<?= htmlspecialchars((string) $fieldName, ENT_QUOTES) ?>"
+                                                           value="<?= htmlspecialchars((string) $fieldValue, ENT_QUOTES) ?>">
+                                                <?php endforeach; ?>
+                                                <button type="submit" class="btn-primary"><?= htmlspecialchars((string) $method['cta']) ?></button>
+                                            </form>
                                         <?php else: ?>
                                             <code><?= htmlspecialchars((string) $method['copy_label']) ?></code>
                                             <button type="button" class="btn-secondary donate-copy-btn"
