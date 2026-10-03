@@ -12,24 +12,24 @@ declare(strict_types=1);
  * s produkčnou logikou aj po jej zmene.
  *
  * Použitie (na serveri, z koreňa projektu):
- *   php tools/botguard_unban.php --list                 prehľad aktívnych banov
- *   php tools/botguard_unban.php --ip=138.199.34.196    zruší ban pre jednu IP
- *   php tools/botguard_unban.php --ip=1.2.3.4 --keep-counters
+ *   php botguard_unban.php --list                 prehľad aktívnych banov
+ *   php botguard_unban.php --ip=138.199.34.196    zruší ban pre jednu IP
+ *   php botguard_unban.php --ip=1.2.3.4 --keep-counters
  *                                                       zruší len ban, počítadlá
  *                                                       okien ponechá
- *   php tools/botguard_unban.php --all                  zruší všetky aktívne bany
+ *   php botguard_unban.php --all                  zruší všetky aktívne bany
  *
  * Typický dôvod použitia: vlastný nástroj (napr. generátor e-booku) prekročí
  * burst limit 600 požiadaviek / 15 minút a zabanuje celú odchádzajúcu IP —
  * teda aj prehliadač autora, ktorý ide z tej istej adresy.
  */
 
-if (PHP_SAPI !== 'cli') {
-    http_response_code(404);
-    exit;
+if (php_sapi_name() !== 'cli') {
+    http_response_code(403);
+    exit('CLI only');
 }
 
-require_once __DIR__ . '/../bot_guard.php';
+require_once __DIR__ . '/bot_guard.php';
 
 $options = getopt('', ['list', 'ip:', 'all', 'keep-counters', 'help']) ?: [];
 
