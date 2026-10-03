@@ -246,6 +246,45 @@ function publicationPriceFor(array $formats): float
     return $count === 1 ? PUBLICATION_PRICE_SINGLE : PUBLICATION_PRICE_BUNDLE;
 }
 
+/**
+ * ASCII podoba názvu súboru pre `filename=` v Content-Disposition.
+ *
+ * Moderné klienty čítajú `filename*` (RFC 5987) s plnou diakritikou; `filename=`
+ * je fallback pre staré prehliadače a musí byť ASCII. Preto nestačí nahradiť
+ * nepovolené bajty podčiarkovníkom — „á“ má v UTF-8 dva bajty a zo
+ * „SK Nefro Báza 1“ by vzniklo „SK Nefro B__za 1“. Diakritiku najprv
+ * prepíšeme na základné písmeno.
+ */
+function publicationAsciiFilename(string $name): string
+{
+    $map = [
+        'á' => 'a', 'ä' => 'a', 'â' => 'a', 'à' => 'a', 'ã' => 'a', 'å' => 'a',
+        'č' => 'c', 'ć' => 'c', 'ç' => 'c',
+        'ď' => 'd', 'đ' => 'd',
+        'é' => 'e', 'ě' => 'e', 'ë' => 'e', 'è' => 'e', 'ê' => 'e',
+        'í' => 'i', 'ï' => 'i', 'ì' => 'i', 'î' => 'i',
+        'ľ' => 'l', 'ĺ' => 'l', 'ł' => 'l',
+        'ň' => 'n', 'ń' => 'n', 'ñ' => 'n',
+        'ó' => 'o', 'ô' => 'o', 'ö' => 'o', 'ò' => 'o', 'õ' => 'o', 'ø' => 'o',
+        'ŕ' => 'r', 'ř' => 'r',
+        'š' => 's', 'ś' => 's', 'ş' => 's',
+        'ť' => 't', 'ţ' => 't',
+        'ú' => 'u', 'ů' => 'u', 'ü' => 'u', 'ù' => 'u', 'û' => 'u',
+        'ý' => 'y', 'ÿ' => 'y',
+        'ž' => 'z', 'ź' => 'z', 'ż' => 'z',
+        'ß' => 'ss', 'æ' => 'ae', 'œ' => 'oe',
+    ];
+
+    // Veľké písmená dorobíme z tej istej tabuľky, aby sa nemusela písať dvakrát.
+    foreach ($map as $from => $to) {
+        $map[mb_strtoupper($from)] = mb_strtoupper($to);
+    }
+
+    $ascii = strtr($name, $map);
+
+    return preg_replace('/[^A-Za-z0-9._ -]/', '_', $ascii) ?? 'publikacia';
+}
+
 /** Cena v tvare „7,00 €“ (slovenská konvencia: desatinná čiarka, medzera pred €). */
 function formatPublicationPrice(float $price): string
 {
@@ -674,7 +713,7 @@ function publicationEncodedAttachmentSize(string $path): int
  * jediný spoľahlivý; ak ho neohlási, použijeme konzervatívny fallback.
  *
  * @param array<int, string> $formats
- * @return array{batches: array<int, array<int, array{path: string, filename: string, mime: string, code: string}>>, linked: array<int, string>}
+ * @return array{batches: array<int, array<int, array{path: string, filename: string, ascii_filename: string, mime: string, code: string}>>, linked: array<int, string>}
  */
 function publicationAttachmentPlan(string $slug, array $formats, string $title): array
 {
@@ -714,11 +753,13 @@ function publicationAttachmentPlan(string $slug, array $formats, string $title):
         }
 
         $used += $encoded;
+        $filename = $title . '.' . (string) $formatMeta[$code]['ext'];
         $current[] = [
-            'path'     => $path,
-            'filename' => $title . '.' . (string) $formatMeta[$code]['ext'],
-            'mime'     => (string) $formatMeta[$code]['mime'],
-            'code'     => $code,
+            'path'           => $path,
+            'filename'       => $filename,
+            'ascii_filename' => publicationAsciiFilename($filename),
+            'mime'           => (string) $formatMeta[$code]['mime'],
+            'code'           => $code,
         ];
     }
 
@@ -780,7 +821,7 @@ function sendPublicationOrderDeliveryEmail(array $order, string $token): array
     /**
      * Vykreslí a odošle jednu správu dodania.
      *
-     * @param array<int, array{path: string, filename: string, mime: string, code: string}> $attachments
+     * @param array<int, array{path: string, filename: string, ascii_filename: string, mime: string, code: string}> $attachments
      */
     $sendMessage = static function (
         string $subject,

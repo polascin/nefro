@@ -766,7 +766,7 @@ function smtpNormalizeTextPart(string $text): string {
  * Odhad veľkosti správy s prílohami v bajtoch — base64 rozšíri obsah
  * na 4/3 a pridá zalomenie každých 76 znakov.
  *
- * @param array<int, array{path: string, filename: string, mime: string}> $attachments
+ * @param array<int, array{path: string, filename: string, mime: string, ascii_filename?: string}> $attachments
  */
 function smtpEstimateMessageSize(string $messageBody, ?string $plainTextAlt, array $attachments): int {
     $size = strlen($messageBody) + strlen((string) $plainTextAlt) + 2048;
@@ -785,7 +785,7 @@ function smtpEstimateMessageSize(string $messageBody, ?string $plainTextAlt, arr
  * Pošle HTML e-mail s prílohami. Prílohy sa streamujú z disku, takže
  * pamäťová náročnosť nerastie s ich veľkosťou.
  *
- * @param array<int, array{path: string, filename: string, mime: string}> $attachments
+ * @param array<int, array{path: string, filename: string, mime: string, ascii_filename?: string}> $attachments
  * @param array<string, string> $extraHeaders
  */
 function sendViaSmtpWithAttachments(
@@ -882,8 +882,15 @@ function sendViaSmtpWithAttachments(
             break;
         }
 
-        $asciiName = preg_replace('/[^A-Za-z0-9._ -]/', '_', $attachment['filename'])
-            ?? 'publikacia';
+        // `filename*` nesie plný názov s diakritikou (RFC 5987), `filename=` je
+        // ASCII fallback pre staré klienty. Volajúci môže dodať prepis diakritiky
+        // v `ascii_filename` — bez neho by sa z „á“ (dva bajty v UTF-8) stali dva
+        // podčiarkovníky a z „Báza“ by vyšlo „B__za“.
+        $asciiName = (string) ($attachment['ascii_filename'] ?? '');
+        if ($asciiName === '') {
+            $asciiName = $attachment['filename'];
+        }
+        $asciiName = preg_replace('/[^A-Za-z0-9._ -]/', '_', $asciiName) ?? 'priloha';
 
         $partHead = '--' . $mixBoundary . "\r\n"
             . 'Content-Type: ' . $attachment['mime'] . '; name="' . $asciiName . "\"\r\n"

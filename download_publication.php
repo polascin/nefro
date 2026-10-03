@@ -11,7 +11,7 @@ declare(strict_types=1);
  * Použitie: download_publication.php?vs=<VS>&t=<token>&format=<pdf|epub|…>
  *
  * Prihlásenie sa nevyžaduje — kupujúci nemusí mať účet. Oprávnenie nesie
- * samotný token (v DB len sha256 odtlačok); strop PUBLICATION_DOWNLOAD_MAX
+ * samotný token (odvodený HMAC-om zo soli v DB); strop PUBLICATION_DOWNLOAD_MAX
  * ohraničuje škodu, ak by kupujúci odkaz predsa len niekomu poslal.
  * ────────────────────────────────────────────────────────────────────────────
  */
@@ -97,7 +97,7 @@ $mimeType = (string) $formats[$formatCode]['mime'];
 
 // Čitateľný názov odvodíme z titulu objednávky; súbor na disku je ASCII.
 $downloadName  = (string) $order['publication_title'] . '.' . $ext;
-$asciiFallback = preg_replace('/[^A-Za-z0-9._ -]/', '_', $downloadName) ?? ($slug . '.' . $ext);
+$asciiFallback = publicationAsciiFilename($downloadName);
 
 // Vyčisti prípadný buffer, aby sme neporušili binárny výstup.
 while (ob_get_level() > 0) {
