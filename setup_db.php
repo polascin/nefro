@@ -970,7 +970,9 @@ try {
     //
     // Objednávka nie je viazaná na účet: kupujúci nemusí byť registrovaný,
     // identifikuje ho variabilný symbol + prístupový token z e-mailu.
-    // V DB je len sha256 odtlačok tokenu, nie token samotný.
+    // Token sa v DB neukladá v žiadnej podobe — odvodzuje sa HMAC-om
+    // z `token_salt` a ID objednávky (publicationOrderToken()), takže
+    // prepísaním soli sa už odoslaný odkaz zneplatní.
     $publicationOrdersSql = "CREATE TABLE IF NOT EXISTS publication_orders (
         id INT AUTO_INCREMENT PRIMARY KEY,
         variable_symbol VARCHAR(12) NULL COMMENT 'Variabilný symbol platby (rok + ID); dopĺňa sa po INSERT z prideleného ID',

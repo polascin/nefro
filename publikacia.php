@@ -125,7 +125,14 @@ if ($publication !== null && ($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
             $errors[] = 'Meno alebo názov firmy je príliš dlhý.';
         }
         if ($formValues['company_id'] !== '' && !preg_match('/^[0-9 ]{6,20}$/', $formValues['company_id'])) {
-            $errors[] = 'IČO zadajte ako číslo (6 – 12 číslic).';
+            $errors[] = 'IČO zadajte ako číslo (6 – 20 znakov, len číslice a medzery).';
+        }
+        // DIČ/IČ DPH je voliteľné, ale stĺpec je VARCHAR(20) — `maxlength` na
+        // inpute je len pohodlie pre prehliadač, nie kontrola. Bez serverovej
+        // validácie by dlhšia hodnota skončila výnimkou z INSERT-u a kupujúci
+        // by dostal len všeobecné „objednávku sa nepodarilo založiť“.
+        if (mb_strlen($formValues['tax_id']) > 20) {
+            $errors[] = 'DIČ / IČ DPH je príliš dlhé (najviac 20 znakov).';
         }
         if (mb_strlen($formValues['address']) > 500) {
             $errors[] = 'Fakturačná adresa je príliš dlhá.';
@@ -144,8 +151,10 @@ if ($publication !== null && ($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 
         // Rate limit podľa IP — bráni zakladaniu objednávok v dávkach.
         if ($errors === [] && !checkFormRateLimit($pdo, 'publication_order', getClientIpAddress(), 10, 3600)) {
+            // Bez `htmlspecialchars` — celé `$errors` sa escapuje až pri výpise
+            // (pozri slučku nižšie), takže escapovanie tu by bolo dvojité.
             $errors[] = 'Príliš veľa objednávok z tejto adresy. Skúste to prosím neskôr '
-                . 'alebo nám napíšte na ' . htmlspecialchars(publicationSeller()['email'], ENT_QUOTES, 'UTF-8') . '.';
+                . 'alebo nám napíšte na ' . publicationSeller()['email'] . '.';
         }
 
         if ($errors === []) {

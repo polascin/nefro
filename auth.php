@@ -66,6 +66,13 @@ function isSensitiveRequestParameter(string $name): bool {
         'resultid' => true,
         'loadid' => true,
         'compare' => true,
+        // Prístupový token objednávky publikácie (`objednavka.php?vs=…&t=…`,
+        // `download_publication.php`). Jednoznakový názov nesadne na žiadny
+        // fragment nižšie, preto musí byť vymenovaný: je to bearer poverenie
+        // ku kúpenému obsahu bez prihlásenia, takže nesmie skončiť ani
+        // v prístupovom logu, ani v hlavičke Referer.
+        't' => true,
+        'accesstoken' => true,
     ];
     if (isset($exact[$normalized])) {
         return true;
@@ -96,6 +103,13 @@ function requestNeedsNoReferrer(): bool {
         'profile_export.php',
         'calculator_history.php',
         'calculator_result_print.php',
+        // Obe nesú prístupový token objednávky v URL a sú dostupné bez
+        // prihlásenia; `strict-origin-when-cross-origin` by cudzej doméne
+        // cestu síce neposlal, no pri odchode na platobnú bránu nemá zmysel
+        // spoliehať sa na menej striktnú politiku, než aká platí pre ostatné
+        // tokenové odkazy (overenie e-mailu, reset hesla).
+        'objednavka.php',
+        'download_publication.php',
     ];
     if (in_array($script, $sensitiveScripts, true)) {
         return true;
