@@ -129,6 +129,7 @@ $catalogue = array_values(array_filter(
                                     <li><?= number_format((int) $publication['pages'], 0, ',', ' ') ?> strán</li>
                                     <li><?= (int) $publication['images'] ?> ilustrácií</li>
                                     <li><?= htmlspecialchars((string) $publication['edition']) ?></li>
+                                    <li>jazyk: <strong><?= htmlspecialchars((string) $publication['language']) ?></strong></li>
                                 </ul>
 
                                 <p class="pub-card__formats">

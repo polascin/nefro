@@ -246,7 +246,9 @@ markFormLoadTime('publication_order');
               'name'          => $publication['title'],
               'bookFormat'    => 'https://schema.org/EBook',
               'description'   => $publication['excerpt'],
-              'inLanguage'    => 'sk-SK',
+              // Jazyk OBSAHU knihy, nie stránky — anglické vydanie by inak
+              // vyhľadávačom tvrdilo, že je po slovensky.
+              'inLanguage'    => (string) $publication['language_code'],
               'numberOfPages' => (int) $publication['pages'],
               'datePublished' => $publication['published_on'],
               'image'         => $baseUrl . $publication['cover'],
@@ -324,6 +326,7 @@ markFormLoadTime('publication_order');
                         <div><dt>Strán</dt><dd><?= number_format((int) $publication['pages'], 0, ',', ' ') ?></dd></div>
                         <div><dt>Slov</dt><dd><?= number_format((int) $publication['words'], 0, ',', ' ') ?></dd></div>
                         <div><dt>Ilustrácií</dt><dd><?= number_format((int) $publication['images'], 0, ',', ' ') ?></dd></div>
+                        <div><dt>Jazyk</dt><dd class="pub-hero__facts-lang"><?= htmlspecialchars((string) $publication['language']) ?></dd></div>
                     </dl>
 
                     <p class="pub-hero__price">
@@ -338,6 +341,22 @@ markFormLoadTime('publication_order');
                     <p class="pub-hero__trust">Bez DRM · stiahnutie po potvrdení úhrady,
                         zvyčajne do jedného pracovného dňa ·
                         <?= htmlspecialchars($seller['vatNote']) ?></p>
+
+                    <?php /* Anglické vydanie si kúpi aj niekto, kto po slovensky nečíta.
+                             Objednávkový formulár je slovenský, preto aspoň krátka
+                             orientácia a kontakt v jazyku samotnej publikácie. */ ?>
+                    <?php if ((string) $publication['language_code'] !== 'sk'): ?>
+                        <div class="info-box-blue pub-hero__lang-note" lang="en">
+                            <p><strong>This edition is in English.</strong>
+                               The order form below is in Slovak — choose your formats,
+                               enter your e-mail and submit. You will receive payment
+                               instructions by e-mail; payment is by bank transfer or card.
+                               Files are delivered once payment is confirmed, usually within
+                               one business day.</p>
+                            <p>Questions in English are welcome at
+                               <a href="mailto:<?= htmlspecialchars($seller['email'], ENT_QUOTES) ?>"><?= htmlspecialchars($seller['email']) ?></a>.</p>
+                        </div>
+                    <?php endif; ?>
                 </div>
             </section>
 

@@ -183,6 +183,7 @@ function publications(): array
             'edition'     => '1. vydanie, október 2026',
             'published_on' => '2026-10-03',
             'language'    => 'slovenčina',
+            'language_code' => 'sk',
             'pages'       => 1745,
             'articles'    => 405,
             'words'       => 590630,
@@ -215,6 +216,54 @@ function publications(): array
             ],
             'audience'     => 'Nefrológovia, internisti, lekári v špecializačnej príprave, sestry na dialýze '
                 . 'a informovaní pacienti, ktorí chcú mať odborný obsah portálu pohromade a offline.',
+        ],
+        [
+            'slug'        => 'sk-nefro-baza-1-en',
+            'title'       => 'SK Nefro Báza 1 — English edition',
+            'subtitle'    => 'Collected specialist articles from nefro.polascin.net, April – October 2026',
+            'author'      => 'Ľubomír Polaščín, MD',
+            'edition'     => '1. vydanie, október 2026',
+            'published_on' => '2026-10-03',
+            'language'    => 'angličtina',
+            // Jazyk obsahu, nie jazyk stránky — ide do Schema.org `inLanguage`.
+            'language_code' => 'en',
+            // Anglické vydanie je o 18 článkov menšie: popularizačné texty
+            // pre pacientov sa neprekladali, lebo mieria na slovenského
+            // pacienta. Číslo preto nie je 405 ako v slovenskom vydaní.
+            'pages'       => 1782,
+            'articles'    => 387,
+            'words'       => 661410,
+            'images'      => 393,
+            'cover'       => 'img/publikacie/sk-nefro-baza-1-en-obalka.jpg',
+            'cover_small' => 'img/publikacie/sk-nefro-baza-1-en-obalka-600.jpg',
+            'formats'     => ['pdf', 'epub', 'azw3', 'docx', 'odt'],
+            'is_available' => true,
+            'excerpt'     => 'Anglický preklad odborného ročníka portálu — 387 článkov o chronickej '
+                . 'chorobe obličiek, dialýze, transplantácii a internej medicíne. Vhodné na '
+                . 'zdieľanie so zahraničnými kolegami a na citovanie v anglickom prostredí.',
+            'description'  => [
+                '<strong>Anglické vydanie</strong> prvého zväzku série <em>SK Nefro Báza</em>. '
+                . 'Obsahuje 387 odborných článkov, ktoré na portáli '
+                . '<em>Nefro-projekt Slovensko</em> vyšli od apríla do začiatku októbra 2026, '
+                . 'preložených do angličtiny vrátane ťahákov.',
+                'Oproti slovenskému vydaniu <strong>neobsahuje 18 popularizačných textov '
+                . 'pre pacientov</strong> — tie sú písané pre slovenského pacienta a preklad '
+                . 'by im vzal zmysel. Všetko ostatné je zhodné: rovnaké články, rovnaké '
+                . 'zoradenie, rovnaké odkazy na zdroje.',
+                'Pri každom článku je odkaz na jeho slovenskú online verziu, takže sa dá '
+                . 'rýchlo porovnať s originálom. Terminológia, jednotky aj desatinné '
+                . 'oddeľovače sú prevedené do anglickej konvencie.',
+            ],
+            'highlights'   => [
+                '387 článkov na 1 782 stranách — odborný ročník v angličtine',
+                '393 ilustrácií a schém v plnom rozlíšení',
+                'Pri každom článku odkaz na slovenskú online verziu',
+                'Anglická terminológia, jednotky a desatinné oddeľovače',
+                'Zachované citácie a odkazy na primárne zdroje (PubMed, Crossref)',
+                'Bez DRM — kúpený súbor je váš, čítajte ho na čomkoľvek',
+            ],
+            'audience'     => 'Zahraniční kolegovia, slovenskí nefrológovia a internisti, ktorí potrebujú '
+                . 'odborný obsah v angličtine na zdieľanie, citovanie alebo prednášky.',
         ],
     ];
 }
@@ -303,6 +352,12 @@ function publicationAsciiFilename(string $name): string
         'ý' => 'y', 'ÿ' => 'y',
         'ž' => 'z', 'ź' => 'z', 'ż' => 'z',
         'ß' => 'ss', 'æ' => 'ae', 'œ' => 'oe',
+        // Typografická interpunkcia v názve publikácie: bez prepisu by sa
+        // z em dash „—" (tri bajty v UTF-8) stali tri podčiarkovníky.
+        '—' => '-', '–' => '-', '‑' => '-',
+        '„' => '"', '“' => '"', '”' => '"',
+        '‘' => "'", '’' => "'",
+        '…' => '...', ' ' => ' ',
     ];
 
     // Veľké písmená dorobíme z tej istej tabuľky, aby sa nemusela písať dvakrát.

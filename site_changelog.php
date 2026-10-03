@@ -55,6 +55,13 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-10-03 20:00',
+                'category' => 'content',
+                'title' => 'Anglické vydanie e-knihy SK Nefro Báza 1',
+                'description' => 'Do katalógu publikácií pribudol anglický preklad — 387 odborných článkov na 1 782 stranách, rovnako v PDF, EPUB, Kindle, DOCX a ODT. Oproti slovenskému vydaniu neobsahuje 18 popularizačných textov pre pacientov. Pri každom článku je odkaz na jeho slovenskú online verziu.',
+                'url' => 'publikacia.php?slug=sk-nefro-baza-1-en',
+            ],
+            [
                 'date' => '2026-10-03 13:53',
                 'category' => 'content',
                 'title' => 'Publikácie na predaj — e-kniha SK Nefro Báza 1',

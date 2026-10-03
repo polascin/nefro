@@ -7918,3 +7918,24 @@ mark.search-hl {
     background: rgba(153, 27, 27, 0.35);
     color: #fca5a5;
 }
+
+/* Jazyk je v mriežke faktov slovo, nie číslo — veľkosť pre čísla by ho
+   rozťahovala cez celý riadok. */
+.pub-hero__facts-lang {
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+}
+
+/* Orientačná poznámka v jazyku publikácie (anglické vydanie). */
+.pub-hero__lang-note {
+    margin-top: 14px;
+    font-size: 0.92rem;
+}
+
+.pub-hero__lang-note p {
+    margin: 0 0 8px;
+}
+
+.pub-hero__lang-note p:last-child {
+    margin-bottom: 0;
+}
