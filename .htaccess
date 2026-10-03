@@ -168,6 +168,9 @@ ServerSignature Off
 </Files>
 
 # Vývojové a diagnostické skripty
+<Files "botguard_token.php">
+    Require all denied
+</Files>
 <Files "botguard_unban.php">
     Require all denied
 </Files>

@@ -30,6 +30,11 @@ if (basename($_SERVER['PHP_SELF'] ?? '') === basename(__FILE__)) {
     exit('Prístup odmietnutý.');
 }
 
+// Konfigurácia je potrebná na overenie tokenov vlastných nástrojov. auth.php ju
+// načíta skôr, ale bot_trap.php includuje tento modul priamo — bez tohto require
+// by tam vrstva dôveryhodných nástrojov bola mimo prevádzky.
+require_once __DIR__ . '/config_loader.php';
+
 // ── Ladiace konštanty ───────────────────────────────────────────────────────
 // Bežný čitateľ článku si otvorí niekoľko stránok za minútu; 90 je pohodlná
 // rezerva aj pre rodinu či ambulanciu za jednou NAT adresou. Scraper ju
@@ -44,6 +49,18 @@ const BOT_GUARD_BAN_SECONDS  = 1800;    // ban po prekročení burst limitu
 const BOT_GUARD_TRAP_BAN     = 3600;    // ban po spadnutí do honeypotu
 const BOT_GUARD_RDNS_TTL     = 604800;  // 7 dní — cache overenia vyhľadávača
 const BOT_GUARD_STATE_TTL    = 86400;   // po dni je súbor stavu na zmazanie
+
+// ── Dôveryhodné vlastné nástroje (podpísaný token) ─────────────────────────
+// Rate-limiting bez autentizácie nevie odlíšiť vlastný dávkový nástroj od
+// scrapera — štatisticky sú identickí. Preto si vlastné nástroje preukážu
+// vlastníctvo HMAC-podpísaným tokenom v hlavičke a dostanú vlastný tier aj
+// vlastný účtovací priestor (nemiešajú sa s ľudskou prevádzkou z tej istej IP).
+const BOT_GUARD_TRUST_HEADER  = 'HTTP_X_NEFRO_TRUST';
+const BOT_GUARD_MAX_TRUSTED   = 600;    // požiadaviek v krátkom okne
+const BOT_GUARD_BURST_TRUSTED = 20000;  // požiadaviek v dlhom okne
+const BOT_GUARD_TRUST_MAX_TTL = 604800; // najdlhšia akceptovaná platnosť (7 dní)
+const BOT_GUARD_TRUST_SKEW    = 300;    // tolerancia rozdielu hodín (s)
+const BOT_GUARD_TRUST_PREFIX  = 'nefro1';
 
 /**
  * Menovaní scraperi, SEO-harvestery a AI-tréningové crawlery → tvrdé 403.
@@ -186,10 +203,16 @@ function botGuardStateDir(): string
     return $dir;
 }
 
-/** Cesta k súboru stavu pre danú IP (názov je hash — IP nie je v názve súboru). */
-function botGuardStatePath(string $ip): string
+/**
+ * Cesta k súboru stavu pre danú identitu (názov je hash — IP nie je v názve
+ * súboru). Identita je spravidla IP; dôveryhodný nástroj má vlastnú identitu
+ * `trust:<nástroj>@<ip>`, aby jeho dávka nevyčerpala limit ľudí z tej istej
+ * adresy. Práve preto sa jeho prevádzka už nedá premietnuť do banu, ktorý by
+ * odstavil aj prehliadač autora.
+ */
+function botGuardStatePath(string $identity): string
 {
-    return botGuardStateDir() . '/' . hash('sha256', 'nefro-bg:' . $ip) . '.json';
+    return botGuardStateDir() . '/' . hash('sha256', 'nefro-bg:' . $identity) . '.json';
 }
 
 /**
@@ -199,9 +222,9 @@ function botGuardStatePath(string $ip): string
  * @param callable(array<string,mixed>):array<string,mixed> $mutator
  * @return array<string,mixed>
  */
-function botGuardMutateState(string $ip, callable $mutator): array
+function botGuardMutateState(string $identity, callable $mutator): array
 {
-    $path = botGuardStatePath($ip);
+    $path = botGuardStatePath($identity);
     $handle = @fopen($path, 'c+');
     if ($handle === false) {
         // Bez úložiska limiter nevieme vynucovať — radšej pustiť ďalej,
@@ -364,6 +387,199 @@ function botGuardVerifySearchBot(string $ip, string $ua): ?bool
     return $verdict;
 }
 
+/**
+ * Kľúč na podpisovanie tokenov dôveryhodných nástrojov.
+ *
+ * Primárne `BOT_GUARD_TRUST_KEY` z konfigurácie; ak chýba, odvodí sa HKDF-om
+ * z kľúča na ochranu údajov s vlastným `info` kontextom. Odvodenie dáva
+ * kryptograficky nezávislý kľúč (žiadne zdieľanie účelu medzi vrstvami)
+ * a nevyžaduje ručný zápis tajomstva na server. Ak nie je dostupné ani jedno,
+ * vráti null a celá vrstva je neaktívna — bot guard sa chová ako predtým.
+ */
+function botGuardTrustKey(): ?string
+{
+    static $key = false;
+    if ($key !== false) {
+        return $key;
+    }
+
+    $key = null;
+
+    try {
+        $env = function_exists('loadAppConfig') ? loadAppConfig() : [];
+    } catch (\RuntimeException) {
+        $env = [];
+    }
+
+    $configuredRaw = $env['BOT_GUARD_TRUST_KEY'] ?? getenv('BOT_GUARD_TRUST_KEY');
+    $configured = is_string($configuredRaw) ? trim($configuredRaw) : '';
+    if ($configured !== '') {
+        // Krátke tajomstvo je horšie než žiadne — radšej vrstvu nechaj vypnutú.
+        if (strlen($configured) >= 32) {
+            $key = $configured;
+        } else {
+            botGuardLog('trust-key', 'BOT_GUARD_TRUST_KEY je kratší než 32 znakov — ignorované');
+        }
+
+        return $key;
+    }
+
+    if (!function_exists('getAppDataProtectionKey')) {
+        return $key;
+    }
+
+    try {
+        $key = hash_hkdf('sha256', getAppDataProtectionKey(), 32, 'nefro-botguard-trust-v1');
+    } catch (\Throwable) {
+        $key = null;
+    }
+
+    return $key;
+}
+
+/** Base64 bez výplne a bez znakov, ktoré treba v URL či hlavičke escapovať. */
+function botGuardB64(string $raw): string
+{
+    return rtrim(strtr(base64_encode($raw), '+/', '-_'), '=');
+}
+
+/**
+ * Vyrobí podpísaný token pre vlastný nástroj. Volá sa z CLI (botguard_token.php),
+ * nikdy nie z web požiadavky.
+ *
+ * Formát:  nefro1.<nástroj>.<vydané>.<platné-do>.<podpis>
+ * Podpis:  HMAC-SHA256 nad „nefro1|nástroj|vydané|platné-do"
+ *
+ * Token NIE JE prístupové oprávnenie — neodomyká žiadny obsah ani dáta.
+ * Preukazuje len vlastníctvo, aby limiter nemusel hádať, kto je na druhej
+ * strane; jediný efekt je vlastný tier a vlastný účtovací priestor.
+ */
+function botGuardMakeTrustToken(string $tool, int $ttlSeconds, ?int $issuedAt = null): string
+{
+    $key = botGuardTrustKey();
+    if ($key === null) {
+        throw new \RuntimeException(
+            'Chýba podpisovací kľúč (BOT_GUARD_TRUST_KEY ani kľúč na ochranu údajov nie sú dostupné).',
+        );
+    }
+
+    $tool = strtolower(trim($tool));
+    if (preg_match('/^[a-z0-9][a-z0-9-]{0,31}$/', $tool) !== 1) {
+        throw new \RuntimeException('Názov nástroja musí byť 1 – 32 znakov z [a-z0-9-].');
+    }
+
+    $ttlSeconds = max(60, min(BOT_GUARD_TRUST_MAX_TTL, $ttlSeconds));
+    $issuedAt ??= time();
+    $expiresAt = $issuedAt + $ttlSeconds;
+
+    $payload = implode('|', [BOT_GUARD_TRUST_PREFIX, $tool, (string) $issuedAt, (string) $expiresAt]);
+
+    return implode('.', [
+        BOT_GUARD_TRUST_PREFIX,
+        $tool,
+        (string) $issuedAt,
+        (string) $expiresAt,
+        botGuardB64(hash_hmac('sha256', $payload, $key, true)),
+    ]);
+}
+
+/**
+ * Overí token a vráti názov nástroja, alebo null s dôvodom v $reason.
+ *
+ * Kontroluje sa: formát, platnosť podpisu (porovnanie v konštantnom čase),
+ * expirácia, vydanie v budúcnosti (nad toleranciu hodín) a maximálna povolená
+ * životnosť — inak by podpis s desaťročnou platnosťou bol použiteľný navždy.
+ */
+function botGuardVerifyTrustToken(string $token, ?string &$reason = null): ?string
+{
+    $key = botGuardTrustKey();
+    if ($key === null) {
+        $reason = 'podpisovací kľúč nie je dostupný';
+        return null;
+    }
+
+    $parts = explode('.', $token);
+    if (count($parts) !== 5 || $parts[0] !== BOT_GUARD_TRUST_PREFIX) {
+        $reason = 'neplatný formát';
+        return null;
+    }
+
+    [$prefix, $tool, $issuedRaw, $expiresRaw, $signatureRaw] = $parts;
+    if (preg_match('/^[a-z0-9][a-z0-9-]{0,31}$/', $tool) !== 1) {
+        $reason = 'neplatný názov nástroja';
+        return null;
+    }
+    if (preg_match('/^\d{1,12}$/', $issuedRaw) !== 1 || preg_match('/^\d{1,12}$/', $expiresRaw) !== 1) {
+        $reason = 'neplatné časové údaje';
+        return null;
+    }
+
+    $payload = implode('|', [$prefix, $tool, $issuedRaw, $expiresRaw]);
+    $expected = botGuardB64(hash_hmac('sha256', $payload, $key, true));
+    if (!hash_equals($expected, $signatureRaw)) {
+        $reason = 'neplatný podpis';
+        return null;
+    }
+
+    $issuedAt = (int) $issuedRaw;
+    $expiresAt = (int) $expiresRaw;
+    $now = time();
+
+    if ($expiresAt <= $now) {
+        $reason = 'platnosť vypršala pred ' . ($now - $expiresAt) . ' s (nástroj ' . $tool . ')';
+        return null;
+    }
+    if ($issuedAt > $now + BOT_GUARD_TRUST_SKEW) {
+        $reason = 'vydaný v budúcnosti (nástroj ' . $tool . ')';
+        return null;
+    }
+    if (($expiresAt - $issuedAt) > BOT_GUARD_TRUST_MAX_TTL) {
+        $reason = 'životnosť presahuje povolené maximum (nástroj ' . $tool . ')';
+        return null;
+    }
+
+    $reason = null;
+
+    return $tool;
+}
+
+/**
+ * Názov dôveryhodného nástroja z hlavičky požiadavky, alebo null.
+ *
+ * Neúspešné overenie sa zaloguje (v logu sa podľa dôvodu rozlíši vypršaný token
+ * vlastného nástroja od cudzieho pokusu), ale nikdy nevedie k banu — inak by
+ * jeden pokazený token odstavil vlastnú infraštruktúru.
+ */
+function botGuardTrustedTool(): ?string
+{
+    static $resolved = false;
+    static $tool = null;
+    if ($resolved) {
+        return $tool;
+    }
+    $resolved = true;
+
+    $raw = trim((string) ($_SERVER[BOT_GUARD_TRUST_HEADER] ?? ''));
+    if ($raw === '') {
+        return null;
+    }
+    if (strlen($raw) > 256) {
+        botGuardLog('trust-reject', 'token presahuje 256 znakov');
+        return null;
+    }
+
+    $reason = null;
+    $verified = botGuardVerifyTrustToken($raw, $reason);
+    if ($verified === null) {
+        botGuardLog('trust-reject', (string) $reason);
+        return null;
+    }
+
+    $tool = $verified;
+
+    return $tool;
+}
+
 /** Odstráni dávno neaktívne súbory stavu (spúšťa sa náhodne, ~0,5 % požiadaviek). */
 function botGuardCollectGarbage(): void
 {
@@ -463,39 +679,56 @@ function botGuardEnforce(): void
     $ua = botGuardUserAgent();
     $now = time();
 
-    // ── 1. Prázdny User-Agent ───────────────────────────────────────────────
-    // Každý prehliadač aj každý slušný bot sa predstaví. Prázdna hlavička je
-    // takmer vždy skript; HEAD (kontrola dostupnosti odkazu) ju mať môže.
-    if ($ua === '' && ($_SERVER['REQUEST_METHOD'] ?? 'GET') !== 'HEAD') {
-        botGuardReject('empty-user-agent');
-    }
+    // ── 0. Vlastný nástroj s podpísaným tokenom ─────────────────────────────
+    // Preukázané vlastníctvo sa posudzuje PRED heuristikami: vlastný nástroj
+    // sa nemá spoliehať na to, že jeho User-Agent nikto nezaradil na blocklist.
+    // Dostane vlastný tier a — podstatnejšie — vlastný účtovací priestor, takže
+    // jeho dávka nevyčerpá limit ľudí, ktorí idú z tej istej IP adresy.
+    $trustedTool = botGuardTrustedTool();
+    $isTrusted = $trustedTool !== null;
 
-    // ── 2. Tvrdý blocklist ──────────────────────────────────────────────────
-    if ($ua !== '' && preg_match(botGuardDenyPattern(), $ua) === 1) {
-        botGuardReject('blocklisted-agent');
-    }
-
-    // ── 3. Klasifikácia a limit pre túto triedu klienta ─────────────────────
-    $isSearch = $ua !== '' && preg_match(botGuardSearchPattern(), $ua) === 1;
-    $isTool   = !$isSearch && $ua !== '' && preg_match(botGuardToolPattern(), $ua) === 1;
-
-    if ($isSearch) {
-        $verified = botGuardVerifySearchBot($ip, $ua);
-        if ($verified === false) {
-            // UA sa vydáva za Googlebota, ale rDNS to nepotvrdzuje → scraper.
-            botGuardBan($ip, BOT_GUARD_BAN_SECONDS, 'spoofed-search-bot');
-            botGuardReject('spoofed-search-bot');
-        }
-        $limit = $verified === true ? BOT_GUARD_MAX_SEARCH : BOT_GUARD_MAX;
-    } elseif ($isTool) {
-        $limit = BOT_GUARD_MAX_TOOL;
+    if ($isTrusted) {
+        $identity = 'trust:' . $trustedTool . '@' . $ip;
+        $limit = BOT_GUARD_MAX_TRUSTED;
+        $burstMax = BOT_GUARD_BURST_TRUSTED;
     } else {
-        $limit = BOT_GUARD_MAX;
-    }
+        $identity = $ip;
+        $burstMax = BOT_GUARD_BURST_MAX;
 
-    // Fulltextové vyhľadávanie je najdrahšia operácia → polovičný limit.
-    if (str_contains((string) ($_SERVER['PHP_SELF'] ?? ''), 'search.php')) {
-        $limit = (int) max(10, $limit / 2);
+        // ── 1. Prázdny User-Agent ───────────────────────────────────────────
+        // Každý prehliadač aj každý slušný bot sa predstaví. Prázdna hlavička je
+        // takmer vždy skript; HEAD (kontrola dostupnosti odkazu) ju mať môže.
+        if ($ua === '' && ($_SERVER['REQUEST_METHOD'] ?? 'GET') !== 'HEAD') {
+            botGuardReject('empty-user-agent');
+        }
+
+        // ── 2. Tvrdý blocklist ──────────────────────────────────────────────
+        if ($ua !== '' && preg_match(botGuardDenyPattern(), $ua) === 1) {
+            botGuardReject('blocklisted-agent');
+        }
+
+        // ── 3. Klasifikácia a limit pre túto triedu klienta ─────────────────
+        $isSearch = $ua !== '' && preg_match(botGuardSearchPattern(), $ua) === 1;
+        $isTool   = !$isSearch && $ua !== '' && preg_match(botGuardToolPattern(), $ua) === 1;
+
+        if ($isSearch) {
+            $verified = botGuardVerifySearchBot($ip, $ua);
+            if ($verified === false) {
+                // UA sa vydáva za Googlebota, ale rDNS to nepotvrdzuje → scraper.
+                botGuardBan($ip, BOT_GUARD_BAN_SECONDS, 'spoofed-search-bot');
+                botGuardReject('spoofed-search-bot');
+            }
+            $limit = $verified === true ? BOT_GUARD_MAX_SEARCH : BOT_GUARD_MAX;
+        } elseif ($isTool) {
+            $limit = BOT_GUARD_MAX_TOOL;
+        } else {
+            $limit = BOT_GUARD_MAX;
+        }
+
+        // Fulltextové vyhľadávanie je najdrahšia operácia → polovičný limit.
+        if (str_contains((string) ($_SERVER['PHP_SELF'] ?? ''), 'search.php')) {
+            $limit = (int) max(10, $limit / 2);
+        }
     }
 
     // ── 4. Započítanie požiadavky a vyhodnotenie okien ──────────────────────
@@ -503,7 +736,7 @@ function botGuardEnforce(): void
     $shortCount = 0;
     $burstCount = 0;
 
-    botGuardMutateState($ip, static function (array $s) use ($now, &$banUntil, &$shortCount, &$burstCount): array {
+    botGuardMutateState($identity, static function (array $s) use ($now, &$banUntil, &$shortCount, &$burstCount): array {
         $banUntil = (int) ($s['banned_until'] ?? 0);
         if ($banUntil > $now) {
             return $s;
@@ -546,13 +779,23 @@ function botGuardEnforce(): void
         );
     }
 
-    if ($burstCount > BOT_GUARD_BURST_MAX) {
-        botGuardBan($ip, BOT_GUARD_BAN_SECONDS, 'burst-limit ' . $burstCount . '/' . BOT_GUARD_BURST_MAX);
-        botGuardThrottle(BOT_GUARD_BAN_SECONDS, 'burst-limit');
+    if ($burstCount > $burstMax) {
+        // Dôveryhodný nástroj dostane len 429 — nikdy ban. Ban je totiž uvalený
+        // na identitu a pri vlastnom nástroji by zbytočne zablokoval dávku,
+        // ktorá sa dá jednoducho spomaliť. Runaway loop sa aj tak zastaví.
+        if (!$isTrusted) {
+            botGuardBan($ip, BOT_GUARD_BAN_SECONDS, 'burst-limit ' . $burstCount . '/' . $burstMax);
+        } else {
+            botGuardLog('trust-throttle', 'burst-limit ' . $burstCount . '/' . $burstMax . ' (' . $trustedTool . ')');
+        }
+        botGuardThrottle($isTrusted ? BOT_GUARD_WINDOW : BOT_GUARD_BAN_SECONDS, 'burst-limit');
     }
 
     if ($shortCount > $limit) {
-        botGuardThrottle(BOT_GUARD_WINDOW, 'rate-limit ' . $shortCount . '/' . $limit);
+        botGuardThrottle(
+            BOT_GUARD_WINDOW,
+            'rate-limit ' . $shortCount . '/' . $limit . ($isTrusted ? ' (' . $trustedTool . ')' : ''),
+        );
     }
 
     // Deklaratívny nesúhlas so zberom na trénovanie AI (`X-Robots-Tag: noai`)

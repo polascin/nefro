@@ -63,6 +63,56 @@ disallowed in `robots.txt`, and it temporarily bans whoever follows it anyway.
 Verified search bots are exempt. Never block `curl`/`wget` (used for QA) or
 `wkhtmltopdf` (fetches its own images while rendering article PDFs).
 
+#### Trusted own tools (signed token)
+
+Rate limiting without an auth layer cannot tell your own batch tool from a
+scraper — statistically they are the same shape. Looser global rules would
+weaken the protection for everyone, so instead a tool proves ownership upfront
+with an HMAC-signed token:
+
+```
+X-Nefro-Trust: nefro1.<tool>.<issued>.<expires>.<base64url HMAC-SHA256>
+```
+
+Mint and inspect tokens with `botguard_token.php` (CLI only, denied in
+`.htaccess`):
+
+```
+php botguard_token.php --tool=ebook-builder --ttl=24h --curl
+php botguard_token.php --verify=<token>
+```
+
+Verification happens in `botGuardTrustedTool()` **before** any heuristic, so a
+trusted tool never depends on its User-Agent staying off the blocklist. What a
+valid token changes:
+
+- its own limit tier (`BOT_GUARD_MAX_TRUSTED`, `BOT_GUARD_BURST_TRUSTED`);
+- its own accounting identity, `trust:<tool>@<ip>` — this is the important
+  part: a batch run no longer consumes the human limit for the same IP, which
+  is what previously turned a 600-request ebook build into a 403 for the
+  author's browser;
+- no bans, ever — overflow yields 429 with `Retry-After`, so a runaway loop
+  still gets stopped but cannot lock the outbound IP out of the site;
+- exemption from the honeypot ban in `bot_trap.php`.
+
+A token is **not** an access grant: it unlocks no content, data, or admin, so
+leaking it only lets someone scrape at a higher rate. Hence short TTLs (max 7
+days, enforced on both minting *and* verification so a long-dated signature
+cannot outlive the policy), the tool name in every log line, and rotation by
+changing the key.
+
+Signing key: `BOT_GUARD_TRUST_KEY` in `private/nefro.env.ini`; if absent it is
+derived via `hash_hkdf` from the data-protection key with its own `info`
+context (independent key material, no shared purpose, nothing to configure).
+**Consequence of the default:** the derived key differs between local and
+production, so mint tokens on the host that will verify them (over SSH for
+production), or set an explicit `BOT_GUARD_TRUST_KEY` in both. Rotating
+`private/data_protection.key` invalidates outstanding tokens.
+
+Failed verification is logged (`trust-reject`, with the reason distinguishing
+an expired own token from a forgery attempt) and falls back to the normal tier
+— never to a ban, or one broken token would take down your own pipeline.
+
 ### 2c) TDM / AI-training reservation
 
 Blocking crawlers controls *access*; this layer reserves *rights*. Under

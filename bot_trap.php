@@ -10,7 +10,8 @@ declare(strict_types=1);
  * predsa príde, prezradil, že robots.txt ignoruje — dostane dočasný ban.
  *
  * Overené vyhľadávače sú z pasce vyňaté, aby omyl v ich crawleri nezhodil
- * indexovanie celého webu.
+ * indexovanie celého webu. Rovnako je vyňatý vlastný nástroj s platným
+ * podpísaným tokenom — ten vlastníctvo preukázal a nie je čo odhaľovať.
  */
 
 require_once __DIR__ . '/bot_guard.php';
@@ -20,6 +21,7 @@ $ua = botGuardUserAgent();
 
 $isSearch = $ua !== '' && preg_match(botGuardSearchPattern(), $ua) === 1;
 $verified = $isSearch ? botGuardVerifySearchBot($ip, $ua) : null;
+$trustedTool = botGuardTrustedTool();
 
 // Prehliadač posiela Sec-Fetch-* hlavičky. Ak požiadavka prišla z cudzej
 // stránky (napr. <img src="…/bot_trap.php"> vložený do fóra či e-mailu),
@@ -32,7 +34,9 @@ $sfDest = $_SERVER['HTTP_SEC_FETCH_DEST'] ?? null;
 $foreignBrowserRequest = $sfSite !== null
     && ($sfSite !== 'same-origin' || ($sfDest !== null && $sfDest !== 'document'));
 
-if ($verified !== true && !$foreignBrowserRequest) {
+if ($trustedTool !== null) {
+    botGuardLog('honeypot-skip', 'dôveryhodný nástroj ' . $trustedTool . ' — bez banu');
+} elseif ($verified !== true && !$foreignBrowserRequest) {
     botGuardBan($ip, BOT_GUARD_TRAP_BAN, 'honeypot');
 } elseif ($foreignBrowserRequest) {
     botGuardLog('honeypot-skip', 'cudzí pôvod (Sec-Fetch-Site: ' . substr((string) preg_replace('/[^a-z-]/', '', (string) $sfSite), 0, 20) . ') — bez banu');
