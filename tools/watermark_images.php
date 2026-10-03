@@ -61,6 +61,8 @@ const DENY_PATTERNS = [
     '/^pay-by-square$/i',            // platobný QR — vodoznak by znehodnotil čitateľnosť
     '/^payme-qr$/i',                 // payme.sk QR — to isté
     '/^impax$/i',                    // fotka dialyzačného strediska Medimpax — bez vodoznaku
+    '/-obalka(-\d+)?$/i',            // obálky predávaných publikácií (img/publikacie/) — vodoznak
+                                     // na obálke knihy vyzerá ako pirátska kópia a škodí predaju
 ];
 
 // Fonty: najprv systémové (dev Windows / Linux server), potom bundled fallback.
