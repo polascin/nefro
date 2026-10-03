@@ -378,6 +378,237 @@ function publicationPaymeUrl(float $amount, string $variableSymbol): string
         . '&CN=' . rawurlencode('MUDr. Lubomir Polascin');
 }
 
+/* ─────────────────── Doplnkové spôsoby platby ───────────────────────────────
+ * Bankový prevod zostáva základom: je bez poplatkov a variabilný symbol
+ * spoľahlivo spáruje platbu s objednávkou. Doplnkové kanály sú pre
+ * kupujúcich, ktorí platia kartou alebo peňaženkou.
+ *
+ * Pri každej metóde je kľúčová otázka, či prenesie **referenciu objednávky**.
+ * Bez nej predávajúci vidí len prišlú sumu a netuší, komu má publikáciu
+ * poslať — preto metódy bez technickej referencie kupujúcemu výslovne
+ * povedia, že variabilný symbol musí uviesť do poznámky, a sú označené ako
+ * pomalšie na spárovanie.
+ *
+ *   Stripe   → client_reference_id (automaticky, vidno v Stripe dashboarde)
+ *   PayPal   → custom + item_name (automaticky)
+ *   payme.sk → variabilný symbol v platobnom príkaze (automaticky)
+ *   Revolut, Ko-fi, Viamo, Uphold → len poznámka od kupujúceho
+ * ────────────────────────────────────────────────────────────────────────── */
+
+/**
+ * Konfigurácia doplnkových platobných kanálov na jednom mieste.
+ *
+ * Zámerne funkcia a nie konštanty: vyprázdnenie hodnoty je prevádzkový
+ * prepínač (kanál zo stránky zmizne), nie preklep. Pri konštantách by
+ * statická analýza porovnanie s prázdnym reťazcom vyhodnotila ako mŕtvy kód
+ * a prepínač by sa stal neviditeľným.
+ *
+ * `stripe_links` — Suma sa do Stripe URL vložiť nedá; je zapečená v cene,
+ * na ktorú je Payment Link vytvorený. Preto treba jeden odkaz na každú
+ * cenovú hladinu (kľúč je suma v tvare „7.00“). Odkazy vytvoríte v Stripe
+ * dashboarde (Payment Links → nový odkaz na produkt s danou cenou).
+ * Kým sú prázdne, použije sa `stripe_fallback` bez pevnej sumy, kde si
+ * kupujúci sumu zadá sám.
+ *
+ * @return array<string, mixed>
+ */
+function publicationPaymentConfig(): array
+{
+    return [
+        'stripe_links' => [
+            '7.00'  => '',
+            '12.00' => '',
+        ],
+        // Tá istá platobná stránka, akú používa podpora.php. Funguje hneď,
+        // ale bez pevnej sumy — len čo budú vyplnené `stripe_links`, prestane
+        // sa používať.
+        'stripe_fallback' => 'https://donate.stripe.com/8x2fZb0bo3Xxdm4cOGfMA00',
+        'paypal_account'  => 'polascin@proton.me',
+        // Revolut ani Ko-fi nevedia prijať sumu či referenciu v odkaze —
+        // kupujúci ich zadáva v ich rozhraní.
+        'revolut_url'     => 'https://revolut.me/polascin',
+        'kofi_url'        => 'https://ko-fi.com/lubomirpolascin',
+        'uphold_account'  => 'lubomir@polascin.net',
+        // Viamo — okamžitá platba na telefónne číslo. Zhodné s podpora.php.
+        'viamo_phone_raw'    => '+421917370474',
+        'viamo_phone_pretty' => '+421 917 370 474',
+    ];
+}
+
+/**
+ * Stripe odkaz pre danú sumu.
+ *
+ * `client_reference_id` (alfanumerické znaky, pomlčky a podčiarkovníky, do
+ * 200 znakov) nesie variabilný symbol — v Stripe dashboarde ho predávajúci
+ * vidí pri platbe, takže ju spáruje bez pýtania sa kupujúceho.
+ *
+ * @return array{url: string, exact: bool}|null  `exact` = odkaz má pevnú sumu
+ */
+function publicationStripeUrl(float $amount, string $variableSymbol, string $buyerEmail = ''): ?array
+{
+    $cfg   = publicationPaymentConfig();
+    $key   = number_format($amount, 2, '.', '');
+    $links = $cfg['stripe_links'];
+    $exact = isset($links[$key]) && $links[$key] !== '';
+    $base  = $exact ? (string) $links[$key] : (string) $cfg['stripe_fallback'];
+
+    if ($base === '') {
+        return null;
+    }
+
+    $params = ['client_reference_id' => $variableSymbol, 'locale' => 'sk'];
+    if (filter_var($buyerEmail, FILTER_VALIDATE_EMAIL)) {
+        $params['prefilled_email'] = $buyerEmail;
+    }
+
+    return [
+        'url'   => $base . (str_contains($base, '?') ? '&' : '?') . http_build_query($params),
+        'exact' => $exact,
+    ];
+}
+
+/**
+ * PayPal „Buy Now“ odkaz s pevnou sumou. Variabilný symbol ide do `custom`
+ * aj do názvu položky, takže ho predávajúci vidí v transakcii.
+ *
+ * Endpoint `_xclick` (PayPal Payments Standard) PayPal označuje za zastaraný,
+ * stále však funguje a nevyžaduje serverovú integráciu ani API kľúče. Ak ho
+ * PayPal vypne, stačí `paypal_account` v publicationPaymentConfig() vyprázdniť a možnosť
+ * zo stránky zmizne.
+ */
+function publicationPaypalUrl(float $amount, string $variableSymbol, string $title): string
+{
+    return 'https://www.paypal.com/cgi-bin/webscr?' . http_build_query([
+        'cmd'           => '_xclick',
+        'business'      => (string) publicationPaymentConfig()['paypal_account'],
+        'item_name'     => $title . ' (obj. ' . $variableSymbol . ')',
+        'item_number'   => $variableSymbol,
+        'custom'        => $variableSymbol,
+        'amount'        => number_format($amount, 2, '.', ''),
+        'currency_code' => 'EUR',
+        'no_shipping'   => '1',
+        'no_note'       => '0',
+        'charset'       => 'utf-8',
+    ]);
+}
+
+/**
+ * Doplnkové spôsoby platby pre konkrétnu objednávku. Vracia len tie, ktoré
+ * majú vyplnenú konfiguráciu — vyprázdnením konštanty metóda zo stránky zmizne.
+ *
+ * Kľúče položky:
+ *   name, desc  — čo to je a pre koho
+ *   url         — odkaz na platbu (null pri metódach, kde sa len kopíruje údaj)
+ *   cta         — text tlačidla
+ *   copy        — hodnota na skopírovanie (telefón, e-mail účtu)
+ *   copy_label  — popis kopírovanej hodnoty
+ *   auto_ref    — true, ak metóda prenesie variabilný symbol sama
+ *   exact       — true, ak je suma v odkaze pevná
+ *
+ * @param array<string, mixed> $order
+ * @return array<int, array<string, mixed>>
+ */
+function publicationPaymentMethods(array $order): array
+{
+    $amount = (float) $order['amount_eur'];
+    $vs     = (string) $order['variable_symbol'];
+    $title  = (string) $order['publication_title'];
+    $email  = (string) $order['buyer_email'];
+    $price  = formatPublicationPrice($amount);
+    $cfg    = publicationPaymentConfig();
+
+    $methods = [];
+
+    $stripe = publicationStripeUrl($amount, $vs, $email);
+    if ($stripe !== null) {
+        $methods[] = [
+            'key'      => 'stripe',
+            'name'     => 'Platobná karta, Apple Pay a Google Pay',
+            'desc'     => $stripe['exact']
+                ? 'Zabezpečená platobná brána Stripe s predvyplnenou sumou ' . $price
+                    . '. Platí sa kartou alebo mobilnou peňaženkou, bez zadávania bankových údajov.'
+                : 'Zabezpečená platobná brána Stripe. Sumu ' . $price
+                    . ' zadajte na platobnej stránke; variabilný symbol sa prenesie automaticky.',
+            'url'      => $stripe['url'],
+            'cta'      => 'Zaplatiť kartou',
+            'auto_ref' => true,
+            'exact'    => $stripe['exact'],
+        ];
+    }
+
+    if ($cfg['paypal_account'] !== '') {
+        $methods[] = [
+            'key'      => 'paypal',
+            'name'     => 'PayPal',
+            'desc'     => 'Platba z PayPal zostatku alebo kartou. Suma ' . $price
+                . ' aj číslo objednávky sú predvyplnené.',
+            'url'      => publicationPaypalUrl($amount, $vs, $title),
+            'cta'      => 'Zaplatiť cez PayPal',
+            'auto_ref' => true,
+            'exact'    => true,
+        ];
+    }
+
+    if ($cfg['revolut_url'] !== '') {
+        $methods[] = [
+            'key'      => 'revolut',
+            'name'     => 'Revolut',
+            'desc'     => 'Karta, Apple Pay aj Google Pay jedným odkazom. Revolut neprenesie sumu '
+                . 'ani číslo objednávky — zadajte sumu ' . $price . ' a do popisu platby '
+                . 'variabilný symbol.',
+            'url'      => $cfg['revolut_url'],
+            'cta'      => 'Zaplatiť cez Revolut',
+            'auto_ref' => false,
+            'exact'    => false,
+        ];
+    }
+
+    if ($cfg['kofi_url'] !== '') {
+        $methods[] = [
+            'key'      => 'kofi',
+            'name'     => 'Ko-fi',
+            'desc'     => 'Platba kartou alebo peňaženkou cez Ko-fi. Zadajte sumu ' . $price
+                . ' a do správy variabilný symbol.',
+            'url'      => $cfg['kofi_url'],
+            'cta'      => 'Zaplatiť cez Ko-fi',
+            'auto_ref' => false,
+            'exact'    => false,
+        ];
+    }
+
+    if ($cfg['viamo_phone_raw'] !== '') {
+        $methods[] = [
+            'key'        => 'viamo',
+            'name'       => 'Viamo — platba na telefónne číslo',
+            'desc'       => 'Okamžitá platba medzi slovenskými bankami (Tatra banka, VÚB, OTP) '
+                . 'bez IBAN. V aplikácii banky zvoľte platbu na telefónne číslo, zadajte sumu '
+                . $price . ' a do poznámky variabilný symbol.',
+            'url'        => null,
+            'copy'       => $cfg['viamo_phone_raw'],
+            'copy_label' => $cfg['viamo_phone_pretty'],
+            'auto_ref'   => false,
+            'exact'      => false,
+        ];
+    }
+
+    if ($cfg['uphold_account'] !== '') {
+        $methods[] = [
+            'key'        => 'uphold',
+            'name'       => 'Kryptomeny (Uphold)',
+            'desc'       => 'V aplikácii Uphold zvoľte Send, zadajte e-mail príjemcu a kryptomenu '
+                . 'v hodnote ' . $price . '. Do poznámky uveďte variabilný symbol. '
+                . 'Kurz sa môže pohnúť, preto platbu párujeme ručne.',
+            'url'        => null,
+            'copy'       => $cfg['uphold_account'],
+            'copy_label' => $cfg['uphold_account'],
+            'auto_ref'   => false,
+            'exact'      => false,
+        ];
+    }
+
+    return $methods;
+}
+
 /**
  * Údaje pre PAY by square QR kód (štandard SK bankovej asociácie v tvare,
  * ktorý aplikácie bánk čítajú z odkazu payme.sk). QR generuje prehliadač

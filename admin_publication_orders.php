@@ -431,6 +431,31 @@ $csrfToken  = generateCsrfToken();
                     <li><strong>Obnoviť prístup</strong> vygeneruje novú soľ: starý odkaz z e-mailu
                         prestane fungovať, počítadlo stiahnutí sa vynuluje a kupujúcemu príde
                         nový dodací e-mail.</li>
+                    <li><strong>Párovanie platieb mimo prevodu.</strong> Stripe aj PayPal prenesú
+                        variabilný symbol samy — v Stripe dashboarde je v poli
+                        <code>client_reference_id</code>, v PayPale v poli <code>custom</code>
+                        a v názve položky. Revolut, Ko-fi, Viamo a Uphold referenciu prenášať
+                        nevedia, takže kupujúceho na stránke objednávky výslovne žiadame, aby VS
+                        napísal do poznámky; ak ho zabudne, platbu treba dohľadať podľa sumy
+                        a e-mailu.</li>
+                    <?php
+                    // Kým sú Stripe Payment Links nevyplnené, kupujúci si na platobnej stránke
+                    // zadáva sumu sám — to je najčastejší zdroj nedoplatkov, preto na to
+                    // upozorňujeme priamo tu, nie len v komentári v kóde.
+                    $stripeLinks = publicationPaymentConfig()['stripe_links'];
+                    $missingStripe = array_keys(array_filter(
+                        $stripeLinks,
+                        static fn ($url): bool => (string) $url === ''
+                    ));
+                    ?>
+                    <?php if ($missingStripe !== []): ?>
+                        <li><strong>Stripe ešte nemá odkazy s pevnou sumou</strong> pre
+                            <?= htmlspecialchars(implode(' € a ', $missingStripe)) ?> €.
+                            Zatiaľ sa používa záložná platobná stránka, na ktorej si kupujúci
+                            zadáva sumu sám. V Stripe dashboarde vytvorte Payment Link na každú
+                            cenu a vložte ich do <code>publicationPaymentConfig()</code>
+                            (pole <code>stripe_links</code>) — suma sa potom predvyplní.</li>
+                    <?php endif; ?>
                 </ul>
             </section>
 

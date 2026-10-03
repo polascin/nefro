@@ -532,9 +532,12 @@ markFormLoadTime('publication_order');
                         <dd><?= htmlspecialchars($seller['vatNote']) ?></dd>
                     </dl>
                     <p class="donate-note">
-                        Platí sa bankovým prevodom v eurách. Konkrétny variabilný symbol, IBAN
-                        aj QR kód dostanete po odoslaní objednávky — na tejto stránke sa
-                        nezadávajú žiadne platobné údaje.
+                        Platí sa v eurách. Po odoslaní objednávky dostanete variabilný symbol,
+                        IBAN aj QR kód pre <strong>bankový prevod</strong> a zároveň možnosť
+                        zaplatiť <strong>kartou, Apple Pay či Google Pay (Stripe), cez PayPal,
+                        Revolut, Ko-fi, Viamo</strong> alebo <strong>kryptomenou (Uphold)</strong>.
+                        Na tejto stránke sa nezadávajú žiadne platobné údaje — platbu spracúva
+                        vaša banka alebo vybraná služba.
                     </p>
                 </div>
                 <p class="pub-legal-link">

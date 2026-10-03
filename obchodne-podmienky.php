@@ -151,7 +151,8 @@ include 'legal_head.php';
 
                 <h3>5. Platba</h3>
                 <p>
-                    Platí sa <strong>bankovým prevodom v eurách</strong> na účet predávajúceho:
+                    Základným spôsobom platby je <strong>bankový prevod v eurách</strong>
+                    na účet predávajúceho:
                 </p>
                 <div class="info-box-blue">
                     <dl class="donate-bank">
@@ -175,9 +176,26 @@ include 'legal_head.php';
                     platbu v aplikácii vašej banky.
                 </p>
                 <p>
+                    Okrem prevodu môžete zaplatiť aj <strong>platobnou kartou, cez Apple Pay
+                    alebo Google Pay</strong> (platobná brána Stripe), <strong>PayPalom</strong>,
+                    <strong>Revolutom</strong>, <strong>cez Ko-fi</strong>, <strong>Viamom</strong>
+                    (platba na telefónne číslo) alebo <strong>kryptomenou</strong> (Uphold).
+                    Konkrétne odkazy sú na stránke objednávky. Tieto platby spracúvajú uvedené
+                    poskytovatelia platobných služieb podľa vlastných podmienok; predávajúci od
+                    nich dostane len informáciu o prijatej platbe.
+                </p>
+                <p>
+                    Pri Stripe a PayPale sa číslo objednávky prenesie automaticky. Pri ostatných
+                    kanáloch ho prosím <strong>uveďte do poznámky alebo popisu platby</strong> —
+                    bez neho musí predávajúci platbu dohľadávať ručne a dodanie sa zdrží.
+                    Cena publikácie sa týmto nemení; prípadné poplatky svojej banky alebo
+                    peňaženky nesie kupujúci.
+                </p>
+                <p>
                     <strong>Na tomto portáli sa nespracúvajú platobné údaje.</strong> Platbu
-                    vykonávate výhradne vo svojej banke; predávajúci nezískava čísla platobných
-                    kariet ani prihlasovacie údaje do internetbankingu.
+                    vykonávate vo svojej banke alebo u vybraného poskytovateľa platobných služieb;
+                    predávajúci nezískava čísla platobných kariet ani prihlasovacie údaje
+                    do internetbankingu.
                 </p>
 
                 <h3>6. Dodanie digitálneho obsahu</h3>

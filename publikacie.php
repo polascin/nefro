@@ -158,16 +158,16 @@ $catalogue = array_values(array_filter(
                 <ol class="pub-steps">
                     <li>Vyberiete formáty a odošlete objednávku — stačí e-mailová adresa.</li>
                     <li>E-mailom dostanete platobné pokyny s variabilným symbolom a QR kódom.</li>
-                    <li>Zaplatíte bankovým prevodom. Platbu párujeme podľa variabilného symbolu,
-                        zvyčajne do jedného pracovného dňa.</li>
+                    <li>Zaplatíte prevodom, alebo kartou a peňaženkou — Stripe, PayPal, Revolut,
+                        Ko-fi, Viamo či kryptomenou.</li>
                     <li>Po potvrdení platby vám publikáciu pošleme e-mailom — súbory, ktoré sa
                         zmestia do prílohy, prídu priamo v nej; objemnejšie stiahnete na stránke
                         objednávky, ktorej odkaz máte v e-maile.</li>
                 </ol>
                 <div class="info-box-blue">
-                    <p><strong>Žiadne platobné údaje na tejto stránke.</strong> Platba prebieha
-                       výhradne vo vašej banke; portál nespracúva čísla kariet ani prihlasovacie
-                       údaje do internetbankingu. Súbory sú bez DRM.</p>
+                    <p><strong>Žiadne platobné údaje na tejto stránke.</strong> Platbu spracúva
+                       vaša banka alebo vybraná platobná služba; portál nevidí ani neuchováva
+                       čísla kariet a prihlasovacie údaje do internetbankingu. Súbory sú bez DRM.</p>
                 </div>
                 <p class="pub-legal-link">
                     Podrobnosti o predaji, dodaní a odstúpení od zmluvy:

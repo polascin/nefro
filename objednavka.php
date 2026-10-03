@@ -53,6 +53,12 @@ $amount       = $order !== null ? (float) $order['amount_eur'] : 0.0;
 $status       = $order !== null ? (string) $order['status'] : '';
 $canDownload  = $order !== null && publicationOrderIsDownloadable($order);
 $paymeUrl     = $order !== null ? publicationPaymeUrl($amount, (string) $order['variable_symbol']) : '';
+
+// Doplnkové kanály (karta, peňaženky) sa ponúkajú len pri neuhradenej
+// objednávke — po zaplatení by boli len návodom, ako zaplatiť druhý raz.
+$payMethods = ($order !== null && $status === 'awaiting_payment')
+    ? publicationPaymentMethods($order)
+    : [];
 ?>
 <!DOCTYPE html>
 <html lang="sk">
@@ -298,6 +304,57 @@ $paymeUrl     = $order !== null ? publicationPaymeUrl($amount, (string) $order['
                                nezadávajú žiadne platobné údaje a portál ich nespracúva.</p>
                         </div>
                     </section>
+
+                    <?php if ($payMethods !== []): ?>
+                    <section class="form-section" aria-labelledby="order-altpay-heading">
+                        <h3 id="order-altpay-heading">Alebo zaplaťte kartou či peňaženkou</h3>
+                        <p>Ak nechcete platiť prevodom, použite ktorúkoľvek z týchto možností.
+                           Platbu spracúva vybraná služba — portál platobné údaje nevidí
+                           ani neuchováva.</p>
+
+                        <ul class="pub-paymethod-list">
+                            <?php foreach ($payMethods as $method): ?>
+                                <li class="pub-paymethod">
+                                    <div class="pub-paymethod__body">
+                                        <p class="pub-paymethod__name">
+                                            <?= htmlspecialchars((string) $method['name']) ?>
+                                            <?php if ($method['auto_ref']): ?>
+                                                <span class="pub-paymethod__tag pub-paymethod__tag--auto">číslo objednávky sa prenesie</span>
+                                            <?php else: ?>
+                                                <span class="pub-paymethod__tag pub-paymethod__tag--manual">uveďte VS do poznámky</span>
+                                            <?php endif; ?>
+                                        </p>
+                                        <p class="pub-paymethod__desc"><?= htmlspecialchars((string) $method['desc']) ?></p>
+                                    </div>
+                                    <div class="pub-paymethod__action no-print">
+                                        <?php if (!empty($method['url'])): ?>
+                                            <a href="<?= htmlspecialchars((string) $method['url'], ENT_QUOTES) ?>"
+                                               class="btn-primary" target="_blank" rel="noopener noreferrer">
+                                                <?= htmlspecialchars((string) $method['cta']) ?>
+                                            </a>
+                                        <?php else: ?>
+                                            <code><?= htmlspecialchars((string) $method['copy_label']) ?></code>
+                                            <button type="button" class="btn-secondary donate-copy-btn"
+                                                    data-copy="<?= htmlspecialchars((string) $method['copy'], ENT_QUOTES) ?>"
+                                                    aria-label="Kopírovať <?= htmlspecialchars((string) $method['copy_label'], ENT_QUOTES) ?> do schránky">Kopírovať</button>
+                                        <?php endif; ?>
+                                    </div>
+                                </li>
+                            <?php endforeach; ?>
+                        </ul>
+
+                        <div class="info-box-yellow">
+                            <p><strong>Dôležité pri platbe mimo prevodu.</strong> Tam, kde službe
+                               nevieme odovzdať číslo objednávky, uveďte prosím do poznámky alebo
+                               popisu platby variabilný symbol
+                               <strong><?= htmlspecialchars((string) $order['variable_symbol']) ?></strong>.
+                               Bez neho musíme platbu dohľadávať ručne a dodanie sa zdrží.
+                               Ak sa to stane, napíšte nám na
+                               <a href="mailto:<?= htmlspecialchars($seller['email'], ENT_QUOTES) ?>"><?= htmlspecialchars($seller['email']) ?></a>
+                               a objednávku spárujeme.</p>
+                        </div>
+                    </section>
+                    <?php endif; ?>
                 <?php endif; ?>
 
                 <section class="form-section" aria-labelledby="order-seller-heading">
