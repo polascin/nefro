@@ -962,6 +962,53 @@ try {
     $cliOut("Tabuľka 'codebook_municipalities' bola úspešne vytvorená alebo už existuje.\n");
     $cliOut("Poznámka: Pre import všetkých obcí SR spustite seed_municipalities_sk.php\n");
 
+    // ── Objednávky platených publikácií (e-knihy) ────────────────────
+    // Publikácia sama je definovaná v kóde (publications_common.php), v DB
+    // ostáva len objednávka. `publication_title` je úmyselná denormalizácia —
+    // objednávka musí ostať čitateľná aj keď sa názov v katalógu neskôr zmení
+    // alebo publikácia z katalógu odíde.
+    //
+    // Objednávka nie je viazaná na účet: kupujúci nemusí byť registrovaný,
+    // identifikuje ho variabilný symbol + prístupový token z e-mailu.
+    // V DB je len sha256 odtlačok tokenu, nie token samotný.
+    $publicationOrdersSql = "CREATE TABLE IF NOT EXISTS publication_orders (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        variable_symbol VARCHAR(12) NULL COMMENT 'Variabilný symbol platby (rok + ID); dopĺňa sa po INSERT z prideleného ID',
+        publication_slug VARCHAR(100) NOT NULL,
+        publication_title VARCHAR(255) NOT NULL COMMENT 'Názov v čase objednávky — objednávka musí ostať čitateľná aj po zmene katalógu',
+        formats VARCHAR(100) NOT NULL COMMENT 'CSV kódov formátov, napr. pdf,epub',
+        amount_eur DECIMAL(8,2) NOT NULL,
+        currency CHAR(3) NOT NULL DEFAULT 'EUR',
+        buyer_email VARCHAR(255) NOT NULL,
+        buyer_name VARCHAR(255) NOT NULL DEFAULT '',
+        buyer_company VARCHAR(255) NOT NULL DEFAULT '',
+        buyer_company_id VARCHAR(20) NOT NULL DEFAULT '',
+        buyer_tax_id VARCHAR(20) NOT NULL DEFAULT '',
+        buyer_address VARCHAR(500) NOT NULL DEFAULT '',
+        buyer_note VARCHAR(1000) NOT NULL DEFAULT '',
+        token_salt CHAR(32) NOT NULL COMMENT 'Soľ pre HMAC prístupového tokenu; prepísaním sa odkaz z e-mailu zneplatní',
+        status ENUM('awaiting_payment', 'paid', 'cancelled') NOT NULL DEFAULT 'awaiting_payment',
+        payment_due_at DATETIME NULL,
+        paid_at DATETIME NULL,
+        cancelled_at DATETIME NULL,
+        payment_note VARCHAR(500) NULL,
+        access_expires_at DATETIME NULL,
+        download_count INT NOT NULL DEFAULT 0,
+        last_download_at DATETIME NULL,
+        last_download_format VARCHAR(10) NULL,
+        created_ip VARCHAR(45) NULL,
+        created_user_agent VARCHAR(255) NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        UNIQUE KEY uq_publication_orders_vs (variable_symbol),
+        INDEX idx_publication_orders_status (status),
+        INDEX idx_publication_orders_email (buyer_email),
+        INDEX idx_publication_orders_slug (publication_slug),
+        INDEX idx_publication_orders_created (created_at)
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";
+    $pdo->exec($publicationOrdersSql);
+    $cliOut("Tabuľka 'publication_orders' bola úspešne vytvorená alebo už existuje.\n");
+
 } catch (\PDOException $e) {
     $cliOut("Chyba pri vytváraní tabuľky: " . $e->getMessage());
     if (php_sapi_name() === 'cli') {
