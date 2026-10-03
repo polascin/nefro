@@ -50,7 +50,7 @@ $articles[] = [
 
 <h2>Štúdia na medikoch: znalosť nestačí na zdržanlivosť</h2>
 
-<p>Linares a spolupracovníci v <em>Neurogastroenterology &amp; Motility</em> (máj 2026) uverejnili multicentrickú prierezovú štúdiu <em>Knowledge Does Not Translate Into Diagnostic Restraint</em>. Zúčastnilo sa jej <strong>238 medikov v klinických ročníkoch</strong> (po aspoň jednom roku stáží) zo <strong>45 univerzít v 14 krajinách Latinskej Ameriky</strong>. Priemerný vek bol 24,3 roka (SD 4,1), ženy tvorili 63,4 %. Išlo o dobrovoľný anonymný výber, nie o náhodný vzoriek; zber prebiehal od januára do marca 2026, teda ešte pred zverejnením Rome V.</p>
+<p>Linares a spolupracovníci v <em>Neurogastroenterology &amp; Motility</em> (máj 2026) uverejnili multicentrickú prierezovú štúdiu <em>Knowledge Does Not Translate Into Diagnostic Restraint</em>. Zúčastnilo sa jej <strong>238 medikov v klinických ročníkoch</strong> (po aspoň jednom roku stáží) zo <strong>45 univerzít v 14 krajinách Latinskej Ameriky</strong>. Priemerný vek bol 24,3 roka (SD 4,1), ženy tvorili 63,4 %. Išlo o dobrovoľný anonymný výber, nie o náhodnú vzorku; zber prebiehal od januára do marca 2026, teda ešte pred zverejnením Rome V.</p>
 
 <p>Nástroj mal päť oblastí: demografické údaje, výučbu DGBI, teoretické znalosti kritérií Rome, zaradenie varovných príznakov a klinické uvažovanie na postupných vinietách. Dospelá vineta opisovala <strong>28-ročnú ženu spĺňajúcu Rome IV pre IBS bez varovných príznakov</strong>. Potom sa tá istá kazuistika predložila v troch etapách: úvod; vyššia intenzita bolesti bez nových alarmov; kontrola po dvoch týždňoch s normálnymi laboratórnymi výsledkami. Nakoniec sa rovnaký obraz preložil do 7-ročného dieťaťa.</p>
 
@@ -170,7 +170,7 @@ $articles[] = [
 
 <h2>Kedy má zmysel testovať ďalej</h2>
 
-<p>Tu treba oddeliť dva plány, ktoré sa v sekundárnych textoch často zlejú. Štúdia na medikoch hodnotila <em>akékoľvek</em> objednanie testu vo vinete bez alarmov ako odklon od diagnostickej zdržanlivosti – vrátane krvného obrazu a kalprotektínu. Odporúčanie ACG z roku 2021 však pri IBS s hnačkou <strong>cieľené</strong> neinvazívne testy naopak navrhuje. Poučenie teda nie je „nerobiť nič“, ale „nerobiť z IBS diagnózu vylúčením a neeskalovať po už normálnych výsledkoch“.</p>
+<p>Tu treba oddeliť dva plány, ktoré sa v sekundárnych textoch často zlejú. Štúdia na medikoch hodnotila <em>akékoľvek</em> objednanie testu vo vinete bez alarmov ako odklon od diagnostickej zdržanlivosti – vrátane krvného obrazu a kalprotektínu. Odporúčanie ACG z roku 2021 však pri IBS s hnačkou <strong>cielené</strong> neinvazívne testy naopak navrhuje. Poučenie teda nie je „nerobiť nič“, ale „nerobiť z IBS diagnózu vylúčením a neeskalovať po už normálnych výsledkoch“.</p>
 
 <p>Nasledujúci prehľad treba čítať ako orientáciu podľa ACG 2021 a verejných materiálov Rome Foundation, <strong>prispôsobenú miestnej praxi</strong>. Nie je to zoznam vyšetrení „vždy a pre každého“.</p>
 
@@ -217,7 +217,7 @@ $articles[] = [
 
 <h2>Čo z toho plynie pre vzdelávanie – a pre nefrológiu</h2>
 
-<p>Autori štúdie to formulujú presne: rozpor medzi princípmi Rome a aplikovaným uvažovaním vzniká už počas pregraduálnej prípravy. Teoretická znalosť súvisí s nižším úvodným testovaním, ale nadužívanie ostáva časté aj u tých, ktorí kritériá ovládajú. Didaktická hodina nestačí. Slubnejší signál dávala kazuistická výučba. Vzdelávanie by malo učiť odlíšiť varovný príznak od definičného znaku IBS, pomenovať pozitívnu diagnózu nahlas a skúšať nielen úplný diferenciál, ale aj primeranú zdržanlivosť.</p>
+<p>Autori štúdie to formulujú presne: rozpor medzi princípmi Rome a aplikovaným uvažovaním vzniká už počas pregraduálnej prípravy. Teoretická znalosť súvisí s nižším úvodným testovaním, ale nadužívanie ostáva časté aj u tých, ktorí kritériá ovládajú. Didaktická hodina nestačí. Sľubnejší signál dávala kazuistická výučba. Vzdelávanie by malo učiť odlíšiť varovný príznak od definičného znaku IBS, pomenovať pozitívnu diagnózu nahlas a skúšať nielen úplný diferenciál, ale aj primeranú zdržanlivosť.</p>
 
 <p>Pre nefrológiu z toho nevyplýva, že by sme IBS diagnostikovali namiesto gastroenterológa. Vyplýva skromnejší záver. Gastrointestinálne ťažkosti pri CKD sú časté: uremická nauzea, zápcha pri obmedzení tekutín a fosfátových viazačoch, hnačka pri niektorých viazačoch, gastroparéza pri diabete, polyfarmácia. Ak obraz spĺňa DGBI a chýbajú alarmy, má zmysel neeskalovať CT a endoskopiu len preto, že pacient „už aj tak veľa chorôb má“. Ak je však prítomná anémia z nedostatku železa, krvácanie, neúmyselný úbytok hmotnosti alebo nočná hnačka, CKD tieto alarmy nevysvetľuje a došetrenie sa nedeleguje na „funkčnú“ nálepku.</p>
 

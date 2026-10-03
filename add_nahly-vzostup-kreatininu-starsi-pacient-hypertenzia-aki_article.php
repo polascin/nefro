@@ -116,7 +116,7 @@ $articles[] = [
 
 <h3>FeNa a FeUrea sú iba pomocné údaje</h3>
 
-<p>Frakčná exkrécia sodíka (FeNa) pod 1 % môže podporiť hypoperfúzny mechanizmus a vyššia hodnota tubulárne poškodenie, ale prahy nie sú diagnózou. Metaanalýza 19 štúdií ukázala, že FeNa je najprínosnejšia u oligurických pacientov bez CKD a bez diuretík; pri CKD alebo diuretickej liečbe jej špecificita výrazne klesá. Výsledok ovplyvňuje aj sepsa, glomerulárne ochorenie, skorá obštrukcia, kontrast a časovanie odberu.</p>
+<p>Frakčná exkrécia sodíka (FeNa) pod 1 % môže podporiť hypoperfúzny mechanizmus a vyššia hodnota tubulárne poškodenie, ale prahy nie sú diagnózou. Metaanalýza 19 štúdií ukázala, že FeNa je najprínosnejšia u oligurických pacientov bez CKD a bez diuretík; pri CKD alebo diuretickej liečbe jej špecificita výrazne klesá. Výsledok ovplyvňuje aj sepsa, glomerulové ochorenie, skorá obštrukcia, kontrast a časovanie odberu.</p>
 
 <p>FeUrea sa tradične používa pri diuretikách, ale nemožno ju považovať za spoľahlivú náhradu FeNa. Systematický prehľad z roku 2026 zistil iba strednú diagnostickú presnosť, výraznú heterogenitu a celkovo nízku istotu dôkazov. Obe frakčné exkrécie sa majú interpretovať spolu s anamnézou, sedimentom, hemodynamikou a vývojom po liečbe.</p>
 

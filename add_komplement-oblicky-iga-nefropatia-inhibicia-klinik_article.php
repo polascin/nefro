@@ -140,7 +140,7 @@ $articles[] = [
 
 <h3>CFHR a alternatívna dráha</h3>
 
-<p>Genomové asociačné štúdie identifikovali pri IgA nefropatii lokus s génmi <strong>CFHR1 a CFHR3</strong>. Ich delecia je spojená s nižším rizikom ochorenia — produkty týchto génov konkurujú faktoru H pri regulácii AP; pri ich absencii môže byť komplement lepšie brzdený. Genetické a biopsijné údaje spolu podporujú dominanciu alternatívnej dráhy s možným podielom lektínovej dráhy v podskupine.</p>
+<p>Genomové asociačné štúdie identifikovali pri IgA nefropatii lokus s génmi <strong>CFHR1 a CFHR3</strong>. Ich delécia je spojená s nižším rizikom ochorenia — produkty týchto génov konkurujú faktoru H pri regulácii AP; pri ich absencii môže byť komplement lepšie brzdený. Genetické a biopsijné údaje spolu podporujú dominanciu alternatívnej dráhy s možným podielom lektínovej dráhy v podskupine.</p>
 
 <div class="table-responsive" role="region" aria-label="Komplementové markery pri IgA nefropatii" tabindex="0">
   <table>
@@ -168,7 +168,7 @@ $articles[] = [
         <td>Podporuje cielenú inhibíciu AP</td>
       </tr>
       <tr>
-        <th scope="row">CFHR1/3 delecia</th>
+        <th scope="row">CFHR1/3 delécia</th>
         <td>Genetická ochrana</td>
         <td>Prepojenie AP a rizika IgAN</td>
       </tr>
@@ -259,7 +259,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>Komplement v nefrológii vyžaduje tri veci naraz: rozlíšiť systémovú a lokálnu aktivitu, rešpektovať infekčné riziko (očkovanie nevylučuje meningokokovú infekciu) a cieľiť správnu dráhu. Pri IgA nefropatii je alternatívna dráha mechanisticky centrálna — iptakopan znížil proteinúriu (základ FDA schválenia v auguste 2024) a po 24 mesiacoch spomalil pokles eGFR. Lektínová dráha je relevantná u C4d+ podskupiny, no fáza III s narsoplimabom bez enrichmentu skončila negatívne. Diagnostika (C3/C4, CH50/AH50, biopsia) má limity; checklist pred inhibíciou by mal byť rutina.</p>
+<p>Komplement v nefrológii vyžaduje tri veci naraz: rozlíšiť systémovú a lokálnu aktivitu, rešpektovať infekčné riziko (očkovanie nevylučuje meningokokovú infekciu) a cieliť správnu dráhu. Pri IgA nefropatii je alternatívna dráha mechanisticky centrálna — iptakopan znížil proteinúriu (základ FDA schválenia v auguste 2024) a po 24 mesiacoch spomalil pokles eGFR. Lektínová dráha je relevantná u C4d+ podskupiny, no fáza III s narsoplimabom bez enrichmentu skončila negatívne. Diagnostika (C3/C4, CH50/AH50, biopsia) má limity; checklist pred inhibíciou by mal byť rutina.</p>
 
 <hr>
 

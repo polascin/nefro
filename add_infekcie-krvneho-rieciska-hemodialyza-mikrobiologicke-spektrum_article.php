@@ -134,7 +134,7 @@ $articles[] = [
 </table>
 </div>
 
-<p>Úplná interpretácia vyžaduje vedieť, či model odhadoval okamžitú zmenu úrovne incidencie, zmenu časového trendu alebo kombináciu oboch. Výsledok pri gramnegatívnych baktériách bol tesne pod hranicou konvenčnej štatistickej významnosti, a je preto podstatne menej robustný než výsledok pre <em>S. aureus</em>.</p>
+<p>Úplná interpretácia vyžaduje vedieť, či model odhadoval okamžitú zmenu úrovne incidencie, zmenu časového trendu alebo kombináciu oboch. Výsledok pri gramnegatívnych baktériách bol tesne pod hranicou konvenčnej štatistickej významnosti a je preto podstatne menej robustný než výsledok pre <em>S. aureus</em>.</p>
 
 <h3>Prečo nová jednotka mohla pomôcť</h3>
 

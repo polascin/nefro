@@ -157,7 +157,7 @@ $articles[] = [
   <li>symptómy a kvalitu života.</li>
 </ul>
 
-<p>Pri OL-HDF sa má preto popri Kt/V zaznamenávať dosiahnutý konvekčný objem, čas liečby, efektívny prietok krvi, filtračná frakcia a priebeh transmembránového tlaku. Pri MCO dialýze zatiaľ neexistuje všeobecne prijatý klinický ukazovateľ, ktorý by spoľahlivo vyjadroval jej „dávku“.</p>
+<p>Pri OL-HDF sa má preto popri Kt/V zaznamenávať dosiahnutý konvekčný objem, čas liečby, efektívny prietok krvi, filtračnú frakciu a priebeh transmembránového tlaku. Pri MCO dialýze zatiaľ neexistuje všeobecne prijatý klinický ukazovateľ, ktorý by spoľahlivo vyjadroval jej „dávku“.</p>
 
 <h2>Praktický výber liečebnej modality</h2>
 

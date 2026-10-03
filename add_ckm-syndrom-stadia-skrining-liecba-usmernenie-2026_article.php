@@ -78,7 +78,7 @@ $articles[] = [
 
 <p>Pacienti s jedným alebo viacerými manifestnými metabolickými rizikovými faktormi — artériovou hypertenziou, diabetom, hypertriglyceridémiou alebo inou aterogénnou dyslipidémiou, metabolickým syndrómom — alebo s chronickou chorobou obličiek, ktorá ešte nedosahuje veľmi vysoké riziko zodpovedajúce štádiu 3.</p>
 
-<p>Usmernenie tu zdôrazňuje <strong>každoročné vyšetrenie pomeru albumínu ku kreatinínu v moči (uACR)</strong> u rizikových pacientov. Samotný sérový kreatinín nestačí — albuminúria môže signalizovať glomerulárne a cievne poškodenie ešte pred poklesom odhadovanej glomerulárnej filtrácie.</p>
+<p>Usmernenie tu zdôrazňuje <strong>každoročné vyšetrenie pomeru albumínu ku kreatinínu v moči (uACR)</strong> u rizikových pacientov. Samotný sérový kreatinín nestačí — albuminúria môže signalizovať glomerulárne a cievne poškodenie ešte pred poklesom odhadovanej glomerulovej filtrácie.</p>
 
 <h3>Štádium 3: subklinické kardiovaskulárne ochorenie alebo rizikový ekvivalent</h3>
 

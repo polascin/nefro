@@ -26,7 +26,7 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Prehľad prepája CKD s kardiovaskulárnym a metabolickým rizikom a premieňa KDIGO 2024 na praktický rámec: eGFR, UACR, KFRE, RAS blokáda, SGLT2 inhibítory, finerenón a GLP-1 RA.',
+    'excerpt'      => 'Prehľad prepája CKD s kardiovaskulárnym a metabolickým rizikom a premieňa KDIGO 2024 na praktický rámec: eGFR, UACR, KFRE, RAS blokáda, inhibítory SGLT2, finerenón a GLP-1 RA.',
     'content'      => <<<'HTML'
 <figure><a href="img/oblicka-v-centre-ckm-syndromu-kdigo.webp" rel="noopener noreferrer" target="_blank"><img src="img/oblicka-v-centre-ckm-syndromu-kdigo.webp" alt="Oblička v strede rámu, cez ktorú prechádzajú tri prepletené oblúky — červený so srdcom, zlatý s metabolickými časticami a modrozelený s obličkovými štruktúrami" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Žiadna z troch zložiek nepokračuje bez obličky — preto ju KDIGO stavia do stredu spoločného rámca.</figcaption></figure>
 
@@ -160,7 +160,7 @@ $articles[] = [
 
 <p>Účinok inhibítorov sodíkovo-glukózového kotransportéra 2 (SGLT2) presahuje glykemickú kontrolu. Obnovou tubuloglomerulovej spätnej väzby znižujú intraglomerulový tlak, spomaľujú pokles eGFR a znižujú riziko renálnych aj kardiovaskulárnych príhod.</p>
 
-<p>Podľa KDIGO 2024 sa SGLT2 inhibítor odporúča:</p>
+<p>Podľa KDIGO 2024 sa inhibítor SGLT2 odporúča:</p>
 
 <ul>
   <li>pacientom s diabetes mellitus 2. typu, CKD a eGFR ≥20 ml/min/1,73 m<sup>2</sup>,</li>
@@ -172,7 +172,7 @@ $articles[] = [
 
 <h3>Finerenón: reziduálne riziko pri diabete a albuminúrii</h3>
 
-<p>Nesteroidný antagonista mineralokortikoidového receptora s preukázaným renálnym a kardiovaskulárnym prínosom má miesto u dospelých s diabetes mellitus 2. typu, eGFR &gt;25 ml/min/1,73 m<sup>2</sup>, normálnou koncentráciou draslíka a perzistujúcou albuminúriou &gt;3 mg/mmol (&gt;30 mg/g) napriek maximálnej tolerovanej dávke RAS blokády. Môže sa pridať k RAS blokáde a SGLT2 inhibítoru.</p>
+<p>Nesteroidný antagonista mineralokortikoidového receptora s preukázaným renálnym a kardiovaskulárnym prínosom má miesto u dospelých s diabetes mellitus 2. typu, eGFR &gt;25 ml/min/1,73 m<sup>2</sup>, normálnou koncentráciou draslíka a perzistujúcou albuminúriou &gt;3 mg/mmol (&gt;30 mg/g) napriek maximálnej tolerovanej dávke RAS blokády. Môže sa pridať k RAS blokáde a inhibítoru SGLT2.</p>
 
 <p>Výber pacienta a pravidelné monitorovanie kaliémie sú zásadné, pretože liečba zvyšuje riziko hyperkaliémie. Steroidné antagonisty mineralokortikoidového receptora zostávajú dôležité pri srdcovom zlyhávaní, hyperaldosteronizme alebo rezistentnej hypertenzii, ich indikačný rámec však nie je totožný s finerenónom.</p>
 
@@ -180,7 +180,7 @@ $articles[] = [
 
 <p>Obezita je významným, no často podceňovaným determinantom CKD. Podieľa sa na hyperfiltrácii, albuminúrii, glomerulomegálii, sekundárnej fokálnej segmentálnej glomeruloskleróze, hypertenzii, diabete aj srdcovom zlyhávaní so zachovanou ejekčnou frakciou.</p>
 
-<p>KDIGO 2024 odporúča dlhodobo pôsobiaci agonista receptora GLP-1 u dospelých s diabetes mellitus 2. typu a CKD, ktorí nedosiahli individualizované glykemické ciele napriek liečbe metformínom a SGLT2 inhibítorom alebo tieto lieky nemôžu užívať; prednosť majú látky s preukázaným kardiovaskulárnym prínosom. Pri výbere treba zohľadniť registrovanú indikáciu, eGFR, gastrointestinálnu toleranciu, riziko dehydratácie, nutričný stav, stratu svalovej hmoty a krehkosť.</p>
+<p>KDIGO 2024 odporúča dlhodobo pôsobiaci agonista receptora GLP-1 u dospelých s diabetes mellitus 2. typu a CKD, ktorí nedosiahli individualizované glykemické ciele napriek liečbe metformínom a inhibítorom SGLT2 alebo tieto lieky nemôžu užívať; prednosť majú látky s preukázaným kardiovaskulárnym prínosom. Pri výbere treba zohľadniť registrovanú indikáciu, eGFR, gastrointestinálnu toleranciu, riziko dehydratácie, nutričný stav, stratu svalovej hmoty a krehkosť.</p>
 
 <p>Farmakoterapia nenahrádza komplexnú intervenciu životného štýlu. Primeraná fyzická aktivita, racionálna výživa, nefajčenie, dostatočný spánok a obmedzenie nadmerného príjmu sodíka zostávajú spoločnými piliermi naprieč CKM štádiami.</p>
 
@@ -219,7 +219,7 @@ $articles[] = [
       <td>Pri väčšom poklese eGFR preveriť objem, NSAID, diuretiká, AKI a stenózu renálnej artérie</td>
     </tr>
     <tr>
-      <td>Po nasadení SGLT2 inhibítora</td>
+      <td>Po nasadení inhibítora SGLT2</td>
       <td>Tolerancia, objemový stav a riziko ketózy; laboratórne kontroly podľa bežného plánu CKD</td>
       <td>Malý počiatočný pokles eGFR býva očakávaný; poučiť o dočasnom prerušení v rizikových situáciách</td>
     </tr>

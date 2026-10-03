@@ -37,7 +37,7 @@ $articles[] = [
 
 <h2>Prečo je to relevantné pre nefrológiu</h2>
 
-<p>Klinická nefrológia sa často diskutuje cez diagnózy, liečbu a komplikácie. To podstatné však býva aj „mimo ambulancie“: stabilita výskumného ekosystému, dostupnosť grantov a schopnosť vedeckej komunity rýchlo pretavovať výsledky do praxe. Diabetes mellitus, najmä jeho chronické mikrovaskulárne poškodenie, je pritom jedným z hlavných motorov chronického ochorenia obličiek.</p>
+<p>Klinická nefrológia sa často diskutuje cez diagnózy, liečbu a komplikácie. To podstatné však býva aj „mimo ambulancie“: stabilita výskumného ekosystému, dostupnosť grantov a schopnosť vedeckej komunity rýchlo pretavovať výsledky do praxe. Diabetes mellitus, najmä jeho chronické mikrovaskulárne poškodenie, je pritom jedným z hlavných motorov chronickej choroby obličiek.</p>
 
 <p>Článok na Medscape („The New ADA: I Prefer the Old One“) nie je primárne odborná klinická kazuistika. Je to autorova reflexia a kritika smerovania American Diabetes Association (ADA) v kontexte jej rozhodnutí počas ADA Scientific Sessions. Pre nefrológa je zaujímavé najmä to, že autor spája konkrétne udalosti s širšou témou dopadov škrtov a politizácie výskumu na vývoj diabetologických a s nimi súvisiacich renálnych terapií.</p>
 
@@ -86,7 +86,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>Text z Medscape predstavuje kritickú reflexiu smerovania ADA a spája ju s väčším príbehom o tom, ako výskumné granty, politická klíma a rozhodnutia odborných organizácií môžu formovať budúcnosť diabetológie a nepriamo aj nefrológie. Pre nás je hlavná správa jednoduchá: stabilita výskumu nie je abstraktná téma, ale podmienka, aby sa nové poznatky dokázali včas premeniť na lepšiu starostlivosť o ľudí s chronickým ochorením obličiek.</p>
+<p>Text z Medscape predstavuje kritickú reflexiu smerovania ADA a spája ju s väčším príbehom o tom, ako výskumné granty, politická klíma a rozhodnutia odborných organizácií môžu formovať budúcnosť diabetológie a nepriamo aj nefrológie. Pre nás je hlavná správa jednoduchá: stabilita výskumu nie je abstraktná téma, ale podmienka, aby sa nové poznatky dokázali včas premeniť na lepšiu starostlivosť o ľudí s chronickou chorobou obličiek.</p>
 
 <h2>Poznámka k presnosti a overovaniu</h2>
 

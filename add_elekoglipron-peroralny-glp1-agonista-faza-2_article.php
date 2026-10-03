@@ -21,12 +21,12 @@ require_once __DIR__ . '/newsletter_notifications.php';
 $articles = [];
 
 $articles[] = [
-    'title'        => 'Nový perorálny GLP-1 agonista elekoglipron: výsledky fázy 2 so zlepšením HbA1c a redukciou hmotnosti',
+    'title'        => 'Nový perorálny agonista GLP-1 elekoglipron: výsledky fázy 2 so zlepšením HbA1c a redukciou hmotnosti',
     'slug'         => 'elekoglipron-peroralny-glp1-agonista-faza-2',
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Elekoglipron, perorálny malomolekulový GLP-1 agonista, dosiahol v dvoch štúdiách fázy 2 (SOLSTICE a VISTA) klinicky významné zníženie HbA1c a redukciu hmotnosti. Dlhodobé renálne outcome zatiaľ preukázané nie sú.',
+    'excerpt'      => 'Elekoglipron, perorálny malomolekulový agonista GLP-1, dosiahol v dvoch štúdiách fázy 2 (SOLSTICE a VISTA) klinicky významné zníženie HbA1c a redukciu hmotnosti. Dlhodobé renálne outcome zatiaľ preukázané nie sú.',
     'content'      => <<<'HTML'
 <figure><a href="img/elekoglipron-peroralny-glp1-agonista-faza-2.webp" rel="noopener noreferrer" target="_blank"><img src="img/elekoglipron-peroralny-glp1-agonista-faza-2.webp" alt="Perorálna kapsula, z ktorej vedie svetelné vlákno cez črevo do krvi, kde sa krivka cukru vyrovnáva" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Tabletka namiesto injekcie mení dostupnosť liečby — fáza 2 je však stále len medzikrok.</figcaption></figure>
 
@@ -94,7 +94,7 @@ $articles[] = [
 
 <h2>Porovnanie s injekčnými inkretínovými terapiami</h2>
 
-<p>Výsledná miera redukcie hmotnosti s elekoglipronom je <strong>porovnateľná s inými perorálnymi malomolekulovými GLP-1 agonistami</strong>, ale <strong>nižšia než miery hlásené pri niektorých injekčných inkretínových terapiách</strong> s vyššou účinnosťou v redukcii hmotnosti.</p>
+<p>Výsledná miera redukcie hmotnosti s elekoglipronom je <strong>porovnateľná s inými perorálnymi malomolekulovými agonistami GLP-1</strong>, ale <strong>nižšia než miery hlásené pri niektorých injekčných inkretínových terapiách</strong> s vyššou účinnosťou v redukcii hmotnosti.</p>
 
 <p>Súčasne sa zdôrazňuje praktický benefit: <strong>perorálne podanie</strong> bez potreby prísnych režimových obmedzení, ktoré môžu byť problematické pri niektorých iných perorálnych GLP-1 liekoch.</p>
 

@@ -161,7 +161,7 @@ $articles[] = [
 <ul>
   <li><a href="article.php?slug=ai-scribe-pravne-nastrahy-ambulancia-nefrologia">AI scribe v ambulancii</a> — možnosti a právne nástrahy pri znižovaní administratívnej záťaže.</li>
   <li><a href="article.php?slug=spolupraca-vseobecny-lekar-nefrolog-ckd-g5-joint-kd">Spolupráca všeobecného lekára a nefrológa</a> — organizácia starostlivosti pri CKD.</li>
-  <li><a href="article.php?slug=12-knih-lekar-choroba-pacient-narativna-medicina">Dvanásť kníh o lekárovi, chorobe a pacientovi</a> — narratívna medicína.</li>
+  <li><a href="article.php?slug=12-knih-lekar-choroba-pacient-narativna-medicina">Dvanásť kníh o lekárovi, chorobe a pacientovi</a> — naratívna medicína.</li>
 </ul>
 
 <hr>

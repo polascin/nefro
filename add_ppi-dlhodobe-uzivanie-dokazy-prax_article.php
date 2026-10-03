@@ -108,20 +108,20 @@ $articles[] = [
 
 <h2>Clopidogrel a gastroprotekcia</h2>
 
-<p>Interakcia PPI s clopidogrelom je farmakologicky plausibilná najmä cez CYP2C19, ktorý sa podieľa na aktivácii clopidogrelu. Klinické observačné výsledky však boli nekonzistentné a sú citlivé na to, že PPI dostávajú pacienti s vyšším gastrointestinálnym aj kardiovaskulárnym rizikom.</p>
+<p>Interakcia PPI s clopidogrelom je farmakologicky plauzibilná najmä cez CYP2C19, ktorý sa podieľa na aktivácii clopidogrelu. Klinické observačné výsledky však boli nekonzistentné a sú citlivé na to, že PPI dostávajú pacienti s vyšším gastrointestinálnym aj kardiovaskulárnym rizikom.</p>
 
 <p>ACG uvádza, že u pacientov užívajúcich clopidogrel, ktorí majú erozívnu ezofagitídu LA C alebo D alebo nedostatočne kontrolované symptómy alternatívnou liečbou, dostupné kvalitné dáta podporujú prevahu preukázaného benefitu PPI nad navrhovaným, ale veľmi sporným kardiovaskulárnym rizikom. Klinické rozhodnutie má zároveň rešpektovať oficiálne informácie o konkrétnom PPI; pri omeprazole a esomeprazole existujú regulačné upozornenia týkajúce sa CYP2C19, preto treba výber lieku riešiť individuálne.</p>
 
 <h2>Ostatné obávané udalosti</h2>
 
 <ul>
-  <li><strong>Enterálne infekcie:</strong> zníženie žalúdočnej kyslosti je biologicky plausibilný mechanizmus; COMPASS ukázala malý nárast črevných infekcií.</li>
+  <li><strong>Enterálne infekcie:</strong> zníženie žalúdočnej kyslosti je biologicky plauzibilný mechanizmus; COMPASS ukázala malý nárast črevných infekcií.</li>
   <li><strong>Hypomagneziémia:</strong> relevantná najmä u rizikových pacientov, napríklad pri diuretikách, dlhodobej liečbe alebo nevysvetlených elektrolytových poruchách; rutinný skríning všetkých pacientov ACG nepodporuje.</li>
   <li><strong>Deficit vitamínu B12 a zlomeniny:</strong> observačné asociácie existujú, ale bez ďalších rizikových faktorov ACG neodporúča automatické dopĺňanie ani rutinné monitorovanie.</li>
   <li><strong>Demencia, infarkt, cievna mozgová príhoda a rakovina:</strong> jednotlivé observačné signály nie sú dostatočným dôkazom, že PPI tieto udalosti spôsobujú.</li>
 </ul>
 
-<p>Mechanistická plausibilita sama osebe nestačí. Pri klinickom rozhodnutí treba kombinovať absolútne riziko udalosti, silu indikácie, alternatívy, dĺžku expozície a kvalitu dôkazov.</p>
+<p>Mechanistická plauzibilita sama osebe nestačí. Pri klinickom rozhodnutí treba kombinovať absolútne riziko udalosti, silu indikácie, alternatívy, dĺžku expozície a kvalitu dôkazov.</p>
 
 <h2>Praktický algoritmus</h2>
 

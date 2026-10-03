@@ -29,7 +29,7 @@ $articles[] = [
 
 <p>Kyselina močová je pri chronickej chorobe obličiek (CKD) lákavý terapeutický cieľ. Urát poškodzuje endotel, aktivuje renín-angiotenzínový systém, podieľa sa na arteriolopatii aferentnej arterioly a jeho hladina stúpa už v skorých štádiách CKD. Hypotéza, že jeho zníženie spomalí progresiu, je preto biologicky vierohodná a merateľný cieľ liečby je k dispozícii.</p>
 
-<p>Klinické dôkazy však hovoria inak. Editoriál publikovaný v <em>Brazilian Journal of Nephrology</em> v roku 2026 túto nezhodu formuluje presne: dve veľké randomizované štúdie renoprotektívny účinok nepreukázali, no retrospektívna kohorta z rovnakého čísla časopisu opisuje zlepšenie funkcie obličiek. Práve tento rozpor stojí za rozbor, pretože sa v praxi opakuje pri každom biomarkeri, ktorý sa dá liečebne ovplyvniť.</p>
+<p>Klinické dôkazy však hovoria inak. Editoriál publikovaný v <em>Brazilian Journal of Nephrology</em> v roku 2026 túto nezhodu formuluje presne: dve veľké randomizované štúdie nefroprotektívny účinok nepreukázali, no retrospektívna kohorta z rovnakého čísla časopisu opisuje zlepšenie funkcie obličiek. Práve tento rozpor stojí za rozbor, pretože sa v praxi opakuje pri každom biomarkeri, ktorý sa dá liečebne ovplyvniť.</p>
 
 <h2>Čo ukázali randomizované štúdie</h2>
 
@@ -60,17 +60,17 @@ $articles[] = [
 </table>
 </div>
 
-<p>Dve poznámky, ktoré sa pri citovaní týchto štúdií často vynechávajú. Po prvé, <strong>zníženie urátu sa v oboch podarilo</strong> – v štúdii PERL klesol z 6,1 na 3,9 mg/dl (približne 363 na 232 µmol/l), zatiaľ čo pri placebe zostal nezmenený. Nešlo teda o zlyhanie liečby, ale o zlyhanie hypotézy. Po druhé, PERL použila <strong>meranú</strong> GFR pomocou iohexolu, takže výsledok nemožno vysvetliť artefaktom odhadu z kreatinínu. Nález vyššieho vylučovania albumínu pri alopurinole je navyše presným opakom očakávaného renoprotektívneho účinku.</p>
+<p>Dve poznámky, ktoré sa pri citovaní týchto štúdií často vynechávajú. Po prvé, <strong>zníženie urátu sa v oboch podarilo</strong> – v štúdii PERL klesol z 6,1 na 3,9 mg/dl (približne 363 na 232 µmol/l), zatiaľ čo pri placebe zostal nezmenený. Nešlo teda o zlyhanie liečby, ale o zlyhanie hypotézy. Po druhé, PERL použila <strong>meranú</strong> GFR pomocou iohexolu, takže výsledok nemožno vysvetliť artefaktom odhadu z kreatinínu. Nález vyššieho vylučovania albumínu pri alopurinole je navyše presným opakom očakávaného nefroprotektívneho účinku.</p>
 
-<p>CKD-FIX bola predčasne ukončená pre pomalé nábery po zaradení 369 zo zamýšľaných 620 pacientov, čo znižuje jej silu. Interval spoľahlivosti rozdielu (−1,18 až 0,97) však vylučuje klinicky významný prínos v oboch smeroch, takže výsledok nie je iba „nepreukázané pre malý súbor“.</p>
+<p>CKD-FIX bola predčasne ukončená pre pomalý nábor po zaradení 369 zo zamýšľaných 620 pacientov, čo znižuje jej silu. Interval spoľahlivosti rozdielu (−1,18 až 0,97) však vylučuje klinicky významný prínos v oboch smeroch, takže výsledok nie je iba „nepreukázané pre malý súbor“.</p>
 
 <h2>Čo z toho urobili odporúčania</h2>
 
-<p>KDIGO 2024 uvádza v odporúčaní 3.14.2 stanovisko so silou 2D: <em>navrhujeme nepoužívať látky znižujúce sérovú kyselinu močovú u osôb s CKD a asymptomatickou hyperurikémiou s cieľom spomaliť progresiu CKD</em>. Formulácia je zámerne úzka a stojí za povšimnutie, čo <strong>nezakazuje</strong>: liečbu symptomatickej dny, liečbu urátovej nefrolitiázy ani prevenciu syndrómu nádorového rozpadu. Neodporúčaná je konkrétne renoprotektívna indikácia pri asymptomatickej hyperurikémii.</p>
+<p>KDIGO 2024 uvádza v odporúčaní 3.14.2 stanovisko so silou 2D: <em>navrhujeme nepoužívať látky znižujúce sérovú kyselinu močovú u osôb s CKD a asymptomatickou hyperurikémiou s cieľom spomaliť progresiu CKD</em>. Formulácia je zámerne úzka a stojí za povšimnutie, čo <strong>nezakazuje</strong>: liečbu symptomatickej dny, liečbu urátovej nefrolitiázy ani prevenciu syndrómu nádorového rozpadu. Neodporúčaná je konkrétne nefroprotektívna indikácia pri asymptomatickej hyperurikémii.</p>
 
 <h2>Retrospektívna kohorta, ktorá tvrdí opak</h2>
 
-<p>Editoriál komentuje retrospektívnu kohortovú štúdiu z jedného špecializovaného pracoviska, ktorá čerpala zo zdravotnej dokumentácie z rokov 2006 až 2020. Zaradila <strong>80 pacientov</strong> s CKD G3–G4 a asymptomatickou hyperurikémiou, rozdelených na 40 liečených alopurinolom a 40 neliečených, so sledovaním 24 mesiacov a štyrmi kontrolami. Porovnávala sa priemerná hodnota urátu a eGFR podľa CKD-EPI, štatisticky analýzou rozptylu.</p>
+<p>Editoriál komentuje retrospektívnu kohortovú štúdiu z jedného špecializovaného pracoviska, ktorá čerpala zo zdravotnej dokumentácie z rokov 2006 až 2020. Zaradila <strong>80 pacientov</strong> s CKD G3–G4 a asymptomatickou hyperurikémiou, rozdelených na 40 liečených alopurinolom a 40 neliečených, so sledovaním 24 mesiacov a štyrmi kontrolami. Porovnávala sa priemerná hodnota urátu a eGFR podľa CKD-EPI, štatistickou analýzou rozptylu.</p>
 
 <p>Výsledky sú pozoruhodné: v skupine s alopurinolom urát klesol pri každej kontrole a priemerná eGFR <strong>významne stúpla</strong> (p &lt; 0,001), zatiaľ čo v kontrolnej skupine sa funkcia zhoršovala. Do zlyhania obličiek počas 24 mesiacov neprešiel nikto z liečených oproti štyrom neliečeným pacientom.</p>
 
@@ -112,7 +112,7 @@ $articles[] = [
     <tr>
       <th scope="row">Alopurinol nedokázal znížiť urikémiu</th>
       <td>Nesprávne</td>
-      <td>Urát klesol podľa očakávania. Neúspešná bola hypotéza o renoprotekcii, nie samotná liečba.</td>
+      <td>Urát klesol podľa očakávania. Neúspešná bola hypotéza o nefroprotekcii, nie samotná liečba.</td>
     </tr>
     <tr>
       <th scope="row">KDIGO 2024 neodporúča urát znižovať na spomalenie progresie CKD</th>
@@ -127,7 +127,7 @@ $articles[] = [
     <tr>
       <th scope="row">Alopurinol nemá pri CKD miesto</th>
       <td>Nesprávne</td>
-      <td>Má – pri dne, tofóznom ochorení a v ďalších indikáciách. Neodporúčaná je izolovaná renoprotektívna indikácia pri asymptomatickej hyperurikémii.</td>
+      <td>Má – pri dne, tofóznom ochorení a v ďalších indikáciách. Neodporúčaná je izolovaná nefroprotektívna indikácia pri asymptomatickej hyperurikémii.</td>
     </tr>
     <tr>
       <th scope="row">Alopurinol je pri zníženej funkcii obličiek bezpečný liek bez zvláštností</th>

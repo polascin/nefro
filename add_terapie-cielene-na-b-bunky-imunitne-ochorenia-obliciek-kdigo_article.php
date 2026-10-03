@@ -46,7 +46,7 @@ $articles[] = [
 
 <h2>Prečo je cielenie na B bunky zmysluplné, ale nie jednoduché</h2>
 
-<p>Podľa konferenčnej správy sa terapie, ktoré B bunky depletujú alebo modulujú, už používajú alebo sa intenzívne skúmajú naprieč viacerými glomerulárnymi ochoreniami. Zároveň však platí, že účinnosť aj bezpečnosť sa medzi diagnózami výrazne líšia.</p>
+<p>Podľa konferenčnej správy sa terapie, ktoré B bunky depletujú alebo modulujú, už používajú alebo sa intenzívne skúmajú naprieč viacerými glomerulovými ochoreniami. Zároveň však platí, že účinnosť aj bezpečnosť sa medzi diagnózami výrazne líšia.</p>
 
 <p>Kľúčové kontroverzie, ktoré konferencia zdôrazňuje, sú najmä tieto:</p>
 

@@ -20,7 +20,7 @@ require_once __DIR__ . '/article_publisher.php';
 $articles = [];
 
 $articles[] = [
-    'title'        => 'Steatotické ochorenie pečene: prečo patrí do hodnotenia rizika pacienta s chronickým ochorením obličiek',
+    'title'        => 'Steatotické ochorenie pečene: prečo patrí do hodnotenia rizika pacienta s chronickou chorobou obličiek',
     'slug'         => 'steatoticke-ochorenie-pecene-riziko-ckd',
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),

@@ -80,7 +80,7 @@ $articles[] = [
 <p><em>Podľa KDIGO 2024, obrázok 7. Faktorom proti cyklofosfamidu je už podaná stredne vysoká kumulatívna dávka v minulosti.</em></p>
 </div>
 
-<p>Pre nefrológa je podstatná praktická poznámka KDIGO 9.3.1.2: pri <strong>výrazne zníženej alebo rýchlo klesajúcej glomerulárnej filtrácii (S-kreatinín &gt; 354 µmol/l)</strong> je dôkazový základ pre samotný rituximab s glukokortikoidmi <strong>obmedzený</strong> — práve títo pacienti boli v registračných štúdiách zastúpení najmenej. Do úvahy prichádza cyklofosfamid s glukokortikoidmi alebo kombinácia rituximabu s cyklofosfamidom.</p>
+<p>Pre nefrológa je podstatná praktická poznámka KDIGO 9.3.1.2: pri <strong>výrazne zníženej alebo rýchlo klesajúcej glomerulovej filtrácii (S-kreatinín &gt; 354 µmol/l)</strong> je dôkazový základ pre samotný rituximab s glukokortikoidmi <strong>obmedzený</strong> — práve títo pacienti boli v registračných štúdiách zastúpení najmenej. Do úvahy prichádza cyklofosfamid s glukokortikoidmi alebo kombinácia rituximabu s cyklofosfamidom.</p>
 
 <p>Dávkovanie cyklofosfamidu podľa KDIGO: perorálne <strong>2 mg/kg/deň</strong> počas 3 mesiacov (pri pretrvávajúcej aktivite maximálne 6 mesiacov), so znížením <strong>na 1,5 mg/kg/deň nad 60 rokov</strong> a <strong>na 1,0 mg/kg/deň nad 70 rokov</strong>, plus ďalšie zníženie o 0,5 mg/kg/deň pri GFR &lt; 30 ml/min/1,73 m². Intravenózna schéma je <strong>15 mg/kg v týždňoch 0, 2, 4, 7, 10</strong> a ďalej. Perorálna cesta sa uprednostní tam, kde je prístup do infúzneho centra ťažký a adherencia nie je problémom; intravenózna tam, kde je nižší počet leukocytov, kde môže byť adherencia problémom alebo kde je dôležitá nižšia kumulatívna dávka.</p>
 

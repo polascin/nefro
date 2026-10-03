@@ -86,7 +86,7 @@ $articles[] = [
 
 <h3>Čo o tom hovorí kohorta CRIC</h3>
 
-<p>Najdôležitejšie dáta pochádzajú zo štúdie <em>Chronic Renal Insufficiency Cohort</em> (CRIC), publikované v <em>Journal of the American Heart Association</em> (2016). Zahrnula <strong>3627 účastníkov s CKD bez klinicky zjavného PAD</strong> na začiatku, ABI meralo podľa štandardného protokolu a kardiovaskulárne príhody sa overovali zo zdravotnej dokumentácie.</p>
+<p>Najdôležitejšie dáta pochádzajú zo štúdie <em>Chronic Renal Insufficiency Cohort</em> (CRIC), publikovanej v <em>Journal of the American Heart Association</em> (2016). Zahrnula <strong>3627 účastníkov s CKD bez klinicky zjavného PAD</strong> na začiatku, ABI meralo podľa štandardného protokolu a kardiovaskulárne príhody sa overovali zo zdravotnej dokumentácie.</p>
 
 <p>Výsledkom bola <strong>U-krivka</strong>: najnižšie riziko mali účastníci s ABI <strong>1,0 až menej než 1,4</strong>, a riziko stúpalo na oboch stranách.</p>
 
@@ -172,7 +172,7 @@ $articles[] = [
     </ul>
   </li>
   <li><strong>Liečba rizikových faktorov sa začína bez ohľadu na to</strong>, či sa PAD potvrdí zobrazovaním — abnormálne ABI je samostatnou indikáciou na intenzívnu kardiovaskulárnu prevenciu.</li>
-  <li><strong>Odoslanie k cievnemu tímu</strong> pri potvrdenom PAD so symptómami, pri non-hojacej sa rane, pokojovej bolesti alebo známkach kriticky ohrozenej končatiny — tam ide o urgentnú konzultáciu, nie o plánované vyšetrenie.</li>
+  <li><strong>Odoslanie k cievnemu tímu</strong> pri potvrdenom PAD so symptómami, pri nehojacej sa rane, pokojovej bolesti alebo známkach kriticky ohrozenej končatiny — tam ide o urgentnú konzultáciu, nie o plánované vyšetrenie.</li>
 </ol>
 
 <h2>Čo tieto dáta nehovoria</h2>

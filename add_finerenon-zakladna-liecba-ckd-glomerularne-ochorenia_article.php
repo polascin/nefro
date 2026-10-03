@@ -26,16 +26,16 @@ require_once __DIR__ . '/pdf_generator.php';
 $articles = [];
 
 $articles[] = [
-    'title'        => 'Finerenón: potenciál ako základná liečba pri CKD aj bez diabetu a pri glomerulárnych ochoreniach',
+    'title'        => 'Finerenón: potenciál ako základná liečba pri CKD aj bez diabetu a pri glomerulových ochoreniach',
     'slug'         => 'finerenon-zakladna-liecba-ckd-glomerularne-ochorenia',
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Výsledky viacerých veľkých štúdií (FIND-CKD, analýza pre glomerulárne ochorenia v JAMA a súhrnná analýza v The Lancet) naznačujú, že finerenón spomaľuje progresiu CKD a znižuje kardiovaskulárne riziko aj bez diabetu — pri disciplinovanom monitorovaní draslíka.',
+    'excerpt'      => 'Výsledky viacerých veľkých štúdií (FIND-CKD, analýza pre glomerulové ochorenia v JAMA a súhrnná analýza v The Lancet) naznačujú, že finerenón spomaľuje progresiu CKD a znižuje kardiovaskulárne riziko aj bez diabetu — pri disciplinovanom monitorovaní draslíka.',
     'content'      => <<<'HTML'
 <figure><a href="img/finerenon-zakladna-liecba-ckd-glomerularne-ochorenia.webp" rel="noopener noreferrer" target="_blank"><img src="img/finerenon-zakladna-liecba-ckd-glomerularne-ochorenia.webp" alt="Molekula ako základný kameň pod obličkou, ktorej svetlo rovnomerne presvetľuje oba glomeruly" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Ak účinok nezávisí od diabetu, posúva sa liek z doplnku smerom k základnej liečbe.</figcaption></figure>
 
-<p>Portál ScienceDaily prináša zhrnutie výsledkov z viacerých veľkých štúdií, v ktorých <strong>finerenón</strong> spomaľoval zhoršovanie funkcie obličiek a znižoval aj kardiovaskulárne riziko. Prínosy sa pozorovali nielen u pacientov s diabetom, ale aj pri <strong>nediabetickom CKD</strong> a v skupinách s <strong>glomerulárnymi ochoreniami</strong>.</p>
+<p>Portál ScienceDaily prináša zhrnutie výsledkov z viacerých veľkých štúdií, v ktorých <strong>finerenón</strong> spomaľoval zhoršovanie funkcie obličiek a znižoval aj kardiovaskulárne riziko. Prínosy sa pozorovali nielen u pacientov s diabetom, ale aj pri <strong>nediabetickom CKD</strong> a v skupinách s <strong>glomerulovými ochoreniami</strong>.</p>
 
 <h2>Kľúčové štúdie a výsledky</h2>
 
@@ -48,9 +48,9 @@ $articles[] = [
   <li>znížil kombinovaný cieľ (<strong>zlyhanie obličiek, progresia CKD, srdcové zlyhanie alebo kardiovaskulárne úmrtie</strong>) o <strong>23 %</strong> oproti štandardnej starostlivosti.</li>
 </ul>
 
-<h3>2) Analýza pre glomerulárne ochorenia (JAMA)</h3>
+<h3>2) Analýza pre glomerulové ochorenia (JAMA)</h3>
 
-<p>U účastníkov s glomerulárnymi ochoreniami finerenón:</p>
+<p>U účastníkov s glomerulovými ochoreniami finerenón:</p>
 
 <ul>
   <li>znížil riziko <strong>zlyhania obličiek alebo progresie CKD</strong> o <strong>26 %</strong> oproti placebu,</li>

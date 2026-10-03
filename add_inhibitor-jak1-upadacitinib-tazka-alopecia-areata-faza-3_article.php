@@ -234,7 +234,7 @@ $articles[] = [
 
 <h2>Čo z toho plynie pre nefrológa</h2>
 
-<p>Alopécia areata nie je ochorenie obličiek a upadacitinib nie je liekom na chronickú chorobu obličiek (CKD). Systémový inhibítor JAK1 však môže prísť do nefrologickej ambulancie ako komedikácia dermatologického alebo reumatologického pacienta, alebo ako otázka dávkovania pri zníženej glomerulárnej filtrácii.</p>
+<p>Alopécia areata nie je ochorenie obličiek a upadacitinib nie je liekom na chronickú chorobu obličiek (CKD). Systémový inhibítor JAK1 však môže prísť do nefrologickej ambulancie ako komedikácia dermatologického alebo reumatologického pacienta, alebo ako otázka dávkovania pri zníženej glomerulovej filtrácii.</p>
 
 <ul>
   <li><strong>Infekcie.</strong> Najčastejšie hlásené udalosti v UP-AA zahŕňali infekcie dýchacích ciest. Pacient s CKD má vyššie infekčné riziko; febrilná infekcia navyše zvyšuje riziko dehydratácie a akútneho zhoršenia funkcie obličiek.</li>

@@ -53,13 +53,13 @@ $articles[] = [
   <li><strong>Kontraindikované:</strong> inhibítory ACE, sartany a priame inhibítory renínu pre fetopatiu s oligohydramniónom, poruchou vývinu obličiek a lebky. Vyhnúť sa treba aj antagonistom mineralokortikoidových receptorov a inhibítorom SGLT2, pre ktoré v tehotenstve chýbajú údaje o bezpečnosti.</li>
 </ul>
 
-<p>Toto je pre nefrológa mimoriadne relevantné: práve renoprotektívne liečivá, ktoré u pacientky s chronickou chorobou obličiek bežne používame, sa musia pri plánovaní tehotenstva vysadiť alebo nahradiť — a to <strong>pred koncepciou</strong>, nie až pri pozitívnom teste.</p>
+<p>Toto je pre nefrológa mimoriadne relevantné: práve nefroprotektívne liečivá, ktoré u pacientky s chronickou chorobou obličiek bežne používame, sa musia pri plánovaní tehotenstva vysadiť alebo nahradiť — a to <strong>pred koncepciou</strong>, nie až pri pozitívnom teste.</p>
 
 <h2>Ťažká hypertenzia je akútny stav</h2>
 
 <p>Tlak krvi 160/110 mm Hg alebo vyšší predstavuje v tehotenstve aj po pôrode urgentnú situáciu s rizikom cievnej mozgovej príhody. Liečbu treba podať bezodkladne, spravidla do 30 až 60 minút, intravenóznym labetalolom, intravenóznym hydralazínom alebo perorálnym nifedipínom s rýchlym uvoľňovaním.</p>
 
-<p>U pacientky s preeklampsiou so závažnými znakmi je indikovaný <strong>síran horečnatý</strong> na prevenciu eklampsie. Tu si nefrológ musí uvedomiť špecifické riziko: <strong>horčík sa vylučuje takmer výlučne obličkami</strong>. Pri zníženej glomerulárnej filtrácii alebo akútnom poškodení obličiek kumuluje a hrozí útlm dýchania a zástava srdca. Dávkovanie je preto nutné redukovať a sledovať šľachové reflexy, diurézu a podľa možnosti aj koncentráciu horčíka v sére.</p>
+<p>U pacientky s preeklampsiou so závažnými znakmi je indikovaný <strong>síran horečnatý</strong> na prevenciu eklampsie. Tu si nefrológ musí uvedomiť špecifické riziko: <strong>horčík sa vylučuje takmer výlučne obličkami</strong>. Pri zníženej glomerulovej filtrácii alebo akútnom poškodení obličiek kumuluje a hrozí útlm dýchania a zástava srdca. Dávkovanie je preto nutné redukovať a sledovať šľachové reflexy, diurézu a podľa možnosti aj koncentráciu horčíka v sére.</p>
 
 <h2>Prevencia u rizikovej pacientky</h2>
 
@@ -78,7 +78,7 @@ $articles[] = [
 <p>Obava z prechodu liečiva do materského mlieka býva dôvodom, prečo sa popôrodná hypertenzia lieči nedostatočne. Priestor je pritom širší než počas tehotenstva:</p>
 
 <ul>
-  <li><strong>Vhodné pri dojčení:</strong> labetalol, nifedipín, a na rozdiel od tehotenstva aj <strong>inhibítory ACE</strong>, najmä enalapril a kaptopril, ktoré prechádzajú do mlieka len v minimálnom množstve. Pre nefrologickú pacientku ide o dôležitý údaj, lebo umožňuje včasný návrat k renoprotektívnej liečbe.</li>
+  <li><strong>Vhodné pri dojčení:</strong> labetalol, nifedipín, a na rozdiel od tehotenstva aj <strong>inhibítory ACE</strong>, najmä enalapril a kaptopril, ktoré prechádzajú do mlieka len v minimálnom množstve. Pre nefrologickú pacientku ide o dôležitý údaj, lebo umožňuje včasný návrat k nefroprotektívnej liečbe.</li>
   <li><strong>Menej vhodné:</strong> atenolol, ktorý sa v mlieku kumuluje výraznejšie než iné betablokátory.</li>
 </ul>
 

@@ -192,7 +192,7 @@ $articles[] = [
 <p>Lipedém sa v ambulancii môže zamieňať s edémom pri chronickej chorobe obličiek (CKD), s nefrotickým syndrómom alebo s lymfedémom. Rozlíšenie má praktický dosah na diuretickú liečbu.</p>
 
 <ul>
-  <li><strong>Nefrotický a CKD edém</strong> býva jamkový, často s periorbitálnym opuchom, nyktúriou, hypoalbuminémiou, proteinúriou a ďalšími známkami objemového preťaženia. Distribúcia nie je „štíhly trup, disproporčné bolestivé nohy so ušetrenými nártmi“.</li>
+  <li><strong>Nefrotický a CKD edém</strong> býva jamkový, často s periorbitálnym opuchom, nyktúriou, hypoalbuminémiou, proteinúriou a ďalšími známkami objemového preťaženia. Distribúcia nie je „štíhly trup, disproporčné bolestivé nohy s ušetrenými nártmi“.</li>
   <li><strong>Lymfedém</strong> pri CKD alebo po výkone na končatine môže byť jednostranný, s postihnutím prstov a pozitívnym Stemmerovým príznakom.</li>
   <li><strong>Lipedém</strong> je tkanivový, bolestivý, typicky obojstranný; opuch nie je prejavom objemového preťaženia obehu.</li>
 </ul>

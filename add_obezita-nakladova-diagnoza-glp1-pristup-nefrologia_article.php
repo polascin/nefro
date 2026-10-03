@@ -39,7 +39,7 @@ $articles[] = [
 
 <h2>Prečo by sa nefrológ mal zaujímať</h2>
 
-<p>Obezita nie je len „metabolický problém“. Je to dlhodobý spúšťač hypertenzie, diabetu 2. typu, dyslipidémie, spánkového apnoe a systémového zápalu. V nefrológii sa tieto súvislosti neskôr často prejavia rýchlejšou progresiou chronického ochorenia obličiek (CKD), vyšším kardiovaskulárnym rizikom a väčším počtom pacientov na dialýze. Rozhodnutia o úhrade a dostupnosti účinnej liečby preto nie sú iba otázkou „zdravotníckej politiky“, ale reálnymi klinickými premennými.</p>
+<p>Obezita nie je len „metabolický problém“. Je to dlhodobý spúšťač hypertenzie, diabetu 2. typu, dyslipidémie, spánkového apnoe a systémového zápalu. V nefrológii sa tieto súvislosti neskôr často prejavia rýchlejšou progresiou chronickej choroby obličiek (CKD), vyšším kardiovaskulárnym rizikom a väčším počtom pacientov na dialýze. Rozhodnutia o úhrade a dostupnosti účinnej liečby preto nie sú iba otázkou „zdravotníckej politiky“, ale reálnymi klinickými premennými.</p>
 
 <p>Autorka sa venuje dileme, či Medicare bude aj v budúcnosti platiť za obezitu ako za prevenciu, alebo bude naďalej hradiť predovšetkým to, na čo sa obezita neskôr pretaví. Kľúčovým bodom je plán BALANCE a následné zmeny okolo tzv. programu Medicare GLP-1 Bridge.</p>
 

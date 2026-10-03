@@ -56,7 +56,7 @@ $articles[] = [
 
 <h2>Prečo porucha funkcie obličiek zvyšuje riziko</h2>
 
-<p>Gentamycín sa vylučuje prevažne nezmenený glomerulárnou filtráciou. Pri poklese funkcie obličiek sa predlžuje jeho eliminačný polčas a rastie riziko akumulácie. SmPC uvádza ako významné rizikové faktory ototoxicity predexistujúcu poruchu funkcie obličiek alebo poškodenie VIII. hlavového nervu; riziko rastie s celkovou a dennou dávkou a pri súbežnom podávaní ďalších ototoxických látok. Vyšší vek je zároveň dôvodom zvýšenej opatrnosti a intenzívnejšieho monitorovania, najmä pre zmeny renálnej eliminácie. <a href="#odborny-zdroj-3">[3]</a></p>
+<p>Gentamycín sa vylučuje prevažne nezmenený glomerulovou filtráciou. Pri poklese funkcie obličiek sa predlžuje jeho eliminačný polčas a rastie riziko akumulácie. SmPC uvádza ako významné rizikové faktory ototoxicity predexistujúcu poruchu funkcie obličiek alebo poškodenie VIII. hlavového nervu; riziko rastie s celkovou a dennou dávkou a pri súbežnom podávaní ďalších ototoxických látok. Vyšší vek je zároveň dôvodom zvýšenej opatrnosti a intenzívnejšieho monitorovania, najmä pre zmeny renálnej eliminácie. <a href="#odborny-zdroj-3">[3]</a></p>
 
 <h3>Terapeutické monitorovanie musí rešpektovať dávkovací režim</h3>
 

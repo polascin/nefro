@@ -103,7 +103,7 @@ $articles[] = [
 
 <h3>3) Pri alopurinole u pacientov s CKD začínať opatrne a monitorovať</h3>
 
-<p>Alopurinol sa síce používa aj u pacientov s chronickým ochorením obličiek (CKD), no riziko hypersenzitivity je u nich vyššie. Odporúča sa začínať nízkou dávkou (napr. do 100 mg denne, pri CKD ešte nižšie) s pomalou titráciou a intenzívnym dohľadom počas prvých týždňov. U vysokorizikových etník treba podľa platných odporúčaní zvážiť skríning alely <strong>HLA-B*58:01</strong>.</p>
+<p>Alopurinol sa síce používa aj u pacientov s chronickou chorobou obličiek (CKD), no riziko hypersenzitivity je u nich vyššie. Odporúča sa začínať nízkou dávkou (napr. do 100 mg denne, pri CKD ešte nižšie) s pomalou titráciou a intenzívnym dohľadom počas prvých týždňov. U vysokorizikových etník treba podľa platných odporúčaní zvážiť skríning alely <strong>HLA-B*58:01</strong>.</p>
 
 <h2>Záver</h2>
 

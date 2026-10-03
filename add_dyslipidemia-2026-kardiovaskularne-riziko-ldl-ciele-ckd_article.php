@@ -335,7 +335,7 @@ $articles[] = [
   <li>mierne zmeny kreatinínu alebo laboratórne hlásené „renálne poškodenie“.</li>
 </ul>
 
-<p>Zvýšenie kreatinínu môže čiastočne súvisieť s inhibíciou jeho tubulárnej sekrécie a nemusí vždy znamenať pokles skutočnej glomerulárnej filtrácie. Pri chronickej chorobe obličiek, dne alebo nevysvetlenom náraste kreatinínu však treba výsledok klinicky vyhodnotiť, nie automaticky bagatelizovať.</p>
+<p>Zvýšenie kreatinínu môže čiastočne súvisieť s inhibíciou jeho tubulárnej sekrécie a nemusí vždy znamenať pokles skutočnej glomerulovej filtrácie. Pri chronickej chorobe obličiek, dne alebo nevysvetlenom náraste kreatinínu však treba výsledok klinicky vyhodnotiť, nie automaticky bagatelizovať.</p>
 
 <h2>Evinakumab pri homozygotnej familiárnej hypercholesterolémii</h2>
 

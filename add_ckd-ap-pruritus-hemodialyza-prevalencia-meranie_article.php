@@ -144,7 +144,7 @@ $articles[] = [
 <p>Vo viacrozmernom modeli boli s vyšším rizikom stredne ťažkého až ťažkého svrbenia spojené komorbidné chronické ochorenie (pomer šancí 2,399; 95 % IS 1,126–5,112) a <em>predchádzajúca edukácia o prurite</em> (3,145; 1,258–7,859), s nižším rizikom manželský stav (0,418; 0,202–0,867). Pohlavie ani vek významné neboli.</p>
 
 <ul>
-  <li><strong>Edukácia svrbenie nezhoršuje.</strong> Ide o učebnicovú protopatickú zaujatosť: edukáciu dostali práve tí, ktorí mali ťažšie príznaky. Autorky to samé pripúšťajú a označujú to za reaktívne poskytovanie starostlivosti. Číslo nemožno interpretovať prognosticky ani kauzálne.</li>
+  <li><strong>Edukácia svrbenie nezhoršuje.</strong> Ide o učebnicovú protopatickú zaujatosť: edukáciu dostali práve tí, ktorí mali ťažšie príznaky. Autorky to samy pripúšťajú a označujú to za reaktívne poskytovanie starostlivosti. Číslo nemožno interpretovať prognosticky ani kauzálne.</li>
   <li><strong>Manželstvo je zástupná premenná</strong> pre psychosociálnu podporu, možno aj pre ochotu nahlásiť symptómy – nie je to ochranný faktor.</li>
   <li><strong>„Komorbidita“ je binárny súhrn</strong> spájajúci diabetes, hypertenziu a srdcové ochorenie; nehovorí, ktorá z nich je relevantná.</li>
   <li><strong>Model je poddimenzovaný.</strong> Na 48 udalostí pripadá šesť prediktorových stupňov voľnosti a odhad pre edukáciu stojí na deviatich udalostiach v 27-člennej exponovanej skupine, čomu zodpovedajú aj široké intervaly.</li>
@@ -186,7 +186,7 @@ $articles[] = [
     <tr>
       <th scope="row">Predchádzajúca edukácia je spojená s ťažším svrbením</th>
       <td>Potvrdené, ale zavádzajúco</td>
-      <td>Ide o obrátenú príčinnosť: edukáciu dostali pacienti s horšími príznakmi. Autorky to samé uvádzajú.</td>
+      <td>Ide o obrátenú príčinnosť: edukáciu dostali pacienti s horšími príznakmi. Autorky to samy uvádzajú.</td>
     </tr>
     <tr>
       <th scope="row">Takmer polovica liečených nemá zo svojej liečby účinok</th>
@@ -205,7 +205,7 @@ $articles[] = [
 <h2>Čo z toho vyplýva pre dialyzačnú ambulanciu</h2>
 
 <ol>
-  <li><strong>Pýtať sa aktívne a pravidelne.Bez cielenej otázky sa o symptóme nedozvieme – to je najlepšie doložené zistenie celej práce. Stačí jedna otázka pri mesačnej kontrole.</li>
+  <li><strong>Pýtať sa aktívne a pravidelne. Bez cielenej otázky sa o symptóme nedozvieme – to je najlepšie doložené zistenie celej práce. Stačí jedna otázka pri mesačnej kontrole.</li>
   <li><strong>Použiť jeden nástroj a držať sa ho.</strong> Číselná škála 0 až 10 alebo 5-D sú obe použiteľné; dôležitejšie než výber je, aby sa u toho istého pacienta nemenila a aby sa hodnota zaznamenávala.</li>
   <li><strong>Nezostať pri antihistaminikách.</strong> Ich rozšírené podávanie je zvyk, nie dôkaz; polovica liečených z nich nemá úžitok a u starších pacientov prináša útlm a riziko pádov.</li>
   <li><strong>Prejsť odstrániteľné príčiny.</strong> Xerózu, dávku dialýzy, fosfátovo-kalciovú rovnováhu a parathormón, anémiu, liekovú anamnézu a kožné ochorenie, ktoré s obličkami nesúvisí.</li>

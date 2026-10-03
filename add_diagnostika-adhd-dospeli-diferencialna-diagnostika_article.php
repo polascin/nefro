@@ -219,7 +219,7 @@ $articles[] = [
 
 <ul>
   <li><strong>kognitívne zmeny pri CKD</strong> — spomalenie, únava, poruchy pozornosti a exekutívnych funkcií sú v tejto populácii dobre popísané a súvisia aj s cerebrálnym ochorením malých ciev,</li>
-  <li><strong>urémiu a metabolické odchýlky</strong> — vrátane vplyvu urémických toxínov,</li>
+  <li><strong>urémiu a metabolické odchýlky</strong> — vrátane vplyvu uremických toxínov,</li>
   <li><strong>anémiu</strong> pri CKD,</li>
   <li><strong>poruchy spánku</strong>, ktoré sú pri CKD a najmä pri dialýze veľmi časté (spánkové apnoe, syndróm nepokojných nôh),</li>
   <li><strong>depresiu a úzkosť</strong> v kontexte chronického ochorenia,</li>

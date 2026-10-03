@@ -32,16 +32,16 @@ require_once __DIR__ . '/pdf_generator.php';
 $articles = [];
 
 $articles[] = [
-    'title'        => 'Trimetylamín-N-oxid (TMAO): črevný metabolit ako urémický toxín pri chronickej obličkovej chorobe',
+    'title'        => 'Trimetylamín-N-oxid (TMAO): črevný metabolit ako uremický toxín pri chronickej chorobe obličiek',
     'slug'         => 'tmao-crevny-metabolit-uremicky-toxin-ckd',
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'TMAO je metabolit cholínu a karnitínu, ktorý tvorí črevný mikrobióm a vylučujú obličky. Pri chronickej obličkovej chorobe sa hromadí ako urémický toxín a spája sa s progresiou CKD aj s vyšším kardiovaskulárnym rizikom — prehľad mechanizmov, prognostického významu a výživových možností.',
+    'excerpt'      => 'TMAO je metabolit cholínu a karnitínu, ktorý tvorí črevný mikrobióm a vylučujú obličky. Pri chronickej chorobe obličiek sa hromadí ako uremický toxín a spája sa s progresiou CKD aj s vyšším kardiovaskulárnym rizikom — prehľad mechanizmov, prognostického významu a výživových možností.',
     'content'      => <<<'HTML'
 <figure><a href="img/tmao-crevny-metabolit-uremicky-toxin-ckd.webp" rel="noopener noreferrer" target="_blank"><img src="img/tmao-crevny-metabolit-uremicky-toxin-ckd.webp" alt="Molekula vznikajúca medzi črevnými baktériami a putujúca cievnou cestou k obličke, kde sa hromadí" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Metabolit vzniká v čreve, no hromadí sa tam, kde ho oblička už nedokáže odstrániť.</figcaption></figure>
 
-<p>Trimetylamín-N-oxid (TMAO) je malá, biologicky aktívna molekula, ktorá vzniká z bežných zložiek potravy činnosťou črevného mikrobiómu a následnou premenou v pečeni. V posledných rokoch sa dostala do centra pozornosti nefrológie aj kardiológie, pretože sa hromadí pri zhoršujúcej sa funkcii obličiek a spája sa s progresiou chronickej obličkovej choroby (CKD) i s vyšším kardiovaskulárnym rizikom. Tento článok zhŕňa, odkiaľ sa TMAO berie, prečo sa pri CKD hromadí, akými mechanizmami škodí a čo z aktuálnych poznatkov reálne vyplýva pre klinickú prax.</p>
+<p>Trimetylamín-N-oxid (TMAO) je malá, biologicky aktívna molekula, ktorá vzniká z bežných zložiek potravy činnosťou črevného mikrobiómu a následnou premenou v pečeni. V posledných rokoch sa dostala do centra pozornosti nefrológie aj kardiológie, pretože sa hromadí pri zhoršujúcej sa funkcii obličiek a spája sa s progresiou chronickej choroby obličiek (CKD) i s vyšším kardiovaskulárnym rizikom. Tento článok zhŕňa, odkiaľ sa TMAO berie, prečo sa pri CKD hromadí, akými mechanizmami škodí a čo z aktuálnych poznatkov reálne vyplýva pre klinickú prax.</p>
 
 <h2>Odkiaľ sa TMAO berie</h2>
 
@@ -54,15 +54,15 @@ $articles[] = [
   <li><strong>Vylučovanie obličkami.</strong> Vzniknutý TMAO sa za fyziologických okolností vylučuje prevažne obličkami.</li>
 </ul>
 
-<p>Práve posledný krok je pre nefrológiu kľúčový: keďže hlavnou cestou eliminácie TMAO sú obličky, akékoľvek zníženie glomerulárnej filtrácie sa priamo premieta do jeho hladín v krvi.</p>
+<p>Práve posledný krok je pre nefrológiu kľúčový: keďže hlavnou cestou eliminácie TMAO sú obličky, akékoľvek zníženie glomerulovej filtrácie sa priamo premieta do jeho hladín v krvi.</p>
 
-<h2>Prečo sa TMAO pri chronickej obličkovej chorobe hromadí</h2>
+<h2>Prečo sa TMAO pri chronickej chorobe obličiek hromadí</h2>
 
 <p>Na zvýšených hladinách TMAO pri CKD sa podieľajú dva mechanizmy, ktoré sa navzájom posilňujú:</p>
 
 <ul>
-  <li><strong>Znížená exkrécia.</strong> S poklesom funkcie obličiek klesá klírens TMAO, takže sa kumuluje v obehu — preto sa zaraďuje medzi tzv. urémické toxíny.</li>
-  <li><strong>Črevná dysbióza.</strong> CKD je sprevádzaná zmenou zloženia črevného mikrobiómu (dysbiózou) a narušením črevnej bariéry. To posúva metabolizmus smerom k vyššej tvorbe prekurzorov urémických toxínov vrátane TMA a následne TMAO.</li>
+  <li><strong>Znížená exkrécia.</strong> S poklesom funkcie obličiek klesá klírens TMAO, takže sa kumuluje v obehu — preto sa zaraďuje medzi tzv. uremické toxíny.</li>
+  <li><strong>Črevná dysbióza.</strong> CKD je sprevádzaná zmenou zloženia črevného mikrobiómu (dysbiózou) a narušením črevnej bariéry. To posúva metabolizmus smerom k vyššej tvorbe prekurzorov uremických toxínov vrátane TMA a následne TMAO.</li>
 </ul>
 
 <p>Tento obojsmerný vzťah sa označuje ako <strong>os črevo – oblička</strong> (gut–kidney axis): zhoršená funkcia obličiek mení črevné prostredie a naopak — dysbiotický mikrobióm produkuje viac toxínov, ktoré ďalej urýchľujú poškodenie obličiek. TMAO je jedným z metabolitov, ktoré túto slučku názorne ilustrujú, popri lepšie preskúmaných toxínoch, akými sú indoxylsulfát a p-krezylsulfát.</p>
@@ -95,7 +95,7 @@ $articles[] = [
 
 <ul>
   <li><strong>Prekurzory v strave.</strong> Cholín a L-karnitín z červeného mäsa a vajec zvyšujú tvorbu TMAO. Poučná je štúdia, v ktorej šesťmesačné podávanie L-karnitínu výrazne zvýšilo hladiny TMAO u starších žien — pripomienka, že aj bežne používané doplnky výživy môžu ovplyvniť tvorbu tohto metabolitu.</li>
-  <li><strong>Mierne obmedzenie bielkovín.</strong> U nedialyzovaných pacientov s CKD sa odporúča mierne obmedzenie príjmu bielkovín; okrem ochrany funkcie obličiek znižuje aj tvorbu urémických toxínov z aminokyselín v čreve.</li>
+  <li><strong>Mierne obmedzenie bielkovín.</strong> U nedialyzovaných pacientov s CKD sa odporúča mierne obmedzenie príjmu bielkovín; okrem ochrany funkcie obličiek znižuje aj tvorbu uremických toxínov z aminokyselín v čreve.</li>
   <li><strong>Ryby ako dvojsečná zbraň.</strong> Ryby sú cenným zdrojom omega-3 mastných kyselín, no zároveň sú významným zdrojom TMAO. Vplyv stravy bohatej na ryby na hladiny TMAO a na kardiovaskulárne výsledky u pacientov s CKD zatiaľ nie je jednoznačne doriešený.</li>
   <li><strong>Modulácia mikrobiómu a inhibícia tvorby.</strong> Experimentálne sa skúma zníženie tvorby TMAO ovplyvnením črevného mikrobiómu či inhibítormi (napríklad 3,3-dimetyl-1-butanol, DMB). Ako doplnkový nefarmakologický prístup k priaznivému ovplyvneniu mikrobiómu sa navrhuje aj pravidelná fyzická aktivita.</li>
 </ul>
@@ -107,7 +107,7 @@ $articles[] = [
 <p>Z pohľadu nefrologickej ambulancie možno súčasné poznatky zhrnúť takto:</p>
 
 <ol>
-  <li>TMAO je urémický toxín, ktorého hladiny stúpajú s poklesom funkcie obličiek a ktorý sa spája s vyšším kardiovaskulárnym rizikom aj s progresiou CKD.</li>
+  <li>TMAO je uremický toxín, ktorého hladiny stúpajú s poklesom funkcie obličiek a ktorý sa spája s vyšším kardiovaskulárnym rizikom aj s progresiou CKD.</li>
   <li>Jeho tvorba je ovplyvniteľná stravou — najmä príjmom prekurzorov z červeného mäsa, vajec a doplnkov s karnitínom.</li>
   <li>Cielené „proti-TMAO“ intervencie zatiaľ nie sú súčasťou štandardnej starostlivosti, pretože chýbajú dôkazy o benefite na klinicky tvrdých ukazovateľoch.</li>
   <li>V praxi preto ostávajú kľúčové osvedčené opatrenia — primeraná úprava príjmu bielkovín u nedialyzovaných pacientov, vyvážený jedálniček a komplexná kontrola kardiovaskulárneho rizika — do ktorých téma TMAO zapadá ako doplnkový, no zatiaľ nie samostatne cieliteľný faktor.</li>

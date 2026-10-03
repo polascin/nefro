@@ -62,7 +62,7 @@ $articles[] = [
 
 <p>Záujem o túto tému vzrástol po publikovaní observačných štúdií a kazuistík, ktoré naznačili možnú asociáciu medzi GLP-1 liekmi a výskytom NAION.</p>
 
-<p>Treba však zdôrazniť rozdiel medzi asociáciou a príčinou. To, že sa jav vyskytol u pacienta užívajúceho konkrétny liek, ešte neznamená, že liek bol príčinou. Pacienti užívajúci GLP-1 agonisty majú často diabetes, hypertenziu, obezitu, obštrukčné spánkové apnoe alebo iné cievne rizikové faktory. Práve tie sú zároveň známymi rizikovými faktormi NAION.</p>
+<p>Treba však zdôrazniť rozdiel medzi asociáciou a príčinou. To, že sa jav vyskytol u pacienta užívajúceho konkrétny liek, ešte neznamená, že liek bol príčinou. Pacienti užívajúci agonisty GLP-1 majú často diabetes, hypertenziu, obezitu, obštrukčné spánkové apnoe alebo iné cievne rizikové faktory. Práve tie sú zároveň známymi rizikovými faktormi NAION.</p>
 
 <p>Inými slovami, môže ísť o prekrytie rizikových populácií.</p>
 
@@ -80,7 +80,7 @@ $articles[] = [
   <li>pravdepodobne aj nočná hypotenzia u predisponovaných pacientov.</li>
 </ul>
 
-<p>Tieto faktory sú časté práve u pacientov liečených GLP-1 agonistami. Preto je ťažké odlíšiť, či prípadná NAION súvisí s liekom, so základným metabolickým a vaskulárnym rizikom, alebo s kombináciou viacerých faktorov.</p>
+<p>Tieto faktory sú časté práve u pacientov liečených agonistami GLP-1. Preto je ťažké odlíšiť, či prípadná NAION súvisí s liekom, so základným metabolickým a vaskulárnym rizikom, alebo s kombináciou viacerých faktorov.</p>
 
 <h2>Možné mechanizmy sú zatiaľ hypotetické</h2>
 
@@ -120,7 +120,7 @@ $articles[] = [
   <li>vyššiu pravdepodobnosť zachytenia udalostí pri mediálne známych liekoch.</li>
 </ul>
 
-<p>Keďže GLP-1 agonisty užívajú milióny pacientov, aj veľmi zriedkavé udalosti sa začnú objavovať častejšie v absolútnych počtoch. To samo osebe ešte neznamená, že riziko je vysoké.</p>
+<p>Keďže agonisty GLP-1 užívajú milióny pacientov, aj veľmi zriedkavé udalosti sa začnú objavovať častejšie v absolútnych počtoch. To samo osebe ešte neznamená, že riziko je vysoké.</p>
 
 <h2>Ako o tom hovoriť s pacientom</h2>
 
@@ -134,7 +134,7 @@ $articles[] = [
 
 <h2>Praktický postup pre klinika</h2>
 
-<p>Pri pacientoch liečených GLP-1 agonistami má zmysel venovať pozornosť najmä tým, ktorí majú vyššie vaskulárne riziko.</p>
+<p>Pri pacientoch liečených agonistami GLP-1 má zmysel venovať pozornosť najmä tým, ktorí majú vyššie vaskulárne riziko.</p>
 
 <p>Prakticky je vhodné:</p>
 
@@ -146,7 +146,7 @@ $articles[] = [
   <li>pri náhlej poruche zraku liečbu individuálne prehodnotiť a pacienta odoslať na urgentné oftalmologické vyšetrenie.</li>
 </ul>
 
-<p>Nie je dôvod rutinne vysadzovať GLP-1 agonisty len na základe obavy z NAION. Je však dôvod byť pozorný.</p>
+<p>Nie je dôvod rutinne vysadzovať agonisty GLP-1 len na základe obavy z NAION. Je však dôvod byť pozorný.</p>
 
 <h2>Praktický záver</h2>
 

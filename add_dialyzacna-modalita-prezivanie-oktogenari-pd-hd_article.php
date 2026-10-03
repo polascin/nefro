@@ -65,7 +65,7 @@ $articles[] = [
 
 <p>Na zníženie vstupných rozdielov medzi skupinami sa použilo <strong>párovanie podľa propenzitného skóre v pomere 1 : 3</strong>, do ktorého vstupovali vek, pohlavie, komorbidity, funkčný stav, obdobie začatia dialýzy, zdravotný región bydliska a sociálne premenné. Vyvážiť sa podarilo dobre (štandardizované rozdiely priemerov pod 0,1). Do párovanej analýzy vstúpilo <strong>637 pacientov na hemodialýze a 213 na peritoneálnej dialýze</strong>. Viacrozmerný model bol následne upravený o vek, pohlavie, obdobie začatia dialýzy, spôsob prezentácie zlyhania obličiek, funkčný stav, diabetes a kardiovaskulárnu komorbiditu.</p>
 
-<p>Z párovania boli pre chýbajúce hodnoty vylúčení 525 pacienti na hemodialýze (13,2 %) a 25 na peritoneálnej dialýze (10,5 %). Porovnanie prežívania pacientov s chýbajúcimi údajmi a bez nich nepreukázalo významné rozdiely, preto autori zvolili analýzu úplných prípadov bez viacnásobnej imputácie.</p>
+<p>Z párovania bolo pre chýbajúce hodnoty vylúčených 525 pacientov na hemodialýze (13,2 %) a 25 na peritoneálnej dialýze (10,5 %). Porovnanie prežívania pacientov s chýbajúcimi údajmi a bez nich nepreukázalo významné rozdiely, preto autori zvolili analýzu úplných prípadov bez viacnásobnej imputácie.</p>
 
 <h2>Prečo sa výsledok mení podľa použitej metódy</h2>
 

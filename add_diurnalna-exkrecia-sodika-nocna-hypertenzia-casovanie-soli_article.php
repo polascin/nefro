@@ -88,7 +88,7 @@ $articles[] = [
 
 <h3>Pressure-natriuresis ako nočná kompenzácia</h3>
 
-<p>Keď oblička cez deň nedokáže vylúčiť dostatok sodíka, na udržanie sodíkovej rovnováhy môže byť potrebný vyšší perfúzny tlak. Kompenzácia sa potom môže prejaviť ako <strong>vyšší nočný tlak</strong> a oslabený dipping – nie len ako „sekundárny dôsledok“, ale ako súčasť regulačnej slučky. Tento rámec podporujú aj mechanistické prehľady o nondippingu ako zlyhaní denného renálneho spracovania sodíka.</p>
+<p>Keď oblička cez deň nedokáže vylúčiť dostatok sodíka, na udržanie sodíkovej rovnováhy môže byť potrebný vyšší perfúzny tlak. Kompenzácia sa potom môže prejaviť ako <strong>vyšší nočný tlak</strong> a oslabený dipping – nielen ako „sekundárny dôsledok“, ale ako súčasť regulačnej slučky. Tento rámec podporujú aj mechanistické prehľady o nondippingu ako zlyhaní denného renálneho spracovania sodíka.</p>
 
 <h3>Čo ukazujú klinické kohorty</h3>
 
@@ -120,7 +120,7 @@ $articles[] = [
   <li>jasné oddelenie bdelosti a spánku (diár, ideálne synchronizované s ABPM),</li>
   <li>kvalitný split zber moču (úplnosť, kontaminácia, compliance; oddelené denné a nočné vzorky),</li>
   <li>spojenie ABPM fenotypov (nočná hypertenzia, dipping) s rovnakými časovými oknami moču,</li>
-  <li>zohľadnenie diuretík, SGLT2 inhibítorov, príjmu soli, noctúrie a kvality spánku.</li>
+  <li>zohľadnenie diuretík, inhibítorov SGLT2, príjmu soli, noctúrie a kvality spánku.</li>
 </ul>
 
 <p>V bežnej ambulancii je ťažké dosiahnuť rovnakú kvalitu ako v protokoloch štúdií. Preto má zmysel cielené použitie u vybraných pacientov, nie plošný zber u každého s hypertenziou.</p>

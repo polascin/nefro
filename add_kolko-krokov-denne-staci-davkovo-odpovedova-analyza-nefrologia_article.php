@@ -151,7 +151,7 @@ $articles[] = [
   <li>pri nových alarmujúcich príznakoch (bolesť na hrudníku, synkopa, neprimeraná dýchavica, nestabilita) záťaž prerušiť a stav prehodnotiť.</li>
 </ol>
 
-<p>Kroky nezachytia bicyklovanie, plávanie, veslovanie ani pohyb na vozíku. U pacienta s výrazným obmedzením mobility preto počet krokov nie je vhodnou jedinou metrikou. Cadencia (rýchlosť krokov) ako doplnkový ukazovateľ má podľa tej istej analýzy zatiaľ zmiešané a na odporúčanie nedostatočné dôkazy.</p>
+<p>Kroky nezachytia bicyklovanie, plávanie, veslovanie ani pohyb na vozíku. U pacienta s výrazným obmedzením mobility preto počet krokov nie je vhodnou jedinou metrikou. Kadencia (rýchlosť krokov) ako doplnkový ukazovateľ má podľa tej istej analýzy zatiaľ zmiešané a na odporúčanie nedostatočné dôkazy.</p>
 
 <h2>Prečo je to relevantné v nefrológii</h2>
 
@@ -188,8 +188,8 @@ $articles[] = [
 <h2>Limitácie, ktoré treba povedať nahlas</h2>
 
 <ol>
-  <li><strong>Observačný dizajn.</strong> Vyšší počet krokov je spojený s lepšími ukazovateľmi, ale kauzalitu z toho automaticky nevyplýva. Zdravší, zdatnejší a menej krehkí ľudia chodia viac. Reziduálne skreslenie a spätná kauzalita ostávajú, aj keď väčšina primárnych štúdií upravovala vek a zdravotný stav.</li>
-  <li><strong>Nelinearita nie je tabulka pre jednotlivca.</strong> Sedemtisíc krokov je praktická verejnozdravotná hranica, nie biologická konštanta platná pre každého vek, pohlavie a komorbiditu. Analýza nemala vekovo špecifické ciele v sile, ktorá by stačila na osobitné odporúčanie pre starších.</li>
+  <li><strong>Observačný dizajn.</strong> Vyšší počet krokov je spojený s lepšími ukazovateľmi, ale kauzalita z toho automaticky nevyplýva. Zdravší, zdatnejší a menej krehkí ľudia chodia viac. Reziduálne skreslenie a spätná kauzalita ostávajú, aj keď väčšina primárnych štúdií upravovala vek a zdravotný stav.</li>
+  <li><strong>Nelinearita nie je tabuľka pre jednotlivca.</strong> Sedemtisíc krokov je praktická verejnozdravotná hranica, nie biologická konštanta platná pre každý vek, pohlavie a komorbiditu. Analýza nemala vekovo špecifické ciele v sile, ktorá by stačila na osobitné odporúčanie pre starších.</li>
   <li><strong>Málo štúdií pri väčšine ukazovateľov.</strong> Robustnejší je odhad mortality zo všetkých príčin. Pri nádoroch, demencii, diabete a pádoch ide o exploratívne syntézy s malým počtom kohort.</li>
   <li><strong>Generalizácia.</strong> Dáta pochádzajú prevažne z krajín s vysokým príjmom a z výskumných zariadení nosených niekoľko dní. Nemusia sa zhodovať s dlhodobým záznamom spotrebiteľských hodiniek a nie sú to randomizované tréningové protokoly.</li>
   <li><strong>Chronická choroba obličiek nie je v syntéze samostatne vyriešená.</strong> Prenos do dialyzačnej a transplantačnej populácie je analogický, nie priamy.</li>

@@ -157,7 +157,7 @@ $articles[] = [
 
 <p>Takýto vzorec sa dá vysvetliť viacerými spôsobmi. Binárny ukazovateľ „pod 7,0 %“ je citlivý na malý posun celej distribúcie okolo prahovej hodnoty — ak leží veľká časť pacientov tesne nad hranicou, aj mierne zlepšenie HbA1c prekloní mnohých pod ňu. Zmena môže tiež pochádzať prevažne z postprandiálnej glykémie, ktorú lačná hodnota nezachytáva, alebo z intenzifikácie farmakoterapie, ktorá HbA1c ovplyvní viac než hmotnosť či tlak.</p>
 
-<p>Bez podrobných údajov o zmenách liečby nemožno medzi týmito vysvetleniami rozhodnúť. Pre klinickú interpretáciu to znamená, že veľkosť účinku vyjadrená podielom pacientov v cieli pôsobí pôsobivejšie než priemerné metabolické posuny, ktoré ju sprevádzajú.</p>
+<p>Bez podrobných údajov o zmenách liečby nemožno medzi týmito vysvetleniami rozhodnúť. Pre klinickú interpretáciu to znamená, že veľkosť účinku vyjadrená podielom pacientov v cieli vyzerá pôsobivejšie než priemerné metabolické posuny, ktoré ju sprevádzajú.</p>
 </div>
 
 <h2>Metodologické silné stránky</h2>
@@ -239,7 +239,7 @@ $articles[] = [
 
 <h2>Nefrologické súvislosti</h2>
 
-<p>Diabetes 2. typu je jednou z najvýznamnejších príčin chronickej choroby obličiek. Lepšia dlhodobá glykemická kontrola môže znižovať riziko diabetickej mikroangiopatie, ale z tejto štúdie nemožno odvodiť renoprotektívny účinok vzdelávacieho programu.</p>
+<p>Diabetes 2. typu je jednou z najvýznamnejších príčin chronickej choroby obličiek. Lepšia dlhodobá glykemická kontrola môže znižovať riziko diabetickej mikroangiopatie, ale z tejto štúdie nemožno odvodiť nefroprotektívny účinok vzdelávacieho programu.</p>
 
 <p>Nehodnotili sa:</p>
 
@@ -279,7 +279,7 @@ $articles[] = [
 
 <p>Týždňové intenzívne prezenčné školenie lekárov, ktorého súčasťou bolo preberanie úlohy pacienta, zvýšilo v čínskej klastrovej randomizovanej štúdii podiel pacientov s diabetom 2. typu dosahujúcich HbA1c pod 7 % približne o 17 percentuálnych bodov.</p>
 
-<p>Výsledok podporuje význam praktického, komunikačného a zážitkového vzdelávania. Dôkaz sa však týka celého viacprvkového programu, nie samotného hrania rolí. Nemožno z neho odvodiť prevenciu diabetických komplikácií ani renoprotekciu — a už vôbec nie u pacientov s chronickou chorobou obličiek, ktorí do štúdie neboli zaradení.</p>
+<p>Výsledok podporuje význam praktického, komunikačného a zážitkového vzdelávania. Dôkaz sa však týka celého viacprvkového programu, nie samotného hrania rolí. Nemožno z neho odvodiť prevenciu diabetických komplikácií ani nefroprotekciu — a už vôbec nie u pacientov s chronickou chorobou obličiek, ktorí do štúdie neboli zaradení.</p>
 
 <p>Pre slovenskú prax by bolo primerané pilotné overenie podobného programu s <strong>aktívnou kontrolnou skupinou s rovnakou časovou dotáciou</strong>, s ekonomickým hodnotením a so širšími výsledkami zahŕňajúcimi hypoglykémie, albuminúriu, eGFR, používanie kardiorenálne ochrannej liečby, hospitalizácie, kvalitu života a dlhodobú udržateľnosť účinku.</p>
 

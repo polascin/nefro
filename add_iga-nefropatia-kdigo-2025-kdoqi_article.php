@@ -89,7 +89,7 @@ $articles[] = [
   <li><strong>kontrola hmotnosti</strong> a vhodná aeróbna aktivita,</li>
   <li><strong>cieľ tlaku krvi ≤ 120/70 mm Hg</strong>,</li>
   <li><strong>blokáda RAS</strong> (ACEi/ARB) a podľa situácie aj stratégia na zníženie hyperfiltrácie,</li>
-  <li>zváženie <strong>SGLT2 inhibítora</strong> ako súčasti renoprotektívneho rámca,</li>
+  <li>zváženie <strong>inhibítora SGLT2</strong> ako súčasti nefroprotektívneho rámca,</li>
   <li>komplexná kardiovaskulárna prevencia podľa lokálnych odporúčaní,</li>
   <li>v ideálnom prípade zváženie <strong>klinickej skúšky</strong>, ak je dostupná.</li>
 </ul>

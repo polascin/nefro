@@ -32,7 +32,7 @@ $articles[] = [
 
 <p>V dialyzačnej jednotke bol identifikovaný 62-ročný muž s polycystickým ochorením obličiek na hemodialýze približne 1 rok. Svrbenie bolo závažné a trvalo minimálne 3 mesiace, pričom pacient o ňom nikdy nehovoril ani zdravotníkom na vizitách.</p>
 
-<p>Pri vyšetrení boli kožné lézie zjavne druhotné, typicky z následkov škrabania (excoriácie, prurigo lézie). Po vylúčení iných príčin chronického pruritu sa potvrdilo CKD-aP. Pacient dosiahol WI-NRS 7/10 a svrbenie výrazne znižovalo kvalitu života, sprevádzal ho aj spánkový deficit, úzkosť a výrazná spoločenská izolácia. Antihistaminiká boli predtým nasadené, ale bez efektu.</p>
+<p>Pri vyšetrení boli kožné lézie zjavne druhotné, typicky z následkov škrabania (exkoriácie, prurigo lézie). Po vylúčení iných príčin chronického pruritu sa potvrdilo CKD-aP. Pacient dosiahol WI-NRS 7/10 a svrbenie výrazne znižovalo kvalitu života, sprevádzal ho aj spánkový deficit, úzkosť a výrazná spoločenská izolácia. Antihistaminiká boli predtým nasadené, ale bez efektu.</p>
 
 <p>Tento prípad dobre ilustruje dve veci: CKD-aP môže byť „neviditeľné“, ak sa aktívne nepýta, a antihistaminiká nemusia zasiahnuť správnu dráhu svrbenia.<sup><a href="https://reachmd.com/programs/cme/stuck-on-antihistamines-for-managing-patients-with-ckd-ap-time-to-reconsider/37607/transcript/83434/" target="_blank" rel="noopener noreferrer">[1]</a></sup></p>
 
@@ -89,7 +89,7 @@ $articles[] = [
 
 <h3>Objav: aj biologická stopa zápalu</h3>
 
-<p>Zaujímavý je aj doplnkový pohľad na zápalové markery. V aktivite sa spomína analýza 20 cirkulujúcich zápalových markerov, kde sa pri reagujúcich pacientoch po 12 týždňoch liečby pozorovalo <strong>pokles biomarkerov</strong> (najmä IL-31, CCL2, CXCL10, TSLP a nerve growth factor), zatiaľ čo u nereagujúcich alebo v placebovej skupine nie. To podporuje hypotézu, že DFK zasahuje nielen senzorickú dráhu svrbenia, ale aj neuroimunitné mechanizmy.<sup><a href="https://reachmd.com/programs/cme/stuck-on-antihistamines-for-managing-patients-with-ckd-ap-time-to-reconsider/37607/transcript/83434/" target="_blank" rel="noopener noreferrer">[1]</a></sup></p>
+<p>Zaujímavý je aj doplnkový pohľad na zápalové markery. V aktivite sa spomína analýza 20 cirkulujúcich zápalových markerov, kde sa pri reagujúcich pacientoch po 12 týždňoch liečby pozoroval <strong>pokles biomarkerov</strong> (najmä IL-31, CCL2, CXCL10, TSLP a nerve growth factor), zatiaľ čo u nereagujúcich alebo v placebovej skupine nie. To podporuje hypotézu, že DFK zasahuje nielen senzorickú dráhu svrbenia, ale aj neuroimunitné mechanizmy.<sup><a href="https://reachmd.com/programs/cme/stuck-on-antihistamines-for-managing-patients-with-ckd-ap-time-to-reconsider/37607/transcript/83434/" target="_blank" rel="noopener noreferrer">[1]</a></sup></p>
 
 <h3>Bezpečnosť a obava z opioidov</h3>
 

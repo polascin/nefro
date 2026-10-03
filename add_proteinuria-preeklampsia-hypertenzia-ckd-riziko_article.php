@@ -90,7 +90,7 @@ $articles[] = [
 
 <ul>
   <li>kontrolu krvného tlaku,</li>
-  <li>vyšetrenie sérového kreatinínu a odhadovanej glomerulárnej filtrácie,</li>
+  <li>vyšetrenie sérového kreatinínu a odhadovanej glomerulovej filtrácie,</li>
   <li>kontrolu albuminúrie alebo proteinúrie,</li>
   <li>posúdenie ďalších rizikových faktorov, napríklad obezity, diabetu, fajčenia a rodinnej anamnézy,</li>
   <li>jasné odporúčanie, kto a kedy bude pacientku ďalej sledovať.</li>

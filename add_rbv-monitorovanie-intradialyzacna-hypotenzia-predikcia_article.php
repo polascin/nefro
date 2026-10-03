@@ -33,7 +33,7 @@ $articles[] = [
 
 <p>Intradialyzačná hypotenzia patrí medzi najčastejšie komplikácie hemodialýzy. Francúzska prospektívna multicentrická štúdia ukázala, že pokles relatívneho objemu krvi (RBV) počas dialýzy súvisí s výskytom hypotenzie a môže pomôcť predpovedať hypotenznú príhodu v nasledujúcich 10 až 60 minútach.</p>
 
-<p>Najlepšiu prediktívnu výkonnosť nemala samotná hodnota RBV, ale model kombinujúci RBV, jeho časovú zmenu, aktuálny systolický krvný tlak, pokles tlaku od začiatku dialýzy a srdcovú frekvenciu. Výsledky sú sľubné, pochádzajú však z malého, vysoko rizikového súboru bez nezávislej externej validácie. <strong>Štúdia zatiaľ nepreukazuje, že použitie modelu znižuje výskyt hypotenzie, hospitalizácie, poškodenie orgánov alebo mortalitu.</strong></p>
+<p>Najlepšiu prediktívnu výkonnosť nemala samotná hodnota RBV, ale model kombinujúci RBV, jeho časovú zmenu, aktuálny systolický krvný tlak, pokles tlaku od začiatku dialýzy a srdcovú frekvenciu. Výsledky sú sľubné, pochádzajú však z malého, vysoko rizikového súboru bez nezávislej externej validácie. <strong>Štúdia zatiaľ nepreukazuje, že použitie modelu znižuje výskyt hypotenzie, hospitalizácie, poškodenia orgánov alebo mortality.</strong></p>
 
 <h2>Prečo vzniká intradialyzačná hypotenzia</h2>
 

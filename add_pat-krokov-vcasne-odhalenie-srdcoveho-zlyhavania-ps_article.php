@@ -106,12 +106,12 @@ $articles[] = [
 <ul>
   <li>skutočne nízka hodnota stále pomáha HF <strong>vylúčiť</strong> — aj pri CKD;</li>
   <li>zvýšená hodnota diagnózu <strong>nepotvrdzuje</strong>: môže odrážať znížený klírens, objem, fibriláciu predsiení alebo vek;</li>
-  <li>pri G4–G5 a u dialyzovaných je špecificita slabá; užitočnejšie sú dôkazy zvýšených plniacich tlakov (echokardiografia, v vybraných situáciách invazívna hemodynamika) než jeden laboratórny prah;</li>
+  <li>pri G4–G5 a u dialyzovaných je špecificita slabá; užitočnejšie sú dôkazy zvýšených plniacich tlakov (echokardiografia, vo vybraných situáciách invazívna hemodynamika) než jeden laboratórny prah;</li>
   <li>NT-proBNP závisí od renálneho klírensu viac ako BNP; niektoré konsenzy pre primárnu starostlivosť preto pri poruche obličiek preferujú BNP, ale ESC 2021 používa oba peptidy s rovnakou logikou vylúčenia;</li>
   <li>eurázijsko-turecký konsenzus pre primárnu starostlivosť (PMC11881534) meranie natriuretických peptidov u dialyzovaných <strong>neodporúča</strong> — to nie je zákaz ESC, ale výstižne upozorňuje, že pri dialýze je interpretácia veľmi obmedzená a kolíše s objemom.</li>
 </ul>
 
-<p>Sekundárna analýza TOPCAT (Myhre a spol., <em>JAMA Cardiology</em> 2018) u HFpEF ukázala, že koncentrácie peptidov sú vyššie pri nižšej odhadovanej glomerulárnej filtrácii (eGFR) a pri fibrilácii predsiení a nižšie pri vyššom BMI. Išlo o <strong>prognostický</strong> vzťah u už diagnostikovaného HFpEF, nie o odvodenie diagnostických prahov. Záver je však pre prax zhodný: jeden absolútny prah podhodnotí niektoré podskupiny (obezita) a nadhodnotí iné (CKD, fibrilácia predsiení).</p>
+<p>Sekundárna analýza TOPCAT (Myhre a spol., <em>JAMA Cardiology</em> 2018) u HFpEF ukázala, že koncentrácie peptidov sú vyššie pri nižšej odhadovanej glomerulovej filtrácii (eGFR) a pri fibrilácii predsiení a nižšie pri vyššom BMI. Išlo o <strong>prognostický</strong> vzťah u už diagnostikovaného HFpEF, nie o odvodenie diagnostických prahov. Záver je však pre prax zhodný: jeden absolútny prah podhodnotí niektoré podskupiny (obezita) a nadhodnotí iné (CKD, fibrilácia predsiení).</p>
 
 <div class="table-responsive" role="region" aria-label="Faktory, ktoré posúvajú natriuretické peptidy" tabindex="0">
 <table>

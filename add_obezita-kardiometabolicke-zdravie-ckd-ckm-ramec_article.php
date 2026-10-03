@@ -93,9 +93,9 @@ $articles[] = [
 
 <p>Pre nefrológa je pri inkretínovej liečbe podstatné sledovať znášanlivosť, objemový stav, gastrointestinálne nežiaduce účinky, nutričný stav a možné interakcie s ostatnou liečbou.</p>
 
-<h3>SGLT2 inhibítory</h3>
+<h3>inhibítory SGLT2</h3>
 
-<p>SGLT2 inhibítory navodzujú <strong>mierny úbytok hmotnosti</strong>, a to prevažne stratou kalórií pri glykozúrii, pričom súčasne poskytujú kardio-obličkovú ochranu. Ich úloha pri obezite je teda doplnková – nie sú liekom na chudnutie, ale ich metabolický efekt je vítaným pridaným účinkom pri liečbe, ktorá je pri CKD indikovaná z iných dôvodov.</p>
+<p>inhibítory SGLT2 navodzujú <strong>mierny úbytok hmotnosti</strong>, a to prevažne stratou kalórií pri glykozúrii, pričom súčasne poskytujú kardio-obličkovú ochranu. Ich úloha pri obezite je teda doplnková – nie sú liekom na chudnutie, ale ich metabolický efekt je vítaným pridaným účinkom pri liečbe, ktorá je pri CKD indikovaná z iných dôvodov.</p>
 
 <h3>Bariatrická a metabolická chirurgia</h3>
 

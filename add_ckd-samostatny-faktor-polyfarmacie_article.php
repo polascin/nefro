@@ -105,7 +105,7 @@ $articles[] = [
   <li>nízka adherencia.</li>
 </ul>
 
-<p>Osobitne rizikové sú nesteroidové antiflogistiká, nevhodne dávkované antibiotiká, niektoré antidiabetiká, sedatíva, opioidy, anticholinergiká, digoxín, lítium a niektoré antiarytmiká. Pri pokročilom CKD môže aj štandardná dávka bežne používaného lieku predstavovať problém.</p>
+<p>Osobitne rizikové sú nesteroidové antiflogistiká, nevhodne dávkované antibiotiká, niektoré antidiabetiká, sedatíva, opioidy, anticholinergiká, digoxín, lítium a niektoré antiarytmiká. Pri pokročilej CKD môže aj štandardná dávka bežne používaného lieku predstavovať problém.</p>
 
 <h2>Polyfarmácia a adherencia</h2>
 

@@ -60,24 +60,24 @@ $articles[] = [
   <tbody>
     <tr>
       <td>Laktát</td>
-      <td>15,2 ± 0,4 mmol/L</td>
-      <td>38,1 ± 1,5 mmol/L</td>
+      <td>15,2 ± 0,4 mmol/l</td>
+      <td>38,1 ± 1,5 mmol/l</td>
     </tr>
     <tr>
       <td>Bikarbonát</td>
-      <td>25,4 ± 1,1 mmol/L</td>
-      <td>3,4 ± 1,1 mmol/L</td>
+      <td>25,4 ± 1,1 mmol/l</td>
+      <td>3,4 ± 1,1 mmol/l</td>
     </tr>
     <tr>
       <td>Rozpustený CO₂</td>
-      <td>1,30 ± 0,08 mmol/L</td>
-      <td>0,34 ± 0,04 mmol/L</td>
+      <td>1,30 ± 0,08 mmol/l</td>
+      <td>0,34 ± 0,04 mmol/l</td>
     </tr>
   </tbody>
 </table>
 </div>
 
-<p>Rozdiely v týchto troch tlmivých zložkách boli očakávané a všetky boli štatisticky významné (p &lt; 0,05). Z ostatných meraných zložiek sa na začiatku líšil iba sodík, ktorého koncentrácia bola pri PD4 o 1,3 % vyššia. Rýchlosť peritoneálnej absorpcie dosiahla 3,66 ± 1,48 mL/min pri B/L a 2,79 ± 1,02 mL/min pri PD4; rozdiel nebol štatisticky významný (p = 0,11).</p>
+<p>Rozdiely v týchto troch tlmivých zložkách boli očakávané a všetky boli štatisticky významné (p &lt; 0,05). Z ostatných meraných zložiek sa na začiatku líšil iba sodík, ktorého koncentrácia bola pri PD4 o 1,3 % vyššia. Rýchlosť peritoneálnej absorpcie dosiahla 3,66 ± 1,48 ml/min pri B/L a 2,79 ± 1,02 ml/min pri PD4; rozdiel nebol štatisticky významný (p = 0,11).</p>
 
 <p>Zvyškový objem pred výmenou bol 466 ± 160 mL pri B/L a 316 ± 74 mL pri PD4; tento rozdiel nebol štatisticky významný. Napustené objemy sa v priemere líšili o 30 mL a kinetika intraperitoneálneho objemu bola medzi roztokmi odlišná do 25. minúty. Autori ju pripisujú skôr malým rozdielom v zvyškovom a napustenom objeme než tlmivému zloženiu. Podľa pomeru kreatinínu v dialyzáte a plazme po štyroch hodinách bol jeden pacient vysoký, traja stredne vysokí a dvaja stredne nízki transportéri. Rozdiel v kinetike laktátu alebo bikarbonátu podľa transportného typu sa neukázal, ale šesť pacientov neposkytuje dostatočnú silu na spoľahlivú podskupinovú analýzu.</p>
 
@@ -85,7 +85,7 @@ $articles[] = [
 
 <p>Trojpórový model opisuje prestup vody a rozpustených látok cez veľké, malé a ultramalé póry, pričom ultramalé póry reprezentujú najmä akvaporíny. Tok vody určujú hydrostatické, onkotické a osmotické gradienty; rozpustené látky sa prenášajú difúziou a konvekciou. Acidobázická časť modelu zahŕňa pľúcne kapiláry a alveoly, arteriálnu a zmiešanú venóznu krv, interstícium a intracelulárny priestor. Do tohto celotelového systému vstupujú modelované transperitoneálne toky bikarbonátu, laktátu a rozpusteného CO₂.</p>
 
-<p>Model odhadoval hydraulickú vodivosť membrány, podiel ultramalých pórov a súčin permeability a plochy (PS) pre desať rozpustených látok. Peritoneálna perfúzia bola pevne nastavená na 55 mL/min a absorpcia sa pre každú výmenu zadala podľa údajov RISA. Pri viacerých neacidobázických látkach sa plazmatické koncentrácie považovali za známe vstupy a medzi odbermi sa lineárne interpolovali.</p>
+<p>Model odhadoval hydraulickú vodivosť membrány, podiel ultramalých pórov a súčin permeability a plochy (PS) pre desať rozpustených látok. Peritoneálna perfúzia bola pevne nastavená na 55 ml/min a absorpcia sa pre každú výmenu zadala podľa údajov RISA. Pri viacerých neacidobázických látkach sa plazmatické koncentrácie považovali za známe vstupy a medzi odbermi sa lineárne interpolovali.</p>
 
 <div class="table-responsive" role="region" aria-label="Čo spája model 3PM/ABE" tabindex="0">
 <table>
@@ -134,7 +134,7 @@ $articles[] = [
 <table>
   <thead>
     <tr>
-      <th scope="col">Odhadnutý PS (mL/min)</th>
+      <th scope="col">Odhadnutý PS (ml/min)</th>
       <th scope="col">B/L</th>
       <th scope="col">PD4</th>
       <th scope="col">Porovnanie</th>
@@ -195,7 +195,7 @@ $articles[] = [
   <li><strong>Možno povedať:</strong> model dobre opísal krátkodobé koncentrácie a objemy v skúmaných 4-hodinových výmenách a vytvoril konzistentné prepojenie medzi peritoneálnym transportom a acidobázickou reguláciou.</li>
   <li><strong>Možno povedať:</strong> rozdielne počiatočné koncentrácie bikarbonátu a laktátu viedli k očakávane odlišným hmotnostným tokom, kým väčšina odhadnutých parametrov membránového transportu bola podobná.</li>
   <li><strong>Nemožno povedať:</strong> že jeden roztok je klinicky účinnejší, bezpečnejší alebo metabolicky nadradený. Štúdia nemala taký dizajn ani výsledkové ukazovatele.</li>
-  <li><strong>Nemožno povedať:</strong> že B/L sám osebe znižuje tvorbu degradačných produktov glukózy alebo predlžuje životnosť peritoneálnej membrány. Hodnota pH a obsah degradačných produktov závisia aj od viac-komorovej výroby a tepelnej sterilizácie, nielen od voľby tlmivej látky.</li>
+  <li><strong>Nemožno povedať:</strong> že B/L sám osebe znižuje tvorbu degradačných produktov glukózy alebo predlžuje životnosť peritoneálnej membrány. Hodnota pH a obsah degradačných produktov závisia aj od viackomorovej výroby a tepelnej sterilizácie, nielen od voľby tlmivej látky.</li>
   <li><strong>Nemožno povedať:</strong> že prechod medzi roztokmi automaticky zachová adekvátnosť PD alebo dlhodobé výsledky. Tie sa v práci nesledovali.</li>
 </ul>
 
@@ -216,7 +216,7 @@ $articles[] = [
 
 <p><strong>Poznámka k označeniu roztokov:</strong> v jednej úvodnej vete diskusie originálneho článku sú skratky B/L a PD4 zjavne zamenené. Abstrakt, metodika, výsledky, obrázky aj názvy produktov konzistentne definujú B/L ako bikarbonátovo-laktátový Physioneal a PD4 ako laktátový Dianeal PD4; týmto definíciám sa riadi aj naše spracovanie.</p>
 
-<p><strong>Poznámka k jednotke rozpustnosti CO₂:</strong> hlavný text uvádza 0,23 mmol/L/mmHg, kým doplnkový matematický materiál pracuje s pCO₂ v kPa. Fyzikálne konzistentná jednotka je 0,23 mmol/L/kPa, približne 0,031 mmol/L/mmHg. Chybnú jednotku z hlavného textu preto v našich výpočtoch ani záveroch nepreberáme.</p>
+<p><strong>Poznámka k jednotke rozpustnosti CO₂:</strong> hlavný text uvádza 0,23 mmol/l/mmHg, kým doplnkový matematický materiál pracuje s pCO₂ v kPa. Fyzikálne konzistentná jednotka je 0,23 mmol/l/kPa, približne 0,031 mmol/l/mmHg. Chybnú jednotku z hlavného textu preto v našich výpočtoch ani záveroch nepreberáme.</p>
 
 <h2>Záver</h2>
 

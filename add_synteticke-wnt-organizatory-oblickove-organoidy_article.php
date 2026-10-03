@@ -58,7 +58,7 @@ $articles[] = [
 
 <p>Táto os sa nachádza pri signálnej hranici medzi <em>WNT11</em> a <em>WNT9B</em>. Zjednodušene povedané, nejde iba o prítomnosť WNT signálnej dráhy, ale o jej priestorové usporiadanie na rozhraní zberacieho systému a vyvíjajúceho sa nefrónu. Práve takáto hranica môže určovať, kde sa aktivujú distálne programy nefrónovej diferenciácie a ktorým smerom sa vyvíjajúca tubulárna štruktúra predlžuje.</p>
 
-<p>Pre klinicky uvažujúceho nefrológa je dôležité najmä to, že segmentová identita nefrónu a jeho priestorová orientácia nie sú oddelené javy. Funkčný význam proximálneho tubulu, Henleho kľučky, distálneho tubulu, zberacieho systému a glomerulárnej zložky závisí od ich vzájomnej nadväznosti. Organoid s lepšou geometriou preto môže byť spoľahlivejším modelom než organoid, ktorý má síce správne bunkové markery, ale chaotickú architektúru.</p>
+<p>Pre klinicky uvažujúceho nefrológa je dôležité najmä to, že segmentová identita nefrónu a jeho priestorová orientácia nie sú oddelené javy. Funkčný význam proximálneho tubulu, Henleho slučky, distálneho tubulu, zberacieho systému a glomerulárnej zložky závisí od ich vzájomnej nadväznosti. Organoid s lepšou geometriou preto môže byť spoľahlivejším modelom než organoid, ktorý má síce správne bunkové markery, ale chaotickú architektúru.</p>
 
 <h2>Syntetické organizátory ako lokálny zdroj signálu</h2>
 

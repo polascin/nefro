@@ -31,7 +31,7 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Jednostranový praktický algoritmus manažmentu IgA nefropatie podľa KDIGO 2025 a KDOQI US Commentary: kedy myslieť na biopsiu, ako nastaviť riziko, aké sú základné renoprotektívne kroky a ako sa rozhodovať medzi Nefeconom a systémovými kortikoidmi.',
+    'excerpt'      => 'Jednostranový praktický algoritmus manažmentu IgA nefropatie podľa KDIGO 2025 a KDOQI US Commentary: kedy myslieť na biopsiu, ako nastaviť riziko, aké sú základné nefroprotektívne kroky a ako sa rozhodovať medzi Nefeconom a systémovými kortikoidmi.',
     'content'      => <<<'HTML'
 <figure><a href="img/iga-nefropatia-algoritmus-kdigo-2025-kdoqi.webp" rel="noopener noreferrer" target="_blank"><img src="img/iga-nefropatia-algoritmus-kdigo-2025-kdoqi.webp" alt="Svetelný rozhodovací strom vychádzajúci z obličky a postupne sa vetviaci na ďalšie cesty" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Algoritmus nenahrádza úsudok — usporadúva ho do krokov, ktoré sa dajú zopakovať.</figcaption></figure>
 
@@ -75,7 +75,7 @@ $articles[] = [
 <h2>4) Ktorých pacientov liečiť cielenejšie</h2>
 
 <ul>
-  <li>☐ Špecifickú liečbu zvažovať pri vyššom riziku progresie, najmä pri pretrvávajúcej proteinúrii napriek základnej renoprotekcii.</li>
+  <li>☐ Špecifickú liečbu zvažovať pri vyššom riziku progresie, najmä pri pretrvávajúcej proteinúrii napriek základnej nefroprotekcii.</li>
   <li>☐ Pri rozhodovaní zohľadniť eGFR, proteinúriu, histológiu, komorbidity a dostupnosť liečby.</li>
 </ul>
 
@@ -108,7 +108,7 @@ $articles[] = [
 
 <h2>7) Praktická veta do dokumentácie</h2>
 
-<p><em>„Pacient s IgA nefropatiou: diagnóza potvrdená biopsiou. Zavedené základné renoprotektívne opatrenia a ciele tlaku krvi. Pri riziku progresie zvolená cielenejšia liečba (Nefecon, ak je dostupný; inak znížené systémové steroidy s profylaxiou). Účinok hodnotím najmä podľa trendu proteinúrie a eGFR.“</em></p>
+<p><em>„Pacient s IgA nefropatiou: diagnóza potvrdená biopsiou. Zavedené základné nefroprotektívne opatrenia a ciele tlaku krvi. Pri riziku progresie zvolená cielenejšia liečba (Nefecon, ak je dostupný; inak znížené systémové steroidy s profylaxiou). Účinok hodnotím najmä podľa trendu proteinúrie a eGFR.“</em></p>
 
 <hr>
 

@@ -181,7 +181,7 @@ $articles[] = [
 
 <h2>Čo si z toho vziať pre prax</h2>
 
-<p>Skutočným poučením nie je technika, ale prístup k liečbe. Ak sa pacient dostane do bodu, keď zvažuje improvizáciu, zlyhalo niečo pred tým: financovanie, doprava, dostupnosť miesta v programe alebo informovanosť o možnostiach.</p>
+<p>Skutočným poučením nie je technika, ale prístup k liečbe. Ak sa pacient dostane do bodu, keď zvažuje improvizáciu, zlyhalo niečo predtým: financovanie, doprava, dostupnosť miesta v programe alebo informovanosť o možnostiach.</p>
 
 <ol>
   <li><strong>Aktívne sa pýtať na finančnú a dopravnú záťaž liečby.</strong> Pacient ju spontánne často nepriznáva a rieši ju vynechávaním sedení skôr, než ju vysloví.</li>

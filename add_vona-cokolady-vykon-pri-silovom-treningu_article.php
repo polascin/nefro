@@ -134,7 +134,7 @@ $articles[] = [
 
 <h2>Nefrologický pohľad</h2>
 
-<p>Pre pacientov s chronickým ochorením obličiek nemajú tieto výsledky priamy klinický význam. Štúdia nezahŕňala pacientov s CKD ani ľudí liečených dialýzou.</p>
+<p>Pre pacientov s chronickou chorobou obličiek nemajú tieto výsledky priamy klinický význam. Štúdia nezahŕňala pacientov s CKD ani ľudí liečených dialýzou.</p>
 
 <p>Samotné ovoňanie čokolády nepredstavuje príjem draslíka, fosforu, cukru ani energie. Teoreticky preto môže sprostredkovať príjemný senzorický zážitok bez nutnosti konzumácie čokolády. Nemožno však tvrdiť, že zlepšuje fyzickú výkonnosť, apetít alebo rehabilitáciu nefrologických pacientov.</p>
 

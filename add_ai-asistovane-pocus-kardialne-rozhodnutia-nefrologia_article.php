@@ -104,7 +104,7 @@ a kardiálne zobrazovanie, pričom rôzne firmy sa zameriavajú buď na:</p>
 echokardiografických laboratórií a špecializovaných pracovísk.</p>
 
 <h2>Prečo by to mohlo zaujímať nefrológa (praktická rovina)</h2>
-<p>V nefrologickej praxi, najmä pri dialyzovaných a pacientov s kardiorenálnym syndrómom, sa
+<p>V nefrologickej praxi, najmä pri dialyzovaných pacientoch a pacientoch s kardiorenálnym syndrómom, sa
 dýchavičnosť, edémy a kolísanie objemového statusu často prelínajú s kardiálnou patológiou.
 Ak má byť AI-asistované POCUS skutočne spoľahlivé ako triážny nástroj, môže to teoreticky:</p>
 <ul>

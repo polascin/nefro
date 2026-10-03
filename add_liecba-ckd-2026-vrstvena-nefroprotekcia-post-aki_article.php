@@ -68,7 +68,7 @@ $articles[] = [
 
 <h3>3. Finerenón: presne vymedzená dôkazová základňa</h3>
 
-<p>Finerenón znížil v štúdiách FIDELIO-DKD a FIGARO-DKD riziko obličkových a kardiovaskulárnych príhod u pacientov s CKD spojenej s diabetom 2. typu. KDIGO 2024 ho navrhuje u dospelých s diabetom 2. typu, eGFR &gt; 25 ml/min/1,73 m², normálnou koncentráciou draslíka a pretrvávajúcou albuminúriou &gt; 30 mg/g (&gt; 3 mg/mmol) napriek maximálnej tolerovanej dávke ACEi alebo ARB. Európska registračná indikácia pre liečbu CKD je naďalej viazaná na diabetes 2. typu.</p>
+<p>Finerenón znížil v štúdiách FIDELIO-DKD a FIGARO-DKD riziko obličkových a kardiovaskulárnych príhod u pacientov s CKD spojenou s diabetom 2. typu. KDIGO 2024 ho navrhuje u dospelých s diabetom 2. typu, eGFR &gt; 25 ml/min/1,73 m², normálnou koncentráciou draslíka a pretrvávajúcou albuminúriou &gt; 30 mg/g (&gt; 3 mg/mmol) napriek maximálnej tolerovanej dávke ACEi alebo ARB. Európska registračná indikácia pre liečbu CKD je naďalej viazaná na diabetes 2. typu.</p>
 
 <p>Výsledky štúdie CONFIDENCE podporujú skoré kombinovanie finerenónu s empagliflozínom u vybraných pacientov s diabetom 2. typu a albuminurickou CKD: po 180 dňoch bol pokles UACR väčší než pri každom lieku samostatne. Primárnym výsledkom však bol zástupný ukazovateľ, nie zlyhanie obličiek, kardiovaskulárna príhoda alebo mortalita. Štúdia preto nedokazuje dlhodobý klinický prínos súčasného začatia oboch liekov. Pri finerenóne je nevyhnutný výber pacienta podľa draslíka a pravidelné monitorovanie kaliémie.</p>
 

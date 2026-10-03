@@ -150,7 +150,7 @@ $articles[] = [
   </table>
 </div>
 
-<p>Kardiovaskulárny prínos nie je automatickým dôkazom renoprotekcie. Podobne môže priaznivý sklon eGFR alebo pokles albuminúrie podporovať hypotézu renálneho účinku, ale jeho význam závisí od mechanizmu lieku, dizajnu a trvania štúdie.</p>
+<p>Kardiovaskulárny prínos nie je automatickým dôkazom nefroprotekcie. Podobne môže priaznivý sklon eGFR alebo pokles albuminúrie podporovať hypotézu renálneho účinku, ale jeho význam závisí od mechanizmu lieku, dizajnu a trvania štúdie.</p>
 
 <h2>Priame protizápalové stratégie: prehľad výsledkov</h2>
 
@@ -213,7 +213,7 @@ $articles[] = [
 
 <p>Dva detaily robia z tejto štúdie dôležitú oporu zápalovej hypotézy aterotrombózy. Po prvé, kanakinumab <strong>neznížil koncentrácie lipidov</strong>, takže výsledok podporuje prínos cieleného ovplyvnenia zápalovej dráhy nezávisle od znižovania lipidov. Po druhé, hsCRP klesol dávkovo závisle o 26, 37 a 41 percentuálnych bodov oproti placebu, čo dokladá zásah do cieľovej dráhy.</p>
 
-<p>Cena však bola reálna: vyšší výskyt fatálnych infekcií a <strong>žiadny rozdiel v celkovej mortalite</strong> (HR 0,94; 95 % IS 0,83–1,06). CANTOS teda potvrdila, že zápal je kauzálne ovplyvniteľnou súčasťou reziduálneho kardiovaskulárneho rizika — nepreukázala však, že blokáda IL-1β je renoprotektívnou liečbou CKD. Renálne analýzy boli sekundárne a kanakinumab takúto indikáciu nemá.</p>
+<p>Cena však bola reálna: vyšší výskyt fatálnych infekcií a <strong>žiadny rozdiel v celkovej mortalite</strong> (HR 0,94; 95 % IS 0,83–1,06). CANTOS teda potvrdila, že zápal je kauzálne ovplyvniteľnou súčasťou reziduálneho kardiovaskulárneho rizika — nepreukázala však, že blokáda IL-1β je nefroprotektívnou liečbou CKD. Renálne analýzy boli sekundárne a kanakinumab takúto indikáciu nemá.</p>
 
 <h3>Inhibícia interleukínu 6</h3>
 
@@ -249,7 +249,7 @@ $articles[] = [
 
 <h3>Bardoxolónmetyl a aktivácia Nrf2</h3>
 
-<p>Bardoxolón aktivuje transkripčný faktor Nrf2 a inhibuje niektoré prozápalové signálne dráhy. V skorších štúdiách zvyšoval eGFR — čo sa vtedy vykladalo ako renoprotekcia.</p>
+<p>Bardoxolón aktivuje transkripčný faktor Nrf2 a inhibuje niektoré prozápalové signálne dráhy. V skorších štúdiách zvyšoval eGFR — čo sa vtedy vykladalo ako nefroprotekcia.</p>
 
 <p>Štúdia BEACON zaradila 2 185 pacientov s diabetom 2. typu a CKD kategórie G4 (eGFR 15–29 ml/min/1,73 m²). Bola predčasne ukončená na odporúčanie nezávislej komisie po mediáne sledovania 9 mesiacov. Primárny zložený ukazovateľ (zlyhanie obličiek alebo kardiovaskulárne úmrtie) sa vyskytol u 6 % v oboch ramenách: HR 0,98 (95 % IS 0,70–1,37; p = 0,92). Hospitalizácia pre srdcové zlyhávanie alebo úmrtie na srdcové zlyhávanie však nastali u 96 oproti 55 pacientov: <strong>HR 1,83 (95 % IS 1,32–2,55; p &lt; 0,001)</strong>.</p>
 
@@ -259,7 +259,7 @@ $articles[] = [
 
 <p>Pentoxifylín inhibuje fosfodiesterázu a môže tlmiť tvorbu niektorých cytokínov. Otvorená randomizovaná štúdia PREDIAN zaradila 169 pacientov s diabetom 2. typu a CKD kategórie G3–G4, ktorí už užívali blokádu systému renín-angiotenzín. Po dvoch rokoch klesla eGFR o 2,1 ± 0,4 ml/min/1,73 m² v skupine s pentoxifylínom oproti 6,5 ± 0,4 v kontrolnej skupine (rozdiel 4,3; 95 % IS 3,1–5,5; p &lt; 0,001). Albuminúria klesla o 14,9 %, kým v kontrolnej skupine stúpla o 5,7 %.</p>
 
-<p>Rozsah účinku je pozoruhodný, ale dôkazová sila nie. Išlo o otvorenú štúdiu jedného pracoviska so 169 účastníkmi a bez tvrdých klinických ukazovateľov. Pentoxifylín preto nemožno považovať za náhradu štandardnej renoprotektívnej liečby; je to skôr nezodpovedaná otázka než hotová odpoveď.</p>
+<p>Rozsah účinku je pozoruhodný, ale dôkazová sila nie. Išlo o otvorenú štúdiu jedného pracoviska so 169 účastníkmi a bez tvrdých klinických ukazovateľov. Pentoxifylín preto nemožno považovať za náhradu štandardnej nefroprotektívnej liečby; je to skôr nezodpovedaná otázka než hotová odpoveď.</p>
 
 <h2>Majú zavedené nefroprotektívne lieky protizápalové účinky?</h2>
 
@@ -312,7 +312,7 @@ $articles[] = [
 <ul>
   <li>CKD je často sprevádzaná systémovým a lokálnym zápalom.</li>
   <li>Vyššie zápalové biomarkery sú spojené s progresiou CKD, kardiovaskulárnymi príhodami a mortalitou.</li>
-  <li>Niektoré zavedené renoprotektívne lieky majú protizápalové vlastnosti.</li>
+  <li>Niektoré zavedené nefroprotektívne lieky majú protizápalové vlastnosti.</li>
   <li>Cielená blokáda zápalových dráh dokáže výrazne meniť zápalové biomarkery.</li>
   <li>Blokáda IL-1β znižuje výskyt aterosklerotických príhod u pacientov po infarkte so zvýšeným hsCRP — za cenu vyššieho rizika fatálnych infekcií.</li>
   <li>V štúdii ZEUS blokáda IL-6 znížila voľný IL-6 a hsCRP, ale podľa oznámených hlavných výsledkov neznížila MACE.</li>
@@ -331,7 +331,7 @@ $articles[] = [
   <li>Každé zvýšenie hsCRP je dôkazom aktívneho poškodzovania obličiek.</li>
   <li>Zníženie CRP automaticky vedie k zlepšeniu prognózy.</li>
   <li>Nešpecifická protizápalová liečba je vhodná pre všetkých pacientov s CKD.</li>
-  <li>Experimentálne protizápalové lieky môžu nahradiť etablovanú renoprotektívnu liečbu.</li>
+  <li>Experimentálne protizápalové lieky môžu nahradiť etablovanú nefroprotektívnu liečbu.</li>
   <li>Zvýšenie eGFR počas liečby vždy znamená zachovanie nefrónov.</li>
 </ul>
 

@@ -48,7 +48,7 @@ $articles[] = [
 
 <h2>Koľko to trvá: metaanalýza</h2>
 
-<p>Najrozsiahlejšiu odpoveď na otázku <em>ako veľmi a ako dlho</em> dáva systematický prehľad s metaanalýzou publikovaný v <em>Neuroscience and Biobehavioral Reviews</em> (2021). Zahrnul <strong>80 publikácií a 1534 výstupov</strong> a hodnotil akútne účinky Δ<sup>9</sup>-tetrahydrokanabinolu (Δ<sup>9</sup>-THC) na výkon pri jazde a na kognitívne schopnosti s jazdou súvisiace.</p>
+<p>Najrozsiahlejšiu odpoveď na otázku, <em>ako veľmi a ako dlho</em>, dáva systematický prehľad s metaanalýzou publikovaný v <em>Neuroscience and Biobehavioral Reviews</em> (2021). Zahrnul <strong>80 publikácií a 1534 výstupov</strong> a hodnotil akútne účinky Δ<sup>9</sup>-tetrahydrokanabinolu (Δ<sup>9</sup>-THC) na výkon pri jazde a na kognitívne schopnosti s jazdou súvisiace.</p>
 
 <p>Hlavné zistenia:</p>
 

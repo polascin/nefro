@@ -127,7 +127,7 @@ $articles[] = [
 <h2>Limity a čo z práce nevyplýva</h2>
 
 <ul>
-  <li>Ide o <strong>jednu populačnú kohortu</strong> v konkrétnom systéme starostlivosti; frekvencia a načasovanie meraní eGFR sa medzi pracoviskami líšia a od nich závisí, koľko informácie má model k dispozícii.</li>
+  <li>Ide o <strong>jednu populačnú kohortu</strong> v konkrétnom systéme starostlivosti; frekvencia a načasovanie meraní eGFR sa medzi pracoviskami líšia a od nich závisí, koľko informácií má model k dispozícii.</li>
   <li>Referenčný štandard je <strong>definovaný, nie meraný</strong>. „Skutočná“ východisková eGFR je najbližšia hodnota do 15 dní od biopsie, nie meraná glomerulová filtrácia exogénnym markerom. Pri inej definícii referencie by sa absolútne odchýlky líšili.</li>
   <li>Práca hodnotí <strong>kvalitu doplnenia jednej premennej</strong>. Z toho, že doplnená hodnota je bližšie k referencii, automaticky nevyplýva, že sa v každej následnej analýze (napríklad v prognostickom modeli) zlepšia aj výsledné odhady rizika.</li>
   <li>Verejne dostupný je zatiaľ len abstrakt; podrobnosti o použitých rovniciach eGFR, o presnej špecifikácii modelu a o zaobchádzaní s liečbou podanou pred biopsiou a po nej z neho nevyplývajú. Výhrady uvedené vyššie preto nie sú prevzaté od autorov, ale odvodené z dostupného opisu metodiky.</li>

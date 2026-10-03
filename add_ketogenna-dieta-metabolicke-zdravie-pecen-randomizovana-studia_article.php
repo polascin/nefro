@@ -157,7 +157,7 @@ $articles[] = [
 
 <p>Lipogenéza v pečeni je stimulovaná glukózou a inzulínom a tlmená glukagónom; glukagón zároveň podporuje oxidáciu mastných kyselín a ketogenézu. Pozorovaný hormonálny posun teda vysvetľuje pozorovaný pokles pečeňového tuku.</p>
 
-<p>Z výsledkov však nemožno vyvodiť jednoduché pravidlo, že vysoký príjem tukov „odstraňuje tuk z pečene“. Autori sami uvádzajú, že <strong>nevedia určiť, či by menej prísne obmedzenie sacharidov bez navodenia ketózy prinieslo rovnaký účinok</strong>, ani či je potrebné dodržiavať diétu počas chudnutia alebo by stačila pri udržiavaní hmotnosti.</p>
+<p>Z výsledkov však nemožno vyvodiť jednoduché pravidlo, že vysoký príjem tukov „odstraňuje tuk z pečene“. Autori sami uvádzajú, že <strong>nevedia určiť, či by menej prísne obmedzenie sacharidov bez navodenia ketózy prinieslo rovnaký účinok</strong>, ani či je potrebné dodržiavať diétu počas chudnutia, alebo by stačila pri udržiavaní hmotnosti.</p>
 
 <h2>Lipidy: obava sa nepotvrdila, ale obraz je zmiešaný</h2>
 
@@ -196,7 +196,7 @@ $articles[] = [
 <p>Tento nález nemožno bez ďalšieho čítať ako zlepšenie funkcie obličiek, a to z troch dôvodov:</p>
 
 <ol>
-  <li><strong>Cystatín C má mimorenálne determinanty.</strong> Ovplyvňuje ho tuková hmota, zápal a funkcia štítnej žľazy. V ketogénnej skupine súčasne klesol PAI-1 a TNF-α a ubudla tuková hmota — pokles cystatínu C teda mohol sčasti odrážať zmenu týchto faktorov, nie skutočnej filtrácie.</li>
+  <li><strong>Cystatín C má mimorenálne determinanty.</strong> Ovplyvňuje ho tuková hmota, zápal a funkcia štítnej žľazy. V ketogénnej skupine súčasne klesol PAI-1 a TNF-α a ubudla tuková hmota — pokles cystatínu C teda mohol sčasti odrážať zmenu týchto faktorov, nie skutočnú zmenu filtrácie.</li>
   <li><strong>Príjem bielkovín bol v ketogénnej skupine vyšší</strong> (23 % energie oproti 15 %), čo potvrdzuje aj zvýšené vylučovanie dusíka močom. Vyšší príjem bielkovín môže zvýšiť glomerulovú filtráciu hyperfiltráciou — a hyperfiltrácia nie je priaznivý jav.</li>
   <li><strong>Rozpor medzi kreatinínom a cystatínom C</strong> je sám osebe signálom, že ide skôr o zmenu markera než o zmenu filtrácie.</li>
 </ol>

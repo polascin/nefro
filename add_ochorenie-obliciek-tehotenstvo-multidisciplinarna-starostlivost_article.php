@@ -45,7 +45,7 @@ $articles[] = [
 
 <h2>Prečo je tehotenstvo pri ochorení obličiek rizikové</h2>
 
-<p>Tehotenstvo predstavuje pre obličky fyziologickú záťaž. Zvyšuje sa renálny prietok plazmy aj glomerulárna filtrácia, mení sa objem tekutín, cievna reaktivita a hemodynamika. U zdravej ženy ide o adaptáciu na metabolické nároky gravidity. U pacientky s ochorením obličiek však môže byť renálna rezerva obmedzená.</p>
+<p>Tehotenstvo predstavuje pre obličky fyziologickú záťaž. Zvyšuje sa renálny prietok plazmy aj glomerulová filtrácia, mení sa objem tekutín, cievna reaktivita a hemodynamika. U zdravej ženy ide o adaptáciu na metabolické nároky gravidity. U pacientky s ochorením obličiek však môže byť renálna rezerva obmedzená.</p>
 
 <p>CKD sa podľa zdrojového článku vyskytuje približne pri 3 až 4 % tehotenstiev a je spojená s vyšším rizikom preeklampsie, predčasného pôrodu, intrauterinnej rastovej reštrikcie, zhoršenia proteinúrie, progresie renálnej dysfunkcie a potreby intenzívnejšieho sledovania matky aj plodu.</p>
 
@@ -53,7 +53,7 @@ $articles[] = [
 
 <h2>Fertilita klesá s poklesom funkcie obličiek</h2>
 
-<p>Jedným z dôležitých bodov review je, že fertilita sa zhoršuje s poklesom renálnej funkcie. Pri pokročilej CKD a najmä pri zlyhaní obličiek je tehotenstvo menej časté. Dôvodom sú hormonálne poruchy, anovulácia, menštruačné nepravidelnosti, uremické prostredie, metabolické zmeny a celkové zhoršenie zdravotného stavu.</p>
+<p>Jedným z dôležitých bodov prehľadu je, že fertilita sa zhoršuje s poklesom renálnej funkcie. Pri pokročilej CKD a najmä pri zlyhaní obličiek je tehotenstvo menej časté. Dôvodom sú hormonálne poruchy, anovulácia, menštruačné nepravidelnosti, uremické prostredie, metabolické zmeny a celkové zhoršenie zdravotného stavu.</p>
 
 <p>To však neznamená, že gravidita nie je možná. Ak nastane u pacientky so zlyhaním obličiek, ide o vysoko rizikovú situáciu. Vyžaduje intenzívnu dialyzačnú stratégiu, časté monitorovanie, dôsledné hodnotenie objemu, tlaku, anémie, výživy a rastu plodu a jasné rozdelenie zodpovednosti medzi tímami.</p>
 
@@ -67,7 +67,7 @@ $articles[] = [
 
 <h2>Renálne parametre sa v gravidite interpretujú inak</h2>
 
-<p>V tehotenstve treba renálne parametre hodnotiť opatrne. Bežné rovnice na odhad glomerulárnej filtrácie nie sú v gravidite spoľahlivé. V praxi sa preto viac opierame o sérový kreatinín, jeho dynamiku, proteinúriu, krvný tlak, klinický stav a porovnanie s predtehotenským východiskom.</p>
+<p>V tehotenstve treba renálne parametre hodnotiť opatrne. Bežné rovnice na odhad glomerulovej filtrácie nie sú v gravidite spoľahlivé. V praxi sa preto viac opierame o sérový kreatinín, jeho dynamiku, proteinúriu, krvný tlak, klinický stav a porovnanie s predtehotenským východiskom.</p>
 
 <p>Aj mierne zvýšený kreatinín, ktorý by mimo gravidity pôsobil nenápadne, môže byť v tehotenstve významný. Rovnako proteinúria vyžaduje kontext: iný význam má stabilná známa proteinúria pri CKD a iný náhly nárast proteinúrie spolu so zhoršením tlaku, trombocytopéniou alebo poruchou rastu plodu.</p>
 

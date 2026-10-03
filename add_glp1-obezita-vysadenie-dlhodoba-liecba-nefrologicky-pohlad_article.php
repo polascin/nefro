@@ -24,7 +24,7 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',  // autor projektu; pôvodných autorov zdroja pridaj do source_authors.php (slug → mená)
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Po vysadení liečby obezity sa hmotnosť často vracia. Čo dokazujú STEP 1, SELECT a SURMOUNT-MAINTAIN a ako plánovať udržiavaciu liečbu pri chronickom ochorení obličiek?',
+    'excerpt'      => 'Po vysadení liečby obezity sa hmotnosť často vracia. Čo dokazujú STEP 1, SELECT a SURMOUNT-MAINTAIN a ako plánovať udržiavaciu liečbu pri chronickej chorobe obličiek?',
     'content'      => <<<'HTML'
 <figure><a href="img/glp1-obezita-vysadenie-dlhodoba-liecba-nefrologicky-pohlad.webp" rel="noopener noreferrer" target="_blank"><img src="img/glp1-obezita-vysadenie-dlhodoba-liecba-nefrologicky-pohlad.webp" alt="Injekčné pero na tmavej ploche, nad ním svetelná krivka prudko stúpa a po skončení lúča sa láme a padá v iskrách" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Otázka pri liečbe obezity nie je len ako dosiahnuť pokles hmotnosti, ale čo nasleduje po vysadení.</figcaption></figure>
 
@@ -57,7 +57,7 @@ $articles[] = [
 <p>Zníženie kombinovaného ukazovateľa o 22 % preto nemožno označiť za 22 % zníženie potreby dialýzy. SELECT tiež nebola štúdiou vysadenia a nedokazuje, o koľko sa po ukončení liečby zmení riziko príhod. Jej výsledky platia pre definovanú populáciu so známym kardiovaskulárnym ochorením; nemožno ich bez ďalších dôkazov zovšeobecniť na všetkých ľudí s obezitou, všetky štádiá CKD ani pacientov na dialýze.</p>
 
 <h2>CKD: rozhoduje konkrétny liek a klinická situácia</h2>
-<p>Pri chronickom ochorení obličiek (CKD) nestačí všeobecné tvrdenie, že lieky tejto skupiny nevyžadujú úpravu dávky. Európska produktová informácia injekčného Wegovy nevyžaduje úpravu pri miernej alebo stredne ťažkej poruche funkcie obličiek, ale použitie pri eGFR &lt;30 ml/min/1,73 m² vrátane terminálneho zlyhania neodporúča pre obmedzené skúsenosti. [7]</p>
+<p>Pri chronickej chorobe obličiek (CKD) nestačí všeobecné tvrdenie, že lieky tejto skupiny nevyžadujú úpravu dávky. Európska produktová informácia injekčného Wegovy nevyžaduje úpravu pri miernej alebo stredne ťažkej poruche funkcie obličiek, ale použitie pri eGFR &lt;30 ml/min/1,73 m² vrátane terminálneho zlyhania neodporúča pre obmedzené skúsenosti. [7]</p>
 <p>Pri Mounjaro sa úprava dávky z dôvodu poruchy funkcie obličiek vrátane terminálneho zlyhania nevyžaduje; pri ťažkej poruche a terminálnom zlyhaní sú však skúsenosti obmedzené a je potrebná opatrnosť. Farmakokinetická možnosť podania nie je totožná s dôkazom dlhodobého klinického prínosu u dialyzovaných pacientov. Schválené udržiavacie dávky tirzepatidu pre dospelých sú 5, 10 a 15 mg týždenne. [8]</p>
 
 <h2>Gastrointestinálne ťažkosti, hydratácia a bezpečné prerušenie</h2>

@@ -96,8 +96,8 @@ $articles[] = [
     <tr><th scope="col">Trieda</th><th scope="col">Sledovať</th></tr>
   </thead>
   <tbody>
-    <tr><td>Slučkové</td><td>Hypokaliémia, hypomagneziémia, hyponatrémia, hypovolémia, ↑ kreatinín, ↑ urát (dna), ototoxicita pri vysokých i.v. dávkach</td></tr>
-    <tr><td>Tiazidy</td><td>Hyponatrémia (typická!), hypokaliémia, hyperkalciémia, hyperurikémia, hyperglykémia, dyslipidémia</td></tr>
+    <tr><td>Slučkové</td><td>Hypokaliémia, hypomagneziémia, hyponatriémia, hypovolémia, ↑ kreatinín, ↑ urát (dna), ototoxicita pri vysokých i.v. dávkach</td></tr>
+    <tr><td>Tiazidy</td><td>Hyponatriémia (typická!), hypokaliémia, hyperkalciémia, hyperurikémia, hyperglykémia, dyslipidémia</td></tr>
     <tr><td>MRA / ENaC blokátory</td><td><strong>Hyperkaliémia</strong> (najmä s RAAS-blokátorom alebo pri CKD), gynekomastia (spironolaktón)</td></tr>
     <tr><td>Acetazolamid</td><td>Metabolická acidóza (NAGMA), hypokaliémia</td></tr>
     <tr><td>Tolvaptan</td><td>Rýchla korekcia Na<sup>+</sup> (riziko ODS), smäd, hepatotoxicita (ADPKD)</td></tr>

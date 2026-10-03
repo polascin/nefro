@@ -112,7 +112,7 @@ $articles[] = [
 </table>
 </div>
 
-<h2>Pokles trombocytov: nestačí pozerať absolútne číslo</h2>
+<h2>Pokles trombocytov: nestačí sa pozerať na absolútne číslo</h2>
 
 <p>Pri HIT je dôležitá najmä relatívna zmena. Pacient môže mať pokles z 300 na 140 × 10<sup>9</sup>/l. Absolútna hodnota 140 × 10<sup>9</sup>/l môže pôsobiť iba ako mierna trombocytopénia, ale pokles o viac ako polovicu je klinicky významný a do 4T skóre vstupuje ako silný signál.</p>
 
@@ -184,7 +184,7 @@ $articles[] = [
 
 <ul>
   <li>regionálnu citrátovú antikoaguláciu, ak je technicky dostupná a bezpečná,</li>
-  <li>heparín-free dialýzu s častejším preplachovaním fyziologickým roztokom,</li>
+  <li>dialýzu bez heparínu s častejším preplachovaním fyziologickým roztokom,</li>
   <li>systémovú neheparínovú antikoaguláciu,</li>
   <li>úpravu dialyzačnej stratégie podľa krvácavého a trombotického rizika,</li>
   <li>hematologickú konzultáciu pri potrebe dlhšej antikoagulácie alebo pri nejasnej laboratórnej interpretácii.</li>

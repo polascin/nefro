@@ -110,9 +110,9 @@ $articles[] = [
 
 <p>ACE inhibítory alebo sartany zostávajú základom pri CKD s albuminúriou, pri CKD s hypertenziou a pri diabete s albuminúriou. Podstatné je titrovať na maximálnu tolerovanú dávku, vyhnúť sa kombinácii ACE inhibítora, sartanu a priameho inhibítora renínu a aktívne riešiť hyperkaliémiu tak, aby sa liečba nemusela zbytočne prerušovať.</p>
 
-<h3>SGLT2 inhibítory</h3>
+<h3>inhibítory SGLT2</h3>
 
-<p>SGLT2 inhibítory dnes patria k najdôležitejším liekom pri CKD s diabetom a čoraz viac aj bez diabetu. Ich prínos presahuje kontrolu glykémie – spomaľujú progresiu CKD, znižujú kardiovaskulárne riziko a znižujú počet hospitalizácií pre srdcové zlyhávanie. Indikáciu a rozmedzie eGFR treba posudzovať podľa konkrétnej molekuly a platnej informácie o lieku.</p>
+<p>inhibítory SGLT2 dnes patria k najdôležitejším liekom pri CKD s diabetom a čoraz viac aj bez diabetu. Ich prínos presahuje kontrolu glykémie – spomaľujú progresiu CKD, znižujú kardiovaskulárne riziko a znižujú počet hospitalizácií pre srdcové zlyhávanie. Indikáciu a rozmedzie eGFR treba posudzovať podľa konkrétnej molekuly a platnej informácie o lieku.</p>
 
 <h3>Agonisty receptora GLP-1</h3>
 
@@ -134,12 +134,12 @@ $articles[] = [
 
 <p>Obezita nie je len sprievodným faktorom. V paradigme CKM býva spúšťačom patologických dejov – glomerulárnej hyperfiltrácie, zápalu, inzulínovej rezistencie a tubulointersticiálneho aj cievneho poškodenia.</p>
 
-<p>Zo záverov konferencie KDIGO o obezite a CKD (Október 2024) vyplýva niekoľko prakticky dôležitých bodov:</p>
+<p>Zo záverov konferencie KDIGO o obezite a CKD (október 2024) vyplýva niekoľko prakticky dôležitých bodov:</p>
 
 <ul>
   <li>Najvyššie riziko vzniku CKD nesie <strong>dlhotrvajúca obezita so skorým začiatkom</strong> a dlhá kumulatívna expozícia – nie iba aktuálna hodnota BMI.</li>
   <li>Základom manažmentu zostáva úprava stravy, pohybová aktivita a súvisiace návyky; tieto stratégie však často zlyhávajú pri dosahovaní alebo udržaní úbytku hmotnosti, a to z mnohých dôvodov.</li>
-  <li>Farmakoterapia vrátane agonistov receptora GLP-1 je účinná pri redukcii hmotnosti a má preukázaný renoprotektívny aj kardiovaskulárny prínos.</li>
+  <li>Farmakoterapia vrátane agonistov receptora GLP-1 je účinná pri redukcii hmotnosti a má preukázaný nefroprotektívny aj kardiovaskulárny prínos.</li>
   <li>Metabolická a bariatrická chirurgia preukázala prínos v znižovaní komplikácií súvisiacich s obezitou.</li>
   <li>Voľba stratégie sa mení podľa veku a komorbidít – a v čase.</li>
   <li>Komunikácia má byť vedená <strong>nehodnotiacim jazykom bez stigmatizácie</strong>, s cieľmi stanovenými spolu s pacientom a zameranými na postupné, dosiahnuteľné zmeny.</li>
@@ -153,7 +153,7 @@ $articles[] = [
 
 <ul>
   <li><strong>Mierny pokles funkcie obličiek po nasadení odporúčanej liečby srdcového zlyhávania spravidla nevyžaduje jej vysadenie.</strong> Takýto pokles býva hemodynamický a nie je spojený s horšími výsledkami. Toto je v praxi najčastejší dôvod zbytočného prerušenia prospešnej liečby.</li>
-  <li>SGLT2 inhibítory, blokátory systému renín–angiotenzín–aldosterón a novšie molekuly ako finerenón či agonisty receptora GLP-1 môžu byť prospešné v oboch populáciách, <strong>dôkazy pri pokročilej CKD však zostávajú obmedzené</strong>.</li>
+  <li>inhibítory SGLT2, blokátory systému renín–angiotenzín–aldosterón a novšie molekuly ako finerenón či agonisty receptora GLP-1 môžu byť prospešné v oboch populáciách, <strong>dôkazy pri pokročilej CKD však zostávajú obmedzené</strong>.</li>
   <li>Chýbajú diagnostické prahy pre srdcové zlyhávanie špecifické pre CKD a spresnená definícia akútneho poškodenia obličiek v kontexte srdcového zlyhávania.</li>
 </ul>
 

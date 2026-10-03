@@ -45,7 +45,7 @@ $articles[] = [
 
 <p>Prakticky to znamená, že v ordinácii už nejde iba o energetický deficit. Dôležitou otázkou je, ako pacientom pomôcť udržať adekvátnu výživu — dostatok vlákniny a bielkovín — a zároveň aktívne pracovať na retencii svalov a kvalite telesnej kompozície. Ako zdôraznila Kim Boyd (MD), v prostredí „sveta GLP-1“ treba správanie a životný štýl prispôsobiť tomu, čo je pre úspech naozaj podstatné.</p>
 
-<p>Z nefrologického pohľadu je to dôležité dvojnásobne. U mnohých pacientov sa obezita premieta do kardiometabolického rizika, ktoré následne zvyšuje pravdepodobnosť progresie chronických ochorení obličiek alebo komplikuje ich manažment. Ak redukcia hmotnosti prebieha bez pozornosti venovanej svalovej hmote, môže zhoršiť funkčnú rezervu, toleranciu ochorenia a celkový zdravotný stav.</p>
+<p>Z nefrologického pohľadu je to dôležité dvojnásobne. U mnohých pacientov sa obezita premieta do kardiometabolického rizika, ktoré následne zvyšuje pravdepodobnosť progresie chronických chorôb obličiek alebo komplikuje ich manažment. Ak redukcia hmotnosti prebieha bez pozornosti venovanej svalovej hmote, môže zhoršiť funkčnú rezervu, toleranciu ochorenia a celkový zdravotný stav.</p>
 
 <h2>Bariéry prístupu nie sú len logistické</h2>
 

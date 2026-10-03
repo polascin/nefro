@@ -39,7 +39,7 @@ $articles[] = [
 
 <p>Mitochondrie nie sú iba zdrojom adenozíntrifosfátu (ATP). Súčasne regulujú oxidáciu mastných kyselín, redoxnú rovnováhu, metabolickú flexibilitu, bunkovú signalizáciu, apoptózu, vrodenú imunitu a odpoveď na stres. Ich homeostáza závisí od primeranej biogenézy, dynamiky siete, kontroly kvality a odstraňovania poškodených mitochondrií mitofágiou.</p>
 
-<p>Pri CKM fenotypoch sa v experimentálnych modeloch a ľudských tkanivových štúdiách opisujú poruchy oxidačnej fosforylácie, zmeny výberu energetického substrátu, nadbytok reaktívnych foriem kyslíka, narušená mitochondriálna dynamika a nedostatočná kontrola kvality. Dôkazy však nie sú vo všetkých orgánoch a štádiách rovnako silné. Preto je presnejšie hovoriť o <strong>spoločnom patobiologickom uzle a pracovnom modeli</strong>, nie o dokázanej jedinej príčine CKM syndrómu.</p>
+<p>Pri CKM fenotypoch sa v experimentálnych modeloch a ľudských tkanivových štúdiách opisujú poruchy oxidačnej fosforylácie, zmeny výberu energetického substrátu, nadbytok reaktívnych foriem kyslíka, narušenú mitochondriálnu dynamiku a nedostatočnú kontrolu kvality. Dôkazy však nie sú vo všetkých orgánoch a štádiách rovnako silné. Preto je presnejšie hovoriť o <strong>spoločnom patobiologickom uzle a pracovnom modeli</strong>, nie o dokázanej jedinej príčine CKM syndrómu.</p>
 
 <h2>Zosilňujúca slučka: energetický stres, oxidačné poškodenie a zápal</h2>
 
@@ -106,7 +106,7 @@ $articles[] = [
   <li><strong>„Mitochondriálny panel“:</strong> validovaný panel na diagnostiku, staging alebo výber liečby CKM syndrómu zatiaľ nie je k dispozícii.</li>
   <li><strong>Hs-CRP, IL-6 alebo adipokíny ako samostatné rozhodovacie testy:</strong> môžu niesť prognostickú informáciu, ale nenahrádzajú štandardné klinické parametre a pre väčšinu pacientov nemenia liečbu.</li>
   <li><strong>Urát ako univerzálny cieľ CKM liečby:</strong> hyperurikémia je markerom rizika a pri dne má jasný klinický význam; samotné zníženie urátu bez inej indikácie nemožno prezentovať ako dokázanú liečbu CKM syndrómu alebo prevenciu progresie CKD.</li>
-  <li><strong>Mitochondriálne transplantácie a priame mitochondriálne liečivá:</strong> ide o experimentálne alebo skúmané prístupy bez preukázanej rutinnnej účinnosti pri CKM syndróme.</li>
+  <li><strong>Mitochondriálne transplantácie a priame mitochondriálne liečivá:</strong> ide o experimentálne alebo skúmané prístupy bez preukázanej rutinnej účinnosti pri CKM syndróme.</li>
 </ul>
 
 <h2>Najdôležitejšia hranica interpretácie</h2>

@@ -35,7 +35,7 @@ $articles[] = [
     'content'      => <<<'HTML'
 <figure><a href="img/rastlinna-strava-nizsia-mortalita-ckd.webp" rel="noopener noreferrer" target="_blank"><img src="img/rastlinna-strava-nizsia-mortalita-ckd.webp" alt="Rastlinné potraviny, ktorých zelené svetlo prúdi do obličky a tá sa rozjasňuje" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Prevaha rastlinnej stravy sa spája s lepším prežívaním — pri CKD však treba strážiť draslík a fosfor.</figcaption></figure>
 
-<p>Na 63. kongrese ERA boli prezentované výsledky multikohortovej analýzy (z databáz NHANES a HCNS), ktorá sledovala, či kvalita stravy súvisí s dlhodobými výsledkami u pacientov s <strong>chronickým ochorením obličiek (CKD)</strong>.</p>
+<p>Na 63. kongrese ERA boli prezentované výsledky multikohortovej analýzy (z databáz NHANES a HCNS), ktorá sledovala, či kvalita stravy súvisí s dlhodobými výsledkami u pacientov s <strong>chronickou chorobou obličiek (CKD)</strong>.</p>
 
 <p>CKD bolo definované ako <strong>eGFR &lt; 60 ml/min/1,73 m²</strong> a/alebo prítomnosť albuminúrie. Celkovo bolo zahrnutých <strong>8 165 dospelých</strong>, pričom medián sledovania trval približne <strong>7 až 8 rokov</strong>.</p>
 

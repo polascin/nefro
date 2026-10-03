@@ -34,7 +34,7 @@ $articles[] = [
 
 <ul>
   <li>Zo všetkých 1 584 účastníkov FIND-CKD malo 459 (29,0 %) skúšajúcim uvedenú diagnózu hypertenznej nefropatie; 234 dostávalo finerenón a 225 placebo.</li>
-  <li>Celkový ročný sklon eGFR bol −3,17 oproti −3,82 mL/min/1,73 m²; rozdiel medzi skupinami predstavoval 0,65 mL/min/1,73 m² za rok (95 % interval spoľahlivosti [IS] 0,02 až 1,29; p = 0,044).</li>
+  <li>Celkový ročný sklon eGFR bol −3,17 oproti −3,82 ml/min/1,73 m²; rozdiel medzi skupinami predstavoval 0,65 ml/min/1,73 m² za rok (95 % interval spoľahlivosti [IS] 0,02 až 1,29; p = 0,044).</li>
   <li>Kompozitný ukazovateľ sa vyskytol u 12,0 % oproti 18,7 % účastníkov (pomer rizík [HR] 0,61; 95 % IS 0,38 až 0,99; p = 0,045).</li>
   <li>Po šiestich mesiacoch bol systolický tlak oproti placebu nižší o 3,5 mmHg a UACR o 33 %.</li>
   <li>Hyperkaliémia bola častejšia pri finerenóne (17,1 % oproti 9,8 %), hoci ukončenie skúšanej liečby pre hyperkaliémiu bolo zriedkavé (1,3 % oproti 0 %).</li>
@@ -56,7 +56,7 @@ $articles[] = [
   <tbody>
     <tr>
       <th scope="row">Funkcia obličiek a albuminúria</th>
-      <td>eGFR ≥ 25 až &lt; 60 mL/min/1,73 m² pri UACR ≥ 200 až &lt; 500 mg/g alebo eGFR ≥ 25 až &lt; 90 mL/min/1,73 m² pri UACR ≥ 500 až ≤ 3 500 mg/g</td>
+      <td>eGFR ≥ 25 až &lt; 60 ml/min/1,73 m² pri UACR ≥ 200 až &lt; 500 mg/g alebo eGFR ≥ 25 až &lt; 90 ml/min/1,73 m² pri UACR ≥ 500 až ≤ 3 500 mg/g</td>
     </tr>
     <tr>
       <th scope="row">Diabetes</th>
@@ -68,7 +68,7 @@ $articles[] = [
     </tr>
     <tr>
       <th scope="row">Krvný tlak a draslík</th>
-      <td>Systolický tlak &lt; 160 mmHg, diastolický tlak &lt; 100 mmHg a sérový draslík ≤ 4,8 mmol/L pri skríningu</td>
+      <td>Systolický tlak &lt; 160 mmHg, diastolický tlak &lt; 100 mmHg a sérový draslík ≤ 4,8 mmol/l pri skríningu</td>
     </tr>
     <tr>
       <th scope="row">Primárny ukazovateľ</th>
@@ -78,11 +78,11 @@ $articles[] = [
 </table>
 </div>
 
-<p>V celej štúdii finerenón spomalil celkový pokles eGFR: −3,3 oproti −4,0 mL/min/1,73 m² za rok, s rozdielom 0,7 mL/min/1,73 m² za rok (95 % IS 0,3 až 1,1; p &lt; 0,001). Hierarchicky testovaný kompozitný obličkovo-kardiovaskulárny ukazovateľ bol tiež priaznivejší (HR 0,77; 95 % IS 0,60 až 0,99; p = 0,04). Štúdiu financovala a sponzorovala spoločnosť Bayer.</p>
+<p>V celej štúdii finerenón spomalil celkový pokles eGFR: −3,3 oproti −4,0 ml/min/1,73 m² za rok, s rozdielom 0,7 ml/min/1,73 m² za rok (95 % IS 0,3 až 1,1; p &lt; 0,001). Hierarchicky testovaný kompozitný obličkovo-kardiovaskulárny ukazovateľ bol tiež priaznivejší (HR 0,77; 95 % IS 0,60 až 0,99; p = 0,04). Štúdiu financovala a sponzorovala spoločnosť Bayer.</p>
 
 <h2>Kto tvoril podskupinu s hypertenznou nefropatiou</h2>
 
-<p>Etiológiu CKD uviedol skúšajúci; nešlo o centrálne potvrdenú histopatologickú diagnózu. Z 1 584 účastníkov bolo 459 zaradených do kategórie hypertenznej nefropatie. Ich priemerný krvný tlak bol 134/80 mmHg, priemerná eGFR 44 mL/min/1,73 m² a medián UACR 797 mg/g (1. kvartil 566; 3. kvartil 1 247 mg/g). Išlo teda prevažne o populáciu s <strong>výraznou albuminúriou a vysokým rizikom progresie</strong>, nie o reprezentatívny prierez všetkými pacientmi s hypertenziou a CKD.</p>
+<p>Etiológiu CKD uviedol skúšajúci; nešlo o centrálne potvrdenú histopatologickú diagnózu. Z 1 584 účastníkov bolo 459 zaradených do kategórie hypertenznej nefropatie. Ich priemerný krvný tlak bol 134/80 mmHg, priemerná eGFR 44 ml/min/1,73 m² a medián UACR 797 mg/g (1. kvartil 566; 3. kvartil 1 247 mg/g). Išlo teda prevažne o populáciu s <strong>výraznou albuminúriou a vysokým rizikom progresie</strong>, nie o reprezentatívny prierez všetkými pacientmi s hypertenziou a CKD.</p>
 
 <p>Označenie „hypertenzná nefropatia“ je v klinickej praxi často diagnózou založenou na pravdepodobnosti a vylúčení iných príčin. Pri výraznej albuminúrii môže zahŕňať zmiešanú hypertenzno-ischemickú chorobu, nerozpoznané primárne ochorenie obličiek alebo viacero súbežných mechanizmov. Analýza preto najpresnejšie vypovedá o pacientoch, ktorých skúšajúci <em>klasifikovali</em> ako hypertenznú nefropatiu.</p>
 
@@ -105,8 +105,8 @@ $articles[] = [
     </tr>
     <tr>
       <th scope="row">Rozdiel celkového sklonu eGFR</th>
-      <td>0,7 mL/min/1,73 m² za rok (95 % IS 0,3 až 1,1)</td>
-      <td>0,65 mL/min/1,73 m² za rok (95 % IS 0,02 až 1,29)</td>
+      <td>0,7 ml/min/1,73 m² za rok (95 % IS 0,3 až 1,1)</td>
+      <td>0,65 ml/min/1,73 m² za rok (95 % IS 0,02 až 1,29)</td>
     </tr>
     <tr>
       <th scope="row">Kompozitný ukazovateľ</th>
@@ -142,7 +142,7 @@ $articles[] = [
 
 <p>Hyperkaliémia zostáva predvídateľným rizikom liečby nesteroidným antagonistom mineralokortikoidového receptora. V podskupine sa vyskytla u 17,1 % pacientov liečených finerenónom a u 9,8 % pacientov užívajúcich placebo; liečba sa pre ňu ukončila u 1,3 % oproti 0 %. Nízky počet ukončení je priaznivý, ale treba ho vnímať v podmienkach klinickej štúdie s výberom pacientov a protokolovým monitorovaním.</p>
 
-<p>Podľa aktuálnych európskych informácií o lieku sa pri indikácii CKD finerenón nezačína pri sérovom draslíku nad 5,0 mmol/L ani pri eGFR pod 25 mL/min/1,73 m². Draslík a eGFR sa majú skontrolovať štyri týždne po začatí, opätovnom začatí alebo zvýšení dávky a následne pravidelne. Pri hodnotách draslíka nad 4,8 do 5,0 mmol/L možno začatie zvážiť len s dodatočným monitorovaním. Konkrétne dávkovanie, liekové interakcie a kontraindikácie treba vždy overiť v aktuálnom súhrne charakteristických vlastností lieku.</p>
+<p>Podľa aktuálnych európskych informácií o lieku sa pri indikácii CKD finerenón nezačína pri sérovom draslíku nad 5,0 mmol/l ani pri eGFR pod 25 ml/min/1,73 m². Draslík a eGFR sa majú skontrolovať štyri týždne po začatí, opätovnom začatí alebo zvýšení dávky a následne pravidelne. Pri hodnotách draslíka nad 4,8 do 5,0 mmol/l možno začatie zvážiť len s dodatočným monitorovaním. Konkrétne dávkovanie, liekové interakcie a kontraindikácie treba vždy overiť v aktuálnom súhrne charakteristických vlastností lieku.</p>
 
 <h2>Čo výsledky podporujú a čo ešte nie</h2>
 
@@ -157,7 +157,7 @@ $articles[] = [
   <tbody>
     <tr>
       <td>Finerenón pridaný k ACE inhibítoru alebo ARB spomalil pokles eGFR vo vybranej albuminurickej populácii bez diabetu.</td>
-      <td>Že rovnaký účinok platí pri UACR pod 200 mg/g, eGFR pod 25 mL/min/1,73 m² alebo pri nekontrolovanej hypertenzii.</td>
+      <td>Že rovnaký účinok platí pri UACR pod 200 mg/g, eGFR pod 25 ml/min/1,73 m² alebo pri nekontrolovanej hypertenzii.</td>
     </tr>
     <tr>
       <td>Smer a veľkosť účinku v podskupine s hypertenznou nefropatiou boli klinicky priaznivé.</td>
@@ -198,7 +198,7 @@ $articles[] = [
 <h2>Súvisiace články</h2>
 
 <ul>
-  <li><a href="article.php?slug=finerenon-zakladna-liecba-ckd-glomerularne-ochorenia">Finerenón: potenciál ako základná liečba pri CKD aj bez diabetu a pri glomerulárnych ochoreniach</a></li>
+  <li><a href="article.php?slug=finerenon-zakladna-liecba-ckd-glomerularne-ochorenia">Finerenón: potenciál ako základná liečba pri CKD aj bez diabetu a pri glomerulových ochoreniach</a></li>
   <li><a href="article.php?slug=nediabeticka-ckd-nehemodynamicke-mechanizmy-nsmra-finerenon">Nediabetická CKD: nehemodynamické mechanizmy a miesto finerenónu</a></li>
   <li><a href="article.php?slug=finerenon-empagliflozin-confidence-albuminuria-krvny-tlak">Finerenón a empagliflozín v štúdii CONFIDENCE</a></li>
   <li><a href="article.php?slug=cielovy-systolicky-tlak-120-ckd-kdigo-realna-prax">Cieľový systolický tlak 120 mmHg pri CKD: odporúčanie KDIGO a reálna prax</a></li>

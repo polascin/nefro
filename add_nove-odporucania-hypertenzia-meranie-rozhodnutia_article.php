@@ -69,7 +69,7 @@ $articles[] = [
 
 <h2>Sodík zostáva kľúčový, ale nie je to len o slánke</h2>
 
-<p>Odporúčanie pre príjem sodíka zostáva prísne. Cieľom je dostať sa pod 2300 mg sodíka denne a ideálne smerovať ešte nižšie, približne k 1500 mg denne. Prakticky to znamená, že nestačí prestať dosáľať jedlo. Veľká časť sodíka prichádza z priemyselne spracovaných potravín, pečiva, syrov, údenín, hotových jedál, instantných výrobkov a reštauračnej stravy.</p>
+<p>Odporúčanie pre príjem sodíka zostáva prísne. Cieľom je dostať sa pod 2300 mg sodíka denne a ideálne smerovať ešte nižšie, približne k 1500 mg denne. Prakticky to znamená, že nestačí prestať dosoľovať jedlo. Veľká časť sodíka prichádza z priemyselne spracovaných potravín, pečiva, syrov, údenín, hotových jedál, instantných výrobkov a reštauračnej stravy.</p>
 
 <p>DASH diéta a diéty s nižším obsahom sodíka majú preukázateľný účinok na krvný tlak. Pre pacienta je však dôležité podať to prakticky. Menej soli neznamená nevýrazné jedlo. Pomôcť môžu bylinky, kyslosť, cesnak, cibuľa, korenie, kvalitné základné potraviny a postupná adaptácia chuti.</p>
 

@@ -175,7 +175,7 @@ $articles[] = [
   <li>nedostatku vitamínov vrátane tiamínu.</li>
 </ul>
 
-<p>Nefrologický pacient je pritom rizikovejší už východiskovo. Systematický prehľad Wernickeho encefalopatie pri akútnom aj chronickom ochorení obličiek identifikoval 46 publikovaných prípadov; typickými prodrómami boli nechutenstvo, vracanie, úbytok hmotnosti, bolesti brucha a hnačka — teda presne to spektrum ťažkostí, ktoré sa pri liečbe agonistom GLP-1 očakáva ako „bežný“ nežiaduci účinok.</p>
+<p>Nefrologický pacient je pritom rizikovejší už východiskovo. Systematický prehľad Wernickeho encefalopatie pri akútnom aj chronickej chorobe obličiek identifikoval 46 publikovaných prípadov; typickými prodrómami boli nechutenstvo, vracanie, úbytok hmotnosti, bolesti brucha a hnačka — teda presne to spektrum ťažkostí, ktoré sa pri liečbe agonistom GLP-1 očakáva ako „bežný“ nežiaduci účinok.</p>
 
 <p>Osobitne zraniteľní sú dialyzovaní pacienti. Tiamín je vodorozpustný vitamín s nízkou molekulovou hmotnosťou a minimálnou väzbou na bielkoviny, preto sa odstraňuje do dialyzátu. V kombinácii s nechutenstvom, diétnymi obmedzeniami a liečbou diuretikami vzniká reálne riziko deficitu aj bez akéhokoľvek lieku na chudnutie.</p>
 

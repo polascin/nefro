@@ -47,7 +47,7 @@ $articles[] = [
 
 <p>Tieto hranice boli vytvorené na opisné účely v rámci štúdie a nemožno ich považovať za univerzálne diagnostické kritériá.</p>
 
-<p><strong>Podstatné obmedzenie:</strong> úplné vyšetrenie testom Sniffin' Sticks zahŕňa tri zložky — prah vnímania pachu, rozlišovanie pachov a identifikáciu (súhrnne skóre TDI). Táto štúdia merala <em>iba identifikáciu</em>. Práve tá je pritom najviac závislá od pamäti, pozornosti, jazyka, kultúrnej známosti pachov a kognitívneho stavu. Výsledok teda nevystihuje celú čuchovú funkciu a čiastočne meria aj kogníciu — čo treba mať na pamäti pri interpretácii hlavného nálezu.</p>
+<p><strong>Podstatné obmedzenie:</strong> úplné vyšetrenie testom Sniffin' Sticks zahŕňa tri zložky — prah vnímania pachu, rozlišovanie pachov a identifikáciu (súhrnné skóre TDI). Táto štúdia merala <em>iba identifikáciu</em>. Práve tá je pritom najviac závislá od pamäti, pozornosti, jazyka, kultúrnej známosti pachov a kognitívneho stavu. Výsledok teda nevystihuje celú čuchovú funkciu a čiastočne meria aj kogníciu — čo treba mať na pamäti pri interpretácii hlavného nálezu.</p>
 
 <h2>Základné výsledky</h2>
 

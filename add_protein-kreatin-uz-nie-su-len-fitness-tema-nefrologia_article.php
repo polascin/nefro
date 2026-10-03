@@ -51,7 +51,7 @@ $articles[] = [
 
 <p>Medscape uvádza, že „obava o obličky“ často stojí na historickom predpoklade, že vysokobielkovinová diéta poškodzuje obličky u zdravých jedincov. Tento koncept sa však v ďalších prácach opakovane spochybnil.</p>
 
-<p>Dôležitý praktický záver pre ambulanciu je, že informáciu treba podávať diferencovane. Na otázku rizika sa totiž nedá odpovedať jednou vetou pre všetkých: pacient bez ochorenia obličiek potrebuje inú odpoveď než pacient s chronickým ochorením obličiek.</p>
+<p>Dôležitý praktický záver pre ambulanciu je, že informáciu treba podávať diferencovane. Na otázku rizika sa totiž nedá odpovedať jednou vetou pre všetkých: pacient bez ochorenia obličiek potrebuje inú odpoveď než pacient s chronickou chorobou obličiek.</p>
 
 <p>Ak sa pacient pýta na bezpečnosť, odporúčanie v duchu článku smeruje k tomu, že proteín sa dá zaradiť ako výživová stratégia a že kreatín má veľmi priaznivý bezpečnostný profil v kontexte športovej výživy.</p>
 
@@ -96,7 +96,7 @@ $articles[] = [
 
 <ul>
   <li><strong>U pacientov s normálnou funkciou obličiek</strong> sa obava z proteínu často podáva tak, akoby bola univerzálna. Článok naznačuje, že tento strach je historicky prehnaný a opakovane spochybnený.</li>
-  <li><strong>U pacientov s chronickým ochorením obličiek</strong> nie je rozumné preberať „jednu dávku pre všetkých“. V praxi treba zohľadniť štádium, trend eGFR, albuminúriu, metabolický profil a toleranciu stravy.</li>
+  <li><strong>U pacientov s chronickou chorobou obličiek</strong> nie je rozumné preberať „jednu dávku pre všetkých“. V praxi treba zohľadniť štádium, trend eGFR, albuminúriu, metabolický profil a toleranciu stravy.</li>
   <li>Pri <strong>kreatíne</strong> treba mať na pamäti, že aj keď má v športovej výžive priaznivý bezpečnostný profil, v populácii s CKD môže byť potrebné sledovať laboratórne ukazovatele a interpretovať zmeny kreatinínu opatrne (aby sa nezamieňali príčiny zmeny hodnoty).</li>
 </ul>
 

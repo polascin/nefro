@@ -45,7 +45,7 @@ $articles[] = [
 
 <p>Pomer albumínu ku kreatinínu v moči (uACR) je základný prediktor rizika a skríning albuminúrie je podľa nových odporúčaní indikovaný u pacientov s hypertriglyceridémiou, hypertenziou, metabolickým syndrómom alebo s diabetom 2. typu.</p>
 
-<p>Praktický problém, na ktorý autor článku upozorňuje, je „nízka frekvencia“ vykonávania testu uACR: analýzy ukazujú, že veľká časť pacientov z rizikových skupín test uACR nedostala. Z nefrologického pohľadu je to dôležité najmä preto, že rastúce hodnoty uACR sú kontinuálne spojené s rizikom progresie chronického ochorenia obličiek a s kardiovaskulárnou mortalitou, pričom riziko sa môže objavovať aj pri relatívne nízkych hodnotách.</p>
+<p>Praktický problém, na ktorý autor článku upozorňuje, je „nízka frekvencia“ vykonávania testu uACR: analýzy ukazujú, že veľká časť pacientov z rizikových skupín test uACR nedostala. Z nefrologického pohľadu je to dôležité najmä preto, že rastúce hodnoty uACR sú kontinuálne spojené s rizikom progresie chronickej choroby obličiek a s kardiovaskulárnou mortalitou, pričom riziko sa môže objavovať aj pri relatívne nízkych hodnotách.</p>
 
 <p><strong>Čo robiť v ambulancii a na oddelení:</strong> Nastaviť pracovné postupy tak, aby systém automaticky ponúkal uACR v rizikových situáciách CKM. Ak v elektronickej zdravotnej dokumentácii nie je „laboratórny panel CKM“ alebo štandardizovaný postup, je praktické požiadať o jeho doplnenie. Automatizácia znižuje pravdepodobnosť, že sa test pri zaneprázdnenosti „preklikne“.</p>
 

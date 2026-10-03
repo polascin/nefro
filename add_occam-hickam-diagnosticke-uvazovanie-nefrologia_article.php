@@ -46,7 +46,7 @@ $articles[] = [
 
 <p>Podľa výpovedí sa klinické rozhodovanie osvojuje predovšetkým <strong>vystavením prípadom, nie explicitnou výučbou</strong>. Nikto lekárov systematicky neučí, kedy opustiť jedno vysvetlenie a začať uvažovať o súbehu. Zručnosť sa buduje pozorovaním a praxou, čo znamená, že sa buduje nerovnomerne a nekontrolovane.</p>
 
-<p>Zaujímavejší je druhý polovica nálezu: <strong>lekári v príprave narúšajú diagnostické rutiny svojich školiteľov spôsobom, ktorý znižuje riziko predčasného uzavretia</strong> diagnostickej úvahy. Otázka „a prečo si myslíte, že je to práve toto?“ od menej skúseného kolegu núti skúseného lekára svoju hypotézu vysloviť a obhájiť — a práve to je moment, keď sa nekonzistentnosť odhalí.</p>
+<p>Zaujímavejší je druhá polovica nálezu: <strong>lekári v príprave narúšajú diagnostické rutiny svojich školiteľov spôsobom, ktorý znižuje riziko predčasného uzavretia</strong> diagnostickej úvahy. Otázka „a prečo si myslíte, že je to práve toto?“ od menej skúseného kolegu núti skúseného lekára svoju hypotézu vysloviť a obhájiť — a práve to je moment, keď sa nekonzistentnosť odhalí.</p>
 
 <p>Prítomnosť rezidenta teda nie je len záťažou pre prevádzku. Je to lacný a účinný mechanizmus kontroly, ktorý na pracoviskách bez výučby chýba.</p>
 

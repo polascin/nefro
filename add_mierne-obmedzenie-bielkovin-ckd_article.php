@@ -103,7 +103,7 @@ $articles[] = [
 
 <p>Štúdia podporuje racionálny a individualizovaný prístup k príjmu bielkovín pri chronickej chorobe obličiek. U pacientov s nedialyzovanou CKD v štádiu III a IV môže byť mierne obmedzenie príjmu bielkovín pod 1,0 g/kg/deň spojené s nižším rizikom nepriaznivých klinických výsledkov, najmä s nižšou pravdepodobnosťou začatia dialýzy.</p>
 
-<p>Kľúčové však je, aby išlo o <strong>kontrolovanú diétnu intervenciu</strong>, nie o neodborné hladovanie alebo neprimerané obmedzovanie stravy. Ideálne má byť súčasťou nefrologickej starostlivosti aj nutričné hodnotenie a diétne poradenstvo, zvlášť u starších pacientov a u pacientov s rizikom proteinovo-energetickej malnutrície.</p>
+<p>Kľúčové však je, aby išlo o <strong>kontrolovanú diétnu intervenciu</strong>, nie o neodborné hladovanie alebo neprimerané obmedzovanie stravy. Ideálne má byť súčasťou nefrologickej starostlivosti aj nutričné hodnotenie a diétne poradenstvo, zvlášť u starších pacientov a u pacientov s rizikom proteínovo-energetickej malnutrície.</p>
 
 <p>Mierna proteínová reštrikcia môže byť užitočným nástrojom, ale len vtedy, ak je správne indikovaná, pravidelne kontrolovaná a prispôsobená konkrétnemu pacientovi.</p>
 

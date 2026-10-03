@@ -61,7 +61,7 @@ $articles[] = [
 </ul>
 <p>Negatívna kultivácia pri výrazných urologických symptómoch je dôležitá informácia, nie dôvod na opakované empirické antibiotické kúry bez ďalšieho vyšetrenia.</p>
 <h3>Zobrazovanie a funkčné vyšetrenie</h3>
-<p>Ultrasonografia obličiek a močového mechúra je vhodná ako prvé zobrazovacie vyšetrenie. Posudzuje hrúbku steny, orientačnú kapacitu, postmikčné reziduum a prítomnosť hydronefrózy. Pri podozrení na komplikovanú obštrukciu alebo inom nejasnom náleze sa podľa klinickej otázky zvažuje magnetická rezonancia alebo CT; radiačnú záťaž treba u detí minimalizovať.</p>
+<p>Ultrasonografia obličiek a močového mechúra je vhodná ako prvé zobrazovacie vyšetrenie. Posudzuje hrúbku steny, orientačnú kapacitu, postmikčné reziduum a prítomnosť hydronefrózy. Pri podozrení na komplikovanú obštrukciu alebo pri inom nejasnom náleze sa podľa klinickej otázky zvažuje magnetická rezonancia alebo CT; radiačnú záťaž treba u detí minimalizovať.</p>
 <p>Urodynamické vyšetrenie môže preukázať detruzorovú hyperaktivitu, zvýšenú senzitivitu, zníženú compliance a nízku kapacitu. Cystoskopia patrí do starostlivosti urológa, najmä pri hematúrii, ťažkých alebo pretrvávajúcich symptómoch a pri plánovaní intervencie. Môže ukázať erytém, petechie, ulcerácie, krvácanie a kontrahovaný močový mechúr. Biopsia sa indikuje selektívne, nie rutinne u každého pacienta; zvažuje sa najmä pri atypickom obraze alebo potrebe vylúčiť inú patológiu.</p>
 
 <h2>Liečba a sledovanie</h2>

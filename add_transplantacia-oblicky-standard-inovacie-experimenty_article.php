@@ -132,7 +132,7 @@ $articles[] = [
 
 <p>Belatacept blokuje kostimulačný signál CD80/86–CD28. V sedemročnom sledovaní štúdie BENEFIT bol oproti cyklosporínu spojený s vyššou eGFR a nižším kombinovaným rizikom smrti alebo straty štepu. Porovnávacím liekom bol však <strong>cyklosporín, nie súčasný takrolimový režim</strong>, čo je pri interpretácii zásadné.</p>
 
-<p>Belatacept nie je vhodný pre každého. Použitie je obmedzené na príjemcov séropozitívnych na Epsteinov-Barrovej vírus pre riziko posttransplantačnej lymfoproliferatívnej choroby; vyžaduje intravenózne podávanie a starostlivé sledovanie rejekcie aj infekcií. Je etablovanou možnosťou pre vybraných pacientov, nie automatickou „netoxickou“ náhradou takrolimu.</p>
+<p>Belatacept nie je vhodný pre každého. Použitie je obmedzené na príjemcov séropozitívnych na vírus Epsteina-Barrovej pre riziko posttransplantačnej lymfoproliferatívnej choroby; vyžaduje intravenózne podávanie a starostlivé sledovanie rejekcie aj infekcií. Je etablovanou možnosťou pre vybraných pacientov, nie automatickou „netoxickou“ náhradou takrolimu.</p>
 
 <h3>Tegoprubart</h3>
 

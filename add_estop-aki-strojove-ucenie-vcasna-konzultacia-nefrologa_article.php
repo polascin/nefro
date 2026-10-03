@@ -106,7 +106,7 @@ $articles[] = [
 
 <h2>Obmedzenia kreatinínu ako primárneho ukazovateľa</h2>
 
-<p>Sérový kreatinín je základným diagnostickým markerom AKI, ale ako primárny ukazovateľ preventívnej štúdie má slabiny. Stúpa oneskorene za poklesom glomerulárnej filtrácie, závisí od svalovej hmoty, mení sa pri objemovej expanzii aj deplécii, môže byť ovplyvnený liekmi inhibujúcimi tubulárnu sekréciu, nehovorí nič o mechanizme poškodenia a jeho krátkodobá zmena nemusí zodpovedať dlhodobej prognóze.</p>
+<p>Sérový kreatinín je základným diagnostickým markerom AKI, ale ako primárny ukazovateľ preventívnej štúdie má slabiny. Stúpa oneskorene za poklesom glomerulovej filtrácie, závisí od svalovej hmoty, mení sa pri objemovej expanzii aj deplécii, môže byť ovplyvnený liekmi inhibujúcimi tubulárnu sekréciu, nehovorí nič o mechanizme poškodenia a jeho krátkodobá zmena nemusí zodpovedať dlhodobej prognóze.</p>
 
 <p>Budúce štúdie by preto mali okrem maximálnej zmeny kreatinínu hodnotiť aj perzistujúce AKI, potrebu náhrady funkcie obličiek, závažné nežiaduce renálne príhody, trvalý pokles eGFR, funkciu obličiek po prepustení a bezpečnostné dôsledky samotných preventívnych zásahov.</p>
 

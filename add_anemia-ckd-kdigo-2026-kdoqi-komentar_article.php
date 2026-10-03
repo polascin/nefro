@@ -35,9 +35,9 @@ $articles[] = [
     'content'      => <<<'HTML'
 <figure><a href="img/anemia-ckd-kdigo-2026-kdoqi-komentar.webp" rel="noopener noreferrer" target="_blank"><img src="img/anemia-ckd-kdigo-2026-kdoqi-komentar.webp" alt="Oblička so zoslabnutým hormonálnym signálom ku kostnej dreni, ktorá tvorí len málo červených krviniek" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Chýbajúci signál z obličky je jadro problému — liečba sa odvíja práve od neho.</figcaption></figure>
 
-<p>Anémia je u pacientov s chronickým ochorením obličiek (CKD) veľmi častá a spojená so zvýšeným rizikom morbidity a mortality. KDOQI zvolalo pracovnú skupinu, ktorá revidovala KDIGO 2026 klinickú smernicu pre manažment anémie v CKD a pripravila komentár k odporúčaniam a praktickým bodom, vrátane poznámok k implementácii v klinickej praxi.</p>
+<p>Anémia je u pacientov s chronickou chorobou obličiek (CKD) veľmi častá a spojená so zvýšeným rizikom morbidity a mortality. KDOQI zvolalo pracovnú skupinu, ktorá revidovala KDIGO 2026 klinickú smernicu pre manažment anémie v CKD a pripravila komentár k odporúčaniam a praktickým bodom, vrátane poznámok k implementácii v klinickej praxi.</p>
 
-<p>V tomto článku zhrniem praktické jadro odporúčaní z pohľadu nefrológie: ako nastaviť diagnostiku, kedy a ako liečiť deficit železa, a ako pristupovať k ESA (erytropoézu stimulujúcim látkam) a HIF-PHI (inhibítory HIF-prolyl hydroxylázy).</p>
+<p>V tomto článku zhrniem praktické jadro odporúčaní z pohľadu nefrológie: ako nastaviť diagnostiku, kedy a ako liečiť deficit železa, a ako pristupovať k ESA (erytropoézu stimulujúcim látkam) a HIF-PHI (inhibítorom HIF-prolyl hydroxylázy).</p>
 
 <h2>1) Diagnostika: anémia nie je len hemoglobín</h2>
 
@@ -179,7 +179,7 @@ $articles[] = [
   <li><strong>Hb pod 11,5 g/dl (115 g/l)</strong> (v texte sa spomína aj US limit 11,0 g/dl).</li>
 </ul>
 
-<h2>5) Praktická titulná stratégia pre ambulanciu alebo dialýzu</h2>
+<h2>5) Praktická titračná stratégia pre ambulanciu alebo dialýzu</h2>
 
 <p>Ak by som to mal zredukovať na pracovný rámec podľa komentára KDIGO/KDOQI:</p>
 

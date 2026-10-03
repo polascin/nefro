@@ -91,7 +91,7 @@ $articles[] = [
 
 <p>Renálnym korelátom preeklampsie je <strong>glomerulárna endotelióza</strong>: opuch endotelových buniek glomerulárnych kapilár s obliteráciou fenestrácií, podmienený nerovnováhou angiogénnych faktorov (nadbytok sFlt-1 viažuceho VEGF a PlGF). Endotelióza po pôrode väčšinou ustúpi. Sprievodná strata podocytov je však problematickejšia — podocyty sú terminálne diferencované bunky s minimálnou schopnosťou proliferácie, takže ich úbytok je do značnej miery nezvratný.</p>
 
-<p>Výsledkom je poškodenie <strong>filtračnej bariéry</strong> skôr než úbytok funkčnej masy nefrónov. Albuminúria je preto citlivejším a skorším signálom. Glomerulárna filtrácia zostáva vďaka funkčnej rezerve a kompenzačnej hyperfiltrácii zvyšných nefrónov dlho normálna a k poklesu eGFR pod 60 ml/min/1,73 m² dochádza až pri pokročilejšej strate. Sledovanie postavené na samotnom kreatiníne teda nielenže zachytáva menej — zachytáva <strong>neskôr</strong>.</p>
+<p>Výsledkom je poškodenie <strong>filtračnej bariéry</strong> skôr než úbytok funkčnej masy nefrónov. Albuminúria je preto citlivejším a skorším signálom. Glomerulová filtrácia zostáva vďaka funkčnej rezerve a kompenzačnej hyperfiltrácii zvyšných nefrónov dlho normálna a k poklesu eGFR pod 60 ml/min/1,73 m² dochádza až pri pokročilejšej strate. Sledovanie postavené na samotnom kreatiníne teda nielenže zachytáva menej — zachytáva <strong>neskôr</strong>.</p>
 
 <h2>Metodická poznámka: detekčné skreslenie pôsobí oboma smermi</h2>
 

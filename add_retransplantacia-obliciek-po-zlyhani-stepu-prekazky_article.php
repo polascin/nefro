@@ -155,7 +155,7 @@ $articles[] = [
 
 <p>Niektorí pacienti uprednostňujú čakanie na orgán od zomretého darcu, hoci by mohli využiť živé darcovstvo. Dôvodom býva obava poškodiť blízkeho človeka, pocit viny, neochota požiadať o orgán alebo skúsenosť so zlyhaním predchádzajúceho štepu. Podľa účastníkov štúdie ide o preferenciu, ktorá sa po zlyhaní štepu pravdepodobne nezmení.</p>
 
-<p>Pacient má právo transplantáciu od žijúceho darcu odmietnuť. Jeho rozhodnutie by však malo vychádzať zo správnych a úplných informácií. Edukácia má zahŕňať riziká a prínosy živého darcovstva, nezávislé posúdenie a ochranu darcu, možnosť párovej výmeny, anonymné darcovské reťazce, skutočnosť že biologický príbuzný nemusí byť priamym kompatibilným darcom, možnosť zapojenia širšej sociálnej siete a právo darcu kedykoľvek a bez vysvetľovania odstúpiť.</p>
+<p>Pacient má právo transplantáciu od žijúceho darcu odmietnuť. Jeho rozhodnutie by však malo vychádzať zo správnych a úplných informácií. Edukácia má zahŕňať riziká a prínosy živého darcovstva, nezávislé posúdenie a ochranu darcu, možnosť párovej výmeny, anonymné darcovské reťazce, skutočnosť, že biologický príbuzný nemusí byť priamym kompatibilným darcom, možnosť zapojenia širšej sociálnej siete a právo darcu kedykoľvek a bez vysvetľovania odstúpiť.</p>
 
 <p><strong>Pacient nemá niesť zodpovednosť za rozhodnutie, či je potenciálny darca zdravotne vhodný.</strong> Túto úlohu má nezávislý tím posudzujúci darcu.</p>
 

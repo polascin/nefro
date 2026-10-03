@@ -63,8 +63,8 @@ $articles[] = [
   <thead>
     <tr>
       <th scope="col">Kategória</th>
-      <th scope="col">2021<br>t CO₂e/pacienta/rok</th>
-      <th scope="col">2023<br>t CO₂e/pacienta/rok</th>
+      <th scope="col">2021<br> t CO₂e/pacienta/rok</th>
+      <th scope="col">2023<br> t CO₂e/pacienta/rok</th>
       <th scope="col">Relatívna zmena</th>
       <th scope="col">p</th>
     </tr>
@@ -115,11 +115,11 @@ $articles[] = [
 
 <h2>Prietok dialyzátu: úspora vody, nie univerzálny predpis</h2>
 
-<p>V pilotných centrách znížili prednastavený <strong>prietok dialyzátu (Qd)</strong> z 500 na 350 mL/min u 50–80 % individuálne vybraných pacientov. Lekár zohľadňoval požadovanú dialyzačnú dávku, prietok krvi, reziduálnu funkciu obličiek, telesnú veľkosť a klinický stav. Priemerná spotreba vody v systéme RO klesla o 14 %. Kombinovaná uhlíková stopa elektriny a vody sa znížila z 1,02 ± 0,31 na 0,86 ± 0,26 t CO₂e na pacienta za rok, tento rozdiel však nedosiahol štatistickú významnosť (p = 0,07).</p>
+<p>V pilotných centrách znížili prednastavený <strong>prietok dialyzátu (Qd)</strong> z 500 na 350 ml/min u 50–80 % individuálne vybraných pacientov. Lekár zohľadňoval požadovanú dialyzačnú dávku, prietok krvi, reziduálnu funkciu obličiek, telesnú veľkosť a klinický stav. Priemerná spotreba vody v systéme RO klesla o 14 %. Kombinovaná uhlíková stopa elektriny a vody sa znížila z 1,02 ± 0,31 na 0,86 ± 0,26 t CO₂e na pacienta za rok, tento rozdiel však nedosiahol štatistickú významnosť (p = 0,07).</p>
 
-<p>Krátke laboratórne porovnanie pochádzalo iba z jedného centra a zahŕňalo štyri týždne pred zmenou a štyri týždne po nej. Fosfát sa zmenil z 1,80 na 1,77 mmol/L, draslík z 5,29 na 5,70 mmol/L a bikarbonát z 20,3 na 19,9 mmol/L; rozdiely neboli štatisticky významné. Malá nekontrolovaná analýza však neposkytla komplexné údaje o spKt/V alebo eKt/V, URR, odstraňovaní stredných molekúl, hospitalizáciách ani dlhodobej bezpečnosti. Neštatisticky významný numerický vzostup draslíka navyše nemožno zamieňať za dôkaz neprítomnosti rizika.</p>
+<p>Krátke laboratórne porovnanie pochádzalo iba z jedného centra a zahŕňalo štyri týždne pred zmenou a štyri týždne po nej. Fosfát sa zmenil z 1,80 na 1,77 mmol/l, draslík z 5,29 na 5,70 mmol/l a bikarbonát z 20,3 na 19,9 mmol/l; rozdiely neboli štatisticky významné. Malá nekontrolovaná analýza však neposkytla komplexné údaje o spKt/V alebo eKt/V, URR, odstraňovaní stredných molekúl, hospitalizáciách ani dlhodobej bezpečnosti. Neštatisticky významný numerický vzostup draslíka navyše nemožno zamieňať za dôkaz neprítomnosti rizika.</p>
 
-<p>Zníženie Qd na 350 mL/min preto možno <strong>zvážiť u individuálne vybraných pacientov</strong>, ak sa zachová predpísaná dialyzačná dávka. Po zmene treba overiť dodanú dávku a metabolickú bezpečnosť – primeranosť podľa spKt/V alebo eKt/V a URR, koncentrácie draslíka, fosfátu a bikarbonátu, objemový stav, krvný tlak, symptómy a toleranciu. Rozhodnutie musí zohľadniť Qb, vlastnosti dialyzátora, dĺžku a frekvenciu liečby, telesnú veľkosť, reziduálnu funkciu obličiek a prípadnú hemodiafiltráciu. Qd sa nemá znižovať automaticky ani výlučne z environmentálnych dôvodov.</p>
+<p>Zníženie Qd na 350 ml/min preto možno <strong>zvážiť u individuálne vybraných pacientov</strong>, ak sa zachová predpísaná dialyzačná dávka. Po zmene treba overiť dodanú dávku a metabolickú bezpečnosť – primeranosť podľa spKt/V alebo eKt/V a URR, koncentrácie draslíka, fosfátu a bikarbonátu, objemový stav, krvný tlak, symptómy a toleranciu. Rozhodnutie musí zohľadniť Qb, vlastnosti dialyzátora, dĺžku a frekvenciu liečby, telesnú veľkosť, reziduálnu funkciu obličiek a prípadnú hemodiafiltráciu. Qd sa nemá znižovať automaticky ani výlučne z environmentálnych dôvodov.</p>
 
 <h2>Fotovoltika, občerstvenie a doprava: čo sa naozaj hodnotilo</h2>
 
@@ -148,7 +148,7 @@ $articles[] = [
   <thead>
     <tr>
       <th scope="col">Modelované opatrenie</th>
-      <th scope="col">Odhad úspory<br>t CO₂e/pacienta/rok</th>
+      <th scope="col">Odhad úspory<br> t CO₂e/pacienta/rok</th>
       <th scope="col">Podiel zo základu</th>
     </tr>
   </thead>

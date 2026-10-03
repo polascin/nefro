@@ -35,7 +35,7 @@ $articles[] = [
 
 <p>Klasickým podkladom je združená inceptná kohorta 898 pacientov s biopticky potvrdenou membranóznou nefropatiou, v ktorej malo aspoň jednu žilovú tromboembolickú príhodu <strong>65 osôb (7,2 %)</strong>, väčšinou do dvoch rokov od prvého klinického vyšetrenia. Riziko bolo nepriamo úmerné koncentrácii albumínu.</p>
 
-<p>Na tento nález nadviazal rozhodovací Markovov model, ktorý postavil zabránené tromboembolické príhody proti závažným krvácaniam. Pomer prínosu a rizika stúpal s hĺbkou hypoalbuminémie: od približne <strong>4,5 : 1</strong> pri albumíne pod 3 g/dl po <strong>13,1 : 1</strong> pri albumíne pod 2 g/dl u pacientov s nízkym rizikom krvácania. Odporúčania KDIGO 2021 pre glomerulárne ochorenia z tejto logiky vychádzajú a profylaktickú antikoaguláciu viažu na hĺbku hypoalbuminémie spolu s individuálnym rizikom krvácania.</p>
+<p>Na tento nález nadviazal rozhodovací Markovov model, ktorý postavil zabránené tromboembolické príhody proti závažným krvácaniam. Pomer prínosu a rizika stúpal s hĺbkou hypoalbuminémie: od približne <strong>4,5 : 1</strong> pri albumíne pod 3 g/dl po <strong>13,1 : 1</strong> pri albumíne pod 2 g/dl u pacientov s nízkym rizikom krvácania. Odporúčania KDIGO 2021 pre glomerulové ochorenia z tejto logiky vychádzajú a profylaktickú antikoaguláciu viažu na hĺbku hypoalbuminémie spolu s individuálnym rizikom krvácania.</p>
 
 <h2>Čo priniesla nová kohorta</h2>
 

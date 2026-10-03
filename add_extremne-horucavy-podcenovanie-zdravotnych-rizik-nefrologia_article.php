@@ -73,7 +73,7 @@ $articles[] = [
 <p>V prehľade je jasne uvedené, že <strong>ľudia s ochorením obličiek</strong> patria medzi obzvlášť zraniteľných pacientov. Toto tvrdenie sa opiera o mechanizmy, ktoré sú v nefrológii klinicky dobre známe:</p>
 
 <ol>
-  <li><strong>Dehydratácia a pokles perfúzie.</strong> Pri strate tekutín a rozkolísaní cirkulácie sa môže zhoršiť perfúzia obličiek a rastie riziko akútneho zhoršenia obličkových funkcií. Článok to priamo neoznačuje ako „AKI pri horúčavách“, ale opisuje dehydratáciu a elektrolytové poruchy ako rizikové faktory, ktoré môžu u pacientov s chronickým ochorením obličiek rýchlejšie viesť ku klinickému zhoršeniu.</li>
+  <li><strong>Dehydratácia a pokles perfúzie.</strong> Pri strate tekutín a rozkolísaní cirkulácie sa môže zhoršiť perfúzia obličiek a rastie riziko akútneho zhoršenia obličkových funkcií. Článok to priamo neoznačuje ako „AKI pri horúčavách“, ale opisuje dehydratáciu a elektrolytové poruchy ako rizikové faktory, ktoré môžu u pacientov s chronickou chorobou obličiek rýchlejšie viesť ku klinickému zhoršeniu.</li>
   <li><strong>Elektrolytové poruchy.</strong> Horúčavy môžu zvyšovať riziko porúch elektrolytov. U nefrologických pacientov je fyziologická rezerva často menšia, a preto je o to dôležitejšie zamerať sa na včasné rozpoznanie prejavov a skorú úpravu režimu.</li>
   <li><strong>Lieky a ich „teplotná“ stránka.</strong> Diuretiká sú v texte explicitne spomenuté. Prakticky to znamená, že počas horúčav sa pacient môže ľahšie dostať do situácie, v ktorej je obehová rovnováha krehká: na jednej strane potreba kontroly retencie tekutín, na druhej strane riziko hypovolémie z dehydratácie. Pri nefrologických diagnózach sa preto liečebný režim počas horúčav nesmie upravovať paušálne, ale vyžaduje individuálne posúdenie ošetrujúcim tímom.</li>
 </ol>
@@ -84,7 +84,7 @@ $articles[] = [
 
 <ul>
   <li><strong>Prevencia pred horúčavou:</strong> identifikovať pacientov s ochorením obličiek, ktorí majú vyššie riziko dekompenzácie pri tepelnej záťaži, a pripraviť im jednoduchý režimový plán (príjem tekutín, sledovanie subjektívnych príznakov, kedy kontaktovať lekára).</li>
-  <li><strong>Včasné rozpoznanie:</strong> zhoršenie stavu hydratácie, slabosť, závraty, zmeny v močení, zhoršenie stavu pri známom chronickom ochorení obličiek, prípadne dekompenzáciu pridružených ochorení treba vnímať ako potenciálne časové okno na intervenciu.</li>
+  <li><strong>Včasné rozpoznanie:</strong> zhoršenie stavu hydratácie, slabosť, závraty, zmeny v močení, zhoršenie stavu pri známom chronickej chorobe obličiek, prípadne dekompenzáciu pridružených ochorení treba vnímať ako potenciálne časové okno na intervenciu.</li>
   <li><strong>Systémová úroveň:</strong> článok uvádza, že do konca roka 2024 malo iba 20 nemeckých obcí (z viacerých tisíc) vypracovaný akčný plán ochrany zdravia počas horúčav (tzv. heat-health action plan). Zároveň sa spomína povinnosť takéto plány vypracovať a pravidelne aktualizovať výstražné systémy aj akčné plány. Pre nefrologické zariadenia to znamená mať pripravené postupy pre rizikové skupiny, zabezpečenú dostupnosť podpory a včasnú komunikáciu pri výstrahách.</li>
 </ul>
 

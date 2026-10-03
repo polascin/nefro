@@ -35,7 +35,7 @@ $articles[] = [
     'content'      => <<<'HTML'
 <figure><a href="img/malignity-transplantacia-oblicky-skrining-ptld.webp" rel="noopener noreferrer" target="_blank"><img src="img/malignity-transplantacia-oblicky-skrining-ptld.webp" alt="Transplantovaná oblička pod stlmeným imunitným štítom a vedľa nej vznikajúce nádorové ložisko snímané lúčom" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Imunosupresia chráni štep, no oslabuje dozor nad nádorovými bunkami — preto skríning nemožno vynechať.</figcaption></figure>
 
-<p>Transplantácia obličky je najefektívnejšia liečba pokročilého chronického ochorenia obličiek, no zároveň ide o stav s dlhodobou imunosupresiou. Tá zvyšuje riziko viacerých nádorov, špecificky nemelanómových kožných karcinómov, lymfoproliferácií súvisiacich s vírusmi (najmä EBV) a niektorých solídnych nádorov. V roku 2026 prinieslo AJKD Core Curriculum, ktoré zhŕňa, ako prakticky pristupovať k skríningu, prevencii a manažmentu nádorových komplikácií u kandidátov a príjemcov transplantátu.</p>
+<p>Transplantácia obličky je najefektívnejšia liečba pokročilého chronickej choroby obličiek, no zároveň ide o stav s dlhodobou imunosupresiou. Tá zvyšuje riziko viacerých nádorov, špecificky nemelanómových kožných karcinómov, lymfoproliferácií súvisiacich s vírusmi (najmä EBV) a niektorých solídnych nádorov. V roku 2026 prinieslo AJKD Core Curriculum, ktoré zhŕňa, ako prakticky pristupovať k skríningu, prevencii a manažmentu nádorových komplikácií u kandidátov a príjemcov transplantátu.</p>
 
 <h2>1) Prečo je onkologické riziko po transplantácii vyššie</h2>
 

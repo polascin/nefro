@@ -29,7 +29,7 @@ $articles[] = [
   <figcaption>Najčastejšie kryštaloidy — obsah sodíka a tonicita.</figcaption>
 </figure>
 
-<p>Prehľad <strong>zloženia a výberu infúznych roztokov</strong> — koncentrácie elektrolytov, tonicita a klinické zásady. Súvisí s <a href="calculator_na.php">poruchami sodíka</a> a <a href="nastroj_hyponatremia.php">algoritmom hyponatrémie</a>.</p>
+<p>Prehľad <strong>zloženia a výberu infúznych roztokov</strong> — koncentrácie elektrolytov, tonicita a klinické zásady. Súvisí s <a href="calculator_na.php">poruchami sodíka</a> a <a href="nastroj_hyponatremia.php">algoritmom hyponatriémie</a>.</p>
 
 <h2>Zloženie bežných roztokov (na 1 liter)</h2>
 <div class="table-responsive" role="region" aria-label="Zloženie bežných roztokov (na 1 liter)" tabindex="0">
@@ -66,8 +66,8 @@ $articles[] = [
   </thead>
   <tbody>
     <tr><td>Izotonické</td><td>0,9 % NaCl, Ringer-laktát, Plasma-Lyte</td><td>Náhrada objemu, resuscitácia, udržiavacia terapia</td></tr>
-    <tr><td>Hypotonické</td><td>0,45 % NaCl, G5</td><td>Náhrada voľnej vody (hypernatrémia); v udržiavacej terapii u dospelých opatrne (riziko hyponatrémie)</td></tr>
-    <tr><td>Hypertonické</td><td>3 % NaCl</td><td>Symptomatická ťažká hyponatrémia (bolusy 100–150 ml), edém mozgu</td></tr>
+    <tr><td>Hypotonické</td><td>0,45 % NaCl, G5</td><td>Náhrada voľnej vody (hypernatriémia); v udržiavacej terapii u dospelých opatrne (riziko hyponatriémie)</td></tr>
+    <tr><td>Hypertonické</td><td>3 % NaCl</td><td>Symptomatická ťažká hyponatriémia (bolusy 100–150 ml), edém mozgu</td></tr>
   </tbody>
 </table>
 </div>
@@ -88,11 +88,11 @@ $articles[] = [
   </thead>
   <tbody>
     <tr><td>Resuscitácia / hypovolémia</td><td>Balansovaný kryštaloid (Ringer-laktát, Plasma-Lyte)</td></tr>
-    <tr><td>Hypernatrémia (náhrada voľnej vody)</td><td>G5 alebo 0,45 % NaCl, pomalá korekcia (≤ 10–12 mmol/l/24 h)</td></tr>
-    <tr><td>Symptomatická ťažká hyponatrémia</td><td>3 % NaCl 100–150 ml bolus, kontrola Na<sup>+</sup>, limit ≤ 8 mmol/l/24 h</td></tr>
+    <tr><td>Hypernatriémia (náhrada voľnej vody)</td><td>G5 alebo 0,45 % NaCl, pomalá korekcia (≤ 10–12 mmol/l/24 h)</td></tr>
+    <tr><td>Symptomatická ťažká hyponatriémia</td><td>3 % NaCl 100–150 ml bolus, kontrola Na<sup>+</sup>, limit ≤ 8 mmol/l/24 h</td></tr>
     <tr><td>Diabetická ketoacidóza</td><td>Najprv 0,9 % NaCl, potom balansovaný; pridať glukózu pri glykémii &lt; 14 mmol/l</td></tr>
     <tr><td>Hyperkalciémia</td><td>Izotonický roztok (0,9 % NaCl) na obnovu volémie a kalciurézu</td></tr>
-    <tr><td>Udržiavacia terapia (dospelí)</td><td>Izotonický roztok (vyhni sa hypotonickým — riziko nozokomiálnej hyponatrémie)</td></tr>
+    <tr><td>Udržiavacia terapia (dospelí)</td><td>Izotonický roztok (vyhni sa hypotonickým — riziko nozokomiálnej hyponatriémie)</td></tr>
   </tbody>
 </table>
 </div>
@@ -100,7 +100,7 @@ $articles[] = [
 <h2>Úskalia</h2>
 <ul>
   <li><strong>Koloidy</strong> (hydroxyetylškrob) sa pri kritickej chorobe a sepse <strong>neodporúčajú</strong> (riziko AKI a mortality); albumín má vybrané indikácie.</li>
-  <li>Hypotonické roztoky u dospelých sú častou príčinou <strong>nemocničnej hyponatrémie</strong> — preferuj izotonické udržiavacie roztoky.</li>
+  <li>Hypotonické roztoky u dospelých sú častou príčinou <strong>nemocničnej hyponatriémie</strong> — preferuj izotonické udržiavacie roztoky.</li>
   <li>Hypertonický roztok pri kontinuálnom podávaní cez <strong>centrálny katéter</strong>; vždy monitoruj rýchlosť korekcie Na<sup>+</sup>.</li>
   <li>Objem a typ vždy prispôsob klinickému stavu (srdcové/renálne zlyhanie — riziko preťaženia).</li>
 </ul>

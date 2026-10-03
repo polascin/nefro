@@ -64,7 +64,7 @@ $articles[] = [
 
 <ul>
   <li>vek <strong>≥ 18</strong> rokov;</li>
-  <li><strong>refrakterná obezita</strong> definovaná ako BMI <strong>≥ 35 kg/m²</strong> napriek dodržiavaniu a znášanlivosti liečby <strong>najvyššou dostupnou dávkou</strong> schválenej terapie chronického manažmentu hmotnosti;</li>
+  <li><strong>refraktérna obezita</strong> definovaná ako BMI <strong>≥ 35 kg/m²</strong> napriek dodržiavaniu a znášanlivosti liečby <strong>najvyššou dostupnou dávkou</strong> schválenej terapie chronického manažmentu hmotnosti;</li>
   <li><strong>dve alebo viac</strong> závažných alebo život ohrozujúcich komplikácií obezity, pre ktoré pacient <strong>aktuálne dostáva štandardnú starostlivosť</strong>;</li>
   <li><strong>nemožnosť</strong> účasti v prebiehajúcom klinickom skúšaní retatrutidu alebo porovnateľného skúšaného lieku (vstupné kritériá alebo chýbajúce primerane dostupné centrum);</li>
   <li>s pacientom boli v rámci spoločného rozhodovania prebraté <strong>všetky štandardné možnosti</strong> vrátane <strong>bariatrickej chirurgie</strong>.</li>
@@ -138,7 +138,7 @@ $articles[] = [
 
 <p>Na Slovensku je ťažiskom <strong>§ 46 ods. 3 a 4</strong> zákona o liekoch: terapeutické alebo diagnostické použitie pre jedného pacienta alebo skupinu pri ohrození života alebo riziku závažného zhoršenia stavu. Pri skúšanom lieku ide typicky o písmená týkajúce sa neregistrovaného alebo skúšaného humánneho lieku, nie o „off-label“ už registrovaného prípravku. Povoľuje <strong>MZ SR</strong> na žiadosť poskytovateľa, ktorý liečbu indikuje, ak nie je dostupný porovnateľný registrovaný liek. ŠÚKL vo verejných pokynoch rieši najmä <strong>hlásenie dovozu</strong> neregistrovaných liekov po povolení MZ, nie vydávanie amerického IND. Výrobca musí liek aj tak <strong>chcieť dodať</strong>; geografické obmedzenie, ktoré Lilly uvádza pri retatrutide, preto ostáva praktickou bránou aj mimo USA.</p>
 
-<p>Kritérium „nie je porovnateľný registrovaný liek“ je v EÚ/SR prísne v inom zmysle než americké sitá NCT07629401. V SR sú na obezitu a diabetes 2. typu dostupné schválené inkretínové lieky. Ani ťažká, na schválenú liečbu refrakterná obezita <strong>automaticky</strong> nezakladá nárok na retatrutid cez § 46. Tvrdosť tejto vety je zámer: falošná nádej škodí rovnako ako mlčanie o existencii cesty.</p>
+<p>Kritérium „nie je porovnateľný registrovaný liek“ je v EÚ/SR prísne v inom zmysle než americké sitá NCT07629401. V SR sú na obezitu a diabetes 2. typu dostupné schválené inkretínové lieky. Ani ťažká, na schválenú liečbu refraktérna obezita <strong>automaticky</strong> nezakladá nárok na retatrutid cez § 46. Tvrdosť tejto vety je zámer: falošná nádej škodí rovnako ako mlčanie o existencii cesty.</p>
 
 <h2>Prečo to v nefrológii nie je okrajová téma</h2>
 

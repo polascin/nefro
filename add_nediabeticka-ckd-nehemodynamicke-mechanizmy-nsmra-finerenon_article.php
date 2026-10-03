@@ -36,7 +36,7 @@ $articles[] = [
 
 <h2>1. Prečo nestačí hemodynamika: reziduálne riziko pri nediabetickej CKD</h2>
 
-<p>Zdroj explicitne rámcuje problém ako <strong>reziduálne riziko</strong> (<em>residual risk</em>). Aj keď štandardná starostlivosť dnes zahŕňa inhibítory RAAS a SGLT2 inhibítory, časť pacientov napriek liečbe pokračuje v progresii CKD a/alebo dosahuje fatálne kardiovaskulárne (KV) a renálne ukončenia.</p>
+<p>Zdroj explicitne rámcuje problém ako <strong>reziduálne riziko</strong> (<em>residual risk</em>). Aj keď štandardná starostlivosť dnes zahŕňa inhibítory RAAS a inhibítory SGLT2, časť pacientov napriek liečbe pokračuje v progresii CKD a/alebo dosahuje fatálne kardiovaskulárne (KV) a renálne ukončenia.</p>
 
 <p>Kľúčové je, že reziduálne riziko sa v praxi často odvíja od <strong>albuminúrie</strong>. Podľa zdroja je albuminúria významným hnacím faktorom progresie a jej zníženie v danom čase koreluje s priaznivejšou budúcnosťou z hľadiska poklesu funkcie obličiek aj klinických udalostí.</p>
 
@@ -92,9 +92,9 @@ $articles[] = [
 
 <p>Toto je praktický bod, lebo cieľom takejto terapie je zmysluplná účinnosť bez neprijateľnej bezpečnostnej záťaže.</p>
 
-<h2>4. Špecifická výzva: glomerulárne ochorenia vo FIND-CKD</h2>
+<h2>4. Špecifická výzva: glomerulové ochorenia vo FIND-CKD</h2>
 
-<p>Glomerulárne ochorenia sú v diskusii opísané ako populácia s historicky menším počtom liečebných možností a rýchlejším zhoršovaním.</p>
+<p>Glomerulové ochorenia sú v diskusii opísané ako populácia s historicky menším počtom liečebných možností a rýchlejším zhoršovaním.</p>
 
 <p>Zdroj pripomína, že FIND-CKD zahrnula:</p>
 
@@ -119,7 +119,7 @@ $articles[] = [
 
 <h3>4.2. Konzistentnosť naprieč podtypmi a nezávislosť od SGLT2</h3>
 
-<p>Zdroj zdôrazňuje, že benefity boli konzistentné naprieč podtypmi glomerulárnych chorôb (IgA nefropatia, FSGS, membranózna nefropatia) a že výsledky sa nelíšili podľa toho, či pacienti užívali SGLT2 inhibítory.</p>
+<p>Zdroj zdôrazňuje, že benefity boli konzistentné naprieč podtypmi glomerulárnych chorôb (IgA nefropatia, FSGS, membranózna nefropatia) a že výsledky sa nelíšili podľa toho, či pacienti užívali inhibítory SGLT2.</p>
 
 <p>Praktický význam: nsMRA sa v tejto interpretácii nevníma ako „liečba len pre jeden typ“, ale ako relatívne univerzálny príspevok k spomaleniu progresie v skupinách, kde je podstatná albuminúria a následné (<em>downstream</em>) zápalové poškodenie.</p>
 
@@ -205,7 +205,7 @@ $articles[] = [
 
 <p>V závere zdroj sumarizuje veľkú tendenciu: posun smerom ku <strong>kombinovanej terapii</strong> ako novému štandardu.</p>
 
-<p>Argumentácia vychádza z toho, že progresia CKD je multifaktoriálna a vyžaduje zásah do viacerých mechanizmov. Pri diabetickej CKD sa v diskusii explicitne uvádza, že existujú štyri overené terapie znižujúce riziko zlyhania obličiek aj KV riziko: <strong>inhibícia RAAS, SGLT2 inhibítory, nesteroidné MRA a agonisty GLP-1 receptora</strong>.</p>
+<p>Argumentácia vychádza z toho, že progresia CKD je multifaktoriálna a vyžaduje zásah do viacerých mechanizmov. Pri diabetickej CKD sa v diskusii explicitne uvádza, že existujú štyri overené terapie znižujúce riziko zlyhania obličiek aj KV riziko: <strong>inhibícia RAAS, inhibítory SGLT2, nesteroidné MRA a agonisty GLP-1 receptora</strong>.</p>
 
 <p>Pri nediabetickej CKD sú v texte ako piliere uvedené inhibícia RAAS, SGLT2 inhibícia a teraz aj nsMRA. Do budúcna sa očakávajú ďalšie možnosti.</p>
 

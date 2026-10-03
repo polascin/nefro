@@ -145,11 +145,11 @@ $articles[] = [
 
 <p>U dialyzovaných pacientov vyžadujúcich zníženie PTH možno podľa klinickej situácie použiť kalcimimetikum, kalcitriol, analóg vitamínu D alebo ich kombináciu. Výber sa má riadiť trendmi PTH, vápnika a fosfátov, súbežnou liečbou a rizikom nežiaducich účinkov. Nadmerná supresia PTH môže podporovať adynamickú kostnú chorobu.</p>
 
-<h2>Vitamín D nie je preukázaná univerzálna renoprotektívna liečba</h2>
+<h2>Vitamín D nie je preukázaná univerzálna nefroprotektívna liečba</h2>
 
 <p>Nízke koncentrácie 25(OH)D sa v observačných štúdiách spájajú s albuminúriou, rýchlejším poklesom glomerulovej filtrácie a vyššou mortalitou. Asociáciu však môžu vysvetľovať alebo zosilňovať zápal, obezita, nižšia fyzická aktivita, proteinúria, malnutrícia a samotná závažnosť ochorenia.</p>
 
-<p>V štúdii VITAL-DKD u 1&nbsp;312 dospelých s diabetom 2. typu neviedlo podávanie 2&nbsp;000&nbsp;IU vitamínu D<sub>3</sub> denne počas piatich rokov k významnému zachovaniu eGFR oproti placebu. Rutinnú suplementáciu preto nemožno prezentovať ako renoprotektívnu liečbu porovnateľnú s kontrolou krvného tlaku, blokádou systému renín – angiotenzín, inhibítormi SGLT2 alebo účinnou liečbou diabetu.</p>
+<p>V štúdii VITAL-DKD u 1&nbsp;312 dospelých s diabetom 2. typu neviedlo podávanie 2&nbsp;000&nbsp;IU vitamínu D<sub>3</sub> denne počas piatich rokov k významnému zachovaniu eGFR oproti placebu. Rutinnú suplementáciu preto nemožno prezentovať ako nefroprotektívnu liečbu porovnateľnú s kontrolou krvného tlaku, blokádou systému renín – angiotenzín, inhibítormi SGLT2 alebo účinnou liečbou diabetu.</p>
 
 <p>Pri CKD má vitamín D jasné miesto v korekcii deficitu a v individualizovanom manažmente CKD-MBD. To je odlišný terapeutický cieľ od všeobecnej prevencie progresie CKD.</p>
 

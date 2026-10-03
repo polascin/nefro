@@ -220,7 +220,7 @@ $articles[] = [
     <tr><th scope="row">Nešpecifické príznaky</th><td>Tlak na hrudi, závrat, nevoľnosť, svrbenie, asymptomatická hypotenzia</td><td>Zastaviť infúziu, sledovať 15 minút; ak je pacient v poriadku, pokračovať 25 – 50 % rýchlosťou. Pri opakovaní ukončiť.</td></tr>
     <tr><th scope="row">Mierna infúzna reakcia</th><td>Nešpecifické príznaky <strong>plus</strong> drobná urtikária</td><td>Zastaviť infúziu, sledovať; prípadný opakovaný pokus hodinu po podaní kortikoidu alebo perorálneho blokátora H1, pokračovať 25 – 50 % rýchlosťou. Pri opakovaní ukončiť.</td></tr>
     <tr><th scope="row">Stredne ťažká reakcia</th><td>Silná bolesť na hrudi, kašeľ, tachykardia, hypotenzia, ťažká generalizovaná urtikária</td><td>Zastaviť infúziu, podať i.v. tekutiny, hydrokortizón 100 mg i.v. a blokátor H1; pokračovať len pri úprave stavu 25 – 50 % rýchlosťou. Zvážiť iný prípravok železa podľa pomeru prínosu a rizika.</td></tr>
-    <tr><th scope="row">Ťažká reakcia</th><td>Náhly vznik piskotov, stridoru, cyanózy, hypotenzie, tachykardie</td><td>Zastaviť infúziu, i.v. tekutiny, kyslík 15 l/min, <strong>adrenalín 0,5 mg 1 : 1000 intramuskulárne</strong>, kortikoid i.v., inhalačný beta-2-mimetikum nebulizátorom, <strong>hospitalizovať</strong>, i.v. železo do budúcna <strong>nepodávať</strong>.</td></tr>
+    <tr><th scope="row">Ťažká reakcia</th><td>Náhly vznik piskotov, stridoru, cyanózy, hypotenzie, tachykardie</td><td>Zastaviť infúziu, i.v. tekutiny, kyslík 15 l/min, <strong>adrenalín 0,5 mg 1 : 1000 intramuskulárne</strong>, kortikoid i.v., inhalačné beta-2-mimetikum nebulizátorom, <strong>hospitalizovať</strong>, i.v. železo do budúcna <strong>nepodávať</strong>.</td></tr>
   </tbody>
 </table>
 <p><em>Podľa obrázka 7 odporúčaní KDIGO 2026.</em></p>

@@ -27,7 +27,7 @@ $articles[] = [
     'content'      => <<<'HTML'
 <figure><a href="img/nefrolog-nie-je-lekar-az-pre-dialyzu-vcasne-vysetrenie.webp" rel="noopener noreferrer" target="_blank"><img src="img/nefrolog-nie-je-lekar-az-pre-dialyzu-vcasne-vysetrenie.webp" alt="Dlhá tmavá cesta smerujúca k sotva viditeľnému dialyzačnému prístroju a hneď na jej začiatku otvorené osvetlené dvere s obličkou" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Odbočka existuje dávno pred koncom cesty — a práve včasné vyšetrenie rozhoduje, či sa využije.</figcaption></figure>
 
-<p class="article-dek"><em>Otázka „kedy odoslať k nefrológovi“ má dnes presnejšiu odpoveď než pred desiatimi rokmi. Nie je ňou hodnota eGFR, ale vypočítané riziko zlyhania obličiek — a to sa dá získať zo štyroch údajov, ktoré má ambulancia poruke.</em></p>
+<p class="article-dek"><em>Otázka „kedy odoslať k nefrológovi“ má dnes presnejšiu odpoveď než pred desiatimi rokmi. Nie je ňou hodnota eGFR, ale vypočítané riziko zlyhania obličiek — a to sa dá získať zo štyroch údajov, ktoré má ambulancia po ruke.</em></p>
 
 <p>Nefrológ sa nezaoberá iba dialýzou a pokročilým zlyhaním obličiek. Väčšinu jeho práce tvorí diagnostika príčin poškodenia obličiek, spomaľovanie progresie chronickej choroby obličiek, liečba hypertenzie a porúch vnútorného prostredia a príprava individualizovanej liečby dávno pred prípadnou potrebou náhrady funkcie obličiek.</p>
 
@@ -171,7 +171,7 @@ $articles[] = [
   </table>
 </div>
 
-<p>Najpoužívanejšia <strong>Kidney Failure Risk Equation</strong> vyžaduje iba štyri údaje: vek, pohlavie, eGFR a UACR. Je validovaná pre CKD kategórií G3 až G5; rovnice vyvinuté pre túto populáciu <strong>nemusia platiť pri kategóriách G1 a G2</strong> a nemajú sa tam nekriticky používať.</p>
+<p>Najpoužívanejšia <strong>Kidney Failure Risk Equation</strong> vyžaduje iba štyri údaje: vek, pohlavie, eGFR a UACR. Je validovaná pre CKD kategórie G3 až G5; rovnice vyvinuté pre túto populáciu <strong>nemusia platiť pri kategóriách G1 a G2</strong> a nemajú sa tam nekriticky používať.</p>
 
 <p>Praktický dôsledok je zreteľný: dvaja pacienti s rovnakou eGFR 40 ml/min/1,73 m² môžu mať pri albuminúrii A1 a A3 zásadne odlišné riziko — a teda aj odlišnú naliehavosť odoslania. Bez UACR sa toto rozlíšenie urobiť nedá.</p>
 

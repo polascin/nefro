@@ -53,7 +53,7 @@ $articles[] = [
 
 <p>MARY-JANE je skratka z angl. <em>Marijuana and Acute Risk of Arrhythmia – Joint Abstinence and Exposure</em>. Primárna publikácia ju opisuje ako prospektívnu randomizovanú kríženú (crossover) štúdiu: ten istý účastník strieda dni s inhaláciou a dni s abstinenciou, takže slúži ako vlastná kontrola. Sledovanie trvalo 14 dní. Pridelenie dňa (inhalovať, alebo abstinovať) dostávali účastníci textovou správou.</p>
 
-<p>Podľa registra ClinicalTrials.gov išlo o dizajn s dvojdennými blokmi (začať dňom s kanabisom, alebo dňom bez neho). Účastníci mali v dňoch s inštrukciou konzumovať kanabis <strong>fajčiť alebo vapovať aspoň raz</strong>. Kanabis si obstarávali sami; štúdia teda nepodávala štandardizovaný produkt s určeným obsahom tetrahydrokanabinolu (THC). Sledovanie prebiehalo na Kalifornskej univerzite v San Franciscu (UCSF).</p>
+<p>Podľa registra ClinicalTrials.gov išlo o dizajn s dvojdennými blokmi (začať dňom s kanabisom, alebo dňom bez neho). Účastníci mali v dňoch s inštrukciou konzumovať kanabis <strong>(fajčiť alebo vapovať) aspoň raz</strong>. Kanabis si obstarávali sami; štúdia teda nepodávala štandardizovaný produkt s určeným obsahom tetrahydrokanabinolu (THC). Sledovanie prebiehalo na Kalifornskej univerzite v San Franciscu (UCSF).</p>
 
 <div class="table-responsive" role="region" aria-label="Základné parametre štúdie MARY-JANE" tabindex="0">
 <table>

@@ -26,7 +26,7 @@ require_once __DIR__ . '/pdf_generator.php';
 $articles = [];
 
 $articles[] = [
-    'title'        => 'Očkovanie pri chronickom ochorení obličiek (CKD) a po transplantácii obličky: praktický prehľad vakcín a načasovania',
+    'title'        => 'Očkovanie pri chronickej chorobe obličiek (CKD) a po transplantácii obličky: praktický prehľad vakcín a načasovania',
     'slug'         => 'ockovanie-ckd-transplantacia-oblicky-vakciny-nacasovanie',
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
@@ -35,7 +35,7 @@ $articles[] = [
     'content'      => <<<'HTML'
 <figure><a href="img/ockovanie-ckd-transplantacia-oblicky-vakciny-nacasovanie.webp" rel="noopener noreferrer" target="_blank"><img src="img/ockovanie-ckd-transplantacia-oblicky-vakciny-nacasovanie.webp" alt="Vakcinačná liekovka vytvárajúca ochrannú svetelnú kupolu nad obličkou nad svetelnou časovou osou" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Ochrana je najsilnejšia, keď sa očkuje včas — po transplantácii je odpoveď imunitného systému slabšia.</figcaption></figure>
 
-<p>Pacienti s chronickým ochorením obličiek a najmä po transplantácii obličky majú vyššie riziko závažných infekcií. Dôvodom je kombinácia zhoršenej imunitnej odpovede pri CKD a imunosupresie po transplantácii, plus časté zdravotnícke kontakty (dialýza, ambulantné sledovanie). Očkovanie preto patrí medzi základné preventívne kroky.</p>
+<p>Pacienti s chronickou chorobou obličiek a najmä po transplantácii obličky majú vyššie riziko závažných infekcií. Dôvodom je kombinácia zhoršenej imunitnej odpovede pri CKD a imunosupresie po transplantácii, plus časté zdravotnícke kontakty (dialýza, ambulantné sledovanie). Očkovanie preto patrí medzi základné preventívne kroky.</p>
 
 <p>Nižšie sumarizujem odporúčania uvedené v prehľade „Vaccinations to Prevent Infections in Adult Individuals With CKD and After Kidney Transplantation“ so zameraním na indikácie, načasovanie a typ vakcíny.</p>
 
@@ -161,7 +161,7 @@ $articles[] = [
 
 <p><em>Použite ako rýchly „check“ v ambulancii. Pri konkrétnom produkte, dávke a dostupnosti vždy dolaďte podľa miestnych/produktových odporúčaní.</em></p>
 
-<h3>1) Dospelý s CKD (chronické ochorenie obličiek)</h3>
+<h3>1) Dospelý s CKD (chronická choroba obličiek)</h3>
 
 <div class="table-responsive" role="region" aria-label="Dospelý s CKD (chronické ochorenie obličiek)" tabindex="0">
 <table>

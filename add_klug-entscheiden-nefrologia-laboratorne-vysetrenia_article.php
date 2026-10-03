@@ -56,7 +56,7 @@ $articles[] = [
 
 <h2>1) Pre koho to platí (praktický rámec)</h2>
 
-<p>Odporúčania sa viažu najmä na <strong>rizikových pacientov</strong> a na <strong>CKD (chronické ochorenie obličiek) od určitej úrovne eGFR</strong>, kde má laboratórium priamy vplyv na:</p>
+<p>Odporúčania sa viažu najmä na <strong>rizikových pacientov</strong> a na <strong>CKD (chronická choroba obličiek) od určitej úrovne eGFR</strong>, kde má laboratórium priamy vplyv na:</p>
 <ul>
   <li>pravdepodobnosť orgánového poškodenia,</li>
   <li>kardiorenálne riziko,</li>

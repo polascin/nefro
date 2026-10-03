@@ -50,7 +50,7 @@ $articles[] = [
 
 <h2>Kedy „chorobnosť“ prichádza: skôr, než ju zachytí diagnostika</h2>
 
-<p>V článku sa zdôrazňuje perspektíva, že človek často vie, že niečo „nie je v poriadku“, <strong>skôr ako sa začne vyšetrovací proces</strong>. Rozpoznanie sa rodí z prežívania, z nášho vzťahu k vlastnému telu, z očakávania zdravia a z toho, ako daná kultúra interpretuje príznaky.</p>
+<p>V článku sa zdôrazňuje perspektíva, že človek často vie, že niečo „nie je v poriadku“, <strong>skôr, ako sa začne vyšetrovací proces</strong>. Rozpoznanie sa rodí z prežívania, z nášho vzťahu k vlastnému telu, z očakávania zdravia a z toho, ako daná kultúra interpretuje príznaky.</p>
 
 <p>V praxi to mení aj otázku „kedy je pacient vlastne chorý?“. Ak diagnóza príde až neskôr, znamená to, že pacient už určitý čas žije v stave, ktorý sa pre medicínu stáva „informáciou na prácu“ až dodatočne. Pacient sa však medzičasom adaptuje, stráca istotu a prežíva nepohodu, ktorá nemusí mať okamžité biologické potvrdenie.</p>
 
@@ -58,7 +58,7 @@ $articles[] = [
 
 <p>Diagnostické označenie je užitočné. Dáva spoločný jazyk, umožňuje koordinovať starostlivosť a niekedy nasmerovať liečbu. Zároveň však článok upozorňuje na riziko: previesť komplexnú skúsenosť na jedinú klinickú kategóriu znamená <strong>odfiltrovať variabilitu a hĺbku prežívania</strong>.</p>
 
-<p>To je v nefrológii obzvlášť citlivé. Pacient s chronickým ochorením obličiek (aj počas dialýzy) často neprežíva iba „ochorenie obličiek“ ako diagnózu. Prežíva kombináciu obmedzení, únavy, kolísania príznakov, vplyvu liečby na organizmus, psychickej záťaže, ale aj zmeny v tom, čo preňho znamená každodennosť. Jedna diagnostická nálepka nikdy nevystihne celé „nie som sám sebou“.</p>
+<p>To je v nefrológii obzvlášť citlivé. Pacient s chronickou chorobou obličiek (aj počas dialýzy) často neprežíva iba „ochorenie obličiek“ ako diagnózu. Prežíva kombináciu obmedzení, únavy, kolísania príznakov, vplyvu liečby na organizmus, psychickej záťaže, ale aj zmeny v tom, čo preňho znamená každodennosť. Jedna diagnostická nálepka nikdy nevystihne celé „nie som sám sebou“.</p>
 
 <h2>Čo to mení v nefrologickej praxi</h2>
 

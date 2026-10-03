@@ -92,7 +92,7 @@ $articles[] = [
 
 <h3>2. Aktívne vylúčiť získané a pseudo-Bartterove príčiny</h3>
 
-<p>Kľučkové diuretiká napodobňujú poruchu NKCC2 a tiazidy Gitelmanov syndróm. Nedávne užitie diuretika môže prechodne zvýšiť močový chlorid, zatiaľ čo pri kolísavom užívaní sa výsledky menia. Ak je anamnéza nejasná, má zmysel toxikologický skríning moču na diuretiká, podľa možnosti z čerstvej a niekedy opakovanej vzorky.</p>
+<p>Slučkové diuretiká napodobňujú poruchu NKCC2 a tiazidy Gitelmanov syndróm. Nedávne užitie diuretika môže prechodne zvýšiť močový chlorid, zatiaľ čo pri kolísavom užívaní sa výsledky menia. Ak je anamnéza nejasná, má zmysel toxikologický skríning moču na diuretiká, podľa možnosti z čerstvej a niekedy opakovanej vzorky.</p>
 
 <p>Pseudo-Bartterov fenotyp môže vzniknúť pri chronickom vracaní, kongenitálnej chloridovej hnačke, cystickej fibróze s veľkými stratami chloridov potom, zneužívaní diuretík alebo laxatív, poruchách príjmu potravy, závažnej podvýžive či pri výžive s nedostatočným obsahom chloridov.</p>
 

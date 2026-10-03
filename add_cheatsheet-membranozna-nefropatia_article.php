@@ -79,7 +79,7 @@ $articles[] = [
     <tr><th scope="col">Riziko</th><th scope="col">Znaky (orientačne)</th><th scope="col">Liečba</th></tr>
   </thead>
   <tbody>
-    <tr><td>Nízke</td><td>Normálny eGFR, proteinúria &lt; 3,5 g/deň a normálny albumín; alebo pokles proteinúrie &gt; 50 % pri podpornej liečbe</td><td>Podporná renoprotekcia, sledovanie</td></tr>
+    <tr><td>Nízke</td><td>Normálny eGFR, proteinúria &lt; 3,5 g/deň a normálny albumín; alebo pokles proteinúrie &gt; 50 % pri podpornej liečbe</td><td>Podporná nefroprotekcia, sledovanie</td></tr>
     <tr><td>Stredné</td><td>Normálny eGFR, proteinúria &gt; 3,5 g pretrváva napriek 6 mes. podpornej liečby</td><td>Zváž imunosupresiu (rituximab alebo CNI ± rituximab)</td></tr>
     <tr><td>Vysoké</td><td>eGFR &lt; 60 alebo proteinúria &gt; 8 g/deň; nízky albumín, vysoký/rastúci anti-PLA2R</td><td>Imunosupresia: rituximab; cyklofosfamid + glukokortikoidy (Ponticelli)</td></tr>
     <tr><td>Veľmi vysoké</td><td>Život ohrozujúci nefrotický syndróm alebo rýchly pokles funkcie</td><td>Cyklofosfamid + glukokortikoidy; urýchlene</td></tr>
@@ -89,7 +89,7 @@ $articles[] = [
 
 <h2>Podporná liečba a komplikácie</h2>
 <ul>
-  <li><strong>Renoprotekcia u všetkých:</strong> RAAS blokáda, cieľový TK, obmedzenie soli, statín, diuretiká pri edémoch; SGLT2 inhibítor podľa indikácie.</li>
+  <li><strong>Nefroprotekcia u všetkých:</strong> RAAS blokáda, cieľový TK, obmedzenie soli, statín, diuretiká pri edémoch; inhibítor SGLT2 podľa indikácie.</li>
   <li><strong>Tromboprofylaxia:</strong> nefrotický syndróm zvyšuje riziko VTE/renálnej trombózy — zváž antikoaguláciu pri <strong>albumíne &lt; 25 g/l</strong> a ďalších rizikových faktoroch.</li>
   <li><strong>Monitoring anti-PLA2R:</strong> imunologická odpoveď (pokles titra) predchádza klinickej remisii; perzistujúci titer = vyššie riziko relapsu.</li>
 </ul>

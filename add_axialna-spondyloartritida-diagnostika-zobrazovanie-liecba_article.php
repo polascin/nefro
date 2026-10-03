@@ -343,7 +343,7 @@ $articles[] = [
 
 <ul>
   <li>oslabenie prostaglandínmi sprostredkovanej vazodilatácie aferentnej arterioly,</li>
-  <li>zníženie glomerulárnej filtrácie,</li>
+  <li>zníženie glomerulovej filtrácie,</li>
   <li>retencia sodíka a vody,</li>
   <li>zvýšenie krvného tlaku,</li>
   <li>hyperkaliémia,</li>

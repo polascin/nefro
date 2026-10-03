@@ -68,7 +68,7 @@ $articles[] = [
 
 <h2>Potenciálny prínos: zaujímavý, ale zatiaľ nepreukázaný</h2>
 
-<p>Pacienti s CKD majú vysoké riziko sarkopénie, krehkosti a zníženej fyzickej výkonnosti. Kreatín má v kombinácii s odporovým tréningom biologicky aj klinicky plausibilný potenciál podporiť svalovú funkciu. Dôkazy zo všeobecnej populácie však nie sú náhradou za štúdie u pacientov s CKD, ktorí majú odlišnú homeostázu, komorbidity, farmakoterapiu aj nutričné obmedzenia.</p>
+<p>Pacienti s CKD majú vysoké riziko sarkopénie, krehkosti a zníženej fyzickej výkonnosti. Kreatín má v kombinácii s odporovým tréningom biologicky aj klinicky plauzibilný potenciál podporiť svalovú funkciu. Dôkazy zo všeobecnej populácie však nie sú náhradou za štúdie u pacientov s CKD, ktorí majú odlišnú homeostázu, komorbidity, farmakoterapiu aj nutričné obmedzenia.</p>
 
 <p>V exploratívnej dvojito zaslepenej štúdii u hemodialyzovaných pacientov sa počas jedného roka podávalo 5 g kreatínmonohydrátu denne. V kreatínovej skupine sa zvýšila beztuková hmota a index kostrového svalstva hodnotené bioimpedanciou, skóre malnutrície a zápalu sa však nezlepšilo. Súčasne vzrástla celková aj intracelulárna voda. Časť zdanlivého zlepšenia telesného zloženia preto mohla súvisieť s hydratáciou a výsledok nemožno interpretovať ako definitívny dôkaz nárastu kontraktilnej svalovej hmoty alebo klinického prínosu.</p>
 

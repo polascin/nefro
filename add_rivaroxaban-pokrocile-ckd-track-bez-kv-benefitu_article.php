@@ -34,7 +34,7 @@ $articles[] = [
     'content'      => <<<'HTML'
 <figure><a href="img/rivaroxaban-pokrocile-ckd-track-bez-kv-benefitu.webp" rel="noopener noreferrer" target="_blank"><img src="img/rivaroxaban-pokrocile-ckd-track-bez-kv-benefitu.webp" alt="Kapsula vysielajúca tenký lúč k srdcu, ktorý sa stráca skôr, než dorazí; bokom oblička v tieni" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Očakávaný kardiovaskulárny prínos sa pri pokročilom CKD nedostavil.</figcaption></figure>
 
-<p>Pacienti s pokročilým chronickým ochorením obličiek majú vysoké kardiovaskulárne riziko. Zároveň však majú aj vysoké riziko krvácania. Práve táto kombinácia robí preventívnu antikoagulačnú liečbu mimoriadne citlivou témou. Výsledky štúdie TRACK ukazujú, že dôkazy z bežnej kardiologickej populácie nemožno automaticky prenášať na pacientov s pokročilým CKD alebo na dialyzovaných pacientov.</p>
+<p>Pacienti s pokročilým chronickou chorobou obličiek majú vysoké kardiovaskulárne riziko. Zároveň však majú aj vysoké riziko krvácania. Práve táto kombinácia robí preventívnu antikoagulačnú liečbu mimoriadne citlivou témou. Výsledky štúdie TRACK ukazujú, že dôkazy z bežnej kardiologickej populácie nemožno automaticky prenášať na pacientov s pokročilým CKD alebo na dialyzovaných pacientov.</p>
 
 <p>V štúdii TRACK nízka dávka rivaroxabanu 2,5 mg dvakrát denne neznížila výskyt veľkých kardiovaskulárnych príhod u pacientov s CKD 4. až 5. štádia alebo so zlyhaním obličiek vyžadujúcim dialýzu. Naopak, liečba bola spojená s vyšším rizikom závažného krvácania.</p>
 
@@ -44,7 +44,7 @@ $articles[] = [
 
 <p>TRACK bola veľká randomizovaná štúdia publikovaná v časopise <em>JAMA</em> a prezentovaná na kongrese European Renal Association v Glasgowe.</p>
 
-<p>Do štúdie boli zaradení dospelí pacienti s pokročilým chronickým ochorením obličiek, teda s odhadovanou glomerulárnou filtráciou ≤ 29 ml/min/1,73 m², alebo pacienti so zlyhaním obličiek závislí od dialýzy. Zároveň išlo o osoby so zvýšeným kardiovaskulárnym rizikom. Riziko bolo definované prítomnosťou ischemickej choroby srdca, periférneho artériového ochorenia, diabetu, anamnézy nehemoragickej a nelakunárnej cievnej mozgovej príhody alebo vekom 65 rokov a viac.</p>
+<p>Do štúdie boli zaradení dospelí pacienti s pokročilým chronickou chorobou obličiek, teda s odhadovanou glomerulovou filtráciou ≤ 29 ml/min/1,73 m², alebo pacienti so zlyhaním obličiek závislí od dialýzy. Zároveň išlo o osoby so zvýšeným kardiovaskulárnym rizikom. Riziko bolo definované prítomnosťou ischemickej choroby srdca, periférneho artériového ochorenia, diabetu, anamnézy nehemoragickej a nelakunárnej cievnej mozgovej príhody alebo vekom 65 rokov a viac.</p>
 
 <p>Pacienti boli randomizovaní na rivaroxaban 2,5 mg dvakrát denne alebo placebo. Primárny kombinovaný cieľ zahŕňal kardiovaskulárne úmrtie, nefatálny infarkt myokardu, cievnu mozgovú príhodu alebo príhodu súvisiacu s periférnym artériovým ochorením.</p>
 

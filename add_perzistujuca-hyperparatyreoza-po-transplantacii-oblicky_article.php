@@ -33,7 +33,7 @@ $articles[] = [
     'content'      => <<<'HTML'
 <figure><a href="img/perzistujuca-hyperparatyreoza-po-transplantacii-oblicky.webp" rel="noopener noreferrer" target="_blank"><img src="img/perzistujuca-hyperparatyreoza-po-transplantacii-oblicky.webp" alt="Zdravá transplantovaná oblička a nad ňou prištítne telieska, ktoré stále intenzívne žiaria a vysielajú signál nadol" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Štep pracuje, no žľazy pokračujú v pôvodnom režime — a táto zotrvačnosť nesie riziko pre kosť, cievy aj samotný štep.</figcaption></figure>
 
-<p>Hyperparatyreóza patrí medzi najčastejšie prejavy poruchy minerálovo-kostného metabolizmu pri chronickej chorobe obličiek. U časti pacientov pretrváva aj po úspešnej transplantácii obličky. Klinicky nejde len o laboratórnu odchýlku: pretrvávajúca posttransplantačná hyperparatyreóza môže byť spojená s hyperkalcémiou, hypofosfatémiou, kostnými komplikáciami, vaskulárnou kalcifikáciou a potenciálne aj horšími výsledkami štepu.</p>
+<p>Hyperparatyreóza patrí medzi najčastejšie prejavy poruchy minerálovo-kostného metabolizmu pri chronickej chorobe obličiek. U časti pacientov pretrváva aj po úspešnej transplantácii obličky. Klinicky nejde len o laboratórnu odchýlku: pretrvávajúca posttransplantačná hyperparatyreóza môže byť spojená s hyperkalciémiou, hypofosfatémiou, kostnými komplikáciami, vaskulárnou kalcifikáciou a potenciálne aj horšími výsledkami štepu.</p>
 
 <p>Systematický prehľad a metaanalýza publikovaná v <em>Clinical Kidney Journal</em> hodnotili, či hyperparatyreóza pred transplantáciou a perzistujúca hyperparatyreóza po transplantácii súvisia s mortalitou a výsledkami transplantovanej obličky. Téma je prakticky dôležitá, pretože definície posttransplantačnej hyperparatyreózy nie sú jednotné a rozhodovanie o liečbe, vrátane cinakalcetu alebo paratyreoidektómie, zostáva v mnohých situáciách nejednoznačné.</p>
 
@@ -41,7 +41,7 @@ $articles[] = [
 
 <p>Po úspešnej transplantácii sa zvyčajne zlepší fosfátová retencia, metabolizmus vitamínu D aj uremické prostredie, ktoré pred transplantáciou podporovalo sekundárnu hyperparatyreózu. Napriek tomu u časti pacientov pretrváva zvýšená sekrécia parathormónu.</p>
 
-<p>Dôvodom býva dlhodobá stimulácia prištítnych teliesok počas chronickej choroby obličiek, difúzna alebo nodulárna hyperplázia a pri pokročilých formách aj znížená citlivosť na regulačné mechanizmy. V takom prípade transplantácia samotná nemusí viesť k úplnej normalizácii funkcie prištítnych teliesok. Klinicky sa tento stav často označuje ako <strong>perzistujúca posttransplantačná hyperparatyreóza</strong>; pri hyperkalcémii sa v praxi používa aj pojem terciárna hyperparatyreóza.</p>
+<p>Dôvodom býva dlhodobá stimulácia prištítnych teliesok počas chronickej choroby obličiek, difúzna alebo nodulárna hyperplázia a pri pokročilých formách aj znížená citlivosť na regulačné mechanizmy. V takom prípade transplantácia samotná nemusí viesť k úplnej normalizácii funkcie prištítnych teliesok. Klinicky sa tento stav často označuje ako <strong>perzistujúca posttransplantačná hyperparatyreóza</strong>; pri hyperkalciémii sa v praxi používa aj pojem terciárna hyperparatyreóza.</p>
 
 <h2>Cieľ systematického prehľadu a metaanalýzy</h2>
 
@@ -89,7 +89,7 @@ $articles[] = [
 
 <p>Zaujímavým výsledkom bola analýza podľa fenotypu hyperparatyreózy. Autori pozorovali gradient rizika zlyhania štepu: pri normokalcemickej hyperparatyreóze bolo HR 1,66, kým pri hyperkalcemickej hyperparatyreóze bolo HR 2,67.</p>
 
-<p>Tento gradient je klinicky dôležitý. Naznačuje, že najvyššie riziko môže mať skupina pacientov s pretrvávajúcou zvýšenou hladinou parathormónu a súčasnou hyperkalcémiou. Zároveň však ani normokalcemická hyperparatyreóza nemusí byť úplne benígny stav.</p>
+<p>Tento gradient je klinicky dôležitý. Naznačuje, že najvyššie riziko môže mať skupina pacientov s pretrvávajúcou zvýšenou hladinou parathormónu a súčasnou hyperkalciémiou. Zároveň však ani normokalcemická hyperparatyreóza nemusí byť úplne benígny stav.</p>
 
 <p>Pre nefrológa to znamená, že po transplantácii nestačí sledovať iba kreatinín a hladiny imunosupresív. Súčasťou dlhodobého sledovania má byť aj kalcium, fosfát, parathormón, vitamín D, alkalická fosfatáza a celkové hodnotenie CKD-MBD profilu.</p>
 
@@ -121,11 +121,11 @@ $articles[] = [
   <li>sérové kalcium a fosfát,</li>
   <li>25-OH vitamín D,</li>
   <li>renálnu funkciu a proteinúriu,</li>
-  <li>kostné komplikácie a príznaky hyperkalcémie,</li>
+  <li>kostné komplikácie a príznaky hyperkalciémie,</li>
   <li>sonografický alebo scintigrafický obraz prištítnych teliesok, ak je indikovaný.</li>
 </ul>
 
-<p>Osobitnú pozornosť si zaslúžia pacienti s hyperkalcémiou, výrazne zvýšeným PTH, pretrvávaním poruchy aj po prvom roku od transplantácie, zhoršovaním funkcie štepu, nefrokalcinózou, fraktúrami alebo ťažkou predtransplantačnou sekundárnou hyperparatyreózou.</p>
+<p>Osobitnú pozornosť si zaslúžia pacienti s hyperkalciémiou, výrazne zvýšeným PTH, pretrvávaním poruchy aj po prvom roku od transplantácie, zhoršovaním funkcie štepu, nefrokalcinózou, fraktúrami alebo ťažkou predtransplantačnou sekundárnou hyperparatyreózou.</p>
 
 <h2>Liečebné možnosti: cinakalcet alebo paratyreoidektómia</h2>
 
@@ -141,7 +141,7 @@ $articles[] = [
 
 <p>Autori upozorňujú, že kontinuálne analýzy PTH vykazovali značnú heterogenitu a neboli robustné v citlivostných analýzach. Samotná číselná hodnota PTH bez kontextu preto nemusí byť spoľahlivým univerzálnym prognostickým nástrojom.</p>
 
-<p>Rozhodovanie má zohľadniť čas od transplantácie, dynamiku PTH, prítomnosť hyperkalcémie, hladinu fosfátu, funkciu štepu, klinické komplikácie, predtransplantačný priebeh CKD-MBD, predchádzajúcu liečbu a celkové riziko pacienta.</p>
+<p>Rozhodovanie má zohľadniť čas od transplantácie, dynamiku PTH, prítomnosť hyperkalciémie, hladinu fosfátu, funkciu štepu, klinické komplikácie, predtransplantačný priebeh CKD-MBD, predchádzajúcu liečbu a celkové riziko pacienta.</p>
 
 <h2>Limity dostupných dôkazov</h2>
 

@@ -119,7 +119,7 @@ $articles[] = [
 <h2>Súvisiace články na portáli</h2>
 
 <ul>
-  <li><a href="article.php?slug=sparsentan-sglt2-inhibitor-iga-nefropatia-spartacus-protect">Sparsentan so SGLT2 inhibítorom pri IgA nefropatii: SPARTACUS a PROTECT OLE</a></li>
+  <li><a href="article.php?slug=sparsentan-sglt2-inhibitor-iga-nefropatia-spartacus-protect">Sparsentan s inhibítorom SGLT2 pri IgA nefropatii: SPARTACUS a PROTECT OLE</a></li>
   <li><a href="article.php?slug=kompletna-remisia-proteinurie-igan-protect-post-hoc">Kompletná remisia proteinúrie v štúdii PROTECT</a></li>
   <li><a href="article.php?slug=iga-nefropatia-algoritmus-kdigo-2025-kdoqi">Algoritmus manažmentu IgA nefropatie podľa KDIGO 2025</a></li>
 </ul>

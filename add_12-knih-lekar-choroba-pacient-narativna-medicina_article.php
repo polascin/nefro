@@ -68,7 +68,7 @@ $articles[] = [
 
 <h2>5. Theodore G. Obenchain: <em>Genius Belabored</em></h2>
 
-<p>Kniha približuje život Ignáca Fülöpa Semmelweisa. V pôrodníckej klinike vo Viedni rozpoznal súvislosť medzi vysokou mortalitou na horúčku šestonedieľok a prenosom materiálu z pitevne rukami lekárov a študentov. Po zavedení dezinfekcie rúk chlórovaným vápnom úmrtnosť výrazne klesla.</p>
+<p>Kniha približuje život Ignáca Fülöpa Semmelweisa. Na pôrodníckej klinike vo Viedni rozpoznal súvislosť medzi vysokou mortalitou na horúčku šestonedieľok a prenosom materiálu z pitevne rukami lekárov a študentov. Po zavedení dezinfekcie rúk chlórovaným vápnom úmrtnosť výrazne klesla.</p>
 
 <p>Populárny obraz osamelého génia, ktorého všetci súčasníci bezdôvodne odmietali, je však zjednodušený. Prijatie záverov komplikovala absencia dnešnej mikrobiológie, dobový vedecký rámec, komunikácia aj inštitucionálne pomery. Opatrnosť si vyžaduje aj spätné diagnostikovanie príčiny Semmelweisovho telesného a duševného úpadku. Obenchain presadzuje jednu z hypotéz, no historické podklady neumožňujú spoľahlivú definitívnu diagnózu.</p>
 
@@ -82,7 +82,7 @@ $articles[] = [
 
 <p>Lekár a vedecký esejista Lewis Thomas uvažuje o bunkovej biológii, mikroorganizmoch, ekológii, jazyku a vzájomnej závislosti živých systémov. Mnohé z textov pôvodne vychádzali v časopise <em>The New England Journal of Medicine</em>.</p>
 
-<p>Eseje sú literárne a filozofické. Niektoré biologické poznatky sa od prvého vydania v roku 1974 zmenili, preto kniha nie je aktuálnym odborným zdrojom. Jej trvalá hodnota spočíva v prepájaní vedeckého pozorovania s úžasom, pochybnosťou a vedomím zložitosti. Je to užitočná protiváha ilúzii, že presný mechanizmus automaticky znamená úplné porozumenie živému systému.</p>
+<p>Eseje sú literárne a filozofické. Niektoré biologické poznatky sa od prvého vydania v roku 1974 zmenili, preto kniha nie je aktuálnym odborným zdrojom. Jej trvalá hodnota spočíva v prepájaní vedeckého pozorovania s úžasom, pochybnosťou a vedomím zložitosti. Je to užitočná protiváha ilúzie, že presný mechanizmus automaticky znamená úplné porozumenie živému systému.</p>
 
 <h2>8. Anupam B. Jena a Christopher Worsham: <em>Random Acts of Medicine</em></h2>
 

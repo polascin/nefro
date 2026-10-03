@@ -59,7 +59,7 @@ $articles[] = [
 
 <p>Liečba prebiehala na pozadí inhibície systému renín–angiotenzín. Na rozdiel od sparsentanu, ktorý blokuje aj receptor AT1 pre angiotenzín II, atrasentan cieli výlučne receptor ET-A.</p>
 
-<p>Podiel pacientov s nežiaducimi udalosťami sa medzi skupinami podstatne nelíšil. <strong>Retencia tekutín</strong> bola hlásená u 19 zo 169 pacientov (11,2 %) pri atrasentane a u 14 zo 170 (8,2 %) pri placebe, <strong>nevviedla však k prerušeniu liečby</strong> a nevyskytli sa zjavné prípady srdcového zlyhávania ani ťažkých edémov. Štúdia pokračuje s cieľom overiť, či atrasentan spomalí pokles eGFR nad rámec samotnej inhibície systému renín–angiotenzín. KDIGO ho preto umiestňuje do stratégie na podobnú pozíciu ako sparsentan.</p>
+<p>Podiel pacientov s nežiaducimi udalosťami sa medzi skupinami podstatne nelíšil. <strong>Retencia tekutín</strong> bola hlásená u 19 zo 169 pacientov (11,2 %) pri atrasentane a u 14 zo 170 (8,2 %) pri placebe, <strong>neviedla však k prerušeniu liečby</strong> a nevyskytli sa zjavné prípady srdcového zlyhávania ani ťažkých edémov. Štúdia pokračuje s cieľom overiť, či atrasentan spomalí pokles eGFR nad rámec samotnej inhibície systému renín–angiotenzín. KDIGO ho preto umiestňuje do stratégie na podobnú pozíciu ako sparsentan.</p>
 
 <h2>Komplement: iptakopan a alternatívna dráha</h2>
 
@@ -206,7 +206,7 @@ $articles[] = [
   <li><a href="article.php?slug=iptakopan-iga-nefropatia-applause-igan-24-mesiacov">Iptakopan pri IgA nefropatii: 24-mesačné výsledky APPLAUSE-IgAN</a></li>
   <li><a href="article.php?slug=atacicept-trutakna-iga-nefropatia-fda-proteinuria">Atacicept pri IgA nefropatii a redukcia proteinúrie</a></li>
   <li><a href="article.php?slug=cielenie-b-buniek-imunitne-podmienene-nefropatie-kdigo">Cielenie B buniek pri imunitne podmienených nefropatiách podľa KDIGO</a></li>
-  <li><a href="article.php?slug=sparsentan-sglt2-inhibitor-iga-nefropatia-spartacus-protect">Sparsentan so SGLT2 inhibítorom pri IgA nefropatii</a></li>
+  <li><a href="article.php?slug=sparsentan-sglt2-inhibitor-iga-nefropatia-spartacus-protect">Sparsentan s inhibítorom SGLT2 pri IgA nefropatii</a></li>
 </ul>
 
 <hr>

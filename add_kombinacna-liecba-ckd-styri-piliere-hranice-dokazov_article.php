@@ -103,11 +103,11 @@ $articles[] = [
 
 <p>Malá krátkodobá skrížená štúdia <a href="https://pubmed.ncbi.nlm.nih.gov/35440501/" target="_blank" rel="noopener noreferrer">ROTATE-3</a> u 46 pacientov ukázala pri dapagliflozíne s eplerenónom väčší pokles UACR a menej epizód hyperkaliémie než pri samotnom eplerenóne. Podobným smerom ukázali analýzy programu FIDELITY a veľkých štúdií s inhibítormi SGLT2. V <a href="https://pubmed.ncbi.nlm.nih.gov/37876229/" target="_blank" rel="noopener noreferrer">spoločnej analýze CREDENCE a DAPA-CKD</a> bolo riziko dočasného alebo trvalého prerušenia RASi najmenej na štyri týždne pri inhibítore SGLT2 o 15 % nižšie než pri placebe (HR 0,85; 95 % IS 0,74–0,99). Observačné údaje z bežnej praxe tento signál podporujú, nemôžu však nahradiť randomizáciu.</p>
 
-<p><strong>Riziko hyperkaliémie sa nezruší.</strong> Ani priaznivý populačný priemer nie je zárukou bezpečnosti u jednotlivca s nízkou eGFR, vysokou vstupnou kalémiou, interkurentným ochorením alebo súbežnými liekmi zvyšujúcimi draslík. Pri vrstvení liečby treba naďalej kontrolovať sérový draslík, eGFR, krvný tlak a objemový stav.</p>
+<p><strong>Riziko hyperkaliémie sa nezruší.</strong> Ani priaznivý populačný priemer nie je zárukou bezpečnosti u jednotlivca s nízkou eGFR, vysokou vstupnou kaliémiou, interkurentným ochorením alebo súbežnými liekmi zvyšujúcimi draslík. Pri vrstvení liečby treba naďalej kontrolovať sérový draslík, eGFR, krvný tlak a objemový stav.</p>
 
 <h2>CONFIDENCE: dôkaz pre albuminúriu, nie ešte pre zlyhanie obličiek</h2>
 
-<p>Významný krok ku kombinačnej liečbe priniesla štúdia <a href="https://doi.org/10.1056/NEJMoa2410659" target="_blank" rel="noopener noreferrer">CONFIDENCE</a>. U dospelých s diabetom 2. typu, CKD, eGFR 30–90 mL/min/1,73 m² a UACR 100–5 000 mg/g porovnala súčasné začatie finerenónu s empagliflozínom s každou monoterapiou. Po 180 dňoch sa UACR pri kombinácii znížil oproti východiskovej hodnote približne o 52 %; relatívny pokles bol o 29 % väčší než pri finerenóne a o 32 % väčší než pri empagliflozíne.</p>
+<p>Významný krok ku kombinačnej liečbe priniesla štúdia <a href="https://doi.org/10.1056/NEJMoa2410659" target="_blank" rel="noopener noreferrer">CONFIDENCE</a>. U dospelých s diabetom 2. typu, CKD, eGFR 30–90 ml/min/1,73 m² a UACR 100–5 000 mg/g porovnala súčasné začatie finerenónu s empagliflozínom s každou monoterapiou. Po 180 dňoch sa UACR pri kombinácii znížil oproti východiskovej hodnote približne o 52 %; relatívny pokles bol o 29 % väčší než pri finerenóne a o 32 % väčší než pri empagliflozíne.</p>
 
 <p>Zdrojový editoriál na jednom mieste uvádza dapagliflozín a spomalenie poklesu eGFR. Presné znenie dôkazu je užšie: CONFIDENCE testovala <strong>empagliflozín</strong>, jej primárnym ukazovateľom bola zmena UACR v 180. deň a nebola výsledkovou štúdiou dlhodobej progresie CKD. Pokles albuminúrie je klinicky významný náhradný ukazovateľ, ale 52-percentný pokles UACR neznamená 52-percentné zníženie rizika dialýzy alebo úmrtia.</p>
 
@@ -119,7 +119,7 @@ $articles[] = [
 
 <p>Štúdia STRONG-HF ukázala prínos rýchleho zavádzania liečby po hospitalizácii pre akútne srdcové zlyhávanie. Pre nefrológiu je to zaujímavá <strong>implementačná analógia</strong>, nie priamy dôkaz účinnosti alebo bezpečnosti rýchlej štvorpilierovej liečby CKD. Bližší údaj poskytuje CONFIDENCE pre súčasné začatie dvoch liekov, stále však iba počas 180 dní a s albuminúriou ako primárnym ukazovateľom.</p>
 
-<p><a href="https://doi.org/10.2337/dc26-S011" target="_blank" rel="noopener noreferrer">Štandardy ADA 2026</a> uvádzajú, že súčasné začatie inhibítora SGLT2 a finerenónu možno zvážiť u dospelých s diabetom 2. typu, UACR najmenej 100 mg/g, eGFR 30–90 mL/min/1,73 m² a liečbou RASi, a to na základe bezpečnosti a priaznivého vplyvu na albuminúriu. Formulácia „možno zvážiť“ nie je univerzálnym odporúčaním ani dôkazom dlhodobého výsledkového prínosu tejto dvojkombinácie.</p>
+<p><a href="https://doi.org/10.2337/dc26-S011" target="_blank" rel="noopener noreferrer">Štandardy ADA 2026</a> uvádzajú, že súčasné začatie inhibítora SGLT2 a finerenónu možno zvážiť u dospelých s diabetom 2. typu, UACR najmenej 100 mg/g, eGFR 30–90 ml/min/1,73 m² a liečbou RASi, a to na základe bezpečnosti a priaznivého vplyvu na albuminúriu. Formulácia „možno zvážiť“ nie je univerzálnym odporúčaním ani dôkazom dlhodobého výsledkového prínosu tejto dvojkombinácie.</p>
 
 <p>Rozumným cieľom je <strong>včasné, ale individualizované vrstvenie</strong> indikovaných liekov. O poradí rozhodujú naliehavosť rizika, krvný tlak, eGFR, UACR, sérový draslík, objemový stav, diabetes, srdcové zlyhávanie, aterosklerotické kardiovaskulárne ochorenie, obezita, tolerancia, počet liekov, preferencie a ich dostupnosť.</p>
 
@@ -129,11 +129,11 @@ $articles[] = [
 
 <p>Pri súbežnom alebo rýchlom nasadení viacerých liekov sa však ich hemodynamické účinky môžu prekryť. Pokles eGFR väčší než približne 30 %, pretrvávajúce zhoršovanie, hypotenzia, ortostatické ťažkosti, interkurentné ochorenie alebo známky objemovej deplécie si vyžadujú klinické zhodnotenie príčiny. Kontrola približne v priebehu 1–4 týždňov – skôr pri vysokom riziku – má zahŕňať krvný tlak, symptómy, kreatinín/eGFR, draslík a objemový stav; presný interval sa riadi použitým liekom a rizikom pacienta.</p>
 
-<h2>Nová informácia po publikovaní editorialu: FIND-CKD</h2>
+<h2>Nová informácia po publikovaní editoriálu: FIND-CKD</h2>
 
-<p>V čase online publikovania editorialu bola úloha finerenónu pri CKD bez diabetu otvorenou otázkou. Dňa 4. júna 2026 však boli online publikované výsledky štúdie <a href="https://doi.org/10.1056/NEJMoa2604625" target="_blank" rel="noopener noreferrer">FIND-CKD</a>. Zahŕňala 1 584 dospelých bez diabetu, s eGFR 25 až menej než 90 mL/min/1,73 m², UACR 200–3 500 mg/g a liečbou RASi.</p>
+<p>V čase online publikovania editoriálu bola úloha finerenónu pri CKD bez diabetu otvorenou otázkou. Dňa 4. júna 2026 však boli online publikované výsledky štúdie <a href="https://doi.org/10.1056/NEJMoa2604625" target="_blank" rel="noopener noreferrer">FIND-CKD</a>. Zahŕňala 1 584 dospelých bez diabetu, s eGFR 25 až menej než 90 ml/min/1,73 m², UACR 200–3 500 mg/g a liečbou RASi.</p>
 
-<p>Celkový ročný sklon eGFR bol −3,3 mL/min/1,73 m² pri finerenóne a −4,0 pri placebe; rozdiel predstavoval 0,7 mL/min/1,73 m² za rok (95 % IS 0,3–1,1; p &lt; 0,001). Zložený obličkovo-kardiovaskulárny ukazovateľ bol menej častý pri finerenóne (HR 0,77; 95 % IS 0,60–0,99), zatiaľ čo samotný zložený obličkový ukazovateľ mal HR 0,78 s 95 % IS 0,60–1,01. Hyperkaliémia sa vyskytla u 17,0 % pacientov pri finerenóne a u 13,3 % pri placebe; pre hyperkaliémiu liečbu ukončilo 1,5 % oproti 0,1 %.</p>
+<p>Celkový ročný sklon eGFR bol −3,3 ml/min/1,73 m² pri finerenóne a −4,0 pri placebe; rozdiel predstavoval 0,7 ml/min/1,73 m² za rok (95 % IS 0,3–1,1; p &lt; 0,001). Zložený obličkovo-kardiovaskulárny ukazovateľ bol menej častý pri finerenóne (HR 0,77; 95 % IS 0,60–0,99), zatiaľ čo samotný zložený obličkový ukazovateľ mal HR 0,78 s 95 % IS 0,60–1,01. Hyperkaliémia sa vyskytla u 17,0 % pacientov pri finerenóne a u 13,3 % pri placebe; pre hyperkaliémiu liečbu ukončilo 1,5 % oproti 0,1 %.</p>
 
 <p>FIND-CKD teda rozšírila dôkazy o finerenóne za hranice diabetu, najmä na albuminurickú nediabetickú CKD. Neznamená to však automatickú indikáciu pre každú nediabetickú CKD ani okamžitú zmenu registračných podmienok. KDIGO v marci 2026 oznámilo <a href="https://kdigo.org/kdigo-announces-update-to-2024-ckd-guideline/" target="_blank" rel="noopener noreferrer">cielenú aktualizáciu odporúčania CKD</a> pre inhibítory SGLT2, agonisty receptora GLP-1 a nsMRA pri CKD bez diabetu; jej výsledok treba odlíšiť od stále platného odporúčania z roku 2024.</p>
 
@@ -158,7 +158,7 @@ $articles[] = [
   <li><strong>Optimalizovať základ.</strong> Riešiť sodík, stravu, pohyb, fajčenie, hmotnosť, tlak, lipidy a glykémiu. RASi podať a titrovať iba tam, kde je indikovaný a tolerovaný; nekombinovať ACE inhibítor s ARB.</li>
   <li><strong>Neodkladať inhibítor SGLT2, ak je indikovaný.</strong> Jeho prínos presahuje kontrolu glykémie a zahŕňa aj mnohých pacientov bez diabetu.</li>
   <li><strong>Finerenón pridať podľa indikácie a rizika.</strong> Rozhodujú albuminúria, eGFR, draslík a základná blokáda RAS; po nasadení alebo úprave dávky treba laboratórnu kontrolu.</li>
-  <li><strong>Liečbu založenú na GLP-1 vyberať podľa celého profilu.</strong> Uplatnenie neurčuje iba albuminúria, ale aj diabetes 2. typu, obezita, kontrola glykémie, kardiovaskulárne riziko, frailty a nutričný stav.</li>
+  <li><strong>Liečbu založenú na GLP-1 vyberať podľa celého profilu.</strong> Uplatnenie neurčuje iba albuminúria, ale aj diabetes 2. typu, obezita, kontrola glykémie, kardiovaskulárne riziko, krehkosť a nutričný stav.</li>
   <li><strong>Tempo prispôsobiť pacientovi.</strong> Vysoké riziko môže hovoriť pre rýchlejšie vrstvenie; hypotenzia, hyperkaliémia, nestabilný objemový stav, polyfarmácia alebo krehkosť vyžadujú opatrnejší postup.</li>
   <li><strong>Vopred naplánovať monitorovanie a edukáciu.</strong> Pacient má vedieť, ktoré príznaky hlásiť a kedy dočasne prerušiť inhibítor SGLT2. Klinický tím má určiť termín kontroly tlaku, eGFR a draslíka ešte pri predpise.</li>
 </ol>

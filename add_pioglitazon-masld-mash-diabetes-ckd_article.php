@@ -133,7 +133,7 @@ $articles[] = [
 
 <h3>Karcinóm močového mechúra</h3>
 
-<p>Údaje o karcinóme močového mechúra nie sú úplne jednotné. Niektoré observačné analýzy a meta-analýzy naznačili malé časovo alebo dávkovo závislé riziko, iné veľké kohorty nepotvrdili významnú asociáciu. Liek sa nemá používať pri aktívnom karcinóme močového mechúra a nevysvetlená makroskopická hematúria si vyžaduje vyšetrenie, nie empirické pokračovanie liečby.</p>
+<p>Údaje o karcinóme močového mechúra nie sú úplne jednotné. Niektoré observačné analýzy a metaanalýzy naznačili malé časovo alebo dávkovo závislé riziko, iné veľké kohorty nepotvrdili významnú asociáciu. Liek sa nemá používať pri aktívnom karcinóme močového mechúra a nevysvetlená makroskopická hematúria si vyžaduje vyšetrenie, nie empirické pokračovanie liečby.</p>
 
 <h3>Hmotnosť a hypoglykémia</h3>
 

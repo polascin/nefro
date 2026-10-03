@@ -34,7 +34,7 @@ $articles[] = [
     'content'      => <<<'HTML'
 <figure><a href="img/kontrola-draslika-ckd-edukovat-nie-strasit.webp" rel="noopener noreferrer" target="_blank"><img src="img/kontrola-draslika-ckd-edukovat-nie-strasit.webp" alt="Potraviny bohaté na draslík pokojne rozložené vedľa obličky s vyrovnanou svetelnou hladinou" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Plošné zakazovanie ochudobňuje stravu — cieľom je vedieť, čo a koľko, nie sa báť.</figcaption></figure>
 
-<p>Hyperkaliémia môže byť pri pokročilom ochorení obličiek vážnym a rýchlo sa rozvíjajúcim problémom. To však neznamená, že každého pacienta treba automaticky vystrašiť dlhým zoznamom zakázaných potravín. Práve naopak. Moderný prístup k diétnym odporúčaniam pri chronickom ochorení obličiek a dialýze by mal byť individuálny, praktický a zrozumiteľný.</p>
+<p>Hyperkaliémia môže byť pri pokročilom ochorení obličiek vážnym a rýchlo sa rozvíjajúcim problémom. To však neznamená, že každého pacienta treba automaticky vystrašiť dlhým zoznamom zakázaných potravín. Práve naopak. Moderný prístup k diétnym odporúčaniam pri chronickej chorobe obličiek a dialýze by mal byť individuálny, praktický a zrozumiteľný.</p>
 
 <p>Starší spôsob edukácie často stál na jednoduchom odkaze: nejedzte banány, nepite pomarančový džús, vyhýbajte sa zemiakom, strukovinám a ďalším potravinám s vyšším obsahom draslíka. Takýto prístup síce vychádzal zo snahy predísť hyperkaliémii, no u mnohých pacientov vyvolával strach, rezignáciu alebo zbytočné obmedzenia. Pacient, ktorý sa bojí jedla, často lepšie nespolupracuje. Skôr sa stratí v zákazoch.</p>
 
@@ -80,7 +80,7 @@ $articles[] = [
 
 <h2>Zápcha môže zhoršovať kontrolu draslíka</h2>
 
-<p>Pri chronickom ochorení obličiek sa často zhoršuje zápcha. Prispievajú k tomu obmedzenia tekutín, nižší príjem vlákniny, znížená pohybová aktivita a viaceré lieky.</p>
+<p>Pri chronickej chorobe obličiek sa často zhoršuje zápcha. Prispievajú k tomu obmedzenia tekutín, nižší príjem vlákniny, znížená pohybová aktivita a viaceré lieky.</p>
 
 <p>Z pohľadu draslíka je dôležité, že pri poklese renálneho vylučovania sa črevo môže podieľať na kompenzačnom vylučovaní draslíka. Ak je však pasáž spomalená, vstrebávanie draslíka v čreve môže byť vyššie a tento kompenzačný mechanizmus nemusí byť dostatočne účinný.</p>
 

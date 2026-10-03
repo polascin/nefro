@@ -189,7 +189,7 @@ $articles[] = [
 
 <ul>
 <li>kreatínkináza vrátane dynamiky, myoglobín v moči,</li>
-<li>kreatinín, urea, odhad glomerulárnej filtrácie v čase,</li>
+<li>kreatinín, urea, odhad glomerulovej filtrácie v čase,</li>
 <li>ionogram vrátane kália, fosforu a kalcia, acidobázická rovnováha,</li>
 <li>pečeňové testy a koagulácia – oneskorená hepatopatia posúva diagnózu k amatoxínom,</li>
 <li>bilancia tekutín a diuréza.</li>

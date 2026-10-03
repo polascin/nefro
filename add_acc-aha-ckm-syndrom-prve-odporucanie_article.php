@@ -58,13 +58,13 @@ $articles[] = [
 
 <p><strong>Štádium 4</strong> zahŕňa už diagnostikované kardiovaskulárne ochorenie, napríklad ischemickú chorobu srdca, srdcové zlyhávanie, cievnu mozgovú príhodu, periférne artériové ochorenie alebo fibriláciu predsiení, spolu s nadváhou, obezitou, metabolickými rizikovými faktormi alebo ochorením obličiek.</p>
 
-<h2>Liečba: od životného štýlu po GLP-1 a SGLT2 inhibítory</h2>
+<h2>Liečba: od životného štýlu po GLP-1 a inhibítory SGLT2</h2>
 
 <p>Manažment má byť odstupňovaný podľa štádia ochorenia. V skorších štádiách sa kladie dôraz na intenzívnu úpravu životného štýlu, redukciu hmotnosti, farmakoterapiu obezity a u vybraných pacientov aj na metabolickú a bariatrickú chirurgiu.</p>
 
 <p>Významnou novinkou je, že odporúčanie po prvý raz zahŕňa <strong>GLP-1 receptorové agonisty</strong> pre vybraných pacientov s obezitou, diabetom 2. typu a ďalšími kardiovaskulárnymi rizikovými faktormi s cieľom znížiť riziko kardiálnych príhod.</p>
 
-<p>U pacientov s diabetom 2. typu a CKM syndrómom v štádiu 2 alebo 3 sa ako prah pre začatie liečby GLP-1 terapiou, SGLT2 inhibítormi alebo ich kombináciou uvádza 10-ročné riziko PREVENT-CVD najmenej 7,5 %.</p>
+<p>U pacientov s diabetom 2. typu a CKM syndrómom v štádiu 2 alebo 3 sa ako prah pre začatie liečby GLP-1 terapiou, inhibítormi SGLT2 alebo ich kombináciou uvádza 10-ročné riziko PREVENT-CVD najmenej 7,5 %.</p>
 
 <h2>Potreba koordinovanej starostlivosti</h2>
 

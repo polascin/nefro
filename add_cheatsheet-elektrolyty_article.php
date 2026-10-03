@@ -29,7 +29,7 @@ $articles[] = [
   <figcaption>Sérové referenčné rozsahy hlavných elektrolytov (mmol/l).</figcaption>
 </figure>
 
-<p>Ťahák k poruchám <strong>sodíka, draslíka, vápnika, magnézia a fosfátov</strong> — normálne hodnoty, hlavné príčiny, EKG nálezy a bezpečné limity korekcie. Interaktívne postupy: <a href="nastroj_hyponatremia.php">algoritmus hyponatrémie</a>, <a href="nastroj_hypokalemia.php">sprievodca hypokaliémiou</a>. Kalkulačky: <a href="calculator_na.php">sodík/korekcia</a>, <a href="calculator_ca.php">korigovaný vápnik</a>.</p>
+<p>Ťahák k poruchám <strong>sodíka, draslíka, vápnika, magnézia a fosfátov</strong> — normálne hodnoty, hlavné príčiny, EKG nálezy a bezpečné limity korekcie. Interaktívne postupy: <a href="nastroj_hyponatremia.php">algoritmus hyponatriémie</a>, <a href="nastroj_hypokalemia.php">sprievodca hypokaliémiou</a>. Kalkulačky: <a href="calculator_na.php">sodík/korekcia</a>, <a href="calculator_ca.php">korigovaný vápnik</a>.</p>
 
 <h2>Normálne hodnoty (sérum)</h2>
 <div class="table-responsive" role="region" aria-label="Normálne hodnoty (sérum)" tabindex="0">
@@ -55,8 +55,8 @@ $articles[] = [
     <tr><th scope="col">Porucha</th><th scope="col">Hlavné príčiny</th><th scope="col">Kľúč k manažmentu</th></tr>
   </thead>
   <tbody>
-    <tr><td>Hyponatrémia</td><td>SIADH, hypovolémia, srdcové/hepatálne/renálne zlyhanie, polydipsia, hypotyreóza/Addison</td><td>Najprv tonicita + objem; rýchlosť korekcie <strong>≤ 8–10 mmol/l/24 h</strong> (≤ 6 pri vysokom riziku) — prevencia osmotického demyelinizačného syndrómu (ODS)</td></tr>
-    <tr><td>Hypernatrémia</td><td>Strata vody (hnačka, horúčka, diabetes insipidus), nedostatočný príjem, hypertonické roztoky</td><td>Vypočítaj deficit vody; pokles Na<sup>+</sup> <strong>≤ 10–12 mmol/l/24 h</strong> — prevencia edému mozgu</td></tr>
+    <tr><td>Hyponatriémia</td><td>SIADH, hypovolémia, srdcové/hepatálne/renálne zlyhanie, polydipsia, hypotyreóza/Addison</td><td>Najprv tonicita + objem; rýchlosť korekcie <strong>≤ 8–10 mmol/l/24 h</strong> (≤ 6 pri vysokom riziku) — prevencia osmotického demyelinizačného syndrómu (ODS)</td></tr>
+    <tr><td>Hypernatriémia</td><td>Strata vody (hnačka, horúčka, diabetes insipidus), nedostatočný príjem, hypertonické roztoky</td><td>Vypočítaj deficit vody; pokles Na<sup>+</sup> <strong>≤ 10–12 mmol/l/24 h</strong> — prevencia edému mozgu</td></tr>
   </tbody>
 </table>
 </div>

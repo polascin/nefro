@@ -35,7 +35,7 @@ $articles[] = [
     'content'      => <<<'HTML'
 <figure><a href="img/finerenon-nefroprotekcia-ckd-3-4-bez-ohladu-na-diabetes.webp" rel="noopener noreferrer" target="_blank"><img src="img/finerenon-nefroprotekcia-ckd-3-4-bez-ohladu-na-diabetes.webp" alt="Dve obličky — jedna s cukrovými iskrami, druhá bez — obe dostávajú rovnako silný ochranný lúč" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Ochrana obličky nezávisí od prítomnosti diabetu — to je jadro nálezu.</figcaption></figure>
 
-<p>Portál Physicians Weekly opisuje výsledky štúdie, v ktorej <strong>finerenón</strong> dokázal <strong>spomaliť progresiu chronického ochorenia obličiek (CKD)</strong> u pacientov v <strong>3.–4. štádiu</strong> s <strong>eGFR 20 až 60 ml/min</strong> a <strong>stredne ťažkou až ťažkou albuminúriou</strong>, a to <strong>nezávisle od prítomnosti diabetu</strong>. Text zdôrazňuje aj bezpečnostný aspekt: nárast <strong>hyperkaliémie</strong> sa nepozoroval.</p>
+<p>Portál Physicians Weekly opisuje výsledky štúdie, v ktorej <strong>finerenón</strong> dokázal <strong>spomaliť progresiu chronickej choroby obličiek (CKD)</strong> u pacientov v <strong>3.–4. štádiu</strong> s <strong>eGFR 20 až 60 ml/min</strong> a <strong>stredne ťažkou až ťažkou albuminúriou</strong>, a to <strong>nezávisle od prítomnosti diabetu</strong>. Text zdôrazňuje aj bezpečnostný aspekt: nárast <strong>hyperkaliémie</strong> sa nepozoroval.</p>
 
 <h2>Kto bol v štúdii</h2>
 

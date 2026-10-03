@@ -97,7 +97,7 @@ otvára dve roviny:</p>
 vyvodiť kauzalitu ani to, že zníženie IS automaticky zlepší kogníciu.</p>
 
 <h2>Limity, ktoré sú dôležité na správnu interpretáciu</h2>
-<p>Medscape explicitne uvádza limity, ktoré si zaslúžia zdôrazniť:</p>
+<p>Medscape explicitne uvádza limity, ktoré si zaslúžia zdôraznenie:</p>
 <ul>
   <li><strong>prierezový dizajn</strong> neumožňuje určiť príčinu a následok,</li>
   <li><strong>MMSE</strong> nemusí optimálne zachytiť všetky domény kognície, najmä

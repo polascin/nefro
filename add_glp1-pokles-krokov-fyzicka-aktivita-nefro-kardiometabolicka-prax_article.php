@@ -130,7 +130,7 @@ $articles[] = [
 <p>Maharjan pre Medscape uviedla tri mechanizmy, ktoré sa môžu sčítať. Žiadny z nich táto kohorta netestovala.</p>
 
 <ol>
-  <li><strong>Energetická šetrnosť a NEAT.</strong> NEAT (<em>non-exercise activity thermogenesis</em>) je energetický výdaj spontánneho pohybu mimo štruktúrovaného cvičenia: vstávanie, chôdza po domácnosti, prešľapovanie. Pri prudkom poklese apetítu a kalorického príjmu môže telo šetriť energiu práve obmedzením tohto „nezámerého“ pohybu.</li>
+  <li><strong>Energetická šetrnosť a NEAT.</strong> NEAT (<em>non-exercise activity thermogenesis</em>) je energetický výdaj spontánneho pohybu mimo štruktúrovaného cvičenia: vstávanie, chôdza po domácnosti, prešľapovanie. Pri prudkom poklese apetítu a kalorického príjmu môže telo šetriť energiu práve obmedzením tohto „nezámerného“ pohybu.</li>
   <li><strong>Nežiaduce účinky.</strong> Nauzea, včasná sýtosť, znížený príjem a únava na začiatku titrácie môžu znížiť chuť aj kapacitu hýbať sa.</li>
   <li><strong>Strata chudej hmoty.</strong> Časť úbytku hmotnosti pri agonistoch GLP-1 tvorí beztuková hmota. Menej svalstva môže znížiť kapacitu aj „chuť“ na záťaž a uzavrieť slučku: menej pohybu → ďalšia strata svalstva.</li>
 </ol>

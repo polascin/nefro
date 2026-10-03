@@ -40,7 +40,7 @@ $articles[] = [
 
 <h2>Diagnózu potvrdzuje epigenetické a molekulárne vyšetrenie</h2>
 
-<p>PWS vzniká stratou expresie génov, ktoré sa v kritickej oblasti 15q11.2-q13 za normálnych okolností exprimujú z otcovskej alely. Najčastejším mechanizmom je delécia otcovského úseku, ďalším je maternálná uniparentálna dizómia chromozómu 15 a zriedkavejšou príčinou je imprintingová porucha. Fenotyp preto nemožno zredukovať na poškodenie jediného génu.</p>
+<p>PWS vzniká stratou expresie génov, ktoré sa v kritickej oblasti 15q11.2-q13 za normálnych okolností exprimujú z otcovskej alely. Najčastejším mechanizmom je delécia otcovského úseku, ďalším je maternálna uniparentálna dizómia chromozómu 15 a zriedkavejšou príčinou je imprintingová porucha. Fenotyp preto nemožno zredukovať na poškodenie jediného génu.</p>
 
 <p>Podľa aktualizovaného GeneReviews možno diagnózu a vo väčšine prípadov aj mechanizmus objasniť kombináciou analýzy metylácie DNA a oligonukleotidového SNP poľa. Metylácia preukáže výlučne maternálny imprinting v kritickej oblasti; chromozómové pole pomáha rozlíšiť deléciu, niektoré formy uniparentálnej dizómie a deléciu imprintingového centra. Pri nejednoznačnom výsledku sa dopĺňajú ďalšie polymorfizmové alebo cielene zvolené testy. Určenie mechanizmu je dôležité aj pre genetické poradenstvo, pretože riziko opakovania v rodine nie je pri všetkých mechanizmoch rovnaké.</p>
 
@@ -52,7 +52,7 @@ $articles[] = [
 
 <h2>Diazoxid cholín: schválenie v USA, nie v Európskej únii</h2>
 
-<p>Najvýznamnejšou aktuálnou zmenou je diazoxid cholín s predĺženým uvoľňovaním (diazoxide choline extended-release, Vykat XR). Americká FDA ho 26. marca 2025 schválila na liečbu hyperfágie u dospelých a detí s PWS vo veku od štyroch rokov. Nemožno ho zamieňať za perorálnu suspenziu diazoxidu, pretože liekové formy majú odlišnú farmakokinetiku.</p>
+<p>Najvýznamnejšou aktuálnou zmenou je diazoxid cholín s predĺženým uvoľňovaním (diazoxide choline extended-release, Vykat XR). Americká FDA ho 26. marca 2025 schválila na liečbu hyperfágie u dospelých a detí s PWS vo veku od štyroch rokov. Nemožno ho zamieňať s perorálnou suspenziou diazoxidu, pretože liekové formy majú odlišnú farmakokinetiku.</p>
 
 <p>Registračnú účinnosť podporila 16-týždňová randomizovaná vysadzovacia fáza so 77 účastníkmi, ktorí pred randomizáciou dostávali liek priemerne 3,3 roka. Pri prechode na placebo sa skóre hyperfágie zhoršilo viac ako pri pokračovaní liečby; rozdiel zmien na škále HQ-CT bol −5,0 bodu v prospech Vykat XR (95 % interval spoľahlivosti −8,1 až −1,8). Tento dizajn dokladá udržanie účinku u predliečenej populácie, nie účinnosť začatia liečby u neselektovaných pacientov.</p>
 

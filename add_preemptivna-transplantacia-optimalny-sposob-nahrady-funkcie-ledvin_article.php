@@ -33,7 +33,7 @@ $articles[] = [
 
 <p>Transplantácia obličky predstavuje optimálny spôsob náhrady funkcie obličiek u pacientov s chronickým zlyhávaním obličiek (CKD – chronic kidney disease). Z pohľadu prežívania pacientov, kvality života aj ekonomickej efektívnosti prekonáva hemodialýzu aj peritoneálnu dialýzu. Benefit transplantácie je zrejmý naprieč všetkými vekovými skupinami v porovnaní s pacientmi na čakacej listine.</p>
 
-<p>Preemptívna transplantácia je transplantácia vykonaná <em>pred</em> zahájením akejkoľvek dialyzačnej liečby. Tento prehľad vychádza z českého odborného článku prof. MUDr. Tomáša Reischiga, Ph.D. (Postgraduální nefrologie, 2026) a sumarizuje dostupné dôkazy, vrátane ich limitácií.</p>
+<p>Preemptívna transplantácia je transplantácia vykonaná <em>pred</em> začatím akejkoľvek dialyzačnej liečby. Tento prehľad vychádza z českého odborného článku prof. MUDr. Tomáša Reischiga, Ph.D. (Postgraduální nefrologie, 2026) a sumarizuje dostupné dôkazy, vrátane ich limitácií.</p>
 
 <h2>Výhody preemptívnej transplantácie – čo hovoria observačné štúdie</h2>
 
@@ -65,14 +65,14 @@ $articles[] = [
   <li><strong>Prevencia kardiovaskulárnych komplikácií dialýzy:</strong> Hemodialyzačné procedúry sú asociované so subklinickými epizódami segmentárnej myokardiálnej ischémie, kumulatívnou fibróznou prestavbou myokardu a poklesom systolickej funkcie ľavej komory. Podobné hemodynamické efekty boli popísané aj pri peritoneálnej dialýze. Prevencia expozície dialýze môže znižovať kardiovaskulárnu mortalitu.</li>
   <li><strong>Urémia a systémový zápal:</strong> Dlhodobá urémia vedie k malnutrícii, chronickému zápalu a kostnej chorobe, ktoré nepriaznivo ovplyvňujú výsledky transplantácie.</li>
   <li><strong>Imunologické faktory:</strong> Niektoré pilotné štúdie naznačili nižší výskyt akútnej rejekcie pri preemptívnej transplantácii od živého darcu, čo nebolo konzistentne potvrdené pri transplantáciách od zosnulých darcov ani novšími metaanalýzami.</li>
-  <li><strong>Lead-time bias</strong> (viď vyššie) – čiastočne prispieva k zdanlivému benefitu.</li>
+  <li><strong>Lead-time bias</strong> (pozri vyššie) – čiastočne prispieva k zdanlivému benefitu.</li>
 </ul>
 
 <h2>Načasovanie preemptívnej transplantácie</h2>
 
 <p>KDIGO odporúčajú preemptívnu transplantáciu pri <strong>eGFR &lt; 10 ml/min/1,73 m²</strong>, prípadne skôr pri prítomnosti symptómov terminálneho zlyhania obličiek. Toto je v súlade s odporúčaniami Českej transplantačnej spoločnosti.</p>
 
-<p>Transplantácia pri vyššej reziduálnej funkcii (eGFR &gt; 10–20 ml/min/1,73 m²) nevedie k ďalšiemu zlepšeniu výsledkov – prežívanie štepu aj mortalita sú porovnateľné v pomerne širokom rozsahu eGFR pri preemptívnej transplantácii (&lt; 10 ml/min/1,73 m² až &gt; 20 ml/min/1,73 m²). Príliš skoré zahájenie náhrady funkcie obličiek (vrátane transplantácie) nie je odôvodnené – randomizovaná štúdia IDEAL nepreukázala benefit skorého zahájenia hemodialýzy.</p>
+<p>Transplantácia pri vyššej reziduálnej funkcii (eGFR &gt; 10–20 ml/min/1,73 m²) nevedie k ďalšiemu zlepšeniu výsledkov – prežívanie štepu aj mortalita sú porovnateľné v pomerne širokom rozsahu eGFR pri preemptívnej transplantácii (&lt; 10 ml/min/1,73 m² až &gt; 20 ml/min/1,73 m²). Príliš skoré začatie náhrady funkcie obličiek (vrátane transplantácie) nie je odôvodnené – randomizovaná štúdia IDEAL nepreukázala benefit skorého začatia hemodialýzy.</p>
 
 <h2>Zastúpenie preemptívnych transplantácií v praxi</h2>
 
@@ -80,7 +80,7 @@ $articles[] = [
 
 <ul>
   <li>V USA: okolo 9 % pri transplantáciách od zosnulého darcu a 33 % od živého darcu (stagnujúce zastúpenie).</li>
-  <li>V Európe (ERA register, 2023): preemptívnou transplantáciou zahájilo náhradu funkcie obličiek len 6 % pacientov (19 % zo všetkých transplantácií), s výraznými rozdielmi medzi krajinami. V rokoch 2000–2019 bol v Európe zrejmý rastúci trend (zo 7 % na 18 %).</li>
+  <li>V Európe (ERA register, 2023): preemptívnou transplantáciou začalo náhradu funkcie obličiek len 6 % pacientov (19 % zo všetkých transplantácií), s výraznými rozdielmi medzi krajinami. V rokoch 2000–2019 bol v Európe zrejmý rastúci trend (zo 7 % na 18 %).</li>
   <li>V Českej republike: podmienky sú teoreticky priaznivé vďaka krátkej čakacej dobe (medián 5 mesiacov v roku 2024). Napriek tomu zaostáva preemptívne zaradenie pacientov na čakaciu listinu – iba v niektorých centrách je preemptívne zaradených aspoň 30 % pacientov. Dlhodobé skúsenosti transplantačného centra FN Plzeň ukazujú, že systematickou edukáciou a spoluprácou s dialyzačnými strediskami možno dosiahnuť preemptívne zastúpenie presahujúce 25 %.</li>
 </ul>
 
@@ -88,7 +88,7 @@ $articles[] = [
 
 <p>Kľúčovými prekážkami sú nedostatočná a príliš neskorá edukácia pacientov a ich ošetrujúcich lekárov. Ďalšie bariéry zahŕňajú neskoré odoslanie pacienta do transplantačného centra, dlhé čakacie doby (tam, kde existujú), zdĺhavé vyšetrovanie živých darcov a nedostatok orgánov od zosnulých darcov.</p>
 
-<p>Odporúča sa zahájenie edukácie pri eGFR &lt; 30 ml/min/1,73 m² a výber metódy náhrady funkcie obličiek pri eGFR &lt; 20 ml/min/1,73 m². Malá randomizovaná štúdia preukázala, že posilnená starostlivosť stredným zdravotníckym personálom zameraná na opakovanú edukáciu vedie k zvýšeniu počtu preemptívnych transplantácií aj peritoneálnych dialýz.</p>
+<p>Odporúča sa začatie edukácie pri eGFR &lt; 30 ml/min/1,73 m² a výber metódy náhrady funkcie obličiek pri eGFR &lt; 20 ml/min/1,73 m². Malá randomizovaná štúdia preukázala, že posilnená starostlivosť stredným zdravotníckym personálom zameraná na opakovanú edukáciu vedie k zvýšeniu počtu preemptívnych transplantácií aj peritoneálnych dialýz.</p>
 
 <h2>Záver</h2>
 

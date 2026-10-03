@@ -37,7 +37,7 @@ $articles[] = [
 
 <h2>Prečo sú svalové bunky zaujímavé</h2>
 
-<p>V experimentoch na myšiach vedci cielene vypínali expresiu mRNA v rôznych typoch buniek. Keď bola expresia vypnutá v svalových bunkách, T-bunková odpoveď sa znížila. To naznačuje, že svalové bunky sa na imunitnej odpovedi po mRNA vakcinácii môžu podieľať viac, než sa predpokladalo.</p>
+<p>V experimentoch na myšiach vedci cielene vypínali expresiu mRNA v rôznych typoch buniek. Keď bola expresia vypnutá vo svalových bunkách, T-bunková odpoveď sa znížila. To naznačuje, že svalové bunky sa na imunitnej odpovedi po mRNA vakcinácii môžu podieľať viac, než sa predpokladalo.</p>
 
 <p>Naopak, keď bola expresia vypnutá v pečeňových bunkách, T-bunková odpoveď sa zvýšila. To môže znamenať, že pečeňové bunky v tomto kontexte skôr tlmia imunitnú aktiváciu. Vypnutie expresie v dendritických bunkách neodstránilo T-bunkovú aktiváciu, hoci pri niektorých antigénoch znížilo počet cytotoxických T-lymfocytov.</p>
 

@@ -86,7 +86,7 @@ $articles[] = [
 
 <p><strong>IVC-CI = (IVC<sub>max</sub> − IVC<sub>min</sub>) / IVC<sub>max</sub> × 100</strong></p>
 
-<p>Dilatovaná VCI s nízkou kolapsibilitou podporuje obraz zvýšeného pravostranného plniaceho tlaku alebo venóznej kongescie. Malá výrazne kolabujúca VCI skôr podporuje nízky preload. V hemodialýze však treba byť opatrný: VCI ovplyvňuje pravostranné srdcové zlyhávanie, trikuspidálna regurgitácia, pľúcna hypertenzia, spontánne dýchanie verzus ventilácia, intraabdominálny tlak a technika merania.</p>
+<p>Dilatovaná VCI s nízkou kolapsibilitou podporuje obraz zvýšeného pravostranného plniaceho tlaku alebo venóznej kongescie. Malá, výrazne kolabujúca VCI skôr podporuje nízky preload. V hemodialýze však treba byť opatrný: VCI ovplyvňuje pravostranné srdcové zlyhávanie, trikuspidálna regurgitácia, pľúcna hypertenzia, spontánne dýchanie verzus ventilácia, intraabdominálny tlak a technika merania.</p>
 
 <p>Veľmi praktický doplnok je <strong>pľúcny ultrazvuk</strong> so sledovaním B-línií. B-línie zachytávajú extravaskulárnu pľúcnu vodu a môžu upozorniť na subklinickú pľúcnu kongesciu ešte pred výraznou dýchavicou. Randomizovaná štúdia ukázala, že stratégia redukcie suchej váhy vedená pľúcnym ultrazvukom môže znížiť ambulantný krvný tlak u hypertenzných hemodialyzovaných pacientov.</p>
 

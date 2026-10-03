@@ -35,7 +35,7 @@ $articles[] = [
     'content'      => <<<'HTML'
 <figure><a href="img/telitacicept-iga-nefropatia-teligan-faza-3-interim.webp" rel="noopener noreferrer" target="_blank"><img src="img/telitacicept-iga-nefropatia-teligan-faza-3-interim.webp" alt="Glomerulus s únikom bielkoviny zúženým na tenký prameň pod svetelným lúčom, okolo ktorého poletujú výstražné iskry" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Výrazný pokles proteinúrie je sprevádzaný vyšším počtom nežiaducich udalostí — obe patria do rovnice.</figcaption></figure>
 
-<p>IgA nefropatia (IgAN) patrí medzi najčastejšie primárne glomerulárne ochorenia vedúce k chronickému zlyhaniu obličiek. Kľúčovou biologickou osou jej patogenézy je okrem iného dysregulácia B buniek a signálnej dráhy sprostredkovanej faktorom aktivujúcim B bunky (BAFF, <em>B-cell activating factor</em>) a ligandom indukujúcim proliferáciu (APRIL, <em>a proliferation-inducing ligand</em>). Telitacicept je fúzny proteín, ktorý cieli a neutralizuje BAFF aj APRIL, a preto predstavuje racionálnu terapeutickú stratégiu pre IgAN.</p>
+<p>IgA nefropatia (IgAN) patrí medzi najčastejšie primárne glomerulové ochorenia vedúce k chronickému zlyhaniu obličiek. Kľúčovou biologickou osou jej patogenézy je okrem iného dysregulácia B buniek a signálnej dráhy sprostredkovanej faktorom aktivujúcim B bunky (BAFF, <em>B-cell activating factor</em>) a ligandom indukujúcim proliferáciu (APRIL, <em>a proliferation-inducing ligand</em>). Telitacicept je fúzny proteín, ktorý cieli a neutralizuje BAFF aj APRIL, a preto predstavuje racionálnu terapeutickú stratégiu pre IgAN.</p>
 
 <h2>Autori zdrojovej štúdie</h2>
 
@@ -76,7 +76,7 @@ $articles[] = [
 <p>Z pohľadu nefrologicky významného „tvrdého“ cieľa je dôležité, že v 39. týždni bol signál priaznivejší pre telitacicept:</p>
 
 <ul>
-  <li>zmena odhadovanej glomerulárnej filtrácie (eGFR) od východiskovej hodnoty:
+  <li>zmena odhadovanej glomerulovej filtrácie (eGFR) od východiskovej hodnoty:
     <ul>
       <li><strong>telitacicept: −1,0 %</strong> (95 % CI <strong>−3,2 až 1,2</strong>),</li>
       <li><strong>placebo: −7,7 %</strong> (95 % CI <strong>−9,9 až −5,4</strong>).</li>
@@ -84,7 +84,7 @@ $articles[] = [
   </li>
 </ul>
 
-<p>V praxi to treba interpretovať opatrne: ide o interim bod a eGFR sa zvyčajne mení pomalšie, preto jej zmeny v kratšom horizonte nemusia automaticky znamenať dlhodobý renoprotektívny efekt.</p>
+<p>V praxi to treba interpretovať opatrne: ide o interim bod a eGFR sa zvyčajne mení pomalšie, preto jej zmeny v kratšom horizonte nemusia automaticky znamenať dlhodobý nefroprotektívny efekt.</p>
 
 <h2>Bezpečnosť</h2>
 

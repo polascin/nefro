@@ -204,7 +204,7 @@ $articles[] = [
 <p>Analýza nepreukázala:</p>
 
 <ul>
-  <li>že dlhší čas v cieľovom rozmedzí renálne riziko <em>spôsobuje</em> znižovať — TTR nebol randomizovaný;</li>
+  <li>že dlhší čas v cieľovom rozmedzí renálne riziko <em>znižuje — TTR nebol randomizovaný;</li>
   <li>synergiu v štatistickom ani biologickom zmysle — chýba formálna analýza interakcie;</li>
   <li>prínos pre tvrdé renálne výsledky posudzované samostatne — makroalbuminúria ani zlyhanie obličiek významnú asociáciu nevykázali;</li>
   <li>že ciele HbA1c pod 6,0 % alebo STK pod 120 mmHg sú vhodné pre bežnú prax — pôvodné vetvy ACCORD to nepodporujú;</li>

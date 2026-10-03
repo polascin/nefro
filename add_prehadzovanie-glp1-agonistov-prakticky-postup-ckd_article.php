@@ -138,7 +138,7 @@ $articles[] = [
 
 <ul>
   <li>eGFR pod 45 ml/min/1,73 m² a najmä CKD G4 a vyššie,</li>
-  <li>súbežnou liečbou diuretikom, ACE-inhibítorom alebo sartanom, prípadne SGLT2 inhibítorom,</li>
+  <li>súbežnou liečbou diuretikom, ACE-inhibítorom alebo sartanom, prípadne inhibítorom SGLT2,</li>
   <li>krehkosťou, vyšším vekom a nízkou telesnou hmotnosťou,</li>
   <li>anamnézou predchádzajúceho AKI.</li>
 </ul>
@@ -168,7 +168,7 @@ $articles[] = [
   <li><strong>Pred zmenou:</strong> skontrolujte eGFR a či je <em>cieľový</em> prípravok pri tejto renálnej funkcii vhodný (exendínové verzus humánne analógy). Zdokumentujte východiskový kreatinín, ionogram, krvný tlak a hmotnosť.</li>
   <li><strong>Zvoľte načasovanie</strong> podľa tabuľky vyššie — bez medzery pri dobre tolerovanej maximálnej dávke, s medzerou a od najnižšej dávky pri neznášanlivosti.</li>
   <li><strong>Pripravte plán pre inzulín a sulfonylmočovinu</strong>, ak ich pacient užíva, vrátane prahov na zníženie dávky.</li>
-  <li><strong>Dajte pacientovi „pravidlo chorého dňa“</strong>: pri výraznej nevoľnosti, opakovanom vracaní, dlhšie trvajúcej hnačke alebo zjavne zníženom príjme tekutín sa má ozvať a dočasne prerušiť diuretikum, blokádu RAAS a SGLT2 inhibítor podľa dohodnutého plánu — a dať si skontrolovať kreatinín a ionogram.</li>
+  <li><strong>Dajte pacientovi „pravidlo chorého dňa“</strong>: pri výraznej nevoľnosti, opakovanom vracaní, dlhšie trvajúcej hnačke alebo zjavne zníženom príjme tekutín sa má ozvať a dočasne prerušiť diuretikum, blokádu RAAS a inhibítor SGLT2 podľa dohodnutého plánu — a dať si skontrolovať kreatinín a ionogram.</li>
   <li><strong>Kontrola do 2 až 3 mesiacov</strong> od prepnutia: primeranosť titrácie, nežiaduce účinky, potreba úpravy ostatných liekov a dosiahnutie terapeutických cieľov. Pri gastrointestinálnych príznakoch, poklese hmotnosti alebo hypotenzii skôr.</li>
 </ol>
 

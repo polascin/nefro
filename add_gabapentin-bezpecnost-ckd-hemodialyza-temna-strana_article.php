@@ -53,7 +53,7 @@ $articles[] = [
 
 <p>Celý problém má jeden farmakokinetický koreň. Gabapentín sa <strong>nemetabolizuje</strong> — v klasickej práci Bluma a spolupracovníkov (<em>Clinical Pharmacology and Therapeutics</em>, 1994) sa u 60 osôb s rôznym stupňom renálnej funkcie nenašli známky metabolizmu ani pri ťažkej renálnej insuficiencii a celkové množstvo nezmeneného liečiva vylúčeného močom bolo porovnateľné vo všetkých skupinách. Plazmatický aj renálny klírens gabapentínu pritom <strong>lineárne koreloval s klírensom kreatinínu</strong>.</p>
 
-<p>Dôsledok je priamočiary a pre nefrológa neprekvapivý: pri klesajúcej glomerulárnej filtrácii rastie maximálna plazmatická koncentrácia, predlžuje sa čas do jej dosiahnutia a predlžuje sa eliminačný polčas. Pri normálnej funkcii obličiek je polčas <strong>asi 5 až 9 hodín</strong>; u dialyzovaného pacienta sa uvádza až <strong>132 hodín</strong>. To nie je jemné posunutie dávkovacieho intervalu — to je zmena o celý rád.</p>
+<p>Dôsledok je priamočiary a pre nefrológa neprekvapivý: pri klesajúcej glomerulovej filtrácii rastie maximálna plazmatická koncentrácia, predlžuje sa čas do jej dosiahnutia a predlžuje sa eliminačný polčas. Pri normálnej funkcii obličiek je polčas <strong>asi 5 až 9 hodín</strong>; u dialyzovaného pacienta sa uvádza až <strong>132 hodín</strong>. To nie je jemné posunutie dávkovacieho intervalu — to je zmena o celý rád.</p>
 
 <p>Dve praktické poznámky k tomu:</p>
 

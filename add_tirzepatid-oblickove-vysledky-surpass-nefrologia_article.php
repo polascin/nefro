@@ -33,13 +33,13 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Tirzepatid prináša v programe SURPASS priaznivé signály pre eGFR, albuminúriu a renálne endpointy. Pre nefrológiu je dôležité rozlíšiť sľubný kardiorenálny účinok od definitívne dokázanej renoprotekcie.',
+    'excerpt'      => 'Tirzepatid prináša v programe SURPASS priaznivé signály pre eGFR, albuminúriu a renálne endpointy. Pre nefrológiu je dôležité rozlíšiť sľubný kardiorenálny účinok od definitívne dokázanej nefroprotekcie.',
     'content'      => <<<'HTML'
 <figure><a href="img/tirzepatid-oblickove-vysledky-surpass-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/tirzepatid-oblickove-vysledky-surpass-nefrologia.webp" alt="Dva receptorové kľúče spojené do jednej molekuly, z ktorej vychádza silný lúč k obličke" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Dvojitý receptorový účinok sa premieta aj do obličkových ukazovateľov — otázkou zostáva sila dôkazov.</figcaption></figure>
 
 <p>Tirzepatid sa pôvodne dostal do klinickej pozornosti najmä ako veľmi účinný liek na zníženie HbA1c a telesnej hmotnosti u pacientov s diabetes mellitus 2. typu. Postupne sa však ukazuje, že jeho význam môže presahovať samotnú glykemickú kontrolu a manažment obezity. Obličkové analýzy z programu SURPASS naznačujú priaznivý vplyv na albuminúriu, rýchlosť poklesu eGFR a zložené renálne ukazovatele.</p>
 
-<p>Z nefrologického hľadiska ide o mimoriadne praktickú tému. Diabetes mellitus 2. typu zostáva jednou z hlavných príčin chronickej choroby obličiek (CKD) a zlyhania obličiek. Každá liečba, ktorá okrem zlepšenia metabolického profilu dokáže priaznivo ovplyvniť albuminúriu, pokles eGFR alebo riziko progresie CKD, môže mať veľký klinický význam. Zároveň však platí, že „renálny signál“ zo sekundárnych alebo exploračných analýz ešte nie je to isté ako definitívne dokázaná renoprotekcia v špecializovanej výsledkovej štúdii zameranej na obličky.</p>
+<p>Z nefrologického hľadiska ide o mimoriadne praktickú tému. Diabetes mellitus 2. typu zostáva jednou z hlavných príčin chronickej choroby obličiek (CKD) a zlyhania obličiek. Každá liečba, ktorá okrem zlepšenia metabolického profilu dokáže priaznivo ovplyvniť albuminúriu, pokles eGFR alebo riziko progresie CKD, môže mať veľký klinický význam. Zároveň však platí, že „renálny signál“ zo sekundárnych alebo exploračných analýz ešte nie je to isté ako definitívne dokázaná nefroprotekcia v špecializovanej výsledkovej štúdii zameranej na obličky.</p>
 
 <h2>Duálny agonista GIP a GLP-1 receptorov</h2>
 
@@ -59,7 +59,7 @@ $articles[] = [
   <li><strong>nižší výskyt zloženého renálneho ukazovateľa</strong> – kompozit zahŕňal ≥40 % pokles eGFR, terminálne zlyhanie obličiek, úmrtie z renálnej príčiny alebo vznik makroalbuminúrie; hazard ratio bolo 0,58 v prospech tirzepatidu.</li>
 </ul>
 
-<p>Dôležité je povedať aj limitáciu: SURPASS-4 nebola primárne renálna štúdia. Obličkové výsledky boli analyzované post hoc, pričom porovnávacím liekom bol inzulín glargín. Výsledky preto podporili hypotézu renálneho prínosu, ale samy osebe ešte neurčili konečné miesto tirzepatidu v renoprotekcii.</p>
+<p>Dôležité je povedať aj limitáciu: SURPASS-4 nebola primárne renálna štúdia. Obličkové výsledky boli analyzované post hoc, pričom porovnávacím liekom bol inzulín glargín. Výsledky preto podporili hypotézu renálneho prínosu, ale samy osebe ešte neurčili konečné miesto tirzepatidu v nefroprotekcii.</p>
 
 <h2>SURPASS-CVOT: aktívny komparátor a dlhšie sledovanie</h2>
 
@@ -107,11 +107,11 @@ $articles[] = [
   <li>nefroprotektívny životný štýl vrátane obmedzenia nadmerného príjmu soli.</li>
 </ul>
 
-<p>Prakticky povedané: tirzepatid nie je náhrada za SGLT2 inhibítor alebo RAAS blokádu. Môže však byť dôležitým doplnením u pacienta, ktorého renálne riziko je úzko prepojené s obezitou, metabolickou dysreguláciou a vysokým kardiovaskulárnym rizikom.</p>
+<p>Prakticky povedané: tirzepatid nie je náhrada za inhibítor SGLT2 alebo RAAS blokádu. Môže však byť dôležitým doplnením u pacienta, ktorého renálne riziko je úzko prepojené s obezitou, metabolickou dysreguláciou a vysokým kardiovaskulárnym rizikom.</p>
 
 <h2>Bezpečnostné poznámky pri CKD</h2>
 
-<p>Pri liečbe tirzepatidom treba myslieť najmä na gastrointestinálne nežiaduce účinky: nauzeu, vracanie a hnačku. V SURPASS-CVOT boli tieto príhody častejšie pri tirzepatide než pri dulaglutide. U pacienta s CKD môže byť dehydratácia klinicky významná, pretože môže viesť k prechodnému zhoršeniu funkcie obličiek, najmä pri súčasnom užívaní diuretík, RAAS blokátorov alebo SGLT2 inhibítorov.</p>
+<p>Pri liečbe tirzepatidom treba myslieť najmä na gastrointestinálne nežiaduce účinky: nauzeu, vracanie a hnačku. V SURPASS-CVOT boli tieto príhody častejšie pri tirzepatide než pri dulaglutide. U pacienta s CKD môže byť dehydratácia klinicky významná, pretože môže viesť k prechodnému zhoršeniu funkcie obličiek, najmä pri súčasnom užívaní diuretík, RAAS blokátorov alebo inhibítorov SGLT2.</p>
 
 <p>Dôležité je sledovať:</p>
 
@@ -124,13 +124,13 @@ $articles[] = [
   <li>potrebu úpravy ostatnej antidiabetickej liečby pri rýchlom zlepšení glykémie.</li>
 </ul>
 
-<p>Samotný tirzepatid má nízke riziko hypoglykémie, ale toto riziko rastie pri kombinácii s inzulínom alebo sulfonylureou. Pri výraznom poklese hmotnosti, znížení príjmu jedla alebo gastrointestinálnej intolerancii treba myslieť aj na praktické „sick day“ odporúčania, najmä ak pacient užíva SGLT2 inhibítor alebo diuretiká.</p>
+<p>Samotný tirzepatid má nízke riziko hypoglykémie, ale toto riziko rastie pri kombinácii s inzulínom alebo sulfonylureou. Pri výraznom poklese hmotnosti, znížení príjmu jedla alebo gastrointestinálnej intolerancii treba myslieť aj na praktické „sick day“ odporúčania, najmä ak pacient užíva inhibítor SGLT2 alebo diuretiká.</p>
 
 <h2>Čo zatiaľ nevieme</h2>
 
 <p>Dostupné údaje sú povzbudivé, no viaceré otázky zostávajú otvorené. Nie je úplne jasné, aká časť renálneho prínosu je nezávislá od redukcie hmotnosti, poklesu HbA1c a krvného tlaku. Rovnako potrebujeme viac údajov u pacientov s pokročilejšou CKD, vysokou albuminúriou, krehkosťou, polyfarmáciou a vyšším rizikom akútnych komplikácií.</p>
 
-<p>Ďalšou otázkou je optimálna kombinácia tirzepatidu so SGLT2 inhibítormi a ďalšími nefroprotektívnymi liekmi. SURPASS-CVOT naznačuje prínos aj v ére modernej liečby, no špecifická stratégia vrstvenia terapie bude musieť vychádzať z ďalších dát, tolerancie pacienta a lokálnej dostupnosti liekov.</p>
+<p>Ďalšou otázkou je optimálna kombinácia tirzepatidu s inhibítormi SGLT2 a ďalšími nefroprotektívnymi liekmi. SURPASS-CVOT naznačuje prínos aj v ére modernej liečby, no špecifická stratégia vrstvenia terapie bude musieť vychádzať z ďalších dát, tolerancie pacienta a lokálnej dostupnosti liekov.</p>
 
 <h2>Praktický nefrologický záver</h2>
 
@@ -142,7 +142,7 @@ $articles[] = [
 
 <p>Inkretínová liečba vstupuje do fázy, v ktorej už nejde iba o HbA1c a hmotnosť. Pri tirzepatide sa čoraz jasnejšie ukazuje kardiorenálno-metabolický potenciál: spomalenie poklesu eGFR, priaznivý vývoj albuminúrie a nižší výskyt zložených renálnych ukazovateľov v programe SURPASS.</p>
 
-<p>Doterajšie údaje sú povzbudivé, ale nefrologická interpretácia má ostať presná. Tirzepatid má sľubné renálne účinky a môže významne doplniť liečbu vybraných pacientov s diabetom 2. typu a CKD. Definitívne postavenie v renoprotekcii však bude závisieť od ďalších dlhodobých a špecificky obličkovo zameraných štúdií.</p>
+<p>Doterajšie údaje sú povzbudivé, ale nefrologická interpretácia má ostať presná. Tirzepatid má sľubné renálne účinky a môže významne doplniť liečbu vybraných pacientov s diabetom 2. typu a CKD. Definitívne postavenie v nefroprotekcii však bude závisieť od ďalších dlhodobých a špecificky obličkovo zameraných štúdií.</p>
 
 <hr>
 

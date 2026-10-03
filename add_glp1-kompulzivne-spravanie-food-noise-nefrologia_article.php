@@ -28,7 +28,7 @@ require_once __DIR__ . '/pdf_generator.php';
 $articles = [];
 
 $articles[] = [
-    'title'        => 'GLP-1 agonisty, „food noise“ a kompulzívne správanie: čo to znamená pre nefrológiu',
+    'title'        => 'agonisty GLP-1, „food noise“ a kompulzívne správanie: čo to znamená pre nefrológiu',
     'slug'         => 'glp1-kompulzivne-spravanie-food-noise-nefrologia',
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),

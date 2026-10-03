@@ -148,7 +148,7 @@ $articles[] = [
 
 <p>Liečba diabetu, obezity, dyslipidémie, hypertenzie, srdcového zlyhávania a CKD zostáva základom. Účinok na hmotnosť, aminotransferázy alebo pečeňový tuk sa však nesmie automaticky vydávať za dokázaný antifibrotický alebo prognostický účinok.</p>
 
-<h3>Dve liečby MASH s podmienečným povolením v EÚ</h3>
+<h3>Dve liečby MASH s podmieneným povolením v EÚ</h3>
 
 <p>K 13. augustu 2026 majú v Európskej únii podmienené povolenie na uvedenie na trh dva lieky určené spolu s diétou a pohybovou aktivitou pre dospelých s necirhotickou MASH a fibrózou F2 až F3:</p>
 
@@ -225,7 +225,7 @@ $articles[] = [
 
 <p>MASLD je systémové metabolické ochorenie s pečeňovými, kardiovaskulárnymi a renálnymi dôsledkami. Normálne aminotransferázy ani negatívna konvenčná ultrasonografia nevylučujú pokročilú fibrózu. Najpraktickejší súčasný postup tvorí cielené vyhľadávanie rizikových pacientov, FIB-4 a následná elastografia alebo test ELF.</p>
 
-<p>V roku 2026 už majú v EÚ dve liečby necirhotickej MASH s fibrózou F2 až F3 podmienečné povolenie na uvedenie na trh: resmetirom a semaglutid Kayshild. Ich použitie však vyžaduje presnú stratifikáciu fibrózy, rešpektovanie súhrnu charakteristických vlastností lieku a vedomie, že dlhodobý vplyv na dekompenzáciu, transplantáciu a prežívanie zatiaľ nie je potvrdený.</p>
+<p>V roku 2026 už majú v EÚ dve liečby necirhotickej MASH s fibrózou F2 až F3 podmienené povolenie na uvedenie na trh: resmetirom a semaglutid Kayshild. Ich použitie však vyžaduje presnú stratifikáciu fibrózy, rešpektovanie súhrnu charakteristických vlastností lieku a vedomie, že dlhodobý vplyv na dekompenzáciu, transplantáciu a prežívanie zatiaľ nie je potvrdený.</p>
 
 <h2>Súvisiace články</h2>
 

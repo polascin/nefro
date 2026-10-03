@@ -47,7 +47,7 @@ $articles[] = [
 
 <p>Prukaloprid je selektívny agonista 5-HT4 receptorov. V gastroenterológii sa používa pre prokinetický účinok, najmä pri chronickej idiopatickej zápche. Z neurobiologického hľadiska sú však 5-HT4 receptory zaujímavé aj preto, že sa podieľajú na procesoch učenia, pamäti a synaptickej plasticity.</p>
 
-<p>Predklinické a skoršie humánne štúdie naznačili, že stimulácia 5-HT4 receptorov môže podporovať synaptickú plasticitu v hipokampe, zvyšovať uvoľňovanie acetylcholínu, modulovať glutamátergnú neurotransmisiu a zlepšovať niektoré zložky učenia a pamäti. To je klinicky zaujímavé najmä pri depresii, kde kognitívne príznaky často pretrvávajú aj po ústupe afektívnych symptómov.</p>
+<p>Predklinické a skoršie humánne štúdie naznačili, že stimulácia 5-HT4 receptorov môže podporovať synaptickú plasticitu v hipokampe, zvyšovať uvoľňovanie acetylcholínu, modulovať glutamátergickú neurotransmisiu a zlepšovať niektoré zložky učenia a pamäti. To je klinicky zaujímavé najmä pri depresii, kde kognitívne príznaky často pretrvávajú aj po ústupe afektívnych symptómov.</p>
 
 <p>Inými slovami: prukaloprid nie je antidepresívum v bežnom zmysle slova. Otázka znie skôr, či krátkodobá stimulácia 5-HT4 receptorov dokáže ovplyvniť kognitívne okruhy, ktoré zostávajú oslabené aj po remisii nálady.</p>
 
@@ -102,7 +102,7 @@ $articles[] = [
 <p>Pre nefrológiu má táto téma nepriamy, ale praktický význam. Pacienti s chronickou chorobou obličiek často trpia kognitívnymi ťažkosťami, únavou, poruchami spánku, depresiou a polyfarmáciou. „Brain fog“ u nefrologického pacienta môže mať viacero príčin:</p>
 
 <ul>
-  <li>urémické toxíny,</li>
+  <li>uremické toxíny,</li>
   <li>anémia,</li>
   <li>poruchy spánku,</li>
   <li>depresia a úzkosť,</li>
@@ -117,7 +117,7 @@ $articles[] = [
 
 <h2>Prukaloprid sa však v nefrológii môže objaviť</h2>
 
-<p>Prukaloprid môže byť pre nefrológa prakticky relevantný z iného dôvodu: chronická zápcha je pri CKD častá. Prispieva k nej obmedzenie tekutín, nízky príjem vlákniny, sedavý režim, viazače fosfátov, železo, opioidy, niektoré antihypertenzíva a samotné urémické prostredie.</p>
+<p>Prukaloprid môže byť pre nefrológa prakticky relevantný z iného dôvodu: chronická zápcha je pri CKD častá. Prispieva k nej obmedzenie tekutín, nízky príjem vlákniny, sedavý režim, viazače fosfátov, železo, opioidy, niektoré antihypertenzíva a samotné uremické prostredie.</p>
 
 <p>Ak sa prukaloprid u pacienta s CKD používa v schválenej indikácii chronickej zápchy, treba myslieť na renálnu elimináciu. Podľa oficiálnych liekových informácií sa prukaloprid významne vylučuje obličkami. Pri miernom až stredne závažnom renálnom poškodení sa zvyčajne nevyžaduje úprava dávky, pri ťažkom renálnom poškodení sa odporúča znížená dávka 1 mg denne a pri terminálnom zlyhaní obličiek vyžadujúcom dialýzu sa použitie neodporúča alebo je kontraindikované podľa konkrétnej registrácie.</p>
 

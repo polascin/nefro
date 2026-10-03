@@ -81,7 +81,7 @@ $articles[] = [
 </table>
 </div>
 
-<p>Erytrocytové valce a akanthocyty sú silnými argumentmi pre glomerulárny pôvod, ale citlivosť morfológie erytrocytov závisí od spracovania vzorky a skúsenosti hodnotiteľa. Neprítomnosť dysmorfných erytrocytov preto glomerulárne ochorenie nevylučuje. Naopak, súčasná albuminúria, hypertenzia alebo znížená eGFR významne posúvajú pravdepodobnosť smerom k parenchýmovému ochoreniu obličiek.</p>
+<p>Erytrocytové valce a akanthocyty sú silnými argumentmi pre glomerulárny pôvod, ale citlivosť morfológie erytrocytov závisí od spracovania vzorky a skúsenosti hodnotiteľa. Neprítomnosť dysmorfných erytrocytov preto glomerulové ochorenie nevylučuje. Naopak, súčasná albuminúria, hypertenzia alebo znížená eGFR významne posúvajú pravdepodobnosť smerom k parenchýmovému ochoreniu obličiek.</p>
 
 <h2>Riziková stratifikácia mikrohematúrie podľa AUA/SUFU 2025</h2>
 
@@ -104,7 +104,7 @@ $articles[] = [
 
 <h2>Nefrológia a urológia nie sú konkurenčné cesty</h2>
 
-<p>Proteinúria, dysmorfné erytrocyty, valce, hypertenzia alebo znížená funkcia obličiek sú dôvodom na nefrologické vyšetrenie. <strong>Podozrenie na glomerulárne ochorenie však automaticky neruší rizikovo primerané urologické vyšetrenie.</strong> Parenchýmové ochorenie obličiek a urologická príčina môžu koexistovať.</p>
+<p>Proteinúria, dysmorfné erytrocyty, valce, hypertenzia alebo znížená funkcia obličiek sú dôvodom na nefrologické vyšetrenie. <strong>Podozrenie na glomerulové ochorenie však automaticky neruší rizikovo primerané urologické vyšetrenie.</strong> Parenchýmové ochorenie obličiek a urologická príčina môžu koexistovať.</p>
 
 <p>Ďalší nefrologický postup sa riadi klinickým syndrómom: sérológia pri podozrení na systémové ochorenie, genetika pri dlhodobej glomerulárnej hematúrii s rodinnou anamnézou, poruchou sluchu alebo zraku a biopsia, ak výsledok môže zmeniť diagnózu, prognózu alebo liečbu. Pojem „tenká glomerulová bazálna membrána“ nemožno automaticky zamieňať s neškodným stavom; spektrum ochorení COL4A3, COL4A4 a COL4A5 je klinicky širšie.</p>
 

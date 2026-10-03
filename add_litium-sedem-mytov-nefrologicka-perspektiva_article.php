@@ -84,7 +84,7 @@ $articles[] = [
     <tr>
       <th scope="row">Akútne poškodenie obličiek / intoxikácia</th>
       <td>Náhle zvýšenie hladiny pri dehydratácii, AKI, NSAID, ACEI/ARB, tiazidoch</td>
-      <td>U starších užívateľov je toxicita bežnejšia (roční incidencia okolo 1,5 %); AKI v kohortách starších 1,3–4 % za 5 rokov</td>
+      <td>U starších užívateľov je toxicita bežnejšia (ročná incidencia okolo 1,5 %); AKI v kohortách starších 1,3–4 % za 5 rokov</td>
       <td>Predovšetkým nadmerná expozícia. Lítium pri AKI a dehydratácii vysadiť, kým sa stav neupraví</td>
     </tr>
     <tr>
@@ -97,7 +97,7 @@ $articles[] = [
 </table>
 </div>
 
-<p>Presne a spol. v biopsickej sérii opísali pomalú progresiu (priemerný ročný pokles klírensu kreatinínu 2,29 ml/min) a vzťah fibrózy k dĺžke liečby aj kumulatívnej dávke; približne 35 % vyšetrených malo stredne ťažkú hyperkalcémiu pri hyperparatyreóze. Shine a spol. súčasne potvrdili asociáciu lítia s hypotyreózou (HR 2,31) a so zvýšeným celkovým kalciom (HR 1,43); vyššie než mediánové koncentrácie lítia zvyšovali riziko všetkých sledovaných nežiaducich výsledkov. Bocchetta a spol. ukázali, že dĺžka liečby je rizikový faktor poklesu eGFR nezávisle od veku, ale dysfunkcia sa zvyčajne objaví až po desaťročiach a po poklese eGFR pod 45 ml/min/1,73 m<sup>2</sup> sa ďalšia progresia v ich 4-ročnom sledovaní nelíšila podľa toho, či sa lítium vysadilo.</p>
+<p>Presne a spol. v bioptickej sérii opísali pomalú progresiu (priemerný ročný pokles klírensu kreatinínu 2,29 ml/min) a vzťah fibrózy k dĺžke liečby aj kumulatívnej dávke; približne 35 % vyšetrených malo stredne ťažkú hyperkalciémiu pri hyperparatyreóze. Shine a spol. súčasne potvrdili asociáciu lítia s hypotyreózou (HR 2,31) a so zvýšeným celkovým kalciom (HR 1,43); vyššie než mediánové koncentrácie lítia zvyšovali riziko všetkých sledovaných nežiaducich výsledkov. Bocchetta a spol. ukázali, že dĺžka liečby je rizikový faktor poklesu eGFR nezávisle od veku, ale dysfunkcia sa zvyčajne objaví až po desaťročiach a po poklese eGFR pod 45 ml/min/1,73 m<sup>2</sup> sa ďalšia progresia v ich 4-ročnom sledovaní nelíšila podľa toho, či sa lítium vysadilo.</p>
 
 <p>Aiffova švédska séria je dôležitá práve pre nefrológa: staršie režimy 1960.–1970. rokov niesli vyššie riziko ESRD (približne 1,5 %); v jednej analýze nikto, kto začal lítium po roku 1980, neskončil v RRT — ale v následnej práci s 630 pacientmi s najmenej 10 rokmi liečby podľa moderných princípov mala asi tretina známky chronického zlyhávania. Moderné dávkovanie riziko znižuje, neeliminuje ho.</p>
 
@@ -119,7 +119,7 @@ $articles[] = [
 
 <p>Toto je azda najtrvácnejší psychiatrický omyl a tu je Ghaemi bližšie k dátam. Lítium v udržiavacej liečbe nie je „len antimanikum“. Štúdia BALANCE (Geddes a spol., Lancet 2010) randomizovala 330 pacientov s bipolárnou poruchou I. typu z 41 centier na lítium v monoterapii (plazmatická koncentrácia 0,4–1,0 mmol/l), valproát v monoterapii (750–1 250 mg) alebo kombináciu, po aktívnom úvodnom období na kombinácii. Primárnym výsledkom bolo začatie novej intervencie pre vzniknutú epizódu nálady počas až 24 mesiacov.</p>
 
-<p>Primárnu udalosť malo 54 % v kombinácii, 59 % pri lítium a 69 % pri valproáte. Pomer rizík: kombinácia vs. valproát 0,59 (95 % IS 0,42–0,83; p = 0,0023); lítium vs. valproát 0,71 (0,51–1,00; p = 0,0472); kombinácia vs. lítium 0,82 (0,58–1,17; p = 0,27). Interpretácia autorov: kombinácia aj lítium v monoterapii predchádzajú relapsu spoľahlivejšie než valproát; prínos kombinácie voči samotnému lítiu štúdia nevedela spoľahlivo potvrdiť ani vyvrátiť.</p>
+<p>Primárnu udalosť malo 54 % v kombinácii, 59 % pri lítiu a 69 % pri valproáte. Pomer rizík: kombinácia vs. valproát 0,59 (95 % IS 0,42–0,83; p = 0,0023); lítium vs. valproát 0,71 (0,51–1,00; p = 0,0472); kombinácia vs. lítium 0,82 (0,58–1,17; p = 0,27). Interpretácia autorov: kombinácia aj lítium v monoterapii predchádzajú relapsu spoľahlivejšie než valproát; prínos kombinácie voči samotnému lítiu štúdia nevedela spoľahlivo potvrdiť ani vyvrátiť.</p>
 
 <p><strong>Korekcia voči Ghaemimu:</strong> v otvorenom abstrakte BALANCE nie je samostatný pomer rizík pre depresívne vs. manické relapsy. Tvrdenie, že lítium bolo „obzvlášť účinné v prevencii depresívnych epizód“, z verejného záznamu štúdie <em>nevieme nezávisle potvrdiť</em>. Čo potvrdiť vieme: udržiavacia liečba lítiom znižuje riziko relapsu náladovej epizódy ako celku — teda oboch pólov v zloženom primárnom výsledku — a nie je to liek „iba na mániu“. NICE navyše ponúka lítium ako liek prvej voľby v dlhodobej farmakoterapii bipolárnej poruchy práve preto, že predchádza relapsu, nie preto, že by liečilo výlučne mániu.</p>
 </div>
@@ -134,7 +134,7 @@ $articles[] = [
 
 <p>Ghaemi označuje lítium za na populačnej úrovni „hmotnostne neutrálne“ a uvádza, že nárast hmotnosti postihne približne 20 % pacientov, v menšej miere než olanzapín, kvetiapín a valproát. Odkaz smeruje na metaanalýzu Gomes-da-Costa a spol. (Neurosci Biobehav Rev 2022). Z otvoreného abstraktu tejto práce vyplýva niečo presnejšie a skromnejšie.</p>
 
-<p>Do systematického prehľadu vošlo 20 štúdií, do metaanalýzy 9. Priemerný nárast hmotnosti pri lítium bol <strong>+0,462 kg a nebol štatisticky významný</strong> (p = 0,158). Voči placebu rozdiel nebol významný; voči aktívnym komparátorom bol nárast pri lítium významne nižší. Kratšie trvanie liečby sa spájalo s väčším nárastom. Číslo „približne 20 %“ v abstrakte <em>nie je</em>; ako podiel pacientov s klinicky významným nárastom ho z otvoreného záznamu nevieme overiť. Overiť vieme: lítium nie je metabolicky nevinné u každého jednotlivca, ale na úrovni populácie nie je olanzapínom — a vyhýbať sa mu výhradne pre obavu z hmotnosti, kým alternativa nesie ťažší metabolický náklad, nemá oporu v tejto metaanalýze.</p>
+<p>Do systematického prehľadu vošlo 20 štúdií, do metaanalýzy 9. Priemerný nárast hmotnosti pri lítiu bol <strong>+0,462 kg a nebol štatisticky významný</strong> (p = 0,158). Voči placebu rozdiel nebol významný; voči aktívnym komparátorom bol nárast pri lítiu významne nižší. Kratšie trvanie liečby sa spájalo s väčším nárastom. Číslo „približne 20 %“ v abstrakte <em>nie je</em>; ako podiel pacientov s klinicky významným nárastom ho z otvoreného záznamu nevieme overiť. Overiť vieme: lítium nie je metabolicky nevinné u každého jednotlivca, ale na úrovni populácie nie je olanzapínom — a vyhýbať sa mu výhradne pre obavu z hmotnosti, kým alternativa nesie ťažší metabolický náklad, nemá oporu v tejto metaanalýze.</p>
 
 <h2>Mýtus 7: Narušuje kreativitu a kogníciu</h2>
 
@@ -145,7 +145,7 @@ $articles[] = [
 <div class="pdf-avoid-break">
 <h2>Čo z toho plynie pre nefrologickú prax</h2>
 
-<p>Lítium sa nenasadzuje v nefrologickej ambulancii, ale nefrológ ho číta v zozname liekov, v poklese eGFR, v polyúrii, v hyperkalcémii a v AKI po hnačke. Individualizácia dávky je správna; vypnutie monitorovania nie je.</p>
+<p>Lítium sa nenasadzuje v nefrologickej ambulancii, ale nefrológ ho číta v zozname liekov, v poklese eGFR, v polyúrii, v hyperkalciémii a v AKI po hnačke. Individualizácia dávky je správna; vypnutie monitorovania nie je.</p>
 
 <div class="table-responsive" role="region" aria-label="Monitorovanie a rizikové situácie pri liečbe lítiom v nefrologickej praxi" tabindex="0">
 <table>
@@ -178,8 +178,8 @@ $articles[] = [
       <td>Vstupne a každých 6 mesiacov; pri zmene nálady myslieť aj na tyreopatiu</td>
     </tr>
     <tr>
-      <th scope="row">Kalcium (a PTH pri hyperkalcémii)</th>
-      <td>Hyperparatyreóza; Presne: ≈ 35 % stredne ťažká hyperkalcémia v nefrologickej sérii</td>
+      <th scope="row">Kalcium (a PTH pri hyperkalciémii)</th>
+      <td>Hyperparatyreóza; Presne: ≈ 35 % stredne ťažká hyperkalciémia v nefrologickej sérii</td>
       <td>NICE meria kalcium spolu s eGFR a tyreoidálnymi testami. Hyperkalcémia nie je „laboratórna kuriozita“</td>
     </tr>
     <tr>

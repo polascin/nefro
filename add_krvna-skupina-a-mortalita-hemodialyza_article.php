@@ -107,7 +107,7 @@ $articles[] = [
   <li><strong>Obmedzená zovšeobecniteľnosť:</strong> takmer výlučne japonskú kohortu z jednej prefektúry nemožno bez replikácie preniesť na európske populácie ani na iné modality náhrady funkcie obličiek.</li>
 </ul>
 
-<p>Štúdia bola čiastočne podporená Japan Kidney Foundation a troma farmaceutickými spoločnosťami. Jeden autor deklaroval granty od týchto spoločností; podľa publikácie financovatelia nezasahovali do návrhu, analýzy, interpretácie ani rozhodnutia článok publikovať.</p>
+<p>Štúdia bola čiastočne podporená Japan Kidney Foundation a tromi farmaceutickými spoločnosťami. Jeden autor deklaroval granty od týchto spoločností; podľa publikácie financovatelia nezasahovali do návrhu, analýzy, interpretácie ani rozhodnutia článok publikovať.</p>
 
 <h2>Čo nález nemení v klinickej praxi</h2>
 

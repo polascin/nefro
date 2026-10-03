@@ -79,7 +79,7 @@ $articles[] = [
 
 <h2>Najväčší nefrologický problém: interakcie</h2>
 
-<p>Pri CKD samotnej nie je hlavná otázka „renálna dávka ľubovníka“, ale interakčný profil. Pacienti s chronickým ochorením obličiek majú často polyfarmáciu, vyššie kardiovaskulárne riziko, antikoagulačnú liečbu, analgetiká, antidepresíva a po transplantácii aj imunosupresíva. Preto je ľubovník v nefrológii prakticky vždy signál na kontrolu celého liekového zoznamu.</p>
+<p>Pri CKD samotnej nie je hlavná otázka „renálna dávka ľubovníka“, ale interakčný profil. Pacienti s chronickou chorobou obličiek majú často polyfarmáciu, vyššie kardiovaskulárne riziko, antikoagulačnú liečbu, analgetiká, antidepresíva a po transplantácii aj imunosupresíva. Preto je ľubovník v nefrológii prakticky vždy signál na kontrolu celého liekového zoznamu.</p>
 
 <h3>Transplantovaný pacient</h3>
 

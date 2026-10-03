@@ -35,7 +35,7 @@ $articles[] = [
     'content'      => <<<'HTML'
 <figure><a href="img/obezita-v-nefrologii-skrining-manazment-dialyza-transplantacia.webp" rel="noopener noreferrer" target="_blank"><img src="img/obezita-v-nefrologii-skrining-manazment-dialyza-transplantacia.webp" alt="Objemná telesná hmota vrhajúca tieň na dialyzačný filter a transplantovanú obličku" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Obezita nie je len pridružená diagnóza — mení podmienky dialýzy aj prístup k transplantácii.</figcaption></figure>
 
-<p>Obezita je najčastejším rizikovým faktorom ochorenia obličiek. V bežnej populácii aj u pacientov s chronickým ochorením obličiek (CKD) nejde len o kardiovaskulárny problém – ide o chronické, často recidivujúce ochorenie, ktoré sa môže výrazne dotýkať viacerých orgánov vrátane obličiek a zároveň zásadne ovplyvňuje priebeh liečby, najmä dialýzy a možnosti transplantácie.</p>
+<p>Obezita je najčastejším rizikovým faktorom ochorenia obličiek. V bežnej populácii aj u pacientov s chronickou chorobou obličiek (CKD) nejde len o kardiovaskulárny problém – ide o chronické, často recidivujúce ochorenie, ktoré sa môže výrazne dotýkať viacerých orgánov vrátane obličiek a zároveň zásadne ovplyvňuje priebeh liečby, najmä dialýzy a možnosti transplantácie.</p>
 
 <p>V nefrologickej praxi sa obezita spája s dvoma praktickými „paradoxmi“:</p>
 

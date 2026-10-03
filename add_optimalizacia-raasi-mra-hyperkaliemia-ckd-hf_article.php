@@ -54,7 +54,7 @@ $articles[] = [
 <p>Prakticky to znamená paralelne riešiť dve veci:</p>
 
 <ol>
-<li><strong>RAASi/MRA terapia:</strong> zahájiť a titrovať podľa tolerancie a cieľov (HF/CKD prospech).</li>
+<li><strong>RAASi/MRA terapia:</strong> začať a titrovať podľa tolerancie a cieľov (HF/CKD prospech).</li>
 <li><strong>Draslík:</strong> znížiť riziko a liečiť hyperkaliémiu tak, aby bolo možné udržať a prípadne zvyšovať dávky RAASi/MRA.</li>
 </ol>
 
@@ -80,7 +80,7 @@ $articles[] = [
 
 <p>Po zmene dávky je rozumné nastaviť laboratórnu kontrolu tak, aby zachytila trend draslíka včas. V praxi to typicky znamená kontrolu v prvých dňoch až týždňoch podľa lokálneho protokolu a rizikovosti pacienta.</p>
 
-<p>Keď K<sup>+</sup> začne rásť, titráciu a riešenie draslíka sa nemá spomaľovať; problémy sa riešia v momente, keď K<sup>+</sup> už dosahuje výraznejšie hodnoty a problém je "v plnom rozsahu".</p>
+<p>Keď K<sup>+</sup> začne rásť, titrácia a riešenie draslíka sa nemajú spomaľovať; problémy sa riešia v momente, keď K<sup>+</sup> už dosahuje výraznejšie hodnoty a problém je "v plnom rozsahu".</p>
 
 <h3>3) Keď K<sup>+</sup> rastie: rieš príčiny + uvoľni cestu pre udržanie RAASi/MRA</h3>
 
@@ -119,7 +119,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>Hyperkaliémia je v cardiorenálnom manažmente čestou prekážkou, ale nemá byť dôvodom na trvalé podliečenie pacienta RAASi/MRA terapiou. Praktický cieľ je udržať a optimalizovať RAASi/MRA tak, že súčasne proaktívne riešime príčiny a máme si pripravený plán na kontrolu draslíka. V článkoch a vzdelávacích programoch tejto témy sa opakovane zdôrazňuje, že „udržanie liečby“ je často uskutočniteľné práve vďaka včasnej stratifikácii rizika a cielenej intervencii pri hyperkaliémii.</p>
+<p>Hyperkaliémia je v kardiorenálnom manažmente častou prekážkou, ale nemá byť dôvodom na trvalé podliečenie pacienta RAASi/MRA terapiou. Praktický cieľ je udržať a optimalizovať RAASi/MRA tak, že súčasne proaktívne riešime príčiny a máme si pripravený plán na kontrolu draslíka. V článkoch a vzdelávacích programoch tejto témy sa opakovane zdôrazňuje, že „udržanie liečby“ je často uskutočniteľné práve vďaka včasnej stratifikácii rizika a cielenej intervencii pri hyperkaliémii.</p>
 
 <hr>
 

@@ -28,7 +28,7 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d'),
     'is_top'       => 0,
-    'excerpt'      => 'Nový prieskum z NKF 2026: hoci 20–30 % chronických ochorení obličiek môže mať genetický základ, len s každým piatym indikovaným pacientom lekár o genetickom testovaní vôbec hovoril.',
+    'excerpt'      => 'Nový prieskum z NKF 2026: hoci 20–30 % chronických chorôb obličiek môže mať genetický základ, len s každým piatym indikovaným pacientom lekár o genetickom testovaní vôbec hovoril.',
     'content'      => <<<'HTML'
 <figure><a href="img/geneticke-testovanie-obliciek-zriedkavo.webp" rel="noopener noreferrer" target="_blank"><img src="img/geneticke-testovanie-obliciek-zriedkavo.webp" alt="Svetelná špirála DNA pri obličke, do ktorej dopadá len jeden tenký lúč, zvyšok zostáva v tme" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Časť diagnóz zostáva neobjasnená len preto, že sa test jednoducho neindikuje.</figcaption></figure>
 
@@ -112,7 +112,7 @@ $articles[] = [
 
 <h2>Praktický záver pre nefrologickú starostlivosť</h2>
 
-<p>Výsledky prieskumu ukazujú jasný nepomer medzi tým, koľko pacientov má indikáciu na genetické testovanie, a tým, s koľkými sa o tejto možnosti reálne diskutuje. Ak má 20 až 30 % chronických ochorení obličiek genetický podklad, genetická diagnostika by nemala zostať okrajovou témou.</p>
+<p>Výsledky prieskumu ukazujú jasný nepomer medzi tým, koľko pacientov má indikáciu na genetické testovanie, a tým, s koľkými sa o tejto možnosti reálne diskutuje. Ak má 20 až 30 % chronických chorôb obličiek genetický podklad, genetická diagnostika by nemala zostať okrajovou témou.</p>
 
 <p>Pre klinickú prax z toho vyplýva jednoduchý záver: pri chronickej chorobe obličiek nejasnej etiológie, pri skorom nástupe ochorenia, pozitívnej rodinnej anamnéze, mimorenálnych prejavoch alebo pred plánovaním príbuzenskej transplantácie má byť otázka genetického testovania aktívne zvážená.</p>
 

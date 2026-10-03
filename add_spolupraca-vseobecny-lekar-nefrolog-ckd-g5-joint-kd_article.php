@@ -37,7 +37,7 @@ $articles[] = [
     'content'      => <<<'HTML'
 <figure><a href="img/spolupraca-vseobecny-lekar-nefrolog-ckd-g5-joint-kd.webp" rel="noopener noreferrer" target="_blank"><img src="img/spolupraca-vseobecny-lekar-nefrolog-ckd-g5-joint-kd.webp" alt="Dve svetelné cesty, ktoré sa spájajú do jedného jasnejšieho prúdu nesúceho obličku v pokročilom štádiu" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Ani jedna zo strán nestačí sama — v pokročilom štádiu rozhoduje, či starostlivosť pokračuje spoločne.</figcaption></figure>
 
-<p>Manažment pacienta s chronickou chorobou obličiek v štádiu G5 nie je iba otázkou rozhodnutia, kedy začať dialýzu. Ide o komplexnú starostlivosť o človeka s vysokým rizikom hospitalizácie, infekcií, kardiovaskulárnych komplikácií, nutričných problémov, polyfarmácie, frailty a zhoršenej kvality života.</p>
+<p>Manažment pacienta s chronickou chorobou obličiek v štádiu G5 nie je iba otázkou rozhodnutia, kedy začať dialýzu. Ide o komplexnú starostlivosť o človeka s vysokým rizikom hospitalizácie, infekcií, kardiovaskulárnych komplikácií, nutričných problémov, polyfarmácie, krehkosti a zhoršenej kvality života.</p>
 
 <p>Štúdia JOINT-KD publikovaná v <em>Journal of Nephrology</em> sa venovala prakticky dôležitej otázke: má spolupráca medzi lekárom primárnej starostlivosti a nefrológom merateľný klinický prínos u pacientov s CKD v štádiu G5?</p>
 
@@ -105,7 +105,7 @@ $articles[] = [
 
 <p>Pre nefrológa je hlavné posolstvo praktické: pacient s CKD G5 by nemal byť izolovaný iba v špecializovanej nefrologickej ambulancii. Aj pri pokročilom ochorení obličiek má zmysel koordinovaná spolupráca s primárnou starostlivosťou.</p>
 
-<p>Takýto model môže byť dôležitý najmä u pacientov vo vyššom veku, s viacerými komorbiditami, častými infekciami, sociálnou alebo logistickou bariérou dostupnosti nefrológa, polyfarmáciou, frailty alebo v období prípravy na dialýzu.</p>
+<p>Takýto model môže byť dôležitý najmä u pacientov vo vyššom veku, s viacerými komorbiditami, častými infekciami, sociálnou alebo logistickou bariérou dostupnosti nefrológa, polyfarmáciou, krehkosťou alebo v období prípravy na dialýzu.</p>
 
 <p>Kľúčové je jasné rozdelenie kompetencií. Primárny lekár má vedieť, kedy pacienta riešiť ambulantne, kedy kontaktovať nefrológa a kedy pacienta odoslať na urgentné vyšetrenie. Nefrológ má poskytnúť zrozumiteľný plán starostlivosti vrátane cieľových hodnôt, varovných príznakov, úpravy liekov a plánu prípravy na dialýzu alebo transplantáciu.</p>
 

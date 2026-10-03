@@ -32,7 +32,7 @@ $articles[] = [
     'content'      => <<<'HTML'
 <figure><a href="img/glp1-lieky-renalne-benefity-dokazy-prax-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/glp1-lieky-renalne-benefity-dokazy-prax-nefrologia.webp" alt="Injekčné pero, ktorého lúč mieri priamo na obličku a rozsvecuje jej vnútorné štruktúry" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Ťažisko sa presúva z metabolického účinku na priamu nefroprotekciu — otázkou pre prax zostáva, komu ju ponúknuť.</figcaption></figure>
 
-<p class="article-dek"><em>Srdcovocievne a metabolické liečby sa v CKD takmer vždy premietnu do obličiek. Posledné dva roky však priniesli silný signál, že agonisty receptora GLP-1 (a v širšom kontexte aj duálne incretinové látky) v klinických štúdiách opakovane prinášajú renálnu ochranu – nielen u diabetu 2. typu, ale aj u vybraných populácií bez diabetu.</em></p>
+<p class="article-dek"><em>Srdcovocievne a metabolické liečby sa v CKD takmer vždy premietnu do obličiek. Posledné dva roky však priniesli silný signál, že agonisty receptora GLP-1 (a v širšom kontexte aj duálne inkretínové látky) v klinických štúdiách opakovane prinášajú renálnu ochranu – nielen u diabetu 2. typu, ale aj u vybraných populácií bez diabetu.</em></p>
 
 <p>V komentári na Medscape nefrológ Kashif J. Piracha upozorňuje, že väčšina lekárov stále zaradzuje agonisty GLP-1 do kategórie „diabetologických“ alebo „obezitologických“ liekov. Randomizované dáta z posledných 24 mesiacov však podporujú iný klinický rámec: pri vhodných pacientoch ide o lieky s preukázaným renálnym prínosom, ktoré sa v CKD manažmente majú uvažovať popri blokáde renínovo-angiotenzínového systému (RAS) a inhibítoroch SGLT2.</p>
 
@@ -131,14 +131,14 @@ $articles[] = [
   <li>priame protizápalové účinky na glomerulus a podocyty.</li>
 </ul>
 
-<p>Ide o navrhované mechanizmy podporované klinickými a experimentálnymi dátami, nie o definitívne dokázanú kauzálnu reťazec u každého jednotlivca. Analógia z komentára na Medscape je užitočná: blokáda RAS a statíny posilňujú „hradzbu“, inhibítor SGLT2 otvára „úľavový ventil“ a agonista GLP-1 znižuje „hladinu vody za hrádzou“. Tri rôzne úlohy – často potrebné súčasne.</p>
+<p>Ide o navrhované mechanizmy podporované klinickými a experimentálnymi dátami, nie o definitívne dokázaný kauzálny reťazec u každého jednotlivca. Analógia z komentára na Medscape je užitočná: blokáda RAS a statíny posilňujú „hradzbu“, inhibítor SGLT2 otvára „úľavový ventil“ a agonista GLP-1 znižuje „hladinu vody za hrádzou“. Tri rôzne úlohy – často potrebné súčasne.</p>
 
 <h2>Čo z toho premeniť na prax</h2>
 
 <ol>
   <li><strong>Skoršie zváženie agonisty GLP-1.</strong> U vhodného pacienta s diabetom 2. typu a CKD má zmysel uvažovať o agoniste GLP-1 v kontexte štandardnej vrstvenej nefroprotekcie (RAS, SGLT2, prípadne finerenón podľa indikácie) – nie ako o lieku, ktorý má čakať na endokrinologické rozhodnutie.</li>
   <li><strong>UACR v rizikových skupinách.</strong> Biomarkerový signál z programu SURMOUNT podporuje východiskové a kontrolné meranie UACR u pacientov s obezitou a kardiometabolickým rizikom, najmä ak už majú zvýšenú albuminúriu alebo pokles eGFR. Nie je to automatický štandard pre každú populáciu.</li>
-  <li><strong>Gastrointestinálna edukácia od prvého dňa.</strong> Nauzea sa vyskytuje približne u 20–30 % pacientov podľa režimu a titračného schémy. Včasné poučenie, pomalá eskalácia dávky a realistické očakávania zlepšujú adherenciu a znižujú riziko predčasného vysadenia.</li>
+  <li><strong>Gastrointestinálna edukácia od prvého dňa.</strong> Nauzea sa vyskytuje približne u 20–30 % pacientov podľa režimu a titračnej schémy. Včasné poučenie, pomalá eskalácia dávky a realistické očakávania zlepšujú adherenciu a znižujú riziko predčasného vysadenia.</li>
   <li><strong>Hypoglykémia pri kombinácii s inzulínom alebo sulfonylureou.</strong> Pri začatí agonisty GLP-1 u pacienta na bazálnom inzulíne s HbA1c &lt;8 % sa v štúdiách často znižoval bazálny inzulín približne o 20 % (napr. SUSTAIN‑5). Pri sulfonylureách zvážte redukciu dávky a častejšie monitorovanie glykémie; konkrétny postup individualizujte podľa rizika hypoglykémie.</li>
 </ol>
 
@@ -146,7 +146,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>V randomizovaných dôkazoch sa semaglutid a ďalšie incretinové lieky ukazujú ako schopné spomaliť renálne zhoršovanie alebo zlepšiť renálne rizikové markery naprieč viacerými klinickými fenotypmi. „GLP-1 framing“ ako renálne prínosných liekov je pre nefrológiu klinicky užitočný: pomáha nastaviť správnu prioritu v CKD manažmente.</p>
+<p>V randomizovaných dôkazoch sa semaglutid a ďalšie inkretínové lieky ukazujú ako schopné spomaliť renálne zhoršovanie alebo zlepšiť renálne rizikové markery naprieč viacerými klinickými fenotypmi. „GLP-1 framing“ ako renálne prínosných liekov je pre nefrológiu klinicky užitočný: pomáha nastaviť správnu prioritu v CKD manažmente.</p>
 
 <p>Zároveň treba zachovať presnosť. Tvrdé renálne endpointy z FLOW a SELECT nie sú zameniteľné s poklesom UACR v post hoc analýzach obezitných štúdií. Kombinácia s inhibítorom SGLT2 je logická a v celkovej populácii FLOW podporovaná, no prírastkový efekt v už liečenej podskupine zostáva štatisticky nepreukázaný. Praktický prínos vznikne až vtedy, keď sa dôkazy pretavia do individuálneho plánu: správna indikácia, vrstvená nefroprotekcia, monitorovanie UACR a eGFR, edukácia k gastrointestinálnym nežiaducim účinkom a bezpečná úprava súbežnej antidiabetickej liečby.</p>
 

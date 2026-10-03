@@ -35,7 +35,7 @@ $articles[] = [
     'content'      => <<<'HTML'
 <figure><a href="img/ckm-syndrom-prva-multidisciplinarna-smernica-2026.webp" rel="noopener noreferrer" target="_blank"><img src="img/ckm-syndrom-prva-multidisciplinarna-smernica-2026.webp" alt="Štyri svetelné lúče spájajúce sa do jedného stĺpa dopadajúceho na srdce, metabolizmus a obličku" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Štyri odbornosti po prvý raz hovoria jedným hlasom — a pacient prestáva prechádzať medzi oddelenými svetmi.</figcaption></figure>
 
-<p>Dňa 9. júna 2026 organizácie AHA, ACC, ADA a ASN spoločne zverejnili prvú multidisciplinárnu smernicu zameranú na kardiovaskulárno-obličkovo-metabolický syndróm (<em>cardiovascular-kidney-metabolic</em>, CKM). Dokument pôvodný rámec z roku 2013 podľa formulácie autorov „uzatvára, nahrádza a rozširuje“ — predovšetkým ho však posúva do koncepcie, že <strong>obezita, diabetes 2. typu, chronické ochorenie obličiek (CKD) a kardiovaskulárne ochorenia sú prepojené ako jeden kontinuálny syndróm</strong>.</p>
+<p>Dňa 9. júna 2026 organizácie AHA, ACC, ADA a ASN spoločne zverejnili prvú multidisciplinárnu smernicu zameranú na kardiovaskulárno-obličkovo-metabolický syndróm (<em>cardiovascular-kidney-metabolic</em>, CKM). Dokument pôvodný rámec z roku 2013 podľa formulácie autorov „uzatvára, nahrádza a rozširuje“ — predovšetkým ho však posúva do koncepcie, že <strong>obezita, diabetes 2. typu, chronická choroba obličiek (CKD) a kardiovaskulárne ochorenia sú prepojené ako jeden kontinuálny syndróm</strong>.</p>
 
 <h2>Čo je nové v praxi</h2>
 
@@ -52,7 +52,7 @@ $articles[] = [
 <p>Pri skríningu sa majú pravidelne používať:</p>
 
 <ul>
-  <li><strong>eGFR</strong> — odhadovaná glomerulárna filtrácia (filtračná funkcia obličiek),</li>
+  <li><strong>eGFR</strong> — odhadovaná glomerulová filtrácia (filtračná funkcia obličiek),</li>
   <li><strong>UACR</strong> — pomer albumín/kreatinín v moči (marker renálneho aj kardiovaskulárneho rizika).</li>
 </ul>
 

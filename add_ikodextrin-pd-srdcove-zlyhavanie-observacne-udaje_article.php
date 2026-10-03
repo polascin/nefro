@@ -85,7 +85,7 @@ $articles[] = [
 
 <p><em>HR – pomer okamžitých rizík (z angl. <span lang="en">hazard ratio</span>); IS – interval spoľahlivosti.</em></p>
 
-<p>Používanie ikodextrínu teda bolo spojené s výrazne nižším pomerom okamžitých rizík úmrtia a s miernejšie nižším pomerom okamžitých rizík kompozitu MACE. Emulácia cieľovej štúdie priniesla podobné odhady: HR pre celkovú mortalitu 0,15, pre kardiovaskulárnu mortalitu 0,11, pre náhlu smrť 0,16 a pre MACE 0,69. Aj analýza trojmesačných intervalov ukázala výsledky rovnakým smerom.</p>
+<p>Používanie ikodextrínu teda bolo spojené s výrazne nižším pomerom okamžitých rizík úmrtia a s mierne nižším pomerom okamžitých rizík kompozitu MACE. Emulácia cieľovej štúdie priniesla podobné odhady: HR pre celkovú mortalitu 0,15, pre kardiovaskulárnu mortalitu 0,11, pre náhlu smrť 0,16 a pre MACE 0,69. Aj analýza trojmesačných intervalov ukázala výsledky v rovnakom smere.</p>
 
 <h2>Čo sa neznížilo</h2>
 

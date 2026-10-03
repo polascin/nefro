@@ -338,7 +338,7 @@ $articles[] = [
 
 <p>Tvrdenie, že intenzívna liečba v podskupine s CKD znížila kardiovaskulárne riziko, teda nie je presné: zložený kardiovaskulárny výsledok významnosť <strong>nedosiahol</strong>. Významné bolo iba zníženie celkovej mortality. Zároveň sa nepreukázalo modifikovanie účinku prítomnosťou CKD (hodnoty p pre interakciu ≥ 0,30), takže prínos zistený v celom súbore sa na pacientov s CKD pravdepodobne vzťahuje — ale samotná podskupina na jeho preukázanie nemala dostatočnú silu.</p>
 
-<p>Presvedčivý renoprotektívny účinok sa nepreukázal. Po úvodných šiestich mesiacoch mala intenzívne liečená skupina dokonca mierne rýchlejší pokles eGFR (−0,47 oproti −0,32 ml/min/1,73 m² za rok; p &lt; 0,03). Akútny hemodynamický pokles eGFR po začatí intenzívnej liečby pritom nemožno automaticky stotožniť so štrukturálnym poškodením obličiek.</p>
+<p>Presvedčivý nefroprotektívny účinok sa nepreukázal. Po úvodných šiestich mesiacoch mala intenzívne liečená skupina dokonca mierne rýchlejší pokles eGFR (−0,47 oproti −0,32 ml/min/1,73 m² za rok; p &lt; 0,03). Akútny hemodynamický pokles eGFR po začatí intenzívnej liečby pritom nemožno automaticky stotožniť so štrukturálnym poškodením obličiek.</p>
 
 <p>SPRINT navyše používala starostlivo organizované meranie krvného tlaku automatickým prístrojom podľa protokolu. Jej cieľovú hodnotu preto nemožno nekriticky preniesť na neštandardizované ambulantné meranie.</p>
 

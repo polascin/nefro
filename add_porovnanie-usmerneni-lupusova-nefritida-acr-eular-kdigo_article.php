@@ -183,9 +183,9 @@ $articles[] = [
       <td>Rituximab tiež nie je prvá línia; neskoršie použitie závisí od klinického kontextu</td>
     </tr>
     <tr>
-      <td><strong>Renoprotekcia</strong></td>
+      <td><strong>Nefroprotekcia</strong></td>
       <td>Spoločný rámec: kontrola krvného tlaku, <strong>blokáda RAAS</strong>, selektívne zváženie <strong>inhibítorov SGLT2</strong></td>
-      <td>Rovnaký princíp — praktická renoprotekcia popri imunosupresii</td>
+      <td>Rovnaký princíp — praktická nefroprotekcia popri imunosupresii</td>
       <td>Rovnaký spoločný základ: cieľový krvný tlak, RAAS, selektívne SGLT2</td>
     </tr>
   </tbody>
@@ -217,7 +217,7 @@ $articles[] = [
 
 <h2>Renoprotektívna liečba: spoločný rámec bez ohľadu na hlavný režim</h2>
 
-<p>Okrem imunosupresie všetky tri dokumenty zdôrazňujú renoprotekciu:</p>
+<p>Okrem imunosupresie všetky tri dokumenty zdôrazňujú nefroprotekciu:</p>
 
 <ul>
   <li>kontrola krvného tlaku na približne <strong>&lt; 120–130/80 mmHg</strong>,</li>

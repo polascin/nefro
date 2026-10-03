@@ -113,7 +113,7 @@ $articles[] = [
 
 <p>Odporúčania z roku 2020 pre závažné infekcie spôsobené MRSA uprednostňujú monitorovanie vankomycínu podľa plochy pod krivkou koncentrácie v čase (AUC). <strong>Expozičné ciele odvodené pre MRSA nemožno bez validácie preniesť na vankomycín s pghi-4 proti VREfm.</strong> Ani vysokú MIC nemožno bezmedzne kompenzovať zvyšovaním dávky vankomycínu. <a href="#zdroj-7">[7]</a> </p>
 
-<p>Pri pghi-4 treba osobitne objasniť renálnu elimináciu a prípadnú kumuláciu látky či jej metabolitov, odstrániteľnosť dialýzou, interakcie s imunosupresívami a vplyv na expozíciu vankomycínu. Z dostupného krátkodobého experimentu nemožno určiť bezpečný režim pre pacienta s chronickým ochorením obličiek, akútnym poškodením obličiek alebo po transplantácii.</p>
+<p>Pri pghi-4 treba osobitne objasniť renálnu elimináciu a prípadnú kumuláciu látky či jej metabolitov, odstrániteľnosť dialýzou, interakcie s imunosupresívami a vplyv na expozíciu vankomycínu. Z dostupného krátkodobého experimentu nemožno určiť bezpečný režim pre pacienta s chronickou chorobou obličiek, akútnym poškodením obličiek alebo po transplantácii.</p>
 
 <div class="pdf-avoid-break">
 <h2>Čo dnes platí pre liečbu infekcie VREfm</h2>

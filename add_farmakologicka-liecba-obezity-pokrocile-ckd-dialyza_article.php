@@ -35,7 +35,7 @@ $articles[] = [
     'content'      => <<<'HTML'
 <figure><a href="img/farmakologicka-liecba-obezity-pokrocile-ckd-dialyza.webp" rel="noopener noreferrer" target="_blank"><img src="img/farmakologicka-liecba-obezity-pokrocile-ckd-dialyza.webp" alt="Injekčné pero pri dialyzačnom filtri a odmeraný prúd svetla prechádzajúci k oslabenej obličke" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Liečba je možná aj na dialýze — rozhoduje však dávkovanie a sledovanie bezpečnosti.</figcaption></figure>
 
-<p>Obezita je v nefrológii špecifická tým, že zhoršuje metabolické a kardiovaskulárne riziká a súčasne komplikuje manažment chronického ochorenia obličiek (CKD). Pri pokročilom CKD, a najmä u pacientov na dialýze, je farmakoterapia zaujímavá ako jedna z možných „odbočiek“ na ceste k lepšej kondícii a potenciálne aj k lepšej spôsobilosti na transplantáciu. Praktickým problémom však býva, že mnohé lieky sa vylučujú obličkami alebo ich farmakokinetiku menia zmeny glomerulárnej filtrácie (GFR) a dialyzačné parametre.</p>
+<p>Obezita je v nefrológii špecifická tým, že zhoršuje metabolické a kardiovaskulárne riziká a súčasne komplikuje manažment chronickej choroby obličiek (CKD). Pri pokročilom CKD, a najmä u pacientov na dialýze, je farmakoterapia zaujímavá ako jedna z možných „odbočiek“ na ceste k lepšej kondícii a potenciálne aj k lepšej spôsobilosti na transplantáciu. Praktickým problémom však býva, že mnohé lieky sa vylučujú obličkami alebo ich farmakokinetiku menia zmeny glomerulovej filtrácie (GFR) a dialyzačné parametre.</p>
 
 <p>Nasledujúci prehľad zhŕňa kľúčové praktické body z dostupného fulltextového materiálu (najmä sekciu venovanú liekom na redukciu hmotnosti), so zameraním na:</p>
 

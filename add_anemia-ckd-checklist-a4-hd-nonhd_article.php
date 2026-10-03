@@ -60,7 +60,7 @@ $articles[] = [
 <h3>A) CKD G5HD (hemodialýza)</h3>
 
 <ul>
-  <li>☐ Pri <strong>ferritín ≤ 500 ng/ml</strong> a <strong>TSAT ≤ 30 %</strong> začať <strong>IV železo</strong></li>
+  <li>☐ Pri <strong>ferritíne ≤ 500 ng/ml</strong> a <strong>TSAT ≤ 30 %</strong> začať <strong>IV železo</strong></li>
   <li>☐ Stop sign pre bezpečnosť: zadržať rutinné železo, ak <strong>ferritín &gt; 700 ng/ml</strong> alebo <strong>TSAT ≥ 40 %</strong></li>
   <li>☐ Typ IV železa a dávkovací plán: ____________________</li>
 </ul>
@@ -69,7 +69,7 @@ $articles[] = [
 
 <ul>
   <li>☐ Zvoliť perorálne vs IV železo podľa ferritínu, TSAT, tolerancie, dostupnosti a potreby rýchlej korekcie</li>
-  <li>☐ Pri zahájení IV železa zvážiť riziká, najmä pri FCM</li>
+  <li>☐ Pri začatí IV železa zvážiť riziká, najmä pri FCM</li>
 </ul>
 
 <h2>4) Špeciálne: FCM a fosfát</h2>
