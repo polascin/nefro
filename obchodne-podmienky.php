@@ -76,10 +76,9 @@ include 'legal_head.php';
                     Publikácie predáva <strong><?= htmlspecialchars($seller['name'], ENT_QUOTES, 'UTF-8') ?></strong>,
                     IČO <?= htmlspecialchars($seller['companyId'], ENT_QUOTES, 'UTF-8') ?>,
                     DIČ <?= htmlspecialchars($seller['taxId'], ENT_QUOTES, 'UTF-8') ?>,
-                    so sídlom v <?= htmlspecialchars($seller['establishment'], ENT_QUOTES, 'UTF-8') ?>
-                    <?php if ($seller['address'] !== ''): ?>
-                        (<?= htmlspecialchars($seller['address'], ENT_QUOTES, 'UTF-8') ?>)
-                    <?php endif; ?>
+                    s miestom podnikania
+                    <?= htmlspecialchars($seller['address'], ENT_QUOTES, 'UTF-8') ?>,
+                    <?= htmlspecialchars($seller['establishment'], ENT_QUOTES, 'UTF-8') ?>
                     (ďalej len „predávajúci“).
                 </p>
                 <p>
@@ -289,8 +288,11 @@ include 'legal_head.php';
                     aj elektronicky. Využitie ADR nevylučuje obrátiť sa na súd.
                 </p>
                 <p>
-                    Orgánom dozoru je Slovenská obchodná inšpekcia — príslušný inšpektorát SOI
-                    podľa miesta podnikania predávajúceho.
+                    Orgánom dozoru je
+                    <strong><?= htmlspecialchars($seller['supervisoryAuthority'], ENT_QUOTES, 'UTF-8') ?></strong>
+                    (<a href="<?= htmlspecialchars($seller['supervisoryAuthorityUrl'], ENT_QUOTES, 'UTF-8') ?>"
+                        target="_blank" rel="noopener noreferrer">soi.sk</a>),
+                    príslušný podľa miesta podnikania predávajúceho.
                 </p>
 
                 <h3>11. Osobné údaje</h3>

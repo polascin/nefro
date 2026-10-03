@@ -306,7 +306,7 @@ $paymeUrl     = $order !== null ? publicationPaymeUrl($amount, (string) $order['
                         <?= htmlspecialchars($seller['name']) ?>,
                         IČO <?= htmlspecialchars($seller['companyId']) ?>,
                         DIČ <?= htmlspecialchars($seller['taxId']) ?>,
-                        so sídlom v <?= htmlspecialchars($seller['establishment']) ?>.
+                        <?= htmlspecialchars($seller['address']) ?>.
                         <?= htmlspecialchars($seller['vatNote']) ?>
                     </p>
                     <p class="pub-legal-link">

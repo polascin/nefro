@@ -55,23 +55,29 @@ const PUBLICATION_FILES_DIR = __DIR__ . '/private/publications';
 /**
  * Identifikácia predávajúceho pre predajné stránky, objednávky a e-maily.
  *
- * `address` je zámerne prázdny reťazec, kým nebude doplnená poštová adresa
- * miesta podnikania — zvyšok webu (privacy.php, terms.php) rovnako uvádza len
- * „so sídlom v Slovenskej republike (EÚ)“. Predzmluvné informácie pri predaji
- * na diaľku ju však vyžadujú; po doplnení sa riadok zobrazí automaticky.
+ * Poštová adresa miesta podnikania tu musí byť uvedená — predzmluvné informácie
+ * pri predaji na diaľku ju vyžadujú. Zvyšok webu (privacy.php, terms.php)
+ * vystačí s „so sídlom v Slovenskej republike (EÚ)“, pretože neuzatvára kúpnu
+ * zmluvu; `establishment` preto zostáva pre texty, ktoré stačia všeobecne.
+ *
+ * `supervisoryAuthority` je inšpektorát SOI príslušný podľa miesta podnikania
+ * (Rovinka, okres Senec → Bratislavský kraj) — spotrebiteľ musí vedieť, kam
+ * sa obrátiť, a všeobecné „príslušný inšpektorát“ mu to nepovie.
  *
  * @return array<string, string>
  */
 function publicationSeller(): array
 {
     return [
-        'name'         => 'MUDr. Ľubomír Polaščín - Nephroctor',
-        'companyId'    => '57646856',
-        'taxId'        => '1047524401',
-        'vatNote'      => 'Predávajúci nie je platiteľom DPH. Ceny sú konečné.',
-        'address'      => '',
+        'name'          => 'MUDr. Ľubomír Polaščín - Nephroctor',
+        'companyId'     => '57646856',
+        'taxId'         => '1047524401',
+        'vatNote'       => 'Predávajúci nie je platiteľom DPH. Ceny sú konečné.',
+        'address'       => 'Kvetná 944/2I, 900 41 Rovinka',
         'establishment' => 'Slovenská republika (EÚ)',
-        'email'        => 'nefro@polascin.net',
+        'email'         => 'nefro@polascin.net',
+        'supervisoryAuthority'    => 'Inšpektorát Slovenskej obchodnej inšpekcie pre Bratislavský kraj',
+        'supervisoryAuthorityUrl' => 'https://www.soi.sk/',
     ];
 }
 
@@ -645,7 +651,8 @@ function sendPublicationOrderInstructionsEmail(array $order, string $token): boo
         . '<p style="margin:0;color:#64748b;font-size:14px;line-height:22px;">Objednávka je '
         . 'rezervovaná ' . $dueDays . ' dní. Ak nestihnete zaplatiť, nič sa nedeje — '
         . 'objednávku jednoducho vytvorte znova. Predávajúci: '
-        . escapeEmailHtml($seller['name']) . ', IČO ' . escapeEmailHtml($seller['companyId'])
+        . escapeEmailHtml($seller['name']) . ', ' . escapeEmailHtml($seller['address'])
+        . ', IČO ' . escapeEmailHtml($seller['companyId'])
         . ', DIČ ' . escapeEmailHtml($seller['taxId']) . '. '
         . escapeEmailHtml($seller['vatNote']) . '</p>';
 
@@ -660,7 +667,8 @@ function sendPublicationOrderInstructionsEmail(array $order, string $token): boo
         . 'od pripísania na účet. Potom vám pošleme publikáciu e-mailom — súbory, ktoré sa '
         . 'zmestia do prílohy, prídu priamo v nej, objemnejšie stiahnete na stránke objednávky.' . "\n\n"
         . 'Objednávka je rezervovaná ' . $dueDays . ' dní.' . "\n\n"
-        . 'Predávajúci: ' . $seller['name'] . ', IČO ' . $seller['companyId']
+        . 'Predávajúci: ' . $seller['name'] . ', ' . $seller['address']
+        . ', IČO ' . $seller['companyId']
         . ', DIČ ' . $seller['taxId'] . '. ' . $seller['vatNote'] . "\n\n"
         . EMAIL_BRAND_NAME;
 
@@ -810,11 +818,13 @@ function sendPublicationOrderDeliveryEmail(array $order, string $token): array
 
     $footerHtml = '<p style="margin:0;color:#64748b;font-size:14px;line-height:22px;">'
         . 'Súbory sú bez DRM a určené na vaše osobné použitie. Predávajúci: '
-        . escapeEmailHtml($seller['name']) . ', IČO ' . escapeEmailHtml($seller['companyId'])
+        . escapeEmailHtml($seller['name']) . ', ' . escapeEmailHtml($seller['address'])
+        . ', IČO ' . escapeEmailHtml($seller['companyId'])
         . ', DIČ ' . escapeEmailHtml($seller['taxId']) . '. '
         . escapeEmailHtml($seller['vatNote']) . '</p>';
     $footerText = 'Súbory sú bez DRM a určené na vaše osobné použitie.' . "\n\n"
-        . 'Predávajúci: ' . $seller['name'] . ', IČO ' . $seller['companyId']
+        . 'Predávajúci: ' . $seller['name'] . ', ' . $seller['address']
+        . ', IČO ' . $seller['companyId']
         . ', DIČ ' . $seller['taxId'] . '. ' . $seller['vatNote'] . "\n\n"
         . EMAIL_BRAND_NAME;
 
