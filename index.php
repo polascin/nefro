@@ -389,6 +389,14 @@ if (!empty($itemListElements)) {
       </section>
       <?php endif; ?>
 
+      <?php if ($autorFilter === ""): ?>
+      <!-- Publikácie (e-knihy) — vlastná podmienka, nie spoločná s Top článkami:
+           blok sa má zobraziť aj vtedy, keď žiadny článok nie je označený ako
+           odporúčaný. Pri filtri na autora ho vynechávame, tam je stránka
+           zámerne zúžená na jeho tvorbu. -->
+      <?php include __DIR__ . '/publication_cta.php'; ?>
+      <?php endif; ?>
+
       <?php if ($autorFilter === "" && !empty($topArticles)): ?>
       <!-- Top články -->
       <section class="articles-top-section" aria-labelledby="top-articles-heading">
