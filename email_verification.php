@@ -238,7 +238,51 @@ function smtpExpectBanner($socket): bool {
 }
 
 function smtpRunEhlo($socket, string $ehloHost, string $stage): bool {
-    return smtpSendCommand($socket, 'EHLO ' . $ehloHost, [250], $stage)['ok'];
+    $result = smtpSendCommand($socket, 'EHLO ' . $ehloHost, [250], $stage);
+
+    // Server v EHLO odpovedi ohlási maximálnu veľkosť správy („250-SIZE 20480000“).
+    // Pri prílohách je to jediný spoľahlivý zdroj limitu — bez neho by sme
+    // len hádali, či sa 25 MB súbor zmestí, alebo spojenie spadne po prenose.
+    if ($result['ok'] && preg_match('/^250[\s-]SIZE\s+(\d+)/mi', (string) $result['response'], $m)) {
+        $GLOBALS['__smtpMaxMessageSize'] = (int) $m[1];
+    }
+
+    return $result['ok'];
+}
+
+/**
+ * Maximálna veľkosť správy ohlásená serverom, alebo 0 ak ju neohlásil
+ * (RFC 1870: chýbajúce SIZE znamená „neudávame limit“, nie „bez limitu“).
+ */
+function smtpAdvertisedMaxMessageSize(): int {
+    return (int) ($GLOBALS['__smtpMaxMessageSize'] ?? 0);
+}
+
+/**
+ * Zistí limit veľkosti správy samostatným handshakom. Výsledok sa cachuje
+ * v rámci požiadavky — zisťovanie otvára spojenie, takže ho nechceme
+ * opakovať pri každej prílohe.
+ */
+function smtpProbeMaxMessageSize(array $cfg): int {
+    static $probed = null;
+    if ($probed !== null) {
+        return $probed;
+    }
+
+    if (smtpAdvertisedMaxMessageSize() > 0) {
+        $probed = smtpAdvertisedMaxMessageSize();
+        return $probed;
+    }
+
+    $socket = smtpOpenAndHandshake($cfg);
+    if ($socket) {
+        smtpSendCommand($socket, 'QUIT', [221], 'quit');
+        smtpCloseSocket($socket);
+    }
+
+    $probed = smtpAdvertisedMaxMessageSize();
+
+    return $probed;
 }
 
 function smtpStartTlsAndReEhlo($socket, string $ehloHost): bool {
@@ -677,4 +721,230 @@ function isEmailResendAllowed(?string $sentAt, int $cooldownSeconds = 60): bool 
     }
 
     return (time() - $sentTs) >= $cooldownSeconds;
+}
+
+/* ───────────────────── Odosielanie s prílohami (streamované) ───────────────
+ * Príloha e-knihy má 22 – 28 MB; v base64 narastie na ~1,37-násobok. Skladať
+ * takú správu do jedného reťazca (a potom nad ňou robiť str_replace pre CRLF
+ * a dot-stuffing, ako to robí smtpBuildPayload) by znamenalo niekoľko kópií
+ * desiatok MB v pamäti. Preto sa príloha zapisuje do socketu po blokoch
+ * a smtpBuildPayload sa pre tento prípad nepoužíva.
+ *
+ * Riadky base64 nikdy nezačínajú bodkou, takže dot-stuffing (RFC 5321 §4.5.2)
+ * je potrebný len pre textové časti — tie prechádzajú rovnakou normalizáciou
+ * ako doteraz.
+ * ────────────────────────────────────────────────────────────────────────── */
+
+/** Koľko bajtov originálu naraz čítame — násobok 3, aby base64 nemal padding v strede. */
+const SMTP_ATTACHMENT_CHUNK_BYTES = 57456;
+
+function smtpWriteRaw($socket, string $data): bool {
+    $length = strlen($data);
+    $written = 0;
+
+    while ($written < $length) {
+        $result = @fwrite($socket, substr($data, $written));
+        if ($result === false || $result === 0) {
+            smtpLogError('data_payload', 'write_failed');
+            return false;
+        }
+        $written += $result;
+    }
+
+    return true;
+}
+
+/** Normalizácia textovej časti správy na CRLF vrátane dot-stuffingu. */
+function smtpNormalizeTextPart(string $text): string {
+    $normalized = str_replace(["\r\n", "\r"], "\n", $text);
+    $normalized = str_replace("\n", "\r\n", $normalized);
+
+    return str_replace("\r\n.", "\r\n..", $normalized);
+}
+
+/**
+ * Odhad veľkosti správy s prílohami v bajtoch — base64 rozšíri obsah
+ * na 4/3 a pridá zalomenie každých 76 znakov.
+ *
+ * @param array<int, array{path: string, filename: string, mime: string}> $attachments
+ */
+function smtpEstimateMessageSize(string $messageBody, ?string $plainTextAlt, array $attachments): int {
+    $size = strlen($messageBody) + strlen((string) $plainTextAlt) + 2048;
+
+    foreach ($attachments as $attachment) {
+        $bytes = (int) @filesize($attachment['path']);
+        $size += (int) ceil($bytes / 3) * 4;          // base64
+        $size += (int) ceil($bytes / 57) * 2;         // CRLF na každých 57 vstupných bajtov
+        $size += 512;                                 // hlavičky časti
+    }
+
+    return $size;
+}
+
+/**
+ * Pošle HTML e-mail s prílohami. Prílohy sa streamujú z disku, takže
+ * pamäťová náročnosť nerastie s ich veľkosťou.
+ *
+ * @param array<int, array{path: string, filename: string, mime: string}> $attachments
+ * @param array<string, string> $extraHeaders
+ */
+function sendViaSmtpWithAttachments(
+    string $toEmail,
+    string $subject,
+    string $messageBody,
+    array $cfg,
+    ?string $plainTextAlt,
+    array $attachments,
+    array $extraHeaders = []
+): bool {
+    $GLOBALS['__smtpLastError'] = '';
+
+    $readable = [];
+    foreach ($attachments as $attachment) {
+        if (is_file($attachment['path']) && is_readable($attachment['path'])) {
+            $readable[] = $attachment;
+        } else {
+            error_log('sendViaSmtpWithAttachments: príloha nie je čitateľná — ' . $attachment['path']);
+        }
+    }
+
+    if ($readable === []) {
+        // Bez prílohy nie je dôvod obchádzať bežnú cestu.
+        return sendViaSmtp($toEmail, $subject, $messageBody, $cfg, EMAIL_CONTENT_TYPE_HTML, $plainTextAlt, $extraHeaders);
+    }
+
+    $socket = smtpOpenAndHandshake($cfg);
+    if (!$socket) {
+        return false;
+    }
+
+    // Limit kontrolujeme až po handshake — až vtedy ho server ohlásil.
+    $advertised = smtpAdvertisedMaxMessageSize();
+    $estimated  = smtpEstimateMessageSize($messageBody, $plainTextAlt, $readable);
+    if ($advertised > 0 && $estimated > $advertised) {
+        smtpLogError('attachment_size', 'exceeds_server_limit', [
+            'expected' => [$advertised],
+            'actual'   => $estimated,
+        ]);
+        smtpSendCommand($socket, 'QUIT', [221], 'quit');
+        smtpCloseSocket($socket);
+
+        return false;
+    }
+
+    if (!smtpAuthenticate($socket, $cfg)) {
+        smtpCloseSocket($socket);
+        return false;
+    }
+
+    if (!smtpOpenEnvelope($socket, (string) $cfg['from_email'], $toEmail)) {
+        smtpSendCommand($socket, 'QUIT', [221], 'quit');
+        smtpCloseSocket($socket);
+        return false;
+    }
+
+    $mixBoundary = '=_nps_mix_' . bin2hex(random_bytes(12));
+    $altBoundary = '=_nps_alt_' . bin2hex(random_bytes(12));
+
+    $headers = [
+        'From: ' . mb_encode_mimeheader((string) $cfg['from_name'], 'UTF-8', 'B', "\r\n ")
+            . ' <' . $cfg['from_email'] . '>',
+        'To: <' . $toEmail . '>',
+        'Subject: ' . mb_encode_mimeheader($subject, 'UTF-8', 'B', "\r\n "),
+        'MIME-Version: 1.0',
+        'Date: ' . date(DATE_RFC2822),
+    ];
+    foreach ($extraHeaders as $headerName => $headerValue) {
+        if ($headerValue !== '') {
+            $headers[] = $headerName . ': ' . $headerValue;
+        }
+    }
+    $headers[] = 'Content-Type: multipart/mixed; boundary="' . $mixBoundary . '"';
+
+    $head = implode("\r\n", $headers) . "\r\n\r\n";
+
+    $altPart = '--' . $mixBoundary . "\r\n"
+        . 'Content-Type: multipart/alternative; boundary="' . $altBoundary . "\"\r\n\r\n"
+        . '--' . $altBoundary . "\r\n"
+        . "Content-Type: text/plain; charset=UTF-8\r\n"
+        . "Content-Transfer-Encoding: quoted-printable\r\n\r\n"
+        . smtpNormalizeTextPart(quoted_printable_encode((string) $plainTextAlt)) . "\r\n\r\n"
+        . '--' . $altBoundary . "\r\n"
+        . 'Content-Type: ' . EMAIL_CONTENT_TYPE_HTML . "\r\n"
+        . "Content-Transfer-Encoding: quoted-printable\r\n\r\n"
+        . smtpNormalizeTextPart(quoted_printable_encode($messageBody)) . "\r\n\r\n"
+        . '--' . $altBoundary . "--\r\n\r\n";
+
+    $ok = smtpWriteRaw($socket, $head . $altPart);
+
+    foreach ($readable as $attachment) {
+        if (!$ok) {
+            break;
+        }
+
+        $asciiName = preg_replace('/[^A-Za-z0-9._ -]/', '_', $attachment['filename'])
+            ?? 'publikacia';
+
+        $partHead = '--' . $mixBoundary . "\r\n"
+            . 'Content-Type: ' . $attachment['mime'] . '; name="' . $asciiName . "\"\r\n"
+            . "Content-Transfer-Encoding: base64\r\n"
+            . 'Content-Disposition: attachment; filename="' . $asciiName . '"; '
+            . "filename*=UTF-8''" . rawurlencode($attachment['filename']) . "\r\n\r\n";
+
+        $ok = smtpWriteRaw($socket, $partHead);
+        if (!$ok) {
+            break;
+        }
+
+        $handle = @fopen($attachment['path'], 'rb');
+        if (!$handle) {
+            smtpLogError('attachment_read', 'fopen_failed');
+            $ok = false;
+            break;
+        }
+
+        while (!feof($handle)) {
+            $chunk = fread($handle, SMTP_ATTACHMENT_CHUNK_BYTES);
+            if ($chunk === false) {
+                smtpLogError('attachment_read', 'fread_failed');
+                $ok = false;
+                break;
+            }
+            if ($chunk === '') {
+                continue;
+            }
+            if (!smtpWriteRaw($socket, chunk_split(base64_encode($chunk), 76, "\r\n"))) {
+                $ok = false;
+                break;
+            }
+        }
+        fclose($handle);
+
+        if ($ok) {
+            $ok = smtpWriteRaw($socket, "\r\n");
+        }
+    }
+
+    if ($ok) {
+        $ok = smtpWriteRaw($socket, '--' . $mixBoundary . "--\r\n.\r\n");
+    }
+
+    if (!$ok) {
+        smtpCloseSocket($socket);
+        return false;
+    }
+
+    [$code, $response] = smtpReadResponse($socket);
+    if ($code !== 250) {
+        smtpLogError('data_finalize', 'unexpected_code', [
+            'expected' => [250],
+            'actual'   => $code,
+            'response' => $response,
+        ]);
+    }
+
+    smtpSendCommand($socket, 'QUIT', [221], 'quit');
+    smtpCloseSocket($socket);
+
+    return $code === 250;
 }

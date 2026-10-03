@@ -18,6 +18,9 @@ $_navStudiesActive = $_navCurrent === 'studie.php' || $_navCurrent === 'studia.p
 // Lieky sú aktívne pre hub aj detail
 $_navDrugsActive = $_navCurrent === 'lieky.php' || $_navCurrent === 'liek.php';
 
+// Publikácie sú aktívne pre katalóg, predajnú stránku aj stránku objednávky
+$_navPubsActive = in_array($_navCurrent, ['publikacie.php', 'publikacia.php', 'objednavka.php'], true);
+
 // Na hlavnej stránke odkazujeme na vlastné sekcie (hash), inde na index.php
 $_navOnIndex = $_navCurrent === 'index.php';
 
@@ -46,6 +49,7 @@ if (!function_exists('_navA')) {
             <li><?= _navA('cheatsheets.php', 'Ťaháky', $_navCurrent === 'cheatsheets.php') ?></li>
             <li><?= _navA('studie.php', 'Štúdie', $_navStudiesActive) ?></li>
             <li><?= _navA('lieky.php', 'Lieky', $_navDrugsActive) ?></li>
+            <li><?= _navA('publikacie.php', 'Publikácie', $_navPubsActive) ?></li>
             <li><?= _navA('search.php', 'Vyhľadávanie', $_navCurrent === 'search.php') ?></li>
             <li class="main-nav__break" role="presentation" aria-hidden="true"></li>
             <li><a href="<?= $_navOnIndex ? '#sluzby' : 'index.php#sluzby' ?>">Služby</a></li>
@@ -54,7 +58,7 @@ if (!function_exists('_navA')) {
                 <li><?= _navA('discussion.php', 'Diskusia', $_navCurrent === 'discussion.php') ?></li>
                 <li><?= _navA('profile.php', 'Môj profil', $_navCurrent === 'profile.php') ?></li>
                 <?php if (function_exists('isAdmin') && isAdmin()): ?>
-                    <li><?= _navA('admin.php', 'Administrácia', in_array($_navCurrent, ['admin.php', 'admin_articles.php', 'admin_discussion.php', 'admin_trials.php', 'admin_drugs.php', 'admin_providers.php'], true)) ?></li>
+                    <li><?= _navA('admin.php', 'Administrácia', in_array($_navCurrent, ['admin.php', 'admin_articles.php', 'admin_discussion.php', 'admin_trials.php', 'admin_drugs.php', 'admin_providers.php', 'admin_publication_orders.php'], true)) ?></li>
                 <?php endif; ?>
                 <li>
                     <form action="logout.php" method="post" class="nav-logout-form">

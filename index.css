@@ -7148,3 +7148,547 @@ mark.search-hl {
 .bot-honeypot {
   display: none !important;
 }
+
+/* ══════════════════════════════════════════════════════════════════════
+   PUBLIKÁCIE (e-knihy) — katalóg, predajná stránka, objednávka
+   publikacie.php · publikacia.php · objednavka.php · admin_publication_orders.php
+
+   CSP (style-src 'self') zakazuje atribút style="", takže všetko, čo by inak
+   bolo inline, patrí sem. Farby sa berú z premenných v :root, aby tmavý režim
+   fungoval bez duplikovania pravidiel.
+   ══════════════════════════════════════════════════════════════════════ */
+
+/* ── Úvod katalógu ───────────────────────────────────────────────────── */
+.pub-intro {
+    margin-bottom: 28px;
+}
+
+.pub-intro__lead {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    max-width: 70ch;
+}
+
+/* ── Katalóg (zoznam kariet) ─────────────────────────────────────────── */
+.pub-catalogue {
+    list-style: none;
+    margin: 0 0 32px;
+    padding: 0;
+    display: grid;
+    gap: 24px;
+}
+
+.pub-card {
+    display: grid;
+    grid-template-columns: minmax(140px, 200px) 1fr;
+    gap: 24px;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    background: var(--card-gradient);
+    box-shadow: var(--shadow-sm);
+}
+
+.pub-card__cover-link {
+    display: block;
+    align-self: start;
+}
+
+.pub-card__cover,
+.pub-hero__cover img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: var(--shadow-md);
+}
+
+.pub-card__body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.pub-card__title {
+    margin: 0;
+    font-size: 1.35rem;
+}
+
+.pub-card__subtitle {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.pub-card__excerpt {
+    margin: 0;
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+.pub-card__meta {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 16px;
+    color: var(--text-tertiary);
+    font-size: 0.9rem;
+}
+
+.pub-card__formats {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+
+.pub-card__formats-label {
+    color: var(--text-tertiary);
+    font-size: 0.9rem;
+}
+
+.pub-format-badge {
+    display: inline-block;
+    padding: 2px 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    background: var(--code-bg);
+    color: var(--text-secondary);
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+.pub-card__price,
+.pub-hero__price {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.pub-card__price-main,
+.pub-hero__price-main {
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.pub-card__price-note,
+.pub-hero__price-note {
+    color: var(--text-secondary);
+    font-size: 0.92rem;
+}
+
+.pub-card__cta {
+    margin: 6px 0 0;
+}
+
+/* ── Navigačná cesta ─────────────────────────────────────────────────── */
+.pub-breadcrumb {
+    margin: 0 0 20px;
+    color: var(--text-tertiary);
+    font-size: 0.9rem;
+}
+
+/* ── Hero predajnej stránky ──────────────────────────────────────────── */
+.pub-hero {
+    display: grid;
+    grid-template-columns: minmax(180px, 280px) 1fr;
+    gap: 32px;
+    margin-bottom: 36px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.pub-hero__cover {
+    align-self: start;
+}
+
+.pub-hero__body {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.pub-hero__title {
+    margin: 0;
+    font-size: 1.9rem;
+    line-height: 1.25;
+}
+
+.pub-hero__subtitle {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+.pub-hero__author {
+    margin: 0;
+    color: var(--text-tertiary);
+    font-size: 0.92rem;
+}
+
+.pub-hero__facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 28px;
+    margin: 4px 0;
+}
+
+.pub-hero__facts div {
+    display: flex;
+    flex-direction: column;
+}
+
+.pub-hero__facts dt {
+    color: var(--text-tertiary);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.pub-hero__facts dd {
+    margin: 0;
+    color: var(--text-primary);
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.pub-hero__cta {
+    margin: 8px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.pub-hero__trust {
+    margin: 0;
+    color: var(--text-tertiary);
+    font-size: 0.88rem;
+}
+
+/* ── Obsahové zoznamy ───────────────────────────────────────────────── */
+.pub-highlights,
+.pub-steps {
+    line-height: 1.7;
+}
+
+.pub-highlights li,
+.pub-steps li {
+    margin-bottom: 6px;
+}
+
+.pub-note {
+    color: var(--text-secondary);
+    font-size: 0.93rem;
+    line-height: 1.65;
+}
+
+.pub-legal-link {
+    color: var(--text-tertiary);
+    font-size: 0.9rem;
+}
+
+/* ── Tabuľka formátov ────────────────────────────────────────────────── */
+.pub-formats-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.pub-formats-table th,
+.pub-formats-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border-color);
+    text-align: left;
+    vertical-align: top;
+}
+
+.pub-formats-table thead th {
+    color: var(--text-tertiary);
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.pub-formats-table tbody th {
+    white-space: nowrap;
+    font-weight: 700;
+}
+
+.pub-formats-table td:last-child {
+    white-space: nowrap;
+    color: var(--text-secondary);
+}
+
+/* ── Objednávkový formulár ──────────────────────────────────────────── */
+.pub-order-form {
+    max-width: 640px;
+}
+
+.pub-order-formats {
+    margin: 0 0 20px;
+    padding: 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    background: var(--card-gradient);
+}
+
+.pub-order-formats legend {
+    padding: 0 6px;
+    font-weight: 700;
+}
+
+.pub-format-choice {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 10px;
+    align-items: start;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+}
+
+.pub-format-choice:last-of-type {
+    border-bottom: 0;
+}
+
+.pub-format-choice input {
+    grid-row: 1 / span 2;
+    margin-top: 4px;
+}
+
+.pub-format-choice__label {
+    font-weight: 600;
+}
+
+.pub-format-choice__note {
+    color: var(--text-secondary);
+    font-size: 0.88rem;
+    line-height: 1.5;
+}
+
+.pub-order-total {
+    margin: 14px 0 0;
+    padding-top: 12px;
+    border-top: 2px solid var(--border-color);
+    font-size: 1.05rem;
+}
+
+.pub-order-total strong {
+    color: var(--primary-color);
+    font-size: 1.35rem;
+}
+
+.pub-order-invoice {
+    margin: 0 0 20px;
+    padding: 12px 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+}
+
+.pub-order-invoice summary {
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.pub-order-invoice[open] summary {
+    margin-bottom: 12px;
+}
+
+.pub-order-consent {
+    margin-bottom: 16px;
+}
+
+.pub-checkbox-label {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 10px;
+    align-items: start;
+    line-height: 1.6;
+    cursor: pointer;
+}
+
+.pub-checkbox-label input {
+    margin-top: 5px;
+}
+
+.pub-required {
+    color: #b91c1c;
+    font-weight: 700;
+}
+
+[data-theme="dark"] .pub-required {
+    color: #fca5a5;
+}
+
+/* ── Stav objednávky ─────────────────────────────────────────────────── */
+.pub-status {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.pub-status--paid {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.pub-status--awaiting {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.pub-status--cancelled {
+    background: #f1f5f9;
+    color: #475569;
+}
+
+[data-theme="dark"] .pub-status--paid {
+    background: rgba(22, 101, 52, 0.35);
+    color: #86efac;
+}
+
+[data-theme="dark"] .pub-status--awaiting {
+    background: rgba(146, 64, 14, 0.35);
+    color: #fcd34d;
+}
+
+[data-theme="dark"] .pub-status--cancelled {
+    background: rgba(71, 85, 105, 0.35);
+    color: #cbd5e1;
+}
+
+/* ── Platobný QR ─────────────────────────────────────────────────────── */
+/* qrcode.min.js vkladá <canvas> aj <img>; obe majú ostať v mriežke figure. */
+.pub-payment-qr {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
+    background: #ffffff;
+}
+
+.pub-payment-qr canvas,
+.pub-payment-qr img {
+    display: block;
+}
+
+/* ── Stiahnutie súborov ─────────────────────────────────────────────── */
+.pub-download-list {
+    list-style: none;
+    margin: 0 0 16px;
+    padding: 0;
+    display: grid;
+    gap: 10px;
+}
+
+.pub-download-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    background: var(--card-gradient);
+}
+
+.pub-download-row__meta {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.pub-download-row__size {
+    color: var(--text-tertiary);
+    font-size: 0.88rem;
+}
+
+.pub-download-row__missing {
+    color: var(--text-tertiary);
+    font-size: 0.88rem;
+    font-style: italic;
+}
+
+/* ── Administrácia objednávok ───────────────────────────────────────── */
+.pub-orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.93rem;
+}
+
+.pub-orders-table th,
+.pub-orders-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border-color);
+    text-align: left;
+    vertical-align: top;
+}
+
+.pub-orders-table thead th {
+    color: var(--text-tertiary);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+}
+
+.pub-orders-table__sub {
+    color: var(--text-tertiary);
+    font-size: 0.85rem;
+}
+
+.pub-orders-table__actions {
+    min-width: 230px;
+}
+
+.pub-orders-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 8px;
+}
+
+.pub-orders-form input[type="text"] {
+    flex: 1 1 120px;
+    min-width: 0;
+    padding: 6px 8px;
+    font-size: 0.85rem;
+}
+
+.pub-orders-form button {
+    white-space: nowrap;
+}
+
+/* ── Responzivita ───────────────────────────────────────────────────── */
+@media (max-width: 720px) {
+    .pub-card,
+    .pub-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .pub-card__cover-link,
+    .pub-hero__cover {
+        max-width: 220px;
+        margin: 0 auto;
+    }
+
+    .pub-hero__title {
+        font-size: 1.5rem;
+    }
+
+    .pub-download-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}

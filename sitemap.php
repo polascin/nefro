@@ -300,10 +300,22 @@ $urls = [
         'priority'   => '0.7',
     ],
     [
+        'loc'        => $baseUrl . 'publikacie.php',
+        'lastmod'    => _sitemapLastmod('publikacie.php'),
+        'changefreq' => 'monthly',
+        'priority'   => '0.8',
+    ],
+    [
         'loc'        => $baseUrl . 'podpora.php',
         'lastmod'    => _sitemapLastmod('podpora.php'),
         'changefreq' => 'yearly',
         'priority'   => '0.5',
+    ],
+    [
+        'loc'        => $baseUrl . 'obchodne-podmienky.php',
+        'lastmod'    => _sitemapLastmod('obchodne-podmienky.php'),
+        'changefreq' => 'yearly',
+        'priority'   => '0.3',
     ],
     [
         'loc'        => $baseUrl . 'privacy.php',
@@ -324,6 +336,21 @@ $urls = [
         'priority'   => '0.3',
     ],
 ];
+
+// Predajné stránky publikácií — katalóg je staticky vyššie, detaily sú v kóde
+// (publications_common.php), nie v DB, preto ich doplníme priamo z katalógu.
+require_once __DIR__ . '/publications_common.php';
+foreach (publications() as $publication) {
+    if (!$publication['is_available']) {
+        continue;
+    }
+    $urls[] = [
+        'loc'        => $baseUrl . 'publikacia.php?slug=' . rawurlencode((string) $publication['slug']),
+        'lastmod'    => _sitemapLastmod('publikacia.php'),
+        'changefreq' => 'monthly',
+        'priority'   => '0.8',
+    ];
+}
 
 $maxArticleTs = 0;
 

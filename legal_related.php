@@ -10,9 +10,10 @@ declare(strict_types=1);
 $legalCurrent = $legalCurrent ?? '';
 
 $legalRelated = [
-    'privacy' => 'Ochrana osobných údajov',
-    'cookies' => 'Cookie Policy',
-    'terms'   => 'Podmienky používania',
+    'privacy'              => 'Ochrana osobných údajov',
+    'cookies'              => 'Cookie Policy',
+    'terms'                => 'Podmienky používania',
+    'obchodne-podmienky'   => 'Obchodné podmienky predaja publikácií',
 ];
 ?>
 <nav class="legal-related" aria-label="Súvisiace právne dokumenty">

@@ -53,6 +53,7 @@ $swatchBeat = '@' . number_format($beatValue, 2, '.', '');
           <li><a href="cheatsheets.php" class="site-footer__link">Ťaháky</a></li>
           <li><a href="studie.php" class="site-footer__link">Klinické štúdie</a></li>
           <li><a href="lieky.php" class="site-footer__link">Lieky</a></li>
+          <li><a href="publikacie.php" class="site-footer__link">Publikácie</a></li>
           <li><a href="podpora.php" class="site-footer__link">Podporiť projekt</a></li>
         </ul>
       </nav>
@@ -76,6 +77,7 @@ $swatchBeat = '@' . number_format($beatValue, 2, '.', '');
           <li><a href="/privacy" class="site-footer__link">Ochrana osobných údajov</a></li>
           <li><a href="/cookies" class="site-footer__link">Cookie Policy</a></li>
           <li><a href="/terms" class="site-footer__link">Podmienky používania</a></li>
+          <li><a href="/obchodne-podmienky" class="site-footer__link">Obchodné podmienky</a></li>
           <?php /* Honeypot: odkaz je skrytý cez display:none (neviditeľný aj pre
                    čítačky obrazovky) a zakázaný v robots.txt. Kto ho nasleduje,
                    prezradil, že je crawler ignorujúci robots.txt — pozri

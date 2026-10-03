@@ -109,7 +109,10 @@ ServerSignature Off
     RewriteRule ^uploads/avatars/archive(/.*)?$ - [F,L]
 
     # Alias bez prípony pre právne stránky → kanonické .php stránky
-    RewriteRule ^(privacy|terms|cookies)/?$ /$1.php [R=301,L,NE]
+    RewriteRule ^(privacy|terms|cookies|obchodne-podmienky)/?$ /$1.php [R=301,L,NE]
+
+    # Alias bez prípony pre katalóg publikácií
+    RewriteRule ^publikacie/?$ /publikacie.php [R=301,L,NE]
 
     # Rewrite sitemap.xml → sitemap.php
     RewriteRule ^sitemap\.xml$ sitemap.php [L]
