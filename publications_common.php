@@ -53,6 +53,30 @@ const PUBLICATION_ATTACHMENT_FALLBACK_LIMIT = 20971520;
 const PUBLICATION_FILES_DIR = __DIR__ . '/private/publications';
 
 /**
+ * Verzia a účinnosť obchodných podmienok predaja. Žijú tu, nie
+ * v obchodne-podmienky.php, pretože verziu treba zapísať ku každej objednávke
+ * (`consent_terms_version`) — aby bolo pri spore zrejmé, aké znenie kupujúci
+ * potvrdil. Pri zmene podmienok zvýš verziu a dátum spolu.
+ */
+const PUBLICATION_TERMS_VERSION = '1.1';
+const PUBLICATION_TERMS_EFFECTIVE_DATE = '2026-10-03';
+
+/* ── Retencia údajov objednávok ───────────────────────────────────────────
+ * Zámerne rôzne doby pre rôzne polia — jednotných „10 rokov“ by bolo
+ * nadbytočné spracúvanie pre všetko okrem účtovného dokladu.
+ * Vynucuje ich `archive_cleanup.php` (cron), nie len text v zásadách.
+ * ──────────────────────────────────────────────────────────────────────── */
+
+/** Účtovný doklad: 10 rokov (§ 35 ods. 3 zákona č. 431/2002 Z. z. o účtovníctve). */
+const PUBLICATION_RETENTION_ACCOUNTING_DAYS = 3653;
+/** Neuhradené a zrušené objednávky — nevznikol účtovný záznam, netreba ich držať. */
+const PUBLICATION_RETENTION_UNPAID_DAYS = 90;
+/** IP adresa a prehliadač pri podaní objednávky — oprávnený záujem (prevencia zneužitia). */
+const PUBLICATION_RETENTION_REQUEST_META_DAYS = 90;
+/** Podrobnosti o stiahnutiach (čas, formát) nad rámec doby na uplatnenie nárokov. */
+const PUBLICATION_RETENTION_DOWNLOAD_DETAIL_DAYS = 1461;
+
+/**
  * Identifikácia predávajúceho pre predajné stránky, objednávky a e-maily.
  *
  * Poštová adresa miesta podnikania tu musí byť uvedená — predzmluvné informácie
@@ -536,12 +560,20 @@ function publicationPaymentMethods(array $order): array
     if ($stripe !== null) {
         $methods[] = [
             'key'      => 'stripe',
-            'name'     => 'Platobná karta, Apple Pay a Google Pay',
+            'name'     => $stripe['exact']
+                ? 'Platobná karta, Apple Pay a Google Pay'
+                : 'Platobná karta, Apple Pay a Google Pay — sumu zadávate ručne',
             'desc'     => $stripe['exact']
                 ? 'Zabezpečená platobná brána Stripe s predvyplnenou sumou ' . $price
                     . '. Platí sa kartou alebo mobilnou peňaženkou, bez zadávania bankových údajov.'
-                : 'Zabezpečená platobná brána Stripe. Sumu ' . $price
-                    . ' zadajte na platobnej stránke; variabilný symbol sa prenesie automaticky.',
+                // Kým nie je pre danú cenu vytvorený Payment Link s pevnou cenou,
+                // používa sa všeobecná platobná stránka. Sumu teda zadáva kupujúci
+                // a môže sa preklepnúť — na to musí byť výslovne upozornený,
+                // inak vznikne nedoplatok, ktorý sa rieši dodatočne.
+                : 'Zabezpečená platobná brána Stripe. Platobná stránka ešte nemá pevnú cenu, '
+                    . 'takže sumu ' . $price . ' musíte zadať sami — skontrolujte si ju prosím '
+                    . 'pred potvrdením. Číslo objednávky sa prenesie automaticky. '
+                    . 'Ak chcete mať sumu predvyplnenú, použite bankový prevod alebo PayPal.',
             'url'      => $stripe['url'],
             'cta'      => 'Zaplatiť kartou',
             'auto_ref' => true,
@@ -664,6 +696,11 @@ function publicationOrderToken(array $order): string
 /**
  * Založí objednávku a vráti ju spolu s prístupovým tokenom pre odkaz v e-maile.
  *
+ * Volá sa až po serverovom overení oboch povinných súhlasov (pozri
+ * publikacia.php), preto sa čas oboch zapisuje priamo pri vložení spolu
+ * s verziou podmienok — bez toho by sa nedalo preukázať, že kupujúci
+ * výslovne požiadal o dodanie pred uplynutím lehoty na odstúpenie.
+ *
  * @param array<string, mixed> $publication
  * @param array<int, string>   $formats
  * @param array<string, string> $buyer  email, name, company, company_id, tax_id, address, note
@@ -677,12 +714,16 @@ function createPublicationOrder(PDO $pdo, array $publication, array $formats, ar
         "INSERT INTO publication_orders
             (publication_slug, publication_title, formats, amount_eur, currency,
              buyer_email, buyer_name, buyer_company, buyer_company_id, buyer_tax_id,
-             buyer_address, buyer_note, token_salt, status,
+             buyer_address, buyer_note,
+             consent_terms_at, consent_delivery_at, consent_terms_version,
+             token_salt, status,
              payment_due_at, created_ip, created_user_agent)
          VALUES
             (:slug, :title, :formats, :amount, 'EUR',
              :email, :name, :company, :company_id, :tax_id,
-             :address, :note, :token_salt, 'awaiting_payment',
+             :address, :note,
+             NOW(), NOW(), :terms_version,
+             :token_salt, 'awaiting_payment',
              DATE_ADD(NOW(), INTERVAL :due_days DAY), :ip, :ua)"
     );
     $stmt->execute([
@@ -697,6 +738,7 @@ function createPublicationOrder(PDO $pdo, array $publication, array $formats, ar
         'tax_id'     => $buyer['tax_id'] ?? '',
         'address'    => $buyer['address'] ?? '',
         'note'       => $buyer['note'] ?? '',
+        'terms_version' => PUBLICATION_TERMS_VERSION,
         'token_salt' => bin2hex(random_bytes(16)),
         'due_days'   => PUBLICATION_PAYMENT_DAYS,
         'ip'         => getClientIpAddress(),
@@ -903,7 +945,7 @@ function sendPublicationOrderInstructionsEmail(array $order, string $token): boo
 
     $htmlMessage = renderEmailHtmlLayout($htmlBody, 'Stav objednávky', $orderUrl);
 
-    $plainMessage = 'Dobrý deň,' . EMAIL_PLAIN_PARAGRAPH_BREAK
+    $plainMessage = 'Dobrý deň' . EMAIL_PLAIN_PARAGRAPH_BREAK
         . 'ďakujeme za objednávku publikácie ' . $title . '. Na jej dokončenie uhraďte '
         . 'sumu ' . $amount . ' bankovým prevodom s uvedeným variabilným symbolom.' . "\n\n"
         . $rowsText . "\n"
@@ -1119,7 +1161,7 @@ function sendPublicationOrderDeliveryEmail(array $order, string $token): array
     $introHtml = '<p style="margin:0 0 16px;">Dobrý deň,</p>'
         . '<p style="margin:0 0 16px;">platbu ' . escapeEmailHtml($amount) . ' za objednávku '
         . '<strong>' . escapeEmailHtml($vs) . '</strong> sme prijali. Ďakujeme.</p>';
-    $introText = 'Dobrý deň,' . EMAIL_PLAIN_PARAGRAPH_BREAK
+    $introText = 'Dobrý deň' . EMAIL_PLAIN_PARAGRAPH_BREAK
         . 'platbu ' . $amount . ' za objednávku ' . $vs . ' sme prijali. Ďakujeme.' . "\n\n";
 
     if ($firstBatch !== []) {
@@ -1193,7 +1235,7 @@ function sendPublicationOrderDeliveryEmail(array $order, string $token): array
             . '" style="color:#0b61d1;text-decoration:underline;">' . escapeEmailHtml($orderUrl) . '</a></p>'
             . '<p style="margin:0 0 16px;color:#334155;">Prístup je platný ' . $years
             . ' roky, so stropom ' . PUBLICATION_DOWNLOAD_MAX . ' stiahnutí.</p>';
-        $fallbackText = 'Dobrý deň,' . EMAIL_PLAIN_PARAGRAPH_BREAK
+        $fallbackText = 'Dobrý deň' . EMAIL_PLAIN_PARAGRAPH_BREAK
             . 'platbu ' . $amount . ' za objednávku ' . $vs . ' sme prijali. Publikácia '
             . $title . ' je pripravená vo formátoch '
             . implode(', ', publicationFormatLabels($formats)) . '.' . "\n\n"
@@ -1242,7 +1284,7 @@ function sendPublicationOrderDeliveryEmail(array $order, string $token): array
             . escapeEmailHtml($title) . '</strong> vo formáte ' . escapeEmailHtml($labels)
             . ' — časť ' . $part . ' z ' . $batchCount . ' k objednávke <strong>'
             . escapeEmailHtml($vs) . '</strong>.</p>';
-        $bodyText = 'Dobrý deň,' . EMAIL_PLAIN_PARAGRAPH_BREAK
+        $bodyText = 'Dobrý deň' . EMAIL_PLAIN_PARAGRAPH_BREAK
             . 'v prílohe posielame publikáciu ' . $title . ' vo formáte ' . $labels
             . ' — časť ' . $part . ' z ' . $batchCount . ' k objednávke ' . $vs . '.' . "\n\n"
             . 'Stránka objednávky: ' . $orderUrl . "\n\n";

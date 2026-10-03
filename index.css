@@ -7906,3 +7906,15 @@ mark.search-hl {
         font-size: 1.15rem;
     }
 }
+
+/* Suma bez predvyplnenia je iné riziko než chýbajúca referencia objednávky
+   (nedoplatok vs. nespárovaná platba), preto má vlastný štítok. */
+.pub-paymethod__tag--amount {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+[data-theme="dark"] .pub-paymethod__tag--amount {
+    background: rgba(153, 27, 27, 0.35);
+    color: #fca5a5;
+}

@@ -40,8 +40,8 @@ function legalInfo(): array
         'jurisdiction'             => 'Slovenskej republiky (EÚ)',
         'supervisoryAuthority'     => 'Úrad na ochranu osobných údajov Slovenskej republiky',
         'supervisoryAuthorityUrl'  => 'https://dataprotection.gov.sk/sk/',
-        'effectiveDate'            => '2026-09-17',
-        'version'                  => '2.8',
+        'effectiveDate'            => '2026-10-03',
+        'version'                  => '2.9',
         'consentVersion'           => '2026-07-16',
     ];
 }
@@ -83,8 +83,20 @@ function legalDataCategories(): array
             'examples' => 'Newsletter (nové články aj novinky na portáli), notifikácie o článkoch, overovacie e-maily/SMS a príspevky v diskusii.',
         ],
         [
+            'category' => 'Objednávkové a fakturačné údaje (predaj publikácií)',
+            'examples' => 'E-mailová adresa (povinná — bez nej nevieme doručiť platobné pokyny ani publikáciu) a voliteľne meno, názov firmy, IČO, DIČ/IČ DPH, fakturačná adresa a poznámka. Ďalej vybrané formáty, suma, variabilný symbol, stav objednávky a dátumy objednania, úhrady či zrušenia. Registrácia sa nevyžaduje — objednávku možno podať bez konta.',
+        ],
+        [
+            'category' => 'Doklad o súhlasoch pri digitálnom obsahu',
+            'examples' => 'Čas potvrdenia obchodných podmienok, čas výslovnej žiadosti o dodanie pred uplynutím lehoty na odstúpenie od zmluvy a verzia obchodných podmienok platná v tom okamihu. Neuchovávame text súhlasu, ten je verzovaný v samotnom dokumente. Bez tohto dokladu by predávajúci nedokázal preukázať, že právo na odstúpenie zaniklo oprávnene.',
+        ],
+        [
+            'category' => 'Prístup k objednávke a evidencia stiahnutí',
+            'examples' => 'Náhodná soľ, z ktorej sa odvodzuje prístupový token v odkaze na stránku objednávky (samotný token sa neukladá), počet stiahnutí a čas a formát posledného stiahnutia. Slúži na sprístupnenie kúpeného obsahu, obmedzenie zdieľania odkazu a ako doklad o dodaní.',
+        ],
+        [
             'category' => 'Technické a prevádzkové údaje',
-            'examples' => 'Serverové a prístupové logy: IP adresa, typ prehliadača, operačný systém, URL požiadavky a čas prístupu. Pri zrušení účtu sa väzba prístupových logov na účet a používateľské meno odstráni.',
+            'examples' => 'Serverové a prístupové logy: IP adresa, typ prehliadača, operačný systém, URL požiadavky a čas prístupu. Pri zrušení účtu sa väzba prístupových logov na účet a používateľské meno odstráni. Pri podaní objednávky publikácie sa IP adresa a prehliadač ukladajú aj k objednávke (ochrana pred zneužitím formulára) a po 90 dňoch sa z nej odstránia, aj keď samotná objednávka ako účtovný doklad zostáva.',
         ],
     ];
 }
@@ -114,6 +126,22 @@ function legalProcessingPurposes(): array
             'basis'   => 'Oprávnený záujem — čl. 6 ods. 1 písm. f). Ide o profesijné kontaktné údaje z verejne dostupných zdrojov, nie o údaje pacientov. Dotknutú osobu informujeme e-mailom podľa čl. 14 pri prvom oslovení; údaje spracúvame, kým trvá účel oslovenia, a na námietku podľa čl. 21 ich bez zbytočného odkladu vymažeme.',
         ],
         [
+            'purpose' => 'Vybavenie objednávky publikácie, doručenie platobných pokynov, dodanie digitálneho obsahu a sprístupnenie na stiahnutie',
+            'basis'   => 'Plnenie zmluvy — čl. 6 ods. 1 písm. b). Objednávku možno podať bez registrácie; e-mailová adresa je povinná, lebo bez nej nie je možné obsah dodať.',
+        ],
+        [
+            'purpose' => 'Vedenie účtovníctva a splnenie daňových povinností z predaja publikácií',
+            'basis'   => 'Zákonná povinnosť — čl. 6 ods. 1 písm. c) v spojení so zákonom č. 431/2002 Z. z. o účtovníctve a daňovými predpismi. Vzťahuje sa len na zaplatené objednávky; z neuhradenej objednávky účtovný záznam nevzniká.',
+        ],
+        [
+            'purpose' => 'Preukázanie, že kupujúci výslovne požiadal o dodanie digitálneho obsahu pred uplynutím lehoty na odstúpenie od zmluvy a bol poučený o strate tohto práva',
+            'basis'   => 'Zákonná povinnosť — čl. 6 ods. 1 písm. c) v spojení so zákonom č. 108/2024 Z. z. o ochrane spotrebiteľa; zároveň oprávnený záujem na obrane právnych nárokov — písm. f)',
+        ],
+        [
+            'purpose' => 'Vybavenie reklamácie a prípadné uplatnenie alebo obrana právnych nárokov z predaja',
+            'basis'   => 'Zákonná povinnosť — čl. 6 ods. 1 písm. c); oprávnený záujem — písm. f)',
+        ],
+        [
             'purpose' => 'Bezpečnosť služby: rate-limiting, prevencia zneužitia a podvodov, audit',
             'basis'   => 'Oprávnený záujem — čl. 6 ods. 1 písm. f)',
         ],
@@ -132,24 +160,67 @@ function legalProcessingPurposes(): array
     ];
 }
 
-/** Sprostredkovatelia / príjemcovia, ktorí môžu spracúvať vaše údaje. */
+/**
+ * Príjemcovia údajov a ich skutočná rola.
+ *
+ * Nie každý príjemca je sprostredkovateľ. Sprostredkovateľ spracúva údaje
+ * podľa našich pokynov a na základe zmluvy podľa čl. 28 GDPR; platobné služby
+ * naopak určujú vlastné účely (vykonanie platby, prevencia podvodov, povinnosti
+ * podľa predpisov o platobných službách a AML), takže vystupujú ako
+ * **samostatní prevádzkovatelia**. Označiť ich za sprostredkovateľov by bolo
+ * nepravdivé a sľubovalo by zmluvnú kontrolu, ktorú nad nimi nemáme.
+ *
+ * Ešte iná situácia je kanál, kde **neprenášame nič** — kupujúci len klikne na
+ * odkaz a spojenie vytvorí jeho prehliadač alebo aplikácia. Takého príjemcu
+ * uvádzame pre transparentnosť, no žiadny údaj mu neposielame.
+ *
+ * `role` je jedna z: `sprostredkovateľ`, `samostatný prevádzkovateľ`,
+ * `samostatný prevádzkovateľ (neprenášame mu údaje)`.
+ */
 function legalSubprocessors(): array
 {
     return [
         [
             'name'     => 'WebSupport, s.r.o. (SK)',
-            'purpose'  => 'Webhosting, databáza a SMTP e-mailová služba',
+            'role'     => 'Sprostredkovateľ (čl. 28 GDPR)',
+            'purpose'  => 'Webhosting, databáza a SMTP e-mailová služba — vrátane uloženia objednávok publikácií a odoslania e-mailov s platobnými pokynmi a s publikáciou',
             'transfer' => 'Európska únia (Slovensko)',
         ],
         [
             'name'     => 'Twilio Inc. (USA)',
+            'role'     => 'Sprostredkovateľ (čl. 28 GDPR)',
             'purpose'  => 'Odosielanie overovacích SMS kódov pri overení telefónneho čísla',
             'transfer' => 'USA — štandardné zmluvné doložky (SCC)',
         ],
         [
             'name'     => 'Google LLC (USA)',
+            'role'     => 'Sprostredkovateľ (čl. 28 GDPR)',
             'purpose'  => 'Google Analytics 4 — len so súhlasom',
             'transfer' => 'USA — štandardné zmluvné doložky (SCC) / EU-US Data Privacy Framework',
+        ],
+        [
+            'name'     => 'Stripe Payments Europe, Limited (Írsko)',
+            'role'     => 'Samostatný prevádzkovateľ',
+            'purpose'  => 'Platba kartou, Apple Pay a Google Pay za publikáciu. Ak zvolíte tento spôsob, do platobnej stránky sa prenesie vaša e-mailová adresa (predvyplnenie) a číslo objednávky (párovanie platby).',
+            'transfer' => 'Európska únia (Írsko); ďalšie prenosy v rámci skupiny do USA zabezpečuje poskytovateľ štandardnými zmluvnými doložkami, resp. rámcom EU-US Data Privacy Framework',
+        ],
+        [
+            'name'     => 'PayPal (Europe) S.à r.l. et Cie, S.C.A. (Luxembursko)',
+            'role'     => 'Samostatný prevádzkovateľ',
+            'purpose'  => 'Platba cez PayPal za publikáciu. Prenáša sa číslo objednávky, názov publikácie a suma; vašu e-mailovú adresu PayPalu neodovzdávame.',
+            'transfer' => 'Európska únia (Luxembursko); ďalšie prenosy do USA na základe štandardných zmluvných doložiek poskytovateľa',
+        ],
+        [
+            'name'     => 'Tatra banka, a.s. (SK)',
+            'role'     => 'Samostatný prevádzkovateľ',
+            'purpose'  => 'Vedenie účtu predávajúceho a prijatie platby bankovým prevodom. Údaje o platiteľovi dostane banka od vašej banky, nie od nás.',
+            'transfer' => 'Európska únia (Slovensko)',
+        ],
+        [
+            'name'     => 'Revolut, Ko-fi, Viamo, payme.sk a Uphold',
+            'role'     => 'Samostatní prevádzkovatelia (neprenášame im vaše údaje)',
+            'purpose'  => 'Doplnkové spôsoby platby za publikáciu. Na stránke objednávky zobrazujeme len odkaz alebo číslo účtu; ak ho použijete, spojenie vytvorí váš prehliadač alebo aplikácia a tieto služby spracúvajú vaše údaje podľa vlastných zásad. My im neposielame nič.',
+            'transfer' => 'EÚ a Spojené kráľovstvo (rozhodnutie o primeranosti); prípadné ďalšie prenosy určuje príslušná služba',
         ],
     ];
 }
@@ -281,6 +352,13 @@ function legalStoredItems(): array
 function legalUpdatesByVersion(): array
 {
     return [
+        '2.9' => [
+            'Portál začal predávať elektronické publikácie (e-knihy). Doplnili sme preto nové účely spracúvania — vybavenie objednávky a dodanie digitálneho obsahu (plnenie zmluvy), vedenie účtovníctva z predaja a preukázanie súhlasu s dodaním pred uplynutím lehoty na odstúpenie od zmluvy (zákonná povinnosť) a vybavenie reklamácií či obranu nárokov.',
+            'Opísali sme nové kategórie údajov: objednávkové a fakturačné údaje, doklad o oboch potvrdených súhlasoch vrátane verzie obchodných podmienok, prístupový token k objednávke a evidenciu stiahnutí. Objednávku možno podať bez registrácie.',
+            'Doby uchovávania objednávok sme rozlíšili podľa údaja namiesto jednej paušálnej lehoty: zaplatená objednávka ako účtovný doklad 10 rokov, neuhradená alebo zrušená 90 dní, IP adresa a prehliadač z objednávkového formulára 90 dní, prístup na stiahnutie 2 roky a podrobnosti o stiahnutiach 4 roky (potom zostáva len ich počet). Mazanie a anonymizáciu vykonáva automatický cron.',
+            'Do zoznamu príjemcov sme doplnili platobné služby a pri každom príjemcovi uvádzame jeho skutočnú rolu. Stripe Payments Europe (Írsko), PayPal (Europe) v Luxembursku a Tatra banka vystupujú ako samostatní prevádzkovatelia, nie ako naši sprostredkovatelia — určujú vlastné účely a nemáme nad nimi zmluvnú kontrolu. Pri Revolute, Ko-fi, Viame, payme.sk a Upholde im sami neposielame žiadny údaj; zobrazíme len odkaz alebo číslo účtu a spojenie vytvorí váš prehliadač.',
+            'Spresnili sme medzinárodné prenosy pri platbách: zmluvní partneri sú v EÚ, prípadné ďalšie prenosy do USA zabezpečujú poskytovatelia vlastnými zárukami, a Ko-fi s Upholdom spadajú pod rozhodnutie o primeranosti pre Spojené kráľovstvo.',
+        ],
         '2.8' => [
             'Týždenný newsletter odteraz okrem nových odborných článkov obsahuje aj krátky prehľad noviniek na portáli — nové kalkulačky, interaktívne nástroje a zmeny v ostatných častiach služby. Účel spracúvania a text súhlasu sme tomu prispôsobili; odber je stále dobrovoľný a kedykoľvek odvolateľný odhlásením.',
         ],

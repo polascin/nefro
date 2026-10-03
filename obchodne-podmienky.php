@@ -20,9 +20,8 @@ $info   = legalInfo();
 $seller = publicationSeller();
 $bank   = publicationBankAccount();
 
-/** Dátum účinnosti týchto obchodných podmienok (nezávislý od verzie legalInfo). */
-const PUBLICATION_TERMS_EFFECTIVE_DATE = '2026-10-03';
-const PUBLICATION_TERMS_VERSION = '1.0';
+// Verzia a účinnosť žijú v publications_common.php — zapisujú sa ku každej
+// objednávke (consent_terms_version), takže nesmú byť len v tejto stránke.
 
 $pageLastUpdated = formatUserDateTime(PUBLICATION_TERMS_EFFECTIVE_DATE, 'd.m.Y');
 
@@ -255,7 +254,7 @@ include 'legal_head.php';
                         a boli ste poučení, že tým právo na odstúpenie stratíte. Práve tento
                         súhlas udeľujete zaškrtnutím príslušného políčka v objednávkovom
                         formulári — bez neho by vám predávajúci nemohol sprístupniť súbory
-                        hneď po platbe.
+                        pred uplynutím tejto lehoty.
                     </p>
                 </div>
                 <p>
@@ -316,12 +315,31 @@ include 'legal_head.php';
                 <h3>11. Osobné údaje</h3>
                 <p>
                     Na vybavenie objednávky spracúva predávajúci e-mailovú adresu a voliteľne
-                    vyplnené fakturačné údaje, ďalej variabilný symbol, sumu, vybrané formáty,
-                    IP adresu a prehliadač pri podaní objednávky (ochrana pred zneužitím)
-                    a záznam o stiahnutiach. Právnym základom je plnenie zmluvy
-                    (čl. 6 ods. 1 písm. b GDPR), pri daňových a účtovných dokladoch plnenie
-                    zákonnej povinnosti (čl. 6 ods. 1 písm. c GDPR) s obvyklou dobou uchovávania
-                    10 rokov.
+                    vyplnené fakturačné údaje, ďalej variabilný symbol, sumu, vybrané formáty
+                    a stav objednávky, čas oboch potvrdených súhlasov s verziou týchto
+                    podmienok, IP adresu a prehliadač pri podaní objednávky (ochrana pred
+                    zneužitím formulára) a evidenciu stiahnutí. Právnym základom je plnenie
+                    zmluvy (čl. 6 ods. 1 písm. b GDPR), pri účtovných a daňových dokladoch
+                    a pri doklade o súhlase s okamžitým dodaním plnenie zákonnej povinnosti
+                    (písm. c), a pri obrane prípadných nárokov oprávnený záujem (písm. f).
+                </p>
+                <p>
+                    <strong>Doby uchovávania sa líšia podľa údaja</strong> — nie všetko sa drží
+                    10 rokov. Zaplatená objednávka ako účtovný doklad vrátane dokladu o súhlasoch
+                    10 rokov; neuhradená alebo zrušená objednávka 90 dní; IP adresa a prehliadač
+                    90 dní (potom sa z objednávky odstránia); prístup na stiahnutie 2 roky
+                    a podrobnosti o stiahnutiach 4 roky, potom zostáva len ich počet.
+                    Úplný prehľad vrátane vašich práv je v
+                    <a href="/privacy">Zásadách ochrany osobných údajov</a>.
+                </p>
+                <p>
+                    Pri platbe kartou alebo peňaženkou vystupujú platobné služby ako
+                    <strong>samostatní prevádzkovatelia</strong>, nie ako sprostredkovatelia
+                    predávajúceho — určujú vlastné účely (vykonanie platby, prevencia podvodov,
+                    povinnosti podľa predpisov o platobných službách). Pri Stripe sa im prenáša
+                    vaša e-mailová adresa a číslo objednávky, pri PayPale číslo objednávky
+                    a suma; pri ostatných kanáloch im predávajúci neposiela nič a spojenie
+                    vytvára váš prehliadač alebo aplikácia.
                 </p>
                 <p>
                     Objednávka <strong>neznamená prihlásenie na odber noviniek</strong> —

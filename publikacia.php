@@ -138,7 +138,8 @@ if ($publication !== null && ($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
         }
         if (($_POST['agree_immediate_delivery'] ?? '') !== '1') {
             $errors[] = 'Potvrďte prosím súhlas s dodaním digitálneho obsahu pred uplynutím '
-                . 'lehoty na odstúpenie od zmluvy — bez neho vám súbory nemôžeme sprístupniť hneď po platbe.';
+                . 'lehoty na odstúpenie od zmluvy — bez neho vám súbory nemôžeme sprístupniť '
+                . 'pred uplynutím tejto lehoty.';
         }
 
         // Rate limit podľa IP — bráni zakladaniu objednávok v dávkach.
@@ -334,7 +335,8 @@ markFormLoadTime('publication_order');
                         <a href="#objednavka" class="btn-primary">Objednať</a>
                         <a href="#formaty" class="btn-secondary">Formáty</a>
                     </p>
-                    <p class="pub-hero__trust">Bez DRM · okamžité stiahnutie po úhrade ·
+                    <p class="pub-hero__trust">Bez DRM · stiahnutie po potvrdení úhrady,
+                        zvyčajne do jedného pracovného dňa ·
                         <?= htmlspecialchars($seller['vatNote']) ?></p>
                 </div>
             </section>
@@ -498,8 +500,8 @@ markFormLoadTime('publication_order');
                     <div class="form-group pub-order-consent">
                         <label for="agree_immediate_delivery" class="pub-checkbox-label">
                             <input type="checkbox" id="agree_immediate_delivery" name="agree_immediate_delivery" value="1" required>
-                            <span>Žiadam o dodanie digitálneho obsahu hneď po prijatí platby, teda pred
-                                uplynutím 14-dňovej lehoty na odstúpenie od zmluvy, a beriem na vedomie,
+                            <span>Žiadam o dodanie digitálneho obsahu bezodkladne po potvrdení úhrady, teda
+                                pred uplynutím 14-dňovej lehoty na odstúpenie od zmluvy, a beriem na vedomie,
                                 že udelením tohto súhlasu <strong>stratím právo odstúpiť od zmluvy</strong>
                                 po sprístupnení súborov. <span class="pub-required">*</span></span>
                         </label>

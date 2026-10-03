@@ -121,16 +121,30 @@ include 'legal_head.php';
                 <h3>4. Ako údaje zdieľame</h3>
                 <p>
                     <strong>Vaše osobné údaje nepredávame za peniaze.</strong>
-                    Údaje zdieľame len so sprostredkovateľmi, ktorých potrebujeme na
-                    prevádzku služby, ak to vyžaduje zákon alebo pri prevode podniku.
-                    Každý sprostredkovateľ je viazaný zmluvou o spracúvaní údajov a spracúva
-                    ich výlučne podľa našich pokynov.
+                    Údaje zdieľame len s príjemcami, ktorých potrebujeme na prevádzku služby,
+                    ak to vyžaduje zákon alebo pri prevode podniku.
                 </p>
+                <p>
+                    Nie každý príjemca má rovnaké postavenie, preto ho v tabuľke uvádzame:
+                </p>
+                <ul>
+                    <li><strong>Sprostredkovateľ</strong> spracúva údaje výlučne podľa našich
+                        pokynov a na základe zmluvy o spracúvaní podľa čl. 28 GDPR.</li>
+                    <li><strong>Samostatný prevádzkovateľ</strong> určuje vlastné účely —
+                        pri platobných službách je to vykonanie platby, prevencia podvodov
+                        a povinnosti podľa predpisov o platobných službách a proti legalizácii
+                        príjmov z trestnej činnosti. Nad týmto spracúvaním nemáme zmluvnú
+                        kontrolu a riadi sa zásadami príslušnej služby.</li>
+                    <li>Pri časti platobných kanálov <strong>neprenášame nič</strong> —
+                        zobrazíme len odkaz alebo číslo účtu a spojenie vytvorí váš prehliadač
+                        či aplikácia. Uvádzame ich pre úplnosť.</li>
+                </ul>
                 <div class="admin-table-wrap legal-table-wrap">
                     <table class="admin-table legal-table">
                         <thead>
                             <tr>
                                 <th scope="col">Poskytovateľ</th>
+                                <th scope="col">Rola</th>
                                 <th scope="col">Účel</th>
                                 <th scope="col">Prenos</th>
                             </tr>
@@ -139,6 +153,7 @@ include 'legal_head.php';
                             <?php foreach (legalSubprocessors() as $row): ?>
                                 <tr>
                                     <th scope="row"><?= htmlspecialchars($row['name'], ENT_QUOTES, 'UTF-8') ?></th>
+                                    <td><?= htmlspecialchars($row['role'], ENT_QUOTES, 'UTF-8') ?></td>
                                     <td><?= htmlspecialchars($row['purpose'], ENT_QUOTES, 'UTF-8') ?></td>
                                     <td><?= htmlspecialchars($row['transfer'], ENT_QUOTES, 'UTF-8') ?></td>
                                 </tr>
@@ -160,6 +175,16 @@ include 'legal_head.php';
                     Webové písmo (Inter) je hostované priamo na našom serveri, takže pri jeho
                     načítaní sa žiadne údaje do tretích krajín neprenášajú.
                 </p>
+                <p>
+                    <strong>Pri platbe za publikáciu</strong> sú naši zmluvní partneri v Európskej
+                    únii — Stripe Payments Europe (Írsko) a PayPal (Europe) v Luxembursku. Ak
+                    tieto služby posielajú údaje ďalej v rámci svojej skupiny do USA, robia tak
+                    na základe vlastných záruk (štandardné zmluvné doložky, prípadne rámec
+                    EU-US Data Privacy Framework) a ako samostatní prevádzkovatelia. Pri Ko-fi
+                    a Uphold ide o Spojené kráľovstvo, na ktoré sa vzťahuje rozhodnutie Komisie
+                    o primeranosti; týmto službám navyše sami neposielame žiadny údaj.
+                    Bankový prevod, Viamo ani payme.sk neznamenajú prenos mimo EÚ.
+                </p>
 
                 <!-- 6. DOBA UCHOVÁVANIA -->
                 <h3>6. Ako dlho údaje uchovávame</h3>
@@ -172,6 +197,31 @@ include 'legal_head.php';
                     <li><strong>Bezpečnostné záznamy (pokusy o prihlásenie, rate-limiting):</strong> priebežne mazané po uplynutí ich účelu.</li>
                     <li><strong>GA4 dáta:</strong> používateľské a udalostné údaje viazané na pseudonymný identifikátor sa v Google Analytics uchovávajú najviac 14 mesiacov.</li>
                     <li><strong>Cookie súhlas:</strong> 365 dní (po uplynutí sa banner znova zobrazí).</li>
+                </ul>
+
+                <p>
+                    <strong>Objednávky publikácií</strong> majú zámerne rôzne doby — jednotná
+                    desaťročná lehota by znamenala, že držíme aj to, čo už nemá účel. Mazanie
+                    a anonymizáciu vykonáva automatický cron, nie až reakcia na žiadosť:
+                </p>
+                <ul>
+                    <li><strong>Zaplatená objednávka ako účtovný doklad</strong> (e-mail,
+                        fakturačné údaje, suma, variabilný symbol, dátumy): 10 rokov podľa
+                        § 35 zákona č. 431/2002 Z. z. o účtovníctve.</li>
+                    <li><strong>Neuhradená alebo zrušená objednávka:</strong> 90 dní, potom sa
+                        maže celá — účtovný záznam z nej nevznikol.</li>
+                    <li><strong>IP adresa a prehliadač z objednávkového formulára:</strong>
+                        90 dní. Potom sa z objednávky odstránia, zvyšok záznamu zostáva.</li>
+                    <li><strong>Doklad o súhlasoch</strong> (čas potvrdenia podmienok, čas
+                        žiadosti o okamžité dodanie a verzia podmienok): spolu so zaplatenou
+                        objednávkou, pretože práve on preukazuje, že právo na odstúpenie
+                        zaniklo oprávnene.</li>
+                    <li><strong>Prístup na stiahnutie:</strong> 2 roky od potvrdenia platby.
+                        Do 30 dní po uplynutí sa prístupový token znehodnotí a odkaz z e-mailu
+                        prestane fungovať.</li>
+                    <li><strong>Podrobnosti o stiahnutiach</strong> (čas a formát posledného
+                        stiahnutia): 4 roky od úhrady. Potom zostáva len počet stiahnutí ako
+                        minimalizovaný doklad o dodaní.</li>
                 </ul>
 
                 <!-- 7. BEZPEČNOSŤ -->

@@ -84,6 +84,16 @@ include 'legal_head.php';
                     sa môže časom meniť; nezaručujeme jeho bezchybnosť ani vhodnosť pre
                     konkrétny prípad (pozri zdravotnícke upozornenie vyššie).
                 </p>
+                <p>
+                    Obsah portálu zostáva <strong>voľne dostupný bez platobnej steny</strong>.
+                    Samostatne predávame len <strong>elektronické publikácie (e-knihy)</strong>,
+                    ktoré ten istý obsah zostavujú do jedného zväzku. Na ich kúpu sa vzťahujú
+                    <a href="/obchodne-podmienky">Obchodné podmienky predaja publikácií</a> —
+                    obsahujú identifikáciu predávajúceho, cenu, spôsoby platby, dodanie
+                    digitálneho obsahu, odstúpenie od zmluvy, reklamácie a alternatívne
+                    riešenie sporov. Tieto Podmienky používania upravujú prístup k portálu
+                    a ku kontu, nie kúpnu zmluvu.
+                </p>
 
                 <!-- 4. VAŠE KONTO -->
                 <h3>4. Vaše konto</h3>
@@ -191,7 +201,8 @@ include 'legal_head.php';
                 <h3>8. Služby tretích strán</h3>
                 <p>
                     Služba sa opiera o tretie strany (napr. Google Analytics, hosting a SMTP
-                    od WebSupport) a môže na ne odkazovať. Na vaše používanie týchto služieb sa
+                    od WebSupport, pri predaji publikácií platobné služby Stripe, PayPal
+                    a ďalšie) a môže na ne odkazovať. Na vaše používanie týchto služieb sa
                     vzťahujú ich vlastné podmienky a zásady súkromia; za ich obsah
                     nezodpovedáme. Zoznam sprostredkovateľov nájdete v
                     <a href="/privacy">Zásadách ochrany osobných údajov</a>.

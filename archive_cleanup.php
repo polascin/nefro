@@ -24,6 +24,9 @@ $accessLogRetentionDays = min(90, max(30, (int) ($arguments[3] ?? 90)));
 require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
 require_once __DIR__ . '/profile_archive.php';
+// Retenčné doby objednávok publikácií sú v publications_common.php — ten istý
+// zdroj, z ktorého čerpá text zásad ochrany údajov.
+require_once __DIR__ . '/publications_common.php';
 
 echo "Nefro Archív Cleanup\n";
 echo "====================\n";
@@ -48,6 +51,11 @@ $accountAuditDeleted = 0;
 $adminAuditDeleted = 0;
 $fallbackAccessDeleted = 0;
 $fallbackDeletionDeleted = 0;
+$pubUnpaidDeleted = 0;
+$pubMetaCleared = 0;
+$pubTokensRotated = 0;
+$pubDownloadDetailCleared = 0;
+$pubAccountingDeleted = 0;
 $cspReportDeleted = 0;
 $cspRateLimitDeleted = 0;
 
@@ -216,6 +224,71 @@ try {
     $adminStmt->execute(['days' => $accessLogRetentionDays]);
     $adminAuditDeleted = $adminStmt->rowCount();
 
+    // ── Objednávky publikácií ──────────────────────────────────────────────
+    // Zásady ochrany údajov uvádzajú pre objednávky štyri rôzne doby; bez
+    // tohto bloku by to boli len sľuby. Doby žijú v publications_common.php,
+    // aby text zásad a skutočné mazanie nemohli rozísť.
+    //
+    // Neuhradené a zrušené objednávky: nevznikol účtovný záznam, takže sa
+    // mažú celé.
+    $pubUnpaidStmt = $pdo->prepare(
+        "DELETE FROM publication_orders
+         WHERE status IN ('awaiting_payment', 'cancelled')
+           AND created_at < DATE_SUB(NOW(), INTERVAL :days DAY)"
+    );
+    $pubUnpaidStmt->execute(['days' => PUBLICATION_RETENTION_UNPAID_DAYS]);
+    $pubUnpaidDeleted = $pubUnpaidStmt->rowCount();
+
+    // IP a prehliadač pri podaní objednávky: oprávnený záujem na prevencii
+    // zneužitia trvá krátko, samotná objednávka ako účtovný doklad dlho —
+    // preto sa polia nulujú, nie maže riadok.
+    $pubMetaStmt = $pdo->prepare(
+        "UPDATE publication_orders
+         SET created_ip = NULL, created_user_agent = NULL
+         WHERE created_at < DATE_SUB(NOW(), INTERVAL :days DAY)
+           AND (created_ip IS NOT NULL OR created_user_agent IS NOT NULL)"
+    );
+    $pubMetaStmt->execute(['days' => PUBLICATION_RETENTION_REQUEST_META_DAYS]);
+    $pubMetaCleared = $pubMetaStmt->rowCount();
+
+    // Prístupový token po uplynutí platnosti prístupu už nemá účel; nová soľ
+    // odkaz z e-mailu definitívne znehodnotí. Predpona `expired-` je zároveň
+    // značka, že sa už rotovalo — bez nej by sa soľ prepisovala pri každom
+    // behu cronu dookola. Mesiac odkladu necháva priestor obnoviť prístup
+    // v administrácii, keď sa kupujúci ozve krátko po expirácii.
+    $pubTokenStmt = $pdo->prepare(
+        "UPDATE publication_orders
+         SET token_salt = CONCAT('expired-', LEFT(SHA2(CONCAT(RAND(), UUID()), 256), 24))
+         WHERE status = 'paid'
+           AND access_expires_at IS NOT NULL
+           AND access_expires_at < DATE_SUB(NOW(), INTERVAL 30 DAY)
+           AND token_salt NOT LIKE 'expired-%'"
+    );
+    $pubTokenStmt->execute();
+    $pubTokensRotated = $pubTokenStmt->rowCount();
+
+    // Podrobnosti o stiahnutiach (čas, formát) po uplynutí doby na uplatnenie
+    // nárokov; samotný počet zostáva ako minimalizovaný doklad o dodaní.
+    $pubDlStmt = $pdo->prepare(
+        "UPDATE publication_orders
+         SET last_download_at = NULL, last_download_format = NULL
+         WHERE paid_at IS NOT NULL
+           AND paid_at < DATE_SUB(NOW(), INTERVAL :days DAY)
+           AND (last_download_at IS NOT NULL OR last_download_format IS NOT NULL)"
+    );
+    $pubDlStmt->execute(['days' => PUBLICATION_RETENTION_DOWNLOAD_DETAIL_DAYS]);
+    $pubDownloadDetailCleared = $pubDlStmt->rowCount();
+
+    // Účtovná povinnosť uplynula — zaplatenú objednávku už netreba držať.
+    $pubAccStmt = $pdo->prepare(
+        "DELETE FROM publication_orders
+         WHERE status = 'paid'
+           AND paid_at IS NOT NULL
+           AND paid_at < DATE_SUB(NOW(), INTERVAL :days DAY)"
+    );
+    $pubAccStmt->execute(['days' => PUBLICATION_RETENTION_ACCOUNTING_DAYS]);
+    $pubAccountingDeleted = $pubAccStmt->rowCount();
+
 } catch (\PDOException $e) {
     $errors[] = "Databázová chyba: " . $e->getMessage();
 }
@@ -275,6 +348,11 @@ echo "  Vyčistené fallback access logy:     {$fallbackAccessDeleted}\n";
 echo "  Vyčistené fallback deletion logy:   {$fallbackDeletionDeleted}\n";
 echo "  Vyčistené CSP reporty:              {$cspReportDeleted}\n";
 echo "  Vyčistené CSP rate-limit súbory:    {$cspRateLimitDeleted}\n";
+echo "  Zmaz. neuhradené/zrušené objednávky: {$pubUnpaidDeleted}\n";
+echo "  Objednávky bez IP/prehliadača:      {$pubMetaCleared}\n";
+echo "  Znehodnotené prístupové tokeny:     {$pubTokensRotated}\n";
+echo "  Objednávky bez detailu stiahnutí:   {$pubDownloadDetailCleared}\n";
+echo "  Zmaz. objednávky po účtovnej dobe:  {$pubAccountingDeleted}\n";
 
 if (!empty($errors)) {
     echo "\nUpozornenia:\n";

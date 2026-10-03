@@ -329,6 +329,12 @@ if (array_filter($payMethods, static fn (array $m): bool => !empty($m['form'])) 
                                             <?php else: ?>
                                                 <span class="pub-paymethod__tag pub-paymethod__tag--manual">uveďte VS do poznámky</span>
                                             <?php endif; ?>
+                                            <?php /* Suma bez predvyplnenia je samostatné riziko (nedoplatok),
+                                                     preto vlastný štítok — nie je to to isté ako chýbajúca
+                                                     referencia objednávky. */ ?>
+                                            <?php if (!($method['exact'] ?? false)): ?>
+                                                <span class="pub-paymethod__tag pub-paymethod__tag--amount">sumu zadávate ručne</span>
+                                            <?php endif; ?>
                                         </p>
                                         <p class="pub-paymethod__desc"><?= htmlspecialchars((string) $method['desc']) ?></p>
                                     </div>
@@ -368,6 +374,8 @@ if (array_filter($payMethods, static fn (array $m): bool => !empty($m['form'])) 
                                popisu platby variabilný symbol
                                <strong><?= htmlspecialchars((string) $order['variable_symbol']) ?></strong>.
                                Bez neho musíme platbu dohľadávať ručne a dodanie sa zdrží.
+                               Ak niektorý kanál nemá predvyplnenú sumu, skontrolujte si ju
+                               prosím pred potvrdením platby — nedoplatok musíme riešiť dodatočne.
                                Ak sa to stane, napíšte nám na
                                <a href="mailto:<?= htmlspecialchars($seller['email'], ENT_QUOTES) ?>"><?= htmlspecialchars($seller['email']) ?></a>
                                a objednávku spárujeme.</p>
