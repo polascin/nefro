@@ -1009,6 +1009,45 @@ try {
     $pdo->exec($publicationOrdersSql);
     $cliOut("Tabuľka 'publication_orders' bola úspešne vytvorená alebo už existuje.\n");
 
+    // ── Evidencia súhlasov k digitálnemu obsahu (migrácia 2026-10-03) ───
+    // Objednávkový formulár oba súhlasy vynucuje serverovo, ale neukladal ich.
+    // Bez záznamu predávajúci nedokáže preukázať, že kupujúci výslovne požiadal
+    // o dodanie pred uplynutím lehoty na odstúpenie a bol poučený o strate
+    // tohto práva — teda presne to, o čo sa opiera § 19 ods. 1 písm. l)
+    // zákona č. 108/2024 Z. z. Ukladáme čas a znenie podmienok, nie samotný
+    // text súhlasu (ten je verzovaný v obchodne-podmienky.php).
+    //
+    // DDL v MariaDB nie je transakčné, preto je migrácia idempotentná cez
+    // columnExists() namiesto obalenia transakciou.
+    // Rollback:
+    //   ALTER TABLE publication_orders
+    //     DROP COLUMN consent_terms_at,
+    //     DROP COLUMN consent_delivery_at,
+    //     DROP COLUMN consent_terms_version;
+    $publicationConsentColumns = [
+        'consent_terms_at' => "ALTER TABLE publication_orders
+            ADD COLUMN consent_terms_at DATETIME NULL
+            COMMENT 'Kedy kupujúci potvrdil obchodné podmienky a zásady ochrany údajov'
+            AFTER buyer_note",
+        'consent_delivery_at' => "ALTER TABLE publication_orders
+            ADD COLUMN consent_delivery_at DATETIME NULL
+            COMMENT 'Kedy kupujúci výslovne požiadal o dodanie pred uplynutím lehoty na odstúpenie a vzal na vedomie stratu práva odstúpiť'
+            AFTER consent_terms_at",
+        'consent_terms_version' => "ALTER TABLE publication_orders
+            ADD COLUMN consent_terms_version VARCHAR(20) NULL
+            COMMENT 'Verzia obchodných podmienok platná v čase objednávky'
+            AFTER consent_delivery_at",
+    ];
+
+    foreach ($publicationConsentColumns as $publicationConsentColumn => $publicationConsentSql) {
+        if (columnExists($pdo, 'publication_orders', $publicationConsentColumn)) {
+            $cliOut("Stĺpec 'publication_orders." . $publicationConsentColumn . "' už existuje.\n");
+            continue;
+        }
+        $pdo->exec($publicationConsentSql);
+        $cliOut("Stĺpec 'publication_orders." . $publicationConsentColumn . "' bol pridaný.\n");
+    }
+
 } catch (\PDOException $e) {
     $cliOut("Chyba pri vytváraní tabuľky: " . $e->getMessage());
     if (php_sapi_name() === 'cli') {
