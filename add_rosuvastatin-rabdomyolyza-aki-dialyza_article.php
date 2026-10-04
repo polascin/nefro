@@ -72,6 +72,7 @@ $articles[] = [
 
 <h2>Záver pre klinickú prax</h2>
 <p>Pri novej závažnej slabosti počas liečby statínom treba rýchlo vyšetriť CK, funkciu obličiek, moč a elektrolyty. Pri rabdomyolýze sú rozhodujúce vysadenie podozrivého lieku, liečba podľa objemového stavu a včasné riešenie komplikácií. Bezpečnosť zvyšuje správne dávkovanie, kontrola interakcií a osobitná opatrnosť pri oligurickom AKI s hyponatriémiou. [2,3,5,7,9]</p>
+<div class="pdf-keep-together">
 <hr>
 <h2>Zdroje</h2>
 <ol class="article-references">
@@ -87,6 +88,7 @@ $articles[] = [
 <li><small><em>Sterns RH, Rondon-Berrios H, Adrogué HJ a kol. Treatment Guidelines for Hyponatremia: Stay the Course. Clin J Am Soc Nephrol. 2024;19(1):129–135. <a href="https://doi.org/10.2215/CJN.0000000000000244" target="_blank" rel="noopener noreferrer">doi:10.2215/CJN.0000000000000244</a>.</em></small></li>
 <li><small><em>European Medicines Agency. Crestor 5 mg: Article 29 referral, prílohy s informáciami o lieku, časti 4.2–4.3. <a href="https://www.ema.europa.eu/en/documents/referral/crestor-5-mg-article-29-referral-annex-i-ii-iii_en.pdf" target="_blank" rel="noopener noreferrer">Dokument EMA</a>.</em></small></li>
 </ol>
+</div>
 <p><small><em>Odborné a bibliografické overenie: 4. októbra 2026.</em></small></p>
 HTML,
 ];
