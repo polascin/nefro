@@ -67,7 +67,7 @@ $articles[] = [
 </tbody>
 </table>
 </div>
-<p>Voľba režimu zohľadňuje aj závažnosť histologického nálezu, extrarenálne prejavy, predchádzajúcu liečbu, infekcie a preferencie pacienta. Pacienti s prudkým poklesom funkcie obličiek alebo veľmi závažným nálezom sú v registračných štúdiách zastúpení obmedzene; ich liečbu nemožno odvodiť iba z priemerného výsledku štúdie. [1]</p>
+<p>Voľba režimu zohľadňuje aj histologický nález, extrarenálne prejavy, predchádzajúcu liečbu, infekcie a preferencie pacienta. Pacienti s prudkým poklesom funkcie obličiek alebo veľmi závažným nálezom boli v registračných štúdiách zastúpení obmedzene; ich liečbu nemožno odvodiť iba z priemerných výsledkov. [1]</p>
 
 <h3>Čo preukázali BLISS-LN a AURORA 1</h3>
 <p>V štúdii <strong>BLISS-LN</strong> bolo randomizovaných 448 pacientov. Belimumab pridaný k štandardnej liečbe zvýšil v 104. týždni podiel pacientov s primárnou renálnou odpoveďou zo 32 % na 43 % a s úplnou renálnou odpoveďou z 20 % na 30 %. Primárna renálna odpoveď a úplná odpoveď boli rozdielne zložené ukazovatele. Výsledok podporuje účinnosť kombinácie, nie belimumabu v monoterapii. [2]</p>
