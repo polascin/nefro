@@ -1,3 +1,8 @@
+param(
+	[switch]$EncodingOnly,
+	[switch]$TestEnvironmentConfirmed
+)
+
 $ErrorActionPreference = "Stop"
 
 $textExtensions = @("*.php", "*.css", "*.js", "*.md", "*.txt", "*.xml", "*.json", "*.ini", "*.ps1", "*.html")
@@ -66,6 +71,13 @@ function Test-TextFilesEncoding {
 }
 
 Test-TextFilesEncoding -RootPath $PSScriptRoot
+
+if ($EncodingOnly) {
+	return
+}
+if (-not $TestEnvironmentConfirmed) {
+	throw "HTTP test vyžaduje izolovanú testovaciu databázu a náhradu SMS služby. Po overení prostredia použite -TestEnvironmentConfirmed; samotnú kontrolu kódovania spustite s -EncodingOnly."
+}
 
 $session = New-Object Microsoft.PowerShell.Commands.WebRequestSession
 $url = "http://127.0.0.1:8099"

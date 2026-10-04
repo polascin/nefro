@@ -17,6 +17,7 @@ $finder = PhpCsFixer\Finder::create()
     ->in(__DIR__)
     ->exclude([
         '.trunk',
+        '.kilo',
         'tools',
         'scratch',
         'private',

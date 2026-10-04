@@ -61,9 +61,9 @@ foreach (['legal_notice_queue' => 'user_id', 'legal_notice_sub_queue' => 'subscr
 }
 
 $current = legalNoticeCurrentVersionInfo();
-legalTest($current['version'] === '2.8', 'Technická zmena nesmie zvýšiť právnu verziu.');
-legalTest(count($current['updates']) === 1, 'Verzia 2.8 obsahuje iba svoju zmenu.');
-legalTest(count(legalRecentUpdates()) === 16, 'Web zachová celý historický prehľad.');
+legalTest($current['version'] === legalInfo()['version'], 'Aktuálna verzia musí zodpovedať právnym dokumentom.');
+legalTest(count(legalRecentUpdates('2.8')) === 1, 'Historická verzia 2.8 obsahuje iba svoju zmenu.');
+legalTest(count(legalRecentUpdates()) > count($current['updates']), 'Web zachová aj staršie skupiny zmien.');
 legalTest(count(legalRecentUpdates('2.7')) === 4, 'Verzia 2.7 má samostatnú skupinu.');
 legalTest(legalRecentUpdates('unknown') === [], 'Neznáma verzia nevracia aktuálne zmeny.');
 
@@ -90,8 +90,11 @@ enqueueLegalChangeNotice($pdo, $current['version'], $current['effectiveDate'], $
 legalTest(processLegalNoticeQueue($pdo)['sent'] === 1, 'Člen dostane aktuálnu verziu.');
 legalTest(processLegalNoticeSubQueue($pdo)['sent'] === 1, 'Odberateľ dostane aktuálnu verziu.');
 foreach (array_slice(LegalTestMailbox::$messages, 2) as $html) {
-    legalTest(substr_count($html, '<li style="margin:0 0 10px;') === 1, 'Aktuálny e-mail má jedinú relevantnú zmenu.');
-    legalTest(str_contains($html, 'Týždenný newsletter odteraz'), 'Aktuálny e-mail obsahuje zmenu newslettera.');
+    legalTest(substr_count($html, '<li style="margin:0 0 10px;') === count($current['updates']), 'Aktuálny e-mail obsahuje presne zmeny svojej verzie.');
+    foreach ($current['updates'] as $update) {
+        legalTest(str_contains($html, htmlspecialchars($update, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8')), 'Aktuálny e-mail obsahuje každú schválenú zmenu.');
+    }
+    legalTest(!str_contains($html, 'Týždenný newsletter odteraz'), 'Staršia zmena 2.8 nesmie prejsť do aktuálneho e-mailu.');
 }
 $repeat = enqueueLegalChangeNotice($pdo, $current['version'], $current['effectiveDate'], $current['updates']);
 legalTest($repeat['already'], 'Aktuálna verzia sa opakovane nezaradí.');

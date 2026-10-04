@@ -55,6 +55,13 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-10-04 13:39',
+                'category' => 'portal',
+                'title' => 'Bezpečnejšie objednávky a sťahovanie publikácií',
+                'description' => 'Stránky objednávok sú vylúčené z analytiky aj pri uloženom súhlase. Sťahovanie spoľahlivo dodržiava limit a platnosť prístupu aj pri súbežných požiadavkách; počas prenosu môžete ďalej používať portál.',
+                'url' => 'publikacie.php',
+            ],
+            [
                 'date' => '2026-10-04 10:30',
                 'category' => 'content',
                 'title' => 'Anglické vydanie kompendia',

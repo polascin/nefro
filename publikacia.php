@@ -50,7 +50,7 @@ $formValues   = [
 ];
 
 if ($publication !== null && ($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
-    /** @var array<int, string> $postedFormats */
+    /** @var array<int, mixed> $postedFormats */
     $postedFormats = is_array($_POST['formats'] ?? null) ? $_POST['formats'] : [];
 
     $formValues = [
@@ -110,12 +110,19 @@ if ($publication !== null && ($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
             exit;
         }
 
+        // Pokus započítame aj pri neplatnom formulári, pred DNS kontrolou domény.
+        if (!checkFormRateLimit($pdo, 'publication_order', getClientIpAddress(), 10, 3600)) {
+            $errors[] = 'Príliš veľa objednávok z tejto adresy. Skúste to prosím neskôr '
+                . 'alebo nám napíšte na ' . publicationSeller()['email'] . '.';
+        }
+
         $selectedFormats = normalizePublicationFormats($publication, $formValues['formats']);
 
         if ($selectedFormats === []) {
             $errors[] = 'Vyberte aspoň jeden formát.';
         }
-        if (!filter_var($formValues['email'], FILTER_VALIDATE_EMAIL) || !isEmailDomainValid($formValues['email'])) {
+        if (!filter_var($formValues['email'], FILTER_VALIDATE_EMAIL)
+            || ($errors === [] && !isEmailDomainValid($formValues['email']))) {
             $errors[] = 'Zadajte platnú e-mailovú adresu — pošleme na ňu platobné pokyny aj súbory.';
         }
         if (mb_strlen($formValues['email']) > 255) {
@@ -147,14 +154,6 @@ if ($publication !== null && ($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
             $errors[] = 'Potvrďte prosím súhlas s dodaním digitálneho obsahu pred uplynutím '
                 . 'lehoty na odstúpenie od zmluvy — bez neho vám súbory nemôžeme sprístupniť '
                 . 'pred uplynutím tejto lehoty.';
-        }
-
-        // Rate limit podľa IP — bráni zakladaniu objednávok v dávkach.
-        if ($errors === [] && !checkFormRateLimit($pdo, 'publication_order', getClientIpAddress(), 10, 3600)) {
-            // Bez `htmlspecialchars` — celé `$errors` sa escapuje až pri výpise
-            // (pozri slučku nižšie), takže escapovanie tu by bolo dvojité.
-            $errors[] = 'Príliš veľa objednávok z tejto adresy. Skúste to prosím neskôr '
-                . 'alebo nám napíšte na ' . publicationSeller()['email'] . '.';
         }
 
         if ($errors === []) {
