@@ -55,6 +55,13 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-10-04 09:30',
+                'category' => 'content',
+                'title' => 'SK Nefro Báza 1 Kompendium — zhustené vydanie',
+                'description' => 'Do katalógu publikácií pribudlo kompendium: 387 odborných článkov spracovaných do abstraktu a štyroch až siedmich kľúčových bodov, k tomu syntéza na začiatku každej zo 16 kapitol. Celý ročník na 261 stranách namiesto 1 745, s číslovaním zhodným s plným vydaním. Rovnakých päť formátov — PDF, EPUB, Kindle, DOCX a ODT.',
+                'url' => 'publikacia.php?slug=sk-nefro-baza-1-kompendium',
+            ],
+            [
                 'date' => '2026-10-03 20:00',
                 'category' => 'content',
                 'title' => 'Anglické vydanie e-knihy SK Nefro Báza 1',

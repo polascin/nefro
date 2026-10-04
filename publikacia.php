@@ -334,7 +334,9 @@ markFormLoadTime('publication_order');
                         <div><dt>Článkov</dt><dd><?= number_format((int) $publication['articles'], 0, ',', ' ') ?></dd></div>
                         <div><dt>Strán</dt><dd><?= number_format((int) $publication['pages'], 0, ',', ' ') ?></dd></div>
                         <div><dt>Slov</dt><dd><?= number_format((int) $publication['words'], 0, ',', ' ') ?></dd></div>
-                        <div><dt>Ilustrácií</dt><dd><?= number_format((int) $publication['images'], 0, ',', ' ') ?></dd></div>
+                        <?php if ((int) $publication['images'] > 0): ?>
+                            <div><dt>Ilustrácií</dt><dd><?= number_format((int) $publication['images'], 0, ',', ' ') ?></dd></div>
+                        <?php endif; ?>
                         <div><dt>Jazyk</dt><dd class="pub-hero__facts-lang"><?= htmlspecialchars((string) $publication['language']) ?></dd></div>
                     </dl>
 

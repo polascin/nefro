@@ -265,6 +265,55 @@ function publications(): array
             'audience'     => 'Zahraniční kolegovia, slovenskí nefrológovia a internisti, ktorí potrebujú '
                 . 'odborný obsah v angličtine na zdieľanie, citovanie alebo prednášky.',
         ],
+        [
+            'slug'        => 'sk-nefro-baza-1-kompendium',
+            'title'       => 'SK Nefro Báza 1 Kompendium',
+            'subtitle'    => 'Abstrakty a zhutnené verzie odborných článkov z portálu nefro.polascin.net, apríl – október 2026',
+            'author'      => 'MUDr. Ľubomír Polaščín',
+            'edition'     => '1. vydanie, október 2026',
+            'published_on' => '2026-10-04',
+            'language'    => 'slovenčina',
+            'language_code' => 'sk',
+            'pages'       => 261,
+            'articles'    => 387,
+            'words'       => 109029,
+            // Kompendium zámerne nepreberá obrázky ani tabuľky z plného
+            // vydania — je to textová mapa, nie obrazová publikácia. Šablóny
+            // preto fakt o ilustráciách pri nule vynechávajú.
+            'images'      => 0,
+            'cover'       => 'img/publikacie/sk-nefro-baza-1-kompendium-obalka.jpg',
+            'cover_small' => 'img/publikacie/sk-nefro-baza-1-kompendium-obalka-600.jpg',
+            'formats'     => ['pdf', 'epub', 'azw3', 'docx', 'odt'],
+            'is_available' => true,
+            'excerpt'     => 'Zhustené vydanie prvého zväzku — 387 článkov ako abstrakt a štyri až sedem '
+                . 'kľúčových bodov, k tomu syntéza na začiatku každej zo 16 kapitol. '
+                . 'Celý ročník na 261 stranách namiesto 1 745.',
+            'description'  => [
+                '<strong>Kompendium</strong> je zhustené vydanie prvého zväzku série '
+                . '<em>SK Nefro Báza</em>. Každý z 387 odborných článkov je spracovaný do '
+                . 'abstraktu a zhutnenej verzie v štyroch až siedmich bodoch s kľúčovými '
+                . 'číslami, limitmi dôkazov a praktickým záverom pre ambulanciu.',
+                'Každú zo 16 kapitol otvára <strong>syntéza kľúčových posolstiev</strong> '
+                . 'v rozsahu približne dvoch strán, ktorá spája jednotlivé články do '
+                . 'súvislého obrazu a pri každom tvrdení odkazuje na číslo zdrojového článku. '
+                . 'Číslovanie je zhodné s plným vydaním, takže prechod na celý text je okamžitý.',
+                'Zhustenie má svoju cenu: kompendium <strong>nepreberá zoznamy literatúry, '
+                . 'tabuľky ani obrázky</strong>. Je mapou, nie náhradou plného znenia — '
+                . 'pri klinickom rozhodnutí, citovaní alebo výučbe treba siahnuť po '
+                . 'plnom článku v zväzku <em>SK Nefro Báza 1</em> alebo na portáli.',
+            ],
+            'highlights'   => [
+                '387 článkov na 261 stranách — celý ročník za zlomok rozsahu',
+                'Pri každom článku abstrakt a 4 až 7 kľúčových bodov s číslami',
+                'Syntéza kľúčových posolstiev na začiatku každej zo 16 kapitol',
+                'Číslovanie zhodné s plným vydaním SK Nefro Báza 1',
+                'Odkaz na online verziu pri každom článku',
+                'Bez DRM — kúpený súbor je váš, čítajte ho na čomkoľvek',
+            ],
+            'audience'     => 'Lekári, ktorí potrebujú rýchlu orientáciu pri vizite, v ambulancii alebo '
+                . 'pred seminárom — a čitatelia plného vydania, ktorým sa hodí stručný register toho, '
+                . 'čo jednotlivé články priniesli.',
+        ],
     ];
 }
 

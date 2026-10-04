@@ -55,7 +55,9 @@ $_pubCtaUrl   = 'publikacia.php?slug=' . urlencode((string) $_pubCtaItem['slug']
       <ul class="publication-cta__facts">
         <li><strong><?= number_format((int) $_pubCtaItem['articles'], 0, ',', ' ') ?></strong> článkov</li>
         <li><strong><?= number_format((int) $_pubCtaItem['pages'], 0, ',', ' ') ?></strong> strán</li>
-        <li><strong><?= number_format((int) $_pubCtaItem['images'], 0, ',', ' ') ?></strong> ilustrácií</li>
+        <?php if ((int) $_pubCtaItem['images'] > 0): ?>
+          <li><strong><?= number_format((int) $_pubCtaItem['images'], 0, ',', ' ') ?></strong> ilustrácií</li>
+        <?php endif; ?>
         <li>jazyk: <strong><?= htmlspecialchars((string) $_pubCtaItem['language']) ?></strong></li>
       </ul>
 

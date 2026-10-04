@@ -127,7 +127,10 @@ $catalogue = array_values(array_filter(
                                 <ul class="pub-card__meta">
                                     <li><?= (int) $publication['articles'] ?> článkov</li>
                                     <li><?= number_format((int) $publication['pages'], 0, ',', ' ') ?> strán</li>
-                                    <li><?= (int) $publication['images'] ?> ilustrácií</li>
+                                    <?php /* Kompendium je bez obrázkov — „0 ilustrácií“ by znelo ako chyba. */ ?>
+                                    <?php if ((int) $publication['images'] > 0): ?>
+                                        <li><?= (int) $publication['images'] ?> ilustrácií</li>
+                                    <?php endif; ?>
                                     <li><?= htmlspecialchars((string) $publication['edition']) ?></li>
                                     <li>jazyk: <strong><?= htmlspecialchars((string) $publication['language']) ?></strong></li>
                                 </ul>
