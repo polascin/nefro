@@ -1221,6 +1221,29 @@ function publicationAttachmentPlan(string $slug, array $formats, string $title):
 }
 
 /**
+ * Kroky záchrany, keď úvodná dodacia správa zlyhá.
+ *
+ * Predvolený nákup je len PDF. PDF sa do e-mailovej prílohy nezmestí, takže
+ * `$firstBatch` je prázdny a správa ide odkazom. Ak server odmietne
+ * `PUBLICATION_DELIVERY_FROM_EMAIL` (typicky nie je SMTP-autentifikovaná),
+ * jediná záchrana je technická adresa. Staršia podmienka
+ * `$firstBatch !== []` tento krok preskočila — potvrdenie platby sa
+ * nedoručilo a tlačidlo „Poslať dodací e-mail“ zlyhalo rovnako.
+ *
+ * @return list<'unattached'|'technical'>
+ */
+function publicationDeliveryIntroFallbackPlan(bool $hadAttachments): array
+{
+    $plan = [];
+    if ($hadAttachments) {
+        $plan[] = 'unattached';
+    }
+    $plan[] = 'technical';
+
+    return $plan;
+}
+
+/**
  * Pošle kupujúcemu potvrdenie platby a samotnú publikáciu.
  *
  * Do jednej správy sa pri 32 MB limite zmestí nanajvýš jeden súbor, preto sa
@@ -1371,12 +1394,14 @@ function sendPublicationOrderDeliveryEmail(array $order, string $token): array
         foreach ($firstBatch as $attachment) {
             $attached[] = $attachment['code'];
         }
-    } elseif ($firstBatch !== []) {
-        // Príloha neprešla — pošli aspoň úvodnú správu s odkazom, inak kupujúci
-        // nevie ani to, že platba dorazila.
-        error_log('sendPublicationOrderDeliveryEmail: príloha v úvodnej správe zlyhala pre VS ' . $vs);
-        foreach ($firstBatch as $attachment) {
-            $linked[] = $attachment['code'];
+    } else {
+        if ($firstBatch !== []) {
+            error_log('sendPublicationOrderDeliveryEmail: príloha v úvodnej správe zlyhala pre VS ' . $vs);
+            foreach ($firstBatch as $attachment) {
+                $linked[] = $attachment['code'];
+            }
+        } else {
+            error_log('sendPublicationOrderDeliveryEmail: úvodná správa bez prílohy zlyhala pre VS ' . $vs);
         }
 
         $fallbackHtml = '<p style="margin:0 0 16px;">Dobrý deň,</p>'
@@ -1399,17 +1424,25 @@ function sendPublicationOrderDeliveryEmail(array $order, string $token): array
             . 'Prístup je platný ' . $years . ' roky, so stropom '
             . PUBLICATION_DOWNLOAD_MAX . ' stiahnutí.' . "\n\n";
 
-        $firstSent = $sendMessage(
-            'Vaša publikácia ' . $title . ' · ' . EMAIL_BRAND_NAME,
-            $fallbackHtml,
-            $fallbackText,
-            []
-        );
+        foreach (publicationDeliveryIntroFallbackPlan($firstBatch !== []) as $step) {
+            if ($firstSent) {
+                break;
+            }
 
-        if (!$firstSent) {
-            // Poslednou možnosťou je technická adresa — niektoré servery odmietnu
-            // MAIL FROM s adresou, ktorá nie je tá autentifikovaná, a dodanie by sa
-            // stratilo len preto, že sme chceli pekného odosielateľa.
+            if ($step === 'unattached') {
+                $firstSent = $sendMessage(
+                    'Vaša publikácia ' . $title . ' · ' . EMAIL_BRAND_NAME,
+                    $fallbackHtml,
+                    $fallbackText,
+                    []
+                );
+                continue;
+            }
+
+            // Technická adresa — niektoré servery odmietnu MAIL FROM, ktorý
+            // nie je autentifikovaný, a dodanie by sa stratilo len preto,
+            // že sme chceli pekného odosielateľa. Musí sa skúsiť aj keď
+            // úvodná správa nemala prílohu (predvolený nákup len PDF).
             $firstSent = sendViaSmtp(
                 $recipient,
                 'Vaša publikácia ' . $title . ' · ' . EMAIL_BRAND_NAME,
