@@ -55,6 +55,13 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-10-04 10:30',
+                'category' => 'content',
+                'title' => 'Anglické vydanie kompendia',
+                'description' => 'Kompendium je od dnes aj v angličtine — 387 článkov ako abstrakt a stručné zhrnutie, syntéza na začiatku každej zo 16 kapitol, 275 strán. Číslovanie je zhodné s anglickým plným vydaním, pri každom článku je odkaz na slovenskú online verziu. Rovnakých päť formátov — PDF, EPUB, Kindle, DOCX a ODT.',
+                'url' => 'publikacia.php?slug=sk-nefro-baza-1-kompendium-en',
+            ],
+            [
                 'date' => '2026-10-04 09:30',
                 'category' => 'content',
                 'title' => 'SK Nefro Báza 1 Kompendium — zhustené vydanie',

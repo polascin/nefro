@@ -314,6 +314,57 @@ function publications(): array
                 . 'pred seminárom — a čitatelia plného vydania, ktorým sa hodí stručný register toho, '
                 . 'čo jednotlivé články priniesli.',
         ],
+        [
+            'slug'        => 'sk-nefro-baza-1-kompendium-en',
+            'title'       => 'SK Nefro Báza 1 Compendium — English edition',
+            'subtitle'    => 'Abstracts and summaries of specialist articles from nefro.polascin.net, April – October 2026',
+            'author'      => 'Ľubomír Polaščín, MD',
+            'edition'     => '1. vydanie, október 2026',
+            'published_on' => '2026-10-04',
+            'language'    => 'angličtina',
+            'language_code' => 'en',
+            'pages'       => 275,
+            'articles'    => 387,
+            // Rozsah textu je väčší než v slovenskom kompendiu (109 029 slov)
+            // len kvôli angličtine — tá na tú istú informáciu potrebuje viac
+            // slov. Článkov aj kapitol je rovnako.
+            'words'       => 127308,
+            'images'      => 0,
+            'cover'       => 'img/publikacie/sk-nefro-baza-1-kompendium-en-obalka.jpg',
+            'cover_small' => 'img/publikacie/sk-nefro-baza-1-kompendium-en-obalka-600.jpg',
+            'formats'     => ['pdf', 'epub', 'azw3', 'docx', 'odt'],
+            'is_available' => true,
+            'excerpt'     => 'Anglické vydanie kompendia — 387 článkov ako abstrakt a stručné zhrnutie, '
+                . 'k tomu syntéza na začiatku každej zo 16 kapitol. Celý ročník na 275 stranách '
+                . 'namiesto 1 782.',
+            'description'  => [
+                '<strong>Anglické vydanie kompendia</strong> prvého zväzku série '
+                . '<em>SK Nefro Báza</em>. Každý z 387 odborných článkov je spracovaný do '
+                . 'abstraktu a stručného zhrnutia s kľúčovými číslami, limitmi dôkazov '
+                . 'a praktickým záverom.',
+                'Každú zo 16 kapitol otvára <strong>syntéza kľúčových posolstiev</strong>, '
+                . 'ktorá spája jednotlivé články a pri každom tvrdení odkazuje na číslo '
+                . 'zdrojového článku. Číslovanie je zhodné s anglickým plným vydaním '
+                . '<em>SK Nefro Báza 1</em>, prílohové články sú A.1 až A.11.',
+                'Články boli písané pre lekárov pôsobiacich na Slovensku, preto odkazy na '
+                . 'slovenskú legislatívu, inštitúcie a úhradové pravidlá zostali zachované. '
+                . 'Odkazy na online verziu vedú na slovenský originál; plné anglické znenie '
+                . 'je v anglickom vydaní zväzku 1.',
+                'Rovnako ako slovenské kompendium <strong>nepreberá zoznamy literatúry, '
+                . 'tabuľky ani obrázky</strong> — je mapou, nie náhradou plného znenia.',
+            ],
+            'highlights'   => [
+                '387 článkov na 275 stranách — celý ročník v angličtine za zlomok rozsahu',
+                'Pri každom článku abstrakt a stručné zhrnutie s kľúčovými číslami',
+                'Syntéza kľúčových posolstiev na začiatku každej zo 16 kapitol',
+                'Číslovanie zhodné s anglickým plným vydaním (príloha A.1 až A.11)',
+                'Pri každom článku odkaz na slovenskú online verziu',
+                'Bez DRM — kúpený súbor je váš, čítajte ho na čomkoľvek',
+            ],
+            'audience'     => 'Zahraniční kolegovia a slovenskí lekári, ktorí potrebujú rýchlu '
+                . 'orientáciu v angličtine — na vizitu, prednášku alebo zdieľanie s kolegami '
+                . 'mimo Slovenska.',
+        ],
     ];
 }
 
