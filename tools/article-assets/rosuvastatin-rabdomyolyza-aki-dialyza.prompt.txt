@@ -1,0 +1,6 @@
+Tool: built-in imagegen
+Final asset: img/rosuvastatin-rabdomyolyza-aki-dialyza.png (1600 x 1000), WebP sibling
+
+Create a compelling premium medical editorial illustration for a Slovak nephrology professional article about rosuvastatin-associated rhabdomyolysis causing acute kidney injury requiring dialysis. Landscape 16:10, ideally 1600x1000. Dark navy clinical background, luminous crimson damaged skeletal muscle fibers on the left releasing subtle copper myoglobin particles into a flowing bloodstream toward a large anatomically credible kidney cutaway on the right, with glowing renal cortex and vulnerable tubules, subtle dialysis hollow-fiber cartridge in the far background. Powerful, precise, sophisticated, cinematic chiaroscuro, realistic anatomical textures with restrained conceptual visualization. Clearly an educational conceptual illustration, not a diagnostic scan. Coherent composition, strong focal point, no gore, no patient face, no letters, no text, no labels, no logos, no watermark. Leave all anatomy fully inside safe margins. Generate the image and provide its saved local path.
+
+Production processing: PHP GD normalization to 1600 x 1000; standard project watermark; WebP quality 82.
