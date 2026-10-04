@@ -116,10 +116,12 @@ $articles[] = [
 <li><strong>Pri plánovaní gravidity:</strong> zosúladiť liečbu vopred. KDIGO odporúča počkať najmenej šesť mesiacov od ústupu aktivity LN; mykofenolát nie je vhodný počas gravidity. Prechod na kompatibilnú liečbu musí byť plánovaný a kontrolovaný. [1,4]</li>
 </ul>
 
+<div class="pdf-keep-together">
 <h2>Čo pribudlo po KDIGO 2024</h2>
 <p>Vývoj sa vydaním odporúčaní nezastavil. V štúdii fázy III <strong>REGENCY</strong>, publikovanej v roku 2025, dosiahlo úplnú renálnu odpoveď v 76. týždni 46,4 % pacientov s obinutuzumabom oproti 33,1 % s placebom; obe skupiny dostávali MMF a glukokortikoidy. Závažné nežiaduce udalosti, najmä infekcie, boli častejšie pri obinutuzumabe. [5]</p>
 <p>EMA už uvádza obinutuzumab v kombinácii s MMF pre dospelých s aktívnou LN triedy III alebo IV, so súčasnou triedou V alebo bez nej. Ide o <strong>novší dôkazový a regulačný vývoj, nie o odporúčanie KDIGO 2024</strong>. Registračná indikácia sama osebe nepotvrdzuje dostupnosť ani úhradu na Slovensku; tie treba overiť pri konkrétnom predpise. [6]</p>
 
+</div>
 <h2>Záver</h2>
 <p>Uplatnenie KDIGO 2024 začína rozlíšením aktívneho zápalu od chronického poškodenia. Nasleduje výber primeranej kombinácie, podporná liečba, plán znižovania glukokortikoidov a včasné hodnotenie účinnosti aj bezpečnosti. Dobre vedená starostlivosť má pre každého pacienta jasný cieľ, termín kontroly a postup pre prípad nedostatočnej odpovede. Rozhodovanie musí vychádzať zo spoločného posúdenia obličkového a systémového ochorenia.</p>
 
