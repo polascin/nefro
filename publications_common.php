@@ -994,6 +994,29 @@ function publicationOrderIsDownloadable(array $order): bool
  */
 function markPublicationOrderPaid(PDO $pdo, int $orderId, ?string $paymentNote = null): bool
 {
+    // Rovnaká podmienka `status <> 'paid'` platí aj pre pamäťový SQLite
+    // v CLI teste. MariaDB vetva ostáva na NOW()/DATE_ADD, aby sa čas
+    // potvrdenia bral z databázy, nie z hodín PHP.
+    if ((string) $pdo->getAttribute(PDO::ATTR_DRIVER_NAME) === 'sqlite') {
+        $now = new DateTimeImmutable('now', new DateTimeZone('Europe/Bratislava'));
+        $stmt = $pdo->prepare(
+            "UPDATE publication_orders
+             SET status = 'paid',
+                 paid_at = :paid_at,
+                 access_expires_at = :expires_at,
+                 payment_note = COALESCE(:note, payment_note)
+             WHERE id = :id AND status <> 'paid'"
+        );
+        $stmt->execute([
+            'paid_at'    => $now->format('Y-m-d H:i:s'),
+            'expires_at' => $now->modify('+' . PUBLICATION_ACCESS_DAYS . ' days')->format('Y-m-d H:i:s'),
+            'note'       => $paymentNote,
+            'id'         => $orderId,
+        ]);
+
+        return $stmt->rowCount() > 0;
+    }
+
     $stmt = $pdo->prepare(
         "UPDATE publication_orders
          SET status = 'paid',
@@ -1230,6 +1253,67 @@ function publicationAttachmentPlan(string $slug, array $formats, string $title):
 }
 
 /**
+ * CLI-only náhrada SMTP pre test doručenia. Vo webovom SAPI sa ignoruje,
+ * takže požiadavka z prehliadača ňou neodošle poštu ani neobíde platbu.
+ */
+function publicationDeliverySmtpTestHook(): ?callable
+{
+    if (PHP_SAPI !== 'cli' || !isset($GLOBALS['NEFRO_TEST_PUBLICATION_SMTP'])) {
+        return null;
+    }
+
+    $hook = $GLOBALS['NEFRO_TEST_PUBLICATION_SMTP'];
+
+    return is_callable($hook) ? $hook : null;
+}
+
+/**
+ * Jedna dodacia správa. Príloha ide cez SMTP s prílohami, správa bez prílohy
+ * cez bežné SMTP. Technická adresa je tá istá funkcia s inou konfiguráciou
+ * odosielateľa — test aj produkcia tak vidia obe cesty oddelene.
+ *
+ * @param array<string, mixed> $cfg
+ * @param array<int, array<string, mixed>> $attachments
+ * @param array<string, string> $extraHeaders
+ */
+function publicationDeliverSmtpMessage(
+    string $toEmail,
+    string $subject,
+    string $html,
+    array $cfg,
+    string $plainText,
+    array $attachments,
+    array $extraHeaders
+): bool {
+    $hook = publicationDeliverySmtpTestHook();
+    if ($hook !== null) {
+        return (bool) $hook($toEmail, $subject, $html, $cfg, $plainText, $attachments, $extraHeaders);
+    }
+
+    if ($attachments !== []) {
+        return sendViaSmtpWithAttachments(
+            $toEmail,
+            $subject,
+            $html,
+            $cfg,
+            $plainText,
+            $attachments,
+            $extraHeaders
+        );
+    }
+
+    return sendViaSmtp(
+        $toEmail,
+        $subject,
+        $html,
+        $cfg,
+        EMAIL_CONTENT_TYPE_HTML,
+        $plainText,
+        $extraHeaders
+    );
+}
+
+/**
  * Kroky záchrany, keď úvodná dodacia správa zlyhá.
  *
  * Predvolený nákup je len PDF. PDF sa do e-mailovej prílohy nezmestí, takže
@@ -1316,19 +1400,15 @@ function sendPublicationOrderDeliveryEmail(array $order, string $token): array
         $html = renderEmailHtmlLayout($bodyHtml . $footerHtml, 'Stránka objednávky', $orderUrl);
         $text = $bodyText . $footerText;
 
-        if ($attachments !== []) {
-            return sendViaSmtpWithAttachments(
-                $recipient,
-                $subject,
-                $html,
-                $cfg,
-                $text,
-                $attachments,
-                $extraHeaders
-            );
-        }
-
-        return sendViaSmtp($recipient, $subject, $html, $cfg, EMAIL_CONTENT_TYPE_HTML, $text, $extraHeaders);
+        return publicationDeliverSmtpMessage(
+            $recipient,
+            $subject,
+            $html,
+            $cfg,
+            $text,
+            $attachments,
+            $extraHeaders
+        );
     };
 
     /**
@@ -1452,13 +1532,13 @@ function sendPublicationOrderDeliveryEmail(array $order, string $token): array
             // nie je autentifikovaný, a dodanie by sa stratilo len preto,
             // že sme chceli pekného odosielateľa. Musí sa skúsiť aj keď
             // úvodná správa nemala prílohu (predvolený nákup len PDF).
-            $firstSent = sendViaSmtp(
+            $firstSent = publicationDeliverSmtpMessage(
                 $recipient,
                 'Vaša publikácia ' . $title . ' · ' . EMAIL_BRAND_NAME,
                 renderEmailHtmlLayout($fallbackHtml . $footerHtml, 'Stiahnuť publikáciu', $orderUrl),
                 getEmailEnvConfig(),
-                EMAIL_CONTENT_TYPE_HTML,
                 $fallbackText . $footerText,
+                [],
                 $extraHeaders
             );
             if ($firstSent) {
