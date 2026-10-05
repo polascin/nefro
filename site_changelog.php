@@ -55,6 +55,13 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-10-05 19:14',
+                'category' => 'portal',
+                'title' => 'Dodací e-mail publikácie príde aj pri objednávke len PDF',
+                'description' => 'Po potvrdení platby príde správa so stránkou na stiahnutie aj vtedy, keď je v objednávke len PDF a poštový server neprijme odosielateľa nefro@polascin.net. Opätovné odoslanie z administrácie použije tú istú zálohu. Druhé potvrdenie už zaplatenej objednávky publikáciu znova nepošle.',
+                'url' => 'publikacie.php',
+            ],
+            [
                 'date' => '2026-10-04 13:39',
                 'category' => 'portal',
                 'title' => 'Bezpečnejšie objednávky a sťahovanie publikácií',
