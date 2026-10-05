@@ -586,11 +586,10 @@ function publicationPaymeUrl(float $amount, string $variableSymbol): string
  * a prepínač by sa stal neviditeľným.
  *
  * `stripe_links` — Suma sa do Stripe URL vložiť nedá; je zapečená v cene,
- * na ktorú je Payment Link vytvorený. Preto treba jeden odkaz na každú
- * cenovú hladinu (kľúč je suma v tvare „7.00“). Odkazy vytvoríte v Stripe
- * dashboarde (Payment Links → nový odkaz na produkt s danou cenou).
- * Kým sú prázdne, použije sa `stripe_fallback` bez pevnej sumy, kde si
- * kupujúci sumu zadá sám.
+ * na ktorú je Payment Link vytvorený. Preto je jeden odkaz na každú
+ * cenovú hladinu (kľúč je suma v tvare „7.00“). Odkazy nižšie sú existujúce
+ * živé Payment Linky, nie nové objekty. `stripe_fallback` je len dobrovoľná
+ * podpora bez pevnej sumy a pre tieto dve ceny sa nepoužíva.
  *
  * @return array<string, mixed>
  */
@@ -598,12 +597,15 @@ function publicationPaymentConfig(): array
 {
     return [
         'stripe_links' => [
-            '7.00'  => '',
-            '12.00' => '',
+            // plink_1UMrEY87gb4DCddjUoaPjAzo — 700 centov, EUR,
+            // checkout „Publikácia Nefro-projekt (1 formát)“.
+            '7.00'  => 'https://buy.stripe.com/cNi9AN1fs51B95OeWOfMA01',
+            // plink_1UMrEf87gb4DCddjRjpIJBqW — 1200 centov, EUR,
+            // checkout „Publikácia Nefro-projekt (balík všetkých formátov)“.
+            '12.00' => 'https://buy.stripe.com/3cI6oB5vIcu35TCcOGfMA02',
         ],
-        // Tá istá platobná stránka, akú používa podpora.php. Funguje hneď,
-        // ale bez pevnej sumy — len čo budú vyplnené `stripe_links`, prestane
-        // sa používať.
+        // Dobrovoľná podpora, plink_1TkyBY87gb4DCddjnXbOHhW9. Rovnaká stránka
+        // ako podpora.php. Nemá pevnú sumu a nie je predvolený nákup 7 € ani 12 €.
         'stripe_fallback' => 'https://donate.stripe.com/8x2fZb0bo3Xxdm4cOGfMA00',
         'paypal_account'  => 'polascin@proton.me',
         // Revolut ani Ko-fi nevedia prijať sumu či referenciu v odkaze —
