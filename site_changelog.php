@@ -55,6 +55,13 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-10-05 20:32',
+                'category' => 'portal',
+                'title' => 'Platba kartou za publikácie s pevnou sumou',
+                'description' => 'Platobná brána Stripe pri objednávke publikácie automaticky predvyplní presnú sumu podľa vybraných formátov (7 € za jeden formát, 12 € za balík). Sumu už pri platbe kartou nezadávate ručne.',
+                'url' => 'publikacie.php',
+            ],
+            [
                 'date' => '2026-10-05 19:14',
                 'category' => 'portal',
                 'title' => 'Dodací e-mail publikácie príde aj pri objednávke len PDF',
