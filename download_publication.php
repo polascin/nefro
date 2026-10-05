@@ -30,6 +30,11 @@ function publicationDownloadFail(int $code, string $message): never
     exit($message . "\n");
 }
 
+if (($_SERVER['REQUEST_METHOD'] ?? 'GET') !== 'GET') {
+    header('Allow: GET');
+    publicationDownloadFail(405, 'Táto metóda sťahovania nie je podporovaná.');
+}
+
 $variableSymbol = trim((string) ($_GET['vs'] ?? ''));
 $token          = trim((string) ($_GET['t'] ?? ''));
 $formatCode     = strtolower(trim((string) ($_GET['format'] ?? '')));
@@ -89,7 +94,19 @@ if ($path === null) {
         . publicationSeller()['email'] . '.');
 }
 
-recordPublicationDownload($pdo, (int) $order['id'], $formatCode);
+try {
+    if (!recordPublicationDownload($pdo, (int) $order['id'], $formatCode)) {
+        publicationDownloadFail(403, 'Prístup na stiahnutie už nie je aktívny.');
+    }
+} catch (\PDOException $e) {
+    error_log('download_publication.php: rezervácia stiahnutia zlyhala: ' . $e->getMessage());
+    publicationDownloadFail(503, 'Služba je momentálne nedostupná. Skúste to prosím o chvíľu znova.');
+}
+
+// Prenos veľkého súboru nesmie blokovať ostatné stránky tej istej relácie.
+if (session_status() === PHP_SESSION_ACTIVE) {
+    session_write_close();
+}
 
 $formats  = publicationFormats();
 $ext      = (string) $formats[$formatCode]['ext'];

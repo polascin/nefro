@@ -15,7 +15,9 @@ const sensitiveAnalyticsPages = new Set([
     'reset_password.php',
     'profile_export.php',
     'calculator_history.php',
-    'calculator_result_print.php'
+    'calculator_result_print.php',
+    'objednavka.php',
+    'download_publication.php'
 ]);
 const sensitiveAnalyticsParameters = new Set([
     'token', 'sig', 'signature', 'secret', 'password', 'passwd',
@@ -24,7 +26,7 @@ const sensitiveAnalyticsParameters = new Set([
     'email', 'login', 'username', 'phone', 'mobile', 'patient',
     'birthnumber', 'patientbirthnumber', 'birthdate', 'birthinput',
     'dateofbirth', 'rodnecislo',
-    'resultid', 'loadid', 'compare'
+    'resultid', 'loadid', 'compare', 't', 'accesstoken'
 ]);
 const sensitiveAnalyticsParameterFragments = [
     'token', 'password', 'secret', 'email', 'login', 'username',

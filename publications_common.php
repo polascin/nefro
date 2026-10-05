@@ -395,14 +395,17 @@ function isValidPublicationSlug(string $slug): bool
  * a zoradí ich podľa poradia v katalógu (nie podľa poradia v požiadavke).
  *
  * @param array<string, mixed> $publication
- * @param array<int, string>   $requested
+ * @param array<int, mixed>    $requested
  * @return array<int, string>
  */
 function normalizePublicationFormats(array $publication, array $requested): array
 {
     /** @var array<int, string> $offered */
     $offered   = $publication['formats'];
-    $requested = array_map(static fn ($code): string => strtolower(trim((string) $code)), $requested);
+    $requested = array_map(
+        static fn (string $code): string => strtolower(trim($code)),
+        array_filter($requested, 'is_string')
+    );
 
     return array_values(array_filter($offered, static fn (string $code): bool => in_array($code, $requested, true)));
 }
@@ -1022,15 +1025,21 @@ function cancelPublicationOrder(PDO $pdo, int $orderId, string $reason): bool
 }
 
 /** Zapíše jedno stiahnutie (počítadlo je zároveň stropom proti zdieľaniu odkazu). */
-function recordPublicationDownload(PDO $pdo, int $orderId, string $formatCode): void
+function recordPublicationDownload(PDO $pdo, int $orderId, string $formatCode): bool
 {
-    $pdo->prepare(
+    // Kontrola a rezervácia musia byť atomické aj pri súbežných požiadavkách.
+    $stmt = $pdo->prepare(
         "UPDATE publication_orders
          SET download_count = download_count + 1,
              last_download_at = NOW(),
              last_download_format = :format
-         WHERE id = :id"
-    )->execute(['format' => $formatCode, 'id' => $orderId]);
+         WHERE id = :id AND status = 'paid'
+           AND (access_expires_at IS NULL OR access_expires_at >= NOW())
+           AND download_count < :download_max"
+    );
+    $stmt->execute(['format' => $formatCode, 'id' => $orderId, 'download_max' => PUBLICATION_DOWNLOAD_MAX]);
+
+    return $stmt->rowCount() === 1;
 }
 
 /* ─────────────────────────────── E-maily ────────────────────────────────── */

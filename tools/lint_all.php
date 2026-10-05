@@ -3,8 +3,13 @@
 declare(strict_types=1);
 
 $root = dirname(__DIR__);
-$iterator = new RecursiveIteratorIterator(
+$excludedDirectories = ['.git', '.trunk', '.kilo', 'scratch', 'private', 'pdf', 'uploads', 'img', 'assets', 'vendor', 'node_modules'];
+$files = new RecursiveCallbackFilterIterator(
     new RecursiveDirectoryIterator($root, FilesystemIterator::SKIP_DOTS),
+    static fn (SplFileInfo $file): bool => !$file->isDir() || !in_array($file->getFilename(), $excludedDirectories, true)
+);
+$iterator = new RecursiveIteratorIterator(
+    $files,
     RecursiveIteratorIterator::LEAVES_ONLY,
     RecursiveIteratorIterator::CATCH_GET_CHILD
 );

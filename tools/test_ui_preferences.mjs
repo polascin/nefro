@@ -117,6 +117,8 @@ for (const pathname of [
     '/calculator_history.php',
     '/calculator_result_print.php',
     '/profile_export.php',
+    '/objednavka.php',
+    '/download_publication.php',
 ]) {
     const payload = validConsent();
     const { context, appendedScripts } = makeContext({
@@ -140,6 +142,8 @@ for (const search of [
     '?reset-token=secret',
     '?birth_input=1965',
     '?birth_date=1965-06-15',
+    '?t=fictional-access-token',
+    '?access_token=fictional-access-token',
 ]) {
     const payload = validConsent();
     const { context, appendedScripts } = makeContext({
