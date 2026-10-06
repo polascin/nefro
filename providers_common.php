@@ -108,6 +108,7 @@ if (!function_exists('ppLocalitySuggestions')) {
             'Bratislava-Dúbravka', 'Bratislava-Karlova Ves', 'Bratislava-Lamač',
             'Bratislava-Devínska Nová Ves', 'Bratislava-Záhorská Bystrica', 'Bratislava-Devín',
             'Bratislava-Staré Mesto', 'Bratislava-Nové Mesto', 'Bratislava-Petržalka',
+            'Rovinka',
             'Stupava', 'Malacky', 'Marianka', 'Borinka', 'Záhorská Ves', 'Zohor', 'Lozorno',
         ];
     }
