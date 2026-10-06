@@ -1,0 +1,5 @@
+PubMed Database Skill License & Terms Notice
+Timestamp: 2026-10-06T10:21:00+02:00
+Terms: https://pubmed.ncbi.nlm.nih.gov/disclaimer/
+Policies: https://www.ncbi.nlm.nih.gov/home/about/policies/
+Notice: Check terms and license of retrieved papers for restrictions.
