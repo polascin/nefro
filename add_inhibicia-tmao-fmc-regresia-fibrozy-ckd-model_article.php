@@ -79,7 +79,7 @@ $articles[] = [
 
 <h2>Zlepšila sa funkcia aj histologický obraz</h2>
 
-<p>FMC prakticky eliminoval cirkulujúci TMAO a zlepšil všetky sledované fenotypy CKD. Okrem meranej glomerulovej filtrácie sa znížili koncentrácie kreatinínu, cystatínu C a pseudouridínu, pomer albumínu ku kreatinínu v moči, expresia profibrotických génov a histologické ukazovatele tubulointersticiálnej fibrózy.</p>
+<p>FMC prakticky eliminoval cirkulujúci TMAO a zlepšil všetky sledované fenotypy CKD. Okrem zlepšenia meranej glomerulovej filtrácie sa znížili koncentrácie kreatinínu, cystatínu C a pseudouridínu, pomer albumínu ku kreatinínu v moči, expresia profibrotických génov a histologické ukazovatele tubulointersticiálnej fibrózy.</p>
 
 <p>Znížili sa aj koncentrácie ďalších retenčných solútov vrátane indoxylsulfátu a fenylacetylglycínu. Tento nález môže znamenať, že zásah do metabolizmu cholínu ovplyvnil širšie črevno-metabolické prostredie. Zároveň však komplikuje jednoduchý záver, že celý účinok bol sprostredkovaný výlučne poklesom TMAO.</p>
 

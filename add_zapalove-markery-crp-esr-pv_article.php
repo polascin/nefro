@@ -104,7 +104,7 @@ malignitách.</p>
 <p>Medscape uvádza:</p>
 <ul>
   <li>normálny interval pre dospelých <strong>1,50 až 1,72 mPa·s</strong>,</li>
-  <li>hraničný (ekvivalentný) výsledok <strong>1,72 až 1,80 mPa·s</strong> (s odporúčaním zvážiť
+  <li>hraničný (nejednoznačný) výsledok <strong>1,72 až 1,80 mPa·s</strong> (s odporúčaním zvážiť
       opakovanie),</li>
   <li>zvýšený výsledok <strong>&gt; 1,80 mPa·s</strong>.</li>
 </ul>

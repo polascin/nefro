@@ -104,7 +104,7 @@ $articles[] = [
 
 <h3>Gabapentinoidy</h3>
 
-<p>Gabapentín a pregabalín sa vylučujú obličkami nezmenené, takže pri poklese eGFR rastie expozícia priamo úmerne. Dôsledkom je zvýšené riziko útlmu, zmätenosti, pádov a fraktúr — a pri kombinácii s opioidmi aj respiračnej depresie. Téme je venovaný samostatný článok <a href="article.php?slug=gabapentin-bezpecnost-ckd-hemodialyza-temna-strana">o bezpečnosti gabapentínu pri CKD a hemodialýze</a>; konkrétne dávkovacie schémy podľa klírensu kreatinínu rozoberá <a href="article.php?slug=polyneuropatia-ckd-diagnostika-liecba-bezpecne-davkovanie">článok o polyneuropatii pri CKD</a>.</p>
+<p>Gabapentín a pregabalín sa vylučujú obličkami nezmenené, takže pri poklese eGFR rastie expozícia nepriamo úmerne eGFR. Dôsledkom je zvýšené riziko útlmu, zmätenosti, pádov a fraktúr — a pri kombinácii s opioidmi aj respiračnej depresie. Téme je venovaný samostatný článok <a href="article.php?slug=gabapentin-bezpecnost-ckd-hemodialyza-temna-strana">o bezpečnosti gabapentínu pri CKD a hemodialýze</a>; konkrétne dávkovacie schémy podľa klírensu kreatinínu rozoberá <a href="article.php?slug=polyneuropatia-ckd-diagnostika-liecba-bezpecne-davkovanie">článok o polyneuropatii pri CKD</a>.</p>
 
 <h3>Opioidy</h3>
 
