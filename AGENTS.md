@@ -194,3 +194,11 @@ cron run, so that is the owner's decision, not a routine edit.
   has the exact step-by-step) and `PUBLIKOVANIE_PRE_PACIENTOV.md`. Use the UPSERT templates
   `add_TEMPLATE_article.php` / `add_TEMPLATE_popular_article.php`; re-running a script updates
   content + PDF and sends the newsletter only on first insert.
+
+## Cursor Cloud specific instructions
+
+- PHP 8.5 (Ondřej Surý packages; production is 8.5.x) and MariaDB 10.11 are provisioned by the Cloud Agent environment. PID 1 is `tini`, not systemd, so MariaDB is started as `mariadbd` rather than via `service`/`systemctl`.
+- Local config is gitignored `env.ini`, a symlink to `~/.config/nefro/env.ini` (`APP_ENV=local`, `SMS_PROVIDER=log`, random local DB password). Do not commit it. `start` runs `php setup_db.php` on every boot (idempotent).
+- The site is already served at `http://127.0.0.1:8080/` by `php -S`. The built-in server does not apply `.htaccess`, so request real files (`/index.php`, `/calculators.php`, `/calculator_egfr.php`). Extensionless aliases such as `/privacy` exist only under Apache in production.
+- Do not run `hooks/install.ps1` in Cloud Agents. Those hooks push the current branch and SFTP-deploy to production.
+- `tools/phpstan.phar` and `tools/php-cs-fixer.phar` are gitignored symlinks to `/opt/nefro-dev/`. Lint with `php tools/lint_all.php`. PHPStan: `php tools/phpstan.phar analyse --no-progress` (baseline ignores existing findings; do not regenerate it). The environment pins PHPStan 2.2.17, which matches `phpstan-baseline.neon`; 2.3.0 reports findings that baseline does not list.
