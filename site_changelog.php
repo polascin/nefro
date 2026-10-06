@@ -58,7 +58,7 @@ if (!function_exists('siteChangelogEntries')) {
                 'date' => '2026-10-06 08:42',
                 'category' => 'content',
                 'title' => 'Dve nové publikácie na bezplatné stiahnutie',
-                'description' => 'Publikácia SK Nefro: Dokázané, pravdepodobné, otvorené spája 387 odborných článkov do 17 rozšírených úvodníkov. Slovenské aj anglické vydanie si možno stiahnuť vo formáte PDF bezplatne, bez registrácie a objednávky.',
+                'description' => 'Publikácia SK Nefro: Dokázané, pravdepodobné, otvorené spája 387 odborných článkov do 17 rozšírených úvodníkov. Slovenské aj anglické vydanie si možno bezplatne stiahnuť vo formátoch PDF, EPUB, AZW3, DOCX a ODT, bez registrácie a objednávky.',
                 'url' => 'publikacie.php',
             ],
             [

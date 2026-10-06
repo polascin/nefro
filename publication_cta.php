@@ -44,8 +44,15 @@ $_pubCtaLevel = ($publicationCtaHeadingLevel ?? 'h2') === 'h3' ? 'h3' : 'h2';
           <p class="publication-cta__text"><?= htmlspecialchars((string) $_pubCtaItem['excerpt']) ?></p>
           <p class="publication-cta__actions">
             <a class="btn-primary" href="<?= htmlspecialchars((string) $_pubCtaItem['file'], ENT_QUOTES) ?>"
-               download="<?= htmlspecialchars((string) $_pubCtaItem['download_name'], ENT_QUOTES) ?>">Stiahnuť zadarmo</a>
+               download="<?= htmlspecialchars((string) $_pubCtaItem['download_name'], ENT_QUOTES) ?>">Stiahnuť PDF zadarmo</a>
           </p>
+          <div class="free-download-formats" aria-label="Ďalšie formáty na stiahnutie">
+            <span class="free-download-formats__label">Ďalšie formáty:</span>
+            <?php foreach (array_slice($_pubCtaItem['downloads'], 1) as $_pubCtaDownload): ?>
+              <a href="<?= htmlspecialchars((string) $_pubCtaDownload['file'], ENT_QUOTES) ?>"
+                 download="<?= htmlspecialchars((string) $_pubCtaDownload['download_name'], ENT_QUOTES) ?>"><?= htmlspecialchars((string) $_pubCtaDownload['label']) ?></a>
+            <?php endforeach; ?>
+          </div>
         </div>
       </article>
     <?php endforeach; ?>

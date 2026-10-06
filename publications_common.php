@@ -187,6 +187,13 @@ function freePublications(): array
             'cover_small' => 'img/publikacie/sk-nefro-dokazane-pravdepodobne-otvorene-obalka-600.jpg',
             'file' => 'pdf/publikacie/sk-nefro-dokazane-pravdepodobne-otvorene.pdf',
             'download_name' => 'SK-Nefro-Dokazane-pravdepodobne-otvorene.pdf',
+            'downloads' => [
+                ['code' => 'pdf', 'label' => 'PDF', 'file' => 'pdf/publikacie/sk-nefro-dokazane-pravdepodobne-otvorene.pdf', 'download_name' => 'SK-Nefro-Dokazane-pravdepodobne-otvorene.pdf'],
+                ['code' => 'epub', 'label' => 'EPUB', 'file' => 'pdf/publikacie/sk-nefro-dokazane-pravdepodobne-otvorene.epub', 'download_name' => 'SK-Nefro-Dokazane-pravdepodobne-otvorene.epub'],
+                ['code' => 'azw3', 'label' => 'AZW3 (Kindle)', 'file' => 'pdf/publikacie/sk-nefro-dokazane-pravdepodobne-otvorene.azw3', 'download_name' => 'SK-Nefro-Dokazane-pravdepodobne-otvorene.azw3'],
+                ['code' => 'docx', 'label' => 'DOCX', 'file' => 'pdf/publikacie/sk-nefro-dokazane-pravdepodobne-otvorene.docx', 'download_name' => 'SK-Nefro-Dokazane-pravdepodobne-otvorene.docx'],
+                ['code' => 'odt', 'label' => 'ODT', 'file' => 'pdf/publikacie/sk-nefro-dokazane-pravdepodobne-otvorene.odt', 'download_name' => 'SK-Nefro-Dokazane-pravdepodobne-otvorene.odt'],
+            ],
             'excerpt' => 'Sedemnásť rozšírených úvodníkov spája 387 odborných článkov do tematických línií a oddeľuje, čo je dokázané, čo je pravdepodobné a čo zostáva otvorené.',
         ],
         [
@@ -199,6 +206,13 @@ function freePublications(): array
             'cover_small' => 'img/publikacie/sk-nefro-proven-probable-open-obalka-600.jpg',
             'file' => 'pdf/publikacie/sk-nefro-proven-probable-open.pdf',
             'download_name' => 'SK-Nefro-Proven-Probable-Open.pdf',
+            'downloads' => [
+                ['code' => 'pdf', 'label' => 'PDF', 'file' => 'pdf/publikacie/sk-nefro-proven-probable-open.pdf', 'download_name' => 'SK-Nefro-Proven-Probable-Open.pdf'],
+                ['code' => 'epub', 'label' => 'EPUB', 'file' => 'pdf/publikacie/sk-nefro-proven-probable-open.epub', 'download_name' => 'SK-Nefro-Proven-Probable-Open.epub'],
+                ['code' => 'azw3', 'label' => 'AZW3 (Kindle)', 'file' => 'pdf/publikacie/sk-nefro-proven-probable-open.azw3', 'download_name' => 'SK-Nefro-Proven-Probable-Open.azw3'],
+                ['code' => 'docx', 'label' => 'DOCX', 'file' => 'pdf/publikacie/sk-nefro-proven-probable-open.docx', 'download_name' => 'SK-Nefro-Proven-Probable-Open.docx'],
+                ['code' => 'odt', 'label' => 'ODT', 'file' => 'pdf/publikacie/sk-nefro-proven-probable-open.odt', 'download_name' => 'SK-Nefro-Proven-Probable-Open.odt'],
+            ],
             'excerpt' => 'Anglické vydanie 17 rozšírených úvodníkov, ktoré spájajú 387 odborných článkov a oddeľujú dokázané, pravdepodobné a otvorené otázky.',
         ],
     ];

@@ -7803,6 +7803,40 @@ mark.search-hl {
     padding-top: 4px;
 }
 
+.free-download-formats {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 7px;
+    margin-top: 2px;
+    font-size: 0.82rem;
+}
+
+.free-download-formats__label {
+    color: var(--text-tertiary);
+}
+
+.free-download-formats a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 30px;
+    padding: 4px 9px;
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    background: var(--card-bg);
+    color: var(--text-secondary);
+    font-weight: 650;
+    line-height: 1.15;
+    text-decoration: none;
+}
+
+.free-download-formats a:hover,
+.free-download-formats a:focus-visible {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
 .pub-free-badge {
     display: inline-block;
     margin-right: 5px;

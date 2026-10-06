@@ -109,7 +109,7 @@ $freeCatalogue = freePublications();
                         <p class="pub-section__eyebrow">Voľne dostupné</p>
                         <h2 id="pub-free-heading">Bezplatné publikácie</h2>
                     </div>
-                    <p>Bez registrácie a bez objednávky, priamo vo formáte PDF.</p>
+                    <p>Bez registrácie a objednávky, prednostne v PDF alebo v ďalších formátoch.</p>
                 </div>
                 <ul class="pub-free-grid">
                     <?php foreach ($freeCatalogue as $publication): ?>
@@ -127,6 +127,13 @@ $freeCatalogue = freePublications();
                                 <p class="pub-free-card__excerpt"><?= htmlspecialchars((string) $publication['excerpt']) ?></p>
                                 <p class="pub-free-card__cta"><a href="<?= htmlspecialchars((string) $publication['file'], ENT_QUOTES) ?>" class="btn-primary"
                                    download="<?= htmlspecialchars((string) $publication['download_name'], ENT_QUOTES) ?>">Stiahnuť PDF zadarmo</a></p>
+                                <div class="free-download-formats" aria-label="Ďalšie formáty na stiahnutie">
+                                    <span class="free-download-formats__label">Ďalšie formáty:</span>
+                                    <?php foreach (array_slice($publication['downloads'], 1) as $download): ?>
+                                        <a href="<?= htmlspecialchars((string) $download['file'], ENT_QUOTES) ?>"
+                                           download="<?= htmlspecialchars((string) $download['download_name'], ENT_QUOTES) ?>"><?= htmlspecialchars((string) $download['label']) ?></a>
+                                    <?php endforeach; ?>
+                                </div>
                             </div>
                         </li>
                     <?php endforeach; ?>

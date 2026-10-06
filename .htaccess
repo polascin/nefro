@@ -149,6 +149,13 @@ ServerSignature Off
 # ── WebP: MIME typ a korektné cachovanie ────────────────────────────────────
 <IfModule mod_mime.c>
     AddType image/webp .webp
+    # Bezplatné e-knihy sa sťahujú priamo. Pri `nosniff` musí mať každý
+    # formát explicitný MIME typ, najmä AZW3, ktorý server bežne nepozná.
+    AddType application/pdf .pdf
+    AddType application/epub+zip .epub
+    AddType application/vnd.amazon.ebook .azw3
+    AddType application/vnd.openxmlformats-officedocument.wordprocessingml.document .docx
+    AddType application/vnd.oasis.opendocument.text .odt
 </IfModule>
 <IfModule mod_headers.c>
     # Proxy/CDN musia cachovať pôvodný (PNG/JPEG) aj WebP variant podľa Accept
