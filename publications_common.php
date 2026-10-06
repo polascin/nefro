@@ -256,20 +256,20 @@ function publications(): array
             'language'    => 'slovenčina',
             'language_code' => 'sk',
             'pages'       => 1745,
-            'articles'    => 405,
-            'words'       => 590630,
-            'images'      => 476,
+            'articles'    => 387,
+            'words'       => 579608,
+            'images'      => 393,
             'cover'       => 'img/publikacie/sk-nefro-baza-1-obalka.jpg',
             'cover_small' => 'img/publikacie/sk-nefro-baza-1-obalka-600.jpg',
             'formats'     => ['pdf', 'epub', 'azw3', 'docx', 'odt'],
             'is_available' => true,
-            'excerpt'     => 'Celý polročný ročník odborného obsahu portálu v jednej knihe — 405 článkov '
+            'excerpt'     => 'Celý polročný ročník odborného obsahu portálu v jednej knihe: 387 článkov '
                 . 'o chronickej chorobe obličiek, dialýze, transplantácii a internej medicíne, '
                 . 'zoradených a prelinkovaných na čítanie offline.',
             'description'  => [
                 'Prvý zväzok série <strong>SK Nefro Báza</strong> zhromažďuje všetko, čo na portáli '
                 . '<em>Nefro-projekt Slovensko</em> vyšlo od apríla do začiatku októbra 2026 — '
-                . '405 odborných a popularizačných článkov, vrátane ťahákov a textov pre pacientov.',
+                . '387 odborných článkov vrátane ťahákov a checklistov. Popularizačné texty pre pacientov do knihy zaradené nie sú.',
                 'Na webe je obsah rozdrobený do jednotlivých článkov a nájdete ho len cez vyhľadávanie. '
                 . 'V knihe je zoradený, s obsahom, priebežným číslovaním a zachovanými odkazmi na zdroje, '
                 . 'takže sa dá čítať aj listovať ako celok — v ambulancii, na dialýze aj bez internetu.',
@@ -278,9 +278,9 @@ function publications(): array
                 . 'jednotky mmol/l), takže znenie je konzistentné naprieč celým zväzkom.',
             ],
             'highlights'   => [
-                '405 článkov na 1 745 stranách — celý ročník obsahu v jednom súbore',
-                '476 ilustrácií a schém v plnom rozlíšení',
-                'Chronologické radenie s obsahom a vnútornými odkazmi',
+                '387 článkov na 1 745 stranách: celý odborný ročník v jednom súbore',
+                '393 ilustrácií a schém',
+                '16 tematických kapitol a príloha, v kapitolách chronologicky, s obsahom a vnútornými odkazmi',
                 'Zachované citácie a odkazy na primárne zdroje (PubMed, Crossref)',
                 'Jazyková korektúra a zjednotená odborná terminológia',
                 'Bez DRM — kúpený súbor je váš, čítajte ho na čomkoľvek',
@@ -298,9 +298,8 @@ function publications(): array
             'language'    => 'angličtina',
             // Jazyk obsahu, nie jazyk stránky — ide do Schema.org `inLanguage`.
             'language_code' => 'en',
-            // Anglické vydanie je o 18 článkov menšie: popularizačné texty
-            // pre pacientov sa neprekladali, lebo mieria na slovenského
-            // pacienta. Číslo preto nie je 405 ako v slovenskom vydaní.
+            // Rovnako ako slovenské vydanie obsahuje 387 odborných článkov;
+            // 18 popularizačných textov pre pacientov nie je v žiadnom vydaní.
             'pages'       => 1782,
             'articles'    => 387,
             'words'       => 661410,
@@ -317,10 +316,9 @@ function publications(): array
                 . 'Obsahuje 387 odborných článkov, ktoré na portáli '
                 . '<em>Nefro-projekt Slovensko</em> vyšli od apríla do začiatku októbra 2026, '
                 . 'preložených do angličtiny vrátane ťahákov.',
-                'Oproti slovenskému vydaniu <strong>neobsahuje 18 popularizačných textov '
-                . 'pre pacientov</strong> — tie sú písané pre slovenského pacienta a preklad '
-                . 'by im vzal zmysel. Všetko ostatné je zhodné: rovnaké články, rovnaké '
-                . 'zoradenie, rovnaké odkazy na zdroje.',
+                'Obsah zodpovedá slovenskému vydaniu: rovnaké články, rovnaké zoradenie, '
+                . 'rovnaké odkazy na zdroje. Popularizačné texty pre pacientov nie sú zaradené '
+                . 'ani v slovenskom, ani v anglickom vydaní.',
                 'Pri každom článku je odkaz na jeho slovenskú online verziu, takže sa dá '
                 . 'rýchlo porovnať s originálom. Terminológia, jednotky aj desatinné '
                 . 'oddeľovače sú prevedené do anglickej konvencie.',
@@ -360,9 +358,9 @@ function publications(): array
                 '<strong>Nemecké vydanie</strong> prvého zväzku série <em>SK Nefro Báza</em>. '
                 . 'Obsahuje 387 odborných článkov, ktoré na portáli <em>Nefro-projekt Slovensko</em> '
                 . 'vyšli od apríla do začiatku októbra 2026, preložených do nemčiny vrátane praktických ťahákov.',
-                'Oproti slovenskému vydaniu <strong>neobsahuje 18 popularizačných textov pre pacientov</strong>, '
-                . 'ktoré boli určené slovenskému čitateľovi. Odborná časť zachováva rovnaké zoradenie, '
-                . 'citácie a odkazy na zdroje.',
+                'Obsah zodpovedá slovenskému vydaniu: rovnaké články, rovnaké zoradenie, '
+                . 'citácie a odkazy na zdroje. Popularizačné texty pre pacientov nie sú zaradené '
+                . 'ani v slovenskom, ani v nemeckom vydaní.',
                 'Pri každom článku je odkaz na jeho slovenskú online verziu. Odborná terminológia '
                 . 'a jazykové konvencie sú prispôsobené nemčine.',
             ],

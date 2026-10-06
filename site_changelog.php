@@ -121,7 +121,7 @@ if (!function_exists('siteChangelogEntries')) {
                 'date' => '2026-10-03 13:53',
                 'category' => 'content',
                 'title' => 'Publikácie na predaj — e-kniha SK Nefro Báza 1',
-                'description' => 'Pribudla sekcia Publikácie s prvým zväzkom SK Nefro Báza 1 — 405 odborných článkov z portálu na 1 745 stranách, v jednom súbore na čítanie offline aj do tlače. Na výber je PDF, EPUB, Kindle (AZW3), DOCX a ODT; jeden formát 7 €, všetky 12 €. Platí sa prevodom alebo kartou a peňaženkou. Články na portáli zostávajú voľne dostupné bez platobnej steny.',
+                'description' => 'Pribudla sekcia Publikácie s prvým zväzkom SK Nefro Báza 1 — 387 odborných článkov z portálu na 1 745 stranách, v jednom súbore na čítanie offline aj do tlače. Na výber je PDF, EPUB, Kindle (AZW3), DOCX a ODT; jeden formát 7 €, všetky 12 €. Platí sa prevodom alebo kartou a peňaženkou. Články na portáli zostávajú voľne dostupné bez platobnej steny.',
                 'url' => 'publikacie.php',
             ],
             [
