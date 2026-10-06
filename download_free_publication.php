@@ -24,6 +24,10 @@ $publications = [
         'stem' => 'sk-nefro-proven-probable-open',
         'download_stem' => 'SK-Nefro-Proven-Probable-Open',
     ],
+    'de' => [
+        'stem' => 'sk-nefro-belegt-wahrscheinlich-offen',
+        'download_stem' => 'SK-Nefro-Belegt-wahrscheinlich-offen',
+    ],
 ];
 
 $mimeTypes = [

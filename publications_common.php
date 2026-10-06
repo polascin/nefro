@@ -215,6 +215,25 @@ function freePublications(): array
             ],
             'excerpt' => 'Anglické vydanie 17 rozšírených úvodníkov, ktoré spájajú 387 odborných článkov a oddeľujú dokázané, pravdepodobné a otvorené otázky.',
         ],
+        [
+            'title' => 'SK Nefro: Belegt, wahrscheinlich, offen',
+            'subtitle' => 'Nephrologie und Innere Medizin im Oktober 2026',
+            'language' => 'nemčina',
+            'language_code' => 'de',
+            'pages' => 105,
+            'published_on' => '2026-10-06',
+            'cover_small' => 'img/publikacie/sk-nefro-belegt-wahrscheinlich-offen-obalka-600.jpg',
+            'file' => 'download_free_publication.php?edition=de&format=pdf',
+            'download_name' => 'SK-Nefro-Belegt-wahrscheinlich-offen.pdf',
+            'downloads' => [
+                ['code' => 'pdf', 'label' => 'PDF', 'file' => 'download_free_publication.php?edition=de&format=pdf', 'download_name' => 'SK-Nefro-Belegt-wahrscheinlich-offen.pdf'],
+                ['code' => 'epub', 'label' => 'EPUB', 'file' => 'download_free_publication.php?edition=de&format=epub', 'download_name' => 'SK-Nefro-Belegt-wahrscheinlich-offen.epub'],
+                ['code' => 'azw3', 'label' => 'AZW3 (Kindle)', 'file' => 'download_free_publication.php?edition=de&format=azw3', 'download_name' => 'SK-Nefro-Belegt-wahrscheinlich-offen.azw3'],
+                ['code' => 'docx', 'label' => 'DOCX', 'file' => 'download_free_publication.php?edition=de&format=docx', 'download_name' => 'SK-Nefro-Belegt-wahrscheinlich-offen.docx'],
+                ['code' => 'odt', 'label' => 'ODT', 'file' => 'download_free_publication.php?edition=de&format=odt', 'download_name' => 'SK-Nefro-Belegt-wahrscheinlich-offen.odt'],
+            ],
+            'excerpt' => 'Nemecké vydanie 17 rozšírených úvodníkov, ktoré spájajú 387 odborných článkov a oddeľujú doložené, pravdepodobné a otvorené otázky.',
+        ],
     ];
 }
 
@@ -318,6 +337,47 @@ function publications(): array
                 . 'odborný obsah v angličtine na zdieľanie, citovanie alebo prednášky.',
         ],
         [
+            'slug'        => 'sk-nefro-baza-1-de',
+            'title'       => 'SK Nefro Báza 1 — Deutsche Ausgabe',
+            'subtitle'    => 'Gesammelte Fachartikel von nefro.polascin.net, April – Oktober 2026',
+            'author'      => 'MUDr. Ľubomír Polaščín',
+            'edition'     => '1. vydanie, október 2026',
+            'published_on' => '2026-10-06',
+            'language'    => 'nemčina',
+            'language_code' => 'de',
+            'pages'       => 1912,
+            'articles'    => 387,
+            'words'       => 652560,
+            'images'      => 393,
+            'cover'       => 'img/publikacie/sk-nefro-baza-1-de-obalka.jpg',
+            'cover_small' => 'img/publikacie/sk-nefro-baza-1-de-obalka-600.jpg',
+            'formats'     => ['pdf', 'epub', 'azw3', 'docx', 'odt'],
+            'is_available' => true,
+            'excerpt'     => 'Nemecký preklad odborného ročníka portálu — 387 článkov o chronickej '
+                . 'chorobe obličiek, dialýze, transplantácii a internej medicíne. Vhodné na '
+                . 'zdieľanie s nemecky hovoriacimi kolegami a na odborné štúdium.',
+            'description'  => [
+                '<strong>Nemecké vydanie</strong> prvého zväzku série <em>SK Nefro Báza</em>. '
+                . 'Obsahuje 387 odborných článkov, ktoré na portáli <em>Nefro-projekt Slovensko</em> '
+                . 'vyšli od apríla do začiatku októbra 2026, preložených do nemčiny vrátane praktických ťahákov.',
+                'Oproti slovenskému vydaniu <strong>neobsahuje 18 popularizačných textov pre pacientov</strong>, '
+                . 'ktoré boli určené slovenskému čitateľovi. Odborná časť zachováva rovnaké zoradenie, '
+                . 'citácie a odkazy na zdroje.',
+                'Pri každom článku je odkaz na jeho slovenskú online verziu. Odborná terminológia '
+                . 'a jazykové konvencie sú prispôsobené nemčine.',
+            ],
+            'highlights'   => [
+                '387 článkov na 1 912 stranách — odborný ročník v nemčine',
+                '393 ilustrácií a schém v plnom rozlíšení',
+                'Pri každom článku odkaz na slovenskú online verziu',
+                'Nemecká odborná terminológia a jazykové konvencie',
+                'Zachované citácie a odkazy na primárne zdroje (PubMed, Crossref)',
+                'Bez DRM — kúpený súbor je váš, čítajte ho na čomkoľvek',
+            ],
+            'audience'     => 'Nemecky hovoriaci nefrológovia, internisti a lekári v špecializačnej príprave '
+                . 'aj slovenskí odborníci, ktorí potrebujú obsah v nemčine na štúdium alebo zdieľanie.',
+        ],
+        [
             'slug'        => 'sk-nefro-baza-1-kompendium',
             'title'       => 'SK Nefro Báza 1 Kompendium',
             'subtitle'    => 'Abstrakty a zhutnené verzie odborných článkov z portálu nefro.polascin.net, apríl – október 2026',
@@ -416,6 +476,46 @@ function publications(): array
             'audience'     => 'Zahraniční kolegovia a slovenskí lekári, ktorí potrebujú rýchlu '
                 . 'orientáciu v angličtine — na vizitu, prednášku alebo zdieľanie s kolegami '
                 . 'mimo Slovenska.',
+        ],
+        [
+            'slug'        => 'sk-nefro-baza-1-kompendium-de',
+            'title'       => 'SK Nefro Báza 1 Kompendium — Deutsche Ausgabe',
+            'subtitle'    => 'Abstracts und Zusammenfassungen der Fachartikel von nefro.polascin.net, April – Oktober 2026',
+            'author'      => 'MUDr. Ľubomír Polaščín',
+            'edition'     => '1. vydanie, október 2026',
+            'published_on' => '2026-10-06',
+            'language'    => 'nemčina',
+            'language_code' => 'de',
+            'pages'       => 300,
+            'articles'    => 387,
+            'words'       => 137769,
+            'images'      => 0,
+            'cover'       => 'img/publikacie/sk-nefro-baza-1-kompendium-de-obalka.jpg',
+            'cover_small' => 'img/publikacie/sk-nefro-baza-1-kompendium-de-obalka-600.jpg',
+            'formats'     => ['pdf', 'epub', 'azw3', 'docx', 'odt'],
+            'is_available' => true,
+            'excerpt'     => 'Nemecké vydanie kompendia — 387 článkov ako abstrakt a stručné zhrnutie, '
+                . 'doplnené syntézou na začiatku každej zo 16 kapitol. Celý ročník na 300 stranách.',
+            'description'  => [
+                '<strong>Nemecké vydanie kompendia</strong> prvého zväzku série <em>SK Nefro Báza</em>. '
+                . 'Každý z 387 odborných článkov je spracovaný do abstraktu a stručného zhrnutia '
+                . 's kľúčovými číslami, limitmi dôkazov a praktickým záverom.',
+                'Každú zo 16 kapitol otvára <strong>syntéza kľúčových posolstiev</strong>, ktorá spája '
+                . 'jednotlivé články a odkazuje na čísla zdrojových textov. Číslovanie je zhodné '
+                . 's nemeckým plným vydaním.',
+                'Kompendium <strong>nepreberá zoznamy literatúry, tabuľky ani obrázky</strong>. Slúži ako '
+                . 'rýchla mapa ročníka; pri klinickom rozhodovaní, citovaní alebo výučbe treba použiť plné znenie.',
+            ],
+            'highlights'   => [
+                '387 článkov na 300 stranách — celý odborný ročník v skratke',
+                'Pri každom článku abstrakt a stručné zhrnutie s kľúčovými číslami',
+                'Syntéza kľúčových posolstiev na začiatku každej zo 16 kapitol',
+                'Číslovanie zhodné s nemeckým plným vydaním',
+                'Pri každom článku odkaz na slovenskú online verziu',
+                'Bez DRM — kúpený súbor je váš, čítajte ho na čomkoľvek',
+            ],
+            'audience'     => 'Nemecky hovoriaci lekári, ktorí potrebujú rýchlu orientáciu pri vizite, '
+                . 'v ambulancii alebo pred seminárom, a čitatelia nemeckého plného vydania.',
         ],
     ];
 }

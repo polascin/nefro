@@ -352,10 +352,10 @@ markFormLoadTime('publication_order');
                         zvyčajne do jedného pracovného dňa ·
                         <?= htmlspecialchars($seller['vatNote']) ?></p>
 
-                    <?php /* Anglické vydanie si kúpi aj niekto, kto po slovensky nečíta.
+                    <?php /* Neslovenské vydanie si kúpi aj niekto, kto po slovensky nečíta.
                              Objednávkový formulár je slovenský, preto aspoň krátka
                              orientácia a kontakt v jazyku samotnej publikácie. */ ?>
-                    <?php if ((string) $publication['language_code'] !== 'sk'): ?>
+                    <?php if ((string) $publication['language_code'] === 'en'): ?>
                         <div class="info-box-blue pub-hero__lang-note" lang="en">
                             <p><strong>This edition is in English.</strong>
                                The order form below is in Slovak — choose your formats,
@@ -364,6 +364,17 @@ markFormLoadTime('publication_order');
                                Files are delivered once payment is confirmed, usually within
                                one business day.</p>
                             <p>Questions in English are welcome at
+                               <a href="mailto:<?= htmlspecialchars($seller['email'], ENT_QUOTES) ?>"><?= htmlspecialchars($seller['email']) ?></a>.</p>
+                        </div>
+                    <?php elseif ((string) $publication['language_code'] === 'de'): ?>
+                        <div class="info-box-blue pub-hero__lang-note" lang="de">
+                            <p><strong>Diese Ausgabe ist auf Deutsch.</strong>
+                               Das Bestellformular unten ist auf Slowakisch: Wählen Sie die Formate,
+                               geben Sie Ihre E-Mail-Adresse ein und senden Sie das Formular ab.
+                               Die Zahlungsanweisungen erhalten Sie per E-Mail; die Zahlung ist per
+                               Banküberweisung oder Karte möglich. Die Dateien werden nach Bestätigung
+                               der Zahlung zugestellt, in der Regel innerhalb eines Werktages.</p>
+                            <p>Fragen auf Deutsch senden Sie bitte an
                                <a href="mailto:<?= htmlspecialchars($seller['email'], ENT_QUOTES) ?>"><?= htmlspecialchars($seller['email']) ?></a>.</p>
                         </div>
                     <?php endif; ?>

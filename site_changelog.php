@@ -55,6 +55,20 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-10-06 19:35',
+                'category' => 'content',
+                'title' => 'Dve nemecké vydania SK Nefro Báza 1',
+                'description' => 'Do katalógu pribudlo nemecké plné vydanie s 387 odbornými článkami a nemecké kompendium. Obe sú dostupné vo formátoch PDF, EPUB, AZW3, DOCX a ODT.',
+                'url' => 'publikacie.php',
+            ],
+            [
+                'date' => '2026-10-06 19:17',
+                'category' => 'content',
+                'title' => 'Nemecké vydanie bezplatnej publikácie',
+                'description' => 'Publikácia SK Nefro: Belegt, wahrscheinlich, offen je bezplatne dostupná v nemčine vo formátoch PDF, EPUB, AZW3, DOCX a ODT, bez registrácie a objednávky.',
+                'url' => 'publikacie.php',
+            ],
+            [
                 'date' => '2026-10-06 08:42',
                 'category' => 'content',
                 'title' => 'Dve nové publikácie na bezplatné stiahnutie',
