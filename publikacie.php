@@ -4,9 +4,8 @@ declare(strict_types=1);
 /**
  * publikacie.php — Katalóg publikácií
  * ────────────────────────────────────────────────────────────────────────────
- * Rozcestník platených publikácií (e-knihy). Zdroj pravdy o katalógu je
- * `publications_common.php`; táto stránka len vykresľuje karty a odkazuje
- * na predajnú stránku `publikacia.php?slug=…`.
+ * Rozcestník bezplatných aj rozšírených publikácií. Zdroj pravdy o
+ * katalógu je `publications_common.php`.
  *
  * Celý obsah portálu zostáva voľne dostupný — publikácie sú zviazaný,
  * skorigovaný a offline čitateľný výber toho istého obsahu, nie paywall.
@@ -22,6 +21,7 @@ $catalogue = array_values(array_filter(
     publications(),
     static fn (array $p): bool => (bool) $p['is_available']
 ));
+$freeCatalogue = freePublications();
 ?>
 <!DOCTYPE html>
 <html lang="sk">
@@ -29,20 +29,27 @@ $catalogue = array_values(array_filter(
   <?php
   $pageTitle       = 'Publikácie | ' . $siteName;
   $canonicalUrl    = $baseUrl . 'publikacie.php';
-  $seoDescription  = 'E-knihy z portálu Nefro-projekt Slovensko — odborné články o chronickej '
-      . 'chorobe obličiek, dialýze a internej medicíne zviazané do jedného zväzku. '
-      . 'PDF, EPUB, Kindle, DOCX aj ODT.';
+  $seoDescription  = 'Bezplatné aj rozšírené e-knihy z portálu Nefro-projekt Slovensko '
+      . 'o nefrológii, dialýze a internej medicíne. PDF na priame stiahnutie aj viacformátové vydania.';
   $seoKeywords     = 'nefrológia e-kniha, SK Nefro Báza, publikácie nefrológia, CKD kniha, '
       . 'dialýza e-book, odborná literatúra nefrológia';
-  $ogImage         = $baseUrl . ($catalogue[0]['cover'] ?? 'img/og-default.jpg');
-  $ogImageWidth    = 1600;
-  $ogImageHeight   = 2400;
+  $ogImage         = $baseUrl . ($freeCatalogue[0]['cover_small'] ?? 'img/og-default.jpg');
+  $ogImageWidth    = 909;
+  $ogImageHeight   = 1286;
 
   $itemList = [];
+  foreach ($freeCatalogue as $publication) {
+      $itemList[] = [
+          '@type'    => 'ListItem',
+          'position' => count($itemList) + 1,
+          'url'      => $baseUrl . $publication['file'],
+          'name'     => $publication['title'],
+      ];
+  }
   foreach ($catalogue as $i => $publication) {
       $itemList[] = [
           '@type'    => 'ListItem',
-          'position' => $i + 1,
+          'position' => count($itemList) + 1,
           'url'      => $baseUrl . 'publikacia.php?slug=' . $publication['slug'],
           'name'     => $publication['title'],
       ];
@@ -79,7 +86,7 @@ $catalogue = array_values(array_filter(
 
     <?php
     $headerTitle = 'Publikácie';
-    $headerIntro = 'Odborný obsah portálu zviazaný do e-knihy';
+    $headerIntro = 'Odborný obsah portálu v prehľadných e-knihách';
     $showLogo    = false;
     include 'header.php';
     ?>
@@ -91,12 +98,49 @@ $catalogue = array_values(array_filter(
                 <h2>E-knihy z portálu</h2>
                 <p class="pub-intro__lead">
                     Články na portáli zostávajú <strong>voľne dostupné a bez paywallu</strong>.
-                    Publikácie sú niečo iné: ten istý obsah zoradený, skorigovaný, s obsahom
-                    a vnútornými odkazmi — v jednom súbore, ktorý si prečítate offline,
-                    na čítačke aj v tlači. Kúpou publikácie zároveň priamo podporujete
-                    ďalšiu tvorbu obsahu.
+                    Nižšie nájdete bezplatné tematické publikácie na priame stiahnutie aj
+                    rozsiahle vydania celého ročníka vo viacerých formátoch.
                 </p>
             </section>
+
+            <section class="pub-section pub-section--free" aria-labelledby="pub-free-heading">
+                <div class="pub-section__heading">
+                    <div>
+                        <p class="pub-section__eyebrow">Voľne dostupné</p>
+                        <h2 id="pub-free-heading">Bezplatné publikácie</h2>
+                    </div>
+                    <p>Bez registrácie a bez objednávky, priamo vo formáte PDF.</p>
+                </div>
+                <ul class="pub-free-grid">
+                    <?php foreach ($freeCatalogue as $publication): ?>
+                        <li class="pub-free-card">
+                            <a href="<?= htmlspecialchars((string) $publication['file'], ENT_QUOTES) ?>" class="pub-free-card__cover-link" download
+                               aria-label="Stiahnuť publikáciu <?= htmlspecialchars((string) $publication['title'], ENT_QUOTES) ?> vo formáte PDF">
+                                <img src="<?= htmlspecialchars((string) $publication['cover_small'], ENT_QUOTES) ?>"
+                                     alt="Obálka publikácie <?= htmlspecialchars((string) $publication['title'], ENT_QUOTES) ?>"
+                                     class="pub-free-card__cover" width="909" height="1286" loading="lazy">
+                            </a>
+                            <div class="pub-free-card__body">
+                                <p class="pub-free-card__meta"><span class="pub-free-badge">Zadarmo</span> PDF · <?= (int) $publication['pages'] ?> strán · <?= htmlspecialchars((string) $publication['language']) ?></p>
+                                <h3 class="pub-free-card__title"><?= htmlspecialchars((string) $publication['title']) ?></h3>
+                                <p class="pub-free-card__subtitle"><?= htmlspecialchars((string) $publication['subtitle']) ?></p>
+                                <p class="pub-free-card__excerpt"><?= htmlspecialchars((string) $publication['excerpt']) ?></p>
+                                <p class="pub-free-card__cta"><a href="<?= htmlspecialchars((string) $publication['file'], ENT_QUOTES) ?>" class="btn-primary"
+                                   download="<?= htmlspecialchars((string) $publication['download_name'], ENT_QUOTES) ?>">Stiahnuť PDF zadarmo</a></p>
+                            </div>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+            </section>
+
+            <section class="pub-section" aria-labelledby="pub-extended-heading">
+                <div class="pub-section__heading">
+                    <div>
+                        <p class="pub-section__eyebrow">Celý ročník</p>
+                        <h2 id="pub-extended-heading">Rozšírené vydania</h2>
+                    </div>
+                    <p>Plné a kompendiálne vydania v slovenčine aj angličtine.</p>
+                </div>
 
             <?php if ($catalogue === []): ?>
                 <div class="info-box-gray">
@@ -156,6 +200,7 @@ $catalogue = array_values(array_filter(
                     <?php endforeach; ?>
                 </ul>
             <?php endif; ?>
+            </section>
 
             <section class="form-section" aria-labelledby="pub-ako-heading">
                 <h3 id="pub-ako-heading">Ako nákup funguje</h3>

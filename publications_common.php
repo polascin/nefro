@@ -167,6 +167,44 @@ function publicationFormats(): array
 }
 
 /**
+ * Bezplatné publikácie dostupné priamo na stiahnutie.
+ *
+ * Sú oddelené od plateného katalógu, aby sa na ne nikdy nevzťahoval
+ * objednávkový, platobný ani limitovaný doručovací tok.
+ *
+ * @return list<array<string, mixed>>
+ */
+function freePublications(): array
+{
+    return [
+        [
+            'title' => 'SK Nefro: Dokázané, pravdepodobné, otvorené',
+            'subtitle' => 'Nefrológia a interná medicína k októbru 2026',
+            'language' => 'slovenčina',
+            'language_code' => 'sk',
+            'pages' => 94,
+            'published_on' => '2026-10-06',
+            'cover_small' => 'img/publikacie/sk-nefro-dokazane-pravdepodobne-otvorene-obalka-600.jpg',
+            'file' => 'pdf/publikacie/sk-nefro-dokazane-pravdepodobne-otvorene.pdf',
+            'download_name' => 'SK-Nefro-Dokazane-pravdepodobne-otvorene.pdf',
+            'excerpt' => 'Sedemnásť rozšírených úvodníkov spája 387 odborných článkov do tematických línií a oddeľuje, čo je dokázané, čo je pravdepodobné a čo zostáva otvorené.',
+        ],
+        [
+            'title' => 'SK Nefro: Proven, Probable, Open',
+            'subtitle' => 'Nephrology and internal medicine as of October 2026',
+            'language' => 'angličtina',
+            'language_code' => 'en',
+            'pages' => 97,
+            'published_on' => '2026-10-06',
+            'cover_small' => 'img/publikacie/sk-nefro-proven-probable-open-obalka-600.jpg',
+            'file' => 'pdf/publikacie/sk-nefro-proven-probable-open.pdf',
+            'download_name' => 'SK-Nefro-Proven-Probable-Open.pdf',
+            'excerpt' => 'Anglické vydanie 17 rozšírených úvodníkov, ktoré spájajú 387 odborných článkov a oddeľujú dokázané, pravdepodobné a otvorené otázky.',
+        ],
+    ];
+}
+
+/**
  * Katalóg publikácií. Pri pridaní ďalšej publikácie stačí doplniť položku —
  * katalóg, predajná stránka aj objednávkový tok ju prevezmú automaticky.
  *

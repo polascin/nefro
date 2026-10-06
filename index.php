@@ -390,7 +390,7 @@ if (!empty($itemListElements)) {
       <?php endif; ?>
 
       <?php if ($autorFilter === ""): ?>
-      <!-- Publikácie (e-knihy) — vlastná podmienka, nie spoločná s Top článkami:
+      <!-- Bezplatné publikácie — vlastná podmienka, nie spoločná s Top článkami:
            blok sa má zobraziť aj vtedy, keď žiadny článok nie je označený ako
            odporúčaný. Pri filtri na autora ho vynechávame, tam je stránka
            zámerne zúžená na jeho tvorbu. -->
