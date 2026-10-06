@@ -919,6 +919,10 @@ function createPublicationOrder(PDO $pdo, array $publication, array $formats, ar
 }
 
 /**
+ * Čítanie z DB: výsledok závisí od stavu databázy, nie len od argumentov —
+ * opakované volanie (po UPDATE) preto nesmie dediť predošlé zúženie typu.
+ *
+ * @phpstan-impure
  * @return array<string, mixed>|null
  */
 function findPublicationOrderById(PDO $pdo, int $orderId): ?array
