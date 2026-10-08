@@ -461,6 +461,9 @@ function getSourceArticleAuthors(): array {
         // programu, overené 2026-10-08. Vedecké vedenie (Mario Schiffer) je redakčná
         // úloha, nie autorstvo prednášky, preto sa medzi autorov neuvádza.
         'rekurencia-glomerularnych-ochoreni-transplantacia-oblicky' => ['Harald Rupprecht', 'Janina Müller-Deile', 'Claudia Seikrit'],
+        // Autori odporúčania AAP Pediatrics 2026;158(4):e2026078565
+        // (doi 10.1542/peds.2026-078565, PMID 42803578), overení cez PubMed 2026-10-08.
+        'infekcie-mocovych-ciest-deti-kratsia-liecba-diagnostika' => ['Brian K. Alverson', 'David S. Hains', 'Stephen M. Downs', 'Rana E. El Feghaly', 'Catherine S. Forster', 'Shabnam Jain', 'Andrea Johnston', 'Tej K. Mattoo', 'Caleb P. Nelson', 'Olusoji Olakanpo', 'Hansel J. Otero', 'Craig A. Peters', 'Nicole M. Poppinga', 'Dipanwita Saha', 'Alan R. Schroeder', 'Emily Senerth', 'Lauren Pilcher', 'Susan K. Flinn', 'Rebecca L. Morgan', 'Reem A. Mustafa'],
         // Autori spracovaného naratívneho prehľadu Clin Kidney J 2026;19(10):sfag288
         // (doi 10.1093/ckj/sfag288, PMID 42824684) — presne traja, overené cez PubMed
         // 2026-10-08. Autori doplnkového zdroja (séria CRRT) sa neuvádzajú, článok je
