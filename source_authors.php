@@ -25,6 +25,7 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
  */
 function getSourceArticleAuthors(): array {
     return [
+        'periferne-arteriove-ochorenie-prognoza-starsi-prijemcovia-oblicky' => ['Elsa Vabret', 'Juliette Piveteau', 'Mathilde Lassalle', 'Fatouma Dupuytren Toure', 'Jean-Baptiste Beuscart', 'Cécile Couchoud', 'Cécile Vigneau', 'Sahar Bayat-Makoei'],
         'znizenie-antihypertenziv-krehky-senior-retreat-frail' => ['Athanase Benetos', 'Sylvie Gautier', 'Anne Freminet', 'Alice Metz', 'Carlos Labat', 'Ioannis Georgiopoulos', 'François Bertin-Hugault', 'Jean-Baptiste Beuscart', 'Olivier Hanon', 'Patrick Karcher', 'Patrick Manckoundia', 'Jean-Luc Novella', 'Abdourahmane Diallo', 'Eric Vicaut', 'Patrick Rossignol'],
         'claudiny-nefrolitiaza-geneticke-asociacie' => ['Iris Y Liu', 'Jenna Haverfield', 'Elby MacKenzie', 'Line Dufresne', 'Aimee K Ryan', 'James C Engert', 'Indra R Gupta'],
         'uacr-upcr-prognosticka-informacia-ckd' => ['Ashish Verma', 'Insa M Schmidt', 'Sophie E Claudel', 'Sushrut S Waikar'],
