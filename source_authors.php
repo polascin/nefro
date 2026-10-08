@@ -479,5 +479,8 @@ function getSourceArticleAuthors(): array {
         // Autori spracovanej kohortovej štúdie RMD Open 2025;11:e005877
         // (doi 10.1136/rmdopen-2025-005877, PMID 41120201), overení cez PubMed/PMC 2026-10-08.
         'vysadenie-glukokortikoidov-lupus-lupusova-nefritida' => ['Ioannis E. Michelakis', 'Alexandros Panagiotopoulos', 'Eleni Kapsia', 'John Boletis', 'Smaragdi Marinaki', 'Petros P. Sfikakis', 'Maria G. Tektonidou'],
+        // Účastníci a autori spracovaného odborného rozhovoru Medscape z 2. októbra 2026;
+        // mená, úlohy a dátum overené v metadátach a prepise verejne dostupnej stránky 2026-10-08.
+        'stitna-zlaza-diabetes-oblicky-hba1c-glykemia' => ['Kaniksha Desai', 'Shashank Joshi'],
     ];
 }
