@@ -228,10 +228,10 @@ if (isLoggedIn()) {
                     <div class="form-section calculator-result-block" role="status" aria-live="polite">
                         <h3>Výsledok</h3>
                         <p><strong>Kt/V (Daugirdas II):</strong> <?= htmlspecialchars(
-                            $calculated["ktv"],
+                            (string) $calculated["ktv"],
                         ) ?></p>
                         <p><strong>URR (Urea Reduction Ratio):</strong> <?= htmlspecialchars(
-                            $calculated["urr"],
+                            (string) $calculated["urr"],
                         ) ?> %</p>
                         <p class="calc-accent-text">Interpretácia: <?= htmlspecialchars(
                             $calculated["interpretation"],

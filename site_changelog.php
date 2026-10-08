@@ -55,6 +55,13 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-10-08 16:55',
+                'category' => 'calculators',
+                'title' => 'UACR a Kt/V znova ukážu vypočítaný výsledok',
+                'description' => 'Po výpočte UACR a Kt/V sa číselný výsledok znova zobrazí na stránke.',
+                'url' => 'calculators.php',
+            ],
+            [
                 'date' => '2026-10-08 16:40',
                 'category' => 'calculators',
                 'title' => 'Presnejšie zaradenie albuminúrie, CKM a PREVENT',

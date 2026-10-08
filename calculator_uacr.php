@@ -266,9 +266,9 @@ if (isLoggedIn()) {
                     <div class="form-section calculator-result-block" role="status" aria-live="polite">
                         <h3>Výsledok KDIGO</h3>
                         <p><strong>UACR:</strong> <?= htmlspecialchars(
-                            $calculated["mg_mmol"],
+                            (string) $calculated["mg_mmol"],
                         ) ?> mg/mmol (<?= htmlspecialchars(
-     $calculated["mg_g"],
+     (string) $calculated["mg_g"],
  ) ?> mg/g)</p>
                         <p class="text-accent-bold-lg">KDIGO Štádium: <?= htmlspecialchars(
                             $calculated["stage"],
