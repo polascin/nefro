@@ -25,6 +25,7 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
  */
 function getSourceArticleAuthors(): array {
     return [
+        'claudiny-nefrolitiaza-geneticke-asociacie' => ['Iris Y Liu', 'Jenna Haverfield', 'Elby MacKenzie', 'Line Dufresne', 'Aimee K Ryan', 'James C Engert', 'Indra R Gupta'],
         'uacr-upcr-prognosticka-informacia-ckd' => ['Ashish Verma', 'Insa M Schmidt', 'Sophie E Claudel', 'Sushrut S Waikar'],
         'biopsia-obliciek-glomerularne-ochorenia' => ['Tomasz Stompór', 'Justyna Zbrzeźniak-Suszczewicz'],
         'hydralazin-lupus-vaskulitida-pancytopenia-dic' => ['Yangming Cao'],
