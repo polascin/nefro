@@ -260,6 +260,7 @@ function getSourceArticleAuthors(): array {
         // primárnych štúdií citovaných v článku.
         'sekvencna-simultanna-kombinovana-liecba-diabetes-ckd' => ['Ian de Boer', 'Amy Mottl'],
         'semaglutid-ckd-porovnanie-glp1-realna-prax' => ['Joshua J Neumiller', 'Yihong Deng', 'Kavya Sindhu Swarna', 'Eric C Polley', 'Jeph Herrin', 'Rodolfo J Galindo', 'Guillermo E Umpierrez', 'Joseph S Ross', 'Mindy M Mickelson', 'Kate Dryden', 'Katherine R Tuttle', 'Rozalina G McCoy'],
+        'semaglutid-chudnutie-egfr-kreatinin-cystatin-c' => ['Hiddo J. L. Heerspink', 'Maria Soler', 'Jelle M. Beernink', 'Niels Jongs', 'Secundino Cigarran', 'Josep M. Cruzado', 'Maria Jesús Puchades', 'Marina López-Martínez', 'Ellen Apperloo', 'Femke Waanders', 'Gozewijn D. Laverman', 'Annemarie van der Aart-van der Beek', 'André P. van Beek', 'Jacobien C. Verhave', 'Sofia B. Ahmed', 'Roland E. Schmieder', 'Christoph Wanner', 'David Z. I. Cherney', 'José L. Górriz'],
         'semaglutid-wernickeho-encefalopatia-deficit-tiaminu' => ['Janice Bidesie', 'Erik Oudman'],
         // Autori spracovanej práce Diabetes Res Clin Pract 2026;239:113476 (PMID 42537913) —
         // 9 mien overených cez PubMed 2026-08-28.
