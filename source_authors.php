@@ -91,6 +91,7 @@ function getSourceArticleAuthors(): array {
         'diurnalna-exkrecia-sodika-nocna-hypertenzia-casovanie-soli' => ['Artemios G. Karagiannidis', 'Marieta Theodorakopoulou', 'Fotini Iatridi', 'Pantelis Sarafidis'],
         'domaca-hemodialyza-kdigo-vychodna-azia-ramec-rozvoja' => ['Ikuto Masakane', 'Paul N. Bennett', 'Chia-Ter Chao', 'Michael Cheung', 'Tsutomu Furuzono', 'Masaki Hara', 'Yung-Ho Hsu', 'Chiu-Ching Huang', 'Sayaka Ishigaki', 'Michel Jadoul', 'Eunjeong Kang', 'Seong Geun Kim', 'Kenichi Kokubo', 'Hirotaka Komaba', 'Huey-Liang Kuo', 'Ki Jeong Kwon', 'Vickie Kwong', 'Wai-Yan Lau', 'Titus Lau', 'Dong Hyung Lee', 'Philip Kam-Tao Li', 'Mark Marshall', 'Sandip Mitra', 'Kojiro Nagai', 'Tomonari Ogawa', 'Hyeong Cheon Park', 'Clara Poon', 'Naoko Tsuji', 'Joseph Wong', 'Po Kwan Wong', 'Sunny Wong', 'Hung-Lai Wu', 'Mei-Yi Wu', 'Kyung Don Yoo', 'Christopher T. Chan'],
         'dress-alopurinol-granulomatozna-ain-pankreatitida' => ['Said Al Zein'],
+        'dynamika-kalciemie-hemodialyza' => ['Ken Iseri', 'Taigi Yamazaki', 'Iori Taki', 'Noriko Hida'],
         'dyslipidemia-ckd-acc-aha-2026-nefrologicka-prax' => ['Amaryllis H Van Craenenbroeck', 'Patrick B Mark', 'Jose M Valdivielso', 'EuReCa-m Working Group of the European Renal Association'],
         'egfr-diabetes-ekfc-ckd-epi-stadia-ckd' => ['YuXia Zi', 'WenXing Fan'],
         'ema-zrusenie-povolenia-tavneos-avacopan-anca-vaskulitida' => ['Rob Hicks'],
