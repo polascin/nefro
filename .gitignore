@@ -106,7 +106,8 @@ ehthumbs_vista.db
 # Editors & IDEs
 .idea/
 .vscode/
-.claude/
+.claude/*
+!.claude/skills/
 *.swp
 *.swo
 *~
