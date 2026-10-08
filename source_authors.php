@@ -473,5 +473,8 @@ function getSourceArticleAuthors(): array {
         // (doi 10.1016/j.jemermed.2026.09.009) — 7 mien overených cez Crossref
         // a otvorený plný text vydavateľa 2026-10-08; záznam zatiaľ nebol v PubMed.
         'urolitiaza-urgentny-prijem-ct-ultrasonografia' => ['Grace V. Riley', 'Kevin G. Buell', 'Eric Moyer', 'Kyle Bernard', 'Evan J. Panken', 'Richard J. Fantus', 'Michael Gottlieb'],
+        // Autorka spracovaného komentára Medscape z 30. septembra 2026;
+        // meno a autorstvo overené na verejnom výpise stránky Medscape 2026-10-08.
+        'skor-nez-pacienta-oznacime-nespolupracujuceho' => ['Raghda Rashad'],
     ];
 }
