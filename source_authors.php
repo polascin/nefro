@@ -456,5 +456,10 @@ function getSourceArticleAuthors(): array {
         // programu, overené 2026-10-08. Vedecké vedenie (Mario Schiffer) je redakčná
         // úloha, nie autorstvo prednášky, preto sa medzi autorov neuvádza.
         'rekurencia-glomerularnych-ochoreni-transplantacia-oblicky' => ['Harald Rupprecht', 'Janina Müller-Deile', 'Claudia Seikrit'],
+        // Autori spracovaného naratívneho prehľadu Clin Kidney J 2026;19(10):sfag288
+        // (doi 10.1093/ckj/sfag288, PMID 42824684) — presne traja, overené cez PubMed
+        // 2026-10-08. Autori doplnkového zdroja (séria CRRT) sa neuvádzajú, článok je
+        // spracovaním prehľadu, nie tejto série.
+        'korekcia-hyponatriemie-rychlost-bezpecnost' => ['Kamel S. Kamel', 'Ziv Harel', 'Martin Schreiber'],
     ];
 }
