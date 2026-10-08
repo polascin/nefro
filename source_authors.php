@@ -476,5 +476,8 @@ function getSourceArticleAuthors(): array {
         // Autorka spracovaného komentára Medscape z 30. septembra 2026;
         // meno a autorstvo overené na verejnom výpise stránky Medscape 2026-10-08.
         'skor-nez-pacienta-oznacime-nespolupracujuceho' => ['Raghda Rashad'],
+        // Autori spracovanej kohortovej štúdie RMD Open 2025;11:e005877
+        // (doi 10.1136/rmdopen-2025-005877, PMID 41120201), overení cez PubMed/PMC 2026-10-08.
+        'vysadenie-glukokortikoidov-lupus-lupusova-nefritida' => ['Ioannis E. Michelakis', 'Alexandros Panagiotopoulos', 'Eleni Kapsia', 'John Boletis', 'Smaragdi Marinaki', 'Petros P. Sfikakis', 'Maria G. Tektonidou'],
     ];
 }
