@@ -95,8 +95,11 @@ poľom `category` a tým, kde sú vypísané.
 > `slug => [mená]`) — je **autoritatívna** a zobrazí ich vo widgete „Zúčastnení
 > autori" aj vo filtri `?autor=`. Mená získavaj len z **otvorených
 > bibliografických API** (Crossref `filter=alternative-id:<PII>`, PubMed/eutils,
-> DOI) alebo verejných tlačových správ — **nikdy obchádzaním paywallu**
-> (Medscape a pod. doplní používateľ). Notácia „Meno Priezvisko" kvôli
+> DOI), z verejných tlačových správ alebo z **bylinu na verejne prístupnej
+> stránke zdroja** (Medscape Reference a pod. — stačí `curl` + strip HTML;
+> `WebFetch` tam vracia 402) — **nikdy obchádzaním paywallu**. Autorov z
+> Medscape dopĺňaj sám, nenechávaj to na používateľa. Do mapy patrí len
+> **autor** (byline), nie recenzent ani redaktor. Notácia „Meno Priezvisko" kvôli
 > agregácii naprieč článkami. Bez mapy funguje len obmedzený fallback: prvý
 > autor z presnej značky `Zdroj:` v obsahu (zoznam `Zdroje` sa neparsuje).
 > Pôvodný (originálny) článok bez konkrétneho zdroja ostáva len pod autorom

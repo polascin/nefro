@@ -11,8 +11,9 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
 /**
  * Zoznam pôvodných autorov zdrojového článku pre každý článok (podľa slugu).
  * Mená sú vyťažené z odkazu „Zdroj:" cez otvorené bibliografické API
- * (Crossref/PubMed/eutils) a z verejných tlačových správ — nie scrapovaním
- * za paywallom. Doplnkový zdroj identít pre widget „Zúčastnení autori"
+ * (Crossref/PubMed/eutils), z verejných tlačových správ a z bylinu na
+ * verejne prístupnej stránke zdroja (napr. Medscape Reference) — nikdy
+ * nie obchádzaním paywallu. Doplnkový zdroj identít pre widget „Zúčastnení autori"
  * a filter ?autor= (pozri articleAuthorIdentities() v db_config.php).
  *
  * LEN pre články, ktoré sú spracovaním JEDNÉHO konkrétneho zdrojového článku —
@@ -445,5 +446,10 @@ function getSourceArticleAuthors(): array {
         'kdigo-ckm-syndrom-oblicka-v-strede' => ['Adeera Levin', 'Nisha Bansal', 'Ian H. de Boer', 'Morgan E. Grams', 'Michel Jadoul', 'Jozine M. ter Maaten', 'Reem A. Mustafa', 'Peter Rossing', 'Michael Cheung', 'Jennifer M. King', 'Amy Earley', 'Paul E. Stevens'],
         'obezita-kardiometabolicke-zdravie-ckd-ckm-ramec' => ['Roy O. Mathew', 'Annie Hong', 'Yoko Narasaki', 'Enrica Fung', 'Dianne Cheung', 'Jennifer Han', 'Matthew S. Durstenfeld', 'Priscilla Y. Hsue', 'Connie M. Rhee'],
         'umela-inteligencia-adpkd-klinicke-vyuzitie' => ['Niloufar Ebrahimi', 'Wisit Cheungpasitporn', 'Fouad T. Chebib', 'Abdul Hamid Borghol', 'Zohreh Gholizadeh Ghozloujeh', 'Sayna Norouzi', 'Amir Abdipour'],
+        // Autor spracovaného obrazového prehľadu Medscape Reference „You've Got Worms!
+        // Common Intestinal Macroparasites" (2026-10-02) — jediný uvedený autor; recenzent
+        // (Russell W. Steele) ani redaktor (Michael Langberg) sa medzi autorov nepočítajú.
+        // Byline načítaný z verejne prístupnej stránky, overené 2026-10-08.
+        'crevne-helmintozy-nefrologia-strongyloidoza-imunosupresia' => ['Lars Grimm'],
     ];
 }
