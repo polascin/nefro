@@ -451,5 +451,10 @@ function getSourceArticleAuthors(): array {
         // (Russell W. Steele) ani redaktor (Michael Langberg) sa medzi autorov nepočítajú.
         // Byline načítaný z verejne prístupnej stránky, overené 2026-10-08.
         'crevne-helmintozy-nefrologia-strongyloidoza-imunosupresia' => ['Lars Grimm'],
+        // Prednášajúci vzdelávacieho programu NephroLIVE „Rekurrenz der Grundkrankheit
+        // nach Transplantation" (streamed-up.com) — tri mená z verejne dostupného
+        // programu, overené 2026-10-08. Vedecké vedenie (Mario Schiffer) je redakčná
+        // úloha, nie autorstvo prednášky, preto sa medzi autorov neuvádza.
+        'rekurencia-glomerularnych-ochoreni-transplantacia-oblicky' => ['Harald Rupprecht', 'Janina Müller-Deile', 'Claudia Seikrit'],
     ];
 }
