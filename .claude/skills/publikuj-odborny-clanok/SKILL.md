@@ -59,6 +59,14 @@ Na Windows nastav `export PYTHONIOENCODING=utf-8`.
   nikdy nenechaj v tele článku.
 - Predloha tvrdí, že dôkaz neexistuje, hoci existuje — prečítaj úvod a diskusiu primárnej práce.
 - Predloha kritizuje metódu, ktorú autori správne použili.
+- **Predloha oslabí stanovisko zdroja.** Napr. „profylaxiu nemožno považovať za jednoznačne
+  účinný štandard", pričom prehľad píše „žiadna štúdia nezistila významný účinok" a
+  „odporúča sa vyhnúť sa predtransplantačnej liečbe". Vždy porovnaj formuláciu s plným textom.
+- **Redakčné poznámky typu „pred publikovaním doplň" v zozname zdrojov.** Nikdy ich nenechaj
+  v článku — sú to úlohy pre teba. Dohľadaj úplné bibliografické údaje (ročník, číslo, strany,
+  DOI, PMC) a nahraď nimi hedging. Vágne „priaznivé výsledky" nahraď konkrétnymi číslami
+  zo štruktúrovaného abstraktu a dopln kritické zhodnotenie dizajnu (fáza, n, náhradný
+  ukazovateľ, otvorený dizajn).
 - **Vecné chyby v samotnom zdroji** — ak ich nájdeš, oprav ich a rozdiel v článku vysvetli.
 
 ### Slovenská jazyková korektúra
