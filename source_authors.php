@@ -469,5 +469,9 @@ function getSourceArticleAuthors(): array {
         // 2026-10-08. Autori doplnkového zdroja (séria CRRT) sa neuvádzajú, článok je
         // spracovaním prehľadu, nie tejto série.
         'korekcia-hyponatriemie-rychlost-bezpecnost' => ['Kamel S. Kamel', 'Ziv Harel', 'Martin Schreiber'],
+        // Autori spracovanej prierezovej štúdie J Emerg Med 2026
+        // (doi 10.1016/j.jemermed.2026.09.009) — 7 mien overených cez Crossref
+        // a otvorený plný text vydavateľa 2026-10-08; záznam zatiaľ nebol v PubMed.
+        'urolitiaza-urgentny-prijem-ct-ultrasonografia' => ['Grace V. Riley', 'Kevin G. Buell', 'Eric Moyer', 'Kyle Bernard', 'Evan J. Panken', 'Richard J. Fantus', 'Michael Gottlieb'],
     ];
 }
