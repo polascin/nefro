@@ -518,11 +518,73 @@ function kfreRiskClass(float $risk5yr): string
 }
 
 /**
+ * load_id je navigácia (GET). Pri POST ho ignoruj — formuláre bez action
+ * (a bookmarky s ?load_id=) by inak pred výpočtom prepísali odoslané hodnoty
+ * históriou a mohli uložiť alebo zobraziť starý klinický výsledok.
+ */
+function calculatorIsHistoryLoadRequest(): bool
+{
+    if (strtoupper((string) ($_SERVER['REQUEST_METHOD'] ?? 'GET')) === 'POST') {
+        return false;
+    }
+
+    return isset($_GET['load_id']) && (int) $_GET['load_id'] > 0;
+}
+
+/**
+ * Skopíruje uložený input_payload do formulára.
+ * Kľúče, ktoré vo formulári nie sú, sa ignorujú — okrem kanonického UACR:
+ * staršie PREVENT záznamy ukladali len uacr_mg_g, KDIGO zase uacr_value
+ * do poľa uacr.
+ *
+ * @param array<string, mixed> $form
+ * @param array<string, mixed> $payload
+ */
+function calculatorApplyInputPayloadToForm(array &$form, array $payload): void
+{
+    foreach ($payload as $k => $v) {
+        if (!array_key_exists($k, $form)) {
+            continue;
+        }
+        if (is_bool($v)) {
+            $form[$k] = $v ? '1' : '0';
+        } elseif (is_scalar($v) || $v === null) {
+            $form[$k] = (string) $v;
+        }
+    }
+
+    $hasStoredUacr = static function (mixed $value): bool {
+        return $value !== null && $value !== '';
+    };
+
+    if (array_key_exists('uacr_value', $form) && trim((string) $form['uacr_value']) === '') {
+        $canonical = $payload['uacr_mg_g'] ?? null;
+        if ($hasStoredUacr($canonical)) {
+            $form['uacr_value'] = (string) $canonical;
+            if (array_key_exists('uacr_unit', $form)) {
+                $form['uacr_unit'] = 'mg_g';
+            }
+        }
+    }
+
+    if (array_key_exists('uacr', $form) && trim((string) $form['uacr']) === '') {
+        if ($hasStoredUacr($payload['uacr_value'] ?? null)) {
+            $form['uacr'] = (string) $payload['uacr_value'];
+        } elseif ($hasStoredUacr($payload['uacr_mg_g'] ?? null)) {
+            $form['uacr'] = (string) $payload['uacr_mg_g'];
+            if (array_key_exists('uacr_unit', $form)) {
+                $form['uacr_unit'] = 'mg_g';
+            }
+        }
+    }
+}
+
+/**
  * Načíta uložený výsledok do $form podľa GET parametra load_id.
  */
 function calculatorHandleLoadId(PDO $pdo, array &$form, array &$messages): void
 {
-    if (!isLoggedIn() || !isset($_GET['load_id'])) {
+    if (!isLoggedIn() || !calculatorIsHistoryLoadRequest()) {
         return;
     }
     $loadId = (int) $_GET['load_id'];
@@ -536,15 +598,7 @@ function calculatorHandleLoadId(PDO $pdo, array &$form, array &$messages): void
     $form['patient_birth_number']   = (string) ($loadedRow['patient_birth_number'] ?? '');
     $form['patient_insurance_code'] = (string) ($loadedRow['patient_insurance_code'] ?? '');
     if (is_array($loadedRow['input_payload'])) {
-        foreach ($loadedRow['input_payload'] as $k => $v) {
-            if (isset($form[$k]) || array_key_exists($k, $form)) {
-                if (is_bool($v)) {
-                    $form[$k] = $v ? '1' : '0';
-                } elseif (is_scalar($v) || $v === null) {
-                    $form[$k] = (string) $v;
-                }
-            }
-        }
+        calculatorApplyInputPayloadToForm($form, $loadedRow['input_payload']);
     }
     // eGFR sa v histórii ukladá vždy v kanonických ml/min/1,73 m² — jednotku
     // vo formulári preto po načítaní vrátime na ml/min, nech hodnota sedí.
@@ -752,7 +806,9 @@ function calculatorParseEgfrToMlMin(
     }
 
     $mlMin = calculatorEgfrToMlMin($value, $unit);
-    if ($mlMin <= $min || $mlMin > $max) {
+    // Rozsah je uzavretý z oboch strán ([min, max]). `<= $min` by pri min>0
+    // odmietlo platnú dolnú hranicu (PREVENT: eGFR 15 ml/min = 0,25 ml/s).
+    if ($mlMin < $min || $mlMin > $max) {
         $errors[] = sprintf(
             '%s musí byť v rozsahu %s–%s ml/min/1,73 m² (t. j. %s–%s ml/s/1,73 m²).',
             $fieldLabel,

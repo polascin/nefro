@@ -464,15 +464,17 @@ function ambulatoryComputeReport(array $input): array
     }
 
     $gCategory = $egfr !== null ? ckdGCategory($egfr) : null;
-    $aCategory = $uacrMgG !== null ? kdigoACategory($uacrMgG) : null;
+    $aCategory = ($uacrValue !== null && $uacrUnit !== null)
+        ? kdigoACategory($uacrValue, $uacrUnit)
+        : null;
     $chronicity = $input['chronicity'];
     $chronicityConfirmed = $chronicity === 'confirmed';
 
     $meetsCkdCriteria = ($egfr !== null && $egfr < 60.0)
-        || ($uacrMgG !== null && $uacrMgG >= 30.0)
+        || ($aCategory !== null && $aCategory !== 'A1')
         || $input['other_kidney_marker'];
     $canRuleOutCkd = $egfr !== null && $egfr >= 60.0
-        && $uacrMgG !== null && $uacrMgG < 30.0
+        && $aCategory === 'A1'
         && !$input['other_kidney_marker'];
     $hasConfirmedCkd = $chronicityConfirmed && $meetsCkdCriteria;
 
@@ -508,11 +510,9 @@ function ambulatoryComputeReport(array $input): array
         $summary['egfr_note'] = true;
     }
 
-    if ($uacrValue !== null && $uacrUnit !== null) {
-        $resolvedUacrMgG = $uacrUnit === 'mg_mmol' ? $uacrValue * 8.84 : $uacrValue;
-        $resolvedACategory = kdigoACategory($resolvedUacrMgG);
-        $aDescription = ambulatoryACategoryDescription($resolvedACategory);
-        $aLine = $resolvedACategory . ' (uACR ' . ambulatoryFormatUacrDisplay($uacrValue, $uacrUnit, $resolvedUacrMgG) . ')';
+    if ($uacrValue !== null && $uacrUnit !== null && $aCategory !== null && $uacrMgG !== null) {
+        $aDescription = ambulatoryACategoryDescription($aCategory);
+        $aLine = $aCategory . ' (uACR ' . ambulatoryFormatUacrDisplay($uacrValue, $uacrUnit, $uacrMgG) . ')';
         if ($aDescription !== '') {
             $aLine .= ' – ' . $aDescription;
         }
@@ -633,7 +633,14 @@ function ambulatoryComputeReport(array $input): array
             $ckdModerateHigh = $hasConfirmedCkd && $gaRiskKey !== 'low';
             $ckdVeryHigh = $hasConfirmedCkd && ($gaRiskKey === 'veryhigh' || $kidneyFailure);
         } else {
-            $ckdModerateHigh = $hasConfirmedCkd && $egfr !== null && $egfr < 60.0;
+            // Bez kompletného G×A: AHA CKM štádium 2 je stredné alebo vysoké KDIGO riziko.
+            // Albuminúria A2/A3 to spĺňa aj bez eGFR (G1A2 je stredné). Samotné
+            // eGFR <60 tiež. Neznáma A pri G1/G2 (len iný marker) nie.
+            $ckdModerateHigh = $hasConfirmedCkd && (
+                ($egfr !== null && $egfr < 60.0)
+                || $aCategory === 'A2'
+                || $aCategory === 'A3'
+            );
             $ckdVeryHigh = $kidneyFailure;
         }
         $ckmStage = ckmComputeStage(

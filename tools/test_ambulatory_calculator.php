@@ -246,6 +246,7 @@ testSame(false, isset($egfrOnly['summary']['a_category']), 'Len eGFR nevyplní k
 testSame(false, isset($egfrOnly['summary']['kfre']), 'Len eGFR nespočíta KFRE');
 testSame(false, isset($egfrOnly['summary']['ckdpc']), 'Len eGFR nespočíta CKD-PC');
 testSame(true, isset($egfrOnly['summary']['ckm']), 'Potvrdená CKD G3b zaradí CKM');
+testSame(true, str_starts_with((string) ($egfrOnly['summary']['ckm'] ?? ''), '2 –'), 'Potvrdená G3b bez uACR je CKM 2');
 testSame(true, in_array('Orientačné riziko G+A — chýba uACR', $egfrOnly['skipped'], true), 'Upozornenie na chýbajúce uACR');
 testSame(true, in_array('eGFR slope — chýba predchádzajúce meranie', $egfrOnly['skipped'], true), 'Upozornenie na chýbajúci slope');
 
@@ -259,6 +260,66 @@ $kfreReady = ambulatoryComputeReport(ambulatoryTestInput([
 testSame('2-ročné 10,0 %; 5-ročné 33,5 %', $kfreReady['summary']['kfre'] ?? null, 'KFRE pri kompletných vstupoch');
 testSame(false, isset($kfreReady['summary']['ckdpc']), 'CKD-PC bez BMI a TK sa nespočíta');
 testSame(true, str_contains(implode(' ', $kfreReady['skipped']), 'CKD-PC — chýba'), 'CKD-PC nahlási chýbajúce vstupy');
+
+testSame('A1', kdigoACategory(29.9), 'A1 tesne pod 30 mg/g');
+testSame('A2', kdigoACategory(30.0), 'A2 na prahu 30 mg/g');
+testSame('A2', kdigoACategory(300.0), 'A2 na prahu 300 mg/g');
+testSame('A3', kdigoACategory(300.1), 'A3 tesne nad 300 mg/g');
+testSame('A1', kdigoACategory(2.9, 'mg_mmol'), 'A1 tesne pod 3 mg/mmol');
+testSame('A2', kdigoACategory(3.0, 'mg_mmol'), 'A2 na prahu 3 mg/mmol — bez prepočtu ×8,84');
+testSame('A1', kdigoACategory(3.2 * 8.84), 'regresia: 3,2 mg/mmol ×8,84 ostáva pod 30 mg/g');
+testSame('A2', kdigoACategory(3.2, 'mg_mmol'), 'A2 pri 3,2 mg/mmol (×8,84 ≈ 28,3 mg/g by omylom bolo A1)');
+testSame('A2', kdigoACategory(30.0, 'mg_mmol'), 'A2 na prahu 30 mg/mmol');
+testSame('A3', kdigoACategory(30.1, 'mg_mmol'), 'A3 tesne nad 30 mg/mmol — bez prepočtu ×8,84');
+testSame('A3', kdigoACategory(31.0, 'mg_mmol'), 'A3 pri 31 mg/mmol (274 mg/g by omylom ostalo A2)');
+
+$siBoundary = ambulatoryComputeReport(ambulatoryTestInput([
+    'egfr' => 95.0,
+    'uacr_value' => 3.2,
+    'uacr_unit' => 'mg_mmol',
+]));
+testSame(true, str_contains((string) ($siBoundary['summary']['a_category'] ?? ''), 'A2'), '3,2 mg/mmol vo výstupe je A2');
+testSame('N18.1 CKD G1', $siBoundary['summary']['main_diagnosis'] ?? null, '3,2 mg/mmol pri G1 spĺňa kritériá CKD');
+testSame(true, str_starts_with((string) ($siBoundary['summary']['ckm'] ?? ''), '2 –'), 'Potvrdená G1A2 je CKM 2');
+
+$uacrA3Only = ambulatoryComputeReport(ambulatoryTestInput([
+    'uacr_value' => 500.0,
+    'uacr_unit' => 'mg_g',
+]));
+testSame(true, str_starts_with((string) ($uacrA3Only['summary']['ckm'] ?? ''), '2 –'), 'Potvrdená A3 bez eGFR je CKM 2, nie 0');
+testSame(true, str_contains((string) ($uacrA3Only['summary']['a_category'] ?? ''), 'A3'), 'A3-only vyplní kategóriu A');
+testSame(false, str_contains((string) ($uacrA3Only['summary']['ckm'] ?? ''), '0 –'), 'A3-only nesmie hlásiť CKM 0');
+
+$uacrA2Only = ambulatoryComputeReport(ambulatoryTestInput([
+    'uacr_value' => 50.0,
+    'uacr_unit' => 'mg_g',
+]));
+testSame(true, str_starts_with((string) ($uacrA2Only['summary']['ckm'] ?? ''), '2 –'), 'Potvrdená A2 bez eGFR je CKM 2');
+
+$uacrA3Mmol = ambulatoryComputeReport(ambulatoryTestInput([
+    'uacr_value' => 31.0,
+    'uacr_unit' => 'mg_mmol',
+]));
+testSame(true, str_contains((string) ($uacrA3Mmol['summary']['a_category'] ?? ''), 'A3'), '31 mg/mmol vo výstupe je A3');
+testSame(true, str_starts_with((string) ($uacrA3Mmol['summary']['ckm'] ?? ''), '2 –'), 'A3 v mg/mmol bez eGFR je CKM 2');
+
+$uacrA1Only = ambulatoryComputeReport(ambulatoryTestInput([
+    'uacr_value' => 10.0,
+    'uacr_unit' => 'mg_g',
+]));
+testSame(false, isset($uacrA1Only['summary']['ckm']), 'A1 bez eGFR a bez iného markera nie je CKD ani CKM');
+
+$unconfirmedA3 = ambulatoryComputeReport(ambulatoryTestInput([
+    'uacr_value' => 500.0,
+    'uacr_unit' => 'mg_g',
+    'chronicity' => 'unconfirmed',
+]));
+testSame(false, isset($unconfirmedA3['summary']['ckm']), 'Nepotvrdená A3 nezaradí CKM');
+
+$markerOnly = ambulatoryComputeReport(ambulatoryTestInput([
+    'other_kidney_marker' => true,
+]));
+testSame(true, str_starts_with((string) ($markerOnly['summary']['ckm'] ?? ''), '0 –'), 'Iný marker bez eGFR a bez A2/A3 nie je CKM 2');
 
 $bmiOnly = ambulatoryComputeReport(ambulatoryTestInput([
     'bmi' => 29.4,
@@ -282,6 +343,43 @@ foreach ($kdigoHeatmap as $gCategory => $albuminRows) {
         $actual = kdigoRisk($gCategory, $aCategory);
         testSame($expectedRisk, $actual['risk'], 'KDIGO ' . $gCategory . '×' . $aCategory);
     }
+}
+
+// calculatorParseEgfrToMlMin: rozsah [min, max] v kanonických ml/min/1,73 m².
+$egfrErrors = [];
+testSame(15.0, calculatorParseEgfrToMlMin('15', EGFR_UNIT_ML_MIN, $egfrErrors, 15.0, 140.0), 'PREVENT eGFR 15 ml/min je v rozsahu');
+testSame([], $egfrErrors, 'PREVENT eGFR 15 nepridá chybu');
+$egfrErrors = [];
+testSame(140.0, calculatorParseEgfrToMlMin('140', EGFR_UNIT_ML_MIN, $egfrErrors, 15.0, 140.0), 'PREVENT eGFR 140 ml/min je v rozsahu');
+$egfrErrors = [];
+testSame(null, calculatorParseEgfrToMlMin('14,9', EGFR_UNIT_ML_MIN, $egfrErrors, 15.0, 140.0), 'PREVENT eGFR 14,9 je mimo rozsahu');
+testSame(true, $egfrErrors !== [], 'PREVENT eGFR 14,9 pridá chybu');
+$egfrErrors = [];
+// 0,25 ml/s/1,73 m² = 15 ml/min/1,73 m²
+testSame(15.0, calculatorParseEgfrToMlMin('0,25', EGFR_UNIT_ML_S, $egfrErrors, 15.0, 140.0), 'PREVENT eGFR 0,25 ml/s (=15) je v rozsahu');
+$egfrErrors = [];
+testSame(45.0, calculatorParseEgfrToMlMin('45', EGFR_UNIT_ML_MIN, $egfrErrors, 0.0, 200.0), 'Bežné eGFR 45 pri min=0');
+$egfrErrors = [];
+testSame(null, calculatorParseEgfrToMlMin('0', EGFR_UNIT_ML_MIN, $egfrErrors, 0.0, 200.0), 'eGFR 0 nie je kladné číslo');
+
+// load_id sa aplikuje len na GET — POST s ?load_id= nesmie prepisovať odoslané hodnoty.
+$prevGet = $_GET;
+$prevMethod = $_SERVER['REQUEST_METHOD'] ?? null;
+$_GET['load_id'] = '12';
+$_SERVER['REQUEST_METHOD'] = 'GET';
+testSame(true, calculatorIsHistoryLoadRequest(), 'GET ?load_id= je načítanie histórie');
+$_SERVER['REQUEST_METHOD'] = 'POST';
+testSame(false, calculatorIsHistoryLoadRequest(), 'POST ?load_id= nesmie načítať históriu');
+$_GET['load_id'] = '0';
+$_SERVER['REQUEST_METHOD'] = 'GET';
+testSame(false, calculatorIsHistoryLoadRequest(), 'GET s load_id=0 nie je načítanie');
+unset($_GET['load_id']);
+testSame(false, calculatorIsHistoryLoadRequest(), 'GET bez load_id nie je načítanie');
+$_GET = $prevGet;
+if ($prevMethod === null) {
+    unset($_SERVER['REQUEST_METHOD']);
+} else {
+    $_SERVER['REQUEST_METHOD'] = $prevMethod;
 }
 
 echo 'Ambulantná kalkulačka: ' . $assertions . " kontrol prešlo.\n";

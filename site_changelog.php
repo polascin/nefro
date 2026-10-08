@@ -55,6 +55,13 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-10-08 16:40',
+                'category' => 'calculators',
+                'title' => 'Presnejšie zaradenie albuminúrie, CKM a PREVENT',
+                'description' => 'Kategória A sa určuje podľa prahov v zadanej jednotke: 3 mg/mmol je A2 a 30 mg/mmol je A3, bez prepočtu na mg/g. Potvrdená A2 alebo A3 bez eGFR sa zaradí do štádia CKM 2. PREVENT prijme eGFR 15 ml/min/1,73 m² a po načítaní z histórie zachová UACR, takže riziko neprejde ticho na základný model. Nový výpočet po načítaní histórie už nepoužije staré údaje.',
+                'url' => 'calculators.php',
+            ],
+            [
                 'date' => '2026-10-06 19:35',
                 'category' => 'content',
                 'title' => 'Dve nemecké vydania SK Nefro Báza 1',

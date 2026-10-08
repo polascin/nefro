@@ -20,13 +20,30 @@ declare(strict_types=1);
  */
 
 /**
- * Kategória albuminúrie podľa KDIGO (uACR v mg/g).
+ * Kategória albuminúrie podľa KDIGO 2024.
  *
- * @param float $uacr uACR v mg/g
+ * Prahy sú definované v oboch jednotkách samostatne (A1 <30 mg/g / <3 mg/mmol;
+ * A2 30–300 mg/g / 3–30 mg/mmol; A3 >300 mg/g / >30 mg/mmol). Nesmú sa
+ * odvodiť prepočtom ×8,84 — ten posúva hranice (napr. 3 mg/mmol = 26,5 mg/g
+ * by omylom ostalo A1; 31 mg/mmol = 274 mg/g by ostalo A2 namiesto A3).
+ *
+ * @param float  $uacr uACR v jednotke $unit
+ * @param string $unit 'mg_g' alebo 'mg_mmol'
  * @return string 'A1', 'A2' alebo 'A3'
  */
-function kdigoACategory(float $uacr): string
+function kdigoACategory(float $uacr, string $unit = "mg_g"): string
 {
+    if ($unit === "mg_mmol") {
+        if ($uacr < 3.0) {
+            return "A1";
+        }
+        if ($uacr <= 30.0) {
+            return "A2";
+        }
+
+        return "A3";
+    }
+
     if ($uacr < 30.0) {
         return "A1";
     }
