@@ -269,16 +269,16 @@ if (isLoggedIn()) {
                     <div class="form-section calculator-result-block" role="status" aria-live="polite">
                         <h3>Výsledok výpočtu</h3>
                         <p><strong>Nekorigovaná Aniónová medzera:</strong> <?= htmlspecialchars(
-                            $calculated["ag"],
+                            (string) $calculated["ag"],
                         ) ?> mmol/L</p>
-                        <p><strong>Korigovaná Aniónová medzera (pri Alb. <?= $calculated[
-                            "alb"
-                        ] ?> g/L):</strong> <?= htmlspecialchars(
-     $calculated["corrected_ag"],
+                        <p><strong>Korigovaná Aniónová medzera (pri Alb. <?= htmlspecialchars(
+                            (string) $calculated["alb"],
+                        ) ?> g/L):</strong> <?= htmlspecialchars(
+     (string) $calculated["corrected_ag"],
  ) ?> mmol/L</p>
                         <?php if ($calculated["delta_ratio"] !== null): ?>
                             <p class="calc-result-mt16"><strong>Delta Ratio (&Delta;/&Delta; pomer):</strong> <?= htmlspecialchars(
-                                $calculated["delta_ratio"],
+                                (string) $calculated["delta_ratio"],
                             ) ?></p>
                             <p class="calc-accent-text">Interpretácia: <?= htmlspecialchars(
                                 $calculated["interpretation"],
