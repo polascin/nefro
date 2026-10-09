@@ -55,6 +55,13 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-10-09 13:15',
+                'category' => 'calculators',
+                'title' => 'Aniónová medzera znova ukáže vypočítaný výsledok',
+                'description' => 'Po výpočte aniónovej medzery a delta pomeru sa číselný výsledok znova zobrazí na stránke.',
+                'url' => 'calculator_acidbase.php',
+            ],
+            [
                 'date' => '2026-10-08 16:55',
                 'category' => 'calculators',
                 'title' => 'UACR a Kt/V znova ukážu vypočítaný výsledok',
