@@ -48,6 +48,12 @@ $urls = [
         'priority'   => '0.8',
     ],
     [
+        'loc'        => $baseUrl . 'calculator_ekfc.php',
+        'lastmod'    => _sitemapLastmod('calculator_ekfc.php'),
+        'changefreq' => 'monthly',
+        'priority'   => '0.8',
+    ],
+    [
         'loc'        => $baseUrl . 'calculator_kdigo_risk.php',
         'lastmod'    => _sitemapLastmod('calculator_kdigo_risk.php'),
         'changefreq' => 'monthly',
