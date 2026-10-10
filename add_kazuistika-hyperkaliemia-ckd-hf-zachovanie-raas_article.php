@@ -20,50 +20,50 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => '2026-05-27',
     'is_top'       => 0,
-    'excerpt'      => 'Hyperkaliémia je najčastejší dôvod prerušenia RAAS inhibície u pacientov s CKD a srdcovým zlyhávaním, no GDMT liečba zlepšuje prognózu. Ako myslieť inak: draslík-viažuce lieky namiesto odstavenia liečby, a prečo patiromer a SZC nie sú navzájom zameniteľné.',
+    'excerpt'      => 'Hyperkaliémia je najčastejší dôvod prerušenia inhibície RAAS u pacientov s CKD a srdcovým zlyhávaním, hoci liečba podľa odporúčaní (GDMT) zlepšuje prognózu. Namiesto vysadenia liečby možno použiť lieky viažuce draslík – patiromer a SZC však nie sú navzájom zameniteľné.',
     'content'      => <<<'HTML'
 <figure><a href="img/kazuistika-hyperkaliemia-ckd-hf-zachovanie-raas.webp" rel="noopener noreferrer" target="_blank"><img src="img/kazuistika-hyperkaliemia-ckd-hf-zachovanie-raas.webp" alt="Draslíkové častice odvádzané bokom viazačom, zatiaľ čo hlavný liečebný lúč k srdcu a obličke zostáva v plnej sile" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Draslík sa dá riešiť samostatne – účinnú liečbu tak nie je nutné oslabiť.</figcaption></figure>
 
-<p>V praxi narážame na rovnaký problém znova a znova: pacient má chronické obličkové ochorenie a zároveň srdcové zlyhávanie, je kandidát na liečbu založenú na RAAS inhibícii (ACEi/ARB) a často aj MRA (napr. spironolaktón). Lenže. Hyperkaliémia naháňa strach, klinici liečbu obmedzujú alebo prerušujú, a tým pacient prichádza o liečbu, ktorá zlepšuje prognózu.</p>
+<p>V praxi narážame stále na ten istý problém: pacient má chronickú chorobu obličiek a zároveň srdcové zlyhávanie, je kandidátom na inhibíciu RAAS (ACEi/ARB) a často aj na MRA (napr. spironolaktón). Hyperkaliémia však vyvoláva obavy, lekári liečbu obmedzujú alebo prerušujú a pacient tak prichádza o liečbu, ktorá zlepšuje prognózu.</p>
 
-<p>Tento článok vychádza zo vzdelávacej aktivity „Case-Based Approach: Managing Hyperkalemia in Patients With CKD and Heart Failure“ a prekladá jej hlavné myšlienky do praktického, kazuistického rámca.<sup><a href="https://reachmd.com/programs/cme/case-based-approach-managing-hyperkalemia-in-patients-with-ckd-and-heart-failure/37617/" target="_blank" rel="noopener noreferrer">[1]</a></sup></p>
+<p>Tento článok vychádza zo vzdelávacej aktivity „Case-Based Approach: Managing Hyperkalemia in Patients With CKD and Heart Failure“ a jej hlavné myšlienky prenáša do praktického kazuistického rámca.<sup><a href="https://reachmd.com/programs/cme/case-based-approach-managing-hyperkalemia-in-patients-with-ckd-and-heart-failure/37617/" target="_blank" rel="noopener noreferrer">[1]</a></sup></p>
 
 <h2>Kazuistika na začiatok: 45-ročná žena s CKD 3b a HFrEF (NYHA II)</h2>
 
-<p>V aktivite sa začína prípadom 45-ročnej ženy s CKD 3b, eGFR &lt; 40 ml/min, proteinúriou a súbežným srdcovým zlyhávaním NYHA II. Pacientka prichádza s veľkou obavou: „Mám CKD aj srdce. A keď mi stúpne draslík, čo potom?“</p>
+<p>Aktivita začína prípadom 45-ročnej ženy s CKD 3b, eGFR &lt; 40 ml/min, proteinúriou a súbežným srdcovým zlyhávaním NYHA II. Pacientka prichádza s veľkou obavou: „Mám CKD aj srdce. A keď mi stúpne draslík, čo potom?“</p>
 
-<p>Pointa kazuistiky je, že obava z hyperkaliémie vedie k podliečeniu. V aktivite sa zdôrazňuje, že RAAS inhibítory sú základ znižovania kardiorenálneho rizika, no hyperkaliémia často bráni ich optimálnemu nasadeniu či udržaniu.<sup><a href="https://reachmd.com/programs/cme/case-based-approach-managing-hyperkalemia-in-patients-with-ckd-and-heart-failure/37617/" target="_blank" rel="noopener noreferrer">[1]</a></sup></p>
+<p>Podstatou kazuistiky je, že obava z hyperkaliémie vedie k nedostatočnej liečbe. Aktivita zdôrazňuje, že inhibítory RAAS sú základom znižovania kardiorenálneho rizika, no hyperkaliémia často bráni ich optimálnemu nasadeniu či udržaniu.<sup><a href="https://reachmd.com/programs/cme/case-based-approach-managing-hyperkalemia-in-patients-with-ckd-and-heart-failure/37617/" target="_blank" rel="noopener noreferrer">[1]</a></sup></p>
 
-<h2>Kľúčový prelom v myslení: hyperkaliémia nemá automaticky zastaviť RAAS liečbu</h2>
+<h2>Kľúčová zmena v uvažovaní: hyperkaliémia nemá automaticky zastaviť inhibíciu RAAS</h2>
 
-<p>V aktivite zaznieva, že pokyny (KDIGO 2024) majú jasný odkaz: hyperkaliémia by sama o sebe nemala byť dôvodom na ukončenie RAAS inhibície. Logika je jednoduchá a klinicky veľmi dôležitá:</p>
+<p>Podľa aktivity odporúčania KDIGO 2024 jasne hovoria, že hyperkaliémia by sama osebe nemala byť dôvodom na ukončenie inhibície RAAS. Logika je jednoduchá a klinicky dôležitá:</p>
 
 <ol>
   <li><strong>GDMT (guideline-directed medical therapy) zlepšuje morbiditu aj mortalitu</strong>,</li>
-  <li><strong>k hyperkaliémii sa má pristúpiť aktívne</strong>, nie ústupom zo základnej kardioprotektívnej liečby,</li>
-  <li>praktický postup je <strong>udržať RAAS/MRA</strong> a k tomu pridať <strong>liečbu viažucu draslík</strong> (plus tam, kde dáva zmysel, aj diuretiká na podporu exkrécie draslíka).<sup><a href="https://reachmd.com/programs/cme/case-based-approach-managing-hyperkalemia-in-patients-with-ckd-and-heart-failure/37617/" target="_blank" rel="noopener noreferrer">[1]</a></sup></li>
+  <li><strong>hyperkaliémiu treba riešiť aktívne</strong>, nie ústupom zo základnej kardioprotektívnej liečby,</li>
+  <li>praktický postup je <strong>udržať RAAS/MRA</strong> a k tomu pridať <strong>liečbu viažucu draslík</strong> (a tam, kde to má zmysel, aj diuretiká na podporu exkrécie draslíka).<sup><a href="https://reachmd.com/programs/cme/case-based-approach-managing-hyperkalemia-in-patients-with-ckd-and-heart-failure/37617/" target="_blank" rel="noopener noreferrer">[1]</a></sup></li>
 </ol>
 
-<p>V tejto logike sa hyperkaliémia prestáva riešiť ako „dôvod stopnúť“, a začína sa riešiť ako „dôvod doplniť správny nástroj“.</p>
+<p>Hyperkaliémia tak prestáva byť „dôvodom liečbu zastaviť“ a stáva sa „dôvodom doplniť správny nástroj“.</p>
 
-<h2>Prečo je problém aj v poddiagnostikovaní a nedostatočnej eskalácii liečby</h2>
+<h2>Problémom je aj poddiagnostikovanie a nedostatočná eskalácia liečby</h2>
 
-<p>Jedným z „tvrdých“ argumentov v aktivite je register CARE-HK v populácii s HFrEF a častým pokročilejším CKD (napr. CKD 3b, eGFR &lt; 40). V kazuistickej časti sa interpretuje, že:</p>
+<p>Jedným z hlavných argumentov aktivity opretých o dáta je register CARE-HK v populácii s HFrEF a často pokročilejšou CKD (napr. CKD 3b, eGFR &lt; 40). Kazuistická časť z neho vyvodzuje, že:</p>
 
 <ul>
   <li><strong>RAASi alebo MRA neboli adekvátne využité u zhruba jednej tretiny</strong> pacientov,</li>
   <li><strong>obavy z hyperkaliémie</strong> sú podľa autorov hlavným dôvodom,</li>
-  <li>hyperkaliemické epizódy sa ukazujú ako <strong>rekurentné</strong> a zároveň sa pozoruje <strong>nízke používanie draslík-viažucich liekov</strong>,</li>
-  <li>s poklesom renálnych funkcií ďalej klesá optimalizácia GDMT a v pokročilých štádiách je podiel pacientov na odporúčanej liečbe alarmujúco nízky.<sup><a href="https://reachmd.com/programs/cme/case-based-approach-managing-hyperkalemia-in-patients-with-ckd-and-heart-failure/37617/" target="_blank" rel="noopener noreferrer">[1]</a></sup></li>
+  <li>hyperkaliemické epizódy sa ukazujú ako <strong>rekurentné</strong> a zároveň sa pozoruje <strong>nízke používanie liekov viažucich draslík</strong>,</li>
+  <li>s poklesom funkcie obličiek ďalej klesá optimalizácia GDMT a v pokročilých štádiách je podiel pacientov na odporúčanej liečbe alarmujúco nízky.<sup><a href="https://reachmd.com/programs/cme/case-based-approach-managing-hyperkalemia-in-patients-with-ckd-and-heart-failure/37617/" target="_blank" rel="noopener noreferrer">[1]</a></sup></li>
 </ul>
 
-<p>Kazuistický záver je teda dvojitý: nie je to len otázka „čo urobiť pri jednej epizóde“, ale aj „čo urobiť, aby sa pacient nedostal do začarovaného kruhu podliečenia“.</p>
+<p>Záver kazuistiky je teda dvojaký: nejde len o to, čo urobiť pri jednej epizóde, ale aj o to, ako zabrániť, aby sa pacient dostal do začarovaného kruhu nedostatočnej liečby.</p>
 
-<h2>Potassium bindery: mechanizmy nie sú rovnaké, preto sa líšia aj bezpečnostné signály</h2>
+<h2>Lieky viažuce draslík: mechanizmy nie sú rovnaké, preto sa líšia aj bezpečnostné signály</h2>
 
-<p>Aktivita postavila praktické porovnanie dvoch moderných draslík-viažucich látok: <strong>patiromer</strong> a <strong>sodium zirconium cyclosilicate (SZC)</strong>.</p>
+<p>Aktivita prakticky porovnáva dve moderné látky viažuce draslík: <strong>patiromer</strong> a <strong>sodium zirconium cyclosilicate (SZC)</strong>.</p>
 
-<h3>Rozdiel v mechanizme (a čo z toho môže byť klinicky)</h3>
+<h3>Rozdiel v mechanizme a jeho možný klinický význam</h3>
 
 <ul>
   <li><strong>Patiromer</strong>: výmena draslíka za vápnik (calcium–potassium exchange).</li>
@@ -74,26 +74,26 @@ $articles[] = [
 
 <h3>Bezpečnostné signály pre SZC (edém, zhoršenie HF)</h3>
 
-<p>Aktivita spomína, že v menších randomizovaných štúdiách aj v pooled analýzach sa pri SZC v populácii s neobjasneným alebo už prítomným HF objavoval signál pre zhoršenie srdcového zlyhávania a edémové udalosti, čo sa premietlo aj do regulačných aktualizácií.<sup><a href="https://reachmd.com/programs/cme/case-based-approach-managing-hyperkalemia-in-patients-with-ckd-and-heart-failure/37617/" target="_blank" rel="noopener noreferrer">[1]</a></sup></p>
+<p>Aktivita uvádza, že v menších randomizovaných štúdiách aj v súhrnných (pooled) analýzach sa pri SZC v populácii s neobjasneným alebo už prítomným HF objavoval signál pre zhoršenie srdcového zlyhávania a edémové udalosti, čo sa premietlo aj do regulačných aktualizácií.<sup><a href="https://reachmd.com/programs/cme/case-based-approach-managing-hyperkalemia-in-patients-with-ckd-and-heart-failure/37617/" target="_blank" rel="noopener noreferrer">[1]</a></sup></p>
 
-<h2>Realita z trialov: REALIZE-K (SZC) vs. DIAMOND (patiromer)</h2>
+<h2>Údaje zo štúdií: REALIZE-K (SZC) vs. DIAMOND (patiromer)</h2>
 
 <h3>REALIZE-K (SZC) pri spironolaktóne</h3>
 
-<p>V REALIZE-K sa SZC používal v kontexte, kde mali pacienti udržať alebo pokračovať v liečbe spironolaktónom aj napriek riziku hyperkaliémie. V aktivite sa zdôrazňuje, že sa pozorovali bezpečnostné udalosti spojené so srdcovým zlyhávaním a viedlo to k zvýšeniu závažných nežiaducich príhod (serious adverse events) pre srdcové zlyhávanie.<sup><a href="https://reachmd.com/programs/cme/case-based-approach-managing-hyperkalemia-in-patients-with-ckd-and-heart-failure/37617/" target="_blank" rel="noopener noreferrer">[1]</a></sup></p>
+<p>V štúdii REALIZE-K sa SZC používal u pacientov, ktorí mali pokračovať v liečbe spironolaktónom napriek riziku hyperkaliémie. Aktivita zdôrazňuje, že sa pozorovali bezpečnostné udalosti spojené so srdcovým zlyhávaním a ich dôsledkom bol vyšší počet závažných nežiaducich príhod (serious adverse events) pre srdcové zlyhávanie.<sup><a href="https://reachmd.com/programs/cme/case-based-approach-managing-hyperkalemia-in-patients-with-ckd-and-heart-failure/37617/" target="_blank" rel="noopener noreferrer">[1]</a></sup></p>
 
 <h3>DIAMOND (patiromer) a natriuretický profil</h3>
 
-<p>Ako kontrast sa spomína DIAMOND: pri patiromeri boli v subanalýze zaznamenané poklesy NT-proBNP v čase, ktoré sú konzistentné s očakávaným efektom pri dobre manažovanej neurohormonálnej liečbe u pacientov s HFrEF.<sup><a href="https://reachmd.com/programs/cme/case-based-approach-managing-hyperkalemia-in-patients-with-ckd-and-heart-failure/37617/" target="_blank" rel="noopener noreferrer">[1]</a></sup></p>
+<p>Na porovnanie sa uvádza štúdia DIAMOND: pri patiromeri sa v subanalýze zaznamenal postupný pokles NT-proBNP, ktorý zodpovedá očakávanému účinku dobre vedenej neurohormonálnej liečby u pacientov s HFrEF.<sup><a href="https://reachmd.com/programs/cme/case-based-approach-managing-hyperkalemia-in-patients-with-ckd-and-heart-failure/37617/" target="_blank" rel="noopener noreferrer">[1]</a></sup></p>
 
-<p>Praktický význam: ak pacient potrebuje MRA a RAAS terapiu, výber draslík-viažucej liečby môže mať nielen vplyv na draslík, ale aj na kardiovaskulárnu toleranciu a bezpečnosť.</p>
+<p>Praktický význam: ak pacient potrebuje MRA aj inhibítor RAAS, výber lieku viažuceho draslík môže ovplyvniť nielen draslík, ale aj kardiovaskulárnu toleranciu a bezpečnosť.</p>
 
-<h2>Take-home message pre kliniku</h2>
+<h2>Čo si odniesť do praxe</h2>
 
 <ul>
   <li><strong>RAAS blokádu neukončovať len kvôli hyperkaliémii</strong>, ak sa dá pokračovať s podporou liečby viažucej draslík.<sup><a href="https://reachmd.com/programs/cme/case-based-approach-managing-hyperkalemia-in-patients-with-ckd-and-heart-failure/37617/" target="_blank" rel="noopener noreferrer">[1]</a></sup></li>
-  <li><strong>Preklenúť strach z draslíka</strong> správnou liečbou a monitoringom, aby pacient reálne dostal a udržal GDMT.</li>
-  <li><strong>Multidisciplinárna spolupráca</strong> (kardiológ, nefrológ, internista) je pri výbere vhodného binderu kľúčová, lebo bezpečnostné signály a mechanizmy nie sú rovnaké.</li>
+  <li><strong>Obavy z hyperkaliémie prekonať</strong> správnou liečbou a monitorovaním, aby pacient GDMT skutočne dostal a udržal.</li>
+  <li><strong>Multidisciplinárna spolupráca</strong> (kardiológ, nefrológ, internista) je pri výbere vhodného lieku viažuceho draslík kľúčová, lebo bezpečnostné signály a mechanizmy nie sú rovnaké.</li>
 </ul>
 
 <hr>

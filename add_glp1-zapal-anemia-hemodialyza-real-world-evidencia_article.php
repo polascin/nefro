@@ -33,7 +33,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'U 2 468 párovaných pacientov na hemodialýze sa začatie agonistu GLP-1 spájalo s nižším NLR, nižšou spotrebou ESA a podobným hemoglobínom. Observačné údaje nedokazujú kauzalitu a nahradiť ESA ani železo nemajú.',
     'content'      => <<<'HTML'
-<figure><a href="img/glp1-zapal-anemia-hemodialyza-real-world-evidencia.webp" rel="noopener noreferrer" target="_blank"><img src="img/glp1-zapal-anemia-hemodialyza-real-world-evidencia.webp" alt="Cieva, v ktorej modrozelené svetlo potláča zápalový opar a v prečistenej časti sa objavujú zdravé červené krvinky" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Ak ustúpi zápal, mení sa aj podmienka, za ktorej telo dokáže tvoriť krv — preto téma zasahuje aj do manažmentu anémie.</figcaption></figure>
+<figure><a href="img/glp1-zapal-anemia-hemodialyza-real-world-evidencia.webp" rel="noopener noreferrer" target="_blank"><img src="img/glp1-zapal-anemia-hemodialyza-real-world-evidencia.webp" alt="Cieva, v ktorej modrozelené svetlo potláča zápalový opar a v prečistenej časti sa objavujú zdravé červené krvinky" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Ak ustúpi zápal, mení sa aj podmienka, za ktorej telo dokáže tvoriť krv – preto téma zasahuje aj do manažmentu anémie.</figcaption></figure>
 
 <p class="article-dek"><em>Agonisty receptora glukagónu podobného peptidu 1 (GLP-1) majú pri chronickej chorobe obličiek (CKD) doložený obličkový a srdcovocievny prínos v randomizovaných štúdiách, predovšetkým mimo dialýzy. Čo sa deje so zápalom a anémiou po ich začatí už pri hemodialýze, doteraz nebolo v prospektívnej štúdii overené. Nová retrospektívna práca v časopise Kidney Medicine prináša veľkú kohortu z reálnej praxe – a zároveň jasnú hranicu: ide o asociáciu, nie o dôkaz, že agonista GLP-1 „lieči anémiu“.</em></p>
 
@@ -55,7 +55,7 @@ $articles[] = [
 
 <h2>Hlavné výsledky po 12 mesiacoch</h2>
 
-<p>V liečenej skupine klesol pomer neutrofilov k lymfocytom (NLR) a počet leukocytov, mierne stúpol sérový albumín, boli vyššie ukazovatele železa a nižšia spotreba erytropoézu stimulujúcich látok (ESA). Hemoglobín sa v 12. mesiaci medzi skupinami prakticky nelíšil. Absolútne rozdiely sú malé; sami autori ich označujú za signály tvoriace hypotézu a klinický význam za neistý.</p>
+<p>V liečenej skupine klesol pomer neutrofilov k lymfocytom (NLR) a počet leukocytov, mierne stúpol sérový albumín, boli vyššie ukazovatele železa a nižšia spotreba erytropoézu stimulujúcich látok (ESA). Hemoglobín sa v 12. mesiaci medzi skupinami prakticky nelíšil. Absolútne rozdiely sú malé; sami autori ich označujú za signály, z ktorých možno tvoriť hypotézy, a ich klinický význam za neistý.</p>
 
 <div class="table-responsive" role="region" aria-label="Dvanásťmesačné rozdiely medzi používateľmi agonistov GLP-1 a párovanými kontrolami" tabindex="0">
 <table>
@@ -149,7 +149,7 @@ $articles[] = [
 <ul>
   <li><strong>Agonista GLP-1 nie je liekom na anémiu pri KFRT.</strong> Štúdia nemerala tvrdé klinické ukazovatele anémie (transfúzie, hospitalizácie, kvalitu života) a hemoglobín sa v 12. mesiaci nelíšil.</li>
   <li><strong>ESA a železo ostávajú štandardom.</strong> Nižšia bodová a kumulatívna dávka ESA nie je dôvodom na vysadenie ani na odklon od algoritmu KDIGO 2026. Rozhodovanie o železe, ESA a inhibítoroch HIF-prolylhydroxylázy sa riadi diagnostikou, bezpečnosťou a zdieľaným rozhodovaním – nie predpisom agonistu GLP-1.</li>
-  <li><strong>Ferritín nie je čistý ukazovateľ zásob železa.</strong> Pri hemodialýze je súčasne reaktantom akútnej fázy. V 12. mesiaci bol ferritín v oboch skupinách nad 800 ng/ml (887,4 oproti 846,9 ng/ml), teda v pásme, kde KDIGO/KDOQI pri HD bežne zadržiava rutinné železo pri ferritíne &gt; 700 ng/ml. Saturácia transferínu ostala pod 40 % (34,0 % oproti 32,3 %). Vyšší ferritín tu nemožno čítať ako „lepšie zásoby“, ktoré treba ešte dopĺňať.</li>
+  <li><strong>Ferritín nie je čistý ukazovateľ zásob železa.</strong> Pri hemodialýze je súčasne reaktantom akútnej fázy. V 12. mesiaci bol ferritín v oboch skupinách nad 800 ng/ml (887,4 oproti 846,9 ng/ml), teda v pásme, v ktorom sa podľa KDIGO/KDOQI pri HD rutinné podávanie železa pri ferritíne &gt; 700 ng/ml spravidla pozastavuje. Saturácia transferínu ostala pod 40 % (34,0 % oproti 32,3 %). Vyšší ferritín tu nemožno čítať ako „lepšie zásoby“, ktoré treba ešte dopĺňať.</li>
   <li><strong>Chýba hs-CRP.</strong> Vysoko citlivý C-reaktívny proteín (hs-CRP) sa v americkej dialyzačnej populácii bežne nemeria. Bez neho nemožno oddeliť zmenu metabolizmu železa od zmeny zápalu. NLR a počet leukocytov sú len náhradné ukazovatele.</li>
   <li><strong>Porovnanie je voči nepoužívateľom, nie voči inému antidiabetiku.</strong> Používanie inhibítorov DPP-4 bolo približne vyvážené (11,1 % oproti 9,8 %), aktívny komparátor však chýba. Časť rozdielu môže odrážať výber pacientov na agonistu GLP-1, nie účinok lieku.</li>
 </ul>
@@ -167,9 +167,9 @@ $articles[] = [
   <li>Absolútna veľkosť zmien je skromná. Smerovo sú výsledky konzistentné naprieč viacerými ukazovateľmi; to ešte nerobí z NLR ani z kumulatívnej dávky ESA náhradu klinického výsledku.</li>
 </ul>
 
-<p>Práca nemala externé financovanie; analýzu interne podporila spoločnosť Fresenius Medical Care. Väčšina autorov je zamestnancami alebo spolupracovníkmi Renal Research Institute, dcérskej spoločnosti Fresenius. To nevylučuje užitočnosť údajov, ale patrí k čítaniu konfliktu záujmov.</p>
+<p>Práca nemala externé financovanie; analýzu interne podporila spoločnosť Fresenius Medical Care. Väčšina autorov je zamestnancami alebo spolupracovníkmi Renal Research Institute, dcérskej spoločnosti Fresenius. To neznižuje užitočnosť údajov, pri ich čítaní však treba zohľadniť možný konflikt záujmov.</p>
 
-<h2>Ako to preložiť do nefrologickej praxe</h2>
+<h2>Čo to znamená pre nefrologickú prax</h2>
 
 <p>Praktický záver je úzky a opatrný.</p>
 
@@ -179,7 +179,7 @@ $articles[] = [
 
 <p>Pri už prebiehajúcej liečbe agonistom GLP-1 na dialýze ostáva v popredí bezpečnosť: gastrointestinálna znášanlivosť, príjem bielkovín a energie, riziko úbytku svalovej hmoty, objem a glykémia. Protokolu tejto štúdie zodpovedá práve pacient, ktorý liek 12 mesiacov neprerušil – nie ten, kto ho pre neznášanlivosť vysadil.</p>
 
-<p>Obličkový prínos semaglutidu pri CKD mimo dialýzy (štúdia FLOW) a evidencia z reálnej praxe pri už prebiehajúcej hemodialýze sú <strong>dve rôzne roviny dôkazu</strong>. FLOW nemerala hs-CRP a nebola štúdiou anémie pri KFRT. Túto prácu preto nemožno čítať ako „FLOW pre dialýzu“, ani ako dôkaz, že nižší zápal vysvetľuje obličkový alebo srdcovocievny účinok.</p>
+<p>Obličkový prínos semaglutidu pri CKD mimo dialýzy (štúdia FLOW) a údaje z reálnej praxe pri už prebiehajúcej hemodialýze sú <strong>dve rôzne roviny dôkazu</strong>. FLOW nemerala hs-CRP a nebola štúdiou anémie pri KFRT. Túto prácu preto nemožno čítať ako „FLOW pre dialýzu“, ani ako dôkaz, že nižší zápal vysvetľuje obličkový alebo srdcovocievny účinok.</p>
 
 <h2>Súvisiace články</h2>
 
