@@ -155,7 +155,7 @@ $articles[] = [
 
 <p>Pri glomerulárnych chorobách zdroj uvádza, že podskupinová analýza naznačila zvlášť výrazný signál pri <strong>FSGS</strong>, a ponúka biologické vysvetlenie: mineralokortikoidový receptor je exprimovaný na <strong>podocytoch</strong> a prehnaná aktivácia tohto receptora môže podporovať ich poškodenie.</p>
 
-<p>Mechanizmus a klinické pozorovanie sa tu zhodujú. Podskupinové analýzy však treba interpretovať opatrne a v hraniciach toho, čo štúdie skutočne dokazujú.</p>
+<p>Ide o príklad prepojenia mechanizmu s klinickým pozorovaním. Podskupinové analýzy však treba interpretovať opatrne a v hraniciach toho, čo štúdie skutočne dokazujú.</p>
 
 <h2>7. Steroidné verzus nesteroidné antagonisty mineralokortikoidového receptora: prečo je finerenón vpredu</h2>
 
@@ -171,7 +171,7 @@ $articles[] = [
 
 <p>Podľa zdroja prežíva nefrológia obdobie nezvyčajne bohaté na nové údaje: popri finerenóne pribúdajú dáta o liekoch, ktoré ovplyvňujú aldosterónovú os iným mechanizmom. Namiesto blokovania receptora ide o zásah do tvorby aldosterónu.</p>
 
-<p>Mechanisticky má inhibícia aldosterónsyntázy znížiť systémový aj podocytový zápal a albuminúriu, a tým aj tubulárne a glomerulárne poškodenie a progresiu do terminálneho štádia CKD; zároveň môže znížiť krvný tlak.</p>
+<p>Mechanisticky má inhibícia aldosterónsyntázy znížiť zápal vrátane podocytového a albuminúriu, a tým aj tubulárne a glomerulárne poškodenie a progresiu do terminálneho štádia CKD; zároveň môže znížiť krvný tlak.</p>
 
 <p>Zdroj spomína tri prebiehajúce programy, ktorých výsledky sa očakávajú v najbližších rokoch:</p>
 

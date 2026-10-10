@@ -26,7 +26,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Prehľad v CJASN zhŕňa, ako obezita poškodzuje obličku priamo aj nepriamo a prečo sa jej manažment pri CKD posunul od prevažne režimového prístupu k viaczložkovej stratégii s inkretínovou liečbou. Nové je aj poznanie, že rozhoduje rozloženie tuku – nielen hmotnosť.',
     'content'      => <<<'HTML'
-<figure><a href="img/obezita-kardiometabolicke-zdravie-ckd-ckm-ramec.webp" rel="noopener noreferrer" target="_blank"><img src="img/obezita-kardiometabolicke-zdravie-ckd-ckm-ramec.webp" alt="Guľa tukového tkaniva zasahovaná štyrmi rôznofarebnými lúčmi z rôznych strán, v pozadí presvitajú srdce a oblička" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Obezita pri chorobe obličiek zriedka ustúpi jednému opatreniu — účinok prichádza zo súbehu viacerých zložiek naraz.</figcaption></figure>
+<figure><a href="img/obezita-kardiometabolicke-zdravie-ckd-ckm-ramec.webp" rel="noopener noreferrer" target="_blank"><img src="img/obezita-kardiometabolicke-zdravie-ckd-ckm-ramec.webp" alt="Guľa tukového tkaniva zasahovaná štyrmi rôznofarebnými lúčmi z rôznych strán, v pozadí presvitajú srdce a oblička" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Obezita pri chorobe obličiek zriedka ustúpi jednému opatreniu – účinok prichádza zo súbehu viacerých zložiek naraz.</figcaption></figure>
 
 <p>Obezita už dávno nie je len sprievodným javom chronickej choroby obličiek (CKD). Je samostatným patofyziologickým činiteľom, ktorý zvyšuje riziko vzniku aj progresie ochorenia obličiek, urýchľuje kardiovaskulárne komplikácie a zhoršuje metabolický profil pacienta. Prehľadová práca Mathewa a kolektívu, publikovaná v roku 2026 v časopise <em>Clinical Journal of the American Society of Nephrology</em>, tieto väzby zhŕňa v rámci <strong>kardio-obličkovo-metabolického (CKM) rámca</strong>.</p>
 
@@ -34,7 +34,7 @@ $articles[] = [
 
 <h2>Ako obezita poškodzuje obličku</h2>
 
-<p>Prehľad rozlišuje <strong>priame a nepriame mechanizmy</strong>, čo je pri klinickej úvahe užitočné rozlíšenie:</p>
+<p>Prehľad rozlišuje <strong>priame a nepriame mechanizmy</strong>, čo sa pri klinickom uvažovaní osvedčuje:</p>
 
 <div class="table-responsive" role="region" aria-label="Mechanizmy poškodenia obličiek pri obezite" tabindex="0">
 <table>
@@ -75,7 +75,7 @@ $articles[] = [
 
 <p>Populačné štúdie to potvrdzujú: ukazovatele adipozity sa spájajú s vyšším rizikom vzniku CKD, jej progresie aj zlyhania obličiek.</p>
 
-<p>Z toho vyplýva priamy dôsledok pre hodnotenie pacienta. <strong>Index telesnej hmotnosti (BMI) je praktický, ale sám osebe nedostatočný.</strong> U niektorých pacientov neodráža ani metabolické riziko, ani zloženie tela – najmä u starších osôb, pri sarkopénii a pri chronickom ochorení. Pri hodnotení preto patrí k BMI aj obvod pása, posúdenie viscerálnej adipozity, krvný tlak, glykemický stav, albuminúria, eGFR, lipidový profil, známky spánkového apnoe a funkčná zdatnosť vrátane rizika sarkopénie.</p>
+<p>Pre hodnotenie pacienta to má priamy dôsledok. <strong>Index telesnej hmotnosti (BMI) je praktický, ale sám osebe nedostatočný.</strong> U niektorých pacientov neodráža ani metabolické riziko, ani zloženie tela – najmä u starších osôb, pri sarkopénii a pri chronickom ochorení. Pri hodnotení preto patrí k BMI aj obvod pása, posúdenie viscerálnej adipozity, krvný tlak, glykemický stav, albuminúria, eGFR, lipidový profil, známky spánkového apnoe a funkčná zdatnosť vrátane rizika sarkopénie.</p>
 
 <h2>Posun v liečbe: od režimu k viaczložkovej stratégii</h2>
 
@@ -93,9 +93,9 @@ $articles[] = [
 
 <p>Pre nefrológa je pri inkretínovej liečbe podstatné sledovať znášanlivosť, objemový stav, gastrointestinálne nežiaduce účinky, nutričný stav a možné interakcie s ostatnou liečbou.</p>
 
-<h3>inhibítory SGLT2</h3>
+<h3>Inhibítory SGLT2</h3>
 
-<p>inhibítory SGLT2 navodzujú <strong>mierny úbytok hmotnosti</strong>, a to prevažne stratou kalórií pri glykozúrii, pričom súčasne poskytujú kardio-obličkovú ochranu. Ich úloha pri obezite je teda doplnková – nie sú liekom na chudnutie, ale ich metabolický efekt je vítaným pridaným účinkom pri liečbe, ktorá je pri CKD indikovaná z iných dôvodov.</p>
+<p>Inhibítory SGLT2 navodzujú <strong>mierny úbytok hmotnosti</strong>, a to prevažne stratou kalórií pri glykozúrii, pričom súčasne poskytujú kardio-obličkovú ochranu. Ich úloha pri obezite je teda doplnková – nie sú liekom na chudnutie, ale ich metabolický účinok je vítaným doplnkom liečby, ktorá je pri CKD indikovaná z iných dôvodov.</p>
 
 <h3>Bariatrická a metabolická chirurgia</h3>
 

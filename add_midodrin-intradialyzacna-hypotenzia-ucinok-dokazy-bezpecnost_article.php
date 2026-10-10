@@ -79,7 +79,7 @@ $articles[] = [
 
 <p>To je podstatný rozdiel oproti bežnej predstave o použití „off label“. U pacienta na udržiavacej hemodialýze nejde len o podanie mimo schválenej indikácie, ale o podanie napriek výslovne uvedenej kontraindikácii. Lokálny dialyzačný protokol tento rozdiel neodstraňuje a nenahrádza individuálne odôvodnené a zdokumentované lekárske rozhodnutie.</p>
 
-<p>Rovnakú štruktúru problému má aj <a href="article.php?slug=manitol-20-intradialyzacna-hypotenzia-dokazy-bezpecnost">20 % manitol</a>, pri ktorom slovenské SPC uvádza rozvinutú anúriu medzi kontraindikáciami. Ide o systematickú vlastnosť farmakoterapie IDH, nie o ojedinelú zvláštnosť jedného lieku.</p>
+<p>Rovnakú štruktúru problému má aj <a href="article.php?slug=manitol-20-intradialyzacna-hypotenzia-dokazy-bezpecnost">20 % manitol</a>, pri ktorom slovenské SPC uvádza rozvinutú anúriu medzi kontraindikáciami. Ide o opakujúci sa problém farmakoterapie IDH, nie o ojedinelú zvláštnosť jedného lieku.</p>
 
 <h2>Čo ukazujú klinické dôkazy</h2>
 
@@ -178,7 +178,7 @@ $articles[] = [
 </table>
 </div>
 
-<p>Toto zistenie je pre prax zásadné. Celý mortalitný signál pochádza zo skupiny s častým dávkovaním. Pri nízkej expozícii sa prežívanie od skupiny bez predpisu nelíšilo vôbec – päťročné prežívanie bolo dokonca číselne o niečo vyššie. Nejde teda o údaj, ktorý by hovoril „midodrín je nebezpečný“, ale skôr o údaj, ktorý hovorí: <strong>potreba častého dávkovania je varovným znamením.</strong></p>
+<p>Toto zistenie je pre prax zásadné. Celý mortalitný signál pochádza zo skupiny s častým dávkovaním. Pri nízkej expozícii sa prežívanie od skupiny bez predpisu nelíšilo vôbec – päťročné prežívanie bolo dokonca číselne o niečo vyššie. Údaj teda nehovorí „midodrín je nebezpečný“, ale skôr: <strong>potreba častého dávkovania je varovným znamením.</strong></p>
 
 <p>Autori ten istý záver formulujú ako výzvu aktívne vyhľadávať a liečiť komorbidity a rizikové faktory IDH u pacientov, ktorí midodrín potrebujú, osobitne pri častom podávaní. [3]</p>
 

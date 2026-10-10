@@ -23,11 +23,11 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Nie každá eGFR pod 60 patrí k nefrológovi — a nie každý pacient s normálnou eGFR je bez rizika. KDIGO 2024 nahrádza jednoduché prahy predikciou rizika zlyhania obličiek. Ako to vyzerá v praxi.',
+    'excerpt'      => 'Nie každá eGFR pod 60 patrí k nefrológovi – a nie každý pacient s normálnou eGFR je bez rizika. KDIGO 2024 nahrádza jednoduché prahy predikciou rizika zlyhania obličiek. Ako to vyzerá v praxi.',
     'content'      => <<<'HTML'
-<figure><a href="img/nefrolog-nie-je-lekar-az-pre-dialyzu-vcasne-vysetrenie.webp" rel="noopener noreferrer" target="_blank"><img src="img/nefrolog-nie-je-lekar-az-pre-dialyzu-vcasne-vysetrenie.webp" alt="Dlhá tmavá cesta smerujúca k sotva viditeľnému dialyzačnému prístroju a hneď na jej začiatku otvorené osvetlené dvere s obličkou" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Odbočka existuje dávno pred koncom cesty — a práve včasné vyšetrenie rozhoduje, či sa využije.</figcaption></figure>
+<figure><a href="img/nefrolog-nie-je-lekar-az-pre-dialyzu-vcasne-vysetrenie.webp" rel="noopener noreferrer" target="_blank"><img src="img/nefrolog-nie-je-lekar-az-pre-dialyzu-vcasne-vysetrenie.webp" alt="Dlhá tmavá cesta smerujúca k sotva viditeľnému dialyzačnému prístroju a hneď na jej začiatku otvorené osvetlené dvere s obličkou" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Odbočka existuje dávno pred koncom cesty – a práve včasné vyšetrenie rozhoduje, či sa využije.</figcaption></figure>
 
-<p class="article-dek"><em>Otázka „kedy odoslať k nefrológovi“ má dnes presnejšiu odpoveď než pred desiatimi rokmi. Nie je ňou hodnota eGFR, ale vypočítané riziko zlyhania obličiek — a to sa dá získať zo štyroch údajov, ktoré má ambulancia po ruke.</em></p>
+<p class="article-dek"><em>Otázka „kedy odoslať k nefrológovi“ má dnes presnejšiu odpoveď než pred desiatimi rokmi. Nie je ňou hodnota eGFR, ale vypočítané riziko zlyhania obličiek – a to sa dá získať zo štyroch údajov, ktoré má ambulancia po ruke.</em></p>
 
 <p>Nefrológ sa nezaoberá iba dialýzou a pokročilým zlyhaním obličiek. Väčšinu jeho práce tvorí diagnostika príčin poškodenia obličiek, spomaľovanie progresie chronickej choroby obličiek, liečba hypertenzie a porúch vnútorného prostredia a príprava individualizovanej liečby dávno pred prípadnou potrebou náhrady funkcie obličiek.</p>
 
@@ -43,7 +43,7 @@ $articles[] = [
 
 <h2>Nefrológ a urológ nie sú zameniteľní</h2>
 
-<p>Nefrológ je predovšetkým internisticky orientovaný špecialista. Urológia je chirurgický odbor zameraný na štruktúrne ochorenia obličiek a močových ciest, mužské pohlavné orgány a operačnú liečbu — obštrukciu močových ciest, nádory obličiek, močového mechúra a prostaty, konkrementy vyžadujúce intervenčnú liečbu, poruchy odtoku moču či inkontinenciu.</p>
+<p>Nefrológ je predovšetkým internisticky orientovaný špecialista. Urológia je chirurgický odbor zameraný na štruktúrne ochorenia obličiek a močových ciest, mužské pohlavné orgány a operačnú liečbu: obštrukciu močových ciest, nádory obličiek, močového mechúra a prostaty, konkrementy vyžadujúce intervenčnú liečbu, poruchy odtoku moču či inkontinenciu.</p>
 
 <p>Nefrológ sa sústreďuje na funkciu obličiek, glomerulové ochorenia, albuminúriu, hypertenziu, poruchy elektrolytov a náhradu funkcie obličiek. Pri hematúrii, opakovanej nefrolitiáze alebo obštrukčnej nefropatii je potrebná spolupráca oboch odborov.</p>
 
@@ -55,7 +55,7 @@ $articles[] = [
 
 <p>Často citované tvrdenie, že približne <strong>deväť z desiatich</strong> dospelých s CKD o svojom ochorení nevie, vychádza z amerických populačných údajov a zahŕňa veľký počet ľudí s miernou alebo iba laboratórne definovanou chorobou. Prevalenčné odhady zo Spojených štátov nemožno bez úpravy prenášať na slovenskú populáciu.</p>
 
-<p>Chronická choroba obličiek nie je vylúčená neprítomnosťou príznakov — a zároveň žiadny jednotlivý symptóm nie je pre CKD špecifický.</p>
+<p>Chronická choroba obličiek nie je vylúčená neprítomnosťou príznakov – a zároveň žiadny jednotlivý symptóm nie je pre CKD špecifický.</p>
 
 <h3>Možné klinické prejavy</h3>
 
@@ -91,7 +91,7 @@ $articles[] = [
   </table>
 </div>
 
-<p>Kategórie G1 a G2 samy osebe neznamenajú CKD — musí byť prítomný iný marker poškodenia obličiek.</p>
+<p>Kategórie G1 a G2 samy osebe neznamenajú CKD – musí byť prítomný iný marker poškodenia obličiek.</p>
 
 <p>eGFR nie je priamo nameraná hodnota. Najčastejšie sa vypočítava zo sérového kreatinínu, veku a pohlavia, a ovplyvniť ju môže svalová hmota, amputácia, malnutrícia, extrémna telesná konštitúcia, intenzívna telesná záťaž, užívanie kreatínu aj lieky meniace tubulárnu sekréciu kreatinínu. V situáciách, v ktorých je kreatinín málo spoľahlivý, môže byť užitočný cystatín C alebo kombinovaný výpočet.</p>
 
@@ -116,7 +116,7 @@ $articles[] = [
   </table>
 </div>
 
-<p>Albuminúria môže predchádzať poklesu eGFR, najmä pri diabetickej chorobe obličiek. Nie je však univerzálne prvým prejavom všetkých nefropatií — niektoré tubulointersticiálne, vaskulárne, cystické alebo obštrukčné ochorenia môžu prebiehať bez významnej albuminúrie.</p>
+<p>Albuminúria môže predchádzať poklesu eGFR, najmä pri diabetickej chorobe obličiek. Nie je však univerzálne prvým prejavom všetkých nefropatií – niektoré tubulointersticiálne, vaskulárne, cystické alebo obštrukčné ochorenia môžu prebiehať bez významnej albuminúrie.</p>
 
 <p>Prechodné zvýšenie UACR môže vzniknúť pri horúčke, infekcii močových ciest, intenzívnej fyzickej záťaži, dekompenzovanom srdcovom zlyhávaní, výraznej hyperglykémii alebo počas menštruácie. Nečakaný nález treba potvrdiť opakovaným vyšetrením.</p>
 
@@ -173,7 +173,7 @@ $articles[] = [
 
 <p>Najpoužívanejšia <strong>Kidney Failure Risk Equation</strong> vyžaduje iba štyri údaje: vek, pohlavie, eGFR a UACR. Je validovaná pre CKD kategórie G3 až G5; rovnice vyvinuté pre túto populáciu <strong>nemusia platiť pri kategóriách G1 a G2</strong> a nemajú sa tam nekriticky používať.</p>
 
-<p>Praktický dôsledok je zreteľný: dvaja pacienti s rovnakou eGFR 40 ml/min/1,73 m² môžu mať pri albuminúrii A1 a A3 zásadne odlišné riziko — a teda aj odlišnú naliehavosť odoslania. Bez UACR sa toto rozlíšenie urobiť nedá.</p>
+<p>Praktický dôsledok je zreteľný: dvaja pacienti s rovnakou eGFR 40 ml/min/1,73 m² môžu mať pri albuminúrii A1 a A3 zásadne odlišné riziko – a teda aj odlišnú naliehavosť odoslania. Bez UACR sa toto rozlíšenie urobiť nedá.</p>
 
 <h2>Čo možno očakávať pri prvom vyšetrení</h2>
 
@@ -187,7 +187,7 @@ $articles[] = [
 
 <p>Cieľom je určiť príčinu ochorenia, znížiť renálne a kardiovaskulárne riziko, predchádzať akútnemu poškodeniu obličiek a liečiť komplikácie. Podľa diagnózy môže liečba zahŕňať primeranú kontrolu krvného tlaku, inhibítor ACE alebo blokátor receptora AT1 (najmä pri albuminúrii), inhibítor SGLT2 pri splnení indikačných kritérií, finerenón u vybraných pacientov s diabetom 2. typu a albuminurickou CKD, agonistu receptora GLP-1 podľa konkrétnej indikácie, optimalizáciu liečby diabetu a srdcového zlyhávania, statínovú liečbu podľa celkového kardiovaskulárneho rizika, liečbu metabolickej acidózy, anémie a porúch minerálového metabolizmu, úpravu dávok liekov podľa funkcie obličiek, prevenciu nefrotoxicity a cielenú imunosupresívnu alebo inú špecifickú liečbu pri vybraných nefropatiách.</p>
 
-<p>Tvrdenie, že chronická choroba obličiek sa nedá vyliečiť, je príliš absolútne. Chronické jazvovité poškodenie býva nezvratné, ale niektoré príčiny možno úspešne liečiť a časť funkčnej zložky poškodenia sa môže zlepšiť. Pri mnohých ochoreniach možno progresiu významne spomaliť — nemožno však sľubovať jej zastavenie u každého pacienta.</p>
+<p>Tvrdenie, že chronická choroba obličiek sa nedá vyliečiť, je príliš absolútne. Chronické jazvovité poškodenie býva nezvratné, ale niektoré príčiny možno úspešne liečiť a časť funkčnej zložky poškodenia sa môže zlepšiť. Pri mnohých ochoreniach možno progresiu významne spomaliť – nemožno však sľubovať jej zastavenie u každého pacienta.</p>
 
 <h2>Strava pri CKD sa musí individualizovať</h2>
 
@@ -203,7 +203,7 @@ $articles[] = [
 
 <h2>Nesteroidové protizápalové lieky a ďalšie riziká</h2>
 
-<p>Nesteroidové protizápalové lieky môžu znížiť prietok krvi obličkami a vyvolať akútne poškodenie obličiek, retenciu sodíka, zvýšenie krvného tlaku alebo hyperkaliémiu. Riziko je vyššie pri CKD, dehydratácii, vyššom veku, srdcovom zlyhávaní a pri súčasnom užívaní blokátora systému renín-angiotenzín s diuretikom — klasická „trojitá hrozba“.</p>
+<p>Nesteroidové protizápalové lieky môžu znížiť prietok krvi obličkami a vyvolať akútne poškodenie obličiek, retenciu sodíka, zvýšenie krvného tlaku alebo hyperkaliémiu. Riziko je vyššie pri CKD, dehydratácii, vyššom veku, srdcovom zlyhávaní a pri súčasnom užívaní blokátora systému renín-angiotenzín s diuretikom – klasická „trojitá hrozba“.</p>
 
 <p>Nie je však presné označiť každé krátkodobé užitie za poškodzujúce. Rozhoduje dávka, trvanie, hydratácia, funkcia obličiek a súbežná liečba. Pacient s CKD by mal použitie konzultovať s lekárom a nespoliehať sa na voľnopredajný status lieku.</p>
 
@@ -217,7 +217,7 @@ $articles[] = [
 
 <p>Ak riziko zlyhania obličiek narastá, včasná nefrologická starostlivosť umožňuje edukáciu o možnostiach liečby, posúdenie preemptívnej transplantácie, včasné vytvorenie cievneho prístupu, plánovanie peritoneálnej alebo domácej hemodialýzy a rozhodovanie o konzervatívnej starostlivosti bez dialýzy.</p>
 
-<p>Systematický prehľad Smarta a Titusa a ďalšie observačné práce spájajú skoršie odoslanie s lepšou prípravou na náhradu funkcie obličiek, menším počtom urgentných začatí dialýzy a nižšou mortalitou. Dôkazy však pochádzajú prevažne z <strong>nerandomizovaných</strong> štúdií, preto môžu byť čiastočne ovplyvnené rozdielmi medzi pacientmi odoslanými včas a neskoro — neskoré odoslanie býva zároveň ukazovateľom horšieho zdravotného a sociálneho kontextu.</p>
+<p>Systematický prehľad Smarta a Titusa a ďalšie observačné práce spájajú skoršie odoslanie s lepšou prípravou na náhradu funkcie obličiek, menším počtom urgentných začatí dialýzy a nižšou mortalitou. Dôkazy však pochádzajú prevažne z <strong>nerandomizovaných</strong> štúdií, preto môžu byť čiastočne ovplyvnené rozdielmi medzi pacientmi odoslanými včas a neskoro – neskoré odoslanie býva zároveň ukazovateľom horšieho zdravotného a sociálneho kontextu.</p>
 
 <h2>Kedy treba vyhľadať pomoc bezodkladne</h2>
 
@@ -252,7 +252,7 @@ $articles[] = [
 
 <p>Nefrológ nie je iba špecialista na dialýzu. Jeho najväčší prínos môže spočívať práve v období, keď pacient nemá príznaky a náhrada funkcie obličiek nie je bezprostrednou témou.</p>
 
-<p>Včasná konzultácia má najväčší význam pri rýchlej progresii, významnej albuminúrii, nejasnej hematúrii, rezistentnej hypertenzii, dedičných alebo systémových ochoreniach a vysokom predikovanom riziku zlyhania obličiek. Nie každý mierne abnormálny výsledok však vyžaduje trvalé nefrologické sledovanie. Rozhodnutie má vychádzať z príčiny ochorenia, kategórie eGFR a albuminúrie, vývoja v čase, komplikácií a <strong>vypočítaného individuálneho rizika</strong> — nie z jediného čísla.</p>
+<p>Včasná konzultácia má najväčší význam pri rýchlej progresii, významnej albuminúrii, nejasnej hematúrii, rezistentnej hypertenzii, dedičných alebo systémových ochoreniach a vysokom predikovanom riziku zlyhania obličiek. Nie každý mierne abnormálny výsledok však vyžaduje trvalé nefrologické sledovanie. Rozhodnutie má vychádzať z príčiny ochorenia, kategórie eGFR a albuminúrie, vývoja v čase, komplikácií a <strong>vypočítaného individuálneho rizika</strong> – nie z jediného čísla.</p>
 
 <p>Najdôležitejším cieľom nefrologickej starostlivosti nie je pripraviť pacienta na dialýzu, ale chrániť funkciu obličiek, znižovať kardiovaskulárne riziko a dialýze podľa možnosti predísť.</p>
 
@@ -261,8 +261,8 @@ $articles[] = [
 <h2>Súvisiace články</h2>
 
 <ul>
-  <li><a href="article.php?slug=nefrologicka-ambulancia-co-sa-vysetruje">Čo sa vyšetruje v nefrologickej ambulancii</a> — verzia pre pacientov.</li>
-  <li><a href="article.php?slug=nerozpoznana-ckd-hypertenzia-kardiovaskularne-ochorenie">Nerozpoznaná CKD pri hypertenzii a KV ochorení</a> — prečo diagnóza často chýba.</li>
+  <li><a href="article.php?slug=nefrologicka-ambulancia-co-sa-vysetruje">Čo sa vyšetruje v nefrologickej ambulancii</a> – verzia pre pacientov.</li>
+  <li><a href="article.php?slug=nerozpoznana-ckd-hypertenzia-kardiovaskularne-ochorenie">Nerozpoznaná CKD pri hypertenzii a KV ochorení</a> – prečo diagnóza často chýba.</li>
   <li><a href="article.php?slug=spolupraca-vseobecny-lekar-nefrolog-ckd-g5-joint-kd">Spolupráca všeobecného lekára a nefrológa</a>.</li>
   <li><a href="article.php?slug=upcr-vs-uacr-riziko-zlyhania-obliciek-ckd">UPCR oproti UACR a riziko zlyhania obličiek</a>.</li>
 </ul>
@@ -281,7 +281,7 @@ $articles[] = [
   <li><strong>Centers for Disease Control and Prevention.</strong> <em>Chronic Kidney Disease in the United States.</em> <a href="https://www.cdc.gov/kidney-disease/php/data-research/" target="_blank" rel="noopener noreferrer">CDC</a>.</li>
 </ol>
 
-<p><em><strong>Poznámka k dôkazom:</strong> Prahy rizika zlyhania obličiek odporúčané v KDIGO 2024 — 3 až 5 % za 5 rokov pre odoslanie k nefrológovi, viac než 10 % za 2 roky pre multidisciplinárnu starostlivosť a viac než 40 % za 2 roky pre edukáciu o modalitách a prípravu náhrady funkcie obličiek — ako aj upozornenie, že rovnice validované pre CKD G3 – G5 nemusia platiť pri G1 – G2, boli overené proti verejne dostupnému zneniu odporúčaní. Bibliografia bola overená cez Crossref. <strong>Opravy oproti pôvodnému spracovaniu:</strong> opravené mená <strong>Neil A. Smart</strong> a <strong>Thomas T. Titus</strong> (v podklade nesprávne „Nicole A. Smart, Timothy T. Titus“); autorský kolektív výkonného súhrnu KDIGO 2024 má <strong>33 členov</strong> (v podklade bolo uvedených 12), citácia preto uvádza prvých trinásť a „a spol.“. Doplnené boli dva ďalšie rizikové prahy KDIGO, ktoré podklad neuvádzal. Rozdelenie kompetencií nefrológ – urológ, poznámky k diéte a kritický rozbor populárnych tvrdení sú <strong>vlastným odborným spracovaním</strong>, nie prekladom konkrétneho zdroja.</em></p>
+<p><em><strong>Poznámka k dôkazom:</strong> Prahy rizika zlyhania obličiek odporúčané v KDIGO 2024 – 3 až 5 % za 5 rokov pre odoslanie k nefrológovi, viac než 10 % za 2 roky pre multidisciplinárnu starostlivosť a viac než 40 % za 2 roky pre edukáciu o modalitách a prípravu náhrady funkcie obličiek – ako aj upozornenie, že rovnice validované pre CKD G3 – G5 nemusia platiť pri G1 – G2, boli overené proti verejne dostupnému zneniu odporúčaní. Bibliografia bola overená cez Crossref. <strong>Opravy oproti pôvodnému spracovaniu:</strong> opravené mená <strong>Neil A. Smart</strong> a <strong>Thomas T. Titus</strong> (v podklade nesprávne „Nicole A. Smart, Timothy T. Titus“); autorský kolektív výkonného súhrnu KDIGO 2024 má <strong>33 členov</strong> (v podklade bolo uvedených 12), citácia preto uvádza prvých trinásť a „a spol.“. Doplnené boli dva ďalšie rizikové prahy KDIGO, ktoré podklad neuvádzal. Rozdelenie kompetencií nefrológ – urológ, poznámky k diéte a kritický rozbor populárnych tvrdení sú <strong>vlastným odborným spracovaním</strong>, nie prekladom konkrétneho zdroja.</em></p>
 HTML,
 ];
 

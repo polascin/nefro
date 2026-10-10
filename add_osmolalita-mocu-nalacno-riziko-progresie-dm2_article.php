@@ -27,7 +27,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'V dvoch prospektívnych kohortách pacientov s diabetom 2. typu bola nižšia osmolalita moču nalačno spojená s nepriaznivejšími obličkovými výsledkami po multivariačnej úprave. Výsledky však neurčujú klinický prah ani neopodstatňujú liečbu riadenú týmto ukazovateľom.',
     'content'      => <<<'HTML'
-<figure><a href="img/osmolalita-mocu-nalacno-riziko-progresie-dm2.webp" rel="noopener noreferrer" target="_blank"><img src="img/osmolalita-mocu-nalacno-riziko-progresie-dm2.webp" alt="Skúmavka riedkeho ranného moču v chladnom svetle a od nej strmšie klesajúca trajektória než susedná čiara" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Nenápadné ranné vyšetrenie nesie prognostickú informáciu — schopnosť koncentrovať moč slabne skôr než filtrácia.</figcaption></figure>
+<figure><a href="img/osmolalita-mocu-nalacno-riziko-progresie-dm2.webp" rel="noopener noreferrer" target="_blank"><img src="img/osmolalita-mocu-nalacno-riziko-progresie-dm2.webp" alt="Skúmavka riedkeho ranného moču v chladnom svetle a od nej strmšie klesajúca trajektória než susedná čiara" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Nenápadné ranné vyšetrenie nesie prognostickú informáciu – schopnosť koncentrovať moč slabne skôr než filtrácia.</figcaption></figure>
 
 <p>Odhadovaná glomerulová filtrácia (eGFR) a pomer albumínu a kreatinínu v moči (UACR) zostávajú základom hodnotenia rizika ochorenia obličiek pri diabete 2. typu. Každý z týchto ukazovateľov však zachytáva inú časť obličkovej fyziológie. eGFR odhaduje celkovú filtračnú funkciu a UACR kvantifikuje vylučovanie albumínu; ani jeden priamo netestuje schopnosť obličiek koncentrovať moč.</p>
 
@@ -154,7 +154,7 @@ $articles[] = [
 
 <p class="pdf-avoid-break"><em><strong>Všetci autori a kolektívny autor zdrojovej štúdie:</strong> Jian-Jun Liu; Sylvia Liu; Joe de Keizer; Huili Zheng; Janus Lee; Vincent Javaugue; Resham L. Gurung; Keven Ang; Louis Potier; Robert G. Nelson; Bryan Kestenbaum; Petter Bjornstad; Su Chi Lim; Samy Hadjadj; Pierre-Jean Saulnier; SMART2D and SURDIAGENE Study Groups.</em></p>
 
-<p class="pdf-avoid-break"><em><strong>Bibliografická poznámka:</strong> PubMed uvádza 15 menovaných autorov a kolektívneho autora SMART2D and SURDIAGENE Study Groups. Zoznam členov vyšetrovateľských skupín vedený v PubMed ako <em>InvestigatorList</em> nie je ďalšou autorskou byline. Článok je na stránke vydavateľa distribuovaný v štandardnom publikačnom modeli Oxford University Press, nie pod otvorenou licenciou.</em></p>
+<p class="pdf-avoid-break"><em><strong>Bibliografická poznámka:</strong> PubMed uvádza 15 menovaných autorov a kolektívneho autora SMART2D and SURDIAGENE Study Groups. Zoznam členov vyšetrovateľských skupín vedený v PubMed ako <em>InvestigatorList</em> nepredstavuje ďalších menovaných autorov. Článok je na stránke vydavateľa distribuovaný v štandardnom publikačnom modeli Oxford University Press, nie pod otvorenou licenciou.</em></p>
 
 <p class="pdf-avoid-break"><em><strong>Financovanie evidované v PubMed:</strong> granty STAR 23201, 24102 a 25203; granty Singapore National Medical Research Council 001327-02, 001704-00 a 001688-00; grant French Ministry of Health PHRC-IR 2008 a podpora označená skratkou SFD. Otvorené bibliografické záznamy neuvádzajú úplné znenie vyhlásenia o konfliktoch záujmov ani úlohu financovateľov; tieto údaje preto bez plného textu neinterpretujeme.</em></p>
 HTML,

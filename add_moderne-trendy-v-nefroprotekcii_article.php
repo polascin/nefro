@@ -35,13 +35,13 @@ $articles[] = [
   <figcaption>Moderná liečba cukrovky chráni nielen hladinu cukru, ale aj srdce a obličky.</figcaption>
 </figure>
 
-<p class="article-dek"><em>Moderné lieky pri cukrovke chránia nielen hladinu cukru, ale aj srdce a obličky, čo môže pacientom dodať pocit nádeje a dôvery v liečbu.</em></p>
+<p class="article-dek"><em>Moderné lieky pri cukrovke chránia nielen hladinu cukru, ale aj srdce a obličky. Čo to znamená pre pacienta a čo môže pre svoje obličky urobiť sám.</em></p>
 
 <p>Liečba cukrovky sa za posledné roky výrazne zmenila. Kedysi sa pozornosť sústreďovala najmä na hladinu cukru v krvi. Dnes vieme, že dobrá liečba diabetu má robiť viac. Má chrániť cievy, srdce, mozog a obličky. Práve obličky patria medzi orgány, ktoré cukrovka ohrozuje najčastejšie a často aj nenápadne.</p>
 
 <p>Chronická choroba obličiek môže roky prebiehať bez bolesti a výrazných ťažkostí. Pacient sa môže cítiť relatívne dobre, hoci v moči už môže byť prítomná bielkovina a filtračná schopnosť obličiek sa postupne znižuje. Preto je dôležité obličky nielen liečiť, keď už sú výrazne poškodené, ale aj ich včas chrániť. Tento prístup nazývame <strong>nefroprotekciou</strong>.</p>
 
-<p>Moderná nefroprotekcia zahŕňa nielen kontrolu krvného tlaku a cukru, ale aj nové lieky, ako sú inhibítory SGLT2 a agonisti GLP-1, ktoré sú kľúčové pre ochranu obličiek a srdca, čím sa zdôrazňuje význam včasnej liečby.</p>
+<p>Popri kontrole krvného tlaku a cukru k nej dnes patria aj nové lieky, napríklad inhibítory SGLT2 a agonisti GLP-1, ktoré majú pri ochrane obličiek a srdca kľúčové miesto. O to väčší význam má včasná liečba.</p>
 
 <h2>Prečo cukrovka poškodzuje obličky</h2>
 
@@ -51,7 +51,7 @@ $articles[] = [
 
 <p>Jedným z prvých signálov poškodenia obličiek býva zvýšené vylučovanie albumínu do moču. Albumín je bielkovina, ktorá by sa za normálnych okolností mala v moči nachádzať len vo veľmi malom množstve. Ak jej je viac, znamená to, že filtračná bariéra obličiek je poškodená. Tento nález sa označuje ako <strong>albuminúria</strong>.</p>
 
-<p>Odhadovaná glomerulová filtrácia (eGFR) je kľúčová pre včasné odhalenie poškodenia obličiek. Pravidelné vyšetrenia vám môžu poskytnúť pocit kontroly a istoty v starostlivosti o vaše zdravie.</p>
+<p>Druhým základným ukazovateľom je odhadovaná glomerulová filtrácia (eGFR), teda odhadovaná filtračná schopnosť obličiek. Pravidelné vyšetrenie oboch hodnôt umožňuje odhaliť poškodenie obličiek včas.</p>
 
 <figure class="article-figure">
   <a href="img/nefroprot-02.webp" target="_blank" rel="noopener noreferrer">
@@ -62,7 +62,7 @@ $articles[] = [
 
 <h2>Staré základy liečby zostávajú dôležité</h2>
 
-<p>Naďalej platí, že základné opatrenia, ako je kontrola krvného tlaku a hladiny cukru, sú spoľahlivou cestou na ochranu obličiek. Dôvera v overené metódy posilňuje vašu istotu.</p>
+<p>Naďalej platí, že základom ochrany obličiek je dobrá kontrola krvného tlaku a hladiny cukru.</p>
 
 <p>Medzi klasické lieky s ochranným účinkom na obličky patria najmä ACE inhibítory alebo sartany, teda lieky často používané pri vysokom krvnom tlaku a albuminúrii. Znižujú tlak v obličkových klbkách (glomeruloch) a pomáhajú znižovať únik bielkovín do moču. U mnohých pacientov zostávajú základným pilierom nefroprotekcie.</p>
 
@@ -79,7 +79,7 @@ $articles[] = [
 
 <p>SGLT2 inhibítory sú lieky, ktoré pôvodne vznikli ako liečba cukrovky 2. typu. Ich účinok spočíva v tom, že v obličkách znižujú spätné vstrebávanie glukózy. Časť cukru sa potom vylúči močom. Tým sa zníži hladina glukózy v krvi.</p>
 
-<p>Veľké klinické štúdie preukázali, že SGLT2 inhibítory dokážu znížiť riziko zhoršenia chronickej choroby obličiek, riziko hospitalizácie pre srdcové zlyhávanie a priaznivo ovplyvniť prognózu pacientov s vysokým kardiovaskulárnym rizikom. Tieto dôkazy posilňujú ich význam v modernom liečebnom protokole.</p>
+<p>Veľké klinické štúdie preukázali, že SGLT2 inhibítory dokážu znížiť riziko zhoršenia chronickej choroby obličiek, riziko hospitalizácie pre srdcové zlyhávanie a priaznivo ovplyvniť prognózu pacientov s vysokým kardiovaskulárnym rizikom.</p>
 
 <p>Najčastejšie sa v praxi uvádzajú tieto štúdie:</p>
 
@@ -95,14 +95,14 @@ $articles[] = [
   <a href="img/nefroprot-04.webp" target="_blank" rel="noopener noreferrer">
     <img src="img/nefroprot-04.webp" alt="Ilustrácia: kľúčové štúdie so SGLT2 inhibítormi" loading="lazy" decoding="async">
   </a>
-  <figcaption>SGLT2 inhibítory — kľúčové klinické štúdie</figcaption>
+  <figcaption>SGLT2 inhibítory – kľúčové klinické štúdie</figcaption>
 </figure>
 
 <h3>Ako SGLT2 inhibítory chránia obličky</h3>
 
 <p>Ich ochranný účinok nespočíva iba v znížení glykémie. Veľmi dôležitý je ich vplyv na tlakové pomery vo vnútri obličkových klbiek (glomerulov). Pri cukrovke bývajú tieto klbká často preťažované. Pracujú pod zvýšeným tlakom, čo urýchľuje ich poškodenie.</p>
 
-<p>SGLT2 inhibítory pomáhajú znižovať vnútroobličkový tlak, čím chránia obličky pred poškodením, a ich účinok je dôležitý v moderných liečebných stratégiách na ochranu obličiek.</p>
+<p>SGLT2 inhibítory pomáhajú tento tlak znižovať, a tak chránia obličky pred poškodením.</p>
 
 <p>Tieto lieky môžu tiež mierne znižovať hmotnosť, krvný tlak a množstvo tekutín v tele. To je výhodné najmä u pacientov so srdcovým zlyhávaním alebo so sklonom k opuchom. Nejde však o močopudné lieky v klasickom zmysle slova.</p>
 
@@ -115,7 +115,7 @@ $articles[] = [
 
 <h3>Pre koho môžu byť SGLT2 inhibítory vhodné</h3>
 
-<p>O vhodnosti liečby rozhoduje lekár podľa celkového stavu pacienta, funkcie obličiek, prítomnosti albuminúrie, srdcového zlyhávania, diabetu a ďalších ochorení. Kritériá zahŕňajú hodnoty eGFR, prítomnosť albuminúrie a celkový kardiovaskulárny rizikový profil. Dnes sa tieto lieky používajú nielen u pacientov s cukrovkou 2. typu, ale v určitých situáciách aj u pacientov s chronickou chorobou obličiek alebo srdcovým zlyhávaním bez cukrovky, čím sa rozširujú ich indikácie.</p>
+<p>O vhodnosti liečby rozhoduje lekár podľa celkového stavu pacienta, funkcie obličiek, prítomnosti albuminúrie, srdcového zlyhávania, diabetu a ďalších ochorení a podľa celkového kardiovaskulárneho rizika. Dnes sa tieto lieky používajú nielen u pacientov s cukrovkou 2. typu, ale v určitých situáciách aj u pacientov s chronickou chorobou obličiek alebo srdcovým zlyhávaním bez cukrovky.</p>
 
 <p>To je zásadná zmena. Ukazuje sa, že ochranný účinok tejto skupiny liekov presahuje samotné zníženie hladiny cukru v krvi.</p>
 
@@ -128,7 +128,7 @@ $articles[] = [
 
 <h3>Na čo si dať pozor pri SGLT2 inhibítoroch</h3>
 
-<p>Tak ako všetky lieky, aj SGLT2 inhibítory majú svoje riziká. Dôležité je vyhýbať sa neschváleným peptidom a reklamám na sociálnych sieťach, aby ste si zachovali dôveru v overené informácie a starostlivosť.</p>
+<p>Tak ako všetky lieky, aj SGLT2 inhibítory majú svoje riziká.</p>
 
 <p>Opatrnosť je potrebná pri stavoch spojených s dehydratáciou, vracaním, hnačkami, horúčkou, hladovaním alebo pred niektorými operačnými zákrokmi. V takýchto situáciách môže lekár odporučiť dočasné prerušenie liečby. Pacient by si však nemal liek vysadzovať svojvoľne bez dohody s lekárom, ak nejde o akútny stav alebo o jasné vopred dané poučenie.</p>
 
@@ -145,15 +145,15 @@ $articles[] = [
 
 <p>Druhou významnou skupinou moderných liekov sú agonisti receptora GLP-1. Napodobňujú účinok prirodzeného črevného hormónu GLP-1. Ten sa podieľa na regulácii tvorby inzulínu, spomaľuje vyprázdňovanie žalúdka, znižuje chuť do jedla a priaznivo ovplyvňuje metabolizmus.</p>
 
-<p>Tieto lieky sa používajú pri liečbe cukrovky 2. typu a niektoré z nich aj pri liečbe obezity. V posledných rokoch sa dostali do veľkej pozornosti verejnosti najmä pre svoj účinok pri znižovaní hmotnosti. Jeho význam je však širší.</p>
+<p>Tieto lieky sa používajú pri liečbe cukrovky 2. typu a niektoré z nich aj pri liečbe obezity. Verejnosť ich v posledných rokoch pozná najmä pre účinok na znižovanie hmotnosti. Ich význam je však širší.</p>
 
 <p>U pacientov s diabetom 2. typu, obezitou a vysokým srdcovocievnym rizikom môžu agonisty GLP-1 receptora znižovať riziko závažných kardiovaskulárnych príhod. Pri obličkách sa ich prínos prejavuje najmä znížením albuminúrie a priaznivým ovplyvnením rizikových faktorov, ako sú hmotnosť, glykémia, krvný tlak a zápalovo-metabolické zaťaženie organizmu.</p>
 
 <figure class="article-figure">
   <a href="img/nefroprot-08.webp" target="_blank" rel="noopener noreferrer">
-    <img src="img/nefroprot-08.webp" alt="Ilustrácia: GLP-1 agonisti — viac než lieky na chudnutie" loading="lazy" decoding="async">
+    <img src="img/nefroprot-08.webp" alt="Ilustrácia: GLP-1 agonisti – viac než lieky na chudnutie" loading="lazy" decoding="async">
   </a>
-  <figcaption>GLP-1 receptorové agonisty — viac než lieky na chudnutie</figcaption>
+  <figcaption>GLP-1 receptorové agonisty – viac než lieky na chudnutie</figcaption>
 </figure>
 
 <h3>Ako môžu GLP-1 receptorové agonisty pomáhať obličkám</h3>
@@ -162,7 +162,7 @@ $articles[] = [
 
 <p>To je pre obličky dôležité. Obezita, inzulínová rezistencia a vysoký krvný tlak zvyšujú záťaž obličiek. Ak sa tieto faktory zlepšia, obličky budú vystavené menšiemu dlhodobému tlaku.</p>
 
-<p>Niektoré odporúčania uprednostňujú GLP-1 receptorové agonisty s preukázaným kardiovaskulárnym prínosom najmä u pacientov s diabetom 2. typu a chronickou chorobou obličiek, ak nie je dostatočne dosiahnutá glykemická kontrola napriek metformínu a SGLT2 inhibítoru, alebo ak tieto lieky pacient nemôže užívať.</p>
+<p>Niektoré odporúčania uprednostňujú GLP-1 receptorové agonisty s preukázaným kardiovaskulárnym prínosom najmä u pacientov s diabetom 2. typu a chronickou chorobou obličiek, ak sa napriek metformínu a SGLT2 inhibítoru nedarí dostatočne upraviť glykémiu alebo ak pacient tieto lieky nemôže užívať.</p>
 
 <figure class="article-figure">
   <a href="img/nefroprot-09.webp" target="_blank" rel="noopener noreferrer">
@@ -188,7 +188,7 @@ $articles[] = [
 
 <h2>Čo sú tirzepatid a retatrutid?</h2>
 
-<p>Tirzepatid je liek, ktorý pôsobí na receptory GLP-1 a GIP, čím má dvojitý účinok. Klinické štúdie skúmajú jeho vplyv na glykémiu, hmotnosť a metabolické parametre. Momentálne je tirzepatid klinicky dostupný pre pacientov, avšak nie je hradený zdravotným poistením. Tento liek je predmetom ďalšieho monitorovania. To umožní rýchle získanie nových informácií o bezpečnosti. Od zdravotníckych pracovníkov sa vyžaduje, aby hlásili akékoľvek podozrenia na nežiaduce reakcie.</p>
+<p>Tirzepatid pôsobí na receptory GLP-1 aj GIP, má teda dvojitý účinok. Klinické štúdie skúmajú jeho vplyv na glykémiu, hmotnosť a metabolické parametre. Pre pacientov je dnes dostupný, nie je však hradený zdravotným poistením. Liek podlieha ďalšiemu monitorovaniu, aby sa rýchlo získavali nové informácie o jeho bezpečnosti; zdravotnícki pracovníci majú hlásiť každé podozrenie na nežiaducu reakciu.</p>
 
 <p>Retatrutid je liečivo, ktoré cieli na GLP-1, GIP aj glukagón (tzv. triple, teda trojitý agonista). V štúdiách sa hodnotí najmä jeho potenciál dosiahnuť výraznejšie zmeny v hmotnosti a ďalších metabolických ukazovateľoch. Nie je ešte schválený na bežné klinické použitie.</p>
 
@@ -201,7 +201,7 @@ $articles[] = [
 
 <h3>Prečo ich ľudia sledujú aj pri diabete 2. typu?</h3>
 
-<p>Aj keď sa niektoré účinky spájajú s chudnutím, sú tu aj ďalšie možné benefity:</p>
+<p>Okrem chudnutia sa sledujú aj ďalšie možné prínosy:</p>
 
 <ul>
   <li>zlepšenie metabolizmu (cukor v krvi, inzulínová rezistencia),</li>
@@ -223,16 +223,16 @@ $articles[] = [
 
 <h2>nsMRA: nové možnosti ochrany obličiek a srdca</h2>
 
-<p>nsMRA je skratka pre non-steroidal mineralocorticoid receptor antagonists, po slovensky ide o lieky, ktoré blokujú mineralokortikoidný receptor (nie sú to „klasické“ steroidné antagonisty). V praxi sa najčastejšie stretávame s <strong>finerenónom</strong>. Tieto lieky majú význam najmä pri diabetickej chorobe obličiek.</p>
+<p>nsMRA je skratka anglického názvu non-steroidal mineralocorticoid receptor antagonists. Ide o lieky, ktoré blokujú mineralokortikoidný receptor (nie sú to „klasické“ steroidné antagonisty). V praxi sa najčastejšie stretávame s <strong>finerenónom</strong>. Tieto lieky majú význam najmä pri diabetickej chorobe obličiek.</p>
 
 <figure class="article-figure">
   <a href="img/nefroprot-12.webp" target="_blank" rel="noopener noreferrer">
-    <img src="img/nefroprot-12.webp" alt="Ilustrácia: nsMRA — nové možnosti ochrany obličiek a srdca" loading="lazy" decoding="async">
+    <img src="img/nefroprot-12.webp" alt="Ilustrácia: nsMRA – nové možnosti ochrany obličiek a srdca" loading="lazy" decoding="async">
   </a>
-  <figcaption>nsMRA — nové možnosti ochrany obličiek a srdca</figcaption>
+  <figcaption>nsMRA – nové možnosti ochrany obličiek a srdca</figcaption>
 </figure>
 
-<h3>Pre koho to dáva zmysel</h3>
+<h3>Pre koho sú vhodné</h3>
 
 <p>nsMRA sa zvyčajne zvažujú u ľudí s:</p>
 
@@ -248,9 +248,9 @@ $articles[] = [
 
 <h3>Najväčšie „ale“: draslík (hyperkaliémia)</h3>
 
-<p>Najdôležitejším rizikom nsMRA je zvýšenie hladiny draslíka v krvi. Preto sa musí sledovať hladina kália a liečba sa podľa výsledkov dávkuje alebo dočasne pozastaví. Prakticky sa v štúdiách používali hranice, napríklad pri hodnotách draslíka nad približne 5,5 mmol/l sa liek zvyčajne zadrží a znovu sa nasadí po poklese. Presný postup sa riadi odporúčaniami a lokálnym nastavením.</p>
+<p>Najdôležitejším rizikom nsMRA je zvýšenie hladiny draslíka v krvi. Preto treba sledovať hladinu draslíka (kália) a podľa výsledkov liečbu upraviť alebo dočasne prerušiť. V štúdiách sa používali pevné hranice: napríklad pri draslíku nad približne 5,5 mmol/l sa liek zvyčajne zadrží a po poklese sa znovu nasadí. Presný postup sa riadi odporúčaniami a miestnymi zvyklosťami.</p>
 
-<p>Ako to pacient vníma v každodennom živote:</p>
+<p>Čo to znamená v každodennom živote:</p>
 
 <ul>
   <li>kontroluje sa krv (draslík, obličkové parametre),</li>
@@ -266,14 +266,14 @@ $articles[] = [
   <a href="img/nefroprot-13.webp" target="_blank" rel="noopener noreferrer">
     <img src="img/nefroprot-13.webp" alt="Ilustrácia: výskumné peptidy a riziká neoverených látok" loading="lazy" decoding="async">
   </a>
-  <figcaption>Výskumné peptidy — prečo je opatrnosť na mieste</figcaption>
+  <figcaption>Výskumné peptidy – prečo je opatrnosť na mieste</figcaption>
 </figure>
 
 <h3>Prečo je to nebezpečné</h3>
 
 <ul>
   <li><strong>Nie sú to lieky, ktoré prešli bežným schvaľovacím procesom pre pacientov.</strong> Regulátori opakovane upozorňujú na predaj produktov, ktoré nie sú schválené a môžu byť aj nesprávne označené (napríklad ako určené „na výskum“, ale predávané spotrebiteľom).</li>
-  <li><strong>Obsah a kvalita nemusia zodpovedať tomu, čo tvrdí reklama.</strong> Pri „výskumných“ produktoch môže byť problém v čistote, účinnosti, stabilite, sterilite a konzistencii dávok. A keď človek nevie, čo presne dostáva, nevie ani bezpečne nastaviť riziká.</li>
+  <li><strong>Obsah a kvalita nemusia zodpovedať tomu, čo tvrdí reklama.</strong> Pri „výskumných“ produktoch môže byť problém v čistote, účinnosti, stabilite, sterilite a konzistencii dávok. A keď človek nevie, čo presne dostáva, nevie ani odhadnúť riziká.</li>
   <li><strong>Dávkovanie a „protokoly“ bývajú prebraté z internetu, nie z medicínskej indikácie.</strong> Tvorcovia obsahu často používajú vlastné „návody“ a dávkovacie schémy bez toho, aby bolo jasné, či ide o reálny klinický plán pre konkrétneho človeka.</li>
 </ul>
 
@@ -281,21 +281,21 @@ $articles[] = [
 
 <ul>
   <li>„Influenceri“ a tvorcovia obsahu prezentujú peptidy ako „prírodnejší“ alebo „bezpečnejší“ variant liečby, hoci pri neschválených látkach to nemusí byť pravda.</li>
-  <li>Platená spolupráca a skryté odporúčania môžu vytvoriť dojem, že ide o overenú informáciu. Bez jasného označenia spolupráce a bez medicínskej zodpovednosti to klame.</li>
+  <li>Platená spolupráca a skryté odporúčania môžu vytvoriť dojem, že ide o overenú informáciu. Bez jasného označenia spolupráce a bez medicínskej zodpovednosti je to klamlivé.</li>
   <li>Strach a nádej idú ruka v ruke. Ľudia s cukrovkou hľadajú riešenie na hmotnosť, inzulínovú rezistenciu alebo „lepšie čísla“ a práve to sa v reklame často zneužíva.</li>
 </ul>
 
-<h3>Čo je na mieste pre čitateľov</h3>
+<h3>Čo z toho vyplýva pre čitateľov</h3>
 
 <p>Ak uvažujete o akomkoľvek „peptide“, hlavná kontrolná otázka je: ide o schválenú liečbu pre pacienta alebo o neschválenú látku predávanú pod rúškom „výskumu“? Odporúčania pre bezpečnejší postup:</p>
 
 <ul>
   <li>Nezačínajte bez dohľadu lekára, najmä ak máte diabetes 2. typu a už užívate lieky na cukor alebo máte ochorenie obličiek.</li>
-  <li>Zaobstarajte si informáciu z primárneho zdroja (vaše aktuálne odporúčania, SPC, regulátorské informácie) a nie z reklamy ani z „recenzií“.</li>
+  <li>Informácie hľadajte v primárnych zdrojoch (vaše aktuálne odporúčania, SPC, regulátorské informácie), nie v reklame ani v „recenziách“.</li>
   <li>Ak reklama sľubuje rýchly efekt a „garantované výsledky“, berte to ako varovný signál.</li>
 </ul>
 
-<p>Krátka realita pre diabetikov: ak je niečo v reklame „nové“, „tajné“ alebo „z výskumu“, nemusí to byť bezpečnejšie. Pri cukrovke ide o liečbu, kde rozhoduje presnosť a sledovanie, nie iba trend.</p>
+<p>Pre diabetikov platí jednoduché pravidlo: ak je niečo v reklame „nové“, „tajné“ alebo „z výskumu“, nemusí to byť bezpečnejšie. Pri cukrovke ide o liečbu, kde rozhoduje presnosť a sledovanie, nie iba trend.</p>
 
 <h2>Čo znamená „kardiorenometabolická“ liečba</h2>
 
@@ -316,7 +316,7 @@ $articles[] = [
 
 <p>Hodnota glykovaného hemoglobínu je dôležitá. Ukazuje priemernú úroveň glykémie za posledné týždne až mesiace. Nie je však jediným ukazovateľom úspešnej liečby.</p>
 
-<p>Pacient môže mať prijateľnú hladinu cukru, ale zároveň vysoký krvný tlak, albuminúriu, obezitu, zvýšené hladiny tukov v krvi a vysoké riziko srdcového zlyhávania. V takom prípade nestačí povedať, že „cukor je dobrý“. Potrebné je pozrieť sa na celý obraz.</p>
+<p>Pacient môže mať prijateľnú hladinu cukru, ale zároveň vysoký krvný tlak, albuminúriu, obezitu, zvýšené hladiny tukov v krvi a vysoké riziko srdcového zlyhávania. V takom prípade nestačí povedať, že „cukor je dobrý“. Treba vidieť celý obraz.</p>
 
 <p>Pri diabete 2. typu sa preto čoraz viac hodnotí, či liečba chráni pacienta aj pred komplikáciami, ktoré najviac skracujú život a znižujú jeho kvalitu.</p>
 
@@ -425,15 +425,15 @@ $articles[] = [
 
 <h2>Nefroprotektívny plán doma: čo sledovať a ako bezpečne brať lieky</h2>
 
-<p>Pri nefroprotekcii nejde len o „dobré lieky“, ale aj o správne sledovanie a bezpečné používanie. Dobré výsledky majú oporu v tom, že sa hodnotí trend eGFR a albumínu v moči (UACR) v čase, nie jedna jednorazová hodnota. Zároveň je dôležité, aby sa liečba nastavila cielene a s kontrolami: pri niektorých liekoch (najmä tých, ktoré ovplyvňujú hladinu draslíka) sa pravidelne kontrolujú kreatinín a draslík podľa plánu vášho nefrológa či diabetológa a po každej zmene dávky.</p>
+<p>Pri nefroprotekcii nejde len o „dobré lieky“, ale aj o správne sledovanie a bezpečné používanie. Hodnotí sa vývoj eGFR a albumínu v moči (UACR) v čase, nie jedna izolovaná hodnota. Liečba sa nastavuje cielene a s kontrolami: pri niektorých liekoch (najmä tých, ktoré ovplyvňujú hladinu draslíka) sa pravidelne kontrolujú kreatinín a draslík podľa plánu vášho nefrológa či diabetológa a po každej zmene dávky.</p>
 
-<p>Nemenej dôležité sú tzv. „sick day“ pravidlá: keď má človek akútnu nevoľnosť s vracaním, hnačkou, horúčkou alebo výrazne zníženým príjmom tekutín a hrozí mu dehydratácia, môže sa zhoršiť rovnováha organizmu a niektoré lieky sa môžu dočasne pozastaviť. Pri začatí SGLT2 inhibítora sa preto od začiatku má dodržiavať presné odporúčanie na „sick day“ postup a na to, kedy liek dočasne nebrať. Pri plánovaných výkonoch sa postup tiež riadi odporúčaniami (napríklad pri SGLT2 inhibítoroch sa bežne odporúča vopred vysadenie podľa pravidiel pre daný typ zákroku).</p>
+<p>Nemenej dôležité sú tzv. „sick day“ pravidlá: keď má človek akútnu nevoľnosť s vracaním, hnačkou, horúčkou alebo výrazne zníženým príjmom tekutín a hrozí mu dehydratácia, môže sa narušiť vnútorné prostredie organizmu a niektoré lieky treba dočasne vynechať. Kto začína užívať SGLT2 inhibítor, mal by preto od začiatku poznať presný postup pre „sick day“ a vedieť, kedy liek dočasne nebrať. Aj pri plánovaných výkonoch sa postupuje podľa odporúčaní (pri SGLT2 inhibítoroch sa bežne odporúča liek vopred vysadiť podľa pravidiel pre daný typ zákroku).</p>
 
 <figure class="article-figure">
   <a href="img/nefroprot-21.webp" target="_blank" rel="noopener noreferrer">
-    <img src="img/nefroprot-21.webp" alt="Ilustrácia: nefroprotekcia v praxi — sledovanie a bezpečné užívanie liekov" loading="lazy" decoding="async">
+    <img src="img/nefroprot-21.webp" alt="Ilustrácia: nefroprotekcia v praxi – sledovanie a bezpečné užívanie liekov" loading="lazy" decoding="async">
   </a>
-  <figcaption>Nefroprotektívny plán doma — sledovanie a bezpečné užívanie liekov</figcaption>
+  <figcaption>Nefroprotektívny plán doma – sledovanie a bezpečné užívanie liekov</figcaption>
 </figure>
 
 <h2>Zhrnutie pre pacienta</h2>

@@ -27,9 +27,9 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d'),
     'is_top'       => 0,
-    'excerpt'      => 'Nové experimentálne práce naznačujú, že mRNA vakcíny aktivujú imunitu širšie, než sa predpokladalo — okrem dendritických buniek sa zapájajú aj svalové bunky a mechanizmy cross-presentation a cross-dressing.',
+    'excerpt'      => 'Nové experimentálne práce naznačujú, že mRNA vakcíny aktivujú imunitu širšie, než sa predpokladalo – okrem dendritických buniek sa zapájajú aj svalové bunky a mechanizmy cross-presentation a cross-dressing.',
     'content'      => <<<'HTML'
-<figure><a href="img/mrna-vakciny-funguju-sirsie-nez-sme-mysleli.webp" rel="noopener noreferrer" target="_blank"><img src="img/mrna-vakciny-funguju-sirsie-nez-sme-mysleli.webp" alt="Vlákno mRNA v lipidovej guličke, ktorej svetlo siaha širšie než na jeden cieľ a aktivuje okolité imunitné bunky" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Okrem cielenej odpovede sa aktivuje aj širšia vrstva imunity — a to otvára ďalšie využitie.</figcaption></figure>
+<figure><a href="img/mrna-vakciny-funguju-sirsie-nez-sme-mysleli.webp" rel="noopener noreferrer" target="_blank"><img src="img/mrna-vakciny-funguju-sirsie-nez-sme-mysleli.webp" alt="Vlákno mRNA v lipidovej guličke, ktorej svetlo siaha širšie než na jeden cieľ a aktivuje okolité imunitné bunky" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Okrem cielenej odpovede sa aktivuje aj širšia vrstva imunity – a to otvára ďalšie využitie.</figcaption></figure>
 
 <p>Vedci dlhé roky predpokladali, že kľúčom účinku mRNA vakcín je ich vstup do dendritických buniek. Tieto bunky patria medzi hlavné „prezentátory“ antigénu a dokážu účinne aktivovať T-lymfocyty. Nové experimentálne práce však naznačujú, že tento mechanizmus je zrejme širší a biologicky pestrejší.</p>
 
@@ -41,7 +41,7 @@ $articles[] = [
 
 <p>Naopak, keď bola expresia vypnutá v pečeňových bunkách, T-bunková odpoveď sa zvýšila. To môže znamenať, že pečeňové bunky v tomto kontexte skôr tlmia imunitnú aktiváciu. Vypnutie expresie v dendritických bunkách neodstránilo T-bunkovú aktiváciu, hoci pri niektorých antigénoch znížilo počet cytotoxických T-lymfocytov.</p>
 
-<p>Dôležité je, že tieto výsledky neznamenajú, že dendritické bunky nie sú dôležité. Skôr ukazujú, že mRNA nemusí nutne vstúpiť priamo do dendritickej bunky, aby sa spustila imunitná odpoveď.</p>
+<p>Tieto výsledky neznamenajú, že dendritické bunky sú nepodstatné. Skôr ukazujú, že mRNA nemusí nutne vstúpiť priamo do dendritickej bunky, aby sa spustila imunitná odpoveď.</p>
 
 <h2>Priama prezentácia, cross-presentation a cross-dressing</h2>
 
@@ -55,7 +55,7 @@ $articles[] = [
 
 <h2>Prečo je to dôležité pre budúcu medicínu</h2>
 
-<p>Lepšie pochopenie fungovania mRNA nie je len akademická otázka. Má praktický význam pre vývoj vakcín a liečebných postupov.</p>
+<p>Lepšie pochopenie toho, ako mRNA funguje, má praktický význam pre vývoj vakcín a liečebných postupov.</p>
 
 <p>Pri onkologických mRNA vakcínach je cieľom čo najsilnejšie aktivovať cytotoxické CD8+ T-lymfocyty, ktoré dokážu rozpoznávať a ničiť nádorové bunky. Pri mRNA terapiách genetických ochorení je situácia opačná. Tam môže byť žiaduce imunitnú reakciu skôr potlačiť, aby organizmus nezničil bunky, ktoré majú byť liečebne upravené.</p>
 
@@ -67,7 +67,7 @@ $articles[] = [
 
 <p>mRNA platforma sa javí ako flexibilnejší biologický nástroj. Dokáže zapojiť rôzne typy buniek a rôzne mechanizmy imunitnej prezentácie. Práve táto variabilita môže byť jedným z dôvodov, prečo má mRNA technológia potenciál nielen vo vakcinológii, ale aj v onkológii, imunoterapii a liečbe genetických ochorení.</p>
 
-<p>Zároveň treba dodať, že ide prevažne o experimentálne poznatky, najmä z myších modelov. Ich priamy klinický význam u ľudí bude potrebné ďalej overovať. Napriek tomu ide o dôležitý posun v chápaní jednej z najvýznamnejších biomedicínskych technológií súčasnosti.</p>
+<p>Zároveň treba dodať, že ide prevažne o experimentálne poznatky, najmä z myších modelov. Ich priamy klinický význam u ľudí bude potrebné ďalej overovať. Napriek tomu ide o dôležitý posun v chápaní mRNA technológie.</p>
 
 <hr>
 

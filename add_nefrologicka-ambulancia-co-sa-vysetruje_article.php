@@ -42,9 +42,9 @@ $articles[] = [
   <img src="img/nefrologicka-ambulancia-co-sa-vysetruje.webp" alt="Infografika: čo sa vyšetruje a sleduje v nefrologickej ambulancii" loading="lazy" decoding="async">
 </figure>
 
-<p>Nefrologická ambulancia sa stará o <strong>zdravie obličiek</strong> — od včasného záchytu
-problémov cez liečbu ochorení až po prípravu na dialýzu, ak je potrebná. V tomto článku
-prehľadne vysvetlíme, čo sa v nej vyšetruje a sleduje.</p>
+<p>Nefrologická ambulancia sa stará o <strong>zdravie obličiek</strong> – od včasného záchytu
+problémov cez liečbu ochorení až po prípravu na dialýzu, ak je potrebná. Nižšie nájdete,
+čo sa v nej vyšetruje a sleduje.</p>
 
 <h2>Klinická nefrológia</h2>
 <p>Ide o diagnostiku a liečbu ochorení obličiek. Nefrológ rieši napríklad chronické ochorenie
@@ -54,25 +54,25 @@ postup ochorenia</strong> a chrániť funkciu obličiek čo najdlhšie.</p>
 
 <h2>Preventívna nefrológia</h2>
 <p>Mnohé ochorenia obličiek dlho nebolia a prebiehajú ticho. Preto je dôležité
-<strong>včasné odhalenie</strong> u rizikových ľudí — pacientov s cukrovkou, vysokým tlakom,
+<strong>včasné odhalenie</strong> u rizikových ľudí – pacientov s cukrovkou, vysokým tlakom,
 ochorením srdca alebo s ochorením obličiek v rodine. Pravidelné sledovanie umožní zachytiť
 zmeny skôr, než narobia škodu.</p>
 
 <h2>Čo sa typicky vyšetruje a sleduje</h2>
 <ul>
-  <li><strong>Krvný tlak</strong> — kľúčový pre obličky aj srdce.</li>
-  <li><strong>Funkcia obličiek</strong> — kreatinín a vypočítaná glomerulárna filtrácia (eGFR).</li>
-  <li><strong>Moč</strong> — najmä bielkovina/albumín v moči (albuminúria) a prítomnosť krvi.</li>
-  <li><strong>Soli a minerály</strong> — draslík, sodík, vápnik, fosfor a ďalšie.</li>
-  <li><strong>Krvný obraz</strong> — napr. záchyt chudokrvnosti (anémie) pri CKD.</li>
+  <li><strong>Krvný tlak</strong> – kľúčový pre obličky aj srdce.</li>
+  <li><strong>Funkcia obličiek</strong> – kreatinín a vypočítaná glomerulárna filtrácia (eGFR).</li>
+  <li><strong>Moč</strong> – najmä bielkovina/albumín v moči (albuminúria) a prítomnosť krvi.</li>
+  <li><strong>Soli a minerály</strong> – draslík, sodík, vápnik, fosfor a ďalšie.</li>
+  <li><strong>Krvný obraz</strong> – napr. záchyt chudokrvnosti (anémie) pri CKD.</li>
   <li><strong>Ultrazvuk</strong> obličiek, močových ciest a brucha podľa potreby.</li>
 </ul>
-<p>Výsledky lekár hodnotí v čase — dôležitý je <strong>vývoj</strong>, nielen jedno číslo.</p>
+<p>Výsledky lekár hodnotí v čase: dôležitý je <strong>vývoj</strong>, nielen jedno číslo.</p>
 
 <h2>Príprava na zaradenie do dialyzačného programu</h2>
 <p>Ak ochorenie postupuje, ambulancia pripravuje pacienta na <strong>chronický intermitentný
 hemodialyzačný program alebo program peritoneálnej dialýzy</strong>. To zahŕňa rozhovor o voľbe metódy
-(hemodialýza vs. peritoneálna dialýza), <strong>včasné plánovanie cievneho prístupu alebo PD
+(hemodialýza alebo peritoneálna dialýza), <strong>včasné plánovanie cievneho prístupu alebo PD
 katétra</strong>, vysvetlenie priebehu liečby a sprevádzanie pri rozhodovaní. Tam, kde je
 vhodná transplantácia, ambulancia zabezpečí vyšetrenia a odoslanie do transplantačného centra.</p>
 
