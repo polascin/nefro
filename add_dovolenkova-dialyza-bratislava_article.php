@@ -56,7 +56,7 @@ zaužívanom režime – spravidla trikrát týždenne – len na inom mieste. D
 <h2>Ako si ju zariadiť – krok za krokom</h2>
 
 <ol>
-  <li><strong>Ozvite sa s dostatočným predstihom.</strong> Ideálne niekoľko týždňov pred cestou  – 
+  <li><strong>Ozvite sa s dostatočným predstihom.</strong> Ideálne niekoľko týždňov pred cestou –
       kapacita býva obmedzená, najmä v letných mesiacoch.</li>
   <li><strong>Dohodnite termíny.</strong> So strediskom si potvrďte konkrétne dni a časy dialýz
       počas vášho pobytu.</li>

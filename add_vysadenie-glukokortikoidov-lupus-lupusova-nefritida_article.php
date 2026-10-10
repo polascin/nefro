@@ -41,7 +41,7 @@ $articles[] = [
 
 <h2>Čo priniesla kohorta pacientov s lupusovou nefritídou</h2>
 
-<p>Ioannis E. Michelakis a spoluautori analyzovali 136 pacientov s biopticky potvrdenou lupusovou nefritídou diagnostikovanou v rokoch 1992 až 2021. Pacientov sledovali spolupracujúce reumatologické a nefrologické pracovisko nemocnice Laiko v Aténach. Medián sledovania bol 121 mesiacov. [2]</p>
+<p>Ioannis E. Michelakis a spoluautori analyzovali 136 pacientov s biopticky potvrdenou lupusovou nefritídou diagnostikovanou v rokoch 1992 až 2021. Pacientov sledovali spolupracujúce reumatologické a nefrologické pracoviská nemocnice Laiko v Aténach. Medián sledovania bol 121 mesiacov. [2]</p>
 
 <p>Proliferatívnu nefritídu vrátane zmiešaných foriem malo 97 pacientov a čistú membranóznu formu 39 pacientov. Zo súboru boli vylúčení pacienti so zlyhaním obličiek vyžadujúcim liečbu nahrádzajúcu funkciu obličiek pri diagnóze alebo krátko po nej. Výsledky preto nemožno bez výhrad preniesť na najťažšie renálne prezentácie.</p>
 
