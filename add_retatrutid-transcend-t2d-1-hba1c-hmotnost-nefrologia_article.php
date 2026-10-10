@@ -156,7 +156,7 @@ $articles[] = [
 
 <p>Účinok bol jasne závislý od dávky. Rozdiely oproti placebu v poslednom stĺpci sú <strong>vlastným odčítaním priemerov</strong>, nie publikovanými odhadmi liečebného rozdielu — publikovaný abstrakt pri hmotnosti neuvádza ani bodové odhady rozdielu, ani intervaly spoľahlivosti. Treba ich preto brať ako orientačné.</p>
 
-<p>Podľa tlačovej správy Americkej diabetologickej asociácie predstavoval priemerný úbytok pri najvyššej dávke približne 36,6 libry, teda asi 16,6 kg. Z toho vyplýva východisková hmotnosť približne 99 kg. Úbytok hmotnosti nedosiahol do 40. týždňa maximum, krivka teda ešte neklesla do plató.</p>
+<p>Podľa tlačovej správy Americkej diabetologickej asociácie predstavoval priemerný úbytok pri najvyššej dávke približne 36,6 libry, teda asi 16,6 kg. Z toho vyplýva východisková hmotnosť približne 99 kg. Úbytok hmotnosti nedosiahol do 40. týždňa maximum, krivka teda ešte nedosiahla plató.</p>
 
 <div class="pdf-avoid-break">
 <h3>Pozor na rozdielne čísla: dva estimandy</h3>
@@ -172,7 +172,7 @@ $articles[] = [
 
 <p>TRANSCEND-T2D-1 neobsahovala aktívny komparátor. Z jej výsledkov preto nemožno tvrdiť, že retatrutid je účinnejší než semaglutid alebo tirzepatid.</p>
 
-<p>Nepriame porovnania medzi samostatnými štúdiami skresľujú rozdiely v:</p>
+<p>Nepriame porovnanie samostatných štúdií je skreslené rozdielmi v:</p>
 
 <ul>
   <li>trvaní diabetu a predchádzajúcej liečbe,</li>
@@ -334,7 +334,7 @@ $articles[] = [
 <ol>
   <li><strong>Krátke sledovanie.</strong> Štyridsať týždňov nestačí na posúdenie dlhodobej bezpečnosti, udržateľnosti hmotnosti ani orgánových výsledkov.</li>
   <li><strong>Selektovaná populácia.</strong> Išlo prevažne o pacientov s obezitou a včasným diabetom liečeným iba režimovými opatreniami.</li>
-  <li><strong>Chýbajúci aktívny komparátor.</strong> Štúdia neumožňuje priamu konfrontáciu so semaglutidom, tirzepatidom ani metformínom.</li>
+  <li><strong>Chýbajúci aktívny komparátor.</strong> Štúdia neumožňuje priame porovnanie so semaglutidom, tirzepatidom ani metformínom.</li>
   <li><strong>Obmedzená štatistická sila pre zriedkavé riziká.</strong> Bezpečnostný súbor bol príliš malý na vylúčenie neobvyklých komplikácií.</li>
   <li><strong>Bez kardiorenálnych výsledkov.</strong> Zmeny metabolických markerov nie sú náhradou za klinické príhody.</li>
   <li><strong>Nejasná udržateľnosť po vysadení.</strong> Štúdia neurčila rozsah opätovného nárastu hmotnosti a zhoršenia glykémie po ukončení liečby.</li>

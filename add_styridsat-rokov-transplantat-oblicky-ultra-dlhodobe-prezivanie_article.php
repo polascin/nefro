@@ -35,11 +35,11 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Írska kohorta pacientov s funkčným obličkovým štepom po viac ako 40 rokoch ukazuje význam živého darcovstva, nízko nastavenej individualizovanej imunosupresie a celoživotného skríningu kožných nádorov.',
     'content'      => <<<'HTML'
-<figure><a href="img/styridsat-rokov-transplantat-oblicky-ultra-dlhodobe-prezivanie.webp" rel="noopener noreferrer" target="_blank"><img src="img/styridsat-rokov-transplantat-oblicky-ultra-dlhodobe-prezivanie.webp" alt="Oblička žiariaca na konci veľmi dlhého svetelného koridoru zloženého z ustupujúcich prstencov" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Štyri desaťročia funkcie štepu nie sú náhoda — ukazujú, čo je pri priaznivej kombinácii faktorov možné.</figcaption></figure>
+<figure><a href="img/styridsat-rokov-transplantat-oblicky-ultra-dlhodobe-prezivanie.webp" rel="noopener noreferrer" target="_blank"><img src="img/styridsat-rokov-transplantat-oblicky-ultra-dlhodobe-prezivanie.webp" alt="Oblička žiariaca na konci veľmi dlhého svetelného koridoru zloženého z ustupujúcich prstencov" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Štyri desaťročia funkcie štepu nie sú náhoda – ukazujú, čo je pri priaznivej kombinácii faktorov možné.</figcaption></figure>
 
 <p>Transplantácia obličky je pre mnohých pacientov s terminálnym zlyhaním obličiek najlepšou formou náhrady funkcie obličiek. Pri hodnotení úspechu sa často sleduje jednoročné, päťročné alebo desaťročné prežívanie štepu. Osobitne cennú skupinu však tvoria pacienti, u ktorých transplantovaná oblička funguje štyridsať rokov a viac.</p>
 
-<p>Nová štúdia publikovaná v <em>Journal of Nephrology</em> analyzuje írsku kohortu pacientov s extrémne dlhým prežívaním obličkového štepu. Je to prakticky dôležitá práca: ukazuje, že veľmi dlhodobá funkcia transplantovanej obličky nie je len historická kuriozita, ale klinicky dosiahnuteľný výsledok pri priaznivých podmienkach, dôslednej dispenzarizácii a individualizovanej imunosupresii.</p>
+<p>Nová štúdia publikovaná v <em>Journal of Nephrology</em> analyzuje írsku kohortu pacientov s extrémne dlhým prežívaním obličkového štepu. Pre prax je dôležitá, pretože ukazuje, že veľmi dlhodobá funkcia transplantovanej obličky nie je len historická kuriozita, ale klinicky dosiahnuteľný výsledok pri priaznivých podmienkach, dôslednej dispenzarizácii a individualizovanej imunosupresii.</p>
 
 <p>Pre nefrológa je takýto súbor zaujímavý aj preto, že mení perspektívu. Nejde iba o otázku, ako zabrániť skorému zlyhaniu štepu. Ide o to, ako viesť pacienta celé desaťročia tak, aby sa zachovala funkcia štepu a zároveň sa minimalizovala cena chronickej imunosupresie.</p>
 
@@ -55,7 +55,7 @@ $articles[] = [
 
 <p>Išlo o retrospektívnu analýzu údajov z írskeho národného registra transplantácií obličiek. Do analýzy boli zahrnuté transplantácie vykonané v uvedenom období.</p>
 
-<p>Celý súbor zahŕňal 428 transplantácií u 394 pacientov. Longitudinálne údaje boli dostupné u 390 pacientov, teda u 98,9 % sledovanej kohorty. To je pri takomto historickom časovom rozpätí veľmi dobrá dostupnosť dát.</p>
+<p>Celý súbor zahŕňal 428 transplantácií u 394 pacientov. Longitudinálne údaje boli dostupné u 390 pacientov, teda u 98,9 % sledovanej kohorty. Pri takom dlhom historickom rozpätí je to veľmi dobrá úplnosť údajov.</p>
 
 <p>Štúdia sa nezameriavala len na samotný fakt prežitia štepu. Sledovala aj klinické charakteristiky ultra-dlhodobých prežívajúcich, funkciu štepu, typ transplantácie a významné komplikácie dlhodobého prežívania.</p>
 
@@ -65,7 +65,7 @@ $articles[] = [
 
 <p>Funkcia prežívajúcich štepov bola pozoruhodne dobrá. Medián sérového kreatinínu u pacientov s prežívajúcim transplantátom bol 107 µmol/l, s rozsahom 66 až 322 µmol/l. Tento údaj ukazuje, že časť pacientov mala aj po štyroch desaťročiach funkciu transplantovanej obličky v klinicky veľmi priaznivom pásme.</p>
 
-<p>Multivariačná analýza identifikovala ako významný faktor dlhodobého prežívania typ transplantácie. Transplantácia od živého darcu bola v porovnaní s transplantáciou od mŕtveho darcu spojená s lepším ultra-dlhodobým prežívaním štepu. Odds ratio bolo 3,51, 95 % interval spoľahlivosti 1,17 až 11,1 a hodnota P = 0,027.</p>
+<p>V multivariačnej analýze bol významným faktorom dlhodobého prežívania typ transplantácie. Transplantácia od živého darcu bola v porovnaní s transplantáciou od mŕtveho darcu spojená s lepším ultra-dlhodobým prežívaním štepu (odds ratio 3,51; 95 % interval spoľahlivosti 1,17 až 11,1; P = 0,027).</p>
 
 <p>Naopak, vek ani pohlavie darcu alebo príjemcu neboli v tejto analýze významne spojené so zlepšeným ultra-dlhodobým prežívaním štepu.</p>
 
@@ -73,13 +73,13 @@ $articles[] = [
 
 <p>Výsledky podporujú význam transplantácie od živého darcu. Pravdepodobne sa na tom podieľa viacero faktorov: lepšia kvalita štepu, kratší ischemický čas, plánovaný charakter výkonu, lepšia príprava príjemcu, dôkladné vyšetrenie darcu a možnosť optimalizovať klinický stav ešte pred transplantáciou.</p>
 
-<p>Zároveň však štúdia neprináša zjednodušený záver, že ultra-dlhodobé prežívanie je možné iba pri živom darcovi. Aj časť transplantátov od mŕtvych darcov prežila veľmi dlho. Dôležité je preto vnímať živé darcovstvo ako silný priaznivý faktor, nie ako jedinú cestu k dlhodobému úspechu.</p>
+<p>Štúdia však nevedie k zjednodušenému záveru, že ultra-dlhodobé prežívanie je možné iba pri živom darcovi. Aj časť transplantátov od mŕtvych darcov prežila veľmi dlho. Živé darcovstvo treba preto vnímať ako silný priaznivý faktor, nie ako jedinú cestu k dlhodobému úspechu.</p>
 
-<p>Pre prax je to ďalší argument pre aktívnu podporu živého darcovstva vždy, keď je medicínsky, eticky a organizačne možné. Súčasne je to pripomienka, že kvalita celého transplantologického procesu, od výberu darcu až po celoživotné sledovanie, rozhoduje o výsledku po desaťročiach.</p>
+<p>Pre prax je to ďalší argument pre aktívnu podporu živého darcovstva vždy, keď je to medicínsky, eticky a organizačne možné. Súčasne je to pripomienka, že kvalita celého transplantologického procesu, od výberu darcu až po celoživotné sledovanie, rozhoduje o výsledku po desaťročiach.</p>
 
 <h2>Imunosupresia: po rokoch rozhoduje jemné nastavenie</h2>
 
-<p>Autori zdôrazňujú, že u ultra-dlhodobých prežívajúcich bola funkcia štepu výborná, ak boli pacienti udržiavaní na nízkej úrovni imunosupresie. Tento bod je klinicky zásadný.</p>
+<p>Autori zdôrazňujú, že u ultra-dlhodobých prežívajúcich bola funkcia štepu výborná, ak boli pacienti udržiavaní na nízkej úrovni imunosupresie.</p>
 
 <p>Dlhodobá imunosupresia musí chrániť pred rejekciou, ale zároveň nesmie zbytočne zvyšovať riziko infekcií, malignít, metabolických komplikácií, kostného poškodenia a kardiovaskulárnej morbidity. U pacienta desaťročia po transplantácii sa preto postupne mení hlavná otázka: nejde len o to, či imunosupresia funguje, ale či je nastavená na najnižšiu účinnú intenzitu.</p>
 
@@ -87,7 +87,7 @@ $articles[] = [
 
 <h2>Kožné nádory ako cena dlhodobého úspechu</h2>
 
-<p>Veľmi dôležitým zistením bola vysoká frekvencia nemelanómových kožných nádorov. Postihovali 22 z 33 pacientov, teda približne 67 % ultra-dlhodobých prežívajúcich pacientov.</p>
+<p>Dôležitým zistením bol vysoký výskyt nemelanómových kožných nádorov: postihovali 22 z 33 pacientov, teda približne 67 % ultra-dlhodobých prežívajúcich pacientov.</p>
 
 <p>Tento údaj je klinicky varovný. Dlhodobá imunosupresia významne zvyšuje riziko kožných malignít, najmä spinocelulárneho a bazocelulárneho karcinómu. U pacientov po transplantácii obličky preto dermatologický skríning nie je doplnková starostlivosť. Je to základná súčasť dlhodobého manažmentu.</p>
 
@@ -95,7 +95,7 @@ $articles[] = [
 
 <h2>Dlhodobé prežívanie nie je len dobrý kreatinín</h2>
 
-<p>Stabilný kreatinín po mnohých rokoch je výborná správa, ale neznamená, že pacient už nepotrebuje intenzívnu odbornú starostlivosť. Riziko sa v čase mení. Menej môže dominovať akútna rejekcia a viac vystupujú do popredia malignity, infekcie, kardiovaskulárne ochorenia, metabolické komplikácie, osteopatia, liekové interakcie a krehkosť vo vyššom veku.</p>
+<p>Stabilný kreatinín po mnohých rokoch je výborná správa, ale neznamená, že pacient už nepotrebuje intenzívnu odbornú starostlivosť. Riziko sa v čase mení. Akútna rejekcia môže ustupovať do pozadia a do popredia vystupujú malignity, infekcie, kardiovaskulárne ochorenia, metabolické komplikácie, osteopatia, liekové interakcie a krehkosť vo vyššom veku.</p>
 
 <p>Ultra-dlhodobý prežívajúci pacient po transplantácii je preto úspechom transplantológie, ale aj veľmi špecifickou chronickou populáciou. Vyžaduje nefrologickú a transplantačnú dispenzarizáciu, dobrú komunikáciu s praktickým lekárom, dermatológom, kardiológom a ďalšími odbormi podľa komorbidít.</p>
 
@@ -139,7 +139,7 @@ $articles[] = [
 
 <p>Zároveň štúdia pripomína cenu dlhodobého úspechu: vysoké riziko nemelanómových kožných nádorov a potrebu celoživotnej komplexnej starostlivosti. Pre nefrológa je hlavným posolstvom rovnováha medzi ochranou štepu, prevenciou komplikácií a kvalitou života pacienta.</p>
 
-<p>Transplantácia obličky môže byť úspešná nielen v rokoch, ale aj v desaťročiach. Aby sa to podarilo, nestačí dobrý operačný výkon. Potrebná je dlhodobá, pozorná a individualizovaná medicína.</p>
+<p>Úspech transplantácie obličky sa môže merať nielen rokmi, ale aj desaťročiami. Nestačí na to dobrý operačný výkon; potrebná je dlhodobá, pozorná a individualizovaná medicína.</p>
 
 <hr>
 

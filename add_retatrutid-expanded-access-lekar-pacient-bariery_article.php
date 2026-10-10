@@ -56,7 +56,7 @@ $articles[] = [
   <li><strong>Informovaný súhlas</strong> pacienta alebo zákonného zástupcu podľa 21 CFR časť 50, na formulári schválenom IRB.</li>
 </ol>
 
-<p>Liečbu pri individuálnom IND mimo naliehavej situácie spravidla nemožno začať skôr, ako uplynie <strong>30 dní</strong> od doručenia podania FDA (alebo kým FDA skôr oznámi, že podanie nezdrží) <strong>a</strong> kým je k dispozícii súhlas IRB. FDA <strong>nemôže prinútiť</strong> výrobcu, aby liek dodal. Ochota výrobcu je preto praktickým predpokladom, nie formalitou. To je verejný fakt úradu, nie interpretácia komentára.</p>
+<p>Liečbu pri individuálnom IND mimo naliehavej situácie spravidla nemožno začať skôr, ako uplynie <strong>30 dní</strong> od doručenia podania FDA (alebo kým FDA skôr oznámi, že podanie nezdrží) <strong>a</strong> kým je k dispozícii súhlas IRB. FDA <strong>nemôže prinútiť</strong> výrobcu, aby liek dodal. Ochota výrobcu je preto praktickým predpokladom, nie formalitou. Toto uvádza priamo úrad, nie je to interpretácia komentára.</p>
 
 <h2>Fakty: kto podľa Lilly a ClinicalTrials.gov spĺňa kritériá</h2>
 
@@ -151,14 +151,14 @@ $articles[] = [
 <h2>Čo z toho plynie pre prax</h2>
 
 <ul>
-  <li>Ak pacient žiada „retatrutid teraz“, najprv rozlíšte <strong>skúšanie</strong>, <strong>expanded access / terapeutické použitie</strong> a <strong>neregulovaný produkt</strong>. Sú to tri rôzne svety.</li>
+  <li>Ak pacient žiada „retatrutid teraz“, najprv rozlíšte <strong>skúšanie</strong>, <strong>expanded access / terapeutické použitie</strong> a <strong>neregulovaný produkt</strong>. Ide o tri odlišné situácie.</li>
   <li>V USA je expanded access k retatrutidu úzka, verejne opísaná cesta (NCT07629401) s troma bránami. Lekár je žiadateľ, nie výdajňa.</li>
   <li>Na Slovensku hľadajte analogickú, nie identickú cestu: klinické skúšanie, prípadne § 46 / § 46a, vždy s ochotou výrobcu dodať liek. Neexistuje slovenský „formulár 3926“ na retatrutid.</li>
   <li>Kým liek nie je schválený, jedinou správnou liečbou ostáva <strong>dostupná schválená terapia</strong> a znižovanie rizika. Falošný pocit, že „už len čakáme na zásielku“, nesmie odsunúť titráciu toho, čo pacient môže dostať dnes.</li>
-  <li>Názor, že proces stavia lekára proti pacientovi, berte ako varovanie pred komunikáciou: sľubujte postup a časový rámec, nie výsledok tretej brány.</li>
+  <li>Názor, že proces stavia lekára proti pacientovi, berte ako upozornenie pre komunikáciu s pacientom: sľubujte postup a časový rámec, nie výsledok tretej brány.</li>
 </ul>
 
-<p>Retatrutid môže po dokončení vývoja a posúdení regulátorov rozšíriť možnosti liečby obezity. Kým sa tak stane, expanded access nie je skratka schválenia. Je to úzka, dobrovoľná a viacbránová výnimka – v USA opísaná inak ako v EÚ a na Slovensku. Pre nefrológa je užitočné vedieť, <em>že</em> existuje, <em>kde</em> sa končí a <em>čím</em> medzitým pacienta liečiť.</p>
+<p>Retatrutid môže po dokončení vývoja a posúdení regulátorov rozšíriť možnosti liečby obezity. Kým sa tak stane, expanded access nie je skratkou namiesto schválenia. Je to úzka, dobrovoľná a viacbránová výnimka – v USA opísaná inak ako v EÚ a na Slovensku. Pre nefrológa je užitočné vedieť, <em>že</em> existuje, <em>kde</em> sa končí a <em>čím</em> medzitým pacienta liečiť.</p>
 
 <hr>
 

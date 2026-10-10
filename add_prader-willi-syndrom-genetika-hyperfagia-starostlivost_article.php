@@ -26,7 +26,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Praderov-Williho syndróm si vyžaduje celoživotnú koordináciu. Nová liečba hyperfágie mení možnosti v USA, no európsky stav, limity dôkazov a renálna bezpečnosť vyžadujú presné čítanie.',
     'content'      => <<<'HTML'
-<figure><a href="img/prader-willi-syndrom-genetika-hyperfagia-starostlivost.webp" rel="noopener noreferrer" target="_blank"><img src="img/prader-willi-syndrom-genetika-hyperfagia-starostlivost.webp" alt="Závitnica DNA s chýbajúcim úsekom, od ktorého vyžaruje silný vír; drží ju niekoľko rôznofarebných podporných lúčov" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Chýbajúci úsek určí celoživotný priebeh vrátane hyperfágie — a udržať stabilitu dokáže len súčinnosť viacerých odborov.</figcaption></figure>
+<figure><a href="img/prader-willi-syndrom-genetika-hyperfagia-starostlivost.webp" rel="noopener noreferrer" target="_blank"><img src="img/prader-willi-syndrom-genetika-hyperfagia-starostlivost.webp" alt="Závitnica DNA s chýbajúcim úsekom, od ktorého vyžaruje silný vír; drží ju niekoľko rôznofarebných podporných lúčov" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Chýbajúci úsek určí celoživotný priebeh vrátane hyperfágie – a udržať stabilitu dokáže len súčinnosť viacerých odborov.</figcaption></figure>
 
 <p class="article-dek"><em>Praderov-Williho syndróm nie je iba genetická príčina obezity. Je to celoživotné neurovývinové a endokrinné ochorenie, pri ktorom sa klinické priority menia od novorodeneckej hypotónie a poruchy príjmu potravy k hyperfágii, poruchám spánku, behaviorálnym ťažkostiam a metabolickým komplikáciám. Nové lieky rozširujú možnosti, ale nenahrádzajú koordinovanú starostlivosť ani bezpečne riadený prístup k jedlu.</em></p>
 
@@ -97,13 +97,13 @@ $articles[] = [
 
 <p>Hlavný materiál Medscape je odborná CME syntéza, nie systematický prehľad ani klinické odporúčanie. Časť manažmentu PWS stojí na malých štúdiách, observačných údajoch a expertnej zhode, čo je pri zriedkavom ochorení pochopiteľné. Aj britsko-írske odporúčanie z roku 2024 výslovne uvádza, že významná časť odporúčaní vychádza z dôkazov nízkej kvality alebo z konsenzu.</p>
 
-<p>Najpevnejší nový regulačný údaj sa týka diazoxidu cholínu v USA. Jeho randomizovaná vysadzovacia štúdia však hodnotila dlhodobo predliečených účastníkov a európska registračná žiadosť bola stiahnutá. Pri liraglutide neboli splnené primárne hmotnostné ciele, údaje o semaglutide sú prevažne kazuistické, topiramát neuspel v primárnom výsledku štúdie TOPRADER a štúdia pitolisantu fázy 3 ešte nemá zverejnené výsledky. Tieto rozdiely v kvalite dôkazov musia byť súčasťou rozhodovania.</p>
+<p>Najpevnejší nový regulačný údaj sa týka diazoxidu cholínu v USA. Jeho randomizovaná vysadzovacia štúdia však hodnotila dlhodobo predliečených účastníkov a európska registračná žiadosť bola stiahnutá. Pri liraglutide neboli splnené primárne hmotnostné ciele, údaje o semaglutide sú prevažne kazuistické, topiramát neuspel v primárnom výsledku štúdie TOPRADER a štúdia pitolisantu fázy 3 ešte nemá zverejnené výsledky. Pri rozhodovaní treba s týmito rozdielmi v kvalite dôkazov počítať.</p>
 
 <h2>Záver</h2>
 
 <p>Praderov-Williho syndróm vyžaduje celoživotnú, predvídateľnú a multidisciplinárnu starostlivosť. Včasná molekulárna diagnóza, riadené prostredie s bezpečným prístupom k jedlu, endokrinná liečba, pravidelné hodnotenie spánku, behaviorálna a psychosociálna podpora a plánovaný prechod do dospelosti zostávajú základom manažmentu.</p>
 
-<p>Diazoxid cholín predstavuje prvú americkou FDA schválenú cielenú liečbu hyperfágie pri PWS, ale jeho účinok a bezpečnosť treba interpretovať v kontexte dizajnu registračnej štúdie, chýbajúceho európskeho povolenia a významných metabolických aj objemových rizík. Ostatné diskutované lieky majú slabšie alebo ešte neukončené dôkazy špecifické pre PWS. Pre nefrológa je najdôležitejšie rozpoznať sekundárne renálne riziko, bezpečne monitorovať liečbu a neprehliadnuť akútnu dehydratáciu, acidózu, nefrolitiázu alebo retenciu tekutín.</p>
+<p>Diazoxid cholín je prvou cielenou liečbou hyperfágie pri PWS, ktorú schválila americká FDA, ale jeho účinok a bezpečnosť treba interpretovať v kontexte dizajnu registračnej štúdie, chýbajúceho európskeho povolenia a významných metabolických aj objemových rizík. Ostatné diskutované lieky majú slabšie alebo ešte neukončené dôkazy špecifické pre PWS. Pre nefrológa je najdôležitejšie rozpoznať sekundárne renálne riziko, bezpečne monitorovať liečbu a neprehliadnuť akútnu dehydratáciu, acidózu, nefrolitiázu alebo retenciu tekutín.</p>
 
 <hr>
 

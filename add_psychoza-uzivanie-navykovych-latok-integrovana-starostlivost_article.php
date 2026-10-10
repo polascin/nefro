@@ -24,7 +24,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Psychóza a problémové užívanie látok vyžadujú jeden koordinovaný plán. Praktický rámec pre skríning, liečbu, prevenciu predávkovania a ochranu obličiek.',
     'content'      => <<<'HTML'
-<figure><a href="img/psychoza-uzivanie-navykovych-latok-integrovana-starostlivost.webp" rel="noopener noreferrer" target="_blank"><img src="img/psychoza-uzivanie-navykovych-latok-integrovana-starostlivost.webp" alt="Dve prekrývajúce sa svetelné polia a jeden spoločný lúč mieriaci presne do ich prieniku, pod nimi obrysy srdca a obličky" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Liečiť oddelene znamená minúť sa cieľa; účinok má zásah mierený do prieniku oboch problémov — vrátane telesného zdravia.</figcaption></figure>
+<figure><a href="img/psychoza-uzivanie-navykovych-latok-integrovana-starostlivost.webp" rel="noopener noreferrer" target="_blank"><img src="img/psychoza-uzivanie-navykovych-latok-integrovana-starostlivost.webp" alt="Dve prekrývajúce sa svetelné polia a jeden spoločný lúč mieriaci presne do ich prieniku, pod nimi obrysy srdca a obličky" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Liečiť oddelene znamená minúť sa cieľa; účinok má zásah mierený do prieniku oboch problémov – vrátane telesného zdravia.</figcaption></figure>
 
 <p class="article-dek"><em>Súčasný výskyt psychózy a problémového užívania psychoaktívnych látok nepredstavuje dve oddelené diagnózy určené pre dve navzájom nepriepustné služby. Pacient potrebuje súbežné posúdenie oboch problémov, jedného koordinátora starostlivosti a plán, ktorý zahŕňa psychiatrickú aj adiktologickú liečbu, prevenciu predávkovania, sociálnu podporu a ochranu telesného zdravia.</em></p>
 
@@ -66,7 +66,7 @@ $articles[] = [
 
 <h2>Komplexné hodnotenie a dynamický plán rizika</h2>
 
-<p>Multidisciplinárne posúdenie môže vyžadovať viacero stretnutí. Nemá sa obmedziť na jeden psychiatrický rozhovor. Zahŕňa psychiatrickú a adiktologickú anamnézu, telesné a sexuálne zdravie, kognitívne schopnosti a rozhodovaciu spôsobilosť, bývanie, rodinné vzťahy, ekonomickú situáciu, traumu, vykorisťovanie, kontakt s trestnoprávnym systémom, silné stránky pacienta a pripravenosť zmeniť spôsob užívania alebo s ním prestať.</p>
+<p>Multidisciplinárne posúdenie sa nemá obmedziť na jeden psychiatrický rozhovor a môže vyžadovať viacero stretnutí. Zahŕňa psychiatrickú a adiktologickú anamnézu, telesné a sexuálne zdravie, kognitívne schopnosti a rozhodovaciu spôsobilosť, bývanie, rodinné vzťahy, ekonomickú situáciu, traumu, vykorisťovanie, kontakt s trestnoprávnym systémom, silné stránky pacienta a pripravenosť zmeniť spôsob užívania alebo s ním prestať.</p>
 
 <p>Informácie od rodiny, záchrannej služby, ambulantných lekárov a z predchádzajúcej dokumentácie môžu zásadne spresniť časovú os. Ich získavanie a zdieľanie musí rešpektovať súhlas, dôvernosť údajov, rozhodovaciu spôsobilosť a slovenský právny rámec. V bezprostredne život ohrozujúcej situácii sa postupuje podľa klinickej nevyhnutnosti a platných právnych pravidiel.</p>
 
@@ -99,7 +99,7 @@ $articles[] = [
 
 <p>Pacient má dostať intervencie odporúčané pre psychózu aj pre konkrétnu poruchu užívania látky. Podľa diagnózy, potrieb a dostupnosti možno využiť motivačný rozhovor, kognitívno-behaviorálne postupy, rodinnú intervenciu, prevenciu relapsu, nácvik zvládania baženia, podmienené odmeňovanie (<em>contingency management</em>), podporu bývania a sociálneho fungovania či rovesnícku podporu.</p>
 
-<p>Cochrane prehľad 41 randomizovaných štúdií nenašiel kvalitný dôkaz, že by jedna konkrétna psychosociálna intervencia bola pri tejto heterogénnej populácii všeobecne nadradená štandardnej starostlivosti. Neznamená to, že psychosociálna liečba je neúčinná. Znamená to, že dôkazy sú neisté a intervencia má byť individualizovaná, dostatočne dlhá a prepojená s farmakoterapiou, bývaním a praktickou podporou.</p>
+<p>Cochrane prehľad 41 randomizovaných štúdií nenašiel kvalitný dôkaz, že by jedna konkrétna psychosociálna intervencia bola pri tejto heterogénnej populácii všeobecne nadradená štandardnej starostlivosti. To neznamená, že psychosociálna liečba je neúčinná, ale že dôkazy sú neisté a intervencia má byť individualizovaná, dostatočne dlhá a prepojená s farmakoterapiou, bývaním a praktickou podporou.</p>
 
 <h3>Antipsychotická liečba</h3>
 

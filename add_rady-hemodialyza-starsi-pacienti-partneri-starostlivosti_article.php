@@ -42,7 +42,7 @@ $articles[] = [
 <h3>Rady určené pacientom</h3>
 
 <ol>
-  <li><strong>Postoj pacienta ovplyvňuje prežívanie liečebnej cesty.</strong> Účastníci zdôrazňovali prijatie novej reality, aktívnu účasť a snahu zachovať pozitívny, ale realistický prístup.</li>
+  <li><strong>Postoj pacienta ovplyvňuje, ako prežíva liečbu.</strong> Účastníci zdôrazňovali prijatie novej reality, aktívnu účasť a snahu zachovať pozitívny, ale realistický prístup.</li>
   <li><strong>Starostlivosť o celkové zdravie pomáha zvládať dialyzačné sedenia.</strong> Nejde o prísľub bezproblémovej liečby, ale o dôraz na sebaopateru, primeranú aktivitu, lieky a režim dohodnutý s dialyzačným tímom.</li>
 </ol>
 

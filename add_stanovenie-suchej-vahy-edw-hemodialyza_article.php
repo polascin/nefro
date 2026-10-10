@@ -35,7 +35,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Suchá váha (odborne presnejšie suchá hmotnosť) pri hemodialýze nie je číslo z jedného vzorca. Praktický postup kombinuje klinický trend, toleranciu ultrafiltrácie, krvný tlak, bioimpedanciu, BVM/RBV krivky a POCUS.',
     'content'      => <<<'HTML'
-<figure><a href="img/stanovenie-suchej-vahy-edw-hemodialyza.webp" rel="noopener noreferrer" target="_blank"><img src="img/stanovenie-suchej-vahy-edw-hemodialyza.webp" alt="Štyri rôzne meracie lúče zbiehajúce sa na jednu svietiacu hladinu tekutín vnútri priesvitného tela" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Žiadna metóda sama nestačí — suchá váha vzniká zo zhody klinického odhadu a prístrojových meraní.</figcaption></figure>
+<figure><a href="img/stanovenie-suchej-vahy-edw-hemodialyza.webp" rel="noopener noreferrer" target="_blank"><img src="img/stanovenie-suchej-vahy-edw-hemodialyza.webp" alt="Štyri rôzne meracie lúče zbiehajúce sa na jednu svietiacu hladinu tekutín vnútri priesvitného tela" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Žiadna metóda sama nestačí – suchá váha vzniká zo zhody klinického odhadu a prístrojových meraní.</figcaption></figure>
 
 <p>Stanovenie „suchej váhy“ (odborne presnejšie suchej hmotnosti) pri hemodialýze patrí medzi najťažšie rutinné rozhodnutia v nefrológii. Na prvý pohľad ide iba o číslo v kilogramoch. V skutočnosti je to klinický odhad objemového stavu, ktorý sa mení podľa výživy, svalovej hmoty, sodíkovej bilancie, reziduálnej diurézy, zápalu, srdcovej funkcie, cievnej poddajnosti a tolerancie ultrafiltrácie.</p>
 
@@ -47,7 +47,7 @@ $articles[] = [
 
 <p>Ďalší problém je tolerancia ultrafiltrácie. Dvaja pacienti s rovnakým interdialyzačným prírastkom môžu reagovať úplne odlišne podľa rýchlosti plazmatického dopĺňania, diabetickej autonómnej neuropatie, liekov, dialyzačného sodíka, teploty dialyzátu a kardiálnej rezervy. Preto sa EDW musí pravidelne prehodnocovať, nie iba mechanicky prepisovať.</p>
 
-<h2>Klinické „probing“: stále základ, ale nie naslepo</h2>
+<h2>Klinické testovanie („probing“): stále základ, ale nie naslepo</h2>
 
 <p>Najpoužívanejší prístup je kontrolované, postupné testovanie cieľovej postdialyzačnej hmotnosti. Starší termín „trial and error“ je výstižný, ale v modernej praxi by nemal znamenať náhodné znižovanie váhy. Ide o štruktúrované sledovanie trendov:</p>
 
@@ -70,7 +70,7 @@ $articles[] = [
 
 <h2>Bioimpedancia a BCM: objektivizácia, nie veštba</h2>
 
-<p>Bioimpedančná spektroskopia (BIS) odhaduje rozloženie telesnej vody a pri nástrojoch typu BCM modelovo oddeľuje <strong>overhydratáciu</strong> od svalovej a tukovej zložky. Jej veľká výhoda je, že pomáha odhaliť „tichú“ hypervolémiu u pacienta bez nápadných edémov a zároveň upozorní na zmenu nutričného alebo svalového stavu.</p>
+<p>Bioimpedančná spektroskopia (BIS) odhaduje rozloženie telesnej vody a pri nástrojoch typu BCM modelovo oddeľuje <strong>overhydratáciu</strong> od svalovej a tukovej zložky. Jej hlavnou výhodou je, že pomáha odhaliť „tichú“ hypervolémiu u pacienta bez nápadných edémov a zároveň upozorní na zmenu nutričného alebo svalového stavu.</p>
 
 <p>Limitom je dostupnosť prístroja, potreba štandardizovaného merania a interpretácia v kontexte pacienta. Výsledok môže byť ťažšie čitateľný pri amputáciách, kovových implantátoch, výrazných deformitách, extrémnom BMI, lokálnych edémoch, peritoneálnej tekutine alebo nestabilnom akútnom stave. Ak BCM ukáže overhydratáciu, stále treba rozhodnúť, ako rýchlo a bezpečne sa k cieľu priblížiť.</p>
 
@@ -88,17 +88,17 @@ $articles[] = [
 
 <p>Dilatovaná VCI s nízkou kolapsibilitou podporuje obraz zvýšeného pravostranného plniaceho tlaku alebo venóznej kongescie. Malá, výrazne kolabujúca VCI skôr podporuje nízky preload. V hemodialýze však treba byť opatrný: VCI ovplyvňuje pravostranné srdcové zlyhávanie, trikuspidálna regurgitácia, pľúcna hypertenzia, spontánne dýchanie verzus ventilácia, intraabdominálny tlak a technika merania.</p>
 
-<p>Veľmi praktický doplnok je <strong>pľúcny ultrazvuk</strong> so sledovaním B-línií. B-línie zachytávajú extravaskulárnu pľúcnu vodu a môžu upozorniť na subklinickú pľúcnu kongesciu ešte pred výraznou dýchavicou. Randomizovaná štúdia ukázala, že stratégia redukcie suchej váhy vedená pľúcnym ultrazvukom môže znížiť ambulantný krvný tlak u hypertenzných hemodialyzovaných pacientov.</p>
+<p>Praktickým doplnkom je <strong>pľúcny ultrazvuk</strong> so sledovaním B-línií. B-línie zachytávajú extravaskulárnu pľúcnu vodu a môžu upozorniť na subklinickú pľúcnu kongesciu ešte pred výraznou dýchavicou. Randomizovaná štúdia ukázala, že stratégia redukcie suchej váhy vedená pľúcnym ultrazvukom môže znížiť ambulantný krvný tlak u hypertenzných hemodialyzovaných pacientov.</p>
 
 <h2>Biomarkery a laboratórium: užitočné, ale nešpecifické</h2>
 
 <p>NT-proBNP, albumín, CRP, sodík, hemoglobín a ďalšie laboratórne parametre môžu pomôcť vysvetliť klinický obraz, ale nie sú priamym výpočtom EDW. NT-proBNP môže rásť pri objemovom preťažení, ale aj pri štrukturálnom ochorení srdca a zníženom renálnom klírense. Hypoalbuminémia zhoršuje plazmatické dopĺňanie a mení distribúciu tekutiny. Zápal a malnutrícia môžu znížiť skutočnú tkanivovú hmotnosť, takže „stará“ suchá váha sa stane príliš vysokou.</p>
 
-<h2>Prediktívne modely a machine learning</h2>
+<h2>Prediktívne modely a strojové učenie</h2>
 
 <p>Najnovšie práce skúšajú predikovať potrebu úpravy suchej váhy pomocou modelov strojového učenia. Používajú sa premenné ako IDWG, pokles krvného tlaku počas dialýzy, laboratórne parametre, nutričné markery, bioimpedančné údaje a predchádzajúce rozhodnutia personálu. Random Forest, XGBoost a príbuzné modely v publikovaných štúdiách ukazujú, že vedia zachytiť niektoré klinické vzorce.</p>
 
-<p>Ich miesto je však zatiaľ podporné. Model sa učí z dát konkrétneho pracoviska, z lokálnych rozhodovacích návykov a z kvality vstupných údajov. Bez externej validácie, priebežného auditu a jasnej zodpovednosti lekára nemá nahradiť klinické rozhodnutie. Najrozumnejšie využitie je ako „early warning“ alebo druhý pohľad na trend, nie ako automatický predpis suchej váhy.</p>
+<p>Ich miesto je však zatiaľ podporné. Model sa učí z dát konkrétneho pracoviska, z lokálnych rozhodovacích návykov a z kvality vstupných údajov. Bez externej validácie, priebežného auditu a jasnej zodpovednosti lekára nemá nahradiť klinické rozhodnutie. Najrozumnejšie je využiť ho ako včasné varovanie („early warning“) alebo druhý pohľad na trend, nie ako automatický predpis suchej váhy.</p>
 
 <h2>Praktický algoritmus pri úprave EDW</h2>
 
@@ -106,7 +106,7 @@ $articles[] = [
   <li><strong>Najprv odlíšiť vodu od tkanivovej hmoty.</strong> Schudol pacient pri infekcii, nechutenstve alebo hospitalizácii? Pribral svaly alebo tuk po zlepšení apetítu? Zmenil sa albumín alebo funkčný stav?</li>
   <li><strong>Zhodnotiť hypervolémiu.</strong> Pretrváva hypertenzia, dýchavica, edémy, ortopnoe, B-línie, dilatovaná VCI, vysoký IDWG alebo plochá RBV krivka pri dostatočnej ultrafiltrácii?</li>
   <li><strong>Zhodnotiť hypovolémiu a toleranciu.</strong> Sú prítomné kŕče, intradialytická hypotenzia, závraty, nauzea, postdialyzačná slabosť, strmý pokles RBV alebo malá kolabujúca VCI?</li>
-  <li><strong>Upravovať postupne.</strong> Pri stabilnom pacientovi je bezpečnejšie meniť cieľ v malých krokoch naprieč viacerými dialýzami, zároveň upraviť príjem soli, dĺžku HD alebo rýchlosť ultrafiltrácie.</li>
+  <li><strong>Upravovať postupne.</strong> Pri stabilnom pacientovi je bezpečnejšie meniť cieľ v malých krokoch naprieč viacerými dialýzami a zároveň upraviť príjem soli, dĺžku HD alebo rýchlosť ultrafiltrácie.</li>
   <li><strong>Overiť mimo dialyzačnej sály.</strong> Domáci alebo ambulantný krvný tlak, symptómy medzi dialýzami a funkčná tolerancia sú často cennejšie než jeden izolovaný predialyzačný tlak.</li>
   <li><strong>Pravidelne revidovať.</strong> EDW treba prehodnotiť po hospitalizácii, infekcii, zmene apetítu, zmene diurézy, dekompenzácii srdcového zlyhávania, zmene antihypertenzív a pri opakovaných intradialytických komplikáciách.</li>
 </ol>

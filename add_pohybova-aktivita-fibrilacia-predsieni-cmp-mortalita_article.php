@@ -23,7 +23,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Nórske kohorty HUNT a Tromsø spájajú už nízku pohybovú aktivitu s nižším rizikom cievnej mozgovej príhody a úmrtia pri fibrilácii predsiení. Observačný výsledok však nenahrádza antikoaguláciu.',
     'content'      => <<<'HTML'
-<figure><a href="img/pohybova-aktivita-fibrilacia-predsieni-cmp-mortalita.webp" rel="noopener noreferrer" target="_blank"><img src="img/pohybova-aktivita-fibrilacia-predsieni-cmp-mortalita.webp" alt="Srdce s nepravidelným rytmom; zlatý prúd pohybu ho posilňuje, k zrazenine však vedie samostatné modré vlákno" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Pohyb znižuje riziko, no zrazeniny nerieši — antikoagulácia zostáva samostatnou a nenahraditeľnou vetvou.</figcaption></figure>
+<figure><a href="img/pohybova-aktivita-fibrilacia-predsieni-cmp-mortalita.webp" rel="noopener noreferrer" target="_blank"><img src="img/pohybova-aktivita-fibrilacia-predsieni-cmp-mortalita.webp" alt="Srdce s nepravidelným rytmom; zlatý prúd pohybu ho posilňuje, k zrazenine však vedie samostatné modré vlákno" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Pohyb znižuje riziko, no zrazeniny nerieši – antikoagulácia zostáva samostatnou a nenahraditeľnou vetvou.</figcaption></figure>
 
 <p class="article-dek"><em>Analýza 87 340 účastníkov štúdií HUNT a Tromsø spája aj nízku úroveň pohybovej aktivity s nižším rizikom cievnej mozgovej príhody a úmrtia. Podobná asociácia sa pozorovala u ľudí s fibriláciou predsiení aj bez nej. Výsledok je klinicky povzbudivý, ale observačná štúdia nedokazuje kauzalitu a pohybová aktivita nenahrádza antikoagulačnú liečbu indikovanú podľa tromboembolického rizika.</em></p>
 
@@ -93,7 +93,7 @@ $articles[] = [
   <li>o <strong>22 %</strong> pri vysokej aktivite (95 % IS 18 až 27 %).</li>
 </ul>
 
-<p>Podobný smer asociácie sa zachoval po rozdelení účastníkov podľa prítomnosti fibrilácie predsiení. Priaznivý vzťah medzi pohybovou aktivitou a sledovanými výsledkami bol teda podobný u ľudí s fibriláciou predsiení aj bez nej.</p>
+<p>Podobný smer asociácie sa zachoval aj po rozdelení účastníkov podľa prítomnosti fibrilácie predsiení: priaznivý vzťah medzi pohybovou aktivitou a sledovanými výsledkami sa pozoroval u ľudí s arytmiou aj bez nej.</p>
 
 <h2>Čo ukázali modely pri fibrilácii predsiení</h2>
 
@@ -123,7 +123,7 @@ $articles[] = [
 
 <p>Pri analýze ischemických cievnych mozgových príhod bol smer výsledkov podobný ako pri celkovom ukazovateli. Pri intracerebrálnom krvácaní sa štatisticky významná asociácia nepotvrdila. Keďže krvácania tvorili iba menšiu časť príhod, analýza mohla mať nedostatočnú štatistickú silu.</p>
 
-<p>Mechanizmy sa navyše líšia. Fibrilácia predsiení priamo súvisí najmä s kardioembolickou ischemickou príhodou. Intracerebrálne krvácanie ovplyvňujú najmä hypertenzia, vek, cerebrálna amyloidová angiopatia, antitrombotická liečba a ďalšie cievne faktory. Neštatisticky významný výsledok preto nemožno interpretovať ako dôkaz neprítomnosti akéhokoľvek vzťahu.</p>
+<p>Mechanizmy sa navyše líšia. Fibrilácia predsiení priamo súvisí najmä s kardioembolickou ischemickou príhodou. Intracerebrálne krvácanie ovplyvňujú najmä hypertenzia, vek, cerebrálna amyloidová angiopatia, antitrombotická liečba a ďalšie cievne faktory. Štatisticky nevýznamný výsledok preto nemožno interpretovať ako dôkaz neprítomnosti akéhokoľvek vzťahu.</p>
 
 <h2>Čo štúdia nedokazuje</h2>
 
@@ -145,7 +145,7 @@ $articles[] = [
 
 <h2>Pohyb nenahrádza antikoaguláciu</h2>
 
-<p>Toto je najdôležitejšia klinická hranica interpretácie. Pohyb môže zlepšiť viaceré modifikovateľné rizikové faktory, ale spoľahlivo neodstraňuje stázu krvi v ľavej predsieni ani tromboembolické riziko spojené s vekom, prekonanou cievnou mozgovou príhodou a ďalšími komorbiditami.</p>
+<p>Pre klinickú prax je to najdôležitejšia hranica interpretácie. Pohyb môže zlepšiť viaceré modifikovateľné rizikové faktory, ale spoľahlivo neodstraňuje stázu krvi v ľavej predsieni ani tromboembolické riziko spojené s vekom, prekonanou cievnou mozgovou príhodou a ďalšími komorbiditami.</p>
 
 <p>Podľa odporúčaní ESC z roku 2024 sa rozhodnutie o perorálnej antikoagulácii pri klinickej fibrilácii predsiení opiera o pravidelne prehodnocované tromboembolické riziko, v európskom rámci najmä o skóre <strong>CHA₂DS₂-VA</strong> a ďalšie individuálne faktory. Pri skóre 1 sa má antikoagulácia zvážiť a pri skóre ≥ 2 sa odporúča, ak pacient nemá kontraindikáciu. Krvácavé rizikové faktory treba aktívne upravovať; samotné krvácavé skóre spravidla nemá byť dôvodom na odopretie indikovanej liečby.</p>
 

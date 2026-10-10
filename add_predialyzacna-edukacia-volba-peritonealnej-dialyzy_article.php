@@ -28,7 +28,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'V poľskej kohorte si po individuálnej edukácii zvolilo peritoneálnu dialýzu 62,7 % pacientov. Výsledok ukazuje potenciál spoločného rozhodovania, nie kauzálny účinok programu.',
     'content'      => <<<'HTML'
-<figure><a href="img/predialyzacna-edukacia-volba-peritonealnej-dialyzy.webp" rel="noopener noreferrer" target="_blank"><img src="img/predialyzacna-edukacia-volba-peritonealnej-dialyzy.webp" alt="Rozdvojená svetelná cesta, ktorej obe vetvy sú vďaka svetlu pred rázcestím rovnako dobre viditeľné" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Edukácia druhú možnosť nevnucuje — iba ju spraví viditeľnou dosť včas na to, aby sa dala zvoliť.</figcaption></figure>
+<figure><a href="img/predialyzacna-edukacia-volba-peritonealnej-dialyzy.webp" rel="noopener noreferrer" target="_blank"><img src="img/predialyzacna-edukacia-volba-peritonealnej-dialyzy.webp" alt="Rozdvojená svetelná cesta, ktorej obe vetvy sú vďaka svetlu pred rázcestím rovnako dobre viditeľné" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Edukácia druhú možnosť nevnucuje – iba ju spraví viditeľnou dosť včas na to, aby sa dala zvoliť.</figcaption></figure>
 
 <p>Voľba liečby pri zlyhaní obličiek patrí medzi rozhodnutia, ktoré zásadne menia každodenný život pacienta aj jeho blízkych. Rozhovor nemá byť obmedzený na otázku, kedy vytvoriť cievny prístup. Pacient potrebuje včas a zrozumiteľne poznať preemptívnu transplantáciu, peritoneálnu dialýzu (PD), strediskovú a tam, kde je dostupná, domácu hemodialýzu, ako aj komplexnú konzervatívnu starostlivosť bez dialýzy.</p>
 
@@ -203,7 +203,7 @@ $articles[] = [
   <li>Bez kontrolnej skupiny nemožno určiť, o koľko edukácia zvýšila výber PD.</li>
   <li>Predvýber potenciálnych kandidátov na PD obmedzuje zovšeobecnenie na všetkých pacientov s CKD G4–G5.</li>
   <li>Jednocentrový retrospektívny súbor 118 pacientov má obmedzenú štatistickú presnosť.</li>
-  <li>Univariačné modely nekontrolovali možné mätúce faktory.</li>
+  <li>Univariačné modely nezohľadnili možné mätúce faktory.</li>
   <li>Neutralita edukácie nebola nezávisle posúdená a jednotnosť programu nebola formálne validovaná.</li>
   <li>Nehodnotili sa vedomosti, rozhodovací konflikt, skúsenosť pacienta, kvalita života ani dlhodobé klinické výsledky.</li>
   <li>Aktuálne dostupná verzia je rukopis prijatý na publikovanie pred konečnou redakčnou úpravou; obsahuje drobné vnútorné nezrovnalosti v niektorých podskupinových súčtoch a štatistických údajoch.</li>

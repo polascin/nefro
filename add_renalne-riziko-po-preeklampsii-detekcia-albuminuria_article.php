@@ -60,7 +60,7 @@ $articles[] = [
 
 <h2>Nízke riziko, alebo nízka detekcia?</h2>
 
-<p>Shiuan-Chih Chen a Ming-Cheng Lin z Chung Shan Medical University upozornili v liste redakcii <em>JASN</em>, že nízke absolútne čísla nemusia znamenať biologicky pokojnú situáciu, ale predovšetkým <strong>obmedzenú detekciu</strong>. Argument stojí na údaji, ktorý pôvodná práca sama uvádza a ktorý je klinicky alarmujúci:</p>
+<p>Shiuan-Chih Chen a Ming-Cheng Lin z Chung Shan Medical University upozornili v liste redakcii <em>JASN</em>, že nízke absolútne čísla nemusia znamenať biologicky pokojnú situáciu, ale predovšetkým <strong>obmedzenú detekciu</strong>. Argument stojí na údaji, ktorý pôvodná práca sama uvádza a ktorý je klinicky znepokojivý:</p>
 
 <ul>
   <li>sérový kreatinín bol v prvom roku po pôrode stanovený len u <strong>20 %</strong> žien,</li>
@@ -68,7 +68,7 @@ $articles[] = [
   <li><strong>obidve</strong> vyšetrenia absolvovalo len <strong>5 %</strong>.</li>
 </ul>
 
-<p>Laboratórne definovaný cieľový ukazovateľ je pritom možné zaznamenať len u ženy, ktorej sa laboratórne vyšetrenie skutočne urobilo. Ak sa deväť z desiatich žien po pôrode nikdy netestuje na albuminúriu, incidencia albuminúrie nemôže byť vysoká — bez ohľadu na to, koľko žien ju v skutočnosti má. Kohorta v takom prípade meria nie prevalenciu poškodenia obličiek, ale <strong>prienik poškodenia a vyšetrovacej praxe</strong>.</p>
+<p>Laboratórne definovaný cieľový ukazovateľ je pritom možné zaznamenať len u ženy, ktorej sa laboratórne vyšetrenie skutočne urobilo. Ak sa deväť z desiatich žien po pôrode nikdy netestuje na albuminúriu, incidencia albuminúrie nemôže byť vysoká — bez ohľadu na to, koľko žien ju v skutočnosti má. Kohorta v takom prípade nemeria prevalenciu poškodenia obličiek, ale <strong>prienik poškodenia a vyšetrovacej praxe</strong>.</p>
 
 <h2>Prah 300 mg/g vynecháva skorý fenotyp</h2>
 
@@ -83,7 +83,7 @@ $articles[] = [
 
 <p>Zahrnutie stredne zvýšenej albuminúrie teda zvýšilo počet zachytených prípadov približne <strong>4,5-násobne</strong>. Bremeno, ktoré pôvodná analýza pri prahu A3 nevidela, existuje — len bolo pod rozlišovacou schopnosťou zvolenej definície.</p>
 
-<p>Pre prax z toho vyplýva jednoduchý dôsledok: ak sa popôrodné sledovanie oprie o kreatinín alebo o „ťažkú“ proteinúriu, zachytí prevažne ženy, u ktorých už bolo poškodenie obličiek nastolené. Skoršie a potenciálne ovplyvniteľné štádium zostane neviditeľné.</p>
+<p>Pre prax z toho vyplýva jednoduchý dôsledok: ak sa popôrodné sledovanie oprie o kreatinín alebo o „ťažkú“ proteinúriu, zachytí prevažne ženy, u ktorých je poškodenie obličiek už rozvinuté. Skoršie a potenciálne ovplyvniteľné štádium zostane neviditeľné.</p>
 
 <h2>Prečo albuminúria predbieha pokles eGFR</h2>
 
@@ -140,7 +140,7 @@ $articles[] = [
   <li><strong>Absolútne riziko je nízke, ale podhodnotené.</strong> Vyplýva to z veľmi nízkej miery popôrodného testovania — 20 % pre kreatinín, 10 % pre albuminúriu, 5 % pre obidve.</li>
   <li><strong>Prah 300 mg/g nie je vhodný na skríning.</strong> Posun na 30 mg/g zvýšil počet zachytených príhod približne 4,5-násobne.</li>
   <li><strong>Albuminúria predbieha pokles eGFR</strong>, čo zodpovedá poškodeniu filtračnej bariéry a strate podocytov skôr než úbytku nefrónov. Sledovanie postavené na kreatiníne prichádza neskoro.</li>
-  <li><strong>Odhady rizika treba čítať cez optiku vyšetrovacieho dizajnu.</strong> „Koľko“ rizika štúdia nájde, závisí od toho, koho testuje, čím ho testuje a aký prah označí za príhodu.</li>
+  <li><strong>Odhady rizika treba interpretovať s ohľadom na to, ako sa vyšetrovalo.</strong> „Koľko“ rizika štúdia nájde, závisí od toho, koho testuje, čím ho testuje a aký prah označí za príhodu.</li>
 </ol>
 
 <h2>Záver</h2>

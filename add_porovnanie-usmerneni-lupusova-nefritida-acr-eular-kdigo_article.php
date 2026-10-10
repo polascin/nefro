@@ -31,11 +31,11 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Tri veľké medzinárodné odporúčania pre lupusovú nefritídu (ACR, EULAR, KDIGO) vychádzajú zo spoločného dôkazového základu, no v niekoľkých bodoch sa významne rozchádzajú — najmä pri výbere úvodného režimu (trojkombinácia verzus dvojkombinácia), miere využitia klinického profilu a tempe hodnotenia liečebnej odpovede.',
+    'excerpt'      => 'Tri veľké medzinárodné odporúčania pre lupusovú nefritídu (ACR, EULAR, KDIGO) vychádzajú zo spoločného dôkazového základu, no v niekoľkých bodoch sa významne rozchádzajú – najmä pri výbere úvodného režimu (trojkombinácia verzus dvojkombinácia), miere využitia klinického profilu a tempe hodnotenia liečebnej odpovede.',
     'content'      => <<<'HTML'
-<figure><a href="img/porovnanie-usmerneni-lupusova-nefritida-acr-eular-kdigo.webp" rel="noopener noreferrer" target="_blank"><img src="img/porovnanie-usmerneni-lupusova-nefritida-acr-eular-kdigo.webp" alt="Tri svetelné tabule usmernení mieriace na ten istý glomerulus pod mierne odlišnými uhlami" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Cieľ je spoločný, cesty sa mierne líšia — a rozdiely medzi usmerneniami treba poznať.</figcaption></figure>
+<figure><a href="img/porovnanie-usmerneni-lupusova-nefritida-acr-eular-kdigo.webp" rel="noopener noreferrer" target="_blank"><img src="img/porovnanie-usmerneni-lupusova-nefritida-acr-eular-kdigo.webp" alt="Tri svetelné tabule usmernení mieriace na ten istý glomerulus pod mierne odlišnými uhlami" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Cieľ je spoločný, cesty sa mierne líšia – a rozdiely medzi usmerneniami treba poznať.</figcaption></figure>
 
-<p>Nedávna komparatívna analýza ukazuje, že tri „veľké“ medzinárodné odporúčania pre lupusovú nefritídu (LN) vychádzajú zo spoločného dôkazového základu, no v niekoľkých miestach sa významne rozchádzajú. Tieto rozdiely následne menia praktické rozhodovanie pri výbere režimu, miere využitia klinického profilu pacienta aj pri cieľoch liečby v čase. Nasledujúci text sumarizuje hlavné zhody a odlišnosti z hľadiska klinickej použiteľnosti.</p>
+<p>Nedávna porovnávacia analýza ukazuje, že tri „veľké“ medzinárodné odporúčania pre lupusovú nefritídu (LN) vychádzajú zo spoločného dôkazového základu, no v niekoľkých bodoch sa významne rozchádzajú. Rozdiely sa premietajú do výberu režimu, do toho, akú váhu dostane klinický profil pacienta, aj do cieľov liečby v čase. Text sumarizuje hlavné zhody a rozdiely z pohľadu klinickej praxe.</p>
 
 <h2>Diagnostika a sledovanie: rovnaký princíp, odlišná operacionalizácia</h2>
 
@@ -46,7 +46,7 @@ $articles[] = [
   <li><strong>EULAR aj KDIGO</strong> idú skôr cestou <strong>individualizovaného, rizikovo orientovaného monitorovania</strong>.</li>
 </ul>
 
-<p><strong>Biopsia obličky</strong> je pri podozrení na LN konzistentne odporúčaná naprieč všetkými tromi zdrojmi, typicky najmä vtedy, ak:</p>
+<p><strong>Biopsiu obličky</strong> pri podozrení na LN odporúčajú všetky tri zdroje, najmä vtedy, ak:</p>
 
 <ul>
   <li>proteinúria presahuje <strong>0,5 g/deň</strong>, alebo</li>
@@ -70,19 +70,19 @@ $articles[] = [
 
 <h3>Odlišnosti v úvodných režimoch (trojkombinácia verzus dvojkombinácia)</h3>
 
-<p>Tu sú rozdiely klinicky najcitlivejšie:</p>
+<p>Práve tu sú rozdiely klinicky najvýznamnejšie:</p>
 
 <ul>
   <li><strong>ACR</strong> preferuje <strong>úvodnú trojkombináciu</strong>, typicky s <strong>mykofenolát-mofetilom (MMF)</strong> a pridaním <strong>buď belimumabu, alebo kalcineurínového inhibítora (CNI)</strong>.</li>
-  <li><strong>EULAR</strong> tiež podporuje skorú intenzívnu liečbu, no ako prvú líniu uvádza <strong>MMF + obinutuzumab</strong> — to je prakticky kľúčový rozdiel oproti ACR aj KDIGO, ktoré obinutuzumab do odporúčaní nezahŕňajú.</li>
+  <li><strong>EULAR</strong> tiež podporuje skorú intenzívnu liečbu, no ako prvú líniu uvádza <strong>MMF + obinutuzumab</strong>; v tom sa prakticky najviac líši od ACR aj KDIGO, ktoré obinutuzumab do odporúčaní nezahŕňajú.</li>
   <li><strong>KDIGO</strong> explicitne uznáva ako prvú líniu aj <strong>dvojkombináciu</strong>, ktorá môže zahŕňať <strong>nízkodávkovaný cyklofosfamid</strong> alebo <strong>MMF</strong>.</li>
 </ul>
 
 <h3>Rituximab a obinutuzumab</h3>
 
 <ul>
-  <li><strong>Rituximab</strong> nie je odporúčaný ako prvá línia v žiadnom z troch usmernení; dôvodom sú negatívne výsledky štúdie <strong>LUNAR</strong> (rutinne sa teda nepoužíva ako východiskový krok).</li>
-  <li><strong>Obinutuzumab</strong> je naopak špecifický pre EULAR, čo odráža rozdiely v interpretácii a zapracovaní dostupných dát.</li>
+  <li><strong>Rituximab</strong> nie je odporúčaný ako prvá línia v žiadnom z troch usmernení; dôvodom sú negatívne výsledky štúdie <strong>LUNAR</strong>.</li>
+  <li><strong>Obinutuzumab</strong> je naopak špecifický pre EULAR, čo odráža rozdiely v interpretácii a zapracovaní dostupných údajov.</li>
 </ul>
 
 <h2>Klinické profilovanie: ACR najpreskriptívnejšie, EULAR opatrnejšie</h2>
@@ -97,7 +97,7 @@ $articles[] = [
     </ul>
   </li>
   <li><strong>KDIGO</strong> tiež zohľadňuje charakteristiky pacienta (vrátane napríklad <strong>etnicity</strong> a <strong>rizika recidívy</strong>), no je <strong>menej preskriptívne</strong> v konkrétnych algoritmoch.</li>
-  <li><strong>EULAR</strong> pristupuje <strong>opatrnejšie</strong> — zdôrazňuje, že niektoré „profilové“ závery môžu stáť na <em>post-hoc</em> analýzach s obmedzenou interpretáciou.</li>
+  <li><strong>EULAR</strong> pristupuje <strong>opatrnejšie</strong>: zdôrazňuje, že niektoré „profilové“ závery môžu stáť na <em>post-hoc</em> analýzach s obmedzenou interpretáciou.</li>
 </ul>
 
 <h2>Liečebné ciele a časové rámce: zhoda na „kompletnej odpovedi“, rozdiel v tempe hodnotenia</h2>
@@ -185,7 +185,7 @@ $articles[] = [
     <tr>
       <td><strong>Nefroprotekcia</strong></td>
       <td>Spoločný rámec: kontrola krvného tlaku, <strong>blokáda RAAS</strong>, selektívne zváženie <strong>inhibítorov SGLT2</strong></td>
-      <td>Rovnaký princíp — praktická nefroprotekcia popri imunosupresii</td>
+      <td>Rovnaký princíp – praktická nefroprotekcia popri imunosupresii</td>
       <td>Rovnaký spoločný základ: cieľový krvný tlak, RAAS, selektívne SGLT2</td>
     </tr>
   </tbody>
@@ -194,7 +194,7 @@ $articles[] = [
 
 <h2>Membranózna (trieda V) LN: najväčšie medzery v dôkazoch</h2>
 
-<p>Tu komparácia priamo poukazuje na citeľný nedostatok robustných dát:</p>
+<p>Pri triede V porovnanie otvorene ukazuje nedostatok spoľahlivých údajov:</p>
 
 <ul>
   <li>naprieč odporúčaniami <strong>neexistuje všeobecne prijatá stratégia</strong>,</li>
@@ -210,7 +210,7 @@ $articles[] = [
 <h2>Triedy I–II LN: praktická šedá zóna</h2>
 
 <ul>
-  <li>pre <strong>triedy I a II</strong> nie sú usmernenia v komparácii explicitné v odporúčaniach (ide o „šedú zónu“),</li>
+  <li>pre <strong>triedy I a II</strong> usmernenia podľa porovnania nedávajú explicitné odporúčania (ide o „šedú zónu“),</li>
   <li><strong>KDIGO</strong> však spomína koncept <strong>lupusovej podocytopatie</strong> u pacientov s triedou I–II, ak sa pridá <strong>nefrotická proteinúria</strong> alebo <strong>nefrotický syndróm</strong>,</li>
   <li>pri recidívach KDIGO odporúča udržiavaciu stratégiu: <strong>nízkodávkové glukokortikoidy</strong> a ďalší imunosupresívny liek (<strong>MMF, azatioprín alebo CNI</strong>).</li>
 </ul>
@@ -227,7 +227,7 @@ $articles[] = [
 
 <h2>Praktický dosah do bežnej ambulancie</h2>
 
-<p>Komparácia posúva jednu myšlienku: hoci cieľ je spoločný (včas potlačiť aktívnu zápalovú aj fibrotizujúcu kaskádu a udržať bezpečnosť liečby), <strong>spôsob, akým sa volí režim</strong>, sa môže líšiť podľa toho:</p>
+<p>Z porovnania vyplýva jedno: hoci cieľ je spoločný (včas potlačiť aktívnu zápalovú aj fibrotizujúcu kaskádu a udržať bezpečnosť liečby), <strong>spôsob, akým sa volí režim</strong>, sa môže líšiť podľa toho:</p>
 
 <ul>
   <li>či sa ako východisko preferuje trojkombinácia alebo dvojkombinácia,</li>

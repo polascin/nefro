@@ -27,7 +27,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Čínska klastrová randomizovaná štúdia CREATION zistila, že po týždňovom zážitkovom školení lekárov dosiahlo HbA1c pod 7 % o 17 percentuálnych bodov viac pacientov. Dôkaz sa týka celého programu, nie samotného hrania rolí, a nezahŕňa klinické komplikácie ani obličkové výsledky.',
     'content'      => <<<'HTML'
-<figure><a href="img/role-play-vzdelavanie-lekarov-diabetes-creation.webp" rel="noopener noreferrer" target="_blank"><img src="img/role-play-vzdelavanie-lekarov-diabetes-creation.webp" alt="Dve prázdne stoličky oproti sebe v šere; na jednej leží stetoskop, na druhej zápisník, medzi nimi svetelná cesta" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Zážitkové vzdelávanie prenáša lekára na druhú stoličku — otázkou pre prax je, či sa to prejaví na kompenzácii pacienta.</figcaption></figure>
+<figure><a href="img/role-play-vzdelavanie-lekarov-diabetes-creation.webp" rel="noopener noreferrer" target="_blank"><img src="img/role-play-vzdelavanie-lekarov-diabetes-creation.webp" alt="Dve prázdne stoličky oproti sebe v šere; na jednej leží stetoskop, na druhej zápisník, medzi nimi svetelná cesta" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Zážitkové vzdelávanie prenáša lekára na druhú stoličku – otázkou pre prax je, či sa to prejaví na kompenzácii pacienta.</figcaption></figure>
 
 <p class="article-dek"><em>Nedostatočná kompenzácia diabetu 2. typu nie je iba dôsledkom nízkej účinnosti liekov alebo slabej adherencie pacienta. Významnú úlohu majú klinická zotrvačnosť, komunikačné nedostatky a rozdiel medzi znalosťou odporúčaní a ich uplatňovaním v praxi. Čínska klastrová randomizovaná štúdia skúmala, či tento rozdiel možno zmenšiť intenzívnym zážitkovým vzdelávaním lekárov, ktorého súčasťou bolo hranie úlohy pacienta.</em></p>
 
@@ -37,7 +37,7 @@ $articles[] = [
 
 <p>Väčšina intervencií proti klinickej zotrvačnosti sa zameriava na algoritmy, pripomienky v informačnom systéme alebo na audit a spätnú väzbu. Štúdia CREATION zvolila iný prístup: nechala lekárov prežiť si časť pacientskej skúsenosti na vlastnej koži.</p>
 
-<p>Výsledky ukázali klinicky významné zvýšenie podielu pacientov, ktorí dosiahli HbA1c pod 7,0 %. Štúdia však <strong>nepreukazuje</strong>, že účinnou zložkou bolo samotné hranie rolí — testovala komplexný týždňový program. Nepreukázala ani zníženie výskytu mikrovaskulárnych, kardiovaskulárnych alebo obličkových príhod.</p>
+<p>Výsledky ukázali klinicky významné zvýšenie podielu pacientov, ktorí dosiahli HbA1c pod 7,0 %. Štúdia však <strong>nepreukazuje</strong>, že účinnou zložkou bolo samotné hranie rolí; testovala komplexný týždňový program. Nepreukázala ani zníženie výskytu mikrovaskulárnych, kardiovaskulárnych alebo obličkových príhod.</p>
 
 <h2>Dizajn štúdie</h2>
 
@@ -53,8 +53,8 @@ $articles[] = [
     <tr><th scope="row">Dizajn</th><td>otvorená, dvojramenná paralelná klastrová randomizovaná klinická štúdia</td></tr>
     <tr><th scope="row">Pracoviská</th><td>205 centier v Číne</td></tr>
     <tr><th scope="row">Randomizačná jednotka</th><td>lekár (centrum), nie jednotlivý pacient</td></tr>
-    <tr><th scope="row">Fáza 1 — lekári</th><td>205 lekárov zaradených od 13. februára do 29. apríla 2023</td></tr>
-    <tr><th scope="row">Fáza 2 — pacienti</th><td>2 017 pacientov zaradených od 28. februára do 19. septembra 2023</td></tr>
+    <tr><th scope="row">Fáza 1 – lekári</th><td>205 lekárov zaradených od 13. februára do 29. apríla 2023</td></tr>
+    <tr><th scope="row">Fáza 2 – pacienti</th><td>2 017 pacientov zaradených od 28. februára do 19. septembra 2023</td></tr>
     <tr><th scope="row">Sledovanie</th><td>12 mesiacov; ukončené 25. októbra 2024</td></tr>
     <tr><th scope="row">Primárny ukazovateľ</th><td>podiel pacientov s HbA1c pod 7,0 % po 6 mesiacoch</td></tr>
     <tr><th scope="row">Registrácia</th><td>ClinicalTrials.gov NCT05715307</td></tr>
@@ -63,7 +63,7 @@ $articles[] = [
 </table>
 </div>
 
-<p>Lekári boli randomizovaní do dvoch ramien: 103 do intenzívneho zážitkového školenia a 102 do štandardného školenia. Následne zaradili pacientov — 1 009 do intervenčného a 1 008 do kontrolného ramena.</p>
+<p>Lekári boli randomizovaní do dvoch ramien: 103 do intenzívneho zážitkového školenia a 102 do štandardného školenia. Následne zaradili pacientov: 1 009 do intervenčného a 1 008 do kontrolného ramena.</p>
 
 <p>Priemerný vek lekárov bol 36,2 roka (smerodajná odchýlka 5,1) a ženy tvorili 75,6 % (155 z 205). Pacienti mali priemerný vek 53,0 roka (7,0), muži tvorili 64,7 % (1 304 z 2 017) a ženy 35,3 % (713).</p>
 
@@ -155,14 +155,14 @@ $articles[] = [
 
 <p>Za povšimnutie stojí nepomer: podiel pacientov v cieli sa zvýšil o 17 percentuálnych bodov, ale glykémia nalačno klesla iba o 0,35 mmol/l, BMI o 0,3 kg/m² a systolický tlak o 1,5 mm Hg.</p>
 
-<p>Takýto vzorec sa dá vysvetliť viacerými spôsobmi. Binárny ukazovateľ „pod 7,0 %“ je citlivý na malý posun celej distribúcie okolo prahovej hodnoty — ak leží veľká časť pacientov tesne nad hranicou, aj mierne zlepšenie HbA1c prekloní mnohých pod ňu. Zmena môže tiež pochádzať prevažne z postprandiálnej glykémie, ktorú lačná hodnota nezachytáva, alebo z intenzifikácie farmakoterapie, ktorá HbA1c ovplyvní viac než hmotnosť či tlak.</p>
+<p>Takýto vzorec sa dá vysvetliť viacerými spôsobmi. Binárny ukazovateľ „pod 7,0 %“ je citlivý na malý posun celej distribúcie okolo prahovej hodnoty – ak leží veľká časť pacientov tesne nad hranicou, aj mierne zlepšenie HbA1c prekloní mnohých pod ňu. Zmena môže tiež pochádzať prevažne z postprandiálnej glykémie, ktorú lačná hodnota nezachytáva, alebo z intenzifikácie farmakoterapie, ktorá HbA1c ovplyvní viac než hmotnosť či tlak.</p>
 
 <p>Bez podrobných údajov o zmenách liečby nemožno medzi týmito vysvetleniami rozhodnúť. Pre klinickú interpretáciu to znamená, že veľkosť účinku vyjadrená podielom pacientov v cieli vyzerá pôsobivejšie než priemerné metabolické posuny, ktoré ju sprevádzajú.</p>
 </div>
 
 <h2>Metodologické silné stránky</h2>
 
-<p>Najväčšou prednosťou je randomizovaný dizajn. Klastrová randomizácia bola pri vzdelávacej intervencii primeraná — randomizácia jednotlivých pacientov toho istého lekára by viedla ku kontaminácii medzi ramenami.</p>
+<p>Najväčšou prednosťou je randomizovaný dizajn. Klastrová randomizácia bola pri vzdelávacej intervencii primeraná, pretože randomizácia jednotlivých pacientov toho istého lekára by viedla ku kontaminácii medzi ramenami.</p>
 
 <ul>
   <li>veľký počet klastrov (205 centier), čo je pri klastrových štúdiách priaznivé,</li>
@@ -192,11 +192,11 @@ $articles[] = [
 
 <p>Primárny výsledok bol uvedený ako 476 z 820 a 351 z 818, hoci randomizované ramená zahŕňali 1 009 a 1 008 pacientov. Do týchto podielov teda nebolo zahrnutých približne 19 % zaradených pacientov.</p>
 
-<p>Za zmienku stojí, že v 12. mesiaci boli menovatele dokonca vyššie (824 a 832) než v 6. mesiaci. Časť pacientov teda mala k dispozícii 12-mesačné, ale nie 6-mesačné meranie. Autori označili primárnu analýzu za analýzu podľa princípu <em>intention-to-treat</em>, no na úplné posúdenie rizika skreslenia treba poznať spôsob imputácie chýbajúcich údajov a výsledky citlivostných analýz.</p>
+<p>V 12. mesiaci boli menovatele dokonca vyššie (824 a 832) než v 6. mesiaci. Časť pacientov teda mala k dispozícii 12-mesačné, ale nie 6-mesačné meranie. Autori označili primárnu analýzu za analýzu podľa princípu <em>intention-to-treat</em>, no na úplné posúdenie rizika skreslenia treba poznať spôsob imputácie chýbajúcich údajov a výsledky citlivostných analýz.</p>
 
 <h3>Náhradný primárny ukazovateľ</h3>
 
-<p>HbA1c pod 7 % je klinicky relevantný, ale nie je priamym dôkazom prevencie terminálneho zlyhania obličiek, infarktu, mozgovej príhody, amputácie alebo smrti. Univerzálny cieľ pod 7 % navyše nie je vhodný pre každého pacienta — u starších, krehkých a u pacientov s pokročilou chronickou chorobou obličiek môže byť prísny cieľ nevhodný pre riziko hypoglykémie.</p>
+<p>HbA1c pod 7 % je klinicky relevantný, ale nie je priamym dôkazom prevencie terminálneho zlyhania obličiek, infarktu, mozgovej príhody, amputácie alebo smrti. Univerzálny cieľ pod 7 % navyše nie je vhodný pre každého pacienta – u starších, krehkých a u pacientov s pokročilou chronickou chorobou obličiek môže byť prísny cieľ nevhodný pre riziko hypoglykémie.</p>
 
 <h3>Nejasný mechanizmus účinku</h3>
 
@@ -252,7 +252,7 @@ $articles[] = [
   <li>obličková alebo celková mortalita.</li>
 </ul>
 
-<p>Pripomeňme navyše, že pacienti s eGFR pod 60 ml/min/1,73 m² boli zo štúdie vylúčení. Program teda nebol overený u populácie, ktorá nefrológa zaujíma najviac.</p>
+<p>Pacienti s eGFR pod 60 ml/min/1,73 m² navyše boli zo štúdie vylúčení. Program teda nebol overený u populácie, ktorá nefrológa zaujíma najviac.</p>
 
 <p>Kvalitný manažment diabetu u pacienta s chronickou chorobou obličiek nemožno redukovať na HbA1c. Musí zahŕňať pravidelné vyšetrovanie eGFR a albuminúrie, kontrolu krvného tlaku a správne použitie inhibítorov systému renín-angiotenzín, inhibítorov SGLT2, agonistov receptora GLP-1 a pri vhodnej indikácii nesteroidného antagonistu mineralokortikoidového receptora.</p>
 
@@ -279,7 +279,7 @@ $articles[] = [
 
 <p>Týždňové intenzívne prezenčné školenie lekárov, ktorého súčasťou bolo preberanie úlohy pacienta, zvýšilo v čínskej klastrovej randomizovanej štúdii podiel pacientov s diabetom 2. typu dosahujúcich HbA1c pod 7 % približne o 17 percentuálnych bodov.</p>
 
-<p>Výsledok podporuje význam praktického, komunikačného a zážitkového vzdelávania. Dôkaz sa však týka celého viacprvkového programu, nie samotného hrania rolí. Nemožno z neho odvodiť prevenciu diabetických komplikácií ani nefroprotekciu — a už vôbec nie u pacientov s chronickou chorobou obličiek, ktorí do štúdie neboli zaradení.</p>
+<p>Výsledok podporuje význam praktického, komunikačného a zážitkového vzdelávania. Dôkaz sa však týka celého viacprvkového programu, nie samotného hrania rolí. Nemožno z neho odvodiť prevenciu diabetických komplikácií ani nefroprotekciu, a už vôbec nie u pacientov s chronickou chorobou obličiek, ktorí do štúdie neboli zaradení.</p>
 
 <p>Pre slovenskú prax by bolo primerané pilotné overenie podobného programu s <strong>aktívnou kontrolnou skupinou s rovnakou časovou dotáciou</strong>, s ekonomickým hodnotením a so širšími výsledkami zahŕňajúcimi hypoglykémie, albuminúriu, eGFR, používanie kardiorenálne ochrannej liečby, hospitalizácie, kvalitu života a dlhodobú udržateľnosť účinku.</p>
 

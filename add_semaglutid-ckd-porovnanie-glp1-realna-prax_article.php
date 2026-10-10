@@ -28,9 +28,9 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Observačné porovnanie štyroch agonistov receptora GLP-1 nezistilo rozdiel v primárnom obličkovom ukazovateli. Priaznivé asociácie semaglutidu sa týkali sekundárneho ukazovateľa zahŕňajúceho úmrtie.',
     'content'      => <<<'HTML'
-<figure><a href="img/semaglutid-ckd-porovnanie-glp1-realna-prax.webp" rel="noopener noreferrer" target="_blank"><img src="img/semaglutid-ckd-porovnanie-glp1-realna-prax.webp" alt="Tri injekčné perá a za nimi oblička; ochranné závoje z nich majú viditeľne rôzny dosah a hustotu" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna, nie zobrazenie konkrétnych prípravkov. Porovnanie z reálnej praxe naznačuje rozdiely v rámci triedy — ide však o observačné údaje.</figcaption></figure>
+<figure><a href="img/semaglutid-ckd-porovnanie-glp1-realna-prax.webp" rel="noopener noreferrer" target="_blank"><img src="img/semaglutid-ckd-porovnanie-glp1-realna-prax.webp" alt="Tri injekčné perá a za nimi oblička; ochranné závoje z nich majú viditeľne rôzny dosah a hustotu" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna, nie zobrazenie konkrétnych prípravkov. Porovnanie z reálnej praxe naznačuje rozdiely v rámci triedy – ide však o observačné údaje.</figcaption></figure>
 
-<p>Chronická choroba obličiek (CKD) patrí medzi najzávažnejšie komplikácie diabetu 2. typu. Agonisty receptora glukagónu podobného peptidu 1 (GLP-1) sa v posledných rokoch etablovali ako lieky, ktoré znižujú glykémiu, podporujú redukciu telesnej hmotnosti a pri vybraných prípravkoch znižujú kardiovaskulárne aj obličkové riziko.</p>
+<p>Chronická choroba obličiek (CKD) patrí medzi najzávažnejšie komplikácie diabetu 2. typu. Agonisty receptora glukagónu podobného peptidu 1 (GLP-1) sa v posledných rokoch presadili ako lieky, ktoré znižujú glykémiu, podporujú redukciu telesnej hmotnosti a pri vybraných prípravkoch znižujú kardiovaskulárne aj obličkové riziko.</p>
 
 <p>Randomizovaná štúdia FLOW preukázala obličkový prínos semaglutidu oproti placebu u pacientov s diabetom 2. typu a už prítomnou CKD. Neodpovedala však na inú klinicky dôležitú otázku: <strong>líšia sa obličkové výsledky medzi jednotlivými agonistami receptora GLP-1?</strong> Priame randomizované porovnanie jednotlivých prípravkov s obličkovými ukazovateľmi zatiaľ chýba.</p>
 
@@ -38,7 +38,7 @@ $articles[] = [
 
 <h2>Ako bola štúdia navrhnutá</h2>
 
-<p>Autori využili údaje z databázy OptumLabs Data Warehouse a úplný súbor administratívnych údajov Medicare fee-for-service v Spojených štátoch. Zaradili dospelých vo veku ≥21 rokov, ktorí od 1. januára 2019 do 31. decembra 2021 novozahájili liečbu jedným zo štyroch skúmaných agonistov receptora GLP-1.</p>
+<p>Autori využili údaje z databázy OptumLabs Data Warehouse a úplný súbor administratívnych údajov Medicare fee-for-service v Spojených štátoch. Zaradili dospelých vo veku ≥21 rokov, ktorí od 1. januára 2019 do 31. decembra 2021 začali liečbu jedným zo štyroch skúmaných agonistov receptora GLP-1.</p>
 
 <p>Išlo o retrospektívnu observačnú štúdiu s rámcom <strong>emulácie cieľovej klinickej štúdie</strong>. Tento postup vopred formuluje podmienky hypotetického randomizovaného skúšania a potom ich čo najvernejšie napodobní v dostupných údajoch. Rozdiely medzi liečenými skupinami autori vyvažovali vážením podľa inverznej pravdepodobnosti liečby (IPTW); skóre pravdepodobnosti odhadli pomocou ansámblovej metódy SuperLearner. Analýza času do udalosti vychádzala z princípu intention-to-treat a z Coxových modelov príčinovo špecifického rizika s IPTW.</p>
 
@@ -91,7 +91,7 @@ $articles[] = [
 </table>
 </div>
 
-<p>Najdôležitejším výsledkom je <strong>neprítomnosť štatisticky významného rozdielu v primárnom obličkovom kompozite</strong>. Priaznivé asociácie semaglutidu sa objavili až v sekundárnom ukazovateli, ktorý už zahŕňal aj celkovú mortalitu. V dostupnom abstrakte nebola uvedená priaznivá asociácia sekundárneho ukazovateľa semaglutidu oproti liraglutidu.</p>
+<p>Najdôležitejším výsledkom je <strong>neprítomnosť štatisticky významného rozdielu v primárnom obličkovom kompozite</strong>. Priaznivé asociácie semaglutidu sa objavili až v sekundárnom ukazovateli, ktorý už zahŕňal aj celkovú mortalitu. Pri porovnaní semaglutidu s liraglutidom dostupný abstrakt priaznivú asociáciu v sekundárnom ukazovateli neuvádza.</p>
 
 <p>Hodnoty 8 %, 12 % a 19 % vyjadrujú relatívne rozdiely v riziku v čase, nie absolútny počet odvrátených udalostí. Bez absolútnych rizík a časového horizontu ich nemožno previesť na počet pacientov potrebných na liečbu.</p>
 

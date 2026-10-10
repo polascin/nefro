@@ -27,13 +27,13 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Štyri opakujúce sa mýty o strave a čreve narážajú pri chronickej chorobe obličiek na tvrdé čísla: fitness prah 1,62 g bielkovín na kilogram leží nad stropom 1,3 g, ktorý KDIGO neodporúča prekračovať, a „čistenie čriev“ má doložené renálne riziko.',
     'content'      => <<<'HTML'
-<figure><a href="img/strava-a-zdravie-creva-myty-influencerov-ckd.webp" rel="noopener noreferrer" target="_blank"><img src="img/strava-a-zdravie-creva-myty-influencerov-ckd.webp" alt="Lesklá vrstvená veža superpotravín pod ostrým svetlom, stojaca na tenkom popraskanom podklade" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Presvedčivá forma ešte nie je dôkaz — a pri chorobe obličiek môže byť „zdravá“ rada priamo riziková.</figcaption></figure>
+<figure><a href="img/strava-a-zdravie-creva-myty-influencerov-ckd.webp" rel="noopener noreferrer" target="_blank"><img src="img/strava-a-zdravie-creva-myty-influencerov-ckd.webp" alt="Lesklá vrstvená veža superpotravín pod ostrým svetlom, stojaca na tenkom popraskanom podklade" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Presvedčivá forma ešte nie je dôkaz – a pri chorobe obličiek môže byť „zdravá“ rada priamo riziková.</figcaption></figure>
 
-<p class="article-dek"><em>Tvrdenia influencerov o strave a „zdraví čreva“ bývajú presvedčivé preto, že majú pravdivé jadro — ktoré sa potom neprimerane zovšeobecní. Pri chronickej chorobe obličiek však tieto zovšeobecnenia narážajú na konkrétne čísla a konkrétne riziká. Tento článok prechádza štyri najčastejšie mýty a ukazuje, kde presne sa pri nefrologickom pacientovi lámu.</em></p>
+<p class="article-dek"><em>Tvrdenia influencerov o strave a „zdraví čreva“ bývajú presvedčivé preto, že majú pravdivé jadro, ktoré sa potom neprimerane zovšeobecní. Pri chronickej chorobe obličiek však tieto zovšeobecnenia narážajú na konkrétne čísla a konkrétne riziká. Tento článok prechádza štyri najčastejšie mýty a ukazuje, kde presne sa pri nefrologickom pacientovi lámu.</em></p>
 
 <h2>Prečo sa tým má nefrológ zaoberať</h2>
 
-<p>Pacienti prichádzajú s odporúčaniami zo sociálnych sietí častejšie než s odporúčaniami od dietológa. Štyri opakujúce sa témy — bielkoviny, detox, testy potravinovej citlivosti a hmotnosť — sa pritom dotýkajú presne tých oblastí, kde je pri chronickej chorobe obličiek (CKD) riziko vyššie než v bežnej populácii.</p>
+<p>Pacienti prichádzajú s odporúčaniami zo sociálnych sietí častejšie než s odporúčaniami od dietológa. Štyri opakujúce sa témy – bielkoviny, detox, testy potravinovej citlivosti a hmotnosť – sa pritom dotýkajú presne tých oblastí, kde je pri chronickej chorobe obličiek (CKD) riziko vyššie než v bežnej populácii.</p>
 
 <p>Cieľom nie je paušálne odmietnuť všetko, čo zaznie na internete. Väčšina týchto tvrdení má pravdivý základ. Problém vzniká pri prenose na pacienta, u ktorého platia iné hranice.</p>
 
@@ -46,7 +46,7 @@ $articles[] = [
 
 <p>Novšia metaanalýza Nunesa a spol. (74 randomizovaných štúdií) tento obraz dopĺňa: zvýšenie príjmu bielkovín prináša pri silovom tréningu iba <em>malý</em> prírastok beztukovej hmoty (štandardizovaný rozdiel priemerov 0,22; 95 % IS 0,14 až 0,30). Účinok bol významný u osôb nad 65 rokov pri príjme 1,2 až 1,59 g/kg/deň a u mladších pri príjme nad 1,6 g/kg/deň.</p>
 
-<p>Tvrdenie „viac je lepšie“ teda nie je nepravdivé — je <strong>ohraničené</strong>. A hranica je známa.</p>
+<p>Tvrdenie „viac je lepšie“ teda nie je nepravdivé – je <strong>ohraničené</strong>. A hranica je známa.</p>
 
 <h3>Kde to naráža pri CKD</h3>
 
@@ -69,9 +69,9 @@ $articles[] = [
 </table>
 </div>
 
-<p>Kontrast je zreteľný: <strong>prah, pri ktorom sa vo fitness komunite prestáva oplácať ďalší proteín, leží nad hranicou, ktorú KDIGO pri riziku progresie neodporúča prekračovať.</strong> Pacient, ktorý sa riadi obsahom pre zdravých športovcov, sa teda môže úplne legitímne dostať do pásma, pred ktorým nefrologické odporúčanie varuje — bez toho, aby porušil čokoľvek z toho, čo počul.</p>
+<p>Kontrast je zreteľný: <strong>prah, pri ktorom sa vo fitness komunite prestáva oplácať ďalší proteín, leží nad hranicou, ktorú KDIGO pri riziku progresie neodporúča prekračovať.</strong> Pacient, ktorý sa riadi obsahom pre zdravých športovcov, sa teda môže úplne legitímne dostať do pásma, pred ktorým nefrologické odporúčanie varuje – bez toho, aby porušil čokoľvek z toho, čo počul.</p>
 
-<p>Doplňme dve upozornenia, aby výklad nebol jednostranný. KDIGO neodporúča prísne nízkobielkovinové diéty plošne — veľmi nízky príjem (0,3 až 0,4 g/kg/deň s ketoanalógmi) prichádza do úvahy len pod dohľadom u vybraných pacientov s rizikom zlyhania obličiek, a u metabolicky nestabilných pacientov ani nízko-, ani veľmi nízkobielkovinovú diétu predpisovať netreba. U detí s CKD sa bielkoviny neobmedzujú vôbec pre riziko poruchy rastu. Pacienti na dialýze majú navyše iné, vyššie potreby než pacienti bez dialýzy.</p>
+<p>Aby výklad nebol jednostranný, treba doplniť dve upozornenia. KDIGO neodporúča prísne nízkobielkovinové diéty plošne: veľmi nízky príjem (0,3 až 0,4 g/kg/deň s ketoanalógmi) prichádza do úvahy len pod dohľadom u vybraných pacientov s rizikom zlyhania obličiek, a u metabolicky nestabilných pacientov ani nízko-, ani veľmi nízkobielkovinovú diétu predpisovať netreba. U detí s CKD sa bielkoviny neobmedzujú vôbec pre riziko poruchy rastu. Pacienti na dialýze majú navyše iné, vyššie potreby než pacienti bez dialýzy.</p>
 
 <p>Podrobnejšie sa proteínovým a kreatínovým doplnkom venuje samostatný článok uvedený v prehľade nižšie.</p>
 </div>
@@ -82,14 +82,14 @@ $articles[] = [
 
 <p>Prehľad Mishoriovej a spol. hľadal doklady o prínose čistenia hrubého čreva a nenašiel <strong>žiadnu metodologicky spoľahlivú štúdiu</strong>, ktorá by túto prax podporovala. Naopak, zdokumentované poškodenia sú konkrétne: poruchy elektrolytov, sepsa, kolitída, perforácia rekta a úmrtia. V opísanom prepuknutí amébózy pripisovanom kolonickej irigácii v jedinom zariadení sa infikovalo najmenej 36 pacientov, 10 potrebovalo kolektómiu a šiesti zomreli.</p>
 
-<p>Koncept „detoxifikácie“ je pritom medicínsky nepresný. Pečeň, obličky, pľúca, črevo a koža <em>sú</em> eliminačný systém a pracujú nepretržite. Krátkodobý úbytok hmotnosti po „detoxe“ sa vysvetľuje energetickým deficitom, zmenou obsahu čreva a stratou tekutín — nie odstránením toxínov.</p>
+<p>Koncept „detoxifikácie“ je pritom medicínsky nepresný. Pečeň, obličky, pľúca, črevo a koža <em>sú</em> eliminačný systém a pracujú nepretržite. Krátkodobý úbytok hmotnosti po „detoxe“ sa vysvetľuje energetickým deficitom, zmenou obsahu čreva a stratou tekutín – nie odstránením toxínov.</p>
 
 <div class="pdf-avoid-break">
-<h3>Kde to naráža pri CKD — a jeden konkrétny renálny mechanizmus</h3>
+<h3>Kde to naráža pri CKD – a jeden konkrétny renálny mechanizmus</h3>
 
 <p>Poruchy elektrolytov a dehydratácia sú pri CKD závažnejšie a menej reverzibilné než u zdravého človeka. Existuje však aj priamy renálny mechanizmus s vlastným menom.</p>
 
-<p><strong>Akútna fosfátová nefropatia</strong> je poškodenie obličiek s tubulárnymi depozitmi fosforečnanu vápenatého po prípravkoch na čistenie čriev obsahujúcich perorálny sodný fosfát. Markowitz a spol. opísali 21 takýchto pacientov, ktorí sa prezentovali akútnym zlyhaním obličiek pri normálnej kalcémii po vyčistení čreva perorálnym sodným fosfátom — a označili tento stav za <em>nedostatočne rozpoznávanú príčinu chronického zlyhania obličiek</em>.</p>
+<p><strong>Akútna fosfátová nefropatia</strong> je poškodenie obličiek s tubulárnymi depozitmi fosforečnanu vápenatého po prípravkoch na čistenie čriev obsahujúcich perorálny sodný fosfát. Markowitz a spol. opísali 21 takýchto pacientov, u ktorých sa pri normálnej kalcémii rozvinulo akútne zlyhanie obličiek po vyčistení čreva perorálnym sodným fosfátom – a označili tento stav za <em>nedostatočne rozpoznávanú príčinu chronického zlyhania obličiek</em>.</p>
 
 <p>To je zásadný rozdiel oproti bežnej predstave: nejde o teoretické riziko dehydratácie, ale o histologicky doloženú entitu, ktorá môže zanechať trvalé poškodenie. Pacientovi s CKD, ktorý uvažuje o „prečistení“ pomocou laxatívnych prípravkov neznámeho zloženia, treba toto povedať priamo.</p>
 </div>
@@ -98,15 +98,15 @@ $articles[] = [
 
 <h3>Čo hovoria odborné spoločnosti</h3>
 
-<p>Stanovisko Kanadskej spoločnosti pre alergiu a klinickú imunológiu (CSACI) k testovaniu potravinovo špecifických IgG je jednoznačne odmietavé — test sa neodporúča na diagnostiku potravinovej alergie ani intolerancie. Rovnaké stanovisko zastáva Americká akadémia alergie, astmy a imunológie.</p>
+<p>Stanovisko Kanadskej spoločnosti pre alergiu a klinickú imunológiu (CSACI) k testovaniu potravinovo špecifických IgG je jednoznačne odmietavé – test sa neodporúča na diagnostiku potravinovej alergie ani intolerancie. Rovnaké stanovisko zastáva Americká akadémia alergie, astmy a imunológie.</p>
 
-<p>Dôvod je imunologický: <strong>prítomnosť špecifických IgG proti potravine odráža expozíciu tejto potravine, nie patologickú reakciu na ňu.</strong> Vysoké IgG voči mlieku znamená predovšetkým to, že daný človek pije mlieko. Pozitívny výsledok tak nemá diagnostickú hodnotu, ale má reálne dôsledky — vedie k vylúčeniu často desiatok potravín.</p>
+<p>Dôvod je imunologický: <strong>prítomnosť špecifických IgG proti potravine odráža expozíciu tejto potravine, nie patologickú reakciu na ňu.</strong> Vysoké IgG voči mlieku znamená predovšetkým to, že daný človek pije mlieko. Pozitívny výsledok tak nemá diagnostickú hodnotu, ale má reálne dôsledky – vedie k vylúčeniu často desiatok potravín.</p>
 
 <h3>Kde to naráža pri CKD</h3>
 
-<p>Neodôvodnené reštrikcie sú v tejto populácii obzvlášť rizikové. Pacient s CKD už spravidla obmedzuje fosfor, draslík a sodík; strava sa mu teda zužuje aj bez ďalších zákazov. Pridanie rozsiahleho zoznamu „zápalových“ potravín podľa IgG testu zvyšuje riziko nedostatočného príjmu energie a bielkovín, deficitu mikroživín a v konečnom dôsledku sarkopénie a krehkosti — teda presne toho, čo prognózu pri CKD zhoršuje.</p>
+<p>Neodôvodnené reštrikcie sú v tejto populácii obzvlášť rizikové. Pacient s CKD už spravidla obmedzuje fosfor, draslík a sodík; strava sa mu teda zužuje aj bez ďalších zákazov. Pridanie rozsiahleho zoznamu „zápalových“ potravín podľa IgG testu zvyšuje riziko nedostatočného príjmu energie a bielkovín, deficitu mikroživín a v konečnom dôsledku sarkopénie a krehkosti – teda presne toho, čo prognózu pri CKD zhoršuje.</p>
 
-<p>Praktický postup: ak pacient príde s výsledkom IgG testu, nie je vhodné ho zosmiešniť. Užitočnejšie je vysvetliť, čo test v skutočnosti meria, a ponúknuť riadny postup — cielenú anamnézu, prípadne alergologické alebo gastroenterologické vyšetrenie, a pri podozrení na intoleranciu štruktúrovanú eliminačno-expozičnú skúšku pod dohľadom.</p>
+<p>Praktický postup: ak pacient príde s výsledkom IgG testu, nie je vhodné ho zosmiešniť. Užitočnejšie je vysvetliť, čo test v skutočnosti meria, a ponúknuť riadny postup – cielenú anamnézu, prípadne alergologické alebo gastroenterologické vyšetrenie, a pri podozrení na intoleranciu štruktúrovanú eliminačno-expozičnú skúšku pod dohľadom.</p>
 
 <h2>Mýtus 4: „Nižšia hmotnosť je vždy zdravšia“</h2>
 
@@ -121,14 +121,14 @@ $articles[] = [
 <p>Informatívnejšie sú:</p>
 
 <ul>
-  <li>funkčný stav — sila stisku ruky, chôdzová rýchlosť, test vstávania zo stoličky,</li>
+  <li>funkčný stav – sila stisku ruky, chôdzová rýchlosť, test vstávania zo stoličky,</li>
   <li>nutričný stav vrátane príjmu energie a bielkovín,</li>
   <li>telesné zloženie tam, kde je dostupné,</li>
   <li>krvný tlak a metabolický profil,</li>
   <li>kvalita života a sebestačnosť.</li>
 </ul>
 
-<p>Osobitnú opatrnosť si vyžaduje neplánovaný úbytok hmotnosti u dialyzovaného pacienta — ten nie je úspechom, ale varovným znamením.</p>
+<p>Osobitnú opatrnosť si vyžaduje neplánovaný úbytok hmotnosti u dialyzovaného pacienta – ten nie je úspechom, ale varovným znamením.</p>
 
 <div class="pdf-avoid-break">
 <h2>Vecná kontrola hlavných tvrdení</h2>
@@ -148,7 +148,7 @@ $articles[] = [
     <tr><td>Odporúčania pre športovcov platia aj pri CKD</td><td><strong>Nie</strong></td><td>KDIGO 2024: 0,8 g/kg/deň pri G3–G5, neprekračovať 1,3 g/kg/deň pri riziku progresie</td></tr>
     <tr><td>Detox diéta odstráni toxíny a resetuje črevo</td><td><strong>Nepodložené</strong></td><td>Žiadna metodologicky spoľahlivá štúdia; eliminačné orgány pracujú nepretržite</td></tr>
     <tr><td>Čistenie čriev je neškodné</td><td><strong>Nepravdivé</strong></td><td>Doložené poruchy elektrolytov, sepsa, kolitída, perforácia, úmrtia; pri amébóze z irigácie ≥ 36 infikovaných, 10 kolektómií, 6 úmrtí</td></tr>
-    <tr><td>Prípravky na čistenie čriev nemajú renálne riziko</td><td><strong>Nepravdivé</strong></td><td>Akútna fosfátová nefropatia po perorálnom sodnom fosfáte — 21 opísaných pacientov, možné trvalé poškodenie</td></tr>
+    <tr><td>Prípravky na čistenie čriev nemajú renálne riziko</td><td><strong>Nepravdivé</strong></td><td>Akútna fosfátová nefropatia po perorálnom sodnom fosfáte – 21 opísaných pacientov, možné trvalé poškodenie</td></tr>
     <tr><td>IgG test ukáže potraviny vyvolávajúce zápal</td><td><strong>Nepodložené na diagnostiku</strong></td><td>IgG odráža expozíciu, nie patologickú reakciu; CSACI aj AAAAI test neodporúčajú</td></tr>
     <tr><td>Nižšie BMI je automaticky zdravšie</td><td><strong>Zjednodušenie</strong></td><td>BMI nerozlišuje tuk od svalu ani nezachytáva funkciu; pri CKD je informatívnejší funkčný a nutričný stav</td></tr>
   </tbody>
@@ -199,7 +199,7 @@ $articles[] = [
   <li><strong>Medscape Medical News.</strong> <em>What Influencers Get Wrong About Diet and Gut Health.</em> Medscape, 2026. Sekundárny zdroj použitý ako východisko témy, nie ako dôkaz; ako autorka sa uvádza Charlotte Markey. <a href="https://www.medscape.com/viewarticle/what-influencers-get-wrong-about-diet-and-gut-health-2026a1000rxg" target="_blank" rel="noopener noreferrer">Spravodajské spracovanie</a>.</li>
 </ol>
 
-<p><em><strong>Poznámka k spracovaniu:</strong> Prah 1,62 g/kg/deň, počet 49 štúdií a 1 863 účastníkov boli overené proti abstraktu v PubMed (PMID 28698222); údaje druhej metaanalýzy (74 štúdií, SMD 0,22; 95 % IS 0,14–0,30, pásma 1,2–1,59 a ≥ 1,6 g/kg/deň) proti PMID 35187864; séria 21 pacientov s akútnou fosfátovou nefropatiou proti PMID 16192415; stanovisko CSACI proti PMID 22835332. Odporúčanie 0,8 g/kg/deň (2C) a praktický bod o neprekračovaní 1,3 g/kg/deň pochádzajú z odporúčania KDIGO 2024 pre CKD. <strong>Oprava oproti pôvodnému podkladu:</strong> ako doklad o „čistení čriev“ bola v podklade uvedená práca Restelliniho a spol. (World J Gastroenterol 2017), tá sa však týka prípravy čreva pred kolonoskopiou pri nešpecifických zápaloch čreva, nie detoxových praktík — bola nahradená prehľadom Mishoriovej a spol. Autorstvo spravodajského spracovania Medscape sa pre obmedzený prístup nepodarilo nezávisle overiť a uvádza sa s výhradou.</em></p>
+<p><em><strong>Poznámka k spracovaniu:</strong> Prah 1,62 g/kg/deň, počet 49 štúdií a 1 863 účastníkov boli overené proti abstraktu v PubMed (PMID 28698222); údaje druhej metaanalýzy (74 štúdií, SMD 0,22; 95 % IS 0,14–0,30, pásma 1,2–1,59 a ≥ 1,6 g/kg/deň) proti PMID 35187864; séria 21 pacientov s akútnou fosfátovou nefropatiou proti PMID 16192415; stanovisko CSACI proti PMID 22835332. Odporúčanie 0,8 g/kg/deň (2C) a praktický bod o neprekračovaní 1,3 g/kg/deň pochádzajú z odporúčania KDIGO 2024 pre CKD. <strong>Oprava oproti pôvodnému podkladu:</strong> ako doklad o „čistení čriev“ bola v podklade uvedená práca Restelliniho a spol. (World J Gastroenterol 2017), tá sa však týka prípravy čreva pred kolonoskopiou pri nešpecifických zápaloch čreva, nie detoxových praktík – bola nahradená prehľadom Mishoriovej a spol. Autorstvo spravodajského spracovania Medscape sa pre obmedzený prístup nepodarilo nezávisle overiť a uvádza sa s výhradou.</em></p>
 
 <p><em><strong>Poznámka k interpretácii:</strong> Príjem bielkovín, obmedzenia stravy a nutričné intervencie pri chronickej chorobe obličiek treba stanoviť individuálne podľa štádia ochorenia, dialyzačnej liečby, nutričného stavu a rizika sarkopénie, v spolupráci s nutričným terapeutom a podľa platných odporúčaní. Uvedené prahy sú orientačné hodnoty z populačných štúdií a odporúčaní, nie predpis pre konkrétneho pacienta.</em></p>
 </div>

@@ -52,7 +52,7 @@ $articles[] = [
 
 <h2>Prečo EHR a jazykový model: chýba kód NDC</h2>
 
-<p>Retatrutid ako neschválený produkt nemá národný kód lieku (NDC), lekárenský nárok ani štruktúrovaný predpis. Expozícia existuje takmer výlučne vo voľnom texte klinických poznámok: či pacient látku naozaj užíval, odkiaľ ju získal a kedy začal. Murugadoss, Venkatakrishnan a Soundararajan preto v federovanej americkej sieti EHR s približne 29 miliónmi pacientov nechali veľký jazykový model posúdiť celú históriu poznámok u každého, u koho sa retatrutid spomenul. Klinický recenzent následne ručne overil 320 náhodne vybraných extrakcií: klasifikácia expozície mala prevalenčne váženú presnosť 99,8 % a cesta dodávky 90,3 %.</p>
+<p>Retatrutid ako neschválený produkt nemá národný kód lieku (NDC), lekárenský nárok ani štruktúrovaný predpis. Expozícia existuje takmer výlučne vo voľnom texte klinických poznámok: či pacient látku naozaj užíval, odkiaľ ju získal a kedy začal. Murugadoss, Venkatakrishnan a Soundararajan preto vo federovanej americkej sieti EHR s približne 29 miliónmi pacientov nechali veľký jazykový model posúdiť celú históriu poznámok u každého, u koho sa retatrutid spomenul. Klinický recenzent následne ručne overil 320 náhodne vybraných extrakcií: klasifikácia expozície mala prevalenčne váženú presnosť 99,8 % a cesta dodávky 90,3 %.</p>
 
 <p>Indexový dátum je najskoršia poznámka s potvrdenou expozíciou, prípadne explicitný dátum začiatku, ak ho záznam uvádza (214 z 652 potvrdených užívateľov, 32,8 %). Dizajn je <strong>observačný</strong> a <strong>nedokazuje príčinnú súvislosť</strong>. Nevie overiť zloženie, čistotu, dávku ani adherenciu. Autori ho označujú za predbežný farmakovigilančný signál, nie za dôkaz kardiovaskulárneho rizika.</p>
 

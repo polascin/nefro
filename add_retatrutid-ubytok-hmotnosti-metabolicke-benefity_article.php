@@ -34,7 +34,7 @@ $articles[] = [
 
 <p>Experimentálny liek <strong>retatrutid</strong> priniesol v nových klinických štúdiách výrazný úbytok hmotnosti, zlepšenie kompenzácie diabetu 2. typu a priaznivé zmeny viacerých kardiometabolických rizikových faktorov. Údaje boli prezentované na vedeckom kongrese <strong>American Diabetes Association 2026</strong> v New Orleans. Výsledky štúdie TRANSCEND-T2D-1 boli zároveň publikované v časopise <strong>The Lancet</strong>.</p>
 
-<p>Retatrutid je skúšaný liek zo skupiny terapií s inkretínovým účinkom. Je to <strong>trojitý agonista receptorov GLP-1, GIP a glukagónu</strong>. Práve kombinácia týchto mechanizmov má potenciál ovplyvniť nielen glykémiu, ale aj telesnú hmotnosť, energetický výdaj a metabolické parametre. Liek však zostáva v štádiu klinického skúšania a jeho miesto v klinickej praxi bude závisieť od ďalších dát, regulačného posúdenia, bezpečnosti a dostupnosti.</p>
+<p>Retatrutid je skúšaný liek zo skupiny terapií s inkretínovým účinkom. Je to <strong>trojitý agonista receptorov GLP-1, GIP a glukagónu</strong>. Kombinácia týchto mechanizmov môže ovplyvniť nielen glykémiu, ale aj telesnú hmotnosť, energetický výdaj a metabolické parametre. Liek však zostáva v štádiu klinického skúšania a jeho miesto v klinickej praxi bude závisieť od ďalších dát, regulačného posúdenia, bezpečnosti a dostupnosti.</p>
 
 <h2>Výsledky u pacientov s diabetom 2. typu</h2>
 

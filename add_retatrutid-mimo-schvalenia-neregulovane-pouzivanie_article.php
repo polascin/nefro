@@ -43,7 +43,7 @@ $articles[] = [
 
 <p>Retatrutid je skúšaný <strong>trojitý agonista receptorov pre GLP-1, GIP a glukagón</strong>, ktorý vyvíja spoločnosť Eli Lilly. Kombinovaný mechanizmus ovplyvňuje príjem potravy, reguláciu glykémie, telesnú hmotnosť a energetický metabolizmus. Výrazný úbytok hmotnosti v klinických skúšaniach vysvetľuje mimoriadny záujem pacientov aj médií.</p>
 
-<p>Sľubný výsledok klinickej štúdie však nie je synonymom regulačného schválenia. Kým sa liek dostane do štandardnej praxe, regulačné autority posudzujú úplnosť údajov o účinnosti, bezpečnosti, výrobe a kvalite. Zároveň sa vytvára schválená informácia o lieku: indikácie, dávkovanie a titrácia, kontraindikácie, upozornenia, liekové interakcie a pravidlá používania v osobitných populáciách.</p>
+<p>Sľubný výsledok klinickej štúdie však ešte neznamená regulačné schválenie. Kým sa liek dostane do štandardnej praxe, regulačné autority posudzujú úplnosť údajov o účinnosti, bezpečnosti, výrobe a kvalite. Zároveň sa vytvára schválená informácia o lieku: indikácie, dávkovanie a titrácia, kontraindikácie, upozornenia, liekové interakcie a pravidlá používania v osobitných populáciách.</p>
 
 <p>Pri retatrutide dnes existujú skúšobné dávkovacie schémy definované protokolmi klinických štúdií. <strong>Neexistuje však schválené dávkovanie pre bežnú klinickú prax</strong> ani definitívne vymedzený dlhodobý bezpečnostný profil.</p>
 

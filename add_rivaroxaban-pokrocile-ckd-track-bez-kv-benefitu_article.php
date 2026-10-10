@@ -30,21 +30,21 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Štúdia TRACK ukázala, že nízkodávkovaný rivaroxaban 2,5 mg dvakrát denne neznížil výskyt veľkých kardiovaskulárnych príhod u pacientov s pokročilým CKD ani u dialyzovaných, no zvýšil riziko závažného krvácania. Pokročilé CKD nie je len ďalší rizikový faktor — je to samostatný klinický kontext.',
+    'excerpt'      => 'Štúdia TRACK ukázala, že nízkodávkovaný rivaroxaban 2,5 mg dvakrát denne neznížil výskyt veľkých kardiovaskulárnych príhod u pacientov s pokročilým CKD ani u dialyzovaných, no zvýšil riziko závažného krvácania. Pokročilé CKD nie je len ďalší rizikový faktor – je to samostatný klinický kontext.',
     'content'      => <<<'HTML'
 <figure><a href="img/rivaroxaban-pokrocile-ckd-track-bez-kv-benefitu.webp" rel="noopener noreferrer" target="_blank"><img src="img/rivaroxaban-pokrocile-ckd-track-bez-kv-benefitu.webp" alt="Kapsula vysielajúca tenký lúč k srdcu, ktorý sa stráca skôr, než dorazí; bokom oblička v tieni" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Očakávaný kardiovaskulárny prínos sa pri pokročilom CKD nedostavil.</figcaption></figure>
 
-<p>Pacienti s pokročilým chronickou chorobou obličiek majú vysoké kardiovaskulárne riziko. Zároveň však majú aj vysoké riziko krvácania. Práve táto kombinácia robí preventívnu antikoagulačnú liečbu mimoriadne citlivou témou. Výsledky štúdie TRACK ukazujú, že dôkazy z bežnej kardiologickej populácie nemožno automaticky prenášať na pacientov s pokročilým CKD alebo na dialyzovaných pacientov.</p>
+<p>Pacienti s pokročilou chronickou chorobou obličiek majú vysoké kardiovaskulárne riziko, ale zároveň aj vysoké riziko krvácania. Preto je u nich preventívna antikoagulačná liečba mimoriadne citlivá téma. Štúdia TRACK ukazuje, že dôkazy z bežnej kardiologickej populácie nemožno automaticky prenášať na pacientov s pokročilým CKD alebo na dialyzovaných pacientov.</p>
 
 <p>V štúdii TRACK nízka dávka rivaroxabanu 2,5 mg dvakrát denne neznížila výskyt veľkých kardiovaskulárnych príhod u pacientov s CKD 4. až 5. štádia alebo so zlyhaním obličiek vyžadujúcim dialýzu. Naopak, liečba bola spojená s vyšším rizikom závažného krvácania.</p>
 
-<p>Ide o dôležitý výsledok. Nie preto, že by definitívne uzatváral otázku antikoagulačnej liečby u pacientov s pokročilým CKD, ale preto, že upozorňuje na potrebu samostatných dát pre túto populáciu.</p>
+<p>Výsledok definitívne neuzatvára otázku antikoagulačnej liečby pri pokročilom CKD. Jeho význam je v tom, že ukazuje potrebu samostatných dát pre túto populáciu.</p>
 
 <h2>Čo skúmala štúdia TRACK</h2>
 
 <p>TRACK bola veľká randomizovaná štúdia publikovaná v časopise <em>JAMA</em> a prezentovaná na kongrese European Renal Association v Glasgowe.</p>
 
-<p>Do štúdie boli zaradení dospelí pacienti s pokročilým chronickou chorobou obličiek, teda s odhadovanou glomerulovou filtráciou ≤ 29 ml/min/1,73 m², alebo pacienti so zlyhaním obličiek závislí od dialýzy. Zároveň išlo o osoby so zvýšeným kardiovaskulárnym rizikom. Riziko bolo definované prítomnosťou ischemickej choroby srdca, periférneho artériového ochorenia, diabetu, anamnézy nehemoragickej a nelakunárnej cievnej mozgovej príhody alebo vekom 65 rokov a viac.</p>
+<p>Do štúdie boli zaradení dospelí pacienti s pokročilou chronickou chorobou obličiek, teda s odhadovanou glomerulovou filtráciou ≤ 29 ml/min/1,73 m², alebo pacienti so zlyhaním obličiek závislí od dialýzy. Všetci mali zvýšené kardiovaskulárne riziko, definované prítomnosťou ischemickej choroby srdca, periférneho artériového ochorenia, diabetu, anamnézy nehemoragickej a nelakunárnej cievnej mozgovej príhody alebo vekom 65 rokov a viac.</p>
 
 <p>Pacienti boli randomizovaní na rivaroxaban 2,5 mg dvakrát denne alebo placebo. Primárny kombinovaný cieľ zahŕňal kardiovaskulárne úmrtie, nefatálny infarkt myokardu, cievnu mozgovú príhodu alebo príhodu súvisiacu s periférnym artériovým ochorením.</p>
 
@@ -52,7 +52,7 @@ $articles[] = [
 
 <p>Po mediáne sledovania 1,7 roka sa primárny kombinovaný cieľ vyskytol u 22,6 % pacientov v skupine s rivaroxabanom a u 20,7 % pacientov v placebovej skupine.</p>
 
-<p>Hazard ratio bolo 1,09, s 95 % intervalom spoľahlivosti 0,87 až 1,36 a hodnotou <em>P</em> = 0,46. To znamená, že štúdia nepreukázala zníženie rizika veľkých kardiovaskulárnych príhod pri podávaní nízkodávkovaného rivaroxabanu.</p>
+<p>Hazard ratio bolo 1,09, s 95 % intervalom spoľahlivosti 0,87 až 1,36 a hodnotou <em>P</em> = 0,46. Štúdia teda nepreukázala zníženie rizika veľkých kardiovaskulárnych príhod pri podávaní nízkodávkovaného rivaroxabanu.</p>
 
 <p>Nezistil sa ani priaznivý rozdiel v sekundárnych cieľoch vrátane celkovej mortality. Úmrtie z akejkoľvek príčiny sa vyskytlo u 25,6 % pacientov liečených rivaroxabanom a u 23,0 % pacientov v placebovej skupine.</p>
 
@@ -64,7 +64,7 @@ $articles[] = [
 
 <p>To zodpovedalo približne 1,7 dodatočnej udalosti na 100 osoborokov. Hazard ratio bolo 1,51, 95 % interval spoľahlivosti 1,02 až 2,22 a <em>P</em> = 0,04.</p>
 
-<p>Zaujímavý bol aj vekový rozdiel. U pacientov vo veku 65 rokov a viac bolo krvácanie pri rivaroxabane výraznejšie zvýšené než u mladších pacientov. V staršej skupine sa veľké krvácanie vyskytlo u 10 % pacientov liečených rivaroxabanom oproti 5,6 % pri placebe. U mladších pacientov bol rozdiel menší, 7,3 % oproti 6,4 %.</p>
+<p>Rozdiel sa ukázal aj podľa veku. U pacientov vo veku 65 rokov a viac bolo krvácanie pri rivaroxabane výraznejšie zvýšené než u mladších pacientov. V staršej skupine sa veľké krvácanie vyskytlo u 10 % pacientov liečených rivaroxabanom oproti 5,6 % pri placebe. U mladších pacientov bol rozdiel menší, 7,3 % oproti 6,4 %.</p>
 
 <p>Tento nález podporuje opatrnosť najmä u starších pacientov s pokročilým CKD, kde sa často kumuluje viac rizikových faktorov krvácania.</p>
 
@@ -74,15 +74,15 @@ $articles[] = [
 
 <p>To je slabé miesto. Patofyziológia aterotrombózy, krvácania, vaskulárnej kalcifikácie, zápalu, urémie, porúch trombocytov a farmakokinetiky liekov je pri pokročilom CKD odlišná. Rivaroxaban sa navyše čiastočne eliminuje obličkami, takže bezpečnosť dávkovania pri pokročilom CKD nemusí byť porovnateľná s populáciou bez závažného renálneho poškodenia.</p>
 
-<p>Vyjadrenie autorov štúdie smeruje k tomu, že rozhodovanie o antikoagulačnej liečbe u týchto pacientov má vychádzať z absolútneho rizika, nie z automatického prenášania dôkazov z iných kohort.</p>
+<p>Podľa autorov štúdie má rozhodovanie o antikoagulačnej liečbe u týchto pacientov vychádzať z absolútneho rizika, nie z automatického prenášania dôkazov z iných kohort.</p>
 
 <h2>Čo štúdia neznamená</h2>
 
-<p>TRACK neznamená, že antikoagulácia nemá miesto u pacientov s pokročilým CKD. To by bola nesprávna interpretácia.</p>
+<p>Bolo by nesprávne vyvodiť z TRACK, že antikoagulácia nemá u pacientov s pokročilým CKD miesto.</p>
 
 <p>Výsledky sa týkajú preventívneho použitia nízkodávkovaného rivaroxabanu na zníženie kardiovaskulárneho rizika u pacientov s pokročilým CKD alebo dialyzačným zlyhaním obličiek. Netýkajú sa automaticky pacientov, ktorí majú jasnú indikáciu na antikoagulačnú liečbu, napríklad prevenciu cievnej mozgovej príhody pri fibrilácii predsiení alebo liečbu venózneho tromboembolizmu.</p>
 
-<p>Na toto upozornili aj autori sprievodného editorialu v <em>JAMA</em>. Podľa nich štúdia nezatvára dvere antikoagulácii v tejto populácii, ale skôr ukazuje, že treba klásť presnejšie otázky: ktorí pacienti môžu profitovať, aká stratégia je bezpečnejšia a či existujú podskupiny s priaznivejším pomerom prínosu a rizika.</p>
+<p>Upozornili na to aj autori sprievodného editorialu v <em>JAMA</em>. Podľa nich štúdia nezatvára dvere antikoagulácii v tejto populácii, ale ukazuje, že treba klásť presnejšie otázky: ktorí pacienti môžu profitovať, aká stratégia je bezpečnejšia a či existujú podskupiny s priaznivejším pomerom prínosu a rizika.</p>
 
 <h2>Limity štúdie</h2>
 
@@ -98,7 +98,7 @@ $articles[] = [
 
 <p>V štúdii TRACK nepriniesol kardiovaskulárny benefit a zvýšil riziko závažného krvácania. Klinické rozhodovanie preto musí byť individuálne, s dôrazom na absolútne riziko ischemických príhod, riziko krvácania, vek, dialyzačný stav, komorbidity, súbežnú antiagregačnú liečbu a konkrétnu indikáciu antikoagulácie.</p>
 
-<p>Najdôležitejší záver je jednoduchý: pokročilé CKD nie je len ďalší rizikový faktor. Je to samostatný klinický kontext, v ktorom treba mať vlastné dôkazy.</p>
+<p>Pokročilé CKD nie je len ďalší rizikový faktor. Je to samostatný klinický kontext, ktorý potrebuje vlastné dôkazy.</p>
 
 <hr>
 
