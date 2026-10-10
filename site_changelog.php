@@ -55,6 +55,13 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-10-10 23:04',
+                'category' => 'portal',
+                'title' => 'Prehľadnejšie stránkovanie článkov',
+                'description' => 'Zoznam odborných článkov aj výber podľa autora teraz zobrazuje 21 článkov na jednej stránke.',
+                'url' => 'index.php',
+            ],
+            [
                 'date' => '2026-10-09 13:15',
                 'category' => 'calculators',
                 'title' => 'Aniónová medzera znova ukáže vypočítaný výsledok',

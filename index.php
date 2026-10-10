@@ -91,7 +91,7 @@ function buildSeoExcerpt(
 
 $topArticles = [];
 $otherArticles = [];
-$otherArticlesPerPage = 10;
+$otherArticlesPerPage = 21;
 $otherArticlesTotal = 0;
 $otherArticlesTotalPages = 1;
 $otherArticlesPage = isset($_GET["page"]) ? (int) $_GET["page"] : 1;
