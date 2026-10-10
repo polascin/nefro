@@ -25,6 +25,7 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
  */
 function getSourceArticleAuthors(): array {
     return [
+        'psychicka-tiesen-dusevna-porucha-nefrologia' => ['Temitope Ogundare'],
         'neziaduce-ucinky-statinov-dokazy-nefrologia' => ['Michael van den Heuvel'],
         'periferne-arteriove-ochorenie-prognoza-starsi-prijemcovia-oblicky' => ['Elsa Vabret', 'Juliette Piveteau', 'Mathilde Lassalle', 'Fatouma Dupuytren Toure', 'Jean-Baptiste Beuscart', 'Cécile Couchoud', 'Cécile Vigneau', 'Sahar Bayat-Makoei'],
         'znizenie-antihypertenziv-krehky-senior-retreat-frail' => ['Athanase Benetos', 'Sylvie Gautier', 'Anne Freminet', 'Alice Metz', 'Carlos Labat', 'Ioannis Georgiopoulos', 'François Bertin-Hugault', 'Jean-Baptiste Beuscart', 'Olivier Hanon', 'Patrick Karcher', 'Patrick Manckoundia', 'Jean-Luc Novella', 'Abdourahmane Diallo', 'Eric Vicaut', 'Patrick Rossignol'],
