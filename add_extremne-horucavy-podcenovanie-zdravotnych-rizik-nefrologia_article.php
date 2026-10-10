@@ -31,17 +31,17 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Extrémne horúčavy zasahujú viac orgánových systémov naraz a ich dôsledky sa často podceňujú, lebo sa zriedka uvádzajú ako priama príčina ochorenia. Pre nefrológiu je kľúčové, že teplo ľahšie spúšťa dehydratáciu, elektrolytové poruchy a krehkú obehovú rovnováhu — najmä u pacientov s ochorením obličiek a pri liečbe diuretikami.',
+    'excerpt'      => 'Extrémne horúčavy zasahujú viac orgánových systémov naraz a ich dôsledky sa často podceňujú, lebo sa zriedka uvádzajú ako priama príčina ochorenia. Pre nefrológiu je kľúčové, že teplo ľahšie vedie k dehydratácii a elektrolytovým poruchám a narúša krehkú obehovú rovnováhu – najmä u pacientov s ochorením obličiek a pri liečbe diuretikami.',
     'content'      => <<<'HTML'
-<figure><a href="img/extremne-horucavy-podcenovanie-zdravotnych-rizik-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/extremne-horucavy-podcenovanie-zdravotnych-rizik-nefrologia.webp" alt="Oblička žiariaca nebezpečne horúco uprostred chvejúcich sa vĺn horúceho vzduchu" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Horúčava nezasiahne len obehový systém — oblička je orgán, ktorý dopláca ako jeden z prvých.</figcaption></figure>
+<figure><a href="img/extremne-horucavy-podcenovanie-zdravotnych-rizik-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/extremne-horucavy-podcenovanie-zdravotnych-rizik-nefrologia.webp" alt="Oblička žiariaca nebezpečne horúco uprostred chvejúcich sa vĺn horúceho vzduchu" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Horúčava nezasiahne len obehový systém – oblička je orgán, ktorý dopláca ako jeden z prvých.</figcaption></figure>
 
-<p>Extrémne teploty už nie sú len „letná nepríjemnosť“. Nové údaje podľa prehľadu Medscape ukazujú, že horúčavy výrazne zasahujú viac orgánových systémov naraz a sú spojené s vyššou chorobnosťou aj s vyšším počtom hospitalizácií. Zdôrazňuje sa aj to, že presný dosah sa často ťažko meria, lebo horúčavy nebývajú v záznamoch uvádzané ako priama príčina ochorenia či úmrtia, a preto sa používajú štatistické modely.</p>
+<p>Extrémne teploty už nie sú len „letná nepríjemnosť“. Podľa prehľadu na Medscape nové údaje ukazujú, že horúčavy výrazne zasahujú viac orgánových systémov naraz a sú spojené s vyššou chorobnosťou aj s vyšším počtom hospitalizácií.</p>
 
-<p>Článok predstavuje horúčavy ako významné environmentálne zdravotné riziko, ktoré narastá spolu s frekvenciou a dĺžkou horúčavových epizód.</p>
+<p>Článok ich opisuje ako významné environmentálne zdravotné riziko, ktoré rastie s tým, ako pribúdajú a predlžujú sa horúčavové epizódy.</p>
 
 <h2>Prečo je riziko „podceňované“</h2>
 
-<p>Horúčavy sa v praxi zriedkavo označujú ako jediná príčina diagnózy. Ich dosah sa preto odhaduje nepriamo. Ako príklad sa uvádza, že Inštitút Roberta Kocha odhadol približne 2 500 úmrtí v Nemecku v roku 2025, ktoré možno pripísať horúčavám, pričom ide o modelovaný odhad.</p>
+<p>Horúčavy sa v záznamoch zriedka uvádzajú ako priama príčina ochorenia či úmrtia. Ich dosah sa preto odhaduje nepriamo, štatistickými modelmi. Inštitút Roberta Kocha napríklad odhadol, že v Nemecku možno v roku 2025 pripísať horúčavám približne 2 500 úmrtí; ide o modelovaný odhad.</p>
 
 <p>Okrem úmrtnosti sa v prácach objavujú aj ukazovatele chorobnosti. Po jednom dni s teplotami nad 30 °C sa uvádza nárast hlásení práceneschopnosti o 3,5 %, po piatich po sebe nasledujúcich dňoch bol nárast vyšší a po siedmich dňoch dosiahol 10,8 %.</p>
 
@@ -70,22 +70,22 @@ $articles[] = [
 
 <h2>Prečo je horúčava relevantná aj v nefrológii</h2>
 
-<p>V prehľade je jasne uvedené, že <strong>ľudia s ochorením obličiek</strong> patria medzi obzvlášť zraniteľných pacientov. Toto tvrdenie sa opiera o mechanizmy, ktoré sú v nefrológii klinicky dobre známe:</p>
+<p>Prehľad výslovne uvádza, že <strong>ľudia s ochorením obličiek</strong> patria medzi obzvlášť zraniteľných pacientov. Toto tvrdenie sa opiera o mechanizmy, ktoré sú v nefrológii klinicky dobre známe:</p>
 
 <ol>
   <li><strong>Dehydratácia a pokles perfúzie.</strong> Pri strate tekutín a rozkolísaní cirkulácie sa môže zhoršiť perfúzia obličiek a rastie riziko akútneho zhoršenia obličkových funkcií. Článok to priamo neoznačuje ako „AKI pri horúčavách“, ale opisuje dehydratáciu a elektrolytové poruchy ako rizikové faktory, ktoré môžu u pacientov s chronickou chorobou obličiek rýchlejšie viesť ku klinickému zhoršeniu.</li>
-  <li><strong>Elektrolytové poruchy.</strong> Horúčavy môžu zvyšovať riziko porúch elektrolytov. U nefrologických pacientov je fyziologická rezerva často menšia, a preto je o to dôležitejšie zamerať sa na včasné rozpoznanie prejavov a skorú úpravu režimu.</li>
-  <li><strong>Lieky a ich „teplotná“ stránka.</strong> Diuretiká sú v texte explicitne spomenuté. Prakticky to znamená, že počas horúčav sa pacient môže ľahšie dostať do situácie, v ktorej je obehová rovnováha krehká: na jednej strane potreba kontroly retencie tekutín, na druhej strane riziko hypovolémie z dehydratácie. Pri nefrologických diagnózach sa preto liečebný režim počas horúčav nesmie upravovať paušálne, ale vyžaduje individuálne posúdenie ošetrujúcim tímom.</li>
+  <li><strong>Elektrolytové poruchy.</strong> Horúčavy môžu zvyšovať riziko porúch elektrolytov. U nefrologických pacientov je fyziologická rezerva často menšia, preto treba prejavy rozpoznať včas a režim upraviť skoro.</li>
+  <li><strong>Lieky a ich „teplotná“ stránka.</strong> Diuretiká sú v texte explicitne spomenuté. Počas horúčav sa tak obehová rovnováha ľahko stane krehkou: na jednej strane treba kontrolovať retenciu tekutín, na druhej hrozí hypovolémia z dehydratácie. Pri nefrologických diagnózach sa preto liečebný režim počas horúčav nesmie upravovať paušálne, ale vyžaduje individuálne posúdenie ošetrujúcim tímom.</li>
 </ol>
 
-<h2>Čo by mali riešiť ambulancie a oddelenia (prakticky)</h2>
+<h2>Čo by mali riešiť ambulancie a oddelenia</h2>
 
 <p>Keďže článok zdôrazňuje rastúce zdravotné bremeno a potrebu adaptačných opatrení, dá sa z neho odvodiť viacero praktických odporúčaní. V nefrológii ich možno rozčleniť do troch rovín: prevencia, včasné rozpoznanie a systémová pripravenosť.</p>
 
 <ul>
   <li><strong>Prevencia pred horúčavou:</strong> identifikovať pacientov s ochorením obličiek, ktorí majú vyššie riziko dekompenzácie pri tepelnej záťaži, a pripraviť im jednoduchý režimový plán (príjem tekutín, sledovanie subjektívnych príznakov, kedy kontaktovať lekára).</li>
-  <li><strong>Včasné rozpoznanie:</strong> zhoršenie stavu hydratácie, slabosť, závraty, zmeny v močení, zhoršenie stavu pri známom chronickej chorobe obličiek, prípadne dekompenzáciu pridružených ochorení treba vnímať ako potenciálne časové okno na intervenciu.</li>
-  <li><strong>Systémová úroveň:</strong> článok uvádza, že do konca roka 2024 malo iba 20 nemeckých obcí (z viacerých tisíc) vypracovaný akčný plán ochrany zdravia počas horúčav (tzv. heat-health action plan). Zároveň sa spomína povinnosť takéto plány vypracovať a pravidelne aktualizovať výstražné systémy aj akčné plány. Pre nefrologické zariadenia to znamená mať pripravené postupy pre rizikové skupiny, zabezpečenú dostupnosť podpory a včasnú komunikáciu pri výstrahách.</li>
+  <li><strong>Včasné rozpoznanie:</strong> zhoršenie stavu hydratácie, slabosť, závraty, zmeny v močení, zhoršenie stavu pri známej chronickej chorobe obličiek, prípadne dekompenzáciu pridružených ochorení treba vnímať ako potenciálne časové okno na intervenciu.</li>
+  <li><strong>Systémová úroveň:</strong> článok uvádza, že do konca roka 2024 malo iba 20 nemeckých obcí (z viacerých tisíc) vypracovaný akčný plán ochrany zdravia počas horúčav (tzv. heat-health action plan). Spomína sa aj povinnosť takéto plány vypracovať a výstražné systémy aj akčné plány pravidelne aktualizovať. Pre nefrologické zariadenia to znamená mať pripravené postupy pre rizikové skupiny, zabezpečenú dostupnosť podpory a včasnú komunikáciu pri výstrahách.</li>
 </ul>
 
 <h2>Deti, gravidita a dlhodobá záťaž</h2>
