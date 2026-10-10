@@ -25,6 +25,7 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
  */
 function getSourceArticleAuthors(): array {
     return [
+        'glukozamin-kognitivny-pokles-bezpecnostny-signal-nefrologia' => ['Megan Brooks'],
         'psychicka-tiesen-dusevna-porucha-nefrologia' => ['Temitope Ogundare'],
         'neziaduce-ucinky-statinov-dokazy-nefrologia' => ['Michael van den Heuvel'],
         'periferne-arteriove-ochorenie-prognoza-starsi-prijemcovia-oblicky' => ['Elsa Vabret', 'Juliette Piveteau', 'Mathilde Lassalle', 'Fatouma Dupuytren Toure', 'Jean-Baptiste Beuscart', 'Cécile Couchoud', 'Cécile Vigneau', 'Sahar Bayat-Makoei'],
