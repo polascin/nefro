@@ -101,7 +101,7 @@ $articles[] = [
 
 <p>Pre bežnú klinickú prax zatiaľ nič nemenia. HDV-lispro je investigatívny prípravok a jeho účinnosť a bezpečnosť musia byť potvrdené vo väčšej fáze 3.</p>
 
-<p>Napriek tomu je smer vývoja veľmi dôležitý. V diabetológii sa dlho sústredíme na HbA1c, time in range a redukciu hyperglykémie. Pacienti s diabetom 1. typu však často nežijú len s vysokou glykémiou, ale aj so strachom z hypoglykémie. Tento strach ovplyvňuje dávkovanie inzulínu, fyzickú aktivitu, spánok, šoférovanie aj kvalitu života.</p>
+<p>Napriek tomu je smer vývoja veľmi dôležitý. V diabetológii sa dlho sústreďujeme na HbA1c, time in range a redukciu hyperglykémie. Pacienti s diabetom 1. typu však často nežijú len s vysokou glykémiou, ale aj so strachom z hypoglykémie. Tento strach ovplyvňuje dávkovanie inzulínu, fyzickú aktivitu, spánok, šoférovanie aj kvalitu života.</p>
 
 <p>Kontinuálne monitorovanie glukózy je obrovský pokrok, ale samo osebe hypoglykémii vždy nezabráni. Upozorní na riziko, pomáha rozhodovať, ale nemení základnú farmakológiu inzulínu. Preto majú liečebné stratégie, ktoré by vedeli znížiť hypoglykémiu bez zhoršenia HbA1c, veľký potenciál.</p>
 
@@ -112,7 +112,7 @@ $articles[] = [
 <p>Najrozumnejšia interpretácia je triezva: nejde o prelom potvrdený pre prax, ale o mechanisticky zaujímavý a klinicky relevantný koncept, ktorý si zaslúži veľkú štúdiu fázy 3. Ak sa účinok potvrdí, mohlo by ísť o významný krok k bezpečnejšej inzulínovej liečbe diabetu 1. typu.</p>
 
 <div class="info-box-blue">
-<p><strong>Poznámka — prepočet jednotiek glukózy.</strong> Hodnoty v mmol/l uvedené v zátvorkách sú prepočítané z mg/dl a zaokrúhlené na jedno desatinné miesto. Pre glukózu v krvi platí:</p>
+<p><strong>Poznámka – prepočet jednotiek glukózy.</strong> Hodnoty v mmol/l uvedené v zátvorkách sú prepočítané z mg/dl a zaokrúhlené na jedno desatinné miesto. Pre glukózu v krvi platí:</p>
 <ul>
   <li>mmol/l = mg/dl ÷ 18 (čiže mg/dl × 0,0555),</li>
   <li>mg/dl = mmol/l × 18.</li>

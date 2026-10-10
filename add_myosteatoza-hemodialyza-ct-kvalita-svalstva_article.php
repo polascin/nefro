@@ -27,7 +27,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Japonská štúdia u 114 hemodialyzovaných pacientov spája CT ukazovatele tukovej infiltrácie svalstva so silou stisku ruky. Prierezový dizajn a chýbajúca externá validácia však bránia rutinnému použitiu.',
     'content'      => <<<'HTML'
-<figure><a href="img/myosteatoza-hemodialyza-ct-kvalita-svalstva.webp" rel="noopener noreferrer" target="_blank"><img src="img/myosteatoza-hemodialyza-ct-kvalita-svalstva.webp" alt="Rez svalom so zachovaným objemom, ale s vláknami premramorovanými tukom; vedľa nepoužitý dynamometer v tieni" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Objem svalu môže zostať zachovaný, kvalita nie — a zobrazenie zatiaľ nenahradí to, čo ukáže funkčný test.</figcaption></figure>
+<figure><a href="img/myosteatoza-hemodialyza-ct-kvalita-svalstva.webp" rel="noopener noreferrer" target="_blank"><img src="img/myosteatoza-hemodialyza-ct-kvalita-svalstva.webp" alt="Rez svalom so zachovaným objemom, ale s vláknami premramorovanými tukom; vedľa nepoužitý dynamometer v tieni" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Objem svalu môže zostať zachovaný, kvalita nie – a zobrazenie zatiaľ nenahradí to, čo ukáže funkčný test.</figcaption></figure>
 
 <p class="article-dek"><em>Tuková infiltrácia kostrového svalstva môže byť spojená so zníženou svalovou silou aj vtedy, keď celková svalová plocha ešte nie je výrazne redukovaná. Nová štúdia u 114 pacientov na udržiavacej hemodialýze ukázala súvislosť medzi CT ukazovateľmi myosteatózy a silou stisku ruky. Prierezový dizajn, malý počet účastníkov a chýbajúca externá validácia však neumožňujú zaviesť tieto ukazovatele ako samostatné diagnostické testy.</em></p>
 
@@ -65,11 +65,11 @@ $articles[] = [
 
 <p>Svalová slabosť pri pokročilej chronickej chorobe obličiek nie je iba dôsledkom zmenšenia svalov. Kvalitu svalstva môžu zhoršovať chronický systémový zápal, metabolická acidóza, uremická mitochondriálna dysfunkcia, inzulínová rezistencia, porucha oxidácie mastných kyselín, intramuskulárne ukladanie lipidov, fyzická nečinnosť, diabetická neuropatia, periférne artériové ochorenie, deficit vitamínu D, anémia, srdcové zlyhávanie, opakované infekcie a hospitalizácie aj lieky spojené s myopatiou alebo sedáciou.</p>
 
-<p>Úbytok svalovej sily môže byť nepomerne väčší než úbytok samotnej svalovej hmoty. Tento jav vysvetľuje, prečo meranie svalovej plochy alebo beztukovej hmoty nemusí dostatočne predpovedať mobilitu a fyzickú výkonnosť.</p>
+<p>Úbytok svalovej sily môže byť nepomerne väčší než úbytok samotnej svalovej hmoty. Preto meranie svalovej plochy alebo beztukovej hmoty nemusí dostatočne predpovedať mobilitu a fyzickú výkonnosť.</p>
 
 <h2>Ako možno myosteatózu hodnotiť pomocou CT</h2>
 
-<p>Najčastejšie sa analyzuje priečny rez na úrovni tretieho driekového stavca, označovanej ako L3. V tejto oblasti možno segmentovať brušné a paraspinálne svaly a vypočítať niekoľko parametrov.</p>
+<p>Najčastejšie sa analyzuje priečny rez na úrovni tretieho driekového stavca (L3). Na ňom možno segmentovať brušné a paraspinálne svaly a vypočítať niekoľko parametrov.</p>
 
 <div class="table-responsive" role="region" aria-label="Ukazovatele myosteatózy hodnotené na úrovni tretieho driekového stavca" tabindex="0">
 <table>
@@ -125,7 +125,7 @@ $articles[] = [
     </tr>
   </thead>
   <tbody>
-    <tr><td>Priemerná denzita kostrového svalstva</td><td>34,4 ± 9,0 HU</td><td>—</td></tr>
+    <tr><td>Priemerná denzita kostrového svalstva</td><td>34,4 ± 9,0 HU</td><td>–</td></tr>
     <tr><td>Podiel svalstva s normálnou denzitou</td><td>58,2 ± 17,0 %</td><td>r = 0,987</td></tr>
     <tr><td>Index nízkodenzitného svalstva</td><td>14,3 ± 5,7 cm²/m²</td><td>r = 0,853</td></tr>
     <tr><td>Podiel medzisvalového tuku</td><td>7,2 % (medzikvartilové rozpätie 3,9 až 12,8 %)</td><td>r = 0,843 po logaritmickej transformácii</td></tr>
@@ -139,7 +139,7 @@ $articles[] = [
 
 <p>Hodnota r = 0,987 sama osebe nesvedčí o vysokej diagnostickej presnosti. Podiel svalstva s normálnou denzitou je matematicky odvodený z tých istých segmentovaných CT údajov ako priemerná denzita svalstva. Vysoká korelácia preto do značnej miery vyplýva zo spoločnej konštrukcie oboch ukazovateľov.</p>
 
-<p>Nové indexy nemusia predstavovať nezávislú biologickú informáciu. Môžu byť predovšetkým alternatívnym matematickým vyjadrením rovnakého zobrazovacieho fenoménu.</p>
+<p>Nové indexy preto nemusia niesť nezávislú biologickú informáciu. Môžu byť predovšetkým iným matematickým vyjadrením toho istého zobrazovacieho nálezu.</p>
 
 <h3>Súvislosť so silou stisku ruky</h3>
 
@@ -161,7 +161,7 @@ $articles[] = [
     </tr>
   </thead>
   <tbody>
-    <tr><td>Priemerná svalová denzita</td><td>0,810</td><td>—</td></tr>
+    <tr><td>Priemerná svalová denzita</td><td>0,810</td><td>–</td></tr>
     <tr><td>Podiel normálne denzitného svalstva</td><td>0,809</td><td>0,84</td></tr>
     <tr><td>Index nízkodenzitného svalstva</td><td>0,810</td><td>0,98</td></tr>
     <tr><td>Podiel medzisvalového tuku</td><td>0,810</td><td>0,97</td></tr>
@@ -222,7 +222,7 @@ $articles[] = [
   <li>motiváciou a schopnosťou porozumieť pokynom.</li>
 </ul>
 
-<p>U hemodialyzovaných pacientov je mimoriadne dôležité štandardizovať, na ktorej končatine, v akej polohe a v akom časovom vzťahu k dialýze sa sila stisku merala.</p>
+<p>U hemodialyzovaných pacientov treba štandardizovať, na ktorej končatine, v akej polohe a v akom časovom vzťahu k dialýze sa sila stisku merala.</p>
 
 <h2>Technické obmedzenia CT ukazovateľov</h2>
 
@@ -254,7 +254,7 @@ $articles[] = [
 
 <h2>Prečo sa CT nemá používať ako rutinný skríning</h2>
 
-<p>CT vyšetrenie predstavuje radiačnú záťaž a nemá sa indikovať iba na zistenie myosteatózy, ak výsledok pravdepodobne nezmení liečbu.</p>
+<p>CT vyšetrenie znamená radiačnú záťaž a nemá sa indikovať iba na zistenie myosteatózy, ak výsledok pravdepodobne nezmení liečbu.</p>
 
 <p>Rozumnejším prístupom je <strong>oportunistické hodnotenie</strong> už existujúceho CT brucha vykonaného z inej klinickej indikácie. Takto možno získať informácie o svalovej ploche, denzite a viscerálnom tuku bez dodatočného ožiarenia.</p>
 
@@ -375,7 +375,7 @@ $articles[] = [
 <div class="pdf-avoid-break">
 <h2>Praktický záver</h2>
 
-<p>CT analýza myosteatózy prináša dôležitý pohľad na kvalitu kostrového svalstva u pacientov na hemodialýze. Vyšší podiel svalstva s normálnou denzitou súvisel s lepšou silou stisku ruky, zatiaľ čo väčší podiel nízkodenzitného svalstva a medzisvalového tuku súvisel so svalovou slabosťou.</p>
+<p>CT analýza myosteatózy dopĺňa informáciu o kvalite kostrového svalstva u pacientov na hemodialýze. Vyšší podiel svalstva s normálnou denzitou súvisel s lepšou silou stisku ruky, zatiaľ čo väčší podiel nízkodenzitného svalstva a medzisvalového tuku súvisel so svalovou slabosťou.</p>
 
 <p>Nové indexy neposkytli lepšiu diskriminačnú schopnosť než jednoduchšia priemerná svalová denzita, hoci v modeloch rizika obstáli o niečo konzistentnejšie. Ich veľmi silná vzájomná korelácia naznačuje, že vyjadrujú prevažne rovnakú zobrazovaciu informáciu.</p>
 

@@ -27,11 +27,11 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Sekvenovanie exómu odhalilo relevantný nález aj po nevýťažnom paneli génov. Ako správne čítať negatívny výsledok a kedy diagnostiku rozšíriť alebo prehodnotiť?',
     'content'      => <<<'HTML'
-<figure><a href="img/negativny-geneticky-test-oblicky-sekvenovanie-exomu.webp" rel="noopener noreferrer" target="_blank"><img src="img/negativny-geneticky-test-oblicky-sekvenovanie-exomu.webp" alt="Reťazec DNA prechádzajúci skenovacím lúčom; v neosvetlenej medzere, kam lúč nedosiahne, svieti červený úsek" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Negatívny výsledok hovorí len o tom, čo test pokryl — príčina môže ležať presne tam, kam metóda nedovidí.</figcaption></figure>
+<figure><a href="img/negativny-geneticky-test-oblicky-sekvenovanie-exomu.webp" rel="noopener noreferrer" target="_blank"><img src="img/negativny-geneticky-test-oblicky-sekvenovanie-exomu.webp" alt="Reťazec DNA prechádzajúci skenovacím lúčom; v neosvetlenej medzere, kam lúč nedosiahne, svieti červený úsek" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Negatívny výsledok hovorí len o tom, čo test pokryl – príčina môže ležať presne tam, kam metóda nedovidí.</figcaption></figure>
 
 <p><strong>Výsledok „negatívny“ pri genetickom vyšetrení choroby obličiek spravidla znamená, že použitá metóda v analyzovanom rozsahu a pri aktuálnom stave poznania neodhalila príčinný variant. Neznamená automaticky, že ochorenie nemá genetický podklad.</strong> Retrospektívna štúdia z programu renálnej genetiky Cleveland Clinic ukázala, že sekvenovanie exómu po predchádzajúcom negatívnom alebo nejednoznačnom paneli prinieslo nový alebo preklasifikovaný patogénny nález u 7 z 54 vyšetrených pacientov, teda u 13 %. <a href="#zdroj-1">[1]</a> <a href="#zdroj-2">[2]</a></p>
 
-<p>Toto číslo nie je univerzálnou pravdepodobnosťou úspechu a nemožno ho preniesť na každého pacienta. Šlo o retrospektívny súbor zo špecializovanej jednocentrovej ambulancie; pacienti odoslaní na vyšetrenie exómu boli klinicky selektovaní a podskupina po nevýťažnom paneli bola malá. Výsledok však názorne potvrdzuje dôležitý princíp: <strong>ak klinické podozrenie pretrváva, nevýťažný prvý test nemusí byť koncom diagnostiky</strong>.</p>
+<p>Toto číslo nie je univerzálnou pravdepodobnosťou úspechu a nemožno ho preniesť na každého pacienta. Šlo o retrospektívny súbor zo špecializovanej jednocentrovej ambulancie; pacienti odoslaní na vyšetrenie exómu boli klinicky selektovaní a podskupina po nevýťažnom paneli bola malá. Dobre však ilustruje princíp: <strong>ak klinické podozrenie pretrváva, nevýťažný prvý test nemusí byť koncom diagnostiky</strong>.</p>
 
 <div class="pdf-avoid-break">
 <h2>Čo presne znamená negatívny výsledok</h2>
@@ -109,7 +109,7 @@ $articles[] = [
 
 <h2>Kedy má zmysel diagnostiku znovu otvoriť</h2>
 
-<p>Opätovné posúdenie je osobitne dôležité pri skorom začiatku CKD alebo zlyhania obličiek, pozitívnej či nejasnej rodinnej anamnéze, nevysvetlenej CKD, vrodených alebo cystických anomáliách a pri mimorenálnych prejavoch – napríklad poruche sluchu alebo zraku, neurologických, skeletálnych, metabolických či pečeňových znakoch. Negatívna rodinná anamnéza genetické ochorenie nevylučuje; príčinou môže byť variant vzniknutý <em>de novo</em>, recesívna alebo X-viazaná dedičnosť, variabilná penetrancia, malá rodina či neúplné informácie. <a href="#zdroj-3">[3]</a> <a href="#zdroj-5">[5]</a></p>
+<p>Opätovné posúdenie má zmysel najmä pri skorom začiatku CKD alebo zlyhania obličiek, pozitívnej či nejasnej rodinnej anamnéze, nevysvetlenej CKD, vrodených alebo cystických anomáliách a pri mimorenálnych prejavoch – napríklad poruche sluchu alebo zraku, neurologických, skeletálnych, metabolických či pečeňových znakoch. Negatívna rodinná anamnéza genetické ochorenie nevylučuje; príčinou môže byť variant vzniknutý <em>de novo</em>, recesívna alebo X-viazaná dedičnosť, variabilná penetrancia, malá rodina či neúplné informácie. <a href="#zdroj-3">[3]</a> <a href="#zdroj-5">[5]</a></p>
 
 <ol>
   <li><strong>Vrátiť sa k fenotypu a rodokmeňu:</strong> doplniť vek začiatku, histológiu, zobrazovanie, priebeh, mimorenálne prejavy a údaje aspoň o blízkych príbuzných.</li>

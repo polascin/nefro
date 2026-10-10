@@ -33,7 +33,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Pentoxifylín (PTX) ako „re-purposed“ liek v diabetickej chorobe obličiek: biologické zdôvodnenie cez zápalové dráhy existuje, klinické signály sú najmä na úrovni albuminúrie/proteinúrie a poklesu eGFR, no dôkazy na tvrdé konce (ESKD, mortalita) zatiaľ chýbajú. Prehľad podľa mini review AJKD vrátane štúdií PREDIAN a prebiehajúcej VA PTXRx.',
     'content'      => <<<'HTML'
-<figure><a href="img/pentoxifylin-diabeticka-choroba-obliciek-mini-review.webp" rel="noopener noreferrer" target="_blank"><img src="img/pentoxifylin-diabeticka-choroba-obliciek-mini-review.webp" alt="Staršia opotrebovaná svetelná tabletka vysielajúca mierny lúč k zapálenému glomerulu diabetickej obličky" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Starší liek s protizápalovým účinkom — otázkou je, či jeho prínos obstojí vedľa dnešných možností.</figcaption></figure>
+<figure><a href="img/pentoxifylin-diabeticka-choroba-obliciek-mini-review.webp" rel="noopener noreferrer" target="_blank"><img src="img/pentoxifylin-diabeticka-choroba-obliciek-mini-review.webp" alt="Staršia opotrebovaná svetelná tabletka vysielajúca mierny lúč k zapálenému glomerulu diabetickej obličky" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Starší liek s protizápalovým účinkom – otázkou je, či jeho prínos obstojí vedľa dnešných možností.</figcaption></figure>
 
 <p>Diabetická choroba obličiek (DKD, dnes často aj CKD spojené s diabetes mellitus 2. typu) ostáva aj napriek moderným „základným pilierom“ liečby významnou príčinou progresie do terminálneho zlyhania obličiek. Popri blokáde RAAS, inhibítoroch SGLT2, nesteroidných antagonistoch mineralokortikoidových receptorov a agonistoch GLP-1 sa skúšajú doplnkové cesty, najmä cez zápalové a oxidačné mechanizmy.</p>
 
@@ -49,9 +49,9 @@ $articles[] = [
 
 <p>PTX je nešpecifický inhibítor fosfodiesteráz, najmä PDE3 a PDE4, čo vedie k zvýšeniu intracelulárneho cAMP. Následná aktivácia PKA má tlmiť tvorbu zápalových cytokínov (IL-1, IL-6, TNF-α) a cez moduláciu signálnych dráh (vrátane osi NF-κB) nepriamo ovplyvňovať aj oxidačný stres a fibrózu.</p>
 
-<h2>3) Čo ukazujú klinické dáta: väčšinou „surrogáty“, nie tvrdé konce</h2>
+<h2>3) Čo ukazujú klinické dáta: väčšinou „surogáty“, nie tvrdé konce</h2>
 
-<p>V článku sa zdôrazňuje, že podporné štúdie boli často malé, krátke a primárne používali zástupné (surrogátne) ukazovatele: zníženie proteinúrie, zmeny eGFR, prípadne albuminúriu. Väčšina skúšaní nemala dostatočnú metodológiu na tvrdenie o dlhodobom klinickom benefite (ESKD alebo mortalita) a niektoré štúdie mali metodologické limity.</p>
+<p>V článku sa zdôrazňuje, že podporné štúdie boli často malé, krátke a primárne používali zástupné (surogátne) ukazovatele: zníženie proteinúrie, zmeny eGFR, prípadne albuminúriu. Väčšina štúdií nebola navrhnutá tak, aby mohla preukázať dlhodobý klinický benefit (ESKD alebo mortalita), a niektoré mali aj ďalšie metodologické limity.</p>
 
 <h3>Silnejšie zázemie: PREDIAN</h3>
 
@@ -74,7 +74,7 @@ $articles[] = [
 
 <h2>5) Praktický záver pre nefrológa</h2>
 
-<p>Z pohľadu prekladu do ambulantnej praxe (podľa toho, čo článok argumentuje) je PTX zatiaľ skôr kandidátom na doplnkovú terapiu než rutinným štandardom:</p>
+<p>Pre ambulantnú prax z argumentácie článku vyplýva, že PTX je zatiaľ skôr kandidátom na doplnkovú terapiu než rutinným štandardom:</p>
 
 <ul>
   <li><strong>biologické zdôvodnenie existuje</strong> (zápal a cytokínové osi),</li>

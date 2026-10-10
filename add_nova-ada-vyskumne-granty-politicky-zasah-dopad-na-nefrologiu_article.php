@@ -33,25 +33,25 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Reflexia Irla B. Hirscha (MD) na Medscape kritizuje smerovanie ADA a spája ho so škrtmi vo financovaní výskumu (NIH) a s politizáciou vedy. Pre nefrológiu je odkaz jasný: stabilita výskumu je podmienkou, aby sa nové poznatky o diabetickej chorobe obličiek včas premenili na lepšiu starostlivosť.',
     'content'      => <<<'HTML'
-<figure><a href="img/nova-ada-vyskumne-granty-politicky-zasah-dopad-na-nefrologiu.webp" rel="noopener noreferrer" target="_blank"><img src="img/nova-ada-vyskumne-granty-politicky-zasah-dopad-na-nefrologiu.webp" alt="Prúd svetla výskumného financovania zúžený tmavou inštitucionálnou prekážkou pred obličkou" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Keď sa zúži financovanie výskumu, dôsledky sa prejavia až o roky — a nesie ich pacient.</figcaption></figure>
+<figure><a href="img/nova-ada-vyskumne-granty-politicky-zasah-dopad-na-nefrologiu.webp" rel="noopener noreferrer" target="_blank"><img src="img/nova-ada-vyskumne-granty-politicky-zasah-dopad-na-nefrologiu.webp" alt="Prúd svetla výskumného financovania zúžený tmavou inštitucionálnou prekážkou pred obličkou" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Keď sa zúži financovanie výskumu, dôsledky sa prejavia až o roky – a nesie ich pacient.</figcaption></figure>
 
 <h2>Prečo je to relevantné pre nefrológiu</h2>
 
-<p>Klinická nefrológia sa často diskutuje cez diagnózy, liečbu a komplikácie. To podstatné však býva aj „mimo ambulancie“: stabilita výskumného ekosystému, dostupnosť grantov a schopnosť vedeckej komunity rýchlo pretavovať výsledky do praxe. Diabetes mellitus, najmä jeho chronické mikrovaskulárne poškodenie, je pritom jedným z hlavných motorov chronickej choroby obličiek.</p>
+<p>O klinickej nefrológii sa zvyčajne hovorí v rovine diagnóz, liečby a komplikácií. Veľa sa však rozhoduje aj mimo ambulancie: stabilita výskumného prostredia, dostupnosť grantov a schopnosť vedeckej komunity rýchlo prenášať výsledky do praxe. Diabetes mellitus, najmä jeho chronické mikrovaskulárne poškodenie, je pritom jedným z hlavných motorov chronickej choroby obličiek.</p>
 
-<p>Článok na Medscape („The New ADA: I Prefer the Old One“) nie je primárne odborná klinická kazuistika. Je to autorova reflexia a kritika smerovania American Diabetes Association (ADA) v kontexte jej rozhodnutí počas ADA Scientific Sessions. Pre nefrológa je zaujímavé najmä to, že autor spája konkrétne udalosti s širšou témou dopadov škrtov a politizácie výskumu na vývoj diabetologických a s nimi súvisiacich renálnych terapií.</p>
+<p>Článok na Medscape („The New ADA: I Prefer the Old One“) nie je klinický text. Ide o osobnú reflexiu a kritiku smerovania American Diabetes Association (ADA) v súvislosti s jej rozhodnutiami počas ADA Scientific Sessions. Pre nefrológa je zaujímavé najmä to, že autor spája konkrétne udalosti so širšou témou dopadov škrtov a politizácie výskumu na vývoj diabetologických a s nimi súvisiacich renálnych terapií.</p>
 
 <h2>Čo autor v texte opisuje</h2>
 
-<p>Autor Irl B. Hirsch (MD) opisuje svoje osobné stanovisko a udalosti spojené s ADA Scientific Sessions. V centre pozornosti sú podľa neho kroky vedenia ADA, ktoré vyústili do odobratia a zhabania identifikačných kariet viacerým účastníkom. Autor to spája s distribúciou editoriálu (úvodníka) z časopisu <em>Diabetes Care</em> a s tým, že editoriál mal podľa jeho názoru komunikovať dopady škrtov v oblasti výskumu (NIH) na diabetologický výskumný „pipeline“.</p>
+<p>Irl B. Hirsch (MD) opisuje udalosti okolo ADA Scientific Sessions a svoj postoj k nim. V centre pozornosti sú podľa neho kroky vedenia ADA, ktoré viedli k odobratiu identifikačných kariet viacerým účastníkom. Autor to spája s distribúciou editoriálu (úvodníka) z časopisu <em>Diabetes Care</em> a s tým, že editoriál mal podľa jeho názoru komunikovať dopady škrtov v oblasti výskumu (NIH) na diabetologický výskumný „pipeline“.</p>
 
-<p>Autor zároveň rámcuje pozadie tým, že hlavným rečníkom (keynote) mal byť Jay Bhattacharya a následne bol nahradený Richardom Woychikom. Text obsahuje aj širšiu politickú rovinu okolo priorít a smerovania výskumu.</p>
+<p>Ako pozadie uvádza, že hlavným rečníkom (keynote) mal byť Jay Bhattacharya, ktorého napokon nahradil Richard Woychik. Text má aj širšiu politickú rovinu: priority a smerovanie výskumu.</p>
 
 <h2>Hlavná myšlienka: nejde len o jednorazovú konfliktnú situáciu</h2>
 
-<p>Z nefrologického pohľadu je dôležité, že autor nepíše len o „jednom dni“ či o protokole podujatia. Jeho argument sa opiera o tézu, že zásahy do výskumu a grantového prostredia môžu mať dlhodobý efekt: spomalenie objavov, zníženie počtu projektov a posun priorít od základného a translačného výskumu ku krátkodobým alebo politicky „preferovaným“ smerom.</p>
+<p>Autor nepíše len o jednom dni či o protokole podujatia. Tvrdí, že zásahy do výskumu a grantového prostredia môžu mať dlhodobý účinok: spomalenie objavov, zníženie počtu projektov a posun priorít od základného a translačného výskumu ku krátkodobým alebo politicky „preferovaným“ smerom.</p>
 
-<p>Pri chronických ochoreniach, ako je diabetes s renálnymi dôsledkami, sú práve dlhšie časové horizonty kľúčové. Výsledky z laboratória a klinických štúdií sa do praxe bežne dostávajú až s odstupom rokov.</p>
+<p>Pri chronických ochoreniach, ako je diabetes s renálnymi dôsledkami, je to podstatné, pretože výsledky z laboratória a klinických štúdií sa do praxe bežne dostávajú až s odstupom rokov.</p>
 
 <h2>Prepojenie na diabetologickú a nefrologickú prax</h2>
 
@@ -60,33 +60,33 @@ $articles[] = [
 <ul>
   <li><strong>Diabetická choroba obličiek:</strong> pokrok v prevencii a liečbe CKD pri diabete stojí na výskume biomarkerov, mechanizmov progresie a na klinických skúšaniach.</li>
   <li><strong>Včasná intervencia a riziková stratifikácia:</strong> ak sa zníži objem výskumu, môžu sa spomaliť aj inovácie v tom, ako identifikovať pacientov s rýchlou progresiou.</li>
-  <li><strong>Dostupnosť dôkazov pre klinické odporúčania:</strong> menej grantov môže znamenať menej kvalitných dát, čo sa môže prejaviť v neskoršom aktualizovaní odporúčaní.</li>
+  <li><strong>Dostupnosť dôkazov pre klinické odporúčania:</strong> menej grantov môže znamenať menej kvalitných dát a pomalšiu aktualizáciu odporúčaní.</li>
 </ul>
 
 <h2>Ako čítať tento typ textu bez rizika nadinterpretácie</h2>
 
-<p>Treba povedať, že ide o autorovo osobné stanovisko a opis udalostí z jeho perspektívy. To znamená:</p>
+<p>Ide o osobné stanovisko autora a opis udalostí z jeho pohľadu. Preto:</p>
 
 <ol>
-  <li>Nie všetky tvrdenia treba automaticky brať ako „hotové fakty“, ak nie sú podložené nezávislými záznamami alebo formálnymi dokumentmi.</li>
-  <li>Ak má článok slúžiť ako podklad do odbornej diskusie, je vhodné doplniť ho o primárne zdroje (vyhlásenia organizátorov, stanoviská, oficiálne recenzie a verejne dostupné informácie).</li>
+  <li>Tvrdenia, ktoré nie sú podložené nezávislými záznamami alebo formálnymi dokumentmi, nemožno automaticky považovať za overené fakty.</li>
+  <li>Ak má článok slúžiť ako podklad pre odbornú diskusiu, treba ho doplniť o primárne zdroje (vyhlásenia organizátorov, stanoviská, oficiálne recenzie a verejne dostupné informácie).</li>
 </ol>
 
 <h2>Praktické ponaučenie pre klinickú komunitu</h2>
 
-<p>Podľa autora je jadrom problému to, že organizácia by mala smerovať k vlastnej misii a k udržiavaniu priestoru pre vedeckú diskusiu. Pre nefrológiu to v praktickej rovine prináša otázku, ako udržať:</p>
+<p>Podľa autora by sa organizácia mala držať svojho poslania a udržiavať priestor pre vedeckú diskusiu. Pre nefrológiu z toho vyplýva praktická otázka, ako udržať:</p>
 
 <ul>
   <li><strong>stabilitu financovania výskumu</strong> na dlhé obdobia,</li>
   <li><strong>ochranu akademickej slobody</strong> a transparentnosť hodnotenia,</li>
-  <li><strong>dôraz na misijnú podstatu</strong> odborných spoločností a časopisov.</li>
+  <li><strong>dôraz na poslanie</strong> odborných spoločností a časopisov.</li>
 </ul>
 
 <p>Ak sa tieto prvky oslabia, dopad sa časom prenesie aj do kvality dôkazov, ktoré používame v každodennej starostlivosti o pacientov s diabetickým aj nediabetickým poškodením obličiek.</p>
 
 <h2>Záver</h2>
 
-<p>Text z Medscape predstavuje kritickú reflexiu smerovania ADA a spája ju s väčším príbehom o tom, ako výskumné granty, politická klíma a rozhodnutia odborných organizácií môžu formovať budúcnosť diabetológie a nepriamo aj nefrológie. Pre nás je hlavná správa jednoduchá: stabilita výskumu nie je abstraktná téma, ale podmienka, aby sa nové poznatky dokázali včas premeniť na lepšiu starostlivosť o ľudí s chronickou chorobou obličiek.</p>
+<p>Hirschov text kriticky hodnotí smerovanie ADA a zasadzuje ho do širšej otázky, ako môžu výskumné granty, politická klíma a rozhodnutia odborných organizácií formovať budúcnosť diabetológie a nepriamo aj nefrológie. Pre nefrológiu z toho vyplýva jednoduchá správa: stabilita výskumu nie je abstraktná téma, ale podmienka, aby sa nové poznatky včas premenili na lepšiu starostlivosť o ľudí s chronickou chorobou obličiek.</p>
 
 <h2>Poznámka k presnosti a overovaniu</h2>
 

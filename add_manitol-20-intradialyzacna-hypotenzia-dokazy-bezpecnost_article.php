@@ -31,7 +31,7 @@ $articles[] = [
     'content'      => <<<'HTML'
 <figure><a href="img/manitol-20-intradialyzacna-hypotenzia-dokazy-bezpecnost.webp" rel="noopener noreferrer" target="_blank"><img src="img/manitol-20-intradialyzacna-hypotenzia-dokazy-bezpecnost.webp" alt="Infúzny vak s hypertonickým roztokom nad strmo klesajúcou krivkou systolického tlaku pri hemodialýze; kvapka vychýli krivku len nepatrne, v pozadí dialyzačný okruh" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Osmotický zásah do padajúceho tlaku je fyziologicky zmysluplný – veľkosť vychýlenia krivky je však presne to, čo zostáva nepreukázané.</figcaption></figure>
 
-<p>Manitol sa pri hemodialýze desaťročia používal s cieľom zmierniť rýchle osmotické zmeny a zlepšiť hemodynamickú toleranciu výkonu. Fyziologické zdôvodnenie však nie je totožné s preukázanou klinickou účinnosťou. Pilotná dvojito zaslepená randomizovaná štúdia u pacientov začínajúcich hemodialýzu nepreukázala štatisticky významné zmenšenie poklesu systolického krvného tlaku. Nižší výskyt hypotenzných epizód predstavoval zaujímavý, ale neistý výsledok sekundárneho hodnotenia.</p>
+<p>Manitol sa pri hemodialýze desaťročia používal s cieľom zmierniť rýchle osmotické zmeny a zlepšiť hemodynamickú toleranciu výkonu. Fyziologické zdôvodnenie však nie je totožné s preukázanou klinickou účinnosťou. Pilotná dvojito zaslepená randomizovaná štúdia u pacientov začínajúcich hemodialýzu nepreukázala štatisticky významné zmenšenie poklesu systolického krvného tlaku. Nižší výskyt hypotenzných epizód bol zaujímavým, ale neistým sekundárnym výsledkom.</p>
 
 <p>K tomu pristupuje okolnosť, ktorá sa v diskusii o manitole často obchádza: slovenské súhrny charakteristických vlastností lieku uvádzajú <strong>rozvinutú anúriu</strong> a <strong>závažné prekrvenie pľúc alebo pľúcny edém</strong> medzi kontraindikáciami. Údaje preto nepodporujú automatické zaradenie 20 % manitolu do rutinnej liečby intradialyzačnej hypotenzie.</p>
 
@@ -203,7 +203,7 @@ $articles[] = [
 
 <p>V klinických prehľadoch a lokálnych postupoch sa možno stretnúť s rôznymi dávkami manitolu. Bez konkrétneho zdroja však nemožno tvrdiť, že 50 až 100 ml 20 % roztoku predstavuje overenú štandardnú dávku na liečbu IDH.</p>
 
-<p>Dôležité je aj správne prepočítanie:</p>
+<p>Pri prepočte treba byť presný:</p>
 
 <ul>
   <li>50 ml 20 % roztoku obsahuje 10 g manitolu;</li>

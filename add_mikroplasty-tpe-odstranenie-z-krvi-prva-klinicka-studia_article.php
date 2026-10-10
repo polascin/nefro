@@ -33,15 +33,15 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Prvá klinická štúdia ukazuje, že terapeutická plazmová výmena môže znížiť merateľnú koncentráciu mikroplastov v krvi, najmä pri vyššom zaťažení. Zatiaľ však ide predovšetkým o dôkaz mechanizmu, nie o dôkaz klinického benefitu.',
     'content'      => <<<'HTML'
-<figure><a href="img/mikroplasty-tpe-odstranenie-z-krvi-prva-klinicka-studia.webp" rel="noopener noreferrer" target="_blank"><img src="img/mikroplasty-tpe-odstranenie-z-krvi-prva-klinicka-studia.webp" alt="Plazma prechádzajúca separačným zariadením, v ktorom sa zachytávajú drobné tmavé plastové čiastočky" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Odstrániť častice z plazmy je technicky možné — či to prinesie klinický úžitok, zostáva otvorené.</figcaption></figure>
+<figure><a href="img/mikroplasty-tpe-odstranenie-z-krvi-prva-klinicka-studia.webp" rel="noopener noreferrer" target="_blank"><img src="img/mikroplasty-tpe-odstranenie-z-krvi-prva-klinicka-studia.webp" alt="Plazma prechádzajúca separačným zariadením, v ktorom sa zachytávajú drobné tmavé plastové čiastočky" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Odstrániť častice z plazmy je technicky možné – či to prinesie klinický úžitok, zostáva otvorené.</figcaption></figure>
 
 <p>Mikroplasty a nanoplasty už nie sú iba témou ekológie. Ich prítomnosť v biologických tekutinách otvára praktickú klinickú otázku: <strong>má zníženie cirkulujúcich častíc v krvi reálny zdravotný význam</strong>?</p>
 
-<p>Medscape zverejnil sumár štúdie, ktorá predstavuje dôležitý míľnik: <strong>terapeutická plazmová výmena (TPE) dokázala znížiť množstvo merateľných mikroplastov v krvi</strong>. Zároveň však ide predovšetkým o dôkaz mechanizmu, nie o preukázanie klinického prínosu pre pacienta.</p>
+<p>Medscape priniesol súhrn štúdie s dôležitým zistením: <strong>terapeutická plazmová výmena (TPE) dokázala znížiť množstvo merateľných mikroplastov v krvi</strong>. Ide však predovšetkým o dôkaz mechanizmu, nie o preukázanie klinického prínosu pre pacienta.</p>
 
 <h2>Čo presne štúdia hodnotila</h2>
 
-<p>Autori analyzovali <strong>174 procedúr TPE u 114 pacientov</strong>. Hodnotený bol vzťah medzi procedúrou a koncentráciou mikroplastov meranou testom <strong>PlasticTox</strong>, vždy bezprostredne <strong>pred a po výkone</strong>.</p>
+<p>Autori analyzovali <strong>174 procedúr TPE u 114 pacientov</strong>. Sledovali vzťah medzi procedúrou a koncentráciou mikroplastov meranou testom <strong>PlasticTox</strong>, vždy bezprostredne <strong>pred a po výkone</strong>.</p>
 
 <p>Ciele boli dva:</p>
 
@@ -70,20 +70,20 @@ $articles[] = [
 <h3>1) Krv môže byť iba prechodný kompartment</h3>
 <p>Zníženie v krvi nemusí znamenať rovnaký efekt v tkanivách. Častice sa môžu medzi kompartmentmi presúvať a krvný signál môže byť iba prechodný.</p>
 
-<h3>2) Tkanivový burden sa hodnotí ťažšie</h3>
+<h3>2) Záťaž tkanív sa hodnotí ťažšie</h3>
 <p>To, čo meria krvný test, nemusí korelovať s tým, čo je dlhodobo uložené v orgánoch, kde môže byť biologický dopad väčší.</p>
 
 <h3>3) Trvanie účinku zostáva nejasné</h3>
 <p>Hoci autori uvádzajú aj kontrolné meranie po 30 dňoch, pre straty pacientov pri sledovaní nebolo možné urobiť robustný záver o dlhodobom efekte.</p>
 
 <h3>4) Problém nanoplastov</h3>
-<p>Podľa článku test PlasticTox nezachytí kompletne spektrum menších častíc, najmä časť nanoplastov, ktoré môžu byť biologicky aktívnejšie a ľahšie prechádzať biologickými bariérami.</p>
+<p>Podľa článku test PlasticTox nezachytí celé spektrum menších častíc, najmä časť nanoplastov, ktoré môžu byť biologicky aktívnejšie a ľahšie prechádzať biologickými bariérami.</p>
 
 <h2>Relevancia pre nefrológiu</h2>
 
 <p>Pre nefrológiu je téma dôležitá skôr konceptuálne ako terapeuticky. TPE je metóda, ktorú nefrológia pozná, no tento výsledok <strong>sa nemá interpretovať ako odporúčanie na rutinné „liečenie mikroplastov“</strong>, a to ani u pacientov s pokročilým postihnutím obličiek alebo na dialýze.</p>
 
-<p>Správna interpretácia dát je nasledovná:</p>
+<p>Údaje treba čítať takto:</p>
 
 <ul>
   <li>existuje mechanistický signál, že časť častíc je možné z cirkulácie odstrániť,</li>
@@ -93,7 +93,7 @@ $articles[] = [
 
 <h2>Riziká a praktické limity TPE</h2>
 
-<p>TPE je invazívny výkon s vlastnými rizikami: cievny prístup, hemodynamická záťaž a komplikácie súvisiace s náhradou plazmy. Aj pri mechanistickom úspechu preto platí, že metóda musí byť hodnotená primárne podľa klinických koncových ukazovateľov, nie iba podľa laboratórneho poklesu markerov.</p>
+<p>TPE je invazívny výkon s vlastnými rizikami: cievny prístup, hemodynamická záťaž a komplikácie súvisiace s náhradou plazmy. Aj pri mechanistickom úspechu ju preto treba hodnotiť predovšetkým podľa klinických koncových ukazovateľov, nie iba podľa laboratórneho poklesu markerov.</p>
 
 <h2>Kam sa vývoj pravdepodobne posunie</h2>
 
@@ -107,7 +107,7 @@ $articles[] = [
   <li><strong>TPE môže znížiť cirkulujúce mikroplasty</strong>, najmä pri vyššom východiskovom zaťažení.</li>
   <li>Efekt <strong>nie je konzistentný vo všetkých pásmach vstupných hodnôt</strong> a môže byť ovplyvnený kontamináciou počas procedúry.</li>
   <li>Zatiaľ <strong>chýba dôkaz klinického benefitu</strong> vo forme lepších tvrdých alebo pacientsky relevantných výsledkov.</li>
-  <li>Pred akoukoľvek klinickou implementáciou bude nutné preukázať vzťah medzi poklesom markerov, tkanivovým burdenom a reálnym zdravotným prínosom.</li>
+  <li>Pred akoukoľvek klinickou implementáciou bude nutné preukázať vzťah medzi poklesom markerov, tkanivovou záťažou a reálnym zdravotným prínosom.</li>
 </ul>
 
 <hr>

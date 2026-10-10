@@ -26,11 +26,11 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'V retrospektívnej kohorte bola perzistujúca mikroskopická hematúria po úprave o vybrané faktory spojená s vyšším rizikom zlyhania obličiek. Podporuje sledovanie sedimentu, nie automatickú eskaláciu liečby.',
     'content'      => <<<'HTML'
-<figure><a href="img/perzistujuca-mikroskopicka-hematuria-podocytopatie-prognoza.webp" rel="noopener noreferrer" target="_blank"><img src="img/perzistujuca-mikroskopicka-hematuria-podocytopatie-prognoza.webp" alt="Glomerulus s trvalým únikom červených krviniek, ktorý chladný lúč iba sleduje a nikde doň nezasahuje" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Pretrvávajúca hematúria hovorí o prognóze — nie je však cieľom, na ktorý by sa mala liečba zameriavať.</figcaption></figure>
+<figure><a href="img/perzistujuca-mikroskopicka-hematuria-podocytopatie-prognoza.webp" rel="noopener noreferrer" target="_blank"><img src="img/perzistujuca-mikroskopicka-hematuria-podocytopatie-prognoza.webp" alt="Glomerulus s trvalým únikom červených krviniek, ktorý chladný lúč iba sleduje a nikde doň nezasahuje" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Pretrvávajúca hematúria hovorí o prognóze – nie je však cieľom, na ktorý by sa mala liečba zameriavať.</figcaption></figure>
 
 <p class="article-dek"><em>Perzistujúca mikroskopická hematúria bola v novej retrospektívnej kohorte pacientov s membranóznou nefropatiou, chorobou minimálnych zmien alebo fokálnou segmentálnou glomerulosklerózou nezávisle spojená so zlyhaním obličiek. Ide o klinicky dostupný prognostický signál, nie o dôkaz, že samotná hematúria spôsobuje progresiu alebo že má automaticky viesť k intenzívnejšej imunosupresii.</em></p>
 
-<p>Pri ochoreniach s poškodením podocytov dominuje klinickému hodnoteniu proteinúria, nefrotický syndróm a trend glomerulovej filtrácie. Krv v moči býva často považovaná za sprievodný nález alebo za dôvod na hľadanie inej diagnózy. Štúdia Gabriela Ștefana a spoluautorov publikovaná v časopise <em>Nephrology</em> ukazuje, že dôležitá môže byť najmä perzistencia mikroskopickej hematúrie v prvých mesiacoch po biopsii.</p>
+<p>Pri ochoreniach s poškodením podocytov dominujú klinickému hodnoteniu proteinúria, nefrotický syndróm a trend glomerulovej filtrácie. Krv v moči býva často považovaná za sprievodný nález alebo za dôvod na hľadanie inej diagnózy. Štúdia Gabriela Ștefana a spoluautorov publikovaná v časopise <em>Nephrology</em> ukazuje, že dôležitá môže byť najmä perzistencia mikroskopickej hematúrie v prvých mesiacoch po biopsii.</p>
 
 <h2>Čo presne štúdia skúmala</h2>
 

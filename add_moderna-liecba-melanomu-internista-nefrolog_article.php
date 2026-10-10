@@ -35,7 +35,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Melanóm už nie je len chirurgicko-dermatologická téma. Imunoterapia a BRAF/MEK liečba menia prognózu, ale prinášajú aj renálne riziká, ktoré má poznať nefrológ.',
     'content'      => <<<'HTML'
-<figure><a href="img/moderna-liecba-melanomu-internista-nefrolog.webp" rel="noopener noreferrer" target="_blank"><img src="img/moderna-liecba-melanomu-internista-nefrolog.webp" alt="Imunitná bunka napádajúca melanómový útvar a vlákno svetla, ktoré vedie nadol k obličke sfarbenej do výstražnej oranžovej" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Účinok imunoterapie sa nezastaví pri nádore — obličku zasiahne rovnaká aktivácia imunitného systému.</figcaption></figure>
+<figure><a href="img/moderna-liecba-melanomu-internista-nefrolog.webp" rel="noopener noreferrer" target="_blank"><img src="img/moderna-liecba-melanomu-internista-nefrolog.webp" alt="Imunitná bunka napádajúca melanómový útvar a vlákno svetla, ktoré vedie nadol k obličke sfarbenej do výstražnej oranžovej" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Účinok imunoterapie sa nezastaví pri nádore – obličku zasiahne rovnaká aktivácia imunitného systému.</figcaption></figure>
 
 <p>Malígny melanóm patrí medzi biologicky najagresívnejšie nádory kože. Jeho incidencia celosvetovo stúpa a podľa epidemiologických odhadov môže do roku 2040 ročná globálna záťaž dosiahnuť približne 510 000 nových prípadov a 96 000 úmrtí. Hoci ide primárne o dermatologicko-onkologickú diagnózu, melanóm má význam aj pre internú medicínu a nefrológiu.</p>
 
@@ -43,9 +43,9 @@ $articles[] = [
 
 <h2>Čo priniesol zdrojový materiál</h2>
 
-<p>Zdrojový materiál Medscape zhŕňa aktuálne princípy liečby melanómu formou klinického kvízu. Venuje sa najmä chirurgickej liečbe lokalizovaného ochorenia, biopsii sentinelovej uzliny, adjuvantnej imunoterapii, cielenej liečbe pri mutácii BRAF V600 a súčasnému ústupu starších liečebných postupov, najmä interferónových režimov a chemoterapie.</p>
+<p>Medscape zhŕňa súčasné princípy liečby melanómu formou klinického kvízu. Venuje sa najmä chirurgickej liečbe lokalizovaného ochorenia, biopsii sentinelovej uzliny, adjuvantnej imunoterapii, cielenej liečbe pri mutácii BRAF V600 a súčasnému ústupu starších liečebných postupov, najmä interferónových režimov a chemoterapie.</p>
 
-<p>Pre nefrológa nie je cieľom preberať úlohu onkológa. Praktický význam spočíva v tom, aby rozumel liečebnému kontextu, vedel včas zachytiť renálne komplikácie a dokázal s onkológom komunikovať o diferenciálnej diagnostike akútneho poškodenia obličiek počas systémovej protinádorovej liečby.</p>
+<p>Nefrológ nemá preberať úlohu onkológa. Potrebuje však rozumieť liečebnému kontextu, včas zachytiť renálne komplikácie a vedieť sa s onkológom dohovoriť o diferenciálnej diagnostike akútneho poškodenia obličiek počas systémovej protinádorovej liečby.</p>
 
 <h2>Chirurgická liečba lokalizovaného melanómu</h2>
 
@@ -98,7 +98,7 @@ $articles[] = [
 
 <p>Kombinácie BRAF/MEK majú vyššiu účinnosť a priaznivejší profil než samotná monoterapia inhibítorom BRAF. Ich miesto je dôležité najmä pri potrebe rýchlej odpovede, symptomatickom alebo rýchlo progredujúcom ochorení, pri kontraindikácii imunoterapie alebo v ďalších sekvenčných situáciách podľa rozhodnutia onkologického tímu.</p>
 
-<p>Poradie imunoterapie a cielenej liečby nemožno určiť univerzálne jednou vetou. Závisí od tempa ochorenia, rozsahu metastáz, symptómov, laboratórnych parametrov, komorbidít, autoimunitnej anamnézy, dostupnosti liečby a cieľa liečby. Pre nefrológa je dôležité poznať, že aj cielená liečba môže nepriamo ovplyvniť obličky, napríklad cez horúčku, dehydratáciu, systémový zápal, rabdomyolýzu, elektrolytové poruchy alebo liekové interakcie.</p>
+<p>Poradie imunoterapie a cielenej liečby nemožno určiť univerzálne jednou vetou. Závisí od tempa ochorenia, rozsahu metastáz, symptómov, laboratórnych parametrov, komorbidít, autoimunitnej anamnézy, dostupnosti liečby a cieľa liečby. Nefrológ by mal vedieť, že aj cielená liečba môže nepriamo ovplyvniť obličky, napríklad cez horúčku, dehydratáciu, systémový zápal, rabdomyolýzu, elektrolytové poruchy alebo liekové interakcie.</p>
 
 <h2>Interferón a chemoterapia ustúpili do úzadia</h2>
 
@@ -120,7 +120,7 @@ $articles[] = [
 
 <p>Osobitnou skupinou sú pacienti po transplantácii obličky. Inhibítory kontrolných bodov imunity môžu u nich zvýšiť riziko rejekcie štepu, pretože mechanizmus liečby zasahuje do rovnováhy protinádorovej imunity a tolerancie transplantovaného orgánu. Rozhodovanie musí byť mimoriadne individualizované a má prebiehať v úzkej spolupráci onkológa, transplantačného nefrológa a pacienta.</p>
 
-<p>V tejto situácii nejde len o otázku účinnosti protinádorovej liečby. Treba otvorene diskutovať riziko straty štepu, potrebu dialýzy, možnosti úpravy imunosupresie, alternatívne onkologické postupy a realistický cieľ liečby.</p>
+<p>V tejto situácii nejde len o otázku účinnosti protinádorovej liečby. Treba otvorene hovoriť o riziku straty štepu, potrebe dialýzy, možnostiach úpravy imunosupresie, alternatívnych onkologických postupoch a realistickom cieli liečby.</p>
 
 <h2>Praktické dôsledky pre klinickú prax</h2>
 
@@ -147,7 +147,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>Súčasná liečba melanómu je založená na presnom stagingu, chirurgickej liečbe lokalizovaného ochorenia, rozumnej indikácii biopsie sentinelovej uzliny, individualizovanej adjuvantnej imunoterapii a cielenej liečbe pri mutácii BRAF V600. Rutinná kompletná disekcia lymfatických uzlín po pozitívnej sentinelovej uzline stratila svoje pôvodné postavenie, pretože nezlepšuje melanómovo špecifické prežívanie a zvyšuje riziko lymfedému.</p>
+<p>Súčasná liečba melanómu je založená na presnom stagingu, chirurgickej liečbe lokalizovaného ochorenia, rozumnej indikácii biopsie sentinelovej uzliny, individualizovanej adjuvantnej imunoterapii a cielenej liečbe pri mutácii BRAF V600. Rutinná kompletná disekcia lymfatických uzlín po pozitívnej sentinelovej uzline stratila pôvodné postavenie, pretože nezlepšuje melanómovo špecifické prežívanie a zvyšuje riziko lymfedému.</p>
 
 <p>Pre nefrologickú prax je najdôležitejšie včas rozpoznať renálne komplikácie imunoterapie, neprehliadnuť bežné príčiny akútneho poškodenia obličiek a spolupracovať s onkológom pri manažmente toxicity. Moderná onkologická liečba predlžuje prežívanie, ale zároveň kladie vyššie nároky na interdisciplinárnu starostlivosť.</p>
 

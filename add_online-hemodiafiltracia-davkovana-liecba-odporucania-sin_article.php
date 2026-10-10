@@ -25,7 +25,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Prínos online hemodiafiltrácie nie je vlastnosťou metódy, ale dosiahnutého konvektívneho objemu. Nové odporúčania to formulujú priamo a spresňujú, čo musí pracovisko splniť, aby dávka zo štúdií vôbec vznikla.',
     'content'      => <<<'HTML'
-<figure><a href="img/online-hemodiafiltracia-davkovana-liecba-odporucania-sin.webp" rel="noopener noreferrer" target="_blank"><img src="img/online-hemodiafiltracia-davkovana-liecba-odporucania-sin.webp" alt="Dialyzátor a vedľa neho presne odmeraná nádoba so svietiacou tekutinou" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Konvekčný objem prestáva byť vedľajším parametrom a stáva sa dávkou, ktorú treba predpísať a kontrolovať.</figcaption></figure>
+<figure><a href="img/online-hemodiafiltracia-davkovana-liecba-odporucania-sin.webp" rel="noopener noreferrer" target="_blank"><img src="img/online-hemodiafiltracia-davkovana-liecba-odporucania-sin.webp" alt="Dialyzátor a vedľa neho presne odmeraná nádoba so svietiacou tekutinou" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Konvektívny objem prestáva byť vedľajším parametrom a stáva sa dávkou, ktorú treba predpísať a kontrolovať.</figcaption></figure>
 
 <p>Online hemodiafiltrácia (OL-HDF) sa v európskych dialyzačných strediskách používa už dve desaťročia, no otázka, či pacientovi skutočne predĺži život, mala dlho rozporuplné odpovede. Rozuzlenie neprišlo z porovnania metód, ale z pochopenia, že ide o <strong>dávkovanú liečbu</strong>: rozhoduje objem konvekcie, ktorý sa počas sedenia naozaj dosiahne.</p>
 
@@ -90,7 +90,7 @@ $articles[] = [
 
 <p>Kľúčovým zistením metaanalýzy individuálnych údajov nie je samotný pomer rizík, ale <strong>tvar vzťahu</strong>: s rastúcim konvektívnym objemom riziko úmrtia klesá plynulo. Zároveň sa nenašiel rozdiel účinku podľa veku, pohlavia, diabetu, trvania dialýzy ani ďalších vopred určených charakteristík.</p>
 
-<p>To má dva praktické dôsledky. Prvý: prepnutie prístroja do režimu HDF bez dosiahnutia potrebného objemu neprinesie očakávaný prínos, hoci v dokumentácii bude modalita zapísaná ako hemodiafiltrácia. Druhý: v skúšaní sa nepreukázala heterogenita účinku medzi podskupinami — to však nie je dôkaz, že nevhodná podskupina neexistuje. CONVINCE totiž zaraďovala <strong>iba pacientov, ktorí boli považovaní za kandidátov na konvekčný objem ≥ 23 l na sedenie</strong>. Tí, u ktorých sa taká dávka dodať nedá, teda v skúšaní vôbec neboli a jeho výsledky o nich nič nehovoria. Rozhodujúce preto zostáva, či sa u konkrétneho pacienta dá dávka technicky dodať.</p>
+<p>To má dva praktické dôsledky. Prvý: prepnutie prístroja do režimu HDF bez dosiahnutia potrebného objemu neprinesie očakávaný prínos, hoci v dokumentácii bude modalita zapísaná ako hemodiafiltrácia. Druhý: v skúšaní sa nepreukázala heterogenita účinku medzi podskupinami – to však nie je dôkaz, že nevhodná podskupina neexistuje. CONVINCE totiž zaraďovala <strong>iba pacientov, ktorí boli považovaní za kandidátov na konvektívny objem ≥ 23 l na sedenie</strong>. Tí, u ktorých sa taká dávka dodať nedá, teda v skúšaní vôbec neboli a jeho výsledky o nich nič nehovoria. Rozhodujúce preto zostáva, či sa u konkrétneho pacienta dá dávka technicky dodať.</p>
 
 <h2>Čo obmedzuje dosiahnutý konvektívny objem</h2>
 

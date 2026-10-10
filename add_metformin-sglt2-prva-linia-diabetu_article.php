@@ -34,15 +34,15 @@ $articles[] = [
 
 <p>Liečba diabetu 2. typu sa posúva od úzkeho zamerania na glykémiu k širšiemu prístupu, ktorý berie do úvahy kardiovaskulárne, renálne a metabolické riziko pacienta. Tento posun dobre ilustruje aktualizované odporúčanie britského <strong>National Institute for Health and Care Excellence</strong>, známeho ako NICE.</p>
 
-<p>Podľa správy publikovanej na portáli Medscape by u väčšiny ľudí s diabetom 2. typu mala byť liečba začatá <strong>metformínom s predĺženým uvoľňovaním</strong> a následne doplnená o <strong>inhibítor SGLT2</strong>. Ide o zmenu, ktorá môže mať významný dopad na každodennú klinickú prax.</p>
+<p>Podľa správy publikovanej na portáli Medscape by u väčšiny ľudí s diabetom 2. typu mala byť liečba začatá <strong>metformínom s predĺženým uvoľňovaním</strong> a následne doplnená o <strong>inhibítor SGLT2</strong>. Pre každodennú klinickú prax je to podstatná zmena.</p>
 
 <h2>Prečo metformín s predĺženým uvoľňovaním</h2>
 
-<p>Metformín patrí už roky medzi základné lieky diabetu 2. typu. Tradične sa často používala forma s okamžitým uvoľňovaním. Aktualizované odporúčanie NICE však uprednostňuje formu s predĺženým, respektíve modifikovaným uvoľňovaním.</p>
+<p>Metformín patrí už roky medzi základné lieky diabetu 2. typu. Tradične sa používala forma s okamžitým uvoľňovaním. Aktualizované odporúčanie NICE však uprednostňuje formu s predĺženým, respektíve modifikovaným uvoľňovaním.</p>
 
 <p>Dôvod je praktický. Metformín s predĺženým uvoľňovaním môže mať menej gastrointestinálnych nežiaducich účinkov, najmä menej nevoľnosti, hnačiek, nafukovania a brušného diskomfortu. To môže zlepšiť toleranciu liečby a tým aj adherenciu pacienta.</p>
 
-<p>Dôležité je, že nejde o tvrdenie, že bežný metformín prestal byť účinný alebo vhodný. Ak pacient užíva štandardný metformín, dobre ho toleruje a dosahuje dobrú kontrolu ochorenia, nie je automaticky potrebné liečbu meniť. Zmena má zmysel najmä pri intolerancii, zlej adherencii alebo pri začatí novej liečby podľa aktuálneho algoritmu.</p>
+<p>Neznamená to, že bežný metformín prestal byť účinný alebo vhodný. Ak pacient užíva štandardný metformín, dobre ho toleruje a dosahuje dobrú kontrolu ochorenia, nie je automaticky potrebné liečbu meniť. Zmena má zmysel najmä pri intolerancii, zlej adherencii alebo pri začatí novej liečby podľa aktuálneho algoritmu.</p>
 
 <h2>Prečo pridať inhibítor SGLT2</h2>
 
@@ -50,11 +50,11 @@ $articles[] = [
 
 <p>Veľké klinické štúdie ukázali, že táto skupina liekov má dôležité <strong>kardiovaskulárne a renálne prínosy</strong>. U vhodne vybraných pacientov môžu znižovať riziko hospitalizácie pre srdcové zlyhávanie, spomaľovať progresiu chronickej choroby obličiek a priaznivo ovplyvňovať kardiometabolické riziko.</p>
 
-<p>Práve preto sa inhibítory SGLT2 dostávajú v odporúčaniach čoraz skôr do liečebného algoritmu. Nejde iba o lieky na zníženie cukru v krvi. Sú súčasťou modernej kardiorenálno-metabolickej ochrany.</p>
+<p>Preto sa v odporúčaniach dostávajú do liečebného algoritmu čoraz skôr – nie ako lieky len na zníženie cukru v krvi, ale ako súčasť kardiorenálno-metabolickej ochrany.</p>
 
 <h2>Nie je to iba „liečba cukru“</h2>
 
-<p>Podľa odborníkov citovaných v článku Medscape sa manažment diabetu 2. typu mení. Starší prístup sa sústreďoval najmä na dosiahnutie cieľovej hodnoty HbA1c. Novší prístup je komplexnejší.</p>
+<p>Podľa odborníkov citovaných v článku Medscape sa manažment diabetu 2. typu mení. Starší prístup sa sústreďoval najmä na dosiahnutie cieľovej hodnoty HbA1c, novší je komplexnejší.</p>
 
 <p>Cieľom liečby je:</p>
 
@@ -71,7 +71,7 @@ $articles[] = [
 
 <h2>Liečba sa má začínať postupne</h2>
 
-<p>Jedným z praktických bodov aktualizovaného odporúčania je, že lieky sa nemajú začínať všetky naraz. Odporúča sa postupný prístup.</p>
+<p>Aktualizované odporúčanie výslovne uvádza, že lieky sa nemajú začínať všetky naraz, ale postupne.</p>
 
 <p>Najskôr sa začne jedna liečba, dávka sa titruje na najvyššiu tolerovanú dávku a až potom sa pridáva ďalší liek. Tento postup umožňuje lepšie posúdiť účinnosť, toleranciu a nežiaduce účinky jednotlivých liekov.</p>
 
@@ -95,7 +95,7 @@ $articles[] = [
   <li>subkutánny semaglutid v dávke do 1 mg týždenne.</li>
 </ul>
 
-<p>Aj tu platí, že liečba sa má začínať postupne a nie naraz. Zaujímavé je, že NICE v tomto prípade prvýkrát odporúča konkrétny liek, nie iba celú liekovú skupinu.</p>
+<p>Aj tu platí, že liečba sa má začínať postupne a nie naraz. NICE tu prvýkrát odporúča konkrétny liek, nie iba celú liekovú skupinu.</p>
 
 <p>Agonisty receptora GLP-1 alebo tirzepatid majú svoje miesto aj pri skorom nástupe diabetu 2. typu a pri obezite, najmä ak sa nedosiahnu glykemické ciele po úvodnej liečbe a po dostatočnom čase na zhodnotenie účinku.</p>
 
@@ -103,7 +103,7 @@ $articles[] = [
 
 <p>Diabetes 2. typu je progresívne ochorenie. Mnohí pacienti budú časom potrebovať intenzifikáciu liečby, niekedy aj inzulín. To neznamená, že pacient „zlyhal“. Znamená to, že ochorenie sa biologicky vyvíja a liečbu treba prispôsobiť jeho aktuálnemu stavu.</p>
 
-<p>Otvorená komunikácia je preto kľúčová. Pacient má rozumieť, prečo sa liek pridáva, aký má očakávaný prínos, aké sú riziká a kedy má vyhľadať lekára.</p>
+<p>S pacientom treba preto hovoriť otvorene. Má rozumieť, prečo sa liek pridáva, aký má očakávaný prínos, aké sú riziká a kedy má vyhľadať lekára.</p>
 
 <h2>Praktický záver</h2>
 
@@ -111,7 +111,7 @@ $articles[] = [
 
 <p>Metformín s predĺženým uvoľňovaním a inhibítor SGLT2 sa podľa NICE dostávajú do prvej línie u väčšiny pacientov s diabetom 2. typu. Vhodnosť takejto liečby však musí vždy posúdiť lekár podľa konkrétneho pacienta, jeho obličkových funkcií, komorbidít, tolerancie liečby a rizika nežiaducich účinkov.</p>
 
-<p>Pre nefrologickú prax je toto odporúčanie obzvlášť dôležité. Potvrdzuje, že pri diabete 2. typu treba od začiatku myslieť kardiorenálne, nie až vtedy, keď sa objaví pokročilá chronická choroba obličiek alebo srdcové zlyhávanie.</p>
+<p>Pre nefrologickú prax z odporúčania vyplýva, že pri diabete 2. typu treba od začiatku myslieť kardiorenálne, nie až vtedy, keď sa objaví pokročilá chronická choroba obličiek alebo srdcové zlyhávanie.</p>
 
 <hr>
 

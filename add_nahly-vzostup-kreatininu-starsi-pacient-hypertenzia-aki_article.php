@@ -23,7 +23,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Náhly vzostup kreatinínu u seniora vyžaduje potvrdenie dynamiky, zhodnotenie diurézy, objemového stavu, liekov, močového nálezu a vylúčenie obštrukcie aj urgentných komplikácií.',
     'content'      => <<<'HTML'
-<figure><a href="img/nahly-vzostup-kreatininu-starsi-pacient-hypertenzia-aki.webp" rel="noopener noreferrer" target="_blank"><img src="img/nahly-vzostup-kreatininu-starsi-pacient-hypertenzia-aki.webp" alt="Pokojná svetelná krivka sa náhle láme a strmo stúpa v červenom svetle, v mieste zlomu sa odvetvujú nejasné tiene možných príčin" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna, nie záznam konkrétneho pacienta. Vzostup kreatinínu je až výsledok — otázkou zostáva, ktorá z možných ciest k nemu viedla.</figcaption></figure>
+<figure><a href="img/nahly-vzostup-kreatininu-starsi-pacient-hypertenzia-aki.webp" rel="noopener noreferrer" target="_blank"><img src="img/nahly-vzostup-kreatininu-starsi-pacient-hypertenzia-aki.webp" alt="Pokojná svetelná krivka sa náhle láme a strmo stúpa v červenom svetle, v mieste zlomu sa odvetvujú nejasné tiene možných príčin" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna, nie záznam konkrétneho pacienta. Vzostup kreatinínu je až výsledok – otázkou zostáva, ktorá z možných ciest k nemu viedla.</figcaption></figure>
 
 <p>Náhly vzostup sérového kreatinínu, napríklad z 90 na 160 µmol/l u približne 80-ročného pacienta, je klinicky významný nález. Ak vznikol počas predchádzajúcich siedmich dní, hodnota sa zvýšila na 1,78-násobok východiskovej koncentrácie a spĺňa kreatinínové kritérium akútneho poškodenia obličiek (<em>acute kidney injury</em>, AKI) 1. stupňa podľa KDIGO. Ak časový priebeh nie je známy, samotná koncentrácia 160 µmol/l AKI nedokazuje. Môže ísť o akútnu zmenu, akútne poškodenie na podklade chronickej choroby obličiek (CKD), doteraz nepoznanú CKD alebo zriedkavejšie o vzostup kreatinínu bez skutočného poklesu glomerulovej filtrácie.</p>
 
@@ -122,7 +122,7 @@ $articles[] = [
 
 <h2>Liečba sa riadi príčinou a klinickým stavom</h2>
 
-<p>Pri hypovolémii sa podáva primeraná objemová náhrada izotonickým kryštaloidom s opakovaným prehodnotením odpovede. U pacienta so srdcovým zlyhávaním alebo kongesciou môže nekritická infúzna liečba zhoršiť pľúcny edém, preto sa tekutiny nemajú podávať iba na základe zvýšeného kreatinínu. Diuretiká neliečia samotné AKI; majú miesto pri klinicky významnom objemovom preťažení.</p>
+<p>Pri hypovolémii sa podáva primeraná objemová náhrada izotonickým kryštaloidom s opakovaným prehodnotením odpovede. U pacienta so srdcovým zlyhávaním alebo kongesciou môže nekriticky podávaná infúzna liečba zhoršiť pľúcny edém, preto sa tekutiny nemajú podávať iba na základe zvýšeného kreatinínu. Diuretiká neliečia samotné AKI; majú miesto pri klinicky významnom objemovom preťažení.</p>
 
 <p>Potenciálne nefrotoxické a hemodynamicky rizikové lieky treba individuálne prehodnotiť. Paušálne vysadenie všetkých antihypertenzív nie je bezpečný algoritmus. Rozhoduje tlak, perfúzia, kongescia, kaliémia, príčina AKI a kardiovaskulárna indikácia. Dávky ostatných liekov sa upravujú podľa aktuálnej a dynamicky sa meniacej funkcie obličiek; statická eGFR môže počas AKI dávkovanie skresľovať.</p>
 

@@ -108,11 +108,11 @@ $articles[] = [
 
 <h2>Mikrorany v jednej bunke</h2>
 
-<p>Mimoriadne zaujímavé bolo pozorovanie takzvaných mikrorán. Išlo o drobné defekty, ktoré prechádzali dokonca vnútrom jednej bunky. Takéto mikropoškodenia sa uzatvárali približne za <strong>3 až 5 minút</strong>.</p>
+<p>Autori pozorovali aj takzvané mikrorany – drobné defekty, ktoré prechádzali dokonca vnútrom jednej bunky. Takéto mikropoškodenia sa uzatvárali približne za <strong>3 až 5 minút</strong>.</p>
 
 <p>Aj v tomto prípade sa objavili lamelipódiá a aktínové štruktúry. Bunky pritom dokázali rozlišovať medzi vlastnými výbežkami a výbežkami susedných buniek. Lamelipódiá pochádzajúce z tej istej bunky sa vedeli spojiť, zatiaľ čo výbežky zo susedných buniek zostávali oddelené a obnovovali bunkové hranice.</p>
 
-<p>Pre bunkovú biológiu je to dôležitý poznatok. Naznačuje, že aj pri akútnej oprave poškodenia sa zachováva schopnosť rozlišovať „vlastné“ a „nevlastné“ bunkové rozhrania. Oprava teda nie je chaotické zalepenie defektu, ale koordinovaný proces s presnou priestorovou kontrolou.</p>
+<p>Naznačuje to, že aj pri akútnej oprave poškodenia sa zachováva schopnosť rozlišovať „vlastné“ a „nevlastné“ bunkové rozhrania. Oprava teda nie je chaotické zalepenie defektu, ale koordinovaný proces s presnou priestorovou kontrolou.</p>
 
 <h2>Prečo sa rana nezjazví</h2>
 
@@ -128,7 +128,7 @@ $articles[] = [
 
 <p>U týchto pacientov sa často stretávame so zhoršeným hojením rán, vyšším rizikom infekcií, malnutríciou, chronickým zápalom, poruchami mikrocirkulácie a dysreguláciou imunity. Pri dialyzovaných pacientoch sú klinicky významné aj problémy s hojením operačných rán, cievnych prístupov, defektov dolných končatín a kožných lézií.</p>
 
-<p>Potenciálny význam základného výskumu epitelovej opravy môže byť v budúcnosti najmä v týchto oblastiach:</p>
+<p>Poznatky o epitelovej oprave by sa v budúcnosti mohli uplatniť najmä v týchto oblastiach:</p>
 
 <ul>
   <li>hojenie chronických rán a diabetických defektov,</li>
@@ -139,11 +139,11 @@ $articles[] = [
   <li>výskum integrity epitelu v koži, čreve, slizniciach a orgánových modeloch.</li>
 </ul>
 
-<p>Pre klinika je dôležité zostať opatrný: cesta od jednoduchého modelu k liečbe človeka je dlhá. Napriek tomu môže byť práve takýto model užitočný, pretože odhaľuje elementárne pravidlá, ktoré sú v cicavčej rane zakryté komplexnosťou zápalu, ciev a jazvovej prestavby.</p>
+<p>Cesta od jednoduchého modelu k liečbe človeka je však dlhá.</p>
 
 <h2>Odborná opatrnosť pri interpretácii</h2>
 
-<p>Popularizačný titulok o medúze, ktorá hojí rany bez jaziev, je atraktívny, ale treba ho čítať presne. <em>Clytia hemisphaerica</em> je výborný model na sledovanie základnej bunkovej mechaniky, nie priamy terapeutický návod na liečbu ľudských rán.</p>
+<p>Popularizačný titulok o medúze, ktorá hojí rany bez jaziev, je atraktívny, ale treba ho čítať presne.</p>
 
 <p>Rozdiely oproti človeku sú zásadné:</p>
 

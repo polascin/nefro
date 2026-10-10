@@ -23,7 +23,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Krvný tlak nad cieľom ešte neznamená skutočnú rezistentnú hypertenziu. Článok vysvetľuje rozdiel medzi zdanlivou a skutočnou rezistenciou, rozoberá sekundárne príčiny a hodnotí inhibítory aldosterónsyntázy.',
     'content'      => <<<'HTML'
-<figure><a href="img/nekontrolovana-rezistentna-hypertenzia-aldosteronova-os.webp" rel="noopener noreferrer" target="_blank"><img src="img/nekontrolovana-rezistentna-hypertenzia-aldosteronova-os.webp" alt="Stiahnutá cieva, ktorej zvierajúci pás napína zlaté vlákno vedené od nadobličky; pod ňou rozsypané nezaúčinkované tabletky" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Ak tlak nereaguje na štandardnú liečbu, oplatí sa hľadať ťah, ktorý ju obchádza — často vedie cez aldosterónovú os.</figcaption></figure>
+<figure><a href="img/nekontrolovana-rezistentna-hypertenzia-aldosteronova-os.webp" rel="noopener noreferrer" target="_blank"><img src="img/nekontrolovana-rezistentna-hypertenzia-aldosteronova-os.webp" alt="Stiahnutá cieva, ktorej zvierajúci pás napína zlaté vlákno vedené od nadobličky; pod ňou rozsypané nezaúčinkované tabletky" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Ak tlak nereaguje na štandardnú liečbu, oplatí sa hľadať ťah, ktorý ju obchádza – často vedie cez aldosterónovú os.</figcaption></figure>
 
 <p>Nekontrolovaná, zdanlivo rezistentná a skutočne rezistentná hypertenzia nie sú synonymá. Zvýšený krvný tlak napriek predpísanej liečbe môže súvisieť s nesprávnym meraním, fenoménom bieleho plášťa, nedostatočnou adherenciou, suboptimálnym liečebným režimom, látkami zvyšujúcimi krvný tlak alebo sekundárnou príčinou, ktorá môže byť podkladom skutočnej rezistencie na liečbu. Rozlíšenie týchto situácií rozhoduje o ďalšom vyšetrení aj liečbe.</p>
 
@@ -145,7 +145,7 @@ $articles[] = [
   </table>
 </div>
 
-<p>K 27. augustu 2026 zostávali lorundrostat, vicadrostat a dexfadrostat skúšanými, neschválenými liekmi. FDA prijal žiadosť o registráciu lorundrostatu a určil cieľový termín rozhodnutia na 22. decembra 2026. Z uvedených štyroch molekúl bolo potvrdené regulačné schválenie iba pre baxdrostat v USA; nejde o dôvod na predpoklad dostupnosti v Európe. <a href="#odborny-zdroj-7">[7]</a> <a href="#odborny-zdroj-9">[9]</a> <a href="#odborny-zdroj-10">[10]</a> <a href="#odborny-zdroj-11">[11]</a> <a href="#odborny-zdroj-12">[12]</a></p>
+<p>K 27. augustu 2026 zostávali lorundrostat, vicadrostat a dexfadrostat skúšanými, neschválenými liekmi. FDA prijal žiadosť o registráciu lorundrostatu a určil cieľový termín rozhodnutia na 22. decembra 2026. Z uvedených štyroch molekúl bolo potvrdené regulačné schválenie iba pre baxdrostat v USA. <a href="#odborny-zdroj-7">[7]</a> <a href="#odborny-zdroj-9">[9]</a> <a href="#odborny-zdroj-10">[10]</a> <a href="#odborny-zdroj-11">[11]</a> <a href="#odborny-zdroj-12">[12]</a></p>
 
 <p>V randomizovanej štúdii BaxHTN bolo liečených 794 účastníkov s nekontrolovanou alebo rezistentnou hypertenziou. Koncentrácia draslíka nad 6,0 mmol/l sa vyskytla u 2,3 % účastníkov pri baxdrostate v dávke 1 mg, u 3,0 % pri dávke 2 mg a u 0,4 % pri placebe. Tieto údaje sa týkajú konkrétneho skúšania a prahu, nie celkovej frekvencie hyperkaliémie v klinickej praxi. <a href="#odborny-zdroj-6">[6]</a></p>
 

@@ -24,11 +24,11 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Takmer šesť z desiatich lekárov v prieskume uviedlo, že by zvážili nižší príjem výmenou za viac voľného času. Metaanalýzy pritom ukazujú, že vyhorenie je predovšetkým problémom organizácie práce — nie nedostatočnej odolnosti jednotlivca.',
+    'excerpt'      => 'Takmer šesť z desiatich lekárov v prieskume uviedlo, že by zvážili nižší príjem výmenou za viac voľného času. Metaanalýzy pritom ukazujú, že vyhorenie je predovšetkým problémom organizácie práce – nie nedostatočnej odolnosti jednotlivca.',
     'content'      => <<<'HTML'
-<figure><a href="img/lekari-cas-autonomia-vyhorenie-pracovne-podmienky.webp" rel="noopener noreferrer" target="_blank"><img src="img/lekari-cas-autonomia-vyhorenie-pracovne-podmienky.webp" alt="Presýpacie hodiny v ochrannom kruhu svetla na tmavom stole; mince okolo nich zostávajú neosvetlené, v pozadí stetoskop a stoh papierov" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Peniaze nie sú jadrom problému — jadrom je, kto rozhoduje o lekárovom čase.</figcaption></figure>
+<figure><a href="img/lekari-cas-autonomia-vyhorenie-pracovne-podmienky.webp" rel="noopener noreferrer" target="_blank"><img src="img/lekari-cas-autonomia-vyhorenie-pracovne-podmienky.webp" alt="Presýpacie hodiny v ochrannom kruhu svetla na tmavom stole; mince okolo nich zostávajú neosvetlené, v pozadí stetoskop a stoh papierov" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Peniaze nie sú jadrom problému – jadrom je, kto rozhoduje o lekárovom čase.</figcaption></figure>
 
-<p class="article-dek"><em>Prieskum medzi lekármi ukazuje, že čas, predvídateľnosť a autonómia sa stávajú súčasťou toho, ako lekári hodnotia pracovné miesto. Zaujímavejšia než samotné percento je však otázka, čo s tým robiť — a tu dostupné dôkazy hovoria pomerne jednoznačne, že riešenie neleží na strane jednotlivca.</em></p>
+<p class="article-dek"><em>Prieskum medzi lekármi ukazuje, že čas, predvídateľnosť a autonómia sa stávajú súčasťou toho, ako lekári hodnotia pracovné miesto. Zaujímavejšia než samotné percento je však otázka, čo s tým robiť. Dostupné dôkazy tu hovoria pomerne jednoznačne: riešenie neleží na strane jednotlivca.</em></p>
 
 <p>Takmer šesť z desiatich lekárov oslovených v prieskume spoločnosti Medscape uviedlo, že by boli ochotní prijať nižší plat výmenou za lepšie zosúladenie pracovného a osobného života alebo za viac voľného času. Podľa prezentovaných výsledkov by nižší príjem zvážilo <strong>59 % lekárov</strong>, kým v predchádzajúcom prieskume to bolo 63 %. Súčasne <strong>46 % respondentov</strong> uviedlo vyhorenie, depresiu alebo kombináciu oboch stavov.</p>
 
@@ -38,7 +38,7 @@ $articles[] = [
 
 <p>Približne tri štvrtiny respondentov pripisovali veľký význam času strávenému s rodinou a možnosti čerpať dovolenku. Asi osem z desiatich považovalo záujmové aktivity za dôležité alebo veľmi dôležité pre relaxáciu a duševné zdravie.</p>
 
-<p>Lekári teda spravidla dobre vedia, čo podporuje ich regeneráciu — dostatok spánku, čas s blízkymi, pohyb, kvalitná strava, záujmy, dovolenka bez pracovného vyrušovania a primeraná kontrola nad pracovným časom. <strong>Problémom nie je nedostatok vedomostí o zdravom životnom štýle, ale nemožnosť uplatniť ich v pracovnom prostredí.</strong> Povinnosti pokračujú aj po skončení formálnej pracovnej doby prostredníctvom dokumentácie, elektronickej komunikácie, výsledkov vyšetrení a zodpovednosti za pacientov.</p>
+<p>Lekári teda spravidla dobre vedia, čo podporuje ich regeneráciu – dostatok spánku, čas s blízkymi, pohyb, kvalitná strava, záujmy, dovolenka bez pracovného vyrušovania a primeraná kontrola nad pracovným časom. <strong>Problémom nie je nedostatok vedomostí o zdravom životnom štýle, ale nemožnosť uplatniť ich v pracovnom prostredí.</strong> Povinnosti pokračujú aj po skončení formálnej pracovnej doby prostredníctvom dokumentácie, elektronickej komunikácie, výsledkov vyšetrení a zodpovednosti za pacientov.</p>
 
 <h2>Vyhorenie nie je synonymom depresie</h2>
 
@@ -52,11 +52,11 @@ $articles[] = [
 
 <h2>Je nižší plat riešením?</h2>
 
-<p>Ochota zvážiť nižší príjem vyjadruje, akú hodnotu lekári pripisujú času a autonómii. Automatické zníženie mzdy však nie je intervenciou proti vyhoreniu — je len znížením mzdy.</p>
+<p>Ochota zvážiť nižší príjem vyjadruje, akú hodnotu lekári pripisujú času a autonómii. Samotné zníženie mzdy však nie je intervenciou proti vyhoreniu, je to len zníženie mzdy.</p>
 
-<p>Ak by sa rovnaký objem práce, rovnaká administratívna záťaž a rovnaká zodpovednosť spojili s nižším platom, výsledkom by bolo ďalšie zhoršenie pracovnej spokojnosti. Zmysluplná výmena musí znamenať <strong>reálne zníženie pracovného zaťaženia alebo zvýšenie kontroly nad pracovným režimom</strong> — kratší alebo flexibilnejší úväzok, menej služieb, predvídateľný rozpis, chránený voľný čas, obmedzenie administratívy po pracovnej dobe, primeraný počet pacientov a dostatočné personálne zabezpečenie.</p>
+<p>Ak by sa rovnaký objem práce, rovnaká administratívna záťaž a rovnaká zodpovednosť spojili s nižším platom, výsledkom by bolo ďalšie zhoršenie pracovnej spokojnosti. Zmysluplná výmena musí znamenať <strong>reálne zníženie pracovného zaťaženia alebo zvýšenie kontroly nad pracovným režimom</strong> – kratší alebo flexibilnejší úväzok, menej služieb, predvídateľný rozpis, chránený voľný čas, obmedzenie administratívy po pracovnej dobe, primeraný počet pacientov a dostatočné personálne zabezpečenie.</p>
 
-<p>Osobitne opatrne treba výsledky vykladať pri lekároch s nižším príjmom, v špecializačnej príprave, u rodičov, samoživiteľov a osôb zaťažených úvermi. <strong>Nie každý si môže dovoliť vymeniť čas za nižšiu mzdu.</strong> Preferencia lepšieho pracovného režimu preto neznamená ekonomickú možnosť takúto ponuku prijať — a prieskum meria to prvé, nie druhé.</p>
+<p>Osobitne opatrne treba výsledky vykladať pri lekároch s nižším príjmom, v špecializačnej príprave, u rodičov, samoživiteľov a osôb zaťažených úvermi. <strong>Nie každý si môže dovoliť vymeniť čas za nižšiu mzdu.</strong> Preferencia lepšieho pracovného režimu preto neznamená ekonomickú možnosť takúto ponuku prijať – a prieskum meria to prvé, nie druhé.</p>
 
 <h2>Hypotetický súhlas nie je rozhodnutie</h2>
 
@@ -66,7 +66,7 @@ $articles[] = [
 
 <h2>Prečo individuálna odolnosť nestačí</h2>
 
-<p>Toto je časť, kde existujú tvrdé dôkazy — a tie hovoria dosť jasne.</p>
+<p>Pri tejto otázke už máme tvrdé dôkazy a hovoria dosť jasne.</p>
 
 <p>Systematický prehľad a metaanalýza kontrolovaných intervencií, ktorú publikovala Maria Panagiotiová so spolupracovníkmi, zahrnula 20 porovnaní z 19 štúdií s 1550 lekármi. Intervencie viedli k malému, ale významnému zníženiu vyhorenia (štandardizovaný rozdiel priemerov −0,29), pričom rozhodujúci bol ich typ:</p>
 
@@ -77,15 +77,15 @@ $articles[] = [
 
 <p>Organizačné zásahy teda boli približne dvaapolkrát účinnejšie. Autori z toho vyvodili, že vyhorenie je <strong>problémom zdravotníckej organizácie, nie jednotlivcov</strong>.</p>
 
-<p>Novšia metaanalýza intervencií u lekárov v špecializačnej príprave (33 štúdií, 2536 účastníkov) však priniesla striedmejší obraz. Individuálne intervencie mali malý účinok na emocionálne vyčerpanie (Cohenovo d −0,25; 95 % IS −0,40 až −0,11) a na depersonalizáciu (−0,17; 95 % IS −0,32 až −0,03), zatiaľ čo <strong>organizačné intervencie nepreukázali významný účinok v žiadnej doméne</strong>. Podiel organizačných intervencií bol pritom v tejto analýze nízky — tvorili menej než štvrtinu zaradených štúdií.</p>
+<p>Novšia metaanalýza intervencií u lekárov v špecializačnej príprave (33 štúdií, 2536 účastníkov) však priniesla striedmejší obraz. Individuálne intervencie mali malý účinok na emocionálne vyčerpanie (Cohenovo d −0,25; 95 % IS −0,40 až −0,11) a na depersonalizáciu (−0,17; 95 % IS −0,32 až −0,03), zatiaľ čo <strong>organizačné intervencie nepreukázali významný účinok v žiadnej doméne</strong>. Podiel organizačných intervencií bol pritom v tejto analýze nízky – tvorili menej než štvrtinu zaradených štúdií.</p>
 
-<p>Zdanlivý rozpor medzi oboma prácami sa dá vysvetliť. Skôr než protirečenie ukazuje, že:</p>
+<p>Zdanlivý rozpor medzi oboma prácami sa dá vysvetliť. Výsledky skôr ukazujú, že:</p>
 
 <ol>
-  <li>nie každá organizačná zmena je účinná — označenie „organizačná intervencia“ zahŕňa všetko od skutočnej zmeny rozpisu po formálny workshop;</li>
+  <li>nie každá organizačná zmena je účinná – označenie „organizačná intervencia“ zahŕňa všetko od skutočnej zmeny rozpisu po formálny workshop;</li>
   <li>výsledok závisí od konkrétneho pracoviska a od toho, ako dôsledne sa zmena realizovala;</li>
   <li>krátkodobá alebo formálna intervencia neodstráni základnú príčinu, ktorou je chronický nepomer medzi objemom práce a zdrojmi;</li>
-  <li>populácia lekárov v príprave má vlastné špecifiká — obmedzenú možnosť ovplyvniť rozpis a vysokú fluktuáciu prostredia.</li>
+  <li>populácia lekárov v príprave má vlastné špecifiká – obmedzenú možnosť ovplyvniť rozpis a vysokú fluktuáciu prostredia.</li>
 </ol>
 
 <p>Praktický záver z oboch prác je zhodný: samotné programy duševnej pohody problém nevyriešia, ale ani formálna organizačná zmena bez skutočného zníženia záťaže neprinesie výsledok.</p>
@@ -98,7 +98,7 @@ $articles[] = [
 
 <h3>Skutočne chránené voľno</h3>
 
-<p>Dovolenka stráca zmysel, ak lekár naďalej vybavuje výsledky, elektronické správy a telefonáty. Chránené voľno vyžaduje zastupiteľnosť a jasné odovzdanie zodpovednosti — nie apel, aby si lekár „nepozeral mobil“.</p>
+<p>Dovolenka stráca zmysel, ak lekár naďalej vybavuje výsledky, elektronické správy a telefonáty. Chránené voľno vyžaduje zastupiteľnosť a jasné odovzdanie zodpovednosti – nie apel, aby si lekár „nepozeral mobil“.</p>
 
 <h3>Zníženie administratívnej záťaže</h3>
 
@@ -132,18 +132,18 @@ $articles[] = [
   <li>obmedzená zastupiteľnosť počas dovoleniek a práceneschopnosti.</li>
 </ul>
 
-<p>Posledný bod je v malých tímoch určujúci. Ak dialyzačné stredisko funguje s dvoma nefrológmi, neexistuje spôsob, ako jednému z nich zabezpečiť skutočne chránené voľno bez toho, aby sa záťaž presunula na druhého. Riešením preto nemôže byť odporúčanie, aby nefrológ lepšie odpočíval — potrebné sú zastupiteľné tímy, primerané personálne normy a reálne oddelenie pracovného a voľného času.</p>
+<p>Posledný bod je v malých tímoch určujúci. Ak dialyzačné stredisko funguje s dvoma nefrológmi, neexistuje spôsob, ako jednému z nich zabezpečiť skutočne chránené voľno bez toho, aby sa záťaž presunula na druhého. Riešením preto nemôže byť odporúčanie, aby nefrológ lepšie odpočíval – potrebné sú zastupiteľné tímy, primerané personálne normy a reálne oddelenie pracovného a voľného času.</p>
 
 <h2>Metodické obmedzenia prieskumu</h2>
 
 <ul>
   <li>Zdrojový článok neposkytuje úplný opis výberu respondentov ani mieru návratnosti.</li>
-  <li>Nie je jasné, nakoľko sú respondenti reprezentatívni pre lekársku populáciu — samovýber do online prieskumu spravidla nadhodnocuje zastúpenie tých, ktorých téma zasahuje.</li>
+  <li>Nie je jasné, nakoľko sú respondenti reprezentatívni pre lekársku populáciu – samovýber do online prieskumu spravidla nadhodnocuje zastúpenie tých, ktorých téma zasahuje.</li>
   <li>Údaje sú založené na sebahodnotení.</li>
   <li>Ochota prijať nižší plat bola hypotetická a nebolo uvedené, o aké zníženie by malo ísť.</li>
   <li>Spoločná kategória „vyhorenie, depresia alebo oboje“ spája odlišné klinické a pracovné problémy.</li>
   <li>Prierezový dizajn neumožňuje doložiť, že nedostatok voľného času tieto ťažkosti priamo spôsobil.</li>
-  <li>Medzinárodná prenositeľnosť je obmedzená rozdielmi v odmeňovaní, pracovnom práve a organizácii zdravotníctva — americké údaje nemožno bez výhrad prenášať do slovenských podmienok.</li>
+  <li>Medzinárodná prenositeľnosť je obmedzená rozdielmi v odmeňovaní, pracovnom práve a organizácii zdravotníctva – americké údaje nemožno bez výhrad prenášať do slovenských podmienok.</li>
 </ul>
 
 <p>Presnejšie je preto hovoriť o <strong>silnom signáli pracovných preferencií</strong> než o populačnom odhade.</p>
@@ -152,16 +152,16 @@ $articles[] = [
 
 <p>Prieskum naznačuje, že významná časť lekárov nevníma odmenu iba ako mzdu. Predvídateľný pracovný čas, možnosť regenerácie, chránená dovolenka, autonómia a život mimo pracoviska majú vlastnú hodnotu.</p>
 
-<p>Výsledok však nie je požiadavkou na zníženie platov. Lekári nežiadajú, aby bola ich práca ocenená menej — signalizujú, že peniaze nedokážu donekonečna nahrádzať stratu času, vzťahov a zdravia.</p>
+<p>Výsledok však nie je požiadavkou na zníženie platov. Lekári nežiadajú, aby bola ich práca ocenená menej – signalizujú, že peniaze nedokážu donekonečna nahrádzať stratu času, vzťahov a zdravia.</p>
 
-<p>Udržateľnosť lekárskeho povolania preto vyžaduje primerané odmeňovanie <strong>aj</strong> pracovné podmienky umožňujúce kvalitnú starostlivosť bez chronického vyčerpania. Dostupné metaanalytické dôkazy pritom naznačujú, že podstatná časť riešenia leží na úrovni pracoviska a systému — nie v odporúčaniach o odolnosti a psychohygiene adresovaných jednotlivému lekárovi.</p>
+<p>Udržateľnosť lekárskeho povolania preto vyžaduje primerané odmeňovanie <strong>aj</strong> pracovné podmienky umožňujúce kvalitnú starostlivosť bez chronického vyčerpania. Dostupné metaanalytické dôkazy pritom naznačujú, že podstatná časť riešenia leží na úrovni pracoviska a systému – nie v odporúčaniach o odolnosti a psychohygiene adresovaných jednotlivému lekárovi.</p>
 
 <h3>Súvisiace články</h3>
 
 <ul>
-  <li><a href="article.php?slug=ai-scribe-pravne-nastrahy-ambulancia-nefrologia">AI scribe v ambulancii</a> — možnosti a právne nástrahy pri znižovaní administratívnej záťaže.</li>
-  <li><a href="article.php?slug=spolupraca-vseobecny-lekar-nefrolog-ckd-g5-joint-kd">Spolupráca všeobecného lekára a nefrológa</a> — organizácia starostlivosti pri CKD.</li>
-  <li><a href="article.php?slug=12-knih-lekar-choroba-pacient-narativna-medicina">Dvanásť kníh o lekárovi, chorobe a pacientovi</a> — naratívna medicína.</li>
+  <li><a href="article.php?slug=ai-scribe-pravne-nastrahy-ambulancia-nefrologia">AI scribe v ambulancii</a> – možnosti a právne nástrahy pri znižovaní administratívnej záťaže.</li>
+  <li><a href="article.php?slug=spolupraca-vseobecny-lekar-nefrolog-ckd-g5-joint-kd">Spolupráca všeobecného lekára a nefrológa</a> – organizácia starostlivosti pri CKD.</li>
+  <li><a href="article.php?slug=12-knih-lekar-choroba-pacient-narativna-medicina">Dvanásť kníh o lekárovi, chorobe a pacientovi</a> – naratívna medicína.</li>
 </ul>
 
 <hr>
@@ -174,7 +174,7 @@ $articles[] = [
   <li><strong>Wuttipat Kiratipaisarl, Vithawat Surawattanasakul, Wachiranun Sirikul.</strong> <em>Individual and organizational interventions to reduce burnout in resident physicians: a systematic review and meta-analysis.</em> BMC Medical Education. 2024;24:1234. doi: 10.1186/s12909-024-06195-3. <a href="https://pubmed.ncbi.nlm.nih.gov/39478552/" target="_blank" rel="noopener noreferrer">PubMed</a>.</li>
 </ol>
 
-<p><em><strong>Poznámka k dôkazom:</strong> Bibliografické údaje, kompletné autorstvo aj číselné výsledky oboch metaanalýz boli overené v Europe PMC — pri práci Panagiotiovej a spolupracovníkov 20 porovnaní z 19 štúdií s 1550 lekármi, celkový štandardizovaný rozdiel priemerov −0,29 a rozdiel medzi organizačne zameranými (−0,45; 95 % IS −0,62 až −0,28) a na lekára zameranými intervenciami (−0,18; 95 % IS −0,32 až −0,03); pri práci Kiratipaisarla a spolupracovníkov 33 štúdií s 2536 účastníkmi, podiel 75,8 % individuálnych a 24,2 % organizačných intervencií, Cohenovo d −0,25 pre emocionálne vyčerpanie a −0,17 pre depersonalizáciu a neprítomnosť významného účinku organizačných intervencií. <strong>Údaje z prieskumu Medscape (59 %, 63 % v predchádzajúcom prieskume, 46 %, podiely týkajúce sa rodiny, dovolenky a záujmov) nebolo možné nezávisle overiť</strong> — metodika, veľkosť vzorky, návratnosť ani štruktúra respondentov nie sú v dostupnej podobe zverejnené. Nejde preto o populačný odhad. Výklad rozdielu medzi vyhorením a depresívnou poruchou, vysvetlenie zdanlivého rozporu medzi metaanalýzami, odporúčania pre organizácie a nefrologická časť sú <strong>vlastným odborným spracovaním</strong>.</em></p>
+<p><em><strong>Poznámka k dôkazom:</strong> Bibliografické údaje, kompletné autorstvo aj číselné výsledky oboch metaanalýz boli overené v Europe PMC – pri práci Panagiotiovej a spolupracovníkov 20 porovnaní z 19 štúdií s 1550 lekármi, celkový štandardizovaný rozdiel priemerov −0,29 a rozdiel medzi organizačne zameranými (−0,45; 95 % IS −0,62 až −0,28) a na lekára zameranými intervenciami (−0,18; 95 % IS −0,32 až −0,03); pri práci Kiratipaisarla a spolupracovníkov 33 štúdií s 2536 účastníkmi, podiel 75,8 % individuálnych a 24,2 % organizačných intervencií, Cohenovo d −0,25 pre emocionálne vyčerpanie a −0,17 pre depersonalizáciu a neprítomnosť významného účinku organizačných intervencií. <strong>Údaje z prieskumu Medscape (59 %, 63 % v predchádzajúcom prieskume, 46 %, podiely týkajúce sa rodiny, dovolenky a záujmov) nebolo možné nezávisle overiť</strong> – metodika, veľkosť vzorky, návratnosť ani štruktúra respondentov nie sú v dostupnej podobe zverejnené. Nejde preto o populačný odhad. Výklad rozdielu medzi vyhorením a depresívnou poruchou, vysvetlenie zdanlivého rozporu medzi metaanalýzami, odporúčania pre organizácie a nefrologická časť sú <strong>vlastným odborným spracovaním</strong>.</em></p>
 HTML,
 ];
 

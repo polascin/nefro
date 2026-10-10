@@ -24,7 +24,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Neceliakálna citlivosť na pšenicu nemá validovaný biomarker. Príznaky môžu súvisieť s gluténom, fruktánmi, ďalšími zložkami pšenice aj nocebo efektom.',
     'content'      => <<<'HTML'
-<figure><a href="img/neceliakalna-citlivost-psenica-gluten-fruktany.webp" rel="noopener noreferrer" target="_blank"><img src="img/neceliakalna-citlivost-psenica-gluten-fruktany.webp" alt="Zrno pšenice, z ktorého vychádzajú tri rôzne molekulové formy a všetky vedú vlákna k podráždenému črevu" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Vinníkom nemusí byť glutén — podiel môžu mať aj fruktány a ďalšie zložky pšenice.</figcaption></figure>
+<figure><a href="img/neceliakalna-citlivost-psenica-gluten-fruktany.webp" rel="noopener noreferrer" target="_blank"><img src="img/neceliakalna-citlivost-psenica-gluten-fruktany.webp" alt="Zrno pšenice, z ktorého vychádzajú tri rôzne molekulové formy a všetky vedú vlákna k podráždenému črevu" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Vinníkom nemusí byť glutén – podiel môžu mať aj fruktány a ďalšie zložky pšenice.</figcaption></figure>
 
 <p class="article-dek"><em>Zlepšenie po vylúčení pšenice samo osebe nepotvrdzuje „gluténovú intoleranciu“. Neceliakálna citlivosť na pšenicu je heterogénny klinický syndróm bez validovaného biomarkera. Uvažovať o nej možno až po riadnom vylúčení celiakie, alergie na pšenicu a iných relevantných ochorení, ideálne ešte počas konzumácie gluténu.</em></p>
 
@@ -112,7 +112,7 @@ $articles[] = [
 
 <p>Negatívna sérológia po dlhšej bezgluténovej diéte nemá dostatočnú výpovednú hodnotu. HLA-DQ2/DQ8 genotypizácia nie je vhodným prvým skríningovým testom, ale v tejto situácii môže pomôcť: negatívny výsledok robí celiakiu prakticky vylúčenou, pozitívny ju pre nízku špecificitu nepotvrdzuje.</p>
 
-<p>Ak je diagnostické potvrdenie potrebné, ESsCD 2025 odporúča u dospelých po spoločnom rozhodnutí zvážiť najmenej <strong>3 g gluténu denne počas 6 týždňov</strong>; vyššia dávka alebo dlhšie trvanie zvyšujú diagnostickú presnosť, ak ich pacient toleruje. Preferovaným cieľom je duodenálna histológia. Režim treba individualizovať a viesť gastroenterológom. Pôvodný údaj o „46 týždňoch“ v zdrojovom texte bol redakčnou chybou, nie platným odporúčaním.</p>
+<p>Ak je diagnostické potvrdenie potrebné, ESsCD 2025 odporúča u dospelých po spoločnom rozhodnutí zvážiť najmenej <strong>3 g gluténu denne počas 6 týždňov</strong>; vyššia dávka alebo dlhšie trvanie zvyšujú diagnostickú presnosť, ak ich pacient toleruje. Preferovaným cieľom je duodenálna histológia. Režim treba individualizovať a viesť gastroenterológom.</p>
 
 <h3>4. Vylúčiť alergiu na pšenicu</h3>
 

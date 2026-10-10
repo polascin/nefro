@@ -31,21 +31,21 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Pacienti s CKD a najmä po transplantácii obličky majú vyššie riziko závažných infekcií. Praktický prehľad indikácií, načasovania a typu vakcín podľa prehľadu AJKD — vrátane ambulantnej pomôcky s tabuľkami pre CKD aj transplantovaných pacientov.',
+    'excerpt'      => 'Pacienti s CKD a najmä po transplantácii obličky majú vyššie riziko závažných infekcií. Praktický prehľad indikácií, načasovania a typu vakcín podľa prehľadu AJKD vrátane ambulantnej pomôcky s tabuľkami pre CKD aj transplantovaných pacientov.',
     'content'      => <<<'HTML'
-<figure><a href="img/ockovanie-ckd-transplantacia-oblicky-vakciny-nacasovanie.webp" rel="noopener noreferrer" target="_blank"><img src="img/ockovanie-ckd-transplantacia-oblicky-vakciny-nacasovanie.webp" alt="Vakcinačná liekovka vytvárajúca ochrannú svetelnú kupolu nad obličkou nad svetelnou časovou osou" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Ochrana je najsilnejšia, keď sa očkuje včas — po transplantácii je odpoveď imunitného systému slabšia.</figcaption></figure>
+<figure><a href="img/ockovanie-ckd-transplantacia-oblicky-vakciny-nacasovanie.webp" rel="noopener noreferrer" target="_blank"><img src="img/ockovanie-ckd-transplantacia-oblicky-vakciny-nacasovanie.webp" alt="Vakcinačná liekovka vytvárajúca ochrannú svetelnú kupolu nad obličkou nad svetelnou časovou osou" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Ochrana je najsilnejšia, keď sa očkuje včas – po transplantácii je odpoveď imunitného systému slabšia.</figcaption></figure>
 
-<p>Pacienti s chronickou chorobou obličiek a najmä po transplantácii obličky majú vyššie riziko závažných infekcií. Dôvodom je kombinácia zhoršenej imunitnej odpovede pri CKD a imunosupresie po transplantácii, plus časté zdravotnícke kontakty (dialýza, ambulantné sledovanie). Očkovanie preto patrí medzi základné preventívne kroky.</p>
+<p>Pacienti s chronickou chorobou obličiek a najmä po transplantácii obličky majú vyššie riziko závažných infekcií. Dôvodom je kombinácia zhoršenej imunitnej odpovede pri CKD a imunosupresie po transplantácii, ako aj častý kontakt so zdravotníckym prostredím (dialýza, ambulantné sledovanie). Očkovanie preto patrí medzi základné preventívne kroky.</p>
 
-<p>Nižšie sumarizujem odporúčania uvedené v prehľade „Vaccinations to Prevent Infections in Adult Individuals With CKD and After Kidney Transplantation“ so zameraním na indikácie, načasovanie a typ vakcíny.</p>
+<p>Nižšie zhŕňam odporúčania z prehľadu „Vaccinations to Prevent Infections in Adult Individuals With CKD and After Kidney Transplantation“ so zameraním na indikácie, načasovanie a typ vakcíny.</p>
 
 <h2>Kľúčové princípy pri CKD a po transplantácii</h2>
 
 <p>V prehľade sa opakovane zdôrazňuje, že:</p>
 
 <ul>
-  <li>očkovanie sa má realizovať podľa rizika (CKD štádium, vek, dialýza, typ imunitnej supresie),</li>
-  <li>po transplantácii treba načasovať očkovanie tak, aby pacient dostal vakcínu vo vhodnom intervale po zákroku,</li>
+  <li>o očkovaní sa rozhoduje podľa rizika (CKD štádium, vek, dialýza, typ imunitnej supresie),</li>
+  <li>po transplantácii treba dodržať vhodný odstup očkovania od zákroku,</li>
   <li>pri transplantovaných pacientoch treba brať do úvahy špecifiká imunitnej odpovede a typ vakcíny (napr. pri chrípke sa uvádza zákaz živých vakcín).</li>
 </ul>
 
@@ -54,9 +54,9 @@ $articles[] = [
 <h3>Influenza (chrípka)</h3>
 
 <ul>
-  <li><strong>Indikácia pre CKD aj transplant:</strong> pre všetkých pacientov <strong>každoročne</strong>.</li>
+  <li><strong>Indikácia pri CKD aj po transplantácii:</strong> pre všetkých pacientov <strong>každoročne</strong>.</li>
   <li><strong>Po transplantácii:</strong> začať <strong>4 týždne po transplantácii</strong>, pričom sa uvádza <em>„no live vaccine“</em> (t. j. nepoužívať živé vakcíny).</li>
-  <li><strong>Veková prax v texte pre transplant:</strong>
+  <li><strong>Po transplantácii podľa veku:</strong>
     <ul>
       <li><strong>vek &lt; 60 rokov:</strong> štandardná jednorazová očkovacia schéma,</li>
       <li><strong>vek ≥ 60 rokov:</strong> <em>high-dose</em> (jednorazová schéma).</li>
@@ -69,7 +69,7 @@ $articles[] = [
 <ul>
   <li><strong>Indikácia pre CKD:</strong> všetci pacienti <strong>vo veku ≥ 19 rokov</strong>.</li>
   <li><strong>Po transplantácii:</strong> začať <strong>6 mesiacov po transplantácii</strong>.</li>
-  <li><strong>Schéma podľa predchádzajúceho očkovania (podľa textu):</strong>
+  <li><strong>Schéma podľa predchádzajúceho očkovania:</strong>
     <ul>
       <li>ak pacient <strong>ešte nebol očkovaný:</strong> <strong>1× PCV</strong>,</li>
       <li>ak pacient <strong>už dostal PPSV23:</strong> <strong>1× PCV booster</strong> <strong>&gt; 1 rok po PPSV23</strong>.</li>
@@ -83,7 +83,7 @@ $articles[] = [
   <li><strong>CKD:</strong> všetci vo veku <strong>≥ 75 rokov</strong>, pri ktorých ide o <strong>CKD 3+</strong>.</li>
   <li><strong>Dialýza:</strong> všetci vo veku <strong>≥ 60 rokov</strong>.</li>
   <li><strong>Po transplantácii:</strong> všetci vo veku <strong>≥ 60 rokov</strong>, začať <strong>6 mesiacov po transplantácii</strong>.</li>
-  <li><strong>V texte uvedené:</strong> <strong>jedna dávka</strong> a bez preferencie typu vakcíny.</li>
+  <li><strong>Schéma:</strong> <strong>jedna dávka</strong>, bez preferencie typu vakcíny.</li>
 </ul>
 
 <h3>SARS-CoV-2 (COVID-19)</h3>
@@ -99,9 +99,9 @@ $articles[] = [
 <ul>
   <li><strong>CKD:</strong> všetci pacienti so <strong>CKD 3b–5</strong>.</li>
   <li><strong>Po transplantácii:</strong> v prehľade sa pri špecifikách uvádza <em>„No specific recommendation“</em>.</li>
-  <li><strong>Schéma pri CKD (a z kontextu aj princíp prípravy):</strong>
+  <li><strong>Schéma pri CKD:</strong>
     <ul>
-      <li><strong>3 až 4 injekcie</strong> buď bežnej, alebo <strong>dvojitej dávky</strong> (podľa labelu príslušného prípravku),</li>
+      <li><strong>3 až 4 injekcie</strong> buď bežnej, alebo <strong>dvojitej dávky</strong> (podľa SPC príslušného prípravku),</li>
       <li><strong>sérologické monitorovanie</strong> a následné <strong>preočkovanie (booster)</strong> ako stratégia.</li>
     </ul>
   </li>
@@ -110,7 +110,7 @@ $articles[] = [
 <h3>Herpes zoster (pásový opar)</h3>
 
 <ul>
-  <li><strong>CKD populácia podľa veku v prehľade:</strong>
+  <li><strong>Pri CKD podľa veku (hranice podľa jurisdikcie):</strong>
     <ul>
       <li><strong>ACIP:</strong> od <strong>≥ 50 rokov</strong>,</li>
       <li><strong>RKI:</strong> od <strong>60 rokov</strong>,</li>
@@ -134,13 +134,13 @@ $articles[] = [
   </li>
   <li><strong>Po transplantácii:</strong> rovnaký princíp špecifického rizika.</li>
   <li><strong>Typ vakcíny v texte:</strong> <strong>MenB alebo MenACWY</strong> podľa epidemiologickej situácie.</li>
-  <li><strong>V texte uvedené:</strong> <strong>jedna dávka</strong>, a treba <strong>vyhodnotiť potrebu dodatočnej antibiotickej profylaxie</strong>.</li>
+  <li><strong>Schéma:</strong> <strong>jedna dávka</strong>; treba <strong>vyhodnotiť potrebu dodatočnej antibiotickej profylaxie</strong>.</li>
 </ul>
 
 <h3>HPV (ľudský papilomavírus)</h3>
 
 <ul>
-  <li><strong>CKD:</strong> v texte je uvedené pre <strong>deti 9–14 rokov</strong>, „catch-up“ až do <strong>26 rokov</strong>.</li>
+  <li><strong>CKD:</strong> v prehľade sa uvádza pre <strong>deti 9–14 rokov</strong>, „catch-up“ až do <strong>26 rokov</strong>.</li>
   <li><strong>Schéma:</strong> rozšírená očkovacia schéma = <strong>3 injekcie</strong> v mesiacoch <strong>0, 2, 6</strong>.</li>
 </ul>
 
@@ -148,18 +148,18 @@ $articles[] = [
 
 <ul>
   <li><strong>Indikácia:</strong> všetci pacienti <strong>každých 5 až 10 rokov</strong> (rovnako uvedené pre CKD aj po transplantácii).</li>
-  <li><strong>V texte:</strong> <strong>jednorazová kombinovaná vakcína</strong>.</li>
+  <li><strong>Schéma:</strong> <strong>jednorazová kombinovaná vakcína</strong>.</li>
 </ul>
 
 <h2>Praktické zhrnutie pre nefrologickú ambulanciu</h2>
 
-<p>Najväčšia hodnota tohto prehľadu pre prax je v tom, že dáva jasnú „kalendárovú“ predstavu pre dospelých s CKD a pre načasovanie po transplantácii: chrípka po transplantácii od 4 týždňov, pneumokok od 6 mesiacov, RSV od 6 mesiacov, a pri vybraných vakcínach schémy dávok s explicitnými časovými intervalmi.</p>
+<p>Pre prax je najcennejšie, že prehľad dáva jasný časový rámec pre dospelých s CKD a pre načasovanie po transplantácii: chrípka po transplantácii od 4 týždňov, pneumokok od 6 mesiacov, RSV od 6 mesiacov, a pri vybraných vakcínach schémy dávok s explicitnými časovými intervalmi.</p>
 
 <hr>
 
 <h2>Ambulantná pomôcka: očkovanie dospelých s CKD a po transplantácii</h2>
 
-<p><em>Použite ako rýchly „check“ v ambulancii. Pri konkrétnom produkte, dávke a dostupnosti vždy dolaďte podľa miestnych/produktových odporúčaní.</em></p>
+<p><em>Použite ako rýchlu kontrolu v ambulancii. Konkrétny prípravok, dávku a dostupnosť vždy overte podľa miestnych odporúčaní a údajov o prípravku.</em></p>
 
 <h3>1) Dospelý s CKD (chronická choroba obličiek)</h3>
 
@@ -251,17 +251,17 @@ $articles[] = [
     </tr>
     <tr>
       <td><strong>SARS-CoV-2</strong></td>
-      <td>v prehľade ako každoročné revakcinovanie</td>
+      <td>v prehľade ako každoročná revakcinácia</td>
       <td><strong>1× ročne</strong>, <strong>mRNA</strong>, <em>most recent virus variant</em>; pri úvahe sa spomína interval <strong>~6 mesiacov</strong></td>
     </tr>
     <tr>
       <td><strong>Hepatitída B</strong></td>
-      <td>pre transplantáty: v prehľade <strong>bez špecifického odporúčania</strong></td>
+      <td>po transplantácii: v prehľade <strong>bez špecifického odporúčania</strong></td>
       <td>sledujte podľa predošlej imunity a lokálnych protokolov</td>
     </tr>
     <tr>
       <td><strong>Herpes zoster</strong></td>
-      <td>očkuje sa v prehľade plošne podľa veku</td>
+      <td>v prehľade plošne podľa veku</td>
       <td><strong>všetci ≥ 19 rokov</strong> (okrem výnimky pri RKI v prehľade); <strong>2 dávky</strong> s intervalom <strong>2–6 mesiacov</strong></td>
     </tr>
     <tr>
@@ -278,11 +278,11 @@ $articles[] = [
 </table>
 </div>
 
-<h3>Rýchly „workflow“ v ambulancii (1 minúta)</h3>
+<h3>Rýchly postup v ambulancii (1 minúta)</h3>
 
 <ol>
   <li><strong>Zistiť diagnózu a režim:</strong> CKD (štádium) alebo transplantácia (imunosupresia).</li>
-  <li><strong>Vybrať skupinu:</strong> CKD tabuľka alebo transplant tabuľka.</li>
+  <li><strong>Vybrať skupinu:</strong> tabuľka pre CKD alebo pre transplantovaných.</li>
   <li><strong>Skontrolovať históriu očkovania</strong> (najmä pneumokok, hepatitída B, zoster).</li>
   <li><strong>Doplniť, čo chýba</strong> podľa časových odkladov po transplantácii (najmä chrípka 4 týždne, pneumokok/RSV 6 mesiacov).</li>
 </ol>

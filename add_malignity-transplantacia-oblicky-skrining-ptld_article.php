@@ -31,11 +31,11 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Dlhodobá imunosupresia po transplantácii obličky zvyšuje riziko viacerých nádorov — najmä nemelanómových kožných karcinómov, lymfoproliferácií viazaných na EBV (PTLD) a vybraných solídnych nádorov. Praktický prehľad skríningu, prevencie a manažmentu podľa Core Curriculum 2026 (AJKD), vrátane ambulantného checklistu pre kandidátov aj príjemcov transplantátu.',
+    'excerpt'      => 'Dlhodobá imunosupresia po transplantácii obličky zvyšuje riziko viacerých nádorov – najmä nemelanómových kožných karcinómov, lymfoproliferácií viazaných na EBV (PTLD) a vybraných solídnych nádorov. Praktický prehľad skríningu, prevencie a manažmentu podľa Core Curriculum 2026 (AJKD), vrátane ambulantného checklistu pre kandidátov aj príjemcov transplantátu.',
     'content'      => <<<'HTML'
-<figure><a href="img/malignity-transplantacia-oblicky-skrining-ptld.webp" rel="noopener noreferrer" target="_blank"><img src="img/malignity-transplantacia-oblicky-skrining-ptld.webp" alt="Transplantovaná oblička pod stlmeným imunitným štítom a vedľa nej vznikajúce nádorové ložisko snímané lúčom" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Imunosupresia chráni štep, no oslabuje dozor nad nádorovými bunkami — preto skríning nemožno vynechať.</figcaption></figure>
+<figure><a href="img/malignity-transplantacia-oblicky-skrining-ptld.webp" rel="noopener noreferrer" target="_blank"><img src="img/malignity-transplantacia-oblicky-skrining-ptld.webp" alt="Transplantovaná oblička pod stlmeným imunitným štítom a vedľa nej vznikajúce nádorové ložisko snímané lúčom" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Imunosupresia chráni štep, no oslabuje dozor nad nádorovými bunkami – preto skríning nemožno vynechať.</figcaption></figure>
 
-<p>Transplantácia obličky je najefektívnejšia liečba pokročilého chronickej choroby obličiek, no zároveň ide o stav s dlhodobou imunosupresiou. Tá zvyšuje riziko viacerých nádorov, špecificky nemelanómových kožných karcinómov, lymfoproliferácií súvisiacich s vírusmi (najmä EBV) a niektorých solídnych nádorov. V roku 2026 prinieslo AJKD Core Curriculum, ktoré zhŕňa, ako prakticky pristupovať k skríningu, prevencii a manažmentu nádorových komplikácií u kandidátov a príjemcov transplantátu.</p>
+<p>Transplantácia obličky je najefektívnejšia liečba pokročilej chronickej choroby obličiek, no vyžaduje dlhodobú imunosupresiu. Tá zvyšuje riziko viacerých nádorov, predovšetkým nemelanómových kožných karcinómov, lymfoproliferácií súvisiacich s vírusmi (najmä EBV) a niektorých solídnych nádorov. AJKD Core Curriculum 2026 zhŕňa, ako prakticky pristupovať k skríningu, prevencii a manažmentu nádorových komplikácií u kandidátov a príjemcov transplantátu.</p>
 
 <h2>1) Prečo je onkologické riziko po transplantácii vyššie</h2>
 
@@ -47,13 +47,13 @@ $articles[] = [
   <li>vyššiemu výskytu viacerých malignít (vrátane kožných a lymfoproliferatívnych).</li>
 </ul>
 
-<p>V prehľade sa uvádza, že príjemcovia obličkového transplantátu majú približne <strong>2- až 4-násobne vyššie riziko rakoviny</strong> než všeobecná populácia a nádorové ochorenie je <strong>druhou najčastejšou príčinou úmrtia</strong> — za infekciami a kardiovaskulárnymi ochoreniami.</p>
+<p>V prehľade sa uvádza, že príjemcovia obličkového transplantátu majú približne <strong>2- až 4-násobne vyššie riziko rakoviny</strong> než všeobecná populácia a nádorové ochorenie je <strong>druhou najčastejšou príčinou úmrtia</strong> – za infekciami a kardiovaskulárnymi ochoreniami.</p>
 
 <h2>2) Skríning rakoviny pred transplantáciou a po nej: viac rizika, ale aj viac pascí</h2>
 
-<p>Core Curriculum zdôrazňuje, že skríning u kandidátov má primárne zmysel identifikovať „skrytú“ malignitu ešte pred začiatkom imunosupresie. Väčšina odporúčaní sa však v praxi opiera o skríningové schémy všeobecnej populácie (prsník, krčok maternice, kolorektum, pľúca).</p>
+<p>Podľa Core Curricula má skríning u kandidátov odhaliť predovšetkým „skrytú“ malignitu ešte pred začiatkom imunosupresie. Väčšina odporúčaní sa však v praxi opiera o skríningové schémy všeobecnej populácie (prsník, krčok maternice, kolorektum, pľúca).</p>
 
-<p>Zároveň sa opakovane pripomína rovnováha:</p>
+<p>Prehľad zároveň opakovane pripomína, že treba vážiť prínos a riziko:</p>
 
 <ul>
   <li>skorší záchyt môže teoreticky zlepšiť výsledky,</li>
@@ -64,9 +64,9 @@ $articles[] = [
 <h3>Praktické rámce skríningu (ako ich opisuje prehľad)</h3>
 
 <ul>
-  <li><strong>Prostata:</strong> odporúčania zostávajú skôr v intenciách všeobecných guidelineov, keďže benefit a dopad na mortalitu nie sú úplne jednoznačné a nadmerný skríning môže byť bariérou pri zaraďovaní na čakaciu listinu.</li>
-  <li><strong>Koža:</strong> tu ide skôr o „posilnený“ (enhanced) prístup než len o štandard.</li>
-  <li><strong>Renálny karcinóm (RCC) a urotel:</strong> pri rizikových skupinách sa zvažuje ultrazvuk a/alebo cytológia moču v intervaloch uvedených v prehľade (často sa uvádza 1 až 3 roky pred transplantáciou; konkrétne frekvencie sa medzi guidelinemi líšia; spomína sa aj nesúhlas s rutinným ročným ultrazvukom po transplantácii v stanovisku EAU).</li>
+  <li><strong>Prostata:</strong> odporúčania sa skôr držia všeobecných odporúčaní, keďže benefit a dopad na mortalitu nie sú úplne jednoznačné a nadmerný skríning môže byť bariérou pri zaraďovaní na čakaciu listinu.</li>
+  <li><strong>Koža:</strong> namiesto štandardného skríningu sa odporúča „posilnený“ (enhanced) prístup.</li>
+  <li><strong>Renálny karcinóm (RCC) a urotel:</strong> pri rizikových skupinách sa zvažuje ultrazvuk a/alebo cytológia moču v intervaloch uvedených v prehľade (často sa uvádza 1 až 3 roky pred transplantáciou; konkrétne frekvencie sa medzi odporúčaniami líšia; spomína sa aj nesúhlas s rutinným ročným ultrazvukom po transplantácii v stanovisku EAU).</li>
   <li><strong>Krčok maternice (cervix):</strong> prehľad zdôrazňuje, že väčšina odporúčaní po transplantácii smeruje k častejšiemu skríningu oproti všeobecnej populácii (v článku sa spomína približovanie k frekvencii odporúčanej pri HIV).</li>
 </ul>
 
@@ -74,7 +74,7 @@ $articles[] = [
 
 <h2>3) Onkogénne vírusy a očkovanie: prevencia, ktorú treba načasovať</h2>
 
-<p>V prehľade sa vírusy spájajú so zvýšeným výskytom viacerých nádorov (napr. EBV pri lymfoproliferáciách, HPV pri anogenitálnych nádoroch a časti nádorov hlavy a krku, HBV pri hepatocelulárnom karcinóme). Očkovanie má byť preventívnou stratégiou, nie až „dolepovaním“ po transplantácii.</p>
+<p>V prehľade sa vírusy spájajú so zvýšeným výskytom viacerých nádorov (napr. EBV pri lymfoproliferáciách, HPV pri anogenitálnych nádoroch a časti nádorov hlavy a krku, HBV pri hepatocelulárnom karcinóme). Očkovanie má byť plánovanou prevenciou, nie dodatočným „dolepovaním“ po transplantácii.</p>
 
 <p>Dôležité praktické body:</p>
 
@@ -84,25 +84,25 @@ $articles[] = [
   <li><strong>Živým vakcínam sa treba u pacientov na imunosupresii vyhnúť.</strong></li>
 </ul>
 
-<p><em>(Konkrétne vakcíny a schémy sú podrobne rozpracované v samostatnom prehľade pre CKD a transplantovaných; tento článok tu rámuje najmä princíp načasovania a bezpečnosti.)</em></p>
+<p><em>(Konkrétne vakcíny a schémy sú podrobne rozpracované v samostatnom prehľade pre CKD a transplantovaných; tu ide najmä o princíp načasovania a bezpečnosti.)</em></p>
 
 <h2>4) Kožné nádory: najčastejšia malignita po transplantácii</h2>
 
-<p>Kožné nádory sú po transplantácii solídnych orgánov dominantné, pričom sa v článku uvádza výrazne vyššia kumulatívna incidencia nemelanómových kožných karcinómov v porovnaní so všeobecnou populáciou.</p>
+<p>Kožné nádory sú po transplantácii solídnych orgánov najčastejšie; kumulatívna incidencia nemelanómových kožných karcinómov je podľa prehľadu výrazne vyššia než vo všeobecnej populácii.</p>
 
 <p>Pre prax sú najdôležitejšie tri veci:</p>
 
 <ol>
   <li><strong>Prevencia UV žiarenia:</strong> účinné používanie opaľovacích krémov (v texte sa spomína SPF 30+ a vyššie) a režim ochrany pred UV.</li>
   <li><strong>Pravidelná dermatologická kontrola:</strong> každoročné celotelové vyšetrenie kože vrátane oblastí ako ústna dutina a genito-análna oblasť.</li>
-  <li><strong>Režim imunosupresie:</strong> v prehľade sa výslovne uvádza, že <strong>azatioprín urýchľuje karcinogenézu nemelanómových kožných nádorov</strong> cez mechanizmy poškodenia DNA a jej opravy po UV. Pri recidívach sa preto často pristupuje k zníženiu imunosupresie a k prerušeniu antimetabolitov (mykofenolát/azatioprín) alebo ku <strong>konverzii na inhibítory mTOR</strong> (sirolimus/everolimus) — pričom treba zvážiť potenciálne zvýšené riziko kardiovaskulárnej mortality.</li>
+  <li><strong>Režim imunosupresie:</strong> v prehľade sa výslovne uvádza, že <strong>azatioprín urýchľuje karcinogenézu nemelanómových kožných nádorov</strong> cez mechanizmy poškodenia DNA a jej opravy po UV. Pri recidívach sa preto často pristupuje k zníženiu imunosupresie a k prerušeniu antimetabolitov (mykofenolát/azatioprín) alebo ku <strong>konverzii na inhibítory mTOR</strong> (sirolimus/everolimus) – pričom treba zvážiť potenciálne zvýšené riziko kardiovaskulárnej mortality.</li>
 </ol>
 
-<p>V kapitole sa riešia aj špecifiká melanómu a zriedkavej, no agresívnej Merkelovej bunkovej rakoviny (MCC), vrátane princípu, že pri MCC je základom redukcia imunosupresie a pri liečbe sa zohľadňuje pomer rizika a prínosu imunoterapie.</p>
+<p>Kapitola sa venuje aj špecifikám melanómu a zriedkavého, no agresívneho karcinómu z Merkelových buniek (MCC): základom je redukcia imunosupresie a pri liečbe treba zvážiť pomer rizika a prínosu imunoterapie.</p>
 
 <h2>5) PTLD: EBV, skríning, diagnostika a prvá línia liečby</h2>
 
-<p>Posttransplantačné lymfoproliferatívne poruchy (PTLD) sú spektrom abnormalít viazaných na imunosupresiu, často poháňaných EBV. V článku sa uvádza:</p>
+<p>Posttransplantačné lymfoproliferatívne poruchy (PTLD) sú spektrom abnormalít viazaných na imunosupresiu, často poháňaných EBV. Prehľad uvádza:</p>
 
 <ul>
   <li>vyššie riziko u EBV-séronegatívnych príjemcov,</li>
@@ -110,9 +110,9 @@ $articles[] = [
   <li>diagnosticky aj prognosticky je dôležité rozlíšiť typ PTLD podľa klasifikácie WHO 2022.</li>
 </ul>
 
-<h3>Monitorovanie EBV PCR (ako je popísané)</h3>
+<h3>Monitorovanie EBV PCR (podľa prehľadu)</h3>
 
-<p>U EBV-séronegatívneho príjemcu sa odporúča surveillance EBV PCR:</p>
+<p>U EBV-séronegatívneho príjemcu sa odporúča sledovať EBV PCR:</p>
 
 <ul>
   <li>každých <strong>7 až 14 dní</strong> počas prvého mesiaca,</li>
@@ -124,28 +124,28 @@ $articles[] = [
 
 <h3>Diagnostika PTLD</h3>
 
-<p>Článok zdôrazňuje, že nestačí „len vylúčiť infekciu“. Diagnostika má obsahovať:</p>
+<p>Nestačí „len vylúčiť infekciu“. Diagnostika má zahŕňať:</p>
 
 <ul>
   <li>laboratórne vyšetrenia (napr. diferenciálny krvný obraz, LDH),</li>
   <li>zobrazovanie (CT hrudníka/brucha/panvy podľa protokolu),</li>
-  <li>a najmä <strong>biopsiu</strong> s histologickým potvrdením. Kľúčová je odporúčaná detekcia EBV (in situ hybridizácia EBER).</li>
+  <li>a najmä <strong>biopsiu</strong> s histologickým potvrdením vrátane odporúčanej detekcie EBV (in situ hybridizácia EBER).</li>
 </ul>
 
 <h3>Prvá línia manažmentu</h3>
 
 <ul>
   <li><strong>Minimalizácia imunosupresie</strong> (vrátane vysadenia antimetabolitov) je prvým krokom, najmä pri EBV-asociovaných a polymorfných formách, kde redukcia imunosupresie často pomáha dostať chorobu pod kontrolu.</li>
-  <li>Pri monomorfných formách a najmä pri agresívnych variantoch (napr. Burkittov lymfóm) sa uvádza, že samotná redukcia imunosupresie nemusí stačiť a nesmie nahradiť onkologickú liečbu.</li>
-  <li>Pri diagnóze PTLD sa zdôrazňuje urgentná spolupráca s hematológom/onkológom. Ako sa v článku píše, inhibítory mTOR sa spomínajú, ale bez klinického dôkazu, že by zlepšili výsledky oproti kalcineurínovým inhibítorom v kontexte PTLD.</li>
+  <li>Pri monomorfných formách a najmä pri agresívnych variantoch (napr. Burkittov lymfóm) samotná redukcia imunosupresie nemusí stačiť a nesmie nahradiť onkologickú liečbu.</li>
+  <li>Pri diagnóze PTLD je nevyhnutná urgentná spolupráca s hematológom/onkológom. Inhibítory mTOR sa v tejto súvislosti spomínajú, no chýba klinický dôkaz, že by pri PTLD zlepšili výsledky oproti kalcineurínovým inhibítorom.</li>
 </ul>
 
 <h2>6) Záverečné zhrnutie pre nefrologickú komunitu</h2>
 
-<p>Tento Core Curriculum nastavuje praktický rámec takto:</p>
+<p>Praktický rámec Core Curricula:</p>
 
 <ul>
-  <li>väčšina skríningov sa opiera o všeobecnú populáciu, ale s dôrazom na „high-yield“ oblasti (koža, vírusom indukované malignity, vybrané uroonkologické situácie),</li>
+  <li>väčšina skríningov sa opiera o všeobecnú populáciu, ale s dôrazom na oblasti s najväčším prínosom (koža, vírusom indukované malignity, vybrané uroonkologické situácie),</li>
   <li>skríning aj liečbu treba individualizovať podľa rizika, očakávanej dĺžky života a cieľov pacienta,</li>
   <li>prevencia a bezpečné očkovanie majú veľký význam, najmä s ohľadom na načasovanie voči imunosupresii,</li>
   <li>na PTLD treba myslieť včas, robiť monitorovanie EBV v rizikových skupinách a držať sa diagnostickej logiky smerujúcej k biopsii.</li>
@@ -155,12 +155,12 @@ $articles[] = [
 
 <h2>Ambulantný checklist: malignity u dospelých kandidátov a príjemcov transplantátu</h2>
 
-<p><em>Použite ako rýchly „check“ v ambulancii. Pri konkrétnych intervaloch, vakcínach a frekvenciách skríningu vždy dolaďte podľa miestnych a produktových odporúčaní.</em></p>
+<p><em>Slúži na rýchlu kontrolu v ambulancii. Konkrétne intervaly, vakcíny a frekvenciu skríningu treba vždy prispôsobiť miestnym odporúčaniam a údajom o konkrétnom produkte.</em></p>
 
 <h3>Pred transplantáciou (pri plánovaní)</h3>
 
 <ul>
-  <li>Skontroluj očkovania a doplň ich — <strong>potrebné očkovania realizuj ešte pred imunosupresiou</strong> (živým vakcínam sa podľa režimu vyhýbaj).</li>
+  <li>Skontroluj očkovania a doplň ich – <strong>potrebné očkovania realizuj ešte pred imunosupresiou</strong> (živým vakcínam sa podľa režimu vyhýbaj).</li>
   <li>Aktualizuj <strong>bežný skríning malignít</strong> podľa veku a rizík pacienta (nerob nič „mechanicky“ bez individualizácie).</li>
   <li>Zhodnoť <strong>riziká kožných nádorov</strong>: dlhodobé slnenie/soláriá, anamnéza kožných nádorov, fototyp.</li>
   <li>Pri plánovaní zváž <strong>uroonkologické situácie</strong> (najmä podľa anamnézy) a dohodni, čo a ako často sa má sledovať.</li>
@@ -170,8 +170,8 @@ $articles[] = [
 
 <ul>
   <li>Nastav <strong>dermatologickú kontrolu</strong> (minimálne pravidelné celotelové vyšetrenie kože) a reálne rieš <strong>UV prevenciu</strong>.</li>
-  <li>Sleduj infekčno-nádorové riziká: u <strong>EBV-séronegatívnych</strong> zváž/naplánuj <strong>surveillance EBV PCR</strong> (podľa lokálneho protokolu, typicky častejšie v prvom období).</li>
-  <li>Vyrieš „červené vlajky“ PTLD: nejasná horúčka, lymfadenopatia, <strong>pokles celkového výkonnostného stavu</strong>, B-symptómy, rýchle zväčšovanie uzlín alebo orgánových nálezov.</li>
+  <li>Sleduj infekčno-nádorové riziká: u <strong>EBV-séronegatívnych</strong> zváž/naplánuj <strong>monitorovanie EBV PCR</strong> (podľa lokálneho protokolu, typicky častejšie v prvom období).</li>
+  <li>Všímaj si varovné príznaky PTLD: nejasná horúčka, lymfadenopatia, <strong>pokles celkového výkonnostného stavu</strong>, B-symptómy, rýchle zväčšovanie uzlín alebo orgánových nálezov.</li>
   <li>Pri podozrení na PTLD postupuj diagnostickou logikou smerom k <strong>biopsii</strong> a urgentne zapoj hematológa/onkológa.</li>
 </ul>
 

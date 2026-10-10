@@ -75,7 +75,7 @@ $articles[] = [
       <tr>
         <th scope="row">Klinické postavenie</th>
         <td>Liečivo obsiahnuté v registrovaných liekoch viazaných na lekársky predpis; indikácie a dávkovanie určuje informácia o konkrétnom lieku</td>
-        <td>Citované dostupné klinické dôkazy nepodporujú jej použitie pri primárnej biliárnej cholangitíde ani pri inom hepatobiliárnom ochorení</td>
+        <td>Citované klinické dôkazy nepodporujú jej použitie pri primárnej biliárnej cholangitíde ani pri inom hepatobiliárnom ochorení</td>
       </tr>
     </tbody>
   </table>
@@ -119,7 +119,7 @@ $articles[] = [
 
 <h3>Bezpečnosť a doplnky výživy</h3>
 
-<p>Dlhodobé údaje o bezpečnosti kyseliny ursolovej u ľudí sú obmedzené a nemožno z nich odvodiť štandardnú terapeutickú dávku pre PBC ani iné hepatobiliárne ochorenie. Označenie „prírodná“ neznamená automaticky účinná alebo bezpečná.</p>
+<p>Dlhodobé údaje o bezpečnosti kyseliny ursolovej u ľudí sú obmedzené a nemožno z nich odvodiť štandardnú terapeutickú dávku pre PBC ani iné hepatobiliárne ochorenie. Označenie „prírodná“ automaticky neznamená, že látka je účinná alebo bezpečná.</p>
 
 <p>Doplnky výživy v Európskej únii podliehajú potravinovému právu a pravidlám bezpečnosti a označovania. Nie sú však schvaľované rovnakým postupom ako lieky a ich označenie ani reklama im nesmú pripisovať schopnosť predchádzať chorobe, liečiť ju alebo ju vyliečiť. Uvedenie doplnku na trh preto nie je dôkazom klinickej účinnosti porovnateľným s registráciou lieku.</p>
 
@@ -127,7 +127,7 @@ $articles[] = [
 
 <ul>
   <li><strong>Kontrolovať celý názov účinnej látky.</strong> „Ursodeoxycholová“ a „ursolová“ označujú dve odlišné molekuly.</li>
-  <li><strong>Kyselinou ursolovou nenahrádzať UDCA.</strong> Citované dostupné klinické dôkazy nepodporujú použitie UA pri PBC ani vybraných cholesterolových žlčníkových kameňoch.</li>
+  <li><strong>Kyselinou ursolovou nenahrádzať UDCA.</strong> Citované klinické dôkazy nepodporujú použitie UA pri PBC ani vybraných cholesterolových žlčníkových kameňoch.</li>
   <li><strong>UDCA nepovažovať za univerzálny liek na cholestázu.</strong> Vhodnosť závisí od diagnózy, konkrétneho lieku, odporúčaní a klinického stavu.</li>
   <li><strong>Výživový doplnok zapísať do liekovej anamnézy.</strong> Pri komorbiditách a súbežnej liečbe treba posúdiť jeho zloženie, očakávaný prínos, neistoty aj možné interakcie.</li>
   <li><strong>Predpísanú liečbu nemeniť svojvoľne.</strong> O dávke, sledovaní a prípadnej druhej línii liečby PBC rozhoduje lekár podľa odpovede pacienta a aktuálnych odporúčaní.</li>
@@ -135,7 +135,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>Kyselina ursodeoxycholová je žlčová kyselina a liečivo s etablovaným klinickým použitím; pri PBC zostáva liečbou prvej línie. Kyselina ursolová je chemicky aj farmakologicky odlišný rastlinný triterpenoid. Citované dostupné klinické dôkazy nepodporujú jej použitie pri PBC, cholestatických ochoreniach ani žlčníkových kameňoch.</p>
+<p>Kyselina ursodeoxycholová je žlčová kyselina a liečivo s etablovaným klinickým použitím; pri PBC zostáva liečbou prvej línie. Kyselina ursolová je chemicky aj farmakologicky odlišný rastlinný triterpenoid. Citované klinické dôkazy nepodporujú jej použitie pri PBC, cholestatických ochoreniach ani žlčníkových kameňoch.</p>
 
 <p>Najdôležitejším praktickým pravidlom je preto nezamieňať podobne znejúce názvy. UA nie je „prírodná UDCA“ a výživový doplnok s kyselinou ursolovou nemá nahrádzať predpísanú liečbu.</p>
 

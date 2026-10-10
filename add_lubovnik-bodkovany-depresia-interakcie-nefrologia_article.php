@@ -35,9 +35,9 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Ľubovník bodkovaný môže mať miesto pri miernej až stredne ťažkej depresii, ale len pri štandardizovanom prípravku a po dôslednej kontrole interakcií. V nefrológii je kritický najmä transplantovaný pacient, polyfarmácia a kombinácia so serotonergnými liekmi.',
     'content'      => <<<'HTML'
-<figure><a href="img/lubovnik-bodkovany-depresia-interakcie-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/lubovnik-bodkovany-depresia-interakcie-nefrologia.webp" alt="Žltokvetá bylina, ktorej svetlo sa delí na upokojujúci prúd a rušivý lúč mieriaci na liekovú kapsulu pri obličke" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Rastlinný pôvod tu nič negarantuje — práve interakcie robia z ľubovníka v nefrológii riziko.</figcaption></figure>
+<figure><a href="img/lubovnik-bodkovany-depresia-interakcie-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/lubovnik-bodkovany-depresia-interakcie-nefrologia.webp" alt="Žltokvetá bylina, ktorej svetlo sa delí na upokojujúci prúd a rušivý lúč mieriaci na liekovú kapsulu pri obličke" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Rastlinný pôvod tu nič negarantuje – práve interakcie robia z ľubovníka v nefrológii riziko.</figcaption></figure>
 
-<p>Ľubovník bodkovaný (<em>Hypericum perforatum</em>, St. John’s wort) sa v ambulancii často objaví nenápadne: pacient ho uvedie ako „čaj na nervy“, „prírodné antidepresívum“ alebo doplnok, ktorý „nemôže škodiť“. Práve toto je problém. Pri ľubovníku nie je najväčším rizikom samotná bylinková povesť, ale to, že ide o biologicky aktívnu látku s klinicky významnými liekovými interakciami.</p>
+<p>Ľubovník bodkovaný (<em>Hypericum perforatum</em>, St. John’s wort) sa v ambulancii často objaví nenápadne: pacient ho uvedie ako „čaj na nervy“, „prírodné antidepresívum“ alebo doplnok, ktorý „nemôže škodiť“. Práve v tom je problém: povesť nevinnej bylinky zakrýva, že ide o biologicky aktívnu látku s klinicky významnými liekovými interakciami.</p>
 
 <p>Medscape v aktuálnom prehľade zdôrazňuje dve paralelné skutočnosti: pri vhodne vybraných dospelých s miernou až stredne ťažkou depresiou môže mať štandardizovaný prípravok racionálne miesto, no rozhodujúce je, aby nešlo o neštandardizovaný doplnok s nejasným obsahom účinných látok. V nefrologickej praxi sa k tomu pridáva tretia podmienka: pred akýmkoľvek odporúčaním musí prebehnúť poctivá revízia medikácie.</p>
 
@@ -51,7 +51,7 @@ $articles[] = [
 
 <p>Veľká časť pozitívnych dát sa týka štandardizovaných extraktov. To nie je detail, ale jadro problému. Obsah hyperforínu, hypericínu a ďalších zložiek sa môže medzi prípravkami výrazne líšiť. Čaj, olej alebo voľnopredajný doplnok s nejasným zložením preto nemožno automaticky považovať za ekvivalent liekovo regulovaného štandardizovaného prípravku.</p>
 
-<p>Z klinického hľadiska to má dve následky:</p>
+<p>Z klinického hľadiska to má dva dôsledky:</p>
 
 <ul>
   <li>účinnosť nemožno bezpečne prenášať z jednej formy prípravku na inú,</li>
@@ -66,7 +66,7 @@ $articles[] = [
 
 <h2>Kedy ľubovník radšej neodporúčať</h2>
 
-<p>Ľubovník nie je vhodná voľba, ak je potrebné štandardné psychiatrické vedenie alebo rýchla intervencia. V praxi by som ho nepovažoval za vhodnú možnosť najmä pri týchto situáciách:</p>
+<p>Ľubovník nie je vhodná voľba, ak je potrebné štandardné psychiatrické vedenie alebo rýchla intervencia. V praxi by som ho nepovažoval za vhodnú možnosť najmä v týchto situáciách:</p>
 
 <ul>
   <li>ťažká depresia, akútna suicidálna ideácia alebo sebapoškodzovanie,</li>
@@ -79,11 +79,11 @@ $articles[] = [
 
 <h2>Najväčší nefrologický problém: interakcie</h2>
 
-<p>Pri CKD samotnej nie je hlavná otázka „renálna dávka ľubovníka“, ale interakčný profil. Pacienti s chronickou chorobou obličiek majú často polyfarmáciu, vyššie kardiovaskulárne riziko, antikoagulačnú liečbu, analgetiká, antidepresíva a po transplantácii aj imunosupresíva. Preto je ľubovník v nefrológii prakticky vždy signál na kontrolu celého liekového zoznamu.</p>
+<p>Pri samotnej CKD nie je hlavnou otázkou „renálna dávka ľubovníka“, ale interakčný profil. Pacienti s chronickou chorobou obličiek majú často polyfarmáciu, vyššie kardiovaskulárne riziko, antikoagulačnú liečbu, analgetiká, antidepresíva a po transplantácii aj imunosupresíva. Preto je ľubovník v nefrológii prakticky vždy signál na kontrolu celého liekového zoznamu.</p>
 
 <h3>Transplantovaný pacient</h3>
 
-<p>Najdôležitejšia červená vlajka je transplantácia. Ľubovník môže znižovať koncentrácie cyklosporínu a takrolimu; opísané boli aj prípady akútnej rejekcie. Rovnaký princíp opatrnosti treba uplatniť pri ďalších úzko terapeutických imunosupresívach závislých od CYP3A4 alebo P-glykoproteínu.</p>
+<p>Najdôležitejším varovným signálom je transplantácia. Ľubovník môže znižovať koncentrácie cyklosporínu a takrolimu; opísané boli aj prípady akútnej rejekcie. Rovnaký princíp opatrnosti treba uplatniť pri ďalších úzko terapeutických imunosupresívach závislých od CYP3A4 alebo P-glykoproteínu.</p>
 
 <p>Dôležité je myslieť aj na opačný smer: po vysadení ľubovníka sa indukčný účinok postupne vytráca a hladiny dotknutých liekov môžu stúpať. Pri takrolime, cyklosporíne alebo podobne citlivých liekoch preto nestačí len povedať „vysaďte to“; treba koordinovať terapeutické monitorovanie hladín.</p>
 
@@ -103,7 +103,7 @@ $articles[] = [
 
 <p>Štandardizované prípravky bývajú v štúdiách často dobre tolerované, ale nežiaduce účinky existujú. Najčastejšie sa uvádzajú gastrointestinálne ťažkosti, nauzea, sucho v ústach, únava alebo ospalosť, nepokoj, bolesť hlavy, závraty a kožné reakcie. Fotosenzitivita sa pri bežných antidepresívnych dávkach javí ako menej častá, no nemožno ju ignorovať, najmä pri svetlom fototype, vyšších dávkach, kombinácii s fotosenzibilizujúcimi liekmi alebo výraznej expozícii slnku.</p>
 
-<h2>Praktický checklist pre nefrologickú ambulanciu</h2>
+<h2>Praktický kontrolný zoznam pre nefrologickú ambulanciu</h2>
 
 <ol>
   <li><strong>Pýtajme sa aktívne.</strong> Pacient často neoznámi ľubovník ako liek. Pomáha formulácia: „Užívate aj bylinky, čaje, doplnky alebo prírodné prípravky na náladu a spánok?“</li>
@@ -122,7 +122,7 @@ $articles[] = [
 
 <hr>
 
-<p><em><strong>Zdroj:</strong> <em>Medscape</em>, „When Should St. John’s Wort Be Considered for Depression?“ (2026). <a href="https://www.medscape.com/viewarticle/when-should-st-johns-wort-be-considered-depression-2026a1000mjd" target="_blank" rel="noopener noreferrer">Link na zdroj</a>. Odborná kontrola bola doplnená podľa prehľadov <a href="https://www.nccih.nih.gov/health/st-johns-wort-and-depression-in-depth" target="_blank" rel="noopener noreferrer">NCCIH</a> a <a href="https://www.mskcc.org/cancer-care/integrative-medicine/herbs/st-john-wort" target="_blank" rel="noopener noreferrer">Memorial Sloan Kettering Cancer Center</a> o účinnosti, bezpečnosti a liekových interakciách ľubovníka.</em></p>
+<p><em><strong>Zdroj:</strong> <em>Medscape</em>, „When Should St. John’s Wort Be Considered for Depression?“ (2026). <a href="https://www.medscape.com/viewarticle/when-should-st-johns-wort-be-considered-depression-2026a1000mjd" target="_blank" rel="noopener noreferrer">Odkaz na zdroj</a>. Odborná kontrola bola doplnená podľa prehľadov <a href="https://www.nccih.nih.gov/health/st-johns-wort-and-depression-in-depth" target="_blank" rel="noopener noreferrer">NCCIH</a> a <a href="https://www.mskcc.org/cancer-care/integrative-medicine/herbs/st-john-wort" target="_blank" rel="noopener noreferrer">Memorial Sloan Kettering Cancer Center</a> o účinnosti, bezpečnosti a liekových interakciách ľubovníka.</em></p>
 HTML,
 ];
 

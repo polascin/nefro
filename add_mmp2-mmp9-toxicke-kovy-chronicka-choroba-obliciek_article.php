@@ -27,9 +27,9 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Vyššie plazmatické MMP-2 a MMP-9 boli spojené s CKD s pomerom šancí 12,45 a 3,77. Prípadovo-kontrolný dizajn však neumožňuje určiť, či ide o príčinu alebo o následok zníženej funkcie obličiek.',
     'content'      => <<<'HTML'
-<figure><a href="img/mmp2-mmp9-toxicke-kovy-chronicka-choroba-obliciek.webp" rel="noopener noreferrer" target="_blank"><img src="img/mmp2-mmp9-toxicke-kovy-chronicka-choroba-obliciek.webp" alt="Zhluk tmavých kovových zŕn a oblička s fibróznymi vláknami, spojené jasným vláknom svetla, ktoré sa ani jedného nedotýka" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Asociácia môže byť silná a napriek tomu nedokazuje príčinnosť — spojnica sa oboch koncov nedotýka.</figcaption></figure>
+<figure><a href="img/mmp2-mmp9-toxicke-kovy-chronicka-choroba-obliciek.webp" rel="noopener noreferrer" target="_blank"><img src="img/mmp2-mmp9-toxicke-kovy-chronicka-choroba-obliciek.webp" alt="Zhluk tmavých kovových zŕn a oblička s fibróznymi vláknami, spojené jasným vláknom svetla, ktoré sa ani jedného nedotýka" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Asociácia môže byť silná a napriek tomu nedokazuje príčinnosť – spojnica sa oboch koncov nedotýka.</figcaption></figure>
 
-<p class="article-dek"><em>Pomer šancí 12,45 vyzerá ohromujúco. V prípadovo-kontrolnej štúdii, v ktorej sa marker aj ochorenie merali v ten istý deň, však toto číslo nehovorí o riziku vzniku ochorenia — hovorí o tom, ako dobre marker odlišuje chorých od zdravých. To je iná otázka a iná úroveň dôkazu.</em></p>
+<p class="article-dek"><em>Pomer šancí 12,45 vyzerá ohromujúco. V prípadovo-kontrolnej štúdii, v ktorej sa marker aj ochorenie merali v ten istý deň, však toto číslo nehovorí o riziku vzniku ochorenia – hovorí o tom, ako dobre marker odlišuje chorých od zdravých. To je iná otázka a iná úroveň dôkazu.</em></p>
 
 <p>Taiwanská prípadovo-kontrolná štúdia zistila výraznú asociáciu medzi vyššími plazmatickými koncentráciami matrixových metaloproteináz MMP-2 a MMP-9 a chronickou chorobou obličiek. Súvislosť bola výraznejšia pri súčasne zvýšených koncentráciách arzénu, kadmia alebo olova a pri nižšej koncentrácii selénu.</p>
 
@@ -45,7 +45,7 @@ $articles[] = [
 
 <h2>Skúmané environmentálne prvky</h2>
 
-<p>Autori hodnotili expozíciu trom potenciálne nefrotoxickým prvkom (kadmium, olovo, arzén) a koncentráciu selénu. Označenie „ťažké kovy“ nie je pre celú skupinu chemicky presné — arzén je polokov a selén je esenciálny stopový prvok, ktorý môže byť pri nadmernej expozícii toxický. Autori si to uvedomujú a v práci výslovne definujú súhrnný pojem „kovy“ ako <em>kovy a polokovy</em>; v slovenskom texte je vhodnejšie hovoriť o environmentálne významných prvkoch.</p>
+<p>Autori hodnotili expozíciu trom potenciálne nefrotoxickým prvkom (kadmium, olovo, arzén) a koncentráciu selénu. Označenie „ťažké kovy“ nie je pre celú skupinu chemicky presné – arzén je polokov a selén je esenciálny stopový prvok, ktorý môže byť pri nadmernej expozícii toxický. Autori si to uvedomujú a v práci výslovne definujú súhrnný pojem „kovy“ ako <em>kovy a polokovy</em>; v slovenskom texte je vhodnejšie hovoriť o environmentálne významných prvkoch.</p>
 
 <h3>Kadmium</h3>
 
@@ -57,17 +57,17 @@ $articles[] = [
 
 <h3>Arzén</h3>
 
-<p>Anorganický arzén a jeho metylované metabolity môžu pôsobiť nefrotoxicky prostredníctvom oxidačného stresu, mitochondriálnej dysfunkcie, zápalu a poškodenia tubulárnych buniek. <strong>Celkový arzén v moči má obmedzenú špecificitu</strong> — po konzumácii morských živočíchov môže byť zvýšený najmä pre relatívne málo toxické organické zlúčeniny arzénu.</p>
+<p>Anorganický arzén a jeho metylované metabolity môžu pôsobiť nefrotoxicky prostredníctvom oxidačného stresu, mitochondriálnej dysfunkcie, zápalu a poškodenia tubulárnych buniek. <strong>Celkový arzén v moči má obmedzenú špecificitu</strong> – po konzumácii morských živočíchov môže byť zvýšený najmä pre relatívne málo toxické organické zlúčeniny arzénu.</p>
 
 <h3>Selén</h3>
 
-<p>Selén je súčasťou antioxidačných selenoproteínov. Jeho nedostatok môže zvyšovať citlivosť na oxidačný stres, ale nadmerný príjem je toxický. Pozorovaná nepriama asociácia medzi plazmatickým selénom a CKD nie je dôkazom, že suplementácia selénom ochoreniu obličiek predchádza — nižšia koncentrácia môže byť následkom zápalu, malnutrície, proteinúrie alebo pokročilejšieho ochorenia.</p>
+<p>Selén je súčasťou antioxidačných selenoproteínov. Jeho nedostatok môže zvyšovať citlivosť na oxidačný stres, ale nadmerný príjem je toxický. Pozorovaná nepriama asociácia medzi plazmatickým selénom a CKD nie je dôkazom, že suplementácia selénom ochoreniu obličiek predchádza – nižšia koncentrácia môže byť následkom zápalu, malnutrície, proteinúrie alebo pokročilejšieho ochorenia.</p>
 
 <h2>Usporiadanie štúdie</h2>
 
 <p>Do štúdie uskutočnenej v dvoch nemocniciach v Tchaj-peji bolo zaradených <strong>215 pacientov s chronickou chorobou obličiek</strong> a <strong>389 kontrolných osôb</strong> zodpovedajúceho veku a pohlavia. Pacienti mali eGFR nižšiu ako 60 ml/min/1,73 m² počas viac ako troch mesiacov a nepotrebovali náhradu funkcie obličiek; eGFR sa vypočítala rovnicou MDRD. Kontrolnú skupinu tvorili osoby bez známej CKD s eGFR vyššou ako 60 ml/min/1,73 m².</p>
 
-<p>Takáto definícia kontrol nie je postačujúca na vylúčenie chronickej choroby obličiek. Osoba s eGFR od 60 do 89 ml/min/1,73 m² môže mať CKD, ak sú prítomné albuminúria, štruktúrne poškodenie alebo iné markery trvajúce najmenej tri mesiace. <strong>Bez údajov o albuminúrii je možná nesprávna klasifikácia časti kontrol</strong> — čo by systematicky zväčšovalo pozorované rozdiely.</p>
+<p>Takáto definícia kontrol nie je postačujúca na vylúčenie chronickej choroby obličiek. Osoba s eGFR od 60 do 89 ml/min/1,73 m² môže mať CKD, ak sú prítomné albuminúria, štruktúrne poškodenie alebo iné markery trvajúce najmenej tri mesiace. <strong>Bez údajov o albuminúrii je možná nesprávna klasifikácia časti kontrol</strong> – čo by systematicky zväčšovalo pozorované rozdiely.</p>
 
 <h3>Laboratórne metódy</h3>
 
@@ -91,7 +91,7 @@ $articles[] = [
   </table>
 </div>
 
-<p>Plazmatické koncentrácie oboch metaloproteináz nepriamo korelovali s eGFR — vyššie hodnoty sa teda pozorovali u osôb s horšou funkciou obličiek.</p>
+<p>Plazmatické koncentrácie oboch metaloproteináz nepriamo korelovali s eGFR – vyššie hodnoty sa teda pozorovali u osôb s horšou funkciou obličiek.</p>
 
 <p>Pomer šancí 12,45 <strong>neznamená dvanásťnásobné riziko vzniku ochorenia</strong>. Ide o porovnanie šancí na <em>prítomnosť</em> chronickej choroby obličiek v prípadovo-kontrolnom súbore, pričom pri častom výsledku nemožno pomer šancí interpretovať ani ako relatívne riziko. Interval spoľahlivosti siahajúci od 6 po 26 navyše ukazuje, že samotná veľkosť efektu je odhadnutá pomerne nepresne.</p>
 
@@ -109,7 +109,7 @@ $articles[] = [
 
 <h2>Genetické polymorfizmy</h2>
 
-<p>Medzi skúmanými polymorfizmami génov MMP2 alebo MMP9 a chronickou chorobou obličiek sa <strong>nezistila</strong> významná asociácia. Negatívny výsledok nepreukazuje, že genetická regulácia MMP nemá pri chorobách obličiek význam — štúdia hodnotila iba vybrané časté varianty a mohla mať nedostatočnú štatistickú silu na zachytenie slabších účinkov, zriedkavých variantov alebo génovo-environmentálnych interakcií.</p>
+<p>Medzi skúmanými polymorfizmami génov MMP2 alebo MMP9 a chronickou chorobou obličiek sa <strong>nezistila</strong> významná asociácia. Negatívny výsledok nepreukazuje, že genetická regulácia MMP nemá pri chorobách obličiek význam – štúdia hodnotila iba vybrané časté varianty a mohla mať nedostatočnú štatistickú silu na zachytenie slabších účinkov, zriedkavých variantov alebo génovo-environmentálnych interakcií.</p>
 
 <p>Tento nález je pritom pre interpretáciu celej práce dôležitý: ak by boli zvýšené koncentrácie MMP geneticky podmienenou <em>príčinou</em> ochorenia, dalo by sa očakávať aspoň slabé genetické signály. Ich absencia je skôr v súlade s predstavou, že zvýšené MMP sú <strong>sprievodným javom</strong> ochorenia.</p>
 
@@ -128,17 +128,17 @@ $articles[] = [
 <ul>
   <li>Nemocničné kontroly nemusia reprezentovať všeobecnú populáciu.</li>
   <li>Jedno meranie nemusí zachytiť dlhodobú expozíciu ani biologickú variabilitu MMP; močový arzén odráža skôr nedávnu expozíciu.</li>
-  <li>Normalizácia na kreatinín v moči koriguje zriedenie, ale pri CKD môže byť ovplyvnená svalovou hmotou, výživou a zmeneným vylučovaním kreatinínu — teda práve tým, čo odlišuje prípady od kontrol.</li>
+  <li>Normalizácia na kreatinín v moči koriguje zriedenie, ale pri CKD môže byť ovplyvnená svalovou hmotou, výživou a zmeneným vylučovaním kreatinínu – teda práve tým, čo odlišuje prípady od kontrol.</li>
   <li>Koncentráciu MMP-9 môžu ovplyvniť leukocyty, trombocyty, spôsob odberu, čas do centrifugácie, typ skúmavky a skladovanie vzorky.</li>
   <li>Štúdia sa uskutočnila v dvoch nemocniciach v Tchaj-peji; expozícia prvkom, genetické pozadie, strava a etiológia CKD sa v iných populáciách líšia.</li>
-  <li>Diabetes, hypertenzia, fajčenie, užívanie analgetík, zápal, výživa a sociálno-ekonomické faktory môžu súčasne ovplyvňovať funkciu obličiek, koncentrácie MMP aj expozíciu — reziduálne skreslenie nemožno vylúčiť.</li>
+  <li>Diabetes, hypertenzia, fajčenie, užívanie analgetík, zápal, výživa a sociálno-ekonomické faktory môžu súčasne ovplyvňovať funkciu obličiek, koncentrácie MMP aj expozíciu – reziduálne skreslenie nemožno vylúčiť.</li>
 </ul>
 
 <h2>Klinický význam</h2>
 
 <p>Výsledky zatiaľ nemenia diagnostiku ani liečbu chronickej choroby obličiek. Stanovenie plazmatických MMP-2 alebo MMP-9 nemožno na základe tejto štúdie odporučiť na skríning CKD, určovanie jej príčiny, predpovedanie individuálnej progresie, rozhodovanie o liečbe ani monitorovanie expozície toxickým prvkom.</p>
 
-<p>Rovnako nie je odôvodnené rutinné stanovovanie kovov a polokovov u každého pacienta s CKD. Cielené vyšetrenie je primerané pri relevantnej pracovnej, environmentálnej, stravovacej alebo liekovej anamnéze — a práve <strong>anamnéza je v tejto oblasti hodnotnejším nástrojom než laboratórium</strong>.</p>
+<p>Rovnako nie je odôvodnené rutinné stanovovanie kovov a polokovov u každého pacienta s CKD. Cielené vyšetrenie je primerané pri relevantnej pracovnej, environmentálnej, stravovacej alebo liekovej anamnéze – a práve <strong>anamnéza je v tejto oblasti hodnotnejším nástrojom než laboratórium</strong>.</p>
 
 <p>Zistená inverzná asociácia so selénom nie je indikáciou na jeho nekontrolovanú suplementáciu. Selén má úzke rozmedzie medzi nedostatočným a nadmerným príjmom a nadbytok je toxický.</p>
 
@@ -167,10 +167,10 @@ $articles[] = [
 <h2>Súvisiace články</h2>
 
 <ul>
-  <li><a href="article.php?slug=environmentalne-toxiny-poskodenie-obliciek-nefrolog">Environmentálne toxíny a poškodenie obličiek</a> — širší kontext.</li>
+  <li><a href="article.php?slug=environmentalne-toxiny-poskodenie-obliciek-nefrolog">Environmentálne toxíny a poškodenie obličiek</a> – širší kontext.</li>
   <li><a href="article.php?slug=uran-a-oblicky-nefrotoxicita-radiacne-poskodenie-kovy">Urán a obličky: nefrotoxicita a ťažké kovy</a>.</li>
-  <li><a href="article.php?slug=ckdnt-pracovnici-horucava-texas-nejasna-etiologia">CKDnt u pracovníkov vystavených horúčave</a> — iná hypotéza environmentálnej etiológie.</li>
-  <li><a href="article.php?slug=zapal-terapeuticky-ciel-ckd-renalne-kardiovaskularne-vysledky">Zápal ako terapeutický cieľ pri CKD</a> — prečo biomarker nestačí.</li>
+  <li><a href="article.php?slug=ckdnt-pracovnici-horucava-texas-nejasna-etiologia">CKDnt u pracovníkov vystavených horúčave</a> – iná hypotéza environmentálnej etiológie.</li>
+  <li><a href="article.php?slug=zapal-terapeuticky-ciel-ckd-renalne-kardiovaskularne-vysledky">Zápal ako terapeutický cieľ pri CKD</a> – prečo biomarker nestačí.</li>
 </ul>
 
 <hr>
@@ -182,7 +182,7 @@ $articles[] = [
   <li><strong>Emily C. Moody, Steven G. Coca, Alison P. Sanders.</strong> <em>Toxic Metals and Chronic Kidney Disease: a Systematic Review of Recent Literature.</em> Current Environmental Health Reports. 2018;5(4):453–463. <a href="https://doi.org/10.1007/s40572-018-0212-1" target="_blank" rel="noopener noreferrer">DOI</a>.</li>
 </ol>
 
-<p><em><strong>Poznámka k dôkazom:</strong> Číselné údaje — 215 pacientov s CKD a 389 vekovo a pohlavím zodpovedajúcich kontrol, upravený pomer šancí 12,45 (6,04 – 25,66) pre MMP-2 a 3,77 (2,14 – 6,66) pre MMP-9, absencia asociácie genotypov MMP2 a MMP9 s CKD, aditívne interakcie medzi vysokou MMP-2 a vyšším močovým arzénom, kadmiom, olovom alebo MMP-9 a nízkym selénom, ako aj multiplikatívna interakcia medzi MMP-2 a olovom — boli overené proti abstraktu v zázname PubMed. Bibliografia bola overená cez Crossref a PubMed; mená autorov sa v origináli uvádzajú so spojovníkmi (Hsi-Hsien Chen a podobne). Údaj, že pomery šancí porovnávajú najvyšší a najnižší tercil, ako aj podrobnosti o laboratórnych metódach a asociáciách s pohlavím, diabetom, hypertenziou či užívaním analgetík pochádzajú z plného textu, ktorý <strong>nebol nezávisle sprístupnený</strong>. Práca sama výslovne definuje súhrnný pojem „kovy“ ako kovy a polokovy — pripomienka k terminológii sa preto týka jej prekladu do slovenčiny, nie nepresnosti originálu. Argument, že absencia genetického signálu podporuje výklad zvýšených MMP ako sprievodného javu, a komentáre k spätnej kauzalite a ku korekcii na močový kreatinín sú <strong>vlastným odborným hodnotením</strong>.</em></p>
+<p><em><strong>Poznámka k dôkazom:</strong> Číselné údaje – 215 pacientov s CKD a 389 vekovo a pohlavím zodpovedajúcich kontrol, upravený pomer šancí 12,45 (6,04 – 25,66) pre MMP-2 a 3,77 (2,14 – 6,66) pre MMP-9, absencia asociácie genotypov MMP2 a MMP9 s CKD, aditívne interakcie medzi vysokou MMP-2 a vyšším močovým arzénom, kadmiom, olovom alebo MMP-9 a nízkym selénom, ako aj multiplikatívna interakcia medzi MMP-2 a olovom – boli overené proti abstraktu v zázname PubMed. Bibliografia bola overená cez Crossref a PubMed; mená autorov sa v origináli uvádzajú so spojovníkmi (Hsi-Hsien Chen a podobne). Údaj, že pomery šancí porovnávajú najvyšší a najnižší tercil, ako aj podrobnosti o laboratórnych metódach a asociáciách s pohlavím, diabetom, hypertenziou či užívaním analgetík pochádzajú z plného textu, ktorý <strong>nebol nezávisle sprístupnený</strong>. Práca sama výslovne definuje súhrnný pojem „kovy“ ako kovy a polokovy – pripomienka k terminológii sa preto týka jej prekladu do slovenčiny, nie nepresnosti originálu. Argument, že absencia genetického signálu podporuje výklad zvýšených MMP ako sprievodného javu, a komentáre k spätnej kauzalite a ku korekcii na močový kreatinín sú <strong>vlastným odborným hodnotením</strong>.</em></p>
 HTML,
 ];
 
