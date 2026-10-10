@@ -30,11 +30,11 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Hĺbková analýza desiatich liekov stiahnutých z trhu pre závažné postmarketingové bezpečnostné zlyhania — od Vioxxu po Zantac. Rozoberá kauzalitu, typy dôkazov, časové intervaly do stiahnutia a rozdiely v prístupe FDA a EMA, vrátane odporúčaní pre farmakovigilanciu.',
+    'excerpt'      => 'Hĺbková analýza desiatich liekov stiahnutých z trhu pre závažné postmarketingové bezpečnostné zlyhania – od Vioxxu po Zantac. Rozoberá kauzalitu, typy dôkazov, časové intervaly do stiahnutia a rozdiely v prístupe FDA a EMA, vrátane odporúčaní pre farmakovigilanciu.',
     'content'      => <<<'HTML'
-<figure><a href="img/postmarketingove-bezpecnostne-zlyhania-liekov-fda-ema.webp" rel="noopener noreferrer" target="_blank"><img src="img/postmarketingove-bezpecnostne-zlyhania-liekov-fda-ema.webp" alt="Rad liekových kapsúl za schvaľovacou bránou, z ktorých viaceré postupne blednú a praskajú" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Schválenie nie je koniec overovania — časť rizík sa ukáže až v bežnom používaní.</figcaption></figure>
+<figure><a href="img/postmarketingove-bezpecnostne-zlyhania-liekov-fda-ema.webp" rel="noopener noreferrer" target="_blank"><img src="img/postmarketingove-bezpecnostne-zlyhania-liekov-fda-ema.webp" alt="Rad liekových kapsúl za schvaľovacou bránou, z ktorých viaceré postupne blednú a praskajú" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Schválenie nie je koniec overovania; časť rizík sa ukáže až v bežnom používaní.</figcaption></figure>
 
-<p>Schválenie lieku regulačným orgánom nie je zárukou jeho dlhodobej bezpečnosti. Táto hĺbková analýza desiatich liekov s fatálnymi postmarketingovými zlyhaniami ukazuje, kde a prečo zlyháva dohľad nad liekmi po ich uvedení na trh — a čo z toho vyplýva pre prax.</p>
+<p>Schválenie lieku regulačným orgánom nie je zárukou jeho dlhodobej bezpečnosti. Táto hĺbková analýza desiatich liekov s fatálnymi postmarketingovými zlyhaniami ukazuje, kde a prečo zlyháva dohľad nad liekmi po ich uvedení na trh – a čo z toho vyplýva pre prax.</p>
 
 <nav aria-label="Obsah článku">
   <h2>Obsah</h2>
@@ -42,7 +42,7 @@ $articles[] = [
     <li><a href="#uvod">Úvod a metodika</a></li>
     <li><a href="#prehlad">Prehľadová tabuľka analyzovaných liekov</a></li>
     <li><a href="#analyzy">Hĺbkové analýzy jednotlivých liekov</a></li>
-    <li><a href="#synteza">Analytická syntéza — kauzalita, dôkazy a regulačné rozdiely</a></li>
+    <li><a href="#synteza">Analytická syntéza – kauzalita, dôkazy a regulačné rozdiely</a></li>
     <li><a href="#diskusia">Diskusia: <em>Primum non nocere</em> v ére zrýchlených schvaľovacích procesov</a></li>
     <li><a href="#zaver">Záver a odporúčania</a></li>
     <li><a href="#literatura">Zoznam citovanej literatúry</a></li>
@@ -51,7 +51,7 @@ $articles[] = [
 
 <h2 id="uvod">1. Úvod a metodika</h2>
 
-<p>Schválenie lieku regulačnými orgánmi, akými sú americký Úrad pre potraviny a liečivá (FDA) a Európska agentúra pre lieky (EMA), predstavuje vyvrcholenie rozsiahleho výskumu, klinických skúšaní a regulačného dohľadu. Lieky schválené týmito orgánmi sa následne považujú za bezpečné na klinické použitie. Historické dôkazy však ukazujú, že schválenie nezaručuje dlhodobú bezpečnosť a účinnosť. Postmarketingový dohľad odhalil bezpečnostné obavy a nepredvídané riziká spojené s mnohými liekmi, čo niekedy viedlo k ich stiahnutiu z trhu alebo k obmedzeniu používania.</p>
+<p>Schválenie lieku americkým Úradom pre potraviny a liečivá (FDA) alebo Európskou agentúrou pre lieky (EMA) je vyvrcholením rozsiahleho výskumu, klinických skúšaní a regulačného dohľadu. Schválený liek sa potom považuje za bezpečný na klinické použitie, história však ukazuje, že schválenie nezaručuje dlhodobú bezpečnosť ani účinnosť. Postmarketingový dohľad odhalil pri mnohých liekoch nepredvídané riziká, ktoré niekedy viedli k ich stiahnutiu z trhu alebo k obmedzeniu používania.</p>
 
 <p>Táto hĺbková analýza sa zameriava na 10 vybraných liekov, u ktorých došlo po uvedení na trh k závažným bezpečnostným zlyhaniam vrátane fatálnych následkov, kardiovaskulárnych príhod, hepatotoxicity, karcinogenity a ďalších závažných nežiaducich udalostí. Analyzujeme regulačné prostredie FDA aj EMA, typy dôkazov, ktoré viedli k regulačným opatreniam, a rozdiely v prístupe medzi jednotlivými jurisdikciami.</p>
 
@@ -78,7 +78,7 @@ $articles[] = [
       <td>1999 (FDA)</td>
       <td>Infarkt myokardu, cievna mozgová príhoda</td>
       <td>Stiahnutie z trhu (2004)</td>
-      <td>Vysoká — RCT a observačné štúdie</td>
+      <td>Vysoká – RCT a observačné štúdie</td>
     </tr>
     <tr>
       <td><strong>Troglitazón</strong> (Rezulin)</td>
@@ -86,7 +86,7 @@ $articles[] = [
       <td>1997 (FDA)</td>
       <td>Hepatotoxicita, zlyhanie pečene</td>
       <td>Stiahnutie z trhu (2000)</td>
-      <td>Vysoká — kazuistiky a observačné štúdie</td>
+      <td>Vysoká – kazuistiky a observačné štúdie</td>
     </tr>
     <tr>
       <td><strong>Cerivastatín</strong> (Baycol/Lipobay)</td>
@@ -94,7 +94,7 @@ $articles[] = [
       <td>1998 (FDA)</td>
       <td>Rabdomyolýza, zlyhanie obličiek</td>
       <td>Stiahnutie z trhu (2001)</td>
-      <td>Vysoká — kazuistiky a farmakoepidemiológia</td>
+      <td>Vysoká – kazuistiky a farmakoepidemiológia</td>
     </tr>
     <tr>
       <td><strong>Cisaprid</strong> (Propulsid)</td>
@@ -102,7 +102,7 @@ $articles[] = [
       <td>1993 (FDA)</td>
       <td>Fatálne srdcové arytmie</td>
       <td>Obmedzenie indikácií, neskôr stiahnutie (2000)</td>
-      <td>Vysoká — kazuistiky a farmakovigilančné signály</td>
+      <td>Vysoká – kazuistiky a farmakovigilančné signály</td>
     </tr>
     <tr>
       <td><strong>Valdekoxib</strong> (Bextra)</td>
@@ -110,7 +110,7 @@ $articles[] = [
       <td>2001 (FDA)</td>
       <td>Infarkt myokardu, cievna mozgová príhoda, Stevensov-Johnsonov syndróm</td>
       <td>Stiahnutie z trhu (2004)</td>
-      <td>Stredná až vysoká — RCT a observačné štúdie</td>
+      <td>Stredná až vysoká – RCT a observačné štúdie</td>
     </tr>
     <tr>
       <td><strong>Tegaserod</strong> (Zelnorm)</td>
@@ -118,7 +118,7 @@ $articles[] = [
       <td>2002 (FDA)</td>
       <td>Kardiovaskulárne príhody</td>
       <td>Stiahnutie (2007), neskôr obmedzené znovuuvedenie (2019)</td>
-      <td>Stredná — observačné štúdie</td>
+      <td>Stredná – observačné štúdie</td>
     </tr>
     <tr>
       <td><strong>Fenfluramín</strong> (Pondimin)</td>
@@ -126,7 +126,7 @@ $articles[] = [
       <td>1973 (FDA)</td>
       <td>Srdcová valvulopatia, pľúcna hypertenzia</td>
       <td>Stiahnutie z trhu (1997)</td>
-      <td>Vysoká — observačné štúdie a echokardiografia</td>
+      <td>Vysoká – observačné štúdie a echokardiografia</td>
     </tr>
     <tr>
       <td><strong>Sibutramín</strong> (Meridia/Reductil)</td>
@@ -134,7 +134,7 @@ $articles[] = [
       <td>1997 (FDA), 1999 (EMA)</td>
       <td>Infarkt myokardu, cievna mozgová príhoda</td>
       <td>Stiahnutie z trhu (2010)</td>
-      <td>Vysoká — RCT (štúdia SCOUT)</td>
+      <td>Vysoká – RCT (štúdia SCOUT)</td>
     </tr>
     <tr>
       <td><strong>Natalizumab</strong> (Tysabri)</td>
@@ -142,7 +142,7 @@ $articles[] = [
       <td>2004 (FDA)</td>
       <td>Progresívna multifokálna leukoencefalopatia (PML)</td>
       <td>Dočasné stiahnutie (2005), obmedzené znovuuvedenie (2006)</td>
-      <td>Vysoká — kazuistiky a klinické skúšania</td>
+      <td>Vysoká – kazuistiky a klinické skúšania</td>
     </tr>
     <tr>
       <td><strong>Ranitidín</strong> (Zantac)</td>
@@ -150,7 +150,7 @@ $articles[] = [
       <td>1983 (FDA)</td>
       <td>Karcinogenita (NDMA)</td>
       <td>Celosvetové stiahnutie (2020)</td>
-      <td>Vysoká — analytické štúdie kontaminácie</td>
+      <td>Vysoká – analytické štúdie kontaminácie</td>
     </tr>
   </tbody>
 </table>
@@ -160,14 +160,14 @@ $articles[] = [
 
 <h3 id="rofekoxib">3.1 Rofekoxib (Vioxx)</h3>
 
-<h4>Schválenie a klinický benefit</h4>
-<p>Rofekoxib, predávaný pod obchodným názvom Vioxx, bol selektívnym inhibítorom cyklooxygenázy-2 (COX-2) a nesteroidným protizápalovým liekom. Pôvodne bol schválený na liečbu bolesti u pacientov s artritídou. Jeho mechanizmus účinku spočíval v selektívnej inhibícii enzýmu COX-2, čo malo teoreticky priniesť protizápalový účinok bez gastrointestinálnych vedľajších účinkov spojených s neselektívnymi NSAID.</p>
+<h4>Schválenie a klinický prínos</h4>
+<p>Rofekoxib, predávaný pod obchodným názvom Vioxx, bol selektívnym inhibítorom cyklooxygenázy-2 (COX-2) a nesteroidným protizápalovým liekom. Pôvodne bol schválený na liečbu bolesti u pacientov s artritídou. Selektívna inhibícia COX-2 mala teoreticky priniesť protizápalový účinok bez gastrointestinálnych nežiaducich účinkov typických pre neselektívne NSAID.</p>
 
 <h4>Bezpečnostné obmedzenia v čase schválenia</h4>
 <p>V čase schválenia FDA v roku 1999 boli k dispozícii klinické skúšania, ktoré preukázali znížený výskyt gastrointestinálnych komplikácií v porovnaní s tradičnými NSAID. Kardiovaskulárne riziko nebolo v predregistračných štúdiách dostatočne identifikované pre relatívne krátke trvanie štúdií a obmedzenú veľkosť súboru.</p>
 
 <h4>Postmarketingový vývoj a identifikácia rizík</h4>
-<p>Po uvedení na trh sa objavili signály o zvýšenom kardiovaskulárnom riziku. Následná placebom kontrolovaná štúdia APPROVe (Adenomatous Polyp Prevention on Vioxx) bola predčasne ukončená, keď sa zistilo, že rofekoxib zdvojnásobuje riziko kardiovaskulárnych príhod. Výsledky ukázali, že liek zvyšoval riziko infarktu myokardu a cievnej mozgovej príhody.</p>
+<p>Po uvedení na trh sa objavili signály o zvýšenom kardiovaskulárnom riziku. Následná placebom kontrolovaná štúdia APPROVe (Adenomatous Polyp Prevention on Vioxx) bola predčasne ukončená, keď sa zistilo, že rofekoxib zdvojnásobuje riziko kardiovaskulárnych príhod vrátane infarktu myokardu a cievnej mozgovej príhody.</p>
 
 <h4>Dôkazy o kardiovaskulárnych komplikáciách a mortalite</h4>
 <p>Metaanalýzy a observačné štúdie potvrdili, že rofekoxib signifikantne zvyšoval riziko kardiovaskulárnych príhod. Odhaduje sa, že celosvetovo bolo s užívaním Vioxxu spojených 88 000 až 140 000 prípadov závažných kardiovaskulárnych ochorení, z ktorých približne 30 – 40 % bolo fatálnych.</p>
@@ -182,14 +182,14 @@ $articles[] = [
 
 <h3 id="troglitazon">3.2 Troglitazón (Rezulin)</h3>
 
-<h4>Schválenie a klinický benefit</h4>
+<h4>Schválenie a klinický prínos</h4>
 <p>Troglitazón, predávaný pod názvom Rezulin, bol prvým liekom v triede tiazolidíndiónov (glitazónov) schváleným na liečbu diabetes mellitus 2. typu. Pôsobil ako agonista receptorov PPAR-γ, čím zvyšoval citlivosť tkanív na inzulín.</p>
 
 <h4>Bezpečnostné obmedzenia v čase schválenia</h4>
 <p>Predregistračné klinické skúšania nezachytili plný rozsah hepatotoxicity. Štúdie boli relatívne krátkodobé a zahŕňali obmedzený počet pacientov, čo neumožnilo identifikovať zriedkavé, ale závažné pečeňové reakcie.</p>
 
 <h4>Postmarketingový vývoj a identifikácia rizík</h4>
-<p>Po uvedení na trh sa začali hromadiť hlásenia o závažnom poškodení pečene vrátane fatálneho zlyhania pečene. Postmarketingové údaje ukázali významný nárast prípadov zlyhania pečene spojených s užívaním Rezulinu. FDA evidovala desiatky prípadov akútneho zlyhania pečene, ktoré si vyžiadali transplantáciu alebo viedli k smrti.</p>
+<p>Po uvedení na trh rýchlo pribúdali hlásenia o závažnom poškodení pečene vrátane fatálneho zlyhania pečene. FDA evidovala desiatky prípadov akútneho zlyhania pečene, ktoré si vyžiadali transplantáciu alebo viedli k smrti.</p>
 
 <h4>Dôkazy o hepatotoxicite a mortalite</h4>
 <p>Kazuistiky a observačné štúdie identifikovali mechanizmus hepatotoxicity zahŕňajúci mitochondriálnu dysfunkciu a steatózu pečene. Niektorí pacienti vykazovali prudký nárast pečeňových enzýmov už po niekoľkých týždňoch liečby. Odhaduje sa, že troglitazón spôsobil desiatky úmrtí na zlyhanie pečene.</p>
@@ -204,14 +204,14 @@ $articles[] = [
 
 <h3 id="cerivastatin">3.3 Cerivastatín (Baycol/Lipobay)</h3>
 
-<h4>Schválenie a klinický benefit</h4>
+<h4>Schválenie a klinický prínos</h4>
 <p>Cerivastatín, predávaný pod názvami Baycol a Lipobay, bol statín (inhibítor HMG-CoA reduktázy) určený na zníženie hladiny cholesterolu. Patril medzi najúčinnejšie statíny v znižovaní LDL cholesterolu.</p>
 
 <h4>Bezpečnostné obmedzenia v čase schválenia</h4>
 <p>V čase schválenia FDA v roku 1998 boli známe riziká spojené so statínmi vrátane myopatie a zriedkavej rabdomyolýzy. Cerivastatín bol schválený v nízkych dávkach, no neskôr boli zavedené vyššie dávky bez dostatočného vyhodnotenia bezpečnostného profilu.</p>
 
 <h4>Postmarketingový vývoj a identifikácia rizík</h4>
-<p>Po uvedení na trh sa začali objavovať hlásenia o závažnej, často fatálnej rabdomyolýze, najmä v kombinácii s gemfibrozilom (ďalším liekom na zníženie lipidov). Cerivastatín bol stiahnutý z trhu v roku 2001, pretože spôsoboval rabdomyolýzu — rozpad svalového tkaniva, ktorý viedol k zlyhaniu obličiek a k smrti.</p>
+<p>Po uvedení na trh sa začali objavovať hlásenia o závažnej, často fatálnej rabdomyolýze, najmä v kombinácii s gemfibrozilom (ďalším liekom na zníženie lipidov). Rabdomyolýza, teda rozpad svalového tkaniva, viedla k zlyhaniu obličiek a k úmrtiam, a preto bol cerivastatín v roku 2001 stiahnutý z trhu.</p>
 
 <h4>Dôkazy o rabdomyolýze a mortalite</h4>
 <p>FDA evidovala 31 potvrdených úmrtí na rabdomyolýzu u pacientov užívajúcich cerivastatín, z toho 12 v kombinácii s gemfibrozilom. Incidencia rabdomyolýzy pri cerivastatíne bola 10- až 50-krát vyššia ako pri iných statínoch. Mechanizmus zahŕňal inhibíciu metabolizmu cerivastatínu gemfibrozilom, čo viedlo k 5- až 8-násobnému zvýšeniu plazmatických hladín cerivastatínu.</p>
@@ -226,7 +226,7 @@ $articles[] = [
 
 <h3 id="cisaprid">3.4 Cisaprid (Propulsid)</h3>
 
-<h4>Schválenie a klinický benefit</h4>
+<h4>Schválenie a klinický prínos</h4>
 <p>Cisaprid, predávaný pod názvom Propulsid, bol prokinetický liek používaný na liečbu gastroezofageálneho refluxu (GERD). Pôsobil ako agonista 5-HT4 receptora, čím stimuloval motilitu gastrointestinálneho traktu.</p>
 
 <h4>Bezpečnostné obmedzenia v čase schválenia</h4>
@@ -248,14 +248,14 @@ $articles[] = [
 
 <h3 id="valdekoxib">3.5 Valdekoxib (Bextra)</h3>
 
-<h4>Schválenie a klinický benefit</h4>
+<h4>Schválenie a klinický prínos</h4>
 <p>Valdekoxib, predávaný pod názvom Bextra, bol selektívny inhibítor COX-2, podobne ako rofekoxib. Bol schválený na liečbu artritídy a dysmenorey.</p>
 
 <h4>Bezpečnostné obmedzenia v čase schválenia</h4>
 <p>V čase schválenia FDA v roku 2001 boli známe kardiovaskulárne riziká COX-2 inhibítorov, no valdekoxib bol považovaný za bezpečnejší než rofekoxib. Predregistračné štúdie nezachytili plný rozsah kardiovaskulárneho rizika ani Stevensovho-Johnsonovho syndrómu.</p>
 
 <h4>Postmarketingový vývoj a identifikácia rizík</h4>
-<p>Po uvedení na trh sa objavili hlásenia o kardiovaskulárnych príhodách a závažných kožných reakciách vrátane Stevensovho-Johnsonovho syndrómu. Liek bol stiahnutý z trhu v roku 2004 pre kombináciu kardiovaskulárneho rizika a závažných kožných reakcií.</p>
+<p>Po uvedení na trh sa objavili hlásenia o kardiovaskulárnych príhodách a závažných kožných reakciách vrátane Stevensovho-Johnsonovho syndrómu.</p>
 
 <h4>Dôkazy o kardiovaskulárnych príhodách a Stevensovom-Johnsonovom syndróme</h4>
 <p>Metaanalýzy ukázali zvýšené riziko kardiovaskulárnych príhod podobné ako pri rofekoxibe. Stevensov-Johnsonov syndróm sa vyskytol najmä v prvých dvoch týždňoch liečby a postihoval predovšetkým pacientov s alergiou na sulfónamidy.</p>
@@ -270,7 +270,7 @@ $articles[] = [
 
 <h3 id="tegaserod">3.6 Tegaserod (Zelnorm)</h3>
 
-<h4>Schválenie a klinický benefit</h4>
+<h4>Schválenie a klinický prínos</h4>
 <p>Tegaserod, predávaný pod názvom Zelnorm, bol agonista 5-HT4 receptora používaný na liečbu syndrómu dráždivého čreva s prevahou zápchy (IBS-C) a chronickej idiopatickej zápchy.</p>
 
 <h4>Bezpečnostné obmedzenia v čase schválenia</h4>
@@ -292,7 +292,7 @@ $articles[] = [
 
 <h3 id="fenfluramin">3.7 Fenfluramín (Pondimin)</h3>
 
-<h4>Schválenie a klinický benefit</h4>
+<h4>Schválenie a klinický prínos</h4>
 <p>Fenfluramín, predávaný pod názvom Pondimin, bol liek na potlačenie chuti do jedla používaný na liečbu obezity. Pôsobil ako agonista serotonínových receptorov, čím zvyšoval pocit sýtosti.</p>
 
 <h4>Bezpečnostné obmedzenia v čase schválenia</h4>
@@ -314,7 +314,7 @@ $articles[] = [
 
 <h3 id="sibutramin">3.8 Sibutramín (Meridia/Reductil)</h3>
 
-<h4>Schválenie a klinický benefit</h4>
+<h4>Schválenie a klinický prínos</h4>
 <p>Sibutramín, predávaný pod názvami Meridia (USA) a Reductil (Európa), bol liek na potlačenie chuti do jedla používaný na liečbu obezity. Pôsobil ako inhibítor spätného vychytávania serotonínu a noradrenalínu, čím zvyšoval pocit sýtosti a termogenézu.</p>
 
 <h4>Bezpečnostné obmedzenia v čase schválenia</h4>
@@ -336,14 +336,14 @@ $articles[] = [
 
 <h3 id="natalizumab">3.9 Natalizumab (Tysabri)</h3>
 
-<h4>Schválenie a klinický benefit</h4>
+<h4>Schválenie a klinický prínos</h4>
 <p>Natalizumab, predávaný pod názvom Tysabri, bol humanizovaná monoklonálna protilátka používaná na liečbu roztrúsenej sklerózy. Pôsobil ako antagonista α4-integrínu, čím blokoval migráciu lymfocytov do centrálneho nervového systému.</p>
 
 <h4>Bezpečnostné obmedzenia v čase schválenia</h4>
 <p>FDA schválila natalizumab vo februári 2004 na základe klinických štúdií, ktoré preukázali významné zníženie relapsov a progresie disability u pacientov s roztrúsenou sklerózou. V čase schválenia neboli známe riziká spojené s progresívnou multifokálnou leukoencefalopatiou (PML), pretože v predregistračných štúdiách sa tento typ komplikácie nevyskytol.</p>
 
 <h4>Postmarketingový vývoj a identifikácia rizík</h4>
-<p>V priebehu prvého roka po schválení boli hlásené tri prípady PML — zriedkavej a fatálnej oportúnnej infekcie mozgu spôsobenej vírusom JC. Dva prípady sa vyskytli u pacientov s roztrúsenou sklerózou liečených natalizumabom a jeden u pacienta s Crohnovou chorobou. Všetky tri prípady boli fatálne alebo viedli k závažnému neurologickému poškodeniu.</p>
+<p>V priebehu prvého roka po schválení boli hlásené tri prípady PML, zriedkavej a fatálnej oportúnnej infekcie mozgu spôsobenej vírusom JC. Dva prípady sa vyskytli u pacientov s roztrúsenou sklerózou liečených natalizumabom a jeden u pacienta s Crohnovou chorobou. Všetky tri prípady boli fatálne alebo viedli k závažnému neurologickému poškodeniu.</p>
 
 <h4>Dôkazy o PML a mortalite</h4>
 <p>Kazuistiky a observačné štúdie identifikovali rizikové faktory pre rozvoj PML: pozitivita na protilátky proti vírusu JC, dĺžka liečby nad 24 mesiacov a predchádzajúca imunosupresívna liečba. Celkové riziko PML sa odhaduje na 1 : 1000 až 1 : 100 v závislosti od kombinácie rizikových faktorov.</p>
@@ -358,7 +358,7 @@ $articles[] = [
 
 <h3 id="ranitidin">3.10 Ranitidín (Zantac)</h3>
 
-<h4>Schválenie a klinický benefit</h4>
+<h4>Schválenie a klinický prínos</h4>
 <p>Ranitidín, predávaný pod názvom Zantac, bol antagonista H2 receptora používaný na liečbu peptického vredu a gastroezofageálneho refluxu. Patril medzi najpredávanejšie lieky na svete.</p>
 
 <h4>Bezpečnostné obmedzenia v čase schválenia</h4>
@@ -378,12 +378,12 @@ $articles[] = [
 
 <p><strong>Stupeň istoty kauzality: vysoký.</strong> Kauzalita je podporená chemickými analýzami, ktoré jednoznačne preukázali tvorbu NDMA.</p>
 
-<h2 id="synteza">4. Analytická syntéza — kauzalita, dôkazy a regulačné rozdiely</h2>
+<h2 id="synteza">4. Analytická syntéza – kauzalita, dôkazy a regulačné rozdiely</h2>
 
 <h3>4.1 Typy dôkazov vedúcich k regulačným opatreniam</h3>
 <p>Systematický prehľad 462 liekov stiahnutých z trhu pre nežiaduce liekové reakcie ukázal, že hepatotoxicita (81 prípadov, 18 %) bola najčastejšie hlásenou nežiaducou reakciou vedúcou k stiahnutiu, nasledovaná imunitne sprostredkovanými reakciami (79 prípadov, 17 %), neurotoxicitou (76 prípadov, 16 %), kardiotoxicitou (63 prípadov, 14 %), karcinogenitou (61 prípadov, 13 %), hematologickou toxicitou (53 prípadov, 11 %) a liekovou závislosťou (52 prípadov, 11 %). Úmrtia boli spojené so stiahnutím v 114 prípadoch (25 %).</p>
 
-<p>Z hľadiska úrovne dôkazov boli kazuistiky najčastejšie používaným dôkazom pre stiahnutie liekov, a to v 71 % všetkých prípadov. V 49 prípadoch (11 %) boli rozhodnutia o stiahnutí založené na výsledkoch štúdií na zvieratách. Frekvencia používania kazuistík ako dominantného zdroja informácií sa časom znižovala — z 85 % v 50. rokoch 20. storočia na 64 % v 90. rokoch a od roku 2000 na 35 %.</p>
+<p>Z hľadiska úrovne dôkazov boli kazuistiky najčastejšie používaným dôkazom pre stiahnutie liekov, a to v 71 % všetkých prípadov. V 49 prípadoch (11 %) boli rozhodnutia o stiahnutí založené na výsledkoch štúdií na zvieratách. Frekvencia používania kazuistík ako dominantného zdroja informácií sa časom znižovala: z 85 % v 50. rokoch 20. storočia na 64 % v 90. rokoch a od roku 2000 na 35 %.</p>
 
 <h3>4.2 Časové intervaly medzi uvedením na trh a stiahnutím</h3>
 <p>Medián intervalu medzi prvým uvedením na trh a prvým stiahnutím bol 18 rokov (IQR 6 – 34) pre všetky lieky a 10 rokov pre lieky uvedené po roku 1960 (IQR 3 – 19). Medián intervalu medzi prvou hlásenou nežiaducou reakciou a rokom prvého stiahnutia bol 6 rokov (IQR 1 – 15) pre všetky lieky a 3 roky pre lieky uvedené po roku 1960 (IQR 0 – 8).</p>
@@ -396,7 +396,7 @@ $articles[] = [
 <p>Tieto rozdiely poukazujú na nerovnomernú globálnu implementáciu farmakovigilančných systémov a na potrebu lepšej koordinácie medzi regulačnými orgánmi.</p>
 
 <h3>4.4 Rozdiely medzi FDA a EMA</h3>
-<p>Štúdie ukázali, že FDA schvaľuje lieky rýchlejšie než jej európsky náprotivok EMA. Lieky, ktoré boli schválené v zrýchlenom procese FDA, mali vyššiu mieru bezpečnostných intervencií. Zrýchlené schvaľovanie sa často spolieha na náhradné ukazovatele (<em>surrogate endpoints</em>), čo znamená, že výskumníci merajú niečo iné než prežitie, napríklad veľkosť nádoru, aby určili, či liek funguje.</p>
+<p>Štúdie ukázali, že FDA schvaľuje lieky rýchlejšie než jej európsky náprotivok EMA. Lieky, ktoré boli schválené v zrýchlenom procese FDA, mali vyššiu mieru bezpečnostných intervencií. Zrýchlené schvaľovanie sa často spolieha na náhradné ukazovatele (<em>surrogate endpoints</em>): účinnosť lieku sa neposudzuje podľa prežívania, ale napríklad podľa veľkosti nádoru.</p>
 
 <p>FDA tiež zaviedla požiadavky na genetické testovanie pred podaním niektorých liekov (napríklad kapecitabínu), aby sa zabránilo fatálnym toxickým reakciám. Na druhej strane EMA kladie väčší dôraz na postmarketingové bezpečnostné štúdie (PASS) a povinné plány riadenia rizík (RMP).</p>
 
@@ -407,7 +407,7 @@ $articles[] = [
 
 <h2 id="diskusia">5. Diskusia: <em>Primum non nocere</em> v ére zrýchlených schvaľovacích procesov</h2>
 
-<p>Princíp <em>primum non nocere</em> (predovšetkým neškodiť) je základným kameňom medicínskej etiky. V kontexte farmaceutickej regulácie tento princíp znamená, že prínos lieku musí prevažovať nad jeho rizikami. Avšak, ako ukazujú analyzované prípady, tento princíp je v praxi často narúšaný nedostatočným postmarketingovým dohľadom a tlakom na rýchle schvaľovanie liekov.</p>
+<p>Princíp <em>primum non nocere</em> (predovšetkým neškodiť) je základným kameňom medicínskej etiky. V kontexte farmaceutickej regulácie tento princíp znamená, že prínos lieku musí prevažovať nad jeho rizikami. Analyzované prípady však ukazujú, že v praxi ho často oslabuje nedostatočný postmarketingový dohľad a tlak na rýchle schvaľovanie liekov.</p>
 
 <h3>5.1 Tlak na rýchle schvaľovanie a jeho dôsledky</h3>
 <p>Politický tlak na FDA, aby schvaľovala lieky rýchlejšie, nie je novým fenoménom. Výskumníci z Yale School of Medicine zistili, že takmer tretina liekov schválených v rokoch 2001 – 2010 mala závažné bezpečnostné problémy roky po tom, čo boli sprístupnené pacientom. „Kým sa tlačí na menej regulácie a rýchlejšie schvaľovanie, tieto rozhodnutia majú dôsledky,“ uvádza Dr. Joseph Ross, docent medicíny na Yale School of Medicine.</p>
@@ -497,7 +497,7 @@ $articles[] = [
   <li><strong>Edukácia pacientov a zdravotníckych pracovníkov:</strong> je nevyhnutné zvýšiť povedomie o tom, že schválenie lieku regulačným orgánom nie je zárukou jeho dlhodobej bezpečnosti.</li>
 </ol>
 
-<p>Na záver, ako zdôrazňuje Dr. Caleb Alexander: „O produkte sa dozvieme obrovské množstvo až potom, čo je na trhu a po jeho použití v širokej populácii.“ Táto skutočnosť podčiarkuje dôležitosť robustných postmarketingových bezpečnostných systémov a neustáleho zlepšovania farmakovigilančných praktík na celom svete.</p>
+<p>Slovami Dr. Caleba Alexandra: „O produkte sa dozvieme obrovské množstvo až potom, čo je na trhu a po jeho použití v širokej populácii.“ Preto sú nevyhnutné spoľahlivé postmarketingové bezpečnostné systémy a sústavné zlepšovanie farmakovigilančnej praxe na celom svete.</p>
 
 <h2 id="literatura">Zoznam citovanej literatúry</h2>
 

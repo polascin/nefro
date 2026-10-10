@@ -27,11 +27,11 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Postupne pridávať lieky, alebo začať viacerými naraz? Priamo na túto otázku odpovedá zatiaľ jediná randomizovaná štúdia — CONFIDENCE. Ostatné argumenty pochádzajú z diabetológie a ich prenos na obličkové ukazovatele má hranice.',
+    'excerpt'      => 'Postupne pridávať lieky, alebo začať viacerými naraz? Priamo na túto otázku odpovedá zatiaľ jediná randomizovaná štúdia: CONFIDENCE. Ostatné argumenty pochádzajú z diabetológie a ich prenos na obličkové ukazovatele má hranice.',
     'content'      => <<<'HTML'
-<figure><a href="img/sekvencna-simultanna-kombinovana-liecba-diabetes-ckd.webp" rel="noopener noreferrer" target="_blank"><img src="img/sekvencna-simultanna-kombinovana-liecba-diabetes-ckd.webp" alt="Oblička zasahovaná na jednej strane postupne prichádzajúcimi lúčmi a na druhej strane štyrmi lúčmi naraz" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Postupné pridávanie je bezpečnejšie na titráciu, súbežný začiatok prináša účinok skôr — voľba patrí ku konkrétnemu pacientovi.</figcaption></figure>
+<figure><a href="img/sekvencna-simultanna-kombinovana-liecba-diabetes-ckd.webp" rel="noopener noreferrer" target="_blank"><img src="img/sekvencna-simultanna-kombinovana-liecba-diabetes-ckd.webp" alt="Oblička zasahovaná na jednej strane postupne prichádzajúcimi lúčmi a na druhej strane štyrmi lúčmi naraz" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Postupné pridávanie je bezpečnejšie na titráciu, súbežný začiatok prináša účinok skôr – voľba patrí ku konkrétnemu pacientovi.</figcaption></figure>
 
-<p>Pri diabete 2. typu s chronickou chorobou obličiek (CKD) dnes máme štyri triedy liekov s dokázaným kardiorenálnym prínosom: blokátor systému renín-angiotenzín, inhibítor SGLT2, nesteroidový antagonista mineralokortikoidového receptora a agonista receptora GLP-1. Otázka už nie je, či ich kombinovať, ale <strong>ako začať</strong> — postupne, s odstupom medzi jednotlivými liekmi, alebo viacerými naraz. Diskusia na kongrese ADA 2026 postavila proti sebe obidva prístupy. Pri kritickom čítaní argumentov je však potrebné rozlíšiť, ktoré z nich pochádzajú z priamych dôkazov a ktoré z analógie.</p>
+<p>Pri diabete 2. typu s chronickou chorobou obličiek (CKD) dnes máme štyri triedy liekov s dokázaným kardiorenálnym prínosom: blokátor systému renín-angiotenzín, inhibítor SGLT2, nesteroidový antagonista mineralokortikoidového receptora a agonista receptora GLP-1. Otázka už nie je, či ich kombinovať, ale <strong>ako začať</strong>: postupne, s odstupom medzi jednotlivými liekmi, alebo viacerými naraz. Diskusia na kongrese ADA 2026 postavila proti sebe obidva prístupy. Pri čítaní argumentov však treba rozlíšiť, ktoré z nich pochádzajú z priamych dôkazov a ktoré z analógie.</p>
 
 <h2>O čo v spore vlastne ide</h2>
 
@@ -50,7 +50,7 @@ $articles[] = [
       <tr>
         <th scope="row">Sekvenčné začatie</th>
         <td>Umožňuje priradiť odpoveď aj nežiaducu udalosť ku konkrétnemu lieku. Dovoľuje individualizovať výber podľa albuminúrie, eGFR, komorbidít a rizika. Zjednodušuje monitorovanie.</td>
-        <td>Odďaľuje nasadenie zvyšných liekov. Každý krok je príležitosť, aby sa liečba zastavila na polceste — v praxi častý dôvod, prečo pacient nikdy nedostane úplnú kombináciu.</td>
+        <td>Odďaľuje nasadenie zvyšných liekov. Každý krok je príležitosť, aby sa liečba zastavila na polceste – v praxi častý dôvod, prečo pacient nikdy nedostane úplnú kombináciu.</td>
       </tr>
       <tr>
         <th scope="row">Simultánne začatie</th>
@@ -73,7 +73,7 @@ $articles[] = [
 
 <p>Vopred plánovaná analýza podľa kategórií rizika KDIGO priniesla dva prakticky užitočné doplnky. Prínos kombinácie bol konzistentný naprieč celým spektrom predpokladaného rizika progresie. Hyperkaliémia bola pri kombinácii <strong>častejšia</strong>, no <strong>včasný pokles eGFR o viac než 30 % do 30 dní bol menej častý u pacientov s vyšším rizikom podľa KDIGO</strong> než u pacientov s nižším rizikom. To je v protiklade s bežnou obavou, že práve najrizikovejší pacienti simultánne začatie „neunesú“.</p>
 
-<p><strong>Hranica dôkazu:</strong> CONFIDENCE je štúdia fázy 2 s trvaním 180 dní a s <strong>náhradným ukazovateľom</strong> — albuminúriou. Nepreukázala spomalenie progresie CKD, zníženie rizika zlyhania obličiek ani zníženie počtu kardiovaskulárnych príhod. Albuminúria je uznávaný prediktor, ale zníženie albuminúrie nie je totožné so zlepšením tvrdého obličkového ukazovateľa.</p>
+<p><strong>Hranica dôkazu:</strong> CONFIDENCE je štúdia fázy 2 s trvaním 180 dní a s <strong>náhradným ukazovateľom</strong>, albuminúriou. Nepreukázala spomalenie progresie CKD, zníženie rizika zlyhania obličiek ani zníženie počtu kardiovaskulárnych príhod. Albuminúria je uznávaný prediktor, ale zníženie albuminúrie nie je totožné so zlepšením tvrdého obličkového ukazovateľa.</p>
 
 <h2>Argumenty prevzaté z diabetológie a ich hranice</h2>
 
@@ -87,9 +87,9 @@ $articles[] = [
 
 <h3>TRIPLE-AXEL: malá otvorená štúdia s dôležitou nástrahou v porovnávacom ramene</h3>
 
-<p>Štúdia TRIPLE-AXEL randomizovala <strong>105 pacientov</strong> s doteraz neliečeným diabetom 2. typu (HbA1c ≥ 8 % a &lt; 11 %) na úvodnú trojkombináciu (metformín, dapagliflozín, saxagliptín) alebo na postupné pridávanie. Primárny ukazovateľ — dosiahnutie HbA1c pod 6,5 % bez hypoglykémie, bez vzostupu hmotnosti o ≥ 5 % a bez ukončenia liečby pre nežiaduci účinok v 104. týždni — dosiahlo <strong>39,0 % oproti 17,1 %</strong> (rozdiel rizika 22,0; 95 % IS 3,0 – 40,8; p = 0,027).</p>
+<p>Štúdia TRIPLE-AXEL randomizovala <strong>105 pacientov</strong> s doteraz neliečeným diabetom 2. typu (HbA1c ≥ 8 % a &lt; 11 %) na úvodnú trojkombináciu (metformín, dapagliflozín, saxagliptín) alebo na postupné pridávanie. Primárny ukazovateľ – dosiahnutie HbA1c pod 6,5 % bez hypoglykémie, bez vzostupu hmotnosti o ≥ 5 % a bez ukončenia liečby pre nežiaduci účinok v 104. týždni – dosiahlo <strong>39,0 % oproti 17,1 %</strong> (rozdiel rizika 22,0; 95 % IS 3,0 – 40,8; p = 0,027).</p>
 
-<p>Pri čítaní tohto výsledku sú podstatné tri okolnosti. Po prvé, samotné zníženie HbA1c bolo v oboch ramenách <strong>porovnateľné</strong> (−2,56 % oproti −2,75 %); rozdiel v zloženom ukazovateli teda nevznikol z lepšej glykemickej kontroly. Po druhé, v ramene s postupným pridávaním nasledoval po metformíne <strong>glimepirid</strong>, teda derivát sulfonylurey — trieda so známym rizikom hypoglykémie a vzostupu hmotnosti. Zložený ukazovateľ tak do značnej miery odráža voľbu porovnávacieho lieku, nie výhodu simultánneho začatia ako princípu. Po tretie, ide o otvorenú štúdiu so 105 účastníkmi a bez obličkových ukazovateľov.</p>
+<p>Pri čítaní tohto výsledku sú podstatné tri okolnosti. Po prvé, samotné zníženie HbA1c bolo v oboch ramenách <strong>porovnateľné</strong> (−2,56 % oproti −2,75 %); rozdiel v zloženom ukazovateli teda nevznikol z lepšej glykemickej kontroly. Po druhé, v ramene s postupným pridávaním nasledoval po metformíne <strong>glimepirid</strong>, teda derivát sulfonylurey, trieda so známym rizikom hypoglykémie a vzostupu hmotnosti. Zložený ukazovateľ tak do značnej miery odráža voľbu porovnávacieho lieku, nie výhodu simultánneho začatia ako princípu. Po tretie, ide o otvorenú štúdiu so 105 účastníkmi a bez obličkových ukazovateľov.</p>
 
 <h3>Metabolická pamäť: koncept z DCCT/EDIC</h3>
 
@@ -102,18 +102,18 @@ $articles[] = [
 <ol>
   <li><strong>Zotrvačnosť je väčší nepriateľ než rýchlosť.</strong> Pacient, ktorý po roku užíva len blokátor systému renín-angiotenzín, je bežnejší problém než pacient s nežiaducim účinkom kombinácie. Obidve strany diskusie sa zhodujú, že čakať bez dôvodu nemožno.</li>
   <li><strong>Simultánne začatie je odôvodnené, keď je zvládnuté monitorovanie.</strong> Predpokladom je vstupné kálium v bezpečnom pásme, známa hodnota eGFR a dohodnutá kontrola s odberom o dva až štyri týždne.</li>
-  <li><strong>Postupné začatie má zmysel tam, kde je priradenie nežiaducej udalosti kľúčové</strong> — pri hraničnej kaliémii, nestabilnej komorbidite, výraznej polyfarmácii alebo pri pacientovi, u ktorého by jedna zle znášaná zmena ohrozila dôveru v celú liečbu.</li>
-  <li><strong>Včasný pokles eGFR treba očakávať a vopred vysvetliť.</strong> Pri liekoch zasahujúcich do glomerulovej hemodynamiky ide o predvídateľnú adaptačnú zmenu, ktorá nie je dôvodom na ukončenie liečby. Rozhodujúce je, či sa hodnota stabilizuje — nie samotný fakt, že klesla. Prah, pri ktorom treba liečbu prehodnotiť, sa určuje individuálne, nie podľa jednej univerzálnej hranice.</li>
+  <li><strong>Postupné začatie má zmysel tam, kde je priradenie nežiaducej udalosti kľúčové</strong>: pri hraničnej kaliémii, nestabilnej komorbidite, výraznej polyfarmácii alebo pri pacientovi, u ktorého by jedna zle znášaná zmena ohrozila dôveru v celú liečbu.</li>
+  <li><strong>Včasný pokles eGFR treba očakávať a vopred vysvetliť.</strong> Pri liekoch zasahujúcich do glomerulovej hemodynamiky ide o predvídateľnú adaptačnú zmenu, ktorá nie je dôvodom na ukončenie liečby. Rozhodujúce je, či sa hodnota stabilizuje, nie samotný fakt, že klesla. Prah, pri ktorom treba liečbu prehodnotiť, sa určuje individuálne, nie podľa jednej univerzálnej hranice.</li>
   <li><strong>Poradie nie je ľubovoľné.</strong> Ak sa volí postupný prístup, blokáda systému renín-angiotenzín a inhibítor SGLT2 sú najlepšie doložené a mali by byť prvé; nesteroidový antagonista mineralokortikoidového receptora sa pridáva pri pretrvávajúcej albuminúrii a bezpečnej kaliémii.</li>
 </ol>
 
 <h2>Čo zostáva nezodpovedané</h2>
 
-<p>Neexistuje randomizovaná štúdia, ktorá by porovnala <strong>simultánne verzus postupné</strong> začatie plnej kardiorenálnej kombinácie s <strong>tvrdými obličkovými ukazovateľmi</strong>. CONFIDENCE preukázala väčší účinok kombinácie na albuminúriu, no neporovnávala postupnosť nasadenia v čase, a jej ukazovateľ je náhradný. Kým takáto štúdia nebude k dispozícii, ide o rozhodovanie na základe klinického úsudku podopretého náhradnými ukazovateľmi a analógiami — a to treba pacientovi aj kolegom vedieť takto pomenovať.</p>
+<p>Neexistuje randomizovaná štúdia, ktorá by porovnala <strong>simultánne verzus postupné</strong> začatie plnej kardiorenálnej kombinácie s <strong>tvrdými obličkovými ukazovateľmi</strong>. CONFIDENCE preukázala väčší účinok kombinácie na albuminúriu, no neporovnávala postupnosť nasadenia v čase a jej ukazovateľ je náhradný. Kým takáto štúdia nebude k dispozícii, ide o rozhodovanie na základe klinického úsudku podopretého náhradnými ukazovateľmi a analógiami. Tak to treba pacientovi aj kolegom otvorene pomenovať.</p>
 
 <h2>Záver</h2>
 
-<p>Spor o sekvenčné verzus simultánne začatie je v skutočnosti sporom o to, koľko istoty potrebujeme pred konaním. Priamy dôkaz existuje pre <strong>súčasné nasadenie finerenónu a empagliflozínu</strong>, a je priaznivý — ale ide o zníženie albuminúrie v štúdii fázy 2. Argumenty prevzaté z diabetológie (VERIFY, TRIPLE-AXEL, DCCT/EDIC) hovoria o glykemickej kontrole a na obličkové ukazovatele sa prenášajú len ako analógia. Najlepšie podložené odporúčanie je preto skromnejšie, než by sa z diskusie mohlo zdať: nečakať zbytočne, začínať tak, ako to bezpečnostný profil konkrétneho pacienta dovoľuje, a monitorovať dôsledne bez ohľadu na zvolený postup.</p>
+<p>Spor o sekvenčné verzus simultánne začatie je v skutočnosti sporom o to, koľko istoty potrebujeme pred konaním. Priamy dôkaz existuje pre <strong>súčasné nasadenie finerenónu a empagliflozínu</strong>, a je priaznivý, ide však o zníženie albuminúrie v štúdii fázy 2. Argumenty prevzaté z diabetológie (VERIFY, TRIPLE-AXEL, DCCT/EDIC) hovoria o glykemickej kontrole a na obličkové ukazovatele sa prenášajú len ako analógia. Najlepšie podložené odporúčanie je preto skromnejšie, než by sa z diskusie mohlo zdať: nečakať zbytočne, začínať tak, ako to bezpečnostný profil konkrétneho pacienta dovoľuje, a monitorovať dôsledne bez ohľadu na zvolený postup.</p>
 
 <h2>Súvisiace články</h2>
 

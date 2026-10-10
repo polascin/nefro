@@ -38,47 +38,47 @@ $articles[] = [
     'excerpt'      => 'Kedy je dialýza potrebná, ako sa vyberá medzi hemodialýzou a peritoneálnou dialýzou, prečo treba myslieť na cievny prístup vopred a v čom pomáha poradňa pred dialýzou.',
     'content'      => <<<'HTML'
 <figure>
-  <img src="img/priprava-na-dialyzacny-program.webp" alt="Infografika: príprava na zaradenie do dialyzačného programu — voľba metódy a cievny prístup" loading="lazy" decoding="async">
+  <img src="img/priprava-na-dialyzacny-program.webp" alt="Infografika: príprava na zaradenie do dialyzačného programu – voľba metódy a cievny prístup" loading="lazy" decoding="async">
 </figure>
 
 <p>Ak vaše obličky postupne strácajú funkciu, lekár s vami môže začať hovoriť o príprave na dialýzu.
-Dobrá správa je, že keď sa pripravíte <strong>s predstihom</strong>, prechod na dialýzu býva
+Keď sa pripravíte <strong>s predstihom</strong>, prechod na dialýzu býva
 oveľa pokojnejší. V tomto článku zhrnieme, čo vás čaká a ako sa pripraviť.</p>
 
 <h2>Kedy je dialýza potrebná</h2>
 
 <p>Dialýza prichádza na rad pri pokročilom chronickom ochorení obličiek, keď už nedokážu
 dostatočne čistiť krv a odvádzať prebytočnú vodu. Presný čas určí lekár podľa vašich
-laboratórnych výsledkov a príznakov — nie podľa jediného čísla, ale podľa celkového stavu.</p>
+laboratórnych výsledkov a príznakov – nie podľa jediného čísla, ale podľa celkového stavu.</p>
 
 <h2>Výber metódy: hemodialýza alebo peritoneálna dialýza</h2>
 
 <p>Existujú dve hlavné metódy a obe sú plnohodnotné. Voľba závisí od vášho zdravotného stavu,
 životného štýlu aj preferencií:</p>
 <ul>
-  <li><strong>Hemodialýza (HD)</strong> — krv sa čistí cez prístroj, spravidla v stredisku
+  <li><strong>Hemodialýza (HD)</strong> – krv sa čistí cez prístroj, spravidla v stredisku
       trikrát týždenne.</li>
-  <li><strong>Peritoneálna dialýza (PD)</strong> — prebieha doma cez brušnú dutinu; môže byť
+  <li><strong>Peritoneálna dialýza (PD)</strong> – prebieha doma cez brušnú dutinu; môže byť
       ručná (CAPD) alebo automatizovaná počas spánku (APD).</li>
 </ul>
-<p>O výhodách a vhodnosti jednotlivých metód sa porozprávajte s nefrológom — pomôže vám vybrať,
-čo najlepšie sadne vášmu životu.</p>
+<p>O výhodách a vhodnosti jednotlivých metód sa porozprávajte s nefrológom – pomôže vám vybrať,
+čo sa najlepšie hodí k vášmu životu.</p>
 
-<h2>Cievny prístup a PD katéter — myslite vopred</h2>
+<h2>Cievny prístup a PD katéter – myslite vopred</h2>
 
 <p>Aby dialýza fungovala, treba si vopred pripraviť prístup:</p>
 <ul>
   <li>pri hemodialýze najčastejšie <strong>arteriovenóznu fistulu</strong>, ktorá potrebuje čas,
-      aby „dozrela“ — preto sa zakladá s predstihom;</li>
+      aby „dozrela“ – preto sa zakladá s predstihom;</li>
   <li>pri peritoneálnej dialýze <strong>PD katéter</strong> v bruchu.</li>
 </ul>
-<p>Včasné plánovanie prístupu je jedným z najdôležitejších krokov hladkého štartu dialýzy.</p>
+<p>Včasné plánovanie prístupu je jedným z najdôležitejších krokov k hladkému začiatku dialýzy.</p>
 
 <h2>Poradňa pred dialýzou</h2>
 
 <p>V nefrologickej ambulancii funguje <strong>poradňa pre prípravu na zaradenie do dialyzačného
 programu</strong>. Pomôže vám zorientovať sa vo voľbe metódy, vysvetlí priebeh liečby, naplánuje
-cievny prístup a sprevádza vás pri rozhodovaní — aby ste do dialýzy vstupovali informovane
+cievny prístup a sprevádza vás pri rozhodovaní – aby ste do dialýzy vstupovali informovane
 a bez zbytočného stresu.</p>
 
 <h2>Čo si pripraviť</h2>
@@ -86,7 +86,7 @@ a bez zbytočného stresu.</p>
   <li>otázky, ktoré vás zaujímajú (pokojne si ich vopred zapíšte);</li>
   <li>zoznam liekov a prípadných alergií;</li>
   <li>informácie o vašom doterajšom priebehu ochorenia obličiek;</li>
-  <li>podporu blízkej osoby — môže ísť s vami a pomôcť zapamätať si informácie.</li>
+  <li>podporu blízkej osoby – môže ísť s vami a pomôcť zapamätať si informácie.</li>
 </ul>
 
 <h2>Kde sa pripraviť a liečiť</h2>

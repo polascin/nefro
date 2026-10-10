@@ -35,19 +35,19 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Japonská kohorta JOINT-KD naznačuje, že spolupráca primárnej starostlivosti a nefrológa pri CKD G5 síce neoddialila dialýzu, ale bola spojená s nižším rizikom infekčných hospitalizácií.',
     'content'      => <<<'HTML'
-<figure><a href="img/spolupraca-vseobecny-lekar-nefrolog-ckd-g5-joint-kd.webp" rel="noopener noreferrer" target="_blank"><img src="img/spolupraca-vseobecny-lekar-nefrolog-ckd-g5-joint-kd.webp" alt="Dve svetelné cesty, ktoré sa spájajú do jedného jasnejšieho prúdu nesúceho obličku v pokročilom štádiu" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Ani jedna zo strán nestačí sama — v pokročilom štádiu rozhoduje, či starostlivosť pokračuje spoločne.</figcaption></figure>
+<figure><a href="img/spolupraca-vseobecny-lekar-nefrolog-ckd-g5-joint-kd.webp" rel="noopener noreferrer" target="_blank"><img src="img/spolupraca-vseobecny-lekar-nefrolog-ckd-g5-joint-kd.webp" alt="Dve svetelné cesty, ktoré sa spájajú do jedného jasnejšieho prúdu nesúceho obličku v pokročilom štádiu" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Ani jedna zo strán nestačí sama; v pokročilom štádiu rozhoduje, či starostlivosť pokračuje spoločne.</figcaption></figure>
 
 <p>Manažment pacienta s chronickou chorobou obličiek v štádiu G5 nie je iba otázkou rozhodnutia, kedy začať dialýzu. Ide o komplexnú starostlivosť o človeka s vysokým rizikom hospitalizácie, infekcií, kardiovaskulárnych komplikácií, nutričných problémov, polyfarmácie, krehkosti a zhoršenej kvality života.</p>
 
 <p>Štúdia JOINT-KD publikovaná v <em>Journal of Nephrology</em> sa venovala prakticky dôležitej otázke: má spolupráca medzi lekárom primárnej starostlivosti a nefrológom merateľný klinický prínos u pacientov s CKD v štádiu G5?</p>
 
-<p>Zadaný zdroj je formálne oprava článku publikovaná v roku 2026. Opravovaný pôvodný článok vyšiel v roku 2025 a obsahuje hlavné klinické výsledky, z ktorých vychádza tento odborný text. Oprava sa týka rozšírenia etickej deklarácie a nemení interpretáciu hlavných klinických výsledkov.</p>
+<p>Citovaný zdroj je formálne oprava článku, publikovaná v roku 2026. Pôvodný článok vyšiel v roku 2025 a obsahuje hlavné klinické výsledky, z ktorých tento text vychádza. Oprava sa týka rozšírenia etickej deklarácie a nemení interpretáciu hlavných klinických výsledkov.</p>
 
 <h2>Prečo je táto téma dôležitá</h2>
 
 <p>Pacienti s CKD G5 sú často sledovaní nefrológom, ale ich zdravotný stav presahuje rámec jednej špecializácie. Mávajú diabetes, hypertenziu, srdcové zlyhávanie, anémiu, poruchy minerálového metabolizmu, infekčné komplikácie, krehkosť, sociálne problémy a vysokú liekovú záťaž.</p>
 
-<p>V takomto kontexte môže mať všeobecný lekár alebo lekár primárnej starostlivosti významnú úlohu. Často je bližšie k pacientovi, pozná jeho domáce a sociálne zázemie, rieši akútne ťažkosti medzi nefrologickými kontrolami a môže včas zachytiť zhoršenie celkového stavu.</p>
+<p>Všeobecný lekár alebo lekár primárnej starostlivosti tu môže zohrať významnú úlohu. Často je bližšie k pacientovi, pozná jeho domáce a sociálne zázemie, rieši akútne ťažkosti medzi nefrologickými kontrolami a môže včas zachytiť zhoršenie celkového stavu.</p>
 
 <p>Primárna starostlivosť môže pomáhať najmä pri prevencii a skorom zachytení infekcií, očkovaní, sledovaní komorbidít, koordinácii liekov, prevencii polyfarmácie a rozhodovaní, kedy je potrebné kontaktovať nefrológa alebo odoslať pacienta na urgentné vyšetrenie.</p>
 
@@ -69,41 +69,39 @@ $articles[] = [
 
 <h2>Hlavné výsledky</h2>
 
-<p>Spolupráca primárneho lekára a nefrológa nebola spojená s oddialením začatia dialýzy. Upravený subdistribučný hazard ratio bol 0,89 s 95 % intervalom spoľahlivosti 0,64 až 1,23.</p>
+<p>Spolupráca primárneho lekára a nefrológa nebola spojená s oddialením začatia dialýzy. Upravený pomer subdistribučných rizík (subdistribution hazard ratio) bol 0,89 (95 % interval spoľahlivosti 0,64 až 1,23).</p>
 
 <p>Podobne nebol zistený významný rozdiel pri hospitalizáciách súvisiacich s CKD ani pri kardiovaskulárnych hospitalizáciách.</p>
 
-<p>Významný rozdiel sa však ukázal pri hospitalizáciách pre infekcie. Spolupráca lekára primárnej starostlivosti a nefrológa bola spojená s nižším rizikom infekčnej hospitalizácie. Upravený subdistribučný hazard ratio bol 0,36 s 95 % intervalom spoľahlivosti 0,15 až 0,87.</p>
-
-<p>To znamená, že pacienti manažovaní v spolupráci primárneho lekára a nefrológa mali v tejto kohorte nižšie riziko hospitalizácie pre infekciu. Výsledok treba interpretovať observačne, ale klinický signál je relevantný.</p>
+<p>Významný rozdiel sa však ukázal pri hospitalizáciách pre infekcie. Spolupráca lekára primárnej starostlivosti a nefrológa bola spojená s nižším rizikom infekčnej hospitalizácie. Upravený pomer subdistribučných rizík bol 0,36 (95 % interval spoľahlivosti 0,15 až 0,87). Ide o observačné zistenie, klinický signál je však relevantný.</p>
 
 <h2>Klinická interpretácia</h2>
 
 <p>Výsledok je zaujímavý práve preto, že spolupráca primárnej a špecializovanej starostlivosti nezmenila všetky sledované ukazovatele. Neoddialila dialýzu a nepreukázala jasný vplyv na kardiovaskulárne hospitalizácie. Jej prínos sa však prejavil v oblasti infekcií.</p>
 
-<p>To dáva klinický zmysel. Infekčné komplikácie u pacientov s pokročilou CKD často začínajú ako zdanlivo bežné ambulantné problémy: infekcia močových ciest, pneumónia, kožná infekcia, respiračné ochorenie, febrilita, dehydratácia alebo nešpecifické zhoršenie celkového stavu.</p>
+<p>Klinicky je to pochopiteľné. Infekčné komplikácie u pacientov s pokročilou CKD často začínajú ako zdanlivo bežné ambulantné problémy: infekcia močových ciest, pneumónia, kožná infekcia, respiračné ochorenie, febrilita, dehydratácia alebo nešpecifické zhoršenie celkového stavu.</p>
 
 <p>Ak je pacient zachytený skoro, môže sa znížiť riziko ťažkého priebehu a potreby hospitalizácie. Lekár primárnej starostlivosti môže v tomto smere dopĺňať nefrológa, pretože je pre pacienta často dostupnejší medzi špecializovanými kontrolami.</p>
 
 <h2>Primárna starostlivosť nenahrádza nefrológa</h2>
 
-<p>Dôležité je nevnímať výsledok ako argument za presun pokročilej CKD do primárnej starostlivosti. Pacient s CKD G5 potrebuje nefrologické vedenie: prípravu na dialýzu alebo transplantáciu, manažment anémie, poruchy minerálovo-kostného metabolizmu, metabolickej acidózy, hyperkaliémie, objemu a antihypertenzívnej liečby.</p>
+<p>Výsledok nie je argumentom za presun pokročilej CKD do primárnej starostlivosti. Pacient s CKD G5 potrebuje nefrologické vedenie: prípravu na dialýzu alebo transplantáciu, manažment anémie, poruchy minerálovo-kostného metabolizmu, metabolickej acidózy, hyperkaliémie, objemu a antihypertenzívnej liečby.</p>
 
 <p>Prínos spolupráce pravdepodobne vzniká vtedy, keď sa obe úrovne starostlivosti dopĺňajú. Nefrológ riadi obličkové ochorenie a prípravu na náhradu funkcie obličiek. Primárny lekár pomáha so skorým zachytením infekcií, komorbiditami, očkovaním, liekovou bezpečnosťou a kontinuálnym kontaktom s pacientom.</p>
 
-<p>Najväčšia hodnota nie je v tom, že pacient má „viac lekárov“, ale že má koordinovaný plán a každý člen tímu vie, čo má sledovať a kedy má reagovať.</p>
+<p>Podstatné nie je, že pacient má „viac lekárov“, ale že má koordinovaný plán a každý člen tímu vie, čo má sledovať a kedy má reagovať.</p>
 
 <h2>Infekcie ako slabé miesto CKD G5</h2>
 
-<p>Pacienti s pokročilou CKD majú zvýšené riziko infekcií z viacerých dôvodov. Prítomná je porucha imunity spojená s urémiou, vyšší vek, diabetes, malnutrícia, anémia, opakované kontakty so zdravotníckym systémom a často aj budúca potreba cievneho prístupu alebo dialýzy.</p>
+<p>Pacienti s pokročilou CKD majú zvýšené riziko infekcií z viacerých dôvodov. Patrí k nim porucha imunity spojená s urémiou, vyšší vek, diabetes, malnutrícia, anémia, opakované kontakty so zdravotníckym systémom a často aj budúca potreba cievneho prístupu alebo dialýzy.</p>
 
 <p>Infekčná hospitalizácia pritom nie je banálna epizóda. U pacienta s CKD G5 môže viesť k akcelerácii poklesu renálnej funkcie, urgentnému začatiu dialýzy, delíriu, poklesu funkčnej kapacity, kardiovaskulárnym komplikáciám a zvýšenej mortalite.</p>
 
-<p>Ak koordinovaná starostlivosť znižuje riziko infekčných hospitalizácií, ide o klinicky relevantný benefit aj vtedy, keď neovplyvní samotný čas začatia dialýzy.</p>
+<p>Ak koordinovaná starostlivosť znižuje riziko infekčných hospitalizácií, ide o klinicky relevantný prínos aj vtedy, keď neovplyvní samotný čas začatia dialýzy.</p>
 
 <h2>Význam pre nefrologickú prax</h2>
 
-<p>Pre nefrológa je hlavné posolstvo praktické: pacient s CKD G5 by nemal byť izolovaný iba v špecializovanej nefrologickej ambulancii. Aj pri pokročilom ochorení obličiek má zmysel koordinovaná spolupráca s primárnou starostlivosťou.</p>
+<p>Pre nefrológa z toho vyplýva praktický záver: pacient s CKD G5 by nemal byť izolovaný iba v špecializovanej nefrologickej ambulancii. Aj pri pokročilom ochorení obličiek má zmysel koordinovaná spolupráca s primárnou starostlivosťou.</p>
 
 <p>Takýto model môže byť dôležitý najmä u pacientov vo vyššom veku, s viacerými komorbiditami, častými infekciami, sociálnou alebo logistickou bariérou dostupnosti nefrológa, polyfarmáciou, krehkosťou alebo v období prípravy na dialýzu.</p>
 
@@ -148,9 +146,9 @@ $articles[] = [
 
 <p>Štúdia JOINT-KD ukazuje, že spolupráca medzi lekárom primárnej starostlivosti a nefrológom u pacientov s CKD G5 pravdepodobne nevedie k oddialeniu dialýzy, ale môže byť spojená s nižším rizikom hospitalizácie pre infekcie.</p>
 
-<p>Pre klinickú prax je to dôležitý signál. Kvalitná starostlivosť o pacienta s pokročilou CKD nie je iba otázkou nefrologickej expertízy, ale aj dobrej koordinácie, dostupnosti, prevencie a včasného zachytenia komplikácií.</p>
+<p>Kvalitná starostlivosť o pacienta s pokročilou CKD nie je iba otázkou nefrologickej expertízy, ale aj dobrej koordinácie, dostupnosti, prevencie a včasného zachytenia komplikácií.</p>
 
-<p>Najmä infekcie predstavujú oblasť, kde môže primárna starostlivosť v spolupráci s nefrológom priniesť reálny benefit. Cieľom nemá byť presun zodpovednosti, ale spoločný plán, ktorý pacienta zachytí skôr, než sa ambulantný problém zmení na hospitalizáciu.</p>
+<p>Najmä infekcie predstavujú oblasť, kde môže primárna starostlivosť v spolupráci s nefrológom priniesť reálny prínos. Cieľom nemá byť presun zodpovednosti, ale spoločný plán, ktorý pacienta zachytí skôr, než sa ambulantný problém zmení na hospitalizáciu.</p>
 
 <hr>
 
