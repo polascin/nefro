@@ -12,6 +12,14 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/auth.php';
 
+if (($_SERVER['REQUEST_METHOD'] ?? 'GET') !== 'GET') {
+    http_response_code(405);
+    header('Allow: GET');
+    header('Content-Type: text/plain; charset=utf-8');
+    header('Cache-Control: no-store');
+    exit("Táto metóda sťahovania nie je podporovaná.\n");
+}
+
 $edition = trim((string) ($_GET['edition'] ?? ''));
 $format = trim((string) ($_GET['format'] ?? ''));
 

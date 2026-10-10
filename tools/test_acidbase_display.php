@@ -46,10 +46,11 @@ acidbaseDisplayTest($ag === 20.0, 'Klasický príklad Na 140, Cl 104, HCO3 16 d�
 acidbaseDisplayTest($correctedAg === 20.0, 'Pri albumíne 40 g/L ostáva korigované AG 20.');
 acidbaseDisplayTest($deltaRatio === 1.0, 'Delta ratio pri HCO3 16 je 1,0 (čistá high-AG acidóza).');
 
-foreach ([$ag, $correctedAg, $deltaRatio, $alb] as $value) {
-    acidbaseDisplayTest(is_float($value), 'round() vracia float, ktorý htmlspecialchars bez pretypovania odmietne.');
-    $escaped = htmlspecialchars((string) $value);
-    acidbaseDisplayTest($escaped !== '', 'Pretypovanie na string dovolí htmlspecialchars.');
+foreach ([[$ag, '20'], [$correctedAg, '20'], [$deltaRatio, '1'], [$alb, '40']] as [$value, $expected]) {
+    acidbaseDisplayTest(
+        htmlspecialchars((string) $value) === $expected,
+        'Pretypovanie číselného výsledku zachová očakávanú zobrazovanú hodnotu.',
+    );
 }
 
 echo "Acidbase display: $checks PASS\n";

@@ -46,6 +46,9 @@ Disallow: /calculator_result_print.php
 # do indexu nepatria (objednavka.php navyše posiela `noindex, nofollow`).
 Disallow: /objednavka.php
 Disallow: /download_publication.php
+# Binárny endpoint bez vlastného indexovateľného obsahu; katalóg sa indexuje
+# cez /publikacie.php, nie cez jednotlivé URL formátov na stiahnutie.
+Disallow: /download_free_publication.php
 Disallow: /search.php?*
 Disallow: /discussion.php
 Disallow: /profile.php

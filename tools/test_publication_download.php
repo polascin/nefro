@@ -44,4 +44,16 @@ publicationDownloadTest(
     'Vnorené a neplatné hodnoty nesmú vyvolať chybu; poradie a jedinečnosť určuje katalóg.'
 );
 
+$freeDownloadSource = (string) file_get_contents(__DIR__ . '/../download_free_publication.php');
+publicationDownloadTest(
+    str_contains($freeDownloadSource, "REQUEST_METHOD'] ?? 'GET') !== 'GET'")
+        && str_contains($freeDownloadSource, "header('Allow: GET')"),
+    'Bezplatný download endpoint povoľuje iba GET a oznamuje povolenú metódu.',
+);
+$robots = (string) file_get_contents(__DIR__ . '/../robots.txt');
+publicationDownloadTest(
+    str_contains($robots, 'Disallow: /download_free_publication.php'),
+    'Binárny download endpoint je vylúčený z indexovania.',
+);
+
 echo "Publication download: $checks checks PASS\n";
