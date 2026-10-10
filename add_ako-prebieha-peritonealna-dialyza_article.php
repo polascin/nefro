@@ -38,25 +38,24 @@ $articles[] = [
     'excerpt'      => 'Peritoneálna dialýza prebieha doma. Vysvetľujeme, ako funguje, aký je rozdiel medzi CAPD a APD, ako vyzerá výmena a ako sa na liečbu pripraviť.',
     'content'      => <<<'HTML'
 <figure>
-  <img src="img/ako-prebieha-peritonealna-dialyza.webp" alt="Infografika: peritoneálna dialýza — princíp, výmena roztoku, CAPD a APD a príprava na liečbu" loading="lazy" decoding="async">
+  <img src="img/ako-prebieha-peritonealna-dialyza.webp" alt="Infografika: peritoneálna dialýza – princíp, výmena roztoku, CAPD a APD a príprava na liečbu" loading="lazy" decoding="async">
 </figure>
 
 <p>Peritoneálna dialýza (PD) je metóda dialýzy, ktorá prebieha <strong>doma</strong> a dáva vám
-väčšiu nezávislosť. V tomto článku jednoduchým jazykom vysvetlíme, ako funguje a ako sa na ňu
-pripraviť.</p>
+väčšiu nezávislosť. Ako funguje a ako sa na ňu pripraviť, vysvetľujeme nižšie.</p>
 
 <h2>Čo je peritoneálna dialýza</h2>
 
 <p>Na čistenie krvi využíva vašu vlastnú <strong>pobrušnicu</strong> (tenkú blanu vystielajúcu
-brušnú dutinu). Cez tenkú hadičku — <strong>PD katéter</strong> — sa do brucha napustí čistý
+brušnú dutinu). Cez tenkú hadičku – <strong>PD katéter</strong> – sa do brucha napustí čistý
 dialyzačný roztok. Ten počas niekoľkých hodín „nasáva“ odpadové látky a prebytočnú vodu z krvi.
 Potom sa použitý roztok vypustí a nahradí čerstvým. Tomuto cyklu sa hovorí <strong>výmena</strong>.</p>
 
-<h2>CAPD a APD — dve formy</h2>
+<h2>CAPD a APD – dve formy</h2>
 <ul>
-  <li><strong>CAPD</strong> (kontinuálna ambulantná PD) — výmeny robíte <strong>ručne</strong>
+  <li><strong>CAPD</strong> (kontinuálna ambulantná PD) – výmeny robíte <strong>ručne</strong>
       niekoľkokrát denne, sami, bez prístroja.</li>
-  <li><strong>APD</strong> (automatizovaná PD) — výmeny za vás v noci vykonáva malý prístroj
+  <li><strong>APD</strong> (automatizovaná PD) – výmeny za vás v noci vykonáva malý prístroj
       (<strong>cykler</strong>), kým spíte. Cez deň ste voľnejší.</li>
 </ul>
 <p>Niektoré strediská umožňujú aj <strong>vzdialené sledovanie</strong> liečby, takže nefrológ
@@ -72,12 +71,12 @@ vidí priebeh a môže program upraviť na diaľku.</p>
 
 <h2>PD katéter a príprava</h2>
 <p>Pred začatím liečby sa drobným zákrokom zavedie <strong>PD katéter</strong> do brucha. Miesto
-sa nechá zahojiť a vy aj vaši blízki absolvujete <strong>zaškolenie</strong> — naučíte sa robiť
+sa nechá zahojiť a vy aj vaši blízki absolvujete <strong>zaškolenie</strong> – naučíte sa robiť
 výmeny správne a hygienicky.</p>
 
 <h2>Na čo myslieť</h2>
 <ul>
-  <li><strong>Hygiena je kľúčová</strong> — dôsledná čistota pri výmenách znižuje riziko infekcie
+  <li><strong>Hygiena je kľúčová</strong> – dôsledná čistota pri výmenách znižuje riziko infekcie
       (zápalu pobrušnice).</li>
   <li>Potrebujete doma miesto na skladovanie roztokov a pomôcok.</li>
   <li>Pravidelne chodíte na kontroly do nefrologickej ambulancie.</li>

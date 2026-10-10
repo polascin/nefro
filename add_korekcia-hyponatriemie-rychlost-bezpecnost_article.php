@@ -110,13 +110,13 @@ $articles[] = [
   <li>pokročilé ochorenie pečene.</li>
 </ul>
 
-<p>Autori zároveň uvádzajú, že osmotická demyelinizácia je <strong>zriedkavá u pacientov bez týchto rizikových faktorov, najmä ak je východisková natriémia nad 120 mmol/l</strong>. [1] To neznamená, že u nich možno limity ignorovať – znamená to, že stratifikácia rizika má reálny klinický obsah a nejde o formalitu.</p>
+<p>Autori zároveň uvádzajú, že osmotická demyelinizácia je <strong>zriedkavá u pacientov bez týchto rizikových faktorov, najmä ak je východisková natriémia nad 120 mmol/l</strong>. [1] Limity u nich naďalej platia, stratifikácia rizika však nie je formalita a má reálny klinický význam.</p>
 
 <p>Aj dopĺňanie draslíka môže zvýšiť natriémiu, pretože draslík je rovnako účinný osmolyt ako sodík. Musí sa preto zarátať do celkového priebehu korekcie, nie sledovať oddelene.</p>
 
 <h2>Nadmernú korekciu často spôsobí náhla vodná diuréza</h2>
 
-<p>Neočakávaný vzostup natriémie nebýva dôsledkom príliš veľkej dávky hypertonického roztoku. Častejším mechanizmom je náhle obnovenie vylučovania zriedenej moči po odstránení podnetu na sekréciu vazopresínu.</p>
+<p>Neočakávaný vzostup natriémie nebýva dôsledkom príliš veľkej dávky hypertonického roztoku. Častejším mechanizmom je náhle obnovenie vylučovania zriedeného moču po odstránení podnetu na sekréciu vazopresínu.</p>
 
 <p>Takáto situácia môže vzniknúť po doplnení objemu pri hypovolémii, po vysadení tiazidu, po liečbe nedostatku kortizolu alebo po ústupe nauzey. Výrazný vzostup diurézy preto môže upozorniť na hroziacu nadmernú korekciu <strong>skôr než nasledujúci laboratórny výsledok</strong>.</p>
 
@@ -126,7 +126,7 @@ $articles[] = [
 
 <h2>Čo robiť pri hroziacej alebo už vzniknutej nadmernej korekcii</h2>
 
-<p>Pri neprimerane rýchlom vzostupe natriémie treba okamžite prehodnotiť podávanú liečbu a zistiť, či pacient nezačal vylučovať veľké množstvo zriedenej moči.</p>
+<p>Pri neprimerane rýchlom vzostupe natriémie treba okamžite prehodnotiť podávanú liečbu a zistiť, či pacient nezačal vylučovať veľké množstvo zriedeného moču.</p>
 
 <p>Dezmopresín možno podľa prehľadu použiť <strong>reaktívne aj preventívne</strong> na zabránenie nadmernej vodnej diuréze a prekorigovaniu; pri SIAD sa opisuje aj plánované podávanie súbežne s hypertonickým roztokom na dosiahnutie tesnejšej kontroly rýchlosti korekcie. [1] Na doplnenie vody, prípadne na kontrolované opätovné zníženie natriémie, sa používa 5 % roztok glukózy.</p>
 
@@ -155,8 +155,8 @@ $articles[] = [
 <p>Observačné práce uvádzajú, že osmotická demyelinizácia je zriedkavá, že jej súvislosť s príliš rýchlou korekciou je nekonzistentná a že pomalšia korekcia – vzostup menej než 6 mmol/l v prvých 24 hodinách – sa spájala s vyššou mortalitou. [1] Autori prehľadu však uvádzajú konkrétne dôvody opatrnosti:</p>
 
 <ul>
-  <li>zdanlivý prínos pre mortalitu <strong>vymizol po úprave na propenzitné skóre</strong>, čo naznačuje reziduálne zmätenie,</li>
-  <li>súvislosť medzi rýchlejšou korekciou a lepším prežívaním môže odrážať <strong>zmätenie závažnosťou základného ochorenia</strong>,</li>
+  <li>zdanlivý prínos pre mortalitu <strong>vymizol po úprave na propenzitné skóre</strong>, čo naznačuje reziduálne skreslenie zavádzajúcimi faktormi,</li>
+  <li>súvislosť medzi rýchlejšou korekciou a lepším prežívaním môže odrážať <strong>skreslenie závažnosťou základného ochorenia</strong>,</li>
   <li>pacienti s komorbiditami sa korigujú pomalšie pre <strong>pretrvávajúce uvoľňovanie vazopresínu</strong> – rýchlejšia korekcia potom len označuje menej závažne chorých pacientov.</li>
 </ul>
 

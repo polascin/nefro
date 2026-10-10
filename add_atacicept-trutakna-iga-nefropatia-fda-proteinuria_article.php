@@ -28,7 +28,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'FDA schválila Trutaknu na zníženie proteinúrie pri primárnej IgA nefropatii. Čo ukázala štúdia ORIGIN 3, aké sú bezpečnostné riziká a čo ešte nevieme.',
     'content'      => <<<'HTML'
-<figure><a href="img/atacicept-trutakna-iga-nefropatia-fda-proteinuria.webp" rel="noopener noreferrer" target="_blank"><img src="img/atacicept-trutakna-iga-nefropatia-fda-proteinuria.webp" alt="Glomerulus so zastaveným únikom bielkoviny a v diaľke ešte rozostavané svetelné dvere s lešením" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Zrýchlené schválenie stojí na znížení proteinúrie — potvrdenie tvrdých obličkových výsledkov ešte len má prísť.</figcaption></figure>
+<figure><a href="img/atacicept-trutakna-iga-nefropatia-fda-proteinuria.webp" rel="noopener noreferrer" target="_blank"><img src="img/atacicept-trutakna-iga-nefropatia-fda-proteinuria.webp" alt="Glomerulus so zastaveným únikom bielkoviny a v diaľke ešte rozostavané svetelné dvere s lešením" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Zrýchlené schválenie stojí na znížení proteinúrie – potvrdenie tvrdých obličkových výsledkov ešte len má prísť.</figcaption></figure>
 
 <p>Americký Úrad pre kontrolu potravín a liečiv (FDA) udelil 7. júla 2026 lieku Trutakna (atacicept-vymj) zrýchlené schválenie na zníženie proteinúrie u dospelých s primárnou IgA nefropatiou, ktorí sú ohrození progresiou ochorenia. Odporúčaná dávka je 150 mg podkožne raz týždenne; liek sa podáva pomocou jednodávkového naplneného autoinjektora.</p>
 
@@ -99,7 +99,7 @@ $articles[] = [
 
 <p>Pacienti s inou glomerulopatiou alebo so systémovou imunosupresívnou liečbou počas 12 týždňov pred skríningom boli vylúčení. Priemerná východisková eGFR bola 65 ml/min/1,73 m² a geometrický priemer UPCR 1,5 g/g. Takmer všetci užívali inhibítor ACE a/alebo sartán a 53 % užívalo inhibítor SGLT2.</p>
 
-<p>Tieto údaje sú pre prax podstatné. Výsledok nevznikol pri neselektovanej populácii so všetkými štádiami IgA nefropatie, ale u pacientov s pretrvávajúcou proteinúriou napriek nastavenej podpornej liečbe a s eGFR najmenej 30 ml/min/1,73 m².</p>
+<p>Pre prax je to podstatné: výsledok nevznikol v neselektovanej populácii so všetkými štádiami IgA nefropatie, ale u pacientov s pretrvávajúcou proteinúriou napriek nastavenej podpornej liečbe a s eGFR najmenej 30 ml/min/1,73 m².</p>
 
 <h2>Primárny výsledok: výrazná redukcia proteinúrie</h2>
 
@@ -143,7 +143,7 @@ $articles[] = [
 
 <p>Trutakna je kontraindikovaná pri závažnej precitlivenosti na atacicept-vymj alebo ktorúkoľvek pomocnú látku. Pred začatím liečby treba posúdiť aktívnu infekciu a podanie odložiť, kým infekcia neustúpi alebo nie je primerane liečená. Pri závažnej infekcii počas liečby sa má zvážiť dočasné prerušenie.</p>
 
-<p>Súbežné podávanie s inými imunomodulačnými liekmi nebolo vyhodnotené. Kombinácia s liekmi ovplyvňujúcimi imunitný systém vrátane systémových kortikosteroidov môže zvyšovať infekčné riziko. Tento údaj je dôležitý najmä pri plánovaní sekvenčnej alebo kombinovanej liečby IgA nefropatie.</p>
+<p>Súbežné podávanie s inými imunomodulačnými liekmi nebolo vyhodnotené. Kombinácia s liekmi ovplyvňujúcimi imunitný systém vrátane systémových kortikosteroidov môže zvyšovať infekčné riziko. Treba s tým počítať najmä pri plánovaní sekvenčnej alebo kombinovanej liečby IgA nefropatie.</p>
 
 <h2>Očkovanie a osobitné populácie</h2>
 

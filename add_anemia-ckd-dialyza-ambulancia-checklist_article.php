@@ -33,14 +33,14 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Dva krátke checklisty pre anémiu pri CKD: verzia pre dialýzu (HD/PD) a verzia pre ambulanciu (non-HD). Obsahujú diagnostiku, hranice pre železo, FCM a fosfát, ESA/HIF-PHI, monitoring aj dokumentáciu pre audit.',
     'content'      => <<<'HTML'
-<figure><a href="img/anemia-ckd-dialyza-ambulancia-checklist.webp" rel="noopener noreferrer" target="_blank"><img src="img/anemia-ckd-dialyza-ambulancia-checklist.webp" alt="Riedke bledé červené krvinky pri obličke a rad svetelných zaškrtnutí vedľa nich" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Anémia pri CKD sa rieši postupnosťou krokov, ktorú má zmysel mať poruke — na dialýze aj v ambulancii.</figcaption></figure>
+<figure><a href="img/anemia-ckd-dialyza-ambulancia-checklist.webp" rel="noopener noreferrer" target="_blank"><img src="img/anemia-ckd-dialyza-ambulancia-checklist.webp" alt="Riedke bledé červené krvinky pri obličke a rad svetelných zaškrtnutí vedľa nich" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Anémia pri CKD sa rieši postupnosťou krokov, ktorú má zmysel mať po ruke – na dialýze aj v ambulancii.</figcaption></figure>
 
-<p>Tento článok je pripravený ako dvojica praktických checklistov na rýchle použitie v ambulancii aj na dialýze. Zmysel je rovnaký v oboch prostrediach: potvrdiť anémiu, zhodnotiť železo, rozlíšiť korigovateľné príčiny a potom bezpečne rozhodnúť o liečbe.</p>
+<p>Článok obsahuje dva praktické checklisty na rýchle použitie v ambulancii a na dialýze. V oboch prostrediach je cieľ rovnaký: potvrdiť anémiu, zhodnotiť železo, rozlíšiť korigovateľné príčiny a potom bezpečne rozhodnúť o liečbe.</p>
 
 <h2>Checklist do praxe A4: Anémia pri CKD pre dialýzu (HD/PD)</h2>
 
 <p><strong>Záznam pacienta:</strong> [PACIENT] | <strong>Dátum:</strong> [DD.MM.RRRR] | <strong>Skupina:</strong> CKD G5D | <strong>Dialýza:</strong> HD/PD</p>
-<p><strong>Lekár:</strong> [MENO/IDENT] | <strong>Cieľ:</strong> init / úprava / monitoring</p>
+<p><strong>Lekár:</strong> [MENO/IDENT] | <strong>Cieľ:</strong> začatie / úprava / monitoring</p>
 
 <h3>1) Potvrdenie a rýchle zhodnotenie</h3>
 <ul>
@@ -48,7 +48,7 @@ $articles[] = [
   <li>☐ <strong>CBC</strong> (MCV, RDW) + <strong>retikulocyty</strong>: ____________</li>
   <li>☐ Symptómy a tolerancia záťaže: ____________</li>
   <li>☐ Zápal, infekcia, krvácanie, nutričný pokles: áno/nie + poznámka ____________</li>
-  <li>☐ Ak výsledky nesedia s CKD anémiou, plán doplnenia diagnostiky: ____________</li>
+  <li>☐ Ak výsledky nezodpovedajú anémii pri CKD, plán doplnenia diagnostiky: ____________</li>
 </ul>
 
 <h3>2) Železo ako priorita</h3>
@@ -61,7 +61,7 @@ $articles[] = [
 <h3>3) Rozhodnutie o IV železe</h3>
 <ul>
   <li>☐ Pri <strong>ferritín ≤ 500</strong> a <strong>TSAT ≤ 30</strong> zvážiť / indikovať IV železo: áno/nie</li>
-  <li>☐ Stop sign: <strong>ferritín &gt; 700</strong> alebo <strong>TSAT ≥ 40</strong> → rutinné železo zadržať / neeskalovať: áno/nie</li>
+  <li>☐ Bezpečnostná hranica: <strong>ferritín &gt; 700</strong> alebo <strong>TSAT ≥ 40</strong> → rutinné železo zadržať / neeskalovať: áno/nie</li>
   <li>☐ Typ IV železa a dávkovací plán: ____________</li>
   <li>☐ Plán kontrolných laboratórií: ____________</li>
 </ul>
@@ -87,7 +87,7 @@ $articles[] = [
 <ul>
   <li>☐ Kontrola <strong>Hb, ferritín, TSAT</strong></li>
   <li>☐ Interval: <strong>1 až 3 mesiace</strong> (G5HD) alebo podľa lokálneho dialyzačného protokolu (G5PD)</li>
-  <li>☐ Re-evaluácia pri zmene kliniky: infekcia, hospitalizácia, krvácanie, rýchly pokles Hb: áno/nie</li>
+  <li>☐ Prehodnotenie pri zmene klinického stavu: infekcia, hospitalizácia, krvácanie, rýchly pokles Hb: áno/nie</li>
   <li>☐ Návrh ďalšej kontroly: [DD.MM.RRRR]</li>
 </ul>
 
@@ -103,7 +103,7 @@ $articles[] = [
 <h2>Checklist do praxe A4: Anémia pri CKD pre ambulanciu (non-HD)</h2>
 
 <p><strong>Záznam pacienta:</strong> [PACIENT] | <strong>Dátum:</strong> [DD.MM.RRRR] | <strong>Skupina:</strong> CKD G__ (bez HD)</p>
-<p><strong>Lekár:</strong> [MENO/IDENT] | <strong>Cieľ:</strong> init / úprava / monitoring</p>
+<p><strong>Lekár:</strong> [MENO/IDENT] | <strong>Cieľ:</strong> začatie / úprava / monitoring</p>
 
 <h3>1) Potvrdenie anémie a zhodnotenie rizík</h3>
 <ul>
@@ -111,7 +111,7 @@ $articles[] = [
   <li>☐ <strong>CBC</strong> (MCV, RDW) + <strong>retikulocyty</strong>: ____________</li>
   <li>☐ Symptómy: únava, dyspnoe, intolerancia záťaže a funkčný dopad: ____________</li>
   <li>☐ Klinicky: infekcia/zápal, krvácanie, nutričné zhoršenie: áno/nie + poznámka ____________</li>
-  <li>☐ Ak výsledky nesedia s CKD anémiou, plán doplnenia diagnostiky: ____________</li>
+  <li>☐ Ak výsledky nezodpovedajú anémii pri CKD, plán doplnenia diagnostiky: ____________</li>
 </ul>
 
 <h3>2) Železo: panel a interpretácia</h3>
@@ -132,7 +132,7 @@ $articles[] = [
 <ul>
   <li>☐ Použitý prípravok (ak IV): FCM / iné: ____________</li>
   <li>☐ Ak IV zahŕňa FCM, plán kontrol <strong>fosfátu</strong> podľa rizika pacienta a režimu: ____________</li>
-  <li>☐ Ak vzniknú príznaky kompatibilné s hypofosfatémiou, okamžitá kontrola fosfátu a úprava plánu: áno/nie</li>
+  <li>☐ Ak vzniknú príznaky zodpovedajúce hypofosfatémii, okamžitá kontrola fosfátu a úprava plánu: áno/nie</li>
 </ul>
 
 <h3>5) ESA alebo HIF-PHI</h3>
@@ -140,7 +140,7 @@ $articles[] = [
   <li>☐ Korektibilné príčiny vyriešené, najmä deficit železa: áno/nie</li>
   <li>☐ Zdieľané rozhodovanie s pacientom: áno/nie</li>
   <li>☐ Zohľadnené riziká a benefit vrátane transfúzií: áno/nie</li>
-  <li>☐ Iniciácia ESA v CKD bez dialýzy podľa symptómov, trendu Hb a rizík, nie len podľa čísla: ____________</li>
+  <li>☐ Iniciácia ESA v CKD bez dialýzy podľa symptómov, trendu Hb a rizík, nielen podľa čísla: ____________</li>
   <li>☐ Pri udržiavaní držať Hb <strong>pod hornou hranicou ~11,5 g/dl</strong>: ____________</li>
 </ul>
 

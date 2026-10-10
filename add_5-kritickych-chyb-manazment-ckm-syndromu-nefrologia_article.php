@@ -31,23 +31,23 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Päť typických chýb v manažmente kardiovaskulárno-renálno-metabolického (CKM) syndrómu podľa Medscape — od vynechania skríningu uACR cez ignorovanie štádia 0 až po pasivitu pri úhradách. Praktické kroky, ako CKM premeniť z konceptu na rutinu v nefrologickej praxi.',
+    'excerpt'      => 'Päť typických chýb v manažmente kardiovaskulárno-renálno-metabolického (CKM) syndrómu podľa Medscape – od vynechania skríningu uACR cez ignorovanie štádia 0 až po pasivitu pri úhradách. Praktické kroky, ako CKM premeniť z konceptu na rutinu v nefrologickej praxi.',
     'content'      => <<<'HTML'
-<figure><a href="img/5-kritickych-chyb-manazment-ckm-syndromu-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/5-kritickych-chyb-manazment-ckm-syndromu-nefrologia.webp" alt="Svetelný oblúk starostlivosti spájajúci srdce, metabolizmus a obličku, prerušený niekoľkými medzerami" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Nie je to jedna veľká chyba — starostlivosť sa stráca v medzerách medzi jednotlivými krokmi.</figcaption></figure>
+<figure><a href="img/5-kritickych-chyb-manazment-ckm-syndromu-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/5-kritickych-chyb-manazment-ckm-syndromu-nefrologia.webp" alt="Svetelný oblúk starostlivosti spájajúci srdce, metabolizmus a obličku, prerušený niekoľkými medzerami" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Nie je to jedna veľká chyba – starostlivosť sa stráca v medzerách medzi jednotlivými krokmi.</figcaption></figure>
 
 <h2>Prečo sa o CKM hovorí častejšie</h2>
 
-<p>Kardiovaskulárno-renálno-metabolický (CKM) syndróm predstavuje rámec, ktorý má pomôcť prepojiť tri často „oddelené“ oblasti starostlivosti: kardiovaskulárne riziko, metabolické faktory a obličkové poškodenie. Článok na Medscape zdôrazňuje, že aj keď sa CKM rýchlo presadzuje a existujú naň prvé odporúčania, bežná prax naráža na staré zvyky a fragmentované myslenie.</p>
+<p>Kardiovaskulárno-renálno-metabolický (CKM) syndróm je rámec, ktorý má prepojiť tri často „oddelené“ oblasti starostlivosti: kardiovaskulárne riziko, metabolické faktory a obličkové poškodenie. Článok na Medscape zdôrazňuje, že aj keď sa CKM rýchlo presadzuje a existujú naň prvé odporúčania, bežná prax naráža na staré zvyky a fragmentované myslenie.</p>
 
-<p>V článku sa spomína päť typických chýb, ktoré môžu viesť k tomu, že sa u pacientov s rizikom CKM mešká diagnostika aj intervencia.</p>
+<p>Článok opisuje päť typických chýb, pre ktoré sa u pacientov s rizikom CKM oneskoruje diagnostika aj intervencia.</p>
 
 <h2>Chyba č. 1: Vynechanie testu uACR</h2>
 
 <p>Pomer albumínu ku kreatinínu v moči (uACR) je základný prediktor rizika a skríning albuminúrie je podľa nových odporúčaní indikovaný u pacientov s hypertriglyceridémiou, hypertenziou, metabolickým syndrómom alebo s diabetom 2. typu.</p>
 
-<p>Praktický problém, na ktorý autor článku upozorňuje, je „nízka frekvencia“ vykonávania testu uACR: analýzy ukazujú, že veľká časť pacientov z rizikových skupín test uACR nedostala. Z nefrologického pohľadu je to dôležité najmä preto, že rastúce hodnoty uACR sú kontinuálne spojené s rizikom progresie chronickej choroby obličiek a s kardiovaskulárnou mortalitou, pričom riziko sa môže objavovať aj pri relatívne nízkych hodnotách.</p>
+<p>Článok upozorňuje, že test uACR sa v praxi robí zriedka: analýzy ukazujú, že veľká časť pacientov z rizikových skupín ho nedostala. Pre nefrológa je to podstatné, pretože rastúce hodnoty uACR sú kontinuálne spojené s rizikom progresie chronickej choroby obličiek aj s kardiovaskulárnou mortalitou a riziko sa môže objavovať už pri relatívne nízkych hodnotách.</p>
 
-<p><strong>Čo robiť v ambulancii a na oddelení:</strong> Nastaviť pracovné postupy tak, aby systém automaticky ponúkal uACR v rizikových situáciách CKM. Ak v elektronickej zdravotnej dokumentácii nie je „laboratórny panel CKM“ alebo štandardizovaný postup, je praktické požiadať o jeho doplnenie. Automatizácia znižuje pravdepodobnosť, že sa test pri zaneprázdnenosti „preklikne“.</p>
+<p><strong>Čo robiť v ambulancii a na oddelení:</strong> Nastaviť pracovné postupy tak, aby systém automaticky ponúkal uACR v rizikových situáciách CKM. Ak elektronická zdravotná dokumentácia nemá „laboratórny panel CKM“ ani štandardizovaný postup, oplatí sa požiadať o jeho doplnenie. Automatizácia znižuje pravdepodobnosť, že sa na test v časovom tlaku zabudne.</p>
 
 <h2>Chyba č. 2: Ignorovanie štádia 0</h2>
 
@@ -55,31 +55,31 @@ $articles[] = [
 
 <p>Podstatné je, že „bez rizikových faktorov“ neznamená „bez budúceho rizika“. Čím skôr sa začnú preventívne opatrenia a edukácia, tým väčší je priestor na intervenciu skôr, než pacient prejde do vyšších štádií, kde sa kumuluje kardiovaskulárne aj renálne riziko.</p>
 
-<p><strong>Čo robiť:</strong> Pri mladších pacientoch (najmä ak sú riziká ešte nenápadné) zaradiť preventívne prvky podľa AHA „Life’s Essential 8“ a komunikáciu o CKM ako súčasť edukácie. V praxi ide o to, aby nefrologicky relevantné riziká boli zachytené včas a aby sa pacientovi nastavila „dráha“ prevencie.</p>
+<p><strong>Čo robiť:</strong> Pri mladších pacientoch (najmä ak sú riziká ešte nenápadné) zaradiť preventívne prvky podľa AHA „Life’s Essential 8“ a komunikáciu o CKM ako súčasť edukácie. Cieľom je zachytiť nefrologicky relevantné riziká včas a dať pacientovi jasný plán prevencie.</p>
 
 <h2>Chyba č. 3: Návrat k izolovanému (silo) prístupu</h2>
 
-<p>Článok na Medscape stavia do kontrastu „starý svet“ silného oddelenia diagnóz a „nový svet“ CKM ako jednotnej mentálnej mapy. Vďaka tomu sa dá jednoduchšie predpisovať liečba s viacerými účinkami.</p>
+<p>Článok na Medscape stavia proti sebe „starý svet“ prísne oddelených diagnóz a „nový svet“, v ktorom CKM slúži ako jednotná mentálna mapa.</p>
 
-<p>Autori spomínajú, že rámec CKM má umožniť predpisovať terapiu s viacerými cieľmi (multitarget), ktorá súčasne rieši kardiovaskulárne, metabolické aj renálne riziko (napríklad liekové triedy ako agonisty GLP-1 receptorov alebo inhibítory SGLT2). Cieľom nie je len „nový názov“, ale aj zmena spôsobu, ako sú poskytovatelia ochotní kombinovať intervencie.</p>
+<p>Rámec CKM má uľahčiť predpisovanie liečby s viacerými cieľmi (multitarget), ktorá súčasne rieši kardiovaskulárne, metabolické aj renálne riziko (napríklad agonisty GLP-1 receptorov alebo inhibítory SGLT2). Nejde len o „nový názov“, ale o zmenu toho, ako ochotne lekári kombinujú intervencie.</p>
 
-<p><strong>Čo robiť:</strong> V bežnej praxi si z odporúčaní vytvoriť vlastný zoznam „prvých úvah“. Článok odporúča začať pri vhodných pacientoch úvahou o agonistoch GLP-1 receptorov a/alebo inhibítoroch SGLT2 a zvažovať aj ďalšie liečebné postupy cielené na riziko.</p>
+<p><strong>Čo robiť:</strong> Vytvoriť si z odporúčaní vlastný zoznam liečby, ktorá prichádza do úvahy ako prvá. Článok odporúča začať pri vhodných pacientoch úvahou o agonistoch GLP-1 receptorov a/alebo inhibítoroch SGLT2 a zvažovať aj ďalšie liečebné postupy cielené na riziko.</p>
 
 <h2>Chyba č. 4: Predpoklad, že pacient si GLP-1 nemôže dovoliť</h2>
 
-<p>Jedna z častých bariér nie je klinická, ale logistická a systémová. Článok priamo pomenúva, že časť lekárov vníma lieky GLP-1 ako „nedostupné“, a nie ako realistickú voľbu pre konkrétneho pacienta.</p>
+<p>Častá bariéra nie je klinická, ale logistická a systémová. Článok priamo uvádza, že časť lekárov vníma lieky GLP-1 ako „nedostupné“, a nie ako realistickú voľbu pre konkrétneho pacienta.</p>
 
-<p><strong>Čo robiť:</strong> Držať GLP-1 v zozname možností a aktívne hľadať dostupné zľavové programy a cesty, ktoré umožnia liečbu začať. V praxi to znamená aj to, že pacientovi sa neopakuje len odmietavá veta, ale že sa podniknú kroky smerom k získaniu dostupnej liečby.</p>
+<p><strong>Čo robiť:</strong> Držať GLP-1 v zozname možností a aktívne hľadať dostupné zľavové programy a cesty, ktoré umožnia liečbu začať. Pacient by nemal dostať len odmietavú odpoveď – treba podniknúť konkrétne kroky k získaniu dostupnej liečby.</p>
 
 <h2>Chyba č. 5: Nechať sa zastaviť zamietnutím poistného krytia</h2>
 
-<p>Indikácie aj podmienky úhrad sa môžu meniť. Článok upozorňuje, že ak je žiadosť zamietnutá, riešenie nemusí byť „koniec“. Niekedy môže k schváleniu viesť zmena prístupu, iné (viackritériové, „multi-kondičné“) zdôvodnenie alebo odlišné posúdenie ochorenia.</p>
+<p>Indikácie aj podmienky úhrad sa môžu meniť. Článok upozorňuje, že zamietnutie žiadosti nemusí byť konečné. Niekedy môže k schváleniu viesť zmena prístupu, iné (viackritériové, „multi-kondičné“) zdôvodnenie alebo odlišné posúdenie ochorenia.</p>
 
-<p><strong>Čo robiť:</strong> Sledovať, pri ktorých kombináciách diagnóz a pacientskych profiloch poisťovňa (plán) kryje liečbu, a pri zamietnutí sa nebáť znova overiť podmienky. Praktický apel: pýtať sa poisťovne či poskytovateľa krytia, či je možné získať liek pre konkrétneho pacienta, a neuzatvárať to po prvom zamietnutí.</p>
+<p><strong>Čo robiť:</strong> Sledovať, pri ktorých kombináciách diagnóz a pacientskych profiloch poisťovňa (plán) kryje liečbu, a pri zamietnutí sa nebáť znova overiť podmienky. Pýtať sa poisťovne či poskytovateľa krytia, či je možné liek pre konkrétneho pacienta získať, a nevzdávať sa po prvom zamietnutí.</p>
 
 <h2>Zhrnutie pre nefrologickú prax</h2>
 
-<p>Ak sa má CKM syndróm premeniť z konceptu do rutiny, rozhodujúce je prepojiť pracovné postupy (najmä skríning uACR), načasovanie intervencií (vrátane štádia 0) a mentálny model starostlivosti (od izolovaného prístupu „diagnóza za diagnózou“ ku kombinovanej, rizikovo riadenej terapii). V systéme, kde môžu byť prekážky v dostupnosti liečby, je dôležitá aj aktívna práca s úhradovými podmienkami.</p>
+<p>Ak sa má CKM syndróm premeniť z konceptu na rutinu, rozhodujúce je prepojiť pracovné postupy (najmä skríning uACR), načasovanie intervencií (vrátane štádia 0) a mentálny model starostlivosti (od izolovaného prístupu „diagnóza za diagnózou“ ku kombinovanej, rizikovo riadenej terapii). V systéme, kde môžu byť prekážky v dostupnosti liečby, je dôležitá aj aktívna práca s úhradovými podmienkami.</p>
 
 <hr>
 

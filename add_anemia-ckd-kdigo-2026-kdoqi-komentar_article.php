@@ -31,13 +31,13 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'KDOQI komentár ku KDIGO 2026 ponúka praktickú „logiku v krokoch“ pri manažmente anémie v CKD: dôkladnú diagnostiku (CBC, retikulocyty, ferritín, TSAT), aktívne hľadanie reverzibilných príčin a manažment deficitu železa s dôrazom na bezpečnostné hranice a riziko hypofosfatémie pri FCM. Pri ESA a HIF-PHI sa posilňuje zdieľané rozhodovanie a dôraz na riziká, nie len na číslo Hb.',
+    'excerpt'      => 'KDOQI komentár ku KDIGO 2026 ponúka praktickú „logiku v krokoch“ pri manažmente anémie v CKD: dôkladnú diagnostiku (CBC, retikulocyty, ferritín, TSAT), aktívne hľadanie reverzibilných príčin a manažment deficitu železa s dôrazom na bezpečnostné hranice a riziko hypofosfatémie pri FCM. Pri ESA a HIF-PHI sa posilňuje zdieľané rozhodovanie a dôraz na riziká, nielen na číslo Hb.',
     'content'      => <<<'HTML'
-<figure><a href="img/anemia-ckd-kdigo-2026-kdoqi-komentar.webp" rel="noopener noreferrer" target="_blank"><img src="img/anemia-ckd-kdigo-2026-kdoqi-komentar.webp" alt="Oblička so zoslabnutým hormonálnym signálom ku kostnej dreni, ktorá tvorí len málo červených krviniek" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Chýbajúci signál z obličky je jadro problému — liečba sa odvíja práve od neho.</figcaption></figure>
+<figure><a href="img/anemia-ckd-kdigo-2026-kdoqi-komentar.webp" rel="noopener noreferrer" target="_blank"><img src="img/anemia-ckd-kdigo-2026-kdoqi-komentar.webp" alt="Oblička so zoslabnutým hormonálnym signálom ku kostnej dreni, ktorá tvorí len málo červených krviniek" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Chýbajúci signál z obličky je jadro problému – liečba sa odvíja práve od neho.</figcaption></figure>
 
-<p>Anémia je u pacientov s chronickou chorobou obličiek (CKD) veľmi častá a spojená so zvýšeným rizikom morbidity a mortality. KDOQI zvolalo pracovnú skupinu, ktorá revidovala KDIGO 2026 klinickú smernicu pre manažment anémie v CKD a pripravila komentár k odporúčaniam a praktickým bodom, vrátane poznámok k implementácii v klinickej praxi.</p>
+<p>Anémia je u pacientov s chronickou chorobou obličiek (CKD) veľmi častá a spojená so zvýšeným rizikom morbidity a mortality. KDOQI zostavilo pracovnú skupinu, ktorá posúdila klinickú smernicu KDIGO 2026 pre manažment anémie v CKD a pripravila komentár k jej odporúčaniam a praktickým bodom vrátane poznámok k zavádzaniu do klinickej praxe.</p>
 
-<p>V tomto článku zhrniem praktické jadro odporúčaní z pohľadu nefrológie: ako nastaviť diagnostiku, kedy a ako liečiť deficit železa, a ako pristupovať k ESA (erytropoézu stimulujúcim látkam) a HIF-PHI (inhibítorom HIF-prolyl hydroxylázy).</p>
+<p>Ďalej zhŕňam praktické jadro odporúčaní z pohľadu nefrológa: ako nastaviť diagnostiku, kedy a ako liečiť deficit železa a ako pristupovať k ESA (erytropoézu stimulujúcim látkam) a HIF-PHI (inhibítorom HIF-prolyl hydroxylázy).</p>
 
 <h2>1) Diagnostika: anémia nie je len hemoglobín</h2>
 
@@ -59,7 +59,7 @@ $articles[] = [
   <li>a v prípade podozrenia aj <strong>vyšetrenie okultného krvácania</strong>.</li>
 </ul>
 
-<p>Prakticky dôležité je, že KDOQI explicitne rieši aj situáciu, keď je <strong>ferritín &lt; 45 ng/ml</strong> alebo <strong>mikrocytóza (MCV &lt; 80 fl)</strong> a príčina deficitu železa je nejasná. Vtedy treba cielene pátrať po zdroji krvácania a podľa kontextu riešiť vyšetrenie cez gastroenterológa, gynekológa alebo urológa.</p>
+<p>KDOQI výslovne rieši aj situáciu, keď je <strong>ferritín &lt; 45 ng/ml</strong> alebo <strong>mikrocytóza (MCV &lt; 80 fl)</strong> a príčina deficitu železa je nejasná. Vtedy treba cielene pátrať po zdroji krvácania a podľa kontextu zabezpečiť vyšetrenie u gastroenterológa, gynekológa alebo urológa.</p>
 
 <p><strong>Klinická pointa:</strong> okrem nízkeho ferritínu sa v komentári zdôrazňuje užitočnosť aj <strong>nízkeho TSAT (&lt; 20 %)</strong> ako spúšťača vyšetrenia krvácania, pričom TSAT sa nemá interpretovať izolovane.</p>
 
@@ -77,30 +77,30 @@ $articles[] = [
   <li><strong>ferritín ≤ 500 ng/ml</strong> a zároveň <strong>TSAT ≤ 30 %</strong>.</li>
 </ul>
 
-<p>A pri začatí liečby železom v tejto skupine KDOQI/KDIGO preferuje:</p>
+<p>Pri začatí liečby železom v tejto skupine KDOQI/KDIGO uprednostňuje:</p>
 
 <ul>
   <li><strong>intravenózne železo</strong> pred perorálnym.</li>
 </ul>
 
-<p>Dôvod je praktický aj z výsledkov štúdií: IV aplikácia je efektívnejšia a jednoduchšia na manažment v dialyzačnej realite. Komentár navyše upozorňuje na špecifiká <strong>ferric citrate</strong> (môže byť indikovaný ako fosfátový viazač pri dialýze, ale zároveň sa vstrebáva v miere, ktorá ovplyvní železné parametre). Ak sa používa len ako viazač fosfátu, treba počítať s tým, že <strong>železné indexy môžu stúpať</strong>, a manažment IV železa tomu prispôsobiť.</p>
+<p>Dôvody sú praktické a opierajú sa aj o výsledky štúdií: IV podanie je účinnejšie a v podmienkach dialýzy sa ľahšie riadi. Komentár navyše upozorňuje na špecifiká <strong>ferric citrate</strong> (môže byť indikovaný ako fosfátový viazač pri dialýze, ale zároveň sa vstrebáva v miere, ktorá ovplyvní parametre železa). Ak sa používa len ako viazač fosfátu, treba počítať s tým, že <strong>indexy železa môžu stúpať</strong>, a manažment IV železa tomu prispôsobiť.</p>
 
 <h3>2.2 „Proaktívne“ IV železo a hranice bezpečnosti</h3>
 
-<p>KDOQI súhlasí s proaktívnym prístupom k IV železu, pričom upozorňuje na kontext dôkazov, najmä PIVOTAL trial. Komentár zdôrazňuje, že bezpečnostný horný limit v proaktívnej vysoko dávkovej vetve PIVOTAL bol:</p>
+<p>KDOQI súhlasí s proaktívnym prístupom k IV železu, pričom upozorňuje na kontext dôkazov, najmä na štúdiu PIVOTAL. Komentár zdôrazňuje, že bezpečnostný horný limit v proaktívnej vysokodávkovej vetve PIVOTAL bol:</p>
 
 <ul>
   <li><strong>ferritín &gt; 700 ng/ml</strong> alebo <strong>TSAT ≥ 40 %</strong>.</li>
 </ul>
 
-<p>Prakticky to podporuje použitie odporúčania, že je rozumné <strong>železo dočasne zadržať</strong>, ak je:</p>
+<p>To podporuje odporúčanie, že je rozumné <strong>železo dočasne zadržať</strong>, ak je:</p>
 
 <ul>
   <li><strong>ferritín &gt; 700 ng/ml</strong>, alebo</li>
   <li><strong>TSAT ≥ 40 %</strong>.</li>
 </ul>
 
-<p>Komentár však zároveň upozorňuje na problém generalizácie formulácie „pre všetkých s CKD“. Podľa dostupných údajov je racionálne opierať sa o tieto hranice hlavne pri HD (CKD G5HD), zatiaľ čo pre peritoneálnu dialýzu a non-dialysis CKD sú bezpečnostné dáta pri vyšších hodnotách limitované.</p>
+<p>Komentár však upozorňuje, že formuláciu „pre všetkých s CKD“ nemožno bez výhrad zovšeobecniť. Podľa dostupných údajov je racionálne opierať sa o tieto hranice hlavne pri HD (CKD G5HD), zatiaľ čo pri peritoneálnej dialýze a CKD bez dialýzy sú bezpečnostné údaje pri vyšších hodnotách obmedzené.</p>
 
 <h3>2.3 Non-HD CKD a perorálne vs IV železo</h3>
 
@@ -111,7 +111,7 @@ $articles[] = [
   <li><strong>ferritín ≥ 100 ng/ml a &lt; 300 ng/ml</strong> a <strong>TSAT &lt; 25 %</strong>.</li>
 </ul>
 
-<p>Pri iniciácii železa mimo HD sa rozhodovanie ponecháva na voľbu podľa:</p>
+<p>Pri začatí liečby železom mimo HD sa rozhoduje individuálne podľa:</p>
 
 <ul>
   <li>preferencií pacienta,</li>
@@ -133,14 +133,14 @@ $articles[] = [
 
 <h2>3) Pozor na hypofosfatémiu: ferric carboxymaltose (FCM) a riadenie rizika</h2>
 
-<p>Prakticky kritický bod komentára sa týka toho, že pri niektorých novších IV prípravkoch (najmä <strong>ferric carboxymaltose, FCM</strong>, ale aj ďalšie uvedené v texte) môže vzniknúť hypofosfatémia, sprostredkovaná mechanizmom cez <strong>FGF23</strong>.</p>
+<p>Pre prax je kritický tento bod komentára: pri niektorých novších IV prípravkoch (najmä <strong>ferric carboxymaltose, FCM</strong>, ale aj ďalších uvedených v texte) môže vzniknúť hypofosfatémia sprostredkovaná <strong>FGF23</strong>.</p>
 
-<p>Komentár uvádza, že FCM je spojené s najvyšším výskytom a najdlhším trvaním hypofosfatémie v porovnaní s inými formuláciami. Rovnako sa zdôrazňuje, že u pacientov s už prítomným sekundárnym hyperparatyreoidizmom alebo u tých, ktorí majú rizikové faktory (napríklad lieky spojené s hypofosfatémiou), môže byť riziko vyššie.</p>
+<p>Komentár uvádza, že FCM je spojené s najvyšším výskytom a najdlhším trvaním hypofosfatémie v porovnaní s inými formuláciami. Zdôrazňuje tiež, že u pacientov s už prítomným sekundárnym hyperparatyreoidizmom alebo u tých, ktorí majú rizikové faktory (napríklad lieky spojené s hypofosfatémiou), môže byť riziko vyššie.</p>
 
 <p><strong>Praktický postup v texte:</strong></p>
 
 <ul>
-  <li>u pacientov so zhoršujúcou sa únavou, bolesťami kostí alebo slabosťou počas alebo po FCM treba myslieť na hypofosfatémiu a <strong>promptne zmerať fosfát</strong>,</li>
+  <li>u pacientov so zhoršujúcou sa únavou, bolesťami kostí alebo slabosťou počas alebo po FCM treba myslieť na hypofosfatémiu a <strong>bez odkladu zmerať fosfát</strong>,</li>
   <li>pri opakovaných dávkach FCM merať fosfát aj pred ďalšími dávkami,</li>
   <li>pri zistení hypofosfatémie doplniť fosfát podľa potreby a zvážiť zmenu na inú IV formuláciu.</li>
 </ul>
@@ -157,11 +157,11 @@ $articles[] = [
   <li>a riziko nežiaducich účinkov (komentár uvádza napríklad cievnu mozgovú príhodu, kardiovaskulárne udalosti a rakovinu).</li>
 </ul>
 
-<p>A pred nasadením ESA alebo HIF-PHI sa majú riešiť všetky korigovateľné príčiny, vrátane deficitu železa.</p>
+<p>Pred nasadením ESA alebo HIF-PHI sa majú riešiť všetky korigovateľné príčiny vrátane deficitu železa.</p>
 
 <h3>4.2 ESA ako prvá voľba vs HIF-PHI</h3>
 
-<p>Komentár podporuje odporúčanie KDIGO, že po riešení korigovateľných príčin je vhodné používať <strong>ESA ako prvú líniu</strong> namiesto HIF-PHI. HIF-PHI sa majú vyhýbať u pacientov so zvýšeným rizikom nežiaducich udalostí (v texte odkaz na tabuľku v KDIGO).</p>
+<p>Komentár podporuje odporúčanie KDIGO, že po riešení korigovateľných príčin je vhodné používať <strong>ESA ako prvú líniu</strong> namiesto HIF-PHI. U pacientov so zvýšeným rizikom nežiaducich udalostí sa HIF-PHI treba vyhnúť (v texte odkaz na tabuľku v KDIGO).</p>
 
 <h3>4.3 Kedy začať ESA a kam cieliť Hb</h3>
 
@@ -181,11 +181,11 @@ $articles[] = [
 
 <h2>5) Praktická titračná stratégia pre ambulanciu alebo dialýzu</h2>
 
-<p>Ak by som to mal zredukovať na pracovný rámec podľa komentára KDIGO/KDOQI:</p>
+<p>Zjednodušený pracovný rámec podľa komentára KDIGO/KDOQI:</p>
 
 <ol>
   <li><strong>Potvrď anémiu</strong> a vyhodnoť panel s CBC, retikulocytmi, ferritínom a TSAT.</li>
-  <li><strong>Hľadaj príčinu.</strong> V CKD je deficit železa častý, ale ak výsledky nesedia, rozšír diagnostiku vrátane posúdenia krvácania.</li>
+  <li><strong>Hľadaj príčinu.</strong> V CKD je deficit železa častý, ale ak výsledky nezodpovedajú, rozšír diagnostiku vrátane posúdenia krvácania.</li>
   <li><strong>Lieč deficit železa podľa dialýzy a prahov</strong>, preferuj IV železo pri HD a individualizuj spôsob mimo HD.</li>
   <li><strong>Monitoruj a drž sa bezpečnostných limitov</strong> najmä pri HD (ferritín &gt; 700 alebo TSAT ≥ 40).</li>
   <li>Pri FCM zohľadni <strong>hypofosfatémiu</strong> a aktívne sleduj fosfát pri príznakoch aj pri opakovaných dávkach.</li>
@@ -194,7 +194,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>KDOQI Commentary ku KDIGO 2026 prináša jasnejšiu „logiku v krokoch“: dôkladná diagnostika s CBC/retikulocyty/ferritín/TSAT, aktívne hľadanie reverzibilných príčin a najmä manažment deficitu železa s dôrazom na bezpečnostné hranice a špecifiká jednotlivých IV prípravkov (najmä riziko hypofosfatémie pri FCM). Pri ESA/HIF-PHI sa posilňuje zdieľané rozhodovanie a dôraz na riziká, nie len na číslo Hb.</p>
+<p>KDOQI Commentary ku KDIGO 2026 prináša jasnejšiu „logiku v krokoch“: dôkladnú diagnostiku s CBC, retikulocytmi, ferritínom a TSAT, aktívne hľadanie reverzibilných príčin a najmä manažment deficitu železa s bezpečnostnými hranicami a ohľadom na špecifiká jednotlivých IV prípravkov (predovšetkým riziko hypofosfatémie pri FCM). Pri ESA/HIF-PHI posilňuje zdieľané rozhodovanie a pozornosť venovanú rizikám, nielen samotnému číslu Hb.</p>
 
 <hr>
 

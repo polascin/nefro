@@ -153,7 +153,7 @@ $articles[] = [
 
 <p>Pegcetakoplan bol dobre tolerovaný, väčšina nežiaducich udalostí bola mierna až stredne závažná a nezaznamenalo sa žiadne prerušenie liečby, vysadenie ani úmrtie. [3]</p>
 
-<p>Pri interpretácii treba zachovať mieru. Ide o <strong>štúdiu fázy 2 s trinástimi pacientmi</strong>, otvoreným dizajnom a <strong>histologickým náhradným ukazovateľom</strong> v 12. týždni. Z takého dizajnu nemožno odvodiť vplyv na dlhodobé prežívanie štepu ani optimálny čas začatia liečby. Výsledky sú povzbudivé a prvýkrát priamo získané v transplantovanej populácii, nie sú však dôkazom o tvrdých klinických výsledkoch.</p>
+<p>Pri interpretácii treba zachovať mieru. Ide o <strong>štúdiu fázy 2 s trinástimi pacientmi</strong>, otvoreným dizajnom a <strong>histologickým náhradným ukazovateľom</strong> v 12. týždni. Z takého dizajnu nemožno odvodiť vplyv na dlhodobé prežívanie štepu ani optimálny čas začatia liečby. Výsledky sú povzbudivé a prvýkrát pochádzajú priamo z transplantovanej populácie, nedokazujú však účinok na tvrdé klinické ukazovatele.</p>
 
 <p>Pri indikácii inhibície komplementu treba osobitne riešiť riziko závažných infekcií, vakcináciu a podľa konkrétneho prípravku aj antimikrobiálnu profylaxiu. U transplantovaného pacienta sa tieto riziká pripočítavajú k účinku udržiavacej imunosupresie. Klinické výsledky štúdie, registrovaná indikácia, dostupnosť a úhrada lieku sú štyri odlišné otázky – pred použitím treba overiť aktuálny súhrn charakteristických vlastností lieku a miestne podmienky.</p>
 
@@ -177,7 +177,7 @@ $articles[] = [
 
 <p>Publikované odpovede na liečbu sú veľmi variabilné. Štúdie sa líšia definíciou remisie, načasovaním a intenzitou liečby aj doplnkovou imunosupresiou. Dosiahnutie remisie je spojené s priaznivejšou prognózou štepu, ale observačné výsledky neumožňujú spoľahlivo určiť prínos jednotlivých zložiek kombinovanej liečby. [2]</p>
 
-<p>Pri <strong>profylaxii</strong> je stanovisko prehľadu jednoznačnejšie, než sa niekedy uvádza: <strong>žiadna štúdia nezistila významný účinok profylaktickej plazmaferézy na rekurentnú FSGS</strong> a autori odporúčajú predtransplantačnej liečbe zameranej na prevenciu rekurencie <strong>vyhnúť sa</strong>. [2] Nejde teda len o „nedostatočne doložený“ postup, ale o postup, proti ktorému sa prehľad explicitne vyslovuje. Individuálne rozhodnutie pri mimoriadne vysokom riziku patrí do transplantačného centra.</p>
+<p>Pri <strong>profylaxii</strong> je stanovisko prehľadu jednoznačnejšie, než sa niekedy uvádza: <strong>žiadna štúdia nezistila významný účinok profylaktickej plazmaferézy na rekurentnú FSGS</strong> a autori odporúčajú predtransplantačnej liečbe zameranej na prevenciu rekurencie <strong>vyhnúť sa</strong>. [2] Nejde teda len o „nedostatočne doložený“ postup, ale o postup, proti ktorému sa prehľad výslovne stavia. Individuálne rozhodnutie pri mimoriadne vysokom riziku patrí do transplantačného centra.</p>
 
 <h3>Protilátky proti nefrínu sú sľubný smer, nie univerzálny test</h3>
 

@@ -88,7 +88,7 @@ $articles[] = [
 
 <p>Analýza neporovnávala transplantovaných pacientov s klinicky podobnými pacientmi, ktorí zostali na dialýze. Pacient s periférnym artériovým ochorením môže mať po transplantácii horšiu prognózu než príjemca bez tohto ochorenia a napriek tomu môže z transplantácie profitovať v porovnaní s pokračovaním dialyzačnej liečby.</p>
 
-<p>Štúdia preto odpovedá na otázku, ktoré charakteristiky boli spojené s prognózou už transplantovaných starších pacientov. Neurčuje, komu sa transplantácia v porovnaní s netransplantovaním „neoplatí“, a nevytvára automatické vylučovacie kritérium.</p>
+<p>Štúdia preto odpovedá na otázku, ktoré charakteristiky boli spojené s prognózou už transplantovaných starších pacientov. Neurčuje, komu sa transplantácia v porovnaní s ponechaním na dialýze „neoplatí“, a nevytvára automatické vylučovacie kritérium.</p>
 
 <h2>Čo periférne artériové ochorenie mení v predtransplantačnom hodnotení</h2>
 
@@ -98,7 +98,7 @@ $articles[] = [
 
 <p>Závažné aortoiliakálne alebo distálne cievne ochorenie podľa KDIGO samo osebe nie je dôvodom pacienta z transplantácie vylúčiť. Riziko progresie treba prebrať s pacientom. Pri nehojacej sa rane končatiny s aktívnou infekciou sa má transplantácia odložiť do vyriešenia infekcie. [2]</p>
 
-<p>V praxi treba rozlíšiť asymptomatické ochorenie, klaudikácie, pokojovú bolesť, nehojace sa defekty, predchádzajúcu revaskularizáciu a anatomické postihnutie aortoiliackeho riečiska. Neprítomnosť klaudikácií nevylučuje významné ochorenie u človeka s nízkou mobilitou alebo diabetickou neuropatiou. Hodnotenie mobility, sebestačnosti, výživy, kognitívnych funkcií a sociálnej podpory dopĺňa informáciu, ktorú vek ani diagnostický kód neposkytujú.</p>
+<p>V praxi treba rozlíšiť asymptomatické ochorenie, klaudikácie, pokojovú bolesť, nehojace sa defekty, predchádzajúcu revaskularizáciu a anatomické postihnutie aortoiliakálneho riečiska. Neprítomnosť klaudikácií nevylučuje významné ochorenie u človeka s nízkou mobilitou alebo diabetickou neuropatiou. Hodnotenie mobility, sebestačnosti, výživy, kognitívnych funkcií a sociálnej podpory dopĺňa informáciu, ktorú vek ani diagnostický kód neposkytujú.</p>
 
 <p>Predchádzajúce observačné práce tiež spájali periférne cievne ochorenie s horším prežívaním pacienta a štepu po transplantácii. [3,4] Ani súhrn týchto asociácií však nepreukazuje, že rutinná preventívna revaskularizácia znižuje mortalitu, ani neurčuje jednotný antitrombotický režim. Liečba musí vychádzať z konkrétnej cievnej indikácie, krvácavého rizika, funkcie obličiek a plánovaného výkonu.</p>
 

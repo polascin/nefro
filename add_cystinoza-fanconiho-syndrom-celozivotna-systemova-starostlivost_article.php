@@ -26,7 +26,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Nefropatická cystinóza je zriedkavé lyzozómové ochorenie a hlavná dedičná príčina Fanconiho syndrómu u detí. Včasná cielená liečba cysteamínom chráni funkciu obličiek a vyžaduje pokračovanie aj po transplantácii.',
     'content'      => <<<'HTML'
-<p>Polyúria, neprospievanie, normoglykemická glukozúria a hypofosfatemická rachitída u dojčaťa či malého dieťaťa predstavujú varovné príznaky renálneho Fanconiho syndrómu. Jednou z jeho najzávažnejších a najčastejších dedičných príčin je infantilná nefropatická cystinóza. Včasné rozpoznanie a okamžité začatie špecifickej liečby zásadne menia prirodzený priebeh tohto ochorenia, hoci samotnú genetickú príčinu v súčasnosti neodstraňujú.</p>
+<p>Polyúria, neprospievanie, normoglykemická glukozúria a hypofosfatemická rachitída u dojčaťa či malého dieťaťa sú varovnými príznakmi renálneho Fanconiho syndrómu. Jednou z jeho najzávažnejších a najčastejších dedičných príčin je infantilná nefropatická cystinóza. Včasné rozpoznanie a okamžité začatie špecifickej liečby zásadne menia prirodzený priebeh ochorenia, hoci jeho genetickú príčinu zatiaľ neodstraňujú.</p>
 
 <p>Cystinóza je autozómovo recesívne lyzozómové ochorenie charakterizované patologickým hromadením aminokyseliny cystínu vo vnútri buniek. Hoci obličky bývajú prvým klinicky nápadným miestom poškodenia, ochorenie zďaleka nepostihuje iba vylučovaciu sústavu. Postupne zasahuje oči, endokrinné žľazy, kostrové svaly a centrálny nervový systém. Komplexná starostlivosť sa preto nekončí dialýzou ani úspešnou transplantáciou obličky, ale sprevádza pacienta po celý život. [1,2]</p>
 
@@ -46,13 +46,13 @@ $articles[] = [
 
 <p>Z biochemického hľadiska je dôležité odlišovať cysteín a cystín. Cysteín je jednotlivá aminokyselina s voľnou tiolovou skupinou (-SH). Cystín vzniká oxidáciou dvoch molekúl cysteínu spojených disulfidovým mostíkom (-S-S-). Pri cystinóze je defekt prísne viazaný na membránový lyzozómový transport cystínu, nejde o následok nadmerného príjmu cystínu či cysteínu v potrave.</p>
 
-<p>Dlhodobý výskum ukazuje, že samotné mechanické ukladanie kryštálov nevysvetľuje celú komplexnú patogenézu bunkového poškodenia. Strata funkcie cystinozínu vedie k poruchám vnútrobunkového vezikulárneho transportu, zlyhaniu autofágie, narušeniu signálnej dráhy mTORC1, oxidačnému stresu a skorej apoptóze. V bunkách proximálneho tubulu dochádza k strate a zníženej expresii multiligandových endocytických receptorov megalínu (LRP2) a kubilínu (CUBN), ktoré zabezpečujú spätné vychytávanie filtrovaných bielkovín. Progresívna dediferenciácia a atrofia buniek vedú k typickému histologickému obrazu stenčenia a skrátenia počiatočného segmentu proximálneho tubulu, označovanému ako deformita labutieho krku (swan-neck deformity). [1]</p>
+<p>Výskum ukazuje, že samotné mechanické ukladanie kryštálov poškodenie buniek úplne nevysvetľuje. Strata funkcie cystinozínu vedie k poruchám vnútrobunkového vezikulárneho transportu, zlyhaniu autofágie, narušeniu signálnej dráhy mTORC1, oxidačnému stresu a skorej apoptóze. V bunkách proximálneho tubulu dochádza k strate a zníženej expresii multiligandových endocytických receptorov megalínu (LRP2) a kubilínu (CUBN), ktoré zabezpečujú spätné vychytávanie filtrovaných bielkovín. Progresívna dediferenciácia a atrofia buniek vedú k typickému histologickému obrazu stenčenia a skrátenia počiatočného segmentu proximálneho tubulu, označovanému ako deformita labutieho krku (swan-neck deformity). [1]</p>
 
 <p>Preto je nesprávne opisovať Fanconiho syndróm iba ako mechanické poškodenie mitochondrií kryštálmi s náhlym vypnutím tvorby ATP. Energetický metabolizmus bunky je síce narušený, no ide o mnohovrstvový biologický proces zahŕňajúci poškodenie apikálnych kotransportérov, cytoskeletu a lyzozómovej integrity.</p>
 
 <h2>Klinické spektrum: tri fenotypy jedného ochorenia</h2>
 
-<p>Fenotypy cystinózy tvoria spojité spektrum závažnosti dané zvyčajne zvyškovej aktivitou cystinozínu. Tradičné klinické rozdelenie na tri formy pomáha pri orientácii, jednotlivé fenotypy sa však môžu v hraničných prípadoch prekrývať. [1]</p>
+<p>Fenotypy cystinózy tvoria spojité spektrum závažnosti, ktoré zvyčajne určuje zvyšková aktivita cystinozínu. Tradičné klinické rozdelenie na tri formy pomáha pri orientácii, jednotlivé fenotypy sa však môžu v hraničných prípadoch prekrývať. [1]</p>
 
 <div class="table-responsive" role="region" aria-label="Klinické formy cystinózy a ich charakteristika" tabindex="0">
 <table>
@@ -83,7 +83,7 @@ $articles[] = [
 </table>
 </div>
 
-<p>Označenie očnej formy ako benígnej je nevhodné. Hoci obličky nie sú postihnuté, fotofóbia, blefarospazmus a recidivujúce erózie rohovky môžu výrazne obmedzovať kvalitu života a zrakové funkcie. Navyše, záchyt diagnózy v dospelosti automaticky neznamená očnú formu; môže ísť o nerozpoznanú juvenilnú formu so zlyhávaním obličiek, ktorá vyžaduje dôkladné nefrologické vyšetrenie. [1,2]</p>
+<p>Označenie očnej formy ako benígnej je nevhodné. Hoci obličky nie sú postihnuté, fotofóbia, blefarospazmus a recidivujúce erózie rohovky môžu výrazne obmedzovať kvalitu života a zrakové funkcie. Ani diagnóza zachytená v dospelosti automaticky neznamená očnú formu; môže ísť o nerozpoznanú juvenilnú formu so zlyhávaním obličiek, ktorá vyžaduje dôkladné nefrologické vyšetrenie. [1,2]</p>
 
 <h2>Renálny Fanconiho syndróm: zachovaná filtrácia pri strate reabsorpcie</h2>
 
@@ -100,7 +100,7 @@ $articles[] = [
   <li><strong>Straty vody a elektrolytov:</strong> osmotická diuréza a znížené vstrebávanie sodíka vedú k polyúrii, kompenzačnej polydipsii, epizodickej hypovolémii, sekundárnemu hyperaldosteronizmu a hypokaliémii. [1,2]</li>
 </ul>
 
-<p>Dôležitým úskalím je skutočnosť, že v úvode ochorenia býva sérový kreatinín úplne normálny. Glomerulová filtrácia môže byť dokonca prechodne zvýšená v dôsledku tubuloglomerulárneho feedbacku a hyperfiltrácie. Normálny kreatinín a neprítomnosť oligúrie preto v žiadnom prípade nevylučujú závažnú tubulopatiu ohrozujúcu život dieťaťa. [1]</p>
+<p>Úskalím je, že na začiatku ochorenia býva sérový kreatinín úplne normálny. Glomerulová filtrácia môže byť dokonca prechodne zvýšená v dôsledku tubuloglomerulárneho feedbacku a hyperfiltrácie. Normálny kreatinín a neprítomnosť oligúrie preto v žiadnom prípade nevylučujú závažnú tubulopatiu ohrozujúcu život dieťaťa. [1]</p>
 
 <p>Terminologická poznámka: Renálny Fanconiho syndróm sa nesmie zamieňať s Fanconiho anémiou. Fanconiho anémia je odlišný dedičný syndróm s poruchou reparácie DNA, aplastickou anémiou, vrodenými anomáliami a vysokým rizikom hematologických malignít.</p>
 
@@ -114,7 +114,7 @@ $articles[] = [
 
 <h2>Diagnostický algoritmus: leukocyty, genetika a štrbinová lampa</h2>
 
-<p>Pri klinickom podozrení na cystinózu stojí diagnostika na troch nezávislých pilieroch. Každý z nich má v diagnostickom postupe presne vymedzené miesto. [1]</p>
+<p>Pri klinickom podozrení na cystinózu stojí diagnostika na troch nezávislých pilieroch, z ktorých každý má v postupe vymedzené miesto. [1]</p>
 
 <ol>
   <li><strong>Stanovenie množstva cystínu v leukocytoch:</strong> predstavuje zlatý štandard biochemického potvrdenia a následného monitorovania účinnosti liečby. Vyšetrenie vyžaduje špecializované laboratórium a validovanú metodiku (HPLC alebo tandemovú hmotnostnú spektrometriu LC-MS/MS). U neliečených pacientov s infantilnou formou presahuje koncentrácia zvyčajne 2 až 5 nmol polovičného cystínu na miligram bunkového proteínu (norma u zdravých osôb je pod 0,2 nmol). Cieľom účinnej liečby cysteamínom je udržiavať hladinu pod 1,0 nmol polovičného cystínu na miligram proteínu. Výsledok závisí od typu buniek (zmiešané leukocyty verzus purifikované granulocyty) a od presného načasovania odberu krvi vo vzťahu k užitej dávke.</li>
@@ -124,7 +124,7 @@ $articles[] = [
 
 <p>Kľúčové diagnostické varovanie: Kryštály v rohovke sa biomikroskopicky objavujú spravidla až medzi 12. a 18. mesiacom života. U dojčaťa vo veku 4 až 8 mesiacov s plne rozvinutým Fanconiho syndrómom býva nález na rohovke ešte negatívny. <strong>Negatívne vyšetrenie štrbinovou lampou v prvom roku života cystinózu nevylučuje</strong> a nesmie oddialiť genetické vyšetrenie ani stanovenie leukocytového cystínu. [1]</p>
 
-<p>Pri potvrdení diagnózy je nevyhnutné genetické poradenstvo pre celú rodinu. Pri autozómovo recesívnej dedičnosti je riziko postihnutia ďalšieho dieťaťa u rodičov prenášačov 25 % pri každom jednom tehotenstve. Vyšetrenie má zahŕňať aj narodených súrodencov pacienta.</p>
+<p>Pri potvrdení diagnózy je nevyhnutné genetické poradenstvo pre celú rodinu. Pri autozómovo recesívnej dedičnosti je riziko postihnutia ďalšieho dieťaťa u rodičov prenášačov 25 % pri každom tehotenstve. Vyšetrenie má zahŕňať aj narodených súrodencov pacienta.</p>
 
 <h2>Cystinóza verzus cystinúria: zásadné rozdiely v patofyziológii a liečbe</h2>
 
@@ -219,7 +219,7 @@ $articles[] = [
 
 <h2>Transplantácia obličky a celoživotný multidisciplinárny manažment dospelých</h2>
 
-<p>Historický prirodzený priebeh neliečenej infantilnej cystinózy viedol k zlyhaniu obličiek okolo deviateho až desiateho roku života. Dnešné deti, diagnostikované v dojčenskom veku a poctivo liečené cysteamínom, si dokážu zachovať vlastné obličky až do dospelosti. Keď však terminálne zlyhanie nastane, optimálnou metódou voľby je transplantácia obličky. [1,2]</p>
+<p>Neliečená infantilná cystinóza viedla k zlyhaniu obličiek okolo deviateho až desiateho roku života. Dnešné deti, diagnostikované v dojčenskom veku a dôsledne liečené cysteamínom, si dokážu zachovať vlastné obličky až do dospelosti. Keď však terminálne zlyhanie nastane, optimálnou metódou voľby je transplantácia obličky. [1,2]</p>
 
 <p>Transplantovaný štep pochádza od darcu s funkčným génom <em>CTNS</em>. V transplantovanej obličke sa preto Fanconiho syndróm nikdy neobnoví. Hoci sa v interstíciu štepu môžu objaviť kryštály cystínu z migrujúcich makrofágov príjemcu, funkciu štepu to nepoškodzuje.</p>
 
@@ -250,7 +250,7 @@ $articles[] = [
 
 <p>Infantilná nefropatická cystinóza je najčastejšou dedičnou príčinou renálneho Fanconiho syndrómu u malých detí. Včasné rozpoznanie proximálnej tubulopatie pred rozvojom zlyhania obličiek a okamžité začatie liečby cysteamínom zásadne menia prežívanie a kvalitu života pacienta.</p>
 
-<p>Liečba cystinózy stojí na troch neoddeliteľných pilieroch: systémovom znižovaní vnútrobunkového cystínu cysteamínom, lokálnej očnej terapii rohovkovými kvapkami a dynamickej substitúcii tubulárnych strát. Tento komplexný prístup sa nesmie prerušiť ani po úspešnej transplantácii obličky.</p>
+<p>Liečba cystinózy stojí na troch neoddeliteľných pilieroch: systémovom znižovaní vnútrobunkového cystínu cysteamínom, lokálnej očnej terapii kvapkami s cysteamínom a dynamickej substitúcii tubulárnych strát. Tento komplexný prístup sa nesmie prerušiť ani po úspešnej transplantácii obličky.</p>
 
 <hr>
 

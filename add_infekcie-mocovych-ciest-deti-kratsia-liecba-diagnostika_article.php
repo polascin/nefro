@@ -61,9 +61,9 @@ $articles[] = [
 
 <p>Technický report AAP definuje infekciu pomocou kombinácie zápalového nálezu v moči, rastu jedného uropatogénu a spôsobu odberu. Pozitívna kultivácia sama osebe môže predstavovať skutočnú infekciu, asymptomatickú bakteriúriu alebo kontamináciu. [2]</p>
 
-<p>Po dostupnosti kultivácie podporuje vysokú pravdepodobnosť infekcie u dojčiat mladších ako dva mesiace nález najmenej 5 leukocytov v zornom poli pri veľkom zväčšení alebo aspoň stopovej leukocytovej esterázy. U detí od dvoch mesiacov do piatich rokov je hranicou najmenej 5 leukocytov v zornom poli alebo leukocytová esteráza najmenej 1+. Súčasne sa vyžaduje rast jedného patogénu najmenej 10 000 CFU/ml z katetrizovaného moču alebo suprapubickej aspirácie, prípadne najmenej 100 000 CFU/ml zo správne odobratého stredného prúdu moču. [2]</p>
+<p>Ak je výsledok kultivácie k dispozícii, u dojčiat mladších ako dva mesiace podporuje vysokú pravdepodobnosť infekcie nález najmenej 5 leukocytov v zornom poli pri veľkom zväčšení alebo aspoň stopovej leukocytovej esterázy. U detí od dvoch mesiacov do piatich rokov je hranicou najmenej 5 leukocytov v zornom poli alebo leukocytová esteráza najmenej 1+. Súčasne sa vyžaduje rast jedného patogénu najmenej 10 000 CFU/ml z katetrizovaného moču alebo suprapubickej aspirácie, prípadne najmenej 100 000 CFU/ml zo správne odobratého stredného prúdu moču. [2]</p>
 
-<p>Pred dostupnosťou kultivácie používa AAP pri rozhodovaní o pravdepodobnej infekcii citlivejšie vekovo špecifické prahy. U detí od dvoch mesiacov ide o najmenej 10 leukocytov v zornom poli alebo leukocytovú esterázu 2+. Výsledok treba interpretovať spolu s klinickou pravdepodobnosťou a technikou laboratórneho vyšetrenia. [2]</p>
+<p>Kým výsledok kultivácie nie je známy, AAP pri rozhodovaní o pravdepodobnej infekcii používa citlivejšie vekovo špecifické prahy. U detí od dvoch mesiacov ide o najmenej 10 leukocytov v zornom poli alebo leukocytovú esterázu 2+. Výsledok treba interpretovať spolu s klinickou pravdepodobnosťou a technikou laboratórneho vyšetrenia. [2]</p>
 
 <p>Moč zo zberného vrecka sa nemá používať na kultivačné potvrdenie infekcie u dieťaťa, ktoré nedokáže poskytnúť čistý stredný prúd. Negatívny skríningový nález môže pomôcť vyhnúť sa katetrizácii, pozitívny nález z vrecka však vyžaduje vhodne odobratú vzorku na kultiváciu. [2]</p>
 
@@ -93,7 +93,7 @@ $articles[] = [
 
 <p>Odporúčanie vzniklo metódou GRADE a sprevádzajú ho tri technické reporty. Obsahuje osem kľúčových odporúčaní, z toho dve silné a šesť podmienečných, a štyri vyhlásenia správnej praxe. Istota dôkazov pri jednotlivých odporúčaniach siaha od nízkej po veľmi nízku. [1]</p>
 
-<p>To je dôležité najmä pri dĺžke a spôsobe podávania antibiotík. Kratšie režimy sú rozumným smerovaním, ale presnosť odhadov a priama použiteľnosť dôkazov nie sú rovnaké vo všetkých vekových a rizikových skupinách. Silné odporúčanie perorálnej liečby pri veľmi nízkej istote dôkazov vyjadruje aj zohľadnenie nežiaducich účinkov hospitalizácie a parenterálnej liečby, uskutočniteľnosti a preferencií rodiny. Nie je to tvrdenie, že dôkazový podklad má vysokú istotu.</p>
+<p>To je dôležité najmä pri dĺžke a spôsobe podávania antibiotík. Kratšie režimy sú rozumným smerom, ale presnosť odhadov a priama použiteľnosť dôkazov nie sú rovnaké vo všetkých vekových a rizikových skupinách. Silné odporúčanie perorálnej liečby pri veľmi nízkej istote dôkazov vyjadruje aj zohľadnenie nežiaducich účinkov hospitalizácie a parenterálnej liečby, uskutočniteľnosti a preferencií rodiny. Nie je to tvrdenie, že dôkazový podklad má vysokú istotu.</p>
 
 <h2>Klinické posolstvo</h2>
 

@@ -19,9 +19,9 @@ $articles[] = [
     'is_top' => 0,
     'excerpt' => 'Elektronická OČR zjednodušuje potvrdzovanie potreby starostlivosti, nezakladá však automaticky nárok na ošetrovné. Prehľad kompetencií nefrológa, úskalí spätného vystavenia a pravidiel dokumentácie.',
     'content' => <<<'HTML'
-<p>Elektronická OČR (eOČR) predstavuje od 1. augusta 2026 ďalší krok v digitalizácii potvrdzovania dočasnej práceneschopnosti a potreby starostlivosti v systéme eZdravie. Pre lekára zjednodušuje komunikáciu s inštitúciami, no v praxi odhaľuje časté nepochopenie hraníc medzi medicínskym potvrdením a sociálnym zabezpečením. Lekár potvrdzuje výlučne existenciu zdravotného stavu vyžadujúceho celodenné ošetrovanie na strane pacienta, sám nerozhoduje o priznaní ani výplate peňažnej dávky ošetrovného.</p>
+<p>Elektronická OČR (eOČR) je od 1. augusta 2026 ďalším krokom v digitalizácii potvrdzovania dočasnej práceneschopnosti a potreby starostlivosti v systéme eZdravie. Lekárovi zjednodušuje komunikáciu s inštitúciami, v praxi však ukazuje, ako často sa zamieňa medicínske potvrdenie so sociálnym zabezpečením. Lekár potvrdzuje iba to, že zdravotný stav pacienta vyžaduje celodenné ošetrovanie. O priznaní ani výplate ošetrovného nerozhoduje.</p>
 
-<p>V nefrologickej praxi prináša eOČR špecifické situácie. Nefrológ lieči pacientov po akútnych dekompenzáciách, hospitalizovaných chorých s ťažkým renálnym zlyhaním, ale aj stabilných chronicky dialyzovaných pacientov či ľudí v terminálnych štádiách ochorenia. Zvládnutie správneho zaradenia prípadu (krátkodobá starostlivosť, dlhodobá starostlivosť po hospitalizácii alebo paliatívny režim) chráni pracovisko pred zbytočnými spormi a rodine pacienta šetrí čas pri uplatňovaní nárokov. [1,2]</p>
+<p>V nefrologickej praxi prináša eOČR špecifické situácie. Nefrológ lieči pacientov po akútnych dekompenzáciách, hospitalizovaných chorých s ťažkým renálnym zlyhaním, ale aj stabilných chronicky dialyzovaných pacientov či ľudí v terminálnych štádiách ochorenia. Správne zaradenie prípadu (krátkodobá starostlivosť, dlhodobá starostlivosť po hospitalizácii alebo paliatívny režim) chráni pracovisko pred zbytočnými spormi a rodine pacienta šetrí čas pri uplatňovaní nárokov. [1,2]</p>
 
 <figure>
   <picture>
@@ -88,15 +88,15 @@ $articles[] = [
 
 <p>V nefrológii sa táto situácia týka najmä pacientov s výraznou stratou sebestačnosti po ťažkom priebehu akútneho poškodenia obličiek, urosepse, kardiorenálnej dekompenzácii či po rozsiahlych cievnych a urologických rekonštrukciách. Rozhodujúci nie je samotný názov diagnózy, ale objektívne preukázaná neschopnosť samostatnej existencie v domácom prostredí.</p>
 
-<p>Z praktického hľadiska nemožno očakávať, že ak nemocnica dlhodobú eOČR pri prepustení nevystaví, ambulantný nefrológ ju dodatočne založí. Ambulantný špecialista nemá zákonnú kompetenciu otvárať dlhodobú eOČR viazanú na hospitalizáciu. Rodinu je preto potrebné upozorniť na vyriešenie tejto náležitosti ešte pred opustením oddelenia.</p>
+<p>Z praktického hľadiska nemožno očakávať, že ak nemocnica dlhodobú eOČR pri prepustení nevystaví, ambulantný nefrológ ju dodatočne založí. Ambulantný špecialista nemá zákonnú kompetenciu otvárať dlhodobú eOČR viazanú na hospitalizáciu. Rodinu preto treba upozorniť, aby túto vec riešila ešte pred odchodom pacienta z oddelenia.</p>
 
 <h2>Paliatívny režim verzus bežná chronická choroba obličiek a dialýza</h2>
 
-<p>Nefrológia patrí medzi špecializačné odbory, ktoré môžu vystaviť dlhodobú eOČR v režime paliatívnej starostlivosti bez podmienky predchádzajúcej hospitalizácie. Tento inštitút však nemožno zovšeobecňovať na každého nefrologického pacienta. [1,2]</p>
+<p>Nefrológia patrí medzi špecializačné odbory, ktoré môžu vystaviť dlhodobú eOČR v režime paliatívnej starostlivosti bez podmienky predchádzajúcej hospitalizácie. Túto možnosť však nemožno uplatniť u každého nefrologického pacienta. [1,2]</p>
 
 <p>Sociálna poisťovňa definuje paliatívny prípad pre účely ošetrovného ako stav pacienta v terminálnom štádiu ochorenia alebo v štádiu ochorenia na konci života. Tento administratívny a posudkový rámec je podstatne užší než moderný koncept renálnej podpornej starostlivosti (kidney supportive care). Podporná starostlivosť podľa medzinárodných odporúčaní KDIGO začína podstatne skôr, zameriava sa na manažment symptómov, plánovanie budúcej starostlivosti a kvalitu života popri aktívnej liečbe. Administratívna paliatívna eOČR sa však viaže na pokročilé terminálne zlyhávanie s nepriaznivou krátkodobou prognózou. [2,6]</p>
 
-<p>Samotná skutočnosť, že pacient podstupuje hemodialýzu alebo má chronickú chorobu obličiek štádia G4 či G5, neznamená automatické splnenie podmienok paliatívnej eOČR. Diagnostický kód N18.5 (terminálne zlyhanie obličiek) je biochemickou a nefrologickou kategóriou, nie dôkazom prebiehajúcej terminálnej agónie či bezprostredného konca života. Pacient na udržiavacej dialýze, ktorý je mimo dialyzačných procedúr mobilný a schopný sebaobsluhy, nespĺňa kritériá celodennej paliatívnej opatery.</p>
+<p>Samotná skutočnosť, že pacient podstupuje hemodialýzu alebo má chronickú chorobu obličiek štádia G4 či G5, neznamená automatické splnenie podmienok paliatívnej eOČR. Diagnostický kód N18.5 (terminálne zlyhanie obličiek) je biochemickou a nefrologickou kategóriou, nie dôkazom terminálnej fázy či bezprostredného konca života. Pacient na udržiavacej dialýze, ktorý je mimo dialyzačných procedúr mobilný a schopný sebaobsluhy, nespĺňa kritériá celodennej paliatívnej opatery.</p>
 
 <p>Paliatívna eOČR je v nefrológii opodstatnená pri:</p>
 
@@ -135,13 +135,13 @@ $articles[] = [
 
 <p>Zároveň však NCZI otvorene konštatuje, že takýto postup sa odlišuje od striktného znenia súčasnej právnej úpravy a pripravuje sa legislatívne zosúladenie. Zákon č. 576/2004 Z. z. aj zákon č. 461/2003 Z. z. primárne predpokladajú potvrdenie odo dňa zistenia potreby ošetrovania pri reálnom vyšetrení pacienta. [1,4,5]</p>
 
-<p>Technická možnosť potvrdiť upozornenie v ambulantnom softvéri nezakladá automatické zákonné oprávnenie pre lekára. Odôvodnenie v dekurze je nevyhnutné, no pri dôslednej revíznej kontrole neodstraňuje rozpor so zákonom, ak lekár potvrdil stav spätne len na základe telefonátu či dodatočnej žiadosti príbuzného bez predošlého kontaktu s pacientom.</p>
+<p>To, že ambulantný softvér umožní upozornenie potvrdiť, ešte nezakladá zákonné oprávnenie lekára. Odôvodnenie v dekurze je nevyhnutné, no pri dôslednej revíznej kontrole neodstraňuje rozpor so zákonom, ak lekár potvrdil stav spätne len na základe telefonátu či dodatočnej žiadosti príbuzného bez predošlého kontaktu s pacientom.</p>
 
 <p>Osobitnú situáciu predstavuje objektívny technický výpadok eZdravia. Ak lekár pacienta v daný deň riadne vyšetril, zdokumentoval potrebu starostlivosti v lokálnom nemocničnom alebo ambulantnom systéme a eOČR odoslal do centrálneho systému dodatočne po odstránení výpadku, nejde o neoprávnené spätné posúdenie, ale o oneskorený prenos dát z objektívnych príčin.</p>
 
 <h2>Manažment prípadu: kontrola, pokračovanie a ukončenie</h2>
 
-<p>Dátum predpokladaného trvania eOČR predstavuje termín, ku ktorému má lekár zdravotný stav pacienta prehodnotiť. Uplynutie tohto dátumu samo osebe prípad v eZdraví automaticky neuzatvára. [1]</p>
+<p>Dátum predpokladaného trvania eOČR je termín, ku ktorému má lekár zdravotný stav pacienta prehodnotiť. Uplynutie tohto dátumu samo osebe prípad v eZdraví automaticky neuzatvára. [1]</p>
 
 <p>Ak medicínska potreba celodennej opatery pretrváva, ošetrujúci lekár pred vypršaním lehoty aktualizuje existujúci záznam novým termínom predpokladaného trvania. Ak dôvody na starostlivosť pominuli, lekár zapíše ukončenie eOČR. Nový prípad sa nevytvára ani vtedy, ak pacienta preberá iný lekár (napríklad prepustenie z nefrologického oddelenia k všeobecnému lekárovi). [1]</p>
 
@@ -157,7 +157,7 @@ $articles[] = [
 
 <h2>Najčastejšie chyby v praxi a odporúčania pre nefrologické pracoviská</h2>
 
-<p>Pri rutinnej prevádzke nefrologických ambulancií a oddelení pomáha dodržiavanie niekoľkých zásad predísť administratívnym zlyhaniam:</p>
+<p>Väčšine administratívnych chýb na nefrologických ambulanciách a oddeleniach predíde niekoľko zásad:</p>
 
 <ul>
   <li><strong>Vystavenie na príbuzného namiesto pacienta:</strong> eOČR sa vystavuje zásadne na rodné číslo ošetrovaného pacienta. Meno ošetrujúceho rodinného príslušníka lekár do eZdravia nezadáva.</li>

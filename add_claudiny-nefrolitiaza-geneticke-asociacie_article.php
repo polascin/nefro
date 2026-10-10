@@ -75,7 +75,7 @@ $articles[] = [
 
 <p><strong>Vysoké pomery šancí treba posudzovať spolu s veľmi malým počtom nositeľov.</strong> Odhad založený na troch nositeľoch je mimoriadne neistý a jeho veľkosť môže podstatne zmeniť jediný ďalší prípad alebo kontrola. Navyše ide o pomer šancí, nie o absolútne ani celoživotné riziko.</p>
 
-<p>Prínos štúdie spočíva predovšetkým v podpore hypotézy, že niektoré heterozygotné varianty <em>CLDN16</em> môžu ovplyvňovať náchylnosť na nefrolitiázu aj bez bialelického genotypu spôsobujúceho FHHNC. Veľkosť účinku, penetrancia a reprodukovateľnosť však vyžadujú potvrdenie v nezávislých súboroch.</p>
+<p>Štúdia predovšetkým podporuje hypotézu, že niektoré heterozygotné varianty <em>CLDN16</em> môžu ovplyvňovať náchylnosť na nefrolitiázu aj bez bialelického genotypu spôsobujúceho FHHNC. Veľkosť účinku, penetrancia a reprodukovateľnosť však vyžadujú potvrdenie v nezávislých súboroch.</p>
 
 <h2>CLDN19: miernejšia asociácia a minerálový metabolizmus</h2>
 
@@ -83,13 +83,13 @@ $articles[] = [
 
 <p>Tieto výsledky podporujú možnú súvislosť so širšou reguláciou minerálového metabolizmu. Samy osebe však nedokazujú renálne straty fosfátov, osteomaláciu ani konkrétny mechanizmus tvorby konkrementov. Štatisticky významná priemerná zmena laboratórneho ukazovateľa nemusí znamenať klinicky významnú poruchu u jednotlivého nositeľa.</p>
 
-<p>Pri súhrnnom teste variantov génu <em>CLDN19</em> asociácia po odstránení p.Arg200Gln zanikla. Génový výsledok teda zrejme výrazne ovplyvňoval tento konkrétny variant, nie všeobecný účinok všetkých hodnotených variantov génu.</p>
+<p>Pri súhrnnom teste variantov génu <em>CLDN19</em> asociácia po odstránení p.Arg200Gln zanikla. Génový výsledok teda zrejme odrážal najmä tento konkrétny variant, nie všeobecný účinok všetkých hodnotených variantov génu.</p>
 
 <h2>Ďalšie lokusy rozširujú výskumnú mapu nefrolitiázy</h2>
 
 <p>Exómová analýza priniesla 43 nových významných asociácií kódujúcich variantov. V imputovaných údajoch autori identifikovali 16 nezávislých asociovaných variantov, z ktorých 13 označili za nové. Signály sa nachádzali aj v oblastiach génov <em>CLDN2</em>, <em>CLDN10</em>, <em>CLDN11</em>, <em>CLDN18</em> a v oblasti <em>CLDN22–CLDN24</em>; potvrdila sa aj známa asociácia s <em>CLDN14</em>. [1]</p>
 
-<p>Tieto výsledky nemožno prekladať ako objav rovnakého počtu nových príčin monogénovej nefrolitiázy. Niektoré varianty ležia mimo kódujúcich oblastí a môžu ovplyvňovať reguláciu génovej expresie; iné môžu iba označovať oblasť vo väzbovej nerovnováhe so skutočným kauzálnym variantom. <strong>Blízkosť variantu ku génu nepreukazuje, že práve tento gén sprostredkúva jeho účinok.</strong></p>
+<p>Tieto výsledky nemožno vykladať ako objav rovnakého počtu nových príčin monogénovej nefrolitiázy. Niektoré varianty ležia mimo kódujúcich oblastí a môžu ovplyvňovať reguláciu génovej expresie; iné môžu iba označovať oblasť vo väzbovej nerovnováhe so skutočným kauzálnym variantom. <strong>Blízkosť variantu ku génu nepreukazuje, že práve tento gén sprostredkúva jeho účinok.</strong></p>
 
 <p>Pri variante v blízkosti <em>CLDN11</em> sa napríklad zistila súvislosť s expresiou génu v tkanive tibiálneho nervu. Takýto nález môže pomôcť formulovať mechanistickú hypotézu, nie je však priamym dôkazom rovnakého regulačného účinku v obličke.</p>
 

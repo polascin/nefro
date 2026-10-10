@@ -39,7 +39,7 @@ $articles[] = [
 
 <p>Ogundare pripomína, že podľa definície DSM-5 spoločensky odlišné správanie ani konflikt jednotlivca so spoločnosťou samy osebe nie sú duševnou poruchou a že štatisticky neobvyklé nie je automaticky patologické. Zdôrazňuje tiež, že diagnóza ovplyvňuje nielen liečbu, ale aj to, ako človek vníma sám seba a ako k nemu pristupuje rodina, zdravotníci či inštitúcie. Pomenovanie podľa neho nie je bezvýznamný úkon. [1]</p>
 
-<p>Z toho nevyplýva potreba stanovovať menej diagnóz za každú cenu. Cieľom je stanovovať ich presnejšie. Sám autor uzatvára, že zložitosť hraníc nie je argumentom proti diagnostike, ale argumentom pre pokoru pri nej. [1]</p>
+<p>Z toho nevyplýva, že treba za každú cenu stanovovať menej diagnóz, ale že ich treba stanovovať presnejšie. Sám autor uzatvára, že zložitosť hraníc nie je argumentom proti diagnostike, ale argumentom pre pokoru pri nej. [1]</p>
 
 <h2>Prečo je rozlišovanie v nefrológii náročné</h2>
 
@@ -96,7 +96,7 @@ $articles[] = [
 
 <p>V dvojito zaslepenej randomizovanej štúdii CAST s 201 pacientmi s chronickou chorobou obličiek G3–G5 bez dialýzy a s veľkou depresívnou poruchou potvrdenou štruktúrovaným rozhovorom nezlepšil sertralín počas 12 týždňov depresívne príznaky v porovnaní s placebom (zmena skóre QIDS-C16 −4,1 oproti −4,2; rozdiel 0,1; 95&nbsp;% CI −1,1 až 1,3). Nevoľnosť či vracanie (22,7&nbsp;% oproti 10,4&nbsp;%) a hnačka (13,4&nbsp;% oproti 3,1&nbsp;%) boli pri sertralíne častejšie. [5]</p>
 
-<p>V otvorenej randomizovanej štúdii ASCEND u 120 hemodialyzovaných pacientov s veľkou depresívnou poruchou alebo dystýmiou viedol sertralín po 12 týždňoch k mierne nižšiemu skóre depresie než kognitívno-behaviorálna terapia poskytovaná priamo v dialyzačnom stredisku (rozdiel −1,84 bodu QIDS-C; 95&nbsp;% CI −3,54 až −0,13), za cenu častejších nežiaducich udalostí. Pacientov s BDI-II ≥&nbsp;15 v štúdii nezaraďovali na základe skríningu: diagnózu bolo potrebné potvrdiť štruktúrovaným rozhovorom MINI podľa kritérií DSM-IV. [6, 7] Štúdia nemala placebovú ani neliečenú kontrolnú skupinu a nehodnotila pretrvávanie účinku. [6]</p>
+<p>V otvorenej randomizovanej štúdii ASCEND u 120 hemodialyzovaných pacientov s veľkou depresívnou poruchou alebo dystýmiou viedol sertralín po 12 týždňoch k mierne nižšiemu skóre depresie než kognitívno-behaviorálna terapia poskytovaná priamo v dialyzačnom stredisku (rozdiel −1,84 bodu QIDS-C; 95&nbsp;% CI −3,54 až −0,13), za cenu častejších nežiaducich udalostí. Pozitívny skríning (BDI-II ≥&nbsp;15) na zaradenie do štúdie nestačil: diagnózu bolo potrebné potvrdiť štruktúrovaným rozhovorom MINI podľa kritérií DSM-IV. [6, 7] Štúdia nemala placebovú ani neliečenú kontrolnú skupinu a nehodnotila pretrvávanie účinku. [6]</p>
 
 <p>Z týchto výsledkov nevyplýva, že antidepresíva sú pri chorobe obličiek neúčinné, ale že ich prínos nemožno automaticky prenášať zo všeobecnej populácie. Pri farmakoterapii treba zohľadniť funkciu obličiek, prípadnú dialyzovateľnosť liečiva, interakcie a profil nežiaducich účinkov. Potreba úpravy dávky sa posudzuje podľa konkrétneho lieku, nie všeobecne podľa toho, že ide o psychofarmakum.</p>
 

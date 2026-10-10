@@ -35,7 +35,7 @@ $articles[] = [
     'content'      => <<<'HTML'
 <figure><a href="img/anemia-ckd-checklist-kdigo-2026-kdoqi.webp" rel="noopener noreferrer" target="_blank"><img src="img/anemia-ckd-checklist-kdigo-2026-kdoqi.webp" alt="Dve svetelné tabule usmernení, ktorých lúče splývajú do jednej cesty vedúcej k obličke" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Medzinárodné odporúčanie a národný komentár sa dajú spojiť do jedného použiteľného postupu.</figcaption></figure>
 
-<p>Tento checklist zhŕňa praktický postup pri anémii u pacientov s CKD podľa KDIGO 2026 a KDOQI US Commentary. Cieľ je jednoduchý: najprv potvrdiť anémiu, potom nájsť a korigovať príčinu, následne cielene riešiť železo a až potom zvažovať ESA alebo HIF-PHI.</p>
+<p>Tento checklist zhŕňa praktický postup pri anémii u pacientov s CKD podľa KDIGO 2026 a KDOQI US Commentary. Poradie krokov: najprv potvrdiť anémiu, potom nájsť a korigovať príčinu, následne cielene riešiť železo a až potom zvažovať ESA alebo HIF-PHI.</p>
 
 <h2>1) Potvrdenie a základné zhodnotenie</h2>
 
@@ -47,7 +47,7 @@ $articles[] = [
   <li><strong>Rýchly klinický screening:</strong> myslieť na infekciu, zápal, krvácanie a nutričný stav.</li>
 </ul>
 
-<p>Ak výsledky a klinika nesedia s typickou CKD anémiou, netreba sa uspokojiť s jedným vysvetlením. V praxi je dôležité myslieť aj na iné príčiny vrátane zápalu, krvácania a ďalších hematologických alebo nutričných faktorov.</p>
+<p>Ak výsledky a klinika nezodpovedajú typickej anémii pri CKD, netreba sa uspokojiť s jedným vysvetlením a treba myslieť aj na iné príčiny vrátane zápalu, krvácania a ďalších hematologických alebo nutričných faktorov.</p>
 
 <h2>2) Železo: laboratórny profil</h2>
 
@@ -60,12 +60,12 @@ $articles[] = [
 <h2>3) Hľadanie korektibilnej príčiny</h2>
 
 <ul>
-  <li>Ak obraz nesedí s CKD anémiou, uvažovať aj o <strong>nutričných príčinách</strong>.</li>
+  <li>Ak obraz nezodpovedá anémii pri CKD, uvažovať aj o <strong>nutričných príčinách</strong>.</li>
   <li>Podľa kliniky myslieť na <strong>hemolýzu</strong> a ďalšie hematologické príčiny.</li>
   <li>Pri podozrení na krvácanie plánovať vyšetrenie zdroja podľa lokálnych možností a odborných väzieb.</li>
 </ul>
 
-<p>Praktická pointa: anémia v CKD je často multifaktoriálna. Ak sa zameriame len na jedno číslo, ľahko prehliadneme korektibilnú príčinu, ktorú by bolo možné riešiť jednoduchšie než ESA eskaláciou.</p>
+<p>Anémia v CKD je často multifaktoriálna. Kto sa zameria len na jedno číslo, ľahko prehliadne korektibilnú príčinu, ktorú by bolo možné riešiť jednoduchšie než eskaláciou ESA.</p>
 
 <h2>4) Rozhodnutie o železe</h2>
 
@@ -73,7 +73,7 @@ $articles[] = [
 
 <ul>
   <li>Pri kombinácii <strong>ferritín ≤ 500 ng/ml</strong> a <strong>TSAT ≤ 30 %</strong> je racionálne začať <strong>IV železo</strong>.</li>
-  <li>Pri liečbe železom mať jasný <strong>stop sign</strong> pre bezpečnosť.</li>
+  <li>Pri liečbe železom mať jasnú <strong>bezpečnostnú hranicu</strong>.</li>
   <li><strong>Rutinné železo zadržať</strong>, ak je <strong>ferritín &gt; 700 ng/ml</strong> alebo <strong>TSAT ≥ 40 %</strong>.</li>
 </ul>
 
@@ -88,7 +88,7 @@ $articles[] = [
 
 <ul>
   <li>Pri použití <strong>ferric carboxymaltose (FCM)</strong> zvažovať monitoring <strong>fosfátu</strong>, najmä u rizikových pacientov alebo pri nových symptómoch.</li>
-  <li>Ak sa objavia príznaky kompatibilné s hypofosfatémiou, doplniť <strong>fosfát</strong> a upraviť ďalší postup.</li>
+  <li>Ak sa objavia príznaky zodpovedajúce hypofosfatémii, doplniť <strong>fosfát</strong> a upraviť ďalší postup.</li>
 </ul>
 
 <p>Pri opakovaných dávkach je praktické mať fosfát v pláne sledovania vopred, nie až po rozvoji príznakov.</p>
@@ -102,7 +102,7 @@ $articles[] = [
   <li>Pri udržiavaní liečby držať Hb <strong>pod hornou hranicou približne 11,5 g/dl</strong>.</li>
 </ul>
 
-<p>V tomto bode je podstatné nehodnotiť len samotnú laboratórnu hodnotu, ale aj symptómy, komorbidity a bezpečnostný profil terapie.</p>
+<p>Nehodnotí sa len samotná laboratórna hodnota, ale aj symptómy, komorbidity a bezpečnostný profil terapie.</p>
 
 <h2>7) Monitoring a intervaly</h2>
 
@@ -125,7 +125,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>Checklistový prístup je v anémii pri CKD najpraktickejší: najprv potvrdiť problém, potom hľadať korektibilnú príčinu, následne nastaviť železo s jasnými hranicami bezpečnosti a až potom zvažovať ESA alebo HIF-PHI. Takýto postup je čitateľný, auditovateľný a v praxi menej náchylný na chybné skratky.</p>
+<p>Pri anémii v CKD sa checklist osvedčuje: najprv potvrdiť problém, potom hľadať korektibilnú príčinu, následne nastaviť železo s jasnými bezpečnostnými hranicami a až potom zvažovať ESA alebo HIF-PHI. Postup je prehľadný, dá sa spätne auditovať a menej zvádza k chybným skratkám.</p>
 
 <hr>
 

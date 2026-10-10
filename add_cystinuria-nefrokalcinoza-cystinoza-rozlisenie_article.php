@@ -56,7 +56,7 @@ $articles[] = [
 
 <p>Súbor je malý a vybraný: zaradené boli deti, ktoré už prišli s nefrolitiázou alebo nefrokalcinózou. Nevylučuje teda, že sa oba nálezy u iného pacienta zídu. Nepodporuje však predstavu, že nefrokalcinóza bežne nadväzuje na cystínové kamene. Takmer tretina detí s hyperkalciúriou a s cystínuriou v tejto sérii dospela do 2.–4. štádia chronickej choroby obličiek. Chýbajúca nefrokalcinóza teda neznamená zachovanú funkciu obličiek. [2]</p>
 
-<p>Opakovaná obštrukcia a infekcie sú pri cystínurii klinicky závažné a podieľajú sa na chronickej chorobe obličiek. [1] Z toho ešte nevyplýva reťaz porucha tubulu, zmena pH a ukladanie vápnika v parenchýme. Takú postupnosť by musela doložiť cielená práca. Ak sa pri známej cystínurii objaví nefrokalcinóza, zobrazovací nález treba overiť a hľadať druhú príčinu.</p>
+<p>Opakovaná obštrukcia a infekcie sú pri cystínurii klinicky závažné a podieľajú sa na chronickej chorobe obličiek. [1] Z toho ešte nevyplýva príčinný reťazec od poruchy tubulu cez zmenu pH k ukladaniu vápnika v parenchýme. Takú postupnosť by musela doložiť cielená práca. Ak sa pri známej cystínurii objaví nefrokalcinóza, zobrazovací nález treba overiť a hľadať druhú príčinu.</p>
 
 <h2>Alkalizácia zvyšuje rozpustnosť cystínu</h2>
 
@@ -80,7 +80,7 @@ $articles[] = [
 
 <p>Ultrasonografická práca z roku 1995 vyšetrila 41 detí s nefropatickou cystinózou a zachovanou funkciou obličiek, vo veku od 2 mesiacov do 15 rokov. Vyšetrenie retroperitonea bolo zaslepené a k metabolickým údajom autori pripojili 216 pacientorokov. Medulárnu nefrokalcinózu nemalo 15 detí, miernu malo 18 a závažnú 8. Obličkové kamene malo 5 detí. Priemerný vek detí s nefrokalcinózou bol 9,4 ± 3,8 roka, bez nej 5,1 ± 3,8 roka. Priemerné pH moču sa pohybovalo od 7,5 do 8,1. Sérový vápnik, fosfát, vitamín D ani parathormón s výskytom ani so závažnosťou nefrokalcinózy nekorelovali. [3]</p>
 
-<p>Nález ukazuje, že nefrokalcinóza môže byť pri nefropatickej cystinóze častá. Podiel 26 zo 41 detí patrí tejto historickej kohorte so zachovanou funkciou obličiek a s vtedajšou liečbou. Na všetkých súčasných pacientov ho preniesť nemožno. Autori sami navrhli, že nefrokalcinózu by bolo možné ovplyvniť znížením perorálnej náhrady fosfátu, vápnika, vitamínu D a citrátu a že po ukončení rastu kostí treba zvážiť obmedzenie fosfátovej substitúcie. Štúdia však zníženie dávok neskúšala. Nedostatočná náhrada strát zhoršuje acidózu, rast a mineralizáciu kostí, takže úprava liečby vychádza zo súčasného laboratórneho a klinického stavu. [3]</p>
+<p>Nález ukazuje, že nefrokalcinóza môže byť pri nefropatickej cystinóze častá. Podiel 26 zo 41 detí sa však týka historickej kohorty so zachovanou funkciou obličiek a s vtedajšou liečbou. Na všetkých súčasných pacientov ho preniesť nemožno. Autori sami navrhli, že nefrokalcinózu by bolo možné ovplyvniť znížením perorálnej náhrady fosfátu, vápnika, vitamínu D a citrátu a že po ukončení rastu kostí treba zvážiť obmedzenie fosfátovej substitúcie. Štúdia však zníženie dávok neskúšala. Nedostatočná náhrada strát zhoršuje acidózu, rast a mineralizáciu kostí, takže úprava liečby vychádza zo súčasného laboratórneho a klinického stavu. [3]</p>
 
 <h2>Prehľad rozdielov</h2>
 

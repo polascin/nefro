@@ -23,7 +23,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Dlhší čas HbA1c aj systolického tlaku v cieľovom rozmedzí počas prvého roka bol v post hoc analýze ACCORD spojený s nižším rizikom kombinovaného renálneho výsledku. Ide o asociáciu, nie o dôkaz kauzality.',
     'content'      => <<<'HTML'
-<figure><a href="img/cas-v-cielovom-rozmedzi-hba1c-tlak-renalne-vysledky-accord.webp" rel="noopener noreferrer" target="_blank"><img src="img/cas-v-cielovom-rozmedzi-hba1c-tlak-renalne-vysledky-accord.webp" alt="Dve rovnobežné zelené cieľové pásma, v každom krivka striedavo biela vnútri a červená mimo pásma" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna, nie záznam konkrétneho pacienta. Rozhoduje podiel času v cieľovom rozmedzí — a to, ako často sa obe hodnoty míňajú cieľa súčasne.</figcaption></figure>
+<figure><a href="img/cas-v-cielovom-rozmedzi-hba1c-tlak-renalne-vysledky-accord.webp" rel="noopener noreferrer" target="_blank"><img src="img/cas-v-cielovom-rozmedzi-hba1c-tlak-renalne-vysledky-accord.webp" alt="Dve rovnobežné zelené cieľové pásma, v každom krivka striedavo biela vnútri a červená mimo pásma" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna, nie záznam konkrétneho pacienta. Rozhoduje podiel času v cieľovom rozmedzí – a to, ako často sa obe hodnoty míňajú cieľa súčasne.</figcaption></figure>
 
 <p>Metabolická a tlaková kompenzácia sa v praxi zvyčajne posudzuje podľa poslednej nameranej hodnoty glykovaného hemoglobínu (HbA1c) alebo krvného tlaku. Jediné meranie však nevystihuje dlhodobú stabilitu ochorenia ani kolísanie liečebnej odpovede. Post hoc analýza randomizovanej štúdie ACCORD, publikovaná v <em>American Journal of Kidney Diseases</em>, preto skúmala, či dlhšie zotrvanie HbA1c a systolického krvného tlaku (STK) v cieľovom rozmedzí súvisí s nižším rizikom nepriaznivých renálnych výsledkov.</p>
 
@@ -61,11 +61,11 @@ $articles[] = [
 </table>
 </div>
 
-<p>Treba pritom pamätať, že tlaková vetva ACCORD zahrnula 4733 účastníkov, zatiaľ čo glykemická vetva 10 251. Verejne dostupný súhrn analýzy neuvádza, ako presne bolo cieľové rozmedzie definované pre jednotlivé randomizačné vetvy ani ako sa postupovalo u účastníkov, ktorí neboli randomizovaní v tlakovej vetve. Pri preberaní konkrétnych prahov je preto namieste opatrnosť.</p>
+<p>Tlaková vetva ACCORD pritom zahrnula 4733 účastníkov, glykemická 10 251. Verejne dostupný súhrn analýzy neuvádza, ako presne bolo cieľové rozmedzie definované pre jednotlivé randomizačné vetvy ani ako sa postupovalo u účastníkov, ktorí neboli randomizovaní v tlakovej vetve. Pri preberaní konkrétnych prahov je preto namieste opatrnosť.</p>
 
 <h3>Ako sa čas v cieľovom rozmedzí kategorizoval</h3>
 
-<p>HbA1c-TTR a STK-TTR sa hodnotili počas prvých 12 mesiacov po randomizácii. Každý ukazovateľ bol samostatne rozdelený na hodnotu <strong>100 %</strong> a na <strong>tercily medzi zvyšnými účastníkmi</strong>. Referenčnou skupinou pre jednotlivé porovnania bol teda najnižší tercil <em>spomedzi tých, ktorí nedosiahli 100 %</em> — nie najnižší tercil celej kohorty.</p>
+<p>HbA1c-TTR a STK-TTR sa hodnotili počas prvých 12 mesiacov po randomizácii. Každý ukazovateľ bol samostatne rozdelený na hodnotu <strong>100 %</strong> a na <strong>tercily medzi zvyšnými účastníkmi</strong>. Referenčnou skupinou pre jednotlivé porovnania bol teda najnižší tercil <em>spomedzi tých, ktorí nedosiahli 100 %</em> – nie najnižší tercil celej kohorty.</p>
 
 <p>Pre spoločné hodnotenie autori vytvorili <strong>štyri kategórie</strong>:</p>
 
@@ -133,13 +133,13 @@ $articles[] = [
 
 <p>V podskupine randomizovanej do intenzívnej kontroly STK sa asociácie nepozorovali. Autori to vysvetľujú menšou variabilitou tlaku v tejto skupine, čo viedlo k užšiemu rozdeleniu STK-TTR a k menšiemu kontrastu medzi kategóriami. Ako ďalšie obmedzenie uvádzajú nízky počet udalostí v tejto podskupine.</p>
 
-<p>Ide o dôležitú pripomienku: <strong>neprítomnosť štatisticky významnej asociácie nie je dôkazom neprítomnosti účinku.</strong> Ak je expozícia v celej skupine takmer rovnaká, štúdia jednoducho nemá čo porovnávať.</p>
+<p><strong>Neprítomnosť štatisticky významnej asociácie nie je dôkazom neprítomnosti účinku.</strong> Ak je expozícia v celej skupine takmer rovnaká, štúdia jednoducho nemá čo porovnávať.</p>
 
 <h2>Prečo pomer hazardu z tejto analýzy nie je liečebný účinok</h2>
 
 <h3>Post hoc charakter</h3>
 
-<p>Analýza nebola vopred navrhnutá ako štúdia hodnotiaca čas v cieľovom rozmedzí. Randomizácia v ACCORD sa týkala <em>intenzity liečby</em>, nie dosiahnutého podielu času v cieľovom rozmedzí. Vzhľadom na to, že TTR je výsledkom liečby aj priebehu ochorenia, porovnanie kategórií TTR nie je randomizovaným porovnaním a asociácie nemožno interpretovať ako kauzálny účinok.</p>
+<p>Analýza nebola vopred navrhnutá ako štúdia hodnotiaca čas v cieľovom rozmedzí. Randomizácia v ACCORD sa týkala <em>intenzity liečby</em>, nie dosiahnutého podielu času v cieľovom rozmedzí. Keďže TTR je výsledkom liečby aj priebehu ochorenia, porovnanie kategórií TTR nie je randomizovaným porovnaním a asociácie nemožno interpretovať ako kauzálny účinok.</p>
 
 <h3>Reziduálne skreslenie</h3>
 
@@ -188,7 +188,7 @@ $articles[] = [
   <li>vek, krehkosť, komorbidity a preferencie pacienta.</li>
 </ol>
 
-<p>U pacientov s diabetom 2. typu a chronickou chorobou obličiek zostávajú základom nefroprotekcie intervencie s preukázaným klinickým prínosom — najmä inhibícia systému renín-angiotenzín pri albuminúrii, inhibítor SGLT2 pri vhodnej funkcii obličiek a podľa indikácie finerenón. Metabolická a tlaková kontrola má byť súčasťou tejto komplexnej liečby, nie jej náhradou ani izolovaným cieľom.</p>
+<p>U pacientov s diabetom 2. typu a chronickou chorobou obličiek zostávajú základom nefroprotekcie intervencie s preukázaným klinickým prínosom – najmä inhibícia systému renín-angiotenzín pri albuminúrii, inhibítor SGLT2 pri vhodnej funkcii obličiek a podľa indikácie finerenón. Metabolická a tlaková kontrola má byť súčasťou tejto komplexnej liečby, nie jej náhradou ani izolovaným cieľom.</p>
 
 <h2>Čo analýza preukázala a čo nie</h2>
 
@@ -204,10 +204,10 @@ $articles[] = [
 <p>Analýza nepreukázala:</p>
 
 <ul>
-  <li>že dlhší čas v cieľovom rozmedzí renálne riziko <em>znižuje — TTR nebol randomizovaný;</li>
-  <li>synergiu v štatistickom ani biologickom zmysle — chýba formálna analýza interakcie;</li>
-  <li>prínos pre tvrdé renálne výsledky posudzované samostatne — makroalbuminúria ani zlyhanie obličiek významnú asociáciu nevykázali;</li>
-  <li>že ciele HbA1c pod 6,0 % alebo STK pod 120 mmHg sú vhodné pre bežnú prax — pôvodné vetvy ACCORD to nepodporujú;</li>
+  <li>že dlhší čas v cieľovom rozmedzí renálne riziko <em>znižuje – TTR nebol randomizovaný;</li>
+  <li>synergiu v štatistickom ani biologickom zmysle – chýba formálna analýza interakcie;</li>
+  <li>prínos pre tvrdé renálne výsledky posudzované samostatne – makroalbuminúria ani zlyhanie obličiek významnú asociáciu nevykázali;</li>
+  <li>že ciele HbA1c pod 6,0 % alebo STK pod 120 mmHg sú vhodné pre bežnú prax – pôvodné vetvy ACCORD to nepodporujú;</li>
   <li>prenositeľnosť na populácie mimo vysokorizikovej kohorty ACCORD.</li>
 </ul>
 

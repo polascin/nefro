@@ -31,11 +31,11 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Štúdia spojila mendelovskú randomizáciu s klinickým súborom a zostavila nomogram s AUC 0,88. Model však neobsahuje eGFR ani albuminúriu a abstrakt štúdie si protirečí s jej vlastnými výsledkami.',
     'content'      => <<<'HTML'
-<figure><a href="img/bmi-hematokrit-diabetes-2-typu-riziko-zlyhania-obliciek.webp" rel="noopener noreferrer" target="_blank"><img src="img/bmi-hematokrit-diabetes-2-typu-riziko-zlyhania-obliciek.webp" alt="Dva jednoduché meracie valce na tmavej oceli, ktorých tiene nedosiahnu na obličku stojacu v pozadí v šere" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Dva jednoduché ukazovatele vysvetlia len časť rizika — zvyšok zostáva mimo ich dosahu.</figcaption></figure>
+<figure><a href="img/bmi-hematokrit-diabetes-2-typu-riziko-zlyhania-obliciek.webp" rel="noopener noreferrer" target="_blank"><img src="img/bmi-hematokrit-diabetes-2-typu-riziko-zlyhania-obliciek.webp" alt="Dva jednoduché meracie valce na tmavej oceli, ktorých tiene nedosiahnu na obličku stojacu v pozadí v šere" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Dva jednoduché ukazovatele vysvetlia len časť rizika – zvyšok zostáva mimo ich dosahu.</figcaption></figure>
 
 <p>Vyšší index telesnej hmotnosti a nižší hematokrit môžu u ľudí s diabetom 2. typu upozorňovať na zvýšené riziko zlyhania obličiek. Nová štúdia spojila analýzu genetických údajov s retrospektívnym sledovaním klinického súboru a vytvorila predikčný model s dobrou rozlišovacou schopnosťou.</p>
 
-<p>Jej výsledky však nemožno interpretovať ako dôkaz, že samotné zvýšenie hematokritu zabráni progresii chronickej choroby obličiek. A hoci model dosiahol plochu pod krivkou 0,88, <strong>neobsahuje eGFR ani albuminúriu</strong> — teda práve tie dva ukazovatele, o ktoré sa opiera zavedené hodnotenie rizika.</p>
+<p>Jej výsledky však nemožno interpretovať ako dôkaz, že samotné zvýšenie hematokritu zabráni progresii chronickej choroby obličiek. A hoci model dosiahol plochu pod krivkou 0,88, <strong>neobsahuje eGFR ani albuminúriu</strong> – teda práve tie dva ukazovatele, o ktoré sa opiera zavedené hodnotenie rizika.</p>
 
 <h2>Dve analytické časti, dve odlišné otázky</h2>
 
@@ -49,10 +49,10 @@ $articles[] = [
 
 <p>Ako obličkový výsledok slúžil samostatný genetický súbor pre <strong>chronické zlyhávanie obličiek</strong> (ebi-a-GCST90018602) so 176 462 osobami. Toto číslo však treba čítať presne: zahŕňalo iba <strong>2 117 prípadov</strong> a 174 345 kontrol.</p>
 
-<p>Sú to dve dôležité obmedzenia naraz:</p>
+<p>Z toho vyplývajú dve dôležité obmedzenia:</p>
 
 <ul>
-  <li>Genetická časť nebola obmedzená na pacientov s diabetom 2. typu — autori uvádzajú, že podskupinová analýza nebola možná pre chýbajúce súhrnné údaje pre túto populáciu.</li>
+  <li>Genetická časť nebola obmedzená na pacientov s diabetom 2. typu – autori uvádzajú, že podskupinová analýza nebola možná pre chýbajúce súhrnné údaje pre túto populáciu.</li>
   <li>Výsledkový fenotyp <em>chronic renal failure</em> nebol totožný s klinicky sledovanou progresiou do konečného štádia. Autori to v obmedzeniach výslovne priznávajú a upozorňujú, že ide o rozdielne štádiá kontinua.</li>
 </ul>
 
@@ -89,13 +89,13 @@ $articles[] = [
 
 <p>Abstrakt uvádza, že všetky inštrumentálne premenné mali F-štatistiku vyššiu ako 10. Sprievodná správa zároveň uvádzala vyradenie glukózy pre slabý inštrument s F-štatistikou 5,65. Plný text tento zdanlivý rozpor rieši: glukóza bola vyradená <strong>z viacrozmernej</strong> analýzy práve pre F = 5,65, pričom jej asociácia s výsledkom bola ďaleko od významnosti (p = 0,671). Tvrdenie o F &gt; 10 sa vzťahuje na inštrumenty ponechané v analýze.</p>
 
-<p>Klinicky je to však nepríjemné zistenie: glukóza mala v jednorozmernej analýze najsilnejší účinok vôbec (pomer šancí 2,41), no práve tento odhad stojí na najslabšom inštrumente. Podobne treba pristupovať k údaju o glykovanom hemoglobíne — jeho genetický súbor (ukb-e-30750_EAS) zahŕňal len 2 566 osôb.</p>
+<p>Klinicky je to však nepríjemné zistenie: glukóza mala v jednorozmernej analýze najsilnejší účinok zo všetkých expozícií (pomer šancí 2,41), no práve tento odhad stojí na najslabšom inštrumente. Podobne treba pristupovať k údaju o glykovanom hemoglobíne – jeho genetický súbor (ukb-e-30750_EAS) zahŕňal len 2 566 osôb.</p>
 
 <h3>Prečo je pri hematokrite predpoklad bez pleiotropie krehký</h3>
 
 <p>Mendelovská randomizácia obmedzuje spätnú kauzalitu a časť zavádzajúcich vplyvov, jej kauzálna interpretácia však platí len za splnenia predpokladov: varianty musia dostatočne súvisieť s expozíciou, nesmú súvisieť so zavádzajúcimi faktormi a nemajú ovplyvňovať výsledok inou cestou než cez skúmanú expozíciu.</p>
 
-<p>Pri hematokrite je posledný predpoklad obzvlášť dôležitý — a samotné výsledky štúdie ho spochybňujú. Metóda MR-PRESSO musela pri hematokrite odstrániť tri odľahlé varianty, medzi nimi <strong>rs855791</strong>. Ide o dobre známy variant génu <em>TMPRSS6</em>, ktorý patrí medzi hlavné determinanty metabolizmu železa. Presne takto vyzerá horizontálna pleiotropia: varianty ovplyvňujúce erytropoézu súčasne zasahujú do hospodárenia so železom. Pri indexe telesnej hmotnosti bolo odstránených dokonca osem odľahlých variantov.</p>
+<p>Pri hematokrite je posledný predpoklad obzvlášť dôležitý – a samotné výsledky štúdie ho spochybňujú. Metóda MR-PRESSO musela pri hematokrite odstrániť tri odľahlé varianty, medzi nimi <strong>rs855791</strong>. Ide o dobre známy variant génu <em>TMPRSS6</em>, ktorý patrí medzi hlavné determinanty metabolizmu železa. Presne takto vyzerá horizontálna pleiotropia: varianty ovplyvňujúce erytropoézu súčasne zasahujú do hospodárenia so železom. Pri indexe telesnej hmotnosti bolo odstránených dokonca osem odľahlých variantov.</p>
 
 <p>Neprítomnosť štatisticky významného výsledku testu pleiotropie po odstránení odľahlých hodnôt preto nie je dôkazom, že pleiotropia neexistuje.</p>
 
@@ -103,9 +103,9 @@ $articles[] = [
 
 <p>Retrospektívna časť zahŕňala 875 dospelých s diabetom 2. typu z pracoviska Qingpu Branch of Zhongshan Hospital pri Univerzite Fudan v Šanghaji, zaradených od 1. januára 2016 do 31. decembra 2023 a sledovaných tri roky. Do výsledku označeného ako <em>end-stage renal disease</em> dospelo 140 pacientov (16 %), 735 pacientov nie.</p>
 
-<p>Vylúčení boli okrem iného pacienti s biopticky preukázaným primárnym glomerulovým ochorením alebo systémovým ochorením, pacienti už liečení dialýzou alebo po transplantácii, pacienti s infekciou, srdcovou či pečeňovou nedostatočnosťou, nádorovým ochorením, so solitárnou obličkou, s toxickým poškodením obličiek — a napokon aj pacienti s neúplnými údajmi alebo stratení zo sledovania.</p>
+<p>Vylúčení boli okrem iného pacienti s biopticky preukázaným primárnym glomerulovým ochorením alebo systémovým ochorením, pacienti už liečení dialýzou alebo po transplantácii, pacienti s infekciou, srdcovou či pečeňovou nedostatočnosťou, nádorovým ochorením, so solitárnou obličkou, s toxickým poškodením obličiek – a napokon aj pacienti s neúplnými údajmi alebo stratení zo sledovania.</p>
 
-<p>Podiel 16 % nie je odhadom trojročného rizika pre všetkých ľudí s diabetom 2. typu. Ide o podiel udalostí v takto vybranom súbore, ktorý bol cielene očistený od iných príčin poškodenia obličiek a zároveň o pacientov so stratou zo sledovania.</p>
+<p>Podiel 16 % nie je odhadom trojročného rizika pre všetkých ľudí s diabetom 2. typu. Ide o podiel udalostí v takto vybranom súbore, ktorý bol cielene očistený od iných príčin poškodenia obličiek a zároveň ochudobnený o pacientov stratených zo sledovania.</p>
 
 <div class="table-responsive" role="region" aria-label="Výsledky viacrozmernej logistickej regresie v klinickom súbore" tabindex="0">
 <table>
@@ -134,7 +134,7 @@ $articles[] = [
 
 <p>Abstrakt pôvodnej práce uvádza medzi nezávislými rizikovými faktormi <strong>diastolický</strong> krvný tlak. Výsledková časť plného textu však v jednorozmernej aj viacrozmernej analýze konzistentne uvádza <strong>systolický</strong> krvný tlak (pomer šancí 1,020; 95 % IS 1,008–1,032; p &lt; 0,001).</p>
 
-<p>Ide o chybu v abstrakte, nie v sprievodnom spravodajstve — správa, ktorá uvádzala systolický tlak, bola v zhode s plným textom. Pri preberaní údajov z tejto publikácie preto treba vychádzať z výsledkovej časti, nie z abstraktu.</p>
+<p>Ide o chybu v abstrakte, nie v sprievodnom spravodajstve – správa, ktorá uvádzala systolický tlak, bola v zhode s plným textom. Pri preberaní údajov z tejto publikácie preto treba vychádzať z výsledkovej časti, nie z abstraktu.</p>
 
 <h2>Vyšší BMI: vierohodný rizikový faktor, nie samostatná diagnóza</h2>
 
@@ -158,15 +158,15 @@ $articles[] = [
 
 <p>Autori v diskusii ponúkajú ako možný mechanizmus účinok inhibítorov SGLT2: znížením tubulárnej reabsorpcie glukózy sa zmierňuje metabolická záťaž proximálneho tubulu, stimuluje sa tvorba erytropoetínu a hematokrit mierne stúpa.</p>
 
-<p>Toto vysvetlenie je biologicky vierohodné — má však dôsledok, ktorý autori nedomýšľajú. Ak vyšší hematokrit odráža užívanie inhibítorov SGLT2, potom v retrospektívnom klinickom súbore <strong>nemeria vlastnosť krvi, ale liečbu s preukázaným nefroprotektívnym účinkom</strong>. Priaznivá asociácia hematokritu by tak bola z podstatnej časti zavádzajúca podľa indikácie, nie kauzálna. Štúdia liečbu inhibítormi SGLT2 medzi premennými neuvádza, takže túto možnosť nemožno ani potvrdiť, ani vylúčiť.</p>
+<p>Toto vysvetlenie je biologicky vierohodné – má však dôsledok, ktorý autori nedomýšľajú. Ak vyšší hematokrit odráža užívanie inhibítorov SGLT2, potom v retrospektívnom klinickom súbore <strong>nemeria vlastnosť krvi, ale liečbu s preukázaným nefroprotektívnym účinkom</strong>. Priaznivá asociácia hematokritu by tak bola z podstatnej časti zavádzajúca podľa indikácie, nie kauzálna. Štúdia liečbu inhibítormi SGLT2 medzi premennými neuvádza, takže túto možnosť nemožno ani potvrdiť, ani vylúčiť.</p>
 
-<p>Podobne treba interpretovať albumín. Nižšia sérová koncentrácia nemusí znamenať iba nedostatočnú výživu — ovplyvňujú ju zápal, straty bielkovín močom, ochorenie pečene aj objemový stav. Prognostická asociácia preto nie je dôkazom, že samotné zvýšenie laboratórnej hodnoty zlepší obličkové výsledky.</p>
+<p>Podobne treba interpretovať albumín. Nižšia sérová koncentrácia nemusí znamenať iba nedostatočnú výživu – ovplyvňujú ju zápal, straty bielkovín močom, ochorenie pečene aj objemový stav. Prognostická asociácia preto nie je dôkazom, že samotné zvýšenie laboratórnej hodnoty zlepší obličkové výsledky.</p>
 
 <h2>Vyšší hematokrit ako priaznivý marker neznamená cieľ liečby</h2>
 
 <p>Najdôležitejším klinickým rozlíšením je rozdiel medzi markerom rizika a liečebným cieľom. Zo zistenia, že vyšší hematokrit súvisí s nižším rizikom zlyhania obličiek, <strong>nevyplýva odporúčanie farmakologicky normalizovať hematokrit alebo hemoglobín s cieľom spomaliť progresiu chronickej choroby obličiek</strong>.</p>
 
-<p>Randomizovaná štúdia CHOIR u 1 432 pacientov s chronickou chorobou obličiek porovnávala liečbu epoetínom alfa s cieľovou koncentráciou hemoglobínu 13,5 g/dl oproti 11,3 g/dl. Vyšší cieľ bol spojený so <strong>zvýšeným</strong> rizikom zloženého výsledku zahŕňajúceho úmrtie, infarkt myokardu, hospitalizáciu pre srdcové zlyhávanie a cievnu mozgovú príhodu — pomer rizík 1,34 (95 % IS 1,03–1,74; p = 0,03) — bez akéhokoľvek zlepšenia kvality života.</p>
+<p>Randomizovaná štúdia CHOIR u 1 432 pacientov s chronickou chorobou obličiek porovnávala liečbu epoetínom alfa s cieľovou koncentráciou hemoglobínu 13,5 g/dl oproti 11,3 g/dl. Vyšší cieľ bol spojený so <strong>zvýšeným</strong> rizikom zloženého výsledku zahŕňajúceho úmrtie, infarkt myokardu, hospitalizáciu pre srdcové zlyhávanie a cievnu mozgovú príhodu – pomer rizík 1,34 (95 % IS 1,03–1,74; p = 0,03) – bez akéhokoľvek zlepšenia kvality života.</p>
 
 <p>CHOIR priamo netestovala nový prognostický model. Názorne však ukazuje, prečo nemožno priaznivú observačnú asociáciu vyššej krvnej hodnoty zamieňať za prospešnosť jej intenzívnej liečebnej korekcie. Ide o rovnaký typ omylu, ktorý by hrozil pri mechanickom čítaní tejto štúdie.</p>
 
@@ -180,11 +180,11 @@ $articles[] = [
 
 <h3>Najväčšia slabina: chýba eGFR a albuminúria</h3>
 
-<p>Model obsahuje sérový kreatinín — ale nie odhadovanú glomerulovú filtráciu ani albuminúriu. To má dva dôsledky.</p>
+<p>Model obsahuje sérový kreatinín – ale nie odhadovanú glomerulovú filtráciu ani albuminúriu. To má dva dôsledky.</p>
 
-<p>Po prvé, zahrnutie kreatinínu medzi prediktory zlyhania obličiek je do značnej miery tautologické: kreatinín <em>je</em> mierou funkcie obličiek. Vysoká hodnota AUC je preto pravdepodobne v rozhodujúcej miere daná východiskovou funkciou obličiek, nie prínosom BMI a hematokritu. Štúdia neuvádza, o koľko sa diskriminácia zlepší po pridaní týchto dvoch premenných k modelu založenému na funkcii obličiek — a práve to je otázka, ktorá rozhoduje o klinickej užitočnosti.</p>
+<p>Po prvé, zahrnutie kreatinínu medzi prediktory zlyhania obličiek je do značnej miery tautologické: kreatinín <em>je</em> mierou funkcie obličiek. Vysoká hodnota AUC je preto pravdepodobne v rozhodujúcej miere daná východiskovou funkciou obličiek, nie prínosom BMI a hematokritu. Štúdia neuvádza, o koľko sa diskriminácia zlepší po pridaní týchto dvoch premenných k modelu založenému na funkcii obličiek – a práve to je otázka, ktorá rozhoduje o klinickej užitočnosti.</p>
 
-<p>Po druhé, albuminúria je pri diabetickej chorobe obličiek najsilnejším samostatným prediktorom progresie. Prognostický model zlyhania obličiek, ktorý ju neobsahuje, nemožno porovnávať so zavedenými nástrojmi. Rovnica Kidney Failure Risk Equation, ktorú Tangri a spolupracovníci overili na dvoch nezávislých kanadských kohortách, vo svojej štvorpremennej verzii zahŕňa vek, pohlavie, eGFR a pomer albumínu ku kreatinínu v moči a v validačnej kohorte dosiahla C-štatistiku 0,841.</p>
+<p>Po druhé, albuminúria je pri diabetickej chorobe obličiek najsilnejším samostatným prediktorom progresie. Prognostický model zlyhania obličiek, ktorý ju neobsahuje, nemožno porovnávať so zavedenými nástrojmi. Rovnica Kidney Failure Risk Equation, ktorú Tangri a spolupracovníci overili na dvoch nezávislých kanadských kohortách, vo svojej štvorpremennej verzii zahŕňa vek, pohlavie, eGFR a pomer albumínu ku kreatinínu v moči a vo validačnej kohorte dosiahla C-štatistiku 0,841.</p>
 
 <p>Interná validácia pomáha odhadnúť optimizmus modelu vytvoreného na dostupných údajoch. Nenahrádza však externú validáciu v inom centre, zdravotníckom systéme alebo populácii. Z dostupných podkladov nemožno overiť, či nový model poskytuje pridanú hodnotu oproti modelu založenému na eGFR a albuminúrii.</p>
 
@@ -200,7 +200,7 @@ $articles[] = [
 
 <p>Vyšší BMI má viesť k posúdeniu adipozity, metabolických rizík a objemového stavu. Nižší hematokrit má viesť k hodnoteniu hemoglobínu a príčin anémie. Ani jeden z týchto údajov by sa nemal interpretovať izolovane.</p>
 
-<p>Liečba pacienta s diabetom 2. typu a chronickou chorobou obličiek sa naďalej opiera o postupy s preukázaným klinickým prínosom: primeraná kontrola krvného tlaku a glykémie, blokáda renínovo-angiotenzínového systému pri príslušnej indikácii a nefroprotektívna liečba podľa funkcie obličiek, albuminúrie, kaliémie a ďalších charakteristík pacienta. KDIGO 2024 zahŕňa do týchto postupov inhibítory SGLT2 a u vhodne vybraných pacientov aj nesteroidný antagonista mineralokortikoidového receptora.</p>
+<p>Liečba pacienta s diabetom 2. typu a chronickou chorobou obličiek sa naďalej opiera o postupy s preukázaným klinickým prínosom: primeraná kontrola krvného tlaku a glykémie, blokáda renínovo-angiotenzínového systému pri príslušnej indikácii a nefroprotektívna liečba podľa funkcie obličiek, albuminúrie, kaliémie a ďalších charakteristík pacienta. KDIGO 2024 zahŕňa do týchto postupov inhibítory SGLT2 a u vhodne vybraných pacientov aj nesteroidného antagonistu mineralokortikoidového receptora.</p>
 
 <p>Nová štúdia tieto odporúčania nemení. Prináša hypotézu o doplnkovom prognostickom význame BMI a hematokritu a predstavuje model, ktorý si zaslúži ďalšie overenie.</p>
 

@@ -31,9 +31,9 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'BBC informuje, že vyše 300 migrantov bolo v Líbyi unesených, mučených a zastrašovaných vyhrážkami odobratia obličiek pri nezaplatení výkupného. Samotnú BBC sa odber orgánov nepodarilo úplne overiť. Z pohľadu nefrológie pripomíname, čo zachytiť u obetí násilia s možným poškodením obličiek.',
+    'excerpt'      => 'BBC informuje, že vyše 300 migrantov bolo v Líbyi unesených, mučených a zastrašovaných vyhrážkami odobratia obličiek pri nezaplatení výkupného. Odber orgánov sa samotnej BBC nepodarilo úplne overiť. Z pohľadu nefrológie pripomíname, na čo myslieť u obetí násilia s možným poškodením obličiek.',
     'content'      => <<<'HTML'
-<figure><a href="img/bbc-unosy-migrantov-libya-hrozba-odberu-obliciek.webp" rel="noopener noreferrer" target="_blank"><img src="img/bbc-unosy-migrantov-libya-hrozba-odberu-obliciek.webp" alt="Nočná púštna scéna so vzdialenými zatvorenými dverami a slabým svetelným obrysom obličky nad nimi" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Zdržanlivá ilustračná scéna. Za správou stoja konkrétni ľudia v bezmocnom postavení — a orgán ako predmet vydierania.</figcaption></figure>
+<figure><a href="img/bbc-unosy-migrantov-libya-hrozba-odberu-obliciek.webp" rel="noopener noreferrer" target="_blank"><img src="img/bbc-unosy-migrantov-libya-hrozba-odberu-obliciek.webp" alt="Nočná púštna scéna so vzdialenými zatvorenými dverami a slabým svetelným obrysom obličky nad nimi" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Zdržanlivá ilustračná scéna. Za správou stoja konkrétni ľudia v bezmocnom postavení – a orgán ako predmet vydierania.</figcaption></figure>
 
 <p>Britská BBC priniesla zistenia, podľa ktorých bolo <strong>vyše 300 migrantov</strong> smerujúcich do Spojeného kráľovstva <strong>unesených v Líbyi</strong>, mučených a zastrašovaných vyhrážkami, že im budú <strong>odobraté obličky</strong>, ak ich rodiny nezaplatia výkupné.</p>
 
@@ -50,21 +50,21 @@ $articles[] = [
 
 <h2>Kontext a mechanika prípadu</h2>
 
-<p>BBC dáva vznik situácie do súvislosti s fungovaním pašeráckych sietí v Líbyi, kde podľa expertov a opisov chýba účinná štátna kontrola. Riešia sa aj spory medzi pašerákmi o to, kto má finančne zabezpečiť transport, čo následne eskaluje do vymáhania výkupného milíciou.</p>
+<p>BBC spája situáciu s fungovaním pašeráckych sietí v Líbyi, kde podľa expertov a dostupných opisov chýba účinná štátna kontrola. Pridávajú sa spory medzi pašerákmi o to, kto má zaplatiť transport, a tie potom prerastajú do vymáhania výkupného milíciou.</p>
 
-<h2>Nefrologický a medicínsky presah (prakticky)</h2>
+<h2>Nefrologický a medicínsky presah v praxi</h2>
 
 <p>Z pohľadu nefrologickej praxe z prípadu vyplýva najmä toto:</p>
 
 <ul>
   <li>hrozia <strong>závažné dlhodobé zdravotné následky</strong> (trauma, infekcie, možný odber orgánu, komplikácie po zákrokoch, dehydratácia, sekundárne poškodenie obličiek),</li>
   <li>u utečencov a obetí násilia treba pri príznakoch poškodenia obličiek myslieť na <strong>urgentné nefrologické vyšetrenie</strong> (oligúria, zmeny kreatinínu, hematúria, hypertenzia, príznaky infekcie),</li>
-  <li>v praxi by to malo ísť ruka v ruke s <strong>medicínsko-forenzným prístupom</strong> a dokumentáciou nálezov, doplneným o psychologickú a sociálnu podporu.</li>
+  <li>vyšetrenie by malo ísť ruka v ruke s <strong>medicínsko-forenzným prístupom</strong> a dokumentáciou nálezov, ako aj s psychologickou a sociálnou podporou.</li>
 </ul>
 
 <hr>
 
-<p><em><strong>Zdroj:</strong> BBC News: „300 migrants… kidnapped and threatened with kidney removal“. <a href="https://www.bbc.com/news/articles/c8xwxdgvx8lo" target="_blank" rel="noopener noreferrer">Link na zdroj</a>.</em></p>
+<p><em><strong>Zdroj:</strong> BBC News: „300 migrants… kidnapped and threatened with kidney removal“. <a href="https://www.bbc.com/news/articles/c8xwxdgvx8lo" target="_blank" rel="noopener noreferrer">Odkaz na zdroj</a>.</em></p>
 HTML,
 ];
 

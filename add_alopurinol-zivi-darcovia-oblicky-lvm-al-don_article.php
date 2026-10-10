@@ -27,7 +27,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'V randomizovanej štúdii AL-DON deväť mesiacov alopurinolu 300 mg u zdravých darcov obličky výrazne znížilo urikémiu, ale nezmenilo hmotnosť ľavej komory na magnetickej rezonancii, krvný tlak ani inzulínovú citlivosť. Nežiaduce udalosti boli častejšie v aktívnej vetve.',
     'content'      => <<<'HTML'
-<figure><a href="img/alopurinol-zivi-darcovia-oblicky-lvm-al-don.webp" rel="noopener noreferrer" target="_blank"><img src="img/alopurinol-zivi-darcovia-oblicky-lvm-al-don.webp" alt="Zreteľne klesajúci stĺpec svetla a vedľa neho nezmenené srdce so zhrubnutou stenou" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Laboratórna hodnota klesla, štruktúra srdca sa nezmenila — a práve to je výsledok, ktorý rozhoduje.</figcaption></figure>
+<figure><a href="img/alopurinol-zivi-darcovia-oblicky-lvm-al-don.webp" rel="noopener noreferrer" target="_blank"><img src="img/alopurinol-zivi-darcovia-oblicky-lvm-al-don.webp" alt="Zreteľne klesajúci stĺpec svetla a vedľa neho nezmenené srdce so zhrubnutou stenou" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Laboratórna hodnota klesla, štruktúra srdca sa nezmenila – a práve to je výsledok, ktorý rozhoduje.</figcaption></figure>
 
 <p class="article-dek"><em>V randomizovanej, dvojito zaslepenej, placebom kontrolovanej štúdii fázy 2b u zdravých živých darcov obličky deväťmesačná liečba alopurinolom 300 mg denne výrazne znížila sérovú kyselinu močovú, ale nezmenila hmotnosť ľavej komory meranú magnetickou rezonanciou, krvný tlak ani inzulínovú citlivosť. Výsledok pripomína, že zníženie biomarkera samo osebe nezaručuje zmenu orgánovej štruktúry.</em></p>
 
@@ -37,7 +37,7 @@ $articles[] = [
 
 <p>Zvýšená kyselina močová sa v pozorovacích štúdiách spája s vyššou hmotnosťou ľavej komory. Po nefrektómii urikémia typicky stúpa, pretože klesá renálna exkrécia urátu. Autori preto vyslovili hypotézu, že zníženie kyseliny močovej môže hmotnosť ľavej komory u darcov znížiť.</p>
 
-<p>Otázka je legitímna aj preto, že staršie randomizované štúdie s alopurinolom pri hypertrofii ľavej komory u iných populácií dopadli pozitívne. Ako uvidíme nižšie, práve porovnanie s nimi vysvetľuje, prečo je tento výsledok negatívny.</p>
+<p>Otázka je legitímna aj preto, že staršie randomizované štúdie s alopurinolom pri hypertrofii ľavej komory u iných populácií dopadli pozitívne. Porovnanie s nimi, ako ukážeme nižšie, ponúka najprirodzenejšie vysvetlenie negatívneho výsledku.</p>
 
 <h2>Dizajn a populácia štúdie AL-DON</h2>
 
@@ -103,7 +103,7 @@ $articles[] = [
 </table>
 </div>
 
-<p>Všimnime si veľkosť rozdielu: medzi skupinami ide o približne 1,3 g hmotnosti ľavej komory pri smerodajnej odchýlke zmeny okolo 4,4 g. To je rozdiel, ktorý je nielen štatisticky nevýznamný, ale aj klinicky bezvýznamný — leží hlboko pod hranicou, ktorá by mohla čokoľvek znamenať pre prognózu. Nejde teda o „takmer významný“ výsledok, ale o presvedčivo nulový nález pri tejto veľkosti účinku.</p>
+<p>Všimnime si veľkosť rozdielu: medzi skupinami ide o približne 1,3 g hmotnosti ľavej komory pri smerodajnej odchýlke zmeny okolo 4,4 g. To je rozdiel, ktorý je nielen štatisticky nevýznamný, ale aj klinicky bezvýznamný – leží hlboko pod hranicou, ktorá by mohla čokoľvek znamenať pre prognózu. Nejde teda o „takmer významný“ výsledok, ale o presvedčivo nulový nález pri tejto veľkosti účinku.</p>
 
 <h3>Bezpečnosť</h3>
 
@@ -111,12 +111,12 @@ $articles[] = [
 
 <p><em>Metodická poznámka:</em> publikovaný abstrakt uvádza pri týchto počtoch podiely 70 % a 37 %. Tie nezodpovedajú rovnomernému rozdeleniu 71 účastníkov do dvoch ramien približne po 35 a menovatele, z ktorých boli vypočítané, abstrakt neuvádza. Absolútne počty (18 oproti 10, tri závažné udalosti) sú preto spoľahlivejšie než uvedené percentá. Typy závažných udalostí abstrakt nešpecifikuje, a preto ich tu neuvádzame.</p>
 
-<p>Aj pri malých číslach ide o pripomienku, že alopurinol nie je nevinný liek. Jeho najzávažnejšou komplikáciou je syndróm precitlivenosti vrátane DRESS, ktorý môže postihnúť aj obličky — tejto téme sa venuje samostatný článok uvedený nižšie.</p>
+<p>Aj pri malých číslach ide o pripomienku, že alopurinol nie je nevinný liek. Jeho najzávažnejšou komplikáciou je syndróm precitlivenosti vrátane DRESS, ktorý môže postihnúť aj obličky – tejto téme sa venuje samostatný článok uvedený nižšie.</p>
 
 <div class="pdf-avoid-break">
 <h2>Prečo bol výsledok negatívny? Porovnanie s predchádzajúcimi štúdiami</h2>
 
-<p>Alopurinol pri hypertrofii ľavej komory nie je nová myšlienka. Predchádzajúce randomizované štúdie skupiny z Dundee dopadli pozitívne — ale v podstatne odlišných populáciách.</p>
+<p>Alopurinol pri hypertrofii ľavej komory nie je nová myšlienka. Predchádzajúce randomizované štúdie skupiny z Dundee dopadli pozitívne – ale v podstatne odlišných populáciách.</p>
 
 <div class="table-responsive" role="region" aria-label="Porovnanie randomizovaných štúdií s alopurinolom a hmotnosťou ľavej komory" tabindex="0">
 <table>
@@ -137,11 +137,11 @@ $articles[] = [
 </table>
 </div>
 
-<p>Rozdiel je zreteľný a ponúka najprirodzenejšie vysvetlenie negatívneho výsledku: <strong>predchádzajúce štúdie zaraďovali pacientov s už prítomnou hypertrofiou ľavej komory, teda s priestorom na regresiu.</strong> Ak je východisková hmotnosť ľavej komory normálna — a u zdravých darcov bez kardiálneho ochorenia to možno predpokladať —, nemožno očakávať, že sa ešte zníži.</p>
+<p>Rozdiel je zreteľný a ponúka najprirodzenejšie vysvetlenie negatívneho výsledku: <strong>predchádzajúce štúdie zaraďovali pacientov s už prítomnou hypertrofiou ľavej komory, teda s priestorom na regresiu.</strong> Ak je východisková hmotnosť ľavej komory normálna – a u zdravých darcov bez kardiálneho ochorenia to možno predpokladať –, nemožno očakávať, že sa ešte zníži.</p>
 
 <p>Druhým rozdielom je dávka: dve z troch pozitívnych štúdií použili 600 mg denne, AL-DON 300 mg. Nižšia dávka mohla priniesť menšiu inhibíciu xantínoxidázy a menší efekt na oxidačný stres. Tento argument však oslabuje skutočnosť, že Kao a spol. dosiahli pozitívny výsledok pri CKD aj s dávkou 300 mg.</p>
 
-<p>Tretím rozdielom je trvanie a výber ukazovateľa. Deväť mesiacov je pri remodelácii myokardu na hranici toho, čo stačí — pozitívne štúdie trvali spravidla 9 až 12 mesiacov, takže samotné trvanie zrejme nie je hlavným vysvetlením.</p>
+<p>Tretím rozdielom je trvanie. Deväť mesiacov je pri remodelácii myokardu na hranici toho, čo stačí, pozitívne štúdie však trvali spravidla 9 až 12 mesiacov, takže samotné trvanie zrejme nie je hlavným vysvetlením.</p>
 </div>
 
 <h2>Metodologické zhodnotenie</h2>
@@ -152,17 +152,17 @@ $articles[] = [
   <li>randomizované a dvojito zaslepené usporiadanie s placebom znižuje riziko systematického skreslenia,</li>
   <li>magnetická rezonancia srdca je referenčnou metódou na meranie hmotnosti ľavej komory a je podstatne presnejšia než echokardiografia,</li>
   <li>vysoká presnosť merania znižuje potrebný počet účastníkov,</li>
-  <li>overená účinnosť intervencie na cieľový biomarker — kyselina močová naozaj klesla, takže nejde o zlyhanie adherencie alebo dávkovania,</li>
+  <li>overená účinnosť intervencie na cieľový biomarker – kyselina močová naozaj klesla, takže nejde o zlyhanie adherencie alebo dávkovania,</li>
   <li>mechanisticky zmysluplná otázka postavená na predchádzajúcich pozitívnych štúdiách,</li>
   <li>vopred registrovaný protokol.</li>
 </ul>
 
-<p>Bod o overenom účinku na biomarker je dôležitý: negatívny výsledok nemožno vysvetliť tým, že liek „nefungoval“. Fungoval — len sa to nepremietlo do zmeny srdcovej štruktúry.</p>
+<p>Bod o overenom účinku na biomarker je dôležitý: negatívny výsledok nemožno vysvetliť tým, že liek „nefungoval“. Fungoval – len sa to nepremietlo do zmeny srdcovej štruktúry.</p>
 
 <h3>Obmedzenia</h3>
 
 <ol>
-  <li><strong>Malý súbor.</strong> Sedemdesiatjeden účastníkov je primeraných pre fázu 2b, ale nedovoľuje vylúčiť malý účinok. Vzhľadom na pozorovaný rozdiel približne 1,3 g však nejde o „takmer významný“ nález.</li>
+  <li><strong>Malý súbor.</strong> Sedemdesiatjeden účastníkov je primeraný počet pre fázu 2b, ale nedovoľuje vylúčiť malý účinok. Vzhľadom na pozorovaný rozdiel približne 1,3 g však nejde o „takmer významný“ nález.</li>
   <li><strong>Trvanie 9 mesiacov.</strong> Nemusí postačovať, ak by účinok urátovej osi bol pomalší alebo závislý od dlhšej expozície.</li>
   <li><strong>Jednocentrový dizajn v jednej krajine.</strong> Nórski darcovia nemusia reprezentovať iné populácie.</li>
   <li><strong>Vysoko selektovaná populácia.</strong> Zdraví darcovia bez indikácie na liečbu znižujúcu urikémiu a bez kardiálneho ochorenia; výsledky nemožno prenášať na pacientov s pokročilejšou CKD, s hypertrofiou ľavej komory alebo s výraznejšou komorbiditou.</li>
@@ -208,9 +208,9 @@ $articles[] = [
   <li><strong>Úloha metabolických faktorov</strong> vrátane urátu v mechanizmoch ovplyvňujúcich vaskulárnu a myokardiálnu štruktúru.</li>
 </ol>
 
-<p>Urát je asociovaný s viacerými kardiovaskulárnymi fenotypmi vrátane hypertrofie a endotelovej dysfunkcie. Táto štúdia však v najlepšej dostupnej testovacej forme — randomizácia, zaslepenie, endpoint na magnetickej rezonancii — nedokázala, že by u darcov po deviatich mesiacoch alopurinol zmenil hmotnosť ľavej komory ani sledované kardiometabolické parametre.</p>
+<p>Urát je asociovaný s viacerými kardiovaskulárnymi fenotypmi vrátane hypertrofie a endotelovej dysfunkcie. Táto štúdia však v najprísnejšom dostupnom usporiadaní (randomizácia, zaslepenie, ukazovateľ meraný magnetickou rezonanciou) nedokázala, že by u darcov po deviatich mesiacoch alopurinol zmenil hmotnosť ľavej komory ani sledované kardiometabolické parametre.</p>
 
-<p>Výsledok zapadá do širšieho vzorca posledných rokov. Dve veľké randomizované štúdie publikované v roku 2020 v <em>New England Journal of Medicine</em> — CKD-FIX u pacientov s chronickou chorobou obličiek 3. a 4. štádia a PERL u pacientov s diabetom 1. typu a včasnou až stredne pokročilou diabetickou chorobou obličiek — takisto nepreukázali klinicky významný prínos znižovania urátu alopurinolom na obličkové výsledky.</p>
+<p>Výsledok zapadá do širšieho vzorca posledných rokov. Dve veľké randomizované štúdie publikované v roku 2020 v <em>New England Journal of Medicine</em> – CKD-FIX u pacientov s chronickou chorobou obličiek 3. a 4. štádia a PERL u pacientov s diabetom 1. typu a včasnou až stredne pokročilou diabetickou chorobou obličiek – takisto nepreukázali klinicky významný prínos znižovania urátu alopurinolom na obličkové výsledky.</p>
 
 <p>Asociácia medzi urikémiou a orgánovým poškodením teda nemusí byť príčinná. Zvýšený urát môže byť skôr <em>ukazovateľom</em> zníženej funkcie obličiek a metabolického rizika než jeho pôvodcom. AL-DON tento obraz dopĺňa o srdcovú štruktúru u darcov.</p>
 
@@ -220,7 +220,7 @@ $articles[] = [
   <li><strong>Zníženie kyseliny močovej alopurinolom je u darcov obličky dosiahnuteľné</strong> a liek účinkuje podľa očakávania.</li>
   <li><strong>Deväť mesiacov alopurinolu v dávke 300 mg denne však nepreukázalo</strong> regresiu hmotnosti ľavej komory ani zlepšenie krvného tlaku a inzulínovej citlivosti.</li>
   <li><strong>Liečbu znižujúcu urikémiu preto nemožno odporúčať darcom obličky iba s cieľom znížiť kardiovaskulárne riziko.</strong> Rozhodnutie má vychádzať z konkrétnych klinických indikácií, ako sú dnavá choroba alebo urátová litiáza, a z bezpečnostného profilu lieku.</li>
-  <li>Bezpečnostný signál — všetky tri závažné udalosti v aktívnej vetve — pri chýbajúcom prínose ďalej posúva pomer prínosu a rizika v neprospech podávania bez indikácie.</li>
+  <li>Bezpečnostný signál – všetky tri závažné udalosti v aktívnej vetve – pri chýbajúcom prínose ďalej posúva pomer prínosu a rizika v neprospech podávania bez indikácie.</li>
   <li>Sledovanie darcov má aj naďalej stáť na kontrole krvného tlaku, eGFR, albuminúrie, hmotnosti a metabolických rizikových faktorov, nie na farmakologickom ovplyvňovaní urikémie.</li>
 </ul>
 

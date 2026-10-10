@@ -75,11 +75,11 @@ $articles[] = [
 
 <p>Predvídateľnejšia biologická dostupnosť torasemidu tak sama osebe neviedla k mortalitnej výhode. Výber medzi liekmi môže naďalej závisieť od individuálnej odpovede, absorpcie, adherencie, dávkovacieho režimu a dostupnosti, nie však od očakávanej prognostickej superiority.</p>
 
-<p>Veľká observačná analýza 328 640 párovaných poistencov Medicare následne zaznamenala pri torasemide mierne nižší výskyt kombinovaného ukazovateľa mortality a príhod súvisiacich so srdcovým zlyhávaním (HR 0,97; 95 % IS 0,95–0,99), ale vyšší výskyt akútneho poškodenia obličiek (HR 1,12; 95 % IS 1,10–1,15). Ani dôsledné párovanie nedokáže vylúčiť reziduálne zmätenie indikáciou. Tieto údaje sú bezpečnostným signálom, nie dôkazom kauzality ani dôvodom na plošnú zámenu lieku.</p>
+<p>Veľká observačná analýza 328 640 párovaných poistencov Medicare následne zaznamenala pri torasemide mierne nižší výskyt kombinovaného ukazovateľa mortality a príhod súvisiacich so srdcovým zlyhávaním (HR 0,97; 95 % IS 0,95–0,99), ale vyšší výskyt akútneho poškodenia obličiek (HR 1,12; 95 % IS 1,10–1,15). Ani dôsledné párovanie nedokáže vylúčiť reziduálne skreslenie indikáciou. Údaje preto treba brať ako bezpečnostný signál, nie dôkazom kauzality ani dôvodom na plošnú zámenu lieku.</p>
 
 <h2>Chlórtalidón a hydrochlorotiazid: bez preukázanej nefroprotekčnej superiority</h2>
 
-<p>V sekundárnej analýze pragmatickej Diuretic Comparison Project sa primárny renálny kombinovaný ukazovateľ vyskytol u 369 z 6 118 pacientov liečených chlórtalidónom (6,0 %) a u 396 zo 6 147 pacientov liečených hydrochlorotiazidom (6,4 %); HR 0,94 (95 % IS 0,81–1,08; p = 0,37). Chlórtalidón teda nepreukázal prevahu v prevencii renálnych výsledkov. V hlavnej analýze štúdie bola hypokaliémia častejšia pri chlórtalidóne, 6,0 % oproti 4,4 %.</p>
+<p>V sekundárnej analýze pragmatickej štúdie Diuretic Comparison Project sa primárny renálny kombinovaný ukazovateľ vyskytol u 369 z 6 118 pacientov liečených chlórtalidónom (6,0 %) a u 396 zo 6 147 pacientov liečených hydrochlorotiazidom (6,4 %); HR 0,94 (95 % IS 0,81–1,08; p = 0,37). Chlórtalidón teda nepreukázal prevahu v prevencii renálnych výsledkov. V hlavnej analýze štúdie bola hypokaliémia častejšia pri chlórtalidóne, 6,0 % oproti 4,4 %.</p>
 
 <p>Záver neznamená, že lieky majú za všetkých okolností rovnaký antihypertenzný účinok ani že chlórtalidón nemá miesto v liečbe hypertenzie. Pri výbere treba zohľadniť trvanie účinku, krvný tlak, funkciu obličiek, elektrolyty, toleranciu a súbežnú liečbu; rovnaký počet miligramov nepredstavuje ekvivalentnú dávku.</p>
 
@@ -87,7 +87,7 @@ $articles[] = [
 
 <p>Štúdia SPIRIT-HF zahŕňala 730 pacientov so srdcovým zlyhávaním so zachovanou alebo mierne zníženou ejekčnou frakciou. Podľa oficiálnej správy ACC bol po 24 mesiacoch primárny kombinovaný ukazovateľ hospitalizácie pre srdcové zlyhávanie a kardiovaskulárneho úmrtia 12,7 udalosti na 100 pacientorokov pri spironolaktóne a 10,8 pri placebe; rozdiel nebol štatisticky významný. Pri spironolaktóne sa častejšie vyskytovali hospitalizácie, hypotenzia, renálne udalosti a hyperkaliémia.</p>
 
-<p>Interpretáciu výrazne obmedzuje predčasné ukončovanie študijnej liečby, zásah pandémie COVID-19 a nedostatočná štatistická sila. Výsledok bol prezentovaný na ACC.26; k dátumu prípravy článku nejde o plne publikovanú recenzovanú štúdiu. Nemožno ho preniesť na srdcové zlyhávanie so zníženou ejekčnou frakciou ani na iné indikácie spironolaktónu či na všetky antagonisty mineralokortikoidových receptorov.</p>
+<p>Interpretáciu výrazne obmedzuje predčasné ukončovanie študijnej liečby, vplyv pandémie COVID-19 a nedostatočná štatistická sila. Výsledok bol prezentovaný na ACC.26; k dátumu prípravy článku nejde o plne publikovanú recenzovanú štúdiu. Nemožno ho preniesť na srdcové zlyhávanie so zníženou ejekčnou frakciou ani na iné indikácie spironolaktónu či na všetky antagonisty mineralokortikoidových receptorov.</p>
 
 <h2>Ako interpretovať vzostup kreatinínu počas dekongescie</h2>
 
@@ -96,7 +96,7 @@ $articles[] = [
   <thead><tr><th scope="col">Oblasť</th><th scope="col">Otázka pri lôžku pacienta</th></tr></thead>
   <tbody>
     <tr><th scope="row">Kongescia</th><td>Ustupujú opuchy, dýchavica, ascites a známky venózneho preťaženia?</td></tr>
-    <tr><th scope="row">Perfúzia</th><td>Je tlak a periférna perfúzia stabilná, bez ortostatických ťažkostí či známok šoku?</td></tr>
+    <tr><th scope="row">Perfúzia</th><td>Sú tlak a periférna perfúzia stabilné, bez ortostatických ťažkostí či známok šoku?</td></tr>
     <tr><th scope="row">Diuréza</th><td>Je odpoveď primeraná, alebo vzniká oligúria napriek pretrvávajúcej kongescii?</td></tr>
     <tr><th scope="row">Trend</th><td>Ide o malý stabilizovaný posun, alebo o pokračujúce zhoršovanie kreatinínu a močoviny?</td></tr>
     <tr><th scope="row">Vnútorné prostredie</th><td>Vzniká závažná porucha sodíka, draslíka, magnézia alebo acidobázickej rovnováhy?</td></tr>

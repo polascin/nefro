@@ -45,9 +45,9 @@ $articles[] = [
 
 <h2>Čo priniesla nová analýza DOPPS</h2>
 
-<p>Iseri a spolupracovníci analyzovali dáta medzinárodnej prospektívnej kohorty DOPPS z rokov 2009–2022. V štvrťročných landmarkových bodoch zhrnuli hodnoty celkového vápnika z predchádzajúcich 180 dní ako poslednú hodnotu, priemer, lineárny sklon, reziduálnu smerodajnú odchýlku a podiel času pod 8,6 mg/dl alebo nad 10,0 mg/dl. Hospitalizácie a úmrtia následne sledovali počas 90 dní. Do hlavnej analýzy vstúpilo 81 475 pacientov a 431 618 landmarkov; zaznamenali 68 632 hospitalizácií a 12 886 úmrtí. [1]</p>
+<p>Iseri a spolupracovníci analyzovali údaje medzinárodnej prospektívnej kohorty DOPPS z rokov 2009–2022. V štvrťročných landmarkových bodoch zhrnuli hodnoty celkového vápnika z predchádzajúcich 180 dní ako poslednú hodnotu, priemer, lineárny sklon, reziduálnu smerodajnú odchýlku a podiel času pod 8,6 mg/dl alebo nad 10,0 mg/dl. Hospitalizácie a úmrtia následne sledovali počas 90 dní. Do hlavnej analýzy vstúpilo 81 475 pacientov a 431 618 landmarkov; zaznamenali 68 632 hospitalizácií a 12 886 úmrtí. [1]</p>
 
-<p>Posledná hodnota vápnika nebola spojená s hospitalizáciou, bola však spojená s mortalitou. Nižší 180-dňový priemer súvisel najmä s hospitalizáciou, vyšší priemer s úmrtím. Rastúci sklon aj väčšia reziduálna variabilita boli konzistentne spojené s oboma výsledkami. Väčšia záťaž časom pod rozmedzím mala odstupňovaný vzťah k hospitalizácii, kým čas nad rozmedzím silno a dávkovo závislo súvisel s mortalitou. [1]</p>
+<p>Posledná hodnota vápnika nebola spojená s hospitalizáciou, bola však spojená s mortalitou. Nižší 180-dňový priemer súvisel najmä s hospitalizáciou, vyšší priemer s úmrtím. Rastúci sklon aj väčšia reziduálna variabilita boli konzistentne spojené s oboma výsledkami. Dlhší čas pod rozmedzím mal odstupňovaný vzťah k hospitalizácii, kým čas nad rozmedzím silno a dávkovo závislo súvisel s mortalitou. [1]</p>
 
 <p>Autori uvádzajú pri väčšej variabilite publikované pomery rizík 1,15 pre hospitalizáciu a 1,37 pre úmrtie; pri rastúcom sklone 1,10 a 1,38. Tieto odhady patria ku konkrétnej parametrizácii modelu a nemožno ich preniesť na ľubovoľný rozdiel kalciémie u jednotlivého pacienta. Pridanie dynamických ukazovateľov navyše zlepšilo diskriminačnú schopnosť populačného modelu iba mierne. [1]</p>
 
@@ -55,7 +55,7 @@ $articles[] = [
 
 <p>Landmarkový prístup oddeľuje obdobie merania expozície od následného obdobia sledovania výsledkov. V tejto štúdii bol každý landmark podmienený najmenej štyrmi mesiacmi s dostupným meraním počas predchádzajúcich 180 dní a aspoň jedným meraním v posledných 45 dňoch. Pacient mohol prispieť viacerými landmarkmi, pokiaľ zostával v riziku.</p>
 
-<p>Tento dizajn znižuje niektoré problémy časového usporiadania, neodstraňuje však reziduálne skreslenie ani selekciu pacientov, ktorí sa do landmarku dostali a mali dostatok údajov. Mesačné dáta nezachytili krátke výkyvy, ionizovaný vápnik nebol dostupný a albumínom korigovaný vápnik sa použil iba v analýzach citlivosti. Deväťdesiatdňový horizont navyše nehodnotí dlhodobé dôsledky. [1]</p>
+<p>Tento dizajn znižuje niektoré problémy časového usporiadania, neodstraňuje však reziduálne skreslenie ani selekciu pacientov, ktorí sa do landmarku dostali a mali dostatok údajov. Mesačné merania nezachytili krátke výkyvy, ionizovaný vápnik nebol dostupný a albumínom korigovaný vápnik sa použil iba v analýzach citlivosti. Deväťdesiatdňový horizont navyše nehodnotí dlhodobé dôsledky. [1]</p>
 
 <h2>Kalciémia nie je celková vápniková bilancia</h2>
 
@@ -108,7 +108,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>Jediný výsledok kalciémie pri hemodialýze je iba časový bod. Priemer, trend, čas mimo rozmedzia a nestabilita môžu odhaliť informáciu, ktorú izolovaná hodnota nezachytí. Zmysluplná interpretácia však vyžaduje porovnateľné odbery, znalosť albumínu a acidobázického stavu, súbežné hodnotenie fosfátov a PTH a presný prehľad dialyzačného predpisu a liečby.</p>
+<p>Jediný výsledok kalciémie pri hemodialýze zachytáva iba jeden časový bod. Priemer, trend, čas mimo rozmedzia a nestabilita môžu odhaliť informáciu, ktorú izolovaná hodnota nezachytí. Zmysluplná interpretácia však vyžaduje porovnateľné odbery, znalosť albumínu a acidobázického stavu, súbežné hodnotenie fosfátov a PTH a presný prehľad dialyzačného predpisu a liečby.</p>
 
 <hr>
 

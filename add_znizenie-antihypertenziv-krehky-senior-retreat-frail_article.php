@@ -68,7 +68,7 @@ $articles[] = [
   <li>pacientov so systolickým tlakom ≥ 130 mmHg,</li>
   <li>mladších pacientov s krehkosťou,</li>
   <li>dialyzovaných pacientov ani osoby po transplantácii obličky,</li>
-  <li>pacientov v akútnej obehovej nestabilite.</li>
+  <li>pacientov s akútnou obehovou nestabilitou.</li>
 </ul>
 
 <p>Odporúčania ESC z roku 2024 zdôrazňujú, že dobre tolerovanú liečbu netreba u veľmi starého alebo krehkého pacienta automaticky rušiť. Pri progresii krehkosti, poklese tlaku, symptomatickej ortostatickej hypotenzii alebo obmedzenej očakávanej dĺžke života však môže byť potrebná individualizácia a depreskripcia. Cieľ 120–129/70–79 mmHg sa na stredne až ťažko krehkých pacientov nemusí dať bezpečne zovšeobecniť.</p>
