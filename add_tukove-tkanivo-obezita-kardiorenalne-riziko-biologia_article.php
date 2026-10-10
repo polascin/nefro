@@ -68,7 +68,7 @@ $articles[] = [
 
 <p>Výsledky podporujú hypotézu, že dysfunkcia tukového tkaniva pri inzulínovej rezistencii nie je jednotným stavom a jej molekulový obraz sa môže líšiť podľa pohlavia a depa.</p>
 
-<p><strong>Čo z toho zatiaľ nevyplýva:</strong> súbor mal 41 osôb so širokým vekovým rozpätím a z dostupného zhrnutia nemožno posúdiť výber účastníkov, menopauzálny stav žien, liečbu, kontrolu zmätočných faktorov ani korekciu na viacnásobné testovanie. Sekvenovanie RNA celého tkaniva navyše zachytáva zmes adipocytov, imunitných, endotelových a stromálnych buniek – zmena génovej expresie preto <strong>nemusí znamenať zmenu v adipocytoch</strong>, ale aj odlišné bunkové zloženie vzorky. Ide o hypotézotvorné údaje vyžadujúce replikáciu.</p>
+<p><strong>Čo z toho zatiaľ nevyplýva:</strong> súbor mal 41 osôb so širokým vekovým rozpätím a z dostupného zhrnutia nemožno posúdiť výber účastníkov, menopauzálny stav žien, liečbu, kontrolu mätúcich faktorov ani korekciu na viacnásobné testovanie. Sekvenovanie RNA celého tkaniva navyše zachytáva zmes adipocytov, imunitných, endotelových a stromálnych buniek – zmena génovej expresie preto <strong>nemusí znamenať zmenu v adipocytoch</strong>, ale aj odlišné bunkové zloženie vzorky. Ide o hypotézotvorné údaje vyžadujúce replikáciu.</p>
 
 <h2>Komunikácia s ostatnými orgánmi cez mikroRNA</h2>
 
