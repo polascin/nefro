@@ -25,9 +25,9 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Prehľad v Kidney International ukazuje, že KDIGO už dnes ponúka ucelený rámec pre manažment kardiovaskulárno-obličkovo-metabolického syndrómu. Nejde o jednu smernicu, ale o sieť odporúčaní a konferenčných správ, v ktorých stojí oblička v strede – nie na okraji.',
     'content'      => <<<'HTML'
-<figure><a href="img/kdigo-ckm-syndrom-oblicka-v-strede.webp" rel="noopener noreferrer" target="_blank"><img src="img/kdigo-ckm-syndrom-oblicka-v-strede.webp" alt="Oblička v strede troch prepletených svetelných oblúkov nesúcich srdce, cievu a metabolické častice" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Kardiovaskulárna, obličková a metabolická zložka sú navzájom prepojené a všetky prechádzajú cez obličku — preto stojí v strede rámca KDIGO.</figcaption></figure>
+<figure><a href="img/kdigo-ckm-syndrom-oblicka-v-strede.webp" rel="noopener noreferrer" target="_blank"><img src="img/kdigo-ckm-syndrom-oblicka-v-strede.webp" alt="Oblička v strede troch prepletených svetelných oblúkov nesúcich srdce, cievu a metabolické častice" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Kardiovaskulárna, obličková a metabolická zložka sú navzájom prepojené a všetky prechádzajú cez obličku – preto stojí v strede rámca KDIGO.</figcaption></figure>
 
-<p>Chronická choroba obličiek (CKD) už dávno nie je izolovaným nefrologickým problémom. Úzko súvisí s obezitou, diabetom 2. typu, artériovou hypertenziou, dyslipidémiou a kardiovaskulárnym ochorením. V roku 2023 tieto väzby Americká kardiologická asociácia (AHA) formálne pomenovala jednotným pojmom <strong>kardiovaskulárno-obličkovo-metabolický syndróm</strong> (cardiovascular-kidney-metabolic, CKM). Koncept zdôrazňuje, že prevencia a liečba jedného orgánového postihnutia si vyžaduje súčasné zohľadnenie ostatných zložiek.</p>
+<p>Chronická choroba obličiek (CKD) už dávno nie je izolovaným nefrologickým problémom. Úzko súvisí s obezitou, diabetom 2. typu, artériovou hypertenziou, dyslipidémiou a kardiovaskulárnym ochorením. V roku 2023 tieto väzby Americká kardiologická asociácia (AHA) formálne pomenovala jednotným pojmom <strong>kardiovaskulárno-obličkovo-metabolický syndróm</strong> (cardiovascular-kidney-metabolic, CKM). Koncept zdôrazňuje, že pri prevencii a liečbe jedného orgánového postihnutia treba súčasne myslieť aj na ostatné zložky.</p>
 
 <p>Prehľadová práca Levina a kolektívu, publikovaná v roku 2026 v časopise <em>Kidney International</em>, ukazuje, že organizácia KDIGO už dnes poskytuje pre túto oblasť ucelený a dôkazmi podložený rámec. Nejde o jedinú „CKM smernicu“. Ide o sieť dokumentov, ktoré sa navzájom dopĺňajú a na ochorenie sa pozerajú optikou obličky.</p>
 
@@ -110,9 +110,9 @@ $articles[] = [
 
 <p>ACE inhibítory alebo sartany zostávajú základom pri CKD s albuminúriou, pri CKD s hypertenziou a pri diabete s albuminúriou. Podstatné je titrovať na maximálnu tolerovanú dávku, vyhnúť sa kombinácii ACE inhibítora, sartanu a priameho inhibítora renínu a aktívne riešiť hyperkaliémiu tak, aby sa liečba nemusela zbytočne prerušovať.</p>
 
-<h3>inhibítory SGLT2</h3>
+<h3>Inhibítory SGLT2</h3>
 
-<p>inhibítory SGLT2 dnes patria k najdôležitejším liekom pri CKD s diabetom a čoraz viac aj bez diabetu. Ich prínos presahuje kontrolu glykémie – spomaľujú progresiu CKD, znižujú kardiovaskulárne riziko a znižujú počet hospitalizácií pre srdcové zlyhávanie. Indikáciu a rozmedzie eGFR treba posudzovať podľa konkrétnej molekuly a platnej informácie o lieku.</p>
+<p>Inhibítory SGLT2 dnes patria k najdôležitejším liekom pri CKD s diabetom a čoraz viac aj bez diabetu. Ich prínos presahuje kontrolu glykémie – spomaľujú progresiu CKD, znižujú kardiovaskulárne riziko aj počet hospitalizácií pre srdcové zlyhávanie. Indikáciu a rozmedzie eGFR treba posudzovať podľa konkrétnej molekuly a platnej informácie o lieku.</p>
 
 <h3>Agonisty receptora GLP-1</h3>
 
@@ -153,7 +153,7 @@ $articles[] = [
 
 <ul>
   <li><strong>Mierny pokles funkcie obličiek po nasadení odporúčanej liečby srdcového zlyhávania spravidla nevyžaduje jej vysadenie.</strong> Takýto pokles býva hemodynamický a nie je spojený s horšími výsledkami. Toto je v praxi najčastejší dôvod zbytočného prerušenia prospešnej liečby.</li>
-  <li>inhibítory SGLT2, blokátory systému renín–angiotenzín–aldosterón a novšie molekuly ako finerenón či agonisty receptora GLP-1 môžu byť prospešné v oboch populáciách, <strong>dôkazy pri pokročilej CKD však zostávajú obmedzené</strong>.</li>
+  <li>Inhibítory SGLT2, blokátory systému renín–angiotenzín–aldosterón a novšie molekuly ako finerenón či agonisty receptora GLP-1 môžu byť prospešné v oboch populáciách, <strong>dôkazy pri pokročilej CKD však zostávajú obmedzené</strong>.</li>
   <li>Chýbajú diagnostické prahy pre srdcové zlyhávanie špecifické pre CKD a spresnená definícia akútneho poškodenia obličiek v kontexte srdcového zlyhávania.</li>
 </ul>
 
@@ -178,7 +178,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>Prehľad Levina a kolektívu presvedčivo ukazuje, že KDIGO už dnes poskytuje praktický a dôkazmi podložený rámec pre manažment ľudí s CKM syndrómom. Najdôležitejšie princípy sú skorá diagnostika, presná klasifikácia CKD, dôraz na albuminúriu, integrovaná kontrola tlaku, glykémie, lipidov, hmotnosti a fajčenia, využitie liekov s preukázaným renálnym aj kardiovaskulárnym prínosom a multidisciplinárna spolupráca.</p>
+<p>KDIGO teda už dnes poskytuje praktický a dôkazmi podložený rámec pre manažment ľudí s CKM syndrómom. Jeho najdôležitejšie princípy sú skorá diagnostika, presná klasifikácia CKD, dôraz na albuminúriu, integrovaná kontrola tlaku, glykémie, lipidov, hmotnosti a fajčenia, využitie liekov s preukázaným renálnym aj kardiovaskulárnym prínosom a multidisciplinárna spolupráca.</p>
 
 <p>Pre nefrológiu je to zároveň príležitosť ukázať, že oblička nie je na okraji kardiometabolickej medicíny, ale priamo v jej strede.</p>
 

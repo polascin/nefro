@@ -27,7 +27,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Semaglutid, tirzepatid a retatrutid nemajú pri MASH rovnakú úroveň dôkazov ani registračné postavenie. Čo ukázali ESSENCE a SYNERGY-NASH a čo musí zohľadniť nefrológ?',
     'content'      => <<<'HTML'
-<figure><a href="img/inkretinove-agonisty-masld-mash-pecen-ckd.webp" rel="noopener noreferrer" target="_blank"><img src="img/inkretinove-agonisty-masld-mash-pecen-ckd.webp" alt="Modrý lúč prechádza stukovatenou pečeňou a rozpúšťa tukové kvapky, v pozadí presvitá oblička v rovnakom svetle" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Prínos pre pečeň sa pri týchto liekoch nezastaví na hranici orgánu — preto téma patrí aj nefrológovi.</figcaption></figure>
+<figure><a href="img/inkretinove-agonisty-masld-mash-pecen-ckd.webp" rel="noopener noreferrer" target="_blank"><img src="img/inkretinove-agonisty-masld-mash-pecen-ckd.webp" alt="Modrý lúč prechádza stukovatenou pečeňou a rozpúšťa tukové kvapky, v pozadí presvitá oblička v rovnakom svetle" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Prínos pre pečeň sa pri týchto liekoch nezastaví na hranici orgánu – preto téma patrí aj nefrológovi.</figcaption></figure>
 
 <p class="article-dek"><em>Semaglutid, tirzepatid a retatrutid predstavujú tri rozdielne receptorové stratégie. Nemožno ich však zoradiť podľa počtu cieľových receptorov ani podľa úbytku hmotnosti v navzájom odlišných štúdiách. Pre klinické rozhodnutie treba oddeliť zníženie obsahu tuku v pečeni, histologickú odpoveď, prevenciu pečeňových komplikácií a kardiorenálny prínos. Pri chronickej chorobe obličiek navyše rozhodujú hydratácia, glykémia, nutričný stav a presná indikácia konkrétneho lieku.</em></p>
 
@@ -35,7 +35,7 @@ $articles[] = [
 
 <h2>MASLD nie je synonymom steatohepatitídy</h2>
 
-<p>MASLD označuje <strong>steatotickú chorobu pečene spojenú s metabolickou dysfunkciou</strong> (<em>metabolic dysfunction-associated steatotic liver disease</em>). MASH je jej zápalový fenotyp — <strong>steatohepatitída spojená s metabolickou dysfunkciou</strong> (<em>metabolic dysfunction-associated steatohepatitis</em>) — charakterizovaný steatózou, zápalom a balónovým poškodením hepatocytov, s fibrózou alebo bez nej.</p>
+<p>MASLD označuje <strong>steatotickú chorobu pečene spojenú s metabolickou dysfunkciou</strong> (<em>metabolic dysfunction-associated steatotic liver disease</em>). MASH je jej zápalový fenotyp – <strong>steatohepatitída spojená s metabolickou dysfunkciou</strong> (<em>metabolic dysfunction-associated steatohepatitis</em>) – charakterizovaný steatózou, zápalom a balónovým poškodením hepatocytov, s fibrózou alebo bez nej.</p>
 
 <p>V anglickom abstrakte východiskového článku je skratka MASLD nesprávne rozpísaná ako steatohepatitída. Nejde o zanedbateľnú terminologickú chybu. Steatóza zistená ultrasonograficky automaticky nepotvrdzuje MASH a už vôbec neurčuje štádium fibrózy. Zároveň neplatí, že každý pacient s MASLD nevyhnutne progreduje do MASH.</p>
 
@@ -169,7 +169,7 @@ $articles[] = [
   </table>
 </div>
 
-<p>Primárny ukazovateľ — ústup MASH bez zhoršenia fibrózy — bol pri každej dávke lepší než pri placebe (p &lt; 0,001). Výsledok fibrózy je povzbudivý, ale odhady boli menej presné a neukazujú jednoduchú dávkovú závislosť. Biopsiu v 52. týždni bolo možné vyhodnotiť u 157 účastníkov; chýbajúce hodnoty sa imputovali podľa vopred určeného štatistického postupu. Štúdia bola krátka a malá na posúdenie klinických pečeňových udalostí.</p>
+<p>Primárny ukazovateľ – ústup MASH bez zhoršenia fibrózy – bol pri každej dávke lepší než pri placebe (p &lt; 0,001). Výsledok fibrózy je povzbudivý, ale odhady boli menej presné a neukazujú jednoduchú dávkovú závislosť. Biopsiu v 52. týždni bolo možné vyhodnotiť u 157 účastníkov; chýbajúce hodnoty sa imputovali podľa vopred určeného štatistického postupu. Štúdia bola krátka a malá na posúdenie klinických pečeňových udalostí.</p>
 
 <p>V EÚ je tirzepatid ako Mounjaro povolený pre diabetes 2. typu a manažment hmotnosti. MASH medzi jeho schválenými indikáciami k 13. septembru 2026 nie je. Výsledky SYNERGY-NASH preto predstavujú dôkaz účinnosti fázy 2 a podklad pre ďalší výskum, nie samostatnú európsku indikáciu na liečbu MASH.</p>
 
@@ -192,10 +192,10 @@ $articles[] = [
 <p>ESSENCE, SYNERGY-NASH a podštúdia retatrutidu sa líšia fázou, veľkosťou, trvaním, populáciou, dávkami, prácou s chýbajúcimi údajmi aj cieľovými ukazovateľmi. Percentá z nich preto nemožno priamo porovnávať ako v jednom spoločnom experimente.</p>
 
 <ol>
-  <li><strong>Metabolické ukazovatele</strong> — hmotnosť, HbA1c a obvod pása — opisujú metabolickú odpoveď.</li>
-  <li><strong>Biomarkery a zobrazovanie</strong> — aminotransferázy a obsah tuku v pečeni — sú užitočné, ale nepotvrdzujú histologický ústup MASH.</li>
-  <li><strong>Histológia</strong> — ústup steatohepatitídy a zlepšenie fibrózy — je bližšie k samotnému ochoreniu, stále však ide o náhradný ukazovateľ.</li>
-  <li><strong>Klinické udalosti</strong> — dekompenzácia, transplantácia, hepatocelulárny karcinóm a úmrtie — sú výsledky, ktoré majú potvrdiť dlhodobý prínos.</li>
+  <li><strong>Metabolické ukazovatele</strong> – hmotnosť, HbA1c a obvod pása – opisujú metabolickú odpoveď.</li>
+  <li><strong>Biomarkery a zobrazovanie</strong> – aminotransferázy a obsah tuku v pečeni – sú užitočné, ale nepotvrdzujú histologický ústup MASH.</li>
+  <li><strong>Histológia</strong> – ústup steatohepatitídy a zlepšenie fibrózy – je bližšie k samotnému ochoreniu, stále však ide o náhradný ukazovateľ.</li>
+  <li><strong>Klinické udalosti</strong> – dekompenzácia, transplantácia, hepatocelulárny karcinóm a úmrtie – sú výsledky, ktoré majú potvrdiť dlhodobý prínos.</li>
 </ol>
 
 <p>Úspech na jednej úrovni automaticky nedokazuje úspech na nasledujúcej. Nie je preto opodstatnené odporúčať semaglutid iba pri „miernej MASLD“, tirzepatid pri „pokročilej MASLD“ a retatrutid ako najsilnejšiu možnosť podľa počtu receptorov. Semaglutid bol priamo skúšaný a povolený práve pri MASH s fibrózou F2–F3; výber lieku sa musí riadiť potvrdenou diagnózou, konkrétnou indikáciou a individuálnym pomerom prínosu a rizika.</p>

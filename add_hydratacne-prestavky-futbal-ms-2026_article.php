@@ -31,7 +31,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'FIFA na MS 2026 zaviedla trojminútové hydratačné prestávky v každom polčase. Pri horúčave nejde len o komfort, ale o prevenciu hypertermie, dehydratácie, hyponatriémie a AKI.',
     'content'      => <<<'HTML'
-<figure><a href="img/hydratacne-prestavky-futbal-ms-2026.webp" rel="noopener noreferrer" target="_blank"><img src="img/hydratacne-prestavky-futbal-ms-2026.webp" alt="Fľaša vody na trávniku pod spaľujúcim svetlom, nad plochou sa chveje horúci vzduch" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Pri extrémnej záťaži teplom nejde o komfort — prestávka na pitie je ochranou pred zlyhaním termoregulácie a obličiek.</figcaption></figure>
+<figure><a href="img/hydratacne-prestavky-futbal-ms-2026.webp" rel="noopener noreferrer" target="_blank"><img src="img/hydratacne-prestavky-futbal-ms-2026.webp" alt="Fľaša vody na trávniku pod spaľujúcim svetlom, nad plochou sa chveje horúci vzduch" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Pri extrémnej záťaži teplom nejde o komfort; prestávka na pitie je ochranou pred zlyhaním termoregulácie a obličiek.</figcaption></figure>
 
 <p>FIFA na majstrovstvách sveta vo futbale 2026 zaviedla trojminútové hydratačné prestávky uprostred každého polčasu. Na prvý pohľad ide o organizačný detail, ktorý prerušuje plynulosť hry a prirodzene vyvoláva otázky o taktike, televíznom priestore a komerčnom využití. Z medicínskeho hľadiska však nejde o kozmetickú úpravu pravidiel. Pri kombinácii tepla, vlhkosti, slnečného žiarenia, cestovania a vysokej intenzity výkonu ide o racionálne preventívne opatrenie.</p>
 
@@ -47,7 +47,7 @@ $articles[] = [
 
 <h2>Čo sa deje pri výkone v horúčave</h2>
 
-<p>Pri intenzívnom futbalovom výkone vzniká veľké množstvo metabolického tepla. Organizmus sa ho snaží odvádzať potením a zvýšeným prietokom krvi cez kožu. Tieto mechanizmy však majú svoje limity. Pri vysokej vlhkosti sa pot horšie odparuje. Pri silnom slnečnom žiarení a vysokej teplote okolia sa znižuje schopnosť tela odovzdávať teplo do prostredia.</p>
+<p>Pri intenzívnom futbalovom výkone vzniká veľké množstvo metabolického tepla. Organizmus sa ho snaží odvádzať potením a zvýšeným prietokom krvi cez kožu. Tieto mechanizmy však majú svoje hranice. Pri vysokej vlhkosti sa pot horšie odparuje. Pri silnom slnečnom žiarení a vysokej teplote okolia sa znižuje schopnosť tela odovzdávať teplo do prostredia.</p>
 
 <p>Dôsledkom môže byť:</p>
 
@@ -85,7 +85,7 @@ $articles[] = [
 
 <h2>Nefrologický pohľad: akútne poškodenie obličiek</h2>
 
-<p>Z pohľadu nefrológa je dôležité, že extrémny výkon v horúčave môže viesť k akútnemu poškodeniu obličiek aj u inak zdravého človeka. Mechanizmy sú viaceré a často sa kombinujú.</p>
+<p>Extrémny výkon v horúčave môže viesť k akútnemu poškodeniu obličiek aj u inak zdravého človeka. Mechanizmy sú viaceré a často sa kombinujú.</p>
 
 <p>Pri dehydratácii klesá efektívny cirkulujúci objem a znižuje sa renálna perfúzia. Aktivuje sa sympatikus a renín-angiotenzín-aldosterónový systém. Ak sa pridá hypertermia, vysoká intenzita výkonu a svalové poškodenie, môže vzniknúť rabdomyolýza s myoglobinúriou. Myoglobín následne poškodzuje tubuly, najmä pri hypovolémii a acidóze.</p>
 
@@ -106,7 +106,7 @@ $articles[] = [
   <li>krátko upraviť záťaž a taktické pokyny.</li>
 </ul>
 
-<p>Niektorí odborníci upozorňujú, že tri minúty môžu byť pri vysokej tepelnej záťaži málo, najmä ak má prestávka slúžiť nielen na pitie, ale aj na efektívne ochladenie. To je legitímna odborná diskusia. Otázka teda neznie, či prestávky majú medicínsky zmysel, ale či sú v konkrétnych podmienkach dostatočne dlhé a správne využité.</p>
+<p>Niektorí odborníci upozorňujú, že tri minúty môžu byť pri vysokej tepelnej záťaži málo, najmä ak má prestávka slúžiť nielen na pitie, ale aj na efektívne ochladenie. Táto námietka je oprávnená. Otázka teda neznie, či prestávky majú medicínsky zmysel, ale či sú v konkrétnych podmienkach dostatočne dlhé a správne využité.</p>
 
 <h2>Môžu prestávky hráčom uškodiť?</h2>
 
@@ -128,7 +128,7 @@ $articles[] = [
 
 <h2>Ponaučenie mimo profesionálneho futbalu</h2>
 
-<p>Hoci sa diskusia začala pri MS 2026, jej posolstvo je širšie. Platí pre amatérsky šport, školské turnaje, behy, cyklistiku, prácu v exteriéri aj rekreačnú aktivitu počas horúčav.</p>
+<p>Diskusia sa síce začala pri MS 2026, jej závery však platia aj pre amatérsky šport, školské turnaje, behy, cyklistiku, prácu v exteriéri aj rekreačnú aktivitu počas horúčav.</p>
 
 <p>Najrizikovejší nemusí byť profesionálny športovec s lekárskym tímom. Často je to človek bez medicínskeho dohľadu, ktorý podcení teplo, nerozpozná príznaky prehriatia a snaží sa „vydržať“. Riziko je vyššie u detí, seniorov, pacientov s hypertenziou, diabetom, chronickou chorobou obličiek, srdcovým zlyhávaním a u ľudí užívajúcich diuretiká, inhibítory RAAS, betablokátory, anticholinergiká alebo nesteroidové antiflogistiká.</p>
 
@@ -157,9 +157,9 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>Hydratačné prestávky na MS 2026 majú jasný medicínsky zmysel. Áno, môžu ovplyvniť rytmus hry a dávajú trénerom krátke taktické okno. To však neznamená, že sú iba marketingovým zásahom. Pri očakávanej kombinácii tepla, vlhkosti, slnečného žiarenia, nadmorskej výšky a cestovnej záťaže sú rozumnou súčasťou ochrany zdravia hráčov.</p>
+<p>Hydratačné prestávky na MS 2026 majú jasný medicínsky zmysel. Môžu síce ovplyvniť rytmus hry a dávajú trénerom krátke taktické okno, to však neznamená, že sú iba marketingovým zásahom. Pri očakávanej kombinácii tepla, vlhkosti, slnečného žiarenia, nadmorskej výšky a cestovnej záťaže sú rozumnou súčasťou ochrany zdravia hráčov.</p>
 
-<p>Z nefrologického pohľadu je dôležité vnímať výkon v horúčave ako situáciu s potenciálnym rizikom akútneho poškodenia obličiek, najmä pri hypovolémii, rabdomyolýze alebo nevhodnej hydratácii. Prestávky, aklimatizácia, chladenie a individuálne riadená hydratácia nie sú prejavom slabosti športovca. Sú súčasťou modernej medicíny výkonu.</p>
+<p>Z nefrologického pohľadu treba výkon v horúčave vnímať ako situáciu s potenciálnym rizikom akútneho poškodenia obličiek, najmä pri hypovolémii, rabdomyolýze alebo nevhodnej hydratácii. Prestávky, aklimatizácia, chladenie a individuálne riadená hydratácia nie sú prejavom slabosti športovca. Sú súčasťou modernej medicíny výkonu.</p>
 
 <hr>
 

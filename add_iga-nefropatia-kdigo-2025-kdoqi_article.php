@@ -33,9 +33,9 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Praktický prehľad manažmentu IgA nefropatie podľa KDIGO 2025 a KDOQI US Commentary: biopsia ako základ diagnózy, prognostická stratifikácia podľa eGFR a proteinúrie, nefarmakologické opatrenia, Nefecon, systémové kortikoidy a bezpečnostné body pre prax.',
     'content'      => <<<'HTML'
-<figure><a href="img/iga-nefropatia-kdigo-2025-kdoqi.webp" rel="noopener noreferrer" target="_blank"><img src="img/iga-nefropatia-kdigo-2025-kdoqi.webp" alt="Bioptická ihla odoberajúca svietiaci valček z obličky, ktorého svetlo sa mení na cielený lúč k zapálenému glomerulu" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Biopsia nie je formalita — z nej sa odvíja, ktorá cielená liečba má pre pacienta zmysel.</figcaption></figure>
+<figure><a href="img/iga-nefropatia-kdigo-2025-kdoqi.webp" rel="noopener noreferrer" target="_blank"><img src="img/iga-nefropatia-kdigo-2025-kdoqi.webp" alt="Bioptická ihla odoberajúca svietiaci valček z obličky, ktorého svetlo sa mení na cielený lúč k zapálenému glomerulu" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Biopsia nie je formalita – od nej sa odvíja, ktorá cielená liečba má pre pacienta zmysel.</figcaption></figure>
 
-<p>IgA nefropatia (IgAN) je heterogénne imunitne podmienené ochorenie s variabilným klinickým priebehom. Praktický prínos KDIGO 2025 spočíva v tom, že posúva manažment smerom k včasnému rozpoznaniu rizikových pacientov a k liečbe zameranej na hlavné mechanizmy ochorenia. KDOQI US Commentary zároveň spresňuje, ako tieto odporúčania implementovať v každodennej klinickej praxi.</p>
+<p>IgA nefropatia (IgAN) je heterogénne imunitne podmienené ochorenie s variabilným klinickým priebehom. KDIGO 2025 posúva manažment k včasnému rozpoznaniu rizikových pacientov a k liečbe zameranej na hlavné mechanizmy ochorenia. KDOQI US Commentary spresňuje, ako tieto odporúčania uplatniť v každodennej klinickej praxi.</p>
 
 <h2>1) Diagnóza IgAN: kľúčová je biopsia</h2>
 
@@ -62,7 +62,7 @@ $articles[] = [
 
 <p>Medzinárodné predikčné nástroje majú význam na <strong>rizikovú stratifikáciu</strong> a môžu podporiť zdieľané rozhodovanie s pacientom. KDOQI však upozorňuje, že tieto nástroje <strong>nemajú slúžiť na výber konkrétneho lieku</strong> ani na predikciu, kto na ktorú liečbu zareaguje. Neodporúčajú sa ani pre atypické fenotypy, ktoré neboli v pôvodných kohortách dostatočne zastúpené, napríklad pri akútnej nefritickej prezentácii, nefrotickom syndróme alebo rýchlo progredujúcej glomerulonefritíde.</p>
 
-<h2>3) Cieľ liečby: spomaliť pokles eGFR a stlačiť proteinúriu dole</h2>
+<h2>3) Cieľ liečby: spomaliť pokles eGFR a znížiť proteinúriu</h2>
 
 <p>KDIGO nastavuje cieľ liečby tak, aby sa rýchlosť poklesu eGFR približovala fyziologickému tempu pre väčšinu dospelých, teda približne <strong>&lt; 1 ml/min/rok</strong>. Najpraktickejším skorým markerom odpovede zostáva proteinúria, ktorá má byť minimálne <strong>&lt; 0,5 g/deň</strong> a ideálne <strong>&lt; 0,3 g/deň</strong>.</p>
 
@@ -77,11 +77,11 @@ $articles[] = [
   <li>manažovať dôsledky straty nefrónov, pravdepodobne celoživotne.</li>
 </ol>
 
-<p>Praktický dôraz je na kombinácii liekov pôsobiacich na viacero článkov patofyziológie, nie iba na izolované znižovanie proteinúrie bez adresovania mechanizmov ochorenia.</p>
+<p>Praktický dôraz je na kombinácii liekov pôsobiacich na viacero článkov patofyziológie, nie iba na izolované znižovanie proteinúrie bez ovplyvnenia mechanizmov ochorenia.</p>
 
 <h2>5) Praktické nefarmakologické a podporné kroky</h2>
 
-<p>KDIGO praxové body sú konkrétne a v komentári sa zdôrazňuje, že nejde o „doplnky“, ale o reálne terapeutické zásahy:</p>
+<p>Praktické body KDIGO sú konkrétne a komentár zdôrazňuje, že nejde o „doplnky“, ale o skutočné terapeutické zásahy:</p>
 
 <ul>
   <li><strong>zníženie príjmu sodíka</strong> pod 2 g/deň,</li>
@@ -110,9 +110,9 @@ $articles[] = [
 
 <h3>Bezpečnosť a systémový tieň lokálneho steroidu</h3>
 
-<p>Aj keď je Nefecon koncipovaný ako lokálny kortikosteroid s menšou systémovou expozíciou, KDOQI upozorňuje, že treba počítať s limitovanou absorpciou a klinicky významnými nežiaducimi účinkami. V štúdii boli závažné nežiaduce udalosti počas 9-mesačnej liečby častejšie v aktívnej skupine a častejšie bolo aj ukončenie liečby pre nežiaduce udalosti. V úvode liečby sa môže objaviť aj fenomén <strong>reverse dip</strong> na eGFR.</p>
+<p>Aj keď je Nefecon koncipovaný ako lokálny kortikosteroid s menšou systémovou expozíciou, KDOQI upozorňuje, že treba počítať s obmedzenou absorpciou a klinicky významnými nežiaducimi účinkami. V štúdii boli závažné nežiaduce udalosti počas 9-mesačnej liečby častejšie v aktívnej skupine a častejšie bolo aj ukončenie liečby pre nežiaduce udalosti. V úvode liečby sa môže objaviť aj fenomén <strong>reverse dip</strong> na eGFR.</p>
 
-<p>V praxi je preto dôležité pacientovi vysvetliť, že krátkodobé zmeny proteinúrie alebo eGFR ešte neznamenajú neúspech či úspech liečby.</p>
+<p>Pacientovi treba preto vysvetliť, že krátkodobé zmeny proteinúrie alebo eGFR ešte neznamenajú neúspech či úspech liečby.</p>
 
 <h2>7) Ak Nefecon nie je dostupný: znížená dávka systémových kortikoidov s profylaxiou</h2>
 
@@ -122,7 +122,7 @@ $articles[] = [
 
 <ul>
   <li><strong>0,4 mg/kg/deň</strong>, maximálne <strong>32 mg/deň</strong>, počas <strong>2 mesiacov</strong>,</li>
-  <li>potom tapering o <strong>4 mg/deň každý mesiac</strong>,</li>
+  <li>potom postupné znižovanie o <strong>4 mg/deň každý mesiac</strong>,</li>
   <li>celková dĺžka liečby <strong>6 až 9 mesiacov</strong>.</li>
 </ul>
 

@@ -37,7 +37,7 @@ $articles[] = [
     'content'      => <<<'HTML'
 <figure><a href="img/glp1-kompulzivne-spravanie-food-noise-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/glp1-kompulzivne-spravanie-food-noise-nefrologia.webp" alt="Chaotické zvukové vlny okolo hlavy, ktoré sa na druhej strane upokoja pri svietiacej molekule; bokom oblička" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Ak lieky stíšia nutkavé myšlienky na jedlo, zasahujú mechanizmus, ktorý sa neobmedzuje len na chuť do jedla.</figcaption></figure>
 
-<p>Lieky pôsobiace cez receptor GLP-1 boli pôvodne vyvíjané ako antidiabetiká. Neskôr zásadne zmenili liečbu obezity a postupne vstúpili aj do diskusie o kardiorenálnej ochrane. Dnes sa okolo nich otvára ďalšia, zatiaľ opatrná, ale vedecky veľmi zaujímavá otázka: môžu ovplyvňovať aj kompulzívne správanie, craving a nutkavé vyhľadávanie odmeňujúcich podnetov?</p>
+<p>Lieky pôsobiace cez receptor GLP-1 boli pôvodne vyvíjané ako antidiabetiká. Neskôr zásadne zmenili liečbu obezity a postupne vstúpili aj do diskusie o kardiorenálnej ochrane. Dnes sa otvára ďalšia otázka, zatiaľ opatrne formulovaná, no vedecky podnetná: môžu ovplyvňovať aj kompulzívne správanie, craving a nutkavé vyhľadávanie odmeňujúcich podnetov?</p>
 
 <p>Medscape túto tému približuje cez pacientsky pojem <strong>„food noise“</strong>. Nejde o bežný hlad, ale o vnútorný mentálny hluk spojený s jedlom: vtieravé, opakované a ťažko ovládateľné myšlienky najmä na vysoko odmeňujúce ultraprocesované potraviny. U časti pacientov sa po nasadení GLP-1 liečby tento „hluk“ výrazne stíši. Klinicky zaujímavé je, že pacienti často nehovoria iba o menšom hlade, ale o menšej naliehavosti impulzu.</p>
 
@@ -57,7 +57,7 @@ $articles[] = [
 
 <p>Tieto dva procesy sa často prekrývajú, ale nie sú totožné. Človek môže niečo chcieť aj vtedy, keď mu to už neprináša veľké potešenie. Práve tento rozdiel je dôležitý pri závislostiach, kompulzívnom jedení, hazardnom správaní a iných poruchách kontroly impulzov.</p>
 
-<p>Dopamínový systém, kedysi zjednodušene chápaný ako systém pôžitku, sa dnes viac spája s motiváciou, salienciou podnetu a vyhľadávaním odmeny. Ak sa tento systém stane senzibilizovaným, bežný podnet môže spúšťať neúmerne silné „chcenie“. Pacient to môže vnímať ako nutkanie, ktoré sa cíti menej ako rozhodnutie a viac ako príkaz. Agonisty GLP-1 receptorov môžu podľa tejto hypotézy znižovať práve intenzitu „chcenia“, nie nevyhnutne samotný pôžitok.</p>
+<p>Dopamínový systém, kedysi zjednodušene chápaný ako systém pôžitku, sa dnes viac spája s motiváciou, salienciou podnetu a vyhľadávaním odmeny. Ak sa tento systém stane senzibilizovaným, bežný podnet môže spúšťať neúmerne silné „chcenie“. Pacient to môže vnímať ako nutkanie, ktoré pôsobí menej ako rozhodnutie a viac ako príkaz. Agonisty GLP-1 receptorov môžu podľa tejto hypotézy znižovať práve intenzitu „chcenia“, nie nevyhnutne samotný pôžitok.</p>
 
 <h2>Alkohol a nikotín: sľubné, ale zatiaľ skoré dáta</h2>
 
@@ -71,7 +71,7 @@ $articles[] = [
 
 <p>Ďalší diel skladačky priniesla veľká kohortová štúdia v <em>BMJ</em> z roku 2026, ktorá analyzovala údaje viac než 600 000 amerických veteránov s diabetes mellitus 2. typu. V dizajne emulácie cieľových štúdií bolo začatie liečby agonistom GLP-1 receptora v porovnaní so začatím liečby inhibítorom SGLT2 spojené s nižším rizikom nových porúch užívania látok. U pacientov s už existujúcou poruchou užívania látok bolo používanie GLP-1 liečby spojené aj s nižším rizikom niektorých nepriaznivých klinických udalostí.</p>
 
-<p>Takéto dáta sú zaujímavé, ale treba ich čítať správne. Observačná štúdia ani pri kvalitnom dizajne nedokazuje kauzalitu. Môže v nej pretrvávať reziduálne skreslenie, rozdiely v správaní pacientov, dostupnosti starostlivosti alebo v závažnosti základného ochorenia. Je to dôvod na ďalší výskum, nie dôkaz, že GLP-1 lieky sú hotovou liečbou závislostí.</p>
+<p>Takéto dáta sú užitočné, ale treba ich čítať správne. Observačná štúdia ani pri kvalitnom dizajne nedokazuje kauzalitu. Môže v nej pretrvávať reziduálne skreslenie, rozdiely v správaní pacientov, dostupnosti starostlivosti alebo v závažnosti základného ochorenia. Je to dôvod na ďalší výskum, nie dôkaz, že GLP-1 lieky sú hotovou liečbou závislostí.</p>
 
 <h2>Food noise a ultraprocesované potraviny</h2>
 
@@ -85,7 +85,7 @@ $articles[] = [
 
 <p>Experimentálna práca publikovaná v <em>Nature</em> v roku 2026 ukázala u myší, že novšie malé molekuly pôsobiace cez GLP-1 receptor môžu zasiahnuť mozgový okruh súvisiaci s odmeňujúcim jedením. Autori identifikovali neuróny exprimujúce GLP-1 receptor v centrálnej amygdale a ukázali, že aktivácia tohto okruhu znižuje konzumáciu vysoko palatabilnej potravy cez následné ovplyvnenie dopamínovej signalizácie.</p>
 
-<p>Tento nález je biologicky veľmi zaujímavý, ale jeho klinická interpretácia musí byť opatrná. Ide o experiment u myší, nie o priamy dôkaz ľudskej skúsenosti „food noise“. Navyše sa týka najmä novších malomolekulových GLP-1 liekov, nie automaticky všetkých dostupných injekčných inkretínových terapií. Napriek tomu ukazuje vierohodnú cestu, ktorou môže GLP-1 signalizácia ovplyvňovať motivované správanie oddelene od klasickej regulácie hladu a sýtosti.</p>
+<p>Nález je biologicky pozoruhodný, klinicky ho však treba interpretovať opatrne. Ide o experiment u myší, nie o priamy dôkaz ľudskej skúsenosti „food noise“. Navyše sa týka najmä novších malomolekulových GLP-1 liekov, nie automaticky všetkých dostupných injekčných inkretínových terapií. Napriek tomu ukazuje vierohodnú cestu, ktorou môže GLP-1 signalizácia ovplyvňovať motivované správanie oddelene od klasickej regulácie hladu a sýtosti.</p>
 
 <h2>Riziko príliš širokého tlmenia motivácie</h2>
 
@@ -97,7 +97,7 @@ $articles[] = [
 
 <h2>Význam pre nefrologickú prax</h2>
 
-<p>V nefrologickej ambulancii sa GLP-1 receptorové agonisty a príbuzné inkretínové lieky objavujú najmä u pacientov s diabetom 2. typu, obezitou, kardiovaskulárnym rizikom a CKD. Bežne sledujeme hmotnosť, HbA1c, eGFR, albuminúriu, krvný tlak, gastrointestinálnu toleranciu a kardiovaskulárne riziko. Nové poznatky však naznačujú, že sa oplatí pýtať aj na správanie.</p>
+<p>V nefrologickej ambulancii sa agonisty GLP-1 receptorov a príbuzné inkretínové lieky objavujú najmä u pacientov s diabetom 2. typu, obezitou, kardiovaskulárnym rizikom a CKD. Bežne sledujeme hmotnosť, HbA1c, eGFR, albuminúriu, krvný tlak, gastrointestinálnu toleranciu a kardiovaskulárne riziko. Nové poznatky však naznačujú, že sa oplatí pýtať aj na správanie.</p>
 
 <p>Pacient môže počas liečby spontánne alebo na cielenú otázku hlásiť:</p>
 

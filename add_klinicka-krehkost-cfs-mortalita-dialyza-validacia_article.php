@@ -23,7 +23,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Vo francúzskej kohorte 792 dialyzovaných pacientov rástla 24-mesačná mortalita od 9,8 % u zdatných po 45,9 % u krehkých. Škála klinickej krehkosti hodnotená sestrami mala prognostickú výkonnosť porovnateľnú s komorbiditným skóre.',
     'content'      => <<<'HTML'
-<figure><a href="img/klinicka-krehkost-cfs-mortalita-dialyza-validacia.webp" rel="noopener noreferrer" target="_blank"><img src="img/klinicka-krehkost-cfs-mortalita-dialyza-validacia.webp" alt="Krehká presklená štruktúra s viditeľnými prasklinami v pokojnom kuželi svetla, v pozadí dialyzačné hadičky" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Krehkosť nepotrebuje prístroj — skúsené oko pri lôžku ju rozpozná a jej posúdenie nesie prognostickú váhu.</figcaption></figure>
+<figure><a href="img/klinicka-krehkost-cfs-mortalita-dialyza-validacia.webp" rel="noopener noreferrer" target="_blank"><img src="img/klinicka-krehkost-cfs-mortalita-dialyza-validacia.webp" alt="Krehká presklená štruktúra s viditeľnými prasklinami v pokojnom kuželi svetla, v pozadí dialyzačné hadičky" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Krehkosť nepotrebuje prístroj – skúsené oko pri lôžku ju rozpozná a jej posúdenie nesie prognostickú váhu.</figcaption></figure>
 
 <p>Krehkosť je stav zníženej fyziologickej rezervy a zvýšenej zraniteľnosti voči záťaži. U dialyzovaných pacientov je veľmi častá a spája sa s horšími výsledkami, jej rutinné hodnotenie však v praxi naráža na čas a personálne kapacity. Prospektívna multicentrická kohortová štúdia zo šiestich dialyzačných stredísk v severovýchodnom Francúzsku, publikovaná v časopise <em>Kidney Medicine</em>, preto overovala, či je uskutočniteľné a prognosticky prínosné, keď krehkosť hodnotí <strong>dialyzačná sestra</strong> pomocou škály klinickej krehkosti (<em>Clinical Frailty Scale</em>, CFS).</p>
 
@@ -37,7 +37,7 @@ $articles[] = [
 
 <h2>Škála klinickej krehkosti</h2>
 
-<p>CFS je deväťbodová klinická škála, ktorú v roku 2005 predstavili Rockwood a spolupracovníci v rámci Kanadskej štúdie zdravia a starnutia. Hodnotí sa podľa funkčnej schopnosti, mobility, závislosti od pomoci pri bežných denných činnostiach a celkového zdravotného stavu — nie podľa veku ani počtu diagnóz.</p>
+<p>CFS je deväťbodová klinická škála, ktorú v roku 2005 predstavili Rockwood a spolupracovníci v rámci Kanadskej štúdie zdravia a starnutia. Hodnotí sa podľa funkčnej schopnosti, mobility, závislosti od pomoci pri bežných denných činnostiach a celkového zdravotného stavu – nie podľa veku ani počtu diagnóz.</p>
 
 <div class="table-responsive" role="region" aria-label="Kategórie škály klinickej krehkosti použité v štúdii" tabindex="0">
 <table>
@@ -78,7 +78,7 @@ $articles[] = [
 
 <ol>
   <li>ako <strong>spojitá premenná</strong>, teda na každý jeden bod zvýšenia,</li>
-  <li>ako <strong>tri vopred určené kategórie</strong> — zdatní (1 – 3), zraniteľní (4 – 5), krehkí (6 – 9).</li>
+  <li>ako <strong>tri vopred určené kategórie</strong> – zdatní (1 – 3), zraniteľní (4 – 5), krehkí (6 – 9).</li>
 </ol>
 
 <p>Sledovaným výsledkom bola celková mortalita po 12 a 24 mesiacoch. <strong>Transplantácia obličky sa hodnotila ako konkurenčná udalosť</strong>, nie ako obyčajné cenzorovanie. Tento postup je metodologicky správnejší, pretože transplantácia mení následné riziko úmrtia a jednoduché cenzorovanie by kumulatívnu incidenciu úmrtia v dialyzačnej kohorte skresľovalo.</p>
@@ -87,7 +87,7 @@ $articles[] = [
 
 <h3>Čo je REIN Predictive Score</h3>
 
-<p>RPS je komorbiditné skóre odvodené z francúzskeho registra REIN. Pôvodne ho odvodili Couchoud a spolupracovníci na predpoveď <em>šesťmesačnej</em> prognózy u <em>starších pacientov začínajúcich</em> dialýzu. V tejto štúdii sa použil ako referenčný komparátor u prevalentnej dialyzačnej populácie bez vekového obmedzenia — teda mimo pôvodného odvodzovacieho kontextu. Pri porovnávaní výkonnosti oboch nástrojov je to podstatné: časť rozdielu môže odrážať odlišnú cieľovú populáciu, nie iba vlastnosti samotného skóre.</p>
+<p>RPS je komorbiditné skóre odvodené z francúzskeho registra REIN. Pôvodne ho odvodili Couchoud a spolupracovníci na predpoveď <em>šesťmesačnej</em> prognózy u <em>starších pacientov začínajúcich</em> dialýzu. V tejto štúdii sa použil ako referenčný komparátor u prevalentnej dialyzačnej populácie bez vekového obmedzenia – teda mimo pôvodného odvodzovacieho kontextu. Pri porovnávaní výkonnosti oboch nástrojov je to podstatné: časť rozdielu môže odrážať odlišnú cieľovú populáciu, nie iba vlastnosti samotného skóre.</p>
 
 <h2>Zhoda medzi hodnotiteľkami</h2>
 
@@ -169,7 +169,7 @@ $articles[] = [
 </table>
 </div>
 
-<p>Bodové odhady sú pre CFS mierne vyššie, <strong>intervaly spoľahlivosti sa však výrazne prekrývajú</strong>. Korektný záver preto znie, že výkonnosť oboch nástrojov bola porovnateľná — nie že CFS je nadradená. Autori sami formulujú výsledok ako výkonnosť „porovnateľnú s komorbiditným skóre a od neho nezávislú“.</p>
+<p>Bodové odhady sú pre CFS mierne vyššie, <strong>intervaly spoľahlivosti sa však výrazne prekrývajú</strong>. Korektný záver preto znie, že výkonnosť oboch nástrojov bola porovnateľná – nie že CFS je nadradená. Autori sami formulujú výsledok ako výkonnosť „porovnateľnú s komorbiditným skóre a od neho nezávislú“.</p>
 
 <p>C-štatistika navyše hodnotí len to, ako dobre model zoradí pacientov podľa rizika. Nehovorí nič o kalibrácii, o klinickej užitočnosti ani o tom, či používanie nástroja zlepší výsledky liečby. <strong>Hodnota 0,71 neznamená 71-percentnú pravdepodobnosť prežitia.</strong> Nástroj s dobrou diskrimináciou môže viesť k nesprávnym rozhodnutiam, ak sa jeho výsledok mechanicky použije na odmietnutie transplantácie, ukončenie dialýzy alebo obmedzenie liečby.</p>
 
@@ -194,7 +194,7 @@ $articles[] = [
 
 <p>Komorbiditné skóre zachytáva prítomnosť a závažnosť vybraných ochorení. Krehkosť zachytáva ich <em>funkčný dôsledok</em> a zníženú rezervu organizmu.</p>
 
-<p>Pacient s početnými diagnózami, ktorý je stále mobilný a sebestačný, môže mať lepšiu prognózu než pacient s menším počtom diagnóz, ktorý je odkázaný na pomoc pri každodenných činnostiach, má nízku mobilitu a opakované pády. Obe dimenzie sa preto nemajú zamieňať a najlepšia prognostická informácia vzniká ich kombináciou — spolu s nutričnými ukazovateľmi, kogníciou a sociálnym zázemím.</p>
+<p>Pacient s početnými diagnózami, ktorý je stále mobilný a sebestačný, môže mať lepšiu prognózu než pacient s menším počtom diagnóz, ktorý je odkázaný na pomoc pri každodenných činnostiach, má nízku mobilitu a opakované pády. Obe dimenzie sa preto nemajú zamieňať a najlepšia prognostická informácia vzniká ich kombináciou – spolu s nutričnými ukazovateľmi, kogníciou a sociálnym zázemím.</p>
 
 <h2>Klinické využitie v dialyzačnej praxi</h2>
 
@@ -218,7 +218,7 @@ $articles[] = [
 
 <h3>Prevalentná, nie incidentná kohorta</h3>
 
-<p>Zaradení boli pacienti, ktorí už dialýzu dostávali. Pacienti, ktorí zomreli krátko po jej začatí alebo ju netolerovali, sa v takejto kohorte nemusia nachádzať — ide o skreslenie prežitím. Výsledky preto nemožno automaticky preniesť na pacientov tesne pred začatím dialýzy ani na prvé mesiace liečby.</p>
+<p>Zaradení boli pacienti, ktorí už dialýzu dostávali. Pacienti, ktorí zomreli krátko po jej začatí alebo ju netolerovali, sa v takejto kohorte nemusia nachádzať – ide o skreslenie prežitím. Výsledky preto nemožno automaticky preniesť na pacientov tesne pred začatím dialýzy ani na prvé mesiace liečby.</p>
 
 <h3>Jeden región a chýbajúce údaje o pôvode</h3>
 
@@ -230,7 +230,7 @@ $articles[] = [
 
 <h3>Neštandardizované načasovanie</h3>
 
-<p>Čas hodnotenia CFS vo vzťahu k dialyzačnej procedúre nebol medzi centrami štandardizovaný — autori to uvádzajú ako obmedzenie. Hodnotenie bezprostredne po dialýze môže byť ovplyvnené únavou, postdialyzačnou hypotenziou alebo krátkodobou slabosťou.</p>
+<p>Čas hodnotenia CFS vo vzťahu k dialyzačnej procedúre nebol medzi centrami štandardizovaný – autori to uvádzajú ako obmedzenie. Hodnotenie bezprostredne po dialýze môže byť ovplyvnené únavou, postdialyzačnou hypotenziou alebo krátkodobou slabosťou.</p>
 
 <h3>Obmedzená reprodukovateľnosť pri deviatich bodoch</h3>
 
@@ -248,7 +248,7 @@ $articles[] = [
   <li>Posúdiť mobilitu a závislosť pri bežných denných činnostiach, nie vek a počet diagnóz.</li>
   <li>Zaznamenať dôvody prideleného skóre, aby bolo hodnotenie preskúmateľné.</li>
   <li>Používať rovnakú oficiálnu verziu škály a jednotnú metodiku vo všetkých strediskách.</li>
-  <li>Zabezpečiť školenie hodnotiteľov — v štúdii hodnotili vyškolené sestry.</li>
+  <li>Zabezpečiť školenie hodnotiteľov – v štúdii hodnotili vyškolené sestry.</li>
   <li>Pracovať prednostne s tromi širšími kategóriami, ktoré sú reprodukovateľnejšie než jednotlivé body.</li>
   <li>Pri vyššom skóre doplniť komplexnejšie geriatrické, nutričné a funkčné vyšetrenie.</li>
   <li>Opakovať hodnotenie pri významnej zmene zdravotného stavu.</li>

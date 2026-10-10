@@ -31,7 +31,7 @@ $articles[] = [
     'content'      => <<<'HTML'
 <figure><a href="img/kava-pecen-cirhoza-hcc-uk-biobank-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/kava-pecen-cirhoza-hcc-uk-biobank-nefrologia.webp" alt="Šálka čiernej kávy, ktorej para vytvára ochranný závoj cez pečeň; na okraji závoja presvitá hrubšia fibrózna štruktúra" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Nález z veľkej kohorty sa týka pečene; pre pacienta s chorobou obličiek treba pripočítať draslík, fosfor a krvný tlak.</figcaption></figure>
 
-<p>Súvislosť medzi pitím kávy a zdravím pečene je opakovane opisovaná, väčšinou však na základe jedného typu údajov. Analýza z kohorty UK Biobank je zaujímavá tým, že spája tri vrstvy naraz: klinické ukazovatele, zobrazovacie markery z magnetickej rezonancie a proteomický profil. Výsledok je konzistentný naprieč všetkými tromi — čo posilňuje biologickú vierohodnosť, no nemení observačnú povahu zistenia.</p>
+<p>Súvislosť medzi pitím kávy a zdravím pečene je opakovane opisovaná, väčšinou však na základe jedného typu údajov. Analýza z kohorty UK Biobank je zaujímavá tým, že spája tri vrstvy naraz: klinické ukazovatele, zobrazovacie markery z magnetickej rezonancie a proteomický profil. Výsledok je konzistentný naprieč všetkými tromi – čo posilňuje biologickú vierohodnosť, no nemení observačnú povahu zistenia.</p>
 
 <h2>Dizajn</h2>
 
@@ -74,27 +74,27 @@ $articles[] = [
 
 <h3>Kofeín zrejme nie je celý príbeh</h3>
 
-<p>Asociácie boli <strong>podobné pri káve s kofeínom aj bez kofeínu</strong>. To posúva pozornosť od kofeínu k ďalším zložkám kávy — polyfenolom, kyseline chlorogénovej, diterpénom. Rovnaké pozorovanie sa objavuje aj v prácach o vplyve kávy na črevný mikrobióm.</p>
+<p>Asociácie boli <strong>podobné pri káve s kofeínom aj bez kofeínu</strong>. To posúva pozornosť od kofeínu k ďalším zložkám kávy – polyfenolom, kyseline chlorogénovej, diterpénom. Rovnaké pozorovanie sa objavuje aj v prácach o vplyve kávy na črevný mikrobióm.</p>
 
 <h3>Cukor a sladidlá: presnejšie znenie, než sa zvyčajne uvádza</h3>
 
-<p>Tento bod býva v sekundárnych spracovaniach posunutý. Podľa práce ochranné asociácie <strong>pretrvávali aj u tých, ktorí si kávu sladili</strong> cukrom alebo umelými sladidlami; používanie prísad však súviselo s <strong>mierne vyšším</strong> na železo korigovaným časom T1, teda s nepriaznivejším fibrozápalovým markerom. Nie je teda správne tvrdiť, že prisladenie prínos ruší — presnejšie je, že prisladená káva vychádza v jednom zobrazovacom ukazovateli o niečo horšie.</p>
+<p>Tento bod býva v sekundárnych spracovaniach skreslený. Podľa práce ochranné asociácie <strong>pretrvávali aj u tých, ktorí si kávu sladili</strong> cukrom alebo umelými sladidlami; používanie prísad však súviselo s <strong>mierne vyšším</strong> na železo korigovaným časom T1, teda s nepriaznivejším fibrozápalovým markerom. Nie je teda správne tvrdiť, že prisladenie prínos ruší – presnejšie je, že prisladená káva vychádza v jednom zobrazovacom ukazovateli o niečo horšie.</p>
 
 <h2>Ako výsledok čítať</h2>
 
-<p>Ide o prospektívnu observačnú analýzu s expozíciou zistenou dotazníkom. Platia pre ňu obvyklé výhrady: nepresnosť samovykazovania, zvyškové zavádzajúce faktory a možnosť obrátenej príčinnosti — ľudia s ťažkosťami môžu pitie kávy obmedziť skôr, než sa ochorenie diagnostikuje. Zhoda naprieč klinickými, zobrazovacími a proteomickými údajmi je silným argumentom pre biologickú vierohodnosť, ale všetky tri vrstvy pochádzajú z tej istej kohorty a zdieľajú tie isté zdroje skreslenia.</p>
+<p>Ide o prospektívnu observačnú analýzu s expozíciou zistenou dotazníkom. Platia pre ňu obvyklé výhrady: nepresnosť samovykazovania, zvyškové zavádzajúce faktory a možnosť obrátenej príčinnosti – ľudia s ťažkosťami môžu pitie kávy obmedziť skôr, než sa ochorenie diagnostikuje. Zhoda naprieč klinickými, zobrazovacími a proteomickými údajmi je silným argumentom pre biologickú vierohodnosť, ale všetky tri vrstvy pochádzajú z tej istej kohorty a zdieľajú tie isté zdroje skreslenia.</p>
 
-<p>Za zmienku stojí, že autori v závere odporúčajú „miernu nesladenú kávu ako jednoduchú stratégiu prevencie ochorenia pečene“. Ide o odporúčanie formulované silnejšie, než observačný dizajn unesie — podobne ako v mnohých nutričných epidemiologických prácach. Vzhľadom na to, že káva je lacná, dostupná a pri bežnom príjme bezpečná, je cena prípadného omylu nízka; formulácia „spojené s nižším rizikom“ však zostáva presnejšia než „chráni“.</p>
+<p>Za zmienku stojí, že autori v závere odporúčajú „miernu nesladenú kávu ako jednoduchú stratégiu prevencie ochorenia pečene“. Ide o odporúčanie formulované silnejšie, než observačný dizajn unesie – podobne ako v mnohých nutričných epidemiologických prácach. Vzhľadom na to, že káva je lacná, dostupná a pri bežnom príjme bezpečná, je cena prípadného omylu nízka; formulácia „spojené s nižším rizikom“ však zostáva presnejšia než „chráni“.</p>
 
 <p>Účastníci UK Biobank sú prevažne európskeho pôvodu a zdravší než bežná populácia, čo obmedzuje prenositeľnosť.</p>
 
 <h2>Nefrologický kontext: prečo to nie je iba hepatologická téma</h2>
 
-<p>Priama súvislosť s obličkami z tejto práce nevyplýva — nesledovala obličkové ukazovatele. Relevantná je nepriamo, cez dve cesty:</p>
+<p>Priama súvislosť s obličkami z tejto práce nevyplýva – nesledovala obličkové ukazovatele. Relevantná je nepriamo, cez dve cesty:</p>
 
 <ul>
-  <li><strong>Steatotické ochorenie pečene spojené s metabolickou dysfunkciou (MASLD)</strong> zdieľa s CKD rizikové faktory aj patofyziológiu a jeho prítomnosť sa spája s vyšším rizikom progresie choroby obličiek. Čokoľvek, čo zaťaženie pečene znižuje, je preto v kardiometabolickom manažmente pacienta s CKD relevantné.</li>
-  <li><strong>Pacienti s pokročilou CKD sa lekára na kávu pýtajú často</strong> — a odpoveď býva zbytočne reštriktívna.</li>
+  <li><strong>Steatotické ochorenie pečene spojené s metabolickou dysfunkciou (MASLD)</strong> zdieľa s CKD rizikové faktory aj patofyziológiu a jeho prítomnosť sa spája s vyšším rizikom progresie choroby obličiek. Čokoľvek, čo zaťaženie pečene znižuje, je preto relevantné aj v kardiometabolickej starostlivosti o pacienta s CKD.</li>
+  <li><strong>Pacienti s pokročilou CKD sa lekára na kávu pýtajú často</strong> – a odpoveď býva zbytočne reštriktívna.</li>
 </ul>
 
 <h3>Čo pri CKD pri káve skutočne zvážiť</h3>
@@ -126,7 +126,7 @@ $articles[] = [
       </tr>
       <tr>
         <th scope="row">Prisladzovanie</th>
-        <td>Pri metabolickom riziku je nesladená káva rozumnejšia voľba — aj podľa uvedenej práce, aj z hľadiska celkového príjmu cukru.</td>
+        <td>Pri metabolickom riziku je nesladená káva rozumnejšia voľba – aj podľa uvedenej práce, aj z hľadiska celkového príjmu cukru.</td>
       </tr>
     </tbody>
   </table>
@@ -134,7 +134,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>V rozsiahlej prospektívnej kohorte sa vyšší príjem kávy spájal s nižším rizikom cirhózy, hepatocelulárneho karcinómu aj úmrtia z pečeňovej príčiny, s odstupňovaným vzťahom a s konzistentnými zobrazovacími a proteomickými nálezmi. Podobný obraz pri káve s kofeínom aj bez neho naznačuje, že rozhodujúcou zložkou nemusí byť kofeín. Pre nefrologickú prax z toho nevyplýva nový liečebný postup, ale užitočná odpoveď na častú otázku pacienta: káva pri chorobe obličiek spravidla nie je problém — problémom býva to, čo si do nej pridáva, a pri pokročilej chorobe celkový objem.</p>
+<p>V rozsiahlej prospektívnej kohorte sa vyšší príjem kávy spájal s nižším rizikom cirhózy, hepatocelulárneho karcinómu aj úmrtia z pečeňovej príčiny, s odstupňovaným vzťahom a s konzistentnými zobrazovacími a proteomickými nálezmi. Podobný obraz pri káve s kofeínom aj bez neho naznačuje, že rozhodujúcou zložkou nemusí byť kofeín. Pre nefrologickú prax z toho nevyplýva nový liečebný postup, ale užitočná odpoveď na častú otázku pacienta: káva pri chorobe obličiek spravidla nie je problém – problémom býva to, čo si do nej pacient pridáva, a pri pokročilej chorobe celkový objem.</p>
 
 <h2>Súvisiace články</h2>
 
@@ -151,7 +151,7 @@ $articles[] = [
 
 <p><small><em><strong>Spracovaný zdroj:</strong> Kim HS, Rezaee-Zavareh MS, Wang Y, Attia AM, Kwak M, Burm S, Celtik D, Legaspi D, Khattab O, Kim N, Mengistu BM, Larios KN, Kim DS, Ayoub W, Kuo A, Martin P, Vipani A, Wang Y, Liangpunsakul S, Li D, Lu SC, Pandol S, Yang JD. Coffee Consumption and Improved Liver Outcomes: Clinical, Imaging, and Proteomic Evidence From the UK Biobank. <em>Clinical Gastroenterology and Hepatology</em>. Publikované online 1. júla 2026. doi: <a href="https://doi.org/10.1016/j.cgh.2026.04.035" target="_blank" rel="noopener noreferrer">10.1016/j.cgh.2026.04.035</a>. PMID 42385787, PMCID PMC13505578. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13505578/" target="_blank" rel="noopener noreferrer">Plný text</a>.</em></small></p>
 
-<p><small><em><strong>Poznámka k dôkazovému základu:</strong> Bibliografické údaje, úplný autorský zoznam (23 mien), veľkosti kohorty a podskupín, dĺžka sledovania aj všetky uvedené pomery rizík boli overené 28. augusta 2026 cez PubMed zo štruktúrovaného abstraktu spracovanej práce. Číselné hodnoty pre rozdiely v obsahu tuku a železa v pečeni a pre pomer šancí pri prísadách nie sú v abstrakte uvedené, preto sa v článku neuvádzajú; opisujú sa len smery zmien. Praktické poznámky pre pacientov s CKD nie sú prevzaté od autorov — spracovaná práca obličkové ukazovatele nesledovala.</em></small></p>
+<p><small><em><strong>Poznámka k dôkazovému základu:</strong> Bibliografické údaje, úplný autorský zoznam (23 mien), veľkosti kohorty a podskupín, dĺžka sledovania aj všetky uvedené pomery rizík boli overené 28. augusta 2026 cez PubMed zo štruktúrovaného abstraktu spracovanej práce. Číselné hodnoty pre rozdiely v obsahu tuku a železa v pečeni a pre pomer šancí pri prísadách nie sú v abstrakte uvedené, preto sa v článku neuvádzajú; opisujú sa len smery zmien. Praktické poznámky pre pacientov s CKD nie sú prevzaté od autorov – spracovaná práca obličkové ukazovatele nesledovala.</em></small></p>
 
 <p><small><em>Text má odborný informačný charakter a nenahrádza individuálne klinické rozhodovanie ani manažment príčiny ochorenia pečene. Odporúčania týkajúce sa príjmu tekutín, draslíka a fosforu treba prispôsobiť štádiu chronickej choroby obličiek a aktuálnym laboratórnym hodnotám.</em></small></p>
 HTML,

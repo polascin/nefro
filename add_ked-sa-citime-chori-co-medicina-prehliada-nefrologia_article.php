@@ -32,37 +32,37 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Medicína vie spoľahlivo pomenovať chorobu (disease), no často prehliada chorobnosť (illness) — subjektívnu skúsenosť, že „nie som sám sebou“. Tento rozdiel nie je v nefrológii filozofiou, ale každodenným rozhodovacím rámcom: prežívanie pacienta je relevantný klinický signál aj vtedy, keď laboratórne hodnoty zostávajú stabilné.',
+    'excerpt'      => 'Medicína vie spoľahlivo pomenovať chorobu (disease), no často prehliada chorobnosť (illness) – subjektívnu skúsenosť, že „nie som sám sebou“. Tento rozdiel nie je v nefrológii filozofiou, ale každodenným rozhodovacím rámcom: prežívanie pacienta je relevantný klinický signál aj vtedy, keď laboratórne hodnoty zostávajú stabilné.',
     'content'      => <<<'HTML'
-<figure><a href="img/ked-sa-citime-chori-co-medicina-prehliada-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/ked-sa-citime-chori-co-medicina-prehliada-nefrologia.webp" alt="Postava obklopená rozptýlenou aurou choroby, cez ktorú presný prístrojový lúč prechádza bez povšimnutia" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. To, čo pacient cíti, sa do meraní nepremietne — a predsa to o jeho stave hovorí veľa.</figcaption></figure>
+<figure><a href="img/ked-sa-citime-chori-co-medicina-prehliada-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/ked-sa-citime-chori-co-medicina-prehliada-nefrologia.webp" alt="Postava obklopená rozptýlenou aurou choroby, cez ktorú presný prístrojový lúč prechádza bez povšimnutia" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. To, čo pacient cíti, sa do meraní nepremietne – a predsa to o jeho stave hovorí veľa.</figcaption></figure>
 
 <h2>Úvod</h2>
 
-<p>Medicína je v praxi veľmi úspešná pri identifikovaní toho, „čo je zle“ v tele. Dokáže pomenovať poruchy funkcie orgánov, vysvetliť nálezy a zvoliť liečbu podľa biologického mechanizmu. Zároveň však existuje druhá vrstva, ktorú je len ťažko možné zachytiť vyšetreniami. Ide o <strong>chorobnosť (illness)</strong>, teda skúsenosť, že nie som „svoj“, že moje bežné fungovanie sa narušilo a svet okolo mňa sa začal správať inak.</p>
+<p>Medicína vie v praxi veľmi dobre určiť, „čo je zle“ v tele. Dokáže pomenovať poruchy funkcie orgánov, vysvetliť nálezy a zvoliť liečbu podľa biologického mechanizmu. Existuje však aj druhá vrstva, ktorú vyšetrenia zachytia len ťažko. Ide o <strong>chorobnosť (illness)</strong>, teda skúsenosť, že nie som „svoj“, že moje bežné fungovanie sa narušilo a svet okolo mňa sa začal správať inak.</p>
 
-<p>Tento rozdiel medzi <strong>chorobou (disease)</strong> a <strong>chorobnosťou (illness)</strong> je jadrom myšlienky článku — medicína niekedy „nevidí“ to, čo pacient vníma ako skutočne dôležité: prežívanie nepohody, neistotu, stratu rutiny, zmenený vzťah k telu a vplyv na život.</p>
+<p>Tento rozdiel medzi <strong>chorobou (disease)</strong> a <strong>chorobnosťou (illness)</strong> je jadrom celej úvahy: medicína niekedy „nevidí“ to, čo pacient vníma ako skutočne dôležité: prežívanie nepohody, neistotu, stratu rutiny, zmenený vzťah k telu a vplyv na život.</p>
 
 <h2>Choroba nie je to isté ako chorobnosť</h2>
 
-<p>Často sa pracuje s predstavou, že „ak sa to nedá dokázať nálezom, tak to nie je skutočné“. Článok však zdôrazňuje opak: <strong>chorobnosť je skúsenosť</strong>, nie iba súbor merateľných abnormalít. Keď ľudia povedia „som chorý“, zvyčajne nemajú na mysli iba patológiu. Opisujú narušenie bežného života: zmeny v rutine, v schopnostiach, v pocite bezpečia do budúcnosti, v kvalite vzťahov a v tom, ako vnímajú sami seba.</p>
+<p>Často sa pracuje s predstavou, že „ak sa to nedá dokázať nálezom, tak to nie je skutočné“. Autor zdôrazňuje opak: <strong>chorobnosť je skúsenosť</strong>, nie iba súbor merateľných abnormalít. Keď ľudia povedia „som chorý“, zvyčajne nemajú na mysli iba patológiu. Opisujú narušenie bežného života: zmeny v rutine, v schopnostiach, v pocite bezpečia do budúcnosti, v kvalite vzťahov a v tom, ako vnímajú sami seba.</p>
 
-<p>Z toho vyplýva prakticky dôležitý záver: aj keď choroba a chorobnosť často idú spolu, <strong>ani jedna nie je úplne závislá od druhej</strong>. Existujú situácie, keď človek trpí a vyšetrenia nedokážu poskytnúť jasné vysvetlenie; a naopak, existujú nálezy, ktoré síce zodpovedajú „chorobnému“ obrazu, ale pacientovo prežívanie nemusí zodpovedať tej istej intenzite.</p>
+<p>Z toho vyplýva prakticky dôležitý záver: hoci choroba a chorobnosť často idú spolu, <strong>ani jedna nie je úplne závislá od druhej</strong>. Človek môže trpieť a vyšetrenia nedajú jasné vysvetlenie; a naopak, nálezy môžu zodpovedať „chorobnému“ obrazu, kým pacientovo prežívanie nemá rovnakú intenzitu.</p>
 
 <h2>Kedy „chorobnosť“ prichádza: skôr, než ju zachytí diagnostika</h2>
 
-<p>V článku sa zdôrazňuje perspektíva, že človek často vie, že niečo „nie je v poriadku“, <strong>skôr, ako sa začne vyšetrovací proces</strong>. Rozpoznanie sa rodí z prežívania, z nášho vzťahu k vlastnému telu, z očakávania zdravia a z toho, ako daná kultúra interpretuje príznaky.</p>
+<p>Človek často vie, že niečo „nie je v poriadku“, <strong>skôr, ako sa začne vyšetrovací proces</strong>. Rozpoznanie sa rodí z prežívania, z nášho vzťahu k vlastnému telu, z očakávania zdravia a z toho, ako daná kultúra interpretuje príznaky.</p>
 
 <p>V praxi to mení aj otázku „kedy je pacient vlastne chorý?“. Ak diagnóza príde až neskôr, znamená to, že pacient už určitý čas žije v stave, ktorý sa pre medicínu stáva „informáciou na prácu“ až dodatočne. Pacient sa však medzičasom adaptuje, stráca istotu a prežíva nepohodu, ktorá nemusí mať okamžité biologické potvrdenie.</p>
 
 <h2>Diagnóza pomáha, ale môže aj zjednodušovať</h2>
 
-<p>Diagnostické označenie je užitočné. Dáva spoločný jazyk, umožňuje koordinovať starostlivosť a niekedy nasmerovať liečbu. Zároveň však článok upozorňuje na riziko: previesť komplexnú skúsenosť na jedinú klinickú kategóriu znamená <strong>odfiltrovať variabilitu a hĺbku prežívania</strong>.</p>
+<p>Diagnostické označenie je užitočné. Dáva spoločný jazyk, umožňuje koordinovať starostlivosť a niekedy nasmerovať liečbu. Autor však upozorňuje aj na riziko: previesť komplexnú skúsenosť na jedinú klinickú kategóriu znamená <strong>odfiltrovať variabilitu a hĺbku prežívania</strong>.</p>
 
 <p>To je v nefrológii obzvlášť citlivé. Pacient s chronickou chorobou obličiek (aj počas dialýzy) často neprežíva iba „ochorenie obličiek“ ako diagnózu. Prežíva kombináciu obmedzení, únavy, kolísania príznakov, vplyvu liečby na organizmus, psychickej záťaže, ale aj zmeny v tom, čo preňho znamená každodennosť. Jedna diagnostická nálepka nikdy nevystihne celé „nie som sám sebou“.</p>
 
 <h2>Čo to mení v nefrologickej praxi</h2>
 
-<p>Ak prijmeme, že chorobnosť je skúsenosť, a nie iba merateľná odchýlka, vynára sa pre nefrológiu niekoľko praktických dôsledkov.</p>
+<p>Ak prijmeme, že chorobnosť je skúsenosť, a nie iba merateľná odchýlka, má to pre nefrológiu niekoľko praktických dôsledkov.</p>
 
 <h3>1) Pacientov opis nie je len „anamnéza na doplnenie“</h3>
 
@@ -70,17 +70,17 @@ $articles[] = [
 
 <h3>2) Absencia jednoznačných nálezov neznižuje realitu utrpenia</h3>
 
-<p>Článok explicitne upozorňuje na paradox: človek prežíva výraznú nepohodu, no vyšetrenia nemusia poskytnúť „dôkaz“. To samo osebe neumenšuje realitu utrpenia. V nefrológii to môže znamenať, že aj pri relatívne stabilných laboratórnych hodnotách pacient prežíva výrazné funkčné obmedzenie, ktoré treba brať vážne a cielene riešiť — symptomaticky, rehabilitáciou, úpravou režimu či liečby, prípadne zhodnotením faktorov, ktoré sa nedajú zúžiť na jediný laboratórny nález (napríklad kvalita spánku, tolerancia liečby, funkčné schopnosti).</p>
+<p>Autor výslovne upozorňuje na paradox: človek prežíva výraznú nepohodu, no vyšetrenia nemusia poskytnúť „dôkaz“. To samo osebe neumenšuje realitu utrpenia. V nefrológii to môže znamenať, že aj pri relatívne stabilných laboratórnych hodnotách pacient prežíva výrazné funkčné obmedzenie, ktoré treba brať vážne a cielene riešiť – symptomaticky, rehabilitáciou, úpravou režimu či liečby, prípadne zhodnotením faktorov, ktoré sa nedajú zúžiť na jediný laboratórny nález (napríklad kvalita spánku, tolerancia liečby, funkčné schopnosti).</p>
 
 <h3>3) „Čo diagnóza vysvetlí“ a „čo diagnóza zakryje“ treba vedieť rozlíšiť</h3>
 
-<p>Diagnóza má osvetliť časť obrazu, no zmysluplná komunikácia a manažment by mali zároveň počítať s tým, že nemusí pokryť všetko, čo pacient prežíva.</p>
+<p>Diagnóza osvetlí časť obrazu, no komunikácia aj manažment by mali počítať s tým, že nemusí pokryť všetko, čo pacient prežíva.</p>
 
 <p>Pre klinickú prax to znamená, že je užitočné cielene sa pýtať na vplyv ochorenia na život: čo je pre pacienta dnes najťažšie, čo sa zmenilo, ako liečba ovplyvňuje jeho fungovanie a aké „bariéry“ sa objavili.</p>
 
 <h3>4) Prehodnotiť, kam smerujú rozhovory</h3>
 
-<p>Ak sa v rozhovore príliš skoro presunie ťažisko len na čísla, pacientovo prežívanie môže zostať nepomenované. Článok uzatvára, že výzvou pre lekárov nie je odmietanie medicínskych vysvetlení, ale <strong>uznanie ich hraníc</strong>. V praxi to znamená vyvážiť:</p>
+<p>Ak sa v rozhovore príliš skoro presunie ťažisko len na čísla, pacientovo prežívanie môže zostať nepomenované. Autor uzatvára, že výzvou pre lekárov nie je odmietanie medicínskych vysvetlení, ale <strong>uznanie ich hraníc</strong>. V praxi to znamená vyvážiť:</p>
 
 <ul>
   <li>objektívne merania,</li>
@@ -89,7 +89,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>Medicína je vynikajúca v identifikovaní choroby. No ak chceme skutočne pomôcť človeku, nestačí iba pomenovať „čo je zle v tele“. Potrebujeme rozumieť aj tomu, ako sa chorobnosť rodí, ako sa komunikuje a ako diagnózy môžu niečo vysvetliť, ale aj niečo prehliadnuť. V nefrológii to nie je filozofická téma, ale každodenný klinický rozhodovací rámec: kvalita starostlivosti sa často zlepšuje práve vtedy, keď pacientovo „nie som sám sebou“ berieme ako relevantný klinický signál, nie ako vedľajší šum.</p>
+<p>Medicína vie chorobu identifikovať veľmi dobre. Ak však chceme človeku skutočne pomôcť, nestačí pomenovať, „čo je zle v tele“. Potrebujeme rozumieť aj tomu, ako sa chorobnosť rodí, ako sa komunikuje a ako diagnózy môžu niečo vysvetliť, ale aj niečo prehliadnuť. V nefrológii to nie je filozofická téma, ale každodenný klinický rozhodovací rámec: kvalita starostlivosti sa často zlepšuje práve vtedy, keď pacientovo „nie som sám sebou“ berieme ako relevantný klinický signál, nie ako vedľajší šum.</p>
 
 <p><em><strong>Poznámka:</strong> Tento článok má vzdelávací a osvetový charakter a nenahrádza individuálne klinické rozhodovanie ošetrujúceho tímu.</em></p>
 

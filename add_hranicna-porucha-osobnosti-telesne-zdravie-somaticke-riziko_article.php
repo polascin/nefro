@@ -27,7 +27,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Populačná kohorta z Hongkongu spája hraničnú poruchu osobnosti s 5,65-násobným rizikom úmrtia a stratou 13 rokov života. Prehľad somatických rizík, diagnostického zatienenia a nefrologických súvislostí.',
     'content'      => <<<'HTML'
-<figure><a href="img/hranicna-porucha-osobnosti-telesne-zdravie-somaticke-riziko.webp" rel="noopener noreferrer" target="_blank"><img src="img/hranicna-porucha-osobnosti-telesne-zdravie-somaticke-riziko.webp" alt="Svietiaca nervová štruktúra v hornej časti a pod ňou samostatne žiariace pečeň, srdce a oblička" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Telesné ochorenia tu nie sú len odrazom psychiky — majú vlastnú váhu a zaslúžia si vlastné vyšetrenie.</figcaption></figure>
+<figure><a href="img/hranicna-porucha-osobnosti-telesne-zdravie-somaticke-riziko.webp" rel="noopener noreferrer" target="_blank"><img src="img/hranicna-porucha-osobnosti-telesne-zdravie-somaticke-riziko.webp" alt="Svietiaca nervová štruktúra v hornej časti a pod ňou samostatne žiariace pečeň, srdce a oblička" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Telesné ochorenia tu nie sú len odrazom psychiky; majú vlastnú váhu a zaslúžia si vlastné vyšetrenie.</figcaption></figure>
 
 <p class="article-dek"><em>Ľudia s hraničnou poruchou osobnosti majú zvýšené riziko predčasného úmrtia, kardiometabolických ochorení, chronickej bolesti, závislostí a nedostatočne diagnostikovaných telesných chorôb. Väčšina dostupných údajov je však observačná a nedokazuje, že samotná porucha priamo vyvoláva konkrétne somatické ochorenie. Rozdiel medzi „je to spojené“ a „je to spôsobené“ tu má priame klinické dôsledky.</em></p>
 
@@ -35,7 +35,7 @@ $articles[] = [
 
 <p>Hraničná porucha osobnosti, označovaná aj skratkou BPD z anglického <em>borderline personality disorder</em>, je závažná duševná porucha charakterizovaná nestabilitou emócií, medziľudských vzťahov, sebaobrazu a správania. Časté sú impulzivita, sebapoškodzovanie, suicidálne správanie, intenzívny strach z opustenia a výrazná citlivosť na medziľudský stres.</p>
 
-<p>Menej pozornosti sa venuje skutočnosti, že títo pacienti majú častejšie aj telesné ochorenia a kratšiu očakávanú dĺžku života. Dôvodom nie je jediný mechanizmus. Uplatňuje sa kombinácia sociálneho znevýhodnenia, fajčenia a ďalších závislostí, nepravidelnej životosprávy, obezity, nežiaducich účinkov liekov, úrazov, sebapoškodzovania, nedostatočného využívania preventívnej starostlivosti a pravdepodobne aj biologických následkov dlhodobého stresu.</p>
+<p>Menej pozornosti sa venuje skutočnosti, že títo pacienti majú častejšie aj telesné ochorenia a kratšiu očakávanú dĺžku života. Nemá to jedinú príčinu; uplatňuje sa kombinácia sociálneho znevýhodnenia, fajčenia a ďalších závislostí, nepravidelnej životosprávy, obezity, nežiaducich účinkov liekov, úrazov, sebapoškodzovania, nedostatočného využívania preventívnej starostlivosti a pravdepodobne aj biologických následkov dlhodobého stresu.</p>
 
 <h3>Poznámka k terminológii a klasifikácii</h3>
 
@@ -75,7 +75,7 @@ $articles[] = [
 </table>
 </div>
 
-<p>Odhadovaný nadmerný počet stratených rokov života bol <strong>13,01 roka</strong> (9,35 až 15,52). Samovraždy a kardiovaskulárne ochorenia boli hlavnými prispievateľmi. Vonkajšie príčiny tvorili 40,4 % úmrtí a prirodzené príčiny 37,3 %, čo dobre ilustruje, že problém nemožno redukovať iba na suicidálne správanie.</p>
+<p>Odhadovaný nadmerný počet stratených rokov života bol <strong>13,01 roka</strong> (9,35 až 15,52). Najviac k nemu prispeli samovraždy a kardiovaskulárne ochorenia. Vonkajšie príčiny tvorili 40,4 % úmrtí a prirodzené príčiny 37,3 %, takže problém nemožno redukovať iba na suicidálne správanie.</p>
 
 <p>Zo somatických diagnóz mala najvyššie riziko <strong>epilepsia s pomerom rizík 7,58</strong> (5,33 až 10,79). Pri ostatných telesných ochoreniach sa pomery rizík pohybovali približne v jedno- až trojnásobnom rozpätí oproti porovnávacej skupine.</p>
 
@@ -266,7 +266,7 @@ $articles[] = [
   <li>regulačný stav liekov a legislatívne iniciatívy zo Spojených štátov sa nedajú automaticky preniesť na slovenské podmienky.</li>
 </ul>
 
-<p>Nič z toho neznižuje závažnosť problému. Znamená to len, že argument pre lepšiu somatickú starostlivosť netreba stavať na nadhodnotených číslach — samotné overené populačné dáta sú dosť presvedčivé.</p>
+<p>Nič z toho neznižuje závažnosť problému. Znamená to len, že argument pre lepšiu somatickú starostlivosť netreba stavať na nadhodnotených číslach; overené populačné dáta sú dostatočne presvedčivé samy osebe.</p>
 
 <h2>Praktický prístup k somatickému zdraviu</h2>
 
@@ -328,7 +328,7 @@ $articles[] = [
 
 <p>Najdôležitejším praktickým opatrením je predchádzať diagnostickému zatieneniu. Telesné príznaky pacienta s BPD treba vyšetriť podľa rovnakých klinických zásad ako u každého iného človeka. Súčasne treba cielene monitorovať liekové komplikácie, metabolické riziko, závislosti, chronickú bolesť, sebapoškodzovanie a faktory poškodenia obličiek.</p>
 
-<p><strong>Zvýšená somatická chorobnosť pri tejto diagnóze je z veľkej časti dôsledkom modifikovateľných okolností — fajčenia, závislostí, sociálneho znevýhodnenia, nežiaducich účinkov liekov a horšieho prístupu k starostlivosti. Práve to je dôvod na aktívnu intervenciu, nie na rezignáciu.</strong></p>
+<p><strong>Zvýšená somatická chorobnosť pri tejto diagnóze je z veľkej časti dôsledkom modifikovateľných okolností: fajčenia, závislostí, sociálneho znevýhodnenia, nežiaducich účinkov liekov a horšieho prístupu k starostlivosti. Práve to je dôvod na aktívnu intervenciu, nie na rezignáciu.</strong></p>
 </div>
 
 <hr>

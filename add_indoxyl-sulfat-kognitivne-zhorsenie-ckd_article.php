@@ -37,16 +37,16 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Prierezová analýza francúzskej kohorty CKD (2389 dospelých): vyššie hladiny indoxyl sulfátu nezávisle súviseli s kognitívnym poškodením (MMSE ≤ 26/30), kým kynurenín a indole-3-acetát nie. Signál pre biomarkery a rizikovú stratifikáciu, nie terapeutické odporúčanie.',
     'content'      => <<<'HTML'
-<figure><a href="img/indoxyl-sulfat-kognitivne-zhorsenie-ckd.webp" rel="noopener noreferrer" target="_blank"><img src="img/indoxyl-sulfat-kognitivne-zhorsenie-ckd.webp" alt="Tmavá molekula stúpajúca zo zlyhávajúcej obličky a dopadajúca ako tieň na mozog, ktorého svetlo sa stlmí" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Toxín, ktorý oblička neodstráni, nezostáva bez následku — zasahuje aj myslenie.</figcaption></figure>
+<figure><a href="img/indoxyl-sulfat-kognitivne-zhorsenie-ckd.webp" rel="noopener noreferrer" target="_blank"><img src="img/indoxyl-sulfat-kognitivne-zhorsenie-ckd.webp" alt="Tmavá molekula stúpajúca zo zlyhávajúcej obličky a dopadajúca ako tieň na mozog, ktorého svetlo sa stlmí" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Toxín, ktorý oblička neodstráni, nezostáva bez následku – zasahuje aj myslenie.</figcaption></figure>
 
 <p>Pacienti s chronickou chorobou obličiek (CKD) majú vyššie riziko neurologických komplikácií,
-ale biologické mechanizmy a využiteľné biomarkery nie sú úplne jasné. V poslednom prehľade na Medscape sa rieši súvislosť medzi metabolitmi odvodenými od tryptofánu, najmä uremickým toxínom
+ale biologické mechanizmy a využiteľné biomarkery nie sú úplne jasné. Nedávny príspevok na Medscape sa venuje súvislosti medzi metabolitmi odvodenými od tryptofánu, najmä uremickým toxínom
 <strong>indoxyl sulfátom (IS)</strong>, a kognitívnym poškodením u pacientov s CKD.</p>
 
 <h2>Cieľ štúdie</h2>
 <p>Autori skúmali, či sa hladiny tryptofánových uremických derivátov (<strong>indoxyl sulfát</strong>,
-<strong>kynurenín</strong>, <strong>indole-3-acetát</strong>) viažu na <strong>kognitívne
-zhoršenie</strong> u dospelých s CKD.</p>
+<strong>kynurenín</strong>, <strong>indole-3-acetát</strong>) súvisia s <strong>kognitívnym
+zhoršením</strong> u dospelých s CKD.</p>
 
 <h2>Dizajn a populácia</h2>
 <p>Ide o <strong>prierezovú (cross-sectional) analýzu</strong> francúzskej kohorty (2013 až 2016).
@@ -76,9 +76,9 @@ pričom za poškodenie sa považovalo <strong>MMSE skóre ≤ 26/30</strong>.</p
       asociáciu s kognitívnym poškodením.</li>
 </ul>
 
-<h3>„Takeaway“ z článku</h3>
-<p>V rámci tryptofánových cirkulujúcich derivátov vychádza, že <strong>IS</strong> je ten, ktorý sa
-viaže ku kognitívnemu zhoršeniu pri CKD, zatiaľ čo <strong>KYN</strong> (kynurenín) a
+<h3>Hlavný odkaz článku</h3>
+<p>Z cirkulujúcich derivátov tryptofánu súvisí s kognitívnym zhoršením pri CKD <strong>IS</strong>,
+zatiaľ čo <strong>KYN</strong> (kynurenín) a
 <strong>IAA</strong> (indole-3-acetát) nie.</p>
 
 <h2>Preklad do nefrologickej praxe: čo to môže znamenať</h2>
@@ -93,11 +93,11 @@ otvára dve roviny:</p>
       že niektoré tryptofánové metabolity môžu byť súčasťou biologickej osi vedúcej k neurologickému
       poškodzovaniu pri CKD.</li>
 </ol>
-<p>Zároveň však treba byť opatrný: ide o <strong>prierezové dáta</strong>, takže z toho nejde priamo
+<p>Zároveň však treba byť opatrný: ide o <strong>prierezové dáta</strong>, takže z nich nemožno priamo
 vyvodiť kauzalitu ani to, že zníženie IS automaticky zlepší kogníciu.</p>
 
 <h2>Limity, ktoré sú dôležité na správnu interpretáciu</h2>
-<p>Medscape explicitne uvádza limity, ktoré si zaslúžia zdôraznenie:</p>
+<p>Medscape výslovne uvádza tieto limity:</p>
 <ul>
   <li><strong>prierezový dizajn</strong> neumožňuje určiť príčinu a následok,</li>
   <li><strong>MMSE</strong> nemusí optimálne zachytiť všetky domény kognície, najmä

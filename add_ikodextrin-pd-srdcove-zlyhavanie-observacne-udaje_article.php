@@ -27,7 +27,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Taiwanská kohorta 1 800 pacientov spájala používanie ikodextrínu s nižšou mortalitou a menším počtom MACE. Veľkosť efektu však treba čítať v kontexte observačného dizajnu a reziduálneho skreslenia.',
     'content'      => <<<'HTML'
-<figure><a href="img/ikodextrin-pd-srdcove-zlyhavanie-observacne-udaje.webp" rel="noopener noreferrer" target="_blank"><img src="img/ikodextrin-pd-srdcove-zlyhavanie-observacne-udaje.webp" alt="Dialyzačný vak odvádzajúci nadbytočnú tekutinu od preťaženého srdca; celá scéna je videná cez zvlnené, skresľujúce sklo" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Nález vyzerá presvedčivo, no observačné údaje vidíme cez skreslenie — výber pacientov sem vstupuje vždy.</figcaption></figure>
+<figure><a href="img/ikodextrin-pd-srdcove-zlyhavanie-observacne-udaje.webp" rel="noopener noreferrer" target="_blank"><img src="img/ikodextrin-pd-srdcove-zlyhavanie-observacne-udaje.webp" alt="Dialyzačný vak odvádzajúci nadbytočnú tekutinu od preťaženého srdca; celá scéna je videná cez zvlnené, skresľujúce sklo" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Nález vyzerá presvedčivo, no observačné údaje vidíme cez skreslenie – výber pacientov sem vstupuje vždy.</figcaption></figure>
 
 <p>U pacientov liečených <strong>peritoneálnou dialýzou (PD)</strong>, ktorí majú súčasne srdcové zlyhávanie, je spoľahlivá kontrola objemu jednou z kľúčových podmienok úspešnej liečby. Bežné roztoky s glukózou vytvárajú kryštaloidný osmotický gradient, ktorý počas dlhej výmeny postupne slabne, pretože sa glukóza vstrebáva. Opakovaná expozícia vysokým koncentráciám glukózy navyše zvyšuje metabolickú záťaž a môže nepriaznivo vplývať na peritoneálnu membránu.</p>
 
@@ -89,7 +89,7 @@ $articles[] = [
 
 <h2>Čo sa neznížilo</h2>
 
-<p>Pri interpretácii kompozitu MACE je dôležité pozrieť sa na jeho jednotlivé zložky. Medzi skupinami sa nepreukázal štatisticky významný rozdiel v hospitalizáciách pre srdcové zlyhávanie (upravený HR 1,06), infarkte myokardu (HR 0,94) ani ischemickej cievnej mozgovej príhode (HR 1,39). Nižší výskyt MACE bol preto podľa autorov poháňaný predovšetkým rozdielom v kardiovaskulárnej mortalite, najmä v náhlej smrti. Rozdiel sa nepreukázal ani pri novodiagnostikovaných nádorových ochoreniach v hlavnej analýze.</p>
+<p>Pri interpretácii kompozitu MACE je dôležité pozrieť sa na jeho jednotlivé zložky. Medzi skupinami sa nepreukázal štatisticky významný rozdiel v hospitalizáciách pre srdcové zlyhávanie (upravený HR 1,06), infarkte myokardu (HR 0,94) ani ischemickej cievnej mozgovej príhode (HR 1,39). Nižší výskyt MACE bol preto podľa autorov daný predovšetkým rozdielom v kardiovaskulárnej mortalite, najmä v náhlej smrti. Rozdiel sa nepreukázal ani pri novodiagnostikovaných nádorových ochoreniach v hlavnej analýze.</p>
 
 <p>Tento nesúlad je klinicky podstatný. Ak by ikodextrín v sledovanej populácii skutočne vyvolával taký veľký pokles mortality, bolo by vhodné vysvetliť, prečo sa súčasne neznížili hospitalizácie pre srdcové zlyhávanie ani ďalšie nefatálne kardiovaskulárne príhody. Observačné údaje na túto otázku neposkytujú definitívnu odpoveď.</p>
 

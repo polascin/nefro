@@ -72,7 +72,7 @@ $articles[] = [
 </ul>
 
 <h2>Čo zostáva otvorené</h2>
-<p>Štúdia VA IncHVets (NCT05465044) porovnáva inkrementálny a konvenčný začiatok HD u veteránov. Podľa registra aktualizovaného 20. augusta 2026 pokračuje nábor, odhadované ukončenie primárneho sledovania je 30. septembra 2027 a výsledky v registri zatiaľ nie sú zverejnené. Prehľadový článok Rheeovej a spoluautorov opisuje tento projekt, nepredkladá jeho výsledky. Nie je možné vopred sľubovať, že jedno skúšanie definitívne vyrieši všetky otázky ochrany RKF. [12, 15]</p>
+<p>Štúdia VA IncHVets (NCT05465044) porovnáva inkrementálny a konvenčný začiatok HD u veteránov. Podľa registra aktualizovaného 20. augusta 2026 pokračuje nábor, odhadované ukončenie primárneho sledovania je 30. septembra 2027 a výsledky v registri zatiaľ nie sú zverejnené. Prehľadový článok Rheeovej a spoluautorov opisuje tento projekt, nepredkladá jeho výsledky. Ani jedno skúšanie však nevyrieši všetky otázky ochrany RKF. [12, 15]</p>
 <p>Inkrementálna HD dvakrát týždenne môže byť rozumnou možnosťou pre starostlivo vybraných pacientov pri zabezpečenom monitorovaní a pripravenosti zvýšiť dávku liečby. Jej uskutočniteľnosť a zníženie počtu procedúr majú oporu v klinických dátach. Presvedčivý dôkaz, že samotná nižšia frekvencia kauzálne spomaľuje stratu RKF alebo zlepšuje prežívanie, však zatiaľ chýba.</p>
 <p><small><em>Ide o naratívny odborný prehľad, nie o systematický prehľad so samostatným vyhľadávacím protokolom. Bibliografia a vybrané kľúčové tvrdenia boli overené v PubMed, Europe PMC, dostupných plných textoch, odporúčaniach KDOQI a registri ClinicalTrials.gov. Pri prácach Vilar, Kaja Kamal a Murea sa uvedené výsledky opierajú o bibliografický záznam a abstrakt. Stav overenia: 24. september 2026.</em></small></p>
 <hr>

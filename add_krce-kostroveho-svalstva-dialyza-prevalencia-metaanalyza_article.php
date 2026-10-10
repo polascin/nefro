@@ -24,13 +24,13 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Metaanalýza 94 štúdií s 32 223 pacientmi z 36 krajín zistila kŕče u 55 % dialyzovaných pacientov a intradialytické kŕče u 33 %. Široké predikčné intervaly však hovoria rovnako veľa ako samotné čísla — meranie tohto symptómu nie je zjednotené.',
+    'excerpt'      => 'Metaanalýza 94 štúdií s 32 223 pacientmi z 36 krajín zistila kŕče u 55 % dialyzovaných pacientov a intradialytické kŕče u 33 %. Široké predikčné intervaly však hovoria rovnako veľa ako samotné čísla – meranie tohto symptómu nie je zjednotené.',
     'content'      => <<<'HTML'
-<figure><a href="img/krce-kostroveho-svalstva-dialyza-prevalencia-metaanalyza.webp" rel="noopener noreferrer" target="_blank"><img src="img/krce-kostroveho-svalstva-dialyza-prevalencia-metaanalyza.webp" alt="Svalové vlákna stiahnuté do tvrdého bolestivého uzla s vyžarujúcimi líniami napätia, v pozadí dialyzačná linka" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Kŕče postihujú väčšinu dialyzovaných — patria medzi najčastejšie a zároveň najmenej riešené ťažkosti.</figcaption></figure>
+<figure><a href="img/krce-kostroveho-svalstva-dialyza-prevalencia-metaanalyza.webp" rel="noopener noreferrer" target="_blank"><img src="img/krce-kostroveho-svalstva-dialyza-prevalencia-metaanalyza.webp" alt="Svalové vlákna stiahnuté do tvrdého bolestivého uzla s vyžarujúcimi líniami napätia, v pozadí dialyzačná linka" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Kŕče postihujú väčšinu dialyzovaných – patria medzi najčastejšie a zároveň najmenej riešené ťažkosti.</figcaption></figure>
 
 <p class="article-dek"><em>Svalové kŕče patria medzi symptómy, ktoré pacienti na dialýze uvádzajú medzi najhoršími, no ktoré sa v ambulancii systematicky nezisťujú. Prvá globálna metaanalýza ukazuje, že sa týkajú viac než polovice pacientov. Jej najpoučnejším nálezom však nie je samotné číslo, ale to, aké je neisté.</em></p>
 
-<p>Kŕče kostrového svalstva sú pri dialýze dlho známym problémom, ktorý sa napriek tomu ocitá na okraji pozornosti. Nemajú vlastný diagnostický kód, nevstupujú do ukazovateľov kvality a v porovnaní s anémiou či fosfátmi nemajú vlastný liečebný algoritmus. Pritom môžu viesť k predčasnému ukončeniu dialyzačnej procedúry, k nedostatočnému odstráneniu tekutín a v konečnom dôsledku k horšej kontrole objemu — teda k dôsledkom, ktoré už tvrdé ukazovatele ovplyvňujú.</p>
+<p>Kŕče kostrového svalstva sú pri dialýze dlho známym problémom, ktorý sa napriek tomu ocitá na okraji pozornosti. Nemajú vlastný diagnostický kód, nevstupujú do ukazovateľov kvality a na rozdiel od anémie či fosfátov nemajú ani liečebný algoritmus. Pritom môžu viesť k predčasnému ukončeniu dialyzačnej procedúry, k nedostatočnému odstráneniu tekutín a v konečnom dôsledku k horšej kontrole objemu – teda k dôsledkom, ktoré už tvrdé ukazovatele ovplyvňujú.</p>
 
 <h2>Čo metaanalýza zistila</h2>
 
@@ -56,7 +56,7 @@ $articles[] = [
   <li><strong>Predikčný interval (20–86 %)</strong> hovorí, akú prevalenciu možno očakávať v <em>ďalšej</em> štúdii alebo v konkrétnom centre. Je veľmi široký.</li>
 </ul>
 
-<p>Pri intradialytických kŕčoch je rozptyl ešte výraznejší — predikčný interval 4 až 87 % prakticky znamená, že z tejto metaanalýzy sa o očakávanej prevalencii vo vlastnom centre nedá vyvodiť takmer nič.</p>
+<p>Pri intradialytických kŕčoch je rozptyl ešte výraznejší – predikčný interval 4 až 87 % prakticky znamená, že z tejto metaanalýzy sa o očakávanej prevalencii vo vlastnom centre nedá vyvodiť takmer nič.</p>
 
 <p>Nejde o slabinu autorov, ale o <strong>poctivo priznaný stav dôkazov</strong>. Rozptyl s najväčšou pravdepodobnosťou neodráža skutočné biologické rozdiely medzi krajinami, ale rozdiely v tom, ako sa kŕče definujú a zisťujú.</p>
 
@@ -73,16 +73,16 @@ $articles[] = [
   <li><strong>Spôsob zisťovania.</strong> Aktívna otázka v dotazníku, alebo spontánny záznam v dokumentácii? Rozdiel medzi nimi býva niekoľkonásobný.</li>
 </ol>
 
-<p>Zistenie, že incidentní pacienti majú kŕče častejšie než prevalentní, si zaslúži opatrný výklad. Môže ísť o adaptáciu — po niekoľkých mesiacoch sa upraví suchá hmotnosť aj ultrafiltračný režim. Rovnako však môže ísť o <strong>skreslenie prežívaním a selekciou</strong>: pacienti, ktorí kŕče znášali najhoršie, mohli prejsť na inú modalitu alebo liečbu ukončiť.</p>
+<p>Zistenie, že incidentní pacienti majú kŕče častejšie než prevalentní, si zaslúži opatrný výklad. Môže ísť o adaptáciu – po niekoľkých mesiacoch sa upraví suchá hmotnosť aj ultrafiltračný režim. Rovnako však môže ísť o <strong>skreslenie prežívaním a selekciou</strong>: pacienti, ktorí kŕče znášali najhoršie, mohli prejsť na inú modalitu alebo liečbu ukončiť.</p>
 
 <h2>Prečo kŕče pri dialýze vznikajú</h2>
 
 <p>Metaanalýza sa mechanizmami nezaoberá, pre prax však stojí za to ich pripomenúť. Intradialytické kŕče sa najčastejšie spájajú s:</p>
 
 <ul>
-  <li><strong>rýchlou alebo nadmernou ultrafiltráciou</strong> a poklesom pod skutočnú suchú hmotnosť — ide o najčastejšiu a zároveň najlepšie ovplyvniteľnú príčinu;</li>
+  <li><strong>rýchlou alebo nadmernou ultrafiltráciou</strong> a poklesom pod skutočnú suchú hmotnosť – ide o najčastejšiu a zároveň najlepšie ovplyvniteľnú príčinu;</li>
   <li><strong>intradialytickou hypotenziou</strong> a poklesom perfúzie svalu;</li>
-  <li><strong>poruchami elektrolytov</strong> — najmä rýchlymi zmenami sodíka, ako aj hypomagneziémiou, hypokalciémiou a hypokaliémiou;</li>
+  <li><strong>poruchami elektrolytov</strong> – najmä rýchlymi zmenami sodíka, ako aj hypomagneziémiou, hypokalciémiou a hypokaliémiou;</li>
   <li>zmenami osmolality a presunmi tekutín medzi kompartmentmi.</li>
 </ul>
 
@@ -93,7 +93,7 @@ $articles[] = [
 <p>Postupnosť krokov, ktorá vychádza z uvedených mechanizmov:</p>
 
 <ol>
-  <li><strong>Aktívne sa pýtať.</strong> Ak sa symptóm vyskytuje u polovice pacientov a v dokumentácii ho má zlomok z nich, problém nie je v prevalencii, ale v tom, že sa nezisťuje. Otázka má rozlíšiť kŕče počas procedúry a mimo nej — spúšťače aj riešenia sa líšia.</li>
+  <li><strong>Aktívne sa pýtať.</strong> Ak sa symptóm vyskytuje u polovice pacientov a v dokumentácii ho má zlomok z nich, problém nie je v prevalencii, ale v tom, že sa nezisťuje. Otázka má rozlíšiť kŕče počas procedúry a mimo nej – spúšťače aj riešenia sa líšia.</li>
   <li><strong>Prehodnotiť suchú hmotnosť.</strong> Opakované kŕče v druhej polovici procedúry sú najčastejšie znakom nastavenia príliš nízko. Pomôcť môže bioimpedancia alebo ultrasonografické hodnotenie dolnej dutej žily.</li>
   <li><strong>Znížiť ultrafiltračnú rýchlosť.</strong> Predĺženie procedúry, pridanie štvrtej dialýzy v týždni alebo dôsledná práca s príjmom soli sú účinnejšie než akákoľvek farmakologická liečba.</li>
   <li><strong>Skontrolovať elektrolyty</strong> vrátane horčíka, ktorý sa rutinne nestanovuje a ktorého deficit je pri dlhodobej dialýze reálny.</li>
@@ -103,18 +103,18 @@ $articles[] = [
 
 <h2>Bezpečnostná poznámka: chinín nie</h2>
 
-<p>Chinín sa pri nočných kŕčoch dlhé roky používal mimo registrovanej indikácie. Americká lieková agentúra pred týmto použitím v roku 2010 <strong>výslovne varovala</strong> pre riziko závažných hematologických reakcií, najmä trombocytopénie, hemolýzy a úmrtí. Pomer prínosu a rizika je pri symptóme, akým sú kŕče, nepriaznivý — a u dialyzovaného pacienta s už zvýšeným rizikom krvácania to platí dvojnásobne.</p>
+<p>Chinín sa pri nočných kŕčoch dlhé roky používal mimo registrovanej indikácie. Americká lieková agentúra pred týmto použitím v roku 2010 <strong>výslovne varovala</strong> pre riziko závažných hematologických reakcií, najmä trombocytopénie, hemolýzy a úmrtí. Pomer prínosu a rizika je pri symptóme, akým sú kŕče, nepriaznivý – a u dialyzovaného pacienta s už zvýšeným rizikom krvácania to platí dvojnásobne.</p>
 
-<p>Aj pri ostatných liekoch skúšaných v tejto indikácii — levokarnitíne, vitamíne E, gabapentíne — je dôkazová základňa slabá a opiera sa o malé štúdie. Farmakologická liečba by preto mala nasledovať až po vyčerpaní úprav dialyzačného režimu, nie ich nahrádzať.</p>
+<p>Aj pri ostatných liekoch skúšaných v tejto indikácii – levokarnitíne, vitamíne E, gabapentíne – je dôkazová základňa slabá a opiera sa o malé štúdie. Farmakologická liečba by preto mala nasledovať až po vyčerpaní úprav dialyzačného režimu, nie ich nahrádzať.</p>
 
 <h2>Limity</h2>
 
 <ul>
-  <li>Ide o syntézu <strong>observačných a nerandomizovaných</strong> štúdií — prevalencia sa nedá interpretovať príčinne a metaanalýza neodpovedá na otázku, čo kŕče spôsobuje ani čo na ne zaberá.</li>
+  <li>Ide o syntézu <strong>observačných a nerandomizovaných</strong> štúdií – prevalencia sa nedá interpretovať príčinne a metaanalýza neodpovedá na otázku, čo kŕče spôsobuje ani čo na ne zaberá.</li>
   <li><strong>Významná heterogenita</strong> a stredné riziko skreslenia u vyše polovice štúdií znižujú váhu bodových odhadov.</li>
   <li>Zaradené boli len práce publikované <strong>v angličtine</strong>, čo prináša jazykové a publikačné skreslenie.</li>
   <li>Vylúčenie hospitalizovaných pacientov je metodicky opodstatnené, ale znamená, že najzávažnejšie prípady v odhade chýbajú.</li>
-  <li>Kŕče sú <strong>výlučne sebahlásené</strong> — objektívny ukazovateľ neexistuje.</li>
+  <li>Kŕče sú <strong>výlučne sebahlásené</strong> – objektívny ukazovateľ neexistuje.</li>
 </ul>
 
 <h2>Záver</h2>
@@ -128,7 +128,7 @@ $articles[] = [
 <ul>
   <li><a href="article.php?slug=dennik-semafor-objemovy-manazment-hemodialyza-rct">Denník semafor a objemový manažment pri hemodialýze</a>.</li>
   <li><a href="article.php?slug=umela-inteligencia-sucha-hmotnost-hemodialyza">Umelá inteligencia a určovanie suchej hmotnosti</a>.</li>
-  <li><a href="article.php?slug=dialyzacny-dysekvilibracny-syndrom-zaciatok-hemodialyzy">Dialyzačný dysekvilibračný syndróm</a> — ďalšia komplikácia začiatku hemodialýzy.</li>
+  <li><a href="article.php?slug=dialyzacny-dysekvilibracny-syndrom-zaciatok-hemodialyzy">Dialyzačný dysekvilibračný syndróm</a> – ďalšia komplikácia začiatku hemodialýzy.</li>
 </ul>
 
 <hr>
@@ -140,7 +140,7 @@ $articles[] = [
   <li><strong>U.S. Food and Drug Administration.</strong> <em>FDA Drug Safety Communication: New risk management plan and patient Medication Guide for Qualaquin (quinine sulfate).</em> 8. júla 2010. <a href="https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/fda-drug-safety-communication-new-risk-management-plan-and-patient-medication-guide-qualaquin-quinine" target="_blank" rel="noopener noreferrer">FDA</a>.</li>
 </ol>
 
-<p><em><strong>Poznámka k dôkazom:</strong> Všetky číselné údaje metaanalýzy — 94 štúdií, 32 223 pacientov, 36 krajín na piatich kontinentoch, 54 štúdií (57 %) v hemodialýze, 16 štúdií s intradialytickými kŕčmi, celková prevalencia 55 % (95 % IS 50–59 %, 95 % PI 20–86 %), intradialytická prevalencia 33 % (95 % IS 22–47 %, 95 % PI 4–87 %), podskupinové rozdiely podľa modality, incidencie a dĺžky obdobia spomínania, ako aj 50 štúdií (53 %) so stredným rizikom skreslenia — boli overené proti doslovnému zneniu abstraktu v zázname PubMed. Plný text práce je za platobnou bariérou vydavateľa a nebol sprístupnený. Časť o mechanizmoch vzniku kŕčov, praktický postup a bezpečnostná poznámka o chiníne <strong>nepochádzajú z tejto metaanalýzy</strong> — ide o vlastné odborné spracovanie opreté o etablované poznatky a o citované varovanie liekovej agentúry.</em></p>
+<p><em><strong>Poznámka k dôkazom:</strong> Všetky číselné údaje metaanalýzy – 94 štúdií, 32 223 pacientov, 36 krajín na piatich kontinentoch, 54 štúdií (57 %) v hemodialýze, 16 štúdií s intradialytickými kŕčmi, celková prevalencia 55 % (95 % IS 50–59 %, 95 % PI 20–86 %), intradialytická prevalencia 33 % (95 % IS 22–47 %, 95 % PI 4–87 %), podskupinové rozdiely podľa modality, incidencie a dĺžky obdobia spomínania, ako aj 50 štúdií (53 %) so stredným rizikom skreslenia – boli overené proti doslovnému zneniu abstraktu v zázname PubMed. Plný text práce je za platobnou bariérou vydavateľa a nebol sprístupnený. Časť o mechanizmoch vzniku kŕčov, praktický postup a bezpečnostná poznámka o chiníne <strong>nepochádzajú z tejto metaanalýzy</strong> – ide o vlastné odborné spracovanie opreté o etablované poznatky a o citované varovanie liekovej agentúry.</em></p>
 HTML,
 ];
 

@@ -28,7 +28,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Rozhovory, pozorovanie a tematická analýza odhaľujú, ako pacienti prežívajú liečbu. Ako kvalitatívne dôkazy správne čítať a používať v nefrologickej praxi.',
     'content'      => <<<'HTML'
-<figure><a href="img/kvalitativny-vyskum-nefrologia-rozhodovanie-pacientov-ckd.webp" rel="noopener noreferrer" target="_blank"><img src="img/kvalitativny-vyskum-nefrologia-rozhodovanie-pacientov-ckd.webp" alt="Pravidelná mriežka chladných bodov a nad ňou bohatý vrstevnatý vír teplo svietiacej hmoty, ktorý ju presahuje" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. To, prečo sa pacient rozhodne tak či onak, sa do mriežky premenných nezmestí — a pritom práve to rozhoduje.</figcaption></figure>
+<figure><a href="img/kvalitativny-vyskum-nefrologia-rozhodovanie-pacientov-ckd.webp" rel="noopener noreferrer" target="_blank"><img src="img/kvalitativny-vyskum-nefrologia-rozhodovanie-pacientov-ckd.webp" alt="Pravidelná mriežka chladných bodov a nad ňou bohatý vrstevnatý vír teplo svietiacej hmoty, ktorý ju presahuje" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. To, prečo sa pacient rozhodne tak či onak, sa do mriežky premenných nezmestí – a pritom práve to rozhoduje.</figcaption></figure>
 
 <p>Randomizovaná štúdia môže ukázať, či intervencia znižuje riziko klinickej udalosti. Register odhalí, ako často sa udalosť vyskytuje a s čím súvisí. Ani jeden prístup však sám osebe nemusí vysvetliť, ako pacient chápe svoje ochorenie, prečo odmieta navrhovanú liečbu alebo čo mu bráni uskutočniť plán, s ktorým v ambulancii súhlasil.</p>
 
@@ -50,7 +50,7 @@ $articles[] = [
   <li>audiozáznamy, videozáznamy alebo digitálny obsah, ak zodpovedajú výskumnej otázke.</li>
 </ul>
 
-<p>Zmiešaný výskum nie je synonymom kvalitatívneho výskumu. Ide o dizajn, ktorý zámerne prepája kvalitatívne a kvantitatívne časti a integruje ich výsledky. Jednoduché pridanie otvorenej otázky na koniec dotazníka ešte automaticky nevytvára kvalitný zmiešaný dizajn.</p>
+<p>Zmiešaný výskum nie je synonymom kvalitatívneho výskumu. Ide o dizajn, ktorý zámerne prepája kvalitatívne a kvantitatívne časti a integruje ich výsledky. Jednoduché pridanie otvorenej otázky na koniec dotazníka ešte nevytvára kvalitný zmiešaný dizajn.</p>
 
 <h2>Tri prístupy, tri odlišné druhy odpovedí</h2>
 
@@ -208,7 +208,7 @@ $articles[] = [
 
 <h2>Od výskumu ku klinickému rozhovoru</h2>
 
-<p>Otvorené otázky zlepšujú klinickú komunikáciu, ale bežný rozhovor v ambulancii nie je kvalitatívnou výskumnou štúdiou. Je však možné využiť rovnakú zvedavosť a nepredpokladať, že laboratórny výsledok vysvetľuje pacientovo rozhodnutie.</p>
+<p>Otvorené otázky zlepšujú klinickú komunikáciu, ale bežný rozhovor v ambulancii nie je kvalitatívnou výskumnou štúdiou. Možno však využiť rovnakú zvedavosť a nepredpokladať, že laboratórny výsledok vysvetľuje pacientovo rozhodnutie.</p>
 
 <p>Užitočné otázky môžu znieť:</p>
 

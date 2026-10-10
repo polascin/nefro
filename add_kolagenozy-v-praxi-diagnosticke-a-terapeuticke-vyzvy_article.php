@@ -50,13 +50,13 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Kolagenózy sú systémové autoimunitné ochorenia s rôznorodými prejavmi. Orgánovo orientovaný prístup k diagnostike (moč, svaly, autoprotilátky) aj k bezpečnej terapii – ako včas zachytiť orgánové ohrozenie a liečiť podľa rizika.',
     'content'      => <<<'HTML'
-<figure><a href="img/kolagenozy-v-praxi-diagnosticke-a-terapeuticke-vyzvy.webp" rel="noopener noreferrer" target="_blank"><img src="img/kolagenozy-v-praxi-diagnosticke-a-terapeuticke-vyzvy.webp" alt="Prekrývajúce sa priesvitné autoimunitné vzory, ktorých hranice nie je možné jednoznačne určiť" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Prekryvy medzi jednotkami sú pravidlom — a práve preto je diagnóza aj liečba v praxi náročná.</figcaption></figure>
+<figure><a href="img/kolagenozy-v-praxi-diagnosticke-a-terapeuticke-vyzvy.webp" rel="noopener noreferrer" target="_blank"><img src="img/kolagenozy-v-praxi-diagnosticke-a-terapeuticke-vyzvy.webp" alt="Prekrývajúce sa priesvitné autoimunitné vzory, ktorých hranice nie je možné jednoznačne určiť" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Prekryvy medzi jednotkami sú pravidlom – a práve preto je diagnóza aj liečba v praxi náročná.</figcaption></figure>
 
-<p>Streamed Up v sérii <strong>RheumaLive</strong> venovanej téme <strong>„Kollagenosen 2026“</strong> zdôrazňuje, že ide o skupinu chorôb s výrazne odlišnými klinickými prejavmi a s diagnostickými aj terapeutickými rozhodnutiami, ktoré musia reflektovať postihnutie orgánov a individuálnu dynamiku ochorenia. V tomto článku to rozoberám „klinicky“: ako pristupovať k podozreniu na kolagenózu, ako rýchlo zachytiť orgánové ohrozenie a ako rozumne nastaviť liečbu tak, aby zodpovedala riziku.</p>
+<p>Streamed Up v sérii <strong>RheumaLive</strong> venovanej téme <strong>„Kollagenosen 2026“</strong> zdôrazňuje, že ide o skupinu chorôb s výrazne odlišnými klinickými prejavmi, pri ktorých musia diagnostické aj terapeutické rozhodnutia zohľadňovať postihnutie orgánov a individuálnu dynamiku ochorenia. Článok sa sústreďuje na klinické otázky: ako pristupovať k podozreniu na kolagenózu, ako rýchlo zachytiť orgánové ohrozenie a ako nastaviť liečbu primerane riziku.</p>
 
-<h2>1) Čo sú kolagenózy a prečo sú „ťažké“</h2>
+<h2>1) Čo sú kolagenózy a prečo sú náročné</h2>
 
-<p>Kolagenózy sú <strong>systémové autoimunitné ochorenia</strong>, pri ktorých imunitný systém postihuje viaceré orgánové systémy naraz alebo sa postihnutie vyvíja postupne. To je aj dôvod, prečo sa diagnóza často odkladá: symptómy môžu byť na prvý pohľad nesúvisiace (napríklad koža, kĺby, pľúca, obličky, svaly, nervový systém).</p>
+<p>Kolagenózy sú <strong>systémové autoimunitné ochorenia</strong>, pri ktorých imunitný systém postihuje viaceré orgánové systémy naraz alebo sa postihnutie vyvíja postupne. Aj preto sa diagnóza často oneskoruje: symptómy môžu na prvý pohľad pôsobiť nesúvisiace (napríklad koža, kĺby, pľúca, obličky, svaly, nervový systém).</p>
 
 <p>Aj pri moderných imunologických metódach platí, že:</p>
 <ul>
@@ -65,7 +65,7 @@ $articles[] = [
   <li>a orgánové komplikácie môžu nastúpiť rýchlo.</li>
 </ul>
 
-<p>Práve preto je dôležité uvažovať systémovo už od prvého kontaktu a nastaviť si diagnostický plán, ktorý včas pokrýva „najhoršie scenáre“.</p>
+<p>Systémovo treba uvažovať už od prvého kontaktu a diagnostický plán nastaviť tak, aby včas pokryl aj „najhoršie scenáre“.</p>
 
 <h2>2) Prvý krok: klinická mapa rizík</h2>
 
@@ -73,7 +73,7 @@ $articles[] = [
 
 <h3>A) Systémové symptómy a zápalová aktivita</h3>
 
-<p>Horúčky, chudnutie, únava, artralgie a laboratórne známky zápalu (CRP, sedimentácia) sú len „vodítko“. Samy osebe diagnózu neurčia, ale hovoria, že nejde o izolovaný problém.</p>
+<p>Horúčky, chudnutie, únava, artralgie a laboratórne známky zápalu (CRP, sedimentácia) sú len vodítkom. Samy osebe diagnózu neurčia, ale naznačujú, že nejde o izolovaný problém.</p>
 
 <h3>B) Orgánové varovné príznaky</h3>
 
@@ -85,7 +85,7 @@ $articles[] = [
   <li>a často aj <strong>koža a sliznice</strong> (exantém, fotosenzitivita, ulcerácie).</li>
 </ul>
 
-<p>Povedané jednoducho: diagnostika kolagenóz nie je len o „správnom názve“, ale predovšetkým o tom, či pacienta treba chrániť pred orgánovým poškodením práve teraz.</p>
+<p>Pri diagnostike kolagenóz nejde len o „správny názov“, ale predovšetkým o to, či pacienta treba chrániť pred orgánovým poškodením práve teraz.</p>
 
 <h3>C) Vzorec príznakov („pattern“) podľa domén</h3>
 
@@ -93,13 +93,13 @@ $articles[] = [
 
 <h2>3) Diagnostika: čo sa robí a prečo nestačí jeden test</h2>
 
-<p>Rheuma-Liga uvádza praktický a na orgány orientovaný diagnostický postup: lekár najprv zhodnotí typické symptómy, doplní laboratóriá a zobrazovanie (napríklad ultrazvuk, RTG), sleduje funkcie postihnutých orgánov a v niektorých situáciách sa pristúpi aj k mikroskopickému vyšetreniu tkaniva (napríklad k biopsii). Dôležité je, že symptómy sa medzi jednotlivými kolagenózami líšia a často si vyžadujú individualizovaný plán.</p>
+<p>Rheuma-Liga uvádza praktický a na orgány orientovaný diagnostický postup: lekár najprv zhodnotí typické symptómy, doplní laboratóriá a zobrazovanie (napríklad ultrazvuk, RTG), sleduje funkcie postihnutých orgánov a v niektorých situáciách sa pristúpi aj k mikroskopickému vyšetreniu tkaniva (napríklad k biopsii). Symptómy sa medzi jednotlivými kolagenózami líšia, a preto býva potrebný individuálny plán.</p>
 
 <h3>3.1 Laboratóriá a imunológia: protilátky ako „smerovník“</h3>
 
 <p>Autoprotilátky môžu diagnózu významne urýchliť. Rheuma-Liga spomína, že <strong>antinukleárne protilátky (ANA)</strong> sú pri kolagenózach často prítomné a bližšie určenie typu protilátok môže pomôcť rozlíšiť podskupiny. Pri niektorých entitách sa cielene vyšetrujú aj špecifické autoprotilátky (napríklad anti-dsDNA pri aktívnom SLE, prípadne anti-Ro a anti-La pri Sjögrenovom syndróme).</p>
 
-<p>Kľúčové praktické ponaučenie:</p>
+<p>Pre prax z toho vyplýva:</p>
 <ul>
   <li>protilátky sú výborný nástroj, ale <strong>nie sú náhradou kliniky</strong>,</li>
   <li>a pozitívny nález bez zodpovedajúceho fenotypu vyžaduje opatrnosť, aby sa pacient zbytočne „neoznačil“.</li>
@@ -107,26 +107,26 @@ $articles[] = [
 
 <h3>3.2 Moč a obličkové ukazovatele pri podozrení na nefritídu</h3>
 
-<p>Pri podozrení na postihnutie obličiek sa uplatňuje vyšetrenie moču a následné hodnotenie príznakov glomerulárneho poškodenia. Rheuma-Liga uvádza, že zápal pri systémovom lupus erythematosus možno zachytiť vyšetrením moču a prvými viditeľnými varovaniami môžu byť opuchy členkov a pena v moči ako signál vysokého obsahu bielkovín.</p>
+<p>Pri podozrení na postihnutie obličiek sa vyšetruje moč a následne sa hodnotia známky glomerulárneho poškodenia. Rheuma-Liga uvádza, že zápal pri systémovom lupus erythematosus možno zachytiť vyšetrením moču a prvými viditeľnými varovaniami môžu byť opuchy členkov a pena v moči ako signál vysokého obsahu bielkovín.</p>
 
 <h3>3.3 Svaly: klinika plus enzýmy a zobrazenie, niekedy aj EMG a biopsia</h3>
 
-<p>Ak dominuje svalová slabosť, Rheuma-Liga spomína, že typické sú zvýšené svalové enzýmy; doplniť ich môže ultrazvuk, MRI, elektromyografia a v prípade potreby aj biopsia svalu. Tento prístup je logický: svalová slabosť má viac príčin a kolagenózové myozitídy treba odlíšiť od infekčných, toxických či iných etiológií.</p>
+<p>Ak dominuje svalová slabosť, Rheuma-Liga spomína, že typické sú zvýšené svalové enzýmy; doplniť ich môže ultrazvuk, MRI, elektromyografia a v prípade potreby aj biopsia svalu. Svalová slabosť má viac príčin a kolagenózové myozitídy treba odlíšiť od infekčných, toxických či iných etiológií.</p>
 
 <h2>4) V čom je terapeutická výzva: liečiť rýchlo, ale nie naslepo</h2>
 
-<p>Streamed Up v popise podujatia uvádza, že sa riešia „diagnostické a terapeutické výzvy“ pri rôznych formách kolagenóz. Aj bez podrobného záznamu jednotlivých prednášok sa dá medicínsky rozumne zhrnúť, čo tieto výzvy typicky znamenajú:</p>
+<p>Streamed Up v popise podujatia uvádza, že sa venuje „diagnostickým a terapeutickým výzvam“ pri rôznych formách kolagenóz. Bez podrobného záznamu jednotlivých prednášok možno všeobecne zhrnúť, čo tieto výzvy v praxi typicky znamenajú:</p>
 
 <ol>
   <li><strong>Rýchlosť rozhodnutia.</strong> Pri orgánovo ohrozujúcich formách nie je priestor na dlhé diagnostické váhanie. Ak sú jasné známky aktivity a rizika, terapia sa zvyčajne začína podľa závažnosti, pričom diagnóza sa priebežne spresňuje.</li>
   <li><strong>Vyváženie účinnosti a bezpečnosti.</strong> Imunosupresia môže dramaticky zlepšiť prognózu, ale zvyšuje riziko infekcií, metabolických komplikácií a nežiaducich účinkov. Preto treba vopred myslieť na prevenciu a monitorovanie.</li>
-  <li><strong>Stratifikácia podľa orgánového postihnutia.</strong> Nie je to jedna liečba pre všetkých. Taktika sa mení podľa toho, či ide o kožné, kĺbové, pľúcne alebo obličkové postihnutie.</li>
+  <li><strong>Stratifikácia podľa orgánového postihnutia.</strong> Univerzálna liečba neexistuje. Taktika sa mení podľa toho, či ide o kožné, kĺbové, pľúcne alebo obličkové postihnutie.</li>
   <li><strong>Dlhodobé riadenie.</strong> Cieľom nie je iba krátkodobá remisia, ale aj jej udržanie bez relapsu a minimalizácia kumulatívnej toxicity liečby.</li>
 </ol>
 
 <h2>5) Praktický diagnosticko-terapeutický rámec (čo by mal vedieť klinik)</h2>
 
-<p>Nasledujúci rámec je praktický a „aplikovateľný“; nie je to presný algoritmus jedného konkrétneho programu.</p>
+<p>Nasledujúci rámec je určený pre prax; nie je to presný algoritmus konkrétneho programu.</p>
 
 <h3>Krok 1: Potvrdiť, že nejde o jednorazový incident</h3>
 
@@ -134,7 +134,7 @@ $articles[] = [
 
 <h3>Krok 2: Cieliť diagnostiku na orgány</h3>
 
-<p>Zámer: odhaliť postihnutie obličiek, svalov, pľúc a iných systémov tak, aby liečba nebola zbytočne oneskorená a aby bola adekvátna riziku. V praxi to typicky znamená:</p>
+<p>Cieľom je odhaliť postihnutie obličiek, svalov, pľúc a iných systémov tak, aby sa liečba zbytočne neoneskorila a zodpovedala riziku. V praxi to typicky znamená:</p>
 <ul>
   <li>vyšetrenie moču pri podozrení na nefritídu,</li>
   <li>svalové enzýmy, zobrazovanie a doplnenie podľa potreby pri slabosti,</li>
@@ -147,11 +147,11 @@ $articles[] = [
 
 <h3>Krok 4: Multidisciplinárne rozhodnutie</h3>
 
-<p>Pri aktívnom orgánovom postihnutí je často potrebná spolupráca reumatológa, nefrológa, pneumológa alebo neurológa podľa domény. Tým sa skracuje cesta k správnej intervencii.</p>
+<p>Pri aktívnom orgánovom postihnutí je často potrebná spolupráca reumatológa, nefrológa, pneumológa alebo neurológa podľa domény. Skracuje to cestu k správnej intervencii.</p>
 
 <h2>6) Čo s „nejasnými“ prípadmi</h2>
 
-<p>Keď je klinika rozporuplná a protilátky sú hraničné alebo nešpecifické, je to typická situácia, v ktorej sa ľahko urobí diagnostická chyba v oboch smeroch:</p>
+<p>Keď je klinický obraz rozporuplný a protilátky sú hraničné alebo nešpecifické, ľahko sa urobí diagnostická chyba v oboch smeroch:</p>
 <ul>
   <li>buď sa významná aktivita podcení,</li>
   <li>alebo sa pacient zbytočne lieči, hoci ide o inú príčinu.</li>
@@ -166,7 +166,7 @@ $articles[] = [
 
 <h2>7) Záver</h2>
 
-<p>Kolagenózy sú skupina systémových autoimunitných ochorení, pri ktorých nerozhoduje jediné laboratórne vyšetrenie, ale premyslený, orgánovo orientovaný prístup. Podujatie „Kollagenosen 2026“ v rámci RheumaLive poukazuje na to, že v tejto oblasti existujú významné diagnostické aj terapeutické výzvy. Klinicky sa to prejavuje potrebou rýchlo zachytiť orgánové ohrozenie, správne interpretovať imunologické nálezy a liečbu prispôsobiť riziku a dynamike ochorenia. Praktický rámec z diagnostiky (moč, svaly, autoprotilátky, doplnenie podľa domény) a z bezpečnej terapie je základ, aby sme pacienta ochránili pred poškodením orgánov a zároveň minimalizovali liečebnú záťaž.</p>
+<p>Pri kolagenózach nerozhoduje jediné laboratórne vyšetrenie, ale premyslený, orgánovo orientovaný prístup. Diagnostické a terapeutické výzvy, na ktoré upozorňuje podujatie „Kollagenosen 2026“, sa v klinike prejavujú potrebou rýchlo zachytiť orgánové ohrozenie, správne interpretovať imunologické nálezy a prispôsobiť liečbu riziku a dynamike ochorenia. Cielená diagnostika (moč, svaly, autoprotilátky, doplnenie podľa domény) a bezpečne vedená terapia umožňujú ochrániť orgány a zároveň obmedziť liečebnú záťaž.</p>
 
 <hr>
 

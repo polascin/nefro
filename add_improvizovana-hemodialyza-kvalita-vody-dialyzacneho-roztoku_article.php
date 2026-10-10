@@ -26,9 +26,9 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Príbeh muža, ktorý si po vyčerpaní úspor zostrojil vlastný dialyzačný prístroj, obieha internet znova. Ukazuje reálnu nerovnosť v prístupe k liečbe – a zároveň to, čo v improvizácii chýba: kontrolu kvality vody a dialyzačného roztoku.',
     'content'      => <<<'HTML'
-<figure><a href="img/improvizovana-hemodialyza-kvalita-vody-dialyzacneho-roztoku.webp" rel="noopener noreferrer" target="_blank"><img src="img/improvizovana-hemodialyza-kvalita-vody-dialyzacneho-roztoku.webp" alt="Improvizovaná filtračná zostava so zakalenou vodou; jedno vlákno z nej vychádza celé, ostatné v tme končia pretrhnuté" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Jeden prežitý prípad je vidieť, tie ostatné nie — a práve preto nie je príbeh dôkazom bezpečnosti.</figcaption></figure>
+<figure><a href="img/improvizovana-hemodialyza-kvalita-vody-dialyzacneho-roztoku.webp" rel="noopener noreferrer" target="_blank"><img src="img/improvizovana-hemodialyza-kvalita-vody-dialyzacneho-roztoku.webp" alt="Improvizovaná filtračná zostava so zakalenou vodou; jedno vlákno z nej vychádza celé, ostatné v tme končia pretrhnuté" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Jeden prežitý prípad je vidieť, tie ostatné nie – a práve preto nie je príbeh dôkazom bezpečnosti.</figcaption></figure>
 
-<p>Príbeh čínskeho pacienta, ktorý si po finančnom vyčerpaní rodiny zostrojil vlastnú hemodialyzačnú zostavu a prežil na nej trinásť rokov, sa v posledných týždňoch znova šíri po sociálnych sieťach. Stojí za to hneď na úvod uviesť jednu vec, ktorú nová vlna zdieľaní vynecháva: <strong>nejde o novú udalosť</strong>. Prípad opísali čínske médiá v januári 2013 a dnešné príspevky sú jeho recykláciou bez akéhokoľvek nového klinického údaja.</p>
+<p>Príbeh čínskeho pacienta, ktorý si po finančnom vyčerpaní rodiny zostrojil vlastnú hemodialyzačnú zostavu a prežil na nej trinásť rokov, sa v posledných týždňoch znova šíri po sociálnych sieťach. Nová vlna zdieľaní však vynecháva podstatnú vec: <strong>nejde o novú udalosť</strong>. Prípad opísali čínske médiá v januári 2013 a dnešné príspevky sú jeho recykláciou bez akéhokoľvek nového klinického údaja.</p>
 
 <p>Príbeh má napriek tomu dve legitímne roviny. Prvou je nerovnosť v prístupe k liečbe, ktorá človeka dotlačí k improvizácii. Druhou je otázka, ktorú si nefrológ položí okamžite: čo presne v takejto zostave chýba a prečo to nemožno nahradiť šikovnosťou.</p>
 
@@ -93,7 +93,7 @@ $articles[] = [
 
 <p>Na okraj patrí aj upozornenie na staršie číselné údaje, ktoré stále kolujú: hranica 2 EU/ml pochádza z prekonaného amerického štandardu a <strong>dnešný limit pre dialyzačnú vodu je 0,25 EU/ml</strong>, teda osemkrát prísnejší. Pri citovaní limitov sa oplatí overiť, z ktorého vydania normy pochádzajú.</p>
 
-<p>Mikrobiológia pritom nie je jediná téma. Úprava vody musí odstrániť aj chemické kontaminanty – reverzná osmóza, zmäkčovanie a filtre s aktívnym uhlím nie sú zbytočná zložitosť. Historicky práve ich zlyhanie viedlo k hromadným poškodeniam pacientov: encefalopatii pri hliníku, hemolýze pri chloramínoch a k otravám pri fluoridoch. Domáca „prečistená voda“ bez pravidelného merania týchto parametrov nie je bezpečnostne porovnateľná s ničím z toho.</p>
+<p>Mikrobiológia pritom nie je jediná téma. Úprava vody musí odstrániť aj chemické kontaminanty – reverzná osmóza, zmäkčovanie a filtre s aktívnym uhlím nie sú zbytočná zložitosť. Historicky práve ich zlyhanie viedlo k hromadným poškodeniam pacientov: encefalopatii pri hliníku, hemolýze pri chloramínoch a k otravám pri fluoridoch. Domáca „prečistená voda“ bez pravidelného merania týchto parametrov sa s takouto úpravou vody nedá z hľadiska bezpečnosti porovnávať.</p>
 
 <h2>Zloženie roztoku nie je tri soli</h2>
 

@@ -31,7 +31,7 @@ $articles[] = [
     'content'      => <<<'HTML'
 <figure class="article-figure">
   <a href="img/vetry-denne-infografika.png" target="_blank" rel="noopener noreferrer"><img src="img/vetry-denne-infografika.png" alt="Infografika: priemerne približne 5× denne je normálne; frekvenciu ovplyvňuje strava, vláknina, črevná mikrobiota, pohyb a lieky. Kedy spozornieť: krv v stolici, úbytok hmotnosti, nočné bolesti, zmena stolice, chronická hnačka alebo zápcha, anémia, horúčka." loading="lazy" decoding="async"></a>
-  <figcaption>Koľko vetrov denne je ešte normálne — priemer, čo frekvenciu ovplyvňuje a kedy spozornieť. Plynatosť je normálna; výrazná zmena alebo varovné príznaky patria k lekárovi.</figcaption>
+  <figcaption>Koľko vetrov denne je ešte normálne – priemer, čo frekvenciu ovplyvňuje a kedy spozornieť. Plynatosť je normálna; výrazná zmena alebo varovné príznaky patria k lekárovi.</figcaption>
 </figure>
 <p>Nadúvanie a odchod črevných plynov patria medzi bežné telesné prejavy, o ktorých sa v ambulancii často hovorí opatrne, niekedy s rozpakmi. Napriek tomu ide o medicínsky relevantnú tému. Pacienti sa často pýtajú, či majú „príliš veľa plynov“, či je ich trávenie v poriadku a kedy už môže ísť o príznak ochorenia.</p>
 
@@ -47,27 +47,27 @@ $articles[] = [
 
 <h2>Priemer: približne päťkrát denne</h2>
 
-<p>Výsledok bol jednoduchý a zároveň prakticky užitočný: priemerný počet zaznamenaných epizód bol približne <strong>5 odchodov plynov denne na osobu</strong>.</p>
+<p>Výsledok je jednoduchý a prakticky užitočný: priemerný počet zaznamenaných epizód bol približne <strong>5 odchodov plynov denne na osobu</strong>.</p>
 
 <p>Rozptyl medzi jednotlivcami bol však výrazný. Niektorí ľudia mali epizód menej, iní viac. To je pri tráviacich prejavoch očakávané, pretože ich ovplyvňuje strava, množstvo vlákniny, črevná mikrobiota, pohyb, denný režim, lieky aj individuálna citlivosť.</p>
 
 <h2>Rozdiely podľa pohlavia, veku a dennej doby</h2>
 
-<p>Štúdia zistila, že muži zaznamenávali odchod plynov častejšie než ženy. Pri takomto type výskumu však treba počítať s možnosťou rozdielneho sebazaznamenávania, teda nie je isté, či ide výlučne o biologický rozdiel.</p>
+<p>Štúdia zistila, že muži zaznamenávali odchod plynov častejšie než ženy. Pri takomto type výskumu však treba počítať s možnosťou rozdielneho sebazaznamenávania, takže nie je isté, či ide výlučne o biologický rozdiel.</p>
 
 <p>Podľa veku bola najvyššia frekvencia v skupine <strong>26 až 45 rokov</strong>. Najnižšie hodnoty boli zaznamenané u mladších účastníkov vo veku <strong>14 až 25 rokov</strong>.</p>
 
-<p>Zaujímavý bol aj denný rytmus. Frekvencia odchodu plynov počas dňa postupne stúpala a vrcholila tesne pred spaním. Najnižšia bola v skorých ranných hodinách. Tento priebeh dáva biologicky zmysel, pretože tvorba a odchod črevných plynov súvisia s príjmom potravy, trávením a bakteriálnou fermentáciou v čreve.</p>
+<p>Zaujímavý bol aj denný rytmus. Frekvencia odchodu plynov počas dňa postupne stúpala a vrcholila tesne pred spaním. Najnižšia bola v skorých ranných hodinách. Tento priebeh je biologicky logický, pretože tvorba a odchod črevných plynov súvisia s príjmom potravy, trávením a bakteriálnou fermentáciou v čreve.</p>
 
 <h2>Vláknina, trávenie a črevné plyny</h2>
 
-<p>Autori sledovali aj súvislosť so samostatne hláseným príjmom vlákniny. Vzťah nebol veľmi silný, čo nie je prekvapujúce. Trávenie nie je okamžitý proces a tvorba plynov závisí od viacerých faktorov, nielen od jedného jedla alebo jedného parametra stravy.</p>
+<p>Autori sledovali aj súvislosť so samostatne hláseným príjmom vlákniny. Vzťah nebol veľmi silný, čo neprekvapuje. Trávenie nie je okamžitý proces a tvorba plynov závisí od viacerých faktorov, nielen od jedného jedla alebo jedného parametra stravy.</p>
 
 <p>Všeobecne však platí, že fermentovateľné sacharidy a vláknina môžu u niektorých ľudí zvyšovať tvorbu plynov. Neznamená to, že vláknina je škodlivá. Práve naopak, má dôležitý význam pre črevné zdravie, metabolizmus aj kardiovaskulárne riziko. Problémom môže byť skôr rýchle zvýšenie jej príjmu alebo individuálna intolerancia niektorých potravín.</p>
 
 <h2>Limity štúdie</h2>
 
-<p>Najväčším obmedzením je spôsob zberu údajov. Všetky epizódy boli zaznamenané samotnými účastníkmi. Nešlo teda o objektívne meranie. Niektoré epizódy mohli byť nezaznamenané, iné mohli byť zaznamenané nepresne.</p>
+<p>Najväčším obmedzením je spôsob zberu údajov. Všetky epizódy boli zaznamenané samotnými účastníkmi. Nešlo teda o objektívne meranie – niektoré epizódy mohli zostať nezaznamenané, iné mohli byť zapísané nepresne.</p>
 
 <p>Ďalším limitom je spánok. Štúdia nevie spoľahlivo povedať, čo sa dialo v noci, keď účastníci spali. Údaje preto opisujú najmä vedome zaznamenané denné epizódy.</p>
 

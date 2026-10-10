@@ -35,7 +35,7 @@ $articles[] = [
     'content'      => <<<'HTML'
 <figure><a href="img/glp1-poruchy-prijmu-potravy-nevhodne-pouzivanie.webp" rel="noopener noreferrer" target="_blank"><img src="img/glp1-poruchy-prijmu-potravy-nevhodne-pouzivanie.webp" alt="Svetelný lúč zužujúci siluetu ďalej, než je zdravé, s výstražným svetlom na okraji" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Ten istý účinok, ktorý pomáha, sa u rizikového pacienta môže stať nástrojom poruchy príjmu potravy.</figcaption></figure>
 
-<p>V posledných rokoch sa dostupnosť agonistov GLP-1 receptorov výrazne zjednodušila. Perorálne prípravky a rýchly prístup cez telemedicínske siete zvyšujú pravdepodobnosť, že o tieto lieky požiadajú aj ľudia mimo okruhu pacientov, pre ktorých sú určené. Medzi odborníkmi sa opakovane objavujú obavy, že časť žiadostí o GLP-1 môže súvisieť s nedostatočným zhodnotením porúch príjmu potravy alebo so skrytou anamnézou, ktorá sa pri „rýchlych“ predpisoch neodhalí.</p>
+<p>V posledných rokoch sa prístup k agonistom GLP-1 receptorov výrazne zjednodušil. Perorálne prípravky a rýchly prístup cez telemedicínske siete zvyšujú pravdepodobnosť, že o tieto lieky požiadajú aj ľudia mimo okruhu pacientov, pre ktorých sú určené. Medzi odborníkmi sa opakovane objavujú obavy, že časť žiadostí o GLP-1 môže súvisieť s nedostatočným zhodnotením porúch príjmu potravy alebo so skrytou anamnézou, ktorá sa pri „rýchlych“ predpisoch neodhalí.</p>
 
 <p>Nasledujúci prehľad zhŕňa, na čo upozorňujú klinici, a ponúka praktický rámec, ako k indikácii GLP-1 pristupovať obozretne.</p>
 
@@ -47,7 +47,7 @@ $articles[] = [
 
 <ol>
   <li><strong>Dopyt „kvôli vzhľadu“ alebo „ešte trochu“</strong>, hoci pacient už má hmotnosť v pásme, kde ďalšie znižovanie neprináša medicínsky prínos.</li>
-  <li><strong>Nedostatočná identifikácia porúch príjmu potravy</strong> alebo ich rizikových vzorcov, ktoré môžu byť pre pacienta citlivé a v ním uvádzanej anamnéze nemusia byť spomenuté.</li>
+  <li><strong>Nedostatočná identifikácia porúch príjmu potravy</strong> alebo ich rizikových vzorcov, ktoré môžu byť pre pacienta citlivé a v anamnéze, ktorú sám uvádza, nemusia zaznieť.</li>
   <li><strong>Riziko škôd pri nevhodne stanovenom cieli chudnutia</strong> – napríklad nadmerná redukcia hmotnosti či strata svalovej hmoty; v citovanej literatúre sa spomína aj pankreatitída.</li>
 </ol>
 
@@ -66,7 +66,7 @@ $articles[] = [
   <li>požiadavka na <strong>rýchlu redukciu</strong> bez zjavnej medicínskej potreby.</li>
 </ul>
 
-<p>Niektorí klinici považujú za praktické viesť rozhovor tak, aby sa ťažisko prenieslo z kozmetického cieľa na otázku metabolického zdravia a celkovej prevencie. Skúsenosť naznačuje, že takéto prerámcovanie cieľa dokáže u časti pacientov znížiť tlak na to, aby „len schudli“.</p>
+<p>Niektorí klinici považujú za praktické viesť rozhovor tak, aby sa ťažisko prenieslo z kozmetického cieľa na otázku metabolického zdravia a celkovej prevencie. Skúsenosť naznačuje, že takýto posun cieľa dokáže u časti pacientov znížiť tlak na to, aby „len schudli“.</p>
 
 <h2>Skríning: čo má zmysel a ako ho robiť</h2>
 
@@ -80,7 +80,7 @@ $articles[] = [
 
 <p>Z konkrétnych nástrojov sa uvádza dotazník <strong>Binge Eating Disorder Screener-7 (BEDS-7)</strong>; ďalšie nástroje sú dostupné prostredníctvom organizácie National Eating Disorders Association.</p>
 
-<p>Zároveň platí, že hoci sa časť lekárov opiera o formálne nástroje, veľký význam má aj „realistická klinická reč“ – podrobná anamnéza celoživotných vzorcov správania a obáv týkajúcich sa vnímania vlastného tela.</p>
+<p>Hoci sa časť lekárov opiera o formálne nástroje, veľký význam má aj obyčajný klinický rozhovor – podrobná anamnéza celoživotných vzorcov správania a obáv týkajúcich sa vnímania vlastného tela.</p>
 
 <h3>3. Rozhovor o nutričnej realite pri potlačení chuti do jedla</h3>
 
@@ -96,11 +96,11 @@ $articles[] = [
   <li>situácie, v ktorých sa u pacienta už prejavuje <strong>strata svalovej hmoty</strong>, klesajúca kostná denzita alebo komplikácie.</li>
 </ul>
 
-<p>Ilustruje to konkrétny príklad: pacientka s anamnézou poruchy príjmu potravy GLP-1 nedostala, ale bola vedená k vedeniu potravinového denníka. Spoločná revízia denníka umožnila riešiť kvalitu výživy a vysvetliť, prečo môže pri potlačení chuti do jedla vzniknúť problém so zachovaním svalovej hmoty.</p>
+<p>Ilustruje to konkrétny príklad: pacientka s anamnézou poruchy príjmu potravy GLP-1 nedostala, ale dostala odporúčanie viesť potravinový denník. Spoločná revízia denníka umožnila riešiť kvalitu výživy a vysvetliť, prečo môže pri potlačení chuti do jedla vzniknúť problém so zachovaním svalovej hmoty.</p>
 
 <h2>Nejednoznačnosť dôkazov a rozdiel medzi indikáciou a zneužitím</h2>
 
-<p>V téme je prítomná dôležitá nuansa. Niektoré štúdie môžu naznačovať potenciálny prínos semaglutidu pri psychogénnom prejedaní (binge eating disorder). Klinická skúsenosť časti autorov však vedie k opatrnosti a k interpretácii, že problémom nemusí byť samotný mechanizmus účinku lieku, ale spôsob, akým sa liečba používa – u koho sa indikuje a aký cieľ sleduje.</p>
+<p>Dôkazy tu nie sú jednoznačné. Niektoré štúdie môžu naznačovať potenciálny prínos semaglutidu pri psychogénnom prejedaní (binge eating disorder). Klinická skúsenosť časti autorov však vedie k opatrnosti a k interpretácii, že problémom nemusí byť samotný mechanizmus účinku lieku, ale spôsob, akým sa liečba používa – u koho sa indikuje a aký cieľ sleduje.</p>
 
 <p>Jedna z opísaných skúseností zdôrazňuje, že pri nevhodnom nastavení liečby alebo u pacientov, ktorí v skutočnosti primárne zápasia s psychiatrickým ochorením, môže dôjsť k nadmernej redukcii hmotnosti a k pokračovaniu liečby dlhšie, než sa klinicky považuje za primerané.</p>
 
@@ -122,7 +122,7 @@ $articles[] = [
 
 <p>Vyššia dostupnosť GLP-1 priniesla nielen lepší prístup k liečbe obezity, ale aj priestor pre nevhodné požiadavky. Kľúčom k zníženiu rizika je systematický skríning porúch príjmu potravy, jasné stanovenie cieľa liečby, edukácia o nutričných dôsledkoch a v rizikových situáciách včasné zapojenie psychologickej podpory.</p>
 
-<p>Ak zvažujete GLP-1 u pacienta s hraničnou indikáciou, je férové pamätať, že „túžba schudnúť“ nie vždy znamená medicínsku potrebu. Môže ísť o psychiatricky podmienený vzorec správania, ktorý si vyžaduje iný liečebný plán.</p>
+<p>Ak zvažujete GLP-1 u pacienta s hraničnou indikáciou, treba pamätať, že „túžba schudnúť“ nie vždy znamená medicínsku potrebu. Môže ísť o psychiatricky podmienený vzorec správania, ktorý si vyžaduje iný liečebný plán.</p>
 
 <hr>
 

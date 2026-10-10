@@ -32,13 +32,13 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Hyperkaliémia pri pokročilom ochorení obličiek je vážny problém, no moderný prístup nestavia na strašení zoznamom zakázaných potravín. Kľúčom je individuálna edukácia, práca s veľkosťou porcie, správna úprava jedla a riešenie zápchy.',
     'content'      => <<<'HTML'
-<figure><a href="img/kontrola-draslika-ckd-edukovat-nie-strasit.webp" rel="noopener noreferrer" target="_blank"><img src="img/kontrola-draslika-ckd-edukovat-nie-strasit.webp" alt="Potraviny bohaté na draslík pokojne rozložené vedľa obličky s vyrovnanou svetelnou hladinou" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Plošné zakazovanie ochudobňuje stravu — cieľom je vedieť, čo a koľko, nie sa báť.</figcaption></figure>
+<figure><a href="img/kontrola-draslika-ckd-edukovat-nie-strasit.webp" rel="noopener noreferrer" target="_blank"><img src="img/kontrola-draslika-ckd-edukovat-nie-strasit.webp" alt="Potraviny bohaté na draslík pokojne rozložené vedľa obličky s vyrovnanou svetelnou hladinou" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Plošné zakazovanie ochudobňuje stravu – cieľom je vedieť, čo a koľko, nie sa báť.</figcaption></figure>
 
-<p>Hyperkaliémia môže byť pri pokročilom ochorení obličiek vážnym a rýchlo sa rozvíjajúcim problémom. To však neznamená, že každého pacienta treba automaticky vystrašiť dlhým zoznamom zakázaných potravín. Práve naopak. Moderný prístup k diétnym odporúčaniam pri chronickej chorobe obličiek a dialýze by mal byť individuálny, praktický a zrozumiteľný.</p>
+<p>Hyperkaliémia môže byť pri pokročilom ochorení obličiek vážnym a rýchlo sa rozvíjajúcim problémom. To však neznamená, že každého pacienta treba automaticky vystrašiť dlhým zoznamom zakázaných potravín. Moderný prístup k diétnym odporúčaniam pri chronickej chorobe obličiek a dialýze by mal byť individuálny, praktický a zrozumiteľný.</p>
 
-<p>Starší spôsob edukácie často stál na jednoduchom odkaze: nejedzte banány, nepite pomarančový džús, vyhýbajte sa zemiakom, strukovinám a ďalším potravinám s vyšším obsahom draslíka. Takýto prístup síce vychádzal zo snahy predísť hyperkaliémii, no u mnohých pacientov vyvolával strach, rezignáciu alebo zbytočné obmedzenia. Pacient, ktorý sa bojí jedla, často lepšie nespolupracuje. Skôr sa stratí v zákazoch.</p>
+<p>Starší spôsob edukácie často stál na jednoduchom odkaze: nejedzte banány, nepite pomarančový džús, vyhýbajte sa zemiakom, strukovinám a ďalším potravinám s vyšším obsahom draslíka. Takýto prístup síce vychádzal zo snahy predísť hyperkaliémii, no u mnohých pacientov vyvolával strach, rezignáciu alebo zbytočné obmedzenia. Pacient, ktorý sa bojí jedla, zvyčajne nespolupracuje lepšie – skôr sa stratí v zákazoch.</p>
 
-<p>Cieľom nie je draslík ignorovať. Cieľom je naučiť pacienta, ako s ním rozumne pracovať.</p>
+<p>Cieľom nie je draslík ignorovať, ale naučiť pacienta rozumne s ním pracovať.</p>
 
 <h2>Nie všetko musí byť zakázané</h2>
 
@@ -50,7 +50,7 @@ $articles[] = [
 
 <h2>Varenie a vylúhovanie pomáha znížiť obsah draslíka</h2>
 
-<p>Jedným z praktických postupov je úprava potravín s vyšším obsahom draslíka. Typickým príkladom sú zemiaky.</p>
+<p>Jedným z praktických postupov je vhodná úprava potravín s vyšším obsahom draslíka, typicky zemiakov.</p>
 
 <p>Pri ošúpaní, nakrájaní na menšie kúsky a varení vo väčšom množstve vody sa časť draslíka dostáva do vody. Samotné namáčanie má len obmedzený efekt, ale nakrájanie alebo nastrúhanie a následné varenie môže obsah draslíka výrazne znížiť. Podľa citovaného zdroja môže pri vhodnej úprave dôjsť k zníženiu obsahu draslíka približne o 50 až 75 %.</p>
 
@@ -82,7 +82,7 @@ $articles[] = [
 
 <p>Pri chronickej chorobe obličiek sa často zhoršuje zápcha. Prispievajú k tomu obmedzenia tekutín, nižší príjem vlákniny, znížená pohybová aktivita a viaceré lieky.</p>
 
-<p>Z pohľadu draslíka je dôležité, že pri poklese renálneho vylučovania sa črevo môže podieľať na kompenzačnom vylučovaní draslíka. Ak je však pasáž spomalená, vstrebávanie draslíka v čreve môže byť vyššie a tento kompenzačný mechanizmus nemusí byť dostatočne účinný.</p>
+<p>Pre draslík je podstatné, že pri poklese renálneho vylučovania sa črevo môže podieľať na kompenzačnom vylučovaní draslíka. Ak je však pasáž spomalená, vstrebávanie draslíka v čreve môže byť vyššie a tento kompenzačný mechanizmus nemusí byť dostatočne účinný.</p>
 
 <p>Preto má liečba zápchy u pacienta s ochorením obličiek aj metabolický význam.</p>
 
@@ -101,7 +101,7 @@ $articles[] = [
 
 <h2>Edukácia má byť individuálna</h2>
 
-<p>Pacient s ochorením obličiek už často čelí mnohým obmedzeniam. Musí sledovať tekutiny, fosfor, sodík, bielkoviny, lieky, dialyzačný režim, laboratórne výsledky a ďalšie odporúčania. Ak k tomu dostane ešte neprehľadný zoznam „zakázaných“ potravín bez vysvetlenia, výsledkom nemusí byť lepšia adherencia. Môže nastať presný opak.</p>
+<p>Pacient s ochorením obličiek už často čelí mnohým obmedzeniam. Musí sledovať tekutiny, fosfor, sodík, bielkoviny, lieky, dialyzačný režim, laboratórne výsledky a ďalšie odporúčania. Ak k tomu dostane ešte neprehľadný zoznam „zakázaných“ potravín bez vysvetlenia, výsledkom nemusí byť lepšia adherencia, ale presný opak.</p>
 
 <p>Lepšia edukácia znamená vysvetliť:</p>
 
@@ -121,9 +121,9 @@ $articles[] = [
 
 <p>Prístup „radšej všetko zakážme“ je zdanlivo bezpečný, ale nie vždy je najlepší. Môže viesť k strachu z jedla, horšiemu príjmu živín, frustrácii a nízkej spolupráci. Pri stabilizovaných pacientoch je často vhodnejšia cielená edukácia, práca s porciou, úprava prípravy jedla a riešenie pridružených problémov, najmä zápchy.</p>
 
-<p>Samozrejme, pri závažnej alebo opakovanej hyperkaliémii treba postupovať striktnejšie a individuálne. Diétne odporúčania musia rešpektovať laboratórne hodnoty, EKG nález, liečbu, reziduálnu funkciu obličiek, dialyzačný režim a celkový stav pacienta.</p>
+<p>Pri závažnej alebo opakovanej hyperkaliémii treba postupovať striktnejšie a individuálne. Diétne odporúčania musia rešpektovať laboratórne hodnoty, EKG nález, liečbu, reziduálnu funkciu obličiek, dialyzačný režim a celkový stav pacienta.</p>
 
-<p>Najlepšie odporúčanie nie je také, ktoré pacienta vystraší. Najlepšie odporúčanie je také, ktoré dokáže dlhodobo používať v bežnom živote.</p>
+<p>Najlepšie odporúčanie nie je to, ktoré pacienta vystraší, ale to, ktoré dokáže dlhodobo používať v bežnom živote.</p>
 
 <hr>
 
