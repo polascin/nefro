@@ -32,13 +32,13 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Štúdia fázy 3 VICTORY (n = 238): vysokodávkovaný IV vitamín C pri ťažkých popáleninách neprináša benefit a zvyšuje 28-dňovú aj nemocničnú mortalitu — s dôležitými nefrologickými signálmi (AKI, vyššia potreba KRT).',
+    'excerpt'      => 'Štúdia fázy 3 VICTORY (n = 238): vysokodávkovaný IV vitamín C pri ťažkých popáleninách neprináša benefit a zvyšuje 28-dňovú aj nemocničnú mortalitu. Pre nefrológa sú dôležité aj signály AKI a vyššej potreby KRT.',
     'content'      => <<<'HTML'
-<figure><a href="img/victory-vitamin-c-tazke-popaleniny-nefrologicke-signaly.webp" rel="noopener noreferrer" target="_blank"><img src="img/victory-vitamin-c-tazke-popaleniny-nefrologicke-signaly.webp" alt="Infúzia klesajúca k popálenému tkanivu, pričom v obličke pod ňou vznikajú kryštalické usadeniny" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Očakávaný prínos sa nedostavil — a pre obličku pribudlo riziko, s ktorým treba počítať.</figcaption></figure>
+<figure><a href="img/victory-vitamin-c-tazke-popaleniny-nefrologicke-signaly.webp" rel="noopener noreferrer" target="_blank"><img src="img/victory-vitamin-c-tazke-popaleniny-nefrologicke-signaly.webp" alt="Infúzia klesajúca k popálenému tkanivu, pričom v obličke pod ňou vznikajú kryštalické usadeniny" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Očakávaný prínos sa nedostavil a pre obličku pribudlo riziko, s ktorým treba počítať.</figcaption></figure>
 
-<p>Vysokodávkovaný intravenózny vitamín C (HD IV vitamín C) sa v intenzívnej medicíne a v popáleninovej starostlivosti skúmal ako potenciálny modulátor zápalovej odpovede a oxidačného stresu. V praxi však existuje aj „tiché“ nefrologické riziko: vitamín C sa metabolizuje na oxalát, takže pri zhoršenej renálnej funkcii, rizikovej hydratácii a u kriticky chorých pacientov sa tradične diskutovala možnosť zvýšeného výskytu oxalátovej nefropatie a zhoršenia akútneho poškodenia obličiek (AKI). Doteraz slabé alebo nekonzistentné dôkazy vyústili do veľkej randomizovanej štúdie VICTORY.</p>
+<p>Vysokodávkovaný intravenózny vitamín C (HD IV vitamín C) sa v intenzívnej medicíne a v popáleninovej starostlivosti skúmal ako potenciálny modulátor zápalovej odpovede a oxidačného stresu. V praxi však existuje aj „tiché“ nefrologické riziko: vitamín C sa metabolizuje na oxalát, takže pri zhoršenej renálnej funkcii, rizikovej hydratácii a u kriticky chorých pacientov sa tradične diskutovala možnosť zvýšeného výskytu oxalátovej nefropatie a zhoršenia akútneho poškodenia obličiek (AKI). Doterajšie dôkazy boli slabé alebo nekonzistentné, preto otázku mala zodpovedať veľká randomizovaná štúdia VICTORY.</p>
 
-<h2>Kto sú autori zdrojovej štúdie?</h2>
+<h2>Autori zdrojovej štúdie</h2>
 
 <p>Štúdia VICTORY bola publikovaná v časopise <em>JAMA</em> (2026). Medzi hlavných autorov patria <strong>Christian Stoppe, Aileen Hill, Leopoldo C. Cancio, Andrew G. Day, Kaitlin A. Pruskowski</strong> a <strong>Alexis F. Turgeon</strong>; posledným (senior) autorom je <strong>Daren K. Heyland</strong>. Štúdia je registrovaná v registri ClinicalTrials.gov pod identifikátorom <a href="https://clinicaltrials.gov/study/NCT04138394" target="_blank" rel="noopener noreferrer">NCT04138394</a>.</p>
 
@@ -61,7 +61,7 @@ $articles[] = [
   <li><strong>placebo</strong>: zodpovedajúce placebo.</li>
 </ul>
 
-<p>Celkovo bolo zaradených <strong>238 pacientov</strong> (priemerný vek 48,9 roka; 79 % mužov; priemerný rozsah popálenín 37,0 % povrchu tela) — <strong>120</strong> do ramena s vitamínom C a <strong>118</strong> do ramena s placebom.</p>
+<p>Celkovo bolo zaradených <strong>238 pacientov</strong> (priemerný vek 48,9 roka; 79 % mužov; priemerný rozsah popálenín 37,0 % povrchu tela), z toho <strong>120</strong> do ramena s vitamínom C a <strong>118</strong> do ramena s placebom.</p>
 
 <p><strong>Primárny cieľ</strong> bol kompozitný:</p>
 
@@ -78,7 +78,7 @@ $articles[] = [
 
 <h2>Výsledky: primárny cieľ sa nezlepšil, mortalita bola vyššia</h2>
 
-<p><strong>Primárny kompozitný výsledok</strong> sa nepotvrdil ako prospešný: vyskytol sa u <strong>49 pacientov (40,8 %)</strong> v ramene s vitamínom C oproti <strong>35 pacientom (29,7 %)</strong> v ramene s placebom — upravený rizikový pomer (RR) <strong>1,28</strong> (95 % CI <strong>0,99 – 1,65</strong>; p = <strong>0,06</strong>). Štúdia tým <strong>prekročila vopred stanovený prah futility/škodlivosti</strong> a po prvej priebežnej (interim) analýze sa <strong>predčasne zastavila</strong>. Predčasné zastavenie znižuje presnosť odhadov, no v tomto prípade bol signál škodlivosti už klinicky relevantný.</p>
+<p><strong>Primárny kompozitný výsledok</strong> sa nepotvrdil ako prospešný: vyskytol sa u <strong>49 pacientov (40,8 %)</strong> v ramene s vitamínom C oproti <strong>35 pacientom (29,7 %)</strong> v ramene s placebom; upravený rizikový pomer (RR) <strong>1,28</strong> (95 % CI <strong>0,99 – 1,65</strong>; p = <strong>0,06</strong>). Štúdia tým <strong>prekročila vopred stanovený prah futility/škodlivosti</strong> a po prvej priebežnej (interim) analýze sa <strong>predčasne zastavila</strong>. Predčasné zastavenie znižuje presnosť odhadov, no v tomto prípade bol signál škodlivosti už klinicky relevantný.</p>
 
 <p><strong>Čas do prepustenia z nemocnice živého do 90 dní</strong> sa nezlepšil (upravený subdistribučný pomer rizík <strong>0,85</strong>; 95 % CI <strong>0,62 – 1,16</strong>; p = <strong>0,31</strong>).</p>
 
@@ -109,7 +109,7 @@ $articles[] = [
   <li><strong>hypoglykémia</strong>: <strong>6</strong> vs <strong>3</strong> pacienti.</li>
 </ul>
 
-<p>Dôležité je, že výskyt niektorých špecifických komplikácií bol v oboch ramenách bez signifikantného rozdielu:</p>
+<p>Niektoré špecifické komplikácie sa medzi ramenami signifikantne nelíšili:</p>
 
 <ul>
   <li><strong>nové oxalátové obličkové kamene</strong>: neboli hlásené,</li>
@@ -118,14 +118,14 @@ $articles[] = [
   <li><strong>refraktérna hypoglykémia</strong>: nebola hlásená.</li>
 </ul>
 
-<p>Štúdia však zároveň uvádza, že <strong>nebola dimenzovaná na zachytenie zriedkavých nežiaducich udalostí</strong> (riziká spojené s oxalátovou nefropatiou sa typicky považujú za „nízkofrekvenčné, ale s vysokou závažnosťou“ — <em>low frequency, high concern</em>), takže „negatívny“ záchyt v rámci štúdie automaticky neznamená absenciu rizika.</p>
+<p>Štúdia však zároveň uvádza, že <strong>nebola dimenzovaná na zachytenie zriedkavých nežiaducich udalostí</strong> (riziká spojené s oxalátovou nefropatiou sa typicky považujú za „nízkofrekvenčné, ale s vysokou závažnosťou“, <em>low frequency, high concern</em>), takže „negatívny“ záchyt v rámci štúdie automaticky neznamená absenciu rizika.</p>
 
 <h2>Klinické implikácie pre nefrológiu v popáleninovej starostlivosti</h2>
 
 <p>Na základe týchto výsledkov je ťažké obhájiť rutinné podávanie vysokodávkovaného intravenózneho vitamínu C pri ťažkých popáleninách mimo kontextu klinického skúšania. Prakticky to znamená:</p>
 
 <ol>
-  <li><strong>V nefrologickej rovine</strong> uprednostniť stratégie s preukázaným vplyvom na perfúziu, prevenciu AKI, včasnú identifikáciu obličkového stresu a racionálne načasovanie KRT — a neinvestovať do intervencie so signálom škodlivosti.</li>
+  <li><strong>V nefrologickej rovine</strong> uprednostniť stratégie s preukázaným vplyvom na perfúziu, prevenciu AKI, včasnú identifikáciu obličkového stresu a racionálne načasovanie KRT, nie investovať do intervencie so signálom škodlivosti.</li>
   <li>Ak by sa vitamín C aj napriek tomu používal (napr. lokálne protokoly alebo výnimky), je nefrologicky rozumné dôsledne monitorovať:
     <ul>
       <li>trend kreatinínu, diurézu a potrebu KRT,</li>

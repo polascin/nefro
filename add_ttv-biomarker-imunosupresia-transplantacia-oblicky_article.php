@@ -31,22 +31,22 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Randomizovaná štúdia fázy II (TTVguideIT) testovala, či možno bezpečne individualizovať imunosupresiu po transplantácii obličky pomocou biomarkera Torque teno vírus (TTV). U stabilných nízkorizikových príjemcov nebolo TTV-riadené dávkovanie takrolimu horšie než štandard — a viedlo k nižším dávkam.',
+    'excerpt'      => 'Randomizovaná štúdia fázy II (TTVguideIT) testovala, či možno bezpečne individualizovať imunosupresiu po transplantácii obličky pomocou biomarkera Torque teno vírus (TTV). U stabilných nízkorizikových príjemcov nebolo TTV-riadené dávkovanie takrolimu horšie než štandard a viedlo k nižším dávkam.',
     'content'      => <<<'HTML'
-<figure><a href="img/ttv-biomarker-imunosupresia-transplantacia-oblicky.webp" rel="noopener noreferrer" target="_blank"><img src="img/ttv-biomarker-imunosupresia-transplantacia-oblicky.webp" alt="Svetelný ciferník z vírusových častíc spojený s imunitným štítom nad transplantovanou obličkou" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Množstvo neškodného vírusu prezrádza, ako hlboko je imunita potlačená — a podľa toho sa dá dávka upraviť.</figcaption></figure>
+<figure><a href="img/ttv-biomarker-imunosupresia-transplantacia-oblicky.webp" rel="noopener noreferrer" target="_blank"><img src="img/ttv-biomarker-imunosupresia-transplantacia-oblicky.webp" alt="Svetelný ciferník z vírusových častíc spojený s imunitným štítom nad transplantovanou obličkou" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Množstvo neškodného vírusu prezrádza, ako hlboko je imunita potlačená, a podľa toho sa dá upraviť dávka.</figcaption></figure>
 
-<p>Lekárska univerzita vo Viedni (MedUni Wien) informuje o klinickom skúšaní, v ktorom medzinárodný tím otestoval, či možno bezpečne individualizovať imunosupresiu po transplantácii obličky pomocou biomarkera <strong>Torque teno vírus (TTV)</strong>.</p>
+<p>Lekárska univerzita vo Viedni (MedUni Wien) informovala o klinickom skúšaní, v ktorom medzinárodný tím overoval, či možno bezpečne individualizovať imunosupresiu po transplantácii obličky pomocou biomarkera <strong>Torque teno vírus (TTV)</strong>.</p>
 
-<p>Cieľ je praktický: pri klasickom prístupe sa dávka imunosupresie riadi najmä <strong>cieľovými hladinami liekov v krvi</strong> (napr. takrolimu). Tieto hodnoty však nemusia presne odrážať, ako silno je daný pacient imunologicky tlmený. TTV má slúžiť ako nepriamy ukazovateľ aktivity imunitného systému.</p>
+<p>Otázka je praktická: pri klasickom prístupe sa dávka imunosupresie riadi najmä <strong>cieľovými hladinami liekov v krvi</strong> (napr. takrolimu). Tieto hodnoty však nemusia presne odrážať, ako silno je daný pacient imunologicky tlmený. TTV má slúžiť ako nepriamy ukazovateľ aktivity imunitného systému.</p>
 
 <h2>Čo presne testovali</h2>
 
-<p>Išlo o <strong>randomizovanú kontrolovanú štúdiu fázy II (TTVguideIT)</strong>. Do štúdie bolo zaradených:</p>
+<p>Išlo o <strong>randomizovanú kontrolovanú štúdiu fázy II (TTVguideIT)</strong>, do ktorej zaradili:</p>
 
 <ul>
   <li><strong>260 dospelých</strong> stabilných príjemcov transplantátu,</li>
   <li>v <strong>13 akademických centrách</strong> v Európe,</li>
-  <li>pacienti boli zaradení v čase približne <strong>4 mesiace po transplantácii</strong>.</li>
+  <li>približne <strong>4 mesiace po transplantácii</strong>.</li>
 </ul>
 
 <p>Porovnávali sa dva prístupy:</p>
@@ -58,7 +58,7 @@ $articles[] = [
 
 <h2>Populácia, v ktorej výsledok platí</h2>
 
-<p>Tento prístup sa vzťahuje primárne na pacientov:</p>
+<p>Výsledky sa vzťahujú predovšetkým na pacientov:</p>
 
 <ul>
   <li><strong>stabilných</strong>,</li>
@@ -73,7 +73,7 @@ $articles[] = [
 <ul>
   <li>v skupine riadenej TTV sa tento cieľový ukazovateľ vyskytol u <strong>35 %</strong> pacientov,</li>
   <li>v kontrolnej skupine u <strong>38 %</strong> pacientov,</li>
-  <li>štúdia tým splnila cieľ <strong>noninferiority</strong> (nie horšieho výsledku) — TTV-riadené dávkovanie teda nebolo horšie než štandard.</li>
+  <li>štúdia tým splnila cieľ <strong>noninferiority</strong> (nie horšieho výsledku), TTV-riadené dávkovanie teda nebolo horšie než štandard.</li>
 </ul>
 
 <p>Výskyt rejekcií v protokolových biopsiách po 12 mesiacoch bol v oboch skupinách <strong>porovnateľný</strong>.</p>
@@ -116,7 +116,7 @@ $articles[] = [
 
 <h2>Čo zostáva nejasné</h2>
 
-<p>Štúdia sa týka konkrétneho obdobia a konkrétnej skupiny pacientov. Ďalší výskum už prebieha — vo Francúzsku pokračuje nadväzujúca (follow-up) štúdia pre pacientov <strong>od druhého roka po transplantácii</strong>, keďže prínos TTV-riadeného dávkovania v neskorších fázach treba ešte overiť.</p>
+<p>Štúdia sa týka konkrétneho obdobia a konkrétnej skupiny pacientov. Ďalší výskum už prebieha: vo Francúzsku pokračuje nadväzujúca (follow-up) štúdia pre pacientov <strong>od druhého roka po transplantácii</strong>, keďže prínos TTV-riadeného dávkovania v neskorších fázach treba ešte overiť.</p>
 
 <hr>
 

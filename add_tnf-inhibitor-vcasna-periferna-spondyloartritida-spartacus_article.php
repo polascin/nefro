@@ -44,7 +44,7 @@ $articles[] = [
 
 <p>Periférna spondyloartritída je zápalové reumatické ochorenie, pri ktorom dominujú prejavy mimo chrbtice. Typicky ide o artritídu periférnych kĺbov, entezitídu alebo daktylitídu. Pacienti môžu mať výrazne opuchnuté kĺby, bolesti úponov šliach a funkčné obmedzenie.</p>
 
-<p>Napriek tomu je dôkazová základňa pre liečbu periférnej spondyloartritídy slabšia než pri axiálnej spondyloartritíde alebo psoriatickej artritíde. Podľa investigátorov štúdie neexistuje dostatok údajov o účinnosti metotrexátu pri periférnej spondyloartritíde, hoci sa v bežnej praxi používa. Zároveň nie sú TNF inhibítory špecificky schválené pre túto diagnózu regulačnými autoritami ako FDA alebo EMA.</p>
+<p>Dôkazová základňa pre liečbu periférnej spondyloartritídy je pritom slabšia než pri axiálnej spondyloartritíde alebo psoriatickej artritíde. Podľa riešiteľov štúdie neexistuje dostatok údajov o účinnosti metotrexátu pri periférnej spondyloartritíde, hoci sa v bežnej praxi používa. Zároveň nie sú TNF inhibítory špecificky schválené pre túto diagnózu regulačnými autoritami ako FDA alebo EMA.</p>
 
 <p>Bežný postup je preto konzervatívny: najprv nesteroidové antiflogistiká, následne csDMARD, napríklad metotrexát alebo sulfasalazín, a biologická liečba sa ponecháva pre refraktérne prípady.</p>
 
@@ -110,7 +110,7 @@ $articles[] = [
 
 <h2>Metotrexát napriek tomu nie je bez významu</h2>
 
-<p>Jedným z dôležitých odkazov štúdie je, že metotrexát v periférnej spondyloartritíde zrejme „niečo robí“. Podľa investigátora Philippa Carrona je to prvý dôkaz, že metotrexát má pri tejto diagnóze účinok, čo je povzbudivé, keďže sa používa v každodennej praxi.</p>
+<p>Jedným z dôležitých odkazov štúdie je, že metotrexát v periférnej spondyloartritíde zrejme „niečo robí“. Podľa riešiteľa Philippa Carrona je to prvý dôkaz, že metotrexát má pri tejto diagnóze účinok, čo je povzbudivé, keďže sa používa v každodennej praxi.</p>
 
 <p>To je prakticky dôležité. Výsledky neznamenajú, že metotrexát treba opustiť. Skôr ukazujú, že ak je cieľom rýchla a hlboká remisia pri včasnej aktívnej periférnej spondyloartritíde, TNF inhibítor môže byť účinnejšou indukčnou stratégiou.</p>
 
@@ -134,7 +134,7 @@ $articles[] = [
 
 <p>To je dôležité najmä preto, že periférna spondyloartritída môže viesť k chronickej bolesti, poškodeniu kĺbov, strate funkcie a zhoršeniu kvality života.</p>
 
-<p>Zároveň však treba držať interpretáciu pri zemi. SPARTACUS ukazuje superioritu okamžitého TNF inhibítora oproti metotrexátovej step-up stratégii v 24. týždni, ale neodpovedá ešte definitívne na otázku dlhodobej remisie bez liekov, rádiografickej progresie ani optimálnej ekonomickej stratégie.</p>
+<p>Výsledky však treba čítať triezvo. SPARTACUS ukazuje superioritu okamžitého TNF inhibítora oproti postupnej (step-up) stratégii s metotrexátom v 24. týždni, ale neodpovedá ešte definitívne na otázku dlhodobej remisie bez liekov, rádiografickej progresie ani optimálnej ekonomickej stratégie.</p>
 
 <h2>Praktický záver</h2>
 
@@ -148,7 +148,7 @@ $articles[] = [
   <li>metotrexát pravdepodobne nie je neúčinný, ale jeho efekt bol v tejto štúdii slabší než pri golimumabe.</li>
 </ul>
 
-<p>Pre klinickú prax to otvára otázku, či by časť pacientov s včasnou, aktívnou a klinicky výraznou periférnou spondyloartritídou nemala byť liečená biologicky skôr, než ako to umožňuje tradičný postupný model.</p>
+<p>Pre klinickú prax to otvára otázku, či by časť pacientov s včasnou, aktívnou a klinicky výraznou periférnou spondyloartritídou nemala dostať biologickú liečbu skôr, než to umožňuje tradičný postupný model.</p>
 
 <hr>
 

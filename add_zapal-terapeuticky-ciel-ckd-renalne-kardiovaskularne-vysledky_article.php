@@ -25,7 +25,7 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Zápal pri CKD súvisí s renálnym aj kardiovaskulárnym rizikom, no samotné zníženie CRP nie je liečebným cieľom. Čo ukázali CANTOS, ZEUS, BEACON, MOSAIC a ďalšie štúdie?',
+    'excerpt'      => 'Zápal pri CKD súvisí s renálnym aj kardiovaskulárnym rizikom, no samotné zníženie CRP nie je liečebným cieľom. Prehľad výsledkov štúdií CANTOS, ZEUS, BEACON, MOSAIC a ďalších.',
     'content'      => <<<'HTML'
 <figure><a href="img/zapal-terapeuticky-ciel-ckd-renalne-kardiovaskularne-vysledky.webp" rel="noopener noreferrer" target="_blank"><img src="img/zapal-terapeuticky-ciel-ckd-renalne-kardiovaskularne-vysledky.webp" alt="Tlejúci zápal prestupujúci obličkovým tkanivom, do ktorého mieri chladný modrý lúč a uhlíky v jeho dosahu hasnú" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Zápal sa pri CKD posúva z roly ukazovateľa rizika do roly cieľa, na ktorý sa dá zamieriť.</figcaption></figure>
 
@@ -154,7 +154,7 @@ $articles[] = [
 
 <h2>Priame protizápalové stratégie: prehľad výsledkov</h2>
 
-<p>Nasledujúca tabuľka zhŕňa to, čo sa v tejto oblasti skutočne odskúšalo — a s akým výsledkom:</p>
+<p>Nasledujúca tabuľka zhŕňa, ktoré priame protizápalové stratégie sa v štúdiách skúšali a s akým výsledkom:</p>
 
 <div class="table-responsive" role="region" aria-label="Prehľad kľúčových štúdií priamej protizápalovej liečby" tabindex="0">
   <table>
@@ -213,7 +213,7 @@ $articles[] = [
 
 <p>Dva detaily robia z tejto štúdie dôležitú oporu zápalovej hypotézy aterotrombózy. Po prvé, kanakinumab <strong>neznížil koncentrácie lipidov</strong>, takže výsledok podporuje prínos cieleného ovplyvnenia zápalovej dráhy nezávisle od znižovania lipidov. Po druhé, hsCRP klesol dávkovo závisle o 26, 37 a 41 percentuálnych bodov oproti placebu, čo dokladá zásah do cieľovej dráhy.</p>
 
-<p>Cena však bola reálna: vyšší výskyt fatálnych infekcií a <strong>žiadny rozdiel v celkovej mortalite</strong> (HR 0,94; 95 % IS 0,83–1,06). CANTOS teda potvrdila, že zápal je kauzálne ovplyvniteľnou súčasťou reziduálneho kardiovaskulárneho rizika — nepreukázala však, že blokáda IL-1β je nefroprotektívnou liečbou CKD. Renálne analýzy boli sekundárne a kanakinumab takúto indikáciu nemá.</p>
+<p>Cena však bola reálna: vyšší výskyt fatálnych infekcií a <strong>žiadny rozdiel v celkovej mortalite</strong> (HR 0,94; 95 % IS 0,83–1,06). CANTOS teda potvrdila, že zápal je kauzálne ovplyvniteľnou súčasťou reziduálneho kardiovaskulárneho rizika, nepreukázala však, že blokáda IL-1β je nefroprotektívnou liečbou CKD. Renálne analýzy boli sekundárne a kanakinumab takúto indikáciu nemá.</p>
 
 <h3>Inhibícia interleukínu 6</h3>
 
@@ -221,7 +221,7 @@ $articles[] = [
 
 <p>Monoklonálne protilátky proti IL-6 alebo jeho receptoru dokážu výrazne znížiť hsCRP. To však ešte nedokazuje priaznivý účinok na klinické príhody. Navyše, blokáda dráhy IL-6 môže tlmiť tvorbu CRP aj počas infekcie, takže nízke CRP pri takejto liečbe nemôže samo osebe vylúčiť závažnú infekciu.</p>
 
-<p>Štúdia ZEUS (NCT05021835) zaradila 6 376 pacientov s aterosklerotickým kardiovaskulárnym ochorením, CKD a hsCRP najmenej 2 mg/l. Účastníci dostávali ziltivekimab 15 mg podkožne raz mesačne alebo placebo. Priemerný vek bol 69,5 roka, priemerná eGFR 44,5 ml/min/1,73 m², medián hsCRP 4,5 mg/l; diabetes malo 65,7 % a srdcové zlyhávanie 41,3 % účastníkov. Primárnym ukazovateľom bol trojzložkový MACE — kardiovaskulárne úmrtie, nefatálny infarkt myokardu alebo nefatálna cievna mozgová príhoda. Vopred určený sekundárny renálny ukazovateľ zahŕňal pokles eGFR o viac než 40 %, eGFR pod 15 ml/min/1,73 m², dialýzu, transplantáciu alebo úmrtie z renálnej či kardiovaskulárnej príčiny.</p>
+<p>Štúdia ZEUS (NCT05021835) zaradila 6 376 pacientov s aterosklerotickým kardiovaskulárnym ochorením, CKD a hsCRP najmenej 2 mg/l. Účastníci dostávali ziltivekimab 15 mg podkožne raz mesačne alebo placebo. Priemerný vek bol 69,5 roka, priemerná eGFR 44,5 ml/min/1,73 m², medián hsCRP 4,5 mg/l; diabetes malo 65,7 % a srdcové zlyhávanie 41,3 % účastníkov. Primárnym ukazovateľom bol trojzložkový MACE – kardiovaskulárne úmrtie, nefatálny infarkt myokardu alebo nefatálna cievna mozgová príhoda. Vopred určený sekundárny renálny ukazovateľ zahŕňal pokles eGFR o viac než 40 %, eGFR pod 15 ml/min/1,73 m², dialýzu, transplantáciu alebo úmrtie z renálnej či kardiovaskulárnej príčiny.</p>
 
 <p><strong>Výsledok už poznáme aspoň na úrovni oficiálne oznámených hlavných údajov.</strong> Dňa 31. júla 2026 spoločnosť Novo Nordisk uviedla, že ziltivekimab dosiahol očakávané zníženie voľného IL-6 a hsCRP, no neznížil výskyt MACE oproti placebu: HR 0,99 (95 % IS 0,88–1,11). Celkový výskyt nežiaducich a závažných nežiaducich udalostí bol podobný, závažné infekcie však boli pri ziltivekimabe častejšie; celková mortalita sa nelíšila.</p>
 
@@ -249,7 +249,7 @@ $articles[] = [
 
 <h3>Bardoxolónmetyl a aktivácia Nrf2</h3>
 
-<p>Bardoxolón aktivuje transkripčný faktor Nrf2 a inhibuje niektoré prozápalové signálne dráhy. V skorších štúdiách zvyšoval eGFR — čo sa vtedy vykladalo ako nefroprotekcia.</p>
+<p>Bardoxolón aktivuje transkripčný faktor Nrf2 a inhibuje niektoré prozápalové signálne dráhy. V skorších štúdiách zvyšoval eGFR, čo sa vtedy vykladalo ako nefroprotekcia.</p>
 
 <p>Štúdia BEACON zaradila 2 185 pacientov s diabetom 2. typu a CKD kategórie G4 (eGFR 15–29 ml/min/1,73 m²). Bola predčasne ukončená na odporúčanie nezávislej komisie po mediáne sledovania 9 mesiacov. Primárny zložený ukazovateľ (zlyhanie obličiek alebo kardiovaskulárne úmrtie) sa vyskytol u 6 % v oboch ramenách: HR 0,98 (95 % IS 0,70–1,37; p = 0,92). Hospitalizácia pre srdcové zlyhávanie alebo úmrtie na srdcové zlyhávanie však nastali u 96 oproti 55 pacientov: <strong>HR 1,83 (95 % IS 1,32–2,55; p &lt; 0,001)</strong>.</p>
 
@@ -263,7 +263,7 @@ $articles[] = [
 
 <h2>Majú zavedené nefroprotektívne lieky protizápalové účinky?</h2>
 
-<p>Tu je pointa celého prehľadu. Zatiaľ čo priame protizápalové stratégie zlyhávali, lieky, ktoré za protizápalové vôbec nepovažujeme, prinášali jednoznačné klinické výsledky — a zápal ovplyvňujú takisto.</p>
+<p>Toto je hlavné posolstvo prehľadu. Kým priame protizápalové stratégie zlyhávali, lieky, ktoré za protizápalové vôbec nepovažujeme, priniesli jednoznačné klinické výsledky, a zápal pritom ovplyvňujú tiež.</p>
 
 <h3>Inhibítory systému renín-angiotenzín-aldosterón</h3>
 
@@ -314,7 +314,7 @@ $articles[] = [
   <li>Vyššie zápalové biomarkery sú spojené s progresiou CKD, kardiovaskulárnymi príhodami a mortalitou.</li>
   <li>Niektoré zavedené nefroprotektívne lieky majú protizápalové vlastnosti.</li>
   <li>Cielená blokáda zápalových dráh dokáže výrazne meniť zápalové biomarkery.</li>
-  <li>Blokáda IL-1β znižuje výskyt aterosklerotických príhod u pacientov po infarkte so zvýšeným hsCRP — za cenu vyššieho rizika fatálnych infekcií.</li>
+  <li>Blokáda IL-1β znižuje výskyt aterosklerotických príhod u pacientov po infarkte so zvýšeným hsCRP – za cenu vyššieho rizika fatálnych infekcií.</li>
   <li>V štúdii ZEUS blokáda IL-6 znížila voľný IL-6 a hsCRP, ale podľa oznámených hlavných výsledkov neznížila MACE.</li>
 </ul>
 
@@ -371,10 +371,10 @@ $articles[] = [
 <h2>Súvisiace články</h2>
 
 <ul>
-  <li><a href="article.php?slug=pentoxifylin-diabeticka-choroba-obliciek-mini-review">Pentoxifylín pri diabetickej chorobe obličiek</a> — podrobnejšie k dôkazovej báze.</li>
-  <li><a href="article.php?slug=zapalove-markery-crp-esr-pv">Zápalové markery: CRP, ESR a plazmatická viskozita</a> — čo v skutočnosti merajú.</li>
-  <li><a href="article.php?slug=kombinacna-liecba-ckd-styri-piliere-hranice-dokazov">Štyri piliere liečby CKD a hranice dôkazov</a> — kde stoja etablované liečivá.</li>
-  <li><a href="article.php?slug=finerenon-nefroprotekcia-ckd-3-4-bez-ohladu-na-diabetes">Finerenón a nefroprotekcia pri CKD G3–G4</a> — antifibrotický a protizápalový rozmer blokády MR.</li>
+  <li><a href="article.php?slug=pentoxifylin-diabeticka-choroba-obliciek-mini-review">Pentoxifylín pri diabetickej chorobe obličiek</a> – podrobnejšie k dôkazovej báze.</li>
+  <li><a href="article.php?slug=zapalove-markery-crp-esr-pv">Zápalové markery: CRP, ESR a plazmatická viskozita</a> – čo v skutočnosti merajú.</li>
+  <li><a href="article.php?slug=kombinacna-liecba-ckd-styri-piliere-hranice-dokazov">Štyri piliere liečby CKD a hranice dôkazov</a> – kde stoja etablované liečivá.</li>
+  <li><a href="article.php?slug=finerenon-nefroprotekcia-ckd-3-4-bez-ohladu-na-diabetes">Finerenón a nefroprotekcia pri CKD G3–G4</a> – antifibrotický a protizápalový rozmer blokády MR.</li>
 </ul>
 
 <hr>

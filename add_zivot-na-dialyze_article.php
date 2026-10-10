@@ -38,43 +38,42 @@ $articles[] = [
     'excerpt'      => 'Ako vyzerá bežný týždeň na dialýze, na čo myslieť pri strave a pitnom režime a ako sa dá popri liečbe pracovať aj cestovať.',
     'content'      => <<<'HTML'
 <figure>
-  <img src="img/zivot-na-dialyze.webp" alt="Infografika: život na dialýze — bežný týždeň, strava a pitný režim, práca, cestovanie, psychika a praktické tipy" loading="lazy" decoding="async">
+  <img src="img/zivot-na-dialyze.webp" alt="Infografika: život na dialýze – bežný týždeň, strava a pitný režim, práca, cestovanie, psychika a praktické tipy" loading="lazy" decoding="async">
 </figure>
 
 <p>Dialýza je síce pravidelná súčasť života, no neznamená, že sa musíte vzdať toho, čo máte radi.
-Mnohí pacienti popri nej pracujú, cestujú a žijú aktívne. V tomto článku zhrnieme, ako taký život
-vyzerá a na čo myslieť.</p>
+Mnohí pacienti popri nej pracujú, cestujú a žijú aktívne.</p>
 
 <h2>Bežný týždeň na dialýze</h2>
 <p>Pri <strong>hemodialýze</strong> chodíte do strediska spravidla <strong>trikrát týždenne</strong>,
 jedno sedenie trvá približne 4–5 hodín. Pri <strong>peritoneálnej dialýze</strong> prebieha liečba
-doma — buď ručnými výmenami počas dňa, alebo automaticky v noci. Časom sa z toho stane rutina,
+doma, buď ručnými výmenami počas dňa, alebo automaticky v noci. Časom sa z toho stane rutina,
 ktorú si zladíte s prácou aj rodinou.</p>
 
 <h2>Strava a pitný režim</h2>
 <p>Strava je dôležitou súčasťou liečby. Podľa typu dialýzy a vašich výsledkov vám lekár alebo
-nutričný špecialista poradí, na čo si dať pozor — najčastejšie ide o príjem
+nutričný špecialista poradí, na čo si dať pozor; najčastejšie ide o príjem
 <strong>tekutín, soli, draslíka a fosforu</strong>. Odporúčania sú individuálne, preto sa riaďte
 pokynmi svojho tímu.</p>
 
 <h2>Práca, cestovanie a voľný čas</h2>
 <ul>
-  <li><strong>Práca</strong> — mnohí pacienti zostávajú zamestnaní; rozvrh dialýz sa dá prispôsobiť.</li>
-  <li><strong>Cestovanie</strong> — dovolenka je možná; dialýzu absolvujete v cieľovom mieste
-      ako <strong>hosťovskú (dovolenkovú) dialýzu</strong> (vopred dohodnutú).</li>
-  <li><strong>Pohyb a záľuby</strong> — primeraná aktivita prospieva; o vhodnej miere sa poraďte
+  <li><strong>Práca</strong> – mnohí pacienti zostávajú zamestnaní; rozvrh dialýz sa dá prispôsobiť.</li>
+  <li><strong>Cestovanie</strong> – dovolenka je možná; dialýzu absolvujete v cieľovom mieste
+      ako vopred dohodnutú <strong>hosťovskú (dovolenkovú) dialýzu</strong>.</li>
+  <li><strong>Pohyb a záľuby</strong> – primeraná aktivita prospieva; o vhodnej miere sa poraďte
       s lekárom.</li>
 </ul>
 
 <h2>Psychika a podpora</h2>
-<p>Je úplne normálne prežívať obavy či únavu. Pomáha hovoriť o tom — s rodinou, s personálom
+<p>Je úplne normálne prežívať obavy či únavu. Pomáha o tom hovoriť s rodinou, s personálom
 strediska aj s ostatnými pacientmi. Dobrá podpora robí liečbu znesiteľnejšou.</p>
 
 <h2>Praktické tipy</h2>
 <ul>
   <li>Veďte si zoznam liekov a noste ho so sebou.</li>
   <li>Dodržiavajte termíny dialýz a kontrol.</li>
-  <li>Pýtajte sa — personál vám rád pomôže.</li>
+  <li>Pýtajte sa, personál vám rád pomôže.</li>
 </ul>
 
 <h2>Sme tu pre vás</h2>

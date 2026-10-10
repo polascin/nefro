@@ -86,7 +86,7 @@ $articles[] = [
 
 <p>Pri kohorte CLSA sa v dostupných sekundárnych zdrojoch objavujú <strong>dve rôzne hodnoty</strong>. Tlačová správa ESC uvádza „o 57 % vyššie riziko“, zatiaľ čo agentúrne spracovanie abstraktu (HealthDay) uvádza <strong>upravený HR 1,47</strong>, teda o 47 %. Pri kohorte EPIC-Norfolk sa obe hodnoty zhodujú (HR 1,18; teda o 18 %).</p>
 
-<p>Bez plného textu abstraktu alebo recenzovanej publikácie nie je možné rozhodnúť, ktorá hodnota pre kohortu CLSA je správna. Je pravdepodobné, že ide o prenos čísla 1,57 z práce z roku 2024. Do času, kým bude práca publikovaná v plnom znení, je preto vecne správne uvádzať <strong>rádovo 45 – 60 % relatívne zvýšenie v kohorte CLSA</strong> a výslovne označiť tento údaj za predbežný.</p>
+<p>Bez plného textu abstraktu alebo recenzovanej publikácie nemožno rozhodnúť, ktorá hodnota pre kohortu CLSA je správna. Je pravdepodobné, že ide o prenos čísla 1,57 z práce z roku 2024. Do času, kým bude práca publikovaná v plnom znení, je preto vecne správne uvádzať <strong>rádovo 45 – 60 % relatívne zvýšenie v kohorte CLSA</strong> a výslovne označiť tento údaj za predbežný.</p>
 
 <p>Na doplnenie kontextu: v kohorte CLSA bolo zaznamenaných 2 950 udalostí MACE, v kohorte EPIC-Norfolk 5 670. Kompozitný ukazovateľ MACE bol definovaný ako <strong>úmrtie, infarkt myokardu alebo cievna mozgová príhoda</strong>. Zahrnutie celkovej mortality do kompozitu je metodicky podstatné – časť signálu môže pochádzať z nekardiovaskulárnych úmrtí.</p>
 
@@ -124,7 +124,7 @@ $articles[] = [
 
 <h2>Skutočná nefrologická súvislosť: oxalátová nefropatia</h2>
 
-<p>Býva zvykom uvádzať, že xylitol nemá priamu nefrologickú relevanciu a že s obličkami súvisí len nepriamo, cez kardiovaskulárne riziko. To nie je presné. Xylitol má <strong>dobre zdokumentovanú priamu renálnu toxicitu</strong> – nie však pri bežnom perorálnom príjme, ale pri <strong>parenterálnom podaní</strong>.</p>
+<p>Často sa uvádza, že xylitol nemá priamu nefrologickú relevanciu a že s obličkami súvisí len nepriamo, cez kardiovaskulárne riziko. To nie je presné. Xylitol má <strong>dobre zdokumentovanú priamu renálnu toxicitu</strong> – nie však pri bežnom perorálnom príjme, ale pri <strong>parenterálnom podaní</strong>.</p>
 
 <p>Xylitol sa v minulosti používal ako náhrada glukózy v parenterálnej výžive. Jeho metabolizmus vedie k tvorbe <strong>oxalátu</strong> a pri vyšších dávkach k sekundárnej oxalóze s ukladaním kryštálov oxalátu vápenatého v obličkových tubuloch:</p>
 

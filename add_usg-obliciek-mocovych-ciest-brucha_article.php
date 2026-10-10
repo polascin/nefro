@@ -36,15 +36,15 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Ultrazvuk je rýchle a nebolestivé vyšetrenie. Poradíme, ako prebieha a ako sa naň pripraviť — kedy treba prísť nalačno a kedy s plným močovým mechúrom.',
+    'excerpt'      => 'Ultrazvuk je rýchle a nebolestivé vyšetrenie. Poradíme, ako prebieha a ako sa naň pripraviť – kedy treba prísť nalačno a kedy s plným močovým mechúrom.',
     'content'      => <<<'HTML'
 <figure>
   <img src="img/usg-obliciek-mocovych-ciest-brucha.webp" alt="Infografika: USG vyšetrenie obličiek, močových ciest a brucha a príprava naň" loading="lazy" decoding="async">
 </figure>
 
 <p>Ultrazvuk (USG) je bežné, rýchle a <strong>nebolestivé</strong> vyšetrenie bez žiarenia.
-V nefrológii pomáha posúdiť obličky, močové cesty aj orgány brucha. V tomto článku vysvetlíme,
-ako prebieha a ako sa naň pripraviť — príprava sa totiž líši podľa toho, čo sa vyšetruje.</p>
+V nefrológii pomáha posúdiť obličky, močové cesty aj orgány brucha. Vysvetlíme,
+ako prebieha a ako sa naň pripraviť – príprava sa totiž líši podľa toho, čo sa vyšetruje.</p>
 
 <h2>Čo je ultrazvuk a prečo sa robí</h2>
 <p>Prístroj vysiela neškodné zvukové vlny a z ich odrazu vytvára obraz vnútorných orgánov na
@@ -61,22 +61,22 @@ ciest, stav močového mechúra či orgánov brucha (pečeň, žlčník, slezina
 </ol>
 
 <h2>Ako sa pripraviť</h2>
-<p>Príprava závisí od toho, čo sa vyšetruje — riaďte sa pokynmi pri objednaní. Vo všeobecnosti:</p>
+<p>Príprava závisí od toho, čo sa vyšetruje – riaďte sa pokynmi pri objednaní. Vo všeobecnosti:</p>
 <ul>
-  <li><strong>USG brucha</strong> — príďte <strong>nalačno</strong> (zvyčajne nejedzte približne
+  <li><strong>USG brucha</strong> – príďte <strong>nalačno</strong> (zvyčajne nejedzte približne
       6 hodín pred vyšetrením), aby črevá neboli plné plynu a obraz bol jasný. Vodu si v malom
       množstve spravidla vypiť môžete; lieky berte podľa pokynov lekára.</li>
-  <li><strong>USG močových ciest a močového mechúra</strong> — naopak je potrebný
+  <li><strong>USG močových ciest a močového mechúra</strong> – naopak je potrebný
       <strong>plný močový mechúr</strong>. Pred vyšetrením vypite väčšie množstvo vody (napr. 0,5–1 l)
       a <strong>nemočte</strong>, aby bol mechúr naplnený.</li>
-  <li><strong>USG obličiek</strong> — často je vhodné prísť nalačno; samotné obličky bývajú dobre
+  <li><strong>USG obličiek</strong> – často je vhodné prísť nalačno; samotné obličky bývajú dobre
       zobraziteľné aj bez náročnej prípravy.</li>
 </ul>
-<p>So sebou si vezmite <strong>predošlé nálezy</strong> a výsledky, ak ich máte — pomôžu pri
+<p>So sebou si vezmite <strong>predošlé nálezy</strong> a výsledky, ak ich máte – pomôžu pri
 porovnaní.</p>
 
 <h2>Čo vyšetrenie ukáže (a čo nie)</h2>
-<p>Ultrazvuk dobre zobrazí štruktúru orgánov a mnohé zmeny, no nie je univerzálny — niekedy lekár
+<p>Ultrazvuk dobre zobrazí štruktúru orgánov a mnohé zmeny, no nie je univerzálny – niekedy lekár
 doplní ďalšie vyšetrenia. Výsledok s vami preberie ošetrujúci lekár v kontexte vašich ostatných
 nálezov.</p>
 

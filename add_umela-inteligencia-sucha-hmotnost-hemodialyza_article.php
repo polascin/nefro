@@ -35,17 +35,17 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Retrospektívna štúdia PLOS One ukazuje, že strojové učenie môže doplniť bioimpedančný odhad suchej hmotnosti, najmä pri menšom rozdiele medzi technickým a klinickým hodnotením.',
     'content'      => <<<'HTML'
-<figure><a href="img/umela-inteligencia-sucha-hmotnost-hemodialyza.webp" rel="noopener noreferrer" target="_blank"><img src="img/umela-inteligencia-sucha-hmotnost-hemodialyza.webp" alt="Telo pretkané jemnou výpočtovou mriežkou a jedna jasnejšia vodorovná čiara označujúca hľadanú hladinu tekutín" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Algoritmus hľadá jedinú správnu hladinu — bod, kde ešte nie je preťaženie a už nie je vysušenie.</figcaption></figure>
+<figure><a href="img/umela-inteligencia-sucha-hmotnost-hemodialyza.webp" rel="noopener noreferrer" target="_blank"><img src="img/umela-inteligencia-sucha-hmotnost-hemodialyza.webp" alt="Telo pretkané jemnou výpočtovou mriežkou a jedna jasnejšia vodorovná čiara označujúca hľadanú hladinu tekutín" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Algoritmus hľadá jedinú správnu hladinu – bod, kde ešte nie je preťaženie a už nie je vysušenie.</figcaption></figure>
 
 <p>Stanovenie suchej hmotnosti patrí medzi najpraktickejšie a zároveň najťažšie rozhodnutia v chronickej hemodialýze. Ak je cieľová suchá hmotnosť nadhodnotená, pacient ostáva chronicky hyperhydratovaný. Výsledkom môže byť horšia kontrola krvného tlaku, hypertrofia ľavej komory, srdcové zlyhávanie a vyššie kardiovaskulárne riziko. Ak je naopak podhodnotená, ultrafiltrácia môže viesť k hypovolémii, intradialyzačnej hypotenzii, kŕčom, závratom, orgánovej ischémii a strate zvyškovej funkcie obličiek.</p>
 
-<p>Štúdia publikovaná v časopise <em>PLOS One</em> sa zaoberala otázkou, či možno pomocou strojového učenia presnejšie odhadnúť klinicky primeranú suchú hmotnosť hemodialyzovaných pacientov. Autori vychádzali z údajov bioimpedančnej spektroskopie a z bežných klinických, laboratórnych a antropometrických parametrov. Najdôležitejším posolstvom práce nie je predstava, že algoritmus nahradí nefrológa. Skôr ukazuje, v ktorých situáciách môže byť technický odhad bioimpedanciou spoľahlivejší a kde sa začína od klinickej reality nebezpečne vzďaľovať.</p>
+<p>Štúdia publikovaná v časopise <em>PLOS One</em> sa zaoberala otázkou, či možno pomocou strojového učenia presnejšie odhadnúť klinicky primeranú suchú hmotnosť hemodialyzovaných pacientov. Autori vychádzali z údajov bioimpedančnej spektroskopie a z bežných klinických, laboratórnych a antropometrických parametrov. Práca nepredpokladá, že algoritmus nahradí nefrológa. Ukazuje skôr, v ktorých situáciách môže byť technický odhad bioimpedanciou spoľahlivejší a kde sa začína od klinickej reality nebezpečne vzďaľovať.</p>
 
 <h2>Prečo samotná bioimpedancia nestačí</h2>
 
 <p>Bioimpedančná spektroskopia (BIS) je užitočný nástroj na hodnotenie hydratácie a telesného zloženia. Meraním elektrických vlastností tkanív pomáha odhadnúť extracelulárnu vodu, intracelulárnu vodu, celkovú telesnú vodu a modelový nadbytok tekutiny. V dialyzačnej praxi tak prináša objektívnejší vstup než samotný klinický pohľad na edémy alebo jednorazové meranie krvného tlaku.</p>
 
-<p>Limitom je, že BIS nepracuje vo vákuu. Výsledok ovplyvňuje telesné zloženie, svalová hmota, tuková hmota, hypoalbuminémia, malnutrícia, periférne edémy, kardiálne ochorenie aj aktuálna tolerancia ultrafiltrácie. U časti pacientov sa preto bioimpedančne odvodená suchá hmotnosť môže líšiť od hmotnosti, ktorú pacient reálne toleruje bez prejavov hypervolémie alebo hypovolémie.</p>
+<p>BIS však nepracuje vo vákuu. Výsledok ovplyvňuje telesné zloženie, svalová hmota, tuková hmota, hypoalbuminémia, malnutrícia, periférne edémy, kardiálne ochorenie aj aktuálna tolerancia ultrafiltrácie. U časti pacientov sa preto bioimpedančne odvodená suchá hmotnosť môže líšiť od hmotnosti, ktorú pacient reálne toleruje bez prejavov hypervolémie alebo hypovolémie.</p>
 
 <p>Autori preto rozlišovali dve hodnoty:</p>
 
@@ -88,7 +88,7 @@ $articles[] = [
 
 <h2>Čo zväčšovalo rozdiel medzi BIS a klinickou realitou</h2>
 
-<p>Jedným z najcennejších prínosov štúdie je identifikácia faktorov súvisiacich s rastúcim Gap<sub>DW</sub>. So zväčšujúcim sa rozdielom klesali najmä hodnoty hemoglobínu, celkových bielkovín, sérového albumínu, kreatinínu, fosforu, draslíka a indexu tukovej hmoty. V detailnej distribučnej analýze sa uvádzal aj pokles sodíka. Naopak, s rastúcim Gap<sub>DW</sub> stúpali výška, celková telesná voda, extracelulárna voda a pomer extracelulárnej k intracelulárnej vode.</p>
+<p>Cenná je identifikácia faktorov súvisiacich s rastúcim Gap<sub>DW</sub>. So zväčšujúcim sa rozdielom klesali najmä hodnoty hemoglobínu, celkových bielkovín, sérového albumínu, kreatinínu, fosforu, draslíka a indexu tukovej hmoty. V detailnej distribučnej analýze sa uvádzal aj pokles sodíka. Naopak, s rastúcim Gap<sub>DW</sub> stúpali výška, celková telesná voda, extracelulárna voda a pomer extracelulárnej k intracelulárnej vode.</p>
 
 <p>Tieto zistenia podporujú klinicky známy obraz: najväčšie nezhody medzi technickým a klinickým odhadom suchej hmotnosti vznikajú u pacientov s prevodnením, zmeneným telesným zložením a znakmi malnutrície alebo nízkej svalovej hmoty. Nízky albumín, nižší kreatinín, nižší fosfor a nižší draslík nemusia byť samostatnými „ukazovateľmi suchej hmotnosti“, ale upozorňujú, že distribúcia tekutín a efektívny cirkulujúci objem môžu byť atypické.</p>
 
@@ -118,19 +118,19 @@ $articles[] = [
 
 <p>Štúdia je zaujímavá aj širšie: ukazuje, že algoritmy môžu odhaliť vzťahy, ktoré dávajú klinický zmysel. Extracelulárna voda, pomer ECW/ICW a malnutričné laboratórne signály sú presne tie premenné, pri ktorých nefrológ očakáva zložitejšiu interpretáciu suchej hmotnosti.</p>
 
-<p>Zároveň však práca veľmi dobre ukazuje hranice umelej inteligencie. Modely boli najmenej presné u pacientov s najväčším rozdielom medzi DW<sub>BIS</sub> a DW<sub>CP</sub> – teda práve u pacientov, ktorí sú klinicky najťažší a pri ktorých by lekár najviac potreboval pomoc. To je dôležité varovanie pred nekritickým používaním algoritmov. AI môže zlepšiť rozhodovanie v štandardnejších situáciách, ale pri komplexnom pacientovi s malnutríciou, edémami, srdcovým zlyhávaním alebo nestabilnou toleranciou ultrafiltrácie zostáva rozhodujúce klinické posúdenie.</p>
+<p>Práca však ukazuje aj hranice umelej inteligencie. Modely boli najmenej presné u pacientov s najväčším rozdielom medzi DW<sub>BIS</sub> a DW<sub>CP</sub> – teda práve u pacientov, ktorí sú klinicky najťažší a pri ktorých by lekár najviac potreboval pomoc. To je dôležité varovanie pred nekritickým používaním algoritmov. AI môže zlepšiť rozhodovanie v štandardnejších situáciách, ale pri komplexnom pacientovi s malnutríciou, edémami, srdcovým zlyhávaním alebo nestabilnou toleranciou ultrafiltrácie zostáva rozhodujúce klinické posúdenie.</p>
 
 <h2>Limity štúdie</h2>
 
 <p>Štúdia bola retrospektívna a jednocentrová, preto nemožno výsledky automaticky preniesť na všetky dialyzačné populácie. Bioimpedančné merania vykonávala jedna osoba, čo síce môže znižovať variabilitu merania, ale zároveň prináša riziko systematickej chyby. Autori nehodnotili externú validačnú kohortu a neanalyzovali výkon modelu osobitne podľa pohlavia alebo veku.</p>
 
-<p>Dôležité je aj to, že štúdia priamo nepreukázala, že algoritmická úprava suchej hmotnosti znižuje mortalitu, hospitalizácie alebo kardiovaskulárne príhody. Ide najmä o metodologický a prediktívny výskum. Na potvrdenie klinického prínosu by boli potrebné prospektívne a multicentrické štúdie s jasne definovanými pacientskymi výsledkami.</p>
+<p>Štúdia navyše priamo nepreukázala, že algoritmická úprava suchej hmotnosti znižuje mortalitu, hospitalizácie alebo kardiovaskulárne príhody. Ide najmä o metodologický a prediktívny výskum. Na potvrdenie klinického prínosu by boli potrebné prospektívne a multicentrické štúdie s jasne definovanými pacientskymi výsledkami.</p>
 
 <h2>Praktický záver</h2>
 
 <p>Strojové učenie môže pomôcť pri odhade klinicky primeranej suchej hmotnosti u hemodialyzovaných pacientov, najmä ak rozdiel medzi bioimpedančným a klinickým odhadom nie je veľký. Najlepšie výsledky v tejto štúdii dosiahol XGBoost u pacientov s Gap<sub>DW</sub> &lt; 1 kg. Pri väčších rozdieloch sa presnosť zhoršovala a pri Gap<sub>DW</sub> ≥ 2 kg ostáva predikcia klinicky problematická.</p>
 
-<p>Najväčší klinický význam práce spočíva v upozornení, že veľký nesúlad medzi BIS a klinickou suchou hmotnosťou často súvisí s extracelulárnou prevodnenosťou a znakmi malnutrície. Bioimpedančný výsledok preto treba interpretovať opatrne a vždy ho konfrontovať s klinickým stavom. Pre nefrológa je posolstvo jasné: suchá hmotnosť má byť výsledkom kombinácie objektívneho merania, klinického pozorovania, laboratórnych údajov a skúsenosti dialyzačného tímu. Algoritmus môže pomôcť, ale nemá rozhodovať sám.</p>
+<p>Najväčší klinický význam práce spočíva v upozornení, že veľký nesúlad medzi BIS a klinickou suchou hmotnosťou často súvisí s extracelulárnou prevodnenosťou a znakmi malnutrície. Bioimpedančný výsledok preto treba interpretovať opatrne a vždy ho konfrontovať s klinickým stavom. Suchá hmotnosť má byť výsledkom kombinácie objektívneho merania, klinického pozorovania, laboratórnych údajov a skúsenosti dialyzačného tímu. Algoritmus môže pomôcť, ale nemá rozhodovať sám.</p>
 
 <hr>
 

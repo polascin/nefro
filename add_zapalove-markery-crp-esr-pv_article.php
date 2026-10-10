@@ -35,11 +35,11 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Praktické čítanie zápalových markerov v ambulancii: CRP (rýchly, ale nešpecifický), ESR (pomalšia, ovplyvnená „fyzikou krvi“) a plazmatická viskozita (PV). Všetky sú citlivé, no nízko špecifické — výsledok treba interpretovať v kontexte, nie izolovane.',
+    'excerpt'      => 'Praktické čítanie zápalových markerov v ambulancii: CRP (rýchly, ale nešpecifický), ESR (pomalšia, ovplyvnená „fyzikou krvi“) a plazmatická viskozita (PV). Všetky sú citlivé, no málo špecifické, preto výsledok treba interpretovať v kontexte, nie izolovane.',
     'content'      => <<<'HTML'
-<figure><a href="img/zapalove-markery-crp-esr-pv.webp" rel="noopener noreferrer" target="_blank"><img src="img/zapalove-markery-crp-esr-pv.webp" alt="Tri skúmavky krvi, každá s iným fyzikálnym signálom, ukazujúce na to isté skryté zápalové svetlo" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Tri ukazovatele merajú ten istý dej odlišne — a líšia sa najmä rýchlosťou, akou reagujú.</figcaption></figure>
+<figure><a href="img/zapalove-markery-crp-esr-pv.webp" rel="noopener noreferrer" target="_blank"><img src="img/zapalove-markery-crp-esr-pv.webp" alt="Tri skúmavky krvi, každá s iným fyzikálnym signálom, ukazujúce na to isté skryté zápalové svetlo" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Tri ukazovatele merajú ten istý dej odlišne a líšia sa najmä rýchlosťou reakcie.</figcaption></figure>
 
-<p>Zápalové markery sa v bežnej ambulantnej praxi používajú často, no niekedy sa s nimi robí jedna
+<p>Zápalové markery sa v ambulantnej praxi používajú často a niekedy sa pri ich hodnotení robí jedna
 z dvoch chýb: buď sa berú ako „diagnóza sama o sebe“, alebo sa interpretujú bez kontextu klinického
 obrazu. Medscape „Primary Care Hack“ sa zameriava najmä na praktické čítanie výsledkov <strong>CRP</strong>,
 <strong>ESR</strong> a <strong>plazmatickej viskozity (PV)</strong> ako markerov zápalu a infekcie.</p>
@@ -123,7 +123,7 @@ symptómami, vyšetrením a ďalšími testami, nie izolovane.</p>
 <hr>
 
 <p><em><strong>Zdroj:</strong> „Interpreting Inflammatory Marker Tests in Primary Care (Primary Care
-Hack)“ — časť k CRP, ESR a PV, <em>Medscape Reference</em> (2026).
+Hack)“ – časť k CRP, ESR a PV, <em>Medscape Reference</em> (2026).
 <a href="https://reference.medscape.com/cc2/p10/interpreting-inflammatory-marker-primary-care-hack-2026a1000j8k" target="_blank" rel="noopener noreferrer">Link na zdroj</a>.</em></p>
 HTML,
 ];

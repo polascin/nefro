@@ -11,7 +11,7 @@
  *
  * Pôvodní autori: článok je PÔVODNÁ SYNTÉZA z viacerých overených zdrojov
  * (PubMed/Crossref, autori a DOI overené pri tvorbe), nie spracovanie JEDNÉHO
- * zdrojového článku — preto ostáva pod autorom projektu a do source_authors.php
+ * zdrojového článku – preto ostáva pod autorom projektu a do source_authors.php
  * sa NEpridáva (v súlade s pravidlom v tom súbore). Všetky zdroje sú uvedené
  * s autormi a DOI v sekcii „Zdroje“ na konci obsahu.
  */
@@ -37,7 +37,7 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'TMAO je metabolit cholínu a karnitínu, ktorý tvorí črevný mikrobióm a vylučujú obličky. Pri chronickej chorobe obličiek sa hromadí ako uremický toxín a spája sa s progresiou CKD aj s vyšším kardiovaskulárnym rizikom — prehľad mechanizmov, prognostického významu a výživových možností.',
+    'excerpt'      => 'TMAO je metabolit cholínu a karnitínu, ktorý tvorí črevný mikrobióm a vylučujú obličky. Pri chronickej chorobe obličiek sa hromadí ako uremický toxín a spája sa s progresiou CKD aj s vyšším kardiovaskulárnym rizikom – prehľad mechanizmov, prognostického významu a výživových možností.',
     'content'      => <<<'HTML'
 <figure><a href="img/tmao-crevny-metabolit-uremicky-toxin-ckd.webp" rel="noopener noreferrer" target="_blank"><img src="img/tmao-crevny-metabolit-uremicky-toxin-ckd.webp" alt="Molekula vznikajúca medzi črevnými baktériami a putujúca cievnou cestou k obličke, kde sa hromadí" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Metabolit vzniká v čreve, no hromadí sa tam, kde ho oblička už nedokáže odstrániť.</figcaption></figure>
 
@@ -48,7 +48,7 @@ $articles[] = [
 <p>Vznik TMAO je viackrokový proces na osi črevo – pečeň – oblička:</p>
 
 <ul>
-  <li><strong>Prekurzory z potravy.</strong> Hlavnými zdrojmi sú cholín, L-karnitín a betaín — nachádzajú sa najmä v červenom mäse, vaječnom žĺtku, mliečnych výrobkoch a rybách.</li>
+  <li><strong>Prekurzory z potravy.</strong> Hlavnými zdrojmi sú cholín, L-karnitín a betaín – nachádzajú sa najmä v červenom mäse, vaječnom žĺtku, mliečnych výrobkoch a rybách.</li>
   <li><strong>Premena v čreve.</strong> Črevné baktérie tieto prekurzory metabolizujú na trimetylamín (TMA).</li>
   <li><strong>Oxidácia v pečeni.</strong> TMA sa v pečeni pomocou enzýmu flavín-obsahujúcej monooxygenázy 3 (FMO3) oxiduje na TMAO.</li>
   <li><strong>Vylučovanie obličkami.</strong> Vzniknutý TMAO sa za fyziologických okolností vylučuje prevažne obličkami.</li>
@@ -61,15 +61,15 @@ $articles[] = [
 <p>Na zvýšených hladinách TMAO pri CKD sa podieľajú dva mechanizmy, ktoré sa navzájom posilňujú:</p>
 
 <ul>
-  <li><strong>Znížená exkrécia.</strong> S poklesom funkcie obličiek klesá klírens TMAO, takže sa kumuluje v obehu — preto sa zaraďuje medzi tzv. uremické toxíny.</li>
+  <li><strong>Znížená exkrécia.</strong> S poklesom funkcie obličiek klesá klírens TMAO, takže sa kumuluje v obehu – preto sa zaraďuje medzi tzv. uremické toxíny.</li>
   <li><strong>Črevná dysbióza.</strong> CKD je sprevádzaná zmenou zloženia črevného mikrobiómu (dysbiózou) a narušením črevnej bariéry. To posúva metabolizmus smerom k vyššej tvorbe prekurzorov uremických toxínov vrátane TMA a následne TMAO.</li>
 </ul>
 
-<p>Tento obojsmerný vzťah sa označuje ako <strong>os črevo – oblička</strong> (gut–kidney axis): zhoršená funkcia obličiek mení črevné prostredie a naopak — dysbiotický mikrobióm produkuje viac toxínov, ktoré ďalej urýchľujú poškodenie obličiek. TMAO je jedným z metabolitov, ktoré túto slučku názorne ilustrujú, popri lepšie preskúmaných toxínoch, akými sú indoxylsulfát a p-krezylsulfát.</p>
+<p>Tento obojsmerný vzťah sa označuje ako <strong>os črevo – oblička</strong> (gut–kidney axis): zhoršená funkcia obličiek mení črevné prostredie a naopak – dysbiotický mikrobióm produkuje viac toxínov, ktoré ďalej urýchľujú poškodenie obličiek. TMAO je jedným z metabolitov, ktoré túto slučku názorne ilustrujú, popri lepšie preskúmaných toxínoch, akými sú indoxylsulfát a p-krezylsulfát.</p>
 
 <h2>Akými mechanizmami TMAO škodí</h2>
 
-<p>TMAO nie je len pasívnym ukazovateľom — v experimentálnych aj klinických prácach sa spája s viacerými škodlivými účinkami na obličky i na kardiovaskulárny systém:</p>
+<p>TMAO nie je len pasívnym ukazovateľom – v experimentálnych aj klinických prácach sa spája s viacerými škodlivými účinkami na obličky i na kardiovaskulárny systém:</p>
 
 <ul>
   <li><strong>Obličky:</strong> podpora renálnej fibrózy, poškodenie tubulárnych buniek, prozápalové a profibrotické pôsobenie a oxidačný stres, ktoré prispievajú k progresii CKD.</li>
@@ -77,11 +77,11 @@ $articles[] = [
   <li><strong>Srdce:</strong> myokardiálna fibróza a nepriaznivé pôsobenie na srdcový sval.</li>
 </ul>
 
-<p>Spoločným menovateľom týchto mechanizmov sú zápal a oxidačný stres — dva procesy, ktoré sú pri CKD chronicky aktivované a ktoré TMAO ešte zosilňuje.</p>
+<p>Spoločným menovateľom týchto mechanizmov sú zápal a oxidačný stres – dva procesy, ktoré sú pri CKD chronicky aktivované a ktoré TMAO ešte zosilňuje.</p>
 
 <h2>TMAO ako prognostický ukazovateľ</h2>
 
-<p>Klinický význam TMAO dokresľujú pozorovania, že jeho plazmatické hladiny sú u pacientov s CKD zvýšené a že vyššie hladiny sa spájajú s horšou prognózou — vrátane celkovej mortality a kardiovaskulárnych príhod. TMAO sa tak skúma nielen ako možný pôvodca poškodenia, ale aj ako biomarker rizika.</p>
+<p>Klinický význam TMAO dokresľujú pozorovania, že jeho plazmatické hladiny sú u pacientov s CKD zvýšené a že vyššie hladiny sa spájajú s horšou prognózou – vrátane celkovej mortality a kardiovaskulárnych príhod. TMAO sa tak skúma nielen ako možný pôvodca poškodenia, ale aj ako biomarker rizika.</p>
 
 <p>Treba však zdôrazniť, že väčšina týchto dôkazov má povahu asociácií a mechanistických štúdií. Priamy príčinný podiel TMAO a presné cesty jeho pôsobenia sa stále overujú, preto je namieste opatrná interpretácia.</p>
 
@@ -94,13 +94,13 @@ $articles[] = [
 <p>Keďže TMAO vzniká z konkrétnych zložiek potravy, do popredia sa dostáva otázka výživy:</p>
 
 <ul>
-  <li><strong>Prekurzory v strave.</strong> Cholín a L-karnitín z červeného mäsa a vajec zvyšujú tvorbu TMAO. Poučná je štúdia, v ktorej šesťmesačné podávanie L-karnitínu výrazne zvýšilo hladiny TMAO u starších žien — pripomienka, že aj bežne používané doplnky výživy môžu ovplyvniť tvorbu tohto metabolitu.</li>
+  <li><strong>Prekurzory v strave.</strong> Cholín a L-karnitín z červeného mäsa a vajec zvyšujú tvorbu TMAO. Poučná je štúdia, v ktorej šesťmesačné podávanie L-karnitínu výrazne zvýšilo hladiny TMAO u starších žien – pripomienka, že aj bežne používané doplnky výživy môžu ovplyvniť tvorbu tohto metabolitu.</li>
   <li><strong>Mierne obmedzenie bielkovín.</strong> U nedialyzovaných pacientov s CKD sa odporúča mierne obmedzenie príjmu bielkovín; okrem ochrany funkcie obličiek znižuje aj tvorbu uremických toxínov z aminokyselín v čreve.</li>
   <li><strong>Ryby ako dvojsečná zbraň.</strong> Ryby sú cenným zdrojom omega-3 mastných kyselín, no zároveň sú významným zdrojom TMAO. Vplyv stravy bohatej na ryby na hladiny TMAO a na kardiovaskulárne výsledky u pacientov s CKD zatiaľ nie je jednoznačne doriešený.</li>
   <li><strong>Modulácia mikrobiómu a inhibícia tvorby.</strong> Experimentálne sa skúma zníženie tvorby TMAO ovplyvnením črevného mikrobiómu či inhibítormi (napríklad 3,3-dimetyl-1-butanol, DMB). Ako doplnkový nefarmakologický prístup k priaznivému ovplyvneniu mikrobiómu sa navrhuje aj pravidelná fyzická aktivita.</li>
 </ul>
 
-<p>Napriek množstvu navrhovaných postupov zatiaľ <strong>žiadna z metód nepreukázala účinnosť na tvrdých, na pacienta orientovaných cieľových ukazovateľoch</strong>. To je dôvod na triezvy optimizmus: smer je racionálny, no presvedčivé klinické dôkazy o benefite zatiaľ chýbajú.</p>
+<p>Napriek množstvu navrhovaných postupov zatiaľ <strong>žiadna z metód nepreukázala účinnosť na tvrdých, na pacienta orientovaných cieľových ukazovateľoch</strong>. To je dôvod na triezvy optimizmus: smer je racionálny, no presvedčivé klinické dôkazy o prínose zatiaľ chýbajú.</p>
 
 <h2>Čo z toho vyplýva pre prax</h2>
 
@@ -108,14 +108,14 @@ $articles[] = [
 
 <ol>
   <li>TMAO je uremický toxín, ktorého hladiny stúpajú s poklesom funkcie obličiek a ktorý sa spája s vyšším kardiovaskulárnym rizikom aj s progresiou CKD.</li>
-  <li>Jeho tvorba je ovplyvniteľná stravou — najmä príjmom prekurzorov z červeného mäsa, vajec a doplnkov s karnitínom.</li>
-  <li>Cielené „proti-TMAO“ intervencie zatiaľ nie sú súčasťou štandardnej starostlivosti, pretože chýbajú dôkazy o benefite na klinicky tvrdých ukazovateľoch.</li>
-  <li>V praxi preto ostávajú kľúčové osvedčené opatrenia — primeraná úprava príjmu bielkovín u nedialyzovaných pacientov, vyvážený jedálniček a komplexná kontrola kardiovaskulárneho rizika — do ktorých téma TMAO zapadá ako doplnkový, no zatiaľ nie samostatne cieliteľný faktor.</li>
+  <li>Jeho tvorba je ovplyvniteľná stravou – najmä príjmom prekurzorov z červeného mäsa, vajec a doplnkov s karnitínom.</li>
+  <li>Cielené „proti-TMAO“ intervencie zatiaľ nie sú súčasťou štandardnej starostlivosti, pretože chýbajú dôkazy o prínose na klinicky tvrdých ukazovateľoch.</li>
+  <li>V praxi preto ostávajú kľúčové osvedčené opatrenia – primeraná úprava príjmu bielkovín u nedialyzovaných pacientov, vyvážený jedálniček a komplexná kontrola kardiovaskulárneho rizika – do ktorých téma TMAO zapadá ako doplnkový, no zatiaľ nie samostatne cieliteľný faktor.</li>
 </ol>
 
 <h2>Záver</h2>
 
-<p>Trimetylamín-N-oxid je názorným príkladom toho, ako spolu komunikujú črevný mikrobióm a obličky. Ako metabolit cholínu a karnitínu, ktorý vylučujú obličky, sa pri CKD hromadí a prostredníctvom zápalu, oxidačného stresu, fibrózy a cievnych zmien prispieva k obličkovému aj kardiovaskulárnemu poškodeniu. Zostáva sľubným prognostickým biomarkerom a racionálnym terapeutickým cieľom — jeho klinické využitie však musí ešte potvrdiť ďalší výskum. Do tej doby je najrozumnejším prístupom starostlivá výživa a dôsledná kontrola kardiovaskulárneho rizika.</p>
+<p>Trimetylamín-N-oxid je názorným príkladom toho, ako spolu komunikujú črevný mikrobióm a obličky. Ako metabolit cholínu a karnitínu, ktorý vylučujú obličky, sa pri CKD hromadí a prostredníctvom zápalu, oxidačného stresu, fibrózy a cievnych zmien prispieva k obličkovému aj kardiovaskulárnemu poškodeniu. Zostáva sľubným prognostickým biomarkerom a racionálnym terapeutickým cieľom – jeho klinické využitie však musí ešte potvrdiť ďalší výskum. Dovtedy je najrozumnejším prístupom starostlivá výživa a dôsledná kontrola kardiovaskulárneho rizika.</p>
 
 <hr>
 

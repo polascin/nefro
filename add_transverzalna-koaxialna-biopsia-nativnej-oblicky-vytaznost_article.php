@@ -3,7 +3,7 @@
 /**
  * add_transverzalna-koaxialna-biopsia-nativnej-oblicky-vytaznost_article.php
  * ════════════════════════════════════════════════════════════════════════════
- * Odborný článok — spracovanie štúdie Renal Failure 2026;48(1):2656545
+ * Odborný článok – spracovanie štúdie Renal Failure 2026;48(1):2656545
  * (doi 10.1080/0886022X.2026.2656545, PMID 42613737, PMC13491899)
  * doplnené o porovnávacie štúdie a odborné odporúčania.
  *
@@ -132,7 +132,7 @@ $articles[] = [
 
 <p>Priemerný počet glomerulov na jeden odber bol 13,94 ± 5,21 pri transverzálnej koaxiálnej technike, 11,88 ± 5,53 pri longitudinálnej koaxiálnej a 10,67 ± 5,14 pri longitudinálnej nekoaxiálnej technike.</p>
 
-<p>Tento ukazovateľ však <strong>nepredstavuje nezávislé potvrdenie</strong> hlavného zistenia. Počet odberov bol vo všetkých troch skupinách rovnaký (medián 2,0; p = 1,000), takže „počet glomerulov na odber“ je prakticky celkový počet glomerulov delený rovnakou konštantou — čo potvrdzujú aj samotné čísla (26,90 ÷ 2 ≈ 13,45; 22,93 ÷ 2 ≈ 11,47; 20,87 ÷ 2 ≈ 10,44). Prezentovať oba údaje ako dve samostatné zhodné zistenia preto zdanie dôkazovej sily zvyšuje viac, než je opodstatnené.</p>
+<p>Tento ukazovateľ však <strong>nepredstavuje nezávislé potvrdenie</strong> hlavného zistenia. Počet odberov bol vo všetkých troch skupinách rovnaký (medián 2,0; p = 1,000), takže „počet glomerulov na odber“ je prakticky celkový počet glomerulov delený rovnakou konštantou – čo potvrdzujú aj samotné čísla (26,90 ÷ 2 ≈ 13,45; 22,93 ÷ 2 ≈ 11,47; 20,87 ÷ 2 ≈ 10,44). Prezentovať oba údaje ako dve samostatné zhodné zistenia preto zdanie dôkazovej sily zvyšuje viac, než je opodstatnené.</p>
 
 <p>Výsledky podporujú hypotézu, že kombinácia priečnej orientácie sondy a koaxiálneho prístupu môže zlepšiť efektívnosť odberu kortikálneho tkaniva. Štúdia však nedokáže oddeliť účinok orientácie sondy od účinku koaxiálneho systému, pretože <strong>neobsahovala štvrtú skupinu s transverzálnou nekoaxiálnou biopsiou</strong>.</p>
 
@@ -140,7 +140,7 @@ $articles[] = [
 
 <p>Prahová hodnota najmenej desať glomerulov je praktickým ukazovateľom, nemala by sa však zamieňať s univerzálnou diagnostickou dostatočnosťou.</p>
 
-<p>Požadovaný počet glomerulov závisí od klinickej otázky a typu ochorenia. Pri fokálnych léziách, napríklad pri fokálnej segmentovej glomeruloskleróze alebo nekrotizujúcej glomerulonefritíde, môže byť potrebná väčšia vzorka. Dôležitý je aj počet artérií, zastúpenie kôry, fragmentácia tkaniva a jeho rozdelenie medzi jednotlivé diagnostické metódy — odporúčania Renal Pathology Society žiadajú pri natívnej obličke súčasné vyšetrenie svetelnou mikroskopiou, imunohistochémiou aj elektrónovou mikroskopiou, čo znamená, že jeden odber musí zásobiť tri rôzne spracovania.</p>
+<p>Požadovaný počet glomerulov závisí od klinickej otázky a typu ochorenia. Pri fokálnych léziách, napríklad pri fokálnej segmentovej glomeruloskleróze alebo nekrotizujúcej glomerulonefritíde, môže byť potrebná väčšia vzorka. Dôležitý je aj počet artérií, zastúpenie kôry, fragmentácia tkaniva a jeho rozdelenie medzi jednotlivé diagnostické metódy – odporúčania Renal Pathology Society žiadajú pri natívnej obličke súčasné vyšetrenie svetelnou mikroskopiou, imunohistochémiou aj elektrónovou mikroskopiou, čo znamená, že jeden odber musí zásobiť tri rôzne spracovania.</p>
 
 <p>Vzorka s desiatimi glomerulmi preto nemusí byť dostatočná pre každú diagnózu. Naopak, vzorka s menším počtom glomerulov môže niekedy poskytnúť rozhodujúci nález.</p>
 
@@ -177,7 +177,7 @@ $articles[] = [
 
 <p>Rozdiel je technicky zaujímavý, jeho klinický význam však treba interpretovať opatrne. Nešlo o celkové trvanie biopsie vrátane prípravy pacienta, ultrazvukového zobrazenia, lokálnej anestézie, zavedenia koaxiálneho systému, manipulácie so vzorkou a následnej kontroly. Meral sa iba interval od preniknutia cez kožu po ukončenie odberu tkaniva.</p>
 
-<p>Že tento ukazovateľ nie je medzi pracoviskami porovnateľný, ukazuje randomizovaná štúdia Babaei Jandaghiho a spolupracovníkov: pri rovnako nazvanom ukazovateli uvádza 5 ± 1 minúty pre koaxiálnu a 14 ± 2 minúty pre nekoaxiálnu techniku — teda hodnoty päť- až šesťnásobne vyššie. Rozdiel približne jednej minúty preto nemožno bez ďalších údajov považovať za dôkaz významného skrátenia celého pracovného postupu.</p>
+<p>Že tento ukazovateľ nie je medzi pracoviskami porovnateľný, ukazuje randomizovaná štúdia Babaei Jandaghiho a spolupracovníkov: pri rovnako nazvanom ukazovateli uvádza 5 ± 1 minúty pre koaxiálnu a 14 ± 2 minúty pre nekoaxiálnu techniku – teda hodnoty päť- až šesťnásobne vyššie. Rozdiel približne jednej minúty preto nemožno bez ďalších údajov považovať za dôkaz významného skrátenia celého pracovného postupu.</p>
 
 <h2>Krvácavé komplikácie</h2>
 
@@ -230,7 +230,7 @@ $articles[] = [
 
 <p>Posledný stĺpec tabuľky obsahuje zistenie, ktoré diskusia pôvodnej práce nezdôrazňuje. <strong>Longitudinálna koaxiálna skupina sa od nekoaxiálnej skupiny nelíšila v žiadnej z troch komplikácií</strong> (p = 0,069; 0,823; 0,149) ani v technickej úspešnosti (p = 0,101). Celá pozorovaná výhoda sa teda sústredila do skupiny, ktorá kombinovala koaxiálny systém s priečnou orientáciou sondy.</p>
 
-<p>Tvrdenie v diskusii publikácie, že „koaxiálna skupina“ mala nižší výskyt krvácavých komplikácií než nekoaxiálna, tak platí len pre jednu z dvoch koaxiálnych skupín. V tomto súbore samotný koaxiálny systém — pri zachovaní zaužívanej pozdĺžnej orientácie — merateľný prínos nepriniesol.</p>
+<p>Tvrdenie v diskusii publikácie, že „koaxiálna skupina“ mala nižší výskyt krvácavých komplikácií než nekoaxiálna, tak platí len pre jednu z dvoch koaxiálnych skupín. V tomto súbore samotný koaxiálny systém – pri zachovaní zaužívanej pozdĺžnej orientácie – merateľný prínos nepriniesol.</p>
 
 <h2>Vnútorné rozpory publikácie</h2>
 
@@ -249,7 +249,7 @@ $articles[] = [
   <tbody>
     <tr>
       <th scope="row">Makroskopická hematúria, A vs. B</th>
-      <td>7/47 (14,9 %) oproti 19/45 (42,2 %), p = 0,004 — <strong>menej častá</strong> v skupine A</td>
+      <td>7/47 (14,9 %) oproti 19/45 (42,2 %), p = 0,004 – <strong>menej častá</strong> v skupine A</td>
       <td>„významne vyšší výskyt v skupine A“</td>
       <td>Obrátený smer rozdielu; tvrdenie prevzal aj ReachMD</td>
     </tr>
@@ -285,7 +285,7 @@ $articles[] = [
 
 <ul>
   <li>rozdiel v technickej úspešnosti oproti longitudinálnej koaxiálnej technike nebol významný (p = 0,489);</li>
-  <li>slovo „nezávisle“ predpokladá viacrozmerný model, ktorý v práci nie je uvedený — nebola prezentovaná žiadna analýza, ktorá by súčasne korigovala výber obličky, kaliber ihly a klinické charakteristiky.</li>
+  <li>slovo „nezávisle“ predpokladá viacrozmerný model, ktorý v práci nie je uvedený – nebola prezentovaná žiadna analýza, ktorá by súčasne korigovala výber obličky, kaliber ihly a klinické charakteristiky.</li>
 </ul>
 
 <p>Formulácia pravdepodobne nadväzuje na randomizovanú štúdiu Akkakriseeho a spolupracovníkov, ktorá viacrozmernú logistickú regresiu skutočne vykonala. V tejto práci však ostáva neopodstatnená.</p>
@@ -341,7 +341,7 @@ $articles[] = [
 
 <p>Bez presnej a jednotnej definície sa tieto percentá nedajú priamo porovnávať s inými štúdiami. Navyše neboli systematicky uvedené klinicky významnejšie ukazovatele, ako pokles hemoglobínu, potreba transfúzie, močová retencia, hemodynamická nestabilita alebo opakovaná hospitalizácia.</p>
 
-<p>Tento nesúlad má aj odvrátenú stranu. Kým menšie príhody boli v tomto súbore hlásené mimoriadne často, závažné komplikácie sa nevyskytli vôbec — zatiaľ čo randomizovaná štúdia Akkakriseeho zaznamenala u 70 pacientov až tri angioembolizácie. Obidva súbory teda podávajú vzájomne nekompatibilný obraz o bezpečnosti výkonu, čo samo osebe upozorňuje na neštandardizované hlásenie komplikácií v tejto oblasti.</p>
+<p>Tento nesúlad má aj odvrátenú stranu. Kým menšie príhody boli v tomto súbore hlásené mimoriadne často, závažné komplikácie sa nevyskytli vôbec – zatiaľ čo randomizovaná štúdia Akkakriseeho zaznamenala u 70 pacientov až tri angioembolizácie. Obidva súbory teda podávajú vzájomne nekompatibilný obraz o bezpečnosti výkonu, čo samo osebe upozorňuje na neštandardizované hlásenie komplikácií v tejto oblasti.</p>
 
 <h2>Ako sa štúdia má k ostatným dôkazom</h2>
 
@@ -359,31 +359,31 @@ $articles[] = [
   </thead>
   <tbody>
     <tr>
-      <th scope="row">Akkakrisee a spol. (2025) — orientácia sondy</th>
+      <th scope="row">Akkakrisee a spol. (2025) – orientácia sondy</th>
       <td>Randomizovaná kontrolovaná štúdia, 70 pacientov (35 + 35)</td>
-      <td>Technická úspešnosť 85,7 % oproti 62,9 %, ale <strong>p = 0,056 — významnosť nedosiahnutá</strong>. Medián počtu glomerulov 20 oproti 18 (p = 0,173). Vo viacrozmernom modeli priečna technika OR 7,69 (95 % IS 1,69–50; p = 0,006)</td>
+      <td>Technická úspešnosť 85,7 % oproti 62,9 %, ale <strong>p = 0,056 – významnosť nedosiahnutá</strong>. Medián počtu glomerulov 20 oproti 18 (p = 0,173). Vo viacrozmernom modeli priečna technika OR 7,69 (95 % IS 1,69–50; p = 0,006)</td>
       <td>Jediná randomizovaná štúdia priečnej orientácie nepreukázala rozdiel vo výťažnosti a v základnej analýze ani v úspešnosti</td>
     </tr>
     <tr>
-      <th scope="row">Babaei Jandaghi a spol. (2017) — koaxiálna technika</th>
+      <th scope="row">Babaei Jandaghi a spol. (2017) – koaxiálna technika</th>
       <td>Randomizovaná kontrolovaná štúdia, 166 pacientov (83 + 83)</td>
       <td>Počet glomerulov 18,2 ± 9,1 oproti 8,6 ± 5,5 (p &lt; 0,001); komplikácie 10,8 % oproti 24,1 % (p = 0,025). Komplikácie boli častejšie pri patologickom parenchýme (19/71 oproti 10/95; p = 0,006)</td>
-      <td>Prínos koaxiálneho systému má randomizovanú oporu — ale typ ochorenia obličky je samostatný rizikový faktor, ktorý hodnotená štúdia nezohľadnila</td>
+      <td>Prínos koaxiálneho systému má randomizovanú oporu – ale typ ochorenia obličky je samostatný rizikový faktor, ktorý hodnotená štúdia nezohľadnila</td>
     </tr>
     <tr>
-      <th scope="row">Mai a spol. (2013) — kaliber ihly</th>
+      <th scope="row">Mai a spol. (2013) – kaliber ihly</th>
       <td>Retrospektívne, 934 biopsií, dve centrá</td>
       <td>16 G oproti 18 G: medián 19 oproti 12 glomerulov (p &lt; 0,001) pri menšom počte valčekov; dostatočnosť 94,7 % oproti 89,4 % (p = 0,001); komplikácie bez rozdielu (3,7 % oproti 2,2 %; p = 0,49)</td>
-      <td>Kaliber ihly je silný determinant výťažnosti — a jeho zastúpenie sa medzi skupinami hodnotenej štúdie líšilo</td>
+      <td>Kaliber ihly je silný determinant výťažnosti – a jeho zastúpenie sa medzi skupinami hodnotenej štúdie líšilo</td>
     </tr>
     <tr>
-      <th scope="row">Corapi a spol. (2012) — bezpečnosť</th>
+      <th scope="row">Corapi a spol. (2012) – bezpečnosť</th>
       <td>Systematický prehľad a metaanalýza, 9 474 biopsií</td>
       <td>Makroskopická hematúria 3,5 %; transfúzia 0,9 %. Ihly hrubšie ako 14 G mali vyššiu potrebu transfúzie (2,1 % oproti 0,5 %; p = 0,009)</td>
       <td>Referenčné hodnoty, oproti ktorým sú čísla hodnotenej štúdie rádovo odlišné</td>
     </tr>
     <tr>
-      <th scope="row">Tøndel a spol. (2012) — register</th>
+      <th scope="row">Tøndel a spol. (2012) – register</th>
       <td>Národný register, 9 288 biopsií</td>
       <td>97,9 % biopsií bez komplikácie. Riziko závažnej komplikácie stúpa pri eGFR &lt; 30 ml/min/1,73 m² (OR 15,5) a v centrách s menej ako 30 biopsiami ročne (OR 1,60)</td>
       <td>Objem pracoviska a funkcia obličiek ovplyvňujú riziko viac než detail techniky</td>
@@ -392,7 +392,7 @@ $articles[] = [
 </table>
 </div>
 
-<p>Z porovnania vyplýva dôležitý záver: <strong>randomizované dôkazy sú slabšie než retrospektívne</strong>. Jediná randomizovaná štúdia priečnej orientácie sondy nenašla rozdiel v počte glomerulov a rozdiel v technickej úspešnosti tesne minul hranicu významnosti. Retrospektívna práca s voľbou techniky podľa uváženia operatéra naopak hlási veľké a konzistentné rozdiely vo všetkých ukazovateľoch naraz. Taký obrazec býva typickejší pre výberové skreslenie než pre skutočný účinok.</p>
+<p>Z porovnania vyplýva dôležitý záver: <strong>randomizované štúdie ukazujú menšie rozdiely než retrospektívne</strong>. Jediná randomizovaná štúdia priečnej orientácie sondy nenašla rozdiel v počte glomerulov a rozdiel v technickej úspešnosti tesne minul hranicu významnosti. Retrospektívna práca s voľbou techniky podľa uváženia operatéra naopak hlási veľké a konzistentné rozdiely vo všetkých ukazovateľoch naraz. Taký obrazec býva typickejší pre výberové skreslenie než pre skutočný účinok.</p>
 
 <h2>Prečo nemožno dokázať príčinnú súvislosť</h2>
 
@@ -413,15 +413,15 @@ $articles[] = [
 
 <p>Výrazne sa líšil aj výber biopsiovanej obličky (p &lt; 0,001). V nekoaxiálnej skupine sa vo všetkých prípadoch odoberala vzorka z ľavej obličky, kým v longitudinálnej koaxiálnej skupine prevažovala pravá oblička (57,8 %). Autori to vysvetľujú tým, že pri nekoaxiálnej technike stálo pracovisko s prístrojom po ľavej strane pacienta. Táto nerovnováha je preto zástupným ukazovateľom rozdielnych pracovných postupov, operatérov alebo časových období, nie anatomickým faktorom.</p>
 
-<p>Štúdia neuvádza viacrozmernú analýzu, ktorá by súčasne korigovala výber obličky, kaliber ihly, klinické charakteristiky a ďalšie možné zavádzajúce premenné. Pri viacerých párových porovnaniach tiež nie je zrejmá korekcia na viacnásobné porovnávanie.</p>
+<p>Štúdia neuvádza viacrozmernú analýzu, ktorá by súčasne korigovala výber obličky, kaliber ihly, klinické charakteristiky a ďalšie možné mätúce faktory. Pri viacerých párových porovnaniach tiež nie je zrejmá korekcia na viacnásobné porovnávanie.</p>
 
 <h3>Kaliber ihly ako neposúdený faktor</h3>
 
 <p>Podiel hrubších ihiel 16 G klesal naprieč skupinami rovnakým smerom ako výťažnosť: 74,5 % v transverzálnej koaxiálnej skupine, 68,9 % v longitudinálnej koaxiálnej a 59,8 % v nekoaxiálnej skupine. Rozdiel nebol štatisticky významný (p = 0,198), no pri súbore 184 pacientov nevýznamnosť neznamená neprítomnosť skreslenia. Autori v obmedzeniach výslovne uvádzajú, že podskupinovú analýzu podľa kalibru ihly nemohli vykonať.</p>
 
-<p>Pri poctivom odhade však samotný kaliber pozorovaný rozdiel nevysvetlí. Ak by sa použili mediány z práce Mai a spolupracovníkov (19 glomerulov pre 16 G, 12 pre 18 G), rozdielne zastúpenie kalibrov by medzi krajnými skupinami vysvetlilo približne jeden glomerulus — nie šesť. Kaliber ihly teda pôsobí rovnakým smerom a nemožno ho vylúčiť ako spolupôsobiaci faktor, sám osebe však rozdiel vo výťažnosti neobjasňuje.</p>
+<p>Pri poctivom odhade však samotný kaliber pozorovaný rozdiel nevysvetlí. Ak by sa použili mediány z práce Mai a spolupracovníkov (19 glomerulov pre 16 G, 12 pre 18 G), rozdielne zastúpenie kalibrov by medzi krajnými skupinami vysvetlilo približne jeden glomerulus – nie šesť. Kaliber ihly teda pôsobí rovnakým smerom a nemožno ho vylúčiť ako spolupôsobiaci faktor, sám osebe však rozdiel vo výťažnosti neobjasňuje.</p>
 
-<p>Pri bezpečnosti je vzťah dokonca opačný a hovorí <em>v prospech</em> techniky: transverzálna koaxiálna skupina používala najviac hrubých ihiel 16 G, a teda aj najhrubšie vonkajšie kanyly 15 G — a napriek tomu krvácala najmenej. Ak by bol pozorovaný bezpečnostný rozdiel len artefaktom rozdielneho vybavenia, očakávali by sme opačné poradie. To je jediný ukazovateľ, pri ktorom je zistenie odolnejšie, než sa na prvý pohľad zdá.</p>
+<p>Pri bezpečnosti je vzťah dokonca opačný a hovorí <em>v prospech</em> techniky: transverzálna koaxiálna skupina používala najviac hrubých ihiel 16 G, a teda aj najhrubšie vonkajšie kanyly 15 G – a napriek tomu krvácala najmenej. Ak by bol pozorovaný bezpečnostný rozdiel len artefaktom rozdielneho vybavenia, očakávali by sme opačné poradie. To je jediný ukazovateľ, pri ktorom je zistenie odolnejšie, než sa na prvý pohľad zdá.</p>
 
 <h2>Možný vplyv obdobia výkonu a učenia operatérov</h2>
 
@@ -460,11 +460,11 @@ $articles[] = [
   <li>jednoznačnú výhodu samotnej transverzálnej orientácie nezávisle od koaxiálneho systému.</li>
 </ul>
 
-<p>Keďže ani v jednej skupine nenastala komplikácia vyžadujúca embolizáciu, štúdia nemala dostatočnú štatistickú silu na porovnanie zriedkavých závažných príhod. Neprítomnosť takejto udalosti v súbore 184 pacientov nie je dôkazom nulového rizika — pri nulovom počte udalostí siaha horná hranica 95 % intervalu spoľahlivosti pre najmenšiu skupinu (47 pacientov) až k približne 7,6 %.</p>
+<p>Keďže ani v jednej skupine nenastala komplikácia vyžadujúca embolizáciu, štúdia nemala dostatočnú štatistickú silu na porovnanie zriedkavých závažných príhod. Neprítomnosť takejto udalosti v súbore 184 pacientov nie je dôkazom nulového rizika – pri nulovom počte udalostí siaha horná hranica 95 % intervalu spoľahlivosti pre najmenšiu skupinu (47 pacientov) až k približne 7,6 %.</p>
 
 <h2>Praktické dôsledky pre nefrologické a intervenčné pracoviská</h2>
 
-<p>Transverzálny koaxiálny prístup je racionálna a perspektívna technická možnosť. Priečna rovina môže v určitých anatomických podmienkach poskytnúť širšiu cieľovú oblasť kôry, kratšiu dráhu ihly a stabilnejší uhol. Koaxiálny systém umožňuje opakovaný odber bez opakovaných samostatných prechodov cez puzdro obličky — v hodnotenej štúdii vystačila koaxiálna technika s jedným prechodom cez puzdro oproti dvom pri nekoaxiálnej technike, čo je najpravdepodobnejší mechanizmus nižšieho výskytu hematómu.</p>
+<p>Transverzálny koaxiálny prístup je racionálna a perspektívna technická možnosť. Priečna rovina môže v určitých anatomických podmienkach poskytnúť širšiu cieľovú oblasť kôry, kratšiu dráhu ihly a stabilnejší uhol. Koaxiálny systém umožňuje opakovaný odber bez opakovaných samostatných prechodov cez puzdro obličky – v hodnotenej štúdii vystačila koaxiálna technika s jedným prechodom cez puzdro oproti dvom pri nekoaxiálnej technike, čo je najpravdepodobnejší mechanizmus nižšieho výskytu hematómu.</p>
 
 <p>O zavedení techniky by však nemala rozhodnúť jediná retrospektívna štúdia, najmä ak jej randomizovaný náprotivok rozdiel nepotvrdil. Pracovisko by malo zohľadniť:</p>
 
@@ -497,7 +497,7 @@ $articles[] = [
 
 <p>Transverzálna koaxiálna biopsia natívnej obličky dosiahla v analyzovanom centre vysokú tkanivovú výťažnosť a kratší čas od punkcie kože po ukončenie odberu. V porovnaní s longitudinálnou nekoaxiálnou technikou bola spojená aj s nižším výskytom zaznamenaných krvácavých príhod.</p>
 
-<p>Výsledky sú sľubné, ale ich dôkazová sila je obmedzená retrospektívnym jednocentrovým usporiadaním, výberom techniky operatérom, malým počtom pacientov, nedostatočnou kontrolou zavádzajúcich premenných a nejasnou klinickou interpretáciou vysokého výskytu hematúrie. Jediná randomizovaná štúdia priečnej orientácie sondy rozdiel vo výťažnosti nepotvrdila.</p>
+<p>Výsledky sú sľubné, ale ich dôkazová sila je obmedzená retrospektívnym jednocentrovým usporiadaním, výberom techniky operatérom, malým počtom pacientov, nedostatočnou kontrolou mätúcich faktorov a nejasnou klinickou interpretáciou vysokého výskytu hematúrie. Jediná randomizovaná štúdia priečnej orientácie sondy rozdiel vo výťažnosti nepotvrdila.</p>
 
 <p>Dôležitá je aj oprava interpretácie makroskopickej hematúrie. Podľa tabuľkových údajov bola menej častá pri transverzálnej koaxiálnej technike než pri longitudinálnej koaxiálnej technike. Opačné tvrdenie v abstrakte, texte štúdie a sprievodnom článku ReachMD je v rozpore s publikovanými počtami.</p>
 

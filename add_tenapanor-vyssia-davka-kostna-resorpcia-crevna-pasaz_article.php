@@ -27,11 +27,11 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Súhrnná analýza troch japonských štúdií fázy 3 (212 pacientov) našla dva faktory spojené s vyššou konečnou dávkou tenapanoru: vyššiu kostnú resorpciu a tvrdšiu stolicu. Ide o prieskumné nálezy, nie o dávkovací algoritmus.',
     'content'      => <<<'HTML'
-<figure><a href="img/tenapanor-vyssia-davka-kostna-resorpcia-crevna-pasaz.webp" rel="noopener noreferrer" target="_blank"><img src="img/tenapanor-vyssia-davka-kostna-resorpcia-crevna-pasaz.webp" alt="Svietiaca črevná trubica s nerovnomernou pasážou a kostná mriežka uvoľňujúca minerálne častice" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Potrebná dávka nezávisí len od príjmu fosforu — spoluurčuje ju rýchlosť črevnej pasáže aj uvoľňovanie minerálu z kosti.</figcaption></figure>
+<figure><a href="img/tenapanor-vyssia-davka-kostna-resorpcia-crevna-pasaz.webp" rel="noopener noreferrer" target="_blank"><img src="img/tenapanor-vyssia-davka-kostna-resorpcia-crevna-pasaz.webp" alt="Svietiaca črevná trubica s nerovnomernou pasážou a kostná mriežka uvoľňujúca minerálne častice" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Potrebná dávka nezávisí len od príjmu fosforu – spoluurčuje ju rýchlosť črevnej pasáže aj uvoľňovanie minerálu z kosti.</figcaption></figure>
 
-<p class="article-dek"><em>Tenapanor nie je viazač fosfátov — znižuje ich vstrebávanie v čreve. Nová súhrnná analýza troch japonských štúdií fázy 3 sa pýta prakticky: čím sa líšia pacienti, ktorí po titrácii skončili na najvyšších dávkach. Odpoveďou sú dva signály — kostná resorpcia a črevná pasáž. Oba sú zaujímavé, ani jeden zatiaľ nie je prediktorom.</em></p>
+<p class="article-dek"><em>Tenapanor nie je viazač fosfátov, ale znižuje ich vstrebávanie v čreve. Nová súhrnná analýza troch japonských štúdií fázy 3 sa pýta prakticky: čím sa líšia pacienti, ktorí po titrácii skončili na najvyšších dávkach. Odpoveďou sú dva signály: kostná resorpcia a črevná pasáž. Oba sú zaujímavé, ani jeden zatiaľ nie je prediktorom.</em></p>
 
-<p>Hyperfosfatémia patrí medzi základné prejavy minerálovej a kostnej poruchy pri chronickej chorobe obličiek (CKD-MBD). U dialyzovaných pacientov sú možnosti odstránenia fosfátov obmedzené: bežný dialyzačný režim odstráni približne <strong>1 800 až 2 520 mg fosfátov týždenne</strong>, čo je výrazne menej, než koľko sa priemerne prijme a vstrebe z potravy. Liečba preto stojí na troch pilieroch — primeranej dialyzačnej dávke, nutričnej intervencii a farmakoterapii.</p>
+<p>Hyperfosfatémia patrí medzi základné prejavy minerálovej a kostnej poruchy pri chronickej chorobe obličiek (CKD-MBD). U dialyzovaných pacientov sú možnosti odstránenia fosfátov obmedzené: bežný dialyzačný režim odstráni približne <strong>1 800 až 2 520 mg fosfátov týždenne</strong>, čo je výrazne menej, než koľko sa priemerne prijme a vstrebe z potravy. Liečba preto stojí na troch pilieroch: primeranej dialyzačnej dávke, nutričnej intervencii a farmakoterapii.</p>
 
 <p>Viazače fosfátov účinkujú v črevnom lúmene, kde viažu fosfáty prijaté potravou. Ich používanie však sprevádza vysoká tabletová záťaž, gastrointestinálne nežiaduce účinky a nedostatočná adherencia. Tenapanor predstavuje farmakologicky odlišný prístup: fosfáty neviaže, ale znižuje ich <strong>paracelulárnu absorpciu</strong> inhibíciou sodíkovo-vodíkového výmenníka 3 (NHE3).</p>
 
@@ -41,7 +41,7 @@ $articles[] = [
 
 <p>Tenapanor selektívne inhibuje NHE3 na apikálnej membráne enterocytov. Zmena intracelulárnej koncentrácie sodíka a protónov vedie ku konformačnej zmene bielkovín tesných spojov (<em>tight junctions</em>) medzi epitelovými bunkami, k zvýšeniu transepitelového odporu a k zníženiu paracelulárnej priepustnosti pre fosfáty. Liek sa prakticky nevstrebáva a účinkuje výlučne v črevnom lúmene.</p>
 
-<p>Inhibícia absorpcie sodíka zároveň zvyšuje množstvo sodíka a vody v črevnom lúmene. Stolica sa stáva mäkšou a zvyšuje sa jej frekvencia. Ten istý mechanizmus, ktorý znižuje fosfatémiu, teda vysvetľuje aj najčastejší nežiaduci účinok — <strong>hnačku</strong>. Táto dvojznačnosť je pre pochopenie celej analýzy kľúčová.</p>
+<p>Inhibícia absorpcie sodíka zároveň zvyšuje množstvo sodíka a vody v črevnom lúmene. Stolica sa stáva mäkšou a zvyšuje sa jej frekvencia. Ten istý mechanizmus, ktorý znižuje fosfatémiu, teda vysvetľuje aj najčastejší nežiaduci účinok – <strong>hnačku</strong>. Bez tejto dvojakej úlohy mechanizmu sa analýza nedá správne pochopiť.</p>
 
 <h3>Dávkovanie sa medzi regiónmi líši</h3>
 
@@ -69,7 +69,7 @@ $articles[] = [
       </tr>
       <tr>
         <th scope="row">EÚ vrátane SR</th>
-        <td>—</td>
+        <td>–</td>
         <td>K septembru 2026 nefiguruje v databáze centrálne registrovaných liekov EMA; v bežnej praxi nie je dostupný</td>
       </tr>
     </tbody>
@@ -122,13 +122,13 @@ $articles[] = [
 <p>Do analýzy účinnosti vstúpilo <strong>212 pacientov</strong>, ktorí v 8. týždni užívali tenapanor:</p>
 
 <ul>
-  <li><strong>127 pacientov</strong> na dávke 5 alebo 10 mg dvakrát denne — skupina s nižšou dávkou,</li>
-  <li><strong>85 pacientov</strong> na dávke 20 alebo 30 mg dvakrát denne — skupina s vyššou dávkou.</li>
+  <li><strong>127 pacientov</strong> na dávke 5 alebo 10 mg dvakrát denne – skupina s nižšou dávkou,</li>
+  <li><strong>85 pacientov</strong> na dávke 20 alebo 30 mg dvakrát denne – skupina s vyššou dávkou.</li>
 </ul>
 
-<p>Bezpečnostná analýza zahŕňala <strong>218 pacientov</strong> (133 v skupine s nižšou a 85 v skupine s vyššou dávkou) — pri porovnávaní percent nežiaducich účinkov treba mať na pamäti, že menovateľ nie je totožný s analýzou účinnosti.</p>
+<p>Bezpečnostná analýza zahŕňala <strong>218 pacientov</strong> (133 v skupine s nižšou a 85 v skupine s vyššou dávkou) – pri porovnávaní percent nežiaducich účinkov treba mať na pamäti, že menovateľ nie je totožný s analýzou účinnosti.</p>
 
-<p>Podľa modality bolo v analýze účinnosti 107 pacientov (50,5 %) na hemodiafiltrácii, 54 (25,5 %) na hemodialýze a 51 (24,1 %) na peritoneálnej dialýze. <em>(Poznámka: v časti Obmedzenia pôvodná práca uvádza mierne odlišné počty — 162 pacientov na hemodialýze a 52 na peritoneálnej dialýze. Ide o vnútornú nezrovnalosť publikácie; vyššie uvedené čísla pochádzajú z tabuľky 1 a súčtovo zodpovedajú populácii 212 pacientov.)</em></p>
+<p>Podľa modality bolo v analýze účinnosti 107 pacientov (50,5 %) na hemodiafiltrácii, 54 (25,5 %) na hemodialýze a 51 (24,1 %) na peritoneálnej dialýze. <em>(Poznámka: v časti Obmedzenia pôvodná práca uvádza mierne odlišné počty – 162 pacientov na hemodialýze a 52 na peritoneálnej dialýze. Ide o vnútornú nezrovnalosť publikácie; vyššie uvedené čísla pochádzajú z tabuľky 1 a súčtovo zodpovedajú populácii 212 pacientov.)</em></p>
 
 <h3>Kto boli títo pacienti</h3>
 
@@ -147,7 +147,7 @@ $articles[] = [
 
 <p>Koncentrácia sérového fosforu počas liečby postupne klesala v oboch skupinách. Zmena oproti východiskovej hodnote sa však medzi skupinami štatisticky významne nelíšila (p = 0,456; zmiešaný model opakovaných meraní, MMRM).</p>
 
-<p>Tento výsledok <strong>nemožno</strong> interpretovať tak, že nižšia a vyššia dávka sú rovnako účinné. Pacienti neboli na jednotlivé dávky randomizovaní — vyššia dávka bola výsledkom titrácie podľa fosfatémie a znášanlivosti. Pacienti s ťažšie kontrolovateľnou hyperfosfatémiou preto prirodzene častejšie skončili v skupine s vyššou dávkou. Ide o učebnicové <strong>skreslenie indikáciou</strong> (<em>confounding by indication</em>). Podobná zmena fosfatémie pri dvojnásobne odlišnej dávke skôr naznačuje, že titrácia fungovala tak, ako mala.</p>
+<p>Tento výsledok <strong>nemožno</strong> interpretovať tak, že nižšia a vyššia dávka sú rovnako účinné. Pacienti neboli na jednotlivé dávky randomizovaní – vyššia dávka bola výsledkom titrácie podľa fosfatémie a znášanlivosti. Pacienti s ťažšie kontrolovateľnou hyperfosfatémiou preto prirodzene častejšie skončili v skupine s vyššou dávkou. Ide o typické <strong>skreslenie indikáciou</strong> (<em>confounding by indication</em>). Podobná zmena fosfatémie pri dvojnásobne odlišnej dávke skôr naznačuje, že titrácia fungovala tak, ako mala.</p>
 
 <h2>Ktoré faktory súviseli s vyššou dávkou</h2>
 
@@ -195,25 +195,25 @@ $articles[] = [
 
 <p>Po viacrozmernej korekcii zostali štatisticky významné iba dva faktory.</p>
 
-<h3>TRACP-5b — marker kostnej resorpcie</h3>
+<h3>TRACP-5b – marker kostnej resorpcie</h3>
 
 <p>Každé zvýšenie TRACP-5b o 100 mU/dl bolo spojené s vyššou pravdepodobnosťou zaradenia do skupiny s vyššou dávkou: <strong>OR 1,121 (95 % IS 1,005–1,249; p = 0,040)</strong>.</p>
 
-<p>Efekt treba čítať v mierke skutočného rozdielu medzi skupinami. Ten predstavoval približne 128 mU/dl, čomu zodpovedá pomer šancí okolo 1,16 — teda <strong>skromný efekt</strong>. Dolná hranica intervalu spoľahlivosti (1,005) sa navyše takmer dotýka jednotky. Ide o hranične štatisticky významnú asociáciu, ktorú treba považovať za signál na ďalšie skúmanie, nie za potvrdený prediktor použiteľný na samostatné rozhodovanie.</p>
+<p>Efekt treba čítať v mierke skutočného rozdielu medzi skupinami. Ten predstavoval približne 128 mU/dl, čomu zodpovedá pomer šancí okolo 1,16 – teda <strong>skromný efekt</strong>. Dolná hranica intervalu spoľahlivosti (1,005) sa navyše takmer dotýka jednotky. Ide o hranične štatisticky významnú asociáciu, ktorú treba považovať za signál na ďalšie skúmanie, nie za potvrdený prediktor použiteľný na samostatné rozhodovanie.</p>
 
-<p>TRACP-5b je marker aktivity osteoklastov a kostnej resorpcie. Biologická úvaha autorov je priamočiara: približne <strong>85 % celkového telesného fosforu</strong> sa nachádza v kosti vo forme hydroxyapatitu a osteoklastová resorpcia ho uvoľňuje do obehu. Tenapanor pritom účinkuje výlučne v čreve a na kostnú resorpciu priamo nepôsobí. Pacient s vyšším prísunom fosfátov z kostného kompartmentu tak môže potrebovať intenzívnejšiu liečbu — alebo, presnejšie povedané, liečbu zameranú inam než na črevo.</p>
+<p>TRACP-5b je marker aktivity osteoklastov a kostnej resorpcie. Biologická úvaha autorov je priamočiara: približne <strong>85 % celkového telesného fosforu</strong> sa nachádza v kosti vo forme hydroxyapatitu a osteoklastová resorpcia ho uvoľňuje do obehu. Tenapanor pritom účinkuje výlučne v čreve a na kostnú resorpciu priamo nepôsobí. Pacient s vyšším prísunom fosfátov z kostného kompartmentu tak môže potrebovať intenzívnejšiu liečbu – alebo, presnejšie povedané, liečbu zameranú inam než na črevo.</p>
 
 <p>Interpretácia je vierohodná, ale štúdia <strong>tok fosfátov z kostí priamo nemerala</strong> a nevykonávala kostnú biopsiu. TRACP-5b preto nie je dôkazom vysokého kostného obratu ani dôkazom, že kostná resorpcia spôsobila potrebu vyššej dávky.</p>
 
-<p>Pôvodná publikácia navyše na jednom mieste označuje parathormón za „marker kostnej formácie“. To nie je presné: <strong>PTH je regulačný hormón</strong> ovplyvňujúci kostný obrat, nie marker formácie kosti. Medzi markery kostnej formácie patria kostná alkalická fosfatáza (bALP) a P1NP, medzi markery resorpcie CTX a práve TRACP-5b. Argument, že PTH nevykazoval asociáciu s dávkou, tak nemožno stavať proti nálezu s TRACP-5b ako protiváhu „formácia verzus resorpcia“ — ide o ukazovatele odlišnej povahy.</p>
+<p>Pôvodná publikácia navyše na jednom mieste označuje parathormón za „marker kostnej formácie“. To nie je presné: <strong>PTH je regulačný hormón</strong> ovplyvňujúci kostný obrat, nie marker formácie kosti. Medzi markery kostnej formácie patria kostná alkalická fosfatáza (bALP) a P1NP, medzi markery resorpcie CTX a práve TRACP-5b. Argument, že PTH nevykazoval asociáciu s dávkou, tak nemožno stavať proti nálezu s TRACP-5b ako protiváhu „formácia verzus resorpcia“ – ide o ukazovatele odlišnej povahy.</p>
 
-<h3>Konzistencia stolice — a čo v skutočnosti meria</h3>
+<h3>Konzistencia stolice – a čo v skutočnosti meria</h3>
 
 <p>Každé zvýšenie skóre Bristolovej škály o jeden stupeň bolo spojené s <strong>nižšou</strong> pravdepodobnosťou potreby vyššej dávky: <strong>OR 0,667 (95 % IS 0,468–0,951; p = 0,025)</strong>. V opačnom smere: každý stupeň smerom k tvrdšej stolici zvyšoval šancu na vyššiu dávku približne 1,5-násobne.</p>
 
-<p>Nižšie skóre označuje tvrdšiu stolicu a sklon k zápche. Interpretácia je tu odlišná od TRACP-5b a treba ju povedať otvorene: pacienti so zápchou pravdepodobne <strong>lepšie tolerovali</strong> osmotický a sekrečný účinok tenapanoru, čo umožnilo intenzívnejšiu titráciu. Vyššia dávka teda nemusela odrážať farmakologickú potrebu, ale schopnosť pacienta dávku zniesť.</p>
+<p>Nižšie skóre označuje tvrdšiu stolicu a sklon k zápche. Interpretácia je tu iná než pri TRACP-5b a treba ju povedať otvorene: pacienti so zápchou pravdepodobne <strong>lepšie tolerovali</strong> osmotický a sekrečný účinok tenapanoru, čo umožnilo intenzívnejšiu titráciu. Vyššia dávka teda nemusela odrážať farmakologickú potrebu, ale schopnosť pacienta dávku zniesť.</p>
 
-<p>Počet stolíc za týždeň nebol nezávislým prediktorom — a pri pohľade na východiskové hodnoty (8,17 oproti 8,35 za týždeň) je zrejmé prečo: skupiny sa vo frekvencii prakticky nelíšili. <strong>Konzistencia stolice je pri hodnotení tolerancie informatívnejšia než frekvencia vyprázdňovania.</strong> To je poznatok použiteľný aj mimo tenapanoru.</p>
+<p>Počet stolíc za týždeň nebol nezávislým prediktorom – a pri pohľade na východiskové hodnoty (8,17 oproti 8,35 za týždeň) je zrejmé prečo: skupiny sa vo frekvencii prakticky nelíšili. <strong>Konzistencia stolice je pri hodnotení tolerancie informatívnejšia než frekvencia vyprázdňovania.</strong> Tento poznatok platí aj mimo tenapanoru.</p>
 
 <h2>Gastrointestinálna bezpečnosť</h2>
 
@@ -244,7 +244,7 @@ $articles[] = [
   </table>
 </div>
 
-<p>Hnačka bola veľmi častá v oboch skupinách a rozdiel nebol štatisticky významný. Záver, že vyššia dávka spôsobuje menej hnačky, by však bol <strong>nesprávny</strong>. Do skupiny s vyššou dávkou sa mohli dostať predovšetkým pacienti, ktorí liečbu lepšie tolerovali; tí citlivejší na gastrointestinálne účinky zostali na nižšej dávke alebo dávku nezvyšovali. Ide o <strong>selekciu podľa tolerancie</strong> — rovnaký mechanizmus, ktorý vysvetľuje aj nález s Bristolovou škálou. Obidva výsledky sú v skutočnosti dvoma pohľadmi na tú istú vec.</p>
+<p>Hnačka bola veľmi častá v oboch skupinách a rozdiel nebol štatisticky významný. Záver, že vyššia dávka spôsobuje menej hnačky, by však bol <strong>nesprávny</strong>. Do skupiny s vyššou dávkou sa mohli dostať predovšetkým pacienti, ktorí liečbu lepšie tolerovali; tí citlivejší na gastrointestinálne účinky zostali na nižšej dávke alebo dávku nezvyšovali. Ide o <strong>selekciu podľa tolerancie</strong> – rovnaký mechanizmus, ktorý vysvetľuje aj nález s Bristolovou škálou. Obidva výsledky sú v skutočnosti dvoma pohľadmi na tú istú vec.</p>
 
 <h2>Čo štúdia preukázala</h2>
 
@@ -269,11 +269,11 @@ $articles[] = [
   <li>tenapanor znižuje výskyt zlomenín, cievnych kalcifikácií, kardiovaskulárnych príhod alebo úmrtí.</li>
 </ul>
 
-<p>Hodnotenými ukazovateľmi boli dávka, fosfatémia a gastrointestinálna znášanlivosť. <strong>Klinické prognostické ukazovatele sa nesledovali</strong> — a práve tie zatiaľ chýbajú celej triede liečiv znižujúcich fosfatémiu.</p>
+<p>Hodnotenými ukazovateľmi boli dávka, fosfatémia a gastrointestinálna znášanlivosť. <strong>Klinické prognostické ukazovatele sa nesledovali</strong> – a práve tie zatiaľ chýbajú celej triede liečiv znižujúcich fosfatémiu.</p>
 
 <h2>Metodologické obmedzenia</h2>
 
-<p>Najdôležitejším obmedzením je <em>post hoc</em> observačný charakter analýzy. Skupiny nevznikli randomizáciou, ale retrospektívne podľa konečnej dávky. Dávka pritom bola priamo určovaná fosfatémiou a znášanlivosťou, teda vlastnosťami, ktoré sa následne analyzovali ako možné vysvetlenie dávky. Autori riziko <strong>kruhovej inferencie</strong> otvorene pripúšťajú a čiastočne ho tlmia zaradením východiskovej fosfatémie do viacrozmerného modelu — úplne ho však odstrániť nemožno.</p>
+<p>Najdôležitejším obmedzením je <em>post hoc</em> observačný charakter analýzy. Skupiny nevznikli randomizáciou, ale retrospektívne podľa konečnej dávky. Dávka pritom bola priamo určovaná fosfatémiou a znášanlivosťou, teda vlastnosťami, ktoré sa následne analyzovali ako možné vysvetlenie dávky. Autori riziko <strong>kruhovej inferencie</strong> otvorene pripúšťajú a čiastočne ho tlmia zaradením východiskovej fosfatémie do viacrozmerného modelu – úplne ho však odstrániť nemožno.</p>
 
 <p>Ďalšie obmedzenia:</p>
 
@@ -282,26 +282,26 @@ $articles[] = [
   <li>zlúčenie monoterapie po vysadení viazačov s prídavnou liečbou; samostatné analýzy neboli pre malé počty uskutočniteľné,</li>
   <li>zlúčenie hemodialýzy, hemodiafiltrácie a peritoneálnej dialýzy napriek odlišnej kinetike odstraňovania fosfátov,</li>
   <li>krátke, osemtýždňové hodnotenie (v štúdii C sa nevyužilo dostupných 16 týždňov),</li>
-  <li>iba 85 pacientov v skupine s vyššou dávkou pri veľkom počte premenných vo viacrozmernom modeli — riziko nadmerného prispôsobenia modelu,</li>
+  <li>iba 85 pacientov v skupine s vyššou dávkou pri veľkom počte premenných vo viacrozmernom modeli – riziko nadmerného prispôsobenia modelu,</li>
   <li>výlučne japonská populácia s dlhým dialyzačným vekom a odlišnými stravovacími zvyklosťami,</li>
   <li>protokolová titrácia, ktorá nemusí zodpovedať bežnej klinickej praxi,</li>
   <li>štúdiu financovala spoločnosť Kyowa Kirin, dvaja z piatich autorov sú jej zamestnancami a ďalší traja deklarujú honoráre alebo granty od výrobcu.</li>
 </ul>
 
-<p>Za zmienku stojí aj rozdiel v tóne: záver pôvodnej práce znie pomerne kategoricky („pacienti vyžadujúci vyššie dávky sa vyznačujú buď zvýšenou kostnou resorpciou, alebo sklonom k zápche“), hoci samotné údaje takúto istotu neunesú.</p>
+<p>Rozdiel je aj v tóne: záver pôvodnej práce znie pomerne kategoricky („pacienti vyžadujúci vyššie dávky sa vyznačujú buď zvýšenou kostnou resorpciou, alebo sklonom k zápche“), hoci samotné údaje takúto istotu neunesú.</p>
 
 <h2>Praktické využitie v dialyzačnej ambulancii</h2>
 
 <p>Pred zvýšením dávky ktoréhokoľvek lieku znižujúceho črevnú absorpciu fosfátov je vhodné posúdiť:</p>
 
 <ol>
-  <li>fosfatémiu <strong>v čase</strong> — trend a variabilitu, nie jedinú hodnotu,</li>
+  <li>fosfatémiu <strong>v čase</strong> – trend a variabilitu, nie jedinú hodnotu,</li>
   <li>príjem fosfátov vrátane fosfátových aditív v spracovaných potravinách,</li>
   <li>adherenciu a správne načasovanie viazačov vo vzťahu k jedlu,</li>
   <li>účinnosť dialýzy, dĺžku a frekvenciu procedúr a reziduálnu funkciu obličiek,</li>
   <li>liečbu sekundárnej hyperparatyreózy a jej primeranosť,</li>
-  <li>ukazovatele kostného obratu — vždy v klinickom kontexte, nie izolovane,</li>
-  <li>konzistenciu a frekvenciu stolice — konzistencia je informatívnejšia,</li>
+  <li>ukazovatele kostného obratu – vždy v klinickom kontexte, nie izolovane,</li>
+  <li>konzistenciu a frekvenciu stolice – konzistencia je informatívnejšia,</li>
   <li>súbežné užívanie laxatív a liekov spôsobujúcich zápchu alebo hnačku.</li>
 </ol>
 
@@ -309,13 +309,13 @@ $articles[] = [
 
 <h3>Čo si z toho odniesť, keď tenapanor k dispozícii nemáme</h3>
 
-<p>Keďže tenapanor u nás dostupný nie je, praktická hodnota tejto práce je konceptuálna — a preto univerzálnejšia, než sa na prvý pohľad zdá. Úvaha o kostnom rezervoári totiž platí pre <strong>ktorúkoľvek</strong> stratégiu, ktorá zasahuje len črevný príjem fosfátov, teda aj pre všetky viazače. Ak fosfatémia neklesá napriek správne užívaným viazačom, primeranej diéte a dostatočnej dialyzačnej dávke, ďalšie zvyšovanie tabletovej záťaže nemusí byť správnou odpoveďou — otázka sa má presunúť <strong>od čreva ku kosti a k prištítnym telieskam</strong>.</p>
+<p>Keďže tenapanor u nás dostupný nie je, praktická hodnota tejto práce je konceptuálna, a preto širšia, než sa na prvý pohľad zdá. Úvaha o kostnom rezervoári totiž platí pre <strong>ktorúkoľvek</strong> stratégiu, ktorá zasahuje len črevný príjem fosfátov, teda aj pre všetky viazače. Ak fosfatémia neklesá napriek správne užívaným viazačom, primeranej diéte a dostatočnej dialyzačnej dávke, ďalšie zvyšovanie tabletovej záťaže nemusí byť správnou odpoveďou – otázka sa má presunúť <strong>od čreva ku kosti a k prištítnym telieskam</strong>.</p>
 
 <p>Druhé posolstvo je jednoduchšie: pri liečivách s osmotickým črevným účinkom rozhoduje o dosiahnuteľnej dávke charakter stolice, nie počet stolíc. Stojí za to sa naň pýtať cielene.</p>
 
 <h2>Záver</h2>
 
-<p>Vyššia koncentrácia TRACP-5b a tvrdšia stolica boli v súhrnnej <em>post hoc</em> analýze spojené s vyššou konečnou dávkou tenapanoru. Prvý nález môže odrážať zvýšený prísun fosfátov z kostného kompartmentu, druhý pravdepodobne lepšiu toleranciu črevného účinku lieku. Sú to teda dva nálezy odlišnej povahy — jeden hovorí o potrebe, druhý o možnosti.</p>
+<p>Vyššia koncentrácia TRACP-5b a tvrdšia stolica boli v súhrnnej <em>post hoc</em> analýze spojené s vyššou konečnou dávkou tenapanoru. Prvý nález môže odrážať zvýšený prísun fosfátov z kostného kompartmentu, druhý pravdepodobne lepšiu toleranciu črevného účinku lieku. Sú to teda dva nálezy odlišnej povahy – jeden hovorí o potrebe, druhý o možnosti.</p>
 
 <p>Obidve asociácie sú klinicky zaujímavé, ale zatiaľ nepredstavujú validované prediktory dávky. Tenapanor sa má titrovať individuálne podľa fosfatémie, gastrointestinálnej znášanlivosti a celkového manažmentu CKD-MBD. Potrebné sú prospektívne štúdie, ktoré vopred definujú prediktory odpovede, <strong>oddelia farmakodynamickú potrebu od tolerancie</strong> a vyhodnotia aj dlhodobé klinické výsledky.</p>
 
@@ -324,10 +324,10 @@ $articles[] = [
 <h2>Súvisiace články</h2>
 
 <ul>
-  <li><a href="article.php?slug=perzistujuca-hyperparatyreoza-po-transplantacii-oblicky">Perzistujúca hyperparatyreóza po transplantácii obličky</a> — druhá strana osi kosť–prištítne telieska.</li>
-  <li><a href="article.php?slug=ckd-samostatny-faktor-polyfarmacie">Chronická choroba obličiek ako samostatný faktor polyfarmácie</a> — kontext tabletovej záťaže viazačov.</li>
-  <li><a href="article.php?slug=online-hemodiafiltracia-davkovana-liecba-odporucania-sin">Online hemodiafiltrácia ako dávkovaná liečba</a> — dialyzačná zložka odstraňovania fosfátov.</li>
-  <li><a href="article.php?slug=prukaloprid-brain-fog-depresia-kognicia-nefrologia">Prukaloprid, zápcha a kognícia</a> — črevná pasáž ako klinická premenná.</li>
+  <li><a href="article.php?slug=perzistujuca-hyperparatyreoza-po-transplantacii-oblicky">Perzistujúca hyperparatyreóza po transplantácii obličky</a> – druhá strana osi kosť–prištítne telieska.</li>
+  <li><a href="article.php?slug=ckd-samostatny-faktor-polyfarmacie">Chronická choroba obličiek ako samostatný faktor polyfarmácie</a> – kontext tabletovej záťaže viazačov.</li>
+  <li><a href="article.php?slug=online-hemodiafiltracia-davkovana-liecba-odporucania-sin">Online hemodiafiltrácia ako dávkovaná liečba</a> – dialyzačná zložka odstraňovania fosfátov.</li>
+  <li><a href="article.php?slug=prukaloprid-brain-fog-depresia-kognicia-nefrologia">Prukaloprid, zápcha a kognícia</a> – črevná pasáž ako klinická premenná.</li>
 </ul>
 
 <hr>
@@ -347,7 +347,7 @@ $articles[] = [
   <li><strong>U.S. Food and Drug Administration.</strong> <em>XPHOZAH (tenapanor) tablets — Highlights of Prescribing Information.</em> 2023. <a href="https://www.accessdata.fda.gov/drugsatfda_docs/label/2023/213931s000lbl.pdf" target="_blank" rel="noopener noreferrer">FDA</a>.</li>
 </ol>
 
-<p><em><strong>Poznámka k dôkazom:</strong> Všetky číselné údaje pripísané súhrnnej analýze — 212 pacientov v analýze účinnosti (127 a 85), 218 v bezpečnostnej analýze (133 a 85), rozdelenie 107/54/51 podľa modality, vek 63,2 roka, 65,1 % mužov, 93,1 mesiaca dialyzačnej liečby, fosfor 7,39 mg/dl, korigovaný vápnik 8,88 mg/dl, diabetická nefropatia 32,1 %, dávky 8,0 ± 2,5 a 26,7 ± 4,9 mg dvakrát denne, p = 0,456, TRACP-5b 532,4 ± 312,9 oproti 660,1 ± 389,3 mU/dl, BSFS 4,15 ± 0,87 oproti 3,88 ± 0,89, stolice 8,17 ± 3,76 oproti 8,35 ± 3,37 za týždeň, OR 1,121 (95 % IS 1,005–1,249; p = 0,040), OR 0,667 (95 % IS 0,468–0,951; p = 0,025), hnačka 95 (71,4 %) oproti 57 (67,1 %) pri p = 0,546 a mäkká stolica 7 (5,3 %) oproti 5 (5,9 %) — boli overené proti plnému textu a tabuľkám otvorene prístupnej publikácie v PLOS ONE. Bibliografické údaje všetkých citovaných prác vrátane mien autorov boli overené v registri Crossref. Údaj o týždennom odstránení 1 800 – 2 520 mg fosfátov dialýzou pochádza z prehľadu Sprague a spol. (zdroj 5); podiel 85 % telesného fosforu v kosti uvádza samotná primárna práca. Porovnanie dávkovania medzi Japonskom a USA vychádza z registračných údajov FDA (zdroj 10) a z prehľadu Akizawa a spol. (zdroj 2); neprítomnosť tenapanoru v databáze centrálne registrovaných liekov EMA bola overená k septembru 2026. Kritické komentáre — skreslenie indikáciou, selekcia podľa tolerancie, mierka efektu TRACP-5b, nepresné označenie parathormónu za marker kostnej formácie a vnútorná nezrovnalosť v počtoch podľa modality — sú <strong>vlastným odborným hodnotením</strong>, nie záverom pôvodných autorov.</em></p>
+<p><em><strong>Poznámka k dôkazom:</strong> Všetky číselné údaje pripísané súhrnnej analýze – 212 pacientov v analýze účinnosti (127 a 85), 218 v bezpečnostnej analýze (133 a 85), rozdelenie 107/54/51 podľa modality, vek 63,2 roka, 65,1 % mužov, 93,1 mesiaca dialyzačnej liečby, fosfor 7,39 mg/dl, korigovaný vápnik 8,88 mg/dl, diabetická nefropatia 32,1 %, dávky 8,0 ± 2,5 a 26,7 ± 4,9 mg dvakrát denne, p = 0,456, TRACP-5b 532,4 ± 312,9 oproti 660,1 ± 389,3 mU/dl, BSFS 4,15 ± 0,87 oproti 3,88 ± 0,89, stolice 8,17 ± 3,76 oproti 8,35 ± 3,37 za týždeň, OR 1,121 (95 % IS 1,005–1,249; p = 0,040), OR 0,667 (95 % IS 0,468–0,951; p = 0,025), hnačka 95 (71,4 %) oproti 57 (67,1 %) pri p = 0,546 a mäkká stolica 7 (5,3 %) oproti 5 (5,9 %) – boli overené proti plnému textu a tabuľkám otvorene prístupnej publikácie v PLOS ONE. Bibliografické údaje všetkých citovaných prác vrátane mien autorov boli overené v registri Crossref. Údaj o týždennom odstránení 1 800 – 2 520 mg fosfátov dialýzou pochádza z prehľadu Sprague a spol. (zdroj 5); podiel 85 % telesného fosforu v kosti uvádza samotná primárna práca. Porovnanie dávkovania medzi Japonskom a USA vychádza z registračných údajov FDA (zdroj 10) a z prehľadu Akizawa a spol. (zdroj 2); neprítomnosť tenapanoru v databáze centrálne registrovaných liekov EMA bola overená k septembru 2026. Kritické komentáre – skreslenie indikáciou, selekcia podľa tolerancie, mierka efektu TRACP-5b, nepresné označenie parathormónu za marker kostnej formácie a vnútorná nezrovnalosť v počtoch podľa modality – sú <strong>vlastným odborným hodnotením</strong>, nie záverom pôvodných autorov.</em></p>
 HTML,
 ];
 

@@ -98,7 +98,7 @@ $articles[] = [
 </table>
 </div>
 
-<p>Pri vysokom riziku je preferovaná viacfázová CT urografia, ak nie je kontraindikovaná. Alternatívou je MR urografia; ak nemožno použiť ani jednu, možno kombinovať retrográdnu pyelografiu s neenhancovaným axiálnym zobrazením alebo ultrasonografiou. Voľba musí zohľadniť funkciu obličiek, predchádzajúcu reakciu na kontrastnú látku, radiačnú záťaž a lokálnu dostupnosť.</p>
+<p>Pri vysokom riziku je preferovaná viacfázová CT urografia, ak nie je kontraindikovaná. Alternatívou je MR urografia; ak nemožno použiť ani jednu, možno kombinovať retrográdnu pyelografiu s natívnym axiálnym zobrazením alebo ultrasonografiou. Voľba musí zohľadniť funkciu obličiek, predchádzajúcu reakciu na kontrastnú látku, radiačnú záťaž a lokálnu dostupnosť.</p>
 
 <p>U informovaného pacienta so stredným rizikom, ktorý sa chce vyhnúť cystoskopii, aktualizácia z roku 2025 pripúšťa použitie cytológie alebo validovaného močového nádorového markeru ako pomôcky pri rozhodovaní o cystoskopii. Ultrasonografia sa však vykoná a pri pretrvávaní mikrohematúrie sa cystoskopia doplní. Markery nie sú rutinnou náhradou cystoskopie vo vysokom riziku.</p>
 

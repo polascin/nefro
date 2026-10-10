@@ -29,21 +29,21 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'V nemeckej kohorte 4 211 dospelých sa vyššia tuková hmota spájala s nižšou eGFR, výraznejšie u žien a v staršom veku. Ide o prierezovú analýzu ovplyvnenú aj pôsobením telesného zloženia na samotné biomarkery.',
     'content'      => <<<'HTML'
-<figure><a href="img/telesne-zlozenie-tukova-hmota-egfr-populacna-studia.webp" rel="noopener noreferrer" target="_blank"><img src="img/telesne-zlozenie-tukova-hmota-egfr-populacna-studia.webp" alt="Rez telom s tukovou a svalovou vrstvou, z ktorého vychádza svetelná spojnica k obličke, no cestou sa rozpadá" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. eGFR odhaduje filtráciu z kreatinínu, a ten závisí od svalovej hmoty — pri extrémnom telesnom zložení preto odhad stráca výpovednú hodnotu.</figcaption></figure>
+<figure><a href="img/telesne-zlozenie-tukova-hmota-egfr-populacna-studia.webp" rel="noopener noreferrer" target="_blank"><img src="img/telesne-zlozenie-tukova-hmota-egfr-populacna-studia.webp" alt="Rez telom s tukovou a svalovou vrstvou, z ktorého vychádza svetelná spojnica k obličke, no cestou sa rozpadá" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. eGFR odhaduje filtráciu z kreatinínu, a ten závisí od svalovej hmoty – pri extrémnom telesnom zložení preto odhad stráca výpovednú hodnotu.</figcaption></figure>
 
-<p>Vzťah medzi obezitou a funkciou obličiek sa zvyčajne opisuje priamočiaro: viac tuku, horšie obličky. Analýza z nemeckej populačnej kohorty <em>Study of Health in Pomerania</em> (SHIP) ukazuje, že obraz je zložitejší — smer asociácie sa mení podľa veku a jej sila podľa pohlavia. Pre nefrológa je pritom rovnako zaujímavá druhá otázka, ktorú práca otvára: nakoľko meriame funkciu obličiek a nakoľko meriame vplyv telesného zloženia na biomarkery, z ktorých ju odhadujeme.</p>
+<p>Vzťah medzi obezitou a funkciou obličiek sa zvyčajne opisuje priamočiaro: viac tuku, horšie obličky. Analýza z nemeckej populačnej kohorty <em>Study of Health in Pomerania</em> (SHIP) ukazuje, že obraz je zložitejší: smer asociácie sa mení podľa veku a jej sila podľa pohlavia. Pre nefrológa je rovnako dôležitá druhá otázka, ktorú práca otvára: nakoľko meriame funkciu obličiek a nakoľko meriame vplyv telesného zloženia na biomarkery, z ktorých ju odhadujeme.</p>
 
 <h2>Čo analýza zahŕňala</h2>
 
-<p>Vychádzala z údajov <strong>4 211 osôb</strong> zaradených do kohorty SHIP Trend-0. Telesné zloženie sa hodnotilo tromi spôsobmi:</p>
+<p>Analýza vychádzala z údajov <strong>4 211 osôb</strong> zaradených do kohorty SHIP Trend-0. Telesné zloženie sa hodnotilo tromi spôsobmi:</p>
 
 <ul>
-  <li><strong>klasickou antropometriou</strong> — index telesnej hmotnosti (BMI) a pomer obvodu pása a bokov,</li>
+  <li><strong>klasickou antropometriou</strong> – index telesnej hmotnosti (BMI) a pomer obvodu pása a bokov,</li>
   <li><strong>bioimpedančnou analýzou</strong>,</li>
   <li><strong>magnetickou rezonanciou</strong> s kvantifikáciou podkožného, viscerálneho a pečeňového tuku.</li>
 </ul>
 
-<p>Odhadovaná glomerulová filtrácia sa počítala rovnicami založenými na kreatiníne aj na cystatíne C. Analýza bola <strong>prierezová</strong>, s lineárnymi regresnými modelmi upravenými na zavádzajúce premenné.</p>
+<p>Odhadovaná glomerulová filtrácia sa počítala rovnicami založenými na kreatiníne aj na cystatíne C. Analýza bola <strong>prierezová</strong>, s lineárnymi regresnými modelmi upravenými na mätúce faktory.</p>
 
 <h2>Výsledky</h2>
 
@@ -76,24 +76,24 @@ $articles[] = [
   </table>
 </div>
 
-<p>Autori uzatvárajú, že zvýšená telesná a tuková hmota — bez ohľadu na distribúciu tuku — a nižší podiel svalovej hmoty sa spájajú s nižšou eGFR, najmä u žien a u starších osôb.</p>
+<p>Autori uzatvárajú, že zvýšená telesná a tuková hmota (bez ohľadu na distribúciu tuku) a nižší podiel svalovej hmoty sa spájajú s nižšou eGFR, najmä u žien a u starších osôb.</p>
 
 <h2>Vekový obrat: hyperfiltrácia ako najpravdepodobnejšie vysvetlenie</h2>
 
-<p>Zmena smeru asociácie podľa veku nie je prekvapením, ale skôr potvrdením známeho javu. Obezita v mladšom veku býva spojená s <strong>glomerulovou hyperfiltráciou</strong>: zvýšený metabolický nárok, aktivácia systému renín-angiotenzín-aldosterón a zmeny tonusu aferentnej arterioly vedú k vyššej filtrácii na nefrón. Vyššia eGFR v tejto fáze teda nie je znakom lepšieho zdravia obličiek — je znakom záťaže, ktorá časom vedie k glomerulomegálii, k ohniskovej segmentovej glomeruloskleróze vo variante spojenej s obezitou a k poklesu funkcie.</p>
+<p>Zmena smeru asociácie podľa veku neprekvapuje, skôr potvrdzuje známy jav. Obezita v mladšom veku býva spojená s <strong>glomerulovou hyperfiltráciou</strong>: zvýšený metabolický nárok, aktivácia systému renín-angiotenzín-aldosterón a zmeny tonusu aferentnej arterioly vedú k vyššej filtrácii na nefrón. Vyššia eGFR v tejto fáze teda nie je znakom zdravších obličiek, ale záťaže, ktorá časom vedie k glomerulomegálii, k ohniskovej segmentovej glomeruloskleróze vo variante spojenej s obezitou a k poklesu funkcie.</p>
 
-<p>V staršej vekovej skupine sa preto pozoruje opačný smer: kumulatívne poškodenie sa prejaví ako nižšia eGFR. Prierezová analýza zachytáva obe fázy naraz, ale u rôznych ľudí — nie priebeh u tých istých. To je zásadné obmedzenie a bráni tomu, aby sa výsledok čítal ako opis vývoja v čase.</p>
+<p>V staršej vekovej skupine sa preto pozoruje opačný smer: kumulatívne poškodenie sa prejaví ako nižšia eGFR. Prierezová analýza zachytáva obe fázy naraz, ale u rôznych ľudí, nie priebeh u tých istých. Je to zásadné obmedzenie: výsledok nemožno čítať ako opis vývoja v čase.</p>
 
 <h2>Kde je metodická hranica: eGFR nie je meraná GFR</h2>
 
-<p>Toto je bod, ktorý si pri téme „telesné zloženie a obličky“ zaslúži osobitnú pozornosť. Analýza pracuje s <strong>odhadovanou</strong> filtráciou, a obidva jej biomarkery sú telesným zložením ovplyvnené nezávisle od skutočnej filtrácie:</p>
+<p>Pri téme „telesné zloženie a obličky“ si tento bod zaslúži osobitnú pozornosť. Analýza pracuje s <strong>odhadovanou</strong> filtráciou, a obidva jej biomarkery sú telesným zložením ovplyvnené nezávisle od skutočnej filtrácie:</p>
 
 <ul>
   <li><strong>Kreatinín</strong> vzniká z kreatínu vo svale. Množstvo svalovej hmoty priamo ovplyvňuje jeho produkciu; pri rovnakej skutočnej GFR má osoba s väčšou svalovou hmotou vyšší kreatinín, a teda nižšiu vypočítanú eGFR.</li>
-  <li><strong>Cystatín C</strong> je citlivý na tukovú hmotu, zápal nízkeho stupňa, funkciu štítnej žľazy a liečbu glukokortikoidmi. Tieto vplyvy sú označované ako <em>determinanty nezávislé od GFR</em> a pri obezite pôsobia smerom k vyššej koncentrácii — a teda k nižšej vypočítanej eGFR.</li>
+  <li><strong>Cystatín C</strong> je citlivý na tukovú hmotu, zápal nízkeho stupňa, funkciu štítnej žľazy a liečbu glukokortikoidmi. Tieto vplyvy sa označujú ako <em>determinanty nezávislé od GFR</em> a pri obezite pôsobia smerom k vyššej koncentrácii, a teda k nižšej vypočítanej eGFR.</li>
 </ul>
 
-<p>Inými slovami: časť pozorovanej asociácie medzi tukovou hmotou a nižšou eGFR môže odrážať vplyv telesného zloženia na biomarkery, nie na filtráciu samotnú. Nie je to argument proti štúdii — je to argument za opatrné formulovanie záveru. Rozlíšiť tieto dve zložky by vyžadovalo <strong>meranú GFR</strong> exogénnym markerom (napr. iohexolom), čo v populačnej kohorte tejto veľkosti nie je uskutočniteľné.</p>
+<p>Inými slovami: časť pozorovanej asociácie medzi tukovou hmotou a nižšou eGFR môže odrážať vplyv telesného zloženia na biomarkery, nie na filtráciu samotnú. Nie je to argument proti štúdii, ale za opatrnú formuláciu záveru. Rozlíšiť tieto dve zložky by vyžadovalo <strong>meranú GFR</strong> exogénnym markerom (napr. iohexolom), čo v populačnej kohorte tejto veľkosti nie je uskutočniteľné.</p>
 
 <h2>Ďalšie obmedzenia</h2>
 

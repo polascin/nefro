@@ -33,7 +33,7 @@ $articles[] = [
 
 <h2>Prečo je téma dôležitá</h2>
 
-<p>Chronická choroba obličiek (CKD) je u pacientov prijímaných na jednotky intenzívnej starostlivosti (JIS) neúmerne častá a predstavuje významný prognostický ukazovateľ. Doteraz však bolo málo jasné, ako presne sa prognóza mení naprieč jednotlivými stupňami závažnosti — a najmä, ako si stoja pacienti s nedialyzovaným 5. štádiom v porovnaní s pacientmi na udržiavacej dialýze.</p>
+<p>Chronická choroba obličiek (CKD) je u pacientov prijímaných na jednotky intenzívnej starostlivosti (JIS) neúmerne častá a predstavuje významný prognostický ukazovateľ. Doteraz však bolo málo jasné, ako presne sa prognóza mení naprieč jednotlivými stupňami závažnosti, a najmä ako si stoja pacienti s nedialyzovaným 5. štádiom v porovnaní s pacientmi na udržiavacej dialýze.</p>
 
 <p>Osobitnú opatrnosť si vyžaduje prekvapujúce zistenie tejto štúdie: pacienti liečení udržiavacou dialýzou mali <strong>nižšiu</strong> upravenú mortalitu než pacienti s nedialyzovaným štádiom G5.</p>
 
@@ -111,7 +111,7 @@ $articles[] = [
 
 <p>Referenčnou skupinou boli pacienti s eGFR najmenej 60 ml/min/1,73 m². Výsledky ukazujú konzistentný gradient rizika: aj mierne až stredne závažné zníženie eGFR bolo spojené s vyššou mortalitou, pričom najsilnejšia asociácia sa zistila pri nedialyzovanom štádiu G5.</p>
 
-<p>Pomer šancí však nie je totožný s relatívnym rizikom. Ak je výsledok častý — a mortalita kriticky chorých pacientov častá je —, pomer šancí veľkosť relatívneho rizika opticky nadhodnocuje. Na klinickú interpretáciu sú preto potrebné aj absolútne riziká, ktoré publikovaný abstrakt neuvádza.</p>
+<p>Pomer šancí však nie je totožný s relatívnym rizikom. Pri častom výsledku, a mortalita kriticky chorých pacientov častá je, pomer šancí veľkosť relatívneho rizika opticky nadhodnocuje. Na klinickú interpretáciu sú preto potrebné aj absolútne riziká, ktoré publikovaný abstrakt neuvádza.</p>
 
 <h2>Výrazný nárast potreby akútnej náhrady funkcie obličiek</h2>
 
@@ -135,7 +135,7 @@ $articles[] = [
 
 <p>Súvislosť je veľmi výrazná, ale výsledok nemožno interpretovať výlučne ako rozdiel vo výskyte závažného akútneho poškodenia obličiek. O začatí náhrady funkcie obličiek (KRT) rozhoduje kombinácia klinického stavu, východiskovej funkcie obličiek, hyperkaliémie, acidózy, objemového preťaženia, oligúrie, komplikácií urémie a odpovede na konzervatívnu liečbu.</p>
 
-<p>Pacient s eGFR pod 15 ml/min/1,73 m² môže dosiahnuť indikáciu na dialýzu už pri menšom akútnom poklese funkcie než pacient s normálnou obličkovou rezervou. Časť pozorovaného gradientu preto vyplýva aj z rozdielnej vzdialenosti od klinického prahu na začatie liečby. Pri nedialyzovanom štádiu G5 sa navyše mohlo v časti prípadov ísť skôr o <em>plánovaný začiatok chronickej dialýzy urýchlený akútnym ochorením</em> než o klasické akútne poškodenie obličiek.</p>
+<p>Pacient s eGFR pod 15 ml/min/1,73 m² môže dosiahnuť indikáciu na dialýzu už pri menšom akútnom poklese funkcie než pacient s normálnou obličkovou rezervou. Časť pozorovaného gradientu preto vyplýva aj z rozdielnej vzdialenosti od klinického prahu na začatie liečby. Pri nedialyzovanom štádiu G5 mohlo navyše v časti prípadov ísť skôr o <em>plánovaný začiatok chronickej dialýzy urýchlený akútnym ochorením</em> než o klasické akútne poškodenie obličiek.</p>
 
 <h2>Dĺžka hospitalizácie</h2>
 
@@ -185,7 +185,7 @@ $articles[] = [
 
 <p>Výsledok podporuje biologicky pravdepodobný predpoklad, že pravdepodobnosť zotavenia obličiek po kritickom ochorení závisí od východiskovej funkčnej rezervy.</p>
 
-<p>Podmienka prežitia do 90. dňa je pri interpretácii kľúčová a treba ju čítať dvoma smermi. Na jednej strane vhodne odstraňuje konkurenčné riziko úmrtia — pacient, ktorý zomrie, sa nemôže zaradiť medzi osoby s pretrvávajúcou dialyzačnou závislosťou. Na druhej strane ide o výber na základe udalosti, ktorá nastala po expozícii, takže porovnávané skupiny prežívajúcich už nemusia byť porovnateľné. Pri pokročilej CKD navyše prežíva menšia časť pacientov, a práve tí najkrehkejší z prežívajúcich môžu mať najnižšiu šancu na obnovu funkcie.</p>
+<p>Podmienka prežitia do 90. dňa je pri interpretácii kľúčová a treba ju čítať dvoma smermi. Na jednej strane vhodne odstraňuje konkurenčné riziko úmrtia: pacient, ktorý zomrie, sa nemôže zaradiť medzi osoby s pretrvávajúcou dialyzačnou závislosťou. Na druhej strane ide o výber na základe udalosti, ktorá nastala po expozícii, takže porovnávané skupiny prežívajúcich už nemusia byť porovnateľné. Pri pokročilej CKD navyše prežíva menšia časť pacientov, a práve tí najkrehkejší z prežívajúcich môžu mať najnižšiu šancu na obnovu funkcie.</p>
 
 <p>Nie je tiež isté, či každá dialýza pokračujúca po 90 dňoch predstavovala nezvratné zlyhanie obličiek. Obnova funkcie môže u niektorých pacientov nastať aj neskôr.</p>
 
@@ -204,7 +204,7 @@ $articles[] = [
   <li><strong>Reziduálne konfundujúce faktory.</strong> Ani rozsiahla štatistická adjustácia nedokáže odstrániť všetky rozdiely medzi nerandomizovanými skupinami.</li>
 </ol>
 
-<p>Výsledok preto treba chápať ako epidemiologickú asociáciu, nie ako terapeutický účinok dialýzy. Zároveň je to užitočné pripomenutie, že skupina „nedialyzované G5“ nie je homogénna — zahŕňa pacientov pred plánovaným začiatkom dialýzy aj pacientov v konzervatívnom manažmente zlyhania obličiek.</p>
+<p>Výsledok preto treba chápať ako epidemiologickú asociáciu, nie ako terapeutický účinok dialýzy. Zároveň je to užitočné pripomenutie, že skupina „nedialyzované G5“ nie je homogénna: zahŕňa pacientov pred plánovaným začiatkom dialýzy aj pacientov v konzervatívnom manažmente zlyhania obličiek.</p>
 </div>
 
 <h2>Metodologické silné stránky</h2>
@@ -348,7 +348,7 @@ $articles[] = [
   <li><strong>Medscape Medical News.</strong> <em>Does CKD Severity Predict Adverse ICU Outcomes?</em> Medscape, 2026. Sekundárny spravodajský zdroj použitý ako východisko, nie ako hlavný dôkaz; individuálny autor nie je v sprístupnenej verzii uvedený. <a href="https://www.medscape.com/viewarticle/does-ckd-severity-predict-adverse-icu-outcomes-2026a1000rz9" target="_blank" rel="noopener noreferrer">Spravodajské spracovanie</a>.</li>
 </ol>
 
-<p><em><strong>Poznámka k spracovaniu:</strong> Údaje o dizajne, období, veľkosti súboru, rozdelení podľa kategórií eGFR, o pomeroch šancí začatia KRT a o podieloch dialyzačnej závislosti po 90 dňoch boli overené proti abstraktu publikácie (PubMed, PMID 42348209). Pomery šancí 90-dňovej mortality pre kategórie G3a, G3b a G4, hodnoty dĺžky hospitalizácie a úplný zoznam premenných zahrnutých do modelov boli doplnené z voľne dostupného plného textu v JAMA Network Open. Autorský zoznam bol overený cez PubMed — prvou autorkou je Hajar El Wadia, Gregory L. Hundemer je posledným (seniorným) autorom; mená neboli dopĺňané odhadom. Absolútne riziká mortality podľa jednotlivých kategórií abstrakt neuvádza a v texte sa preto neuvádzajú.</em></p>
+<p><em><strong>Poznámka k spracovaniu:</strong> Údaje o dizajne, období, veľkosti súboru, rozdelení podľa kategórií eGFR, o pomeroch šancí začatia KRT a o podieloch dialyzačnej závislosti po 90 dňoch boli overené proti abstraktu publikácie (PubMed, PMID 42348209). Pomery šancí 90-dňovej mortality pre kategórie G3a, G3b a G4, hodnoty dĺžky hospitalizácie a úplný zoznam premenných zahrnutých do modelov boli doplnené z voľne dostupného plného textu v JAMA Network Open. Autorský zoznam bol overený cez PubMed; prvou autorkou je Hajar El Wadia, Gregory L. Hundemer je posledným (seniorným) autorom; mená neboli dopĺňané odhadom. Absolútne riziká mortality podľa jednotlivých kategórií abstrakt neuvádza a v texte sa preto neuvádzajú.</em></p>
 
 <p><em><strong>Poznámka k interpretácii:</strong> Prognostické údaje z observačnej štúdie nepreukazujú príčinný vzťah a nemajú slúžiť ako samostatné kritérium pri rozhodovaní o prijatí na jednotku intenzívnej starostlivosti, o začatí náhrady funkcie obličiek ani o obmedzení liečby. Rozhodovanie má vychádzať z klinického stavu, reverzibility, krehkosti, celkovej prognózy a hodnôt a preferencií pacienta.</em></p>
 </div>

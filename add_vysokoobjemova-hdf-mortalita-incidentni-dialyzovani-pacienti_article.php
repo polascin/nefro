@@ -27,13 +27,13 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Kohorta 18 515 incidentných dialyzovaných pacientov spája online hemodiafiltráciu s o 20 % nižšou celkovou a o 29 % nižšou kardiovaskulárnou mortalitou. Prečo tlačová správa uvádza 28 % a prečo ide o inú štúdiu.',
     'content'      => <<<'HTML'
-<figure><a href="img/vysokoobjemova-hdf-mortalita-incidentni-dialyzovani-pacienti.webp" rel="noopener noreferrer" target="_blank"><img src="img/vysokoobjemova-hdf-mortalita-incidentni-dialyzovani-pacienti.webp" alt="Veľký objem tekutiny prúdiaci dialyzátorom a v diaľke svetelná čiara, ktorá s ním nie je priamo spojená" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Asociácia je presvedčivá, priame prepojenie však chýba — a práve to odlišuje pozorovanie od dôkazu príčinnosti.</figcaption></figure>
+<figure><a href="img/vysokoobjemova-hdf-mortalita-incidentni-dialyzovani-pacienti.webp" rel="noopener noreferrer" target="_blank"><img src="img/vysokoobjemova-hdf-mortalita-incidentni-dialyzovani-pacienti.webp" alt="Veľký objem tekutiny prúdiaci dialyzátorom a v diaľke svetelná čiara, ktorá s ním nie je priamo spojená" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Asociácia je presvedčivá, priame prepojenie však chýba – a práve to odlišuje pozorovanie od dôkazu príčinnosti.</figcaption></figure>
 
-<p class="article-dek"><em>Vysokoobjemová hemodiafiltrácia má randomizovaný dôkaz prínosu u prevalentných pacientov. Nová kohorta prináša chýbajúci diel: čo sa deje v prvých dvoch rokoch po začatí dialýzy. Výsledok je priaznivý a konzistentný — a zároveň je príkladom toho, ako sa to isté číslo dá v tlačovej správe a v publikácii vzťahovať na dve rôzne veci.</em></p>
+<p class="article-dek"><em>Vysokoobjemová hemodiafiltrácia má randomizovaný dôkaz prínosu u prevalentných pacientov. Nová kohorta prináša chýbajúci diel: čo sa deje v prvých dvoch rokoch po začatí dialýzy. Výsledok je priaznivý a konzistentný – a zároveň je príkladom toho, ako sa to isté číslo dá v tlačovej správe a v publikácii vzťahovať na dve rôzne veci.</em></p>
 
 <p>Online hemodiafiltrácia (HDF) kombinuje difúzny transport klasickej hemodialýzy s konvektívnym transportom. V porovnaní s konvenčnou vysokoprietokovou hemodialýzou preto účinnejšie odstraňuje širšie spektrum uremických látok vrátane stredne veľkých molekúl.</p>
 
-<p>Nové údaje z klinickej praxe spájajú vysokoobjemovú hemodiafiltráciu so znížením celkovej aj kardiovaskulárnej mortality. Najväčšiu pozornosť si zasluhuje zistenie, že priaznivá asociácia sa pozorovala už u pacientov, ktorí dialyzačnú liečbu iba nedávno začali — teda v období, ktoré doterajšie štúdie pokrývali najslabšie.</p>
+<p>Nové údaje z klinickej praxe spájajú vysokoobjemovú hemodiafiltráciu so znížením celkovej aj kardiovaskulárnej mortality. Najväčšiu pozornosť si zasluhuje zistenie, že priaznivá asociácia sa pozorovala už u pacientov, ktorí dialyzačnú liečbu iba nedávno začali – teda v období, ktoré doterajšie štúdie pokrývali najslabšie.</p>
 
 <p>Napriek priaznivým výsledkom treba dôsledne rozlišovať medzi randomizovaným dôkazom a observačnou asociáciou. Výber dialyzačnej modality nie je v bežnej praxi náhodný a môže súvisieť s prognózou pacienta nezávisle od samotnej hemodiafiltrácie.</p>
 
@@ -48,9 +48,9 @@ $articles[] = [
   <li><strong>8 366 pacientov</strong> liečených online hemodiafiltráciou.</li>
 </ul>
 
-<p>Na zaradenie do príslušnej skupiny musel pacient absolvovať danou modalitou najmenej <strong>75 % dialyzačných procedúr</strong>. Hemodiafiltrácia sa vykonávala výlučne v postdilučnom režime — predilučná HDF bola vyraďovacím kritériom — s priemerným konvekčným objemom <strong>24,9 litra na procedúru</strong> (medián 25,1 l; medzikvartilové rozpätie 23,1 – 27,2 l). Ide teda skutočne o vysokoobjemovú HDF v zmysle prahu 23 l na procedúru, ktorý používajú randomizované štúdie.</p>
+<p>Na zaradenie do príslušnej skupiny musel pacient absolvovať danou modalitou najmenej <strong>75 % dialyzačných procedúr</strong>. Hemodiafiltrácia sa vykonávala výlučne v postdilučnom režime – predilučná HDF bola vyraďovacím kritériom – s priemerným konvekčným objemom <strong>24,9 litra na procedúru</strong> (medián 25,1 l; medzikvartilové rozpätie 23,1 – 27,2 l). Ide teda skutočne o vysokoobjemovú HDF v zmysle prahu 23 l na procedúru, ktorý používajú randomizované štúdie.</p>
 
-<p>Medián sledovania bol <strong>15,7 mesiaca</strong> (medzikvartilové rozpätie 6,4 – 24,0 mesiaca), sledovanie bolo zámerne ohraničené dvoma rokmi.</p>
+<p>Medián sledovania bol <strong>15,7 mesiaca</strong> (medzikvartilové rozpätie 6,4 – 24,0 mesiaca); sledovanie bolo zámerne ohraničené dvoma rokmi.</p>
 
 <h2>Celková mortalita</h2>
 
@@ -65,7 +65,7 @@ $articles[] = [
 
 <p>Dodatočná korekcia na vek a typ cievneho prístupu priniesla mierne konzervatívnejší výsledok: <strong>HR 0,82 (95 % IS 0,77–0,88)</strong>. Pri prístupe približujúcom sa analýze podľa pôvodného liečebného zámeru bola asociácia ešte slabšia, ale stále priaznivá: <strong>HR 0,88 (95 % IS 0,82–0,95)</strong>.</p>
 
-<p>Tento zostupný rad je poučný sám osebe. Čím prísnejšie sa analýza bráni skresleniu, tým menší je odhadovaný efekt. Rozdiel medzi HR 0,80 a HR 0,88 nie je detail — je to miera toho, koľko z pozorovaného prínosu môže pochádzať z metodiky a nie z liečby.</p>
+<p>Tento zostupný rad je poučný sám osebe. Čím prísnejšie sa analýza bráni skresleniu, tým menší je odhadovaný efekt. Rozdiel medzi HR 0,80 a HR 0,88 nie je detail – je to miera toho, koľko z pozorovaného prínosu môže pochádzať z metodiky a nie z liečby.</p>
 
 <h2>Kardiovaskulárna mortalita</h2>
 
@@ -78,13 +78,13 @@ $articles[] = [
 
 <p>Po štatistickej korekcii bola hemodiafiltrácia spojená s o 29 % nižším relatívnym rizikom kardiovaskulárneho úmrtia: <strong>HR 0,71 (95 % IS 0,63–0,80)</strong>. Príčina úmrtia bola dokumentovaná pri 93,4 % úmrtí, čo je na register neobvykle dobrá úplnosť.</p>
 
-<p>Priaznivá asociácia sa pozorovala vo väčšine analyzovaných podskupín. <strong>U pacientov s diabetom však výsledok pre kardiovaskulárnu mortalitu nedosiahol štatistickú významnosť.</strong> To nepreukazuje neprítomnosť účinku pri diabete — znamená to, že údaje v tejto podskupine neposkytli dostatočne presvedčivý dôkaz. Podskupinové analýzy majú spravidla nižšiu silu a nemajú sa čítať ako samostatné štúdie.</p>
+<p>Priaznivá asociácia sa pozorovala vo väčšine analyzovaných podskupín. <strong>U pacientov s diabetom však výsledok pre kardiovaskulárnu mortalitu nedosiahol štatistickú významnosť.</strong> To nepreukazuje neprítomnosť účinku pri diabete – znamená to, že údaje v tejto podskupine neposkytli dostatočne presvedčivý dôkaz. Podskupinové analýzy majú spravidla nižšiu silu a nemajú sa čítať ako samostatné štúdie.</p>
 
 <h2>Tlačová správa hovorí o 28 %. Ide o inú štúdiu</h2>
 
 <p>Tlačová správa spoločnosti Fresenius Medical Care z 27. augusta 2026 uvádza <strong>28 % nižšie relatívne riziko celkovej mortality</strong>, pričom pri konvekčných objemoch nad 23 litrov na procedúru hovorí až o 33 %. Publikovaná kohorta incidentných pacientov pritom uvádza 20 %.</p>
 
-<p>Tieto čísla si neprotirečia — <strong>pochádzajú z dvoch odlišných prác</strong>. Údaj 28 % zodpovedá HR 0,72 z emulácie cieľovej štúdie publikovanej v <em>Journal of the American Society of Nephrology</em> (Strippoli a spol.), ktorá analyzovala inú populáciu, iné obdobie a inú definíciu expozície:</p>
+<p>Tieto čísla si neprotirečia – <strong>pochádzajú z dvoch odlišných prác</strong>. Údaj 28 % zodpovedá HR 0,72 z emulácie cieľovej štúdie publikovanej v <em>Journal of the American Society of Nephrology</em> (Strippoli a spol.), ktorá analyzovala inú populáciu, iné obdobie a inú definíciu expozície:</p>
 
 <div class="table-responsive" role="region" aria-label="Porovnanie dvoch registrových štúdií hemodiafiltrácie" tabindex="0">
   <table>
@@ -217,7 +217,7 @@ $articles[] = [
 
 <h3>Observačný dizajn</h3>
 
-<p>Pacienti neboli randomizovaní. O pridelení modality rozhodovala klinická prax, dostupnosť technológie, charakteristika centra, cievny prístup a zdravotný stav pacienta. Ani pokročilé štatistické metódy nedokážu odstrániť vplyv nemeraných faktorov — a schopnosť pacienta tolerovať vysoký konvekčný objem je presne takým faktorom.</p>
+<p>Pacienti neboli randomizovaní. O pridelení modality rozhodovala klinická prax, dostupnosť technológie, charakteristika centra, cievny prístup a zdravotný stav pacienta. Ani pokročilé štatistické metódy nedokážu odstrániť vplyv nemeraných faktorov – a schopnosť pacienta tolerovať vysoký konvekčný objem je presne takým faktorom.</p>
 
 <h3>Rozdiely pred štatistickou korekciou</h3>
 
@@ -257,11 +257,11 @@ $articles[] = [
   </table>
 </div>
 
-<p>Rozdiel v type cievneho prístupu je najvýrečnejší. Fistula u 40 % oproti 28 % neznamená len lepší prístup — je ukazovateľom <strong>plánovaného, včas pripraveného začiatku dialýzy</strong>, teda pacienta, ktorý bol vopred v nefrologickej starostlivosti. Práve preto autori doplnili analýzu korigovanú aj na cievny prístup; reziduálne skreslenie však nemožno vylúčiť ani po nej.</p>
+<p>Rozdiel v type cievneho prístupu je najvýrečnejší. Fistula u 40 % oproti 28 % neznamená len lepší prístup – je ukazovateľom <strong>plánovaného, včas pripraveného začiatku dialýzy</strong>, teda pacienta, ktorý bol vopred v nefrologickej starostlivosti. Práve preto autori doplnili analýzu korigovanú aj na cievny prístup; reziduálne skreslenie však nemožno vylúčiť ani po nej.</p>
 
 <h3>Podmienenie modality budúcou liečbou</h3>
 
-<p>Pacient bol klasifikovaný podľa modality použitej najmenej pri 75 % procedúr počas prvého roka. Takýto postup používa informáciu získanú <em>po</em> začiatku sledovania. Aby pacient mohol byť zaradený do skupiny HDF, musel dostatočne dlho žiť — čo môže vytvoriť časové (nesmrteľné obdobie) alebo selekčné skreslenie.</p>
+<p>Pacient bol klasifikovaný podľa modality použitej najmenej pri 75 % procedúr počas prvého roka. Takýto postup používa informáciu získanú <em>po</em> začiatku sledovania. Aby pacient mohol byť zaradený do skupiny HDF, musel dostatočne dlho žiť – čo môže vytvoriť skreslenie z nesmrteľného času (immortal time bias) alebo selekčné skreslenie.</p>
 
 <p>Autori preto vykonali aj analýzu podľa modality na konci vstupného obdobia. Poskytla konzervatívnejší výsledok (HR 0,88), ktorý podporil smer asociácie, ale súčasne ukázal, že jej veľkosť závisí od analytického postupu.</p>
 
@@ -269,7 +269,7 @@ $articles[] = [
 
 <p>Vylúčení boli pacienti, ktorí počas 30-dňového vstupného obdobia zomreli, podstúpili transplantáciu alebo boli inak vyradení. Vylúčení boli aj pacienti s priemerným online meraným Kt/V pod 1,2, ako aj krajiny s jedinou dostupnou modalitou.</p>
 
-<p>Analyzovaná populácia teda predstavuje <strong>relatívne stabilných incidentných pacientov s primeranou dialyzačnou dávkou</strong>. Výsledky nemožno bez výhrad preniesť na klinicky nestabilných pacientov s najvyšším skorým rizikom — teda práve na tých, ktorí v prvých mesiacoch dialýzy umierajú najčastejšie.</p>
+<p>Analyzovaná populácia teda predstavuje <strong>relatívne stabilných incidentných pacientov s primeranou dialyzačnou dávkou</strong>. Výsledky nemožno bez výhrad preniesť na klinicky nestabilných pacientov s najvyšším skorým rizikom – teda práve na tých, ktorí v prvých mesiacoch dialýzy umierajú najčastejšie.</p>
 
 <h3>Obmedzená prenositeľnosť</h3>
 
@@ -310,17 +310,17 @@ $articles[] = [
 
 <p>Medzinárodná kohortová štúdia incidentných dialyzovaných pacientov ukázala konzistentnú asociáciu vysokoobjemovej online hemodiafiltrácie s nižšou celkovou a kardiovaskulárnou mortalitou. Odhad je blízky randomizovanému výsledku štúdie CONVINCE, čo posilňuje jeho vierohodnosť.</p>
 
-<p>Najpresnejšia formulácia však znie, že vysokoobjemová hemodiafiltrácia <strong>bola spojená s nižšou mortalitou</strong>. Observačný dizajn nedovoľuje tvrdiť, že ju jednoznačne znížila — a rozpätie odhadov od HR 0,80 po HR 0,88 podľa použitej metódy ukazuje, kde presne leží hranica našej istoty. Potvrdenie veľkosti kauzálneho účinku osobitne u incidentných pacientov si vyžaduje randomizovanú klinickú štúdiu.</p>
+<p>Najpresnejšia formulácia však znie, že vysokoobjemová hemodiafiltrácia <strong>bola spojená s nižšou mortalitou</strong>. Observačný dizajn nedovoľuje tvrdiť, že ju jednoznačne znížila – a rozpätie odhadov od HR 0,80 po HR 0,88 podľa použitej metódy ukazuje, kde presne leží hranica našej istoty. Potvrdenie veľkosti kauzálneho účinku osobitne u incidentných pacientov si vyžaduje randomizovanú klinickú štúdiu.</p>
 
 <hr>
 
 <h2>Súvisiace články</h2>
 
 <ul>
-  <li><a href="article.php?slug=online-hemodiafiltracia-davkovana-liecba-odporucania-sin">Online hemodiafiltrácia ako dávkovaná liečba</a> — odporúčania Talianskej nefrologickej spoločnosti.</li>
-  <li><a href="article.php?slug=online-hemodiafiltracia-mco-dialyzatory-stredne-molekuly">Online HDF a MCO dialyzátory</a> — dve cesty k odstraňovaniu stredných molekúl.</li>
-  <li><a href="article.php?slug=nacasovanie-cievneho-pristupu-avf-avg-pred-hemodialyzou">Načasovanie cievneho prístupu pred hemodialýzou</a> — predpoklad bezpečného vysokého konvekčného objemu.</li>
-  <li><a href="article.php?slug=improvizovana-hemodialyza-kvalita-vody-dialyzacneho-roztoku">Kvalita vody a dialyzačného roztoku</a> — technická podmienka HDF.</li>
+  <li><a href="article.php?slug=online-hemodiafiltracia-davkovana-liecba-odporucania-sin">Online hemodiafiltrácia ako dávkovaná liečba</a> – odporúčania Talianskej nefrologickej spoločnosti.</li>
+  <li><a href="article.php?slug=online-hemodiafiltracia-mco-dialyzatory-stredne-molekuly">Online HDF a MCO dialyzátory</a> – dve cesty k odstraňovaniu stredných molekúl.</li>
+  <li><a href="article.php?slug=nacasovanie-cievneho-pristupu-avf-avg-pred-hemodialyzou">Načasovanie cievneho prístupu pred hemodialýzou</a> – predpoklad bezpečného vysokého konvekčného objemu.</li>
+  <li><a href="article.php?slug=improvizovana-hemodialyza-kvalita-vody-dialyzacneho-roztoku">Kvalita vody a dialyzačného roztoku</a> – technická podmienka HDF.</li>
 </ul>
 
 <hr>
@@ -335,7 +335,7 @@ $articles[] = [
   <li><strong>Fresenius Medical Care.</strong> <em>Fresenius Medical Care Announces Publication of a Multinational Real-World Evidence Study Associating High-Volume Hemodiafiltration with Lower Mortality Risk Than Conventional Hemodialysis.</em> Firemná tlačová správa, 27. augusta 2026. <a href="https://freseniusmedicalcare.com/en/media/newsroom/multinational-real-world-evidence-study-associating-high-volume-hemodiafiltration-with-lower-mortality-risk-than-conventional-hemodialysis/" target="_blank" rel="noopener noreferrer">Tlačová správa</a>.</li>
 </ol>
 
-<p><em><strong>Poznámka k dôkazom:</strong> Číselné údaje pripísané incidentnej kohorte — 18 515 pacientov (10 149 hemodialýza, 8 366 hemodiafiltrácia), roky 2019 – 2022, prah 75 % procedúr, konvekčný objem 24,9 l (medián 25,1; MKR 23,1 – 27,2), medián sledovania 15,7 mesiaca (MKR 6,4 – 24,0), 11,7 oproti 15,6 a 4,1 oproti 6,7 úmrtia na 100 osoborokov, HR 0,80 (0,75–0,86), HR 0,82 (0,77–0,88), HR 0,88 (0,82–0,95), HR 0,71 (0,63–0,80), 93,4 % úmrtí so známou príčinou, vstupné rozdiely vo veku (64,5 ± 14,5 oproti 62,0 ± 15,1), fistule (28 % oproti 40 %), diabete (38 % oproti 34 %) a pohlaví (54 % oproti 58 % mužov), ako aj vyraďovacie kritériá vrátane predilučnej HDF a Kt/V pod 1,2 — boli overené proti abstraktu v zázname PubMed a plnému textu v PMC. Údaje o štúdii JASN (19 539 pacientov, vážená pseudopopulácia 19 758, osem krajín, 2014 – 2019, prah 90 %, HR 0,72 [0,67–0,77], kumulatívna incidencia 20,6 % oproti 22,3 %) pochádzajú z jej záznamu v PubMed; údaje o CONVINCE (1 360 pacientov, 25,3 l, 17,3 % oproti 21,9 %, HR 0,77 [0,65–0,93]) rovnako. Bibliografia bola overená cez Crossref a PubMed. <strong>Upozornenie na rozdiel oproti pôvodnému spracovaniu:</strong> údaj 28 % z tlačovej správy nie je alternatívnym odhadom tej istej analýzy — vzťahuje sa na inú, samostatne publikovanú prácu, ktorá bola pre potreby tohto článku dohľadaná a odcitovaná. Porovnanie oboch štúdií, prepojenie na randomizované dôkazy a metodologické komentáre sú <strong>vlastným odborným hodnotením</strong>, nie závermi pôvodných autorov.</em></p>
+<p><em><strong>Poznámka k dôkazom:</strong> Číselné údaje pripísané incidentnej kohorte – 18 515 pacientov (10 149 hemodialýza, 8 366 hemodiafiltrácia), roky 2019 – 2022, prah 75 % procedúr, konvekčný objem 24,9 l (medián 25,1; MKR 23,1 – 27,2), medián sledovania 15,7 mesiaca (MKR 6,4 – 24,0), 11,7 oproti 15,6 a 4,1 oproti 6,7 úmrtia na 100 osoborokov, HR 0,80 (0,75–0,86), HR 0,82 (0,77–0,88), HR 0,88 (0,82–0,95), HR 0,71 (0,63–0,80), 93,4 % úmrtí so známou príčinou, vstupné rozdiely vo veku (64,5 ± 14,5 oproti 62,0 ± 15,1), fistule (28 % oproti 40 %), diabete (38 % oproti 34 %) a pohlaví (54 % oproti 58 % mužov), ako aj vyraďovacie kritériá vrátane predilučnej HDF a Kt/V pod 1,2 – boli overené proti abstraktu v zázname PubMed a plnému textu v PMC. Údaje o štúdii JASN (19 539 pacientov, vážená pseudopopulácia 19 758, osem krajín, 2014 – 2019, prah 90 %, HR 0,72 [0,67–0,77], kumulatívna incidencia 20,6 % oproti 22,3 %) pochádzajú z jej záznamu v PubMed; údaje o CONVINCE (1 360 pacientov, 25,3 l, 17,3 % oproti 21,9 %, HR 0,77 [0,65–0,93]) rovnako. Bibliografia bola overená cez Crossref a PubMed. <strong>Upozornenie na rozdiel oproti pôvodnému spracovaniu:</strong> údaj 28 % z tlačovej správy nie je alternatívnym odhadom tej istej analýzy – vzťahuje sa na inú, samostatne publikovanú prácu, ktorá bola pre potreby tohto článku dohľadaná a odcitovaná. Porovnanie oboch štúdií, prepojenie na randomizované dôkazy a metodologické komentáre sú <strong>vlastným odborným hodnotením</strong>, nie závermi pôvodných autorov.</em></p>
 HTML,
 ];
 

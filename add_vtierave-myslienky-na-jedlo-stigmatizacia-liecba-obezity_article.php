@@ -29,9 +29,9 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Opakované vtieravé myšlienky na jedlo a stigmatizácia liečby vstupujú do diskusie o obezite. Ide zatiaľ o odborné komentáre a jeden vinetový experiment, nie o klinické dôkazy — a to treba pri interpretácii rešpektovať.',
+    'excerpt'      => 'Opakované vtieravé myšlienky na jedlo a stigmatizácia liečby vstupujú do diskusie o obezite. Ide zatiaľ o odborné komentáre a jeden vinetový experiment, nie o klinické dôkazy, a to treba pri interpretácii rešpektovať.',
     'content'      => <<<'HTML'
-<figure><a href="img/vtierave-myslienky-na-jedlo-stigmatizacia-liecba-obezity.webp" rel="noopener noreferrer" target="_blank"><img src="img/vtierave-myslienky-na-jedlo-stigmatizacia-liecba-obezity.webp" alt="Prázdna osobná váha v kuželi svetla a nad ňou rozsiahla búrka svetelných vtieravých myšlienok" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. To, čo pacienta najviac vyčerpáva, váha nezmeria — a práve preto samotná hmotnosť nestačí ako meradlo úspechu liečby.</figcaption></figure>
+<figure><a href="img/vtierave-myslienky-na-jedlo-stigmatizacia-liecba-obezity.webp" rel="noopener noreferrer" target="_blank"><img src="img/vtierave-myslienky-na-jedlo-stigmatizacia-liecba-obezity.webp" alt="Prázdna osobná váha v kuželi svetla a nad ňou rozsiahla búrka svetelných vtieravých myšlienok" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. To, čo pacienta najviac vyčerpáva, váha nezmeria, a práve preto samotná hmotnosť nestačí ako meradlo úspechu liečby.</figcaption></figure>
 
 <p>Obezitu nemožno primerane hodnotiť iba podľa čísla na váhe. Klinicky významné sú aj zdravotné komplikácie, funkčná zdatnosť, psychická záťaž a vzťah človeka k jedlu. Do diskusie o liečbe vstupujú dva súvisiace, ale odlišné javy: opakované vtieravé myšlienky na jedlo, označované ako <em>food noise</em>, a stigmatizácia ľudí, ktorí užívajú lieky na zníženie telesnej hmotnosti.</p>
 
@@ -86,7 +86,7 @@ $articles[] = [
 
 <p>Treba ich odlišovať od fyziologického hladu, intenzívnej túžby po konkrétnom jedle, záchvatového prejedania a ďalších psychických ťažkostí. Tieto javy sa môžu prekrývať. Samotné časté myslenie na jedlo však nepreukazuje záchvatové prejedanie a jeho neprítomnosť nevylučuje poruchu príjmu potravy.</p>
 
-<p>Pri hodnotení je potrebné zohľadniť aj reštriktívne stravovanie a nedostatočný energetický príjem. Myšlienky na jedlo nemusia byť prejavom nadmernej chuti do jedla — môžu súvisieť aj s hladovaním alebo s úzkostlivým dodržiavaním diétnych pravidiel. Klinický rozhovor preto nemá smerovať iba k otázke, ako tieto myšlienky potlačiť, ale aj k tomu, <strong>prečo vznikajú</strong>.</p>
+<p>Pri hodnotení je potrebné zohľadniť aj reštriktívne stravovanie a nedostatočný energetický príjem. Myšlienky na jedlo nemusia byť prejavom nadmernej chuti do jedla; môžu súvisieť aj s hladovaním alebo s úzkostlivým dodržiavaním diétnych pravidiel. Klinický rozhovor preto nemá smerovať iba k otázke, ako tieto myšlienky potlačiť, ale aj k tomu, <strong>prečo vznikajú</strong>.</p>
 
 <h2>Prečo liečba nemusí tieto myšlienky odstrániť</h2>
 
@@ -102,25 +102,25 @@ $articles[] = [
 
 <p>Ľudia s obezitou čelia predsudkom, ktoré ich telesnú hmotnosť vysvetľujú nedostatkom disciplíny alebo osobným zlyhaním. Farmakoterapia tento problém nemusí odstrániť. Môže priniesť ďalšiu formu znevažovania: predstavu, že pacient dosiahol výsledok „príliš ľahko“.</p>
 
-<p>Stacy M. Post navrhuje venovať stigmatizácii spojenej s užívaním agonistov receptora GLP-1 samostatnú výskumnú pozornosť. Argumentuje, že ide o <strong>odlišnú formu hmotnostnej stigmy</strong>, pri ktorej sa hodnotenie presúva od veľkosti tela k domnelej legitímnosti a „morálnej zaslúženosti“ farmakologickej liečby. Formuluje to však dôsledne v podmieňovacom spôsobe — takto zložená stigma <em>môže</em> zhoršovať zdravotné dôsledky a zapojenie do liečby. Ide teda o odôvodnenú obavu a výskumnú hypotézu, nie o preukázaný príčinný vzťah.</p>
+<p>Stacy M. Post navrhuje venovať stigmatizácii spojenej s užívaním agonistov receptora GLP-1 samostatnú výskumnú pozornosť. Argumentuje, že ide o <strong>odlišnú formu hmotnostnej stigmy</strong>, pri ktorej sa hodnotenie presúva od veľkosti tela k domnelej legitímnosti a „morálnej zaslúženosti“ farmakologickej liečby. Formuluje to však dôsledne v podmieňovacom spôsobe: takto zložená stigma <em>môže</em> zhoršovať zdravotné dôsledky a zapojenie do liečby. Ide teda o odôvodnenú obavu a výskumnú hypotézu, nie o preukázaný príčinný vzťah.</p>
 
 <h3>Čo skutočne ukázal experiment</h3>
 
-<p>Jediný priamy experimentálny doklad pochádza z práce Post a Perskej z roku 2024. Išlo o usporiadanie 2 × 2 na vzorke <strong>357 dospelých z USA</strong> (priemerný vek 37,8 roka; SD 13), ktorí boli náhodne priradení k čítaniu opisu ženy — buď štíhlej, alebo s obezitou — ktorá schudla 15 % telesnej hmotnosti buď diétou a cvičením, alebo pomocou agonistu receptora GLP-1. Práca bola vopred zaregistrovaná.</p>
+<p>Jediný priamy experimentálny doklad pochádza z práce Post a Perskej z roku 2024. Išlo o usporiadanie 2 × 2 na vzorke <strong>357 dospelých z USA</strong> (priemerný vek 37,8 roka; SD 13), ktorí boli náhodne priradení k čítaniu opisu štíhlej ženy alebo ženy s obezitou, ktorá schudla 15 % telesnej hmotnosti buď diétou a cvičením, alebo pomocou agonistu receptora GLP-1. Práca bola vopred zaregistrovaná.</p>
 
 <p>Výsledky:</p>
 
 <ul>
   <li>negatívne hodnotenia boli silnejšie voči žene, ktorá schudla pomocou lieku, než voči tej, ktorá schudla diétou a cvičením;</li>
-  <li>tento účinok sprostredkovalo presvedčenie, že pacientka „použila skratku“ — a to <strong>bez ohľadu na veľkosť tela</strong>;</li>
+  <li>tento účinok sprostredkovalo presvedčenie, že pacientka „použila skratku“, a to <strong>bez ohľadu na veľkosť tela</strong>;</li>
   <li>u štíhlej ženy bol navyše silnejší účinok na hodnotenia spojené s egotizmom.</li>
 </ul>
 
-<p>Takéto usporiadanie zachytáva predsudky v kontrolovaných podmienkach. Nehovorí však o ich frekvencii v bežnej populácii ani o dlhodobom klinickom dosahu. Vzorka bola americká a internetová, podnetom bol textový opis, nie skutočný človek, a posudzovanou postavou bola <strong>vždy žena</strong> — o postojoch voči mužom teda experiment nevypovedá nič.</p>
+<p>Takéto usporiadanie zachytáva predsudky v kontrolovaných podmienkach. Nehovorí však o ich frekvencii v bežnej populácii ani o dlhodobom klinickom dosahu. Vzorka bola americká a internetová, podnetom bol textový opis, nie skutočný človek, a posudzovanou postavou bola <strong>vždy žena</strong>, takže o postojoch voči mužom experiment nevypovedá nič.</p>
 
 <h3>Vonkajšia a zvnútornená stigma</h3>
 
-<p>Dôležité je rozlišovať medzi vonkajšou stigmatizáciou a jej zvnútornením. V prvom prípade ide napríklad o ponižujúce poznámky alebo spochybňovanie liečby okolím. V druhom pacient sám prijíma presvedčenie, že potreba lieku dokazuje jeho slabosť.</p>
+<p>Treba rozlišovať medzi vonkajšou stigmatizáciou a jej zvnútornením. V prvom prípade ide napríklad o ponižujúce poznámky alebo spochybňovanie liečby okolím. V druhom pacient sám prijíma presvedčenie, že potreba lieku dokazuje jeho slabosť.</p>
 
 <p>Širšia odborná literatúra opisuje súvislosti hmotnostnej stigmy s psychickou záťažou, problémovým stravovacím správaním a nepriaznivými skúsenosťami v zdravotnej starostlivosti; prehľad Browna, Flinta a Batterhamovej ju dokumentuje naprieč zdravotníctvom, médiami, pracoviskami, vzdelávaním aj tvorbou politík.</p>
 
@@ -130,7 +130,7 @@ $articles[] = [
 
 <p>Index telesnej hmotnosti je dostupný orientačný ukazovateľ. Nedokáže však priamo rozlíšiť tukové tkanivo od svalovej hmoty ani určiť distribúciu tuku. Rovnako nevyjadruje závažnosť orgánového poškodenia alebo funkčného obmedzenia.</p>
 
-<p>Priya Sumithran a Louise A. Baur sa vo svojom komentári venujú práve rozmnoženiu rámcov starostlivosti o obezitu a ich klasifikačným a stagingovým prístupom. Podľa redakčného prehľadu Medscape sa porovnávané rámce — vrátane prístupov Lancet Commission, European Association for the Study of Obesity a American Association of Clinical Endocrinology — zhodujú na potrebe širšieho klinického hodnotenia a individualizovanej dlhodobej starostlivosti, nie sú však vo všetkých diagnostických a klasifikačných detailoch totožné.</p>
+<p>Priya Sumithran a Louise A. Baur sa vo svojom komentári venujú práve rozmnoženiu rámcov starostlivosti o obezitu a ich klasifikačným a stagingovým prístupom. Podľa redakčného prehľadu Medscape sa porovnávané rámce (vrátane prístupov Lancet Commission, European Association for the Study of Obesity a American Association of Clinical Endocrinology) zhodujú na potrebe širšieho klinického hodnotenia a individualizovanej dlhodobej starostlivosti, nie sú však vo všetkých diagnostických a klasifikačných detailoch totožné.</p>
 
 <p>Vyšetrenie má podľa klinickej situácie dopĺňať index telesnej hmotnosti o posúdenie centrálnej adipozity, napríklad meraním obvodu pása, a o vyhľadanie komplikácií. Dôležité sú metabolické a kardiovaskulárne ochorenia, poruchy dýchania v spánku, pohybové obmedzenia, psychické zdravie a kvalita života.</p>
 
@@ -140,9 +140,9 @@ $articles[] = [
 
 <p>V nefrológii má interpretácia telesnej hmotnosti ďalšie úskalia. Pri retencii tekutín nemusí zvýšená hmotnosť znamenať pribúdanie tuku. Rýchly pokles hmotnosti po úprave objemového preťaženia zase nemožno zamieňať za úspech redukčnej liečby.</p>
 
-<p>Pri chronickej chorobe obličiek, najmä v pokročilých štádiách a pri dialýze, treba hodnotiť aj svalovú hmotu, funkčnú zdatnosť a riziko proteínovo-energetického chradnutia. Obezita a podvýživa sa navzájom nevylučujú — pacient môže mať nadbytok tukového tkaniva a súčasne nedostatočnú svalovú hmotu či neprimeraný príjem živín.</p>
+<p>Pri chronickej chorobe obličiek, najmä v pokročilých štádiách a pri dialýze, treba hodnotiť aj svalovú hmotu, funkčnú zdatnosť a riziko proteínovo-energetického chradnutia. Obezita a podvýživa sa navzájom nevylučujú: pacient môže mať nadbytok tukového tkaniva a súčasne nedostatočnú svalovú hmotu či neprimeraný príjem živín.</p>
 
-<p>Z toho vyplýva praktický dôsledok, ktorý je pri tejto téme kľúčový: <strong>menšia chuť do jedla nie je sama osebe vždy priaznivým výsledkom</strong>. Jej význam závisí od východiskového nutričného stavu a od toho, či sa zachováva primeraný príjem energie a živín. To, čo je u metabolicky zdravšieho pacienta žiaduci účinok, môže byť u dialyzovaného pacienta so sklonom k chradnutiu varovným signálom.</p>
+<p>Pre prax z toho vyplýva kľúčový dôsledok: <strong>menšia chuť do jedla nie je sama osebe vždy priaznivým výsledkom</strong>. Jej význam závisí od východiskového nutričného stavu a od toho, či sa zachováva primeraný príjem energie a živín. To, čo je u metabolicky zdravšieho pacienta žiaduci účinok, môže byť u dialyzovaného pacienta so sklonom k chradnutiu varovným signálom.</p>
 
 <p>Pri liečbe sprevádzanej nauzeou, vracaním alebo hnačkou treba venovať pozornosť hydratácii a funkcii obličiek. Režim príjmu tekutín musí rešpektovať konkrétny stav pacienta, najmä pri srdcovom zlyhávaní alebo dialyzačnej liečbe. Všeobecné odporúčanie zvýšiť príjem tekutín preto nemusí byť vhodné.</p>
 
@@ -160,11 +160,11 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>Obezita si vyžaduje medicínsky prístup, ktorý berie vážne biologické mechanizmy aj osobnú skúsenosť človeka. Vtieravé myšlienky na jedlo môžu byť významnou súčasťou tejto skúsenosti, zatiaľ však nie sú validovaným diagnostickým ani terapeutickým ukazovateľom — pojem sa ešte len vymedzuje a nástroje na jeho meranie nie sú overené.</p>
+<p>Obezita si vyžaduje medicínsky prístup, ktorý berie vážne biologické mechanizmy aj osobnú skúsenosť človeka. Vtieravé myšlienky na jedlo môžu byť významnou súčasťou tejto skúsenosti, zatiaľ však nie sú validovaným diagnostickým ani terapeutickým ukazovateľom. Pojem sa ešte len vymedzuje a nástroje na jeho meranie nie sú overené.</p>
 
 <p>Stigmatizácia spojená s farmakologickou liečbou je doložená experimentálne, no zatiaľ len na vinetovej vzorke; jej klinický dosah na dodržiavanie liečby ostáva hypotézou, ktorú treba overiť. To nemení nič na tom, že stigmatizácia nemá v liečbe miesto bez ohľadu na to, či pacient využíva režimové opatrenia, lieky alebo chirurgickú liečbu.</p>
 
-<p>V nefrologickom kontexte platí navyše osobitná výhrada: ukazovatele, ktoré sú inde znakom úspechu — menšia chuť do jedla, pokles hmotnosti —, treba u pacienta s pokročilým ochorením obličiek vždy posudzovať spolu s nutričným a objemovým stavom.</p>
+<p>V nefrologickom kontexte platí navyše osobitná výhrada: ukazovatele, ktoré sú inde znakom úspechu (menšia chuť do jedla, pokles hmotnosti), treba u pacienta s pokročilým ochorením obličiek vždy posudzovať spolu s nutričným a objemovým stavom.</p>
 
 <h2>Súvisiace články</h2>
 
@@ -180,13 +180,13 @@ $articles[] = [
 
 <p><small><em><strong>Vymedzenie pojmu:</strong> Umashanker D, Mitchell J. Food Noise Is a Type of Thinking. <em>Diabetes, Obesity and Metabolism</em>. Publikované online 10. augusta 2026. doi: 10.1111/dom.71203. <a href="https://pubmed.ncbi.nlm.nih.gov/42575863/" target="_blank" rel="noopener noreferrer">PubMed</a>.</em></small></p>
 
-<p><small><em><strong>Stigma spojená s liečbou — koncepčná stať:</strong> Post SM. GLP-1 receptor agonists and the emergence of treatment-related stigma: a call for conceptual clarity. <em>International Journal of Obesity</em>. Publikované online 17. augusta 2026. doi: 10.1038/s41366-026-02200-5. <a href="https://pubmed.ncbi.nlm.nih.gov/42608457/" target="_blank" rel="noopener noreferrer">PubMed</a>.</em></small></p>
+<p><small><em><strong>Stigma spojená s liečbou – koncepčná stať:</strong> Post SM. GLP-1 receptor agonists and the emergence of treatment-related stigma: a call for conceptual clarity. <em>International Journal of Obesity</em>. Publikované online 17. augusta 2026. doi: 10.1038/s41366-026-02200-5. <a href="https://pubmed.ncbi.nlm.nih.gov/42608457/" target="_blank" rel="noopener noreferrer">PubMed</a>.</em></small></p>
 
 <p><small><em><strong>Experimentálny doklad:</strong> Post SM, Persky S. The effect of GLP-1 receptor agonist use on negative evaluations of women with higher and lower body weight. <em>International Journal of Obesity</em>. 2024;48(7):1019–1026. doi: 10.1038/s41366-024-01516-4. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12439114/" target="_blank" rel="noopener noreferrer">plný text v PubMed Central</a>.</em></small></p>
 
 <p><small><em><strong>Rámce starostlivosti o obezitu:</strong> Sumithran P, Baur LA. Navigating the Numerous Frameworks for Obesity Care. <em>Obesity (Silver Spring)</em>. Publikované online 30. júla 2026. doi: 10.1002/oby.70273. <a href="https://pubmed.ncbi.nlm.nih.gov/42532510/" target="_blank" rel="noopener noreferrer">PubMed</a>.</em></small></p>
 
-<p><small><em><strong>Hmotnostná stigma — prehľad:</strong> Brown A, Flint SW, Batterham RL. Pervasiveness, impact and implications of weight stigma. <em>eClinicalMedicine</em>. 2022;47:101408. doi: 10.1016/j.eclinm.2022.101408. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9046114/" target="_blank" rel="noopener noreferrer">plný text v PubMed Central</a>.</em></small></p>
+<p><small><em><strong>Hmotnostná stigma – prehľad:</strong> Brown A, Flint SW, Batterham RL. Pervasiveness, impact and implications of weight stigma. <em>eClinicalMedicine</em>. 2022;47:101408. doi: 10.1016/j.eclinm.2022.101408. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9046114/" target="_blank" rel="noopener noreferrer">plný text v PubMed Central</a>.</em></small></p>
 HTML,
 ];
 

@@ -31,19 +31,19 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Prehľad praktického využitia umelej inteligencie a strojového učenia v nefrológii: skoré zachytenie AKI, odhad progresie CKD, predikcia dialýznych udalostí, podpora transplantácie a automatizácia patológie — spolu s limitmi ako bias, kvalita dát, „black box“, bezpečnosť a etika. Podľa prehľadového článku na PMC.',
+    'excerpt'      => 'Prehľad praktického využitia umelej inteligencie a strojového učenia v nefrológii: skoré zachytenie AKI, odhad progresie CKD, predikcia dialýznych udalostí, podpora transplantácie a automatizácia patológie – spolu s limitmi ako bias, kvalita dát, „black box“, bezpečnosť a etika. Podľa prehľadového článku na PMC.',
     'content'      => <<<'HTML'
-<figure><a href="img/umela-inteligencia-nefrologia-co-vieme-limity.webp" rel="noopener noreferrer" target="_blank"><img src="img/umela-inteligencia-nefrologia-co-vieme-limity.webp" alt="Výpočtová mriežka obopínajúca obličku, hustá v strede a rozplývajúca sa na okrajoch" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. V jadre úloh je algoritmus spoľahlivý; na okrajoch sa istota rozplýva — a tam začína zodpovednosť lekára.</figcaption></figure>
+<figure><a href="img/umela-inteligencia-nefrologia-co-vieme-limity.webp" rel="noopener noreferrer" target="_blank"><img src="img/umela-inteligencia-nefrologia-co-vieme-limity.webp" alt="Výpočtová mriežka obopínajúca obličku, hustá v strede a rozplývajúca sa na okrajoch" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. V jadre úloh je algoritmus spoľahlivý; na okrajoch sa istota rozplýva – a tam začína zodpovednosť lekára.</figcaption></figure>
 
 <h2>Úvod: prečo je nefrológia pre AI prirodzené pole</h2>
 
-<p>Umelá inteligencia (AI) sa v medicíne rozširuje naprieč odbormi, no nefrológia podľa dostupných prehľadov doteraz zaostávala v adopcii a praktickej integrácii. Dôvod je praktický: nefrológia pracuje s veľkým množstvom štruktúrovaných dát, ktoré sú zároveň matematicky „čitateľné“. Navyše v klinickej praxi ide často o rozhodovania v časovom tlaku (napríklad skoré zachytenie AKI) a o riziká s jasnými parametrami (progresia CKD, komplikácie, dialyzačné udalosti).</p>
+<p>Umelá inteligencia (AI) sa v medicíne rozširuje naprieč odbormi, no nefrológia podľa dostupných prehľadov doteraz zaostávala v zavádzaní a praktickom využití. Pritom je pre AI prirodzeným poľom: pracuje s veľkým množstvom štruktúrovaných dát, ktoré sú zároveň matematicky „čitateľné“. Navyše v klinickej praxi ide často o rozhodovanie v časovom tlaku (napríklad skoré zachytenie AKI) a o riziká s jasnými parametrami (progresia CKD, komplikácie, dialyzačné udalosti).</p>
 
-<p>Cieľom AI v zdravotníctve nemá byť nahradiť nefrológa. Skôr má rozšíriť jeho schopnosti: spracovať viac dát, rýchlejšie identifikovať riziká a pomôcť pri tvorbe presnejších a včasnejších postupov.</p>
+<p>AI v zdravotníctve nemá nefrológa nahradiť, ale rozšíriť jeho možnosti: spracovať viac dát, rýchlejšie identifikovať riziká a pomôcť pri tvorbe presnejších a včasnejších postupov.</p>
 
 <h2>Základné pojmy: AI, ML a deep learning (a prečo na tom záleží)</h2>
 
-<p>Pre klinika je užitočné vedieť, že AI je zastrešujúci pojem a najčastejšou praktickou „motorovou časťou“ v medicíne je strojové učenie (machine learning, ML).</p>
+<p>Pre klinika je užitočné vedieť, že AI je zastrešujúci pojem a jej najčastejšie používanou zložkou v medicíne je strojové učenie (machine learning, ML).</p>
 
 <p>ML sa dá zjednodušene deliť na:</p>
 
@@ -53,11 +53,11 @@ $articles[] = [
   <li><strong>učenie posilňovaním</strong> (reinforcement learning): model sa „učí“ cez odmeny a penalizácie, čo v medicíne naráža na etické limity (experimentovanie v reálnom čase zvyčajne nie je možné, preto sa pracuje skôr s retrospektívnymi dátami).</li>
 </ul>
 
-<p>V praxi sa spomína aj rozdiel oproti tradičným štatistickým skórovacím systémom: ML dokáže flexibilne prispôsobiť váhy jednotlivých premenných a generovať výstupy bez priameho ľudského zásahu v kroku rozhodovania.</p>
+<p>Od tradičných štatistických skórovacích systémov sa ML líši tým, že dokáže flexibilne prispôsobiť váhy jednotlivých premenných a generovať výstupy bez priameho ľudského zásahu v kroku rozhodovania.</p>
 
 <h2>Kľúčový koncept klinickej rozhodovacej podpory: životný cyklus AI</h2>
 
-<p>AI určená na klinické rozhodovanie typicky prechádza cyklom: tréning na dátach, validácia, nasadenie do klinického procesu a následné priebežné hodnotenie. Dôležité je, že reálny výkon neurčuje len „presnosť“ na testovacej vzorke, ale aj to, ako model reaguje na zmeny populácie, praxe alebo zberu dát.</p>
+<p>AI určená na klinické rozhodovanie typicky prechádza cyklom: tréning na dátach, validácia, nasadenie do klinického procesu a priebežné hodnotenie. Reálny výkon pritom neurčuje len „presnosť“ na testovacej vzorke, ale aj to, ako model reaguje na zmeny populácie, praxe alebo zberu dát.</p>
 
 <hr>
 
@@ -107,11 +107,11 @@ $articles[] = [
   <li>jeden komerčný model spomínaný v texte (KidneyIntelX) využíva plazmatické biomarkery, širokú paletu laboratórnych hodnôt, diagnózy, lieky a vitálne funkcie merané v troch časových bodoch; výkon sa udáva ako <strong>C-štatistika ~0,77</strong> a zdroj opisuje aj integráciu do EHR v rámci konkrétneho systému (Mount Sinai) a následnú ekonomickú analýzu s hypotézou úspory nákladov z menšieho počtu neplánovaných začatí dialýzy („crash starts“) a z pomalšej progresie DKD.</li>
 </ul>
 
-<p>Pointa pre klinika: AI môže podporiť včasné odoslanie na nefrológiu a umožniť cielenejšie rozvrstvenie rizika, čo je v súlade s posunom smerom k „value-based care“.</p>
+<p>Pre klinika z toho vyplýva, že AI môže podporiť včasné odoslanie na nefrológiu a cielenejšie rozvrstvenie rizika, čo zodpovedá posunu k „value-based care“.</p>
 
 <h3>3) Dialýza: predikcia udalostí a podpora výkonu</h3>
 
-<p>Dialýza je v časti krajín vysoko štandardizovaná, najmä v centre. To znamená, že vzniká veľa dát vhodných pre ML: predpisy (čas liečby, ultrafiltrácia, prietok dialyzátu), lieky podané počas dialýzy a ďalšie parametre v digitálnej forme.</p>
+<p>Dialýza je v časti krajín vysoko štandardizovaná, najmä v dialyzačných centrách. Vzniká tak veľa dát vhodných pre ML: predpisy (čas liečby, ultrafiltrácia, prietok dialyzátu), lieky podané počas dialýzy a ďalšie parametre v digitálnej forme.</p>
 
 <p>Najčastejšie smerovania AI v dialýze podľa textu:</p>
 
@@ -122,25 +122,25 @@ $articles[] = [
   <li><strong>odhad mortality</strong> napríklad cez Coxov model so súborom klinických parametrov (vek, kreatinín, draslík, hemoglobín, albumín, diabetes, Kt/V a ďalšie).</li>
 </ul>
 
-<p>Zaujímavé je, že hoci dialýza prináša vhodné dáta, AI sa zatiaľ rutinne nepoužíva široko (s výnimkami, napríklad v oblasti anémie). Zdroj dáva do popredia dôvody ako regulácia, ochrana súkromia a náročnosť integrácie do každodenného procesu.</p>
+<p>Hoci dialýza prináša vhodné dáta, AI sa v nej zatiaľ široko rutinne nepoužíva (s výnimkami, napríklad v oblasti anémie). Zdroj ako dôvody uvádza reguláciu, ochranu súkromia a náročnosť integrácie do každodennej práce.</p>
 
 <h3>4) Transplantácia obličky: alokácia, párovanie darcu a príjemcu, patológia</h3>
 
-<p>Transplantácia je „multidimenzionálna“ medicínska oblasť. AI sa v texte spomína naprieč:</p>
+<p>Transplantácia je mnohorozmerná oblasť a AI sa v texte spomína pri:</p>
 
 <ul>
-  <li>alokáciou orgánov,</li>
-  <li>imunosupresívnou liečbou,</li>
-  <li>zobrazovaním a hodnotením patológie štepu,</li>
-  <li>párovaním darcu a príjemcu (donor-recipient matching).</li>
+  <li>alokácii orgánov,</li>
+  <li>imunosupresívnej liečbe,</li>
+  <li>zobrazovaní a hodnotení patológie štepu,</li>
+  <li>párovaní darcu a príjemcu (donor-recipient matching).</li>
 </ul>
 
 <p>Konkrétne príklady z článku:</p>
 
 <ul>
   <li>existuje predikčný systém „iBox“ na odhad dlhodobého rizika zlyhania štepu, ktorý v uvedenom porovnaní predpovedal lepšie než nefrológovia a bol tiež externe validovaný v štúdiách v USA a Európe,</li>
-  <li>pri alokácii a spravodlivosti zdroj spomína koncepty a rámce, ktoré sa snažia riešiť nerovnosti v prístupe k transplantáciám. Ako príklad sa uvádza aj kontinuálne bodové priraďovanie pri alokácii pľúc s možným dopadom ako „primer“ pre iné orgány,</li>
-  <li>párovanie darcu a príjemcu: uvádza sa online nástroj na rozhodovanie o prijatí alebo odmietnutí „marginálnych“ ponúk na základe očakávaného posttransplantačného prežívania a indexu Kidney Donor Profile Index,</li>
+  <li>pri alokácii a spravodlivosti zdroj spomína koncepty a rámce, ktoré sa snažia riešiť nerovnosti v prístupe k transplantáciám. Ako príklad sa uvádza aj kontinuálne bodové priraďovanie pri alokácii pľúc, ktoré môže poslúžiť ako vzor pre iné orgány,</li>
+  <li>párovanie darcu a príjemcu: uvádza sa online nástroj na rozhodovanie o prijatí alebo odmietnutí „marginálnych“ ponúk na základe očakávaného posttransplantačného prežívania a Kidney Donor Profile Indexu,</li>
   <li>okrem obličiek sa v texte spomína aj použitie modelov prežívania v kontexte transplantácie pečene u diabetikov a vplyv diabetu na mortalitu.</li>
 </ul>
 
@@ -155,7 +155,7 @@ $articles[] = [
   <li>segmentácie objemov pri ADPKD pomocou algoritmov, ktoré sa porovnávajú s medzipozorovateľskou variabilitou.</li>
 </ul>
 
-<p>Klinicky je to dôležité v tom, že ide o oblasti s vysokým podielom subjektívnej interpretácie. AI môže pomôcť spraviť hodnotenie konzistentnejším, ak je validované a nasadené bezpečným spôsobom.</p>
+<p>Klinický význam spočíva v tom, že ide o oblasti s vysokým podielom subjektívnej interpretácie. AI môže pomôcť hodnotenie zjednotiť, ak je validované a nasadené bezpečným spôsobom.</p>
 
 <hr>
 
@@ -185,17 +185,17 @@ $articles[] = [
 
 <hr>
 
-<h2>Budúcnosť ML v nefrológii: tréning, validácia a „evidence“ z reálneho sveta</h2>
+<h2>Budúcnosť ML v nefrológii: tréning, validácia a dôkazy z reálnej praxe</h2>
 
 <p>Zdroj zdôrazňuje, že AI je v nefrológii stále nedostatočne využívaná a potrebuje viac validácií. Zároveň si všíma význam vzdelávania: väčšina tréningu klinikov v EHR pokrýva základné zaznamenávanie, nie porozumenie životnému cyklu dát (čo sa zbiera, ako sa to normalizuje, čo model „vidí“).</p>
 
-<p>Pri posune k value-based care môže AI fungovať ako „force multiplier“: ušetriť čas pri dokumentácii, znížiť administratívnu záťaž a umožniť viac času na priamu starostlivosť.</p>
+<p>Pri posune k value-based care môže AI znásobiť kapacitu tímu: ušetriť čas pri dokumentácii, znížiť administratívnu záťaž a umožniť viac času na priamu starostlivosť.</p>
 
-<p>V oblasti klinických štúdií sa spomína využitie ML na generovanie reálnej evidencie z real-world dát, prípadne syntetické kontrolné ramená a zrýchlenie procesov cez automatizované vyhodnocovanie obrázkov a skenov.</p>
+<p>V oblasti klinických štúdií sa spomína využitie ML na získavanie dôkazov z dát z bežnej praxe (real-world data), prípadne syntetické kontrolné ramená a zrýchlenie procesov cez automatizované vyhodnocovanie obrázkov a skenov.</p>
 
 <h2>Záver</h2>
 
-<p>AI má potenciál výrazne zmeniť nefrologickú starostlivosť: skoré odhalenie AKI, presnejší odhad progresie CKD, podporu dialyzačných rozhodnutí, pomoc v transplantácii a automatizáciu časti diagnostiky v patológii a zobrazovaní. Zároveň však platí, že integrácia do klinickej praxe nie je len otázkou „či to funguje“. Musia byť vyriešené bezpečnosť, férovosť, transparentnosť, zodpovednosť a ochrana súkromia. Najväčšiu praktickú výhodu budú mať tí, ktorí dokážu AI rozumne používať tak, aby zvyšovala kvalitu práce nefrológa, nie aby nahrádzala úsudkovú zložku medicíny.</p>
+<p>AI má potenciál výrazne zmeniť nefrologickú starostlivosť: skoré odhalenie AKI, presnejší odhad progresie CKD, podporu dialyzačných rozhodnutí, pomoc v transplantácii a automatizáciu časti diagnostiky v patológii a zobrazovaní. Zároveň však platí, že integrácia do klinickej praxe nie je len otázkou „či to funguje“. Musia byť vyriešené bezpečnosť, férovosť, transparentnosť, zodpovednosť a ochrana súkromia. Najväčšiu praktickú výhodu budú mať tí, ktorí dokážu AI rozumne používať tak, aby zvyšovala kvalitu práce nefrológa, nie aby nahrádzala klinický úsudok.</p>
 
 <hr>
 

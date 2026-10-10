@@ -31,17 +31,17 @@ $articles[] = [
     'content'      => <<<'HTML'
 <figure><a href="img/vasopresin-nezavisla-cesta-regulacie-vody-adpkd.webp" rel="noopener noreferrer" target="_blank"><img src="img/vasopresin-nezavisla-cesta-regulacie-vody-adpkd.webp" alt="Cystami prestúpená oblička so stlmenou hormonálnou cestou a druhým, novo otvoreným svetelným kanálom" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Ak hospodárenie s vodou riadi aj druhá cesta, otvára sa liečebný cieľ mimo doterajšieho mechanizmu.</figcaption></figure>
 
-<p>Autozomálne dominantná polycystická choroba obličiek (ADPKD) patrí k ochoreniam, kde je jedným z hlavných cieľov liečby obmedziť rast cýst — to sa však darí len za cenu nežiaducich účinkov. Nový translačný poznatok tímu z Mayo Clinic opisuje doplnkový, od vazopresínu nezávislý mechanizmus, ktorým oblička reguluje spätné vstrebávanie vody. V budúcnosti by mohol zmierniť akvaretickú záťaž liečby tolvaptanom a zlepšiť tak jej toleranciu.</p>
+<p>Autozomálne dominantná polycystická choroba obličiek (ADPKD) patrí k ochoreniam, kde je jedným z hlavných cieľov liečby obmedziť rast cýst; dnes sa to však darí len za cenu nežiaducich účinkov. Tím z Mayo Clinic opísal doplnkový, od vazopresínu nezávislý mechanizmus, ktorým oblička reguluje spätné vstrebávanie vody. V budúcnosti by mohol zmierniť akvaretickú záťaž liečby tolvaptanom a zlepšiť tak jej toleranciu.</p>
 
 <h2>Prečo je to dôležité pre nefrológov</h2>
 
-<p>Tolvaptan (antagonista V2 receptorov pre vazopresín) spomaľuje progresiu ADPKD, no zároveň zvyšuje diurézu — ide o takzvaný akvaretický efekt. V praxi to často znamená výraznú polyúriu a nočné močenie (noktúriu), čo znižuje toleranciu liečby aj adherenciu k nej.</p>
+<p>Tolvaptan (antagonista V2 receptorov pre vazopresín) spomaľuje progresiu ADPKD, no zároveň zvyšuje diurézu (takzvaný akvaretický efekt). V praxi to často znamená výraznú polyúriu a nočné močenie (noktúriu), čo znižuje toleranciu liečby aj adherenciu k nej.</p>
 
-<p>Nové zistenia tímu z Mayo Clinic opisujú doplnkový mechanizmus, ktorým oblička reguluje spätné vstrebávanie vody nezávisle od klasickej osi V2 receptor – cAMP – AQP2. Táto „záložná“ cesta by v budúcnosti mohla zmierniť akvaretickú záťaž pri zachovaní priaznivého účinku tolvaptanu.</p>
+<p>Opísaný mechanizmus funguje nezávisle od klasickej osi V2 receptor – cAMP – AQP2. Táto „záložná“ cesta by v budúcnosti mohla zmierniť akvaretickú záťaž pri zachovaní priaznivého účinku tolvaptanu.</p>
 
 <h2>Čo našli: urát ako vnútrobunkový signál v zberných kanálikoch</h2>
 
-<p>Kľúčom k objavu bol výskum účinkov staršieho lieku probenecidu (dnes používaného najmä pri dne a hyperurikémii). Výskumníci očakávali, že tento liek bude proces ochorenia zhoršovať — v experimentálnych modeloch sa však ukázal opak. Probenecid podľa výsledkov znižoval rast cýst a zároveň upravoval vodné hospodárstvo tak, že výrazne tlmil nárast objemu moču vyvolaný tolvaptanom.</p>
+<p>Kľúčom k objavu bol výskum účinkov staršieho lieku probenecidu (dnes používaného najmä pri dne a hyperurikémii). Výskumníci očakávali, že tento liek bude proces ochorenia zhoršovať, v experimentálnych modeloch sa však ukázal opak. Probenecid podľa výsledkov znižoval rast cýst a zároveň upravoval vodné hospodárstvo tak, že výrazne tlmil nárast objemu moču vyvolaný tolvaptanom.</p>
 
 <p>Mechanizmus možno zhrnúť takto:</p>
 
@@ -69,11 +69,11 @@ $articles[] = [
   <li>pričom väčšina pacientov uvádzala zlepšenie kvality života.</li>
 </ul>
 
-<p>Autori zároveň zdôrazňujú, že nejde o definitívne riešenie. Probenecid je starý liek, nepôsobí cielene iba na túto dráhu a nie je súčasťou bežných liečebných schém ADPKD. Skôr ho využívajú ako východisko pri návrhu cielenejších terapií.</p>
+<p>Autori zároveň zdôrazňujú, že nejde o definitívne riešenie. Probenecid je starý liek, nepôsobí cielene iba na túto dráhu a nie je súčasťou bežných liečebných schém ADPKD. Slúži skôr ako východisko pri návrhu cielenejších terapií.</p>
 
 <h2>Praktický dopad do nefrologickej praxe (čo sledovať, ako uvažovať)</h2>
 
-<p>Tento objav je zatiaľ predovšetkým mechanisticky podloženým translačným poznatkom, nie štandardom odporúčaným do rutinnej klinickej praxe. Napriek tomu dáva veľmi konkrétny smer úvahám o manažmente ADPKD:</p>
+<p>Tento objav je zatiaľ predovšetkým mechanisticky podloženým translačným poznatkom, nie štandardom odporúčaným do rutinnej klinickej praxe. Úvahám o manažmente ADPKD však dáva konkrétny smer:</p>
 
 <ol>
   <li>
@@ -84,7 +84,7 @@ $articles[] = [
     <strong>Zmysel má rozlišovať dve veci:</strong>
     <ul>
       <li>schopnosť spomaliť cystickú progresiu,</li>
-      <li>oproti tolerovateľnosti akvaretického účinku.</li>
+      <li>tolerovateľnosť akvaretického účinku.</li>
     </ul>
     Táto práca sa zameriava práve na druhú z nich.
   </li>
@@ -94,7 +94,7 @@ $articles[] = [
     <ul>
       <li>objem moču a nočnú diurézu ako klinicky relevantnú záťaž,</li>
       <li>zmeny hydratácie a symptomatiku,</li>
-      <li>a, samozrejme, bezpečnosť zvoleného zásahu.</li>
+      <li>bezpečnosť zvoleného zásahu.</li>
     </ul>
   </li>
   <li>

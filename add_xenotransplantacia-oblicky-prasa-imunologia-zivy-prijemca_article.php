@@ -41,7 +41,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Prvý živý príjemca obličky z prasaťa so 69 genetickými úpravami: xenoštep poskytol klinicky významnú funkciu, no ani intenzívna imunosupresia nezabránila včasnej T-bunkovej rejekcii ani pretrvávajúcej aktivácii vrodenej imunity. Čo z toho vyplýva pre nefrológiu.',
     'content'      => <<<'HTML'
-<figure><a href="img/xenotransplantacia-oblicky-prasa-imunologia-zivy-prijemca.webp" rel="noopener noreferrer" target="_blank"><img src="img/xenotransplantacia-oblicky-prasa-imunologia-zivy-prijemca.webp" alt="Funkčná oblička s čistým prúdom filtrátu, obliehaná zo všetkých strán hustými rojmi imunitných buniek" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Štep môže pracovať a byť pritom pod trvalým imunologickým tlakom — funkcia a pokoj nie sú to isté.</figcaption></figure>
+<figure><a href="img/xenotransplantacia-oblicky-prasa-imunologia-zivy-prijemca.webp" rel="noopener noreferrer" target="_blank"><img src="img/xenotransplantacia-oblicky-prasa-imunologia-zivy-prijemca.webp" alt="Funkčná oblička s čistým prúdom filtrátu, obliehaná zo všetkých strán hustými rojmi imunitných buniek" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Štep môže pracovať a byť pritom pod trvalým imunologickým tlakom – funkcia a pokoj nie sú to isté.</figcaption></figure>
 
 <h2>Úvod</h2>
 
@@ -53,7 +53,7 @@ $articles[] = [
 
 <h2>Klinický prípad</h2>
 
-<p>Príjemcom bol 62-ročný muž so zlyhaním obličiek, diabetes mellitus 2. typu a závažným kardiovaskulárnym ochorením. V roku 2018 podstúpil transplantáciu obličky od zomretého darcu. Po zlyhaní aloštepu, spojenom s BK vírusovou infekciou a rekurenciou diabetickej nefropatie, sa v roku 2023 vrátil k dialyzačnej liečbe.</p>
+<p>Príjemcom bol 62-ročný muž so zlyhaním obličiek, diabetom mellitus 2. typu a závažným kardiovaskulárnym ochorením. V roku 2018 podstúpil transplantáciu obličky od zomretého darcu. Po zlyhaní aloštepu, spojenom s BK vírusovou infekciou a rekurenciou diabetickej nefropatie, sa v roku 2023 vrátil k dialyzačnej liečbe.</p>
 
 <p>Opakované komplikácie cievneho prístupu významne zhoršovali jeho kvalitu života. Pravdepodobnosť získania ďalšieho ľudského orgánu bola nízka, zatiaľ čo riziko úmrtia alebo straty spôsobilosti na transplantáciu bolo vysoké.</p>
 
@@ -110,7 +110,7 @@ $articles[] = [
 
 <p>Rejekcia sa liečila pulzmi metylprednizolónu, ďalšími dávkami antitymocytového globulínu, tocilizumabom proti receptoru interleukínu 6 a pegcetacoplanom, ktorý inhibuje C3 a C3b. Zároveň sa zvýšila intenzita udržiavacej imunosupresie. Funkcia štepu sa po liečbe zlepšila.</p>
 
-<p>Hodnotenie podľa Banffovej klasifikácie je klinicky užitočné, ale treba upozorniť, že táto klasifikácia bola vytvorená pre ľudské aloštepy. Jej diagnostické prahy a prognostický význam nie sú pri prasacích xenoštepoch úplne validované.</p>
+<p>Hodnotenie podľa Banffovej klasifikácie je klinicky užitočné, táto klasifikácia však bola vytvorená pre ľudské aloštepy. Jej diagnostické prahy a prognostický význam nie sú pri prasacích xenoštepoch úplne validované.</p>
 
 <h2>Periférna krv neodhalila celý obraz</h2>
 

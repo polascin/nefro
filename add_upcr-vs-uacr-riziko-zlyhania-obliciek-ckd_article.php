@@ -37,9 +37,9 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Prospektívna observačná analýza japonských pred-dialyzačných pacientov s CKD ukazuje, že 30 % pokles UPCR aj UACR sa spája s nižším rizikom zlyhania obličiek (KFRT) a oba markery majú podobnú prognostickú výkonnosť. Pri pokročilej CKD (eGFR pod 15) je však spoľahlivejší UACR.',
+    'excerpt'      => 'Prospektívna observačná analýza japonských preddialyzačných pacientov s CKD ukazuje, že 30 % pokles UPCR aj UACR sa spája s nižším rizikom zlyhania obličiek (KFRT) a oba markery majú podobnú prognostickú výkonnosť. Pri pokročilej CKD (eGFR pod 15) je však spoľahlivejší UACR.',
     'content'      => <<<'HTML'
-<figure><a href="img/upcr-vs-uacr-riziko-zlyhania-obliciek-ckd.webp" rel="noopener noreferrer" target="_blank"><img src="img/upcr-vs-uacr-riziko-zlyhania-obliciek-ckd.webp" alt="Dve skúmavky moču vedľa seba, z každej stúpa predikčná krivka; krivky sa takmer, ale nie úplne prekrývajú" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Obe merania predpovedajú riziko podobne — nie však natoľko, aby sa dali zamieňať bez rozmyslu.</figcaption></figure>
+<figure><a href="img/upcr-vs-uacr-riziko-zlyhania-obliciek-ckd.webp" rel="noopener noreferrer" target="_blank"><img src="img/upcr-vs-uacr-riziko-zlyhania-obliciek-ckd.webp" alt="Dve skúmavky moču vedľa seba, z každej stúpa predikčná krivka; krivky sa takmer, ale nie úplne prekrývajú" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Obe merania predpovedajú riziko podobne – nie však natoľko, aby sa dali zamieňať bez rozmyslu.</figcaption></figure>
 
 <p>Pri stratifikácii rizika progresie chronickej choroby obličiek (CKD) sa v ambulantnej praxi bežne používa <strong>albuminúria vyjadrená ako UACR</strong> (pomer albumín/kreatinín v moči). Alternatívou alebo doplnkom je <strong>celková proteinúria vyjadrená ako UPCR</strong> (pomer proteín/kreatinín v moči). Na prvý pohľad by sa mohlo zdať, že ide o takmer zameniteľné ukazovatele. V skutočnosti však UPCR a UACR nie sú totožné: UPCR zachytáva aj nealbumínové zložky proteinúrie (napríklad bielkoviny tubulárneho pôvodu či iné proteíny než albumín), pričom podiel albumínu na celkovej proteinúrii môže s klesajúcou funkciou obličiek postupne klesať.</p>
 
@@ -47,7 +47,7 @@ $articles[] = [
 
 <h2>Čo ukázala prospektívna observačná analýza</h2>
 
-<p>Ide o prospektívnu observačnú analýzu japonských pacientov s pred-dialyzačnou CKD. Hlavným sledovaným ukazovateľom (endpointom) bolo <strong>KFRT</strong>, teda zlyhanie obličiek vyžadujúce náhradu funkcie — začatie hemodialýzy, peritoneálnej dialýzy alebo transplantáciu obličky.</p>
+<p>Ide o prospektívnu observačnú analýzu japonských pacientov s preddialyzačnou CKD. Hlavným sledovaným ukazovateľom (endpointom) bolo <strong>KFRT</strong>, teda zlyhanie obličiek vyžadujúce náhradu funkcie – začatie hemodialýzy, peritoneálnej dialýzy alebo transplantáciu obličky.</p>
 
 <h3>1. Pokles UPCR aj UACR o 30 % súvisel s nižším rizikom KFRT</h3>
 
@@ -72,7 +72,7 @@ $articles[] = [
 
 <h2>Ako to preniesť do nefrologickej praxe</h2>
 
-<p>Tieto zistenia zmenšujú praktický rozdiel medzi UPCR a UACR, no zároveň jasne ukazujú, že oba ukazovatele majú svoje limity.</p>
+<p>Zistenia zmenšujú praktický rozdiel medzi UPCR a UACR, ukazujú však aj limity oboch ukazovateľov.</p>
 
 <h3>Praktické zhrnutie</h3>
 
@@ -86,7 +86,7 @@ $articles[] = [
 
 <ul>
   <li>Ak u pacienta po optimalizácii nefroprotektívnej liečby (ACE inhibítory alebo sartany a ďalšie lieky podľa jeho profilu) klesá proteinúria či albuminúria, ide o objektívny podklad na posúdenie rizika.</li>
-  <li>V pokročilých štádiách CKD nemožno UPCR považovať za plnohodnotnú náhradu UACR bez zohľadnenia kontextu — najmä ak sa mení zloženie proteinúrie.</li>
+  <li>V pokročilých štádiách CKD nemožno UPCR považovať za plnohodnotnú náhradu UACR bez zohľadnenia kontextu, najmä ak sa mení zloženie proteinúrie.</li>
 </ul>
 
 <h2>Limity, ktoré treba mať na pamäti</h2>
@@ -98,7 +98,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>U pacientov s pred-dialyzačnou CKD sa <strong>30 % pokles UPCR</strong> spája s nižším rizikom KFRT a modely založené na UPCR aj na UACR majú celkovo podobnú prognostickú výkonnosť. Najväčší rozdiel sa javí pri <strong>eGFR pod 15 ml/min/1,73 m²</strong>, kde UPCR stráca časť „albumínového“ signálu — a preto je v pokročilých štádiách rozumnejšie opierať sa viac o <strong>UACR</strong>.</p>
+<p>U pacientov s preddialyzačnou CKD sa <strong>30 % pokles UPCR</strong> spája s nižším rizikom KFRT a modely založené na UPCR aj na UACR majú celkovo podobnú prognostickú výkonnosť. Najväčší rozdiel sa javí pri <strong>eGFR pod 15 ml/min/1,73 m²</strong>, kde UPCR stráca časť „albumínového“ signálu, a preto je v pokročilých štádiách rozumnejšie opierať sa viac o <strong>UACR</strong>.</p>
 
 <hr>
 
