@@ -23,11 +23,11 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Mikrofluidné modely a organoidy z indukovaných pluripotentných kmeňových buniek umožňujú oddeliť mechanické účinky od biochemických. Celý orgán zatiaľ nenahrádzajú a regulačné využitie si žiada validáciu.',
     'content'      => <<<'HTML'
-<figure><a href="img/oblicka-na-cipe-organoidy-mechanicke-sily.webp" rel="noopener noreferrer" target="_blank"><img src="img/oblicka-na-cipe-organoidy-mechanicke-sily.webp" alt="Priehľadný mikrofluidný čip so svietiacimi kanálikmi, v jednej komôrke obličkový organoid deformovaný prúdom tekutiny" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Mechanické sily nie sú pri týchto modeloch vedľajšou okolnosťou — práve ony rozhodujú, ako sa tkanivo vyvíja.</figcaption></figure>
+<figure><a href="img/oblicka-na-cipe-organoidy-mechanicke-sily.webp" rel="noopener noreferrer" target="_blank"><img src="img/oblicka-na-cipe-organoidy-mechanicke-sily.webp" alt="Priehľadný mikrofluidný čip so svietiacimi kanálikmi, v jednej komôrke obličkový organoid deformovaný prúdom tekutiny" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Mechanické sily nie sú pri týchto modeloch vedľajšou okolnosťou – práve ony rozhodujú, ako sa tkanivo vyvíja.</figcaption></figure>
 
-<p>Modely obličky na čipe a obličkové organoidy odvodené z indukovaných pluripotentných kmeňových buniek (iPSC) sú rýchlo sa rozvíjajúce experimentálne platformy. Umožňujú skúmať ľudské obličkové bunky v prostredí, ktoré je fyziologicky relevantnejšie než bežná statická kultúra — s kontrolovaným prietokom, tlakovými pomermi, mechanickým napätím, zložením extracelulárnej matrix a vzájomným pôsobením viacerých bunkových populácií.</p>
+<p>Modely obličky na čipe a obličkové organoidy odvodené z indukovaných pluripotentných kmeňových buniek (iPSC) sú rýchlo sa rozvíjajúce experimentálne platformy. Umožňujú skúmať ľudské obličkové bunky v prostredí, ktoré je fyziologicky relevantnejšie než bežná statická kultúra – s kontrolovaným prietokom, tlakovými pomermi, mechanickým napätím, zložením extracelulárnej matrix a vzájomným pôsobením viacerých bunkových populácií.</p>
 
-<p>Prehľadová práca publikovaná v <em>Journal of the American Society of Nephrology</em> zhŕňa, ako tieto systémy prispievajú k modelovaniu nefrotoxicity, vývoja obličiek a patofyziológie. Jej ťažiskovým argumentom je práve mechanika: zvieracie modely síce umožňujú skúmať ochorenie na úrovni celého organizmu, <strong>neumožňujú však oddeliť biomechanické účinky od biochemických</strong> — a práve to je pri ochoreniach obličiek podstatné.</p>
+<p>Prehľadová práca publikovaná v <em>Journal of the American Society of Nephrology</em> zhŕňa, ako tieto systémy prispievajú k modelovaniu nefrotoxicity, vývoja obličiek a patofyziológie. Jej ťažiskovým argumentom je práve mechanika: zvieracie modely síce umožňujú skúmať ochorenie na úrovni celého organizmu, <strong>neumožňujú však oddeliť biomechanické účinky od biochemických</strong> – a práve to je pri ochoreniach obličiek podstatné.</p>
 
 <p>Tieto technológie zatiaľ nereprodukujú funkciu celého ľudského orgánu. Ich využitie v regulačnom rozhodovaní si vyžaduje štandardizáciu, nezávislú validáciu a porovnanie s klinickými údajmi.</p>
 
@@ -43,7 +43,7 @@ $articles[] = [
 
 <h2>Čo je oblička na čipe</h2>
 
-<p>Oblička na čipe — presnejšie obličkový mikrofyziologický systém — je mikrofluidné zariadenie s jednou alebo viacerými populáciami obličkových buniek. Bunky sa pestujú v priestorovo definovaných kanáloch alebo komorách, cez ktoré možno regulovane viesť médium. Priepustná membrána alebo trojrozmerná matrix môže oddeľovať epitelovú a endotelovú časť.</p>
+<p>Oblička na čipe – presnejšie obličkový mikrofyziologický systém – je mikrofluidné zariadenie s jednou alebo viacerými populáciami obličkových buniek. Bunky sa pestujú v priestorovo definovaných kanáloch alebo komorách, cez ktoré možno regulovane viesť médium. Priepustná membrána alebo trojrozmerná matrix môže oddeľovať epitelovú a endotelovú časť.</p>
 
 <p>Konštrukcia závisí od toho, ktorú časť nefrónu má systém napodobniť. Existujú modely glomerulárnej filtračnej bariéry, proximálneho tubulu, distálneho nefrónu aj zberného systému; niektoré platformy spájajú viacero kompartmentov alebo ich integrujú s modelmi pečene či srdca.</p>
 
@@ -57,7 +57,7 @@ $articles[] = [
 
 <p>Tubulárny epitel je neustále vystavený prietoku ultrafiltrátu. Šmykové napätie ovplyvňuje polaritu buniek, usporiadanie cytoskeletu, diferenciáciu mikroklkov, funkciu primárnych cílií a expresiu transportérov. Statická kultúra tento podnet neposkytuje.</p>
 
-<p>Pri vhodne nastavenom prietoku možno dosiahnuť fenotyp bližší ľudskému tubulárnemu epitelu. Neznamená to však, že vyšší prietok je automaticky fyziologickejší — výsledok závisí od rozmerov kanála, viskozity média, geometrie zariadenia a od skutočného šmykového napätia pôsobiaceho na bunkový povrch.</p>
+<p>Pri vhodne nastavenom prietoku možno dosiahnuť fenotyp bližší ľudskému tubulárnemu epitelu. Neznamená to však, že vyšší prietok je automaticky fyziologickejší – výsledok závisí od rozmerov kanála, viskozity média, geometrie zariadenia a od skutočného šmykového napätia pôsobiaceho na bunkový povrch.</p>
 
 <h3>Tlak a mechanická deformácia</h3>
 
@@ -108,7 +108,7 @@ $articles[] = [
 
 <p>Spojenie pacientskych iPSC s organoidmi a mikrofluidnými zariadeniami umožňuje vytvárať modely nesúce konkrétny genetický variant. Úprava genómu môže vytvoriť izogénnu kontrolu, pri ktorej sa chorobný a korigovaný model líšia iba skúmaným variantom.</p>
 
-<p>Prístup môže pomôcť objasniť patogenitu zriedkavých variantov, mechanizmy dedičných nefropatií a potenciálnu odpoveď na liečbu. Zatiaľ však nemožno predpokladať, že odpoveď organoidu spoľahlivo predpovie klinickú odpoveď konkrétneho pacienta — na taký záver by boli potrebné prospektívne validačné štúdie porovnávajúce výsledky modelu so skutočným klinickým priebehom.</p>
+<p>Prístup môže pomôcť objasniť patogenitu zriedkavých variantov, mechanizmy dedičných nefropatií a potenciálnu odpoveď na liečbu. Zatiaľ však nemožno predpokladať, že odpoveď organoidu spoľahlivo predpovie klinickú odpoveď konkrétneho pacienta – na taký záver by boli potrebné prospektívne validačné štúdie porovnávajúce výsledky modelu so skutočným klinickým priebehom.</p>
 
 <h2>Strojové učenie a klinické databázy</h2>
 
@@ -175,11 +175,11 @@ $articles[] = [
 
 <p>Ide o <strong>odborný prehľad</strong>, nie o randomizovanú štúdiu, diagnostickú validačnú štúdiu ani systematickú metaanalýzu. Presvedčivo opisuje biologický a technologický potenciál platforiem, neposkytuje však dôkaz, že tieto modely už dokážu samostatne nahradiť zvieracie štúdie alebo predpovedať klinické poškodenie obličiek s presne stanovenou citlivosťou a špecificitou.</p>
 
-<p>Tvrdenia o modelovaní glomerulovej filtrácie a tubulárnej reabsorpcie treba chápať ako reprodukciu vybraných funkčných dejov v konkrétnom experimentálnom systéme — nie ako rekonštrukciu celkovej filtračnej, endokrinnej, metabolickej a homeostatickej funkcie obličiek.</p>
+<p>Tvrdenia o modelovaní glomerulovej filtrácie a tubulárnej reabsorpcie treba chápať ako reprodukciu vybraných funkčných dejov v konkrétnom experimentálnom systéme – nie ako rekonštrukciu celkovej filtračnej, endokrinnej, metabolickej a homeostatickej funkcie obličiek.</p>
 
 <p>Rovnako treba odlišovať <em>biologickú vierohodnosť</em> od <em>regulačnej validácie</em>. Model môže mať fyziologicky presvedčivú architektúru, ale bez reprodukovateľnosti medzi laboratóriami a bez porovnania s klinickými výsledkami ešte nemusí byť vhodný na rozhodovanie o bezpečnosti lieku.</p>
 
-<p>Za povšimnutie stojí aj to, že autori v závere zdôrazňujú interdisciplinárnu spoluprácu inžinierov, biológov a lekárov-vedcov ako <em>podmienku</em> translácie. Ide teda o formuláciu výskumného programu, nie o oznámenie hotového nástroja.</p>
+<p>Autori v závere zdôrazňujú interdisciplinárnu spoluprácu inžinierov, biológov a lekárov-vedcov ako <em>podmienku</em> translácie. Ide teda o formuláciu výskumného programu, nie o oznámenie hotového nástroja.</p>
 
 <h2>Význam pre klinickú nefrológiu</h2>
 

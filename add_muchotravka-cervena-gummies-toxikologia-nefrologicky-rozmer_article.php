@@ -55,7 +55,7 @@ $articles[] = [
 
 <p>Tvrdenie, že muskarín vysvetľuje autonómne prejavy otravy muchotrávkou červenou, treba podať presne. Napriek tomu, že huba dala látke meno, jej obsah je nízky – FDA uvádza približne 3 ppm (0,0003 %), čo je hodnota vychádzajúca z prác z 50. rokov minulého storočia. Klinicky významné množstvá muskarínu obsahujú iné rody, najmä <em>Inocybe</em> a <em>Clitocybe</em>.</p>
 
-<p>Tento konsenzus však bol v roku 2025 spochybnený. Feeney a spol. analyzovali vzorky metódou HPLC-MS/MS a namerali koncentrácie muskarínu <strong>0,004 % až 0,043 %</strong>, teda rádovo 10- až 140-násobne vyššie než tradične uvádzaná hodnota, a doložili ich prieskumom u 53 osôb s cholinergnými príznakmi po požití huby. Praktický záver: obsah muskarínu nemožno považovať za zanedbateľný paušálne, ale ani za hlavný mechanizmus toxicity. Ak sú prítomné cholinergné prejavy, ide o <strong>miózu</strong>, nie mydriázu – tá patrí k opačnému, anticholinergnému obrazu.</p>
+<p>Tento konsenzus však bol v roku 2025 spochybnený. Feeney a spol. analyzovali vzorky metódou HPLC-MS/MS a namerali koncentrácie muskarínu <strong>0,004 % až 0,043 %</strong>, teda rádovo 10- až 140-násobne vyššie než tradične uvádzaná hodnota, a doložili ich prieskumom u 53 osôb s cholinergnými príznakmi po požití huby. Praktický záver: obsah muskarínu nemožno paušálne považovať za zanedbateľný, ale ani za hlavný mechanizmus toxicity. Ak sú prítomné cholinergné prejavy, ide o <strong>miózu</strong>, nie mydriázu – tá patrí k opačnému, anticholinergnému obrazu.</p>
 
 <h3>Obsah účinných látok kolíše o rády</h3>
 
@@ -89,11 +89,11 @@ $articles[] = [
 
 <h2>Nefrologická otázka: poškodzuje muchotrávka červená obličky?</h2>
 
-<p>Práve v tomto bode sa opakovane objavuje nadhodnotenie rizika. Dostupné údaje hovoria nasledovné:</p>
+<p>Práve v tomto bode sa opakovane objavuje nadhodnotenie rizika. Dostupné údaje ukazujú toto:</p>
 
 <ul>
 <li><strong>Najväčší publikovaný klinický súbor</strong> (34 prípadov za 14 rokov, Oregonské toxikologické centrum) <strong>nezaznamenal ani jedno akútne poškodenie obličiek</strong>.</li>
-<li><strong>Vedecké memorandum FDA</strong>, ktoré prešlo 604 unikátnych publikácií, <strong>neuvádza obličkové poškodenie vôbec</strong> – ani medzi hlásenými účinkami, ani medzi kazuistikami. Citovať FDA ako zdroj tvrdenia o renálnej insuficiencii po <em>A. muscaria</em> je preto nepodložené.</li>
+<li><strong>Vedecké memorandum FDA</strong>, ktoré posúdilo 604 jedinečných publikácií, <strong>neuvádza obličkové poškodenie vôbec</strong> – ani medzi hlásenými účinkami, ani medzi kazuistikami. Citovať FDA ako zdroj tvrdenia o renálnej insuficiencii po <em>A. muscaria</em> je preto nepodložené.</li>
 <li>V databáze PubMed <strong>nie je indexovaná ani jedna práca</strong> na dopyt „Amanita muscaria“ a „rhabdomyolysis“.</li>
 <li>Jediný dohľadateľný doklad o súbežnom renálnom zlyhaní a rabdomyolýze je <strong>kongresový abstrakt</strong> (poster, CHEST 2020): 56-ročný muž po cielenom požití huby s hyperaktivitou prechádzajúcou do agresivity, útlmom dýchania, myoklonickými zášklbmi, renálnym zlyhaním a rabdomyolýzou. Ide o jednu kazuistiku vo forme neindexovaného abstraktu, teda o najnižšiu úroveň dôkazu.</li>
 </ul>
@@ -127,7 +127,7 @@ $articles[] = [
 
 <h3>Aplikácie na určovanie húb nie sú bezpečnostná poistka</h3>
 
-<p>Pri odbere anamnézy stojí za zmienku, že rastúci podiel pacientov sa spolieha na mobilné aplikácie s rozpoznávaním obrázkov. Austrálska práca porovnala tri populárne aplikácie na 78 vzorkách overených mykológom: úspešnosť určenia bola 35 až 49 % pre všetky vzorky a 30 až 44 % pre jedovaté huby, pričom <em>A. phalloides</em> bola nesprávne určená trikrát. Autori uzatvárajú, že tieto nástroje samy osebe nedokážu vylúčiť expozíciu potenciálne jedovatej hube.</p>
+<p>Pri odbere anamnézy treba myslieť aj na to, že rastúci podiel pacientov sa spolieha na mobilné aplikácie s rozpoznávaním obrázkov. Austrálska práca porovnala tri populárne aplikácie na 78 vzorkách overených mykológom: úspešnosť určenia bola 35 až 49 % pre všetky vzorky a 30 až 44 % pre jedovaté huby, pričom <em>A. phalloides</em> bola nesprávne určená trikrát. Autori uzatvárajú, že tieto nástroje samy osebe nedokážu vylúčiť expozíciu potenciálne jedovatej hube.</p>
 
 <h2>Prečo je „gummy“ iný problém než huba z lesa</h2>
 
@@ -181,7 +181,7 @@ $articles[] = [
 <li>zvyšky produktu, obal alebo zvyšky húb – ich uchovanie umožní laboratórnu identifikáciu.</li>
 </ul>
 
-<p>Užitočná je aj informácia, že <strong>tieto látky sa nezachytia bežným toxikologickým skríningom</strong>. Negatívny drogový skríning expozíciu nevylučuje.</p>
+<p>Treba tiež vedieť, že <strong>tieto látky sa nezachytia bežným toxikologickým skríningom</strong>. Negatívny drogový skríning expozíciu nevylučuje.</p>
 
 <h3>2. Laboratórne sledovanie</h3>
 

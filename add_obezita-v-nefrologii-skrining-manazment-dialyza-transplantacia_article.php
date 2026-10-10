@@ -33,7 +33,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Praktický prehľad podľa AJKD Core Curriculum: ako skrínovať obezitu pri CKD (BMI a centrálna adipozita), prečo poškodzuje obličky a čo platí pri behaviorálnej liečbe, ketodiétach, dialýze a transplantácii.',
     'content'      => <<<'HTML'
-<figure><a href="img/obezita-v-nefrologii-skrining-manazment-dialyza-transplantacia.webp" rel="noopener noreferrer" target="_blank"><img src="img/obezita-v-nefrologii-skrining-manazment-dialyza-transplantacia.webp" alt="Objemná telesná hmota vrhajúca tieň na dialyzačný filter a transplantovanú obličku" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Obezita nie je len pridružená diagnóza — mení podmienky dialýzy aj prístup k transplantácii.</figcaption></figure>
+<figure><a href="img/obezita-v-nefrologii-skrining-manazment-dialyza-transplantacia.webp" rel="noopener noreferrer" target="_blank"><img src="img/obezita-v-nefrologii-skrining-manazment-dialyza-transplantacia.webp" alt="Objemná telesná hmota vrhajúca tieň na dialyzačný filter a transplantovanú obličku" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Obezita nie je len pridružená diagnóza – mení podmienky dialýzy aj prístup k transplantácii.</figcaption></figure>
 
 <p>Obezita je najčastejším rizikovým faktorom ochorenia obličiek. V bežnej populácii aj u pacientov s chronickou chorobou obličiek (CKD) nejde len o kardiovaskulárny problém – ide o chronické, často recidivujúce ochorenie, ktoré sa môže výrazne dotýkať viacerých orgánov vrátane obličiek a zároveň zásadne ovplyvňuje priebeh liečby, najmä dialýzy a možnosti transplantácie.</p>
 
@@ -114,7 +114,7 @@ $articles[] = [
 
 <p>V modelovom prípade pacienta s BMI 26 kg/m², CKD 4. štádia, obštrukčným spánkovým apnoe a osteoartrózou článok rieši otázku, či treba robiť ďalšie merania adipozity (napríklad DXA). Odpoveď je, že <strong>nie</strong> – pri nadváhe v prítomnosti komorbidít asociovaných s adipozitou sa chudnutie odporúča aj bez ďalších špecifických doplnkových testov.</p>
 
-<p>Kľúčový praktický bod: u pacientov s CKD sa zameraj skôr na <strong>prítomnosť komorbidít</strong> a celkový zdravotný cieľ než na „zložitosť“ merania adipozity, ktoré by len zvýšilo záťaž pacienta.</p>
+<p>Prakticky: u pacientov s CKD je dôležitejšia <strong>prítomnosť komorbidít</strong> a celkový zdravotný cieľ než „zložité“ meranie adipozity, ktoré by len zvýšilo záťaž pacienta.</p>
 
 <h2>Behaviorálny intervenčný program: čo má byť jadrom liečby</h2>
 
@@ -128,7 +128,7 @@ $articles[] = [
 
 <h3>Dôkazy a limity pri už rozvinutej CKD</h3>
 
-<p>Zmienka o štúdii LOOK AHEAD (diabetes 2. typu) pomáha pochopiť, čo sa reálne dosiahne:</p>
+<p>Štúdia LOOK AHEAD (diabetes 2. typu) ukazuje, čo sa dá reálne dosiahnuť:</p>
 
 <ul>
   <li>pri intenzívnom programe bol váhový úbytok významne vyšší (8 % oproti 0,7 % v 1. roku),</li>
@@ -157,28 +157,28 @@ $articles[] = [
   <li>monitorovanie BMI a obvodu pása a sledovanie kvality života.</li>
 </ul>
 
-<p>Pri riziku hyperkaliémie sa spomína využiteľnosť <strong>pomeru draslík/vláknina</strong> na výber potravín s nižším rizikom hyperkaliémie.</p>
+<p>Pri riziku hyperkaliémie môže pri výbere potravín pomôcť <strong>pomer draslík/vláknina</strong>.</p>
 
 <h2>Ketogénne diéty pri CKD: prečo sú pri pokročilom CKD skôr nevhodné</h2>
 
-<p>Článok rieši kazuistický dotaz pacienta s CKD 4. štádia, či môže použiť ketogénnu diétu. Záver je jednoznačne praktický:</p>
+<p>Článok rozoberá modelovú otázku pacienta s CKD 4. štádia, či môže držať ketogénnu diétu. Záver je praktický:</p>
 
 <ul>
   <li>pri CKD, najmä pokročilom, sa ketogénne diéty <strong>skôr neodporúčajú</strong> pre nedostatok dôkazov o bezpečnosti,</li>
   <li>ketogénna diéta často znamená nízky príjem sacharidov a vysoký príjem tuku, pričom v praxi môže viesť aj k vyššiemu príjmu bielkovín,</li>
-  <li>diétna logika pri CKD zdôrazňuje, že nízkosacharidová strava s vysokým obsahom bielkovín sa u pacientov s CKD neodporúča.</li>
+  <li>nízkosacharidová strava s vysokým obsahom bielkovín sa u pacientov s CKD neodporúča.</li>
 </ul>
 
 <p>Text v tejto časti spomína aj diétne rámce pri CKD podľa KDIGO (v kontexte odporúčania 0,8 g bielkovín/kg ideálnej telesnej hmotnosti/deň pre pacientov bez dialýzy) a potrebu starostlivo kontrolovaných nízkobielkovinových stratégií pod vedením registrovaného dietológa.</p>
 
-<p>Z textu vyplývajú dve ďalšie obavy:</p>
+<p>Text uvádza ešte dve obavy:</p>
 
 <ul>
   <li>ketogénne diéty môžu zvyšovať LDL cholesterol,</li>
   <li>ketogénne diéty zvyšujú riziko obličkových kameňov – podporujú vyššiu exkréciu vápnika do moču, znižujú exkréciu citrátu a znižujú pH moču.</li>
 </ul>
 
-<p>Článok síce spomína krátkodobú štúdiu s rastlinnou ketogénnou diétou pri autozomálne dominantnej polycystickej chorobe obličiek (ADPKD), kde bolo priemerné eGFR vysoké a diéta sa po 12 týždňoch hodnotila ako bezpečná a účinná. Hneď však dodáva, že pre krátke trvanie nevieme, či je udržateľná a bezpečná dlhodobo, a preto sa pri CKD, najmä pokročilom, majú ketogénne diéty skôr odradiť.</p>
+<p>Článok síce spomína krátkodobú štúdiu s rastlinnou ketogénnou diétou pri autozomálne dominantnej polycystickej chorobe obličiek (ADPKD), kde bolo priemerné eGFR vysoké a diéta sa po 12 týždňoch hodnotila ako bezpečná a účinná. Hneď však dodáva, že pre krátke trvanie nevieme, či je udržateľná a bezpečná dlhodobo, a preto sa pri CKD, najmä pokročilom, majú ketogénne diéty skôr neodporúčať.</p>
 
 <h2>Obezita a dialýza: peritoneálna dialýza a Kt/V pri veľkých telesných rozmeroch</h2>
 
@@ -212,7 +212,7 @@ $articles[] = [
   <li>a ak sú dostupné, metódy ako <strong>bioimpedancia alebo kinetické modelovanie</strong>, ktoré môžu obísť chyby vo výpočte V.</li>
 </ul>
 
-<p>Dôležitým praktickým dodatkom je častejší režim monitorovania a úprav predpisu PD u obéznych pacientov, ako aj to, že úbytok reziduálnej renálnej funkcie môže byť pri vyššom BMI rýchlejší.</p>
+<p>Prakticky dôležité je aj častejšie monitorovanie a úprava predpisu PD u obéznych pacientov a vedomie, že úbytok reziduálnej renálnej funkcie môže byť pri vyššom BMI rýchlejší.</p>
 
 <h2>Obezita a transplantácia obličky: zaradenie na čakaciu listinu, operačné riziká a zmysel chudnutia</h2>
 
@@ -254,14 +254,14 @@ $articles[] = [
 <ul>
   <li>najprv si vyžiadať <strong>súhlas pacienta</strong>, či je možné hovoriť o chudnutí ako o intervencii na dosiahnutie konkrétneho cieľa (napríklad zaradenia na čakaciu listinu),</li>
   <li>vyhýbať sa stigmatizujúcim výrazom ako „obezita“ alebo „tuk“,</li>
-  <li>rámcovať diskusiu ako prínos pre zdravie a konkrétny výsledok,</li>
+  <li>viesť rozhovor ako o prínose pre zdravie a konkrétny výsledok,</li>
   <li>pred zvažovaním medicínskych krokov preveriť bariéry ako poruchy príjmu potravy a sociálne faktory.</li>
 </ul>
 
 <h2>Zhrnutie pre klinickú prax</h2>
 
 <ul>
-  <li>skríning rob cez <strong>BMI</strong> a podľa situácie doplň aj <strong>centrálnu adipozitu (obvod pása, pomer pás/boky)</strong>,</li>
+  <li>skríning robiť pomocou <strong>BMI</strong> a podľa situácie doplniť aj <strong>centrálnu adipozitu (obvod pása, pomer pás/boky)</strong>,</li>
   <li>pri <strong>nadváhe alebo obezite s komorbiditami</strong> pri CKD je chudnutie na mieste aj bez „overovania“ adipozity ďalšími drahými meraniami,</li>
   <li>behaviorálne intervencie majú byť dlhé, komplexné a prakticky uskutočniteľné pre reálneho pacienta,</li>
   <li>ketogénne diéty pri CKD, najmä pokročilom, skôr odmietať pre riziká a nedostatok dôkazov,</li>

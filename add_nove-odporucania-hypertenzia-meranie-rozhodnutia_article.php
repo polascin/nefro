@@ -32,17 +32,17 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Nové odporúčania pre hypertenziu kladú dôraz na presné meranie krvného tlaku, rozhodovanie podľa celkového kardiovaskulárneho rizika a racionálne skoršie použitie kombinovanej liečby. Bezmanžetové technológie zatiaľ nemajú nahrádzať validované manžetové meranie.',
     'content'      => <<<'HTML'
-<figure><a href="img/nove-odporucania-hypertenzia-meranie-rozhodnutia.webp" rel="noopener noreferrer" target="_blank"><img src="img/nove-odporucania-hypertenzia-meranie-rozhodnutia.webp" alt="Tlakomerová manžeta na pokojne položenom ramene s ostrým stabilným údajom a miznúcim rozmazaným dvojobrazom" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Nepresné meranie vedie k nesprávnemu rozhodnutiu — technika merania je súčasťou diagnózy.</figcaption></figure>
+<figure><a href="img/nove-odporucania-hypertenzia-meranie-rozhodnutia.webp" rel="noopener noreferrer" target="_blank"><img src="img/nove-odporucania-hypertenzia-meranie-rozhodnutia.webp" alt="Tlakomerová manžeta na pokojne položenom ramene s ostrým stabilným údajom a miznúcim rozmazaným dvojobrazom" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Nepresné meranie vedie k nesprávnemu rozhodnutiu – technika merania je súčasťou diagnózy.</figcaption></figure>
 
 <p>Liečba hypertenzie sa často začína jedným číslom v ambulancii. Problém je, že toto číslo nemusí byť spoľahlivé. Nové odporúčania a ich praktická interpretácia pripomínajú jednoduchú, ale zásadnú vec: ak krvný tlak meriame zle, môžeme nesprávne diagnostikovať, zbytočne liečiť alebo neprimerane zvyšovať dávky liekov.</p>
 
-<p>Hlavné posolstvo je veľmi praktické. Predtým, než pacienta označíme za hypertonika alebo mu pridáme ďalší liek, musíme sa uistiť, že meranie bolo technicky správne. Až potom má zmysel hovoriť o životnom štýle, diéte, alkohole, sodíku, draslíku a farmakoterapii.</p>
+<p>Predtým, než pacienta označíme za hypertonika alebo mu pridáme ďalší liek, musíme sa uistiť, že meranie bolo technicky správne. Až potom má zmysel hovoriť o životnom štýle, diéte, alkohole, sodíku, draslíku a farmakoterapii.</p>
 
 <h2>Presné meranie tlaku nie je formalita</h2>
 
 <p>Krvný tlak v ambulancii je citlivý na detaily. Poloha ruky, opora chrbta, poloha nôh, predchádzajúca káva, jedlo alebo nikotín môžu významne ovplyvniť výsledok. Podľa diskutovaných údajov môže byť rozdiel medzi meraním s rukou položenou v lone a rukou vo výške srdca klinicky významný. Ešte horšie je, ak ruka voľne visí pozdĺž tela.</p>
 
-<p>Správne meranie má vyzerať jednoducho, ale dôsledne:</p>
+<p>Pri správnom meraní:</p>
 
 <ul>
   <li>pacient sedí pokojne,</li>
@@ -53,13 +53,13 @@ $articles[] = [
   <li>meranie sa nerobí bezprostredne po káve, fajčení, jedle alebo fyzickej námahe.</li>
 </ul>
 
-<p>V praxi je veľmi časté, že prvý tlak nameraný pri triedení pacienta je vyšší než opakované meranie po niekoľkých minútach pokoja. To nie je drobnosť. Rozdiel môže rozhodnúť o tom, či pacient dostane liek, vyššiu dávku alebo novú diagnózu.</p>
+<p>V praxi býva prvý tlak nameraný pri triedení pacienta často vyšší než opakované meranie po niekoľkých minútach pokoja. Tento rozdiel môže rozhodnúť o tom, či pacient dostane liek, vyššiu dávku alebo novú diagnózu.</p>
 
 <h2>Bezmanžetové zariadenia zatiaľ nestačia</h2>
 
 <p>Inteligentné hodinky a bezmanžetové zariadenia sú technologicky lákavé, ale zatiaľ nemajú byť náhradou štandardného merania krvného tlaku. V článku sa uvádza, že technológia využívaná napríklad v hodinkách Apple Watch na odhad hypertenzie zatiaľ nie je dostatočne spoľahlivá. Spomínaná senzitivita 41 % na detekciu vysokého krvného tlaku je na klinické rozhodovanie slabá.</p>
 
-<p>To neznamená, že tieto technológie nemajú budúcnosť. Znamená to iba toľko, že dnes by sa podľa nich nemala nastavovať liečba hypertenzie. Na diagnostiku a úpravu liečby zostáva potrebné validované manžetové meranie, ideálne doplnené domácim meraním alebo ambulantným 24-hodinovým monitorovaním, ak je to klinicky vhodné.</p>
+<p>To neznamená, že tieto technológie nemajú budúcnosť. Dnes by sa však podľa nich nemala nastavovať liečba hypertenzie. Na diagnostiku a úpravu liečby zostáva potrebné validované manžetové meranie, ideálne doplnené domácim meraním alebo ambulantným 24-hodinovým monitorovaním, ak je to klinicky vhodné.</p>
 
 <h2>Alkohol a tlak: čím menej, tým lepšie</h2>
 
@@ -71,15 +71,15 @@ $articles[] = [
 
 <p>Odporúčanie pre príjem sodíka zostáva prísne. Cieľom je dostať sa pod 2300 mg sodíka denne a ideálne smerovať ešte nižšie, približne k 1500 mg denne. Prakticky to znamená, že nestačí prestať dosoľovať jedlo. Veľká časť sodíka prichádza z priemyselne spracovaných potravín, pečiva, syrov, údenín, hotových jedál, instantných výrobkov a reštauračnej stravy.</p>
 
-<p>DASH diéta a diéty s nižším obsahom sodíka majú preukázateľný účinok na krvný tlak. Pre pacienta je však dôležité podať to prakticky. Menej soli neznamená nevýrazné jedlo. Pomôcť môžu bylinky, kyslosť, cesnak, cibuľa, korenie, kvalitné základné potraviny a postupná adaptácia chuti.</p>
+<p>DASH diéta a diéty s nižším obsahom sodíka majú preukázateľný účinok na krvný tlak. Pacientovi to však treba podať prakticky: menej soli neznamená nevýrazné jedlo. Pomôcť môžu bylinky, kyslosť, cesnak, cibuľa, korenie, kvalitné základné potraviny a postupná adaptácia chuti.</p>
 
 <h2>Draslík môže pomáhať, ale nie u každého rovnako</h2>
 
-<p>Zaujímavým bodom nových odporúčaní je väčší dôraz na príjem draslíka. Vyšší príjem draslíka v strave môže pomáhať znižovať krvný tlak, ak ho pacient toleruje a nemá kontraindikáciu.</p>
+<p>Nové odporúčania kladú väčší dôraz na príjem draslíka. Vyšší príjem draslíka v strave môže pomáhať znižovať krvný tlak, ak ho pacient toleruje a nemá kontraindikáciu.</p>
 
 <p>Preferovaným zdrojom má byť potrava, nie automaticky tabletová suplementácia. Vhodné potraviny s vyšším obsahom draslíka môžu byť súčasťou zdravého jedálnička. Samotný článok však správne pripomína, že banány nie sú ideálnou „prvou voľbou“ pre každého, keďže prinášajú aj vyšší obsah cukrov. Draslík sa dá prijímať aj z iných rastlinných potravín.</p>
 
-<p>Tu treba byť klinicky opatrný. U pacientov s chronickou chorobou obličiek, pokročilým CKD, pri liečbe inhibítormi renín-angiotenzín-aldosterónového systému, mineralokortikoidnými antagonistami alebo pri anamnéze hyperkaliémie sa nedá paušálne odporučiť zvyšovanie draslíka bez kontroly laboratórnych hodnôt. V bežnej populácii s hypertenziou môže byť vyšší príjem draslíka prospešný, ale u nefrologických pacientov musí byť individualizovaný.</p>
+<p>Tu treba byť klinicky opatrný. U pacientov s chronickou chorobou obličiek, najmä pokročilou, pri liečbe inhibítormi renín-angiotenzín-aldosterónového systému, antagonistami mineralokortikoidových receptorov alebo pri anamnéze hyperkaliémie sa nedá paušálne odporučiť zvyšovanie draslíka bez kontroly laboratórnych hodnôt. V bežnej populácii s hypertenziou môže byť vyšší príjem draslíka prospešný, ale u nefrologických pacientov musí byť individualizovaný.</p>
 
 <h2>Hypertenzia 1. stupňa: rozhoduje aj kardiovaskulárne riziko</h2>
 
@@ -87,7 +87,7 @@ $articles[] = [
 
 <p>Ak má pacient známe kardiovaskulárne ochorenie, diabetes alebo 10-ročné kardiovaskulárne riziko podľa kalkulátora PREVENT nad 7,5 %, je dôvod začať farmakologickú liečbu skôr. Ak je riziko nízke, môže byť rozumné najskôr cielene pracovať so životným štýlom a následne tlak prehodnotiť.</p>
 
-<p>Toto je praktický posun. Hypertenzia sa nelieči izolovane od pacienta. Iný význam má tlak 134/84 mm Hg u mladého nízkorizikového človeka a iný u pacienta s diabetom, albuminúriou alebo už prekonanou kardiovaskulárnou príhodou.</p>
+<p>Hypertenzia sa teda nelieči izolovane od pacienta. Iný význam má tlak 134/84 mm Hg u mladého nízkorizikového človeka a iný u pacienta s diabetom, albuminúriou alebo už prekonanou kardiovaskulárnou príhodou.</p>
 
 <h2>Hypertenzia 2. stupňa: skôr kombinácia než maximálna dávka jedného lieku</h2>
 
@@ -95,7 +95,7 @@ $articles[] = [
 
 <p>V článku sa spomína skoršie nasadenie dvojkombinácií a v niektorých prípadoch aj trojkombinácií, napríklad kombinácia blokátora angiotenzínového receptora, blokátora kalciového kanála a tiazidového alebo tiazidu podobného diuretika. Takýto prístup môže zlepšiť adherenciu, najmä ak je dostupný v jednej tablete.</p>
 
-<p>Samozrejme, výber liekov musí zohľadniť vek, obličkové funkcie, elektrolyty, albuminúriu, srdcové zlyhávanie, ischemickú chorobu srdca, dnu, ortostatické ťažkosti, graviditu alebo liekové interakcie.</p>
+<p>Výber liekov musí pritom zohľadniť vek, obličkové funkcie, elektrolyty, albuminúriu, srdcové zlyhávanie, ischemickú chorobu srdca, dnu, ortostatické ťažkosti, graviditu alebo liekové interakcie.</p>
 
 <h2>Praktická interpretácia pre ambulanciu</h2>
 
@@ -107,7 +107,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>Nové odporúčania pre hypertenziu sú praktické najmä v troch oblastiach. Po prvé, zdôrazňujú presné meranie krvného tlaku. Po druhé, posúvajú rozhodovanie pri hypertenzii 1. stupňa smerom k celkovému kardiovaskulárnemu riziku. Po tretie, podporujú racionálne skoršie použitie kombinovanej liečby pri vyšších hodnotách tlaku.</p>
+<p>Nové odporúčania pre hypertenziu sú praktické najmä v troch oblastiach: zdôrazňujú presné meranie krvného tlaku, pri hypertenzii 1. stupňa posúvajú rozhodovanie smerom k celkovému kardiovaskulárnemu riziku a pri vyšších hodnotách tlaku podporujú racionálne skoršie použitie kombinovanej liečby.</p>
 
 <p>Pre pacienta je dôležité jednoduché vysvetlenie: tlak treba merať správne, nespoliehať sa na neoverené bezmanžetové technológie, znížiť alkohol a sodík, u vhodných pacientov zvýšiť príjem draslíka a liečbu prispôsobiť celkovému riziku, nie iba jednému číslu z ambulancie.</p>
 
