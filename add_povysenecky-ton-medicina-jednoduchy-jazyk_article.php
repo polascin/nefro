@@ -30,15 +30,15 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Zrozumiteľná komunikácia nie je to isté ako infantilizácia. Článok na Medscape upozorňuje, že prehnane zjednodušený alebo povýšenecký jazyk vrátane „elderspeak“ môže pacienta podceniť a narušiť dôveru.',
     'content'      => <<<'HTML'
-<figure><a href="img/povysenecky-ton-medicina-jednoduchy-jazyk.webp" rel="noopener noreferrer" target="_blank"><img src="img/povysenecky-ton-medicina-jednoduchy-jazyk.webp" alt="Dva svetelné útvary v nerovnakej výške, zhora nadol prúdi zjednodušené svetlo a spodný pod ním stmavne" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Zrozumiteľnosť a rešpekt nestoja proti sebe — rozdiel robí tón, nie slovná zásoba.</figcaption></figure>
+<figure><a href="img/povysenecky-ton-medicina-jednoduchy-jazyk.webp" rel="noopener noreferrer" target="_blank"><img src="img/povysenecky-ton-medicina-jednoduchy-jazyk.webp" alt="Dva svetelné útvary v nerovnakej výške, zhora nadol prúdi zjednodušené svetlo a spodný pod ním stmavne" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Zrozumiteľnosť a rešpekt nestoja proti sebe – rozdiel robí tón, nie slovná zásoba.</figcaption></figure>
 
-<p>Komunikácia medzi lekárom a pacientom patrí medzi najdôležitejšie časti medicíny. Správne vysvetlenie diagnózy, liečby a ďalšieho postupu môže rozhodnúť o tom, či pacient porozumie svojmu stavu, bude spolupracovať a bude sa cítiť bezpečne. Zároveň však platí, že komunikácia nie je iba o jednoduchosti. Je aj o dôstojnosti, rešpekte a citlivom odhade konkrétneho človeka.</p>
+<p>Komunikácia medzi lekárom a pacientom patrí medzi najdôležitejšie časti medicíny. Správne vysvetlenie diagnózy, liečby a ďalšieho postupu môže rozhodnúť o tom, či pacient porozumie svojmu stavu, bude spolupracovať a bude sa cítiť bezpečne. Dobrá komunikácia však nie je len o jednoduchosti, ale aj o dôstojnosti, rešpekte a citlivom odhade konkrétneho človeka.</p>
 
 <p>Na tento problém upozorňuje článok Aryu Anthonyho Kamyaba publikovaný na portáli Medscape. Autor kriticky opisuje jav, ktorý mnohí pacienti poznajú z vlastnej skúsenosti: lekár síce hovorí zrozumiteľne, ale zároveň tak zjednodušene, že pacient má pocit, akoby sa s ním hovorilo ako s dieťaťom.</p>
 
 <h2>Jednoduchý jazyk je potrebný, ale nie univerzálny</h2>
 
-<p>Medicína dlhodobo učí lekárov, aby sa vyhýbali odbornému žargónu. Tento prístup má dobrý dôvod. Pacient, ktorý nerozumie tomu, čo mu lekár hovorí, nemusí správne pochopiť diagnózu, odporúčania ani prepúšťacie pokyny. To môže mať priamy dopad na bezpečnosť liečby.</p>
+<p>Medicína dlhodobo učí lekárov, aby sa vyhýbali odbornému žargónu. Tento prístup má dobrý dôvod. Pacient, ktorý nerozumie tomu, čo mu lekár hovorí, nemusí správne pochopiť diagnózu, odporúčania ani prepúšťacie pokyny. To môže priamo ovplyvniť bezpečnosť liečby.</p>
 
 <p>Odborné termíny môžu byť navyše zavádzajúce. Slovo „chronický“ znamená v medicíne dlhodobý alebo pretrvávajúci, kým pacient ho môže chápať ako „ťažký“ alebo „vážny“. Preto má zmysel hovoriť pomaly, jasne, overovať porozumenie a nepoužívať odborný jazyk tam, kde nie je potrebný.</p>
 
@@ -46,7 +46,7 @@ $articles[] = [
 
 <h2>Rozdiel medzi zdravotnou gramotnosťou a inteligenciou</h2>
 
-<p>Dôležité je rozlišovať medzi zdravotnou gramotnosťou a inteligenciou. Človek môže byť vysoko vzdelaný, analytický a schopný chápať zložité súvislosti, ale nemusí poznať medicínsku terminológiu.</p>
+<p>Zdravotná gramotnosť nie je to isté čo inteligencia. Človek môže byť vysoko vzdelaný, analytický a schopný chápať zložité súvislosti, ale nemusí poznať medicínsku terminológiu.</p>
 
 <p>Ak lekár povie pacientovi, že má „parestézie“, pacient nemusí vedieť, čo tento pojem znamená. Ak však povie, že ide o „mravčenie alebo brnenie súvisiace s nervami“, informácia je zrozumiteľná bez toho, aby bola detinská. To je presne rozdiel medzi jasným vysvetlením a zbytočným zjednodušovaním.</p>
 
@@ -58,7 +58,7 @@ $articles[] = [
 
 <p>Takéto vyjadrenie môže byť myslené dobre, ale u dospelého pacienta môže pôsobiť ponižujúco. Pacient nemusí odísť z ambulancie s pocitom bezpečia, ale s pocitom, že jeho schopnosť chápať bola podcenená.</p>
 
-<p>A to je dôležitý bod. Komunikačný štýl lekára neovplyvňuje len porozumenie informáciám. Ovplyvňuje aj dôveru, ochotu pýtať sa, spoluprácu a celkový vzťah pacienta k zdravotníckemu systému.</p>
+<p>Komunikačný štýl lekára pritom neovplyvňuje len porozumenie informáciám. Ovplyvňuje aj dôveru, ochotu pýtať sa, spoluprácu a celkový vzťah pacienta k zdravotníckemu systému.</p>
 
 <h2>Problém „jednoduchosti za každú cenu“</h2>
 

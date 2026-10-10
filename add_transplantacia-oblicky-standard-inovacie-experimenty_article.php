@@ -62,7 +62,7 @@ $articles[] = [
       </tr>
       <tr>
         <th scope="row">Lokálny inhibítor C1 esterázy</th>
-        <td>Pilot so 40 príjemcami neznížil DGF; ukázal exploratórny rozdiel eGFR</td>
+        <td>Pilot so 40 príjemcami neznížil DGF; ukázal exploračný rozdiel v eGFR</td>
         <td>Experiment, ktorý vyžaduje väčšiu potvrdzujúcu štúdiu</td>
       </tr>
       <tr>
@@ -104,7 +104,7 @@ $articles[] = [
 
 <p>Medzinárodná párová štúdia z roku 2009 použila obličky od 336 zosnulých darcov. Z každého páru bola jedna oblička uchovaná strojovou perfúziou a druhá staticky v chlade; sledovalo sa 672 príjemcov. DGF vznikla u 70 príjemcov po strojovej perfúzii a u 89 po chladovom uchovaní (upravený pomer šancí 0,57; p = 0,01). Jednoročné prežívanie štepu bolo 94 % oproti 90 %.</p>
 
-<p>Výsledok nepovoľuje tvrdenie, že HMP odstráni DGF alebo vyrovná všetky riziká okrajového darcu. Podporuje však jej použitie ako súčasť programu uchovávania orgánov, osobitne tam, kde je riziko ischemického poškodenia vyššie.</p>
+<p>Výsledok neoprávňuje tvrdiť, že HMP odstráni DGF alebo vyrovná všetky riziká okrajového darcu. Podporuje však jej použitie ako súčasť programu uchovávania orgánov, osobitne tam, kde je riziko ischemického poškodenia vyššie.</p>
 
 <h2>Normotermická perfúzia: platforma s potenciálom, nie dokázaná univerzálna nadradenosť</h2>
 
@@ -142,7 +142,7 @@ $articles[] = [
 
 <h2>Infekcie, malignity a metabolické komplikácie zostávajú rozhodujúce</h2>
 
-<p>Úspech transplantácie nie je len absencia rejekcie. Intenzita imunosupresie sa musí priebežne vyvažovať s rizikom cytomegalovírusu, BK polyomavírusu, pneumocystovej pneumónie, ďalších infekcií a malignít. Profylaxia a monitorovanie sa riadia sérologickým rizikom darcu a príjemcu, použitou indukciou, lokálnou epidemiológiou a protokolom centra.</p>
+<p>Úspech transplantácie nie je len neprítomnosť rejekcie. Intenzita imunosupresie sa musí priebežne vyvažovať s rizikom cytomegalovírusu, BK polyomavírusu, pneumocystovej pneumónie, ďalších infekcií a malignít. Profylaxia a monitorovanie sa riadia sérologickým rizikom darcu a príjemcu, použitou indukciou, lokálnou epidemiológiou a protokolom centra.</p>
 
 <p>Rovnako dôležité sú artériová hypertenzia, diabetes po transplantácii, dyslipidémia, obezita, fajčenie, kostné ochorenie a adherencia. Nová perfúzna technika ani biologická liečba nevykompenzujú dlhodobú nedostupnosť liekov alebo opakované vynechávanie dávok.</p>
 

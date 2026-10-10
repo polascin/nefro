@@ -28,7 +28,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'U 238 medikov v Latinskej Amerike znalosť kritérií Rome nestačila na diagnostickú zdržanlivosť pri IBS bez varovných príznakov. Pozitívna diagnóza DGBI nie je diagnóza vylúčením.',
     'content'      => <<<'HTML'
-<figure><a href="img/rome-kriteria-ibs-dgbi-dalsie-testovanie-medici.webp" rel="noopener noreferrer" target="_blank"><img src="img/rome-kriteria-ibs-dgbi-dalsie-testovanie-medici.webp" alt="Svietiace črevo spojené vláknom svetla s mozgom, za pokojnou priečnou čiarou svetla sa rozprestiera prázdna tma" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Ak kritériá sedia a varovné príznaky chýbajú, ďalšie testovanie spravidla neprinesie nový poznatok — len odklad diagnózy.</figcaption></figure>
+<figure><a href="img/rome-kriteria-ibs-dgbi-dalsie-testovanie-medici.webp" rel="noopener noreferrer" target="_blank"><img src="img/rome-kriteria-ibs-dgbi-dalsie-testovanie-medici.webp" alt="Svietiace črevo spojené vláknom svetla s mozgom, za pokojnou priečnou čiarou svetla sa rozprestiera prázdna tma" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Ak kritériá sedia a varovné príznaky chýbajú, ďalšie testovanie spravidla neprinesie nový poznatok – len odklad diagnózy.</figcaption></figure>
 
 <p class="article-dek"><em>Kritériá Rome umožňujú stanoviť syndróm dráždivého čreva ako pozitívnu, symptómovú diagnózu, ak chýbajú varovné príznaky. Multicentrická štúdia na medikoch v Latinskej Amerike ukázala, že samotná znalosť týchto kritérií nestačí na racionálne testovanie. Pre nefrológiu je to poučné tam, kde sú gastrointestinálne ťažkosti časté a nešpecifické.</em></p>
 
@@ -36,7 +36,7 @@ $articles[] = [
 
 <p>To neznamená, že kritériá Rome „zakazujú“ vyšetrenia. Umožňujú stanoviť diagnózu na základe symptómov a cieliť ďalšie testovanie podľa varovných príznakov a fenotypu. Rozdiel je v tom, či laboratórium, zobrazovanie a endoskopia slúžia ako <em>cielený krok</em>, alebo ako <em>rituál vylučovania</em> – teda preto, lebo diagnóza bez nich „neplatí“.</p>
 
-<p>V nefrologicky ladenej praxi je toto rozlíšenie užitočné skromne, ale prakticky. Pacienti s chronickou chorobou obličiek (CKD) a multimorbiditou majú časté nešpecifické gastrointestinálne ťažkosti. Riziko diagnostickej eskalácie bez jasných alarmov je v bežnej praxi vysoké – a rovnako nebezpečné je bagatelizovať skutočný varovný príznak, napríklad anémiu z nedostatku železa, ako „iba CKD“.</p>
+<p>V nefrologickej praxi má toto rozlíšenie skromný, ale praktický význam. Pacienti s chronickou chorobou obličiek (CKD) a multimorbiditou majú časté nešpecifické gastrointestinálne ťažkosti. Riziko diagnostickej eskalácie bez jasných alarmov je v bežnej praxi vysoké – a rovnako nebezpečné je bagatelizovať skutočný varovný príznak, napríklad anémiu z nedostatku železa, ako „iba CKD“.</p>
 
 <h2>Čo sú DGBI a čo znamenajú kritériá Rome</h2>
 
@@ -109,9 +109,9 @@ $articles[] = [
 
 <p>Najčastejšie požadované vyšetrenia zahŕňali krvný obraz, zápalové markery, celiakálnu sérológiu, fekálny kalprotektín, železo, ultrasonografiu brucha, CT aj kolonoskopiu. Po normálnych laboratórnych výsledkoch ostávali v hre najmä kolonoskopia a CT. „Vysoké diagnostické nadužívanie“ (testovanie v aspoň dvoch etapách vinety) malo 66 % účastníkov.</p>
 
-<p>Pri pediatrickej vinete bez varovných príznakov označilo 46 % medikov obraz za nepravdepodobne funkčný. Testovanie ostalo vysoké. To len posilňuje záver autorov: vylučovací reflex sa formuje už v pregraduálnej príprave, nielen v praxi špecialistov.</p>
+<p>Pri pediatrickej vinete bez varovných príznakov označilo 46 % medikov obraz za nepravdepodobne funkčný. Testovanie ostalo vysoké. To podporuje záver autorov: vylučovací reflex sa formuje už v pregraduálnej príprave, nielen v praxi špecialistov.</p>
 
-<p>Obmedzenia sú zrejmé a treba ich povedať nahlas. Išlo o vinety, nie o pozorované ambulancie; o jeden IBS obraz, nie o celé spektrum DGBI; o dobrovoľný výber v latinskoamerických školách. Prenos do slovenského pregraduálneho vzdelávania preto nie je automatický – vzorec „viem kritériá, ale aj tak testujem“ je však dostatočne všeobecný na to, aby stál za pozornosť.</p>
+<p>Obmedzenia sú zrejmé. Išlo o vinety, nie o pozorované ambulancie; o jeden IBS obraz, nie o celé spektrum DGBI; o dobrovoľný výber v latinskoamerických školách. Prenos do slovenského pregraduálneho vzdelávania preto nie je automatický – vzorec „viem kritériá, ale aj tak testujem“ je však dostatočne všeobecný na to, aby stál za pozornosť.</p>
 
 <h2>Varovné príznaky: čo študenti mýlili</h2>
 
@@ -166,7 +166,7 @@ $articles[] = [
   </table>
 </div>
 
-<p>Približne tretina respondentov nesprávne zaradila aspoň jeden definičný funkčný príznak ako varovný. To je klinicky dôležité: ak sa typický znak IBS prečíta ako alarm, spustí sa vylučovacia kaskáda aj tam, kde Rome IV žiada pozitívnu diagnózu. V bežných odporúčaniach sa k štúdiovému zoznamu zvyčajne pridávajú aj <strong>anémiu, neskorší vek vzniku ťažkostí a rodinnú anamnézu kolorektálneho karcinómu</strong>. Tieto položky štúdia ako samostatné položky nástroja neuvádzala; v ambulancii ich však treba hľadať.</p>
+<p>Približne tretina respondentov nesprávne zaradila aspoň jeden definičný funkčný príznak ako varovný. To je klinicky dôležité: ak sa typický znak IBS prečíta ako alarm, spustí sa vylučovacia kaskáda aj tam, kde Rome IV žiada pozitívnu diagnózu. V bežných odporúčaniach sa k štúdiovému zoznamu zvyčajne pridávajú aj <strong>anémia, neskorší vek vzniku ťažkostí a rodinná anamnéza kolorektálneho karcinómu</strong>. Štúdia ich ako samostatné položky nástroja neuvádzala; v ambulancii ich však treba hľadať.</p>
 
 <h2>Kedy má zmysel testovať ďalej</h2>
 
@@ -213,13 +213,13 @@ $articles[] = [
   </table>
 </div>
 
-<p>Inými slovami: kritériá Rome <strong>neumožňujú vyhnúť sa všetkému došetreniu</strong>. Umožňujú stanoviť pozitívnu diagnózu a testovať cielené, nie plošne. Znalosť kritérií sama o sebe racionálne testovanie negarantuje.</p>
+<p>Inými slovami: kritériá Rome <strong>neumožňujú vyhnúť sa všetkému došetreniu</strong>. Umožňujú stanoviť pozitívnu diagnózu a testovať cielene, nie plošne. Znalosť kritérií sama o sebe racionálne testovanie negarantuje.</p>
 
 <h2>Čo z toho plynie pre vzdelávanie – a pre nefrológiu</h2>
 
 <p>Autori štúdie to formulujú presne: rozpor medzi princípmi Rome a aplikovaným uvažovaním vzniká už počas pregraduálnej prípravy. Teoretická znalosť súvisí s nižším úvodným testovaním, ale nadužívanie ostáva časté aj u tých, ktorí kritériá ovládajú. Didaktická hodina nestačí. Sľubnejší signál dávala kazuistická výučba. Vzdelávanie by malo učiť odlíšiť varovný príznak od definičného znaku IBS, pomenovať pozitívnu diagnózu nahlas a skúšať nielen úplný diferenciál, ale aj primeranú zdržanlivosť.</p>
 
-<p>Pre nefrológiu z toho nevyplýva, že by sme IBS diagnostikovali namiesto gastroenterológa. Vyplýva skromnejší záver. Gastrointestinálne ťažkosti pri CKD sú časté: uremická nauzea, zápcha pri obmedzení tekutín a fosfátových viazačoch, hnačka pri niektorých viazačoch, gastroparéza pri diabete, polyfarmácia. Ak obraz spĺňa DGBI a chýbajú alarmy, má zmysel neeskalovať CT a endoskopiu len preto, že pacient „už aj tak veľa chorôb má“. Ak je však prítomná anémia z nedostatku železa, krvácanie, neúmyselný úbytok hmotnosti alebo nočná hnačka, CKD tieto alarmy nevysvetľuje a došetrenie sa nedeleguje na „funkčnú“ nálepku.</p>
+<p>Pre nefrológiu z toho nevyplýva, že by sme IBS diagnostikovali namiesto gastroenterológa. Záver je skromnejší. Gastrointestinálne ťažkosti pri CKD sú časté: uremická nauzea, zápcha pri obmedzení tekutín a fosfátových viazačoch, hnačka pri niektorých viazačoch, gastroparéza pri diabete, polyfarmácia. Ak obraz spĺňa DGBI a chýbajú alarmy, má zmysel neeskalovať CT a endoskopiu len preto, že pacient „už aj tak veľa chorôb má“. Ak je však prítomná anémia z nedostatku železa, krvácanie, neúmyselný úbytok hmotnosti alebo nočná hnačka, CKD tieto alarmy nevysvetľuje a došetrenie sa nedeleguje na „funkčnú“ nálepku.</p>
 
 <div class="pdf-avoid-break">
 <h2>Praktické zhrnutie</h2>

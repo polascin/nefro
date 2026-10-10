@@ -35,23 +35,23 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'AI-asistovaný point-of-care ultrazvuk (POCUS) ako triážny nástroj pre rýchlejšie kardiálne rozhodnutia mimo echolaboratórií — a čo z toho môže vyplynúť pre nefrológiu pri dýchavičnosti, edémoch a kardiorenálnom syndróme.',
+    'excerpt'      => 'AI-asistovaný point-of-care ultrazvuk (POCUS) ako triážny nástroj pre rýchlejšie kardiálne rozhodnutia mimo echolaboratórií – a čo z toho môže vyplynúť pre nefrológiu pri dýchavičnosti, edémoch a kardiorenálnom syndróme.',
     'content'      => <<<'HTML'
-<figure><a href="img/ai-asistovane-pocus-kardialne-rozhodnutia-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/ai-asistovane-pocus-kardialne-rozhodnutia-nefrologia.webp" alt="Ultrazvuková sonda vysielajúca lúč na srdce, odraz spracúvaný výpočtovou mriežkou do jednej jasnej odpovede" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Zrýchlenie rozhodnutia pri lôžku je hlavný prísľub — presnosť však zostáva na tom, kto vyšetruje.</figcaption></figure>
+<figure><a href="img/ai-asistovane-pocus-kardialne-rozhodnutia-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/ai-asistovane-pocus-kardialne-rozhodnutia-nefrologia.webp" alt="Ultrazvuková sonda vysielajúca lúč na srdce, odraz spracúvaný výpočtovou mriežkou do jednej jasnej odpovede" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Zrýchlenie rozhodnutia pri lôžku je hlavný prísľub – presnosť však zostáva na tom, kto vyšetruje.</figcaption></figure>
 
-<p>Pacient s dýchavičnosťou, edémom dolných končatín a únavou často smeruje k otázke, či ide
-o srdcové zlyhávanie, významnú chlopňovú patológiu, alebo problém mimo srdca. V praxi je však
-častým úzkym hrdlom dostupnosť echokardiografie. Podľa článku na Medscape môže byť echokardiogram
-dostupný až o hodiny, niekedy aj neskôr (dni), čo komplikuje včasné triedenie a rozhodovanie.</p>
+<p>Pri pacientovi s dýchavičnosťou, edémom dolných končatín a únavou sa často rieši, či ide
+o srdcové zlyhávanie, významnú chlopňovú patológiu alebo problém mimo srdca. Úzkym hrdlom však
+býva dostupnosť echokardiografie. Podľa článku na Medscape môže byť echokardiogram
+dostupný až o niekoľko hodín, niekedy až o dni, čo komplikuje včasné triedenie a rozhodovanie.</p>
 
-<p>Téma, ktorá sa rieši v najnovšom spracovaní na portáli Medscape, je využitie AI-asistovaného
-point-of-care ultrazvuku (POCUS) na pracoviskách, kde potrebujete rýchlu orientačnú informáciu
-o srdcovej funkcii a štrukturálnych/chlopňových nálezoch.</p>
+<p>Článok sa venuje využitiu AI-asistovaného point-of-care ultrazvuku (POCUS) na pracoviskách,
+kde je potrebná rýchla orientačná informácia o srdcovej funkcii a o štrukturálnych či chlopňových
+nálezoch.</p>
 
 <h2>Prečo práve POCUS a prečo k tomu pribudla AI vrstva</h2>
-<p>Článok opisuje, že pre pokročilých praktikov (nurse practitioners, physician assistants) je
-POCUS užitočný najmä v situáciách ako urgentná starostlivosť, nemocničná medicína, ambulancie
-a dlhodobá starostlivosť. Kľúčovým problémom však nie je len „nasnímať“ obraz. Najväčšie oneskorenie
+<p>Podľa článku je POCUS pre pokročilých praktikov (nurse practitioners, physician assistants)
+užitočný najmä v urgentnej starostlivosti, nemocničnej medicíne, ambulanciách
+a dlhodobej starostlivosti. Problémom však nie je len obraz nasnímať. Najväčšie oneskorenie
 vzniká pri interpretácii, keď:</p>
 <ul>
   <li>jemné chlopňové abnormality a hodnotenie srdcovej funkcie často vyžadujú špecializovaný dohľad,</li>
@@ -63,7 +63,7 @@ informáciám pri lôžku. Riešenie je prezentované ako „triážny“ nástr
 echokardiografie.</p>
 
 <h2>Ako to má vyzerať v klinickej rutine</h2>
-<p>Podľa textu „cloud-based“ platforma analyzuje fokálne (špecificky zamerané) srdcové
+<p>Podľa textu cloudová platforma analyzuje fokálne (špecificky zamerané) srdcové
 ultrazvukové obrazy a poskytuje:</p>
 <ul>
   <li>automatizované merania,</li>
@@ -82,17 +82,16 @@ ultrazvukové obrazy a poskytuje:</p>
 rozsahu robia kardiológovia.</p>
 
 <h2>Znižovanie bariéry učenia: od akvizície k spoľahlivej interpretácii</h2>
-<p>Jednou z obáv pri ultrazvuku býva technická zručnosť potrebná na kvalitnú akvizíciu. V článku
-je opísané, že pokroky v AI-asistovanom vedení môžu znižovať bariéru pri získavaní obrazov.</p>
-<p>Konkrétne na Sheba Medical Center časť fokálnych vyšetrení podľa textu vykonáva aj vyškolený
-personál, pričom niekoľko dní zahŕňa teoretickú výučbu a následne supervíziu počas snímania.
-V praxi sa má čas na vyšetrenie pohybovať v rádoch minút (článok uvádza, že to môže byť aj
-približne 2 minúty).</p>
-<p>Zároveň však text jasne pomenúva, že pre APPs aj tak zostáva najväčšou výzvou rýchla,
-spoľahlivá interpretácia, ktorá podporí rozhodovanie.</p>
+<p>Jednou z obáv pri ultrazvuku býva technická zručnosť potrebná na kvalitnú akvizíciu. Podľa
+článku môžu pokroky v AI-asistovanom navádzaní túto bariéru pri získavaní obrazov znižovať.</p>
+<p>V Sheba Medical Center časť fokálnych vyšetrení podľa textu vykonáva aj vyškolený
+personál; príprava zahŕňa niekoľko dní teoretickej výučby a potom snímanie pod supervíziou.
+Samotné vyšetrenie trvá rádovo minúty, podľa článku aj približne 2 minúty.</p>
+<p>Najväčšou výzvou pre pokročilých praktikov (APPs) však podľa textu zostáva rýchla
+a spoľahlivá interpretácia, ktorá podporí rozhodovanie.</p>
 
-<h2>Kontext v kardiovaskulárnej krajine: nie je to jediný hráč</h2>
-<p>Medscape článok uvádza, že AISAP je súčasťou rastúceho spektra AI nástrojov pre ultrazvuk
+<h2>Širší kontext: AISAP nie je jediný hráč</h2>
+<p>Článok uvádza, že AISAP je súčasťou rastúceho spektra AI nástrojov pre ultrazvuk
 a kardiálne zobrazovanie, pričom rôzne firmy sa zameriavajú buď na:</p>
 <ul>
   <li>hardvér a point-of-care akvizíciu,</li>
@@ -100,7 +99,7 @@ a kardiálne zobrazovanie, pričom rôzne firmy sa zameriavajú buď na:</p>
   <li>získavanie obrazov s navádzaním AI pre neodborníkov,</li>
   <li>alternatívne prístupy (napríklad digitálne stetoskopy s podporou AI a analýza srdcových zvukov).</li>
 </ul>
-<p>Spoločný cieľ je rozširovať prístup ku kardiovaskulárnemu posúdeniu mimo tradičných
+<p>Spoločným cieľom je rozšíriť prístup ku kardiovaskulárnemu posúdeniu mimo tradičných
 echokardiografických laboratórií a špecializovaných pracovísk.</p>
 
 <h2>Prečo by to mohlo zaujímať nefrológa (praktická rovina)</h2>
@@ -108,7 +107,7 @@ echokardiografických laboratórií a špecializovaných pracovísk.</p>
 dýchavičnosť, edémy a kolísanie objemového statusu často prelínajú s kardiálnou patológiou.
 Ak má byť AI-asistované POCUS skutočne spoľahlivé ako triážny nástroj, môže to teoreticky:</p>
 <ul>
-  <li>pomôcť rýchlejšie odlíšiť „pravdepodobné kardiálne zlyhávanie“ vs. iné príčiny dýchavice,</li>
+  <li>pomôcť rýchlejšie odlíšiť „pravdepodobné kardiálne zlyhávanie“ od iných príčin dýchavice,</li>
   <li>urýchliť eskaláciu na echokardiografiu, keď je to potrebné,</li>
   <li>podporiť rýchlejšie rozhodnutia o následnom postupe (napr. hospitalizácia vs. ambulantný plán).</li>
 </ul>
@@ -117,8 +116,8 @@ Na nefrologickom pracovisku je rozumné zavádzať takéto nástroje s lokálnym
 kvality a jasnými pravidlami, kedy musí nasledovať formálna echokardiografia.</p>
 
 <h2>Dôležitá poznámka k záujmom</h2>
-<p>V texte sa uvádza, že Robert Klempfner je spoluzakladateľ a medicínsky riaditeľ spoločnosti AISAP, a teda má
-finančný vzťah ku spoločnosti. Tamar Kupfer neuvádza konflikt záujmov.</p>
+<p>Podľa textu je Robert Klempfner spoluzakladateľom a medicínskym riaditeľom spoločnosti AISAP, má teda
+k nej finančný vzťah. Tamar Kupfer neuvádza konflikt záujmov.</p>
 
 <hr>
 

@@ -38,25 +38,25 @@ $articles[] = [
     'excerpt'      => 'Cestujete a potrebujete dialýzu mimo domáceho strediska? Vysvetľujeme, čo je hosťovská (dovolenková) dialýza, ako si ju vopred zariadiť a čo si pripraviť.',
     'content'      => <<<'HTML'
 <figure>
-  <img src="img/dovolenkova-dialyza-bratislava.webp" alt="Infografika: hosťovská (dovolenková) dialýza — ako si ju zariadiť v Bratislave" loading="lazy" decoding="async">
+  <img src="img/dovolenkova-dialyza-bratislava.webp" alt="Infografika: hosťovská (dovolenková) dialýza – ako si ju zariadiť v Bratislave" loading="lazy" decoding="async">
 </figure>
 
 <p>Dialýza nemusí znamenať koniec cestovania. Ak ste v pravidelnom hemodialyzačnom programe,
-môžete absolvovať liečbu aj počas dovolenky alebo pracovnej cesty — v inom stredisku, než je to
+môžete absolvovať liečbu aj počas dovolenky alebo pracovnej cesty – v inom stredisku, než je to
 vaše domovské. Hovorí sa tomu <strong>hosťovská</strong> alebo <strong>dovolenková dialýza</strong>.
-V tomto článku zrozumiteľne vysvetlíme, ako si ju zariadiť.</p>
+Nižšie nájdete, ako si ju zariadiť.</p>
 
 <h2>Čo je hosťovská (dovolenková) dialýza</h2>
 
 <p>Je to bežná dialyzačná liečba (hemodialýza alebo hemodiafiltrácia), ktorú absolvujete
 v stredisku v mieste vášho pobytu namiesto domovského pracoviska. Pokračujete vo svojom
-zaužívanom režime — spravidla trikrát týždenne — len na inom mieste. Dôležité je dohodnúť sa
+zaužívanom režime – spravidla trikrát týždenne – len na inom mieste. Dôležité je dohodnúť sa
 <strong>vopred</strong>, pretože každé stredisko má obmedzený počet voľných miest.</p>
 
-<h2>Ako si ju zariadiť — krok za krokom</h2>
+<h2>Ako si ju zariadiť – krok za krokom</h2>
 
 <ol>
-  <li><strong>Ozvite sa s dostatočným predstihom.</strong> Ideálne niekoľko týždňov pred cestou —
+  <li><strong>Ozvite sa s dostatočným predstihom.</strong> Ideálne niekoľko týždňov pred cestou –
       kapacita býva obmedzená, najmä v letných mesiacoch.</li>
   <li><strong>Dohodnite termíny.</strong> So strediskom si potvrďte konkrétne dni a časy dialýz
       počas vášho pobytu.</li>
@@ -83,7 +83,7 @@ zaužívanom režime — spravidla trikrát týždenne — len na inom mieste. D
 
 <p>Ak smerujete do Bratislavy, hosťovskú hemodialýzu aj hemodiafiltráciu poskytuje
 <strong>Dialyzačné stredisko a nefrologická ambulancia Medimpax</strong> v Bratislave-Dúbravke
-(Na vrátkach 2/A). Vybavenie po dohode závisí od voľnej kapacity, preto sa ozvite vopred.</p>
+(Na vrátkach 2/A). Termín závisí od voľnej kapacity, preto sa ozvite vopred.</p>
 
 <ul>
   <li>Dialyzačná sála: <a href="tel:+421947900202">0947 900 202</a></li>

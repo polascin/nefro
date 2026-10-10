@@ -27,30 +27,30 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Pri IgA nefropatii výmena RASi za sparsentan pri stabilnom SGLT2i v SPARTACUS výrazne znížila albuminúriu; v PROTECT OLE pridanie SGLT2i k sparsentanu prinieslo ďalší mierny pokles proteinúrie.',
     'content'      => <<<'HTML'
-<figure><a href="img/sparsentan-sglt2-inhibitor-iga-nefropatia-spartacus-protect.webp" rel="noopener noreferrer" target="_blank"><img src="img/sparsentan-sglt2-inhibitor-iga-nefropatia-spartacus-protect.webp" alt="Glomerulus obtočený dvoma prepletenými svetelnými stuhami, fialovou a azúrovou, pod ním sa prúd častíc stenčuje" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Dva mechanizmy sa tu nenahrádzajú, ale vrstvia — otázkou pre prax je, koľko navyše prinesie druhá vrstva.</figcaption></figure>
+<figure><a href="img/sparsentan-sglt2-inhibitor-iga-nefropatia-spartacus-protect.webp" rel="noopener noreferrer" target="_blank"><img src="img/sparsentan-sglt2-inhibitor-iga-nefropatia-spartacus-protect.webp" alt="Glomerulus obtočený dvoma prepletenými svetelnými stuhami, fialovou a azúrovou, pod ním sa prúd častíc stenčuje" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Dva mechanizmy sa tu nenahrádzajú, ale vrstvia; otázkou pre prax je, koľko navyše prinesie druhá vrstva.</figcaption></figure>
 
-<p><strong>Sparsentan</strong> (duálny antagonista endotelínového a angiotenzínového receptora, DEARA) a <strong>inhibítory sodíkovo-glukózového kotransportéra 2 (SGLT2i)</strong> znižujú proteinúriu pri IgA nefropatii (IgAN). V <em>Nephrology Dialysis Transplantation</em> (2026) Ayoub a kol. zhrnuli účinnosť a bezpečnosť ich kombinácie v dvoch komplementárnych nastaveniach: v otvorenej štúdii fázy 2 <strong>SPARTACUS</strong> a v randomizovanej substúdii otvoreného predĺženia (OLE) štúdie <strong>PROTECT</strong>. Text vychádza z publikačného abstraktu a má sa čítať opatrne – najmä pri extrapolácii na tvrdé obličkové alebo kardiovaskulárne ukazovatele.</p>
+<p><strong>Sparsentan</strong> (duálny antagonista endotelínového a angiotenzínového receptora, DEARA) a <strong>inhibítory sodíkovo-glukózového kotransportéra 2 (SGLT2i)</strong> znižujú proteinúriu pri IgA nefropatii (IgAN). V <em>Nephrology Dialysis Transplantation</em> (2026) Ayoub a kol. zhrnuli účinnosť a bezpečnosť ich kombinácie v dvoch komplementárnych nastaveniach: v otvorenej štúdii fázy 2 <strong>SPARTACUS</strong> a v randomizovanej substúdii otvoreného predĺženia (OLE) štúdie <strong>PROTECT</strong>. Text vychádza z abstraktu publikácie, preto ho treba čítať opatrne, najmä pri extrapolácii na tvrdé obličkové alebo kardiovaskulárne ukazovatele.</p>
 
-<h2>Najdôležitejšie odkazy</h2>
+<h2>Hlavné zistenia</h2>
 
 <ul>
   <li>V <strong>SPARTACUS</strong> (NCT05856760) sa u pacientov so stabilným SGLT2i vymenil inhibítor systému renín–angiotenzín (RASi) za sparsentan. Do 24.&nbsp;týždňa klesol pomer albumínu ku kreatinínu v moči (UACR) o LS mean <strong>−56&nbsp;%</strong> (95&nbsp;% interval spoľahlivosti [IS] −66&nbsp;% až −3&nbsp;%).</li>
   <li>V substúdii <strong>PROTECT OLE</strong> (NCT03762850) pridanie SGLT2i k stabilnému sparsentanu v 12.&nbsp;týždni prinieslo relatívne priaznivejšiu zmenu pomeru proteínu ku kreatinínu v moči (UPCR) oproti samotnému sparsentanu (pomer 0,75; 95&nbsp;% IS 0,58–0,98; <em>P</em>&nbsp;&lt;&nbsp;0,05).</li>
   <li>Kombinácia bola podľa abstraktu <strong>dobre tolerovaná</strong>; závažné alebo vážne nežiaduce udalosti súvisiace s liečbou boli zriedkavé a neočakávané bezpečnostné signály sa nehlásili.</li>
-  <li>Ide o <strong>náhradné (surrogátne) ukazovatele</strong> (UACR/UPCR) a relatívne krátke sledovanie. Samostatný dôkaz o spomalení poklesu eGFR, zlyhaní obličiek či kardiovaskulárnych príhodách z týchto dát nevyplýva.</li>
+  <li>Ide o <strong>náhradné (surogátne) ukazovatele</strong> (UACR/UPCR) a relatívne krátke sledovanie. Samostatný dôkaz o spomalení poklesu eGFR, zlyhaní obličiek či kardiovaskulárnych príhodách z týchto dát nevyplýva.</li>
 </ul>
 
 <h2>Prečo má kombinácia DEARA + SGLT2i zmysel</h2>
 
-<p>Sparsentan blokuje endotelínový receptor typu&nbsp;A a receptor angiotenzínu&nbsp;II typu&nbsp;1. inhibítory SGLT2 pôsobia cez tubuloglomerulárnu spätnú väzbu, znižujú intraglomerulárny tlak a majú ďalšie systémové účinky. Pri IgAN sa obe cesty používajú ako neimunosupresívna nefroprotekcia; otázka <strong>sekvencie a súčtu účinkov</strong> (výmena RASi za sparsentan pri už užívanom SGLT2i vs. pridanie SGLT2i k sparsentanu) však ešte nebola dostatočne zodpovedaná v bežnej praxi.</p>
+<p>Sparsentan blokuje endotelínový receptor typu&nbsp;A a receptor angiotenzínu&nbsp;II typu&nbsp;1. Inhibítory SGLT2 pôsobia cez tubuloglomerulárnu spätnú väzbu, znižujú intraglomerulárny tlak a majú ďalšie systémové účinky. Pri IgAN sa obe cesty používajú ako neimunosupresívna nefroprotekcia; otázka <strong>sekvencie a súčtu účinkov</strong> (výmena RASi za sparsentan pri už užívanom SGLT2i vs. pridanie SGLT2i k sparsentanu) však pre bežnú prax zatiaľ nie je dostatočne zodpovedaná.</p>
 
-<p>SPARTACUS a PROTECT OLE odpovedajú práve na tieto dve praktické situácie – nie sú to však veľké štúdie tvrdej klinickej účinnosti ani priame porovnanie s inými modernými režimami (napr. cieľová imunomodulácia podľa KDIGO).</p>
+<p>SPARTACUS a PROTECT OLE sa venujú práve týmto dvom situáciám. Nie sú to však veľké štúdie s tvrdými klinickými ukazovateľmi ani priame porovnanie s inými modernými režimami (napr. cieľová imunomodulácia podľa KDIGO).</p>
 
 <h2>SPARTACUS: výmena RASi za sparsentan pri stabilnom SGLT2i</h2>
 
-<p>SPARTACUS bola <strong>fáza&nbsp;2, otvorená</strong> štúdia. Pacienti mali RASi nahradený sparsentanom a pokračovali v stabilnej liečbe SGLT2i. Zaradených bolo <strong>48</strong> pacientov (priemerný vek 48,9&nbsp;roka, SD 13,9; 58&nbsp;% mužov); liečbu dokončilo <strong>39</strong>.</p>
+<p>SPARTACUS bola <strong>fáza&nbsp;2, otvorená</strong> štúdia. Pacientom bol RASi nahradený sparsentanom a pokračovali v stabilnej liečbe SGLT2i. Zaradených bolo <strong>48</strong> pacientov (priemerný vek 48,9&nbsp;roka, SD 13,9; 58&nbsp;% mužov); liečbu dokončilo <strong>39</strong>.</p>
 
-<p>Výmena RASi za sparsentan viedla k <strong>rýchlemu a do 24.&nbsp;týždňa udržanému poklesu UACR</strong>: LS mean −56&nbsp;% (95&nbsp;% IS −66&nbsp;% až −3&nbsp;%). Interval spoľahlivosti je podľa publikačného abstraktu značne asymetrický; bodový odhad je však výrazný a smeruje k klinicky relevantnej redukcii albuminúrie.</p>
+<p>Výmena RASi za sparsentan viedla k <strong>rýchlemu a do 24.&nbsp;týždňa udržanému poklesu UACR</strong>: LS mean −56&nbsp;% (95&nbsp;% IS −66&nbsp;% až −3&nbsp;%). Interval spoľahlivosti uvedený v abstrakte je výrazne asymetrický; bodový odhad však naznačuje klinicky relevantnú redukciu albuminúrie.</p>
 
 <div class="table-responsive" role="region" aria-label="Hlavné znaky štúdie SPARTACUS" tabindex="0">
 <table>
@@ -85,7 +85,7 @@ $articles[] = [
 </table>
 </div>
 
-<p><strong>Metodický kontext:</strong> SPARTACUS nie je zaslepená randomizovaná komparatívna štúdia oproti pokračovaniu RASi. Pokles UACR preto silne podporuje hypotézu o prínose sparsentanu v prostredí SGLT2i, ale nedokazuje superioritu voči „optimálne titrovanému RASi + SGLT2i“ v rovnakom dizajne. Endpointom bola albuminúria (UACR), nie UPCR – pri citovaní treba rozlišovať od PROTECT OLE.</p>
+<p><strong>Metodický kontext:</strong> SPARTACUS nie je zaslepená randomizovaná komparatívna štúdia oproti pokračovaniu RASi. Pokles UACR preto silne podporuje hypotézu o prínose sparsentanu v prostredí SGLT2i, ale nedokazuje nadradenosť oproti „optimálne titrovanému RASi + SGLT2i“ v rovnakom dizajne. Sledovaným ukazovateľom bola albuminúria (UACR), nie UPCR ako v PROTECT OLE; pri citovaní treba tieto ukazovatele rozlišovať.</p>
 
 <h2>PROTECT OLE: pridanie SGLT2i k stabilnému sparsentanu</h2>
 
@@ -132,7 +132,7 @@ $articles[] = [
 </table>
 </div>
 
-<p>Absolútne ide o <strong>mierny</strong> ďalší pokles proteinúrie pri pridaní SGLT2i, nie o efekt veľkosti SPARTACUS. Intervaly spoľahlivosti jednotlivých skupín sa prekrývajú s nulou, ale <em>kontrast medzi ramenami</em> dosiahol štatistickú významnosť. Pri interpretácii treba počítať s malým <em>n</em>, krátkym randomizovaným horizontom a tým, že neskôr mali všetci možnosť prejsť na kombináciu.</p>
+<p>V absolútnom vyjadrení ide o <strong>mierny</strong> ďalší pokles proteinúrie pri pridaní SGLT2i, nie o efekt veľkosti, aký sa pozoroval v SPARTACUS. Intervaly spoľahlivosti jednotlivých skupín zahŕňajú nulu, ale <em>kontrast medzi ramenami</em> dosiahol štatistickú významnosť. Pri interpretácii treba počítať s malým <em>n</em>, krátkym randomizovaným horizontom a tým, že neskôr mali všetci možnosť prejsť na kombináciu.</p>
 
 <h2>Bezpečnosť</h2>
 
@@ -146,6 +146,7 @@ $articles[] = [
 <table>
   <thead>
     <tr>
+      <th scope="col">Oblasť</th>
       <th scope="col">Podporujú</th>
       <th scope="col">Nepodporujú / chýba</th>
     </tr>
@@ -170,11 +171,11 @@ $articles[] = [
 </table>
 </div>
 
-<p>Pre ambulantnú prax je rozumný záver: <strong>kombinácia sparsentanu so SGLT2i pri IgAN je v týchto dátach biologicky a klinicky zmysluplná cestou k ďalšiemu zníženiu proteinúrie</strong>, najmä ak už pacient užíva jednu z týchto tried. Rozhodnutie však musí rešpektovať dostupnosť lieku, úhradu, kontraindikácie, monitorovanie a celkový rizikový profil pacienta – vrátane otázky, či je vhodnejšia cielená imunomodulácia.</p>
+<p>Pre ambulantnú prax z toho vyplýva, že <strong>kombinácia sparsentanu so SGLT2i pri IgAN je podľa týchto dát biologicky aj klinicky zmysluplnou cestou k ďalšiemu zníženiu proteinúrie</strong>, najmä ak už pacient užíva jednu z týchto tried. Rozhodnutie však musí rešpektovať dostupnosť lieku, úhradu, kontraindikácie, monitorovanie a celkový rizikový profil pacienta – vrátane otázky, či je vhodnejšia cielená imunomodulácia.</p>
 
 <h2>Zhrnutie</h2>
 
-<p>SPARTACUS ukázal výrazný a udržaný pokles <strong>UACR</strong> po výmene RASi za sparsentan pri stabilnom SGLT2i. Substúdia PROTECT OLE ukázala, že pridanie SGLT2i k sparsentanu prináša oproti samotnému sparsentanu <strong>relatívne priaznivejšiu zmenu UPCR</strong> v 12.&nbsp;týždni (pomer 0,75). Kombinácia bola krátkodobo dobre tolerovaná. Ide o dôležité náhradné dôkazy proteinúrie pre kombinovanú nefroprotekciu pri IgAN, nie o finálny dôkaz tvrdého klinického prínosu.</p>
+<p>SPARTACUS ukázal výrazný a udržaný pokles <strong>UACR</strong> po výmene RASi za sparsentan pri stabilnom SGLT2i. Substúdia PROTECT OLE ukázala, že pridanie SGLT2i k sparsentanu prináša oproti samotnému sparsentanu <strong>relatívne priaznivejšiu zmenu UPCR</strong> v 12.&nbsp;týždni (pomer 0,75). Kombinácia bola krátkodobo dobre tolerovaná. Ide o dôležité dôkazy na úrovni náhradného ukazovateľa (proteinúrie) v prospech kombinovanej nefroprotekcie pri IgAN, nie o definitívny dôkaz tvrdého klinického prínosu.</p>
 
 <h2>Súvisiace články na portáli</h2>
 

@@ -28,19 +28,19 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d'),
     'is_top'       => 0,
-    'excerpt'      => 'Štúdia CONNECT (ADA 2026) ukazuje, že kontinuálne monitorovanie glukózy (CGM) výrazne zlepšuje glykémiu aj u dospelých s diabetom 2. typu, ktorí nepoužívajú inzulín — väčší pokles HbA1c, viac času v cieľovom rozmedzí a vyššia spokojnosť. Najviac profitujú pacienti s vysokým HbA1c.',
+    'excerpt'      => 'Štúdia CONNECT (ADA 2026) ukazuje, že kontinuálne monitorovanie glukózy (CGM) výrazne zlepšuje glykémiu aj u dospelých s diabetom 2. typu, ktorí nepoužívajú inzulín – väčší pokles HbA1c, viac času v cieľovom rozmedzí a vyššia spokojnosť. Najviac profitujú pacienti s vysokým HbA1c.',
     'content'      => <<<'HTML'
 <figure><a href="img/kontinualne-monitorovanie-glukozy-diabetes-2-typu-bez-inzulinu.webp" rel="noopener noreferrer" target="_blank"><img src="img/kontinualne-monitorovanie-glukozy-diabetes-2-typu-bez-inzulinu.webp" alt="Senzor na ramene vysielajúci svetelnú glykemickú krivku, ktorá sa z ostrých špičiek vyrovnáva" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Aj bez inzulínu môže priebežný obraz glykémie zmeniť každodenné rozhodnutia pacienta.</figcaption></figure>
 
-<p>Kontinuálne monitorovanie glukózy, známe ako CGM, sa už roky považuje za štandardnú súčasť starostlivosti pri diabete 1. typu a pri diabete 2. typu liečenom inzulínom. Nové údaje zo štúdie CONNECT však ukazujú, že významný prínos môže mať aj u dospelých s diabetom 2. typu, ktorí inzulín nepoužívajú.</p>
+<p>Kontinuálne monitorovanie glukózy (CGM) je už roky štandardnou súčasťou starostlivosti pri diabete 1. typu a pri diabete 2. typu liečenom inzulínom. Nové údaje zo štúdie CONNECT však ukazujú, že významný prínos môže mať aj u dospelých s diabetom 2. typu, ktorí inzulín nepoužívajú.</p>
 
-<p>Výsledky boli prezentované na vedeckom kongrese <strong>American Diabetes Association 2026 Scientific Sessions</strong> v New Orleans. Podľa autorov štúdie môže CGM zlepšiť kontrolu hyperglykémie, pomôcť pacientom lepšie pochopiť vplyv stravy, pohybu a liekov na glykémiu a potenciálne znížiť riziko dlhodobých komplikácií diabetu.</p>
+<p>Výsledky odzneli na kongrese <strong>American Diabetes Association 2026 Scientific Sessions</strong> v New Orleans. Podľa autorov štúdie môže CGM zlepšiť kontrolu hyperglykémie, pomôcť pacientom lepšie pochopiť vplyv stravy, pohybu a liekov na glykémiu a potenciálne znížiť riziko dlhodobých komplikácií diabetu.</p>
 
 <h2>Prečo je táto otázka dôležitá</h2>
 
 <p>U pacientov s diabetom 2. typu bez inzulínovej liečby sa CGM doteraz nepoužíva tak bežne ako u pacientov liečených inzulínom. Dôvodom je aj nedostatok veľkých randomizovaných štúdií, ktoré by jasne preukázali jeho prínos v tejto skupine.</p>
 
-<p>Zároveň však veľká časť pacientov s diabetom 2. typu nedosahuje cieľové hodnoty glykémie ani napriek liečbe modernými liekmi, ako sú inhibítory SGLT2, agonisty receptora GLP-1 alebo iné antidiabetiká. Práve tu môže byť CGM praktickým nástrojom, ktorý nezasahuje len do liečby, ale aj do každodenného správania pacienta.</p>
+<p>Zároveň však veľká časť pacientov s diabetom 2. typu nedosahuje cieľové hodnoty glykémie napriek liečbe modernými liekmi, ako sú inhibítory SGLT2, agonisty receptora GLP-1 alebo iné antidiabetiká. Tu môže CGM pomôcť ako praktický nástroj, ktorý ovplyvňuje nielen liečbu, ale aj každodenné správanie pacienta.</p>
 
 <h2>Štúdia CONNECT</h2>
 
@@ -55,7 +55,7 @@ $articles[] = [
 
 <p>Obe skupiny pokračovali v predchádzajúcej antidiabetickej liečbe, dostali edukáciu o strave a pohybe a absolvovali pravidelné kontroly.</p>
 
-<p>Priemerný vek pacientov bol 60 rokov. Medián trvania diabetu bol 10 rokov. Priemerná vstupná hodnota HbA1c bola 8,8 %, pričom 31 % pacientov malo HbA1c aspoň 9 %. Priemerný BMI bol 33 kg/m². Časť pacientov užívala modernú liečbu, konkrétne 37 % inhibítor SGLT2 a 40 % liečbu založenú na inkretínoch, napríklad agonistu receptora GLP-1.</p>
+<p>Priemerný vek pacientov bol 60 rokov. Medián trvania diabetu bol 10 rokov. Priemerná vstupná hodnota HbA1c bola 8,8 %, pričom 31 % pacientov malo HbA1c aspoň 9 %. Priemerný BMI bol 33 kg/m². Inhibítor SGLT2 užívalo 37 % pacientov a liečbu založenú na inkretínoch, napríklad agonistu receptora GLP-1, 40 %.</p>
 
 <h2>Výraznejšie zníženie HbA1c</h2>
 
@@ -76,7 +76,7 @@ $articles[] = [
 
 <h2>Viac času v cieľovom rozmedzí</h2>
 
-<p>CGM neprináša iba informáciu o priemernej hodnote glykémie. Jeho výhodou je možnosť sledovať, koľko času pacient trávi v cieľovom glykemickom rozmedzí.</p>
+<p>CGM neukazuje iba priemernú glykémiu, ale aj to, koľko času pacient trávi v cieľovom glykemickom rozmedzí.</p>
 
 <p>V štúdii sa hodnotilo rozmedzie <strong>70 až 180 mg/dl</strong> (3,9 až 10,0 mmol/l). Pacienti s CGM strávili v tomto cieľovom rozmedzí približne o <strong>5 hodín denne viac</strong> než pacienti v bežnej starostlivosti.</p>
 
@@ -84,7 +84,7 @@ $articles[] = [
 
 <h2>Prínos bez ohľadu na modernú farmakoterapiu</h2>
 
-<p>Dôležitým zistením je, že prínos CGM sa pozoroval u pacientov užívajúcich aj neužívajúcich agonisty receptora GLP-1 a inhibítory SGLT2.</p>
+<p>Prínos CGM sa pozoroval u pacientov užívajúcich aj neužívajúcich agonisty receptora GLP-1 a inhibítory SGLT2.</p>
 
 <p>To naznačuje, že CGM nemá význam len ako doplnok pri nedostatočnej liečbe. Môže byť užitočné aj u pacientov, ktorí už dostávajú účinné moderné antidiabetiká, ale stále potrebujú lepšiu glykemickú kontrolu a spätnú väzbu v každodennom režime.</p>
 
@@ -92,13 +92,13 @@ $articles[] = [
 
 <p>V štúdii neboli hlásené žiadne prípady ťažkej hypoglykémie ani v jednej skupine. Výskyt závažných nežiaducich udalostí nesúvisiacich s CGM bol podobný.</p>
 
-<p>Pacienti používajúci CGM zároveň hlásili vyššiu spokojnosť s manažmentom diabetu a nižšiu mieru diabetického distresu. Tento aspekt je prakticky významný. Diabetes je vo veľkej miere ochorenie riadené samotným pacientom. Ak pacient lepšie vidí dôsledky svojich rozhodnutí, môže aktívnejšie upravovať stravu, pohyb a adherenciu k liečbe.</p>
+<p>Pacienti používajúci CGM zároveň hlásili vyššiu spokojnosť s manažmentom diabetu a nižšiu mieru diabetického distresu. Má to praktický význam: diabetes do veľkej miery riadi sám pacient, a ak lepšie vidí dôsledky svojich rozhodnutí, môže aktívnejšie upravovať stravu, pohyb a adherenciu k liečbe.</p>
 
 <h2>Význam pre verejné zdravie</h2>
 
-<p>Podľa odborníkov majú výsledky význam aj z pohľadu verejného zdravia. Pacienti s diabetom 2. typu bez inzulínu tvoria veľkú časť populácie s diabetom. V USA ide približne o tri štvrtiny dospelých s diabetom 2. typu, teda asi 20 miliónov ľudí.</p>
+<p>Výsledky majú podľa odborníkov význam aj pre verejné zdravie. Pacienti s diabetom 2. typu bez inzulínu tvoria veľkú časť populácie s diabetom. V USA ide približne o tri štvrtiny dospelých s diabetom 2. typu, teda asi 20 miliónov ľudí.</p>
 
-<p>Keďže CGM v tejto skupine často nie je hradené poisťovňami, nové dáta môžu podporiť diskusiu o širšej dostupnosti tejto technológie. Treba však dodať, že štúdia bola financovaná spoločnosťou Dexcom, výrobcom použitého CGM systému, čo je potrebné zohľadniť pri interpretácii výsledkov.</p>
+<p>Keďže CGM v tejto skupine často nie je hradené poisťovňami, nové dáta môžu podporiť diskusiu o širšej dostupnosti tejto technológie. Štúdiu však financovala spoločnosť Dexcom, výrobca použitého systému CGM, a to treba pri interpretácii výsledkov zohľadniť.</p>
 
 <h2>Čo z toho vyplýva pre prax</h2>
 
@@ -106,7 +106,7 @@ $articles[] = [
 
 <p>Najväčší praktický prínos možno očakávať u pacientov s výraznejšou hyperglykémiou, nízkym časom v cieľovom rozmedzí, neistotou v stravovacích návykoch alebo potrebou lepšej spätnej väzby o účinku liekov a životného štýlu.</p>
 
-<p>CGM však nie je samoúčelný prístroj. Jeho hodnota vzniká až vtedy, keď pacient a zdravotnícky tím dokážu namerané údaje správne interpretovať a premietnuť ich do konkrétnych rozhodnutí.</p>
+<p>Samotný prístroj však nestačí. Hodnotu má až vtedy, keď pacient a zdravotnícky tím dokážu namerané údaje správne interpretovať a premietnuť ich do konkrétnych rozhodnutí.</p>
 
 <h2>Záver</h2>
 
@@ -115,7 +115,7 @@ $articles[] = [
 <p>Ak sa tieto výsledky potvrdia aj v ďalších štúdiách a v bežnej klinickej praxi, CGM sa môže stať dôležitým nástrojom individualizovanej starostlivosti o širšiu skupinu pacientov s diabetom 2. typu.</p>
 
 <div class="info-box-blue">
-<p><strong>Poznámka — prepočet jednotiek glukózy.</strong> Hodnota v mmol/l uvedená v zátvorke je prepočítaná z mg/dl a zaokrúhlená na jedno desatinné miesto. Pre glukózu v krvi platí:</p>
+<p><strong>Poznámka – prepočet jednotiek glukózy.</strong> Hodnota v mmol/l uvedená v zátvorke je prepočítaná z mg/dl a zaokrúhlená na jedno desatinné miesto. Pre glukózu v krvi platí:</p>
 <ul>
   <li>mmol/l = mg/dl ÷ 18 (čiže mg/dl × 0,0555),</li>
   <li>mg/dl = mmol/l × 18.</li>

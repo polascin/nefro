@@ -28,13 +28,13 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d'),
     'is_top'       => 0,
-    'excerpt'      => 'Trojitý agonista receptorov GLP-1, GIP a glukagónu retatrutid priniesol v štúdiách TRANSCEND-T2D-1 a TRIUMPH-1 výrazný úbytok hmotnosti (až 30 %), lepšiu kompenzáciu diabetu 2. typu aj priaznivé kardiometabolické zmeny. Sľubné dáta však treba čítať opatrne — ide o liek vo vývoji.',
+    'excerpt'      => 'Trojitý agonista receptorov GLP-1, GIP a glukagónu retatrutid priniesol v štúdiách TRANSCEND-T2D-1 a TRIUMPH-1 výrazný úbytok hmotnosti (až 30 %), lepšiu kompenzáciu diabetu 2. typu aj priaznivé kardiometabolické zmeny. Sľubné dáta však treba čítať opatrne – ide o liek vo vývoji.',
     'content'      => <<<'HTML'
-<figure><a href="img/retatrutid-ubytok-hmotnosti-metabolicke-benefity.webp" rel="noopener noreferrer" target="_blank"><img src="img/retatrutid-ubytok-hmotnosti-metabolicke-benefity.webp" alt="Tri receptorové kľúče spojené do jednej molekuly so silným lúčom a opatrným oparom na okraji" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Trojitý účinok prináša výrazné výsledky — zdržanlivosť si však žiada dĺžka sledovania, nie veľkosť efektu.</figcaption></figure>
+<figure><a href="img/retatrutid-ubytok-hmotnosti-metabolicke-benefity.webp" rel="noopener noreferrer" target="_blank"><img src="img/retatrutid-ubytok-hmotnosti-metabolicke-benefity.webp" alt="Tri receptorové kľúče spojené do jednej molekuly so silným lúčom a opatrným oparom na okraji" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Trojitý účinok prináša výrazné výsledky – zdržanlivosť si však žiada dĺžka sledovania, nie veľkosť efektu.</figcaption></figure>
 
 <p>Experimentálny liek <strong>retatrutid</strong> priniesol v nových klinických štúdiách výrazný úbytok hmotnosti, zlepšenie kompenzácie diabetu 2. typu a priaznivé zmeny viacerých kardiometabolických rizikových faktorov. Údaje boli prezentované na vedeckom kongrese <strong>American Diabetes Association 2026</strong> v New Orleans. Výsledky štúdie TRANSCEND-T2D-1 boli zároveň publikované v časopise <strong>The Lancet</strong>.</p>
 
-<p>Retatrutid je skúšaný liek zo skupiny terapií s inkretínovým účinkom. Je to <strong>trojitý agonista receptorov GLP-1, GIP a glukagónu</strong>. Práve kombinácia týchto mechanizmov má potenciál ovplyvniť nielen glykémiu, ale aj telesnú hmotnosť, energetický výdaj a metabolické parametre. Liek však zostáva v štádiu klinického skúšania a jeho miesto v klinickej praxi bude závisieť od ďalších dát, regulačného posúdenia, bezpečnosti a dostupnosti.</p>
+<p>Retatrutid je skúšaný liek zo skupiny terapií s inkretínovým účinkom. Je to <strong>trojitý agonista receptorov GLP-1, GIP a glukagónu</strong>. Kombinácia týchto mechanizmov môže ovplyvniť nielen glykémiu, ale aj telesnú hmotnosť, energetický výdaj a metabolické parametre. Liek však zostáva v štádiu klinického skúšania a jeho miesto v klinickej praxi bude závisieť od ďalších dát, regulačného posúdenia, bezpečnosti a dostupnosti.</p>
 
 <h2>Výsledky u pacientov s diabetom 2. typu</h2>
 
@@ -107,13 +107,13 @@ $articles[] = [
 
 <p>Endokrinologička Alice Y. Y. Cheng upozornila, že väčší úbytok hmotnosti nemusí byť vždy lepší, potrebný ani správny pre každého pacienta. Kľúčovou otázkou podľa nej nie je iba samotné chudnutie, ale <strong>prínos pre zdravie</strong>.</p>
 
-<p>To je podstatná poznámka. Pri liečbe obezity by cieľom nemalo byť číslo na váhe izolované od klinického kontextu. Dôležité sú metabolické výsledky, funkčný stav, kvalita života, tolerancia liečby, bezpečnosť a dostupnosť.</p>
+<p>Pri liečbe obezity by cieľom nemalo byť číslo na váhe izolované od klinického kontextu. Dôležité sú metabolické výsledky, funkčný stav, kvalita života, tolerancia liečby, bezpečnosť a dostupnosť.</p>
 
 <h2>Záver</h2>
 
-<p>Retatrutid predstavuje jednu z najsľubnejších experimentálnych terapií v oblasti obezity a diabetu 2. typu. Dáta ukazujú výrazný úbytok hmotnosti, zlepšenie HbA1c, priaznivý vplyv na lipidy, krvný tlak, obvod pása a potenciálne aj na komplikácie obezity, ako sú osteoartróza kolena a obštrukčné spánkové apnoe.</p>
+<p>Retatrutid patrí medzi najsľubnejšie experimentálne lieky na obezitu a diabetes 2. typu. Dáta ukazujú výrazný úbytok hmotnosti, zlepšenie HbA1c, priaznivý vplyv na lipidy, krvný tlak, obvod pása a potenciálne aj na komplikácie obezity, ako sú osteoartróza kolena a obštrukčné spánkové apnoe.</p>
 
-<p>Zároveň však platí, že ide o liek vo vývoji. Potrebné sú ďalšie údaje o dlhodobej bezpečnosti, udržateľnosti účinku, výbere vhodných pacientov a reálnej dostupnosti. Retatrutid môže byť silným nástrojom, ale jeho hodnota sa bude merať nie iba kilogramami, ale najmä tým, či pacientom prinesie bezpečný a udržateľný zdravotný prínos.</p>
+<p>Zároveň však platí, že ide o liek vo vývoji. Potrebné sú ďalšie údaje o dlhodobej bezpečnosti, udržateľnosti účinku, výbere vhodných pacientov a reálnej dostupnosti. Retatrutid môže byť silným nástrojom, jeho hodnotu však neurčia iba kilogramy, ale najmä to, či pacientom prinesie bezpečný a udržateľný zdravotný prínos.</p>
 
 <hr>
 

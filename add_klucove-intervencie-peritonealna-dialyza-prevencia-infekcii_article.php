@@ -28,9 +28,9 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d'),
     'is_top'       => 0,
-    'excerpt'      => 'Podcast American Society of Nephrology s Dr. Jeffreym Perlom o prevencii infekčných komplikácií pri peritoneálnej dialýze — peritonitídy aj infekcií katétra. Kľúčom je tímová spolupráca, edukácia pacienta, sledovanie trendov a kultúra kvality v každodennej starostlivosti.',
+    'excerpt'      => 'Podcast American Society of Nephrology s Dr. Jeffreym Perlom o prevencii infekčných komplikácií pri peritoneálnej dialýze, teda peritonitídy aj infekcií katétra. Kľúčom je tímová spolupráca, edukácia pacienta, sledovanie trendov a kultúra kvality v každodennej starostlivosti.',
     'content'      => <<<'HTML'
-<figure><a href="img/klucove-intervencie-peritonealna-dialyza-prevencia-infekcii.webp" rel="noopener noreferrer" target="_blank"><img src="img/klucove-intervencie-peritonealna-dialyza-prevencia-infekcii.webp" alt="Výstupné miesto katétra chránené niekoľkými prekrývajúcimi sa svetelnými prstencami, baktérie zostávajú vonku" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Žiadne jedno opatrenie nestačí — ochranu tvoria vrstvy, o ktoré sa stará celý tím.</figcaption></figure>
+<figure><a href="img/klucove-intervencie-peritonealna-dialyza-prevencia-infekcii.webp" rel="noopener noreferrer" target="_blank"><img src="img/klucove-intervencie-peritonealna-dialyza-prevencia-infekcii.webp" alt="Výstupné miesto katétra chránené niekoľkými prekrývajúcimi sa svetelnými prstencami, baktérie zostávajú vonku" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Žiadne jedno opatrenie nestačí – ochranu tvoria vrstvy, o ktoré sa stará celý tím.</figcaption></figure>
 
 <p>Peritoneálna dialýza patrí medzi dôležité formy náhrady funkcie obličiek. Pacientovi poskytuje väčšiu mieru samostatnosti, často umožňuje domácu liečbu a môže priaznivo ovplyvniť kvalitu života. Jej úspech však nestojí iba na technickom zvládnutí výkonu. Jedným z rozhodujúcich faktorov je prevencia infekcií.</p>
 
@@ -38,7 +38,7 @@ $articles[] = [
 
 <h2>Infekcie ako kľúčová komplikácia peritoneálnej dialýzy</h2>
 
-<p>Infekčné komplikácie patria medzi najzávažnejšie problémy peritoneálnej dialýzy. Môžu viesť k hospitalizácii, zlyhaniu metódy, prechodu pacienta na hemodialýzu a v závažných prípadoch aj k ohrozeniu života. Najčastejšie sa v tejto súvislosti hovorí o peritonitíde, infekcii v mieste výstupu katétra a tunelovej infekcii.</p>
+<p>Infekcie patria medzi najzávažnejšie komplikácie peritoneálnej dialýzy. Môžu viesť k hospitalizácii, zlyhaniu metódy, prechodu pacienta na hemodialýzu a v závažných prípadoch aj k ohrozeniu života. Najčastejšie sa v tejto súvislosti hovorí o peritonitíde, infekcii v mieste výstupu katétra a tunelovej infekcii.</p>
 
 <p>Prevencia preto nemôže byť doplnkovou aktivitou. Musí byť základnou súčasťou programu peritoneálnej dialýzy. Zahŕňa správnu edukáciu pacienta, kvalitné zavedenie a ošetrovanie katétra, dodržiavanie aseptickej techniky, pravidelné preškoľovanie, sledovanie infekčných epizód a rýchlu reakciu na vzniknuté problémy.</p>
 
@@ -62,7 +62,7 @@ $articles[] = [
 
 <h2>Priestor na zlepšenie</h2>
 
-<p>Podcast zdôrazňuje, že v prevencii infekcií stále existuje priestor na pokrok. Ten môže vzniknúť lepšou štandardizáciou postupov, systematickým auditom infekcií, dôslednejšou edukáciou, podporou pacientov a výmenou skúseností medzi pracoviskami.</p>
+<p>Podľa diskusie je v prevencii infekcií stále priestor na zlepšenie: lepšou štandardizáciou postupov, systematickým auditom infekcií, dôslednejšou edukáciou, podporou pacientov a výmenou skúseností medzi pracoviskami.</p>
 
 <p>Peritoneálna dialýza je efektívna metóda, ale jej bezpečnosť závisí od detailov. Každý krok, od výberu pacienta cez zavedenie katétra až po domáce výmeny, môže ovplyvniť riziko infekcie. Práve preto majú „core interventions“, teda základné intervencie, rozhodujúci význam.</p>
 
@@ -70,7 +70,7 @@ $articles[] = [
 
 <p>Prevencia infekcií pri peritoneálnej dialýze nie je jednorazové školenie ani formálna súčasť dokumentácie. Je to kontinuálny proces, ktorý si vyžaduje kvalitný tím, aktívneho pacienta, sledovanie výsledkov a ochotu meniť prax podľa reálnych dát.</p>
 
-<p>Diskusia s Dr. Jeffreym Perlom pripomína, že zlepšenie výsledkov v peritoneálnej dialýze nevzniká iba novými technológiami. Rovnako dôležité sú dôslednosť, spolupráca a kultúra kvality v každodennej starostlivosti.</p>
+<p>Diskusia s Dr. Jeffreym Perlom pripomína, že lepšie výsledky v peritoneálnej dialýze neprinášajú iba nové technológie, ale rovnako dôslednosť, spolupráca a kultúra kvality v každodennej starostlivosti.</p>
 
 <hr>
 

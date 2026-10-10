@@ -31,7 +31,7 @@ $articles[] = [
 
 <p><strong>Proteinúria</strong> patrí pri IgA nefropatii (IgAN) medzi najdôležitejšie modifikovateľné ukazovatele rizika progresie chronickej choroby obličiek. Súčasná stratégia preto začína optimalizovanou podpornou liečbou vrátane kontroly krvného tlaku, inhibície systému renín–angiotenzín (RAS) v maximálne tolerovanej dávke a podľa vhodnosti aj inhibítora SGLT2. Pri pretrvávajúcej proteinúrii môže prichádzať do úvahy sparsentan, ktorý v jednej molekule kombinuje antagonizmus endotelínového receptora typu A a receptora AT1 pre angiotenzín II.</p>
 
-<p>Nová multicentrická retrospektívna štúdia zo Španielska sledovala účinok sparsentanu v bežnej klinickej praxi. Jej význam spočíva v tom, že väčšina pacientov už dostávala modernú podpornú liečbu vrátane inhibítora SGLT2. Zároveň však ide o malú nekontrolovanú kohortu, takže výsledky opisujú asociáciu po nasadení lieku a nemožno z nich samostatne dokázať jeho kauzálny účinok ani dlhodobý vplyv na zlyhanie obličiek.</p>
+<p>Nová multicentrická retrospektívna štúdia zo Španielska sledovala účinok sparsentanu v bežnej klinickej praxi. Zaujímavá je tým, že väčšina pacientov už dostávala modernú podpornú liečbu vrátane inhibítora SGLT2. Zároveň však ide o malú nekontrolovanú kohortu, takže výsledky opisujú asociáciu po nasadení lieku a nemožno z nich samostatne dokázať jeho kauzálny účinok ani dlhodobý vplyv na zlyhanie obličiek.</p>
 
 <h2>Čo štúdia sledovala</h2>
 
@@ -91,7 +91,7 @@ $articles[] = [
 
 <p>Funkcia obličiek podľa abstraktu zostala počas sledovania stabilná napriek mierne až stredne zníženému vstupnému eGFR. Toto pozorovanie je upokojujúce, ale 12 mesiacov a nekontrolovaný dizajn nestačia na spoľahlivé určenie skutočného sklonu eGFR ani na preukázanie prevencie zlyhania obličiek.</p>
 
-<p>Autori nepozorovali <strong>klinicky významnú hyperkaliémiu ani závažné nežiaduce udalosti</strong>. Tento záver neznamená, že monitorovanie nie je potrebné. Pri sparsentane treba individuálne sledovať krvný tlak, objemový stav, kreatinín alebo eGFR, draslík a podľa platných informácií o lieku aj pečeňové testy. Pri poklese tlaku, akútnom zhoršení funkcie obličiek alebo objemovej deplecii je potrebné prehodnotiť súbežnú liečbu a hydratáciu pacienta.</p>
+<p>Autori nepozorovali <strong>klinicky významnú hyperkaliémiu ani závažné nežiaduce udalosti</strong>. Monitorovanie to však nerobí zbytočným. Pri sparsentane treba individuálne sledovať krvný tlak, objemový stav, kreatinín alebo eGFR, draslík a podľa platných informácií o lieku aj pečeňové testy. Pri poklese tlaku, akútnom zhoršení funkcie obličiek alebo objemovej deplecii je potrebné prehodnotiť súbežnú liečbu a hydratáciu pacienta.</p>
 
 <h2>Ako výsledky zapadajú do randomizovaných dát</h2>
 
@@ -99,7 +99,7 @@ $articles[] = [
 
 <p>Systematický prehľad a meta-analýza z roku 2024 zahŕňali <strong>tri štúdie s celkovo 884 pacientmi</strong> s IgAN alebo fokálnou segmentovou glomerulosklerózou, nie iba pacientov s IgAN. V porovnaní s irbesartanom bol sparsentan spojený s priaznivejším UPCR (pomer percentuálnej redukcie 0,66; 95 % interval spoľahlivosti [IS] 0,58–0,74), častejšou kompletnou remisiou proteinúrie (relatívne riziko 2,57; 95 % IS 1,73–3,81) a čiastočnou remisiou (relatívne riziko 1,63; 95 % IS 1,40–1,91). Rozdiel v eGFR oproti irbesartanu nebol štatisticky významný a hypotenzia bola častejšia pri sparsentane (relatívne riziko 2,02; 95 % IS 1,30–3,16).</p>
 
-<p>Meta-analýza teda podporuje najmä antiproteinurický účinok. Pri interpretácii renálnych „hard“ endpointov treba zohľadniť malý počet štúdií, rozdielne populácie, odlišné definície remisie a dĺžku sledovania.</p>
+<p>Meta-analýza teda podporuje najmä antiproteinurický účinok. Pri interpretácii tvrdých renálnych ukazovateľov treba zohľadniť malý počet štúdií, rozdielne populácie, odlišné definície remisie a dĺžku sledovania.</p>
 
 <h2>Praktické limity štúdie z reálnej praxe</h2>
 

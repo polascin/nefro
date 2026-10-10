@@ -35,9 +35,9 @@ $articles[] = [
     'content'      => <<<'HTML'
 <figure><a href="img/c3-glomerulopatia-c3g-liecba-inhibicia-komplementu.webp" rel="noopener noreferrer" target="_blank"><img src="img/c3-glomerulopatia-c3g-liecba-inhibicia-komplementu.webp" alt="Glomerulus zanesený depozitmi komplementu a presný svetelný blokátor zastavujúci jeden krok kaskády" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Nešpecifická liečba tlmí následky; cielená inhibícia zasahuje priamo krok, ktorý poškodenie spúšťa.</figcaption></figure>
 
-<p>U pacientov s <strong>komplement 3 glomerulopatiou (C3G)</strong> sa dlhodobo ťažko vytvára jednotný „štandard starostlivosti“, a to najmä pre <strong>relatívne nedávne vyčlenenie diagnózy</strong> a <strong>nedostatok randomizovaných kontrolovaných štúdií</strong>. KDIGO 2021 preto svoje odporúčania stavia prevažne na <strong>klinickej skúsenosti a expertnom konsenze</strong>, pričom dôkazy často pochádzajú z <strong>retrospektívnych kohortových štúdií</strong>.</p>
+<p>U pacientov s <strong>komplement 3 glomerulopatiou (C3G)</strong> sa jednotný „štandard starostlivosti“ vytvára ťažko, najmä pre <strong>relatívne nedávne vyčlenenie diagnózy</strong> a <strong>nedostatok randomizovaných kontrolovaných štúdií</strong>. KDIGO 2021 preto svoje odporúčania stavia prevažne na <strong>klinickej skúsenosti a expertnom konsenze</strong>, pričom dôkazy často pochádzajú z <strong>retrospektívnych kohortových štúdií</strong>.</p>
 
-<p>Zároveň sa ukazuje, že C3G nie je jedna homogénna jednotka. <strong>C3G spojená s monoklonálnymi imunoglobulínmi</strong> je odlišná situácia, v ktorej majú prednosť postupy <strong>cielené na klon</strong> (clone-targeted); tento prehľad sa však venuje najmä širšiemu rámcu liečby C3G bez tejto špecifickej klonovej cesty.</p>
+<p>C3G pritom nie je homogénna jednotka. <strong>C3G spojená s monoklonálnymi imunoglobulínmi</strong> je odlišná situácia, v ktorej majú prednosť postupy <strong>cielené na klon</strong> (clone-targeted); tento prehľad sa venuje najmä liečbe C3G bez takejto klonovej príčiny.</p>
 
 <h2>Nešpecifická a podporná terapia (KDIGO 2021)</h2>
 
@@ -45,7 +45,7 @@ $articles[] = [
 
 <h3>Inhibítor ACE alebo ARB pre všetkých</h3>
 
-<p>Inhibítory ACE (ACEi), prípadne blokátory receptorov pre angiotenzín (ARB), sú odporúčané <strong>pre všetkých pacientov</strong>.</p>
+<p>Inhibítory ACE (ACEi), prípadne blokátory receptorov pre angiotenzín (ARB), sa odporúčajú <strong>všetkým pacientom</strong>.</p>
 
 <h3>Možný prínos inhibítorov SGLT2</h3>
 
@@ -57,7 +57,7 @@ $articles[] = [
 
 <h3>Kedy pridať imunosupresiu</h3>
 
-<p>Pri <strong>stredne ťažkom až ťažkom priebehu</strong> (v texte definovanom ako <strong>proteinúria &gt; 1 g/deň</strong> a zároveň buď <strong>hematúria</strong>, alebo <strong>pokles funkcie počas aspoň 6 mesiacov</strong>) KDIGO 2021 uvádza, že je možné začať <strong>imunosupresiu</strong>:</p>
+<p>Pri <strong>stredne ťažkom až ťažkom priebehu</strong> (definovanom ako <strong>proteinúria &gt; 1 g/deň</strong> a zároveň buď <strong>hematúria</strong>, alebo <strong>pokles funkcie počas aspoň 6 mesiacov</strong>) možno podľa KDIGO 2021 začať <strong>imunosupresiu</strong>:</p>
 
 <ul>
   <li><strong>mykofenolát mofetil (MMF) v kombinácii s glukokortikoidmi (kortikosteroidmi)</strong>.</li>
@@ -73,7 +73,7 @@ $articles[] = [
   <li>Iné kohorty ukazujú, že rozdiely medzi režimami (napríklad MMF vs. iná liečba než MMF vs. ACEi/ARB) nemusia byť konzistentné.</li>
 </ul>
 
-<p>Z materiálu vyplýva dôležitý praktický paradox: hoci sa MMF odporúča v natívnych obličkách, <strong>väčšina transplantovaných pacientov dostáva MMF v rámci základnej imunosupresie</strong>, a napriek tomu <strong>potransplantačná recidíva C3G pretrváva</strong> – čo podporuje potrebu <strong>cielených terapií meniacich mechanizmus ochorenia</strong>.</p>
+<p>Prakticky dôležitý je tento paradox: hoci sa MMF odporúča v natívnych obličkách, <strong>väčšina transplantovaných pacientov dostáva MMF v rámci základnej imunosupresie</strong>, a napriek tomu <strong>potransplantačná recidíva C3G pretrváva</strong>. Aj to podporuje potrebu <strong>cielených terapií meniacich mechanizmus ochorenia</strong>.</p>
 
 <h2>Terminálna inhibícia komplementu: ekulizumab</h2>
 
@@ -81,7 +81,7 @@ $articles[] = [
 
 <h3>Mechanizmus</h3>
 
-<p>Ekulizumab blokuje štiepenie <strong>C5</strong> na úrovni <strong>C5 konvertázy</strong>. Zároveň <strong>neovplyvňuje patologickú hyperaktiváciu alternatívnej dráhy vyššie v kaskáde (upstream)</strong>.</p>
+<p>Ekulizumab blokuje štiepenie <strong>C5</strong> na úrovni <strong>C5 konvertázy</strong>. Neovplyvňuje však <strong>patologickú hyperaktiváciu alternatívnej dráhy vyššie v kaskáde (upstream)</strong>.</p>
 
 <h3>Kedy sa ekulizumab zvažuje</h3>
 
@@ -94,17 +94,17 @@ $articles[] = [
 
 <h3>Výsledky sú heterogénne</h3>
 
-<p>Účinnosť ekulizumabu je <strong>veľmi variabilná</strong>. Príklady z textu (série prípadov a štúdie):</p>
+<p>Účinnosť ekulizumabu je <strong>veľmi variabilná</strong>. Údaje pochádzajú zo sérií prípadov a štúdií:</p>
 
 <ul>
   <li>V niektorých súboroch sa pozorovalo <strong>zníženie kreatinínu a/alebo proteinúrie</strong> u časti pacientov, zatiaľ čo iní nemali laboratórny efekt, ale zaznamenali histopatologické zmeny.</li>
   <li>Pri potransplantačnej recidíve sa v niektorých prípadoch po počiatočnej odpovedi objavil <strong>relaps</strong> po vysadení lieku a neodpoveď po opätovnom nasadení.</li>
-  <li>V združených údajoch (retrospektívne kohorty a série prípadov, spolu 122 pacientov) bol ekulizumab spojený s <strong>nižšou mierou zlyhania štepov (33 %)</strong> než plazmaferéza (42 %) alebo rituximab (81 %). Materiál však zdôrazňuje veľkú variabilitu naprieč štúdiami.</li>
+  <li>V združených údajoch (retrospektívne kohorty a série prípadov, spolu 122 pacientov) bol ekulizumab spojený s <strong>nižšou mierou zlyhania štepov (33 %)</strong> než plazmaferéza (42 %) alebo rituximab (81 %). Výsledky sa však medzi štúdiami výrazne líšili.</li>
 </ul>
 
 <h2>Inhibícia C5aR1: avakopan (ACCOLADE)</h2>
 
-<p>Alternatívou v terminálnej zložke je <strong>avakopan</strong> (inhibítor receptora C5aR1). Materiál uvádza výsledky fázy 2:</p>
+<p>Ďalšou možnosťou zásahu do terminálnej časti kaskády je <strong>avakopan</strong> (inhibítor receptora C5aR1). Výsledky štúdie fázy 2:</p>
 
 <ul>
   <li>štúdia <strong>ACCOLADE</strong> (randomizovaná, dvojito zaslepená, placebom kontrolovaná),</li>
@@ -114,7 +114,7 @@ $articles[] = [
 
 <h2>Inhibícia alternatívnej dráhy: iptakopan a pegcetakoplan</h2>
 
-<p>Materiál logicky prechádza od terminálnej blokády k terapiám, ktoré zasahujú jadro patogenézy – <strong>alternatívnu dráhu (AP)</strong>.</p>
+<p>Na rozdiel od terminálnej blokády zasahujú ďalšie lieky priamo jadro patogenézy – <strong>alternatívnu dráhu (AP)</strong>.</p>
 
 <h3>Iptakopan (inhibítor faktora B)</h3>
 
@@ -138,7 +138,7 @@ $articles[] = [
   <li>rýchly nástup: účinok na proteinúriu sa uvádza približne do <strong>2 týždňov</strong>.</li>
 </ul>
 
-<p><strong>Bezpečnosť:</strong> v štúdii APPEAR-C3G je uvedená <strong>1 závažná pneumokoková infekcia</strong> pri iptakopane, bez meningokokového ochorenia v rámci opísaných udalostí.</p>
+<p><strong>Bezpečnosť:</strong> v štúdii APPEAR-C3G sa pri iptakopane vyskytla <strong>1 závažná pneumokoková infekcia</strong>; meningokokové ochorenie sa medzi opísanými udalosťami neobjavilo.</p>
 
 <h3>Pegcetakoplan (inhibítor C3 a C3b)</h3>
 
@@ -159,18 +159,18 @@ $articles[] = [
 
 <h2>Čo z toho vyplýva: do praxe a limity</h2>
 
-<p>Z textu vyplýva praktický model uvažovania:</p>
+<p>Pre prax z toho vyplýva tento postup:</p>
 
 <ol>
   <li><strong>Začínať podpornou liečbou</strong> (ACEi/ARB, kontrola rizík, konzervatívne opatrenia) a podľa závažnosti zvažovať aj <strong>MMF s kortikosteroidmi</strong>.</li>
   <li>Keď je priebeh <strong>progredujúci</strong> a odpoveď na nešpecifickú liečbu nedostatočná, KDIGO 2021 otvára priestor pre <strong>cielenú komplementovú terapiu</strong>.</li>
   <li>Najdôležitejší mechanistický posun smeruje k liekom blokujúcim <strong>alternatívnu dráhu</strong> (iptakopan, pegcetakoplan), pri ktorých sú výsledky (najmä proteinúria) konzistentnejšie než pri viacerých nešpecifických režimoch.</li>
-  <li>Pri výbere „kto má dostať čo“ však stále narážame na limit: materiál výslovne uvádza, že <strong>kritériá vymedzujúce podskupinu s jasným prínosom terminálnej blokády</strong> nie sú spoľahlivo identifikované.</li>
+  <li>Pri výbere liečby pre konkrétneho pacienta však zostáva zásadný limit: <strong>kritériá vymedzujúce podskupinu s jasným prínosom terminálnej blokády</strong> zatiaľ nie sú spoľahlivo určené.</li>
 </ol>
 
 <h2>Záver</h2>
 
-<p>C3G je terapeuticky náročná a liečba sa tradične opierala o nešpecifické stratégie s variabilnou účinnosťou na renálne prežívanie. Súčasný vývoj smeruje k tomu, že cieľom už nie je len tlmiť zápal, ale <strong>zasiahnuť mechanizmus komplementovej aktivácie</strong>. Najmä lieky zamerané na alternatívnu dráhu (iptakopan, pegcetakoplan) prinášajú v štúdiách významné zníženie proteinúrie a stabilizáciu eGFR, pričom biomarkery podporujú biologickú konzistentnosť inhibície komplementu. Zároveň platí, že dlhodobé renálne výsledky a presné „indikácie pre konkrétneho pacienta“ pri jednotlivých komplementových cestách si budú vyžadovať ďalšie triedenie dôkazov.</p>
+<p>C3G je terapeuticky náročná a liečba sa tradične opierala o nešpecifické stratégie s variabilnou účinnosťou na renálne prežívanie. Cieľom liečby už nie je len tlmiť zápal, ale <strong>zasiahnuť mechanizmus komplementovej aktivácie</strong>. Najmä lieky zamerané na alternatívnu dráhu (iptakopan, pegcetakoplan) prinášajú v štúdiách významné zníženie proteinúrie a stabilizáciu eGFR, pričom biomarkery podporujú biologickú konzistentnosť inhibície komplementu. Dlhodobé renálne výsledky a presné indikácie jednotlivých liekov pre konkrétneho pacienta si však vyžiadajú ďalšie dôkazy.</p>
 
 <hr>
 

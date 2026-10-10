@@ -33,9 +33,9 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Jednostranový checklist pre anémiu pri CKD: potvrdenie anémie, základné laboratórium, rozhodnutie o železe podľa skupiny, opatrnosť pri ferric carboxymaltose, ESA/HIF-PHI, intervaly monitorovania a dokumentácia pre audit.',
     'content'      => <<<'HTML'
-<figure><a href="img/anemia-ckd-checklist-a4-hd-nonhd.webp" rel="noopener noreferrer" target="_blank"><img src="img/anemia-ckd-checklist-a4-hd-nonhd.webp" alt="Svetelný list, z ktorého sa oddeľujú dve vetvy — jedna k dialyzačnému filtru, druhá k obličke" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Jedna strana, dve situácie — hemodialyzovaný a nedialyzovaný pacient potrebujú odlišné kroky.</figcaption></figure>
+<figure><a href="img/anemia-ckd-checklist-a4-hd-nonhd.webp" rel="noopener noreferrer" target="_blank"><img src="img/anemia-ckd-checklist-a4-hd-nonhd.webp" alt="Svetelný list, z ktorého sa oddeľujú dve vetvy – jedna k dialyzačnému filtru, druhá k obličke" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Jedna strana, dve situácie – hemodialyzovaný a nedialyzovaný pacient potrebujú odlišné kroky.</figcaption></figure>
 
-<p>Tento checklist je určený na rýchle použitie v ambulancii aj na dialýze. Zmysel je praktický: potvrdiť anémiu, vyhodnotiť železo, rozhodnúť o liečbe podľa skupiny pacienta a mať jasne zapísané, prečo bol zvolený konkrétny postup.</p>
+<p>Tento checklist je určený na rýchle použitie v ambulancii aj na dialýze. Pomáha potvrdiť anémiu, vyhodnotiť železo, rozhodnúť o liečbe podľa skupiny pacienta a jasne zapísať, prečo bol zvolený konkrétny postup.</p>
 
 <h2>1) Potvrdenie anémie a rýchle zhodnotenie</h2>
 
@@ -44,7 +44,7 @@ $articles[] = [
   <li>☐ <strong>CBC</strong> s MCV a RDW + <strong>retikulocyty</strong></li>
   <li>☐ Symptómy a tolerancia záťaže: únava, dyspnoe, iné</li>
   <li>☐ Rýchle zhodnotenie príčiny: zápal/infekcia, krvácanie, výživa (klinicky)</li>
-  <li>☐ Ak obraz nesedí s CKD anémiou, doplniť plán ďalšej diagnostiky</li>
+  <li>☐ Ak obraz nezodpovedá anémii pri CKD, doplniť plán ďalšej diagnostiky</li>
 </ul>
 
 <h2>2) Železo: laboratórny profil</h2>
@@ -61,7 +61,7 @@ $articles[] = [
 
 <ul>
   <li>☐ Pri <strong>ferritíne ≤ 500 ng/ml</strong> a <strong>TSAT ≤ 30 %</strong> začať <strong>IV železo</strong></li>
-  <li>☐ Stop sign pre bezpečnosť: zadržať rutinné železo, ak <strong>ferritín &gt; 700 ng/ml</strong> alebo <strong>TSAT ≥ 40 %</strong></li>
+  <li>☐ Bezpečnostná hranica: zadržať rutinné železo, ak <strong>ferritín &gt; 700 ng/ml</strong> alebo <strong>TSAT ≥ 40 %</strong></li>
   <li>☐ Typ IV železa a dávkovací plán: ____________________</li>
 </ul>
 
@@ -97,7 +97,7 @@ $articles[] = [
   <li>☐ Kontrola <strong>Hb, ferritín, TSAT</strong></li>
   <li>☐ Non-HD a CKD G5PD: <strong>každé 3 mesiace</strong></li>
   <li>☐ CKD G5HD: <strong>každých 1 až 3 mesiace</strong></li>
-  <li>☐ Re-evaluácia pri zmene kliniky: infekcia, hospitalizácia, krvácanie, rýchly pokles Hb</li>
+  <li>☐ Prehodnotenie pri zmene klinického stavu: infekcia, hospitalizácia, krvácanie, rýchly pokles Hb</li>
   <li>☐ Návrh ďalšej kontroly: [DD.MM.RRRR]</li>
 </ul>
 

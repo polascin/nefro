@@ -41,7 +41,7 @@ $articles[] = [
 
 <p>Medzi helminty patria hlístovce (nematódy), pásomnice (cestódy) a motolice (trematódy). Ich spôsob prenosu, lokalizácia v organizme aj citlivosť na liečbu sa zásadne líšia. Označenie „črevné parazity“ je širšie, pretože zahŕňa aj prvoky, ktoré helmintmi nie sú.</p>
 
-<p>Od helmintóz treba odlíšiť myiázu, teda napadnutie tkanív larvami múch. Larvy druhu <em>Cochliomyia hominivorax</em>, ktoré v obrazovom prehľade uvádza aj východiskový zdroj tohto článku, nie sú črevné helminty: ide o larválne štádium muchy bzučivky, pôvodcu tkanivovej myiázy. Na rozdiel od lariev, ktoré sa živia odumretým tkanivom, požierajú živé tkanivo, merajú 6,5 až 17 mm a spôsobujú rýchlo progredujúce bolestivé rany s páchnucim zápachom. Liečba spočíva v <strong>odstránení lariev a ošetrení rany</strong>, prípadne v antibiotiku na prevenciu sekundárnej stafylokokovej či streptokokovej infekcie – nie v režime určenom na črevné helmintózy. [1]</p>
+<p>Od helmintóz treba odlíšiť myiázu, teda napadnutie tkanív larvami múch. Larvy druhu <em>Cochliomyia hominivorax</em>, ktoré v obrazovom prehľade uvádza aj východiskový zdroj tohto článku, nie sú črevné helminty: ide o larválne štádium muchy bzučivky, pôvodcu tkanivovej myiázy. Na rozdiel od lariev, ktoré sa živia odumretým tkanivom, požierajú živé tkanivo, merajú 6,5 až 17 mm a spôsobujú rýchlo progredujúce, bolestivé a zapáchajúce rany. Liečba spočíva v <strong>odstránení lariev a ošetrení rany</strong>, prípadne v antibiotiku na prevenciu sekundárnej stafylokokovej či streptokokovej infekcie – nie v režime určenom na črevné helmintózy. [1]</p>
 
 <p>Zaradenie tejto témy do obrazového prehľadu parazitov preto nemožno chápať ako taxonomické zaradenie medzi črevné červy. Rozlíšenie má priamy praktický dôsledok: pri myiáze by podanie antihelmintika len oddialilo jediný účinný zákrok.</p>
 
@@ -125,7 +125,7 @@ $articles[] = [
 
 <h3>Prenos darcovským orgánom: negatívna sérológia darcu nestačí</h3>
 
-<p>Osobitnú kapitolu predstavuje prenos infekcie darcovským orgánom. V kazuistickom oznámení uverejnenom v januári 2026 v <em>Emerging Infectious Diseases</em> autori opisujú <strong>dva prípady darcom prenesenej strongyloidózy u príjemcov obličky</strong>. Sérologické vyšetrenie vzoriek darcu bolo pôvodne negatívne; prenos potvrdilo až retrospektívne testovanie. [3]</p>
+<p>V kazuistickom oznámení uverejnenom v januári 2026 v <em>Emerging Infectious Diseases</em> autori opisujú <strong>dva prípady darcom prenesenej strongyloidózy u príjemcov obličky</strong>. Sérologické vyšetrenie vzoriek darcu bolo pôvodne negatívne; prenos potvrdilo až retrospektívne testovanie. [3]</p>
 
 <p>Oznámenie má tri praktické dôsledky. Po prvé, sérologický skríning darcu má obmedzenú citlivosť a jeho negatívny výsledok nie je dôkazom neprítomnosti infekcie. Po druhé, u darcov s epidemiologickým rizikom je namieste cielený protokol, nie rutinný jednotný postup. Po tretie, po transplantácii má zmysel aktívne sledovanie príjemcu vrátane pozornosti na nevysvetlenú eozinofíliu a na respiračné prejavy pripomínajúce Löfflerov syndróm – teda práve v období, keď imunosupresia hyperinfekciu umožňuje.</p>
 
@@ -190,7 +190,7 @@ $articles[] = [
 
 <h3>Anémia</h3>
 
-<p>Pri anémii treba odlíšiť renálnu zložku od nedostatku železa a od krvných strát. Epidemiologicky pravdepodobná infekcia machovcami môže byť jednou z príčin sideropénie, nie však univerzálnym vysvetlením anémie u dialyzovaného pacienta. Pri makrocytóze má do úvahy vstúpiť aj difylobotrióza. Pred eskaláciou liečby erytropoézu stimulujúcimi látkami má zmysel vylúčiť odstrániteľnú príčinu strát.</p>
+<p>Pri anémii treba odlíšiť renálnu zložku od nedostatku železa a od krvných strát. Epidemiologicky pravdepodobná infekcia machovcami môže byť jednou z príčin sideropénie, nie však univerzálnym vysvetlením anémie u dialyzovaného pacienta. Pri makrocytóze treba zvážiť aj difylobotriózu. Pred eskaláciou liečby erytropoézu stimulujúcimi látkami má zmysel vylúčiť odstrániteľnú príčinu strát.</p>
 
 <h3>Dávkovanie antiparazitík pri zníženej funkcii obličiek</h3>
 
@@ -214,7 +214,7 @@ $articles[] = [
 
 <p>Ak je imunosupresia neodkladná, diagnostika nesmie nekriticky oddialiť život zachraňujúcu liečbu. Súčasne však treba bezodkladne konzultovať infektológa a individuálne rozhodnúť o potrebe predbežnej antiparazitárnej liečby.</p>
 
-<p>Najdôležitejším preventabilným rizikom nie je prehliadnutie miernych tráviacich ťažkostí, ale <strong>podanie imunosupresie pacientovi s nerozpoznanou strongyloidózou</strong>.</p>
+<p>Najdôležitejším rizikom, ktorému sa dá predísť, nie je prehliadnutie miernych tráviacich ťažkostí, ale <strong>podanie imunosupresie pacientovi s nerozpoznanou strongyloidózou</strong>.</p>
 
 <h2>Limity</h2>
 

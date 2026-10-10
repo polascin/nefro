@@ -33,15 +33,15 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Randomizovaná fáza 2 s perorálnym inhibítorom TRPC6 (BI 764198) pri FSGS: placebom korigované zníženie proteinúrie v 12. týždni a 100 % odpoveď u pacientov s patogénnymi variantmi TRPC6 – krok k precíznej nefrológii.',
     'content'      => <<<'HTML'
-<figure><a href="img/trpc6-inhibicia-fsgs-faza-2-precizna-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/trpc6-inhibicia-fsgs-faza-2-precizna-nefrologia.webp" alt="Iónový kanál na podocyte presne uzatváraný malým svetelným kľúčom, okolité zjazvené tkanivo prestáva tmavnúť" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Zásah mieri na konkrétny kanál v podocyte — to je podstata precíznej nefrológie.</figcaption></figure>
+<figure><a href="img/trpc6-inhibicia-fsgs-faza-2-precizna-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/trpc6-inhibicia-fsgs-faza-2-precizna-nefrologia.webp" alt="Iónový kanál na podocyte presne uzatváraný malým svetelným kľúčom, okolité zjazvené tkanivo prestáva tmavnúť" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Zásah mieri na konkrétny kanál v podocyte – v tom je podstata precíznej nefrológie.</figcaption></figure>
 
-<p>Fokálna segmentálna glomeruloskleróza (FSGS) je histopatologický vzorec poškodenia obličkových glomerulov, no klinicky ide najčastejšie o <strong>primárnu podocytopatiu</strong>. Podocyty sú terminálne diferencované bunky tvoriace filtračnú bariéru, takže ich priame poškodenie vedie k <strong>proteinúrii až nefrotickému syndrómu</strong>. Dôležité je, že poškodenie podocytov má rôzne spúšťače: od imunitne sprostredkovaných mechanizmov cez maladaptívnu hemodynamiku až po genetické príčiny.</p>
+<p>Fokálna segmentálna glomeruloskleróza (FSGS) je histopatologický vzorec poškodenia obličkových glomerulov, no klinicky ide najčastejšie o <strong>primárnu podocytopatiu</strong>. Podocyty sú terminálne diferencované bunky tvoriace filtračnú bariéru, takže ich priame poškodenie vedie k <strong>proteinúrii až nefrotickému syndrómu</strong>. Poškodenie podocytov má pritom rôzne spúšťače: od imunitne sprostredkovaných mechanizmov cez maladaptívnu hemodynamiku až po genetické príčiny.</p>
 
-<p>Klasifikácia podocytopatií podľa KDIGO umožňuje presnejšie triedenie príčin (primárne, genetické, sekundárne a nejasné), čo otvára cestu k <strong>mechanizmovo cielenej liečbe namiesto necielenej imunosupresie</strong> vo vybraných skupinách pacientov.</p>
+<p>Klasifikácia podocytopatií podľa KDIGO triedi príčiny presnejšie (primárne, genetické, sekundárne a nejasné), a tým otvára cestu k <strong>mechanizmovo cielenej liečbe namiesto necielenej imunosupresie</strong> vo vybraných skupinách pacientov.</p>
 
 <h2>TRPC6: mechanistické prepojenie génu so stresom podocytu</h2>
 
-<p>TRPC6 je iónový kanál z rodiny TRP kanálov, ktorý je <strong>priepustný pre vápnikové ióny (Ca²⁺)</strong>. V podocytoch môže jeho nadmerná aktivita spustiť kaskádu vedúcu k strate integrity filtračnej bariéry. Mechanistický rámec uvedený v texte je nasledovný:</p>
+<p>TRPC6 je iónový kanál z rodiny TRP kanálov, ktorý je <strong>priepustný pre vápnikové ióny (Ca²⁺)</strong>. V podocytoch môže jeho nadmerná aktivita spustiť kaskádu, ktorá vedie k strate integrity filtračnej bariéry:</p>
 
 <ol>
   <li>TRPC6 sprostredkuje <strong>zvýšený prísun Ca²⁺ do bunky</strong>,</li>
@@ -55,7 +55,7 @@ $articles[] = [
 
 <h2>Čo testovala štúdia: fáza 2 s liekom BI 764198 (inhibítor TRPC6)</h2>
 
-<p>Zdrojový materiál rozoberá fázu 2 skúšajúcu <strong>BI 764198</strong> – perorálny <strong>selektívny inhibítor TRPC6 podávaný 1× denne</strong>. Štúdia bola <strong>randomizovaná, placebom kontrolovaná</strong>.</p>
+<p>Štúdia fázy 2 skúšala <strong>BI 764198</strong> – perorálny <strong>selektívny inhibítor TRPC6 podávaný 1× denne</strong>. Bola <strong>randomizovaná a placebom kontrolovaná</strong>.</p>
 
 <h3>Dizajn a populácia</h3>
 
@@ -63,7 +63,7 @@ $articles[] = [
   <li><strong>Dávky:</strong> 20 mg, 40 mg, 80 mg oproti placebu.</li>
   <li><strong>Trvanie:</strong> 12 týždňov.</li>
   <li><strong>Populácia:</strong> 62 pacientov s FSGS potvrdenou biopsiou.</li>
-  <li><strong>Zahrnutí:</strong> pacienti s <strong>primárnou FSGS</strong> (definovanou nie „klasickým“ imunologickým kontextom KDIGO, ale skôr neprítomnosťou klinických dôkazov sekundárnej príčiny) alebo s <strong>genetickou FSGS</strong> podmienenou patogénnym variantom TRPC6.</li>
+  <li><strong>Zahrnutí:</strong> pacienti s <strong>primárnou FSGS</strong> (definovanou skôr neprítomnosťou klinických dôkazov sekundárnej príčiny než „klasickým“ imunologickým kontextom KDIGO) alebo s <strong>genetickou FSGS</strong> podmienenou patogénnym variantom TRPC6.</li>
   <li><strong>Vylúčení:</strong> pacienti s histologickými alebo klinickými znakmi sekundárnej FSGS, prípadne s monogénnymi príčinami inými než TRPC6.</li>
 </ul>
 
@@ -82,7 +82,7 @@ $articles[] = [
   <li>v placebe <strong>7 %</strong>.</li>
 </ul>
 
-<p>Ide o oddelenie od placeba už na relatívne krátkom horizonte 12 týždňov; v kontexte fázy 2 je to klinicky relevantný signál, hoci nejde o vysokú mieru odpovede v celom súbore.</p>
+<p>Od placeba sa liečba oddelila už za relatívne krátkych 12 týždňov. Pre fázu 2 je to klinicky relevantný signál, hoci miera odpovede v celom súbore nie je vysoká.</p>
 
 <h3>Presná odpoveď pri patogénnych variantoch TRPC6</h3>
 
@@ -93,7 +93,7 @@ $articles[] = [
   <li>v placebovom ramene tejto podskupiny nebol nikto s odpoveďou (<strong>0/3</strong>).</li>
 </ul>
 
-<p>Štatistická sila tejto časti je pre malý počet obmedzená, no výsledok je mechanisticky veľmi konzistentný s hypotézou <strong>presnej, génom podmienenej terapie</strong>.</p>
+<p>Pre malý počet pacientov je štatistická sila tejto analýzy obmedzená, výsledok je však mechanisticky veľmi konzistentný s hypotézou <strong>presnej, génom podmienenej terapie</strong>.</p>
 
 <h3>Absolútne zníženie UPCR v 24-hodinovom zbere</h3>
 
@@ -123,7 +123,7 @@ $articles[] = [
 
 <h2>Ako to zapadá do kontextu: prečo je štúdia dôležitá aj napriek limitom</h2>
 
-<p>Ide o <strong>prvú randomizovanú kontrolovanú štúdiu</strong> pri FSGS, ktorá testuje liek zacielený na <strong>gén spôsobujúci ochorenie</strong>.</p>
+<p>Je to <strong>prvá randomizovaná kontrolovaná štúdia</strong> pri FSGS, ktorá testuje liek zacielený na <strong>gén spôsobujúci ochorenie</strong>.</p>
 
 <p>Porovnanie s inými mechanistickými prístupmi je však obmedzené:</p>
 
@@ -132,11 +132,11 @@ $articles[] = [
   <li>pri TRPC6 je genetická príčina fenotypovo užšia a mechanizmus je priamo vo vápnikovom signálnom programe podocytu, čo robí prenos mechanizmu do klinického efektu intuitívnejším.</li>
 </ul>
 
-<p>Zároveň treba pripomenúť, že FDA schválila na liečbu FSGS sparsentan (duálny antagonista endotelínového a angiotenzínového receptora), ktorého prínos sa viaže na zníženie proteinúrie. Porovnávať „absolútne čísla“ s inhibíciou TRPC6 je však metodicky problematické, pretože dráhy a mechanizmy sú odlišné.</p>
+<p>FDA zároveň schválila na liečbu FSGS sparsentan (duálny antagonista endotelínového a angiotenzínového receptora), ktorého prínos sa viaže na zníženie proteinúrie. Porovnávať „absolútne čísla“ s inhibíciou TRPC6 je však metodicky problematické, pretože dráhy a mechanizmy sú odlišné.</p>
 
 <h2>Posolstvo pre nefrológov: heterogenita FSGS a budúcnosť precíznej selekcie</h2>
 
-<p>V celom súbore je odpoveď len 35 %, čo môže na prvý pohľad pôsobiť skromne. Materiál však uvádza viacero dôvodov, prečo to nie je „márne“:</p>
+<p>Odpoveď 35 % v celom súbore môže na prvý pohľad pôsobiť skromne. Viacero okolností však ukazuje, že nejde o „márny“ výsledok:</p>
 
 <ul>
   <li>ide o 12-týždňovú fázu 2 s konzervatívnym prahom odpovede,</li>
@@ -151,7 +151,7 @@ $articles[] = [
 
 <h2>Praktické limity: čo ešte nevieme</h2>
 
-<p>Výstup je silný v mechanizmovej interpretácii, ale stále limitovaný:</p>
+<p>Mechanistická interpretácia je silná, štúdia má však limity:</p>
 
 <ul>
   <li>malý počet účastníkov a podskupín,</li>

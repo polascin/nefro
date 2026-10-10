@@ -33,7 +33,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Sekundárna analýza randomizovanej štúdie pri aktívnej reumatoidnej artritíde: eGFR z cystatínu C je konzistentne nižší než z kreatinínu už na začiatku a zmena TNFR1 súvisí so zmenou eGFRcys, nie eGFRcr.',
     'content'      => <<<'HTML'
-<figure><a href="img/cystatin-c-kreatinin-egfr-biomarkery-reumatoidna-artritida.webp" rel="noopener noreferrer" target="_blank"><img src="img/cystatin-c-kreatinin-egfr-biomarkery-reumatoidna-artritida.webp" alt="Dva meracie ukazovatele stúpajúce z obličky, pričom do jedného zasahuje signál zo zapálených kĺbov" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Zápal môže ovplyvniť jeden z odhadov viac než druhý — a tým skresliť obraz funkcie obličiek.</figcaption></figure>
+<figure><a href="img/cystatin-c-kreatinin-egfr-biomarkery-reumatoidna-artritida.webp" rel="noopener noreferrer" target="_blank"><img src="img/cystatin-c-kreatinin-egfr-biomarkery-reumatoidna-artritida.webp" alt="Dva meracie ukazovatele stúpajúce z obličky, pričom do jedného zasahuje signál zo zapálených kĺbov" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Zápal môže ovplyvniť jeden z odhadov viac než druhý, a tým skresliť obraz funkcie obličiek.</figcaption></figure>
 
 <p>Reumatoidná artritída (RA) je chronické systémové zápalové ochorenie, ktoré okrem kĺbov zasahuje aj ďalšie orgánové systémy vrátane obličiek. V klinickej praxi sa funkcia obličiek najčastejšie monitoruje nepriamo – prostredníctvom odhadov glomerulovej filtrácie z koncentrácií kreatinínu a cystatínu C. Pri RA však môže byť interpretácia týchto testov problematická: samotný chronický zápal, zmeny svalovej hmoty (sarkopénia) aj liečba môžu ovplyvňovať tvorbu alebo hladiny týchto markerov, a tým aj výsledné odhady eGFR.</p>
 
@@ -52,7 +52,7 @@ $articles[] = [
 
 <h2>Sledované ukazovatele</h2>
 
-<p>Východisková situácia a jej ďalší vývoj sa hodnotili v časových bodoch <strong>vstupné vyšetrenie (baseline), 6., 18. a 24. týždeň</strong>.</p>
+<p>Ukazovatele sa hodnotili v časových bodoch <strong>vstupné vyšetrenie (baseline), 6., 18. a 24. týždeň</strong>.</p>
 
 <h3>Primárne cieľové ukazovatele</h3>
 
@@ -98,11 +98,11 @@ $articles[] = [
   <li>zmena eGFRcr: <strong>−0,28 ml/min/1,73 m²</strong> (95 % IS −3,71 až 3,15).</li>
 </ul>
 
-<p>Inými slovami, hoci sa v štúdii hodnotila aktivita RA a jej biomarkery, odhady funkcie obličiek sa na makroúrovni významne nemenili.</p>
+<p>Odhady funkcie obličiek sa teda na úrovni celej kohorty významne nemenili.</p>
 
 <h3>3. Asociácie biomarkerov zápalu a eGFR na začiatku</h3>
 
-<p>Po úprave na viaceré faktory bolo niekoľko biomarkerov aktivity RA <strong>inverzne asociovaných</strong> s eGFRcys, prípadne s eGFRcr. Inverzná väzba sa explicitne uvádza pre:</p>
+<p>Po úprave na viaceré faktory bolo niekoľko biomarkerov aktivity RA <strong>inverzne asociovaných</strong> s eGFRcys, prípadne s eGFRcr. Inverzný vzťah sa výslovne uvádza pre:</p>
 
 <ul>
   <li>VCAM-1,</li>
@@ -112,7 +112,7 @@ $articles[] = [
   <li>rezistín.</li>
 </ul>
 
-<p>Z klinického pohľadu tento výsledok podporuje myšlienku, že pri RA nejde o „obličky ako izolovaný orgán“ – zápalové prostredie môže odrážať alebo ovplyvňovať laboratórne parametre, z ktorých sa eGFR počíta.</p>
+<p>Klinicky to podporuje predstavu, že obličky pri RA nemožno posudzovať ako izolovaný orgán: zápalové prostredie môže odrážať alebo ovplyvňovať laboratórne parametre, z ktorých sa eGFR počíta.</p>
 
 <h3>4. Zmena biomarkerov v čase a vzťah k zmene eGFR</h3>
 
@@ -123,14 +123,14 @@ $articles[] = [
   <li><strong>žiadna zmena biomarkerov</strong> nebola významne spojená so zmenou <strong>eGFRcr</strong>.</li>
 </ul>
 
-<p>Toto zistenie je dôležité, pretože naznačuje odlišnú citlivosť, prípadne odlišnú mechanizmovú cestu cystatínového a kreatinínového odhadu v kontexte dynamiky zápalu po liečbe RA.</p>
+<p>Zistenie naznačuje odlišnú citlivosť, prípadne odlišný mechanizmus cystatínového a kreatinínového odhadu v kontexte dynamiky zápalu po liečbe RA.</p>
 
 <h2>Interpretácia a klinické implikácie</h2>
 
-<p>Zistenia tejto práce možno zhrnúť do niekoľkých praktických bodov:</p>
+<p>Z práce vyplýva niekoľko praktických bodov:</p>
 
 <ol>
-  <li><strong>Systémový rozdiel medzi eGFRcys a eGFRcr je prítomný už na začiatku</strong> aktívnej RA. Môže to znamenať buď rozdielne „vykazovanie“ reálnej renálnej funkcie v závislosti od mechanizmov ochorenia, alebo vplyv mimorenálnych faktorov na samotné markery.</li>
+  <li><strong>Systematický rozdiel medzi eGFRcys a eGFRcr je prítomný už na začiatku</strong> aktívnej RA. Môže to znamenať buď rozdielne „vykazovanie“ reálnej renálnej funkcie v závislosti od mechanizmov ochorenia, alebo vplyv mimorenálnych faktorov na samotné markery.</li>
   <li><strong>Po 24 týždňoch liečby RA sa celkový eGFR (cystatínový ani kreatinínový) významne nemenil.</strong> Neznamená to, že obličky sú nezúčastnené, ale skôr to, že v tomto časovom okne pravdepodobne nedošlo k výraznej zmene GFR, prípadne boli zmeny malé a prekryté variabilitou.</li>
   <li><strong>Biomarkery zápalu sú spojené s nižším eGFR (najmä cystatínovým) už pri vstupnom vyšetrení.</strong> To môže byť relevantné u pacientov s aktívnou RA, u ktorých sa súčasne posudzuje renálna bezpečnosť liečby.</li>
   <li><strong>Zmena jedného z ukazovateľov osi TNF súvisela so zmenou eGFRcys</strong>, nie však s eGFRcr. Ak sa tento vzor potvrdí v ďalších štúdiách, môže ovplyvniť výber odhadu eGFR pri sledovaní vplyvu zápalu a liečby na „renálne“ laboratórne ukazovatele.</li>

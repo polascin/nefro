@@ -37,7 +37,7 @@ $articles[] = [
 
 <p>V počiatočných štádiách sa objavujú parestézie, pálenie, bolesť, znížené vibračné a povrchové čitie a oslabenie Achillových reflexov. Pri progresii sa pridáva necitlivosť, porucha rovnováhy, neistá chôdza, slabosť a atrofia distálnych svalov. Možné sú aj autonómne prejavy, napríklad ortostatická hypotenzia, poruchy potenia, obstipácia, hnačka alebo sexuálna dysfunkcia.</p>
 
-<p>Patofyziológia nie je vysvetlená jediným uremickým toxínom. Pravdepodobne sa uplatňuje kombinácia retinovaných látok, oxidačného stresu, metabolických porúch a zmenenej excitability axónov. Chronicky zvýšená koncentrácia draslíka môže prispievať k depolarizácii nervových vlákien, no z dostupných údajov nemožno vyvodiť, že samotná korekcia draslíka už vzniknutú neuropatiu vylieči.</p>
+<p>Patofyziológia nie je vysvetlená jediným uremickým toxínom. Pravdepodobne sa uplatňuje kombinácia zadržiavaných látok, oxidačného stresu, metabolických porúch a zmenenej excitability axónov. Chronicky zvýšená koncentrácia draslíka môže prispievať k depolarizácii nervových vlákien, no z dostupných údajov nemožno vyvodiť, že samotná korekcia draslíka už vzniknutú neuropatiu vylieči.</p>
 
 <h2>Nie každá neuropatia pri CKD je uremická</h2>
 
@@ -254,7 +254,7 @@ $articles[] = [
 
 <h2>Limity dôkazov</h2>
 
-<p>Údaje o uremickej neuropatii pochádzajú prevažne zo starších observačných štúdií a prehľadov. Moderných randomizovaných štúdií zameraných na klinicky významné neurologické výsledky je málo. Renálne dávkovanie gabapentinoidov je dobre opreté o farmakokinetiku a regulačné dokumenty, menej istá je však veľkosť ich klinického účinku priamo pri uremickej neuropatii. HTEMS má iba malé nekontrolované štúdie; širšia evidencia NMES sa týka najmä svalovej sily a fyzickej funkcie, nie špecificky neuropatickej bolesti.</p>
+<p>Údaje o uremickej neuropatii pochádzajú prevažne zo starších observačných štúdií a prehľadov. Moderných randomizovaných štúdií zameraných na klinicky významné neurologické výsledky je málo. Renálne dávkovanie gabapentinoidov je dobre opreté o farmakokinetiku a regulačné dokumenty, menej istá je však veľkosť ich klinického účinku priamo pri uremickej neuropatii. HTEMS má iba malé nekontrolované štúdie; širšie dôkazy o NMES sa týkajú najmä svalovej sily a fyzickej funkcie, nie špecificky neuropatickej bolesti.</p>
 
 <div class="pdf-avoid-break">
 <h2>Záver</h2>

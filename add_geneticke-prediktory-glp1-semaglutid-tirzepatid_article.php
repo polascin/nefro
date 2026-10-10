@@ -27,7 +27,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Veľká štúdia 23andMe spojila varianty GLP1R a GIPR s úbytkom hmotnosti, nauzeou a vracaním pri semaglutide a tirzepatide. Účinky sú však malé a zatiaľ neopodstatňujú liečbu podľa genotypu.',
     'content'      => <<<'HTML'
-<figure><a href="img/geneticke-prediktory-glp1-semaglutid-tirzepatid.webp" rel="noopener noreferrer" target="_blank"><img src="img/geneticke-prediktory-glp1-semaglutid-tirzepatid.webp" alt="Závitnica DNA s farebnými markermi; len niektoré vlákna dosiahnu k injekčným perám, ostatné končia v opare" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Niektoré súvislosti sú doložené, iné zostávajú nepotvrdené — na výber liečby podľa genotypu je zatiaľ skoro.</figcaption></figure>
+<figure><a href="img/geneticke-prediktory-glp1-semaglutid-tirzepatid.webp" rel="noopener noreferrer" target="_blank"><img src="img/geneticke-prediktory-glp1-semaglutid-tirzepatid.webp" alt="Závitnica DNA s farebnými markermi; len niektoré vlákna dosiahnu k injekčným perám, ostatné končia v opare" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Niektoré súvislosti sú doložené, iné zostávajú nepotvrdené – na výber liečby podľa genotypu je zatiaľ skoro.</figcaption></figure>
 
 <p>Myšlienka, že genetický test pred začatím liečby predpovie úbytok hmotnosti alebo gastrointestinálne nežiaduce účinky semaglutidu a tirzepatidu, je klinicky príťažlivá. Priložený text spoločnosti 23andMe ju však predstavuje súčasne ako vedeckú novinku aj ako podporu vlastného komerčného produktu. Vecné posúdenie preto musí vychádzať predovšetkým z pôvodnej práce publikovanej v časopise <em>Nature</em>, nie z jej marketingovej interpretácie.</p>
 
@@ -115,7 +115,7 @@ $articles[] = [
   <li><strong>rs11760106:</strong> alela T bola spojená s vyšším pomerom šancí na vracanie (OR 1,57; <em>P</em> = 2,5 × 10<sup>−27</sup>).</li>
 </ul>
 
-<p>Je dôležité opraviť zjednodušenie v propagačnom texte: indexový variant úbytku hmotnosti a indexové varianty nauzey či vracania <strong>nie sú totožné</strong>. Nachádzajú sa v tej istej génovej oblasti a sú vo väzbovej nerovnováhe. Kolokalizačná analýza naznačila, že signály môžu mať spoločný kauzálny podklad, ale neurčila ho s istotou. Z výsledku nemožno vyvodiť, že vyvolanie nauzey spôsobí lepší liečebný účinok alebo že gastrointestinálne ťažkosti treba tolerovať za každú cenu.</p>
+<p>Propagačný text tu zjednodušuje: indexový variant úbytku hmotnosti a indexové varianty nauzey či vracania <strong>nie sú totožné</strong>. Nachádzajú sa v tej istej génovej oblasti a sú vo väzbovej nerovnováhe. Kolokalizačná analýza naznačila, že signály môžu mať spoločný kauzálny podklad, ale neurčila ho s istotou. Z výsledku nemožno vyvodiť, že vyvolanie nauzey spôsobí lepší liečebný účinok alebo že gastrointestinálne ťažkosti treba tolerovať za každú cenu.</p>
 
 <p>U používateľov tirzepatidu sa navyše našla asociácia vracania s oblasťou <em>GIPR</em>. Indexový variant rs71338792 mal OR 1,84. Bol v takmer úplnej väzbovej nerovnováhe (<em>r</em><sup>2</sup> = 0,99) s variantom <strong>rs1800437</strong>, ktorý vedie k zámene p.Glu354Gln. Alela C zodpovedajúca glutamínu bola spojená s približne 1,83-násobným pomerom šancí na vracanie oproti ochrannej alele G. Pri semaglutide sa tento účinok nepozoroval, čo je biologicky zlučiteľné s tým, že semaglutid receptor GIP neaktivuje.</p>
 

@@ -24,11 +24,11 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Pri CKD nerozhoduje len cieľ v g/kg/deň. Správny plán rozlišuje nedialyzovanú CKD, dialýzu, nutričný stav, vek a zdroj bielkovín; vysvetľuje hranice nízko- a veľmi nízkobielkovinových diét.',
     'content'      => <<<'HTML'
-<figure><a href="img/bielkoviny-ckd-mnozstvo-kvalita-individualizacia.webp" rel="noopener noreferrer" target="_blank"><img src="img/bielkoviny-ckd-mnozstvo-kvalita-individualizacia.webp" alt="Bielkovinové potraviny na tmavom tanieri v kuželi svetla, nad nimi sa svetelné vlákno rozdeľuje do viacerých smerov, v pozadí silueta obličky" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Tá istá porcia bielkovín vedie u rôznych pacientov k rôznej odpovedi — otázka nie je len „koľko“, ale aj „pre koho“.</figcaption></figure>
+<figure><a href="img/bielkoviny-ckd-mnozstvo-kvalita-individualizacia.webp" rel="noopener noreferrer" target="_blank"><img src="img/bielkoviny-ckd-mnozstvo-kvalita-individualizacia.webp" alt="Bielkovinové potraviny na tmavom tanieri v kuželi svetla, nad nimi sa svetelné vlákno rozdeľuje do viacerých smerov, v pozadí silueta obličky" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Tá istá porcia bielkovín vedie u rôznych pacientov k rôznej odpovedi – otázka nie je len „koľko“, ale aj „pre koho“.</figcaption></figure>
 
 <p class="article-dek"><em>Pri chronickej chorobe obličiek (CKD) nie je príjem bielkovín jediným číslom. Rovnaký cieľ môže byť primeraný pre metabolicky stabilného človeka s progredujúcou nedialyzovanou CKD, ale nevhodný pre pacienta na dialýze, po akútnom ochorení alebo s proteínovo-energetickým chradnutím. Klinický cieľ nie je „jesť čo najmenej bielkovín“, ale chrániť funkciu obličiek bez straty výživového a funkčného stavu.</em></p>
 
-<p>Otázka príjmu bielkovín pri CKD vyvoláva zdanlivo jednoduchú odpoveď: menej bielkovín má znížiť tvorbu dusíkatých metabolitov, fosfátovú nálož a glomerulárnu hyperfiltráciu. Takáto skratka je však nebezpečná. Pri nedostatočnom energetickom príjme, anorexii, zápale alebo krehkosti môže reštrikcia urýchliť úbytok svalovej hmoty, zhoršiť fyzickú výkonnosť a viesť k proteínovo-energetickému chradnutiu (PEW).</p>
+<p>Na otázku príjmu bielkovín pri CKD sa ponúka zdanlivo jednoduchá odpoveď: menej bielkovín má znížiť tvorbu dusíkatých metabolitov, fosfátovú nálož a glomerulárnu hyperfiltráciu. Takáto skratka je však nebezpečná. Pri nedostatočnom energetickom príjme, anorexii, zápale alebo krehkosti môže reštrikcia urýchliť úbytok svalovej hmoty, zhoršiť fyzickú výkonnosť a viesť k proteínovo-energetickému chradnutiu (PEW).</p>
 
 <p>Správne položená otázka preto znie: <strong>aký príjem bielkovín je primeraný pre konkrétneho pacienta v konkrétnej fáze choroby a pri akom nutričnom riziku?</strong> Množstvo, zdroj, celkový energetický príjem, laboratórny kontext aj schopnosť diétu dlhodobo dodržiavať sú rovnako dôležité.</p>
 
@@ -60,11 +60,11 @@ $articles[] = [
 
 <p>Umbrella review z roku 2025 zahrnula 25 meta-analýz so 47 randomizovanými štúdiami. Pri nízkobielkovinových diétach uviedla strednú istotu dôkazov pre priaznivý vplyv na fosfatémiu a riziko zlyhania obličiek, no pri zmene GFR a pri viacerých ďalších výsledkoch bola istota nízka až veľmi nízka. Výsledok preto podporuje individuálne vedenú diétu, nie univerzálne obmedzenie pre všetkých pacientov s CKD.</p>
 
-<p>Osobitne dôležité je, že pacient so stabilnou eGFR nemusí byť nutrične v poriadku a pacient s pokročilou CKD nemusí automaticky profitovať z najprísnejšej reštrikcie. Rozhodovanie má vyvažovať očakávaný prínos pre progresiu CKD oproti riziku úbytku svalovej hmoty, nižšej výkonnosti a horšej kvality života.</p>
+<p>Pacient so stabilnou eGFR pritom nemusí byť nutrične v poriadku a pacient s pokročilou CKD nemusí automaticky profitovať z najprísnejšej reštrikcie. Rozhodovanie má vyvažovať očakávaný prínos pre progresiu CKD oproti riziku úbytku svalovej hmoty, nižšej výkonnosti a horšej kvality života.</p>
 
 <h2>Starší pacient: nejde o jednoduchý konflikt dvoch odporúčaní</h2>
 
-<p>Geriatrické odporúčania často pracujú s príjmom nad 1,0 g/kg/deň na prevenciu podvýživy a sarkopénie. Tento cieľ však nemožno automaticky preniesť na každého staršieho pacienta s CKD. Spoločný kritický prehľad ERN-ERA a ESPEN odporúča najprv určiť naliehavejší problém: pri dobrom nutričnom stave a progredujúcej pokročilej CKD môže mať prednosť kontrolovaná reštrikcia; pri PEW, podvýžive alebo stabilnej funkcii obličiek treba reštrikciu odložiť alebo jej zabrániť.</p>
+<p>Geriatrické odporúčania často pracujú s príjmom nad 1,0 g/kg/deň na prevenciu podvýživy a sarkopénie. Tento cieľ však nemožno automaticky preniesť na každého staršieho pacienta s CKD. Spoločný kritický prehľad ERN-ERA a ESPEN odporúča najprv určiť naliehavejší problém: pri dobrom nutričnom stave a progredujúcej pokročilej CKD môže mať prednosť kontrolovaná reštrikcia; pri PEW, podvýžive alebo stabilnej funkcii obličiek treba reštrikciu odložiť alebo ju vôbec nezavádzať.</p>
 
 <p>V observačnej štúdii EQUAL u ľudí vo veku najmenej 65 rokov s eGFR pod 20 ml/min/1,73 m² nebola nízkobielkovinová diéta predpísaná v bežnej klinickej praxi spojená s vyššou mortalitou ani so zhoršením globálneho nutričného hodnotenia. Keďže išlo o observačné údaje, výsledok nepotvrdzuje bezpečnosť pre každého jednotlivca. Interakcie s vekom nad 75 rokov, nižším nutričným skóre a vyššou komorbiditou naopak zdôrazňujú potrebu častejšieho monitorovania.</p>
 

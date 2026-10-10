@@ -29,7 +29,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Moderná liečba CKD vrství blokádu RAS, inhibítory SGLT2, finerenón a agonisty GLP-1 podľa fenotypu. Rozhodujú albuminúria, eGFR, komorbidity, tolerancia a plán sledovania po AKI.',
     'content'      => <<<'HTML'
-<figure><a href="img/liecba-ckd-2026-vrstvena-nefroprotekcia-post-aki.webp" rel="noopener noreferrer" target="_blank"><img src="img/liecba-ckd-2026-vrstvena-nefroprotekcia-post-aki.webp" alt="Oblička obalená niekoľkými sústrednými vrstvami svetla, z jednej strany merací lúč, v pozadí stopa po staršom poškodení so stálym dohľadom" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Ochrana sa vrství podľa zmeraného rizika — a epizóda akútneho poškodenia sa nezavrie, ale sleduje ďalej.</figcaption></figure>
+<figure><a href="img/liecba-ckd-2026-vrstvena-nefroprotekcia-post-aki.webp" rel="noopener noreferrer" target="_blank"><img src="img/liecba-ckd-2026-vrstvena-nefroprotekcia-post-aki.webp" alt="Oblička obalená niekoľkými sústrednými vrstvami svetla, z jednej strany merací lúč, v pozadí stopa po staršom poškodení so stálym dohľadom" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Ochrana sa vrství podľa zmeraného rizika – a epizóda akútneho poškodenia sa nezavrie, ale sleduje ďalej.</figcaption></figure>
 
 <p class="article-dek"><em>Moderná nefroprotekcia nie je univerzálna kombinácia štyroch liekov. Je to postupné vrstvenie terapií s preukázaným prínosom podľa príčiny CKD, kategórie eGFR a albuminúrie, pridružených ochorení, tolerancie a priorít pacienta.</em></p>
 
@@ -58,7 +58,7 @@ $articles[] = [
 
 <p>Inhibítor angiotenzín konvertujúceho enzýmu (ACEi) alebo blokátor receptora angiotenzínu II (ARB) je základnou liečbou vhodných pacientov s albuminurickou CKD. KDIGO odporúča titráciu na najvyššiu schválenú tolerovanú dávku. Kombinácia ACEi s ARB ani ich kombinovanie s priamym inhibítorom renínu sa neodporúča, pretože zvyšuje riziko hypotenzie, hyperkaliémie a akútneho poškodenia obličiek bez zodpovedajúceho klinického prínosu.</p>
 
-<p>Po nasadení alebo zvýšení dávky treba spravidla do 2 až 4 týždňov skontrolovať krvný tlak, kreatinín a draslík. Prechodný vzostup kreatinínu nemusí znamenať poškodenie obličiek; podľa KDIGO sa má pátrať po reverzibilnej príčine najmä vtedy, ak kreatinín do 4 týždňov stúpne o viac ako 30 %. Hyperkaliémiu je často možné manažovať bez automatického vysadenia liečby.</p>
+<p>Po nasadení alebo zvýšení dávky treba spravidla do 2 až 4 týždňov skontrolovať krvný tlak, kreatinín a draslík. Prechodný vzostup kreatinínu nemusí znamenať poškodenie obličiek; podľa KDIGO sa má pátrať po reverzibilnej príčine najmä vtedy, ak kreatinín do 4 týždňov stúpne o viac ako 30 %. Hyperkaliémiu je často možné zvládnuť bez automatického vysadenia liečby.</p>
 
 <h3>2. Inhibítory SGLT2 majú široké, nie však neobmedzené použitie</h3>
 
@@ -118,7 +118,7 @@ $articles[] = [
   <li><strong>Nasaďte ACEi alebo ARB pri zodpovedajúcej indikácii.</strong> Titrujte podľa tolerancie a kontrolujte kreatinín a draslík.</li>
   <li><strong>Pridajte inhibítor SGLT2, ak pacient spĺňa odporúčané kritériá.</strong> Vopred vysvetlite očakávaný pokles eGFR a pravidlá dočasného prerušenia.</li>
   <li><strong>Pri diabete 2. typu a pretrvávajúcej albuminúrii zvážte finerenón.</strong> Overte eGFR, kaliémiu, liekové interakcie a zabezpečte ďalšie kontroly draslíka.</li>
-  <li><strong>Agonista GLP-1 vyberte podľa celého fenotypu.</strong> Zohľadnite glykemickú kontrolu, obezitu, kardiovaskulárne riziko, toleranciu a schválenú indikáciu.</li>
+  <li><strong>Agonistu GLP-1 vyberte podľa celého fenotypu.</strong> Zohľadnite glykemickú kontrolu, obezitu, kardiovaskulárne riziko, toleranciu a schválenú indikáciu.</li>
   <li><strong>Po každej zmene skontrolujte bezpečnosť a adherenciu.</strong> Nehodnoťte liečbu iba podľa jednej hodnoty eGFR; sledujte tlak, objemový stav, draslík, UACR a dlhodobý trend.</li>
   <li><strong>Po AKI vytvorte konkrétny plán.</strong> Určte termín kontroly, potrebné laboratórne vyšetrenia, správu liekov a zodpovedného lekára.</li>
 </ol>

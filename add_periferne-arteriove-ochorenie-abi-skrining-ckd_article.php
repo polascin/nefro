@@ -39,11 +39,11 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Periférne arteriové ochorenie malo v roku 2023 globálne 316,54 milióna ľudí nad 25 rokov. Pri chronickej chorobe obličiek je však jeho najpoužívanejší skríningový test zradný v oboch smeroch: v kohorte CRIC mali zvýšené riziko aj pacienti s ABI 0,9 až 1,0 — teda s hodnotou, ktorú konvenčné kritériá označujú za normálnu — a rovnako tí s ABI nad 1,4. Prehľad toho, ako skrínovať a čím ABI doplniť.',
+    'excerpt'      => 'Periférne arteriové ochorenie malo v roku 2023 globálne 316,54 milióna ľudí nad 25 rokov. Pri chronickej chorobe obličiek je však jeho najpoužívanejší skríningový test zradný v oboch smeroch: v kohorte CRIC mali zvýšené riziko aj pacienti s ABI 0,9 až 1,0 – teda s hodnotou, ktorú konvenčné kritériá označujú za normálnu – a rovnako tí s ABI nad 1,4. Prehľad toho, ako skrínovať a čím ABI doplniť.',
     'content'      => <<<'HTML'
-<figure><a href="img/periferne-arteriove-ochorenie-abi-ckd.webp" rel="noopener noreferrer" target="_blank"><img src="img/periferne-arteriove-ochorenie-abi-ckd.webp" alt="Predkolenie a noha zobrazené ako priesvitné tmavé sklo; vnútri svietia tepny, ktoré smerom k členku a chodidlu postupne blednú a hasnú, pričom ich obaľujú tuhé bledé kalcifikované prstence držiace cievu otvorenú aj tam, kde už neprechádza svetlo" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna, nie zobrazovací nález konkrétneho pacienta. Obraz zachytáva podstatu problému pri CKD: mediálna kalcifikácia drží cievu tuho otvorenú aj tam, kde perfúzia dávno chýba — a práve preto môže manžeta nameraný tlak nadhodnotiť a ABI vyjsť falošne upokojivo.</figcaption></figure>
+<figure><a href="img/periferne-arteriove-ochorenie-abi-ckd.webp" rel="noopener noreferrer" target="_blank"><img src="img/periferne-arteriove-ochorenie-abi-ckd.webp" alt="Predkolenie a noha zobrazené ako priesvitné tmavé sklo; vnútri svietia tepny, ktoré smerom k členku a chodidlu postupne blednú a hasnú, pričom ich obaľujú tuhé bledé kalcifikované prstence držiace cievu otvorenú aj tam, kde už neprechádza svetlo" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna, nie zobrazovací nález konkrétneho pacienta. Obraz zachytáva podstatu problému pri CKD: mediálna kalcifikácia drží cievu tuho otvorenú aj tam, kde perfúzia dávno chýba – a práve preto môže manžeta nameraný tlak nadhodnotiť a ABI vyjsť falošne upokojivo.</figcaption></figure>
 
-<p>Periférne arteriové ochorenie (PAD, v slovenčine aj ischemická choroba dolných končatín) má jednu nepríjemnú vlastnosť: dlho nebolí tak, aby pacienta priviedlo k lekárovi, a keď konečne zabolí, býva už pokročilé. V nefrologickej ambulancii k tomu pristupuje druhá komplikácia — <strong>najpoužívanejší skríningový test je práve u našich pacientov najmenej spoľahlivý</strong>.</p>
+<p>Periférne arteriové ochorenie (PAD, v slovenčine aj ischemická choroba dolných končatín) má jednu nepríjemnú vlastnosť: dlho nebolí tak, aby pacienta priviedlo k lekárovi, a keď konečne zabolí, býva už pokročilé. V nefrologickej ambulancii k tomu pristupuje druhá komplikácia – <strong>najpoužívanejší skríningový test je práve u našich pacientov najmenej spoľahlivý</strong>.</p>
 
 <p>Tento článok nie je prehľadom cievnej chirurgie. Sústreďuje sa na tri otázky, ktoré má nefrológ reálne v rukách: koho skrínovať, ako čítať výsledok u pacienta s CKD, a kedy ABI nestačí.</p>
 
@@ -54,23 +54,23 @@ $articles[] = [
 <p>Dva údaje z tej istej práce stoja za zapamätanie:</p>
 
 <ul>
-  <li><strong>Prevalencia rastie s vekom plynulo</strong> — od 4,31 % vo veku 25 až 29 rokov po 22,09 % vo veku 90 až 99 rokov, s podobným priebehom u oboch pohlaví. Predstava, že ide o chorobu výhradne starých ľudí, teda neplatí; už v štvrtej dekáde je prevalencia nezanedbateľná.</li>
-  <li><strong>Krajiny s nízkym a stredným príjmom nesú vyše troch štvrtín všetkých prípadov</strong> (239,35 milióna), hoci ich prevalencia je nižšia — rozhoduje veľkosť populácie.</li>
+  <li><strong>Prevalencia rastie s vekom plynulo</strong> – od 4,31 % vo veku 25 až 29 rokov po 22,09 % vo veku 90 až 99 rokov, s podobným priebehom u oboch pohlaví. Predstava, že ide o chorobu výhradne starých ľudí, teda neplatí; už v štvrtej dekáde je prevalencia nezanedbateľná.</li>
+  <li><strong>Krajiny s nízkym a stredným príjmom nesú vyše troch štvrtín všetkých prípadov</strong> (239,35 milióna), hoci ich prevalencia je nižšia – rozhoduje veľkosť populácie.</li>
 </ul>
 
 <h2>Prečo včasné zachytenie dáva zmysel</h2>
 
-<p>PAD nie je len problém končatiny. Je to <strong>ukazovateľ celkovej aterotrombotickej záťaže</strong> — pacient s PAD má zvýšené riziko infarktu myokardu, cievnej mozgovej príhody a kardiovaskulárneho úmrtia. Včasné zachytenie preto nie je len o záchrane končatiny, ale predovšetkým o tom, že sa začne cielená liečba aterosklerózy:</p>
+<p>PAD nie je len problém končatiny. Je to <strong>ukazovateľ celkovej aterotrombotickej záťaže</strong> – pacient s PAD má zvýšené riziko infarktu myokardu, cievnej mozgovej príhody a kardiovaskulárneho úmrtia. Včasné zachytenie preto nie je len o záchrane končatiny, ale predovšetkým o tom, že sa začne cielená liečba aterosklerózy:</p>
 
 <ul>
   <li>antiagregačná a hypolipidemická liečba podľa platných odporúčaní,</li>
   <li>kontrola krvného tlaku a diabetu,</li>
-  <li><strong>ukončenie fajčenia</strong> — pri PAD má najväčší účinok zo všetkých režimových opatrení,</li>
+  <li><strong>ukončenie fajčenia</strong> – pri PAD má najväčší účinok zo všetkých režimových opatrení,</li>
   <li>supervidovaný tréning chôdze, ktorý má pri klaudikáciách dobrý dôkazový základ,</li>
   <li>a včasné odoslanie k cievnemu tímu pri progresii.</li>
 </ul>
 
-<p>U pacienta s CKD k tomu pristupuje funkčný rozmer: aj mierne obmedzená perfúzia zhoršuje toleranciu chôdze, prispieva ku krehkosti a zvyšuje riziko pádov — a u dialyzovaného pacienta aj riziko komplikácií hojenia.</p>
+<p>U pacienta s CKD k tomu pristupuje funkčný rozmer: aj mierne obmedzená perfúzia zhoršuje toleranciu chôdze, prispieva ku krehkosti a zvyšuje riziko pádov – a u dialyzovaného pacienta aj riziko komplikácií hojenia.</p>
 
 <h2>ABI: jednoduchý test s komplikovanou interpretáciou</h2>
 
@@ -80,7 +80,7 @@ $articles[] = [
 
 <h3>Prečo je ABI pri CKD zradný</h3>
 
-<p>Pri CKD je výrazne častejšia <strong>mediálna arteriálna kalcifikácia</strong> (Mönckebergova skleróza). Tá nezužuje lúmen, ale robí stenu tepny tuhou a <strong>nestlačiteľnou</strong>. Manžeta ju potom nedokáže uzavrieť pri skutočnom systolickom tlaku, nameraný tlak na členku je falošne vysoký a ABI vyjde <strong>falošne normálne alebo falošne vysoké</strong> — aj u pacienta s kriticky zníženou perfúziou.</p>
+<p>Pri CKD je výrazne častejšia <strong>mediálna arteriálna kalcifikácia</strong> (Mönckebergova skleróza). Tá nezužuje lúmen, ale robí stenu tepny tuhou a <strong>nestlačiteľnou</strong>. Manžeta ju potom nedokáže uzavrieť pri skutočnom systolickom tlaku, nameraný tlak na členku je falošne vysoký a ABI vyjde <strong>falošne normálne alebo falošne vysoké</strong> – aj u pacienta s kriticky zníženou perfúziou.</p>
 
 <p>Dôsledok je klinicky zákerný: <strong>normálne ABI u pacienta s CKD nevylučuje PAD</strong>. Falošná istota je tu nebezpečnejšia než chýbajúci výsledok.</p>
 
@@ -88,7 +88,7 @@ $articles[] = [
 
 <p>Najdôležitejšie dáta pochádzajú zo štúdie <em>Chronic Renal Insufficiency Cohort</em> (CRIC), publikovanej v <em>Journal of the American Heart Association</em> (2016). Zahrnula <strong>3627 účastníkov s CKD bez klinicky zjavného PAD</strong> na začiatku, ABI meralo podľa štandardného protokolu a kardiovaskulárne príhody sa overovali zo zdravotnej dokumentácie.</p>
 
-<p>Výsledkom bola <strong>U-krivka</strong>: najnižšie riziko mali účastníci s ABI <strong>1,0 až menej než 1,4</strong>, a riziko stúpalo na oboch stranách.</p>
+<p>Výsledkom bola <strong>U-krivka</strong>: najnižšie riziko mali účastníci s ABI <strong>1,0 až menej než 1,4</strong> a riziko stúpalo na oboch stranách.</p>
 
 <div class="table-responsive" role="region" aria-label="Riziko podľa hodnoty ABI u pacientov s CKD v kohorte CRIC" tabindex="0">
 <table>
@@ -98,8 +98,8 @@ $articles[] = [
   <tbody>
     <tr><th scope="row">&lt; 0,9</th><td><strong>5,78</strong> (3,57 – 9,35)</td><td>1,67 (1,23 – 2,29)</td><td>1,51 (1,27 – 1,79)</td><td>1,55 (1,28 – 1,89)</td></tr>
     <tr><th scope="row">0,9 – &lt; 1,0 <em>(„normálne“ podľa konvencie)</em></th><td><strong>2,76</strong> (1,56 – 4,88)</td><td><strong>1,85</strong> (1,33 – 2,57)</td><td>1,39 (1,15 – 1,68)</td><td>1,36 (1,10 – 1,69)</td></tr>
-    <tr><th scope="row">1,0 – &lt; 1,4</th><td colspan="4">referenčná kategória — najnižšie riziko</td></tr>
-    <tr><th scope="row">≥ 1,4</th><td><strong>4,85</strong> (2,05 – 11,50)</td><td>2,08 (1,10 – 3,93)</td><td>1,23 (0,82 – 1,84) — nevýznamné</td><td>1,00 (0,62 – 1,62) — nevýznamné</td></tr>
+    <tr><th scope="row">1,0 – &lt; 1,4</th><td colspan="4">referenčná kategória – najnižšie riziko</td></tr>
+    <tr><th scope="row">≥ 1,4</th><td><strong>4,85</strong> (2,05 – 11,50)</td><td>2,08 (1,10 – 3,93)</td><td>1,23 (0,82 – 1,84) – nevýznamné</td><td>1,00 (0,62 – 1,62) – nevýznamné</td></tr>
   </tbody>
 </table>
 <p><em>Chen J a kol., J Am Heart Assoc 2016;5(6):e003339. Údaje sú pomery rizík (95 % IS) upravené na viaceré premenné, oproti referenčnej kategórii ABI 1,0 – &lt; 1,4.</em></p>
@@ -108,7 +108,7 @@ $articles[] = [
 <p>Z tejto tabuľky plynie nález, ktorý mení prax:</p>
 
 <blockquote>
-<p>Pacienti s ABI <strong>0,9 až 1,0</strong> — teda s hodnotou, ktorú konvenčné kritériá označujú za <em>normálnu</em> — mali v kohorte CRIC <strong>takmer trojnásobné riziko rozvoja PAD</strong> a dokonca <em>vyššie</em> upravené riziko infarktu myokardu než skupina s ABI pod 0,9.</p>
+<p>Pacienti s ABI <strong>0,9 až 1,0</strong> – teda s hodnotou, ktorú konvenčné kritériá označujú za <em>normálnu</em> – mali v kohorte CRIC <strong>takmer trojnásobné riziko rozvoja PAD</strong> a dokonca <em>vyššie</em> upravené riziko infarktu myokardu než skupina s ABI pod 0,9.</p>
 </blockquote>
 
 <p>Autori z toho vyvodzujú, že pri CKD by sa mali ďalej hodnotiť hraničné hodnoty <strong>ABI pod 1,0 alebo ≥ 1,4</strong> pre diagnózu PAD a <strong>ABI pod 1,0</strong> pre stratifikáciu kardiovaskulárneho rizika. Pre ambulantnú prax to znamená jediné: <strong>hodnotu 0,95 u pacienta s CKD nemožno odškrtnúť ako „v norme“.</strong></p>
@@ -131,17 +131,17 @@ $articles[] = [
 <p><em>Hazique M a kol., Crit Pathw Cardiol 2025;24(3):e0396. Za normálne sa v tejto analýze považovali hodnoty 0,9 – 1,3. Riziko bolo vyššie u hemodialyzovaných než u nedialyzovaných pacientov s CKD.</em></p>
 </div>
 
-<p>Pozoruhodné je, že <strong>vysoké ABI predpovedalo kardiovaskulárnu mortalitu silnejšie než nízke</strong>. Nestlačiteľná tepna teda nie je len technický artefakt, ktorý vyšetrenie znehodnocuje — je to <em>samostatný prognostický signál</em> o rozsahu cievnej kalcifikácie. V bežnej praxi sa pritom hodnota 1,45 často odloží ako „nemerateľné“ a nikam nevedie.</p>
+<p>Pozoruhodné je, že <strong>vysoké ABI predpovedalo kardiovaskulárnu mortalitu silnejšie než nízke</strong>. Nestlačiteľná tepna teda nie je len technický artefakt, ktorý vyšetrenie znehodnocuje – je to <em>samostatný prognostický signál</em> o rozsahu cievnej kalcifikácie. V bežnej praxi sa pritom hodnota 1,45 často odloží ako „nemerateľná“ a ďalej sa s ňou nepracuje.</p>
 
 <h2>Čím ABI doplniť</h2>
 
 <p>Keď je ABI pri CKD nejasné, hraničné alebo falošne vysoké, pomáhajú postupy, ktoré kalcifikácia ovplyvňuje menej:</p>
 
 <ul>
-  <li><strong>Prstovo-ramenný index (TBI)</strong> — digitálne tepny podliehajú mediálnej kalcifikácii podstatne menej, takže TBI je pri nestlačiteľných členkových tepnách spoľahlivejší. Bežne používaný prah abnormality je <strong>pod 0,70</strong>.</li>
-  <li><strong>Tvar dopplerovskej krivky a segmentálne tlaky</strong> — monofázický signál svedčí pre významnú proximálnu obštrukciu aj pri „normálnom“ ABI.</li>
+  <li><strong>Prstovo-ramenný index (TBI)</strong> – digitálne tepny podliehajú mediálnej kalcifikácii podstatne menej, takže TBI je pri nestlačiteľných členkových tepnách spoľahlivejší. Bežne používaný prah abnormality je <strong>pod 0,70</strong>.</li>
+  <li><strong>Tvar dopplerovskej krivky a segmentálne tlaky</strong> – monofázický signál svedčí pre významnú proximálnu obštrukciu aj pri „normálnom“ ABI.</li>
   <li><strong>Duplexná sonografia</strong> na lokalizáciu a kvantifikáciu lézie.</li>
-  <li><strong>Pozor na kontrastné vyšetrenia.</strong> CT angiografia aj klasická angiografia znamenajú u pacienta s CKD expozíciu jódovej kontrastnej látke. Indikáciu treba vážiť a koordinovať s cievnym tímom — nie ju automaticky objednať pri každom nejasnom ABI.</li>
+  <li><strong>Pozor na kontrastné vyšetrenia.</strong> CT angiografia aj klasická angiografia znamenajú u pacienta s CKD expozíciu jódovej kontrastnej látke. Indikáciu treba vážiť a koordinovať s cievnym tímom – nie ju automaticky objednať pri každom nejasnom ABI.</li>
 </ul>
 
 <h2>Koho skrínovať v nefrologickej ambulancii</h2>
@@ -149,7 +149,7 @@ $articles[] = [
 <p>Plošný skríning všetkých pacientov s CKD nemá dôkazový podklad. Cielený prístup má zmysel u pacientov s:</p>
 
 <ul>
-  <li><strong>diabetom</strong> — kombinácia diabetu a CKD je pre mediálnu kalcifikáciu aj pre PAD najrizikovejšia,</li>
+  <li><strong>diabetom</strong> – kombinácia diabetu a CKD je pre mediálnu kalcifikáciu aj pre PAD najrizikovejšia,</li>
   <li>anamnézou fajčenia,</li>
   <li>známym kardiovaskulárnym ochorením alebo cievnym postihnutím v inom povodí,</li>
   <li>klaudikáciami alebo atypickými záťažovými ťažkosťami dolných končatín,</li>
@@ -161,33 +161,33 @@ $articles[] = [
 <h2>Praktický postup</h2>
 
 <ol>
-  <li><strong>Klinické vyšetrenie.</strong> Anamnéza klaudikácií a zmeny tolerancie chôdze, pohmat periférnych pulzov, teplota a farba kože, trofické zmeny, ulcerácie. U diabetika s neuropatiou môžu klaudikácie <em>chýbať</em> napriek významnej ischémii — absencia príznakov nič nevylučuje.</li>
+  <li><strong>Klinické vyšetrenie.</strong> Anamnéza klaudikácií a zmeny tolerancie chôdze, pohmat periférnych pulzov, teplota a farba kože, trofické zmeny, ulcerácie. U diabetika s neuropatiou môžu klaudikácie <em>chýbať</em> napriek významnej ischémii – absencia príznakov nič nevylučuje.</li>
   <li><strong>ABI</strong> za štandardizovaných podmienok.</li>
   <li><strong>Interpretácia s poistkou pre CKD:</strong>
     <ul>
-      <li><strong>pod 0,9</strong> — PAD pravdepodobné, pokračovať v diagnostike;</li>
-      <li><strong>0,9 až 1,0</strong> — <em>nie je to norma</em>; podľa dát CRIC ide o skupinu so zvýšeným rizikom, ktorá si zaslúži klinickú pozornosť a agresívnu kontrolu rizikových faktorov;</li>
-      <li><strong>1,0 až 1,4</strong> — najnižšie riziko, ale pri jasnej klinike treba doplniť ďalšie vyšetrenie;</li>
-      <li><strong>≥ 1,4</strong> — nestlačiteľné tepny; ABI je nehodnotiteľné pre diagnózu, ale <strong>je samo o sebe prognosticky nepriaznivým nálezom</strong>. Doplniť TBI a dopplerovskú krivku.</li>
+      <li><strong>pod 0,9</strong> – PAD pravdepodobné, pokračovať v diagnostike;</li>
+      <li><strong>0,9 až 1,0</strong> – <em>nie je to norma</em>; podľa dát CRIC ide o skupinu so zvýšeným rizikom, ktorá si zaslúži klinickú pozornosť a agresívnu kontrolu rizikových faktorov;</li>
+      <li><strong>1,0 až 1,4</strong> – najnižšie riziko, ale pri jasnej klinike treba doplniť ďalšie vyšetrenie;</li>
+      <li><strong>≥ 1,4</strong> – nestlačiteľné tepny; ABI je nehodnotiteľné pre diagnózu, ale <strong>je samo o sebe prognosticky nepriaznivým nálezom</strong>. Doplniť TBI a dopplerovskú krivku.</li>
     </ul>
   </li>
-  <li><strong>Liečba rizikových faktorov sa začína bez ohľadu na to</strong>, či sa PAD potvrdí zobrazovaním — abnormálne ABI je samostatnou indikáciou na intenzívnu kardiovaskulárnu prevenciu.</li>
-  <li><strong>Odoslanie k cievnemu tímu</strong> pri potvrdenom PAD so symptómami, pri nehojacej sa rane, pokojovej bolesti alebo známkach kriticky ohrozenej končatiny — tam ide o urgentnú konzultáciu, nie o plánované vyšetrenie.</li>
+  <li><strong>Liečba rizikových faktorov sa začína bez ohľadu na to</strong>, či sa PAD potvrdí zobrazovaním – abnormálne ABI je samostatnou indikáciou na intenzívnu kardiovaskulárnu prevenciu.</li>
+  <li><strong>Odoslanie k cievnemu tímu</strong> pri potvrdenom PAD so symptómami, pri nehojacej sa rane, pokojovej bolesti alebo známkach kriticky ohrozenej končatiny – tam ide o urgentnú konzultáciu, nie o plánované vyšetrenie.</li>
 </ol>
 
 <h2>Čo tieto dáta nehovoria</h2>
 
 <ul>
   <li><strong>Neexistuje randomizovaná štúdia, ktorá by preukázala, že skríning ABI u pacientov s CKD zlepšuje výsledky.</strong> Všetko, čo máme, je prognostická asociácia plus biologicky vierohodná úvaha, že skoršie rozpoznanie umožní skoršiu liečbu.</li>
-  <li><strong>Prahy pre CKD nie sú formálne prijaté.</strong> Autori kohorty CRIC odporúčajú prahy pod 1,0 a ≥ 1,4 <em>ďalej hodnotiť</em> — nie ich okamžite zaviesť. Článok ich preto uvádza ako dôvod na opatrnosť pri interpretácii, nie ako nové kritérium.</li>
+  <li><strong>Prahy pre CKD nie sú formálne prijaté.</strong> Autori kohorty CRIC odporúčajú prahy pod 1,0 a ≥ 1,4 <em>ďalej hodnotiť</em> – nie ich okamžite zaviesť. Článok ich preto uvádza ako dôvod na opatrnosť pri interpretácii, nie ako nové kritérium.</li>
   <li><strong>Metaanalýza z roku 2025 pracovala s inou hranicou vysokého ABI (≥ 1,3) než kohorta CRIC (≥ 1,4)</strong>, čo ilustruje, že ani v literatúre nie je zhoda.</li>
 </ul>
 
 <h2>Záver</h2>
 
-<p>Periférne arteriové ochorenie je pri chronickej chorobe obličiek časté, prognosticky závažné a ľahko prehliadnuteľné. Jeho najdostupnejší skríningový test je u tejto populácie zároveň najmenej spoľahlivý — a zlyháva <strong>v smere, ktorý upokojuje</strong>.</p>
+<p>Periférne arteriové ochorenie je pri chronickej chorobe obličiek časté, prognosticky závažné a ľahko prehliadnuteľné. Jeho najdostupnejší skríningový test je u tejto populácie zároveň najmenej spoľahlivý – a zlyháva <strong>v smere, ktorý upokojuje</strong>.</p>
 
-<p>Praktický záver je preto jednoduchý a dá sa zhrnúť do jednej vety: <strong>u pacienta s CKD čítajte ABI ako kontinuálnu premennú s rizikom na oboch koncoch, nie ako test s jedným prahom — a nikdy nezamieňajte normálny výsledok za vylúčenie choroby.</strong></p>
+<p>Praktický záver sa dá zhrnúť do jednej vety: <strong>u pacienta s CKD čítajte ABI ako kontinuálnu premennú s rizikom na oboch koncoch, nie ako test s jedným prahom – a nikdy nezamieňajte normálny výsledok za vylúčenie choroby.</strong></p>
 
 <hr>
 

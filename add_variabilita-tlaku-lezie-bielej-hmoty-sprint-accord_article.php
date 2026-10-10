@@ -30,7 +30,7 @@ $articles[] = [
     'content'      => <<<'HTML'
 <figure><a href="img/variabilita-tlaku-lezie-bielej-hmoty-sprint-accord.webp" rel="noopener noreferrer" target="_blank"><img src="img/variabilita-tlaku-lezie-bielej-hmoty-sprint-accord.webp" alt="Prudko kolísajúca svetelná čiara a pod jej najväčšími výkyvmi svetlé ložiská v tmavom tkanive" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna, nie záznam konkrétneho pacienta. Nezáleží len na priemernej hodnote tlaku, ale aj na tom, ako veľmi kolíše medzi návštevami.</figcaption></figure>
 
-<p class="article-dek"><em>V združenej analýze individuálnych údajov z dvoch randomizovaných štúdií bola vyššia variabilita systolického krvného tlaku medzi návštevami nezávisle spojená s rýchlejšou progresiou abnormalít bielej hmoty. Intenzívne znižovanie systolického tlaku progresiu spomalilo, pričom variabilita tlaku tento účinok sprostredkovala iba čiastočne — podľa autorov približne z deviatich percent.</em></p>
+<p class="article-dek"><em>V združenej analýze individuálnych údajov z dvoch randomizovaných štúdií bola vyššia variabilita systolického krvného tlaku medzi návštevami nezávisle spojená s rýchlejšou progresiou abnormalít bielej hmoty. Intenzívne znižovanie systolického tlaku progresiu spomalilo, pričom variabilita tlaku tento účinok sprostredkovala iba čiastočne, podľa autorov približne z deviatich percent.</em></p>
 
 <h2>Prečo je téma zaujímavá</h2>
 
@@ -68,7 +68,7 @@ $articles[] = [
 
 <p><strong>Prvé: výpočet variability až od tretieho mesiaca.</strong> Merania z prvých troch mesiacov boli vynechané zámerne. V tom období sa liečba ešte titruje a tlak prirodzene kolíše, takže by sa do „variability“ započítalo doladenie režimu namiesto skutočnej nestability.</p>
 
-<p><strong>Druhé: metrika VIM.</strong> Skratka VIM označuje <em>variation independent of mean</em>, teda variabilitu nezávislú od priemeru. Bežné miery rozptylu, ako smerodajná odchýlka alebo variačný koeficient, s priemernou hodnotou tlaku korelujú — kto má vyšší tlak, má spravidla aj väčší rozptyl. VIM je matematicky konštruovaná tak, aby táto závislosť odpadla, a preto umožňuje oddeliť účinok nestability od účinku samotnej výšky tlaku. Ostatné metriky (smerodajná odchýlka, variačný koeficient, ARV) slúžili na overenie robustnosti.</p>
+<p><strong>Druhé: metrika VIM.</strong> Skratka VIM označuje <em>variation independent of mean</em>, teda variabilitu nezávislú od priemeru. Bežné miery rozptylu, ako smerodajná odchýlka alebo variačný koeficient, s priemernou hodnotou tlaku korelujú – kto má vyšší tlak, má spravidla aj väčší rozptyl. VIM je matematicky konštruovaná tak, aby táto závislosť odpadla, a preto umožňuje oddeliť účinok nestability od účinku samotnej výšky tlaku. Ostatné metriky (smerodajná odchýlka, variačný koeficient, ARV) slúžili na overenie robustnosti.</p>
 
 <h2>Hlavné výsledky</h2>
 
@@ -91,16 +91,16 @@ $articles[] = [
 </table>
 </div>
 
-<p>Účastníci v najvyššom tercile variability mali v surovom ročnom vyjadrení o <strong>0,160 ml za rok</strong> rýchlejšiu progresiu než účastníci v najnižšom tercile. Vzhľadom na priemernú ročnú progresiu 0,43 ml ide o rozdiel zodpovedajúci zhruba tretine typického ročného prírastku — v relatívnom vyjadrení teda nejde o zanedbateľnú hodnotu.</p>
+<p>Účastníci v najvyššom tercile variability mali v surovom ročnom vyjadrení o <strong>0,160 ml za rok</strong> rýchlejšiu progresiu než účastníci v najnižšom tercile. Vzhľadom na priemernú ročnú progresiu 0,43 ml ide o rozdiel zodpovedajúci zhruba tretine typického ročného prírastku – v relatívnom vyjadrení teda nejde o zanedbateľnú hodnotu.</p>
 
 <div class="pdf-avoid-break">
 <h3>Prečo sú hodnoty β také malé a čo znamená deväť percent</h3>
 
-<p>Regresné koeficienty vyzerajú nepatrne, pretože primárny ukazovateľ bol transformovaný inverznou hyperbolickou funkciou sínus (asinh). Táto transformácia stláča veľké hodnoty a umožňuje pracovať aj s nulovými a veľmi malými objemami. Koeficienty preto nemožno čítať priamo ako mililitre — na to slúži uvedené surové ročné vyjadrenie po terciloch.</p>
+<p>Regresné koeficienty vyzerajú nepatrne, pretože primárny ukazovateľ bol transformovaný inverznou hyperbolickou funkciou sínus (asinh). Táto transformácia stláča veľké hodnoty a umožňuje pracovať aj s nulovými a veľmi malými objemami. Koeficienty preto nemožno čítať priamo ako mililitre – na to slúži uvedené surové ročné vyjadrenie po terciloch.</p>
 
-<p>Podstatnejší je iný údaj. <strong>Mediačná analýza pripísala variabilite tlaku 9,15 % celkového ochranného účinku intenzívnej kontroly tlaku.</strong> Inak povedané: viac než deväť desatín prínosu intenzívnej liečby sa variabilitou nevysvetlilo. Stabilita tlaku teda podľa týchto údajov nie je hlavným mechanizmom, ktorým intenzívna liečba chráni bielu hmotu — je jedným z viacerých, a nie tým najvýznamnejším.</p>
+<p>Podstatnejší je iný údaj. <strong>Mediačná analýza pripísala variabilite tlaku 9,15 % celkového ochranného účinku intenzívnej kontroly tlaku.</strong> Inak povedané: viac než deväť desatín prínosu intenzívnej liečby sa variabilitou nevysvetlilo. Stabilita tlaku teda podľa týchto údajov nie je hlavným mechanizmom, ktorým intenzívna liečba chráni bielu hmotu – je jedným z viacerých, a nie tým najvýznamnejším.</p>
 
-<p>Za povšimnutie stojí aj krehkosť hlavnej asociácie: dolná hranica intervalu spoľahlivosti pre β je 0,001, teda tesne nad nulou. To isté platí pre mediačný účinok (dolná hranica 0,001). Ide o štatisticky významné, ale nie robustné nálezy — pri mierne odlišnej analýze by sa hranica významnosti mohla ľahko prekročiť opačným smerom.</p>
+<p>Za povšimnutie stojí aj krehkosť hlavnej asociácie: dolná hranica intervalu spoľahlivosti pre β je 0,001, teda tesne nad nulou. To isté platí pre mediačný účinok (dolná hranica 0,001). Ide o štatisticky významné, ale nie robustné nálezy – pri mierne odlišnej analýze by sa hranica významnosti mohla ľahko prekročiť opačným smerom.</p>
 </div>
 
 <h2>Metodologické zhodnotenie</h2>
@@ -121,7 +121,7 @@ $articles[] = [
 <h3>Obmedzenia</h3>
 
 <ol>
-  <li><strong>Post hoc dizajn.</strong> Analýza nebola cieľom pôvodných štúdií. Randomizácia sa vzťahuje na intenzitu kontroly tlaku, nie na variabilitu — tá zostáva observačnou expozíciou.</li>
+  <li><strong>Post hoc dizajn.</strong> Analýza nebola cieľom pôvodných štúdií. Randomizácia sa vzťahuje na intenzitu kontroly tlaku, nie na variabilitu – tá zostáva observačnou expozíciou.</li>
   <li><strong>Náhradný ukazovateľ.</strong> Hodnotila sa subklinická progresia lézií bielej hmoty, nie klinické príhody, ako sú cievna mozgová príhoda alebo demencia.</li>
   <li><strong>Malý podiel mediácie.</strong> Deväť percent celkového účinku znamená, že hlavný mechanizmus prínosu intenzívnej liečby zostáva nevysvetlený.</li>
   <li><strong>Krehká štatistická významnosť.</strong> Dolné hranice intervalov spoľahlivosti tesne nad nulou znižujú istotu záveru.</li>
@@ -185,9 +185,9 @@ $articles[] = [
 
 <h2>Praktický záver</h2>
 
-<p>V populácii s vysokým kardiovaskulárnym rizikom bola vyššia variabilita systolického tlaku medzi návštevami nezávisle spojená s rýchlejšou progresiou abnormalít bielej hmoty. Intenzívne znižovanie systolického tlaku progresiu spomalilo a mediačná analýza naznačila, že variabilita tvorí súčasť mechanizmu — avšak len jeho menšiu časť.</p>
+<p>V populácii s vysokým kardiovaskulárnym rizikom bola vyššia variabilita systolického tlaku medzi návštevami nezávisle spojená s rýchlejšou progresiou abnormalít bielej hmoty. Intenzívne znižovanie systolického tlaku progresiu spomalilo a mediačná analýza naznačila, že variabilita tvorí súčasť mechanizmu, avšak len jeho menšiu časť.</p>
 
-<p>Pre nefrologickú prax to podporuje dôraz na <strong>stabilitu krvného tlaku popri dosahovaní cieľovej priemernej hodnoty</strong>, s individualizáciou podľa komorbidít, rizika hypotenzie a ortostatiky a podľa možností monitorovania. Nepodporuje to však zavedenie variability tlaku ako samostatného terapeutického cieľa — na to by bola potrebná intervenčná štúdia, ktorá by variabilitu priamo ovplyvňovala a merala klinické výsledky.</p>
+<p>Pre nefrologickú prax to podporuje dôraz na <strong>stabilitu krvného tlaku popri dosahovaní cieľovej priemernej hodnoty</strong>, s individualizáciou podľa komorbidít, rizika hypotenzie a ortostatiky a podľa možností monitorovania. Nepodporuje to však zavedenie variability tlaku ako samostatného terapeutického cieľa – na to by bola potrebná intervenčná štúdia, ktorá by variabilitu priamo ovplyvňovala a merala klinické výsledky.</p>
 
 <h2>Súvisiace články</h2>
 
@@ -212,7 +212,7 @@ $articles[] = [
   <li><strong>Medscape Medical News.</strong> <em>Blood Pressure Variability Linked to Faster White Matter Lesion Progression.</em> Medscape, 2026. Sekundárny spravodajský zdroj použitý ako východisko, nie ako hlavný dôkaz. <a href="https://www.medscape.com/viewarticle/blood-pressure-variability-linked-faster-white-matter-lesion-2026a1000rji" target="_blank" rel="noopener noreferrer">Spravodajské spracovanie</a>.</li>
 </ol>
 
-<p><em><strong>Poznámka k spracovaniu:</strong> Dizajn, zaraďovacie podmienky, počet účastníkov, vek a zastúpenie žien, medián počtu meraní tlaku, vývoj objemu abnormálnej bielej hmoty, hodnoty β s intervalmi spoľahlivosti pre variabilitu aj pre intenzívnu kontrolu tlaku, rozdiel medzi tercilmi (0,160 ml za rok) a mediačný účinok vrátane podielu 9,15 % boli overené priamo proti abstraktu publikácie v časopise Neurology (PubMed, PMID 42430676). Úplný autorský zoznam bol overený cez Crossref a PubMed — ide o sedem autorov, prvým je Wenbo Zhao a posledným Hugh S. Markus; mená neboli dopĺňané odhadom. Podrobnosti o zozname kovariát, o dĺžke intervalu medzi vyšetreniami magnetickou rezonanciou v jednotlivých štúdiách a o počte simulácií pri bootstrappingu publikovaný abstrakt neuvádza, preto sa v texte neuvádzajú. Prepočet rozdielu medzi tercilmi voči priemernej ročnej progresii je vlastný orientačný výpočet.</em></p>
+<p><em><strong>Poznámka k spracovaniu:</strong> Dizajn, zaraďovacie podmienky, počet účastníkov, vek a zastúpenie žien, medián počtu meraní tlaku, vývoj objemu abnormálnej bielej hmoty, hodnoty β s intervalmi spoľahlivosti pre variabilitu aj pre intenzívnu kontrolu tlaku, rozdiel medzi tercilmi (0,160 ml za rok) a mediačný účinok vrátane podielu 9,15 % boli overené priamo proti abstraktu publikácie v časopise Neurology (PubMed, PMID 42430676). Úplný autorský zoznam bol overený cez Crossref a PubMed – ide o sedem autorov, prvým je Wenbo Zhao a posledným Hugh S. Markus; mená neboli dopĺňané odhadom. Podrobnosti o zozname kovariát, o dĺžke intervalu medzi vyšetreniami magnetickou rezonanciou v jednotlivých štúdiách a o počte simulácií pri bootstrappingu publikovaný abstrakt neuvádza, preto sa v texte neuvádzajú. Prepočet rozdielu medzi tercilmi voči priemernej ročnej progresii je vlastný orientačný výpočet.</em></p>
 
 <p><em><strong>Poznámka k interpretácii:</strong> Ide o post hoc analýzu s náhradným zobrazovacím ukazovateľom. Variabilita krvného tlaku v nej nebola randomizovanou expozíciou, preto z výsledku nemožno odvodiť, že intervencia zameraná priamo na jej zníženie zlepší klinické výsledky. Cieľové hodnoty krvného tlaku pri chronickej chorobe obličiek treba stanoviť podľa platných odporúčaní KDIGO a individuálneho rizika pacienta.</em></p>
 </div>

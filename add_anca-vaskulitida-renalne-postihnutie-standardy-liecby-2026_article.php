@@ -36,16 +36,16 @@ $articles[] = [
     'content'      => <<<'HTML'
 <figure><a href="img/anca-vaskulitida-renalne-postihnutie.webp" rel="noopener noreferrer" target="_blank"><img src="img/anca-vaskulitida-renalne-postihnutie.webp" alt="Glomerulus zovretý polmesiacovitou zápalovou léziou, okolo obrys presýpacích hodín ako symbol ubiehajúceho času" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna, nie histologický preparát konkrétneho pacienta. Pri ANCA-asociovanej vaskulitíde s renálnym postihnutím rozhoduje čas: kým sa polmesiace stanú fibróznymi, funkcia obličiek je nenávratne stratená.</figcaption></figure>
 
-<p><strong>ANCA-asociované vaskulitídy (AAV)</strong> sú systémové nekrotizujúce vaskulitídy malých ciev spojené s protilátkami proti cytoplazme neutrofilov. Patria k najčastejším príčinám <strong>rýchlo progredujúcej glomerulonefritídy (RPGN)</strong> a k tým málo nefrologickým diagnózam, kde niekoľko dní oneskorenia rozhoduje o tom, či pacient zostane bez dialýzy.</p>
+<p><strong>ANCA-asociované vaskulitídy (AAV)</strong> sú systémové nekrotizujúce vaskulitídy malých ciev spojené s protilátkami proti cytoplazme neutrofilov. Patria k najčastejším príčinám <strong>rýchlo progredujúcej glomerulonefritídy (RPGN)</strong> a k tým málo nefrologickým diagnózam, pri ktorých niekoľko dní oneskorenia rozhoduje o tom, či pacient zostane bez dialýzy.</p>
 
-<p>Posledné roky priniesli do tejto oblasti dve protichodné správy. Tou dobrou je, že <strong>expozíciu glukokortikoidom možno bezpečne výrazne znížiť</strong>. Tou zlou, že liek, ktorý mal byť vlajkovou loďou tejto stratégie — <strong>avacopan</strong> — v Európskej únii v roku 2026 prišiel o registráciu po tom, ako bola jeho kľúčová štúdia stiahnutá. Tento článok zhŕňa, čo z odporúčaní <strong>KDIGO 2024</strong> a <strong>EULAR 2022</strong> po tejto zmene v praxi zostáva a ako dnes vyzerá obhájiteľný postup u pacienta s AAV a postihnutím obličiek.</p>
+<p>Posledné roky priniesli dve protichodné správy. Na jednej strane sa ukázalo, že <strong>expozíciu glukokortikoidom možno bezpečne výrazne znížiť</strong>. Na druhej strane liek, ktorý mal byť pilierom tejto stratégie, <strong>avacopan</strong>, v roku 2026 prišiel v Európskej únii o registráciu po tom, ako bola jeho kľúčová štúdia stiahnutá. Ďalej preto zhŕňame, čo z odporúčaní <strong>KDIGO 2024</strong> a <strong>EULAR 2022</strong> po tejto zmene v praxi zostáva a ako dnes vyzerá obhájiteľný postup u pacienta s AAV a postihnutím obličiek.</p>
 
-<h2>Čo sa zmenilo: avacopan vypadol z európskej rovnice</h2>
+<h2>Čo sa zmenilo: avacopan už v Európe nie je možnosťou</h2>
 
 <p>Odporúčania EULAR aj KDIGO boli formulované v čase, keď bol avacopan (Tavneos) registrovaný ako prostriedok na zníženie expozície glukokortikoidom pri <strong>granulomatóze s polyangiitídou (GPA)</strong> a <strong>mikroskopickej polyangiitíde (MPA)</strong>. Táto premisa už neplatí:</p>
 
 <ul>
-  <li><strong>29. júna 2026</strong> časopis <em>New England Journal of Medicine</em> <strong>stiahol (retrahoval)</strong> registračnú štúdiu ADVOCATE. Podľa redakčného oznámenia obaja akademickí autori o stiahnutie požiadali sami, keď sa v rámci prebiehajúceho vyšetrovania FDA ukázalo, že u <strong>deviatich pacientov</strong> bolo hodnotenie primárneho cieľového ukazovateľa <strong>opätovne adjudikované až po uzamknutí databázy a po odslepení štúdie</strong> — bez ich vedomia a bez uvedenia v článku.</li>
+  <li><strong>29. júna 2026</strong> časopis <em>New England Journal of Medicine</em> <strong>stiahol (retrahoval)</strong> registračnú štúdiu ADVOCATE. Podľa redakčného oznámenia obaja akademickí autori o stiahnutie požiadali sami, keď sa v rámci prebiehajúceho vyšetrovania FDA ukázalo, že u <strong>deviatich pacientov</strong> bolo hodnotenie primárneho cieľového ukazovateľa <strong>opätovne adjudikované až po uzamknutí databázy a po odslepení štúdie</strong> – bez ich vedomia a bez uvedenia v článku.</li>
   <li><strong>26. júna 2026</strong> výbor CHMP odporučil zrušiť európsku registráciu; <strong>rozhodnutím Európskej komisie zo 4. augusta 2026</strong> bola registrácia Tavneosu v EÚ a EHP <strong>zrušená</strong>.</li>
   <li>V USA navrhlo centrum CDER zrušenie schválenia už v apríli 2026; výrobca požiadal o vypočutie, takže americká situácia zostáva otvorená. Pre slovenskú prax je však rozhodujúce európske rozhodnutie: <strong>avacopan tu už nie je liečebnou možnosťou</strong>.</li>
 </ul>
@@ -54,9 +54,9 @@ $articles[] = [
 
 <h2>Diagnostika: biopsia áno, ale nesmie zdržať liečbu</h2>
 
-<p>EULAR aj KDIGO stavajú diagnostiku na kombinácii <strong>sérológie ANCA</strong> (anti-MPO, anti-PR3) a <strong>histológie</strong>. Biopsia obličky má hodnotu nielen diagnostickú, ale aj prognostickú — podiel normálnych, sklerotických a polmesiacových glomerulov určuje, koľko funkcie sa dá reálne zachrániť.</p>
+<p>EULAR aj KDIGO stavajú diagnostiku na kombinácii <strong>sérológie ANCA</strong> (anti-MPO, anti-PR3) a <strong>histológie</strong>. Biopsia obličky má hodnotu nielen diagnostickú, ale aj prognostickú – podiel normálnych, sklerotických a polmesiacových glomerulov určuje, koľko funkcie sa dá reálne zachrániť.</p>
 
-<p>Kľúčová je však načasovacia poznámka KDIGO: ak klinický obraz zodpovedá vaskulitíde malých ciev a sérológia MPO- alebo PR3-ANCA je pozitívna, <strong>čakanie na vykonanie alebo na výsledok biopsie nemá oddialiť začatie imunosupresívnej liečby</strong>, najmä u rýchlo sa zhoršujúceho pacienta. KDIGO zároveň uvádza, že pacienti s AAV majú byť liečení v centrách so skúsenosťou s týmto ochorením — teda tam, kde je naraz dostupná rýchla sérológia a histológia, rituximab, plazmaferéza, jednotka intenzívnej starostlivosti aj akútna hemodialýza.</p>
+<p>Podstatná je však poznámka KDIGO k načasovaniu: ak klinický obraz zodpovedá vaskulitíde malých ciev a sérológia MPO- alebo PR3-ANCA je pozitívna, <strong>čakanie na vykonanie alebo na výsledok biopsie nemá oddialiť začatie imunosupresívnej liečby</strong>, najmä u rýchlo sa zhoršujúceho pacienta. KDIGO zároveň uvádza, že pacienti s AAV majú byť liečení v centrách so skúsenosťou s týmto ochorením – teda tam, kde je naraz dostupná rýchla sérológia a histológia, rituximab, plazmaferéza, jednotka intenzívnej starostlivosti aj akútna hemodialýza.</p>
 
 <h2>Indukcia remisie: glukokortikoidy plus rituximab alebo cyklofosfamid</h2>
 
@@ -80,15 +80,15 @@ $articles[] = [
 <p><em>Podľa KDIGO 2024, obrázok 7. Faktorom proti cyklofosfamidu je už podaná stredne vysoká kumulatívna dávka v minulosti.</em></p>
 </div>
 
-<p>Pre nefrológa je podstatná praktická poznámka KDIGO 9.3.1.2: pri <strong>výrazne zníženej alebo rýchlo klesajúcej glomerulovej filtrácii (S-kreatinín &gt; 354 µmol/l)</strong> je dôkazový základ pre samotný rituximab s glukokortikoidmi <strong>obmedzený</strong> — práve títo pacienti boli v registračných štúdiách zastúpení najmenej. Do úvahy prichádza cyklofosfamid s glukokortikoidmi alebo kombinácia rituximabu s cyklofosfamidom.</p>
+<p>Pre nefrológa je podstatná praktická poznámka KDIGO 9.3.1.2: pri <strong>výrazne zníženej alebo rýchlo klesajúcej glomerulovej filtrácii (S-kreatinín &gt; 354 µmol/l)</strong> je dôkazový základ pre samotný rituximab s glukokortikoidmi <strong>obmedzený</strong> – práve títo pacienti boli v registračných štúdiách zastúpení najmenej. Do úvahy prichádza cyklofosfamid s glukokortikoidmi alebo kombinácia rituximabu s cyklofosfamidom.</p>
 
 <p>Dávkovanie cyklofosfamidu podľa KDIGO: perorálne <strong>2 mg/kg/deň</strong> počas 3 mesiacov (pri pretrvávajúcej aktivite maximálne 6 mesiacov), so znížením <strong>na 1,5 mg/kg/deň nad 60 rokov</strong> a <strong>na 1,0 mg/kg/deň nad 70 rokov</strong>, plus ďalšie zníženie o 0,5 mg/kg/deň pri GFR &lt; 30 ml/min/1,73 m². Intravenózna schéma je <strong>15 mg/kg v týždňoch 0, 2, 4, 7, 10</strong> a ďalej. Perorálna cesta sa uprednostní tam, kde je prístup do infúzneho centra ťažký a adherencia nie je problémom; intravenózna tam, kde je nižší počet leukocytov, kde môže byť adherencia problémom alebo kde je dôležitá nižšia kumulatívna dávka.</p>
 
-<h2>Glukokortikoidy: rýchly zostup je dnes štandard, nie odvaha</h2>
+<h2>Glukokortikoidy: rýchly zostup je dnes štandardom</h2>
 
 <p>Najdôležitejšia praktická zmena posledných rokov sa netýka biologík, ale <strong>dávkovania glukokortikoidov</strong>. Štúdia <strong>PEXIVAS</strong> (704 pacientov s ťažkou AAV, teda s eGFR &lt; 50 ml/min/1,73 m² alebo s difúznym alveolárnym krvácaním) ukázala, že <strong>redukovaný režim perorálnych glukokortikoidov je non-inferiórny</strong> voči štandardnému: úmrtie z akejkoľvek príčiny alebo zlyhanie obličiek nastalo u 27,9 % vs. 25,5 % pacientov (absolútny rozdiel 2,3 percentuálneho bodu; 90 % IS −3,4 až 8,0, pri hranici non-inferiority 11 bodov). Zároveň bolo v redukovanej vetve <strong>menej závažných infekcií v prvom roku</strong> (pomer incidencií 0,69; 95 % IS 0,52–0,93).</p>
 
-<p>Japonská štúdia <strong>LoVAS</strong> to potvrdila aj pri rituximabovej indukcii: prednizolón 0,5 mg/kg/deň bol non-inferiórny voči 1 mg/kg/deň (remisia v 6. mesiaci 71,0 % vs. 69,2 %), pričom <strong>závažné nežiaduce udalosti nastali u 18,8 % vs. 36,9 %</strong> a závažné infekcie u 7,2 % vs. 20,0 % pacientov. Dôležitá výhrada pre nefrológiu: <strong>LoVAS zámerne vylúčila pacientov s ťažkou glomerulonefritídou a s alveolárnym krvácaním</strong>, takže na najzávažnejších pacientov ju priamo extrapolovať nemožno — pre nich je relevantný PEXIVAS.</p>
+<p>Japonská štúdia <strong>LoVAS</strong> to potvrdila aj pri rituximabovej indukcii: prednizolón 0,5 mg/kg/deň bol non-inferiórny voči 1 mg/kg/deň (remisia v 6. mesiaci 71,0 % vs. 69,2 %), pričom <strong>závažné nežiaduce udalosti nastali u 18,8 % vs. 36,9 %</strong> a závažné infekcie u 7,2 % vs. 20,0 % pacientov. Dôležitá výhrada pre nefrológiu: <strong>LoVAS zámerne vylúčila pacientov s ťažkou glomerulonefritídou a s alveolárnym krvácaním</strong>, takže na najzávažnejších pacientov ju priamo extrapolovať nemožno – pre nich je relevantný PEXIVAS.</p>
 
 <p>KDIGO 2024 preto ako referenčný uvádza <strong>redukovaný režim z PEXIVAS-u</strong> (nadväzuje na úvodné intravenózne pulzy metylprednizolónu podľa zvyklostí pracoviska). EULAR 2022 formuluje ten istý cieľ inak, ale zhodne: znížiť dávku na <strong>približne 5 mg prednizolónového ekvivalentu denne do 4 až 5 mesiacov</strong>.</p>
 
@@ -119,66 +119,66 @@ $articles[] = [
 
 <h2>Plazmaferéza: koniec paušálneho používania, nie koniec indikácií</h2>
 
-<p>Plazmaferéza (terapeutická výmena plazmy) je oblasť, kde sa najviac vypláca čítať pôvodné dáta a nie zvyk. <strong>PEXIVAS prínos nepreukázal:</strong> zložený cieľ úmrtia alebo zlyhania obličiek dosiahlo 28,4 % pacientov s plazmaferézou a 31,0 % pacientov bez nej (pomer rizík 0,86; 95 % IS 0,65–1,13; p = 0,27). To ukončilo éru, v ktorej sa plazmaferéza podávala takmer každému pacientovi s ťažkou renálnou vaskulitídou.</p>
+<p>Pri plazmaferéze (terapeutickej výmene plazmy) sa viac než inde oplatí riadiť pôvodnými údajmi, nie zvykom. <strong>PEXIVAS prínos nepreukázal:</strong> zložený cieľ úmrtia alebo zlyhania obličiek dosiahlo 28,4 % pacientov s plazmaferézou a 31,0 % pacientov bez nej (pomer rizík 0,86; 95 % IS 0,65–1,13; p = 0,27). To ukončilo éru, v ktorej sa plazmaferéza podávala takmer každému pacientovi s ťažkou renálnou vaskulitídou.</p>
 
 <p>Ukončilo ju však <em>iba ako rutinu</em>. Následné systematické prehodnotenie dôkazov v odporúčaní <em>BMJ Rapid Recommendations</em> (2022), vedenom metodikou GRADE, formulovalo <strong>vrstvený prístup podľa rizika zlyhania obličiek</strong>:</p>
 
 <ul>
-  <li><strong>nízke až nízko-stredné riziko</strong> vývoja zlyhania obličiek — slabé odporúčanie <strong>proti</strong> plazmaferéze;</li>
-  <li><strong>stredne vysoké až vysoké riziko</strong> — slabé odporúčanie <strong>v prospech</strong> plazmaferézy;</li>
-  <li><strong>pľúcne krvácanie bez renálneho postihnutia</strong> — panel navrhuje plazmaferézu <strong>nepoužívať</strong>;</li>
+  <li><strong>nízke až nízko-stredné riziko</strong> vývoja zlyhania obličiek – slabé odporúčanie <strong>proti</strong> plazmaferéze;</li>
+  <li><strong>stredne vysoké až vysoké riziko</strong> – slabé odporúčanie <strong>v prospech</strong> plazmaferézy;</li>
+  <li><strong>pľúcne krvácanie bez renálneho postihnutia</strong> – panel navrhuje plazmaferézu <strong>nepoužívať</strong>;</li>
   <li>a súčasne <strong>silné</strong> odporúčanie v prospech redukovaného, nie štandardného dávkovania glukokortikoidov.</li>
 </ul>
 
 <p>KDIGO 2024 to premieta do konkrétnych spúšťačov (praktický bod 9.3.1.9): <strong>zvážiť plazmaferézu pri S-kreatiníne &gt; 300 µmol/l, u pacientov vyžadujúcich dialýzu alebo s rýchlo stúpajúcim kreatinínom a pri difúznom alveolárnom krvácaní s hypoxémiou</strong>. Odvoláva sa pritom aj na staršiu štúdiu MEPEX, ktorá ukázala lepšie renálne výsledky pri veľmi ťažkom postihnutí (S-kreatinín &gt; 500 µmol/l).</p>
 
-<p>Pozor na jeden rozdiel, ktorý pri čítaní odporúčaní ľahko unikne: pri <strong>alveolárnom krvácaní</strong> panel <em>BMJ</em> plazmaferézu neodporúča, kým KDIGO ju pri <strong>hypoxémii</strong> zvážiť pripúšťa. Nejde o chybu ani jednej strany — panel <em>BMJ</em> hodnotil pľúcne krvácanie <em>bez</em> renálneho postihnutia, KDIGO cieli na hypoxemických pacientov s vysokou včasnou mortalitou. Pri normoxemickom alveolárnom krvácaní sa obe stanoviská zhodujú, že prognóza je priaznivá a stav ustúpi s kontrolou mimopľúcneho ochorenia.</p>
+<p>Medzi odporúčaniami je jeden rozdiel, ktorý ľahko unikne: pri <strong>alveolárnom krvácaní</strong> panel <em>BMJ</em> plazmaferézu neodporúča, kým KDIGO ju pri <strong>hypoxémii</strong> zvážiť pripúšťa. Nejde o chybu ani jednej strany – panel <em>BMJ</em> hodnotil pľúcne krvácanie <em>bez</em> renálneho postihnutia, KDIGO cieli na hypoxemických pacientov s vysokou včasnou mortalitou. Pri normoxemickom alveolárnom krvácaní sa obe stanoviská zhodujú, že prognóza je priaznivá a stav ustúpi s kontrolou mimopľúcneho ochorenia.</p>
 
-<p>Samostatnú, jednoznačnejšiu indikáciu tvorí <strong>prekryv AAV s ochorením proti bazálnej membráne glomerulov (anti-GBM)</strong>: tu KDIGO plazmaferézu <strong>pridať odporúča</strong> (praktický bod 9.3.1.10). Dvojitá pozitivita nie je rarita — v citovanej jednocentrovej práci bolo 5 % ANCA-pozitívnych pacientov súčasne anti-GBM pozitívnych a 32 % anti-GBM pozitívnych malo detegovateľné ANCA. Títo pacienti sa správajú skôr ako pacienti s anti-GBM ochorením. <strong>Praktický dôsledok: u každého pacienta s RPGN a pozitívnymi ANCA vyšetri aj anti-GBM protilátky.</strong></p>
+<p>Samostatnú, jednoznačnejšiu indikáciu tvorí <strong>prekryv AAV s ochorením proti bazálnej membráne glomerulov (anti-GBM)</strong>: tu KDIGO plazmaferézu <strong>pridať odporúča</strong> (praktický bod 9.3.1.10). Dvojitá pozitivita nie je rarita – v citovanej jednocentrovej práci bolo 5 % ANCA-pozitívnych pacientov súčasne anti-GBM pozitívnych a 32 % anti-GBM pozitívnych malo detegovateľné ANCA. Títo pacienti sa správajú skôr ako pacienti s anti-GBM ochorením. <strong>Praktický dôsledok: u každého pacienta s RPGN a pozitívnymi ANCA vyšetri aj anti-GBM protilátky.</strong></p>
 
 <h2>Udržiavacia liečba: rituximab ako prvá voľba, ale nie donekonečna</h2>
 
 <p>KDIGO odporúča po indukcii remisie <strong>udržiavaciu liečbu rituximabom alebo azatioprínom s nízkou dávkou glukokortikoidov</strong> (odporúčanie 9.3.2.1, stupeň 1C); EULAR pri GPA/MPA uprednostňuje rituximab, s azatioprínom a metotrexátom ako alternatívami. Po indukcii rituximabom má udržiavaciu liečbu dostať <strong>väčšina</strong> pacientov.</p>
 
-<p>Oporou je štúdia <strong>RITAZAREM</strong> u pacientov s relabujúcou AAV: opakovane podávaný rituximab bol v prevencii relapsu výrazne lepší než azatioprín (pomer rizík <strong>0,41</strong>; 95 % IS 0,27–0,61; p &lt; 0,001), pričom závažnú nežiaducu udalosť zaznamenalo <strong>22 % vs. 36 %</strong> pacientov — teda lepšia účinnosť bez bezpečnostnej ceny.</p>
+<p>Oporou je štúdia <strong>RITAZAREM</strong> u pacientov s relabujúcou AAV: opakovane podávaný rituximab bol v prevencii relapsu výrazne lepší než azatioprín (pomer rizík <strong>0,41</strong>; 95 % IS 0,27–0,61; p &lt; 0,001), pričom závažnú nežiaducu udalosť zaznamenalo <strong>22 % vs. 36 %</strong> pacientov. Vyššia účinnosť teda nebola vykúpená horšou bezpečnosťou.</p>
 
 <p>Dve dávkovacie schémy podľa KDIGO:</p>
 <ul>
-  <li><strong>MAINRITSAN</strong> — 500 mg dvakrát pri dosiahnutí kompletnej remisie, potom 500 mg v 6., 12. a 18. mesiaci;</li>
-  <li><strong>RITAZAREM</strong> — 1000 mg po indukcii remisie a ďalej v 4., 8., 12. a 16. mesiaci.</li>
+  <li><strong>MAINRITSAN</strong> – 500 mg dvakrát pri dosiahnutí kompletnej remisie, potom 500 mg v 6., 12. a 18. mesiaci;</li>
+  <li><strong>RITAZAREM</strong> – 1000 mg po indukcii remisie a ďalej v 4., 8., 12. a 16. mesiaci.</li>
 </ul>
 
-<p>Pri neznášanlivosti azatioprínu prichádza do úvahy mykofenolátmofetil alebo metotrexát — <strong>metotrexát sa však nemá použiť pri GFR &lt; 60 ml/min/1,73 m²</strong>, čo z neho v nefrologickej populácii robí skôr výnimku než alternatívu.</p>
+<p>Pri neznášanlivosti azatioprínu prichádza do úvahy mykofenolátmofetil alebo metotrexát – <strong>metotrexát sa však nemá použiť pri GFR &lt; 60 ml/min/1,73 m²</strong>, čo z neho v nefrologickej populácii robí skôr výnimku než alternatívu.</p>
 
-<p><strong>Optimálna dĺžka udržiavacej liečby je podľa KDIGO 18 mesiacov až 4 roky</strong> po indukcii remisie. Pri rozhodovaní o vysadení treba vážiť riziko relapsu — vyššie je pri GPA, PR3-ANCA fenotype, vyššom sérovom kreatiníne, rozsiahlejšom ochorení, postihnutí ORL oblasti a pri relapse v anamnéze. Post hoc analýza štúdie RITAZAREM (2026) k tomu pridáva dva ľahko dostupné markery: po ukončení liečby bola s relapsom spojená <strong>prítomnosť CD19+ B-lymfocytov</strong> (pomer šancí 2,5; 95 % IS 1,2–5,1) a <strong>opätovné objavenie sa ANCA</strong> (pomer šancí 3,2; 95 % IS 1,3–7,7). Pacient musí byť poučený, že pri návrate príznakov má prísť <strong>bezodkladne</strong>.</p>
+<p><strong>Optimálna dĺžka udržiavacej liečby je podľa KDIGO 18 mesiacov až 4 roky</strong> po indukcii remisie. Pri rozhodovaní o vysadení treba vážiť riziko relapsu – vyššie je pri GPA, PR3-ANCA fenotype, vyššom sérovom kreatiníne, rozsiahlejšom ochorení, postihnutí ORL oblasti a pri relapse v anamnéze. Post hoc analýza štúdie RITAZAREM (2026) k tomu pridáva dva ľahko dostupné markery: po ukončení liečby bola s relapsom spojená <strong>prítomnosť CD19+ B-lymfocytov</strong> (pomer šancí 2,5; 95 % IS 1,2–5,1) a <strong>opätovné objavenie sa ANCA</strong> (pomer šancí 3,2; 95 % IS 1,3–7,7). Pacient musí byť poučený, že pri návrate príznakov má prísť <strong>bezodkladne</strong>.</p>
 
 <h2>Špecifické nefrologické situácie</h2>
 
 <ul>
   <li><strong>Pacient trvale na dialýze bez mimorenálnych prejavov.</strong> KDIGO odporúča <strong>zvážiť ukončenie imunosupresie po 3 mesiacoch</strong> (praktický bod 9.3.1.5). Pokračovanie v tejto situácii prináša riziko infekcie bez zodpovedajúceho zisku.</li>
-  <li><strong>Refraktérne ochorenie.</strong> Riešením je zvýšenie dávky glukokortikoidov, prechod z cyklofosfamidu na rituximab alebo naopak; plazmaferézu možno zvážiť. Pozor na diferenciálnu diagnostiku: progresia zlyhávania obličiek môže odrážať <strong>chronické poškodenie, nie aktivitu</strong> — opakovaná biopsia je legitímny krok.</li>
+  <li><strong>Refraktérne ochorenie.</strong> Riešením je zvýšenie dávky glukokortikoidov, prechod z cyklofosfamidu na rituximab alebo naopak; plazmaferézu možno zvážiť. Pozor na diferenciálnu diagnostiku: progresia zlyhávania obličiek môže odrážať <strong>chronické poškodenie, nie aktivitu</strong> – opakovaná biopsia je legitímny krok.</li>
   <li><strong>Relaps.</strong> Život alebo orgán ohrozujúci relaps sa lieči <strong>opätovnou indukciou, prednostne rituximabom</strong>.</li>
-  <li><strong>Transplantácia obličky.</strong> Odložiť až do <strong>kompletnej klinickej remisie trvajúcej aspoň 6 mesiacov</strong>. <strong>Pretrvávajúca pozitivita ANCA nie je dôvodom na odklad</strong> — recidíva po transplantácii je zriedkavá (rádovo 0,02–0,03 na pacientorok) a nesúvisí s ANCA statusom pred transplantáciou.</li>
+  <li><strong>Transplantácia obličky.</strong> Odložiť až do <strong>kompletnej klinickej remisie trvajúcej aspoň 6 mesiacov</strong>. <strong>Pretrvávajúca pozitivita ANCA nie je dôvodom na odklad</strong> – recidíva po transplantácii je zriedkavá (rádovo 0,02–0,03 na pacientorok) a nesúvisí s ANCA statusom pred transplantáciou.</li>
 </ul>
 
-<h2>Eozinofilná GPA: anti-IL-5 liečba ako samostatná vetva</h2>
+<h2>EGPA: anti-IL-5 liečba ako samostatná vetva</h2>
 
 <p>Pri <strong>eozinofilnej granulomatóze s polyangiitídou (EGPA)</strong> s relabujúcim alebo refraktérnym priebehom EULAR odporúča <strong>mepolizumab</strong>. Opiera sa o štúdiu <strong>MIRRA</strong>, kde remisiu v 36. aj 48. týždni dosiahlo 32 % pacientov na mepolizumabe oproti 3 % na placebe.</p>
 
-<p>Od publikácie odporúčaní pribudla dôležitá možnosť: v štúdii <strong>MANDARA</strong> bol <strong>benralizumab</strong> (protilátka proti receptoru pre interleukín-5α) <strong>non-inferiórny voči mepolizumabu</strong> — remisia v 36. aj 48. týždni u 59 % vs. 56 % pacientov (rozdiel 3 percentuálne body; 95 % IS −13 až 18). V dvojročnom otvorenom predĺžení bolo v remisii 62 % pacientov pokračujúcich na benralizumabe a 68 % tých, ktorí prešli z mepolizumabu, pričom približne 44 % pacientov v oboch skupinách <strong>úplne vysadilo perorálne glukokortikoidy</strong>. Pre pacienta s EGPA je to relevantné práve pre steroid-šetriaci potenciál — treba však pamätať, že renálne postihnutie je pri EGPA menej časté a menej závažné než pri GPA/MPA a pacienti s ťažkou glomerulonefritídou boli v týchto štúdiách zastúpení okrajovo.</p>
+<p>Od publikácie odporúčaní pribudla dôležitá možnosť: v štúdii <strong>MANDARA</strong> bol <strong>benralizumab</strong> (protilátka proti α-podjednotke receptora pre interleukín 5) <strong>non-inferiórny voči mepolizumabu</strong> – remisia v 36. aj 48. týždni u 59 % vs. 56 % pacientov (rozdiel 3 percentuálne body; 95 % IS −13 až 18). V dvojročnom otvorenom predĺžení bolo v remisii 62 % pacientov pokračujúcich na benralizumabe a 68 % tých, ktorí prešli z mepolizumabu, pričom približne 44 % pacientov v oboch skupinách <strong>úplne vysadilo perorálne glukokortikoidy</strong>. Pre pacienta s EGPA je to relevantné práve pre steroid-šetriaci potenciál – treba však pamätať, že renálne postihnutie je pri EGPA menej časté a menej závažné než pri GPA/MPA a pacienti s ťažkou glomerulonefritídou boli v týchto štúdiách zastúpení okrajovo.</p>
 
 <h2>Bezpečnosť a monitorovanie</h2>
 
-<p>Kumulatívna imunosupresia pri AAV je jedna z najvyšších v nefrológii a infekcie sú vedúcou príčinou včasnej mortality — nie samotná vaskulitída. Rámec, ktorý sa v praxi osvedčuje:</p>
+<p>Kumulatívna imunosupresia pri AAV je jedna z najvyšších v nefrológii a infekcie sú vedúcou príčinou včasnej mortality – nie samotná vaskulitída. Rámec, ktorý sa v praxi osvedčuje:</p>
 
 <ul>
   <li><strong>Profylaxia pneumocystovej pneumónie</strong> počas indukcie a po celý čas vyššej dávky glukokortikoidov, podľa lokálneho protokolu a funkcie obličiek.</li>
-  <li><strong>Krvný obraz</strong> — pri cyklofosfamide zvlášť sledovanie leukopénie; pri rituximabe kontrola <strong>hladín imunoglobulínov</strong> pred opakovaným podaním a pri opakovaných infekciách.</li>
+  <li><strong>Krvný obraz</strong> – pri cyklofosfamide zvlášť sledovanie leukopénie; pri rituximabe kontrola <strong>hladín imunoglobulínov</strong> pred opakovaným podaním a pri opakovaných infekciách.</li>
   <li><strong>Skríning hepatitíd B a C a latentnej tuberkulózy</strong> pred začatím biologickej liečby.</li>
   <li><strong>Očkovanie</strong> podľa možnosti pred začatím liečby alebo v období najnižšej imunosupresie; po rituximabe je odpoveď na vakcíny výrazne oslabená.</li>
   <li><strong>Renálne parametre a močový nález</strong> (sediment, pomer albumín/kreatinín) ako nepriame markery aktivity.</li>
-  <li><strong>Kumulatívna dávka cyklofosfamidu</strong> — dokumentovať ju, s ohľadom na fertilitu a onkologické riziko.</li>
-  <li><strong>Kostné zdravie</strong> — aj pri redukovanom režime ide o mesiace liečby glukokortikoidmi.</li>
+  <li><strong>Kumulatívna dávka cyklofosfamidu</strong> – dokumentovať ju, s ohľadom na fertilitu a onkologické riziko.</li>
+  <li><strong>Kostné zdravie</strong> – aj pri redukovanom režime ide o mesiace liečby glukokortikoidmi.</li>
 </ul>
 
 <h2>Praktický algoritmus pre prvých 72 hodín</h2>
@@ -186,7 +186,7 @@ $articles[] = [
 <ol>
   <li><strong>Posúď závažnosť.</strong> Rýchlosť poklesu eGFR, močový sediment, albuminúria, oxygenácia, systémové prejavy.</li>
   <li><strong>Zober sérológiu naraz.</strong> ANCA (MPO aj PR3) <strong>a anti-GBM</strong>, doplň diferenciálnu diagnostiku (komplement, ANA, kryoglobulíny, sérologické vyšetrenia podľa kliniky).</li>
-  <li><strong>Naplánuj biopsiu — ale neodkladaj kvôli nej liečbu.</strong> Pri zodpovedajúcom obraze a pozitívnej sérológii začni imunosupresiu okamžite.</li>
+  <li><strong>Naplánuj biopsiu – ale neodkladaj kvôli nej liečbu.</strong> Pri zodpovedajúcom obraze a pozitívnej sérológii začni imunosupresiu okamžite.</li>
   <li><strong>Začni indukciu:</strong> glukokortikoidy plus rituximab alebo cyklofosfamid; pri S-kreatiníne &gt; 354 µmol/l zváž cyklofosfamid alebo kombináciu s rituximabom.</li>
   <li><strong>Nastav zostup glukokortikoidov hneď na začiatku</strong> podľa redukovanej schémy PEXIVAS, s cieľom približne 5 mg denne do 4 až 5 mesiacov. Nenechávaj zostupnú schému „na neskôr“.</li>
   <li><strong>Rozhodni o plazmaferéze podľa rizika:</strong> S-kreatinín &gt; 300 µmol/l, potreba dialýzy alebo rýchlo stúpajúci kreatinín; hypoxemické alveolárne krvácanie; <strong>vždy</strong> pri prekryve s anti-GBM.</li>
@@ -196,7 +196,7 @@ $articles[] = [
 
 <h2>Poznámka k dôkazom</h2>
 
-<p>Odporúčania EULAR 2022 aj KDIGO 2024 boli formulované v čase, keď sa štúdia ADVOCATE považovala za platnú. Body týkajúce sa <strong>avacopanu</strong> (EULAR: „môže byť zvážený“; KDIGO praktický bod 9.3.1.7: „môže byť použitý ako alternatíva glukokortikoidov“) preto v tomto článku uvádzame len ako historický kontext — v Európskej únii sú po zrušení registrácie zo 4. augusta 2026 neaplikovateľné. Ostatné časti oboch dokumentov stoja na iných, nespochybnených štúdiách (RAVE, PEXIVAS, LoVAS, MAINRITSAN, RITAZAREM, MEPEX, MIRRA) a zostávajú v platnosti.</p>
+<p>Odporúčania EULAR 2022 aj KDIGO 2024 boli formulované v čase, keď sa štúdia ADVOCATE považovala za platnú. Body týkajúce sa <strong>avacopanu</strong> (EULAR: „môže byť zvážený“; KDIGO praktický bod 9.3.1.7: „môže byť použitý ako alternatíva glukokortikoidov“) preto v tomto článku uvádzame len ako historický kontext – v Európskej únii sú po zrušení registrácie zo 4. augusta 2026 neaplikovateľné. Ostatné časti oboch dokumentov stoja na iných, nespochybnených štúdiách (RAVE, PEXIVAS, LoVAS, MAINRITSAN, RITAZAREM, MEPEX, MIRRA) a zostávajú v platnosti.</p>
 
 <p>Tento článok je odborným zhrnutím publikovaných odporúčaní a primárnych štúdií, nie samostatným systematickým prehľadom. Uvedené číselné údaje pochádzajú z plných textov a abstraktov citovaných prác. Konkrétny postup u konkrétneho pacienta vždy závisí od aktivity ochorenia, komorbidít, dostupnosti liečby a lokálnych protokolov.</p>
 

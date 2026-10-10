@@ -26,42 +26,42 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Prehľad nových dôkazov z ERA kongresu: pri nediabetickej CKD sa ťažisko presúva od hemodynamiky (RAAS, SGLT2) k nehemodynamickým cieľom — zápalu, fibróze a aldosterónovej osi (finerenón, FIND-CKD, INFINITY).',
+    'excerpt'      => 'Prehľad nových dôkazov z ERA kongresu: pri nediabetickej CKD sa ťažisko presúva od hemodynamiky (RAAS, SGLT2) k nehemodynamickým cieľom – zápalu, fibróze a aldosterónovej osi (finerenón, FIND-CKD, INFINITY).',
     'content'      => <<<'HTML'
-<figure><a href="img/nediabeticka-ckd-nehemodynamicke-mechanizmy-nsmra-finerenon.webp" rel="noopener noreferrer" target="_blank"><img src="img/nediabeticka-ckd-nehemodynamicke-mechanizmy-nsmra-finerenon.webp" alt="Oblička so stlmenou tlakovou cestou a jasne svietiacimi fibróznymi, zápalovými a hormonálnymi mechanizmami" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Tlak vysvetľuje len časť poškodenia — zvyšok prebieha mechanizmami, ktoré s ním nesúvisia.</figcaption></figure>
+<figure><a href="img/nediabeticka-ckd-nehemodynamicke-mechanizmy-nsmra-finerenon.webp" rel="noopener noreferrer" target="_blank"><img src="img/nediabeticka-ckd-nehemodynamicke-mechanizmy-nsmra-finerenon.webp" alt="Oblička so stlmenou tlakovou cestou a jasne svietiacimi fibróznymi, zápalovými a hormonálnymi mechanizmami" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Tlak vysvetľuje len časť poškodenia – zvyšok prebieha mechanizmami, ktoré s ním nesúvisia.</figcaption></figure>
 
-<p>Medscape vzdelávacia aktivita „Hot Off the Press: Emerging Therapies in Nondiabetic Kidney Disease“ prináša prehľad nových klinických dát prezentovaných na kongrese Európskej renálnej asociácie (ERA) a z nich vyplývajúci praktický smer: pri nediabetickej CKD sa čoraz viac posúvame od samotnej hemodynamiky (inhibícia RAAS, SGLT2 inhibítory) k cieleniu <strong>nehemodynamických</strong> — predovšetkým zápalových a fibrotizujúcich — mechanizmov poškodenia. V centre pozornosti sú <strong>nesteroidné antagonisty mineralokortikoidového receptora (nsMRA)</strong>, najmä <strong>finerenón</strong>, doplnené o ďalšie triedy liekov, ktoré sa snažia ovplyvniť aldosterónovú os „vyššie v kaskáde“ (<em>upstream</em>) aj zápalovú signalizáciu.</p>
+<p>Medscape vzdelávacia aktivita „Hot Off the Press: Emerging Therapies in Nondiabetic Kidney Disease“ prináša prehľad nových klinických údajov prezentovaných na kongrese Európskej renálnej asociácie (ERA) a praktický smer, ktorý z nich vyplýva: pri nediabetickej CKD sa liečba posúva od samotnej hemodynamiky (inhibícia RAAS, SGLT2 inhibítory) k <strong>nehemodynamickým</strong> mechanizmom poškodenia – predovšetkým zápalovým a fibrotizujúcim. V centre pozornosti sú <strong>nesteroidné antagonisty mineralokortikoidového receptora (nsMRA)</strong>, najmä <strong>finerenón</strong>, doplnené o ďalšie triedy liekov, ktoré sa snažia ovplyvniť aldosterónovú os „vyššie v kaskáde“ (<em>upstream</em>) aj zápalovú signalizáciu.</p>
 
-<p>Tento článok sumarizuje hlavné argumenty, ktoré podľa zdroja podporujú rozšírenie „pilierovej“ liečby aj u pacientov bez diabetu, a vysvetľuje, kde sa objavujú najvýraznejšie benefity.</p>
+<p>Článok zhŕňa hlavné argumenty, ktoré podľa zdroja podporujú rozšírenie „pilierovej“ liečby aj na pacientov bez diabetu, a ukazuje, kde je prínos najvýraznejší.</p>
 
 <h2>1. Prečo nestačí hemodynamika: reziduálne riziko pri nediabetickej CKD</h2>
 
-<p>Zdroj explicitne rámcuje problém ako <strong>reziduálne riziko</strong> (<em>residual risk</em>). Aj keď štandardná starostlivosť dnes zahŕňa inhibítory RAAS a inhibítory SGLT2, časť pacientov napriek liečbe pokračuje v progresii CKD a/alebo dosahuje fatálne kardiovaskulárne (KV) a renálne ukončenia.</p>
+<p>Zdroj opisuje problém ako <strong>reziduálne riziko</strong> (<em>residual risk</em>). Hoci štandardná starostlivosť dnes zahŕňa inhibítory RAAS a inhibítory SGLT2, časť pacientov napriek liečbe pokračuje v progresii CKD a/alebo dosahuje fatálne kardiovaskulárne (KV) a renálne ukončenia.</p>
 
-<p>Kľúčové je, že reziduálne riziko sa v praxi často odvíja od <strong>albuminúrie</strong>. Podľa zdroja je albuminúria významným hnacím faktorom progresie a jej zníženie v danom čase koreluje s priaznivejšou budúcnosťou z hľadiska poklesu funkcie obličiek aj klinických udalostí.</p>
+<p>Reziduálne riziko sa v praxi často odvíja od <strong>albuminúrie</strong>. Podľa zdroja je albuminúria významným hnacím faktorom progresie a jej zníženie koreluje s pomalším poklesom funkcie obličiek aj s menším počtom klinických udalostí.</p>
 
-<p>Z toho vyplýva logická výzva: ak hemodynamické mechanizmy vysvetľujú len časť progresie, potom treba cieliť aj ďalšie determinanty poškodenia.</p>
+<p>Ak hemodynamické mechanizmy vysvetľujú len časť progresie, liečba sa musí zamerať aj na ďalšie determinanty poškodenia.</p>
 
 <h2>2. Nehemodynamické mechanizmy progresie: zápal, fibróza a aldosterón ako spúšťač</h2>
 
-<p>Ako významné nehemodynamické vodiče progresie sa v diskusii opisujú najmä:</p>
+<p>Ako významné nehemodynamické hnacie mechanizmy progresie sa v diskusii opisujú najmä:</p>
 
 <ul>
   <li><strong>zápalové dráhy</strong> (<em>inflammatory pathways</em>),</li>
   <li><strong>fibróza</strong> a následný pokles schopnosti obličky udržať funkciu.</li>
 </ul>
 
-<p>Albuminúria je tu opísaná ako spúšťač glomerulárneho poškodenia, ktoré následne ťahá aj tubulárne zranenie. Tento reťazec vedie k fibróze a zhoršeniu výsledkov.</p>
+<p>Albuminúria je tu opísaná ako spúšťač glomerulárneho poškodenia, na ktoré nadväzuje poškodenie tubulov. Tento reťazec vedie k fibróze a horším výsledkom.</p>
 
-<p>Zdroj ďalej tematizuje rolu <strong>renín-angiotenzín-aldosterónového systému (RAAS)</strong> a najmä <strong>aldosterónu</strong>. V časti o aldosteróne ide o posun v interpretácii: nejde len o „škodlivé zvýšenie“, ale o dôsledky <strong>chronicky (aj subklinicky) zvýšenej aktivácie</strong>. Zdroj uvádza, že aj subklinický nadbytok aldosterónu môže predikovať pokles eGFR a nepriaznivé klinické výsledky, čo podporuje úvahu, že zníženie tvorby aldosterónu alebo blokovanie jeho účinku na mineralokortikoidovom receptore môže mať pri ochoreniach obličiek význam.</p>
+<p>Zdroj sa ďalej venuje úlohe <strong>renín-angiotenzín-aldosterónového systému (RAAS)</strong>, najmä <strong>aldosterónu</strong>. Pri aldosteróne sa posúva interpretácia: nejde len o „škodlivé zvýšenie“, ale o dôsledky <strong>chronicky (aj subklinicky) zvýšenej aktivácie</strong>. Zdroj uvádza, že aj subklinický nadbytok aldosterónu môže predikovať pokles eGFR a nepriaznivé klinické výsledky, čo podporuje úvahu, že zníženie tvorby aldosterónu alebo blokovanie jeho účinku na mineralokortikoidovom receptore môže mať pri ochoreniach obličiek význam.</p>
 
-<p>Prakticky to znamená, že terapia zameraná na aldosterónovú os môže byť jedným zo spôsobov, ako „dopĺňať“ SGLT2 a RAAS inhibíciu tak, aby sa pokryli viaceré mechanizmy progresie naraz.</p>
+<p>Liečba zameraná na aldosterónovú os tak môže dopĺňať inhibíciu SGLT2 a RAAS a pokryť viac mechanizmov progresie naraz.</p>
 
 <h2>3. Finerenón pri nediabetickej CKD: FIND-CKD ako rozhodujúci signál</h2>
 
 <h3>3.1. Otázka, ktorú štúdia riešila</h3>
 
-<p>Zdroj zdôrazňuje, že finerenón (nsMRA) už priniesol relevantné benefity pri <strong>diabetickej</strong> chorobe obličiek, no nebolo jasné, či rovnaký koncept bude fungovať aj u pacientov s <strong>nediabetickou</strong> CKD. Preto sa uvádza štúdia <strong>FIND-CKD</strong>.</p>
+<p>Finerenón (nsMRA) už preukázal prínos pri <strong>diabetickej</strong> chorobe obličiek, no nebolo jasné, či rovnaký koncept bude fungovať aj pri <strong>nediabetickej</strong> CKD. Na túto otázku odpovedala štúdia <strong>FIND-CKD</strong>.</p>
 
 <h3>3.2. Dizajn a populácia</h3>
 
@@ -78,32 +78,30 @@ $articles[] = [
 
 <p>Primárnym ukazovateľom bol <strong>celkový sklon poklesu GFR</strong> (rýchlosť poklesu GFR za 3 roky). V sekundárnych a ďalších ukazovateľoch sa sledovali aj klinicky tvrdé výsledky vrátane kombinovaných renálnych a KV udalostí.</p>
 
-<h3>3.3. Výsledky: sklon eGFR a preklad do tvrdých ukazovateľov</h3>
+<h3>3.3. Výsledky: sklon eGFR a tvrdé ukazovatele</h3>
 
 <p>Podľa zdroja pacienti v skupine placeba strácali približne <strong>4 ml/min za rok</strong>. V ramene finerenónu sa pokles zmenšil na <strong>3,3 ml/min za rok</strong>, čo predstavuje absolútny rozdiel približne <strong>0,7 ml/min za rok</strong>.</p>
 
-<p>Aj keď tento rozdiel na úrovni sklonu môže pôsobiť „mierne“, zdroj uvádza dôležitý preklad do klinických výsledkov: pre kľúčový sekundárny kompozitný ukazovateľ (zahŕňajúci napr. zlyhanie obličiek alebo 57 % pokles GFR, hospitalizácie pre zlyhanie srdca a KV smrť) sa dosiahlo približne <strong>23 % relatívne zníženie rizika</strong> a výsledok bol štatisticky významný.</p>
+<p>Rozdiel v sklone môže pôsobiť „mierne“, zdroj však uvádza aj klinické výsledky: pri kľúčovom sekundárnom kompozitnom ukazovateli (zahŕňajúci napr. zlyhanie obličiek alebo 57 % pokles GFR, hospitalizácie pre zlyhanie srdca a KV smrť) sa dosiahlo približne <strong>23 % relatívne zníženie rizika</strong> a výsledok bol štatisticky významný.</p>
 
 <h3>3.4. Bezpečnosť: hyperkaliémia a znášanlivosť</h3>
 
 <p>Z hľadiska bezpečnosti bol finerenón podľa zdroja celkovo dobre znášaný a bez signálu nerovnováhy v závažných nežiaducich udalostiach.</p>
 
-<p>Hyperkaliémia sa vyskytovala častejšie pri finerenóne než pri placebe (v zdroji uvedené približne <strong>17 % verzus 13,3 %</strong>). Dôležité však je, že klinicky relevantná hyperkaliémia vedúca k trvalému vysadeniu liečby alebo k hospitalizácii bola podľa zdroja nízka (uvádzané <strong>&lt; 2 %</strong>).</p>
-
-<p>Toto je praktický bod, lebo cieľom takejto terapie je zmysluplná účinnosť bez neprijateľnej bezpečnostnej záťaže.</p>
+<p>Hyperkaliémia sa vyskytovala častejšie pri finerenóne než pri placebe (v zdroji približne <strong>17 % verzus 13,3 %</strong>). Klinicky relevantná hyperkaliémia vedúca k trvalému vysadeniu liečby alebo k hospitalizácii však bola podľa zdroja zriedkavá (<strong>&lt; 2 %</strong>). Prakticky to je podstatné, pretože účinnosť nesmie byť vykúpená neprijateľnou bezpečnostnou záťažou.</p>
 
 <h2>4. Špecifická výzva: glomerulové ochorenia vo FIND-CKD</h2>
 
 <p>Glomerulové ochorenia sú v diskusii opísané ako populácia s historicky menším počtom liečebných možností a rýchlejším zhoršovaním.</p>
 
-<p>Zdroj pripomína, že FIND-CKD zahrnula:</p>
+<p>FIND-CKD zahrnula:</p>
 
 <ul>
   <li><strong>903 pacientov</strong> s diagnózou glomerulárnej choroby podľa vyšetrujúceho lekára (čo je <strong>57 %</strong> populácie),</li>
   <li>v štruktúre boli uvedené napr. <strong>IgA nefropatia</strong>, <strong>FSGS</strong>, <strong>membranózna nefropatia</strong> a aj iné menej časté glomerulárne diagnózy.</li>
 </ul>
 
-<p>Zaujímavé je aj to, že približne <strong>80 %</strong> prípadov malo diagnózu potvrdenú biopsiou, pričom zdroj naznačuje variabilitu biopsických postupov v rôznych krajinách.</p>
+<p>Približne <strong>80 %</strong> prípadov malo diagnózu potvrdenú biopsiou; zdroj pritom naznačuje, že biopsické postupy sa medzi krajinami líšili.</p>
 
 <h3>4.1. Renálny sklon, albuminúria a exploračné kompozity</h3>
 
@@ -117,17 +115,17 @@ $articles[] = [
   <li>v exploračnom kompozite (zahŕňajúcom napr. zlyhanie obličiek alebo 40 % pokles GFR) relatívne zníženie rizika približne <strong>26 %</strong>.</li>
 </ul>
 
-<h3>4.2. Konzistentnosť naprieč podtypmi a nezávislosť od SGLT2</h3>
+<h3>4.2. Konzistentnosť v podtypoch a nezávislosť od SGLT2</h3>
 
-<p>Zdroj zdôrazňuje, že benefity boli konzistentné naprieč podtypmi glomerulárnych chorôb (IgA nefropatia, FSGS, membranózna nefropatia) a že výsledky sa nelíšili podľa toho, či pacienti užívali inhibítory SGLT2.</p>
+<p>Prínos bol podľa zdroja konzistentný vo všetkých podtypoch glomerulárnych chorôb (IgA nefropatia, FSGS, membranózna nefropatia) a že výsledky sa nelíšili podľa toho, či pacienti užívali inhibítory SGLT2.</p>
 
-<p>Praktický význam: nsMRA sa v tejto interpretácii nevníma ako „liečba len pre jeden typ“, ale ako relatívne univerzálny príspevok k spomaleniu progresie v skupinách, kde je podstatná albuminúria a následné (<em>downstream</em>) zápalové poškodenie.</p>
+<p>nsMRA sa v tejto interpretácii nechápe ako „liečba len pre jeden typ“, ale ako pomerne univerzálny príspevok k spomaleniu progresie v skupinách, kde je podstatná albuminúria a následné (<em>downstream</em>) zápalové poškodenie.</p>
 
-<h2>5. INFINITY: pohľad naprieč spektrom CKD a preklad na klinicky relevantné výsledky</h2>
+<h2>5. INFINITY: celé spektrum CKD a klinicky relevantné výsledky</h2>
 
-<p>Zdroj uvádza program <strong>INFINITY</strong>, ktorý je <strong>metaanalýzou na úrovni individuálnych účastníkov</strong> (<em>individual participant data</em>) štúdie FIND-CKD a predchádzajúcich diabetických štúdií (FIGARO-DKD a FIDELIO-DKD).</p>
+<p>Program <strong>INFINITY</strong> je <strong>metaanalýzou na úrovni individuálnych účastníkov</strong> (<em>individual participant data</em>) štúdie FIND-CKD a predchádzajúcich diabetických štúdií (FIGARO-DKD a FIDELIO-DKD).</p>
 
-<p>Cieľom je zistiť účinky finerenónu naprieč:</p>
+<p>Cieľom je zistiť účinky finerenónu v závislosti od:</p>
 
 <ul>
   <li>prítomnosťou alebo neprítomnosťou diabetu,</li>
@@ -145,37 +143,37 @@ $articles[] = [
   <li>znížil celkovú (<em>all-cause</em>) mortalitu o <strong>12 %</strong>.</li>
 </ul>
 
-<p>Zdroj zároveň zdôrazňuje konzistentnosť naprieč príčinami ochorenia obličiek, statusom diabetu, úrovňami GFR, albuminúriou aj užívaním SGLT2.</p>
+<p>Účinok bol podľa zdroja konzistentný bez ohľadu na príčinu ochorenia obličiek, prítomnosť diabetu, úroveň GFR, albuminúriu aj užívanie SGLT2.</p>
 
-<p>V kontexte článku je dôležité, že táto interpretácia podporuje koncept, podľa ktorého môže byť finerenón „základným“ pilierom terapie podobne, ako dnes u mnohých pacientov vnímame SGLT2.</p>
+<p>Táto interpretácia podporuje koncept, podľa ktorého môže byť finerenón „základným“ pilierom liečby, podobne ako dnes u mnohých pacientov SGLT2 inhibítory.</p>
 
 <h2>6. Kto má najväčší absolútny benefit</h2>
 
-<p>Zdroj priamo rieši otázku, „kto z toho vyťaží najviac v absolútnych číslach“.</p>
+<p>Zdroj sa priamo pýta, kto z liečby získa najviac v absolútnych číslach.</p>
 
-<p>Argumentácia vychádza z toho, že niektorí pacienti majú vyššie východiskové riziko a výraznejšie konkurenčné riziko KV udalostí. Pri diabete je diabetes silným vodičom KV rizika, a preto sú absolútne benefity pri KV a mortalitných ukazovateľoch (v tejto interpretácii) väčšie. Pri nediabetickej CKD však benefity pretrvávajú, len v absolútnych číslach môžu byť menšie — čo však stále môže byť klinicky relevantné.</p>
+<p>Niektorí pacienti majú vyššie východiskové riziko a výraznejšie konkurenčné riziko KV udalostí. Diabetes je silným zdrojom KV rizika, a preto je absolútny prínos pri KV a mortalitných ukazovateľoch (v tejto interpretácii) väčší u diabetikov. Pri nediabetickej CKD prínos pretrváva, v absolútnych číslach však môže byť menší, a napriek tomu klinicky relevantný.</p>
 
 <p>Pri glomerulárnych chorobách zdroj uvádza, že podskupinová analýza naznačila zvlášť výrazný signál pri <strong>FSGS</strong>, a ponúka biologické vysvetlenie: mineralokortikoidový receptor je exprimovaný na <strong>podocytoch</strong> a prehnaná aktivácia tohto receptora môže podporovať ich poškodenie.</p>
 
-<p>Toto je dobrý príklad toho, ako sa od mechanizmu prechádza ku klinickému pozorovaniu. Zároveň je férové dodať, že podskupinové interpretácie treba vždy brať opatrne a držať ich v hraniciach toho, čo štúdie reálne dokazujú.</p>
+<p>Ide o príklad prepojenia mechanizmu s klinickým pozorovaním. Podskupinové analýzy však treba interpretovať opatrne a v hraniciach toho, čo štúdie skutočne dokazujú.</p>
 
 <h2>7. Steroidné verzus nesteroidné antagonisty mineralokortikoidového receptora: prečo je finerenón vpredu</h2>
 
-<p>Zdroj pomenúva „slona v miestnosti“: ako sa finerenón líši od <strong>spironolaktónu</strong>.</p>
+<p>Zdroj otvára aj otázku, ktorá sa ponúka sama: čím sa finerenón líši od <strong>spironolaktónu</strong>.</p>
 
 <p>Ako hlavný argument sa uvádza, že veľká štúdia so steroidným MRA pri CKD, <strong>BARACK-D</strong>, mala výrazne vyššiu mieru ukončenia liečby pre bezpečnostné problémy. Podľa zdroja až dve tretiny pacientov v ramene spironolaktónu ukončili liečbu pre protokolom riadené bezpečnostné obmedzenia.</p>
 
-<p>Okrem toho zdroj uvádza, že dôkazy pre spironolaktón a eplerenón pri CKD sú podľa neho obmedzené menšími štúdiami s nekonzistentnými výsledkami a len skromnými účinkami na albuminúriu.</p>
+<p>Dôkazy pre spironolaktón a eplerenón pri CKD sú podľa zdroja obmedzené na menšie štúdie s nekonzistentnými výsledkami a len skromnými účinkami na albuminúriu.</p>
 
-<p>Z toho zdroj vyvodzuje, že aktuálne sú dôkazy silnejšie pre nsMRA — a to je presne dôvod, prečo sa v tejto diskusii stavia finerenón do centra pozornosti.</p>
+<p>Zdroj z toho vyvodzuje, že dôkazy sú v súčasnosti silnejšie pre nsMRA, a preto je v diskusii v centre pozornosti finerenón.</p>
 
 <h2>8. Terapia „upstream“: inhibítory aldosterónsyntázy a prebiehajúce fázy výskumu</h2>
 
-<p>Zdroj opisuje pre nefrológa obdobie nezvyčajne bohaté na nové dáta: popri finerenóne pribúdajú údaje z tried liekov zameraných na aldosterónovú os, no odlišným mechanizmom. Namiesto blokovania receptora ide o zásah do tvorby aldosterónu.</p>
+<p>Podľa zdroja prežíva nefrológia obdobie nezvyčajne bohaté na nové údaje: popri finerenóne pribúdajú dáta o liekoch, ktoré ovplyvňujú aldosterónovú os iným mechanizmom. Namiesto blokovania receptora ide o zásah do tvorby aldosterónu.</p>
 
-<p>Ako mechanistická logika sa uvádza, že inhibícia aldosterónsyntázy môže znížiť zápal, znížiť podocytový zápal, znížiť albuminúriu, a tým následne aj tubulárne/glomerulárne zranenie a progresiu do terminálneho štádia CKD — a zároveň môže znížiť aj hypertenziu.</p>
+<p>Mechanisticky má inhibícia aldosterónsyntázy znížiť zápal vrátane podocytového a albuminúriu, a tým aj tubulárne a glomerulárne poškodenie a progresiu do terminálneho štádia CKD; zároveň môže znížiť krvný tlak.</p>
 
-<p>Zdroj spomína tri prebiehajúce programy s plánovanými výsledkami v horizonte rokov:</p>
+<p>Zdroj spomína tri prebiehajúce programy, ktorých výsledky sa očakávajú v najbližších rokoch:</p>
 
 <ul>
   <li><strong>FigHTN</strong> s baxdrostatom pri CKD s nekontrolovanou hypertenziou (pričom sa zdôrazňuje, že tieto lieky môžu znižovať krvný tlak),</li>
@@ -183,35 +181,35 @@ $articles[] = [
   <li><strong>EASi-KIDNEY</strong>: vicadrostat plus štandardná starostlivosť, konkrétne vicadrostat a empagliflozín.</li>
 </ul>
 
-<p>V texte sa uvádza, že do budúcna bude potrebné vybrať správne fenotypy a indikovať liečbu pacientom s najväčším očakávaným benefitom.</p>
+<p>Do budúcna bude podľa zdroja potrebné vyberať správne fenotypy a liečbu indikovať pacientom s najväčším očakávaným prínosom.</p>
 
 <h2>9. Endotelínové receptory a „vypnutie“ zápalových kaskád</h2>
 
 <p>Ďalšou triedou liekov v diskusii sú <strong>antagonisty endotelínových receptorov</strong>.</p>
 
-<p>Zdroj upozorňuje, že endotelínové receptory majú dve zložky — <strong>ETA</strong> a <strong>ETB</strong>. V interpretácii zdroja blokáda ETA vedie k zníženiu albuminúrie a zápalu, zatiaľ čo ETB môže zvyšovať retenciu tekutín.</p>
+<p>Endotelínové receptory majú dva podtypy – <strong>ETA</strong> a <strong>ETB</strong>. Podľa zdroja blokáda ETA vedie k zníženiu albuminúrie a zápalu, zatiaľ čo ETB môže zvyšovať retenciu tekutín.</p>
 
 <p>V klinickom vývoji sa spomína <strong>zibotentan</strong> (fáza 3) a kombinácia zibotentanu s dapagliflozínom. Podľa zdroja by výsledky mali prísť v roku 2027.</p>
 
-<p>Zápalová logika v texte sa opiera o blokádu následnej signalizácie spojenej s NF-κB a o pokles zápalových cytokínov. V rámci kombinácií to má byť „ďalší nástroj“ popri finerenóne, SGLT2 a inhibícii RAAS.</p>
+<p>Protizápalový účinok sa vysvetľuje blokádou následnej signalizácie spojenej s NF-κB a poklesom zápalových cytokínov. V kombinovanej liečbe by šlo o ďalší nástroj popri finerenóne, SGLT2 inhibítoroch a inhibícii RAAS.</p>
 
 <h2>10. Atrasentan: ďalší príspevok do algoritmov pri IgA nefropatii</h2>
 
 <p>Zdroj spomína aj liek <strong>atrasentan</strong>, pre ktorý sa očakávajú výsledky v populácii <strong>IgA nefropatie</strong>.</p>
 
-<p>Pozoruhodné je, že podľa prezentácie nejde o liek „výlučne pre IgA“, ale skôr o liek pri CKD, ktorý má význam pre populáciu s IgA nefropatiou. Zmysel je v tom, že zníženie albuminúrie sa v tejto logike spája so znížením zápalu, podocytového a tubulárneho poškodenia a s nižším rizikom progresie do terminálneho štádia CKD.</p>
+<p>Podľa prezentácie nejde o liek „výlučne pre IgA“, ale skôr o liek pri CKD, ktorý má význam aj pre pacientov s IgA nefropatiou. Zníženie albuminúrie sa v tejto logike spája so znížením zápalu, podocytového a tubulárneho poškodenia a s nižším rizikom progresie do terminálneho štádia CKD.</p>
 
 <h2>11. Kam smeruje štandard: kombinovaná, etiológiu zohľadňujúca a rizikovo orientovaná terapia</h2>
 
-<p>V závere zdroj sumarizuje veľkú tendenciu: posun smerom ku <strong>kombinovanej terapii</strong> ako novému štandardu.</p>
+<p>V závere zdroj opisuje celkový trend: posun ku <strong>kombinovanej terapii</strong> ako novému štandardu.</p>
 
-<p>Argumentácia vychádza z toho, že progresia CKD je multifaktoriálna a vyžaduje zásah do viacerých mechanizmov. Pri diabetickej CKD sa v diskusii explicitne uvádza, že existujú štyri overené terapie znižujúce riziko zlyhania obličiek aj KV riziko: <strong>inhibícia RAAS, inhibítory SGLT2, nesteroidné MRA a agonisty GLP-1 receptora</strong>.</p>
+<p>Progresia CKD je multifaktoriálna a vyžaduje zásah do viacerých mechanizmov. Pri diabetickej CKD sa v diskusii explicitne uvádza, že existujú štyri overené terapie znižujúce riziko zlyhania obličiek aj KV riziko: <strong>inhibícia RAAS, inhibítory SGLT2, nesteroidné MRA a agonisty GLP-1 receptora</strong>.</p>
 
 <p>Pri nediabetickej CKD sú v texte ako piliere uvedené inhibícia RAAS, SGLT2 inhibícia a teraz aj nsMRA. Do budúcna sa očakávajú ďalšie možnosti.</p>
 
-<p>Zdroj zároveň kladie dôraz na špecifikum nediabetickej CKD: treba riešiť aj <strong>príčinu</strong> (terapia špecifická pre etiológiu), nielen následky. Pri niektorých imunologických ochoreniach obličiek, najmä pri IgA nefropatii, sa zdôrazňuje smerovanie k terapiám špecifickým pre etiológiu.</p>
+<p>Pri nediabetickej CKD treba podľa zdroja riešiť aj <strong>príčinu</strong> (terapia špecifická pre etiológiu), nielen následky; pri niektorých imunologických ochoreniach obličiek, najmä pri IgA nefropatii, sa liečba k takýmto terapiám už posúva.</p>
 
-<p>Zároveň sa zdôrazňuje, že pacienti s najvyšším rizikom budú mať najväčší absolútny benefit a že treba zlepšiť identifikáciu vysokorizikových jedincov a liečiť ich včasnejšie a intenzívnejšie.</p>
+<p>Pacienti s najvyšším rizikom budú mať najväčší absolútny prínos, preto treba lepšie identifikovať vysokorizikových jedincov a liečiť ich včasnejšie a intenzívnejšie.</p>
 
 <h2>12. Praktické implikácie pre nefrológa (vychádzajúce z logiky zdroja)</h2>
 
@@ -227,9 +225,9 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>Podľa zdroja sa pri nediabetickej CKD mení paradigma: hemodynamické cesty sú dôležité, ale nie sú kompletné. Aldosterónová os a nehemodynamické mechanizmy zápalu a fibrózy vytvárajú racionálny cieľ pre terapiu nsMRA. Dôkazy z FIND-CKD podporujú finerenón ako liek, ktorý spomaľuje pokles GFR a prekladá sa aj do klinicky významných renálnych a KV výsledkov vrátane veľkej glomerulárnej podskupiny. Program INFINITY potom posilňuje konzistentnosť účinku naprieč spektrom CKD.</p>
+<p>Podľa zdroja sa pri nediabetickej CKD mení paradigma: hemodynamické mechanizmy sú dôležité, ale nevysvetľujú všetko. Aldosterónová os a nehemodynamické mechanizmy zápalu a fibrózy vytvárajú racionálny cieľ pre terapiu nsMRA. Dôkazy z FIND-CKD podporujú finerenón ako liek, ktorý spomaľuje pokles GFR a zlepšuje aj klinicky významné renálne a KV výsledky vrátane veľkej glomerulárnej podskupiny. Program INFINITY podporuje konzistentnosť účinku v celom spektre CKD.</p>
 
-<p>Súčasne prebiehajú ďalšie výskumné línie, ktoré idú „vyššie v kaskáde“ (inhibítory aldosterónsyntázy) alebo zasahujú do endotelínovej signalizácie. V horizonte rokov má zmysel očakávať posun ku kombinovanej a fenotypovo aj etiologicky riadenej liečbe tak, aby sa pacientom s najvyšším reziduálnym rizikom podarilo predĺžiť čas do renálnej „cieľovej udalosti“ a znížiť KV úmrtnosť.</p>
+<p>Súčasne prebiehajú ďalšie výskumné línie, ktoré idú „vyššie v kaskáde“ (inhibítory aldosterónsyntázy) alebo zasahujú do endotelínovej signalizácie. V najbližších rokoch možno očakávať posun ku kombinovanej a fenotypovo aj etiologicky riadenej liečbe tak, aby sa pacientom s najvyšším reziduálnym rizikom podarilo predĺžiť čas do renálnej „cieľovej udalosti“ a znížiť KV úmrtnosť.</p>
 
 <hr>
 

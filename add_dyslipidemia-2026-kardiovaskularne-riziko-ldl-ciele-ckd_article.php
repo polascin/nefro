@@ -27,7 +27,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Aktualizácia ESC/EAS z roku 2025 ponechala cieľové hodnoty LDL cholesterolu, ale spresnila hodnotenie rizika, skorú kombinovanú liečbu po akútnom koronárnom syndróme aj nové lieky. Čo z toho platí pri CKD a dialýze?',
     'content'      => <<<'HTML'
-<figure><a href="img/dyslipidemia-2026-kardiovaskularne-riziko-ldl-ciele-ckd.webp" rel="noopener noreferrer" target="_blank"><img src="img/dyslipidemia-2026-kardiovaskularne-riziko-ldl-ciele-ckd.webp" alt="Cieva s plakom a dve prahové čiary nad sebou; nižšia z nich prechádza popri obličke" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Prítomnosť chronickej choroby obličiek posúva cieľovú hodnotu nižšie — riziko sa neposudzuje izolovane od obličiek.</figcaption></figure>
+<figure><a href="img/dyslipidemia-2026-kardiovaskularne-riziko-ldl-ciele-ckd.webp" rel="noopener noreferrer" target="_blank"><img src="img/dyslipidemia-2026-kardiovaskularne-riziko-ldl-ciele-ckd.webp" alt="Cieva s plakom a dve prahové čiary nad sebou; nižšia z nich prechádza popri obličke" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Prítomnosť chronickej choroby obličiek posúva cieľovú hodnotu nižšie – riziko sa neposudzuje izolovane od obličiek.</figcaption></figure>
 
 <p class="article-dek"><em>Aterogénne lipoproteíny obsahujúce apolipoproteín B majú kauzálnu úlohu pri vzniku aterosklerotického kardiovaskulárneho ochorenia. Aktualizácia odporúčaní ESC a EAS z októbra 2025 nemení cieľové hodnoty LDL cholesterolu z roku 2019, ale spresňuje hodnotenie rizika, zavádza skorú kombinovanú liečbu po akútnom koronárnom syndróme a rozširuje liekové možnosti. Chronická choroba obličiek pritom zostáva osobitnou situáciou, v ktorej sa rozhodnutie nemôže opierať iba o koncentráciu LDL cholesterolu.</em></p>
 
@@ -313,7 +313,7 @@ $articles[] = [
 
 <h2>Kyselina bempedoová</h2>
 
-<p>Kyselina bempedoová inhibuje ATP-citrátlyázu, enzým uložený v metabolickej dráhe pred HMG-CoA reduktázou. Aktivuje sa prevažne v pečeni, nie v kostrovom svalstve, čo môže byť výhodné u pacientov so svalovými ťažkosťami pri statínoch.</p>
+<p>Kyselina bempedoová inhibuje ATP-citrátlyázu, enzým, ktorý v metabolickej dráhe pôsobí pred HMG-CoA reduktázou. Aktivuje sa prevažne v pečeni, nie v kostrovom svalstve, čo môže byť výhodné u pacientov so svalovými ťažkosťami pri statínoch.</p>
 
 <p>Približný pokles LDL cholesterolu je:</p>
 
@@ -438,7 +438,7 @@ $articles[] = [
   <li>ESC a EAS zdôrazňujú dosiahnutie intenzity poklesu primeranej riziku.</li>
 </ul>
 
-<p>Treba pripomenúť, že odporúčanie KDIGO pre lipidy pochádza z roku 2013 a nebolo odvtedy aktualizované, zatiaľ čo európske odporúčania sa medzitým dvakrát revidovali. V praxi je preto rozumné oba prístupy kombinovať s prihliadnutím na štádium CKD, vek, aterosklerotické ochorenie, liekové interakcie a toleranciu.</p>
+<p>Odporúčanie KDIGO pre lipidy pochádza z roku 2013 a odvtedy nebolo aktualizované, zatiaľ čo európske odporúčania sa medzitým dvakrát revidovali. V praxi je preto rozumné oba prístupy kombinovať s prihliadnutím na štádium CKD, vek, aterosklerotické ochorenie, liekové interakcie a toleranciu.</p>
 
 <h2>Dialýza</h2>
 
@@ -584,7 +584,7 @@ $articles[] = [
 
 <p>Pri chronickej chorobe obličiek je hypolipidemická liečba mimoriadne dôležitá pred začatím dialýzy. Pri udržiavacej dialýze však neskoré začatie statínu neprinieslo v hlavných štúdiách rovnaký výsledkový prínos. Rozhodovanie preto musí rozlišovať nedialyzovanú CKD, dialýzu a transplantáciu.</p>
 
-<p><strong>Najpresnejšie klinické posolstvo znie: lieči sa aterosklerotické riziko pacienta, nie izolované číslo v lipidovom profile. LDL cholesterol je však hlavný kauzálny a terapeuticky ovplyvniteľný cieľ.</strong></p>
+<p><strong>Lieči sa aterosklerotické riziko pacienta, nie izolované číslo v lipidovom profile. LDL cholesterol je však hlavný kauzálny a terapeuticky ovplyvniteľný cieľ.</strong></p>
 </div>
 
 <hr>

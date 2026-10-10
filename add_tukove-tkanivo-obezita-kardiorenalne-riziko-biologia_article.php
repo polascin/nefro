@@ -24,11 +24,11 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Rozloženie tuku a jeho funkčná kvalita určujú metabolické riziko viac než index telesnej hmotnosti. Prehľad poznatkov o viscerálnom a podkožnom tuku, komunikácii cez mikroRNA a termogenéze — s dôrazom na to, čo z toho pre prax zatiaľ nevyplýva.',
+    'excerpt'      => 'Rozloženie tuku a jeho funkčná kvalita určujú metabolické riziko viac než index telesnej hmotnosti. Prehľad poznatkov o viscerálnom a podkožnom tuku, komunikácii cez mikroRNA a termogenéze – s dôrazom na to, čo z toho pre prax zatiaľ nevyplýva.',
     'content'      => <<<'HTML'
-<figure><a href="img/tukove-tkanivo-obezita-kardiorenalne-riziko-biologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/tukove-tkanivo-obezita-kardiorenalne-riziko-biologia.webp" alt="Aktívne tukové tkanivo s vnútorným pohybom buniek, vysielajúce signálne prúdy k srdcu a obličke" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Tukové tkanivo nie je sklad — je zdrojom signálov, ktoré menia srdce aj obličky.</figcaption></figure>
+<figure><a href="img/tukove-tkanivo-obezita-kardiorenalne-riziko-biologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/tukove-tkanivo-obezita-kardiorenalne-riziko-biologia.webp" alt="Aktívne tukové tkanivo s vnútorným pohybom buniek, vysielajúce signálne prúdy k srdcu a obličke" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Tukové tkanivo nie je sklad, ale zdroj signálov, ktoré menia srdce aj obličky.</figcaption></figure>
 
-<p class="article-dek"><em>Metabolické riziko neurčuje len celkové množstvo tuku, ale aj jeho rozloženie, schopnosť bezpečne ukladať energetický nadbytok a endokrinná aktivita. Nové výskumné smery — pohlavne špecifické profily tukového tkaniva, komunikácia so srdcom cez mikroRNA a ovplyvňovanie termogenézy výživou — sú biologicky zaujímavé. Pre klinickú prax však zatiaľ nepredstavujú podklad na zmenu postupov.</em></p>
+<p class="article-dek"><em>Metabolické riziko neurčuje len celkové množstvo tuku, ale aj jeho rozloženie, schopnosť bezpečne ukladať energetický nadbytok a endokrinná aktivita. Nové výskumné smery – pohlavne špecifické profily tukového tkaniva, komunikácia so srdcom cez mikroRNA a ovplyvňovanie termogenézy výživou – sú biologicky zaujímavé. Pre klinickú prax však zatiaľ nepredstavujú podklad na zmenu postupov.</em></p>
 
 <p>Obezita sa tradične posudzuje podľa telesnej hmotnosti a indexu telesnej hmotnosti. Takýto prístup je praktický, ale biologicky neúplný. Význam má aj anatomické rozloženie tuku, schopnosť tukového tkaniva bezpečne ukladať energetický nadbytok, jeho zápalová a endokrinná aktivita, pohlavie, vek a interakcia s ďalšími orgánmi.</p>
 
@@ -48,17 +48,17 @@ $articles[] = [
 
 <p>Nadmerné množstvo viscerálneho tuku sa spája s vyšším rizikom inzulínovej rezistencie, diabetu 2. typu, aterogénnej dyslipidémie, artériovej hypertenzie, steatotickej choroby pečene spojenej s metabolickou dysfunkciou, kardiovaskulárnych ochorení a chronickej choroby obličiek.</p>
 
-<p>Túto asociáciu nevysvetľuje jediný mechanizmus. Podieľa sa na nej zvýšený tok voľných mastných kyselín do portálneho obehu, zápalová aktivita, endotelová dysfunkcia, nepriaznivý profil adipokínov — a tiež skutočnosť, že viscerálna adipozita je <em>markerom</em> širšej metabolickej dysfunkcie, nie nutne jej jedinou príčinou.</p>
+<p>Túto asociáciu nevysvetľuje jediný mechanizmus. Podieľa sa na nej zvýšený tok voľných mastných kyselín do portálneho obehu, zápalová aktivita, endotelová dysfunkcia, nepriaznivý profil adipokínov – a tiež skutočnosť, že viscerálna adipozita je <em>markerom</em> širšej metabolickej dysfunkcie, nie nutne jej jedinou príčinou.</p>
 
 <h3>Podkožné tukové tkanivo</h3>
 
-<p>Pri zachovanej schopnosti vytvárať nové adipocyty môže podkožný tuk fungovať ako relatívne bezpečný zásobník energetického nadbytku. Tvrdenie, že je „ochranný“, však nemožno absolutizovať — aj podkožné tkanivo môže hypertrofovať, fibrotizovať a stať sa zápalovo a metabolicky dysfunkčným. Rozhodujúca nie je iba poloha, ale <strong>biologická kvalita a schopnosť ďalšej expanzie</strong>.</p>
+<p>Pri zachovanej schopnosti vytvárať nové adipocyty môže podkožný tuk fungovať ako relatívne bezpečný zásobník energetického nadbytku. Tvrdenie, že je „ochranný“, však nemožno absolutizovať – aj podkožné tkanivo môže hypertrofovať, fibrotizovať a stať sa zápalovo a metabolicky dysfunkčným. Rozhodujúca nie je iba poloha, ale <strong>biologická kvalita a schopnosť ďalšej expanzie</strong>.</p>
 
 <h2>Rozdiely medzi mužmi a ženami</h2>
 
-<p>Muži majú v priemere vyšší podiel viscerálneho tuku, zatiaľ čo ženy pred menopauzou častejšie ukladajú tuk podkožne, najmä v gluteofemorálnej oblasti. Ženy preto môžu mať vyšší celkový podiel telesného tuku bez proporcionálne vyššieho kardiometabolického rizika — biológiu tohto „hruškovitého“ fenotypu podrobne zhrnuli Kalypso Karastergiouová a spolupracovníci.</p>
+<p>Muži majú v priemere vyšší podiel viscerálneho tuku, zatiaľ čo ženy pred menopauzou častejšie ukladajú tuk podkožne, najmä v gluteofemorálnej oblasti. Ženy preto môžu mať vyšší celkový podiel telesného tuku bez proporcionálne vyššieho kardiometabolického rizika – biológiu tohto „hruškovitého“ fenotypu podrobne zhrnuli Kalypso Karastergiouová a spolupracovníci.</p>
 
-<p>Tieto rozdiely ovplyvňujú pohlavné hormóny, distribúcia adrenergných receptorov, regionálna lipolytická aktivita, diferenciácia adipocytov, genetické a epigenetické mechanizmy, menopauza, vek, pohybová aktivita a výživa. Po menopauze sa distribúcia často posúva k centrálnej a viscerálnej adipozite. <strong>Biologické pohlavie však nie je deterministickým prediktorom</strong> — medzijednotlivcová variabilita je výrazná.</p>
+<p>Tieto rozdiely ovplyvňujú pohlavné hormóny, distribúcia adrenergných receptorov, regionálna lipolytická aktivita, diferenciácia adipocytov, genetické a epigenetické mechanizmy, menopauza, vek, pohybová aktivita a výživa. Po menopauze sa distribúcia často posúva k centrálnej a viscerálnej adipozite. <strong>Biologické pohlavie však nie je deterministickým prediktorom</strong> – medzijednotlivcová variabilita je výrazná.</p>
 
 <h3>Nové transkriptomické údaje</h3>
 
@@ -68,11 +68,11 @@ $articles[] = [
 
 <p>Výsledky podporujú hypotézu, že dysfunkcia tukového tkaniva pri inzulínovej rezistencii nie je jednotným stavom a jej molekulový obraz sa môže líšiť podľa pohlavia a depa.</p>
 
-<p><strong>Čo z toho zatiaľ nevyplýva:</strong> súbor mal 41 osôb so širokým vekovým rozpätím a z dostupného zhrnutia nemožno posúdiť výber účastníkov, menopauzálny stav žien, liečbu, kontrolu zmätočných faktorov ani korekciu na viacnásobné testovanie. Sekvenovanie RNA celého tkaniva navyše zachytáva zmes adipocytov, imunitných, endotelových a stromálnych buniek — zmena génovej expresie preto <strong>nemusí znamenať zmenu v adipocytoch</strong>, ale aj odlišné bunkové zloženie vzorky. Ide o hypotézotvorné údaje vyžadujúce replikáciu.</p>
+<p><strong>Čo z toho zatiaľ nevyplýva:</strong> súbor mal 41 osôb so širokým vekovým rozpätím a z dostupného zhrnutia nemožno posúdiť výber účastníkov, menopauzálny stav žien, liečbu, kontrolu mätúcich faktorov ani korekciu na viacnásobné testovanie. Sekvenovanie RNA celého tkaniva navyše zachytáva zmes adipocytov, imunitných, endotelových a stromálnych buniek – zmena génovej expresie preto <strong>nemusí znamenať zmenu v adipocytoch</strong>, ale aj odlišné bunkové zloženie vzorky. Ide o hypotézotvorné údaje vyžadujúce replikáciu.</p>
 
 <h2>Komunikácia s ostatnými orgánmi cez mikroRNA</h2>
 
-<p>Tukové tkanivo komunikuje so vzdialenými orgánmi aj prostredníctvom extracelulárnych vezikúl prenášajúcich mikroRNA — krátke nekódujúce molekuly regulujúce génovú expresiu. Že ide o fyziologicky významný mechanizmus, doložili Thomas Thomou a spolupracovníci: mikroRNA pochádzajúce z tukového tkaniva regulujú expresiu génov v iných tkanivách.</p>
+<p>Tukové tkanivo komunikuje so vzdialenými orgánmi aj prostredníctvom extracelulárnych vezikúl prenášajúcich mikroRNA – krátke nekódujúce molekuly regulujúce génovú expresiu. Že ide o fyziologicky významný mechanizmus, doložili Thomas Thomou a spolupracovníci: mikroRNA pochádzajúce z tukového tkaniva regulujú expresiu génov v iných tkanivách.</p>
 
 <p>Enzým DICER je nevyhnutný na tvorbu zrelých mikroRNA. V experimentálnych modeloch vedie jeho nedostatok v adipocytoch k čiastočnej lipodystrofii, inzulínovej rezistencii, poruche hnedého tukového tkaniva, zrýchlenej bunkovej senescencii a zmenám cirkulujúcich mikroRNA.</p>
 
@@ -90,7 +90,7 @@ $articles[] = [
 
 <h3>Môže zvýšenie termogenézy liečiť obezitu?</h3>
 
-<p>Uvádza sa, že chladom alebo stravou indukovaná termogenéza môže zvýšiť energetický výdaj približne o 5 až 10 %. Takýto údaj treba čítať veľmi opatrne — veľkosť účinku závisí od metodiky, trvania expozície, okolitej teploty, telesnej kompozície, množstva aktívneho hnedého tuku a adaptačných mechanizmov.</p>
+<p>Uvádza sa, že chladom alebo stravou indukovaná termogenéza môže zvýšiť energetický výdaj približne o 5 až 10 %. Tento údaj treba čítať veľmi opatrne: veľkosť účinku závisí od metodiky, trvania expozície, okolitej teploty, telesnej kompozície, množstva aktívneho hnedého tuku a adaptačných mechanizmov.</p>
 
 <p>Organizmus navyše zvýšený výdaj kompenzuje väčším príjmom potravy, znížením spontánnej pohybovej aktivity, zmenami bazálneho metabolizmu a hormonálnou adaptáciou. <strong>Experimentálne zvýšenie termogenézy preto nemožno prepočítať na očakávaný úbytok hmotnosti.</strong></p>
 
@@ -100,7 +100,7 @@ $articles[] = [
 
 <p>V zvieracích štúdiách sa podávanie genisteínu alebo sójovej bielkoviny spájalo s vyššou expresiou termogénnych markerov, väčším počtom béžových adipocytov, zvýšenou spotrebou kyslíka, menšími adipocytmi a nižším prírastkom hmotnosti. V izolovaných ľudských adipocytoch sa pozorovalo zvýšenie mitochondriálnych a termogénnych markerov, pričom odpoveď bola slabšia v bunkách od ľudí s nadváhou alebo obezitou.</p>
 
-<p><strong>Čo tieto výsledky neznamenajú:</strong> preklinické údaje nedokazujú, že genisteín alebo sójové doplnky spôsobujú klinicky významné a udržateľné chudnutie u ľudí. Nemožno z nich odvodiť účinnú dávku, dlhodobú bezpečnosť koncentrovaných doplnkov, veľkosť očakávaného úbytku hmotnosti, účinok na kardiovaskulárne alebo renálne príhody ani nadradenosť nad štandardnou liečbou obezity. Sója môže byť súčasťou kvalitnej stravy, ale <strong>genisteín nemožno odporučiť ako liečbu obezity</strong> — a biologická aktivita izolovaného doplnku sa navyše nemusí zhodovať s účinkom celej potraviny.</p>
+<p><strong>Čo tieto výsledky neznamenajú:</strong> preklinické údaje nedokazujú, že genisteín alebo sójové doplnky spôsobujú klinicky významné a udržateľné chudnutie u ľudí. Nemožno z nich odvodiť účinnú dávku, dlhodobú bezpečnosť koncentrovaných doplnkov, veľkosť očakávaného úbytku hmotnosti, účinok na kardiovaskulárne alebo renálne príhody ani nadradenosť nad štandardnou liečbou obezity. Sója môže byť súčasťou kvalitnej stravy, ale <strong>genisteín nemožno odporučiť ako liečbu obezity</strong> – a biologická aktivita izolovaného doplnku sa navyše nemusí zhodovať s účinkom celej potraviny.</p>
 
 <h2>Prečo BMI nestačí</h2>
 
@@ -108,13 +108,13 @@ $articles[] = [
 
 <p>Pri klinickom hodnotení je preto vhodné doplniť ho aspoň o obvod pása a posúdenie metabolických komplikácií; podľa situácie možno využiť zobrazovacie alebo bioimpedančné metódy s vlastnými obmedzeniami.</p>
 
-<p>Pojem „metabolicky zdravá obezita“ treba používať opatrne — neprítomnosť aktuálnych metabolických odchýlok neznamená nulové dlhodobé riziko a tento fenotyp môže časom prejsť do metabolicky nezdravého stavu.</p>
+<p>Pojem „metabolicky zdravá obezita“ treba používať opatrne – neprítomnosť aktuálnych metabolických odchýlok neznamená nulové dlhodobé riziko a tento fenotyp môže časom prejsť do metabolicky nezdravého stavu.</p>
 
 <h2>Význam pre nefrologickú prax</h2>
 
 <p>Obezita ovplyvňuje obličky hemodynamickými, metabolickými, zápalovými aj mechanickými cestami. Viscerálna a ektopická adipozita sa spájajú s aktiváciou sympatikového nervového systému a systému renín-angiotenzín-aldosterón, hyperinzulinémiou a retenciou sodíka, <strong>glomerulárnou hyperfiltráciou a intraglomerulárnou hypertenziou</strong>, albuminúriou, fokálnou segmentovou glomerulosklerózou asociovanou s obezitou, progresiou diabetickej a hypertenznej choroby obličiek, vyšším rizikom nefrolitiázy a so srdcovým zlyhávaním a kardiorenálnym syndrómom.</p>
 
-<p>Index telesnej hmotnosti býva u pacientov s chronickou chorobou obličiek osobitne zavádzajúci. Výsledok ovplyvňuje retencia tekutín, sarkopénia, amputácie aj rozdielne zastúpenie svalovej a tukovej hmoty. <strong>Pacient môže mať normálny index telesnej hmotnosti a súčasne vysoký podiel viscerálneho tuku a nízku svalovú hmotu</strong> — kombináciu, ktorá je prognosticky nepriaznivá a bežným meraním úplne unikne.</p>
+<p>Index telesnej hmotnosti býva u pacientov s chronickou chorobou obličiek osobitne zavádzajúci. Výsledok ovplyvňuje retencia tekutín, sarkopénia, amputácie aj rozdielne zastúpenie svalovej a tukovej hmoty. <strong>Pacient môže mať normálny index telesnej hmotnosti a súčasne vysoký podiel viscerálneho tuku a nízku svalovú hmotu</strong> – kombináciu, ktorá je prognosticky nepriaznivá a bežným meraním úplne unikne.</p>
 
 <h3>Obezita u dialyzovaných pacientov</h3>
 
@@ -126,7 +126,7 @@ $articles[] = [
 
 <ol>
   <li><strong>Metabolické riziko nemožno hodnotiť iba podľa hmotnosti.</strong> Potrebné je zohľadniť obvod pása, tlak krvi, glykemický a lipidový profil, pečeňové a renálne parametre a telesnú kompozíciu.</li>
-  <li><strong>Viscerálna adipozita má spravidla nepriaznivejší profil než gluteofemorálny podkožný tuk</strong> — ani podkožné tkanivo však nie je za každých okolností metabolicky neutrálne.</li>
+  <li><strong>Viscerálna adipozita má spravidla nepriaznivejší profil než gluteofemorálny podkožný tuk</strong> – ani podkožné tkanivo však nie je za každých okolností metabolicky neutrálne.</li>
   <li><strong>Pohlavie a vek ovplyvňujú distribúciu aj vlastnosti tuku</strong>, no malá transkriptomická štúdia zatiaľ neumožňuje zaviesť pohlavne špecifickú molekulovú liečbu.</li>
   <li><strong>Komunikácia cez mikroRNA je biologicky hodnoverná</strong>, jej terapeutické využitie však nebolo klinicky potvrdené.</li>
   <li><strong>Aktivácia hnedého alebo béžového tuku je perspektívnym smerom</strong>, ktorý zatiaľ nenahrádza intervencie s preukázanou klinickou účinnosťou.</li>
@@ -139,15 +139,15 @@ $articles[] = [
 
 <p>Nové výsledky naznačujú, že dysfunkcia tukového tkaniva môže mať pohlavne a anatomicky špecifické molekulové profily, že medzi tukovým tkanivom a srdcom prebieha komunikácia prostredníctvom mikroRNA a že genisteín dokáže aktivovať termogénny program adipocytov.</p>
 
-<p>Tieto poznatky však zatiaľ neodôvodňujú molekulové testovanie tukového tkaniva, terapeutickú manipuláciu mikroRNA ani používanie genisteínu ako lieku na obezitu. Pre klinickú prax zostáva najdôležitejšie hodnotenie distribúcie tuku, metabolických a orgánových komplikácií a používanie intervencií s preukázaným dlhodobým prínosom. Jediné bezprostredne použiteľné posolstvo je pritom najstaršie: <strong>samotný index telesnej hmotnosti nestačí</strong> — a u nefrologického pacienta klame najviac.</p>
+<p>Tieto poznatky však zatiaľ neodôvodňujú molekulové testovanie tukového tkaniva, terapeutickú manipuláciu mikroRNA ani používanie genisteínu ako lieku na obezitu. Pre klinickú prax zostáva najdôležitejšie hodnotenie distribúcie tuku, metabolických a orgánových komplikácií a používanie intervencií s preukázaným dlhodobým prínosom. Jediné bezprostredne použiteľné posolstvo je pritom najstaršie: <strong>samotný index telesnej hmotnosti nestačí</strong> – a u nefrologického pacienta klame najviac.</p>
 
 <h3>Súvisiace články</h3>
 
 <ul>
-  <li><a href="article.php?slug=obezita-v-nefrologii-skrining-manazment-dialyza-transplantacia">Obezita v nefrológii</a> — skríning, manažment, dialýza a transplantácia.</li>
-  <li><a href="article.php?slug=ckm-syndrom-stadia-skrining-liecba-usmernenie-2026">CKM syndróm: štádiá 0 až 4</a> — kardiovaskulárno-obličkovo-metabolické riziko.</li>
+  <li><a href="article.php?slug=obezita-v-nefrologii-skrining-manazment-dialyza-transplantacia">Obezita v nefrológii</a> – skríning, manažment, dialýza a transplantácia.</li>
+  <li><a href="article.php?slug=ckm-syndrom-stadia-skrining-liecba-usmernenie-2026">CKM syndróm: štádiá 0 až 4</a> – kardiovaskulárno-obličkovo-metabolické riziko.</li>
   <li><a href="article.php?slug=farmakologicka-liecba-obezity-pokrocile-ckd-dialyza">Farmakologická liečba obezity pri pokročilej CKD a dialýze</a>.</li>
-  <li><a href="article.php?slug=frailty-ckd-vyziva-pohyb-stisk-ruky">Krehkosť pri CKD</a> — telesná kompozícia a funkčné hodnotenie.</li>
+  <li><a href="article.php?slug=frailty-ckd-vyziva-pohyb-stisk-ruky">Krehkosť pri CKD</a> – telesná kompozícia a funkčné hodnotenie.</li>
 </ul>
 
 <hr>
@@ -163,7 +163,7 @@ $articles[] = [
   <li><strong>Csaba P. Kovesdy, Susan L. Furth, Carmine Zoccali; World Kidney Day Steering Committee.</strong> <em>Obesity and kidney disease: hidden consequences of the epidemic.</em> Kidney International. 2017;91(2):260–262. doi: 10.1016/j.kint.2016.10.019. <a href="https://pubmed.ncbi.nlm.nih.gov/28010887/" target="_blank" rel="noopener noreferrer">PubMed</a>.</li>
 </ol>
 
-<p><em><strong>Poznámka k dôkazom:</strong> Bibliografické údaje a kompletné autorstvo všetkých piatich recenzovaných prác boli overené v Europe PMC. <strong>Kongresové údaje prezentované na International Congress on Obesity 2026 — transkriptomická analýza 41 biopsií, experimenty s mikroRNA vo vzťahu k srdcu vrátane miR-92a a miR-222, ako aj údaj o zvýšení energetického výdaja o 5 až 10 % — nebolo možné overiť proti publikovanému recenzovanému textu</strong> a treba ich do zverejnenia úplnej publikácie považovať za predbežné. Práce Thomoua, Moriho a Fuentesovej-Romerovej sú citované ako publikované doklady o samotných mechanizmoch (medziorgánový prenos mikroRNA, prehľad extracelulárnych mikroRNA, aktivácia promótora <em>Ucp1</em> genisteínom), nie ako zdroj kongresových zistení. Časť o význame pre nefrologickú prax, výhrady k paradoxu obezity a upozornenie na zavádzajúcu hodnotu indexu telesnej hmotnosti pri chronickej chorobe obličiek sú <strong>vlastným odborným spracovaním</strong> opretým o etablované poznatky.</em></p>
+<p><em><strong>Poznámka k dôkazom:</strong> Bibliografické údaje a kompletné autorstvo všetkých piatich recenzovaných prác boli overené v Europe PMC. <strong>Kongresové údaje prezentované na International Congress on Obesity 2026 – transkriptomická analýza 41 biopsií, experimenty s mikroRNA vo vzťahu k srdcu vrátane miR-92a a miR-222, ako aj údaj o zvýšení energetického výdaja o 5 až 10 % – nebolo možné overiť proti publikovanému recenzovanému textu</strong> a treba ich do zverejnenia úplnej publikácie považovať za predbežné. Práce Thomoua, Moriho a Fuentesovej-Romerovej sú citované ako publikované doklady o samotných mechanizmoch (medziorgánový prenos mikroRNA, prehľad extracelulárnych mikroRNA, aktivácia promótora <em>Ucp1</em> genisteínom), nie ako zdroj kongresových zistení. Časť o význame pre nefrologickú prax, výhrady k paradoxu obezity a upozornenie na zavádzajúcu hodnotu indexu telesnej hmotnosti pri chronickej chorobe obličiek sú <strong>vlastným odborným spracovaním</strong> opretým o etablované poznatky.</em></p>
 HTML,
 ];
 

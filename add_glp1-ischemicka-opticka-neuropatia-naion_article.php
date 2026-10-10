@@ -30,11 +30,11 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Diskutuje sa o možnej súvislosti medzi agonistami GLP-1 receptorov a neartériitickou prednou ischemickou optickou neuropatiou (NAION). Dostupné dáta sú observačné a nepreukazujú kauzalitu — namieste je informovaná ostražitosť, nie panika.',
+    'excerpt'      => 'Diskutuje sa o možnej súvislosti medzi agonistami GLP-1 receptorov a neartériitickou prednou ischemickou optickou neuropatiou (NAION). Dostupné dáta sú observačné a nepreukazujú kauzalitu – namieste je informovaná ostražitosť, nie panika.',
     'content'      => <<<'HTML'
-<figure><a href="img/glp1-ischemicka-opticka-neuropatia-naion.webp" rel="noopener noreferrer" target="_blank"><img src="img/glp1-ischemicka-opticka-neuropatia-naion.webp" alt="Jedna slabá výstražná iskra pri terči zrakového nervu v inak pokojnom tmavom poli" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Signál je zriedkavý, no reálny — patrí do sledovania, nie do paniky.</figcaption></figure>
+<figure><a href="img/glp1-ischemicka-opticka-neuropatia-naion.webp" rel="noopener noreferrer" target="_blank"><img src="img/glp1-ischemicka-opticka-neuropatia-naion.webp" alt="Jedna slabá výstražná iskra pri terči zrakového nervu v inak pokojnom tmavom poli" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Signál je zriedkavý, no reálny – patrí do sledovania, nie do paniky.</figcaption></figure>
 
-<p>Agonisty GLP-1 receptorov sa čoraz širšie používajú pri liečbe diabetu 2. typu a obezity. S rastúcim počtom pacientov sa prirodzene objavuje aj väčšia pozornosť voči zriedkavým nežiaducim účinkom. Jedným z diskutovaných bezpečnostných signálov je možná súvislosť medzi liekmi zo skupiny GLP-1 a neartériitickou prednou ischemickou optickou neuropatiou, známou ako NAION.</p>
+<p>Agonisty GLP-1 receptorov sa čoraz širšie používajú pri liečbe diabetu 2. typu a obezity. S rastúcim počtom liečených pacientov sa pozornosť obracia aj na zriedkavé nežiaduce účinky. Jedným z diskutovaných bezpečnostných signálov je možná súvislosť medzi liekmi zo skupiny GLP-1 a neartériitickou prednou ischemickou optickou neuropatiou, známou ako NAION.</p>
 
 <p>NAION je akútne ischemické poškodenie prednej časti zrakového nervu. Môže viesť k náhlej strate zraku, najčastejšie na jednom oku. Aktuálne dostupné údaje však nepreukazujú jasný kauzálny vzťah medzi GLP-1 liečbou a NAION. Ide najmä o observačné štúdie, farmakovigilančné dáta a kazuistiky.</p>
 
@@ -54,7 +54,7 @@ $articles[] = [
   <li>často zistené po prebudení.</li>
 </ul>
 
-<p>Pretože poškodenie zraku môže byť trvalé, každá náhla zmena videnia má byť považovaná za urgentný stav. Pacient nemá čakať, či sa stav „sám upraví“.</p>
+<p>Pretože poškodenie zraku môže byť trvalé, treba každú náhlu zmenu videnia považovať za urgentný stav. Pacient nemá čakať, či sa stav „sám upraví“.</p>
 
 <p>Výskyt NAION sa odhaduje približne na 2 až 10 prípadov na 100 000 osôb ročne. Riziko rastie s vekom a s prítomnosťou vaskulárnych rizikových faktorov.</p>
 
@@ -113,18 +113,18 @@ $articles[] = [
 <p>Nedokážu spoľahlivo vylúčiť:</p>
 
 <ul>
-  <li>confounding by indication,</li>
+  <li>skreslenie indikáciou (confounding by indication),</li>
   <li>vplyv základného diabetu alebo obezity,</li>
   <li>rozdiely v sledovaní pacientov,</li>
   <li>selektívne hlásenie nežiaducich účinkov,</li>
   <li>vyššiu pravdepodobnosť zachytenia udalostí pri mediálne známych liekoch.</li>
 </ul>
 
-<p>Keďže agonisty GLP-1 užívajú milióny pacientov, aj veľmi zriedkavé udalosti sa začnú objavovať častejšie v absolútnych počtoch. To samo osebe ešte neznamená, že riziko je vysoké.</p>
+<p>Keďže agonisty GLP-1 užívajú milióny pacientov, aj veľmi zriedkavé udalosti sa v absolútnych počtoch začnú objavovať častejšie. To samo osebe ešte neznamená, že riziko je vysoké.</p>
 
 <h2>Ako o tom hovoriť s pacientom</h2>
 
-<p>Pacienta netreba zbytočne vystrašiť. GLP-1 liečba má u správne indikovaných pacientov významné prínosy: zlepšenie glykemickej kontroly, redukciu hmotnosti a pri niektorých liekoch aj preukázané kardiovaskulárne a metabolické benefity.</p>
+<p>Pacienta netreba zbytočne vystrašiť. GLP-1 liečba má u správne indikovaných pacientov významné prínosy: zlepšenie glykemickej kontroly, redukciu hmotnosti a pri niektorých liekoch aj preukázaný kardiovaskulárny a metabolický prínos.</p>
 
 <p>Rozumná informácia pre pacienta môže znieť:</p>
 
@@ -150,11 +150,11 @@ $articles[] = [
 
 <h2>Praktický záver</h2>
 
-<p>Možná súvislosť medzi GLP-1 receptorovými agonistami a NAION je bezpečnostný signál, ktorý si zaslúži ďalšie skúmanie. Zatiaľ však ide o observačné údaje a kazuistiky, nie o dôkaz kauzálneho vzťahu.</p>
+<p>Možná súvislosť medzi agonistami GLP-1 receptorov a NAION je bezpečnostný signál, ktorý si zaslúži ďalšie skúmanie. Zatiaľ však ide o observačné údaje a kazuistiky, nie o dôkaz kauzálneho vzťahu.</p>
 
 <p>Absolútne riziko sa javí ako malé. Prínosy GLP-1 liečby u vhodne indikovaných pacientov zostávajú významné. Najlepším prístupom preto nie je panika ani ignorovanie, ale informovaná ostražitosť.</p>
 
-<p>Náhla, nebolestivá porucha videnia, výpadok zorného poľa alebo stmavnutie videnia na jednom oku má byť vždy riešené urgentne, bez ohľadu na to, či pacient užíva GLP-1 liek alebo nie.</p>
+<p>Náhla, nebolestivá porucha videnia, výpadok zorného poľa alebo stmavnutie videnia na jednom oku treba vždy riešiť urgentne, bez ohľadu na to, či pacient užíva GLP-1 liek alebo nie.</p>
 
 <hr>
 

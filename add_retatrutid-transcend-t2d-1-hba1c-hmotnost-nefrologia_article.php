@@ -38,9 +38,9 @@ $articles[] = [
 <p>Retatrutid, pôvodne označovaný ako LY3437943, je podkožne podávaný peptid, ktorý súčasne aktivuje tri hormonálne receptory:</p>
 
 <ul>
-  <li><strong>receptor GLP-1</strong> — podporuje glukózo-dependentnú sekréciu inzulínu, znižuje neprimeranú sekréciu glukagónu pri hyperglykémii, spomaľuje vyprázdňovanie žalúdka a tlmí príjem potravy;</li>
-  <li><strong>receptor GIP</strong> — ovplyvňuje inzulínovú odpoveď, energetický metabolizmus a funkciu tukového tkaniva;</li>
-  <li><strong>glukagónový receptor</strong> — môže podporovať mobilizáciu tukových zásob a energetický výdaj, ale súčasne môže stimulovať hepatálnu tvorbu glukózy a ovplyvňovať srdcovú frekvenciu.</li>
+  <li><strong>receptor GLP-1</strong> – podporuje glukózo-dependentnú sekréciu inzulínu, znižuje neprimeranú sekréciu glukagónu pri hyperglykémii, spomaľuje vyprázdňovanie žalúdka a tlmí príjem potravy;</li>
+  <li><strong>receptor GIP</strong> – ovplyvňuje inzulínovú odpoveď, energetický metabolizmus a funkciu tukového tkaniva;</li>
+  <li><strong>glukagónový receptor</strong> – môže podporovať mobilizáciu tukových zásob a energetický výdaj, ale súčasne môže stimulovať hepatálnu tvorbu glukózy a ovplyvňovať srdcovú frekvenciu.</li>
 </ul>
 
 <p>Výsledný klinický účinok nie je jednoduchým súčtom účinkov troch hormónov. Závisí od relatívnej aktivity molekuly na jednotlivých receptoroch, od dávky, farmakokinetiky a fyziologickej odpovede pacienta.</p>
@@ -154,9 +154,9 @@ $articles[] = [
 </table>
 </div>
 
-<p>Účinok bol jasne závislý od dávky. Rozdiely oproti placebu v poslednom stĺpci sú <strong>vlastným odčítaním priemerov</strong>, nie publikovanými odhadmi liečebného rozdielu — publikovaný abstrakt pri hmotnosti neuvádza ani bodové odhady rozdielu, ani intervaly spoľahlivosti. Treba ich preto brať ako orientačné.</p>
+<p>Účinok bol jasne závislý od dávky. Rozdiely oproti placebu v poslednom stĺpci sú <strong>vlastným odčítaním priemerov</strong>, nie publikovanými odhadmi liečebného rozdielu – publikovaný abstrakt pri hmotnosti neuvádza ani bodové odhady rozdielu, ani intervaly spoľahlivosti. Treba ich preto brať ako orientačné.</p>
 
-<p>Podľa tlačovej správy Americkej diabetologickej asociácie predstavoval priemerný úbytok pri najvyššej dávke približne 36,6 libry, teda asi 16,6 kg. Z toho vyplýva východisková hmotnosť približne 99 kg. Úbytok hmotnosti nedosiahol do 40. týždňa maximum, krivka teda ešte neklesla do plató.</p>
+<p>Podľa tlačovej správy Americkej diabetologickej asociácie predstavoval priemerný úbytok pri najvyššej dávke približne 36,6 libry, teda asi 16,6 kg. Z toho vyplýva východisková hmotnosť približne 99 kg. Úbytok hmotnosti nedosiahol do 40. týždňa maximum, krivka teda ešte nedosiahla plató.</p>
 
 <div class="pdf-avoid-break">
 <h3>Pozor na rozdielne čísla: dva estimandy</h3>
@@ -165,14 +165,14 @@ $articles[] = [
 
 <p>Tlačová správa ADA k tej istej štúdii uvádza „až 2 % zníženie HbA1c“ a zníženie hmotnosti o <strong>16,8 %</strong>. Rozdiel oproti hodnotám 1,94 % a 15,3 % s najväčšou pravdepodobnosťou vyplýva z použitia druhého, priaznivejšieho estimandu, ktorý hodnotí účinok pri pokračujúcej liečbe bez záchrannej medikácie.</p>
 
-<p>Ani jedno číslo nie je nesprávne — odpovedajú však na dve odlišné otázky. Pri porovnávaní liekov medzi štúdiami je preto nevyhnutné overiť, ktorý estimand je uvedený. Rovnaké upozornenie platí pri čítaní tlačových správ a konferenčného spravodajstva.</p>
+<p>Ani jedno číslo nie je nesprávne – odpovedajú však na dve odlišné otázky. Pri porovnávaní liekov medzi štúdiami je preto nevyhnutné overiť, ktorý estimand je uvedený. Rovnaké upozornenie platí pri čítaní tlačových správ a konferenčného spravodajstva.</p>
 </div>
 
 <h3>Priame porovnanie so semaglutidom alebo tirzepatidom nie je možné</h3>
 
 <p>TRANSCEND-T2D-1 neobsahovala aktívny komparátor. Z jej výsledkov preto nemožno tvrdiť, že retatrutid je účinnejší než semaglutid alebo tirzepatid.</p>
 
-<p>Nepriame porovnania medzi samostatnými štúdiami skresľujú rozdiely v:</p>
+<p>Nepriame porovnanie samostatných štúdií je skreslené rozdielmi v:</p>
 
 <ul>
   <li>trvaní diabetu a predchádzajúcej liečbe,</li>
@@ -184,7 +184,7 @@ $articles[] = [
   <li>spôsobe spracovania prerušenej liečby a chýbajúcich údajov.</li>
 </ul>
 
-<p>Na spoľahlivé porovnanie je potrebná priamo porovnávacia randomizovaná štúdia. Práve taká už prebieha — pozri nižšie.</p>
+<p>Na spoľahlivé porovnanie je potrebná priamo porovnávacia randomizovaná štúdia. Práve taká už prebieha – pozri nižšie.</p>
 
 <h2>Bezpečnosť a znášanlivosť</h2>
 
@@ -334,7 +334,7 @@ $articles[] = [
 <ol>
   <li><strong>Krátke sledovanie.</strong> Štyridsať týždňov nestačí na posúdenie dlhodobej bezpečnosti, udržateľnosti hmotnosti ani orgánových výsledkov.</li>
   <li><strong>Selektovaná populácia.</strong> Išlo prevažne o pacientov s obezitou a včasným diabetom liečeným iba režimovými opatreniami.</li>
-  <li><strong>Chýbajúci aktívny komparátor.</strong> Štúdia neumožňuje priamu konfrontáciu so semaglutidom, tirzepatidom ani metformínom.</li>
+  <li><strong>Chýbajúci aktívny komparátor.</strong> Štúdia neumožňuje priame porovnanie so semaglutidom, tirzepatidom ani metformínom.</li>
   <li><strong>Obmedzená štatistická sila pre zriedkavé riziká.</strong> Bezpečnostný súbor bol príliš malý na vylúčenie neobvyklých komplikácií.</li>
   <li><strong>Bez kardiorenálnych výsledkov.</strong> Zmeny metabolických markerov nie sú náhradou za klinické príhody.</li>
   <li><strong>Nejasná udržateľnosť po vysadení.</strong> Štúdia neurčila rozsah opätovného nárastu hmotnosti a zhoršenia glykémie po ukončení liečby.</li>
@@ -362,7 +362,7 @@ $articles[] = [
     <tr><td>Placebom korigovaný pokles HbA1c pri 12 mg bol 1,12 percentuálneho bodu</td><td>Potvrdené; 95 % IS −1,39 až −0,85</td></tr>
     <tr><td>Pri dávke 12 mg znížil hmotnosť o 15,3 %</td><td>Potvrdené ako priemerná zmena oproti východisku</td></tr>
     <tr><td>Rozdiel v hmotnosti oproti placebu bol 12,7 percentuálneho bodu</td><td>Vlastný orientačný prepočet; publikovaný odhad rozdielu ani interval spoľahlivosti abstrakt neuvádza</td></tr>
-    <tr><td>Tlačová správa a publikácia uvádzajú rovnaké čísla</td><td>Nie; 16,8 % oproti 15,3 % pre hmotnosť — pravdepodobne rozdiel estimandov</td></tr>
+    <tr><td>Tlačová správa a publikácia uvádzajú rovnaké čísla</td><td>Nie; 16,8 % oproti 15,3 % pre hmotnosť – pravdepodobne rozdiel estimandov</td></tr>
     <tr><td>Retatrutid je účinnejší než semaglutid alebo tirzepatid</td><td>Nedokázané; chýba priame porovnanie (prebieha TRANSCEND-T2D-2)</td></tr>
     <tr><td>Retatrutid môže navodiť trvalú remisiu diabetu</td><td>Nedokázané</td></tr>
     <tr><td>Retatrutid nespôsobuje hypoglykémiu</td><td>Závažná hypoglykémia sa nevyskytla pri monoterapii; kombinovaná liečba nebola overená</td></tr>
@@ -396,7 +396,7 @@ $articles[] = [
   <li>nezávislé potvrdenie výsledkov.</li>
 </ul>
 
-<p><strong>Retatrutid zostáva skúšanou molekulou. Nie je registrovaný a nemá sa používať prostredníctvom neoverených internetových prípravkov označovaných ako „research peptides“</strong> — tejto téme sa venuje samostatný článok uvedený nižšie.</p>
+<p><strong>Retatrutid zostáva skúšanou molekulou. Nie je registrovaný a nemá sa používať prostredníctvom neoverených internetových prípravkov označovaných ako „research peptides“</strong> – tejto téme sa venuje samostatný článok uvedený nižšie.</p>
 </div>
 
 <h2>Súvisiace články</h2>
@@ -426,7 +426,7 @@ $articles[] = [
   <li><strong>Medscape Medical News.</strong> <em>Retatrutide Trims Weight and A1c in Diabetes.</em> Medscape, 2026. Sekundárny spravodajský zdroj (obsah za prihlásením); individuálny autor nie je v sprístupnenej verzii uvedený. <a href="https://www.medscape.com/s/viewarticle/retatrutide-trims-weight-and-a1c-diabetes-2026a1000rfw" target="_blank" rel="noopener noreferrer">Spravodajské spracovanie</a>.</li>
 </ol>
 
-<p><em><strong>Poznámka k spracovaniu:</strong> Všetky číselné údaje o dizajne, populácii, primárnom a kľúčovom sekundárnom ukazovateli, o rozdieloch oproti placebu vrátane intervalov spoľahlivosti, o prerušeniach liečby a o úmrtiach boli overené priamo proti abstraktu publikácie v časopise Lancet (PubMed, PMID 42250575). Údaje o prebiehajúcich štúdiách TRANSCEND-T2D-2 a TRANSCEND-T2D-3 pochádzajú z registra ClinicalTrials.gov, absolútny úbytok hmotnosti a hodnota 16,8 % z tlačovej správy ADA. Rozdiely v telesnej hmotnosti oproti placebu vyjadrené v percentuálnych bodoch sú vlastným orientačným odčítaním priemerov — publikovaný abstrakt pri hmotnosti neuvádza odhad liečebného rozdielu ani interval spoľahlivosti. Autorstvo a bibliografické údaje všetkých citovaných prác boli overené cez PubMed; mená neboli dopĺňané odhadom.</em></p>
+<p><em><strong>Poznámka k spracovaniu:</strong> Všetky číselné údaje o dizajne, populácii, primárnom a kľúčovom sekundárnom ukazovateli, o rozdieloch oproti placebu vrátane intervalov spoľahlivosti, o prerušeniach liečby a o úmrtiach boli overené priamo proti abstraktu publikácie v časopise Lancet (PubMed, PMID 42250575). Údaje o prebiehajúcich štúdiách TRANSCEND-T2D-2 a TRANSCEND-T2D-3 pochádzajú z registra ClinicalTrials.gov, absolútny úbytok hmotnosti a hodnota 16,8 % z tlačovej správy ADA. Rozdiely v telesnej hmotnosti oproti placebu vyjadrené v percentuálnych bodoch sú vlastným orientačným odčítaním priemerov – publikovaný abstrakt pri hmotnosti neuvádza odhad liečebného rozdielu ani interval spoľahlivosti. Autorstvo a bibliografické údaje všetkých citovaných prác boli overené cez PubMed; mená neboli dopĺňané odhadom.</em></p>
 
 <p><em><strong>Poznámka k interpretácii:</strong> Retatrutid nie je registrovaným liekom. Tento článok neslúži na odporúčanie liečby ani na porovnávanie s registrovanými prípravkami. Voľbu liečby diabetu 2. typu treba riadiť platnými odbornými odporúčaniami, súhrnom charakteristických vlastností konkrétneho lieku, funkciou obličiek a individuálnym rizikom pacienta.</em></p>
 </div>

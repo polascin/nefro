@@ -31,7 +31,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Závery konferencie KDIGO 2024 o srdcovom zlyhávaní a CKD: obojsmerné zaťaženie, GDMT s duálnym prínosom a hemodynamický pokles eGFR, ktorý sám osebe nie je dôvodom na vysadenie liečby.',
     'content'      => <<<'HTML'
-<figure><a href="img/srdcove-zlyhavanie-ckd-kdigo-kontroverzie-2026.webp" rel="noopener noreferrer" target="_blank"><img src="img/srdcove-zlyhavanie-ckd-kdigo-kontroverzie-2026.webp" alt="Srdce a oblička spojené káblom svetla, v ktorom prúdia dva prúdy súčasne opačnými smermi" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Záťaž ide oboma smermi naraz — preto sa liečba jedného orgánu nedá plánovať bez ohľadu na druhý.</figcaption></figure>
+<figure><a href="img/srdcove-zlyhavanie-ckd-kdigo-kontroverzie-2026.webp" rel="noopener noreferrer" target="_blank"><img src="img/srdcove-zlyhavanie-ckd-kdigo-kontroverzie-2026.webp" alt="Srdce a oblička spojené káblom svetla, v ktorom prúdia dva prúdy súčasne opačnými smermi" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Záťaž ide oboma smermi naraz – preto sa liečba jedného orgánu nedá plánovať bez ohľadu na druhý.</figcaption></figure>
 
 <p class="article-dek"><em>Konferencia KDIGO o chorobe obličiek a srdcovom zlyhávaní (marec 2024) bola v roku 2026 uverejnená súčasne v Kidney International a v JACC: Heart Failure. Správa nie je novým usmernením KDIGO, ale konsenzuálnym prehľadom dôkazov, diagnostických dilem a praktických princípov liečby tam, kde sa srdce a obličky stretávajú. Tento článok je slovenské spracovanie tejto správy pre nefrologickú prax.</em></p>
 
@@ -90,7 +90,7 @@ $articles[] = [
 </table>
 </div>
 
-<p>Ide o <strong>asociácie z observačnej kohorty</strong>, nie o dôkaz, že hospitalizácia pre HF kauzálne „spôsobuje“ progresiu CKD. Klinický význam je však jasný: pri CKD treba aktívne hľadať riziko a prejavy HF a pri HF treba systematicky sledovať obličky. Súhrn „približne dvoj- až trojnásobné riziko“ zhruba zodpovedá týmto pomerom rizika, ale v texte je presnejšie uvádzať konkrétne HR.</p>
+<p>Ide o <strong>asociácie z observačnej kohorty</strong>, nie o dôkaz, že hospitalizácia pre HF kauzálne „spôsobuje“ progresiu CKD. Klinický význam je však jasný: pri CKD treba aktívne hľadať riziko a prejavy HF a pri HF treba systematicky sledovať obličky. Zjednodušenie na „približne dvoj- až trojnásobné riziko“ týmto pomerom zhruba zodpovedá, presnejšie je však uvádzať konkrétne HR.</p>
 
 <p>Patofyziológia ostáva čiastočne otvorená. Konferencia pripomína hypotézu „spoločnej pôdy“: obezita, diabetes a hypertenzia vedú k zápalu, endotelovej dysfunkcii, neurohormonálnej aktivácii a hemodynamickému stresu v srdci aj v obličkách. Pri HF sa na poklese GFR podieľajú zmeny krvného tlaku, znížený srdcový index aj zvýšený centrálny venózny tlak; relatívny prínos týchto zložiek nie je úplne objasnený. Predchádzajúce klasifikácie kardiorenálneho syndrómu sa sústreďovali najmä na HFrEF a podceňovali čoraz častejší fenotyp HFpEF.</p>
 
@@ -136,12 +136,12 @@ $articles[] = [
 
 <h2>GDMT s duálnym prínosom: v štúdiách a v odporúčaných indikáciách</h2>
 
-<p>Terapeutické spektrum HF a CKD sa zbieha. inhibítory SGLT2, inhibítory RAAS a novšie aj nesteroidné antagonisty mineralokortikoidového receptora (nsMRA, napr. finerenón) a agonisty receptora GLP-1 môžu v príslušných populáciách zlepšiť kardiovaskulárne aj obličkové výsledky. Dôkazy pri pokročilej CKD, najmä G5 a G5D, ostávajú obmedzené – títo pacienti sú z randomizovaných štúdií často vylúčení.</p>
+<p>Terapeutické spektrum HF a CKD sa zbieha. Inhibítory SGLT2, inhibítory RAAS a novšie aj nesteroidné antagonisty mineralokortikoidového receptora (nsMRA, napr. finerenón) a agonisty receptora GLP-1 môžu v príslušných populáciách zlepšiť kardiovaskulárne aj obličkové výsledky. Dôkazy pri pokročilej CKD, najmä G5 a G5D, ostávajú obmedzené – títo pacienti sú z randomizovaných štúdií často vylúčení.</p>
 
 <p>Prínos treba viazať na indikačné populácie, nie prezentovať ako univerzálnu „dvojitú ochranu“ u každého:</p>
 
 <ul>
-  <li><strong>inhibítory SGLT2</strong> sú podľa KDIGO 2024 základom nefroprotekcie pri CKD s diabetes mellitus 2. typu aj bez neho (pri splnení prahov eGFR a albuminúrie). Súčasne sú súčasťou GDMT HFrEF aj HFpEF. Konferenčný rámec počíta s použitím spravidla pri eGFR nad približne 20 ml/min/1,73 m<sup>2</sup>.</li>
+  <li><strong>Inhibítory SGLT2</strong> sú podľa KDIGO 2024 základom nefroprotekcie pri CKD s diabetes mellitus 2. typu aj bez neho (pri splnení prahov eGFR a albuminúrie). Súčasne sú súčasťou GDMT HFrEF aj HFpEF. Konferenčný rámec počíta s použitím spravidla pri eGFR nad približne 20 ml/min/1,73 m<sup>2</sup>.</li>
   <li><strong>ACEi/ARB</strong> ostávajú základom pri CKD s albuminúriou. KDIGO odporúča v liečbe pokračovať aj vtedy, keď eGFR klesne pod 30 ml/min/1,73 m<sup>2</sup>, ak je to klinicky únosné. ESC pri HF uvádza pokračovanie v RAAS inhibícii, pokiaľ vzostup sérového kreatinínu nie je &gt;50 % (a kreatinín ostáva &lt;3 mg/dl, eGFR &gt;25 ml/min/1,73 m<sup>2</sup> a nie je hyperkaliémia).</li>
   <li><strong>Finerenón</strong> v predšpecifikovanej súhrnnej analýze FIDELITY (13 026 pacientov s DM2 a CKD) znížil kompozitný kardiovaskulárny výsledok (HR 0,86; 95 % CI 0,78–0,95) aj kompozitný obličkový výsledok (HR 0,77; 0,67–0,88) oproti placebu. Trvalé ukončenie pre hyperkaliémiu bolo častejšie pri finerenóne (1,7 % vs. 0,6 %). Konferencia spomína aj prínos finerenónu pri HF s mierne zníženou alebo zachovanou ejekčnou frakciou (FINEARTS-HF); ide o inú populáciu než FIDELITY.</li>
   <li><strong>Semaglutid</strong> v štúdii FLOW u 3 533 pacientov s DM2 a CKD znížil riziko primárneho obličkového kompozitu o 24 % (HR 0,76; 95 % CI 0,66–0,88). KDIGO 2024 odporúča dlhodobo pôsobiaci GLP-1 RA u dospelých s DM2 a CKD, ktorí nedosiahli glykemické ciele alebo inhibítor SGLT2/metformín nemôžu užívať; prednosť majú látky s preukázaným kardiovaskulárnym prínosom. Konferencia pre GLP-1 RA pri CKD uvádza aj praktický názor účastníkov (nie samostatné odporúčanie KDIGO) vo väzbe na údaje z klinických štúdií.</li>
@@ -153,9 +153,9 @@ $articles[] = [
 
 <h2>Pokles eGFR po začatí GDMT: očakávaný hemodynamický jav, nie univerzálne pravidlo „až 30 %“</h2>
 
-<p>inhibítory SGLT2, RAAS inhibítory, MRA/nsMRA aj ARNI môžu spôsobiť akútny, často reverzibilný pokles eGFR znížením intraglomerulárneho tlaku. Tento „dip“ spravidla <strong>nesúvisí s horšími klinickými výsledkami</strong> a malé poklesy po začatí GDMT podľa konferencie vo všeobecnosti <strong>nevyžadujú vysadenie</strong>.</p>
+<p>Inhibítory SGLT2, RAAS inhibítory, MRA/nsMRA aj ARNI môžu spôsobiť akútny, často reverzibilný pokles eGFR znížením intraglomerulárneho tlaku. Tento „dip“ spravidla <strong>nesúvisí s horšími klinickými výsledkami</strong> a malé poklesy po začatí GDMT podľa konferencie vo všeobecnosti <strong>nevyžadujú vysadenie</strong>.</p>
 
-<p>Konferenčná tabuľka k manažmentu nežiaducich účinkov formuluje praktické pravidlo:</p>
+<p>V konferenčnej tabuľke k manažmentu nežiaducich účinkov je praktické pravidlo:</p>
 
 <ul>
   <li>hemodynamické výkyvy eGFR <strong>až do 30 %</strong> sa môžu vyskytnúť a <strong>nemajú samy osebe viesť k ukončeniu liečby</strong>;</li>
@@ -170,7 +170,7 @@ $articles[] = [
 
 <p>Odporúčania pre HF a CKD sa pri tých istých liekoch môžu líšiť (napríklad prahy eGFR pre začatie RAAS inhibície). Bez vzájomného sledovania obličiek pri liečbe HF a srdca pri liečbe CKD hrozí, že jedna disciplína neúmyselne zhorší druhý orgán. Konferencia preto žiada <strong>integrované, individualizované a kolaboratívne</strong> riadenie a ako výskumnú prioritu uvádza hodnotenie integrovaných modelov starostlivosti.</p>
 
-<p>Systematický prehľad Durua a spoluautorov (22 štúdií u pacientov s najmenej dvoma CKM stavmi) zahŕňal multidisciplinárne ambulancie, zapojenie farmaceuta, edukáciu pacienta aj tímové porady. V porovnaní s bežnou starostlivosťou boli programy <strong>spojené</strong> s vyššou spokojnosťou pacientov, menším počtom zdravotných problémov, lepšou dochádzkou a v niektorých modeloch (najmä s telemedicínou) s nižšími nákladmi. Autori uzatvárajú, že koordinovaná CKM starostlivosť <strong>môže</strong> zlepšiť klinické výsledky a znížiť náklady; heterogenita zásahov, populácií aj ukazovateľov bráni silnému kauzálnemu zovšeobecneniu. Do článku preto patrí formulácia „boli spojené so“, nie „preukázali, že“.</p>
+<p>Systematický prehľad Durua a spoluautorov (22 štúdií u pacientov s najmenej dvoma CKM stavmi) zahŕňal multidisciplinárne ambulancie, zapojenie farmaceuta, edukáciu pacienta aj tímové porady. V porovnaní s bežnou starostlivosťou boli programy <strong>spojené</strong> s vyššou spokojnosťou pacientov, menším počtom zdravotných problémov, lepšou dochádzkou a v niektorých modeloch (najmä s telemedicínou) s nižšími nákladmi. Autori uzatvárajú, že koordinovaná CKM starostlivosť <strong>môže</strong> zlepšiť klinické výsledky a znížiť náklady; heterogenita zásahov, populácií aj ukazovateľov bráni silnému kauzálnemu zovšeobecneniu. Ide teda o asociáciu, nie o preukázaný účinok.</p>
 
 <p>V praxi má primárna starostlivosť kľúčovú úlohu pri včasnom záchyte (eGFR, UACR, tlak, glykémia, nadváha). Pri rastúcej komplexnosti, krehkosti, opakovaných hospitalizáciách pre HF, rýchlom poklese eGFR alebo ťažkej albuminúrii je potrebná úzka spolupráca nefrológa, kardiológa, diabetológa/endokrinológa, sestry a klinického farmaceuta.</p>
 

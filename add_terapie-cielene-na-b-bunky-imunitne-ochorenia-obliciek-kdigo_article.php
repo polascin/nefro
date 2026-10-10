@@ -32,15 +32,15 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Konferencia KDIGO Controversies ukazuje, že cielenie na B bunky pri imunitne sprostredkovaných ochoreniach obličiek nie je jedna stratégia, ale súbor diferencovaných prístupov. Účinnosť aj bezpečnosť závisia od diagnózy a od toho, ako hlboko a akým mechanizmom sa zasiahne B bunková os — od anti-CD20 cez inhibíciu BAFF/APRIL až po terapiu CAR T bunkami.',
+    'excerpt'      => 'Konferencia KDIGO Controversies ukazuje, že cielenie na B bunky pri imunitne sprostredkovaných ochoreniach obličiek nie je jedna stratégia, ale súbor diferencovaných prístupov. Účinnosť aj bezpečnosť závisia od diagnózy a od toho, ako hlboko a akým mechanizmom sa zasiahne B bunková os – od anti-CD20 cez inhibíciu BAFF/APRIL až po terapiu CAR T bunkami.',
     'content'      => <<<'HTML'
-<figure><a href="img/terapie-cielene-na-b-bunky-imunitne-ochorenia-obliciek-kdigo.webp" rel="noopener noreferrer" target="_blank"><img src="img/terapie-cielene-na-b-bunky-imunitne-ochorenia-obliciek-kdigo.webp" alt="Cielený lúč zasahujúci jednu imunitnú bunku spomedzi mnohých, za ňou sa upokojuje zapálený glomerulus" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Zásah mieri na zdroj protilátok — otázkou zostáva, u koho a ako dlho sa oplatí.</figcaption></figure>
+<figure><a href="img/terapie-cielene-na-b-bunky-imunitne-ochorenia-obliciek-kdigo.webp" rel="noopener noreferrer" target="_blank"><img src="img/terapie-cielene-na-b-bunky-imunitne-ochorenia-obliciek-kdigo.webp" alt="Cielený lúč zasahujúci jednu imunitnú bunku spomedzi mnohých, za ňou sa upokojuje zapálený glomerulus" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Zásah mieri na zdroj protilátok – otázkou zostáva, u koho a ako dlho sa oplatí.</figcaption></figure>
 
 <h2>Úvod</h2>
 
-<p>KDIGO (Kidney Disease: Improving Global Outcomes) zorganizovalo v júni 2025 v meste Panama City konferenciu typu „Controversies“ venovanú terapiám, ktoré sa zameriavajú na B bunky pri imunitne sprostredkovaných ochoreniach obličiek. Cieľom bolo zhodnotiť dostupné dôkazy, upozorniť na kontroverzie a identifikovať zásadné medzery v poznatkoch tak, aby sa tieto stratégie dali v praxi využívať cielene a bezpečne.</p>
+<p>KDIGO (Kidney Disease: Improving Global Outcomes) zorganizovalo v júni 2025 v meste Panama City konferenciu typu „Controversies“ venovanú terapiám, ktoré sa zameriavajú na B bunky pri imunitne sprostredkovaných ochoreniach obličiek. Cieľom bolo zhodnotiť dostupné dôkazy, pomenovať sporné otázky a zásadné medzery v poznatkoch, aby sa tieto stratégie dali v praxi využívať cielene a bezpečne.</p>
 
-<p>Problematika B buniek nie je jednotná. Pri rôznych diagnózach môžu dominovať odlišné B bunkové procesy (tvorba protilátok, prežívanie B a plazmatických buniek, interakcie s ďalšími zložkami imunity) a klinická odpoveď môže závisieť od toho, akú „časť“ B bunkovej osi terapie skutočne zasiahnu.</p>
+<p>Úloha B buniek nie je pri všetkých ochoreniach rovnaká. Pri rôznych diagnózach môžu dominovať odlišné B bunkové procesy (tvorba protilátok, prežívanie B a plazmatických buniek, interakcie s ďalšími zložkami imunity) a klinická odpoveď môže závisieť od toho, akú „časť“ B bunkovej osi terapie skutočne zasiahnu.</p>
 
 <p>Konferencii spolupredsedali <strong>Jürgen Floege</strong> a <strong>Brad Rovin</strong>.</p>
 
@@ -48,7 +48,7 @@ $articles[] = [
 
 <p>Podľa konferenčnej správy sa terapie, ktoré B bunky depletujú alebo modulujú, už používajú alebo sa intenzívne skúmajú naprieč viacerými glomerulovými ochoreniami. Zároveň však platí, že účinnosť aj bezpečnosť sa medzi diagnózami výrazne líšia.</p>
 
-<p>Kľúčové kontroverzie, ktoré konferencia zdôrazňuje, sú najmä tieto:</p>
+<p>Konferencia zdôrazňuje najmä tieto sporné otázky:</p>
 
 <ol>
   <li><strong>Čo presne znamená „dostatočne hlboká“ deplécia B buniek</strong> a či rozhoduje rozsah deplécie, miesto jej dosiahnutia (periféria verzus lymfatické tkanivá), alebo oboje.</li>
@@ -63,7 +63,7 @@ $articles[] = [
 
 <p>Pri IgA nefropatii podľa správy konferencie <strong>anti-CD20</strong> terapia (rituximab) vykazuje <strong>obmedzenú účinnosť</strong>. Naopak, lepší signál prinášajú zásahy do dráh prežívania B buniek, najmä inhibícia <strong>BAFF (B cell activating factor)</strong> a <strong>APRIL (a proliferation-inducing ligand)</strong>, prípadne prístupy cielené na plazmatické bunky.</p>
 
-<p>Praktický význam má aj poznatok, že pri terapiách zameraných na prežívanie B buniek existuje potenciál návratu aktivujúcich mechanizmov po ukončení liečby. Preto sa v správe opakovane vracia otázka, či pri vybraných fenotypoch treba udržiavať účinnejšiu supresiu dlhšie.</p>
+<p>Prakticky dôležité je aj to, že pri terapiách zameraných na prežívanie B buniek sa aktivujúce mechanizmy môžu po ukončení liečby vrátiť. Preto sa v správe opakovane vracia otázka, či pri vybraných fenotypoch treba udržiavať účinnejšiu supresiu dlhšie.</p>
 
 <p>Z pohľadu klinických cieľov konferencia naznačuje, že ak sa dosiahne optimálna rýchlosť poklesu eGFR, ďalšia kombinácia alebo eskalácia nemusí byť automaticky potrebná. Naopak, pri pretrvávajúcom zhoršovaní môže byť na mieste ďalší diagnostický a terapeutický krok.</p>
 
@@ -79,16 +79,16 @@ $articles[] = [
 
 <h3>4) Lupusová nefritída (LN)</h3>
 
-<p>Pri lupusovej nefritíde konferencia konštatuje, že „novšie“ prístupy prinášajú sľubnejšie výsledky než skoršie anti-CD20 prístupy.</p>
+<p>Pri lupusovej nefritíde podľa konferencie „novšie“ prístupy prinášajú sľubnejšie výsledky než skoršie anti-CD20 prístupy.</p>
 
-<p>V správe sa uvádza:</p>
+<p>Správa uvádza:</p>
 
 <ul>
   <li><strong>obinutuzumab</strong> ako intenzívnejší anti-CD20 režim,</li>
   <li>a najmä <strong>terapia CAR T bunkami</strong>, ktorá zavádza koncept dlhšej remisie, prípadne obdobia bez aktivity ochorenia.</li>
 </ul>
 
-<p>Konferencia zároveň poukazuje na to, že interpretácia tohto stavu je sporná, keďže „vyliečenie“ môže byť niekedy príliš silné tvrdenie a vyžaduje presné definovanie podľa merateľných imunologických a klinických kritérií.</p>
+<p>Interpretácia tohto stavu je podľa konferencie sporná: „vyliečenie“ môže byť príliš silné tvrdenie a vyžaduje presnú definíciu podľa merateľných imunologických a klinických kritérií.</p>
 
 <h3>5) ANCA-asociovaná vaskulitída (AAV)</h3>
 
@@ -96,14 +96,14 @@ $articles[] = [
 
 <h2>Bezpečnosť: rozdielna „cena“ podľa intenzity liečby</h2>
 
-<p>Z konferencie zaznieva jasné praktické posolstvo: bezpečnostný profil terapií cielených na B bunky nie je jednotný.</p>
+<p>Bezpečnostný profil terapií cielených na B bunky nie je jednotný.</p>
 
 <ul>
   <li><strong>Konvenčné anti-CD20</strong> režimy sa opisujú ako režimy s <strong>priaznivejším bezpečnostným profilom</strong>.</li>
   <li><strong>Terapie CAR T bunkami</strong> vyžadujú <strong>opatrný výber pacientov</strong>, pretože nesú riziko závažných nežiaducich udalostí vrátane <strong>syndrómu uvoľnenia cytokínov</strong> (cytokine release syndrome, CRS).</li>
 </ul>
 
-<p>To má priame dôsledky pre prax: pri zvažovaní pokročilých terapií nestačí samotná účinnosť. Musí byť jasné, pre koho je prínos realistický a aké monitorovanie a podporné opatrenia sú dostupné.</p>
+<p>Pri zvažovaní pokročilých terapií preto nestačí posudzovať samotnú účinnosť. Musí byť jasné, pre koho je prínos realistický a aké monitorovanie a podporné opatrenia sú dostupné.</p>
 
 <h2>Čo je podľa konferencie najväčšia výskumná medzera</h2>
 
@@ -120,7 +120,7 @@ $articles[] = [
 
 <h2>Klinické zhrnutie pre nefrológa</h2>
 
-<p>Z praktického hľadiska konferencia neponúka „jedno univerzálne pravidlo“, ale skôr rámec, ktorý sa dá použiť pri rozhodovaní:</p>
+<p>Konferencia neponúka jedno univerzálne pravidlo, ale rámec na rozhodovanie:</p>
 
 <ul>
   <li>Pri niektorých diagnózach prevažuje snaha zasiahnuť <strong>prežívanie a aktivitu B buniek alebo plazmatických buniek</strong> (napríklad pri IgA nefropatii), pričom samotná deplécia pomocou anti-CD20 nemusí stačiť.</li>
@@ -128,13 +128,13 @@ $articles[] = [
   <li>Pri lupusovej nefritíde sa otvára priestor pre intenzívnejšie zásahy vrátane prístupov s CAR T bunkami, no to súčasne zvyšuje nároky na bezpečnosť a výber pacienta.</li>
 </ul>
 
-<p>Ak sa tieto princípy prenesú do praxe, rozhodovanie sa musí opierať o diagnózu, fenotyp, očakávanú biológiu odpovede a dostupné bezpečnostné kapacity.</p>
+<p>V praxi sa rozhodovanie musí opierať o diagnózu, fenotyp, očakávanú biológiu odpovede a dostupné bezpečnostné kapacity.</p>
 
 <h2>Záver</h2>
 
 <p>Konferencia KDIGO Controversies ukazuje, že cielenie na B bunky je už dnes súbor diferencovaných stratégií, nie jedna terapeutická myšlienka. Účinnosť aj bezpečnosť závisia od konkrétneho ochorenia a od toho, ako hlboko a akým mechanizmom sa B bunková os modifikuje.</p>
 
-<p>Najbližší krok smerom k lepšej praxi bude podľa správy postavený na troch pilieroch: biomarkerová stratifikácia; objektívne merania odpovede a načasovanie eskalácie; a bezpečná implementácia pokročilých bunkových terapií s prísnym výberom pacientov.</p>
+<p>Ďalší pokrok bude podľa správy závisieť od troch vecí: od stratifikácie podľa biomarkerov, od objektívneho merania odpovede a načasovania eskalácie a od bezpečného zavádzania pokročilých bunkových terapií s prísnym výberom pacientov.</p>
 
 <p><em><strong>Poznámka k zodpovednosti:</strong> Text je odborným zhrnutím konferenčnej správy a dostupných informácií z uvedených zdrojov. Nejde o individuálne medicínske odporúčanie.</em></p>
 

@@ -25,7 +25,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Pri ťažkej hypoalbuminémii sa vyššie hladiny anti-PLA2R spájali s vyšším rizikom trombózy aj po úprave na albumín a vek. Odhad však stojí na najviac desiatich príhodách a nemožno ho extrapolovať na bežné titre.',
     'content'      => <<<'HTML'
-<figure><a href="img/anti-pla2r-trombozy-membranozna-nefropatia-hypoalbuminemia.webp" rel="noopener noreferrer" target="_blank"><img src="img/anti-pla2r-trombozy-membranozna-nefropatia-hypoalbuminemia.webp" alt="Dva rôzne ukazovatele, ktorých lúče osvetľujú cievu len čiastočne; až v mieste prekrytia je vidieť vznikajúcu zrazeninu" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Samotný albumín nevysvetlí celé riziko — protilátka pridáva časť obrazu, ktorá mu chýba.</figcaption></figure>
+<figure><a href="img/anti-pla2r-trombozy-membranozna-nefropatia-hypoalbuminemia.webp" rel="noopener noreferrer" target="_blank"><img src="img/anti-pla2r-trombozy-membranozna-nefropatia-hypoalbuminemia.webp" alt="Dva rôzne ukazovatele, ktorých lúče osvetľujú cievu len čiastočne; až v mieste prekrytia je vidieť vznikajúcu zrazeninu" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Samotný albumín nevysvetlí celé riziko – protilátka pridáva časť obrazu, ktorá mu chýba.</figcaption></figure>
 
 <p>Membranózna nefropatia patrí k tým glomerulopatiám, kde trombóza nie je zriedkavou komplikáciou, ale očakávaným rizikom. Rozhodovanie o profylaxii pritom stojí prakticky na jedinom ukazovateli – na koncentrácii sérového albumínu – a na odhade rizika krvácania. Otázka, či existuje aj marker <em>aktivity ochorenia</em>, ktorý by riziko spresnil, je preto legitímna.</p>
 
@@ -110,7 +110,7 @@ $articles[] = [
   <li>vek, pohlavie ani podiel sekundárnej membranóznej nefropatie.</li>
 </ul>
 
-<p>Plný text je za platobnou stenou a nemá otvorenú verziu, takže autorské limity nemožno citovať. Výhrady uvedené v tomto texte sú preto odvodené z dizajnu opísaného v abstrakte, nie prevzaté od autorov. Označenie „multicentrická“ je podľa afiliácií správne — ide o dve pracoviská. Podstatné však je, že obe patria do jedného bostonského zdravotníckeho systému a ide prevažne o terciárne centrum pre vaskulitídy a glomerulonefritídy, takže závery treba obmedziť na takto vyberanú populáciu, nie na multicentrickosť ako takú.</p>
+<p>Plný text je za platobnou stenou a nemá otvorenú verziu, takže autorské limity nemožno citovať. Výhrady uvedené v tomto texte sú preto odvodené z dizajnu opísaného v abstrakte, nie prevzaté od autorov. Označenie „multicentrická“ je podľa afiliácií správne – ide o dve pracoviská. Podstatné však je, že obe patria do jedného bostonského zdravotníckeho systému a ide prevažne o terciárne centrum pre vaskulitídy a glomerulonefritídy, takže závery treba obmedziť na takto vybranú populáciu, nie na multicentrickosť ako takú.</p>
 
 <h2>Vecná kontrola tvrdení</h2>
 
@@ -152,7 +152,7 @@ $articles[] = [
     <tr>
       <th scope="row">Ide o multicentrickú štúdiu</th>
       <td>Potvrdené</td>
-      <td>Práca sa sama označuje za multicentrickú a podľa afiliácií zahŕňa dve pracoviská (Massachusetts General Hospital a Brigham and Women’s Hospital). Označenie teda spochybniť nemožno; obmedzená je <strong>generalizácia</strong> — obe centrá sú v jednom bostonskom systéme a ide prevažne o terciárne referenčné pracovisko pre vaskulitídy a glomerulonefritídy.</td>
+      <td>Práca sa sama označuje za multicentrickú a podľa afiliácií zahŕňa dve pracoviská (Massachusetts General Hospital a Brigham and Women’s Hospital). Označenie teda spochybniť nemožno; obmedzená je <strong>generalizácia</strong> – obe centrá sú v jednom bostonskom systéme a ide prevažne o terciárne referenčné pracovisko pre vaskulitídy a glomerulonefritídy.</td>
     </tr>
     <tr>
       <th scope="row">Aktivita ochorenia môže súvisieť s trombogenézou</th>
@@ -182,7 +182,7 @@ $articles[] = [
 <h2>Súvisiace články</h2>
 
 <ul>
-  <li><a href="article.php?slug=cheatsheet-membranozna-nefropatia">Membranózna nefropatia — ťahák</a></li>
+  <li><a href="article.php?slug=cheatsheet-membranozna-nefropatia">Membranózna nefropatia – ťahák</a></li>
   <li><a href="article.php?slug=antitromboticka-liecba-faktor-xi-bezpecnejsia-prevencia">Nové prístupy v antitrombotickej liečbe: od „dobrých“ a „zlých“ zrazenín k bezpečnejšej prevencii</a></li>
   <li><a href="article.php?slug=perzistujuca-mikroskopicka-hematuria-podocytopatie-prognoza">Perzistujúca mikroskopická hematúria pri podocytopatiách: prognostický signál, nie terapeutický cieľ</a></li>
 </ul>

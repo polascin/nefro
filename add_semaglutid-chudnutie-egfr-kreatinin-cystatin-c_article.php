@@ -25,7 +25,7 @@ $articles[] = [
     'content'      => <<<'HTML'
 <figure><a href="img/semaglutid-chudnutie-egfr-kreatinin-cystatin-c.webp" target="_blank" rel="noopener noreferrer"><img src="img/semaglutid-chudnutie-egfr-kreatinin-cystatin-c.webp" alt="Poloschematická oblička a glomerulus s odlišnými prúdmi kreatinínu zo svalstva a cystatínu C z telesných tkanív pri úbytku hmotnosti" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Konceptuálne znázornenie neobličkových determinantov filtračných markerov pri zmene telesného zloženia. Farebné častice a ukazovatele sú symbolické; nejde o diagnostický obraz ani tvrdenie, že cystatín C je bez zdrojov skreslenia.</figcaption></figure>
 
-<p>Pokles telesnej hmotnosti počas liečby agonistom receptora GLP-1 môže sprevádzať zmena odhadovanej glomerulovej filtrácie (eGFR). Zdanlivo priaznivý výsledok vyvoláva dôležitú otázku: zlepšila sa skutočne funkcia obličiek, alebo pacient tvorí menej kreatinínu v dôsledku zmeny telesného zloženia?</p>
+<p>Pokles telesnej hmotnosti počas liečby agonistom receptora GLP-1 môže sprevádzať zmena odhadovanej glomerulovej filtrácie (eGFR). Zdanlivo priaznivý výsledok však vyvoláva otázku: zlepšila sa skutočne funkcia obličiek, alebo pacient tvorí menej kreatinínu v dôsledku zmeny telesného zloženia?</p>
 
 <p>Vopred plánovaná analýza štúdie SMART prináša čiastočne upokojujúce údaje. Pri približne 10 % úbytku hmotnosti počas 24-týždňovej liečby semaglutidom sa v hlavných analýzach nezistila korelácia medzi zmenami hmotnosti či telesného zloženia a zmenami kreatinínovej alebo cystatínovej eGFR ani meranej GFR. Výsledok však nie je univerzálnym potvrdením presnosti eGFR pri každom rozsahu chudnutia a u každého pacienta. [1]</p>
 
@@ -64,7 +64,7 @@ $articles[] = [
 
 <h2>Prečo výsledok nemožno formulovať absolútne</h2>
 
-<h3>Negatívna korelácia nie je validácia každého jednotlivého výsledku</h3>
+<h3>Chýbajúca korelácia nie je validáciou každého jednotlivého výsledku</h3>
 
 <p>Nezistenie štatisticky významnej korelácie v malom súbore nevylučuje slabšiu asociáciu ani skreslenie v rizikovej podskupine. Korelačná analýza tiež nie je plnohodnotným hodnotením presnosti, ktoré by vyžadovalo napríklad individuálny bias a podiel odhadov v akceptovanom rozmedzí od meranej GFR.</p>
 
@@ -72,7 +72,7 @@ $articles[] = [
 
 <h3>Nie všetky štatistické výstupy sú úplne súhlasné</h3>
 
-<p>V tabuľke 2 pôvodnej publikácie sa pri niektorých upravených modeloch objavujú hodnoty <em>P</em> = 0,03, hoci súhrnný text opisuje analýzy ako bez významných asociácií. Tento nesúlad nemení hlavný smer výsledkov, vyžaduje však opatrnú formuláciu: <strong>hlavné korelačné analýzy boli negatívne, nie všetky jednotlivé modely jednoznačne vylúčili akúkoľvek súvislosť.</strong> [1]</p>
+<p>V tabuľke 2 pôvodnej publikácie sa pri niektorých upravených modeloch objavujú hodnoty <em>P</em> = 0,03, hoci súhrnný text opisuje analýzy ako bez významných asociácií. Tento nesúlad nemení hlavný smer výsledkov, vyžaduje však opatrnú formuláciu: <strong>hlavné korelačné analýzy súvislosť nepreukázali, nie všetky jednotlivé modely jednoznačne vylúčili akúkoľvek súvislosť.</strong> [1]</p>
 
 <h3>Bioimpedancia nie je priame meranie svalstva</h3>
 
@@ -90,7 +90,7 @@ $articles[] = [
 
 <h2>Kedy doplniť cystatín C</h2>
 
-<p>KDIGO 2024 odporúča pri riziku nepresnosti kreatinínovej eGFR a v situácii, keď presnosť ovplyvní klinické rozhodnutie, použiť kombinovanú eGFR z kreatinínu a cystatínu C. Doplnenie cystatínu C je obzvlášť užitočné pri výraznej zmene svalovej hmoty, sarkopénii, malnutrícii, amputácii alebo nesúlade výsledku s klinickým obrazom. [2]</p>
+<p>KDIGO 2024 odporúča pri riziku nepresnosti kreatinínovej eGFR a v situácii, keď presnosť ovplyvní klinické rozhodnutie, použiť kombinovanú eGFR z kreatinínu a cystatínu C. Doplnenie cystatínu C je obzvlášť užitočné pri výraznej zmene svalovej hmoty, sarkopénii, malnutrícii, amputácii alebo nesúlade výsledku s klinickým obrazom. [2] Prakticky ide najmä o tieto situácie:</p>
 
 <ul>
   <li>výrazný alebo rýchly úbytok hmotnosti,</li>
@@ -109,7 +109,7 @@ $articles[] = [
   <li><strong>Rozlíšiť smer zmeny.</strong> Úbytok svalstva by pri nezmenenej filtrácii skôr znižoval kreatinín. Jeho vzostup preto nemožno vysvetliť stratou svalov.</li>
   <li><strong>Vylúčiť akútnu situáciu.</strong> Nauzea, vracanie a obmedzený príjem tekutín môžu viesť k hypovolémii a akútnemu poškodeniu obličiek. Pri nestabilnom kreatiníne rovnice eGFR nevyjadrujú aktuálnu filtráciu spoľahlivo.</li>
   <li><strong>Skontrolovať lieky a hemodynamiku.</strong> Zohľadniť diuretiká, blokátory renínovo-angiotenzínového systému, inhibítory SGLT2, nesteroidové antiflogistiká a nedávne zmeny dávok.</li>
-  <li><strong>Určiť potrebnú presnosť.</strong> Pri dávkovaní lieku s úzkym terapeutickým rozmedzím alebo pri rozhodovaní na hranici indikácie je nižší prah na eGFR z kreatinínu a cystatínu C alebo na meranú GFR.</li>
+  <li><strong>Určiť potrebnú presnosť.</strong> Pri dávkovaní lieku s úzkym terapeutickým rozmedzím alebo pri rozhodovaní na hranici indikácie je namieste nižší prah na použitie eGFR z kreatinínu a cystatínu C alebo meranej GFR.</li>
   <li><strong>Sledovať poškodenie obličiek aj funkčný stav.</strong> UACR nenahrádza GFR, ale dopĺňa rizikovú stratifikáciu. Pri chudnutí treba hodnotiť výživu, svalovú silu, mobilitu a funkčnosť.</li>
 </ol>
 

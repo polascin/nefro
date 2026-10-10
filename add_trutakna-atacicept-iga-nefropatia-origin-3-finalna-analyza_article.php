@@ -24,11 +24,11 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',  // autor projektu; pôvodných autorov zdroja pridaj do source_authors.php (slug → mená)
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Finálna analýza ORIGIN 3 priniesla priaznivé výsledky eGFR a progresie IgA nefropatie. Čo údaje o atacicepte dokazujú a prečo ich nemožno zamieňať za dôkaz zníženia úmrtnosti?',
+    'excerpt'      => 'Finálna analýza ORIGIN 3 priniesla priaznivé výsledky eGFR a progresie IgA nefropatie. Čo údaje o atacicepte dokazujú – a prečo ich nemožno zamieňať za dôkaz zníženia úmrtnosti.',
     'content'      => <<<'HTML'
 <figure><a href="img/trutakna-atacicept-iga-nefropatia-origin-3-finalna-analyza.webp" rel="noopener noreferrer" target="_blank"><img src="img/trutakna-atacicept-iga-nefropatia-origin-3-finalna-analyza.webp" alt="Svietiaci glomerulus zasiahnutý úzkym modrým lúčom, ktorý rozpúšťa tmavé depozity, zdravé kapilárne kľučky zostávajú nedotknuté" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia, nie mikroskopický nález. Cielená liečba sa posudzuje podľa toho, ako presne zasiahne mechanizmus ochorenia a čoho sa nedotkne.</figcaption></figure>
 
-<p>Finálna analýza účinnosti štúdie ORIGIN 3, oznámená 15. septembra 2026, rozširuje poznatky o atacicepte (Trutakna, atacicept-vymj) pri primárnej IgA nefropatii. Popri predtým publikovanom znížení proteinúrie priniesla priaznivé výsledky odhadovanej glomerulovej filtrácie (eGFR) a kombinovaného ukazovateľa progresie. Septembrové údaje však zatiaľ pochádzajú z oznámenia zadávateľa a jeho prezentácie, nie z tu overenej recenzovanej publikácie finálnej analýzy. [1, 2]</p>
+<p>Finálna analýza účinnosti štúdie ORIGIN 3, oznámená 15. septembra 2026, rozširuje poznatky o atacicepte (Trutakna, atacicept-vymj) pri primárnej IgA nefropatii. Popri predtým publikovanom znížení proteinúrie priniesla priaznivé výsledky odhadovanej glomerulovej filtrácie (eGFR) a kombinovaného ukazovateľa progresie. Septembrové údaje však zatiaľ pochádzajú z oznámenia zadávateľa a jeho prezentácie, nie z recenzovanej publikácie finálnej analýzy, ktorú by sme mohli overiť. [1, 2]</p>
 <p><strong>Stav poznatkov k 20. septembru 2026:</strong> treba odlíšiť recenzovanú priebežnú analýzu proteinúrie, novšie firemné výsledky a platnú americkú indikáciu. Každý z týchto zdrojov odpovedá na inú otázku.</p>
 
 <h2>Prečo blokovať BAFF a APRIL</h2>
@@ -67,7 +67,7 @@ $articles[] = [
 <h2>Význam pre nefrologickú prax</h2>
 <p>Výsledky podporujú potenciál ataciceptu ovplyvniť priebeh ochorenia nad rámec samotného zníženia proteinúrie. Ich praktická interpretácia však musí zohľadniť výber pacientov, sprievodnú liečbu, trvanie sledovania a dostupnosť úplnej analýzy. Porovnanie s placebom neumožňuje vyhlásiť atacicept za účinnejší než iné cielené lieky bez priameho porovnania.</p>
 <p>Rozhodnutie FDA platí pre USA a samo osebe nedokladá registráciu, dostupnosť ani úhradu na Slovensku. Pri klinickom rozhodovaní treba vychádzať z aktuálne platných miestnych podmienok a schválenej informácie o lieku.</p>
-<p>Najpresnejší záver preto znie: finálna analýza oznámená zadávateľom priniesla priaznivý signál zachovania eGFR a nižšieho výskytu kombinovanej progresie. Samostatný prínos pre úmrtnosť, dlhodobá ochrana pred dialýzou a úplné regulačné potvrdenie týchto nových výsledkov sa z tohto oznámenia nedajú automaticky vyvodiť.</p>
+<p>Finálna analýza oznámená zadávateľom priniesla priaznivý signál zachovania eGFR a nižšieho výskytu kombinovanej progresie. Samostatný prínos pre úmrtnosť, dlhodobá ochrana pred dialýzou a úplné regulačné potvrdenie týchto nových výsledkov sa z tohto oznámenia nedajú automaticky vyvodiť.</p>
 <p>Súvisiaci článok: <a href="article.php?slug=atacicept-trutakna-iga-nefropatia-fda-proteinuria">Atacicept pri IgA nefropatii: pôvodné zrýchlené schválenie FDA a proteinúria</a>.</p>
 
 <hr>

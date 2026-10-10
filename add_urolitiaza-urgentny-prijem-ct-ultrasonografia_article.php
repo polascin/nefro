@@ -17,7 +17,7 @@ $articles[] = [
     'author' => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top' => 0,
-    'excerpt' => 'Americká analýza zaznamenala rast CT pri urolitiáze zo 73,8 % na 89,8 %. Výsledok opisuje prax, nepreukazuje však, že všetky vyšetrenia boli potrebné ani nevhodné.',
+    'excerpt' => 'Americká analýza zaznamenala rast CT pri urolitiáze zo 73,8 % na 89,8 %. Výsledok opisuje prax, nepreukazuje však, že by všetky vyšetrenia boli potrebné, ani že boli nevhodné.',
     'content' => <<<'HTML'
 <p>Pri návštevách amerických urgentných príjmov s diagnózou močových kameňov sa počítačová tomografia používala čoraz častejšie. V rozsiahlej analýze elektronických zdravotných záznamov vzrástol podiel návštev s CT vyšetrením zo 73,8 % v roku 2016 na 89,8 % v roku 2024. Zaznamenané použitie ultrasonografie sa v rovnakom období znížilo z 5,8 % na 3,8 %. [1]</p>
 
@@ -64,7 +64,7 @@ $articles[] = [
 
 <p>Niektoré vyšetrenia mohli riešiť inú diagnostickú otázku a konkrement sa mohol zachytiť súčasne alebo náhodne. Databáza neposkytovala konkrétne radiačné dávky. Z rastúceho podielu CT možno usudzovať na častejšie využívanie tejto metódy, bez údajov o protokoloch, dávkach a opakovaných vyšetreniach však nemožno vyčísliť zmenu radiačnej záťaže jednotlivých pacientov.</p>
 
-<p>Treba rozlišovať radiačnú expozíciu od podania jódovej kontrastnej látky. Ide o dva odlišné aspekty vyšetrenia. Natívne CT kontrastnú látku nevyžaduje a táto štúdia neposudzovala poškodenie obličiek súvisiace s jej podaním.</p>
+<p>Radiačnú expozíciu treba odlišovať od podania jódovej kontrastnej látky. Natívne CT kontrastnú látku nevyžaduje a táto štúdia neposudzovala poškodenie obličiek súvisiace s jej podaním.</p>
 
 <h2>Nízke využitie ultrasonografie treba interpretovať opatrne</h2>
 
@@ -94,7 +94,7 @@ $articles[] = [
 
 <p>Európska urologická asociácia odporúča pri urolitiáze ultrasonografiu ako primárny zobrazovací nástroj a následné natívne CT na potvrdenie diagnózy pri akútnej bolesti v boku. Okamžité zobrazenie odporúča pri horúčke, solitárnej obličke alebo neistote diagnózy. Uvádza tiež, že obštrukcia s infekciou močových ciest alebo anúriou je urologickou urgentnou situáciou vyžadujúcou bezodkladnú dekompresiu. [2]</p>
 
-<p>Americké kritériá ACR naopak považujú natívne CT za zvyčajne vhodné úvodné vyšetrenie dospelého s akútnou bolesťou v boku a podozrením na kameň bez predchádzajúcej anamnézy urolitiázy. V gravidite odporúčajú ako úvodnú metódu ultrasonografiu. [3] Rozdiel nie je možné zredukovať na tvrdenie, že jedna odborná spoločnosť má pravdu a druhá nie: odporúčania vychádzajú z rozdielne formulovaných scenárov, váženia diagnostickej výťažnosti a radiačnej záťaže.</p>
+<p>Americké kritériá ACR naopak považujú natívne CT za zvyčajne vhodné úvodné vyšetrenie dospelého s akútnou bolesťou v boku a podozrením na kameň bez predchádzajúcej anamnézy urolitiázy. V gravidite odporúčajú ako úvodnú metódu ultrasonografiu. [3] Rozdiel nemožno zúžiť na tvrdenie, že jedna odborná spoločnosť má pravdu a druhá nie: odporúčania vychádzajú z rozdielne formulovaných scenárov, váženia diagnostickej výťažnosti a radiačnej záťaže.</p>
 
 <p>Multiodborový konsenzus urológov, urgentných lekárov a rádiológov hodnotil 29 modelových scenárov. CT odporučil v 7, ultrasonografiu v 9 a žiadne ďalšie zobrazenie v 13 scenároch; ak bolo CT potrebné, uprednostnil zníženú dávku. [4] Randomizovaná štúdia s 2 759 pacientmi navyše ukázala, že úvodná ultrasonografia znížila kumulatívnu radiačnú expozíciu bez zisteného nárastu závažných komplikácií s vysokým rizikom, návratov na urgentný príjem či hospitalizácií oproti úvodnému CT. Následné zobrazenie však bolo ponechané na klinickom rozhodnutí, takže nešlo o stratégiu „ultrasonografia a nikdy CT“. [5]</p>
 
@@ -112,13 +112,13 @@ $articles[] = [
   <li><strong>Observačný dizajn nepreukazuje príčinnosť:</strong> trendy v CT, hospitalizáciách, opioidoch a výkonoch nemožno navzájom označiť za príčinu a následok.</li>
 </ul>
 
-<p>Autori neuviedli známe konkurenčné finančné ani osobné záujmy. To nemení metodické hranice analýzy. [1]</p>
+<p>Autori neuviedli žiadne známe finančné ani osobné konflikty záujmov. Na metodických hraniciach analýzy to nič nemení. [1]</p>
 
 <h2>Klinické posolstvo</h2>
 
 <p>Americké údaje nepreukazujú, že takmer rutinné CT je optimálne, ani že ho možno bezpečne nahradiť ultrasonografiou u každého pacienta. Ukazujú veľký odstup medzi frekvenciou oboch zaznamenaných metód a potrebu hodnotiť zobrazovanie presnejšie než samotným počtom vyšetrení.</p>
 
-<p>Audit pracoviska by mal sledovať klinickú indikáciu, použitý protokol a dávku, opakované expozície aj to, či nález zmenil rozhodnutie. Najpraktickejším záverom nie je „menej CT za každú cenu“, ale <strong>správne zobrazenie, správnemu pacientovi a v správnom čase</strong>.</p>
+<p>Audit pracoviska by mal sledovať klinickú indikáciu, použitý protokol a dávku, opakované expozície aj to, či nález zmenil rozhodnutie. Najpraktickejším záverom nie je „menej CT za každú cenu“, ale <strong>správne zobrazenie pre správneho pacienta v správnom čase</strong>.</p>
 
 <hr>
 

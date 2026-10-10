@@ -27,17 +27,17 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Online trend „gutmaxxing“ spája vysoký príjem bielkovín, vlákninové a suplementačné režimy a vyraďovanie skupín potravín. Pre pacienta s chronickou chorobou obličiek sú pritom bežne odporúčané cieľové hodnoty nevhodné až rizikové.',
+    'excerpt'      => 'Online trend „gutmaxxing“ spája vysoký príjem bielkovín, vlákninové a suplementačné režimy a vyraďovanie skupín potravín. Pre pacienta s chronickou chorobou obličiek sú však cieľové hodnoty, ktoré sa v ňom bežne odporúčajú, nevhodné až rizikové.',
     'content'      => <<<'HTML'
 <figure><a href="img/gutmaxxing-rigidny-dietny-protokol-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/gutmaxxing-rigidny-dietny-protokol-nefrologia.webp" alt="Svietiace črevo zovreté klietkou z tvrdých rovných geometrických mreží svetla, ktoré ho v miestach dotyku deformujú" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Keď sa zo starostlivosti o črevo stane nemenný protokol, obmedzenie začne škodiť skôr než pomáhať.</figcaption></figure>
 
-<p>Pojmom „gutmaxxing“ sa v online komunitách označuje snaha o maximálne „optimalizované“ trávenie: vysoký príjem vlákniny a bielkovín, sledovanie makroživín, kombinácie výživových doplnkov, opakované „detoxikačné“ a „očistné“ cykly a vyraďovanie celých skupín potravín. Je súčasťou širšieho javu, ktorý spája sebazlepšovanie s číselnými cieľmi. Z pohľadu ambulancie nejde v prvom rade o to, čo pacient je — ale o to, <strong>ako prísne dodržiava pravidlá, ktoré si stanovil</strong>. A pre pacienta s chronickou chorobou obličiek (CKD) sú tieto pravidlá spravidla prevzaté z odporúčaní, ktoré preňho neplatia.</p>
+<p>Pojmom „gutmaxxing“ sa v online komunitách označuje snaha o maximálne „optimalizované“ trávenie: vysoký príjem vlákniny a bielkovín, sledovanie makroživín, kombinácie výživových doplnkov, opakované „detoxikačné“ a „očistné“ cykly a vyraďovanie celých skupín potravín. Patrí k širšiemu javu, ktorý spája sebazlepšovanie s číselnými cieľmi. Pre ambulanciu nie je rozhodujúce ani tak to, čo pacient je, ako to, <strong>ako prísne dodržiava pravidlá, ktoré si stanovil</strong>. Pre pacienta s chronickou chorobou obličiek (CKD) sú tieto pravidlá spravidla prevzaté z odporúčaní, ktoré preňho neplatia.</p>
 
 <h2>Čo taký protokol zvyčajne obsahuje</h2>
 
 <ul>
   <li>Číselné ciele pre bielkoviny a vlákninu, často prevzaté z fitness obsahu.</li>
-  <li>Viacero výživových doplnkov naraz — probiotiká, vlákninové prípravky, proteínové koncentráty, kreatín, elektrolytové zmesi, bylinné prípravky.</li>
+  <li>Viacero výživových doplnkov naraz: probiotiká, vlákninové prípravky, proteínové koncentráty, kreatín, elektrolytové zmesi, bylinné prípravky.</li>
   <li>Vyraďovanie skupín potravín (lepok, mliečne výrobky, niektoré rastlinné oleje, väčšina ovocia) bez preukázanej intolerancie alebo alergie.</li>
   <li>Opakované „očistné“ režimy a preplachy.</li>
   <li>Denné vykazovanie a kontrola dodržiavania pravidiel.</li>
@@ -49,7 +49,7 @@ $articles[] = [
 
 <h3>Cieľové hodnoty pre bežnú populáciu nie sú cieľovými hodnotami pri CKD</h3>
 
-<p>Toto je najdôležitejšia praktická informácia celého článku. Hodnoty, ktoré v populárnych prehľadoch figurujú ako rozumné, sú pri CKD nad odporúčaným stropom:</p>
+<p>Toto je prakticky najdôležitejšia časť článku. Hodnoty, ktoré populárne prehľady uvádzajú ako rozumné, sú pri CKD nad odporúčaným stropom:</p>
 
 <div class="table-responsive pdf-keep-together" role="region" aria-label="Porovnanie odporúčaní pre príjem bielkovín v bežnej populácii a pri chronickej chorobe obličiek" tabindex="0">
   <table>
@@ -74,28 +74,28 @@ $articles[] = [
       <tr>
         <th scope="row">Pacient na dialýze</th>
         <td>Vyšší príjem než pri CKD bez dialýzy</td>
-        <td>Riziko je opačné — podvýživa a úbytok svalovej hmoty. Cieľ určuje nefrológ spolu s nutričným terapeutom.</td>
+        <td>Riziko je opačné: podvýživa a úbytok svalovej hmoty. Cieľ určuje nefrológ spolu s nutričným terapeutom.</td>
       </tr>
     </tbody>
   </table>
 </div>
 
-<p>Rozdiel je zásadný. Cieľ 1,6 g/kg/deň prevzatý z fitness obsahu leží u pacienta s CKD nad hranicou, ktorú KDIGO neodporúča prekračovať. U 80-kilogramového pacienta ide o rozdiel medzi približne 64 g a 128 g bielkovín denne. Podrobnejšie sa touto otázkou zaoberá samostatný článok o mýtoch influencerov, na ktorý odkazujeme nižšie.</p>
+<p>Rozdiel je zásadný. Cieľ 1,6 g/kg/deň prevzatý z fitness obsahu leží u pacienta s CKD nad hranicou, ktorú KDIGO neodporúča prekračovať. U 80-kilogramového pacienta ide o rozdiel medzi približne 64 g a 128 g bielkovín denne. Podrobnejšie sa tejto otázke venuje samostatný článok o mýtoch influencerov (odkaz nižšie).</p>
 
 <h3>Doplnky výživy a minerálový profil</h3>
 
-<p>Pri CKD platí, že „prírodné“ nie je synonymom „bezpečné“. Praktické riziká kombinovaných suplementačných režimov:</p>
+<p>Pri CKD „prírodné“ neznamená „bezpečné“. Kombinované suplementačné režimy nesú tieto praktické riziká:</p>
 
 <ul>
   <li><strong>Draslík.</strong> Rastlinné proteínové zmesi, zeleninové koncentráty a elektrolytové prípravky môžu obsahovať významné množstvo draslíka bez toho, aby to bolo zjavné z obalu.</li>
   <li><strong>Fosfor.</strong> Fosforečnanové aditíva v spracovaných „proteínových“ výrobkoch sa vstrebávajú podstatne lepšie než fosfor viazaný v prirodzených potravinách.</li>
-  <li><strong>Tekutiny a objem.</strong> Vlákninové prípravky vyžadujú dostatočný príjem tekutín, ktorý je pri pokročilej CKD alebo pri srdcovom zlyhávaní obmedzený. Naopak „očistné“ režimy môžu viesť k stratám tekutín a k prerenálnemu poškodeniu.</li>
+  <li><strong>Tekutiny a objem.</strong> Vlákninové prípravky vyžadujú dostatočný príjem tekutín, ktorý je pri pokročilej CKD alebo pri srdcovom zlyhávaní obmedzený. „Očistné“ režimy zasa môžu viesť k stratám tekutín a k prerenálnemu poškodeniu.</li>
   <li><strong>Bylinné prípravky.</strong> Časť z nich je nefrotoxická alebo vstupuje do liekových interakcií; zloženie výživových doplnkov nepodlieha rovnakej kontrole ako zloženie liekov.</li>
 </ul>
 
 <h3>Interpretácia kreatinínu</h3>
 
-<p>Vysoký príjem bielkovín, doplnky s kreatínom a vyšší podiel svalovej hmoty zvyšujú koncentráciu kreatinínu bez toho, aby klesla skutočná filtrácia. Pri pacientovi s takýmto režimom je preto pred záverom o „zhoršení funkcie obličiek“ namieste doplniť cystatín C, prípadne albuminúriu, a odber zopakovať po vysadení doplnkov.</p>
+<p>Vysoký príjem bielkovín, doplnky s kreatínom a vyšší podiel svalovej hmoty zvyšujú koncentráciu kreatinínu bez toho, aby klesla skutočná filtrácia. U pacienta s takýmto režimom je preto pred záverom o „zhoršení funkcie obličiek“ namieste doplniť cystatín C, prípadne albuminúriu, a odber zopakovať po vysadení doplnkov.</p>
 
 <h2>Kedy ide už o poruchu, nie o disciplínu</h2>
 
@@ -105,12 +105,12 @@ $articles[] = [
   <li>výrazná úzkosť, vina alebo pocit zlyhania pri odchýlke od protokolu,</li>
   <li>vyhýbanie sa spoločným jedlám, cestovaniu alebo rodinným udalostiam kvôli pravidlám,</li>
   <li>postupné rozširovanie zoznamu zakázaných potravín bez klinického dôvodu,</li>
-  <li>opakované kontrolné správanie — váženie, fotografovanie, zapisovanie, vyhľadávanie zloženia,</li>
+  <li>opakované kontrolné správanie – váženie, fotografovanie, zapisovanie, vyhľadávanie zloženia,</li>
   <li>neúmyselné chudnutie, únava, výpadok menštruácie, znížená výkonnosť,</li>
   <li>presvedčenie, ktoré odoláva vysvetleniu a opiera sa o obsah zo sociálnych sietí.</li>
 </ul>
 
-<p>Poznámka k terminológii: pojem „ortorexia“ sa v tejto súvislosti používa často, <strong>nejde však o samostatnú diagnostickú jednotku v DSM-5</strong>. Klinicky významné je to, či sú prítomné kritériá poruchy príjmu potravy — najmä vyhýbavo-reštriktívnej poruchy príjmu potravy — alebo obsedantno-kompulzívneho okruhu. Pri podozrení patrí pacient k psychiatrovi alebo klinickému psychológovi, nie k ďalšej nutričnej úprave.</p>
+<p>Poznámka k terminológii: pojem „ortorexia“ sa v tejto súvislosti používa často, <strong>nejde však o samostatnú diagnostickú jednotku v DSM-5</strong>. Klinicky významné je to, či sú prítomné kritériá poruchy príjmu potravy (najmä vyhýbavo-reštriktívnej poruchy príjmu potravy) alebo obsedantno-kompulzívneho okruhu. Pri podozrení patrí pacient k psychiatrovi alebo klinickému psychológovi, nie k ďalšej nutričnej úprave.</p>
 
 <h2>Praktický postup v ambulancii</h2>
 
@@ -119,7 +119,7 @@ $articles[] = [
   <li><strong>Vypísať všetky doplnky.</strong> Vrátane proteínových práškov, elektrolytových zmesí, bylinných čajov a „očistných“ prípravkov. Pacienti ich spravidla neuvádzajú medzi liekmi.</li>
   <li><strong>Prepočítať skutočný príjem bielkovín</strong> na kilogram telesnej hmotnosti a porovnať ho s cieľom primeraným štádiu CKD, nie s cieľom z internetu.</li>
   <li><strong>Zvážiť laboratórne vyšetrenie</strong> podľa klinickej situácie: kálium, fosfor, vápnik, bikarbonát, kreatinín s cystatínom C, albuminúria, prípadne parametre nutričného stavu.</li>
-  <li><strong>Nezakazovať plošne.</strong> Zákaz bez vysvetlenia motivovaného pacienta spravidla nezastaví — len ho prestane o režime informovať. Účinnejšie je ponúknuť konkrétny, číselne vyjadrený cieľ prispôsobený jeho štádiu CKD.</li>
+  <li><strong>Nezakazovať plošne.</strong> Zákaz bez vysvetlenia motivovaného pacienta spravidla nezastaví; pacient len prestane lekára o režime informovať. Účinnejšie je ponúknuť konkrétny, číselne vyjadrený cieľ prispôsobený jeho štádiu CKD.</li>
   <li><strong>Vlákninu preferovať z potravy.</strong> Pri CKD však treba zohľadniť obsah draslíka v jednotlivých zdrojoch a prípadné obmedzenie príjmu tekutín.</li>
 </ol>
 
@@ -129,7 +129,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>„Gutmaxxing“ je príklad toho, ako sa zdravotná motivácia mení na číselný protokol. Pre nefrológa z toho vyplývajú dve úlohy: preložiť cieľové hodnoty do podoby platnej pre dané štádium CKD — najmä pri bielkovinách, kde sa bežne odporúčané rozpätie s odporúčaním KDIGO míňa — a rozpoznať, kedy už za protokolom nestojí disciplína, ale porucha, ktorá si vyžaduje inú než nutričnú intervenciu.</p>
+<p>„Gutmaxxing“ je príklad toho, ako sa zdravotná motivácia mení na číselný protokol. Pre nefrológa z toho vyplývajú dve úlohy: preložiť cieľové hodnoty do podoby platnej pre dané štádium CKD (najmä pri bielkovinách, kde sa bežne odporúčané rozpätie s odporúčaním KDIGO míňa) a rozpoznať, kedy už za protokolom nestojí disciplína, ale porucha, ktorá si vyžaduje inú než nutričnú intervenciu.</p>
 
 <h2>Súvisiace články</h2>
 

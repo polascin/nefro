@@ -27,7 +27,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Jedno stanovenie Lp(a) môže odhaliť celoživotné genetické riziko ASCVD a aortálnej stenózy. Ako správne čítať mg/dl a nmol/l a čo po vysokom výsledku zmeniť aj pri CKD.',
     'content'      => <<<'HTML'
-<figure><a href="img/lipoprotein-a-kardiovaskularne-riziko-primarna-starostlivost.webp" rel="noopener noreferrer" target="_blank"><img src="img/lipoprotein-a-kardiovaskularne-riziko-primarna-starostlivost.webp" alt="Plak v cieve, v ktorom skenovací lúč osvetlí len časť častíc a tmavšia populácia zostáva v tieni" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Bežný lipidový profil túto časť rizika neosvetlí — a bez cieleného vyšetrenia zostane neviditeľná.</figcaption></figure>
+<figure><a href="img/lipoprotein-a-kardiovaskularne-riziko-primarna-starostlivost.webp" rel="noopener noreferrer" target="_blank"><img src="img/lipoprotein-a-kardiovaskularne-riziko-primarna-starostlivost.webp" alt="Plak v cieve, v ktorom skenovací lúč osvetlí len časť častíc a tmavšia populácia zostáva v tieni" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Bežný lipidový profil túto časť rizika neosvetlí – a bez cieleného vyšetrenia zostane neviditeľná.</figcaption></figure>
 
 <p>Lipoproteín(a), Lp(a), patrí medzi najčastejšie prehliadané kardiovaskulárne rizikové faktory. Jeho koncentrácia sa v bežnom lipidovom profile nemeria a z hodnoty LDL cholesterolu ju nemožno spoľahlivo odvodiť. Pacient preto môže mať prijateľný LDL cholesterol, zdravý životný štýl a napriek tomu niesť významné, prevažne vrodené reziduálne riziko.</p>
 

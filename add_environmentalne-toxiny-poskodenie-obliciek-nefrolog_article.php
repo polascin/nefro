@@ -32,7 +32,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Praktický rámec pre nefrológa: kedy pri nevysvetlenej tubulopatii, kryštálovej nefropatii či neprimerane rýchlom poklese eGFR cielene pátrať po environmentálnej a pracovnej expozícii. A prečo zvýšená hladina chemickej látky sama osebe nie je dôkazom príčiny CKD.',
     'content'      => <<<'HTML'
-<figure><a href="img/environmentalne-toxiny-poskodenie-obliciek-nefrolog.webp" rel="noopener noreferrer" target="_blank"><img src="img/environmentalne-toxiny-poskodenie-obliciek-nefrolog.webp" alt="Oblička a tenké vlákna environmentálnych stôp — kovové zrná, prach, postrek, výpary — ktoré zviditeľní až cielený lúč" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Tieto expozície sa v anamnéze samy neobjavia; zviditeľní ich len cielená otázka.</figcaption></figure>
+<figure><a href="img/environmentalne-toxiny-poskodenie-obliciek-nefrolog.webp" rel="noopener noreferrer" target="_blank"><img src="img/environmentalne-toxiny-poskodenie-obliciek-nefrolog.webp" alt="Oblička a tenké vlákna environmentálnych stôp – kovové zrná, prach, postrek, výpary – ktoré zviditeľní až cielený lúč" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Tieto expozície sa v anamnéze samy neobjavia; zviditeľní ich len cielená otázka.</figcaption></figure>
 
 <h2>Úvod</h2>
 
@@ -162,7 +162,7 @@ $articles[] = [
 
 <h2>Urán, oxid kremičitý a ďalšie geogénne látky</h2>
 
-<p>Urán môže poškodzovať proximálne tubuly, predovšetkým pri vyššej chemickej expozícii. Epidemiologické údaje o jeho vplyve na eGFR sú však nejednotné. Je potrebné odlišovať chemickú toxicitu uránu od rizika ionizujúceho žiarenia.</p>
+<p>Urán môže poškodzovať proximálne tubuly, predovšetkým pri vyššej chemickej expozícii. Epidemiologické údaje o jeho vplyve na eGFR sú však nejednotné. Treba odlišovať chemickú toxicitu uránu od rizika ionizujúceho žiarenia.</p>
 
 <p>Oxid kremičitý, fluoridy a vanád sa skúmajú ako možné faktory CKD neznámej etiológie. Ich samostatný kauzálny význam nebol spoľahlivo potvrdený. Pri ochoreniach poľnohospodárskych pracovníkov sa pravdepodobne uplatňuje kombinácia tepelného stresu, opakovanej dehydratácie, fyzickej záťaže, sociálnych podmienok a viacerých chemických expozícií.</p>
 
@@ -208,7 +208,7 @@ $articles[] = [
 
 <p>Pri chronickej expozícii sú dôkazy menej jednoznačné. Štúdie poľnohospodárskych pracovníkov sú komplikované súčasným pôsobením viacerých pesticídov, tepla, dehydratácie, infekcií, prašnosti a sociálnych faktorov. Označiť pesticídy za jedinú príčinu CKD neznámej etiológie by preto bolo neprimerané.</p>
 
-<p>Dôležitý je aj fakt, že toxicitu nemusí určovať iba deklarovaná účinná látka. Rozpúšťadlá a povrchovo aktívne látky vo formulácii môžu významne meniť absorpciu a toxický účinok.</p>
+<p>Toxicitu navyše nemusí určovať iba deklarovaná účinná látka. Rozpúšťadlá a povrchovo aktívne látky vo formulácii môžu významne meniť absorpciu a toxický účinok.</p>
 
 <h2>Kedy myslieť na environmentálne podmienené ochorenie obličiek</h2>
 

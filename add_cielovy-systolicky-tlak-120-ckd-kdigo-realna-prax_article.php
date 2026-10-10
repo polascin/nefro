@@ -93,7 +93,7 @@ $articles[] = [
 </table>
 </div>
 
-<p>Dasgupta a Zoccali v prehľade v časopise <em>Hypertension</em> upozornili, že cieľ KDIGO je „výnimkou medzi súčasnými veľkými medzinárodnými odporúčaniami pre hypertenziu“ a že jeho mechanické použitie na rutinne merané hodnoty by pacientov s viacerými ochoreniami a krehkých pacientov vystavilo riziku nežiaducich udalostí vrátane pádov a zlomenín. Pomalé prijatie cieľa preto nie je len prejavom zotrvačnosti — odráža aj odbornú neistotu, ktorá bola opísaná krátko po zverejnení odporúčania.</p>
+<p>Dasgupta a Zoccali v prehľade v časopise <em>Hypertension</em> upozornili, že cieľ KDIGO je „výnimkou medzi súčasnými veľkými medzinárodnými odporúčaniami pre hypertenziu“ a že jeho mechanické použitie na rutinne merané hodnoty by pacientov s viacerými ochoreniami a krehkých pacientov vystavilo riziku nežiaducich udalostí vrátane pádov a zlomenín. Pomalé prijatie cieľa preto nie je len prejavom zotrvačnosti – odráža aj odbornú neistotu, ktorá bola opísaná krátko po zverejnení odporúčania.</p>
 
 <h2>Ako bola skúmaná reálna klinická prax</h2>
 
@@ -154,7 +154,7 @@ $articles[] = [
 </table>
 </div>
 
-<p>Za povšimnutie stojí, že v prvom roku po publikovaní odporúčania sa podiel nezvýšil vôbec a intervaly spoľahlivosti prekročili nulu až od roku 2023. Nárast teda nastal až s odstupom dvoch rokov.</p>
+<p>Za povšimnutie stojí, že v prvom roku po publikovaní odporúčania sa podiel nezvýšil vôbec a interval spoľahlivosti prestal zahŕňať nulu až v roku 2023. Nárast teda nastal až s odstupom dvoch rokov.</p>
 
 <p>V roku 2024 tak malo priemerný systolický tlak 120 mm Hg alebo vyšší približne 78 % pacientov. Zároveň však medián systolického tlaku mierne klesol zo 131 mm Hg v roku 2020 na 130 mm Hg v roku 2024 a medián diastolického tlaku zo 73 na 71 mm Hg. Nešlo teda o úplnú absenciu populačnej zmeny, ale o malý posun, ktorý väčšinu pacientov nepresunul pod hranicu 120 mm Hg.</p>
 
@@ -183,13 +183,13 @@ $articles[] = [
 
 <p>Autori vykonali aj citlivostnú analýzu s hranicou systolického tlaku pod 130 mm Hg, ktorá zodpovedala americkému odporúčaniu ACC/AHA z roku 2017.</p>
 
-<p>Podiel pacientov pod touto hranicou vzrástol zo 44,7 % v roku 2020 na 50,4 % v roku 2024, absolútny rozdiel 5,7 percentuálneho bodu.</p>
+<p>Podiel pacientov pod touto hranicou vzrástol zo 44,7 % v roku 2020 na 50,4 % v roku 2024, čo predstavuje absolútny rozdiel 5,7 percentuálneho bodu.</p>
 
 <p>Aj pri menej prísnej hranici tak malo v roku 2024 približne 49,6 % pacientov systolický tlak 130 mm Hg alebo vyšší. Problém nedostatočne kontrolovanej hypertenzie preto nemožno vysvetliť iba mimoriadne prísnym cieľom KDIGO.</p>
 
 <h2>Súvislosť krvného tlaku s kardiovaskulárnymi a obličkovými príhodami</h2>
 
-<p>V longitudinálnej kohorte malo systolický tlak pod 120 mm Hg 3 767 z 18 996 pacientov, teda 19,8 %. Medián sledovania predstavoval 6,9 roka. Počas sledovania sa zaznamenalo 6 021 kardiovaskulárnych príhod a 2 213 prípadov zlyhania obličiek.</p>
+<p>V longitudinálnej kohorte malo systolický tlak pod 120 mm Hg 3 767 z 18 996 pacientov, teda 19,8 %. Medián sledovania bol 6,9 roka. Počas sledovania sa zaznamenalo 6 021 kardiovaskulárnych príhod a 2 213 prípadov zlyhania obličiek.</p>
 
 <p>Po štatistickom zohľadnení viacerých klinických charakteristík bol systolický tlak 120 mm Hg alebo vyšší v porovnaní s tlakom pod 120 mm Hg spojený s:</p>
 
@@ -277,7 +277,7 @@ $articles[] = [
 
 <h3>Výrazná selekcia longitudinálnej kohorty</h3>
 
-<p>Zo 83 249 potenciálne vhodných pacientov zostalo po uplatnení všetkých kritérií 18 996, teda necelá štvrtina. Hlavnými dôvodmi boli nedostatočný počet meraní, predchádzajúce kardiovaskulárne ochorenie a chýbajúce údaje. Takáto selekcia obmedzuje prenositeľnosť výsledkov na všetkých pacientov s CKD — najmä vylúčenie pacientov s predchádzajúcim kardiovaskulárnym ochorením, teda práve tých s najvyšším absolútnym rizikom.</p>
+<p>Zo 83 249 potenciálne vhodných pacientov zostalo po uplatnení všetkých kritérií 18 996, teda necelá štvrtina. Hlavnými dôvodmi boli nedostatočný počet meraní, predchádzajúce kardiovaskulárne ochorenie a chýbajúce údaje. Takáto selekcia obmedzuje prenositeľnosť výsledkov na všetkých pacientov s CKD – najmä vylúčenie pacientov s predchádzajúcim kardiovaskulárnym ochorením, teda práve tých s najvyšším absolútnym rizikom.</p>
 
 <h3>Chýbali pacienti vo veku 80 rokov a viac</h3>
 
@@ -336,7 +336,7 @@ $articles[] = [
 </table>
 </div>
 
-<p>Tvrdenie, že intenzívna liečba v podskupine s CKD znížila kardiovaskulárne riziko, teda nie je presné: zložený kardiovaskulárny výsledok významnosť <strong>nedosiahol</strong>. Významné bolo iba zníženie celkovej mortality. Zároveň sa nepreukázalo modifikovanie účinku prítomnosťou CKD (hodnoty p pre interakciu ≥ 0,30), takže prínos zistený v celom súbore sa na pacientov s CKD pravdepodobne vzťahuje — ale samotná podskupina na jeho preukázanie nemala dostatočnú silu.</p>
+<p>Tvrdenie, že intenzívna liečba v podskupine s CKD znížila kardiovaskulárne riziko, teda nie je presné: zložený kardiovaskulárny výsledok významnosť <strong>nedosiahol</strong>. Významné bolo iba zníženie celkovej mortality. Zároveň sa nepreukázalo, že by prítomnosť CKD modifikovala účinok (hodnoty p pre interakciu ≥ 0,30), takže prínos zistený v celom súbore sa na pacientov s CKD pravdepodobne vzťahuje – ale samotná podskupina na jeho preukázanie nemala dostatočnú silu.</p>
 
 <p>Presvedčivý nefroprotektívny účinok sa nepreukázal. Po úvodných šiestich mesiacoch mala intenzívne liečená skupina dokonca mierne rýchlejší pokles eGFR (−0,47 oproti −0,32 ml/min/1,73 m² za rok; p &lt; 0,03). Akútny hemodynamický pokles eGFR po začatí intenzívnej liečby pritom nemožno automaticky stotožniť so štrukturálnym poškodením obličiek.</p>
 

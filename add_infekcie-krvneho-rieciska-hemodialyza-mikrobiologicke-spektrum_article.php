@@ -27,7 +27,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Pätnásťročná írska štúdia zaznamenala pokles podielu stafylokokových infekcií a relatívny vzostup gramnegatívnych paličiek. Najvýznamnejším modifikovateľným rizikom zostáva centrálny venózny katéter.',
     'content'      => <<<'HTML'
-<figure><a href="img/infekcie-krvneho-rieciska-hemodialyza-mikrobiologicke-spektrum.webp" rel="noopener noreferrer" target="_blank"><img src="img/infekcie-krvneho-rieciska-hemodialyza-mikrobiologicke-spektrum.webp" alt="Katétrový nadstavec a okolo neho riedky, no druhovo pestrý roj mikroorganizmov rôznych tvarov" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia, nie mikroskopický nález. Prípadov ubúda, no skladba pôvodcov sa mení — a to mení aj úvodnú voľbu liečby.</figcaption></figure>
+<figure><a href="img/infekcie-krvneho-rieciska-hemodialyza-mikrobiologicke-spektrum.webp" rel="noopener noreferrer" target="_blank"><img src="img/infekcie-krvneho-rieciska-hemodialyza-mikrobiologicke-spektrum.webp" alt="Katétrový nadstavec a okolo neho riedky, no druhovo pestrý roj mikroorganizmov rôznych tvarov" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia, nie mikroskopický nález. Prípadov ubúda, no skladba pôvodcov sa mení – a to mení aj úvodnú voľbu liečby.</figcaption></figure>
 
 <p class="article-dek"><em>Pätnásťročná írska štúdia zaznamenala pokles podielu stafylokokových infekcií a relatívny vzostup gramnegatívnych baktérií. Najvýznamnejším modifikovateľným rizikovým faktorom zostáva centrálny venózny katéter. Časová súvislosť s otvorením novej dialyzačnej jednotky je zaujímavá, ale sama osebe nedokazuje príčinný účinok.</em></p>
 
@@ -174,13 +174,13 @@ $articles[] = [
 
 <p>Koaguláza-negatívne stafylokoky sú častými pôvodcami katétrových infekcií, ale aj častými kontaminantmi hemokultúr. Interpretácia závisí od počtu pozitívnych fliaš a odberových súprav, času do pozitivity, prítomnosti rovnakého mikroorganizmu vo viacerých odberoch, klinických príznakov, prítomnosti katétra alebo iného implantátu a výsledkov kontrolných hemokultúr.</p>
 
-<p>Príliš voľná definícia môže počet infekcií nadhodnotiť, príliš prísna môže prehliadnuť skutočnú katétrovú infekciu. Táto skutočnosť má význam aj pri porovnávaní dlhodobých trendov: zmena definície alebo laboratórnej metodiky sa v grafe prejaví podobne ako skutočná zmena epidemiológie.</p>
+<p>Príliš voľná definícia môže počet infekcií nadhodnotiť, príliš prísna môže prehliadnuť skutočnú katétrovú infekciu. Má to význam aj pri porovnávaní dlhodobých trendov: zmena definície alebo laboratórnej metodiky sa v grafe prejaví podobne ako skutočná zmena epidemiológie.</p>
 
 <h3>Katétrová infekcia verzus infekcia z iného zdroja</h3>
 
 <p>U dialyzovaného pacienta s katétrom nemožno každú bakteriémiu automaticky označiť za katétrovú. Zdrojom môže byť pneumónia, infekcia močových ciest, cholangitída, ischemická rana alebo endokarditída.</p>
 
-<p>Na druhej strane absencia lokálnych známok pri výstupe katétra nevylučuje intraluminálnu infekciu.</p>
+<p>Naopak, chýbanie lokálnych známok pri výstupe katétra nevylučuje intraluminálnu infekciu.</p>
 
 <h2>Klinický postup pri podozrení na infekciu krvného riečiska</h2>
 

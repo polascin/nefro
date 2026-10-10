@@ -109,7 +109,7 @@ $articles[] = [
 </table>
 </div>
 
-<p>Pokles celkovej stopy medzi rokmi 2021 a 2023 bol teda 0,356 ± 0,257 t CO₂e na pacienta za rok. Rozdiel sa koncentroval najmä v kategórii energie, vykurovania a vody. Keďže neexistovali kontrolné centrá a súčasne sa mohli meniť počasie, energetický mix, stavebná prevádzka, počet výkonov či obsadenosť, <strong>9,1-percentný pokles nemožno kauzálne pripísať jednej intervencii ani jednoduchému súčtu opatrení</strong>. Presné je povedať, že pokles bol časovo spojený s prevádzkovými zmenami.</p>
+<p>Pokles celkovej stopy medzi rokmi 2021 a 2023 bol teda 0,356 ± 0,257 t CO₂e na pacienta za rok. Rozdiel sa koncentroval najmä v kategórii energie, vykurovania a vody. Keďže neexistovali kontrolné centrá a súčasne sa mohli meniť počasie, energetický mix, stavebná prevádzka, počet výkonov či obsadenosť, <strong>9,1-percentný pokles nemožno kauzálne pripísať jednej intervencii ani jednoduchému súčtu opatrení</strong>. Presnejšie je hovoriť o poklese, ktorý sa časovo zhodoval s prevádzkovými zmenami.</p>
 
 <p>Autori porovnali dialyzačnú stopu s nemeckými emisiami na obyvateľa a uviedli približne 40-percentný prírastok. Ide iba o ilustráciu rádu veľkosti. Národný údaj a inventúra dialyzačného centra majú odlišné systémové hranice a pri jednoduchom sčítaní môže dôjsť k dvojitému započítaniu časti zdravotníctva.</p>
 
@@ -193,7 +193,7 @@ $articles[] = [
 
 <p>Nie všetok dialyzačný odpad je infekčný alebo nebezpečný a nie každý sa likviduje spaľovaním. Správne triedenie znižuje množstvo klinického odpadu, ale recyklácia alebo opakovane použiteľné riešenia musia rešpektovať infekčnú bezpečnosť, sledovateľnosť a miestne predpisy. Označenie „biologicky odbúrateľný“ samo osebe nezaručuje nižší celoživotný vplyv.</p>
 
-<p>Včasná diagnostika a účinné spomalenie progresie chronickej choroby obličiek a preemptívna transplantácia u vhodných pacientov môžu spolu s klinickým prínosom znížiť aj dlhodobú environmentálnu záťaž. Z pôvodnej práce však nemožno odvodiť, že transplantácia je univerzálne „najzelenším“ riešením: časť argumentu vychádzala z extrapolácie iných transplantačných výkonov a výsledok závisí od krajiny a hraníc LCA. Indikácia transplantácie zostáva medicínska a pacientsky orientovaná. Dialýza ani iná život zachraňujúca liečba nesmie byť odkladaná alebo obmedzovaná pre uhlíkovú stopu.</p>
+<p>Včasná diagnostika, účinné spomalenie progresie chronickej choroby obličiek a preemptívna transplantácia u vhodných pacientov môžu spolu s klinickým prínosom znížiť aj dlhodobú environmentálnu záťaž. Z pôvodnej práce však nemožno odvodiť, že transplantácia je univerzálne „najzelenším“ riešením: časť argumentu vychádzala z extrapolácie iných transplantačných výkonov a výsledok závisí od krajiny a hraníc LCA. Indikácia transplantácie zostáva medicínska a pacientsky orientovaná. Dialýza ani iná život zachraňujúca liečba nesmie byť odkladaná alebo obmedzovaná pre uhlíkovú stopu.</p>
 
 <h2>Záver</h2>
 

@@ -33,11 +33,11 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Praktický algoritmus manažmentu anémie pri CKD podľa KDOQI US Commentary ku KDIGO 2026: potvrdenie anémie, hľadanie korektibilných príčin, racionálne dopĺňanie železa s jasnými hranicami, opatrnosť pri ferric carboxymaltose a zdieľané rozhodovanie pri ESA/HIF-PHI.',
     'content'      => <<<'HTML'
-<figure><a href="img/anemia-ckd-2026-prakticky-algoritmus-esa-hif-phi.webp" rel="noopener noreferrer" target="_blank"><img src="img/anemia-ckd-2026-prakticky-algoritmus-esa-hif-phi.webp" alt="Cesta od krvnej vzorky rozdelená na dve liečebné vetvy — injekčnú a tabletkovú — obe končia pri jasných krvinkách" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Dve liečebné cesty vedú k rovnakému cieľu — líšia sa spôsobom podania aj profilom rizík.</figcaption></figure>
+<figure><a href="img/anemia-ckd-2026-prakticky-algoritmus-esa-hif-phi.webp" rel="noopener noreferrer" target="_blank"><img src="img/anemia-ckd-2026-prakticky-algoritmus-esa-hif-phi.webp" alt="Cesta od krvnej vzorky rozdelená na dve liečebné vetvy – injekčnú a tabletkovú – obe končia pri jasných krvinkách" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Dve liečebné cesty vedú k rovnakému cieľu – líšia sa spôsobom podania aj profilom rizík.</figcaption></figure>
 
-<p>Anémia pri chronickej chorobe obličiek (CKD) nie je len problém „nízkeho Hb“. Zmysluplný postup začína potvrdením anémie a hľadaním jej príčiny, pokračuje cieleným doplnením železa a až potom sa rozhoduje o ESA alebo HIF-PHI tak, aby sa minimalizovalo riziko aj počet zbytočných transfúzií.</p>
+<p>Anémia pri chronickej chorobe obličiek (CKD) nie je len problém „nízkeho Hb“. Postup začína potvrdením anémie a hľadaním jej príčiny, pokračuje cieleným doplnením železa a až potom prichádza rozhodnutie o ESA alebo HIF-PHI – tak, aby bolo čo najmenšie riziko liečby aj počet zbytočných transfúzií.</p>
 
-<p>Nižšie je praktická verzia komentára k odporúčaniam KDIGO 2026, upravená do podoby, ktorá sa dá použiť v ambulancii aj na dialýze ako krok za krokom vedený postup.</p>
+<p>Ďalej je komentár k odporúčaniam KDIGO 2026 prepísaný do postupu krok za krokom, ktorý sa dá použiť v ambulancii aj na dialýze.</p>
 
 <h2>1) Kedy začať a čo vyšetriť hneď</h2>
 
@@ -63,13 +63,13 @@ $articles[] = [
   <li>podľa klinického kontextu aj zápal alebo infekcia, hemolýza, nutričné faktory a prípadne skríning krvácania.</li>
 </ul>
 
-<p>Dôležitá myšlienka komentára je jednoduchá: manažment anémie v CKD je tímová práca zameraná na príčinu. Ak železo nedáva zmysel, netreba ho opakovane podávať ani nasadzovať ESA bez jasnej logiky.</p>
+<p>Hlavná myšlienka komentára: manažment anémie v CKD je tímová práca zameraná na príčinu. Ak železo nedáva zmysel, netreba ho opakovane podávať a ani ESA nemá byť nasadené bez jasného dôvodu.</p>
 
 <h2>2) Železo: kedy riešiť deficit a kedy ho dočasne nechať tak</h2>
 
 <h3>2.1 CKD G5HD: preferencia intravenózneho železa</h3>
 
-<p>U pacientov na hemodialýze je praktickým cieľom rýchla korekcia deficitu, pretože perorálne železo býva menej účinné a horšie manažovateľné. Komentár podporuje proaktívnejší intravenózny prístup, pričom ako praktický spúšťač uvádza kombináciu:</p>
+<p>U pacientov na hemodialýze je praktickým cieľom rýchla korekcia deficitu, pretože perorálne železo býva menej účinné a jeho efekt sa horšie riadi. Komentár podporuje proaktívnejší intravenózny prístup, pričom ako praktický spúšťač uvádza kombináciu:</p>
 
 <ul>
   <li><strong>ferritín ≤ 500 ng/ml</strong> a <strong>TSAT ≤ 30 %</strong>.</li>
@@ -77,16 +77,16 @@ $articles[] = [
 
 <p>Ak má pacient na HD nízky TSAT a nie je výrazne „nasýtený“ železom, je racionálne siahnuť po IV železe namiesto čakania na efekt ESA.</p>
 
-<h3>2.2 Bezpečnostný stop sign pri vysokých hodnotách</h3>
+<h3>2.2 Bezpečnostná hranica pri vysokých hodnotách</h3>
 
-<p>Veľmi praktický bod komentára je hranica, pri ktorej je rozumné železo dočasne zadržať. Rutinné podávanie železa sa odporúča prerušiť, ak je:</p>
+<p>Komentár určuje aj hranicu, pri ktorej je rozumné železo dočasne zadržať. Rutinné podávanie železa sa odporúča prerušiť, ak je:</p>
 
 <ul>
   <li><strong>ferritín &gt; 700 ng/ml</strong> alebo</li>
   <li><strong>TSAT ≥ 40 %</strong>.</li>
 </ul>
 
-<p>Táto brzda pomáha predísť situácii, keď sa železo podáva opakovane len preto, že anémia pretrváva, bez toho, aby bol jasne zhodnotený celý obraz pacienta.</p>
+<p>Táto brzda bráni tomu, aby sa železo podávalo opakovane len preto, že anémia pretrváva, bez zhodnotenia celého klinického obrazu.</p>
 
 <h3>2.3 Non-HD CKD: individualizácia podľa ferritínu a TSAT</h3>
 
@@ -98,11 +98,11 @@ $articles[] = [
   <li>toho, či je deficit skôr absolútny alebo maskovaný zápalom.</li>
 </ul>
 
-<p>V tejto skupine je dôležité myslieť aj na iné príčiny anémie, ak výsledky nepasujú iba na CKD a deficit železa.</p>
+<p>V tejto skupine je dôležité myslieť aj na iné príčiny anémie, ak výsledky nezodpovedajú iba CKD a deficitu železa.</p>
 
 <h2>3) Špecifické upozornenie pre ferric carboxymaltose: hypofosfatémia</h2>
 
-<p>Tento bod v každodennej praxi skutočne mení rozhodovanie. Komentár upozorňuje, že najvýraznejšie riziko hypofosfatémie sa spája s <strong>ferric carboxymaltose (FCM)</strong>.</p>
+<p>Tento bod mení rozhodovanie v bežnej praxi. Komentár upozorňuje, že najvýraznejšie riziko hypofosfatémie sa spája s <strong>ferric carboxymaltose (FCM)</strong>.</p>
 
 <p>Prakticky to znamená:</p>
 
@@ -119,7 +119,7 @@ $articles[] = [
 <p>ESA aj HIF-PHI majú zmysel až vtedy, keď:</p>
 
 <ul>
-  <li>je anémia skutočne CKD-dependentná,</li>
+  <li>je anémia skutočne podmienená CKD,</li>
   <li>sú riešené korektibilné príčiny, najmä deficit železa,</li>
   <li>a rozhodnutie je zdieľané s pacientom s ohľadom na prínosy a riziká vrátane rizika transfúzií.</li>
 </ul>
@@ -158,7 +158,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>Praktická verzia komentára sa dá zhrnúť jednou vetou: pri anémii v CKD nerob nič naslepo. Najprv diagnostika a príčiny, potom cielené železo s jasnými bezpečnostnými hranicami a až následne ESA alebo HIF-PHI v cieli, ktorý minimalizuje riziko.</p>
+<p>Pri anémii v CKD nerob nič naslepo. Najprv diagnostika a príčiny, potom cielené železo s jasnými bezpečnostnými hranicami a až následne ESA alebo HIF-PHI s cieľovým Hb, pri ktorom je riziko najmenšie.</p>
 
 <hr>
 

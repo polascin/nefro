@@ -29,7 +29,7 @@ $articles[] = [
     'content'      => <<<'HTML'
 <figure><a href="img/baxdrostat-rezistentna-hypertenzia-bax24.webp" rel="noopener noreferrer" target="_blank"><img src="img/baxdrostat-rezistentna-hypertenzia-bax24.webp" alt="Pretiahnutá cieva, ktorou prechádza modrá vlna svetla a uvoľňuje jej stenu po celej dĺžke, nad ňou neprerušený pás svetla" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Pri rezistentnej hypertenzii nejde len o hodnotu v ambulancii, ale o to, či zníženie vydrží celých 24 hodín.</figcaption></figure>
 
-<p class="article-dek"><em>Štrnásť milimetrov ortuti navyše v 24-hodinovom ambulantnom meraní je pri rezistentnej hypertenzii veľké číslo. Štúdia však trvala tri mesiace, primárny výsledok bol dostupný len u 85 % randomizovaných pacientov a chýba porovnanie so spironolaktónom — teda s liečbou, ktorú by baxdrostat mal nahradiť.</em></p>
+<p class="article-dek"><em>Štrnásť milimetrov ortuti navyše v 24-hodinovom ambulantnom meraní je pri rezistentnej hypertenzii veľké číslo. Štúdia však trvala tri mesiace, primárny výsledok bol dostupný len u 85 % randomizovaných pacientov a chýba porovnanie so spironolaktónom, teda s liečbou, ktorú by baxdrostat mal nahradiť.</em></p>
 
 <p>Selektívny inhibítor aldosterónsyntázy baxdrostat znížil v štúdii Bax24 priemerný 24-hodinový ambulantný systolický krvný tlak o <strong>14,0 mm Hg viac než placebo</strong>. Účinok sa dosiahol u pacientov s rezistentnou hypertenziou napriek súbežnej liečbe najmenej tromi antihypertenzívami vrátane diuretika.</p>
 
@@ -41,17 +41,17 @@ $articles[] = [
 
 <p>Pred potvrdením diagnózy treba vylúčiť <strong>pseudorezistenciu</strong> spôsobenú nesprávnou technikou merania, nedostatočnou adherenciou, suboptimálnymi dávkami alebo nevhodnou kombináciou liekov, efektom bieleho plášťa, liekmi a látkami zvyšujúcimi krvný tlak a nedostatočnou kontrolou príjmu sodíka a objemového preťaženia.</p>
 
-<p>Ambulantné monitorovanie krvného tlaku je preto pri diagnostike rezistentnej hypertenzie kľúčové — umožňuje potvrdiť pretrvávajúcu hypertenziu mimo ambulancie, zhodnotiť nočný krvný tlak a vylúčiť významný efekt bieleho plášťa.</p>
+<p>Ambulantné monitorovanie krvného tlaku je preto pri diagnostike rezistentnej hypertenzie kľúčové: umožňuje potvrdiť pretrvávajúcu hypertenziu mimo ambulancie, zhodnotiť nočný krvný tlak a vylúčiť významný efekt bieleho plášťa.</p>
 
 <p>Aldosterón podporuje retenciu sodíka, zväčšenie extracelulárneho objemu, straty draslíka a vaskulárne aj tkanivové poškodenie. Jeho význam sa neobmedzuje na pacientov s jednoznačne diagnostikovaným primárnym aldosteronizmom: relatívne autonómna alebo neprimeraná tvorba aldosterónu môže prispievať k rezistentnej hypertenzii aj bez klasického biochemického obrazu.</p>
 
 <h2>Mechanizmus účinku baxdrostatu</h2>
 
-<p>Baxdrostat je perorálny selektívny inhibítor aldosterónsyntázy — enzýmu <strong>CYP11B2</strong>, ktorý katalyzuje záverečné kroky biosyntézy aldosterónu v kôre nadobličiek.</p>
+<p>Baxdrostat je perorálny selektívny inhibítor aldosterónsyntázy, enzýmu <strong>CYP11B2</strong>, ktorý katalyzuje záverečné kroky biosyntézy aldosterónu v kôre nadobličiek.</p>
 
 <p>Vývoj tejto liekovej skupiny bol dlho obmedzený podobnosťou aldosterónsyntázy s enzýmom <strong>CYP11B1</strong>, potrebným na tvorbu kortizolu; nedostatočne selektívna inhibícia by mohla viesť k nežiaducej supresii kortizolu. Baxdrostat bol vyvinutý s vyššou selektivitou voči CYP11B2.</p>
 
-<p>Na rozdiel od antagonistov mineralokortikoidového receptora neblokuje účinok aldosterónu na receptore, ale znižuje jeho <strong>syntézu</strong>. Ani tento mechanizmus však neodstraňuje riziko hyperkaliémie — zníženie biologického účinku aldosterónu obmedzuje vylučovanie draslíka obličkami rovnako.</p>
+<p>Na rozdiel od antagonistov mineralokortikoidového receptora neblokuje účinok aldosterónu na receptore, ale znižuje jeho <strong>syntézu</strong>. Ani tento mechanizmus však neodstraňuje riziko hyperkaliémie, pretože zníženie biologického účinku aldosterónu obmedzuje vylučovanie draslíka obličkami rovnako.</p>
 
 <h2>Usporiadanie štúdie Bax24</h2>
 
@@ -67,7 +67,7 @@ $articles[] = [
 
 <p>Muži tvorili 65 % (140 pacientov), ženy 35 % (77) a 78 % (170) účastníkov bolo bielej rasy. Medián veku bol 60,0 roka (medzikvartilové rozpätie 51,0 – 68,0).</p>
 
-<p>Primárna analýza neobsahovala všetkých randomizovaných pacientov. Platné vstupné aj 12-týždňové ambulantné meranie bolo dostupné u <strong>89 pacientov</strong> v skupine s baxdrostatom a u <strong>95 pacientov</strong> v skupine s placebom — do primárnej analýzy tak vstúpilo 184 zo 217 randomizovaných (približne 85 %). Chýbajúce alebo neplatné ambulantné merania sa štatisticky <strong>nenahrádzali</strong>.</p>
+<p>Primárna analýza neobsahovala všetkých randomizovaných pacientov. Platné vstupné aj 12-týždňové ambulantné meranie bolo dostupné u <strong>89 pacientov</strong> v skupine s baxdrostatom a u <strong>95 pacientov</strong> v skupine s placebom; do primárnej analýzy tak vstúpilo 184 zo 217 randomizovaných (približne 85 %). Chýbajúce alebo neplatné ambulantné merania sa štatisticky <strong>nenahrádzali</strong>.</p>
 
 <h2>Výrazné zníženie 24-hodinového systolického tlaku</h2>
 
@@ -88,7 +88,7 @@ $articles[] = [
   </table>
 </div>
 
-<p>Ide o veľký antihypertenzný účinok, ktorý nemožno vysvetliť regresiou k priemeru ani efektom bieleho plášťa — výsledok vychádzal z <strong>24-hodinového ambulantného merania</strong> a bol porovnávaný s placebom. Pokles o 2,6 mm Hg v placebovom ramene navyše ukazuje, že samotné zaradenie do štúdie a opakované meranie prinášajú len malý efekt.</p>
+<p>Ide o veľký antihypertenzný účinok, ktorý nemožno vysvetliť regresiou k priemeru ani efektom bieleho plášťa: výsledok vychádzal z <strong>24-hodinového ambulantného merania</strong> a bol porovnávaný s placebom. Pokles o 2,6 mm Hg v placebovom ramene navyše ukazuje, že samotné zaradenie do štúdie a opakované meranie prinášajú len malý efekt.</p>
 
 <p>Účinok bol podľa autorov konzistentný v preddefinovaných podskupinách. Štúdia však nemusela mať dostatočnú štatistickú silu na spoľahlivé vylúčenie rozdielov medzi všetkými podskupinami.</p>
 
@@ -138,15 +138,15 @@ $articles[] = [
 
 <h3>Neúplná primárna analýza</h3>
 
-<p>Primárny výsledok bol dostupný len u 184 z 217 randomizovaných pacientov a chýbajúce merania sa nenahrádzali. Ak dôvody chýbajúcich údajov súviseli s účinnosťou alebo toleranciou liečby, mohol vzniknúť výberový bias. Veľkosť rozdielu medzi skupinami je napriek tomu taká výrazná, že neúplnosť údajov pravdepodobne nevysvetľuje celý účinok — znižuje však istotu presného odhadu jeho veľkosti.</p>
+<p>Primárny výsledok bol dostupný len u 184 z 217 randomizovaných pacientov a chýbajúce merania sa nenahrádzali. Ak dôvody chýbajúcich údajov súviseli s účinnosťou alebo toleranciou liečby, mohol vzniknúť výberový bias. Veľkosť rozdielu medzi skupinami je napriek tomu taká výrazná, že neúplnosť údajov pravdepodobne nevysvetľuje celý účinok, znižuje však istotu presného odhadu jeho veľkosti.</p>
 
 <h3>Krátke sledovanie a vybraná populácia</h3>
 
-<p>Dvanásť týždňov postačuje na preukázanie antihypertenzného účinku, nie však na posúdenie jeho dlhodobej udržateľnosti, bezpečnosti a vplyvu na klinické príhody. Pacienti so zníženou funkciou obličiek, vstupnou hyperkaliémiou, veľmi vysokým krvným tlakom a niektorými sekundárnymi príčinami hypertenzie boli vylúčení — a práve u nich by bola potreba novej liečby najväčšia.</p>
+<p>Dvanásť týždňov postačuje na preukázanie antihypertenzného účinku, nie však na posúdenie jeho dlhodobej udržateľnosti, bezpečnosti a vplyvu na klinické príhody. Pacienti so zníženou funkciou obličiek, vstupnou hyperkaliémiou, veľmi vysokým krvným tlakom a niektorými sekundárnymi príčinami hypertenzie boli vylúčení, a práve u nich by bola potreba novej liečby najväčšia.</p>
 
 <h3>Placebová úvodná fáza</h3>
 
-<p>Dvojtýždňová fáza s placebom pomáhala identifikovať pacientov s nedostatočnou adherenciou. Sama však nemusí spoľahlivo potvrdiť dlhodobé užívanie všetkých základných antihypertenzív; na definitívne vylúčenie pseudorezistencie by boli najspoľahlivejšie objektívne metódy kontroly adherencie. Za povšimnutie stojí, že <strong>199 pacientov bolo vyradených až počas samotnej placebovej fázy</strong> — čo naznačuje, koľko „rezistentnej hypertenzie“ sa pri dôslednom overení rozplynie.</p>
+<p>Dvojtýždňová fáza s placebom pomáhala identifikovať pacientov s nedostatočnou adherenciou. Sama však nemusí spoľahlivo potvrdiť dlhodobé užívanie všetkých základných antihypertenzív; na definitívne vylúčenie pseudorezistencie by boli najspoľahlivejšie objektívne metódy kontroly adherencie. Za povšimnutie stojí, že <strong>199 pacientov bolo vyradených až počas samotnej placebovej fázy</strong>, čo naznačuje, koľko „rezistentnej hypertenzie“ sa pri dôslednom overení rozplynie.</p>
 
 <h3>Bez aktívneho komparátora</h3>
 
@@ -166,7 +166,7 @@ $articles[] = [
 
 <h2>Klinický význam</h2>
 
-<p>Pokles priemerného 24-hodinového systolického tlaku o ďalších 14 mm Hg oproti placebu je výrazný. Ak by bol dlhodobo udržateľný a bezpečný, mohol by viesť k relevantnému zníženiu kardiovaskulárneho rizika — štúdia Bax24 však takýto vplyv priamo nehodnotila.</p>
+<p>Pokles priemerného 24-hodinového systolického tlaku o ďalších 14 mm Hg oproti placebu je výrazný. Ak by bol dlhodobo udržateľný a bezpečný, mohol by viesť k relevantnému zníženiu kardiovaskulárneho rizika. Štúdia Bax24 však takýto vplyv priamo nehodnotila.</p>
 
 <p>Pred použitím novej cielenej liečby zostáva nevyhnutné:</p>
 
@@ -192,7 +192,7 @@ $articles[] = [
 
 <ul>
   <li><a href="article.php?slug=nekontrolovana-rezistentna-hypertenzia-aldosteronova-os">Nekontrolovaná rezistentná hypertenzia a aldosterónová os</a>.</li>
-  <li><a href="article.php?slug=renalna-denervacia-rezistentna-hypertenzia">Renálna denervácia pri rezistentnej hypertenzii</a> — nefarmakologická alternatíva.</li>
+  <li><a href="article.php?slug=renalna-denervacia-rezistentna-hypertenzia">Renálna denervácia pri rezistentnej hypertenzii</a> – nefarmakologická alternatíva.</li>
   <li><a href="article.php?slug=optimalizacia-raasi-mra-hyperkaliemia-ckd-hf">Optimalizácia RAASi a MRA pri riziku hyperkaliémie</a>.</li>
   <li><a href="article.php?slug=nove-odporucania-hypertenzia-meranie-rozhodnutia">Nové odporúčania pri hypertenzii: meranie a rozhodnutia</a>.</li>
 </ul>
@@ -206,7 +206,7 @@ $articles[] = [
   <li><strong>ClinicalTrials.gov, U.S. National Library of Medicine.</strong> <em>A Study to Investigate the Effect of Baxdrostat on Ambulatory Blood Pressure in Participants With Resistant Hypertension (Bax24), NCT06168409.</em> Zadávateľ AstraZeneca. <a href="https://clinicaltrials.gov/study/NCT06168409" target="_blank" rel="noopener noreferrer">ClinicalTrials.gov</a>.</li>
 </ol>
 
-<p><em><strong>Poznámka k dôkazom:</strong> Všetky číselné údaje — 79 centier v 22 krajinách, vstupný systolický tlak ≥ 140 a &lt; 170 mm Hg, dvojtýždňová placebová fáza, prah ambulantného tlaku ≥ 130 mm Hg, dávka 2 mg raz denne počas 12 týždňov, stratifikácia podľa hodnoty 140 mm Hg, nábor od 1. marca 2024 do 16. apríla 2025, 854 skrínovaných a 636 vyradených (437 pred fázou a 199 počas nej), 217 randomizovaných (108/109), 140 mužov (65 %), 77 žien (35 %), 170 bielej rasy (78 %), medián veku 60,0 roka (MKR 51,0 – 68,0), primárny výsledok −16,6 (−18,8 až −14,3) pri n = 89 oproti −2,6 (−4,7 až −0,4) pri n = 95 s rozdielom −14,0 (−17,2 až −10,8) a p &lt; 0,0001, nežiaduce udalosti 56 (52 %) oproti 40 (37 %), draslík nad 6,0 mmol/l u 3 (3 %) oproti 0 a financovanie spoločnosťou AstraZeneca — boli overené proti štruktúrovanému abstraktu v zázname PubMed. <strong>Zásadná oprava oproti pôvodnému spracovaniu:</strong> podklad uvádzal medzi autormi mená „George Thomas“ a „Gary Sirken“ — tieto osoby však <strong>nie sú autormi</strong>, ale figurujú v zozname spolupracujúcich skúšajúcich (<em>Bax24 investigators</em>). Zároveň chýbalo osem skutočných autorov (Hongjian Li, Filip Birve, Aina S. Lihn, Shira Perl, Markus P. Schlaich, Hirotaka Shibata, Ji-Guang Wang, Bryan Williams). Úplný autorský kolektív bol doplnený z metaúdajov PubMed a Crossref. Vstupné kritériá kaliémie (3,5 až &lt; 5,0 mmol/l) a eGFR (nad 45 ml/min/1,73 m²), podiel pacientov s dosiahnutým tlakom pod 130 mm Hg a počet ukončení liečby sa v abstrakte nenachádzajú a <strong>neboli nezávisle overené</strong>; plný text v <em>The Lancet</em> je za platobnou bariérou. Nezrovnalosť jedného pacienta (854 − 636 = 218 oproti 217 randomizovaným) je prítomná priamo v publikovanom abstrakte. Komentár k 199 pacientom vyradeným počas placebovej fázy a porovnanie so spironolaktónom sú <strong>vlastným odborným hodnotením</strong>.</em></p>
+<p><em><strong>Poznámka k dôkazom:</strong> Všetky číselné údaje – 79 centier v 22 krajinách, vstupný systolický tlak ≥ 140 a &lt; 170 mm Hg, dvojtýždňová placebová fáza, prah ambulantného tlaku ≥ 130 mm Hg, dávka 2 mg raz denne počas 12 týždňov, stratifikácia podľa hodnoty 140 mm Hg, nábor od 1. marca 2024 do 16. apríla 2025, 854 skrínovaných a 636 vyradených (437 pred fázou a 199 počas nej), 217 randomizovaných (108/109), 140 mužov (65 %), 77 žien (35 %), 170 bielej rasy (78 %), medián veku 60,0 roka (MKR 51,0 – 68,0), primárny výsledok −16,6 (−18,8 až −14,3) pri n = 89 oproti −2,6 (−4,7 až −0,4) pri n = 95 s rozdielom −14,0 (−17,2 až −10,8) a p &lt; 0,0001, nežiaduce udalosti 56 (52 %) oproti 40 (37 %), draslík nad 6,0 mmol/l u 3 (3 %) oproti 0 a financovanie spoločnosťou AstraZeneca – boli overené proti štruktúrovanému abstraktu v zázname PubMed. <strong>Zásadná oprava oproti pôvodnému spracovaniu:</strong> podklad uvádzal medzi autormi mená „George Thomas“ a „Gary Sirken“; tieto osoby však <strong>nie sú autormi</strong>, ale figurujú v zozname spolupracujúcich skúšajúcich (<em>Bax24 investigators</em>). Zároveň chýbalo osem skutočných autorov (Hongjian Li, Filip Birve, Aina S. Lihn, Shira Perl, Markus P. Schlaich, Hirotaka Shibata, Ji-Guang Wang, Bryan Williams). Úplný autorský kolektív bol doplnený z metaúdajov PubMed a Crossref. Vstupné kritériá kaliémie (3,5 až &lt; 5,0 mmol/l) a eGFR (nad 45 ml/min/1,73 m²), podiel pacientov s dosiahnutým tlakom pod 130 mm Hg a počet ukončení liečby sa v abstrakte nenachádzajú a <strong>neboli nezávisle overené</strong>; plný text v <em>The Lancet</em> je za platobnou bariérou. Nezrovnalosť jedného pacienta (854 − 636 = 218 oproti 217 randomizovaným) je prítomná priamo v publikovanom abstrakte. Komentár k 199 pacientom vyradeným počas placebovej fázy a porovnanie so spironolaktónom sú <strong>vlastným odborným hodnotením</strong>.</em></p>
 HTML,
 ];
 

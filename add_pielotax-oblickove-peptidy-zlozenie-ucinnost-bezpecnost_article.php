@@ -115,9 +115,9 @@ $articles[] = [
 
 <h3>Problém perorálnej biologickej dostupnosti</h3>
 
-<p>Perorálne podané peptidy sú spravidla vystavené denaturácii v kyslom prostredí žalúdka, štiepeniu pepsínom a pankreatickými proteázami, ďalšej degradácii peptidázami kefkového lemu črevnej sliznice a napokon obmedzenému prechodu cez črevný epitel. Ide o dobre opísanú a v praxi mimoriadne náročnú bariéru.<sup>[3,4]</sup></p>
+<p>Perorálne podané peptidy sú spravidla vystavené denaturácii v kyslom prostredí žalúdka, štiepeniu pepsínom a pankreatickými proteázami, ďalšej degradácii peptidázami kefkového lemu črevnej sliznice a napokon obmedzenému prechodu cez črevný epitel. Ide o dobre opísanú bariéru, ktorú je v praxi veľmi ťažké prekonať.<sup>[3,4]</sup></p>
 
-<p>Praktickú mieru tejto náročnosti dobre ilustruje perorálny semaglutid. Aby sa peptidové liečivo dalo vôbec podávať ústami, bolo potrebné vyvinúť špeciálnu tabletovú formuláciu s látkou podporujúcou vstrebávanie (SNAC); aj tak sa jeho biologická dostupnosť pohybuje rádovo okolo jedného percenta a dávka podávaná ústami je preto mnohonásobne vyššia než dávka podkožná.<sup>[3]</sup></p>
+<p>Ako ťažké to je, dobre ilustruje perorálny semaglutid. Aby sa peptidové liečivo dalo vôbec podávať ústami, bolo potrebné vyvinúť špeciálnu tabletovú formuláciu s látkou podporujúcou vstrebávanie (SNAC); aj tak sa jeho biologická dostupnosť pohybuje rádovo okolo jedného percenta a dávka podávaná ústami je preto mnohonásobne vyššia než dávka podkožná.<sup>[3]</sup></p>
 
 <p>Časť veľmi krátkych peptidov (di- a tripeptidov) sa síce v tenkom čreve vstrebáva prenášačovými systémami, no bez farmakokinetickej štúdie nemožno predpokladať, že neznáme peptidy komplexu A-9 prechádzajú do systémového obehu v biologicky účinnej koncentrácii. Už vôbec nemožno automaticky predpokladať ich selektívnu akumuláciu v obličkách.</p>
 
@@ -158,7 +158,7 @@ $articles[] = [
   <li>dávkovanie bolo 1 až 2 kapsuly trikrát denne, 10 až 15 minút pred jedlom.<sup>[2]</sup></li>
 </ul>
 
-<p>Autori uvádzajú ústup klinických prejavov nefropatie u 78 % liečených pacientov a pokles koncentrácie močoviny, kyseliny močovej a reziduálneho (neproteínového) dusíka. Uvedené hodnoty sú nasledujúce.</p>
+<p>Autori uvádzajú ústup klinických prejavov nefropatie u 78 % liečených pacientov a pokles koncentrácie močoviny, kyseliny močovej a reziduálneho (neproteínového) dusíka. Uvádzané hodnoty zhŕňa tabuľka.</p>
 
 <div class="table-responsive" role="region" aria-label="Výsledky uvádzané v správe o klinickej štúdii Pielotaxu" tabindex="0">
   <table>
@@ -271,7 +271,7 @@ $articles[] = [
 
 <p>Pielotax nie je izolovaný produkt, ale súčasť rozsiahlej skupiny takzvaných peptidových bioregulátorov (v angloamerickej literatúre označovaných aj ako „Khavinson peptides“) a s nimi príbuzných tkanivových extraktov. Ich spoločnou črtou je tvrdenie, že krátke peptidy izolované z konkrétneho zvieracieho orgánu selektívne regulujú funkciu toho istého orgánu u človeka.</p>
 
-<p>Pri hodnotení tejto skupiny sú podstatné tri okolnosti. Po prvé, značná časť literatúry pochádza z jedného výskumného pracoviska a je publikovaná v ruskojazyčných časopisoch s obmedzeným medzinárodným dosahom.<sup>[8]</sup> Po druhé, nezávislá replikácia kľúčových klinických zistení inými pracoviskami je zriedkavá – pritom práve nezávislé potvrdenie je mechanizmus, ktorým sa veda opravuje. Po tretie, mechanistické hypotézy o regulácii génovej expresie krátkymi peptidmi sa opierajú prevažne o bunkové a zvieracie modely a neriešia otázku, či sa perorálne podaný peptid vôbec dostane k cieľovému tkanivu.</p>
+<p>Pri hodnotení tejto skupiny sú podstatné tri okolnosti. Po prvé, značná časť literatúry pochádza z jedného výskumného pracoviska a je publikovaná v ruskojazyčných časopisoch s obmedzeným medzinárodným dosahom.<sup>[8]</sup> Po druhé, nezávislá replikácia kľúčových klinických zistení inými pracoviskami je zriedkavá, hoci práve nezávislé potvrdenie umožňuje vede opravovať vlastné chyby. Po tretie, mechanistické hypotézy o regulácii génovej expresie krátkymi peptidmi sa opierajú prevažne o bunkové a zvieracie modely a neriešia otázku, či sa perorálne podaný peptid vôbec dostane k cieľovému tkanivu.</p>
 
 <p>To neznamená, že výskum krátkych peptidov je bezcenný. Znamená to, že „existuje výskum“ a „je preukázaný klinický účinok u ľudí“ sú dve rôzne úrovne dôkazu a Pielotax spĺňa prvú, nie druhú.</p>
 

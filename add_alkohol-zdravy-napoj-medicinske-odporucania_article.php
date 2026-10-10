@@ -31,7 +31,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Mierne pitie alkoholu nemožno odporúčať ako prevenciu. Novšie dôkazy spresňujú onkologické a kardiovaskulárne riziká aj praktický prístup u pacientov s CKD.',
     'content'      => <<<'HTML'
-<figure><a href="img/alkohol-zdravy-napoj-medicinske-odporucania.webp" rel="noopener noreferrer" target="_blank"><img src="img/alkohol-zdravy-napoj-medicinske-odporucania.webp" alt="Pohár červeného vína s doznievajúcou zlatou svätožiarou okolo pätky, nasvietený chladnejším svetlom z inej strany" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Predstava o ochrannom účinku sa rozplýva — novšie analýzy ukazujú, že sa opierala o skreslené porovnania.</figcaption></figure>
+<figure><a href="img/alkohol-zdravy-napoj-medicinske-odporucania.webp" rel="noopener noreferrer" target="_blank"><img src="img/alkohol-zdravy-napoj-medicinske-odporucania.webp" alt="Pohár červeného vína s doznievajúcou zlatou svätožiarou okolo pätky, nasvietený chladnejším svetlom z inej strany" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Predstava o ochrannom účinku sa rozplýva – novšie analýzy ukazujú, že sa opierala o skreslené porovnania.</figcaption></figure>
 
 <p>Predstava, že jeden pohár vína denne prospieva srdcu, patrila desaťročia medzi najrozšírenejšie zdravotné mýty. Podporovali ju médiá, pojem „francúzsky paradox“ aj observačné štúdie, v ktorých mali ľahkí až mierni konzumenti alkoholu priaznivejšie výsledky než abstinenti. Novšie analýzy však ukazujú, že podstatnú časť zdanlivého prínosu možno vysvetliť metodickými skresleniami. Alkohol preto nemožno odporúčať ako súčasť prevencie kardiovaskulárnych ani iných ochorení.</p>
 
@@ -52,7 +52,7 @@ $articles[] = [
 
 <h2>Čo presne znamená „najbezpečnejšia dávka je nulová“</h2>
 
-<p>Táto veta potrebuje presnú interpretáciu. Etanol a acetaldehyd vznikajúci pri jeho metabolizme sú karcinogénne. Pri nádorových ochoreniach nebola určená hranica, pod ktorou by bolo riziko preukázateľne nulové. Abstinencia preto minimalizuje riziko pripísateľné alkoholu. Pri nízkej spotrebe býva absolútny nárast rizika u jednotlivca malý, nie však nulový, a s dávkou rastie.</p>
+<p>Túto vetu treba čítať presne. Etanol a acetaldehyd vznikajúci pri jeho metabolizme sú karcinogénne. Pri nádorových ochoreniach nebola určená hranica, pod ktorou by bolo riziko preukázateľne nulové. Abstinencia preto minimalizuje riziko pripísateľné alkoholu. Pri nízkej spotrebe býva absolútny nárast rizika u jednotlivca malý, nie však nulový, a s dávkou rastie.</p>
 
 <p>Označenie „nízkoriziková“ alebo „mierna“ konzumácia neznamená bezpečnosť ani zdravotný prínos. Vyjadruje iba nižšie riziko v porovnaní s vyššou spotrebou. Ak človek alkohol nepije, nie je medicínsky dôvod odporúčať mu, aby začal. Ak pije, znižovanie množstva a vynechanie nárazového pitia riziko znižujú.</p>
 
@@ -66,9 +66,9 @@ $articles[] = [
 
 <p>V ambulancii je preto vhodné hovoriť priamo: nižšia spotreba znamená nižšie onkologické riziko a najnižšie riziko pripísateľné alkoholu má človek, ktorý nepije. Takáto informácia nie je zákazom ani hodnotením pacienta, ale súčasťou informovaného rozhodovania.</p>
 
-<h2>Kardiovaskulárne ochorenia: bez dôvodu predpisovať víno</h2>
+<h2>Kardiovaskulárne ochorenia: žiadny dôvod predpisovať víno</h2>
 
-<p>V kardiovaskulárnej oblasti je potrebná väčšia nuansa. Vedecké stanovisko American Heart Association z roku 2025 hodnotí údaje o nízkej až miernej konzumácii ako zmiešané: niektoré observačné štúdie naznačujú priaznivú asociáciu pri vybraných výsledkoch, kým štúdie využívajúce mendelovskú randomizáciu jasný ochranný účinok nepotvrdili. Príčinný kardioprotektívny účinok alkoholu teda nebol dokázaný a odborné spoločnosti neodporúčajú začať piť pre zdravie srdca.</p>
+<p>Pri kardiovaskulárnych ochoreniach je obraz zložitejší. Vedecké stanovisko American Heart Association z roku 2025 hodnotí údaje o nízkej až miernej konzumácii ako zmiešané: niektoré observačné štúdie naznačujú priaznivú asociáciu pri vybraných výsledkoch, kým štúdie využívajúce mendelovskú randomizáciu jasný ochranný účinok nepotvrdili. Príčinný kardioprotektívny účinok alkoholu teda nebol dokázaný a odborné spoločnosti neodporúčajú začať piť pre zdravie srdca.</p>
 
 <p>Na druhej strane sú nadmerná a nárazová konzumácia konzistentne spojené s hypertenziou, fibriláciou predsiení, cievnou mozgovou príhodou, kardiomyopatiou a srdcovým zlyhávaním. Japonská longitudinálna analýza z roku 2025 navyše ukázala malé, dávkovo závislé zníženie krvného tlaku po ukončení aj nízkej až miernej konzumácie. Keďže nešlo o randomizovanú intervenciu, výsledok treba chápať ako podporu redukcie alkoholu pri manažmente tlaku, nie ako presný odhad účinku pre každého pacienta.</p>
 

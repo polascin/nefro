@@ -31,11 +31,11 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Káva ovplyvňuje črevnú motilitu, mikrobiálne zloženie aj metabolity, často nezávisle od kofeínu. Klinický význam týchto zmien však zatiaľ zostáva neistý.',
     'content'      => <<<'HTML'
-<figure><a href="img/kava-crevny-mikrobiom-ucinok-presahuje-kofein.webp" rel="noopener noreferrer" target="_blank"><img src="img/kava-crevny-mikrobiom-ucinok-presahuje-kofein.webp" alt="Šálka kávy, z ktorej vedie úzka rýchla niť a popri nej podstatne širší farebný prúd do svietiaceho čreva s mikróbmi" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Kofeín je len úzka časť príbehu — väčší podiel má to, čo káva robí s črevnou mikroflórou.</figcaption></figure>
+<figure><a href="img/kava-crevny-mikrobiom-ucinok-presahuje-kofein.webp" rel="noopener noreferrer" target="_blank"><img src="img/kava-crevny-mikrobiom-ucinok-presahuje-kofein.webp" alt="Šálka kávy, z ktorej vedie úzka rýchla niť a popri nej podstatne širší farebný prúd do svietiaceho čreva s mikróbmi" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Kofeín je len úzka časť príbehu – väčší podiel má to, čo káva robí s črevnou mikroflórou.</figcaption></figure>
 
 <p>Káva patrí medzi najčastejšie konzumované nápoje na svete. Pacienti ju spájajú najmä s povzbudením, nutkaním na stolicu alebo diuretickým účinkom. Takéto vysvetlenie však redukuje komplexný nápoj na jedinú molekulu – kofeín. Novšie práce ukazujú, že káva môže ovplyvňovať črevnú motilitu, zloženie mikrobioty aj mikrobiálne metabolity prostredníctvom viacerých nekofeínových zložiek.</p>
 
-<p>Zdrojový článok Medscape sumarizuje výskum polyfenolov, chlorogénových kyselín, rozpustnej vlákniny a melanoidínov vznikajúcich pri pražení. Dôležitý signál predstavuje skutočnosť, že časť pozorovaných účinkov sa objavila aj pri bezkofeínovej káve. To však ešte neznamená, že káva je prebiotikum, liečba dysbiózy alebo univerzálne prospešná intervencia.</p>
+<p>Zdrojový článok Medscape sumarizuje výskum polyfenolov, chlorogénových kyselín, rozpustnej vlákniny a melanoidínov vznikajúcich pri pražení. Dôležité je, že časť pozorovaných účinkov sa objavila aj pri bezkofeínovej káve. To však ešte neznamená, že káva je prebiotikum, liečba dysbiózy alebo univerzálne prospešná intervencia.</p>
 
 <h2>Káva nepôsobí iba cez kofeín</h2>
 
@@ -55,7 +55,7 @@ $articles[] = [
 
 <p>Chlorogénové kyseliny a ich metabolity patria medzi najčastejšie skúmané nekofeínové zložky kávy. Črevné baktérie ich premieňajú na menšie fenolové zlúčeniny, ktoré sa môžu vstrebávať a vstupovať do metabolických a zápalových dráh. Melanoidíny môžu byť čiastočne fermentované podobne ako vláknina.</p>
 
-<p>To vytvára biologicky vierohodný mechanizmus, ktorým môže káva selektívne meniť mikrobiálne spoločenstvo a metabolóm. Zatiaľ však nevieme, ktoré zmeny sú príčinne prospešné, neutrálne alebo iba označujú konzumáciu kávy. Pojmy „modulácia mikrobiómu“ a „zdravší mikrobióm“ preto nemožno používať ako synonymá.</p>
+<p>Ide o biologicky vierohodný mechanizmus, ktorým môže káva selektívne meniť mikrobiálne spoločenstvo a metabolóm. Zatiaľ však nevieme, ktoré zmeny sú príčinne prospešné, neutrálne alebo iba označujú konzumáciu kávy. Pojmy „modulácia mikrobiómu“ a „zdravší mikrobióm“ preto nemožno používať ako synonymá.</p>
 
 <h2>Štúdia osi mikrobiota – črevo – mozog</h2>
 

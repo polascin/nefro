@@ -23,13 +23,13 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Digitálny nástroj CheckCausesObesity.com hodnotí viac než 30 možných prispievajúcich faktorov obezity v siedmich oblastiach. Z 62 809 používateľov holandskej verzie ich 91,2 % uviedlo faktory v dvoch a viacerých oblastiach.',
     'content'      => <<<'HTML'
-<figure><a href="img/obezita-multifaktorialne-ochorenie-skrining-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/obezita-multifaktorialne-ochorenie-skrining-nefrologia.webp" alt="Guľa tukového tkaniva, do ktorej z rôznych strán vstupujú desiatky rôznofarebných svetelných vlákien" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Žiadne jednotlivé vlákno nevysvetlí celok — preto skríning, ktorý stavia len na jednom čísle, nestačí.</figcaption></figure>
+<figure><a href="img/obezita-multifaktorialne-ochorenie-skrining-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/obezita-multifaktorialne-ochorenie-skrining-nefrologia.webp" alt="Guľa tukového tkaniva, do ktorej z rôznych strán vstupujú desiatky rôznofarebných svetelných vlákien" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Žiadne jednotlivé vlákno nevysvetlí celok – preto skríning, ktorý stavia len na jednom čísle, nestačí.</figcaption></figure>
 
 <p>Obezita nie je výsledkom jedinej príčiny ani iba dôsledkom nedostatku pohybu a nadmerného príjmu energie. Je multifaktoriálnym chronickým ochorením, na ktorom sa podieľajú biologické, genetické, endokrinné, psychologické, sociálne, behaviorálne aj iatrogénne faktory. Bežná klinická prax sa napriek tomu často zastaví pri všeobecnej rade o strave a pohybe.</p>
 
 <p>Tento pohľad má priamy význam aj v nefrológii. Obezita zvyšuje riziko hypertenzie, albuminúrie, glomerulárnej hyperfiltrácie, chronickej choroby obličiek (CKD), obličkových kameňov, obštrukčného spánkového apnoe a kardiovaskulárnych komplikácií. Súčasne môže komplikovať interpretáciu telesnej hmotnosti, svalovej hmoty aj renálnych parametrov.</p>
 
-<p>V časopise <em>Nature Reviews Endocrinology</em> bol 1. septembra 2026 publikovaný opis digitálneho nástroja CheckCausesObesity.com, ktorý má systematicky vyhodnocovať viac než 30 možných prispievajúcich faktorov obezity v siedmich oblastiach. Ide o krátky opisný text predstavujúci nástroj, nie o pôvodnú výskumnú štúdiu s vlastnou metodickou sekciou — pri hodnotení sily dôkazov je tento rozdiel podstatný.</p>
+<p>V časopise <em>Nature Reviews Endocrinology</em> bol 1. septembra 2026 publikovaný opis digitálneho nástroja CheckCausesObesity.com, ktorý má systematicky vyhodnocovať viac než 30 možných prispievajúcich faktorov obezity v siedmich oblastiach. Ide o krátky opisný text predstavujúci nástroj, nie o pôvodnú výskumnú štúdiu s vlastnou metodickou sekciou – pri hodnotení sily dôkazov je tento rozdiel podstatný.</p>
 
 <h2>Čo nástroj hodnotí</h2>
 
@@ -90,7 +90,7 @@ $articles[] = [
   <li>medián indexu telesnej hmotnosti (BMI) 33,1 kg/m<sup>2</sup>.</li>
 </ul>
 
-<p>Aspoň jeden prispievajúci faktor v <strong>dvoch alebo viacerých</strong> oblastiach uviedlo 91,2 % používateľov, v <strong>troch alebo viacerých</strong> oblastiach 68,3 %. Najčastejšou kombináciou boli faktory životného štýlu, psychologické faktory a faktory súvisiace s liekmi — vyskytla sa u 39,9 % používateľov.</p>
+<p>Aspoň jeden prispievajúci faktor v <strong>dvoch alebo viacerých</strong> oblastiach uviedlo 91,2 % používateľov, v <strong>troch alebo viacerých</strong> oblastiach 68,3 %. Najčastejšou kombináciou boli faktory životného štýlu, psychologické faktory a faktory súvisiace s liekmi – vyskytla sa u 39,9 % používateľov.</p>
 
 <p>Tieto čísla <strong>neopisujú prevalenciu príčin obezity v populácii</strong>. Ide o výsledky skupiny ľudí, ktorí sa nástroj rozhodli použiť; nešlo o náhodne vybranú populačnú vzorku. Údaj „91,2 %“ preto hovorí o tom, čo používatelia <em>uviedli</em>, nie o tom, čo ich obezitu spôsobilo.</p>
 
@@ -118,7 +118,7 @@ $articles[] = [
 
 <p>Obštrukčné spánkové apnoe je pri obezite časté a môže prispievať k rezistentnej hypertenzii, nočnej hypoxémii, sympatikovej aktivácii, albuminúrii, dennej únave a vyššiemu kardiovaskulárnemu riziku.</p>
 
-<p>Nástroj používa ako skríningový algoritmus STOP-Bang. Ten má vo validačných prácach vysokú citlivosť, ale nízku špecificitu, takže <strong>pozitívny výsledok nie je diagnózou</strong> — tú musí potvrdiť vyšetrenie spánku, najčastejšie polygrafia alebo polysomnografia. Naopak, jeho sila je práve v tom, že negatívny výsledok stredne ťažké až ťažké apnoe pomerne spoľahlivo vylúči.</p>
+<p>Nástroj používa ako skríningový algoritmus STOP-Bang. Ten má vo validačných prácach vysokú citlivosť, ale nízku špecificitu, takže <strong>pozitívny výsledok nie je diagnózou</strong> – tú musí potvrdiť vyšetrenie spánku, najčastejšie polygrafia alebo polysomnografia. Naopak, jeho sila je práve v tom, že negatívny výsledok stredne ťažké až ťažké apnoe pomerne spoľahlivo vylúči.</p>
 
 <h3>Psychologické faktory a záchvatové prejedanie</h3>
 
@@ -142,7 +142,7 @@ $articles[] = [
 
 <h3>Nejde o dôkaz kauzality</h3>
 
-<p>Nástroj identifikuje faktory spojené s obezitou alebo priberaním. Výsledok nepreukazuje, že konkrétny faktor je príčinou, ani že jeho odstránenie povedie k redukcii hmotnosti. Presnejšie je hovoriť o <em>prispievajúcich faktoroch</em> než o príčinách — čo napokon zodpovedá aj názvu nástroja lepšie než jeho doslovný preklad.</p>
+<p>Nástroj identifikuje faktory spojené s obezitou alebo priberaním. Výsledok nepreukazuje, že konkrétny faktor je príčinou, ani že jeho odstránenie povedie k redukcii hmotnosti. Presnejšie je hovoriť o <em>prispievajúcich faktoroch</em> než o príčinách – čo napokon zodpovedá aj názvu nástroja lepšie než jeho doslovný preklad.</p>
 
 <h3>Výberové skreslenie</h3>
 
@@ -191,7 +191,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>CheckCausesObesity.com je praktický pokus systematizovať vyšetrenie obezity ako komplexného ochorenia. Údaje z holandskej verzie ukázali, že veľká väčšina používateľov uvádzala prispievajúce faktory vo viacerých oblastiach naraz — najčastejšie kombináciu životného štýlu, psychologických okolností a liekov.</p>
+<p>CheckCausesObesity.com je praktický pokus systematizovať vyšetrenie obezity ako komplexného ochorenia. Údaje z holandskej verzie ukázali, že veľká väčšina používateľov uvádzala prispievajúce faktory vo viacerých oblastiach naraz – najčastejšie kombináciu životného štýlu, psychologických okolností a liekov.</p>
 
 <p>Pre nefrologickú prax je najcennejší samotný multidimenzionálny prístup. Pri pacientovi s obezitou nestačí odporúčanie znížiť kalorický príjem a zvýšiť pohyb. Treba posúdiť krvný tlak, albuminúriu, spánkové apnoe, psychické faktory, lieky, sociálne podmienky, hydratáciu aj riziko sarkopénie.</p>
 

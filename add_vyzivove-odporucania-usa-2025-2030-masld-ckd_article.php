@@ -25,7 +25,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Americké DGA odporúčajú 1,2–1,6 g bielkovín/kg/deň, no tento populačný cieľ nie je vhodný pre každého pacienta s CKD. Čo ukázala analýza NHANES a ako ju bezpečne čítať pri MASLD.',
     'content'      => <<<'HTML'
-<figure><a href="img/vyzivove-odporucania-usa-2025-2030-masld-ckd.webp" rel="noopener noreferrer" target="_blank"><img src="img/vyzivove-odporucania-usa-2025-2030-masld-ckd.webp" alt="Tanier bežného jedla pod širokým svetlom, cez ktorý prechádza úzky lúč zvýrazňujúci problémové položky" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Odporúčanie pre populáciu nie je odporúčaním pre konkrétneho pacienta — pri MASLD a CKD platia iné dôrazy.</figcaption></figure>
+<figure><a href="img/vyzivove-odporucania-usa-2025-2030-masld-ckd.webp" rel="noopener noreferrer" target="_blank"><img src="img/vyzivove-odporucania-usa-2025-2030-masld-ckd.webp" alt="Tanier bežného jedla pod širokým svetlom, cez ktorý prechádza úzky lúč zvýrazňujúci problémové položky" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Odporúčanie pre populáciu nie je odporúčaním pre konkrétneho pacienta – pri MASLD a CKD platia iné dôrazy.</figcaption></figure>
 
 <p>Americké <em>Dietary Guidelines for Americans 2025–2030</em> (DGA), zverejnené v januári 2026, prinášajú zrozumiteľné populačné posolstvo: uprednostňovať nutrične hodnotné, málo spracované potraviny a obmedziť sladené nápoje, pridané cukry, nadbytok sodíka a ultraspracované výrobky. Dve časti dokumentu však vyžadujú v klinickej praxi osobitnú opatrnosť: cieľový príjem bielkovín 1,2–1,6 g/kg/deň a všeobecná formulácia „konzumujte menej alkoholu“ bez číselného limitu.</p>
 
@@ -172,7 +172,7 @@ $articles[] = [
 
 <h2>Alkohol: neurčitý populačný slogan nestačí</h2>
 
-<p>Staršie americké limity neboli cieľom ani zárukou bezpečnosti. Nová veta „konzumujte menej“ síce smeruje správnym smerom, ale pri klinickom rozhovore je príliš neurčitá. U každého pacienta so steatotickou chorobou pečene treba zaznamenať množstvo v gramoch alkoholu, frekvenciu, epizódy nárazového pitia a zmeny v čase.</p>
+<p>Staršie americké limity neboli cieľom ani zárukou bezpečnosti. Nová veta „konzumujte menej“ síce ide správnym smerom, ale pri klinickom rozhovore je príliš neurčitá. U každého pacienta so steatotickou chorobou pečene treba zaznamenať množstvo alkoholu v gramoch, frekvenciu, epizódy nárazového pitia a zmeny v čase.</p>
 
 <p>EASL–EASD–EASO odporúčajú ľudí so SLD od alkoholu odrádzať; pri pokročilej fibróze alebo cirhóze je namieste úplná a trvalá abstinencia. Pri CKD treba zohľadniť aj krvný tlak, triglyceridy, glykemickú kontrolu, objemový stav, liekové interakcie, riziko pádov a transplantologický kontext. Chýbajúci číselný limit v DGA sa nesmie interpretovať ako povolenie bez hraníc.</p>
 

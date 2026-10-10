@@ -30,7 +30,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Retrospektívna kohortová štúdia v JAMA Network Open: mierne obmedzenie príjmu bielkovín pod 1,0 g/kg/deň pri CKD v štádiu III–IV bolo spojené s 23 % nižším rizikom nepriaznivých výsledkov a 35 % nižším rizikom dialýzy.',
     'content'      => <<<'HTML'
-<figure><a href="img/mierne-obmedzenie-bielkovin-ckd-prognoza.webp" rel="noopener noreferrer" target="_blank"><img src="img/mierne-obmedzenie-bielkovin-ckd-prognoza.webp" alt="Mierne zúžený prúd bielkovinových častíc vstupujúci do obličky, glomerulus sa viditeľne uvoľňuje" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Cieľom je odľahčiť obličku, nie pacienta vyživovo ochudobniť — rozdiel je v miere.</figcaption></figure>
+<figure><a href="img/mierne-obmedzenie-bielkovin-ckd-prognoza.webp" rel="noopener noreferrer" target="_blank"><img src="img/mierne-obmedzenie-bielkovin-ckd-prognoza.webp" alt="Mierne zúžený prúd bielkovinových častíc vstupujúci do obličky, glomerulus sa viditeľne uvoľňuje" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Cieľom je odľahčiť obličku, nie pacienta vyživovo ochudobniť – rozdiel je v miere.</figcaption></figure>
 
 <p>Diétne odporúčania pri chronickej chorobe obličiek patria medzi najdiskutovanejšie oblasti nefrologickej starostlivosti. Osobitne citlivou témou je príjem bielkovín. Na jednej strane môže nadmerný príjem bielkovín zvyšovať glomerulárnu hyperfiltráciu a urýchľovať progresiu ochorenia obličiek. Na druhej strane príliš prísna restrikcia môže viesť k podvýžive, úbytku svalovej hmoty a horším klinickým výsledkom.</p>
 
@@ -42,7 +42,7 @@ $articles[] = [
 
 <p>Zo štúdie boli vylúčení pacienti s odhadovanou glomerulovou filtráciou nad 60 alebo pod 15 ml/min/1,73 m², pacienti liečení dialýzou a pacienti po transplantácii obličky.</p>
 
-<p>Príjem bielkovín nebol hodnotený iba podľa diétneho dotazníka. Vedci ho odhadovali objektívnejšie, pomocou <strong>24-hodinového vylučovania dusíka močom</strong>, následne prepočítaného na upravenú telesnú hmotnosť. Takto vypočítaný normalizovaný denný príjem bielkovín sa označuje ako nDPI.</p>
+<p>Príjem bielkovín sa nehodnotil len podľa diétneho dotazníka, ale objektívnejšie – z <strong>24-hodinového vylučovania dusíka močom</strong> prepočítaného na upravenú telesnú hmotnosť. Takto vypočítaný normalizovaný denný príjem bielkovín sa označuje ako nDPI.</p>
 
 <p>Medián vstupnej hodnoty nDPI bol <strong>1,18 g/kg/deň</strong>.</p>
 
@@ -71,17 +71,17 @@ $articles[] = [
 
 <p>V párovanej kohorte bol nižší príjem bielkovín spojený s <strong>23 % nižším rizikom zloženého nepriaznivého výsledku</strong> v porovnaní s vyšším príjmom bielkovín.</p>
 
-<p>Hazard ratio bolo 0,77, s 95 % intervalom spoľahlivosti 0,62 až 0,97.</p>
+<p>Pomer rizík (HR) bol 0,77, s 95 % intervalom spoľahlivosti 0,62 až 0,97.</p>
 
-<p>Najvýraznejší rozdiel sa týkal začatia dialýzy. Pacienti s nižším príjmom bielkovín mali <strong>35 % nižšie riziko začatia dialyzačnej liečby</strong>. Hazard ratio bolo 0,65, s 95 % intervalom spoľahlivosti 0,42 až 0,99.</p>
+<p>Najvýraznejší rozdiel sa týkal začatia dialýzy. Pacienti s nižším príjmom bielkovín mali <strong>35 % nižšie riziko začatia dialyzačnej liečby</strong>. Pomer rizík bol 0,65, s 95 % intervalom spoľahlivosti 0,42 až 0,99.</p>
 
 <p>Aj po úprave na vek, pohlavie, diabetes mellitus, BMI, vstupnú eGFR, sérový albumín a pomer albumínu ku kreatinínu v moči zostal nižší príjem bielkovín spojený so štatisticky významne nižším rizikom zloženého výsledku.</p>
 
 <h2>Funkcia obličiek klesala v oboch skupinách</h2>
 
-<p>Odhadovaná glomerulová filtrácia počas sledovania klesala v oboch skupinách. V skupine s nižším príjmom bielkovín bol pokles numericky pomalší, hoci hlavným klinicky významným rozdielom zostalo najmä nižšie riziko začatia dialýzy.</p>
+<p>Odhadovaná glomerulová filtrácia počas sledovania klesala v oboch skupinách. V skupine s nižším príjmom bielkovín bol pokles numericky pomalší, hlavným klinicky významným rozdielom však zostalo nižšie riziko začatia dialýzy.</p>
 
-<p>Z praktického hľadiska je dôležité, že nižší príjem bielkovín nebol spojený so zhoršením štandardných nutričných ukazovateľov. Medzi skupinami sa nepozorovali významné rozdiely v sledovaných parametroch výživového stavu.</p>
+<p>Pre prax je podstatné, že nižší príjem bielkovín nebol spojený so zhoršením štandardných nutričných ukazovateľov – v sledovaných parametroch výživového stavu sa medzi skupinami nepozorovali významné rozdiely.</p>
 
 <h2>Prečo je tento výsledok dôležitý</h2>
 
@@ -103,7 +103,7 @@ $articles[] = [
 
 <p>Štúdia podporuje racionálny a individualizovaný prístup k príjmu bielkovín pri chronickej chorobe obličiek. U pacientov s nedialyzovanou CKD v štádiu III a IV môže byť mierne obmedzenie príjmu bielkovín pod 1,0 g/kg/deň spojené s nižším rizikom nepriaznivých klinických výsledkov, najmä s nižšou pravdepodobnosťou začatia dialýzy.</p>
 
-<p>Kľúčové však je, aby išlo o <strong>kontrolovanú diétnu intervenciu</strong>, nie o neodborné hladovanie alebo neprimerané obmedzovanie stravy. Ideálne má byť súčasťou nefrologickej starostlivosti aj nutričné hodnotenie a diétne poradenstvo, zvlášť u starších pacientov a u pacientov s rizikom proteínovo-energetickej malnutrície.</p>
+<p>Musí však ísť o <strong>kontrolovanú diétnu intervenciu</strong>, nie o neodborné hladovanie alebo neprimerané obmedzovanie stravy. Ideálne má byť súčasťou nefrologickej starostlivosti aj nutričné hodnotenie a diétne poradenstvo, zvlášť u starších pacientov a u pacientov s rizikom proteínovo-energetickej malnutrície.</p>
 
 <p>Mierna proteínová reštrikcia môže byť užitočným nástrojom, ale len vtedy, ak je správne indikovaná, pravidelne kontrolovaná a prispôsobená konkrétnemu pacientovi.</p>
 

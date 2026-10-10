@@ -28,13 +28,13 @@ $articles[] = [
 
 <p>Tieto vrstvy dôkazov však nemožno zlúčiť do vety „glukozamín spôsobuje demenciu“. Klinická časť bola retrospektívna, expozíciu určoval záznam v dokumentácii a párovanie zohľadnilo iba vek alebo základné demografické premenné. Neskoršia analýza v nezávislej kohorte navyše ukázala, že podobný signál progresie sprevádzal aj záznamy o iných doplnkoch, a po adjustácii nepotvrdila vyššiu mortalitu pri glukozamíne. Ide zatiaľ o nerecenzovaný preprint, no oslabuje predstavu špecifického klinického účinku. [2]</p>
 
-<p>Pre nefrológa nie je bezprostredným dôsledkom plošný zákaz. Dôležitá je presná lieková anamnéza vrátane doplnkov, individuálne posúdenie prínosu a rizika a otvorená diskusia najmä pri už existujúcej kognitívnej poruche. Nová štúdia neposkytla údaje podľa eGFR, albuminúrie, dialýzy ani transplantácie.</p>
+<p>Pre nefrológa z toho nevyplýva plošný zákaz. Dôležitá je presná lieková anamnéza vrátane doplnkov, individuálne posúdenie prínosu a rizika a otvorená diskusia najmä pri už existujúcej kognitívnej poruche. Nová štúdia neposkytla údaje podľa eGFR, albuminúrie, dialýzy ani transplantácie.</p>
 
 <h2>Čo vlastne skúmala práca v Nature Metabolism</h2>
 
 <p>Hawkinsonová a spoluautori spojili štyri výskumné prístupy: priestorovú metabolomiku, lipidomiku a glykomiku posmrtného ľudského mozgového tkaniva, izotopové sledovanie tvorby glykánov, zásahy do glykozylácie v modeloch 5xFAD a PS19 a retrospektívnu analýzu elektronických zdravotných záznamov. [1] Takéto prepojenie zvyšuje biologickú vierohodnosť hypotézy, ale každá časť odpovedá na inú otázku a má odlišné limity.</p>
 
-<p>Úvodné priestorové porovnanie čerstvo zmrazenej frontálnej kôry zahŕňalo tri vzorky s Alzheimerovou chorobou a tri kontrolné vzorky. Pri niektorých analýzach sa tisíce obrazových bodov uvádzali ako dátové body, tie však nie sú tisíckami nezávislých pacientov. Nálezy sa ďalej overovali vo väčšom súbore tkanív podľa Braakovho štádia. V sivej hmote viaceré N-glykány pribúdali s pokročilosťou neuropatologických zmien; v bielej hmote sa zvýšenie objavilo skôr a v neskorých štádiách nepokračovalo. [1]</p>
+<p>Úvodné priestorové porovnanie čerstvo zmrazenej frontálnej kôry zahŕňalo tri vzorky s Alzheimerovou chorobou a tri kontrolné vzorky. Pri niektorých analýzach sa ako dátové body uvádzali tisíce obrazových bodov, tie však nepredstavujú tisíce nezávislých pacientov. Nálezy sa ďalej overovali vo väčšom súbore tkanív podľa Braakovho štádia. V sivej hmote viaceré N-glykány pribúdali s pokročilosťou neuropatologických zmien; v bielej hmote sa zvýšenie objavilo skôr a v neskorých štádiách nepokračovalo. [1]</p>
 
 <p>Posmrtné prierezové vzorky neukazujú časový vývoj u toho istého človeka a samy osebe neurčujú, či zmena glykozylácie bola príčinou, následkom alebo sprievodným javom ochorenia.</p>
 
@@ -67,7 +67,7 @@ $articles[] = [
 </table>
 </div>
 
-<p>Percentuálne údaje sú relatívne, nie zvýšením absolútneho rizika o 25 percentuálnych bodov. Autori identifikovali expozíciu vyhľadávaním kľúčových slov v lekárskych poznámkach a záznamoch o liekoch. Zmienka v dokumentácii nemusí spoľahlivo určovať dávku, liekovú formu, adherenciu ani dĺžku užívania. Párovanie 1 : 1 zohľadňovalo iba vek alebo demografické premenné. Nezahŕňalo závažnosť artrózy a bolesti, mobilitu, krehkosť, komorbidity, funkčný stav, sociálnu podporu ani celú súbežnú liečbu. [1]</p>
+<p>Ide o relatívne údaje, nie o zvýšenie absolútneho rizika o 25 percentuálnych bodov. Autori identifikovali expozíciu vyhľadávaním kľúčových slov v lekárskych poznámkach a záznamoch o liekoch. Zmienka v dokumentácii nemusí spoľahlivo určovať dávku, liekovú formu, adherenciu ani dĺžku užívania. Párovanie 1 : 1 zohľadňovalo iba vek alebo demografické premenné. Nezahŕňalo závažnosť artrózy a bolesti, mobilitu, krehkosť, komorbidity, funkčný stav, sociálnu podporu ani celú súbežnú liečbu. [1]</p>
 
 <p>Aj časové zaradenie expozície je problematické: užívateľ bol definovaný dokumentovaným užívaním najmenej rok po diagnóze demencie. Bez dôkladného časovo závislého modelovania môže takáto definícia vytvoriť skreslenie a neumožňuje jednoduché príčinné čítanie Kaplanových-Meierových kriviek.</p>
 
@@ -83,7 +83,7 @@ $articles[] = [
 
 <p>Práca Hawkinsonovej a spoluautorov neuvádza výsledky podľa eGFR, albuminúrie, dialýzy alebo transplantácie a neposudzuje farmakokinetiku pri zníženej funkcii obličiek. Nemožno z nej odvodiť, že neurologické riziko je pri CKD vyššie, ani že glukozamín sa pri zlyhaní obličiek akumuluje alebo odstraňuje dialýzou. [1]</p>
 
-<p>Samostatná renálna bezpečnostná základňa je riedka. Publikované sú ojedinelé kazuistiky intersticiálnej nefritídy. V jednej biopsiou dokumentovanej kazuistike sa po vysadení glukozamínu eGFR čiastočne zlepšila a po opätovnom nasadení znovu klesla; takáto pozitívna reexpozícia podporuje súvislosť v danom prípade, neurčuje však populačnú incidenciu. [5]</p>
+<p>Údajov o renálnej bezpečnosti je málo. Publikované sú ojedinelé kazuistiky intersticiálnej nefritídy. V jednej biopsiou dokumentovanej kazuistike sa po vysadení glukozamínu eGFR čiastočne zlepšila a po opätovnom nasadení znovu klesla; takáto pozitívna reexpozícia podporuje súvislosť v danom prípade, neurčuje však populačnú incidenciu. [5]</p>
 
 <p>Mendelovská randomizačná štúdia opísala spojenie genetickej náchylnosti k užívaniu glukozamínu s veľmi malým poklesom eGFR, no genetický nástroj pre správanie „užíva doplnok“ nie je ekvivalentom koncentrácie alebo dávky glukozamínu a výsledok nemožno použiť na klinické dávkovanie. [6] Naopak, observačná analýza UK Biobank zistila nižšiu albuminúriu medzi užívateľmi, ale genetická analýza kauzálny účinok na albuminúriu nepodporila. [7] Súbor údajov je teda rozporný a neumožňuje vyhlásiť renálnu škodlivosť ani renoprotekciu.</p>
 

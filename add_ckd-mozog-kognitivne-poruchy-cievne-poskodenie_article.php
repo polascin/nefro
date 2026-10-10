@@ -27,7 +27,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'CKD sa spája s kognitívnou poruchou, cerebrálnou chorobou malých ciev a mozgovou príhodou. Klinicky rozhoduje cielené vyšetrenie, lieková bezpečnosť a ochrana perfúzie pri dialýze.',
     'content'      => <<<'HTML'
-<figure><a href="img/ckd-mozog-kognitivne-poruchy-cievne-poskodenie.webp" rel="noopener noreferrer" target="_blank"><img src="img/ckd-mozog-kognitivne-poruchy-cievne-poskodenie.webp" alt="Mozog s viditeľne zúženými drobnými cievami a bledými ložiskami, spojený prúdom častíc s obličkou" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Choroba obličiek nekončí pri obličke — cievne poškodenie mozgu patrí k jej dôsledkom.</figcaption></figure>
+<figure><a href="img/ckd-mozog-kognitivne-poruchy-cievne-poskodenie.webp" rel="noopener noreferrer" target="_blank"><img src="img/ckd-mozog-kognitivne-poruchy-cievne-poskodenie.webp" alt="Mozog s viditeľne zúženými drobnými cievami a bledými ložiskami, spojený prúdom častíc s obličkou" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Choroba obličiek nekončí pri obličke – cievne poškodenie mozgu patrí k jej dôsledkom.</figcaption></figure>
 
 <p>Chronická choroba obličiek (CKD) nie je izolovaným ochorením jedného orgánu. Spája sa s vyšším rizikom cievnej mozgovej príhody, poškodenia drobných mozgových ciev a kognitívnej poruchy. Tieto komplikácie môžu zhoršiť bezpečné užívanie liekov, adherenciu, samostatnosť aj schopnosť porozumieť zložitým rozhodnutiam o dialýze, konzervatívnej liečbe alebo transplantácii.</p>
 

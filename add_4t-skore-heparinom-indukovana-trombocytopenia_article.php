@@ -37,19 +37,19 @@ $articles[] = [
     'content'      => <<<'HTML'
 <figure><a href="img/4t-skore-heparinom-indukovana-trombocytopenia.webp" rel="noopener noreferrer" target="_blank"><img src="img/4t-skore-heparinom-indukovana-trombocytopenia.webp" alt="Stúpajúca škála svetelných stĺpcov a vedľa nej cieva s ubúdajúcimi krvnými doštičkami a tvoriacim sa trombom" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Jednoduché skóre rozhoduje, či ide o nevinný pokles doštičiek alebo o stav, ktorý paradoxne hrozí trombózou.</figcaption></figure>
 
-<p>Heparínom indukovaná trombocytopénia (<strong>HIT</strong>) patrí medzi diagnózy, ktoré nemožno podceniť. Môže viesť k život ohrozujúcim trombózam, ale jej zbytočné nadhodnotenie je tiež škodlivé: vedie k prerušeniu heparínu, podaniu alternatívnej antikoagulácie, vyššiemu riziku krvácania, rastu nákladov a diagnostickej neistote.</p>
+<p>Heparínom indukovanú trombocytopéniu (<strong>HIT</strong>) nemožno podceniť, pretože môže viesť k život ohrozujúcim trombózam. Škodí však aj jej zbytočné nadhodnotenie: vedie k prerušeniu heparínu, podaniu alternatívnej antikoagulácie, vyššiemu riziku krvácania, rastu nákladov a diagnostickej neistote.</p>
 
-<p>Práve preto má v praxi veľký význam <strong>4T skóre</strong> – jednoduchý klinický nástroj na odhad predtestovej pravdepodobnosti HIT. Jeho najväčšia sila nie je v tom, že by samo potvrdilo diagnózu, ale v tom, že pri nízkom výsledku HIT veľmi spoľahlivo vylučuje a chráni pacienta pred zbytočnou liečbou.</p>
+<p>Práve tu pomáha <strong>4T skóre</strong> – jednoduchý klinický nástroj na odhad predtestovej pravdepodobnosti HIT. Diagnózu samo nepotvrdí; jeho sila je v tom, že pri nízkom výsledku HIT veľmi spoľahlivo vylučuje a chráni pacienta pred zbytočnou liečbou.</p>
 
 <h2>Čo je heparínom indukovaná trombocytopénia</h2>
 
 <p>Klinicky závažná HIT je imunitne sprostredkovaná nežiaduca reakcia na heparín. Najčastejšie ide o protilátky proti komplexu <strong>doštičkový faktor 4 (PF4) – heparín</strong>. Tieto protilátky môžu aktivovať trombocyty, monocyty aj endotel, čím vzniká výrazne protrombotický stav.</p>
 
-<p>Typické je, že pacient nemá iba pokles počtu trombocytov. Paradoxom HIT je, že pri trombocytopénii dominuje riziko trombózy, nie krvácania. Môže ísť o hlbokú žilovú trombózu, pľúcnu embóliu, trombózu cievneho prístupu, ischémiu končatiny, cievnu mozgovú príhodu, infarkt myokardu alebo inú arteriálnu či venóznu trombotickú komplikáciu.</p>
+<p>Paradoxom HIT je, že napriek trombocytopénii dominuje riziko trombózy, nie krvácania. Môže ísť o hlbokú žilovú trombózu, pľúcnu embóliu, trombózu cievneho prístupu, ischémiu končatiny, cievnu mozgovú príhodu, infarkt myokardu alebo inú arteriálnu či venóznu trombotickú komplikáciu.</p>
 
 <h2>Prečo je HIT dôležitá v nefrológii a dialýze</h2>
 
-<p>Nefrologickí pacienti patria medzi skupiny, v ktorých sa s heparínom stretávame často. Používa sa pri hemodialýze, hospitalizáciách, prevencii tromboembolizmu, liečbe trombóz, invazívnych výkonoch aj pri práci s cievnymi prístupmi.</p>
+<p>Nefrologickí pacienti dostávajú heparín často: pri hemodialýze, hospitalizáciách, prevencii tromboembolizmu, liečbe trombóz, invazívnych výkonoch aj pri práci s cievnymi prístupmi.</p>
 
 <p>Podozrenie na HIT môže vzniknúť najmä u pacienta:</p>
 
@@ -152,7 +152,7 @@ $articles[] = [
 
 <h2>Laboratórna diagnostika</h2>
 
-<p>Laboratórne testovanie HIT má dve hlavné skupiny.</p>
+<p>Laboratórne testy na HIT sa delia do dvoch hlavných skupín.</p>
 
 <p>Prvou sú <strong>imunologické testy</strong>, ktoré zachytávajú protilátky proti komplexu PF4–heparín. Sú citlivé, ale pozitívny výsledok nemusí automaticky dokazovať klinicky významnú aktiváciu trombocytov. Falošne pozitívne alebo klinicky nevýznamné nálezy sú problém najmä vtedy, ak sa testuje pacient s nízkou predtestovou pravdepodobnosťou.</p>
 
@@ -203,7 +203,7 @@ $articles[] = [
   <li>ignorovanie iných pravdepodobných príčin trombocytopénie,</li>
   <li>pokračovanie v heparíne pri strednom alebo vysokom skóre bez jasného dôvodu a plánu,</li>
   <li>diagnóza HIT iba na základe pozitívneho imunologického testu,</li>
-  <li>zámenu nízkomolekulového heparínu za bezpečnú alternatívu pri podozrení na HIT.</li>
+  <li>považovanie nízkomolekulového heparínu za bezpečnú alternatívu pri podozrení na HIT.</li>
 </ul>
 
 <p>4T skóre je jednoduché, ale vyžaduje presnú klinickú úvahu. Ak sa vyplní mechanicky, môže byť zavádzajúce.</p>
@@ -218,7 +218,7 @@ $articles[] = [
 
 <p>4T skóre je praktický a klinicky užitočný nástroj na odhad predtestovej pravdepodobnosti heparínom indukovanej trombocytopénie. Jeho najväčšia hodnota spočíva v tom, že nízke skóre HIT spoľahlivo vylučuje a pomáha predchádzať zbytočnému testovaniu aj nevhodnej antikoagulačnej liečbe.</p>
 
-<p>Pre nefrologickú a dialyzačnú prax je 4T skóre mimoriadne dôležité, pretože expozícia heparínu je častá a trombocytopénia má mnoho alternatívnych príčin. Pri strednej alebo vysokej pravdepodobnosti treba konať rýchlo: prerušiť heparín, zvoliť vhodnú alternatívnu antikoaguláciu, doplniť laboratórnu diagnostiku a myslieť na trombotické komplikácie.</p>
+<p>V nefrologickej a dialyzačnej praxi má 4T skóre osobitný význam, pretože expozícia heparínu je častá a trombocytopénia má mnoho alternatívnych príčin. Pri strednej alebo vysokej pravdepodobnosti treba konať rýchlo: prerušiť heparín, zvoliť vhodnú alternatívnu antikoaguláciu, doplniť laboratórnu diagnostiku a myslieť na trombotické komplikácie.</p>
 
 <p>Správne použité 4T skóre znižuje riziko dvoch klinických omylov: prehliadnutia skutočnej HIT aj zbytočného označenia pacienta za HIT pozitívneho.</p>
 

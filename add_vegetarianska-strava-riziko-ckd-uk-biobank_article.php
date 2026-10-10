@@ -30,9 +30,9 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'U 416 584 dospelých sa počas priemerne 12,9 roka sledovania vegetariánska strava spájala s o 19 % nižším rizikom vzniku chronickej choroby obličiek. Ide o asociáciu a o tému primárnej prevencie, nie o liečebné odporúčanie.',
     'content'      => <<<'HTML'
-<figure><a href="img/vegetarianska-strava-riziko-ckd-uk-biobank.webp" rel="noopener noreferrer" target="_blank"><img src="img/vegetarianska-strava-riziko-ckd-uk-biobank.webp" alt="Pestrá rastlinná strava na tmavej bridlici a nad ňou modrozelená ochranná kupola svetla klenúca sa nad obličkou" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Ochrana nie je absolútna a na okrajoch slabne — observačný nález z veľkej kohorty ukazuje smer, nie záruku.</figcaption></figure>
+<figure><a href="img/vegetarianska-strava-riziko-ckd-uk-biobank.webp" rel="noopener noreferrer" target="_blank"><img src="img/vegetarianska-strava-riziko-ckd-uk-biobank.webp" alt="Pestrá rastlinná strava na tmavej bridlici a nad ňou modrozelená ochranná kupola svetla klenúca sa nad obličkou" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Ochrana nie je absolútna a na okrajoch slabne – observačný nález z veľkej kohorty ukazuje smer, nie záruku.</figcaption></figure>
 
-<p>Vplyv rastlinnej stravy na obličky sa doteraz skúmal prevažne cez skóre kvality stravy, ktoré si výskumník definuje dodatočne — napríklad index zdravej rastlinnej stravy. Takéto skóre je analyticky elegantné, ale nezodpovedá tomu, ako o svojom jedálničku uvažuje pacient. Analýza z kohorty UK Biobank ide inou cestou: pracuje s <strong>habituálnymi stravovacími skupinami</strong>, teda so vzorcami, ktoré v populácii reálne existujú a ktoré človek o sebe vie povedať jednou vetou. Práve to robí jej výsledok priamočiarejšie prenosným do ambulancie — a zároveň zraniteľnejším voči zavádzajúcim faktorom.</p>
+<p>Vplyv rastlinnej stravy na obličky sa doteraz skúmal prevažne cez skóre kvality stravy, ktoré si výskumník definuje dodatočne – napríklad index zdravej rastlinnej stravy. Takéto skóre je analyticky elegantné, ale nezodpovedá tomu, ako o svojom jedálničku uvažuje pacient. Analýza z kohorty UK Biobank ide inou cestou: pracuje s <strong>habituálnymi stravovacími skupinami</strong>, teda so vzorcami, ktoré v populácii reálne existujú a ktoré človek o sebe vie povedať jednou vetou. Práve to robí jej výsledok priamočiarejšie prenosným do ambulancie – a zároveň zraniteľnejším voči mätúcim faktorom.</p>
 
 <h2>Dizajn</h2>
 
@@ -41,16 +41,16 @@ $articles[] = [
 <p>Stravovanie sa hodnotilo vstupným dotazníkom frekvencie potravín (FFQ) s 29 položkami. Účastníci sa zaradili do piatich skupín:</p>
 
 <ul>
-  <li><strong>Vysoká spotreba mäsa</strong> (<em>high meat eaters</em>) — červené alebo spracované mäso vrátane hydiny viac než 5 – 6× týždenne.</li>
-  <li><strong>Nízka spotreba mäsa</strong> (<em>low meat eaters</em>) — tie isté potraviny menej často, ale viac než raz týždenne.</li>
-  <li><strong>Konzumenti hydiny</strong> (<em>poultry eaters</em>) — hydina áno, červené a spracované mäso nie.</li>
-  <li><strong>Pescatariáni</strong> — bez mäsa a hydiny, ryby áno.</li>
-  <li><strong>Vegetariáni</strong> — bez mäsa a rýb. Vegánov bolo na samostatnú analýzu primálo (<strong>n = 367</strong>), preto ich autori zlúčili s vegetariánmi.</li>
+  <li><strong>Vysoká spotreba mäsa</strong> (<em>high meat eaters</em>) – červené alebo spracované mäso vrátane hydiny viac než 5 – 6× týždenne.</li>
+  <li><strong>Nízka spotreba mäsa</strong> (<em>low meat eaters</em>) – tie isté potraviny menej často, ale viac než raz týždenne.</li>
+  <li><strong>Konzumenti hydiny</strong> (<em>poultry eaters</em>) – hydina áno, červené a spracované mäso nie.</li>
+  <li><strong>Pescatariáni</strong> – bez mäsa a hydiny, ryby áno.</li>
+  <li><strong>Vegetariáni</strong> – bez mäsa a rýb. Vegánov bolo na samostatnú analýzu primálo (<strong>n = 367</strong>), preto ich autori zlúčili s vegetariánmi.</li>
 </ul>
 
 <p>Incidentná choroba obličiek sa zisťovala z <strong>hospitalizačných záznamov</strong> podľa kódov MKCH-10 (N03, N06, N08, N11 – N16, N18, N19, Z49, I12, I13) a podľa procedurálnej klasifikácie OPCS-4. Prevalentná choroba obličiek na začiatku bola definovaná predchádzajúcou diagnózou alebo vstupným <strong>eGFR &lt; 60 ml/min/1,73 m²</strong>; eGFR sa počítal rovnicou CKD-EPI 2021 z kreatinínu.</p>
 
-<p>Použili sa Coxove modely proporcionálnych rizík s <strong>vekom ako časovou osou</strong>, upravené na pohlavie, príjem, vzdelanie, obvod pása, BMI, pohybovú aktivitu a fajčenie. Etnicita a diabetes 2. typu porušovali predpoklad proporcionality rizík, preto boli v modeloch <strong>stratifikované</strong>, nie adjustované — metodicky korektné riešenie.</p>
+<p>Použili sa Coxove modely proporcionálnych rizík s <strong>vekom ako časovou osou</strong>, upravené na pohlavie, príjem, vzdelanie, obvod pása, BMI, pohybovú aktivitu a fajčenie. Etnicita a diabetes 2. typu porušovali predpoklad proporcionality rizík, preto boli v modeloch <strong>stratifikované</strong>, nie adjustované – metodicky korektné riešenie.</p>
 
 <h2>Výsledky</h2>
 
@@ -101,12 +101,12 @@ $articles[] = [
   </table>
 </div>
 
-<p>Štatistickú významnosť v základnom modeli dosiahli len dve skupiny — nízka spotreba mäsa a vegetariáni. Naprieč skupinami však bol viditeľný <strong>odstupňovaný vzťah</strong>, ktorý kopíroval klesajúci príjem živočíšnych bielkovín: o 3 % nižšie riziko pri nízkej spotrebe mäsa, o 2 % u konzumentov hydiny, o 9 % u pescatariánov a o 19 % u vegetariánov.</p>
+<p>Štatistickú významnosť v základnom modeli dosiahli len dve skupiny – nízka spotreba mäsa a vegetariáni. Naprieč skupinami však bol viditeľný <strong>odstupňovaný vzťah</strong>, ktorý kopíroval klesajúci príjem živočíšnych bielkovín: o 3 % nižšie riziko pri nízkej spotrebe mäsa, o 2 % u konzumentov hydiny, o 9 % u pescatariánov a o 19 % u vegetariánov.</p>
 
 <h3>Podskupiny a citlivostné analýzy</h3>
 
 <ul>
-  <li><strong>Podľa vstupnej funkcie obličiek:</strong> u vegetariánov s normálnou funkciou obličiek bolo riziko nižšie (HR 0,81; 95 % IS 0,706 – 0,936), u osôb s ľahko zníženou funkciou (štádium 1 – 2) sa významný rozdiel nepreukázal. Test heterogenity medzi vrstvami však vyšiel negatívny — rozdiel teda môže odrážať menšiu silu podskupiny, nie odlišný účinok.</li>
+  <li><strong>Podľa vstupnej funkcie obličiek:</strong> u vegetariánov s normálnou funkciou obličiek bolo riziko nižšie (HR 0,81; 95 % IS 0,706 – 0,936), u osôb s ľahko zníženou funkciou (štádium 1 – 2) sa významný rozdiel nepreukázal. Test heterogenity medzi vrstvami však vyšiel negatívny – rozdiel teda môže odrážať menšiu silu podskupiny, nie odlišný účinok.</li>
   <li><strong>Podľa pohlavia:</strong> u mužov o 21 %, u žien o 16 % nižšie riziko, bez významnej heterogenity.</li>
   <li><strong>Podľa polygénového rizika:</strong> najväčší rozdiel (približne 30 %) sa objavil v skupine s najnižším genetickým rizikom, no asociácie boli konzistentné vo všetkých vrstvách a heterogenita sa nepreukázala.</li>
   <li><strong>Po doplnkovej úprave na vstupný eGFR a ACR</strong> sa asociácia u vegetariánov mierne <em>zosilnila</em> (HR 0,80; 95 % IS 0,676 – 0,938).</li>
@@ -122,8 +122,8 @@ $articles[] = [
 
 <ol>
   <li><strong>Zdravší profil kohorty.</strong> Účastníci UK Biobank sú zdravší než bežná britská populácia a prevažne európskeho pôvodu, čo obmedzuje prenositeľnosť záveru.</li>
-  <li><strong>Strava sa merala raz, na začiatku.</strong> Zmena stravovania alebo podhodnotenie niektorých potravín vedie k chybnému zaradeniu — pravdepodobne skôr k <em>podhodnoteniu</em> skutočného rozdielu. Autori zároveň odkazujú na podštúdiu reprodukovateľnosti, podľa ktorej sú typy stravy v tejto kohorte v čase veľmi stabilné.</li>
-  <li><strong>Kategórie miešajú dve rôzne kritériá</strong> — frekvenčné (vysoká verzus nízka spotreba mäsa) a vylučovacie (hydina, ryby). Preto sa výsledok nedá čítať ako čistá závislosť dávky a odpovede pre živočíšnu bielkovinu.</li>
+  <li><strong>Strava sa merala raz, na začiatku.</strong> Zmena stravovania alebo podhodnotenie niektorých potravín vedie k chybnému zaradeniu – pravdepodobne skôr k <em>podhodnoteniu</em> skutočného rozdielu. Autori zároveň odkazujú na podštúdiu reprodukovateľnosti, podľa ktorej sú typy stravy v tejto kohorte v čase veľmi stabilné.</li>
+  <li><strong>Kategórie miešajú dve rôzne kritériá</strong> – frekvenčné (vysoká verzus nízka spotreba mäsa) a vylučovacie (hydina, ryby). Preto sa výsledok nedá čítať ako čistá závislosť dávky a odpovede pre živočíšnu bielkovinu.</li>
   <li><strong>Zachytenie prípadov je nemocničné.</strong> Kódy z hospitalizačných záznamov zachytávajú skôr klinicky rozpoznané a pokročilejšie ochorenie než všetky incidentné prípady.</li>
   <li><strong>Jednorazové meranie eGFR a ACR</strong> pri delení na štádiá sa odchyľuje od klinickej definície, ktorá vyžaduje pretrvávanie odchýlok aspoň tri mesiace. Časť účastníkov zaradených do štádia 1 – 2 teda mohla mať prechodný pokles funkcie alebo prechodnú albuminúriu.</li>
   <li><strong>Zlúčenie vegánov s vegetariánmi</strong> spája dva čiastočne odlišné nutričné profily, čo môže asociáciu zrieďovať.</li>
@@ -131,29 +131,29 @@ $articles[] = [
 
 <h2>Navrhované mechanizmy sú zatiaľ hypotézy</h2>
 
-<p>Autori ponúkajú tri okruhy vysvetlení. Žiadny z nich táto práca netestovala — ide o interpretačný rámec, nie o dôkaz.</p>
+<p>Autori ponúkajú tri okruhy vysvetlení. Žiadny z nich táto práca netestovala – ide o interpretačný rámec, nie o dôkaz.</p>
 
 <ul>
   <li><strong>Nižšia kyslá nálož.</strong> Rastlinná strava obsahuje menej organických fosfátov, sulfátov a nemetabolizovateľných organických kyselín, ktoré vedú k nadbytku protónov. Experimentálne práce ukazujú, že acidifikácia obličkového tkaniva aktivuje lokálny renín-angiotenzínový systém, a klinické práce pri hypertenznej nefropatii ukázali, že strava bohatá na ovocie a zeleninu znižovala čistú exkréciu kyselín a spomaľovala progresiu porovnateľne s perorálnym hydrogenuhličitanom sodným.</li>
   <li><strong>Vláknina, polyfenoly a os črevo – obličky.</strong> Vyšší príjem vlákniny podporuje baktérie produkujúce mastné kyseliny s krátkym reťazcom, čo sa spája s nižším oxidačným stresom a zápalom. Rastlinná strava tiež znižuje hladiny trimetylamín-N-oxidu (TMAO), metabolitu spájaného s vyššou mortalitou a kardiometabolickým rizikom pri chorobe obličiek.</li>
-  <li><strong>Minerály a mikroživiny.</strong> Fosfát je v rastlinných potravinách viazaný najmä ako fytát, ktorý sa pre chýbajúcu črevnú fytázu vstrebáva zle — fosfátová nálož je preto pri rovnakom obsahu nižšia než z mäsa a najmä z fosfátových aditív.</li>
+  <li><strong>Minerály a mikroživiny.</strong> Fosfát je v rastlinných potravinách viazaný najmä ako fytát, ktorý sa pre chýbajúcu črevnú fytázu vstrebáva zle – fosfátová nálož je preto pri rovnakom obsahu nižšia než z mäsa a najmä z fosfátových aditív.</li>
 </ul>
 
 <h3>Nuansa, ktorá stojí za povšimnutie: draslík a fosfor</h3>
 
-<p>Bežná obava, že rastlinná strava automaticky znamená vysoký príjem draslíka, sa v opisných údajoch tejto kohorty <strong>nepotvrdila</strong>. Vegetariáni mali podľa 24-hodinových nutričných záznamov vyšší príjem vlákniny, ale <strong>nižší</strong> príjem draslíka aj fosforu než skupina s vysokou spotrebou mäsa. Konzumenti mäsa mali zároveň vyššie vylučovanie sodíka, kreatinínu a mikroalbumínu močom. Ide o opisné porovnanie bez štatistického testovania, no dobre ilustruje, že „vegetariánska strava“ nie je synonymom „stravy bohatej na draslík“ — rozhoduje zloženie konkrétneho jedálnička, nie nálepka.</p>
+<p>Bežná obava, že rastlinná strava automaticky znamená vysoký príjem draslíka, sa v opisných údajoch tejto kohorty <strong>nepotvrdila</strong>. Vegetariáni mali podľa 24-hodinových nutričných záznamov vyšší príjem vlákniny, ale <strong>nižší</strong> príjem draslíka aj fosforu než skupina s vysokou spotrebou mäsa. Konzumenti mäsa mali zároveň vyššie vylučovanie sodíka, kreatinínu a mikroalbumínu močom. Ide o opisné porovnanie bez štatistického testovania, no dobre ilustruje, že „vegetariánska strava“ nie je synonymom „stravy bohatej na draslík“ – rozhoduje zloženie konkrétneho jedálnička, nie nálepka.</p>
 
 <h2>Čo z toho pre prax</h2>
 
 <p>Zistenie sa týka <strong>primárnej prevencie</strong>, teda populácie bez choroby obličiek. Tam zapadá do rovnakej logiky ako ostatné kardiometabolické odporúčania: obezita, diabetes 2. typu a hypertenzia sú spoločnými determinantmi choroby obličiek aj kardiovaskulárnych ochorení a všetky tri sú stravou ovplyvniteľné.</p>
 
-<p>Pri pacientovi, ktorý už chorobu obličiek má, sú odporúčania rozpornejšie a táto práca na ne neodpovedá. Obmedzenie bielkovín na spomalenie progresie hovorí v prospech stravy chudobnej na živočíšne produkty; obmedzenie draslíka pri hyperkaliémii naopak limituje mnohé rastlinné potraviny a obmedzenie fosfátov pri poruche kostného a minerálového metabolizmu vedie k jednotvárnemu jedálničku. Samotné označenie „vegetariánska strava“ preto nezaručuje priaznivý nutričný profil — rozhodovať treba individuálne podľa štádia, kaliémie, fosfatémie, kompenzácie diabetu a znášanlivosti.</p>
+<p>Pri pacientovi, ktorý už chorobu obličiek má, sú odporúčania rozpornejšie a táto práca na ne neodpovedá. Obmedzenie bielkovín na spomalenie progresie hovorí v prospech stravy chudobnej na živočíšne produkty; obmedzenie draslíka pri hyperkaliémii naopak limituje mnohé rastlinné potraviny a obmedzenie fosfátov pri poruche kostného a minerálového metabolizmu vedie k jednotvárnemu jedálničku. Samotné označenie „vegetariánska strava“ preto nezaručuje priaznivý nutričný profil – rozhodovať treba individuálne podľa štádia, kaliémie, fosfatémie, kompenzácie diabetu a znášanlivosti.</p>
 
 <p>Za zmienku stojí posun v odporúčaniach: KDIGO začalo úlohu rastlinnej stravy v manažmente choroby obličiek uznávať, hoci v praxi stále prevažujú konzervatívnejšie postoje opreté o staršie obavy z draslíka, fosforu a kvality bielkovín. Autori preto v závere volajú po randomizovaných štúdiách rastlinnej stravy u pacientov s chorobou obličiek vrátane posúdenia jej praktickej uskutočniteľnosti a prijateľnosti.</p>
 
 <h2>Záver</h2>
 
-<p>V populačnej kohorte s viac než 400 000 účastníkmi a takmer 13 rokmi sledovania sa vegetariánska strava spájala s približne o pätinu nižším rizikom vzniku chronickej choroby obličiek, s odstupňovaným vzťahom kopírujúcim klesajúci príjem živočíšnych bielkovín a s výsledkom stabilným po zohľadnení vstupnej funkcie obličiek, albuminúrie aj genetickej predispozície. Pre nefrologickú prax z toho nevyplýva nový liečebný postup, ale podpora pre argument, ktorý pri prevencii aj tak používame: posun jedálnička smerom k rastlinným zdrojom je rozumný. Dôkazový základ pre pacientov, ktorí chorobu obličiek už majú, zatiaľ chýba — a ten sa observačnou analýzou nahradiť nedá.</p>
+<p>V populačnej kohorte s viac než 400 000 účastníkmi a takmer 13 rokmi sledovania sa vegetariánska strava spájala s približne o pätinu nižším rizikom vzniku chronickej choroby obličiek, s odstupňovaným vzťahom kopírujúcim klesajúci príjem živočíšnych bielkovín a s výsledkom stabilným po zohľadnení vstupnej funkcie obličiek, albuminúrie aj genetickej predispozície. Pre nefrologickú prax z toho nevyplýva nový liečebný postup, ale podpora pre argument, ktorý pri prevencii aj tak používame: posun jedálnička smerom k rastlinným zdrojom je rozumný. Dôkazový základ pre pacientov, ktorí chorobu obličiek už majú, zatiaľ chýba – a ten sa observačnou analýzou nahradiť nedá.</p>
 
 <h2>Súvisiace články</h2>
 
@@ -171,7 +171,7 @@ $articles[] = [
 
 <p><small><em><strong>Spracovaný zdroj:</strong> Candussi CJ, Bell W, Mutapcic M, Thompson AS, Rohrmann S, Cassidy A, Kühn T, Gaggl M. Vegetarian diet is associated with a lower risk of chronic kidney disease in a population-based study. <em>Scientific Reports</em>. 2026;16(1). doi: <a href="https://doi.org/10.1038/s41598-026-62827-2" target="_blank" rel="noopener noreferrer">10.1038/s41598-026-62827-2</a>. PMID 42547796, PMCID PMC13434791. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC13434791/" target="_blank" rel="noopener noreferrer">Plný text</a>.</em></small></p>
 
-<p><small><em><strong>Poznámka k dôkazovému základu:</strong> Bibliografické údaje, úplný autorský zoznam (8 mien), veľkosti kohorty a jednotlivých stravovacích skupín, počty incidentných prípadov, dĺžka sledovania, všetky uvedené pomery rizík aj intervaly spoľahlivosti boli overené 28. augusta 2026 v plnom texte spracovanej práce cez PubMed Central. Presné intervaly spoľahlivosti pre konzumentov hydiny a pre pescatariánov sú v pôvodnej práci uvedené len v obrázku, nie v texte — preto sa tu uvádza iba veľkosť a významnosť odhadu. Údaje o príjme živín pochádzajú z podskupiny s dostupným 24-hodinovým záznamom (n = 178 209) a autori ich neporovnávali štatisticky.</em></small></p>
+<p><small><em><strong>Poznámka k dôkazovému základu:</strong> Bibliografické údaje, úplný autorský zoznam (8 mien), veľkosti kohorty a jednotlivých stravovacích skupín, počty incidentných prípadov, dĺžka sledovania, všetky uvedené pomery rizík aj intervaly spoľahlivosti boli overené 28. augusta 2026 v plnom texte spracovanej práce cez PubMed Central. Presné intervaly spoľahlivosti pre konzumentov hydiny a pre pescatariánov sú v pôvodnej práci uvedené len v obrázku, nie v texte – preto sa tu uvádza iba veľkosť a významnosť odhadu. Údaje o príjme živín pochádzajú z podskupiny s dostupným 24-hodinovým záznamom (n = 178 209) a autori ich neporovnávali štatisticky.</em></small></p>
 
 <p><small><em>Text má odborný informačný charakter a nenahrádza individuálne klinické rozhodovanie. Zistenie sa týka vzniku ochorenia u osôb bez choroby obličiek; nejde o výživové odporúčanie pre pacientov, ktorí chronickú chorobu obličiek už majú. Úpravu príjmu bielkovín, draslíka a fosforu treba prispôsobiť štádiu ochorenia a aktuálnym laboratórnym hodnotám.</em></small></p>
 HTML,

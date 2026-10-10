@@ -35,7 +35,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Pacienti na peritoneálnej dialýze sú ochotní zapájať sa do udržateľnejšej starostlivosti. Potrebujú však jasné pravidlá pre odpad, stabilnú logistiku a digitálne nástroje, ktoré nenahradia klinicky potrebný osobný kontakt.',
     'content'      => <<<'HTML'
-<figure><a href="img/udrzatelna-peritonealna-dialyza-pacienti-zelena-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/udrzatelna-peritonealna-dialyza-pacienti-zelena-nefrologia.webp" alt="Dialyzačný vak, ktorého odtok sa vracia späť do uzavretej svetelnej slučky namiesto odpadu" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Zelená nefrológia znamená uzavrieť cyklus tam, kde to ide — bez toho, aby liečba stratila kvalitu.</figcaption></figure>
+<figure><a href="img/udrzatelna-peritonealna-dialyza-pacienti-zelena-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/udrzatelna-peritonealna-dialyza-pacienti-zelena-nefrologia.webp" alt="Dialyzačný vak, ktorého odtok sa vracia späť do uzavretej svetelnej slučky namiesto odpadu" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Zelená nefrológia znamená uzavrieť cyklus tam, kde to ide, bez toho, aby liečba stratila kvalitu.</figcaption></figure>
 
 <p>Peritoneálna dialýza (PD) je z klinického hľadiska cenná domáca dialyzačná metóda. Pacientovi prináša väčšiu autonómiu, menšiu potrebu pravidelného dochádzania do dialyzačného strediska a pri správnej indikácii aj dobrú kvalitu života. Menej viditeľnou, ale čoraz dôležitejšou témou je jej environmentálna stopa.</p>
 
@@ -61,13 +61,13 @@ $articles[] = [
   <li>vnímanie telemedicíny a digitálnych informačných nástrojov.</li>
 </ul>
 
-<p>Do štúdie bolo zaradených 90 pacientov na peritoneálnej dialýze. Priemerný vek bol 54,4 ± 14,3 roka a muži tvorili 64,4 % súboru. Ide teda o relatívne prakticky uchopiteľnú pacientsku kohortu, nie o abstraktný model environmentálnej záťaže.</p>
+<p>Do štúdie bolo zaradených 90 pacientov na peritoneálnej dialýze. Priemerný vek bol 54,4 ± 14,3 roka a muži tvorili 64,4 % súboru.</p>
 
 <h2>Recyklácia: ochota existuje, hranice musia byť jasné</h2>
 
-<p>Väčšina pacientov uviedla, že recykluje aspoň jeden materiál súvisiaci s PD. Konkrétne išlo o 84,4 % pacientov. Najčastejšie sa recykloval papier (83,3 %) a plastové obaly (66,7 %).</p>
+<p>Väčšina pacientov (84,4 %) uviedla, že recykluje aspoň jeden materiál súvisiaci s PD. Najčastejšie sa recykloval papier (83,3 %) a plastové obaly (66,7 %).</p>
 
-<p>Tento výsledok je povzbudivý. Ukazuje, že pacienti nie sú voči environmentálnej téme ľahostajní a mnohí si svoje bežné domáce recyklačné návyky prenášajú aj do dialyzačnej liečby. Zároveň však štúdia upozorňuje na podstatný bezpečnostný problém.</p>
+<p>Výsledok je povzbudivý: pacienti nie sú voči environmentálnej téme ľahostajní a mnohí si svoje bežné domáce recyklačné návyky prenášajú aj do dialyzačnej liečby. Zároveň však štúdia upozorňuje na podstatný bezpečnostný problém.</p>
 
 <p>Až 21,3 % pacientov uviedlo recykláciu vakov s dialyzačným roztokom alebo drenážnych vakov, hoci tieto materiály sú klasifikované ako zdravotnícky odpad. To nie je dôkaz nezodpovednosti pacienta. Skôr je to signál, že systém pacientom nemusí dostatočne jasne vysvetľovať, ktoré materiály možno bezpečne triediť a ktoré už patria do regulovaného zdravotníckeho odpadu.</p>
 
@@ -77,7 +77,7 @@ $articles[] = [
 
 <p>Autori nenašli významnú súvislosť medzi recyklačným správaním a vekom, miestom bydliska ani modalitou peritoneálnej dialýzy. Ochota recyklovať teda podľa dostupných údajov nebola vyhradená len mladším pacientom ani konkrétnej technike PD.</p>
 
-<p>To je pre dialyzačné centrá dôležité. Edukácia o odpade a recyklácii by nemala byť selektívna. Nemá sa predpokladať, že starší pacienti o tému nemajú záujem alebo že mladší pacienti automaticky poznajú pravidlá. Každý pacient potrebuje rovnaký, jasný a opakovane dostupný návod.</p>
+<p>Pre dialyzačné centrá z toho vyplýva, že edukácia o odpade a recyklácii by nemala byť selektívna. Nemá sa predpokladať, že starší pacienti o tému nemajú záujem alebo že mladší pacienti automaticky poznajú pravidlá. Každý pacient potrebuje rovnaký, jasný a opakovane dostupný návod.</p>
 
 <p>Rozumným výstupom môže byť jednoduchý lokálny prehľad: čo patrí do papiera, čo do plastu, čo do komunálneho odpadu a čo je zdravotnícky odpad. Takýto dokument má byť prispôsobený miestnym pravidlám nakladania s odpadom, nie iba všeobecným environmentálnym heslám.</p>
 
@@ -101,9 +101,9 @@ $articles[] = [
 
 <p>Štúdia ukázala opatrný postoj pacientov k nahrádzaniu osobných návštev telemedicínou. Až 84,4 % pacientov preferovalo osobné kontroly pred telemedicínou.</p>
 
-<p>Tento výsledok netreba čítať ako odmietnutie digitalizácie. Pacienti môžu súčasne chcieť osobnú kontrolu a zároveň prijímať digitálne informácie, pripomienky alebo bezpečný komunikačný kanál. Zdrojová práca naznačuje, že mladší pacienti boli digitálnym formám informovania otvorenejší.</p>
+<p>Tento výsledok netreba čítať ako odmietnutie digitalizácie. Pacienti môžu chcieť osobnú kontrolu a zároveň prijímať digitálne informácie, pripomienky alebo bezpečný komunikačný kanál. Zdrojová práca naznačuje, že mladší pacienti boli digitálnym formám informovania otvorenejší.</p>
 
-<p>Pre nefrológa je dôležité rozlíšiť dve veci: telemedicína ako náhrada klinickej kontroly a digitálne nástroje ako doplnok starostlivosti. Pri peritoneálnej dialýze môže videokonzultácia pomôcť pri administratíve, edukácii, kontrole denníka, úprave predpisu alebo rýchlom riešení otázok. Nenahradí však všetko.</p>
+<p>Treba rozlišovať telemedicínu ako náhradu klinickej kontroly a digitálne nástroje ako doplnok starostlivosti. Pri peritoneálnej dialýze môže videokonzultácia pomôcť pri administratíve, edukácii, kontrole denníka, úprave predpisu alebo rýchlom riešení otázok. Nenahradí však všetko.</p>
 
 <h2>Prečo osobný kontakt zostáva dôležitý</h2>
 
@@ -132,7 +132,7 @@ $articles[] = [
 
 <p>Zelená nefrológia nemá byť samostatný projekt oddelený od kvality starostlivosti. Má byť súčasťou klinického rozhodovania. Pri peritoneálnej dialýze to znamená, že environmentálne opatrenia musia rešpektovať infekčnú bezpečnosť, kontinuitu liečby, schopnosti pacienta, domáce podmienky a dostupnosť podpory.</p>
 
-<p>Najväčší priestor na zlepšenie pravdepodobne nie je v moralizovaní pacienta. Je v systémových opatreniach: lepší dizajn obalov, jednoznačné označenie recyklovateľných komponentov, bezpečné oddelenie zdravotníckeho odpadu, optimalizácia distribúcie a digitálne nástroje, ktoré riešia konkrétnu potrebu.</p>
+<p>Najväčší priestor na zlepšenie pravdepodobne neleží v moralizovaní pacienta, ale v systémových opatreniach: lepší dizajn obalov, jednoznačné označenie recyklovateľných komponentov, bezpečné oddelenie zdravotníckeho odpadu, optimalizácia distribúcie a digitálne nástroje, ktoré riešia konkrétnu potrebu.</p>
 
 <p>Pacient môže byť partnerom udržateľnej PD len vtedy, ak systém nezamieňa partnerstvo za prenesenie zodpovednosti. Úlohou centra je vytvoriť rámec, v ktorom je environmentálne správanie bezpečné, jednoduché a kompatibilné s liečbou.</p>
 
@@ -142,7 +142,7 @@ $articles[] = [
 
 <p>Dotazníkové údaje navyše zachytávajú deklarované správanie a postoje. Tie sa môžu líšiť od reálnej praxe, najmä pri odpade, kde pacient nemusí presne rozlišovať medzi obalom, použitým vakom, kontaminovaným materiálom a lokálnymi pravidlami recyklácie.</p>
 
-<p>Napriek týmto limitom je práca hodnotná. Do diskusie o udržateľnosti prináša hlas pacientov, teda ľudí, ktorí budú environmentálne opatrenia pri domácej dialýze skutočne vykonávať.</p>
+<p>Práca je napriek tomu hodnotná, pretože do diskusie o udržateľnosti prináša hlas pacientov, teda ľudí, ktorí budú environmentálne opatrenia pri domácej dialýze skutočne vykonávať.</p>
 
 <h2>Záver</h2>
 
@@ -150,7 +150,7 @@ $articles[] = [
 
 <p>V logistike pacienti oceňujú stabilitu a väčšinou sú spokojní s mesačným doručovaním materiálu. Pri digitálnej starostlivosti preferujú osobné kontroly, ale to nevylučuje využitie digitálnych informácií a doplnkových nástrojov.</p>
 
-<p>Pre klinickú prax je hlavné posolstvo jednoduché: udržateľná peritoneálna dialýza sa nemá robiť „na pacientoch“, ale spolu s pacientmi. Zelená nefrológia bude úspešná len vtedy, ak zostane bezpečná, praktická a klinicky rozumná.</p>
+<p>Udržateľná peritoneálna dialýza sa nemá robiť „na pacientoch“, ale spolu s pacientmi. Zelená nefrológia bude úspešná len vtedy, ak zostane bezpečná, praktická a klinicky rozumná.</p>
 
 <hr>
 

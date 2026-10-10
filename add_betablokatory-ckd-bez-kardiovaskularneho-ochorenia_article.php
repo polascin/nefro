@@ -31,17 +31,17 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Kórejská kohortová štúdia v Clinical Kidney Journal ukazuje asociáciu betablokátorov s vyššou mortalitou a MACE u pacientov s CKD bez známeho kardiovaskulárneho ochorenia.',
     'content'      => <<<'HTML'
-<figure><a href="img/betablokatory-ckd-bez-kardiovaskularneho-ochorenia.webp" rel="noopener noreferrer" target="_blank"><img src="img/betablokatory-ckd-bez-kardiovaskularneho-ochorenia.webp" alt="Tabletka so štítom svetla mieriacim do prázdna; oblička stojí mimo jeho dosahu a v mieste okraja stmavne" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Bez kardiovaskulárnej indikácie ochrana nemá kam dopadnúť — zostáva len riziko nežiaducich účinkov.</figcaption></figure>
+<figure><a href="img/betablokatory-ckd-bez-kardiovaskularneho-ochorenia.webp" rel="noopener noreferrer" target="_blank"><img src="img/betablokatory-ckd-bez-kardiovaskularneho-ochorenia.webp" alt="Tabletka so štítom svetla mieriacim do prázdna; oblička stojí mimo jeho dosahu a v mieste okraja stmavne" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Bez kardiovaskulárnej indikácie ochrana nemá kam dopadnúť – zostáva len riziko nežiaducich účinkov.</figcaption></figure>
 
 <p>Chronická choroba obličiek (CKD) je významným rizikovým faktorom kardiovaskulárnej morbidity a mortality. Pacienti so zníženou eGFR majú vyššie riziko ischemickej choroby srdca, srdcového zlyhávania, cievnej mozgovej príhody aj náhlej smrti. V klinickej praxi sa preto často používa intenzívna kardiovaskulárna prevencia vrátane antihypertenzívnej liečby.</p>
 
 <p>Betablokátory majú pevné miesto pri viacerých kardiologických indikáciách, najmä po infarkte myokardu, pri srdcovom zlyhávaní so zníženou ejekčnou frakciou, pri niektorých arytmiách a pri symptomatickej ischemickej chorobe srdca. Menej jasná je však ich úloha u pacientov s CKD, ktorí ešte nemajú preukázané kardiovaskulárne ochorenie.</p>
 
-<p>Nová populačná kohortová štúdia publikovaná v <em>Clinical Kidney Journal</em> prináša dôležitý signál: u pacientov s CKD bez predchádzajúceho kardiovaskulárneho ochorenia bolo užívanie betablokátorov spojené s vyššou mortalitou a vyšším rizikom veľkých kardiovaskulárnych príhod. Tento výsledok treba interpretovať opatrne, pretože ide o observačnú štúdiu. Napriek tomu je klinicky významný a podporuje potrebu presnejšej indikácie betablokátorov v nefrologickej populácii.</p>
+<p>Nová populačná kohortová štúdia publikovaná v <em>Clinical Kidney Journal</em> prináša dôležitý signál: u pacientov s CKD bez predchádzajúceho kardiovaskulárneho ochorenia bolo užívanie betablokátorov spojené s vyššou mortalitou a vyšším rizikom veľkých kardiovaskulárnych príhod. Ide o observačnú štúdiu, preto ju treba interpretovať opatrne. Signál je napriek tomu klinicky významný a podporuje potrebu presnejšej indikácie betablokátorov v nefrologickej populácii.</p>
 
 <h2>Prečo je táto otázka dôležitá</h2>
 
-<p>Pacienti s CKD majú často arteriálnu hypertenziu, sympatikovú aktiváciu, hypertrofiu ľavej komory, metabolické poruchy a vysoké bazálne kardiovaskulárne riziko. Betablokátory sa preto môžu zdať ako logická preventívna voľba.</p>
+<p>Pacienti s CKD majú často arteriálnu hypertenziu, sympatikovú aktiváciu, hypertrofiu ľavej komory, metabolické poruchy a vysoké bazálne kardiovaskulárne riziko. Betablokátory sa preto môžu javiť ako logická preventívna voľba.</p>
 
 <p>Problém je, že účinnosť lieku závisí od indikácie. To, čo je prospešné po infarkte myokardu alebo pri systolickom srdcovom zlyhávaní, nemusí automaticky prinášať benefit pri primárnej prevencii u pacienta s CKD bez známeho kardiovaskulárneho ochorenia.</p>
 
@@ -94,7 +94,7 @@ $articles[] = [
 
 <h2>Ako tieto výsledky interpretovať</h2>
 
-<p>Výsledky neznamenajú, že betablokátory sú všeobecne škodlivé u všetkých pacientov s CKD. Taká interpretácia by bola nesprávna.</p>
+<p>Výsledky neznamenajú, že betablokátory sú škodlivé u všetkých pacientov s CKD.</p>
 
 <p>Štúdia sa týkala špecifickej skupiny pacientov: osôb s CKD bez už známeho kardiovaskulárneho ochorenia. Ide teda o otázku používania betablokátorov v populácii, kde indikácia nemusí byť taká pevná ako pri srdcovom zlyhávaní, po infarkte myokardu alebo pri arytmii.</p>
 
@@ -102,7 +102,7 @@ $articles[] = [
 
 <h2>Možné vysvetlenia nepriaznivej asociácie</h2>
 
-<p>Existuje viacero možných mechanizmov alebo vysvetlení, prečo mohli mať používatelia betablokátorov horšie výsledky.</p>
+<p>Horšie výsledky používateľov betablokátorov môže vysvetľovať viacero mechanizmov.</p>
 
 <p>Prvým je <strong>confounding by indication</strong>, teda skreslenie podľa indikácie. Pacienti liečení betablokátormi mohli byť rizikovejší už pred začatím liečby, aj keď nemali formálne diagnostikované kardiovaskulárne ochorenie.</p>
 
@@ -124,7 +124,7 @@ $articles[] = [
 
 <h2>Karvedilol a rozdiely medzi betablokátormi</h2>
 
-<p>Štúdia uvádza vyššie riziko nepriaznivých príhod pri karvedilole v porovnaní s inými betablokátormi. Tento nález je zaujímavý, ale treba ho interpretovať opatrne.</p>
+<p>Štúdia uvádza vyššie riziko nepriaznivých príhod pri karvedilole v porovnaní s inými betablokátormi. Aj tento nález treba interpretovať opatrne.</p>
 
 <p>Karvedilol sa často používa u pacientov so srdcovým zlyhávaním, hypertrofiou ľavej komory, horším tlakovým profilom alebo vyšším kardiometabolickým rizikom. Preto aj tento výsledok môže byť ovplyvnený klinickým výberom pacientov.</p>
 
@@ -145,11 +145,11 @@ $articles[] = [
   <li>potrebu kontroly srdcovej frekvencie.</li>
 </ul>
 
-<p>Naopak, pri nekomplikovanej hypertenzii u pacienta s CKD bez kardiovaskulárneho ochorenia nebývajú betablokátory zvyčajne prvou voľbou. V mnohých prípadoch majú prioritu inhibítory RAAS, blokátory kalciových kanálov, diuretiká podľa objemového stavu a ďalšie lieky podľa albuminúrie, eGFR, kaliémie a tolerancie.</p>
+<p>Naopak, pri nekomplikovanej hypertenzii u pacienta s CKD bez kardiovaskulárneho ochorenia nie sú betablokátory zvyčajne prvou voľbou. V mnohých prípadoch majú prioritu inhibítory RAAS, blokátory kalciových kanálov, diuretiká podľa objemového stavu a ďalšie lieky podľa albuminúrie, eGFR, kaliémie a tolerancie.</p>
 
 <h2>Čo má lekár pri betablokátore skontrolovať</h2>
 
-<p>Ak pacient s CKD užíva betablokátor, nie je správne ho bezhlavo vysadiť. Dôležité je najprv overiť dôvod liečby.</p>
+<p>Ak pacient s CKD užíva betablokátor, nemá sa bezhlavo vysadiť. Najprv treba overiť dôvod liečby.</p>
 
 <p>V praxi je vhodné skontrolovať:</p>
 
@@ -181,11 +181,11 @@ $articles[] = [
 
 <p>Štúdia tiež neodpovedá na otázku, či konkrétny betablokátor pri presne definovanej indikácii zlepšuje alebo zhoršuje prognózu. Nejde o randomizovanú klinickú štúdiu a výsledky nemožno automaticky preniesť na všetky populácie mimo kórejského zdravotného systému.</p>
 
-<p>Dôležité je aj to, že pacienti bez etablovaného kardiovaskulárneho ochorenia mohli mať nediagnostikované subklinické ochorenie, ktoré ovplyvnilo predpis betablokátora aj výsledky.</p>
+<p>Pacienti bez etablovaného kardiovaskulárneho ochorenia navyše mohli mať nediagnostikované subklinické ochorenie, ktoré ovplyvnilo predpis betablokátora aj výsledky.</p>
 
 <h2>Klinické odporúčanie z pohľadu nefrológa</h2>
 
-<p>Najrozumnejší záver je opatrný a praktický. U pacientov s CKD bez jasného kardiovaskulárneho ochorenia treba betablokátory používať selektívne, nie rutinne.</p>
+<p>U pacientov s CKD bez jasného kardiovaskulárneho ochorenia treba betablokátory používať selektívne, nie rutinne.</p>
 
 <p>Liečba má byť individualizovaná podľa:</p>
 

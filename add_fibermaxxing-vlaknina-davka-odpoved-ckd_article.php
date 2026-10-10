@@ -28,9 +28,9 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Najväčšie zníženie rizika sa v rozsiahlom prehľade pozorovalo pri 25 – 29 g vlákniny denne. Kľúčová veta pre nefrológiu je však iná: tieto zistenia sa výslovne netýkajú ľudí s chronickým ochorením.',
     'content'      => <<<'HTML'
-<figure><a href="img/fibermaxxing-vlaknina-davka-odpoved-ckd.webp" rel="noopener noreferrer" target="_blank"><img src="img/fibermaxxing-vlaknina-davka-odpoved-ckd.webp" alt="Rastúca kopa vlákniny a nad ňou svetelná krivka, ktorá po strmom vzostupe prechádza do rovného plateau" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Prvé navýšenie vlákniny prinesie najviac; ďalšie pridávanie už krivku nedvíha — a pri CKD môže pridať iné problémy.</figcaption></figure>
+<figure><a href="img/fibermaxxing-vlaknina-davka-odpoved-ckd.webp" rel="noopener noreferrer" target="_blank"><img src="img/fibermaxxing-vlaknina-davka-odpoved-ckd.webp" alt="Rastúca kopa vlákniny a nad ňou svetelná krivka, ktorá po strmom vzostupe prechádza do rovného plateau" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Prvé navýšenie vlákniny prinesie najviac; ďalšie pridávanie už krivku nedvíha – a pri CKD môže pridať iné problémy.</figcaption></figure>
 
-<p>Online trend označovaný ako „fibermaxxing“ vychádza z jednoduchej premisy: vláknina je zdravá, teda čím viac, tým lepšie. Prvá časť tejto premisy je dobre doložená. Druhá časť je problematická — a pri pacientovi s chronickou chorobou obličiek (CKD) je problematická dvojnásobne, pretože dôkazová základňa, o ktorú sa trend opiera, ľudí s chronickým ochorením výslovne nezahŕňa.</p>
+<p>Online trend označovaný ako „fibermaxxing“ vychádza z jednoduchej premisy: vláknina je zdravá, teda čím viac, tým lepšie. Prvá časť tejto premisy je dobre doložená. Druhá časť je problematická – a pri pacientovi s chronickou chorobou obličiek (CKD) je problematická dvojnásobne, pretože dôkazová základňa, o ktorú sa trend opiera, ľudí s chronickým ochorením výslovne nezahŕňa.</p>
 
 <h2>Čo dôkazy skutočne ukazujú</h2>
 
@@ -59,7 +59,7 @@ $articles[] = [
       </tr>
       <tr>
         <th scope="row">Kvalita dôkazov</th>
-        <td>Podľa prístupu GRADE hodnotená pre vlákninu ako <strong>stredná</strong>.</td>
+        <td>Podľa prístupu GRADE <strong>stredná</strong>.</td>
       </tr>
     </tbody>
   </table>
@@ -69,19 +69,19 @@ $articles[] = [
 
 <h2>Prvá korekcia: „plateau“ nie je celkom presné slovo</h2>
 
-<p>Populárne prehľady z pásma 25 – 29 g/deň často vyvodzujú, že nad touto hranicou už úžitok nepribúda. Prehľad v <em>Lancete</em> však uvádza niečo odlišnejšie: krivky dávky a odpovede naznačovali, že <strong>vyšší príjem vlákniny by mohol prinášať ešte väčší úžitok</strong> v ochrane pred kardiovaskulárnymi ochoreniami, diabetom 2. typu a kolorektálnym a prsníkovým karcinómom.</p>
+<p>Populárne prehľady z pásma 25 – 29 g/deň často vyvodzujú, že nad touto hranicou už úžitok nepribúda. Prehľad v <em>Lancete</em> však uvádza niečo iné: krivky dávky a odpovede naznačovali, že <strong>vyšší príjem vlákniny by mohol prinášať ešte väčší úžitok</strong> v ochrane pred kardiovaskulárnymi ochoreniami, diabetom 2. typu a kolorektálnym a prsníkovým karcinómom.</p>
 
-<p>Presnejšie znenie teda je: pásmo 25 – 29 g/deň je úroveň, pri ktorej bolo zníženie rizika naprieč viacerými ukazovateľmi najkonzistentnejšie doložené — nie strop, za ktorým úžitok končí. Argument proti extrémnym dávkam preto nestojí na tom, že by boli zbytočné, ale na znášanlivosti, na chýbajúcich dôkazoch pre veľmi vysoké dávky z doplnkov a na tom, komu sa dôkazy vôbec týkajú.</p>
+<p>Presnejšie znenie teda je: pásmo 25 – 29 g/deň je úroveň, pri ktorej bolo zníženie rizika naprieč viacerými ukazovateľmi najkonzistentnejšie doložené – nie strop, za ktorým úžitok končí. Argument proti extrémnym dávkam preto nestojí na tom, že by boli zbytočné, ale na znášanlivosti, na chýbajúcich dôkazoch pre veľmi vysoké dávky z doplnkov a na tom, komu sa dôkazy vôbec týkajú.</p>
 
 <h2>Druhá korekcia, pre nefrológiu podstatnejšia: koho sa dôkazy týkajú</h2>
 
 <p>Autori prehľadu v <em>Lancete</em> uvádzajú výslovné obmedzenie: <strong>zistenia sa vzťahujú na zníženie rizika v bežnej populácii, nie u osôb s chronickým ochorením</strong>. Prospektívne štúdie aj skúšania s účastníkmi s chronickým ochorením boli z analýzy vylúčené.</p>
 
-<p>To má priamy dôsledok. Pacient s CKD, ktorý si prečíta odporúčanie „25 – 29 g denne, pokojne aj viac“, čerpá z dôkazovej základne, ktorá ho nezahŕňala. Neznamená to, že vláknina je pri CKD škodlivá — existuje dobrý mechanistický dôvod pre opak. Znamená to, že prenos číselného cieľa aj očakávanej veľkosti úžitku je extrapoláciou, a že o zdroji vlákniny treba pri CKD rozhodovať inak než v bežnej populácii.</p>
+<p>To má priamy dôsledok. Pacient s CKD, ktorý si prečíta odporúčanie „25 – 29 g denne, pokojne aj viac“, čerpá z dôkazovej základne, ktorá ho nezahŕňala. Neznamená to, že vláknina je pri CKD škodlivá – existuje dobrý mechanistický dôvod pre opak. Znamená to, že prenos číselného cieľa aj očakávanej veľkosti úžitku je extrapoláciou, a že o zdroji vlákniny treba pri CKD rozhodovať inak než v bežnej populácii.</p>
 
 <h2>Prečo je vláknina pri CKD napriek tomu zaujímavá</h2>
 
-<p>Nefrologický dôvod záujmu o vlákninu nie je kardiovaskulárny, ale mikrobiálny. Pri CKD sa mení zloženie črevnej mikrobioty a posilňuje sa <strong>proteolytická fermentácia</strong>, pri ktorej vznikajú prekurzory uremických toxínov viazaných na bielkoviny — indoxylsulfát a p-krezylsulfát. Fermentovateľná vláknina posúva rovnováhu smerom k sacharolytickej fermentácii a produkcii mastných kyselín s krátkym reťazcom. Ide o biologicky vierohodný mechanizmus, nie o dokázaný klinický prínos: štúdie s tvrdými obličkovými ukazovateľmi chýbajú.</p>
+<p>Nefrologický dôvod záujmu o vlákninu nie je kardiovaskulárny, ale mikrobiálny. Pri CKD sa mení zloženie črevnej mikrobioty a posilňuje sa <strong>proteolytická fermentácia</strong>, pri ktorej vznikajú prekurzory uremických toxínov viazaných na bielkoviny – indoxylsulfát a p-krezylsulfát. Fermentovateľná vláknina posúva rovnováhu smerom k sacharolytickej fermentácii a produkcii mastných kyselín s krátkym reťazcom. Ide o biologicky vierohodný mechanizmus, nie o dokázaný klinický prínos: štúdie s tvrdými obličkovými ukazovateľmi chýbajú.</p>
 
 <h2>Praktický výber zdroja vlákniny pri CKD</h2>
 
@@ -90,11 +90,11 @@ $articles[] = [
 <ul>
   <li><strong>Draslík.</strong> Strukoviny, orechy, zemiaky, sušené ovocie a niektoré celozrnné výrobky patria k významným zdrojom draslíka. Pri CKD s hyperkaliémiou alebo pri liečbe blokátorom systému renín-angiotenzín treba výber prispôsobiť aktuálnej kaliémii, nie ho plošne zakázať.</li>
   <li><strong>Fosfor.</strong> Fosfor viazaný vo fytáte v celozrnných výrobkoch a strukovinách sa vstrebáva podstatne horšie než fosforečnanové aditíva v spracovaných potravinách. Z pohľadu fosfátovej záťaže je preto prirodzený zdroj vlákniny spravidla výhodnejší než „obohatený“ výrobok.</li>
-  <li><strong>Tekutiny.</strong> Objemotvorná vláknina vrátane psyllia vyžaduje dostatočný príjem tekutín. Pri obmedzení príjmu tekutín — najmä u dialyzovaného pacienta — môže jej zvýšenie zápchu naopak zhoršiť.</li>
-  <li><strong>Znášanlivosť.</strong> Nadúvanie a bolesti brucha sú časté najmä pri náhlom zvýšení dávky a pri niektorých typoch vlákniny. Postupné zvyšovanie po malých krokoch je znášané lepšie než skoková zmena.</li>
+  <li><strong>Tekutiny.</strong> Objemotvorná vláknina vrátane psyllia vyžaduje dostatočný príjem tekutín. Pri obmedzení príjmu tekutín – najmä u dialyzovaného pacienta – môže jej zvýšenie zápchu naopak zhoršiť.</li>
+  <li><strong>Znášanlivosť.</strong> Nadúvanie a bolesti brucha sú časté najmä pri náhlom zvýšení dávky a pri niektorých typoch vlákniny. Postupné zvyšovanie po malých krokoch sa znáša lepšie než skoková zmena.</li>
 </ul>
 
-<p>K často spomínanému vplyvu fytátov na vstrebávanie železa, zinku a vápnika: ide o reálny, no spravidla mierny efekt pri bežnom príjme. Klinicky významným sa stáva skôr pri veľmi vysokom príjme v kombinácii s hraničným nutričným stavom — čo je situácia, ktorá u pacienta s pokročilou CKD nastať môže.</p>
+<p>K často spomínanému vplyvu fytátov na vstrebávanie železa, zinku a vápnika: ide o reálny, no spravidla mierny efekt pri bežnom príjme. Klinicky významným sa stáva skôr pri veľmi vysokom príjme v kombinácii s hraničným nutričným stavom – čo je situácia, ktorá u pacienta s pokročilou CKD nastať môže.</p>
 
 <h2>Čo o veľmi vysokých dávkach z doplnkov vieme</h2>
 
@@ -102,7 +102,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>Vyšší príjem vlákniny je spojený s nižším rizikom viacerých ochorení a pásmo 25 – 29 g denne je najlepšie doloženou úrovňou. „Fibermaxxing“ však robí dva myšlienkové skoky naraz: zamieňa asociáciu za návod a bežnú populáciu za všetkých. Pri chronickej chorobe obličiek platí odporúčanie v inej podobe — vlákninu áno, prednostne z potravy, s postupným zvyšovaním a s výberom zdroja podľa kaliémie, fosfatémie a povoleného príjmu tekutín.</p>
+<p>Vyšší príjem vlákniny je spojený s nižším rizikom viacerých ochorení a pásmo 25 – 29 g denne je najlepšie doloženou úrovňou. „Fibermaxxing“ však robí dva myšlienkové skoky naraz: zamieňa asociáciu za návod a bežnú populáciu za všetkých. Pri chronickej chorobe obličiek platí odporúčanie v inej podobe – vlákninu áno, prednostne z potravy, s postupným zvyšovaním a s výberom zdroja podľa kaliémie, fosfatémie a povoleného príjmu tekutín.</p>
 
 <h2>Súvisiace články</h2>
 
@@ -119,13 +119,13 @@ $articles[] = [
 
 <h2>Odborné zdroje</h2>
 
-<p id="odborny-zdroj-1"><small><em><strong>1. Východiskový materiál:</strong> Medscape. What Is Fibermaxxing — and Is More Fiber Always Better? 2026. Východiskový materiál; číselné údaje a závery boli overené podľa primárnych publikácií uvedených nižšie.</em></small></p>
+<p id="odborny-zdroj-1"><small><em><strong>1. Východiskový materiál:</strong> Medscape. What Is Fibermaxxing – and Is More Fiber Always Better? 2026. Východiskový materiál; číselné údaje a závery boli overené podľa primárnych publikácií uvedených nižšie.</em></small></p>
 
 <p id="odborny-zdroj-2"><small><em><strong>2. Dávka a odpoveď, séria prehľadov:</strong> Reynolds A, Mann J, Cummings J, Winter N, Mete E, Te Morenga L. Carbohydrate quality and human health: a series of systematic reviews and meta-analyses. <em>Lancet</em>. 2019;393(10170):434–445. doi: <a href="https://doi.org/10.1016/S0140-6736(18)31809-9" target="_blank" rel="noopener noreferrer">10.1016/S0140-6736(18)31809-9</a>. PMID 30638909. <a href="https://pubmed.ncbi.nlm.nih.gov/30638909/" target="_blank" rel="noopener noreferrer">PubMed</a>. Zdroj údajov o pásme 25 – 29 g/deň, o znížení rizika o 15 – 30 %, o tvare krivky dávky a odpovede aj o obmedzení platnosti na bežnú populáciu.</em></small></p>
 
 <p id="odborny-zdroj-3"><small><em><strong>3. Kardiovaskulárny ukazovateľ:</strong> Threapleton DE, Greenwood DC, Evans CEL, Cleghorn CL, Nykjaer C, Woodhead C, Cade JE, Gale CP, Burley VJ. Dietary fibre intake and risk of cardiovascular disease: systematic review and meta-analysis. <em>BMJ</em>. 2013;347:f6879. doi: <a href="https://doi.org/10.1136/bmj.f6879" target="_blank" rel="noopener noreferrer">10.1136/bmj.f6879</a>. PMID 24355537, PMCID PMC3898422. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3898422/" target="_blank" rel="noopener noreferrer">Plný text</a>.</em></small></p>
 
-<p><small><em><strong>Poznámka k dôkazovému základu:</strong> Bibliografické údaje, úplné autorské zoznamy a všetky číselné výsledky oboch primárnych prác boli overené 28. augusta 2026 cez PubMed z ich abstraktov. Upozornenie, že prehľad v <em>Lancete</em> vylúčil osoby s chronickým ochorením, a upresnenie tvaru krivky dávky a odpovede nie sú prevzaté z východiskového materiálu; pochádzajú priamo z abstraktu primárnej práce. Odporúčania pre výber zdroja vlákniny pri CKD sú odvodené zo všeobecne známych nutričných súvislostí, nie z uvedených prehľadov — tie pacientov s chronickým ochorením nezahŕňali.</em></small></p>
+<p><small><em><strong>Poznámka k dôkazovému základu:</strong> Bibliografické údaje, úplné autorské zoznamy a všetky číselné výsledky oboch primárnych prác boli overené 28. augusta 2026 cez PubMed z ich abstraktov. Upozornenie, že prehľad v <em>Lancete</em> vylúčil osoby s chronickým ochorením, a upresnenie tvaru krivky dávky a odpovede nie sú prevzaté z východiskového materiálu; pochádzajú priamo z abstraktu primárnej práce. Odporúčania pre výber zdroja vlákniny pri CKD sú odvodené zo všeobecne známych nutričných súvislostí, nie z uvedených prehľadov – tie pacientov s chronickým ochorením nezahŕňali.</em></small></p>
 
 <p><small><em>Text má odborný informačný charakter a nenahrádza individuálne nutričné poradenstvo. Úpravu príjmu vlákniny pri chronickej chorobe obličiek treba prispôsobiť štádiu ochorenia, aktuálnym laboratórnym hodnotám a povolenému príjmu tekutín.</em></small></p>
 HTML,

@@ -20,14 +20,14 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',  // autor projektu; pôvodných autorov zdroja pridaj do source_authors.php (slug → mená)
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt' => 'Vyšší odhadovaný čas so systolickým tlakom 110 až 130 mm Hg sa spájal s priaznivejšou prognózou po hospitalizácii pre srdcové zlyhávanie. Čo výsledok znamená a čo nepreukazuje?',
+    'excerpt' => 'Vyšší odhadovaný čas so systolickým tlakom 110 až 130 mm Hg sa spájal s priaznivejšou prognózou po hospitalizácii pre srdcové zlyhávanie. Nepreukazuje však, že cielené zvyšovanie tohto ukazovateľa zlepší prognózu.',
     'content'      => <<<'HTML'
 <figure><a href="img/cas-tlaku-v-cielovom-pasme-srdcove-zlyhavanie-egfr.webp" rel="noopener noreferrer" target="_blank"><img src="img/cas-tlaku-v-cielovom-pasme-srdcove-zlyhavanie-egfr.webp" alt="Svietiaca krivka prechádzajúca dnu a von zo zeleného cieľového pásma, mimo pásma sa mení na červenú" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna, nie záznam konkrétneho pacienta. Nerozhoduje len hodnota pri jednom meraní, ale podiel času, ktorý tlak strávi v cieľovom pásme.</figcaption></figure>
 
 <p>Vyšší odhadovaný podiel času so systolickým tlakom v pásme 110 až 130 mm Hg sa v čínskej prospektívnej kohorte pacientov po hospitalizácii pre srdcové zlyhávanie spájal s nižšou pravdepodobnosťou poklesu funkcie obličiek a s nižšou dlhodobou mortalitou. Výsledok podporuje záujem o priebeh tlaku v čase, ale nepreukazuje, že cielené zvyšovanie tohto ukazovateľa zlepší prognózu. Pásmo použité vo výskume nemožno automaticky prevziať ako liečebný cieľ. [1]</p>
 
 <h2>Populácia a spôsob hodnotenia tlaku</h2>
-<p>Wang a spoluautori analyzovali multicentrickú prospektívnu kohortu pacientov hospitalizovaných pre srdcové zlyhávanie v 52 nemocniciach v Číne v rokoch 2016 až 2018. Systolický krvný tlak (STK) bol meraný pri návštevách v prvom, šiestom a dvanástom mesiaci po prepustení. Analýza renálneho výsledku zahŕňala 1 529 pacientov a analýza úmrtnosti 2 195 pacientov. Ide o rozdielne analytické súbory, ktoré nemožno zamieňať. [1]</p>
+<p>Wang a spoluautori analyzovali multicentrickú prospektívnu kohortu pacientov hospitalizovaných pre srdcové zlyhávanie v 52 nemocniciach v Číne v rokoch 2016 až 2018. Systolický krvný tlak (STK) sa meral pri návštevách v prvom, šiestom a dvanástom mesiaci po prepustení. Analýza renálneho výsledku zahŕňala 1 529 pacientov a analýza úmrtnosti 2 195 pacientov. Ide o rozdielne analytické súbory, ktoré nemožno zamieňať. [1]</p>
 <p>Čas v cieľovom pásme (<em>time in target range</em>, TTR) vyjadroval odhadovaný podiel času so STK medzi 110 a 130 mm Hg. Autori ho vypočítali lineárnou interpoláciou medzi dostupnými meraniami. Nešlo o kontinuálne monitorovanie tlaku ani o priamy záznam všetkých denných hodnôt. Vyšší TTR preto znamená dlhší <em>odhadovaný</em> čas v zvolenom intervale, nie preukázanú neprítomnosť krátkych epizód hypotenzie alebo hypertenzie. [1]</p>
 <p>Pri lineárnej interpolácii sa predpokladá postupná priamočiara zmena medzi dvoma meraniami. Tento predpoklad je výpočtovým zjednodušením: skutočný tlak môže medzi návštevami kolísať inak. TTR zároveň nie je totožný s variabilitou tlaku. Stabilná hodnota mimo zvoleného pásma môže viesť k nízkemu TTR, hoci je variabilita malá. Ide o metodické vysvetlenie ukazovateľa, nie o ďalší výsledok štúdie.</p>
 
@@ -54,7 +54,7 @@ $articles[] = [
 <ul>
 <li><strong>Observačný dizajn:</strong> pacienti neboli randomizovaní na stratégie zvyšujúce TTR. Lepší priebeh tlaku môže odrážať menej závažné srdcové zlyhávanie, lepšiu adherenciu alebo iné priaznivé charakteristiky. Úprava na dostupné premenné nevylučuje zvyškové skreslenie.</li>
 <li><strong>Riedke merania:</strong> tri návštevy počas prvého roka nemôžu spoľahlivo zachytiť všetky medziľahlé výkyvy. Presnosť TTR závisí od meraní aj od predpokladu lineárneho priebehu.</li>
-<li><strong>Prekrývanie hodnotených období:</strong> TTR a zmena eGFR boli hodnotené počas prvého roka. Renálny výsledok preto nemožno prezentovať ako predpoveď udalostí, ktoré sa všetky odohrali až po dokončení merania TTR. Vzťah môže byť obojstranný.</li>
+<li><strong>Prekrývanie hodnotených období:</strong> TTR aj zmena eGFR sa hodnotili počas prvého roka. Renálny výsledok preto nemožno prezentovať ako predpoveď udalostí, ktoré sa všetky odohrali až po dokončení merania TTR. Vzťah môže byť obojstranný.</li>
 <li><strong>Výber pacientov a chýbajúce údaje:</strong> rozdielne počty v oboch analýzach upozorňujú na dostupnosť odlišných údajov. Bez plného textu nemožno presne zhodnotiť vplyv vylúčení, strát zo sledovania ani spôsob časového ukotvenia mortalitnej analýzy.</li>
 <li><strong>Bez overeného rozhodovacieho prahu:</strong> samotný abstrakt neposkytuje validovanú hranicu TTR, podľa ktorej by sa mala meniť liečba. Rozdelenie do tercilov nevytvára univerzálny klinický prah.</li>
 </ul>

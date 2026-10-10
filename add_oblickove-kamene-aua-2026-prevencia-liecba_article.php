@@ -56,7 +56,7 @@ $articles[] = [
 
 <p>Rozšírené vyšetrenie je určené rekurentným pacientom a vysokorizikovým alebo motivovaným pacientom po prvej epizóde. Vyššie riziko naznačujú napríklad mnohopočetné alebo obojstranné kamene, nefrokalcinóza, rodinná záťaž, detský alebo mladý vek, solitárna oblička, chronická choroba obličiek, črevná malabsorpcia, primárna hyperoxalúria, cystinúria, urátové, brushitové alebo infekčné kamene a rýchly rast či časté zákroky.</p>
 
-<p>Samotná obezita alebo nízky vek nie sú automaticky jediným kritériom. Rozhoduje súhrn klinického rizika, kamenná aktivita a to, či výsledok vyšetrenia zmení liečbu.</p>
+<p>Obezita alebo nízky vek samy osebe ešte automaticky neznamenajú indikáciu na rozšírené vyšetrenie. Rozhoduje súhrn klinického rizika, kamenná aktivita a to, či výsledok vyšetrenia zmení liečbu.</p>
 
 <h2>24-hodinový moč: čo merať a ako ho interpretovať</h2>
 
@@ -68,7 +68,7 @@ $articles[] = [
   <li>sodík, draslík a kreatinín.</li>
 </ul>
 
-<p>Laboratórium môže doplniť močovinu, síran, fosfát, horčík a výpočet presýtenia podľa lokálneho protokolu, nejde však o povinné minimum pôvodného jadrového panelu. Kreatinín a klinický kontext pomáhajú posúdiť úplnosť zberu. Výsledok má byť interpretovaný spolu so zložením kameňa, stravou, liekmi, telesnou veľkosťou a funkciou obličiek.</p>
+<p>Laboratórium môže doplniť močovinu, síran, fosfát, horčík a výpočet presýtenia podľa lokálneho protokolu, nejde však o povinné minimum pôvodného jadrového panelu. Kreatinín a klinický kontext pomáhajú posúdiť úplnosť zberu. Výsledok treba interpretovať spolu so zložením kameňa, stravou, liekmi, telesnou veľkosťou a funkciou obličiek.</p>
 
 <h2>Hydratácia: cieľom je moč, nie počet pohárov</h2>
 

@@ -31,11 +31,11 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Výsledky viacerých veľkých štúdií (FIND-CKD, analýza pre glomerulové ochorenia v JAMA a súhrnná analýza v The Lancet) naznačujú, že finerenón spomaľuje progresiu CKD a znižuje kardiovaskulárne riziko aj bez diabetu — pri disciplinovanom monitorovaní draslíka.',
+    'excerpt'      => 'Výsledky viacerých veľkých štúdií (FIND-CKD, analýza pre glomerulové ochorenia v JAMA a súhrnná analýza v The Lancet) naznačujú, že finerenón spomaľuje progresiu CKD a znižuje kardiovaskulárne riziko aj bez diabetu – pri disciplinovanom monitorovaní draslíka.',
     'content'      => <<<'HTML'
 <figure><a href="img/finerenon-zakladna-liecba-ckd-glomerularne-ochorenia.webp" rel="noopener noreferrer" target="_blank"><img src="img/finerenon-zakladna-liecba-ckd-glomerularne-ochorenia.webp" alt="Molekula ako základný kameň pod obličkou, ktorej svetlo rovnomerne presvetľuje oba glomeruly" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Ak účinok nezávisí od diabetu, posúva sa liek z doplnku smerom k základnej liečbe.</figcaption></figure>
 
-<p>Portál ScienceDaily prináša zhrnutie výsledkov z viacerých veľkých štúdií, v ktorých <strong>finerenón</strong> spomaľoval zhoršovanie funkcie obličiek a znižoval aj kardiovaskulárne riziko. Prínosy sa pozorovali nielen u pacientov s diabetom, ale aj pri <strong>nediabetickom CKD</strong> a v skupinách s <strong>glomerulovými ochoreniami</strong>.</p>
+<p>Portál ScienceDaily zhrnul výsledky viacerých veľkých štúdií, v ktorých <strong>finerenón</strong> spomaľoval zhoršovanie funkcie obličiek a znižoval aj kardiovaskulárne riziko. Prínosy sa pozorovali nielen u pacientov s diabetom, ale aj pri <strong>nediabetickom CKD</strong> a v skupinách s <strong>glomerulovými ochoreniami</strong>.</p>
 
 <h2>Kľúčové štúdie a výsledky</h2>
 
@@ -71,21 +71,21 @@ $articles[] = [
 
 <h2>Bezpečnosť (draslík)</h2>
 
-<p>Finerenón bol vo všeobecnosti <strong>dobre tolerovaný</strong>, no <strong>hyperkaliémia</strong> sa vyskytovala častejšie než pri placebe. Ukončenie liečby ani hospitalizácie pre hyperkaliémiu sa však uvádzajú ako <strong>nečasté</strong>.</p>
+<p>Finerenón bol vo všeobecnosti <strong>dobre tolerovaný</strong>, no <strong>hyperkaliémia</strong> sa vyskytovala častejšie než pri placebe. Ukončenie liečby pre hyperkaliémiu a hospitalizácie z tohto dôvodu však boli podľa zdroja <strong>nečasté</strong>.</p>
 
-<p>V praxi to znamená, že aj pri širšom uvažovaní o indikácii treba dodržiavať disciplinované monitorovanie draslíka a renálnych parametrov.</p>
+<p>Aj pri širšej indikácii preto treba draslík a renálne parametre sledovať disciplinovane.</p>
 
 <h2>Praktické ponaučenie</h2>
 
-<p>Tento zdroj podporuje myšlienku, že finerenón by mohol byť relevantný ako pevnejší pilier liečby CKD aj u pacientov, ktorí:</p>
+<p>Podľa týchto výsledkov by finerenón mohol mať pevnejšie miesto v liečbe CKD aj u pacientov, ktorí:</p>
 
 <ul>
   <li><strong>nemajú diabetes</strong>,</li>
-  <li>patria k <strong>glomerulárnym</strong> fenotypom,</li>
+  <li>patria ku <strong>glomerulovým</strong> fenotypom,</li>
   <li>a zároveň majú <strong>klinicky významný renálny rizikový profil</strong>, pri ktorom možno očakávať prínos aj na albuminúrii a klinických cieľových ukazovateľoch.</li>
 </ul>
 
-<p>Zároveň si zachovajme realistickú zdržanlivosť: ide o výsledky zhrnuté v populárno-vedeckom článku, nie o úplné protokoly a štatistické detaily v jednej tabuľke. Pre webový článok ich stačí uviesť ako „výsledky viacerých štúdií s konzistentným smerovaním“, no pri zavádzaní u konkrétnych pacientov je rozumné riadiť sa lokálnymi odporúčaniami a schémou monitorovania draslíka.</p>
+<p>Treba však zostať zdržanliví: výsledky pochádzajú z populárno-vedeckého súhrnu, nie z úplných protokolov so štatistickými detailmi. Možno ich chápať ako výsledky viacerých štúdií s konzistentným smerom; pri nasadzovaní u konkrétnych pacientov je rozumné riadiť sa lokálnymi odporúčaniami a schémou monitorovania draslíka.</p>
 
 <hr>
 

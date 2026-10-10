@@ -31,7 +31,7 @@ $articles[] = [
     'content'      => <<<'HTML'
 <figure><a href="img/zelatinove-koloidy-gelofusine-intradialyzacna-hypotenzia.webp" rel="noopener noreferrer" target="_blank"><img src="img/zelatinove-koloidy-gelofusine-intradialyzacna-hypotenzia.webp" alt="Koloidné častice unikajú cez stenu kapiláry do interstícia, v pozadí varovný červený záblesk – koloid v cievach nezostáva" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Predstava koloidu, ktorý zostáva v cievnom riečisku, je pri želatíne nepresná: podstatná časť podanej dávky prechádza do intersticiálneho priestoru.</figcaption></figure>
 
-<p>Gelofusine je infúzny roztok modifikovanej želatíny používaný na náhradu objemu plazmy. Pri intradialyzačnej hypotenzii (IDH) môže vzniknúť úvaha o jeho podaní ako o objemovej podpore. Z fyzikálnych vlastností koloidu však nemožno automaticky odvodiť lepšiu klinickú účinnosť, menšiu celkovú tekutinovú záťaž ani priaznivejšiu bezpečnosť oproti izotonickému kryštaloidu.</p>
+<p>Gelofusine je infúzny roztok modifikovanej želatíny používaný na náhradu objemu plazmy. Pri intradialyzačnej hypotenzii (IDH) sa niekedy zvažuje ako objemová podpora. Z fyzikálnych vlastností koloidu však nemožno automaticky odvodiť lepšiu klinickú účinnosť, menšiu celkovú tekutinovú záťaž ani priaznivejšiu bezpečnosť oproti izotonickému kryštaloidu.</p>
 
 <p>Dostupné údaje hovoria skôr opačne. Metaanalýza 60 štúdií zistila, že 17 až 31 % podanej želatíny sa zachytáva mimo cievneho riečiska, že priemerný pomer potrebného objemu kryštaloidu ku koloidu je len 1,4 a že riziko anafylaxie je približne trojnásobné. V jedinej dohľadanej štúdii u pacientov s refraktérnou dialyzačnou hypotenziou zlepšila 4 % želatína systolický tlak u 2 z 10 pacientov, zatiaľ čo 20 % albumín u šiestich. Rozhodujúce preto zostáva rozpoznanie príčiny hypotenzie, posúdenie objemového stavu a úprava ultrafiltrácie.</p>
 
@@ -59,7 +59,7 @@ $articles[] = [
 
 <p>Z toho vyplývajú dva praktické závery. Po prvé, úspora objemu oproti kryštaloidu je malá a pri sodíkovej záťaži 154 mmol/l sa takmer celkom stráca. Po druhé, podstatná časť podanej želatíny skončí v interstíciu, odkiaľ sa pri ďalšej ultrafiltrácii odstraňuje pomaly.</p>
 
-<p>Účinok navyše závisí od priepustnosti kapilár, funkcie srdca, východiskového objemového stavu a pokračujúcej ultrafiltrácie. Z jeho zloženia preto nemožno vypočítať univerzálny pomer, v ktorom nahradí kryštaloid u každého dialyzovaného pacienta.</p>
+<p>Účinok navyše závisí od priepustnosti kapilár, funkcie srdca, východiskového objemového stavu a pokračujúcej ultrafiltrácie. Zo zloženia roztoku preto nemožno vypočítať univerzálny pomer, v ktorom nahradí kryštaloid u každého dialyzovaného pacienta.</p>
 
 <p>Rovnako nie je správne tvrdiť, že želatína musí zvyšovať krvný tlak rýchlejšie než 0,9 % roztok NaCl. Bezprostredná odpoveď závisí aj od rýchlosti podania a príčiny hypotenzie, nielen od typu roztoku – a rýchle podanie je pri želatíne práve to, čo registračná dokumentácia pri začatí infúzie neodporúča.</p>
 
@@ -135,7 +135,7 @@ $articles[] = [
 
 <h3>Ako čítať porovnávacie štúdie koloidov</h3>
 
-<p>Na posúdenie akejkoľvek porovnávacej štúdie sú nevyhnutné odpovede na tieto otázky:</p>
+<p>Pri posudzovaní porovnávacej štúdie treba zodpovedať tieto otázky:</p>
 
 <div class="table-responsive" role="region" aria-label="Otázky, ktoré treba zodpovedať pri hodnotení štúdií koloidov pri dialyzačnej hypotenzii" tabindex="0">
 <table>
@@ -170,7 +170,7 @@ $articles[] = [
 </table>
 </div>
 
-<p>Bez týchto rozdielov je tvrdenie, že koloidy, albumín, hypertonický NaCl a fyziologický roztok sú „približne rovnocenné“, príliš široké. Rovnako neopodstatnené je všeobecné tvrdenie o nadradenosti koloidov.</p>
+<p>Bez zohľadnenia týchto rozdielov je tvrdenie, že koloidy, albumín, hypertonický NaCl a fyziologický roztok sú „približne rovnocenné“, príliš široké. Rovnako neopodstatnené je všeobecné tvrdenie o nadradenosti koloidov.</p>
 
 <p>Hypoalbuminémia sama osebe nie je automatickou indikáciou albumínu. Rozhodnutie závisí od klinickej situácie, príčiny nízkej koncentrácie albumínu a cieľa intervencie.</p>
 
@@ -229,7 +229,7 @@ $articles[] = [
 
 <p>Koloid môže zhoršiť kongesciu rovnako ako iná nevhodne indikovaná objemová náhrada. Registračná dokumentácia uvádza <strong>hypervolémiu, hyperhydratáciu a akútne kongestívne zlyhávanie srdca medzi kontraindikáciami</strong> a vyžaduje opatrnosť pri insuficiencii pravej či ľavej komory, hypertenzii a pľúcnom edéme. [3]</p>
 
-<p>Ide o rovnakú štruktúru problému ako pri <a href="article.php?slug=manitol-20-intradialyzacna-hypotenzia-dokazy-bezpecnost">20 % manitole</a> a <a href="article.php?slug=midodrin-intradialyzacna-hypotenzia-ucinok-dokazy-bezpecnost">midodríne</a>: stav, ktorý je u dialyzovaného pacienta častý, je v dokumentácii uvedený ako kontraindikácia. Nejde teda len o použitie mimo schválenej indikácie.</p>
+<p>Problém je rovnaký ako pri <a href="article.php?slug=manitol-20-intradialyzacna-hypotenzia-dokazy-bezpecnost">20 % manitole</a> a <a href="article.php?slug=midodrin-intradialyzacna-hypotenzia-ucinok-dokazy-bezpecnost">midodríne</a>: stav, ktorý je u dialyzovaného pacienta častý, je v dokumentácii uvedený ako kontraindikácia. Nejde teda len o použitie mimo schválenej indikácie.</p>
 
 <p>Menší podaný objem automaticky neznamená menšie hemodynamické riziko. Dôležitá je výsledná zmena intravaskulárneho objemu a schopnosť srdca tento objem zvládnuť.</p>
 
@@ -269,7 +269,7 @@ $articles[] = [
 
 <p>Želatínové koloidy môžu byť predmetom individuálneho rozhodovania o objemovej podpore, ale ich koloidné vlastnosti nepredstavujú dôkaz nadradenosti pri intradialyzačnej hypotenzii. Údaje hovoria skôr opačne: podstatná časť dávky opúšťa cievne riečisko, úspora objemu oproti kryštaloidu je malá, sodíková záťaž je rovnaká ako pri fyziologickom roztoku a riziko anafylaxie je zvýšené.</p>
 
-<p>Želatínu preto nemožno odporučiť ako automatickú záchrannú náhradu po neúčinnosti fyziologického roztoku. Požiadavka podať prvých 20 ml pomaly navyše s predstavou rýchleho záchranného bolusu priamo koliduje.</p>
+<p>Želatínu preto nemožno odporučiť ako automatickú záchrannú náhradu po neúčinnosti fyziologického roztoku. Požiadavka podať prvých 20 ml pomaly je navyše v priamom rozpore s predstavou rýchleho záchranného bolusu.</p>
 
 <p>Základom postupu zostáva rozpoznanie príčiny hypotenzie, prerušenie neprimeranej ultrafiltrácie a opatrná, priebežne prehodnocovaná liečba. Pri opakovaných epizódach má prednosť úprava dialyzačnej stratégie pred opakovaným podávaním objemových náhrad.</p>
 

@@ -26,7 +26,7 @@ $articles[] = [
     'content'      => <<<'HTML'
 <figure><a href="img/pioglitazon-masld-mash-diabetes-ckd.webp" rel="noopener noreferrer" target="_blank"><img src="img/pioglitazon-masld-mash-diabetes-ckd.webp" alt="Váhy v šere, na jednej miske pečeň v teplom zlatom svetle, na druhej srdce a oblička v chladnom modrom svetle" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Pioglitazón zlepšuje histologický nález v pečeni; na druhú misku váh však treba položiť zadržiavanie tekutín a kardiorenálne riziko.</figcaption></figure>
 
-<p class="article-dek"><em>Pioglitazón patrí medzi málo starších antidiabetík s randomizovaným histologickým signálom pri steatohepatitíde. Tento prínos však nemožno zjednodušiť na tvrdenie, že „lieči MASLD“ alebo spoľahlivo zvracia fibrózu. Pri chronickej chorobe obličiek (CKD) navyše rozhoduje jeho schopnosť zadržiavať sodík a vodu, zvyšovať hmotnosť a zhoršiť srdcové zlyhávanie. Správna otázka preto nie je, či je pioglitazón dobrý alebo zlý liek, ale či má konkrétny pacient profil, pri ktorom jeho metabolický a pečeňový prínos preváži nad objemovým a kostným rizikom.</em></p>
+<p class="article-dek"><em>Pioglitazón patrí medzi málo starších antidiabetík s randomizovaným histologickým signálom pri steatohepatitíde. Tento prínos však nemožno zjednodušiť na tvrdenie, že „lieči MASLD“ alebo spoľahlivo zvracia fibrózu. Pri chronickej chorobe obličiek (CKD) navyše rozhoduje jeho schopnosť zadržiavať sodík a vodu, zvyšovať hmotnosť a zhoršiť srdcové zlyhávanie. Rozhoduje preto menej to, či je pioglitazón dobrý alebo zlý liek, a viac to, či má konkrétny pacient profil, pri ktorom jeho metabolický a pečeňový prínos preváži nad objemovým a kostným rizikom.</em></p>
 
 <p>Pioglitazón je tiazolidíndión a agonista receptora PPAR-γ. Zvyšuje citlivosť tukového tkaniva, pečene a kostrového svalstva na inzulín, znižuje lipolýzu a presúva ukladanie lipidov smerom od viscerálneho a ektopického tuku. Práve zlepšenie inzulínovej rezistencie je biologickým dôvodom, prečo môže ovplyvniť diabetes aj metabolicky asociovanú steatohepatitídu (MASH).</p>
 
@@ -106,7 +106,7 @@ $articles[] = [
   <li>zlomeniny vyžadujúce operáciu alebo hospitalizáciu: 5,1 % oproti 3,2 %.</li>
 </ul>
 
-<p>IRIS nepodporuje plošné predpisovanie pioglitazónu každému pacientovi s MASLD. Išlo o špecifickú sekundárnu prevenciu po cerebrovaskulárnej udalosti u ľudí bez diabetu a so selekciou znižujúcou riziko srdcového zlyhávania.</p>
+<p>IRIS nepodporuje plošné predpisovanie pioglitazónu každému pacientovi s MASLD. Išlo o špecifickú sekundárnu prevenciu po cerebrovaskulárnej udalosti u ľudí bez diabetu, pričom výber pacientov znižoval riziko srdcového zlyhávania.</p>
 
 <h2>Prečo je CKD osobitný bezpečnostný kontext</h2>
 
@@ -129,7 +129,7 @@ $articles[] = [
 
 <h3>Zlomeniny</h3>
 
-<p>Riziko zlomenín je konzistentným signálom triedy tiazolidíndiónov. Nie je obmedzené iba na laboratórny pokles kostnej denzity; v IRIS pribudli závažnejšie zlomeniny. Opatrnosť je potrebná pri osteoporóze, predchádzajúcej fragilitnej zlomenine, vysokej pádovej záťaži a u krehkých starších pacientov.</p>
+<p>Riziko zlomenín je konzistentným signálom triedy tiazolidíndiónov. Nie je obmedzené iba na laboratórny pokles kostnej denzity; v IRIS pribudli závažnejšie zlomeniny. Opatrnosť je potrebná pri osteoporóze, predchádzajúcej fragilitnej zlomenine, vysokom riziku pádov a u krehkých starších pacientov.</p>
 
 <h3>Karcinóm močového mechúra</h3>
 
@@ -158,7 +158,7 @@ $articles[] = [
 
 <ul>
   <li><strong>Hmotnosť a edémy:</strong> najmä rýchlu zmenu v prvých týždňoch a po zvýšení dávky.</li>
-  <li><strong>Dýchavicu a príznaky kongescie:</strong> nový ortopnoický alebo námahový symptóm vyžaduje promptné prehodnotenie.</li>
+  <li><strong>Dýchavicu a príznaky kongescie:</strong> novovzniknutá ortopnoe alebo námahová dýchavica si vyžaduje rýchle prehodnotenie.</li>
   <li><strong>Glykémiu a HbA<sub>1c</sub>:</strong> s úpravou inzulínu alebo sulfonylurey podľa potreby.</li>
   <li><strong>Pečeňové testy:</strong> pred liečbou a pri klinickom podozrení na hepatálne poškodenie; normalizácia ALT nie je potvrdením ústupu MASH.</li>
   <li><strong>Kostné riziko:</strong> pády, predchádzajúce zlomeniny a indikáciu denzitometrie.</li>

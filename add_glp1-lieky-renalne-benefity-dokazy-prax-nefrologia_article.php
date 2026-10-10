@@ -30,11 +30,11 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Agonisty GLP-1 už nie sú len diabetologická téma. FLOW, SELECT, analýzy so SGLT2 a signál z SURMOUNT ukazujú renálnu ochranu v randomizovaných dátach – s dôležitými rozdielmi medzi tvrdými endpointmi a biomarkermi.',
     'content'      => <<<'HTML'
-<figure><a href="img/glp1-lieky-renalne-benefity-dokazy-prax-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/glp1-lieky-renalne-benefity-dokazy-prax-nefrologia.webp" alt="Injekčné pero, ktorého lúč mieri priamo na obličku a rozsvecuje jej vnútorné štruktúry" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Ťažisko sa presúva z metabolického účinku na priamu nefroprotekciu — otázkou pre prax zostáva, komu ju ponúknuť.</figcaption></figure>
+<figure><a href="img/glp1-lieky-renalne-benefity-dokazy-prax-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/glp1-lieky-renalne-benefity-dokazy-prax-nefrologia.webp" alt="Injekčné pero, ktorého lúč mieri priamo na obličku a rozsvecuje jej vnútorné štruktúry" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Ťažisko sa presúva z metabolického účinku na priamu nefroprotekciu – otázkou pre prax zostáva, komu ju ponúknuť.</figcaption></figure>
 
-<p class="article-dek"><em>Srdcovocievne a metabolické liečby sa v CKD takmer vždy premietnu do obličiek. Posledné dva roky však priniesli silný signál, že agonisty receptora GLP-1 (a v širšom kontexte aj duálne inkretínové látky) v klinických štúdiách opakovane prinášajú renálnu ochranu – nielen u diabetu 2. typu, ale aj u vybraných populácií bez diabetu.</em></p>
+<p class="article-dek"><em>Srdcovocievne a metabolické liečby sa v CKD takmer vždy premietnu do obličiek. Posledné dva roky však priniesli silný signál, že agonisty receptora GLP-1 (a v širšom kontexte aj duálne inkretínové látky) v klinických štúdiách opakovane chránia obličky – nielen pri diabete 2. typu, ale aj u vybraných populácií bez diabetu.</em></p>
 
-<p>V komentári na Medscape nefrológ Kashif J. Piracha upozorňuje, že väčšina lekárov stále zaradzuje agonisty GLP-1 do kategórie „diabetologických“ alebo „obezitologických“ liekov. Randomizované dáta z posledných 24 mesiacov však podporujú iný klinický rámec: pri vhodných pacientoch ide o lieky s preukázaným renálnym prínosom, ktoré sa v CKD manažmente majú uvažovať popri blokáde renínovo-angiotenzínového systému (RAS) a inhibítoroch SGLT2.</p>
+<p>V komentári na Medscape nefrológ Kashif J. Piracha upozorňuje, že väčšina lekárov stále zaraďuje agonisty GLP-1 do kategórie „diabetologických“ alebo „obezitologických“ liekov. Randomizované dáta z posledných 24 mesiacov však podporujú iný klinický rámec: pri vhodných pacientoch ide o lieky s preukázaným renálnym prínosom, o ktorých treba v liečbe CKD uvažovať popri blokáde renínovo-angiotenzínového systému (RAS) a inhibítoroch SGLT2.</p>
 
 <p>Nižšie zhrnieme štyri kľúčové klinické scenáre, navrhnuté mechanizmy a praktické body pre ambulanciu. Dôraz je na presných formuláciách: randomizovaný dôkaz nie je to isté ako kauzalita v reálnom svete a pokles UACR nie je ekvivalentom tvrdého renálneho endpointu.</p>
 
@@ -44,14 +44,14 @@ $articles[] = [
 
 <p>Pre nefrológiu je dôležité, že signál nie je obmedzený na jediný fenotyp. Objavuje sa u pacientov s diabetom 2. typu a CKD, u osôb s nadváhou alebo obezitou a etablovaným kardiovaskulárnym ochorením bez diabetu, pri súbežnej liečbe inhibítorom SGLT2 aj – s inou silou dôkazu – ako zmena albuminúrie u populácií bez východiskovej CKD. To mení načasovanie a prioritu rozhodnutia: u vhodného pacienta už nie je rozumné pasívne čakať, kým glykémia „dopadne“ na endokrinológa.</p>
 
-<h2>Čo znamená „CKD framing“ agonistov GLP-1</h2>
+<h2>Čo znamená zaradiť agonisty GLP-1 do liečby CKD</h2>
 
-<p>Pointa nie je slogan „GLP-1 sú obličkové lieky“. Presnejšie formulácie sú:</p>
+<p>Nejde o slogan „GLP-1 sú obličkové lieky“. Presnejšie formulácie sú:</p>
 
 <ul>
   <li>agonisty GLP-1 v randomizovaných štúdiách prinášajú renálnu ochranu v presne definovaných populáciách,</li>
   <li>účinky na obličky sú podložené tvrdými endpointmi alebo – v iných scenároch – biomarkermi,</li>
-  <li>nejde o dôkaz univerzálnej kauzality v každej ambulantnej populácii, ale o robustnú evidenciu z klinických skúšaní.</li>
+  <li>nejde o dôkaz univerzálnej kauzality v každej ambulantnej populácii, ale o robustné dôkazy z klinických skúšaní.</li>
 </ul>
 
 <p>Ak agonista GLP-1 znižuje tvrdé renálne endpointy alebo spomaľuje pokles eGFR v randomizovaných štúdiách, má v klinickom rozhodovaní miesto nielen „na cukor“ alebo „na váhu“, ale aj v stratégii nefroprotekcie – vždy v rámci schválenej indikácie, tolerancie a ostatných pilierov liečby CKD.</p>
@@ -107,23 +107,23 @@ $articles[] = [
 
 <p>Štúdia SELECT skúmala semaglutid 2,4 mg u osôb s nadváhou alebo obezitou a etablovaným kardiovaskulárnym ochorením bez diabetu. Predšpecifikovaná renálna analýza ukázala nižší výskyt hlavného obličkového kompozitu (1,8 % vs 2,2 %; HR 0,78; 95 % CI 0,63–0,96). Po 104 týždňoch bol rozdiel eGFR v prospech semaglutidu 0,75 ml/min/1,73 m² celkovo a 2,19 ml/min/1,73 m² u pacientov s východiskovým eGFR &lt;60 ml/min/1,73 m².</p>
 
-<p>Renálny benefit teda nebol obmedzený na diabetickú populáciu. Neznamená to však, že každý pacient bez diabetu získa rovnaký prínos – rozhoduje indikácia, absolútne riziko, tolerancia a celkový klinický kontext.</p>
+<p>Renálny prínos teda nebol obmedzený na diabetickú populáciu. Neznamená to však, že každý pacient bez diabetu získa rovnaký prínos – rozhoduje indikácia, absolútne riziko, tolerancia a celkový klinický kontext.</p>
 
 <h3>3. Pacient už liečený inhibítorom SGLT2</h3>
 
 <p>Podskupinová analýza FLOW podľa súbežného užívania inhibítora SGLT2 je pre prax kľúčová. Celkový benefit semaglutidu oproti placebu zostal (HR 0,76). V podskupine 550 účastníkov na inhibítore SGLT2 pri východisku však rozdiel v primárnom kompozite nebol štatisticky významný (HR 1,07; 95 % CI 0,69–1,67), zatiaľ čo v skupine bez SGLT2 bol HR 0,73 (95 % CI 0,63–0,85). Interakcia nebola signifikantná (P = 0,109) a autori upozorňujú na obmedzenú štatistickú silu v menšej podskupine.</p>
 
-<p>Bezpečnejšia interpretácia znie: v analýzach sa benefit semaglutidu objavoval bez dôkazu škodlivého interakčného efektu so SGLT2, no v už liečenej podskupine nie je preukázaný samostatný prírastkový efekt nad rámec toho, čo už inhibítor SGLT2 poskytuje. Mechanizmy oboch tried sa prekrývajú len čiastočne – v praxi ide skôr o komplementárne než o zameniteľné pôsobenie.</p>
+<p>Opatrnejšia interpretácia znie: v analýzach sa benefit semaglutidu objavoval bez dôkazu škodlivého interakčného efektu so SGLT2, no v už liečenej podskupine nie je preukázaný samostatný prírastkový efekt nad rámec toho, čo už inhibítor SGLT2 poskytuje. Mechanizmy oboch tried sa prekrývajú len čiastočne – v praxi ide skôr o komplementárne než o zameniteľné pôsobenie.</p>
 
 <h3>4. Bez východiskovej CKD: biomarkerový signál tirzepatidu</h3>
 
-<p>Pooled post hoc analýza SURMOUNT‑1 a SURMOUNT‑2 ukázala, že tirzepatid znižoval UACR u osôb s nadváhou alebo obezitou s diabetom aj bez neho. Pri východiskovom UACR ≥30 mg/g boli placebo‑korigované redukcie po 72 týždňoch približne 42 % v SURMOUNT‑1 a 55 % v SURMOUNT‑2.</p>
+<p>Spoločná (pooled) post hoc analýza SURMOUNT‑1 a SURMOUNT‑2 ukázala, že tirzepatid znižoval UACR u osôb s nadváhou alebo obezitou s diabetom aj bez neho. Pri východiskovom UACR ≥30 mg/g boli placebo‑korigované redukcie po 72 týždňoch približne 42 % v SURMOUNT‑1 a 55 % v SURMOUNT‑2.</p>
 
-<p>UACR je dôležitý prognostický biomarker, ale nie je to istý typ dôkazu ako zlyhanie obličiek alebo trvalý pokles eGFR ≥50 %. Signál je biologicky a rizikovo priaznivý, no neumožňuje tvrdiť, že tirzepatid u každého pacienta bez CKD „zaručene zabráni“ vzniku CKD.</p>
+<p>UACR je dôležitý prognostický biomarker, ale nie je to rovnaký typ dôkazu ako zlyhanie obličiek alebo trvalý pokles eGFR ≥50 %. Signál je biologicky a rizikovo priaznivý, no neumožňuje tvrdiť, že tirzepatid u každého pacienta bez CKD „zaručene zabráni“ vzniku CKD.</p>
 
 <h2>Navrhované mechanizmy</h2>
 
-<p>Renálny benefit agonistov GLP-1 sa nedá vysvetliť iba poklesom glykémie. Vo FLOW pretrvával aj u pacientov, u ktorých sa trajektória HbA1c nelíšila od placeba. Pravdepodobné cesty zahŕňajú:</p>
+<p>Renálny prínos agonistov GLP-1 sa nedá vysvetliť iba poklesom glykémie. Vo FLOW pretrvával aj u pacientov, u ktorých sa trajektória HbA1c nelíšila od placeba. Pravdepodobné cesty zahŕňajú:</p>
 
 <ul>
   <li>redukciu telesnej hmotnosti a zlepšenie metabolického profilu,</li>
@@ -133,7 +133,7 @@ $articles[] = [
 
 <p>Ide o navrhované mechanizmy podporované klinickými a experimentálnymi dátami, nie o definitívne dokázaný kauzálny reťazec u každého jednotlivca. Analógia z komentára na Medscape je užitočná: blokáda RAS a statíny posilňujú „hradzbu“, inhibítor SGLT2 otvára „úľavový ventil“ a agonista GLP-1 znižuje „hladinu vody za hrádzou“. Tri rôzne úlohy – často potrebné súčasne.</p>
 
-<h2>Čo z toho premeniť na prax</h2>
+<h2>Čo z toho vyplýva pre prax</h2>
 
 <ol>
   <li><strong>Skoršie zváženie agonisty GLP-1.</strong> U vhodného pacienta s diabetom 2. typu a CKD má zmysel uvažovať o agoniste GLP-1 v kontexte štandardnej vrstvenej nefroprotekcie (RAS, SGLT2, prípadne finerenón podľa indikácie) – nie ako o lieku, ktorý má čakať na endokrinologické rozhodnutie.</li>
@@ -146,7 +146,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>V randomizovaných dôkazoch sa semaglutid a ďalšie inkretínové lieky ukazujú ako schopné spomaliť renálne zhoršovanie alebo zlepšiť renálne rizikové markery naprieč viacerými klinickými fenotypmi. „GLP-1 framing“ ako renálne prínosných liekov je pre nefrológiu klinicky užitočný: pomáha nastaviť správnu prioritu v CKD manažmente.</p>
+<p>Randomizované dôkazy ukazujú, že semaglutid a ďalšie inkretínové lieky dokážu spomaliť zhoršovanie funkcie obličiek alebo zlepšiť renálne rizikové markery naprieč viacerými klinickými fenotypmi. Vnímať ich ako lieky s renálnym prínosom je pre nefrológiu klinicky užitočné: pomáha to nastaviť správnu prioritu v liečbe CKD.</p>
 
 <p>Zároveň treba zachovať presnosť. Tvrdé renálne endpointy z FLOW a SELECT nie sú zameniteľné s poklesom UACR v post hoc analýzach obezitných štúdií. Kombinácia s inhibítorom SGLT2 je logická a v celkovej populácii FLOW podporovaná, no prírastkový efekt v už liečenej podskupine zostáva štatisticky nepreukázaný. Praktický prínos vznikne až vtedy, keď sa dôkazy pretavia do individuálneho plánu: správna indikácia, vrstvená nefroprotekcia, monitorovanie UACR a eGFR, edukácia k gastrointestinálnym nežiaducim účinkom a bezpečná úprava súbežnej antidiabetickej liečby.</p>
 

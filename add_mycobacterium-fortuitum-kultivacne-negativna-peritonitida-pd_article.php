@@ -23,7 +23,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Slovenská kazuistika pripomína netuberkulózne mykobaktérie ako príčinu peritonitídy, ktorá nereaguje na liečbu a zostáva kultivačne negatívna. Podľa ISPD sa lieči kombináciou antibiotík a odstránením katétra.',
     'content'      => <<<'HTML'
-<figure><a href="img/mycobacterium-fortuitum-kultivacne-negativna-peritonitida-pd.webp" rel="noopener noreferrer" target="_blank"><img src="img/mycobacterium-fortuitum-kultivacne-negativna-peritonitida-pd.webp" alt="Prázdna kultivačná miska v kuželi svetla, mimo osvetleného kruhu svieti zhluk tyčinkovitých baktérií" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Negatívna kultivácia neznamená, že pôvodca chýba — znamená, že ho použitá metóda nezachytila.</figcaption></figure>
+<figure><a href="img/mycobacterium-fortuitum-kultivacne-negativna-peritonitida-pd.webp" rel="noopener noreferrer" target="_blank"><img src="img/mycobacterium-fortuitum-kultivacne-negativna-peritonitida-pd.webp" alt="Prázdna kultivačná miska v kuželi svetla, mimo osvetleného kruhu svieti zhluk tyčinkovitých baktérií" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Negatívna kultivácia neznamená, že pôvodca chýba – znamená, že ho použitá metóda nezachytila.</figcaption></figure>
 
 <p>Peritonitída zostáva jednou z najzávažnejších komplikácií peritoneálnej dialýzy (PD). Väčšinu epizód spôsobujú bežné grampozitívne alebo gramnegatívne baktérie a pôvodcu možno určiť štandardnou kultiváciou. Osobitný diagnostický problém predstavuje peritonitída s opakovane negatívnymi kultiváciami, ktorá nereaguje na empirickú antibiotickú liečbu.</p>
 
@@ -75,19 +75,19 @@ $articles[] = [
 
 <p>Pri podozrení na NTM treba laboratórium výslovne upozorniť. ISPD uvádza konkrétne: predĺžiť inkubáciu štandardných bakteriálnych kultivácií <strong>na sedem dní</strong> a doplniť špecifické mykobakteriálne médiá.</p>
 
-<p>Negatívna acidorezistentná mikroskopia diagnózu nevylučuje — jej citlivosť je pri nízkom počte mikroorganizmov nedostatočná.</p>
+<p>Negatívna acidorezistentná mikroskopia diagnózu nevylučuje – jej citlivosť je pri nízkom počte mikroorganizmov nedostatočná.</p>
 
 <h2>Kedy myslieť na netuberkulózne mykobaktérie</h2>
 
-<p>ISPD odporúča (stupeň 2D) vyžiadať farbenie podľa Ziehla a Neelsena na acidorezistentné tyčinky vždy, keď je klinické podozrenie na NTM peritonitídu — <strong>vrátane pretrvávajúcej kultivačne negatívnej peritonitídy</strong>.</p>
+<p>ISPD odporúča (stupeň 2D) vyžiadať farbenie podľa Ziehla a Neelsena na acidorezistentné tyčinky vždy, keď je klinické podozrenie na NTM peritonitídu – <strong>vrátane pretrvávajúcej kultivačne negatívnej peritonitídy</strong>.</p>
 
-<p>Podozrenie by mala zvýšiť kombinácia nasledujúcich okolností:</p>
+<p>Podozrenie by mala zvýšiť kombinácia týchto okolností:</p>
 
 <ul>
   <li>pretrvávajúci zakalený dialyzát a zvýšený počet leukocytov,</li>
   <li>opakovane negatívna štandardná kultivácia,</li>
   <li>nedostatočná odpoveď na obvyklú empirickú liečbu alebo relaps po prechodnom zlepšení,</li>
-  <li>súčasná infekcia výstupu alebo tunela katétra — ISPD ju uvádza ako typický sprievodný nález,</li>
+  <li>súčasná infekcia výstupu alebo tunela katétra – ISPD ju uvádza ako typický sprievodný nález,</li>
   <li>noduly, abscesy alebo atypické kožné lézie v okolí katétra,</li>
   <li>neobvyklý alebo oneskorený mikrobiologický rast,</li>
   <li>nález, ktorý sa nedarí spoľahlivo identifikovať.</li>
@@ -99,7 +99,7 @@ $articles[] = [
 
 <p>ISPD definuje refraktérnu peritonitídu ako zlyhanie vyčistenia dialyzátu po piatich dňoch vhodnej antibiotickej liečby a pri nej odporúča odstránenie katétra (stupeň 1D). Po začatí liečby zvyčajne nastáva klinické zlepšenie do 72 hodín.</p>
 
-<p>Aktualizácia z roku 2022 však priniesla dôležité zmiernenie: ak sa počet leukocytov v dialyzáte znižuje smerom k norme, je namieste ďalej sledovať účinok antibiotík aj po piatom dni namiesto povinného odstránenia katétra (stupeň 2C). Samotná päťdňová hranica sa v texte odporúčania označuje za <strong>arbitrárny referenčný nástroj</strong> — údaje porovnávajúce dlhodobé výsledky pri päťdňovom pravidle a pri dlhšom čakaní chýbajú.</p>
+<p>Aktualizácia z roku 2022 však priniesla dôležité zmiernenie: ak sa počet leukocytov v dialyzáte znižuje smerom k norme, je namieste ďalej sledovať účinok antibiotík aj po piatom dni namiesto povinného odstránenia katétra (stupeň 2C). Samotná päťdňová hranica sa v texte odporúčania označuje za <strong>arbitrárny referenčný nástroj</strong> – údaje porovnávajúce dlhodobé výsledky pri päťdňovom pravidle a pri dlhšom čakaní chýbajú.</p>
 
 <p>Rozhodnutie preto musí vychádzať z dynamiky, nie z jedného časového bodu. Skoršie odstránenie katétra je namieste pri hemodynamickej nestabilite, sepse, zhoršujúcej sa bolesti brucha, rastúcom počte leukocytov v dialyzáte, podozrení na chirurgickú príčinu, tunelovej infekcii, plesňovej alebo mykobakteriálnej etiológii a pri progresii napriek adekvátnej liečbe.</p>
 
@@ -117,13 +117,13 @@ $articles[] = [
 
 <p>Údajov o optimálnom trvaní liečby je málo. ISPD uvádza, že <strong>väčšina expertov odporúča dve antibiotiká, na ktoré je izolát citlivý, počas najmenej šiestich týždňov</strong>. Ide o expertný konsenzus, nie o samostatne odstupňované odporúčanie.</p>
 
-<p>Realistické očakávania nastavuje citovaná observačná štúdia 27 po sebe nasledujúcich epizód: úplné vyliečenie sa dosiahlo len u <strong>14,8 %</strong> pacientov napriek liečbe trvajúcej vyše dvoch mesiacov. NTM peritonitída teda aj pri správnom postupe často znamená koniec peritoneálnej dialýzy.</p>
+<p>Realistický obraz dáva citovaná observačná štúdia 27 po sebe nasledujúcich epizód: úplné vyliečenie sa dosiahlo len u <strong>14,8 %</strong> pacientov napriek liečbe trvajúcej vyše dvoch mesiacov. NTM peritonitída teda aj pri správnom postupe často znamená koniec peritoneálnej dialýzy.</p>
 
 <p>Antibiotickú liečbu treba riadiť podľa identifikovaného druhu a následne podľa citlivosti in vitro. ISPD výslovne odporúča konzultovať výber kombinovanej antimykobakteriálnej liečby s mikrobiológom alebo infektológom.</p>
 
 <h3>Ktoré liečivá prichádzajú do úvahy</h3>
 
-<p>Potenciálnu aktivitu proti niektorým izolátom <em>M. fortuitum</em> môžu mať amikacín, imipeném, fluorochinolóny, doxycyklín alebo minocyklín, kotrimoxazol, linezolid a niektoré makrolidy. Tento zoznam nie je univerzálnym terapeutickým odporúčaním — citlivosť jednotlivých izolátov je premenlivá a medzi laboratórnou citlivosťou a klinickou účinnosťou nemusí byť zhoda.</p>
+<p>Potenciálnu aktivitu proti niektorým izolátom <em>M. fortuitum</em> môžu mať amikacín, imipeném, fluorochinolóny, doxycyklín alebo minocyklín, kotrimoxazol, linezolid a niektoré makrolidy. Tento zoznam nie je univerzálnym terapeutickým odporúčaním – citlivosť jednotlivých izolátov je premenlivá a medzi laboratórnou citlivosťou a klinickou účinnosťou nemusí byť zhoda.</p>
 
 <p>Pri výbere treba zohľadniť výsledok testovania citlivosti, závažnosť infekcie, prítomnosť biofilmu, osud katétra, reziduálnu funkciu obličiek, liekové interakcie, ototoxicitu a vestibulotoxicitu, hematologickú a neurologickú toxicitu, predĺženie intervalu QT a dostupnosť intravenózneho, perorálneho alebo intraperitoneálneho podania.</p>
 
@@ -199,7 +199,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p><em>Mycobacterium fortuitum</em> je zriedkavý, ale klinicky významný pôvodca peritonitídy pri peritoneálnej dialýze — spolu s <em>M. chelonae</em> tvorí väčšinu epizód NTM peritonitídy. Diagnóza býva oneskorená o šesť až tridsať dní, pretože štandardné kultivácie zostávajú negatívne, mikroorganizmus sa dá pri Gramovom farbení zameniť za difteroidy a úvodná antibiotická liečba nie je účinná.</p>
+<p><em>Mycobacterium fortuitum</em> je zriedkavý, ale klinicky významný pôvodca peritonitídy pri peritoneálnej dialýze – spolu s <em>M. chelonae</em> tvorí väčšinu epizód NTM peritonitídy. Diagnóza býva oneskorená o šesť až tridsať dní, pretože štandardné kultivácie zostávajú negatívne, mikroorganizmus sa dá pri Gramovom farbení zameniť za difteroidy a úvodná antibiotická liečba nie je účinná.</p>
 
 <p>Na NTM treba myslieť pri refraktérnej alebo relabujúcej peritonitíde, najmä ak je spojená s infekciou výstupu či tunela katétra. Diagnostika vyžaduje úzku spoluprácu nefrológa a mikrobiológa, druhovú identifikáciu a testovanie citlivosti.</p>
 

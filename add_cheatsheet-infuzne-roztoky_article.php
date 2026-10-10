@@ -26,10 +26,10 @@ $articles[] = [
     'content'      => <<<'HTML'
 <figure>
   <img src="img/cheatsheet-infuzne-roztoky.svg" alt="Štyri infúzne vaky s obsahom sodíka a tonicitou: 0,9 % NaCl (Na 154, izotonický), Ringer-laktát (Na 130, balansovaný), Plasma-Lyte (Na 140, balansovaný) a 5 % glukóza (voľná voda, hypotonický efekt)." loading="lazy" decoding="async">
-  <figcaption>Najčastejšie kryštaloidy — obsah sodíka a tonicita.</figcaption>
+  <figcaption>Najčastejšie kryštaloidy – obsah sodíka a tonicita.</figcaption>
 </figure>
 
-<p>Prehľad <strong>zloženia a výberu infúznych roztokov</strong> — koncentrácie elektrolytov, tonicita a klinické zásady. Súvisí s <a href="calculator_na.php">poruchami sodíka</a> a <a href="nastroj_hyponatremia.php">algoritmom hyponatriémie</a>.</p>
+<p>Prehľad <strong>zloženia a výberu infúznych roztokov</strong> – koncentrácie elektrolytov, tonicita a klinické zásady. Súvisí s <a href="calculator_na.php">poruchami sodíka</a> a <a href="nastroj_hyponatremia.php">algoritmom hyponatriémie</a>.</p>
 
 <h2>Zloženie bežných roztokov (na 1 liter)</h2>
 <div class="table-responsive" role="region" aria-label="Zloženie bežných roztokov (na 1 liter)" tabindex="0">
@@ -46,20 +46,20 @@ $articles[] = [
   </thead>
   <tbody>
     <tr><td>Plazma (referencia)</td><td>140</td><td>100</td><td>4</td><td>HCO<sub>3</sub><sup>−</sup> 24</td><td>~290</td></tr>
-    <tr><td>0,9 % NaCl (fyziologický)</td><td>154</td><td>154</td><td>0</td><td>—</td><td>~308</td></tr>
+    <tr><td>0,9 % NaCl (fyziologický)</td><td>154</td><td>154</td><td>0</td><td>–</td><td>~308</td></tr>
     <tr><td>Ringer-laktát (Hartmann)</td><td>130</td><td>109</td><td>4</td><td>Ca 1,5; laktát 28</td><td>~273</td></tr>
     <tr><td>Plasma-Lyte 148</td><td>140</td><td>98</td><td>5</td><td>Mg 1,5; acetát 27; glukonát 23</td><td>~295</td></tr>
-    <tr><td>0,45 % NaCl (½ fyziologický)</td><td>77</td><td>77</td><td>0</td><td>—</td><td>~154</td></tr>
+    <tr><td>0,45 % NaCl (½ fyziologický)</td><td>77</td><td>77</td><td>0</td><td>–</td><td>~154</td></tr>
     <tr><td>5 % glukóza (G5)</td><td>0</td><td>0</td><td>0</td><td>glukóza 50 g</td><td>~278*</td></tr>
-    <tr><td>3 % NaCl (hypertonický)</td><td>513</td><td>513</td><td>0</td><td>—</td><td>~1027</td></tr>
+    <tr><td>3 % NaCl (hypertonický)</td><td>513</td><td>513</td><td>0</td><td>–</td><td>~1027</td></tr>
     <tr><td>8,4 % NaHCO<sub>3</sub></td><td>1000</td><td>0</td><td>0</td><td>HCO<sub>3</sub><sup>−</sup> 1000 (1 mmol/ml)</td><td>~2000</td></tr>
   </tbody>
 </table>
 </div>
-<p><em>* G5 je in vitro takmer izotonická, no po metabolizme glukózy poskytuje <strong>voľnú vodu</strong> — pôsobí hypotonicky.</em></p>
+<p><em>* G5 je in vitro takmer izotonická, no po metabolizme glukózy poskytuje <strong>voľnú vodu</strong> – pôsobí hypotonicky.</em></p>
 
-<h2>Tonicita — praktické dôsledky</h2>
-<div class="table-responsive" role="region" aria-label="Tonicita — praktické dôsledky" tabindex="0">
+<h2>Tonicita – praktické dôsledky</h2>
+<div class="table-responsive" role="region" aria-label="Tonicita – praktické dôsledky" tabindex="0">
 <table>
   <thead>
     <tr><th scope="col">Tonicita</th><th scope="col">Príklady</th><th scope="col">Použitie</th></tr>
@@ -74,9 +74,9 @@ $articles[] = [
 
 <h2>Balansované roztoky vs. 0,9 % NaCl</h2>
 <ul>
-  <li><strong>0,9 % NaCl</strong> má vysoký chlorid (154) — pri veľkých objemoch spôsobuje <strong>hyperchloremickú metabolickú acidózu</strong> a môže zhoršiť renálnu perfúziu.</li>
-  <li><strong>Balansované kryštaloidy</strong> (Ringer-laktát, Plasma-Lyte) majú zloženie bližšie plazme; pri resuscitácii sú vo väčšine situácií <strong>uprednostňované</strong> (štúdie SMART, BaSICS, PLUS — celkovo v prospech balansovaných pri riziku poškodenia obličiek).</li>
-  <li><strong>Ringer-laktát obsahuje vápnik</strong> — nepodávaj v jednej linke s <em>citrátovými</em> krvnými prípravkami (riziko zrazenia) ani s ceftriaxónom u novorodencov.</li>
+  <li><strong>0,9 % NaCl</strong> má vysoký chlorid (154) – pri veľkých objemoch spôsobuje <strong>hyperchloremickú metabolickú acidózu</strong> a môže zhoršiť renálnu perfúziu.</li>
+  <li><strong>Balansované kryštaloidy</strong> (Ringer-laktát, Plasma-Lyte) majú zloženie bližšie plazme; pri resuscitácii sú vo väčšine situácií <strong>uprednostňované</strong> (štúdie SMART, BaSICS, PLUS – celkovo v prospech balansovaných pri riziku poškodenia obličiek).</li>
+  <li><strong>Ringer-laktát obsahuje vápnik</strong> – nepodávaj v jednej linke s <em>citrátovými</em> krvnými prípravkami (riziko zrazenia) ani s ceftriaxónom u novorodencov.</li>
   <li>Pri ťažkej hyperkaliémii sa balansované roztoky (K 4–5) v praxi tolerujú; paradoxne 0,9 % NaCl môže acidózou kaliémiu zhoršiť.</li>
 </ul>
 
@@ -92,7 +92,7 @@ $articles[] = [
     <tr><td>Symptomatická ťažká hyponatriémia</td><td>3 % NaCl 100–150 ml bolus, kontrola Na<sup>+</sup>, limit ≤ 8 mmol/l/24 h</td></tr>
     <tr><td>Diabetická ketoacidóza</td><td>Najprv 0,9 % NaCl, potom balansovaný; pridať glukózu pri glykémii &lt; 14 mmol/l</td></tr>
     <tr><td>Hyperkalciémia</td><td>Izotonický roztok (0,9 % NaCl) na obnovu volémie a kalciurézu</td></tr>
-    <tr><td>Udržiavacia terapia (dospelí)</td><td>Izotonický roztok (vyhni sa hypotonickým — riziko nozokomiálnej hyponatriémie)</td></tr>
+    <tr><td>Udržiavacia terapia (dospelí)</td><td>Izotonický roztok (vyhni sa hypotonickým – riziko nozokomiálnej hyponatriémie)</td></tr>
   </tbody>
 </table>
 </div>
@@ -100,9 +100,9 @@ $articles[] = [
 <h2>Úskalia</h2>
 <ul>
   <li><strong>Koloidy</strong> (hydroxyetylškrob) sa pri kritickej chorobe a sepse <strong>neodporúčajú</strong> (riziko AKI a mortality); albumín má vybrané indikácie.</li>
-  <li>Hypotonické roztoky u dospelých sú častou príčinou <strong>nemocničnej hyponatriémie</strong> — preferuj izotonické udržiavacie roztoky.</li>
-  <li>Hypertonický roztok pri kontinuálnom podávaní cez <strong>centrálny katéter</strong>; vždy monitoruj rýchlosť korekcie Na<sup>+</sup>.</li>
-  <li>Objem a typ vždy prispôsob klinickému stavu (srdcové/renálne zlyhanie — riziko preťaženia).</li>
+  <li>Hypotonické roztoky u dospelých sú častou príčinou <strong>nemocničnej hyponatriémie</strong> – preferuj izotonické udržiavacie roztoky.</li>
+  <li>Pri kontinuálnom podávaní hypertonického roztoku použi <strong>centrálny katéter</strong>; vždy monitoruj rýchlosť korekcie Na<sup>+</sup>.</li>
+  <li>Objem a typ vždy prispôsob klinickému stavu (srdcové/renálne zlyhanie – riziko preťaženia).</li>
 </ul>
 
 <hr>
@@ -112,7 +112,7 @@ $articles[] = [
   <li><a href="https://pubmed.ncbi.nlm.nih.gov/29485925/" target="_blank" rel="noopener noreferrer">Semler MW, et al. Balanced Crystalloids versus Saline in Critically Ill Adults (SMART). N Engl J Med 2018;378:829–39</a></li>
   <li><a href="https://pubmed.ncbi.nlm.nih.gov/35041780/" target="_blank" rel="noopener noreferrer">Finfer S, et al. Balanced Multielectrolyte Solution versus Saline in the Critically Ill (PLUS). N Engl J Med 2022;386:815–26</a></li>
 </ul>
-<p><em>Orientačná pomôcka — nenahrádza klinický úsudok.</em></p>
+<p><em>Orientačná pomôcka – nenahrádza klinický úsudok.</em></p>
 HTML,
 ];
 

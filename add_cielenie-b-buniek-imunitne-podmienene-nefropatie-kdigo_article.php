@@ -26,7 +26,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Dostupnosť, účinnosť aj bezpečnosť liečby cielenej na B bunky sa medzi glomerulovými ochoreniami podstatne líšia. Konferencia KDIGO ukazuje, že rozhodujúca nie je maximálna sila zásahu, ale správna hĺbka deplécie u správneho pacienta – a že chýbajúce biomarkery sú dnes hlavnou brzdou.',
     'content'      => <<<'HTML'
-<figure><a href="img/cielenie-b-buniek-imunitne-podmienene-nefropatie-kdigo.webp" rel="noopener noreferrer" target="_blank"><img src="img/cielenie-b-buniek-imunitne-podmienene-nefropatie-kdigo.webp" alt="Prstenec imunitných buniek, ktorý pod modrým lúčom postupne hasne a rozpadá sa; za vyhasnutou stranou zostáva prázdna tma, v pozadí oblička" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Hlbšia deplécia B buniek neznamená automaticky lepší výsledok — spolu s chorobou hasne aj obrana, ktorú pacient potrebuje.</figcaption></figure>
+<figure><a href="img/cielenie-b-buniek-imunitne-podmienene-nefropatie-kdigo.webp" rel="noopener noreferrer" target="_blank"><img src="img/cielenie-b-buniek-imunitne-podmienene-nefropatie-kdigo.webp" alt="Prstenec imunitných buniek, ktorý pod modrým lúčom postupne hasne a rozpadá sa; za vyhasnutou stranou zostáva prázdna tma, v pozadí oblička" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Hlbšia deplécia B buniek neznamená automaticky lepší výsledok – spolu s chorobou hasne aj obrana, ktorú pacient potrebuje.</figcaption></figure>
 
 <p>Imunitne podmienené ochorenia obličiek sú často poháňané mechanizmami závislými od B buniek a protilátok. Paleta liečby, ktorá B bunky depletuje alebo hlbšie moduluje, sa preto v posledných rokoch výrazne rozšírila. Organizácia KDIGO usporiadala v <strong>júni 2025 v Paname</strong> konferenciu (controversies conference), ktorej cieľom bolo zhodnotiť dostupné dôkazy a pomenovať medzery v poznaní. Závery boli publikované v roku 2026 v časopise <em>Kidney International</em>.</p>
 
@@ -88,7 +88,7 @@ $articles[] = [
 
 <p>Dokument zároveň upozorňuje na diferenciáciu podľa cieľových autoantigénov (najmä PLA2R a THSD7A) a na možnosť, že pri rôznom bunkovom zdroji protilátok bude účinok odlišný. Rozvíjajú sa aj ďalšie prístupy – intenzívnejšia deplécia CD20 alebo cielenie plazmatických populácií.</p>
 
-<p>Práve pri membranóznej nefropatii dokument výslovne mierni nadšenie pre bunkovú terapiu CAR T. Ochorenie zvyčajne nie je rýchlo progresívne, chronická imunosupresia nie je vždy potrebná, populácia býva staršia a najnaliehavejšia nenaplnená potreba leží inde. Terapia CAR T sa tu preto rámcuje ako stratégia pre vybrané, ťažké situácie – nie ako ďalší logický krok.</p>
+<p>Práve pri membranóznej nefropatii dokument výslovne mierni nadšenie pre bunkovú terapiu CAR T. Ochorenie zvyčajne nie je rýchlo progresívne, chronická imunosupresia nie je vždy potrebná, populácia býva staršia a najnaliehavejšia nenaplnená potreba leží inde. Terapiu CAR T tu preto dokument vidí ako stratégiu pre vybrané, ťažké situácie – nie ako ďalší logický krok.</p>
 
 <h3>Podocytopatie: minimálne zmeny a fokálna segmentová glomeruloskleróza</h3>
 
@@ -104,7 +104,7 @@ $articles[] = [
 
 <h3>Glomerulonefritída asociovaná s ANCA</h3>
 
-<p>Pri glomerulonefritíde asociovanej s ANCA sa rituximab osvedčil <strong>v indukčnej aj udržiavacej liečbe</strong>. Prebiehajúce skúšania skúmajú prístupy s CAR T bunkami.</p>
+<p>Pri glomerulonefritíde asociovanej s ANCA sa rituximab osvedčil <strong>v indukčnej aj udržiavacej liečbe</strong>. V prebiehajúcich skúšaniach sa overujú prístupy s CAR T bunkami.</p>
 
 <p>Pre budúcnosť dokument otvorene pomenúva medzery: nie je jasné, ktoré modulačné prístupy budú rovnako účinné ako deplécia CD20, a chýba lepšia stratifikácia rizika relapsu vrátane sledovania imunologickej dynamiky po liečbe.</p>
 
@@ -120,7 +120,7 @@ $articles[] = [
 
 <p>Bezpečnostné dôsledky sa líšia podľa intenzity zásahu. Dokument konštatuje, že <strong>konvenčná liečba anti-CD20 má priaznivý bezpečnostný profil</strong>, zatiaľ čo terapia CAR T si vyžaduje starostlivý výber pacientov pre riziko syndrómu z uvoľnenia cytokínov a ďalších závažných nežiaducich udalostí.</p>
 
-<p>Toto rozlíšenie je dôležité aj pri komunikácii s pacientom: obavy z rituximabu sa nemajú prenášať z rizikového profilu bunkovej terapie.</p>
+<p>Toto rozlíšenie je dôležité aj pri komunikácii s pacientom: riziká bunkovej terapie sa nemajú prenášať na rituximab.</p>
 
 <p>Pri liečbe zameranej na B bunky treba počítať najmä s týmito rizikami:</p>
 
@@ -152,7 +152,7 @@ $articles[] = [
 
 <ol>
   <li>Pri imunitne podmienených glomerulopatiách už nejde o nešpecifickú imunosupresiu, ale o <strong>cielený zásah do mechanizmov B buniek</strong>.</li>
-  <li>Rozdielna účinnosť naprieč diagnózami ukazuje, že mechanizmus ochorenia nie je univerzálny. <strong>Rituximab nie je zameniteľná odpoveď na každú glomerulopatiu</strong> – pri IgA nefropatii má obmedzený prínos, pri membranóznej nefropatii je liečbou prvej línie.</li>
+  <li>Rozdielna účinnosť naprieč diagnózami ukazuje, že mechanizmus ochorenia nie je univerzálny. <strong>Rituximab nie je odpoveďou na každú glomerulopatiu</strong> – pri IgA nefropatii má obmedzený prínos, pri membranóznej nefropatii je liečbou prvej línie.</li>
   <li>Pri steroid-dependentnom nefrotickom syndróme treba od začiatku počítať s <strong>prechodnosťou</strong> účinku a plánovať následný postup.</li>
   <li>Bezpečnostná príprava nie je voliteľná – imunoglobulíny, krvný obraz, očkovací stav a plán sledovania.</li>
   <li>Bunková terapia CAR T je zatiaľ nástrojom pre vybrané, ťažké situácie, nie ďalším stupňom eskalácie pre každého.</li>
@@ -164,7 +164,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>Konferencia KDIGO potvrdzuje, že liečba cielená na B bunky je pri imunitne podmienených nefropatiách reálnou a v niektorých diagnózach už štandardnou možnosťou. Zároveň však jasne pomenúva, že ďalší pokrok nezávisí od sily zásahu, ale od schopnosti určiť správnu hĺbku deplécie u správneho pacienta a spoľahlivo ju sledovať. Pokým nebudú validované biomarkery, zostane výber liečby do značnej miery empirický – a práve v tom spočíva najväčšia nenaplnená potreba tejto oblasti.</p>
+<p>Konferencia KDIGO potvrdzuje, že liečba cielená na B bunky je pri imunitne podmienených nefropatiách reálnou a v niektorých diagnózach už štandardnou možnosťou. Zároveň však jasne pomenúva, že ďalší pokrok nezávisí od sily zásahu, ale od schopnosti určiť správnu hĺbku deplécie u správneho pacienta a spoľahlivo ju sledovať. Kým nebudú k dispozícii validované biomarkery, zostane výber liečby do značnej miery empirický – a práve v tom spočíva najväčšia nenaplnená potreba tejto oblasti.</p>
 
 <h2>Súvisiace články na portáli</h2>
 

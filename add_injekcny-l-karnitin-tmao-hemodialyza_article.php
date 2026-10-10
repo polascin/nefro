@@ -37,13 +37,13 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Medzi nefrológmi koluje úvaha, že keď perorálny L-karnitín zvyšuje TMAO, stačí ho podať injekčne (i.v.) po dialýze a problém zmizne. Mechanisticky je to podložené, no slovo „zabráni“ je nadhodnotené: parenterálna cesta mikrobiálnu tvorbu TMAO výrazne tlmí, no neruší ju úplne — a dôkaz o zlepšení tvrdých kardiovaskulárnych výsledkov u ľudí zatiaľ chýba.',
+    'excerpt'      => 'Medzi nefrológmi koluje úvaha, že keď perorálny L-karnitín zvyšuje TMAO, stačí ho podať injekčne (i.v.) po dialýze a problém zmizne. Mechanisticky je to podložené, no slovo „zabráni“ je nadhodnotené: parenterálna cesta mikrobiálnu tvorbu TMAO výrazne tlmí, no neruší ju úplne – a dôkaz o zlepšení tvrdých kardiovaskulárnych výsledkov u ľudí zatiaľ chýba.',
     'content'      => <<<'HTML'
-<figure><a href="img/injekcny-l-karnitin-tmao-hemodialyza.webp" rel="noopener noreferrer" target="_blank"><img src="img/injekcny-l-karnitin-tmao-hemodialyza.webp" alt="Infúzna kvapka vstupujúca do krvného riečiska, zatiaľ čo črevné baktérie ďalej produkujú tmavé častice" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Injekčná cesta obchádza črevo — a práve to je dôvod, prečo sa od nej očakávalo menej TMAO.</figcaption></figure>
+<figure><a href="img/injekcny-l-karnitin-tmao-hemodialyza.webp" rel="noopener noreferrer" target="_blank"><img src="img/injekcny-l-karnitin-tmao-hemodialyza.webp" alt="Infúzna kvapka vstupujúca do krvného riečiska, zatiaľ čo črevné baktérie ďalej produkujú tmavé častice" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Injekčná cesta obchádza črevo – a práve to je dôvod, prečo sa od nej očakávalo menej TMAO.</figcaption></figure>
 
-<p>Medzi nefrológmi koluje elegantná úvaha: keďže perorálny L-karnitín zvyšuje hladinu TMAO, stačí ho podať injekčne (intravenózne, i.v.) po dialýze a problém s TMAO zmizne. Mechanisticky je táto úvaha reálne podložená, no slovo <strong>„zabráni“</strong> je nadhodnotené. Injekčná cesta produkciu TMAO výrazne tlmí, no neruší ju úplne — a klinický dosah na tvrdé kardiovaskulárne výsledky zostáva nepreukázaný.</p>
+<p>Medzi nefrológmi koluje elegantná úvaha: keďže perorálny L-karnitín zvyšuje hladinu TMAO, stačí ho podať injekčne (intravenózne, i.v.) po dialýze a problém s TMAO zmizne. Mechanisticky je táto úvaha reálne podložená, no slovo <strong>„zabráni“</strong> je nadhodnotené. Injekčná cesta produkciu TMAO výrazne tlmí, no neruší ju úplne – a klinický dosah na tvrdé kardiovaskulárne výsledky zostáva nepreukázaný.</p>
 
-<p>Článok nadväzuje na širší rámec dráhy, ktorú približujeme v texte o <a href="article.php?slug=tmao-crevny-metabolit-uremicky-toxin-ckd">TMAO ako uremickom toxíne pri CKD</a>, a na tému <a href="article.php?slug=cholin-l-karnitin-doplnky-diabeticka-nefropatia-tmao">doplnkov s cholínom a L-karnitínom pri diabetickej nefropatii</a>. Tu sa sústredíme na jednu praktickú otázku — na cestu podania.</p>
+<p>Článok nadväzuje na širší rámec dráhy, ktorú približujeme v texte o <a href="article.php?slug=tmao-crevny-metabolit-uremicky-toxin-ckd">TMAO ako uremickom toxíne pri CKD</a>, a na tému <a href="article.php?slug=cholin-l-karnitin-doplnky-diabeticka-nefropatia-tmao">doplnkov s cholínom a L-karnitínom pri diabetickej nefropatii</a>. Tu sa sústredíme na jednu praktickú otázku – na cestu podania.</p>
 
 <h2>Ako vzniká TMAO z karnitínu</h2>
 
@@ -64,13 +64,13 @@ $articles[] = [
 
 <p><strong>Nie je to nula, len menej.</strong> Karnitín podlieha enterohepatálnej cirkulácii a časť sa vylučuje do čreva, kde ju mikrobiota môže spracovať na TMA. Parenterálna cesta tvorbu TMAO výrazne redukuje, no mechanizmus úplne neobchádza.</p>
 
-<p><strong>U dialyzovaných určuje hladinu TMAO predovšetkým obličková eliminácia.</strong> TMAO je uremický retenčný solút. U pacientov s CKD/ESRD je výrazne zvýšený predovšetkým preto, že sa nevylučuje — dialýza ho čiastočne odstráni, no medzi procedúrami sa jeho hladina opäť zvyšuje (rebound). Voľba cesty podania karnitínu túto východiskovú hladinu zásadne nezmení.</p>
+<p><strong>U dialyzovaných určuje hladinu TMAO predovšetkým obličková eliminácia.</strong> TMAO je uremický retenčný solút. U pacientov s CKD/ESRD je výrazne zvýšený predovšetkým preto, že sa nevylučuje – dialýza ho čiastočne odstráni, no medzi procedúrami sa jeho hladina opäť zvyšuje (rebound). Voľba cesty podania karnitínu túto východiskovú hladinu zásadne nezmení.</p>
 
-<p><strong>„Nepriaznivé pôsobenie“ nie je u ľudí dokázané tvrdými klinickými dátami.</strong> Asociácia TMAO s aterosklerózou a s veľkými nežiaducimi kardiovaskulárnymi príhodami (MACE) je silná a mechanisticky podložená (potlačenie reverzného transportu cholesterolu, zvýšená expresia receptorov CD36/SRA, tvorba penových buniek). Koeth a kol. ukázali, že vysoká hladina karnitínu predpovedá kardiovaskulárne riziko len pri súčasne vysokom TMAO. Ide však o asociačné a mechanistické dáta — intervenčný dôkaz, že samotné zníženie TMAO zlepší tvrdé kardiovaskulárne výsledky u ľudí, zatiaľ chýba.</p>
+<p><strong>„Nepriaznivé pôsobenie“ nie je u ľudí dokázané tvrdými klinickými dátami.</strong> Asociácia TMAO s aterosklerózou a s veľkými nežiaducimi kardiovaskulárnymi príhodami (MACE) je silná a mechanisticky podložená (potlačenie reverzného transportu cholesterolu, zvýšená expresia receptorov CD36/SRA, tvorba penových buniek). Koeth a kol. ukázali, že vysoká hladina karnitínu predpovedá kardiovaskulárne riziko len pri súčasne vysokom TMAO. Ide však o asociačné a mechanistické dáta – intervenčný dôkaz, že samotné zníženie TMAO zlepší tvrdé kardiovaskulárne výsledky u ľudí, zatiaľ chýba.</p>
 
 <h2>Prečo karnitín u dialyzovaných vôbec riešime</h2>
 
-<p>Podľa prehľadu Kljajić a kol. (Journal of Clinical Medicine 2025) je deficit karnitínu u hemodialyzovaných častý a kombinuje prvky primárneho aj sekundárneho deficitu: hemodialýza odstraňuje viac voľného než esterifikovaného karnitínu, zdravé obličky reabsorbujú viac než 90 % filtrovanej nálože a podieľajú sa na jeho syntéze — obe funkcie pri ESRD chýbajú. Pridáva sa malnutrícia, strata do dialyzátu a katabolizmus.</p>
+<p>Podľa prehľadu Kljajić a kol. (Journal of Clinical Medicine 2025) je deficit karnitínu u hemodialyzovaných častý a kombinuje prvky primárneho aj sekundárneho deficitu: hemodialýza odstraňuje viac voľného než esterifikovaného karnitínu, zdravé obličky reabsorbujú viac než 90 % filtrovanej nálože a podieľajú sa na jeho syntéze – obe funkcie pri ESRD chýbajú. Pridáva sa malnutrícia, strata do dialyzátu a katabolizmus.</p>
 
 <p>Deficit sa spája s anémiou rezistentnou na liečbu ESA, hypotenziou počas hemodialýzy, svalovými kŕčmi, dyslipidémiou a chronickým zápalom. Dôkazy o benefite suplementácie sú však zmiešané: časť štúdií opísala pokles CRP a zníženie potreby erytropoetínu, iné nezistili žiadny efekt; výsledky pre kŕče, glykémiu a kardiálnu funkciu zostávajú nekonzistentné.</p>
 
@@ -92,7 +92,7 @@ $articles[] = [
 
 <p>Zdroje dávkovania: <a href="https://kidneyfoundation.cachefly.net/professionals/KDOQI/guidelines_nutrition/nut_appx10a.html" target="_blank" rel="noopener noreferrer">KDOQI, Appendix X</a>, <a href="https://www.cms.gov/medicare-coverage-database/view/ncacal-decision-memo.aspx?proposed=N&amp;ncaid=44" target="_blank" rel="noopener noreferrer">CMS NCD pre ESRD</a> a <a href="https://www.mdpi.com/2077-0383/14/14/5052" target="_blank" rel="noopener noreferrer">Kljajić a kol. (JCM 2025)</a>.</p>
 
-<p><strong>Bezpečnostná poznámka:</strong> vysokodávkový perorálny karnitín (3 g/deň) v jednej malej štúdii paradoxne zvýšil triacylglyceroly a agregáciu trombocytov — argument proti prístupu „čím viac, tým lepšie“.</p>
+<p><strong>Bezpečnostná poznámka:</strong> vysokodávkový perorálny karnitín (3 g/deň) v jednej malej štúdii paradoxne zvýšil triacylglyceroly a agregáciu trombocytov – argument proti prístupu „čím viac, tým lepšie“.</p>
 
 <h2>Záver</h2>
 

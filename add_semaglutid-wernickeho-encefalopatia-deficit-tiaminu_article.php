@@ -26,11 +26,11 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Šesť kazuistík a nezávislá analýza hlásení vo VigiBase upozorňujú na deficit tiamínu pri liečbe agonistami receptora GLP-1. Signál je zriedkavý, pri oneskorenej liečbe však nezvratný.',
     'content'      => <<<'HTML'
-<figure><a href="img/semaglutid-wernickeho-encefalopatia-deficit-tiaminu.webp" rel="noopener noreferrer" target="_blank"><img src="img/semaglutid-wernickeho-encefalopatia-deficit-tiaminu.webp" alt="Strmo klesajúca krivka a pozdĺž nej pretrhnuté zlaté vlákno rezervy; mozgová štruktúra nad ním v tom mieste hasne" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Rýchly úbytok hmotnosti môže vyčerpať zásobu tiamínu skôr, než na ňu niekto pomyslí — komplikácia je zriedkavá, ale odvrátiteľná.</figcaption></figure>
+<figure><a href="img/semaglutid-wernickeho-encefalopatia-deficit-tiaminu.webp" rel="noopener noreferrer" target="_blank"><img src="img/semaglutid-wernickeho-encefalopatia-deficit-tiaminu.webp" alt="Strmo klesajúca krivka a pozdĺž nej pretrhnuté zlaté vlákno rezervy; mozgová štruktúra nad ním v tom mieste hasne" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Rýchly úbytok hmotnosti môže vyčerpať zásobu tiamínu skôr, než na ňu niekto pomyslí – komplikácia je zriedkavá, ale odvrátiteľná.</figcaption></figure>
 
 <p class="article-dek"><em>Publikované kazuistiky aj analýza spontánnych hlásení ukazujú na to isté miesto zlyhania: dlhodobé gastrointestinálne ťažkosti a rýchly úbytok hmotnosti počas liečby agonistom receptora GLP-1 môžu vyčerpať zásoby tiamínu. Semaglutid pritom podľa dostupných údajov nie je priamym neurotoxínom. Rozhoduje včasné rozpoznanie rizikovej situácie a bezodkladné parenterálne podanie tiamínu.</em></p>
 
-<p>Semaglutid patrí medzi agonisty receptora pre glukagónu podobný peptid 1 (GLP-1 RA). Používa sa pri diabetes mellitus 2. typu a pri obezite. S rozširujúcim sa používaním sa dostávajú do popredia aj zriedkavé komplikácie, ktoré nemusia byť priamym toxickým účinkom lieku, ale môžu vzniknúť sekundárne — v dôsledku výrazného potlačenia apetítu, vracania, obmedzeného príjmu potravy a rýchleho poklesu telesnej hmotnosti.</p>
+<p>Semaglutid patrí medzi agonisty receptora pre glukagónu podobný peptid 1 (GLP-1 RA). Používa sa pri diabetes mellitus 2. typu a pri obezite. S rozširujúcim sa používaním sa dostávajú do popredia aj zriedkavé komplikácie, ktoré nemusia byť priamym toxickým účinkom lieku, ale môžu vzniknúť sekundárne, v dôsledku výrazného potlačenia apetítu, vracania, obmedzeného príjmu potravy a rýchleho poklesu telesnej hmotnosti.</p>
 
 <p>Systematický prehľad publikovaný v júli 2026 identifikoval šesť kazuistík Wernickeho encefalopatie u pacientov liečených semaglutidom pre obezitu. Nezávisle od neho bola na kongrese AACE 2026 prezentovaná analýza spontánnych hlásení, ktorá pre túto dvojicu našla výrazný disproporcionálny signál. Ide o klinicky relevantné upozornenie, nie však o dôkaz, že semaglutid sám osebe priamo poškodzuje mozog.</p>
 
@@ -54,7 +54,7 @@ $articles[] = [
 
 <p>Janice Bidesie a Erik Oudman systematicky prehľadali databázy PubMed, Embase, CINAHL a Scopus podľa metodiky PRISMA. Zaradili kazuistiky pacientov, ktorým bol semaglutid predpísaný na liečbu obezity a u ktorých klinický obraz zodpovedal Wernickeho encefalopatii.</p>
 
-<p>Identifikovaných bolo iba <strong>šesť prípadov</strong> — štyri ženy a dvaja muži. Priemerný vek bol 47,2 roka a semaglutid sa pred rozvojom encefalopatie užíval v priemere 4,9 mesiaca.</p>
+<p>Identifikovaných bolo iba <strong>šesť prípadov</strong>: štyri ženy a dvaja muži. Priemerný vek bol 47,2 roka a semaglutid sa pred rozvojom encefalopatie užíval v priemere 4,9 mesiaca.</p>
 
 <p>Neurologickému zhoršeniu predchádzali najmä:</p>
 
@@ -87,7 +87,7 @@ $articles[] = [
 
 <h2>Nezávislý farmakovigilančný signál</h2>
 
-<p>Kazuistický prehľad nezostal osamotený. Na kongrese American Association of Clinical Endocrinology v apríli 2026 bola prezentovaná analýza, ktorá spojila systematický prehľad publikovaných prípadov s hláseniami z databázy Svetovej zdravotníckej organizácie VigiBase. Okrem troch publikovaných klinických správ zahrnula <strong>18 hlásení z VigiBase</strong>.</p>
+<p>Na kongrese American Association of Clinical Endocrinology v apríli 2026 bola prezentovaná analýza, ktorá spojila systematický prehľad publikovaných prípadov s hláseniami z databázy Svetovej zdravotníckej organizácie VigiBase. Okrem troch publikovaných klinických správ zahrnula <strong>18 hlásení z VigiBase</strong>.</p>
 
 <p>Vypočítané pomery šancí hlásenia (reporting odds ratio, ROR) boli:</p>
 
@@ -96,7 +96,7 @@ $articles[] = [
   <li>tirzepatid 11,4 (95 % interval spoľahlivosti 2,8–45,8).</li>
 </ul>
 
-<p>Analýza opísala „trojitý zásah“ (<em>triple hit</em>): iatrogénnu gastroparézu, pretrvávajúce vracanie a rýchly úbytok hmotnosti rýchlosťou 3,5 až 13,3 kg mesačne — v jednom prípade 30 kg za 12 týždňov. Medián nástupu bol 3 až 6 mesiacov od začatia liečby alebo od zvýšenia dávky, čo dobre zodpovedá priemerným 4,9 mesiaca v prehľade kazuistík.</p>
+<p>Analýza opísala „trojitý zásah“ (<em>triple hit</em>): iatrogénnu gastroparézu, pretrvávajúce vracanie a rýchly úbytok hmotnosti rýchlosťou 3,5 až 13,3 kg mesačne – v jednom prípade 30 kg za 12 týždňov. Medián nástupu bol 3 až 6 mesiacov od začatia liečby alebo od zvýšenia dávky, čo dobre zodpovedá priemerným 4,9 mesiaca v prehľade kazuistík.</p>
 
 <p>Tieto čísla treba čítať správne. ROR je mierou <strong>disproporcionality hlásení</strong>, nie incidencie ani relatívneho rizika. Databázy spontánnych hlásení nemajú menovateľa, trpia podhlásením aj mediálne podmieneným nadhlásením a nedokazujú kauzalitu. Zmysluplné je preto najmä porovnanie oboch liečiv navzájom: hodnota pre tirzepatid nie je nižšia než pre semaglutid, čo skôr podporuje mechanizmus <strong>spoločný pre celú triedu</strong> než účinok špecifický pre jednu molekulu. Široký interval spoľahlivosti pri tirzepatide zároveň pripomína, že ide o veľmi malé počty.</p>
 
@@ -106,9 +106,9 @@ $articles[] = [
 
 <p><strong>semaglutid → potlačenie apetítu a gastrointestinálne nežiaduce účinky → obmedzený príjem potravy a rýchle chudnutie → vyčerpanie zásob tiamínu → Wernickeho encefalopatia.</strong></p>
 
-<p>Zásoby tiamínu v organizme sú malé — rádovo 25–30 mg — a pri výrazne zníženom príjme sa môžu vyčerpať v priebehu niekoľkých týždňov. Riziko zvyšuje pretrvávajúce vracanie, malnutrícia, malabsorpcia alebo iné ochorenie narúšajúce príjem a využitie živín.</p>
+<p>Zásoby tiamínu v organizme sú malé, rádovo 25–30 mg, a pri výrazne zníženom príjme sa môžu vyčerpať v priebehu niekoľkých týždňov. Riziko zvyšuje pretrvávajúce vracanie, malnutrícia, malabsorpcia alebo iné ochorenie narúšajúce príjem a využitie živín.</p>
 
-<p>Závažný nutričný deficit pritom môže vzniknúť aj u človeka s obezitou. Vysoký index telesnej hmotnosti nevylučuje nedostatok vitamínov ani stopových prvkov — a práve u týchto pacientov sa naň myslí najmenej.</p>
+<p>Závažný nutričný deficit pritom môže vzniknúť aj u človeka s obezitou. Vysoký index telesnej hmotnosti nevylučuje nedostatok vitamínov ani stopových prvkov a práve u týchto pacientov sa naň myslí najmenej.</p>
 
 <h2>Asociácia nie je dôkazom príčinnej súvislosti</h2>
 
@@ -124,7 +124,7 @@ $articles[] = [
   <li>či je riziko špecifické pre semaglutid, alebo spoločné pre všetky situácie s dlhodobým vracaním a rýchlym chudnutím.</li>
 </ul>
 
-<p>Kazuistiky podliehajú publikačnému a selekčnému skresleniu: závažné a nezvyčajné prípady sa publikujú s väčšou pravdepodobnosťou než mierne alebo včas rozpoznané. Práve to vysvetľuje nápadný rozdiel vo výsledkoch — v publikovaných kazuistikách skončili štyria zo šiestich pacientov s Korsakovovým syndrómom, kým v analýze hlásení malo kognitívny deficit pri prepustení približne 20 % pacientov. Skutočná prognóza pri včasnej liečbe je teda pravdepodobne lepšia, než naznačuje samotný kazuistický prehľad.</p>
+<p>Kazuistiky podliehajú publikačnému a selekčnému skresleniu: závažné a nezvyčajné prípady sa publikujú s väčšou pravdepodobnosťou než mierne alebo včas rozpoznané. Práve to vysvetľuje nápadný rozdiel vo výsledkoch – v publikovaných kazuistikách skončili štyria zo šiestich pacientov s Korsakovovým syndrómom, kým v analýze hlásení malo kognitívny deficit pri prepustení približne 20 % pacientov. Skutočná prognóza pri včasnej liečbe je teda pravdepodobne lepšia, než naznačuje samotný kazuistický prehľad.</p>
 
 <p>U piatich zo šiestich pacientov boli navyše prítomné pridružené ochorenia a nie vždy bolo možné jednoznačne oddeliť účinky lieku, základného ochorenia, ďalšej farmakoterapie a nutričného deficitu.</p>
 
@@ -143,11 +143,11 @@ $articles[] = [
   <li>zmätenosť, apatia, porucha pozornosti alebo pamäti.</li>
 </ul>
 
-<p>Nešpecifická úvodná symptomatológia sa ľahko nesprávne pripíše dehydratácii, metabolickej encefalopatii, psychickému ochoreniu alebo bežným nežiaducim účinkom liečby. Osobitne zradné je, že sama liečba obezity poskytuje pohodlné vysvetlenie pre nechutenstvo aj chudnutie — teda presne pre tie príznaky, ktoré mali vzbudiť podozrenie.</p>
+<p>Nešpecifická úvodná symptomatológia sa ľahko nesprávne pripíše dehydratácii, metabolickej encefalopatii, psychickému ochoreniu alebo bežným nežiaducim účinkom liečby. Osobitne zradné je, že sama liečba obezity poskytuje pohodlné vysvetlenie pre nechutenstvo aj chudnutie – teda presne pre tie príznaky, ktoré mali vzbudiť podozrenie.</p>
 
 <h2>Diagnostika a liečba</h2>
 
-<p>Wernickeho encefalopatia je predovšetkým klinická diagnóza. Normálna koncentrácia tiamínu v krvi ju nemusí spoľahlivo vylúčiť a výsledok laboratórneho vyšetrenia nesmie oddialiť liečbu. Ani normálny nález na magnetickej rezonancii diagnózu úplne nevylučuje — senzitivita MR je pri tomto ochorení nízka, hoci jej špecificita je vysoká.</p>
+<p>Wernickeho encefalopatia je predovšetkým klinická diagnóza. Normálna koncentrácia tiamínu v krvi ju nemusí spoľahlivo vylúčiť a výsledok laboratórneho vyšetrenia nesmie oddialiť liečbu. Ani normálny nález na magnetickej rezonancii diagnózu úplne nevylučuje – senzitivita MR je pri tomto ochorení nízka, hoci jej špecificita je vysoká.</p>
 
 <p>Pri dôvodnom podozrení je indikované bezodkladné <strong>parenterálne podanie tiamínu</strong>, ideálne ešte pred podaním glukózy alebo súbežne s ňou; podanie sacharidov bez tiamínu môže deficit prehĺbiť a stav zhoršiť. Perorálny tiamín nemožno pri manifestnej encefalopatii považovať za rovnocennú úvodnú liečbu, pretože jeho absorpcia je saturovateľná a pri malabsorpcii aj vracaní neistá.</p>
 
@@ -158,9 +158,9 @@ $articles[] = [
   <li><strong>Novšie protokoly a práce autorov prehľadu</strong> používajú 500 mg intravenózne trikrát denne; v analýze hlásení sa uvádzajú vysoké dávky 500–1500 mg denne.</li>
 </ul>
 
-<p>Hranica menej ako 500 mg parenterálneho tiamínu v úvodnej dávke, ktorú autori prehľadu označili za suboptimálnu liečbu, teda nie je svojvoľná: vychádza z ich vlastného predchádzajúceho systematického prehľadu Wernickeho encefalopatie pri ochoreniach obličiek, kde dávka 500 mg trikrát denne často viedla k úplnému zotaveniu, zatiaľ čo Korsakovov syndróm sa vyskytol u pacientov liečených nízkymi dávkami. Nejde však o univerzálne prijatú dávkovaciu normu — liečba sa má riadiť miestnym protokolom a klinickou odpoveďou a v žiadnom prípade sa nesmie odkladať.</p>
+<p>Hranica menej ako 500 mg parenterálneho tiamínu v úvodnej dávke, ktorú autori prehľadu označili za suboptimálnu liečbu, teda nie je svojvoľná: vychádza z ich vlastného predchádzajúceho systematického prehľadu Wernickeho encefalopatie pri ochoreniach obličiek, kde dávka 500 mg trikrát denne často viedla k úplnému zotaveniu, zatiaľ čo Korsakovov syndróm sa vyskytol u pacientov liečených nízkymi dávkami. Nejde však o univerzálne prijatú dávkovaciu normu – liečba sa má riadiť miestnym protokolom a klinickou odpoveďou a v žiadnom prípade sa nesmie odkladať.</p>
 
-<p>Hodnotiť a korigovať treba aj hypomagneziémiu: magnézium je kofaktorom premeny tiamínu na tiamínpyrofosfát, a pri jeho nedostatku môže byť odpoveď na substitúciu tiamínu neúplná. Myslieť treba aj na súčasný deficit ďalších vitamínov skupiny B a na riziko realimentačného (refeeding) syndrómu.</p>
+<p>Hodnotiť a korigovať treba aj hypomagneziémiu: magnézium je kofaktorom premeny tiamínu na tiamínpyrofosfát a pri jeho nedostatku môže byť odpoveď na substitúciu tiamínu neúplná. Myslieť treba aj na súčasný deficit ďalších vitamínov skupiny B a na riziko realimentačného (refeeding) syndrómu.</p>
 
 <h2>Význam pre nefrologickú prax</h2>
 
@@ -175,11 +175,11 @@ $articles[] = [
   <li>nedostatku vitamínov vrátane tiamínu.</li>
 </ul>
 
-<p>Nefrologický pacient je pritom rizikovejší už východiskovo. Systematický prehľad Wernickeho encefalopatie pri akútnom aj chronickej chorobe obličiek identifikoval 46 publikovaných prípadov; typickými prodrómami boli nechutenstvo, vracanie, úbytok hmotnosti, bolesti brucha a hnačka — teda presne to spektrum ťažkostí, ktoré sa pri liečbe agonistom GLP-1 očakáva ako „bežný“ nežiaduci účinok.</p>
+<p>Nefrologický pacient je pritom rizikovejší už východiskovo. Systematický prehľad Wernickeho encefalopatie pri akútnom aj chronickom ochorení obličiek identifikoval 46 publikovaných prípadov; typickými prodrómami boli nechutenstvo, vracanie, úbytok hmotnosti, bolesti brucha a hnačka – teda presne to spektrum ťažkostí, ktoré sa pri liečbe agonistom GLP-1 očakáva ako „bežný“ nežiaduci účinok.</p>
 
 <p>Osobitne zraniteľní sú dialyzovaní pacienti. Tiamín je vodorozpustný vitamín s nízkou molekulovou hmotnosťou a minimálnou väzbou na bielkoviny, preto sa odstraňuje do dialyzátu. V kombinácii s nechutenstvom, diétnymi obmedzeniami a liečbou diuretikami vzniká reálne riziko deficitu aj bez akéhokoľvek lieku na chudnutie.</p>
 
-<p>U pacienta s pokročilou chronickou chorobou obličiek sa zmätenosť ľahko automaticky pripíše urémii, elektrolytovej poruche, dialyzačnému dysekvilibračnému syndrómu alebo liekom. Wernickeho encefalopatia musí zostať v diferenciálnej diagnostike vždy, keď neurologickým príznakom predchádzalo vracanie, nechutenstvo alebo rýchle chudnutie. Podanie tiamínu je pritom lacné, bezpečné a nevyžaduje úpravu dávky podľa funkcie obličiek — pomer prínosu a rizika je preto pri dôvodnom podozrení jednoznačný.</p>
+<p>U pacienta s pokročilou chronickou chorobou obličiek sa zmätenosť ľahko automaticky pripíše urémii, elektrolytovej poruche, dialyzačnému dysekvilibračnému syndrómu alebo liekom. Wernickeho encefalopatia musí zostať v diferenciálnej diagnostike vždy, keď neurologickým príznakom predchádzalo vracanie, nechutenstvo alebo rýchle chudnutie. Podanie tiamínu je pritom lacné, bezpečné a nevyžaduje úpravu dávky podľa funkcie obličiek – pomer prínosu a rizika je preto pri dôvodnom podozrení jednoznačný.</p>
 
 <h2>Praktické závery</h2>
 
@@ -191,19 +191,19 @@ $articles[] = [
   <li><strong>Pri neurologických príznakoch treba na deficit tiamínu myslieť včas</strong> a použiť Caineove kritériá namiesto čakania na kompletnú triádu.</li>
   <li><strong>Pri dôvodnom podozrení sa parenterálny tiamín podáva ihneď</strong>, bez čakania na laboratórne alebo zobrazovacie potvrdenie a pred podaním glukózy.</li>
   <li><strong>Signál sa netýka len semaglutidu.</strong> Rovnaká pozornosť patrí tirzepatidu a ďalším liekom triedy, keďže mechanizmus je nutričný, nie molekulovo špecifický.</li>
-  <li><strong>Potrebné sú populačné farmakovigilančné štúdie</strong> s menovateľom — kazuistiky ani analýzy spontánnych hlásení neumožňujú vyčísliť riziko ani dokázať kauzalitu.</li>
+  <li><strong>Potrebné sú populačné farmakovigilančné štúdie</strong> s menovateľom – kazuistiky ani analýzy spontánnych hlásení neumožňujú vyčísliť riziko ani dokázať kauzalitu.</li>
 </ol>
 
 <h2>Záver</h2>
 
-<p>Dostupné údaje naznačujú možnosť Wernickeho encefalopatie pri liečbe semaglutidom, ak je liečba komplikovaná dlhodobým vracaním, závažným nechutenstvom, výrazne obmedzeným príjmom potravy a rýchlym chudnutím. Ide o zriedkavý, ale potenciálne smrteľný — a pritom plne liečiteľný — stav.</p>
+<p>Dostupné údaje naznačujú možnosť Wernickeho encefalopatie pri liečbe semaglutidom, ak je liečba komplikovaná dlhodobým vracaním, závažným nechutenstvom, výrazne obmedzeným príjmom potravy a rýchlym chudnutím. Ide o zriedkavý, potenciálne smrteľný, a pritom plne liečiteľný stav.</p>
 
 <p>Najdôležitejším posolstvom nie je obava zo semaglutidu ako takého, ale včasné rozpoznanie rizikovej klinickej situácie. Oneskorené podanie tiamínu môže viesť k nezvratnému Korsakovovmu syndrómu alebo k smrti, zatiaľ čo empirická parenterálna liečba pri dôvodnom podozrení je lacná, bezpečná a časovo kritická.</p>
 
 <h3>Súvisiace články</h3>
 
 <ul>
-  <li><a href="article.php?slug=glp1-ischemicka-opticka-neuropatia-naion">GLP-1 a nearteritická ischemická optická neuropatia</a> — ďalší zriedkavý bezpečnostný signál triedy.</li>
+  <li><a href="article.php?slug=glp1-ischemicka-opticka-neuropatia-naion">GLP-1 a nearteritická ischemická optická neuropatia</a> – ďalší zriedkavý bezpečnostný signál triedy.</li>
   <li><a href="article.php?slug=farmakologicka-liecba-obezity-pokrocile-ckd-dialyza">Farmakologická liečba obezity pri pokročilej CKD a dialýze</a>.</li>
   <li><a href="article.php?slug=semaglutid-ckd-porovnanie-glp1-realna-prax">Semaglutid pri CKD v reálnej praxi</a>.</li>
 </ul>
@@ -222,7 +222,7 @@ $articles[] = [
   <li><strong>Medscape Medical News.</strong> <em>Semaglutide Linked to Rare Brain Illness.</em> 14. júla 2026. <a href="https://www.medscape.com/viewarticle/semaglutide-linked-rare-brain-illness-2026a1000npa" target="_blank" rel="noopener noreferrer">Medscape</a>.</li>
 </ol>
 
-<p><em><strong>Poznámka k dôkazom:</strong> Hlavným spracovaným zdrojom je systematický prehľad Bidesieovej a Oudmana; jeho bibliografické údaje a kľúčové čísla (šesť prípadov, štyri ženy a dvaja muži, priemerný vek 47,2 roka, priemerné trvanie liečby 4,9 mesiaca, jedno úmrtie, štyria pacienti s Korsakovovým syndrómom, hranica &lt; 500 mg parenterálneho tiamínu) boli overené v PubMed a Europe PMC. Farmakovigilančné údaje pochádzajú z nezávislej analýzy prezentovanej na kongrese AACE 2026 — ide o konferenčný abstrakt, teda o predbežné údaje bez plnej recenzie. Nefrologická časť vychádza zo systematického prehľadu Wernickeho encefalopatie pri ochoreniach obličiek a z prehľadu vodorozpustných vitamínov pri dialýze. Podrobné frekvencie jednotlivých príznakov sú prevzaté z plného textu prehľadu v podobe, v akej ich referovala odborná tlač.</em></p>
+<p><em><strong>Poznámka k dôkazom:</strong> Hlavným spracovaným zdrojom je systematický prehľad Bidesieovej a Oudmana; jeho bibliografické údaje a kľúčové čísla (šesť prípadov, štyri ženy a dvaja muži, priemerný vek 47,2 roka, priemerné trvanie liečby 4,9 mesiaca, jedno úmrtie, štyria pacienti s Korsakovovým syndrómom, hranica &lt; 500 mg parenterálneho tiamínu) boli overené v PubMed a Europe PMC. Farmakovigilančné údaje pochádzajú z nezávislej analýzy prezentovanej na kongrese AACE 2026 – ide o konferenčný abstrakt, teda o predbežné údaje bez plnej recenzie. Nefrologická časť vychádza zo systematického prehľadu Wernickeho encefalopatie pri ochoreniach obličiek a z prehľadu vodorozpustných vitamínov pri dialýze. Podrobné frekvencie jednotlivých príznakov sú prevzaté z plného textu prehľadu v podobe, v akej ich referovala odborná tlač.</em></p>
 HTML,
 ];
 

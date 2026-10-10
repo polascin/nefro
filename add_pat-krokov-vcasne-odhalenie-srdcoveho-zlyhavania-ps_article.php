@@ -30,13 +30,13 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Päťkrokový rámec včasného záchytu srdcového zlyhávania v primárnej starostlivosti: anamnéza, natriuretické peptidy s výhradou pri CKD, rizikové skupiny, včasná echokardiografia a komorbidity.',
     'content'      => <<<'HTML'
-<figure><a href="img/pat-krokov-vcasne-odhalenie-srdcoveho-zlyhavania-ps.webp" rel="noopener noreferrer" target="_blank"><img src="img/pat-krokov-vcasne-odhalenie-srdcoveho-zlyhavania-ps.webp" alt="Päť svetelných schodov stúpajúcich tmou k srdcu, ktoré je zachytené vo včasnom štádiu" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Hodnota rámca je v poradí krokov — práve ono robí nález viditeľným dosť skoro na to, aby sa dalo konať.</figcaption></figure>
+<figure><a href="img/pat-krokov-vcasne-odhalenie-srdcoveho-zlyhavania-ps.webp" rel="noopener noreferrer" target="_blank"><img src="img/pat-krokov-vcasne-odhalenie-srdcoveho-zlyhavania-ps.webp" alt="Päť svetelných schodov stúpajúcich tmou k srdcu, ktoré je zachytené vo včasnom štádiu" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Hodnota rámca je v poradí krokov – práve ono robí nález viditeľným dosť skoro na to, aby sa dalo konať.</figcaption></figure>
 
-<p class="article-dek"><em>Srdcové zlyhávanie sa často rozvíja postupne a v primárnej starostlivosti ostáva dlho nediagnostikované — najmä fenotyp so zachovanou ejekčnou frakciou. Tento článok je slovenské spracovanie praktického päťkrokového rámca z Medscape pre včasný záchyt. Ide o diagnostickú triáž pri podozrení na srdcové zlyhávanie, nie o dôkaz príčiny ťažkostí. Prahové hodnoty natriuretických peptidov sú overené proti otvoreným zdrojom; pri chronickej chorobe obličiek žiadny univerzálny prah nestačí.</em></p>
+<p class="article-dek"><em>Srdcové zlyhávanie sa často rozvíja postupne a v primárnej starostlivosti ostáva dlho nediagnostikované – najmä fenotyp so zachovanou ejekčnou frakciou. Tento článok je slovenské spracovanie praktického päťkrokového rámca z Medscape pre včasný záchyt. Ide o diagnostickú triáž pri podozrení na srdcové zlyhávanie, nie o dôkaz príčiny ťažkostí. Prahové hodnoty natriuretických peptidov sú overené proti otvoreným zdrojom; pri chronickej chorobe obličiek žiadny univerzálny prah nestačí.</em></p>
 
 <p>Srdcové zlyhávanie (HF, z angl. <em>heart failure</em>) často vzniká pozvoľna. Mnohí pacienti si ho uvedomia až vtedy, keď je funkcia srdca už výrazne zhoršená alebo keď sa opakujú epizódy dekompenzácie. Včasná diagnóza pritom umožňuje skôr začať liečbu podľa odporúčaní, zlepšiť kvalitu života a znížiť riziko hospitalizácií.</p>
 
-<p>Nasledujúcich päť krokov pomáha lekárovi v primárnej starostlivosti — a rovnako nefrológovi pri pacientovi s chronickou chorobou obličiek (CKD) — spoznať včasné HF a nasmerovať ďalšie vyšetrenia. Samotný laboratórny výsledok ani jeden príznak diagnózu nenesú.</p>
+<p>Nasledujúcich päť krokov pomáha lekárovi v primárnej starostlivosti – a rovnako nefrológovi pri pacientovi s chronickou chorobou obličiek (CKD) – spoznať včasné HF a nasmerovať ďalšie vyšetrenia. Diagnózu nestanoví samotný laboratórny výsledok ani jediný príznak.</p>
 
 <h2>Krok 1: Cielená anamnéza, nielen „únava z veku“</h2>
 
@@ -52,15 +52,15 @@ $articles[] = [
   <li>opakované respiračné infekcie alebo obmedzenie dennej pohybovej aktivity.</li>
 </ul>
 
-<p>Pri srdcovom zlyhávaní so zachovanou ejekčnou frakciou (HFpEF) bývajú ťažkosti postupné a dlho nešpecifické. Usmernenia Európskej kardiologickej spoločnosti (ESC) odporúčajú hodnotiť typické príznaky spolu s klinickým vyšetrením a biomarkermi — nie izolovane.</p>
+<p>Pri srdcovom zlyhávaní so zachovanou ejekčnou frakciou (HFpEF) bývajú ťažkosti postupné a dlho nešpecifické. Usmernenia Európskej kardiologickej spoločnosti (ESC) odporúčajú hodnotiť typické príznaky spolu s klinickým vyšetrením a biomarkermi – nie izolovane.</p>
 
-<h2>Krok 2: BNP alebo NT-proBNP — na vylúčenie, nie ako jediný dôkaz</h2>
+<h2>Krok 2: BNP alebo NT-proBNP – na vylúčenie, nie ako jediný dôkaz</h2>
 
-<p>Natriuretické peptidy patria k najužitočnejším laboratórnym nástrojom pri podozrení na chronické HF. ESC odporúča stanoviť B-typ natriuretický peptid (BNP) alebo N-terminálny fragment prohormónu B-typu natriuretického peptidu (NT-proBNP), len čo je chronické HF v hre.</p>
+<p>Natriuretické peptidy patria k najužitočnejším laboratórnym nástrojom pri podozrení na chronické HF. ESC odporúča stanoviť B-typ natriuretický peptid (BNP) alebo N-terminálny fragment prohormónu B-typu natriuretického peptidu (NT-proBNP) už pri podozrení na chronické HF.</p>
 
-<p><strong>Veľmi nízke hodnoty robia klinicky významné HF nepravdepodobným</strong> a šetria zbytočné odoslania. Zvýšené koncentrácie odôvodňujú promptnú ďalšiu diagnostiku, predovšetkým echokardiografiu. Výsledok treba čítať v kontexte veku, obličiek, srdcového rytmu, obezity a klinického obrazu — nie ako kauzálny dôkaz.</p>
+<p><strong>Veľmi nízke hodnoty robia klinicky významné HF nepravdepodobným</strong> a šetria zbytočné odoslania. Zvýšené koncentrácie odôvodňujú promptnú ďalšiu diagnostiku, predovšetkým echokardiografiu. Výsledok treba čítať v kontexte veku, obličiek, srdcového rytmu, obezity a klinického obrazu – nie ako kauzálny dôkaz.</p>
 
-<p>Cielená aktualizácia ESC z roku 2023 (McDonagh a spol.) zmenila najmä liečbu (inhibítory sodíkovo-glukózového kotransportéra 2, SGLT2, pri HFpEF a pri HF s mierne zníženou ejekčnou frakciou) a <strong>diagnostické prahy natriuretických peptidov nemenila</strong>. V auguste 2026 ESC vydala nové usmernenie pre manažment HF (Køber, Adamo a spol.), ktoré 2021 dokument nahrádza. Tabuľkové prahy nižšie sú tie, ktoré sú v otvorených zdrojoch overiteľné z ESC 2021 a z konsenzu Heart Failure Association (HFA) ESC 2023; plný diagnostický algoritmus dokumentu 2026 tu necitujeme po jednotlivých číslach, pretože ako otvorený plný text nebol pri príprave článku k dispozícii.</p>
+<p>Cielená aktualizácia ESC z roku 2023 (McDonagh a spol.) zmenila najmä liečbu (inhibítory sodíkovo-glukózového kotransportéra 2, SGLT2, pri HFpEF a pri HF s mierne zníženou ejekčnou frakciou) a <strong>diagnostické prahy natriuretických peptidov nemenila</strong>. V auguste 2026 ESC vydala nové usmernenie pre manažment HF (Køber, Adamo a spol.), ktoré nahrádza dokument z roku 2021. Prahy v tabuľke nižšie sú overiteľné v otvorených zdrojoch z ESC 2021 a z konsenzu Heart Failure Association (HFA) ESC 2023; plný diagnostický algoritmus dokumentu 2026 tu necitujeme po jednotlivých číslach, pretože ako otvorený plný text nebol pri príprave článku k dispozícii.</p>
 
 <div class="table-responsive" role="region" aria-label="Prahové hodnoty natriuretických peptidov podľa ESC 2021" tabindex="0">
 <table>
@@ -83,7 +83,7 @@ $articles[] = [
       <th scope="row">Akútne / dekompenzácia (ESC 2021)</th>
       <td>&lt;100 pg/ml</td>
       <td>&lt;300 pg/ml</td>
-      <td>Ak je dostupný aj midregionálny pro-atriálny natriuretický peptid (MR-proANP), prah na vylúčenie je &lt;120 pg/ml. Akútne prahy sú vyššie ako ambulantné — nesmú sa zamieňať</td>
+      <td>Ak je dostupný aj midregionálny pro-atriálny natriuretický peptid (MR-proANP), prah na vylúčenie je &lt;120 pg/ml. Akútne prahy sú vyššie ako ambulantné – nesmú sa zamieňať</td>
     </tr>
     <tr>
       <th scope="row">HFpEF: sínusový rytmus vs. fibrilácia predsiení (ESC 2021)</th>
@@ -95,20 +95,20 @@ $articles[] = [
 </table>
 </div>
 
-<p>Jednotka pg/ml je pri týchto peptidoch totožná s ng/l. Britské usmernenie NICE pre chronické HF používa vyšší odosielací prah NT-proBNP (≥400 ng/l) — to nie je prah ESC a na Slovensku sa ním neriadime ako náhradou ESC 2021.</p>
+<p>Jednotka pg/ml je pri týchto peptidoch totožná s ng/l. Britské usmernenie NICE pre chronické HF používa vyšší odosielací prah NT-proBNP (≥400 ng/l) – to nie je prah ESC a na Slovensku sa ním neriadime ako náhradou ESC 2021.</p>
 
-<p>Konsenzus HFA ESC z roku 2023 (Bayes-Genis a spol.), na ktorý odkazuje aj spracovaný článok Medscape, navrhuje v ambulancii <strong>vekovo prispôsobené prahy na „rule-in“</strong> NT-proBNP: ≥125 pg/ml pred 50. rokom, ≥250 pg/ml vo veku 50–75 rokov a ≥500 pg/ml nad 75 rokov. Tieto čísla <strong>neznižujú</strong> klasický vylučovací prah 125 pg/ml u mladších; pri starších zvyšujú špecificitu za cenu citlivosti. Pri obezite HFA navrhuje <strong>znížiť</strong> prah NT-proBNP o približne 25 % pri indexe telesnej hmotnosti (BMI) 30,0–34,9 kg/m<sup>2</sup>, o 30 % pri 35,0–39,9 kg/m<sup>2</sup> a o 40 % pri BMI ≥40 kg/m<sup>2</sup>. Presné číselné korekcie pre renálnu insuficienciu a fibriláciu predsiení v tomto konsenze tu neuvádzame, ak nie sú v otvorenom texte jednoznačne tabulované — HFA ich však explicitne žiada zohľadniť.</p>
+<p>Konsenzus HFA ESC z roku 2023 (Bayes-Genis a spol.), na ktorý odkazuje aj spracovaný článok Medscape, navrhuje v ambulancii <strong>vekovo prispôsobené prahy na „rule-in“</strong> NT-proBNP: ≥125 pg/ml pred 50. rokom, ≥250 pg/ml vo veku 50–75 rokov a ≥500 pg/ml nad 75 rokov. Tieto čísla <strong>neznižujú</strong> klasický vylučovací prah 125 pg/ml u mladších; pri starších zvyšujú špecificitu za cenu citlivosti. Pri obezite HFA navrhuje <strong>znížiť</strong> prah NT-proBNP o približne 25 % pri indexe telesnej hmotnosti (BMI) 30,0–34,9 kg/m<sup>2</sup>, o 30 % pri 35,0–39,9 kg/m<sup>2</sup> a o 40 % pri BMI ≥40 kg/m<sup>2</sup>. Presné číselné korekcie pre renálnu insuficienciu a fibriláciu predsiení v tomto konsenze tu neuvádzame, ak nie sú v otvorenom texte jednoznačne tabulované – HFA ich však explicitne žiada zohľadniť.</p>
 
 <h3>Prečo pri CKD nestačí jeden univerzálny prah</h3>
 
 <p>Pre nefrologickú ambulanciu je to kľúčová výhrada. CKD natriuretické peptidy <strong>zvyšuje</strong>: znížený renálny klírens, retencia sodíka a vody a časté sprievodné faktory (hypertenzia, diabetes, objemové preťaženie). Všeobecné ambulantné prahy 35 / 125 pg/ml <strong>nie sú CKD-špecifické</strong>. Konferencia KDIGO o chorobe obličiek a srdcovom zlyhávaní preto žiada prahy prispôsobené CKD. Prakticky:</p>
 
 <ul>
-  <li>skutočne nízka hodnota stále pomáha HF <strong>vylúčiť</strong> — aj pri CKD;</li>
+  <li>skutočne nízka hodnota stále pomáha HF <strong>vylúčiť</strong> – aj pri CKD;</li>
   <li>zvýšená hodnota diagnózu <strong>nepotvrdzuje</strong>: môže odrážať znížený klírens, objem, fibriláciu predsiení alebo vek;</li>
   <li>pri G4–G5 a u dialyzovaných je špecificita slabá; užitočnejšie sú dôkazy zvýšených plniacich tlakov (echokardiografia, vo vybraných situáciách invazívna hemodynamika) než jeden laboratórny prah;</li>
   <li>NT-proBNP závisí od renálneho klírensu viac ako BNP; niektoré konsenzy pre primárnu starostlivosť preto pri poruche obličiek preferujú BNP, ale ESC 2021 používa oba peptidy s rovnakou logikou vylúčenia;</li>
-  <li>eurázijsko-turecký konsenzus pre primárnu starostlivosť (PMC11881534) meranie natriuretických peptidov u dialyzovaných <strong>neodporúča</strong> — to nie je zákaz ESC, ale výstižne upozorňuje, že pri dialýze je interpretácia veľmi obmedzená a kolíše s objemom.</li>
+  <li>eurázijsko-turecký konsenzus pre primárnu starostlivosť (PMC11881534) meranie natriuretických peptidov u dialyzovaných <strong>neodporúča</strong> – to nie je zákaz ESC, ale výstižne upozorňuje, že pri dialýze je interpretácia veľmi obmedzená a kolíše s objemom.</li>
 </ul>
 
 <p>Sekundárna analýza TOPCAT (Myhre a spol., <em>JAMA Cardiology</em> 2018) u HFpEF ukázala, že koncentrácie peptidov sú vyššie pri nižšej odhadovanej glomerulovej filtrácii (eGFR) a pri fibrilácii predsiení a nižšie pri vyššom BMI. Išlo o <strong>prognostický</strong> vzťah u už diagnostikovaného HFpEF, nie o odvodenie diagnostických prahov. Záver je však pre prax zhodný: jeden absolútny prah podhodnotí niektoré podskupiny (obezita) a nadhodnotí iné (CKD, fibrilácia predsiení).</p>
@@ -152,7 +152,7 @@ $articles[] = [
 </table>
 </div>
 
-<h2>Krok 3: Nesledujte každého rovnako — rizikové skupiny</h2>
+<h2>Krok 3: Nesledujte každého rovnako – rizikové skupiny</h2>
 
 <p>Nie každý pacient potrebuje cielené pátranie po HF. Zvýšenú pozornosť si zaslúžia ľudia s:</p>
 
@@ -171,7 +171,7 @@ $articles[] = [
 
 <h2>Krok 4: Echokardiografiu neodkladajte</h2>
 
-<p>Transthorakálna echokardiografia je <strong>kľúčové vyšetrenie</strong> na potvrdenie štrukturálnej alebo funkčnej abnormality srdca — pumpovacia funkcia, kinetika stien, chlopne, diastolická funkcia — a na odlíšenie HF so zníženou, mierne zníženou a zachovanou ejekčnou frakciou. V jazyku usmernení to nie je univerzálny „zlatý štandard“ v zmysle jediného dôkazu; diagnóza HF ostáva klinickým syndrómom, ktorý echo <strong>podporuje a spresňuje</strong>.</p>
+<p>Transthorakálna echokardiografia je <strong>kľúčové vyšetrenie</strong> na potvrdenie štrukturálnej alebo funkčnej abnormality srdca – pumpovacia funkcia, kinetika stien, chlopne, diastolická funkcia – a na odlíšenie HF so zníženou, mierne zníženou a zachovanou ejekčnou frakciou. V jazyku usmernení to nie je univerzálny „zlatý štandard“ v zmysle jediného dôkazu; diagnóza HF ostáva klinickým syndrómom, ktorý echo <strong>podporuje a spresňuje</strong>.</p>
 
 <p>ESC odporúča ponúknuť echokardiografiu <strong>čo najskôr</strong> pacientom s typickými príznakmi a zvýšeným BNP alebo NT-proBNP. Cieľom je stanoviť diagnózu ešte pred prvou dekompenzáciou. Pri pokročilej CKD a u hemodialyzovaných treba zobrazenie podľa možnosti plánovať na deň bez dialýzy; ľavokomorová hypertrofia je pri pokročilej CKD častá a sama osebe HF nediagnostikuje.</p>
 
@@ -191,11 +191,11 @@ $articles[] = [
 <h2>Čo z toho vyplýva v ambulancii</h2>
 
 <ol>
-  <li>Pýtajte sa na námahovú a nočnú dýchavicu, ortopnoe, opuchy a nevysvetlený nárast hmotnosti — nenechajte ich splynúť s vekom ani s „obvyklou“ CKD.</li>
+  <li>Pýtajte sa na námahovú a nočnú dýchavicu, ortopnoe, opuchy a nevysvetlený nárast hmotnosti – nenechajte ich splynúť s vekom ani s „obvyklou“ CKD.</li>
   <li>Pri podozrení stanovte BNP alebo NT-proBNP. Nízka hodnota HF spochybňuje; vysoká je dôvod na echo, nie na razantný záver.</li>
   <li>Pri CKD, fibrilácii predsiení, veku a obezite interpretujte peptid opatrne. Pri G4–G5 a dialýze nečakajte, že jeden prah rozhodne.</li>
   <li>Echokardiografiu pri typickej klinike a zvýšenom peptide neodkladajte.</li>
-  <li>Hľadajte HF v rizikových skupinách a vždy v kontexte komorbidít — ide o triáž, nie o dôkaz príčiny.</li>
+  <li>Hľadajte HF v rizikových skupinách a vždy v kontexte komorbidít – ide o triáž, nie o dôkaz príčiny.</li>
 </ol>
 
 <h2>Limitácie</h2>
@@ -205,7 +205,7 @@ $articles[] = [
 <h2>Súvisiace články</h2>
 
 <ul>
-  <li><a href="article.php?slug=srdcove-zlyhavanie-ckd-kdigo-kontroverzie-2026">Srdcové zlyhávanie a CKD: závery KDIGO konferencie</a> — prečo všeobecné prahy natriuretických peptidov nie sú CKD-špecifické.</li>
+  <li><a href="article.php?slug=srdcove-zlyhavanie-ckd-kdigo-kontroverzie-2026">Srdcové zlyhávanie a CKD: závery KDIGO konferencie</a> – prečo všeobecné prahy natriuretických peptidov nie sú CKD-špecifické.</li>
   <li><a href="article.php?slug=ckd-vznik-srdcoveho-zlyhavania-hfpef-svedsky-register">Chronická choroba obličiek a vznik srdcového zlyhávania: najsilnejšia väzba smeruje k HFpEF</a>.</li>
   <li><a href="article.php?slug=pohybova-aktivita-fibrilacia-predsieni-cmp-mortalita">Pohybová aktivita pri fibrilácii predsiení: nižšie riziko cievnej mozgovej príhody a úmrtia</a>.</li>
   <li><a href="article.php?slug=ckm-syndrom-stadia-skrining-liecba-usmernenie-2026">CKM syndróm: štádiá 0 až 4, skríning a liečba</a>.</li>
@@ -231,7 +231,7 @@ $articles[] = [
   <li><strong>Damman K, Ter Maaten JM, Mayne KJ, et al.</strong> <em>2026 ESC Guidelines for the management of cardiovascular disease and chronic kidney disease, in collaboration with the European Renal Association (ERA).</em> Eur Heart J. 2026. doi: 10.1093/eurheartj/ehag098. PMID 42661426. Súbežné usmernenie ESC/ERA z 28. augusta 2026; nie je spracovaným zdrojom tohto článku. <a href="https://doi.org/10.1093/eurheartj/ehag098" target="_blank" rel="noopener noreferrer">DOI</a>; <a href="https://pubmed.ncbi.nlm.nih.gov/42661426/" target="_blank" rel="noopener noreferrer">PubMed</a>.</li>
 </ol>
 
-<p><em><strong>Poznámka k dôkazom:</strong> Päť krokov (cielená anamnéza vrátane námahovej a nočnej dýchavice, ortopnoe, únavy, opuchov členkov, nevysvetleného nárastu hmotnosti a opakovaných respiračných infekcií; natriuretické peptidy; rizikové skupiny; včasná echokardiografia; komorbidity) je spracovaním verejne dostupného textu Medscape (autor Michael van den Heuvel). Autori ESC task force nie sú autormi spracovaného zdroja a vo widgete „Zúčastnení autori“ sa neuvádzajú. Ambulantné prahy BNP &lt;35 pg/ml a NT-proBNP &lt;125 pg/ml a akútne prahy BNP &lt;100 pg/ml a NT-proBNP &lt;300 pg/ml sú z ESC 2021 a zhodne ich cituje PMC11881534. Doplnkové prahy pri HFpEF podľa rytmu (125 / 365 a 35 / 105 pg/ml) sú z ESC 2021. Vekové prahy 125 / 250 / 500 pg/ml a percentuálne zníženie prahu pri obezite sú z konsenzu HFA 2023 (PMID 37712339) a z otvorenej validačnej práce Taylorovej a spol. Analýza TOPCAT (PMID 30140899) je prognostická, nie diagnostická. Plný text ESC 2026 (PMID 42661420) nebol pri príprave čítaný ako otvorený dokument — preto sa z neho neodvádzajú nové prahy.</em></p>
+<p><em><strong>Poznámka k dôkazom:</strong> Päť krokov (cielená anamnéza vrátane námahovej a nočnej dýchavice, ortopnoe, únavy, opuchov členkov, nevysvetleného nárastu hmotnosti a opakovaných respiračných infekcií; natriuretické peptidy; rizikové skupiny; včasná echokardiografia; komorbidity) je spracovaním verejne dostupného textu Medscape (autor Michael van den Heuvel). Autori ESC task force nie sú autormi spracovaného zdroja a vo widgete „Zúčastnení autori“ sa neuvádzajú. Ambulantné prahy BNP &lt;35 pg/ml a NT-proBNP &lt;125 pg/ml a akútne prahy BNP &lt;100 pg/ml a NT-proBNP &lt;300 pg/ml sú z ESC 2021 a zhodne ich cituje PMC11881534. Doplnkové prahy pri HFpEF podľa rytmu (125 / 365 a 35 / 105 pg/ml) sú z ESC 2021. Vekové prahy 125 / 250 / 500 pg/ml a percentuálne zníženie prahu pri obezite sú z konsenzu HFA 2023 (PMID 37712339) a z otvorenej validačnej práce Taylorovej a spol. Analýza TOPCAT (PMID 30140899) je prognostická, nie diagnostická. Plný text ESC 2026 (PMID 42661420) nebol pri príprave čítaný ako otvorený dokument – preto sa z neho neodvádzajú nové prahy.</em></p>
 HTML,
 ];
 

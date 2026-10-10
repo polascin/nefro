@@ -31,9 +31,9 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Workshop ASN ukázal, že AI je v nefrológii prítomná už dnes. Praktické aplikácie generatívnej AI – syntéza literatúry, dokumentácia, analýza obrazu – aj jej limity: halucinácie, nereprodukovateľnosť a nutnosť ľudskej kontroly.',
     'content'      => <<<'HTML'
-<figure><a href="img/ai-nefrologia-hands-on-primer-klinicka-integracia.webp" rel="noopener noreferrer" target="_blank"><img src="img/ai-nefrologia-hands-on-primer-klinicka-integracia.webp" alt="Ľudská ruka a výpočtová mriežka pracujúce na tej istej obličke, pričom ruka určuje smer" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Nástroj rozširuje možnosti lekára — rozhodnutie a zodpovednosť však zostávajú na ňom.</figcaption></figure>
+<figure><a href="img/ai-nefrologia-hands-on-primer-klinicka-integracia.webp" rel="noopener noreferrer" target="_blank"><img src="img/ai-nefrologia-hands-on-primer-klinicka-integracia.webp" alt="Ľudská ruka a výpočtová mriežka pracujúce na tej istej obličke, pričom ruka určuje smer" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Nástroj rozširuje možnosti lekára – rozhodnutie a zodpovednosť však zostávajú na ňom.</figcaption></figure>
 
-<p>Rýchly nástup umelej inteligencie (AI) v medicíne už nie je len technologická kuriozita. Mení spôsob, akým klinici vyhľadávajú informácie, syntetizujú dôkazy a pracujú s klinickými dátami. Článok „AI in Nephrology Hands-On Primer: Practical Applications and Clinical Integration“ sa zameriava na praktickú rovinu tejto zmeny – na skúsenosti z workshopu venovaného práci s dátovou a generatívnou AI v nefrológii, teda na to, ako sa tieto nástroje premietajú do bežných pracovných tokov.</p>
+<p>Rýchly nástup umelej inteligencie (AI) v medicíne už nie je len technologická kuriozita. Mení spôsob, akým klinici vyhľadávajú informácie, syntetizujú dôkazy a pracujú s klinickými dátami. Článok „AI in Nephrology Hands-On Primer: Practical Applications and Clinical Integration“ sa zameriava na praktickú rovinu tejto zmeny – na skúsenosti z workshopu venovaného práci s dátovou a generatívnou AI v nefrológii, teda na to, ako sa tieto nástroje dostávajú do bežnej klinickej práce.</p>
 
 <h2>Prečo je „hands-on“ prístup dôležitý</h2>
 <p>Workshop (konaný 16. – 17. marca 2026 v New Yorku) ukázal, že AI je v klinickom uvažovaní prítomná už dnes. Nešlo len o pasívne zoznámenie sa, ale o model „použi, uvidíš, skontroluj“. Z pohľadu lekárov v príprave (tzv. trainees) je to podstatné, lebo riziko pri AI nespočíva len v tom, že „sa môže pomýliť“, ale aj v tom, že sa môže pomýliť presvedčivo – a zakaždým inak, podľa toho, aký nástroj a aký prompt použijeme.</p>
@@ -54,7 +54,7 @@ $articles[] = [
 
 <h2>Jedna úloha, viac výsledkov: problém reprodukovateľnosti</h2>
 <p>Jedným z najvýraznejších zistení workshopu bola nekonzistentnosť medzi platformami. Identické zadania môžu viesť k výrazne odlišným odpovediam naprieč nástrojmi (napríklad ChatGPT, Gemini a Claude). V klinickej praxi, kde sú reprodukovateľnosť a spoľahlivosť rozhodujúce, je to zásadná prekážka.</p>
-<p>Z praktického hľadiska to znamená, že klinik nemôže posudzovať výstup AI ako „jedinú pravdu“. Potrebuje:</p>
+<p>Klinik preto nemôže brať výstup AI ako „jedinú pravdu“. Potrebuje:</p>
 <ul>
   <li><strong>overenie informácií</strong>,</li>
   <li>porovnanie s relevantnými zdrojmi alebo vlastnou klinickou skúsenosťou,</li>
@@ -69,7 +69,7 @@ $articles[] = [
   <li><strong>Vizualizácie a komunikácia</strong> – pomoc pri tvorbe grafov, diagramov a vzdelávacích materiálov (napr. Canva, Napkin AI).</li>
   <li><strong>Podpora založená na dôkazoch</strong> – nástroje, ktoré sa snažia ukotviť odpovede v prepojenom, referencovanom obsahu (napr. OpenEvidence).</li>
 </ol>
-<p>Podstatné je, že „dobrá“ AI pre klinika nie je nutne jedno veľké riešenie. Skôr ide o schopnosť kombinovať nástroje v pracovnom toku tak, aby človek ostal poslednou rozhodovacou autoritou.</p>
+<p>„Dobrá“ AI pre klinika teda nemusí byť jedno veľké riešenie. Ide skôr o schopnosť kombinovať nástroje v pracovnom toku tak, aby človek ostal poslednou rozhodovacou autoritou.</p>
 
 <h2>Praktické príklady z nefrológie: kde AI pomáha a kde treba opatrnosť</h2>
 
@@ -83,7 +83,7 @@ $articles[] = [
 <p>Významným prínosom bola úspora času. Autori však jasne upozorňujú, že výstupy treba <strong>overiť</strong> – z hľadiska presnosti aj úplnosti.</p>
 
 <h3>2) Analýza obrazu: hodnotenie diéty a exit-site pri peritoneálnej dialýze</h3>
-<p>Zaujímavá časť bola venovaná vizuálnym úlohám:</p>
+<p>Časť workshopu sa venovala vizuálnym úlohám:</p>
 <ul>
   <li>posúdenie diéty z fotografií,</li>
   <li>hodnotenie exit-site (miesta výstupu) peritoneálneho dialyzačného katétra.</li>
@@ -98,11 +98,11 @@ $articles[] = [
 <p>Z toho vyplýva praktické pravidlo: aj keď AI „vyzerá, že sa trafila“, bez klinického kontextu a bez systematického overenia v danej populácii je náhrada odborného úsudku zatiaľ nereálna.</p>
 
 <h3>3) Klinické scenáre: rôzne modely vedú k rôznym úvahovým cestám</h3>
-<p>Pri testovaní LLM v klinických scenároch produkovali rôzne modely odlišné odporúčania aj odlišnú logickú štruktúru argumentácie. To je dôležité, pretože v medicíne nie je problémom len „koncové tvrdenie“, ale aj to, <strong>ako</strong> sa k nemu model dopracuje.</p>
+<p>Pri testovaní LLM v klinických scenároch produkovali rôzne modely odlišné odporúčania aj odlišnú logickú štruktúru argumentácie. V medicíne totiž nejde len o „koncové tvrdenie“, ale aj o to, <strong>ako</strong> sa k nemu model dopracuje.</p>
 <p>Praktický dôsledok: výstup treba krížovo kontrolovať a klinickú zodpovednosť ponechať na človeku.</p>
 
 <h2>NephroResource a cesta od „schopnosti“ k „nástroju“</h2>
-<p>Workshop spomenul aj úsilie premeniť AI na klinicky použiteľné rozhrania. Jedným z príkladov je <strong>NephroResource</strong> – webová platforma s kurátorsky spracovanými nefrologickými informáciami, ktorá sa prezentuje ako premostenie medzi všeobecnými schopnosťami AI a praktickou aplikáciou vo vzdelávacích alebo podporných klinických úlohách.</p>
+<p>Workshop sa dotkol aj snahy premeniť AI na klinicky použiteľné rozhrania. Jedným z príkladov je <strong>NephroResource</strong> – webová platforma s kurátorsky spracovanými nefrologickými informáciami, ktorá sa prezentuje ako premostenie medzi všeobecnými schopnosťami AI a praktickou aplikáciou vo vzdelávacích alebo podporných klinických úlohách.</p>
 
 <h2>Budovanie komunity: učenie sa z praxe, nie len z prezentácií</h2>
 <p>Autori kladú dôraz na komunitne riadené vzdelávanie. ASN (American Society of Nephrology) organizuje workshopy a AI-komunity a zdôrazňuje, že pre nefrológov bude kľúčové:</p>
@@ -111,7 +111,7 @@ $articles[] = [
   <li>vymieňať si praktické know-how,</li>
   <li>spoločne formovať zodpovedné používanie AI.</li>
 </ul>
-<p>Záver článku je v podstate jasný: integrácia AI do nefrológie už nie je hypotetická. Hlavnou otázkou teraz je, <strong>ako ju používať efektívne, bezpečne a rozumne</strong> v reálnej klinickej praxi.</p>
+<p>Článok uzatvára, že integrácia AI do nefrológie už nie je hypotetická. Hlavnou otázkou je teraz, <strong>ako ju používať efektívne, bezpečne a rozumne</strong> v reálnej klinickej praxi.</p>
 
 <hr>
 <p><em><strong>Zdroj:</strong> Noppawit Aiumtrakul, Arjunmohan Mohan, Harshil A. Fichadiya, Wisit Cheungpasitporn. „AI in Nephrology Hands-On Primer: Practical Applications and Clinical Integration“, <em>Kidney News</em> (ASN), ročník 18, číslo 5. <a href="https://www.kidneynews.org/view/journals/kidney-news/18/5/article-p10_7.xml" target="_blank" rel="noopener noreferrer">kidneynews.org</a>.</em></p>

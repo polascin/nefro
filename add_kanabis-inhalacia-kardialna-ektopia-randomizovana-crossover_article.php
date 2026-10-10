@@ -30,24 +30,24 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Randomizovaná krížená štúdia MARY-JANE u 108 pravidelných užívateľov inhalovaného kanabisu ukázala približne 9 % menej dennej kardiálnej ektopie. Výsledok nemení prax a nedokazuje, že kanabis lieči arytmie.',
     'content'      => <<<'HTML'
-<figure><a href="img/kanabis-inhalacia-kardialna-ektopia-randomizovana-crossover.webp" rel="noopener noreferrer" target="_blank"><img src="img/kanabis-inhalacia-kardialna-ektopia-randomizovana-crossover.webp" alt="Srdcová krivka s niekoľkými predčasnými výchylkami, cez ktorú sa prevaľujú pramene dymu" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna, nie záznam konkrétneho pacienta. Pozorovanie predčasných sťahov je nález — nie je to však samo osebe dôvod arytmiu liečiť.</figcaption></figure>
+<figure><a href="img/kanabis-inhalacia-kardialna-ektopia-randomizovana-crossover.webp" rel="noopener noreferrer" target="_blank"><img src="img/kanabis-inhalacia-kardialna-ektopia-randomizovana-crossover.webp" alt="Srdcová krivka s niekoľkými predčasnými výchylkami, cez ktorú sa prevaľujú pramene dymu" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna, nie záznam konkrétneho pacienta. Pozorovanie predčasných sťahov je nález – nie je to však samo osebe dôvod arytmiu liečiť.</figcaption></figure>
 
-<p class="article-dek"><em>V randomizovanej kríženej štúdii MARY-JANE mali pravidelní užívatelia inhalovaného kanabisu v dňoch s pridelenou inhaláciou približne o 9 % menej denných extra sťahov srdca ako v dňoch s pridelenou abstinenciou. Za poklesom stáli predčasné predsieňové extrasystoly; komorové extrasystoly, kroky, dĺžka spánku ani glukóza sa významne nezmenili. Ide o akútny, náhradný ukazovateľ v mladom súbore bez známej arytmie — nie o výskyt fibrilácie predsiení, hospitalizácie či úmrtia. Štúdia nemení prax a nedokazuje, že kanabis arytmie lieči, ani že je kardiovaskulárne bezpečný.</em></p>
+<p class="article-dek"><em>V randomizovanej kríženej štúdii MARY-JANE mali pravidelní užívatelia inhalovaného kanabisu v dňoch s pridelenou inhaláciou približne o 9 % menej denných extra sťahov srdca ako v dňoch s pridelenou abstinenciou. Za poklesom stáli predčasné predsieňové extrasystoly; komorové extrasystoly, kroky, dĺžka spánku ani glukóza sa významne nezmenili. Ide o akútny, náhradný ukazovateľ v mladom súbore bez známej arytmie – nie o výskyt fibrilácie predsiení, hospitalizácie či úmrtia. Štúdia nemení prax a nedokazuje, že kanabis arytmie lieči, ani že je kardiovaskulárne bezpečný.</em></p>
 
-<p>Tento text je slovenské spracovanie primárnej práce Eliasa a spol. v časopise <em>Journal of the American College of Cardiology</em> (<em>JACC</em>), publikovanej online 30. júla 2026. Čísla sú overené proti otvorenému abstraktu, záznamu PubMed (PMID 42584385), registru Crossref a záznamu ClinicalTrials.gov <a href="https://clinicaltrials.gov/study/NCT06021613" target="_blank" rel="noopener noreferrer">NCT06021613</a>. Plný text za paywallom sme neotvárali; kde abstrakt údaj neuvádza, výslovne to povieme.</p>
+<p>Tento text je slovenské spracovanie primárnej práce Eliasa a spol. v časopise <em>Journal of the American College of Cardiology</em> (<em>JACC</em>), publikovanej online 30. júla 2026. Čísla sú overené proti otvorenému abstraktu, záznamu PubMed (PMID 42584385), registru Crossref a záznamu ClinicalTrials.gov <a href="https://clinicaltrials.gov/study/NCT06021613" target="_blank" rel="noopener noreferrer">NCT06021613</a>. Plný text za platobnou bariérou sme neotvárali; kde abstrakt údaj neuvádza, výslovne to povieme.</p>
 
 <h2>Čo znamená kardiálna ektopia</h2>
 
 <p><strong>Kardiálna ektopia</strong> (z angl. <em>cardiac ectopy</em>) označuje extra sťahy srdca, ktoré nevznikajú v sínusovom uzle. V tejto štúdii ide o súčet:</p>
 
 <ul>
-  <li><strong>predčasných predsieňových extrasystol</strong> (PAC, z angl. <em>premature atrial contractions</em>) — extra sťahy začínajúce v predsieni,</li>
-  <li><strong>predčasných komorových extrasystol</strong> (PVC, z angl. <em>premature ventricular contractions</em>) — extra sťahy začínajúce v komore.</li>
+  <li><strong>predčasných predsieňových extrasystol</strong> (PAC, z angl. <em>premature atrial contractions</em>) – extra sťahy začínajúce v predsieni,</li>
+  <li><strong>predčasných komorových extrasystol</strong> (PVC, z angl. <em>premature ventricular contractions</em>) – extra sťahy začínajúce v komore.</li>
 </ul>
 
 <p>Ojedinelé extrasystoly sú u dospelých bežné. Častejšie PAC sa v kohortových prácach spájajú s neskorším vznikom fibrilácie predsiení; vyššia záťaž PVC sa spája s rizikom srdcového zlyhávania. To z ektopie robí <strong>náhradný (proxy) ukazovateľ</strong>, nie klinický výsledok, podľa ktorého by sa malo meniť liečebné rozhodnutie.</p>
 
-<p>Observačné práce o kanabise a srdci sú rozporuplné. Niektoré spájajú užívanie s vyšším rizikom fibrilácie predsiení a iných kardiovaskulárnych príhod, iné sú nejednoznačné. Vedecké stanovisko American Heart Association z roku 2020 preto kanabis z hľadiska srdca a ciev nepokladá za neškodný. Randomizovaný akútny pokus s objektívnym EKG práve preto dával zmysel — a vyšiel proti pôvodnej hypotéze autorov.</p>
+<p>Observačné práce o kanabise a srdci sú rozporuplné. Niektoré spájajú užívanie s vyšším rizikom fibrilácie predsiení a iných kardiovaskulárnych príhod, iné sú nejednoznačné. Vedecké stanovisko American Heart Association z roku 2020 preto kanabis z hľadiska srdca a ciev nepokladá za neškodný. Randomizovaný akútny pokus s objektívnym EKG práve preto dával zmysel – a vyšiel proti pôvodnej hypotéze autorov.</p>
 
 <h2>Dizajn štúdie MARY-JANE</h2>
 
@@ -151,24 +151,24 @@ $articles[] = [
 
 <h2>Čo z toho nevyplýva</h2>
 
-<p>Autori v záveroch sami uvádzajú, že interpretáciu kauzálneho mechanizmu obmedzujú <strong>možné abstinenčné (odvykacie) účinky, stredná adherencia a kointervencia</strong>. To nie je drobná poznámka pod čiarou. U navyknutých užívateľov môže deň bez kanabisu ektopiu zvýšiť abstinenciou, nie deň s kanabisom ju znížiť priaznivým účinkom na myokard. Kointervencia znamená, že s inhaláciou sa môžu meniť aj iné správania (kofeín, alkohol, spánok, aktivita), ktoré abstrakt ako významne odlišné v priemere neukázal, ale ktoré mechanizmus predsa len môžu zahmlievať.</p>
+<p>Autori v záveroch sami uvádzajú, že interpretáciu kauzálneho mechanizmu obmedzujú <strong>možné abstinenčné (odvykacie) účinky, stredná adherencia a kointervencia</strong>. To nie je drobná poznámka pod čiarou. U navyknutých užívateľov môže rozdiel vzniknúť tým, že abstinencia ektopiu v deň bez kanabisu zvýši, a nie tým, že by kanabis priaznivo pôsobil na myokard. Kointervencia znamená, že s inhaláciou sa môžu meniť aj iné správania (kofeín, alkohol, spánok, aktivita), ktoré sa podľa abstraktu v priemere významne nelíšili, no výklad mechanizmu môžu aj tak skresľovať.</p>
 
 <p>Štúdia <strong>nebola navrhnutá na hodnotenie výskytu fibrilácie predsiení</strong>, hospitalizácie, srdcového zlyhávania ani úmrtia. Nemerala dlhodobú bezpečnosť, endotelovú funkciu, ischémiu, pľúcne následky inhalácie ani závislosť. Neodpovedá na otázku, či má niekto začať kanabis užívať, pokračovať v ňom, alebo ho vysadiť pre arytmiu.</p>
 
-<p><strong>Z výsledku preto nevzniká odporúčanie „liečiť“ extrasystoly či fibriláciu predsiení kanabisom.</strong> Nevzniká ani dôkaz, že inhalovaný kanabis je pre srdce bezpečný. Akútny pokles náhradného ukazovateľa v selektovanej, relatívne mladej populácii navyknutých užívateľov nemožno preklopiť do klinickej indikačnej vety.</p>
+<p><strong>Z výsledku preto nevzniká odporúčanie „liečiť“ extrasystoly či fibriláciu predsiení kanabisom.</strong> Nevzniká ani dôkaz, že inhalovaný kanabis je pre srdce bezpečný. Akútny pokles náhradného ukazovateľa v selektovanej, relatívne mladej populácii navyknutých užívateľov nemožno pretaviť do klinickej indikácie.</p>
 
 <h2>Čo z toho plynie pri CKD a dialýze</h2>
 
 <p>Pacienti s CKD a najmä s dialýzou majú vysoké kardiovaskulárne riziko, častejšiu fibriláciu predsiení, objemové a elektrolytové výkyvy a často pokročilý vek. MARY-JANE takúto populáciu neskúmala: priemerný vek 32 rokov, bez známej arytmie, bez antiarytmík, bez srdcového zlyhávania a bez inzulínu. <strong>Výsledky sa na CKD a dialýzu extrapolovať nedajú.</strong></p>
 
-<p>V ambulancii a na dialyzačnej sále má zmysel pýtať sa na užívanie kanabisu <strong>bez odsudzovania</strong> — rovnako ako na alkohol, tabak a iné inhalované látky. Dôvodom nie je moralizovanie, ale kardiovaskulárne riziko, možné liekové interakcie (polyfarmácia, imunosupresia po transplantácii obličky), sedácia, kolísanie krvného tlaku a adherencia k liečbe. Otázka v anamnéze nie je súhlas s fajčením ako liečbou.</p>
+<p>V ambulancii a na dialyzačnej sále má zmysel pýtať sa na užívanie kanabisu <strong>bez odsudzovania</strong> – rovnako ako na alkohol, tabak a iné inhalované látky. Dôvodom nie je moralizovanie, ale kardiovaskulárne riziko, možné liekové interakcie (polyfarmácia, imunosupresia po transplantácii obličky), sedácia, kolísanie krvného tlaku a adherencia k liečbe. Otázka v anamnéze nie je súhlas s fajčením ako liečbou.</p>
 
 <p>Inhalácia dymu či výparov ostáva expozíciou dýchacích ciest a cievneho endotelu. Táto štúdia to nevyvracia. <strong>Kanabis sa ako antiarytmikum, nefroprotektívum ani „bezpečnejšia náhrada“ inej liečby predpisovať nemá.</strong></p>
 
 <div class="pdf-avoid-break">
 <h2>Záver</h2>
 
-<p>MARY-JANE je užitočný akútny experiment: v dňoch s randomizovanou inhaláciou mali navyknutí užívatelia o niečo menej dennej ektopie, predovšetkým PAC, bez významnej zmeny PVC, krokov, spánku a glukózy. Nález je v rozpore s pôvodnou hypotézou a s časťou observačnej literatúry, preto si zaslúži pozornosť — ako podnet na mechanizmus, nie ako návod na liečbu.</p>
+<p>MARY-JANE je užitočný akútny experiment: v dňoch s randomizovanou inhaláciou mali navyknutí užívatelia o niečo menej dennej ektopie, predovšetkým PAC, bez významnej zmeny PVC, krokov, spánku a glukózy. Nález je v rozpore s pôvodnou hypotézou a s časťou observačnej literatúry, preto si zaslúži pozornosť – ako podnet na mechanizmus, nie ako návod na liečbu.</p>
 
 <p><strong>Prax sa nemení.</strong> Extra sťahy srdca tu nie sú klinickým cieľom liečby kanabisom. Pacientovi s extrasystolami, fibriláciou predsiení, CKD alebo dialýzou treba povedať pravý opak marketingového skratkovitého výkladu: táto štúdia nedokazuje, že má kanabis inhalovať, aby si „liečil“ arytmiu, a nedokazuje, že je to pre srdce bezpečné.</p>
 </div>
@@ -176,8 +176,8 @@ $articles[] = [
 <h2>Súvisiace články</h2>
 
 <ul>
-  <li><a href="article.php?slug=pohybova-aktivita-fibrilacia-predsieni-cmp-mortalita">Pohybová aktivita pri fibrilácii predsiení: nižšie riziko cievnej mozgovej príhody a úmrtia</a> — observačný vzťah pohybu a prognózy, nie náhrada antikoagulácie.</li>
-  <li><a href="article.php?slug=wearables-dialyza-nefrologia-dokazy-a-limity">Nositeľné senzory v nefrológii a dialýze</a> — čo z náplasťového a hodinkového EKG obstojí pri zlyhaní obličiek.</li>
+  <li><a href="article.php?slug=pohybova-aktivita-fibrilacia-predsieni-cmp-mortalita">Pohybová aktivita pri fibrilácii predsiení: nižšie riziko cievnej mozgovej príhody a úmrtia</a> – observačný vzťah pohybu a prognózy, nie náhrada antikoagulácie.</li>
+  <li><a href="article.php?slug=wearables-dialyza-nefrologia-dokazy-a-limity">Nositeľné senzory v nefrológii a dialýze</a> – čo z náplasťového a hodinkového EKG obstojí pri zlyhaní obličiek.</li>
 </ul>
 
 <hr>

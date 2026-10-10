@@ -47,8 +47,8 @@ $articles[] = [
 </table>
 </div>
 
-<h2>Krok 1 — Primárna porucha</h2>
-<div class="table-responsive" role="region" aria-label="Krok 1 — Primárna porucha" tabindex="0">
+<h2>Krok 1 – Primárna porucha</h2>
+<div class="table-responsive" role="region" aria-label="Krok 1 – Primárna porucha" tabindex="0">
 <table>
   <thead>
     <tr><th scope="col">pH</th><th scope="col">Primárna zmena</th><th scope="col">Porucha</th></tr>
@@ -63,9 +63,9 @@ $articles[] = [
 </div>
 <p><em>pH v norme + abnormálne pCO<sub>2</sub>/HCO<sub>3</sub><sup>−</sup> → zmiešaná porucha.</em></p>
 
-<h2>Krok 2 — Očakávaná kompenzácia</h2>
+<h2>Krok 2 – Očakávaná kompenzácia</h2>
 <p>Kompenzácia <strong>nikdy nekoriguje pH úplne</strong> do normy. Odchýlka od očakávanej hodnoty = ďalšia (zmiešaná) porucha.</p>
-<div class="table-responsive" role="region" aria-label="Krok 2 — Očakávaná kompenzácia" tabindex="0">
+<div class="table-responsive" role="region" aria-label="Krok 2 – Očakávaná kompenzácia" tabindex="0">
 <table>
   <thead>
     <tr><th scope="col">Primárna porucha</th><th scope="col">Očakávaná kompenzácia</th></tr>
@@ -73,22 +73,22 @@ $articles[] = [
   <tbody>
     <tr><td>Metabolická acidóza</td><td>pCO<sub>2</sub> = 1,5 × HCO<sub>3</sub><sup>−</sup> + 8 ± 2 (Winterov vzorec)</td></tr>
     <tr><td>Metabolická alkalóza</td><td>pCO<sub>2</sub> stúpa ~0,7 mmHg na každý 1 mmol/l ↑ HCO<sub>3</sub><sup>−</sup></td></tr>
-    <tr><td>Respiračná acidóza — akútna</td><td>HCO<sub>3</sub><sup>−</sup> ↑ o 1 na každých 10 mmHg ↑ pCO<sub>2</sub></td></tr>
-    <tr><td>Respiračná acidóza — chronická</td><td>HCO<sub>3</sub><sup>−</sup> ↑ o 3,5 – 4 na každých 10 mmHg ↑ pCO<sub>2</sub></td></tr>
-    <tr><td>Respiračná alkalóza — akútna</td><td>HCO<sub>3</sub><sup>−</sup> ↓ o 2 na každých 10 mmHg ↓ pCO<sub>2</sub></td></tr>
-    <tr><td>Respiračná alkalóza — chronická</td><td>HCO<sub>3</sub><sup>−</sup> ↓ o 4 – 5 na každých 10 mmHg ↓ pCO<sub>2</sub></td></tr>
+    <tr><td>Respiračná acidóza – akútna</td><td>HCO<sub>3</sub><sup>−</sup> ↑ o 1 na každých 10 mmHg ↑ pCO<sub>2</sub></td></tr>
+    <tr><td>Respiračná acidóza – chronická</td><td>HCO<sub>3</sub><sup>−</sup> ↑ o 3,5 – 4 na každých 10 mmHg ↑ pCO<sub>2</sub></td></tr>
+    <tr><td>Respiračná alkalóza – akútna</td><td>HCO<sub>3</sub><sup>−</sup> ↓ o 2 na každých 10 mmHg ↓ pCO<sub>2</sub></td></tr>
+    <tr><td>Respiračná alkalóza – chronická</td><td>HCO<sub>3</sub><sup>−</sup> ↓ o 4 – 5 na každých 10 mmHg ↓ pCO<sub>2</sub></td></tr>
   </tbody>
 </table>
 </div>
 
-<h2>Krok 3 — Aniónové okno (AG)</h2>
+<h2>Krok 3 – Aniónové okno (AG)</h2>
 <p><strong>AG = Na<sup>+</sup> − (Cl<sup>−</sup> + HCO<sub>3</sub><sup>−</sup>)</strong>, norma 8 – 12 mmol/l.</p>
-<p><strong>Korekcia na albumín:</strong> AG stúpa o ~2,5 mmol/l na každých 10 g/l (1 g/dl), o ktoré je albumín pod 40 g/l (4 g/dl). Pri hypoalbuminémii môže zvýšené AG zostať zamaskované — vždy koriguj.</p>
+<p><strong>Korekcia na albumín:</strong> AG stúpa o ~2,5 mmol/l na každých 10 g/l (1 g/dl), o ktoré je albumín pod 40 g/l (4 g/dl). Pri hypoalbuminémii môže zvýšené AG zostať zamaskované – vždy koriguj.</p>
 
-<h3>Metabolická acidóza so zvýšeným AG (HAGMA) — mnemotechnika GOLD MARK</h3>
+<h3>Metabolická acidóza so zvýšeným AG (HAGMA) – mnemotechnika GOLD MARK</h3>
 <ul>
   <li><strong>G</strong>lykoly (etylénglykol, propylénglykol)</li>
-  <li><strong>O</strong>xoprolín (pyroglutamát — chronický paracetamol)</li>
+  <li><strong>O</strong>xoprolín (pyroglutamát – chronický paracetamol)</li>
   <li><strong>L</strong>-laktát (sepsa, hypoperfúzia, metformín)</li>
   <li><strong>D</strong>-laktát (syndróm krátkeho čreva)</li>
   <li><strong>M</strong>etanol</li>
@@ -104,9 +104,9 @@ $articles[] = [
   <li><strong>UAG pozitívne</strong> → porucha exkrécie NH<sub>4</sub><sup>+</sup> → <em>renálna</em> tubulárna acidóza (RTA), CKD.</li>
 </ul>
 
-<h2>Krok 4 — Delta ratio (ΔAG / ΔHCO<sub>3</sub><sup>−</sup>)</h2>
+<h2>Krok 4 – Delta ratio (ΔAG / ΔHCO<sub>3</sub><sup>−</sup>)</h2>
 <p>Pri HAGMA odhalí <strong>skrytú zmiešanú poruchu</strong>: Δratio = (AG − 12) / (24 − HCO<sub>3</sub><sup>−</sup>).</p>
-<div class="table-responsive" role="region" aria-label="Krok 4 — Delta ratio (ΔAG / ΔHCO3−)" tabindex="0">
+<div class="table-responsive" role="region" aria-label="Krok 4 – Delta ratio (ΔAG / ΔHCO3−)" tabindex="0">
 <table>
   <thead>
     <tr><th scope="col">Delta ratio</th><th scope="col">Interpretácia</th></tr>
@@ -120,8 +120,8 @@ $articles[] = [
 </table>
 </div>
 
-<h2>Metabolická alkalóza — podľa močového chloridu</h2>
-<div class="table-responsive" role="region" aria-label="Metabolická alkalóza — podľa močového chloridu" tabindex="0">
+<h2>Metabolická alkalóza – podľa močového chloridu</h2>
+<div class="table-responsive" role="region" aria-label="Metabolická alkalóza – podľa močového chloridu" tabindex="0">
 <table>
   <thead>
     <tr><th scope="col">U-Cl</th><th scope="col">Typ</th><th scope="col">Príčiny</th></tr>
@@ -136,7 +136,7 @@ $articles[] = [
 <h2>Pomôcky a úskalia</h2>
 <ul>
   <li><strong>Osmolárne okno</strong> (vypočítaná vs. meraná osmolalita &gt; 10 mosm/kg) podporuje intoxikáciu toxickým alkoholom (metanol, etylénglykol).</li>
-  <li>Vždy <strong>koriguj AG na albumín</strong> — inak ti unikne zvýšené AG u kriticky chorých.</li>
+  <li>Vždy <strong>koriguj AG na albumín</strong> – inak ti unikne zvýšené AG u kriticky chorých.</li>
   <li>Pri zmiešaných poruchách porovnaj namerané hodnoty s <strong>očakávanou kompenzáciou</strong>, nie s normálnymi referenčnými hodnotami.</li>
   <li>Klinický kontext (anamnéza, lieky, glykémia, laktát, ketolátky) má prednosť pred samotnými číslami.</li>
 </ul>
@@ -148,7 +148,7 @@ $articles[] = [
   <li><a href="https://pubmed.ncbi.nlm.nih.gov/25295502/" target="_blank" rel="noopener noreferrer">Berend K, et al. Physiological Approach to Assessment of Acid–Base Disturbances. N Engl J Med 2014;371:1434–45</a></li>
   <li><a href="https://pubmed.ncbi.nlm.nih.gov/17699401/" target="_blank" rel="noopener noreferrer">Kraut JA, Madias NE. Serum Anion Gap: Its Uses and Limitations in Clinical Medicine. Clin J Am Soc Nephrol 2007;2(1):162–74</a></li>
 </ul>
-<p><em>Orientačná pomôcka — nenahrádza klinický úsudok.</em></p>
+<p><em>Orientačná pomôcka – nenahrádza klinický úsudok.</em></p>
 HTML,
 ];
 

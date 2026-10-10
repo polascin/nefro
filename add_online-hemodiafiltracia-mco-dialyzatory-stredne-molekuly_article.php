@@ -32,7 +32,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Vysokodávková online hemodiafiltrácia má randomizovaný dôkaz o znížení mortality (štúdia CONVINCE); MCO dialyzátory zatiaľ preukázali len lepší klírens stredných molekúl. Prečo lepší laboratórny výsledok neznamená rovnaký klinický prínos a ako vybrať modalitu.',
     'content'      => <<<'HTML'
-<figure><a href="img/online-hemodiafiltracia-mco-dialyzatory-stredne-molekuly.webp" rel="noopener noreferrer" target="_blank"><img src="img/online-hemodiafiltracia-mco-dialyzatory-stredne-molekuly.webp" alt="Dialyzátor, cez ktorého membránu prechádzajú spolu s drobnými časticami aj výrazne väčšie molekulové zhluky" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Difúzia sama stredné molekuly neodstráni — potrebný je konvekčný prenos alebo membrána s väčšími pórmi.</figcaption></figure>
+<figure><a href="img/online-hemodiafiltracia-mco-dialyzatory-stredne-molekuly.webp" rel="noopener noreferrer" target="_blank"><img src="img/online-hemodiafiltracia-mco-dialyzatory-stredne-molekuly.webp" alt="Dialyzátor, cez ktorého membránu prechádzajú spolu s drobnými časticami aj výrazne väčšie molekulové zhluky" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Difúzia sama stredné molekuly neodstráni – potrebný je konvekčný prenos alebo membrána s väčšími pórmi.</figcaption></figure>
 
 <p>Konvenčná hemodialýza účinne odstraňuje malé vo vode rozpustné látky, napríklad močovinu, draslík a kreatinín. Podstatne menej účinná je pri odstraňovaní väčších uremických toxínov označovaných ako stredné molekuly. Online hemodiafiltrácia a dialýza s medium cut-off membránami rozširujú možnosti mimotelovej eliminačnej liečby práve zvýšením transportu týchto látok.</p>
 
@@ -157,7 +157,7 @@ $articles[] = [
   <li>symptómy a kvalitu života.</li>
 </ul>
 
-<p>Pri OL-HDF sa má preto popri Kt/V zaznamenávať dosiahnutý konvekčný objem, čas liečby, efektívny prietok krvi, filtračnú frakciu a priebeh transmembránového tlaku. Pri MCO dialýze zatiaľ neexistuje všeobecne prijatý klinický ukazovateľ, ktorý by spoľahlivo vyjadroval jej „dávku“.</p>
+<p>Pri OL-HDF treba preto popri Kt/V zaznamenávať dosiahnutý konvekčný objem, čas liečby, efektívny prietok krvi, filtračnú frakciu a priebeh transmembránového tlaku. Pri MCO dialýze zatiaľ neexistuje všeobecne prijatý klinický ukazovateľ, ktorý by spoľahlivo vyjadroval jej „dávku“.</p>
 
 <h2>Praktický výber liečebnej modality</h2>
 

@@ -33,7 +33,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Porovnanie Európy a USA podľa ERA Registry a USRDS ukazuje výrazné rozdiely v incidencii a prevalencii KRT, v miere transplantácií aj v mortalite. Rozdiely medzi regiónmi sa zdajú byť nápadnejšie u žien než u mužov.',
     'content'      => <<<'HTML'
-<figure><a href="img/rodove-rozdiely-dialyza-transplantacia-era-usrds.webp" rel="noopener noreferrer" target="_blank"><img src="img/rodove-rozdiely-dialyza-transplantacia-era-usrds.webp" alt="Dve nerovnako široké svetelné cesty od dialyzačného filtra k transplantovanej obličke" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Cesta k transplantácii nie je pre všetkých rovnako priechodná — registre ten rozdiel dokumentujú.</figcaption></figure>
+<figure><a href="img/rodove-rozdiely-dialyza-transplantacia-era-usrds.webp" rel="noopener noreferrer" target="_blank"><img src="img/rodove-rozdiely-dialyza-transplantacia-era-usrds.webp" alt="Dve nerovnako široké svetelné cesty od dialyzačného filtra k transplantovanej obličke" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Cesta k transplantácii nie je pre všetkých rovnako priechodná – registre ten rozdiel dokumentujú.</figcaption></figure>
 
 <p>Chronické zlyhávanie obličiek vedie k potrebe liečby obličkovej náhrady (KRT, <em>kidney replacement therapy</em>). V klinickej praxi však narážame na rozdiely medzi pohlaviami aj medzi krajinami, najmä v tom, kto sa na KRT dostane, aké sú šance na transplantáciu a aká je následná mortalita. Analýza publikovaná v <em>Nephrology Dialysis Transplantation</em> porovnáva Európu a USA práve v týchto parametroch a ukazuje, že rozdiely sú výraznejšie najmä u žien.</p>
 
@@ -68,11 +68,11 @@ $articles[] = [
   <li><strong>muži v USA</strong> mali incidenciu KRT <strong>2,4-krát vyššiu</strong> než muži v Európe.</li>
 </ul>
 
-<p>Podiel žien, ktoré iniciovali KRT, bol v Európe nižší:</p>
+<p>Podiel žien medzi pacientmi, ktorí začali KRT, bol v Európe nižší:</p>
 
 <ul>
-  <li><strong>35 %</strong> iniciátorov v Európe,</li>
-  <li><strong>41 %</strong> iniciátorov v USA.</li>
+  <li><strong>35 %</strong> v Európe,</li>
+  <li><strong>41 %</strong> v USA.</li>
 </ul>
 
 <h3>2) Trendy 2013 až 2022: v Európe stabilita u žien, rast u mužov</h3>
@@ -130,17 +130,17 @@ $articles[] = [
 
 <h2>Ako si to preniesť do praxe</h2>
 
-<p>Táto štúdia neidentifikuje jeden konkrétny biologický mechanizmus. Skôr dokumentuje rozdiely v poskytovaní a priebehu KRT medzi regiónmi a medzi ženami a mužmi. Pre klinickú prax z toho vyplýva niekoľko dôležitých otázok:</p>
+<p>Štúdia neodhaľuje konkrétny biologický mechanizmus. Dokumentuje rozdiely v poskytovaní a priebehu KRT medzi regiónmi a medzi ženami a mužmi. Pre klinickú prax z toho vyplýva niekoľko otázok:</p>
 
 <ol>
-  <li><strong>Kto sa dostane na KRT a kedy?</strong> Nižší podiel žien medzi iniciátormi KRT v Európe môže odrážať rozdiely v dostupnosti, rozhodovaní, komorbiditách alebo v referovaní pacientov.</li>
+  <li><strong>Kto sa dostane na KRT a kedy?</strong> Nižší podiel žien medzi pacientmi začínajúcimi KRT v Európe môže odrážať rozdiely v dostupnosti, rozhodovaní, komorbiditách alebo v odosielaní pacientov.</li>
   <li><strong>Aký je výsledok po začatí KRT?</strong> Vyššia mortalita v USA môže naznačovať rozdiely v komorbiditách, zložení populácie aj v samotnom procese liečby.</li>
-  <li><strong>Prečo sa mortalita žien líši podľa regiónu?</strong> Tento nález podporuje hypotézu, že pohlavie pravdepodobne pôsobí cez viacero mechanizmov, ktoré nemusia byť rovnaké v rôznych zdravotníckych systémoch.</li>
+  <li><strong>Prečo sa mortalita žien líši podľa regiónu?</strong> Tento nález podporuje hypotézu, že pohlavie pôsobí cez viacero mechanizmov, ktoré nemusia byť rovnaké v rôznych zdravotníckych systémoch.</li>
 </ol>
 
 <p>V ambulantnej nefrológii sa to dá pretaviť do konkrétnych kontrolných bodov: včasné plánovanie KRT, dôsledná práca s komorbiditami a systematické sledovanie výsledkov liečby u oboch pohlaví.</p>
 
-<h2>Limitácie, ktoré treba mať na pamäti</h2>
+<h2>Limity</h2>
 
 <p>Aj keď štúdia využíva veľké registre, porovnania naprieč kontinentmi sú vždy ovplyvnené rozdielmi v:</p>
 
@@ -155,7 +155,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>V roku 2022 boli v USA vyššie incidencie aj prevalencie KRT, vyššia miera transplantácií a zároveň vyššia mortalita na KRT v porovnaní s Európou. Zaujímavé je, že rozdiely medzi regiónmi boli väčšie u žien a vzťah medzi pohlavím a mortalitou na KRT sa medzi Európou a USA líšil.</p>
+<p>V roku 2022 boli v USA vyššie incidencie aj prevalencie KRT, vyššia miera transplantácií a zároveň vyššia mortalita na KRT v porovnaní s Európou. Rozdiely medzi regiónmi boli väčšie u žien a vzťah medzi pohlavím a mortalitou na KRT sa medzi Európou a USA líšil.</p>
 
 <hr>
 

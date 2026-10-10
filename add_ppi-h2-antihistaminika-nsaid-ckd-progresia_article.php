@@ -23,13 +23,13 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'V juhokórejskej kohorte bolo užívanie PPI spojené s 38 % vyšším relatívnym rizikom progresie CKD než H2-antihistaminiká. Hlavným modifikovateľným problémom však zostáva samotné nesteroidové antiflogistikum.',
     'content'      => <<<'HTML'
-<figure><a href="img/ppi-h2-antihistaminika-nsaid-ckd-progresia.webp" rel="noopener noreferrer" target="_blank"><img src="img/ppi-h2-antihistaminika-nsaid-ckd-progresia.webp" alt="Oblička pod dvoma rôznymi štítmi, pod každým iný vzor poškodenia od dopadajúcich úlomkov" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Voľba medzi dvoma spôsobmi ochrany žalúdka nie je pri CKD a nesteroidových antiflogistikách nevinná — ani jedna nechráni úplne.</figcaption></figure>
+<figure><a href="img/ppi-h2-antihistaminika-nsaid-ckd-progresia.webp" rel="noopener noreferrer" target="_blank"><img src="img/ppi-h2-antihistaminika-nsaid-ckd-progresia.webp" alt="Oblička pod dvoma rôznymi štítmi, pod každým iný vzor poškodenia od dopadajúcich úlomkov" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Voľba medzi dvoma spôsobmi ochrany žalúdka nie je pri CKD a nesteroidových antiflogistikách nevinná – ani jedna nechráni úplne.</figcaption></figure>
 
 <p>Tradičné nesteroidové antiflogistiká (NSAID) patria medzi lieky, ktoré si pri chronickej chorobe obličiek (CKD) vyžadujú mimoriadnu opatrnosť. Inhibícia renálnej syntézy prostaglandínov môže znížiť prietok krvi obličkami, vyvolať retenciu sodíka a vody, zhoršiť hypertenziu a prispieť k akútnemu poškodeniu obličiek. Riziko stúpa pri vyššom veku, dehydratácii, srdcovom zlyhávaní a pri súbežnom užívaní diuretík alebo inhibítorov systému renín-angiotenzín.</p>
 
 <p>Na prevenciu alebo liečbu gastrointestinálnych komplikácií sa k NSAID často pridávajú inhibítory protónovej pumpy (PPI). Ich dlhodobé používanie sa však v observačných štúdiách spája s akútnou tubulointersticiálnou nefritídou, akútnym poškodením obličiek aj s vyšším rizikom vzniku a progresie CKD.</p>
 
-<p>Juhokórejská retrospektívna kohortová štúdia publikovaná v <em>Journal of Nephrology</em> preto porovnala riziko progresie CKD pri PPI a pri antagonistoch histamínových receptorov H2 (H2RA) práve u pacientov užívajúcich tradičné NSAID. Výsledky naznačujú nižšie riziko pri H2-antihistaminikách — pre observačný dizajn však nepreukazujú príčinnú súvislosť.</p>
+<p>Juhokórejská retrospektívna kohortová štúdia publikovaná v <em>Journal of Nephrology</em> preto porovnala riziko progresie CKD pri PPI a pri antagonistoch histamínových receptorov H2 (H2RA) práve u pacientov užívajúcich tradičné NSAID. Výsledky naznačujú nižšie riziko pri H2-antihistaminikách – pre observačný dizajn však nepreukazujú príčinnú súvislosť.</p>
 
 <h2>Usporiadanie štúdie</h2>
 
@@ -40,7 +40,7 @@ $articles[] = [
   <li>7 112 pacientov s H2-antihistaminikom.</li>
 </ul>
 
-<p>Porovnávaná kohorta teda zahŕňala 12 427 pacientov, čo je necelých 9 % z pôvodného súboru užívateľov NSAID. Väčšina pacientov s CKD, ktorým bolo NSAID predpísané, gastroprotekciu nedostala — samo osebe zaujímavé číslo.</p>
+<p>Porovnávaná kohorta teda zahŕňala 12 427 pacientov, čo je necelých 9 % z pôvodného súboru užívateľov NSAID. Väčšina pacientov s CKD, ktorým bolo NSAID predpísané, gastroprotekciu nedostala – samo osebe zaujímavé číslo.</p>
 
 <p>Na vyváženie pozorovaných rozdielov medzi skupinami autori použili stabilizované inverzné váženie podľa pravdepodobnosti liečby. Nelineárne vzťahy medzi kumulatívnou expozíciou liekom a progresiou CKD analyzovali Coxovým modelom s obmedzenými kubickými splajnami. Analýzy citlivosti zamerané na prípady s nešpecifikovaným štádiom CKD podľa autorov potvrdili robustnosť hlavného nálezu.</p>
 
@@ -100,7 +100,7 @@ $articles[] = [
 
 <p>Tieto výsledky sú klinicky uveriteľné, nemožno ich však automaticky interpretovať ako nezávislé príčinné účinky jednotlivých diagnóz alebo liekov.</p>
 
-<p>Najzreteľnejšie to platí pre <strong>diuretiká</strong>. Diuretikum môže byť markerom srdcového zlyhávania, objemového preťaženia, rezistentnej hypertenzie alebo pokročilejšej choroby obličiek. Asociácia s dvojnásobným rizikom preto neznamená, že vysadenie diuretika renálnu prognózu zlepší — u pacienta s kongesciou by neodôvodnené vysadenie mohlo stav naopak zhoršiť.</p>
+<p>Najzreteľnejšie to platí pre <strong>diuretiká</strong>. Diuretikum môže byť markerom srdcového zlyhávania, objemového preťaženia, rezistentnej hypertenzie alebo pokročilejšej choroby obličiek. Asociácia s dvojnásobným rizikom preto neznamená, že vysadenie diuretika renálnu prognózu zlepší – u pacienta s kongesciou by neodôvodnené vysadenie mohlo stav naopak zhoršiť.</p>
 
 <h3>Inhibítory SGLT2</h3>
 
@@ -112,7 +112,7 @@ $articles[] = [
 
 <p>Relatívne vyššie riziko pri PPI bolo najvýraznejšie u žien, u pacientov s CKD v štádiu G3, vo veku 71 rokov a viac a pri liečbe trvajúcej 1 až 15 dní.</p>
 
-<p>Podskupinové výsledky treba interpretovať opatrne. Štatistická významnosť v jednej podskupine a jej neprítomnosť v druhej sama osebe nedokazuje, že sa účinok medzi skupinami skutočne líši — na také tvrdenie je potrebný významný test interakcie.</p>
+<p>Podskupinové výsledky treba interpretovať opatrne. Štatistická významnosť v jednej podskupine a jej neprítomnosť v druhej sama osebe nedokazuje, že sa účinok medzi skupinami skutočne líši – na také tvrdenie je potrebný významný test interakcie.</p>
 
 <p>Osobitne problematická je asociácia už pri <strong>jedno- až pätnásťdňovej</strong> liečbe. Taký krátky interval je biologicky málo presvedčivý ako príčina skutočnej progresie chronického ochorenia. Pravdepodobnejšie odráža:</p>
 
@@ -131,7 +131,7 @@ $articles[] = [
 
 <h3>Akútna tubulointersticiálna nefritída</h3>
 
-<p>Najlepšie doložený renálny nežiaduci účinok PPI. Môže sa prejaviť akútnym alebo subakútnym vzostupom kreatinínu, často bez klasickej triády horúčky, exantému a eozinofílie. Pri oneskorenej diagnóze nemusí dôjsť k úplnej úprave funkcie obličiek a opakované alebo nerozpoznané epizódy by teoreticky mohli prispievať k chronickému tubulointersticiálnemu poškodeniu. Ide o najpravdepodobnejší mechanizmus spájajúci PPI s dlhodobým renálnym rizikom.</p>
+<p>Je to najlepšie doložený renálny nežiaduci účinok PPI. Môže sa prejaviť akútnym alebo subakútnym vzostupom kreatinínu, často bez klasickej triády horúčky, exantému a eozinofílie. Pri oneskorenej diagnóze nemusí dôjsť k úplnej úprave funkcie obličiek a opakované alebo nerozpoznané epizódy by teoreticky mohli prispievať k chronickému tubulointersticiálnemu poškodeniu. Ide o najpravdepodobnejší mechanizmus spájajúci PPI s dlhodobým renálnym rizikom.</p>
 
 <h3>Hypomagneziémia</h3>
 
@@ -143,7 +143,7 @@ $articles[] = [
 
 <h3>Kontext skorších prác</h3>
 
-<p>Zistenie nestojí osamotene. Analýza kohorty ARIC publikovaná v roku 2016 zistila vyššie riziko incidentnej CKD u používateľov PPI a v tom istom roku veľká kohorta veteránov opísala vyššie riziko incidentnej CKD aj progresie do zlyhania obličiek. Všetky tieto práce sú však observačné a zdieľajú rovnaké obmedzenia — vrátane skreslenia indikáciou.</p>
+<p>Zistenie nestojí osamotene. Analýza kohorty ARIC publikovaná v roku 2016 zistila vyššie riziko incidentnej CKD u používateľov PPI a v tom istom roku veľká kohorta veteránov opísala vyššie riziko incidentnej CKD aj progresie do zlyhania obličiek. Všetky tieto práce sú však observačné a zdieľajú rovnaké obmedzenia – vrátane skreslenia indikáciou.</p>
 
 <h2>Hlavným modifikovateľným problémom zostáva samotné NSAID</h2>
 
@@ -166,13 +166,13 @@ $articles[] = [
 
 <h2>Je H2-antihistaminikum bezpečnejšou alternatívou?</h2>
 
-<p>Výsledky podporujú zváženie H2-antihistaminika vtedy, keď je supresia žalúdočnej kyseliny skutočne indikovaná, PPI nie je nevyhnutný, očakávaná intenzita gastroprotekcie postačuje a nie sú prítomné závažné refluxné alebo ulcerózne komplikácie vyžadujúce PPI. Presne tak formulujú svoj záver aj autori — H2-antihistaminikum ako možná bezpečnejšia alternatíva tam, kde PPI <em>nie je nevyhnutný</em>.</p>
+<p>Výsledky podporujú zváženie H2-antihistaminika vtedy, keď je supresia žalúdočnej kyseliny skutočne indikovaná, PPI nie je nevyhnutný, očakávaná intenzita gastroprotekcie postačuje a nie sú prítomné závažné refluxné alebo ulcerózne komplikácie vyžadujúce PPI. Presne tak formulujú svoj záver aj autori – H2-antihistaminikum ako možná bezpečnejšia alternatíva tam, kde PPI <em>nie je nevyhnutný</em>.</p>
 
 <p>Štúdia však nedokazuje, že H2-antihistaminiká sú všeobecne bezpečnejšie ani rovnako účinné vo všetkých gastroenterologických indikáciách. PPI zostávajú vhodné napríklad pri liečbe a prevencii recidívy krvácajúceho peptického vredu, pri závažnej erozívnej ezofagitíde, pri Barrettovom pažeráku podľa individuálnej indikácie, pri hypersekrečných stavoch, v niektorých režimoch eradikácie <em>Helicobacter pylori</em> a pri vysokej potrebe gastroprotekcie počas pokračujúcej rizikovej liečby.</p>
 
 <h3>Vlastné obmedzenia H2-antihistaminík</h3>
 
-<p>Zámena nie je bez nákladov. Viaceré H2-antihistaminiká sa eliminujú obličkami a pri zníženej glomerulovej filtrácii vyžadujú <strong>úpravu dávky</strong>. Pri akumulácii sa môže objaviť zmätenosť, delírium alebo iné neurologické nežiaduce účinky, najmä u starších pacientov — teda práve v skupine, kde bola v tejto štúdii asociácia s PPI najvýraznejšia.</p>
+<p>Ani zámena nie je bez rizika. Viaceré H2-antihistaminiká sa eliminujú obličkami a pri zníženej glomerulovej filtrácii vyžadujú <strong>úpravu dávky</strong>. Pri akumulácii sa môže objaviť zmätenosť, delírium alebo iné neurologické nežiaduce účinky, najmä u starších pacientov – teda práve v skupine, kde bola v tejto štúdii asociácia s PPI najvýraznejšia.</p>
 
 <p>Treba pamätať aj na to, že zloženie skupiny sa v čase zmenilo: ranitidín bol v roku 2020 pre kontamináciu nitrózamínom (NDMA) stiahnutý z väčšiny trhov, takže praktickou voľbou je dnes najmä famotidín. Skupinový výsledok z rokov 2018 až 2023 preto nemusí zodpovedať dnešnému spektru predpisovaných liečiv.</p>
 
@@ -188,7 +188,7 @@ $articles[] = [
 
 <h3>Obmedzenia administratívnych údajov</h3>
 
-<p>Databázy poisťovní spoľahlivo zachytávajú predpis alebo výdaj lieku, nie však skutočné užívanie a adherenciu, voľnopredajné NSAID a PPI, sérový kreatinín a eGFR, albuminúriu, objemový stav, krvný tlak, fajčenie, telesnú hmotnosť, stravu a hydratáciu ani závažnosť akútneho ochorenia. Diagnostické kódy CKD a jej štádia môžu byť neúplné — čo je aj dôvod, prečo autori robili samostatnú analýzu citlivosti pre prípady s nešpecifikovaným štádiom.</p>
+<p>Databázy poisťovní spoľahlivo zachytávajú predpis alebo výdaj lieku, nie však skutočné užívanie a adherenciu, voľnopredajné NSAID a PPI, sérový kreatinín a eGFR, albuminúriu, objemový stav, krvný tlak, fajčenie, telesnú hmotnosť, stravu a hydratáciu ani závažnosť akútneho ochorenia. Diagnostické kódy CKD a jej štádia môžu byť neúplné – čo je aj dôvod, prečo autori robili samostatnú analýzu citlivosti pre prípady s nešpecifikovaným štádiom.</p>
 
 <h3>Časovo závislá expozícia</h3>
 
@@ -219,7 +219,7 @@ $articles[] = [
 
 <p>V juhokórejskej retrospektívnej kohorte pacientov s CKD užívajúcich tradičné NSAID bolo používanie PPI v porovnaní s H2-antihistaminikami spojené s 38 % vyšším relatívnym rizikom progresie choroby obličiek (upravený pomer hazardu 1,38; 95 % interval spoľahlivosti 1,10 – 1,74).</p>
 
-<p>Výsledok podporuje racionálnu revíziu indikácie PPI a zváženie H2-antihistaminika tam, kde PPI nie je nevyhnutný. Neoprávňuje však k plošnému vysadzovaniu PPI ani nedokazuje, že ich nahradenie H2-antihistaminikami progresii CKD zabráni — najmä keď sa najsilnejšia asociácia objavila už pri liečbe kratšej než dva týždne, čo je pre skutočnú progresiu chronického ochorenia biologicky ťažko obhájiteľné.</p>
+<p>Výsledok podporuje racionálnu revíziu indikácie PPI a zváženie H2-antihistaminika tam, kde PPI nie je nevyhnutný. Neoprávňuje však na plošné vysadzovanie PPI ani nedokazuje, že ich nahradenie H2-antihistaminikami progresii CKD zabráni – najmä keď sa najsilnejšia asociácia objavila už pri liečbe kratšej než dva týždne, čo je pre skutočnú progresiu chronického ochorenia biologicky ťažko obhájiteľné.</p>
 
 <p>Najvýznamnejším preventívnym opatrením zostáva minimalizácia expozície nesteroidovým antiflogistikám. Pri každom pacientovi treba najskôr posúdiť potrebu samotného NSAID a až potom zvoliť primeranú gastroprotekciu.</p>
 

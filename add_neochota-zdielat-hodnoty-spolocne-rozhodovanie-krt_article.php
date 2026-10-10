@@ -24,25 +24,25 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Takmer štvrtina pacientov pred voľbou náhrady funkcie obličiek nie je ochotná hovoriť o tom, čo je pre nich dôležité. Japonská štúdia so 474 účastníkmi ukazuje, že za mlčaním stojí najmä nedôvera a depresia — nie neochota spolupracovať.',
+    'excerpt'      => 'Takmer štvrtina pacientov pred voľbou náhrady funkcie obličiek nie je ochotná hovoriť o tom, čo je pre nich dôležité. Japonská štúdia so 474 účastníkmi ukazuje, že za mlčaním stojí najmä nedôvera a depresia – nie neochota spolupracovať.',
     'content'      => <<<'HTML'
-<figure><a href="img/neochota-zdielat-hodnoty-spolocne-rozhodovanie-krt.webp" rel="noopener noreferrer" target="_blank"><img src="img/neochota-zdielat-hodnoty-spolocne-rozhodovanie-krt.webp" alt="Dve stoličky oproti sebe a svetlo medzi nimi zastavené mliečnou bariérou, za ktorou niečo nejasne svieti" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Spoločné rozhodovanie predpokladá, že pacient svoje hodnoty vysloví — a to nie je samozrejmosť.</figcaption></figure>
+<figure><a href="img/neochota-zdielat-hodnoty-spolocne-rozhodovanie-krt.webp" rel="noopener noreferrer" target="_blank"><img src="img/neochota-zdielat-hodnoty-spolocne-rozhodovanie-krt.webp" alt="Dve stoličky oproti sebe a svetlo medzi nimi zastavené mliečnou bariérou, za ktorou niečo nejasne svieti" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Spoločné rozhodovanie predpokladá, že pacient svoje hodnoty vysloví – a to nie je samozrejmosť.</figcaption></figure>
 
-<p class="article-dek"><em>Spoločné rozhodovanie o modalite náhrady funkcie obličiek predpokladá, že pacient povie, čo je pre neho dôležité. Japonská štúdia ukazuje, že takmer štvrtina pacientov to urobiť nechce — a že za mlčaním nestojí odmietanie spolupráce, ale najmä miera dôvery k lekárovi a prítomnosť depresívnych príznakov.</em></p>
+<p class="article-dek"><em>Spoločné rozhodovanie o modalite náhrady funkcie obličiek predpokladá, že pacient povie, čo je pre neho dôležité. Japonská štúdia ukazuje, že takmer štvrtina pacientov to urobiť nechce – a že za mlčaním nestojí odmietanie spolupráce, ale najmä miera dôvery k lekárovi a prítomnosť depresívnych príznakov.</em></p>
 
 <p>Model spoločného rozhodovania (<em>shared decision-making</em>, SDM) sa pri voľbe medzi hemodialýzou, peritoneálnou dialýzou, transplantáciou a konzervatívnym postupom stal štandardom. Jeho logika je jednoduchá: lekár prináša odborné informácie o možnostiach, pacient prináša informácie o tom, čo je pre neho v živote dôležité, a rozhodnutie vzniká zo spojenia oboch.</p>
 
-<p>Celý model však stojí na predpoklade, ktorý sa málokedy overuje — že pacient je ochotný o svojich hodnotách hovoriť. Ak túto časť nedodá, rozhodovanie zostane formálne správne, ale fakticky jednostranné: lekár vyplní prázdne miesto vlastným odhadom toho, čo by pacient asi chcel.</p>
+<p>Celý model však stojí na predpoklade, ktorý sa málokedy overuje – že pacient je ochotný o svojich hodnotách hovoriť. Ak túto časť nedodá, rozhodovanie zostane formálne správne, ale fakticky jednostranné: lekár vyplní prázdne miesto vlastným odhadom toho, čo by pacient asi chcel.</p>
 
 <h2>Čo štúdia skúmala</h2>
 
-<p>Rozsiahla japonská štúdia pod vedením Noriakiho Kuritu z Fukushima Medical University sa zamerala presne na túto medzeru. Zapojených bolo <strong>474 dospelých pacientov s pokročilou chronickou chorobou obličiek</strong>, ktorí si už modalitu náhrady funkcie obličiek zvolili.</p>
+<p>Japonská štúdia pod vedením Noriakiho Kuritu z Fukushima Medical University sa zamerala presne na túto medzeru. Zapojených bolo <strong>474 dospelých pacientov s pokročilou chronickou chorobou obličiek</strong>, ktorí si už modalitu náhrady funkcie obličiek zvolili.</p>
 
-<p>Použitý bol <strong>konvergentný zmiešaný dizajn</strong> — kvantitatívna a kvalitatívna časť prebiehali súbežne a ich výsledky sa spájali až pri interpretácii. Kvantitatívna časť merala mieru neochoty, jej determinanty a vzťah k dotazníku <strong>CollaboRATE</strong>, ktorým pacient hodnotí, do akej miery bol do rozhodovania skutočne zapojený. Kvalitatívna časť analyzovala voľné odpovede pacientov na otázku, prečo o svojich hodnotách hovoriť nechcú.</p>
+<p>Použitý bol <strong>konvergentný zmiešaný dizajn</strong> – kvantitatívna a kvalitatívna časť prebiehali súbežne a ich výsledky sa spájali až pri interpretácii. Kvantitatívna časť merala mieru neochoty, jej determinanty a vzťah k dotazníku <strong>CollaboRATE</strong>, ktorým pacient hodnotí, do akej miery bol do rozhodovania skutočne zapojený. Kvalitatívna časť analyzovala voľné odpovede pacientov na otázku, prečo o svojich hodnotách hovoriť nechcú.</p>
 
 <h2>Neochota je častá a má merateľné dôsledky</h2>
 
-<p>Ako veľmi alebo do istej miery neochotných zdieľať svoje osobné hodnoty sa označilo <strong>111 pacientov, teda 24,2 %</strong>. Takmer každý štvrtý pacient teda vstupuje do rozhovoru o zásadnom celoživotnom rozhodnutí s tým, že podstatnú časť informácií neposkytne.</p>
+<p>Ako veľmi alebo do istej miery neochotných zdieľať svoje osobné hodnoty sa označilo <strong>111 pacientov, teda 24,2 %</strong>. Takmer každý štvrtý pacient tak vstupuje do rozhovoru o zásadnom celoživotnom rozhodnutí s tým, že podstatnú časť informácií neposkytne.</p>
 
 <p>Nejde pritom o formalitu bez následkov. V porovnaní s pacientmi, ktorí neochotu neuvádzali vôbec, dosahovali:</p>
 
@@ -51,20 +51,20 @@ $articles[] = [
   <li>veľmi alebo do istej miery neochotní pacienti nižšie o <strong>11,39 bodu</strong>.</li>
 </ul>
 
-<p>Vzťah je teda odstupňovaný — čím väčšia neochota, tým nižšie hodnotenie vlastného zapojenia. To je dôležité: neochota nie je len postoj, ale premieta sa do toho, ako pacient sám vníma kvalitu rozhodovacieho procesu, ktorým prešiel.</p>
+<p>Vzťah je teda odstupňovaný – čím väčšia neochota, tým nižšie hodnotenie vlastného zapojenia. Neochota teda nie je len postoj, premieta sa aj do toho, ako pacient sám vníma kvalitu rozhodovacieho procesu, ktorým prešiel.</p>
 
 <h2>Dva determinanty s opačným smerom</h2>
 
 <p>Analýza identifikovala dva faktory, ktoré na neochotu pôsobia protichodne:</p>
 
 <ul>
-  <li><strong>Väčšia dôvera v primárneho nefrológa pôsobila ochranne</strong> — čím vyššia dôvera, tým nižšia neochota.</li>
+  <li><strong>Väčšia dôvera v primárneho nefrológa pôsobila ochranne</strong> – čím vyššia dôvera, tým nižšia neochota.</li>
   <li><strong>Depresívne príznaky neochotu podporovali.</strong></li>
 </ul>
 
-<p>Obidva nálezy majú priamy praktický význam. Prvý hovorí, že ochota hovoriť o hodnotách nie je vlastnosťou pacienta, ale <strong>vlastnosťou vzťahu</strong> — a vzťah možno ovplyvniť. Druhý upozorňuje, že mlčanie môže byť príznakom, nie postojom.</p>
+<p>Obidva nálezy majú priamy praktický význam. Prvý hovorí, že ochota hovoriť o hodnotách nie je vlastnosťou pacienta, ale <strong>vlastnosťou vzťahu</strong> – a vzťah možno ovplyvniť. Druhý upozorňuje, že mlčanie môže byť príznakom, nie postojom.</p>
 
-<p>Práve druhý bod si zaslúži zdôraznenie. Ak pacient pred rozhodnutím o dialýze nekomunikuje, apaticky prijíma čokoľvek, čo sa navrhne, alebo pôsobí, že mu je to jedno, prvá úvaha by nemala smerovať k „nespolupracujúcemu pacientovi“, ale k možnej neliečenej depresii. Tá je v tejto populácii častá, systematicky poddiagnostikovaná a liečiteľná.</p>
+<p>Ak pacient pred rozhodnutím o dialýze nekomunikuje, apaticky prijíma čokoľvek, čo sa navrhne, alebo pôsobí, že mu je to jedno, prvá úvaha by nemala smerovať k „nespolupracujúcemu pacientovi“, ale k možnej neliečenej depresii. Tá je v tejto populácii častá, systematicky poddiagnostikovaná a liečiteľná.</p>
 
 <h2>Päť dôvodov mlčania</h2>
 
@@ -73,21 +73,21 @@ $articles[] = [
 <ol>
   <li><strong>Rozdielna citlivosť na súkromie.</strong> Pacienti sa výrazne líšia v tom, čo považujú za osobnú informáciu, ktorá do zdravotníckeho rozhovoru nepatrí.</li>
   <li><strong>Postoje a preferencie v rozhodovaní.</strong> Nie každý pacient chce rozhodovať spoločne. Časť ľudí si vedome želá, aby rozhodol lekár, a nepovažuje za potrebné vysvetľovať prečo.</li>
-  <li><strong>Osobnosť a psychická adaptácia.</strong> Spôsob, akým sa človek vyrovnáva so závažnou diagnózou, ovplyvňuje jeho ochotu hovoriť o vlastných preferenciách — vrátane situácií, keď si ich sám ešte nesformuloval.</li>
+  <li><strong>Osobnosť a psychická adaptácia.</strong> Spôsob, akým sa človek vyrovnáva so závažnou diagnózou, ovplyvňuje jeho ochotu hovoriť o vlastných preferenciách – vrátane situácií, keď si ich sám ešte nesformuloval.</li>
   <li><strong>Uprednostnenie zdravia pred súkromím.</strong> Časť pacientov je ochotná osobné informácie poskytnúť napriek nepohodliu, ak sú presvedčení, že to zlepší ich liečbu.</li>
-  <li><strong>Dôvera k poskytovateľom starostlivosti.</strong> Dôvera funguje ako faktor, ktorý bariéru súkromia prekonáva — čo zodpovedá aj kvantitatívnemu nálezu.</li>
+  <li><strong>Dôvera k poskytovateľom starostlivosti.</strong> Dôvera funguje ako faktor, ktorý bariéru súkromia prekonáva – čo zodpovedá aj kvantitatívnemu nálezu.</li>
 </ol>
 
-<p>Zásadný praktický dôsledok je, že <strong>jednotná komunikačná stratégia nemôže fungovať</strong>. Pacient, ktorý mlčí kvôli citlivosti na súkromie, potrebuje niečo iné ako pacient, ktorý si praje, aby rozhodol lekár, a ten zas niečo iné ako pacient s depresiou.</p>
+<p><strong>Jednotná komunikačná stratégia preto nemôže fungovať.</strong> Pacient, ktorý mlčí pre citlivosť na súkromie, potrebuje niečo iné ako pacient, ktorý si praje, aby rozhodol lekár, a ten zas niečo iné ako pacient s depresiou.</p>
 
 <h2>Čo z toho vyplýva pre prax</h2>
 
-<p>Zistenia sa dajú previesť do niekoľkých pomerne konkrétnych krokov:</p>
+<p>Zo zistení vyplýva niekoľko konkrétnych krokov:</p>
 
 <ol>
-  <li><strong>Neochotu považovať za údaj, nie za prekážku.</strong> Ak pacient o svojich hodnotách nehovorí, je to informácia o vzťahu, o jeho psychickom stave alebo o jeho preferovanom štýle rozhodovania — a stojí za to zistiť, o ktorú z možností ide.</li>
+  <li><strong>Neochotu považovať za údaj, nie za prekážku.</strong> Ak pacient o svojich hodnotách nehovorí, je to informácia o vzťahu, o jeho psychickom stave alebo o jeho preferovanom štýle rozhodovania – a stojí za to zistiť, o ktorú z možností ide.</li>
   <li><strong>Aktívne pátrať po depresívnych príznakoch</strong> pred rozhodovaním o modalite, nie až po ňom. Postačí krátky skríningový nástroj alebo cielená otázka na náladu, spánok a záujem o veci, ktoré pacienta predtým tešili.</li>
-  <li><strong>Budovať dôveru priebežne, nie pri rozhodovacom rozhovore.</strong> Dôvera k primárnemu nefrológovi je podľa štúdie ochranným faktorom — vzniká však počas mesiacov a rokov sledovania, nie počas jednej konzultácie.</li>
+  <li><strong>Budovať dôveru priebežne, nie pri rozhodovacom rozhovore.</strong> Dôvera k primárnemu nefrológovi je podľa štúdie ochranným faktorom – vzniká však počas mesiacov a rokov sledovania, nie počas jednej konzultácie.</li>
   <li><strong>Explicitne sa opýtať na preferovanú mieru zapojenia.</strong> Otázka „Chcete, aby sme sa rozhodovali spoločne, alebo by ste radšej, aby som vám odporučil, čo považujem za najlepšie?“ je legitímna a šetrí obom stranám nedorozumenie.</li>
   <li><strong>Normalizovať postupné odpovede.</strong> Pacient nemusí mať svoje hodnoty sformulované hneď. Rozdelenie rozhodovania do viacerých návštev je pri plánovanom začiatku liečby spravidla realizovateľné.</li>
   <li><strong>Rešpektovať hranicu.</strong> Právo nehovoriť o osobných záležitostiach je súčasťou autonómie pacienta rovnako ako právo rozhodovať. Cieľom nie je neochotu odstrániť za každú cenu, ale porozumieť jej a prispôsobiť sa jej.</li>
@@ -99,23 +99,23 @@ $articles[] = [
 
 <ul>
   <li>Ide o <strong>prierezovú štúdiu</strong>. Doložené sú asociácie, nie príčinné vzťahy. Vzťah medzi dôverou a neochotou môže pôsobiť obojsmerne a rovnako je možné, že depresia aj neochota majú spoločnú príčinu.</li>
-  <li>Zaradení boli len pacienti, ktorí <strong>modalitu už zvolili</strong>. Tí, ktorí sa k rozhodnutiu nedopracovali, v súbore chýbajú — a práve u nich by neochota mohla byť ešte vyššia. Skutočná prevalencia je preto pravdepodobne podhodnotená.</li>
+  <li>Zaradení boli len pacienti, ktorí <strong>modalitu už zvolili</strong>. Tí, ktorí sa k rozhodnutiu nedopracovali, v súbore chýbajú – a práve u nich by neochota mohla byť ešte vyššia. Skutočná prevalencia je preto pravdepodobne podhodnotená.</li>
   <li>Kľúčové premenné sú <strong>sebahlásené</strong>, čo pri téme, ako je ochota hovoriť o osobných veciach, prináša riziko skreslenia sociálnou žiaducnosťou.</li>
-  <li>Ide o <strong>japonskú populáciu</strong>. Normy týkajúce sa súkromia, očakávaného rozdelenia rolí medzi lekárom a pacientom a spôsobu vyjadrovania nesúhlasu sa medzi kultúrami líšia. Konkrétny podiel 24,2 % preto nemožno automaticky preniesť do slovenských podmienok — mechanizmy, ktoré štúdia opísala, sú však pravdepodobne prenositeľnejšie než samotné číslo.</li>
+  <li>Ide o <strong>japonskú populáciu</strong>. Normy týkajúce sa súkromia, očakávaného rozdelenia rolí medzi lekárom a pacientom a spôsobu vyjadrovania nesúhlasu sa medzi kultúrami líšia. Konkrétny podiel 24,2 % preto nemožno automaticky preniesť do slovenských podmienok – mechanizmy, ktoré štúdia opísala, sú však pravdepodobne prenositeľnejšie než samotné číslo.</li>
 </ul>
 
 <h2>Záver</h2>
 
 <p>Spoločné rozhodovanie sa v odporúčaniach opisuje ako výmena, v ktorej lekár prináša odbornosť a pacient hodnoty. Táto štúdia pripomína, že druhá polovica výmeny sa nedeje automaticky. Takmer štvrtina pacientov o svojich hodnotách hovoriť nechce a ich hodnotenie vlastného zapojenia do rozhodovania je zodpovedajúco nižšie.</p>
 
-<p>Podstatné je, ako sa tento nález číta. Mlčanie pacienta nie je zlyhaním pacienta. Podľa dostupných údajov súvisí predovšetkým s dôverou — teda s niečím, čo je na strane vzťahu a čo možno budovať — a s depresívnymi príznakmi, teda s niečím liečiteľným. Spoločné rozhodovanie preto nemá byť jedným rozhovorom pred podpisom informovaného súhlasu, ale procesom, ktorý začína dávno predtým a ktorý počíta aj s tým, že časť pacientov si svoje súkromie ponechá.</p>
+<p>Podstatné je, ako sa tento nález číta. Mlčanie pacienta nie je zlyhaním pacienta. Podľa dostupných údajov súvisí predovšetkým s dôverou – teda s niečím, čo je na strane vzťahu a čo možno budovať – a s depresívnymi príznakmi, teda s niečím liečiteľným. Spoločné rozhodovanie preto nemá byť jedným rozhovorom pred podpisom informovaného súhlasu, ale procesom, ktorý začína dávno predtým a ktorý počíta aj s tým, že časť pacientov si svoje súkromie ponechá.</p>
 
 <h3>Súvisiace články</h3>
 
 <ul>
   <li><a href="article.php?slug=kvalitativny-vyskum-nefrologia-rozhodovanie-pacientov-ckd">Kvalitatívny výskum v nefrológii a rozhodovanie pacientov s CKD</a>.</li>
   <li><a href="article.php?slug=predialyzacna-edukacia-volba-peritonealnej-dialyzy">Predialyzačná edukácia a voľba peritoneálnej dialýzy</a>.</li>
-  <li><a href="article.php?slug=frailty-ckd-vyziva-pohyb-stisk-ruky">Krehkosť pri CKD</a> — výživa, pohyb a funkčné hodnotenie.</li>
+  <li><a href="article.php?slug=frailty-ckd-vyziva-pohyb-stisk-ruky">Krehkosť pri CKD</a> – výživa, pohyb a funkčné hodnotenie.</li>
 </ul>
 
 <hr>
@@ -127,7 +127,7 @@ $articles[] = [
   <li><strong>Paul J. Barr, Rachel Thompson, Thom Walsh, Stuart W. Grande, Elissa M. Ozanne, Glyn Elwyn.</strong> <em>The psychometric properties of CollaboRATE: a fast and frugal patient-reported measure of the shared decision-making process.</em> Journal of Medical Internet Research. 2014;16(1):e2. doi: 10.2196/jmir.3085. <a href="https://pubmed.ncbi.nlm.nih.gov/24389354/" target="_blank" rel="noopener noreferrer">PubMed</a>.</li>
 </ol>
 
-<p><em><strong>Poznámka k dôkazom:</strong> Bibliografické údaje, kompletné autorstvo (52 autorov) aj kľúčové číselné údaje — 474 účastníkov, 111 pacientov (24,2 %) veľmi alebo do istej miery neochotných, rozdiely v skóre CollaboRATE −5,12 a −11,39 bodu, ochranný účinok dôvery v primárneho nefrológa, podporný účinok depresívnych príznakov a konvergentný zmiešaný dizajn — boli overené priamo v zázname PubMed a v Europe PMC vrátane doslovného znenia abstraktu. Rovnako boli overené názvy všetkých piatich kvalitatívnych tém. Plný text štúdie je za platobnou bariérou vydavateľa a nebol sprístupnený; slovenský opis jednotlivých tém preto vychádza z ich názvov a nie z detailných citácií pacientov. Praktické odporúčania, výklad depresie ako možnej príčiny mlčania a poznámka o kultúrnej prenositeľnosti sú <strong>vlastným odborným komentárom</strong>.</em></p>
+<p><em><strong>Poznámka k dôkazom:</strong> Bibliografické údaje, kompletné autorstvo (52 autorov) aj kľúčové číselné údaje – 474 účastníkov, 111 pacientov (24,2 %) veľmi alebo do istej miery neochotných, rozdiely v skóre CollaboRATE −5,12 a −11,39 bodu, ochranný účinok dôvery v primárneho nefrológa, podporný účinok depresívnych príznakov a konvergentný zmiešaný dizajn – boli overené priamo v zázname PubMed a v Europe PMC vrátane doslovného znenia abstraktu. Rovnako boli overené názvy všetkých piatich kvalitatívnych tém. Plný text štúdie je za platobnou bariérou vydavateľa a nebol sprístupnený; slovenský opis jednotlivých tém preto vychádza z ich názvov a nie z detailných citácií pacientov. Praktické odporúčania, výklad depresie ako možnej príčiny mlčania a poznámka o kultúrnej prenositeľnosti sú <strong>vlastným odborným komentárom</strong>.</em></p>
 HTML,
 ];
 

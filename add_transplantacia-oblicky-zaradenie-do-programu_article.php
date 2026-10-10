@@ -42,19 +42,18 @@ $articles[] = [
 </figure>
 
 <p>Transplantácia obličky je pre mnohých pacientov s pokročilým ochorením obličiek
-<strong>často preferovanou formou náhrady ich funkcie</strong> — umožňuje život bez dialýzy alebo
-s jej ukončením. Cesta k nej vedie cez dôkladnú prípravu a zaradenie do transplantačného programu.
-V tomto článku zrozumiteľne vysvetlíme, ako to prebieha.</p>
+<strong>často preferovanou formou náhrady ich funkcie</strong> – umožňuje vyhnúť sa dialýze alebo
+ju ukončiť. Cesta k nej vedie cez dôkladnú prípravu a zaradenie do transplantačného programu.</p>
 
 <h2>Prečo transplantácia</h2>
 <p>Fungujúca darovaná oblička dokáže nahradiť prácu vlastných obličiek lepšie a komplexnejšie
 než dialýza. Mnohí pacienti po transplantácii majú vyššiu kvalitu života. Nie je však vhodná
-pre každého — vhodnosť posudzuje tím odborníkov.</p>
+pre každého – vhodnosť posudzuje tím odborníkov.</p>
 
 <h2>Kto môže byť zaradený</h2>
 <p>O zaradení rozhoduje <strong>transplantačné centrum</strong> na základe celkového zdravotného
 stavu. Posudzuje sa, či je zákrok pre vás bezpečný a prínosný. Niektoré ochorenia alebo riziká
-môžu zaradenie odložiť alebo vylúčiť — všetko sa hodnotí individuálne.</p>
+môžu zaradenie odložiť alebo vylúčiť – všetko sa hodnotí individuálne.</p>
 
 <h2>Aké vyšetrenia to vyžaduje</h2>
 <p>Pred zaradením absolvujete sadu vyšetrení, ktoré overia, že telo zákrok a následnú liečbu
@@ -62,7 +61,7 @@ zvládne. Typicky zahŕňajú:</p>
 <ul>
   <li>vyšetrenie srdca a ciev,</li>
   <li>skríning infekcií a onkologický skríning,</li>
-  <li>imunologické vyšetrenia a stanovenie krvnej skupiny a tkanivovej typizácie,</li>
+  <li>imunologické vyšetrenia a stanovenie krvnej skupiny a tkanivovú typizáciu,</li>
   <li>zubné a ďalšie konziliárne vyšetrenia podľa potreby.</li>
 </ul>
 
@@ -73,7 +72,7 @@ je niekedy možné zákrok naplánovať skôr.</p>
 
 <h2>Čakacia listina</h2>
 <p>Po úspešnom posúdení vás transplantačné centrum zaradí na <strong>čakaciu listinu</strong>.
-Pri darcovi od zosnulého sa vhodný orgán prideľuje podľa zhody a ďalších kritérií, preto sa
+Pri obličke od zosnulého darcu sa vhodný orgán prideľuje podľa zhody a ďalších kritérií, preto sa
 čakanie nedá presne predpovedať. Počas čakania zvyčajne pokračujete v dialyzačnej liečbe
 a chodíte na pravidelné kontroly.</p>
 

@@ -27,7 +27,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Revízia klasifikačných kritérií ASAS-SPARTAN z roku 2025 a odporúčania ACR z roku 2026 menia váhu magnetickej rezonancie aj poradie cielenej liečby. Prehľad diagnostiky, zobrazovania a bezpečného výberu liekov.',
     'content'      => <<<'HTML'
-<figure><a href="img/axialna-spondyloartritida-diagnostika-zobrazovanie-liecba.webp" rel="noopener noreferrer" target="_blank"><img src="img/axialna-spondyloartritida-diagnostika-zobrazovanie-liecba.webp" alt="Sakroiliakálne kĺby, v ktorých zobrazovací lúč odhaľuje prvé jemné zápalové žiarenie" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia, nie nález konkrétneho pacienta. Včasný zápal je vidieť skôr, než vznikne štrukturálne poškodenie — ak sa naň cielene pozrieme.</figcaption></figure>
+<figure><a href="img/axialna-spondyloartritida-diagnostika-zobrazovanie-liecba.webp" rel="noopener noreferrer" target="_blank"><img src="img/axialna-spondyloartritida-diagnostika-zobrazovanie-liecba.webp" alt="Sakroiliakálne kĺby, v ktorých zobrazovací lúč odhaľuje prvé jemné zápalové žiarenie" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia, nie nález konkrétneho pacienta. Včasný zápal je vidieť skôr, než vznikne štrukturálne poškodenie – ak sa naň cielene pozrieme.</figcaption></figure>
 
 <p class="article-dek"><em>Axiálna spondyloartritída sa nedá diagnostikovať jedným testom. Revidované klasifikačné kritériá ASAS-SPARTAN z roku 2025 znížili váhu izolovaného edému kostnej drene a odporúčania ACR, SAA a SPARTAN z roku 2026 postavili inhibítory TNF a interleukínu 17 na rovnakú úroveň ako prvú biologickú voľbu. Nasledujúci prehľad zhŕňa, čo z toho vyplýva pre včasnú diagnostiku, interpretáciu zobrazovania a bezpečný výber liečby vrátane pacientov s obličkovým rizikom.</em></p>
 
@@ -279,7 +279,7 @@ $articles[] = [
   <li><strong>ASDAS</strong>, ktorý kombinuje klinické položky s C-reaktívnym proteínom alebo sedimentáciou.</li>
 </ul>
 
-<p>ASDAS poskytuje lepšie ukotvenie v objektívnom zápale než samotný BASDAI, hoci ani on nie je bez obmedzení. Odporúča sa používať niektoré z ochorení špecifických skóre pravidelne, nie iba všeobecné meradlá bolesti či kvality života.</p>
+<p>ASDAS poskytuje lepšie ukotvenie v objektívnom zápale než samotný BASDAI, hoci ani on nie je bez obmedzení. Odporúča sa pravidelne používať niektoré zo skóre špecifických pre ochorenie, nie iba všeobecné meradlá bolesti či kvality života.</p>
 
 <p>Formálna stratégia liečby k cieľu, teda systematická eskalácia podľa vopred stanovenej hraničnej hodnoty skóre, sa pri axSpA zatiaľ neopiera o presvedčivé dôkazy o prevahe nad postupom vedeným symptómami. Ak sa cieľ stanovuje, primeraným cieľom je nízka aktivita ochorenia. Pri rozhodovaní o eskalácii cielenej liečby sa má vysoká aktivita potvrdiť klinickým posúdením a podľa možnosti objektívnymi znakmi zápalu.</p>
 
@@ -388,7 +388,7 @@ $articles[] = [
 
 <p>Miesto si zachovávajú pri významnej periférnej artritíde alebo pri niektorých mimokĺbových prejavoch. Sulfasalazín sa nemá používať ako povinný medzistupeň pred biologickou liečbou u pacienta s dominantným axiálnym ochorením.</p>
 
-<p>Táto hranica je dôležitá aj pri posudzovaní „zlyhania štandardnej liečby“. Nedostatočný účinok metotrexátu na axiálnu bolesť nie je prekvapivým dôkazom rezistencie, pretože tento liek nie je na axiálnu zložku spoľahlivo účinný.</p>
+<p>Táto hranica je dôležitá aj pri posudzovaní „zlyhania štandardnej liečby“. Nedostatočný účinok metotrexátu na axiálnu bolesť nie je prekvapením ani dôkazom rezistencie, pretože tento liek nie je na axiálnu zložku spoľahlivo účinný.</p>
 
 <h2>Kedy zvažovať biologickú alebo cielenú syntetickú liečbu</h2>
 
@@ -434,7 +434,7 @@ $articles[] = [
 </table>
 </div>
 
-<p>Vnútri jednotlivých tried sa nepreferuje konkrétna molekula plošne. Výber sa riadi mimokĺbovými prejavmi, komorbiditami, spôsobom podania a preferenciou pacienta.</p>
+<p>V rámci jednotlivých tried sa plošne neuprednostňuje žiadna konkrétna molekula. Výber sa riadi mimokĺbovými prejavmi, komorbiditami, spôsobom podania a preferenciou pacienta.</p>
 
 <h3>Inhibítory TNF</h3>
 
@@ -628,7 +628,7 @@ $articles[] = [
 
 <h2>Deti a dospievajúci</h2>
 
-<p>Popri aktualizácii odporúčaní pre dospelých vznikla v roku 2026 aj samostatná smernica pre juvenilnú axiálnu spondyloartritídu. Najvýraznejším rozdielom je zobrazovanie: u detí a dospievajúcich je preferovaným prvým vyšetrením magnetická rezonancia sakroiliakálnych kĺbov bez kontrastnej látky, nie röntgenová snímka. Opakované snímkovanie chrbtice a panvy v pevných intervaloch sa v detskom veku neodporúča dôraznejšie než u dospelých.</p>
+<p>Popri aktualizácii odporúčaní pre dospelých vznikla v roku 2026 aj samostatná smernica pre juvenilnú axiálnu spondyloartritídu. Najvýraznejším rozdielom je zobrazovanie: u detí a dospievajúcich je preferovaným prvým vyšetrením magnetická rezonancia sakroiliakálnych kĺbov bez kontrastnej látky, nie röntgenová snímka. Opakované snímkovanie chrbtice a panvy v pevných intervaloch sa v detskom veku neodporúča ešte dôraznejšie než u dospelých.</p>
 
 <h2>Praktický klinický postup</h2>
 

@@ -26,9 +26,9 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Presný nefrologický výklad odporúčaní ACC/AHA 2026: koho liečiť bez skóre PREVENT, aké ciele platia pri CKD s ASCVD a prečo je dialýza osobitnou situáciou.',
+    'excerpt'      => 'Nefrologický výklad odporúčaní ACC/AHA 2026: koho liečiť bez skóre PREVENT, aké ciele platia pri CKD s ASCVD a prečo je dialýza osobitnou situáciou.',
     'content'      => <<<'HTML'
-<figure><a href="img/dyslipidemia-ckd-acc-aha-2026-nefrologicka-prax.webp" rel="noopener noreferrer" target="_blank"><img src="img/dyslipidemia-ckd-acc-aha-2026-nefrologicka-prax.webp" alt="Cieva s plakom a prahová čiara posunutá nižšie, pôvodná poloha zostáva ako slabý odtlačok; pod novou čiarou svieti oblička" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Nové odporúčania posúvajú latku nižšie práve pre pacientov s chorobou obličiek — a to mení prax, nielen text.</figcaption></figure>
+<figure><a href="img/dyslipidemia-ckd-acc-aha-2026-nefrologicka-prax.webp" rel="noopener noreferrer" target="_blank"><img src="img/dyslipidemia-ckd-acc-aha-2026-nefrologicka-prax.webp" alt="Cieva s plakom a prahová čiara posunutá nižšie, pôvodná poloha zostáva ako slabý odtlačok; pod novou čiarou svieti oblička" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Nové odporúčania posúvajú latku nižšie práve pre pacientov s chorobou obličiek.</figcaption></figure>
 
 <p>Kardiovaskulárne ochorenia patria medzi hlavné príčiny chorobnosti a úmrtnosti pacientov s chronickou chorobou obličiek (CKD). Riziko stúpa s poklesom odhadovanej glomerulovej filtrácie (eGFR), albuminúriou, diabetom, artériovou hypertenziou a už prítomným aterosklerotickým kardiovaskulárnym ochorením (ASCVD). Manažment dyslipidémie je preto dôležitou súčasťou kardiorenálnej prevencie, jeho prínos však nie je rovnaký v predialyzačnej CKD, počas dialýzy a po transplantácii obličky.</p>
 
@@ -69,7 +69,7 @@ $articles[] = [
 </table>
 </div>
 
-<p>Prvá veta sa týka primárnej prevencie vo vymedzenom veku a rozsahu LDL-C. Pacienti s LDL-C ≥4,9 mmol/l (≥190 mg/dl) patria do osobitného algoritmu závažnej hypercholesterolémie. Pri hodnotách mimo uvedeného rozsahu alebo mimo veku 40–75 rokov nemožno CKD odporúčanie mechanicky extrapolovať; rozhoduje celkový klinický kontext a ďalšie príslušné časti usmernenia.</p>
+<p>Prvé odporúčanie sa týka primárnej prevencie vo vymedzenom veku a rozsahu LDL-C. Pacienti s LDL-C ≥4,9 mmol/l (≥190 mg/dl) patria do osobitného algoritmu závažnej hypercholesterolémie. Pri hodnotách mimo uvedeného rozsahu alebo mimo veku 40–75 rokov nemožno CKD odporúčanie mechanicky extrapolovať; rozhoduje celkový klinický kontext a ďalšie príslušné časti usmernenia.</p>
 
 <h2>PREVENT už obličky neignoruje</h2>
 
@@ -171,7 +171,7 @@ $articles[] = [
 
 <p>Dialýza zostáva zásadnou výnimkou: rutinné nové nasadenie statínu po začatí udržiavacej hemodialýzy nemá presvedčivú výsledkovú oporu, zatiaľ čo pokračovanie už zavedenej liečby môže byť rozumné po individualizácii. Transplantácia obličky si vyžaduje osobitný prístup podľa KDIGO a dôslednú kontrolu interakcií.</p>
 
-<p>Najpraktickejším posolstvom pre nefrológa je neliečiť izolované číslo LDL-C, ale presne určené aterosklerotické riziko. Cieľová hodnota má zmysel iba spolu so správne zvolenou populáciou, bezpečnou liečbou a kontrolou celého kardiorenálneho rizikového profilu.</p>
+<p>Pre nefrológa z toho vyplýva jednoduché pravidlo: neliečiť izolované číslo LDL-C, ale presne určené aterosklerotické riziko. Cieľová hodnota má zmysel iba spolu so správne zvolenou populáciou, bezpečnou liečbou a kontrolou celého kardiorenálneho rizikového profilu.</p>
 
 <hr>
 

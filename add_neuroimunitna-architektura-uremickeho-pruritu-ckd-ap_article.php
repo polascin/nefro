@@ -26,17 +26,17 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Pruritus pri chronickej chorobe obličiek trápi vyše tretinu dialyzovaných pacientov a liečba býva empirická. Nový prehľad navrhuje model štyroch neuroimunitných uzlov, ktorý vysvetľuje, prečo antihistaminiká zlyhávajú a prečo gabapentinoidy a difelikefalín zaberajú.',
     'content'      => <<<'HTML'
-<figure><a href="img/neuroimunitna-architektura-uremickeho-pruritu-ckd-ap.webp" rel="noopener noreferrer" target="_blank"><img src="img/neuroimunitna-architektura-uremickeho-pruritu-ckd-ap.webp" alt="Štyri rozdielne uzly prepojené do uzavretého samoposilňujúceho okruhu nad podráždeným tkanivom" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Svrbenie tu nie je reťazec, ale uzavretý okruh — a liečba musí zasiahnuť ten uzol, ktorý ho u daného pacienta poháňa.</figcaption></figure>
+<figure><a href="img/neuroimunitna-architektura-uremickeho-pruritu-ckd-ap.webp" rel="noopener noreferrer" target="_blank"><img src="img/neuroimunitna-architektura-uremickeho-pruritu-ckd-ap.webp" alt="Štyri rozdielne uzly prepojené do uzavretého samoposilňujúceho okruhu nad podráždeným tkanivom" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Svrbenie tu nie je reťazec, ale uzavretý okruh – a liečba musí zasiahnuť ten uzol, ktorý ho u daného pacienta poháňa.</figcaption></figure>
 
-<p class="article-dek"><em>Svrbenie pri chronickej chorobe obličiek nemá jednu dominantnú príčinu — a práve preto naň zlyháva liečba postavená na jednom mechanizme. Brazílsky prehľadový článok navrhuje rámec štyroch neuroimunitných uzlov, ktorý mechanistickú zložitosť prekladá do klinicky uchopiteľných domén. Autori ho výslovne označujú za pragmatický a generujúci hypotézy, nie za validovaný systém endotypizácie.</em></p>
+<p class="article-dek"><em>Svrbenie pri chronickej chorobe obličiek nemá jednu dominantnú príčinu – a práve preto naň zlyháva liečba postavená na jednom mechanizme. Brazílsky prehľadový článok navrhuje rámec štyroch neuroimunitných uzlov, ktorý mechanistickú zložitosť prekladá do klinicky uchopiteľných domén. Autori ho výslovne označujú za pragmatický a generujúci hypotézy, nie za validovaný systém endotypizácie.</em></p>
 
-<p>Pruritus asociovaný s chronickou chorobou obličiek (v anglickej literatúre <em>CKD-associated pruritus</em>, CKD-aP; staršie „uremický pruritus“) patrí medzi symptómy, ktoré sa v ambulancii ľahko prehliadnu — pacient ich sám nespomenie a lekár sa na ne nespýta. Pritom ide o jeden z najzaťažujúcejších prejavov pokročilého ochorenia obličiek.</p>
+<p>Pruritus asociovaný s chronickou chorobou obličiek (v anglickej literatúre <em>CKD-associated pruritus</em>, CKD-aP; staršie „uremický pruritus“) patrí medzi symptómy, ktoré sa v ambulancii ľahko prehliadnu – pacient ich sám nespomenie a lekár sa na ne nespýta. Pritom ide o jeden z najzaťažujúcejších prejavov pokročilého ochorenia obličiek.</p>
 
-<p>Longitudinálna analýza medzinárodnej štúdie DOPPS, ktorá zahrnula 7976 hemodialyzovaných pacientov z 21 krajín, ukazuje, že <strong>51 % pacientov malo stredne ťažké až ťažké svrbenie</strong> aspoň pri jednom z dvoch hodnotení a 22 % pri oboch. Symptóm teda nie je prechodný — u pätiny pacientov pretrváva roky.</p>
+<p>Longitudinálna analýza medzinárodnej štúdie DOPPS, ktorá zahrnula 7976 hemodialyzovaných pacientov z 21 krajín, ukazuje, že <strong>51 % pacientov malo stredne ťažké až ťažké svrbenie</strong> aspoň pri jednom z dvoch hodnotení a 22 % pri oboch. Symptóm teda nie je prechodný – u pätiny pacientov pretrváva roky.</p>
 
 <p>Dôsledky nie sú len subjektívne. U pacientov s pretrvávajúcim svrbením boli oproti pacientom bez neho upravené pomery rizík <strong>1,29 (95 % IS 1,09–1,53) pre celkovú mortalitu</strong>, 1,17 (1,07–1,28) pre hospitalizáciu z akejkoľvek príčiny a 1,48 (1,26–1,74) pre kardiovaskulárne príhody. U pacientov, u ktorých sa svrbenie nanovo objavilo, stúpol výskyt depresie o 13 percentuálnych bodov, nepokojného spánku o 10 a pocitu vyčerpania o 14.</p>
 
-<p>Kauzálny výklad je namieste opatrný — svrbenie môže byť sčasti aj ukazovateľom horšieho celkového stavu. Konzistentná súvislosť so spánkom a depresiou však naznačuje pravdepodobnú cestu, ktorou sa symptóm premieta do tvrdých ukazovateľov.</p>
+<p>Pri kauzálnom výklade treba byť opatrný – svrbenie môže byť sčasti aj ukazovateľom horšieho celkového stavu. Konzistentná súvislosť so spánkom a depresiou však naznačuje pravdepodobnú cestu, ktorou sa symptóm premieta do tvrdých ukazovateľov.</p>
 
 <p>Napriek tomu zostáva manažment CKD-aP prevažne empirický a jeho účinnosť len čiastočná. Prehľad publikovaný v <em>Journal of Nephrology</em> ponúka vysvetlenie, prečo je to tak.</p>
 
@@ -54,7 +54,7 @@ $articles[] = [
   <li>signalizáciu neuropeptidov.</li>
 </ul>
 
-<p>Tento zoznam je klinicky nepoužiteľný — je príliš dlhý a jednotlivé položky sa prekrývajú. Autori ho preto zoskupili do štyroch uzlov, ktoré majú byť <strong>organizujúcim modelom</strong>, teda pomôckou na usporiadanie uvažovania, nie klasifikačným systémom.</p>
+<p>Tento zoznam je klinicky nepoužiteľný – je príliš dlhý a jednotlivé položky sa prekrývajú. Autori ho preto zoskupili do štyroch uzlov, ktoré majú byť <strong>organizujúcim modelom</strong>, teda pomôckou na usporiadanie uvažovania, nie klasifikačným systémom.</p>
 
 <h2>Model štyroch uzlov</h2>
 
@@ -62,11 +62,11 @@ $articles[] = [
 
 <p>Miesto, kde sa v koži stretávajú zakončenia senzitívnych C-vlákien s keratinocytmi, mastocytmi a bunkami imunitného systému. Tu sa spája niekoľko vplyvov naraz: porucha kožnej bariéry pri xeróze, lokálna zápalová aktivita a účinok zadržaných uremických solútov. Výsledkom je pruritogénna signalizácia, ktorá vzniká ešte pred vstupom do nervového systému.</p>
 
-<p>Klinickým korelátom tohto uzla je suchá koža — nález, ktorý má u dialyzovaných pacientov vysokú prevalenciu a ktorý je zároveň jediným plne modifikovateľným článkom celého reťazca. Sústavná lokálna starostlivosť s emoliens patrí preto na začiatok liečby vždy, aj keď je jej samostatný účinok obmedzený.</p>
+<p>Klinickým korelátom tohto uzla je suchá koža – nález, ktorý má u dialyzovaných pacientov vysokú prevalenciu a ktorý je zároveň jediným plne modifikovateľným článkom celého reťazca. Sústavná lokálna starostlivosť s emoliens patrí preto na začiatok liečby vždy, aj keď je jej samostatný účinok obmedzený.</p>
 
 <h3>Uzol II: nervový prenos a hyperexcitabilita</h3>
 
-<p>Uzol zahŕňa prenos pruritogénneho signálu periférnym a centrálnym nervovým systémom a jeho patologické zosilnenie. Opakovaná alebo dlhodobá stimulácia vedie k zníženiu prahu a k senzitizácii — svrbenie sa udržiava aj po tom, ako pôvodný podnet zoslabne.</p>
+<p>Uzol zahŕňa prenos pruritogénneho signálu periférnym a centrálnym nervovým systémom a jeho patologické zosilnenie. Opakovaná alebo dlhodobá stimulácia vedie k zníženiu prahu a k senzitizácii – svrbenie sa udržiava aj po tom, ako pôvodný podnet zoslabne.</p>
 
 <p>Práve tento uzol dáva mechanistický zmysel účinnosti <strong>gabapentinoidov</strong>. Gabapentín a pregabalín pôsobia na podjednotku α2δ napäťovo riadených kalciových kanálov a tlmia neuronálnu hyperexcitabilitu. Pri dialýze sa dávkujú výrazne redukovane, spravidla v malých dávkach po dialyzačnej procedúre; oba sa eliminujú obličkami a pri bežnom dávkovaní kumulujú, s rizikom sedácie, závratov, porúch chôdze a pádov. Ide o typický príklad liečby, kde je rozdiel medzi účinnou a toxickou dávkou u dialyzovaného pacienta úzky.</p>
 
@@ -74,7 +74,7 @@ $articles[] = [
 
 <p>Uzol vychádza z dlhšie diskutovanej hypotézy o nerovnováhe opioidného systému: relatívnej prevahe aktivity μ-receptorov, ktorá svrbenie podporuje, nad aktivitou κ-receptorov, ktorá ho tlmí.</p>
 
-<p>Tento uzol je terapeuticky najlepšie doložený. <strong>Difelikefalín</strong>, periférne obmedzený agonista κ-opioidných receptorov, bol v štúdiách KALM-1 a KALM-2 podávaný intravenózne v dávke 0,5 µg/kg po každej hemodialýze počas 12 týždňov. V združenej analýze oboch štúdií dosiahlo pokles najhoršej intenzity svrbenia (WI-NRS) aspoň o 3 body <strong>51,1 % pacientov oproti 35,2 %</strong> pri placebe; pokles aspoň o 4 body dosiahlo 38,7 % oproti 23,4 %. Rozdiel je konzistentný, no zároveň je namieste všimnúť si vysokú odpoveď v ramene s placebom — pri subjektívnom symptóme, akým je svrbenie, ide o očakávaný jav, ktorý pripomína, aký veľký podiel má na hodnotení symptómu očakávanie pacienta.</p>
+<p>Tento uzol je terapeuticky najlepšie doložený. <strong>Difelikefalín</strong>, periférne obmedzený agonista κ-opioidných receptorov, bol v štúdiách KALM-1 a KALM-2 podávaný intravenózne v dávke 0,5 µg/kg po každej hemodialýze počas 12 týždňov. V združenej analýze oboch štúdií dosiahlo pokles najhoršej intenzity svrbenia (WI-NRS) aspoň o 3 body <strong>51,1 % pacientov oproti 35,2 %</strong> pri placebe; pokles aspoň o 4 body dosiahlo 38,7 % oproti 23,4 %. Rozdiel je konzistentný, nápadná je však aj vysoká odpoveď v ramene s placebom. Pri subjektívnom symptóme, akým je svrbenie, ide o očakávaný jav, ktorý pripomína, aký veľký podiel má na hodnotení symptómu očakávanie pacienta.</p>
 
 <p>V Japonsku sa v rovnakej indikácii dlhodobo používa nalfurafín, ďalší agonista κ-receptorov.</p>
 
@@ -88,7 +88,7 @@ $articles[] = [
 
 <p>Model dobre vysvetľuje jednu z najčastejších klinických skúseností: obmedzenú účinnosť antihistaminík. Ani jeden zo štyroch uzlov nie je primárne histamínový. Histamín je pri CKD-aP nanajvýš okrajovým mediátorom a blokáda H<sub>1</sub>-receptorov preto nezasahuje do hlavných dráh.</p>
 
-<p>Zlepšenie, ktoré pacienti po antihistaminikách niekedy uvádzajú, sa dá vo veľkej miere pripísať <strong>sedatívnemu účinku</strong> — pacient lepšie spí a svrbenie subjektívne menej vníma. U dialyzovaného, spravidla staršieho pacienta ide o problematickú cestu: sedatívne antihistaminiká majú anticholinergné pôsobenie a zvyšujú riziko zmätenosti a pádov. Ich dlhodobé podávanie ako „liečby svrbenia“ je preto ťažko obhájiteľné.</p>
+<p>Zlepšenie, ktoré pacienti po antihistaminikách niekedy uvádzajú, sa dá vo veľkej miere pripísať <strong>sedatívnemu účinku</strong> – pacient lepšie spí a svrbenie subjektívne menej vníma. U dialyzovaného, spravidla staršieho pacienta ide o problematickú cestu: sedatívne antihistaminiká majú anticholinergné pôsobenie a zvyšujú riziko zmätenosti a pádov. Ich dlhodobé podávanie ako „liečby svrbenia“ je preto ťažko obhájiteľné.</p>
 
 <h2>Čo model neznamená</h2>
 
@@ -101,7 +101,7 @@ $articles[] = [
   <li>voľba liečby podľa predpokladaného mechanizmu si pred zavedením do rutinnej praxe vyžaduje prospektívnu validáciu.</li>
 </ul>
 
-<p>Ide teda o didaktický a výskumný rámec. Jeho hodnota je v tom, že usporadúva myslenie a navrhuje smer pre budúce štúdie s obohatením súboru — teda štúdie, ktoré zaradia práve tých pacientov, u ktorých má testovaný mechanizmus najväčšiu pravdepodobnosť uplatnenia. Doterajšie štúdie liečili heterogénnu populáciu jednotne, čo mohlo skutočný účinok rozriediť.</p>
+<p>Ide teda o didaktický a výskumný rámec. Jeho hodnota je v tom, že usporadúva myslenie a navrhuje smer pre budúce štúdie s obohatením súboru – teda štúdie, ktoré zaradia práve tých pacientov, u ktorých má testovaný mechanizmus najväčšiu pravdepodobnosť uplatnenia. Doterajšie štúdie liečili heterogénnu populáciu jednotne, čo mohlo skutočný účinok rozriediť.</p>
 
 <h2>Praktický postup pri pacientovi so svrbením</h2>
 
@@ -118,13 +118,13 @@ $articles[] = [
 
 <h2>Poznámka k dostupnosti</h2>
 
-<p>Difelikefalín je registrovaný v USA (Korsuva) aj v Európskej únii (Kapruvia) na liečbu stredne ťažkého až ťažkého CKD-aP u dospelých hemodialyzovaných pacientov. Skutočná dostupnosť a úhrada sa však medzi krajinami líšia a v praxi býva hlavným obmedzením. Gabapentinoidy zostávajú preto v mnohých prostrediach pragmatickou prvou voľbou pri farmakologickej liečbe — s vedomím, že ide o použitie mimo registrovanej indikácie a s dôrazom na nízke dávkovanie.</p>
+<p>Difelikefalín je registrovaný v USA (Korsuva) aj v Európskej únii (Kapruvia) na liečbu stredne ťažkého až ťažkého CKD-aP u dospelých hemodialyzovaných pacientov. Skutočná dostupnosť a úhrada sa však medzi krajinami líšia a v praxi býva hlavným obmedzením. Gabapentinoidy zostávajú preto v mnohých prostrediach pragmatickou prvou voľbou pri farmakologickej liečbe – s vedomím, že ide o použitie mimo registrovanej indikácie a s dôrazom na nízke dávkovanie.</p>
 
 <h2>Záver</h2>
 
 <p>Prehľad neprináša nový liek ani nové dáta o účinnosti. Prináša niečo iné a v tomto prípade užitočné: usporiadanie rozptýlených mechanizmov do štyroch domén, ktoré sa dajú spojiť s konkrétnymi liečebnými zásahmi. Vysvetľuje, prečo antihistaminiká pri CKD-aP zlyhávajú, prečo gabapentinoidy a difelikefalín zaberajú, a prečo je pravdepodobné, že žiadna monoterapia nebude fungovať u všetkých.</p>
 
-<p>Zároveň si zachováva korektnú mieru: ide o rámec na uvažovanie a plánovanie výskumu, nie o návod na výber liečby podľa mechanizmu. Prospektívna validácia je podmienkou, ktorú autori sami stanovujú — a bolo by chybou ju pri čítaní preskočiť.</p>
+<p>Zároveň si zachováva korektnú mieru: ide o rámec na uvažovanie a plánovanie výskumu, nie o návod na výber liečby podľa mechanizmu. Prospektívna validácia je podmienkou, ktorú autori sami stanovujú – a bolo by chybou ju pri čítaní preskočiť.</p>
 
 <hr>
 

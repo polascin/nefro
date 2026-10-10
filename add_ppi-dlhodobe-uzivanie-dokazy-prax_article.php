@@ -60,7 +60,7 @@ $articles[] = [
     <tr>
       <th scope="row">Jednoduchá observačná asociácia</th>
       <td>Signál možného rizika</td>
-      <td>Confounding by indication, protopatické skreslenie, reverzná kauzalita a chybné meranie expozície</td>
+      <td>Skreslenie indikáciou, protopatické skreslenie, reverzná kauzalita a chybné meranie expozície</td>
     </tr>
   </tbody>
 </table>
@@ -77,7 +77,7 @@ $articles[] = [
 <p>Systematický prehľad Ben-Eltrikiho a kol. z roku 2020 hľadal dôkazy o celkovej mortalite pri používaní PPI dlhšom než 12 týždňov. Porovnal tri odlišné typy údajov:</p>
 
 <ul>
-  <li>systematický prehľad observačných štúdií s približne ročným sledovaním: pooled OR 1,68 (95 % IS 1,53–1,84),</li>
+  <li>systematický prehľad observačných štúdií s približne ročným sledovaním: súhrnný OR 1,68 (95 % IS 1,53–1,84),</li>
   <li>americká kohorta veteránov s novými používateľmi PPI verzus H2-antagonistov a až 10-ročným sledovaním: HR 1,17 (95 % IS 1,10–1,24),</li>
   <li>randomizovaná časť COMPASS s pantoprazolom: HR 1,03 (95 % IS 0,92–1,15) po približne 3 rokoch.</li>
 </ul>
@@ -128,7 +128,7 @@ $articles[] = [
 <ol>
   <li><strong>Overiť indikáciu.</strong> Rozlíšiť potvrdenú GERD, závažnú erozívnu ezofagitídu, Barrettov pažerák, ulcerózne krvácanie, hypersekrečný stav, eradikáciu <em>H. pylori</em> a gastroprotekciu pri vysokom riziku od „zabudnutého“ PPI po empirickom kurze.</li>
   <li><strong>Určiť, či je potrebná dlhodobá liečba.</strong> Pri typických príznakoch bez alarmujúcich prejavov ACG odporúča 8-týždňový empirický kurz raz denne pred jedlom; pri odpovedi odporúča pokus o vysadenie. Toto neplatí automaticky pri Barrettovom pažeráku alebo LA C/D ezofagitíde.</li>
-  <li><strong>Použiť najnižšiu účinnú dávku.</strong> Pri potrebe udržiavacej liečby voliť dávku, ktorá kontroluje symptómy a udržiava hojenie. Pri neerozívnej GERD možno zvážiť intermitentný alebo režim podľa potreby.</li>
+  <li><strong>Použiť najnižšiu účinnú dávku.</strong> Pri potrebe udržiavacej liečby voliť dávku, ktorá kontroluje symptómy a udržiava hojenie. Pri neerozívnej GERD možno zvážiť intermitentné podávanie alebo užívanie podľa potreby.</li>
   <li><strong>Skontrolovať užívanie.</strong> Enterosolventný PPI je pri dávkovaní raz denne spravidla účinnejší 30–60 minút pred prvým jedlom než pred spaním.</li>
   <li><strong>Prehodnotiť NSAID a antitrombotiká.</strong> Najprv riešiť potrebu NSAID, krvácavé riziko, renálnu funkciu a objemový stav; gastroprotekcia nenahrádza renálnu bezpečnosť.</li>
   <li><strong>Monitorovať podľa rizika.</strong> Pri CKD alebo predchádzajúcom AKI sledovať kreatinín/eGFR a podľa kontextu draslík, objemový stav a magnézium. Pri nevysvetlenom vzostupe kreatinínu myslieť na AIN.</li>
@@ -139,7 +139,7 @@ $articles[] = [
 
 <p>PPI netreba démonizovať ani idealizovať. Pri jasnej indikácii má ich prínos pri GERD, závažnej ezofagitíde, vredovej chorobe a gastroprotekcii často prevahu. Väčšina obávaných dlhodobých udalostí bola identifikovaná najmä v observačných štúdiách, v ktorých nemožno úplne odstrániť skreslenie indikáciou, protopatické skreslenie a chyby v meraní expozície.</p>
 
-<p>Pre nefrologickú a internú prax z toho vyplýva jednoduchý princíp: <strong>udržať PPI tam, kde je potrebný, ale pravidelne odstrániť PPI bez platnej indikácie</strong>. Pri CKD má byť súčasťou revízie aj samotné NSAID, diuretikum, ACEi/ARB, objemový stav, elektrolyty a riziko AIN. Cieľom nie je nulová expozícia PPI, ale odôvodnená expozícia v najnižšej účinnej dávke a s primeranou kontrolou.</p>
+<p>Pre nefrologickú a internú prax z toho vyplýva jednoduchý princíp: <strong>udržať PPI tam, kde je potrebný, ale PPI bez platnej indikácie pri pravidelnej revízii vysadiť</strong>. Pri CKD má byť súčasťou revízie aj samotné NSAID, diuretikum, ACEi/ARB, objemový stav, elektrolyty a riziko AIN. Cieľom nie je nulová expozícia PPI, ale odôvodnená expozícia v najnižšej účinnej dávke a s primeranou kontrolou.</p>
 
 <h2>Súvisiace články na portáli</h2>
 

@@ -35,13 +35,13 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'U pacientov s diabetom 2. typu môže výber kreatinínovej rovnice pre eGFR meniť zaradenie do G kategórií CKD. Rozdiel medzi CKD-EPI 2021 a EKFC preto nie je len matematický, ale môže ovplyvniť rizikovú stratifikáciu a načasovanie nefroprotekcie.',
     'content'      => <<<'HTML'
-<figure><a href="img/egfr-diabetes-ekfc-ckd-epi-stadia-ckd.webp" rel="noopener noreferrer" target="_blank"><img src="img/egfr-diabetes-ekfc-ckd-epi-stadia-ckd.webp" alt="Oblička na rozhraní dvoch svetelných zón, cez ktoré prechádzajú dve mierne odlišné meracie krivky" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Pacient sa nezmení — no podľa použitej rovnice môže skončiť v inom štádiu CKD.</figcaption></figure>
+<figure><a href="img/egfr-diabetes-ekfc-ckd-epi-stadia-ckd.webp" rel="noopener noreferrer" target="_blank"><img src="img/egfr-diabetes-ekfc-ckd-epi-stadia-ckd.webp" alt="Oblička na rozhraní dvoch svetelných zón, cez ktoré prechádzajú dve mierne odlišné meracie krivky" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Pacient sa nezmení – no podľa použitej rovnice môže skončiť v inom štádiu CKD.</figcaption></figure>
 
 <p>Odhad glomerulovej filtrácie patrí medzi základné nástroje nefrologickej aj diabetologickej praxe. U pacientov s diabetes mellitus 2. typu má osobitný význam, pretože práve táto skupina má vysoké riziko chronickej choroby obličiek, progresie albuminúrie, poklesu eGFR a napokon aj zlyhania obličiek.</p>
 
 <p>Krátky článok publikovaný v <em>Journal of Nephrology</em> upozorňuje na prakticky dôležitý problém: rôzne kreatinínové rovnice na výpočet eGFR nemusia toho istého pacienta zaradiť do rovnakej G kategórie. Pri diabete to môže mať priamy dosah na stratifikáciu rizika, frekvenciu kontrol, indikáciu nefroprotektívnej liečby aj načasovanie odoslania pacienta k nefrológovi.</p>
 
-<p>Je dôležité povedať hneď na začiatku: eGFR nie je meraná GFR. Je to odhad odvodený z rovnice. A rovnica nie je neutrálna technická drobnosť. V populácii s vysokým kardiorenálnym rizikom môže výber rovnice zmeniť klinický príbeh pacienta.</p>
+<p>eGFR nie je meraná GFR, ale odhad odvodený z rovnice. A rovnica nie je neutrálna technická drobnosť: v populácii s vysokým kardiorenálnym rizikom môže jej výber zmeniť, ako pacienta klinicky hodnotíme.</p>
 
 <h2>O čo v článku ide</h2>
 
@@ -57,9 +57,9 @@ $articles[] = [
 
 <p>Autori uvádzajú, že po spresnení implementácie rovnice EKFC pomocou správnych exponenciálnych faktorov pre hodnoty Scr/Q ≥ 1 vzniklo rozdelenie pokročilejších kategórií CKD, ktoré podľa nich lepšie zodpovedalo klinickej realite u vysoko rizikovej diabetickej populácie.</p>
 
-<p>Inými slovami, nejde o akademický detail. Menej vhodná alebo nesprávne implementovaná rovnica môže časť pacientov zaradiť do miernejšej kategórie renálnej funkcie, než by lepšie zodpovedalo ich skutočnému riziku.</p>
+<p>Nejde teda o akademický detail. Menej vhodná alebo nesprávne implementovaná rovnica môže časť pacientov zaradiť do miernejšej kategórie renálnej funkcie, než by lepšie zodpovedalo ich skutočnému riziku.</p>
 
-<h2>Fenomén stage migration</h2>
+<h2>Presun medzi kategóriami (stage migration)</h2>
 
 <p>Kľúčovým pojmom článku je <em>stage migration</em>, teda presun pacienta medzi kategóriami podľa toho, aká rovnica sa použije na výpočet eGFR.</p>
 
@@ -85,7 +85,7 @@ $articles[] = [
 
 <h2>Praktický nefrologický pohľad</h2>
 
-<p>Pre nefrológa je hlavné posolstvo jednoduché: eGFR nie je absolútna hodnota nezávislá od metódy výpočtu. Pri pacientovi s diabetom 2. typu treba vedieť, akú rovnicu laboratórium používa, najmä ak sa rozhoduje o štádiu CKD, úprave dávok liekov alebo nefrologickom sledovaní.</p>
+<p>Pre nefrológa z toho vyplýva, že eGFR nie je absolútna hodnota nezávislá od metódy výpočtu. Pri pacientovi s diabetom 2. typu treba vedieť, akú rovnicu laboratórium používa, najmä ak sa rozhoduje o štádiu CKD, úprave dávok liekov alebo nefrologickom sledovaní.</p>
 
 <p>V praxi má veľký význam trend. Jednorazová hodnota eGFR je menej informatívna než opakované merania v čase. Ak sa pacient podľa jednej rovnice nachádza v G1 a podľa inej v G2, klinické rozhodovanie by nemalo stáť iba na hranici 90 ml/min/1,73 m².</p>
 
@@ -122,17 +122,17 @@ $articles[] = [
 
 <h2>Limity dostupných údajov</h2>
 
-<p>Treba zdôrazniť, že zdrojový text má charakter krátkeho komentára alebo stručnej analytickej správy, nie rozsiahlej plne otvorenej štúdie s kompletnou metodikou dostupnou v otvorenom zobrazení. Z verejne dostupného extraktu preto nemožno detailne posúdiť všetky štatistické analýzy, charakteristiky kohorty, zastúpenie albuminúrie, liečbu pacientov ani možné konfúzne faktory.</p>
+<p>Zdrojový text má charakter krátkeho komentára alebo stručnej analytickej správy, nie rozsiahlej štúdie s kompletnou metodikou v otvorenom prístupe. Z verejne dostupného extraktu preto nemožno detailne posúdiť všetky štatistické analýzy, charakteristiky kohorty, zastúpenie albuminúrie, liečbu pacientov ani možné konfúzne faktory.</p>
 
-<p>Záver preto treba chápať opatrne. Práca podporuje význam správnej voľby a implementácie eGFR rovníc u pacientov s diabetom, ale nenahrádza individuálne klinické posúdenie pacienta a neznamená, že jedna rovnica je univerzálne najlepšia pre všetky populácie a všetky klinické situácie.</p>
+<p>Závery preto treba čítať opatrne. Práca podporuje význam správnej voľby a implementácie eGFR rovníc u pacientov s diabetom, ale nenahrádza individuálne klinické posúdenie pacienta a neznamená, že jedna rovnica je univerzálne najlepšia pre všetky populácie a všetky klinické situácie.</p>
 
 <h2>Záver</h2>
 
-<p>Článok upozorňuje na dôležitý praktický problém: u pacientov s diabetom 2. typu môže použitá rovnica na výpočet eGFR významne meniť zaradenie do G kategórií CKD. Rovnica EKFC v analyzovanej kohorte viedla ku konzervatívnejšiemu hodnoteniu renálnej funkcie a presunu časti pacientov z kategórie G1 do G2.</p>
+<p>U pacientov s diabetom 2. typu môže použitá rovnica na výpočet eGFR významne meniť zaradenie do G kategórií CKD. Rovnica EKFC v analyzovanej kohorte viedla ku konzervatívnejšiemu hodnoteniu renálnej funkcie a presunu časti pacientov z kategórie G1 do G2.</p>
 
-<p>Pre klinickú prax je dôležité nehodnotiť eGFR mechanicky. U diabetikov má byť vždy interpretovaná spolu s albuminúriou, trendom renálnych parametrov a celkovým kardiometabolickým rizikom. Správny odhad funkcie obličiek môže pomôcť zachytiť rizikových pacientov skôr a umožniť včasnejšiu nefroprotektívnu intervenciu.</p>
+<p>eGFR preto netreba hodnotiť mechanicky. U diabetikov má byť vždy interpretovaná spolu s albuminúriou, trendom renálnych parametrov a celkovým kardiometabolickým rizikom. Správny odhad funkcie obličiek môže pomôcť zachytiť rizikových pacientov skôr a umožniť včasnejšiu nefroprotektívnu intervenciu.</p>
 
-<p>Najpraktickejšie posolstvo je jednoduché: poznať rovnicu, sledovať trend, neignorovať albuminúriu a pri hraničných rozhodnutiach si nevystačiť s jedným číslom.</p>
+<p>V praxi to znamená poznať rovnicu, sledovať trend, neignorovať albuminúriu a pri hraničných rozhodnutiach si nevystačiť s jedným číslom.</p>
 
 <hr>
 

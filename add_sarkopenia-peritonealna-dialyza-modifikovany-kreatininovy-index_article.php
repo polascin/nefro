@@ -95,7 +95,7 @@ $articles[] = [
 
 <h2>Čo ukázali dve štúdie z toho istého pracoviska</h2>
 
-<p>Práve prenos rovnice z hemodialýzy na peritoneálnu dialýzu overila skupina z Prince of Wales Hospital v Hongkongu v dvoch po sebe nasledujúcich prácach. Ich výsledky sú odlišné a práve tento rozdiel je klinicky najdôležitejší.</p>
+<p>Prenos rovnice z hemodialýzy na peritoneálnu dialýzu overila skupina z Prince of Wales Hospital v Hongkongu v dvoch po sebe nasledujúcich prácach. Ich výsledky sú odlišné a práve tento rozdiel je klinicky najdôležitejší.</p>
 
 <h3>Jednorazové meranie obstálo</h3>
 
@@ -131,7 +131,7 @@ $articles[] = [
 
 <h3>Prečo je tento rozdiel dôležitý</h3>
 
-<p>Ide o typickú, ale často prehliadanú situáciu: ukazovateľ môže mať slušnú <strong>prierezovú</strong> koreláciu s referenčnou metódou a súčasne byť nepoužiteľný na <strong>longitudinálne</strong> sledovanie. Korelačný koeficient okolo 0,65 zodpovedá asi 40 % vysvetlenej variability — na hrubé zaradenie pacienta do rizikovej skupiny to stačí, na hodnotenie individuálnej zmeny v čase nie.</p>
+<p>Ide o typickú, ale často prehliadanú situáciu: ukazovateľ môže mať slušnú <strong>prierezovú</strong> koreláciu s referenčnou metódou a súčasne byť nepoužiteľný na <strong>longitudinálne</strong> sledovanie. Korelačný koeficient okolo 0,65 zodpovedá asi 40 % vysvetlenej variability. Na hrubé zaradenie pacienta do rizikovej skupiny to stačí, na hodnotenie individuálnej zmeny v čase nie.</p>
 
 <p>Praktický dôsledok je jednoznačný. Vetu „kreatinínový index pacienta sa za pol roka zlepšil, výživová intervencia teda zaberá“ nemožno na základe súčasných údajov vysloviť.</p>
 
@@ -175,7 +175,7 @@ $articles[] = [
   <li>laboratórnych alebo preanalytických odchýlkach.</li>
 </ul>
 
-<p>Výsledok môže potom pôsobiť matematicky presne, ale biologicky nezodpovedá skutočnosti.</p>
+<p>Výsledok potom môže pôsobiť matematicky presne, ale biologicky nezodpovedá skutočnosti.</p>
 
 <h3>Príjem mäsa a výživové doplnky</h3>
 
@@ -241,7 +241,7 @@ $articles[] = [
 
 <h3>Test vstávania zo stoličky</h3>
 
-<p>Čas potrebný na päť opakovaných postavení sa zo stoličky hodnotí silu dolných končatín. Test je praktický, ale jeho výsledok ovplyvňujú rovnováha, artróza, bolesť, neurologické ochorenia a kardiopulmonálna výkonnosť.</p>
+<p>Čas potrebný na päť opakovaných postavení zo stoličky slúži na hodnotenie sily dolných končatín. Test je praktický, ale jeho výsledok ovplyvňujú rovnováha, artróza, bolesť, neurologické ochorenia a kardiopulmonálna výkonnosť.</p>
 
 <h3>Rýchlosť chôdze a fyzická výkonnosť</h3>
 

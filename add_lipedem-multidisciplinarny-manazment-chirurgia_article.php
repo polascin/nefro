@@ -26,7 +26,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Lipedém je chronické ochorenie podkožného tuku s bolesťou, disproporciou končatín a neskorším lymfatickým postihnutím. Diagnóza je klinická; liečba multidisciplinárna a chirurgia redukčná, nie kozmetická.',
     'content'      => <<<'HTML'
-<figure><a href="img/lipedem-multidisciplinarny-manazment-chirurgia.webp" rel="noopener noreferrer" target="_blank"><img src="img/lipedem-multidisciplinarny-manazment-chirurgia.webp" alt="Zväčšené nodulárne tukové lalôčiky s bolestivým červeným presvitaním, zasahované tromi rôznymi lúčmi svetla" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia, nie nález konkrétneho pacienta. Lipedém nie je obezita a nezvládne ho jediný odbor — chirurgia je jednou zo zložiek, nie náhradou ostatných.</figcaption></figure>
+<figure><a href="img/lipedem-multidisciplinarny-manazment-chirurgia.webp" rel="noopener noreferrer" target="_blank"><img src="img/lipedem-multidisciplinarny-manazment-chirurgia.webp" alt="Zväčšené nodulárne tukové lalôčiky s bolestivým červeným presvitaním, zasahované tromi rôznymi lúčmi svetla" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia, nie nález konkrétneho pacienta. Lipedém nie je obezita a nezvládne ho jediný odbor – chirurgia je jednou zo zložiek, nie náhradou ostatných.</figcaption></figure>
 
 <p class="article-dek"><em>Lipedém nie je „len obezita nôh“. Ide o chronické, prevažne u žien sa vyskytujúce ochorenie podkožného tuku s bolesťou, obmedzením hybnosti a psychosociálnou záťažou. Diagnóza ostáva klinická. Liečba je multidisciplinárna; chirurgia je redukčná, nie kozmetická, a nie je vyliečením.</em></p>
 
@@ -156,8 +156,8 @@ $articles[] = [
 <p>Americký štandard starostlivosti za štandardnú konzervatívnu liečbu považuje výživové poradenstvo, manuálne techniky, kompresiu, zváženie pneumatickej kompresie a individuálny domáci pohybový plán. Delphi konsenzus 2026 zdôrazňuje multidisciplinárny prístup: medicína, rehabilitácia, výživa a psychológia.</p>
 
 <ul>
-  <li><strong>Výživa:</strong> obmedzenie vysoko spracovaných potravín a rafinovaných sacharidov je <em>podporné opatrenie</em>, nie kauzálne vyliečenie lipedému. Cieľom je metabolické zdravie, zápal a sprievodná obezita, nie „vymiznutie“ lipedémového tuku. V literatúre sa spomínajú strava z celých, prevažne rastlinných potravín aj nízkosacharidové vzorce; žiadny režim nie je dokázanou špecifickou liečbou ochorenia.</li>
-  <li><strong>Pohyb:</strong> chôdza, bicykel, vodné aktivity, podľa tolerancie aj eliptický trenažér alebo joga. Záťaž má byť udržateľná, nie trestajúca. Individuálny predpis, pomalý nárast a dlhodobé sledovanie.</li>
+  <li><strong>Výživa:</strong> obmedzenie vysoko spracovaných potravín a rafinovaných sacharidov je <em>podporné opatrenie</em>, nie kauzálne vyliečenie lipedému. Cieľom je zlepšiť metabolické zdravie, tlmiť zápal a ovplyvniť sprievodnú obezitu, nie dosiahnuť „vymiznutie“ lipedémového tuku. V literatúre sa spomínajú strava z celých, prevažne rastlinných potravín aj nízkosacharidové vzorce; žiadny režim nie je dokázanou špecifickou liečbou ochorenia.</li>
+  <li><strong>Pohyb:</strong> chôdza, bicykel, vodné aktivity, podľa tolerancie aj eliptický trenažér alebo joga. Záťaž má byť udržateľná, nie trestajúca; predpisuje sa individuálne, zvyšuje pomaly a sleduje dlhodobo.</li>
   <li><strong>Kompresia:</strong> znižuje bolesť a pomáha pri opuchu; silu, strih a materiál treba individualizovať podľa bolesti a schopnosti odev obliecť a vyzliecť.</li>
   <li><strong>Lymfatická terapia:</strong> manuálna lymfodrenáž ako súčasť komplexného programu, mäkké uvoľňovanie väziva, v indikovaných prípadoch pneumatická kompresia – nie ako jediná „kúra“.</li>
   <li><strong>Psychológia:</strong> stigma, úzkosť, depresia a poruchy príjmu potravy sú časté; psychologická podpora nie je doplnok navyše, ale súčasť liečby.</li>
@@ -185,7 +185,7 @@ $articles[] = [
 
 <p>Pozorovacie série a metaanalýzy prevažne nerandomizovaných štúdií opisujú zlepšenie bolesti, hybnosti a kvality života. Dizajny sú však väčšinou retrospektívne, bez primeranej kontroly, s rôznymi technikami, štádiami a dĺžkou sledovania. Často citované percentá v kongresových správach občas <strong>zamieňajú priemerný pokles skóre bolesti s podielom pacientok</strong>. Preto ich tu neuvádzam ako klinickú konštantu. Randomizované dôkazy s dlhým sledovaním chýbajú.</p>
 
-<p>Chirurgia <strong>nie je vyliečenie</strong>. Redukuje tkanivo a môže spomaliť progresiu, ale celoživotná multidisciplinárna starostlivosť – kompresia, pohyb, výživa, lymfatická terapia, psychológia – ostáva potrebná. Včasné štádiá nosia pooperačnú kompresiu aspoň 2 až 3 mesiace; pokročilý lipedém a lipolymfedém často doživotne.</p>
+<p>Chirurgia <strong>nie je vyliečenie</strong>. Redukuje tkanivo a môže spomaliť progresiu, ale celoživotná multidisciplinárna starostlivosť – kompresia, pohyb, výživa, lymfatická terapia, psychológia – ostáva potrebná. Pri včasných štádiách sa pooperačná kompresia nosí aspoň 2 až 3 mesiace, pri pokročilom lipedéme a lipolymfedéme často doživotne.</p>
 
 <h2>Poznámka pre nefrológa</h2>
 
@@ -206,7 +206,7 @@ $articles[] = [
   <li>Diagnóza je klinická; zobrazovanie a laboratórium diferencujú, nenahrádzajú vyšetrenie.</li>
   <li>Jamkový edém nie je samostatné diagnostické pravidlo.</li>
   <li>Typy a štádiá treba uvádzať s vedomím, že klasifikácie nie sú jednotné.</li>
-  <li>Cieľom je bolesť, hybnosť, opuch a kvalita života, nie chudnutie za každú cenu.</li>
+  <li>Cieľom je zmierniť bolesť, zlepšiť hybnosť, ovplyvniť opuch a kvalitu života, nie chudnutie za každú cenu.</li>
   <li>Konzervatívna starostlivosť je základ; GLP-1 len pri metabolickej indikácii a bez kauzálneho nároku na „liečbu lipedému“.</li>
   <li>Chirurgia je redukčná, lymfu šetriaca, etapovitá, po konzervatívnej príprave a cievnom vyšetrení; nie je vyliečením.</li>
   <li>Diuretiká nepatria do prvej línie liečby lipedému.</li>

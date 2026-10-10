@@ -31,15 +31,15 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Interim analýza fázy 3 TELIGAN (n = 318): telitacicept znížil 24-hodinovú proteinúriu o 58,9 % vs 8,8 % pri placebe (relatívne −55 %; p < 0,001) a eGFR klesalo menej; nežiaducich udalostí bolo viac, závažných AE menej.',
+    'excerpt'      => 'Interim analýza fázy 3 TELIGAN (n = 318): telitacicept znížil 24-hodinovú proteinúriu o 58,9 % vs 8,8 % pri placebe (relatívne −55 %; p < 0,001) a eGFR klesala menej; nežiaducich udalostí bolo viac, závažných AE menej.',
     'content'      => <<<'HTML'
-<figure><a href="img/telitacicept-iga-nefropatia-teligan-faza-3-interim.webp" rel="noopener noreferrer" target="_blank"><img src="img/telitacicept-iga-nefropatia-teligan-faza-3-interim.webp" alt="Glomerulus s únikom bielkoviny zúženým na tenký prameň pod svetelným lúčom, okolo ktorého poletujú výstražné iskry" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Výrazný pokles proteinúrie je sprevádzaný vyšším počtom nežiaducich udalostí — obe patria do rovnice.</figcaption></figure>
+<figure><a href="img/telitacicept-iga-nefropatia-teligan-faza-3-interim.webp" rel="noopener noreferrer" target="_blank"><img src="img/telitacicept-iga-nefropatia-teligan-faza-3-interim.webp" alt="Glomerulus s únikom bielkoviny zúženým na tenký prameň pod svetelným lúčom, okolo ktorého poletujú výstražné iskry" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Výrazný pokles proteinúrie je sprevádzaný vyšším počtom nežiaducich udalostí – pri hodnotení treba vážiť oboje.</figcaption></figure>
 
-<p>IgA nefropatia (IgAN) patrí medzi najčastejšie primárne glomerulové ochorenia vedúce k chronickému zlyhaniu obličiek. Kľúčovou biologickou osou jej patogenézy je okrem iného dysregulácia B buniek a signálnej dráhy sprostredkovanej faktorom aktivujúcim B bunky (BAFF, <em>B-cell activating factor</em>) a ligandom indukujúcim proliferáciu (APRIL, <em>a proliferation-inducing ligand</em>). Telitacicept je fúzny proteín, ktorý cieli a neutralizuje BAFF aj APRIL, a preto predstavuje racionálnu terapeutickú stratégiu pre IgAN.</p>
+<p>IgA nefropatia (IgAN) patrí medzi najčastejšie primárne glomerulové ochorenia vedúce k chronickému zlyhaniu obličiek. Jednou z kľúčových biologických osí jej patogenézy je dysregulácia B buniek a signálnej dráhy sprostredkovanej faktorom aktivujúcim B bunky (BAFF, <em>B-cell activating factor</em>) a ligandom indukujúcim proliferáciu (APRIL, <em>a proliferation-inducing ligand</em>). Telitacicept je fúzny proteín, ktorý viaže a neutralizuje BAFF aj APRIL, čo z neho robí biologicky zdôvodnenú možnosť liečby IgAN.</p>
 
 <h2>Autori zdrojovej štúdie</h2>
 
-<p>Zdrojom je interim analýza štúdie <strong>TELIGAN</strong> publikovaná v časopise <em>New England Journal of Medicine</em> (2026). Kľúčovými autormi sú <strong>Jicheng Lv, Lijun Liu, Wenxiang Wang, Xinyue Wang, Qing Zuraw, Vlado Perkovic, Jianmin Fang</strong> a <strong>Hong Zhang</strong> v mene <strong>TELIGAN Investigators</strong>. Štúdia je registrovaná v registri ClinicalTrials.gov pod identifikátorom <a href="https://clinicaltrials.gov/study/NCT05799287" target="_blank" rel="noopener noreferrer">NCT05799287</a> (financovaná spoločnosťou RemeGen).</p>
+<p>Zdrojom je interim analýza štúdie <strong>TELIGAN</strong> publikovaná v časopise <em>New England Journal of Medicine</em> (2026). Hlavnými autormi sú <strong>Jicheng Lv, Lijun Liu, Wenxiang Wang, Xinyue Wang, Qing Zuraw, Vlado Perkovic, Jianmin Fang</strong> a <strong>Hong Zhang</strong> v mene <strong>TELIGAN Investigators</strong>. Štúdia je registrovaná v registri ClinicalTrials.gov pod identifikátorom <a href="https://clinicaltrials.gov/study/NCT05799287" target="_blank" rel="noopener noreferrer">NCT05799287</a> (financovaná spoločnosťou RemeGen).</p>
 
 <h2>Dizajn štúdie TELIGAN a populácia</h2>
 
@@ -53,7 +53,7 @@ $articles[] = [
   <li>hodnotenie v interim bode: <strong>po 39 týždňoch</strong>.</li>
 </ul>
 
-<p>Primárny cieľ bol zameraný na <strong>geometrický priemer pomeru 24-hodinovej proteinúrie</strong> — pomeru bielkovín ku kreatinínu v moči (UPCR) — v 39. týždni vzhľadom na východiskovú hodnotu. Bezpečnosť sa hodnotila súbežne.</p>
+<p>Primárny cieľ bol zameraný na <strong>geometrický priemer pomeru 24-hodinovej proteinúrie</strong> (pomeru bielkovín ku kreatinínu v moči, UPCR) v 39. týždni vzhľadom na východiskovú hodnotu. Bezpečnosť sa hodnotila súbežne.</p>
 
 <h2>Výsledky účinnosti (39. týždeň)</h2>
 
@@ -73,7 +73,7 @@ $articles[] = [
 
 <h3>Funkcia obličiek</h3>
 
-<p>Z pohľadu nefrologicky významného „tvrdého“ cieľa je dôležité, že v 39. týždni bol signál priaznivejší pre telitacicept:</p>
+<p>Aj vývoj funkcie obličiek bol v 39. týždni priaznivejší pre telitacicept:</p>
 
 <ul>
   <li>zmena odhadovanej glomerulovej filtrácie (eGFR) od východiskovej hodnoty:
@@ -84,7 +84,7 @@ $articles[] = [
   </li>
 </ul>
 
-<p>V praxi to treba interpretovať opatrne: ide o interim bod a eGFR sa zvyčajne mení pomalšie, preto jej zmeny v kratšom horizonte nemusia automaticky znamenať dlhodobý nefroprotektívny efekt.</p>
+<p>Tento údaj treba interpretovať opatrne: ide o interim bod a eGFR sa zvyčajne mení pomaly, preto jej zmeny v kratšom horizonte nemusia automaticky znamenať dlhodobý nefroprotektívny efekt.</p>
 
 <h2>Bezpečnosť</h2>
 
@@ -96,12 +96,12 @@ $articles[] = [
   <li>pri telitacicepte neboli hlásené <strong>neočakávané bezpečnostné nálezy</strong>.</li>
 </ul>
 
-<p>Klinicky to znamená, že telitacicept zjavne prináša vyššiu celkovú mieru nežiaducich udalostí, ale závažné udalosti sa v interim dátach javia ako menej časté než pri placebe. Pri takejto interpretácii je dôležité sledovať, ako sa bezpečnosť prejaví v pokračujúcej časti štúdie a či sa rozdiely udržia v dlhšom horizonte.</p>
+<p>Telitacicept teda prináša vyššiu celkovú mieru nežiaducich udalostí, závažné udalosti sa však v interim dátach javia ako menej časté než pri placebe. Rozhodujúce bude, ako sa bezpečnosť prejaví v pokračujúcej časti štúdie a či sa rozdiely udržia v dlhšom horizonte.</p>
 
 <h2>Nefrologická interpretácia: čo tieto dáta znamenajú v praxi</h2>
 
 <ol>
-  <li><strong>Silný antiproteinurický efekt:</strong> pokles proteinúrie o takmer 59 % oproti 8,8 % pri placebe je veľký a klinicky relevantný. Proteinúria je pri IgAN etablovaný marker rizika progresie a jej zníženie sa často spája s lepšími renálnymi výsledkami.</li>
+  <li><strong>Silný antiproteinurický efekt:</strong> pokles proteinúrie o takmer 59 % oproti 8,8 % pri placebe je veľký a klinicky relevantný. Proteinúria je pri IgAN zavedený marker rizika progresie a jej zníženie sa často spája s lepšími renálnymi výsledkami.</li>
   <li><strong>Signál na eGFR:</strong> menší pokles eGFR v ramene s telitaciceptom je povzbudivý, ide však o interim hodnotenie.</li>
   <li><strong>Bezpečnosť vyžaduje dlhšie sledovanie:</strong> vyšší výskyt nežiaducich udalostí je prakticky dôležitý pre rozhodovanie o pomere prínosu a rizika, najmä ak by sa liek nasadzoval aj mimo úzko vybraných rizikových skupín.</li>
   <li><strong>Imunomodulácia mení imunitné prostredie:</strong> pri terapiách cieliacich BAFF/APRIL je biologicky očakávané zvýšenie rizík spojených s imunomoduláciou, hoci interim dáta neočakávané signály neukázali.</li>
@@ -111,12 +111,12 @@ $articles[] = [
 
 <ul>
   <li>ide o <strong>vopred špecifikovanú priebežnú (interim) analýzu</strong>, takže veľkosť efektu sa pri ďalšom sledovaní ešte môže zmeniť;</li>
-  <li>primárny efekt stojí na <strong>náhradnom (surrogátnom) ukazovateli</strong> (proteinúria) — hoci ide o veľmi užitočný marker, pre pacienta v praxi býva rozhodujúce, či sa efekt v čase premietne do tvrdých klinických cieľov.</li>
+  <li>primárny efekt stojí na <strong>náhradnom (surrogátnom) ukazovateli</strong> (proteinúria); hoci ide o veľmi užitočný marker, pre pacienta je rozhodujúce, či sa efekt v čase premietne do tvrdých klinických cieľov.</li>
 </ul>
 
 <h2>Záver</h2>
 
-<p>Pri vysokorizikovej IgA nefropatii s perzistujúcou proteinúriou <strong>telitacicept v 39-týždňovej interim analýze významne znížil proteinúriu</strong> oproti placebu a zároveň ukázal <strong>menší pokles eGFR</strong>. V bezpečnosti bola pozorovaná vyššia frekvencia nežiaducich udalostí, zatiaľ čo závažné udalosti boli v interim analýze menej časté, bez neočakávaných bezpečnostných signálov. Pri zavádzaní do praxe bude kľúčové, aby pokračujúce výsledky potvrdili trvanie účinku a dlhodobú renálnu bezpečnosť.</p>
+<p>Pri vysokorizikovej IgA nefropatii s perzistujúcou proteinúriou <strong>telitacicept v 39-týždňovej interim analýze významne znížil proteinúriu</strong> oproti placebu a zároveň ukázal <strong>menší pokles eGFR</strong>. Nežiaduce udalosti boli častejšie, závažné udalosti v interim analýze naopak menej časté, bez neočakávaných bezpečnostných signálov. Pre zavedenie do praxe bude rozhodujúce, či pokračujúce výsledky potvrdia trvanie účinku a dlhodobú renálnu bezpečnosť.</p>
 
 <hr>
 

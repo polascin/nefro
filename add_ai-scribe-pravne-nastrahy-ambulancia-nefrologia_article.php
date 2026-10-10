@@ -31,11 +31,11 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Ericka L. Adler na Medscape zhŕňa právne riziká AI scribov v ambulancii: súlad dodávateľa s ochranou dát, preukázateľný súhlas pacienta a zodpovednosť lekára za presnosť záznamu. V nefrológii to platí dvojnásobne — dokumentácia ovplyvňuje dlhodobé rozhodovanie aj bezpečnosť liečby.',
+    'excerpt'      => 'Ericka L. Adler na Medscape zhŕňa právne riziká AI scribov v ambulancii: súlad dodávateľa s ochranou dát, preukázateľný súhlas pacienta a zodpovednosť lekára za presnosť záznamu. V nefrológii to platí dvojnásobne – dokumentácia ovplyvňuje dlhodobé rozhodovanie aj bezpečnosť liečby.',
     'content'      => <<<'HTML'
-<figure><a href="img/ai-scribe-pravne-nastrahy-ambulancia-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/ai-scribe-pravne-nastrahy-ambulancia-nefrologia.webp" alt="Zvuková vlna z rozhovoru prechádzajúca do digitálneho záznamu, cez prúd dopadá tieň právnej pečate" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Pohodlie prepisu má právnu cenu — zodpovednosť za záznam zostáva na lekárovi.</figcaption></figure>
+<figure><a href="img/ai-scribe-pravne-nastrahy-ambulancia-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/ai-scribe-pravne-nastrahy-ambulancia-nefrologia.webp" alt="Zvuková vlna z rozhovoru prechádzajúca do digitálneho záznamu, cez prúd dopadá tieň právnej pečate" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Pohodlie prepisu má právnu cenu – zodpovednosť za záznam zostáva na lekárovi.</figcaption></figure>
 
-<p>AI scriby (nástroje na automatický prepis a tvorbu zdravotnej dokumentácie pomocou umelej inteligencie) sa dnes používajú preto, aby znížili administratívnu záťaž a zrýchlili zápis priamo počas vyšetrenia. V nefrológii býva dokumentácia obzvlášť časovo náročná — chronické ochorenie, liečba, dávkovanie, laboratórne trendy, záznamy z dialyzačnej či predialyzačnej fázy. To robí z AI scribov praktický nástroj, no zároveň oblasť s právnymi rizikami, na ktoré sa sústreďuje článok z Medscape.</p>
+<p>AI scriby (nástroje na automatický prepis a tvorbu zdravotnej dokumentácie pomocou umelej inteligencie) majú znížiť administratívnu záťaž a zrýchliť zápis priamo počas vyšetrenia. V nefrológii býva dokumentácia obzvlášť časovo náročná: chronické ochorenie, liečba, dávkovanie, laboratórne trendy, záznamy z dialyzačnej či predialyzačnej fázy. AI scribe je preto praktický nástroj, no prináša aj právne riziká, na ktoré sa sústreďuje článok z Medscape.</p>
 
 <h2>1) Zvoľte riešenie pripravené na zdravotnícke dáta, nie „len“ na nahrávanie</h2>
 
@@ -53,9 +53,9 @@ $articles[] = [
 
 <p>Zdroj zdôrazňuje, že pacientovi treba vopred jasne vysvetliť, prečo AI scribe používate, ako zlepší priebeh vyšetrenia a ako prispeje k dokumentácii. Dôležitá je aj praktická stránka: pacient musí mať možnosť súhlasiť alebo odmietnuť.</p>
 
-<p>Kritickým bodom je zdokumentovanie súhlasu v zdravotnej dokumentácii. Článok upozorňuje na prípady, keď pacienti tvrdili, že boli nahrávaní bez súhlasu. Aj keď záznam v dokumentácii môže neskôr pôsobiť, že súhlas prebehol, právny problém nastáva vtedy, ak v skutočnosti udelený nebol.</p>
+<p>Kritickým bodom je zdokumentovanie súhlasu v zdravotnej dokumentácii. Článok upozorňuje na prípady, keď pacienti tvrdili, že boli nahrávaní bez súhlasu. Aj keď záznam v dokumentácii môže neskôr naznačovať, že súhlas bol udelený, právny problém vzniká, ak v skutočnosti udelený nebol.</p>
 
-<p>Pre prax z toho vyplýva jediné — zaviesť interný proces, aby súhlas bol:</p>
+<p>Pre prax z toho vyplýva potreba zaviesť interný proces, aby súhlas bol:</p>
 
 <ul>
   <li>udelený správnym spôsobom (v súlade s miestnymi pravidlami),</li>
@@ -65,7 +65,7 @@ $articles[] = [
 
 <h2>3) Lekár zostáva zodpovedný za správnosť záznamu aj pri AI scribovi</h2>
 
-<p>AI scribe má pomáhať, no zodpovednosti nezbavuje. Zdroj výslovne upozorňuje, že AI niekedy „halucinuje“ — teda vytvára nepodložené alebo nepresné informácie.</p>
+<p>AI scribe má pomáhať, no zodpovednosti nezbavuje. Zdroj výslovne upozorňuje, že AI niekedy „halucinuje“ – teda vytvára nepodložené alebo nepresné informácie.</p>
 
 <p>V nefrológii je tento problém obzvlášť citlivý, pretože dokumentácia nesie zásadné klinické rozhodnutia:</p>
 
@@ -76,11 +76,11 @@ $articles[] = [
   <li>ako aj záznamy o dialyzačnej liečbe či o predpisovaní nefroprotektívnych postupov.</li>
 </ul>
 
-<p>Praktické minimum, ktoré si z článku možno odniesť: po každom vyšetrení treba prekontrolovať nielen to, „či bol súhlas“, ale aj celý medicínsky obsah záznamu.</p>
+<p>Praktické minimum: po každom vyšetrení treba prekontrolovať nielen to, „či bol súhlas“, ale aj celý medicínsky obsah záznamu.</p>
 
 <h2>4) Ochrana ambulancie: zmluvy, interné politiky a kontrola dodávateľa</h2>
 
-<p>Zdroj odporúča riešiť implementáciu s právnikom — najmä kvôli zmluvám s dodávateľom a kvôli tomu, aby ambulancia mala vhodné interné politiky. Z hľadiska rizika je podstatné, aby:</p>
+<p>Zdroj odporúča riešiť implementáciu s právnikom – najmä pre zmluvy s dodávateľom a pre to, aby ambulancia mala vhodné interné politiky. Z hľadiska rizika je podstatné, aby:</p>
 
 <ul>
   <li>zmluva jasne upravovala zber, uchovávanie a prístup k záznamom,</li>
@@ -88,11 +88,11 @@ $articles[] = [
   <li>personál vedel, ako postupovať v situáciách, keď výstup AI nedáva zmysel alebo je nepresný.</li>
 </ul>
 
-<p>A ešte jedna vec z článku: v závere je nutné dodržať pravidlá týkajúce sa nahrávania interakcií a uchovávania záznamov v súlade s právnymi predpismi (zdroj to uvádza ako potrebu zosúladenia so „štátnymi a federálnymi zákonmi“ a s HIPAA v kontexte USA).</p>
+<p>Článok v závere pripomína aj povinnosť dodržať pravidlá týkajúce sa nahrávania interakcií a uchovávania záznamov v súlade s právnymi predpismi (zdroj to uvádza ako potrebu zosúladenia so „štátnymi a federálnymi zákonmi“ a s HIPAA v kontexte USA).</p>
 
 <h2>5) Čo by som v nefrologickej ambulancii nastavil ako „bezpečné minimum“</h2>
 
-<p>Ak chcete AI scribe zaviesť tak, aby sa nestal zdrojom problémov, v duchu toho, čo zdroj zdôrazňuje, odporúčam mať:</p>
+<p>Ak má byť AI scribe pomocou, a nie zdrojom problémov, odporúčam v duchu zdroja mať:</p>
 
 <ol>
   <li>schválený proces výberu dodávateľa (ukladanie, prístup, retenčná doba),</li>
@@ -103,7 +103,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>AI scribe môže byť praktický, no právne riziká sa v článku z Medscape sústreďujú na tri reálne body: <strong>compliance dodávateľa</strong>, <strong>preukázateľný súhlas pacienta</strong> a <strong>zodpovednosť lekára za presnosť záznamu</strong>. V nefrológii to platí dvojnásobne, pretože dokumentácia ovplyvňuje dlhodobé rozhodovanie aj bezpečnosť liečby.</p>
+<p>AI scribe môže byť praktický, no právne riziká sa v článku z Medscape sústreďujú na tri konkrétne body: <strong>compliance dodávateľa</strong>, <strong>preukázateľný súhlas pacienta</strong> a <strong>zodpovednosť lekára za presnosť záznamu</strong>. V nefrológii to platí dvojnásobne, pretože dokumentácia ovplyvňuje dlhodobé rozhodovanie aj bezpečnosť liečby.</p>
 
 <hr>
 

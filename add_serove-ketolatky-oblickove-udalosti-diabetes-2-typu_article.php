@@ -29,9 +29,9 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'V kórejskej kohorte 1 392 pacientov s diabetom 2. typu bez inzulínu a tiazolidíndiónov sa vyššie sérové ketolátky spájali s nižším rizikom obličkových udalostí. Ide o asociáciu, ktorej hlavným otáznikom je liečba inhibítormi SGLT2.',
     'content'      => <<<'HTML'
-<figure><a href="img/serove-ketolatky-oblickove-udalosti-diabetes-2-typu.webp" rel="noopener noreferrer" target="_blank"><img src="img/serove-ketolatky-oblickove-udalosti-diabetes-2-typu.webp" alt="Prúd ketolátkových častíc a presne rovnobežná červená čiara rizika, medzi ktorými zostáva tmavá medzera" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Obe krivky stúpajú spolu, nič ich však nespája — kohortová štúdia ukazuje súbeh, nie príčinu.</figcaption></figure>
+<figure><a href="img/serove-ketolatky-oblickove-udalosti-diabetes-2-typu.webp" rel="noopener noreferrer" target="_blank"><img src="img/serove-ketolatky-oblickove-udalosti-diabetes-2-typu.webp" alt="Prúd ketolátkových častíc a presne rovnobežná červená čiara rizika, medzi ktorými zostáva tmavá medzera" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Obe krivky stúpajú spolu, nič ich však nespája – kohortová štúdia ukazuje súbeh, nie príčinu.</figcaption></figure>
 
-<p>Ketolátky sa v nefrológii dlho spomínali najmä v súvislosti s ketoacidózou. Posledné roky ich však posunuli aj do inej roly — ako možný ukazovateľ metabolického stavu, prípadne ako mediátor účinku inhibítorov SGLT2. Prospektívna kohortová štúdia z Kórey teraz sleduje, či cirkulujúce ketolátky súvisia s ďalším osudom obličiek u ambulantných pacientov s diabetom 2. typu. Výsledok je zaujímavý, no jeho interpretácia si vyžaduje väčšiu opatrnosť, než akú naznačuje záver samotnej práce.</p>
+<p>Ketolátky sa v nefrológii dlho spomínali najmä v súvislosti s ketoacidózou. V posledných rokoch sa však na ne pozerá aj inak: ako na možný ukazovateľ metabolického stavu, prípadne ako na mediátor účinku inhibítorov SGLT2. Prospektívna kohortová štúdia z Kórey teraz sleduje, či cirkulujúce ketolátky súvisia s ďalším osudom obličiek u ambulantných pacientov s diabetom 2. typu. Výsledok je zaujímavý, no jeho interpretácia si vyžaduje väčšiu opatrnosť, než akú naznačuje záver samotnej práce.</p>
 
 <h2>Dizajn a populácia</h2>
 
@@ -95,19 +95,19 @@ $articles[] = [
   </table>
 </div>
 
-<p>Kardiovaskulárne ukazovatele vykázali priaznivý smer bez štatistickej významnosti — pri 64 udalostiach je to očakávateľné a nemožno z toho vyvodzovať ani prítomnosť, ani neprítomnosť účinku.</p>
+<p>Kardiovaskulárne ukazovatele vykázali priaznivý smer bez štatistickej významnosti. Pri 64 udalostiach je to očakávateľné a nemožno z toho vyvodzovať ani prítomnosť, ani neprítomnosť účinku.</p>
 
 <h2>Kde je hlavný problém interpretácie: inhibítory SGLT2</h2>
 
-<p>Toto je bod, ktorý rozhoduje o tom, ako sa má štúdia čítať. <strong>Inhibítory SGLT2 zvyšujú koncentráciu ketolátok</strong> — ide o dobre opísaný metabolický efekt tejto triedy. Súčasne ide o jedinú liekovú triedu v štúdii, pri ktorej je nefroprotektívny účinok dokázaný randomizovanými štúdiami.</p>
+<p>Od tohto bodu závisí, ako štúdiu čítať. <strong>Inhibítory SGLT2 zvyšujú koncentráciu ketolátok</strong>; ide o dobre opísaný metabolický efekt tejto triedy. Súčasne ide o jedinú liekovú triedu v štúdii, pri ktorej je nefroprotektívny účinok dokázaný randomizovanými štúdiami.</p>
 
-<p>Ak teda pacienti v najvyššom tercile ketolátok užívali častejšie inhibítor SGLT2, potom pozorovaná asociácia „vyššie ketolátky — menej obličkových udalostí“ môže z podstatnej časti odrážať jednoducho to, že títo pacienti boli lepšie liečení. Ketolátky by v takom prípade neboli mediátorom ochrany, ale <strong>ukazovateľom expozície účinnému lieku</strong>. Rozlíšiť tieto dve možnosti pozorovacím dizajnom s jednorazovým meraním expozície nemožno; vyžadovalo by si to prinajmenšom stratifikáciu podľa užívania inhibítora SGLT2, ideálne mediačnú analýzu na randomizovaných dátach.</p>
+<p>Ak teda pacienti v najvyššom tercile ketolátok užívali častejšie inhibítor SGLT2, potom pozorovaná asociácia „vyššie ketolátky – menej obličkových udalostí“ môže z podstatnej časti odrážať jednoducho to, že títo pacienti boli lepšie liečení. Ketolátky by v takom prípade neboli mediátorom ochrany, ale <strong>ukazovateľom expozície účinnému lieku</strong>. Rozlíšiť tieto dve možnosti pozorovacím dizajnom s jednorazovým meraním expozície nemožno; vyžadovalo by si to prinajmenšom stratifikáciu podľa užívania inhibítora SGLT2, ideálne mediačnú analýzu na randomizovaných dátach.</p>
 
 <p>Z dostupného abstraktu nevyplýva, ako sa s touto skutočnosťou naložilo. Kľúčové slová práce však inhibítor SGLT2 explicitne uvádzajú, takže autori si problém zjavne uvedomovali. Bez plného textu ide o otvorenú otázku, ktorá by mala byť pri čítaní práce prvá.</p>
 
 <h2>Výhrada k formulácii záveru</h2>
 
-<p>Autori v závere abstraktu uvádzajú, že zistenia „podporujú možnú úlohu ketolátok ako mediátorov obličkového rizika“. Táto formulácia je silnejšia, než čo dizajn unesie. Mediácia je kauzálny pojem: predpokladá, že expozícia leží na príčinnej dráhe medzi niečím a výsledkom. Prospektívna kohorta s <strong>jednorazovým meraním expozície</strong>, bez randomizácie a bez publikovanej formálnej mediačnej analýzy, dokáže preukázať asociáciu — nie mediáciu.</p>
+<p>Autori v závere abstraktu uvádzajú, že zistenia „podporujú možnú úlohu ketolátok ako mediátorov obličkového rizika“. Táto formulácia je silnejšia, než čo dizajn unesie. Mediácia je kauzálny pojem: predpokladá, že expozícia leží na príčinnej dráhe medzi niečím a výsledkom. Prospektívna kohorta s <strong>jednorazovým meraním expozície</strong>, bez randomizácie a bez publikovanej formálnej mediačnej analýzy, dokáže preukázať asociáciu, nie mediáciu.</p>
 
 <p>Korektnejšie čítanie znie: mierne zvýšené sérové ketolátky boli v tejto populácii <strong>prognosticky</strong> spojené s nižším rizikom obličkových udalostí. Či ide o príčinu, o dôsledok inej priaznivej okolnosti, alebo o marker liečby, štúdia nerozhoduje.</p>
 
@@ -116,7 +116,7 @@ $articles[] = [
 <ul>
   <li><strong>Jednorazové meranie expozície.</strong> Koncentrácia ketolátok kolíše podľa príjmu potravy, odstupu od posledného jedla, telesnej záťaže a metabolického stavu. Jedno meranie zaraďuje pacienta do tercilu s neznámou stabilitou v čase.</li>
   <li><strong>Vylúčenie pacientov na inzulíne a tiazolidíndiónoch.</strong> Ide o selekciu smerom k menej pokročilému diabetu; zistenia sa nedajú prenášať na pacientov liečených inzulínom, ktorí tvoria významnú časť nefrologickej ambulancie.</li>
-  <li><strong>Krátke sledovanie.</strong> Medián 23,2 mesiaca je pre obličkové ukazovatele krátky. Pokles eGFR o ≥ 40 % zachytený v takomto okne môže byť u časti pacientov ovplyvnený aj hemodynamickými zmenami po začatí liečby, nie len skutočnou stratou funkcie.</li>
+  <li><strong>Krátke sledovanie.</strong> Medián 23,2 mesiaca je pre obličkové ukazovatele krátky. Pokles eGFR o ≥ 40 % zachytený v takomto okne môže byť u časti pacientov ovplyvnený aj hemodynamickými zmenami po začatí liečby, nielen skutočnou stratou funkcie.</li>
   <li><strong>Zvyškové zavádzajúce faktory.</strong> Popri liečbe inhibítorom SGLT2 prichádzajú do úvahy aj rozdiely vo veku, východiskovej funkcii obličiek, telesnej hmotnosti a stravovaní. Bez plného textu nie je zrejmé, ktoré z nich boli v modeloch zohľadnené.</li>
 </ul>
 
@@ -127,13 +127,13 @@ $articles[] = [
 <ul>
   <li>Ketolátky <strong>nie sú</strong> validovaným nástrojom na stratifikáciu obličkového rizika a ich rutinné vyšetrovanie na tento účel nie je odôvodnené.</li>
   <li>Zvyšovanie ketolátok <strong>nie je</strong> liečebným cieľom; žiadna štúdia nepreukázala, že ich cielené zvýšenie zlepší obličkové výsledky.</li>
-  <li>Výsledok <strong>nepodporuje</strong> odporúčanie ketogénnej diéty pacientom s CKD; nutričné riziká pri pokročilej chorobe obličiek sú vlastnou samostatnou témou.</li>
-  <li>Rozumným praktickým čítaním je opak: pripomienka, že liečba, ktorá ketolátky zvyšuje ako vedľajší metabolický efekt — teda inhibítor SGLT2 — má u vhodných pacientov dokázaný nefroprotektívny prínos a mala by byť nasadená.</li>
+  <li>Výsledok <strong>nepodporuje</strong> odporúčanie ketogénnej diéty pacientom s CKD; nutričné riziká pri pokročilej chorobe obličiek sú samostatnou témou.</li>
+  <li>Rozumným praktickým čítaním je opak: pripomienka, že liečba, ktorá ketolátky zvyšuje ako vedľajší metabolický efekt – teda inhibítor SGLT2 – má u vhodných pacientov dokázaný nefroprotektívny prínos a mala by byť nasadená.</li>
 </ul>
 
 <h2>Záver</h2>
 
-<p>V prospektívnej kohorte pacientov s diabetom 2. typu bez inzulínu a tiazolidíndiónov sa mierne zvýšené sérové ketolátky spájali s nižším rizikom zloženého obličkového ukazovateľa, najmä prostredníctvom nižšieho rizika poklesu eGFR o ≥ 40 %. Zistenie je hypotézotvorné. Kým sa nevylúči, že za asociáciou nestojí jednoducho liečba inhibítorom SGLT2, je predčasné hovoriť o ketolátkach ako o mediátoroch ochrany obličiek — a rovnako predčasné je zaviesť ich do klinickej rozvahy.</p>
+<p>V prospektívnej kohorte pacientov s diabetom 2. typu bez inzulínu a tiazolidíndiónov sa mierne zvýšené sérové ketolátky spájali s nižším rizikom zloženého obličkového ukazovateľa, najmä prostredníctvom nižšieho rizika poklesu eGFR o ≥ 40 %. Zistenie je hypotézotvorné. Kým sa nevylúči, že za asociáciou nestojí jednoducho liečba inhibítorom SGLT2, je predčasné hovoriť o ketolátkach ako o mediátoroch ochrany obličiek, a rovnako predčasné je zaviesť ich do klinickej rozvahy.</p>
 
 <h2>Súvisiace články</h2>
 
@@ -150,7 +150,7 @@ $articles[] = [
 
 <p><small><em><strong>Spracovaný zdroj:</strong> Shin SM, Lee J, Kim YE, Kim JA, Kim KJ, Kim KJ, Kim HY, Kim SG, Kim NH. Serum ketone body levels and risk of incident kidney and cardiovascular events among patients with type 2 diabetes: a prospective cohort study. <em>Diabetes Research and Clinical Practice</em>. 2026;239:113476. doi: <a href="https://doi.org/10.1016/j.diabres.2026.113476" target="_blank" rel="noopener noreferrer">10.1016/j.diabres.2026.113476</a>. PMID 42537913. <a href="https://pubmed.ncbi.nlm.nih.gov/42537913/" target="_blank" rel="noopener noreferrer">PubMed</a>.</em></small></p>
 
-<p><small><em><strong>Poznámka k dôkazovému základu:</strong> Bibliografické údaje, úplný autorský zoznam, veľkosť kohorty, hranice tercilov, dĺžka sledovania, počty udalostí a všetky uvedené pomery rizík boli overené 28. augusta 2026 cez PubMed zo štruktúrovaného abstraktu spracovanej práce. Plný text nemá otvorenú verziu. Údaje, ktoré v abstrakte nie sú uvedené — priemerný vek, zastúpenie žien, podmienky odberu, použitá analytická metóda, prahová hodnota pre makroalbuminúriu, tvar vzťahu medzi koncentráciou ketolátok a rizikom a zoznam premenných v modeloch — sa v článku zámerne neuvádzajú. Metodické výhrady vrátane úvahy o inhibítoroch SGLT2 nie sú prevzaté od autorov, ale odvodené z dostupného opisu metodiky.</em></small></p>
+<p><small><em><strong>Poznámka k dôkazovému základu:</strong> Bibliografické údaje, úplný autorský zoznam, veľkosť kohorty, hranice tercilov, dĺžka sledovania, počty udalostí a všetky uvedené pomery rizík boli overené 28. augusta 2026 cez PubMed zo štruktúrovaného abstraktu spracovanej práce. Plný text nemá otvorenú verziu. Údaje, ktoré v abstrakte nie sú uvedené – priemerný vek, zastúpenie žien, podmienky odberu, použitá analytická metóda, prahová hodnota pre makroalbuminúriu, tvar vzťahu medzi koncentráciou ketolátok a rizikom a zoznam premenných v modeloch – sa v článku zámerne neuvádzajú. Metodické výhrady vrátane úvahy o inhibítoroch SGLT2 nie sú prevzaté od autorov, ale odvodené z dostupného opisu metodiky.</em></small></p>
 
 <p><small><em>Text má odborný informačný charakter a nenahrádza individuálne klinické rozhodovanie ani platné odporúčania pre liečbu diabetu a chronickej choroby obličiek.</em></small></p>
 HTML,

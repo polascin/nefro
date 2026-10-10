@@ -26,7 +26,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Dvanásť diel o bolesti, smrti, vede, transplantácii a profesijnej identite. Kriticky hodnotený výber ukazuje, čo môže literatúra priniesť lekárovi a kde sa končí jej dôkazná hodnota.',
     'content'      => <<<'HTML'
-<figure><a href="img/12-knih-lekar-choroba-pacient-narativna-medicina.webp" rel="noopener noreferrer" target="_blank"><img src="img/12-knih-lekar-choroba-pacient-narativna-medicina.webp" alt="Otvorená kniha na tmavom stole pod lampou, z jej strán stúpajú svetelné obrysy troch postáv; vedľa leží stetoskop" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Časť toho, čomu sa lekár potrebuje naučiť, nie je v odbornej literatúre — a predsa to pri lôžku rozhoduje.</figcaption></figure>
+<figure><a href="img/12-knih-lekar-choroba-pacient-narativna-medicina.webp" rel="noopener noreferrer" target="_blank"><img src="img/12-knih-lekar-choroba-pacient-narativna-medicina.webp" alt="Otvorená kniha na tmavom stole pod lampou, z jej strán stúpajú svetelné obrysy troch postáv; vedľa leží stetoskop" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Časť toho, čomu sa lekár potrebuje naučiť, nie je v odbornej literatúre – a predsa to pri lôžku rozhoduje.</figcaption></figure>
 
 <p>Medicína sa nedá redukovať na diagnostické algoritmy, laboratórne hodnoty a terapeutické odporúčania. Lekár pracuje aj s neistotou, utrpením, nádejou, stratou, vzťahmi a etickými konfliktmi. Odborné časopisy poskytujú vedecké poznatky; literatúra môže sprostredkovať skúsenosť choroby spôsobom, ktorý štatistika zachytáva iba čiastočne.</p>
 
@@ -40,7 +40,7 @@ $articles[] = [
 
 <p>Systematické prehľady ponúkajú opatrne povzbudivé, nie definitívne závery. Prehľad 36 publikácií z roku 2019 našiel merateľné zmeny najmä v účasti, postojoch, vedomostiach a zručnostiach, no nie jednoznačný dôkaz trvalej zmeny správania alebo interakcie s pacientmi. Kritický prehľad z roku 2026 zahrnul 17 štúdií umelecky orientovaného vzdelávania s 835 účastníkmi; iba štyri hodnotili naratívnu medicínu a vysoká heterogenita znemožnila metaanalýzu. Autori preto odporúčajú skôr lokálne, facilitované programy s realistickými očakávaniami než silné všeobecné tvrdenia.</p>
 
-<p>Presné posolstvo teda znie: <strong>literatúra vytvára príležitosť na rozvoj naratívnej a etickej citlivosti, ale samotné prečítanie románu nie je dokázanou intervenciou na zlepšenie klinických výsledkov.</strong></p>
+<p>Presnejšie povedané: <strong>literatúra vytvára príležitosť na rozvoj naratívnej a etickej citlivosti, ale samotné prečítanie románu nie je dokázanou intervenciou na zlepšenie klinických výsledkov.</strong></p>
 
 <h2>1. Alphonse Daudet: <em>In the Land of Pain</em></h2>
 
@@ -56,7 +56,7 @@ $articles[] = [
 
 <h2>3. Lindsey Fitzharris: <em>The Butchering Art</em></h2>
 
-<p>Historická monografia sleduje premenu chirurgie v 19. storočí a úsilie Josepha Listera zaviesť antiseptické postupy. Lister, nadväzujúc na rozvoj mikrobiálnej teórie, začal v roku 1865 systematicky používať antisepsu. Znižovanie pooperačných infekcií potom zásadne rozšírilo možnosti chirurgie.</p>
+<p>Historická monografia sleduje premenu chirurgie v 19. storočí a úsilie Josepha Listera zaviesť antiseptické postupy. Lister v nadväznosti na rozvoj mikrobiálnej teórie začal v roku 1865 systematicky používať antisepsu. Znižovanie pooperačných infekcií potom zásadne rozšírilo možnosti chirurgie.</p>
 
 <p>Historický obraz si vyžaduje spresnenie: Lister nebol jediným pôvodcom modernej prevencie infekcií a zmena bola postupná. Verejná demonštrácia éterovej anestézie sa uskutočnila už v roku 1846, teda pred hlavnou etapou jeho antiseptickej práce. Kniha najmä ukazuje, že účinný postup sa nestáva štandardom iba existenciou dôkazu. Rozhoduje aj vysvetlenie mechanizmu, dôvera, uskutočniteľnosť a zmena každodennej klinickej kultúry.</p>
 
@@ -64,7 +64,7 @@ $articles[] = [
 
 <p>Richard Harris analyzuje krízu reprodukovateľnosti v biomedicínskom výskume: nedostatočnú kontrolu experimentov, malé súbory, selektívne publikovanie, tlak na atraktívne výsledky a problémy pri prenose predklinických zistení do klinickej medicíny.</p>
 
-<p>Kniha nedokazuje, že biomedicínske poznanie je ako celok nespoľahlivé. Poukazuje na mechanizmy, ktoré zvyšujú pravdepodobnosť falošne pozitívnych alebo nereprodukovateľných výsledkov. Pre nefrológa je dôležité rozlišovať biologickú plausibilitu, experimentálny výsledok, observačnú asociáciu a dôkaz klinického prínosu. Zlepšenie biomarkera alebo laboratórnej hodnoty nemusí znamenať nižšiu mortalitu, menej hospitalizácií ani lepšiu kvalitu života.</p>
+<p>Kniha nedokazuje, že biomedicínske poznanie je ako celok nespoľahlivé. Poukazuje na mechanizmy, ktoré zvyšujú pravdepodobnosť falošne pozitívnych alebo nereprodukovateľných výsledkov. Pre nefrológa je dôležité rozlišovať biologickú vierohodnosť, experimentálny výsledok, observačnú asociáciu a dôkaz klinického prínosu. Zlepšenie biomarkera alebo laboratórnej hodnoty nemusí znamenať nižšiu mortalitu, menej hospitalizácií ani lepšiu kvalitu života.</p>
 
 <h2>5. Theodore G. Obenchain: <em>Genius Belabored</em></h2>
 
@@ -129,11 +129,11 @@ $articles[] = [
   <li>ukončení dialýzy a starostlivosti na konci života.</li>
 </ul>
 
-<p>Pozorné počúvanie nenahrádza odborné rozhodovanie. Môže však odhaliť, že medicínsky uskutočniteľná liečba nezodpovedá pacientovým cieľom alebo že zdanlivá nonadherencia vzniká pre finančné, psychologické, kognitívne či organizačné prekážky.</p>
+<p>Pozorné počúvanie nenahrádza odborné rozhodovanie. Môže však odhaliť, že medicínsky uskutočniteľná liečba nezodpovedá pacientovým cieľom alebo že zdanlivé nedodržiavanie liečby vzniká pre finančné, psychologické, kognitívne či organizačné prekážky.</p>
 
 <h2>Ako tieto knihy čítať</h2>
 
-<p>Najväčší prínos nemusí priniesť počet titulov, ale spôsob čítania. Pri každej knihe si možno položiť tri otázky:</p>
+<p>Viac než počet titulov rozhoduje spôsob čítania. Pri každej knihe si možno položiť tri otázky:</p>
 
 <ol>
   <li>Čo postava alebo autor prežíva, ale nedokáže priamo pomenovať?</li>

@@ -25,7 +25,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Po epizóde hyperkaliémie sa u 429 pacientov vysadili antagonisty mineralokortikoidného receptora takmer u každého piateho, hoci ide o liečbu s najsilnejším dôkazovým základom. Recidíva postihla 43,8 %.',
     'content'      => <<<'HTML'
-<figure><a href="img/hyperkaliemia-ckd-realna-prax-recidiva-raasi.webp" rel="noopener noreferrer" target="_blank"><img src="img/hyperkaliemia-ckd-realna-prax-recidiva-raasi.webp" alt="Krivka opakovane stúpajúca do červeného pásma; pri každom zásahu sa rad tabletiek vedľa nej skráti" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Hyperkaliémia sa spravidla vracia — a cenu za to platí práve tá liečba, ktorú by pacient mal udržať.</figcaption></figure>
+<figure><a href="img/hyperkaliemia-ckd-realna-prax-recidiva-raasi.webp" rel="noopener noreferrer" target="_blank"><img src="img/hyperkaliemia-ckd-realna-prax-recidiva-raasi.webp" alt="Krivka opakovane stúpajúca do červeného pásma; pri každom zásahu sa rad tabletiek vedľa nej skráti" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Hyperkaliémia sa spravidla vracia a cenu za to platí práve tá liečba, ktorú by pacient mal udržať.</figcaption></figure>
 
 <p>Skutočná cena hyperkaliémie pri chronickej chorobe obličiek sa málokedy meria hodnotou kália. Meria sa tým, čo po epizóde vysadíme. Blokáda systému renín–angiotenzín–aldosterón a antagonisty mineralokortikoidného receptora patria k liečbe s najlepšie doloženým kardiorenálnym prínosom a zároveň k najčastejším „obetiam“ jedného zvýšeného laboratórneho výsledku.</p>
 
@@ -105,7 +105,7 @@ $articles[] = [
 
 <p>Tu je jadro celej práce. <strong>Liečba, ktorá má pri chronickej chorobe obličiek s albuminúriou a pri srdcovom zlyhávaní najsilnejší doložený prínos, sa vysadzuje najčastejšie</strong> – takmer u každého piateho pacienta, teda trojnásobne častejšie než inhibítor ACE. Dôvod je pochopiteľný: antagonisty mineralokortikoidného receptora zvyšujú kálium najvýraznejšie a v hierarchii „čo vysadím ako prvé“ sú intuitívne na vrchu. Z hľadiska dlhodobej prognózy je to však presne opačné poradie, než aké by si pacient zaslúžil.</p>
 
-<p><em>Poznámka k údajom: uvedené podiely sa nevzťahujú na celý súbor 429 pacientov, ale na počty užívateľov jednotlivých liekových skupín. Rekonštrukcia celých čísel ukazuje, že menovatele sú triedne špecifické; presné počty pacientov práca neuvádza.</em></p>
+<p><em>Poznámka k údajom: uvedené podiely sa nevzťahujú na celý súbor 429 pacientov, ale na počty užívateľov jednotlivých liekových skupín. Z rekonštrukcie celých čísel vyplýva, že menovatele sa líšia podľa liekovej skupiny; presné počty pacientov práca neuvádza.</em></p>
 
 <h2>Recidíva je pravidlom</h2>
 
@@ -121,12 +121,12 @@ $articles[] = [
 
 <ol>
   <li><strong>Uvádzajú sa výhradne neupravené podiely a hodnoty p.</strong> Chýbajú pomery rizík, intervaly spoľahlivosti aj akýkoľvek viacrozmerný model. Nedá sa preto tvrdiť, že recidíva je <em>nezávisle</em> spojená s rýchlejším poklesom filtrácie – rovnako dobre môže byť len ukazovateľom pokročilejšieho a nestabilnejšieho ochorenia. Autori sami uvádzajú, že príčinná súvislosť je nejasná.</li>
-  <li><strong>Recidíva vzniká až počas sledovania.</strong> Publikovaný súhrn neuvádza časový začiatok sledovania, landmark analýzu ani to, či sa recidíva modelovala ako časovo závislá premenná. <em>Ak</em> sa analyzovala ako vstupná vlastnosť, vzniká skreslenie nesmrteľného času: pacient musí prežiť dosť dlho na to, aby sa recidívy vôbec dožil. Z dostupného abstraktu to nemožno potvrdiť ani vylúčiť — rovnaká výhrada sa týka výpočtu ročného sklonu filtrácie.</li>
+  <li><strong>Recidíva vzniká až počas sledovania.</strong> Publikovaný súhrn neuvádza časový začiatok sledovania, landmark analýzu ani to, či sa recidíva modelovala ako časovo závislá premenná. <em>Ak</em> sa analyzovala ako vstupná vlastnosť, vzniká skreslenie nesmrteľného času: pacient musí prežiť dosť dlho na to, aby sa recidívy vôbec dožil. Z dostupného abstraktu to nemožno potvrdiť ani vylúčiť; rovnaká výhrada sa týka výpočtu ročného sklonu filtrácie.</li>
   <li><strong>Chýba definícia recidívy.</strong> Nie je uvedený prah kália, časové okno, minimálny odstup medzi epizódami ani predpísaná frekvencia odberov. Pri observačnom zbere pritom zachytenie recidívy priamo závisí od intenzity monitorovania – a pacienti s filtráciou pod 30 ml/min sa kontrolujú častejšie. Časť rozdielu 49,1 oproti 38,8 % teda môže byť len rozdielom v tom, ako často odoberáme krv.</li>
-  <li><strong>„Žiadny významný rozdiel“ nie je dôkaz rovnocennosti.</strong> Porovnanie viažucich látok so živicami bolo nerandomizované, bez uvedenia veľkostí podskupín, intervalu spoľahlivosti ani sily testu. O liečbe rozhodoval ošetrujúci nefrológ, takže platí zmätenie indikáciou.</li>
+  <li><strong>„Žiadny významný rozdiel“ nie je dôkaz rovnocennosti.</strong> Porovnanie viažucich látok so živicami bolo nerandomizované, bez uvedenia veľkostí podskupín, intervalu spoľahlivosti ani sily testu. O liečbe rozhodoval ošetrujúci nefrológ, takže hrozí skreslenie indikáciou.</li>
   <li><strong>Záver ide nad rámec dát.</strong> Odporúčanie zaraďovať viažuce látky do liečebných stratégií nemá v tejto práci oporu – chýba kontrolná skupina bez viažucej látky aj výsledky o dosiahnutých hladinách kália. Dvaja zo šestnástich autorov vrátane prvej autorky navyše deklarujú konzultačné väzby na výrobcov, medzi nimi aj na výrobcu jednej z viažucich látok.</li>
   <li><strong>Abstrakt si protirečí.</strong> Výsledky uvádzajú, že rozdiel v prežívaní nie je, no záver hovorí, že „rozdiel v mortalite si vyžaduje ďalšie skúmanie“. Počet úmrtí ani hodnota log-rank testu nie sú uvedené.</li>
-  <li><strong>Kardiovaskulárne príhody sa zbierali, ale nereferujú.</strong> Metodika ich menuje ako sledovaný ukazovateľ, vo výsledkoch ani v závere sa však neobjaví ani jeden. Ide o neúplné referovanie a z tejto práce nemožno o kardiovaskulárnych výsledkoch uviesť nič.</li>
+  <li><strong>Kardiovaskulárne príhody sa zbierali, ale neuvádzajú sa.</strong> Metodika ich menuje ako sledovaný ukazovateľ, vo výsledkoch ani v závere sa však neobjaví ani jeden. Výsledky sú teda zverejnené neúplne a z tejto práce nemožno o kardiovaskulárnych výsledkoch uviesť nič.</li>
   <li><strong>Podiel miernej hyperkaliémie sa neuvádza.</strong> Dopočet na 77,2 % je aritmeticky konzistentný, ale je to náš výpočet, nie údaj štúdie – a platí len vtedy, ak tri kategórie pokrývajú celý súbor bez chýbajúcich údajov.</li>
 </ol>
 
@@ -150,7 +150,7 @@ $articles[] = [
     <tr>
       <th scope="row">Antagonisty mineralokortikoidného receptora sa vysadzujú najčastejšie</th>
       <td>Potvrdené</td>
-      <td>21,82 % vysadených oproti 6,80 % pri inhibítoroch ACE a 7,32 % pri sartanoch; menovatele sú triedne špecifické.</td>
+      <td>21,82 % vysadených oproti 6,80 % pri inhibítoroch ACE a 7,32 % pri sartanoch; menovatele sa líšia podľa liekovej skupiny.</td>
     </tr>
     <tr>
       <th scope="row">Recidíva spôsobuje rýchlejší pokles filtrácie</th>

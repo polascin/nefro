@@ -32,13 +32,13 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Štúdia v časopise JAMA naznačuje, že 4 % tetrasodný EDTA lock roztok môže na JIS znížiť komplikácie centrálnych venóznych katétrov. Prínos sa však týkal najmä poklesu oklúzií, nie jednoznačného zníženia katétrových infekcií.',
     'content'      => <<<'HTML'
-<figure><a href="img/edta-lock-roztoky-priechodnost-cvk.webp" rel="noopener noreferrer" target="_blank"><img src="img/edta-lock-roztoky-priechodnost-cvk.webp" alt="Katéter naplnený čírym svetelným roztokom, ktorý rozpúšťa tmavé usadeniny a obnovuje prietok" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Zámok pôsobí priamo v lúmene — otázkou zostáva, ako dlho priechodnosť udrží.</figcaption></figure>
+<figure><a href="img/edta-lock-roztoky-priechodnost-cvk.webp" rel="noopener noreferrer" target="_blank"><img src="img/edta-lock-roztoky-priechodnost-cvk.webp" alt="Katéter naplnený čírym svetelným roztokom, ktorý rozpúšťa tmavé usadeniny a obnovuje prietok" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Zámok pôsobí priamo v lúmene – otázkou zostáva, ako dlho priechodnosť udrží.</figcaption></figure>
 
-<p>Komplikácie spojené s centrálnymi venóznymi katétrami zostávajú v intenzívnej medicíne významným problémom. Centrálne venózne vstupy sú pre kriticky chorých pacientov často nevyhnutné, no prinášajú riziko krvnej infekcie, oklúzie katétra a trombózy súvisiacej s katétrom. Tieto komplikácie zvyšujú morbiditu, predlžujú hospitalizáciu a zvyšujú náklady na zdravotnú starostlivosť.</p>
+<p>Kriticky chorí pacienti sa bez centrálneho venózneho katétra často nezaobídu. Katéter však prináša riziko krvnej infekcie, oklúzie a trombózy súvisiacej s katétrom. Tieto komplikácie zvyšujú morbiditu, predlžujú hospitalizáciu a zvyšujú náklady na zdravotnú starostlivosť.</p>
 
-<p>Jednou z možností prevencie sú takzvané lock roztoky, teda roztoky ponechávané v lúmene katétra v čase, keď sa daný vstup nepoužíva. Cieľom je znížiť riziko upchatia katétra, obmedziť tvorbu biofilmu a zachovať funkčnosť cievneho vstupu.</p>
+<p>Jednou z možností prevencie sú lock roztoky, teda roztoky ponechávané v lúmene katétra v čase, keď sa daný vstup nepoužíva. Majú znížiť riziko upchatia katétra, obmedziť tvorbu biofilmu a zachovať funkčnosť cievneho vstupu.</p>
 
-<p>Nová klinická štúdia publikovaná v časopise <em>JAMA</em> naznačuje, že 4 % tetrasodný EDTA lock roztok môže v podmienkach jednotiek intenzívnej starostlivosti znížiť výskyt komplikácií spojených s centrálnymi venóznymi katétrami. Hlavný prínos sa však týkal najmä zníženia oklúzií katétra, nie jednoznačného poklesu katétrových infekcií.</p>
+<p>Nová klinická štúdia publikovaná v časopise <em>JAMA</em> naznačuje, že 4 % tetrasodný EDTA lock roztok môže v podmienkach jednotiek intenzívnej starostlivosti znížiť výskyt komplikácií spojených s centrálnymi venóznymi katétrami. Prínos sa však týkal najmä oklúzií katétra, nie jednoznačného poklesu katétrových infekcií.</p>
 
 <h2>Prečo práve EDTA?</h2>
 
@@ -52,11 +52,11 @@ $articles[] = [
   <li>zlepšenie priechodnosti katétra.</li>
 </ul>
 
-<p>Práve kombinácia antikoagulačných a antibiofilmových vlastností robí z EDTA zaujímavú alternatívu k bežným lock roztokom, ako je fyziologický roztok alebo citrát.</p>
+<p>Kombinácia antikoagulačných a antibiofilmových vlastností robí z EDTA zaujímavú alternatívu k bežným lock roztokom, ako je fyziologický roztok alebo citrát.</p>
 
 <h2>Dizajn štúdie</h2>
 
-<p>Išlo o pragmatickú, multicentrickú, klastrovo randomizovanú, trojito zaslepenú crossover štúdiu. Prebiehala v šiestich nemocniciach v Kanade, vrátane akademických aj komunitných centier.</p>
+<p>Išlo o pragmatickú, multicentrickú, klastrovo randomizovanú, trojito zaslepenú crossover štúdiu. Prebiehala v šiestich akademických aj komunitných nemocniciach v Kanade.</p>
 
 <p>Do analýzy bolo zahrnutých 1468 dospelých pacientov prijatých na jednotku intenzívnej starostlivosti. Všetci mali funkčný centrálny venózny katéter a aspoň jeden nepoužívaný lúmen. Priemerný vek pacientov bol 60 rokov a väčšinu tvorili muži.</p>
 
@@ -74,23 +74,23 @@ $articles[] = [
   <li>odstránenie katétra pre oklúziu.</li>
 </ul>
 
-<p>Výsledok bol priaznivejší pri použití EDTA. Kombinovaný cieľ sa vyskytol s incidenciou 13,1 udalosti na 1000 katétrových dní pri EDTA oproti 19,9 udalosti na 1000 katétrových dní pri kontrolnom lock roztoku.</p>
+<p>Výsledok vyznel v prospech EDTA. Kombinovaný cieľ sa pri EDTA vyskytol s incidenciou 13,1 udalosti na 1000 katétrových dní, pri kontrolnom lock roztoku 19,9 udalosti na 1000 katétrových dní.</p>
 
-<p>Pomer incidencií bol 0,68, 95 % interval spoľahlivosti 0,47 až 0,96 a hodnota <em>P</em> = 0,03. Inak povedané, EDTA lock roztok bol spojený s približne tretinovým relatívnym znížením kombinovaného endpointu.</p>
+<p>Pomer incidencií bol 0,68, 95 % interval spoľahlivosti 0,47 až 0,96 a hodnota <em>P</em> = 0,03. EDTA lock roztok bol teda spojený s približne tretinovým relatívnym znížením kombinovaného cieľa.</p>
 
-<p>Dôležité však je, že celkový prínos bol ťahaný najmä znížením oklúzií katétra vyžadujúcich alteplázu. Práve táto jednotlivá zložka kombinovaného cieľa sa medzi skupinami významne líšila.</p>
+<p>Celkový prínos však vychádzal najmä zo zníženia oklúzií katétra vyžadujúcich alteplázu. Práve táto zložka kombinovaného cieľa sa medzi skupinami významne líšila.</p>
 
 <h2>Infekcie sa významne neznížili</h2>
 
-<p>Aj keď kombinovaný endpoint vyznel v prospech EDTA, výsledky jednotlivých zložiek boli menej jednoznačné.</p>
+<p>Aj keď kombinovaný cieľ vyznel v prospech EDTA, výsledky jednotlivých zložiek boli menej jednoznačné.</p>
 
 <p>Štúdia nepreukázala štatisticky významný rozdiel v miere katétrových krvných infekcií. To naznačuje, že hlavný klinický prínos EDTA v tejto štúdii spočíval skôr v zachovaní priechodnosti katétra než v jasne dokázanom antiinfekčnom účinku.</p>
 
-<p>Toto rozlíšenie je dôležité. EDTA môže mať antibiofilmové vlastnosti, ale v tejto konkrétnej klinickej štúdii sa najpresvedčivejšie prejavil efekt na prevenciu oklúzie. Preto by sa výsledky nemali interpretovať tak, že EDTA jednoznačne znižuje katétrové infekcie v intenzívnej starostlivosti.</p>
+<p>EDTA síce môže mať antibiofilmové vlastnosti, v tejto štúdii sa však najpresvedčivejšie prejavil účinok na prevenciu oklúzie. Výsledky preto nedovoľujú tvrdiť, že EDTA jednoznačne znižuje katétrové infekcie v intenzívnej starostlivosti.</p>
 
 <h2>Klinický význam zachovania priechodnosti</h2>
 
-<p>Zníženie oklúzií katétra má reálny praktický význam. Kriticky chorí pacienti často potrebujú spoľahlivý centrálny venózny prístup na podávanie vazopresorov, antibiotík, parenterálnej výživy, sedácie, tekutín alebo iných liekov.</p>
+<p>Menej oklúzií katétra má praktický význam. Kriticky chorí pacienti často potrebujú spoľahlivý centrálny venózny prístup na podávanie vazopresorov, antibiotík, parenterálnej výživy, sedácie, tekutín alebo iných liekov.</p>
 
 <p>Ak sa lúmen katétra upchá, môže to znamenať:</p>
 
@@ -102,21 +102,21 @@ $articles[] = [
   <li>potrebu zavedenia nového invazívneho vstupu.</li>
 </ul>
 
-<p>V tomto kontexte aj relatívne mierne zníženie počtu oklúzií môže byť pre jednotku intenzívnej starostlivosti významné, najmä pri veľkom počte pacientov a dlhšom používaní centrálnych venóznych vstupov.</p>
+<p>Aj relatívne mierne zníženie počtu oklúzií preto môže byť pre jednotku intenzívnej starostlivosti významné, najmä pri veľkom počte pacientov a dlhšom používaní centrálnych venóznych vstupov.</p>
 
 <h2>Bez významného bezpečnostného signálu</h2>
 
-<p>Podľa dostupných údajov zo štúdie neboli hlásené relevantné bezpečnostné signály spojené s použitím 4 % tetrasodného EDTA. To podporuje jeho ďalšie hodnotenie a možné využitie v klinickej praxi.</p>
+<p>Podľa dostupných údajov zo štúdie neboli hlásené relevantné bezpečnostné signály spojené s použitím 4 % tetrasodného EDTA. To hovorí v prospech jeho ďalšieho hodnotenia a možného využitia v klinickej praxi.</p>
 
-<p>Napriek tomu treba byť opatrný pri plošnom zavádzaní. Lock roztoky sa používajú v citlivom prostredí, kde rozhoduje presná koncentrácia, objem, kompatibilita s typom katétra, protokol používania, zaškolenie personálu a prevencia chýb pri manipulácii.</p>
+<p>Pri plošnom zavádzaní je však namieste opatrnosť. Lock roztoky sa používajú v citlivom prostredí, kde rozhoduje presná koncentrácia, objem, kompatibilita s typom katétra, protokol používania, zaškolenie personálu a prevencia chýb pri manipulácii.</p>
 
 <h2>Čo z toho vyplýva pre prax</h2>
 
 <p>Štúdia podporuje úvahu, že 4 % tetrasodný EDTA lock roztok môže byť vhodnou alternatívou k štandardným lock roztokom u kriticky chorých pacientov s centrálnymi venóznymi katétrami, najmä ak je problémom častá oklúzia lúmenov.</p>
 
-<p>Silnou stránkou štúdie je multicentrický crossover dizajn a pragmatické usporiadanie, ktoré lepšie odráža reálnu klinickú prax. Zároveň však treba výsledky čítať presne: benefit bol skôr v priechodnosti katétra než v preukázanom znížení infekcií.</p>
+<p>Silnou stránkou štúdie je multicentrický crossover dizajn a pragmatické usporiadanie, ktoré lepšie odráža reálnu klinickú prax. Výsledky však treba čítať presne: prínos bol skôr v priechodnosti katétra než v preukázanom znížení infekcií.</p>
 
-<p>Pred rutinným zavedením do praxe budú dôležité ďalšie faktory:</p>
+<p>Pred rutinným zavedením do praxe treba zvážiť:</p>
 
 <ul>
   <li>cena a dostupnosť EDTA roztoku,</li>
@@ -129,9 +129,9 @@ $articles[] = [
 
 <h2>Praktický záver</h2>
 
-<p>4 % tetrasodný EDTA lock roztok v tejto štúdii znížil kombinovaný výskyt komplikácií spojených s centrálnymi venóznymi katétrami u pacientov na JIS. Efekt bol však poháňaný najmä redukciou oklúzií katétra vyžadujúcich alteplázu. Štatisticky významné zníženie katétrových krvných infekcií sa nepreukázalo.</p>
+<p>4 % tetrasodný EDTA lock roztok v tejto štúdii znížil kombinovaný výskyt komplikácií spojených s centrálnymi venóznymi katétrami u pacientov na JIS. Prínos však vychádzal najmä zo zníženia počtu oklúzií katétra vyžadujúcich alteplázu. Štatisticky významné zníženie katétrových krvných infekcií sa nepreukázalo.</p>
 
-<p>Pre prax to znamená, že EDTA lock roztok môže byť sľubnou stratégiou na udržanie priechodnosti centrálnych venóznych katétrov, ale nemal by sa prezentovať ako jednoznačne dokázané riešenie na prevenciu infekcií.</p>
+<p>EDTA lock roztok tak môže byť sľubnou stratégiou na udržanie priechodnosti centrálnych venóznych katétrov, nemal by sa však prezentovať ako jednoznačne dokázaný prostriedok prevencie infekcií.</p>
 
 <hr>
 

@@ -38,7 +38,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Malá randomizovaná skrížená štúdia u mladých mužov cvičiacich nalačno naznačuje, že vôňa horkej čokolády môže zvýšiť počet extenzií kolena a potlačiť hlad. Výsledky sú predbežné – nejde o overený ergogénny účinok.',
     'content'      => <<<'HTML'
-<figure><a href="img/vona-cokolady-vykon-pri-silovom-treningu.webp" rel="noopener noreferrer" target="_blank"><img src="img/vona-cokolady-vykon-pri-silovom-treningu.webp" alt="Stuha vône stúpajúca z kúska čokolády k mozgovej štruktúre a odtiaľ vlákno k svalovým vláknam, vedľa činkový kotúč" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Vplyv vône na výkon je vedený cez nervový systém — ide o jemný efekt, nie o náhradu tréningu.</figcaption></figure>
+<figure><a href="img/vona-cokolady-vykon-pri-silovom-treningu.webp" rel="noopener noreferrer" target="_blank"><img src="img/vona-cokolady-vykon-pri-silovom-treningu.webp" alt="Stuha vône stúpajúca z kúska čokolády k mozgovej štruktúre a odtiaľ vlákno k svalovým vláknam, vedľa činkový kotúč" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Vplyv vône na výkon je vedený cez nervový systém. Ide o jemný efekt, nie o náhradu tréningu.</figcaption></figure>
 
 <p>Vôňa jedla ovplyvňuje chuť do jedla, emócie, očakávanie odmeny aj autonómne reakcie organizmu. Nová experimentálna štúdia naznačuje, že krátkodobá expozícia vôni čokolády môže počas tréningu nalačno zvýšiť tréningový objem pri silovom cvičení dolných končatín. Najvýraznejší účinok sa pozoroval pri vôni horkej čokolády s vysokým obsahom kakaa.</p>
 

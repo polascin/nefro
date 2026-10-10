@@ -39,17 +39,17 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Na kongrese EASD v Miláne bol predstavený a súčasne publikovaný nový konsenzus ADA a EASD o manažmente diabetu 2. typu. Dokument rozširuje zameranie z liečby hyperglykémie na celostný manažment ochorenia a jeho dlhodobých komplikácií a odporúča skoršie — potenciálne už od diagnózy — nasadenie inhibítorov SGLT2 a liečby založenej na GLP-1 pre orgánovú ochranu. Čo z toho vyplýva pre nefrologickú prax.',
+    'excerpt'      => 'Na kongrese EASD v Miláne bol predstavený a súčasne publikovaný nový konsenzus ADA a EASD o manažmente diabetu 2. typu. Dokument rozširuje zameranie z liečby hyperglykémie na celostný manažment ochorenia a jeho dlhodobých komplikácií a odporúča skoršie – potenciálne už od diagnózy – nasadenie inhibítorov SGLT2 a liečby založenej na GLP-1 pre orgánovú ochranu. Čo z toho vyplýva pre nefrologickú prax.',
     'content'      => <<<'HTML'
-<figure><a href="img/konsenzus-ada-easd-2026-diabetes.webp" rel="noopener noreferrer" target="_blank"><img src="img/konsenzus-ada-easd-2026-diabetes.webp" alt="V tmavom priestore leží na podstavci jediný svietiaci kryštálik cukru pod úzkym bodovým svetlom; lúč sa rozširuje do širokého pásu, ktorý z tmy odhaľuje sústavu priesvitných svietiacich orgánov — srdce, dve obličky a pečeň — pospájaných jemnými svetelnými vláknami" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna, nie klinický záznam. Podstata zmeny v jednom obraze: svetlo, ktoré roky svietilo na jediný ukazovateľ, sa rozširuje na orgány, ktoré o prognóze pacienta rozhodujú.</figcaption></figure>
+<figure><a href="img/konsenzus-ada-easd-2026-diabetes.webp" rel="noopener noreferrer" target="_blank"><img src="img/konsenzus-ada-easd-2026-diabetes.webp" alt="V tmavom priestore leží na podstavci jediný svietiaci kryštálik cukru pod úzkym bodovým svetlom; lúč sa rozširuje do širokého pásu, ktorý z tmy odhaľuje sústavu priesvitných svietiacich orgánov – srdce, dve obličky a pečeň – pospájaných jemnými svetelnými vláknami" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna, nie klinický záznam. Podstata zmeny v jednom obraze: svetlo, ktoré roky svietilo na jediný ukazovateľ, sa rozširuje na orgány, ktoré o prognóze pacienta rozhodujú.</figcaption></figure>
 
 <p>Na <strong>62. výročnom stretnutí Európskej asociácie pre štúdium diabetu (EASD)</strong>, ktoré sa konalo v Miláne od 28. septembra do 2. októbra 2026, bol predstavený a <strong>súčasne publikovaný</strong> nový spoločný konsenzuálny dokument <strong>Americkej diabetologickej asociácie (ADA) a EASD</strong> o manažmente diabetu 2. typu u netehotných dospelých.</p>
 
-<p>Ide o aktualizáciu série, ktorá vychádza od roku 2006 a naposledy bola aktualizovaná v roku 2022. Pre nefrológa je podstatné, že v panele sedeli aj <strong>nefrológovia</strong> — Sylvia E. Rosas a Peter Rossing — a že obličky sa v dokumente neobjavujú ako jedna z komplikácií na konci zoznamu, ale ako jeden z dôvodov, prečo sa celá logika liečby mení.</p>
+<p>Ide o aktualizáciu série, ktorá vychádza od roku 2006 a naposledy bola aktualizovaná v roku 2022. Pre nefrológa je podstatné, že v panele sedeli aj <strong>nefrológovia</strong> – Sylvia E. Rosas a Peter Rossing – a že obličky sa v dokumente neobjavujú ako jedna z komplikácií na konci zoznamu, ale ako jeden z dôvodov, prečo sa celá logika liečby mení.</p>
 
 <h2>Čo sa zmenilo: od glykémie k orgánom</h2>
 
-<p>Najvýznamnejšia zmena je formulovaná priamo v publikovanom dokumente: aktualizácia <strong>rozšírila zameranie z manažmentu hyperglykémie na celostný manažment diabetu 2. typu a rizika pridružených viacnásobných dlhodobých ochorení</strong>.</p>
+<p>Najvýznamnejšiu zmenu formuluje priamo publikovaný dokument: aktualizácia <strong>rozšírila zameranie z manažmentu hyperglykémie na celostný manažment diabetu 2. typu a rizika pridružených viacnásobných dlhodobých ochorení</strong>.</p>
 
 <p>Prakticky to znamená tri posuny:</p>
 
@@ -59,7 +59,7 @@ $articles[] = [
     <tr><th scope="col">Oblasť</th><th scope="col">Čo konsenzus 2026 hovorí</th></tr>
   </thead>
   <tbody>
-    <tr><th scope="row">Základ starostlivosti</th><td>Podpora zdravého životného štýlu — zdravé stravovanie, <strong>24-hodinové pohybové správanie vrátane spánku</strong>, vyhýbanie sa tabaku a návykovým látkam — spolu s <strong>psychologickou podporou</strong> a intervenciami zameranými na manažment hmotnosti</td></tr>
+    <tr><th scope="row">Základ starostlivosti</th><td>Podpora zdravého životného štýlu – zdravé stravovanie, <strong>24-hodinové pohybové správanie vrátane spánku</strong>, vyhýbanie sa tabaku a návykovým látkam – spolu s <strong>psychologickou podporou</strong> a intervenciami zameranými na manažment hmotnosti</td></tr>
     <tr><th scope="row">Farmakoterapia</th><td><strong>Skoršie použitie, potenciálne už od diagnózy</strong>, inhibítorov SGLT2 a/alebo liečby založenej na GLP-1 s cieľom <strong>orgánovej ochrany</strong> a zlepšenia dlhodobých výsledkov</td></tr>
     <tr><th scope="row">Kombinačná liečba</th><td><strong>Skoršie kombinované použitie</strong> inhibítora SGLT2 a liečby založenej na GLP-1 treba zvážiť u ľudí so súčasne prítomným <strong>kardiovaskulárnym ochorením, chronickou chorobou obličiek a srdcovým zlyhávaním</strong></td></tr>
   </tbody>
@@ -69,13 +69,13 @@ $articles[] = [
 
 <p>Dva detaily v tejto tabuľke sa oplatí prečítať dvakrát.</p>
 
-<p>Prvým je spojenie <strong>„potenciálne už od diagnózy“</strong>. Doterajšia logika — metformín, potom pridať niečo ďalšie — sa tým neruší explicitne, ale prestáva byť samozrejmým východiskom. Dôvodom nie je lepšia glykemická účinnosť, ale <strong>orgánová ochrana</strong>: liečivá sa nasadzujú kvôli tomu, čo robia so srdcom a obličkami, nie kvôli tomu, o koľko znížia HbA1c.</p>
+<p>Prvým je spojenie <strong>„potenciálne už od diagnózy“</strong>. Doterajšia logika – metformín, potom pridať niečo ďalšie – sa tým neruší explicitne, ale prestáva byť samozrejmým východiskom. Dôvodom nie je lepšia glykemická účinnosť, ale <strong>orgánová ochrana</strong>: liečivá sa nasadzujú kvôli tomu, čo robia so srdcom a obličkami, nie kvôli tomu, o koľko znížia HbA1c.</p>
 
-<p>Druhým je <strong>skoršia kombinácia</strong> inhibítora SGLT2 a liečby založenej na GLP-1. Pre nefrológa je to najpriamejšia veta celého dokumentu — práve naša populácia je tá, v ktorej sa „súčasne prítomné kardiovaskulárne ochorenie, CKD a srdcové zlyhávanie“ vyskytuje najčastejšie.</p>
+<p>Druhým je <strong>skoršia kombinácia</strong> inhibítora SGLT2 a liečby založenej na GLP-1. Pre nefrológa je to najpriamejšie odporúčanie dokumentu – práve naša populácia je tá, v ktorej sa „súčasne prítomné kardiovaskulárne ochorenie, CKD a srdcové zlyhávanie“ vyskytuje najčastejšie.</p>
 
 <h2>Prečo práve tieto dve skupiny</h2>
 
-<p>Konsenzus vychádza zo systematického prehľadu publikácií od roku 2022 — a práve v tomto období pribudli dáta, ktoré renálnu indikáciu obidvoch skupín podstatne posilnili.</p>
+<p>Konsenzus vychádza zo systematického prehľadu publikácií od roku 2022 – a práve v tomto období pribudli dáta, ktoré renálnu indikáciu obidvoch skupín podstatne posilnili.</p>
 
 <p>Pre nefrológiu je najvýznamnejšia štúdia <strong>FLOW</strong> (<em>New England Journal of Medicine</em>, 2024), ktorá zaradila 3533 pacientov s diabetom 2. typu a chronickou chorobou obličiek a randomizovala ich na subkutánny semaglutid 1,0 mg týždenne alebo placebo. Pri mediáne sledovania 3,4 roka bol primárny zložený renálny a kardiovaskulárny ukazovateľ o <strong>24 % nižší</strong> (pomer rizík 0,76; 95 % IS 0,66 – 0,88), kardiovaskulárne úmrtie o 29 % nižšie (0,71; 0,56 – 0,89) a úmrtie z akejkoľvek príčiny o 20 % nižšie (0,80; 0,67 – 0,95). Štúdia bola <strong>predčasne ukončená</strong> na odporúčanie po prednastavenej priebežnej analýze.</p>
 
@@ -83,19 +83,19 @@ $articles[] = [
 
 <h2>Nefrologické poznámky k implementácii</h2>
 
-<p>Konsenzus je dokumentom o tom, <em>čo</em> robiť. Nefrologická prax sa láme na tom, <em>ako</em> to robiť bezpečne u pacienta s poklesom eGFR.</p>
+<p>Konsenzus hovorí, <em>čo</em> robiť. Nefrologická prax sa láme na tom, <em>ako</em> to robiť bezpečne u pacienta s poklesom eGFR.</p>
 
 <h3>1) Metformín: individualizácia podľa renálnej funkcie zostáva</h3>
 
-<p>Posun k skoršiemu nasadeniu inhibítorov SGLT2 a GLP-1 neznamená, že metformín pri CKD prestáva podliehať renálnym pravidlám. Rozhodnutie sa naďalej riadi odhadovanou glomerulovou filtráciou, znášanlivosťou a rizikom laktátovej acidózy podľa platných odporúčaní a SPC. Z praktického hľadiska sa však mení poradie otázok: namiesto „kedy pridať druhý liek k metformínu“ sa pýtame „čo tento pacient potrebuje pre ochranu obličiek a srdca — a je metformín pri jeho renálnej funkcii vhodným doplnkom“.</p>
+<p>Posun k skoršiemu nasadeniu inhibítorov SGLT2 a GLP-1 neznamená, že metformín pri CKD prestáva podliehať renálnym pravidlám. Rozhodnutie sa naďalej riadi odhadovanou glomerulovou filtráciou, znášanlivosťou a rizikom laktátovej acidózy podľa platných odporúčaní a SPC. Z praktického hľadiska sa však mení poradie otázok: namiesto „kedy pridať druhý liek k metformínu“ sa pýtame „čo tento pacient potrebuje pre ochranu obličiek a srdca – a je metformín pri jeho renálnej funkcii vhodným doplnkom“.</p>
 
 <h3>2) Očakávaný úvodný pokles eGFR</h3>
 
-<p>Pri nasadení inhibítora SGLT2 (a v menšej miere pri ďalších nefroprotektívnych liečivách) sa typicky objaví <strong>počiatočný pokles eGFR</strong>, ktorý je hemodynamický, reverzibilný a je <em>priaznivým</em> prognostickým znakom. Jeho nerozpoznanie vedie k zbytočnému vysadeniu práve toho lieku, ktorý pacienta chráni. Pri skoršom nasadení u pacientov s lepšou východiskovou funkciou obličiek bude táto situácia v ambulanciách častejšia — a tým aj riziko nesprávnej reakcie.</p>
+<p>Pri nasadení inhibítora SGLT2 (a v menšej miere pri ďalších nefroprotektívnych liečivách) sa typicky objaví <strong>počiatočný pokles eGFR</strong>, ktorý je hemodynamický, reverzibilný a je <em>priaznivým</em> prognostickým znakom. Jeho nerozpoznanie vedie k zbytočnému vysadeniu práve toho lieku, ktorý pacienta chráni. Pri skoršom nasadení u pacientov s lepšou východiskovou funkciou obličiek bude táto situácia v ambulanciách častejšia – a tým aj riziko nesprávnej reakcie.</p>
 
 <h3>3) Objemová deplécia a pravidlo chorého dňa</h3>
 
-<p>Kombinácia inhibítora SGLT2, agonistu GLP-1, diuretika a blokády systému renín-angiotenzín-aldosterón je účinná — a pri interkurentnom ochorení riziková. Gastrointestinálne nežiaduce účinky liečby založenej na GLP-1 môžu viesť k zníženému príjmu tekutín a k objemovej deplécii, čo je najčastejšia cesta k akútnemu poškodeniu obličiek u týchto pacientov. <strong>Každý pacient na kombinovanej liečbe potrebuje dohodnuté pravidlo chorého dňa</strong> — čo vysadiť pri vracaní, hnačke alebo horúčke a kedy sa ozvať. Podrobnejšie k tomu článok <a href="article.php?slug=prehadzovanie-glp1-agonistov-prakticky-postup-ckd">o prechode medzi agonistami GLP-1</a>.</p>
+<p>Kombinácia inhibítora SGLT2, agonistu GLP-1, diuretika a blokády systému renín-angiotenzín-aldosterón je účinná – a pri interkurentnom ochorení riziková. Gastrointestinálne nežiaduce účinky liečby založenej na GLP-1 môžu viesť k zníženému príjmu tekutín a k objemovej deplécii, čo je najčastejšia cesta k akútnemu poškodeniu obličiek u týchto pacientov. <strong>Každý pacient na kombinovanej liečbe potrebuje dohodnuté pravidlo chorého dňa</strong> – čo vysadiť pri vracaní, hnačke alebo horúčke a kedy sa ozvať. Podrobnejšie k tomu článok <a href="article.php?slug=prehadzovanie-glp1-agonistov-prakticky-postup-ckd">o prechode medzi agonistami GLP-1</a>.</p>
 
 <h3>4) Skríning komplikácií sa rozširuje aj na pečeň</h3>
 
@@ -103,27 +103,27 @@ $articles[] = [
 
 <h3>5) Hypoglykémia a technológia</h3>
 
-<p>Pri CKD je riziko hypoglykémie vyššie — mení sa farmakokinetika viacerých liečiv aj renálna glukoneogenéza. Pokiaľ pacient užíva inzulín alebo deriváty sulfonylmočoviny, kontinuálne monitorovanie glukózy je predovšetkým <strong>bezpečnostný</strong>, nie optimalizačný nástroj. Prínos tu nie je renálny priamo, ale cez zníženie počtu hypoglykémií u krehkých pacientov. Dôkazy pri diabete 2. typu bez inzulínu rozoberá <a href="article.php?slug=kontinualne-monitorovanie-glukozy-diabetes-2-typu-bez-inzulinu">samostatný článok</a>.</p>
+<p>Pri CKD je riziko hypoglykémie vyššie – mení sa farmakokinetika viacerých liečiv aj renálna glukoneogenéza. Ak pacient užíva inzulín alebo deriváty sulfonylmočoviny, kontinuálne monitorovanie glukózy je predovšetkým <strong>bezpečnostný</strong>, nie optimalizačný nástroj. Prínos tu nie je priamo renálny, spočíva v menšom počte hypoglykémií u krehkých pacientov. Dôkazy pri diabete 2. typu bez inzulínu rozoberá <a href="article.php?slug=kontinualne-monitorovanie-glukozy-diabetes-2-typu-bez-inzulinu">samostatný článok</a>.</p>
 
 <h2>Veta, ktorá je v dokumente najdôležitejšia</h2>
 
-<p>Konsenzus sa neuzatvára novým liečivom ani novým cieľom. Uzatvára sa konštatovaním, že schopnosť zásadne zmeniť výsledky pacientov s diabetom 2. typu je <strong>na dosah — prostredníctvom dôsledného, spravodlivého a systematického zavádzania stratégií a liečiv, ktoré sú už dnes dostupné</strong>.</p>
+<p>Konsenzus sa neuzatvára novým liečivom ani novým cieľom. Uzatvára sa konštatovaním, že schopnosť zásadne zmeniť výsledky pacientov s diabetom 2. typu je <strong>na dosah – prostredníctvom dôsledného, spravodlivého a systematického zavádzania stratégií a liečiv, ktoré sú už dnes dostupné</strong>.</p>
 
-<p>To je z nefrologického pohľadu najpoctivejšia veta celého dokumentu. Hlavnou prekážkou nefroprotekcie pri diabete dnes nie je chýbajúci dôkaz ani chýbajúce liečivo. Je ňou to, že <strong>pacienti, ktorí by z liečby profitovali, ju nedostávajú</strong> — pre oneskorenú diagnózu CKD, nevykonaný skríning albuminúrie, obavu z úvodného poklesu eGFR, úhradové prekážky alebo jednoducho preto, že nikto neprevzal zodpovednosť za to, kto liek nasadí.</p>
+<p>To je z nefrologického pohľadu najpoctivejšia veta celého dokumentu. Hlavnou prekážkou nefroprotekcie pri diabete dnes nie je chýbajúci dôkaz ani chýbajúce liečivo. Je ňou to, že <strong>pacienti, ktorí by z liečby profitovali, ju nedostávajú</strong> – pre oneskorenú diagnózu CKD, nevykonaný skríning albuminúrie, obavu z úvodného poklesu eGFR, úhradové prekážky alebo jednoducho preto, že nikto neprevzal zodpovednosť za to, kto liek nasadí.</p>
 
 <h2>Čo tento článok zámerne neobsahuje</h2>
 
-<p>Na kongrese EASD 2026 odzneli aj výsledky štúdií, ktoré zatiaľ <strong>nie sú recenzovane publikované</strong> — napríklad randomizovanej štúdie <strong>RESET for REMISSION</strong>, ktorá u mladých dospelých (18 až 45 rokov) do 6 rokov od diagnózy diabetu 2. typu skúma remisiu po kombinácii nízkoenergetickej diéty (800 až 900 kcal denne počas 12 týždňov) so supervidovaným aeróbnym a silovým tréningom trikrát týždenne, s následnou 12-týždňovou udržiavacou fázou; primárnym ukazovateľom je remisia definovaná ako HbA1c pod 6,5 % v 24. týždni bez liečiv znižujúcich glykémiu počas udržiavacej fázy.</p>
+<p>Na kongrese EASD 2026 odzneli aj výsledky štúdií, ktoré zatiaľ <strong>nie sú recenzovane publikované</strong> – napríklad randomizovanej štúdie <strong>RESET for REMISSION</strong>, ktorá u mladých dospelých (18 až 45 rokov) do 6 rokov od diagnózy diabetu 2. typu skúma remisiu po kombinácii nízkoenergetickej diéty (800 až 900 kcal denne počas 12 týždňov) so supervidovaným aeróbnym a silovým tréningom trikrát týždenne, s následnou 12-týždňovou udržiavacou fázou; primárnym ukazovateľom je remisia definovaná ako HbA1c pod 6,5 % v 24. týždni bez liečiv znižujúcich glykémiu počas udržiavacej fázy.</p>
 
 <p>Protokol tejto štúdie je publikovaný a overiteľný; <strong>jej výsledky tu neuvádzame</strong>, kým nebudú dostupné v recenzovanej podobe. To isté platí pre prezentácie nových inkretínových liečiv. Kongresová prezentácia je legitímny spôsob komunikácie vedy, ale nie je dostatočným podkladom na čísla v odbornom texte ani na zmenu praxe.</p>
 
-<p>Z nefrologického hľadiska stojí pri remisných režimoch za zmienku jedna praktická vec, ktorá platí bez ohľadu na výsledok štúdie: <strong>výrazná dietetická intervencia u pacienta s rizikom CKD mení hemodynamiku</strong>. Pri prudkom úbytku hmotnosti a zmenenom príjme tekutín treba počítať s hypotenziou, so zhoršenou toleranciou blokády RAAS a s potrebou skorého prehodnotenia dávok — teda s plánom monitorovania kreatinínu, ionogramu a krvného tlaku, nie s jednorazovou kontrolou o pol roka.</p>
+<p>Z nefrologického hľadiska stojí pri remisných režimoch za zmienku jedna praktická vec, ktorá platí bez ohľadu na výsledok štúdie: <strong>výrazná dietetická intervencia u pacienta s rizikom CKD mení hemodynamiku</strong>. Pri prudkom úbytku hmotnosti a zmenenom príjme tekutín treba počítať s hypotenziou, so zhoršenou toleranciou blokády RAAS a s potrebou skorého prehodnotenia dávok – teda s plánom monitorovania kreatinínu, ionogramu a krvného tlaku, nie s jednorazovou kontrolou o pol roka.</p>
 
 <h2>Záver</h2>
 
 <p>Konsenzus ADA a EASD 2026 nie je revolúciou v tom zmysle, že by priniesol nové liečivo. Je posunom v <strong>definícii problému</strong>: diabetes 2. typu sa v ňom prestáva správať ako ochorenie glykémie a začína sa správať ako ochorenie viacerých orgánov, v ktorom je oblička jedným z hlavných cieľov ochrany, nie neskorou komplikáciou.</p>
 
-<p>Pre nefrológa z toho vyplýva menej dramatický, ale praktickejší záver: liečivá, ktoré roky používame u pacientov s pokročilou CKD, majú podľa tohto dokumentu patriť k pacientom <em>skôr</em> — a často <em>v kombinácii</em>. Úlohou nefrológie nie je čakať, kým ich pacient dostane od niekoho iného.</p>
+<p>Pre nefrológa z toho vyplýva menej dramatický, ale praktickejší záver: liečivá, ktoré roky používame u pacientov s pokročilou CKD, majú podľa tohto dokumentu patriť k pacientom <em>skôr</em> – a často <em>v kombinácii</em>. Úlohou nefrológie nie je čakať, kým ich pacient dostane od niekoho iného.</p>
 
 <hr>
 

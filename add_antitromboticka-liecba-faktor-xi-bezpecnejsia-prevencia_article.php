@@ -33,25 +33,25 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Moderná antitrombotická liečba sa posúva od plošného zvyšovania intenzity, ktoré zvyšuje krvácanie, k cielenejšiemu zásahu do trombózy pri zachovaní hemostázy. Najväčšie očakávania sa viažu na inhibítory faktora XI (asundexián, milvexián) v sekundárnej prevencii cievnej mozgovej príhody aj pri fibrilácii predsiení.',
     'content'      => <<<'HTML'
-<figure><a href="img/antitromboticka-liecba-faktor-xi-bezpecnejsia-prevencia.webp" rel="noopener noreferrer" target="_blank"><img src="img/antitromboticka-liecba-faktor-xi-bezpecnejsia-prevencia.webp" alt="Škodlivý trombus rozpúšťaný presným lúčom, zatiaľ čo menšia ochranná zrazenina zostáva nedotknutá" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Cieľom je zasiahnuť patologickú zrazeninu a pritom zachovať hojivú — tam smeruje inhibícia faktora XI.</figcaption></figure>
+<figure><a href="img/antitromboticka-liecba-faktor-xi-bezpecnejsia-prevencia.webp" rel="noopener noreferrer" target="_blank"><img src="img/antitromboticka-liecba-faktor-xi-bezpecnejsia-prevencia.webp" alt="Škodlivý trombus rozpúšťaný presným lúčom, zatiaľ čo menšia ochranná zrazenina zostáva nedotknutá" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Cieľom je zasiahnuť patologickú zrazeninu a pritom zachovať hojivú – tam smeruje inhibícia faktora XI.</figcaption></figure>
 
-<p>Antitrombotická liečba dlhodobo naráža na ten istý kompromis: čím účinnejšie potláčame tvorbu zrazenín, tým vyššie je riziko krvácania. Nasledujúci prehľad vychádza z odborného stretnutia venovaného moderným trendom v prevencii tromboembolických príhod. V centre diskusie stáli dve veľké témy — ako zlepšiť sekundárnu prevenciu cievnej mozgovej príhody najmä u pacientov bez fibrilácie predsiení a ako zvládnuť situácie, v ktorých sa v praxi stretáva potreba antikoagulácie pri fibrilácii predsiení s potrebou protidoštičkovej liečby po koronárnych výkonoch, pričom riziko krvácania výrazne limituje dlhodobú kombinovanú terapiu.</p>
+<p>Antitrombotická liečba dlhodobo naráža na ten istý kompromis: čím účinnejšie potláčame tvorbu zrazenín, tým vyššie je riziko krvácania. Nasledujúci prehľad vychádza z odborného stretnutia venovaného moderným trendom v prevencii tromboembolických príhod. V centre diskusie stáli dve veľké témy – ako zlepšiť sekundárnu prevenciu cievnej mozgovej príhody najmä u pacientov bez fibrilácie predsiení a ako zvládnuť situácie, v ktorých sa potreba antikoagulácie pri fibrilácii predsiení stretáva s potrebou protidoštičkovej liečby po koronárnych výkonoch. Riziko krvácania pritom výrazne obmedzuje dlhodobú kombinovanú liečbu.</p>
 
 <h2>Keď nerozhoduje fibrilácia predsiení, no riziko zrazenín treba aj tak liečiť</h2>
 
-<p>Pri cievnej mozgovej príhode (CMP) treba najprv jednoznačne určiť typ príhody — ischemická verzus hemoragická — a mechanizmus jej vzniku. Z pohľadu klinickej praxe z toho vyplýva:</p>
+<p>Pri cievnej mozgovej príhode (CMP) treba najprv jednoznačne určiť typ príhody – ischemická verzus hemoragická – a mechanizmus jej vzniku. Z pohľadu klinickej praxe z toho vyplýva:</p>
 
 <ul>
   <li>pri <strong>fibrilácii predsiení (FP)</strong> je kľúčová antikoagulačná liečba,</li>
   <li>pri <strong>nekardioembolickej</strong> príhode je dlhodobým základom <strong>protidoštičková (antiagregačná) liečba</strong>,</li>
-  <li>skúšania s antikoagulanciami pri nekardioembolických príhodách v minulosti narážali na problém <strong>tolerability</strong> — riziko krvácania bolo z hľadiska bezpečnosti príliš vysoké.</li>
+  <li>skúšania s antikoagulanciami pri nekardioembolických príhodách v minulosti narážali na problém <strong>tolerability</strong> – riziko krvácania bolo z hľadiska bezpečnosti príliš vysoké.</li>
 </ul>
 
-<p>Typickú frustráciu ilustruje modelový pacient, ktorému príhoda recidivuje napriek protidoštičkovej liečbe. Hľadá sa riešenie, ktoré by znížilo riziko recidívy bez toho, aby výrazne zvýšilo riziko závažného krvácania.</p>
+<p>Typický problém ilustruje modelový pacient, ktorému príhoda recidivuje napriek protidoštičkovej liečbe. Hľadá sa riešenie, ktoré by znížilo riziko recidívy bez toho, aby výrazne zvýšilo riziko závažného krvácania.</p>
 
 <h3>Faktor XI ako potenciálne „špecifickejší“ cieľ</h3>
 
-<p>Práve preto sa veľa očakáva od <strong>inhibítorov faktora XI</strong>. Logika je nasledovná:</p>
+<p>Práve preto sa veľa očakáva od <strong>inhibítorov faktora XI</strong>. Úvaha je takáto:</p>
 
 <ul>
   <li>zrazenina vzniká súhrou <strong>aktivácie krvných doštičiek</strong> a následnej <strong>tvorby trombínu</strong>,</li>
@@ -60,7 +60,7 @@ $articles[] = [
   <li>faktor XI sa prezentuje ako cieľ s výraznejšou väzbou na „škodlivú“ patologickú trombózu, ale s menším dosahom na mechanizmy potrebné pri reparácii cievnej steny.</li>
 </ul>
 
-<p>Prvé pozitívne údaje z 3. fázy v sekundárnej prevencii CMP — konkrétne štúdia s <strong>asundexiánom</strong> (OCEANIC-STROKE) — ukázali výrazné zníženie recidív, pričom sa nepozorovalo nadmerné zvýšenie krvácania vrátane krvácania do mozgu. Ďalšie výsledky sa očakávajú aj pri <strong>milvexiáne</strong> (LIBREXIA-STROKE).</p>
+<p>Prvé pozitívne údaje z 3. fázy v sekundárnej prevencii CMP – konkrétne zo štúdie s <strong>asundexiánom</strong> (OCEANIC-STROKE) – ukázali výrazné zníženie recidív, pričom sa nepozorovalo nadmerné zvýšenie krvácania vrátane krvácania do mozgu. Ďalšie výsledky sa očakávajú aj pri <strong>milvexiáne</strong> (LIBREXIA-STROKE).</p>
 
 <h2>Fibrilácia predsiení + PCI + krvácanie: prečo je kombinovaná liečba taký problém</h2>
 
@@ -72,23 +72,23 @@ $articles[] = [
   <li>a následne <strong>krvácanie z tráviaceho traktu</strong> (na podklade divertikulového ochorenia).</li>
 </ul>
 
-<p>V súlade s reálnou praxou platí, že tieto liečby možno kombinovať, no len na <strong>obmedzený čas</strong>, pretože riziko krvácania s dĺžkou kombinácie rastie.</p>
+<p>V praxi platí, že tieto liečby možno kombinovať, no len na <strong>obmedzený čas</strong>, pretože riziko krvácania s dĺžkou kombinácie rastie.</p>
 
 <h3>Ako vyzerá zásada deeskalácie</h3>
 
 <p>Keď je potrebná antikoagulácia aj protidoštičková liečba zároveň, cieľom je:</p>
 
 <ol>
-  <li>krátkodobo nasadiť <strong>intenzívnejší režim</strong>, a potom</li>
+  <li>krátkodobo nasadiť <strong>intenzívnejší režim</strong> a potom</li>
   <li><strong>rýchlo deeskalovať</strong>, aby pacient dlhodobo nezostával vystavený neúmerne vysokému riziku krvácania.</li>
 </ol>
 
-<p>Všeobecný rámec, ktorý zaznel:</p>
+<p>Na stretnutí zaznel tento všeobecný rámec:</p>
 
 <ul>
   <li>približne <strong>1 mesiac trojkombinácie</strong> (antikoagulancium + kyselina acetylsalicylová + inhibítor P2Y12; ako bezpečnejšia voľba do trojkombinácie sa najčastejšie uvádza <strong>klopidogrel</strong>),</li>
   <li>následne prechod na <strong>dvojkombináciu</strong> na ďalšie obdobie (v príklade približne 5 mesiacov),</li>
-  <li>a napokon často návrat k <strong>samotnému perorálnemu antikoagulanciu (DOAC)</strong> — približne po 6 mesiacoch alebo neskôr — podľa ischemického aj krvácavého profilu pacienta.</li>
+  <li>a napokon často návrat k <strong>samotnému perorálnemu antikoagulanciu (DOAC)</strong> – približne po 6 mesiacoch alebo neskôr – podľa ischemického aj krvácavého profilu pacienta.</li>
 </ul>
 
 <h3>Prečo sa v praxi často nedeeskaluje</h3>
@@ -109,7 +109,7 @@ $articles[] = [
 
 <ul>
   <li><strong>konkrétny zdroj v tráviacom trakte</strong> môže byť spúšťačom (v príklade divertikulové ochorenie), ale</li>
-  <li>u pacientov na antitrombotickej liečbe treba myslieť aj na <strong>ďalšie príčiny</strong> vrátane skrytých diagnóz (napríklad onkologické ochorenie) — neuspokojiť sa s prvým vysvetlením.</li>
+  <li>u pacientov na antitrombotickej liečbe treba myslieť aj na <strong>ďalšie príčiny</strong> vrátane skrytých diagnóz (napríklad onkologické ochorenie) – neuspokojiť sa s prvým vysvetlením.</li>
 </ul>
 
 <h2>Inhibítory faktora XI pri fibrilácii predsiení: prečo nie všetky štúdie dopadli rovnako</h2>
@@ -122,7 +122,7 @@ $articles[] = [
   <li>a najmä <strong>cieľová populácia</strong> a klinický kontext.</li>
 </ul>
 
-<p>Prebieha veľká štúdia s <strong>milvexiánom</strong> pri fibrilácii predsiení (LIBREXIA-AF), ktorá ho porovnáva s aktuálnym štandardom (komparátorom je apixabán) s cieľom preukázať lepšiu bezpečnosť pri zachovaní účinnosti. Treba dodať, že v čase prípravy tohto materiálu neboli dostupné niektoré najnovšie dáta, ktoré môžu interpretáciu vývoja v tejto oblasti ešte zmeniť.</p>
+<p>Prebieha veľká štúdia s <strong>milvexiánom</strong> pri fibrilácii predsiení (LIBREXIA-AF), ktorá ho porovnáva s aktuálnym štandardom (komparátorom je apixabán) s cieľom preukázať lepšiu bezpečnosť pri zachovaní účinnosti. V čase prípravy materiálu ešte neboli dostupné niektoré najnovšie údaje, ktoré môžu interpretáciu vývoja v tejto oblasti zmeniť.</p>
 
 <h2>Ablácia a uzáver uška ľavej predsiene: znižujú riziko, no nie u každého na nulu</h2>
 
@@ -137,7 +137,7 @@ $articles[] = [
 
 <h2>Zhrnutie</h2>
 
-<p>Smerovanie sa posúva od plošného zvyšovania intenzity, ktoré zvyšuje krvácanie, k stratégii, ktorá cieli trombózu účinnejšie a zároveň <strong>minimalizuje zásah do hemostázy</strong>. Najväčšie očakávania sa viažu na <strong>inhibítory faktora XI</strong> (asundexián, milvexián) v sekundárnej prevencii cievnej mozgovej príhody aj pri fibrilácii predsiení — predovšetkým u pacientov, u ktorých má kombinovaná terapia len krátke okno tolerability.</p>
+<p>Antitrombotická liečba sa posúva od plošného zvyšovania intenzity, ktoré zvyšuje krvácanie, k stratégii, ktorá mieri na trombózu účinnejšie a zároveň <strong>minimalizuje zásah do hemostázy</strong>. Najväčšie očakávania sa viažu na <strong>inhibítory faktora XI</strong> (asundexián, milvexián) v sekundárnej prevencii cievnej mozgovej príhody aj pri fibrilácii predsiení – predovšetkým u pacientov, u ktorých má kombinovaná terapia len krátke okno tolerability.</p>
 
 <hr>
 

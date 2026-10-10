@@ -30,31 +30,29 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Retina substúdia SURPASS-CVOT ukázala, že tirzepatid nebol spojený so zvýšeným rizikom vzniku ani progresie diabetickej retinopatie u vysokorizikových pacientov s diabetom 2. typu — napriek výraznejšiemu poklesu HbA1c oproti dulaglutidu.',
+    'excerpt'      => 'Retina substúdia SURPASS-CVOT ukázala, že tirzepatid nebol spojený so zvýšeným rizikom vzniku ani progresie diabetickej retinopatie u vysokorizikových pacientov s diabetom 2. typu, a to napriek výraznejšiemu poklesu HbA1c oproti dulaglutidu.',
     'content'      => <<<'HTML'
 <figure><a href="img/tirzepatid-diabeticka-retinopatia-surpass-cvot.webp" rel="noopener noreferrer" target="_blank"><img src="img/tirzepatid-diabeticka-retinopatia-surpass-cvot.webp" alt="Molekula vedľa oka, ktorého sieť sietnicových ciev zostáva pokojná a rovnomerne nasvietená" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Obava z rýchleho zhoršenia sietnice sa v sledovaní rizikových pacientov nepotvrdila.</figcaption></figure>
 
 <p>Tirzepatid, známy aj pod obchodným názvom Mounjaro, nebol v retina substúdii SURPASS-CVOT spojený so zvýšeným rizikom vzniku alebo progresie diabetickej retinopatie u vysokorizikových pacientov s diabetom 2. typu. Výsledky boli prezentované na kongrese American Diabetes Association 2026 Scientific Sessions.</p>
 
-<p>Tento výsledok je klinicky dôležitý, pretože tirzepatid dokáže viesť k výraznému a pomerne rýchlemu poklesu HbA1c. Práve rýchle zlepšenie glykemickej kontroly bolo v minulosti v niektorých štúdiách spojené s prechodným zhoršením diabetickej retinopatie. Pri tirzepatide sa preto prirodzene objavila otázka, či intenzívna metabolická účinnosť nemôže mať nepriaznivý dopad na sietnicu.</p>
-
-<p>Podľa dostupných údajov zo substúdie sa takéto zvýšené riziko nepotvrdilo.</p>
+<p>Výsledok je klinicky dôležitý, pretože tirzepatid dokáže viesť k výraznému a pomerne rýchlemu poklesu HbA1c. Práve rýchle zlepšenie glykemickej kontroly bolo v minulosti v niektorých štúdiách spojené s prechodným zhoršením diabetickej retinopatie. Pri tirzepatide sa preto objavila otázka, či jeho silný metabolický účinok nemôže nepriaznivo pôsobiť na sietnicu. Podľa dostupných údajov zo substúdie sa takéto zvýšené riziko nepotvrdilo.</p>
 
 <h2>Prečo bola táto otázka dôležitá</h2>
 
 <p>Diabetická retinopatia je dôsledkom chronickej hyperglykémie a patrí medzi najzávažnejšie mikrovaskulárne komplikácie diabetu. Dlhodobé zlepšenie glykemickej kontroly riziko retinopatie znižuje. Zároveň však platí, že pri rýchlej korekcii výraznej hyperglykémie sa môže u niektorých pacientov objaviť prechodné zhoršenie retinopatie.</p>
 
-<p>Tento jav bol opísaný najmä pri intenzifikácii liečby inzulínom a v niektorých predchádzajúcich štúdiách s modernými antidiabetikami. Mechanizmus nie je úplne jednoduchý, ale klinický odkaz je praktický: pri výraznom zlepšovaní glykemickej kontroly treba dbať aj na očné sledovanie, najmä u pacientov s už prítomnou retinopatiou.</p>
+<p>Tento jav bol opísaný najmä pri intenzifikácii liečby inzulínom a v niektorých predchádzajúcich štúdiách s modernými antidiabetikami. Mechanizmus nie je jednoduchý, klinický odkaz však áno: pri výraznom zlepšovaní glykemickej kontroly treba dbať aj na očné sledovanie, najmä u pacientov s už prítomnou retinopatiou.</p>
 
-<p>Tirzepatid je veľmi účinný liek. Kombinuje účinok na receptory GIP a GLP-1 a často vedie k výraznému poklesu HbA1c aj telesnej hmotnosti. Preto bolo potrebné overiť, či jeho metabolický efekt nie je sprevádzaný zvýšeným rizikom progresie retinopatie.</p>
+<p>Tirzepatid pôsobí na receptory GIP aj GLP-1 a často vedie k výraznému poklesu HbA1c aj telesnej hmotnosti. Preto bolo potrebné overiť, či jeho metabolický efekt nie je sprevádzaný zvýšeným rizikom progresie retinopatie.</p>
 
 <h2>Ako bola substúdia navrhnutá</h2>
 
-<p>Retina substúdia bola súčasťou veľkej štúdie SURPASS-CVOT. Do nej boli zaradení pacienti s diabetom 2. typu a kardiovaskulárnym ochorením. Keďže išlo o vysokorizikových pacientov, ako porovnávacia liečba bol použitý dulaglutid, nie placebo.</p>
+<p>Retina substúdia bola súčasťou veľkej štúdie SURPASS-CVOT, do ktorej boli zaradení pacienti s diabetom 2. typu a kardiovaskulárnym ochorením. Keďže išlo o vysokorizikových pacientov, ako porovnávacia liečba bol použitý dulaglutid, nie placebo.</p>
 
 <p>Do retina substúdie bolo zahrnutých 920 pacientov z celkového počtu 13 165 účastníkov štúdie. Zaradení boli pacienti, ktorí mali na začiatku diabetickú retinopatiu alebo makulárny edém aspoň na jednom oku, prípadne boli považovaní za vysokorizikových na základe trvania diabetu 2. typu 15 rokov alebo viac a vstupného HbA1c aspoň 8,0 %.</p>
 
-<p>Z nich 449 pacientov dostávalo tirzepatid v dávke až 15 mg týždenne a 471 pacientov dostávalo dulaglutid v dávke 1,5 mg týždenne. Stav sietnice sa hodnotil štandardizovanými fundus fotografiami na začiatku a následne po 12, 18, 24 a 36 mesiacoch.</p>
+<p>Z nich 449 pacientov dostávalo tirzepatid v dávke až 15 mg týždenne a 471 pacientov dostávalo dulaglutid v dávke 1,5 mg týždenne. Stav sietnice sa hodnotil štandardizovanými fotografiami očného pozadia na začiatku a následne po 12, 18, 24 a 36 mesiacoch.</p>
 
 <h2>Tirzepatid znížil HbA1c výraznejšie</h2>
 
@@ -67,7 +65,7 @@ $articles[] = [
   <li>1,28 percentuálneho bodu pri dulaglutide.</li>
 </ul>
 
-<p>Rozdiel bol štatisticky významný. To potvrdzuje, že tirzepatid priniesol intenzívnejšie zlepšenie glykemickej kontroly. Dôležité však je, že toto výraznejšie zníženie HbA1c nebolo sprevádzané zhoršením retinálneho nálezu v porovnaní s dulaglutidom.</p>
+<p>Rozdiel bol štatisticky významný, tirzepatid teda priniesol intenzívnejšie zlepšenie glykemickej kontroly. Toto výraznejšie zníženie HbA1c pritom nebolo sprevádzané zhoršením retinálneho nálezu v porovnaní s dulaglutidom.</p>
 
 <h2>Progresia retinopatie sa nezvýšila</h2>
 
@@ -80,13 +78,13 @@ $articles[] = [
   <li>23,3 % pacientov v skupine s dulaglutidom.</li>
 </ul>
 
-<p>Odds ratio bolo 0,89 a rozdiel nebol štatisticky významný. Ani čas do prvého výskytu progresie o dva alebo viac stupňov sa medzi skupinami významne nelíšil.</p>
+<p>Pomer šancí (OR) bol 0,89 a rozdiel nebol štatisticky významný. Ani čas do prvého výskytu progresie o dva alebo viac stupňov sa medzi skupinami významne nelíšil.</p>
 
 <p>Inými slovami, napriek výraznejšiemu poklesu HbA1c pri tirzepatide sa nezistil signál vyššieho rizika zhoršenia diabetickej retinopatie.</p>
 
 <h2>Nebol rozdiel ani v závažných očných udalostiach</h2>
 
-<p>Medzi skupinami sa nelíšili ani sekundárne očné ukazovatele. Hodnotený bol kombinovaný endpoint zahŕňajúci:</p>
+<p>Medzi skupinami sa nelíšili ani sekundárne očné ukazovatele. Hodnotil sa kombinovaný ukazovateľ zahŕňajúci:</p>
 
 <ul>
   <li>retinálnu fotokoaguláciu,</li>
@@ -96,7 +94,7 @@ $articles[] = [
   <li>významnú stratu zrakovej ostrosti.</li>
 </ul>
 
-<p>Celkový hazard ratio bol 1,1, bez významného rozdielu medzi tirzepatidom a dulaglutidom. Rozdiel sa nezistil ani pri hodnotení podľa toho, či pacienti mali alebo nemali diabetickú retinopatiu už na začiatku.</p>
+<p>Pomer rizík (HR) bol 1,1, bez významného rozdielu medzi tirzepatidom a dulaglutidom. Rozdiel sa nezistil ani pri hodnotení podľa toho, či pacienti mali alebo nemali diabetickú retinopatiu už na začiatku.</p>
 
 <p>Progresia retinálnych zmien bola v oboch skupinách postupná a zodpovedala prirodzenému priebehu ochorenia.</p>
 
@@ -110,11 +108,11 @@ $articles[] = [
 
 <h2>Čo to znamená pre klinickú prax</h2>
 
-<p>Výsledky substúdie sú povzbudivé. U vysokorizikových pacientov s diabetom 2. typu, vrátane pacientov s existujúcou retinopatiou alebo makulárnym edémom, tirzepatid nezvýšil riziko progresie diabetickej retinopatie v porovnaní s dulaglutidom.</p>
+<p>U vysokorizikových pacientov s diabetom 2. typu, vrátane pacientov s existujúcou retinopatiou alebo makulárnym edémom, tirzepatid nezvýšil riziko progresie diabetickej retinopatie v porovnaní s dulaglutidom.</p>
 
-<p>To však neznamená, že očné sledovanie možno zanedbať. Naopak, pri pacientoch s dlhodobým diabetom, vyšším HbA1c, existujúcou retinopatiou alebo pri rýchlom zlepšovaní glykemickej kontroly zostáva pravidelný skríning sietnice nevyhnutný.</p>
+<p>Očné sledovanie však nemožno zanedbať. Pri pacientoch s dlhodobým diabetom, vyšším HbA1c, existujúcou retinopatiou alebo pri rýchlom zlepšovaní glykemickej kontroly zostáva pravidelný skríning sietnice nevyhnutný.</p>
 
-<p>Prakticky možno povedať:</p>
+<p>V skratke:</p>
 
 <ul>
   <li>tirzepatid v tejto substúdii nezhoršil retinálny stav oproti dulaglutidu,</li>

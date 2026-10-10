@@ -35,7 +35,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Tehotenstvo pri ochorení obličiek vyžaduje plánovanie ešte pred koncepciou, úpravu rizikových liekov, správnu interpretáciu renálnych parametrov a úzku spoluprácu nefrológa s materno-fetálnym tímom.',
     'content'      => <<<'HTML'
-<figure><a href="img/ochorenie-obliciek-tehotenstvo-multidisciplinarna-starostlivost.webp" rel="noopener noreferrer" target="_blank"><img src="img/ochorenie-obliciek-tehotenstvo-multidisciplinarna-starostlivost.webp" alt="Silueta tehotenského brucha a vedľa nej oblička pod zvýšenou záťažou, obe nasvietené zbiehajúcimi sa lúčmi" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Tehotenstvo kladie na obličky vyššie nároky — a práve preto sa o pacientku stará viac odborností naraz.</figcaption></figure>
+<figure><a href="img/ochorenie-obliciek-tehotenstvo-multidisciplinarna-starostlivost.webp" rel="noopener noreferrer" target="_blank"><img src="img/ochorenie-obliciek-tehotenstvo-multidisciplinarna-starostlivost.webp" alt="Silueta tehotenského brucha a vedľa nej oblička pod zvýšenou záťažou, obe nasvietené zbiehajúcimi sa lúčmi" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Tehotenstvo kladie na obličky vyššie nároky, a práve preto sa o pacientku stará viac odborností naraz.</figcaption></figure>
 
 <p>Tehotenstvo u ženy s ochorením obličiek patrí medzi klinicky náročné situácie. Nejde iba o graviditu s pridruženou diagnózou. Ide o dynamický stav, v ktorom sa fyziologické zmeny tehotenstva prekrývajú s chronickým alebo akútnym poškodením obličiek, hypertenziou, proteinúriou, imunologickou aktivitou ochorenia, rizikom preeklampsie a možnými komplikáciami pre plod.</p>
 
@@ -53,7 +53,7 @@ $articles[] = [
 
 <h2>Fertilita klesá s poklesom funkcie obličiek</h2>
 
-<p>Jedným z dôležitých bodov prehľadu je, že fertilita sa zhoršuje s poklesom renálnej funkcie. Pri pokročilej CKD a najmä pri zlyhaní obličiek je tehotenstvo menej časté. Dôvodom sú hormonálne poruchy, anovulácia, menštruačné nepravidelnosti, uremické prostredie, metabolické zmeny a celkové zhoršenie zdravotného stavu.</p>
+<p>Prehľad pripomína, že fertilita sa zhoršuje s poklesom renálnej funkcie. Pri pokročilej CKD a najmä pri zlyhaní obličiek je tehotenstvo menej časté. Dôvodom sú hormonálne poruchy, anovulácia, menštruačné nepravidelnosti, uremické prostredie, metabolické zmeny a celkové zhoršenie zdravotného stavu.</p>
 
 <p>To však neznamená, že gravidita nie je možná. Ak nastane u pacientky so zlyhaním obličiek, ide o vysoko rizikovú situáciu. Vyžaduje intenzívnu dialyzačnú stratégiu, časté monitorovanie, dôsledné hodnotenie objemu, tlaku, anémie, výživy a rastu plodu a jasné rozdelenie zodpovednosti medzi tímami.</p>
 
@@ -61,7 +61,7 @@ $articles[] = [
 
 <p>Pri CKD je najdôležitejším krokom predkoncepčné poradenstvo. Pacientka by mala ešte pred otehotnením vedieť, aké riziká súvisia s jej aktuálnym štádiom ochorenia, proteinúriou, krvným tlakom, histologickou alebo klinickou diagnózou a užívanou liečbou.</p>
 
-<p>Najvyššie riziko majú najmä pacientky s pokročilou CKD, významnou proteinúriou, nedostatočne kontrolovanou hypertenziou, aktívnym glomerulovým ochorením, lupusovou nefritídou, diabetickou chorobou obličiek, anamnézou preeklampsie alebo predčasného pôrodu a rýchlou progresiou ochorenia pred plánovanou graviditou.</p>
+<p>Najvyššie riziko majú pacientky s pokročilou CKD, významnou proteinúriou, nedostatočne kontrolovanou hypertenziou, aktívnym glomerulovým ochorením, lupusovou nefritídou, diabetickou chorobou obličiek, anamnézou preeklampsie alebo predčasného pôrodu a rýchlou progresiou ochorenia pred plánovanou graviditou.</p>
 
 <p>Prakticky má predkoncepčné zhodnotenie odpovedať na štyri otázky: či je ochorenie stabilné, či je krvný tlak bezpečne kontrolovaný, či je liečba kompatibilná s tehotenstvom a aký plán monitorovania bude potrebný po otehotnení.</p>
 
@@ -101,7 +101,7 @@ $articles[] = [
 
 <p>Tehotenstvo u pacientok so zlyhaním obličiek je menej časté, ale možné. Výsledky sa v posledných rokoch zlepšili najmä vďaka intenzívnejším dialyzačným protokolom a koordinovanej starostlivosti.</p>
 
-<p>Základnou myšlienkou je znížiť uremickú záťaž a udržiavať čo najstabilnejšie vnútorné prostredie. To si vyžaduje častejšiu alebo dlhšiu dialýzu, prísne sledovanie objemu, krvného tlaku, anémie, minerálového metabolizmu, výživy a rastu plodu.</p>
+<p>Cieľom je znížiť uremickú záťaž a udržiavať čo najstabilnejšie vnútorné prostredie. To si vyžaduje častejšiu alebo dlhšiu dialýzu, prísne sledovanie objemu, krvného tlaku, anémie, minerálového metabolizmu, výživy a rastu plodu.</p>
 
 <p>Takáto gravidita má byť vedená v centre so skúsenosťami s vysoko rizikovým tehotenstvom a nefrologickou starostlivosťou. Dôležitý je aj realistický rozhovor s pacientkou o rizikách, očakávaniach, záťaži intenzívnej dialýzy a možnostiach pôrodu.</p>
 
@@ -111,7 +111,7 @@ $articles[] = [
 
 <p>Kľúčové je sledovať zmenu oproti východiskovému stavu. Klinicky významné môže byť nové alebo zhoršujúce sa zvýšenie krvného tlaku, náhly nárast proteinúrie, zhoršenie renálnych funkcií, trombocytopénia, zvýšené pečeňové enzýmy, neurologické príznaky alebo porucha rastu plodu.</p>
 
-<p>V nejasných prípadoch môže pomôcť spolupráca s perinatológom a podľa lokálnych možností aj angiogénne biomarkery. Výsledok však musí byť vždy interpretovaný v klinickom kontexte a v porovnaní s predchádzajúcim stavom pacientky.</p>
+<p>V nejasných prípadoch môže pomôcť spolupráca s perinatológom a podľa lokálnych možností aj angiogénne biomarkery. Výsledok však treba vždy interpretovať v klinickom kontexte a v porovnaní s predchádzajúcim stavom pacientky.</p>
 
 <h2>Multidisciplinárna starostlivosť nie je formalita</h2>
 
@@ -142,9 +142,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>Ochorenie obličiek v tehotenstve je spojené so zvýšeným rizikom komplikácií pre matku aj plod. Riziko závisí od štádia CKD, proteinúrie, krvného tlaku, základnej diagnózy, aktivity ochorenia a komorbidít. Akútne poškodenie obličiek v gravidite má rôzne príčiny podľa trimestra a vyžaduje rýchlu diferenciálnu diagnostiku.</p>
-
-<p>Najdôležitejším klinickým posolstvom je potreba včasného plánovania. Predkoncepčné poradenstvo, úprava liečby, správna interpretácia renálnych parametrov počas gravidity a úzka spolupráca nefrológa s materno-fetálnym špecialistom môžu významne zlepšiť výsledky.</p>
+<p>Riziko komplikácií pre matku aj plod závisí od štádia CKD, proteinúrie, krvného tlaku, základnej diagnózy, aktivity ochorenia a komorbidít. Rozhodujúce je preto včasné plánovanie: predkoncepčné poradenstvo, úprava liečby, správna interpretácia renálnych parametrov počas gravidity a úzka spolupráca nefrológa s materno-fetálnym špecialistom môžu významne zlepšiť výsledky.</p>
 
 <p>Pre nefrologickú prax platí jednoduché pravidlo: u ženy s ochorením obličiek treba o tehotenstve hovoriť skôr, než nastane.</p>
 

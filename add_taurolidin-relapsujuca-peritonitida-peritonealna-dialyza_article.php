@@ -35,21 +35,21 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Taurolidín môže byť u vybraných pacientov s relapsujúcou PD peritonitídou zaujímavou adjuvantnou stratégiou proti katétrovému biofilmu. Nemá však nahradiť antibiotiká ani odkladať odstránenie katétra, keď je klinicky indikované.',
     'content'      => <<<'HTML'
-<figure><a href="img/taurolidin-relapsujuca-peritonitida-peritonealna-dialyza.webp" rel="noopener noreferrer" target="_blank"><img src="img/taurolidin-relapsujuca-peritonitida-peritonealna-dialyza.webp" alt="Katéter s tmavým biofilmom na vnútornej stene, ktorý svetlý antiseptický zámok čiastočne vyčistí" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Biofilm je dôvod, prečo sa peritonitída vracia — otázkou zostáva, či ho zámok zvládne odstrániť.</figcaption></figure>
+<figure><a href="img/taurolidin-relapsujuca-peritonitida-peritonealna-dialyza.webp" rel="noopener noreferrer" target="_blank"><img src="img/taurolidin-relapsujuca-peritonitida-peritonealna-dialyza.webp" alt="Katéter s tmavým biofilmom na vnútornej stene, ktorý svetlý antiseptický zámok čiastočne vyčistí" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Biofilm je dôvod, prečo sa peritonitída vracia – otázkou zostáva, či ho zámok dokáže odstrániť.</figcaption></figure>
 
-<p>Peritonitída zostáva jednou z najzávažnejších komplikácií peritoneálnej dialýzy (PD). Nie je to len akútna infekčná epizóda. Opakované, relapsujúce alebo refraktérne peritonitídy zvyšujú riziko poškodenia peritoneálnej membrány, zlyhania techniky, hospitalizácie, prechodu na hemodialýzu a u krehkých pacientov aj celkovej morbidity.</p>
+<p>Peritonitída zostáva jednou z najzávažnejších komplikácií peritoneálnej dialýzy (PD). Nejde len o akútnu infekčnú epizódu: opakované, relapsujúce alebo refraktérne peritonitídy zvyšujú riziko poškodenia peritoneálnej membrány, zlyhania techniky, hospitalizácie, prechodu na hemodialýzu a u krehkých pacientov aj celkovej morbidity.</p>
 
-<p>Článok v <em>Journal of Nephrology</em> zo série „Lessons for the clinical nephrologist“ sa venuje použitiu <strong>taurolidínu</strong> ako adjuvantnej stratégie u starostlivo vybraných pacientov s relapsujúcou PD peritonitídou. Ide o prakticky zaujímavú tému, najmä v situáciách, keď štandardná antibiotická liečba opakovane prinesie len dočasné zlepšenie a infekcia sa vracia.</p>
+<p>Článok v <em>Journal of Nephrology</em> zo série „Lessons for the clinical nephrologist“ sa venuje použitiu <strong>taurolidínu</strong> ako adjuvantnej stratégie u starostlivo vybraných pacientov s relapsujúcou PD peritonitídou. Téma je prakticky dôležitá najmä vtedy, keď štandardná antibiotická liečba opakovane prinesie len dočasné zlepšenie a infekcia sa vracia.</p>
 
-<p>Kľúčové je hneď na začiatku povedať hranicu: taurolidín nie je náhrada štandardnej antibiotickej liečby peritonitídy a nemá slúžiť na odkladanie odstránenia infikovaného katétra, ak je katéter potrebné odstrániť. Je to možná doplnková stratégia v úzkom klinickom okne, kde sa ešte racionálne uvažuje o záchrane PD techniky.</p>
+<p>Hranicu treba povedať hneď na začiatku: taurolidín nie je náhrada štandardnej antibiotickej liečby peritonitídy a nemá slúžiť na odkladanie odstránenia infikovaného katétra, ak je katéter potrebné odstrániť. Je to možná doplnková stratégia v úzkom klinickom okne, keď má ešte zmysel uvažovať o záchrane PD techniky.</p>
 
 <h2>Prečo je relapsujúca peritonitída taká problematická</h2>
 
 <p>Pri peritoneálnej dialýze je peritoneálna dutina opakovane vystavená manipulácii, pripojeniam a odpojeniam dialyzačného systému. Aj pri dobrej technike zostáva riziko kontaminácie a infekcie prítomné. Väčšina epizód sa dá zvládnuť antibiotickou liečbou, ale relapsujúci priebeh je iná klinická situácia.</p>
 
-<p>Podľa praktického rámca ISPD treba rozlišovať viacero pojmov. <strong>Relapsujúca peritonitída</strong> je návrat peritonitídy do 4 týždňov po ukončení liečby s rovnakým mikroorganizmom alebo s jednou sterilnou kultivačnou epizódou v sekvencii. <strong>Rekurentná peritonitída</strong> sa vracia v podobnom časovom okne, ale s iným mikroorganizmom. <strong>Repeat peritonitis</strong> je návrat s rovnakým mikroorganizmom po viac ako 4 týždňoch od ukončenia liečby. <strong>Refraktérna peritonitída</strong> znamená, že dialyzát sa napriek primeranej antibiotickej liečbe nevyčistí v očakávanom čase, typicky po 5 dňoch.</p>
+<p>Podľa praktického rámca ISPD treba rozlišovať viacero pojmov. <strong>Relapsujúca peritonitída</strong> je návrat peritonitídy do 4 týždňov po ukončení liečby s rovnakým mikroorganizmom alebo s jednou sterilnou kultivačnou epizódou v sekvencii. <strong>Rekurentná peritonitída</strong> sa vracia v podobnom časovom okne, ale s iným mikroorganizmom. <strong>Opakovaná peritonitída</strong> (<em>repeat peritonitis</em>) je návrat s rovnakým mikroorganizmom po viac ako 4 týždňoch od ukončenia liečby. <strong>Refraktérna peritonitída</strong> znamená, že dialyzát sa napriek primeranej antibiotickej liečbe nevyčistí v očakávanom čase, typicky po 5 dňoch.</p>
 
-<p>Tieto rozdiely nie sú akademické. Relaps často naznačuje perzistujúci infekčný fokus: biofilm na katétri, kolonizáciu katétrového tunela, nedostatočnú eradikáciu mikroorganizmu alebo kombináciu viacerých faktorov. Takáto situácia sa už nedá riešiť len automatickým opakovaním rovnakého antibiotického režimu.</p>
+<p>Tieto rozdiely nie sú akademické. Relaps často naznačuje perzistujúci infekčný fokus: biofilm na katétri, kolonizáciu katétrového tunela, nedostatočnú eradikáciu mikroorganizmu alebo kombináciu viacerých faktorov. Vtedy už nestačí automaticky zopakovať rovnaký antibiotický režim.</p>
 
 <h2>Biofilm ako skrytý rezervoár infekcie</h2>
 
@@ -61,7 +61,7 @@ $articles[] = [
 
 <h2>Čo je taurolidín</h2>
 
-<p>Taurolidín je antimikrobiálna látka s účinkom proti baktériám a niektorým hubám. V medicíne sa používal najmä v súvislosti s prevenciou katétrových infekcií, vrátane centrálnych venóznych katétrov. Zaujímavý je najmä jeho účinok na mikroorganizmy v biofilme a nižšia tendencia k vzniku klasickej antimikrobiálnej rezistencie v porovnaní s bežnými antibiotikami.</p>
+<p>Taurolidín je antimikrobiálna látka s účinkom proti baktériám a niektorým hubám. V medicíne sa používal najmä v súvislosti s prevenciou katétrových infekcií, vrátane centrálnych venóznych katétrov. Zaujímavý je najmä jeho účinok na mikroorganizmy v biofilme a menší sklon k vzniku klasickej antimikrobiálnej rezistencie v porovnaní s bežnými antibiotikami.</p>
 
 <p>V kontexte PD sa taurolidín skúma najmä ako <em>lock</em> roztok alebo adjuvantná katétrová intervencia. Cieľom nie je liečiť akútnu peritonitídu namiesto antibiotík, ale znížiť riziko, že katéter zostane rezervoárom mikroorganizmov a že sa infekcia po ukončení liečby znovu objaví.</p>
 
@@ -88,9 +88,9 @@ $articles[] = [
 
 <h2>Význam pre vzdialené a vidiecke oblasti</h2>
 
-<p>Kľúčové slová zdrojového článku zahŕňajú aj <em>rural and remote health</em>, teda zdravotnú starostlivosť vo vidieckych a vzdialených oblastiach. To je veľmi praktická poznámka. Peritoneálna dialýza má pre pacientov žijúcich ďaleko od dialyzačného centra veľký význam. Umožňuje domácu liečbu a znižuje potrebu pravidelného dochádzania na hemodialýzu.</p>
+<p>Kľúčové slová zdrojového článku zahŕňajú aj <em>rural and remote health</em>, teda zdravotnú starostlivosť vo vidieckych a vzdialených oblastiach. Pre pacientov, ktorí žijú ďaleko od dialyzačného centra, má peritoneálna dialýza veľký význam: umožňuje domácu liečbu a znižuje potrebu pravidelného dochádzania na hemodialýzu.</p>
 
-<p>Ak takýto pacient stratí možnosť PD pre relapsujúcu peritonitídu, môže to znamenať zásadné zhoršenie kvality života aj dostupnosti liečby. V takýchto situáciách môže byť snaha o záchranu techniky klinicky opodstatnená. Musí však byť bezpečná a časovo ohraničená. Cieľom je zachrániť pacienta a metódu, nie slepo zachraňovať katéter.</p>
+<p>Ak takýto pacient stratí možnosť PD pre relapsujúcu peritonitídu, môže to znamenať zásadné zhoršenie kvality života aj dostupnosti liečby. V takýchto situáciách môže byť snaha o záchranu techniky klinicky opodstatnená. Musí však byť bezpečná a časovo ohraničená. Cieľom je zachrániť pacienta a metódu, nie katéter za každú cenu.</p>
 
 <h2>Praktický algoritmus pre nefrológa</h2>
 
@@ -109,19 +109,19 @@ $articles[] = [
 
 <p>Použitie taurolidínu pri relapsujúcej PD peritonitíde nie je zatiaľ štandardizované na úrovni veľkých randomizovaných štúdií. Dôkazy sú obmedzené a často vychádzajú z kazuistík, menších sérií alebo extrapolácie zo skúseností s katétrovými infekciami.</p>
 
-<p>Aj zdrojový článok má charakter „Lessons for the clinical nephrologist“, teda prakticko-edukačný formát. Nejde o veľkú intervenčnú štúdiu, ktorá by definitívne stanovila účinnosť taurolidínu v tejto indikácii. Preto je namieste opatrnosť v jazyku aj v praxi: taurolidín môže byť možnosťou, nie štandardom pre každého pacienta.</p>
+<p>Aj zdrojový článok má charakter „Lessons for the clinical nephrologist“, teda prakticko-edukačný formát. Nejde o veľkú intervenčnú štúdiu, ktorá by definitívne stanovila účinnosť taurolidínu v tejto indikácii. Preto je namieste opatrnosť v interpretácii aj v praxi: taurolidín môže byť možnosťou, nie štandardom pre každého pacienta.</p>
 
 <h2>Klinické posolstvo</h2>
 
-<p>Taurolidín môže byť zaujímavou doplnkovou možnosťou pri starostlivo vybraných pacientoch s relapsujúcou PD peritonitídou, najmä ak je cieľom potlačiť katétrový biofilm a zachovať peritoneálnu dialýzu. Použitie však musí byť individuálne, opatrné a podriadené bezpečnosti pacienta.</p>
+<p>Taurolidín môže byť doplnkovou možnosťou u starostlivo vybraných pacientov s relapsujúcou PD peritonitídou, najmä ak je cieľom potlačiť katétrový biofilm a zachovať peritoneálnu dialýzu. Použitie však musí byť individuálne, opatrné a podriadené bezpečnosti pacienta.</p>
 
-<p>Najväčšou chybou by bolo vnímať taurolidín ako spôsob, ako odložiť odstránenie infikovaného katétra v situácii, kde je už odstránenie jasne indikované. Najväčším prínosom môže byť naopak jeho racionálne použitie v úzkom okne medzi opakovaným relapsom a definitívnym zlyhaním techniky.</p>
+<p>Najväčšou chybou by bolo vnímať taurolidín ako spôsob, ako odložiť odstránenie infikovaného katétra v situácii, kde je už odstránenie jasne indikované. Prínos môže mať naopak jeho uvážené použitie v úzkom okne medzi opakovaným relapsom a definitívnym zlyhaním techniky.</p>
 
 <h2>Záver</h2>
 
 <p>Relapsujúca peritonitída pri peritoneálnej dialýze je závažný klinický problém, pri ktorom treba myslieť na biofilm, katétrový rezervoár infekcie a riziko zlyhania techniky. Taurolidín predstavuje potenciálnu adjuvantnú možnosť u vybraných pacientov, najmä tam, kde je bezpečné zachovanie PD klinicky významné.</p>
 
-<p>Pre klinickú prax platí jednoduchý záver: taurolidín môže byť užitočný doplnok, ale nie náhrada za včasnú antibiotickú liečbu, dôslednú mikrobiologickú diagnostiku, kontrolu katétra a rozhodnutie o jeho odstránení, ak si to stav pacienta vyžaduje.</p>
+<p>Pre prax: taurolidín môže byť užitočný doplnok, nie však náhrada za včasnú antibiotickú liečbu, dôslednú mikrobiologickú diagnostiku, kontrolu katétra a rozhodnutie o jeho odstránení, ak si to stav pacienta vyžaduje.</p>
 
 <hr>
 

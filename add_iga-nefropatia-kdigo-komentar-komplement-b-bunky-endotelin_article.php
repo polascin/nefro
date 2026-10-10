@@ -26,7 +26,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Po vydaní odporúčania KDIGO pre IgA nefropatiu z roku 2025 pribudli tri urýchlené schválenia FDA. Pracovná skupina preto vydala krátky komentár, ktorý nové lieky zaraďuje podľa štvorzásahového modelu patogenézy – a zároveň varuje pred zoraďovaním liekov podľa poklesu proteinúrie bez priameho porovnania.',
     'content'      => <<<'HTML'
-<figure><a href="img/iga-nefropatia-kdigo-komentar-komplement-b-bunky-endotelin.webp" rel="noopener noreferrer" target="_blank"><img src="img/iga-nefropatia-kdigo-komentar-komplement-b-bunky-endotelin.webp" alt="Tri odlišné farebné prúdy — kaskáda prstencov, roj buniek a sťahujúce sa vlákno — sa zbiehajú na svietiacom glomerule" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Komplement, B bunky a endotelínový systém zasahujú ten istý cieľ z troch rôznych strán; tam zapadajú aj nové terapie.</figcaption></figure>
+<figure><a href="img/iga-nefropatia-kdigo-komentar-komplement-b-bunky-endotelin.webp" rel="noopener noreferrer" target="_blank"><img src="img/iga-nefropatia-kdigo-komentar-komplement-b-bunky-endotelin.webp" alt="Tri odlišné farebné prúdy – kaskáda prstencov, roj buniek a sťahujúce sa vlákno – sa zbiehajú na svietiacom glomerule" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Komplement, B bunky a endotelínový systém zasahujú ten istý cieľ z troch rôznych strán; tam zapadajú aj nové terapie.</figcaption></figure>
 
 <p>IgA nefropatia sa v priebehu niekoľkých rokov zmenila z ochorenia s obmedzenými liečebnými možnosťami na oblasť s viacerými mechanisticky odlišnými cieľmi liečby. Tempo registrácií pritom predbehlo tvorbu odporúčaní: organizácia KDIGO aktualizovala odporúčanie pre glomerulové ochorenia v roku 2021 a špecializované odporúčanie pre IgA nefropatiu a IgA vaskulitídu v roku 2025 – a <strong>po odovzdaní revízie do tlače získali ďalšie tri lieky urýchlené schválenie americkej FDA</strong>.</p>
 
@@ -73,7 +73,7 @@ $articles[] = [
 
 <h3>Bezpečnosť: rozlíšiť nález zo štúdie a upozornenie v informácii o lieku</h3>
 
-<p>Tu je potrebné byť presný, pretože sa tieto dve veci často zamieňajú:</p>
+<p>Tieto dve veci sa často zamieňajú:</p>
 
 <ul>
   <li><strong>V samotnej štúdii</strong> sa nezistili neočakávané bezpečnostné nálezy, výskyt nežiaducich udalostí bol v oboch skupinách podobný, väčšina bola mierna až stredne ťažká a reverzibilná, a <strong>nepozorovalo sa zvýšené riziko infekcií</strong>.</li>
@@ -100,7 +100,7 @@ $articles[] = [
   <li>upravený geometrický priemer uPCR bol pri sibeprenlimabe <strong>o 51,2 % nižší</strong> než pri placebe (96,5 % IS 42,9 až 58,2; <em>P</em> &lt; 0,001).</li>
 </ul>
 
-<p>Farmakodynamicky boli v 48. týždni hladiny <strong>APRIL znížené o 95,8 %</strong> a hladiny patogénnej <strong>Gd-IgA1 o 67,1 %</strong> oproti východisku. Bezpečnostný profil sa javil podobný ako pri placebe: nebolo hlásené žiadne úmrtie a výskyt závažných nežiaducich udalostí počas liečby bol <strong>3,5 % pri sibeprenlimabe oproti 4,4 % pri placebe</strong>. Kľúčovým sekundárnym ukazovateľom, ktorý sa bude referovať po ukončení štúdie, je ročný sklon eGFR za 24 mesiacov.</p>
+<p>Farmakodynamicky boli v 48. týždni hladiny <strong>APRIL znížené o 95,8 %</strong> a hladiny patogénnej <strong>Gd-IgA1 o 67,1 %</strong> oproti východisku. Bezpečnostný profil sa javil podobný ako pri placebe: nebolo hlásené žiadne úmrtie a výskyt závažných nežiaducich udalostí počas liečby bol <strong>3,5 % pri sibeprenlimabe oproti 4,4 % pri placebe</strong>. Kľúčovým sekundárnym ukazovateľom, ktorý sa vyhodnotí po ukončení štúdie, je ročný sklon eGFR za 24 mesiacov.</p>
 
 <h3>Atacicept – ORIGIN 3 (fáza 3)</h3>
 
@@ -167,7 +167,7 @@ $articles[] = [
 
 <p>V praxi to znamená individualizovať voľbu podľa rizika progresie, výšky proteinúrie, funkcie obličiek, znášanlivosti podpornej liečby, pridružených ochorení a bezpečnostného profilu konkrétnej molekuly. <strong>Kombinovanie nových liekov KDIGO zatiaľ nepodporuje</strong> – chýbajú údaje o účinnosti kombinácií, o bezpečnosti dlhodobej duálnej alebo trojitej blokády aj o najvhodnejšom poradí podávania.</p>
 
-<p>Osobitne stojí za pripomenutie, že <strong>zníženie proteinúrie nie je cieľom liečby, ale jej náhradným ukazovateľom</strong>. Skutočné ciele zostávajú spomalenie poklesu eGFR, zníženie rizika zlyhania obličiek, zachovanie kvality života a čo najnižšia toxicita liečby.</p>
+<p>Treba pripomenúť, že <strong>zníženie proteinúrie nie je cieľom liečby, ale jej náhradným ukazovateľom</strong>. Skutočné ciele zostávajú spomalenie poklesu eGFR, zníženie rizika zlyhania obličiek, zachovanie kvality života a čo najnižšia toxicita liečby.</p>
 
 <h2>Čo komentár nerieši</h2>
 

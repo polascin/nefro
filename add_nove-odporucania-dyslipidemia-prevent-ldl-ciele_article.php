@@ -32,21 +32,21 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Odporúčania ACC/AHA/ADA pre dyslipidémiu z roku 2026 zavádzajú kalkulátor PREVENT, hodnotenie 10- aj 30-ročného rizika, jasnejšie cieľové hodnoty LDL a väčší dôraz na ApoB, Lp(a) a koronárne kalciové skóre. Pri sekundárnej prevencii sa kľúčovou hodnotou stáva LDL pod 55 mg/dl (1,4 mmol/l).',
     'content'      => <<<'HTML'
-<figure><a href="img/nove-odporucania-dyslipidemia-prevent-ldl-ciele.webp" rel="noopener noreferrer" target="_blank"><img src="img/nove-odporucania-dyslipidemia-prevent-ldl-ciele.webp" alt="Starý miznúci ciferník nahrádzaný novým a vedľa nich klesajúca hladina tukových častíc v cieve" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Mení sa nástroj odhadu rizika aj cieľová hodnota — obe zmeny posúvajú prah liečby nižšie.</figcaption></figure>
+<figure><a href="img/nove-odporucania-dyslipidemia-prevent-ldl-ciele.webp" rel="noopener noreferrer" target="_blank"><img src="img/nove-odporucania-dyslipidemia-prevent-ldl-ciele.webp" alt="Starý miznúci ciferník nahrádzaný novým a vedľa nich klesajúca hladina tukových častíc v cieve" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Mení sa nástroj odhadu rizika aj cieľová hodnota – obe zmeny posúvajú prah liečby nižšie.</figcaption></figure>
 
-<p>Nové odporúčania ACC/AHA/ADA pre manažment dyslipidémie z roku 2026 prinášajú viacero prakticky dôležitých zmien. Nejde len o kozmetickú úpravu starých pravidiel. Mení sa spôsob odhadu kardiovaskulárneho rizika, zavádzajú sa jasnejšie rizikové kategórie, viac sa pracuje s celoživotným rizikom a pri vyššom riziku sa cieľové hodnoty LDL cholesterolu posúvajú nižšie.</p>
+<p>Nové odporúčania ACC/AHA/ADA pre manažment dyslipidémie z roku 2026 prinášajú viacero prakticky dôležitých zmien. Mení sa spôsob odhadu kardiovaskulárneho rizika, zavádzajú sa jasnejšie rizikové kategórie, viac sa pracuje s celoživotným rizikom a pri vyššom riziku sa cieľové hodnoty LDL cholesterolu posúvajú nižšie.</p>
 
-<p>Hlavné posolstvo pre prax je jednoduché: liečba dyslipidémie má byť viac individualizovaná, viac založená na aktuálnejšom odhade rizika a pri rizikových pacientoch dostatočne intenzívna. Zároveň platí, že samotné číslo LDL nestačí. Treba ho interpretovať v kontexte veku, diabetu, chronickej choroby obličiek, aterosklerotického ochorenia, rodinnej anamnézy a ďalších rizikových markerov.</p>
+<p>Pre prax z toho vyplýva, že liečba dyslipidémie má byť individualizovanejšia, má vychádzať z aktuálnejšieho odhadu rizika a pri rizikových pacientoch má byť dostatočne intenzívna. Samotné číslo LDL pritom nestačí. Treba ho interpretovať v kontexte veku, diabetu, chronickej choroby obličiek, aterosklerotického ochorenia, rodinnej anamnézy a ďalších rizikových markerov.</p>
 
 <h2>PREVENT nahrádza starý ASCVD kalkulátor</h2>
 
-<p>Jednou z najväčších zmien je prechod od starého kalkulátora pooled cohort equation, známeho ako PCE, k novému kalkulátoru PREVENT.</p>
+<p>Jednou z najväčších zmien je prechod od starého kalkulátora PCE (pooled cohort equation) ku kalkulátoru PREVENT.</p>
 
-<p>Starý PCE kalkulátor vychádzal z dát približne 25 000 ľudí z rokov 1960 až 1990. Nový PREVENT kalkulátor je založený na podstatne modernejšom súbore viac než 3 miliónov ľudí. Má preto lepšie odrážať súčasné populačné riziko.</p>
+<p>Starý PCE kalkulátor vychádzal z dát približne 25 000 ľudí z rokov 1960 až 1990. PREVENT vychádza z podstatne novšieho súboru viac než 3 miliónov ľudí, a preto by mal lepšie odrážať súčasné riziko v populácii.</p>
 
-<p>Dôležité je, že PREVENT umožňuje vypočítať nielen 10-ročné, ale aj 30-ročné riziko. To má význam najmä u mladších ľudí do 50 rokov. Tí môžu mať nízke 10-ročné riziko len preto, že sú mladí, ale ich dlhodobé riziko môže byť vysoké.</p>
+<p>PREVENT navyše umožňuje vypočítať nielen 10-ročné, ale aj 30-ročné riziko. To má význam najmä u mladších ľudí do 50 rokov. Tí môžu mať nízke 10-ročné riziko len preto, že sú mladí, ale ich dlhodobé riziko môže byť vysoké.</p>
 
-<p>Treba však poznať jeden praktický detail. PREVENT zvyčajne dáva približne polovičný odhad 10-ročného rizika v porovnaní so starým PCE kalkulátorom. Preto sa v nových odporúčaniach znížili hranice rizika, pri ktorých sa uvažuje o liečbe. Na prvý pohľad môžu vyzerať agresívnejšie, ale v skutočnosti majú zachytiť podobnú skupinu pacientov ako predchádzajúci systém.</p>
+<p>PREVENT však zvyčajne dáva približne polovičný odhad 10-ročného rizika v porovnaní so starým PCE kalkulátorom. Preto sa v nových odporúčaniach znížili hranice rizika, pri ktorých sa uvažuje o liečbe. Na prvý pohľad môžu vyzerať agresívnejšie, ale v skutočnosti majú zachytiť podobnú skupinu pacientov ako predchádzajúci systém.</p>
 
 <h2>Primárna prevencia: nové rizikové kategórie</h2>
 
@@ -56,11 +56,11 @@ $articles[] = [
 
 <p>Pacienti s 10-ročným rizikom pod 3 % sa považujú za nízkorizikových. Ak majú LDL cholesterol pod 160 mg/dl (4,1 mmol/l) a 30-ročné riziko pod 10 %, základom je poradenstvo o životnom štýle.</p>
 
-<p>Ak je však LDL v rozmedzí 160 až 189 mg/dl (4,1 až 4,9 mmol/l) alebo ak je 30-ročné riziko aspoň 10 % vo veku 30 až 50 rokov, stredne intenzívny statín je rozumnou možnosťou. Toto je dôležitý posun. Odporúčania viac myslia na kumulatívnu celoživotnú expozíciu aterogénnym lipoproteínom, nielen na krátkodobé 10-ročné riziko.</p>
+<p>Ak je však LDL v rozmedzí 160 až 189 mg/dl (4,1 až 4,9 mmol/l) alebo ak je 30-ročné riziko aspoň 10 % vo veku 30 až 50 rokov, stredne intenzívny statín je rozumnou možnosťou. Ide o dôležitý posun: odporúčania viac zohľadňujú kumulatívnu celoživotnú expozíciu aterogénnym lipoproteínom, nielen na krátkodobé 10-ročné riziko.</p>
 
 <h3>Hraničné riziko: 3 až 5 %</h3>
 
-<p>Pri 10-ročnom riziku 3 až 5 % možno zvážiť liečbu stredne intenzívnym statínom. Toto je skupina, kde je obzvlášť dôležité personalizovať rozhodovanie.</p>
+<p>Pri 10-ročnom riziku 3 až 5 % možno zvážiť liečbu stredne intenzívnym statínom. V tejto skupine treba rozhodovanie osobitne individualizovať.</p>
 
 <p>Pomôcť môžu takzvané riziko modifikujúce faktory:</p>
 
@@ -83,7 +83,7 @@ $articles[] = [
 
 <p>Pri 10-ročnom riziku nad 10 % ide podľa nového systému o vysoké riziko. Cieľová hodnota LDL cholesterolu je tu 70 mg/dl (1,8 mmol/l) alebo menej.</p>
 
-<p>Ak sa cieľ nedosiahne samotným statínom, je rozumné pridať ezetimib. Tento postup môže na prvý pohľad pôsobiť prísne, ale treba si uvedomiť, že pacienti s rizikom nad 10 % podľa PREVENT by často mali podľa starého PCE kalkulátora riziko nad 20 %.</p>
+<p>Ak sa cieľ nedosiahne samotným statínom, je rozumné pridať ezetimib. Môže to pôsobiť prísne, no pacienti s rizikom nad 10 % podľa PREVENT by často mali podľa starého PCE kalkulátora riziko nad 20 %.</p>
 
 <h2>Skupiny, kde netreba čakať na kalkulátor</h2>
 
@@ -98,7 +98,7 @@ $articles[] = [
 
 <p>Pri LDL nad 190 mg/dl (4,9 mmol/l) je cieľom dostať LDL pod 100 mg/dl (2,6 mmol/l). Ak má pacient diabetes a viacero rizikových faktorov, cieľ je prísnejší: LDL pod 70 mg/dl (1,8 mmol/l).</p>
 
-<p>Pre nefrologickú prax je dôležité, že CKD štádia 3 a 4 zostáva samostatnou rizikovou kategóriou. U týchto pacientov sa nemá rozhodovanie odkladať len preto, že kalkulátor vyjde relatívne priaznivo. CKD samo osebe významne zvyšuje kardiovaskulárne riziko.</p>
+<p>Pre nefrologickú prax je dôležité, že CKD štádia 3 a 4 zostáva samostatnou rizikovou kategóriou. U týchto pacientov sa nemá rozhodovanie odkladať len preto, že kalkulátor vyjde relatívne priaznivo. CKD sama osebe významne zvyšuje kardiovaskulárne riziko.</p>
 
 <h2>ApoB: keď LDL nemusí povedať všetko</h2>
 
@@ -106,7 +106,7 @@ $articles[] = [
 
 <p>Môže byť užitočný napríklad pri metabolickom syndróme, hypertriglyceridémii, diabete 2. typu alebo u pacientov, u ktorých je LDL zdanlivo prijateľný, ale reziduálne riziko zostáva vysoké.</p>
 
-<p>Prakticky povedané: ApoB nenahrádza LDL u každého pacienta, ale môže spresniť rozhodovanie u vybraných rizikových pacientov.</p>
+<p>ApoB teda nenahrádza LDL u každého pacienta, ale môže spresniť rozhodovanie u vybraných rizikových pacientov.</p>
 
 <h2>Lp(a): zmerať aspoň raz za život</h2>
 
@@ -114,13 +114,13 @@ $articles[] = [
 
 <p>Dnes ešte nie je bežne dostupná špecifická liečba znižujúca Lp(a), ale meranie má aj tak význam. Podobne ako rodinná anamnéza pomáha lepšie pochopiť celkové riziko pacienta. Ak je Lp(a) vysoký, môže to viesť k intenzívnejšej kontrole ostatných ovplyvniteľných rizikových faktorov, najmä LDL cholesterolu, krvného tlaku, fajčenia a diabetu.</p>
 
-<p>Druhý dôvod je výhľad do blízkej budúcnosti. Liečby cielene znižujúce Lp(a) sú vo vývoji a v najbližších rokoch môžu zmeniť klinickú prax.</p>
+<p>Meranie má zmysel aj s výhľadom do budúcnosti: liečby cielene znižujúce Lp(a) sú vo vývoji a v najbližších rokoch môžu zmeniť klinickú prax.</p>
 
 <h2>Koronárne kalciové skóre: užitočný nástroj pri neistote</h2>
 
 <p>Koronárne kalciové skóre má v odporúčaniach silnejšie miesto. Je osobitne užitočné u mužov nad 40 rokov a u žien nad 45 rokov, najmä ak je pacient v hraničnej alebo strednej rizikovej kategórii a rozhodnutie o statíne nie je jasné.</p>
 
-<p>Interpretácia je praktická:</p>
+<p>Výsledok sa interpretuje takto:</p>
 
 <ul>
   <li>CAC skóre 0 znamená nízke riziko koronárnej príhody v najbližších približne 5 rokoch. Statín zvyčajne nie je potrebný a vyšetrenie možno zopakovať o 3 až 7 rokov.</li>
@@ -129,7 +129,7 @@ $articles[] = [
   <li>CAC skóre nad 1000 môže viesť k úvahe o veľmi prísnom cieli LDL pod 55 mg/dl (1,4 mmol/l).</li>
 </ul>
 
-<p>Tento prístup má výhodu v komunikácii s pacientom. Namiesto abstraktného percenta rizika vidí konkrétny dôkaz aterosklerotického postihnutia koronárnych artérií. Zároveň však treba zvážiť dostupnosť, náklady, radiačnú záťaž a klinickú primeranosť vyšetrenia.</p>
+<p>Výhodou je aj komunikácia s pacientom: namiesto abstraktného percenta rizika vidí konkrétny dôkaz aterosklerotického postihnutia koronárnych artérií. Zároveň však treba zvážiť dostupnosť, náklady, radiačnú záťaž a klinickú primeranosť vyšetrenia.</p>
 
 <h2>Sekundárna prevencia: LDL pod 55 mg/dl (1,4 mmol/l) sa stáva kľúčovou hodnotou</h2>
 
@@ -137,7 +137,7 @@ $articles[] = [
 
 <p>Podľa odporúčaní bude väčšina pacientov s anamnézou ASCVD pravdepodobne patriť do veľmi vysokého rizika. Pre nich je cieľová hodnota LDL cholesterolu pod 55 mg/dl (1,4 mmol/l).</p>
 
-<p>To má praktický dôsledok: vysokointenzívny statín často nebude stačiť. Odporúčania preto zdôrazňujú potrebu včas pridávať ďalšie lieky, ak sa cieľ nedosiahne.</p>
+<p>Vysokointenzívny statín preto často nebude stačiť. Odporúčania preto zdôrazňujú potrebu včas pridávať ďalšie lieky, ak sa cieľ nedosiahne.</p>
 
 <p>Do úvahy prichádzajú:</p>
 
@@ -148,7 +148,7 @@ $articles[] = [
   <li>inklisiran.</li>
 </ul>
 
-<p>Dôležité je neuspokojiť sa s „celkom dobrým“ LDL, ak pacient patrí do veľmi vysokého rizika. Pri sekundárnej prevencii je reziduálne riziko vysoké a cieľ má byť primerane ambiciózny.</p>
+<p>Netreba sa uspokojiť s „celkom dobrým“ LDL, ak pacient patrí do veľmi vysokého rizika. Pri sekundárnej prevencii je reziduálne riziko vysoké a cieľ má byť primerane ambiciózny.</p>
 
 <h2>Čo to znamená pre ambulantnú prax</h2>
 
@@ -164,10 +164,10 @@ $articles[] = [
 
 <p>V primárnej prevencii sa rozhodovanie stáva jemnejším. V sekundárnej prevencii sa ciele sprísňujú, pričom LDL pod 55 mg/dl (1,4 mmol/l) sa stáva kľúčovou hodnotou pre väčšinu pacientov s ASCVD.</p>
 
-<p>Najpraktickejšie posolstvo je toto: najskôr správne určiť riziko, potom zvoliť primerane intenzívnu liečbu a následne skutočne kontrolovať, či pacient dosiahol cieľ. Pri vysokom riziku nestačí statín predpísať. Treba sa uistiť, že výsledný LDL zodpovedá riziku pacienta.</p>
+<p>Postup je teda takýto: najskôr správne určiť riziko, potom zvoliť primerane intenzívnu liečbu a následne skutočne kontrolovať, či pacient dosiahol cieľ. Pri vysokom riziku nestačí statín predpísať. Treba sa uistiť, že výsledný LDL zodpovedá riziku pacienta.</p>
 
 <div class="info-box-blue">
-<p><strong>Poznámka — prepočet jednotiek cholesterolu.</strong> Hodnoty v mmol/l uvedené v zátvorkách sú prepočítané z mg/dl a zaokrúhlené na jedno desatinné miesto. Pre cholesterol (LDL, HDL aj celkový cholesterol) platí:</p>
+<p><strong>Poznámka – prepočet jednotiek cholesterolu.</strong> Hodnoty v mmol/l uvedené v zátvorkách sú prepočítané z mg/dl a zaokrúhlené na jedno desatinné miesto. Pre cholesterol (LDL, HDL aj celkový cholesterol) platí:</p>
 <ul>
   <li>mmol/l = mg/dl ÷ 38,67 (čiže mg/dl × 0,02586),</li>
   <li>mg/dl = mmol/l × 38,67.</li>

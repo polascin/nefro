@@ -31,41 +31,41 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Amy Faith Ho na Medscape rozoberá dilemu, či má Medicare platiť za obezitu ako za prevenciu (liekmi GLP-1), alebo naďalej za jej neskoršie následky. Model BALANCE a dočasný program GLP-1 Bridge ukazujú, prečo je nestabilná dostupnosť liečby aj nefrologickým problémom — dotýka sa CKD a kardiometabolického rizika.',
+    'excerpt'      => 'Amy Faith Ho na Medscape rozoberá dilemu, či má Medicare platiť za obezitu ako za prevenciu (liekmi GLP-1), alebo naďalej za jej neskoršie následky. Model BALANCE a dočasný program GLP-1 Bridge ukazujú, prečo je nestabilná dostupnosť liečby aj nefrologickým problémom – dotýka sa CKD a kardiometabolického rizika.',
     'content'      => <<<'HTML'
-<figure><a href="img/obezita-nakladova-diagnoza-glp1-pristup-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/obezita-nakladova-diagnoza-glp1-pristup-nefrologia.webp" alt="Váhy so svietiacim injekčným perom na jednej strane a ťažkým tmavým závažím nákladov na druhej; pod perom oblička v tieni" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. O dostupnosti liečby nerozhoduje len účinok — a dôsledky nesie aj nefrológia.</figcaption></figure>
+<figure><a href="img/obezita-nakladova-diagnoza-glp1-pristup-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/obezita-nakladova-diagnoza-glp1-pristup-nefrologia.webp" alt="Váhy so svietiacim injekčným perom na jednej strane a ťažkým tmavým závažím nákladov na druhej; pod perom oblička v tieni" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. O dostupnosti liečby nerozhoduje len účinok – a dôsledky nesie aj nefrológia.</figcaption></figure>
 
-<p>Obezita sa v systémoch zdravotnej starostlivosti čoraz častejšie posudzuje aj cez optiku nákladov — nielen ako klinická diagnóza, ale ako položka, ktorá generuje ďalšie a ďalšie výdavky. Článok na Medscape od Amy Faith Ho (MD, MPH) rozoberá dilemu, či má systém platiť za obezitu ako za prevenciu (drahými liekmi zo skupiny GLP-1), alebo bude aj naďalej hradiť najmä jej neskoršie následky. Hoci ide o americkú zdravotnú politiku (Medicare a Medicaid), otázka má priamy dosah aj na nefrológiu.</p>
+<p>Obezita sa v systémoch zdravotnej starostlivosti čoraz častejšie posudzuje aj z hľadiska nákladov – nielen ako klinická diagnóza, ale aj ako položka, ktorá vytvára stále ďalšie výdavky. Článok na Medscape od Amy Faith Ho (MD, MPH) rozoberá dilemu, či má systém platiť za obezitu ako za prevenciu (drahými liekmi zo skupiny GLP-1), alebo bude aj naďalej hradiť najmä jej neskoršie následky. Hoci ide o americkú zdravotnú politiku (Medicare a Medicaid), otázka má priamy dosah aj na nefrológiu.</p>
 
 <h2>Prečo by sa nefrológ mal zaujímať</h2>
 
-<p>Obezita nie je len „metabolický problém“. Je to dlhodobý spúšťač hypertenzie, diabetu 2. typu, dyslipidémie, spánkového apnoe a systémového zápalu. V nefrológii sa tieto súvislosti neskôr často prejavia rýchlejšou progresiou chronickej choroby obličiek (CKD), vyšším kardiovaskulárnym rizikom a väčším počtom pacientov na dialýze. Rozhodnutia o úhrade a dostupnosti účinnej liečby preto nie sú iba otázkou „zdravotníckej politiky“, ale reálnymi klinickými premennými.</p>
+<p>Obezita nie je len „metabolický problém“. Je to dlhodobý spúšťač hypertenzie, diabetu 2. typu, dyslipidémie, spánkového apnoe a systémového zápalu. V nefrológii sa tieto súvislosti neskôr často prejavia rýchlejšou progresiou chronickej choroby obličiek (CKD), vyšším kardiovaskulárnym rizikom a väčším počtom pacientov na dialýze. Rozhodnutia o úhrade a dostupnosti účinnej liečby preto nie sú iba otázkou „zdravotníckej politiky“ – ovplyvňujú aj klinické výsledky.</p>
 
-<p>Autorka sa venuje dileme, či Medicare bude aj v budúcnosti platiť za obezitu ako za prevenciu, alebo bude naďalej hradiť predovšetkým to, na čo sa obezita neskôr pretaví. Kľúčovým bodom je plán BALANCE a následné zmeny okolo tzv. programu Medicare GLP-1 Bridge.</p>
+<p>Ťažiskom textu je plán BALANCE a následné zmeny okolo tzv. programu Medicare GLP-1 Bridge.</p>
 
 <h2>Prevencia verzus manažment neskorších následkov</h2>
 
-<p>Článok opisuje model BALANCE ako snahu presunúť logiku systému od platenia „za chorobu až následne“ k plateniu „za prevenciu“ prostredníctvom drahých liekov (GLP-1). Model bol podľa textu koncipovaný tak, aby sa terapeutický liek kombinoval so sprievodnou behaviorálnou podporou, pričom časť implementácie mala prebiehať postupne — najprv v programe Medicaid a potom v Medicare.</p>
+<p>Článok opisuje model BALANCE ako snahu presunúť logiku systému od platenia „za chorobu až následne“ k plateniu „za prevenciu“ prostredníctvom drahých liekov (GLP-1). Model bol podľa textu koncipovaný tak, aby sa terapeutický liek kombinoval so sprievodnou behaviorálnou podporou, pričom časť implementácie mala prebiehať postupne – najprv v programe Medicaid a potom v Medicare.</p>
 
 <p>Pred spustením v Medicare však došlo k posunu: dočasný program Bridge sa predĺžil a trvalé riešenie zostalo nejasné. Z praktického hľadiska to znamená, že časový horizont dostupnosti liekov je pre časť pacientov kratší a neistý.</p>
 
 <h2>Medicare GLP-1 Bridge: čo je podstatné pre prax (a pre pacienta)</h2>
 
-<p>Text pracuje s myšlienkou, že počas „mostíkového“ (bridge) obdobia môžu niektorí poistenci s obezitou ako kvalifikačnou diagnózou získať vybrané lieky zo skupiny GLP-1 za zníženú mesačnú úhradu. Autorka zároveň zdôrazňuje, že ide o provizórny režim s obmedzenou dobou platnosti a že po jeho skončení sa zásadná otázka skôr odkladá, než rieši.</p>
+<p>Podľa textu môžu počas „mostíkového“ (bridge) obdobia niektorí poistenci s obezitou ako kvalifikačnou diagnózou získať vybrané lieky zo skupiny GLP-1 za zníženú mesačnú úhradu. Autorka zároveň zdôrazňuje, že ide o provizórny režim s obmedzenou dobou platnosti a že po jeho skončení sa zásadná otázka skôr odkladá, než rieši.</p>
 
 <p>Pre nefrológa je z toho relevantné najmä toto:</p>
 
 <ul>
   <li>liečba obezity (GLP-1) môže byť pre CKD a kardiometabolické riziko nepriamo „časovo citlivá“,</li>
   <li>ak je dostupnosť nestabilná, zhoršuje sa adherencia aj dlhodobý prínos,</li>
-  <li>v praxi potom často narážame na to, že pacient liečbu začne, no následne nastane prekážka v jej pokračovaní.</li>
+  <li>v praxi potom často narážame na to, že pacient liečbu začne, no v pokračovaní mu niečo zabráni.</li>
 </ul>
 
 <p>Pri rozhodovaní o konkrétnom pacientovi sa preto oplatí mať pripravený plán: zdokumentovať indikáciu a očakávaný prínos pre kardiometabolický profil aj renálne riziko a včas riešiť administratívne i logistické prekážky.</p>
 
-<h2>„Zaplatiť teraz, alebo zaplatiť neskôr“ nie je slogan, ale predikcia klinickej reality</h2>
+<h2>„Zaplatiť teraz, alebo zaplatiť neskôr“: viac než slogan</h2>
 
-<p>Autorka stavia argumentáciu na jednoduchom kompromise: buď systém investuje do liečby obezity teraz, alebo zaplatí neskôr — za infarkt, zlyhanie srdca, dialýzu, endoprotézy a ďalšie nákladné následky.</p>
+<p>Autorka stavia argumentáciu na jednoduchej voľbe: buď systém investuje do liečby obezity teraz, alebo zaplatí neskôr – za infarkt, zlyhanie srdca, dialýzu, endoprotézy a ďalšie nákladné následky.</p>
 
 <p>V texte sú uvedené aj odhady úspor a dodatočných nákladov v horizonte niekoľkých rokov (z rôznych inštitúcií). Berme ich ako orientačné čísla, pretože skutočné výsledky závisia od:</p>
 
@@ -78,7 +78,7 @@ $articles[] = [
 
 <h2>Čo by mali odborníci komunikovať pacientom aj systému</h2>
 
-<p>Z článku pre mňa vychádzajú tri jasné body:</p>
+<p>Z článku podľa mňa vyplývajú tri body:</p>
 
 <ol>
   <li><strong>Obezita je chronické ochorenie s merateľným rizikom pre obličky.</strong> Pacientovi to zrozumiteľne vysvetlime ako „investíciu do budúcnosti obličiek“, nie iba do hmotnosti.</li>

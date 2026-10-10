@@ -42,7 +42,7 @@ $articles[] = [
 
 <h2>Obezita ako centrálny faktor multiorgánového poškodenia</h2>
 
-<p>Nové odporúčanie posúva pohľad na obezitu. Už nejde iba o jeden z rizikových faktorov kardiovaskulárnych ochorení, ale o <strong>ústredný patofyziologický motor multiorgánovej progresie</strong>.</p>
+<p>Nové odporúčanie posúva pohľad na obezitu: už nie je iba jedným z rizikových faktorov kardiovaskulárnych ochorení, ale <strong>ústredný patofyziologický motor multiorgánovej progresie</strong>.</p>
 
 <p>Autori zdôrazňujú, že nadbytočné a dysfunkčné tukové tkanivo vedie k rozvoju metabolických rizikových faktorov, chronickej choroby obličiek, subklinického kardiovaskulárneho poškodenia a napokon ku klinicky manifestnému kardiovaskulárnemu ochoreniu. Cieľom je preto zachytiť pacientov skôr, ešte pred vznikom ireverzibilných orgánových následkov.</p>
 
@@ -54,7 +54,7 @@ $articles[] = [
 
 <p><strong>Štádium 2</strong> zahŕňa prítomnosť aspoň jedného metabolického rizikového faktora, napríklad hypertenzie, hypertriglyceridémie, diabetu 2. typu alebo metabolického syndrómu, prípadne stredne až vysoko rizikovej chronickej choroby obličiek, ale bez zjavného kardiovaskulárneho ochorenia.</p>
 
-<p><strong>Štádium 3</strong> predstavuje subklinické kardiovaskulárne ochorenie spolu s CKM rizikovými faktormi, 10-ročné kardiovaskulárne riziko podľa PREVENT-CVD najmenej 20 %, alebo veľmi vysoké riziko ochorenia obličiek podľa kritérií KDIGO.</p>
+<p><strong>Štádium 3</strong> zahŕňa subklinické kardiovaskulárne ochorenie spolu s rizikovými faktormi CKM, 10-ročné kardiovaskulárne riziko podľa PREVENT-CVD najmenej 20 %, alebo veľmi vysoké riziko ochorenia obličiek podľa kritérií KDIGO.</p>
 
 <p><strong>Štádium 4</strong> zahŕňa už diagnostikované kardiovaskulárne ochorenie, napríklad ischemickú chorobu srdca, srdcové zlyhávanie, cievnu mozgovú príhodu, periférne artériové ochorenie alebo fibriláciu predsiení, spolu s nadváhou, obezitou, metabolickými rizikovými faktormi alebo ochorením obličiek.</p>
 
@@ -62,13 +62,13 @@ $articles[] = [
 
 <p>Manažment má byť odstupňovaný podľa štádia ochorenia. V skorších štádiách sa kladie dôraz na intenzívnu úpravu životného štýlu, redukciu hmotnosti, farmakoterapiu obezity a u vybraných pacientov aj na metabolickú a bariatrickú chirurgiu.</p>
 
-<p>Významnou novinkou je, že odporúčanie po prvý raz zahŕňa <strong>GLP-1 receptorové agonisty</strong> pre vybraných pacientov s obezitou, diabetom 2. typu a ďalšími kardiovaskulárnymi rizikovými faktormi s cieľom znížiť riziko kardiálnych príhod.</p>
+<p>Novinkou je, že odporúčanie po prvý raz zahŕňa <strong>agonisty GLP-1 receptorov</strong> pre vybraných pacientov s obezitou, diabetom 2. typu a ďalšími kardiovaskulárnymi rizikovými faktormi s cieľom znížiť riziko kardiálnych príhod.</p>
 
 <p>U pacientov s diabetom 2. typu a CKM syndrómom v štádiu 2 alebo 3 sa ako prah pre začatie liečby GLP-1 terapiou, inhibítormi SGLT2 alebo ich kombináciou uvádza 10-ročné riziko PREVENT-CVD najmenej 7,5 %.</p>
 
 <h2>Potreba koordinovanej starostlivosti</h2>
 
-<p>Kľúčovou časťou odporúčania je odmietnutie izolovaného, odborovo rozdrobeného prístupu. Pacienti s CKM syndrómom často prechádzajú medzi diabetológom, nefrológom, kardiológom, obezitológom a všeobecným lekárom, čo môže viesť k nejednotnej a oneskorenej liečbe.</p>
+<p>Odporúčanie odmieta izolovaný, odborovo rozdrobený prístup. Pacienti s CKM syndrómom často prechádzajú medzi diabetológom, nefrológom, kardiológom, obezitológom a všeobecným lekárom, čo môže viesť k nejednotnej a oneskorenej liečbe.</p>
 
 <p>Odporúčanie preto zdôrazňuje potrebu interdisciplinárnych modelov starostlivosti a určenia koordinátora, ktorý bude sledovať riziko, implementáciu odporúčanej liečby a kontinuitu starostlivosti.</p>
 
@@ -76,7 +76,7 @@ $articles[] = [
 
 <h2>Praktický význam</h2>
 
-<p>Hlavný prínos nového odporúčania nespočíva iba v jednotlivých terapeutických odporúčaniach, ale v zmene myslenia. Kardiovaskulárne, metabolické a renálne riziko sa nemá posudzovať oddelene. CKM syndróm predstavuje jeden prepojený klinický proces, ktorý sa začína často už nadváhou, obezitou alebo prediabetom a môže končiť závažným kardiovaskulárnym ochorením a predčasnou mortalitou.</p>
+<p>Hlavný prínos dokumentu nie je v jednotlivých terapeutických krokoch, ale v zmene myslenia. Kardiovaskulárne, metabolické a renálne riziko sa nemá posudzovať oddelene. CKM syndróm je jeden prepojený klinický proces, ktorý sa často začína už nadváhou, obezitou alebo prediabetom a môže končiť závažným kardiovaskulárnym ochorením a predčasnou mortalitou.</p>
 
 <p>Pre klinickú prax to znamená potrebu skoršej identifikácie rizikových pacientov, dôslednejšej liečby obezity, aktívneho manažmentu diabetu a chronickej choroby obličiek a lepšej koordinácie medzi odbornosťami.</p>
 

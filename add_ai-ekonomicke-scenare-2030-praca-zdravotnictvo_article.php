@@ -23,28 +23,28 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Model troch scenárov do roku 2030 ukazuje, že hospodársky rast a mzdy nemusia ísť rovnakým smerom. Autori výslovne uvádzajú, že nejde o predpovede a nepripisujú im pravdepodobnosti.',
     'content'      => <<<'HTML'
-<figure><a href="img/ai-ekonomicke-scenare-2030-praca-zdravotnictvo.webp" rel="noopener noreferrer" target="_blank"><img src="img/ai-ekonomicke-scenare-2030-praca-zdravotnictvo.webp" alt="Jedna cesta svetla sa štiepi na tri rozbiehajúce sa lúče — stúpajúci zlatý, vodorovný biely a klesajúci červený" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Nejde o predpoveď, ale o scenáre: tá istá technológia môže viesť k veľmi odlišným dopadom na prácu aj na zdravotníctvo.</figcaption></figure>
+<figure><a href="img/ai-ekonomicke-scenare-2030-praca-zdravotnictvo.webp" rel="noopener noreferrer" target="_blank"><img src="img/ai-ekonomicke-scenare-2030-praca-zdravotnictvo.webp" alt="Jedna cesta svetla sa štiepi na tri rozbiehajúce sa lúče – stúpajúci zlatý, vodorovný biely a klesajúci červený" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Nejde o predpoveď, ale o scenáre: tá istá technológia môže viesť k veľmi odlišným dopadom na prácu aj na zdravotníctvo.</figcaption></figure>
 
-<p>Ako veľmi zmení umelá inteligencia ekonomiku do roku 2030 a čo to znamená pre ľudí, ktorí v nej pracujú? Pracovný dokument <em>Economic Scenarios for Transformative AI</em> ponúka na túto otázku netradičnú odpoveď: namiesto jednej predpovede stavia jednoduchý model, ktorý prevádza malý počet predpokladov o vývoji umelej inteligencie na dôsledky pre produktivitu, rast, mzdy, podiel práce na príjmoch, presuny pracovných miest a nezamestnanosť.</p>
+<p>Pracovný dokument <em>Economic Scenarios for Transformative AI</em> neodpovedá na otázku, ako zmení umelá inteligencia do roku 2030 ekonomiku a prácu ľudí, jednou predpoveďou. Namiesto nej stavia jednoduchý model, ktorý prevádza malý počet predpokladov o vývoji umelej inteligencie na dôsledky pre produktivitu, rast, mzdy, podiel práce na príjmoch, presuny pracovných miest a nezamestnanosť.</p>
 
 <p>Autori svoj zámer formulujú jednoznačne: <strong>„Scenáre nie sú predpovede a nepripisujeme im pravdepodobnosti; ich účelom je urobiť dôsledky rôznych predpokladov porovnateľnými.“</strong> Model je sprístupnený aj ako interaktívny prehliadač scenárov.</p>
 
 <h3>Poznámka k pôvodu zdroja</h3>
 
-<p>Dokument vydal The Anthropic Institute — teda inštitút spoločnosti, ktorá umelú inteligenciu vyvíja a predáva. Ide o prácu o ekonomickom dosahu vlastnej produktovej kategórie, čo je pri hodnotení namieste vziať do úvahy. Autori v poznámke pod čiarou uvádzajú, že vyjadrené názory sú ich vlastné a nemusia predstavovať stanovisko spoločnosti Anthropic ani inštitútu, a že pri rešerši a písaní použili ako asistenta model Claude. Dokument nie je recenzovanou publikáciou v odbornom časopise.</p>
+<p>Dokument vydal The Anthropic Institute – teda inštitút spoločnosti, ktorá umelú inteligenciu vyvíja a predáva. Ide o prácu o ekonomickom dosahu vlastnej produktovej kategórie, čo je pri hodnotení namieste vziať do úvahy. Autori v poznámke pod čiarou uvádzajú, že vyjadrené názory sú ich vlastné a nemusia predstavovať stanovisko spoločnosti Anthropic ani inštitútu, a že pri rešerši a písaní použili ako asistenta model Claude. Dokument nie je recenzovanou publikáciou v odbornom časopise.</p>
 
-<p>Tieto skutočnosti prácu nediskvalifikujú — jej predpoklady aj obmedzenia sú explicitne uvedené a výsledky sa porovnávajú s nezávislou literatúrou. Znamenajú však, že sa má čítať ako analytický rámec s deklarovaným záujmom autorskej inštitúcie, nie ako neutrálny odhad.</p>
+<p>Tieto skutočnosti prácu nediskvalifikujú – jej predpoklady aj obmedzenia sú explicitne uvedené a výsledky sa porovnávajú s nezávislou literatúrou. Znamenajú však, že sa má čítať ako analytický rámec s deklarovaným záujmom autorskej inštitúcie, nie ako neutrálny odhad.</p>
 
 <h2>Ako je model postavený</h2>
 
 <p>Ide o štandardný model založený na úlohách (<em>task-based model</em>). Umelá inteligencia v ňom automatizuje alebo dopĺňa rastúci podiel úloh vykonávaných prácou. Pracovníci sú rozdelení na dve skupiny:</p>
 
 <ul>
-  <li><strong>kognitívne povolania</strong> — riadiace, odborné, obchodné a administratívne, ktoré môžu byť umelou inteligenciou priamo zasiahnuté;</li>
+  <li><strong>kognitívne povolania</strong> – riadiace, odborné, obchodné a administratívne, ktoré môžu byť umelou inteligenciou priamo zasiahnuté;</li>
   <li><strong>ostatné povolania</strong>, ktoré priamo zasiahnuté nie sú (autori uvádzajú ako príklad stavebných robotníkov alebo elektrikárov).</li>
 </ul>
 
-<p>Zavádzanie umelej inteligencie zvyšuje produktivitu, ale súčasne vytláča pracovníkov: znižuje dopyt po práci a mzdy v kognitívnych povolaniach a časť pracovníkov musí hľadať prácu inde. Tento presun naráža na trenie — softvérový inžinier sa ťažko stane elektrikárom — čo môže viesť k trvalejšiemu zvýšeniu nezamestnanosti. Umelá inteligencia zároveň zvyšuje dopyt po kapitáli, čím rastie jeho výnos aj podiel na celkových príjmoch výrobných faktorov.</p>
+<p>Zavádzanie umelej inteligencie zvyšuje produktivitu, ale súčasne vytláča pracovníkov: znižuje dopyt po práci a mzdy v kognitívnych povolaniach a časť pracovníkov musí hľadať prácu inde. Tento presun naráža na trenie (softvérový inžinier sa ťažko stane elektrikárom), čo môže viesť k trvalejšiemu zvýšeniu nezamestnanosti. Umelá inteligencia zároveň zvyšuje dopyt po kapitáli, čím rastie jeho výnos aj podiel na celkových príjmoch výrobných faktorov.</p>
 
 <h2>Tri scenáre a ich výsledky</h2>
 
@@ -97,9 +97,9 @@ $articles[] = [
 
 <h3>Dôležité spresnenie k mzdám</h3>
 
-<p>Údaj o poklese miezd kognitívnych pracovníkov sa často cituje nepresne. Podľa pracovného dokumentu je v extrémnom scenári kognitívna mzda <strong>o 11,5 % nižšia, než by bola bez umelej inteligencie</strong> — nejde teda automaticky o absolútny pokles oproti dnešku, ale o zaostávanie za hypotetickou dráhou bez tejto technológie.</p>
+<p>Údaj o poklese miezd kognitívnych pracovníkov sa často cituje nepresne. Podľa pracovného dokumentu je v extrémnom scenári kognitívna mzda <strong>o 11,5 % nižšia, než by bola bez umelej inteligencie</strong>. Nejde teda automaticky o absolútny pokles oproti dnešku, ale o zaostávanie za hypotetickou dráhou bez tejto technológie.</p>
 
-<p>Ešte podstatnejšie je, čo sa deje súčasne v druhej skupine: mzdy v povolaniach, ktoré umelá inteligencia priamo nezasahuje, sú v tom istom scenári <strong>o 34 % vyššie</strong>, než by boli bez nej. Model teda nepredpovedá plošné ochudobnenie pracujúcich, ale <em>presun</em> — od kognitívnej práce ku kapitálu a k nekognitívnym povolaniam. Autori tiež uvádzajú, že takmer celá divergencia medzi scenármi nastáva až po roku 2027.</p>
+<p>Ešte podstatnejšie je, čo sa deje súčasne v druhej skupine: mzdy v povolaniach, ktoré umelá inteligencia priamo nezasahuje, sú v tom istom scenári <strong>o 34 % vyššie</strong>, než by boli bez nej. Model teda nepredpovedá plošné ochudobnenie pracujúcich, ale <em>presun</em> – od kognitívnej práce ku kapitálu a k nekognitívnym povolaniam. Autori tiež uvádzajú, že takmer celá divergencia medzi scenármi nastáva až po roku 2027.</p>
 
 <h2>Vyšší rast nemusí znamenať vyššie mzdy</h2>
 
@@ -107,11 +107,11 @@ $articles[] = [
 
 <p>Rozhodujúce bude, kto bude vlastniť technológie, výpočtovú infraštruktúru, dátové centrá, modely a podnikový kapitál potrebný na ich využívanie. Ak umelá inteligencia zvýši výnosy z kapitálu, väčšia časť ekonomických prínosov môže smerovať k vlastníkom kapitálu.</p>
 
-<p>Mechanizmus nie je pre umelú inteligenciu špecifický — technologické inovácie opakovane menili pomer medzi príjmami z práce a z kapitálu. Pri digitálnych technológiách však môže byť zmena rýchlejšia, pretože ich možno škálovať bez úmerného zvyšovania počtu pracovníkov.</p>
+<p>Mechanizmus nie je pre umelú inteligenciu špecifický – technologické inovácie opakovane menili pomer medzi príjmami z práce a z kapitálu. Pri digitálnych technológiách však môže byť zmena rýchlejšia, pretože ich možno škálovať bez úmerného zvyšovania počtu pracovníkov.</p>
 
 <h2>Prekvapivé zistenie: inovačný kanál je malý</h2>
 
-<p>Za pozornosť stojí nález, ktorý ide proti častému očakávaniu. Ak umelá inteligencia zrýchli samotný výskum, mala by ekonomiku poháňať aj týmto druhým kanálom. Podľa modelu je však toto zrýchlenie <strong>relatívne malé aj v extrémnom scenári</strong>: produktivita práce cez inovačný kanál rastie „výrazne menej než o jedno percento“ vo všetkých troch scenároch.</p>
+<p>Jeden z nálezov ide proti častému očakávaniu. Ak umelá inteligencia zrýchli samotný výskum, mala by ekonomiku poháňať aj týmto druhým kanálom. Podľa modelu je však toto zrýchlenie <strong>relatívne malé aj v extrémnom scenári</strong>: produktivita práce cez inovačný kanál rastie „výrazne menej než o jedno percento“ vo všetkých troch scenároch.</p>
 
 <p>Dôvodom je, že automatizácia výskumu síce zvyšuje množstvo vstupov do tvorby nových poznatkov, výskum však zostáva limitovaný fyzickými úlohami. Autori zároveň priznávajú, že model neobsahuje niektoré dôležité spätné väzby medzi výskumom a automatizáciou, a preto nedokáže vygenerovať scenáre explozívneho zrýchlenia. Inovačné efekty v modeli sú teda skôr <strong>dolným odhadom</strong>.</p>
 
@@ -130,15 +130,15 @@ $articles[] = [
   <li>nachádzame sa na <strong>úplnom začiatku</strong> extrémnejšieho vývoja, ktorý úlohu a odmeňovanie práce zásadne zmení.</li>
 </ol>
 
-<p>Ako autori zdôrazňujú, tieto dva výklady majú veľmi odlišné dôsledky pre verejnú politiku — a doterajšie dáta medzi nimi zatiaľ nerozhodujú.</p>
+<p>Ako autori zdôrazňujú, tieto dva výklady majú veľmi odlišné dôsledky pre verejnú politiku a doterajšie dáta medzi nimi zatiaľ nerozhodujú.</p>
 
 <h2>Expozícia povolania nie je zánik pracovných miest</h2>
 
 <p>Generatívna umelá inteligencia zasahuje aj činnosti, ktoré sa tradične považovali za prevažne intelektuálne: tvorbu a úpravu textov, preklad, analýzu dokumentov, programovanie, administratívu, právne a finančné služby, zákaznícku podporu či prípravu odborných materiálov.</p>
 
-<p>Treba však dôsledne rozlišovať medzi <em>expozíciou</em> povolania voči umelej inteligencii a <em>zánikom</em> pracovných miest. Ak systém dokáže vykonávať časť úloh určitého povolania, ešte z toho nevyplýva, že povolanie zanikne — technológia môže pracovníka podporovať, meniť náplň práce alebo zvyšovať jeho produktivitu. Povolanie vystavené technologickej zmene môže dokonca rásť, ak vyššia produktivita vyvolá vyšší dopyt po danej službe.</p>
+<p>Treba však dôsledne rozlišovať medzi <em>expozíciou</em> povolania voči umelej inteligencii a <em>zánikom</em> pracovných miest. Ak systém dokáže vykonávať časť úloh určitého povolania, ešte z toho nevyplýva, že povolanie zanikne. Technológia môže pracovníka podporovať, meniť náplň práce alebo zvyšovať jeho produktivitu. Povolanie vystavené technologickej zmene môže dokonca rásť, ak vyššia produktivita vyvolá vyšší dopyt po danej službe.</p>
 
-<p>Na druhej strane môže podiel činností vykonávaných človekom klesnúť natoľko, že sa zníži počet pracovníkov potrebných na určitý objem služieb. Výsledkom nemusí byť hromadné prepúšťanie — častejšie ide o pomalšie prijímanie nových pracovníkov, tlak na mzdy, zmenu kvalifikačných požiadaviek a presun pracovných miest medzi sektormi.</p>
+<p>Na druhej strane môže podiel činností vykonávaných človekom klesnúť natoľko, že sa zníži počet pracovníkov potrebných na určitý objem služieb. Výsledkom nemusí byť hromadné prepúšťanie; častejšie ide o pomalšie prijímanie nových pracovníkov, tlak na mzdy, zmenu kvalifikačných požiadaviek a presun pracovných miest medzi sektormi.</p>
 
 <h2>Obmedzenia, ktoré autori priznávajú</h2>
 
@@ -166,7 +166,7 @@ $articles[] = [
 
 <p>V nefrológii možno očakávať rozvoj systémov na predikciu progresie chronickej choroby obličiek, optimalizáciu dávkovania liekov, detekciu komplikácií pri dialýze, interpretáciu trendov laboratórnych výsledkov a podporu rozhodovania o načasovaní transplantačného vyšetrenia.</p>
 
-<p>Každý takýto systém však musí byť validovaný v konkrétnej populácii a v konkrétnom klinickom prostredí. Ekonomické modelové úvahy preto nemožno priamo premeniť na klinické odporúčania — a naopak, dobrá výkonnosť nástroja v celkovej populácii nie je dôkazom jeho vhodnosti pre nefrologických pacientov.</p>
+<p>Každý takýto systém však musí byť validovaný v konkrétnej populácii a v konkrétnom klinickom prostredí. Ekonomické modelové úvahy preto nemožno priamo premeniť na klinické odporúčania. A naopak, dobrá výkonnosť nástroja v celkovej populácii nie je dôkazom jeho vhodnosti pre nefrologických pacientov.</p>
 
 <h2>Čo z toho plynie pre zdravotníckych pracovníkov</h2>
 

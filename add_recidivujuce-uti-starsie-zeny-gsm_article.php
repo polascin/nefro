@@ -36,15 +36,14 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Praktický prístup k recidivujúcim infekciám močových ciest u starších žien: kedy potvrdiť infekciu a kedy nie, prečo pozitívny nález automaticky neznamená antibiotiká, a prevencia bez antibiotík — vrátane kľúčovej úlohy lokálnych vaginálnych estrogénov pri urogenitálnom syndróme menopauzy (GSM).',
+    'excerpt'      => 'Praktický prístup k recidivujúcim infekciám močových ciest u starších žien: kedy potvrdiť infekciu a kedy nie, prečo pozitívny nález automaticky neznamená antibiotiká, a prevencia bez antibiotík – vrátane kľúčovej úlohy lokálnych vaginálnych estrogénov pri urogenitálnom syndróme menopauzy (GSM).',
     'content'      => <<<'HTML'
-<figure><a href="img/recidivujuce-uti-starsie-zeny-gsm.webp" rel="noopener noreferrer" target="_blank"><img src="img/recidivujuce-uti-starsie-zeny-gsm.webp" alt="Stenčená ochranná slizničná bariéra, cez ktorú opakovane prenikajú baktérie, a vedľa nej obnovujúce sa tkanivo" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Kým sa neobnoví bariéra, infekcie sa vracajú — antibiotikum rieši epizódu, nie príčinu.</figcaption></figure>
+<figure><a href="img/recidivujuce-uti-starsie-zeny-gsm.webp" rel="noopener noreferrer" target="_blank"><img src="img/recidivujuce-uti-starsie-zeny-gsm.webp" alt="Stenčená ochranná slizničná bariéra, cez ktorú opakovane prenikajú baktérie, a vedľa nej obnovujúce sa tkanivo" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Kým sa neobnoví bariéra, infekcie sa vracajú – antibiotikum rieši epizódu, nie príčinu.</figcaption></figure>
 
 <p>Opakované infekcie močových ciest (recurrent UTI) sú u starších žien časté a klinicky náročné.
-Problém nie je len v tom, že je potrebné „potvrdiť infekciu“, ale aj v tom, že časť ťažkostí
-napodobňuje infekciu bez toho, aby išlo o aktívnu bakteriálnu cystitídu. Z toho vyplýva riziko
-zbytočnej antibiotickej liečby, ktorá má nepriaznivé dôsledky pre pacientku aj pre antimikrobiálnu
-rezistenciu.</p>
+Nestačí len „potvrdiť infekciu“: časť ťažkostí infekciu napodobňuje, hoci nejde o aktívnu
+bakteriálnu cystitídu. Hrozí tak zbytočná antibiotická liečba s nepriaznivými dôsledkami pre
+pacientku aj pre antimikrobiálnu rezistenciu.</p>
 
 <p>V tomto podcastovom rozhovore na Medscape (InDiscussion) sa moderátorka rozpráva s urologickou
 expertkou Dr. Melissou R. Kaufmanovou o praktickom prístupe k diagnostike a manažmentu recidivujúcich
@@ -52,14 +51,14 @@ UTI u starších žien, s dôrazom na úlohu urogenitálneho syndrómu menopauzy
 bez antibiotík.</p>
 
 <h2>1) Ako pristupovať k žene s recidivujúcimi UTI</h2>
-<p>Podľa rozhovoru je prvým krokom cielene zamerať anamnézu na symptómy a kontext. Dôležité sú najmä:</p>
+<p>Prvým krokom je podľa rozhovoru cielená anamnéza zameraná na symptómy a ich kontext. Dôležité sú najmä:</p>
 <ul>
   <li>predchádzajúce urologické a gynekologické zákroky,</li>
   <li>východiskové symptómy z dolných močových ciest,</li>
   <li>črevné ťažkosti ako možný zavádzajúci faktor (confounder),</li>
   <li>vzťah symptómov k spúšťačom a k predošlej liečbe.</li>
 </ul>
-<p>V diagnostike je podľa expertky kľúčový aj gynekologický (pelvický) vyšetrovací prvok, lebo môže
+<p>Kľúčové je podľa expertky aj gynekologické (pelvické) vyšetrenie, ktoré môže
 odhaliť alternatívne príčiny alebo prispievajúce faktory, ako sú vaginálna atrofia pri GSM, uretrálne
 divertikulum alebo prolaps panvových orgánov.</p>
 
@@ -67,11 +66,11 @@ divertikulum alebo prolaps panvových orgánov.</p>
 <p>Rozhovor zdôrazňuje, že pri podozrení na akútnu cystitídu má <strong>negatívny výsledok moču</strong>
 (bez nitritov a bez leukocytov v moči) významnú negatívnu prediktívnu hodnotu, takže môže pomôcť
 infekciu skôr vylúčiť.</p>
-<p>Zároveň sa rieši, že pri vzorkách zo stredného prúdu moču („clean catch“) je kontaminácia častá,
+<p>Pri vzorkách zo stredného prúdu moču („clean catch“) je kontaminácia častá,
 čo môže viesť k zbytočnej antibiotickej liečbe. Pri nejasnosti rozhovor odporúča zvážiť
 <strong>katetrizačný odber</strong> pre presnejšie posúdenie.</p>
-<p>Pri hodnotení močového nálezu sa uvádza význam pyúrie, konkrétne <strong>viac ako 5 leukocytov/HPF</strong>
-pri mikroskopii, a pozornosť na rozdiel medzi:</p>
+<p>Pri hodnotení močového nálezu má význam pyúria, konkrétne <strong>viac ako 5 leukocytov/HPF</strong>
+pri mikroskopii. Treba tiež rozlišovať medzi:</p>
 <ul>
   <li>bakteriálnou cystitídou a</li>
   <li>stavmi, ktoré môžu UTI napodobňovať (intersticiálna cystitída, syndróm bolestivého mechúra,
@@ -82,23 +81,23 @@ pri mikroskopii, a pozornosť na rozdiel medzi:</p>
 <p>Jednou z hlavných myšlienok rozhovoru je, že aj pozitívny nález v moči (napr. nitrity + leukocyty)
 nemusí znamenať klinicky relevantnú infekciu. Podľa expertky môže ísť aj o bežnú komenzálnu prítomnosť
 baktérií v prostredí dolných močových ciest.</p>
-<p>Zároveň sa rieši, že starší pacienti môžu mať zmenené vnímanie symptómov, takže ani „zjavná“
+<p>Starší pacienti navyše môžu mať zmenené vnímanie symptómov, takže ani „zjavná“
 baktériúria nemusí korelovať s klinickým obrazom dyzúrie.</p>
 
 <h2>4) Nadužívanie antibiotík treba riešiť systémovo: urobióm, stewardship a nadmerná diagnostika</h2>
 <p>Rozhovor dáva do súvisu urobióm (mikrobióm močových ciest) a riziko systémovej dysbiózy pri častom
 podávaní antibiotík. Cieľom nie je len „vyhnúť sa <em>C. difficile</em>“, ale mať širší pohľad na vplyv
 antibiotík na mikrobiotu vrátane možných dlhodobých následkov.</p>
-<p>Prakticky sa to prejaví tak, že podľa rozhovoru nie je podporený prístup „len to predĺžim, rozšírim
-spektrum alebo zvýšim dávku“ pri recidívach, pokiaľ na to nie sú dôkazy. Ide práve o ten typ manažmentu,
-ktorý môže zvyšovať selekčný tlak a zhoršovať rezistenciu.</p>
+<p>V praxi to znamená, že prístup „len to predĺžim, rozšírim spektrum alebo zvýšim dávku“ nie je pri
+recidívach podľa rozhovoru opodstatnený, ak preň nie sú dôkazy. Práve takýto postup môže zvyšovať
+selekčný tlak a zhoršovať rezistenciu.</p>
 
 <h2>5) Prevencia recidivujúcich UTI bez (automatického) antibiotika</h2>
-<p>Pri prevencii recidivujúcich UTI sa v rozhovore zdôrazňujú možnosti, ktoré sú súčasťou aktuálneho
-smerovania odporúčaní (guidelines) pre recidivujúce UTI.</p>
+<p>Rozhovor zdôrazňuje preventívne možnosti, s ktorými počítajú aktuálne odporúčania (guidelines)
+pre recidivujúce UTI.</p>
 
 <h3>Hydratácia</h3>
-<p>Jedným z krokov s najnižším rizikom a prakticky odporúčaných je <strong>príjem tekutín približne
+<p>Jedným z najmenej rizikových a v praxi odporúčaných krokov je <strong>príjem tekutín približne
 1,5 litra vody denne</strong>, čo môže pomôcť znížiť riziko infekcie.</p>
 
 <h3>Brusnice a D-manóza</h3>
@@ -120,19 +119,19 @@ a androgénov, s vplyvom na:</p>
   <li>pH a mikroprostredie,</li>
   <li>a v dôsledku toho aj vyššiu náchylnosť na recidivujúce UTI.</li>
 </ul>
-<p>Vysvetlenie je postavené na strate ochranných laktobacilov pri hypoestrogénnom stave, čo umožní
+<p>Rozhovor to vysvetľuje stratou ochranných laktobacilov pri hypoestrogénnom stave, čo umožní
 premnoženie patogénov a ich prístup do močových ciest.</p>
 
 <h2>6) Nefrologický pohľad: prečo by nás to malo zaujímať</h2>
-<p>Aj keď podcast rieši primárne urologickú a gynekologickú perspektívu, nefrologicky je to relevantné
-z dvoch dôvodov:</p>
+<p>Podcast sa venuje najmä urologickému a gynekologickému pohľadu, téma je však dôležitá aj pre
+nefrológa, a to z dvoch dôvodov:</p>
 <ol>
   <li>U starších pacientov s CKD často opakovane vznikajú epizódy symptómov „podobných UTI“, kde
       rozhodnutie antibiotiká verzus neinfekčný stav býva zásadné.</li>
   <li>Pacienti s CKD môžu byť zraniteľnejší voči nežiaducim účinkom antibiotík, polyfarmácii a zmenám
       nutričného alebo mikrobiómového prostredia.</li>
 </ol>
-<p>Pri nefrologickej starostlivosti preto dáva zmysel prepojiť urologické odporúčania s nefrologickým
+<p>V nefrologickej starostlivosti je preto rozumné prepojiť urologické odporúčania s nefrologickým
 princípom rozvážnosti: potvrdiť infekciu čo najpresnejšie podľa kliniky a výsledkov moču a pri
 recidívach aktívne riešiť prispievajúce stavy, najmä GSM, aby sa antibiotiká nemuseli používať „len
 zo zvyku“.</p>

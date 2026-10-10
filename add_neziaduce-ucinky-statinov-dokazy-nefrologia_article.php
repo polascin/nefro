@@ -33,7 +33,7 @@ $articles[] = [
 
 <h2>Udalosť počas liečby ešte nemusí byť účinkom lieku</h2>
 
-<p>Nežiaduca udalosť vznikne počas liečby, ale nemusí byť liekom spôsobená. Nežiaduci účinok predpokladá aspoň odôvodnenú možnosť príčinnej súvislosti. Rozdiel je podstatný pri príznakoch, ktoré sú bežné aj bez statínu: svalovej bolesti, únave, poruchách spánku alebo subjektívnych poruchách pamäti.</p>
+<p>Nežiaduca udalosť vznikne počas liečby, ale nemusí ju spôsobiť liek. Nežiaduci účinok predpokladá aspoň odôvodnenú možnosť príčinnej súvislosti. Rozdiel je podstatný pri príznakoch, ktoré sú bežné aj bez statínu: svalovej bolesti, únave, poruchách spánku alebo subjektívnych poruchách pamäti.</p>
 
 <p>Dvojito zaslepené randomizované štúdie porovnávajú statín s placebom a obmedzujú vplyv očakávaní pacienta aj hodnotiteľa. Sú preto vhodnejšie na posudzovanie častých nešpecifických ťažkostí než otvorené pozorovanie. Ani veľké štúdie však nemusia spoľahlivo zachytiť veľmi zriedkavú toxicitu, dlhodobé následky alebo riziko v slabo zastúpených skupinách.</p>
 
@@ -101,13 +101,13 @@ $articles[] = [
 
 <p>Primárna publikácia umožňuje presnejšiu interpretáciu než široká kategória „zmeny zloženia moču“. V post hoc analýze išlo najmä o kompozit proteinúrie, albuminúrie alebo mikroalbuminúrie: pomer mier 1,20 (95 % interval spoľahlivosti 1,02 až 1,42) a absolútny ročný nadbytok 0,02 percentuálneho bodu. Statíny významne nezvýšili leukocytúriu, hematúriu, iné močové abnormality ani klinické renálne výsledky vrátane akútneho poškodenia obličiek. [2]</p>
 
-<p>Pri intenzívnejšej oproti menej intenzívnej liečbe sa močový signál nepotvrdil a neobjavila sa dávková odpoveď. Autori preto jeho kauzalitu a klinický význam hodnotia ako neisté. Malý vzostup koncentrácie bielkovín v moči nemožno automaticky preložiť ako progresiu chronickej choroby obličiek alebo glomerulové poškodenie. [2]</p>
+<p>Pri intenzívnejšej oproti menej intenzívnej liečbe sa močový signál nepotvrdil a neobjavila sa dávková odpoveď. Autori preto jeho kauzalitu a klinický význam hodnotia ako neisté. Malý vzostup koncentrácie bielkovín v moči nemožno automaticky vykladať ako progresiu chronickej choroby obličiek alebo glomerulové poškodenie. [2]</p>
 
 <p>Podobne malý nadbytok edémov, 0,07 percentuálneho bodu ročne, nebol závislý od intenzity liečby. Databáza neumožnila určiť závažnosť edému a pozorovaný močový signál podľa autorov pravdepodobne nevysvetľuje jeho nadbytok. U pacienta s novým edémom preto treba hľadať kongesciu, venózne ochorenie, hypoalbuminémiu, retenciu sodíka a účinky ďalších liekov, nie ho automaticky pripísať statínu. [2]</p>
 
 <h2>Kognícia, nálada a spánok: randomizované údaje kauzálny vzťah nepodporujú</h2>
 
-<p>Metaanalýza nezistila po korekcii na viacnásobné testovanie významný nadbytok kognitívnych porúch, depresie ani porúch spánku. Presné posolstvo je, že veľké zaslepené randomizované údaje nepodporujú všeobecný kauzálny vzťah. Neznamená to, že pri individuálnom pacientovi možno bez vyšetrenia vylúčiť akúkoľvek časovú súvislosť alebo inú príčinu ťažkostí. [2]</p>
+<p>Metaanalýza nezistila po korekcii na viacnásobné testovanie významný nadbytok kognitívnych porúch, depresie ani porúch spánku. Presnejšie povedané, veľké zaslepené randomizované údaje nepodporujú všeobecný kauzálny vzťah. Neznamená to, že pri individuálnom pacientovi možno bez vyšetrenia vylúčiť akúkoľvek časovú súvislosť alebo inú príčinu ťažkostí. [2]</p>
 
 <h2>Čo sa mení v nefrologickej praxi</h2>
 

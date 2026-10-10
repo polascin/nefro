@@ -32,7 +32,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Dánska populačná kohortová štúdia naznačuje, že stredne ťažká alebo ťažká proteinúria pri preeklampsii pomáha identifikovať ženy s vyšším dlhodobým rizikom hypertenzie a chronickej choroby obličiek. Jasná súvislosť s kardiovaskulárnym rizikom sa nepotvrdila.',
     'content'      => <<<'HTML'
-<figure><a href="img/proteinuria-preeklampsia-hypertenzia-ckd-riziko.webp" rel="noopener noreferrer" target="_blank"><img src="img/proteinuria-preeklampsia-hypertenzia-ckd-riziko.webp" alt="Únik bielkoviny z glomerulu, z ktorého vedie svetelné vlákno dopredu k stúpajúcej tlakovej krivke a blednúcej obličke" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Preeklampsia sa pôrodom nekončí — proteinúria môže ukazovať na riziko o roky neskôr.</figcaption></figure>
+<figure><a href="img/proteinuria-preeklampsia-hypertenzia-ckd-riziko.webp" rel="noopener noreferrer" target="_blank"><img src="img/proteinuria-preeklampsia-hypertenzia-ckd-riziko.webp" alt="Únik bielkoviny z glomerulu, z ktorého vedie svetelné vlákno dopredu k stúpajúcej tlakovej krivke a blednúcej obličke" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Preeklampsia sa pôrodom nekončí – proteinúria môže ukazovať na riziko o roky neskôr.</figcaption></figure>
 
 <p>Preeklampsia sa nemá chápať len ako akútna komplikácia gravidity. Čoraz viac údajov ukazuje, že môže byť aj varovným signálom budúceho kardiometabolického a renálneho rizika. Nová dánska populačná kohortová štúdia pridáva dôležitý detail: závažnosť proteinúrie pri preeklampsii môže pomôcť odhadnúť, ktoré ženy majú po pôrode vyššie riziko neskoršej hypertenzie a chronickej choroby obličiek.</p>
 
@@ -56,7 +56,7 @@ $articles[] = [
 
 <p>Preeklampsia sa v sledovanej populácii vyskytla u 3,3 % gravidných žien. Z nich malo 58,3 % žiadnu alebo miernu proteinúriu a 41,7 % malo stredne ťažkú alebo ťažkú proteinúriu.</p>
 
-<p>Tento údaj je klinicky zaujímavý. Proteinúria pri preeklampsii nie je len diagnostický parameter počas gravidity. Môže niesť informáciu o budúcom riziku, najmä z hľadiska krvného tlaku a obličkových funkcií.</p>
+<p>Klinicky je to zaujímavé: proteinúria pri preeklampsii nie je len diagnostickým parametrom počas gravidity, ale môže niesť aj informáciu o budúcom riziku, najmä z hľadiska krvného tlaku a funkcie obličiek.</p>
 
 <h2>Riziko hypertenzie bolo výrazne vyššie</h2>
 
@@ -72,7 +72,7 @@ $articles[] = [
 
 <p>Podobný rozdiel sa pozoroval aj pri 15-ročnom horizonte.</p>
 
-<p>Z nefrologického pohľadu je to dôležité. Preeklampsia je stav spojený s endoteliálnou dysfunkciou, glomerulárnym poškodením a hemodynamickým stresom. U časti žien môže odhaliť predispozíciu k budúcej hypertenzii alebo renálnemu ochoreniu. U iných môže byť samotná graviditná komplikácia súčasťou dlhodobejšej cievnej a obličkovej vulnerability.</p>
+<p>Z nefrologického pohľadu je to dôležité. Preeklampsia je stav spojený s endoteliálnou dysfunkciou, glomerulárnym poškodením a hemodynamickým stresom. U časti žien môže odhaliť predispozíciu k budúcej hypertenzii alebo renálnemu ochoreniu. U iných môže byť samotná graviditná komplikácia súčasťou dlhodobejšej cievnej a obličkovej zraniteľnosti.</p>
 
 <h2>Kardiovaskulárne riziko: signál nebol jasný</h2>
 
@@ -80,7 +80,7 @@ $articles[] = [
 
 <p>To neznamená, že preeklampsia nie je relevantná pre kardiovaskulárne riziko. Iné údaje podporujú jej význam ako markeru budúceho rizika. Táto konkrétna analýza však neukázala, že samotná miera proteinúrie pri preeklampsii jednoznačne stratifikuje kardiovaskulárne udalosti tak, ako to naznačuje pri hypertenzii a CKD.</p>
 
-<p>Tu treba rozlišovať medzi dvoma vecami: preeklampsia ako rizikový marker celkovo a závažnosť proteinúrie ako samostatný prediktor konkrétnych výsledkov. V tejto práci bola proteinúria najsilnejšie použiteľná najmä pre hypertenziu a CKD.</p>
+<p>Tu treba rozlišovať medzi dvoma vecami: preeklampsia ako rizikový marker celkovo a závažnosť proteinúrie ako samostatný prediktor konkrétnych výsledkov. V tejto práci bola proteinúria použiteľná predovšetkým pre hypertenziu a CKD.</p>
 
 <h2>Čo z toho vyplýva pre popôrodné sledovanie</h2>
 
@@ -100,7 +100,7 @@ $articles[] = [
 
 <h2>Limity štúdie</h2>
 
-<p>Ide o veľkú populačnú štúdiu, čo je jej silná stránka. Zároveň však platia obmedzenia typické pre observačné registre.</p>
+<p>Ide o veľkú populačnú štúdiu, čo je jej silná stránka. Platia však obmedzenia typické pre observačné registre.</p>
 
 <p>Výsledky testovania moču prúžkom neboli v Dánsku vždy konzistentne zaznamenané v laboratórnych databázach. V niektorých pôrodniciach sa používalo iba prúžkové vyšetrenie moču. To môže viesť k nepresnostiam pri klasifikácii proteinúrie.</p>
 
@@ -112,7 +112,7 @@ $articles[] = [
 
 <p>Proteinúria pri preeklampsii nie je len údaj do pôrodníckej dokumentácie. Stredne ťažká alebo ťažká proteinúria môže pomôcť identifikovať ženy s vyšším dlhodobým rizikom hypertenzie a chronickej choroby obličiek.</p>
 
-<p>Najpraktickejší záver je jednoduchý: žena po preeklampsii, najmä ak mala významnejšiu proteinúriu, potrebuje jasný plán popôrodného sledovania krvného tlaku a obličkových parametrov. Nejde o strašenie pacientky, ale o prevenciu a včasný záchyt problémov, ktoré sa dajú lepšie ovplyvniť, keď sa nájdu včas.</p>
+<p>Žena po preeklampsii, najmä ak mala významnejšiu proteinúriu, potrebuje jasný plán popôrodného sledovania krvného tlaku a obličkových parametrov. Nejde o strašenie pacientky, ale o prevenciu a včasný záchyt problémov, ktoré sa dajú lepšie ovplyvniť, keď sa nájdu včas.</p>
 
 <hr>
 

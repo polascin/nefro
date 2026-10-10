@@ -39,7 +39,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Praktický prehľad ketoacidózy pre nefrológa: od hladovej a alkoholovej formy cez diabetickú a euglykemickú DKA až po graviditu a dialýzu. S dôrazom na acidobázickú interpretáciu, kaliémiu, β-hydroxybutyrát a individualizáciu liečby pri chronickej chorobe obličiek.',
     'content'      => <<<'HTML'
-<figure><a href="img/ketoacidoza-nefrologicka-prax-hladovanie-euglykemicka-dka.webp" rel="noopener noreferrer" target="_blank"><img src="img/ketoacidoza-nefrologicka-prax-hladovanie-euglykemicka-dka.webp" alt="Nádoba s nebezpečne narastajúcimi ketolátkovými kryštálmi a vedľa nej pokojný ukazovateľ na nenápadnej hodnote" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Normálna glykémia ketoacidózu nevylučuje — práve táto nezhoda robí euglykemickú formu ľahko prehliadnuteľnou.</figcaption></figure>
+<figure><a href="img/ketoacidoza-nefrologicka-prax-hladovanie-euglykemicka-dka.webp" rel="noopener noreferrer" target="_blank"><img src="img/ketoacidoza-nefrologicka-prax-hladovanie-euglykemicka-dka.webp" alt="Nádoba s nebezpečne narastajúcimi ketolátkovými kryštálmi a vedľa nej pokojný ukazovateľ na nenápadnej hodnote" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Normálna glykémia ketoacidózu nevylučuje – práve táto nezhoda robí euglykemickú formu ľahko prehliadnuteľnou.</figcaption></figure>
 
 <h2>Klinický význam</h2>
 
@@ -59,7 +59,7 @@ $articles[] = [
 
 <p>Po približne 24 hodinách bez adekvátneho príjmu potravy sa vyčerpávajú zásoby hepatálneho glykogénu. Zvyšuje sa glukoneogenéza a lipolýza, mastné kyseliny sa v pečeni menia na ketolátky. Pri dlhšom hladovaní sa mozog postupne viac adaptuje na využívanie ketolátok, čím sa znižuje potreba glukózy a proteolýza.</p>
 
-<p>U zdravého človeka býva hladová ketóza zvyčajne limitovaná. Závažnejšia acidóza sa môže vyskytnúť pri dlhodobom hladovaní, vracaní, malnutrícii, gravidite, interkurentnom ochorení alebo pri súčasnej poruche funkcie obličiek.</p>
+<p>U zdravého človeka býva hladová ketóza obmedzená. Závažnejšia acidóza sa môže vyskytnúť pri dlhodobom hladovaní, vracaní, malnutrícii, gravidite, interkurentnom ochorení alebo pri súčasnej poruche funkcie obličiek.</p>
 
 <p>Obličky majú v tejto situácii ochrannú úlohu. Zvyšujú amoniogenézu z glutamínu, vylučujú amónium s aniónmi ketolátok a regenerujú bikarbonát. Pri pokročilej chronickej chorobe obličiek (CKD) je táto adaptačná kapacita znížená, preto môže byť acidémia pri porovnateľnej ketogenéze výraznejšia.</p>
 
@@ -103,7 +103,7 @@ $articles[] = [
 
 <p>V DKA býva sérová koncentrácia draslíka normálna alebo zvýšená napriek významnému celkovému deficitu draslíka. Hlavnými mechanizmami sú nedostatok inzulínu, hypertonicita a renálne straty draslíka pri osmotickej diuréze a sekundárnom hyperaldosteronizme.</p>
 
-<p>Po začatí inzulínovej liečby sa draslík presúva do buniek a môže rýchlo vzniknúť život ohrozujúca hypokaliémia. Preto je nevyhnutné opakované sledovanie kaliémie a individualizovaná substitúcia. Podľa medzinárodného konsenzu z roku 2024 sa má podanie inzulínu odložiť, ak je sérový draslík pod 3,5 mmol/l (staršie odporúčania uvádzali hranicu 3,3 mmol/l), a to až do jeho doplnenia. Substitúciu draslíka treba pritom začať už vtedy, keď kaliémia klesne do horného pásma normy (približne pod 5,0–5,3 mmol/l), za priebežného monitorovania.</p>
+<p>Po začatí inzulínovej liečby sa draslík presúva do buniek a môže rýchlo vzniknúť život ohrozujúca hypokaliémia. Kaliémiu preto treba opakovane sledovať a substitúciu individualizovať. Podľa medzinárodného konsenzu z roku 2024 sa má podanie inzulínu odložiť, ak je sérový draslík pod 3,5 mmol/l (staršie odporúčania uvádzali hranicu 3,3 mmol/l), a to až do jeho doplnenia. Substitúciu draslíka treba pritom začať už vtedy, keď kaliémia klesne do horného pásma normy (približne pod 5,0–5,3 mmol/l), za priebežného monitorovania.</p>
 
 <p>Hyperkaliémia pri DKA neznamená, že pacient má nadbytok draslíka. Naopak, pri rozvinutej osmotickej diuréze môže byť celkový deficit výrazný.</p>
 
@@ -117,7 +117,7 @@ $articles[] = [
 
 <p>Treba však myslieť aj na zmiešané poruchy. Pomôckou je porovnanie vzostupu aniónového rozdielu s poklesom bikarbonátu (tzv. delta pomer): ak je vzostup aniónového rozdielu výrazne menší než pokles bikarbonátu, ide o kombináciu s hyperchloremickou acidózou; ak je pokles bikarbonátu menší než vzostup rozdielu, treba pomyslieť na súčasnú metabolickú alkalózu. Vracanie tak môže vyvolať metabolickú alkalózu, hyperventilácia respiračnú alkalózu a následná liečba väčším objemom roztokov s vysokým obsahom chloridov môže viesť k hyperchloremickej metabolickej acidóze s normálnym aniónovým rozdielom.</p>
 
-<p>Pôvodný zdroj správne zdôrazňuje, že po liečbe DKA môže pretrvávať hyperchloremická acidóza aj napriek ustupujúcej ketóze. Tento obraz nesmie byť automaticky interpretovaný ako pretrvávajúca DKA. Základným markerom ústupu ketoacidózy je pokles β-hydroxybutyrátu spolu s klinickým zlepšením a normalizáciou pH alebo bikarbonátu.</p>
+<p>Pôvodný zdroj správne zdôrazňuje, že po liečbe DKA môže pretrvávať hyperchloremická acidóza aj napriek ustupujúcej ketóze. Tento obraz sa nesmie automaticky interpretovať ako pretrvávajúca DKA. Základným markerom ústupu ketoacidózy je pokles β-hydroxybutyrátu spolu s klinickým zlepšením a normalizáciou pH alebo bikarbonátu.</p>
 
 <p>Tvrdenie, že DKA sa v najskoršej fáze vždy začína hyperchloremickou acidózou s normálnym aniónovým rozdielom, je však príliš kategorické. V klinickej praxi sa väčšina pacientov prezentuje už so zvýšeným aniónovým rozdielom a často so zmiešanou acidobázickou poruchou.</p>
 

@@ -27,13 +27,13 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Praktický rámec, ako pri diabete 2. typu s CKD, srdcovým zlyhávaním alebo aterosklerózou vybrať a kombinovať inhibítor SGLT2, agonistu GLP-1 a duálneho agonistu. Postavený na piatich randomizovaných štúdiách s overenými pomermi rizík.',
     'content'      => <<<'HTML'
-<figure><a href="img/vyber-sglt2-glp1-dualne-agonisty-kardiorenalne-riziko.webp" rel="noopener noreferrer" target="_blank"><img src="img/vyber-sglt2-glp1-dualne-agonisty-kardiorenalne-riziko.webp" alt="Tri farebné prúdy smerujúce k obličke a srdcu — dva sa prepletajú do jedného, tretí ide samostatne, štvrtý sa odkláňa" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Nie každá kombinácia dáva zmysel; rozhoduje, čo sa pri danom pacientovi dopĺňa a čo sa len prekrýva.</figcaption></figure>
+<figure><a href="img/vyber-sglt2-glp1-dualne-agonisty-kardiorenalne-riziko.webp" rel="noopener noreferrer" target="_blank"><img src="img/vyber-sglt2-glp1-dualne-agonisty-kardiorenalne-riziko.webp" alt="Tri farebné prúdy smerujúce k obličke a srdcu: dva sa prepletajú do jedného, tretí ide samostatne, štvrtý sa odkláňa" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Nie každá kombinácia dáva zmysel; rozhoduje, čo sa pri danom pacientovi dopĺňa a čo sa len prekrýva.</figcaption></figure>
 
-<p class="article-dek"><em>Pri diabete 2. typu s obličkovým alebo srdcovým postihnutím sa prínos liečby už neposudzuje podľa poklesu HbA1c, ale podľa tvrdých kardiovaskulárnych a obličkových výsledkov. Tento článok prekladá dostupné randomizované dôkazy do rozhodovacieho rámca použiteľného v nefrologickej ambulancii — vrátane toho, čo o kombináciách vieme a čo zatiaľ nie.</em></p>
+<p class="article-dek"><em>Pri diabete 2. typu s obličkovým alebo srdcovým postihnutím sa prínos liečby už neposudzuje podľa poklesu HbA1c, ale podľa tvrdých kardiovaskulárnych a obličkových výsledkov. Tento článok prekladá dostupné randomizované dôkazy do rozhodovacieho rámca použiteľného v nefrologickej ambulancii vrátane toho, čo o kombináciách vieme a čo zatiaľ nie.</em></p>
 
 <h2>Prečo výber lieku prestal byť otázkou glykémie</h2>
 
-<p>U pacienta s diabetom 2. typu a súčasne s chronickou chorobou obličiek (CKD), srdcovým zlyhávaním alebo aterosklerotickým kardiovaskulárnym ochorením (ASKVO) sa prínos moderných antidiabetík hodnotí predovšetkým cez klinické príhody — progresiu obličkového ochorenia, hospitalizácie pre srdcové zlyhávanie, infarkt, cievnu mozgovú príhodu a úmrtie.</p>
+<p>U pacienta s diabetom 2. typu a súčasne s chronickou chorobou obličiek (CKD), srdcovým zlyhávaním alebo aterosklerotickým kardiovaskulárnym ochorením (ASKVO) sa prínos moderných antidiabetík hodnotí predovšetkým cez klinické príhody: progresiu obličkového ochorenia, hospitalizácie pre srdcové zlyhávanie, infarkt, cievnu mozgovú príhodu a úmrtie.</p>
 
 <p>Dôsledok je zásadný: <strong>rovnaká „diabetologická“ schéma nemusí byť optimálna, ak je pre pacienta dominantné obličkové alebo srdcové riziko.</strong> Výber sa preto riadi fenotypom komorbidít, nie cieľovou hodnotou HbA1c.</p>
 
@@ -89,7 +89,7 @@ $articles[] = [
 
 <p>Z tabuľky vyplýva niekoľko vecí, ktoré sa v zjednodušených schémach strácajú.</p>
 
-<p><strong>Inhibítory SGLT2 majú pri obličkovom výsledku najväčší a najkonzistentnejší efekt</strong> — tri nezávislé štúdie s rôznymi molekulami a rôznymi populáciami dospeli k pomerom rizík 0,61 až 0,72. DAPA-CKD aj EMPA-KIDNEY navyše zaraďovali pacientov <em>bez</em> diabetu a účinok bol konzistentný, čo z tejto skupiny robí nefroprotektívnu liečbu, nie iba antidiabetikum.</p>
+<p><strong>Inhibítory SGLT2 majú pri obličkovom výsledku najväčší a najkonzistentnejší efekt</strong>. Tri nezávislé štúdie s rôznymi molekulami a rôznymi populáciami dospeli k pomerom rizík 0,61 až 0,72. DAPA-CKD aj EMPA-KIDNEY navyše zaraďovali pacientov <em>bez</em> diabetu a účinok bol konzistentný, čo z tejto skupiny robí nefroprotektívnu liečbu, nie iba antidiabetikum.</p>
 
 <p><strong>FLOW zmenila postavenie agonistov GLP-1 pri CKD.</strong> Do jej publikovania v roku 2024 sa GLP-1 RA odporúčali najmä pre ASKVO a metabolický prínos. FLOW je prvá veľká štúdia s <em>obličkovým</em> primárnym výsledkom pri semaglutide a bola ukončená predčasne pre účinnosť. Okrem obličkového kompozitu znížila aj kardiovaskulárne úmrtie (0,71; 0,56–0,89), celkovú úmrtnosť o 20 % a spomalila ročný pokles eGFR o 1,16 ml/min/1,73 m².</p>
 
@@ -141,13 +141,13 @@ $articles[] = [
 
 <h2>Kombinácie: čo je dokázané a čo sa iba predpokladá</h2>
 
-<p>Toto je miesto, kde sa v praxi najviac improvizuje — a kde sú dôkazy najtenšie.</p>
+<p>Práve tu sa v praxi najviac improvizuje a dôkazy sú tu najtenšie.</p>
 
 <h3>Čo je doložené randomizovanou štúdiou</h3>
 
 <p>Štúdia <strong>CONFIDENCE</strong> priamo testovala kombináciu finerenónu s empagliflozínom oproti každej zložke samostatne u pacientov s CKD a diabetom 2. typu. Po 180 dňoch bola redukcia pomeru albumínu ku kreatinínu v moči pri kombinácii <strong>o 29 % väčšia než pri samotnom finerenóne</strong> a <strong>o 32 % väčšia než pri samotnom empagliflozíne</strong>.</p>
 
-<p>Ide o doklad aditívneho účinku na náhradný ukazovateľ — albuminúriu. Nie je to dôkaz aditívneho účinku na tvrdé klinické príhody a štúdia na to ani nebola dimenzovaná.</p>
+<p>Ide o doklad aditívneho účinku na náhradný ukazovateľ, albuminúriu. Nie je to dôkaz aditívneho účinku na tvrdé klinické príhody a štúdia na to ani nebola dimenzovaná.</p>
 
 <h3>Čo dokázané nie je</h3>
 
@@ -161,13 +161,13 @@ $articles[] = [
 <h2>Praktické poznámky pre ambulanciu</h2>
 
 <ol>
-  <li><strong>Základ je blokáda RAS v maximálnej tolerovanej dávke</strong> — inhibítory SGLT2 a finerenón sa nasadzujú na ňu, nie namiesto nej.</li>
+  <li><strong>Základ je blokáda RAS v maximálnej tolerovanej dávke</strong>; inhibítory SGLT2 a finerenón sa nasadzujú na ňu, nie namiesto nej.</li>
   <li><strong>Úvodný pokles eGFR po nasadení inhibítora SGLT2 je očakávaný</strong> a nie je dôvodom na vysadenie. Je hemodynamický a spravidla reverzibilný.</li>
-  <li><strong>Hranicu eGFR na začatie a pravidlá pokračovania</strong> overte v platnom súhrne charakteristických vlastností konkrétneho lieku a v aktuálnom odporúčaní KDIGO — medzi molekulami sú rozdiely.</li>
+  <li><strong>Hranicu eGFR na začatie a pravidlá pokračovania</strong> overte v platnom súhrne charakteristických vlastností konkrétneho lieku a v aktuálnom odporúčaní KDIGO, medzi molekulami sú rozdiely.</li>
   <li><strong>Po pridaní finerenónu kontrolujte kálium</strong> podľa odporúčaného rozvrhu; hyperkaliémia je hlavný dôvod prerušenia liečby.</li>
-  <li><strong>Pri nasadení inhibítora SGLT2 prehodnoťte diuretiká</strong> — riziko hypovolémie a hypotenzie stúpa najmä u starších a krehkých pacientov.</li>
+  <li><strong>Pri nasadení inhibítora SGLT2 prehodnoťte diuretiká</strong>: riziko hypovolémie a hypotenzie stúpa najmä u starších a krehkých pacientov.</li>
   <li><strong>Poučte pacienta o pravidlách pri akútnom ochorení</strong> (dočasné prerušenie pri vracaní, hnačke, horúčke a nedostatočnom príjme tekutín) a o riziku euglykemickej ketoacidózy.</li>
-  <li><strong>Pri agonistoch GLP-1 sledujte gastrointestinálnu toleranciu</strong> a hydratáciu — výrazné ťažkosti môžu viesť k prerenálnemu poškodeniu obličiek.</li>
+  <li><strong>Pri agonistoch GLP-1 sledujte gastrointestinálnu toleranciu</strong> a hydratáciu; výrazné ťažkosti môžu viesť k prerenálnemu poškodeniu obličiek.</li>
   <li><strong>Nezabudnite na ostatné piliere</strong>: krvný tlak, statín, kontrola glykémie, hmotnosť, nefajčenie a očkovanie.</li>
 </ol>
 
@@ -205,7 +205,7 @@ $articles[] = [
 
 <p>Pri diabete 2. typu s kardiorenálnymi komorbiditami sa liečba vyberá podľa toho, ktoré riziko je dominantné, nie podľa cieľovej hodnoty HbA1c.</p>
 
-<p>Pri obličkovom postihnutí je základnou voľbou inhibítor SGLT2 nasadený na maximálnu tolerovanú blokádu RAS. Pri diabete 2. typu s CKD má po štúdii FLOW doloženú obličkovú indikáciu aj semaglutid. Finerenón je doplnkom pri pretrvávajúcej albuminúrii, s povinným sledovaním kália. Duálne agonisty patria do úvahy tam, kde je hlavným cieľom hmotnosť — obličkovú výsledkovú štúdiu zatiaľ nemajú.</p>
+<p>Pri obličkovom postihnutí je základnou voľbou inhibítor SGLT2 nasadený na maximálnu tolerovanú blokádu RAS. Pri diabete 2. typu s CKD má po štúdii FLOW doloženú obličkovú indikáciu aj semaglutid. Finerenón je doplnkom pri pretrvávajúcej albuminúrii, s povinným sledovaním kália. Duálne agonisty patria do úvahy tam, kde je hlavným cieľom hmotnosť, obličkovú výsledkovú štúdiu však zatiaľ nemajú.</p>
 
 <p>Kombinácie sú klinicky rozumné, ale ich prínos je zatiaľ doložený predovšetkým na albuminúrii, nie na tvrdých príhodách. Tento rozdiel má byť pri rozhovore s pacientom pomenovaný.</p>
 
@@ -236,7 +236,7 @@ $articles[] = [
   <li><strong>Medscape Education.</strong> <em>Cardioprotective Antihyperglycemic Strategies for Cardiorenal Risk in Type 2 Diabetes.</em> Medscape, 2026. Vzdelávací modul použitý ako podnet k téme; plný text nie je voľne dostupný, preto sa mu v článku nepripisujú konkrétne tvrdenia. <a href="https://www.medscape.org/viewarticle/medscape-now-cardioprotective-antihyperglycemic-strategies-2026a1000s58" target="_blank" rel="noopener noreferrer">Vzdelávací modul</a>.</li>
 </ol>
 
-<p><em><strong>Poznámka k spracovaniu:</strong> Všetky pomery rizík a intervaly spoľahlivosti boli overené priamo proti sekciám Results publikovaných abstraktov v PubMed: DAPA-CKD 0,61 (0,51–0,72) a NNT 19 (PMID 32970396); EMPA-KIDNEY 0,72 (0,64–0,82) (PMID 36331190); CREDENCE 0,70 (0,59–0,82) a renálny kompozit 0,66 (0,53–0,81) (PMID 30990260); FLOW 0,76 (0,66–0,88), obličkový kompozit 0,79 (0,66–0,94), kardiovaskulárne úmrtie 0,71 (0,56–0,89) a rozdiel v ročnom sklone eGFR 1,16 ml/min/1,73 m² (PMID 38785209); FIDELIO-DKD 0,82 (0,73–0,93) a prerušenie pre hyperkaliémiu 2,3 % oproti 0,9 % (PMID 33264825); CONFIDENCE rozdiel v poklese UACR o 29 % a 32 % (PMID 40470996). Identita všetkých šiestich štúdií bola overená cez DOI v Crossref — <strong>kľúčové upozornenie:</strong> vyhľadávanie podľa názvu v PubMed vracalo pri každej z nich ako prvý výsledok nedávnu sekundárnu prácu, nie pôvodnú štúdiu, preto boli PMID priradené cez DOI. Hranica eGFR na začatie liečby sa v článku zámerne neuvádza číselne, pretože sa medzi molekulami líši a nebola overená proti platným súhrnom charakteristických vlastností liekov.</em></p>
+<p><em><strong>Poznámka k spracovaniu:</strong> Všetky pomery rizík a intervaly spoľahlivosti boli overené priamo proti sekciám Results publikovaných abstraktov v PubMed: DAPA-CKD 0,61 (0,51–0,72) a NNT 19 (PMID 32970396); EMPA-KIDNEY 0,72 (0,64–0,82) (PMID 36331190); CREDENCE 0,70 (0,59–0,82) a renálny kompozit 0,66 (0,53–0,81) (PMID 30990260); FLOW 0,76 (0,66–0,88), obličkový kompozit 0,79 (0,66–0,94), kardiovaskulárne úmrtie 0,71 (0,56–0,89) a rozdiel v ročnom sklone eGFR 1,16 ml/min/1,73 m² (PMID 38785209); FIDELIO-DKD 0,82 (0,73–0,93) a prerušenie pre hyperkaliémiu 2,3 % oproti 0,9 % (PMID 33264825); CONFIDENCE rozdiel v poklese UACR o 29 % a 32 % (PMID 40470996). Identita všetkých šiestich štúdií bola overená cez DOI v Crossref. <strong>Kľúčové upozornenie:</strong> vyhľadávanie podľa názvu v PubMed vracalo pri každej z nich ako prvý výsledok nedávnu sekundárnu prácu, nie pôvodnú štúdiu, preto boli PMID priradené cez DOI. Hranica eGFR na začatie liečby sa v článku zámerne neuvádza číselne, pretože sa medzi molekulami líši a nebola overená proti platným súhrnom charakteristických vlastností liekov.</em></p>
 
 <p><em><strong>Poznámka k interpretácii:</strong> Článok je rozhodovací rámec, nie liečebný protokol. Voľba a kombinácia liečby pri diabete 2. typu s kardiorenálnymi komorbiditami patrí do rúk ošetrujúceho lekára a riadi sa platnými odporúčaniami, súhrnom charakteristických vlastností konkrétneho lieku, funkciou obličiek, komorbiditami a preferenciami pacienta. Údaje o kombináciách sa zatiaľ opierajú prevažne o náhradné ukazovatele.</em></p>
 </div>

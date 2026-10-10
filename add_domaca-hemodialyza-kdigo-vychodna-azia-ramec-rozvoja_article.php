@@ -24,7 +24,7 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Nová správa KDIGO z pracovného stretnutia v japonskom Kawagoe navrhuje trojfázový rámec rozvoja domácej hemodialýzy. Randomizované údaje však ukazujú, že rozhodujúci nie je samotný presun dialýzy domov — a že intenzívnejšie režimy majú aj vlastné riziká.',
+    'excerpt'      => 'Nová správa KDIGO z pracovného stretnutia v japonskom Kawagoe navrhuje trojfázový rámec rozvoja domácej hemodialýzy. Randomizované údaje však ukazujú, že rozhodujúci nie je samotný presun dialýzy domov – a že intenzívnejšie režimy majú aj vlastné riziká.',
     'content'      => <<<'HTML'
 <figure><a href="img/domaca-hemodialyza-kdigo-vychodna-azia-ramec-rozvoja.webp" rel="noopener noreferrer" target="_blank"><img src="img/domaca-hemodialyza-kdigo-vychodna-azia-ramec-rozvoja.webp" alt="Domáci dialyzačný prístroj svieti isto, no podporné linky od neho do tmy sú tenké, blikajúce a jedna pretrhnutá" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Bez zásobovania, zaškolenia a servisu zostane autonómia pacienta len na papieri.</figcaption></figure>
 
@@ -36,11 +36,11 @@ $articles[] = [
 
 <h2>Čo tento dokument je a čo nie je</h2>
 
-<p>Nejde o klinické odporúčanie založené na systematickom hodnotení dôkazov. Ide o <strong>konsenzuálnu správu z pracovného stretnutia</strong>, ktorá navrhuje organizačný a strategický rámec — teda „cestovnú mapu“ pre poskytovateľov, platiteľov a regulátorov.</p>
+<p>Nejde o klinické odporúčanie založené na systematickom hodnotení dôkazov. Ide o <strong>konsenzuálnu správu z pracovného stretnutia</strong>, ktorá navrhuje organizačný a strategický rámec – teda „cestovnú mapu“ pre poskytovateľov, platiteľov a regulátorov.</p>
 
-<p>Hlavnou hodnotou dokumentu preto nie je dokazovanie nadradenosti domácej hemodialýzy nad strediskovou. Je ňou pomenovanie podmienok, bez ktorých sa bezpečný a udržateľný program domácej liečby jednoducho nedá vybudovať. Túto distinkciu treba pri čítaní podobných dokumentov držať v hlave — implementačný rámec sa v druhotnom prerozprávaní ľahko zmení na tvrdenie o účinnosti.</p>
+<p>Hlavnou hodnotou dokumentu preto nie je dokazovanie nadradenosti domácej hemodialýzy nad strediskovou. Je ňou pomenovanie podmienok, bez ktorých sa bezpečný a udržateľný program domácej liečby nedá vybudovať. Tento rozdiel treba mať pri čítaní podobných dokumentov na pamäti: implementačný rámec sa pri ďalšom prerozprávaní ľahko zmení na tvrdenie o účinnosti.</p>
 
-<h2>Domáca hemodialýza nie je jediná liečebná modalita</h2>
+<h2>Domáca hemodialýza nie je jeden režim</h2>
 
 <p>Pojem domáca hemodialýza zahŕňa viacero režimov. Liečba môže prebiehať:</p>
 
@@ -68,25 +68,25 @@ $articles[] = [
   <li>obavy pacientov zo samostatného vykonávania liečby.</li>
 </ul>
 
-<p>K tomu pristupujú prekážky, ktoré sú špecifické pre konkrétny zdravotnícky systém — najmä nastavenie úhrady, dostupnosť technického servisu a malý počet centier so skúsenosťou s domácim programom.</p>
+<p>K tomu pristupujú prekážky, ktoré sú špecifické pre konkrétny zdravotnícky systém – najmä nastavenie úhrady, dostupnosť technického servisu a malý počet centier so skúsenosťou s domácim programom.</p>
 
 <p>Ak úhrada zvýhodňuje strediskovú hemodialýzu, poskytovateľ nemá dostatočnú ekonomickú motiváciu investovať do domáceho programu. Pacient pritom môže znášať časť nákladov na vodu, elektrickú energiu, úpravu domácnosti alebo dopravu materiálu. <strong>Ani formálna dostupnosť modality preto neznamená jej reálnu dostupnosť.</strong></p>
 
 <h2>Čo skutočne ukázali randomizované štúdie</h2>
 
-<p>Toto je bod, v ktorom sa v popularizačných textoch o domácej dialýze najčastejšie chybuje. Randomizované údaje o intenzívnejšej hemodialýze pochádzajú prevažne z dvoch paralelných štúdií siete Frequent Hemodialysis Network (FHN) — a ich výsledky sa zásadne líšia.</p>
+<p>Práve tu popularizačné texty o domácej dialýze chybujú najčastejšie. Randomizované údaje o intenzívnejšej hemodialýze pochádzajú prevažne z dvoch paralelných štúdií siete Frequent Hemodialysis Network (FHN) – a ich výsledky sa zásadne líšia.</p>
 
-<h3>FHN Daily Trial — šesťkrát týždenne, ale v stredisku</h3>
+<h3>FHN Daily Trial – šesťkrát týždenne, ale v stredisku</h3>
 
 <p>Štúdia randomizovala 245 pacientov na hemodialýzu šesťkrát týždenne (125 osôb) alebo trikrát týždenne (120 osôb) počas 12 mesiacov. Častejšia dialýza priniesla významný prínos v oboch spoločných primárnych ukazovateľoch: pomer rizík pre úmrtie alebo nárast hmotnosti ľavej komory bol 0,61 (95 % IS 0,46–0,82) a pre úmrtie alebo zhoršenie zložky telesného zdravia 0,70 (95 % IS 0,53–0,92).</p>
 
-<p>Zásadná poznámka: <strong>táto štúdia prebiehala v dialyzačnom stredisku, nie doma.</strong> Ide teda o dôkaz o účinku vyššej frekvencie dialýzy, nie o dôkaz o prínose domáceho prostredia.</p>
+<p><strong>Táto štúdia však prebiehala v dialyzačnom stredisku, nie doma.</strong> Ide teda o dôkaz o účinku vyššej frekvencie dialýzy, nie o dôkaz o prínose domáceho prostredia.</p>
 
-<h3>FHN Nocturnal Trial — nočná domáca dialýza, negatívny výsledok</h3>
+<h3>FHN Nocturnal Trial – nočná domáca dialýza, negatívny výsledok</h3>
 
 <p>Paralelná štúdia randomizovala 87 pacientov na konvenčnú hemodialýzu trikrát týždenne alebo na nočnú domácu hemodialýzu šesťkrát týždenne. Intenzívnejšie liečená skupina dosiahla 1,82-násobne vyšší priemerný týždenný stdKt/V<sub>urea</sub> a 2,45-násobne dlhší týždenný dialyzačný čas.</p>
 
-<p>Napriek tomu autori <strong>nezistili významný účinok na ani jeden zo spoločných primárnych ukazovateľov</strong> (úmrtie alebo hmotnosť ľavej komory: pomer rizík 0,68; úmrtie alebo zložka telesného zdravia RAND: 0,91). Zlepšila sa kontrola hyperfosfatémie a hypertenzie, ostatné hlavné sekundárne ukazovatele nie. Zaznamenal sa trend k vyššiemu počtu príhod cievneho prístupu.</p>
+<p>Napriek tomu autori <strong>nezistili významný účinok ani na jeden zo spoločných primárnych ukazovateľov</strong> (úmrtie alebo hmotnosť ľavej komory: pomer rizík 0,68; úmrtie alebo zložka telesného zdravia RAND: 0,91). Zlepšila sa kontrola hyperfosfatémie a hypertenzie, ostatné hlavné sekundárne ukazovatele nie. Zaznamenal sa trend k vyššiemu počtu príhod cievneho prístupu.</p>
 
 <h3>Dlhodobé sledovanie nočnej štúdie</h3>
 
@@ -94,19 +94,19 @@ $articles[] = [
 
 <p>Tento výsledok <strong>netreba čítať ako dôkaz, že nočná domáca hemodialýza zabíja</strong>. Ide o malý súbor, veľmi nízky počet príhod, prekvapivo nízku mortalitu v kontrolnej skupine a široký interval spoľahlivosti. Je to však vážny signál, ktorý vyvracia predstavu, že intenzívnejšia liečba je automaticky bezpečnejšia, a ktorý sa v propagačných materiáloch o domácej dialýze spravidla neuvádza.</p>
 
-<h3>ACTIVE Dialysis — predĺžené hodiny bez zlepšenia kvality života</h3>
+<h3>ACTIVE Dialysis – predĺžené hodiny bez zlepšenia kvality života</h3>
 
-<p>Štúdia ACTIVE randomizovala 200 pacientov zo strediskových aj domácich programov na predĺženú (≥ 24 hodín týždenne) alebo štandardnú dialýzu (cieľ 12–15 hodín, maximum 18) počas 12 mesiacov. Primárny ukazovateľ — zmena kvality života podľa dotazníka EQ-5D — sa medzi skupinami nelíšil (priemerný rozdiel 0,04; 95 % IS −0,03 až 0,11; p = 0,29).</p>
+<p>Štúdia ACTIVE randomizovala 200 pacientov zo strediskových aj domácich programov na predĺženú (≥ 24 hodín týždenne) alebo štandardnú dialýzu (cieľ 12–15 hodín, maximum 18) počas 12 mesiacov. Primárny ukazovateľ – zmena kvality života podľa dotazníka EQ-5D – sa medzi skupinami nelíšil (priemerný rozdiel 0,04; 95 % IS −0,03 až 0,11; p = 0,29).</p>
 
 <p>Predĺžená dialýza viedla k nižšej fosfatémii a kaliémii, vyššiemu hemoglobínu a menšej potrebe antihypertenzív a viazačov fosfátov. Hmotnostný index ľavej komory sa v podštúdii (95 pacientov) medzi skupinami významne nelíšil.</p>
 
-<p>Zhrnuté: <strong>intenzívnejšia dialýza spoľahlivo zlepšuje laboratórne a liekové ukazovatele, no jej vplyv na kvalitu života a tvrdé klinické ciele je nekonzistentný.</strong></p>
+<p><strong>Intenzívnejšia dialýza teda spoľahlivo zlepšuje laboratórne a liekové ukazovatele, no jej vplyv na kvalitu života a tvrdé klinické ciele je nekonzistentný.</strong></p>
 
 <h2>Prežívanie: čo hovoria observačné údaje</h2>
 
 <p>Najčastejšie citovaným dokladom o lepšom prežívaní pri domácej hemodialýze je párovaná registrová analýza, ktorá porovnala 1873 pacientov na dennej domácej hemodialýze s 9365 párovanými pacientmi na strediskovej dialýze trikrát týždenne. Kumulatívna úmrtnosť bola 19,2 % oproti 21,7 %, čo zodpovedá o 13 % nižšiemu riziku úmrtia (pomer rizík 0,87; 95 % IS 0,78–0,97).</p>
 
-<p>Ide o dôležitý, ale observačný nález. Pacienti vybraní na domácu hemodialýzu bývajú mladší, funkčne zdatnejší, motivovanejší a majú lepšiu sociálnu podporu. Aj po štatistickom zohľadnení známych rozdielov zostáva významné riziko selekčného skreslenia — párovanie dokáže vyrovnať len to, čo register meria.</p>
+<p>Ide o dôležitý, ale observačný nález. Pacienti vybraní na domácu hemodialýzu bývajú mladší, funkčne zdatnejší, motivovanejší a majú lepšiu sociálnu podporu. Aj po štatistickom zohľadnení známych rozdielov zostáva významné riziko selekčného skreslenia – párovanie dokáže vyrovnať len to, čo register meria.</p>
 
 <p>Konsenzuálna konferencia KDIGO o domácej dialýze z roku 2023 to formulovala striedmo: klinické výsledky sú naprieč dialyzačnými modalitami <em>zväčša podobné</em>, a preto má byť voľba modality vedená predovšetkým preferenciou pacienta.</p>
 
@@ -164,7 +164,7 @@ $articles[] = [
 
 <p>Začiatok v podobe menšieho pilotného programu umožňuje odhaliť organizačné problémy bez nekontrolovaného rozširovania rizík. Centrum potrebuje lekárov, sestry, technikov, nutričných terapeutov a podľa potreby aj sociálnych pracovníkov či psychológov so skúsenosťami v domácej liečbe.</p>
 
-<p>Partnerstvo so skúseným centrom môže skrátiť čas potrebný na zavedenie bezpečných pracovných postupov. Jednorazové školenie nestačí — potrebná je kontinuálna supervízia a pravidelná aktualizácia kompetencií.</p>
+<p>Partnerstvo so skúseným centrom môže skrátiť čas potrebný na zavedenie bezpečných pracovných postupov. Jednorazové školenie nestačí – potrebná je kontinuálna supervízia a pravidelná aktualizácia kompetencií.</p>
 
 <h3>3. Riadené rozširovanie a priebežné zlepšovanie kvality</h3>
 
@@ -205,7 +205,7 @@ $articles[] = [
 
 <h2>Prenositeľnosť záverov do európskych podmienok</h2>
 
-<p>Východoázijský rámec nemožno bez úprav preniesť do iných regiónov. Rozdiely v úhrade, dostupnosti ošetrovateľskej starostlivosti, bývaní, technických normách, cenách energií a organizácii dialyzačnej siete sú podstatné. Osobitne to platí pre argument o „kultúre strediskovej hemodialýzy“ — v Japonsku či na Taiwane má strediskový model inú historickú a spoločenskú váhu než v strednej Európe.</p>
+<p>Východoázijský rámec nemožno bez úprav preniesť do iných regiónov. Rozdiely v úhrade, dostupnosti ošetrovateľskej starostlivosti, bývaní, technických normách, cenách energií a organizácii dialyzačnej siete sú podstatné. Osobitne to platí pre argument o „kultúre strediskovej hemodialýzy“ – v Japonsku či na Taiwane má strediskový model inú historickú a spoločenskú váhu než v strednej Európe.</p>
 
 <p>Všeobecne prenosné sú však štyri princípy:</p>
 
@@ -216,7 +216,7 @@ $articles[] = [
   <li>Rozšírenie modality má byť výsledkom informovanej voľby, nie administratívne stanoveného cieľa.</li>
 </ol>
 
-<p>Pre menšie krajiny by mohol byť realistický model niekoľkých regionálnych referenčných centier s centralizovaným tréningom, technickou podporou a jednotným registrom výsledkov — podobne, ako to opisuje <a href="article.php?slug=domaca-dialyza-100-pacientov-treningovy-model">skúsenosť barcelonského centra so stovkou pacientov na domácej dialýze</a>. Pred zavedením by však bolo potrebné analyzovať legislatívnu zodpovednosť, úhradu energií a úprav domácnosti, dostupnosť nepretržitej pomoci a organizáciu urgentného návratu do dialyzačného strediska.</p>
+<p>Pre menšie krajiny by mohol byť realistický model niekoľkých regionálnych referenčných centier s centralizovaným tréningom, technickou podporou a jednotným registrom výsledkov – podobne, ako to opisuje <a href="article.php?slug=domaca-dialyza-100-pacientov-treningovy-model">skúsenosť barcelonského centra so stovkou pacientov na domácej dialýze</a>. Pred zavedením by však bolo potrebné analyzovať legislatívnu zodpovednosť, úhradu energií a úprav domácnosti, dostupnosť nepretržitej pomoci a organizáciu urgentného návratu do dialyzačného strediska.</p>
 
 <h2>Sila dôkazov: čo je doložené a čo nie</h2>
 
@@ -241,18 +241,18 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>Domáca hemodialýza môže rozšíriť možnosti liečby a priniesť väčšiu autonómiu pacientom, ktorí o ňu majú záujem a dokážu ju bezpečne vykonávať. Nie je však univerzálne vhodná ani automaticky nadradená strediskovej hemodialýze — a randomizované údaje to potvrdzujú zreteľnejšie, než sa obvykle pripúšťa.</p>
+<p>Domáca hemodialýza môže rozšíriť možnosti liečby a priniesť väčšiu autonómiu pacientom, ktorí o ňu majú záujem a dokážu ju bezpečne vykonávať. Nie je však univerzálne vhodná ani automaticky nadradená strediskovej hemodialýze – a randomizované údaje to potvrdzujú zreteľnejšie, než sa obvykle pripúšťa.</p>
 
 <p>Nová správa KDIGO správne zdôrazňuje, že rozhodujúcim problémom nie je dostupnosť technológie. Potrebný je celý systém zahŕňajúci financovanie, odborný tím, tréning, technickú podporu, zber výsledkov, ochranu pacienta a rešpektovanie jeho preferencií.</p>
 
-<p>Rozvoj domácej hemodialýzy preto nemá byť súťažou o čo najvyšší počet domácich pacientov. Cieľom má byť bezpečný, spravodlivý a udržateľný prístup k širšiemu spektru liečebných možností — a poctivá informácia pacientovi o tom, čo mu domáca liečba dá a čo od neho bude vyžadovať.</p>
+<p>Rozvoj domácej hemodialýzy preto nemá byť súťažou o čo najvyšší počet domácich pacientov. Cieľom má byť bezpečný, spravodlivý a udržateľný prístup k širšiemu spektru liečebných možností – a poctivá informácia pacientovi o tom, čo mu domáca liečba dá a čo od neho bude vyžadovať.</p>
 
 <h3>Súvisiace články</h3>
 
 <ul>
-  <li><a href="article.php?slug=domaca-dialyza-100-pacientov-treningovy-model">Sto pacientov na domácej dialýze</a> — model tréningu a domáceho monitorovania.</li>
+  <li><a href="article.php?slug=domaca-dialyza-100-pacientov-treningovy-model">Sto pacientov na domácej dialýze</a> – model tréningu a domáceho monitorovania.</li>
   <li><a href="article.php?slug=predialyzacna-edukacia-volba-peritonealnej-dialyzy">Predialyzačná edukácia a voľba modality</a>.</li>
-  <li><a href="article.php?slug=neochota-zdielat-hodnoty-spolocne-rozhodovanie-krt">Spoločné rozhodovanie o náhrade funkcie obličiek</a> — keď pacient nechce zdieľať svoje hodnoty.</li>
+  <li><a href="article.php?slug=neochota-zdielat-hodnoty-spolocne-rozhodovanie-krt">Spoločné rozhodovanie o náhrade funkcie obličiek</a> – keď pacient nechce zdieľať svoje hodnoty.</li>
   <li><a href="article.php?slug=nacasovanie-cievneho-pristupu-avf-avg-pred-hemodialyzou">Načasovanie cievneho prístupu pred hemodialýzou</a>.</li>
   <li><a href="article.php?slug=predikcia-vhodnosti-peritonealnej-dialyzy-validacia">Predikcia vhodnosti peritoneálnej dialýzy</a>.</li>
 </ul>
@@ -272,7 +272,7 @@ $articles[] = [
   <li><strong>Bessie A. Young, Christopher T. Chan, Christopher R. Blagg, Robert S. Lockridge Jr., Thomas A. Golper, Fredric O. Finkelstein, Rachel Shaffer, Rajnish Mehrotra; ASN Dialysis Advisory Group.</strong> <em>How to overcome barriers and establish a successful home HD program.</em> Clinical Journal of the American Society of Nephrology. 2012;7(12):2023–2032. doi: 10.2215/CJN.07080712. <a href="https://doi.org/10.2215/CJN.07080712" target="_blank" rel="noopener noreferrer">DOI</a>.</li>
 </ol>
 
-<p><em><strong>Poznámka k dôkazom:</strong> Bibliografické údaje a kompletné autorstvo všetkých ôsmich citovaných prác boli overené v Europe PMC a v databáze PubMed. Číselné údaje (pomery rizík, intervaly spoľahlivosti, veľkosti súborov, dĺžky sledovania) sú prevzaté priamo z abstraktov primárnych publikácií; plné texty za paywallom neboli dostupné, takže podrobnosti metodiky nebolo možné nezávisle preveriť. Popis pracovného stretnutia KDIGO — jednodňové stretnutie v septembri 2025 v japonskom Kawagoe a zoznam bariér využívania domácej hemodialýzy vo východnej Ázii — vychádza z abstraktu správy. Rozbor prenositeľnosti do európskych a slovenských podmienok, upozornenie na rozdiel medzi strediskovou a domácou intenzívnou dialýzou vo FHN štúdiách, tabuľka sily dôkazov a výhrady k selekčnému skresleniu registrových porovnaní sú <strong>vlastným odborným spracovaním</strong> opretým o citované práce.</em></p>
+<p><em><strong>Poznámka k dôkazom:</strong> Bibliografické údaje a kompletné autorstvo všetkých ôsmich citovaných prác boli overené v Europe PMC a v databáze PubMed. Číselné údaje (pomery rizík, intervaly spoľahlivosti, veľkosti súborov, dĺžky sledovania) sú prevzaté priamo z abstraktov primárnych publikácií; plné texty za paywallom neboli dostupné, takže podrobnosti metodiky nebolo možné nezávisle preveriť. Popis pracovného stretnutia KDIGO – jednodňové stretnutie v septembri 2025 v japonskom Kawagoe a zoznam bariér využívania domácej hemodialýzy vo východnej Ázii – vychádza z abstraktu správy. Rozbor prenositeľnosti do európskych a slovenských podmienok, upozornenie na rozdiel medzi strediskovou a domácou intenzívnou dialýzou vo FHN štúdiách, tabuľka sily dôkazov a výhrady k selekčnému skresleniu registrových porovnaní sú <strong>vlastným odborným spracovaním</strong> opretým o citované práce.</em></p>
 HTML,
 ];
 

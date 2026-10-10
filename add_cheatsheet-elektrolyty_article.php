@@ -29,7 +29,7 @@ $articles[] = [
   <figcaption>Sérové referenčné rozsahy hlavných elektrolytov (mmol/l).</figcaption>
 </figure>
 
-<p>Ťahák k poruchám <strong>sodíka, draslíka, vápnika, magnézia a fosfátov</strong> — normálne hodnoty, hlavné príčiny, EKG nálezy a bezpečné limity korekcie. Interaktívne postupy: <a href="nastroj_hyponatremia.php">algoritmus hyponatriémie</a>, <a href="nastroj_hypokalemia.php">sprievodca hypokaliémiou</a>. Kalkulačky: <a href="calculator_na.php">sodík/korekcia</a>, <a href="calculator_ca.php">korigovaný vápnik</a>.</p>
+<p>Ťahák k poruchám <strong>sodíka, draslíka, vápnika, magnézia a fosfátov</strong> – normálne hodnoty, hlavné príčiny, EKG nálezy a bezpečné limity korekcie. Interaktívne postupy: <a href="nastroj_hyponatremia.php">algoritmus hyponatriémie</a>, <a href="nastroj_hypokalemia.php">sprievodca hypokaliémiou</a>. Kalkulačky: <a href="calculator_na.php">sodík/korekcia</a>, <a href="calculator_ca.php">korigovaný vápnik</a>.</p>
 
 <h2>Normálne hodnoty (sérum)</h2>
 <div class="table-responsive" role="region" aria-label="Normálne hodnoty (sérum)" tabindex="0">
@@ -55,8 +55,8 @@ $articles[] = [
     <tr><th scope="col">Porucha</th><th scope="col">Hlavné príčiny</th><th scope="col">Kľúč k manažmentu</th></tr>
   </thead>
   <tbody>
-    <tr><td>Hyponatriémia</td><td>SIADH, hypovolémia, srdcové/hepatálne/renálne zlyhanie, polydipsia, hypotyreóza/Addison</td><td>Najprv tonicita + objem; rýchlosť korekcie <strong>≤ 8–10 mmol/l/24 h</strong> (≤ 6 pri vysokom riziku) — prevencia osmotického demyelinizačného syndrómu (ODS)</td></tr>
-    <tr><td>Hypernatriémia</td><td>Strata vody (hnačka, horúčka, diabetes insipidus), nedostatočný príjem, hypertonické roztoky</td><td>Vypočítaj deficit vody; pokles Na<sup>+</sup> <strong>≤ 10–12 mmol/l/24 h</strong> — prevencia edému mozgu</td></tr>
+    <tr><td>Hyponatriémia</td><td>SIADH, hypovolémia, srdcové/hepatálne/renálne zlyhanie, polydipsia, hypotyreóza/Addison</td><td>Najprv tonicita + objem; rýchlosť korekcie <strong>≤ 8–10 mmol/l/24 h</strong> (≤ 6 pri vysokom riziku) – prevencia osmotického demyelinizačného syndrómu (ODS)</td></tr>
+    <tr><td>Hypernatriémia</td><td>Strata vody (hnačka, horúčka, diabetes insipidus), nedostatočný príjem, hypertonické roztoky</td><td>Vypočítaj deficit vody; pokles Na<sup>+</sup> <strong>≤ 10–12 mmol/l/24 h</strong> – prevencia edému mozgu</td></tr>
   </tbody>
 </table>
 </div>
@@ -95,7 +95,7 @@ $articles[] = [
     <tr><th scope="col">Porucha</th><th scope="col">Hlavné príčiny</th><th scope="col">Poznámka</th></tr>
   </thead>
   <tbody>
-    <tr><td>Hypomagneziémia</td><td>Diuretiká, PPI, alkohol, GIT straty, inhibítory EGFR</td><td>Spôsobuje refraktérnu hypokaliémiu a hypokalciémiu — koriguj ho ako prvé</td></tr>
+    <tr><td>Hypomagneziémia</td><td>Diuretiká, PPI, alkohol, GIT straty, inhibítory EGFR</td><td>Spôsobuje refraktérnu hypokaliémiu a hypokalciémiu – koriguj ho ako prvé</td></tr>
     <tr><td>Hypermagneziémia</td><td>CKD + suplementácia/antacidá, eklampsia (liečba MgSO<sub>4</sub>)</td><td>Hyporeflexia, hypotenzia, zástava dychu; antidotum kalcium i.v.</td></tr>
     <tr><td>Hypofosfatémia</td><td>Refeeding syndróm, alkohol, DKA pri liečbe, renálne straty (Fanconi)</td><td>Ťažká (&lt; 0,3 mmol/l): svalová slabosť, rabdomyolýza, respiračné zlyhanie</td></tr>
     <tr><td>Hyperfosfatémia</td><td>CKD (najčastejšie), syndróm rozpadu nádoru, rabdomyolýza</td><td>CKD-MBD: diétne obmedzenie + viazače fosfátov; rieš príčinu</td></tr>
@@ -118,7 +118,7 @@ $articles[] = [
   <li><a href="https://pubmed.ncbi.nlm.nih.gov/25551526/" target="_blank" rel="noopener noreferrer">Sterns RH. Disorders of Plasma Sodium — Causes, Consequences, and Correction. N Engl J Med 2015;372:55–65</a></li>
   <li><a href="https://kdigo.org/guidelines/" target="_blank" rel="noopener noreferrer">KDIGO — klinické odporúčania (poruchy elektrolytov a CKD)</a></li>
 </ul>
-<p><em>Orientačná pomôcka — nenahrádza klinický úsudok.</em></p>
+<p><em>Orientačná pomôcka – nenahrádza klinický úsudok.</em></p>
 HTML,
 ];
 

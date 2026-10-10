@@ -31,9 +31,9 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Multikohortová analýza prezentovaná na 63. kongrese ERA spája prevažne rastlinný stravovací model (najmä Planetary Health Diet) s nižšou celkovou aj renálnou mortalitou u pacientov s CKD. Ide o pozorovaciu štúdiu — nie o dôkaz príčinnej súvislosti — no smer pre prax je čitateľný.',
+    'excerpt'      => 'Multikohortová analýza prezentovaná na 63. kongrese ERA spája prevažne rastlinný stravovací model (najmä Planetary Health Diet) s nižšou celkovou aj renálnou mortalitou u pacientov s CKD. Ide o pozorovaciu štúdiu, nie o dôkaz príčinnej súvislosti, no smer pre prax je zrejmý.',
     'content'      => <<<'HTML'
-<figure><a href="img/rastlinna-strava-nizsia-mortalita-ckd.webp" rel="noopener noreferrer" target="_blank"><img src="img/rastlinna-strava-nizsia-mortalita-ckd.webp" alt="Rastlinné potraviny, ktorých zelené svetlo prúdi do obličky a tá sa rozjasňuje" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Prevaha rastlinnej stravy sa spája s lepším prežívaním — pri CKD však treba strážiť draslík a fosfor.</figcaption></figure>
+<figure><a href="img/rastlinna-strava-nizsia-mortalita-ckd.webp" rel="noopener noreferrer" target="_blank"><img src="img/rastlinna-strava-nizsia-mortalita-ckd.webp" alt="Rastlinné potraviny, ktorých zelené svetlo prúdi do obličky a tá sa rozjasňuje" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Prevaha rastlinnej stravy sa spája s lepším prežívaním – pri CKD však treba strážiť draslík a fosfor.</figcaption></figure>
 
 <p>Na 63. kongrese ERA boli prezentované výsledky multikohortovej analýzy (z databáz NHANES a HCNS), ktorá sledovala, či kvalita stravy súvisí s dlhodobými výsledkami u pacientov s <strong>chronickou chorobou obličiek (CKD)</strong>.</p>
 
@@ -46,8 +46,8 @@ $articles[] = [
 <ul>
   <li><strong>DASH</strong> (Dietary Approaches to Stop Hypertension),</li>
   <li><strong>stredomorská strava</strong> (Mediterranean),</li>
-  <li><strong>Planetary Health Diet (PHD)</strong> — strava pre zdravie planéty,</li>
-  <li><strong>Inverted Pyramid Diet</strong> — „obrátená potravinová pyramída“.</li>
+  <li><strong>Planetary Health Diet (PHD)</strong> – strava pre zdravie planéty,</li>
+  <li><strong>Inverted Pyramid Diet</strong> – „obrátená potravinová pyramída“.</li>
 </ul>
 
 <h2>Hlavné výsledky (mortalita)</h2>
@@ -79,7 +79,7 @@ $articles[] = [
 
 <h2>Praktické ponaučenie pre nefrologickú ambulanciu</h2>
 
-<p>Tento zdroj neponúka liečebný algoritmus „na predpis“, ale dáva praktický smer: pri CKD má zmysel zmysluplne komunikovať <strong>kvalitu stravy</strong>. Najviac logiky dáva podporovať model, ktorý:</p>
+<p>Tento zdroj neponúka liečebný algoritmus „na predpis“, ale dáva praktický smer: pri CKD má zmysel hovoriť s pacientom o <strong>kvalite stravy</strong>. Rozumné je podporovať model, ktorý:</p>
 
 <ul>
   <li>je <strong>prevažne rastlinný</strong> a stojí na <strong>minimálne spracovaných</strong> potravinách,</li>
@@ -87,7 +87,7 @@ $articles[] = [
   <li>a <strong>reálne znižuje príjem červeného mäsa</strong>.</li>
 </ul>
 
-<p>Dôležité upozornenie pri interpretácii: ide o <strong>pozorovaciu analýzu</strong> a o kongresový abstrakt — nie teda o dôkaz príčinnej súvislosti. V praxi treba tiež myslieť na to, že pri CKD môže byť problematická individuálna nutričná tolerancia (napr. príjem bielkovín, riziko sarkopénie pri nevhodne „prehnanom“ rastlinnom režime). Najlepšie funguje skríning nutričného stavu a cielené odporúčanie v spolupráci s dietológom.</p>
+<p>Pri interpretácii treba pamätať, že ide o <strong>pozorovaciu analýzu</strong> a kongresový abstrakt, nie o dôkaz príčinnej súvislosti. V praxi môže byť pri CKD problémom aj individuálna nutričná tolerancia (napr. príjem bielkovín, riziko sarkopénie pri nevhodne „prehnanom“ rastlinnom režime). Najlepšie funguje skríning nutričného stavu a cielené odporúčanie v spolupráci s dietológom.</p>
 
 <hr>
 

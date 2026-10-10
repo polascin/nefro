@@ -31,7 +31,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Retatrutid zostáva neschváleným skúšaným liekom, no na internete sa predávajú produkty s jeho názvom. Ako má lekár reagovať bez legitimizácie rizikového trhu?',
     'content'      => <<<'HTML'
-<figure><a href="img/retatrutid-mimo-schvalenia-neregulovane-pouzivanie.webp" rel="noopener noreferrer" target="_blank"><img src="img/retatrutid-mimo-schvalenia-neregulovane-pouzivanie.webp" alt="Neoznačená liekovka uháňajúca vpred so svetelnou stopou a ďaleko za ňou pomaly sa skladajúci geometrický útvar regulácie" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Keď sa liek dostane k ľuďom skôr než pravidlá, riziko nesie pacient — a lekár ho spravidla nezachytí včas.</figcaption></figure>
+<figure><a href="img/retatrutid-mimo-schvalenia-neregulovane-pouzivanie.webp" rel="noopener noreferrer" target="_blank"><img src="img/retatrutid-mimo-schvalenia-neregulovane-pouzivanie.webp" alt="Neoznačená liekovka uháňajúca vpred so svetelnou stopou a ďaleko za ňou pomaly sa skladajúci geometrický útvar regulácie" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Keď sa liek dostane k ľuďom skôr než pravidlá, riziko nesie pacient – a lekár ho spravidla nezachytí včas.</figcaption></figure>
 
 <p><strong>Retatrutid</strong> patrí medzi najsledovanejšie skúšané lieky na liečbu obezity a diabetu 2. typu. Prvé výsledky klinického programu sú sľubné, no rozhodujúci fakt zostáva nezmenený: retatrutid zatiaľ <strong>neschválila žiadna regulačná autorita pre nijakú indikáciu</strong>. Podľa spoločnosti Eli Lilly je pre pacientov dostupný iba v rámci jej riadne vedených klinických skúšaní.</p>
 
@@ -43,7 +43,7 @@ $articles[] = [
 
 <p>Retatrutid je skúšaný <strong>trojitý agonista receptorov pre GLP-1, GIP a glukagón</strong>, ktorý vyvíja spoločnosť Eli Lilly. Kombinovaný mechanizmus ovplyvňuje príjem potravy, reguláciu glykémie, telesnú hmotnosť a energetický metabolizmus. Výrazný úbytok hmotnosti v klinických skúšaniach vysvetľuje mimoriadny záujem pacientov aj médií.</p>
 
-<p>Sľubný výsledok klinickej štúdie však nie je synonymom regulačného schválenia. Kým sa liek dostane do štandardnej praxe, regulačné autority posudzujú úplnosť údajov o účinnosti, bezpečnosti, výrobe a kvalite. Zároveň sa vytvára schválená informácia o lieku: indikácie, dávkovanie a titrácia, kontraindikácie, upozornenia, liekové interakcie a pravidlá používania v osobitných populáciách.</p>
+<p>Sľubný výsledok klinickej štúdie však ešte neznamená regulačné schválenie. Kým sa liek dostane do štandardnej praxe, regulačné autority posudzujú úplnosť údajov o účinnosti, bezpečnosti, výrobe a kvalite. Zároveň sa vytvára schválená informácia o lieku: indikácie, dávkovanie a titrácia, kontraindikácie, upozornenia, liekové interakcie a pravidlá používania v osobitných populáciách.</p>
 
 <p>Pri retatrutide dnes existujú skúšobné dávkovacie schémy definované protokolmi klinických štúdií. <strong>Neexistuje však schválené dávkovanie pre bežnú klinickú prax</strong> ani definitívne vymedzený dlhodobý bezpečnostný profil.</p>
 

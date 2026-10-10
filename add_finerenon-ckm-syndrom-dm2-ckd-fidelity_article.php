@@ -37,17 +37,17 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Post-hoc združená analýza FIDELITY (12 990 pacientov s DM2 a CKD): finerenón znižoval kardiovaskulárne aj renálne príhody konzistentne naprieč štádiami CKM syndrómu, s priaznivejšou dynamikou CKM (regresia III→II) a porovnateľnou bezpečnosťou vrátane hyperkaliémie.',
     'content'      => <<<'HTML'
-<figure><a href="img/finerenon-ckm-syndrom-dm2-ckd-fidelity.webp" rel="noopener noreferrer" target="_blank"><img src="img/finerenon-ckm-syndrom-dm2-ckd-fidelity.webp" alt="Molekula vysielajúca tri rovnako silné lúče k srdcu, metabolickým časticiam a obličke" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Účinok nemieri na jediný orgán — a práve preto dáva zmysel hodnotiť ho naprieč celým CKM syndrómom.</figcaption></figure>
+<figure><a href="img/finerenon-ckm-syndrom-dm2-ckd-fidelity.webp" rel="noopener noreferrer" target="_blank"><img src="img/finerenon-ckm-syndrom-dm2-ckd-fidelity.webp" alt="Molekula vysielajúca tri rovnako silné lúče k srdcu, metabolickým časticiam a obličke" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Účinok nemieri na jediný orgán – a práve preto dáva zmysel hodnotiť ho naprieč celým CKM syndrómom.</figcaption></figure>
 
 <p>Pacienti s diabetes mellitus 2. typu (DM2) a chronickou chorobou obličiek (CKD) tvoria skupinu
-s vysokým rizikom kardiovaskulárnych aj renálnych príhod. V praxi je však diagnostika a riziková
-stratifikácia často „fragmentovaná“: nefrológ rieši obličky, kardiológ srdce a metabolické faktory
-idú mimo hlavného rozhodovacieho rámca.</p>
+s vysokým rizikom kardiovaskulárnych aj renálnych príhod. V praxi sú však diagnostika a riziková
+stratifikácia často „fragmentované“: nefrológ rieši obličky, kardiológ srdce a metabolické faktory
+zostávajú mimo hlavného rozhodovania.</p>
 
-<p>V tomto kontexte dáva zmysel koncept CKM syndrómu (cardiovascular-kidney-metabolic), ktorý spája
+<p>Preto dáva zmysel koncept CKM syndrómu (cardiovascular-kidney-metabolic), ktorý spája
 obezitu/metabolické riziká, diabetes, CKD a kardiovaskulárne ochorenie do jedného klinického rámca.
-Medscape článok sumarizuje výsledky post-hoc analýzy dvoch randomizovaných FIDELITY štúdií, v ktorej
-sa hodnotilo, či liečba finerenónom prináša konzistentný prínos naprieč CKM štádiami.</p>
+Článok v Medscape zhŕňa výsledky post-hoc analýzy dvoch randomizovaných štúdií FIDELITY, ktorá
+hodnotila, či liečba finerenónom prináša konzistentný prínos naprieč CKM štádiami.</p>
 
 <h2>Dizajn a populácia</h2>
 <ul>
@@ -55,7 +55,7 @@ sa hodnotilo, či liečba finerenónom prináša konzistentný prínos naprieč 
       kontrolovaných štúdií FIDELITY</strong>.</li>
   <li>Zaradených bolo <strong>12 990 pacientov</strong> (priemerný vek 64,8 roka; 70 % mužov), so sérovým
       <strong>K+ ≤ 4,8 mmol/l</strong> a liečených <strong>maximálne tolerovanou inhibíciou RAAS</strong>.</li>
-  <li>Symptomatické <strong>HFrEF</strong> boli zo štúdií vylúčené.</li>
+  <li>Pacienti so symptomatickým <strong>HFrEF</strong> boli zo štúdií vylúčení.</li>
   <li>Pacienti boli podľa <strong>CKM štádia východiskovo</strong> rozdelení na:
     <ul>
       <li><strong>štádium II</strong>: metabolické rizikové faktory alebo stredné až vysoké riziko CKD (n = 3864)</li>
@@ -82,8 +82,8 @@ sa hodnotilo, či liečba finerenónom prináša konzistentný prínos naprieč 
   <li><strong>kardiovaskulárny kompozit</strong>: aHR <strong>1,87</strong> (95 % IS 1,56–2,24)</li>
   <li><strong>renálny kompozit</strong>: aHR <strong>1,96</strong> (95 % IS 1,43–2,69)</li>
 </ul>
-<p>To zodpovedá klinickému očakávaniu, ale dôležité je, že rámec CKM štádia sa správa konzistentne aj
-v prostredí klinického skúšania.</p>
+<p>Zodpovedá to klinickému očakávaniu; podstatné je, že stratifikácia podľa CKM štádia funguje konzistentne
+aj v klinickom skúšaní.</p>
 
 <h3>2) Finerenón znižoval riziko nezávisle od CKM štádia</h3>
 <p>Finerenón znížil:</p>
@@ -91,33 +91,33 @@ v prostredí klinického skúšania.</p>
   <li><strong>kardiovaskulárny kompozit</strong> aj pri rôznych CKM štádiách (P pre interakciu <strong>0,86</strong>)</li>
   <li><strong>renálny kompozit</strong> naprieč CKM štádiami (P pre interakciu <strong>0,65</strong>)</li>
 </ul>
-<p>Čiže prínos bol „robustný“ naprieč východiskovým rizikovým profilom podľa CKM.</p>
+<p>Prínos bol teda konzistentný bez ohľadu na východiskový rizikový profil podľa CKM.</p>
 
 <h3>3) Okrem prínosu v príhodách: aj priaznivejšia dynamika CKM</h3>
 <p>V skupine na finerenóne sa pozorovala priaznivejšia zmena CKM stavu v čase:</p>
 <ul>
   <li><strong>CKM regresia zo štádia III do II</strong>: vyššia pravdepodobnosť pri finerenóne
       (odds ratio 1,66; <strong>P &lt; 0,001</strong>)</li>
-  <li><strong>CKM progresia</strong>: menej častá, ale štatisticky to vyšlo len na hranici
+  <li><strong>CKM progresia</strong>: menej častá, rozdiel bol však len na hranici štatistickej významnosti
       (aOR 0,89; <strong>P = 0,05</strong>)</li>
 </ul>
 
 <h3>4) Bezpečnosť naprieč CKM štádiami</h3>
-<p>Bezpečnostný profil finerenónu bol <strong>podobný naprieč CKM štádiami</strong> a nebol pozorovaný
-diferencovaný nárast rizika <strong>hyperkaliémie podľa štádia</strong>.</p>
+<p>Bezpečnostný profil finerenónu bol <strong>podobný naprieč CKM štádiami</strong> a nepozoroval sa
+rozdielny nárast rizika <strong>hyperkaliémie podľa štádia</strong>.</p>
 
 <h2>Prečo je to zaujímavé pre nefrológiu</h2>
-<p>Z nefrologického pohľadu je prakticky dôležité, že tento výsledok podporuje myšlienku, že finerenón
-nie je „len renálny“ liek alebo „len kardiálny“ liek, ale pravdepodobne zasahuje spoločné dráhy, ktoré
+<p>Pre nefrológiu je dôležité, že výsledok podporuje predstavu finerenónu ako lieku, ktorý nie je
+„len renálny“ ani „len kardiálny“, ale pravdepodobne zasahuje spoločné dráhy, ktoré
 vedú k renálnym aj kardiovaskulárnym príhodám. CKM rámec navyše naznačuje, že pacient môže mať komplexné
 riziko aj bez toho, aby bolo v klinickej dokumentácii explicitne pomenované ako jedna jednotka.</p>
-<p>Napriek tomu treba mať na pamäti, že ide o post-hoc analýzu a nie primárny cieľový ukazovateľ štúdie pre CKM
-štádiá.</p>
+<p>Treba však pamätať, že ide o post-hoc analýzu; hodnotenie podľa CKM štádií nebolo primárnym cieľom
+štúdií.</p>
 
-<h2>Limity a interpretácia opatrne</h2>
+<h2>Limity a opatrná interpretácia</h2>
 <p>Medscape aj pôvodná práca zdôrazňujú obmedzenia:</p>
 <ul>
-  <li><strong>FIDELITY štúdie neboli pôvodne dizajnované na skúmanie účinkov finerenónu na CKM
+  <li><strong>Štúdie FIDELITY neboli pôvodne navrhnuté na skúmanie účinkov finerenónu na CKM
       syndróm</strong>, takže niektoré podskupiny majú obmedzené počty a nie všetky potrebné premenné
       boli systematicky zbierané pre úplnú klasifikáciu CKM štádií.</li>
   <li>Post-hoc charakter znižuje istotu kauzality a robí z výsledkov skôr potvrdenie konzistencie než
@@ -134,7 +134,7 @@ hyperkaliémie bola porovnateľná naprieč štádiami.</p>
 <hr>
 
 <p><em><strong>Zdroj:</strong> Kevin Bryan Lo, John W. Ostrominski, et al. (FIDELITY post-hoc analýza),
-<em>JAMA Cardiology</em> (2026) — spracované v <em>Medscape Medical News</em>: „Finerenone Benefits
+<em>JAMA Cardiology</em> (2026) – spracované v <em>Medscape Medical News</em>: „Finerenone Benefits
 Patients With T2D, CKD Across Cardiovascular-Kidney-Metabolic…“.
 <a href="https://www.medscape.com/viewarticle/finerenone-benefits-patients-t2d-ckd-across-cardiovascular-2026a1000m3s" target="_blank" rel="noopener noreferrer">Medscape</a> ·
 <a href="https://pubmed.ncbi.nlm.nih.gov/42234437/" target="_blank" rel="noopener noreferrer">PubMed</a>.</em></p>

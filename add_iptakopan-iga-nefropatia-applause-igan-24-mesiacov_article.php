@@ -27,9 +27,9 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Inhibítor faktora B spomalil ročný pokles eGFR o polovicu a znížil riziko kombinovaného obličkového ukazovateľa o 43 %. Bezpečnostný profil však nie je totožný s placebom: závažné infekcie 6,7 % oproti 2,1 %.',
     'content'      => <<<'HTML'
-<figure><a href="img/iptakopan-iga-nefropatia-applause-igan-24-mesiacov.webp" rel="noopener noreferrer" target="_blank"><img src="img/iptakopan-iga-nefropatia-applause-igan-24-mesiacov.webp" alt="Dve klesajúce krivky z rovnakého bodu — jedna strmá a tmavnúca, druhá mierna a stále jasne svietiaca" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Cieľom nie je návrat na východiskovú hodnotu, ale zmena sklonu — pomalší pokles funkcie obličiek v čase.</figcaption></figure>
+<figure><a href="img/iptakopan-iga-nefropatia-applause-igan-24-mesiacov.webp" rel="noopener noreferrer" target="_blank"><img src="img/iptakopan-iga-nefropatia-applause-igan-24-mesiacov.webp" alt="Dve klesajúce krivky z rovnakého bodu – jedna strmá a tmavnúca, druhá mierna a stále jasne svietiaca" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Cieľom nie je návrat na východiskovú hodnotu, ale zmena sklonu – pomalší pokles funkcie obličiek v čase.</figcaption></figure>
 
-<p class="article-dek"><em>Prvý raz máme z dlhodobej štúdie fázy III dôkaz, že selektívna inhibícia alternatívnej cesty komplementu pri IgA nefropatii ovplyvní nielen proteinúriu, ale aj stratu funkcie obličiek. Cenou je trojnásobný výskyt závažných infekcií — a to je pri komplementovej blokáde údaj, ktorý sa nedá odbiť poznámkou o „porovnateľnej bezpečnosti“.</em></p>
+<p class="article-dek"><em>Prvý raz máme z dlhodobej štúdie fázy III dôkaz, že selektívna inhibícia alternatívnej cesty komplementu pri IgA nefropatii ovplyvní nielen proteinúriu, ale aj stratu funkcie obličiek. Cenou je trojnásobný výskyt závažných infekcií – a to je pri komplementovej blokáde údaj, ktorý sa nedá odbiť poznámkou o „porovnateľnej bezpečnosti“.</em></p>
 
 <p>Konečná analýza randomizovanej štúdie fázy III APPLAUSE-IgAN preukázala, že pridanie iptakopanu k podpornej liečbe významne spomalilo pokles odhadovanej glomerulovej filtrácie (eGFR) u dospelých pacientov s IgA nefropatiou a pretrvávajúcou proteinúriou. Liečba zároveň znížila riziko kombinovaného ukazovateľa progresie ochorenia obličiek.</p>
 
@@ -41,13 +41,13 @@ $articles[] = [
 
 <p>Alternatívna cesta funguje ako <strong>amplifikačný mechanizmus</strong> aktivácie komplementu bez ohľadu na to, ktorou cestou sa aktivácia začala. Faktor B je nevyhnutnou súčasťou C3-konvertázy alternatívnej cesty; jeho inhibíciou sa obmedzuje štiepenie C3, ďalšia amplifikácia, tvorba C5-konvertázy a následná tvorba terminálneho komplexu C5b-9.</p>
 
-<p>Tvrdenie, že aktivácia komplementu je jediným alebo univerzálne dominantným mechanizmom IgA nefropatie, by však bolo nepresné. Ide o jednu z viacerých vzájomne prepojených zložiek patogenézy a jej význam sa medzi pacientmi pravdepodobne líši — čo je zároveň dôvod, prečo nemožno očakávať rovnakú odpoveď u všetkých.</p>
+<p>Tvrdenie, že aktivácia komplementu je jediným alebo univerzálne dominantným mechanizmom IgA nefropatie, by však bolo nepresné. Ide o jednu z viacerých vzájomne prepojených zložiek patogenézy a jej význam sa medzi pacientmi pravdepodobne líši – čo je zároveň dôvod, prečo nemožno očakávať rovnakú odpoveď u všetkých.</p>
 
 <h2>Mechanizmus účinku iptakopanu</h2>
 
 <p>Iptakopan je perorálne podávaný selektívny inhibítor faktora B. Zasahuje <strong>proximálnu</strong> časť alternatívnej cesty komplementu a neblokuje klasickú ani lektínovú cestu priamo. Inhibícia faktora B má obmedziť amplifikáciu aktivácie C3, tvorbu C3a a C5a, depozíciu fragmentov C3, vznik terminálneho komplexu C5b-9 a komplementom sprostredkovaný zápal.</p>
 
-<p>Iptakopan sa už klinicky používa pri niektorých ďalších ochoreniach spojených s dysreguláciou komplementu. Účinnosť a bezpečnosť však nemožno automaticky prenášať medzi rozdielnymi diagnózami — každá indikácia vyžaduje samostatné hodnotenie pomeru prínosu a rizika.</p>
+<p>Iptakopan sa už klinicky používa pri niektorých ďalších ochoreniach spojených s dysreguláciou komplementu. Účinnosť a bezpečnosť však nemožno automaticky prenášať medzi rozdielnymi diagnózami – každá indikácia vyžaduje samostatné hodnotenie pomeru prínosu a rizika.</p>
 
 <h2>Usporiadanie štúdie APPLAUSE-IgAN</h2>
 
@@ -55,7 +55,7 @@ $articles[] = [
 
 <p>Pacienti boli randomizovaní v pomere 1 : 1 na iptakopan 200 mg perorálne dvakrát denne alebo placebo dvakrát denne. Obe skupiny pokračovali v podpornej liečbe zahŕňajúcej stabilnú maximálnu tolerovanú dávku inhibítora ACE alebo blokátora receptora AT1. Liečba inhibítorom SGLT2 bola povolená, ale nebola podmienkou zaradenia; pri vstupe ju dostávala približne pätina pacientov.</p>
 
-<p>Randomizovaných bolo 478 pacientov, konečná analýza primárneho výsledku zahŕňala <strong>477 pacientov</strong> — 238 na iptakopane a 239 na placebe. Tieto dva údaje treba rozlišovať.</p>
+<p>Randomizovaných bolo 478 pacientov, konečná analýza primárneho výsledku zahŕňala <strong>477 pacientov</strong> – 238 na iptakopane a 239 na placebe. Tieto dva údaje treba rozlišovať.</p>
 
 <h2>Primárny výsledok: spomalenie poklesu eGFR</h2>
 
@@ -94,7 +94,7 @@ $articles[] = [
 
 <h2>Proteinúria</h2>
 
-<p>Predchádzajúca deväťmesačná analýza preukázala, že iptakopan znížil 24-hodinový pomer bielkovín ku kreatinínu v moči v porovnaní s placebom o <strong>38,3 %</strong>. Tento údaj vyjadruje <em>porovnávací</em> účinok oproti placebu — nemožno ho zamieňať s percentuálnymi zmenami v jednotlivých ramenách, ktoré sú zo svojej podstaty vyššie.</p>
+<p>Predchádzajúca deväťmesačná analýza preukázala, že iptakopan znížil 24-hodinový pomer bielkovín ku kreatinínu v moči v porovnaní s placebom o <strong>38,3 %</strong>. Tento údaj vyjadruje <em>porovnávací</em> účinok oproti placebu – nemožno ho zamieňať s percentuálnymi zmenami v jednotlivých ramenách, ktoré sú zo svojej podstaty vyššie.</p>
 
 <p>Pokles proteinúrie sa prejavil už v prvých mesiacoch a predchádzal rozdielu v poklese eGFR. Tento časový priebeh je biologicky konzistentný s nefroprotektívnym účinkom, hoci nepreukazuje, že celý účinok na eGFR bol sprostredkovaný iba znížením proteinúrie.</p>
 
@@ -126,7 +126,7 @@ $articles[] = [
   </table>
 </div>
 
-<p>Celkový bezpečnostný profil teda <strong>nemožno označiť za totožný s placebom</strong>. Hoci celkový počet nežiaducich a závažných nežiaducich udalostí bol podobný, viac než trojnásobný výskyt závažných infekcií pri inhibícii komplementu si zaslúži osobitnú pozornosť — je to práve tá kategória rizika, ktorú tento mechanizmus účinku predpovedá.</p>
+<p>Celkový bezpečnostný profil teda <strong>nemožno označiť za totožný s placebom</strong>. Hoci celkový počet nežiaducich a závažných nežiaducich udalostí bol podobný, viac než trojnásobný výskyt závažných infekcií pri inhibícii komplementu si zaslúži osobitnú pozornosť – je to práve tá kategória rizika, ktorú tento mechanizmus účinku predpovedá.</p>
 
 <p>Pred liečbou sa vyžaduje očkovanie proti <em>Neisseria meningitidis</em> a <em>Streptococcus pneumoniae</em>; očkovanie proti <em>Haemophilus influenzae</em> typu b sa odporúča podľa miestnych pravidiel. Ani správne očkovanie riziko infekcie neodstraňuje úplne. Pacienti musia byť poučení o príznakoch závažnej infekcie a o potrebe bezodkladného vyšetrenia.</p>
 
@@ -154,7 +154,7 @@ $articles[] = [
 
 <h3>Nízke využitie inhibítorov SGLT2</h3>
 
-<p>Inhibítor SGLT2 užívala pri vstupe iba približne pätina pacientov. Nie je preto jasné, aký bude <strong>absolútny</strong> prínos iptakopanu pri dôslednej súčasnej liečbe zahŕňajúcej blokádu systému renín-angiotenzín aj inhibítor SGLT2. Ide o systematický problém všetkých súčasných štúdií pri IgA nefropatii: štandard podpornej liečby sa mení rýchlejšie, než sa stihnú dokončiť.</p>
+<p>Inhibítor SGLT2 užívala pri vstupe iba približne pätina pacientov. Nie je preto jasné, aký bude <strong>absolútny</strong> prínos iptakopanu pri dôslednej súčasnej liečbe zahŕňajúcej blokádu systému renín-angiotenzín aj inhibítor SGLT2. Tento problém majú všetky súčasné štúdie pri IgA nefropatii: štandard podpornej liečby sa mení rýchlejšie, než sa ich podarí dokončiť.</p>
 
 <h3>Bez priameho porovnania s inou cielenou liečbou</h3>
 
@@ -166,13 +166,13 @@ $articles[] = [
 
 <h2>Zaradenie do liečby IgA nefropatie</h2>
 
-<p>Výsledky podporujú model súbežnej liečby dvoch hlavných zložiek progresie IgA nefropatie — nešpecifických mechanizmov chronického poškodenia nefrónov a imunologických mechanizmov primárneho ochorenia.</p>
+<p>Výsledky podporujú model súbežnej liečby dvoch hlavných zložiek progresie IgA nefropatie – nešpecifických mechanizmov chronického poškodenia nefrónov a imunologických mechanizmov primárneho ochorenia.</p>
 
-<p>Základom liečby zostáva optimalizácia krvného tlaku, blokáda systému renín-angiotenzín, primeraná liečba inhibítorom SGLT2, kontrola kardiovaskulárneho rizika a ďalšie nefroprotektívne opatrenia. <strong>Iptakopan túto liečbu nenahrádza</strong> — predstavuje prídavnú cielenú terapiu alternatívnej cesty komplementu.</p>
+<p>Základom liečby zostáva optimalizácia krvného tlaku, blokáda systému renín-angiotenzín, primeraná liečba inhibítorom SGLT2, kontrola kardiovaskulárneho rizika a ďalšie nefroprotektívne opatrenia. <strong>Iptakopan túto liečbu nenahrádza</strong> – predstavuje prídavnú cielenú terapiu alternatívnej cesty komplementu.</p>
 
 <p>O vhodnosti liečby treba rozhodovať individuálne podľa rizika progresie, výšky a trvania proteinúrie, aktuálnej eGFR a jej vývoja, histologického nálezu, predchádzajúcej a súčasnej liečby, infekčného rizika, stavu očkovania a dostupnosti a nákladov liečby.</p>
 
-<p>Štúdia nepreukázala, že komplementová aktivita bola u jednotlivých pacientov meraná a použitá na výber liečby. <strong>Zatiaľ preto nemáme validovaný biomarker</strong>, ktorý by spoľahlivo identifikoval pacientov s najväčšou pravdepodobnosťou odpovede — a pri liečbe s trojnásobným rizikom závažnej infekcie by taký biomarker bol mimoriadne užitočný.</p>
+<p>Štúdia nepreukázala, že komplementová aktivita bola u jednotlivých pacientov meraná a použitá na výber liečby. <strong>Zatiaľ preto nemáme validovaný biomarker</strong>, ktorý by spoľahlivo identifikoval pacientov s najväčšou pravdepodobnosťou odpovede – a pri liečbe s trojnásobným rizikom závažnej infekcie by taký biomarker bol mimoriadne užitočný.</p>
 
 <h2>Záver</h2>
 
@@ -185,10 +185,10 @@ $articles[] = [
 <h2>Súvisiace články</h2>
 
 <ul>
-  <li><a href="article.php?slug=kompletna-remisia-proteinurie-igan-protect-post-hoc">Kompletná remisia proteinúrie pri IgA nefropatii (PROTECT)</a> — sparsentan a hodnota proteinúrie ako cieľa.</li>
+  <li><a href="article.php?slug=kompletna-remisia-proteinurie-igan-protect-post-hoc">Kompletná remisia proteinúrie pri IgA nefropatii (PROTECT)</a> – sparsentan a hodnota proteinúrie ako cieľa.</li>
   <li><a href="article.php?slug=iga-nefropatia-algoritmus-kdigo-2025-kdoqi">Algoritmus liečby IgA nefropatie podľa KDIGO 2025</a>.</li>
   <li><a href="article.php?slug=telitacicept-iga-nefropatia-teligan-faza-3-interim">Telitacicept pri IgA nefropatii</a>.</li>
-  <li><a href="article.php?slug=c3-glomerulopatia-c3g-liecba-inhibicia-komplementu">C3 glomerulopatia a inhibícia komplementu</a> — príbuzný mechanizmus v inej diagnóze.</li>
+  <li><a href="article.php?slug=c3-glomerulopatia-c3g-liecba-inhibicia-komplementu">C3 glomerulopatia a inhibícia komplementu</a> – príbuzný mechanizmus v inej diagnóze.</li>
 </ul>
 
 <hr>
@@ -201,7 +201,7 @@ $articles[] = [
   <li><strong>Kidney Disease: Improving Global Outcomes, KDIGO IgA Nephropathy Guideline Work Group.</strong> <em>Clinical Practice Guideline for the Management of Immunoglobulin A Nephropathy and Immunoglobulin A Vasculitis.</em> <a href="https://kdigo.org/guidelines/iga-nephropathy/" target="_blank" rel="noopener noreferrer">KDIGO</a>.</li>
 </ol>
 
-<p><em><strong>Poznámka k dôkazom:</strong> Číselné údaje — 477 pacientov v konečnej analýze (238 iptakopan, 239 placebo), vstupné kritériá eGFR ≥ 30 ml/min/1,73 m² a UPCR ≥ 1 g/g, dávka 200 mg dvakrát denne, anualizovaný sklon eGFR −3,10 oproti −6,12 s rozdielom 3,02 (95 % IS 2,02 – 4,01) pri upravenom p &lt; 0,001, kombinovaný ukazovateľ 21,4 % oproti 33,5 % s HR 0,57 (0,40 – 0,81) a upraveným p = 0,003, jeho úplná definícia vrátane 30-percentného poklesu eGFR, nežiaduce udalosti 87,0 % oproti 89,1 %, závažné nežiaduce udalosti 12,2 % oproti 11,7 %, závažné infekcie 6,7 % oproti 2,1 %, žiadne úmrtia, deväťmesačný pokles UPCR o 38,3 % oproti placebu, financovanie spoločnosťou Novartis a registračné číslo NCT04578834 — boli overené proti abstraktu v zázname PubMed. <strong>Úplný autorský kolektív (29 mien) bol doplnený z metaúdajov PubMed</strong>; podklad ho neuvádzal a upozorňoval, že mená netreba dopĺňať odhadom. Plný text v <em>New England Journal of Medicine</em> je za platobnou bariérou vydavateľa a nebol sprístupnený; údaje o počte randomizovaných pacientov (478), podiele užívateľov inhibítorov SGLT2 pri vstupe (približne pätina), stratifikácii randomizácie a požiadavkách na očkovanie pochádzajú z podkladového spracovania a <strong>neboli nezávisle overené</strong> proti plnému textu. Výpočet NNT, komentár k rýchlosti poklesu v placebovom ramene a upozornenie, že bezpečnosť nie je totožná s placebom, sú <strong>vlastným odborným hodnotením</strong>.</em></p>
+<p><em><strong>Poznámka k dôkazom:</strong> Číselné údaje – 477 pacientov v konečnej analýze (238 iptakopan, 239 placebo), vstupné kritériá eGFR ≥ 30 ml/min/1,73 m² a UPCR ≥ 1 g/g, dávka 200 mg dvakrát denne, anualizovaný sklon eGFR −3,10 oproti −6,12 s rozdielom 3,02 (95 % IS 2,02 – 4,01) pri upravenom p &lt; 0,001, kombinovaný ukazovateľ 21,4 % oproti 33,5 % s HR 0,57 (0,40 – 0,81) a upraveným p = 0,003, jeho úplná definícia vrátane 30-percentného poklesu eGFR, nežiaduce udalosti 87,0 % oproti 89,1 %, závažné nežiaduce udalosti 12,2 % oproti 11,7 %, závažné infekcie 6,7 % oproti 2,1 %, žiadne úmrtia, deväťmesačný pokles UPCR o 38,3 % oproti placebu, financovanie spoločnosťou Novartis a registračné číslo NCT04578834 – boli overené proti abstraktu v zázname PubMed. <strong>Úplný autorský kolektív (29 mien) bol doplnený z metaúdajov PubMed</strong>; podklad ho neuvádzal a upozorňoval, že mená netreba dopĺňať odhadom. Plný text v <em>New England Journal of Medicine</em> je za platobnou bariérou vydavateľa a nebol sprístupnený; údaje o počte randomizovaných pacientov (478), podiele užívateľov inhibítorov SGLT2 pri vstupe (približne pätina), stratifikácii randomizácie a požiadavkách na očkovanie pochádzajú z podkladového spracovania a <strong>neboli nezávisle overené</strong> proti plnému textu. Výpočet NNT, komentár k rýchlosti poklesu v placebovom ramene a upozornenie, že bezpečnosť nie je totožná s placebom, sú <strong>vlastným odborným hodnotením</strong>.</em></p>
 HTML,
 ];
 

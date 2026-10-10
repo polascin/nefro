@@ -37,14 +37,14 @@ $articles[] = [
   <a href="img/obob-01.png" target="_blank" rel="noopener noreferrer">
     <img src="img/obob-01.png" alt="Ilustrácia: redukcia hmotnosti a zlepšenie obličiek pri cukrovke a obezite" loading="lazy" decoding="async">
   </a>
-  <figcaption>Keď sa stretne cukrovka a obezita, je to jeden spoločný príbeh — a obličky sú jeho tichými svedkami.</figcaption>
+  <figcaption>Keď sa stretne cukrovka a obezita, je to jeden spoločný príbeh – a obličky sú jeho tichými svedkami.</figcaption>
 </figure>
 
-<p class="article-dek"><em>Ako redukcia hmotnosti u diabetika odľahčí filtračný aparát obličiek a aké sú súčasné medicínske možnosti manažmentu obezity.</em></p>
+<p class="article-dek"><em>Ako redukcia hmotnosti u diabetika odľahčí filtračný aparát obličiek a aké sú dnešné možnosti liečby obezity.</em></p>
 
 <p>Keď má človek diabetes a zároveň aj obezitu, nejde len o „dva problémy vedľa seba“. Ide o jeden spoločný príbeh, v ktorom sa stretávajú metabolická nerovnováha, zmeny v cievach, zápalové procesy a často aj zhoršená schopnosť dlhodobo udržiavať stabilnú hladinu cukru v krvi. Obezita v takomto prostredí zvyšuje nároky na organizmus a postupne sa môže premietnuť aj do toho, ako fungujú obličky.</p>
 
-<p>Obličky sú pri diabetikovi „tichými svedkami“ dlhodobého stresu. Nemusia bolieť, neukážu sa hneď v plnom rozsahu a človek môže roky fungovať tak, že sa nič dramatické „nevníma“. Napriek tomu sa v pozadí môžu diať zmeny, ktoré sa neskôr prejavia albumínom v moči, postupným zhoršovaním funkcie obličiek a zvýšeným kardiovaskulárnym rizikom. Preto medzinárodné odporúčania zdôrazňujú, že pri diabete a chronickom ochorení obličiek ide o komplexný manažment rizík vrátane tlaku, albuminúrie a celkového kardiometabolického zdravia, nie iba o glykémiu [1,2].</p>
+<p>Obličky sú pri diabetikovi „tichými svedkami“ dlhodobého stresu. Nebolia, poškodenie sa neprejaví hneď v plnom rozsahu a človek roky nemusí nič zvláštne pociťovať. Napriek tomu sa v pozadí môžu diať zmeny, ktoré sa neskôr prejavia albumínom v moči, postupným zhoršovaním funkcie obličiek a zvýšeným kardiovaskulárnym rizikom. Medzinárodné odporúčania preto zdôrazňujú, že pri diabete a chronickom ochorení obličiek treba sledovať a liečiť viacero rizík naraz – krvný tlak, albuminúriu a celkové kardiometabolické zdravie, nielen glykémiu [1,2].</p>
 
 <figure class="article-figure">
   <a href="img/obob-02.png" target="_blank" rel="noopener noreferrer">
@@ -55,11 +55,11 @@ $articles[] = [
 
 <h2>Prečo obezita zvyšuje tlak na obličky</h2>
 
-<p>V praxi je užitočné predstaviť si obličku ako filtračný systém, ktorý potrebuje stabilné podmienky. Pri obezite sa často mení viac vecí naraz. Tukové tkanivo nie je len „sklad energie“. Je aktívne a vytvára látky a signály, ktoré podporujú chronický zápal, zhoršujú inzulínovú citlivosť a súvisia aj s poruchami metabolizmu tukov. To isté sa týka aj faktorov, ktoré zvyšujú riziko poškodenia ciev a tým aj cievnych štruktúr v obličkách.</p>
+<p>V praxi je užitočné predstaviť si obličku ako filtračný systém, ktorý potrebuje stabilné podmienky. Pri obezite sa často mení viac vecí naraz. Tukové tkanivo nie je len „sklad energie“. Je aktívne a vytvára látky a signály, ktoré podporujú chronický zápal, zhoršujú inzulínovú citlivosť a súvisia aj s poruchami metabolizmu tukov. Tieto signály zároveň zvyšujú riziko poškodenia ciev, a tým aj cievnych štruktúr v obličkách.</p>
 
-<p>K tomu sa pridáva častý sprievodný problém: vysoký krvný tlak. Aj keď sa o krvnom tlaku hovorí často, pri obličkách platí, že ide o jedného z najdôležitejších „spúšťačov“ dlhodobého poškodenia filtračného aparátu. Ak je tlak dlhodobo vyšší, oblička sa musí prispôsobiť. Ak je adaptácia dlhodobá a nevhodná, zvyšuje sa riziko, že sa poškodenie časom zafixuje. Medzinárodné dokumenty pre manažment diabetu pri chronickom ochorení obličiek preto opakovane zdôrazňujú, že treba pracovať aj s tlakom, albuminúriou a celkovým kardiometabolickým rizikom, nie iba s jedným „číslom“ [1,2].</p>
+<p>K tomu sa pridáva častý sprievodný problém: vysoký krvný tlak. O krvnom tlaku sa hovorí často, no pre obličky je naozaj jedným z najdôležitejších „spúšťačov“ dlhodobého poškodenia filtračného aparátu. Pri dlhodobo vyššom tlaku sa oblička musí prispôsobiť, a ak je toto prispôsobenie dlhodobé a nevhodné, zvyšuje sa riziko, že sa poškodenie časom zafixuje. Medzinárodné odporúčania pre liečbu diabetu pri chronickom ochorení obličiek preto opakovane zdôrazňujú, že treba sledovať aj tlak, albuminúriu a celkové kardiometabolické riziko, nie iba jedno „číslo“ [1,2].</p>
 
-<p>Obezita navyše často zhoršuje kvalitu kompenzácie diabetu. Človek môže byť na liečbe, ale inzulínová rezistencia zostáva vysoká, hladiny cukru sa môžu opakovane „tlačiť“ hore a potom opäť klesať a tento kolotoč metabolického stresu postupne zasahuje orgány. Keď sa tento proces kombinuje s už spomenutými tlakmi a zápalom, obraz sa zhoršuje aj pre obličky. A preto dáva zmysel, že redukcia hmotnosti sa v modernej medicíne nepovažuje za kozmetický cieľ, ale môže byť súčasťou ochrany orgánov [1,2].</p>
+<p>Obezita navyše často zhoršuje kvalitu kompenzácie diabetu. Človek môže byť na liečbe, ale inzulínová rezistencia zostáva vysoká, hladiny cukru sa môžu opakovane „tlačiť“ hore a potom opäť klesať a tento kolotoč metabolického stresu postupne zasahuje orgány. Ak sa k tomu pridá vysoký tlak a zápal, obraz sa zhoršuje aj pre obličky. Preto sa redukcia hmotnosti v dnešnej medicíne nepovažuje za kozmetický cieľ, ale za možnú súčasť ochrany orgánov [1,2].</p>
 
 <figure class="article-figure">
   <a href="img/obob-03.png" target="_blank" rel="noopener noreferrer">
@@ -70,15 +70,15 @@ $articles[] = [
 
 <h2>Ako môže redukcia hmotnosti u diabetika odľahčiť filtračný aparát</h2>
 
-<p>Najdôležitejšie je, že chudnutie môže ovplyvniť viac mechanizmov naraz. Nie vždy sa to dá vysvetliť jednou vetou a nie u každého bude mať rovnaký účinok. V praxi sa však často pozoruje, že keď sa dlhodobo zlepší metabolická situácia, spravidla sa zlepší aj prostredie pre obličky.</p>
+<p>Chudnutie môže ovplyvniť viac mechanizmov naraz, hoci nie u každého bude mať rovnaký účinok. V praxi sa často pozoruje, že keď sa dlhodobo zlepší metabolická situácia, spravidla sa zlepší aj prostredie pre obličky.</p>
 
-<p>Pri redukcii hmotnosti často nastane aspoň časť týchto javov: znižuje sa inzulínová rezistencia, lepšie sa regulujú výkyvy glykémie, postupne sa zlepšuje krvný tlak a znižuje sa chronický zápalový signál. Tým sa menia „podmienky v okolí“ obličky. Ak sú tieto podmienky menej stresujúce, obličky nemusia tak intenzívne kompenzovať a riziko progresie poškodenia sa môže znížiť. Práve albuminúria je v tomto kontexte dôležitým signálom. Ak sa albumín v moči znižuje, často to znamená, že sa zlepšujú podmienky pre filtračný aparát [1,2].</p>
+<p>Pri redukcii hmotnosti často nastane aspoň časť týchto javov: znižuje sa inzulínová rezistencia, lepšie sa regulujú výkyvy glykémie, postupne sa zlepšuje krvný tlak a znižuje sa chronický zápalový signál. Tým sa menia „podmienky v okolí“ obličky. Ak sú tieto podmienky menej stresujúce, obličky nemusia tak intenzívne kompenzovať a riziko progresie poškodenia sa môže znížiť. Dôležitým signálom je tu albuminúria. Ak sa albumín v moči znižuje, často to znamená, že sa zlepšujú podmienky pre filtračný aparát [1,2].</p>
 
-<p>Bezpečný a koordinovaný prístup k redukcii hmotnosti je kľúčový na to, aby sa pacienti cítili istí, že ich zdravie je v dobrých rukách a že riziká sú minimalizované.</p>
+<p>Chudnutie by preto malo prebiehať bezpečne a v spolupráci s lekárom, aby sa riziká udržali čo najnižšie.</p>
 
-<p>Je reálne chudnúť a pritom neublížiť obličkám? Áno, ale nie je to automatické. Preto je vhodné vyhnúť sa jednoduchým sľubom typu „schudnete a obličky sa hneď opravia“. Také tvrdenie by bolo pre pacientov zavádzajúce. Rozumnejšia formulácia znie: správne vedená a postupná redukcia hmotnosti môže znížiť riziká, odľahčiť organizmus a podporiť priaznivejší priebeh ochorenia vrátane ochorení obličiek.</p>
+<p>Chudnúť a pritom neublížiť obličkám sa dá, no nie automaticky. Sľub typu „schudnete a obličky sa hneď opravia“ by bol zavádzajúci. Presnejšie je povedať, že správne vedená a postupná redukcia hmotnosti môže znížiť riziká, odľahčiť organizmus a podporiť priaznivejší priebeh ochorenia vrátane ochorení obličiek.</p>
 
-<p>Podstatné je, že pri diabetikovi s rizikom ochorenia obličiek sa sleduje viacero parametrov. Zvyčajne ide o funkciu obličiek, prítomnosť albumínu v moči, krvný tlak a dlhodobú kontrolu glykémie. Pri sledovaní týchto ukazovateľov je možné prispôsobiť liečbu tak, aby bola bezpečná a aby chudnutie nebolo spojené s nepriaznivými vedľajšími účinkami. Tento prístup je v súlade s medzinárodnými odporúčaniami, ktoré zdôrazňujú individualizáciu a manažment rizík [1,2].</p>
+<p>Pri diabetikovi s rizikom ochorenia obličiek sa sleduje viacero parametrov, zvyčajne funkcia obličiek, albumín v moči, krvný tlak a dlhodobá kontrola glykémie. Podľa nich možno liečbu prispôsobiť tak, aby bola bezpečná a aby chudnutie neprinášalo nepriaznivé vedľajšie účinky. Zodpovedá to medzinárodným odporúčaniam, ktoré zdôrazňujú individuálny prístup a kontrolu rizík [1,2].</p>
 
 <figure class="article-figure">
   <a href="img/obob-04.png" target="_blank" rel="noopener noreferrer">
@@ -87,11 +87,11 @@ $articles[] = [
   <figcaption>Bezpečné a postupné chudnutie môže odľahčiť filtračný aparát obličiek.</figcaption>
 </figure>
 
-<h2>Súčasné medicínske možnosti manažmentu obezity</h2>
+<h2>Ako sa dnes lieči obezita</h2>
 
-<p>Dnes už nikto neberie obezitu len ako „nedostatok vôle“. V medicíne sa obezita chápe ako chronické, relapsujúce ochorenie, ktoré si často vyžaduje dlhodobý plán. Zmyslom liečby je znížiť hmotnosť a najmä udržať dosiahnutý výsledok, aby sa znížilo riziko komplikácií. Na Slovensku štandardné postupy aj odborné dokumenty zdôrazňujú multidisciplinárny prístup, edukáciu a spoluprácu viacerých odborov [5].</p>
+<p>Obezita sa dnes už nepovažuje len za „nedostatok vôle“. V medicíne sa obezita chápe ako chronické, relapsujúce ochorenie, ktoré si často vyžaduje dlhodobý plán. Zmyslom liečby je znížiť hmotnosť a najmä udržať dosiahnutý výsledok, aby sa znížilo riziko komplikácií. Na Slovensku štandardné postupy aj odborné dokumenty zdôrazňujú multidisciplinárny prístup, edukáciu a spoluprácu viacerých odborov [5].</p>
 
-<p>V praxi sa liečba zvyčajne skladá z troch rovín. Prvá je režimová: strava je nastavená tak, aby podporovala lepšiu metabolickú kontrolu a primeraný pohyb podľa možností človeka. Druhá je farmakologická, keď samotné režimové opatrenia nestačia alebo ich nie je možné dosiahnuť v požadovanom čase a rozsahu. Tretia rovina je bariatrická alebo metabolická chirurgia u vybraných pacientov, kde môže byť prínos výrazný, ale vždy je potrebné zvážiť indikácie a následné sledovanie [5].</p>
+<p>V praxi sa liečba zvyčajne skladá z troch rovín. Prvá je režimová: strava nastavená tak, aby podporovala lepšiu metabolickú kontrolu, a primeraný pohyb podľa možností človeka. Druhá je farmakologická, keď samotné režimové opatrenia nestačia alebo ich nie je možné dosiahnuť v požadovanom čase a rozsahu. Tretia rovina je bariatrická alebo metabolická chirurgia u vybraných pacientov, u ktorých môže byť prínos výrazný, ale vždy je potrebné zvážiť indikácie a následné sledovanie [5].</p>
 
 <figure class="article-figure">
   <a href="img/obob-05.png" target="_blank" rel="noopener noreferrer">
@@ -100,19 +100,19 @@ $articles[] = [
   <figcaption>Súčasné medicínske možnosti manažmentu obezity.</figcaption>
 </figure>
 
-<h2>Farmakoterapia, ktorá mení hru (aj pri diabetikovi)</h2>
+<h2>Lieky na obezitu (aj pri diabete)</h2>
 
 <p>Jedným z významných posunov posledných rokov je širšie využívanie liečby, ktorá pôsobí na mechanizmy spojené s reguláciou chuti do jedla a energetického metabolizmu. Príkladom sú lieky na báze semaglutidu, ktoré sa v rôznych odporúčaniach uvádzajú ako možnosť manažmentu nadváhy a obezity u vhodných pacientov spolu so zníženou kalorickou diétou a zvýšenou fyzickou aktivitou [3].</p>
 
-<p>V klinických štúdiách semaglutid viedol k významnej redukcii hmotnosti u dospelých s nadváhou alebo obezitou a výsledky patria medzi dôvody, prečo sa lieková liečba v praxi stala bežnou súčasťou manažmentu obezity v mnohých krajinách [4]. Pre diabetikov je dôležité, aby sa takáto liečba posudzovala v kontexte celej terapie diabetu a obličiek. Nie je to jedno univerzálne riešenie, ale nástroj, ktorý môže zmysluplne doplniť režim, ak je indikovaný a bezpečný pre konkrétneho človeka [1,2,7].</p>
+<p>V klinických štúdiách semaglutid viedol k významnej redukcii hmotnosti u dospelých s nadváhou alebo obezitou a výsledky patria medzi dôvody, prečo sa lieková liečba v praxi stala bežnou súčasťou manažmentu obezity v mnohých krajinách [4]. Pre diabetikov je dôležité, aby sa takáto liečba posudzovala v kontexte celej terapie diabetu a obličiek. Nie je to univerzálne riešenie, ale nástroj, ktorý môže zmysluplne doplniť režim, ak je indikovaný a bezpečný pre konkrétneho človeka [1,2,7].</p>
 
-<p>Zároveň platí, že lieky nie sú náhradou za zmeny životného štýlu. Skôr pomáhajú prekonať biologické brzdy, ktoré sa objavia, keď človek začne žiť v kalorickom deficite a telo sa snaží vrátiť do pôvodného stavu. Keď je farmakoterapia správne načasovaná a koordinovaná, zvyšuje sa šanca, že výsledok bude trvalý [3,4,9].</p>
+<p>Lieky však nenahrádzajú zmenu životného štýlu. Skôr pomáhajú prekonať biologické brzdy, ktoré sa objavia, keď človek začne žiť v kalorickom deficite a telo sa snaží vrátiť do pôvodného stavu. Keď je farmakoterapia správne načasovaná a koordinovaná, zvyšuje sa šanca, že výsledok bude trvalý [3,4,9].</p>
 
 <figure class="article-figure">
   <a href="img/obob-06.png" target="_blank" rel="noopener noreferrer">
     <img src="img/obob-06.png" alt="Ilustrácia: farmakoterapia obezity" loading="lazy" decoding="async">
   </a>
-  <figcaption>Farmakoterapia obezity, ktorá mení hru aj pri diabetikovi.</figcaption>
+  <figcaption>Lieková liečba obezity má miesto aj pri diabete.</figcaption>
 </figure>
 
 <h2>Chirurgia, keď je to medicínsky odôvodnené</h2>
@@ -123,27 +123,27 @@ $articles[] = [
   <a href="img/obob-07.png" target="_blank" rel="noopener noreferrer">
     <img src="img/obob-07.png" alt="Ilustrácia: bariatrická a metabolická chirurgia" loading="lazy" decoding="async">
   </a>
-  <figcaption>Bariatrická a metabolická chirurgia — pri správnej indikácii.</figcaption>
+  <figcaption>Bariatrická a metabolická chirurgia – pri správnej indikácii.</figcaption>
 </figure>
 
 <h2>Čo by mal pacient riešiť s lekárom pri diabete a obezite (prakticky)</h2>
 
-<p>Ak chcete, aby redukcia hmotnosti chránila aj obličky, je dobré mať v hlave jednoduchú logiku: cieľ nie je „schudnúť“, ale znížiť riziko komplikácií a spomaliť poškodenie orgánov. A k tomu patrí aj pravidelná kontrola.</p>
+<p>Ak chcete, aby redukcia hmotnosti chránila aj obličky, majte na pamäti, že cieľom nie je samotné „schudnutie“, ale nižšie riziko komplikácií a pomalšie poškodzovanie orgánov. Patria k tomu aj pravidelné kontroly.</p>
 
-<p>Pri konzultácii má zmysel pýtať sa na trend albuminúrie a funkcie obličiek, na krvný tlak a na to, ako sa nastaví diabetologická liečba tak, aby sa pri redukcii neznížila bezpečnosť pacienta. Dôležité je aj to, aký typ režimu a pohybového plánu je vhodný, aby sa minimalizovalo riziko zníženia svalovej hmoty a zachovala sa výkonnosť. Ak je indikovaná farmakoterapia obezity, treba zvážiť jej bezpečnosť v kontexte obličiek a diabetu. Tento typ koordinovaného tímového prístupu zodpovedá odporúčaniam manažmentu diabetu a obličiek aj v medzinárodných dokumentoch [1,2].</p>
+<p>Pri konzultácii má zmysel pýtať sa na trend albuminúrie a funkcie obličiek, na krvný tlak a na to, ako nastaviť liečbu diabetu tak, aby bolo chudnutie bezpečné. Dôležité je aj to, aký typ režimu a pohybového plánu je vhodný, aby sa minimalizovalo riziko zníženia svalovej hmoty a zachovala sa výkonnosť. Ak je indikovaná farmakoterapia obezity, treba zvážiť jej bezpečnosť v kontexte obličiek a diabetu. Takýto koordinovaný tímový prístup zodpovedá medzinárodným odporúčaniam pre liečbu diabetu a ochorení obličiek [1,2].</p>
 
 <figure class="article-figure">
   <a href="img/obob-08.png" target="_blank" rel="noopener noreferrer">
     <img src="img/obob-08.png" alt="Ilustrácia: spolupráca pre zdravé obličky pri diabete a obezite" loading="lazy" decoding="async">
   </a>
-  <figcaption>Čo riešiť s lekárom — spolupráca pre zdravé obličky pri diabete a obezite.</figcaption>
+  <figcaption>Čo riešiť s lekárom – spolupráca pre zdravé obličky pri diabete a obezite.</figcaption>
 </figure>
 
 <h2>Záver</h2>
 
 <p>Obezita zvyšuje riziko poškodenia obličiek u diabetikov najmä prostredníctvom metabolických a tlakových mechanizmov, zápalu a dlhodobého zhoršovania mikrocirkulácie. Redukcia hmotnosti, ak je bezpečná, udržateľná a koordinovaná s liečbou diabetu, môže obličkám reálne odľahčiť a prispieť k priaznivejšiemu priebehu ochorenia.</p>
 
-<p>Súčasná medicína dnes ponúka nielen režimové opatrenia, ale aj farmakologickú liečbu obezity a u vybraných pacientov aj bariatrickú alebo metabolickú chirurgiu. Rozumný cieľ je dosiahnuť zmenu, ktorú viete udržať a ktorá znižuje riziká, nielen dočasne zmeniť číslo.</p>
+<p>Medicína dnes ponúka nielen režimové opatrenia, ale aj farmakologickú liečbu obezity a u vybraných pacientov aj bariatrickú alebo metabolickú chirurgiu. Rozumný cieľ je dosiahnuť zmenu, ktorú viete udržať a ktorá znižuje riziká, nielen dočasne zmeniť číslo.</p>
 
 <figure class="article-figure">
   <a href="img/obob-09.png" target="_blank" rel="noopener noreferrer">

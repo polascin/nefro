@@ -33,14 +33,14 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Praktický prehľad farmakoterapie obezity pri pokročilom CKD a na dialýze: dávkovanie a dialyzačné špecifiká naltrexónu, topiramátu, bupropiónu, orlistatu a agonistov GLP-1 (vrátane tirzepatidu) a bezpečnostné upozornenia.',
     'content'      => <<<'HTML'
-<figure><a href="img/farmakologicka-liecba-obezity-pokrocile-ckd-dialyza.webp" rel="noopener noreferrer" target="_blank"><img src="img/farmakologicka-liecba-obezity-pokrocile-ckd-dialyza.webp" alt="Injekčné pero pri dialyzačnom filtri a odmeraný prúd svetla prechádzajúci k oslabenej obličke" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Liečba je možná aj na dialýze — rozhoduje však dávkovanie a sledovanie bezpečnosti.</figcaption></figure>
+<figure><a href="img/farmakologicka-liecba-obezity-pokrocile-ckd-dialyza.webp" rel="noopener noreferrer" target="_blank"><img src="img/farmakologicka-liecba-obezity-pokrocile-ckd-dialyza.webp" alt="Injekčné pero pri dialyzačnom filtri a odmeraný prúd svetla prechádzajúci k oslabenej obličke" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Liečba je možná aj na dialýze – rozhoduje však dávkovanie a sledovanie bezpečnosti.</figcaption></figure>
 
-<p>Obezita je v nefrológii špecifická tým, že zhoršuje metabolické a kardiovaskulárne riziká a súčasne komplikuje manažment chronickej choroby obličiek (CKD). Pri pokročilom CKD, a najmä u pacientov na dialýze, je farmakoterapia zaujímavá ako jedna z možných „odbočiek“ na ceste k lepšej kondícii a potenciálne aj k lepšej spôsobilosti na transplantáciu. Praktickým problémom však býva, že mnohé lieky sa vylučujú obličkami alebo ich farmakokinetiku menia zmeny glomerulovej filtrácie (GFR) a dialyzačné parametre.</p>
+<p>Obezita je v nefrológii špecifická tým, že zhoršuje metabolické a kardiovaskulárne riziká a súčasne komplikuje manažment chronickej choroby obličiek (CKD). Pri pokročilom CKD, a najmä u pacientov na dialýze, môže byť farmakoterapia jednou z ciest k lepšej kondícii a potenciálne aj k lepšej spôsobilosti na transplantáciu. Problémom však býva, že mnohé lieky sa vylučujú obličkami alebo ich farmakokinetiku menia zmeny glomerulovej filtrácie (GFR) a dialyzačné parametre.</p>
 
-<p>Nasledujúci prehľad zhŕňa kľúčové praktické body z dostupného fulltextového materiálu (najmä sekciu venovanú liekom na redukciu hmotnosti), so zameraním na:</p>
+<p>Prehľad zhŕňa praktické body z plného textu článku (najmä z časti o liekoch na redukciu hmotnosti) so zameraním na:</p>
 
 <ul>
-  <li>čo je významné pri <strong>GFR &lt; 30 ml/min/1,73 m²</strong>,</li>
+  <li>čo treba zohľadniť pri <strong>GFR &lt; 30 ml/min/1,73 m²</strong>,</li>
   <li>čo mení <strong>dialýza</strong> (odstránenie lieku),</li>
   <li>ako nastaviť <strong>titráciu a dávkovanie</strong>,</li>
   <li>na čo myslieť pri <strong>nežiaducich účinkoch a kontraindikáciách</strong>.</li>
@@ -48,7 +48,7 @@ $articles[] = [
 
 <h2>Všeobecné princípy pri liečbe obezity u CKD a ESKD</h2>
 
-<p>Pri pokročilom CKD je rozumné pri každom lieku uvažovať o troch rovinách:</p>
+<p>Pri pokročilom CKD treba pri každom lieku zvážiť tri otázky:</p>
 
 <ol>
   <li><strong>Eliminácia:</strong> je liek prevažne metabolizovaný v pečeni a obličky účinne „obchádza“, alebo je významne závislý od renálnej exkrécie?</li>
@@ -56,11 +56,11 @@ $articles[] = [
   <li><strong>Titračný režim a bezpečnostné riziká:</strong> aké sú najčastejšie gastrointestinálne ťažkosti, riziká pre centrálny nervový systém, metabolická acidóza, riziko pankreatitídy či riziká špecifické pre endokrinné nádory?</li>
 </ol>
 
-<p>Materiál sa k týmto bodom pri jednotlivých liekoch vyjadruje veľmi konkrétne. Skratkou ESKD sa označuje terminálne (konečné) štádium zlyhania obličiek.</p>
+<p>Pri jednotlivých liekoch sa materiál k týmto otázkam vyjadruje konkrétne. Skratka ESKD označuje terminálne (konečné) štádium zlyhania obličiek.</p>
 
 <h2>Naltrexón (v kombinácii) a špecifiká pri CKD a ESKD</h2>
 
-<p>Perorálny naltrexón je charakterizovaný takto:</p>
+<p>Charakteristika perorálneho naltrexónu:</p>
 
 <ul>
   <li><strong>metabolizmus v pečeni</strong>,</li>
@@ -79,7 +79,7 @@ $articles[] = [
 
 <p><strong>Kľúčová bezpečnostná poznámka:</strong> pred začatím musí byť pacient <strong>bez opioidov 7 až 10 dní</strong> – inak hrozí vyvolanie abstinenčných (odvykacích) prejavov.</p>
 
-<p>Praktická implikácia pre nefrológiu: pri ESKD netreba riešiť „doplnkovú dávku po dialýze“, pretože liek sa dialýzou neodstraňuje.</p>
+<p>Pri ESKD preto netreba riešiť „doplnkovú dávku po dialýze“, liek sa dialýzou neodstraňuje.</p>
 
 <h2>Topiramát: dialýza skracuje expozíciu, po dialýze môže byť potrebná doplňujúca dávka</h2>
 
@@ -102,7 +102,7 @@ $articles[] = [
 
 <p><strong>Kontraindikácie a varovania:</strong> glaukóm, obličkové kamene.</p>
 
-<p>Praktická implikácia: u dialyzovaných pacientov je topiramát „dialyzačne citlivý“, takže načasovanie dávky (a potreba doplnenia po dialýze) je súčasťou bezpečného režimu.</p>
+<p>U dialyzovaných pacientov je topiramát „dialyzačne citlivý“, preto k bezpečnému režimu patrí načasovanie dávky a prípadné doplnenie po dialýze.</p>
 
 <h2>Bupropión: úprava dávky pri GFR &lt; 30 ml/min</h2>
 
@@ -131,7 +131,7 @@ $articles[] = [
   <li>ťažké elektrolytové poruchy.</li>
 </ul>
 
-<p>Praktická implikácia: pri CKD a ESKD je bupropión použiteľný, ale treba cielene „začať nízko a titrovať pomaly“ (low and go slow) a sledovať riziká pre centrálny nervový systém a elektrolyty.</p>
+<p>Pri CKD a ESKD je bupropión použiteľný, platí však zásada „začať nízko a titrovať pomaly“ (start low, go slow) a treba sledovať riziká pre centrálny nervový systém a elektrolyty.</p>
 
 <h2>Orlistat: lokálny mechanizmus, minimálna renálna záťaž, bez úpravy pri ESKD</h2>
 
@@ -154,7 +154,7 @@ $articles[] = [
   <li>riziko <strong>oxalátovej nefropatie</strong>.</li>
 </ul>
 
-<p>Praktická implikácia: orlistat je pri CKD farmakologicky často „bezpečný“, ale klinicky treba myslieť na gastrointestinálnu toleranciu a prípadnú potrebu sledovania výživového stavu.</p>
+<p>Farmakologicky je orlistat pri CKD často „bezpečný“, klinicky však treba myslieť na gastrointestinálnu toleranciu a prípadnú potrebu sledovania výživového stavu.</p>
 
 <h2>Agonisty GLP-1: výhoda nezávislosti od obličiek v eliminačnej ceste</h2>
 
@@ -165,7 +165,7 @@ $articles[] = [
   <li><strong>bez závislosti od obličiek</strong> pri eliminácii.</li>
 </ul>
 
-<p>To je v dialyzačnej praxi zásadné, pretože to znižuje obavy z akumulácie v dôsledku zníženej renálnej clearance.</p>
+<p>V dialyzačnej praxi je to zásadné, lebo to znižuje obavy z akumulácie pri zníženej renálnej clearance.</p>
 
 <h3>Liraglutid</h3>
 
@@ -198,9 +198,9 @@ $articles[] = [
 
 <p><strong>Kontraindikácie a varovania:</strong> medulárny karcinóm štítnej žľazy, MEN2.</p>
 
-<p><strong>Bezpečnostná pointa:</strong> tirzepatid nie je špecificky schválený pre ESKD a bezpečnostné údaje sú obmedzené.</p>
+<p><strong>Upozornenie:</strong> tirzepatid nie je špecificky schválený pre ESKD a bezpečnostné údaje sú obmedzené.</p>
 
-<p>Praktická implikácia: z eliminačnej logiky je táto skupina výhodná, no pri tirzepatide – a v materiáli aj pri ostatných látkach typu GLP-1 – ostáva pri dialýze medzera v dôkazoch, naznačená formuláciami o obmedzených údajoch.</p>
+<p>Z hľadiska eliminácie je táto skupina výhodná, pri dialýze však zostáva medzera v dôkazoch – pri tirzepatide a podľa formulácií o obmedzených údajoch aj pri ostatných látkach typu GLP-1.</p>
 
 <h2>Praktický kontrolný zoznam pred začiatkom liečby</h2>
 
@@ -215,7 +215,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>Z dostupného fulltextového materiálu vyplýva pomerne praktický obraz:</p>
+<p>Pre prax z materiálu vyplýva:</p>
 
 <ul>
   <li><strong>topiramát</strong> je renálne limitovaný a dialýza mu skracuje expozíciu (pravdepodobne doplnenie dávky po dialýze),</li>

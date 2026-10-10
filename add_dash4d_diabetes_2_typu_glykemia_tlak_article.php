@@ -56,7 +56,7 @@ $articles[] = [
 <p>Tieto výsledky ukazujú priaznivý krátkodobý glykemický profil. Štúdia však netestovala, či sa zmena CGM premietne do nižšieho výskytu progresie CKD, kardiovaskulárnych príhod alebo mortality.</p>
 
 <h2>Krvný tlak: treba oddeliť stravovací model od účinku sodíka</h2>
-<p>V primárnej analýze krvného tlaku malo porovnanie DASH4D s nižším obsahom sodíka oproti typickej americkej strave s vyšším obsahom sodíka za následok pokles systolického tlaku o 4,6 mmHg (95 % CI −7,2 až −2,0) a diastolického tlaku o 2,3 mmHg (95 % CI −3,7 až −0,9). Toto porovnanie však súčasne mení stravovací model aj príjem sodíka. Autori zistili, že väčšiu časť tlakového účinku vysvetľovalo zníženie sodíka. Celý rozdiel preto nemožno pripísať samotnému modelu DASH4D.</p>
+<p>V primárnej analýze krvného tlaku malo porovnanie DASH4D s nižším obsahom sodíka oproti typickej americkej strave s vyšším obsahom sodíka za následok pokles systolického tlaku o 4,6 mmHg (95 % IS −7,2 až −2,0) a diastolického tlaku o 2,3 mmHg (95 % IS −3,7 až −0,9). Toto porovnanie však súčasne mení stravovací model aj príjem sodíka. Autori zistili, že väčšiu časť tlakového účinku vysvetľovalo zníženie sodíka. Celý rozdiel preto nemožno pripísať samotnému modelu DASH4D.</p>
 
 <h2>Čo výsledky znamenajú pre nefrologickú prax</h2>
 <p>DASH4D ponúka použiteľný rámec pre pacienta s diabetom 2. typu, hypertenziou a zachovanou alebo mierne až stredne zníženou funkciou obličiek, ak sa jedálny lístok prispôsobí laboratórnym výsledkom, liečbe a nutričným potrebám. Prakticky ide najmä o nahradenie vysoko spracovaných potravín a sladených nápojov minimálne spracovanými potravinami, preferovanie nenasýtených tukov a primerané zníženie sodíka.</p>

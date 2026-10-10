@@ -37,27 +37,27 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Doplnky s cholínom a L-karnitínom sú prekurzormi TMAO — uremického metabolitu, ktorý sa spája so zápalom, fibrózou a poškodením ciev aj obličiek. Mechanistické, preklinické a observačné dáta dávajú dôvod na opatrnosť pri suplementácii najmä u diabetikov s CKD, hoci kauzálny dôkaz zhoršenia tvrdých renálnych ukazovateľov zatiaľ chýba.',
+    'excerpt'      => 'Doplnky s cholínom a L-karnitínom sú prekurzormi TMAO – uremického metabolitu, ktorý sa spája so zápalom, fibrózou a poškodením ciev aj obličiek. Mechanistické, preklinické a observačné dáta dávajú dôvod na opatrnosť pri suplementácii najmä u diabetikov s CKD, hoci kauzálny dôkaz zhoršenia tvrdých renálnych ukazovateľov zatiaľ chýba.',
     'content'      => <<<'HTML'
-<figure><a href="img/cholin-l-karnitin-doplnky-diabeticka-nefropatia-tmao.webp" rel="noopener noreferrer" target="_blank"><img src="img/cholin-l-karnitin-doplnky-diabeticka-nefropatia-tmao.webp" alt="Uzavretý kruh: kapsuly, črevné baktérie, tmavé toxínové častice a oslabená oblička, ktorá kruh znovu uzatvára" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Doplnok, črevo a oslabená oblička sa navzájom posilňujú — kruh sa uzatvára a sám sa udržiava.</figcaption></figure>
+<figure><a href="img/cholin-l-karnitin-doplnky-diabeticka-nefropatia-tmao.webp" rel="noopener noreferrer" target="_blank"><img src="img/cholin-l-karnitin-doplnky-diabeticka-nefropatia-tmao.webp" alt="Uzavretý kruh: kapsuly, črevné baktérie, tmavé toxínové častice a oslabená oblička, ktorá kruh znovu uzatvára" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Doplnok, črevo a oslabená oblička sa navzájom posilňujú – kruh sa uzatvára a sám sa udržiava.</figcaption></figure>
 
-<p>U pacientov s diabetes mellitus 2. typu sa črevný mikrobióm čoraz viac chápe ako samostatný „metabolický orgán“, ktorý ovplyvňuje zápal, cievny endotel aj celkový metabolizmus. Jedným z mediátorov, ktorý sa opakovane spája s kardiometabolickým a renálnym rizikom, je <strong>trimetylamín-N-oxid (TMAO)</strong>. Klinicky zaujímavý je najmä praktický problém: <strong>doplnenie prekurzorov TMAO</strong> — predovšetkým <strong>cholínu</strong> a <strong>L-karnitínu</strong> — môže u niektorých pacientov zvýšiť jeho tvorbu na osi črevo – pečeň – cievy – obličky. Tento mechanistický rámec je podkladom hypotézy, že suplementácia môže nepriaznivo vplývať na progresiu <strong>diabetickej choroby obličiek</strong>.</p>
+<p>U pacientov s diabetes mellitus 2. typu sa črevný mikrobióm čoraz viac chápe ako samostatný „metabolický orgán“, ktorý ovplyvňuje zápal, cievny endotel aj celkový metabolizmus. Jedným z mediátorov, ktorý sa opakovane spája s kardiometabolickým a renálnym rizikom, je <strong>trimetylamín-N-oxid (TMAO)</strong>. Klinicky zaujímavý je najmä praktický problém: <strong>doplnenie prekurzorov TMAO</strong> – predovšetkým <strong>cholínu</strong> a <strong>L-karnitínu</strong> – môže u niektorých pacientov zvýšiť jeho tvorbu na osi črevo – pečeň – cievy – obličky. Tento mechanistický rámec je podkladom hypotézy, že suplementácia môže nepriaznivo vplývať na progresiu <strong>diabetickej choroby obličiek</strong>.</p>
 
-<p>Treba to však povedať férovo: v humánnej medicíne zatiaľ nie je etablovaný konsenzus, že by suplementácia cholínu alebo L-karnitínu v širokých populáciách diabetikov jednoznačne a kauzálne zhoršovala tvrdé renálne ukazovatele. Ide skôr o kombináciu <strong>mechanistických</strong>, <strong>preklinických</strong> a <strong>observačných</strong> dát, ktorá dáva klinicky rozumný dôvod na opatrnosť, najmä u pacientov s už prítomnou chronickou chorobou obličiek (CKD).</p>
+<p>Treba však otvorene povedať, že v humánnej medicíne zatiaľ nie je zhoda v tom, že by suplementácia cholínu alebo L-karnitínu v širokých populáciách diabetikov jednoznačne a kauzálne zhoršovala tvrdé renálne ukazovatele. Ide skôr o kombináciu <strong>mechanistických</strong>, <strong>preklinických</strong> a <strong>observačných</strong> dát, ktorá dáva klinicky rozumný dôvod na opatrnosť, najmä u pacientov s už prítomnou chronickou chorobou obličiek (CKD).</p>
 
 <h2>Mechanizmus: od cholínu a karnitínu k TMAO a poškodeniu obličiek</h2>
 
 <h3>1. Premena v čreve a pečeni</h3>
 
-<p>Prekurzory ako cholín, betaín a L-karnitín metabolizujú črevné baktérie na <strong>trimetylamín (TMA)</strong>. TMA sa následne v pečeni oxiduje — dominantne enzýmom flavín-obsahujúcou monooxygenázou 3 (FMO3) — na <strong>TMAO</strong>. Keďže prvý krok je podmienený činnosťou mikrobiómu, výsledná „citlivosť“ jednotlivca závisí od zloženia jeho črevnej flóry: pri rovnakom príjme prekurzorov môžu mať dvaja pacienti rozdielnu tvorbu TMAO.</p>
+<p>Prekurzory ako cholín, betaín a L-karnitín metabolizujú črevné baktérie na <strong>trimetylamín (TMA)</strong>. TMA sa následne v pečeni oxiduje – prevažne enzýmom FMO3 (flavín-obsahujúca monooxygenáza 3) – na <strong>TMAO</strong>. Keďže prvý krok je podmienený činnosťou mikrobiómu, výsledná „citlivosť“ jednotlivca závisí od zloženia jeho črevnej flóry: pri rovnakom príjme prekurzorov môžu mať dvaja pacienti rozdielnu tvorbu TMAO.</p>
 
 <h3>2. TMAO ako spúšťač zápalu cez NLRP3 inflamazóm</h3>
 
-<p>V preklinických modeloch zvýšený TMAO podporuje aktiváciu zápalových dráh, najmä <strong>NLRP3 inflamazómu</strong>, čo vedie k tvorbe prozápalových cytokínov (napríklad IL-1β a IL-18). Tento mechanizmus je relevantný aj pre diabetické mikroprostredie obličiek, kde je pôda pre zápalovú odpoveď už pripravená. V klinickom jazyku: ak TMAO zosilní zápalový program v tubulárnom a intersticiálnom priestore, zvyšuje sa pravdepodobnosť progresie tubulointersticiálneho poškodenia.</p>
+<p>V preklinických modeloch zvýšený TMAO podporuje aktiváciu zápalových dráh, najmä <strong>NLRP3 inflamazómu</strong>, čo vedie k tvorbe prozápalových cytokínov (napríklad IL-1β a IL-18). Tento mechanizmus je relevantný aj pre diabetické mikroprostredie obličiek, kde je pôda pre zápalovú odpoveď už pripravená. Klinicky povedané: ak TMAO zosilní zápalový program v tubulárnom a intersticiálnom priestore, zvyšuje sa pravdepodobnosť progresie tubulointersticiálneho poškodenia.</p>
 
 <h3>3. Fibróza cez os TGF-β/Smad3</h3>
 
-<p>Chronický zápal typicky prechádza do remodelácie tkaniva. TMAO sa spája s aktiváciou profibrotickej signalizácie <strong>TGF-β/Smad3</strong>, ktorá podporuje nadmerné ukladanie kolagénu a rozvoj <strong>tubulointersticiálnej fibrózy</strong> — práve tá je pre progresiu CKD klinicky rozhodujúca. V zvieracích modeloch viedla chronická diétna expozícia cholínu a TMAO priamo k progresívnej tubulointersticiálnej fibróze a k poklesu funkcie obličiek.</p>
+<p>Chronický zápal typicky prechádza do remodelácie tkaniva. TMAO sa spája s aktiváciou profibrotickej signalizácie <strong>TGF-β/Smad3</strong>, ktorá podporuje nadmerné ukladanie kolagénu a rozvoj <strong>tubulointersticiálnej fibrózy</strong> – práve tá je pre progresiu CKD klinicky rozhodujúca. V zvieracích modeloch viedla chronická diétna expozícia cholínu a TMAO priamo k progresívnej tubulointersticiálnej fibróze a k poklesu funkcie obličiek.</p>
 
 <h3>4. Endotelová dysfunkcia a strata mikrocirkulácie</h3>
 
@@ -65,29 +65,29 @@ $articles[] = [
 
 <h3>5. Znížené vylučovanie pri CKD vytvára kumulatívny efekt</h3>
 
-<p>TMAO sa za fyziologických okolností vylučuje prevažne obličkami (glomerulovou filtráciou). Pri CKD sa táto vylučovacia „brzda“ oslabuje, TMAO sa hromadí a jeho biologický signál pôsobí dlhšie. Merania to potvrdzujú: hladiny TMAO sú u pacientov s CKD výrazne vyššie než u ľudí so zachovanou funkciou obličiek. Vzniká tak potenciálny <strong>začarovaný kruh</strong> — zhoršená funkcia obličiek zvyšuje hladinu TMAO a vyšší TMAO môže prispievať k ďalšiemu poškodeniu obličiek.</p>
+<p>TMAO sa za fyziologických okolností vylučuje prevažne obličkami (glomerulovou filtráciou). Pri CKD sa táto vylučovacia „brzda“ oslabuje, TMAO sa hromadí a jeho biologický signál pôsobí dlhšie. Merania to potvrdzujú: hladiny TMAO sú u pacientov s CKD výrazne vyššie než u ľudí so zachovanou funkciou obličiek. Vzniká tak potenciálny <strong>začarovaný kruh</strong> – zhoršená funkcia obličiek zvyšuje hladinu TMAO a vyšší TMAO môže prispievať k ďalšiemu poškodeniu obličiek.</p>
 
 <h2>Kde je to klinicky najcitlivejšie: diabetik s CKD</h2>
 
-<p>V observačných štúdiách u ľudí s diabetom 2. typu a CKD nachádzame vyššie hladiny TMAO než u diabetikov so zachovanou funkciou obličiek a tieto hladiny korelujú s horšími ukazovateľmi — napríklad s nižšou odhadovanou glomerulovou filtráciou (eGFR) a s prítomnosťou albuminúrie či proteinúrie. Časť prác opisuje aj súvislosť medzi TMAO a markermi systémového zápalu a endotelovej dysfunkcie práve v populácii diabetikov s pokročilou CKD.</p>
+<p>V observačných štúdiách u ľudí s diabetom 2. typu a CKD nachádzame vyššie hladiny TMAO než u diabetikov so zachovanou funkciou obličiek a tieto hladiny korelujú s horšími ukazovateľmi – napríklad s nižšou odhadovanou glomerulovou filtráciou (eGFR) a s prítomnosťou albuminúrie či proteinúrie. Časť prác opisuje aj súvislosť medzi TMAO a markermi systémového zápalu a endotelovej dysfunkcie práve v populácii diabetikov s pokročilou CKD.</p>
 
-<p>Dôležitá interpretačná poznámka pre prax: korelácia nie je dôkazom príčinnosti. V kombinácii s vierohodným mechanizmom však vytvára rozumný dôvod na klinickú opatrnosť pri predpisovaní doplnkov, ktoré sú prekurzormi TMAO.</p>
+<p>Korelácia však nie je dôkazom príčinnosti. V kombinácii s vierohodným mechanizmom však vytvára rozumný dôvod na klinickú opatrnosť pri predpisovaní doplnkov, ktoré sú prekurzormi TMAO.</p>
 
 <h2>Čo hovoria priame dáta o suplementácii</h2>
 
-<p>Najpresvedčivejší praktický argument prináša pozorovanie, že samotné dopĺňanie L-karnitínu dokáže hladinu TMAO reálne zvýšiť. V pilotnej štúdii u starších žien šesťmesačná suplementácia L-karnitínu niekoľkonásobne zvýšila hladinu TMAO v porovnaní s východiskovým stavom, pričom tréning ani suplementácia inej aminokyseliny takýto efekt nemali. Ide síce o malú štúdiu mimo nefrologickej populácie, no jasne ukazuje, že prekurzor podaný ako doplnok sa v tele skutočne premieta do vyššej tvorby TMAO.</p>
+<p>Najpresvedčivejší praktický argument prináša pozorovanie, že samotné dopĺňanie L-karnitínu dokáže hladinu TMAO merateľne zvýšiť. V pilotnej štúdii u starších žien šesťmesačná suplementácia L-karnitínu niekoľkonásobne zvýšila hladinu TMAO v porovnaní s východiskovým stavom, pričom tréning ani suplementácia inej aminokyseliny takýto efekt nemali. Ide síce o malú štúdiu mimo nefrologickej populácie, no jasne ukazuje, že prekurzor podaný ako doplnok sa v tele skutočne premieta do vyššej tvorby TMAO.</p>
 
 <h2>Praktické odporúčanie pre nefrologickú ambulanciu</h2>
 
 <p>Ak sa v ambulancii rieši, či pacientovi ponechať alebo zaradiť doplnok s cholínom alebo L-karnitínom, odporúčam rozhodovať v troch krokoch.</p>
 
-<h3>Krok 1: riziková vrstva podľa štádia CKD</h3>
+<h3>Krok 1: riziko podľa štádia CKD</h3>
 
 <p>Čím nižšia je eGFR a čím vyššia je albuminúria, tým biologicky relevantnejšie sa javí riziko kumulácie TMAO. Pri pokročilej CKD by som suplementáciu prekurzormi TMAO považoval za zbytočné riziko, pokiaľ nie je jasne preukázaný benefit.</p>
 
 <h3>Krok 2: dôvod suplementácie a očakávaný prínos</h3>
 
-<p>Typické dôvody — únava, „fitness“ účely, podpora chudnutia či „metabolická energia“ — sú často založené skôr na všeobecnom marketingu doplnkov než na renálnej indikácii. Ak prínos nie je jasný, pri CKD je ťažké obhájiť vystavenie pacienta mechanizmu, ktorý môže zhoršovať zápal a fibrózu.</p>
+<p>Typické dôvody – únava, „fitness“ účely, podpora chudnutia či „metabolická energia“ – sú často založené skôr na všeobecnom marketingu doplnkov než na renálnej indikácii. Ak prínos nie je jasný, pri CKD je ťažké obhájiť vystavenie pacienta mechanizmu, ktorý môže zhoršovať zápal a fibrózu.</p>
 
 <h3>Krok 3: kontrola liekov a metabolického profilu</h3>
 
@@ -99,7 +99,7 @@ $articles[] = [
   <li>celkový kardiovaskulárny plán.</li>
 </ul>
 
-<p>V praxi: ak pacient už dostáva nefroprotektívnu liečbu, doplnok na osi cholín/karnitín – TMAO môže byť práve ten malý dodatočný faktor, ktorý zvyšuje zápalové pozadie bez jasného protichodného prínosu.</p>
+<p>V praxi: ak pacient už dostáva nefroprotektívnu liečbu, doplnok na osi cholín/karnitín – TMAO môže byť práve ten malý dodatočný faktor, ktorý zvyšuje zápalové pozadie bez jasného prínosu, ktorý by to vyvážil.</p>
 
 <h2>Ako to komunikovať pacientovi (bez paniky, ale jasne)</h2>
 
@@ -107,11 +107,11 @@ $articles[] = [
 
 <h2>Čo zatiaľ nevieme (limitácie)</h2>
 
-<p>Uvedený rámec je prevažne mechanistický a preklinický, doplnený observačnými dátami. Zostáva niekoľko otvorených otázok, ktoré treba držať na pamäti:</p>
+<p>Uvedený rámec je prevažne mechanistický a preklinický, doplnený observačnými dátami. Zostáva niekoľko otvorených otázok, ktoré treba mať na pamäti:</p>
 
 <ul>
   <li>Korelácia medzi TMAO a horšou funkciou obličiek <strong>nie je dôkazom kauzality</strong>; vyššie hladiny TMAO môžu byť z veľkej časti len <strong>dôsledkom</strong> zníženej exkrécie, nie jej príčinou.</li>
-  <li>Nie všetky klinické dáta sú jednotné. V prospektívnej kohorte pacientov so stredne ťažkou až pokročilou CKD sa po zohľadnení zavádzajúcich faktorov ukázalo, že vyššie hladiny TMAO boli vysvetlené zhoršenou funkciou obličiek a <strong>neboli nezávislým prediktorom</strong> kardiovaskulárnych ani renálnych výsledkov; nezávislým rizikovým faktorom bol v tejto práci skôr betaín. Autori uzatvárajú, že TMAO nemusí byť vhodným terapeutickým cieľom u pacientov s už rozvinutou CKD.</li>
+  <li>Nie všetky klinické dáta sú jednotné. V prospektívnej kohorte pacientov so stredne ťažkou až pokročilou CKD sa po zohľadnení zmätočných faktorov ukázalo, že vyššie hladiny TMAO boli vysvetlené zhoršenou funkciou obličiek a <strong>neboli nezávislým prediktorom</strong> kardiovaskulárnych ani renálnych výsledkov; nezávislým rizikovým faktorom bol v tejto práci skôr betaín. Autori uzatvárajú, že TMAO nemusí byť vhodným terapeutickým cieľom u pacientov s už rozvinutou CKD.</li>
   <li>Chýbajú veľké randomizované štúdie, ktoré by priamo testovali, či obmedzenie prekurzorov TMAO alebo samotného TMAO zlepšuje tvrdé renálne ukazovatele u diabetikov.</li>
 </ul>
 
@@ -119,7 +119,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>Mechanistický a preklinický rámec naznačuje, že doplnky cholínu a L-karnitínu môžu u pacientov s diabetickou nefropatiou podporiť dráhu <strong>črevný mikrobióm → TMAO → zápal (NLRP3) → fibróza (TGF-β/Smad3) → endotelová dysfunkcia</strong>, pričom CKD zhoršuje elimináciu TMAO a môže vytvoriť kumulatívny efekt. Kľúčové je preto v praxi nastaviť opatrnosť pri suplementácii najmä u pacientov s nižšou eGFR a prítomnou albuminúriou — a zároveň korektne priznať, že priamy kauzálny dôkaz na tvrdých renálnych ukazovateľoch zatiaľ chýba.</p>
+<p>Mechanistický a preklinický rámec naznačuje, že doplnky cholínu a L-karnitínu môžu u pacientov s diabetickou nefropatiou podporiť dráhu <strong>črevný mikrobióm → TMAO → zápal (NLRP3) → fibróza (TGF-β/Smad3) → endotelová dysfunkcia</strong>, pričom CKD zhoršuje elimináciu TMAO a môže vytvoriť kumulatívny efekt. V praxi to znamená opatrnosť pri suplementácii najmä u pacientov s nižšou eGFR a prítomnou albuminúriou – a zároveň treba korektne priznať, že priamy kauzálny dôkaz na tvrdých renálnych ukazovateľoch zatiaľ chýba.</p>
 
 <hr>
 

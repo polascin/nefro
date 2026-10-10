@@ -29,7 +29,7 @@ $articles[] = [
 
 <p><strong>Tirzepatid</strong>, duálny agonista receptorov GIP a GLP-1, a <strong>semaglutid</strong>, agonista receptora GLP-1, patria medzi najúčinnejšie farmakologické možnosti liečby obezity a diabetu 2. typu. Priame porovnanie však nie je iba otázkou percent úbytku hmotnosti. V nefrologickej praxi treba súčasne zohľadniť funkciu obličiek, objemový stav, súbežné diuretiká, renálne rizikové lieky a toleranciu gastrointestinálnych nežiaducich účinkov.</p>
 
-<p>Nová systematická review a meta-analýza priamych porovnaní ukázala pri tirzepatide väčší priemerný úbytok hmotnosti a väčšie zníženie HbA1c než pri semaglutide. Súčasne však zaznamenala vyšší výskyt závažných nežiaducich udalostí (serious adverse events, SAE). Tento signál je klinicky relevantný, ale nemožno ho preložiť do jednoduchej vety, že tirzepatid je „nebezpečnejší“: SAE je heterogénny kompozit a dostupné štúdie neukazujú, ktoré konkrétne udalosti rozdiel vytvorili.</p>
+<p>Nový systematický prehľad s meta-analýzou priamych porovnaní ukázal pri tirzepatide väčší priemerný úbytok hmotnosti a väčšie zníženie HbA1c než pri semaglutide. Súčasne však zaznamenal vyšší výskyt závažných nežiaducich udalostí (serious adverse events, SAE). Tento signál je klinicky relevantný, ale nemožno ho preložiť do jednoduchej vety, že tirzepatid je „nebezpečnejší“: SAE je heterogénny kompozit a dostupné štúdie neukazujú, ktoré konkrétne udalosti rozdiel vytvorili.</p>
 
 <h2>Čo presne hodnotila nová meta-analýza</h2>
 
@@ -79,13 +79,13 @@ $articles[] = [
     <tr>
       <th scope="row">HbA1c</th>
       <td>MD −0,29 %</td>
-      <td>Metabolický účinok sa nedá automaticky zameniť za renálny klinický benefit</td>
+      <td>Metabolický účinok sa nedá automaticky zameniť za renálny klinický prínos</td>
     </tr>
   </tbody>
 </table>
 </div>
 
-<p>Subanalýzy podľa dizajnu štúdie a prítomnosti diabetu 2. typu smerovali podobným smerom. To podporuje konzistentnosť účinnosti, ale neodstraňuje rozdiely v dávkach, eskalácii, trvaní sledovania ani v tom, či bol liek predpísaný primárne na obezitu alebo diabetes.</p>
+<p>Subanalýzy podľa dizajnu štúdie a prítomnosti diabetu 2. typu mali podobný smer. To podporuje konzistentnosť účinnosti, ale neodstraňuje rozdiely v dávkach, eskalácii, trvaní sledovania ani v tom, či bol liek predpísaný primárne na obezitu alebo diabetes.</p>
 
 <h2>Bezpečnosť: čo znamená signál SAE</h2>
 
@@ -98,10 +98,10 @@ $articles[] = [
 <h2>Prečo sa výsledok nedá čítať ako jednoduchý verdikt</h2>
 
 <ul>
-  <li><strong>Zmiešaný dizajn:</strong> iba 3 z 10 štúdií boli randomizované; retrospektívne kohorty môžu trpieť reziduálnym confoundingom.</li>
+  <li><strong>Zmiešaný dizajn:</strong> iba 3 z 10 štúdií boli randomizované; retrospektívne kohorty môžu byť zaťažené reziduálnymi mätúcimi faktormi.</li>
   <li><strong>Rôzne populácie:</strong> pacienti s obezitou bez diabetu a pacienti s diabetom nemajú rovnaké východiskové riziko ani rovnaké terapeutické ciele.</li>
   <li><strong>Rôzne dávky a titrácia:</strong> výsledok závisí od toho, či boli porovnávané maximálne tolerované dávky a ako rýchlo sa k nim pacienti dostali.</li>
-  <li><strong>Kompozitný SAE endpoint:</strong> bez detailnej typológie nemožno vytvoriť špecifický nefrologický mechanizmus.</li>
+  <li><strong>Zložený ukazovateľ SAE:</strong> bez podrobného rozpisu udalostí nemožno odvodiť špecifický nefrologický mechanizmus.</li>
   <li><strong>Obmedzené trvanie:</strong> 24 až 72 týždňov nemusí zachytiť vzácne alebo neskoré komplikácie.</li>
   <li><strong>Absolútne riziko:</strong> relatívne riziko 1,83 môže znamenať rozdiel malej alebo väčšej klinickej významnosti podľa základného rizika pacienta.</li>
 </ul>
@@ -126,7 +126,7 @@ $articles[] = [
 
 <p>Pri akútnom ochorení s vracaním, hnačkou, horúčkou alebo výrazne zníženým príjmom tekutín treba pacienta kontaktovať, posúdiť hydratáciu, tlak, diurézu, kreatinín/eGFR a elektrolyty a podľa klinického stavu dočasne upraviť liečbu. Neexistuje univerzálne pravidlo, že každý pacient má automaticky vysadiť všetky lieky. Konkrétny postup závisí od liekovej kombinácie, diabetu, krvného tlaku, srdcového zlyhávania, CKD a závažnosti interkurentného ochorenia.</p>
 
-<h2>Účinnosť nie je to isté ako renálny benefit</h2>
+<h2>Účinnosť nie je to isté ako renálny prínos</h2>
 
 <p>Väčší úbytok hmotnosti a pokles HbA1c môžu zlepšiť metabolický a kardiovaskulárny profil, ale z tejto meta-analýzy nemožno odvodiť superioritu tirzepatidu v prevencii AKI, spomalení poklesu eGFR, znížení albuminúrie alebo oddialení náhrady funkcie obličiek. Na renálny záver treba samostatné štúdie so špecifickou CKD populáciou a renálnymi ukazovateľmi.</p>
 
@@ -140,12 +140,12 @@ $articles[] = [
   <li><strong>Vybrať liek podľa celkového profilu:</strong> vyššia priemerná účinnosť tirzepatidu môže byť dôležitá, ale sama neprevažuje nad bezpečnostnými a tolerančnými problémami.</li>
   <li><strong>Titrovať podľa tolerancie:</strong> pri významných GI ťažkostiach dávku nezvyšovať mechanicky a zvážiť dočasný návrat na predchádzajúcu tolerovanú dávku podľa schválenej informácie o lieku.</li>
   <li><strong>Chrániť objem:</strong> pacient má mať jasný plán, kedy kontaktovať ambulanciu a kedy je potrebné laboratórne alebo urgentné vyšetrenie.</li>
-  <li><strong>Interpretovať SAE v kontexte:</strong> zistiť, čo sa v konkrétnej udalosti skutočne stalo, nie iba priradiť rozhodnutie k číslu RR.</li>
+  <li><strong>Interpretovať SAE v kontexte:</strong> zistiť, čo sa v konkrétnej udalosti skutočne stalo, nie rozhodovať iba podľa čísla RR.</li>
 </ol>
 
 <h2>Záver</h2>
 
-<p>Systematická review a meta-analýza priamych porovnaní ukázala pri tirzepatide v priemere väčší úbytok hmotnosti a väčšie zníženie HbA1c než pri semaglutide. Súčasne zaznamenala vyšší výskyt SAE (5,7 % oproti 2,9 %; RR 1,83), pričom prerušenie liečby pre nežiaduce udalosti, celkové nežiaduce udalosti a gastrointestinálne nežiaduce udalosti sa významne nelíšili.</p>
+<p>Systematický prehľad s meta-analýzou priamych porovnaní ukázal pri tirzepatide v priemere väčší úbytok hmotnosti a väčšie zníženie HbA1c než pri semaglutide. Súčasne zaznamenal vyšší výskyt SAE (5,7 % oproti 2,9 %; RR 1,83), pričom prerušenie liečby pre nežiaduce udalosti, celkové nežiaduce udalosti a gastrointestinálne nežiaduce udalosti sa významne nelíšili.</p>
 
 <p>Pre nefrologickú prax to nie je dôvod označiť tirzepatid za nebezpečný ani semaglutid za automaticky bezpečný. Je to dôvod na presnejšie rozhodovanie: počas titrácie sledovať toleranciu, hydratáciu, krvný tlak, funkciu obličiek a elektrolyty, najmä pri CKD, diuretikách, NSAID alebo liekoch ovplyvňujúcich hemodynamiku. Väčšia účinnosť má hodnotu iba vtedy, ak ju pacient dokáže bezpečne tolerovať a ak je zvolený režim primeraný jeho renálnemu riziku.</p>
 
@@ -162,7 +162,7 @@ $articles[] = [
 
 <p><em><strong>Zdroj:</strong> Paccola GP, Fernandes de Oliveira R, Mochetti MM, Marsola Razera FP, Vecchi R, Montanher RCP. Comparative Efficacy of Tirzepatide Versus Semaglutide for Weight Loss in Adults With Overweight or Obesity: A Systematic Review and Meta-Analysis of Head-to-Head Studies. <em>Clinical Obesity</em>. 2026;16(5):e70111. doi:10.1111/cob.70111. PMID 42670242. <a href="https://doi.org/10.1111/cob.70111" target="_blank" rel="noopener noreferrer">DOI</a>; <a href="https://pubmed.ncbi.nlm.nih.gov/42670242/" target="_blank" rel="noopener noreferrer">PubMed</a>.</em></p>
 
-<p><small>Odborný text bol vecne a jazykovo revidovaný 17. septembra 2026. Výsledky meta-analýzy nepredstavujú dôkaz renálneho benefitu jednej molekuly a nenahrádzajú individuálne klinické rozhodnutie ani schválenú informáciu o lieku.</small></p>
+<p><small>Odborný text bol vecne a jazykovo revidovaný 17. septembra 2026. Výsledky meta-analýzy nepredstavujú dôkaz renálneho prínosu jednej molekuly a nenahrádzajú individuálne klinické rozhodnutie ani schválenú informáciu o lieku.</small></p>
 HTML,
 ];
 

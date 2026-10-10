@@ -33,13 +33,13 @@ $articles[] = [
 
 <p>Na 62. výročnom zasadnutí Európskej asociácie pre štúdium diabetu (EASD 2026), ktoré sa konalo v Miláne od 28. septembra do 2. októbra 2026, predstavili technologickí partneri SiBionics a PharmaSens vývojové koncepty v oblasti kontinuálneho monitorovania glukózy, monitorovania ketolátok a automatizovaného podávania inzulínu.</p>
 
-<p>Výraznú pozornosť vzbudil výskumný prototyp označovaný ako <em>niia signature</em>. Zariadenie smeruje k integrácii kontinuálneho senzora glukózy (CGM), infúzneho mechanizmu na podávanie inzulínu a algoritmu automatizovanej regulácie glykémie (AGC) do jedinej nositeľnej náplasti. Ide o vývojový prototyp, ktorý zatiaľ nezískal schválenie regulačných orgánov a nie je dostupný na trhu. Pre klinickú prax a osobitne pre nefrológiu však otvára zásadné otázky o tom, ako sa technologický pokrok vyrovnáva s náročnými patofyziologickými podmienkami u pacientov s poruchou funkcie obličiek.</p>
+<p>Pozornosť vzbudil výskumný prototyp označovaný ako <em>niia signature</em>. Zariadenie smeruje k integrácii kontinuálneho senzora glukózy (CGM), infúzneho mechanizmu na podávanie inzulínu a algoritmu automatizovanej regulácie glykémie (AGC) do jedinej nositeľnej náplasti. Ide o vývojový prototyp, ktorý zatiaľ nezískal schválenie regulačných orgánov a nie je dostupný na trhu. Pre klinickú prax a osobitne pre nefrológiu však otvára otázku, ako sa takáto technológia vyrovná s podmienkami u pacientov s poruchou funkcie obličiek.</p>
 
 <h2>Od samostatných senzorov k automatizovanej liečbe (AID)</h2>
 
 <p>Súčasné systémy automatizovaného podávania inzulínu (Automated Insulin Delivery, AID), nazývané aj hybridné systémy s uzavretou slučkou, využívajú údaje z podkožného glukózového senzora na dynamickú úpravu dávkovania inzulínu prostredníctvom riadiaceho algoritmu. Ich hlavným cieľom je znížiť glykemickú variabilitu, predĺžiť čas strávený v cieľovom rozmedzí (Time in Range, TIR) a minimalizovať výskyt závažnej hypoglykémie.</p>
 
-<p>Väčšina doterajších komerčných AID systémov si vyžaduje nosenie dvoch samostatných zariadení na tele: nezávislého senzora CGM a samostatnej infúznej súpravy či patch pumpy, ktoré navzájom komunikujú bezdrôtovo. Technologický vývoj prirodzene smeruje k unifikácii:</p>
+<p>Väčšina doterajších komerčných AID systémov si vyžaduje nosenie dvoch samostatných zariadení na tele: nezávislého senzora CGM a samostatnej infúznej súpravy či patch pumpy, ktoré navzájom komunikujú bezdrôtovo. Vývoj smeruje k zjednoteniu týchto funkcií do jedného zariadenia:</p>
 
 <ul>
   <li>kontinuálne stanovenie intersticiálnej glukózy,</li>
@@ -55,27 +55,27 @@ $articles[] = [
 
 <p>Na kongrese EASD 2026 odzneli prvé výsledky štúdie uskutočniteľnosti <strong>SMART02</strong>, ktorú prezentoval profesor Ahmad Haidar z McGill University. Výskum hodnotil skorý prototyp systému niia signature s cieľom overiť, či podávanie inzulínu v bezprostrednom okolí senzora glukózy nespôsobuje dočasné skreslenie meraných hodnôt.</p>
 
-<p>Kľúčovým pozorovaním bolo, že pri bežnom bazálnom dávkovaní bola presnosť merania stabilná. Dočasná interferencia sa však vyskytovala po podaní bolusových dávok s veľkosťou 10 jednotiek inzulínu alebo vyšších. Pri takýchto dávkach dosahovala pravdepodobnosť prechodného výkyvu signálu približne 20 až 25 %. K úplnému obnoveniu spoľahlivého signálu senzora došlo v priemere do 20 minút po aplikácii bolusu.</p>
+<p>Pri bežnom bazálnom dávkovaní bola presnosť merania stabilná. Dočasná interferencia sa však vyskytovala po podaní bolusových dávok s veľkosťou 10 jednotiek inzulínu alebo vyšších. Pri takýchto dávkach dosahovala pravdepodobnosť prechodného výkyvu signálu približne 20 až 25 %. K úplnému obnoveniu spoľahlivého signálu senzora došlo v priemere do 20 minút po aplikácii bolusu.</p>
 
-<p>Z hľadiska medicíny založenej na dôkazoch je nevyhnutné hodnotiť tieto dáta triezvo. Išlo o pilotnú štúdiu uskutočniteľnosti na obmedzenom počte participantov. Štúdia neposkytuje dôkaz o dlhodobej bezpečnosti, klinickej účinnosti ani o vplyve na metabolickú kompenzáciu v reálnom živote. Zverejnené dáta zatiaľ neobsahujú podrobné rozdelenie podľa veku, typu diabetu, referenčnej laboratórnej metódy ani klinické ukazovatele, akými sú percento času v hypoglykémii či výskyt technických zlyhaní.</p>
+<p>Išlo o pilotnú štúdiu uskutočniteľnosti na obmedzenom počte účastníkov. Štúdia neposkytuje dôkaz o dlhodobej bezpečnosti, klinickej účinnosti ani o vplyve na metabolickú kompenzáciu v reálnom živote. Zverejnené dáta zatiaľ neobsahujú podrobné rozdelenie podľa veku, typu diabetu, referenčnej laboratórnej metódy ani klinické ukazovatele, akými sú percento času v hypoglykémii či výskyt technických zlyhaní.</p>
 
 <h2>Prečo je diabetes s chronickou chorobou obličiek špecifický</h2>
 
-<p>Kombinácia diabetu a chronickej choroby obličiek (CKD) predstavuje jednu z najzložitejších oblastí internej medicíny. Progresívny pokles renálnych funkcií zásadne mení homeostázu glukózy a metabolizmus inzulínu:</p>
+<p>Kombinácia diabetu a chronickej choroby obličiek (CKD) patrí k najnáročnejším situáciám internej medicíny. Progresívny pokles renálnych funkcií zásadne mení homeostázu glukózy a metabolizmus inzulínu:</p>
 
 <ul>
-  <li><strong>Znížený renálny klírens inzulínu:</strong> Zdravé obličky odbúravajú približne 30 až 40 % cirkulujúceho inzulínu. Pri poklese glomerulovej filtrácie (eGFR pod 60 ml/min/1,73 m² a najmä pod 30 ml/min/1,73 m²) sa biologický polčas inzulínu výrazne predlžuje, čo rapídne zvyšuje riziko oneskorených a prolongovaných hypoglykémií.</li>
-  <li><strong>Znížená renálna glukoneogenéza:</strong> Renálny kortex sa významne podieľa na systémovej novotvorbe glukózy nalačno. Pri zániku funkčného parenchýmu je táto záchranná brzda pred hypoglykémiou oslabená.</li>
+  <li><strong>Znížený renálny klírens inzulínu:</strong> Zdravé obličky odbúravajú približne 30 až 40 % cirkulujúceho inzulínu. Pri poklese glomerulovej filtrácie (eGFR pod 60 ml/min/1,73 m² a najmä pod 30 ml/min/1,73 m²) sa biologický polčas inzulínu výrazne predlžuje, čo zvyšuje riziko oneskorených a prolongovaných hypoglykémií.</li>
+  <li><strong>Znížená renálna glukoneogenéza:</strong> Renálny kortex sa významne podieľa na systémovej novotvorbe glukózy nalačno. Pri zániku funkčného parenchýmu táto obrana pred hypoglykémiou slabne.</li>
   <li><strong>Nepredvídateľná glykemická variabilita:</strong> Sprievodná uremická enteropatia, diabetická gastroparéza a nechutenstvo spôsobujú disproporciu medzi resorpciou živín a farmakodynamikou podaného inzulínu.</li>
 </ul>
 
 <p>V pokročilých štádiách CKD (G4 a G5) a u pacientov v pravidelnom dialyzačnom programe navyše <strong>glykovaný hemoglobín (HbA1c) stráca svoju diagnostickú spoľahlivosť</strong>. Hodnoty HbA1c bývajú skreslené skráteným prežívaním erytrocytov, renálnou anémiou, liečbou erytropoetínom (ESA), intravenóznym železom, krvnými transfúziami aj prítomnosťou karbamylovaného hemoglobínu. HbA1c nedokáže zachytiť nebezpečné nočné hypoglykémie ani prudké výkyvy v priebehu dňa.</p>
 
-<p>Konsenzuálne odporúčania American Diabetes Association (ADA) a Kidney Disease: Improving Global Outcomes (KDIGO), ako aj odborné stanovisko publikované v roku 2025 (Rhee et al., <em>Journal of Diabetes Science and Technology</em>), jednoznačne vyzdvihujú kontinuálne monitorovanie glukózy ako kľúčový nástroj u pacientov s CKD. CGM poskytuje dynamický pohľad na čas strávený v cieľovom pásme (TIR 70–180 mg/dl, t. j. 3,9–10,0 mmol/l), čas pod cieľovým pásmom (TBR &lt; 70 mg/dl, t. j. &lt; 3,9 mmol/l) a odhaľuje asymptomatické hypoglykémie.</p>
+<p>Konsenzuálne odporúčania American Diabetes Association (ADA) a Kidney Disease: Improving Global Outcomes (KDIGO), ako aj odborné stanovisko publikované v roku 2025 (Rhee et al., <em>Journal of Diabetes Science and Technology</em>), zdôrazňujú kontinuálne monitorovanie glukózy ako kľúčový nástroj u pacientov s CKD. CGM poskytuje dynamický pohľad na čas strávený v cieľovom pásme (TIR 70–180 mg/dl, t. j. 3,9–10,0 mmol/l), čas pod cieľovým pásmom (TBR &lt; 70 mg/dl, t. j. &lt; 3,9 mmol/l) a odhaľuje asymptomatické hypoglykémie.</p>
 
 <h2>Špecifiká hemodialýzy a validácia presnosti senzorov</h2>
 
-<p>Hemodialyzačná procedúra vystavuje pacienta extrémnym metabolickým a objemovým zmenám, ktoré priamo ovplyvňujú chovanie glukózy aj fungovanie biosenzorov:</p>
+<p>Hemodialyzačná procedúra vystavuje pacienta extrémnym metabolickým a objemovým zmenám, ktoré priamo ovplyvňujú správanie glukózy aj fungovanie biosenzorov:</p>
 
 <ul>
   <li><strong>Difúzia glukózy cez dialyzačnú membránu:</strong> Pri použití dialyzačného roztoku bez glukózy dochádza k rýchlym stratám glukózy do dialyzátu. Použitie roztokov s fyziologickou koncentráciou glukózy (5,5 mmol/l, resp. 100 mg/dl) tieto straty tlmí, no dynamika výmeny ostáva výrazná.</li>
@@ -83,7 +83,7 @@ $articles[] = [
   <li><strong>Objemové posuny a intersticiálna hydratácia:</strong> Ultrafiltrácia odstraňuje tekutinu z intravaskulárneho a následne z intersticiálneho priestoru. Keďže CGM senzory merajú koncentráciu glukózy v intersticiálnej tekutine, rýchla dehydratácia podkožia, periférna vazokonstrikcia a edémy môžu ovplyvniť difúziu glukózy k enzýmovej elektróde.</li>
 </ul>
 
-<p>Významná klinická štúdia Narasakiho a kolektívu (<em>Diabetes Care</em> 2024;47(11):1922–1930) hodnotila analytickú presnosť CGM u dialyzovaných diabetikov. Výskum ukázal, že stredná absolútna relatívna odchýlka (MARD) bola u hemodialyzovaných pacientov vyššia než v bežnej populácii, dosahujúc približne 20 % (18,2 % v nedialyzačné dni oproti 22,0 % počas samotnej dialýzy). Napriek nižšej numerickej presnosti však analýza podľa konsenzuálnych chybových mriežok (Parkes/Clarke Error Grid) potvrdila, že takmer všetky namerané hodnoty spadali do klinicky bezpečných zón A a B, kde nehrozí nesprávne liečebné rozhodnutie vedúce k poškodeniu pacienta.</p>
+<p>Klinická štúdia Narasakiho a kolektívu (<em>Diabetes Care</em> 2024;47(11):1922–1930) hodnotila analytickú presnosť CGM u dialyzovaných diabetikov. Výskum ukázal, že stredná absolútna relatívna odchýlka (MARD) bola u hemodialyzovaných pacientov vyššia než v bežnej populácii a dosahovala približne 20 % (18,2 % v nedialyzačné dni oproti 22,0 % počas samotnej dialýzy). Napriek nižšej numerickej presnosti však analýza podľa konsenzuálnych chybových mriežok (Parkes/Clarke Error Grid) potvrdila, že takmer všetky namerané hodnoty spadali do klinicky bezpečných zón A a B, kde nehrozí nesprávne liečebné rozhodnutie vedúce k poškodeniu pacienta.</p>
 
 <p>Platí však striktné klinické pravidlo: ak sa klinický stav pacienta nezhoduje s hodnotou na displeji senzora, alebo pri podozrení na ťažkú hypoglykémiu, je nevyhnutné okamžité overenie kapilárnou alebo laboratórnou glykémiou.</p>
 
@@ -100,7 +100,7 @@ $articles[] = [
     <tr>
       <th scope="row">Spoľahlivosť HbA1c</th>
       <td>Štandardný biomarker dlhodobej kompenzácie</td>
-      <td>Nespoľahlivý (skreslenie anémiou, liečbou ESA, transfúziami a uémiou)</td>
+      <td>Nespoľahlivý (skreslenie anémiou, liečbou ESA, transfúziami a urémiou)</td>
     </tr>
     <tr>
       <th scope="row">Klírens a biologický polčas inzulínu</th>
@@ -128,9 +128,9 @@ $articles[] = [
 
 <h2>Kontinuálne monitorovanie ketolátok (CKM) a nefrologické úskalia</h2>
 
-<p>Ďalším významným technologickým trendom diskutovaným na kongrese EASD 2026 je kontinuálne monitorovanie ketolátok (Continuous Ketone Monitoring, CKM). Zariadenia merajú koncentráciu beta-hydroxybutyrátu v podkoží v reálnom čase s aktualizáciou každých niekoľko minút (Kong et al., <em>Diabetes Obesity and Metabolism</em> 2024; Nguyen et al., <em>Journal of Diabetes Science and Technology</em> 2022).</p>
+<p>Ďalšou témou kongresu EASD 2026 bolo kontinuálne monitorovanie ketolátok (Continuous Ketone Monitoring, CKM). Zariadenia merajú koncentráciu beta-hydroxybutyrátu v podkoží v reálnom čase s aktualizáciou každých niekoľko minút (Kong et al., <em>Diabetes Obesity and Metabolism</em> 2024; Nguyen et al., <em>Journal of Diabetes Science and Technology</em> 2022).</p>
 
-<p>Perspektíva CKM je mimoriadna pri diabete 1. typu, pri akútnych infekčných dekompenzáciách a osobitne <strong>pri liečbe inhibítormi SGLT2 (gliflozínmi)</strong>. Inhibítory SGLT2 sa stali základným pilierom nefroprotektívnej liečby pri chronickom ochorení obličiek. U pacientov s diabetom však nesú známe, hoci zriedkavé riziko <em>euglykemickej diabetickej ketoacidózy</em> (euDKA), kde hladina glukózy v krvi nepresahuje varovné hodnoty, no ketogenéza prudko akceleruje. Senzor CKM dokáže zachytiť stúpajúcu hladinu ketolátok skôr, než sa rozvinie plný metabolický rozvrat.</p>
+<p>CKM je perspektívne najmä pri diabete 1. typu, pri akútnych infekčných dekompenzáciách a osobitne <strong>pri liečbe inhibítormi SGLT2 (gliflozínmi)</strong>. Inhibítory SGLT2 sa stali základným pilierom nefroprotektívnej liečby pri chronickom ochorení obličiek. U pacientov s diabetom však nesú známe, hoci zriedkavé riziko <em>euglykemickej diabetickej ketoacidózy</em> (euDKA), kde hladina glukózy v krvi nepresahuje varovné hodnoty, no ketogenéza prudko stúpa. Senzor CKM dokáže zachytiť stúpajúcu hladinu ketolátok skôr, než sa rozvinie plný metabolický rozvrat.</p>
 
 <p>Pre nefrológa má však interpretácia ketolátok špecifické úskalia. Pacienti s pokročilým CKD majú často prítomnú chronickú metabolickú acidózu s normálnou alebo zvýšenou aniónovou medzerou (spôsobenú retenciou sulfátov, fosfátov a organických kyselín v dôsledku poklesu tubulárnej sekrécie vodíkových iónov). Samotný údaj z podkožného senzora preto <strong>nesmie nahradiť komplexné laboratórne vyšetrenie</strong>:</p>
 
@@ -143,7 +143,7 @@ $articles[] = [
 
 <h2>Klinické výzvy a riziká AID systémov pri zlyhávaní obličiek</h2>
 
-<p>Automatizované systémy podávania inzulínu predstavujú prísľub stability, no pri ich nekritickej aplikácii u pacientov s pokročilou renálnou insuficienciou hrozia závažné komplikácie:</p>
+<p>Automatizované systémy podávania inzulínu sľubujú stabilnejšiu glykémiu; pri nekritickom použití u pacientov s pokročilou renálnou insuficienciou však hrozia závažné komplikácie:</p>
 
 <ol>
   <li><strong>Nesúlad algoritmu s farmakokinetikou:</strong> Štandardné komerčné algoritmy kalkulujú s krivkami aktívneho inzulínu odvodenými od jedincov so zachovanou renálnou elimináciou. Ak algoritmus pri pretrvávajúcej hyperglykémii opakovane pridáva korekčné dávky, zatiaľ čo predchádzajúci inzulín sa z tela odbúrava spomalene, dochádza k nebezpečnému „stohovaniu inzulínu“ (insulin stacking) a k masívnej oneskorenej hypoglykémii.</li>
@@ -166,14 +166,14 @@ $articles[] = [
 
 <h2>Praktické odporúčania pre nefrologickú ambulanciu</h2>
 
-<p>Hoci plne integrované náplasti typu „všetko v jednom“ sú zatiaľ hudbou budúcnosti, samostatné CGM senzory sa už dnes stávajú neoceniteľnou súčasťou manažmentu diabetu pri CKD. Pre lekárov v nefrologických ambulanciách a dialyzačných strediskách z toho vyplývajú tieto kľúčové zásady:</p>
+<p>Plne integrované náplasti typu „všetko v jednom“ sú zatiaľ vo vývoji, samostatné CGM senzory však už dnes patria k dôležitým nástrojom manažmentu diabetu pri CKD. Pre lekárov v nefrologických ambulanciách a dialyzačných strediskách z toho vyplýva niekoľko zásad:</p>
 
 <ul>
   <li><strong>Indikovať CGM u rizikových pacientov:</strong> Senzor je prínosný najmä u pacientov liečených inzulínom alebo derivátmi sulfonylmočoviny, u pacientov s nerozpoznávaním hypoglykémie a pri diskrepancii medzi HbA1c a klinickým stavom.</li>
   <li><strong>Poznať analytické limity:</strong> Rátať s tým, že MARD u dialyzovaných pacientov je vyššia. Pri akýchkoľvek pochybnostiach alebo príznakoch hypoglykémie overiť hodnotu kapilárnou glukózou.</li>
   <li><strong>Sledovať obdobie po dialýze:</strong> Riziko závažného poklesu glykémie stúpa v hodinách nasledujúcich po ukončení hemodialýzy v dôsledku odstránenia uremických inhibítorov a zvýšenia inzulínovej senzitivity.</li>
   <li><strong>Konzultovať diabetologicko-nefrologický tím:</strong> Nasadenie inzulínovej pumpy či AID systému u dialyzovaného pacienta vyžaduje úzku medziodborovú spoluprácu a individuálne upravené cieľové pásma glykémie (často s toleranciou mierne vyšších hodnôt v záujme prevencie hypoglykémie).</li>
-  <li><strong>Pravidlo pri SGLT2 inhibítoroch:</strong> Pri podozrení na ketoacidózu okamžite vyšetriť pH a bikarbónát v krvi; normálna glykémia nevylučuje euglykemickú DKA.</li>
+  <li><strong>Pravidlo pri SGLT2 inhibítoroch:</strong> Pri podozrení na ketoacidózu okamžite vyšetriť pH a bikarbonát v krvi; normálna glykémia nevylučuje euglykemickú DKA.</li>
 </ul>
 
 <div class="info-box-blue">
@@ -189,7 +189,7 @@ $articles[] = [
 
 <p>Vývojový prototyp niia signature predstavený na kongrese EASD 2026 ilustruje technologický smer, ktorým sa uberá moderná diabetológia: miniaturizácia, integrácia senzorov a dávkovačov do jedného nositeľného prvku a automatizované uzatváranie regulačnej slučky. Výsledky štúdie SMART02 potvrdili realizovateľnosť takéhoto riešenia, no zároveň poukázali na technické výzvy pri bolusovom podávaní inzulínu v tesnej blízkosti biosenzora.</p>
 
-<p>Pre nefrológiu zostáva kľúčovým odkazom skutočnosť, že pacienti s pokročilým ochorením obličiek a pacienti odkázaní na dialýzu predstavujú zraniteľnú skupinu s odlišnou farmakokinetikou inzulínu, zmenenou intersticiálnou dynamikou a vysokou mierou kardiovaskulárneho rizika. Kým sa integrované systémy stanú bežnou realitou v nefrologických ambulanciách, bude potrebné ich bezpečnosť a algoritmy rigorózne overiť v dedikovaných klinických štúdiách zameraných na pacientov so zlyhávaním obličiek.</p>
+<p>Pacienti s pokročilým ochorením obličiek a pacienti odkázaní na dialýzu sú zraniteľná skupina s odlišnou farmakokinetikou inzulínu, zmenenou intersticiálnou dynamikou a vysokým kardiovaskulárnym rizikom. Kým sa integrované systémy dostanú do nefrologických ambulancií, bude potrebné ich bezpečnosť a algoritmy overiť v klinických štúdiách zameraných práve na pacientov so zlyhávaním obličiek.</p>
 
 <hr>
 

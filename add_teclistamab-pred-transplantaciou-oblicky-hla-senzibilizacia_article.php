@@ -26,7 +26,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Kazuistika v NEJM opisuje transplantáciu po experimentálnom znížení anti-HLA protilátok teclistamabom. Ide o dôležitý dôkaz konceptu, nie o potvrdený desenzibilizačný štandard.',
     'content'      => <<<'HTML'
-<figure><a href="img/teclistamab-pred-transplantaciou-oblicky-hla-senzibilizacia.webp" rel="noopener noreferrer" target="_blank"><img src="img/teclistamab-pred-transplantaciou-oblicky-hla-senzibilizacia.webp" alt="Hustá stena protilátok s úzkym prielomom, ktorý otvoril modrý lúč; za ňou čaká pripravená oblička" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Ide o prvý klinický signál, nie o zavedený postup — prielom je úzky a stena zostáva inde neporušená.</figcaption></figure>
+<figure><a href="img/teclistamab-pred-transplantaciou-oblicky-hla-senzibilizacia.webp" rel="noopener noreferrer" target="_blank"><img src="img/teclistamab-pred-transplantaciou-oblicky-hla-senzibilizacia.webp" alt="Hustá stena protilátok s úzkym prielomom, ktorý otvoril modrý lúč; za ňou čaká pripravená oblička" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Ide o prvý klinický signál, nie o zavedený postup – prielom je úzky a stena zostáva inde neporušená.</figcaption></figure>
 
 <p class="article-dek"><em>List publikovaný v New England Journal of Medicine opisuje úspešnú transplantáciu obličky po experimentálnom použití teclistamabu u extrémne HLA senzibilizovaného pacienta. Výsledok je biologicky presvedčivý a klinicky významný, ale zostáva dôkazom konceptu u jediného človeka.</em></p>
 
@@ -34,21 +34,21 @@ $articles[] = [
 
 <p>Martina Schatzl a spoluautori v júli 2026 opísali použitie teclistamabu, bispecifickej protilátky pôvodne vyvinutej pre mnohopočetný myelóm, na zníženie anti-HLA protilátok pred transplantáciou obličky. Publikácia má formu trojstranového listu, nie prospektívnej klinickej štúdie.</p>
 
-<h2>Najprv oprava dôležitého pojmu: cPRA</h2>
+<h2>Najprv k pojmu cPRA</h2>
 
 <p>Skóre calculated panel-reactive antibody (cPRA) odhaduje percento darcov, s ktorými by bol kandidát imunologicky inkompatibilný na základe nahlásených neprijateľných HLA antigénov a ich frekvencie v referenčnej populácii. Vysoké cPRA preto znamená málo potenciálne kompatibilných darcov; hodnota blízka 100 % vyjadruje extrémnu senzibilizáciu.</p>
 
-<p><strong>cPRA 0 % neznamená nulovú šancu na kompatibilného darcu.</strong> Znamená opak: vypočítaný podiel inkompatibilných darcov v referenčnej populácii je nulový alebo po zaokrúhlení minimálny. Formuláciu „nulová kompatibilita“ možno použiť iba ako slovný opis prakticky nulovej pravdepodobnosti nájsť vhodného darcu, nie ako synonymum cPRA 0 %. Východiskový text tieto dve veličiny zamieňal.</p>
+<p><strong>cPRA 0 % neznamená nulovú šancu na kompatibilného darcu.</strong> Znamená opak: vypočítaný podiel inkompatibilných darcov v referenčnej populácii je nulový alebo po zaokrúhlení minimálny. Výraz „nulová kompatibilita“ teda opisuje prakticky nulovú pravdepodobnosť nájsť vhodného darcu a nie je synonymom cPRA 0 %.</p>
 
 <p>cPRA navyše nie je priamym meraním sily protilátok ani individuálneho rizika rejekcie konkrétneho štepu. Výsledné rozhodnutie závisí aj od špecificity protilátok, výsledku virtuálnej a fyzickej krížovej skúšky, charakteru darcu a od metodiky transplantačno-imunologického laboratória.</p>
 
 <h2>Čo bolo opísané v kazuistike</h2>
 
-<p>Autori opísali 37-ročného dialyzovaného pacienta po dvoch predchádzajúcich transplantáciách, ktorý bol pre mimoriadne širokú HLA senzibilizáciu na čakacej listine viac ako 12 rokov. Pravdepodobnosť imunologicky vhodnej ponuky orgánu bola podľa opisu prípadu prakticky nulová. Presnú východiskovú hodnotu cPRA však nemožno nahradiť nesprávnym zápisom „cPRA = 0 %“.</p>
+<p>Autori opísali 37-ročného dialyzovaného pacienta po dvoch predchádzajúcich transplantáciách, ktorý bol pre mimoriadne širokú HLA senzibilizáciu na čakacej listine viac ako 12 rokov. Pravdepodobnosť imunologicky vhodnej ponuky orgánu bola podľa opisu prípadu prakticky nulová – čo je opak hodnoty cPRA 0 %.</p>
 
 <p>Počas 31 týždňov liečby teclistamabom poklesli hladiny vybraných anti-HLA protilátok natoľko, že transplantačný tím mohol prehodnotiť zoznam neprijateľných antigénov a rozšíriť okruh potenciálne prijateľných darcov. Následne sa našiel vhodný orgán a transplantácia sa uskutočnila. V čase krátkodobého hodnotenia mal pacient funkčný štep a nepotreboval dialýzu.</p>
 
-<p>Tento priebeh ukazuje, že zásah do bunkového zdroja protilátok môže u starostlivo vybraného pacienta zmeniť praktickú transplantovateľnosť. Neurčuje však pravdepodobnosť úspechu u ďalších pacientov ani dlhodobé riziko protilátkami sprostredkovanej rejekcie.</p>
+<p>Priebeh ukazuje, že zásah do bunkového zdroja protilátok môže u starostlivo vybraného pacienta zmeniť praktickú transplantovateľnosť. Neurčuje však pravdepodobnosť úspechu u ďalších pacientov ani dlhodobé riziko protilátkami sprostredkovanej rejekcie.</p>
 
 <h2>Prečo môže teclistamab znižovať anti-HLA protilátky</h2>
 
@@ -68,7 +68,7 @@ $articles[] = [
 
 <p>V Európskej únii je teclistamab schválený na liečbu dospelých s relabujúcim a refraktérnym mnohopočetným myelómom po najmenej troch predchádzajúcich liečebných režimoch určených v registračnej indikácii. Použitie na predtransplantačnú HLA desenzibilizáciu je mimo schválenej indikácie.</p>
 
-<p>Medzi významné riziká teclistamabu patria syndróm uvoľnenia cytokínov, hypogamaglobulinémia, neutropénia, lymfopénia, trombocytopénia a infekcie vrátane pneumónie a sepsy. Závažná môže byť aj neurologická toxicita. Pri kandidátovi na transplantáciu sa k tomuto riziku následne pridáva indukčná a udržiavacia imunosupresia. Kazuistika jedného pacienta nemôže spoľahlivo určiť bezpečný interval medzi poslednou dávkou a transplantáciou, potrebu substitúcie imunoglobulínov, optimálnu antiinfekčnú profylaxiu ani dlhodobé riziko infekcií.</p>
+<p>Medzi významné riziká teclistamabu patria syndróm uvoľnenia cytokínov, hypogamaglobulinémia, neutropénia, lymfopénia, trombocytopénia a infekcie vrátane pneumónie a sepsy. Závažná môže byť aj neurologická toxicita. Pri kandidátovi na transplantáciu sa k nim následne pridáva indukčná a udržiavacia imunosupresia. Kazuistika jedného pacienta nemôže spoľahlivo určiť bezpečný interval medzi poslednou dávkou a transplantáciou, potrebu substitúcie imunoglobulínov, optimálnu antiinfekčnú profylaxiu ani dlhodobé riziko infekcií.</p>
 
 <p>Pri budúcom skúšaní bude potrebné sledovať najmenej krvný obraz, imunoglobulíny, infekčné komplikácie, imunitnú rekonštitúciu, dynamiku HLA protilátok, DSA, výsledky krížových skúšok a biopsiou potvrdenú rejekciu. Takýto postup vyžaduje spoločný protokol transplantačného nefrológa, imunológa, hematológa, infektológa a transplantačného chirurga.</p>
 
@@ -91,7 +91,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>Kazuistika Schatzlovej a spoluautorov prináša dôležitý klinický signál: teclistamabom sprostredkované zacielenie BCMA-pozitívnych buniek môže znížiť anti-HLA protilátkovú záťaž natoľko, že sa transplantácia obličky stane uskutočniteľnou aj u extrémne senzibilizovaného pacienta. Najväčšou hodnotou publikácie je dôkaz biologického konceptu, nie návod na rutinnú liečbu.</p>
+<p>Kazuistika Schatzlovej a spoluautorov prináša dôležitý klinický signál: teclistamabom sprostredkované zacielenie BCMA-pozitívnych buniek môže znížiť anti-HLA protilátkovú záťaž natoľko, že sa transplantácia obličky stane uskutočniteľnou aj u extrémne senzibilizovaného pacienta. Hodnota publikácie je v dôkaze biologického konceptu, nie v návode na rutinnú liečbu.</p>
 
 <p>Ďalší postup musí určiť systematický klinický výskum s presnou HLA charakterizáciou, jednotnými kritériami odpovede, aktívnym bezpečnostným dohľadom a dlhodobými výsledkami po transplantácii. Dovtedy má teclistamab v tejto oblasti zostať experimentálnou intervenciou.</p>
 

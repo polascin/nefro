@@ -57,7 +57,7 @@ $articles[] = [
 
 <p>Medzi pacientmi s aspoň jednou indikáciou malo 65,1 % pozitívnu rodinnú anamnézu ochorenia obličiek, 64,7 % malo klinickú diagnózu, pri ktorej existuje odporúčanie na genetické testovanie, a 27,3 % malo mimorenálne prejavy.</p>
 
-<p>Napriek tomu bola komunikácia o genetickom testovaní nízka. Zo všetkých respondentov s ochorením obličiek uviedlo diskusiu s lekárom o genetickom testovaní alebo genetickom poradenstve:</p>
+<p>O genetickom testovaní sa však hovorilo málo. Zo všetkých respondentov s ochorením obličiek uviedlo diskusiu s lekárom o genetickom testovaní alebo genetickom poradenstve:</p>
 
 <ul>
   <li>11 % pacientov bez indikácie,</li>
@@ -72,9 +72,9 @@ $articles[] = [
 
 <h2>Prečo na genetickej diagnóze záleží</h2>
 
-<p>Genetická diagnóza môže mať priamy praktický význam. Nejde iba o pomenovanie príčiny ochorenia. V niektorých prípadoch môže zmeniť liečebné rozhodnutia, zabrániť použitiu nevhodných liekov, upozorniť na riziko rekurencie ochorenia po transplantácii alebo pomôcť pri vyšetrení príbuzných.</p>
+<p>Genetická diagnóza nie je len pomenovaním príčiny ochorenia. V niektorých prípadoch môže zmeniť liečebné rozhodnutia, zabrániť použitiu nevhodných liekov, upozorniť na riziko rekurencie ochorenia po transplantácii alebo pomôcť pri vyšetrení príbuzných.</p>
 
-<p>Ako príklady sa uvádzajú ochorenia, pri ktorých môže mať genetické potvrdenie zásadný terapeutický význam:</p>
+<p>Príkladom sú ochorenia, pri ktorých môže mať genetické potvrdenie zásadný terapeutický význam:</p>
 
 <h3>Fabryho choroba</h3>
 
@@ -88,7 +88,7 @@ $articles[] = [
 
 <p>Pri včasnej diagnostike môže byť klinicky významné podávanie vysokých dávok koenzýmu Q10, ktoré môže pomôcť zachovať funkciu obličiek.</p>
 
-<p>Genetické testovanie môže byť dôležité aj pri transplantácii obličky. Ak pacient zlyhal z nejasnej príčiny, ktorá sa neskôr ukáže ako genetická, môže byť rizikové prijať obličku od príbuzného darcu bez adekvátneho genetického zhodnotenia. Príbuzný darca môže niesť rovnakú genetickú predispozíciu a môže byť sám ohrozený budúcim ochorením obličiek.</p>
+<p>Genetické testovanie môže byť dôležité aj pri transplantácii obličky. Ak obličky pacienta zlyhali z nejasnej príčiny, ktorá sa neskôr ukáže ako genetická, môže byť rizikové prijať obličku od príbuzného darcu bez adekvátneho genetického zhodnotenia. Takýto darca môže niesť rovnakú genetickú predispozíciu a môže byť sám ohrozený budúcim ochorením obličiek.</p>
 
 <h2>Bariéry v praxi</h2>
 
@@ -106,7 +106,7 @@ $articles[] = [
 
 <h2>Nie každý pacient potrebuje genetické testovanie</h2>
 
-<p>Dôležité je zdôrazniť, že genetické testovanie nie je potrebné u každého pacienta s chronickou chorobou obličiek. Má však význam tam, kde existujú klinické znaky, rodinná anamnéza, nejasná etiológia ochorenia, skorý nástup choroby alebo mimorenálne prejavy.</p>
+<p>Genetické testovanie pritom nie je potrebné u každého pacienta s chronickou chorobou obličiek. Má však význam tam, kde existujú klinické znaky, rodinná anamnéza, nejasná etiológia ochorenia, skorý nástup choroby alebo mimorenálne prejavy.</p>
 
 <p>Správne indikované genetické vyšetrenie môže priniesť odpovede, ktoré majú význam pre pacienta, jeho liečbu, príbuzných aj transplantačné plánovanie.</p>
 
@@ -114,9 +114,9 @@ $articles[] = [
 
 <p>Výsledky prieskumu ukazujú jasný nepomer medzi tým, koľko pacientov má indikáciu na genetické testovanie, a tým, s koľkými sa o tejto možnosti reálne diskutuje. Ak má 20 až 30 % chronických chorôb obličiek genetický podklad, genetická diagnostika by nemala zostať okrajovou témou.</p>
 
-<p>Pre klinickú prax z toho vyplýva jednoduchý záver: pri chronickej chorobe obličiek nejasnej etiológie, pri skorom nástupe ochorenia, pozitívnej rodinnej anamnéze, mimorenálnych prejavoch alebo pred plánovaním príbuzenskej transplantácie má byť otázka genetického testovania aktívne zvážená.</p>
+<p>Pre klinickú prax z toho vyplýva jednoduchý záver: pri chronickej chorobe obličiek nejasnej etiológie, pri skorom nástupe ochorenia, pozitívnej rodinnej anamnéze, mimorenálnych prejavoch alebo pred plánovaním príbuzenskej transplantácie treba genetické testovanie aktívne zvážiť.</p>
 
-<p>Nie ako rutinný automatizmus, ale ako cielený nástroj presnejšej diagnostiky a bezpečnejšej, personalizovanej starostlivosti.</p>
+<p>Nemá ísť o rutinný automatizmus, ale o cielený nástroj presnejšej diagnostiky a bezpečnejšej, personalizovanej starostlivosti.</p>
 
 <hr>
 

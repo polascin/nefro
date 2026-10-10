@@ -28,9 +28,9 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Ako bezpečne reagovať na diagnózu alebo liečebný návrh z chatbota: nefrologický kontext, urgentná triáž, ochrana údajov a praktický postup konzultácie.',
     'content'      => <<<'HTML'
-<figure><a href="img/pacient-diagnoza-ai-nefrologicka-ambulancia.webp" rel="noopener noreferrer" target="_blank"><img src="img/pacient-diagnoza-ai-nefrologicka-ambulancia.webp" alt="Dve stoličky oproti sebe; zo strany pacienta prichádza hotový svetelný záver, z druhej strany mu vychádza v ústrety teplé svetlo" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Konzultácia už nezačína od nuly — začína pri hotovom závere, ktorý treba spoločne preveriť, nie zhodiť.</figcaption></figure>
+<figure><a href="img/pacient-diagnoza-ai-nefrologicka-ambulancia.webp" rel="noopener noreferrer" target="_blank"><img src="img/pacient-diagnoza-ai-nefrologicka-ambulancia.webp" alt="Dve stoličky oproti sebe; zo strany pacienta prichádza hotový svetelný záver, z druhej strany mu vychádza v ústrety teplé svetlo" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Konzultácia už nezačína od nuly – začína pri hotovom závere, ktorý treba spoločne preveriť, nie zhodiť.</figcaption></figure>
 
-<p>Pacient môže dnes vstúpiť do ambulancie nielen so zoznamom príznakov a výsledkov, ale aj s ucelenou „diagnózou“, prognózou alebo návrhom liečby vytvoreným generatívnou umelou inteligenciou. Takýto výstup môže obsahovať užitočné všeobecné informácie, no môže byť aj nepresný, neaktuálny alebo neprimerane sebavedomý. Pre lekára preto nie je správnou reakciou ani automatické odmietnutie, ani nekritické potvrdenie.</p>
+<p>Pacient dnes môže prísť do ambulancie nielen so zoznamom príznakov a výsledkov, ale aj s ucelenou „diagnózou“, prognózou alebo návrhom liečby vytvoreným generatívnou umelou inteligenciou. Takýto výstup môže obsahovať užitočné všeobecné informácie, no môže byť aj nepresný, neaktuálny alebo neprimerane sebavedomý. Pre lekára preto nie je správnou reakciou ani automatické odmietnutie, ani nekritické potvrdenie.</p>
 
 <p>V nefrológii je riziko nesprávnej interpretácie osobitne vysoké. Jednorazová eGFR, kreatinín, albuminúria, proteinúria alebo sonografický opis nemajú spoľahlivý význam bez časového vývoja, klinického stavu, liekov, hydratácie a ďalších nálezov. Chatbot môže z hodnoty eGFR 52 ml/min/1,73 m² vytvoriť záver o „zlyhávaní obličiek“, hoci ešte nie je potvrdená chronicita; rovnako môže podceniť význam pretrvávajúcej albuminúrie pri relatívne zachovanej eGFR.</p>
 
@@ -121,7 +121,7 @@ $articles[] = [
     </tr>
     <tr>
       <td>„Bielkovina v moči znamená zlyhanie obličiek.“</td>
-      <td>ACR alebo PCR, perzistenciu, sediment, hematuriu, infekciu, horúčku, fyzickú záťaž, hyperglykémiu a diagnózu</td>
+      <td>ACR alebo PCR, perzistenciu, sediment, hematúriu, infekciu, horúčku, fyzickú záťaž, hyperglykémiu a diagnózu</td>
     </tr>
     <tr>
       <td>„Na prečistenie obličiek treba piť tri až štyri litre denne.“</td>
@@ -145,7 +145,7 @@ $articles[] = [
 
 <p>eGFR odvodená od kreatinínu je odhad, nie priame meranie. Interpretáciu ovplyvňuje vek a pohlavie použité vo výpočte, ale aj faktory meniace tvorbu alebo vylučovanie kreatinínu: svalová hmota, amputácia, kachexia, intenzívna fyzická záťaž, strava a niektoré lieky. Pri rýchlej zmene kreatinínu navyše nie je splnený predpoklad ustáleného stavu, preto môže byť vypočítaná eGFR pri AKI zavádzajúca. Ak je kreatinín nespoľahlivým markerom, môže byť vhodný cystatín C alebo kombinovaný odhad, prípadne meraná GFR podľa klinickej otázky.</p>
 
-<p>Aj albuminúria významne kolíše. Izolovaný zvýšený ACR treba interpretovať s ohľadom na infekciu močových ciest, febrilitu, cvičenie, menštruáciu, hyperglykémiu a ďalšie prechodné vplyvy. Zároveň platí, že normálna eGFR nevylučuje klinicky významné ochorenie obličiek, ak je prítomná perzistujúca albuminúria, hematuria, patologický sediment alebo štrukturálna abnormalita.</p>
+<p>Aj albuminúria významne kolíše. Izolovaný zvýšený ACR treba interpretovať s ohľadom na infekciu močových ciest, febrilitu, cvičenie, menštruáciu, hyperglykémiu a ďalšie prechodné vplyvy. Zároveň platí, že normálna eGFR nevylučuje klinicky významné ochorenie obličiek, ak je prítomná perzistujúca albuminúria, hematúria, patologický sediment alebo štrukturálna abnormalita.</p>
 
 <h2>Najprv urgentná triáž, až potom diskusia o zdroji</h2>
 
@@ -178,7 +178,7 @@ $articles[] = [
 
 <h2>Pacient môže priniesť aj užitočnú stopu</h2>
 
-<p>Chyba by bola predpokladať, že každá hypotéza z AI je bezcenná. Pacient môže vďaka chatbotu pomenovať prehliadaný symptóm, spýtať sa na rodinné ochorenie alebo upozorniť na možnú liekovú interakciu. Správnou odpoveďou je preveriť medicínsku pravdepodobnosť a dôkazy, nie hodnotiť myšlienku podľa toho, či ju vyslovil človek alebo systém.</p>
+<p>Bolo by chybou predpokladať, že každá hypotéza z AI je bezcenná. Pacient môže vďaka chatbotu pomenovať prehliadaný symptóm, spýtať sa na rodinné ochorenie alebo upozorniť na možnú liekovú interakciu. Správnou odpoveďou je preveriť medicínsku pravdepodobnosť a dôkazy, nie hodnotiť myšlienku podľa toho, či ju vyslovil človek alebo systém.</p>
 
 <p>Rovnaké riziko ukotvenia vzniká na oboch stranách. Pacient sa môže upnúť na výstup chatbota, lekár zasa na prvý dojem, že „internetová diagnóza“ je určite nesprávna. Bezpečnejší je explicitný diferenciálnodiagnostický postup: čo hypotézu podporuje, čo jej odporuje, čo je pravdepodobnejšie a ktorý test alebo časový vývoj môže rozhodnúť.</p>
 
@@ -213,7 +213,7 @@ $articles[] = [
 
 <p>Diagnóza od chatbota nie je diagnózou v klinickom zmysle, ale môže byť dôležitou súčasťou pacientovho príbehu. Môže obsahovať chybu, užitočnú stopu aj informáciu o tom, čomu pacient nerozumie alebo čoho sa obáva.</p>
 
-<p>Bezpečný nefrologický postup má tri piliere: najprv vylúčiť urgentný stav, potom nezávisle overiť údaje v časovom a klinickom kontexte a napokon uzavrieť konzultáciu jasným plánom. Generatívna AI môže pomáhať formulovať otázky a vysvetľovať pojmy, no individuálne rozhodnutie musí zostať ukotvené vo vyšetrení, dôkazoch, preferenciách pacienta a zodpovednej klinickej komunikácii.</p>
+<p>Bezpečný nefrologický postup má tri kroky: najprv vylúčiť urgentný stav, potom nezávisle overiť údaje v časovom a klinickom kontexte a napokon uzavrieť konzultáciu jasným plánom. Generatívna AI môže pomáhať formulovať otázky a vysvetľovať pojmy, no individuálne rozhodnutie musí zostať ukotvené vo vyšetrení, dôkazoch, preferenciách pacienta a zodpovednej klinickej komunikácii.</p>
 
 <hr>
 

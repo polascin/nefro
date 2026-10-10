@@ -34,7 +34,7 @@ $articles[] = [
     'content'      => <<<'HTML'
 <figure><a href="img/lupusova-nefritida-liecit-hned-biopsiu-co-najskor.webp" rel="noopener noreferrer" target="_blank"><img src="img/lupusova-nefritida-liecit-hned-biopsiu-co-najskor.webp" alt="Polopriesvitná oblička so zápalovým žiarením zvnútra, k jej povrchu smeruje bioptická ihla, v pozadí presýpacie hodiny" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia, nie snímka konkrétneho pacienta. Pri lupusovej nefritíde rozhoduje čas: liečba sa začína hneď a biopsia má nasledovať čo najskôr, nie naopak.</figcaption></figure>
 
-<p>Otázka „biopsia najprv, alebo liečba najprv?“ patrí pri lupusovej nefritíde (LN) medzi najdiskutovanejšie v klinickej praxi. Odpoveď, ku ktorej sa v posledných rokoch priklonili odborné spoločnosti aj panelové diskusie, znie nepríjemne prakticky: <strong>biopsiu urobiť vždy, keď sa dá – ale nečakať na ňu s liečbou</strong>. Nasledujúci text zhŕňa dôkazy, o ktoré sa toto stanovisko opiera, aktuálne odporúčania ACR, EULAR a KDIGO, ako aj miesto opakovanej biopsie, biomarkerov a nových kombinovaných režimov.</p>
+<p>Otázka „biopsia najprv, alebo liečba najprv?“ patrí pri lupusovej nefritíde (LN) k najčastejšie diskutovaným v klinickej praxi. Odpoveď, ku ktorej sa v posledných rokoch priklonili odborné spoločnosti aj panelové diskusie, znie nepríjemne prakticky: <strong>biopsiu urobiť vždy, keď sa dá – ale nečakať na ňu s liečbou</strong>. Nasledujúci text zhŕňa dôkazy, o ktoré sa toto stanovisko opiera, aktuálne odporúčania ACR, EULAR a KDIGO, ako aj miesto opakovanej biopsie, biomarkerov a nových kombinovaných režimov.</p>
 
 <h2>Prečo na tom záleží: rozsah problému</h2>
 
@@ -50,7 +50,7 @@ $articles[] = [
 
 <p>Renálna biopsia umožňuje stanoviť histologickú triedu, oddelene kvantifikovať <strong>aktivitu a chronicitu</strong> a vylúčiť iné príčiny glomerulového postihnutia. Histologická klasifikácia vychádza z delenia Medzinárodnej spoločnosti pre nefrológiu a Spoločnosti pre renálnu patológiu (ISN/RPS) z roku 2003: trieda I (minimálna mezangiálna), II (mezangiálna proliferatívna), III (fokálna), IV (difúzna), V (membranózna) a VI (pokročilá sklerotizujúca).</p>
 
-<p>Dôležité je, že táto klasifikácia bola v roku <strong>2018 podstatne revidovaná</strong>: zrušilo sa delenie triedy IV na segmentálnu (IV-S) a globálnu (IV-G), upravili sa definície mezangiálnej hypercelularity a semilunarov, pojem „endokapilárna proliferácia“ bol nahradený <strong>endokapilárnou hypercelularitou</strong> a namiesto označení „aktívna/chronická“ sa pre všetky triedy zaviedli modifikované <strong>indexy aktivity a chronicity podľa NIH</strong>. Tieto indexy sú dnes základom rozhodovania o intenzite imunosupresie a mali by byť v histologickom náleze uvedené.</p>
+<p>V roku <strong>2018 bola táto klasifikácia podstatne revidovaná</strong>: zrušilo sa delenie triedy IV na segmentálnu (IV-S) a globálnu (IV-G), upravili sa definície mezangiálnej hypercelularity a semilunarov, pojem „endokapilárna proliferácia“ bol nahradený <strong>endokapilárnou hypercelularitou</strong> a namiesto označení „aktívna/chronická“ sa pre všetky triedy zaviedli modifikované <strong>indexy aktivity a chronicity podľa NIH</strong>. Tieto indexy sú dnes základom rozhodovania o intenzite imunosupresie a mali by byť v histologickom náleze uvedené.</p>
 
 <h3>Kontraindikácie a dostupnosť</h3>
 
@@ -94,7 +94,7 @@ $articles[] = [
 
 <p>Retrospektívna kohorta 370 pacientov s biopsiou potvrdenou LN je v tomto smere poučná. Klinicky indikovanú druhú biopsiu podstúpilo <strong>122 pacientov (33 %)</strong> – pre akútny renálny relaps, pretrvávajúcu aktivitu alebo podozrenie na progresiu. K <strong>histologickej transformácii došlo v 68 % opakovaných biopsií</strong> a podiel zmiešaných tried stúpol zo 7,4 % na 22,9 % (p &lt; 0,05). Nález viedol k <strong>okamžitej zmene liečby u 82,8 % pacientov</strong>, najčastejšie k jej intenzifikácii pri aktívnej proliferatívnej transformácii.</p>
 
-<p>Jediným nezávislým klinickým prediktorom podstúpenia druhej biopsie bolo <strong>dlhšie trvanie SLE</strong> (22,2 ± 4,96 vs. 17,2 ± 6,29 roka; upravené OR = 1,15; 95 % IS: 1,06 – 1,25), zatiaľ čo <strong>východisková proliferatívna LN</strong> nezávisle predpovedala aktívne ochorenie pri rebiopsii (upravené OR = 2,42; 95 % IS: 1,09 – 5,38). Autori zároveň korektne upozorňujú, že z retrospektívneho dizajnu nemožno odvodiť prínos pre dlhodobé prežívanie.</p>
+<p>Jediným nezávislým klinickým prediktorom podstúpenia druhej biopsie bolo <strong>dlhšie trvanie SLE</strong> (22,2 ± 4,96 vs. 17,2 ± 6,29 roka; upravené OR = 1,15; 95 % IS: 1,06 – 1,25), zatiaľ čo <strong>východisková proliferatívna LN</strong> nezávisle predpovedala aktívne ochorenie pri rebiopsii (upravené OR = 2,42; 95 % IS: 1,09 – 5,38). Autori zároveň upozorňujú, že z retrospektívneho dizajnu nemožno odvodiť prínos pre dlhodobé prežívanie.</p>
 
 <p>Menšia, no obsahovo cenná španielska kohorta (19 pacientov, 45 natívnych biopsií, 2003 – 2025) ukazuje ešte jeden rozmer. Najčastejšou indikáciou bolo sérologické a/alebo proteinurické zhoršenie; pri porovnaní indexovej a poslednej biopsie sa histologická alebo diagnostická zmena zistila u <strong>14 z 19 pacientov (73,7 %)</strong>. Kľúčové je, že u <strong>3 z 19 (15,8 %)</strong> išlo o diagnózu <strong>nezlučiteľnú s aktívnou lupusovou nefritídou</strong> – rebiopsia teda nechráni len pred poddávkovaním imunosupresie, ale aj pred jej zbytočným stupňovaním.</p>
 
@@ -163,7 +163,7 @@ $articles[] = [
 
 <h2>Hydroxychlorochín: základ, ktorý sa nevynecháva</h2>
 
-<p>Hydroxychlorochín (HCQ) zostáva základnou liečbou SLE aj LN a má ho dostať každý pacient, u ktorého nie je kontraindikovaný. Korektné je pritom pomenovať silu dôkazov: prehľad v časopise <em>Kidney360</em> konštatuje, že podklady pre terapeutický prínos HCQ <strong>špecificky pri LN</strong> pochádzajú prevažne z observačných štúdií realizovaných ešte pred spresnením moderných imunosupresívnych protokolov. Napriek tejto obmedzenej kvalite dôkazov nefrologická komunita jeho plošné používanie pri LN široko podporuje a odporúčania ho konzistentne obsahujú. Pozornosť si vyžaduje kumulatívna dávka a retinálna toxicita, čo podčiarkuje potrebu individualizovaného dávkovania a pravidelného oftalmologického sledovania.</p>
+<p>Hydroxychlorochín (HCQ) zostáva základnou liečbou SLE aj LN a má ho dostať každý pacient, u ktorého nie je kontraindikovaný. Sila dôkazov je však skromnejšia: prehľad v časopise <em>Kidney360</em> konštatuje, že podklady pre terapeutický prínos HCQ <strong>špecificky pri LN</strong> pochádzajú prevažne z observačných štúdií realizovaných ešte pred spresnením moderných imunosupresívnych protokolov. Nefrologická komunita napriek tomu jeho plošné používanie pri LN široko podporuje a odporúčania ho konzistentne obsahujú. Sledovať treba kumulatívnu dávku a retinálnu toxicitu, preto sa dávka individualizuje a pacient má byť pravidelne oftalmologicky kontrolovaný.</p>
 
 <h2>Zhrnutie pre prax</h2>
 
@@ -180,7 +180,7 @@ $articles[] = [
 
 <p>Liečbu lupusovej nefritídy treba začať promptne, bez čakania na výsledok renálnej biopsie – biopsia však zostáva nenahraditeľným diagnostickým a prognostickým nástrojom, ktorý má byť vykonaný čo najskôr. Aktuálne odporúčania ACR, EULAR aj KDIGO sa zhodujú na skorej kombinovanej imunosupresii, minimalizácii glukokortikoidov a individualizovanom prístupe; rozchádzajú sa v tom, aký agresívny má byť úvodný režim.</p>
 
-<p>Opakovaná biopsia zostáva pre rozhodovanie o intenzifikácii alebo redukcii imunosupresie kľúčová práve preto, že klinické a sérologické markery histológiu spoľahlivo nenahradia. Nové biomarkery a cielené terapie tento priestor postupne rozširujú, no ich dlhodobú účinnosť a bezpečnosť ešte treba potvrdiť. Integrácia klinických, laboratórnych a histologických údajov tak zostáva jadrom starostlivosti o pacienta s lupusovou nefritídou.</p>
+<p>Opakovaná biopsia zostáva pre rozhodovanie o intenzifikácii alebo redukcii imunosupresie kľúčová práve preto, že klinické a sérologické markery histológiu spoľahlivo nenahradia. Nové biomarkery a cielené terapie tento priestor postupne rozširujú, no ich dlhodobú účinnosť a bezpečnosť ešte treba potvrdiť.</p>
 
 <hr>
 

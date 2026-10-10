@@ -27,7 +27,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Bolesť v driekovej oblasti spravidla nevyžaduje okamžité MRI. Praktický algoritmus odlišuje urgentné príčiny, ischias a bezpečnú liečbu pri CKD.',
     'content'      => <<<'HTML'
-<figure><a href="img/bolest-driekovej-oblasti-ischias-diagnostika-liecba-ckd.webp" rel="noopener noreferrer" target="_blank"><img src="img/bolest-driekovej-oblasti-ischias-diagnostika-liecba-ckd.webp" alt="Driekova chrbtica so zapáleným nervovým koreňom a vyžarujúcou bolesťou; tieň tabletky dopadá na obličku v pozadí" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Úľava od bolesti je legitímny cieľ — pri zníženej funkcii obličiek však treba vedieť, čo za ňu platíme.</figcaption></figure>
+<figure><a href="img/bolest-driekovej-oblasti-ischias-diagnostika-liecba-ckd.webp" rel="noopener noreferrer" target="_blank"><img src="img/bolest-driekovej-oblasti-ischias-diagnostika-liecba-ckd.webp" alt="Driekova chrbtica so zapáleným nervovým koreňom a vyžarujúcou bolesťou; tieň tabletky dopadá na obličku v pozadí" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Úľava od bolesti je legitímny cieľ – pri zníženej funkcii obličiek však treba vedieť, čo za ňu platíme.</figcaption></figure>
 
 <p>Bolesť v driekovej oblasti patrí medzi najčastejšie príčiny obmedzenia pohyblivosti, pracovnej neschopnosti a užívania analgetík. Vo väčšine prípadov ide o nešpecifickú muskuloskeletálnu bolesť s priaznivým prirodzeným priebehom. Menšia časť pacientov má radikulárny syndróm alebo konkrétne ochorenie, pri ktorom treba diagnostiku a liečbu zásadne zmeniť.</p>
 
@@ -86,7 +86,7 @@ $articles[] = [
   <li><strong>Ďalšie príčiny:</strong> renálny infarkt, krvácanie alebo infekcia cysty, nádor a spontánne retroperitoneálne krvácanie, najmä pri antikoagulačnej liečbe.</li>
 </ul>
 
-<p>Ak klinika smeruje k močovým cestám, treba voliť laboratórne a zobrazovacie vyšetrenia podľa tejto diferenciálnej diagnózy. Odporúčanie nerobiť rutinne MRI chrbtice neznamená odkladať ultrasonografiu, CT alebo cievne vyšetrenie pri inom dôvodnom podozrení.</p>
+<p>Ak klinický obraz smeruje k močovým cestám, treba voliť laboratórne a zobrazovacie vyšetrenia podľa tejto diferenciálnej diagnózy. Odporúčanie nerobiť rutinne MRI chrbtice neznamená odkladať ultrasonografiu, CT alebo cievne vyšetrenie pri inom dôvodnom podozrení.</p>
 
 <h2>Zobrazovanie iba vtedy, keď môže zmeniť postup</h2>
 
@@ -110,7 +110,7 @@ $articles[] = [
 
 <h3>Prečo sa odporúčania o akupunktúre a psychologickej liečbe líšia</h3>
 
-<p>NICE neodporúča akupunktúru pri bolesti v driekovej oblasti ani ischiase. WHO ju medzi podmienečne použiteľné postupy zaraďuje, jeho odporúčanie sa však týka chronickej primárnej bolesti u dospelých v primárnej a komunitnej starostlivosti, nie akútnej bolesti ani špecifických príčin. Rozdiel preto nemožno zredukovať na jednoduché tvrdenie, že jedna smernica má pravdu a druhá nie.</p>
+<p>NICE neodporúča akupunktúru pri bolesti v driekovej oblasti ani ischiase. WHO ju medzi podmienečne použiteľné postupy zaraďuje, jej odporúčanie sa však týka chronickej primárnej bolesti u dospelých v primárnej a komunitnej starostlivosti, nie akútnej bolesti ani špecifických príčin. Rozdiel preto nemožno zredukovať na jednoduché tvrdenie, že jedna smernica má pravdu a druhá nie.</p>
 
 <p>NICE 29. júla 2026 stiahlo odporúčania o psychologickej terapii a kombinovaných fyzicko-psychologických programoch bez okamžitej náhrady. Toto rozhodnutie nie je dôkazom škodlivosti psychologických intervencií a neruší význam psychosociálnych faktorov, depresie, spánku, obáv z pohybu ani spoločného rozhodovania. WHO pri chronickej primárnej bolesti naďalej používa biopsychosociálny a individualizovaný rámec.</p>
 
@@ -148,7 +148,7 @@ $articles[] = [
 
 <h3>Gabapentinoidy, kortikosteroidy a benzodiazepíny</h3>
 
-<p>Gabapentín, pregabalín, iné antiepileptiká, perorálne glukokortikoidy a benzodiazepíny sa pri ischiase nemajú rutinne používať, pretože celkový prínos nebol presvedčivo preukázaný a liečba prináša poškodenia. Gabapentín aj pregabalín sa vylučujú prevažne obličkami. Pri inej oprávnenej indikácii vyžadujú úpravu dávky podľa funkcie obličiek; kumulácia môže viesť k výraznej sedácii, ataxii, myoklóniám alebo encefalopatii.</p>
+<p>Gabapentín, pregabalín, iné antiepileptiká, perorálne glukokortikoidy a benzodiazepíny sa pri ischiase nemajú rutinne používať, pretože celkový prínos nebol presvedčivo preukázaný a liečba je spojená s nežiaducimi účinkami. Gabapentín aj pregabalín sa vylučujú prevažne obličkami. Pri inej oprávnenej indikácii vyžadujú úpravu dávky podľa funkcie obličiek; kumulácia môže viesť k výraznej sedácii, ataxii, myoklóniám alebo encefalopatii.</p>
 
 <p>Kombinácia gabapentinoidu s opioidom alebo iným tlmivým liekom zvyšuje riziko respiračného útlmu. Dlhodobo užívané opioidy, benzodiazepíny ani gabapentinoidy sa nemajú náhle vysadiť bez individuálneho plánu postupného znižovania.</p>
 

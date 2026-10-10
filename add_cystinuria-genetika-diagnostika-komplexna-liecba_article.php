@@ -22,7 +22,7 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Cystínuria vyžaduje celoživotnú kombináciu vysokej diurézy, obmedzenia sodíka, riadenej alkalizácie a podľa aktivity tiolovej liečby. Genotyp pomáha rodine, no liečbu určuje fenotyp.',
+    'excerpt'      => 'Cystínuria vyžaduje celoživotnú kombináciu vysokej diurézy, obmedzenia sodíka, riadenej alkalizácie a podľa aktivity ochorenia aj tiolovej liečby. Genotyp pomáha rodine, no liečbu určuje fenotyp.',
     'content'      => <<<'HTML'
 <figure><a href="img/cystinuria-genetika-diagnostika-komplexna-liecba.webp" target="_blank" rel="noopener noreferrer"><img src="img/cystinuria-genetika-diagnostika-komplexna-liecba.webp" alt="Poloschematická oblička s cystínovým konkrementom a hexagonálnymi kryštálmi, prepojená so zväčšeným transportérom aminokyselín v proximálnom tubule a DNA" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická ilustračná scéna: porucha transportu cystínu v proximálnom tubule vedie k jeho nadmernému vylučovaniu, kryštalizácii a tvorbe konkrementov. Obrázok neznázorňuje konkrétneho pacienta ani presnú molekulovú štruktúru transportéra.</figcaption></figure>
 
@@ -36,10 +36,10 @@ $articles[] = [
 
 <p>Cystín tvoria dve molekuly cysteínu spojené disulfidovou väzbou. V moči je málo rozpustný, najmä pri fyziologickom a kyslom pH. Riziko kryštalizácie závisí od denného vylučovania cystínu, objemu a pH moču, ďalšieho močového profilu a účinku prípadnej tiolovej liečby. Ostatné dotknuté aminokyseliny sú rozpustnejšie a porovnateľnú litiázu spravidla nespôsobujú.</p>
 
-<p>Praktický cieľ koncentrácie cystínu pod približne 250 mg/l zodpovedá približne 1 mmol/l, nejde však o univerzálnu hranicu pri každom pH. Rozpustnosť cystínu sa s rastúcim pH výrazne zvyšuje. [1]</p>
+<p>Praktický cieľ, koncentrácia cystínu pod približne 250 mg/l (asi 1 mmol/l), nie je univerzálnou hranicou pri každom pH. Rozpustnosť cystínu sa s rastúcim pH výrazne zvyšuje. [1]</p>
 
 <h3>Cystínuria nie je cystinóza</h3>
-<p>Cystinóza je odlišné lyzozómové ochorenie, ktoré môže vyvolať Fanconiho syndróm a systémové poškodenie. Cysteamín používaný pri cystinóze nie je štandardnou liečbou cystínurie. Rozlíšenie je patofyziologické, klinické aj terapeutické, nie iba terminologické.</p>
+<p>Cystinóza je odlišné lyzozómové ochorenie, ktoré môže vyvolať Fanconiho syndróm a systémové poškodenie. Cysteamín používaný pri cystinóze nie je štandardnou liečbou cystínurie. Rozdiel nie je len terminologický: obe ochorenia majú odlišnú patofyziológiu, klinický obraz aj liečbu.</p>
 
 <h2>Genetické formy a klinická interpretácia</h2>
 
@@ -76,7 +76,7 @@ $articles[] = [
 <p>Ploché hexagonálne kryštály cystínu sú vysoko charakteristické, ich neprítomnosť však diagnózu nevylučuje. Cyanidovo-nitroprusidový test môže slúžiť na skríning, pozitívny výsledok musí viesť ku kvantitatívnemu vyšetreniu.</p>
 
 <h3>Kvantifikácia a zobrazovanie</h3>
-<p>U dospelého je vhodný 24-hodinový zber moču s vyšetrením cystínu, objemu, pH, sodíka a kreatinínu; podľa situácie sa dopĺňa celý profil rizikových faktorov litiázy. Treba odlišovať denné vylučovanie cystínu, jeho koncentráciu a presýtenie moču. Vysoké denné vylučovanie môže mať pri dostatočnej diuréze priaznivejšiu koncentráciu.</p>
+<p>U dospelého je vhodný 24-hodinový zber moču s vyšetrením cystínu, objemu, pH, sodíka a kreatinínu; podľa situácie sa dopĺňa celý profil rizikových faktorov litiázy. Treba odlišovať denné vylučovanie cystínu, jeho koncentráciu a presýtenie moču. Pri dostatočnej diuréze môže byť koncentrácia priaznivá aj pri vysokom dennom vylučovaní.</p>
 
 <p>Ultrasonografia je vhodná na opakované sledovanie bez žiarenia. Pri akútnej situácii alebo nejasnom náleze sa používa nízkodávkové CT bez kontrastnej látky. Cystínové konkrementy nie sú úplne rádiolucentné, na natívnej snímke však môžu byť menej nápadné než kalciové.</p>
 
@@ -154,7 +154,7 @@ $articles[] = [
 
 <p>Skúmajú sa inhibítory rastu cystínových kryštálov, génová liečba, látky ovplyvňujúce objem moču a kyselina alfa-lipoová. Randomizovaná štúdia NCT02910531 s 50 účastníkmi bola ukončená v decembri 2024 a výsledky boli v registri zverejnené v apríli 2026. Register uvádza recidívu u 16 z 25 účastníkov pri kyseline alfa-lipoovej a u 23 z 25 pri placebe, neposkytuje však v zázname inferenčnú štatistiku potrebnú na definitívny klinický záver. Bez recenzovanej publikácie a začlenenia do odporúčaní nemožno túto intervenciu považovať za štandardnú liečbu. [4]</p>
 
-<p>Pri cystínurii všeobecne prevažujú menšie observačné štúdie a expertný konsenzus. Silná klinická potreba liečby preto môže existovať aj pri obmedzenej istote dôkazov, slabo doložené postupy sa však nemajú stavať na rovnakú úroveň ako hydratácia, alkalizácia a etablované tiolové lieky.</p>
+<p>Pri cystínurii všeobecne prevažujú menšie observačné štúdie a expertný konsenzus. Liečba môže byť klinicky nevyhnutná aj pri obmedzenej istote dôkazov, slabo doložené postupy však nemožno stavať na rovnakú úroveň ako hydratácia, alkalizácia a etablované tiolové lieky.</p>
 
 <h2>Záver</h2>
 

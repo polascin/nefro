@@ -34,13 +34,13 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'FDA v USA schválila tirzepatid (Mounjaro) na zníženie rizika MACE pri diabete 2. typu s vysokým kardiovaskulárnym rizikom. SURPASS-CVOT preukázala neinferioritu voči dulaglutidu, nie superioritu; EMA indikáciu neschválila.',
     'content'      => <<<'HTML'
-<figure><a href="img/tirzepatid-mounjaro-fda-kardiovaskularne-riziko-t2d-surpass-cvot.webp" rel="noopener noreferrer" target="_blank"><img src="img/tirzepatid-mounjaro-fda-kardiovaskularne-riziko-t2d-surpass-cvot.webp" alt="Injekčné pero a z neho rozšírený modrozelený štít svetla, ktorý teraz prekrýva aj srdce" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna, nie zobrazenie konkrétneho prípravku. Rozšírenie indikácie posúva hranicu toho, čo sa od liečby očakáva — z metabolického účinku na kardiovaskulárnu ochranu.</figcaption></figure>
+<figure><a href="img/tirzepatid-mounjaro-fda-kardiovaskularne-riziko-t2d-surpass-cvot.webp" rel="noopener noreferrer" target="_blank"><img src="img/tirzepatid-mounjaro-fda-kardiovaskularne-riziko-t2d-surpass-cvot.webp" alt="Injekčné pero a z neho rozšírený modrozelený štít svetla, ktorý teraz prekrýva aj srdce" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna, nie zobrazenie konkrétneho prípravku. Rozšírenie indikácie posúva hranicu toho, čo sa od liečby očakáva – z metabolického účinku na kardiovaskulárnu ochranu.</figcaption></figure>
 
 <p class="article-dek"><em>Americký indikačný rámec tirzepatidu (Mounjaro) sa v auguste 2026 rozšíril o zníženie rizika závažných nežiaducich kardiovaskulárnych príhod. Podkladom je aktívne kontrolovaná štúdia SURPASS-CVOT, ktorá preukázala neinferioritu voči dulaglutidu, nie nadradenosť. Ide o označenie FDA; výbor CHMP túto indikáciu v EÚ neschválil.</em></p>
 
 <p>FDA 27. augusta 2026 (doplnok s44 v databáze Drugs@FDA; tlačová správa výrobcu 28. augusta 2026) schválila liek <strong>Mounjaro</strong> (tirzepatid) na zníženie rizika závažných nežiaducich kardiovaskulárnych príhod (MACE) u dospelých s diabetom 2. typu, ktorí sú na tieto príhody vo vysokom riziku. Tirzepatid je duálny agonista receptorov GIP (glukózodependentný inzulínotropný polypeptid) a GLP-1 (glukagónu podobný peptid 1) a podáva sa podkožne raz týždenne.</p>
 
-<p>Pre slovenskú prax je táto správa dôležitá aj tým, čím nie je. Schválenie FDA <strong>nie je</strong> automaticky indikačným rámcom EMA ani ŠÚKL. Výbor CHMP v júni 2026 novú kardiovaskulárnu indikáciu neodporučil; relevantné údaje sa majú uviesť v informáciách o lieku, bez rozšírenia bodu 4.1.</p>
+<p>Pre slovenskú prax je rovnako dôležité, čo táto správa neznamená. Schválenie FDA <strong>nie je</strong> automaticky indikačným rámcom EMA ani ŠÚKL. Výbor CHMP v júni 2026 novú kardiovaskulárnu indikáciu neodporučil; relevantné údaje sa majú uviesť v informáciách o lieku, bez rozšírenia bodu 4.1.</p>
 
 <h2>Čo presne hovorí americký súhrn údajov</h2>
 
@@ -51,7 +51,7 @@ $articles[] = [
   <li>na zníženie rizika závažných nežiaducich kardiovaskulárnych príhod – kardiovaskulárne úmrtie, nefatálny infarkt myokardu alebo nefatálna cievna mozgová príhoda – <strong>u dospelých s diabetom 2. typu, ktorí sú na tieto príhody vo vysokom riziku</strong>.</li>
 </ul>
 
-<p>Označenie teda <strong>nevyžaduje výslovne už prítomné aterosklerotické kardiovaskulárne ochorenie (ASKVO)</strong>. Štúdia SURPASS-CVOT, o ktorú sa indikácia opiera, však randomizovala práve dospelých s diabetom 2. typu a <strong>už etablovaným ASKVO</strong>. Tento rozdiel medzi znením indikačného textu a skúšanou populáciou treba pri čítaní súhrnu vnímať.</p>
+<p>Označenie teda <strong>nevyžaduje výslovne už prítomné aterosklerotické kardiovaskulárne ochorenie (ASKVO)</strong>. Štúdia SURPASS-CVOT, o ktorú sa indikácia opiera, však randomizovala práve dospelých s diabetom 2. typu a <strong>už etablovaným ASKVO</strong>. Na tento rozdiel medzi znením indikačného textu a skúšanou populáciou treba pri čítaní súhrnu pamätať.</p>
 
 <p>Indikácia sa týka značky <strong>Mounjaro</strong>, nie značky Zepbound. V USA je Zepbound samostatný prípravok s tou istou účinnou látkou na dlhodobú redukciu hmotnosti a na stredne ťažké až ťažké obštrukčné spánkové apnoe u dospelých s obezitou. Tieto označenia sa nesmú miešať s kardiovaskulárnou indikáciou Mounjaro. Pediatrické použitie od 10 rokov platí pre glykemickú indikáciu, nie pre MACE.</p>
 
@@ -106,7 +106,7 @@ $articles[] = [
 
 <p>Pomer rizík 0,92 zodpovedá približne 8 % nižšiemu hazardu. Tento údaj treba čítať ako <strong>pozorovaný nižší výskyt príhod, nie ako preukázanú nadradenosť</strong>: horná hranica 95,3 % intervalu spoľahlivosti prekročila 1. Absolútny rozdiel bol 0,9 percentuálneho bodu (12,2 % oproti 13,1 %).</p>
 
-<p>Klinický význam tohto usporiadania je praktický. Dulaglutid už má kardiovaskulárny dôkaz; SURPASS-CVOT ukázala, že tirzepatid v skúšanej populácii <strong>nezostal za ním</strong> v kompozite MACE-3. Neukázala, že je v tomto kompozite lepší. Interpretácia „prvý duálny agonista GIP/GLP-1 so znížením kardiovaskulárneho rizika“ preto platí v americkom regulačnom zmysle neinferiority voči aktívnemu komparátoru, nie ako dôkaz superiority voči dulaglutidu ani voči placebu.</p>
+<p>Dulaglutid už má kardiovaskulárny dôkaz; SURPASS-CVOT ukázala, že tirzepatid v skúšanej populácii <strong>nezostal za ním</strong> v kompozite MACE-3. Neukázala, že je v tomto kompozite lepší. Interpretácia „prvý duálny agonista GIP/GLP-1 so znížením kardiovaskulárneho rizika“ preto platí v americkom regulačnom zmysle neinferiority voči aktívnemu komparátoru, nie ako dôkaz superiority voči dulaglutidu ani voči placebu.</p>
 
 <div class="table-responsive" role="region" aria-label="Primárny ukazovateľ MACE-3 v SURPASS-CVOT, populácia mITT podľa NEJM" tabindex="0">
 <table>
@@ -151,7 +151,7 @@ $articles[] = [
 
 <h2>Čo z toho vyplýva v ambulancii</h2>
 
-<p>Pre pacienta s diabetom 2. typu a ASKVO, ktorý už má alebo zvažuje inkretínovú liečbu, SURPASS-CVOT hovorí predovšetkým toto: tirzepatid v priamom porovnaní s dulaglutidom 1,5 mg nesklamal v kompozite MACE-3 a metabolicky ostáva veľmi účinný. Nehovorí, že má nahradiť dulaglutid, semaglutid alebo inhibítor SGLT2 „pretože je kardiovaskulárne lepší“. Superiorita v MACE-3 preukázaná nebola.</p>
+<p>Pre pacienta s diabetom 2. typu a ASKVO, ktorý už má alebo zvažuje inkretínovú liečbu, SURPASS-CVOT hovorí predovšetkým toto: tirzepatid v priamom porovnaní s dulaglutidom 1,5 mg nebol horší v kompozite MACE-3 a metabolicky ostáva veľmi účinný. Nehovorí, že má nahradiť dulaglutid, semaglutid alebo inhibítor SGLT2 „pretože je kardiovaskulárne lepší“. Superiorita v MACE-3 preukázaná nebola.</p>
 
 <p>Výber ostáva fenotypový: glykémia, hmotnosť, ASKVO, srdcové zlyhávanie, CKD, tolerancia, dostupnosť a – na Slovensku – indikačné obmedzenie a úhrada. Inhibítor SGLT2 s obličkovým alebo srdcovým dôkazom sa kardiovaskulárnym označením tirzepatidu v USA nestráca. Rovnako sa nestráca dôkaz FLOW pre semaglutid pri CKD.</p>
 

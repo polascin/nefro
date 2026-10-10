@@ -33,11 +33,11 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Jednostranový praktický algoritmus manažmentu IgA nefropatie podľa KDIGO 2025 a KDOQI US Commentary: kedy myslieť na biopsiu, ako nastaviť riziko, aké sú základné nefroprotektívne kroky a ako sa rozhodovať medzi Nefeconom a systémovými kortikoidmi.',
     'content'      => <<<'HTML'
-<figure><a href="img/iga-nefropatia-algoritmus-kdigo-2025-kdoqi.webp" rel="noopener noreferrer" target="_blank"><img src="img/iga-nefropatia-algoritmus-kdigo-2025-kdoqi.webp" alt="Svetelný rozhodovací strom vychádzajúci z obličky a postupne sa vetviaci na ďalšie cesty" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Algoritmus nenahrádza úsudok — usporadúva ho do krokov, ktoré sa dajú zopakovať.</figcaption></figure>
+<figure><a href="img/iga-nefropatia-algoritmus-kdigo-2025-kdoqi.webp" rel="noopener noreferrer" target="_blank"><img src="img/iga-nefropatia-algoritmus-kdigo-2025-kdoqi.webp" alt="Svetelný rozhodovací strom vychádzajúci z obličky a postupne sa vetviaci na ďalšie cesty" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Algoritmus nenahrádza úsudok, iba ho usporadúva do krokov, ktoré sa dajú zopakovať.</figcaption></figure>
 
-<p>Tento algoritmus je upravený do podoby stručnej praktickej prílohy na jednu stranu A4. Zmysel je jednoduchý: správne rozpoznať podozrenie na IgA nefropatiu, potvrdiť diagnózu biopsiou, odhadnúť riziko progresie a zvoliť liečbu, ktorá cieli na mechanizmy ochorenia a na spomalenie straty funkcie obličiek.</p>
+<p>Algoritmus je spracovaný ako stručná praktická príloha na jednu stranu A4. Má pomôcť správne rozpoznať podozrenie na IgA nefropatiu, potvrdiť diagnózu biopsiou, odhadnúť riziko progresie a zvoliť liečbu, ktorá cieli na mechanizmy ochorenia a na spomalenie straty funkcie obličiek.</p>
 
-<h2>0) Keď uvažovať o ďalšom kroku</h2>
+<h2>0) Kedy uvažovať o ďalšom kroku</h2>
 
 <ul>
   <li>☐ Podozrenie na IgAN: perzistujúca hematuria a/alebo proteinúria u dospelého, po vylúčení bežných alternatívnych príčin.</li>
@@ -49,13 +49,13 @@ $articles[] = [
 <ul>
   <li>☐ Zvážiť biopsiu, ak dospelý má <strong>proteinúriu ≥ 0,5 g/deň</strong> alebo ekvivalent.</li>
   <li>☐ Biopsiu nepovažovať za „voliteľnú“, ak výsledok zásadne zmení liečbu a nie sú kontraindikácie.</li>
-  <li>☐ Do dokumentácie uviesť: hematuriu a proteinúriu s kvantifikáciou, vylúčenie významnej alternatívy príčiny, eGFR a komorbidity relevantné pre riziko biopsie.</li>
+  <li>☐ Do dokumentácie uviesť: hematuriu a proteinúriu s kvantifikáciou, vylúčenie významnej alternatívnej príčiny, eGFR a komorbidity relevantné pre riziko biopsie.</li>
 </ul>
 
 <h2>2) Po biopsii: ako nastaviť riziko a cieľ liečby</h2>
 
 <ul>
-  <li>☐ Po potvrdení IgAN určiť rizikovosť najmä podľa <strong>eGFR</strong> a <strong>proteinúrie</strong>; histologické parametre využiť podľa Oxford klasifikácie.</li>
+  <li>☐ Po potvrdení IgAN určiť rizikovosť najmä podľa <strong>eGFR</strong> a <strong>proteinúrie</strong>; histologické parametre využiť podľa Oxfordskej klasifikácie.</li>
   <li>☐ Cieľ liečby: znížiť proteinúriu čo najskôr a čo najviac, prakticky minimálne <strong>&lt; 0,5 g/deň</strong>, ideálne <strong>&lt; 0,3 g/deň</strong>, ak je to dosiahnuteľné.</li>
   <li>☐ Súčasne sledovať spomalenie poklesu eGFR, tlak krvi a kardiovaskulárne riziká.</li>
 </ul>
@@ -68,8 +68,8 @@ $articles[] = [
   <li>☐ Kontrola hmotnosti a aeróbna aktivita podľa tolerancie.</li>
   <li>☐ Cieľ tlaku krvi približne <strong>≤ 120/70 mm Hg</strong>, podľa individuálnej tolerancie.</li>
   <li>☐ Ak je indikovaná a tolerovaná, použiť <strong>blokádu RAS</strong> (ACEi/ARB).</li>
-  <li>☐ Zvážiť <strong>SGLT2 inhibíciu</strong>, ak je pre pacienta indikovaná a realizovateľná.</li>
-  <li>☐ Po týchto krokoch re-evaluovať proteinúriu trendom, nie jednorazovou hodnotou.</li>
+  <li>☐ Zvážiť <strong>inhibítor SGLT2</strong>, ak je pre pacienta indikovaná a realizovateľná.</li>
+  <li>☐ Po týchto krokoch prehodnotiť proteinúriu podľa trendu, nie podľa jednorazovej hodnoty.</li>
 </ul>
 
 <h2>4) Ktorých pacientov liečiť cielenejšie</h2>
@@ -85,7 +85,7 @@ $articles[] = [
 
 <ul>
   <li>☐ Zvážiť <strong>9-mesačný cyklus</strong> u rizikových pacientov podľa KDIGO.</li>
-  <li>☐ Pacientovi vysvetliť, že hodnotí sa najmä dlhodobejší trend eGFR a proteinúrie, nie iba krátkodobá zmena po začiatku liečby.</li>
+  <li>☐ Pacientovi vysvetliť, že sa hodnotí najmä dlhodobejší trend eGFR a proteinúrie, nie iba krátkodobá zmena po začiatku liečby.</li>
   <li>☐ Po vysadení môže pretrvávať len čiastočný „legacy effect“ na proteinúriu.</li>
 </ul>
 
@@ -103,7 +103,7 @@ $articles[] = [
   <li>☐ Sledovať <strong>proteinúriu</strong> ako hlavný ukazovateľ účinku.</li>
   <li>☐ Sledovať <strong>eGFR</strong> a tlak krvi.</li>
   <li>☐ Pri kortikoidoch sledovať bezpečnostné parametre podľa rizika a zvoleného režimu.</li>
-  <li>☐ Pri nečakanom alebo nekompatibilnom priebehu prehodnotiť adherenciu, základnú liečbu a diferenciálnu diagnostiku.</li>
+  <li>☐ Pri nečakanom alebo nevysvetliteľnom priebehu prehodnotiť adherenciu, základnú liečbu a diferenciálnu diagnostiku.</li>
 </ul>
 
 <h2>7) Praktická veta do dokumentácie</h2>

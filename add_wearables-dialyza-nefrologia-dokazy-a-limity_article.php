@@ -79,7 +79,7 @@ $articles[] = [
 
 <p>Napriek tomu, že detekcia fibrilácie predsiení je marketingovo najviditeľnejšou funkciou spotrebných zariadení, prehľadová práca konštatuje, že <strong>pre neinvazívnu wearable detekciu arytmií v populácii s terminálnym zlyhaním obličiek neexistujú publikované štúdie</strong>. Nejde pritom len o chýbajúcu validáciu senzora. Nejasná je aj klinická nadväznosť: indikácia antikoagulácie pri fibrilácii predsiení u dialyzovaného pacienta je sama osebe predmetom sporu, takže záchyt bez rozhodovacieho algoritmu nemusí pacientovi priniesť nič.</p>
 
-<p>Paradoxne pritom platí, že práve u dialyzovaných pacientov je kontinuálny záznam rytmu klinicky najzaujímavejší – implantovateľné slučkové záznamníky ukázali prevahu bradyarytmií nad komorovými arytmiami. Prenos tejto informácie na neinvazívny senzor je však zatiaľ nepodložený.</p>
+<p>Práve u dialyzovaných pacientov je pritom kontinuálny záznam rytmu klinicky najzaujímavejší – implantovateľné slučkové záznamníky ukázali prevahu bradyarytmií nad komorovými arytmiami. Prenos tejto informácie na neinvazívny senzor je však zatiaľ nepodložený.</p>
 
 <h2>Draslík z krivky EKG: nádejné, ale nie hotové</h2>
 
@@ -101,7 +101,7 @@ $articles[] = [
 
 <h2>Nositeľná umelá oblička: stále vo vývoji</h2>
 
-<p>Prototypy pre peritoneálnu dialýzu (AWAK, Carry Life, WEAKID, ViWAK) prešli malými štúdiami na zvieratách alebo na obmedzenom počte ľudí. Hemodialyzačné riešenia narážajú na trvalé technické prekážky: zrážanie v mimotelovom okruhu, kolísanie prietokov, regeneráciu dialyzačného roztoku sorbentmi a bezpečnostné mechanizmy. Rozdiel oproti bežnému monitorovaniu je zásadný a stojí za jednoduchým zhrnutím: <strong>nositeľný monitor je dnes realistický, nositeľná dialýza nie.</strong></p>
+<p>Prototypy pre peritoneálnu dialýzu (AWAK, Carry Life, WEAKID, ViWAK) prešli malými štúdiami na zvieratách alebo na obmedzenom počte ľudí. Hemodialyzačné riešenia narážajú na trvalé technické prekážky: zrážanie v mimotelovom okruhu, kolísanie prietokov, regeneráciu dialyzačného roztoku sorbentmi a bezpečnostné mechanizmy. Rozdiel oproti bežnému monitorovaniu je zásadný: <strong>nositeľný monitor je dnes realistický, nositeľná dialýza nie.</strong></p>
 
 <h2>Vecná kontrola tvrdení</h2>
 
@@ -168,7 +168,7 @@ $articles[] = [
 
 <h2>Riziká, ktoré sa pri nadšení prehliadajú</h2>
 
-<p><strong>Únava z upozornení.</strong> Prehľad na ňu upozorňuje výslovne: nekontrolované používanie vedie k falošne pozitívnym nálezom, k úzkosti pacienta a k zbytočným zásahom. V dialyzačnom stredisku, kde je personálu chronicky nedostatok, je to reálna bezpečnostná hrozba, nie teoretická poznámka.</p>
+<p><strong>Únava z upozornení.</strong> Prehľad na ňu výslovne upozorňuje: nekontrolované používanie vedie k falošne pozitívnym nálezom, k úzkosti pacienta a k zbytočným zásahom. V dialyzačnom stredisku, kde je personálu chronicky nedostatok, je to reálna bezpečnostná hrozba, nie teoretická poznámka.</p>
 
 <p><strong>Digitálna priepasť.</strong> Časť pacientov nemá prístup k technológii ani zručnosti na jej používanie. Ak sa monitorovanie stane cestou k lepšej starostlivosti, jeho zavedenie bez podpory znevýhodní práve tých, ktorí sú už znevýhodnení – starších, sociálne slabších, pacientov s poruchou zraku alebo s kognitívnym deficitom.</p>
 

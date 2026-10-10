@@ -32,7 +32,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Nové epidemiologické údaje z francúzskej kohorty NutriNet-Santé spájajú vysoký príjem niektorých potravinových farbív a konzervantov s vyšším rizikom diabetu 2. typu, rakoviny, hypertenzie a kardiovaskulárnych ochorení. Ide o observačné dáta, nie o dôkaz kauzality.',
     'content'      => <<<'HTML'
-<figure><a href="img/potravinove-aditiva-farbiva-konzervanty-chronicke-ochorenia.webp" rel="noopener noreferrer" target="_blank"><img src="img/potravinove-aditiva-farbiva-konzervanty-chronicke-ochorenia.webp" alt="Neprirodzene žiarivé farebné kvapky a konzervačné čiastočky vstupujúce do krvi so zápalovými iskrami" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Prídavné látky sa posudzovali jednotlivo — nové dáta však ukazujú na ich súhrnný vplyv.</figcaption></figure>
+<figure><a href="img/potravinove-aditiva-farbiva-konzervanty-chronicke-ochorenia.webp" rel="noopener noreferrer" target="_blank"><img src="img/potravinove-aditiva-farbiva-konzervanty-chronicke-ochorenia.webp" alt="Neprirodzene žiarivé farebné kvapky a konzervačné čiastočky vstupujúce do krvi so zápalovými iskrami" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Prídavné látky sa posudzovali jednotlivo – nové dáta však ukazujú na ich súhrnný vplyv.</figcaption></figure>
 
 <p>Potravinové aditíva sú bežnou súčasťou priemyselne spracovaných a najmä ultraprocesovaných potravín. Farbivá, konzervanty, antioxidanty a ďalšie látky pomáhajú zlepšiť vzhľad, trvanlivosť, chuť alebo technologické vlastnosti výrobkov. Nové epidemiologické údaje z francúzskej kohorty NutriNet-Santé však znovu otvárajú otázku, či ich dlhodobá konzumácia vo vysokých množstvách nemôže súvisieť so zvýšeným rizikom diabetu 2. typu, nádorových ochorení, hypertenzie a kardiovaskulárnych chorôb.</p>
 
@@ -68,7 +68,7 @@ $articles[] = [
   <li>antokyány E163: HR 1,40; 95 % CI 1,17 až 1,68.</li>
 </ul>
 
-<p>Tieto látky sa často nachádzajú v ultraprocesovaných potravinách. Preto je dôležité nehovoriť iba o jednej „éčkovej“ látke izolovane. Často ide o súčasť širšieho stravovacieho vzorca s vyšším podielom priemyselne spracovaných výrobkov.</p>
+<p>Tieto látky sa často nachádzajú v ultraprocesovaných potravinách. Preto nestačí posudzovať jednu „éčkovú“ látku izolovane. Často je súčasťou širšieho stravovacieho vzorca s vyšším podielom priemyselne spracovaných výrobkov.</p>
 
 <h2>Farbivá a riziko rakoviny</h2>
 
@@ -117,7 +117,7 @@ $articles[] = [
 
 <h2>Asociácia nie je kauzalita</h2>
 
-<p>Najdôležitejším metodologickým bodom je, že ide o observačné štúdie. Autori upravovali analýzy o mnoho potenciálnych rušivých faktorov, vrátane sociodemografických charakteristík, fajčenia, alkoholu, fyzickej aktivity a celkovej kvality stravy.</p>
+<p>Z metodologického hľadiska je najdôležitejšie, že ide o observačné štúdie. Autori upravovali analýzy o mnoho potenciálnych rušivých faktorov vrátane sociodemografických charakteristík, fajčenia, alkoholu, fyzickej aktivity a celkovej kvality stravy.</p>
 
 <p>To zvyšuje dôveryhodnosť výsledkov, ale nevylučuje všetky alternatívne vysvetlenia.</p>
 

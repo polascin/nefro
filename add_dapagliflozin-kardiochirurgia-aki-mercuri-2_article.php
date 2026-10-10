@@ -27,9 +27,9 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'V randomizovanej štúdii MERCURI-2 znížili štyri dávky dapagliflozínu výskyt pooperačného akútneho poškodenia obličiek z 52 % na 28 %. Výsledok však do veľkej miery určilo kritérium nízkej diurézy. Mortalita, dĺžka hospitalizácie ani závažné kardiorenálne príhody sa nezmenili.',
     'content'      => <<<'HTML'
-<figure><a href="img/dapagliflozin-kardiochirurgia-aki-mercuri-2.webp" rel="noopener noreferrer" target="_blank"><img src="img/dapagliflozin-kardiochirurgia-aki-mercuri-2.webp" alt="Oblička za tenkým modrozeleným štítom svetla, proti ktorému smerujú chirurgické nástroje" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Ochrana pred operáciou vyzerá sľubne, no štít je zatiaľ tenký — na zmenu perioperačnej praxe to nestačí.</figcaption></figure>
+<figure><a href="img/dapagliflozin-kardiochirurgia-aki-mercuri-2.webp" rel="noopener noreferrer" target="_blank"><img src="img/dapagliflozin-kardiochirurgia-aki-mercuri-2.webp" alt="Oblička za tenkým modrozeleným štítom svetla, proti ktorému smerujú chirurgické nástroje" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Ochrana pred operáciou vyzerá sľubne, no štít je zatiaľ tenký a na zmenu perioperačnej praxe nestačí.</figcaption></figure>
 
-<p class="article-dek"><em>Štyri dávky dapagliflozínu podané okolo elektívnej operácie srdca znížili v štúdii MERCURI-2 výskyt akútneho poškodenia obličiek z 52 % na 28 %. Rozsah účinku je nezvyčajne veľký, no podstatnú časť rozdielu tvorili prípady definované krátkodobou oligúriou — a dapagliflozín diurézu sám zvyšuje. Mortalita, potreba náhrady funkcie obličiek, dĺžka hospitalizácie ani závažné kardiorenálne príhody sa nezmenili a bezpečnostný súbor bol príliš malý a príliš selektovaný na vylúčenie perioperačnej ketoacidózy.</em></p>
+<p class="article-dek"><em>Štyri dávky dapagliflozínu podané okolo elektívnej operácie srdca znížili v štúdii MERCURI-2 výskyt akútneho poškodenia obličiek z 52 % na 28 %. Rozsah účinku je nezvyčajne veľký, no podstatnú časť rozdielu tvorili prípady definované krátkodobou oligúriou, pričom dapagliflozín diurézu sám zvyšuje. Mortalita, potreba náhrady funkcie obličiek, dĺžka hospitalizácie ani závažné kardiorenálne príhody sa nezmenili a bezpečnostný súbor bol príliš malý a príliš selektovaný na vylúčenie perioperačnej ketoacidózy.</em></p>
 
 <h2>Prečo je téma dôležitá</h2>
 
@@ -111,7 +111,7 @@ $articles[] = [
 <p>Dve z týchto kritérií menia vyznenie diskusie o perioperačnej bezpečnosti:</p>
 
 <ol>
-  <li><strong>Chronickí používatelia inhibítora SGLT2 boli zo štúdie vylúčení.</strong> MERCURI-2 preto <em>neodpovedá</em> na otázku, či má pacient dlhodobo užívajúci inhibítor SGLT2 liek pred operáciou vysadiť. Odpovedá na inú otázku — či sa oplatí liek na štyri dni <em>začať</em>.</li>
+  <li><strong>Chronickí používatelia inhibítora SGLT2 boli zo štúdie vylúčení.</strong> MERCURI-2 preto <em>neodpovedá</em> na otázku, či má pacient dlhodobo užívajúci inhibítor SGLT2 liek pred operáciou vysadiť. Odpovedá na inú otázku: či sa oplatí liek na štyri dni <em>začať</em>.</li>
   <li>Vylúčené boli aj viaceré skupiny s vyšším rizikom ketoacidózy. Nízky výskyt tejto komplikácie preto nemožno automaticky preniesť na všetkých pacientov užívajúcich inhibítory SGLT2.</li>
 </ol>
 
@@ -156,7 +156,7 @@ $articles[] = [
 
 <p>Táto skutočnosť sa v spravodajstve takmer nespomína, hoci je pre posúdenie výsledku podstatná. Výpočet veľkosti súboru vychádzal z <strong>predpokladaného výskytu AKI v placebovej skupine 22 %</strong> a z relatívneho rizika 0,64, čo zodpovedalo absolútnemu zníženiu o 7,9 percentuálneho bodu. Skutočne pozorovaný výskyt v placebovej skupine bol 52 %, teda takmer 2,4-násobok predpokladu, a pozorovaný účinok bol väčší, než sa plánovalo.</p>
 
-<p>Ak sa pozorovaná incidencia v kontrolnej skupine výrazne odchýli od predpokladu, spravidla to znamená, že sa zachytávali aj veľmi mierne udalosti — v tomto prípade najmä krátkodobé poklesy diurézy, ktoré sa pri hodinovom monitorovaní na jednotke intenzívnej starostlivosti zaznamenávajú takmer u každého pacienta po mimotelovom obehu.</p>
+<p>Ak sa pozorovaná incidencia v kontrolnej skupine výrazne odchýli od predpokladu, spravidla to znamená, že sa zachytávali aj veľmi mierne udalosti, v tomto prípade najmä krátkodobé poklesy diurézy, ktoré sa pri hodinovom monitorovaní na jednotke intenzívnej starostlivosti zaznamenávajú takmer u každého pacienta po mimotelovom obehu.</p>
 </div>
 
 <h2>Kritérium diurézy vysvetľuje väčšinu rozdielu</h2>
@@ -183,7 +183,7 @@ $articles[] = [
 </table>
 </div>
 
-<p>Ak by sa AKI hodnotilo <em>iba</em> podľa kreatinínu, rozdiel by predstavoval približne 22 % oproti 27 %, teda relatívne zníženie rádovo o pätinu — hodnotu blízku doterajším súhrnným analýzam dlhodobej liečby inhibítormi SGLT2, ktoré uvádzajú zníženie rizika AKI približne o 20 až 26 %.</p>
+<p>Ak by sa AKI hodnotilo <em>iba</em> podľa kreatinínu, rozdiel by predstavoval približne 22 % oproti 27 %, teda relatívne zníženie rádovo o pätinu. Táto hodnota je blízka doterajším súhrnným analýzam dlhodobej liečby inhibítormi SGLT2, ktoré uvádzajú zníženie rizika AKI približne o 20 až 26 %.</p>
 
 <p><strong>Tento prepočet je orientačný.</strong> Predpokladá, že sa kritériá u jednotlivých pacientov neprekrývali, čo publikovaný abstrakt neuvádza. Napriek tomu ukazuje, kde je ťažisko problému: kritérium diurézy pravdepodobne vysvetľuje približne štyri pätiny pozorovaného absolútneho rozdielu.</p>
 
@@ -194,7 +194,7 @@ $articles[] = [
   <li>osmotická diuréza mechanicky znížila počet pacientov spĺňajúcich oligurickú zložku definície AKI.</li>
 </ol>
 
-<p>Samotné zachovanie diurézy nie je bezvýznamné — oligúria môže signalizovať závažnú hemodynamickú poruchu a spája sa s nepriaznivou prognózou. Pri lieku s priamym diuretickým účinkom však nemožno automaticky považovať pokles oligúrie za rovnocenný dôkaz ochrany renálneho parenchýmu.</p>
+<p>Samotné zachovanie diurézy nie je bezvýznamné: oligúria môže signalizovať závažnú hemodynamickú poruchu a spája sa s nepriaznivou prognózou. Pri lieku s priamym diuretickým účinkom však nemožno automaticky považovať pokles oligúrie za rovnocenný dôkaz ochrany renálneho parenchýmu.</p>
 
 <p>Na rozlíšenie týchto možností by boli potrebné samostatne publikované výsledky kreatinínových a diuretických kritérií, biomarkery tubulárneho poškodenia a dlhodobejšie sledovanie eGFR a albuminúrie.</p>
 
@@ -214,7 +214,7 @@ $articles[] = [
 
 <p>Fibrilácia predsiení vznikla u 45 % pacientov v oboch skupinách (176 z 392 v každej). Reoperáciu podstúpilo 11 % pacientov liečených dapagliflozínom (43 z 392) a 10 % pacientov dostávajúcich placebo (39 z 392).</p>
 
-<p>Neprítomnosť rozdielu nemusí znamenať neúčinnosť — štúdia pravdepodobne nemala dostatočnú štatistickú silu na zriedkavejšie klinické udalosti. Zároveň však ukazuje, že výrazné zníženie kombinovaného AKI sa zatiaľ nepremietlo do preukázateľného krátkodobého klinického prínosu.</p>
+<p>Neprítomnosť rozdielu nemusí znamenať neúčinnosť; štúdia pravdepodobne nemala dostatočnú štatistickú silu na zriedkavejšie klinické udalosti. Zároveň však ukazuje, že výrazné zníženie kombinovaného AKI sa zatiaľ nepremietlo do preukázateľného krátkodobého klinického prínosu.</p>
 
 <div class="pdf-avoid-break">
 <h3>Poznámka k údajom o závažnejších štádiách AKI</h3>
@@ -228,7 +228,7 @@ $articles[] = [
 
 <p>Jedna epizóda ketoacidózy vznikla v dapagliflozínovej skupine, žiadna v skupine s placebom. Absolútne riziko v liečenej skupine tak bolo približne 0,26 %.</p>
 
-<p>Jediná udalosť neumožňuje spoľahlivo odhadnúť skutočné riziko. Pri 392 liečených pacientoch je horná hranica 95 % intervalu spoľahlivosti pre jednu udalosť približne 1,4 %, čo nie je zanedbateľné. Štúdia bola na vylúčenie zriedkavej, ale potenciálne život ohrozujúcej komplikácie príliš malá — a navyše boli vylúčení pacienti s viacerými rizikovými faktormi ketoacidózy.</p>
+<p>Jediná udalosť neumožňuje spoľahlivo odhadnúť skutočné riziko. Pri 392 liečených pacientoch je horná hranica 95 % intervalu spoľahlivosti pre jednu udalosť približne 1,4 %, čo nie je zanedbateľné. Štúdia bola na vylúčenie zriedkavej, ale potenciálne život ohrozujúcej komplikácie príliš malá a navyše boli vylúčení pacienti s viacerými rizikovými faktormi ketoacidózy.</p>
 
 <div class="pdf-avoid-break">
 <h3>Prečo vzniká euglykemická ketoacidóza</h3>
@@ -260,7 +260,7 @@ $articles[] = [
 
 <h2>Možné mechanizmy renálnej ochrany</h2>
 
-<p>Prípadný účinok dapagliflozínu nemožno vysvetliť chronickou redukciou albuminúrie ani spomalením progresie CKD — liečba trvala iba štyri dni. Uvažovať možno o viacerých akútnych mechanizmoch:</p>
+<p>Prípadný účinok dapagliflozínu nemožno vysvetliť chronickou redukciou albuminúrie ani spomalením progresie CKD, keďže liečba trvala iba štyri dni. Uvažovať možno o viacerých akútnych mechanizmoch:</p>
 
 <ul>
   <li>zníženie proximálnej tubulárnej reabsorpcie sodíka a glukózy,</li>
@@ -323,7 +323,7 @@ $articles[] = [
       <th scope="row">Ruste a spol. (2026)</th>
       <td>retrospektívna kohorta, 509 pacientov, kardiochirurgia s mimotelovým obehom, <em>chronická</em> liečba</td>
       <td>KDIGO: <strong>len kreatinín</strong></td>
-      <td>35 % oproti 30 %; RR 1,12 (0,80 až 1,55) — bez prínosu</td>
+      <td>35 % oproti 30 %; RR 1,12 (0,80 až 1,55) – bez prínosu</td>
     </tr>
     <tr>
       <th scope="row">Gao a spol. (2026)</th>
@@ -339,11 +339,11 @@ $articles[] = [
 
 <h2>Možno podľa štúdie prestať vysadzovať inhibítory SGLT2?</h2>
 
-<p><strong>Zatiaľ nie</strong> — a to hneď z dvoch dôvodov.</p>
+<p><strong>Zatiaľ nie</strong>, a to z dvoch dôvodov.</p>
 
 <p>Prvý je logický: <em>MERCURI-2 na túto otázku vôbec neodpovedá.</em> Pacienti už liečení inhibítorom SGLT2 boli zo štúdie vylúčení. Štúdia teda testovala <strong>začatie</strong> lieku, nie <strong>pokračovanie</strong> chronickej liečby cez operáciu. To sú farmakologicky aj klinicky odlišné situácie: chronický používateľ má iný metabolický stav, dlhšie trvajúcu glykosúriu a spravidla aj kardiorenálnu indikáciu.</p>
 
-<p>Druhý je dôkazný: jedna štúdia nestačí na zmenu bezpečnostných odporúčaní. Doterajšie odporúčania na prerušenie inhibítora SGLT2 pred plánovanou operáciou vznikli na základe farmakológie liekov a hlásených prípadov perioperačnej euglykemickej ketoacidózy. Napriek krátkemu plazmatickému polčasu môže farmakodynamický účinok — glykosúria a ketogénny posun — pretrvávať dlhšie.</p>
+<p>Druhý je dôkazný: jedna štúdia nestačí na zmenu bezpečnostných odporúčaní. Doterajšie odporúčania na prerušenie inhibítora SGLT2 pred plánovanou operáciou vznikli na základe farmakológie liekov a hlásených prípadov perioperačnej euglykemickej ketoacidózy. Napriek krátkemu plazmatickému polčasu môže farmakodynamický účinok (glykosúria a ketogénny posun) pretrvávať dlhšie.</p>
 
 <p>MERCURI-2 nevylučuje riziko u:</p>
 
@@ -486,7 +486,7 @@ $articles[] = [
 <p>Spravodajské spracovanie v Medscape primerane reprodukuje základné výsledky štúdie a upozorňuje na napätie medzi možným znížením AKI a rizikom ketoacidózy. Niektoré formulácie však vyžadujú korekciu:</p>
 
 <ul>
-  <li>označenie rizika ketoacidózy u pacientov bez diabetu za „takmer zanedbateľné“ je príliš kategorické — regulačné odporúčanie FDA sa výslovne vzťahuje aj na nediabetikov,</li>
+  <li>označenie rizika ketoacidózy u pacientov bez diabetu za „takmer zanedbateľné“ je príliš kategorické, pretože regulačné odporúčanie FDA sa výslovne vzťahuje aj na nediabetikov,</li>
   <li>pokles kombinovaného AKI nemožno bez výhrad označiť za rovnako veľký pokles parenchýmového poškodenia obličiek,</li>
   <li>neprítomnosť rozdielu v mortalite a ďalších tvrdých výsledkoch si zasluhuje väčší dôraz,</li>
   <li>skutočnosť, že chronickí používatelia inhibítora SGLT2 boli zo štúdie vylúčení, sa v spravodajstve prakticky nespomína, hoci zásadne obmedzuje záver o „netreba vysadzovať“,</li>
@@ -502,7 +502,7 @@ $articles[] = [
 
 <p>Výsledok však nemožno interpretovať bez zásadných výhrad. Primárny ukazovateľ do veľkej miery určila oligúria, ktorú dapagliflozín mení osmotickou diurézou; po odpočítaní tejto zložky sa účinok približuje k rádovo pätinovému zníženiu známemu z chronickej liečby. Nebol dokázaný pokles mortality, hospitalizácie ani závažných kardiorenálnych príhod. Bezpečnostný súbor bol príliš malý a príliš selektovaný na vylúčenie euglykemickej ketoacidózy.</p>
 
-<p><strong>Dapagliflozín sa preto zatiaľ nemá rutinne začínať deň pred operáciou srdca iba na prevenciu AKI. Rovnako je predčasné všeobecne zrušiť perioperačné prerušovanie inhibítorov SGLT2 — najmä preto, že chronickí používatelia týchto liekov boli zo štúdie vylúčení, takže na túto otázku MERCURI-2 vôbec neodpovedá.</strong> O prípadnej zmene praxe majú rozhodnúť nezávislé replikačné štúdie, samostatne vykazované kreatinínové výsledky, dlhodobé renálne sledovanie a aktualizované odborné a regulačné odporúčania.</p>
+<p><strong>Dapagliflozín sa preto zatiaľ nemá rutinne začínať deň pred operáciou srdca iba na prevenciu AKI. Rovnako je predčasné všeobecne zrušiť perioperačné prerušovanie inhibítorov SGLT2, najmä preto, že chronickí používatelia týchto liekov boli zo štúdie vylúčení, takže na túto otázku MERCURI-2 vôbec neodpovedá.</strong> O prípadnej zmene praxe majú rozhodnúť nezávislé replikačné štúdie, samostatne vykazované kreatinínové výsledky, dlhodobé renálne sledovanie a aktualizované odborné a regulačné odporúčania.</p>
 </div>
 
 <h2>Súvisiace články</h2>

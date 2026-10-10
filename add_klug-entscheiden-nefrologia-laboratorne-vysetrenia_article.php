@@ -50,9 +50,9 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Iniciatíva Klug entscheiden (DGIM) v nefrológii: ktoré laboratórne vyšetrenia naozaj menia manažment pacienta. Pozitívne odporúčania (kreatinín/eGFR, ACR, parametre CKD-MBD) aj to, čomu sa pri CKD vyhnúť.',
     'content'      => <<<'HTML'
-<figure><a href="img/klug-entscheiden-nefrologia-laboratorne-vysetrenia.webp" rel="noopener noreferrer" target="_blank"><img src="img/klug-entscheiden-nefrologia-laboratorne-vysetrenia.webp" alt="Dlhý rad laboratórnych skúmaviek, z ktorých len niekoľko zostáva rozsvietených a smeruje svetlo k obličke" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Viac vyšetrení neznamená lepšie rozhodnutie — hodnotu má len to, čo skutočne mení postup.</figcaption></figure>
+<figure><a href="img/klug-entscheiden-nefrologia-laboratorne-vysetrenia.webp" rel="noopener noreferrer" target="_blank"><img src="img/klug-entscheiden-nefrologia-laboratorne-vysetrenia.webp" alt="Dlhý rad laboratórnych skúmaviek, z ktorých len niekoľko zostáva rozsvietených a smeruje svetlo k obličke" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Viac vyšetrení neznamená lepšie rozhodnutie – hodnotu má len to, čo skutočne mení postup.</figcaption></figure>
 
-<p>Iniciatíva <strong>„Klug entscheiden“</strong> (v preklade „rozumne sa rozhodovať“) – vedená spoločnosťou DGIM (Nemecká spoločnosť pre vnútorné lekárstvo) spolu s odbornými spoločnosťami – sa zameriava na to, aby sa v medicíne nerobil zbytočný „laboratórny skríning“ bez jasného klinického dôvodu, ale zároveň sa neprehliadli vyšetrenia, ktoré reálne menia manažment pacienta. V nefrológii je jadrom prístupu skoré zachytenie ochorenia a stratifikácia rizika pri CKD pomocou jednoduchých krvných a močových testov a vybraných parametrov minerálovo-kostného metabolizmu.</p>
+<p>Iniciatíva <strong>„Klug entscheiden“</strong> (v preklade „rozumne sa rozhodovať“) – vedená spoločnosťou DGIM (Nemecká spoločnosť pre vnútorné lekárstvo) spolu s odbornými spoločnosťami – sa snaží obmedziť zbytočný „laboratórny skríning“ bez jasného klinického dôvodu a zároveň zabrániť tomu, aby sa prehliadli vyšetrenia, ktoré reálne menia manažment pacienta. V nefrológii ide predovšetkým o skoré zachytenie ochorenia a stratifikáciu rizika pri CKD pomocou jednoduchých krvných a močových testov a vybraných parametrov minerálovo-kostného metabolizmu.</p>
 
 <h2>1) Pre koho to platí (praktický rámec)</h2>
 
@@ -73,7 +73,7 @@ $articles[] = [
   <li><strong>močový status</strong> (orientačný záchyt abnormalít v moči).</li>
 </ul>
 
-<p>Špecifické schémy sledovania (napríklad intervaly) sa viažu na rizikovú skupinu; typicky ide o periodické kontroly (v dokumente sa uvádza interval raz za 1 – 2 roky pri rizikových skupinách).</p>
+<p>Intervaly sledovania závisia od rizikovej skupiny; dokument pri rizikových skupinách uvádza kontrolu raz za 1 – 2 roky.</p>
 
 <h3>P2. Stratifikácia rizika pri CKD: eGFR + kvantifikácia proteinúrie/albuminúrie</h3>
 
@@ -82,7 +82,7 @@ $articles[] = [
   <li><strong>kvantitatívne stanovenie proteinúrie/albuminúrie</strong>, napríklad ako <strong>albumín-kreatinínový pomer (ACR)</strong> v spontánnom alebo zbernom moči.</li>
 </ul>
 
-<p>Dôvod je jednoduchý: samotná eGFR nemusí vysvetliť riziko. <strong>Rozsah albuminúrie/proteinúrie</strong> významne dopĺňa prognostiku (kardiorenálne výsledky aj priebeh ochorenia).</p>
+<p>Samotná eGFR riziko nemusí dostatočne vystihnúť. <strong>Rozsah albuminúrie/proteinúrie</strong> významne dopĺňa prognostiku (kardiorenálne výsledky aj priebeh ochorenia).</p>
 
 <h3>P3. Minerálovo-kostný metabolizmus pri pokročilejšej CKD: Ca, P, iPTH, 25-OH vitamín D</h3>
 
@@ -94,32 +94,32 @@ $articles[] = [
   <li><strong>25-OH vitamín D3</strong>.</li>
 </ul>
 
-<p>Cieľom je zachytiť poruchy v rámci CKD-MBD (minerálová a kostná porucha pri CKD) včas, keď ešte vieme cielene ovplyvniť ďalší vývoj a znížiť riziká spojené s kostným a kardiovaskulárnym poškodením.</p>
+<p>Cieľom je zachytiť poruchy v rámci CKD-MBD (minerálová a kostná porucha pri CKD) včas, keď sa ešte dá cielene ovplyvniť ďalší vývoj a znížiť riziká spojené s kostným a kardiovaskulárnym poškodením.</p>
 
 <h3>P4. Laboratórium ako súčasť rozhodovania o kontraste: racionálne zvažovanie rizika</h3>
 
-<p>Táto časť je síce „nefrologická“, ale nie je čisto o laboratóriách. Podstatou je, že pri <strong>vyššom stupni poruchy funkcie obličiek (CKD 4 – 5; eGFR &lt; 30 ml/min/1,73 m²)</strong> treba zvážiť diagnostický prínos kontrastného vyšetrenia oproti potenciálnym rizikám tak, aby nevznikalo <strong>systematické poddiagnostikovanie</strong>.</p>
+<p>Toto odporúčanie sa netýka len laboratória. Podstatou je, že pri <strong>vyššom stupni poruchy funkcie obličiek (CKD 4 – 5; eGFR &lt; 30 ml/min/1,73 m²)</strong> treba zvážiť diagnostický prínos kontrastného vyšetrenia oproti potenciálnym rizikám tak, aby nevznikalo <strong>systematické poddiagnostikovanie</strong>.</p>
 
-<p>V praxi to súvisí s tým, že laboratórium (eGFR) je potrebné skôr ako vstup do rozhodnutia, nie ako „automatický reflex“ pred každým vyšetrením.</p>
+<p>eGFR tu slúži ako jeden zo vstupov do rozhodnutia, nie ako „automatický reflex“ pred každým vyšetrením.</p>
 
 <h3>P5. Prevencia infekcií cez pravidelnú kontrolu očkovania</h3>
 
-<p>Opäť ide skôr o organizačno-preventívnu rovinu, ale pre nefrológiu je to dôležité: pri CKD a/alebo imunosupresii sa má pravidelne kontrolovať očkovací status. Nejde o laboratórne hodnoty, ale často sa rieši v rámci tej istej nefrologickej starostlivosti.</p>
+<p>Aj tu ide skôr o organizačnú a preventívnu rovinu: pri CKD a/alebo imunosupresii sa má pravidelne kontrolovať očkovací status. Nejde o laboratórne hodnoty, no rieši sa to často v rámci tej istej nefrologickej starostlivosti.</p>
 
 <h2>3) Čomu sa vyhnúť (negatívne odporúčania) a čo to znamená pre „zmysluplné laboratórium“</h2>
 
-<p>V dokumente sú aj negatívne odporúčania, ktoré nepovedia „aké laboratóriá robiť“, ale pomáhajú pochopiť logiku iniciatívy:</p>
+<p>Dokument obsahuje aj negatívne odporúčania. Nehovoria, aké vyšetrenia robiť, ale ukazujú logiku iniciatívy:</p>
 <ul>
   <li><strong>Nevytvárať zbytočný režim zvýšeného príjmu tekutín len preto, aby sa „zlepšila funkcia obličiek“</strong> (žiadna automatická vysoká perorálna hydratácia na „prepláchnutie“).</li>
   <li><strong>Neplytvať klinickým časom ani nezaťažovať obličky diuretikami a tekutinami s cieľom „zabrzdiť“ alebo „zvrátiť“ akútne poškodenie</strong>, ak na to nie je jasná indikácia.</li>
   <li><strong>Lieky používať „šetriaco“</strong> – napríklad sa neodporúča pravidelné podávanie NSAID (nesteroidové antiflogistiká) u pacientov s hypertenziou alebo CKD.</li>
 </ul>
 
-<p>Pre laboratórnu prax z toho plynie jednoduchý princíp: keď liečbu neriadi jasná indikácia, ani laboratórne vyšetrenia sa nemajú robiť plošne bez očakávaného vplyvu na rozhodnutie.</p>
+<p>Pre laboratórnu prax z toho vyplýva rovnaký princíp: tak ako liečba, ani laboratórne vyšetrenia sa nemajú robiť plošne, ak sa od nich nečaká vplyv na rozhodnutie.</p>
 
 <h2>4) Praktické zhrnutie pre ambulanciu nefrológa</h2>
 
-<p>Ak chceš zostaviť úsporný („lean“) nefrologický laboratórny balík v súlade s myšlienkou Klug entscheiden, typicky budeš vychádzať z týchto jadier:</p>
+<p>Úsporný nefrologický laboratórny balík v duchu Klug entscheiden stojí na týchto základoch:</p>
 <ul>
   <li><strong>kreatinín → eGFR</strong> + <strong>močový status</strong> pri sledovaní rizikových pacientov,</li>
   <li>pri <strong>CKD &lt; 60</strong>: <strong>eGFR + kvantifikácia ACR/proteinúrie</strong>,</li>

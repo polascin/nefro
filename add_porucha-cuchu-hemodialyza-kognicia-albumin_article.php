@@ -29,7 +29,7 @@ $articles[] = [
 
 <p>Prospektívna observačná štúdia z Ankary, publikovaná v <em>Journal of Nephrology</em>, porovnala schopnosť identifikovať pachy u 100 hemodialyzovaných pacientov a 52 zdravých kontrolných osôb. U časti pacientov sa vyšetrenie zopakovalo približne po roku.</p>
 
-<p>Výsledky ukázali výrazne horšiu identifikáciu pachov u dialyzovaných pacientov — poruchu malo <strong>91 %</strong> z nich. Lepšia čuchová výkonnosť súvisela s vyšším kognitívnym skóre a vyššou koncentráciou sérového albumínu. Súvislosť s dialyzačnou primeranosťou vyjadrenou pomocou Kt/V sa nepreukázala.</p>
+<p>Výsledky ukázali výrazne horšiu identifikáciu pachov u dialyzovaných pacientov: poruchu malo <strong>91 %</strong> z nich. Lepšia čuchová výkonnosť súvisela s vyšším kognitívnym skóre a vyššou koncentráciou sérového albumínu. Súvislosť s dialyzačnou primeranosťou vyjadrenou pomocou Kt/V sa nepreukázala.</p>
 
 <p>Zásadný je práve tento kontrast: porucha čuchu sa v tejto kohorte javí skôr ako <strong>odraz celkovej chorobnosti a zraniteľnosti pacienta než ako dôsledok nedostatočnej dialyzačnej dávky</strong>.</p>
 
@@ -39,7 +39,7 @@ $articles[] = [
 
 <p>Vylúčení boli pacienti s aktívnym ochorením nosa alebo prinosových dutín, nedávnou infekciou horných dýchacích ciest, závažným neurologickým alebo psychiatrickým ochorením a osoby užívajúce lieky, ktoré môžu ovplyvniť čuch.</p>
 
-<p>Vyšetrenia dialyzovaných pacientov sa robili <strong>pred hemodialýzou v strede týždňa</strong>. Toto zjednotenie je metodicky dôležité — obmedzuje variabilitu z rozdielnej dĺžky medzidialyzačného intervalu aj z bezprostredného účinku samotnej procedúry, ktorý staršie práce opísali ako významný.</p>
+<p>Vyšetrenia dialyzovaných pacientov sa robili <strong>pred hemodialýzou v strede týždňa</strong>. Toto zjednotenie je metodicky dôležité, pretože obmedzuje variabilitu z rozdielnej dĺžky medzidialyzačného intervalu aj z bezprostredného účinku samotnej procedúry, ktorý staršie práce opísali ako významný.</p>
 
 <h3>Ako sa čuch meral</h3>
 
@@ -47,7 +47,7 @@ $articles[] = [
 
 <p>Tieto hranice boli vytvorené na opisné účely v rámci štúdie a nemožno ich považovať za univerzálne diagnostické kritériá.</p>
 
-<p><strong>Podstatné obmedzenie:</strong> úplné vyšetrenie testom Sniffin' Sticks zahŕňa tri zložky — prah vnímania pachu, rozlišovanie pachov a identifikáciu (súhrnné skóre TDI). Táto štúdia merala <em>iba identifikáciu</em>. Práve tá je pritom najviac závislá od pamäti, pozornosti, jazyka, kultúrnej známosti pachov a kognitívneho stavu. Výsledok teda nevystihuje celú čuchovú funkciu a čiastočne meria aj kogníciu — čo treba mať na pamäti pri interpretácii hlavného nálezu.</p>
+<p><strong>Podstatné obmedzenie:</strong> úplné vyšetrenie testom Sniffin' Sticks zahŕňa tri zložky: prah vnímania pachu, rozlišovanie pachov a identifikáciu (súhrnné skóre TDI). Táto štúdia merala <em>iba identifikáciu</em>. Práve tá je pritom najviac závislá od pamäti, pozornosti, jazyka, kultúrnej známosti pachov a kognitívneho stavu. Výsledok teda nevystihuje celú čuchovú funkciu a čiastočne meria aj kogníciu, čo treba mať na pamäti pri interpretácii hlavného nálezu.</p>
 
 <h2>Základné výsledky</h2>
 
@@ -96,7 +96,7 @@ $articles[] = [
 
 <p>Asociácia má niekoľko možných vysvetlení. Identifikácia pachu vyžaduje nielen zachované periférne čuchové dráhy, ale aj pozornosť, vybavenie z pamäti, sémantické spracovanie a výber správnej odpovede. Horší výsledok preto nemusí znamenať izolované poškodenie čuchového epitelu.</p>
 
-<p>Čuchová porucha tak môže byť markerom centrálneho neurologického postihnutia, cievneho poškodenia, kognitívnej zraniteľnosti alebo celkovej záťaže uremického ochorenia. Štúdia však neumožňuje určiť smer ani príčinnosť tohto vzťahu — a pri meraní samotnej identifikácie sa časť asociácie môže vysvetliť aj tým, že oba testy sčasti merajú to isté.</p>
+<p>Čuchová porucha tak môže byť markerom centrálneho neurologického postihnutia, cievneho poškodenia, kognitívnej zraniteľnosti alebo celkovej záťaže uremického ochorenia. Štúdia však neumožňuje určiť smer ani príčinnosť tohto vzťahu. Keďže sa merala iba identifikácia, časť asociácie môže vysvetľovať aj to, že oba testy sčasti merajú to isté.</p>
 
 <h2>Súvislosť so sérovým albumínom</h2>
 
@@ -112,7 +112,7 @@ $articles[] = [
 
 <p>Interpretácia východiskového skóre ako prediktora si vyžaduje opatrnosť. Takýto vzťah môže sčasti odrážať matematickú väzbu medzi východiskovou hodnotou a zmenovým skóre, stropový a podlahový efekt alebo regresiu k priemeru. Z publikovaného opisu nemožno odvodiť klinicky použiteľný prah na predpoveď individuálnej progresie.</p>
 
-<p>Zásadné je, že 40 pacientov sledovanie nedokončilo — okrem prechodu do iného centra a odmietnutia išlo aj o interkurentné ochorenia, hospitalizácie, transplantácie a úmrtia. Vzniká tak riziko výberového skreslenia: pacienti s horšou prognózou, kogníciou a pravdepodobne aj čuchom v analýze zmeny chýbajú. Záver „bez významného priemerného zhoršenia“ sa preto týka predovšetkým tých, ktorí boli schopní kontrolné vyšetrenie absolvovať.</p>
+<p>Zásadné je, že 40 pacientov sledovanie nedokončilo; okrem prechodu do iného centra a odmietnutia išlo aj o interkurentné ochorenia, hospitalizácie, transplantácie a úmrtia. Vzniká tak riziko výberového skreslenia: pacienti s horšou prognózou, kogníciou a pravdepodobne aj čuchom v analýze zmeny chýbajú. Záver „bez významného priemerného zhoršenia“ sa preto týka predovšetkým tých, ktorí boli schopní kontrolné vyšetrenie absolvovať.</p>
 
 <h2>Dialyzačná primeranosť a čuch</h2>
 
@@ -126,7 +126,7 @@ $articles[] = [
 
 <p>Patogenéza je pravdepodobne multifaktoriálna. Uvažuje sa o uremickej neurotoxicite, chronickom zápale a oxidačnom strese, poškodení čuchového epitelu, bulbu aj centrálneho spracovania pachov, poruche hematoencefalickej bariéry, cerebrovaskulárnom ochorení, cievnej kalcifikácii a endotelovej dysfunkcii so znížením mozgového prietoku, kognitívnej poruche, autonómnej dysfunkcii, nedostatku mikronutrientov, diabete, liekových účinkoch, opakovaných hemodynamických a osmotických zmenách počas dialýzy, chronickom sinonazálnom ochorení a fajčení.</p>
 
-<p>Zdrojová štúdia viaceré príčiny vylučovala už pri výbere pacientov, konkrétny mechanizmus však určiť nedokázala — ani to, či porucha vznikla pred začatím dialýzy alebo až počas nej.</p>
+<p>Zdrojová štúdia viaceré príčiny vylučovala už pri výbere pacientov, konkrétny mechanizmus však určiť nedokázala. Nevedno ani, či porucha vznikla pred začatím dialýzy alebo až počas nej.</p>
 
 <h2>Prečo na to myslieť: pacienti o poruche nevedia</h2>
 
@@ -136,15 +136,15 @@ $articles[] = [
 
 <h3>Nutričný stav</h3>
 
-<p>Porucha čuchu môže znižovať intenzitu vnímania arómy, pôžitok z jedla a chuť do jedla. Môže podporovať jednostranný výber výrazne sladkých alebo slaných potravín, čo je problematické pri hypertenzii, objemovom preťažení, diabete a CKD. Súvislosť s malnutríciou však zostáva prevažne observačná — nie je dokázané, že liečba čuchovej poruchy znižuje výskyt proteínovo-energetického chradnutia, hospitalizácií alebo mortality.</p>
+<p>Porucha čuchu môže znižovať intenzitu vnímania arómy, pôžitok z jedla a chuť do jedla. Môže podporovať jednostranný výber výrazne sladkých alebo slaných potravín, čo je problematické pri hypertenzii, objemovom preťažení, diabete a CKD. Súvislosť s malnutríciou však zostáva prevažne observačná: nie je dokázané, že liečba čuchovej poruchy znižuje výskyt proteínovo-energetického chradnutia, hospitalizácií alebo mortality.</p>
 
 <h3>Bezpečnosť</h3>
 
-<p>Výrazná hyposmia alebo anosmia znižuje schopnosť rozpoznať dym a požiar, únik plynu, pokazené potraviny a chemické látky. Pacienta so závažnou poruchou treba poučiť o používaní detektorov dymu a plynu, o kontrole dátumu spotreby a o opatrnosti pri skladovaní potravín. Ide o jednoduché opatrenie s potenciálne veľkým dosahom.</p>
+<p>Výrazná hyposmia alebo anosmia znižuje schopnosť rozpoznať dym a požiar, únik plynu, pokazené potraviny a chemické látky. Pacienta so závažnou poruchou treba poučiť o používaní detektorov dymu a plynu, o kontrole dátumu spotreby a o opatrnosti pri skladovaní potravín. Opatrenie je jednoduché a môže mať veľký význam.</p>
 
 <h3>Kognitívna porucha</h3>
 
-<p>Postupné zhoršenie identifikácie pachov môže byť dôvodom na orientačné posúdenie kognitívnych funkcií. Čuchový test však nemožno používať ako samostatný skríning demencie — výsledok ovplyvňuje vzdelanie, jazyk, kultúrna známosť pachov, depresia, zrak, sluch aj schopnosť porozumieť pokynom.</p>
+<p>Postupné zhoršenie identifikácie pachov môže byť dôvodom na orientačné posúdenie kognitívnych funkcií. Čuchový test však nemožno používať ako samostatný skríning demencie, pretože výsledok ovplyvňuje vzdelanie, jazyk, kultúrna známosť pachov, depresia, zrak, sluch aj schopnosť porozumieť pokynom.</p>
 
 <h2>Možnosti liečby</h2>
 
@@ -191,7 +191,7 @@ $articles[] = [
 
 <h3>Čuchový tréning</h3>
 
-<p>Ide o najsľubnejšiu nefarmakologickú možnosť a jedinú s hodnotením strednej istoty. V randomizovanej štúdii z Iránu pacienti počas 12 týždňov vdychovali <strong>štyri známe pachy — levanduľu, citrón, škoricu a eukalyptus — vždy 20 sekúnd, dvakrát denne</strong>. Objektívne skóre identifikácie sa zlepšilo z 15,3 na 18,8 bodu (P = 0,001), dotazník ťažkostí z 19,0 na 12,2 bodu (P = 0,003) a sebahodnotenie zo 6,8 na 8,2 bodu (P = 0,027). Normosmiu dosiahlo <strong>36,8 % pacientov</strong> oproti nikomu na začiatku.</p>
+<p>Ide o najsľubnejšiu nefarmakologickú možnosť a jedinú s hodnotením strednej istoty. V randomizovanej štúdii z Iránu pacienti počas 12 týždňov vdychovali <strong>štyri známe pachy (levanduľu, citrón, škoricu a eukalyptus), vždy 20 sekúnd, dvakrát denne</strong>. Objektívne skóre identifikácie sa zlepšilo z 15,3 na 18,8 bodu (P = 0,001), dotazník ťažkostí z 19,0 na 12,2 bodu (P = 0,003) a sebahodnotenie zo 6,8 na 8,2 bodu (P = 0,027). Normosmiu dosiahlo <strong>36,8 % pacientov</strong> oproti nikomu na začiatku.</p>
 
 <p>Postup je lacný, neinvazívny a bezpečný. Napriek tomu ide o jedinú štúdiu s 19 pacientmi v tréningovej vetve, takže čuchový tréning zatiaľ nemožno označiť za štandardnú nefrologickú liečbu s preukázaným vplyvom na výživu alebo klinické výsledky.</p>
 
@@ -205,11 +205,11 @@ $articles[] = [
 
 <h3>Zinok a ďalšie doplnky</h3>
 
-<p>Zinok sa nemá podávať iba na základe poruchy čuchu alebo chuti bez posúdenia jeho deficitu a rizík dlhodobej suplementácie. Ďalšie postupy skúšané pri iných príčinách čuchovej poruchy — lokálne kortikosteroidy, vitamín A, omega-3 mastné kyseliny, podanie plazmy bohatej na doštičky alebo akupunktúra — neboli u pacientov s CKD priamo skúmané.</p>
+<p>Zinok sa nemá podávať iba na základe poruchy čuchu alebo chuti bez posúdenia jeho deficitu a rizík dlhodobej suplementácie. Ďalšie postupy skúšané pri iných príčinách čuchovej poruchy (lokálne kortikosteroidy, vitamín A, omega-3 mastné kyseliny, podanie plazmy bohatej na doštičky alebo akupunktúra) neboli u pacientov s CKD priamo skúmané.</p>
 
 <h3>Transplantácia obličky</h3>
 
-<p>Observačné práce naznačujú najúplnejšie zotavenie čuchu práve po transplantácii: skóre TDI dosahovalo 31,6 oproti 32,3 u zdravých kontrol a poruchu malo len 34 % príjemcov oproti viac než 75 % dialyzovaných pacientov. Transplantácia však nie je liečbou anosmie a nemožno ju indikovať pre senzorickú poruchu — zlepšenie čuchu je sprievodným dôsledkom obnovenej funkcie obličiek.</p>
+<p>Observačné práce naznačujú najúplnejšie zotavenie čuchu práve po transplantácii: skóre TDI dosahovalo 31,6 oproti 32,3 u zdravých kontrol a poruchu malo len 34 % príjemcov oproti viac než 75 % dialyzovaných pacientov. Transplantácia však nie je liečbou anosmie a nemožno ju indikovať pre senzorickú poruchu; zlepšenie čuchu je sprievodným dôsledkom obnovenej funkcie obličiek.</p>
 
 <h2>Praktický postup v dialyzačnom centre</h2>
 
@@ -257,11 +257,11 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>Porucha identifikácie pachov bola u hemodialyzovaných pacientov podstatne častejšia než u zdravých kontrolných osôb — podľa kategórií použitých autormi ju malo 91 % pacientov oproti 44 % kontrol. Lepšia čuchová výkonnosť súvisela s vyšším kognitívnym skóre a vyšším albumínom, nie s Kt/V. Počas roka sa na úrovni skupiny nepreukázal významný priemerný pokles, individuálne trajektórie však boli veľmi rozdielne.</p>
+<p>Porucha identifikácie pachov bola u hemodialyzovaných pacientov podstatne častejšia než u zdravých kontrolných osôb: podľa kategórií použitých autormi ju malo 91 % pacientov oproti 44 % kontrol. Lepšia čuchová výkonnosť súvisela s vyšším kognitívnym skóre a vyšším albumínom, nie s Kt/V. Počas roka sa na úrovni skupiny nepreukázal významný priemerný pokles, individuálne trajektórie však boli veľmi rozdielne.</p>
 
-<p>Čuchová dysfunkcia sa tak javí ako prejav celkovej chorobnosti a zraniteľnosti pacienta, nie ako izolovaný následok nedostatočnej dialyzačnej dávky. Pri nechutenstve, chudnutí, nízkom albumíne alebo kognitívnych ťažkostiach má zmysel na ňu cielene myslieť — najmä preto, že pacienti si ju sami spravidla neuvedomia.</p>
+<p>Čuchová dysfunkcia sa tak javí ako prejav celkovej chorobnosti a zraniteľnosti pacienta, nie ako izolovaný následok nedostatočnej dialyzačnej dávky. Pri nechutenstve, chudnutí, nízkom albumíne alebo kognitívnych ťažkostiach má zmysel na ňu cielene myslieť, najmä preto, že pacienti si ju sami spravidla neuvedomia.</p>
 
-<p>Zatiaľ však chýbajú dôkazy, že rutinný skríning alebo špecifická liečba zlepšujú výživu, kvalitu života, hospitalizácie alebo mortalitu. Z dostupných možností má najlepšie hodnotenie istoty dôkazov čuchový tréning — lacná a bezpečná intervencia, ktorú možno u vhodného pacienta ponúknuť, no zatiaľ na podklade jedinej malej randomizovanej štúdie.</p>
+<p>Zatiaľ však chýbajú dôkazy, že rutinný skríning alebo špecifická liečba zlepšujú výživu, kvalitu života, hospitalizácie alebo mortalitu. Z dostupných možností má najlepšie hodnotenie istoty dôkazov čuchový tréning. Je to lacná a bezpečná intervencia, ktorú možno u vhodného pacienta ponúknuť, no zatiaľ na podklade jedinej malej randomizovanej štúdie.</p>
 
 <h2>Súvisiace články</h2>
 

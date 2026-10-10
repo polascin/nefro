@@ -82,7 +82,7 @@ $articles[] = [
 
 <h2>Orgány spolu komunikujú na diaľku</h2>
 
-<p>Medziorgánová komunikácia prebieha prostredníctvom hemodynamiky, autonómneho nervového systému, hormónov, cytokínov, metabolitov, uremických toxínov a extracelulárnych vezikúl. Diskutované signály zahŕňajú napríklad GDF15, FGF21, sukcinát, ceramidy a urát. Ich biologická úloha je predmetom intenzívneho výskumu, ale väčšina z nich <strong>nie je štandardným biomarkerom na diagnostiku alebo staging CKM syndrómu</strong>.</p>
+<p>Medziorgánová komunikácia prebieha prostredníctvom hemodynamiky, autonómneho nervového systému, hormónov, cytokínov, metabolitov, uremických toxínov a extracelulárnych vezikúl. Diskutované signály zahŕňajú napríklad GDF15, FGF21, sukcinát, ceramidy a urát. Ich biologická úloha je predmetom intenzívneho výskumu, ale väčšina z nich <strong>nie je štandardným biomarkerom na diagnostiku alebo určenie štádia CKM syndrómu</strong>.</p>
 
 <p>Rovnaká opatrnosť platí pre priamy prenos mitochondrií medzi bunkami. Experimentálne údaje ukazujú, že bunky môžu mitochondrie alebo ich zložky uvoľňovať a prijímať, no klinický význam tohto javu a jeho využiteľnosť v liečbe CKM syndrómu zatiaľ nie sú stanovené.</p>
 
@@ -98,12 +98,12 @@ $articles[] = [
   <li>orgánovo protektívna liečba podľa overených indikácií, funkcie obličiek, kaliémie, tolerancie a preferencií pacienta.</li>
 </ul>
 
-<p>Blokátory RAAS, inhibítory SGLT2, agonisty receptora GLP-1 a nesteroidné antagonisty mineralokortikoidových receptorov môžu priaznivo ovplyvniť viacero zložiek CKM kontinua. Pri niektorých z nich sa diskutujú aj účinky na bunkovú energetiku a mitochondriálnu homeostázu. Klinické rozhodnutie však musí stáť na preukázanom vplyve na renálne a kardiovaskulárne výsledky, nie na samotnej mechanistickej plausibilite.</p>
+<p>Blokátory RAAS, inhibítory SGLT2, agonisty receptora GLP-1 a nesteroidné antagonisty mineralokortikoidových receptorov môžu priaznivo ovplyvniť viacero zložiek CKM kontinua. Pri niektorých z nich sa diskutujú aj účinky na bunkovú energetiku a mitochondriálnu homeostázu. Klinické rozhodnutie však musí stáť na preukázanom vplyve na renálne a kardiovaskulárne výsledky, nie na samotnej mechanistickej hodnovernosti.</p>
 
 <h2>Čo zatiaľ do rutiny nepatrí</h2>
 
 <ul>
-  <li><strong>„Mitochondriálny panel“:</strong> validovaný panel na diagnostiku, staging alebo výber liečby CKM syndrómu zatiaľ nie je k dispozícii.</li>
+  <li><strong>„Mitochondriálny panel“:</strong> validovaný panel na diagnostiku, určenie štádia alebo výber liečby CKM syndrómu zatiaľ nie je k dispozícii.</li>
   <li><strong>Hs-CRP, IL-6 alebo adipokíny ako samostatné rozhodovacie testy:</strong> môžu niesť prognostickú informáciu, ale nenahrádzajú štandardné klinické parametre a pre väčšinu pacientov nemenia liečbu.</li>
   <li><strong>Urát ako univerzálny cieľ CKM liečby:</strong> hyperurikémia je markerom rizika a pri dne má jasný klinický význam; samotné zníženie urátu bez inej indikácie nemožno prezentovať ako dokázanú liečbu CKM syndrómu alebo prevenciu progresie CKD.</li>
   <li><strong>Mitochondriálne transplantácie a priame mitochondriálne liečivá:</strong> ide o experimentálne alebo skúmané prístupy bez preukázanej rutinnej účinnosti pri CKM syndróme.</li>

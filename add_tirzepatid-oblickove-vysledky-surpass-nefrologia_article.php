@@ -35,11 +35,11 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Tirzepatid prináša v programe SURPASS priaznivé signály pre eGFR, albuminúriu a renálne endpointy. Pre nefrológiu je dôležité rozlíšiť sľubný kardiorenálny účinok od definitívne dokázanej nefroprotekcie.',
     'content'      => <<<'HTML'
-<figure><a href="img/tirzepatid-oblickove-vysledky-surpass-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/tirzepatid-oblickove-vysledky-surpass-nefrologia.webp" alt="Dva receptorové kľúče spojené do jednej molekuly, z ktorej vychádza silný lúč k obličke" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Dvojitý receptorový účinok sa premieta aj do obličkových ukazovateľov — otázkou zostáva sila dôkazov.</figcaption></figure>
+<figure><a href="img/tirzepatid-oblickove-vysledky-surpass-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/tirzepatid-oblickove-vysledky-surpass-nefrologia.webp" alt="Dva receptorové kľúče spojené do jednej molekuly, z ktorej vychádza silný lúč k obličke" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Dvojitý receptorový účinok sa premieta aj do obličkových ukazovateľov – otázkou zostáva sila dôkazov.</figcaption></figure>
 
-<p>Tirzepatid sa pôvodne dostal do klinickej pozornosti najmä ako veľmi účinný liek na zníženie HbA1c a telesnej hmotnosti u pacientov s diabetes mellitus 2. typu. Postupne sa však ukazuje, že jeho význam môže presahovať samotnú glykemickú kontrolu a manažment obezity. Obličkové analýzy z programu SURPASS naznačujú priaznivý vplyv na albuminúriu, rýchlosť poklesu eGFR a zložené renálne ukazovatele.</p>
+<p>Tirzepatid sa do klinickej praxe dostal najmä ako veľmi účinný liek na zníženie HbA1c a telesnej hmotnosti u pacientov s diabetes mellitus 2. typu. Postupne sa však ukazuje, že jeho význam môže presahovať samotnú glykemickú kontrolu a manažment obezity. Obličkové analýzy z programu SURPASS naznačujú priaznivý vplyv na albuminúriu, rýchlosť poklesu eGFR a zložené renálne ukazovatele.</p>
 
-<p>Z nefrologického hľadiska ide o mimoriadne praktickú tému. Diabetes mellitus 2. typu zostáva jednou z hlavných príčin chronickej choroby obličiek (CKD) a zlyhania obličiek. Každá liečba, ktorá okrem zlepšenia metabolického profilu dokáže priaznivo ovplyvniť albuminúriu, pokles eGFR alebo riziko progresie CKD, môže mať veľký klinický význam. Zároveň však platí, že „renálny signál“ zo sekundárnych alebo exploračných analýz ešte nie je to isté ako definitívne dokázaná nefroprotekcia v špecializovanej výsledkovej štúdii zameranej na obličky.</p>
+<p>Pre nefrológiu je to veľmi praktická téma. Diabetes mellitus 2. typu zostáva jednou z hlavných príčin chronickej choroby obličiek (CKD) a zlyhania obličiek. Každá liečba, ktorá okrem zlepšenia metabolického profilu dokáže priaznivo ovplyvniť albuminúriu, pokles eGFR alebo riziko progresie CKD, môže mať veľký klinický význam. Zároveň však platí, že „renálny signál“ zo sekundárnych alebo exploračných analýz ešte nie je to isté ako definitívne dokázaná nefroprotekcia v špecializovanej výsledkovej štúdii zameranej na obličky.</p>
 
 <h2>Duálny agonista GIP a GLP-1 receptorov</h2>
 
@@ -59,7 +59,7 @@ $articles[] = [
   <li><strong>nižší výskyt zloženého renálneho ukazovateľa</strong> – kompozit zahŕňal ≥40 % pokles eGFR, terminálne zlyhanie obličiek, úmrtie z renálnej príčiny alebo vznik makroalbuminúrie; hazard ratio bolo 0,58 v prospech tirzepatidu.</li>
 </ul>
 
-<p>Dôležité je povedať aj limitáciu: SURPASS-4 nebola primárne renálna štúdia. Obličkové výsledky boli analyzované post hoc, pričom porovnávacím liekom bol inzulín glargín. Výsledky preto podporili hypotézu renálneho prínosu, ale samy osebe ešte neurčili konečné miesto tirzepatidu v nefroprotekcii.</p>
+<p>Treba však uviesť aj obmedzenie: SURPASS-4 nebola primárne renálna štúdia. Obličkové výsledky boli analyzované post hoc, pričom porovnávacím liekom bol inzulín glargín. Výsledky preto podporili hypotézu renálneho prínosu, ale samy osebe ešte neurčili konečné miesto tirzepatidu v nefroprotekcii.</p>
 
 <h2>SURPASS-CVOT: aktívny komparátor a dlhšie sledovanie</h2>
 
@@ -67,9 +67,9 @@ $articles[] = [
 
 <p>Po mediáne sledovania 4,0 roka bol primárny zložený renálny ukazovateľ nižší pri tirzepatide než pri dulaglutide: 6,0 % oproti 7,6 %, hazard ratio 0,77. Kompozit zahŕňal perzistujúcu makroalbuminúriu, perzistujúci pokles eGFR o ≥50 %, zlyhanie obličiek alebo úmrtie z renálnej príčiny.</p>
 
-<p>Účinok sa líšil podľa východiskového renálneho rizika. V populácii s nízkym až stredným rizikom CKD bol prínos dominantne ťahaný nižším výskytom novej perzistujúcej makroalbuminúrie. V skupine s vysokým rizikom CKD bol dôležitejší pomalší pokles eGFR. Celkovo bol ročný pokles eGFR pri tirzepatide miernejší než pri dulaglutide; rozdiel bol 0,29 ml/min/1,73 m² za rok v celkovej populácii a 0,93 ml/min/1,73 m² za rok vo vysokorizikovej CKD skupine.</p>
+<p>Účinok sa líšil podľa východiskového renálneho rizika. V populácii s nízkym až stredným rizikom CKD bol prínos daný najmä nižším výskytom novej perzistujúcej makroalbuminúrie. V skupine s vysokým rizikom CKD bol dôležitejší pomalší pokles eGFR. Celkovo bol ročný pokles eGFR pri tirzepatide miernejší než pri dulaglutide; rozdiel bol 0,29 ml/min/1,73 m² za rok v celkovej populácii a 0,93 ml/min/1,73 m² za rok vo vysokorizikovej CKD skupine.</p>
 
-<p>Pre nefrológa je práve toto zaujímavé: tirzepatid nepriniesol len metabolickú účinnosť, ale v aktívne kontrolovanej štúdii ukázal priaznivý renálny signál oproti etablovanému GLP-1 receptorovému agonistovi. Zároveň treba ostať presný: išlo o predšpecifikovanú exploračnú renálnu analýzu v kardiovaskulárnej outcome štúdii, nie o primárne obličkovú štúdiu typu DAPA-CKD, EMPA-KIDNEY alebo FLOW.</p>
+<p>Pre nefrológa je práve toto zaujímavé: tirzepatid nepriniesol len metabolickú účinnosť, ale v aktívne kontrolovanej štúdii ukázal priaznivý renálny signál oproti etablovanému GLP-1 receptorovému agonistovi. Zároveň treba ostať presný: išlo o predšpecifikovanú exploračnú renálnu analýzu v kardiovaskulárnej výsledkovej štúdii, nie o primárne obličkovú štúdiu typu DAPA-CKD, EMPA-KIDNEY alebo FLOW.</p>
 
 <h2>Možné mechanizmy renálneho prínosu</h2>
 
@@ -89,7 +89,7 @@ $articles[] = [
 
 <h3>Metabolické a protizápalové účinky</h3>
 
-<p>Inkretínové terapie môžu ovplyvňovať zápal, oxidačný stres, endoteliálnu dysfunkciu a tukovú distribúciu. Pri tirzepatide sa časť renálneho signálu môže viazať na zlepšenie celého kardio-renálno-metabolického prostredia, nie na izolovaný účinok na glomerulus.</p>
+<p>Inkretínové terapie môžu ovplyvňovať zápal, oxidačný stres, endoteliálnu dysfunkciu a tukovú distribúciu. Pri tirzepatide sa časť renálneho signálu môže viazať na zlepšenie celého kardiorenálno-metabolického prostredia, nie na izolovaný účinok na glomerulus.</p>
 
 <h2>Kde môže byť tirzepatid klinicky najzaujímavejší</h2>
 
@@ -113,7 +113,7 @@ $articles[] = [
 
 <p>Pri liečbe tirzepatidom treba myslieť najmä na gastrointestinálne nežiaduce účinky: nauzeu, vracanie a hnačku. V SURPASS-CVOT boli tieto príhody častejšie pri tirzepatide než pri dulaglutide. U pacienta s CKD môže byť dehydratácia klinicky významná, pretože môže viesť k prechodnému zhoršeniu funkcie obličiek, najmä pri súčasnom užívaní diuretík, RAAS blokátorov alebo inhibítorov SGLT2.</p>
 
-<p>Dôležité je sledovať:</p>
+<p>Sledovať treba:</p>
 
 <ul>
   <li>toleranciu liečby a príjem tekutín,</li>

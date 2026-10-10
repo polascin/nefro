@@ -25,7 +25,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Dve veľké randomizované štúdie nepreukázali, že alopurinol spomalí pokles eGFR. Retrospektívna kohorta pritom hlási vzostup filtrácie o 12 ml/min. Rozbor toho, prečo je rozpor zdanlivý a ktorý výsledok platí.',
     'content'      => <<<'HTML'
-<figure><a href="img/alopurinol-ckd-asymptomaticka-hyperurikemia-dokazy.webp" rel="noopener noreferrer" target="_blank"><img src="img/alopurinol-ckd-asymptomaticka-hyperurikemia-dokazy.webp" alt="Tabletka a z nej dve rovnako silné šípky svetla mieriace presne opačnými smermi" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Randomizované štúdie a retrospektívne dáta tu ukazujú opačne — a rozhodnúť treba podľa toho, ktorý typ dôkazu unesie danú otázku.</figcaption></figure>
+<figure><a href="img/alopurinol-ckd-asymptomaticka-hyperurikemia-dokazy.webp" rel="noopener noreferrer" target="_blank"><img src="img/alopurinol-ckd-asymptomaticka-hyperurikemia-dokazy.webp" alt="Tabletka a z nej dve rovnako silné šípky svetla mieriace presne opačnými smermi" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Randomizované štúdie a retrospektívne dáta tu ukazujú opačne – a rozhodnúť treba podľa toho, ktorý typ dôkazu unesie danú otázku.</figcaption></figure>
 
 <p>Kyselina močová je pri chronickej chorobe obličiek (CKD) lákavý terapeutický cieľ. Urát poškodzuje endotel, aktivuje renín-angiotenzínový systém, podieľa sa na arteriolopatii aferentnej arterioly a jeho hladina stúpa už v skorých štádiách CKD. Hypotéza, že jeho zníženie spomalí progresiu, je preto biologicky vierohodná a merateľný cieľ liečby je k dispozícii.</p>
 
@@ -62,7 +62,7 @@ $articles[] = [
 
 <p>Dve poznámky, ktoré sa pri citovaní týchto štúdií často vynechávajú. Po prvé, <strong>zníženie urátu sa v oboch podarilo</strong> – v štúdii PERL klesol z 6,1 na 3,9 mg/dl (približne 363 na 232 µmol/l), zatiaľ čo pri placebe zostal nezmenený. Nešlo teda o zlyhanie liečby, ale o zlyhanie hypotézy. Po druhé, PERL použila <strong>meranú</strong> GFR pomocou iohexolu, takže výsledok nemožno vysvetliť artefaktom odhadu z kreatinínu. Nález vyššieho vylučovania albumínu pri alopurinole je navyše presným opakom očakávaného nefroprotektívneho účinku.</p>
 
-<p>CKD-FIX bola predčasne ukončená pre pomalý nábor po zaradení 369 zo zamýšľaných 620 pacientov, čo znižuje jej silu. Interval spoľahlivosti rozdielu (−1,18 až 0,97) však vylučuje klinicky významný prínos v oboch smeroch, takže výsledok nie je iba „nepreukázané pre malý súbor“.</p>
+<p>CKD-FIX bola predčasne ukončená pre pomalý nábor po zaradení 369 zo zamýšľaných 620 pacientov, čo znižuje jej silu. Interval spoľahlivosti rozdielu (−1,18 až 0,97) však vylučuje klinicky významný rozdiel v ktoromkoľvek smere, takže výsledok nie je iba „nepreukázané pre malý súbor“.</p>
 
 <h2>Čo z toho urobili odporúčania</h2>
 

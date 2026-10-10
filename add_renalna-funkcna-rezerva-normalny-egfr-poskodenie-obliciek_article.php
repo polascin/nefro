@@ -29,7 +29,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Zachovaný eGFR nevylučuje CKD ani chronické histologické poškodenie. Renálna funkčná rezerva a kompenzačná hyperfiltrácia vysvetľujú časť tohto nesúladu, ich testovanie však zatiaľ nie je rutinným nástrojom.',
     'content'      => <<<'HTML'
-<figure><a href="img/renalna-funkcna-rezerva-normalny-egfr-poskodenie-obliciek.webp" rel="noopener noreferrer" target="_blank"><img src="img/renalna-funkcna-rezerva-normalny-egfr-poskodenie-obliciek.webp" alt="Oblička s pokojným vonkajším žiarením, no vo vnútri sú mnohé jednotky zhasnuté a zvyšné svietia preťažene; merací lúč sníma len vonkajší jas" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Normálna hodnota môže byť výsledkom preťaženia zvyšných nefrónov — rezerva je vyčerpaná skôr, než sa filtrácia zmení.</figcaption></figure>
+<figure><a href="img/renalna-funkcna-rezerva-normalny-egfr-poskodenie-obliciek.webp" rel="noopener noreferrer" target="_blank"><img src="img/renalna-funkcna-rezerva-normalny-egfr-poskodenie-obliciek.webp" alt="Oblička s pokojným vonkajším žiarením, no vo vnútri sú mnohé jednotky zhasnuté a zvyšné svietia preťažene; merací lúč sníma len vonkajší jas" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Normálna hodnota môže byť výsledkom preťaženia zvyšných nefrónov – rezerva je vyčerpaná skôr, než sa filtrácia zmení.</figcaption></figure>
 
 <p>Normálna koncentrácia kreatinínu ani zachovaný odhad glomerulovej filtrácie (eGFR) samy osebe nevylučujú ochorenie obličiek. Pacient môže mať albuminúriu, glomerulárnu hematúriu, štrukturálnu abnormalitu alebo chronické histologické zmeny, hoci celková glomerulová filtrácia zostáva v referenčnom rozmedzí.</p>
 
@@ -103,7 +103,7 @@ $articles[] = [
 
 <p>Pri IgA nefropatii, lupusovej nefritíde, fokálnej segmentálnej glomeruloskleróze a ďalších glomerulopatiách môže byť eGFR zachovaný napriek aktívnemu močovému nálezu alebo už prítomným chronickým zmenám. Proteinúria a hematúria boli aj dôvodom biopsie v klinických príkladoch oboch diskutujúcich.</p>
 
-<p>Pretrvávajúca proteinúria môže byť markerom aj mediátorom progresie, ale hematúria si vyžaduje etiologické zhodnotenie. Nie každá hematúria je glomerulová a nie každý pozitívny testovací prúžok znamená chronické poškodenie. Nález treba potvrdiť, posúdiť močový sediment a podľa klinického kontextu vylúčiť prechodné, nefrologické aj urologické príčiny.</p>
+<p>Pretrvávajúca proteinúria môže byť markerom aj mediátorom progresie. Hematúria si zasa vyžaduje etiologické zhodnotenie: nie každá hematúria je glomerulová a nie každý pozitívny testovací prúžok znamená chronické poškodenie. Nález treba potvrdiť, posúdiť močový sediment a podľa klinického kontextu vylúčiť prechodné, nefrologické aj urologické príčiny.</p>
 
 <p>Biopsia obličky môže odhaliť aktivitu a chronicitu ochorenia, ktoré z eGFR nemožno určiť. Nie je však skríningovým testom pri každom izolovanom náleze. Indikácia závisí od rozsahu proteinúrie, charakteru sedimentu, trendu eGFR, systémových príznakov, sérologických výsledkov a od toho, či histologický výsledok môže zmeniť diagnózu, prognózu alebo liečbu.</p>
 
@@ -136,7 +136,7 @@ $articles[] = [
 
 <p>Hlavným zdrojom je krátky sponzorovaný edukačný rozhovor, nie pôvodná klinická štúdia, systematický prehľad ani klinické odporúčanie. Poskytuje názorné vysvetlenie adaptačnej hyperfiltrácie a skúsenosť nefrológa a renálnej patologičky, neposkytuje však populačné údaje, validáciu diagnostického prahu ani dôkaz, že meranie renálnej funkčnej rezervy zlepšuje výsledky liečby.</p>
 
-<p>Prepis obsahuje označenie „IgG nephropathy“. Keďže nejde o štandardné pomenovanie bežnej glomerulopatie a zo záznamu nemožno spoľahlivo určiť, či ide o prerieknutie alebo chybu transkripcie, nemožno ho automaticky nahradiť diagnózou IgA nefropatie. V tomto článku preto slúži rozhovor ako východisko ku koncepcii, zatiaľ čo klinické tvrdenia sú konfrontované s KDIGO a recenzovanou literatúrou.</p>
+<p>Prepis obsahuje označenie „IgG nephropathy“. Keďže nejde o štandardné pomenovanie bežnej glomerulopatie a zo záznamu nemožno spoľahlivo určiť, či ide o prerieknutie alebo chybu transkripcie, nemožno ho automaticky nahradiť diagnózou IgA nefropatie. Rozhovor preto v tomto článku slúži ako východisko na vysvetlenie koncepcie a klinické tvrdenia sú porovnané s KDIGO a recenzovanou literatúrou.</p>
 
 <h2>Záver</h2>
 

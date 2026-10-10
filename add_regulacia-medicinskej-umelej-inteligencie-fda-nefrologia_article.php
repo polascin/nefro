@@ -23,9 +23,9 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'FDA nereguluje umelú inteligenciu, ale zdravotnícke pomôcky. Diskusný dokument z augusta 2026 navrhuje dvojosový rizikový rámec a kompetenčné hodnotenie generatívnej AI. Čo to znamená pre nefrologickú prax.',
     'content'      => <<<'HTML'
-<figure><a href="img/regulacia-medicinskej-umelej-inteligencie-fda-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/regulacia-medicinskej-umelej-inteligencie-fda-nefrologia.webp" alt="Svietiaci nepokojný oblak neurónovej siete uzavretý v presnom geometrickom ráme zo svetla" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Regulácia nemá algoritmus zhasnúť, ale vymedziť — a lekár je ten, kto v ráme zostáva zodpovedný.</figcaption></figure>
+<figure><a href="img/regulacia-medicinskej-umelej-inteligencie-fda-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/regulacia-medicinskej-umelej-inteligencie-fda-nefrologia.webp" alt="Svietiaci nepokojný oblak neurónovej siete uzavretý v presnom geometrickom ráme zo svetla" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Regulácia nemá algoritmus zhasnúť, ale vymedziť – a lekár je ten, kto v ráme zostáva zodpovedný.</figcaption></figure>
 
-<p>Umelá inteligencia sa rýchlo začleňuje do klinickej praxe — pri analýze obrazových vyšetrení, klinickej dokumentácii, predikcii rizika, podpore diagnostiky, triedení pacientov, monitorovaní vitálnych funkcií aj vo výskume. Podľa údajov Americkej lekárskej asociácie (AMA), ktoré cituje odborné spravodajstvo, viac než 80 % lekárov dnes uvádza profesionálne používanie takýchto nástrojov, zatiaľ čo v roku 2023 to bolo 38 %.</p>
+<p>Umelá inteligencia sa rýchlo začleňuje do klinickej praxe – pri analýze obrazových vyšetrení, klinickej dokumentácii, predikcii rizika, podpore diagnostiky, triedení pacientov, monitorovaní vitálnych funkcií aj vo výskume. Podľa údajov Americkej lekárskej asociácie (AMA), ktoré cituje odborné spravodajstvo, viac než 80 % lekárov dnes uvádza profesionálne používanie takýchto nástrojov, zatiaľ čo v roku 2023 to bolo 38 %.</p>
 
 <p>Regulačný rámec za technológiou zaostáva. Nie každý nástroj využívajúci umelú inteligenciu je zdravotníckou pomôckou, nie každý prešiel hodnotením bezpečnosti a účinnosti a povolenie uvedenia na trh neznamená, že nástroj je vhodný pre každého pacienta a každé pracovisko.</p>
 
@@ -35,11 +35,11 @@ $articles[] = [
 
 <h2>1. FDA nereguluje umelú inteligenciu, ale zdravotnícke pomôcky</h2>
 
-<p>Dokument to formuluje priamo: FDA nereguluje generatívnu umelú inteligenciu ako takú — reguluje zdravotnícke pomôcky vrátane tých, ktoré ju využívajú. Je to rovnaký prístup ako pri iných technológiách: úrad nereguluje softvér ako taký, hardvér ako taký ani umelú inteligenciu ako takú, ale výrobky, ktoré spĺňajú definíciu pomôcky podľa federálneho zákona o potravinách, liekoch a kozmetike.</p>
+<p>Dokument to formuluje priamo: FDA nereguluje generatívnu umelú inteligenciu ako takú – reguluje zdravotnícke pomôcky vrátane tých, ktoré ju využívajú. Je to rovnaký prístup ako pri iných technológiách: úrad nereguluje softvér ako taký, hardvér ako taký ani umelú inteligenciu ako takú, ale výrobky, ktoré spĺňajú definíciu pomôcky podľa federálneho zákona o potravinách, liekoch a kozmetike.</p>
 
 <p>Regulácia sa navyše uplatňuje na <strong>jednotlivé funkcie</strong> výrobku, nie na výrobok ako celok. Podľa usmernenia o pomôckach s viacerými funkciami je funkcia samostatný účel výrobku: produkt určený na ukladanie, prenos a analýzu údajov má tri funkcie. Niektoré z nich môžu byť zdravotníckou pomôckou, iné nie.</p>
 
-<p>Rovnaký model umelej inteligencie preto môže mať odlišný regulačný status podľa toho, na čo je určený a ako sa používa. Výraz „umelá inteligencia schválená úradmi“ je tak spravidla príliš nepresný — schválená alebo povolená býva konkrétna pomôcka s konkrétnym zamýšľaným použitím, nie technológia.</p>
+<p>Rovnaký model umelej inteligencie preto môže mať odlišný regulačný status podľa toho, na čo je určený a ako sa používa. Výraz „umelá inteligencia schválená úradmi“ je tak spravidla príliš nepresný – schválená alebo povolená býva konkrétna pomôcka s konkrétnym zamýšľaným použitím, nie technológia.</p>
 
 <h2>2. Dvojosový rizikový rámec: čo systém robí a aké sú následky chyby</h2>
 
@@ -79,7 +79,7 @@ $articles[] = [
 </table>
 </div>
 
-<p>Os následkov ilustruje dokument názorne: nesprávne odporúčanie voľnopredajného prípravku na drobný príznak je niečo celkom iné než nesprávne odporúčanie na úpravu dávky inzulínu. Rovnako autonómne predpísanie antibiotika pri potvrdenej streptokokovej angíne môže mať podstatne nižšiu závažnosť než autonómne spustenie trombolytického protokolu pri cievnej mozgovej príhode — a to aj pri rovnakej miere dohľadu.</p>
+<p>Os následkov ilustruje dokument názorne: nesprávne odporúčanie voľnopredajného prípravku na drobný príznak je niečo celkom iné než nesprávne odporúčanie na úpravu dávky inzulínu. Rovnako autonómne predpísanie antibiotika pri potvrdenej streptokokovej angíne môže mať podstatne nižšiu závažnosť než autonómne spustenie trombolytického protokolu pri cievnej mozgovej príhode – a to aj pri rovnakej miere dohľadu.</p>
 
 <h3>Direktívnosť je kontinuum, nie prepínač</h3>
 
@@ -98,7 +98,7 @@ $articles[] = [
 
 <p><strong>Meracie a signálové funkcie.</strong> Funkcie in vitro diagnostiky, merania a spracovania signálu produkujú formálne nedirektívne informácie, no CDRH ich napriek tomu zvažuje ako rizikovejšie: používateľ spravidla nedokáže nezávisle posúdiť, na akom základe výstup vznikol, a preto nemôže rozpoznať a odmietnuť nesprávny výsledok. To je presne situácia laboratórne odvodených renálnych parametrov.</p>
 
-<p><strong>Generalista verzus špecialista.</strong> Funkcia, ktorej bezpečné použitie závisí od kontextualizácie špecialistom, môže predstavovať zvýšené riziko práve vtedy, keď ju používa lekár bez príslušnej špecializácie. Nefrologický nástroj v rukách nešpecialistu tak nemusí byť rovnako bezpečný ako u nefrológa — a naopak, môže zmysluplne rozšíriť prístup k odbornej znalosti tam, kde nefrológ nie je dostupný.</p>
+<p><strong>Generalista verzus špecialista.</strong> Funkcia, ktorej bezpečné použitie závisí od kontextualizácie špecialistom, môže predstavovať zvýšené riziko práve vtedy, keď ju používa lekár bez príslušnej špecializácie. Nefrologický nástroj v rukách nešpecialistu tak nemusí byť rovnako bezpečný ako u nefrológa – a naopak, môže zmysluplne rozšíriť prístup k odbornej znalosti tam, kde nefrológ nie je dostupný.</p>
 
 <p><strong>Viackolové konverzácie.</strong> Konverzačný systém môže začať informačnou funkciou a v priebehu rozhovoru sa posunúť k funkcii smerujúcej k činu. CDRH preto zvažuje hodnotenie rizika naprieč realistickými priebehmi rozhovoru, nie iba na úrovni jednotlivých funkcií.</p>
 
@@ -106,7 +106,7 @@ $articles[] = [
 
 <h2>3. Kompetenčný prístup: benchmarking a klinické potvrdenie</h2>
 
-<p>Klasické softvérové pomôcky majú ohraničené vstupy a pevné výstupy. Pri generatívných systémoch je rozsah možných vstupov a výstupov príliš veľký na vyčerpávajúce testovanie. CDRH preto zvažuje kompetenčný prístup inšpirovaný — na vysokej úrovni — tým, ako sa hodnotia a atestujú lekári: nie testovaním každého mysliteľného scenára, ale kombináciou štruktúrovaného hodnotenia znalostí, praxe pod dohľadom a priebežného hodnotenia po začatí samostatnej praxe.</p>
+<p>Klasické softvérové pomôcky majú ohraničené vstupy a pevné výstupy. Pri generatívných systémoch je rozsah možných vstupov a výstupov príliš veľký na vyčerpávajúce testovanie. CDRH preto zvažuje kompetenčný prístup inšpirovaný – vo všeobecných rysoch – tým, ako sa hodnotia a atestujú lekári: nie testovaním každého mysliteľného scenára, ale kombináciou štruktúrovaného hodnotenia znalostí, praxe pod dohľadom a priebežného hodnotenia po začatí samostatnej praxe.</p>
 
 <p>Prístup má dve zložky: <strong>neklinický benchmarking pomôcky</strong> a <strong>klinické potvrdenie</strong>. Hodnotila by sa pritom výsledná pomôcka v podobe určenej na reálne nasadenie, nie samotný základový model ani izolovaný podkomponent.</p>
 
@@ -139,7 +139,7 @@ $articles[] = [
 </table>
 </div>
 
-<p>Kategórie sú teda štyri; komunikácia a zrozumiteľnosť nie sú samostatnou kategóriou, ale prvkom klinickej spôsobilosti. Nie všetky prvky by sa uplatnili na každú pomôcku — voľba by závisela od zamýšľaného použitia a rizikového profilu.</p>
+<p>Kategórie sú teda štyri; komunikácia a zrozumiteľnosť nie sú samostatnou kategóriou, ale prvkom klinickej spôsobilosti. Nie všetky prvky by sa uplatnili na každú pomôcku – voľba by závisela od zamýšľaného použitia a rizikového profilu.</p>
 
 <p>CDRH zároveň upozorňuje na úskalie verejne dostupných benchmarkov: kontamináciu údajov, saturáciu a obmedzenú reprezentatívnosť reálnych podmienok.</p>
 
@@ -155,13 +155,13 @@ $articles[] = [
   <li><strong>Prospektívna klinická štúdia</strong>, v niektorých prípadoch randomizovaná.</li>
 </ol>
 
-<p>Otvorenou otázkou zostáva, voči čomu sa má výkonnosť porovnávať. CDRH zvažuje porovnanie s panelom kvalifikovaných klinikov, s mediánovým lekárom v praxi, prípadne s bežným štandardom starostlivosti — a osobitne rieši, či sa má hodnotiť <strong>tím človek a stroj</strong>, alebo systém pracujúci sám.</p>
+<p>Otvorenou otázkou zostáva, voči čomu sa má výkonnosť porovnávať. CDRH zvažuje porovnanie s panelom kvalifikovaných klinikov, s mediánovým lekárom v praxi, prípadne s bežným štandardom starostlivosti – a osobitne rieši, či sa má hodnotiť <strong>tím človek a stroj</strong>, alebo systém pracujúci sám.</p>
 
 <h3>Monitorovanie po uvedení na trh</h3>
 
 <p>Vzhľadom na to, že generatívne systémy sa po nasadení menia, dokument zvažuje väčšie spoliehanie sa na dohľad po uvedení na trh. Navrhované prístupy zahŕňajú periodické opakovanie benchmarkingu, periodické hodnotenie vzoriek reálnych vstupov a výstupov nezávislými klinikmi a monitorovanie degradácie výkonnosti (driftu) v dôsledku zmien vstupnej populácie alebo dátového prostredia.</p>
 
-<p>Zmeny pomôcky sa pritom delia na zámerné úpravy sponzorom, na priebežnú evolúciu modelu a — čo je osobitne dôležité — na zmeny vyplývajúce z aktualizácie <strong>základového modelu tretej strany</strong>, ktoré nemusí iniciovať výrobca pomôcky. Dokument tiež výslovne uvádza, že zodpovednosť za ekosystém je zdieľaná: úlohu majú kliniki, pacienti, zdravotnícke inštitúcie, platitelia, odborné spoločnosti, normalizačné orgány aj federálne a štátne úrady.</p>
+<p>Zmeny pomôcky sa pritom delia na zámerné úpravy sponzorom, na priebežnú evolúciu modelu a – čo je osobitne dôležité – na zmeny vyplývajúce z aktualizácie <strong>základového modelu tretej strany</strong>, ktoré nemusí iniciovať výrobca pomôcky. Dokument tiež výslovne uvádza, že zodpovednosť za ekosystém je zdieľaná: úlohu majú klinici, pacienti, zdravotnícke inštitúcie, platitelia, odborné spoločnosti, normalizačné orgány aj federálne a štátne úrady.</p>
 
 <h2>4. Povolenie na trhu nie je dôkazom klinickej vhodnosti</h2>
 
@@ -194,7 +194,7 @@ $articles[] = [
 </table>
 </div>
 
-<p>Cesta 510(k) nie je „nevedecká“ — je to iný typ posúdenia, ktorého jadrom je porovnanie s existujúcou pomôckou. To však znamená, že samotné povolenie nemusí byť podložené rozsiahlymi prospektívnymi štúdiami v podmienkach každodennej praxe. Kritika sa dlhodobo týka aj toho, že používatelia nemusia dostať podstatné informácie o bezpečnom používaní vrátane zloženia tréningových údajov podľa pohlavia, rasy a etnicity; jedným z navrhovaných riešení sú štandardizované označenia typu „AI Facts“ podľa vzoru výživových údajov na potravinách.</p>
+<p>Cesta 510(k) nie je „nevedecká“ – je to iný typ posúdenia, ktorého jadrom je porovnanie s existujúcou pomôckou. To však znamená, že samotné povolenie nemusí byť podložené rozsiahlymi prospektívnymi štúdiami v podmienkach každodennej praxe. Kritika sa dlhodobo týka aj toho, že používatelia nemusia dostať podstatné informácie o bezpečnom používaní vrátane zloženia tréningových údajov podľa pohlavia, rasy a etnicity; jedným z navrhovaných riešení sú štandardizované označenia typu „AI Facts“ podľa vzoru výživových údajov na potravinách.</p>
 
 <p>Zásadné je rozlíšenie medzi <strong>validačnou štúdiou a dôkazom zlepšenia klinických výsledkov</strong>. Nástroj môže mať výbornú diskrimináciu v testovacom súbore, a pritom neznižovať mortalitu, komplikácie ani počet hospitalizácií.</p>
 
@@ -207,7 +207,7 @@ $articles[] = [
   <li><strong>Kalifornia</strong> zaviedla podobné obmedzenia vrátane zákazu používať slová, tituly alebo označenia ako „doktor“, ktoré by mohli vyvolať dojem, že ide o licencovaného zdravotníckeho pracovníka.</li>
   <li><strong>Rhode Island</strong> prijal v júni zákon ukladajúci poskytovateľom povinnosť informovať pacienta o použití nástroja na automatický prepis návštevy. Zákon nadväzuje na viaceré žaloby proti zdravotníckym systémom pre nahrávanie návštev bez primeraného upozornenia a súhlasu.</li>
   <li><strong>Colorado</strong> reguluje umelú inteligenciu pri rozhodovaní o úhradách: od roku 2027 musí posudzovanie využitia zohľadňovať individuálne klinické okolnosti pacienta, nie skupinové údaje, a zamietnutie pre lekársku nevyhnutnosť sa nesmie opierať výlučne o výstup systému bez posúdenia kvalifikovaným licencovaným pracovníkom.</li>
-  <li><strong>Utah</strong> súčasne pilotne skúša opačný smer — účasť umelej inteligencie na rozhodovaní o obnovení niektorých existujúcich receptov.</li>
+  <li><strong>Utah</strong> súčasne pilotne skúša opačný smer – účasť umelej inteligencie na rozhodovaní o obnovení niektorých existujúcich receptov.</li>
 </ul>
 
 <p>Federácia štátnych lekárskych komôr (FSMB) zriadila v máji pracovnú skupinu pre umelú inteligenciu s dôrazom na nástroje vykonávajúce klinické funkcie s obmedzeným alebo žiadnym priamym dohľadom lekára; návrh usmernenia sa očakáva na verejné pripomienkovanie začiatkom roka 2027.</p>
@@ -218,15 +218,15 @@ $articles[] = [
 
 <p>Podobná viacvrstvovosť platí aj v Európe. Používanie umelej inteligencie v zdravotníctve môže súčasne podliehať pravidlám pre zdravotnícke pomôcky, ochrane osobných údajov, kybernetickej bezpečnosti, pravidlám klinického skúšania a zodpovednosti za škodu.</p>
 
-<p>Nariadenie (EÚ) 2024/1689, akt o umelej inteligencii, vytvára rizikový rámec pre systémy umelej inteligencie. Neznamená to však, že každý medicínsky nástroj má rovnaký právny status — pri zdravotníckych pomôckach treba posudzovať aj vzťah k nariadeniu o zdravotníckych pomôckach a k príslušným postupom posudzovania zhody.</p>
+<p>Nariadenie (EÚ) 2024/1689, akt o umelej inteligencii, vytvára rizikový rámec pre systémy umelej inteligencie. Neznamená to však, že každý medicínsky nástroj má rovnaký právny status – pri zdravotníckych pomôckach treba posudzovať aj vzťah k nariadeniu o zdravotníckych pomôckach a k príslušným postupom posudzovania zhody.</p>
 
 <h2>Zodpovednosť za chybný výstup</h2>
 
 <p>Najťažšia otázka znie: kto zodpovedá, ak umelá inteligencia poškodí pacienta? Odpoveď nemožno zredukovať na to, že vždy zodpovedá lekár alebo vždy výrobca.</p>
 
-<p>Návrh politiky, ktorý v júni posudzovala Washingtonská lekárska komisia, uvádzal, že lekári a ďalší držitelia licencie zostávajú pri používaní nástrojov umelej inteligencie „plne a výlučne“ zodpovední za klinický úsudok a výsledky starostlivosti. Súčasne im ukladal <strong>vyhľadať a preštudovať dokumentáciu o validovaných spôsoboch použitia nástroja, jeho výkonnostných ukazovateľoch a známych režimoch zlyhania</strong> — a ak dodávateľ tieto údaje neposkytne, zvážiť úplné upustenie od jeho používania, individuálne aj na úrovni organizácie. Nešlo o všeobecne platné pravidlo pre celé USA.</p>
+<p>Návrh politiky, ktorý v júni posudzovala Washingtonská lekárska komisia, uvádzal, že lekári a ďalší držitelia licencie zostávajú pri používaní nástrojov umelej inteligencie „plne a výlučne“ zodpovední za klinický úsudok a výsledky starostlivosti. Súčasne im ukladal <strong>vyhľadať a preštudovať dokumentáciu o validovaných spôsoboch použitia nástroja, jeho výkonnostných ukazovateľoch a známych režimoch zlyhania</strong> – a ak dodávateľ tieto údaje neposkytne, zvážiť úplné upustenie od jeho používania, individuálne aj na úrovni organizácie. Nešlo o všeobecne platné pravidlo pre celé USA.</p>
 
-<p>Generálny riaditeľ AMA na návrh reagoval kriticky. Podporil zachovanie lekárskeho dohľadu nad umelou inteligenciou, ale odmietol prenesenie plnej zodpovednosti za chyby na klinikov — najmä ak je nástroj zabudovaný do klinického procesu alebo nariadený zamestnávateľom. Podľa neho by taký prístup zaobchádzal s umelou inteligenciou inak než s akýmkoľvek iným zdravotníckym produktom a v podstate by zbavoval technológie zodpovednosti za ich vlastnú výkonnosť. Namiesto toho navrhol posudzovať zodpovednosť <strong>podľa toho, kto je v najlepšom postavení poznať riziko nástroja a predísť ujme alebo ju zmierniť</strong>.</p>
+<p>Generálny riaditeľ AMA na návrh reagoval kriticky. Podporil zachovanie lekárskeho dohľadu nad umelou inteligenciou, ale odmietol prenesenie plnej zodpovednosti za chyby na klinikov – najmä ak je nástroj zabudovaný do klinického procesu alebo nariadený zamestnávateľom. Podľa neho by taký prístup zaobchádzal s umelou inteligenciou inak než s akýmkoľvek iným zdravotníckym produktom a v podstate by zbavoval technológie zodpovednosti za ich vlastnú výkonnosť. Namiesto toho navrhol posudzovať zodpovednosť <strong>podľa toho, kto je v najlepšom postavení poznať riziko nástroja a predísť ujme alebo ju zmierniť</strong>.</p>
 
 <p>Pri konkrétnom posúdení tak zaváži, aký bol účel systému, či bol riadne overený, či sa používal v rámci deklarovaného použitia, či lekár dostal dostatočné informácie o obmedzeniach, či zariadenie jeho používanie nariadilo, či výrobca zatajil známe zlyhania, či došlo k neprimeranej aktualizácii modelu, či existoval primeraný ľudský dohľad a či lekár mohol výstup rozumne overiť.</p>
 
@@ -238,7 +238,7 @@ $articles[] = [
 
 <p>Algoritmus môže byť ovplyvnený zmenami laboratórnych metód, rozdielmi medzi analyzátormi, chýbajúcimi údajmi, akútnymi zmenami hydratácie, svalovou hmotou aj neštandardnými klinickými situáciami.</p>
 
-<p>Výpočet eGFR nie je priamym meraním skutočnej glomerulovej filtrácie. Model validovaný na stabilných ambulantných pacientoch nemusí byť vhodný pri akútnom poškodení obličiek, na dialýze, pri extrémnej svalovej hmote ani pri rýchlych zmenách kreatinínu. Ide presne o typ funkcie, ktorú diskusný dokument zaraďuje medzi meracie funkcie so zvýšeným rizikom — používateľ totiž nedokáže nezávisle posúdiť, na akom základe výstup vznikol.</p>
+<p>Výpočet eGFR nie je priamym meraním skutočnej glomerulovej filtrácie. Model validovaný na stabilných ambulantných pacientoch nemusí byť vhodný pri akútnom poškodení obličiek, na dialýze, pri extrémnej svalovej hmote ani pri rýchlych zmenách kreatinínu. Ide presne o typ funkcie, ktorú diskusný dokument zaraďuje medzi meracie funkcie so zvýšeným rizikom – používateľ totiž nedokáže nezávisle posúdiť, na akom základe výstup vznikol.</p>
 
 <h3>Hemodialýza</h3>
 
@@ -248,7 +248,7 @@ $articles[] = [
 
 <h3>Dialyzované a transplantované populácie</h3>
 
-<p>Dialyzovaní a transplantovaní pacienti bývajú v bežných databázach nedostatočne zastúpení. Model preto môže mať horšiu výkonnosť práve u pacientov s vysokou polymorbiditou, častými hospitalizáciami, atypickými laboratórnymi hodnotami, odlišnou farmakokinetikou, premenlivým objemovým stavom a imunosupresívnou liečbou. Dobrá výkonnosť v celkovej populácii nie je dôkazom vhodnosti pre nefrologických pacientov — čo zodpovedá tomu, že FDA zaraďuje <em>výkonnosť v podskupinách</em> medzi samostatné prvky benchmarkingu.</p>
+<p>Dialyzovaní a transplantovaní pacienti bývajú v bežných databázach nedostatočne zastúpení. Model preto môže mať horšiu výkonnosť práve u pacientov s vysokou polymorbiditou, častými hospitalizáciami, atypickými laboratórnymi hodnotami, odlišnou farmakokinetikou, premenlivým objemovým stavom a imunosupresívnou liečbou. Dobrá výkonnosť v celkovej populácii nie je dôkazom vhodnosti pre nefrologických pacientov – čo zodpovedá tomu, že FDA zaraďuje <em>výkonnosť v podskupinách</em> medzi samostatné prvky benchmarkingu.</p>
 
 <h2>Praktický kontrolný zoznam pre pracovisko</h2>
 
@@ -283,7 +283,7 @@ $articles[] = [
 
 <p>Regulácia medicínskej umelej inteligencie sa presúva od otázky, či sa výrobok označuje ako AI, k otázkam jeho zamýšľaného použitia, miery samostatnosti a závažnosti možnej ujmy. FDA pri generatívnej umelej inteligencii zvažuje rizikovo orientovaný dvojosový rámec a kompetenčné hodnotenie kombinujúce neklinický benchmarking, klinické potvrdenie a dlhodobé monitorovanie po nasadení.</p>
 
-<p>Zatiaľ však nejde o platnú regulačnú požiadavku — dokument je výslovne diskusný a sám neriešil ani to, či by opísané prístupy boli v rámci existujúcich právomocí úradu. Lekár preto nesmie zamieňať regulačné povolenie konkrétnej pomôcky s dôkazom, že nástroj zlepšuje klinické výsledky v jeho vlastnej populácii pacientov.</p>
+<p>Zatiaľ však nejde o platnú regulačnú požiadavku – dokument je výslovne diskusný a sám neriešil ani to, či by opísané prístupy boli v rámci existujúcich právomocí úradu. Lekár preto nesmie zamieňať regulačné povolenie konkrétnej pomôcky s dôkazom, že nástroj zlepšuje klinické výsledky v jeho vlastnej populácii pacientov.</p>
 
 <p>V nefrológii má umelá inteligencia potenciál zlepšiť predikciu, dokumentáciu aj organizáciu starostlivosti. Pri rozhodnutiach týkajúcich sa dialýzy, liekov, transplantácie alebo akútneho poškodenia obličiek však musí zostať súčasťou riadeného klinického procesu s jasne určeným ľudským dohľadom, dokumentovanými obmedzeniami a priebežným hodnotením bezpečnosti.</p>
 

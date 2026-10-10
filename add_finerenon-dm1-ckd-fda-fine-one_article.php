@@ -67,26 +67,26 @@ $articles[] = [
     'is_top'       => 0,                     // ← 1 ak má byť featured
     'excerpt'      => 'FDA rozšírila indikáciu finerenónu na dospelých s CKD a diabetom 1. typu. Základom je pokles albuminúrie v FINE-ONE, nie priamy dôkaz prevencie zlyhania obličiek.',
     'content'      => <<<'HTML'
-<figure><a href="img/finerenon-dm1-ckd-fda-fine-one.webp" rel="noopener noreferrer" target="_blank"><img src="img/finerenon-dm1-ckd-fda-fine-one.webp" alt="Tabletka na tmavej oceli pred úzkymi otvorenými dverami zo svetla, v nich presvitá silueta obličky" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Schválenie otvára dvere — nehovorí však samo osebe, pre ktorého pacienta a s akým očakávaným prínosom cez ne prejsť.</figcaption></figure>
+<figure><a href="img/finerenon-dm1-ckd-fda-fine-one.webp" rel="noopener noreferrer" target="_blank"><img src="img/finerenon-dm1-ckd-fda-fine-one.webp" alt="Tabletka na tmavej oceli pred úzkymi otvorenými dverami zo svetla, v nich presvitá silueta obličky" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Schválenie otvára dvere – nehovorí však samo osebe, pre ktorého pacienta a s akým očakávaným prínosom cez ne prejsť.</figcaption></figure>
 
 <p>Americký Úrad pre kontrolu potravín a liečiv (FDA) rozšíril v septembri 2026 indikáciu finerenónu (Kerendia) na dospelých s chronickou chorobou obličiek (CKD) asociovanou s diabetes mellitus 1. typu. Presná formulácia je podstatná: liek je v USA indikovaný na <strong>zníženie pomeru albumínu ku kreatinínu v moči (UACR), od ktorého sa očakáva zníženie rizika trvalého poklesu eGFR a terminálneho zlyhania obličiek</strong>. Štúdia FINE-ONE priamo preukázala pokles albuminúrie, nie zníženie počtu prípadov zlyhania obličiek, kardiovaskulárnych príhod alebo úmrtí. [1–3]</p>
 
 <h2>Regulačné rozhodnutie nie je dôkazom všetkých klinických výsledkov</h2>
 <p>Aktuálny americký predpisový text odlišuje tri indikácie finerenónu. Pri CKD a diabete 2. typu uvádza zníženie rizika renálnych a kardiovaskulárnych príhod na základe výsledkov FIDELIO-DKD a FIGARO-DKD. Pri CKD a diabete 1. typu je indikácia postavená na znížení UACR a na očakávanom renálnom prínose odvodenom z celkového súboru dôkazov. FDA využila výsledky FINE-ONE spolu s klinickými údajmi pri diabete 2. typu, v ktorých bola zmena albuminúrie spojená s renálnymi výsledkami. [1]</p>
-<p>Toto regulačné odvodenie je významné, ale nesmie sa preformulovať na tvrdenie, že FINE-ONE preukázala prevenciu terminálneho zlyhania obličiek. Štúdia trvala šesť mesiacov, mala 242 účastníkov a na takýto klinický výsledok nebola navrhnutá ani štatisticky dimenzovaná. UACR je prognosticky dôležitý biomarker a v tomto programe registračný preklenovací ukazovateľ; zostáva však náhradným ukazovateľom. [1–3]</p>
+<p>Toto regulačné odvodenie je dôležité, nemožno ho však zamieňať s tvrdením, že FINE-ONE preukázala prevenciu terminálneho zlyhania obličiek. Štúdia trvala šesť mesiacov, mala 242 účastníkov a na takýto klinický výsledok nebola navrhnutá ani štatisticky dimenzovaná. UACR je prognosticky dôležitý biomarker a v tomto programe registračný preklenovací ukazovateľ; zostáva však náhradným ukazovateľom. [1–3]</p>
 
 <h2>Koho zahŕňala FINE-ONE</h2>
 <p>FINE-ONE bola multicentrická, randomizovaná, dvojito zaslepená, placebom kontrolovaná štúdia 3. fázy. Zaradila dospelých s diabetom 1. typu a CKD, ktorí mali eGFR 25 až menej ako 90 ml/min/1,73 m², UACR 200 až menej ako 5 000 mg/g a HbA1c pod 10 %. Účastníci dostávali inzulín a stabilnú dávku inhibítora ACE alebo blokátora receptorov angiotenzínu II. Vstupná koncentrácia draslíka musela byť najviac 4,8 mmol/l. [1, 2]</p>
 <p>Pacienti užívajúci inhibítor SGLT2 alebo agonistu receptora GLP-1 boli zo štúdie vylúčení. Výsledok preto neposkytuje priamy dôkaz o účinnosti ani bezpečnosti súbežnej liečby týmito liekmi pri diabete 1. typu a rozhodovanie nemožno prenášať zo situácie pri diabete 2. typu. [1]</p>
 
-<h2>Primárny výsledok: tri percentá, tri odlišné významy</h2>
+<h2>Primárny výsledok: tri čísla, tri odlišné významy</h2>
 <p>Primárnym ukazovateľom bola zmena logaritmicky transformovaného UACR vyjadrená ako pomer k východiskovej hodnote a spriemerovaná z meraní v treťom a šiestom mesiaci. Priemerný účinok finerenónu oproti placebu predstavoval <strong>o 25 % väčšie zníženie UACR</strong> (pomer geometrických priemerov 0,75; 95 % interval spoľahlivosti 0,65 až 0,87; p &lt; 0,001). [2]</p>
 <ul>
 <li>V ramene s finerenónom klesol UACR za šesť mesiacov o 34 % oproti východiskovej hodnote.</li>
 <li>V ramene s placebom klesol za rovnaký čas o 12 %.</li>
 <li>Placebom korigovaný rozdiel bol 25 %, pretože sa počítal ako pomer geometrických priemerov, nie jednoduchým odčítaním 34 mínus 12.</li>
 </ul>
-<p>Americký predpisový text uvádza aj časové odhady: oproti placebu bol UACR nižší o 22 % v treťom a o 28 % v šiestom mesiaci. Tieto čísla sa nevylučujú s primárnym 25 % výsledkom; opisujú jednotlivé návštevy, zatiaľ čo primárna analýza ich spriemerovala. [1]</p>
+<p>Americký predpisový text uvádza aj časové odhady: oproti placebu bol UACR nižší o 22 % v treťom a o 28 % v šiestom mesiaci. Tieto čísla nie sú v rozpore s primárnym výsledkom 25 %; opisujú jednotlivé návštevy, zatiaľ čo primárna analýza ich spriemerovala. [1]</p>
 
 <h2>eGFR: krátkodobý pokles bol po vysadení prevažne reverzibilný</h2>
 <p>Po šiestich mesiacoch sa eGFR zmenila o −5,6 ml/min/1,73 m² pri finerenóne a o −2,7 ml/min/1,73 m² pri placebe. Rozdiel bol −2,9 ml/min/1,73 m² (95 % interval spoľahlivosti −5,1 až −0,7). Počas vymývacieho obdobia sa hodnoty približovali k východiskovým, čo podporuje hemodynamickú zložku zmeny. [2]</p>

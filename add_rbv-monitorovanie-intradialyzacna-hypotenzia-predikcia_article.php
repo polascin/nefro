@@ -25,11 +25,11 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Pokles relatívneho objemu krvi predpovedal hypotenziu s AUC 0,77 pri validácii podľa procedúr — ale iba 0,62 pri nových pacientoch. Rozdiel medzi týmito dvoma číslami je celý príbeh tejto štúdie.',
+    'excerpt'      => 'Pokles relatívneho objemu krvi predpovedal hypotenziu s AUC 0,77 pri validácii podľa procedúr – ale iba 0,62 pri nových pacientoch. V rozdiele medzi týmito dvoma číslami je podstata celej štúdie.',
     'content'      => <<<'HTML'
 <figure><a href="img/rbv-monitorovanie-intradialyzacna-hypotenzia-predikcia.webp" rel="noopener noreferrer" target="_blank"><img src="img/rbv-monitorovanie-intradialyzacna-hypotenzia-predikcia.webp" alt="Svetelná krivka sa mierne prehýba a až ďalej prudko padá; v mieste prehnutia svieti varovný bod, v pozadí dialyzačný set" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna, nie záznam konkrétneho pacienta. Hodnota kontinuálneho merania je v tom, že signál prichádza skôr než samotný pokles tlaku.</figcaption></figure>
 
-<p class="article-dek"><em>Model, ktorý pozná predchádzajúce dialýzy toho istého pacienta, funguje dobre. Ten istý model u pacienta, ktorého nikdy nevidel, funguje sotva lepšie než náhoda. To nie je chyba štúdie — je to jej najužitočnejšie zistenie.</em></p>
+<p class="article-dek"><em>Model, ktorý pozná predchádzajúce dialýzy toho istého pacienta, funguje dobre. Ten istý model u pacienta, ktorého nikdy nevidel, funguje sotva lepšie než náhoda. To nie je chyba štúdie – je to jej najužitočnejšie zistenie.</em></p>
 
 <p>Intradialyzačná hypotenzia patrí medzi najčastejšie komplikácie hemodialýzy. Francúzska prospektívna multicentrická štúdia ukázala, že pokles relatívneho objemu krvi (RBV) počas dialýzy súvisí s výskytom hypotenzie a môže pomôcť predpovedať hypotenznú príhodu v nasledujúcich 10 až 60 minútach.</p>
 
@@ -37,11 +37,11 @@ $articles[] = [
 
 <h2>Prečo vzniká intradialyzačná hypotenzia</h2>
 
-<p>Ultrafiltrácia odstraňuje tekutinu priamo z intravaskulárneho priestoru. Strata plazmatického objemu sa za fyziologických okolností kompenzuje presunom tekutiny z interstícia do cievneho riečiska — plazmatickým dopĺňaním. Ak rýchlosť ultrafiltrácie prekročí kapacitu plazmatického dopĺňania, klesá objem cirkulujúcej krvi a srdcový výdaj.</p>
+<p>Ultrafiltrácia odstraňuje tekutinu priamo z intravaskulárneho priestoru. Strata plazmatického objemu sa za fyziologických okolností kompenzuje presunom tekutiny z interstícia do cievneho riečiska – plazmatickým dopĺňaním. Ak rýchlosť ultrafiltrácie prekročí kapacitu plazmatického dopĺňania, klesá objem cirkulujúcej krvi a srdcový výdaj.</p>
 
 <p>Stabilita krvného tlaku potom závisí od zvýšenia srdcovej frekvencie a kontraktility, periférnej vazokonstrikcie, mobilizácie krvi z kapacitných ciev, zachovanej autonómnej regulácie a primeraného plazmatického dopĺňania.</p>
 
-<p>Hypotenzia preto nevzniká iba v dôsledku zníženia objemu krvi. Význam majú aj systolická a diastolická dysfunkcia, poruchy rytmu, autonómna neuropatia, nízky cievny tonus, príjem potravy počas dialýzy, zloženie a teplota dialyzačného roztoku, antihypertenzná liečba a individuálna hemodynamická odpoveď. <strong>Rovnaký pokles RBV môže byť u jedného pacienta dobre tolerovaný a u iného viesť k závažnej hypotenzii</strong> — a práve táto veta predurčuje výsledky celej štúdie.</p>
+<p>Hypotenzia preto nevzniká iba v dôsledku zníženia objemu krvi. Význam majú aj systolická a diastolická dysfunkcia, poruchy rytmu, autonómna neuropatia, nízky cievny tonus, príjem potravy počas dialýzy, zloženie a teplota dialyzačného roztoku, antihypertenzná liečba a individuálna hemodynamická odpoveď. <strong>Rovnaký pokles RBV môže byť u jedného pacienta dobre tolerovaný a u iného viesť k závažnej hypotenzii</strong> – a práve to vysvetľuje výsledky celej štúdie.</p>
 
 <h2>Klinické dôsledky intradialyzačnej hypotenzie</h2>
 
@@ -67,11 +67,11 @@ $articles[] = [
 
 <p>Hypotenzia bola definovaná súčasným splnením dvoch kritérií: systolický krvný tlak pod 90 mm Hg <strong>a</strong> pokles systolického tlaku najmenej o 20 mm Hg oproti prvej hodnote zaznamenanej počas procedúry.</p>
 
-<p>Definícia nevyžadovala prítomnosť príznakov ani terapeutický zásah. Nie je preto správne označovať všetky zaznamenané príhody za <em>symptomatickú</em> intradialyzačnú hypotenziu. (V metodickej časti elektronickej verzie primárnej publikácie sa nachádza formulácia „pokles o menej než 20 mm Hg“, ktorá odporuje abstraktu aj klinickej logike; ide takmer určite o typografickú chybu — abstrakt uvádza konzistentne pokles <strong>najmenej</strong> o 20 mm Hg.)</p>
+<p>Definícia nevyžadovala prítomnosť príznakov ani terapeutický zásah. Nie je preto správne označovať všetky zaznamenané príhody za <em>symptomatickú</em> intradialyzačnú hypotenziu. (V metodickej časti elektronickej verzie primárnej publikácie sa nachádza formulácia „pokles o menej než 20 mm Hg“, ktorá odporuje abstraktu aj klinickej logike; ide takmer určite o typografickú chybu – abstrakt uvádza konzistentne pokles <strong>najmenej</strong> o 20 mm Hg.)</p>
 
 <h3>Výskyt hypotenzie</h3>
 
-<p>Intradialyzačná hypotenzia sa vyskytla pri <strong>29,7 % procedúr</strong>. Tento údaj je na hornej hranici bežne uvádzaného rozpätia a nemožno ho extrapolovať na všetkých hemodialyzovaných pacientov — štúdia zámerne skúmala populáciu obohatenú o pacientov s častou hemodynamickou nestabilitou.</p>
+<p>Intradialyzačná hypotenzia sa vyskytla pri <strong>29,7 % procedúr</strong>. Tento údaj je na hornej hranici bežne uvádzaného rozpätia a nemožno ho extrapolovať na všetkých hemodialyzovaných pacientov – štúdia zámerne skúmala populáciu obohatenú o pacientov s častou hemodynamickou nestabilitou.</p>
 
 <h2>Pokles RBV a aktuálne riziko hypotenzie</h2>
 
@@ -93,11 +93,11 @@ $articles[] = [
 
 <p>Pokles RBV pod dynamický prah bol <strong>v rovnakom čase</strong> spojený s viac než dvojnásobnou šancou na hypotenziu (OR 2,37; p &lt; 0,001).</p>
 
-<p>Tento výsledok treba dôsledne odlíšiť od predikcie budúcej hypotenzie. V modeli hodnotiacom výskyt hypotenzie počas nasledujúcich 10 až 60 minút bolo prekročenie prahu spojené s <strong>miernejším</strong> zvýšením šance. Nie je teda presné tvrdiť, že pokles pod prah viac než zdvojnásobil riziko hypotenzie v nasledujúcich 10 až 60 minútach — hodnota 2,37 sa vzťahovala na súčasnú asociáciu.</p>
+<p>Tento výsledok treba dôsledne odlíšiť od predikcie budúcej hypotenzie. V modeli hodnotiacom výskyt hypotenzie počas nasledujúcich 10 až 60 minút bolo prekročenie prahu spojené s <strong>miernejším</strong> zvýšením šance. Nie je teda presné tvrdiť, že pokles pod prah viac než zdvojnásobil riziko hypotenzie v nasledujúcich 10 až 60 minútach – hodnota 2,37 sa vzťahovala na súčasnú asociáciu.</p>
 
 <h2>Predikcia hypotenzie a význam individuálnych rozdielov</h2>
 
-<p>Tu leží jadro celej práce. Výkonnosť modelu závisela od toho, ako sa rozdelili tréningové a testovacie údaje:</p>
+<p>To je jadro celej práce. Výkonnosť modelu závisela od toho, ako sa rozdelili tréningové a testovacie údaje:</p>
 
 <div class="table-responsive" role="region" aria-label="Prediktívna výkonnosť modelov podľa spôsobu validácie" tabindex="0">
   <table>
@@ -116,27 +116,27 @@ $articles[] = [
   </table>
 </div>
 
-<p>Pri rozdelení podľa procedúr mohol tréningový súbor obsahovať predchádzajúce dialýzy tých istých pacientov — model teda čiastočne rozpoznával <strong>individuálny profil známeho pacienta</strong>, nie univerzálnu zákonitosť. Keď sa súbory rozdelili podľa pacientov, výkonnosť samotného RBV klesla na AUC 0,62, teda na úroveň sotva použiteľnú.</p>
+<p>Pri rozdelení podľa procedúr mohol tréningový súbor obsahovať predchádzajúce dialýzy tých istých pacientov – model teda čiastočne rozpoznával <strong>individuálny profil známeho pacienta</strong>, nie univerzálnu zákonitosť. Keď sa súbory rozdelili podľa pacientov, výkonnosť samotného RBV klesla na AUC 0,62, teda na úroveň sotva použiteľnú.</p>
 
-<p>Po doplnení ďalších priebežne meraných premenných — časovej derivácie RBV, aktuálneho systolického tlaku, jeho poklesu oproti začiatku procedúry a srdcovej frekvencie — sa výkonnosť u nových pacientov výrazne zlepšila (AUC 0,85 a 0,86). Rozdiel medzi klasickým zmiešaným modelom a algoritmom strojového učenia bol pritom <strong>zanedbateľný</strong>: komplexnejší algoritmus tu neprináša prevahu.</p>
+<p>Po doplnení ďalších priebežne meraných premenných – časovej derivácie RBV, aktuálneho systolického tlaku, jeho poklesu oproti začiatku procedúry a srdcovej frekvencie – sa výkonnosť u nových pacientov výrazne zlepšila (AUC 0,85 a 0,86). Rozdiel medzi klasickým zmiešaným modelom a algoritmom strojového učenia bol pritom <strong>zanedbateľný</strong>: komplexnejší algoritmus tu neprináša prevahu.</p>
 
-<p>Časť prediktívnej výkonnosti navyše pochádzala z aktuálneho krvného tlaku a jeho už prebiehajúceho poklesu. Model preto nemusí predpovedať celkom neočakávanú hypotenziu — môže zachytávať jej <strong>počiatočnú hemodynamickú fázu</strong>.</p>
+<p>Časť prediktívnej výkonnosti navyše pochádzala z aktuálneho krvného tlaku a jeho už prebiehajúceho poklesu. Model preto nemusí predpovedať celkom neočakávanú hypotenziu – môže zachytávať jej <strong>počiatočnú hemodynamickú fázu</strong>.</p>
 
 <h2>Hydratácia a suchá hmotnosť</h2>
 
 <p>V nízkorizikovom klastri sa predpísaná suchá hmotnosť približne zhodovala s bioimpedančným odhadom. Vo vysokorizikových klastroch bola predpísaná suchá hmotnosť v priemere približne o 0,9 kg <strong>nižšia</strong> než hodnota odvodená pomocou monitora telesného zloženia.</p>
 
-<p>To môže znamenať, že niektorí pacienti boli vedení k nižšej cieľovej hmotnosti, než zodpovedalo bioimpedančnému odhadu normohydratácie — výraznejší pokles RBV tak mohol súvisieť s pokusom odstrániť viac tekutiny, než bolo hemodynamicky tolerovateľné. Bioimpedančne stanovená normohydratácia však nie je absolútnym referenčným štandardom a treba ju posudzovať spolu s klinickým vyšetrením, krvným tlakom, reziduálnou diurézou, echokardiografickým nálezom a toleranciou ultrafiltrácie.</p>
+<p>To môže znamenať, že niektorí pacienti boli vedení k nižšej cieľovej hmotnosti, než zodpovedalo bioimpedančnému odhadu normohydratácie – výraznejší pokles RBV tak mohol súvisieť s pokusom odstrániť viac tekutiny, než bolo hemodynamicky tolerovateľné. Bioimpedančne stanovená normohydratácia však nie je absolútnym referenčným štandardom a treba ju posudzovať spolu s klinickým vyšetrením, krvným tlakom, reziduálnou diurézou, echokardiografickým nálezom a toleranciou ultrafiltrácie.</p>
 
 <h2>Čo štúdia nepreukázala</h2>
 
 <p>Štúdia nepreukázala, že používanie dynamického prahu RBV znižuje počet hypotenzných príhod, umožňuje bezpečne automatizovať ultrafiltráciu, znižuje poškodenie myokardu alebo mozgu, chráni reziduálnu funkciu obličiek, znižuje počet hospitalizácií, predlžuje prežívanie alebo je bezpečnejšie než štandardné klinické riadenie dialýzy.</p>
 
-<p><strong>Model údaje iba vyhodnocoval</strong> — podľa jeho výstupov sa počas štúdie ultrafiltrácia automaticky ani protokolovo neupravovala.</p>
+<p><strong>Model údaje iba vyhodnocoval</strong> – podľa jeho výstupov sa počas štúdie ultrafiltrácia automaticky ani protokolovo neupravovala.</p>
 
 <h2>Prečo nestačí iba znížiť ultrafiltračnú rýchlosť</h2>
 
-<p>Ak sa pri každom poklese RBV ultrafiltrácia iba zníži alebo zastaví bez úpravy celkového liečebného plánu, pacient nemusí dosiahnuť primeranú euvolémiu. Dôsledkom môže byť chronické objemové preťaženie, hypertenzia a srdcové zlyhávanie — teda výmena akútneho problému za chronický.</p>
+<p>Ak sa pri každom poklese RBV ultrafiltrácia iba zníži alebo zastaví bez úpravy celkového liečebného plánu, pacient nemusí dosiahnuť primeranú euvolémiu. Dôsledkom môže byť chronické objemové preťaženie, hypertenzia a srdcové zlyhávanie – teda výmena akútneho problému za chronický.</p>
 
 <p>Primeraná reakcia môže zahŕňať prehodnotenie cieľovej hmotnosti, obmedzenie interdialyzačného príjmu sodíka a tekutín, predĺženie procedúry, zvýšenie frekvencie dialýz, individualizáciu ultrafiltračného profilu, použitie chladnejšieho dialyzačného roztoku, prehodnotenie antihypertenznej liečby a diagnostiku srdcového alebo autonómneho ochorenia.</p>
 
@@ -146,16 +146,16 @@ $articles[] = [
   <li><strong>Malý počet pacientov:</strong> iba 56 osôb. Väčší počet procedúr nemôže nahradiť malý počet nezávislých pacientov, pretože opakované procedúry toho istého pacienta sú navzájom korelované.</li>
   <li><strong>Výber vysoko rizikovej populácie:</strong> všetci pacienti mali pred zaradením opakovanú hypotenziu; model nemusí mať rovnakú výkonnosť v bežnej dialyzovanej populácii.</li>
   <li><strong>Bez nezávislej externej validácie:</strong> prahy, klastre aj modely vznikli a boli hodnotené v rovnakom súbore. Rozdelenie na tréningové a testovacie údaje je interná, nie externá validácia.</li>
-  <li><strong>Riziko úniku informácií medzi procedúrami</strong> pri validácii podľa procedúr — rozdiel AUC 0,77 oproti 0,62 túto obavu priamo kvantifikuje.</li>
+  <li><strong>Riziko úniku informácií medzi procedúrami</strong> pri validácii podľa procedúr – rozdiel AUC 0,77 oproti 0,62 túto obavu priamo kvantifikuje.</li>
   <li><strong>Odvodenie prahu z klastrov:</strong> dynamický prah nebol odvodený z nezávislého klinického výsledku, ale optimalizovaný na rozlíšenie klastrov vzniknutých z tých istých údajov.</li>
   <li><strong>Technické obmedzenia RBV:</strong> recirkulácia v cievnom prístupe, zmena polohy, technická chyba, infúzia alebo náhle zmeny distribúcie krvi.</li>
-  <li><strong>Neštandardizovaná dialyzačná preskripcia:</strong> zloženie roztoku, membrána, prietoky, antikoagulácia a stanovenie suchej hmotnosti zostali v kompetencii ošetrujúceho nefrológa — to zvyšuje klinickú realistickosť, ale pridáva mätúce premenné.</li>
+  <li><strong>Neštandardizovaná dialyzačná preskripcia:</strong> zloženie roztoku, membrána, prietoky, antikoagulácia a stanovenie suchej hmotnosti zostali v kompetencii ošetrujúceho nefrológa – to zvyšuje klinickú realistickosť, ale pridáva mätúce premenné.</li>
   <li><strong>Vzťahy k výrobcovi:</strong> dvaja spoluautori sú zamestnancami spoločnosti Fresenius Medical Care (francúzska pobočka a globálny výskum a vývoj), ďalší autori deklarujú prednáškové alebo konzultačné vzťahy.</li>
 </ul>
 
 <h2>Klinický význam</h2>
 
-<p>Kontinuálny priebeh RBV prináša viac informácií než izolovaná hodnota na konci dialýzy. Najväčší potenciál má pravdepodobne <strong>pri opakovaných procedúrach toho istého pacienta</strong>, keď možno porovnávať individuálne trajektórie, ultrafiltráciu, krvný tlak a predchádzajúcu toleranciu liečby. Paradoxne je to práve to, čo štúdia ukázala najpresvedčivejšie — a zároveň to, čo skúsený dialyzačný tím robí aj bez algoritmu.</p>
+<p>Kontinuálny priebeh RBV prináša viac informácií než izolovaná hodnota na konci dialýzy. Najväčší potenciál má pravdepodobne <strong>pri opakovaných procedúrach toho istého pacienta</strong>, keď možno porovnávať individuálne trajektórie, ultrafiltráciu, krvný tlak a predchádzajúcu toleranciu liečby. Paradoxne je to práve to, čo štúdia ukázala najpresvedčivejšie – a zároveň to, čo skúsený dialyzačný tím robí aj bez algoritmu.</p>
 
 <p>RBV nemožno používať ako jediný signál na automatické znižovanie ultrafiltrácie. Rozhodovanie musí zahŕňať aktuálny krvný tlak a jeho trend, srdcovú frekvenciu, príznaky, objemový stav, cieľovú hmotnosť, srdcovú funkciu a potrebu dosiahnuť primeranú dlhodobú kontrolu hydratácie.</p>
 
@@ -172,10 +172,10 @@ $articles[] = [
 <h2>Súvisiace články</h2>
 
 <ul>
-  <li><a href="article.php?slug=stanovenie-suchej-vahy-edw-hemodialyza">Stanovenie suchej hmotnosti pri hemodialýze</a> — kľúčová premenná tejto štúdie.</li>
+  <li><a href="article.php?slug=stanovenie-suchej-vahy-edw-hemodialyza">Stanovenie suchej hmotnosti pri hemodialýze</a> – kľúčová premenná tejto štúdie.</li>
   <li><a href="article.php?slug=umela-inteligencia-sucha-hmotnost-hemodialyza">Umelá inteligencia a určovanie suchej hmotnosti</a>.</li>
-  <li><a href="article.php?slug=dennik-semafor-objemovy-manazment-hemodialyza-rct">Denník semafor a objemový manažment</a> — jednoduchšia cesta k tomu istému cieľu.</li>
-  <li><a href="article.php?slug=krce-kostroveho-svalstva-dialyza-prevalencia-metaanalyza">Kŕče kostrového svalstva pri dialýze</a> — príbuzný intradialyzačný symptóm.</li>
+  <li><a href="article.php?slug=dennik-semafor-objemovy-manazment-hemodialyza-rct">Denník semafor a objemový manažment</a> – jednoduchšia cesta k tomu istému cieľu.</li>
+  <li><a href="article.php?slug=krce-kostroveho-svalstva-dialyza-prevalencia-metaanalyza">Kŕče kostrového svalstva pri dialýze</a> – príbuzný intradialyzačný symptóm.</li>
 </ul>
 
 <hr>
@@ -188,7 +188,7 @@ $articles[] = [
   <li><strong>ClinicalTrials.gov, U.S. National Library of Medicine.</strong> <em>Prediction of Risk of Hypotension in Hemodialysis (IMHOTEP), NCT03350308.</em> Zadávateľ CHU Clermont-Ferrand. <a href="https://clinicaltrials.gov/study/NCT03350308" target="_blank" rel="noopener noreferrer">ClinicalTrials.gov</a>.</li>
 </ol>
 
-<p><em><strong>Poznámka k dôkazom:</strong> Číselné údaje — 56 pacientov a 459 dialyzačných procedúr, definícia hypotenzie ako systolický tlak pod 90 mm Hg so súčasným poklesom najmenej o 20 mm Hg, výskyt hypotenzie pri 29,7 % procedúr, OR 1,05 na každý percentuálny bod poklesu RBV, OR 2,37 pri prekročení dynamického prahu, AUC 0,77 pri validácii podľa procedúr a 0,62 pri validácii podľa pacientov, AUC 0,85 pre zmiešaný model a 0,86 pre XGBoost po doplnení ďalších premenných — boli overené proti štruktúrovanému abstraktu v zázname PubMed. Príslušnosť dvoch spoluautorov k spoločnosti Fresenius Medical Care bola overená v afiliáciách. Hodnoty uvádzané s tromi desatinnými miestami (OR 1,053 s intervalom 1,037 – 1,069), rozdelenie klastrov (33,2 / 18,8 / 30,9 %), OR 2,58 pre vysokorizikové klastre, OR 1,68 pre predikciu na 10 až 60 minút, senzitivity a špecificity, rozdiel suchej hmotnosti 0,9 kg a priemerné parametre procedúr pochádzajú z plného textu a <strong>neboli nezávisle overené</strong>. Bibliografia bola overená cez Crossref a PubMed; v citácii konsenzu KDIGO boli <strong>opravené mená troch autorov</strong> — na deviatom až jedenástom mieste sú Daniel E. Weiner, Michael Cheung a Michel Jadoul, nie Matthew R. Weir, James B. Wetmore a Caroline M. Wilkie (tí sú medzi ďalšími z 55 účastníkov). Rozbor rozdielu medzi validáciou podľa procedúr a podľa pacientov, upozornenie na odlíšenie súčasnej asociácie od predikcie a poznámka o výmene akútneho problému za chronický sú <strong>vlastným odborným hodnotením</strong>.</em></p>
+<p><em><strong>Poznámka k dôkazom:</strong> Číselné údaje – 56 pacientov a 459 dialyzačných procedúr, definícia hypotenzie ako systolický tlak pod 90 mm Hg so súčasným poklesom najmenej o 20 mm Hg, výskyt hypotenzie pri 29,7 % procedúr, OR 1,05 na každý percentuálny bod poklesu RBV, OR 2,37 pri prekročení dynamického prahu, AUC 0,77 pri validácii podľa procedúr a 0,62 pri validácii podľa pacientov, AUC 0,85 pre zmiešaný model a 0,86 pre XGBoost po doplnení ďalších premenných – boli overené proti štruktúrovanému abstraktu v zázname PubMed. Príslušnosť dvoch spoluautorov k spoločnosti Fresenius Medical Care bola overená v afiliáciách. Hodnoty uvádzané s tromi desatinnými miestami (OR 1,053 s intervalom 1,037 – 1,069), rozdelenie klastrov (33,2 / 18,8 / 30,9 %), OR 2,58 pre vysokorizikové klastre, OR 1,68 pre predikciu na 10 až 60 minút, senzitivity a špecificity, rozdiel suchej hmotnosti 0,9 kg a priemerné parametre procedúr pochádzajú z plného textu a <strong>neboli nezávisle overené</strong>. Bibliografia bola overená cez Crossref a PubMed; v citácii konsenzu KDIGO boli <strong>opravené mená troch autorov</strong> – na deviatom až jedenástom mieste sú Daniel E. Weiner, Michael Cheung a Michel Jadoul, nie Matthew R. Weir, James B. Wetmore a Caroline M. Wilkie (tí sú medzi ďalšími z 55 účastníkov). Rozbor rozdielu medzi validáciou podľa procedúr a podľa pacientov, upozornenie na odlíšenie súčasnej asociácie od predikcie a poznámka o výmene akútneho problému za chronický sú <strong>vlastným odborným hodnotením</strong>.</em></p>
 HTML,
 ];
 
