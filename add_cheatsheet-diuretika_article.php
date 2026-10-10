@@ -40,18 +40,18 @@ $articles[] = [
   <tbody>
     <tr><td>Slučkové</td><td>Furosemid, torasemid, bumetanid</td><td>Hrubé vzostupné raménko (NKCC2)</td></tr>
     <tr><td>Tiazidové / tiazidom podobné</td><td>Hydrochlorotiazid, chlortalidón, indapamid, metolazón</td><td>Distálny stočený tubulus (NCC)</td></tr>
-    <tr><td>Antagonisty mineralokortikoidov (MRA)</td><td>Spironolaktón, eplerenón, finerenón*</td><td>Zberný kanálik — aldosterónový receptor</td></tr>
-    <tr><td>Blokátory ENaC</td><td>Amilorid, triamterén</td><td>Zberný kanálik — epitelový Na kanál</td></tr>
+    <tr><td>Antagonisty mineralokortikoidov (MRA)</td><td>Spironolaktón, eplerenón, finerenón*</td><td>Zberný kanálik – aldosterónový receptor</td></tr>
+    <tr><td>Blokátory ENaC</td><td>Amilorid, triamterén</td><td>Zberný kanálik – epitelový Na kanál</td></tr>
     <tr><td>Inhibítory karboanhydrázy</td><td>Acetazolamid</td><td>Proximálny tubulus</td></tr>
     <tr><td>Osmotické</td><td>Manitol</td><td>Celý nefrón (osmóza)</td></tr>
-    <tr><td>Vaptany (akvaretiká)</td><td>Tolvaptan</td><td>Zberný kanálik — V2 receptor (voľná voda)</td></tr>
+    <tr><td>Vaptany (akvaretiká)</td><td>Tolvaptan</td><td>Zberný kanálik – V2 receptor (voľná voda)</td></tr>
   </tbody>
 </table>
 </div>
-<p><em>* Finerenón je nesteroidný MRA — používa sa primárne ako <strong>nefroprotektívum</strong> pri CKD (nie ako diuretikum).</em></p>
+<p><em>* Finerenón je nesteroidný MRA – používa sa primárne ako <strong>nefroprotektívum</strong> pri CKD (nie ako diuretikum).</em></p>
 
-<h2>Dávkové ekvivalencie — slučkové diuretiká</h2>
-<div class="table-responsive" role="region" aria-label="Dávkové ekvivalencie — slučkové diuretiká" tabindex="0">
+<h2>Dávkové ekvivalencie – slučkové diuretiká</h2>
+<div class="table-responsive" role="region" aria-label="Dávkové ekvivalencie – slučkové diuretiká" tabindex="0">
 <table>
   <thead>
     <tr><th scope="col">Liek</th><th scope="col">Ekvivalentná dávka</th><th scope="col">Biologická dostupnosť (p.o.)</th></tr>
@@ -65,8 +65,8 @@ $articles[] = [
 </div>
 <p><strong>Furosemid p.o. : i.v. = 2 : 1</strong> (40 mg p.o. ≈ 20 mg i.v.). Pri kolísavej absorpcii uprednostni torasemid alebo i.v. podanie.</p>
 
-<h2>Dávkové ekvivalencie — tiazidy a MRA</h2>
-<div class="table-responsive" role="region" aria-label="Dávkové ekvivalencie — tiazidy a MRA" tabindex="0">
+<h2>Dávkové ekvivalencie – tiazidy a MRA</h2>
+<div class="table-responsive" role="region" aria-label="Dávkové ekvivalencie – tiazidy a MRA" tabindex="0">
 <table>
   <thead>
     <tr><th scope="col">Liek</th><th scope="col">Približná ekvivalencia / poznámka</th></tr>
@@ -80,13 +80,13 @@ $articles[] = [
 </table>
 </div>
 
-<h2>Diuretická rezistencia — princípy</h2>
+<h2>Diuretická rezistencia – princípy</h2>
 <ul>
-  <li><strong>Prekročiť prah:</strong> slučkové diuretiká majú prahovú dávku — poddávkovanie nezaberie. Pri CKD/srdcovom zlyhaní treba vyššiu jednorazovú dávku.</li>
-  <li><strong>Sekvenčná blokáda nefrónu:</strong> pridaj tiazid (napr. metolazón alebo chlortalidón) k slučkovému pri rezistencii.</li>
+  <li><strong>Prekročiť prah:</strong> slučkové diuretiká majú prahovú dávku – poddávkovanie je neúčinné. Pri CKD/srdcovom zlyhaní treba vyššiu jednorazovú dávku.</li>
+  <li><strong>Sekvenčná blokáda nefrónu:</strong> pridaj tiazid (napr. metolazón alebo chlortalidón) k slučkovému diuretiku pri rezistencii.</li>
   <li><strong>Tiazidy pri nízkom eGFR:</strong> tradične menej účinné pri eGFR &lt; 30 ml/min/1,73 m²; metolazón a chlortalidón si časť účinku zachovávajú, využívajú sa v kombinácii.</li>
   <li><strong>Kontinuálna infúzia</strong> slučkového diuretika môže byť účinnejšia než bolusy pri ťažkom edéme.</li>
-  <li>Pri hypoalbuminémii a nefrotickom syndróme je odpoveď znížená — rieš aj základnú príčinu.</li>
+  <li>Pri hypoalbuminémii a nefrotickom syndróme je odpoveď znížená – rieš aj základnú príčinu.</li>
 </ul>
 
 <h2>Monitorovanie a nežiaduce účinky</h2>
@@ -112,7 +112,7 @@ $articles[] = [
   <li><a href="https://pubmed.ncbi.nlm.nih.gov/29141174/" target="_blank" rel="noopener noreferrer">Ellison DH, Felker GM. Diuretic Treatment in Heart Failure. N Engl J Med 2017;377:1964–75</a></li>
   <li><a href="https://www.escardio.org/Guidelines/Clinical-Practice-Guidelines" target="_blank" rel="noopener noreferrer">ESC — Clinical Practice Guidelines (srdcové zlyhávanie)</a></li>
 </ul>
-<p><em>Dávky over vždy podľa platného SPC. Orientačná pomôcka — nenahrádza klinický úsudok.</em></p>
+<p><em>Dávky over vždy podľa platného SPC. Orientačná pomôcka – nenahrádza klinický úsudok.</em></p>
 HTML,
 ];
 

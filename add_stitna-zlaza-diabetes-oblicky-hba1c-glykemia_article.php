@@ -31,7 +31,7 @@ $articles[] = [
   <figcaption>HbA1c je nepriamy ukazovateľ. Jeho vzťah ku glykémii môžu meniť poruchy štítnej žľazy, CKD, anémia aj liečba ovplyvňujúca obrat erytrocytov. Ilustračné zobrazenie.</figcaption>
 </figure>
 
-<p>Východiskom článku je odborný rozhovor Kanikshy Desaiovej a Shashanka Joshiho v podcaste Medscape pripravenom s American Thyroid Association. Ide o expertnú diskusiu, nie o systematicky vytvorené klinické odporúčanie. Jej praktické posolstvá preto treba konfrontovať s primárnymi štúdiami a aktuálnymi usmerneniami. [1]</p>
+<p>Východiskom článku je odborný rozhovor Kanikshy Desaiovej a Shashanka Joshiho v podcaste Medscape pripravenom s American Thyroid Association. Ide o expertnú diskusiu, nie o systematicky vytvorené klinické odporúčanie. Jej praktické závery preto treba porovnať s primárnymi štúdiami a aktuálnymi usmerneniami. [1]</p>
 
 <h2>Dve ochorenia, viacero mechanizmov</h2>
 
@@ -108,7 +108,7 @@ $articles[] = [
 
 <h2>Mierne zvýšené TSH pri obezite nie je automatickou indikáciou liečby</h2>
 
-<p>Mierna elevácia TSH pri normálnom fT4 môže súvisieť s obezitou, subklinickou hypotyreózou alebo prechodnou zmenou počas zotavovania z iného ochorenia. Zdrojový rozhovor používa v tejto súvislosti výraz „hypertyroxinémia“, ktorý znamená zvýšenú koncentráciu tyroxínu. Pri zvýšenom TSH a normálnom fT4 je presné hovoriť o miernej elevácii TSH alebo hypertyreotropinémii.</p>
+<p>Mierna elevácia TSH pri normálnom fT4 môže súvisieť s obezitou, subklinickou hypotyreózou alebo prechodnou zmenou počas zotavovania z iného ochorenia. Zdrojový rozhovor používa v tejto súvislosti výraz „hypertyroxinémia“, ktorý znamená zvýšenú koncentráciu tyroxínu. Pri zvýšenom TSH a normálnom fT4 je presnejšie hovoriť o miernej elevácii TSH alebo hypertyreotropinémii.</p>
 
 <p>Negativita anti-TPO nevylučuje hypotyreózu a pozitivita sama osebe neznamená potrebu levotyroxínu. Rozhoduje pretrvávanie nálezu, fT4, výška TSH, vek, príznaky a osobitné situácie, napríklad gravidita. Levotyroxín nie je liekom na obezitu ani prostriedkom na zlepšenie HbA1c bez preukázanej indikácie.</p>
 

@@ -41,7 +41,7 @@ $articles[] = [
 
 <h2>Čo priniesla kohorta pacientov s lupusovou nefritídou</h2>
 
-<p>Ioannis E. Michelakis a spoluautori analyzovali 136 pacientov s biopticky potvrdenou lupusovou nefritídou diagnostikovanou v rokoch 1992 až 2021. Pacienti boli sledovaní na spolupracujúcich reumatologickom a nefrologickom pracovisku nemocnice Laiko v Aténach. Medián sledovania bol 121 mesiacov. [2]</p>
+<p>Ioannis E. Michelakis a spoluautori analyzovali 136 pacientov s biopticky potvrdenou lupusovou nefritídou diagnostikovanou v rokoch 1992 až 2021. Pacientov sledovali spolupracujúce reumatologické a nefrologické pracovisko nemocnice Laiko v Aténach. Medián sledovania bol 121 mesiacov. [2]</p>
 
 <p>Proliferatívnu nefritídu vrátane zmiešaných foriem malo 97 pacientov a čistú membranóznu formu 39 pacientov. Zo súboru boli vylúčení pacienti so zlyhaním obličiek vyžadujúcim liečbu nahrádzajúcu funkciu obličiek pri diagnóze alebo krátko po nej. Výsledky preto nemožno bez výhrad preniesť na najťažšie renálne prezentácie.</p>
 
@@ -69,7 +69,7 @@ $articles[] = [
 
 <p>V čase vysadenia bola v kohorte mediánová proteinúria 0,2 g/deň a mediánová odhadovaná glomerulová filtrácia 105 ml/min/1,73 m². Ide o opis vybranej skupiny, nie o univerzálne prahové hodnoty. [2]</p>
 
-<p>Pri čistej membranóznej forme sa glukokortikoidy vysadili skôr než pri proliferatívnej nefritíde, mediánovo po 25 oproti 31 mesiacom. Celkový podiel pacientov, u ktorých sa vysadenie napokon podarilo, bol však podobný. Histologická trieda V preto sama osebe neznamená nízke riziko ani neoprávňuje na vysadenie pri pretrvávajúcej aktivite.</p>
+<p>Pri čistej membranóznej forme sa glukokortikoidy vysadili skôr než pri proliferatívnej nefritíde, mediánovo po 25 oproti 31 mesiacom. Celkový podiel pacientov, u ktorých sa vysadenie napokon podarilo, bol však podobný. Histologická trieda V preto sama osebe neznamená nízke riziko ani neoprávňuje glukokortikoidy vysadiť pri pretrvávajúcej aktivite.</p>
 
 <h2>Remisia nie je iba neprítomnosť príznakov</h2>
 
@@ -77,7 +77,7 @@ $articles[] = [
 
 <p>Aténska štúdia rozlišovala klinickú remisiu DORIS a prísnejšiu kategóriu označenú ako „DORIS complete remission“. Práve prísnejšia kategória v čase vysadenia bola v multivariabilnej analýze spojená s nižšími šancami následného renálneho relapsu: OR 0,20; p = 0,005. Publikovaný abstrakt neuvádza interval spoľahlivosti tohto odhadu. [2]</p>
 
-<p>Tento výsledok nemožno preložiť ako zaručené 80 % zníženie individuálneho rizika. Ide o pomer šancí z observačnej analýzy s krokovým výberom premenných. Označenie použité v štúdii navyše nemožno automaticky zameniť za každú inú definíciu remisie DORIS. Pri klinickom použití treba vždy skontrolovať presné kritériá príslušnej definície.</p>
+<p>Tento výsledok nemožno vykladať ako zaručené 80 % zníženie individuálneho rizika. Ide o pomer šancí z observačnej analýzy s krokovým výberom premenných. Označenie použité v štúdii navyše nemožno automaticky zameniť za každú inú definíciu remisie DORIS. Pri klinickom použití treba vždy skontrolovať presné kritériá príslušnej definície.</p>
 
 <h2>Hydroxychlorochín bol priaznivým prognostickým znakom</h2>
 
