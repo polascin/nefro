@@ -35,13 +35,13 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Malá randomizovaná štúdia naznačuje, že prukaloprid môže krátkodobo zlepšiť niektoré objektívne kognitívne výkony u osôb s remisiou rekurentnej depresie. Pri CKD je kľúčové dávkovanie podľa renálnej funkcie a opatrná interpretácia.',
     'content'      => <<<'HTML'
-<figure><a href="img/prukaloprid-brain-fog-depresia-kognicia-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/prukaloprid-brain-fog-depresia-kognicia-nefrologia.webp" alt="Hlava zahalená hmlou, ktorá sa rozjasňuje tam, kde zdola stúpa jemné svetelné vlákno" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Hmla po odznení depresie zostáva najčastejšie v pozornosti a pamäti — a hľadá sa spôsob, ako ju rozptýliť.</figcaption></figure>
+<figure><a href="img/prukaloprid-brain-fog-depresia-kognicia-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/prukaloprid-brain-fog-depresia-kognicia-nefrologia.webp" alt="Hlava zahalená hmlou, ktorá sa rozjasňuje tam, kde zdola stúpa jemné svetelné vlákno" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Hmla po odznení depresie zostáva najčastejšie v pozornosti a pamäti – a hľadá sa spôsob, ako ju rozptýliť.</figcaption></figure>
 
-<p>Kognitívne ťažkosti patria medzi najčastejšie a zároveň najviac podceňované následky depresie. Pacienti ich opisujú ako „brain fog“, zhoršenú koncentráciu, pomalšie myslenie, slabšiu pracovnú pamäť, ťažšie vybavovanie slov alebo celkovú mentálnu únavu. Dôležité je, že tieto príznaky môžu pretrvávať aj po odznení depresívnej nálady.</p>
+<p>Kognitívne ťažkosti patria medzi najčastejšie a zároveň najviac podceňované následky depresie. Pacienti ich opisujú ako „brain fog“, zhoršenú koncentráciu, pomalšie myslenie, slabšiu pracovnú pamäť, ťažšie vybavovanie slov alebo celkovú mentálnu únavu. Tieto príznaky pritom môžu pretrvávať aj po odznení depresívnej nálady.</p>
 
 <p>Medscape upozornil na malú, dvojito zaslepenú, placebom kontrolovanú proof-of-concept štúdiu, podľa ktorej <strong>prukaloprid</strong>, selektívny agonista serotonínového <strong>5-HT4 receptora</strong>, zlepšil niektoré objektívne kognitívne výkony u osôb s remisiou rekurentnej depresívnej poruchy. Prukaloprid je pritom známy najmä ako prokinetikum schválené na liečbu chronickej zápchy. Nový výskum naznačuje, že jeho biologický účinok nemusí byť obmedzený iba na črevo.</p>
 
-<p>Z nefrologického pohľadu nejde o výzvu začať liečiť „brain fog“ prukalopridom. Ide skôr o zaujímavý signál na rozhraní gastroenterológie, psychiatrie, neurobiológie a nefrologickej farmakoterapie. Pacienti s CKD často trpia zápchou, depresiou, únavou, polyfarmáciou a kognitívnymi ťažkosťami. Práve preto je potrebné rozlišovať medzi schválenou indikáciou, experimentálnym prokognitívnym signálom a bezpečným dávkovaním pri zníženej renálnej funkcii.</p>
+<p>Z nefrologického pohľadu nejde o výzvu začať liečiť „brain fog“ prukalopridom. Ide skôr o zaujímavý signál na rozhraní gastroenterológie, psychiatrie, neurobiológie a nefrologickej farmakoterapie. Pacienti s CKD často trpia zápchou, depresiou, únavou, polyfarmáciou a kognitívnymi ťažkosťami. Preto treba rozlišovať medzi schválenou indikáciou, experimentálnym prokognitívnym signálom a bezpečným dávkovaním pri zníženej renálnej funkcii.</p>
 
 <h2>Prečo práve 5-HT4 receptor?</h2>
 
@@ -69,7 +69,7 @@ $articles[] = [
 
 <p>V porovnaní s placebom prukaloprid zlepšil výkon vo viacerých objektívnych kognitívnych úlohách. Najvýraznejšie signály sa týkali lepšieho okamžitého vybavovania slov v teste sluchovo-verbálneho učenia a rýchlejších reakčných časov v komplexnej úlohe pracovnej pamäti bez straty presnosti.</p>
 
-<p>Štúdia zároveň ukázala lepšiu presnosť pri rozpoznávaní rýchlo prezentovaných výrazov tváre a celkové zlepšenie v kompozitnej analýze neemocionálnych kognitívnych úloh. Dôležité je, že zlepšenie nebolo vysvetlené iba východiskovou náladou alebo subjektívnymi kognitívnymi ťažkosťami. To podporuje hypotézu, že účinok môže byť priamo prokognitívny.</p>
+<p>Štúdia zároveň ukázala lepšiu presnosť pri rozpoznávaní rýchlo prezentovaných výrazov tváre a celkové zlepšenie v kompozitnej analýze neemocionálnych kognitívnych úloh. Zlepšenie pritom nebolo vysvetlené iba východiskovou náladou alebo subjektívnymi kognitívnymi ťažkosťami. To podporuje hypotézu, že účinok môže byť priamo prokognitívny.</p>
 
 <p>Treba však zdôrazniť slovo „môže“. Ide o krátkodobý objektívny testový signál, nie o dôkaz zlepšenia pracovného výkonu, štúdia, kvality života alebo dlhodobej funkčnej obnovy.</p>
 
@@ -125,7 +125,7 @@ $articles[] = [
 
 <h2>Čo z toho vyplýva pre klinickú prax</h2>
 
-<p>Najsilnejším posolstvom článku nie je to, že liek na zápchu má byť predpisovaný na „brain fog“. Skôr ide o dôkaz, že kognitívne príznaky depresie majú biologicky uchopiteľné mechanizmy a môžu byť cieľom budúcej farmakologickej liečby.</p>
+<p>Hlavným posolstvom článku nie je, že liek na zápchu treba predpisovať na „brain fog“. Skôr ide o dôkaz, že kognitívne príznaky depresie majú biologicky uchopiteľné mechanizmy a môžu byť cieľom budúcej farmakologickej liečby.</p>
 
 <p>Pre lekára je praktické najmä toto:</p>
 
