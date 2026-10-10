@@ -63,7 +63,7 @@ $articles[] = [
 <tr><th scope="row">MPAA</th><td>Štandardná možnosť (1B). Vhodná najmä pri snahe vyhnúť sa gonadotoxicite cyklofosfamidu; treba posúdiť toleranciu, adherenciu a reprodukčné plány.</td></tr>
 <tr><th scope="row">Nízkodávkovaný intravenózny cyklofosfamid</th><td>Štandardná možnosť (1B). Režim Euro-Lupus používa 500 mg každé dva týždne, spolu šesť dávok. Intravenózne podanie môže pomôcť pri problémoch s pravidelným užívaním perorálnej liečby.</td></tr>
 <tr><th scope="row">Belimumab + MPAA alebo nízkodávkovaný intravenózny cyklofosfamid</th><td>Možnosť úvodnej trojkombinácie (1B). KDIGO ju osobitne zvažuje pri opakovaných renálnych vzplanutiach alebo vysokom riziku progresie.</td></tr>
-<tr><th scope="row">MPAA + inhibítor kalcineurínu (CNI)</th><td>Možnosť úvodnej trojkombinácie (1B), ak funkcia obličiek nie je závažne znížená. Príťažlivá môže byť pri nefrotickej proteinúrii a relatívne zachovanej eGFR; vyžaduje kontrolu nefrotoxicity a interakcií.</td></tr>
+<tr><th scope="row">MPAA + inhibítor kalcineurínu (CNI)</th><td>Možnosť úvodnej trojkombinácie (1B), ak funkcia obličiek nie je závažne znížená. Výhodná môže byť pri nefrotickej proteinúrii a relatívne zachovanej eGFR; vyžaduje kontrolu nefrotoxicity a interakcií.</td></tr>
 </tbody>
 </table>
 </div>
