@@ -93,7 +93,7 @@ $articles[] = [
 </table>
 </div>
 
-<p>Dasgupta a Zoccali v prehľade v časopise <em>Hypertension</em> upozornili, že cieľ KDIGO je „výnimkou medzi súčasnými veľkými medzinárodnými odporúčaniami pre hypertenziu“ a že jeho mechanické použitie na rutinne merané hodnoty by pacientov s viacerými ochoreniami a krehkých pacientov vystavilo riziku nežiaducich udalostí vrátane pádov a zlomenín. Pomalé prijatie cieľa preto nie je len prejavom zotrvačnosti — odráža aj odbornú neistotu, ktorá bola opísaná krátko po zverejnení odporúčania.</p>
+<p>Dasgupta a Zoccali v prehľade v časopise <em>Hypertension</em> upozornili, že cieľ KDIGO je „výnimkou medzi súčasnými veľkými medzinárodnými odporúčaniami pre hypertenziu“ a že jeho mechanické použitie na rutinne merané hodnoty by pacientov s viacerými ochoreniami a krehkých pacientov vystavilo riziku nežiaducich udalostí vrátane pádov a zlomenín. Pomalé prijatie cieľa preto nie je len prejavom zotrvačnosti – odráža aj odbornú neistotu, ktorá bola opísaná krátko po zverejnení odporúčania.</p>
 
 <h2>Ako bola skúmaná reálna klinická prax</h2>
 
@@ -277,7 +277,7 @@ $articles[] = [
 
 <h3>Výrazná selekcia longitudinálnej kohorty</h3>
 
-<p>Zo 83 249 potenciálne vhodných pacientov zostalo po uplatnení všetkých kritérií 18 996, teda necelá štvrtina. Hlavnými dôvodmi boli nedostatočný počet meraní, predchádzajúce kardiovaskulárne ochorenie a chýbajúce údaje. Takáto selekcia obmedzuje prenositeľnosť výsledkov na všetkých pacientov s CKD — najmä vylúčenie pacientov s predchádzajúcim kardiovaskulárnym ochorením, teda práve tých s najvyšším absolútnym rizikom.</p>
+<p>Zo 83 249 potenciálne vhodných pacientov zostalo po uplatnení všetkých kritérií 18 996, teda necelá štvrtina. Hlavnými dôvodmi boli nedostatočný počet meraní, predchádzajúce kardiovaskulárne ochorenie a chýbajúce údaje. Takáto selekcia obmedzuje prenositeľnosť výsledkov na všetkých pacientov s CKD – najmä vylúčenie pacientov s predchádzajúcim kardiovaskulárnym ochorením, teda práve tých s najvyšším absolútnym rizikom.</p>
 
 <h3>Chýbali pacienti vo veku 80 rokov a viac</h3>
 
@@ -336,7 +336,7 @@ $articles[] = [
 </table>
 </div>
 
-<p>Tvrdenie, že intenzívna liečba v podskupine s CKD znížila kardiovaskulárne riziko, teda nie je presné: zložený kardiovaskulárny výsledok významnosť <strong>nedosiahol</strong>. Významné bolo iba zníženie celkovej mortality. Zároveň sa nepreukázalo modifikovanie účinku prítomnosťou CKD (hodnoty p pre interakciu ≥ 0,30), takže prínos zistený v celom súbore sa na pacientov s CKD pravdepodobne vzťahuje — ale samotná podskupina na jeho preukázanie nemala dostatočnú silu.</p>
+<p>Tvrdenie, že intenzívna liečba v podskupine s CKD znížila kardiovaskulárne riziko, teda nie je presné: zložený kardiovaskulárny výsledok významnosť <strong>nedosiahol</strong>. Významné bolo iba zníženie celkovej mortality. Zároveň sa nepreukázalo modifikovanie účinku prítomnosťou CKD (hodnoty p pre interakciu ≥ 0,30), takže prínos zistený v celom súbore sa na pacientov s CKD pravdepodobne vzťahuje – ale samotná podskupina na jeho preukázanie nemala dostatočnú silu.</p>
 
 <p>Presvedčivý nefroprotektívny účinok sa nepreukázal. Po úvodných šiestich mesiacoch mala intenzívne liečená skupina dokonca mierne rýchlejší pokles eGFR (−0,47 oproti −0,32 ml/min/1,73 m² za rok; p &lt; 0,03). Akútny hemodynamický pokles eGFR po začatí intenzívnej liečby pritom nemožno automaticky stotožniť so štrukturálnym poškodením obličiek.</p>
 

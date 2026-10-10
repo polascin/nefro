@@ -29,7 +29,7 @@ $articles[] = [
 
 <p>Hlavný výsledok je dvojaký. Po štatistickej úprave <strong>sa päťročné prežívanie nelíšilo</strong> podľa toho, či pacient začal hemodialýzou (HD) alebo peritoneálnou dialýzou (PD). Prechod z peritoneálnej dialýzy na hemodialýzu však bol nezávisle spojený s vyššou mortalitou: pomer hazardu 1,46 (95 % interval spoľahlivosti 1,02 – 2,08; P = 0,038).</p>
 
-<p>Autori samotný prechod nepovažujú za priamu príčinu. Najpravdepodobnejšie ide o marker klinického zhoršenia, technického zlyhania metódy alebo straty vhodnosti pre peritoneálnu dialýzu. Súčasne však výslovne uvádzajú, že vlastný proces prechodu — hospitalizácia, zavedenie cievneho prístupu, hemodynamická záťaž, zápalová reakcia a nestabilita u krehkého pacienta — môže k horšiemu výsledku prispieť. Rozlíšiť, či je prechod iba znakom zraniteľnosti, sprostredkovateľom rizika, alebo obojím, observačná štúdia neumožňuje.</p>
+<p>Autori samotný prechod nepovažujú za priamu príčinu. Najpravdepodobnejšie ide o marker klinického zhoršenia, technického zlyhania metódy alebo straty vhodnosti pre peritoneálnu dialýzu. Súčasne však výslovne uvádzajú, že vlastný proces prechodu – hospitalizácia, zavedenie cievneho prístupu, hemodynamická záťaž, zápalová reakcia a nestabilita u krehkého pacienta – môže k horšiemu výsledku prispieť. Rozlíšiť, či je prechod iba znakom zraniteľnosti, sprostredkovateľom rizika, alebo obojím, observačná štúdia neumožňuje.</p>
 
 <h2>Voľba modality u veľmi starých pacientov</h2>
 
@@ -61,7 +61,7 @@ $articles[] = [
 
 <p>Toto je najdôležitejšia metodologická vlastnosť práce a odlišuje ju od väčšiny starších porovnaní. Prechod z peritoneálnej dialýzy na hemodialýzu <strong>nebol</strong> riešený ako tretia vstupná skupina ani ako konkurenčná udalosť, ale bol modelovaný ako <strong>časovo závislá premenná</strong> v Coxovom modeli. Pacient tak prispieval osobočasom do stavu „peritoneálna dialýza“ až do dňa prechodu a od toho dňa do stavu „hemodialýza“.</p>
 
-<p>Práve tento postup bráni skresleniu takzvaným nesmrteľným časom (<em>immortal time bias</em>). Ak by sa pacienti, ktorí niekedy prešli na hemodialýzu, jednoducho porovnali s tými, ktorí neprešli, čas pred prechodom by sa nesprávne priradil hemodialýze — a keďže pacient musel dovtedy prežiť, výsledok by bol systematicky skreslený v jej prospech.</p>
+<p>Práve tento postup bráni skresleniu takzvaným nesmrteľným časom (<em>immortal time bias</em>). Ak by sa pacienti, ktorí niekedy prešli na hemodialýzu, jednoducho porovnali s tými, ktorí neprešli, čas pred prechodom by sa nesprávne priradil hemodialýze – a keďže pacient musel dovtedy prežiť, výsledok by bol systematicky skreslený v jej prospech.</p>
 
 <p>Na zníženie vstupných rozdielov medzi skupinami sa použilo <strong>párovanie podľa propenzitného skóre v pomere 1 : 3</strong>, do ktorého vstupovali vek, pohlavie, komorbidity, funkčný stav, obdobie začatia dialýzy, zdravotný región bydliska a sociálne premenné. Vyvážiť sa podarilo dobre (štandardizované rozdiely priemerov pod 0,1). Do párovanej analýzy vstúpilo <strong>637 pacientov na hemodialýze a 213 na peritoneálnej dialýze</strong>. Viacrozmerný model bol následne upravený o vek, pohlavie, obdobie začatia dialýzy, spôsob prezentácie zlyhania obličiek, funkčný stav, diabetes a kardiovaskulárnu komorbiditu.</p>
 
@@ -69,7 +69,7 @@ $articles[] = [
 
 <h2>Prečo sa výsledok mení podľa použitej metódy</h2>
 
-<p>Táto štúdia je názornou ukážkou toho, ako zvolená analýza mení záver:</p>
+<p>Na tejto štúdii je dobre vidieť, ako zvolená analýza mení záver:</p>
 
 <div class="table-responsive" role="region" aria-label="Porovnanie výsledkov podľa použitej analytickej metódy" tabindex="0">
 <table>
@@ -163,7 +163,7 @@ $articles[] = [
 
 <p>Dolná hranica intervalu spoľahlivosti pre prechod z peritoneálnej dialýzy na hemodialýzu je 1,02. Výsledok je teda štatisticky významný len tesne a bodový odhad 1,46 treba brať ako stred pomerne širokého rozpätia, nie ako presné číslo.</p>
 
-<p>Vyšší vek pri začatí náhrady funkcie obličiek bol spojený s vyššou mortalitou (pomer hazardu 1,06 na každý ďalší rok). Tento údaj nemožno jednoducho previesť na individuálnu prognózu — ide o výstup štatistického modelu, ktorý predpokladá rovnaký relatívny účinok naprieč celým vekovým rozsahom.</p>
+<p>Vyšší vek pri začatí náhrady funkcie obličiek bol spojený s vyššou mortalitou (pomer hazardu 1,06 na každý ďalší rok). Tento údaj nemožno jednoducho previesť na individuálnu prognózu – ide o výstup štatistického modelu, ktorý predpokladá rovnaký relatívny účinok naprieč celým vekovým rozsahom.</p>
 
 <p>Pacienti, ktorí začali liečbu v rokoch 2000 až 2007, mali vyššie riziko úmrtia než tí liečení v rokoch 2016 až 2022. Môže ísť o dôsledok zlepšenia dialyzačnej starostlivosti, lepšej kontroly komorbidít a všeobecného vývoja medicíny, ale aj o zmenu vo výbere pacientov, v registrácii údajov a v organizácii zdravotnej starostlivosti.</p>
 
@@ -213,7 +213,7 @@ $articles[] = [
 
 <h2>Ako robustný je výsledok</h2>
 
-<p>Autori doplnili analýzu citlivosti metódou E-hodnoty. Tá udáva, akú silnú väzbu by musel mať nezmeraný zmätočný faktor súčasne s expozíciou aj s výsledkom, aby pozorovanú asociáciu úplne vysvetlil.</p>
+<p>Autori doplnili analýzu citlivosti metódou E-hodnoty. Tá udáva, akú silnú väzbu by musel mať nezmeraný mätúci faktor súčasne s expozíciou aj s výsledkom, aby pozorovanú asociáciu úplne vysvetlil.</p>
 
 <ul>
   <li>Pre porovnanie peritoneálnej dialýzy bez prechodu s výlučnou hemodialýzou by bol potrebný faktor s relatívnym rizikom najmenej <strong>1,72</strong>.</li>
@@ -226,7 +226,7 @@ $articles[] = [
 
 <h3>Observačný dizajn a nezachytené premenné</h3>
 
-<p>Pacienti neboli randomizovaní ani k úvodnej modalite, ani k prechodu. Register nezachytáva krehkosť, kognitívny a nutričný stav ani primeranosť domácej podpory — teda práve tie faktory, ktoré môžu ovplyvniť voľbu modality aj výsledok. Reziduálne skreslenie preto nemožno vylúčiť.</p>
+<p>Pacienti neboli randomizovaní ani k úvodnej modalite, ani k prechodu. Register nezachytáva krehkosť, kognitívny a nutričný stav ani primeranosť domácej podpory – teda práve tie faktory, ktoré môžu ovplyvniť voľbu modality aj výsledok. Reziduálne skreslenie preto nemožno vylúčiť.</p>
 
 <h3>Malý počet pacientov po prechode</h3>
 
@@ -238,7 +238,7 @@ $articles[] = [
 
 <h3>Cenzorovanie a nezohľadnené konkurenčné udalosti</h3>
 
-<p>Transplantácia obličky bola cenzorujúcou udalosťou. V tejto vekovej skupine bol počet transplantácií očakávane nízky (na čakacej listine bolo definitívne vylúčených približne 84 % pacientov). Iné klinicky významné konkurenčné udalosti — ukončenie dialýzy alebo prechod na konzervatívny postup — sa však explicitne nemodelovali, čo môže odhady prežívania ovplyvniť.</p>
+<p>Transplantácia obličky bola cenzorujúcou udalosťou. V tejto vekovej skupine bol počet transplantácií očakávane nízky (na čakacej listine bolo definitívne vylúčených približne 84 % pacientov). Iné klinicky významné konkurenčné udalosti – ukončenie dialýzy alebo prechod na konzervatívny postup – sa však explicitne nemodelovali, čo môže odhady prežívania ovplyvniť.</p>
 
 <h3>Vylúčenie skorých prechodov z hemodialýzy na peritoneálnu dialýzu</h3>
 
@@ -267,11 +267,11 @@ $articles[] = [
 <p>Štúdia nepreukázala:</p>
 
 <ul>
-  <li>že hemodialýza po prechode mortalitu <em>spôsobuje</em> — kauzálny podiel prechodu a podiel zhoršenia stavu, ktoré k nemu viedlo, nemožno oddeliť;</li>
-  <li>že obe modality poskytujú rovnakú kvalitu života alebo symptomatickú záťaž — tieto ukazovatele sa nehodnotili;</li>
+  <li>že hemodialýza po prechode mortalitu <em>spôsobuje</em> – kauzálny podiel prechodu a podiel zhoršenia stavu, ktoré k nemu viedlo, nemožno oddeliť;</li>
+  <li>že obe modality poskytujú rovnakú kvalitu života alebo symptomatickú záťaž – tieto ukazovatele sa nehodnotili;</li>
   <li>že jedna modalita je optimálna pre všetkých pacientov vo veku 80 rokov a viac;</li>
   <li>že prechod na hemodialýzu treba odkladať aj pri zlyhaní peritoneálnej dialýzy;</li>
-  <li>čokoľvek o porovnaní dialýzy s konzervatívnym postupom — register zahŕňa iba pacientov, ktorí dialýzu začali;</li>
+  <li>čokoľvek o porovnaní dialýzy s konzervatívnym postupom – register zahŕňa iba pacientov, ktorí dialýzu začali;</li>
   <li>že vek sám osebe je dostatočným dôvodom na výber alebo odmietnutie určitej modality.</li>
 </ul>
 

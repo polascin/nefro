@@ -31,7 +31,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Prospektívna štúdia v Clinical Kidney Journal naznačuje, že dialyzačný dysekvilibračný syndróm môže byť častejší a že kľúčovým signálom je intradialyzačná hypertenzia.',
     'content'      => <<<'HTML'
-<figure><a href="img/dialyzacny-dysekvilibracny-syndrom-zaciatok-hemodialyzy.webp" rel="noopener noreferrer" target="_blank"><img src="img/dialyzacny-dysekvilibracny-syndrom-zaciatok-hemodialyzy.webp" alt="Cieva s rýchlo vyčistenými časticami a vedľa nej opuchnuté mozgové tkanivo, v ktorom častice zostali husté" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Príliš rýchle očistenie krvi vytvorí rozdiel medzi krvou a mozgom — a práve ten vedie k opuchu.</figcaption></figure>
+<figure><a href="img/dialyzacny-dysekvilibracny-syndrom-zaciatok-hemodialyzy.webp" rel="noopener noreferrer" target="_blank"><img src="img/dialyzacny-dysekvilibracny-syndrom-zaciatok-hemodialyzy.webp" alt="Cieva s rýchlo vyčistenými časticami a vedľa nej opuchnuté mozgové tkanivo, v ktorom častice zostali husté" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Príliš rýchle očistenie krvi vytvorí rozdiel medzi krvou a mozgom – a práve ten vedie k opuchu.</figcaption></figure>
 
 <p>Dialyzačný dysekvilibračný syndróm je neurologická komplikácia, ktorá sa môže objaviť počas iniciácie hemodialýzy alebo krátko po nej. Tradične sa vysvetľoval najmä rýchlym poklesom urey v krvi pri pomalšej úprave osmotických pomerov v centrálnom nervovom systéme. Novšia práca publikovaná v <em>Clinical Kidney Journal</em> však naznačuje, že tento pohľad môže byť príliš zjednodušený.</p>
 
@@ -60,7 +60,7 @@ $articles[] = [
 
 <p>Autori si položili praktickú otázku: ako často sa DDS vyskytuje u dospelých pacientov začínajúcich hemodialýzu a ktoré faktory sú s jeho vznikom spojené?</p>
 
-<p>Doterajšie údaje u dospelých boli obmedzené. Mnohé odporúčania pre prevenciu DDS sú založené na patofyziologických úvahách, kazuistikách, pediatrických skúsenostiach alebo starších prácach. Prospektívne údaje z reálnej dospelej populácie preto majú osobitnú klinickú hodnotu, hoci pri malej monocentrickej štúdii musia byť interpretované opatrne.</p>
+<p>Doterajšie údaje u dospelých boli obmedzené. Mnohé odporúčania pre prevenciu DDS sú založené na patofyziologických úvahách, kazuistikách, pediatrických skúsenostiach alebo starších prácach. Prospektívne údaje z reálnej dospelej populácie preto majú osobitnú klinickú hodnotu, hoci pri malej monocentrickej štúdii ich treba interpretovať opatrne.</p>
 
 <h2>Dizajn a metodika</h2>
 
@@ -74,7 +74,7 @@ $articles[] = [
 
 <p>Zo 48 pacientov bolo <strong>70,8 % mužov</strong> a medián veku bol <strong>67 rokov</strong>. DDS sa vyskytol u <strong>22,9 % pacientov</strong>. Dvaja pacienti mali viac než jednu epizódu.</p>
 
-<p>Tento údaj je klinicky dôležitý. Ak sa DDS systematicky vyhľadáva, nemusí ísť o raritnú komplikáciu. Mierne formy môžu byť pri začiatku dialýzy pomerne časté. Neznamená to, že každý pacient má vysoké riziko ťažkého neurologického poškodenia, ale znamená to, že lekár a dialyzačný tím by mali pri prvých procedúrach cielene sledovať neurologické príznaky.</p>
+<p>Ak sa DDS systematicky vyhľadáva, nemusí ísť o raritnú komplikáciu. Mierne formy môžu byť pri začiatku dialýzy pomerne časté. Neznamená to, že každý pacient má vysoké riziko ťažkého neurologického poškodenia, ale znamená to, že lekár a dialyzačný tím by mali pri prvých procedúrach cielene sledovať neurologické príznaky.</p>
 
 <h2>Rizikové faktory v univariačnej analýze</h2>
 
@@ -91,9 +91,9 @@ $articles[] = [
 
 <h2>Urea nebola prediktorom DDS</h2>
 
-<p>Jedným z najzaujímavejších výsledkov je, že <strong>predialyzačná koncentrácia urey nebola spojená so vznikom DDS</strong>. Hodnota P bola 0,15, teda bez štatistickej významnosti.</p>
+<p>Pozoruhodné je, že <strong>predialyzačná koncentrácia urey nebola spojená so vznikom DDS</strong>. Hodnota P bola 0,15, teda bez štatistickej významnosti.</p>
 
-<p>Tento nález je dôležitý, pretože klasická koncepcia DDS často stavia ureu do centra patofyziológie. Rýchly pokles urey počas dialýzy môže viesť k osmotickému gradientu medzi krvou a mozgom, s presunom vody do mozgového tkaniva. Táto teória však zrejme nevysvetľuje všetky prípady DDS.</p>
+<p>Klasická koncepcia DDS pritom často stavia ureu do centra patofyziológie. Rýchly pokles urey počas dialýzy môže viesť k osmotickému gradientu medzi krvou a mozgom, s presunom vody do mozgového tkaniva. Táto teória však zrejme nevysvetľuje všetky prípady DDS.</p>
 
 <p>Štúdia preto podporuje širší pohľad: DDS môže byť výsledkom kombinácie osmotických, acidobázických, hemodynamických a neurovaskulárnych mechanizmov.</p>
 
@@ -103,7 +103,7 @@ $articles[] = [
 
 <p>Intradialyzačná hypertenzia sa vyskytla v <strong>78,6 % dialyzačných sedení s DDS</strong> oproti <strong>40,0 % sedení bez DDS</strong>.</p>
 
-<p>Tento výsledok má praktické dôsledky. V bežnej dialyzačnej praxi sa riziko neurologických komplikácií pri začiatku dialýzy často spája hlavne s rýchlou dialyzačnou účinnosťou a vysokou uremickou záťažou. Štúdia však upozorňuje, že vzostup krvného tlaku počas výkonu môže byť významným varovným signálom alebo súčasťou patofyziologického procesu.</p>
+<p>V bežnej dialyzačnej praxi sa riziko neurologických komplikácií pri začiatku dialýzy často spája hlavne s rýchlou dialyzačnou účinnosťou a vysokou uremickou záťažou. Štúdia však upozorňuje, že vzostup krvného tlaku počas výkonu môže byť významným varovným signálom alebo súčasťou patofyziologického procesu.</p>
 
 <h2>Možný patofyziologický model</h2>
 
@@ -118,7 +118,7 @@ $articles[] = [
   <li>možné narušenie hematoencefalickej bariéry pri uremickom prostredí.</li>
 </ul>
 
-<p>Nižšie predialyzačné pH u pacientov s DDS je zaujímavé najmä preto, že rýchle korekcie acidózy môžu ovplyvňovať mozgové pH, ventiláciu, cievny tonus a distribúciu vody medzi kompartmentmi. Vyšší chlorid môže byť markerom špecifickej acidobázickej situácie alebo celkového stavu vnútorného prostredia.</p>
+<p>Nižšie predialyzačné pH u pacientov s DDS stojí za pozornosť, pretože rýchle korekcie acidózy môžu ovplyvňovať mozgové pH, ventiláciu, cievny tonus a distribúciu vody medzi kompartmentmi. Vyšší chlorid môže byť markerom špecifickej acidobázickej situácie alebo celkového stavu vnútorného prostredia.</p>
 
 <p>Prevodnenie môže prispievať k hypertenzii, poruche autoregulácie a vyššiemu riziku cerebrálneho edému. Centrálne pôsobiace lieky môžu znižovať prah pre neurologické príznaky, zhoršovať vigilitu alebo maskovať skoré prejavy DDS.</p>
 

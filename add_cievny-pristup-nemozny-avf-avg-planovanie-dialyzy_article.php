@@ -23,7 +23,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Zo 647 pacientov posúdených tímom pre cievne prístupy dostalo 40 (6,2 %) negatívne odporúčanie. Deväť z desiatich začalo hemodialýzu neplánovane a 43 % pacientov počas sledovania zomrelo.',
     'content'      => <<<'HTML'
-<figure><a href="img/cievny-pristup-nemozny-avf-avg-planovanie-dialyzy.webp" rel="noopener noreferrer" target="_blank"><img src="img/cievny-pristup-nemozny-avf-avg-planovanie-dialyzy.webp" alt="Vyčerpaná sieť tenkých ciev s tupo ukončenými vetvami, chirurgický nástroj sa nezapája" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Vyjadrenie, že arteriovenózny prístup už nie je možný, nie je len technickým záverom — nesie prognostickú informáciu.</figcaption></figure>
+<figure><a href="img/cievny-pristup-nemozny-avf-avg-planovanie-dialyzy.webp" rel="noopener noreferrer" target="_blank"><img src="img/cievny-pristup-nemozny-avf-avg-planovanie-dialyzy.webp" alt="Vyčerpaná sieť tenkých ciev s tupo ukončenými vetvami, chirurgický nástroj sa nezapája" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Vyjadrenie, že arteriovenózny prístup už nie je možný, nie je len technickým záverom – nesie prognostickú informáciu.</figcaption></figure>
 
 <p>Arteriovenózna fistula (AVF) a arteriovenózny graft (AVG) sú preferovanými formami cievneho prístupu pri hemodialýze. Nie u každého pacienta s pokročilou chronickou chorobou obličiek (CKD) ich však možno vytvoriť. Dôvodom býva vyčerpanie vhodného cievneho riečiska, centrálna venózna stenóza alebo oklúzia, opakované zlyhanie predchádzajúcich prístupov, závažné kardiovaskulárne ochorenie, vysoké operačné riziko alebo celkový stav pacienta.</p>
 
@@ -48,7 +48,7 @@ $articles[] = [
     <tr>
       <th scope="row">Posúdení pacienti celkovo</th>
       <td>647</td>
-      <td>—</td>
+      <td>–</td>
     </tr>
     <tr>
       <th scope="row">Negatívne chirurgické odporúčanie</th>
@@ -81,13 +81,13 @@ $articles[] = [
 
 <p>Analýza bola opisná. Štúdia preto neposkytuje dôkaz o rozdieloch medzi liečebnými stratégiami ani o účinnosti konkrétnej intervencie.</p>
 
-<p>Podiel 6,2 % treba čítať v správnom kontexte: menovateľom sú pacienti <em>odoslaní na posúdenie tímom pre cievne prístupy</em>, nie všetci pacienti s pokročilou CKD. Nemožnosť vytvoriť arteriovenózny prístup je teda v tejto vybranej populácii nie častým, ale ani zanedbateľným javom.</p>
+<p>Podiel 6,2 % treba čítať v správnom kontexte: menovateľom sú pacienti <em>odoslaní na posúdenie tímom pre cievne prístupy</em>, nie všetci pacienti s pokročilou CKD. Nemožnosť vytvoriť arteriovenózny prístup teda v tejto vybranej populácii nie je častým, ale ani zanedbateľným javom.</p>
 
 <h2>Pacienti pred začatím dialýzy</h2>
 
 <p>Z 20 pacientov s pokročilou CKD, ktorí v čase posúdenia ešte neboli liečení náhradou funkcie obličiek, ju neskôr začalo <strong>11 (55 %)</strong>: desať hemodialýzou a jeden peritoneálnou dialýzou.</p>
 
-<p>Rozhodujúci je však spôsob, akým sa liečba začala. U <strong>deviatich z desiatich pacientov (90 %)</strong>, ktorí ako prvú modalitu začali hemodialýzu, išlo o <strong>neplánované začatie</strong> — najčastejšie pre akútny kardiorenálny alebo koronárny syndróm.</p>
+<p>Rozhodujúci je však spôsob, akým sa liečba začala. U <strong>deviatich z desiatich pacientov (90 %)</strong>, ktorí ako prvú modalitu začali hemodialýzu, išlo o <strong>neplánované začatie</strong> – najčastejšie pre akútny kardiorenálny alebo koronárny syndróm.</p>
 
 <p>Klinický dosah je zrejmý. Pacient bez vytvoreného arteriovenózneho prístupu, ktorý náhle potrebuje hemodialýzu, je spravidla odkázaný na dočasný alebo tunelizovaný centrálny venózny katéter. Liečba sa tak začína počas urgentnej hospitalizácie, bez dostatočného času na voľbu modality, poučenie pacienta a prípravu bezpečného prístupu.</p>
 
@@ -148,7 +148,7 @@ $articles[] = [
 
 <h2>Význam peritoneálnej dialýzy</h2>
 
-<p>U pacienta bez možnosti arteriovenózneho prístupu treba vždy posúdiť, či je vhodnou alternatívou peritoneálna dialýza. V opísanom súbore ju spomedzi jedenástich pacientov začínajúcich náhradu funkcie obličiek zvolil iba jeden — čo naznačuje, že jej potenciál v tejto situácii nemusí byť plne využitý.</p>
+<p>U pacienta bez možnosti arteriovenózneho prístupu treba vždy posúdiť, či je vhodnou alternatívou peritoneálna dialýza. V opísanom súbore ju spomedzi jedenástich pacientov začínajúcich náhradu funkcie obličiek zvolil iba jeden, čo naznačuje, že jej potenciál v tejto situácii nemusí byť plne využitý.</p>
 
 <p>Automaticky možná však nie je u každého. Zohľadniť treba predchádzajúce brušné operácie a zrasty, funkciu peritonea, hernie alebo opakované infekcie, schopnosť pacienta liečbu vykonávať, kognitívny a funkčný stav, podporu rodiny alebo dostupnosť asistovanej liečby, riziko nedostatočnej ultrafiltrácie a preferencie pacienta.</p>
 
@@ -156,7 +156,7 @@ $articles[] = [
 
 <h2>Potreba skoršieho plánovania</h2>
 
-<p>Výsledky podporujú včasné odoslanie rizikových pacientov na komplexné posúdenie cievneho prístupu. Samotné vytvorenie prístupu však nie je jediným cieľom — plánovať treba celý ďalší priebeh liečby. Autori vo svojom závere zdôrazňujú práve tri veci: <strong>skoršiu identifikáciu</strong> týchto pacientov, <strong>štruktúrované posúdenie modality</strong> a <strong>včasné začlenenie paliatívnej starostlivosti</strong>.</p>
+<p>Výsledky podporujú včasné odoslanie rizikových pacientov na komplexné posúdenie cievneho prístupu. Samotné vytvorenie prístupu však nie je jediným cieľom – plánovať treba celý ďalší priebeh liečby. Autori vo svojom závere zdôrazňujú práve tri veci: <strong>skoršiu identifikáciu</strong> týchto pacientov, <strong>štruktúrované posúdenie modality</strong> a <strong>včasné začlenenie paliatívnej starostlivosti</strong>.</p>
 
 <p>Včas je vhodné prediskutovať:</p>
 
@@ -180,7 +180,7 @@ $articles[] = [
 
 <h3>Malý súbor</h3>
 
-<p>Hlavným obmedzením je počet pacientov: celý analyzovaný súbor tvorilo 40 osôb, po 20 v každej podskupine. Percentuálne údaje preto pôsobia výrazne, ale ich odhad je štatisticky neistý — jeden či dva prípady navyše by výsledné podiely podstatne zmenili.</p>
+<p>Hlavným obmedzením je počet pacientov: celý analyzovaný súbor tvorilo 40 osôb, po 20 v každej podskupine. Percentuálne údaje preto pôsobia výrazne, ale ich odhad je štatisticky neistý – jeden či dva prípady navyše by výsledné podiely podstatne zmenili.</p>
 
 <h3>Chýbajúca kontrolná skupina</h3>
 
@@ -200,7 +200,7 @@ $articles[] = [
 
 <h3>Neplánované začatie hemodialýzy nemá jednoduchú príčinu</h3>
 
-<p>Skutočnosť, že deväť z desiatich pacientov začalo hemodialýzu neplánovane, je klinicky významná, nemožno z nej však vyvodiť, že urgentné začatie spôsobilo negatívne chirurgické odporúčanie. Pravdepodobnejšie je, že negatívne odporúčanie aj neplánované začatie dialýzy sú prejavmi tej istej pokročilej choroby — akútnych kardiorenálnych a koronárnych syndrómov, náhleho zhoršenia CKD, infekcie, objemového preťaženia a celkovej krehkosti.</p>
+<p>Skutočnosť, že deväť z desiatich pacientov začalo hemodialýzu neplánovane, je klinicky významná, nemožno z nej však vyvodiť, že urgentné začatie spôsobilo negatívne chirurgické odporúčanie. Pravdepodobnejšie je, že negatívne odporúčanie aj neplánované začatie dialýzy sú prejavmi tej istej pokročilej choroby – akútnych kardiorenálnych a koronárnych syndrómov, náhleho zhoršenia CKD, infekcie, objemového preťaženia a celkovej krehkosti.</p>
 
 <h2>Praktický postup pri pacientovi bez možnosti arteriovenózneho prístupu</h2>
 
@@ -231,7 +231,7 @@ $articles[] = [
   <li>celková mortalita dosiahla 42,5 %.</li>
 </ul>
 
-<p>Štúdia nepreukázala, že absencia arteriovenózneho prístupu priamo spôsobuje vyššiu mortalitu. Ukazuje, že negatívne chirurgické odporúčanie identifikuje skupinu pacientov s pokročilým cievnym ochorením, vysokou komorbiditou a nepriaznivou prognózou — a že dôsledky sa líšia podľa toho, či pacient náhradu funkcie obličiek už dostáva.</p>
+<p>Štúdia nepreukázala, že absencia arteriovenózneho prístupu priamo spôsobuje vyššiu mortalitu. Ukazuje, že negatívne chirurgické odporúčanie identifikuje skupinu pacientov s pokročilým cievnym ochorením, vysokou komorbiditou a nepriaznivou prognózou – a že dôsledky sa líšia podľa toho, či pacient náhradu funkcie obličiek už dostáva.</p>
 
 <p>Praktickým záverom je skoré a realistické plánovanie všetkých možností vrátane peritoneálnej dialýzy a konzervatívnej liečby. Pri pacientoch s vysokou krehkosťou a závažnými komorbiditami má byť paliatívna starostlivosť integrovaná včas, nie až po zlyhaní poslednej možnosti cievneho prístupu.</p>
 

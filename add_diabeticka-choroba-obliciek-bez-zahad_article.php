@@ -31,8 +31,8 @@ $articles[] = [
     'content'      => <<<'NEFRO_HTML'
 <p class="article-dek"><em>Čo sa deje v obličkách pri cukrovke, ako čítať kreatinín a bielkovinu v moči a prečo rozhoduje včasný záchyt</em></p>
 <p>Cukrovka neznamená iba zvýšenú hladinu cukru – konkrétne glukózy – v krvi. Ak trvá roky, môže ovplyvniť cievy, nervy, oči, srdce aj obličky. Práve obličky patria medzi orgány, ktoré dlho „nebolia“ a nehlásia problém viditeľnými príznakmi. Preto sa diabetická choroba obličiek často rozvíja potichu.</p>
-<p>Dobrá správa je, že dnes vieme zachytiť DKD skôr a efektívnejšie ako predtým, čo môže pacientom dodať pocit istoty a nádeje, že je ich zdravie pod kontrolou.</p>
-<p>Diabetická choroba obličiek, skrátene DKD, je poškodenie obličiek spôsobené cukrovkou. Aby ste ju mohli čo najlepšie ochrániť, je dôležité udržiavať hladinu cukru a krvný tlak v odporúčaných hodnotách, pravidelne kontrolovať moč a krv a dodržiavať odporúčania lekára ohľadom liečby a životného štýlu.</p>
+<p>Diabetická choroba obličiek, skrátene DKD, je poškodenie obličiek spôsobené cukrovkou. Dobrá správa je, že dnes ju vieme zachytiť skôr a účinnejšie ako kedysi.</p>
+<p>Obličky najlepšie ochránite, ak udržiavate hladinu cukru a krvný tlak v odporúčaných hodnotách, pravidelne si dávate kontrolovať moč a krv a dodržiavate odporúčania lekára týkajúce sa liečby a životného štýlu.</p>
 <figure class="article-figure">
   <a href="img/dkd-01.png" target="_blank" rel="noopener noreferrer">
     <img src="img/dkd-01.png" alt="Ilustrácia: diabetická choroba obličiek sa vyvíja potichu" loading="lazy" decoding="async">
@@ -61,8 +61,8 @@ $articles[] = [
 </figure>
 <h2>Kreatinín: užitočný, ale nie dokonalý ukazovateľ</h2>
 <p>Kreatinín je látka, ktorá vzniká vo svaloch a vylučuje sa obličkami. V krvi ho meriame preto, lebo jeho zvýšenie môže signalizovať zhoršenú funkciu obličiek.</p>
-<p>Problém je v tom, že samotný kreatinín niekedy klame svojou „normálnosťou“. Okrem toho môžu byť hodnoty kreatinínu a eGFR ovplyvnené faktormi ako vek, svalová hmota alebo užívanie doplnkov, čo je dôležité pri interpretácii výsledkov.</p>
-<p>Preto sa dnes nepozeráme iba na kreatinín samotný. Z kreatinínu sa vypočítava odhadovaná glomerulová filtrácia, známa pod skratkou eGFR. Táto formulácia lepšie vyjadruje, ako obličky krv filtrujú.</p>
+<p>Problém je v tom, že samotný kreatinín niekedy klame svojou „normálnosťou“. Hodnoty kreatinínu a eGFR navyše môže ovplyvniť vek, svalová hmota alebo užívanie doplnkov a s tým treba pri hodnotení výsledkov počítať.</p>
+<p>Preto sa dnes nepozeráme iba na samotný kreatinín. Z neho sa vypočítava odhadovaná glomerulová filtrácia, známa pod skratkou eGFR. Tento údaj lepšie vyjadruje, ako obličky krv filtrujú.</p>
 <figure class="article-figure">
   <a href="img/dkd-04.png" target="_blank" rel="noopener noreferrer">
     <img src="img/dkd-04.png" alt="Ilustrácia k téme: Kreatinín: užitočný, ale nie dokonalý ukazovateľ" loading="lazy" decoding="async">
@@ -73,7 +73,7 @@ $articles[] = [
 <p>Pri hodnotení kreatinínu je dôležité vedieť aj to, či pacient neužíva potravinový doplnok kreatín. Kreatín sa dlhé roky používal najmä vo fitnes a silovom tréningu, no v poslednom období sa o ňom čoraz viac hovorí aj v súvislosti so starnutím, udržiavaním svalovej hmoty a možným vplyvom na kognitívne funkcie. Dôkazy o priaznivom účinku na kogníciu u starších ľudí sú zatiaľ sľubné, ale nie úplne jednoznačné.</p>
 <p>Z pohľadu obličkových výsledkov je podstatné, že kreatín je metabolický substrát, z ktorého v tele vzniká kreatinín. Ak človek užíva kreatín, môže sa zvýšiť hladina kreatinínu v krvi bez toho, aby to automaticky znamenalo skutočné zhoršenie funkcie obličiek. Keďže sa z kreatinínu počíta aj eGFR, teda odhadovaná glomerulová filtrácia, kreatín môže nepriamo spôsobiť aj zdanlivé zníženie eGFR. Výsledok potom môže navodiť falošný dojem, že sa obličky zhoršili.</p>
 <p>Preto je dôležité, aby pacient lekárovi povedal, že kreatín užíva. Platí to najmä vtedy, ak sa kreatinín náhle zvýši alebo eGFR nečakane klesne bez iného vysvetlenia. V takých situáciách môže lekár zvážiť opakované vyšetrenie po dočasnom vysadení doplnku alebo použiť alternatívne spôsoby odhadu funkcie obličiek, napríklad výpočet eGFR podľa cystatínu C. Cystatín C je marker, ktorý nie je priamo závislý od príjmu kreatínu a svalového metabolizmu v takej miere ako kreatinín.</p>
-<p>Dôležité je rozlišovať medzi laboratórnym skreslením a skutočným poškodením obličiek. Súčasné dostupné dôkazy neukazujú, že by primerané užívanie kreatínu u ľudí so zdravými obličkami samo osebe poškodzovalo obličky. Opatrnosť je však namieste u pacientov s už známou chronickou chorobou obličiek, pri cukrovke, vysokom krvnom tlaku, dehydratácii alebo pri súčasnom užívaní liekov, ktoré môžu obličky zaťažovať. V týchto prípadoch je rozumné užívanie kreatínu vopred konzultovať s lekárom.</p>
+<p>Dôležité je rozlišovať medzi laboratórnym skreslením a skutočným poškodením obličiek. Dostupné dôkazy neukazujú, že by primerané užívanie kreatínu u ľudí so zdravými obličkami samo osebe poškodzovalo obličky. Opatrnosť je však namieste u pacientov s už známou chronickou chorobou obličiek, pri cukrovke, vysokom krvnom tlaku, dehydratácii alebo pri súčasnom užívaní liekov, ktoré môžu obličky zaťažovať. V týchto prípadoch je rozumné užívanie kreatínu vopred konzultovať s lekárom.</p>
 <figure class="article-figure">
   <a href="img/dkd-05.png" target="_blank" rel="noopener noreferrer">
     <img src="img/dkd-05.png" alt="Ilustrácia k téme: Kreatín ako doplnok výživy môže skresliť kreatinín" loading="lazy" decoding="async">
@@ -107,7 +107,7 @@ $articles[] = [
   <li>eGFR pod 60, ak trvá aspoň 3 mesiace, už zodpovedá chronickej chorobe obličiek,</li>
   <li>čím nižšia eGFR, tým vyššie riziko komplikácií a tým dôležitejšia je nefrologická starostlivosť.</li>
 </ul>
-<p>Treba však zdôrazniť, že jedna hodnota nestačí na dôležité závery. Obličkovú funkciu treba hodnotiť v priebehu času. Dôležité je, či je stav stabilný alebo či sa eGFR postupne znižuje.</p>
+<p>Jedna hodnota však na dôležité závery nestačí. Obličkovú funkciu treba hodnotiť v priebehu času a sledovať, či je stav stabilný alebo či sa eGFR postupne znižuje.</p>
 <figure class="article-figure">
   <a href="img/dkd-07.png" target="_blank" rel="noopener noreferrer">
     <img src="img/dkd-07.png" alt="Ilustrácia k téme: Čo znamená eGFR" loading="lazy" decoding="async">
@@ -177,7 +177,7 @@ $articles[] = [
   <figcaption>Včasný záchyt mení prognózu</figcaption>
 </figure>
 <h2>Cukor nie je jediný problém</h2>
-<p>Pri cukrovke sa prirodzene zameriavame na glykémiu. Je to správne, ale pri ochrane obličiek nestačí sledovať len hladinu cukru (myslíme tým glukózu, teda glykémiu).</p>
+<p>Pri cukrovke sa prirodzene zameriavame na glykémiu. Je to správne, ale pri ochrane obličiek nestačí sledovať len glykémiu, teda hladinu cukru v krvi.</p>
 <p>Veľmi dôležitý je krvný tlak. Vysoký tlak poškodzuje obličkové cievy a zároveň urýchľuje stratu filtračnej funkcie. U mnohých pacientov s diabetickou chorobou obličiek je liečba vysokého krvného tlaku rovnako dôležitá ako liečba cukrovky.</p>
 <p>Dôležité sú aj tuky v krvi, telesná hmotnosť, fajčenie, pohybová aktivita a celkové kardiovaskulárne riziko. Obličky, srdce a cievy úzko súvisia. Pacient s diabetickou chorobou obličiek nemá iba „obličkový problém“. Má vyššie riziko infarktu, srdcového zlyhávania, mozgových príhod a ďalších cievnych komplikácií.</p>
 <figure class="article-figure">
@@ -189,7 +189,7 @@ $articles[] = [
 <h2>Lieky, ktoré chránia obličky</h2>
 <p>Liečba patrí vždy do rúk lekára, pretože závisí od typu cukrovky, veku, funkcie obličiek, tlaku, hladiny draslíka, pridružených ochorení a ďalších okolností. Napriek tomu je dobré, aby pacient rozumel základným princípom.</p>
 <p>Pri zvýšenom krvnom tlaku a albuminúrii sa často používajú lieky zo skupiny ACE inhibítorov alebo blokátorov receptorov pre angiotenzín II. Tieto lieky nielen znižujú tlak, ale môžu znižovať aj únik bielkoviny do moču a chrániť obličkový filter.</p>
-<p>V posledných rokoch sa veľa zmenilo vďaka liekom zo skupiny inhibítorov SGLT2. Pôvodne boli vyvíjané ako lieky na zníženie glykémie, ale ukázalo sa, že majú významný ochranný účinok na obličky a srdce u mnohých pacientov s diabetom 2. typu a chronickou chorobou obličiek. Ich použitie však závisí od konkrétnej situácie a funkcie obličiek.</p>
+<p>V posledných rokoch sa veľa zmenilo vďaka liekom zo skupiny inhibítorov SGLT2. Pôvodne vznikli ako lieky na zníženie glykémie, ale ukázalo sa, že majú významný ochranný účinok na obličky a srdce u mnohých pacientov s diabetom 2. typu a chronickou chorobou obličiek. Ich použitie však závisí od konkrétnej situácie a funkcie obličiek.</p>
 <p>U niektorých pacientov môže mať význam aj liečba zo skupiny agonistov GLP-1 receptorov, najmä pri potrebe ovplyvniť hmotnosť, glykémiu a kardiovaskulárne riziko.</p>
 <p>Pacient by však nemal lieky svojvoľne vysadzovať ani nasadzovať. Pri ochorení obličiek je dôležité aj správne dávkovanie liekov. Niektoré lieky treba pri zníženej funkcii obličiek upraviť, niektorým sa treba vyhýbať.</p>
 <figure class="article-figure">
@@ -208,7 +208,7 @@ $articles[] = [
   <figcaption>Pozor na lieky proti bolesti</figcaption>
 </figure>
 <h2>Čo môže urobiť pacient</h2>
-<p>Pacient nie je pasívny pozorovateľ výsledkov. Práve naopak. Pri diabetickej chorobe obličiek má každodenné správanie veľký význam.</p>
+<p>Pacient nie je iba pasívnym pozorovateľom svojich výsledkov. Pri diabetickej chorobe obličiek má každodenné správanie veľký význam.</p>
 <p>Základné odporúčania sú jednoduché, ale účinné:</p>
 <ul>
   <li>chodiť na pravidelné kontroly diabetológa a praktického lekára,</li>

@@ -31,36 +31,36 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'AHA, ACC, ADA a ASN spoločne zverejnili prvú multidisciplinárnu smernicu pre kardiovaskulárno-obličkovo-metabolický (CKM) syndróm. Nahrádza rámec z roku 2013 a rozširuje ho do koncepcie, že obezita, diabetes 2. typu, CKD a kardiovaskulárne ochorenia tvoria jeden kontinuálny syndróm — s obličkou ako centrálnou súčasťou.',
+    'excerpt'      => 'AHA, ACC, ADA a ASN spoločne zverejnili prvú multidisciplinárnu smernicu pre kardiovaskulárno-obličkovo-metabolický (CKM) syndróm. Nahrádza rámec z roku 2013 a rozširuje ho do koncepcie, že obezita, diabetes 2. typu, CKD a kardiovaskulárne ochorenia tvoria jeden kontinuálny syndróm, v ktorom je oblička centrálnou súčasťou.',
     'content'      => <<<'HTML'
-<figure><a href="img/ckm-syndrom-prva-multidisciplinarna-smernica-2026.webp" rel="noopener noreferrer" target="_blank"><img src="img/ckm-syndrom-prva-multidisciplinarna-smernica-2026.webp" alt="Štyri svetelné lúče spájajúce sa do jedného stĺpa dopadajúceho na srdce, metabolizmus a obličku" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Štyri odbornosti po prvý raz hovoria jedným hlasom — a pacient prestáva prechádzať medzi oddelenými svetmi.</figcaption></figure>
+<figure><a href="img/ckm-syndrom-prva-multidisciplinarna-smernica-2026.webp" rel="noopener noreferrer" target="_blank"><img src="img/ckm-syndrom-prva-multidisciplinarna-smernica-2026.webp" alt="Štyri svetelné lúče spájajúce sa do jedného stĺpa dopadajúceho na srdce, metabolizmus a obličku" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna: štyri odbornosti po prvý raz hovoria jedným hlasom.</figcaption></figure>
 
-<p>Dňa 9. júna 2026 organizácie AHA, ACC, ADA a ASN spoločne zverejnili prvú multidisciplinárnu smernicu zameranú na kardiovaskulárno-obličkovo-metabolický syndróm (<em>cardiovascular-kidney-metabolic</em>, CKM). Dokument pôvodný rámec z roku 2013 podľa formulácie autorov „uzatvára, nahrádza a rozširuje“ — predovšetkým ho však posúva do koncepcie, že <strong>obezita, diabetes 2. typu, chronická choroba obličiek (CKD) a kardiovaskulárne ochorenia sú prepojené ako jeden kontinuálny syndróm</strong>.</p>
+<p>Dňa 9. júna 2026 organizácie AHA, ACC, ADA a ASN spoločne zverejnili prvú multidisciplinárnu smernicu zameranú na kardiovaskulárno-obličkovo-metabolický syndróm (<em>cardiovascular-kidney-metabolic</em>, CKM). Dokument podľa formulácie autorov pôvodný rámec z roku 2013 „uzatvára, nahrádza a rozširuje“. Predovšetkým však presadzuje koncepciu, že <strong>obezita, diabetes 2. typu, chronická choroba obličiek (CKD) a kardiovaskulárne ochorenia sú prepojené ako jeden kontinuálny syndróm</strong>.</p>
 
 <h2>Čo je nové v praxi</h2>
 
 <h3>1) Štandardizovaná klasifikácia štádií CKM (0 až 4)</h3>
 
-<p>Smernica zavádza <strong>klasifikáciu štádií CKM od 0 do 4</strong>. Cieľom je identifikovať pacientov skôr, voliť terapie podľa <strong>absolútneho kardiovaskulárneho rizika</strong> a hodnotiť cielené intervencie aj z hľadiska spomalenia či regresie progresie do CKD a kardiovaskulárneho ochorenia (CVD).</p>
+<p>Smernica zavádza <strong>klasifikáciu štádií CKM od 0 do 4</strong>. Cieľom je identifikovať pacientov skôr, voliť terapie podľa <strong>absolútneho kardiovaskulárneho rizika</strong> a hodnotiť cielené intervencie aj podľa toho, či spomalia alebo zvrátia progresiu do CKD a kardiovaskulárneho ochorenia (CVD).</p>
 
 <h3>2) Riziko kvantifikovať jednotným nástrojom: PREVENT</h3>
 
-<p>Pre pacientov v štádiách CKM 0 až 3 sa odporúča používať rovnice <strong>PREVENT</strong> na odhad <strong>10- a 30-ročného</strong> rizika aterosklerotického kardiovaskulárneho ochorenia (ASCVD), srdcového zlyhania a celkového kardiovaskulárneho rizika. Výstup z tohto výpočtu má pomôcť určiť intenzitu preventívnej liečby.</p>
+<p>Pre pacientov v štádiách CKM 0 až 3 sa odporúča používať rovnice <strong>PREVENT</strong> na odhad <strong>10- a 30-ročného</strong> rizika aterosklerotického kardiovaskulárneho ochorenia (ASCVD), srdcového zlyhania a celkového kardiovaskulárneho rizika. Výsledok má pomôcť určiť intenzitu preventívnej liečby.</p>
 
 <h3>3) Rutinné vyhľadávanie CKD: eGFR + UACR</h3>
 
 <p>Pri skríningu sa majú pravidelne používať:</p>
 
 <ul>
-  <li><strong>eGFR</strong> — odhadovaná glomerulová filtrácia (filtračná funkcia obličiek),</li>
-  <li><strong>UACR</strong> — pomer albumín/kreatinín v moči (marker renálneho aj kardiovaskulárneho rizika).</li>
+  <li><strong>eGFR</strong> – odhadovaná glomerulová filtrácia (filtračná funkcia obličiek),</li>
+  <li><strong>UACR</strong> – pomer albumín/kreatinín v moči (marker renálneho aj kardiovaskulárneho rizika).</li>
 </ul>
 
-<p>Nejde teda o postup „diagnóza CKD až dodatočne“, ale o aktívne vyhľadávanie a včasnú stratifikáciu rizika.</p>
+<p>CKD sa teda nemá diagnostikovať až dodatočne, ale aktívne vyhľadávať a riziko včas stratifikovať.</p>
 
 <h3>4) Inhibítory SGLT2 a liečba na báze GLP-1 ako kľúčové CKM terapie</h3>
 
-<p>Dôraz sa kladie na terapie, ktoré majú súčasne <strong>kardiovaskulárny aj renálny benefit</strong> — nielen glykemickú kontrolu. Explicitne sa uvádzajú:</p>
+<p>Dôraz sa kladie na terapie, ktoré majú súčasne <strong>kardiovaskulárny aj renálny prínos</strong>, nielen glykemický účinok. Výslovne sa uvádzajú:</p>
 
 <ul>
   <li><strong>inhibítory SGLT2</strong>,</li>
@@ -69,7 +69,7 @@ $articles[] = [
 
 <h3>5) Interdisciplinárny manažment a koordinátor starostlivosti</h3>
 
-<p>Smernica odporúča koordinovaný prístup naprieč špecializáciami (všeobecný lekár, kardiológ, nefrológ, diabetológ) a zavádza princíp, že má existovať <strong>zodpovedná kontaktná osoba</strong> alebo koordinátor starostlivosti, aby sa terapie skutočne implementovali konzistentne.</p>
+<p>Smernica odporúča koordinovaný prístup naprieč špecializáciami (všeobecný lekár, kardiológ, nefrológ, diabetológ) a zavádza princíp <strong>zodpovednej kontaktnej osoby</strong> alebo koordinátora starostlivosti, aby sa liečba skutočne zavádzala dôsledne a jednotne.</p>
 
 <h3>6) Obezita nie je doplnok, ale základ</h3>
 
@@ -89,16 +89,16 @@ $articles[] = [
 
 <h2>Desať odporúčaní v skratke</h2>
 
-<p>Smernica sa točí najmä okolo týchto okruhov:</p>
+<p>Odporúčania smernice pokrývajú najmä tieto okruhy:</p>
 
 <ul>
   <li>rutinná klasifikácia štádií CKM,</li>
   <li>kvantifikácia kardiovaskulárneho rizika pomocou nástroja PREVENT,</li>
-  <li>pravidelný skríning CKM rizík (vrátane cieľových stavov ako pre-heart failure, MASLD a obštrukčné spánkové apnoe — OSA),</li>
+  <li>pravidelný skríning CKM rizík (vrátane cieľových stavov ako pre-heart failure, MASLD a obštrukčné spánkové apnoe – OSA),</li>
   <li>zahrnutie sociálnych determinantov zdravia do manažmentu,</li>
   <li>interdisciplinárna starostlivosť,</li>
   <li>obezita ako základná liečebná os,</li>
-  <li>diabetologická liečba s preferenciou CKM benefitov (inhibítory SGLT2, GLP-1),</li>
+  <li>diabetologická liečba s prednosťou liekov s CKM prínosom (inhibítory SGLT2, GLP-1),</li>
   <li>aktívne identifikovanie a liečba CKD (eGFR + UACR, blokáda RAAS, inhibítory SGLT2 a pri pretrvávajúcej albuminúrii aj ďalšie triedy ako nesteroidové antagonisty mineralokortikoidných receptorov (nsMRA) alebo GLP-1 podľa kontextu),</li>
   <li>u pacientov s už prítomným ASCVD intenzívny CKM manažment,</li>
   <li>pri srdcovom zlyhaní integrácia CKM prospešných terapií podľa fenotypu (inhibítory SGLT2, inhibítory RAAS, MRA, GLP-1 podľa vhodnosti).</li>
@@ -106,7 +106,7 @@ $articles[] = [
 
 <h2>Prepojenie s nefrológiou a dialyzačnou realitou</h2>
 
-<p>V prenose do nefrologickej praxe smernica posúva uvažovanie od „oblička je dôsledok“ k „oblička je centrálna súčasť syndrómu“:</p>
+<p>V nefrologickej praxi smernica posúva uvažovanie od „oblička je dôsledok“ k „oblička je centrálna súčasť syndrómu“:</p>
 
 <ul>
   <li>albuminúria a eGFR sa majú používať rutinne,</li>

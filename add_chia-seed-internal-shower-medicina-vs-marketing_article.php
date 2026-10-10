@@ -31,11 +31,11 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Trend „internal shower“ sľubuje „vyčistenie“ čriev pomocou chia semienok vo vode. Nutričná hodnota chia (najmä vláknina) je reálna, no klinické dôkazy o „čistení“ čreva nad rámec účinku bežnej vlákniny chýbajú — a náhle zvýšenie dávky môže symptómy zhoršiť.',
+    'excerpt'      => 'Trend „internal shower“ sľubuje „vyčistenie“ čriev pomocou chia semienok vo vode. Nutričná hodnota chia (najmä vláknina) je reálna, no klinické dôkazy o „čistení“ čreva nad rámec účinku bežnej vlákniny chýbajú – a náhle zvýšenie dávky môže symptómy zhoršiť.',
     'content'      => <<<'HTML'
-<figure><a href="img/chia-seed-internal-shower-medicina-vs-marketing.webp" rel="noopener noreferrer" target="_blank"><img src="img/chia-seed-internal-shower-medicina-vs-marketing.webp" alt="Napučané semená v pohári vody s prehnaným leskom, zatiaľ čo svetlo vstupujúce do čreva je obyčajné" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Vláknina s vodou má svoj zmysel — účinok je však bežný, nie zázračný.</figcaption></figure>
+<figure><a href="img/chia-seed-internal-shower-medicina-vs-marketing.webp" rel="noopener noreferrer" target="_blank"><img src="img/chia-seed-internal-shower-medicina-vs-marketing.webp" alt="Napučané semená v pohári vody s prehnaným leskom, zatiaľ čo svetlo vstupujúce do čreva je obyčajné" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Vláknina s vodou má svoj zmysel – účinok je však bežný, nie zázračný.</figcaption></figure>
 
-<p>Keď pacienti prídu do ambulancie, často si nesú konkrétnu otázku: „Pomohlo by mi pitie chia semienok na vyčistenie čriev?“ Trend „internal shower“ (ráno zjesť alebo zaliať chia semienka vodou, aby sa „vypláchol“ tráviaci systém) sa šíri online neuveriteľne rýchlo. Zároveň však existuje výrazný rozdiel medzi tým, čo je na chia nutrične pravdivé, a tým, čo trend sľubuje.</p>
+<p>Pacienti prichádzajú do ambulancie často s konkrétnou otázkou: „Pomohlo by mi pitie chia semienok na vyčistenie čriev?“ Trend „internal shower“ (ráno zjesť alebo zaliať chia semienka vodou, aby sa „vypláchol“ tráviaci systém) sa online šíri veľmi rýchlo. Medzi tým, čo chia skutočne ponúka nutrične, a tým, čo trend sľubuje, je však veľký rozdiel.</p>
 
 <h2>Čo je na chia semienkach reálne dobré</h2>
 
@@ -47,7 +47,7 @@ $articles[] = [
   <li>bielkoviny a minerály.</li>
 </ul>
 
-<p>Keď sa chia zmieša s vodou, rozpustná vláknina vytvorí viskózny gél. Takýto mechanizmus môže:</p>
+<p>Keď sa chia zmieša s vodou, rozpustná vláknina vytvorí viskózny gél. Ten môže:</p>
 
 <ul>
   <li>pridať objem do stolice,</li>
@@ -59,19 +59,19 @@ $articles[] = [
 
 <h2>Kde sa medicína a marketing rozchádzajú</h2>
 
-<p>Sľub „internal shower“ vychádza z predstavy, že organizmus má „upchaté“ alebo „znečistené“ črevo a treba ho pravidelne „vypláchnuť zvnútra“. Klinicky je potrebné pacientom povedať priamo: telo nevnímajte ako upchatý odtok. Detoxikačné procesy prebiehajú priebežne a bez pitia chia vody ich netreba „spúšťať“.</p>
+<p>Sľub „internal shower“ vychádza z predstavy, že organizmus má „upchaté“ alebo „znečistené“ črevo a treba ho pravidelne „vypláchnuť zvnútra“. Pacientom treba povedať priamo: telo nie je upchatý odtok. Detoxikačné procesy prebiehajú priebežne a bez pitia chia vody ich netreba „spúšťať“.</p>
 
-<p>V zdrojovom materiáli sa zároveň uvádza jasná pointa:</p>
+<p>Zdrojový materiál to hovorí jasne:</p>
 
 <ul>
-  <li>neexistuje peer-reviewed dôkaz, že chia seed water má efekt „čistenia“ čreva nad rámec toho, čo by poskytla bežná diétna vláknina.</li>
+  <li>neexistuje recenzovaný (peer-reviewed) dôkaz, že voda s chia semienkami „čistí“ črevo viac, než by to dokázala bežná diétna vláknina.</li>
 </ul>
 
-<p>Inými slovami: ak pacientovi pomôže, je to v prvom rade preto, že prijal vlákninu, nie preto, že by sa „vypláchol“ vnútorný systém.</p>
+<p>Inými slovami: ak chia pacientovi pomôže, je to v prvom rade preto, že prijal vlákninu, nie preto, že by sa mu „vypláchol“ tráviaci systém.</p>
 
 <h2>Vláknina nie je pre všetkých rovnaká</h2>
 
-<p>Jedna z najdôležitejších klinických nuáns je typ vlákniny a tolerancia v črevách, najmä pri:</p>
+<p>Klinicky podstatný je typ vlákniny a to, ako ju črevo znáša, najmä pri:</p>
 
 <ul>
   <li>zápche,</li>
@@ -84,14 +84,14 @@ $articles[] = [
 <ul>
   <li><strong>psyllium</strong> má najsilnejšiu dôkaznú bázu pre zlepšenie frekvencie a konzistencie stolice pri chronickej zápche,</li>
   <li><strong>nerozpustné vlákniny</strong> (napr. pšeničné otruby) môžu u niektorých pacientov zhoršiť nadúvanie a diskomfort pri IBS,</li>
-  <li>chia obsahuje rozpustnú aj nerozpustnú vlákninu, pričom primárne ide skôr o rozpustnú zložku, čo môže byť pre viacerých pacientov v poriadku, ale nie pre každého.</li>
+  <li>chia obsahuje rozpustnú aj nerozpustnú vlákninu, prevažuje však rozpustná zložka – mnohým pacientom to vyhovuje, ale nie každému.</li>
 </ul>
 
-<p>Praktický dôsledok: odporúčanie „len pridajte vlákninu“ bez špecifikácie a bez titrácie je zbytočné riziko. Najmä u pacientov s IBS môže viesť k horšej symptomatike.</p>
+<p>Praktický dôsledok: odporúčanie „len pridajte vlákninu“ bez upresnenia typu a bez postupného zvyšovania dávky je zbytočné riziko. Najmä pri IBS môže ťažkosti zhoršiť.</p>
 
 <h2>Prečo môže chia trend pacientovi uškodiť</h2>
 
-<p>Podľa zdrojového materiálu typický scenár v praxi vyzerá takto:</p>
+<p>Podľa zdrojového materiálu je typický scenár takýto:</p>
 
 <ul>
   <li>pacient začne nárazovo (napr. „z nuly na plnú dávku“),</li>
@@ -102,7 +102,7 @@ $articles[] = [
 
 <h2>Ako to komunikovať pacientovi v ambulancii (konkrétne odporúčanie)</h2>
 
-<p>Ak pacient trvá na skúšaní, zmysluplný a bezpečnejší rámec vychádza z praktickej titrácie:</p>
+<p>Ak pacient chce chia napriek tomu vyskúšať, bezpečnejšie je dávku postupne titrovať:</p>
 
 <ul>
   <li>začať <strong>0,5 až 1 polievkovou lyžicou denne</strong>,</li>
@@ -110,34 +110,34 @@ $articles[] = [
   <li>a najmä <strong>zabezpečiť dostatočný príjem tekutín</strong>.</li>
 </ul>
 
-<p>Dôležitá praktická veta pre pacienta: vláknina bez tekutín je recept na zhoršenie a riziko zhoršenej pasáže.</p>
+<p>Pacientovi to treba povedať jasne: vláknina bez tekutín ťažkosti zhoršuje a môže zhoršiť pasáž.</p>
 
-<p>Zároveň môžete využiť „preorientovanie“ na dôkazy:</p>
+<p>Rozhovor možno zároveň presmerovať na postupy s oporou v dôkazoch:</p>
 
 <ul>
   <li>denný cieľ vlákniny sa v zdrojovom článku uvádza približne <strong>25 až 35 g denne</strong> z rôznych potravín,</li>
   <li>pri zápche má psyllium silnú oporu v štúdiách,</li>
   <li>ako doplnok v praxi môžu fungovať aj konkrétne potraviny (napr. slivky, kiwi, ovos),</li>
-  <li>pohyb a režim sú podstatnou súčasťou motility.</li>
+  <li>na motilitu má podstatný vplyv aj pohyb a denný režim.</li>
 </ul>
 
 <h2>Kedy nepokračovať v trende a riešiť príčinu</h2>
 
 <p>Zdrojový článok upozorňuje aj na druhú, klinicky veľmi dôležitú rovinu: ak pacient používa wellness trend na dlhšie trvajúce ťažkosti, môže oddialiť vyšetrenie.</p>
 
-<p>Varovný signál je najmä:</p>
+<p>Varovnými signálmi sú najmä:</p>
 
 <ul>
   <li>zápcha, ktorá pretrváva,</li>
-  <li>potreba „social media fixu“ na symptomatický problém, ktorý trvá mesiace,</li>
+  <li>snaha vyriešiť ťažkosti, ktoré trvajú mesiace, „receptom“ zo sociálnych sietí,</li>
   <li>príznaky, pri ktorých treba myslieť na liekovú príčinu, endokrinnú poruchu alebo funkčnú poruchu defekácie.</li>
 </ul>
 
-<p>V takých situáciách treba riešiť etiologicky, nie iba zvyšovať vlákninu.</p>
+<p>V takých prípadoch treba hľadať príčinu, nie iba zvyšovať vlákninu.</p>
 
 <h2>Osobitné poznámky pre nefrologických pacientov (CKD, dialýza)</h2>
 
-<p>Toto je bod, ktorý trend často ignoruje. Pri ochoreniach obličiek sa tekutinový režim môže líšiť podľa štádia a liečby. Preto:</p>
+<p>Na toto trend často zabúda. Pri ochoreniach obličiek sa tekutinový režim môže líšiť podľa štádia a liečby. Preto:</p>
 
 <ul>
   <li>odporúčanie „zabezpečte dostatok tekutín“ treba pre nefrologických pacientov preložiť do reality ich <strong>individuálneho tekutinového limitu</strong>,</li>
@@ -145,17 +145,17 @@ $articles[] = [
   <li>ak sa objaví zhoršenie nadúvania, kŕčov alebo pasáže stolice, trend treba zastaviť a prehodnotiť stratégiu zápchy.</li>
 </ul>
 
-<p>Nejde o to, že chia „je zakázaná“, ale o to, že nefrologická starostlivosť často mení praktické detaily (najmä tekutiny), aby sa minimalizovalo riziko.</p>
+<p>Nejde o to, že chia „je zakázaná“, ale o to, že v nefrologickej starostlivosti sa praktické detaily (najmä príjem tekutín) často musia upraviť, aby sa riziko minimalizovalo.</p>
 
 <h2>Zhrnutie</h2>
 
-<p>„Chia seed internal shower“ je typický príklad, kde:</p>
+<p>„Chia seed internal shower“ je typický príklad trendu, pri ktorom:</p>
 
 <ul>
   <li><strong>nutričná hodnota chia je skutočná</strong> (najmä vláknina),</li>
   <li><strong>sľub „vyčistenia čriev“ nie je podporený klinickými dôkazmi</strong>, ktoré by išli nad rámec účinku vlákniny,</li>
   <li>náhle zvýšenie dávky môže zhoršiť symptómy,</li>
-  <li>najlepšie funguje princíp individualizácie: postupná titrácia, dostatočná hydratácia podľa tolerancie a pri potrebe aj voľba vlákniny s lepšou dôkaznou oporou (napr. psyllium).</li>
+  <li>najlepšie funguje individuálny prístup: postupná titrácia, dostatočná hydratácia podľa tolerancie a pri potrebe aj voľba vlákniny s lepšou dôkaznou oporou (napr. psyllium).</li>
 </ul>
 
 <hr>

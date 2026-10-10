@@ -24,7 +24,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'CKD pri diabete odhalí až spoločné hodnotenie eGFR a UACR. Praktický rámec skríningu, diferenciálnej diagnostiky a bezpečného vrstvenia RAS blokády, inhibítora SGLT2, finerenónu a agonistu receptora GLP-1.',
     'content'      => <<<'HTML'
-<figure><a href="img/ckd-pri-diabete-skrining-vrstvena-kardiorenalna-liecba.webp" rel="noopener noreferrer" target="_blank"><img src="img/ckd-pri-diabete-skrining-vrstvena-kardiorenalna-liecba.webp" alt="Oblička obalená niekoľkými sústrednými vrstvami svetla, z boku ju zasahuje jemný skenovací lúč" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Najprv treba nález zachytiť, až potom vrstviť ochranu — poradie tu rozhoduje rovnako ako samotná liečba.</figcaption></figure>
+<figure><a href="img/ckd-pri-diabete-skrining-vrstvena-kardiorenalna-liecba.webp" rel="noopener noreferrer" target="_blank"><img src="img/ckd-pri-diabete-skrining-vrstvena-kardiorenalna-liecba.webp" alt="Oblička obalená niekoľkými sústrednými vrstvami svetla, z boku ju zasahuje jemný skenovací lúč" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Najprv treba nález zachytiť, až potom vrstviť ochranu – poradie tu rozhoduje rovnako ako samotná liečba.</figcaption></figure>
 
 <p class="article-dek"><em>Chronická choroba obličiek (CKD) patrí medzi najčastejšie a prognosticky najzávažnejšie komplikácie diabetu, no dlho môže zostať bez príznakov. Samotný kreatinín ani samotná albuminúria nestačia. Včasný záchyt vyžaduje spoločné hodnotenie eGFR a pomeru albumínu ku kreatinínu v moči; liečba potom vrství terapie podľa typu diabetu, albuminúrie, funkcie obličiek, kardiovaskulárneho rizika a bezpečnosti.</em></p>
 
@@ -108,7 +108,7 @@ $articles[] = [
 
 <h2>Agonisty receptora GLP-1 po štúdii FLOW</h2>
 
-<p>ADA 2026 odporúča pri diabete 2. typu a CKD agonistu receptora GLP-1 s preukázaným prínosom na zníženie progresie CKD a kardiovaskulárneho rizika. Najpevnejší dedikovaný obličkový dôkaz má zatiaľ subkutánny semaglutid zo štúdie FLOW. U 3 533 pacientov s diabetom 2. typu a CKD znížil riziko primárneho kompozitného výsledku závažných obličkových príhod alebo úmrtia z obličkových či kardiovaskulárnych príčin o 24 % oproti placebu. Riziko obličkovo špecifického kompozitného výsledku bez kardiovaskulárneho úmrtia bolo nižšie o 21 %.</p>
+<p>ADA 2026 odporúča pri diabete 2. typu a CKD agonistu receptora GLP-1 s preukázaným prínosom na zníženie progresie CKD a kardiovaskulárneho rizika. Najpevnejší dôkaz z cielenej obličkovej štúdie má zatiaľ subkutánny semaglutid zo štúdie FLOW. U 3 533 pacientov s diabetom 2. typu a CKD znížil riziko primárneho kompozitného výsledku závažných obličkových príhod alebo úmrtia z obličkových či kardiovaskulárnych príčin o 24 % oproti placebu. Riziko obličkovo špecifického kompozitného výsledku bez kardiovaskulárneho úmrtia bolo nižšie o 21 %.</p>
 
 <p>Tento výsledok neznamená automatický triedový účinok rovnakej veľkosti ani to, že semaglutid nahrádza inhibítor SGLT2, finerenón alebo indikovanú RAS blokádu. Výber lieku ovplyvňuje obezita, aterosklerotické riziko, glykémia, eGFR, krehkosť, gastrointestinálna tolerancia a dostupnosť. Pri nauzee, vracaní alebo hnačke hrozí dehydratácia a prerenálne akútne poškodenie obličiek, osobitne pri súčasnom diuretiku, RAS blokáde alebo inhibítore SGLT2.</p>
 
@@ -175,9 +175,9 @@ $articles[] = [
 <h3>Súvisiace články</h3>
 
 <ul>
-  <li><a href="article.php?slug=liecba-ckd-2026-vrstvena-nefroprotekcia-post-aki">Liečba chronickej choroby obličiek v roku 2026</a> - širší rámec vrstvenej nefroprotekcie a sledovania po AKI.</li>
-  <li><a href="article.php?slug=semaglutid-ckd-porovnanie-glp1-realna-prax">Semaglutid a riziko CKD pri diabete 2. typu</a> - porovnanie agonistov receptora GLP-1 v reálnej praxi.</li>
-  <li><a href="article.php?slug=kazuistika-hyperkaliemia-ckd-hf-zachovanie-raas">Hyperkaliémia pri CKD a srdcovom zlyhávaní</a> - ako zachovať prognosticky účinnú liečbu.</li>
+  <li><a href="article.php?slug=liecba-ckd-2026-vrstvena-nefroprotekcia-post-aki">Liečba chronickej choroby obličiek v roku 2026</a> – širší rámec vrstvenej nefroprotekcie a sledovania po AKI.</li>
+  <li><a href="article.php?slug=semaglutid-ckd-porovnanie-glp1-realna-prax">Semaglutid a riziko CKD pri diabete 2. typu</a> – porovnanie agonistov receptora GLP-1 v reálnej praxi.</li>
+  <li><a href="article.php?slug=kazuistika-hyperkaliemia-ckd-hf-zachovanie-raas">Hyperkaliémia pri CKD a srdcovom zlyhávaní</a> – ako zachovať prognosticky účinnú liečbu.</li>
 </ul>
 </div>
 

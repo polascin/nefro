@@ -25,7 +25,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Turecká štúdia udáva stredne ťažký až ťažký pruritus u 16,3 % dialyzovaných, iné kohorty u 23 až 40 %. Veľkú časť rozdielu vysvetľuje použitý nástroj a prah, bez priameho porovnania v tej istej kohorte ho však nemožno pripísať iba meraniu – a najcennejšia časť práce je celkom inde než v číslach.',
     'content'      => <<<'HTML'
-<figure><a href="img/svrbenie-pruritus-na-dialyze-preco-sa-udavana-prevalencia-lisi-dvojnasobne-a-co-pacient-sam-nepovie.webp" rel="noopener noreferrer" target="_blank"><img src="img/svrbenie-pruritus-na-dialyze-preco-sa-udavana-prevalencia-lisi-dvojnasobne-a-co-pacient-sam-nepovie.webp" alt="Koža s dráždivými červenými čiarami a iskrami na nervových zakončeniach, nad ňou prázdna tichá tma" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Pod kožou sa deje veľa, v dokumentácii nič — preto sa udávaná prevalencia líši podľa toho, ako sa pýtame.</figcaption></figure>
+<figure><a href="img/svrbenie-pruritus-na-dialyze-preco-sa-udavana-prevalencia-lisi-dvojnasobne-a-co-pacient-sam-nepovie.webp" rel="noopener noreferrer" target="_blank"><img src="img/svrbenie-pruritus-na-dialyze-preco-sa-udavana-prevalencia-lisi-dvojnasobne-a-co-pacient-sam-nepovie.webp" alt="Koža s dráždivými červenými čiarami a iskrami na nervových zakončeniach, nad ňou prázdna tichá tma" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Pod kožou sa deje veľa, v dokumentácii nič – preto sa udávaná prevalencia líši podľa toho, ako sa pýtame.</figcaption></figure>
 
 <p>Pruritus spojený s chronickou chorobou obličiek patrí k symptómom, ktoré dialyzovaného pacienta obťažujú najviac a v ambulancii sa spomenú najmenej. Nová turecká štúdia s kombinovaným kvantitatívno-kvalitatívnym dizajnom priniesla údaj, ktorý sa rýchlo rozšíril: stredne ťažké až ťažké svrbenie malo <strong>16,3 %</strong> hemodialyzovaných.</p>
 
@@ -131,7 +131,7 @@ $articles[] = [
 </table>
 </div>
 
-<p>Takmer polovica liečených teda nemá zo svojej liečby žiaden úžitok. Údaj sa vzťahuje na akúkoľvek antipruritickú liečbu, nie osobitne na antihistaminiká — tie sú len najčastejšie predpisovanou skupinou – lieky, ktorých neúčinnosť pri uremickom prurite je patofyziologicky očakávaná, pretože svrbenie tu nie je histamínovo sprostredkované.</p>
+<p>Takmer polovica liečených teda nemá zo svojej liečby žiadny úžitok. Údaj sa vzťahuje na akúkoľvek antipruritickú liečbu, nie osobitne na antihistaminiká. Tie sú len najčastejšie predpisovanou skupinou, hoci ich neúčinnosť pri uremickom prurite je patofyziologicky očakávaná, pretože svrbenie tu nie je sprostredkované histamínom.</p>
 
 <p><em>Poznámka k údajom: pôvodná tabuľka uvádza tieto podiely vzťahované na celý súbor 294 pacientov (34,0 %, 26,5 % a 11,6 %). Vyššie uvedené podiely sú prepočítané na 212 skutočných užívateľov liekov, čo je klinicky zmysluplnejší menovateľ.</em></p>
 
@@ -181,7 +181,7 @@ $articles[] = [
     <tr>
       <th scope="row">Prah ≥ 12 pochádza z pôvodnej publikácie škály 5-D</th>
       <td>Nesprávne</td>
-      <td>Pôvodná práca kategórie závažnosti nedefinuje. Prah pochádza z neskoršej jednocentrickej taiwanskej práce (409 pacientov). Tá ROC analýzu urobila — plocha pod krivkou bola 0,915 (95 % IS 0,889 – 0,941) pre stredne ťažký pruritus podľa NRS ≥ 4 —, samotné deliace body však odvodila z rovnice lineárnej regresie, nie z ROC. Pri prahu 12 mala senzitivitu 75 % a špecificitu 89,3 %; autori sami žiadajú externú validáciu.</td>
+      <td>Pôvodná práca kategórie závažnosti nedefinuje. Prah pochádza z neskoršej jednocentrickej taiwanskej práce (409 pacientov). Tá síce ROC analýzu urobila (plocha pod krivkou pre stredne ťažký pruritus podľa NRS ≥ 4 bola 0,915; 95 % IS 0,889 – 0,941), samotné deliace body však odvodila z rovnice lineárnej regresie, nie z ROC. Pri prahu 12 mala senzitivitu 75 % a špecificitu 89,3 %; autori sami žiadajú externú validáciu.</td>
     </tr>
     <tr>
       <th scope="row">Predchádzajúca edukácia je spojená s ťažším svrbením</th>
@@ -191,7 +191,7 @@ $articles[] = [
     <tr>
       <th scope="row">Takmer polovica liečených nemá zo svojej liečby účinok</th>
       <td>Potvrdené</td>
-      <td>100 z 212 užívateľov <strong>akejkoľvek</strong> antipruritickej liečby — údaj sa nevzťahuje osobitne na antihistaminiká. Tie sú len najčastejšie predpisovanou skupinou (143 z 294) a pri uremickom prurite nemajú patofyziologické opodstatnenie; štúdia však ich samostatnú účinnosť nehodnotila.</td>
+      <td>100 z 212 užívateľov <strong>akejkoľvek</strong> antipruritickej liečby; údaj sa nevzťahuje osobitne na antihistaminiká. Tie sú len najčastejšie predpisovanou skupinou (143 z 294) a pri uremickom prurite nemajú patofyziologické opodstatnenie; štúdia však ich samostatnú účinnosť nehodnotila.</td>
     </tr>
     <tr>
       <th scope="row">Štúdia hodnotí modernú liečbu (difelikefalín, gabapentinoidy, fototerapiu)</th>
@@ -205,7 +205,7 @@ $articles[] = [
 <h2>Čo z toho vyplýva pre dialyzačnú ambulanciu</h2>
 
 <ol>
-  <li><strong>Pýtať sa aktívne a pravidelne. Bez cielenej otázky sa o symptóme nedozvieme – to je najlepšie doložené zistenie celej práce. Stačí jedna otázka pri mesačnej kontrole.</li>
+  <li><strong>Pýtať sa aktívne a pravidelne.</strong> Bez cielenej otázky sa o symptóme nedozvieme – to je najlepšie doložené zistenie celej práce. Stačí jedna otázka pri mesačnej kontrole.</li>
   <li><strong>Použiť jeden nástroj a držať sa ho.</strong> Číselná škála 0 až 10 alebo 5-D sú obe použiteľné; dôležitejšie než výber je, aby sa u toho istého pacienta nemenila a aby sa hodnota zaznamenávala.</li>
   <li><strong>Nezostať pri antihistaminikách.</strong> Ich rozšírené podávanie je zvyk, nie dôkaz; polovica liečených z nich nemá úžitok a u starších pacientov prináša útlm a riziko pádov.</li>
   <li><strong>Prejsť odstrániteľné príčiny.</strong> Xerózu, dávku dialýzy, fosfátovo-kalciovú rovnováhu a parathormón, anémiu, liekovú anamnézu a kožné ochorenie, ktoré s obličkami nesúvisí.</li>
@@ -219,7 +219,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>Zo štúdie si netreba odniesť číslo, ale mechanizmus. Prevalencia symptómu závisí od nástroja a prahu, takže rozdiel medzi 16 a 40 % je do veľkej miery sporom o meraní. Pripísať ho <em>výlučne</em> nástroju by však bolo predčasné: nijaká z týchto prác neporovnávala škály head-to-head v tej istej kohorte, takže skutočné rozdiely medzi populáciami (skladba pacientov, ročné obdobie, dialyzačná prax, komorbidity) sa vylúčiť nedajú. Klinicky použiteľné zistenie je iné a nemenej dôležité: <strong>pacienti o svrbení nehovoria, dostávajú liečbu, ktorá im v polovici prípadov nepomáha, a s oboma vecami vieme niečo urobiť hneď.</strong></p>
+<p>Zo štúdie si netreba odniesť číslo, ale mechanizmus. Prevalencia symptómu závisí od nástroja a prahu, takže rozdiel medzi 16 a 40 % je do veľkej miery sporom o meraní. Pripísať ho <em>výlučne</em> nástroju by však bolo predčasné: nijaká z týchto prác neporovnávala škály priamo v tej istej kohorte, takže skutočné rozdiely medzi populáciami (skladba pacientov, ročné obdobie, dialyzačná prax, komorbidity) sa vylúčiť nedajú. Klinicky použiteľné zistenie je iné a nemenej dôležité: <strong>pacienti o svrbení nehovoria, dostávajú liečbu, ktorá im v polovici prípadov nepomáha, a s oboma vecami vieme niečo urobiť hneď.</strong></p>
 
 <h2>Súvisiace články</h2>
 

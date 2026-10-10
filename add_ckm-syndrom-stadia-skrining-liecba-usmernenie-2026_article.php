@@ -24,11 +24,11 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Systematický prehľad všetkých piatich štádií CKM syndrómu vrátane často opomínaného štádia 0, konkrétnych prahov pre štádium 3, skríningového panelu a liečby podľa jednotlivých liekových skupín — a toho, čo staging nedokáže.',
+    'excerpt'      => 'Systematický prehľad všetkých piatich štádií CKM syndrómu vrátane často opomínaného štádia 0, konkrétnych prahov pre štádium 3, skríningového panelu a liečby podľa jednotlivých liekových skupín. Článok ukazuje aj to, čo klasifikácia štádií nedokáže.',
     'content'      => <<<'HTML'
-<figure><a href="img/ckm-syndrom-stadia-skrining-liecba-usmernenie-2026.webp" rel="noopener noreferrer" target="_blank"><img src="img/ckm-syndrom-stadia-skrining-liecba-usmernenie-2026.webp" alt="Päť stúpajúcich svetelných stupňov od sotva viditeľného žiarenia po prudko červený záver" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Zmyslom štádií je zasiahnuť na nižšom stupni — tam, kde je zmena ešte lacná a vratná.</figcaption></figure>
+<figure><a href="img/ckm-syndrom-stadia-skrining-liecba-usmernenie-2026.webp" rel="noopener noreferrer" target="_blank"><img src="img/ckm-syndrom-stadia-skrining-liecba-usmernenie-2026.webp" alt="Päť stúpajúcich svetelných stupňov od sotva viditeľného žiarenia po prudko červený záver" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Zmyslom štádií je zasiahnuť na nižšom stupni, kde je zmena ešte lacná a vratná.</figcaption></figure>
 
-<p class="article-dek"><em>Usmernenie AHA, ACC, ADA a ASN z roku 2026 nahradilo pohľad na obezitu, diabetes, chronickú chorobu obličiek a kardiovaskulárne ochorenie ako na samostatné diagnózy jedným kontinuom rizika. Tento článok prechádza systematicky celý rámec — všetkých päť štádií vrátane často vynechávaného štádia 0, konkrétne prahové hodnoty, skríningový panel aj hranice použiteľnosti stagingu.</em></p>
+<p class="article-dek"><em>Usmernenie AHA, ACC, ADA a ASN z roku 2026 nahradilo pohľad na obezitu, diabetes, chronickú chorobu obličiek a kardiovaskulárne ochorenie ako na samostatné diagnózy jedným kontinuom rizika. Článok systematicky prechádza celý rámec: všetkých päť štádií vrátane často vynechávaného štádia 0, konkrétne prahové hodnoty, skríningový panel aj hranice použiteľnosti klasifikácie.</em></p>
 
 <p>Kardiovaskulárne ochorenia, chronická choroba obličiek, obezita, diabetes mellitus 2. typu, artériová hypertenzia a poruchy metabolizmu lipidov sa tradične hodnotili oddelene. V skutočnosti ich spája spoločná patofyziológia: rovnaké mechanizmy poškodzujú cievy, srdce, obličky aj pečeň a spoločne zvyšujú riziko predčasného úmrtia.</p>
 
@@ -56,17 +56,17 @@ $articles[] = [
 
 <p>V popularizačných zhrnutiach sa nadmerná, najmä viscerálna adipozita označuje za základnú príčinu CKM syndrómu. Toto zjednodušenie správne vystihuje jej význam, ale pri doslovnom čítaní je príliš kategorické.</p>
 
-<p>Dysfunkčná tuková masa je nepochybne jedným z najdôležitejších mechanizmov — cez inzulínovú rezistenciu, chronický zápal nízkeho stupňa, aktiváciu sympatikového a renín-angiotenzín-aldosterónového systému, endotelovú dysfunkciu a ektopické ukladanie tuku. Nie je však jediným. CKM fenotyp významne formujú aj genetická predispozícia, vek, sociálne a ekonomické determinanty zdravia, kvalita stravy a pohybová aktivita, fajčenie, poruchy spánku, primárne ochorenia obličiek, lieky a ďalšie pridružené ochorenia.</p>
+<p>Dysfunkčná tuková masa je nepochybne jedným z najdôležitejších mechanizmov. Pôsobí cez inzulínovú rezistenciu, chronický zápal nízkeho stupňa, aktiváciu sympatikového a renín-angiotenzín-aldosterónového systému, endotelovú dysfunkciu a ektopické ukladanie tuku. Nie je však jediným. CKM fenotyp významne formujú aj genetická predispozícia, vek, sociálne a ekonomické determinanty zdravia, kvalita stravy a pohybová aktivita, fajčenie, poruchy spánku, primárne ochorenia obličiek, lieky a ďalšie pridružené ochorenia.</p>
 
-<p>Presnejšie je preto hovoriť o adipozite ako o <strong>ústrednom a často modifikovateľnom mechanizme</strong>, nie ako o univerzálnej jedinej príčine. Rozdiel nie je akademický: u štíhleho pacienta s CKM fenotypom vedie prvá formulácia k tomu, že sa riziko podcení.</p>
+<p>Presnejšie je preto hovoriť o adipozite ako o <strong>ústrednom a často modifikovateľnom mechanizme</strong>, nie ako o univerzálnej jedinej príčine. Rozdiel nie je akademický: ak sa adipozita chápe ako jediná príčina, u štíhleho pacienta s CKM fenotypom sa riziko ľahko podcení.</p>
 
 <h2>Päť štádií, nie štyri</h2>
 
-<p>Zhrnutia usmernenia nezriedka uvádzajú štyri štádiá. Úplná klasifikácia ich má <strong>päť — od štádia 0 po štádium 4</strong>. Vynechanie štádia 0 nie je detail, pretože práve ono definuje skupinu, u ktorej má prevencia najväčší zmysel.</p>
+<p>Zhrnutia usmernenia nezriedka uvádzajú štyri štádiá. Úplná klasifikácia ich má <strong>päť, od štádia 0 po štádium 4</strong>. Vynechanie štádia 0 nie je detail, pretože práve ono definuje skupinu, u ktorej má prevencia najväčší zmysel.</p>
 
 <h3>Štádium 0: bez identifikovaných rizikových faktorov</h3>
 
-<p>Pacient nemá nadmernú ani dysfunkčnú adipozitu, metabolické rizikové faktory, chronickú chorobu obličiek ani klinické či subklinické kardiovaskulárne ochorenie. Cieľom je udržanie tohto stavu — kvalitná strava, pravidelná pohybová aktivita, nefajčenie, primeraná telesná hmotnosť, dostatočný spánok a periodické prehodnotenie rizika.</p>
+<p>Pacient nemá nadmernú ani dysfunkčnú adipozitu, metabolické rizikové faktory, chronickú chorobu obličiek ani klinické či subklinické kardiovaskulárne ochorenie. Cieľom je udržať tento stav: kvalitná strava, pravidelná pohybová aktivita, nefajčenie, primeraná telesná hmotnosť, dostatočný spánok a periodické prehodnotenie rizika.</p>
 
 <h3>Štádium 1: nadmerná alebo dysfunkčná adipozita a prediabetes</h3>
 
@@ -76,19 +76,19 @@ $articles[] = [
 
 <h3>Štádium 2: metabolické rizikové faktory alebo chronická choroba obličiek</h3>
 
-<p>Pacienti s jedným alebo viacerými manifestnými metabolickými rizikovými faktormi — artériovou hypertenziou, diabetom, hypertriglyceridémiou alebo inou aterogénnou dyslipidémiou, metabolickým syndrómom — alebo s chronickou chorobou obličiek, ktorá ešte nedosahuje veľmi vysoké riziko zodpovedajúce štádiu 3.</p>
+<p>Pacienti s jedným alebo viacerými manifestnými metabolickými rizikovými faktormi (artériovou hypertenziou, diabetom, hypertriglyceridémiou alebo inou aterogénnou dyslipidémiou, metabolickým syndrómom) alebo s chronickou chorobou obličiek, ktorá ešte nedosahuje veľmi vysoké riziko zodpovedajúce štádiu 3.</p>
 
-<p>Usmernenie tu zdôrazňuje <strong>každoročné vyšetrenie pomeru albumínu ku kreatinínu v moči (uACR)</strong> u rizikových pacientov. Samotný sérový kreatinín nestačí — albuminúria môže signalizovať glomerulárne a cievne poškodenie ešte pred poklesom odhadovanej glomerulovej filtrácie.</p>
+<p>Usmernenie tu zdôrazňuje <strong>každoročné vyšetrenie pomeru albumínu ku kreatinínu v moči (uACR)</strong> u rizikových pacientov. Samotný sérový kreatinín nestačí: albuminúria môže signalizovať glomerulárne a cievne poškodenie ešte pred poklesom odhadovanej glomerulovej filtrácie.</p>
 
 <h3>Štádium 3: subklinické kardiovaskulárne ochorenie alebo rizikový ekvivalent</h3>
 
 <p>Pacienti bez klinicky manifestného kardiovaskulárneho ochorenia, ktorí však majú jeho subklinické prejavy alebo rizikový ekvivalent. Prahové hodnoty sú konkrétne:</p>
 
 <ul>
-  <li><strong>subklinické koronárne ochorenie</strong> — kalciové skóre koronárnych artérií nad 100;</li>
-  <li><strong>subklinické srdcové zlyhávanie</strong> — NT-proBNP ≥ 125 pg/ml spolu s echokardiografickým dôkazom komorovej dysfunkcie;</li>
+  <li><strong>subklinické koronárne ochorenie</strong> – kalciové skóre koronárnych artérií nad 100;</li>
+  <li><strong>subklinické srdcové zlyhávanie</strong> – NT-proBNP ≥ 125 pg/ml spolu s echokardiografickým dôkazom komorovej dysfunkcie;</li>
   <li><strong>chronická choroba obličiek s veľmi vysokým rizikom</strong> podľa kombinácie eGFR a albuminúrie v tabuľke KDIGO, prípadne štádium G4 alebo G5;</li>
-  <li><strong>vysoké predikované riziko</strong> — desaťročné riziko nad 20 % podľa rovníc PREVENT.</li>
+  <li><strong>vysoké predikované riziko</strong> – desaťročné riziko nad 20 % podľa rovníc PREVENT.</li>
 </ul>
 
 <p>Kalciové skóre, natriuretické peptidy ani echokardiografia však nie sú vyšetreniami pre každého. Zmysel majú vtedy, keď výsledok môže zmeniť intenzitu liečby alebo pomôcť pri spoločnom rozhodovaní s pacientom.</p>
@@ -140,25 +140,25 @@ $articles[] = [
 
 <h3>Nesteroidné antagonisty mineralokortikoidových receptorov</h3>
 
-<p>U vybraných pacientov s diabetom 2. typu, chronickou chorobou obličiek a pretrvávajúcou albuminúriou napriek štandardnej liečbe znižujú kardiovaskulárne a renálne riziko. Podmienkou je primeraná funkcia obličiek a dôsledná kontrola kaliémie — hyperkaliémia zostáva klinicky významným rizikom.</p>
+<p>U vybraných pacientov s diabetom 2. typu, chronickou chorobou obličiek a pretrvávajúcou albuminúriou napriek štandardnej liečbe znižujú kardiovaskulárne a renálne riziko. Podmienkou je primeraná funkcia obličiek a dôsledná kontrola kaliémie, pretože hyperkaliémia zostáva klinicky významným rizikom.</p>
 
 <h3>Lipidy a antitrombotická liečba</h3>
 
-<p>Statíny sú základom liečby aterosklerotického rizika; intenzita sa riadi celkovým rizikom, prítomnosťou klinického alebo subklinického ochorenia, diabetom, chronickou chorobou obličiek a toleranciou. <strong>Kyselina acetylsalicylová nemá byť podávaná automaticky</strong> každému pacientovi s CKM syndrómom — pri primárnej prevencii treba individuálne zvážiť prínos oproti riziku krvácania.</p>
+<p>Statíny sú základom liečby aterosklerotického rizika; intenzita sa riadi celkovým rizikom, prítomnosťou klinického alebo subklinického ochorenia, diabetom, chronickou chorobou obličiek a toleranciou. <strong>Kyselina acetylsalicylová nemá byť podávaná automaticky</strong> každému pacientovi s CKM syndrómom; pri primárnej prevencii treba individuálne zvážiť prínos oproti riziku krvácania.</p>
 
 <h2>Model PREVENT a doplňujúce vyšetrenia</h2>
 
-<p>Rovnice PREVENT odhadujú kardiovaskulárne riziko s využitím údajov relevantných pre CKM kontinuum a oproti starším modelom lepšie integrujú renálne a metabolické charakteristiky. Rizikový model však nenahrádza klinický úsudok — výsledok ovplyvňuje kvalita vstupných údajov, populácia, v ktorej bol model validovaný, vek pacienta, pridružené ochorenia aj faktory, ktoré model nezahŕňa.</p>
+<p>Rovnice PREVENT odhadujú kardiovaskulárne riziko s využitím údajov relevantných pre CKM kontinuum a oproti starším modelom lepšie integrujú renálne a metabolické charakteristiky. Rizikový model však nenahrádza klinický úsudok. Výsledok ovplyvňuje kvalita vstupných údajov, populácia, v ktorej bol model validovaný, vek pacienta, pridružené ochorenia aj faktory, ktoré model nezahŕňa.</p>
 
 <p>Kalciové skóre pomáha najmä pri neistote o intenzite hypolipidemickej liečby; NT-proBNP a echokardiografia môžu u vybraných vysokorizikových pacientov odhaliť preklinické srdcové zlyhávanie. Ani jedno nie je plošným vyšetrením pre všetkých asymptomatických.</p>
 
-<h2>Čo staging dokáže a čo nie</h2>
+<h2>Čo klasifikácia štádií dokáže a čo nie</h2>
 
-<p>Staging prináša spoločný jazyk pre kardiológov, nefrológov, diabetológov, obezitológov a všeobecných lekárov a pomáha identifikovať pacientov, u ktorých treba liečbu zintenzívniť skôr, než vznikne manifestné poškodenie. Má však hranice:</p>
+<p>Klasifikácia štádií prináša spoločný jazyk pre kardiológov, nefrológov, diabetológov, obezitológov a všeobecných lekárov a pomáha identifikovať pacientov, u ktorých treba liečbu zintenzívniť skôr, než vznikne manifestné poškodenie. Má však hranice:</p>
 
 <ol>
   <li><strong>Nie je biologicky absolútny.</strong> Jednotlivé štádiá zahŕňajú heterogénne skupiny.</li>
-  <li><strong>Progresia nemusí byť lineárna.</strong> Pacient nemusí prejsť každým štádiom postupne — predstava nevyhnutného sledu štádií je zjednodušením, ktoré usmernenie nepodporuje.</li>
+  <li><strong>Progresia nemusí byť lineárna.</strong> Pacient nemusí prejsť každým štádiom postupne. Predstava nevyhnutného sledu štádií je zjednodušením, ktoré usmernenie nepodporuje.</li>
   <li><strong>Štádium nenahrádza diagnózu.</strong> Etiológia chronickej choroby obličiek, typ srdcového zlyhávania či mechanizmus obezity zostávajú rozhodujúce.</li>
   <li><strong>Nie každý marker patrí do plošného skríningu.</strong> Vyšetrenie má mať vopred definovaný klinický dôsledok.</li>
   <li><strong>Odporúčania nemožno mechanicky prenášať.</strong> Liečba závisí od indikácie, kontraindikácií, tolerancie, funkcie obličiek a preferencií pacienta.</li>
@@ -166,23 +166,23 @@ $articles[] = [
 
 <h2>Význam pre nefrologickú prax</h2>
 
-<p>CKM koncept posúva nefrológiu k skoršej prevencii. Nefrológ nemá hodnotiť len eGFR a čas do zlyhania obličiek — rovnako významné sú albuminúria, kardiovaskulárne riziko, srdcové zlyhávanie, obezita a telesná kompozícia, diabetes, tlak krvi, metabolická steatotická choroba pečene a bezpečná kombinácia orgánovo protektívnych liekov.</p>
+<p>CKM koncept posúva nefrológiu k skoršej prevencii. Nefrológ nemá hodnotiť len eGFR a čas do zlyhania obličiek. Rovnako významné sú albuminúria, kardiovaskulárne riziko, srdcové zlyhávanie, obezita a telesná kompozícia, diabetes, tlak krvi, metabolická steatotická choroba pečene a bezpečná kombinácia orgánovo protektívnych liekov.</p>
 
-<p>Rovnako dôležité je zabrániť terapeutickej zotrvačnosti. Pacient s albuminurickou chronickou chorobou obličiek, diabetom a vysokým kardiovaskulárnym rizikom potrebuje spravidla viac než kontrolu glykémie a tlaku krvi — rozhodujúca je kombinovaná redukcia reziduálneho renálneho aj kardiovaskulárneho rizika.</p>
+<p>Rovnako dôležité je zabrániť terapeutickej zotrvačnosti. Pacient s albuminurickou chronickou chorobou obličiek, diabetom a vysokým kardiovaskulárnym rizikom potrebuje spravidla viac než kontrolu glykémie a tlaku krvi; rozhodujúca je kombinovaná redukcia reziduálneho renálneho aj kardiovaskulárneho rizika.</p>
 
 <h2>Záver</h2>
 
 <p>Najväčším prínosom CKM rámca je presun pozornosti od liečby už vzniknutých komplikácií k včasnej identifikácii rizika. Prakticky najdôležitejšie sú súčasné hodnotenie eGFR a uACR, dôsledná liečba hypertenzie a dyslipidémie, aktívny manažment obezity a diabetu a využívanie liekov s preukázaným kardiálnym a renálnym účinkom podľa konkrétnych indikácií.</p>
 
-<p>Staging má pritom slúžiť ako organizačný a rozhodovací rámec, nie ako náhrada individuálnej diagnostiky. Kvalitná starostlivosť zostáva založená na etiológii ochorenia, absolútnom riziku, kontraindikáciách, preferenciách pacienta a koordinácii viacerých odborností.</p>
+<p>Klasifikácia štádií má pritom slúžiť ako organizačný a rozhodovací rámec, nie ako náhrada individuálnej diagnostiky. Kvalitná starostlivosť zostáva založená na etiológii ochorenia, absolútnom riziku, kontraindikáciách, preferenciách pacienta a koordinácii viacerých odborností.</p>
 
 <h3>Súvisiace články</h3>
 
 <ul>
-  <li><a href="article.php?slug=ckm-syndrom-prva-multidisciplinarna-smernica-2026">Prvá multidisciplinárna CKM smernica (AHA/ACC/ADA/ASN 2026)</a> — čo je nové a desať hlavných odporúčaní.</li>
-  <li><a href="article.php?slug=ckm-syndrom-usmernenia-acc-aha-ada-asn-nefrologia">CKM syndróm ako jeden rámec</a> — čo usmernenia znamenajú pre nefrologickú ambulanciu.</li>
+  <li><a href="article.php?slug=ckm-syndrom-prva-multidisciplinarna-smernica-2026">Prvá multidisciplinárna CKM smernica (AHA/ACC/ADA/ASN 2026)</a> – čo je nové a desať hlavných odporúčaní.</li>
+  <li><a href="article.php?slug=ckm-syndrom-usmernenia-acc-aha-ada-asn-nefrologia">CKM syndróm ako jeden rámec</a> – čo usmernenia znamenajú pre nefrologickú ambulanciu.</li>
   <li><a href="article.php?slug=5-kritickych-chyb-manazment-ckm-syndromu-nefrologia">5 kritických chýb v manažmente CKM syndrómu</a>.</li>
-  <li><a href="article.php?slug=finerenon-ckm-syndrom-dm2-ckd-fidelity">Finerenón pri CKM syndróme</a> — analýza FIDELITY.</li>
+  <li><a href="article.php?slug=finerenon-ckm-syndrom-dm2-ckd-fidelity">Finerenón pri CKM syndróme</a> – analýza FIDELITY.</li>
 </ul>
 
 <hr>
@@ -195,7 +195,7 @@ $articles[] = [
   <li><strong>American Heart Association.</strong> <em>First-ever clinical guideline issued for cardiovascular-kidney-metabolic (CKM) syndrome.</em> Newsroom, 2026. <a href="https://newsroom.heart.org/news/first-ever-guideline-on-cardiovascular-kidney-metabolic-syndrome-issued" target="_blank" rel="noopener noreferrer">AHA Newsroom</a>.</li>
 </ol>
 
-<p><em><strong>Poznámka k dôkazom:</strong> Bibliografické údaje usmernenia vrátane kompletného autorstva písacieho výboru boli overené v Europe PMC (Circulation 2026;154(4):e50–e158, PMID 42263157). Prahové hodnoty pre štádium 3 — kalciové skóre nad 100, NT-proBNP ≥ 125 pg/ml s echokardiografickým dôkazom komorovej dysfunkcie, veľmi vysoké riziko chronickej choroby obličiek podľa tabuľky KDIGO a desaťročné riziko nad 20 % podľa rovníc PREVENT — boli overené proti publikovanému opisu stagingu. Plné znenie usmernenia je rozsiahly dokument a nebolo pri príprave článku prečítané v celom rozsahu; jednotlivé odporúčania preto nie sú citované s uvedením triedy odporúčania a úrovne dôkazov. Dve spresnenia oproti populárnym zhrnutiam — že klasifikácia má <strong>päť</strong> štádií vrátane štádia 0 (nie štyri) a že adipozita je ústredným, <strong>nie jediným</strong> mechanizmom — sú vlastnou korekciou. Časti o hraniciach stagingu a o význame pre nefrologickú prax sú vlastným odborným spracovaním.</em></p>
+<p><em><strong>Poznámka k dôkazom:</strong> Bibliografické údaje usmernenia vrátane kompletného autorstva písacieho výboru boli overené v Europe PMC (Circulation 2026;154(4):e50–e158, PMID 42263157). Prahové hodnoty pre štádium 3 – kalciové skóre nad 100, NT-proBNP ≥ 125 pg/ml s echokardiografickým dôkazom komorovej dysfunkcie, veľmi vysoké riziko chronickej choroby obličiek podľa tabuľky KDIGO a desaťročné riziko nad 20 % podľa rovníc PREVENT – boli overené proti publikovanému opisu klasifikácie štádií. Plné znenie usmernenia je rozsiahly dokument a nebolo pri príprave článku prečítané v celom rozsahu; jednotlivé odporúčania preto nie sú citované s uvedením triedy odporúčania a úrovne dôkazov. Dve spresnenia oproti populárnym zhrnutiam – že klasifikácia má <strong>päť</strong> štádií vrátane štádia 0 (nie štyri) a že adipozita je ústredným, <strong>nie jediným</strong> mechanizmom – sú vlastnou korekciou. Časti o hraniciach klasifikácie štádií a o význame pre nefrologickú prax sú vlastným odborným spracovaním.</em></p>
 HTML,
 ];
 

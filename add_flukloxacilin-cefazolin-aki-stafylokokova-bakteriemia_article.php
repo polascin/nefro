@@ -29,11 +29,11 @@ $articles[] = [
 
 <p>Z 1408 zaradených pacientov vzniklo AKI u 483 (34,3 %). Pri flukloxacilíne to bolo 466 z 1324 pacientov (35,2 %), pri cefazolíne 17 z 84 (20,2 %); rozdiel bol štatisticky významný (P = 0,004). Po multivariabilnej úprave zostal flukloxacilín spojený s vyššou šancou na AKI (upravený pomer šancí 2,37; 95 % interval spoľahlivosti 1,30 – 4,55).</p>
 
-<p>Práca nestojí osamotene a nie je ani prvým dôkazom v tejto otázke. Nadväzuje na dve randomizované klinické skúšania publikované krátko pred ňou — platformové skúšanie SNAP a francúzske skúšanie CloCeBa —, ktoré rovnaký rozdiel v renálnej bezpečnosti preukázali v randomizovanom usporiadaní. Prínos holandskej kohorty je inde: opisuje, <em>kedy</em> AKI vzniká, <em>ako ťažké</em> je, <em>ako sa</em> obličková funkcia zotavuje a či na tom niečo mení <em>dávka</em> flukloxacilínu.</p>
+<p>Práca nie je prvým dôkazom v tejto otázke. Nadväzuje na dve randomizované klinické skúšania publikované krátko pred ňou – platformové skúšanie SNAP a francúzske skúšanie CloCeBa –, ktoré rovnaký rozdiel v renálnej bezpečnosti preukázali v randomizovanom usporiadaní. Prínos holandskej kohorty je inde: opisuje, <em>kedy</em> AKI vzniká, <em>ako ťažké</em> je, <em>ako sa</em> obličková funkcia zotavuje a či na tom niečo mení <em>dávka</em> flukloxacilínu.</p>
 
 <h2>Voľba antibiotika pri stafylokokovej bakteriémii</h2>
 
-<p>Bakteriémia spôsobená <em>S. aureus</em> sa môže komplikovať infekčnou endokarditídou, osteomyelitídou, septickou artritídou, epidurálnym abscesom, metastatickými infekčnými ložiskami a sepsou s orgánovou dysfunkciou. Pri kmeni citlivom na meticilín (<em>meticillin-susceptible S. aureus</em>, MSSA) sa uprednostňuje betalaktámové antibiotikum. V európskej praxi je to najčastejšie protistafylokokový penicilín — flukloxacilín, prípadne kloxacilín alebo oxacilín. Alternatívou je cefazolín, cefalosporín prvej generácie.</p>
+<p>Bakteriémia spôsobená <em>S. aureus</em> sa môže komplikovať infekčnou endokarditídou, osteomyelitídou, septickou artritídou, epidurálnym abscesom, metastatickými infekčnými ložiskami a sepsou s orgánovou dysfunkciou. Pri kmeni citlivom na meticilín (<em>meticillin-susceptible S. aureus</em>, MSSA) sa uprednostňuje betalaktámové antibiotikum. V európskej praxi je to najčastejšie protistafylokokový penicilín – flukloxacilín, prípadne kloxacilín alebo oxacilín. Alternatívou je cefazolín, cefalosporín prvej generácie.</p>
 
 <p>Rozhodnutie nemožno založiť iba na nefrotoxicite. Treba zohľadniť citlivosť izolátu, miesto a rozsah infekcie, prítomnosť endokarditídy alebo hlbokého ložiska, kvalitu kontroly zdroja infekcie, funkciu obličiek a potrebu úpravy dávky, alergologickú anamnézu, liekové interakcie, farmakokinetické a farmakodynamické vlastnosti liečiva, ako aj lokálnu epidemiológiu a mikrobiologické odporúčania.</p>
 
@@ -76,7 +76,7 @@ $articles[] = [
 
 <p>V skúšaní SNAP bol cefazolín non-inferiórny voči protistafylokokovému penicilínu z hľadiska 90-dňovej mortality (15,0 % verzus 17,0 %; upravený pomer šancí 0,81; 95 % kredibilný interval 0,59 – 1,12; posteriórna pravdepodobnosť non-inferiority 99,2 %) a súčasne mal nižší výskyt AKI. V skúšaní CloCeBa bol cefazolín non-inferiórny v zloženom ukazovateli klinickej účinnosti a mal menej závažných nežiaducich udalostí (15 % verzus 27 %; P = 0,010). Do CloCeBa sa však <strong>nezaraďovali</strong> pacienti s vnútrocievnym implantátom ani s podozrením na infekciu centrálneho nervového systému, čo obmedzuje prenos jeho záverov na tieto situácie.</p>
 
-<p>Holandská kohorta má preto iný účel než dokazovať, že rozdiel existuje. Odpovedá na otázky, ktoré randomizované skúšania nechali otvorené.</p>
+<p>Holandská kohorta preto nemusí dokazovať, že rozdiel existuje; odpovedá na otázky, ktoré randomizované skúšania nechali otvorené.</p>
 
 <h2>Usporiadanie štúdie</h2>
 
@@ -88,7 +88,7 @@ $articles[] = [
 
 <h3>Ako sa určovalo AKI</h3>
 
-<p>AKI sa klasifikovalo podľa kritérií KDIGO zo všetkých meraní sérového kreatinínu po indexovej hemokultúre počas hospitalizácie. <strong>Kritérium diurézy sa nepoužilo</strong> — objem moču sa v týchto centrách rutinne nemeral. Zotavenie funkcie obličiek bolo definované ako návrat kreatinínu pod 1,5-násobok východiskovej hodnoty a súčasne najviac 26,5 µmol/l nad ňu do 30 dní od vzniku AKI.</p>
+<p>AKI sa klasifikovalo podľa kritérií KDIGO zo všetkých meraní sérového kreatinínu po indexovej hemokultúre počas hospitalizácie. <strong>Kritérium diurézy sa nepoužilo</strong> – objem moču sa v týchto centrách rutinne nemeral. Zotavenie funkcie obličiek bolo definované ako návrat kreatinínu pod 1,5-násobok východiskovej hodnoty a súčasne najviac 26,5 µmol/l nad ňu do 30 dní od vzniku AKI.</p>
 
 <p>Východisková koncentrácia kreatinínu sa určovala hierarchicky: najprv z mediánu ambulantných hodnôt 100 až 90 dní pred prijatím (156 pacientov), potom z mediánu hodnôt 365 až 7 dní pred prijatím (796 pacientov). Ak nebola k dispozícii žiadna hodnota spred hospitalizácie, východisková koncentrácia sa <strong>odhadla podľa veku a pohlavia</strong> (456 pacientov, teda takmer tretina kohorty). Distribúcia meraných a odhadnutých východiskových hodnôt sa medzi liečebnými skupinami nelíšila (P = 0,911).</p>
 
@@ -154,7 +154,7 @@ $articles[] = [
 
 <p>Neupravený absolútny rozdiel vo výskyte AKI predstavoval 15 percentuálnych bodov (vlastný prepočet z publikovaných podielov). Neupravený pomer šancí pre cefazolín bol 0,47 (95 % interval spoľahlivosti 0,25 – 0,82).</p>
 
-<p>Multivariabilný logistický regresný model sa upravoval o vek, pohlavie, východiskový kreatinín, Charlsonov index komorbidít, prijatie na jednotku intenzívnej starostlivosti, spôsob získania infekcie, nemocnicu, počet súbežných nefrotoxických liekov a — samostatne, pre ich dobre doložený nefrotoxický potenciál — o použitie vankomycínu a aminoglykozidov. Po tejto úprave zostal flukloxacilín spojený s vyššou šancou na AKI (upravený pomer šancí 2,37; 95 % interval spoľahlivosti 1,30 – 4,55).</p>
+<p>Multivariabilný logistický regresný model sa upravoval o vek, pohlavie, východiskový kreatinín, Charlsonov index komorbidít, prijatie na jednotku intenzívnej starostlivosti, spôsob získania infekcie, nemocnicu, počet súbežných nefrotoxických liekov a – samostatne, pre ich dobre doložený nefrotoxický potenciál – o použitie vankomycínu a aminoglykozidov. Po tejto úprave zostal flukloxacilín spojený s vyššou šancou na AKI (upravený pomer šancí 2,37; 95 % interval spoľahlivosti 1,30 – 4,55).</p>
 
 <p>Citlivostná analýza obmedzená na pacientov s <em>nameraným</em> východiskovým kreatinínom priniesla podobný výsledok (upravený pomer šancí 2,59; 95 % interval spoľahlivosti 1,29 – 5,63). Doplnková analýza zohľadňujúca rozdielnu dĺžku hospitalizácie ukázala mieru výskytu AKI 0,84 na 100 pacientodní pri cefazolíne a 1,66 pri flukloxacilíne; medzi centrami bola u pacientov na flukloxacilíne podobná (1,43 až 1,89). Asociácia teda nebola vysvetliteľná ani dlhším sledovaním, ani jedinou nemocnicou.</p>
 
@@ -166,19 +166,19 @@ $articles[] = [
 
 <p>Rozdelenie načasovania (bez AKI, skoré AKI do 7 dní, neskoré AKI po 7 dňoch) sa medzi liečebnými skupinami významne líšilo (P = 0,019). Skoré AKI vzniklo u 15,5 % pacientov na cefazolíne a u 28,3 % pacientov na flukloxacilíne, neskoré u 4,8 % a 6,9 %.</p>
 
-<p>V multinomiálnej regresii bol flukloxacilín spojený s vyššou šancou na skoré AKI (pomer šancí 2,51; 95 % interval spoľahlivosti 1,28 – 4,93; P = 0,007). Pri neskorom AKI bol bodový odhad podobný, interval spoľahlivosti však zahŕňal jednotku a asociácia nebola štatisticky významná (pomer šancí 2,08; 95 % interval spoľahlivosti 0,63 – 6,86; P = 0,23). Neskorých prípadov bolo iba 95, z toho v cefazolínovej skupine štyri — analýza teda nemá silu rozdiel spoľahlivo potvrdiť ani vylúčiť.</p>
+<p>V multinomiálnej regresii bol flukloxacilín spojený s vyššou šancou na skoré AKI (pomer šancí 2,51; 95 % interval spoľahlivosti 1,28 – 4,93; P = 0,007). Pri neskorom AKI bol bodový odhad podobný, interval spoľahlivosti však zahŕňal jednotku a asociácia nebola štatisticky významná (pomer šancí 2,08; 95 % interval spoľahlivosti 0,63 – 6,86; P = 0,23). Neskorých prípadov bolo iba 95, z toho v cefazolínovej skupine štyri – analýza teda nemá silu rozdiel spoľahlivo potvrdiť ani vylúčiť.</p>
 
 <h3>Čo skorý nástup znamená a čo neznamená</h3>
 
 <p>Poškodenie obličiek, ktoré sa prejaví približne jeden deň po indexovej hemokultúre, nemôže byť dôsledkom niekoľkodňovej kumulatívnej expozície antibiotiku. Ponúka sa preto výklad, že ide prevažne o poškodenie zo sepsy, hemodynamickej nestability, hypovolémie a predchádzajúcich zásahov, nie o liekovú toxicitu.</p>
 
-<p>Tento výklad má však tri obmedzenia. Po prvé, pacienti, ktorí spĺňali kritériá AKI už <em>pred</em> indexovou hemokultúrou, boli z kohorty vylúčení — zachytené epizódy teda vznikli až po nej. Po druhé, asociácia s flukloxacilínom pretrvala po úprave o východiskovú funkciu obličiek a o ukazovatele závažnosti ochorenia, čo naznačuje, že rozdiel medzi skupinami nevysvetľuje samotná ťažkosť sepsy. Po tretie, podľa konsenzu ADQI o sepsou podmienenom AKI nie je nefrotoxicita antibiotika samostatná entita oddelená od poškodenia zo sepsy; obe pôsobia súčasne a delia sa o rovnaké mechanizmy.</p>
+<p>Tento výklad má však tri obmedzenia. Po prvé, pacienti, ktorí spĺňali kritériá AKI už <em>pred</em> indexovou hemokultúrou, boli z kohorty vylúčení – zachytené epizódy teda vznikli až po nej. Po druhé, asociácia s flukloxacilínom pretrvala po úprave o východiskovú funkciu obličiek a o ukazovatele závažnosti ochorenia, čo naznačuje, že rozdiel medzi skupinami nevysvetľuje samotná ťažkosť sepsy. Po tretie, podľa konsenzu ADQI o sepsou podmienenom AKI nie je nefrotoxicita antibiotika samostatná entita oddelená od poškodenia zo sepsy; obe pôsobia súčasne a delia sa o rovnaké mechanizmy.</p>
 
 <p>Autori sami upozorňujú, že veľmi skorý nástup <strong>nezodpovedá</strong> klasickému oneskorenému obrazu akútnej tubulointersticiálnej nefritídy spojenej s flukloxacilínom, ktorá sa typicky rozvíja sedem až desať dní po začatí liečby. To nesvedčí proti liekovému podielu, ale naznačuje, že sa uplatňujú aj iné alebo viaceré mechanizmy súčasne.</p>
 
 <h2>Závažnosť AKI a zotavenie funkcie obličiek</h2>
 
-<p>Medzi pacientmi, u ktorých AKI vzniklo, sa rozdelenie štádií medzi flukloxacilínom a cefazolínom významne nelíšilo (P = 0,599). Hlavný rozdiel sa teda týkal pravdepodobnosti vzniku AKI, nie jeho závažnosti po vzniku. Presnosť tohto porovnania však obmedzuje veľmi malý počet pacientov s AKI v cefazolínovej skupine — iba 17 osôb. Neprítomnosť štatisticky významného rozdielu preto nie je dôkazom rovnakej závažnosti.</p>
+<p>Medzi pacientmi, u ktorých AKI vzniklo, sa rozdelenie štádií medzi flukloxacilínom a cefazolínom významne nelíšilo (P = 0,599). Hlavný rozdiel sa teda týkal pravdepodobnosti vzniku AKI, nie jeho závažnosti po vzniku. Presnosť tohto porovnania však obmedzuje veľmi malý počet pacientov s AKI v cefazolínovej skupine – iba 17 osôb. Neprítomnosť štatisticky významného rozdielu preto nie je dôkazom rovnakej závažnosti.</p>
 
 <p>Pravdepodobnosť zotavenia funkcie obličiek do 30 dní klesala so závažnosťou AKI, zatiaľ čo úmrtnosť pred zotavením rástla:</p>
 
@@ -217,7 +217,7 @@ $articles[] = [
 
 <p>Približne polovica pacientov s AKI 3. štádia teda do 30 dní nedosiahla zotavenie definované v štúdii. Údaje potvrdzujú klinický význam aj miernejších foriem AKI: nejde iba o prechodnú laboratórnu odchýlku. AKI pri závažnej infekcii môže predĺžiť hospitalizáciu, obmedziť antibiotickú liečbu a zvýšiť riziko chronickej choroby obličiek, ďalšej epizódy AKI aj úmrtia.</p>
 
-<p>Sledovanie zotavenia bolo obmedzené na 30 dní od vzniku AKI alebo po posledné meranie kreatinínu — podľa toho, čo nastalo skôr. Z publikovaných údajov preto nemožno posúdiť dlhodobejší vývoj funkcie obličiek ani podiel pacientov s pretrvávajúcou dysfunkciou po tomto období.</p>
+<p>Sledovanie zotavenia bolo obmedzené na 30 dní od vzniku AKI alebo po posledné meranie kreatinínu – podľa toho, čo nastalo skôr. Z publikovaných údajov preto nemožno posúdiť dlhodobejší vývoj funkcie obličiek ani podiel pacientov s pretrvávajúcou dysfunkciou po tomto období.</p>
 
 <h2>Nižšia dávka flukloxacilínu nebola spojená s nižším výskytom AKI</h2>
 
@@ -243,23 +243,23 @@ $articles[] = [
 
 <h3>Akútna tubulointersticiálna nefritída</h3>
 
-<p>Betalaktámové antibiotiká patria medzi klasické príčiny liekovej akútnej tubulointersticiálnej nefritídy. Klinicky sa môže prejaviť vzostupom kreatinínu, sterilnou leukocytúriou, hematúriou, proteinúriou alebo eozinofíliou. Triáda horúčky, exantému a eozinofílie je málo citlivá a v úplnej podobe u väčšiny pacientov chýba. Ako však uvádzajú autori, typický odstup sedem až desať dní od začiatku liečby sa s pozorovaným mediánom 1,3 dňa nezhoduje — tubulointersticiálna nefritída teda ťažko vysvetľuje väčšinu zachytených epizód.</p>
+<p>Betalaktámové antibiotiká patria medzi klasické príčiny liekovej akútnej tubulointersticiálnej nefritídy. Klinicky sa môže prejaviť vzostupom kreatinínu, sterilnou leukocytúriou, hematúriou, proteinúriou alebo eozinofíliou. Triáda horúčky, exantému a eozinofílie je málo citlivá a v úplnej podobe u väčšiny pacientov chýba. Ako však uvádzajú autori, typický odstup sedem až desať dní od začiatku liečby sa s pozorovaným mediánom 1,3 dňa nezhoduje – tubulointersticiálna nefritída teda ťažko vysvetľuje väčšinu zachytených epizód.</p>
 
 <h3>Akútne tubulárne poškodenie a sepsou podmienené AKI</h3>
 
 <p>Pri sepse môže tubulárne poškodenie vzniknúť v dôsledku porúch mikrocirkulácie, zápalovej odpovede, mitochondriálnej dysfunkcie, hypoperfúzie a súbežného pôsobenia nefrotoxických látok. Antibiotická expozícia je pritom iba jednou zložkou multifaktoriálneho poškodenia. Konsenzus ADQI výslovne zahŕňa poškodenie z liečby sepsy do konceptu sepsou podmieneného AKI, takže „toxické“ a „septické“ AKI nie sú v klinickej praxi oddelené entity.</p>
 
-<h3>Sodíková záťaž — často preceňovaný rozdiel</h3>
+<h3>Sodíková záťaž – často preceňovaný rozdiel</h3>
 
-<p>Vysoké intravenózne dávky protistafylokokových penicilínov sa niekedy uvádzajú ako zdroj významnej sodíkovej záťaže. Presnejší pohľad je striedmejší: 1 g flukloxacilínu sodného obsahuje približne 2,26 mmol (52 mg) sodíka, 1 g cefazolínu sodného približne 2,1 mmol (48 mg). <strong>Na gram liečiva sú teda takmer rovnaké</strong> a rozdiel v dennej záťaži vzniká iba z rozdielnej dennej dávky — pri 12 g flukloxacilínu ide o približne 27 mmol (asi 620 mg) sodíka denne (vlastný prepočet z údajov v súhrne charakteristických vlastností lieku). Klinicky to môže byť dôležité pri srdcovom zlyhávaní, pokročilej chorobe obličiek alebo objemovom preťažení, štúdia však sodíkovú záťaž nehodnotila a nepreukázala, že by ňou bol rozdiel vo výskyte AKI sprostredkovaný.</p>
+<p>Vysoké intravenózne dávky protistafylokokových penicilínov sa niekedy uvádzajú ako zdroj významnej sodíkovej záťaže. Presnejší pohľad je striedmejší: 1 g flukloxacilínu sodného obsahuje približne 2,26 mmol (52 mg) sodíka, 1 g cefazolínu sodného približne 2,1 mmol (48 mg). <strong>Na gram liečiva sú teda takmer rovnaké</strong> a rozdiel v dennej záťaži vzniká iba z rozdielnej dennej dávky – pri 12 g flukloxacilínu ide o približne 27 mmol (asi 620 mg) sodíka denne (vlastný prepočet z údajov v súhrne charakteristických vlastností lieku). Klinicky to môže byť dôležité pri srdcovom zlyhávaní, pokročilej chorobe obličiek alebo objemovom preťažení, štúdia však sodíkovú záťaž nehodnotila a nepreukázala, že by ňou bol rozdiel vo výskyte AKI sprostredkovaný.</p>
 
 <h2>Prečo môže mať cefazolín priaznivejší renálny profil</h2>
 
 <p>Cefazolín sa v observačných porovnaniach aj v oboch citovaných randomizovaných skúšaniach spája s nižším výskytom nefrotoxicity než protistafylokokové penicilíny. Má praktickejší dávkovací režim a pri zodpovedajúcom dávkovaní dosahuje dostatočné koncentrácie proti citlivým kmeňom <em>S. aureus</em>.</p>
 
-<p>Historickou výhradou voči cefazolínu je takzvaný inokulový efekt — laboratórne zníženie účinnosti pri vysokej náloži baktérií, ktoré súvisí s produkciou určitých typov stafylokokovej betalaktamázy (najmä typu A kódovaného génom <em>blaZ</em>). Jeho klinický význam nie je vo všetkých populáciách a pri všetkých formách infekcie jednoznačný a randomizované skúšania ho pri celkovej účinnosti nepotvrdili ako prekážku. Opatrnosť je namieste najmä pri hlbokých ložiskách s vysokým inokulom a pri infekcii centrálneho nervového systému, kde je aj penetrácia cefazolínu obmedzená; práve pacienti s podozrením na infekciu centrálneho nervového systému boli zo skúšania CloCeBa vylúčení.</p>
+<p>Historickou výhradou voči cefazolínu je takzvaný inokulový efekt – laboratórne zníženie účinnosti pri vysokej náloži baktérií, ktoré súvisí s produkciou určitých typov stafylokokovej betalaktamázy (najmä typu A kódovaného génom <em>blaZ</em>). Jeho klinický význam nie je vo všetkých populáciách a pri všetkých formách infekcie jednoznačný a randomizované skúšania ho pri celkovej účinnosti nepotvrdili ako prekážku. Opatrnosť je namieste najmä pri hlbokých ložiskách s vysokým inokulom a pri infekcii centrálneho nervového systému, kde je aj penetrácia cefazolínu obmedzená; práve pacienti s podozrením na infekciu centrálneho nervového systému boli zo skúšania CloCeBa vylúčení.</p>
 
-<p>Predložená kohorta sa venovala výhradne AKI. Sama osebe nehovorí nič o porovnateľnej antibakteriálnej účinnosti oboch liečiv — to je otázka randomizovaných skúšaní, nie tejto práce.</p>
+<p>Predložená kohorta sa venovala výhradne AKI. Sama osebe nehovorí nič o porovnateľnej antibakteriálnej účinnosti oboch liečiv – to je otázka randomizovaných skúšaní, nie tejto práce.</p>
 
 <h2>Hlavné metodologické obmedzenia</h2>
 
@@ -267,7 +267,7 @@ $articles[] = [
 
 <p>O liečbe nerozhodovala randomizácia. Výber antibiotika mohol súvisieť s nemocnicou, obdobím liečby, závažnosťou infekcie, vstupnou funkciou obličiek, alergiou, predchádzajúcou liečbou alebo lokálnymi protokolmi. Štatistická úprava reziduálne skreslenie znižuje, neodstraňuje ho však.</p>
 
-<p>Zaujímavé je, že <strong>smer možného skreslenia nie je zrejmý</strong>. Pacienti na cefazolíne mali väčšiu chronickú komorbiditu (medián Charlsonovho indexu 4 verzus 3), ale nižšie ukazovatele akútnej závažnosti; 30-dňová mortalita bola v tejto skupine podstatne nižšia (6,0 % verzus 14,8 %). Chronicky chorejší, ale akútne menej ťažko chorí pacienti dostávali cefazolín, čo môže výsledok skresľovať oboma smermi naraz.</p>
+<p><strong>Smer možného skreslenia pritom nie je zrejmý</strong>. Pacienti na cefazolíne mali väčšiu chronickú komorbiditu (medián Charlsonovho indexu 4 verzus 3), ale nižšie ukazovatele akútnej závažnosti; 30-dňová mortalita bola v tejto skupine podstatne nižšia (6,0 % verzus 14,8 %). Chronicky chorejší, ale akútne menej ťažko chorí pacienti dostávali cefazolín, čo môže výsledok skresľovať oboma smermi naraz.</p>
 
 <h3>Výrazne nevyvážené skupiny</h3>
 
@@ -298,12 +298,12 @@ $articles[] = [
 <ol>
   <li>stanoviť vstupnú koncentráciu kreatinínu a odhadnúť glomerulovú filtráciu ešte pred začatím liečby;</li>
   <li>kontrolovať kreatinín a elektrolyty často a od prvých dní, nie až po týždni;</li>
-  <li>sledovať diurézu, hoci sa v kritériách štúdie nepoužila — v klinickej praxi zachytáva epizódy, ktoré samotný kreatinín minie;</li>
+  <li>sledovať diurézu, hoci sa v kritériách štúdie nepoužila – v klinickej praxi zachytáva epizódy, ktoré samotný kreatinín minie;</li>
   <li>zhodnotiť objemový a hemodynamický stav a cielene ho korigovať;</li>
   <li>obmedziť alebo vysadiť ďalšie nefrotoxické lieky, ak je to možné;</li>
   <li>prispôsobiť dávkovanie funkcii obličiek a charakteru infekcie, s vedomím, že samotné zníženie dávky riziko AKI podľa tejto kohorty neodstraňuje;</li>
   <li>pri vzostupe kreatinínu znovu posúdiť infekciu, kontrolu zdroja, hemodynamiku, močový nález a všetky súbežné lieky a zvážiť aj tubulointersticiálnu nefritídu;</li>
-  <li>po epizóde AKI zabezpečiť kontrolu funkcie obličiek aj po prepustení — najmä pri 2. a 3. štádiu, kde sa do 30 dní nezotavila tretina až polovica pacientov.</li>
+  <li>po epizóde AKI zabezpečiť kontrolu funkcie obličiek aj po prepustení – najmä pri 2. a 3. štádiu, kde sa do 30 dní nezotavila tretina až polovica pacientov.</li>
 </ol>
 
 <p>Keďže väčšina prípadov vznikla počas prvého týždňa, monitorovanie musí byť intenzívne už od začiatku liečby, nie až pri jej predpokladanom kumulatívnom účinku.</p>
@@ -323,18 +323,18 @@ $articles[] = [
 <p>Štúdia nepreukázala:</p>
 
 <ul>
-  <li>že flukloxacilín bol priamou príčinou všetkých zaznamenaných prípadov AKI — observačný dizajn to neumožňuje;</li>
+  <li>že flukloxacilín bol priamou príčinou všetkých zaznamenaných prípadov AKI – observačný dizajn to neumožňuje;</li>
   <li>konkrétny morfologický mechanizmus poškodenia (chýbali biopsie aj etiologická klasifikácia);</li>
-  <li>že expozícia flukloxacilínu nesúvisí s nefrotoxicitou — hodnotila sa iba úvodná predpísaná dávka, nie skutočná expozícia;</li>
-  <li>rovnakú klinickú účinnosť oboch antibiotík pri všetkých zdrojoch infekcie — to nebolo jej cieľom;</li>
+  <li>že expozícia flukloxacilínu nesúvisí s nefrotoxicitou – hodnotila sa iba úvodná predpísaná dávka, nie skutočná expozícia;</li>
+  <li>rovnakú klinickú účinnosť oboch antibiotík pri všetkých zdrojoch infekcie – to nebolo jej cieľom;</li>
   <li>dlhodobý vývoj funkcie obličiek nad rámec 30 dní od vzniku AKI.</li>
 </ul>
 
-<p>Naopak, tvrdenie, že randomizované porovnanie renálnej bezpečnosti cefazolínu a protistafylokokových penicilínov neexistuje, už neplatí — poskytli ho skúšania SNAP a CloCeBa.</p>
+<p>Naopak, tvrdenie, že randomizované porovnanie renálnej bezpečnosti cefazolínu a protistafylokokových penicilínov neexistuje, už neplatí – poskytli ho skúšania SNAP a CloCeBa.</p>
 
 <h2>Záver</h2>
 
-<p>V retrospektívnej kohorte 1408 pacientov s bakteriémiou spôsobenou <em>Staphylococcus aureus</em> bolo podávanie flukloxacilínu spojené s vyšším výskytom AKI než podávanie cefazolínu — 35,2 % verzus 20,2 %, upravený pomer šancí 2,37 (95 % interval spoľahlivosti 1,30 – 4,55). Výsledok je konzistentný s randomizovanými dôkazmi zo skúšaní SNAP a CloCeBa.</p>
+<p>V retrospektívnej kohorte 1408 pacientov s bakteriémiou spôsobenou <em>Staphylococcus aureus</em> bolo podávanie flukloxacilínu spojené s vyšším výskytom AKI než podávanie cefazolínu – 35,2 % verzus 20,2 %, upravený pomer šancí 2,37 (95 % interval spoľahlivosti 1,30 – 4,55). Výsledok je konzistentný s randomizovanými dôkazmi zo skúšaní SNAP a CloCeBa.</p>
 
 <p>Najväčšiu klinickú pozornosť si zasluhujú tri zistenia: AKI vzniká veľmi skoro, pravdepodobnosť zotavenia klesá so štádiom a zníženie úvodnej dávky flukloxacilínu riziko neodstraňuje. Prakticky to znamená dôsledné a včasné monitorovanie funkcie obličiek od prvého dňa liečby, sledovanie pacienta aj po prepustení a zvažovanie cefazolínu u vhodných pacientov.</p>
 

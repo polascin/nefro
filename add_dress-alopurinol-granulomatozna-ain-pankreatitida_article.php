@@ -33,11 +33,11 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Kazuistika ťažkého DRESS syndrómu po alopurinole komplikovaného granulomatóznou akútnou intersticiálnou nefritídou a akútnou pankreatitídou. Ukazuje, prečo má v diagnosticky neprehľadných situáciách s konkurujúcimi príčinami AKI rozhodujúcu hodnotu renálna biopsia.',
     'content'      => <<<'HTML'
-<figure><a href="img/dress-alopurinol-granulomatozna-ain-pankreatitida.webp" rel="noopener noreferrer" target="_blank"><img src="img/dress-alopurinol-granulomatozna-ain-pankreatitida.webp" alt="Tabletka, ktorej svetlo vyvoláva zápal súčasne v obličke aj v podžalúdkovej žľaze" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Jeden liek, viac zasiahnutých orgánov naraz — práve to robí z DRESS diagnostickú pascu.</figcaption></figure>
+<figure><a href="img/dress-alopurinol-granulomatozna-ain-pankreatitida.webp" rel="noopener noreferrer" target="_blank"><img src="img/dress-alopurinol-granulomatozna-ain-pankreatitida.webp" alt="Tabletka, ktorej svetlo vyvoláva zápal súčasne v obličke aj v podžalúdkovej žľaze" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Jeden liek, viac zasiahnutých orgánov naraz – práve to robí z DRESS diagnostickú pascu.</figcaption></figure>
 
-<p>DRESS syndróm (Drug Reaction with Eosinophilia and Systemic Symptoms, lieková reakcia s eozinofíliou a systémovými príznakmi) je zriedkavá, no potenciálne život ohrozujúca oneskorená hypersenzitívna reakcia. Alopurinol patrí medzi jej najčastejšie spúšťače, pričom renálne postihnutie býva v rámci DRESS pomerne časté — najčastejšie vo forme akútnej intersticiálnej nefritídy (AIN). V bežnej praxi však DRESS môže maskovať alebo napodobňovať infekčné, autoimunitné či metabolické stavy, najmä ak sa pridruží ďalšia komplikácia.</p>
+<p>DRESS syndróm (Drug Reaction with Eosinophilia and Systemic Symptoms, lieková reakcia s eozinofíliou a systémovými príznakmi) je zriedkavá, no potenciálne život ohrozujúca oneskorená hypersenzitívna reakcia. Alopurinol patrí medzi jej najčastejšie spúšťače, pričom renálne postihnutie býva v rámci DRESS pomerne časté – najčastejšie vo forme akútnej intersticiálnej nefritídy (AIN). V bežnej praxi však DRESS môže maskovať alebo napodobňovať infekčné, autoimunitné či metabolické stavy, najmä ak sa pridruží ďalšia komplikácia.</p>
 
-<p>Nasledujúca kazuistika je cenná tým, že ukazuje kombináciu, ktorá robí diagnostiku mimoriadne zložitou: <strong>granulomatózna AIN</strong> spolu s <strong>akútnou pankreatitídou</strong> po alopurinole, doplnená o neurologické prejavy.</p>
+<p>Opísaná kazuistika ukazuje kombináciu, ktorá diagnostiku mimoriadne sťažuje: <strong>granulomatózna AIN</strong> spolu s <strong>akútnou pankreatitídou</strong> po alopurinole, doplnená o neurologické prejavy.</p>
 
 <h2>Klinický obraz, ktorý by mal mať nefrológ na pamäti</h2>
 
@@ -50,7 +50,7 @@ $articles[] = [
   <li>zobrazovacie vyšetrenie potvrdilo <strong>akútnu pankreatitídu</strong> bez jasnej biliárnej príčiny.</li>
 </ul>
 
-<p>Infekčné ani autoimunitné vyšetrenia neviedli k jednoznačnému vysvetleniu. Práve tu vzniká typický podnet na diagnostickú skratku: pankreatitídu, horúčku a zhoršenie funkcie obličiek by bolo možné pripísať sepse, komplikácii akútneho zápalu, dehydratácii, záťaži kontrastnou látkou alebo inej príčine. Autori však zdôrazňujú, že celkové zoskupenie príznakov — časová väzba na liek, vyrážka, eozinofília, multiorgánové postihnutie, hepatopatia a AKI — zvyšuje pravdepodobnosť DRESS.</p>
+<p>Infekčné ani autoimunitné vyšetrenia neviedli k jednoznačnému vysvetleniu. Práve tu sa ponúka diagnostická skratka: pankreatitídu, horúčku a zhoršenie funkcie obličiek by bolo možné pripísať sepse, komplikácii akútneho zápalu, dehydratácii, záťaži kontrastnou látkou alebo inej príčine. Autori však zdôrazňujú, že celkové zoskupenie príznakov – časová väzba na liek, vyrážka, eozinofília, multiorgánové postihnutie, hepatopatia a AKI – zvyšuje pravdepodobnosť DRESS.</p>
 
 <h2>Prečo bola biopsia kľúčová</h2>
 
@@ -72,7 +72,7 @@ $articles[] = [
 
 <h2>Liečba a klinická odpoveď</h2>
 
-<p>Základ manažmentu predstavovali:</p>
+<p>Základom liečby boli:</p>
 
 <ol>
   <li><strong>okamžité vysadenie alopurinolu</strong>,</li>
@@ -89,7 +89,7 @@ $articles[] = [
   <li>ústupu pankreatitídy v rámci podporných opatrení.</li>
 </ul>
 
-<p>Pri DRESS je dôležité mať na pamäti, že hoci sa funkcia obličiek pri včasnej liečbe často zlepší, pri ťažkých formách môže pretrvávať neúplné zotavenie alebo prechod do chronického poškodenia.</p>
+<p>Funkcia obličiek sa pri včasnej liečbe DRESS často zlepší, pri ťažkých formách však zotavenie môže zostať neúplné alebo poškodenie prejde do chronického.</p>
 
 <h2>Praktické ponaučenia pre nefrológa</h2>
 
@@ -99,15 +99,15 @@ $articles[] = [
 
 <h3>2) Pri multietiologickom AKI neváhať s biopsiou</h3>
 
-<p>V tejto kazuistike biopsia odstránila diagnostickú neistotu. Platí princíp: ak sa AKI zhoršuje a etiológia je neistá, histologický dôkaz liekovej AIN môže urýchliť správnu imunomodulačnú liečbu a zabrániť zbytočným diagnostickým zdržaniam.</p>
+<p>V tejto kazuistike biopsia odstránila diagnostickú neistotu. Ak sa AKI zhoršuje a etiológia je neistá, histologický dôkaz liekovej AIN môže urýchliť správnu imunomodulačnú liečbu a zabrániť zbytočným diagnostickým zdržaniam.</p>
 
 <h3>3) Pri alopurinole u pacientov s CKD začínať opatrne a monitorovať</h3>
 
-<p>Alopurinol sa síce používa aj u pacientov s chronickou chorobou obličiek (CKD), no riziko hypersenzitivity je u nich vyššie. Odporúča sa začínať nízkou dávkou (napr. do 100 mg denne, pri CKD ešte nižšie) s pomalou titráciou a intenzívnym dohľadom počas prvých týždňov. U vysokorizikových etník treba podľa platných odporúčaní zvážiť skríning alely <strong>HLA-B*58:01</strong>.</p>
+<p>Alopurinol sa síce používa aj u pacientov s chronickou chorobou obličiek (CKD), no riziko hypersenzitivity je u nich vyššie. Odporúča sa začínať nízkou dávkou (napr. do 100 mg denne, pri CKD ešte nižšie) s pomalou titráciou a intenzívnym dohľadom počas prvých týždňov. U pacientov z vysokorizikových etnických skupín treba podľa platných odporúčaní zvážiť skríning alely <strong>HLA-B*58:01</strong>.</p>
 
 <h2>Záver</h2>
 
-<p>Ide o kazuistiku ťažkého alopurinolom indukovaného DRESS syndrómu komplikovaného granulomatóznou AIN a akútnou pankreatitídou. Správne rozpoznanie syndrómu, skoré vysadenie spúšťajúceho lieku a promptné podanie kortikosteroidov viedli k výraznému klinickému zlepšeniu a takmer úplnému obnoveniu funkcie obličiek. V diagnosticky neprehľadných situáciách s konkurujúcimi príčinami AKI má <strong>renálna biopsia</strong> rozhodujúcu hodnotu.</p>
+<p>V opísanom prípade ťažkého DRESS syndrómu po alopurinole s granulomatóznou AIN a akútnou pankreatitídou viedli správne rozpoznanie syndrómu, skoré vysadenie spúšťajúceho lieku a včasné podanie kortikosteroidov k výraznému klinickému zlepšeniu a takmer úplnému obnoveniu funkcie obličiek. V diagnosticky neprehľadných situáciách s konkurujúcimi príčinami AKI má <strong>renálna biopsia</strong> rozhodujúcu hodnotu.</p>
 
 <hr>
 

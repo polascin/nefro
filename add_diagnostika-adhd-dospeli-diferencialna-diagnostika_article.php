@@ -29,17 +29,17 @@ $articles[] = [
     'content'      => <<<'HTML'
 <figure><a href="img/diagnostika-adhd-dospeli-diferencialna-diagnostika.webp" rel="noopener noreferrer" target="_blank"><img src="img/diagnostika-adhd-dospeli-diferencialna-diagnostika.webp" alt="Rozptýlené svetelné úlomky, ktoré sa v lúči presného nástroja usporiadajú do zrozumiteľnej štruktúry" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Rozptýlenosť má mnoho príčin; diagnózu z nej robí až štruktúrované vyšetrenie a vylúčenie alternatív.</figcaption></figure>
 
-<p class="article-dek"><em>Dospelí s podozrením na ADHD opisujú nepozornosť, zabúdanie, ťažkosti s organizáciou, vnútorný nepokoj alebo impulzivitu. Samotná nepozornosť však diagnózu nezakladá. ADHD je neurovývinová porucha definovaná trvalým vzorcom príznakov s funkčným dopadom vo viacerých prostrediach a s nutnosťou odlíšiť iné medicínske, psychiatrické a environmentálne príčiny. Posudzovacie škály hodnotenie podporujú — nenahrádzajú ho.</em></p>
+<p class="article-dek"><em>Dospelí s podozrením na ADHD opisujú nepozornosť, zabúdanie, ťažkosti s organizáciou, vnútorný nepokoj alebo impulzivitu. Samotná nepozornosť však diagnózu nezakladá. ADHD je neurovývinová porucha definovaná trvalým vzorcom príznakov s funkčným dopadom vo viacerých prostrediach a s nutnosťou odlíšiť iné medicínske, psychiatrické a environmentálne príčiny. Posudzovacie škály hodnotenie podporujú – nenahrádzajú ho.</em></p>
 
 <h2>Prečo je téma dôležitá aj pre nefrológa</h2>
 
-<p>Porucha pozornosti s hyperaktivitou (ADHD; v staršej terminológii MKCH-10 hyperkinetická porucha) sa v dospelosti diagnostikuje čoraz častejšie. Rastie aj počet pacientov, ktorí prichádzajú s vlastným podozrením — často po obsahu na sociálnych sieťach.</p>
+<p>Porucha pozornosti s hyperaktivitou (ADHD; v staršej terminológii MKCH-10 hyperkinetická porucha) sa v dospelosti diagnostikuje čoraz častejšie. Rastie aj počet pacientov, ktorí prichádzajú s vlastným podozrením – často po obsahu na sociálnych sieťach.</p>
 
-<p>Pre nefrológiu je téma relevantná z dvoch strán. Po prvé, <strong>porucha pozornosti je pri chronickej chorobe obličiek (CKD) častá a má viacero medicínskych príčin</strong>, ktoré sa dajú liečiť. Po druhé, ak sa ADHD potvrdí, jeho farmakoterapia zasahuje do krvného tlaku a srdcovej frekvencie — teda presne do parametrov, ktoré sú pri CKD kľúčové.</p>
+<p>Pre nefrológiu je téma relevantná z dvoch strán. Po prvé, <strong>porucha pozornosti je pri chronickej chorobe obličiek (CKD) častá a má viacero medicínskych príčin</strong>, ktoré sa dajú liečiť. Po druhé, ak sa ADHD potvrdí, jeho farmakoterapia zasahuje do krvného tlaku a srdcovej frekvencie – teda presne do parametrov, ktoré sú pri CKD kľúčové.</p>
 
 <p>Cieľom článku nie je nahradiť psychiatrické vyšetrenie. Je ním zhrnúť, čo má obsahovať poctivé diagnostické posúdenie a kde sú jeho hranice.</p>
 
-<h2>Čo ADHD v dospelosti je — a čo ním nie je</h2>
+<h2>Čo ADHD v dospelosti je – a čo ním nie je</h2>
 
 <p>Diagnóza podľa DSM-5 nestojí na prítomnosti príznakov, ale na ich <em>vzorci</em>. Vyžaduje sa:</p>
 
@@ -52,7 +52,7 @@ $articles[] = [
   <li>vylúčenie iného vysvetlenia.</li>
 </ul>
 
-<p><strong>Klinický obraz sa s vekom mení.</strong> Zjavná hyperaktivita spravidla ustupuje, nepozornosť pretrváva. U dospelých sa hyperaktivita často presúva „dovnútra“ — ako vnútorný nepokoj, ruminácie, neschopnosť udržať pozornosť v rozhovore alebo neznesiteľnosť nečinnosti. Ťažkosti s organizáciou, riadením času a emočnou reguláciou sú typické, ale <em>nešpecifické</em> — vyskytujú sa pri mnohých iných stavoch.</p>
+<p><strong>Klinický obraz sa s vekom mení.</strong> Zjavná hyperaktivita spravidla ustupuje, nepozornosť pretrváva. U dospelých sa hyperaktivita často presúva „dovnútra“ – ako vnútorný nepokoj, ruminácie, neschopnosť udržať pozornosť v rozhovore alebo neznesiteľnosť nečinnosti. Ťažkosti s organizáciou, riadením času a emočnou reguláciou sú typické, ale <em>nešpecifické</em> – vyskytujú sa pri mnohých iných stavoch.</p>
 
 <h2>Diagnostický postup</h2>
 
@@ -74,12 +74,12 @@ $articles[] = [
     <tr>
       <th scope="row">Objektívna anamnéza</th>
       <td>školské vysvedčenia a hodnotenia, zdravotná dokumentácia z detstva, svedectvo rodiča alebo partnera</td>
-      <td>Vysoká — najmä pri overovaní počiatku v detstve</td>
+      <td>Vysoká – najmä pri overovaní počiatku v detstve</td>
     </tr>
     <tr>
       <th scope="row">Posudzovacie škály</th>
       <td>ASRS a podobné nástroje na zmapovanie a kvantifikáciu príznakov</td>
-      <td>Podporná — nikdy samostatný dôkaz</td>
+      <td>Podporná – nikdy samostatný dôkaz</td>
     </tr>
     <tr>
       <th scope="row">Štruktúrovaný rozhovor</th>
@@ -94,7 +94,7 @@ $articles[] = [
     <tr>
       <th scope="row">Neuropsychologické testy</th>
       <td>hodnotenie exekutívnych funkcií</td>
-      <td>Doplnková — normálny výsledok ADHD nevylučuje a abnormálny ho nedokazuje</td>
+      <td>Doplnková – normálny výsledok ADHD nevylučuje a abnormálny ho nedokazuje</td>
     </tr>
   </tbody>
 </table>
@@ -125,11 +125,11 @@ $articles[] = [
 </table>
 </div>
 
-<p>Tieto čísla treba čítať pozorne, pretože hovoria niečo dosť iné, než sa bežne predpokladá.</p>
+<p>Tieto čísla treba čítať pozorne, pretože hovoria niečo iné, než sa často predpokladá.</p>
 
-<p><strong>Špecificita je vynikajúca, senzitivita nie.</strong> Pri 99,5 % špecificite je pozitívny skríning silným signálom, že sa oplatí pokračovať v podrobnom vyšetrení. Ale pri senzitivite 68,7 % <em>zhruba tri z desiatich prípadov ADHD skríner nezachytí</em>. Negatívna ASRS teda ADHD <strong>nevylučuje</strong> a nesmie byť dôvodom na ukončenie vyšetrovania u pacienta s presvedčivou anamnézou.</p>
+<p><strong>Špecificita je vynikajúca, senzitivita nie.</strong> Pri 99,5 % špecificite je pozitívny skríning silným signálom, že sa oplatí pokračovať v podrobnom vyšetrení. Pri senzitivite 68,7 % však <em>zhruba tri z desiatich prípadov ADHD skríner nezachytí</em>. Negatívna ASRS teda ADHD <strong>nevylučuje</strong> a nesmie byť dôvodom na ukončenie vyšetrovania u pacienta s presvedčivou anamnézou.</p>
 
-<p>Zhoda pri jednotlivých príznakoch navyše veľmi kolísala (Cohenovo kappa 0,16 až 0,81) — niektoré položky teda merajú to, čo klinik hodnotí, podstatne horšie než iné. Paradoxne skrátený šesťpoložkový skríner prekonal plnú 18-položkovú verziu vo všetkých sledovaných parametroch.</p>
+<p>Zhoda pri jednotlivých príznakoch navyše veľmi kolísala (Cohenovo kappa 0,16 až 0,81) – niektoré položky teda merajú to, čo klinik hodnotí, podstatne horšie než iné. Paradoxne skrátený šesťpoložkový skríner prekonal plnú 18-položkovú verziu vo všetkých sledovaných parametroch.</p>
 
 <p>Doplňme dve obmedzenia, ktoré sa v propagácii nástroja strácajú: ASRS je viazaná na kritériá <strong>DSM-IV</strong>, nie DSM-5, a validácia prebehla na komunitnej vzorke s cieleným nadzastúpením osôb, ktoré samy uviedli ADHD v detstve. V populácii s inou pretestovou pravdepodobnosťou budú prediktívne hodnoty iné.</p>
 </div>
@@ -141,7 +141,7 @@ $articles[] = [
 <p>Pri citovaní dôkazov o nástroji však treba rozlišovať verzie:</p>
 
 <ul>
-  <li><strong>DIVA 2.0</strong> vychádza z kritérií <strong>DSM-IV</strong>. Práve tejto verzie sa týka najčastejšie citovaná validačná práca (Ramos-Quiroga a spol.) — a išlo o štúdiu na <strong>40 ambulantných pacientoch</strong>, čo je pre posúdenie diagnostickej presnosti veľmi málo.</li>
+  <li><strong>DIVA 2.0</strong> vychádza z kritérií <strong>DSM-IV</strong>. Práve tejto verzie sa týka najčastejšie citovaná validačná práca (Ramos-Quiroga a spol.) – a išlo o štúdiu na <strong>40 ambulantných pacientoch</strong>, čo je pre posúdenie diagnostickej presnosti veľmi málo.</li>
   <li><strong>DIVA-5</strong> je aktuálna verzia postavená na kritériách <strong>DSM-5</strong>; existujú aj varianty Young DIVA-5 pre deti a dorast a DIVA-5 ID pre osoby s mentálnym postihnutím. Nástroj spravuje nadácia DIVA Foundation a nie je bezplatný.</li>
 </ul>
 
@@ -149,7 +149,7 @@ $articles[] = [
 
 <h2>Diferenciálna diagnostika</h2>
 
-<p>Toto je časť, ktorá rozhoduje najviac — a ktorá sa pri rýchlom vyšetrení najčastejšie odbije.</p>
+<p>Toto je časť, ktorá rozhoduje najviac – a ktorá sa pri rýchlom vyšetrení najčastejšie odbije.</p>
 
 <div class="table-responsive" role="region" aria-label="Stavy, ktoré môžu napodobniť ADHD u dospelých" tabindex="0">
 <table>
@@ -179,9 +179,9 @@ $articles[] = [
 
 <h3>Prečo je rekonštrukcia detstva metodologicky slabá</h3>
 
-<p>Podmienka počiatku príznakov v detstve sa v dospelosti overuje spätne — a spätné vybavovanie je nespoľahlivé. Pacient, ktorý sa už s diagnózou stotožnil, si minulosť prirodzene reinterpretuje cez jej optiku. Dokumentácia z detstva často chýba a rodičia si nemusia pamätať detaily alebo ich hodnotia inak.</p>
+<p>Podmienka počiatku príznakov v detstve sa v dospelosti overuje spätne – a spätné vybavovanie je nespoľahlivé. Pacient, ktorý sa už s diagnózou stotožnil, si minulosť prirodzene reinterpretuje cez jej optiku. Dokumentácia z detstva často chýba a rodičia si nemusia pamätať detaily alebo ich hodnotia inak.</p>
 
-<p>Praktický dôsledok: čím slabšie sú podklady o detstve, tým opatrnejší má byť záver — a tým väčšiu váhu má dôsledná diferenciálna diagnostika.</p>
+<p>Praktický dôsledok: čím slabšie sú podklady o detstve, tým opatrnejší má byť záver – a tým väčšiu váhu má dôsledná diferenciálna diagnostika.</p>
 
 <div class="pdf-avoid-break">
 <h2>Vecná kontrola hlavných tvrdení</h2>
@@ -199,9 +199,9 @@ $articles[] = [
     <tr><td>ADHD nie je dané len nepozornosťou</td><td><strong>Potvrdené</strong></td><td>Vyžaduje sa trvalý vzorec, vývinová neprimeranosť, prítomnosť vo viacerých prostrediach a funkčné poškodenie</td></tr>
     <tr><td>Klinický rozhovor je základ diagnózy</td><td><strong>Potvrdené</strong></td><td>V súlade s odporúčaním NICE NG87; štruktúrované nástroje zvyšujú konzistentnosť, nenahrádzajú posúdenie</td></tr>
     <tr><td>DIVA je užitočný štruktúrovaný rozhovor</td><td><strong>Potvrdené ako podporný nástroj</strong></td><td>Pozor na verziu: validačná práca sa týka DIVA 2.0 (DSM-IV, n = 40); aktuálna je DIVA-5 (DSM-5)</td></tr>
-    <tr><td>Posudzovacie škály samy diagnózu nestanovia</td><td><strong>Potvrdené a kvantifikovateľné</strong></td><td>ASRS skríner: špecificita 99,5 %, ale senzitivita iba 68,7 % — negatívny výsledok ADHD nevylučuje</td></tr>
+    <tr><td>Posudzovacie škály samy diagnózu nestanovia</td><td><strong>Potvrdené a kvantifikovateľné</strong></td><td>ASRS skríner: špecificita 99,5 %, ale senzitivita iba 68,7 % – negatívny výsledok ADHD nevylučuje</td></tr>
     <tr><td>Neuropsychologické testy samy ADHD nedokazujú</td><td><strong>Potvrdené</strong></td><td>Poruchu exekutívnych funkcií spôsobuje množstvo iných stavov; normálny výsledok diagnózu nevylučuje</td></tr>
-    <tr><td>Úzkosť a depresia môžu príznaky zameniť</td><td><strong>Potvrdené</strong></td><td>Zámena funguje obojsmerne — ADHD býva mylne liečené ako primárna depresia</td></tr>
+    <tr><td>Úzkosť a depresia môžu príznaky zameniť</td><td><strong>Potvrdené</strong></td><td>Zámena funguje obojsmerne – ADHD býva mylne liečené ako primárna depresia</td></tr>
     <tr><td>Spánok, látky a lieky môžu zhoršiť pozornosť</td><td><strong>Potvrdené</strong></td><td>Pri novovzniknutých ťažkostiach majú prednosť pred diagnózou ADHD</td></tr>
     <tr><td>Technologická distrakcia môže ADHD napodobniť</td><td><strong>Podporené, kauzalita nejasná</strong></td><td>Smer vzťahu nie je určený; nejde o diagnostické kritérium ani o vylučujúci nález</td></tr>
     <tr><td>ADHD v dospelosti nevyzerá ako v detstve</td><td><strong>Potvrdené</strong></td><td>Hyperaktivita ustupuje, nepozornosť pretrváva; príznaky sa internalizujú</td></tr>
@@ -218,14 +218,14 @@ $articles[] = [
 <p>U pacienta s chronickou chorobou obličiek treba pred úvahou o ADHD cielene zvážiť:</p>
 
 <ul>
-  <li><strong>kognitívne zmeny pri CKD</strong> — spomalenie, únava, poruchy pozornosti a exekutívnych funkcií sú v tejto populácii dobre popísané a súvisia aj s cerebrálnym ochorením malých ciev,</li>
-  <li><strong>urémiu a metabolické odchýlky</strong> — vrátane vplyvu uremických toxínov,</li>
+  <li><strong>kognitívne zmeny pri CKD</strong> – spomalenie, únava, poruchy pozornosti a exekutívnych funkcií sú v tejto populácii dobre popísané a súvisia aj s cerebrálnym ochorením malých ciev,</li>
+  <li><strong>urémiu a metabolické odchýlky</strong> – vrátane vplyvu uremických toxínov,</li>
   <li><strong>anémiu</strong> pri CKD,</li>
   <li><strong>poruchy spánku</strong>, ktoré sú pri CKD a najmä pri dialýze veľmi časté (spánkové apnoe, syndróm nepokojných nôh),</li>
   <li><strong>depresiu a úzkosť</strong> v kontexte chronického ochorenia,</li>
-  <li><strong>polyfarmáciu</strong> — sedatívne, anticholinergné a antihistaminové účinky,</li>
-  <li><strong>interkurentné stavy</strong> — infekcie, dehydratáciu, poruchy iónov,</li>
-  <li><strong>dialyzačný režim</strong> — kolísanie vnútorného prostredia a únavu po procedúre.</li>
+  <li><strong>polyfarmáciu</strong> – sedatívne, anticholinergné a antihistaminové účinky,</li>
+  <li><strong>interkurentné stavy</strong> – infekcie, dehydratáciu, poruchy iónov,</li>
+  <li><strong>dialyzačný režim</strong> – kolísanie vnútorného prostredia a únavu po procedúre.</li>
 </ul>
 
 <p>Toto nie je alternatíva k ADHD, ale <strong>povinná súčasť</strong> diagnostického procesu. Ak nefrologický pacient žiada vyšetrenie na ADHD, medicínska diferenciálna diagnostika má prebehnúť súbežne s psychiatrickým posúdením.</p>
@@ -241,7 +241,7 @@ $articles[] = [
   <li>pred začatím liečby zmerať krvný tlak a srdcovú frekvenciu a zaznamenať východiskový stav,</li>
   <li>po nasadení a po každej zmene dávky kontrolovať oba parametre,</li>
   <li>pri vzostupe tlaku prehodnotiť antihypertenzívnu liečbu alebo samotnú indikáciu stimulancia,</li>
-  <li>zohľadniť, že úprava dávkovania pri zníženej funkcii obličiek sa riadi <strong>platným súhrnom charakteristických vlastností konkrétneho lieku</strong> — medzi liečivami sú rozdiely a paušálne pravidlo neexistuje,</li>
+  <li>zohľadniť, že úprava dávkovania pri zníženej funkcii obličiek sa riadi <strong>platným súhrnom charakteristických vlastností konkrétneho lieku</strong> – medzi liečivami sú rozdiely a paušálne pravidlo neexistuje,</li>
   <li>rátať s tým, že predpisovanie psychostimulancií podlieha na Slovensku osobitným pravidlám pre omamné a psychotropné látky a preskripčným obmedzeniam.</li>
 </ol>
 
@@ -254,7 +254,7 @@ $articles[] = [
 
 <p><strong>Konkrétne čísla to potvrdzujú:</strong> skríningová škála ASRS má síce špecificitu 99,5 %, ale senzitivitu iba 68,7 %. Pozitívny výsledok je dôvod pokračovať, negatívny nie je dôvod skončiť.</p>
 
-<p>Pre nefrologickú prax platí dvojité pravidlo. Pred diagnózou treba vylúčiť medicínske príčiny poruchy pozornosti, ktoré sú pri CKD časté a liečiteľné. Po diagnóze treba pri liečbe sledovať krvný tlak a srdcovú frekvenciu — teda parametre, na ktorých pri CKD záleží najviac.</p>
+<p>Pre nefrologickú prax platí dvojité pravidlo. Pred diagnózou treba vylúčiť medicínske príčiny poruchy pozornosti, ktoré sú pri CKD časté a liečiteľné. Po diagnóze treba pri liečbe sledovať krvný tlak a srdcovú frekvenciu – teda parametre, na ktorých pri CKD záleží najviac.</p>
 
 <h2>Súvisiace články</h2>
 
@@ -280,7 +280,7 @@ $articles[] = [
   <li><strong>Medscape Medical News.</strong> <em>The Challenge of Diagnosing ADHD in Adults.</em> Medscape, 2026. Sekundárny zdroj použitý ako východisko, nie ako hlavný dôkaz; ako autorka sa uvádza Zebib K. Abraham. <a href="https://www.medscape.com/viewarticle/challenge-diagnosing-adhd-adults-2026a1000rxl" target="_blank" rel="noopener noreferrer">Spravodajské spracovanie</a>.</li>
 </ol>
 
-<p><em><strong>Poznámka k spracovaniu:</strong> Údaje o vlastnostiach škály ASRS (senzitivita 68,7 % oproti 56,3 %, špecificita 99,5 % oproti 98,3 %, celková presnosť 97,9 % oproti 96,2 %, kappa 0,76 oproti 0,58, rozsah kappa 0,16–0,81 pri jednotlivých položkách, vzorka 154 respondentov) boli overené priamo proti abstraktu v PubMed (PMID 15841682), rovnako ako úplný zoznam 12 autorov. Údaje metaanalýzy o metylfenidáte a atomoxetíne (22 štúdií, 46 107 účastníkov, P &lt; 0,001) pochádzajú z abstraktu PMID 30127314; ročník a číslo boli overené cez Crossref. Validačná štúdia DIVA 2.0 (n = 40, kritériá DSM-IV) bola overená cez PMID 27125994 — pozor, týka sa verzie 2.0, nie aktuálnej DIVA-5. Dátumy publikovania a poslednej aktualizácie odporúčania NICE NG87 boli prevzaté priamo zo stránky odporúčania. Autorstvo spravodajského spracovania Medscape sa pre obmedzený prístup nepodarilo nezávisle overiť a uvádza sa s výhradou.</em></p>
+<p><em><strong>Poznámka k spracovaniu:</strong> Údaje o vlastnostiach škály ASRS (senzitivita 68,7 % oproti 56,3 %, špecificita 99,5 % oproti 98,3 %, celková presnosť 97,9 % oproti 96,2 %, kappa 0,76 oproti 0,58, rozsah kappa 0,16–0,81 pri jednotlivých položkách, vzorka 154 respondentov) boli overené priamo proti abstraktu v PubMed (PMID 15841682), rovnako ako úplný zoznam 12 autorov. Údaje metaanalýzy o metylfenidáte a atomoxetíne (22 štúdií, 46 107 účastníkov, P &lt; 0,001) pochádzajú z abstraktu PMID 30127314; ročník a číslo boli overené cez Crossref. Validačná štúdia DIVA 2.0 (n = 40, kritériá DSM-IV) bola overená cez PMID 27125994 – pozor, týka sa verzie 2.0, nie aktuálnej DIVA-5. Dátumy publikovania a poslednej aktualizácie odporúčania NICE NG87 boli prevzaté priamo zo stránky odporúčania. Autorstvo spravodajského spracovania Medscape sa pre obmedzený prístup nepodarilo nezávisle overiť a uvádza sa s výhradou.</em></p>
 
 <p><em><strong>Poznámka k interpretácii:</strong> Článok neslúži na stanovenie diagnózy ani na výber liečby. Diagnostika ADHD u dospelých patrí do rúk psychiatra; nefrológ prispieva vylúčením medicínskych príčin poruchy pozornosti a sledovaním kardiovaskulárnych parametrov pri liečbe. Dávkovanie liekov pri zníženej funkcii obličiek sa riadi platným súhrnom charakteristických vlastností konkrétneho lieku a preskripčnými obmedzeniami platnými na Slovensku.</em></p>
 </div>

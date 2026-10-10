@@ -27,13 +27,13 @@ $articles[] = [
     'content'      => <<<'HTML'
 <figure><a href="img/ckdnt-pracovnici-horucava-texas-nejasna-etiologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/ckdnt-pracovnici-horucava-texas-nejasna-etiologia.webp" alt="Oblička v horúcom opare nad popraskanou vyprahnutou zemou, praskliny žiaria tlejúcou červenou" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Opakovaná záťaž horúčavou a dehydratáciou poškodzuje obličky aj tam, kde sa klasická príčina nenájde.</figcaption></figure>
 
-<p class="article-dek"><em>Reportáž z Texasu opisuje reálny a pravdepodobne rastúci problém. Medzi „u pracovníkov v horúčave stúpa kreatinín“ a „do Texasu prišla epidémia záhadnej choroby obličiek“ však leží značná evidenčná vzdialenosť. Práve tá je pri tejto téme najzaujímavejšia — a najviac sa prehliada.</em></p>
+<p class="article-dek"><em>Reportáž z Texasu opisuje reálny a pravdepodobne rastúci problém. Medzi „u pracovníkov v horúčave stúpa kreatinín“ a „do Texasu prišla epidémia záhadnej choroby obličiek“ je však v sile dôkazov značný rozdiel. Práve ten je pri tejto téme najzaujímavejší – a najviac sa prehliada.</em></p>
 
 <p>Chronická choroba obličiek nejasnej alebo netradičnej etiológie, označovaná skratkami <strong>CKDu</strong> alebo <strong>CKDnt</strong>, bola najprv opísaná medzi pracovníkmi v poľnohospodárstve v Strednej Amerike a na Srí Lanke. Postihuje prevažne mladších mužov vykonávajúcich namáhavú fyzickú prácu v horúcom prostredí, často bez diabetu, závažnej hypertenzie alebo iného bežného vysvetlenia poškodenia obličiek.</p>
 
 <p>Reportáž časopisu <em>Texas Monthly</em> s titulkom „A Mysterious Kidney Disease Has Arrived in Texas. Immigration Enforcement Has Made It Harder to Combat.“ upozorňuje, že podobné poškodenie obličiek sa objavuje aj medzi prisťahovaleckými pracovníkmi v Texase. Text vychádza zo skúseností lekárov z nemocnice Ben Taub v Houstone, kde internista Ricardo Nuila opisuje obavu, že vidí prvú vlnu podstatne väčšieho problému.</p>
 
-<p>Téma je medicínsky aj spoločensky závažná — a druhá polovica titulku je pritom podstatnejšia než tá prvá. Dostupné údaje presvedčivo dokumentujú výskyt tepelného stresu, dehydratácie a akútneho poškodenia obličiek medzi pracovníkmi v Spojených štátoch. Zatiaľ však neposkytujú rovnako presvedčivý <strong>populačný</strong> dôkaz rozsiahlej epidémie chronickej CKDnt v Texase.</p>
+<p>Téma je medicínsky aj spoločensky závažná – a druhá polovica titulku je pritom podstatnejšia než tá prvá. Dostupné údaje presvedčivo dokumentujú výskyt tepelného stresu, dehydratácie a akútneho poškodenia obličiek medzi pracovníkmi v Spojených štátoch. Zatiaľ však neposkytujú rovnako presvedčivý <strong>populačný</strong> dôkaz rozsiahlej epidémie chronickej CKDnt v Texase.</p>
 
 <h2>Čo označujú pojmy CKDu a CKDnt</h2>
 
@@ -50,7 +50,7 @@ $articles[] = [
   <li>systémové autoimunitné ochorenie.</li>
 </ul>
 
-<p>Tieto termíny nie sú úplne zameniteľné. „Neznáma etiológia“ vyjadruje <strong>diagnostickú neistotu</strong>, zatiaľ čo „netradičná etiológia“ už predpokladá určitý spoločný epidemiologický a klinický fenotyp. Prechod od prvého označenia k druhému teda nie je len zmenou názvu — je to tichý posun od priznanej nevedomosti k hypotéze.</p>
+<p>Tieto termíny nie sú úplne zameniteľné. „Neznáma etiológia“ vyjadruje <strong>diagnostickú neistotu</strong>, zatiaľ čo „netradičná etiológia“ už predpokladá určitý spoločný epidemiologický a klinický fenotyp. Prechod od prvého označenia k druhému teda nie je len zmenou názvu – je to tichý posun od priznanej nevedomosti k hypotéze.</p>
 
 <p>CKDnt nie je jedna choroba s jedinou príčinou. Pravdepodobnejšie ide o skupinu tubulointersticiálnych poškodení vznikajúcich kombináciou pracovných, environmentálnych, biologických a sociálnych faktorov.</p>
 
@@ -121,7 +121,7 @@ $articles[] = [
   </table>
 </div>
 
-<p>Posledný riadok si zaslúži osobitnú poznámku. Interval spoľahlivosti siahajúci od 7 po 1 443 znamená, že veľkosť efektu je <strong>prakticky neurčená</strong> — ide o odhad z malého počtu prípadov, nie o merateľné stonásobné riziko. Citovať „stonásobne vyššie riziko“ by bolo zavádzajúce; poctivá formulácia znie, že u žien pracujúcich za úkolovú mzdu bola asociácia veľmi silná, ale odhad mimoriadne nepresný.</p>
+<p>Posledný riadok si zaslúži osobitnú poznámku. Interval spoľahlivosti siahajúci od 7 po 1 443 znamená, že veľkosť efektu je <strong>prakticky neurčená</strong> – ide o odhad z malého počtu prípadov, nie o merateľné stonásobné riziko. Citovať „stonásobne vyššie riziko“ by bolo zavádzajúce; poctivá formulácia znie, že u žien pracujúcich za úkolovú mzdu bola asociácia veľmi silná, ale odhad mimoriadne nepresný.</p>
 
 <p>Vecné jadro nálezu je však robustné a klinicky zaujímavé: <strong>spôsob odmeňovania predpovedal poškodenie obličiek silnejšie než samotná tepelná záťaž.</strong> Úkolová mzda pracovníka motivuje obmedzovať prestávky a pokračovať napriek prejavom tepelného vyčerpania. Ide teda o rizikový faktor, ktorý sa dá zmeniť zmluvou, nie liekom.</p>
 
@@ -220,7 +220,7 @@ $articles[] = [
 
 <p>Verejné pojednávanie sa skončilo 2. júla 2025 a lehota na dodatočné pripomienky 30. októbra 2025. <strong>Norma však zostáva nedokončená a nemá stanovený termín prijatia.</strong> V apríli 2026 vydal OSHA revidovaný národný program cieleného dozoru (<em>National Emphasis Program</em>), ktorý usmerňuje federálne inšpekcie a osvetu v rizikových odvetviach. Nie je však náhradou záväznej federálnej normy; uplatňovanie všeobecnej povinnosti zamestnávateľa a pravidlá jednotlivých štátov predstavujú ďalšie, odlišné právne mechanizmy.</p>
 
-<p>Toto je podstatná časť príbehu. Nefrologické riziko, o ktorom je reč, nie je primárne otázkou liekov ani skríningových algoritmov — je to otázka pracovného práva a jeho vymožiteľnosti.</p>
+<p>Nefrologické riziko, o ktorom je reč, teda nie je primárne otázkou liekov ani skríningových algoritmov, ale pracovného práva a jeho vymožiteľnosti.</p>
 
 <p>Elektrolytové roztoky môžu byť užitočné pri dlhotrvajúcom intenzívnom potení, ale ich zloženie a množstvo treba prispôsobiť zdravotnému stavu. Nekontrolovaný príjem vysokého množstva draslíka nie je vhodný pri už prítomnej pokročilej CKD.</p>
 
@@ -291,9 +291,9 @@ $articles[] = [
 
 <h2>Čo z toho platí pre slovenskú nefrológiu</h2>
 
-<p>Slovensko nemá stredoamerický klimatický profil ani porovnateľné poľnohospodárske pracovné podmienky. Prenositeľný je však samotný postup uvažovania. Pri pacientovi s nevysvetleným poklesom eGFR, minimálnou proteinúriou a nevýrazným sedimentom má pracovná anamnéza rovnaké postavenie ako liekový záznam — a pri práci v horúcich prevádzkach (zlievarne, sklárne, pekárne, stavebníctvo, sezónne poľnohospodárstvo) sa na ňu treba pýtať cielene.</p>
+<p>Slovensko nemá stredoamerický klimatický profil ani porovnateľné poľnohospodárske pracovné podmienky. Prenositeľný je však samotný postup uvažovania. Pri pacientovi s nevysvetleným poklesom eGFR, minimálnou proteinúriou a nevýrazným sedimentom má pracovná anamnéza rovnaké postavenie ako liekový záznam – a pri práci v horúcich prevádzkach (zlievarne, sklárne, pekárne, stavebníctvo, sezónne poľnohospodárstvo) sa na ňu treba pýtať cielene.</p>
 
-<p>Druhým prenositeľným poznatkom je, že opakované epizódy AKI — bez ohľadu na príčinu — patria do anamnézy chronickej choroby obličiek. Pacient po prekonanom AKI potrebuje následné sledovanie, nie prepustenie s normalizovaným kreatinínom.</p>
+<p>Druhým prenositeľným poznatkom je, že opakované epizódy AKI – bez ohľadu na príčinu – patria do anamnézy chronickej choroby obličiek. Pacient po prekonanom AKI potrebuje následné sledovanie, nie prepustenie s normalizovaným kreatinínom.</p>
 
 <h2>Záver</h2>
 
@@ -301,17 +301,17 @@ $articles[] = [
 
 <p>Dostupné vedecké údaje podporujú súvislosť medzi pracovným tepelným stresom, dehydratáciou a akútnym poškodením obličiek. Menej isté je, aká časť týchto epizód prechádza do CKDnt a aký rozsah má tento problém konkrétne v Texase.</p>
 
-<p>Najpresnejšie preto nie je tvrdiť, že tajomná epidémia už bola v Texase definitívne potvrdená. Primeranejšie je povedať, že <strong>v Texase existujú podmienky, rizikové profesie a pravdepodobné prípady zodpovedajúce vznikajúcemu fenotypu CKDnt, ktorý si vyžaduje systematický dohľad, dlhodobé štúdie a záväznú ochranu pracovníkov pred tepelným stresom</strong>. Posledná z týchto troch podmienok je pritom najbližšie k splneniu — a najďalej od uskutočnenia.</p>
+<p>Najpresnejšie preto nie je tvrdiť, že tajomná epidémia už bola v Texase definitívne potvrdená. Primeranejšie je povedať, že <strong>v Texase existujú podmienky, rizikové profesie a pravdepodobné prípady zodpovedajúce vznikajúcemu fenotypu CKDnt, ktorý si vyžaduje systematický dohľad, dlhodobé štúdie a záväznú ochranu pracovníkov pred tepelným stresom</strong>. Poslednú z týchto troch požiadaviek by bolo najľahšie splniť, a predsa je od uskutočnenia najďalej.</p>
 
 <hr>
 
 <h2>Súvisiace články</h2>
 
 <ul>
-  <li><a href="article.php?slug=extremne-horucavy-riziko-ckd-dialyza">Extrémne horúčavy a riziko pri CKD a dialýze</a> — klinický pohľad na tepelnú záťaž u pacientov.</li>
-  <li><a href="article.php?slug=extremne-horucavy-podcenovanie-zdravotnych-rizik-nefrologia">Podceňovanie zdravotných rizík horúčav</a> — prečo sa tepelná záťaž systematicky nemeria.</li>
-  <li><a href="article.php?slug=environmentalne-toxiny-poskodenie-obliciek-nefrolog">Environmentálne toxíny a poškodenie obličiek</a> — druhá skupina podozrivých pri CKDnt.</li>
-  <li><a href="article.php?slug=hydratacne-prestavky-futbal-ms-2026">Hydratačné prestávky a tepelná záťaž</a> — ten istý princíp v inom kontexte.</li>
+  <li><a href="article.php?slug=extremne-horucavy-riziko-ckd-dialyza">Extrémne horúčavy a riziko pri CKD a dialýze</a> – klinický pohľad na tepelnú záťaž u pacientov.</li>
+  <li><a href="article.php?slug=extremne-horucavy-podcenovanie-zdravotnych-rizik-nefrologia">Podceňovanie zdravotných rizík horúčav</a> – prečo sa tepelná záťaž systematicky nemeria.</li>
+  <li><a href="article.php?slug=environmentalne-toxiny-poskodenie-obliciek-nefrolog">Environmentálne toxíny a poškodenie obličiek</a> – druhá skupina podozrivých pri CKDnt.</li>
+  <li><a href="article.php?slug=hydratacne-prestavky-futbal-ms-2026">Hydratačné prestávky a tepelná záťaž</a> – ten istý princíp v inom kontexte.</li>
 </ul>
 
 <hr>
@@ -329,7 +329,7 @@ $articles[] = [
   <li><strong>Occupational Safety and Health Administration.</strong> <em>Heat Exposure.</em> Inštitucionálny zdroj. <a href="https://www.osha.gov/heat-exposure" target="_blank" rel="noopener noreferrer">OSHA</a>.</li>
 </ol>
 
-<p><em><strong>Poznámka k dôkazom:</strong> Číselné údaje kalifornskej štúdie — 283 pracovníkov, 35 prípadov AKI (12,3 %) počas jedinej zmeny, OR 1,34 (1,04–1,74) pre tepelnú záťaž, OR 4,24 (1,56–11,52) pre úkolovú mzdu a OR 102,81 (7,32–1443,20) pre ženy odmeňované podľa výkonu — boli overené proti abstraktu v zázname PubMed. Bibliografické údaje citovaných odborných prác boli overené cez PubMed E-utilities a Crossref; <strong>opravené boli mená ôsmich autorov</strong> v citáciách (Gangadhar Taduri, Mala Amarasinghe, Georgi Abraham, Sirirat Anutrakulchai, David Sheikh-Hamad, Tamara Milagres, Laura Gabriela Sánchez-Lozada; a Sally Moyce, Tracey Armitage, Jill Joseph). Údaje o regulačnom stave v USA — návrh normy z 30. augusta 2024, prahy tepelného indexu 80 °F a 90 °F, koniec pojednávania 2. júla 2025, koniec pripomienkovania 30. októbra 2025, chýbajúci termín prijatia a revidovaný národný program cieleného dozoru z apríla 2026 — pochádzajú z verejných materiálov OSHA. Stránka časopisu <em>Texas Monthly</em> blokuje automatizovaný prístup, preto <strong>meno autora reportáže nebolo možné nezávisle overiť</strong> a citácia uvádza iba vydavateľa a úplný titulok; menovaný lekár Ricardo Nuila a nemocnica Ben Taub v Houstone boli overení vo verejne dostupných výňatkoch. Kritické komentáre — rozlíšenie CKDu a CKDnt ako posunu od nevedomosti k hypotéze, nepresnosť odhadu pri veľmi širokom intervale spoľahlivosti, nemerateľnosť populácie vyhýbajúcej sa inštitúciám a časť o slovenskej praxi — sú <strong>vlastným odborným hodnotením</strong>.</em></p>
+<p><em><strong>Poznámka k dôkazom:</strong> Číselné údaje kalifornskej štúdie – 283 pracovníkov, 35 prípadov AKI (12,3 %) počas jedinej zmeny, OR 1,34 (1,04–1,74) pre tepelnú záťaž, OR 4,24 (1,56–11,52) pre úkolovú mzdu a OR 102,81 (7,32–1443,20) pre ženy odmeňované podľa výkonu – boli overené proti abstraktu v zázname PubMed. Bibliografické údaje citovaných odborných prác boli overené cez PubMed E-utilities a Crossref; <strong>opravené boli mená ôsmich autorov</strong> v citáciách (Gangadhar Taduri, Mala Amarasinghe, Georgi Abraham, Sirirat Anutrakulchai, David Sheikh-Hamad, Tamara Milagres, Laura Gabriela Sánchez-Lozada; a Sally Moyce, Tracey Armitage, Jill Joseph). Údaje o regulačnom stave v USA – návrh normy z 30. augusta 2024, prahy tepelného indexu 80 °F a 90 °F, koniec pojednávania 2. júla 2025, koniec pripomienkovania 30. októbra 2025, chýbajúci termín prijatia a revidovaný národný program cieleného dozoru z apríla 2026 – pochádzajú z verejných materiálov OSHA. Stránka časopisu <em>Texas Monthly</em> blokuje automatizovaný prístup, preto <strong>meno autora reportáže nebolo možné nezávisle overiť</strong> a citácia uvádza iba vydavateľa a úplný titulok; menovaný lekár Ricardo Nuila a nemocnica Ben Taub v Houstone boli overení vo verejne dostupných výňatkoch. Kritické komentáre – rozlíšenie CKDu a CKDnt ako posunu od nevedomosti k hypotéze, nepresnosť odhadu pri veľmi širokom intervale spoľahlivosti, nemerateľnosť populácie vyhýbajúcej sa inštitúciám a časť o slovenskej praxi – sú <strong>vlastným odborným hodnotením</strong>.</em></p>
 HTML,
 ];
 

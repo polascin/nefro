@@ -26,10 +26,10 @@ $articles[] = [
     'content'      => <<<'HTML'
 <figure>
   <img src="img/cheatsheet-membranozna-nefropatia.svg" alt="Rez glomerulovou filtračnou bariérou: podocytové pedicely, subepiteliálne imunodepozity (anti-PLA2R) so spikami bazálnej membrány, fenestrovaný endotel a kapilárny lúmen." loading="lazy" decoding="async">
-  <figcaption>Subepiteliálne imunodepozity a „spiky“ GBM — histologický znak membranóznej nefropatie.</figcaption>
+  <figcaption>Subepiteliálne imunodepozity a „spiky“ GBM – histologický znak membranóznej nefropatie.</figcaption>
 </figure>
 
-<p>Ťahák k <strong>membranóznej nefropatii</strong> — najčastejšej príčine nefrotického syndrómu u nediabetických dospelých. Podklad: subepiteliálne imunokomplexy a aktivácia komplementu. Diferenciálnu diagnostiku nefrotického syndrómu rieši <a href="nastroj_gn.php">interaktívny sprievodca GN</a>.</p>
+<p>Ťahák k <strong>membranóznej nefropatii</strong> – najčastejšej príčine nefrotického syndrómu u nediabetických dospelých. Podklad: subepiteliálne imunokomplexy a aktivácia komplementu. Diferenciálnu diagnostiku nefrotického syndrómu rieši <a href="nastroj_gn.php">interaktívny sprievodca GN</a>.</p>
 
 <h2>Cieľové antigény (fáza podocytu)</h2>
 <div class="table-responsive" role="region" aria-label="Cieľové antigény (fáza podocytu)" tabindex="0">
@@ -40,7 +40,7 @@ $articles[] = [
   <tbody>
     <tr><td><strong>PLA2R</strong></td><td>~70 % primárnych</td><td>Sérová protilátka koreluje s aktivitou a prognózou</td></tr>
     <tr><td>THSD7A</td><td>~1–3 %</td><td>Občas malignita</td></tr>
-    <tr><td>NELL1</td><td>~5–10 %</td><td>Často sekundárna — malignita, lieky (vrátane tradičnej medicíny)</td></tr>
+    <tr><td>NELL1</td><td>~5–10 %</td><td>Často sekundárna – malignita, lieky (vrátane tradičnej medicíny)</td></tr>
     <tr><td>EXT1/EXT2</td><td>autoimunitná</td><td>Lupus a autoimunita; zvyčajne lepšia prognóza</td></tr>
     <tr><td>Semaforín-3B</td><td>pediatrická/skorá</td><td>Deti a mladí dospelí</td></tr>
     <tr><td>PCDH7, NCAM1</td><td>zriedkavé</td><td>PCDH7 často bez imunosupresie; NCAM1 pri lupuse</td></tr>
@@ -56,7 +56,7 @@ $articles[] = [
   </thead>
   <tbody>
     <tr><td>Primárna (~75–80 %)</td><td>Autoimunitná, najčastejšie anti-PLA2R; IgG4-dominantná v IF</td></tr>
-    <tr><td>Malignita</td><td>Solídne nádory (pľúca, GIT, prostata, prsník) — skríning podľa veku, najmä pri NELL1/THSD7A</td></tr>
+    <tr><td>Malignita</td><td>Solídne nádory (pľúca, GIT, prostata, prsník) – skríning podľa veku, najmä pri NELL1/THSD7A</td></tr>
     <tr><td>Autoimunita</td><td>Lupus (trieda V), autoimunitná tyreoiditída, sarkoidóza</td></tr>
     <tr><td>Infekcie</td><td>Hepatitída B a C, syfilis, malária</td></tr>
     <tr><td>Lieky</td><td>NSA, penicilamín, zlato, anti-TNF</td></tr>
@@ -66,8 +66,8 @@ $articles[] = [
 
 <h2>Vyšetrenie</h2>
 <ul>
-  <li><strong>Anti-PLA2R protilátky</strong> (sérum, ELISA/IFA) — pozitivita podporuje primárnu MN a často umožní diagnózu aj bez biopsie; titer slúži na monitoring odpovede.</li>
-  <li><strong>Renálna biopsia:</strong> subepiteliálne depozity, „spikes“ na striebornom farbení; IF granulárny IgG (IgG4 pri primárnej); EM štádiá I–IV (Ehrenreich–Churg). Tkanivový PLA2R/THSD7A/NELL1 farbením.</li>
+  <li><strong>Anti-PLA2R protilátky</strong> (sérum, ELISA/IFA) – pozitivita podporuje primárnu MN a často umožní diagnózu aj bez biopsie; titer slúži na monitoring odpovede.</li>
+  <li><strong>Renálna biopsia:</strong> subepiteliálne depozity, „spikes“ na striebornom farbení; IF granulárny IgG (IgG4 pri primárnej); EM štádiá I–IV (Ehrenreich–Churg). Tkanivové farbenie na PLA2R/THSD7A/NELL1.</li>
   <li><strong>Skríning sekundárnych príčin</strong> podľa veku a kontextu: malignita, sérológie hepatitíd, ANA/anti-dsDNA, TSH.</li>
   <li>Kvantifikácia proteinúrie, albumín, eGFR; posúdenie rizika trombózy.</li>
 </ul>
@@ -80,7 +80,7 @@ $articles[] = [
   </thead>
   <tbody>
     <tr><td>Nízke</td><td>Normálny eGFR, proteinúria &lt; 3,5 g/deň a normálny albumín; alebo pokles proteinúrie &gt; 50 % pri podpornej liečbe</td><td>Podporná nefroprotekcia, sledovanie</td></tr>
-    <tr><td>Stredné</td><td>Normálny eGFR, proteinúria &gt; 3,5 g pretrváva napriek 6 mes. podpornej liečby</td><td>Zváž imunosupresiu (rituximab alebo CNI ± rituximab)</td></tr>
+    <tr><td>Stredné</td><td>Normálny eGFR, proteinúria &gt; 3,5 g pretrváva napriek 6 mesiacom podpornej liečby</td><td>Zváž imunosupresiu (rituximab alebo CNI ± rituximab)</td></tr>
     <tr><td>Vysoké</td><td>eGFR &lt; 60 alebo proteinúria &gt; 8 g/deň; nízky albumín, vysoký/rastúci anti-PLA2R</td><td>Imunosupresia: rituximab; cyklofosfamid + glukokortikoidy (Ponticelli)</td></tr>
     <tr><td>Veľmi vysoké</td><td>Život ohrozujúci nefrotický syndróm alebo rýchly pokles funkcie</td><td>Cyklofosfamid + glukokortikoidy; urýchlene</td></tr>
   </tbody>
@@ -90,7 +90,7 @@ $articles[] = [
 <h2>Podporná liečba a komplikácie</h2>
 <ul>
   <li><strong>Nefroprotekcia u všetkých:</strong> RAAS blokáda, cieľový TK, obmedzenie soli, statín, diuretiká pri edémoch; inhibítor SGLT2 podľa indikácie.</li>
-  <li><strong>Tromboprofylaxia:</strong> nefrotický syndróm zvyšuje riziko VTE/renálnej trombózy — zváž antikoaguláciu pri <strong>albumíne &lt; 25 g/l</strong> a ďalších rizikových faktoroch.</li>
+  <li><strong>Tromboprofylaxia:</strong> nefrotický syndróm zvyšuje riziko VTE/renálnej trombózy – zváž antikoaguláciu pri <strong>albumíne &lt; 25 g/l</strong> a ďalších rizikových faktoroch.</li>
   <li><strong>Monitoring anti-PLA2R:</strong> imunologická odpoveď (pokles titra) predchádza klinickej remisii; perzistujúci titer = vyššie riziko relapsu.</li>
 </ul>
 
@@ -102,7 +102,7 @@ $articles[] = [
   <li><a href="https://pubmed.ncbi.nlm.nih.gov/19571279/" target="_blank" rel="noopener noreferrer">Beck LH Jr a kol. PLA2R ako cieľový antigén pri membranóznej nefropatii. N Engl J Med 2009;361:11–21</a></li>
   <li><a href="https://clinicaltrials.gov/" target="_blank" rel="noopener noreferrer">ClinicalTrials.gov — membranózna nefropatia</a></li>
 </ul>
-<p><em>Orientačná pomôcka — nenahrádza klinický úsudok ani biopsiu.</em></p>
+<p><em>Orientačná pomôcka – nenahrádza klinický úsudok ani biopsiu.</em></p>
 HTML,
 ];
 

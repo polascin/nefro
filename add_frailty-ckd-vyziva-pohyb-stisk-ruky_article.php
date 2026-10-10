@@ -35,13 +35,13 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Frailty pri CKD je dynamický viacrozmerný syndróm. Popri eGFR a albuminúrii má zmysel sledovať výživu, fyzickú aktivitu, svalovú silu, psychickú rezervu a sociálne fungovanie pacienta.',
     'content'      => <<<'HTML'
-<figure><a href="img/frailty-ckd-vyziva-pohyb-stisk-ruky.webp" rel="noopener noreferrer" target="_blank"><img src="img/frailty-ckd-vyziva-pohyb-stisk-ruky.webp" alt="Ruka zvierajúca svietiacu tyč, ktorej svetlo slabne, a vedľa nej pokojne žiariaca oblička" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Ubúdajúca sila sa v hodnote eGFR neukáže — krehkosť treba hľadať samostatne.</figcaption></figure>
+<figure><a href="img/frailty-ckd-vyziva-pohyb-stisk-ruky.webp" rel="noopener noreferrer" target="_blank"><img src="img/frailty-ckd-vyziva-pohyb-stisk-ruky.webp" alt="Ruka zvierajúca svietiacu tyč, ktorej svetlo slabne, a vedľa nej pokojne žiariaca oblička" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Ubúdajúca sila sa v hodnote eGFR neukáže – krehkosť treba hľadať samostatne.</figcaption></figure>
 
-<p>Chronická choroba obličiek nie je len ochorenie glomerulovej filtrácie. U mnohých pacientov ide o systémový stav, ktorý zasahuje svalovú silu, výživu, psychickú odolnosť, sociálne fungovanie a schopnosť zvládať bežné denné aktivity. Práve preto sa v nefrológii čoraz viac diskutuje o pojme <em>frailty</em>, teda krehkosť alebo zraniteľnosť pacienta.</p>
+<p>Chronická choroba obličiek nie je len ochorenie glomerulovej filtrácie. U mnohých pacientov ide o systémový stav, ktorý zasahuje svalovú silu, výživu, psychickú odolnosť, sociálne fungovanie a schopnosť zvládať bežné denné aktivity. Preto sa v nefrológii čoraz častejšie hovorí o <em>frailty</em>, teda krehkosť alebo zraniteľnosť pacienta.</p>
 
 <p>Článok publikovaný v <em>Journal of Nephrology</em> sa venuje longitudinálnemu sledovaniu viacrozmernej frailty u pacientov s chronickou chorobou obličiek. Autori skúmali, ako sa počas 12 mesiacov menia jednotlivé zložky frailty u pacientov s CKD, ktorí ešte neboli liečení dialýzou, a aký význam majú nutričný stav, fyzická aktivita a sila stisku ruky.</p>
 
-<p>Pre klinickú prax je hlavné posolstvo jednoduché: eGFR a albuminúria sú nevyhnutné, ale nestačia. Pacient s rovnakou eGFR môže mať úplne inú funkčnú rezervu, inú toleranciu liečby a iné riziko hospitalizácie podľa toho, či je aktívny, živený, sebestačný a sociálne podporený.</p>
+<p>Pre klinickú prax z toho vyplýva jednoduchý záver: eGFR a albuminúria sú nevyhnutné, ale nestačia. Pacient s rovnakou eGFR môže mať úplne inú funkčnú rezervu, inú toleranciu liečby a iné riziko hospitalizácie podľa toho, či je aktívny, dobre živený, sebestačný a má sociálnu oporu.</p>
 
 <h2>Frailty ako klinický problém pri CKD</h2>
 
@@ -49,27 +49,27 @@ $articles[] = [
 
 <p>Autori pripomínajú, že výskyt frailty u pacientov s CKD môže byť veľmi vysoký, najmä v pokročilých štádiách ochorenia. V literatúre sa v niektorých skupinách pacientov s pokročilou CKD uvádza prevalencia až približne 70 %.</p>
 
-<p>Dôležité je, že frailty nie je statická nálepka. Môže sa zhoršovať, stabilizovať alebo zlepšovať. Preto nestačí jednorazovo označiť pacienta ako krehkého. Klinicky cennejšie je sledovať vývoj v čase a hľadať faktory, ktoré sú ovplyvniteľné.</p>
+<p>Frailty pritom nie je statická nálepka. Môže sa zhoršovať, stabilizovať alebo zlepšovať. Preto nestačí jednorazovo označiť pacienta ako krehkého. Klinicky cennejšie je sledovať vývoj v čase a hľadať faktory, ktoré sú ovplyvniteľné.</p>
 
 <h2>Viacrozmerný pohľad na krehkosť</h2>
 
 <p>Frailty sa často zužuje na fyzickú slabosť, pomalú chôdzu alebo nízku svalovú silu. Tento prístup je praktický, ale neúplný. Zdrojový článok zdôrazňuje <em>multidomain frailty</em>, teda viacrozmernú krehkosť.</p>
 
-<p>Viacrozmerná frailty zahŕňa fyzickú, psychologickú a sociálnu zložku. Pri CKD to dáva veľký klinický zmysel. Pacient môže mať relatívne stabilnú eGFR, ale zároveň sa môže zhoršovať jeho výživa, ubúdať svalová sila, klesať aktivita, narastať únava alebo sociálna izolácia.</p>
+<p>Viacrozmerná frailty zahŕňa fyzickú, psychologickú a sociálnu zložku. Pri CKD to má jasný klinický zmysel: pacient môže mať relatívne stabilnú eGFR, ale zároveň sa môže zhoršovať jeho výživa, ubúdať svalová sila, klesať aktivita, narastať únava alebo sociálna izolácia.</p>
 
 <p>Takýto pacient je klinicky rizikovejší, aj keď samotné laboratórne parametre nemusia dramaticky upozorniť na zmenu stavu. Preto by sa krehkosť mala chápať ako doplnková informácia o biologickom a funkčnom stave pacienta, nie ako samostatná geriatrická poznámka mimo nefrologického rozhodovania.</p>
 
 <h2>Dizajn štúdie</h2>
 
-<p>Autori realizovali longitudinálnu kohortovú štúdiu u pacientov s chronickou chorobou obličiek, ktorí neboli liečení dialýzou.</p>
+<p>Išlo o longitudinálnu kohortovú štúdiu u pacientov s chronickou chorobou obličiek, ktorí neboli liečení dialýzou.</p>
 
-<p>Do štúdie bolo zaradených 120 pacientov s CKD vo veku nad 20 rokov. Pacienti boli regrutovaní z nefrologickej ambulancie zdravotníckeho centra na južnom Taiwane v období od novembra 2022 do mája 2024.</p>
+<p>Do štúdie bolo zaradených 120 pacientov s CKD vo veku nad 20 rokov. Pacienti pochádzali z nefrologickej ambulancie zdravotníckeho centra na južnom Taiwane v období od novembra 2022 do mája 2024.</p>
 
 <p>Cieľom bolo sledovať 12-mesačné trajektórie viacrozmernej frailty a hodnotiť súvislosť medzi zmenami frailty a tromi klinicky ovplyvniteľnými faktormi: nutričným stavom, fyzickou aktivitou a silou stisku ruky.</p>
 
 <h2>Prečo práve výživa, pohyb a sila stisku</h2>
 
-<p>Výber týchto faktorov je veľmi praktický. V nefrologickej ambulancii často sledujeme kreatinín, eGFR, albuminúriu, draslík, bikarbonát, fosfor, hemoglobín a krvný tlak. Menej systematicky však hodnotíme, či pacient chudne, koľko sa hýbe a či mu ubúda svalová sila.</p>
+<p>Výber týchto faktorov je praktický. V nefrologickej ambulancii často sledujeme kreatinín, eGFR, albuminúriu, draslík, bikarbonát, fosfor, hemoglobín a krvný tlak. Menej systematicky však hodnotíme, či pacient chudne, koľko sa hýbe a či mu ubúda svalová sila.</p>
 
 <p>Pritom práve tieto ukazovatele môžu predchádzať klinickému zlomu. Pokles chuti do jedla, úbytok hmotnosti, zníženie aktivity alebo slabší stisk ruky môžu signalizovať, že pacient stráca rezervu ešte predtým, než sa objaví hospitalizácia, pád alebo strata sebestačnosti.</p>
 
@@ -87,7 +87,7 @@ $articles[] = [
 
 <p>Primeraná fyzická aktivita však môže pomáhať udržiavať svalovú silu, metabolickú stabilitu, rovnováhu, funkčnú nezávislosť a psychickú odolnosť. Nemusí ísť o športový výkon. U mnohých pacientov má význam pravidelná chôdza, jednoduché silové cvičenia, tréning rovnováhy a individuálne nastavený rehabilitačný plán.</p>
 
-<p>Pre nefrológa je dôležité nepýtať sa iba „bolí vás niečo?“, ale aj „koľko prejdete?“, „zvládnete schody?“, „prestali ste robiť niečo, čo ste predtým zvládali?“ a „bojíte sa pádu?“. Tieto otázky často odhalia riziko skôr než laboratórium.</p>
+<p>Nefrológ by sa preto nemal pýtať iba „bolí vás niečo?“, ale aj „koľko prejdete?“, „zvládnete schody?“, „prestali ste robiť niečo, čo ste predtým zvládali?“ a „bojíte sa pádu?“. Tieto otázky často odhalia riziko skôr než laboratórium.</p>
 
 <h2>Sila stisku ruky</h2>
 
@@ -95,11 +95,11 @@ $articles[] = [
 
 <p>Jej výhodou je praktickosť. Vyšetrenie je rýchle, opakovateľné a pre pacienta málo zaťažujúce. Pokles sily stisku môže signalizovať zhoršenie svalovej kondície ešte predtým, než sa prejaví výrazná strata sebestačnosti.</p>
 
-<p>Samozrejme, sila stisku nie je celý príbeh. Treba ju interpretovať spolu s vekom, pohlavím, dominantnou rukou, neurologickým a ortopedickým stavom. Ako jednoduchý trendový ukazovateľ však môže byť veľmi užitočná.</p>
+<p>Sila stisku však sama osebe nestačí. Treba ju interpretovať spolu s vekom, pohlavím, dominantnou rukou, neurologickým a ortopedickým stavom. Ako jednoduchý trendový ukazovateľ však môže byť veľmi užitočná.</p>
 
 <h2>Klinický význam pre nefrológa</h2>
 
-<p>Hlavné posolstvo článku je jasné: pacient s CKD má byť hodnotený komplexnejšie ako iba podľa eGFR. Frailty významne ovplyvňuje prognózu, toleranciu liečby a kvalitu života.</p>
+<p>Pacienta s CKD treba hodnotiť komplexnejšie než iba podľa eGFR, pretože frailty významne ovplyvňuje prognózu, toleranciu liečby a kvalitu života.</p>
 
 <p>V praxi má zmysel u pacientov s CKD, najmä v pokročilejších štádiách, pravidelne sledovať neúmyselný úbytok hmotnosti, chuť do jedla, svalovú silu, schopnosť chôdze, pády alebo neistotu pri chôdzi, únavu, fyzickú aktivitu, depresívne alebo úzkostné príznaky, sociálnu izoláciu a schopnosť zvládať liečebný režim.</p>
 
@@ -135,25 +135,25 @@ $articles[] = [
   <li>sila stisku ruky alebo iný jednoduchý funkčný test, ak je dostupný.</li>
 </ul>
 
-<p>Takýto skríning nemusí predĺžiť ambulanciu neprimerane dlho, ale môže zmeniť klinické rozhodovanie. Ak sa ukáže zhoršovanie, pacient potrebuje nie iba ďalší laboratórny odber, ale aj plán intervencie.</p>
+<p>Takýto skríning nemusí kontrolu neprimerane predĺžiť, ale môže zmeniť klinické rozhodovanie. Ak sa ukáže zhoršovanie, pacient potrebuje nie iba ďalší laboratórny odber, ale aj plán intervencie.</p>
 
 <h2>Dôležitý posun v uvažovaní</h2>
 
-<p>Tento článok zapadá do širšieho trendu modernej nefrológie. Cieľom už nie je iba spomaliť pokles eGFR alebo pripraviť pacienta na dialýzu. Cieľom je zachovať funkčnosť, sebestačnosť, kvalitu života a schopnosť pacienta rozhodovať o vlastnej liečbe.</p>
+<p>Štúdia zapadá do širšieho posunu v súčasnej nefrológii. Cieľom už nie je iba spomaliť pokles eGFR alebo pripraviť pacienta na dialýzu. Cieľom je zachovať funkčnosť, sebestačnosť, kvalitu života a schopnosť pacienta rozhodovať o vlastnej liečbe.</p>
 
 <p>Pri CKD sa často venuje veľká pozornosť laboratórnym hraniciam. Tie sú nevyhnutné, ale nie postačujúce. Pacient, ktorý je fyzicky slabý, sociálne izolovaný, malnutričný a depresívny, má iné riziko ako pacient s rovnakou eGFR, ale dobrou svalovou silou, stabilnou výživou a zachovanou aktivitou.</p>
 
 <h2>Limity dostupného zdroja</h2>
 
-<p>Verejne dostupný text článku je extrakt advance článku a celý text nie je voľne dostupný. Preto nie je možné spoľahlivo zhrnúť všetky detailné výsledky, štatistické modely, presné hodnoty zmien jednotlivých domén frailty ani všetky charakteristiky pacientov.</p>
+<p>Verejne dostupný je iba abstrakt článku publikovaného online pred tlačou, plný text nie je voľne prístupný. Preto nie je možné spoľahlivo zhrnúť všetky detailné výsledky, štatistické modely, presné hodnoty zmien jednotlivých domén frailty ani všetky charakteristiky pacientov.</p>
 
-<p>Tento slovenský odborný text preto interpretuje najmä overené informácie zo záznamu a dostupného extraktu: cieľ štúdie, dizajn, počet pacientov, sledované faktory a klinický význam témy. Pri citovaní detailných numerických výsledkov nad rámec týchto údajov je vhodné vychádzať z plného textu článku.</p>
+<p>Tento text preto vychádza najmä z overených informácií z bibliografického záznamu a abstraktu: cieľ štúdie, dizajn, počet pacientov, sledované faktory a klinický význam témy. Pri citovaní detailných numerických výsledkov nad rámec týchto údajov je vhodné vychádzať z plného textu článku.</p>
 
 <h2>Záver</h2>
 
 <p>Frailty pri chronickej chorobe obličiek je dynamický a viacrozmerný syndróm. Netýka sa iba svalovej slabosti, ale aj psychickej, sociálnej a funkčnej rezervy pacienta. Štúdia z Taiwanu upozorňuje, že u nedialyzovaných pacientov s CKD má zmysel sledovať vývoj frailty v čase a venovať pozornosť ovplyvniteľným faktorom, ako sú výživa, fyzická aktivita a sila stisku ruky.</p>
 
-<p>Pre nefrologickú prax je hlavné posolstvo praktické: eGFR a albuminúria nestačia na úplné posúdenie rizika. Pacienta s CKD treba hodnotiť aj podľa jeho funkčnej rezervy. Včasné rozpoznanie frailty môže pomôcť lepšie načasovať intervencie, pripraviť pacienta na ďalší priebeh ochorenia a zachovať čo najlepšiu kvalitu života.</p>
+<p>eGFR a albuminúria na úplné posúdenie rizika nestačia; pacienta s CKD treba hodnotiť aj podľa jeho funkčnej rezervy. Včasné rozpoznanie frailty môže pomôcť lepšie načasovať intervencie, pripraviť pacienta na ďalší priebeh ochorenia a zachovať čo najlepšiu kvalitu života.</p>
 
 <hr>
 

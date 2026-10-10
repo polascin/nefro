@@ -38,29 +38,28 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Pravidelné cesty na hemodialýzu sú dôležitou praktickou témou. Prinášame prehľad možností dopravy vrátane zvozu organizovaného strediskom a ako si ju zariadiť.',
+    'excerpt'      => 'Ako sa dostať na hemodialýzu a späť: prehľad možností dopravy vrátane zvozu organizovaného strediskom a postup, ako si ju zariadiť.',
     'content'      => <<<'HTML'
 <figure>
   <img src="img/doprava-a-zvoz-na-dialyzu.webp" alt="Infografika: možnosti dopravy a zvozu na dialýzu" loading="lazy" decoding="async">
 </figure>
 
-<p>Hemodialýza znamená pravidelné cesty do strediska — najčastejšie trikrát týždenne. Spoľahlivá
-doprava preto býva dôležitou praktickou otázkou. V tomto článku zhrnieme, aké sú možnosti a ako si
-dopravu zariadiť.</p>
+<p>Hemodialýza znamená pravidelné cesty do strediska, najčastejšie trikrát týždenne. Oplatí sa
+preto mať dopravu spoľahlivo vyriešenú. Nižšie nájdete možnosti a postup, ako si ju zariadiť.</p>
 
 <h2>Možnosti dopravy</h2>
 <ul>
-  <li><strong>Vlastná doprava</strong> alebo s pomocou rodiny — ak to váš stav dovoľuje.</li>
-  <li><strong>Mestská a verejná doprava</strong> — pri dobrej dostupnosti a vhodnom stave.</li>
-  <li><strong>Zmluvná sanitná preprava</strong> — pri zdravotnej indikácii ju môže predpísať lekár.</li>
-  <li><strong>Zvoz organizovaný strediskom</strong> — spoločná preprava pacientov v rámci spádovej
+  <li><strong>Vlastná doprava</strong> alebo pomoc rodiny – ak to váš stav dovoľuje.</li>
+  <li><strong>Mestská a verejná doprava</strong> – pri dobrej dostupnosti a vhodnom stave.</li>
+  <li><strong>Zmluvná sanitná preprava</strong> – pri zdravotnej indikácii ju môže predpísať lekár.</li>
+  <li><strong>Zvoz organizovaný strediskom</strong> – spoločná preprava pacientov v rámci spádovej
       oblasti.</li>
 </ul>
 
 <h2>Zvoz organizovaný strediskom</h2>
-<p>Pre pacientov v spádovej oblasti — vrátane <strong>západnej Bratislavy a Záhoria</strong> — môže
+<p>Pre pacientov v spádovej oblasti – vrátane <strong>západnej Bratislavy a Záhoria</strong> – môže
 stredisko pomôcť s organizáciou <strong>zvozu</strong> na dialýzu a späť. Konkrétne možnosti
-a podmienky závisia od vašej polohy a stavu; najlepšie je vopred sa informovať.</p>
+a podmienky závisia od toho, kde bývate, a od vášho zdravotného stavu, preto sa informujte vopred.</p>
 
 <h2>Ako si dopravu zariadiť</h2>
 <ol>
@@ -72,7 +71,7 @@ a podmienky závisia od vašej polohy a stavu; najlepšie je vopred sa informova
 
 <h2>Tipy</h2>
 <ul>
-  <li>Plánujte s rezervou — počítajte s časom na cestu pred aj po dialýze.</li>
+  <li>Plánujte s rezervou – počítajte s časom na cestu pred aj po dialýze.</li>
   <li>Majte záložný plán dopravy pre prípad výpadku.</li>
   <li>Dôležité zmeny v termínoch hláste vopred.</li>
 </ul>

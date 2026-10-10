@@ -31,11 +31,11 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Prospektívne hodnotenie u 180 ambulantných pacientov s CKD 3.–4. štádia a významnou albuminúriou naznačuje nefroprotektívny prínos finerenónu nezávisle od prítomnosti diabetu, bez nárastu hyperkaliémie. Ide o malú reálnu kohortu — preto skôr signál a smer než definitívny dôkaz.',
+    'excerpt'      => 'Prospektívne hodnotenie u 180 ambulantných pacientov s CKD 3.–4. štádia a významnou albuminúriou naznačuje nefroprotektívny prínos finerenónu nezávisle od prítomnosti diabetu, bez nárastu hyperkaliémie. Ide o malú reálnu kohortu – preto skôr signál a smer než definitívny dôkaz.',
     'content'      => <<<'HTML'
-<figure><a href="img/finerenon-nefroprotekcia-ckd-3-4-bez-ohladu-na-diabetes.webp" rel="noopener noreferrer" target="_blank"><img src="img/finerenon-nefroprotekcia-ckd-3-4-bez-ohladu-na-diabetes.webp" alt="Dve obličky — jedna s cukrovými iskrami, druhá bez — obe dostávajú rovnako silný ochranný lúč" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Ochrana obličky nezávisí od prítomnosti diabetu — to je jadro nálezu.</figcaption></figure>
+<figure><a href="img/finerenon-nefroprotekcia-ckd-3-4-bez-ohladu-na-diabetes.webp" rel="noopener noreferrer" target="_blank"><img src="img/finerenon-nefroprotekcia-ckd-3-4-bez-ohladu-na-diabetes.webp" alt="Dve obličky – jedna s cukrovými iskrami, druhá bez – obe dostávajú rovnako silný ochranný lúč" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Ochrana obličky nezávisí od prítomnosti diabetu – to je jadro nálezu.</figcaption></figure>
 
-<p>Portál Physicians Weekly opisuje výsledky štúdie, v ktorej <strong>finerenón</strong> dokázal <strong>spomaliť progresiu chronickej choroby obličiek (CKD)</strong> u pacientov v <strong>3.–4. štádiu</strong> s <strong>eGFR 20 až 60 ml/min</strong> a <strong>stredne ťažkou až ťažkou albuminúriou</strong>, a to <strong>nezávisle od prítomnosti diabetu</strong>. Text zdôrazňuje aj bezpečnostný aspekt: nárast <strong>hyperkaliémie</strong> sa nepozoroval.</p>
+<p>Portál Physicians Weekly opisuje výsledky štúdie, v ktorej <strong>finerenón</strong> dokázal <strong>spomaliť progresiu chronickej choroby obličiek (CKD)</strong> u pacientov v <strong>3.–4. štádiu</strong> s <strong>eGFR 20 až 60 ml/min</strong> a <strong>stredne ťažkou až ťažkou albuminúriou</strong>, a to <strong>nezávisle od prítomnosti diabetu</strong>. Text zdôrazňuje aj bezpečnosť: nárast <strong>hyperkaliémie</strong> sa nepozoroval.</p>
 
 <h2>Kto bol v štúdii</h2>
 
@@ -77,16 +77,16 @@ $articles[] = [
 
 <h2>Praktické ponaučenie</h2>
 
-<p>Tento zdroj prakticky podporuje myšlienku, že u vybraných pacientov s <strong>CKD 3.–4. štádia a významnou albuminúriou</strong> môže mať finerenón <strong>nefroprotektívny prínos aj bez diabetu</strong>. Zároveň však ide o reálnu populáciu (ambulantní pacienti, v texte zjavne v kontexte mimo schválenej indikácie), čo treba do praxe preložiť takto:</p>
+<p>Zdroj podporuje predstavu, že u vybraných pacientov s <strong>CKD 3.–4. štádia a významnou albuminúriou</strong> môže mať finerenón <strong>nefroprotektívny prínos aj bez diabetu</strong>. Ide však o reálnu populáciu (ambulantní pacienti, podľa textu zjavne mimo schválenej indikácie), z čoho pre prax vyplýva:</p>
 
 <ul>
-  <li>relevantní sú pacienti s albuminúriou (UACR &gt; 30 mg/g) a eGFR v príslušnom rozmedzí,</li>
-  <li>a zároveň treba dodržať realistickú klinickú logiku monitorovania draslíka (aj keď v tejto kohorte hyperkaliémia nebola problémom).</li>
+  <li>do úvahy prichádzajú pacienti s albuminúriou (UACR &gt; 30 mg/g) a eGFR v príslušnom rozmedzí,</li>
+  <li>draslík treba monitorovať podľa bežných klinických zásad, aj keď v tejto kohorte hyperkaliémia nebola problémom.</li>
 </ul>
 
 <h2>Dôležitá opatrnosť pri interpretácii</h2>
 
-<p>Text je správou o štúdii a neuvádza všetky detaily (dizajn, presné parametre a štatistické testy). Pozoruhodné je najmä <em>zlepšenie</em> eGFR, ktoré je pri tejto liekovej triede netypické a samo osebe si vyžaduje opatrnú interpretáciu. Preto k záverom pristupujme ako k <strong>signálu</strong> a smeru — praktickú pointu si zaslúžia, ale pred nasadením u konkrétneho pacienta treba držať lokálne odporúčania a bezpečnostné monitorovanie.</p>
+<p>Text je správou o štúdii a neuvádza všetky detaily (dizajn, presné parametre a štatistické testy). Pozoruhodné je najmä <em>zlepšenie</em> eGFR, ktoré je pri tejto liekovej triede netypické a samo osebe si vyžaduje opatrnú interpretáciu. Závery preto treba brať ako <strong>signál</strong> a smer – pre prax sú zaujímavé, ale pred nasadením u konkrétneho pacienta treba dodržať lokálne odporúčania a bezpečnostné monitorovanie.</p>
 
 <hr>
 

@@ -31,11 +31,11 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Clínic Barcelona dosiahol 100 pacientov na domácej dialýze a konsoliduje model tréningu a domáceho monitorovania. Úspech domácich modalít stojí menej na technike a viac na organizačných pilieroch — spojitom tréningu, zdieľanej infraštruktúre pre PD aj domácu HD a aktívnej edukácii.',
+    'excerpt'      => 'Clínic Barcelona dosiahol 100 pacientov na domácej dialýze a upevňuje model tréningu a domáceho monitorovania. Úspech domácich modalít závisí menej od techniky a viac od organizácie – nadväzujúceho tréningu, spoločnej infraštruktúry pre PD aj domácu HD a aktívnej edukácie.',
     'content'      => <<<'HTML'
 <figure><a href="img/domaca-dialyza-100-pacientov-treningovy-model.webp" rel="noopener noreferrer" target="_blank"><img src="img/domaca-dialyza-100-pacientov-treningovy-model.webp" alt="Domáci interiér s dialyzačným prístrojom pri okne a tenkým vláknom monitorovacieho svetla do diaľky" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Liečba doma funguje vtedy, keď za ňou stojí tréning pacienta a spoľahlivé sledovanie na diaľku.</figcaption></figure>
 
-<p>Nemocnica Clínic Barcelona informuje, že dosiahla <strong>100 pacientov na domácej dialýze</strong> a zároveň konsoliduje priekopnícky model <strong>tréningu a domáceho monitorovania</strong>. Cieľom je urobiť z domácej liečby bezpečnú, efektívnu a do bežného života integrovanú alternatívu.</p>
+<p>Nemocnica Clínic Barcelona informuje, že dosiahla <strong>100 pacientov na domácej dialýze</strong> a zároveň upevňuje priekopnícky model <strong>tréningu a domáceho monitorovania</strong>. Cieľom je urobiť z domácej liečby bezpečnú, účinnú a do bežného života integrovanú alternatívu.</p>
 
 <h2>Aktuálne počty a trend rastu</h2>
 
@@ -66,7 +66,7 @@ $articles[] = [
   <li><strong>monitorovanie počas domácej liečby</strong>.</li>
 </ul>
 
-<p>V tomto priestore spolunažívajú obe modality — domáca hemodialýza aj peritoneálna dialýza. Tím dokáže <strong>trénovať pacientov pre obe techniky</strong> a umožňuje vzájomné učenie: pacienti si môžu vymieňať skúsenosti a strácajú počiatočné obavy. V praxi to znižuje bariéry a pomáha budovať dôveru v sebaobsluhu.</p>
+<p>V tomto priestore sú pod jednou strechou obe modality – domáca hemodialýza aj peritoneálna dialýza. Tím dokáže <strong>trénovať pacientov pre obe techniky</strong> a umožňuje vzájomné učenie: pacienti si môžu vymieňať skúsenosti a zbavujú sa počiatočných obáv. V praxi to znižuje bariéry a pomáha budovať dôveru v sebaobsluhu.</p>
 
 <h2>Úloha sestier a domácej podpory</h2>
 
@@ -90,10 +90,10 @@ $articles[] = [
 
 <h2>Praktické ponaučenie</h2>
 
-<p>Ak sa na domáce modality hľadí len ako na „zariadenie a techniku“, implementácia často zlyháva. Tento model je dobrým príkladom toho, že úspech stojí na organizačných pilieroch:</p>
+<p>Ak sa na domáce modality hľadí len ako na „zariadenie a techniku“, implementácia často zlyháva. Tento model ukazuje, že úspech závisí najmä od organizácie:</p>
 
 <ol>
-  <li><strong>centralizovaný tréning a následná domáca podpora ako jedna kontinuita</strong>, nie oddelené fázy,</li>
+  <li><strong>centralizovaný tréning a následná domáca podpora ako jeden nadväzujúci celok</strong>, nie oddelené fázy,</li>
   <li><strong>spoločná infraštruktúra pre PD aj domácu HD</strong>, ktorá zvyšuje flexibilitu a psychologickú prijateľnosť,</li>
   <li><strong>aktívna edukácia a budovanie dôvery</strong>, aby pacient liečbu zvládol dlhodobo v reálnom živote.</li>
 </ol>

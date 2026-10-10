@@ -37,7 +37,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Nové usmernenia ACC/AHA/ADA/ASN zavádzajú kardiovaskulárno-obličkovo-metabolický (CKM) syndróm ako jeden rámec. Čo to znamená pre nefrologickú prax: prepojiť renálne, kardiovaskulárne a metabolické riziko do spoločného postupu detekcie, hodnotenia, manažmentu a sledovania.',
     'content'      => <<<'HTML'
-<figure><a href="img/ckm-syndrom-usmernenia-acc-aha-ada-asn-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/ckm-syndrom-usmernenia-acc-aha-ada-asn-nefrologia.webp" alt="Jeden svetelný rámec spájajúci srdce, metabolické častice a obličku, ktorá je v jeho strede" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Spoločný rámec znamená, že sa už nehodnotí každý orgán zvlášť — a oblička stojí v jeho strede.</figcaption></figure>
+<figure><a href="img/ckm-syndrom-usmernenia-acc-aha-ada-asn-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/ckm-syndrom-usmernenia-acc-aha-ada-asn-nefrologia.webp" alt="Jeden svetelný rámec spájajúci srdce, metabolické častice a obličku, ktorá je v jeho strede" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Spoločný rámec znamená, že sa už nehodnotí každý orgán zvlášť a oblička stojí v jeho strede.</figcaption></figure>
 
 <p>Chronická choroba obličiek (CKD) zriedka existuje izolovane. U väčšiny pacientov sa prelína
 s diabetom, metabolickými rizikami, obezitou, dyslipidémiou a kardiovaskulárnym ochorením. V praxi
@@ -45,27 +45,27 @@ potom vzniká typický problém: každý odbor rieši „svoje“ diagnózy, ale
 a rastie naprieč orgánmi.</p>
 
 <p>Nové usmernenia pre <strong>kardiovaskulárno-obličkovo-metabolický (cardiovascular-kidney-metabolic,
-CKM) syndróm</strong> majú ambíciu tento prístup prepojiť. Ide o to, že CKD sa už neberie iba ako
-renálny koniec reťazca, ale ako súčasť širšieho kardiovaskulárno-metabolického obrazu.</p>
+CKM) syndróm</strong> chcú tieto pohľady prepojiť. CKD v nich už nie je iba renálnym koncom
+reťazca, ale súčasťou širšieho kardiovaskulárno-metabolického obrazu.</p>
 
 <h2>Čo je cieľom CKM usmernení</h2>
 <p>Podľa spracovania na Medscape sú publikované dve súvisiace časti:</p>
 <ol>
-  <li><strong>„Guideline-at-a-glance“ v JACC</strong> (pre rýchlu orientáciu) pre CKM syndróm.</li>
+  <li><strong>„Guideline-at-a-glance“ v JACC</strong>, stručný prehľad na rýchlu orientáciu.</li>
   <li><strong>Komplexné usmernenie AHA/ACC/ADA/ASN</strong> pre prevenciu, detekciu, vyhodnotenie
       a manažment CKM syndrómu.</li>
 </ol>
-<p>Usmernenia sú významné aj tým, že ide o <strong>nový, explicitný rámec</strong> pre CKM syndróm
-(teda nejde len o ďalšiu sumarizáciu jednotlivých diagnóz riešených izolovane v samostatných odboroch).</p>
+<p>Význam usmernení je aj v tom, že prinášajú <strong>nový, explicitný rámec</strong> pre CKM syndróm,
+nie ďalší súhrn jednotlivých diagnóz riešených izolovane v samostatných odboroch.</p>
 
-<h2>Ako to môže vyzerať v nefrologickej ambulancii (prakticky)</h2>
+<h2>Ako to môže vyzerať v nefrologickej ambulancii</h2>
 <p>Nefrológ často stojí pred otázkou, ako prepojiť:</p>
 <ul>
   <li>renálne riziko (pokles eGFR, albuminúria, progresia),</li>
   <li>kardiovaskulárne riziko (KV príhody, hospitalizácie, zlyhávanie srdca),</li>
   <li>metabolické riziko (diabetes, obezita, dyslipidémia).</li>
 </ul>
-<p>CKM prístup v zásade podporuje pracovný model, v ktorom sa u pacienta mapa rizika nebuduje oddelene,
+<p>CKM prístup podporuje pracovný model, v ktorom sa mapa rizika pacienta nebuduje oddelene,
 ale naraz. Prakticky to môže znamenať:</p>
 <ul>
   <li>mať pri každej významnej návšteve „spoločný cieľ“ (CKD nie je len cieľová hodnota eGFR, ale aj
@@ -87,8 +87,8 @@ ale naraz. Prakticky to môže znamenať:</p>
 </ol>
 
 <h2>Čo si z usmernení odniesť ako „nefrologický pracovný postup“</h2>
-<p>Keďže ide o CKM usmernenia zamerané na prevenciu, detekciu, vyhodnotenie a manažment, užitočné je
-premeniť ich do vlastného interného postupu. Ten si môžete nastaviť napríklad takto:</p>
+<p>Usmernenia sú zamerané na prevenciu, detekciu, vyhodnotenie a manažment, preto sa dajú premeniť
+na vlastný interný postup, napríklad takto:</p>
 <ul>
   <li><strong>Detekcia:</strong> u každého pacienta s CKD aktívne pátrať po dominantnej
       kardiometabolickej osi (nielen podľa diagnóz, ale aj podľa rizikového profilu).</li>

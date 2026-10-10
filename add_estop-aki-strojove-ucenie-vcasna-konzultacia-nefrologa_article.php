@@ -24,15 +24,15 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Randomizovaná štúdia vybrala modelom strojového učenia 180 hospitalizovaných pacientov s vysokým rizikom akútneho poškodenia obličiek. Včasná nefrologická konzultácia nezmenila kreatinín ani incidenciu AKI — a odporúčania sa realizovali len v 41 % prípadov.',
+    'excerpt'      => 'Randomizovaná štúdia vybrala modelom strojového učenia 180 hospitalizovaných pacientov s vysokým rizikom akútneho poškodenia obličiek. Včasná nefrologická konzultácia nezmenila kreatinín ani incidenciu AKI – a odporúčania sa realizovali len v 41 % prípadov.',
     'content'      => <<<'HTML'
 <figure><a href="img/estop-aki-strojove-ucenie-vcasna-konzultacia-nefrologa.webp" rel="noopener noreferrer" target="_blank"><img src="img/estop-aki-strojove-ucenie-vcasna-konzultacia-nefrologa.webp" alt="Algoritmická sieť vysiela zreteľnú výstrahu na obličku, jej klesajúca trajektória však pokračuje rovnako ako bez výstrahy" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Rozpoznať riziko je len prvý krok; ak sa za signálom nezmení postup, výsledok zostane rovnaký.</figcaption></figure>
 
-<p class="article-dek"><em>Modely strojového učenia dokážu upozorniť na hroziace akútne poškodenie obličiek hodiny až dni pred vzostupom kreatinínu. Randomizovaná štúdia ESTOP-AKI však ukázala, že samotné upozornenie spolu so včasnou konzultáciou nefrológa výsledky nezlepšilo. Najzaujímavejšie nie je, že štúdia vyšla negatívne — ale kde presne sa reťazec pretrhol.</em></p>
+<p class="article-dek"><em>Modely strojového učenia dokážu upozorniť na hroziace akútne poškodenie obličiek hodiny až dni pred vzostupom kreatinínu. Randomizovaná štúdia ESTOP-AKI však ukázala, že samotné upozornenie spolu so včasnou konzultáciou nefrológa výsledky nezlepšilo. Najzaujímavejšie nie je to, že štúdia vyšla negatívne, ale kde presne sa reťazec pretrhol.</em></p>
 
 <p>Predikcia akútneho poškodenia obličiek (AKI) patrí k najúspešnejším aplikáciám strojového učenia v nemocničnej medicíne. Model tej istej pracovnej skupiny bol v roku 2020 validovaný na takmer pol milióne hospitalizácií v troch zdravotníckych systémoch a dosahoval plochu pod krivkou ROC <strong>0,85 až 0,86</strong> pre predpoveď AKI druhého alebo vyššieho štádia v nasledujúcich 48 hodinách. Nástup dokázal signalizovať približne <strong>27 až 39 hodín</strong> pred zdvojnásobením sérového kreatinínu.</p>
 
-<p>To je na prediktívny model v klinickej medicíne veľmi dobrý výkon. Otvorenou zostávala druhá otázka — či sa dá takto získaný čas premeniť na lepší výsledok pre pacienta.</p>
+<p>To je na prediktívny model v klinickej medicíne veľmi dobrý výkon. Otvorená zostávala druhá otázka: či sa dá takto získaný čas premeniť na lepší výsledok pre pacienta.</p>
 
 <h2>Ako bola štúdia postavená</h2>
 
@@ -46,11 +46,11 @@ $articles[] = [
 
 <p>Konzultáciu vykonal nefrológ osobným vyšetrením pacienta. Odporúčania sa týkali objemového stavu a renálnej perfúzie, tlaku krvi, výberu a dávkovania liekov, potenciálne nefrotoxických expozícií, podávania tekutín a diuretík, elektrolytových a acidobázických porúch, nutričných potrieb a potreby ďalších vyšetrení.</p>
 
-<p>Nešlo teda o jednu štandardizovanú liečbu, ale o individuálne zostavený súbor odporúčaní. To zodpovedá klinickej realite, no zároveň znemožňuje určiť, ktorá zložka mohla byť účinná — a či vôbec niektorá.</p>
+<p>Nešlo teda o jednu štandardizovanú liečbu, ale o individuálne zostavený súbor odporúčaní. To zodpovedá klinickej realite, no zároveň znemožňuje určiť, ktorá zložka mohla byť účinná – a či vôbec niektorá.</p>
 
 <h2>Výsledky</h2>
 
-<p>Primárnym ukazovateľom bola maximálna zmena sérového kreatinínu počas siedmich dní. Rozdiel bol malý a nevýznamný — vzostup o <strong>0,04 mg/dl</strong> pri včasnej konzultácii oproti poklesu o <strong>0,03 mg/dl</strong> pri štandardnej starostlivosti (P = 0,30).</p>
+<p>Primárnym ukazovateľom bola maximálna zmena sérového kreatinínu počas siedmich dní. Rozdiel bol malý a nevýznamný: vzostup o <strong>0,04 mg/dl</strong> pri včasnej konzultácii oproti poklesu o <strong>0,03 mg/dl</strong> pri štandardnej starostlivosti (P = 0,30).</p>
 
 <p>Výber populácie pritom fungoval: AKI ktoréhokoľvek štádia vzniklo počas siedmich dní u <strong>70 pacientov, teda u 38,9 %</strong> celej kohorty. Model teda skutočne vybral vysokorizikový súbor.</p>
 
@@ -79,9 +79,9 @@ $articles[] = [
   <li>v <strong>68 %</strong> prípadov v skupine so štandardnou starostlivosťou.</li>
 </ul>
 
-<p>Intervencia, ktorá sa realizuje menej než v polovici prípadov, nemá ako preukázať účinok — aj keby bola sama osebe správna. Štúdia teda netestovala „účinnosť včasnej nefrologickej starostlivosti“, ale <strong>účinnosť ponuky včasnej nefrologickej starostlivosti v reálnom nemocničnom prostredí</strong>. To je legitímna a klinicky relevantná otázka, no je to iná otázka.</p>
+<p>Intervencia, ktorá sa realizuje menej než v polovici prípadov, nemá ako preukázať účinok – aj keby bola sama osebe správna. Štúdia teda netestovala „účinnosť včasnej nefrologickej starostlivosti“, ale <strong>účinnosť ponuky včasnej nefrologickej starostlivosti v reálnom nemocničnom prostredí</strong>. To je legitímna a klinicky relevantná otázka, no je to iná otázka.</p>
 
-<p>Porovnanie oboch mier adherencie si zároveň žiada opatrnosť. <strong>Randomizovaní boli pacienti, nie jednotlivé odporúčania.</strong> V skupine so štandardnou starostlivosťou sa nefrológ prizýval vtedy, keď o to ošetrujúci tím sám požiadal — teda spravidla pri zjavnejšom probléme, s menším počtom odporúčaní a s väčšou vnímanou naliehavosťou. Vyššia adherencia v kontrolnej skupine preto neznamená, že tam bola starostlivosť organizovaná lepšie. Porovnávajú sa dve odlišné klinické situácie.</p>
+<p>Porovnanie oboch mier adherencie si zároveň žiada opatrnosť. <strong>Randomizovaní boli pacienti, nie jednotlivé odporúčania.</strong> V skupine so štandardnou starostlivosťou sa nefrológ prizýval vtedy, keď o to ošetrujúci tím sám požiadal – teda spravidla pri zjavnejšom probléme, s menším počtom odporúčaní a s väčšou vnímanou naliehavosťou. Vyššia adherencia v kontrolnej skupine preto neznamená, že tam bola starostlivosť organizovaná lepšie. Porovnávajú sa dve odlišné klinické situácie.</p>
 
 <h2>Prečo sa včasné odporúčania nedodržiavali</h2>
 
@@ -100,7 +100,7 @@ $articles[] = [
 
 <p>Prediktívny model označí pacienta za vysokorizikového pre kombináciu veku, závažnosti základného ochorenia, chronickej choroby obličiek, malignity, hemodynamickej nestability a laboratórnych odchýlok. Väčšinu týchto faktorov nefrologická konzultácia zmeniť nemôže. Vysoké skóre pritom môže rovnako dobre označovať pacienta, ktorého AKI je odvrátiteľné vysadením nefrotoxického lieku, ako aj pacienta, ktorého AKI je nevyhnutným dôsledkom septického šoku.</p>
 
-<p>Rovnaké predpovedané riziko teda môže vzniknúť pri hypovolémii, venóznej kongescii, sepse, hypotenzii, liekovej toxicite, obštrukcii močových ciest alebo kardiorenálnom syndróme. <strong>Univerzálna konzultácia nemôže viesť k univerzálne účinnej intervencii</strong>, pretože účinná intervencia je pri každom z týchto mechanizmov iná — a pri niektorých neexistuje.</p>
+<p>Rovnaké predpovedané riziko teda môže vzniknúť pri hypovolémii, venóznej kongescii, sepse, hypotenzii, liekovej toxicite, obštrukcii močových ciest alebo kardiorenálnom syndróme. <strong>Univerzálna konzultácia nemôže viesť k univerzálne účinnej intervencii</strong>, pretože účinná intervencia je pri každom z týchto mechanizmov iná – a pri niektorých neexistuje.</p>
 
 <p>Pre prevenciu je preto dôležitejšie rozpoznať <em>reverzibilné</em> riziko než vypočítať vysokú pravdepodobnosť AKI.</p>
 
@@ -118,7 +118,7 @@ $articles[] = [
 
 <ol>
   <li><strong>Hemodynamická stabilizácia.</strong> Hypotenziu a nedostatočnú orgánovú perfúziu korigovať podľa príčiny, nie paušálne.</li>
-  <li><strong>Presné hodnotenie objemového stavu.</strong> Oligúria ani vzostup kreatinínu automaticky neznamenajú potrebu tekutín — pacient môže byť hypovolemický, normovolemický aj kongestívny. Pri kongescii nadmerná tekutinová liečba stav zhoršuje.</li>
+  <li><strong>Presné hodnotenie objemového stavu.</strong> Oligúria ani vzostup kreatinínu automaticky neznamenajú potrebu tekutín – pacient môže byť hypovolemický, normovolemický aj kongestívny. Pri kongescii nadmerná tekutinová liečba stav zhoršuje.</li>
   <li><strong>Revízia liekov, nie automatické vysadenie.</strong> Renálne riziko treba porovnať s prínosom liečby základného ochorenia.</li>
   <li><strong>Úprava dávkovania podľa funkcie obličiek</strong> tak, aby sa predišlo akumulácii bez zbytočného poddávkovania.</li>
   <li><strong>Racionálne používanie kontrastných látok.</strong> Obava z AKI nesmie viesť k odkladu nevyhnutnej diagnostiky alebo život zachraňujúceho výkonu.</li>
@@ -151,17 +151,17 @@ $articles[] = [
 
 <p>ESTOP-AKI prináša realistický a užitočný výsledok: algoritmus dokáže spoľahlivo upozorniť na rizikového pacienta, ale <strong>upozornenie samo osebe obličky nechráni</strong>. Ani včasná konzultácia nefrológa nemusí zmeniť výsledok, ak riziko nie je modifikovateľné, ak odporúčania nie sú prioritizované a ak sa v praxi nerealizujú.</p>
 
-<p>Bolo by chybou čítať štúdiu ako zlyhanie umelej inteligencie alebo ako dôkaz zbytočnosti včasnej nefrologickej starostlivosti. Model svoju úlohu splnil — takmer 40 % vybraných pacientov skutočne dostalo AKI. Zlyhal <strong>prenos predikcie do konkrétneho, včas vykonaného a účinného zásahu</strong>.</p>
+<p>Bolo by chybou čítať štúdiu ako zlyhanie umelej inteligencie alebo ako dôkaz zbytočnosti včasnej nefrologickej starostlivosti. Model svoju úlohu splnil: takmer 40 % vybraných pacientov skutočne dostalo AKI. Zlyhal <strong>prenos predikcie do konkrétneho, včas vykonaného a účinného zásahu</strong>.</p>
 
-<p>To je zároveň všeobecnejšie poučenie pre celú oblasť klinickej podpory rozhodovania: presnosť modelu je nutnou, nie postačujúcou podmienkou. Nástroj, ktorý identifikuje riziko bez toho, aby ukázal, čo s ním robiť a či sa to urobilo, pridáva do už tak preťaženého prostredia ďalšie upozornenie — a upozornenia bez jasného nasledujúceho kroku sa v nemocnici prehliadajú spoľahlivo.</p>
+<p>To je zároveň všeobecnejšie poučenie pre celú oblasť klinickej podpory rozhodovania: presnosť modelu je nutnou, nie postačujúcou podmienkou. Nástroj, ktorý identifikuje riziko bez toho, aby ukázal, čo s ním robiť a či sa to urobilo, pridáva do už tak preťaženého prostredia ďalšie upozornenie – a upozornenia bez jasného nasledujúceho kroku sa v nemocnici prehliadajú spoľahlivo.</p>
 
 <h3>Súvisiace články</h3>
 
 <ul>
-  <li><a href="article.php?slug=umela-inteligencia-nefrologia-co-vieme-limity">Umelá inteligencia v nefrológii</a> — čo vieme a kde sú limity.</li>
+  <li><a href="article.php?slug=umela-inteligencia-nefrologia-co-vieme-limity">Umelá inteligencia v nefrológii</a> – čo vieme a kde sú limity.</li>
   <li><a href="article.php?slug=liecba-ckd-2026-vrstvena-nefroprotekcia-post-aki">Vrstvená nefroprotekcia po prekonanom AKI</a>.</li>
-  <li><a href="article.php?slug=predikcia-vhodnosti-peritonealnej-dialyzy-validacia">Predikcia vhodnosti peritoneálnej dialýzy</a> — validácia a prírastková hodnota prediktívnych modelov.</li>
-  <li><a href="article.php?slug=renalna-funkcna-rezerva-normalny-egfr-poskodenie-obliciek">Renálna funkčná rezerva</a> — poškodenie obličiek pri normálnej eGFR.</li>
+  <li><a href="article.php?slug=predikcia-vhodnosti-peritonealnej-dialyzy-validacia">Predikcia vhodnosti peritoneálnej dialýzy</a> – validácia a prírastková hodnota prediktívnych modelov.</li>
+  <li><a href="article.php?slug=renalna-funkcna-rezerva-normalny-egfr-poskodenie-obliciek">Renálna funkčná rezerva</a> – poškodenie obličiek pri normálnej eGFR.</li>
 </ul>
 
 <hr>
@@ -175,7 +175,7 @@ $articles[] = [
   <li><strong>Medscape Medical News.</strong> <em>Early AKI Prevention Tool Flags Risk, but Compliance Low.</em> 2026. <a href="https://www.medscape.com/viewarticle/early-acute-kidney-injury-prevention-tool-flags-risk-2026a1000qao" target="_blank" rel="noopener noreferrer">Medscape</a>.</li>
 </ol>
 
-<p><em><strong>Poznámka k dôkazom:</strong> Bibliografické údaje a kompletné autorstvo oboch prác Churpeka a spolupracovníkov boli overené v Europe PMC. Proti zneniu abstraktu štúdie ESTOP-AKI boli overené tieto údaje: 180 randomizovaných pacientov, medián veku 62,5 roka, 56,7 % mužov, rozdelenie 89 a 91 pacientov, zmena kreatinínu 0,04 oproti −0,03 mg/dl (P = 0,30), AKI 1.+ štádia 42 % oproti 36 % (P = 0,47), AKI 2.+ štádia 19 % oproti 13 % (P = 0,28), adherencia 41 % oproti 68 %, mortalita do 90 dní 14,8 % oproti 18,7 % (P = 0,62) a rehospitalizácie 34,1 % oproti 44,4 % (P = 0,21). Údaj o 70 pacientoch (38,9 %) s AKI je dopočítaný z uvedených podielov a zodpovedá im. Údaje o validačnej štúdii z roku 2020 (495 971 hospitalizácií, plocha pod krivkou ROC 0,85 – 0,86 pre AKI 2.+ štádia, predstih 27 – 39 hodín) boli overené samostatne. <strong>Neuvádzam</strong> obdobie náboru, presné počty konzultácií a odporúčaní ani etnické zloženie súboru — tieto údaje sa v abstrakte nenachádzajú a nebolo možné ich overiť; jednocentrický charakter štúdie vyplýva z afiliácií autorov a z veľkosti súboru, nie z overeného znenia. Výklad rozdielu medzi predikciou a modifikovateľnosťou rizika, poznámka o tom, že odporúčania neboli randomizované, a praktické zásady prevencie AKI sú <strong>vlastným odborným spracovaním</strong>.</em></p>
+<p><em><strong>Poznámka k dôkazom:</strong> Bibliografické údaje a kompletné autorstvo oboch prác Churpeka a spolupracovníkov boli overené v Europe PMC. Proti zneniu abstraktu štúdie ESTOP-AKI boli overené tieto údaje: 180 randomizovaných pacientov, medián veku 62,5 roka, 56,7 % mužov, rozdelenie 89 a 91 pacientov, zmena kreatinínu 0,04 oproti −0,03 mg/dl (P = 0,30), AKI 1.+ štádia 42 % oproti 36 % (P = 0,47), AKI 2.+ štádia 19 % oproti 13 % (P = 0,28), adherencia 41 % oproti 68 %, mortalita do 90 dní 14,8 % oproti 18,7 % (P = 0,62) a rehospitalizácie 34,1 % oproti 44,4 % (P = 0,21). Údaj o 70 pacientoch (38,9 %) s AKI je dopočítaný z uvedených podielov a zodpovedá im. Údaje o validačnej štúdii z roku 2020 (495 971 hospitalizácií, plocha pod krivkou ROC 0,85 – 0,86 pre AKI 2.+ štádia, predstih 27 – 39 hodín) boli overené samostatne. <strong>Neuvádzam</strong> obdobie náboru, presné počty konzultácií a odporúčaní ani etnické zloženie súboru – tieto údaje sa v abstrakte nenachádzajú a nebolo možné ich overiť; jednocentrický charakter štúdie vyplýva z afiliácií autorov a z veľkosti súboru, nie z overeného znenia. Výklad rozdielu medzi predikciou a modifikovateľnosťou rizika, poznámka o tom, že odporúčania neboli randomizované, a praktické zásady prevencie AKI sú <strong>vlastným odborným spracovaním</strong>.</em></p>
 HTML,
 ];
 

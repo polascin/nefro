@@ -29,7 +29,7 @@ $articles[] = [
   <figcaption>Tri aktivačné dráhy komplementu konvergujú na C3 → C5 → MAC (C5b-9).</figcaption>
 </figure>
 
-<p>Ťahák k <strong>systému komplementu</strong> v nefrológii — tri aktivačné dráhy, interpretácia sérového C3/C4, komplementom sprostredkované choroby obličiek a cielené lieky. Diferenciálnu diagnostiku nefritíd podľa komplementu rieši <a href="nastroj_gn.php">interaktívny sprievodca GN</a>.</p>
+<p>Ťahák k <strong>systému komplementu</strong> v nefrológii – tri aktivačné dráhy, interpretácia sérového C3/C4, komplementom sprostredkované choroby obličiek a cielené lieky. Diferenciálnu diagnostiku nefritíd podľa komplementu rieši <a href="nastroj_gn.php">interaktívny sprievodca GN</a>.</p>
 
 <h2>Tri aktivačné dráhy</h2>
 <div class="table-responsive" role="region" aria-label="Tri aktivačné dráhy" tabindex="0">
@@ -55,7 +55,7 @@ $articles[] = [
   <tbody>
     <tr><td><strong>↓C3, normálny C4</strong></td><td>Alternatívna</td><td>C3 glomerulopatia, poststreptokoková GN</td></tr>
     <tr><td><strong>↓C3 aj ↓C4</strong></td><td>Klasická</td><td>Lupusová nefritída, kryoglobulinemická GN, imunokomplexová MPGN, endokarditída/shunt nefritída</td></tr>
-    <tr><td><strong>Normálny C3 aj C4</strong></td><td>—</td><td>IgA nefropatia, ANCA-asociovaná, anti-GBM</td></tr>
+    <tr><td><strong>Normálny C3 aj C4</strong></td><td>–</td><td>IgA nefropatia, ANCA-asociovaná, anti-GBM</td></tr>
   </tbody>
 </table>
 </div>
@@ -78,10 +78,10 @@ $articles[] = [
 
 <h2>Regulátory a genetika (aHUS / C3G)</h2>
 <ul>
-  <li><strong>Faktor H (CFH)</strong> — hlavný regulátor alternatívnej dráhy; strata funkcie (mutácia alebo anti-FH protilátky) → aHUS/C3G.</li>
-  <li><strong>Faktor I (CFI), MCP/CD46</strong> — kofaktor a membránový regulátor; strata funkcie → aHUS.</li>
-  <li><strong>C3, faktor B (CFB)</strong> — zisk funkcie (gain-of-function) → nadmerná aktivácia C3 konvertázy.</li>
-  <li><strong>Trombomodulín (THBD)</strong> a ďalšie — zriedkavejšie príčiny aHUS.</li>
+  <li><strong>Faktor H (CFH)</strong> – hlavný regulátor alternatívnej dráhy; strata funkcie (mutácia alebo anti-FH protilátky) → aHUS/C3G.</li>
+  <li><strong>Faktor I (CFI), MCP/CD46</strong> – kofaktor a membránový regulátor; strata funkcie → aHUS.</li>
+  <li><strong>C3, faktor B (CFB)</strong> – zisk funkcie (gain-of-function) → nadmerná aktivácia C3 konvertázy.</li>
+  <li><strong>Trombomodulín (THBD)</strong> a ďalšie – zriedkavejšie príčiny aHUS.</li>
 </ul>
 
 <h2>Komplement-cielené lieky</h2>
@@ -108,7 +108,7 @@ $articles[] = [
   <li><a href="https://pubmed.ncbi.nlm.nih.gov/24161035/" target="_blank" rel="noopener noreferrer">Noris M, Remuzzi G. Overview of Complement Activation and Regulation. Semin Nephrol 2013;33(6):479–92</a></li>
   <li><a href="https://clinicaltrials.gov/" target="_blank" rel="noopener noreferrer">ClinicalTrials.gov — komplement-cielené terapie</a></li>
 </ul>
-<p><em>Orientačná pomôcka — nenahrádza klinický úsudok ani aktuálne SPC liekov.</em></p>
+<p><em>Orientačná pomôcka – nenahrádza klinický úsudok ani aktuálne SPC liekov.</em></p>
 HTML,
 ];
 

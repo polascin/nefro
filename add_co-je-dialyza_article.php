@@ -38,12 +38,11 @@ $articles[] = [
     'excerpt'      => 'Jednoduché vysvetlenie, čo je dialýza, aké sú jej dva hlavné druhy, kedy je potrebná a čo znamená pre bežný život.',
     'content'      => <<<'HTML'
 <figure>
-  <img src="img/co-je-dialyza.webp" alt="Infografika: čo je dialýza — zdravá funkcia obličiek, ich zlyhanie, hemodialýza v centre a peritoneálna dialýza doma" loading="lazy" decoding="async">
+  <img src="img/co-je-dialyza.webp" alt="Infografika: čo je dialýza – zdravá funkcia obličiek, ich zlyhanie, hemodialýza v centre a peritoneálna dialýza doma" loading="lazy" decoding="async">
 </figure>
 
 <p>Slovo „dialýza“ znie pre mnohých ľudí znepokojivo. V skutočnosti ide o liečbu, ktorá za
-zlyhávajúce obličky preberá ich najdôležitejšiu úlohu — čistiť krv. V tomto článku jednoducho
-vysvetlíme, čo dialýza je a kedy je potrebná.</p>
+zlyhávajúce obličky preberá ich najdôležitejšiu úlohu: čistí krv.</p>
 
 <h2>Čo robia obličky a čo je dialýza</h2>
 <p>Zdravé obličky odstraňujú z krvi odpadové látky a prebytočnú vodu, udržiavajú rovnováhu solí
@@ -52,16 +51,16 @@ v tele hromadia. <strong>Dialýza</strong> je liečba, ktorá ich z tela odstra�
 
 <h2>Dva hlavné druhy dialýzy</h2>
 <ul>
-  <li><strong>Hemodialýza (HD)</strong> — krv sa čistí mimo tela cez prístroj, najčastejšie
+  <li><strong>Hemodialýza (HD)</strong> – krv sa čistí mimo tela cez prístroj, najčastejšie
       v dialyzačnom stredisku trikrát týždenne.</li>
-  <li><strong>Peritoneálna dialýza (PD)</strong> — prebieha doma, využíva sa pri nej vlastná
+  <li><strong>Peritoneálna dialýza (PD)</strong> – prebieha doma, využíva sa pri nej vlastná
       brušná blana (pobrušnica); môže byť ručná (CAPD) alebo automatizovaná v noci (APD).</li>
 </ul>
 <p>Obe metódy sú plnohodnotné. Ktorá je pre vás vhodnejšia, posúdi nefrológ spolu s vami.</p>
 
 <h2>Kedy je dialýza potrebná</h2>
 <p>Dialýza prichádza na rad pri <strong>pokročilom zlyhaní obličiek</strong>, keď už ich funkcia
-nestačí. O správnom čase rozhoduje lekár podľa vašich výsledkov a príznakov — nie podľa jediného
+nestačí. O správnom čase rozhoduje lekár podľa vašich výsledkov a príznakov, nie podľa jediného
 čísla, ale podľa celkového stavu. Niekedy je potrebná dočasne (napr. pri náhlom zlyhaní obličiek),
 inokedy dlhodobo.</p>
 

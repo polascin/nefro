@@ -25,15 +25,15 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Porušená denná natriuréza a relatívne zvýšená nočná exkrécia sodíka súvisia s nočnou hypertenziou a oslabeným dippingom. Review v Nephron 2026 ukazuje, prečo má časovanie soli a ABPM klinický význam.',
+    'excerpt'      => 'Porušená denná natriuréza a relatívne zvýšená nočná exkrécia sodíka súvisia s nočnou hypertenziou a oslabeným dippingom. Prehľadová práca v časopise Nephron (2026) ukazuje, prečo má časovanie soli a ABPM klinický význam.',
     'content'      => <<<'HTML'
-<figure><a href="img/diurnalna-exkrecia-sodika-nocna-hypertenzia-casovanie-soli.webp" rel="noopener noreferrer" target="_blank"><img src="img/diurnalna-exkrecia-sodika-nocna-hypertenzia-casovanie-soli.webp" alt="Soľné kryštály riedke na osvetlenej dennej strane a nakopené v nočnej tme, nad tmavou časťou krivka namiesto poklesu stúpa" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Rovnaký denný príjem soli môže mať odlišný dopad podľa toho, kedy telo sodík vylučuje — a či tlak v noci klesne.</figcaption></figure>
+<figure><a href="img/diurnalna-exkrecia-sodika-nocna-hypertenzia-casovanie-soli.webp" rel="noopener noreferrer" target="_blank"><img src="img/diurnalna-exkrecia-sodika-nocna-hypertenzia-casovanie-soli.webp" alt="Soľné kryštály riedke na osvetlenej dennej strane a nakopené v nočnej tme, nad tmavou časťou krivka namiesto poklesu stúpa" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Rovnaký denný príjem soli môže mať odlišný dopad podľa toho, kedy telo sodík vylučuje – a či tlak v noci klesne.</figcaption></figure>
 
 <p>Za fyziologických podmienok má arteriálny tlak cirkadiánny rytmus. Počas spánku typicky klesá oproti bdelosti približne o <strong>10 až 20&nbsp;%</strong> („nocturnal dipping“). Ak sa tento pokles stratí (blunted / non-dipping) alebo sa objaví <strong>nočná hypertenzia</strong>, stúpa kardiovaskulárne aj renálne riziko. Súbežne má vlastný diurnálny rytmus aj renálne hospodárenie so sodíkom: za normy prevažuje <strong>exkrécia sodíka cez deň</strong>.</p>
 
-<p>Review v <em>Nephron</em> (2026) syntetizuje dôkazy, že <strong>porušená diurnálna exkrécia sodíka</strong> – oslabená denná a/alebo relatívne zvýšená nočná natriuréza – prispieva k abnormálnemu nočnému profilu krvného tlaku. Nasledujúci text rozoberá mechanizmy, klinickú logiku aj limity interpretácie; nie je to univerzálny liečebný algoritmus.</p>
+<p>Prehľadová práca v <em>Nephron</em> (2026) zhŕňa dôkazy, že <strong>porušená diurnálna exkrécia sodíka</strong> – oslabená denná a/alebo relatívne zvýšená nočná natriuréza – prispieva k abnormálnemu nočnému profilu krvného tlaku. Nasledujúci text rozoberá mechanizmy, klinickú logiku aj limity interpretácie; nie je to univerzálny liečebný algoritmus.</p>
 
-<h2>Kľúčové posolstvá</h2>
+<h2>Hlavné body</h2>
 
 <ul>
   <li><strong>Porušená diurnálna exkrécia sodíka</strong> je úzko spojená s nočnou hypertenziou a so zhoršeným nočným dippingom.</li>
@@ -78,7 +78,7 @@ $articles[] = [
 </table>
 </div>
 
-<p>Hodnota „10–20&nbsp;%“ je etablovaná praktická aproximácia. V protokoloch a v správach ABPM treba vždy uviesť, aký prah a aké časové okná (diár spánku vs. pevné hodiny) sa použili.</p>
+<p>Hodnota „10–20&nbsp;%“ je zavedené praktické priblíženie. V protokoloch a v správach ABPM treba vždy uviesť, aký prah a aké časové okná (diár spánku vs. pevné hodiny) sa použili.</p>
 
 <h2>Patofyziológia: prečo „sodík v správnom čase“ súvisí s nočným tlakom</h2>
 
@@ -103,7 +103,7 @@ $articles[] = [
 
 <h2>Čo je asociácia a čo ešte nie je kauzalita</h2>
 
-<p>Review aj podporné štúdie ukazujú <strong>tesnú súvislosť</strong>, nie automaticky kauzalitu v každom prípade. Porušená diurnálna natriuréza môže byť:</p>
+<p>Prehľad aj podporné štúdie ukazujú <strong>tesnú súvislosť</strong>, nie automaticky kauzalitu v každom prípade. Porušená diurnálna natriuréza môže byť:</p>
 
 <ul>
   <li><strong>mechanizmom</strong> (nedostatočná denná exkrécia → nočná pressure-natriuresis → vyšší nočný tlak),</li>
@@ -118,16 +118,16 @@ $articles[] = [
 
 <ul>
   <li>jasné oddelenie bdelosti a spánku (diár, ideálne synchronizované s ABPM),</li>
-  <li>kvalitný split zber moču (úplnosť, kontaminácia, compliance; oddelené denné a nočné vzorky),</li>
+  <li>kvalitný delený zber moču (úplnosť, kontaminácia, spolupráca pacienta; oddelené denné a nočné vzorky),</li>
   <li>spojenie ABPM fenotypov (nočná hypertenzia, dipping) s rovnakými časovými oknami moču,</li>
   <li>zohľadnenie diuretík, inhibítorov SGLT2, príjmu soli, noctúrie a kvality spánku.</li>
 </ul>
 
 <p>V bežnej ambulancii je ťažké dosiahnuť rovnakú kvalitu ako v protokoloch štúdií. Preto má zmysel cielené použitie u vybraných pacientov, nie plošný zber u každého s hypertenziou.</p>
 
-<h2>Klinické implikácie</h2>
+<h2>Klinické dôsledky</h2>
 
-<h3>Koho typicky zaujíma nočná hypertenzia</h3>
+<h3>Kedy cielene pátrať po nočnej hypertenzii</h3>
 
 <ul>
   <li>CKD, diabetes, obštrukčné spánkové apnoe, autonómna dysfunkcia,</li>
@@ -168,13 +168,13 @@ $articles[] = [
     </tr>
     <tr>
       <th scope="row">2. Fenotyp sodíka</th>
-      <td>Pri vybraných pacientoch split 24-hodinový zber (deň/noc) na Na⁺</td>
+      <td>Pri vybraných pacientoch delený 24-hodinový zber (deň/noc) na Na⁺</td>
       <td>Že jeden neúplný zber spoľahlivo klasifikuje rytmus</td>
     </tr>
     <tr>
       <th scope="row">3. Interpretácia</th>
-      <td>Vysoký nočný BP + nízky day/night pomer Na⁺ → zvážiť sodíkovo-časovú logiku</td>
-      <td>Automatickú kauzalitu bez konfúzorov (CKD, OSA, lieky)</td>
+      <td>Vysoký nočný tlak + nízky day/night pomer Na⁺ → zvážiť sodíkovo-časovú logiku</td>
+      <td>Automatickú kauzalitu bez zohľadnenia mätúcich faktorov (CKD, OSA, lieky)</td>
     </tr>
     <tr>
       <th scope="row">4. Intervencia</th>
@@ -187,7 +187,7 @@ $articles[] = [
 
 <h2>Zhrnutie</h2>
 
-<p>Diurnálna exkrécia sodíka a nočný krvný tlak tvoria spoločný cirkadiánny problém. Dôkazy z review aj z klinických kohort podporujú, že <strong>oslabená denná natriuréza</strong> súvisí s nočnou hypertenziou a horším dippingom. Klinicky to posilňuje dôraz na ABPM a – u vybraných pacientov – na časovaný sodík. Interpretácia musí zostať kritická: asociácia nie je automaticky kauzalita a rutinný split zber moču nie je pre každého.</p>
+<p>Diurnálna exkrécia sodíka a nočný krvný tlak tvoria spoločný cirkadiánny problém. Dôkazy z prehľadu aj z klinických kohort podporujú, že <strong>oslabená denná natriuréza</strong> súvisí s nočnou hypertenziou a horším dippingom. Klinicky to posilňuje dôraz na ABPM a – u vybraných pacientov – na časovaný sodík. Interpretácia musí zostať kritická: asociácia nie je automaticky kauzalita a rutinný delený zber moču nie je pre každého.</p>
 
 <h2>Súvisiace články na portáli</h2>
 

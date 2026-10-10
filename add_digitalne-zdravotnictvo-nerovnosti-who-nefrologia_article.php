@@ -27,7 +27,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Prehľad WHO pre európsky región zistil systematicky vyššie využívanie digitálnych zdravotníckych technológií u ľudí s vyšším vzdelaním, príjmom, v mestách a u mladších. Ak sa rovnosť prístupu nemeria, digitálne nástroje môžu rozdiely v zdraví zväčšiť.',
     'content'      => <<<'HTML'
-<figure><a href="img/digitalne-zdravotnictvo-nerovnosti-who-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/digitalne-zdravotnictvo-nerovnosti-who-nefrologia.webp" alt="Hustá svietiaca sieť, ktorá sa končí ostrou hranou nad tmavou priepasťou s niekoľkými osamelými bodmi" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Digitálny nástroj pomôže tým, ktorí sa k nemu dostanú — a o to viac vzdiali tých ostatných.</figcaption></figure>
+<figure><a href="img/digitalne-zdravotnictvo-nerovnosti-who-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/digitalne-zdravotnictvo-nerovnosti-who-nefrologia.webp" alt="Hustá svietiaca sieť, ktorá sa končí ostrou hranou nad tmavou priepasťou s niekoľkými osamelými bodmi" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Digitálny nástroj pomôže tým, ktorí sa k nemu dostanú – a o to viac vzdiali tých ostatných.</figcaption></figure>
 
 <p class="article-dek"><em>Digitálne technológie sa často predstavujú ako cesta k spravodlivejšiemu prístupu k zdravotnej starostlivosti. Prehľadová správa Regionálneho úradu WHO pre Európu však ukazuje, že ich využívanie je systematicky vyššie práve u skupín, ktoré sú aj inak zvýhodnené. Ak sa nerovnosť v prístupe, používaní a zapojení nesleduje a nemeria, digitálny manažment môže rozdiely v zdraví zväčšiť namiesto toho, aby ich zmenšil.</em></p>
 
@@ -37,11 +37,11 @@ $articles[] = [
 
 <p>Ak tieto nástroje fungujú, môžu zlepšiť včasnosť intervencií pri chronickej chorobe obličiek. Ak však nie sú použiteľné pre znevýhodnených pacientov, zväčšia rozdiel medzi tými, ktorí starostlivosť dostávajú, a tými, ktorí ju potrebujú najviac.</p>
 
-<p>Tento jav má svoje meno. Britský lekár Julian Tudor Hart ho v roku 1971 opísal ako <strong>zákon obrátenej starostlivosti</strong>: dostupnosť dobrej zdravotnej starostlivosti má tendenciu byť nepriamo úmerná potrebe obyvateľstva, ktoré ju potrebuje. Práve na tento pojem nadväzuje aj redakčný komentár publikovaný v roku 2026 v <em>NEJM AI</em>, ktorý ho aplikuje na geografické rozdiely v prístupe k zdravotníckym technológiám.</p>
+<p>Tento jav má svoje meno. Britský lekár Julian Tudor Hart ho v roku 1971 opísal ako <strong>zákon obrátenej starostlivosti</strong>: dostupnosť dobrej zdravotnej starostlivosti má tendenciu byť nepriamo úmerná tomu, ako veľmi ju obsluhované obyvateľstvo potrebuje. Práve na tento pojem nadväzuje aj redakčný komentár publikovaný v roku 2026 v <em>NEJM AI</em>, ktorý ho aplikuje na geografické rozdiely v prístupe k zdravotníckym technológiám.</p>
 
 <h2>Kľúčový rámec: prístup, používanie a zapojenie</h2>
 
-<p>Najlepšie zadefinovaným podkladom je prehľadová správa Regionálneho úradu WHO pre Európu z roku 2022. Jej autori zámerne oddelili dva rôzne rámce, ktoré sa v diskusii často zamieňajú:</p>
+<p>Najlepšie definovaným podkladom je prehľadová správa Regionálneho úradu WHO pre Európu z roku 2022. Jej autori zámerne oddelili dva rôzne rámce, ktoré sa v diskusii často zamieňajú:</p>
 
 <div class="table-responsive" role="region" aria-label="Dva rámce použité v prehľade WHO" tabindex="0">
 <table>
@@ -64,7 +64,7 @@ $articles[] = [
 </table>
 </div>
 
-<p>Toto rozlíšenie je dôležité. Služba môže byť formálne dostupná všetkým, a napriek tomu ju z praktického hľadiska obídu práve skupiny s najväčšou potrebou — buď preto, že nemajú zariadenie a pripojenie, alebo preto, že ho nedokážu použiť, alebo preto, že sa do interakcie nezapoja.</p>
+<p>Rozlíšenie má praktický význam: služba môže byť formálne dostupná všetkým, a napriek tomu ju z praktického hľadiska obídu práve skupiny s najväčšou potrebou – buď preto, že nemajú zariadenie a pripojenie, alebo preto, že ho nedokážu použiť, alebo preto, že sa do interakcie nezapoja.</p>
 
 <h2>Čo prehľad WHO zistil</h2>
 
@@ -82,7 +82,7 @@ $articles[] = [
 
 <p>Lepší prístup mali aj osoby bez zdravotného postihnutia alebo bez komplexných zdravotných potrieb.</p>
 
-<p>Ide teda o systematický vzorec, nie o náhodné rozdiely. Skupiny s najväčšou zdravotnou potrebou — starší ľudia, marginalizované skupiny, osoby so zdravotným postihnutím — majú najmenšiu pravdepodobnosť prístupu k digitálnym platformám.</p>
+<p>Ide teda o systematický vzorec, nie o náhodné rozdiely. Skupiny s najväčšou zdravotnou potrebou – starší ľudia, marginalizované skupiny, osoby so zdravotným postihnutím – majú najmenšiu pravdepodobnosť prístupu k digitálnym platformám.</p>
 
 <div class="pdf-avoid-break">
 <h3>Digitálne technológie však vidieckym komunitám aj pomáhajú</h3>
@@ -96,7 +96,7 @@ $articles[] = [
 
 <p>Zatiaľ čo prístup rozhoduje o tom, či sa človek k službe vôbec dostane, digitálna gramotnosť rozhoduje o tom, či ju dokáže využiť. WHO ju označuje za kľúčový faktor rozdielov v používaní a zapojení.</p>
 
-<p>Podstatné je, že rovnosť v digitálnom zdraví je funkciou <em>vzájomného pôsobenia</em> viacerých sociálnych a demografických faktorov. Tento priesečníkový pohľad však podľa WHO uviedli iba <strong>dva z 22</strong> zahrnutých prehľadov. Starší pacient s nízkym príjmom, žijúci na vidieku a s jazykovou bariérou nie je súčtom štyroch nevýhod — je v kvalitatívne inej situácii.</p>
+<p>Podstatné je, že rovnosť v digitálnom zdraví je funkciou <em>vzájomného pôsobenia</em> viacerých sociálnych a demografických faktorov. Tento priesečníkový pohľad však podľa WHO uviedli iba <strong>dva z 22</strong> zahrnutých prehľadov. Starší pacient s nízkym príjmom, žijúci na vidieku a s jazykovou bariérou nie je súčtom štyroch nevýhod – je v kvalitatívne inej situácii.</p>
 
 <h3>Prístupu sa venovalo najmenej prác</h3>
 
@@ -104,12 +104,12 @@ $articles[] = [
 
 <h2>Regionálne rozdiely a algoritmické nástroje</h2>
 
-<p>Ak implementácia umelej inteligencie nezohľadní regionálne rozdiely, riziko je zhoršenie existujúcich nerovností. V praxi sa to týka:</p>
+<p>Ak implementácia umelej inteligencie nezohľadní regionálne rozdiely, hrozí, že existujúce nerovnosti prehĺbi. V praxi sa to týka:</p>
 
 <ul>
   <li>dostupnosti infraštruktúry a zdrojov v jednotlivých regiónoch,</li>
   <li>prenositeľnosti modelov trénovaných na mestských alebo univerzitných dátach do vidieckeho prostredia,</li>
-  <li>chybnej interpretácie nízkeho využívania zdravotnej starostlivosti — ktoré môže odrážať bariéry prístupu — ako „nízkej potreby“.</li>
+  <li>chybnej interpretácie nízkeho využívania zdravotnej starostlivosti – ktoré môže odrážať bariéry prístupu – ako „nízkej potreby“.</li>
 </ul>
 
 <p>Posledný bod je pre nefrológiu najzávažnejší. Ak model rizika progresie CKD alebo model potreby nefrologickej konzultácie vychádza z historických dát, v ktorých znevýhodnení pacienti mali menej vyšetrení, menej meraní albuminúrie a neskoršie odoslanie k špecialistovi, môže sa naučiť, že títo pacienti „potrebujú menej“. Model tak zakonzervuje nerovnosť a zároveň jej dodá zdanie objektivity.</p>
@@ -165,7 +165,7 @@ $articles[] = [
 
 <ol>
   <li><strong>Bez hodnotenia kvality.</strong> Prehľad typu <em>scoping review</em> nehodnotí metodologickú robustnosť zahrnutých prác. Z 22 prehľadov ich kritické hodnotenie vykonalo 12 a celková kvalita štúdií sa v nich označovala za <strong>nízku</strong>.</li>
-  <li><strong>Metodologické slabiny primárnych prác.</strong> Uvádzali sa chýbajúce zaslepenie, malé súbory, nezohľadnenie všetkých konfundujúcich faktorov, nízka účasť a — čo je osobitne poučné — <em>zaraďovanie iba účastníkov, ktorí už mali prístup k digitálnym technológiám</em>. Štúdia postavená takto z princípu nemôže vidieť tých, ktorých sa vylúčenie týka najviac.</li>
+  <li><strong>Metodologické slabiny primárnych prác.</strong> Uvádzali sa chýbajúce zaslepenie, malé súbory, nezohľadnenie všetkých konfundujúcich faktorov, nízka účasť a – čo je osobitne poučné – <em>zaraďovanie iba účastníkov, ktorí už mali prístup k digitálnym technológiám</em>. Štúdia postavená takto z princípu nemôže vidieť tých, ktorých sa vylúčenie týka najviac.</li>
   <li><strong>Iba anglicky publikované kvantitatívne práce.</strong> Identifikovali sa dva prehľady v iných jazykoch, ani jeden nesplnil kritériá zaradenia.</li>
   <li><strong>Kvalitatívna literatúra mimo rozsahu.</strong> Práve tá pritom nesie väčšinu kontextových informácií o bariérach a facilitátoroch.</li>
   <li><strong>Obmedzená prenositeľnosť v rámci regiónu.</strong> Väčšina dôkazov pochádza mimo európskeho regiónu a európske dôkazy takmer výlučne z vysokopríjmových krajín západnej Európy. WHO výslovne uvádza, že použiteľnosť pre krajiny regiónu s nižším a stredným príjmom je pravdepodobne obmedzená.</li>
@@ -195,8 +195,8 @@ $articles[] = [
 
 <ol>
   <li><strong>Merať rozdiely v prístupe, používaní a zapojení</strong> medzi skupinami pacientov (vek, vzdelanie, jazyk, dostupnosť internetu, zdravotné postihnutie), nie iba celkovú mieru využívania.</li>
-  <li><strong>Navrhovať a testovať s reálnymi pacientmi</strong> vrátane tých, ktorí majú bariéry — nie iba s tými, ktorí sa do testovania sami prihlásia.</li>
-  <li><strong>Zachovať alternatívne cesty</strong> — telefonickú a osobnú komunikáciu, papierovú edukáciu — a nepenalizovať pacienta za to, že digitálny kanál nevyužil.</li>
+  <li><strong>Navrhovať a testovať s reálnymi pacientmi</strong> vrátane tých, ktorí majú bariéry – nie iba s tými, ktorí sa do testovania sami prihlásia.</li>
+  <li><strong>Zachovať alternatívne cesty</strong> – telefonickú a osobnú komunikáciu, papierovú edukáciu – a nepenalizovať pacienta za to, že digitálny kanál nevyužil.</li>
   <li><strong>Nepovažovať nevyužitie digitálnej služby za nezáujem.</strong> Môže ísť o nedostupnosť, nie o preferenciu.</li>
   <li><strong>Postupovať opatrne pri algoritmických nástrojoch</strong>, najmä ak sú trénované na historických dátach odrážajúcich bariéry prístupu, a vyžadovať údaje o výkone modelu v jednotlivých podskupinách.</li>
   <li><strong>Zapojiť sestry, sociálnu prácu a rodinu</strong> ako podporu pri používaní technológie; WHO uvádza, že rodinní príslušníci majú pri starších vidieckych pacientoch podpornú úlohu.</li>
@@ -205,7 +205,7 @@ $articles[] = [
 
 <h2>Praktický záver</h2>
 
-<p>Dôkazová báza podporuje záver, že digitálne zdravotníctvo môže nerovnosti zmenšiť aj zväčšiť — podľa toho, či sa rovnosť berie ako merateľný cieľ, alebo len ako deklarácia. Prehľad WHO konzistentne ukazuje, že prístup k digitálnym riešeniam a ich používanie sú systematicky vyššie u skupín s lepšou digitálnou a socioekonomickou pozíciou.</p>
+<p>Dôkazová báza podporuje záver, že digitálne zdravotníctvo môže nerovnosti zmenšiť aj zväčšiť – podľa toho, či sa rovnosť berie ako merateľný cieľ, alebo len ako deklarácia. Prehľad WHO konzistentne ukazuje, že prístup k digitálnym riešeniam a ich používanie sú systematicky vyššie u skupín s lepšou digitálnou a socioekonomickou pozíciou.</p>
 
 <p>Pre nefrológiu z toho vyplýva, že pri zavádzaní digitálnych nástrojov pri chronickej chorobe obličiek treba rovnosť plánovať a sledovať rovnako dôsledne ako klinický prínos. Inak riskujeme, že digitálny manažment prispeje k rastu rozdielov v zdraví práve v skupine pacientov, ktorá je už teraz najzraniteľnejšia.</p>
 
@@ -231,7 +231,7 @@ $articles[] = [
   <li><strong>Medscape Professional Network.</strong> <em>Digital health innovation widening equity gap.</em> Medscape, 2026. Sekundárny zdroj použitý ako východisko, nie ako hlavný dôkaz; v sprístupnenej verzii sa ako autor uvádza Eugenio Santoro. <a href="https://www.medscape.com/viewarticle/digital-health-innovation-widening-equity-gap-2026a1000sk7" target="_blank" rel="noopener noreferrer">Spravodajské spracovanie</a>.</li>
 </ol>
 
-<p><em><strong>Poznámka k spracovaniu:</strong> Všetky vecné tvrdenia pripisované prehľadu WHO — počet 22 zahrnutých prehľadových prác a metaanalýz, obdobie 2016 až máj 2022, tri dimenzie digitálneho zdravia, desať domén rámca PROGRESS Plus, zoznam skupín s vyšším využívaním, údaj o dvoch z 22 prehľadov s priesečníkovým pohľadom, hodnotenie kvality v 12 z 22 prehľadov, popis rámca NICE s 21 štandardmi aj celý zoznam obmedzení — boli overené priamo proti plnému textu správy (výkonný súhrn a kapitola Discussion). Bibliografické údaje komentára v NEJM AI vrátane úplného názvu a autorstva boli overené cez Crossref. Údaj o autorstve spravodajského spracovania Medscape sa pre obmedzený prístup nepodarilo nezávisle overiť a uvádza sa s výhradou. Odkaz na zákon obrátenej starostlivosti (Julian Tudor Hart, 1971) je doplnený ako kontext k názvu komentára v NEJM AI.</em></p>
+<p><em><strong>Poznámka k spracovaniu:</strong> Všetky vecné tvrdenia pripisované prehľadu WHO – počet 22 zahrnutých prehľadových prác a metaanalýz, obdobie 2016 až máj 2022, tri dimenzie digitálneho zdravia, desať domén rámca PROGRESS Plus, zoznam skupín s vyšším využívaním, údaj o dvoch z 22 prehľadov s priesečníkovým pohľadom, hodnotenie kvality v 12 z 22 prehľadov, popis rámca NICE s 21 štandardmi aj celý zoznam obmedzení – boli overené priamo proti plnému textu správy (výkonný súhrn a kapitola Discussion). Bibliografické údaje komentára v NEJM AI vrátane úplného názvu a autorstva boli overené cez Crossref. Údaj o autorstve spravodajského spracovania Medscape sa pre obmedzený prístup nepodarilo nezávisle overiť a uvádza sa s výhradou. Odkaz na zákon obrátenej starostlivosti (Julian Tudor Hart, 1971) je doplnený ako kontext k názvu komentára v NEJM AI.</em></p>
 
 <p><em><strong>Poznámka k interpretácii:</strong> Prehľad typu „scoping review“ mapuje rozsah a charakter dôkazov, nehodnotí účinnosť intervencií a nevykonáva hodnotenie kvality zahrnutých prác. Zistenia preto nemožno chápať ako kvantitatívny odhad veľkosti nerovností, ale ako opis ich smeru a konzistentnosti. Vyhľadávanie sa uzavrelo v máji 2022, čo treba pri hodnotení súčasných nástrojov umelej inteligencie zohľadniť.</em></p>
 </div>

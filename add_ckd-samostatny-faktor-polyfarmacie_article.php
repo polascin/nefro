@@ -31,11 +31,11 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Polyfarmácia pri CKD nie je len dôsledkom veku a komorbidít. Samotná chronická choroba obličiek zvyšuje liekovú záťaž, riziko interakcií a potrebu pravidelnej liekovej revízie.',
     'content'      => <<<'HTML'
-<figure><a href="img/ckd-samostatny-faktor-polyfarmacie.webp" rel="noopener noreferrer" target="_blank"><img src="img/ckd-samostatny-faktor-polyfarmacie.webp" alt="Oblička, ktorá svetelným vláknom sama pridáva ďalšie tabletky do už dlhého radu na tmavej ploche" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Choroba obličiek pridáva lieky aj sama za seba — nielen cez pridružené diagnózy.</figcaption></figure>
+<figure><a href="img/ckd-samostatny-faktor-polyfarmacie.webp" rel="noopener noreferrer" target="_blank"><img src="img/ckd-samostatny-faktor-polyfarmacie.webp" alt="Oblička, ktorá svetelným vláknom sama pridáva ďalšie tabletky do už dlhého radu na tmavej ploche" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Choroba obličiek pridáva lieky aj sama za seba, nielen cez pridružené diagnózy.</figcaption></figure>
 
-<p>Polyfarmácia je u pacientov s chronickou chorobou obličiek bežná, často nevyhnutná a zároveň riziková. Pacient s CKD má často arteriálnu hypertenziu, diabetes, dyslipidémiu, srdcové zlyhávanie, anémiu, poruchu minerálovo-kostného metabolizmu, metabolickú acidózu, hyperkaliémiu alebo hyperurikémiu. Každá z týchto diagnóz môže viesť k pridaniu ďalšieho lieku.</p>
+<p>Polyfarmácia je u pacientov s chronickou chorobou obličiek bežná, často nevyhnutná a zároveň riziková. K chorobe obličiek sa zvyčajne pridáva arteriálna hypertenzia, diabetes, dyslipidémia, srdcové zlyhávanie, anémia, porucha minerálovo-kostného metabolizmu, metabolická acidóza, hyperkaliémia alebo hyperurikémia a každá z týchto diagnóz môže priniesť ďalší liek.</p>
 
-<p>Krátky odborný list publikovaný v <em>Clinical Kidney Journal</em> upozorňuje na dôležitú myšlienku: chronická choroba obličiek nemá byť chápaná iba ako jedna z komorbidít, ktoré sa náhodne spájajú s polyfarmáciou. CKD môže byť <strong>samostatným a aktívnym motorom polyfarmácie</strong>. Samotné zníženie funkcie obličiek a komplikácie s ním spojené vytvárajú liečebnú záťaž, ktorá zvyšuje počet predpisovaných liekov, náklady, riziko interakcií aj pravdepodobnosť nežiaducich účinkov.</p>
+<p>Krátky odborný list publikovaný v <em>Clinical Kidney Journal</em> upozorňuje, že chronickú chorobu obličiek netreba chápať iba ako jednu z komorbidít, ktoré sa náhodne spájajú s polyfarmáciou. CKD môže byť <strong>samostatným a aktívnym motorom polyfarmácie</strong>. Samotné zníženie funkcie obličiek a komplikácie s ním spojené vytvárajú liečebnú záťaž, ktorá zvyšuje počet predpisovaných liekov, náklady, riziko interakcií aj pravdepodobnosť nežiaducich účinkov.</p>
 
 <h2>Prečo je polyfarmácia pri CKD taká častá</h2>
 
@@ -65,7 +65,7 @@ $articles[] = [
 
 <p>Autori zdôrazňujú, že CKD má vlastnú patofyziologickú logiku, ktorá prirodzene vedie k nárastu farmakoterapie. S poklesom eGFR sa zvyšuje výskyt komplikácií, ktoré si vyžadujú liečbu. Zároveň sa zhoršuje farmakokinetika mnohých liekov, mení sa distribučný objem, väzba na bielkoviny, renálna eliminácia a citlivosť na nežiaduce účinky.</p>
 
-<p>Preto polyfarmácia pri CKD nie je iba dôsledkom vyššieho veku alebo pridružených diagnóz. Chronická choroba obličiek sama osebe vytvára klinické situácie, ktoré vedú k predpisovaniu ďalších liekov. Tento pohľad je prakticky dôležitý, pretože umožňuje lepšie identifikovať pacientov s vysokým rizikom liekových komplikácií.</p>
+<p>Polyfarmácia pri CKD teda nie je iba dôsledkom vyššieho veku alebo pridružených diagnóz. Tento pohľad má praktický význam: pomáha lepšie identifikovať pacientov s vysokým rizikom liekových komplikácií.</p>
 
 <h2>Vhodná a nevhodná polyfarmácia</h2>
 
@@ -83,7 +83,7 @@ $articles[] = [
   <li>pacient nerozumie dávkovaniu a neužíva lieky správne.</li>
 </ul>
 
-<p>Cieľom nefrológa preto nemá byť mechanické znižovanie počtu liekov. Cieľom má byť <strong>racionálna farmakoterapia</strong>, pri ktorej má každý liek jasný dôvod, primeranú dávku, sledovaný účinok a prijateľné riziko.</p>
+<p>Cieľom nefrológa preto nie je mechanicky znižovať počet liekov, ale <strong>racionálna farmakoterapia</strong>, pri ktorej má každý liek jasný dôvod, primeranú dávku, sledovaný účinok a prijateľné riziko.</p>
 
 <h2>Riziká polyfarmácie u pacientov s CKD</h2>
 
@@ -140,7 +140,7 @@ $articles[] = [
 
 <p>Depreskripcia je vhodná najmä pri liekoch bez jasnej indikácie, pri liekoch s vysokým rizikom toxicity, pri duplicitách, pri zmene prognózy pacienta alebo pri prechode na paliatívne ciele liečby.</p>
 
-<p>Dôležité je, aby bola riadená a dokumentovaná. Náhle vysadenie niektorých liekov môže byť nebezpečné, napríklad pri betablokátoroch, benzodiazepínoch, kortikosteroidoch alebo antiepileptikách.</p>
+<p>Depreskripcia má byť riadená a dokumentovaná. Náhle vysadenie niektorých liekov môže byť nebezpečné, napríklad pri betablokátoroch, benzodiazepínoch, kortikosteroidoch alebo antiepileptikách.</p>
 
 <h2>Úloha farmaceuta a tímovej spolupráce</h2>
 
@@ -150,7 +150,7 @@ $articles[] = [
 
 <h2>Širší systémový význam</h2>
 
-<p>Autori upozorňujú aj na ekonomický a systémový rozmer. CKD je spojená s vyšším využívaním zdravotnej starostlivosti, častejšími hospitalizáciami, vyššími nákladmi a komplikovanejšou farmakoterapiou. Polyfarmácia tento problém ďalej zvyšuje.</p>
+<p>Autori upozorňujú aj na ekonomický a systémový rozmer. CKD je spojená s vyšším využívaním zdravotnej starostlivosti, častejšími hospitalizáciami, vyššími nákladmi a komplikovanejšou farmakoterapiou. Polyfarmácia tento problém ďalej prehlbuje.</p>
 
 <p>Ak sa CKD chápe ako samostatný faktor polyfarmácie, zdravotnícke systémy môžu lepšie plánovať preventívne stratégie. Patrí sem pravidelné liekové hodnotenie, elektronické upozornenia na dávkovanie podľa eGFR, integrované zdieľanie liekových zoznamov a edukácia pacientov.</p>
 
@@ -162,9 +162,9 @@ $articles[] = [
 
 <h2>Praktické odporúčanie</h2>
 
-<p>Pri každom pacientovi s CKD by mal byť liekový zoznam považovaný za dynamický dokument. Nestačí vedieť, aké lieky pacient užíva. Treba pravidelne overovať, či ich ešte potrebuje, či ich užíva správne a či sú bezpečné pri aktuálnej funkcii obličiek.</p>
+<p>Pri každom pacientovi s CKD treba liekový zoznam považovať za dynamický dokument. Nestačí vedieť, aké lieky pacient užíva. Treba pravidelne overovať, či ich ešte potrebuje, či ich užíva správne a či sú bezpečné pri aktuálnej funkcii obličiek.</p>
 
-<p>Najpraktickejší postup je:</p>
+<p>V praxi to znamená:</p>
 
 <ul>
   <li>pravidelne aktualizovať kompletný zoznam liekov vrátane voľnopredajných prípravkov,</li>

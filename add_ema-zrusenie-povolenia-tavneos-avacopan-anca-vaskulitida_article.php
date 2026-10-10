@@ -32,9 +32,9 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'EMA odporučila zrušiť povolenie pre Tavneos (avacopan): po opätovnom preskúmaní dát zo štúdie ADVOCATE už jeho prínosy nie sú preukázateľne vyššie než riziká. Pre nefrológiu to pri GPA/MPA s renálnym postihnutím znamená nezačínať nových pacientov, aktuálne liečených previesť na alternatívu a sledovať funkciu pečene.',
     'content'      => <<<'HTML'
-<figure><a href="img/ema-zrusenie-povolenia-tavneos-avacopan-anca-vaskulitida.webp" rel="noopener noreferrer" target="_blank"><img src="img/ema-zrusenie-povolenia-tavneos-avacopan-anca-vaskulitida.webp" alt="Kedysi jasná kapsula lieku bledne a praská pod chladným svetlom novších dát, v pozadí zapálená cievna stena" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Nové dáta môžu prekryť pôvodný prísľub — a rozhodnutie regulátora sa potom mení.</figcaption></figure>
+<figure><a href="img/ema-zrusenie-povolenia-tavneos-avacopan-anca-vaskulitida.webp" rel="noopener noreferrer" target="_blank"><img src="img/ema-zrusenie-povolenia-tavneos-avacopan-anca-vaskulitida.webp" alt="Kedysi jasná kapsula lieku bledne a praská pod chladným svetlom novších dát, v pozadí zapálená cievna stena" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Nové dáta môžu prekryť pôvodný prísľub – a rozhodnutie regulátora sa potom mení.</figcaption></figure>
 
-<p>Európska agentúra pre lieky (EMA) odporučila Európskej komisii zrušiť povolenie na uvedenie na trh pre <strong>Tavneos (avacopan)</strong> v Európskej únii. Dôvodom nie je zmena mechanizmu účinku ako takého, ale to, že podľa EMA sa pôvodné rozhodnutie o účinnosti lieku opieralo o údaje z kľúčovej štúdie <strong>ADVOCATE</strong>, pri ktorej boli identifikované závažné problémy z hľadiska integrity dát a súladu s princípmi <strong>správnej klinickej praxe</strong>. EMA preto uzavrela, že <strong>prínosy už nie sú preukázateľne vyššie než riziká</strong>.</p>
+<p>Európska agentúra pre lieky (EMA) odporučila Európskej komisii zrušiť povolenie na uvedenie na trh pre <strong>Tavneos (avacopan)</strong> v Európskej únii. Dôvodom nie je samotný mechanizmus účinku. Pôvodné rozhodnutie o účinnosti sa podľa EMA opieralo o údaje z kľúčovej štúdie <strong>ADVOCATE</strong>, v ktorej sa zistili závažné problémy s integritou dát a so súladom s princípmi <strong>správnej klinickej praxe</strong>. EMA preto uzavrela, že <strong>prínosy už nie sú preukázateľne vyššie než riziká</strong>.</p>
 
 <p>Pre klinickú prax to má priamy vplyv na liečbu <strong>granulomatózy s polyangiitídou (GPA)</strong> a <strong>mikroskopickej polyangiitídy (MPA)</strong>, vrátane pacientov s postihnutím obličiek; tieto ochorenia totiž patria medzi najčastejšie príčiny rýchlo progredujúceho zlyhania obličiek.</p>
 
@@ -46,7 +46,7 @@ $articles[] = [
 
 <p>EMA však po opätovnom preskúmaní dát konštatovala, že štúdia bola realizovaná <strong>v rozpore s princípmi správnej klinickej praxe</strong> a že údaje dodané v čase posudzovania žiadosti boli <strong>„nesprávne a zavádzajúce“</strong>. Preto sa tieto výsledky už nedajú považovať za spoľahlivý dôkaz účinnosti.</p>
 
-<h2>Praktické rozhodnutia: čo odporúčanie EMA znamená v praxi</h2>
+<h2>Čo odporúčanie EMA znamená v praxi</h2>
 
 <p>Z odporúčania EMA vyplýva, že:</p>
 
@@ -55,37 +55,37 @@ $articles[] = [
   <li><strong>pacienti, ktorí Tavneos už užívajú</strong>, majú byť <strong>prevedení na vhodnú alternatívnu liečbu</strong>.</li>
 </ul>
 
-<p>Dôležité je aj to, že Tavneos je spojený so zvýšeným rizikom <strong>liekmi vyvolaného poškodenia pečene</strong> a zriedkavého <strong>syndrómu miznúcich žlčovodov</strong> (vanishing bile duct syndrome, VBDS). EMA preto odporúča <strong>pozorne sledovať funkciu pečene</strong> až do trvalého ukončenia liečby. Pri podozrení na VBDS sa má liek <strong>okamžite vysadiť</strong>.</p>
+<p>Tavneos je navyše spojený so zvýšeným rizikom <strong>liekmi vyvolaného poškodenia pečene</strong> a zriedkavého <strong>syndrómu miznúcich žlčovodov</strong> (vanishing bile duct syndrome, VBDS). EMA preto odporúča <strong>pozorne sledovať funkciu pečene</strong> až do trvalého ukončenia liečby. Pri podozrení na VBDS sa má liek <strong>okamžite vysadiť</strong>.</p>
 
-<p>Súčasne treba mať na pamäti, že odporúčanie EMA je len jedným z krokov: konečné, právne záväzné rozhodnutie pre všetky členské štáty vydá <strong>Európska komisia</strong>, ak odporúčanie EMA potvrdí.</p>
+<p>Odporúčanie EMA ešte nie je konečné: právne záväzné rozhodnutie pre všetky členské štáty vydá <strong>Európska komisia</strong>, ak odporúčanie EMA potvrdí.</p>
 
 <h2>Nefrologický kontext: prečo je to relevantné práve pre obličky</h2>
 
 <p>GPA/MPA sú systémové nekrotizujúce vaskulitídy spojené s protilátkami proti cytoplazmatickým antigénom neutrofilov (ANCA). <strong>Renálne postihnutie</strong> je v klinickom obraze časté a zásadné, lebo často rozhoduje o potrebe urgentnej hospitalizácie či dialýzy a o dlhodobej prognóze.</p>
 
-<p>Aj keď sa článok venuje hodnoteniu lieku primárne z pohľadu regulačných dôkazov, pre nefrológa sú dôležité tieto praktické roviny:</p>
+<p>Hoci ide primárne o regulačné hodnotenie dôkazov, pre nefrológa z neho vyplývajú tri praktické otázky.</p>
 
-<h3>1) Zmysluplnosť stratégie šetriacej kortikosteroidy sa stáva neistou</h3>
+<h3>1) Prínos stratégie šetriacej kortikosteroidy je neistý</h3>
 
-<p>Avacopan ako antagonista receptora C5a smeruje k zníženiu zápalovej aktivity ciev. V klinickej praxi však často platí, že veľká časť prínosu liečby spočívala v kombinácii s režimami, ktoré umožňujú <strong>obmedziť expozíciu kortikosteroidom</strong>.</p>
+<p>Avacopan ako antagonista receptora C5a má tlmiť zápalovú aktivitu v cievach. V praxi však veľká časť prínosu spočívala v kombinácii s režimami, ktoré umožňujú <strong>obmedziť expozíciu kortikosteroidom</strong>.</p>
 
-<p>Ak sa účinnosť doložená štúdiou ADVOCATE už nepovažuje za spoľahlivú, je potrebné prehodnotiť, aký kompromis medzi kontrolou vaskulitídy a minimalizáciou steroidnej toxicity je v konkrétnej situácii pre pacienta optimálny.</p>
+<p>Ak sa účinnosť doložená štúdiou ADVOCATE už nepovažuje za spoľahlivú, treba prehodnotiť, aký kompromis medzi kontrolou vaskulitídy a minimalizáciou steroidnej toxicity je v konkrétnej situácii pre pacienta optimálny.</p>
 
 <h3>2) Zmena liečby musí ísť ruka v ruke s bezpečnostným sledovaním pečene</h3>
 
-<p>Pri pacientoch s nefrologickými diagnózami je bežné, že sa súčasne rieši viac orgánových systémov naraz. Ak sa Tavneos ukončuje alebo nahrádza, treba zároveň zabezpečiť:</p>
+<p>U nefrologických pacientov sa často rieši viac orgánových systémov naraz. Ak sa Tavneos ukončuje alebo nahrádza, treba zároveň:</p>
 
 <ul>
   <li>cielene sledovať pečeňové testy počas prechodu,</li>
-  <li>byť pozorný na klinické a laboratórne známky VBDS,</li>
+  <li>všímať si klinické a laboratórne známky VBDS,</li>
   <li>koordinovať plán s multidisciplinárnym tímom (nefrológ, reumatológ/hematológ, podľa potreby hepatológ).</li>
 </ul>
 
 <h3>3) Prechod na alternatívy môže byť časovo kritický</h3>
 
-<p>Pri systémových vaskulitídach platí, že „čakanie“ na nové rozhodnutia môže ovplyvniť chorobnú aktivitu. Preto odporúčanie EMA — <strong>nezačínať liečbu u nových pacientov</strong> a už liečených <strong>previesť na alternatívnu liečbu</strong> — znamená, že lokálne protokoly by mali mať pripravený mechanizmus rýchlej zmeny terapie.</p>
+<p>Pri systémových vaskulitídach môže čakanie na ďalšie rozhodnutia ovplyvniť chorobnú aktivitu. Odporúčanie EMA <strong>nezačínať liečbu u nových pacientov</strong> a už liečených <strong>previesť na alternatívnu liečbu</strong> preto znamená, že lokálne protokoly by mali mať pripravený postup na rýchlu zmenu liečby.</p>
 
-<h2>Ako to komunikovať pacientovi (praktická formulácia)</h2>
+<h2>Ako to vysvetliť pacientovi</h2>
 
 <p>Pacientovi je vhodné zrozumiteľne vysvetliť, že:</p>
 
@@ -96,11 +96,11 @@ $articles[] = [
   <li>počas prechodu sa bude sledovať bezpečnosť, najmä funkcia pečene.</li>
 </ul>
 
-<p>Je vhodné zdôrazniť, že konkrétny postup závisí od aktuálnej chorobnej aktivity, stavu obličiek a komorbidít, nie od všeobecného odporúčania pre populáciu.</p>
+<p>Treba tiež povedať, že konkrétny postup závisí od aktuálnej chorobnej aktivity, stavu obličiek a komorbidít, nie od všeobecného odporúčania pre populáciu.</p>
 
 <h2>Záver</h2>
 
-<p>Odporúčanie EMA na zrušenie povolenia na uvedenie na trh pre <strong>Tavneos (avacopan)</strong> je regulačne aj klinicky významná udalosť. EMA uzatvára, že dôkazy z kľúčovej štúdie ADVOCATE už nemožno považovať za spoľahlivé pre problémy s integritou dát a porušenie zásad správnej klinickej praxe, a preto prínosy lieku nie sú preukázateľne vyššie než riziká.</p>
+<p>Odporúčanie EMA zrušiť povolenie pre <strong>Tavneos (avacopan)</strong> je regulačne aj klinicky významné. Dôkazy zo štúdie ADVOCATE pre problémy s integritou dát a porušenie zásad správnej klinickej praxe už nemožno považovať za spoľahlivé, a preto prínosy lieku nie sú preukázateľne vyššie než riziká.</p>
 
 <p>Pre nefrológiu je to dôležité najmä u pacientov s <strong>GPA/MPA s postihnutím obličiek</strong>, u ktorých zmena liečebnej stratégie môže ovplyvniť kontrolu zápalu, potrebu intenzívnej starostlivosti aj bezpečnostné riziká. V praxi by sa mali okamžite riešiť dve veci: <strong>nezačínať liečbu u nových pacientov</strong> a <strong>systematicky prehodnotiť liečbu aktuálne liečených</strong>, vrátane <strong>sledovania funkcie pečene</strong> až do definitívneho ukončenia liečby.</p>
 
