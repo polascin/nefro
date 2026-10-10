@@ -33,35 +33,35 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Proteín a kreatín sa z okrajovej „fitness témy“ presunuli do bežných rozhovorov v ambulancii. Medscape zhŕňa päť praktických otázok o bezpečnosti, dávkovaní a výbere. Pre nefrológiu je kľúčové inak odpovedať pacientovi bez ochorenia obličiek a inak pacientovi s CKD (vrátane opatrnej interpretácie kreatinínu).',
     'content'      => <<<'HTML'
-<figure><a href="img/protein-kreatin-uz-nie-su-len-fitness-tema-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/protein-kreatin-uz-nie-su-len-fitness-tema-nefrologia.webp" alt="Odmerka proteínového prášku a kryštalického doplnku, ktorých svetlo siaha až k obličke pod záťažou" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Doplnky sa presunuli z posilňovne do bežnej výživy — a tým aj do nefrologickej ordinácie.</figcaption></figure>
+<figure><a href="img/protein-kreatin-uz-nie-su-len-fitness-tema-nefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/protein-kreatin-uz-nie-su-len-fitness-tema-nefrologia.webp" alt="Odmerka proteínového prášku a kryštalického doplnku, ktorých svetlo siaha až k obličke pod záťažou" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Doplnky sa presunuli z posilňovne do bežnej výživy – a tým aj do nefrologickej ordinácie.</figcaption></figure>
 
 <h2>Prečo sa to dnes týka takmer každého pacienta</h2>
 
-<p>Medicína sa v posledných rokoch stretáva s novou realitou: doplnky výživy, ktoré boli kedysi doménou športu, sa stali súčasťou bežných rozhovorov v ambulancii. V praxi to znamená, že lekár sa čoraz častejšie pýta na dve otázky naraz: „Je to bezpečné?“ a „Ako to správne dávkovať?“</p>
+<p>Doplnky výživy, ktoré boli kedysi doménou športu, sa v posledných rokoch stali bežnou témou rozhovorov v ambulancii. Lekár tak čoraz častejšie dostáva dve otázky naraz: „Je to bezpečné?“ a „Ako to správne dávkovať?“</p>
 
-<p>Z hľadiska nefrológie je kľúčové, že najčastejšie obavy pacientov sa sústreďujú na to, či vyšší príjem bielkovín „nezničí“ obličky a či kreatín nie je rizikový. Medscape v tomto kontexte zdôrazňuje, že diskusia o proteíne a kreatíne musí prejsť z roviny „sú to doplnky?“ do roviny „ako ich zasadiť do cielenej výživovej stratégie?“.</p>
+<p>Pre nefrológa je podstatné, že obavy pacientov sa najčastejšie týkajú toho, či vyšší príjem bielkovín „nezničí“ obličky a či kreatín nie je rizikový. Medscape zdôrazňuje, že diskusia o proteíne a kreatíne musí prejsť z roviny „sú to doplnky?“ do roviny „ako ich zasadiť do cielenej výživovej stratégie?“.</p>
 
 <h2>Ako sa proteín a kreatín líšia (a prečo je to praktické)</h2>
 
-<p>Autori rámcujú proteín ako stavebnú zložku (svaly, hormóny, obnova), teda ako nutričnú podporu pre regeneráciu a udržiavanie štíhlej telesnej hmoty.</p>
+<p>Autori opisujú proteín ako stavebnú zložku (svaly, hormóny, obnova), teda ako nutričnú podporu pre regeneráciu a udržiavanie štíhlej telesnej hmoty.</p>
 
 <p>Kreatín je naopak substrát pre rýchly energetický výkon, takže jeho praktický význam sa viaže najmä na silu a výkon. Medscape zároveň spomína rastúci záujem o možné kognitívne alebo neuroprotektívne využitie, pričom dôkazy sa ešte vyvíjajú.</p>
 
 <h2>Otázka 1: Je vyšší príjem bielkovín alebo kreatínu nebezpečný pre obličky?</h2>
 
-<p>Medscape uvádza, že „obava o obličky“ často stojí na historickom predpoklade, že vysokobielkovinová diéta poškodzuje obličky u zdravých jedincov. Tento koncept sa však v ďalších prácach opakovane spochybnil.</p>
+<p>Medscape uvádza, že „obava o obličky“ často stojí na historickom predpoklade, že vysokobielkovinová diéta poškodzuje obličky u zdravých jedincov. Neskoršie práce ho však opakovane spochybnili.</p>
 
-<p>Dôležitý praktický záver pre ambulanciu je, že informáciu treba podávať diferencovane. Na otázku rizika sa totiž nedá odpovedať jednou vetou pre všetkých: pacient bez ochorenia obličiek potrebuje inú odpoveď než pacient s chronickou chorobou obličiek.</p>
+<p>Pre ambulanciu z toho vyplýva, že odpoveď treba diferencovať. Na otázku rizika sa nedá odpovedať jednou vetou pre všetkých: pacient bez ochorenia obličiek potrebuje inú odpoveď než pacient s chronickou chorobou obličiek.</p>
 
-<p>Ak sa pacient pýta na bezpečnosť, odporúčanie v duchu článku smeruje k tomu, že proteín sa dá zaradiť ako výživová stratégia a že kreatín má veľmi priaznivý bezpečnostný profil v kontexte športovej výživy.</p>
+<p>Ak sa pacient pýta na bezpečnosť, článok vedie k odpovedi, že proteín možno zaradiť ako súčasť výživovej stratégie a kreatín má v športovej výžive veľmi priaznivý bezpečnostný profil.</p>
 
 <h2>Otázka 2: Koľko proteínu sa odporúča a ako sa mení situácia pri GLP-1?</h2>
 
-<p>V článku zaznieva odporúčací rámec, ktorý sa u dospelých opiera o približne <strong>1,2 až 1,6 g proteínu na kilogram telesnej hmotnosti denne</strong>.</p>
+<p>Pre dospelých článok uvádza orientačne približne <strong>1,2 až 1,6 g proteínu na kilogram telesnej hmotnosti denne</strong>.</p>
 
-<p>Medscape opisuje aj konkrétnejšie „počítanie“ cez príklady (napr. pri 82 kg približne 100 až 130 g denne).</p>
+<p>Medscape to ilustruje aj príkladom: pri 82 kg ide približne o 100 až 130 g denne.</p>
 
-<p>Pri liečbe GLP-1 sa však mení praktická realita: pacienti majú znížený apetít a často klesá aj príjem potravy vrátane bielkovín. V článku sa preto uvádza, že v praxi sa často mieri na <strong>nižší denný cieľ okolo 1 až 1,2 g/kg/deň</strong>, pričom zachovanie svalovej hmoty sa dosahuje najmä kombináciou bielkovín a odporového tréningu (proteín je „druhý v poradí“ za tréningom).</p>
+<p>Pri liečbe GLP-1 sa však situácia mení: pacienti majú znížený apetít a často klesá aj príjem potravy vrátane bielkovín. Podľa článku sa preto v praxi často mieri na <strong>nižší denný cieľ okolo 1 až 1,2 g/kg/deň</strong>, pričom zachovanie svalovej hmoty sa dosahuje najmä kombináciou bielkovín a odporového tréningu (proteín je „druhý v poradí“ za tréningom).</p>
 
 <h2>Otázka 3: Aký proteín a ktorý kreatín vybrať</h2>
 
@@ -69,7 +69,7 @@ $articles[] = [
 
 <p>Pri proteíne je výber zložitejší. Medscape zdôrazňuje princíp: „najlepší proteín je ten, ktorý pacient toleruje, dokáže pravidelne používať a ktorý zapadá do jeho stravovania a cieľov“.</p>
 
-<p>Z hľadiska kvality sa v článku spomína, že srvátkový izolát (whey) je zvyčajne veľmi „praktický“ (leucín, stráviteľnosť). Pri vegánskych režimoch sa uvádza, že rastlinné (plant-based) zmesi môžu fungovať podobne, ak obsahujú leucín a sú zostavené tak, aby podporovali stimuláciu syntézy svalových bielkovín.</p>
+<p>Z hľadiska kvality je podľa článku srvátkový izolát (whey) zvyčajne veľmi „praktický“ (leucín, stráviteľnosť). Pri vegánskej strave môžu podobne fungovať rastlinné (plant-based) zmesi, ak obsahujú leucín a sú zostavené tak, aby podporovali stimuláciu syntézy svalových bielkovín.</p>
 
 <h2>Otázka 4: Koľko proteínu naraz a je „viac“ plytvanie?</h2>
 
@@ -82,17 +82,17 @@ $articles[] = [
 
 <p>Podľa článku vyššie jednorazové množstvá nie sú automaticky „plytvaním“. Celkový denný príjem a kvalita proteínu majú dôležitejšiu úlohu než to, či je proteín rozdelený do jedného alebo viacerých jedál.</p>
 
-<p>Pre orientáciu pri cieľoch stimulácie článok uvádza rámec, že približne 20 g v jednom jedle býva dostatočných pre mladších dospelých, okolo 30 g pre starších a vyššie hodnoty (napr. 40 g) môžu syntézu maximalizovať pre väčšinu ľudí.</p>
+<p>Na stimuláciu syntézy bielkovín podľa článku orientačne stačí približne 20 g v jednom jedle u mladších dospelých a okolo 30 g u starších; vyššie hodnoty (napr. 40 g) môžu syntézu maximalizovať pre väčšinu ľudí.</p>
 
 <h2>Otázka 5: Majú zmysel doplnky bez tréningu?</h2>
 
-<p>V článku zaznieva, že v určitých prípadoch áno — najmä ak pacient nedokáže pokryť potrebu bielkovín jedlom (menší apetít, starší vek, vynechávanie raňajok, obmedzenia v príjme).</p>
+<p>Podľa článku v určitých prípadoch áno, najmä ak pacient nedokáže pokryť potrebu bielkovín jedlom (menší apetít, starší vek, vynechávanie raňajok, obmedzenia v príjme).</p>
 
-<p>Zároveň však Medscape uzatvára, že pre väčšinu ľudí majú proteínové a kreatínové doplnky najväčší benefit práve v kontexte stratégie zameranej na posilňovanie a udržiavanie svalovej hmoty. Kreatín môže mať širší význam pri záujme o kognitívne benefity, ale aj tam treba počítať s tým, že dôkazy nie sú „finálne“.</p>
+<p>Medscape však uzatvára, že pre väčšinu ľudí majú proteínové a kreatínové doplnky najväčší prínos práve v kontexte stratégie zameranej na posilňovanie a udržiavanie svalovej hmoty. Kreatín môže mať širší význam pri záujme o kognitívne prínosy, ale aj tam treba počítať s tým, že dôkazy nie sú „finálne“.</p>
 
 <h2>Praktické nefrologické poznámky (ako to pretaviť do ambulantnej praxe)</h2>
 
-<p>Tento článok na Medscape je orientovaný skôr na všeobecné otázky pacientov a na klinickú komunikáciu. Pri nefrológii je však užitočné pretaviť jeho posolstvo do bezpečnej praxe:</p>
+<p>Tento článok na Medscape je orientovaný skôr na všeobecné otázky pacientov a na klinickú komunikáciu. V nefrológii ho treba preložiť do bezpečnej praxe:</p>
 
 <ul>
   <li><strong>U pacientov s normálnou funkciou obličiek</strong> sa obava z proteínu často podáva tak, akoby bola univerzálna. Článok naznačuje, že tento strach je historicky prehnaný a opakovane spochybnený.</li>
@@ -104,12 +104,12 @@ $articles[] = [
 
 <h2>Zhrnutie pre nefrologickú prax</h2>
 
-<p>Medscape posúva proteín a kreatín z pozície okrajových doplnkov do bežnej zdravotnej komunikácie. Pre nefrológiu z toho vyplýva, že v ambulancii treba:</p>
+<p>Pre nefrologickú ambulanciu z toho vyplýva, že treba:</p>
 
 <ol>
   <li>jasne rozlíšiť otázky pre osoby bez ochorenia obličiek a pre osoby s CKD,</li>
   <li>ponúknuť pacientovi dávkovací rámec v kontexte cieľa (udržanie svalovej hmoty, GLP-1, apetít),</li>
-  <li>u kreatínu preferovať overenú formu a pri CKD nastaviť opatrné sledovanie.</li>
+  <li>pri kreatíne preferovať overenú formu a pri CKD nastaviť opatrné sledovanie.</li>
 </ol>
 
 <hr>

@@ -146,6 +146,7 @@ $articles[] = [
 <table>
   <thead>
     <tr>
+      <th scope="col">Oblasť</th>
       <th scope="col">Podporujú</th>
       <th scope="col">Nepodporujú / chýba</th>
     </tr>
