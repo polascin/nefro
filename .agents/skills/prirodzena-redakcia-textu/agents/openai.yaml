@@ -1,0 +1,4 @@
+interface:
+  display_name: "Hĺbková prirodzená redakcia"
+  short_description: "Komplexná redakcia vo vašom doloženom štýle"
+  default_prompt: "Použi $prirodzena-redakcia-textu na hĺbkovú redakciu tohto textu v mojom doloženom štýle pri zachovaní významu a presnosti."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Humanizácia neodborného textu"
+  short_description: "Hĺbková prirodzená redakcia bežných textov"
+  default_prompt: "Použi $humanizacia-neodborneho-textu na dôslednú humanizáciu a jazykovú korektúru tohto neodborného textu."
