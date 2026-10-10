@@ -42,11 +42,11 @@ $articles[] = [
 
 <p class="article-dek"><em>V pokročilých štádiách a na dialýze: praktický edukačný sprievodca.</em></p>
 
-<p>Keď sa k diabetu pridá nefropatia, človek si často uvedomí, že „liečba diabetu“ už nie je samostatná téma. Zrazu ide o jeden spoločný príbeh, kde sa spájajú cukry, tlak, tekutiny, minerály v krvi a aj to, ako vaše telo reaguje na jedlo a samotnú dialýzu. Preto odporúčania pre diabetes pri chronickom ochorení obličiek (CKD) zdôrazňujú, že ide o komplexný manažment rizík a že ciele sa musia prispôsobiť štádiu ochorenia a vášmu konkrétnemu profilu rizík [1,2].</p>
+<p>Keď sa k diabetu pridá nefropatia, človek si často uvedomí, že „liečba diabetu“ už nie je samostatná téma. Cukry, tlak, tekutiny, minerály v krvi aj to, ako vaše telo reaguje na jedlo a na samotnú dialýzu, spolu súvisia. Odporúčania pre diabetes pri chronickom ochorení obličiek (CKD) preto zdôrazňujú komplexný manažment rizík a ciele prispôsobené štádiu ochorenia a vášmu konkrétnemu profilu rizík [1,2].</p>
 
-<p>V pokročilých štádiách nefropatie (pred dialýzou) a najmä na dialýze sa potom mení rytmus dňa, mení sa aj to, čo je „správne“ v jedle a pití. Nejde však o náhodné obmedzovanie. Je to snaha udržať stabilitu vnútorného prostredia tak, aby ste mali menšie výkyvy, menej komplikácií a aby liečba diabetu aj obličiek bola bezpečná.</p>
+<p>V pokročilých štádiách nefropatie (pred dialýzou) a najmä na dialýze sa mení rytmus dňa aj to, čo je „správne“ v jedle a pití. Nejde o náhodné obmedzovanie, ale o snahu udržať stabilné vnútorné prostredie, aby ste mali menšie výkyvy, menej komplikácií a aby liečba diabetu aj obličiek bola bezpečná.</p>
 
-<p>V tomto článku ukážem, ako na to v praxi – od stravy cez pitný režim až po význam komunikácie medzi diabetológom, nefrológom a dialyzačným tímom (a často aj dietológom), aby ste dosiahli bezpečnú starostlivosť.</p>
+<p>Ďalej ukážem, ako to vyzerá v praxi – od stravy cez pitný režim až po spoluprácu diabetológa, nefrológa, dialyzačného tímu a často aj dietológa.</p>
 
 <figure class="article-figure">
   <a href="img/zdn-02.png" target="_blank" rel="noopener noreferrer">
@@ -57,11 +57,11 @@ $articles[] = [
 
 <h2>Prečo sa v pokročilom štádiu menia „pravidlá hry“ (a prečo sa to nedá mať rovnako pre všetkých)</h2>
 
-<p>V skorších štádiách môže človek s diabetom dlho žiť „bez toho, aby boli obličky viditeľné“. Obličky totiž spočiatku fungujú kompenzačne. Až neskôr sa začne odzrkadľovať to, čo sa dialo v pozadí: objavia sa zmeny v laboratóriách, rastie riziko komplikácií a postupne sa pridávajú aj režimové obmedzenia. Včasná diagnostika a starostlivosť môžu výrazne zlepšiť vaše vyhliadky.</p>
+<p>V skorších štádiách môže človek s diabetom dlho žiť bez toho, aby o obličkách vôbec vedel. Obličky totiž spočiatku poškodenie kompenzujú. Až neskôr sa prejaví to, čo sa dialo v pozadí: objavia sa zmeny v laboratóriách, rastie riziko komplikácií a postupne sa pridávajú aj režimové obmedzenia. Včasná diagnostika a starostlivosť môžu výrazne zlepšiť vaše vyhliadky.</p>
 
-<p>Pri pokročilom CKD sa mení schopnosť obličiek udržiavať rovnováhu vody a elektrolytov a lieky sa musia prispôsobiť. KDIGO zdôrazňuje, že cieľom je vyvážiť prínos liečby a riziká, pričom každý pacient vyžaduje individuálny prístup, čo znamená úpravy liečby pri zmene režimu, stravy alebo začatí dialýzy.</p>
+<p>Pri pokročilom CKD sa mení schopnosť obličiek udržiavať rovnováhu vody a elektrolytov a lieky sa musia prispôsobiť. KDIGO zdôrazňuje, že treba vyvážiť prínos liečby a jej riziká a ku každému pacientovi pristupovať individuálne, teda upravovať liečbu pri zmene režimu, stravy alebo po začatí dialýzy.</p>
 
-<p>A potom je tu ešte dialýza. Dialýza nie je „magický reset“. Je to liečba s presnými pravidlami, ktorá má svoje limity a riziká (napríklad preťaženie tekutinami alebo elektrolytové zmeny počas sedenia). Preto sa aj výživa a pitný režim na dialýze nastavujú tak, aby sa dialýza dala bezpečne a opakovane zvládnuť.</p>
+<p>A potom je tu dialýza, ktorá nie je „magický reset“. Je to liečba s presnými pravidlami, ktorá má svoje limity a riziká (napríklad preťaženie tekutinami alebo elektrolytové zmeny počas sedenia). Preto sa aj výživa a pitný režim na dialýze nastavujú tak, aby sa dialýza dala bezpečne a opakovane zvládnuť.</p>
 
 <figure class="article-figure">
   <a href="img/zdn-03.png" target="_blank" rel="noopener noreferrer">
@@ -76,7 +76,7 @@ $articles[] = [
 
 <p>Diabetológ zvyčajne rieši bezpečné nastavenie cukrov (a v pokročilom štádiu aj riziko hypoglykémie). Nefrológ rieši CKD/diurézu, elektrolyty, tlak, progresiu ochorenia a načasovanie dialýzy (alebo režim pred dialýzou). Dialyzačný tím vie najlepšie, ako vyzerá váš „reálny“ dialyzačný priebeh: ako znášate sedenie, aké máte typické ťažkosti a aké bývajú vaše prírastky medzi dialýzami. Dietológ potom tieto medicínske ciele preloží do stravy tak, aby bola praktická a zároveň bezpečná.</p>
 
-<p>Tento prístup – prepojenie edukácie, monitorovania a tímovej starostlivosti – zodpovedá tomu, ako sa odporúčania opakovane formulujú: nie „jedna rada pre všetkých“, ale plánovanie podľa rizík a podľa výsledkov v čase [1,2,4]. Vaša aktívna účasť a porozumenie sú kľúčové pre úspešnú liečbu a lepšiu kvalitu života.</p>
+<p>Tento prístup – prepojenie edukácie, monitorovania a tímovej starostlivosti – zodpovedá tomu, ako sa odporúčania opakovane formulujú: nie „jedna rada pre všetkých“, ale plánovanie podľa rizík a podľa výsledkov v čase [1,2,4]. Rovnako dôležitá je vaša aktívna účasť a porozumenie liečbe.</p>
 
 <figure class="article-figure">
   <a href="img/zdn-04.png" target="_blank" rel="noopener noreferrer">
@@ -87,7 +87,7 @@ $articles[] = [
 
 <h2>Strava: prečo pri nefropatii nejde len o to „čo nejesť“, ale aj o to, čo si organizmus nevie dovoliť</h2>
 
-<p>Pri pokročilej nefropatii sa často hovorí o obmedzení príjmu draslíka, fosforu a sodíka. To je pravda, ale dôvod je ešte hlbší: ide o to, že obličky (alebo dialýza) nezvládajú tieto látky v rovnakom rozsahu ako zdravé obličky.</p>
+<p>Pri pokročilej nefropatii sa často hovorí o obmedzení príjmu draslíka, fosforu a sodíka. To je pravda, no podstatný je dôvod: choré obličky ani dialýza tieto látky nezvládajú v rovnakom rozsahu ako zdravé obličky.</p>
 
 <figure class="article-figure">
   <a href="img/zdn-05.png" target="_blank" rel="noopener noreferrer">
@@ -100,7 +100,7 @@ $articles[] = [
 
 <p>Keď je v strave veľa sodíka, zvyčajne sa zvýši smäd a zároveň sa zvyšuje riziko, že medzi dialýzami (alebo aj v predialyzačnom období) bude v tele viac tekutín. To následne znamená väčší prírastok hmotnosti, vyšší tlak a horšiu toleranciu dialýzy.</p>
 
-<p>Práve preto dialyzačné edukácie kladú dôraz na to, aby pacient rozumel tomu, že pitný režim sa nedá udržať bez úpravy stravy a najmä bez obmedzenia soli [5,6,7]. Prakticky to býva najväčší rozdiel v tom, či režim „ide“ alebo či je človek neustále v smäde a pod tlakom.</p>
+<p>Edukácia na dialýze preto zdôrazňuje, že pitný režim sa nedá udržať bez úpravy stravy, najmä bez obmedzenia soli [5,6,7]. V praxi práve to najčastejšie rozhoduje, či režim „ide“, alebo je človek neustále smädný a pod tlakom.</p>
 
 <figure class="article-figure">
   <a href="img/zdn-06.png" target="_blank" rel="noopener noreferrer">
@@ -111,9 +111,9 @@ $articles[] = [
 
 <h3>Draslík: prečo sa nevyberá podľa zoznamu z internetu</h3>
 
-<p>V CKD a na dialýze môže draslík v krvi rásť. Príliš vysoký draslík môže byť nebezpečný pre srdce, a preto sa s ním opatrne pracuje. Ale obmedzenia draslíka nie sú pre každého identické: závisia od vašich aktuálnych hladín, od dialyzačnej schémy a často aj od toho, čo sa vám v praxi reálne darí jesť.</p>
+<p>V CKD a na dialýze môže draslík v krvi rásť. Príliš vysoký draslík môže byť nebezpečný pre srdce. Obmedzenia draslíka však nie sú pre každého rovnaké: závisia od vašich aktuálnych hladín, od dialyzačnej schémy a často aj od toho, čo sa vám v praxi reálne darí jesť.</p>
 
-<p>Preto sa v edukáciách opakovane zdôrazňuje individualizácia a sledovanie laboratórií. Dietoterapia v nefropatii je „vedená cieľmi“ – laboratórne hodnoty určujú, čo je v danom čase problém [1,4,7].</p>
+<p>Edukačné materiály preto opakovane zdôrazňujú individuálny prístup a sledovanie laboratórnych výsledkov. Diéta pri nefropatii sa riadi cieľmi – laboratórne hodnoty určujú, čo je v danom čase problém [1,4,7].</p>
 
 <figure class="article-figure">
   <a href="img/zdn-07.png" target="_blank" rel="noopener noreferrer">
@@ -124,9 +124,9 @@ $articles[] = [
 
 <h3>Fosfor: prečo sa rieši dlhodobo, aj keď sa človek necíti „chorý“</h3>
 
-<p>Fosfor pri CKD často narastá postupne a dlhodobo to môže poškodzovať kosti a zvyšovať riziká spojené s minerálovým metabolizmom. Preto sa strava prispôsobí a ak máte predpísané viazače fosforu, sú súčasťou stratégie, nie „doplnkom k režimu“.</p>
+<p>Fosfor pri CKD často narastá postupne a dlhodobo to môže poškodzovať kosti a zvyšovať riziká spojené s minerálovým metabolizmom. Preto sa upravuje strava, a ak máte predpísané viazače fosforu, sú súčasťou stratégie, nie „doplnkom k režimu“.</p>
 
-<p>Pritom je veľmi dôležité načasovanie viazačov. V praxi sa veľa problémov stane z drobností – napríklad z toho, že tabletky nie sú užité presne s jedlom alebo sa vynechajú v dňoch, keď má pacient horšiu chuť do jedla. Dialyzačné a renálne nutričné materiály preto fosfor uvádzajú ako jednu z centrálnych tém stravy [4,6,7].</p>
+<p>Veľmi dôležité je načasovanie viazačov. Veľa problémov vzniká z drobností – napríklad z toho, že tabletky nie sú užité presne s jedlom alebo sa vynechajú v dňoch, keď má pacient horšiu chuť do jedla. Dialyzačné a renálne nutričné materiály preto fosfor uvádzajú ako jednu z centrálnych tém stravy [4,6,7].</p>
 
 <figure class="article-figure">
   <a href="img/zdn-08.png" target="_blank" rel="noopener noreferrer">
@@ -139,7 +139,7 @@ $articles[] = [
 
 <p>Ľudia s ochorením obličiek niekedy znížia príjem bielkovín zo strachu. Lenže dialýza a pokročilé CKD zvyšujú riziko podvýživy a svalového úbytku. Preto nutričné odporúčania pri CKD a najmä pri dialýze pracujú s tým, aby pacient nebol v energetickom deficite a aby mal dostatok bielkovín v dávkovaní podľa štádia a stavu [4,6].</p>
 
-<p>Je dôležité povedať jednu vec „ľudsky“: cieľom nie je hladovať. Cieľom je jesť tak, aby boli všetky relevantné parametre (sodík, draslík, fosfor, energia, bielkoviny) v rovnováhe. A to sa robí s dietológom a podľa vašich výsledkov.</p>
+<p>Povedané jednoducho: cieľom nie je hladovať. Cieľom je jesť tak, aby boli sodík, draslík, fosfor, energia aj bielkoviny v rovnováhe. To sa nastavuje s dietológom a podľa vašich výsledkov.</p>
 
 <figure class="article-figure">
   <a href="img/zdn-09.png" target="_blank" rel="noopener noreferrer">
@@ -150,11 +150,11 @@ $articles[] = [
 
 <h3>Pitný režim: prečo je to jedna z najťažších častí dialýzy a zároveň najviac „naučiteľná“</h3>
 
-<p>Pitný režim sa často vníma ako disciplína. Ale správne nastavený pitný režim je najmä o fyziológii a plánovaní. Dialýza odstraňuje tekutiny v určitom čase a do určitej miery. Ak medzi dialýzami vypijete viac, telo sa postupne preplní tekutinami a dialýza musí uberať viac – čo zvyšuje riziko poklesu tlaku, kŕčov, dýchavičnosti a nepohody počas sedenia.</p>
+<p>Pitný režim sa často vníma ako skúška disciplíny, no správne nastavený režim je najmä vecou fyziológie a plánovania. Dialýza odstraňuje tekutiny v určitom čase a do určitej miery. Ak medzi dialýzami vypijete viac, telo sa postupne preplní tekutinami a dialýza musí uberať viac – čo zvyšuje riziko poklesu tlaku, kŕčov, dýchavičnosti a nepohody počas sedenia.</p>
 
-<p>Preto americká National Kidney Foundation aj mnohé dialyzačné edukačné materiály zdôrazňujú, že tekutinové obmedzenie má byť presne podľa predpisu vášho tímu a že pomáha pracovať so stratégiami (sledovanie príjmu, náhrady pri smäde a najmä zníženie príjmu sodíka, aby smäd rástol menej) [5]. Slovenské dialyzačné príručky pre pacientov túto logiku rozvádzajú tak, že pitný režim a prírastky medzi dialýzami sú kľúčové pre komfort a bezpečnosť dialýzy [6].</p>
+<p>Preto americká National Kidney Foundation aj mnohé dialyzačné edukačné materiály zdôrazňujú, že obmedzenie tekutín sa má dodržiavať presne podľa predpisu vášho tímu a že pomáhajú konkrétne stratégie (sledovanie príjmu, náhrady pri smäde a najmä zníženie príjmu sodíka, aby smäd rástol menej) [5]. Slovenské príručky pre dialyzovaných pacientov podobne uvádzajú, že pitný režim a prírastky medzi dialýzami sú kľúčové pre komfort a bezpečnosť dialýzy [6].</p>
 
-<p>Je veľmi dôležité, aby ste si uvedomili, že tekutinový limit nie je „trest za nedisciplinovanosť“. Limit sa dá diskutovať. Ak sa vám nedarí držať limit, často to nie je len o pití, ale aj o soli v jedle, o tom, ako máte nastavené dávky liekov (napríklad na tlak alebo režimy súvisiace s diabetom) a o tom, či máte správne zvládnutú hydratáciu pri horších dňoch.</p>
+<p>Tekutinový limit nie je „trest za nedisciplinovanosť“ a dá sa o ňom s tímom hovoriť. Ak sa vám nedarí držať limit, často to nie je len o pití, ale aj o soli v jedle, o tom, ako máte nastavené dávky liekov (napríklad na tlak alebo režimy súvisiace s diabetom) a o tom, či máte správne zvládnutú hydratáciu v horších dňoch.</p>
 
 <figure class="article-figure">
   <a href="img/zdn-10.png" target="_blank" rel="noopener noreferrer">
@@ -165,9 +165,9 @@ $articles[] = [
 
 <h2>Diabetes pri nefropatii a na dialýze: prečo sa mení riziko hypo/hyperglykémie a prečo nesmiete improvizovať</h2>
 
-<p>V pokročilom CKD sa mení „správanie“ organizmu. Zmení sa tolerancia jedla, zmení sa aj rytmus dialýzy, často sa mení aj chuť do jedla (alebo sa mení typ jedál podľa draslíka/fosforu). To u určitých ľudí mení priebeh glykémie počas dňa.</p>
+<p>V pokročilom CKD sa mení „správanie“ organizmu. Mení sa tolerancia jedla, denný rytmus sa prispôsobuje dialýze a často sa mení chuť do jedla (alebo skladba jedál podľa draslíka a fosforu). U niektorých ľudí to mení priebeh glykémie počas dňa.</p>
 
-<p>K tomu sa pridáva aj to, že pri CKD a dialýze môžu byť niektoré lieky pre organizmus „z hľadiska bezpečnosti“ iné. KDIGO preto odporúča individualizovať liečbu diabetu aj ciele a zdôrazňuje, že pri CKD treba zohľadniť riziká vrátane hypoglykémie [1,2]. V praxi to znamená, že keď nastane zmena režimu (napríklad deň pred dialýzou, deň po dialýze, menej jedla, zmenený príjem tekutín), dávkovanie liekov by sa nemalo riešiť „od oka“.</p>
+<p>K tomu sa pridáva aj to, že pri CKD a dialýze sa môže zmeniť bezpečnosť niektorých liekov. KDIGO preto odporúča individualizovať liečbu diabetu aj ciele a zdôrazňuje, že pri CKD treba zohľadniť riziká vrátane hypoglykémie [1,2]. V praxi to znamená, že keď nastane zmena režimu (napríklad deň pred dialýzou, deň po dialýze, menej jedla, zmenený príjem tekutín), dávkovanie liekov by sa nemalo riešiť „od oka“.</p>
 
 <p>Ak sa vám pri dialýze opakovane robí zle (napríklad tras, potenie, zmätenosť, slabosť, výrazne nízke hodnoty), nepovažujte to za „osobnú slabosť“. Je to signál, že plán treba prekalibrovať v spolupráci s diabetológom a dialyzačným tímom [1,6].</p>
 
@@ -180,11 +180,11 @@ $articles[] = [
 
 <h2>Viazače fosforu, doplnky a lieky: najčastejšie chyby sú v drobnostiach</h2>
 
-<p>V praxi býva problém v tom, že si pacient niekedy myslí, že „vitamín“ alebo „doplnok minerálov“ je automaticky bezpečný. Pri CKD to však nie je pravda. Draslík a fosfor sa môžu zhoršovať aj prostredníctvom doplnkov, nie iba cez jedlo. A niektoré doplnky môžu zasahovať do rovnováhy alebo do toho, ako sa cítite počas dialýzy.</p>
+<p>Problémom býva predstava, že „vitamín“ alebo „doplnok minerálov“ je automaticky bezpečný. Pri CKD to však nie je pravda. Draslík a fosfor sa môžu zhoršovať aj prostredníctvom doplnkov, nie iba cez jedlo. A niektoré doplnky môžu zasahovať do rovnováhy alebo do toho, ako sa cítite počas dialýzy.</p>
 
-<p>Rovnako viazače fosforu fungujú len vtedy, ak sú použité správne. Preto sa v edukáciách opakovane zdôrazňuje, že lieky pri obličkových komplikáciách nie sú „voliteľné podľa chuti“, ale sú súčasťou liečebnej stratégie [4,6,7].</p>
+<p>Rovnako viazače fosforu fungujú len vtedy, ak sa užívajú správne. Edukačné materiály preto opakovane zdôrazňujú, že lieky pri obličkových komplikáciách nie sú „voliteľné podľa chuti“, ale sú súčasťou liečebnej stratégie [4,6,7].</p>
 
-<p>Toto je miesto, kde sa oplatí spraviť jednu jednoduchú vec: mať zoznam liekov a dávok a vždy ho ukázať pri kontrole diabetológa aj nefrológa (a najmä dialyzačnému tímu). To znižuje riziko, že sa niečo prehliadne.</p>
+<p>Pomôže jednoduchá vec: mať zoznam liekov a dávok a vždy ho ukázať pri kontrole u diabetológa aj nefrológa (a najmä dialyzačnému tímu). To znižuje riziko, že sa niečo prehliadne.</p>
 
 <figure class="article-figure">
   <a href="img/zdn-12.png" target="_blank" rel="noopener noreferrer">
@@ -195,9 +195,9 @@ $articles[] = [
 
 <h2>Pred dialýzou vs. na dialýze: prečo sa pravidlá môžu líšiť aj v tom, na čo najviac „dávate pozor“</h2>
 
-<p>V predialyzačnom období CKD je cieľom často spomaliť progresiu a zachovať stabilitu. Tam môže byť tekutinový režim menej „ostro ohraničený“ ako na dialýze, no aj tak často sú potrebné úpravy podľa príznakov, tlaku a laboratórií.</p>
+<p>V predialyzačnom období CKD je cieľom často spomaliť progresiu a zachovať stabilitu. Tam môže byť tekutinový režim menej „ostro ohraničený“ ako na dialýze, no aj tak sú často potrebné úpravy podľa príznakov, tlaku a laboratórií.</p>
 
-<p>Na dialýze sa však pitný režim rieši veľmi konkrétne, pretože priamo súvisí s prírastkami medzi dialýzami a s tým, koľko tekutiny dialýza odstráni. Dialyzačné edukačné materiály preto prírastky a pitný režim pripomínajú ako praktickú súčasť úspešnosti dialyzačného liečenia [6,7]. Zároveň je dobré vedieť, že peritoneálna dialýza má iný spôsob odstránenia tekutín a iné režimové princípy (nie vždy rovnaké obmedzenia tekutín ako pri hemodialýze), takže presné odporúčania sa vždy majú riadiť vašou metódou a pokynmi tímu [6].</p>
+<p>Na dialýze sa však pitný režim rieši veľmi konkrétne, pretože priamo súvisí s prírastkami medzi dialýzami a s tým, koľko tekutiny dialýza odstráni. Dialyzačné edukačné materiály preto prírastky a pitný režim pripomínajú ako praktickú súčasť úspešnej dialyzačnej liečby [6,7]. Zároveň je dobré vedieť, že peritoneálna dialýza má iný spôsob odstránenia tekutín a iné režimové princípy (nie vždy rovnaké obmedzenia tekutín ako pri hemodialýze), takže presné odporúčania sa vždy majú riadiť vašou metódou a pokynmi tímu [6].</p>
 
 <figure class="article-figure">
   <a href="img/zdn-13.png" target="_blank" rel="noopener noreferrer">
@@ -210,9 +210,9 @@ $articles[] = [
 
 <p>Jedna z najväčších výziev pri dialýze a pokročilom CKD je, že život nie je laboratórium. Prídu dni, keď budete mať menej chuti, príde chrípka, hnačka, zvracanie, horúčka alebo cestovanie.</p>
 
-<p>Pri diabetikovi je navyše kľúčové, že zmena príjmu jedla môže zmeniť glykémiu veľmi rýchlo. A pri obličkách môže zmena hydratácie zmeniť tlak a minerály.</p>
+<p>Pri diabete navyše zmena príjmu jedla môže veľmi rýchlo zmeniť glykémiu a pri chorých obličkách môže zmena hydratácie zmeniť tlak a minerály.</p>
 
-<p>Aj preto mnohé edukácie zdôrazňujú, že pacient má vedieť, čo urobiť, keď sa zhorší stav – komu zavolať a aký je „smer“ riešenia (najmä pri opakovaných problémoch alebo dehydratácii/prehnanom smäde). NKF napríklad vo svojich dialyzačných edukáciách smeruje k tomu, aby pacient pracoval so systémom a sledoval, nie aby čakal až na veľký problém [5]. Slovenské dialyzačné príručky obdobne vedú pacienta k tomu, že pravidlá sú na udržanie bezpečnosti a komfortu [6].</p>
+<p>Preto mnohé edukačné materiály zdôrazňujú, že pacient má vedieť, čo urobiť, keď sa zhorší stav – komu zavolať a aký je „smer“ riešenia (najmä pri opakovaných problémoch alebo dehydratácii/prehnanom smäde). NKF napríklad vo svojich materiáloch pre dialyzovaných vedie pacienta k tomu, aby sa držal dohodnutého systému a priebežne sa sledoval, nie aby čakal na veľký problém [5]. Slovenské dialyzačné príručky podobne vysvetľujú, že pravidlá slúžia bezpečnosti a komfortu [6].</p>
 
 <p>Prakticky to znamená: ak máte „zlý deň“ (menej jedla, viac smädu, zmena stolice), nespoliehajte sa len na intuitívne rozhodnutia. Radšej to vopred preberte s tímom alebo aspoň zavolajte, keď sa to opakuje.</p>
 
@@ -225,9 +225,9 @@ $articles[] = [
 
 <h2>Kedy je čas kontaktovať tím skôr (a nie až „kým to prejde“)</h2>
 
-<p>V dialýze aj v pokročilom CKD platí jedna jednoduchá myšlienka: čím skôr zachytíte odchýlku, tým jednoduchšie sa často dá riešiť. Samozrejme, presný zoznam príznakov má byť podľa vášho centra, ale typicky ide o situácie ako dýchavičnosť, rýchle opuchy, výrazné zmeny prírastkov, opakované závraty alebo ťažkosti počas dialýzy, výrazné zmeny glykémie a príznaky hypoglykémie.</p>
+<p>V dialýze aj v pokročilom CKD platí jednoduché pravidlo: čím skôr zachytíte odchýlku, tým jednoduchšie sa často dá riešiť. Presný zoznam príznakov by malo určiť vaše centrum, typicky však ide o situácie ako dýchavičnosť, rýchle opuchy, výrazné zmeny prírastkov, opakované závraty alebo ťažkosti počas dialýzy, výrazné zmeny glykémie a príznaky hypoglykémie.</p>
 
-<p>Dialyzačné príručky pre pacientov túto logiku komunikácie „nečakať“ opakovane vysvetľujú v edukácii o režime a bezpečnosti [6]. NKF pri tekutinách a dialyzačných obmedzeniach podobne zdôrazňuje, že tekutinové odporúčania nie sú teoretické, pretože preťaženie tekutinami mení priebeh dialýzy [5].</p>
+<p>Príručky pre dialyzovaných pacientov tento princíp „nečakať“ opakovane vysvetľujú v častiach o režime a bezpečnosti [6]. NKF pri tekutinách a dialyzačných obmedzeniach podobne zdôrazňuje, že tekutinové odporúčania nie sú teoretické, pretože preťaženie tekutinami mení priebeh dialýzy [5].</p>
 
 <figure class="article-figure">
   <a href="img/zdn-15.png" target="_blank" rel="noopener noreferrer">
@@ -238,9 +238,9 @@ $articles[] = [
 
 <h2>Záver: čo je naozaj cieľom (a aby ste sa cítili menej ako „pacient s pravidlami“)</h2>
 
-<p>Keď to celé zhrniem do jedného „ľudského“ odseku, cieľom nie je mať dokonalý režim každý deň. Cieľom je mať bezpečný režim, ktorý sa dá udržať a včas upravovať podľa výsledkov a podľa toho, ako naň reagujete vy.</p>
+<p>Cieľom nie je mať dokonalý režim každý deň. Cieľom je mať bezpečný režim, ktorý sa dá udržať a včas upravovať podľa výsledkov a podľa toho, ako naň reagujete vy.</p>
 
-<p>Diabetológ a nefrológ vám pomáhajú nastaviť si ciele a zabezpečiť bezpečnú liečbu. Dialyzačný tím vám pomáha zvládať dialýzu. Dietológ vám preloží medicínske ciele do jedál a do toho, čo je pre vás prakticky možné. Keď sa toto „spojí“, režim prestane byť len súborom zákazov a začne byť oporou pre kvalitu života.</p>
+<p>Diabetológ a nefrológ vám pomáhajú nastaviť si ciele a zabezpečiť bezpečnú liečbu. Dialyzačný tím vám pomáha zvládať dialýzu. Dietológ vám preloží medicínske ciele do jedál a do toho, čo je pre vás prakticky možné. Keď to do seba zapadne, režim prestane byť len súborom zákazov a stane sa oporou kvality života.</p>
 
 <figure class="article-figure">
   <a href="img/zdn-16.png" target="_blank" rel="noopener noreferrer">
