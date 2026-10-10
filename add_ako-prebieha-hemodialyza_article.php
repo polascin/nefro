@@ -38,12 +38,12 @@ $articles[] = [
     'excerpt'      => 'Krok za krokom vysvetľujeme, ako vyzerá jedno hemodialyzačné sedenie, ako často sa opakuje, čo je cievny prístup a ako sa môžete po dialýze cítiť.',
     'content'      => <<<'HTML'
 <figure>
-  <img src="img/ako-prebieha-hemodialyza.webp" alt="Infografika: ako prebieha hemodialýza — priebeh sedenia, cievny prístup a čo môžete čakať" loading="lazy" decoding="async">
+  <img src="img/ako-prebieha-hemodialyza.webp" alt="Infografika: ako prebieha hemodialýza – priebeh sedenia, cievny prístup a čo môžete čakať" loading="lazy" decoding="async">
 </figure>
 
 <p>Ak vám lekár oznámil, že budete potrebovať hemodialýzu, je prirodzené mať otázky a obavy.
-V tomto článku jednoduchým jazykom vysvetlíme, ako jedno dialyzačné sedenie prebieha — aby ste
-vedeli, čo čakať.</p>
+Jednoduchými slovami vysvetlíme, ako jedno dialyzačné sedenie prebieha, aby ste
+vedeli, čo vás čaká.</p>
 
 <h2>Čo je hemodialýza</h2>
 
@@ -54,11 +54,11 @@ látky a prebytočnú vodu, a očistená sa vracia späť do tela. Ide o bezpeč
 <h2>Ako vyzerá jedno sedenie</h2>
 
 <ol>
-  <li><strong>Príchod a odváženie.</strong> Na začiatku vás odvážia — podľa hmotnosti sa určí,
+  <li><strong>Príchod a odváženie.</strong> Na začiatku vás odvážia. Podľa hmotnosti sa určí,
       koľko vody treba počas dialýzy odobrať.</li>
   <li><strong>Napojenie.</strong> Sestra vás napojí na prístroj cez váš cievny prístup (pozri nižšie).</li>
   <li><strong>Samotná dialýza.</strong> Liečba trvá spravidla <strong>4 až 5 hodín</strong>. Počas nej
-      pohodlne sedíte alebo ležíte — môžete čítať, sledovať obrazovku, oddychovať či spať.</li>
+      pohodlne sedíte alebo ležíte a môžete čítať, sledovať obrazovku, oddychovať či spať.</li>
   <li><strong>Sledovanie.</strong> Personál priebežne kontroluje váš krvný tlak a chod prístroja.</li>
   <li><strong>Odpojenie a kontrola.</strong> Na záver vás odpoja, ošetria prístup a znova odvážia.</li>
 </ol>
@@ -73,24 +73,24 @@ vám určí lekár podľa vášho stavu. Časť pacientov môže byť vhodná aj
 
 <p>Aby mohla krv prúdiť do prístroja a späť, potrebujete tzv. cievny prístup:</p>
 <ul>
-  <li><strong>Arteriovenózna fistula</strong> — spojenie tepny a žily, zvyčajne na predlaktí;
+  <li><strong>Arteriovenózna fistula</strong> – spojenie tepny a žily, zvyčajne na predlaktí;
       je najtrvácnejšia voľba a vytvára sa s predstihom.</li>
-  <li><strong>Cievny graft</strong> — umelé spojenie, ak fistula nie je možná.</li>
-  <li><strong>Dialyzačný katéter</strong> — používa sa najmä dočasne alebo keď treba začať rýchlo.</li>
+  <li><strong>Cievny graft</strong> – umelé spojenie, ak fistula nie je možná.</li>
+  <li><strong>Dialyzačný katéter</strong> – používa sa najmä dočasne alebo keď treba začať rýchlo.</li>
 </ul>
 
 <h2>Ako sa môžete cítiť</h2>
 
 <p>Väčšina ľudí dialýzu dobre znáša. Niekedy sa môže objaviť únava alebo pokles krvného tlaku
-počas liečby — preto je dôležité dodržiavať odporúčania o príjme tekutín a soli a hlásiť personálu,
-ak sa necítite dobre. Po čase sa stáva dialýza súčasťou rutiny.</p>
+počas liečby. Preto je dôležité dodržiavať odporúčania o príjme tekutín a soli a hlásiť personálu,
+ak sa necítite dobre. Časom sa dialýza stane súčasťou bežného života.</p>
 
 <h2>Praktické tipy</h2>
 <ul>
-  <li>Noste pohodlné oblečenie s prístupom k miestu cievneho prístupu.</li>
+  <li>Noste pohodlné oblečenie, pri ktorom je cievny prístup ľahko dostupný.</li>
   <li>Dodržiavajte odporúčaný pitný režim a stravu.</li>
   <li>Berte si lieky podľa pokynov a noste si ich zoznam.</li>
-  <li>Pýtajte sa — personál vám rád vysvetlí všetko, čo vás zaujíma.</li>
+  <li>Pýtajte sa. Personál vám rád vysvetlí všetko, čo vás zaujíma.</li>
 </ul>
 
 <h2>Kde poskytujeme hemodialýzu</h2>
