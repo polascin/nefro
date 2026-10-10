@@ -29,9 +29,9 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Ak sa východisková eGFR pri biopsii určí z merania vzdialeného od výkonu, môže ísť o iný časový bod choroby. Kanadská kohorta ukazuje, že longitudinálne dáta v zmiešanom modeli zlepšujú kvalitu doplnenia chýbajúcej hodnoty.',
     'content'      => <<<'HTML'
-<figure><a href="img/vychodiskova-egfr-biopsia-imputacia-glomerulove-ochorenia.webp" rel="noopener noreferrer" target="_blank"><img src="img/vychodiskova-egfr-biopsia-imputacia-glomerulove-ochorenia.webp" alt="Trajektórie vychádzajúce z tesne vzdialených štartových bodov, ktoré sa vejárovito rozchádzajú; niektoré body sú len duté obrysy" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Malý rozdiel vo východiskovej hodnote — najmä ak je doplnená a nie meraná — rozhodne o tom, kam analýza dôjde.</figcaption></figure>
+<figure><a href="img/vychodiskova-egfr-biopsia-imputacia-glomerulove-ochorenia.webp" rel="noopener noreferrer" target="_blank"><img src="img/vychodiskova-egfr-biopsia-imputacia-glomerulove-ochorenia.webp" alt="Trajektórie vychádzajúce z tesne vzdialených štartových bodov, ktoré sa vejárovito rozchádzajú; niektoré body sú len duté obrysy" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Malý rozdiel vo východiskovej hodnote, najmä ak je doplnená a nie meraná, rozhodne o tom, kam analýza dôjde.</figcaption></figure>
 
-<p>Východisková („baseline“) odhadovaná glomerulová filtrácia pri biopsii obličky patrí medzi najčastejšie používané premenné v observačných štúdiách glomerulových ochorení. Vstupuje do stratifikácie závažnosti, do prognostických modelov, do definícií progresie aj do úvah o účinku liečby. V praxi sa pritom určuje pomerne voľne — typicky ako prvé dostupné meranie v okne šiestich mesiacov okolo biopsie — a ak žiadna hodnota k dispozícii nie je, býva doplnená (imputovaná). Analýza z populačnej kanadskej kohorty ukazuje, že táto zdanlivo technická voľba nie je neutrálna: čím ďalej od biopsie hodnotu vezmeme, tým väčšia je odchýlka od skutočného východiskového stavu.</p>
+<p>Východisková („baseline“) odhadovaná glomerulová filtrácia pri biopsii obličky patrí medzi najčastejšie používané premenné v observačných štúdiách glomerulových ochorení. Vstupuje do stratifikácie závažnosti, do prognostických modelov, do definícií progresie aj do úvah o účinku liečby. V praxi sa pritom určuje pomerne voľne, typicky ako prvé dostupné meranie v okne šiestich mesiacov okolo biopsie, a ak žiadna hodnota k dispozícii nie je, býva doplnená (imputovaná). Analýza z populačnej kanadskej kohorty ukazuje, že táto zdanlivo technická voľba nie je neutrálna: čím ďalej od biopsie hodnotu vezmeme, tým väčšia je odchýlka od skutočného východiskového stavu.</p>
 
 <h2>Prečo nejde len o metodický detail</h2>
 
@@ -66,7 +66,7 @@ $articles[] = [
     <tbody>
       <tr>
         <th scope="row">Správnosť (accuracy)</th>
-        <td>Ako blízko je doplnená hodnota skutočnej východiskovej eGFR — teda veľkosť systematickej odchýlky.</td>
+        <td>Ako blízko je doplnená hodnota skutočnej východiskovej eGFR, teda veľkosť systematickej odchýlky.</td>
         <td>Odhad je sústavne posunutý jedným smerom; výsledok analýzy je skreslený.</td>
       </tr>
       <tr>
@@ -135,7 +135,7 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>Ak sa východisková funkcia obličiek pri glomerulovom ochorení určí z merania vzdialeného od biopsie, môže ísť o misklasifikáciu — a teda o chybu v premennej, od ktorej sa odvíja väčšina ďalších záverov. V kohorte s opakovanými meraniami eGFR zlepšilo využitie longitudinálnych dát v modeli so zmiešanými účinkami správnosť pri jednoduchej imputácii a správnosť aj presnosť pri viacnásobnej imputácii. Pre observačný výskum glomerulových ochorení z toho vyplýva praktické odporúčanie: k východiskovej eGFR pristupovať ako k odhadovanej veličine s vlastnou neistotou, nie ako k danému údaju.</p>
+<p>Ak sa východisková funkcia obličiek pri glomerulovom ochorení určí z merania vzdialeného od biopsie, môže ísť o misklasifikáciu, a teda o chybu v premennej, od ktorej sa odvíja väčšina ďalších záverov. V kohorte s opakovanými meraniami eGFR zlepšilo využitie longitudinálnych dát v modeli so zmiešanými účinkami správnosť pri jednoduchej imputácii a správnosť aj presnosť pri viacnásobnej imputácii. Pre observačný výskum glomerulových ochorení z toho vyplýva praktické odporúčanie: k východiskovej eGFR pristupovať ako k odhadovanej veličine s vlastnou neistotou, nie ako k danému údaju.</p>
 
 <h2>Súvisiace články</h2>
 
@@ -152,7 +152,7 @@ $articles[] = [
 
 <p><small><em><strong>Spracovaný zdroj:</strong> Han J, Canney M, Er L, Barbour SJ. Longitudinal eGFR data in the estimation of missing baseline eGFR in patients with glomerular disease. <em>Nephrology Dialysis Transplantation</em>. Publikované online 21. augusta 2026 (predbežný článok, bez ročníka a stránkovania). doi: <a href="https://doi.org/10.1093/ndt/gfag194" target="_blank" rel="noopener noreferrer">10.1093/ndt/gfag194</a>. PMID 42627408. <a href="https://pubmed.ncbi.nlm.nih.gov/42627408/" target="_blank" rel="noopener noreferrer">PubMed</a>.</em></small></p>
 
-<p><small><em><strong>Poznámka k dôkazovému základu:</strong> Bibliografické údaje, autorský zoznam, veľkosť kohorty aj definícia referenčného štandardu boli overené 28. augusta 2026 cez PubMed z abstraktu spracovanej práce. Plný text nemá otvorenú verziu, preto článok neuvádza číselné hodnoty stredných absolútnych chýb ani parametre modelu — v abstrakte nie sú uvedené a ich domýšľanie by bolo nepodložené. Metodické výhrady v texte nie sú prevzaté od autorov.</em></small></p>
+<p><small><em><strong>Poznámka k dôkazovému základu:</strong> Bibliografické údaje, autorský zoznam, veľkosť kohorty aj definícia referenčného štandardu boli overené 28. augusta 2026 cez PubMed z abstraktu spracovanej práce. Plný text nemá otvorenú verziu, preto článok neuvádza číselné hodnoty stredných absolútnych chýb ani parametre modelu; v abstrakte nie sú uvedené a ich domýšľanie by bolo nepodložené. Metodické výhrady v texte nie sú prevzaté od autorov.</em></small></p>
 
 <p><small><em>Text má odborný informačný charakter a týka sa metodiky observačného výskumu, nie diagnostického ani liečebného postupu u konkrétneho pacienta.</em></small></p>
 HTML,
