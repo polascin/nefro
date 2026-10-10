@@ -31,7 +31,7 @@ $articles[] = [
   <figcaption>Za rovnakým prejavom nedostatočnej adherencie môžu byť odlišné zdravotné, praktické, psychické aj systémové bariéry. Ilustračné zobrazenie.</figcaption>
 </figure>
 
-<p>Pre nefrológiu je tento pohľad osobitne dôležitý. Dlhodobá liečba zasahuje do stravovania, práce, rodinného života aj každodenného rozhodovania. Rozhovor o adherencii preto nemôže zostať iba kontrolou, či pacient splnil pokyny.</p>
+<p>V nefrológii je tento pohľad osobitne dôležitý, pretože dlhodobá liečba zasahuje do stravovania, práce, rodinného života aj každodenného rozhodovania. Rozhovor o adherencii preto nemôže zostať iba kontrolou, či pacient splnil pokyny.</p>
 
 <h2>Adherencia opisuje uskutočňovanie liečby, nie charakter človeka</h2>
 
@@ -112,7 +112,7 @@ $articles[] = [
 
 <p>Záznam „pacient nespolupracuje“ je informačne chudobný. Nepovie ďalšiemu zdravotníkovi, čo sa stalo, aké riziko vzniklo ani čo už bolo vykonané.</p>
 
-<p>Modelový, nie skutočný záznam môže znieť:</p>
+<p>Modelový (nie skutočný) záznam môže znieť napríklad takto:</p>
 
 <blockquote><p>Pacient uvádza vynechanie večernej dávky pre opakovanú nevoľnosť. Overený aktuálny liekový zoznam a časová súvislosť ťažkostí s užívaním. Vysvetlené riziká svojvoľného prerušenia liečby. Dohodnuté ďalšie posúdenie tolerancie a kontrola v určenom termíne.</p></blockquote>
 
@@ -128,7 +128,7 @@ $articles[] = [
 
 <p>Nedostatočnú adherenciu treba pomenovať, pretože môže ohrozovať zdravie. Netreba z nej však robiť charakterovú vlastnosť. Starostlivosť zohľadňujúca psychickú traumu ponúka rámec na zníženie zbytočného pocitu ohrozenia a na otvorenie rozhovoru o prekážkach. Jej rozumné princípy nemožno zamieňať s preukázaným zlepšením dlhodobých nefrologických výsledkov.</p>
 
-<p>Dostupná metaanalýza podporuje asociáciu PTSD s liekovou nonadherenciou, nie účinnosť konkrétnej intervencie. Pre každodennú prax zostáva podstatná zmena otázky: namiesto hodnotenia, aký pacient je, zistiť, čo mu bráni uskutočniť liečbu, aké riziko vzniklo a čo možno bezpečne zmeniť.</p>
+<p>Dostupná metaanalýza podporuje asociáciu PTSD s nedostatočnou adherenciou k liekom, nie účinnosť konkrétnej intervencie. Pre každodennú prax zostáva podstatná zmena otázky: namiesto hodnotenia, aký pacient je, zistiť, čo mu bráni uskutočniť liečbu, aké riziko vzniklo a čo možno bezpečne zmeniť.</p>
 
 <hr>
 
