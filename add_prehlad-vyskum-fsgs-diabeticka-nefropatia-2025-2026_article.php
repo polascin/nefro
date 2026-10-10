@@ -28,17 +28,17 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d'),
     'is_top'       => 0,
-    'excerpt'      => 'Sparsentan ako prvý liek schválený špecificky na FSGS, autoprotilátky proti nefrínu v úlohe nového biomarkera a etablovanie trojkombinácie SGLT2i + GLP-1 + finerénon pri diabetickej chorobe obličiek — prehľad kľúčových zistení z rokov 2025–2026.',
+    'excerpt'      => 'Sparsentan ako prvý liek schválený špecificky na FSGS, autoprotilátky proti nefrínu v úlohe nového biomarkera a nástup trojkombinácie SGLT2i + GLP-1 + finerénon pri diabetickej chorobe obličiek – prehľad kľúčových zistení z rokov 2025–2026.',
     'content'      => <<<'HTML'
-<figure><a href="img/prehlad-vyskum-fsgs-diabeticka-nefropatia-2025-2026.webp" rel="noopener noreferrer" target="_blank"><img src="img/prehlad-vyskum-fsgs-diabeticka-nefropatia-2025-2026.webp" alt="Dva glomeruly vedľa seba — jeden so zjazvením, druhý zhrubnutý cukrovými depozitmi — nasvietené tým istým svetlom" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Dve odlišné cesty poškodenia, ktoré dnes sleduje ten istý prúd výskumu.</figcaption></figure>
+<figure><a href="img/prehlad-vyskum-fsgs-diabeticka-nefropatia-2025-2026.webp" rel="noopener noreferrer" target="_blank"><img src="img/prehlad-vyskum-fsgs-diabeticka-nefropatia-2025-2026.webp" alt="Dva glomeruly vedľa seba – jeden so zjazvením, druhý zhrubnutý cukrovými depozitmi – nasvietené tým istým svetlom" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Dve odlišné cesty poškodenia, ktoré dnes sleduje ten istý prúd výskumu.</figcaption></figure>
 
-<p>Posledné mesiace priniesli v nefrológii niekoľko zásadných posunov. V oblasti fokálnej segmentálnej glomerulosklerózy (FSGS) ide o historicky prvé cielené schválenie liečby a o rýchle dozrievanie nových biomarkerov, pri diabetickej chorobe obličiek o postupné etablovanie kombinovanej kardiorenálnej ochrany. Nasledujúci prehľad sumarizuje najvýznamnejšie zistenia z rokov 2025 – 2026 spolu s ich dopadom na klinickú prax.</p>
+<p>Posledné mesiace priniesli v nefrológii niekoľko zásadných posunov. V oblasti fokálnej segmentálnej glomerulosklerózy (FSGS) ide o historicky prvé cielené schválenie liečby a o rýchle dozrievanie nových biomarkerov, pri diabetickej chorobe obličiek o postupné presadzovanie kombinovanej kardiorenálnej ochrany. Prehľad zhŕňa najvýznamnejšie zistenia z rokov 2025 – 2026 a ich dosah na klinickú prax.</p>
 
 <h2>FSGS – fokálna segmentálna glomeruloskleróza</h2>
 
 <h3>1. Historický prelom: FDA schválila sparsentan (apríl 2026)</h3>
 
-<p>Ide o najvýznamnejšiu správu v histórii liečby FSGS. Dňa 13. apríla 2026 schválil americký Úrad pre kontrolu potravín a liečiv (FDA) <strong>sparsentan (FILSPARI)</strong> ako <strong>prvý a jediný liek schválený špecificky na liečbu FSGS</strong> — po desaťročiach čisto empirickej terapie. Schválenie sa týka dospelých a detských pacientov vo veku <strong>≥ 8 rokov</strong> s FSGS <strong>bez</strong> nefrotického syndrómu.</p>
+<p>Pre liečbu FSGS ide o zásadnú správu. Dňa 13. apríla 2026 schválil americký Úrad pre kontrolu potravín a liečiv (FDA) <strong>sparsentan (FILSPARI)</strong> ako <strong>prvý a jediný liek schválený špecificky na liečbu FSGS</strong>, a to po desaťročiach čisto empirickej terapie. Schválenie sa týka dospelých a detských pacientov vo veku <strong>≥ 8 rokov</strong> s FSGS <strong>bez</strong> nefrotického syndrómu.</p>
 
 <p>Liek je duálnym antagonistom receptorov pre angiotenzín II a endotelín-1 (v liečbe IgA nefropatie je už schválený). Rozhodnutie FDA vychádza z výsledkov štúdie fázy 3 DUPLEX (n = 371, doteraz najväčšia štúdia FSGS), publikovanej v <em>New England Journal of Medicine</em>:</p>
 
@@ -77,30 +77,30 @@ $articles[] = [
 
 <h3>2. Precízna medicína pretvára klasifikáciu FSGS</h3>
 
-<p>Zásadný prehľadový článok autorov Trachtmana, Eddyho a Kretzlera, publikovaný v <em>American Journal of Kidney Diseases</em> (december 2025), mapuje súčasný stav terapeutiky FSGS v ére precíznej medicíny. KDIGO v súčasnosti uznáva 4 podtypy — primárny (imunitne podmienený), genetický, sekundárny a nešpecifikovaný — pričom výskumná komunita smeruje k <strong>mechanistickým molekulárnym podtypom</strong>, ktoré využívajú multiomické prístupy (genomika, transkriptomika, proteomika a metabolomika). Súčasná imunosupresívna liečba dosahuje remisiu u menej než 25 % pacientov, čo robí mechanistickú stratifikáciu kľúčovou prioritou výskumu.</p>
+<p>Prehľadový článok autorov Trachtmana, Eddyho a Kretzlera, publikovaný v <em>American Journal of Kidney Diseases</em> (december 2025), mapuje súčasný stav liečby FSGS v ére precíznej medicíny. KDIGO v súčasnosti uznáva 4 podtypy: primárny (imunitne podmienený), genetický, sekundárny a nešpecifikovaný. Výskumná komunita však smeruje k <strong>mechanistickým molekulárnym podtypom</strong>, ktoré využívajú multiomické prístupy (genomika, transkriptomika, proteomika a metabolomika). Súčasná imunosupresívna liečba dosahuje remisiu u menej než 25 % pacientov, čo robí mechanistickú stratifikáciu kľúčovou prioritou výskumu.</p>
 
-<p>Kľúčový praktický záver: genetické testovanie je dnes indikované <strong>bez ohľadu na vek</strong>, keďže až 15 % dospelých pacientov s FSGS je nositeľom kauzálnej mutácie — čo sa donedávna považovalo za výnimočné.</p>
+<p>Kľúčový praktický záver: genetické testovanie je dnes indikované <strong>bez ohľadu na vek</strong>, keďže až 15 % dospelých pacientov s FSGS je nositeľom kauzálnej mutácie, čo sa donedávna považovalo za výnimočné.</p>
 
-<h3>3. Autoprotilátky proti nefrínu: transformujúci biomarker</h3>
+<h3>3. Autoprotilátky proti nefrínu: biomarker, ktorý mení prax</h3>
 
-<p>Autoprotilátky proti nefrínu sa rýchlo presúvajú z výskumnej zaujímavosti do klinickej praxe. Vyskytujú sa približne u 10 % pacientov s FSGS, pri použití modernejších testovacích metód až u 90 % prípadov idiopatického nefrotického syndrómu. Klinické dôsledky sú nasledujúce:</p>
+<p>Autoprotilátky proti nefrínu sa rýchlo presúvajú z výskumnej zaujímavosti do klinickej praxe. Vyskytujú sa približne u 10 % pacientov s FSGS, pri použití modernejších testovacích metód až u 90 % prípadov idiopatického nefrotického syndrómu. Klinické dôsledky:</p>
 
 <ul>
-  <li><strong>Vedenie liečby:</strong> pacienti s pozitivitou autoprotilátok proti nefrínu dobre reagujú na rituximab, čo umožňuje precíznu terapiu šetriacu kortikosteroidy;</li>
+  <li><strong>Vedenie liečby:</strong> pacienti s pozitivitou autoprotilátok proti nefrínu dobre reagujú na rituximab, čo umožňuje cielenú liečbu šetriacu kortikosteroidy;</li>
   <li><strong>Monitorovanie:</strong> titre protilátok korelujú s odpoveďou na liečbu;</li>
-  <li><strong>Pred transplantáciou:</strong> séria prípadov z roku 2026 opisuje úspešnú elimináciu protilátok pred transplantáciou s cieľom predísť recidíve FSGS po transplantácii — reálny klinický pokrok pre pacientov indikovaných na transplantáciu.</li>
+  <li><strong>Pred transplantáciou:</strong> séria prípadov z roku 2026 opisuje úspešnú elimináciu protilátok pred transplantáciou s cieľom predísť recidíve FSGS po transplantácii; ide o reálny klinický pokrok pre pacientov indikovaných na transplantáciu.</li>
 </ul>
 
 <h3>4. Vývojová línia terapií cielených na APOL1</h3>
 
-<p>Pacienti s dvoma rizikovými alelami génu APOL1 majú výrazne vyššie riziko FSGS. V súčasnosti prebiehajú dedikované klinické štúdie:</p>
+<p>Pacienti s dvoma rizikovými alelami génu APOL1 majú výrazne vyššie riziko FSGS. V súčasnosti prebiehajú klinické štúdie zamerané priamo na túto skupinu:</p>
 
 <ul>
-  <li><strong>VX-147 (inaxaplin)</strong> spoločnosti Vertex — fáza 2a pri FSGS podmienenej APOL1, prebieha;</li>
-  <li><strong>Baricitinib</strong> (inhibítor JAK1/2, bežne známy pri reumatoidnej artritíde) — fáza 2, štúdia JUSTICE pri FSGS a hypertenznej CKD asociovanej s APOL1, predpokladaný koniec v roku 2029.</li>
+  <li><strong>VX-147 (inaxaplin)</strong> spoločnosti Vertex – fáza 2a pri FSGS podmienenej APOL1, prebieha;</li>
+  <li><strong>Baricitinib</strong> (inhibítor JAK1/2, bežne známy pri reumatoidnej artritíde) – fáza 2, štúdia JUSTICE pri FSGS a hypertenznej CKD asociovanej s APOL1, predpokladaný koniec v roku 2029.</li>
 </ul>
 
-<p>Tieto prístupy predstavujú prvé skutočne <strong>genotypovo cielené</strong> terapie FSGS.</p>
+<p>Ide o prvé skutočne <strong>genotypovo cielené</strong> terapie FSGS.</p>
 
 <h3>5. Ďalšia aktívna vývojová línia</h3>
 
@@ -143,19 +143,19 @@ $articles[] = [
 </table>
 </div>
 
-<p>Výskum aktivátorov KLF15 je obzvlášť zaujímavý — replikuje priaznivé podocytárne účinky kortikosteroidov bez ich systémových nežiaducich účinkov.</p>
+<p>Výskum aktivátorov KLF15 je obzvlášť zaujímavý: napodobňuje priaznivé podocytárne účinky kortikosteroidov bez ich systémových nežiaducich účinkov.</p>
 
 <h2>Diabetická choroba obličiek (DKD)</h2>
 
-<h3>1. Štúdia FLOW: semaglutid si upevnil historické miesto</h3>
+<h3>1. Štúdia FLOW: semaglutid si upevnil miesto</h3>
 
-<p>Štúdia FLOW (publikovaná v <em>NEJM</em> v roku 2024, s rozsiahlymi subskupinovými analýzami v rokoch 2025 – 2026) bola predčasne ukončená pre preukázanú účinnosť. U pacientov s diabetom mellitus 2. typu (DM2) a CKD dosiahol subkutánny semaglutid podávaný raz týždenne <strong>24-percentnú relatívnu redukciu rizika</strong> kombinovaného primárneho cieľového ukazovateľa (trvalý pokles eGFR o ≥ 50 %, zlyhanie obličiek [ESKD], kardiovaskulárna smrť alebo úmrtie z akejkoľvek príčiny). Analýza v <em>CJASN</em> z mája 2026 potvrdila konzistentný prínos <strong>naprieč všetkými stupňami závažnosti CKD</strong> — teda bez ohľadu na úroveň eGFR či albuminúrie.</p>
+<p>Štúdia FLOW (publikovaná v <em>NEJM</em> v roku 2024, s rozsiahlymi subskupinovými analýzami v rokoch 2025 – 2026) bola predčasne ukončená pre preukázanú účinnosť. U pacientov s diabetom mellitus 2. typu (DM2) a CKD dosiahol subkutánny semaglutid podávaný raz týždenne <strong>24-percentnú relatívnu redukciu rizika</strong> kombinovaného primárneho cieľového ukazovateľa (trvalý pokles eGFR o ≥ 50 %, zlyhanie obličiek [ESKD], kardiovaskulárna smrť alebo úmrtie z akejkoľvek príčiny). Analýza v <em>CJASN</em> z mája 2026 potvrdila konzistentný prínos <strong>vo všetkých stupňoch závažnosti CKD</strong>, teda bez ohľadu na úroveň eGFR či albuminúrie.</p>
 
 <p>V januári 2025 FDA schválila injekčnú formu semaglutidu na liečbu CKD pri DM2. Štúdia SELECT navyše preukázala 22-percentnú redukciu závažných renálnych príhod u pacientov s obezitou alebo nadváhou.</p>
 
 <h3>2. Inhibítory SGLT2 verzus agonisty GLP-1: prvé priame porovnanie</h3>
 
-<p>Rozsiahla štúdia v <em>JAMA Internal Medicine</em>, ktorá využila dánske registrové dáta (sledovanie 5 rokov), postavila obe liekové skupiny zoči-voči:</p>
+<p>Rozsiahla štúdia v <em>JAMA Internal Medicine</em>, ktorá využila dánske registrové dáta (sledovanie 5 rokov), porovnala obe liekové skupiny:</p>
 
 <div class="table-responsive">
 <table>
@@ -186,7 +186,7 @@ $articles[] = [
 </table>
 </div>
 
-<p>Inhibítory SGLT2 sa javia ako účinnejšie pri priamej ochrane obličiek, kým agonisty GLP-1 pridávajú zníženie telesnej hmotnosti, redukciu kardiovaskulárneho rizika a prínosy pri aterosklerotickom kardiovaskulárnom ochorení (ASCVD). Rastúci konsenzus ich vníma ako komplementárne, nie konkurenčné stratégie.</p>
+<p>Inhibítory SGLT2 sa javia ako účinnejšie pri priamej ochrane obličiek, kým agonisty GLP-1 pridávajú zníženie telesnej hmotnosti, redukciu kardiovaskulárneho rizika a prínosy pri aterosklerotickom kardiovaskulárnom ochorení (ASCVD). Čoraz častejšie sa na ne nazerá ako na komplementárne, nie konkurenčné stratégie.</p>
 
 <h3>3. Finerénon verzus spironolaktón: prvé priame porovnanie</h3>
 
@@ -223,21 +223,21 @@ $articles[] = [
 
 <p><em>aHR = upravený pomer rizík (adjusted hazard ratio).</em></p>
 
-<p>Tieto zistenia silne favorizujú finerénon pred spironolaktónom pri kombinácii CKD a DM2, pričom výhoda z hľadiska hyperkaliémie je klinicky mimoriadne dôležitá pre dodržiavanie liečby. Priebežné subanalýzy štúdie FIDELITY (2025 – 2026) potvrdili konzistentný prínos aj u krehkých pacientov, pacientov čiernej pleti a užívateľov diuretík.</p>
+<p>Tieto zistenia výrazne hovoria v prospech finerénonu pred spironolaktónom pri kombinácii CKD a DM2; nižší výskyt hyperkaliémie je pritom pre dodržiavanie liečby klinicky mimoriadne dôležitý. Priebežné subanalýzy štúdie FIDELITY (2025 – 2026) potvrdili konzistentný prínos aj u krehkých pacientov, pacientov čiernej pleti a užívateľov diuretík.</p>
 
 <h3>4. Trojkombinácia ako nastupujúci štandard</h3>
 
-<p>Kombinácia <strong>inhibítor SGLT2 + agonista GLP-1 + finerénon</strong> (na pozadí inhibítora ACE alebo blokátora receptorov pre angiotenzín) sa etabluje ako optimálna stratégia kardiorenálnej ochrany pri DM2 a CKD. Každá lieková trieda pôsobí na odlišné, vzájomne sa dopĺňajúce patofyziologické dráhy — čo potvrdzuje aj dokument ADA <em>Standards of Care 2025</em> (<em>Diabetes Care</em>).</p>
+<p>Kombinácia <strong>inhibítor SGLT2 + agonista GLP-1 + finerénon</strong> (na pozadí inhibítora ACE alebo blokátora receptorov pre angiotenzín) sa presadzuje ako optimálna stratégia kardiorenálnej ochrany pri DM2 a CKD. Každá lieková trieda pôsobí na odlišné, vzájomne sa dopĺňajúce patofyziologické dráhy, čo potvrdzuje aj dokument ADA <em>Standards of Care 2025</em> (<em>Diabetes Care</em>).</p>
 
 <h3>5. Nový obzor: agonisty GLP-1 pri diabete 1. typu</h3>
 
-<p>Štúdia z pracoviska Johns Hopkins z roku 2026 preukázala prelomové zlepšenie srdcových a obličkových výsledkov u pacientov s diabetom 1. typu (DM1) užívajúcich agonisty GLP-1 — v populácii, ktorá bola doteraz v renálnych štúdiách výrazne podreprezentovaná.</p>
+<p>Štúdia z pracoviska Johns Hopkins z roku 2026 preukázala zlepšenie srdcových a obličkových výsledkov u pacientov s diabetom 1. typu (DM1) užívajúcich agonisty GLP-1, teda v populácii, ktorá bola doteraz v renálnych štúdiách výrazne podreprezentovaná.</p>
 
 <h2>Záver pre klinickú prax</h2>
 
 <p><strong>FSGS:</strong> Sparsentan je dnes liekom prvej voľby špecifickým pre FSGS bez nefrotického syndrómu. Testovanie autoprotilátok proti nefrínu dozrieva na reálny klinický nástroj a genetické testovanie si zaslúži širšie využitie. Vývojová línia je bohatá, väčšina liekov je však stále vo fáze 2.</p>
 
-<p><strong>DKD:</strong> Trojvrstvová kardiorenálna ochrana (inhibítor SGLT2 + agonista GLP-1 + finerénon) sa stáva de facto štandardom. Finerénon jasne prekonáva spironolaktón z hľadiska účinnosti aj znášanlivosti. Dáta zo štúdie FLOW pre semaglutid sú robustné naprieč všetkými stupňami CKD.</p>
+<p><strong>DKD:</strong> Trojvrstvová kardiorenálna ochrana (inhibítor SGLT2 + agonista GLP-1 + finerénon) sa stáva de facto štandardom. Finerénon jasne prekonáva spironolaktón z hľadiska účinnosti aj znášanlivosti. Údaje zo štúdie FLOW o semaglutide sú robustné vo všetkých stupňoch CKD.</p>
 
 <h2>Zdroje</h2>
 

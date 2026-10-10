@@ -27,7 +27,7 @@ $articles[] = [
 
 <p>Zlyhanie transplantovanej obličky neznamená iba návrat k dialýze. Pacient sa musí vyrovnať so stratou fungujúceho orgánu, obnovením uremických ťažkostí, zmenou imunosupresívnej liečby, neistotou ďalšej prognózy a často aj s podstatne zložitejšou cestou k opakovanej transplantácii.</p>
 
-<p>Význam témy podčiarkujú dve skutočnosti, ktoré uvádzajú autori kanadskej kvalitatívnej štúdie publikovanej v <em>Clinical Journal of the American Society of Nephrology</em>: opakovaná transplantácia prináša oproti zotrvaniu na čakacej listine <strong>významný prínos v prežívaní</strong>, a zlyhanie štepu zostáva <strong>jednou z hlavných príčin začatia dialýzy</strong>. Trendy v preemptívnom opätovnom zaradení na čakaciu listinu sú pritom podľa autorov neuspokojivé.</p>
+<p>Význam témy podčiarkujú dve skutočnosti, ktoré uvádzajú autori kanadskej kvalitatívnej štúdie publikovanej v <em>Clinical Journal of the American Society of Nephrology</em>: opakovaná transplantácia prináša oproti zotrvaniu na čakacej listine <strong>významný prínos v prežívaní</strong> a zlyhanie štepu zostáva <strong>jednou z hlavných príčin začatia dialýzy</strong>. Trendy v preemptívnom opätovnom zaradení na čakaciu listinu sú pritom podľa autorov neuspokojivé.</p>
 
 <p>Na túto štúdiu reagovala v tom istom časopise osobným komentárom Kimberly Brown Marsh — pacientka po troch transplantáciách obličky. Pacientska skúsenosť nenahrádza kontrolovanú štúdiu, prináša však informácie, ktoré registre a administratívne databázy zachytávajú nedostatočne: psychologické dôsledky straty štepu, praktické problémy pri hľadaní žijúceho darcu, nedostatky edukácie, fragmentáciu starostlivosti a potrebu aktívnej navigácie pacienta systémom.</p>
 
@@ -84,7 +84,7 @@ $articles[] = [
       <td>Postoj, ktorý sa po zlyhaní štepu podľa účastníkov pravdepodobne nezmení</td>
     </tr>
     <tr>
-      <th scope="row">Vnímane vyčerpaný okruh darcov</th>
+      <th scope="row">Zdanlivo vyčerpaný okruh darcov</th>
       <td>Pocit, že menší okruh vhodných žijúcich darcov sa už spotreboval pri prvej transplantácii</td>
     </tr>
     <tr>
@@ -161,7 +161,7 @@ $articles[] = [
 
 <h2>Imunosupresia po zlyhaní štepu</h2>
 
-<p>Jedno z najťažších rozhodnutí. Rýchle vysadenie imunosupresie môže znižovať riziko infekcií, malignít, metabolických komplikácií a hematologickej toxicity. Súčasne však môže zvýšiť riziko tvorby nových anti-HLA protilátok, nárastu cPRA, straty reziduálnej funkcie štepu, syndrómu intolerancie zlyhaného štepu a potreby transplantektómie.</p>
+<p>Rozhodnutie o ďalšej imunosupresii patrí medzi najťažšie. Rýchle vysadenie imunosupresie môže znižovať riziko infekcií, malignít, metabolických komplikácií a hematologickej toxicity. Súčasne však môže zvýšiť riziko tvorby nových anti-HLA protilátok, nárastu cPRA, straty reziduálnej funkcie štepu, syndrómu intolerancie zlyhaného štepu a potreby transplantektómie.</p>
 
 <p>Pokračovanie imunosupresie môže byť výhodnejšie u pacienta s reálnou možnosťou skorej opakovanej transplantácie. U pacienta s aktívnou závažnou infekciou, malignitou alebo bez realistickej perspektívy retransplantácie môže prevážiť potreba liečbu znížiť alebo ukončiť.</p>
 

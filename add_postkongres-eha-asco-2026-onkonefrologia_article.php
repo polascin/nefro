@@ -35,11 +35,11 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Moderná onkologická a hematoonkologická liečba zvyšuje potrebu onkonefrologického dohľadu: ICI nefritída, anti-VEGF toxicita, myelómová oblička, CAR-T, TLS aj dávkovanie liekov pri CKD.',
     'content'      => <<<'HTML'
-<figure><a href="img/postkongres-eha-asco-2026-onkonefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/postkongres-eha-asco-2026-onkonefrologia.webp" alt="Dva prúdy svetla — hematologický a onkologický — zbiehajúce sa do jedného kanála smerujúceho do obličky" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Onkologické aj hematologické novinky sa zbiehajú v tom istom bode — pri obličke, ktorá ich účinky znáša.</figcaption></figure>
+<figure><a href="img/postkongres-eha-asco-2026-onkonefrologia.webp" rel="noopener noreferrer" target="_blank"><img src="img/postkongres-eha-asco-2026-onkonefrologia.webp" alt="Dva prúdy svetla – hematologický a onkologický – zbiehajúce sa do jedného kanála smerujúceho do obličky" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Ilustračná scéna. Onkologické aj hematologické novinky sa zbiehajú v tom istom bode: pri obličke, ktorá ich účinky znáša.</figcaption></figure>
 
-<p>Onkológia a nefrológia sa čoraz výraznejšie prelínajú. Dôvodom nie je iba vyšší vek pacientov a častejšia polymorbidita, ale aj samotná povaha modernej protinádorovej liečby. Imunoterapia, cielené lieky, bunkové terapie, bispecifické protilátky, konjugáty protilátka–liek a intenzívne kombinované režimy prinášajú pacientom významný benefit, no zároveň zvyšujú nároky na sledovanie renálnych nežiaducich účinkov.</p>
+<p>Onkológia a nefrológia sa čoraz výraznejšie prelínajú. Dôvodom nie je iba vyšší vek pacientov a častejšia polymorbidita, ale aj samotná povaha modernej protinádorovej liečby. Imunoterapia, cielené lieky, bunkové terapie, bispecifické protilátky, konjugáty protilátka–liek a intenzívne kombinované režimy prinášajú pacientom významný prínos, no zároveň zvyšujú nároky na sledovanie renálnych nežiaducich účinkov.</p>
 
-<p>Postkongresové onkologické formáty po EHA a ASCO sú preto relevantné aj pre nefrológa. Nie preto, že by mal preberať rolu onkológa alebo hematológa, ale preto, že úspech modernej liečby často závisí od schopnosti bezpečne zvládnuť akútne poškodenie obličiek, proteinúriu, hypertenziu, elektrolytové poruchy, syndróm nádorového rozpadu a dávkovanie liekov pri zníženej funkcii obličiek.</p>
+<p>Postkongresové onkologické formáty po EHA a ASCO sú preto užitočné aj pre nefrológa. Nemá preberať úlohu onkológa ani hematológa, no úspech modernej liečby často závisí od toho, či sa podarí bezpečne zvládnuť akútne poškodenie obličiek, proteinúriu, hypertenziu, elektrolytové poruchy, syndróm nádorového rozpadu a dávkovanie liekov pri zníženej funkcii obličiek.</p>
 
 <h2>Prečo má nefrológ sledovať EHA a ASCO</h2>
 
@@ -100,13 +100,13 @@ $articles[] = [
   <li>zhoršením preexistujúcej CKD.</li>
 </ul>
 
-<p>Tieto komplikácie sú klinicky významné. Hypertenzia a proteinúria môžu byť v niektorých kontextoch markerom biologickej aktivity liečby, no nie sú dôvodom na pasivitu. Vyžadujú meranie krvného tlaku, kvantifikáciu proteinúrie, úpravu antihypertenzívnej liečby, posúdenie renálneho rizika a v ťažších prípadoch diskusiu o úprave alebo prerušení onkologickej liečby.</p>
+<p>Hypertenzia a proteinúria môžu byť v niektorých kontextoch markerom biologickej aktivity liečby, no ako klinicky významné komplikácie nie sú dôvodom na pasivitu. Vyžadujú meranie krvného tlaku, kvantifikáciu proteinúrie, úpravu antihypertenzívnej liečby, posúdenie renálneho rizika a v ťažších prípadoch diskusiu o úprave alebo prerušení onkologickej liečby.</p>
 
 <p>Pri inhibítoroch tyrozínkináz treba myslieť aj na elektrolytové poruchy, renálnu dysfunkciu, liekové interakcie cez metabolické dráhy a potrebu úpravy dávok pri zníženej funkcii obličiek. Prakticky dôležitá je najmä pravidelná kontrola kreatinínu, eGFR, močového nálezu, krvného tlaku, draslíka, horčíka a liekov, ktoré pacient užíva mimo onkologickej ambulancie.</p>
 
 <h2>Hematologické malignity a obličky</h2>
 
-<p>EHA je pre nefrológa osobitne dôležitá pre oblasť hematologických malignít. Obličky sú často postihnuté pri mnohopočetnom myelóme, AL amyloidóze, monoklonálnej gamapatii renálneho významu (MGRS), lymfómoch, leukémiách a pri komplikáciách ich liečby.</p>
+<p>Z programu EHA sú pre nefrológa osobitne dôležité hematologické malignity. Obličky sú často postihnuté pri mnohopočetnom myelóme, AL amyloidóze, monoklonálnej gamapatii renálneho významu (MGRS), lymfómoch, leukémiách a pri komplikáciách ich liečby.</p>
 
 <p>Pri mnohopočetnom myelóme môže byť renálne postihnutie prvým alebo dominantným prejavom ochorenia. Najtypickejšia je myelómová <em>cast</em> nefropatia, ale spektrum je širšie: zahŕňa AL amyloidózu, chorobu z depozície ľahkých reťazcov, Fanconiho syndróm a iné tubulárne alebo glomerulové poškodenia súvisiace s monoklonálnym proteínom.</p>
 
@@ -140,7 +140,7 @@ $articles[] = [
   <li>potreba intenzívnej starostlivosti.</li>
 </ul>
 
-<p>Akútne poškodenie obličiek pri týchto stavoch býva často multifaktoriálne. Môže ísť o kombináciu hypoperfúzie, systémového zápalu, tubulárneho poškodenia, liekových vplyvov a metabolických komplikácií. Manažment preto vyžaduje dobrú komunikáciu medzi hematológom, intenzivistom, nefrológom a klinickým farmakológom.</p>
+<p>Akútne poškodenie obličiek pri týchto stavoch býva často multifaktoriálne. Môže ísť o kombináciu hypoperfúzie, systémového zápalu, tubulárneho poškodenia, liekových vplyvov a metabolických komplikácií. Liečba preto vyžaduje úzku spoluprácu medzi hematológom, intenzivistom, nefrológom a klinickým farmakológom.</p>
 
 <h2>Syndróm nádorového rozpadu</h2>
 
@@ -218,9 +218,9 @@ $articles[] = [
 
 <h2>Záver</h2>
 
-<p>Postkongresové novinky z EHA a ASCO 2026 sú dôležité aj pre nefrológiu. Moderná onkologická a hematoonkologická liečba prináša pacientom lepšiu prognózu, ale zároveň zvyšuje riziko renálnych komplikácií. Nefrológ musí poznať najmä riziká imunoterapie, anti-VEGF liečby, cielených liekov, CAR-T terapií, bispecifických protilátok, syndrómu nádorového rozpadu a dávkovania liekov pri zníženej funkcii obličiek.</p>
+<p>Moderná onkologická a hematoonkologická liečba prináša pacientom lepšiu prognózu, ale zároveň zvyšuje riziko renálnych komplikácií. Nefrológ musí poznať najmä riziká imunoterapie, anti-VEGF liečby, cielených liekov, CAR-T terapií, bispecifických protilátok, syndrómu nádorového rozpadu a dávkovania liekov pri zníženej funkcii obličiek.</p>
 
-<p>Kľúčové je skoré zapojenie nefrológa, presná diferenciálna diagnostika akútneho poškodenia obličiek, pravidelné sledovanie proteinúrie a krvného tlaku a úzka komunikácia s onkológom alebo hematológom. Onkonefrológia sa tak stáva nevyhnutnou súčasťou modernej starostlivosti o onkologického pacienta.</p>
+<p>Rozhoduje skoré zapojenie nefrológa, presná diferenciálna diagnostika akútneho poškodenia obličiek, pravidelné sledovanie proteinúrie a krvného tlaku a úzka komunikácia s onkológom alebo hematológom. Onkonefrológia sa tak stáva nevyhnutnou súčasťou modernej starostlivosti o onkologického pacienta.</p>
 
 <hr>
 

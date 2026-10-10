@@ -36,7 +36,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'Štúdia v Science ukazuje, že lokálne WNT signály zo syntetických bunkových organizátorov dokážu lepšie usporiadať ľudské obličkové organoidy a zvýšiť ich výpovednú hodnotu pre nefrologický výskum.',
     'content'      => <<<'HTML'
-<figure><a href="img/synteticke-wnt-organizatory-oblickove-organoidy.webp" rel="noopener noreferrer" target="_blank"><img src="img/synteticke-wnt-organizatory-oblickove-organoidy.webp" alt="Neusporiadaný zhluk buniek a vedľa neho tie isté bunky usporiadané do pravidelnej obličkovej štruktúry" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Bunky samy o sebe nestačia — chýba im signál, ktorý im povie, kam patria.</figcaption></figure>
+<figure><a href="img/synteticke-wnt-organizatory-oblickove-organoidy.webp" rel="noopener noreferrer" target="_blank"><img src="img/synteticke-wnt-organizatory-oblickove-organoidy.webp" alt="Neusporiadaný zhluk buniek a vedľa neho tie isté bunky usporiadané do pravidelnej obličkovej štruktúry" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Bunky samy o sebe nestačia – chýba im signál, ktorý im povie, kam patria.</figcaption></figure>
 
 <p>Obličkový organoid nie je len zhluk „správnych“ buniek. Aby bol biologicky a experimentálne použiteľný, bunky sa musia objaviť aj v správnej polohe, v správnej orientácii a v správnom vzťahu k susedným štruktúram. Práve priestorové vzorovanie zostáva jednou z hlavných slabín súčasných obličkových organoidov odvodených z ľudských pluripotentných kmeňových buniek.</p>
 
@@ -56,7 +56,7 @@ $articles[] = [
 
 <p>Autori použili priestorovú transkriptomiku ľudského vývoja obličky a identifikovali organizačný vzorec, podľa ktorého sa vznikajúce nefróny orientujú voči zberaciemu systému. Kľúčovým nálezom bola polarita od oblasti susediacej so zberacím duktom smerom k vzdialenejším častiam nefrónu.</p>
 
-<p>Táto os sa nachádza pri signálnej hranici medzi <em>WNT11</em> a <em>WNT9B</em>. Zjednodušene povedané, nejde iba o prítomnosť WNT signálnej dráhy, ale o jej priestorové usporiadanie na rozhraní zberacieho systému a vyvíjajúceho sa nefrónu. Práve takáto hranica môže určovať, kde sa aktivujú distálne programy nefrónovej diferenciácie a ktorým smerom sa vyvíjajúca tubulárna štruktúra predlžuje.</p>
+<p>Táto os sa nachádza pri signálnej hranici medzi <em>WNT11</em> a <em>WNT9B</em>. Nejde teda iba o prítomnosť WNT signálnej dráhy, ale o jej priestorové usporiadanie na rozhraní zberacieho systému a vyvíjajúceho sa nefrónu. Práve takáto hranica môže určovať, kde sa aktivujú distálne programy nefrónovej diferenciácie a ktorým smerom sa vyvíjajúca tubulárna štruktúra predlžuje.</p>
 
 <p>Pre klinicky uvažujúceho nefrológa je dôležité najmä to, že segmentová identita nefrónu a jeho priestorová orientácia nie sú oddelené javy. Funkčný význam proximálneho tubulu, Henleho slučky, distálneho tubulu, zberacieho systému a glomerulárnej zložky závisí od ich vzájomnej nadväznosti. Organoid s lepšou geometriou preto môže byť spoľahlivejším modelom než organoid, ktorý má síce správne bunkové markery, ale chaotickú architektúru.</p>
 
@@ -64,14 +64,14 @@ $articles[] = [
 
 <p>Vývojové organizátory sú bunkové alebo tkanivové oblasti, ktoré vytvárajú morfogenetické signálne pole a tým usmerňujú osud aj tvar susedných buniek. V tejto práci autori využili syntetické Wnt-sekretujúce bunkové organizátory. Ich úlohou nebolo vytvoriť vlastné obličkové tkanivo, ale pôsobiť ako lokalizovaný zdroj signálu, ktorý dáva organoidu priestorovú informáciu.</p>
 
-<p>Po zavedení týchto organizátorov do obličkových organoidov sa pozorovali dva dôležité efekty:</p>
+<p>Po zavedení týchto organizátorov do obličkových organoidov sa pozorovali dva účinky:</p>
 
 <ul>
   <li><strong>podpora distálnej nefrónovej diferenciácie</strong> – organoidy nadobúdali výraznejšie distálne nefrónové programy, ktoré sú v bežných organoidových protokoloch často slabšie zastúpené,</li>
   <li><strong>orientovaná morfogenéza nefrónov</strong> – nefrónové štruktúry sa nevyvíjali len radiálne alebo náhodne, ale orientovali sa smerom k zdroju WNT signálu.</li>
 </ul>
 
-<p>Tento výsledok je dôležitý aj metodologicky. Ukazuje, že samoorganizáciu organoidu netreba úplne nahradiť externým inžinierstvom. Možno ju skôr usmerniť tým, že sa do systému doplní chýbajúca lokálna vývojová informácia.</p>
+<p>Metodologicky výsledok ukazuje, že samoorganizáciu organoidu netreba úplne nahradiť externým inžinierstvom. Možno ju skôr usmerniť tým, že sa do systému doplní chýbajúca lokálna vývojová informácia.</p>
 
 <h2>Význam pre nefrologický výskum</h2>
 
@@ -88,7 +88,7 @@ $articles[] = [
   <li>dlhodobý vývoj regeneratívnych stratégií, kde bude nevyhnutná nielen bunková skladba, ale aj orgánová organizácia.</li>
 </ul>
 
-<p>Zároveň treba povedať, že organoidy s lepším vzorovaním môžu zlepšiť reprodukovateľnosť experimentov. Pri modeloch, ktoré vznikajú samoorganizáciou, je variabilita medzi organoidmi zásadným limitom. Ak sa podarí tkanivové usporiadanie riadiť predvídateľnejšie, výsledky môžu byť robustnejšie a lepšie porovnateľné medzi laboratóriami.</p>
+<p>Organoidy s lepším vzorovaním môžu zlepšiť aj reprodukovateľnosť experimentov. Pri modeloch, ktoré vznikajú samoorganizáciou, je variabilita medzi organoidmi zásadným limitom. Ak sa podarí tkanivové usporiadanie riadiť predvídateľnejšie, výsledky môžu byť robustnejšie a lepšie porovnateľné medzi laboratóriami.</p>
 
 <h2>Čo štúdia neznamená</h2>
 
@@ -96,11 +96,11 @@ $articles[] = [
 
 <p>Rovnako nejde o postup, ktorý by mal okamžitý dopad na liečbu chronickej choroby obličiek, diabetickej choroby obličiek, glomerulonefritíd alebo polycystickej choroby obličiek. Klinická hodnota tejto práce je zatiaľ nepriamym príspevkom k lepším experimentálnym modelom.</p>
 
-<p>Práve táto opatrnosť je však súčasťou jej významu. Štúdia nerieši všetky limity organoidov, ale veľmi presne adresuje jeden z najdôležitejších: nedostatočné priestorové usporiadanie.</p>
+<p>Práve táto opatrnosť je však súčasťou jej významu. Štúdia nerieši všetky limity organoidov, ale cielene rieši jeden z najdôležitejších: nedostatočné priestorové usporiadanie.</p>
 
 <h2>Klinický nefrologický pohľad</h2>
 
-<p>Pre praktického nefrológa je najdôležitejšie posolstvo jednoduché: kvalita experimentálneho modelu obličky sa nebude dať hodnotiť len podľa toho, či obsahuje „správne“ bunkové typy. Rovnako dôležité bude, či tieto bunky tvoria správne tkanivové vzťahy.</p>
+<p>Pre praktického nefrológa z toho vyplýva, že kvalita experimentálneho modelu obličky sa nebude dať hodnotiť len podľa toho, či obsahuje „správne“ bunkové typy. Rovnako dôležité bude, či tieto bunky tvoria správne tkanivové vzťahy.</p>
 
 <p>Ak majú organoidy slúžiť ako modely chorôb, predikcia toxicity alebo platformy pre individualizovanú medicínu, musia sa viac priblížiť reálnej vývojovej a funkčnej architektúre obličky. Lokálne syntetické organizátory predstavujú jeden zo spôsobov, ako sa k tomu priblížiť bez toho, aby sa stratila prirodzená schopnosť buniek samoorganizovať sa.</p>
 

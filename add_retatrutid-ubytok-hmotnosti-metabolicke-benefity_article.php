@@ -107,13 +107,13 @@ $articles[] = [
 
 <p>Endokrinologička Alice Y. Y. Cheng upozornila, že väčší úbytok hmotnosti nemusí byť vždy lepší, potrebný ani správny pre každého pacienta. Kľúčovou otázkou podľa nej nie je iba samotné chudnutie, ale <strong>prínos pre zdravie</strong>.</p>
 
-<p>To je podstatná poznámka. Pri liečbe obezity by cieľom nemalo byť číslo na váhe izolované od klinického kontextu. Dôležité sú metabolické výsledky, funkčný stav, kvalita života, tolerancia liečby, bezpečnosť a dostupnosť.</p>
+<p>Pri liečbe obezity by cieľom nemalo byť číslo na váhe izolované od klinického kontextu. Dôležité sú metabolické výsledky, funkčný stav, kvalita života, tolerancia liečby, bezpečnosť a dostupnosť.</p>
 
 <h2>Záver</h2>
 
-<p>Retatrutid predstavuje jednu z najsľubnejších experimentálnych terapií v oblasti obezity a diabetu 2. typu. Dáta ukazujú výrazný úbytok hmotnosti, zlepšenie HbA1c, priaznivý vplyv na lipidy, krvný tlak, obvod pása a potenciálne aj na komplikácie obezity, ako sú osteoartróza kolena a obštrukčné spánkové apnoe.</p>
+<p>Retatrutid patrí medzi najsľubnejšie experimentálne lieky na obezitu a diabetes 2. typu. Dáta ukazujú výrazný úbytok hmotnosti, zlepšenie HbA1c, priaznivý vplyv na lipidy, krvný tlak, obvod pása a potenciálne aj na komplikácie obezity, ako sú osteoartróza kolena a obštrukčné spánkové apnoe.</p>
 
-<p>Zároveň však platí, že ide o liek vo vývoji. Potrebné sú ďalšie údaje o dlhodobej bezpečnosti, udržateľnosti účinku, výbere vhodných pacientov a reálnej dostupnosti. Retatrutid môže byť silným nástrojom, ale jeho hodnota sa bude merať nie iba kilogramami, ale najmä tým, či pacientom prinesie bezpečný a udržateľný zdravotný prínos.</p>
+<p>Zároveň však platí, že ide o liek vo vývoji. Potrebné sú ďalšie údaje o dlhodobej bezpečnosti, udržateľnosti účinku, výbere vhodných pacientov a reálnej dostupnosti. Retatrutid môže byť silným nástrojom, jeho hodnotu však neurčia iba kilogramy, ale najmä to, či pacientom prinesie bezpečný a udržateľný zdravotný prínos.</p>
 
 <hr>
 

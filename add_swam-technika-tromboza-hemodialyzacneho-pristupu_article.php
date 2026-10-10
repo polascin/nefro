@@ -35,7 +35,7 @@ $articles[] = [
     'is_top'       => 0,
     'excerpt'      => 'SWAM kombinuje veľkolúmenovú aspiráciu so separátorom trombu pri trombóze AV fistúl, graftov a katétrov. Sľubná technika, zatiaľ však nie univerzálny štandard.',
     'content'      => <<<'HTML'
-<figure><a href="img/swam-technika-tromboza-hemodialyzacneho-pristupu.webp" rel="noopener noreferrer" target="_blank"><img src="img/swam-technika-tromboza-hemodialyzacneho-pristupu.webp" alt="Katétrový nástroj rozrušujúci trombus v cievnom prístupe; za jeho hrotom sa obnovuje jasný prietok" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Mechanické odstránenie trombu môže prístup zachrániť — rozhoduje však rýchlosť, s akou sa k nemu pacient dostane.</figcaption></figure>
+<figure><a href="img/swam-technika-tromboza-hemodialyzacneho-pristupu.webp" rel="noopener noreferrer" target="_blank"><img src="img/swam-technika-tromboza-hemodialyzacneho-pristupu.webp" alt="Katétrový nástroj rozrušujúci trombus v cievnom prístupe; za jeho hrotom sa obnovuje jasný prietok" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Mechanické odstránenie trombu môže prístup zachrániť – rozhoduje však rýchlosť, s akou sa k nemu pacient dostane.</figcaption></figure>
 
 <p>Trombóza cievneho prístupu patrí medzi najčastejšie a klinicky najzávažnejšie príčiny zlyhania hemodialyzačného prístupu. Pre pacienta znamená okamžité riziko prerušenia dialyzačnej liečby, potrebu urgentného riešenia, zavedenie dočasného alebo tunelizovaného centrálneho venózneho katétra a vyššie riziko infekčných, trombotických aj hospitalizačných komplikácií.</p>
 
@@ -43,7 +43,7 @@ $articles[] = [
 
 <h2>Prečo je trombóza prístupu zásadný problém</h2>
 
-<p>Funkčný cievny prístup je pre pacienta v chronickej hemodialýze prakticky životne dôležitý. Trombóza arteriovenóznej fistuly, arteriovenózneho graftu alebo centrálneho venózneho katétra vedie k okamžitej strate použiteľnosti prístupu. Klinicky sa môže prejaviť stratou víru a šelestu nad fistulou, nemožnosťou kanylácie, zníženým prietokom, vysokými venóznymi tlakmi počas dialýzy alebo úplným zlyhaním dialyzačnej procedúry.</p>
+<p>Funkčný cievny prístup je pre pacienta v chronickej hemodialýze životne dôležitý. Trombóza arteriovenóznej fistuly, arteriovenózneho graftu alebo centrálneho venózneho katétra vedie k okamžitej strate použiteľnosti prístupu. Klinicky sa môže prejaviť stratou víru a šelestu nad fistulou, nemožnosťou kanylácie, zníženým prietokom, vysokými venóznymi tlakmi počas dialýzy alebo úplným zlyhaním dialyzačnej procedúry.</p>
 
 <p>Najčastejším podkladom trombózy býva stenóza vo venóznom odtokovom segmente, v oblasti anastomózy, v graftovom segmente alebo v centrálnom venóznom riečisku. Samotné odstránenie trombu preto nestačí, ak sa súčasne neidentifikuje a nerieši hemodynamicky významná stenóza. Úspešná liečba musí obnoviť priechodnosť prístupu a zároveň odstrániť alebo aspoň zmierniť príčinu, ktorá k trombóze viedla.</p>
 
@@ -55,7 +55,7 @@ $articles[] = [
 
 <h2>Čo je SWAM technika</h2>
 
-<p>SWAM je skratka pre <strong>Separator With Aspirator for Mechanical Thrombectomy</strong>. Podstatou metódy je kombinácia dvoch mechanizmov:</p>
+<p>Podstatou metódy je kombinácia dvoch mechanizmov:</p>
 
 <ol>
   <li><strong>veľkolúmenového aspiračného katétra</strong>, ktorý vytvára negatívny tlak a odstraňuje trombotický materiál,</li>
@@ -70,21 +70,21 @@ $articles[] = [
 
 <p>Podľa publikovaných skúseností dosiahla SWAM technika priaznivý efekt najmä pri <strong>akútnom trombe</strong>. To je klinicky logické: čerstvý trombus býva mäkší, menej organizovaný a lepšie odstrániteľný aspiráciou alebo mechanickou fragmentáciou.</p>
 
-<p>Pri <strong>chronickom trombe</strong> bol efekt prítomný len do určitej miery. Táto formulácia je dôležitá. Chronický trombus býva pevnejší, adherentnejší a často spojený s výraznejšou stenózou, fibrotickou prestavbou alebo dlhšie trvajúcou dysfunkciou prístupu. V takýchto situáciách môže byť potrebná kombinácia viacerých techník, opakované intervencie alebo chirurgické riešenie.</p>
+<p>Pri <strong>chronickom trombe</strong> bol efekt prítomný len do určitej miery. Chronický trombus býva pevnejší, adherentnejší a často spojený s výraznejšou stenózou, fibrotickou prestavbou alebo dlhšie trvajúcou dysfunkciou prístupu. V takýchto situáciách môže byť potrebná kombinácia viacerých techník, opakované intervencie alebo chirurgické riešenie.</p>
 
-<p>Z praktického hľadiska to potvrdzuje, že čas je pri trombóze dialyzačného prístupu rozhodujúci. Čím skôr sa trombóza diagnostikuje a rieši, tým vyššia je šanca na úspešnú rekanalizáciu a zachovanie prístupu.</p>
+<p>Prakticky to podčiarkuje, že čas je pri trombóze dialyzačného prístupu rozhodujúci. Čím skôr sa trombóza diagnostikuje a rieši, tým vyššia je šanca na úspešnú rekanalizáciu a zachovanie prístupu.</p>
 
 <h2>Význam pre arteriovenóznu fistulu</h2>
 
 <p>Arteriovenózna fistula je preferovaný dlhodobý prístup na hemodialýzu, ale jej trombóza môže byť technicky náročná. Pri natívnej fistule je dôležité šetrné zaobchádzanie so stenotickými a aneuryzmatickými segmentmi, zachovanie použiteľnej kanylačnej zóny a minimalizácia poškodenia cievnej steny.</p>
 
-<p>SWAM technika môže byť zaujímavá najmä tam, kde je potrebné odstrániť intraluminálny trombus bez nadmernej traumatizácie prístupu. Napriek tomu treba zdôrazniť, že úspech závisí od anatómie fistuly, lokalizácie trombu, prítomnosti stenózy, veku trombu a skúsenosti intervenčného pracoviska.</p>
+<p>SWAM technika môže byť zaujímavá najmä tam, kde je potrebné odstrániť intraluminálny trombus bez nadmernej traumatizácie prístupu. Úspech však závisí od anatómie fistuly, lokalizácie trombu, prítomnosti stenózy, veku trombu a skúsenosti intervenčného pracoviska.</p>
 
 <h2>Význam pre arteriovenózny graft</h2>
 
 <p>Arteriovenózne grafty majú vyššie riziko trombózy než natívne fistuly. Často ide o trombózu na podklade stenózy venóznej anastomózy alebo výtokového segmentu. Pri grafte je mechanická trombektómia bežnou súčasťou endovaskulárneho manažmentu.</p>
 
-<p>V tejto oblasti môže SWAM priniesť praktický benefit, ak skracuje výkon a zvyšuje účinnosť odstránenia trombu. Pri graftoch je však rovnako nevyhnutné následne riešiť stenózu, najčastejšie balónikovou angioplastikou, prípadne ďalším endovaskulárnym postupom podľa lokálneho nálezu.</p>
+<p>V tejto oblasti môže SWAM priniesť praktický prínos, ak skracuje výkon a zvyšuje účinnosť odstránenia trombu. Pri graftoch je však rovnako nevyhnutné následne riešiť stenózu, najčastejšie balónikovou angioplastikou, prípadne ďalším endovaskulárnym postupom podľa lokálneho nálezu.</p>
 
 <h2>Význam pri centrálnych venóznych katétroch</h2>
 
@@ -94,7 +94,7 @@ $articles[] = [
 
 <h2>Praktické nefrologické súvislosti</h2>
 
-<p>Pre nefrológa je najdôležitejšie včas rozpoznať dysfunkciu prístupu. Trombóze často predchádzajú varovné príznaky: zhoršené prietoky, vyššie venózne tlaky, predlžujúce sa krvácanie po vytiahnutí ihiel, zmeny pulzácie alebo oslabenie víru. Tieto signály by nemali byť bagatelizované.</p>
+<p>Pre nefrológa je najdôležitejšie včas rozpoznať dysfunkciu prístupu. Trombóze často predchádzajú varovné príznaky: zhoršené prietoky, vyššie venózne tlaky, predlžujúce sa krvácanie po vytiahnutí ihiel, zmeny pulzácie alebo oslabenie víru. Tieto signály netreba bagatelizovať.</p>
 
 <p>Pri podozrení na trombózu alebo významnú stenózu je vhodné urýchlene zabezpečiť ultrazvukové alebo intervenčné vyšetrenie. Každé zdržanie môže znižovať šancu na záchranu prístupu. Ak sa prístup nepodarí obnoviť, pacient často končí so zavedením dočasného alebo tunelizovaného centrálneho venózneho katétra, čo zvyšuje riziko infekcie, centrálnej venóznej stenózy a ďalších komplikácií.</p>
 
@@ -134,7 +134,7 @@ $articles[] = [
 
 <p>SWAM technika predstavuje nový endovaskulárny prístup k mechanickej trombektómii hemodialyzačných prístupov. Kombinácia veľkolúmenovej aspirácie a mechanického separátora trombu môže zlepšiť efektivitu odstránenia trombotického materiálu a skrátiť trvanie výkonu. Podľa publikovaných skúseností sa javí najúčinnejšia pri akútnom trombe, s určitým prínosom aj pri chronickejšom trombotickom materiáli.</p>
 
-<p>Pre nefrologickú prax je hlavné posolstvo jasné: trombóza dialyzačného prístupu si vyžaduje rýchlu diagnostiku, včasnú intervenciu a úzku spoluprácu nefrológa, intervenčného rádiológa, angiologického pracoviska a cievneho chirurga. SWAM môže byť ďalším nástrojom na záchranu prístupu, jeho definitívne miesto však musia potvrdiť väčšie a metodicky silnejšie štúdie.</p>
+<p>Pre nefrologickú prax z toho vyplýva, že trombóza dialyzačného prístupu si vyžaduje rýchlu diagnostiku, včasnú intervenciu a úzku spoluprácu nefrológa, intervenčného rádiológa, angiologického pracoviska a cievneho chirurga. SWAM môže byť ďalším nástrojom na záchranu prístupu, jeho definitívne miesto však musia potvrdiť väčšie a metodicky silnejšie štúdie.</p>
 
 <hr>
 

@@ -28,15 +28,15 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d'),
     'is_top'       => 0,
-    'excerpt'      => 'Renálna denervácia môže u vybraných pacientov s rezistentnou hypertenziou znížiť systolický tlak o 5–10 mmHg. Nie je však náhradou diagnostiky, režimových opatrení ani farmakoterapie — má byť súčasťou systému, nie skratkou.',
+    'excerpt'      => 'Renálna denervácia môže u vybraných pacientov s rezistentnou hypertenziou znížiť systolický tlak o 5–10 mmHg. Nie je však náhradou diagnostiky, režimových opatrení ani farmakoterapie – má byť súčasťou systému, nie skratkou.',
     'content'      => <<<'HTML'
-<figure><a href="img/renalna-denervacia-rezistentna-hypertenzia.webp" rel="noopener noreferrer" target="_blank"><img src="img/renalna-denervacia-rezistentna-hypertenzia.webp" alt="Katéter pôsobiaci na stenu obličkovej tepny a stíšujúci nervové vlákna; vedľa zostáva rad tabletiek" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Zákrok tlak zníži, no lieky spravidla nenahradí — preto nejde o skratku.</figcaption></figure>
+<figure><a href="img/renalna-denervacia-rezistentna-hypertenzia.webp" rel="noopener noreferrer" target="_blank"><img src="img/renalna-denervacia-rezistentna-hypertenzia.webp" alt="Katéter pôsobiaci na stenu obličkovej tepny a stíšujúci nervové vlákna; vedľa zostáva rad tabletiek" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Zákrok tlak zníži, no lieky spravidla nenahradí – preto nejde o skratku.</figcaption></figure>
 
 <p>Rezistentná hypertenzia patrí medzi klinicky najrizikovejšie formy vysokého krvného tlaku. Nejde iba o „vyššie čísla“ na tlakomere. Pacienti s rezistentnou hypertenziou majú vyššie riziko infarktu myokardu, cievnej mozgovej príhody, srdcového zlyhávania, chronickej choroby obličiek a predčasnej kardiovaskulárnej mortality.</p>
 
-<p>V posledných rokoch sa do popredia opäť dostáva <strong>renálna denervácia</strong>. Ide o intervenčný postup, ktorého cieľom je znížiť aktivitu sympatických nervových vlákien v okolí renálnych artérií. Tým môže dôjsť k poklesu krvného tlaku. Podľa diskusie odborníkov v podcaste Medscape <em>InDiscussion</em> sa renálna denervácia postupne začleňuje do štruktúrovaného prístupu k liečbe pacientov s rezistentnou alebo nedostatočne kontrolovanou hypertenziou.</p>
+<p>V posledných rokoch sa do popredia opäť dostáva <strong>renálna denervácia</strong>. Ide o intervenčný postup, ktorého cieľom je znížiť aktivitu sympatických nervových vlákien v okolí renálnych artérií, a tým aj krvný tlak. Podľa diskusie odborníkov v podcaste Medscape <em>InDiscussion</em> sa renálna denervácia postupne začleňuje do štruktúrovaného prístupu k liečbe pacientov s rezistentnou alebo nedostatočne kontrolovanou hypertenziou.</p>
 
-<p>Dôležité však je povedať hneď na začiatku: <strong>renálna denervácia nie je náhradou správnej diagnostiky, režimových opatrení ani farmakoterapie</strong>. Má byť doplnkovou možnosťou u starostlivo vybraných pacientov.</p>
+<p>Hneď na začiatku treba povedať: <strong>renálna denervácia nie je náhradou správnej diagnostiky, režimových opatrení ani farmakoterapie</strong>. Má byť doplnkovou možnosťou u starostlivo vybraných pacientov.</p>
 
 <h2>Čo je rezistentná hypertenzia</h2>
 
@@ -46,7 +46,7 @@ $articles[] = [
 
 <p>Druhou možnosťou je situácia, keď je krvný tlak síce kontrolovaný, ale pacient na to potrebuje <strong>štyri alebo viac antihypertenzív</strong>.</p>
 
-<p>V praxi je však veľmi dôležité odlíšiť skutočnú rezistentnú hypertenziu od zdanlivej rezistencie. Tá môže byť spôsobená nesprávnym meraním tlaku, nízkou adherenciou k liečbe, nevhodne nastavenou farmakoterapiou alebo fenoménom bieleho plášťa.</p>
+<p>V praxi je však kľúčové odlíšiť skutočnú rezistentnú hypertenziu od zdanlivej rezistencie. Tá môže byť spôsobená nesprávnym meraním tlaku, nízkou adherenciou k liečbe, nevhodne nastavenou farmakoterapiou alebo fenoménom bieleho plášťa.</p>
 
 <h2>Kedy má byť pacient odoslaný k špecialistovi</h2>
 
@@ -110,7 +110,7 @@ $articles[] = [
 
 <p>Treba tiež počítať s tým, že časť pacientov na výkon neodpovie dostatočne. Podľa odborníkov môže ísť približne o tretinu pacientov, v závislosti od použitej definície odpovede a od konkrétnych štúdií.</p>
 
-<p>Za potenciálnu neodpoveď sa zvyčajne neuvažuje bezprostredne po výkone. Hodnotenie efektu má zmysel po niekoľkých mesiacoch, často po 3 až 6 mesiacoch. Niektorí odborníci odporúčajú definitívne hodnotenie až po roku, pretože efekt sa môže rozvíjať postupne.</p>
+<p>O neodpovedi na výkon sa zvyčajne neuvažuje hneď po ňom. Hodnotenie efektu má zmysel po niekoľkých mesiacoch, často po 3 až 6 mesiacoch. Niektorí odborníci odporúčajú definitívne hodnotenie až po roku, pretože efekt sa môže rozvíjať postupne.</p>
 
 <h2>Bezpečnosť renálnej denervácie</h2>
 
@@ -130,23 +130,23 @@ $articles[] = [
 
 <p>Približne po 6 mesiacoch sa môže zvážiť zobrazovacie vyšetrenie renálnych artérií, najčastejšie duplexná sonografia. Pri nejasnom náleze možno doplniť CT angiografiu alebo MR angiografiu podľa lokálnych možností a klinickej situácie.</p>
 
-<p>Veľmi dôležité je, aby úprava antihypertenzív neprebiehala chaoticky. Pacienta často sleduje viacero lekárov, napríklad všeobecný lekár, nefrológ, kardiológ, špecialista na hypertenziu a intervenčný lekár. Preto má existovať jasný plán, kto liečbu riadi a ako sa má postupovať pri poklese alebo opätovnom vzostupe krvného tlaku.</p>
+<p>Úprava antihypertenzív nesmie prebiehať chaoticky. Pacienta často sleduje viacero lekárov, napríklad všeobecný lekár, nefrológ, kardiológ, špecialista na hypertenziu a intervenčný lekár. Preto má existovať jasný plán, kto liečbu riadi a ako sa má postupovať pri poklese alebo opätovnom vzostupe krvného tlaku.</p>
 
 <h2>Budúcnosť renálnej denervácie</h2>
 
 <p>Renálna denervácia sa ďalej vyvíja. V Spojených štátoch sú podľa diskusie odborníkov schválené dve zariadenia na zníženie krvného tlaku ako doplnková liečba u pacientov, u ktorých boli použité režimové opatrenia a antihypertenzívna liečba, no tlak zostáva nedostatočne kontrolovaný.</p>
 
-<p>Skúmajú sa aj ďalšie technológie, vrátane nových ultrazvukových systémov, aplikácie alkoholu do steny renálnej artérie, kombinovanej denervácie viacerých orgánov a extravaskulárnych prístupov. Niektoré skoré dáta sú zaujímavé, ale nejde zatiaľ o rutinnú klinickú prax.</p>
+<p>Skúmajú sa aj ďalšie technológie, vrátane nových ultrazvukových systémov, aplikácie alkoholu do steny renálnej artérie, kombinovanej denervácie viacerých orgánov a extravaskulárnych prístupov. Niektoré skoré údaje sú zaujímavé, rutinnou klinickou praxou to však zatiaľ nie je.</p>
 
 <p>Okrem hypertenzie sa skúma aj možný význam renálnej denervácie v iných oblastiach, napríklad pri fibrilácii predsiení. Predbežné údaje naznačujú, že kombinácia ablácie fibrilácie predsiení s renálnou denerváciou môže u niektorých pacientov znížiť riziko recidívy arytmie. Aj tu však platí, že definitívne miesto tejto stratégie v praxi si vyžaduje ďalšie dôkazy.</p>
 
 <h2>Praktický záver</h2>
 
-<p>Renálna denervácia je zaujímavá a perspektívna metóda v liečbe rezistentnej a nedostatočne kontrolovanej hypertenzie. Jej prínos spočíva najmä v tom, že aj mierny, ale dlhodobo udržaný pokles krvného tlaku môže u vysokorizikových pacientov významne znížiť kardiovaskulárne riziko.</p>
+<p>Renálna denervácia je perspektívna metóda v liečbe rezistentnej a nedostatočne kontrolovanej hypertenzie. Jej prínos spočíva najmä v tom, že aj mierny, ale dlhodobo udržaný pokles krvného tlaku môže u vysokorizikových pacientov významne znížiť kardiovaskulárne riziko.</p>
 
 <p>Nie je to však výkon pre každého pacienta s hypertenziou. Pred jej zvažovaním je potrebné potvrdiť skutočnú rezistenciu, vylúčiť sekundárne príčiny, optimalizovať liečbu a zabezpečiť dlhodobé sledovanie.</p>
 
-<p>Najdôležitejšie posolstvo je jednoduché: <strong>renálna denervácia má byť súčasťou systému, nie náhradou systému</strong>. Najväčší úžitok môže priniesť vtedy, keď je indikovaná uvážene, vykonaná skúseným tímom a zaradená do koordinovanej, multidisciplinárnej starostlivosti o pacienta s vysokým kardiovaskulárnym rizikom.</p>
+<p>Platí jednoduché pravidlo: <strong>renálna denervácia má byť súčasťou systému, nie náhradou systému</strong>. Najväčší úžitok môže priniesť vtedy, keď je indikovaná uvážene, vykonaná skúseným tímom a zaradená do koordinovanej, multidisciplinárnej starostlivosti o pacienta s vysokým kardiovaskulárnym rizikom.</p>
 
 <hr>
 
