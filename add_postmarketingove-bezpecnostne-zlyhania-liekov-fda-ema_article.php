@@ -91,7 +91,7 @@ $articles[] = [
     <tr>
       <td><strong>Cerivastatín</strong> (Baycol/Lipobay)</td>
       <td>Hypercholesterolémia</td>
-      <td>1998 (FDA)</td>
+      <td>1997 (FDA)</td>
       <td>Rabdomyolýza, zlyhanie obličiek</td>
       <td>Stiahnutie z trhu (2001)</td>
       <td>Vysoká – kazuistiky a farmakoepidemiológia</td>
@@ -109,7 +109,7 @@ $articles[] = [
       <td>Artritída, bolesť</td>
       <td>2001 (FDA)</td>
       <td>Infarkt myokardu, cievna mozgová príhoda, Stevensov-Johnsonov syndróm</td>
-      <td>Stiahnutie z trhu (2004)</td>
+      <td>Stiahnutie z trhu (2005)</td>
       <td>Stredná až vysoká – RCT a observačné štúdie</td>
     </tr>
     <tr>
@@ -139,9 +139,9 @@ $articles[] = [
     <tr>
       <td><strong>Natalizumab</strong> (Tysabri)</td>
       <td>Roztrúsená skleróza</td>
-      <td>2004 (FDA)</td>
+      <td>2004 (FDA, 23. november)</td>
       <td>Progresívna multifokálna leukoencefalopatia (PML)</td>
-      <td>Dočasné stiahnutie (2005), obmedzené znovuuvedenie (2006)</td>
+      <td>Dočasné stiahnutie (február 2005), obmedzené znovuuvedenie (5. jún 2006)</td>
       <td>Vysoká – kazuistiky a klinické skúšania</td>
     </tr>
     <tr>
@@ -261,7 +261,7 @@ $articles[] = [
 <p>Metaanalýzy ukázali zvýšené riziko kardiovaskulárnych príhod podobné ako pri rofekoxibe. Stevensov-Johnsonov syndróm sa vyskytol najmä v prvých dvoch týždňoch liečby a postihoval predovšetkým pacientov s alergiou na sulfónamidy.</p>
 
 <h4>Regulačné kroky a stiahnutie z trhu</h4>
-<p>FDA požiadala spoločnosť Pfizer o stiahnutie Bextry z trhu v apríli 2004. EMA podobne odporučila stiahnutie lieku z európskeho trhu. Stiahnutie bolo motivované kombináciou kardiovaskulárneho rizika a závažných kožných reakcií.</p>
+<p>FDA požiadala spoločnosť Pfizer o stiahnutie Bextry z trhu 7. apríla 2005. V ten istý deň Pfizer po dohode s EMA pozastavil predaj a uvádzanie Bextry na trh v Európe; Európska komisia následne 13. októbra 2005 pozastavila jej registráciu. Opatrenia boli motivované nepriaznivým pomerom prínosu a rizika vrátane kardiovaskulárneho rizika a závažných kožných reakcií.</p>
 
 <h4>Aktuálny stav</h4>
 <p>Valdekoxib zostáva stiahnutý z trhu. Jeho prípad prispel k prehodnoteniu bezpečnostného profilu celej triedy COX-2 inhibítorov.</p>
@@ -340,7 +340,7 @@ $articles[] = [
 <p>Natalizumab, predávaný pod názvom Tysabri, bol humanizovaná monoklonálna protilátka používaná na liečbu roztrúsenej sklerózy. Pôsobil ako antagonista α4-integrínu, čím blokoval migráciu lymfocytov do centrálneho nervového systému.</p>
 
 <h4>Bezpečnostné obmedzenia v čase schválenia</h4>
-<p>FDA schválila natalizumab vo februári 2004 na základe klinických štúdií, ktoré preukázali významné zníženie relapsov a progresie disability u pacientov s roztrúsenou sklerózou. V čase schválenia neboli známe riziká spojené s progresívnou multifokálnou leukoencefalopatiou (PML), pretože v predregistračných štúdiách sa tento typ komplikácie nevyskytol.</p>
+<p>FDA schválila natalizumab 23. novembra 2004 na základe klinických štúdií, ktoré preukázali významné zníženie relapsov a progresie disability u pacientov s roztrúsenou sklerózou. V čase schválenia neboli známe riziká spojené s progresívnou multifokálnou leukoencefalopatiou (PML), pretože v predregistračných štúdiách sa tento typ komplikácie nevyskytol.</p>
 
 <h4>Postmarketingový vývoj a identifikácia rizík</h4>
 <p>V priebehu prvého roka po schválení boli hlásené tri prípady PML, zriedkavej a fatálnej oportúnnej infekcie mozgu spôsobenej vírusom JC. Dva prípady sa vyskytli u pacientov s roztrúsenou sklerózou liečených natalizumabom a jeden u pacienta s Crohnovou chorobou. Všetky tri prípady boli fatálne alebo viedli k závažnému neurologickému poškodeniu.</p>
@@ -349,7 +349,7 @@ $articles[] = [
 <p>Kazuistiky a observačné štúdie identifikovali rizikové faktory pre rozvoj PML: pozitivita na protilátky proti vírusu JC, dĺžka liečby nad 24 mesiacov a predchádzajúca imunosupresívna liečba. Celkové riziko PML sa odhaduje na 1 : 1000 až 1 : 100 v závislosti od kombinácie rizikových faktorov.</p>
 
 <h4>Regulačné kroky a stiahnutie z trhu</h4>
-<p>Spoločnosť Biogen dobrovoľne stiahla Tysabri z amerického trhu vo februári 2005. Po analýze rizík a prínosov FDA schválila obmedzené znovuuvedenie natalizumabu v júli 2006 v rámci špeciálneho programu TOUCH (Tysabri Outreach: Unified Commitment to Health), ktorý vyžaduje prísne monitorovanie a hlásenie akýchkoľvek nových neurologických symptómov.</p>
+<p>Spoločnosti Biogen Idec a Elan 28. februára 2005 dobrovoľne pozastavili uvádzanie Tysabri na americký trh. Po analýze rizík a prínosov FDA schválila jeho obmedzené znovuuvedenie 5. júna 2006 v rámci špeciálneho programu TOUCH (Tysabri Outreach: Unified Commitment to Health), ktorý vyžaduje prísne monitorovanie a hlásenie akýchkoľvek nových neurologických symptómov.</p>
 
 <h4>Aktuálny stav</h4>
 <p>Natalizumab je v súčasnosti dostupný len v rámci prísneho monitorovacieho programu. Prípad natalizumabu ilustruje, že aj lieky s výnimočným terapeutickým prínosom môžu byť spojené so závažnými rizikami, ktoré sa objavia až po uvedení na trh, a že regulačné orgány môžu umožniť prístup k takýmto liekom za prísnych podmienok.</p>
@@ -371,10 +371,10 @@ $articles[] = [
 <p>Analytické štúdie potvrdili, že ranitidín produkuje NDMA v koncentráciách prekračujúcich prijateľný denný príjem stanovený FDA (96 ng/deň). NDMA je klasifikovaný ako pravdepodobný ľudský karcinogén na základe štúdií na zvieratách. Dlhodobé účinky u ľudí sú ťažko kvantifikovateľné, no potenciálne riziko rakoviny bolo považované za významné.</p>
 
 <h4>Regulačné kroky a stiahnutie z trhu</h4>
-<p>FDA požiadala o stiahnutie všetkých liekov obsahujúcich ranitidín z amerického trhu v apríli 2020. EMA a ďalšie regulačné orgány nasledovali po podobnom vyšetrovaní. Liek bol celosvetovo stiahnutý. Výrobcovia boli požiadaní, aby pozastavili distribúciu a začali proces stiahnutia všetkých šarží.</p>
+<p>FDA požiadala 1. apríla 2020 o stiahnutie všetkých vtedy uvádzaných liekov obsahujúcich ranitidín z amerického trhu. Výbor CHMP agentúry EMA v septembri 2020 potvrdil odporúčanie pozastaviť všetky ranitidínové lieky v EÚ a Európska komisia vydala 24. novembra 2020 záväzné rozhodnutie. Nešlo však o definitívny celosvetový zákaz účinnej látky: FDA 24. novembra 2025 schválila reformulované tablety ranitidínu po testoch stability a úpravách výroby.</p>
 
 <h4>Aktuálny stav</h4>
-<p>Ranitidín je v súčasnosti stiahnutý z trhu a nie je dostupný v lekárňach. Nahradili ho iné lieky na zníženie kyslosti žalúdka, ako sú inhibítory protónovej pumpy (omeprazol, lansoprazol) alebo iné H2 antagonisty (famotidín). Prípad ranitidínu je unikátny, pretože riziko nebolo spôsobené farmakologickým účinkom lieku, ale chemickou nestabilitou vedúcou k tvorbe karcinogénnej látky.</p>
+<p>Pôvodné ranitidínové prípravky zostali po opatreniach z roku 2020 mimo trhu. V USA sa od novembra 2025 môže uvádzať reformulovaný ranitidín s novými podmienkami skladovania; stav registrácie a dostupnosti sa medzi jurisdikciami líši a treba ho overovať v aktuálnej národnej databáze. Alternatívami zostávajú iné H2 antagonisty, napríklad famotidín, alebo inhibítory protónovej pumpy. Prípad ranitidínu je osobitný tým, že riziko súviselo s chemickou nestabilitou a nárastom NDMA pri skladovaní, nie s jeho zamýšľaným farmakologickým účinkom.</p>
 
 <p><strong>Stupeň istoty kauzality: vysoký.</strong> Kauzalita je podporená chemickými analýzami, ktoré jednoznačne preukázali tvorbu NDMA.</p>
 

@@ -35,7 +35,7 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Post-hoc združená analýza FIDELITY (12 990 pacientov s DM2 a CKD): finerenón znižoval kardiovaskulárne aj renálne príhody konzistentne naprieč štádiami CKM syndrómu, s priaznivejšou dynamikou CKM (regresia III→II) a porovnateľnou bezpečnosťou vrátane hyperkaliémie.',
+    'excerpt'      => 'Post-hoc združená analýza FIDELITY (12 990 pacientov s DM2 a CKD): finerenón znižoval kardiovaskulárne aj renálne príhody konzistentne naprieč štádiami CKM syndrómu, s priaznivejšou dynamikou CKM (regresia 3 → 2) a porovnateľnou bezpečnosťou vrátane hyperkaliémie.',
     'content'      => <<<'HTML'
 <figure><a href="img/finerenon-ckm-syndrom-dm2-ckd-fidelity.webp" rel="noopener noreferrer" target="_blank"><img src="img/finerenon-ckm-syndrom-dm2-ckd-fidelity.webp" alt="Molekula vysielajúca tri rovnako silné lúče k srdcu, metabolickým časticiam a obličke" width="1600" height="1000" loading="lazy" decoding="async"></a><figcaption>Poloschematická vizualizácia. Účinok nemieri na jediný orgán – a práve preto dáva zmysel hodnotiť ho naprieč celým CKM syndrómom.</figcaption></figure>
 
@@ -58,9 +58,9 @@ hodnotila, či liečba finerenónom prináša konzistentný prínos naprieč CKM
   <li>Pacienti so symptomatickým <strong>HFrEF</strong> boli zo štúdií vylúčení.</li>
   <li>Pacienti boli podľa <strong>CKM štádia východiskovo</strong> rozdelení na:
     <ul>
-      <li><strong>štádium II</strong>: metabolické rizikové faktory alebo stredné až vysoké riziko CKD (n = 3864)</li>
-      <li><strong>štádium III</strong>: veľmi vysoké riziko CKD (n = 3275)</li>
-      <li><strong>štádium IV</strong>: klinické kardiovaskulárne ochorenie (n = 5851)</li>
+      <li><strong>štádium 2</strong>: metabolické rizikové faktory alebo stredné až vysoké riziko CKD (n = 3864)</li>
+      <li><strong>štádium 3</strong>: veľmi vysoké riziko CKD (n = 3275)</li>
+      <li><strong>štádium 4</strong>: klinické kardiovaskulárne ochorenie (n = 5851)</li>
     </ul>
   </li>
   <li>Primárne sledované boli:
@@ -77,7 +77,7 @@ hodnotila, či liečba finerenónom prináša konzistentný prínos naprieč CKM
 <h2>Kľúčové výsledky</h2>
 
 <h3>1) Vyššie CKM štádium znamená vyššie riziko</h3>
-<p>CKM <strong>štádium IV</strong> bolo spojené s vyšším rizikom oproti štádiu II:</p>
+<p>CKM <strong>štádium 4</strong> bolo spojené s vyšším rizikom oproti štádiu 2:</p>
 <ul>
   <li><strong>kardiovaskulárny kompozit</strong>: aHR <strong>1,87</strong> (95 % IS 1,56–2,24)</li>
   <li><strong>renálny kompozit</strong>: aHR <strong>1,96</strong> (95 % IS 1,43–2,69)</li>
@@ -96,7 +96,7 @@ aj v klinickom skúšaní.</p>
 <h3>3) Okrem prínosu v príhodách: aj priaznivejšia dynamika CKM</h3>
 <p>V skupine na finerenóne sa pozorovala priaznivejšia zmena CKM stavu v čase:</p>
 <ul>
-  <li><strong>CKM regresia zo štádia III do II</strong>: vyššia pravdepodobnosť pri finerenóne
+  <li><strong>CKM regresia zo štádia 3 do 2</strong>: vyššia pravdepodobnosť pri finerenóne
       (odds ratio 1,66; <strong>P &lt; 0,001</strong>)</li>
   <li><strong>CKM progresia</strong>: menej častá, rozdiel bol však len na hranici štatistickej významnosti
       (aOR 0,89; <strong>P = 0,05</strong>)</li>
@@ -126,9 +126,9 @@ riziko aj bez toho, aby bolo v klinickej dokumentácii explicitne pomenované ak
 
 <h2>Záver</h2>
 <p>V post-hoc združenej analýze FIDELITY finerenón <strong>znižoval kardiovaskulárne aj renálne príhody
-konzistentne naprieč CKM štádiami</strong> u pacientov s DM2 a CKD. Štádium IV bolo spojené s vyšším
+konzistentne naprieč CKM štádiami</strong> u pacientov s DM2 a CKD. Štádium 4 bolo spojené s vyšším
 rizikom, no prínos finerenónu sa ukázal aj u pacientov s vyššou východiskovou záťažou. Navyše sa
-pozorovala priaznivejšia dynamika CKM (regresia zo štádia III do II) a bezpečnosť vrátane rizika
+pozorovala priaznivejšia dynamika CKM (regresia zo štádia 3 do 2) a bezpečnosť vrátane rizika
 hyperkaliémie bola porovnateľná naprieč štádiami.</p>
 
 <hr>

@@ -95,7 +95,7 @@ $articles[] = [
 
 <ul>
   <li>monoterapia – udržiavanie: <strong>50 až 100 mg denne</strong>, počiatočne: <strong>25 mg každý druhý deň</strong>; udržiavanie v režime s obmedzením: <strong>50 mg každý druhý deň</strong>,</li>
-  <li>uvádza sa aj použitie mimo schválených indikácií (off-label), napríklad pri migréne a epilepsii, a mimo schválených indikácií aj na redukciu hmotnosti.</li>
+  <li>topiramát je schválený na liečbu epilepsie a prevenciu migrény; jeho samostatné použitie na redukciu hmotnosti je mimo schválenej indikácie (off-label). V USA je na chronický manažment hmotnosti schválená fixná kombinácia fentermínu s topiramátom, nie topiramát samotný.</li>
 </ul>
 
 <p><strong>Nežiaduce účinky a riziká:</strong> parestézie, kognitívne ťažkosti, psychiatrické účinky a metabolická acidóza.</p>
