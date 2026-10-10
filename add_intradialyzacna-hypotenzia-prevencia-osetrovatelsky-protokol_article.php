@@ -45,7 +45,7 @@ $articles[] = [
 
 <h3>Súvislosť medzi tlakom a príznakmi je slabá</h3>
 
-<p>Toto je pre tvorbu protokolu najdôležitejšie zistenie a zároveň to, ktoré sa najčastejšie prehliada. Korelácia medzi zmenami krvného tlaku a klinickými príznakmi je <strong>slabá</strong>. Niektorí pacienti vykazujú známky intravaskulárnej hypovolémie <em>bez</em> toho, aby pokles tlaku splnil ktorúkoľvek číselnú definíciu. Pri výraznej kompenzačnej odpovedi sa môže objaviť dokonca paradoxný vzostup tlaku. [1]</p>
+<p>Pre tvorbu protokolu je to najdôležitejšie zistenie – a zároveň najčastejšie prehliadané. Korelácia medzi zmenami krvného tlaku a klinickými príznakmi je <strong>slabá</strong>. Niektorí pacienti vykazujú známky intravaskulárnej hypovolémie <em>bez</em> toho, aby pokles tlaku splnil ktorúkoľvek číselnú definíciu. Pri výraznej kompenzačnej odpovedi sa môže objaviť dokonca paradoxný vzostup tlaku. [1]</p>
 
 <p>Analýza Flytheovej a spoluautorov porovnala bežne používané definície IDH v kohorte 1 409 pacientov zo štúdie HEMO a 10 392 pacientov veľkej dialyzačnej organizácie. S mortalitou najsilnejšie súvisel <strong>absolútny najnižší systolický tlak pod 90 mmHg</strong>, a to celkovo aj v podskupinách s predialyzačným tlakom pod 120 a 120 až 159 mmHg; pri predialyzačnom tlaku 160 mmHg a viac to bola hranica pod 100 mmHg. Definície, ktoré vychádzali z príznakov, z vykonaných zásahov alebo zo samotného poklesu tlaku počas výkonu, s mortalitou spojené neboli. Pridanie kritéria príznakov či intervencie k hodnote najnižšieho tlaku súvislosť nijako nezosilnilo. [2]</p>
 
@@ -206,7 +206,7 @@ $articles[] = [
 
 <ul>
   <li>strata alebo nová porucha vedomia, kŕče či ložiskový neurologický príznak;</li>
-  <li>bolesť na hrudníku, závažná dyspnoe alebo nová hypoxémia;</li>
+  <li>bolesť na hrudníku, závažné dyspnoe alebo nová hypoxémia;</li>
   <li>výrazná bradykardia, tachykardia alebo podozrenie na závažnú arytmiu;</li>
   <li>známky šoku alebo pretrvávajúca hypotenzia napriek úvodným opatreniam;</li>
   <li>aktívne krvácanie alebo porucha cievneho prístupu so stratou krvi;</li>
@@ -293,7 +293,7 @@ $articles[] = [
 
 <p>Pri tvorbe protokolu treba mať na pamäti dve zistenia, ktoré idú proti intuícii. Po prvé, súvislosť medzi poklesom tlaku a príznakmi je slabá, takže číselné kritérium nesmie byť podmienkou pomoci. Po druhé, cieľom nie je výkon ukončiť, ale zvládnuť epizódu tak, aby pacient neodchádzal objemovo preťažený.</p>
 
-<p>Kvalitný ošetrovateľský protokol podporuje rýchlu reakciu a spoluprácu s lekárom. Jeho konečným cieľom nie je iba upraviť tlak počas jednej epizódy, ale zlepšiť bezpečnosť a toleranciu nasledujúcich výkonov. Trvalé riešenie opakovanej IDH leží v dialyzačnom predpise – v obmedzení medzidialyzačných prírastkov, predĺžení času výkonu, znížení rýchlosti ultrafiltrácie a individualizácii predpisu podľa objemového stavu. [1]</p>
+<p>Kvalitný ošetrovateľský protokol podporuje rýchlu reakciu a spoluprácu s lekárom. Jeho konečným cieľom nie je iba upraviť tlak počas jednej epizódy, ale zlepšiť bezpečnosť a toleranciu nasledujúcich výkonov. Trvalé riešenie opakovanej IDH je v dialyzačnom predpise – v obmedzení medzidialyzačných prírastkov, predĺžení času výkonu, znížení rýchlosti ultrafiltrácie a individualizácii predpisu podľa objemového stavu. [1]</p>
 
 <hr>
 
