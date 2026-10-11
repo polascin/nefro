@@ -315,7 +315,7 @@ function fetchPublishedArticlesByAuthor(\PDO $pdo, string $authorName): array {
             "SELECT id, title, slug, author, excerpt, published_at, content, is_top, sort_order
              FROM articles
              WHERE is_published = 1
-             ORDER BY is_top DESC, sort_order ASC, published_at DESC"
+             ORDER BY is_top DESC, sort_order ASC, published_at DESC, id ASC"
         );
     } catch (\PDOException $e) {
         error_log('project stats: chyba filtra článkov podľa autora: ' . $e->getMessage());

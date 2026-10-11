@@ -126,7 +126,7 @@ try {
         $stmtTop = $pdo->query(
             "SELECT id, title, slug, author, excerpt, published_at
              FROM articles WHERE is_top = 1 AND is_published = 1 AND category = 'odborne'
-             ORDER BY sort_order ASC, published_at DESC",
+             ORDER BY sort_order ASC, published_at DESC, id ASC",
         );
         $topArticles = $stmtTop->fetchAll();
 
@@ -145,7 +145,7 @@ try {
         $stmtOther = $pdo->prepare(
             "SELECT id, title, slug, author, excerpt, published_at
              FROM articles WHERE is_top = 0 AND is_published = 1 AND category = 'odborne'
-             ORDER BY sort_order ASC, published_at DESC
+             ORDER BY sort_order ASC, published_at DESC, id ASC
              LIMIT :limit OFFSET :offset",
         );
         $stmtOther->bindValue(":limit", $otherArticlesPerPage, \PDO::PARAM_INT);

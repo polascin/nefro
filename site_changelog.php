@@ -55,6 +55,13 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-10-11 19:20',
+                'category' => 'portal',
+                'title' => 'Stabilnejšie stránkovanie článkov',
+                'description' => 'Pri rovnakom poradí a dátume publikovania zostáva poradie článkov stabilné aj medzi stránkami. To platí pre hlavný zoznam aj výber článkov podľa autora.',
+                'url' => 'index.php',
+            ],
+            [
                 'date' => '2026-10-10 23:04',
                 'category' => 'portal',
                 'title' => 'Prehľadnejšie stránkovanie článkov',
