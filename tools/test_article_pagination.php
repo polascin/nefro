@@ -6,7 +6,8 @@ $pdo = new PDO('sqlite::memory:');
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $pdo->exec(
     'CREATE TABLE articles (
-        id INTEGER PRIMARY KEY,
+        physical_order INTEGER PRIMARY KEY,
+        id INTEGER NOT NULL UNIQUE,
         title TEXT NOT NULL,
         slug TEXT NOT NULL,
         author TEXT NOT NULL,
@@ -101,16 +102,21 @@ function articleAuthorIdentities(array $row): array
     return $author === '' ? [] : [normalizeAuthorIdentity($author) => $author];
 }
 
-eval(articlePaginationExtractFunction($articleSource, 'fetchPublishedArticlesByAuthor'));
+$authorFunction = articlePaginationExtractFunction($articleSource, 'fetchPublishedArticlesByAuthor');
+eval($authorFunction);
 
 $insert = $pdo->prepare(
     'INSERT INTO articles
-        (id, title, slug, author, excerpt, published_at, content, is_top, is_published, category, sort_order)
+        (physical_order, id, title, slug, author, excerpt, published_at, content, is_top, is_published, category, sort_order)
      VALUES
-        (:id, :title, :slug, :author, :excerpt, :published_at, :content, :is_top, 1, :category, 5)',
+        (:physical_order, :id, :title, :slug, :author, :excerpt, :published_at, :content, :is_top, 1, :category, 5)',
 );
-for ($id = 1; $id <= 50; ++$id) {
+// The rowid (physical scan order) is deliberately decoupled from article IDs,
+// so a query without the ID tie-breaker cannot return range(1, 50) by accident.
+for ($position = 1; $position <= 50; ++$position) {
+    $id = (($position * 17) % 50) + 1;
     $insert->execute([
+        'physical_order' => $position,
         'id' => $id,
         'title' => "Synthetic article $id",
         'slug' => "synthetic-article-$id",
@@ -122,6 +128,11 @@ for ($id = 1; $id <= 50; ++$id) {
         'category' => 'odborne',
     ]);
 }
+$physicalIds = array_map('intval', $pdo->query('SELECT id FROM articles ORDER BY physical_order')->fetchAll(PDO::FETCH_COLUMN));
+articlePaginationTest(
+    $physicalIds !== range(1, 50) && $physicalIds !== range(50, 1) && count(array_unique($physicalIds)) === 50,
+    'Fixture physical order must be a unique non-monotonic permutation of article IDs.',
+);
 
 $standardWhere = "is_top = 0 AND is_published = 1 AND category = 'odborne'";
 $standardOrder = articlePaginationOrder($indexSource, $standardWhere);
@@ -153,6 +164,11 @@ articlePaginationTest(
     'Top article query must retain its ordering and use the same unique tie-breaker.',
 );
 
+articlePaginationTest(
+    preg_match('/ORDER BY ([^"\r\n]+)"/', $authorFunction, $authorOrderMatch) === 1
+        && trim($authorOrderMatch[1]) === 'is_top DESC, sort_order ASC, published_at DESC, id ASC',
+    'Author query must keep the main ordering and add the unique ID tie-breaker.',
+);
 $authorArticles = fetchPublishedArticlesByAuthor($pdo, 'Pagination Test Author');
 articlePaginationTest(
     array_column($authorArticles, 'id') === range(1, 50),
