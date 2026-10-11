@@ -46,6 +46,19 @@ Inštalácia hookov: `.\hooks\install.ps1`
 Prejde `php -l` cez **celý** projekt naraz (nie len staged) — užitočné na jednorazovú
 revíziu: `php tools\lint_all.php`.
 
+## Regresie platieb a dodania publikácií
+
+```powershell
+php tools\test_publication_stripe.php
+php tools\test_publication_delivery.php
+```
+
+Testy používajú SQLite v pamäti a CLI SMTP stub; neotvárajú Checkout,
+nevykonávajú platbu ani neposielajú živú poštu. Stripe test počíta priamo
+volania SMTP: prvé potvrdenie úhrady odošle jednu správu, opakované potvrdenie
+žiadnu ďalšiu a samostatné opätovné dodanie jednu ďalšiu. Pridané druhé volanie
+`sendPublicationOrderDeliveryEmail()` pri prvom potvrdení musí test odmietnuť.
+
 ## Trunk (len vo WSL)
 
 V repe je `.trunk/trunk.yaml` pre Gitleaks, Prettier, Markdownlint,
