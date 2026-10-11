@@ -19,7 +19,7 @@ function publicationStripeTest(bool $condition, string $label): void
 }
 
 /**
- * @return array{url: string, exact: bool, query: array<string, string>}
+ * @return array{url: string, exact: bool, query: array<string, string>, host: string, path: string}
  */
 function publicationStripeCheckedUrl(float $amount, string $variableSymbol, string $email = ''): array
 {
@@ -112,9 +112,13 @@ $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $pdo->exec('CREATE TABLE publication_orders (id INTEGER PRIMARY KEY, status TEXT, paid_at TEXT, access_expires_at TEXT, payment_note TEXT)');
 $pdo->exec("INSERT INTO publication_orders (id, status) VALUES (7, 'awaiting_payment')");
 
-$deliveries = 0;
+$smtpCalls = 0;
 $GLOBALS['__smtpMaxMessageSize'] = 32 * 1024 * 1024;
-$GLOBALS['NEFRO_TEST_PUBLICATION_SMTP'] = static fn (): bool => true;
+$GLOBALS['NEFRO_TEST_PUBLICATION_SMTP'] = static function () use (&$smtpCalls): bool {
+    $smtpCalls++;
+
+    return true;
+};
 $paidOrder = [
     'id' => 7,
     'variable_symbol' => '2026000007',
@@ -125,19 +129,29 @@ $paidOrder = [
     'buyer_email' => 'buyer@example.com',
     'token_salt' => 'salt-stripe-test',
 ];
-
-publicationStripeTest(!publicationOrderIsDownloadable(['status' => 'awaiting_payment', 'access_expires_at' => null, 'download_count' => 0]), 'pred úhradou sa súbor nevydá');
-publicationStripeTest(markPublicationOrderPaid($pdo, 7, 'spárované podľa client_reference_id'), 'prvé potvrdenie už spárovanej úhrady objednávku označí ako zaplatenú');
 $token = publicationOrderToken($paidOrder);
-$firstDelivery = sendPublicationOrderDeliveryEmail($paidOrder, $token);
-if ($firstDelivery['sent']) {
-    $deliveries++;
+$confirmAndDeliver = static function (string $note) use ($pdo, $paidOrder, $token): bool {
+    if (!markPublicationOrderPaid($pdo, 7, $note)) {
+        return false;
+    }
+    $delivery = sendPublicationOrderDeliveryEmail($paidOrder, $token);
+    publicationStripeTest($delivery['sent'] === true, 'potvrdená úhrada doručí publikáciu');
+
+    return true;
+};
+
+try {
+    publicationStripeTest(!publicationOrderIsDownloadable(['status' => 'awaiting_payment', 'access_expires_at' => null, 'download_count' => 0]), 'pred úhradou sa súbor nevydá');
+    publicationStripeTest($smtpCalls === 0, 'pred potvrdením úhrady sa SMTP nevolá');
+    publicationStripeTest($confirmAndDeliver('spárované podľa client_reference_id'), 'prvé potvrdenie už spárovanej úhrady objednávku označí ako zaplatenú');
+    publicationStripeTest($smtpCalls === 1, 'prvé potvrdenie vyvolá presne jedno SMTP volanie');
+    publicationStripeTest(!$confirmAndDeliver('opakované potvrdenie'), 'druhé potvrdenie tej istej úhrady sa odmietne');
+    publicationStripeTest($smtpCalls === 1, 'odmietnuté druhé potvrdenie nevyvolá ďalšie SMTP volanie');
+    $resend = sendPublicationOrderDeliveryEmail($paidOrder, $token);
+    publicationStripeTest($resend['sent'] === true, 'ručné opätovné dodanie je možné až po úhrade a nie je druhé potvrdenie');
+    publicationStripeTest($smtpCalls === 2, 'samostatne vyžiadané opätovné dodanie vyvolá presne jedno ďalšie SMTP volanie');
+} finally {
+    unset($GLOBALS['NEFRO_TEST_PUBLICATION_SMTP'], $GLOBALS['__smtpMaxMessageSize']);
 }
-publicationStripeTest($deliveries === 1, 'doručenie vznikne až po platnom potvrdení');
-publicationStripeTest(!markPublicationOrderPaid($pdo, 7, 'opakované potvrdenie'), 'druhé potvrdenie tej istej úhrady sa odmietne');
-publicationStripeTest($deliveries === 1, 'odmietnuté druhé potvrdenie znova nedoručí');
-$resend = sendPublicationOrderDeliveryEmail($paidOrder, $token);
-publicationStripeTest($resend['sent'] === true, 'ručné opätovné dodanie je možné až po úhrade a nie je druhé potvrdenie');
-unset($GLOBALS['NEFRO_TEST_PUBLICATION_SMTP']);
 
 echo "Stripe odkazy publikácií: $checks kontrol prešlo.\n";
