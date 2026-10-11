@@ -9,7 +9,9 @@ This file provides guidance to WARP (warp.dev) when working with code in this re
 - Run PHP syntax lint across the repository: `php .\tools\lint_all.php`
 - Lint a single PHP file: `php -l .\path\to\file.php`
 - Run newsletter queue worker manually: `php .\newsletter_worker.php --limit=50 --max-attempts=5`
-- Run archive cleanup manually: `php .\archive_cleanup.php [profile_days] [avatar_days]`
+- Run archive cleanup manually: `php .\archive_cleanup.php [profile_days] [avatar_days] [access_log_days]`.
+  Production also runs it automatically every Sunday at 02:00 through cron; output is written to
+  `private/archive_cleanup_cron.log`.
 - Run safe UTF-8 checks: `pwsh -File .\smoke_test.ps1 -EncodingOnly`. Run the auth/mobile-verification flow with `-TestEnvironmentConfirmed` only after verifying an isolated test database and an SMS substitute; a localhost URL alone does not prove isolation.
 - Static analysis (PHAR, no Composer): `php tools\phpstan.phar analyse --no-progress` (baseline blocks only NEW issues); style: `php tools\php-cs-fixer.phar fix --dry-run --diff`. Install: `pwsh -File .\tools\install-dev-tools.ps1`.
 
