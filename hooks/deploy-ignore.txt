@@ -19,6 +19,7 @@
 .vscode/**
 .yamllint.yaml
 AGENTS.md
+COMPLIANCE_EVIDENCE.md
 DEPLOY.md
 PLAN_NEPHRORESOURCE.md
 PUBLIKOVANIE_*.md

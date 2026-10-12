@@ -33,6 +33,11 @@ function legalInfo(): array
         'entity'                   => 'Nefro-projekt Slovensko',
         'operator'                 => 'MUDr. Ľubomír Polaščín - Nephroctor',
         'companyId'                => '57 646 856',
+        'taxId'                    => '1047524401',
+        'businessAddress'          => 'Kvetná 944/2I, 900 41 Rovinka, okres Senec, Bratislavský kraj',
+        'phone'                    => '+421 917 370 474',
+        'registerName'             => 'Živnostenský register Slovenskej republiky',
+        'registerNumber'           => 'Okresný úrad Senec',
         'site'                     => 'nefro.polascin.net',
         'url'                      => 'https://nefro.polascin.net',
         'contactEmail'             => 'nefro@polascin.net',
@@ -40,8 +45,11 @@ function legalInfo(): array
         'jurisdiction'             => 'Slovenskej republiky (EÚ)',
         'supervisoryAuthority'     => 'Úrad na ochranu osobných údajov Slovenskej republiky',
         'supervisoryAuthorityUrl'  => 'https://dataprotection.gov.sk/sk/',
-        'effectiveDate'            => '2026-10-03',
-        'version'                  => '2.9',
+        'consumerAuthority'        => 'Inšpektorát Slovenskej obchodnej inšpekcie pre Bratislavský kraj',
+        'consumerAuthorityAddress' => 'Bajkalská 21/A, P. O. BOX č. 5, 820 07 Bratislava',
+        'consumerAuthorityUrl'     => 'https://www.soi.sk/kontakt',
+        'effectiveDate'            => '2026-10-12',
+        'version'                  => '3.0',
         'consentVersion'           => '2026-07-16',
     ];
 }
@@ -68,7 +76,7 @@ function legalDataCategories(): array
         ],
         [
             'category' => 'Klinické výsledky kalkulačiek',
-            'examples' => 'Výsledky výpočtov uložené na žiadosť lekára spolu s pacientskymi identifikátormi (meno, dátum narodenia, rodné číslo, kód poisťovne) — vkladá ich výhradne prihlásený lekár. Ide o údaje o zdraví (osobitná kategória podľa čl. 9 GDPR). Záznam vymaže ten, kto ho zadal, priamo vo svojom konte; na žiadosť používateľa ho vymaže prevádzkovateľ. Všetky záznamy sa odstránia aj pri zrušení konta.',
+            'examples' => 'Používateľ si môže uložiť vlastný orientačný výsledok. Kalkulačky ani úložisko nie sú určené na starostlivosť o konkrétneho pacienta a používateľ nesmie zadávať údaje identifikujúce inú osobu. Výsledok vymaže používateľ priamo vo svojom konte alebo prevádzkovateľ na jeho žiadosť; všetky výsledky sa odstránia aj pri zrušení konta.',
         ],
         [
             'category' => 'Lokálna história kalkulačiek pre neprihlásených',
@@ -80,7 +88,11 @@ function legalDataCategories(): array
         ],
         [
             'category' => 'Komunikácia',
-            'examples' => 'Newsletter (nové články aj novinky na portáli), notifikácie o článkoch, overovacie e-maily/SMS a príspevky v diskusii.',
+            'examples' => 'Newsletter (nové články aj novinky na portáli), notifikácie o článkoch, overovacie e-maily/SMS a príspevky v diskusii. Pri newsletteri uchovávame aj verziu a presné znenie súhlasu, spôsob a čas udelenia alebo odvolania a pseudonymizovaný odtlačok e-mailu.',
+        ],
+        [
+            'category' => 'Oznámenia nezákonného obsahu',
+            'examples' => 'Meno alebo názov a e-mail oznamovateľa, ak sa neuplatní zákonná výnimka, URL oznámeného obsahu, právny dôvod, skutkové okolnosti, rozhodnutie, jeho odôvodnenie a prípadný e-mail dotknutého používateľa.',
         ],
         [
             'category' => 'Objednávkové a fakturačné údaje (predaj publikácií)',
@@ -110,12 +122,16 @@ function legalProcessingPurposes(): array
             'basis'   => 'Plnenie zmluvy — čl. 6 ods. 1 písm. b)',
         ],
         [
-            'purpose' => 'Ukladanie a zobrazovanie výsledkov klinických kalkulačiek na žiadosť lekára',
-            'basis'   => 'Zmluva — čl. 6 ods. 1 písm. b); pri údajoch o zdraví navyše čl. 9 ods. 2 písm. h) (zdravotná starostlivosť), resp. výslovný súhlas písm. a). Pri týchto údajoch vystupuje prevádzkovateľ v postavení prevádzkovateľa (nie sprostredkovateľa ambulancie), pretože sám určuje účely a prostriedky ich spracúvania; sprostredkovateľská zmluva podľa čl. 28 sa preto neuzatvára.',
+            'purpose' => 'Voliteľné uloženie vlastného orientačného výsledku používateľom; nie na starostlivosť o pacienta, diagnostiku, monitorovanie ani rozhodovanie o liečbe',
+            'basis'   => 'Plnenie zmluvy — čl. 6 ods. 1 písm. b). Používateľ nesmie zadávať osobné ani zdravotné údaje inej osoby.',
         ],
         [
             'purpose' => 'Zasielanie newslettera a notifikácií o nových článkoch a o novinkách na portáli (nové kalkulačky, nástroje a zmeny v službe)',
             'basis'   => 'Súhlas — čl. 6 ods. 1 písm. a) (kedykoľvek odvolateľný odhlásením)',
+        ],
+        [
+            'purpose' => 'Prijatie, posúdenie a zdokumentovanie oznámenia možného nezákonného obsahu a oznámenie odôvodneného rozhodnutia',
+            'basis'   => 'Zákonná povinnosť — čl. 6 ods. 1 písm. c) GDPR v spojení s nariadením (EÚ) 2022/2065; obrana právnych nárokov — písm. f)',
         ],
         [
             'purpose' => 'Overenie e-mailovej adresy a telefónneho čísla',
@@ -352,6 +368,13 @@ function legalStoredItems(): array
 function legalUpdatesByVersion(): array
 {
     return [
+        '3.0' => [
+            'Doplnili sme úplné identifikačné a kontaktné údaje poskytovateľa a príslušný orgán dozoru nad ochranou spotrebiteľa.',
+            'Spresnili sme, že kalkulačky nie sú určené na starostlivosť o konkrétneho pacienta, diagnostiku, monitorovanie ani rozhodovanie o liečbe a nesmú sa používať ako zdravotná dokumentácia.',
+            'Zaviedli sme verziovanú evidenciu newsletterového súhlasu a jeho odvolania s automatickou štvorročnou lehotou uchovania dôkazu po odvolaní.',
+            'Doplnili sme proces oznamovania nezákonného obsahu, evidenciu rozhodnutí a poskytovanie odôvodnenia podľa aktu o digitálnych službách.',
+            'Aktualizovali sme informácie o alternatívnom riešení spotrebiteľských sporov a ukončení európskej platformy ODR.',
+        ],
         '2.9' => [
             'Portál začal predávať elektronické publikácie (e-knihy). Doplnili sme preto nové účely spracúvania — vybavenie objednávky a dodanie digitálneho obsahu (plnenie zmluvy), vedenie účtovníctva z predaja a preukázanie súhlasu s dodaním pred uplynutím lehoty na odstúpenie od zmluvy (zákonná povinnosť) a vybavenie reklamácií či obranu nárokov.',
             'Opísali sme nové kategórie údajov: objednávkové a fakturačné údaje, doklad o oboch potvrdených súhlasoch vrátane verzie obchodných podmienok, prístupový token k objednávke a evidenciu stiahnutí. Objednávku možno podať bez registrácie.',

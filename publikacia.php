@@ -531,19 +531,18 @@ markFormLoadTime('publication_order');
                     <div class="form-group pub-order-consent">
                         <label for="agree_terms" class="pub-checkbox-label">
                             <input type="checkbox" id="agree_terms" name="agree_terms" value="1" required>
-                            <span>Prečítal/-a som si <a href="obchodne-podmienky.php" target="_blank" rel="noopener">obchodné
-                                podmienky predaja publikácií</a> a <a href="/privacy" target="_blank" rel="noopener">zásady
-                                ochrany osobných údajov</a> a súhlasím s nimi. <span class="pub-required">*</span></span>
+                            <span><?= htmlspecialchars(publicationTermsConsentText(), ENT_QUOTES, 'UTF-8') ?>
+                                <a href="obchodne-podmienky.php" target="_blank" rel="noopener">Obchodné podmienky</a>
+                                a <a href="/privacy" target="_blank" rel="noopener">zásady ochrany osobných údajov</a>
+                                sú dostupné na prečítanie. <span class="pub-required">*</span></span>
                         </label>
                     </div>
 
                     <div class="form-group pub-order-consent">
                         <label for="agree_immediate_delivery" class="pub-checkbox-label">
                             <input type="checkbox" id="agree_immediate_delivery" name="agree_immediate_delivery" value="1" required>
-                            <span>Žiadam o dodanie digitálneho obsahu bezodkladne po potvrdení úhrady, teda
-                                pred uplynutím 14-dňovej lehoty na odstúpenie od zmluvy, a beriem na vedomie,
-                                že udelením tohto súhlasu <strong>stratím právo odstúpiť od zmluvy</strong>
-                                po sprístupnení súborov. <span class="pub-required">*</span></span>
+                            <span><?= htmlspecialchars(publicationDeliveryConsentText(), ENT_QUOTES, 'UTF-8') ?>
+                                <span class="pub-required">*</span></span>
                         </label>
                     </div>
 

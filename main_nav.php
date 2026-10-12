@@ -58,7 +58,7 @@ if (!function_exists('_navA')) {
                 <li><?= _navA('discussion.php', 'Diskusia', $_navCurrent === 'discussion.php') ?></li>
                 <li><?= _navA('profile.php', 'Môj profil', $_navCurrent === 'profile.php') ?></li>
                 <?php if (function_exists('isAdmin') && isAdmin()): ?>
-                    <li><?= _navA('admin.php', 'Administrácia', in_array($_navCurrent, ['admin.php', 'admin_articles.php', 'admin_discussion.php', 'admin_trials.php', 'admin_drugs.php', 'admin_providers.php', 'admin_publication_orders.php'], true)) ?></li>
+                    <li><?= _navA('admin.php', 'Administrácia', in_array($_navCurrent, ['admin.php', 'admin_articles.php', 'admin_discussion.php', 'admin_content_notices.php', 'admin_trials.php', 'admin_drugs.php', 'admin_providers.php', 'admin_publication_orders.php'], true)) ?></li>
                 <?php endif; ?>
                 <li>
                     <form action="logout.php" method="post" class="nav-logout-form">
@@ -74,6 +74,14 @@ if (!function_exists('_navA')) {
     </div>
 </nav>
 <?php if ($_navCalcActive): include 'calc_subnav.php'; endif; ?>
+<?php if (str_starts_with($_navCurrent, 'calculator_')): ?>
+<aside class="container legal-callout calculator-legal-notice" aria-label="Právne upozornenie ku kalkulačke">
+    <strong>Upozornenie:</strong> Táto kalkulačka je určená výhradne na informačné a vzdelávacie účely.
+    Nie je určená na použitie lekárom pri starostlivosti o konkrétneho pacienta ani na diagnostiku,
+    monitorovanie zdravotného stavu alebo rozhodovanie o liečbe. Výstup nenahrádza odborný úsudok,
+    validovaný zdravotnícky softvér ani individuálne klinické posúdenie.
+</aside>
+<?php endif; ?>
 <?php if ($_navToolsActive): include 'nastroj_subnav.php'; endif; ?>
 <script nonce="<?= htmlspecialchars(function_exists('getScriptNonce') ? getScriptNonce() : '', ENT_QUOTES) ?>">
 (function () {

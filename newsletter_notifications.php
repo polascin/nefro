@@ -1,6 +1,7 @@
 <?php
 
 declare(strict_types=1);
+require_once __DIR__ . '/newsletter_consent_audit.php';
 
 require_once __DIR__ . '/email_verification.php';
 require_once __DIR__ . '/site_changelog.php';
@@ -507,6 +508,9 @@ if (!function_exists('sendSubscriberVerifyEmail')) {
 
         $body = '<p style="margin:0 0 16px;">Dobrý deň,</p>'
             . '<p style="margin:0 0 16px;">Požiadali ste o odber noviniek z webu Nefro-projekt Slovensko.</p>'
+            . '<p style="margin:0 0 16px;">Potvrdením udeľujete tento súhlas: '
+            . htmlspecialchars(newsletterConsentText(), ENT_QUOTES | ENT_HTML5, 'UTF-8')
+            . ' Verzia súhlasu: ' . htmlspecialchars(NEWSLETTER_CONSENT_VERSION, ENT_QUOTES | ENT_HTML5, 'UTF-8') . '.</p>'
             . '<p style="margin:0 0 16px;">Kliknite na tlačidlo nižšie a potvrďte svoju e-mailovú adresu:</p>'
             . '<p style="margin:0 0 24px;"><a href="' . $verifyUrlHtml . '" style="display:inline-block;padding:12px 20px;background:#0055a5;color:#ffffff;border-radius:8px;text-decoration:none;font-weight:600;">Potvrdiť odber</a></p>'
             . '<p style="margin:0 0 16px;color:#475569;font-size:13px;">Ak ste o odber nepožiadali, tento e-mail ignorujte. Odkaz vyprší po 7 dňoch.</p>'

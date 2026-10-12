@@ -58,8 +58,18 @@ const PUBLICATION_FILES_DIR = __DIR__ . '/private/publications';
  * (`consent_terms_version`) — aby bolo pri spore zrejmé, aké znenie kupujúci
  * potvrdil. Pri zmene podmienok zvýš verziu a dátum spolu.
  */
-const PUBLICATION_TERMS_VERSION = '1.1';
-const PUBLICATION_TERMS_EFFECTIVE_DATE = '2026-10-03';
+const PUBLICATION_TERMS_VERSION = '1.2';
+const PUBLICATION_TERMS_EFFECTIVE_DATE = '2026-10-12';
+
+function publicationTermsConsentText(): string
+{
+    return 'Prečítal/-a som si obchodné podmienky predaja publikácií a zásady ochrany osobných údajov a súhlasím s nimi.';
+}
+
+function publicationDeliveryConsentText(): string
+{
+    return 'Výslovne súhlasím so začatím dodávania digitálneho obsahu pred uplynutím lehoty na odstúpenie od zmluvy a vyhlasujem, že som bol/-a riadne poučený/-á, že začatím dodávania digitálneho obsahu strácam právo na odstúpenie od zmluvy.';
+}
 
 /* ── Retencia údajov objednávok ───────────────────────────────────────────
  * Zámerne rôzne doby pre rôzne polia — jednotných „10 rokov“ by bolo
@@ -100,8 +110,12 @@ function publicationSeller(): array
         'address'       => 'Kvetná 944/2I, 900 41 Rovinka',
         'establishment' => 'Slovenská republika (EÚ)',
         'email'         => 'nefro@polascin.net',
+        'phone'         => '+421 917 370 474',
+        'registerName'  => 'Živnostenský register Slovenskej republiky',
+        'registerNumber'=> 'Okresný úrad Senec',
         'supervisoryAuthority'    => 'Inšpektorát Slovenskej obchodnej inšpekcie pre Bratislavský kraj',
-        'supervisoryAuthorityUrl' => 'https://www.soi.sk/',
+        'supervisoryAuthorityAddress' => 'Bajkalská 21/A, P. O. BOX č. 5, 820 07 Bratislava',
+        'supervisoryAuthorityUrl' => 'https://www.soi.sk/kontakt',
     ];
 }
 
@@ -1236,6 +1250,9 @@ function sendPublicationOrderInstructionsEmail(array $order, string $token): boo
     $formats   = implode(', ', publicationFormatLabels(publicationOrderFormats($order)));
     $title     = (string) $order['publication_title'];
     $dueDays   = PUBLICATION_PAYMENT_DAYS;
+    $consentTermsAt = (string) ($order['consent_terms_at'] ?? '');
+    $consentDeliveryAt = (string) ($order['consent_delivery_at'] ?? '');
+    $consentVersion = (string) ($order['consent_terms_version'] ?? PUBLICATION_TERMS_VERSION);
 
     $subject = 'Objednávka ' . $vs . ' — platobné pokyny · ' . EMAIL_BRAND_NAME;
 
@@ -1275,6 +1292,13 @@ function sendPublicationOrderInstructionsEmail(array $order, string $token): boo
         . 'kedykoľvek na tejto adrese:</p>'
         . '<p style="margin:0 0 16px;word-break:break-word;"><a href="' . escapeEmailHtml($orderUrl)
         . '" style="color:#0b61d1;text-decoration:underline;">' . escapeEmailHtml($orderUrl) . '</a></p>'
+        . '<h2 style="margin:20px 0 8px;font-size:17px;">Potvrdenie vašich vyhlásení</h2>'
+        . '<p style="margin:0 0 8px;">' . escapeEmailHtml(publicationTermsConsentText())
+        . ' Potvrdené: ' . escapeEmailHtml($consentTermsAt) . '.</p>'
+        . '<p style="margin:0 0 8px;">' . escapeEmailHtml(publicationDeliveryConsentText())
+        . ' Potvrdené: ' . escapeEmailHtml($consentDeliveryAt) . '.</p>'
+        . '<p style="margin:0 0 16px;color:#334155;">Verzia obchodných podmienok: '
+        . escapeEmailHtml($consentVersion) . '.</p>'
         . '<p style="margin:0;color:#64748b;font-size:14px;line-height:22px;">Objednávka je '
         . 'rezervovaná ' . $dueDays . ' dní. Ak nestihnete zaplatiť, nič sa nedeje — '
         . 'objednávku jednoducho vytvorte znova. Predávajúci: '
@@ -1290,6 +1314,10 @@ function sendPublicationOrderInstructionsEmail(array $order, string $token): boo
         . 'sumu ' . $amount . ' bankovým prevodom s uvedeným variabilným symbolom.' . "\n\n"
         . $rowsText . "\n"
         . 'Stav objednávky:' . "\n" . $orderUrl . "\n\n"
+        . "POTVRDENIE VAŠICH VYHLÁSENÍ\n"
+        . publicationTermsConsentText() . ' Potvrdené: ' . $consentTermsAt . ".\n"
+        . publicationDeliveryConsentText() . ' Potvrdené: ' . $consentDeliveryAt . ".\n"
+        . 'Verzia obchodných podmienok: ' . $consentVersion . ".\n\n"
         . 'Platbu spárujeme podľa variabilného symbolu, zvyčajne do jedného pracovného dňa '
         . 'od pripísania na účet. Potom vám pošleme publikáciu e-mailom — súbory, ktoré sa '
         . 'zmestia do prílohy, prídu priamo v nej, objemnejšie stiahnete na stránke objednávky.' . "\n\n"

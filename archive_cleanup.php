@@ -58,6 +58,8 @@ $pubDownloadDetailCleared = 0;
 $pubAccountingDeleted = 0;
 $cspReportDeleted = 0;
 $cspRateLimitDeleted = 0;
+$newsletterConsentAuditDeleted = 0;
+$contentNoticesDeleted = 0;
 
 /**
  * Vyčistí riadky staršie než cutoff z tab-delimited fallback logu.
@@ -224,6 +226,33 @@ try {
     $adminStmt->execute(['days' => $accessLogRetentionDays]);
     $adminAuditDeleted = $adminStmt->rowCount();
 
+    // Doklad o newsletterovom súhlase sa drží počas aktívneho súhlasu a
+    // najmenej štyri roky po jeho odvolaní (§ 116 ods. 5 zákona č. 452/2021 Z. z.).
+    $newsletterConsentTableExists = $pdo
+        ->query("SHOW TABLES LIKE 'newsletter_consent_audit'")
+        ->fetchColumn() !== false;
+    if ($newsletterConsentTableExists) {
+        $newsletterConsentStmt = $pdo->prepare(
+            "DELETE FROM newsletter_consent_audit
+             WHERE retain_until IS NOT NULL AND retain_until < NOW()"
+        );
+        $newsletterConsentStmt->execute();
+        $newsletterConsentAuditDeleted = $newsletterConsentStmt->rowCount();
+    }
+
+    // DSA spis sa uchováva päť rokov od poslednej procesnej zmeny kvôli
+    // preukázaniu prijatia, posúdenia a odôvodnenia rozhodnutia.
+    $contentNoticesTableExists = $pdo
+        ->query("SHOW TABLES LIKE 'content_notices'")
+        ->fetchColumn() !== false;
+    if ($contentNoticesTableExists) {
+        $contentNoticesStmt = $pdo->prepare(
+            "DELETE FROM content_notices WHERE updated_at < DATE_SUB(NOW(), INTERVAL 5 YEAR)"
+        );
+        $contentNoticesStmt->execute();
+        $contentNoticesDeleted = $contentNoticesStmt->rowCount();
+    }
+
     // ── Objednávky publikácií ──────────────────────────────────────────────
     // Zásady ochrany údajov uvádzajú pre objednávky štyri rôzne doby; bez
     // tohto bloku by to boli len sľuby. Doby žijú v publications_common.php,
@@ -344,6 +373,8 @@ echo "  Vyčistené password reset tokeny:    {$passwordResetDeleted}\n";
 echo "  Vyčistené account deletion tokeny:  {$deletionTokenDeleted}\n";
 echo "  Vyčistené account deletion audity:  {$accountAuditDeleted}\n";
 echo "  Vyčistené admin export audity:      {$adminAuditDeleted}\n";
+echo "  Vyčistené doklady newsletter súhlasu: {$newsletterConsentAuditDeleted}\n";
+echo "  Vyčistené DSA oznámenia:             {$contentNoticesDeleted}\n";
 echo "  Vyčistené fallback access logy:     {$fallbackAccessDeleted}\n";
 echo "  Vyčistené fallback deletion logy:   {$fallbackDeletionDeleted}\n";
 echo "  Vyčistené CSP reporty:              {$cspReportDeleted}\n";

@@ -55,6 +55,13 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-10-12 04:32',
+                'category' => 'portal',
+                'title' => 'Presnejšie právne informácie a oznamovanie obsahu',
+                'description' => 'Portál doplnil identifikačné a spotrebiteľské informácie, presnejšie upozornenia pri kalkulačkách a elektronický formulár na oznámenie možného nezákonného obsahu.',
+                'url' => 'terms.php',
+            ],
+            [
                 'date' => '2026-10-11 19:20',
                 'category' => 'portal',
                 'title' => 'Stabilnejšie stránkovanie článkov',

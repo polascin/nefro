@@ -44,13 +44,12 @@ include 'legal_head.php';
                     <p>
                         Obsah, kalkulačky, interaktívne nástroje, databáza liekov a register
                         klinických štúdií na tejto Službe slúžia výhradne na
-                        <strong>informačné a vzdelávacie účely a ako podporný nástroj</strong> pre
-                        zdravotníckych pracovníkov a informovaných pacientov.
-                        <strong>Nenahrádzajú odborný lekársky úsudok, vyšetrenie, diagnózu ani liečbu.</strong>
-                        Výsledky výpočtov sú orientačné a každé klinické rozhodnutie musí
-                        posúdiť kvalifikovaný zdravotnícky pracovník so znalosťou konkrétneho
-                        pacienta. V naliehavých prípadoch kontaktujte tiesňovú linku alebo
-                        svojho lekára.
+                        <strong>informačné a vzdelávacie účely</strong>.
+                        <strong>Nie sú určené na použitie lekárom pri starostlivosti o konkrétneho
+                        pacienta ani na diagnostiku, monitorovanie zdravotného stavu alebo
+                        rozhodovanie o liečbe.</strong> Nenahrádzajú odborný lekársky úsudok,
+                        vyšetrenie, diagnózu, liečbu ani validovaný zdravotnícky softvér.
+                        V naliehavých prípadoch kontaktujte tiesňovú linku alebo svojho lekára.
                     </p>
                 </section>
 
@@ -58,8 +57,13 @@ include 'legal_head.php';
                 <h3>1. S kým uzatvárate zmluvu</h3>
                 <p>
                     Službu poskytuje <strong><?= htmlspecialchars($info['operator'], ENT_QUOTES, 'UTF-8') ?></strong>
-                    (IČO <?= htmlspecialchars($info['companyId'], ENT_QUOTES, 'UTF-8') ?>),
-                    so sídlom v <?= htmlspecialchars($info['establishment'], ENT_QUOTES, 'UTF-8') ?>.
+                    (IČO <?= htmlspecialchars($info['companyId'], ENT_QUOTES, 'UTF-8') ?>,
+                    DIČ <?= htmlspecialchars($info['taxId'], ENT_QUOTES, 'UTF-8') ?>), s miestom podnikania
+                    <?= htmlspecialchars($info['businessAddress'], ENT_QUOTES, 'UTF-8') ?>.
+                    Zapísaný v <?= htmlspecialchars($info['registerName'], ENT_QUOTES, 'UTF-8') ?>,
+                    registračný orgán <?= htmlspecialchars($info['registerNumber'], ENT_QUOTES, 'UTF-8') ?>.
+                    Kontakt: <a href="mailto:<?= htmlspecialchars($info['contactEmail'], ENT_QUOTES, 'UTF-8') ?>"><?= htmlspecialchars($info['contactEmail'], ENT_QUOTES, 'UTF-8') ?></a>,
+                    telefón <?= htmlspecialchars($info['phone'], ENT_QUOTES, 'UTF-8') ?>.
                     Ak sa poskytujúca osoba zmení, túto sekciu aktualizujeme a upozorníme vás.
                 </p>
 
@@ -85,6 +89,11 @@ include 'legal_head.php';
                     konkrétny prípad (pozri zdravotnícke upozornenie vyššie).
                 </p>
                 <p>
+                    Do kalkulačiek ani uložených výsledkov nesmiete zadávať osobné alebo
+                    zdravotné údaje inej osoby. Funkcia uloženia slúži iba na vaše vlastné
+                    orientačné poznámky a nesmie sa používať ako zdravotná dokumentácia.
+                </p>
+                <p>
                     Obsah portálu zostáva <strong>voľne dostupný bez platobnej steny</strong>.
                     Samostatne predávame len <strong>elektronické publikácie (e-knihy)</strong>,
                     ktoré ten istý obsah zostavujú do jedného zväzku. Na ich kúpu sa vzťahujú
@@ -93,6 +102,14 @@ include 'legal_head.php';
                     digitálneho obsahu, odstúpenie od zmluvy, reklamácie a alternatívne
                     riešenie sporov. Tieto Podmienky používania upravujú prístup k portálu
                     a ku kontu, nie kúpnu zmluvu.
+                </p>
+                <p>
+                    <strong>Prístupnosť:</strong> poskytovateľ má podľa stavu k 12. októbru 2026
+                    jedného pracovníka, nulový obrat a zatiaľ nemá uzavretú prvú bilanciu.
+                    Na základe týchto údajov sa predbežne považuje za mikropodnik poskytujúci
+                    služby, na ktorý sa vzťahuje výnimka podľa zákona č. 351/2022 Z. z.
+                    Bez ohľadu na výnimku portál dobrovoľne sleduje WCAG 2.1 AA. Status sa
+                    prehodnotí po prvej účtovnej závierke a pri každej podstatnej zmene veľkosti.
                 </p>
 
                 <!-- 4. VAŠE KONTO -->
@@ -237,13 +254,29 @@ include 'legal_head.php';
                     vlastníctvo, vyhlásenia, zodpovednosť), platia aj po ukončení.
                 </p>
 
+                <h3>11a. Oznámenie a moderovanie nezákonného obsahu</h3>
+                <p>
+                    Nezákonný obsah možno oznámiť cez <a href="content_report.php">elektronický
+                    formulár</a>. Oznámenie musí obsahovať presnú URL, vysvetlenie nezákonnosti
+                    a vyhlásenie o dobrej viere. Oznámenia posudzujeme včas, objektívne a bez
+                    svojvôle. Pri obmedzení obsahu poskytneme dotknutému používateľovi jasné
+                    odôvodnenie; ohlasovateľovi s uvedeným kontaktom oznámime výsledok a možnosti
+                    nápravy. Kontaktné miesto podľa DSA je
+                    <a href="mailto:<?= htmlspecialchars($info['contactEmail'], ENT_QUOTES, 'UTF-8') ?>"><?= htmlspecialchars($info['contactEmail'], ENT_QUOTES, 'UTF-8') ?></a>.
+                </p>
+
                 <!-- 12. ROZHODNÉ PRÁVO A SPORY -->
                 <h3>12. Rozhodné právo a spory</h3>
                 <p>
                     Tieto Podmienky sa riadia právom <?= htmlspecialchars($info['jurisdiction'], ENT_QUOTES, 'UTF-8') ?>,
                     bez vplyvu na záväzné spotrebiteľské pravidlá vašej krajiny pobytu.
-                    Spotrebitelia v EHP a UK môžu využiť aj príslušné mechanizmy online riešenia
-                    sporov a podať žalobu na svojom miestnom súde.
+                    Spotrebiteľ sa môže po predchádzajúcej žiadosti o nápravu obrátiť na subjekt
+                    alternatívneho riešenia spotrebiteľských sporov, najmä na Slovenskú obchodnú
+                    inšpekciu. Európska platforma ODR bola 20. júla 2025 ukončená, preto na ňu
+                    neodkazujeme. Aktuálne informácie a elektronické podanie sú dostupné na
+                    <a href="https://www.soi.sk/sk/Alternativne-riesenie-spotrebitelskych-sporov.soi"
+                       target="_blank" rel="noopener noreferrer">stránke SOI o alternatívnom riešení sporov</a>.
+                    Tým nie je dotknuté právo obrátiť sa na príslušný súd.
                 </p>
 
                 <!-- 13. ZMENY PODMIENOK -->
@@ -259,6 +292,11 @@ include 'legal_head.php';
                 <p>
                     Otázky k týmto Podmienkam:
                     <a href="mailto:<?= htmlspecialchars($info['contactEmail'], ENT_QUOTES, 'UTF-8') ?>"><?= htmlspecialchars($info['contactEmail'], ENT_QUOTES, 'UTF-8') ?></a>.
+                </p>
+                <p>
+                    Orgán dozoru nad ochranou spotrebiteľa:
+                    <strong><?= htmlspecialchars($info['consumerAuthority'], ENT_QUOTES, 'UTF-8') ?></strong>,
+                    <?= htmlspecialchars($info['consumerAuthorityAddress'], ENT_QUOTES, 'UTF-8') ?>.
                 </p>
 
                 <?php $legalCurrent = 'terms'; include 'legal_related.php'; ?>

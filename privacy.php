@@ -197,6 +197,12 @@ include 'legal_head.php';
                     <li><strong>Bezpečnostné záznamy (pokusy o prihlásenie, rate-limiting):</strong> priebežne mazané po uplynutí ich účelu.</li>
                     <li><strong>GA4 dáta:</strong> používateľské a udalostné údaje viazané na pseudonymný identifikátor sa v Google Analytics uchovávajú najviac 14 mesiacov.</li>
                     <li><strong>Cookie súhlas:</strong> 365 dní (po uplynutí sa banner znova zobrazí).</li>
+                    <li><strong>Doklad o newsletterovom súhlase:</strong> počas aktívneho odberu
+                        a najmenej 4 roky po odvolaní súhlasu. Evidujeme verziu a text súhlasu,
+                        spôsob a čas udalosti a pseudonymizovaný odtlačok e-mailu; po uplynutí
+                        lehoty ho automaticky odstráni retenčný cron.</li>
+                    <li><strong>Oznámenie nezákonného obsahu a rozhodnutie:</strong> 5 rokov od
+                        poslednej procesnej zmeny; potom ho automaticky odstráni retenčný cron.</li>
                 </ul>
 
                 <p>

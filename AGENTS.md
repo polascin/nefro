@@ -49,8 +49,8 @@ This file provides guidance to WARP (warp.dev) when working with code in this re
 
 Three coordinated layers — keep their agent lists in sync when editing any one:
 
-1. `robots.txt` — declarative; blocks SEO harvesters and AI *training* crawlers.
-   AI *search* agents (OAI-SearchBot, ChatGPT-User, Claude-User, PerplexityBot)
+1. `robots.txt` — declarative; blocks SEO harvesters and AI _training_ crawlers.
+   AI _search_ agents (OAI-SearchBot, ChatGPT-User, Claude-User, PerplexityBot)
    stay allowed: they cite and send readers back.
 2. `.htaccess` — User-Agent blocklist evaluated before PHP starts, plus
    `X-Robots-Tag: noai, noimageai` (`append`, never `set` — pages set their own).
@@ -99,7 +99,7 @@ valid token changes:
 
 A token is **not** an access grant: it unlocks no content, data, or admin, so
 leaking it only lets someone scrape at a higher rate. Hence short TTLs (max 7
-days, enforced on both minting *and* verification so a long-dated signature
+days, enforced on both minting _and_ verification so a long-dated signature
 cannot outlive the policy), the tool name in every log line, and rotation by
 changing the key.
 
@@ -117,7 +117,7 @@ an expired own token from a forgery attempt) and falls back to the normal tier
 
 ### 2c) TDM / AI-training reservation
 
-Blocking crawlers controls *access*; this layer reserves *rights*. Under
+Blocking crawlers controls _access_; this layer reserves _rights_. Under
 § 51c of the Slovak Copyright Act (185/2015 Z. z., transposing Art. 4 of
 Directive (EU) 2019/790) the general text-and-data-mining exception applies
 only where the use has not been **expressly reserved** — so the reservation is
@@ -127,12 +127,12 @@ Note § 51b (scientific-research TDM) cannot be reserved; do not claim otherwise
 The same reservation is declared through four independent channels. **Change
 them together or they will contradict each other:**
 
-| Channel | File |
-| --- | --- |
-| `/.well-known/tdmrep.json` (W3C TDMRep) | `.well-known/tdmrep.json` |
-| `tdm-reservation` / `tdm-policy` / `Content-Usage` HTTP headers | `.htaccess` |
-| `<meta name="tdm-reservation">`, `noai, noimageai` | `head_meta.php` + `legal_head.php` (právne stránky) |
-| Binding legal text | `terms.php#tdm` |
+| Channel                                                         | File                                                |
+| --------------------------------------------------------------- | --------------------------------------------------- |
+| `/.well-known/tdmrep.json` (W3C TDMRep)                         | `.well-known/tdmrep.json`                           |
+| `tdm-reservation` / `tdm-policy` / `Content-Usage` HTTP headers | `.htaccess`                                         |
+| `<meta name="tdm-reservation">`, `noai, noimageai`              | `head_meta.php` + `legal_head.php` (právne stránky) |
+| Binding legal text                                              | `terms.php#tdm`                                     |
 
 `tdm-policy.json` is the ODRL offer the first three point at (`tdm:mine` with an
 `obtainConsent` duty). `Content-Usage: train-ai=n, search=y` follows the IETF

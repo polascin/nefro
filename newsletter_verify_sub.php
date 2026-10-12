@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/db_config.php';
+require_once __DIR__ . '/newsletter_consent_audit.php';
 if (!isset($pdo) || !$pdo instanceof \PDO) {
     throw new \RuntimeException('Databázové pripojenie nie je dostupné.');
 }
@@ -67,7 +68,7 @@ if ($requestMethod === 'POST') {
                 $pdo->beginTransaction();
 
                 $stmt = $pdo->prepare(
-                    "SELECT id, verified_at
+                    "SELECT id, email, verified_at
                      FROM newsletter_subscribers
                      WHERE verify_token = :token_hash
                        AND updated_at >= DATE_SUB(NOW(), INTERVAL 7 DAY)
@@ -88,6 +89,16 @@ if ($requestMethod === 'POST') {
                              verify_token = NULL
                          WHERE id = :id"
                     )->execute(['id' => (int) $subscriber['id']]);
+                    if (!$wasVerified) {
+                        recordNewsletterConsentEvent(
+                            $pdo,
+                            'subscriber',
+                            (int) $subscriber['id'],
+                            (string) $subscriber['email'],
+                            'granted',
+                            'double_opt_in'
+                        );
+                    }
                     $pdo->commit();
 
                     try {

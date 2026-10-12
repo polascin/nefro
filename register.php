@@ -2,6 +2,7 @@
 declare(strict_types=1);
 require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/db_config.php';
+require_once __DIR__ . '/newsletter_consent_audit.php';
 /** @var \PDO $pdo */
 require_once __DIR__ . '/avatar_upload.php';
 require_once __DIR__ . '/email_verification.php';
@@ -356,6 +357,9 @@ if ($requestMethod === 'POST') {
                         $registrationInserted = true;
 
                         $newUserId = (int) $pdo->lastInsertId();
+                        if ($newsletterConsent === 1) {
+                            recordNewsletterConsentEvent($pdo, 'user', $newUserId, $email, 'granted', 'registration');
+                        }
                         $newUserRow = null;
                         $userFetchStmt = $pdo->prepare("SELECT * FROM users WHERE id = :id LIMIT 1");
                         $userFetchStmt->execute(['id' => $newUserId]);
@@ -503,7 +507,7 @@ if ($requestMethod === 'POST') {
 
                     <div class="form-check">
                         <input type="checkbox" id="newsletter_consent" name="newsletter_consent" value="1" <?= isset($_POST['newsletter_consent']) ? 'checked' : '' ?>>
-                        <label for="newsletter_consent">Chcem dostávať nové odborné články a novinky z portálu do e-mailu — nové štúdie, zmeny v odporúčaniach, praktické závery pre prax a nové kalkulačky či nástroje. Zadarmo, kedykoľvek sa odhlásite.</label>
+                        <label for="newsletter_consent"><?= htmlspecialchars(newsletterConsentText(), ENT_QUOTES, 'UTF-8') ?> Verzia <?= htmlspecialchars(NEWSLETTER_CONSENT_VERSION, ENT_QUOTES, 'UTF-8') ?>.</label>
                     </div>
 
                     <details class="register-optional">

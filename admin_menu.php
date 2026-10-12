@@ -11,6 +11,7 @@ $adminNavItems = [
     'admin_newsletter.php' => 'Newsletter',
     'admin_legal_notice.php' => 'Právne oznámenia',
     'admin_discussion.php' => 'Diskusia',
+    'admin_content_notices.php' => 'Oznámenia obsahu',
 ];
 $currentPage = basename($_SERVER['PHP_SELF']);
 $logoutLabel = 'Odhlásiť sa';

@@ -4,6 +4,7 @@ require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
 require_once __DIR__ . '/newsletter_notifications.php';
+require_once __DIR__ . '/newsletter_consent_audit.php';
 
 $requestMethod = strtoupper((string) ($_SERVER['REQUEST_METHOD'] ?? 'GET'));
 if (!in_array($requestMethod, ['GET', 'POST'], true)) {
@@ -59,6 +60,7 @@ if ($isPost && !validateCsrfToken((string) ($_POST['csrf_token'] ?? ''))) {
             );
             $cancelStmt->execute(['sid' => $subId]);
             $cancelled = (int) $cancelStmt->rowCount();
+            recordNewsletterConsentEvent($pdo, 'subscriber', $subId, (string) $sub['email'], 'withdrawn', 'unsubscribe_link');
             $pdo->commit();
 
             $status  = 'success';
@@ -101,6 +103,7 @@ if ($isPost && !validateCsrfToken((string) ($_POST['csrf_token'] ?? ''))) {
             );
             $cancelStmt->execute(['sid' => $subId]);
             $cancelled = (int) $cancelStmt->rowCount();
+            recordNewsletterConsentEvent($pdo, 'subscriber', $subId, (string) $sub['email'], 'withdrawn', 'unsubscribe_legacy_link');
             $pdo->commit();
 
             $status  = 'success';
@@ -154,6 +157,7 @@ if ($isPost && !validateCsrfToken((string) ($_POST['csrf_token'] ?? ''))) {
             $cancelStmt->execute(['uid' => $uid]);
 
             $cancelledQueueItems = (int) $cancelStmt->rowCount();
+            recordNewsletterConsentEvent($pdo, 'user', $uid, (string) $user['email'], 'withdrawn', 'unsubscribe_link');
             $pdo->commit();
 
             $status = 'success';

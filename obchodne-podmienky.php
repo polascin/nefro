@@ -83,7 +83,12 @@ include 'legal_head.php';
                 <p>
                     Kontakt pre objednávky, otázky, reklamácie aj odstúpenie od zmluvy:
                     <a href="mailto:<?= htmlspecialchars($seller['email'], ENT_QUOTES, 'UTF-8') ?>"><?= htmlspecialchars($seller['email'], ENT_QUOTES, 'UTF-8') ?></a>.
+                    Telefón: <?= htmlspecialchars($seller['phone'], ENT_QUOTES, 'UTF-8') ?>.
                     Komunikácia prebieha v slovenčine.
+                </p>
+                <p>
+                    Zapísaný v <?= htmlspecialchars($seller['registerName'], ENT_QUOTES, 'UTF-8') ?>,
+                    registračný orgán <?= htmlspecialchars($seller['registerNumber'], ENT_QUOTES, 'UTF-8') ?>.
                 </p>
                 <p>
                     <strong><?= htmlspecialchars($seller['vatNote'], ENT_QUOTES, 'UTF-8') ?></strong>
@@ -249,12 +254,12 @@ include 'legal_head.php';
                 </p>
                 <div class="info-box-yellow">
                     <p>
-                        <strong>Pri digitálnom obsahu toto právo zaniká</strong> jeho dodaním,
-                        ak ste výslovne požiadali o dodanie pred uplynutím 14-dňovej lehoty
-                        a boli ste poučení, že tým právo na odstúpenie stratíte. Práve tento
-                        súhlas udeľujete zaškrtnutím príslušného políčka v objednávkovom
-                        formulári — bez neho by vám predávajúci nemohol sprístupniť súbory
-                        pred uplynutím tejto lehoty.
+                        <strong>Pri digitálnom obsahu toto právo zaniká začatím dodávania</strong>,
+                        ak ste pred uplynutím 14-dňovej lehoty udelili výslovný súhlas so
+                        začatím dodávania, vyhlásili, že ste boli riadne poučení o strate práva,
+                        a predávajúci vám poskytol potvrdenie uzavretej zmluvy na trvanlivom
+                        médiu. Obe vyhlásenia, ich čas a verziu podmienok dostanete v e-maile
+                        s potvrdením objednávky. Bez týchto podmienok právo nezaniká.
                     </p>
                 </div>
                 <p>
@@ -280,12 +285,15 @@ include 'legal_head.php';
                     s uvedením variabilného symbolu a popisom problému.
                 </p>
                 <p>
-                    Reklamáciu predávajúci vybaví bezodkladne, najneskôr do 30 dní od jej
-                    uplatnenia. Prednostným riešením je dodanie bezchybného súboru alebo iného
-                    formátu; ak to nie je možné, vráti predávajúci zaplatenú sumu.
-                    Predávajúci nezodpovedá za to, že súbor nepodporuje vaše konkrétne
-                    zariadenie alebo aplikácia — formát si prosím vyberte podľa opisu
-                    na stránke publikácie, a ak si nie ste istí, napíšte nám pred nákupom.
+                    Spotrebiteľ má právo žiadať uvedenie digitálneho obsahu do súladu. Predávajúci
+                    nápravu zabezpečí bezplatne, v primeranej lehote a bez závažných ťažkostí.
+                    Ak náprava nie je možná, nebola vykonaná riadne alebo ide o závažnú vadu,
+                    spotrebiteľ má podľa zákonných podmienok právo na primerané zníženie ceny
+                    alebo odstúpenie od zmluvy. Tým nie je dotknuté právo na náhradu škody.
+                    Predávajúci poskytne aj aktualizácie potrebné na zachovanie súladu počas
+                    doby, počas ktorej ich môže spotrebiteľ rozumne očakávať. Pri posudzovaní
+                    kompatibility sa vychádza z technických požiadaviek oznámených pred nákupom;
+                    toto ustanovenie neobmedzuje zákonné práva spotrebiteľa.
                 </p>
                 <p>
                     Predávajúci nezodpovedá za rozhodnutia prijaté na základe obsahu publikácie;
@@ -310,6 +318,8 @@ include 'legal_head.php';
                     (<a href="<?= htmlspecialchars($seller['supervisoryAuthorityUrl'], ENT_QUOTES, 'UTF-8') ?>"
                         target="_blank" rel="noopener noreferrer">soi.sk</a>),
                     príslušný podľa miesta podnikania predávajúceho.
+                    Adresa orgánu dozoru:
+                    <?= htmlspecialchars($seller['supervisoryAuthorityAddress'], ENT_QUOTES, 'UTF-8') ?>.
                 </p>
 
                 <h3>11. Osobné údaje</h3>

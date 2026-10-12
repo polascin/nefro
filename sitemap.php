@@ -341,6 +341,12 @@ $urls = [
         'changefreq' => 'yearly',
         'priority'   => '0.3',
     ],
+    [
+        'loc'        => $baseUrl . 'content_report.php',
+        'lastmod'    => _sitemapLastmod('content_report.php'),
+        'changefreq' => 'yearly',
+        'priority'   => '0.3',
+    ],
 ];
 
 // Predajné stránky publikácií — katalóg je staticky vyššie, detaily sú v kóde

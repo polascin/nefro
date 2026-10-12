@@ -2,6 +2,7 @@
 declare(strict_types=1);
 require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/db_config.php';
+require_once __DIR__ . '/newsletter_consent_audit.php';
 /** @var \PDO $pdo */
 require_once __DIR__ . '/avatar_upload.php';
 require_once __DIR__ . '/phone_utils.php';
@@ -335,6 +336,7 @@ if ($requestMethod === 'POST' && ($_POST['action'] ?? '') !== 'delete_account') 
             }
         }
         $data['newsletter_consent'] = isset($_POST['newsletter_consent']) ? 1 : 0;
+        $previousNewsletterConsent = (int) ($user['newsletter_consent'] ?? 0);
         $data['theme_auto'] = isset($_POST['theme_auto']) ? 1 : 0;
 
         // Zmena hesla
@@ -478,6 +480,17 @@ if ($requestMethod === 'POST' && ($_POST['action'] ?? '') !== 'delete_account') 
                     $profileSaveCompleted = true;
                 } else {
                     $pdo->beginTransaction();
+
+                    if ($previousNewsletterConsent !== (int) $data['newsletter_consent']) {
+                        recordNewsletterConsentEvent(
+                            $pdo,
+                            'user',
+                            $user_id,
+                            (string) $user['email'],
+                            (int) $data['newsletter_consent'] === 1 ? 'granted' : 'withdrawn',
+                            'profile'
+                        );
+                    }
 
                     // Archivujeme iba predchádzajúce hodnoty reálne zmenených
                     // profilových polí; autentifikačné a 2FA údaje sú mimo allowlistu.
@@ -796,7 +809,7 @@ if ($requestMethod === 'POST' && $success && empty($errors)) {
 
                 <div class="form-check">
                     <input type="checkbox" id="newsletter_consent" name="newsletter_consent" value="1" <?= $user['newsletter_consent'] ? 'checked' : '' ?>>
-                    <label for="newsletter_consent">Chcem dostávať nové odborné články a novinky z portálu priamo do e-mailu (bezplatný odber, odhlásite sa kedykoľvek)</label>
+                    <label for="newsletter_consent"><?= htmlspecialchars(newsletterConsentText(), ENT_QUOTES, 'UTF-8') ?> Verzia <?= htmlspecialchars(NEWSLETTER_CONSENT_VERSION, ENT_QUOTES, 'UTF-8') ?>.</label>
                 </div>
 
                 <div class="form-actions">
