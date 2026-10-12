@@ -58,5 +58,6 @@ complianceTest($adminCode !== false && str_contains($adminCode, 'logAdminAction'
 complianceTest($adminCode !== false && str_contains($adminCode, 'affected_email'), 'DSA proces nevie oznámiť dôvody dotknutému používateľovi.');
 complianceTest($reportCode !== false && str_contains($reportCode, 'contact_exemption'), 'DSA formulár nepokrýva výnimku z kontaktných údajov.');
 complianceTest($migrationCode !== false && str_contains($migrationCode, "PHP_SAPI !== 'cli'"), 'Migrácia nie je obmedzená na CLI.');
+complianceTest($migrationCode !== false && str_contains($migrationCode, 'array_diff($required, $columns)'), 'Migrácia po vytvorení neoveruje úplnosť schémy.');
 
 echo "Compliance controls: {$checks} PASS\n";

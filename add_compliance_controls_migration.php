@@ -45,4 +45,25 @@ $pdo->exec("CREATE TABLE IF NOT EXISTS content_notices (
     INDEX idx_content_notices_status_created (status, created_at)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci");
 
-echo "Compliance tables are ready.\n";
+$requiredColumns = [
+    'newsletter_consent_audit' => [
+        'id', 'subject_type', 'subject_id', 'email_digest', 'event',
+        'consent_version', 'consent_text', 'source', 'occurred_at', 'retain_until',
+    ],
+    'content_notices' => [
+        'id', 'reporter_name', 'reporter_email', 'contact_exemption', 'content_url',
+        'legal_basis', 'explanation', 'good_faith', 'status', 'decision',
+        'decision_reason', 'affected_email', 'decided_at', 'created_at', 'updated_at',
+    ],
+];
+
+foreach ($requiredColumns as $table => $required) {
+    $columns = $pdo->query("SHOW COLUMNS FROM `{$table}`")->fetchAll(PDO::FETCH_COLUMN);
+    $missing = array_values(array_diff($required, $columns));
+    if ($missing !== []) {
+        throw new RuntimeException("Incomplete table {$table}; missing: " . implode(', ', $missing));
+    }
+    echo $table . ': ' . count($columns) . " columns verified.\n";
+}
+
+echo "Compliance tables are ready and verified.\n";
