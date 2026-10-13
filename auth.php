@@ -302,6 +302,7 @@ function hashAppPassword(string $password): string {
  * @return bool True ak je v relácii platný user_id
  */
 if (!function_exists('isLoggedIn')) {
+    /** @phpstan-impure Výsledok závisí od stavu relácie, ktorý sa počas požiadavky mení. */
     function isLoggedIn(): bool {
         return isset($_SESSION['user_id']) && (int) $_SESSION['user_id'] > 0;
     }
