@@ -55,6 +55,20 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-10-13 15:30',
+                'category' => 'content',
+                'title' => 'Dve talianske vydania SK Nefro Báza 1',
+                'description' => 'Do katalógu pribudlo talianske plné vydanie s 387 odbornými článkami a talianske kompendium. Obe sú dostupné vo formátoch PDF, EPUB, AZW3, DOCX a ODT.',
+                'url' => 'publikacie.php',
+            ],
+            [
+                'date' => '2026-10-13 15:25',
+                'category' => 'content',
+                'title' => 'Talianske vydanie bezplatnej publikácie',
+                'description' => 'Publikácia SK Nefro: Dimostrato, probabile, aperto je bezplatne dostupná v italčine vo formátoch PDF, EPUB, AZW3, DOCX a ODT, bez registrácie a objednávky.',
+                'url' => 'publikacie.php',
+            ],
+            [
                 'date' => '2026-10-12 04:32',
                 'category' => 'portal',
                 'title' => 'Presnejšie právne informácie a oznamovanie obsahu',

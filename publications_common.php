@@ -248,6 +248,25 @@ function freePublications(): array
             ],
             'excerpt' => 'Nemecké vydanie 17 rozšírených úvodníkov, ktoré spájajú 387 odborných článkov a oddeľujú doložené, pravdepodobné a otvorené otázky.',
         ],
+        [
+            'title' => 'SK Nefro: Dimostrato, probabile, aperto',
+            'subtitle' => 'Nefrologia e medicina interna a ottobre 2026',
+            'language' => 'italčina',
+            'language_code' => 'it',
+            'pages' => 101,
+            'published_on' => '2026-10-13',
+            'cover_small' => 'img/publikacie/sk-nefro-dimostrato-probabile-aperto-obalka-600.jpg',
+            'file' => 'download_free_publication.php?edition=it&format=pdf',
+            'download_name' => 'SK-Nefro-Dimostrato-probabile-aperto.pdf',
+            'downloads' => [
+                ['code' => 'pdf', 'label' => 'PDF', 'file' => 'download_free_publication.php?edition=it&format=pdf', 'download_name' => 'SK-Nefro-Dimostrato-probabile-aperto.pdf'],
+                ['code' => 'epub', 'label' => 'EPUB', 'file' => 'download_free_publication.php?edition=it&format=epub', 'download_name' => 'SK-Nefro-Dimostrato-probabile-aperto.epub'],
+                ['code' => 'azw3', 'label' => 'AZW3 (Kindle)', 'file' => 'download_free_publication.php?edition=it&format=azw3', 'download_name' => 'SK-Nefro-Dimostrato-probabile-aperto.azw3'],
+                ['code' => 'docx', 'label' => 'DOCX', 'file' => 'download_free_publication.php?edition=it&format=docx', 'download_name' => 'SK-Nefro-Dimostrato-probabile-aperto.docx'],
+                ['code' => 'odt', 'label' => 'ODT', 'file' => 'download_free_publication.php?edition=it&format=odt', 'download_name' => 'SK-Nefro-Dimostrato-probabile-aperto.odt'],
+            ],
+            'excerpt' => 'Talianske vydanie 17 rozšírených úvodníkov, ktoré spájajú 387 odborných článkov a oddeľujú dokázané, pravdepodobné a otvorené otázky.',
+        ],
     ];
 }
 
@@ -528,6 +547,87 @@ function publications(): array
             ],
             'audience'     => 'Nemecky hovoriaci lekári, ktorí potrebujú rýchlu orientáciu pri vizite, '
                 . 'v ambulancii alebo pred seminárom, a čitatelia nemeckého plného vydania.',
+        ],
+        [
+            'slug'        => 'sk-nefro-baza-1-it',
+            'title'       => 'SK Nefro Báza 1 — Edizione italiana',
+            'subtitle'    => 'Raccolta di articoli specialistici da nefro.polascin.net, aprile – ottobre 2026',
+            'author'      => 'MUDr. Ľubomír Polaščín',
+            'edition'     => '1. vydanie, október 2026',
+            'published_on' => '2026-10-13',
+            'language'    => 'italčina',
+            'language_code' => 'it',
+            'pages'       => 1853,
+            'articles'    => 387,
+            'words'       => 722612,
+            'images'      => 393,
+            'cover'       => 'img/publikacie/sk-nefro-baza-1-it-obalka.jpg',
+            'cover_small' => 'img/publikacie/sk-nefro-baza-1-it-obalka-600.jpg',
+            'formats'     => ['pdf', 'epub', 'azw3', 'docx', 'odt'],
+            'is_available' => true,
+            'excerpt'     => 'Taliansky preklad odborného ročníka portálu — 387 článkov o chronickej '
+                . 'chorobe obličiek, dialýze, transplantácii a internej medicíne. Vhodné na '
+                . 'zdieľanie s taliansky hovoriacimi kolegami a na odborné štúdium.',
+            'description'  => [
+                '<strong>Talianske vydanie</strong> prvého zväzku série <em>SK Nefro Báza</em>. '
+                . 'Obsahuje 387 odborných článkov, ktoré na portáli <em>Nefro-projekt Slovensko</em> '
+                . 'vyšli od apríla do začiatku októbra 2026, preložených do italčiny vrátane praktických ťahákov.',
+                'Obsah zodpovedá slovenskému vydaniu: rovnaké články, rovnaké zoradenie, '
+                . 'citácie a odkazy na zdroje. Popularizačné texty pre pacientov nie sú zaradené '
+                . 'ani v slovenskom, ani v talianskom vydaní.',
+                'Pri každom článku je odkaz na jeho slovenskú online verziu. Odborná terminológia '
+                . 'a jazykové konvencie sú prispôsobené italčine.',
+            ],
+            'highlights'   => [
+                '387 článkov na 1 853 stranách — odborný ročník v italčine',
+                '393 ilustrácií a schém v plnom rozlíšení',
+                'Pri každom článku odkaz na slovenskú online verziu',
+                'Talianska odborná terminológia a jazykové konvencie',
+                'Zachované citácie a odkazy na primárne zdroje (PubMed, Crossref)',
+                'Bez DRM — kúpený súbor je váš, čítajte ho na čomkoľvek',
+            ],
+            'audience'     => 'Taliansky hovoriaci nefrológovia, internisti a lekári v špecializačnej príprave '
+                . 'aj slovenskí odborníci, ktorí potrebujú obsah v italčine na štúdium alebo zdieľanie.',
+        ],
+        [
+            'slug'        => 'sk-nefro-baza-1-kompendium-it',
+            'title'       => 'SK Nefro Báza 1 Compendio — Edizione italiana',
+            'subtitle'    => 'Abstract e sintesi degli articoli specialistici di nefro.polascin.net, aprile – ottobre 2026',
+            'author'      => 'MUDr. Ľubomír Polaščín',
+            'edition'     => '1. vydanie, október 2026',
+            'published_on' => '2026-10-13',
+            'language'    => 'italčina',
+            'language_code' => 'it',
+            'pages'       => 290,
+            'articles'    => 387,
+            'words'       => 154412,
+            'images'      => 0,
+            'cover'       => 'img/publikacie/sk-nefro-baza-1-kompendium-it-obalka.jpg',
+            'cover_small' => 'img/publikacie/sk-nefro-baza-1-kompendium-it-obalka-600.jpg',
+            'formats'     => ['pdf', 'epub', 'azw3', 'docx', 'odt'],
+            'is_available' => true,
+            'excerpt'     => 'Talianske vydanie kompendia — 387 článkov ako abstrakt a stručné zhrnutie, '
+                . 'doplnené syntézou na začiatku každej zo 16 kapitol. Celý ročník na 290 stranách.',
+            'description'  => [
+                '<strong>Talianske vydanie kompendia</strong> prvého zväzku série <em>SK Nefro Báza</em>. '
+                . 'Každý z 387 odborných článkov je spracovaný do abstraktu a stručného zhrnutia '
+                . 's kľúčovými číslami, limitmi dôkazov a praktickým záverom.',
+                'Každú zo 16 kapitol otvára <strong>syntéza kľúčových posolstiev</strong>, ktorá spája '
+                . 'jednotlivé články a odkazuje na čísla zdrojových textov. Číslovanie je zhodné '
+                . 's talianskym plným vydaním.',
+                'Kompendium <strong>nepreberá zoznamy literatúry, tabuľky ani obrázky</strong>. Slúži ako '
+                . 'rýchla mapa ročníka; pri klinickom rozhodovaní, citovaní alebo výučbe treba použiť plné znenie.',
+            ],
+            'highlights'   => [
+                '387 článkov na 290 stranách — celý odborný ročník v skratke',
+                'Pri každom článku abstrakt a stručné zhrnutie s kľúčovými číslami',
+                'Syntéza kľúčových posolstiev na začiatku každej zo 16 kapitol',
+                'Číslovanie zhodné s talianskym plným vydaním',
+                'Pri každom článku odkaz na slovenskú online verziu',
+                'Bez DRM — kúpený súbor je váš, čítajte ho na čomkoľvek',
+            ],
+            'audience'     => 'Taliansky hovoriaci lekári, ktorí potrebujú rýchlu orientáciu pri vizite, '
+                . 'v ambulancii alebo pred seminárom, a čitatelia talianskeho plného vydania.',
         ],
     ];
 }

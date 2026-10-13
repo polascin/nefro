@@ -146,7 +146,7 @@ $freeCatalogue = freePublications();
                         <p class="pub-section__eyebrow">Celý ročník</p>
                         <h2 id="pub-extended-heading">Rozšírené vydania</h2>
                     </div>
-                    <p>Plné a kompendiálne vydania v slovenčine aj angličtine.</p>
+                    <p>Plné a kompendiálne vydania v slovenčine, angličtine, nemčine a italčine.</p>
                 </div>
 
             <?php if ($catalogue === []): ?>

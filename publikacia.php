@@ -377,6 +377,17 @@ markFormLoadTime('publication_order');
                             <p>Fragen auf Deutsch senden Sie bitte an
                                <a href="mailto:<?= htmlspecialchars($seller['email'], ENT_QUOTES) ?>"><?= htmlspecialchars($seller['email']) ?></a>.</p>
                         </div>
+                    <?php elseif ((string) $publication['language_code'] === 'it'): ?>
+                        <div class="info-box-blue pub-hero__lang-note" lang="it">
+                            <p><strong>Questa edizione è in italiano.</strong>
+                               Il modulo d'ordine qui sotto è in slovacco: scelga i formati,
+                               inserisca il suo indirizzo e-mail e invii il modulo.
+                               Le istruzioni di pagamento arriveranno per e-mail; si paga con
+                               bonifico bancario o con carta. I file vengono consegnati dopo la
+                               conferma del pagamento, di norma entro un giorno lavorativo.</p>
+                            <p>Per domande in italiano scriva a
+                               <a href="mailto:<?= htmlspecialchars($seller['email'], ENT_QUOTES) ?>"><?= htmlspecialchars($seller['email']) ?></a>.</p>
+                        </div>
                     <?php endif; ?>
                 </div>
             </section>
