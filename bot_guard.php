@@ -234,25 +234,40 @@ function botGuardMutateState(string $identity, callable $mutator): array
 
     $state = [];
     try {
-        @chmod($path, 0600);
-        if (flock($handle, LOCK_EX)) {
-            rewind($handle);
-            $raw = stream_get_contents($handle);
-            if (is_string($raw) && $raw !== '') {
-                $parsed = json_decode($raw, true);
-                if (is_array($parsed)) {
-                    $state = $parsed;
-                }
+        // Blokujúci flock drží PHP worker po celý čas čakania vo fronte.
+        // WebSupport (OpenResty) má strop 25 súbežných workerov; po jeho
+        // prekročení návštevník nedostane našu odpoveď, ale celostránkové
+        // „429 Too Many Requests“. Zámok preto len skúsime a pri obsadení
+        // požiadavku nepočítame — radšej ju pustiť, než podržať worker.
+        $locked = false;
+        for ($attempt = 0; $attempt < 6; $attempt++) {
+            if (flock($handle, LOCK_EX | LOCK_NB)) {
+                $locked = true;
+                break;
             }
-
-            $state = $mutator($state);
-
-            rewind($handle);
-            ftruncate($handle, 0);
-            fwrite($handle, (string) json_encode($state, JSON_UNESCAPED_SLASHES));
-            fflush($handle);
-            flock($handle, LOCK_UN);
+            usleep(2000);
         }
+        if (!$locked) {
+            return $state;
+        }
+
+        @chmod($path, 0600);
+        rewind($handle);
+        $raw = stream_get_contents($handle);
+        if (is_string($raw) && $raw !== '') {
+            $parsed = json_decode($raw, true);
+            if (is_array($parsed)) {
+                $state = $parsed;
+            }
+        }
+
+        $state = $mutator($state);
+
+        rewind($handle);
+        ftruncate($handle, 0);
+        fwrite($handle, (string) json_encode($state, JSON_UNESCAPED_SLASHES));
+        fflush($handle);
+        flock($handle, LOCK_UN);
     } finally {
         fclose($handle);
     }

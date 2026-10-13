@@ -163,6 +163,15 @@ ServerSignature Off
     <FilesMatch "\.(png|jpe?g|webp)$">
         Header append Vary Accept
     </FilesMatch>
+
+    # Statika (štýly, skripty, obálky, ikony) nech si ju OpenResty aj prehliadač
+    # podrží. CSS/JS majú v URL verziu podľa filemtime, takže nový súbor sa
+    # načíta hneď. Bez tejto hlavičky každé otvorenie stránky znova žiada
+    # desiatky súborov z originu a pri súbehu PHP workerov OpenResty vráti
+    # celostránkové „429 Too Many Requests“.
+    <FilesMatch "\.(?:css|js|mjs|woff2?|ttf|eot|ico|gif|svg|png|jpe?g|webp|avif)$">
+        Header set Cache-Control "public, max-age=86400"
+    </FilesMatch>
 </IfModule>
 
 # ── Bezpečnostné blokovanie citlivých súborov ──────────────────────────────
