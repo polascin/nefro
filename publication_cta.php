@@ -41,10 +41,9 @@ $_pubCtaLevel = ($publicationCtaHeadingLevel ?? 'h2') === 'h3' ? 'h3' : 'h2';
         <div class="publication-cta__body">
           <p class="publication-cta__eyebrow">PDF · <?= (int) $_pubCtaItem['pages'] ?> strán · <?= htmlspecialchars((string) $_pubCtaItem['language']) ?></p>
           <p class="publication-cta__title"><?= htmlspecialchars((string) $_pubCtaItem['title']) ?></p>
-          <p class="publication-cta__text"><?= htmlspecialchars((string) $_pubCtaItem['excerpt']) ?></p>
           <p class="publication-cta__actions">
             <a class="btn-primary" href="<?= htmlspecialchars((string) $_pubCtaItem['file'], ENT_QUOTES) ?>"
-               download="<?= htmlspecialchars((string) $_pubCtaItem['download_name'], ENT_QUOTES) ?>">Stiahnuť PDF zadarmo</a>
+               download="<?= htmlspecialchars((string) $_pubCtaItem['download_name'], ENT_QUOTES) ?>">Stiahnuť PDF</a>
           </p>
           <div class="free-download-formats" aria-label="Ďalšie formáty na stiahnutie">
             <span class="free-download-formats__label">Ďalšie formáty:</span>
