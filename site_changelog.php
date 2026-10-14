@@ -55,6 +55,13 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-10-14 05:30',
+                'category' => 'portal',
+                'title' => 'Kompaktnejšia ponuka publikácií na domovskej stránke',
+                'description' => 'Ponuka bezplatných publikácií nad odporúčanými článkami zaberá menej miesta, pričom odkazy na všetky dostupné formáty zostali zachované.',
+                'url' => 'index.php',
+            ],
+            [
                 'date' => '2026-10-13 15:30',
                 'category' => 'content',
                 'title' => 'Dve talianske vydania SK Nefro Báza 1',
