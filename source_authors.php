@@ -25,6 +25,9 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
  */
 function getSourceArticleAuthors(): array {
     return [
+        // Autor spracovaného redakčného komentára CJASN 2026, doi 10.2215/CJN.0000001255
+        // (PMID 42853623) – overené cez PubMed eutils 2026-10-15.
+        'genomicke-testovanie-nefrologia-vytaznost-implementacia' => ['Xavier F. Vela Parada'],
         'glukozamin-kognitivny-pokles-bezpecnostny-signal-nefrologia' => ['Megan Brooks'],
         'psychicka-tiesen-dusevna-porucha-nefrologia' => ['Temitope Ogundare'],
         'neziaduce-ucinky-statinov-dokazy-nefrologia' => ['Michael van den Heuvel'],
