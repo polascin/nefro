@@ -188,6 +188,9 @@ function getSourceArticleAuthors(): array {
         'lokalny-finasterid-muzska-androgenova-alopecia' => ['Giuseppe Gallo', 'Luca Mastorino', 'Pietro Quaglino', 'Simone Ribero'],
         'malignity-transplantacia-oblicky-skrining-ptld' => ['Christopher D. Blosser', 'Elena-Bianca Barbir', 'Salma Shaikhouni', 'Naoka Murakami'],
         'meduza-hojenie-ran-bez-jaziev-regenerativna-medicina' => ['Jocelyn E. Malamy', 'Maxwell Sassaman', 'Manjula P. Mony'],
+        // Autori spracovanej práce Nephrol Dial Transplant 2026, doi 10.1093/ndt/gfag232
+        // (PMID 42858001) – 10 mien overených cez PubMed eutils a Crossref 2026-10-15.
+        'multimorbidita-discordancia-egfr-kreatinin-cystatin-c' => ['Kaitlin J. Mayne', 'Heather Walker', 'Michael K. Sullivan', 'Bhautesh Jani', 'Paul Welsh', 'Qiaoling Liu', 'Jill P. Pell', 'Frederick K. Ho', 'Patrick B. Mark', 'Jennifer S. Lees'],
         'monoklonalna-gamapatia-klinickeho-vyznamu-mgcs-mimo-mgrs' => ['Patrick Hofmann', 'Sujal I. Shah', 'Helmut G. Rennke', 'Rahel Schwotzer', 'David B. Sykes', 'Nelson Leung', 'Raad B. Chowdhury'],
         'moderne-trendy-v-nefroprotekcii' => ['Hiddo J.L. Heerspink', 'Bergur V. Stefánsson', 'Ricardo Correa-Rotter', 'Glenn M. Chertow', 'Tom Greene', 'Fan-Fan Hou', 'Johannes F.E. Mann', 'John J.V. McMurray', 'Magnus Lindberg', 'Peter Rossing', 'C. David Sjöström', 'Roberto D. Toto', 'Anna-Maria Langkilde', 'David C. Wheeler'],
         'nacasovanie-cievneho-pristupu-avf-avg-pred-hemodialyzou' => ['Jooyeon Yoon', 'Kyungjun Shon', 'Hayne Cho Park', 'Sua Lee', 'Young-Ki Lee', 'Hyungseok Lee', 'Eun Jung Kim', 'Hoon Suk Park', 'Min-Ho Kim', 'Do Hyoung Kim'],
