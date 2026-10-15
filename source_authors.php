@@ -153,6 +153,9 @@ function getSourceArticleAuthors(): array {
         'kanabis-inhalacia-kardialna-ektopia-randomizovana-crossover' => ['Adi Elias', 'Gabrielle C. Montenegro', 'Hannah H. Oo', 'Isabella J. Peña', 'Dylan A. Lowe', 'Catherine Lee', 'Janet Tang', 'Kara L. Lynch', 'Lilly Lim', 'Mirna Maamou', 'Nhung Nguyen', 'Matthew L. Springer', 'Gregory M. Marcus'],
         'ked-sa-citime-chori-co-medicina-prehliada-nefrologia' => ['Arya Anthony Kamyab'],
         'kedy-zacat-krt-pri-aki' => ['Marlies Ostermann', 'Sean M Bagshaw', 'Nuttha Lumlertgul', 'Ron Wald'],
+        // Autor spracovanej spravodajskej analýzy Medscape Medical News z 13. 10. 2026;
+        // autori primárnej práce JASN (doi 10.1681/ASN.0000001245) sú citovaní v článku.
+        'kreatininova-clearance-ukoncenie-dialyzy-aki-d' => ['Nancy A. Melville'],
         // Autori spracovanej práce Clin Gastroenterol Hepatol 2026, doi 10.1016/j.cgh.2026.04.035
         // (PMID 42385787) — 23 mien overených cez PubMed 2026-08-28.
         'kava-pecen-cirhoza-hcc-uk-biobank-nefrologia' => ['Hyun-Seok Kim', 'Mohammad Saeid Rezaee-Zavareh', 'Yufeng Wang', 'Abdelrahman M. Attia', 'Minsun Kwak', 'Seungwon Burm', 'Derin Celtik', 'Daniel Legaspi', 'Osama Khattab', 'Naomy Kim', 'Beza M. Mengistu', 'Kelsey N. Larios', 'David Sooik Kim', 'Walid Ayoub', 'Alexandar Kuo', 'Paul Martin', 'Aarshi Vipani', 'Yun Wang', 'Suthat Liangpunsakul', 'Debiao Li', 'Shelly C. Lu', 'Stephen Pandol', 'Ju Dong Yang'],
