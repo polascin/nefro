@@ -34,6 +34,8 @@ function getSourceArticleAuthors(): array {
         'uacr-upcr-prognosticka-informacia-ckd' => ['Ashish Verma', 'Insa M Schmidt', 'Sophie E Claudel', 'Sushrut S Waikar'],
         'biopsia-obliciek-glomerularne-ochorenia' => ['Tomasz Stompór', 'Justyna Zbrzeźniak-Suszczewicz'],
         'hydralazin-lupus-vaskulitida-pancytopenia-dic' => ['Yangming Cao'],
+        // Autori spracovaného komentára/transkriptu Medscape Psychiatry z 5. 10. 2026.
+        'rastuce-pocty-diagnoz-pas-nefrologicka-prax' => ['Stephen M. Strakowski', 'Catherine Lord', 'Fred R. Volkmar'],
         'rosuvastatin-rabdomyolyza-aki-dialyza' => ['Luiza Mendonça Pessoa de Melo', 'Mauro de Deus Passos', 'Dilson Palhares Ferreira'],
         'vysetrenie-hematurie-nefrologicka-prax-algoritmus' => ['Megan Prochaska', 'Luke F. Reynolds', 'Anna Zisman'],
         'esc-era-2026-kardiorenalne-odporucania' => ['Kevin Damman', 'Jozine M ter Maaten', 'Kaitlin J Mayne', 'Davide Bolignano', 'Elizabeth M Brown', 'Bruno R da Costa', 'Anna Dagre', 'Ron T Gansevoort', 'Cristina Gavina', 'Andreas Goette', 'Diana A Gorog', 'Nina Nikolova Gotcheva', 'Marta Kaluzna-Oleksy', 'Dearbhla M Kelly', 'Oleksii Korzh', 'Jennifer S Lees', 'Olivia Manfrini', 'Pieter Martens', 'Julio Nunez', 'Eugenio Stabile', 'Isabella Sudano', 'Marieta P Theodorakopoulou', 'Simon Winther', 'William G Herrington'],
