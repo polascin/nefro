@@ -143,6 +143,9 @@ function getSourceArticleAuthors(): array {
         // Autorka spracovanej spravodajskej analýzy Medscape Medical News z 9. 10. 2026;
         // autori koncepčného rámca eClinicalMedicine 2026;97:104058 sú citovaní v článku.
         'ibd-hojenie-sliznice-renalne-prejavy' => ['Daniela Barros'],
+        // Autori spracovanej práce Nephrol Dial Transplant 2026, doi 10.1093/ndt/gfag235
+        // (PMID 42852734) – 6 mien overených cez PubMed eutils 2026-10-15.
+        'igg4-suvisiace-renalne-ochorenie-liecebny-standard' => ['Francesco Peyronel', 'Giulia Palazzini', 'Riccardo Campi', 'Salvatore Granata', 'Lorenzo Masieri', 'Augusto Vaglio'],
         'iga-nefropatia-algoritmus-kdigo-2025-kdoqi' => ['Isabelle Ayoub', 'Gaia Coppock', 'Shikha Wadhwani', 'Timothy Yau'],
         'implementacia-intenzivnej-kontroly-tlaku-esprit-nefrologia' => ['Yu-Jie Zuo', 'Ji-Guang Wang'],
         // Autori spracovanej štúdie Nature Communications 2026;17:7581, overení cez Crossref.
