@@ -138,6 +138,9 @@ function getSourceArticleAuthors(): array {
         // PMID 42251702) - 17 mien, AuthorList CompleteYN=Y, overené cez PubMed eutils
         // a Crossref 2026-09-05. Autori doplnkových citácií sa nepridávajú.
         'htd1801-berberin-ursodeoxycholat-diabetes-2-typu' => ['Linong Ji', 'Zhifeng Cheng', 'Jianhua Ma', 'Dexue Liu', 'Xin Zhang', 'Xiaolin Dong', 'Yang Lin', 'Mingming Yang', 'Shenglian Gan', 'Hanqing Cai', 'Xiaomei Wang', 'Yan Liu', 'Xiaoguang Shi', 'Kui Liu', 'Leigh MacConell', 'Meng Yu', 'Liping Liu'],
+        // Autorka spracovanej spravodajskej analýzy Medscape Medical News z 9. 10. 2026;
+        // autori koncepčného rámca eClinicalMedicine 2026;97:104058 sú citovaní v článku.
+        'ibd-hojenie-sliznice-renalne-prejavy' => ['Daniela Barros'],
         'iga-nefropatia-algoritmus-kdigo-2025-kdoqi' => ['Isabelle Ayoub', 'Gaia Coppock', 'Shikha Wadhwani', 'Timothy Yau'],
         'implementacia-intenzivnej-kontroly-tlaku-esprit-nefrologia' => ['Yu-Jie Zuo', 'Ji-Guang Wang'],
         // Autori spracovanej štúdie Nature Communications 2026;17:7581, overení cez Crossref.
