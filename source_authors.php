@@ -122,6 +122,11 @@ function getSourceArticleAuthors(): array {
         'frailty-ckd-vyziva-pohyb-stisk-ruky' => ['Fang-Ru Yueh', 'Dongjuan Xu', 'Huan-Fang Lee', 'Junne-Ming Sung', 'Miaofen Yen'],
         'geneticke-prediktory-glp1-semaglutid-tirzepatid' => ['Qiaojuan Jane Su', 'James R. Ashenhurst', 'Wanwan Xu', 'Vinh Tran', 'R. Ryanne Wu', 'Catherine H. Weldon', 'Jingchunzi Shi', 'Barry Hicks', 'Noura S. Abul-Husn', 'Stella Aslibekyan', 'Michael V. Holmes', 'Bertram L. Koelsch', 'Adam Auton'],
         'genotypizacia-apol1-zivy-darca-oblicky' => ['Chi-Yuan Hsu', 'Ying Gao', 'Barry I Freedman', 'Mitchell R Lunn', 'Anthony N Muiru', 'Mark A Schnitzler', 'Jasmin Divers', 'Roslyn B Mannon', 'Nicholette D Palmer', 'Amy B Karger', 'Krista L Lentine', 'Meyeon Park'],
+        // Medscape Medical News z 9. 10. 2026 (verejný byline Scott Harris) + autori
+        // spracovaného kongresového abstraktu EADV 2026 o nechtových zmenách pri GLP-1 RA,
+        // overení z tlačovej správy EADV (referencia 1 a 3) 2026-10-16. Autori prác
+        // citovaných v článku (FLOW, Lee & Lipner a i.) sa sem neuvádzajú.
+        'glp1-agonisty-onycholyza-nechty-eadv-2026' => ['Scott Harris', 'Bianca Maria Piraccini', 'Valérie Mengeaud', 'Virginie Ribet', 'Anne Couttet', 'Núria Perez Cullell', 'Charles Taïeb', 'Bruno Halioua'],
         'glp1-era-novy-model-starostlivosti-o-obezitu-nefrologia' => ['Manuela Callari'],
         'glp1-lieky-renalne-benefity-dokazy-prax-nefrologia' => ['Kashif J. Piracha'],
         'glp1-kompulzivne-spravanie-food-noise-nefrologia' => ['Eric Spitznagel'],
