@@ -27,7 +27,7 @@ $_pubCtaLevel = ($publicationCtaHeadingLevel ?? 'h2') === 'h3' ? 'h3' : 'h2';
 ?>
 <section class="publication-cta" aria-labelledby="publication-cta-heading">
   <<?= $_pubCtaLevel ?> id="publication-cta-heading" class="section-heading">Bezplatne na stiahnutie</<?= $_pubCtaLevel ?>>
-  <p class="publication-cta__intro">Štyri jazykové vydania prinášajú syntézu polroka odbornej tvorby v slovenčine, angličtine, nemčine a italčine.</p>
+  <p class="publication-cta__intro">Štyri jazykové vydania prinášajú syntézu polroka odbornej tvorby v slovenčine, angličtine, nemčine a taliančine.</p>
 
   <div class="publication-cta__grid">
     <?php foreach ($_pubCtaAvailable as $_pubCtaItem): ?>

@@ -72,7 +72,7 @@ if (!function_exists('siteChangelogEntries')) {
                 'date' => '2026-10-13 15:25',
                 'category' => 'content',
                 'title' => 'Talianske vydanie bezplatnej publikácie',
-                'description' => 'Publikácia SK Nefro: Dimostrato, probabile, aperto je bezplatne dostupná v italčine vo formátoch PDF, EPUB, AZW3, DOCX a ODT, bez registrácie a objednávky.',
+                'description' => 'Publikácia SK Nefro: Dimostrato, probabile, aperto je bezplatne dostupná v taliančine vo formátoch PDF, EPUB, AZW3, DOCX a ODT, bez registrácie a objednávky.',
                 'url' => 'publikacie.php',
             ],
             [

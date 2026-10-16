@@ -251,7 +251,7 @@ function freePublications(): array
         [
             'title' => 'SK Nefro: Dimostrato, probabile, aperto',
             'subtitle' => 'Nefrologia e medicina interna a ottobre 2026',
-            'language' => 'italčina',
+            'language' => 'taliančina',
             'language_code' => 'it',
             'pages' => 101,
             'published_on' => '2026-10-13',
@@ -555,7 +555,7 @@ function publications(): array
             'author'      => 'MUDr. Ľubomír Polaščín',
             'edition'     => '1. vydanie, október 2026',
             'published_on' => '2026-10-13',
-            'language'    => 'italčina',
+            'language'    => 'taliančina',
             'language_code' => 'it',
             'pages'       => 1853,
             'articles'    => 387,
@@ -571,15 +571,15 @@ function publications(): array
             'description'  => [
                 '<strong>Talianske vydanie</strong> prvého zväzku série <em>SK Nefro Báza</em>. '
                 . 'Obsahuje 387 odborných článkov, ktoré na portáli <em>Nefro-projekt Slovensko</em> '
-                . 'vyšli od apríla do začiatku októbra 2026, preložených do italčiny vrátane praktických ťahákov.',
+                . 'vyšli od apríla do začiatku októbra 2026, preložených do taliančiny vrátane praktických ťahákov.',
                 'Obsah zodpovedá slovenskému vydaniu: rovnaké články, rovnaké zoradenie, '
                 . 'citácie a odkazy na zdroje. Popularizačné texty pre pacientov nie sú zaradené '
                 . 'ani v slovenskom, ani v talianskom vydaní.',
                 'Pri každom článku je odkaz na jeho slovenskú online verziu. Odborná terminológia '
-                . 'a jazykové konvencie sú prispôsobené italčine.',
+                . 'a jazykové konvencie sú prispôsobené taliančine.',
             ],
             'highlights'   => [
-                '387 článkov na 1 853 stranách — odborný ročník v italčine',
+                '387 článkov na 1 853 stranách — odborný ročník v taliančine',
                 '393 ilustrácií a schém v plnom rozlíšení',
                 'Pri každom článku odkaz na slovenskú online verziu',
                 'Talianska odborná terminológia a jazykové konvencie',
@@ -587,7 +587,7 @@ function publications(): array
                 'Bez DRM — kúpený súbor je váš, čítajte ho na čomkoľvek',
             ],
             'audience'     => 'Taliansky hovoriaci nefrológovia, internisti a lekári v špecializačnej príprave '
-                . 'aj slovenskí odborníci, ktorí potrebujú obsah v italčine na štúdium alebo zdieľanie.',
+                . 'aj slovenskí odborníci, ktorí potrebujú obsah v taliančine na štúdium alebo zdieľanie.',
         ],
         [
             'slug'        => 'sk-nefro-baza-1-kompendium-it',
@@ -596,7 +596,7 @@ function publications(): array
             'author'      => 'MUDr. Ľubomír Polaščín',
             'edition'     => '1. vydanie, október 2026',
             'published_on' => '2026-10-13',
-            'language'    => 'italčina',
+            'language'    => 'taliančina',
             'language_code' => 'it',
             'pages'       => 290,
             'articles'    => 387,
