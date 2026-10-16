@@ -122,6 +122,10 @@ function getSourceArticleAuthors(): array {
         'frailty-ckd-vyziva-pohyb-stisk-ruky' => ['Fang-Ru Yueh', 'Dongjuan Xu', 'Huan-Fang Lee', 'Junne-Ming Sung', 'Miaofen Yen'],
         'geneticke-prediktory-glp1-semaglutid-tirzepatid' => ['Qiaojuan Jane Su', 'James R. Ashenhurst', 'Wanwan Xu', 'Vinh Tran', 'R. Ryanne Wu', 'Catherine H. Weldon', 'Jingchunzi Shi', 'Barry Hicks', 'Noura S. Abul-Husn', 'Stella Aslibekyan', 'Michael V. Holmes', 'Bertram L. Koelsch', 'Adam Auton'],
         'genotypizacia-apol1-zivy-darca-oblicky' => ['Chi-Yuan Hsu', 'Ying Gao', 'Barry I Freedman', 'Mitchell R Lunn', 'Anthony N Muiru', 'Mark A Schnitzler', 'Jasmin Divers', 'Roslyn B Mannon', 'Nicholette D Palmer', 'Amy B Karger', 'Krista L Lentine', 'Meyeon Park'],
+        // Autori spracovaného editoriálu JACC: Heart Failure 2026;14(8):103114
+        // (doi 10.1016/j.jchf.2026.103114), overení z plného znenia 2026-10-16.
+        // Autori podkladových štúdií (Zhuo, Tardif, Desai a i.) sa sem neuvádzajú.
+        'hyperkaliemia-raasi-mra-viazace-draslika-sodik' => ['Bertram Pitt', 'Javed Butler', 'Matthew R. Weir'],
         // Medscape Medical News z 9. 10. 2026 (verejný byline Scott Harris) + autori
         // spracovaného kongresového abstraktu EADV 2026 o nechtových zmenách pri GLP-1 RA,
         // overení z tlačovej správy EADV (referencia 1 a 3) 2026-10-16. Autori prác
