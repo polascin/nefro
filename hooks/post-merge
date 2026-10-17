@@ -27,6 +27,11 @@ if ! git symbolic-ref --quiet --short HEAD >/dev/null 2>&1; then
 fi
 BRANCH=$(git symbolic-ref --quiet --short HEAD)
 
+if [[ $BRANCH != main ]]; then
+	echo "[post-merge] Vetva $BRANCH: produkcia sa nasadzuje iba z main."
+	exit 0
+fi
+
 DEPLOY_SCRIPT="$REPO_ROOT/hooks/deploy.sh"
 if [[ ! -x $DEPLOY_SCRIPT && ! -f $DEPLOY_SCRIPT ]]; then
 	echo "[post-merge] Chýba deploy skript: $DEPLOY_SCRIPT" >&2

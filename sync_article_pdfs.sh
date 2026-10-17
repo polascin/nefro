@@ -1,6 +1,7 @@
 #!/bin/sh
 # sync_article_pdfs.sh
 # ─────────────────────────────────────────────────────────────────────────────
+
 # Zosúladí PDF verzie článkov medzi serverom a gitom. Spusti po zmene obsahu
 # článkov (audit, slovenská korektúra/revízia, nový alebo upravený článok).
 #
@@ -12,6 +13,8 @@
 #
 # Spustenie z koreňa projektu:  sh sync_article_pdfs.sh
 # ─────────────────────────────────────────────────────────────────────────────
+
+set -eu
 
 KEY="$HOME/.ssh/nefro_deploy"
 HOST="shell.r1.websupport.sk"
@@ -51,13 +54,23 @@ esac
 
 if [ ! -f "$KEY" ]; then
 	echo "[sync-pdf] SSH kľúč nenájdený: $KEY — končím."
-	exit 0
+	exit 1
+fi
+
+cd "$ROOT" || exit 1
+if ! git diff --cached --quiet || [ -n "$(git status --porcelain -- pdf/)" ]; then
+	echo "[sync-pdf] Najprv dokonči rozpracovaný staging a lokálne zmeny PDF." >&2
+	exit 1
 fi
 
 echo "[sync-pdf] 1/3 Regenerujem chýbajúce/neaktuálne PDF na serveri…"
-ssh -i "$KEY" -p "$PORT" -o StrictHostKeyChecking=accept-new "$USER@$HOST" \
-	"php $REMOTE/generate_all_article_pdfs.php --stale" 2>&1 |
-	grep -E 'Hotovo|✓|✗|CHYBA' || true
+if ! REGEN_OUTPUT=$(ssh -4 -i "$KEY" -p "$PORT" -o StrictHostKeyChecking=accept-new "$USER@$HOST" \
+	"php $REMOTE/generate_all_article_pdfs.php --stale" 2>&1); then
+	printf '%s\n' "$REGEN_OUTPUT" >&2
+	echo "[sync-pdf] Regenerácia zlyhala; sťahovanie a commit sa nevykonali." >&2
+	exit 1
+fi
+printf '%s\n' "$REGEN_OUTPUT" | grep -E 'Hotovo|✓|✗|CHYBA' || true
 
 echo "[sync-pdf] 2/3 Sťahujem PDF zo servera do pdf/…"
 mkdir -p "$ROOT/pdf"

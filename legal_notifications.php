@@ -346,13 +346,21 @@ if (!function_exists('processLegalNoticeQueue')) {
                 continue;
             }
 
-            $info = legalNoticeQueuedVersionInfo($item);
-            $version = $info['version'];
-            $subject = 'Aktualizácia právnych podmienok (verzia ' . $version . ') - Nefro-projekt Slovensko';
-            $displayName = legalNoticeDisplayName($item, $recipientEmail);
-            $body = buildLegalNoticeEmailHtml($displayName, $version, $info['effectiveDate'], $info['updates'], false);
+            $failure = 'SMTP odoslanie zlyhalo.';
+            try {
+                $info = legalNoticeQueuedVersionInfo($item);
+                $version = $info['version'];
+                $subject = 'Aktualizácia právnych podmienok (verzia ' . $version . ') - Nefro-projekt Slovensko';
+                $displayName = legalNoticeDisplayName($item, $recipientEmail);
+                $body = buildLegalNoticeEmailHtml($displayName, $version, $info['effectiveDate'], $info['updates'], false);
+                $sent = legalNoticeSendOne($recipientEmail, $subject, $body);
+            } catch (\Throwable $e) {
+                $sent = false;
+                $failure = 'Príprava alebo odoslanie právneho oznámenia zlyhalo.';
+                error_log('Legal notice item failed: queue=' . 'user' . ' id=' . $queueId . ' type=' . get_class($e));
+            }
 
-            if (legalNoticeSendOne($recipientEmail, $subject, $body)) {
+            if ($sent) {
                 $successStmt->execute(['id' => $queueId]);
                 $stats['sent']++;
             } else {
@@ -361,7 +369,7 @@ if (!function_exists('processLegalNoticeQueue')) {
                     'id' => $queueId,
                     'attempts' => $failAttempt,
                     'next_attempt_at' => date('Y-m-d H:i:s', time() + min(3600, (int) pow(2, min($failAttempt, 10)) * 60)),
-                    'last_error' => 'SMTP odoslanie zlyhalo.',
+                    'last_error' => $failure,
                 ]);
                 $stats['failed']++;
             }
@@ -454,13 +462,21 @@ if (!function_exists('processLegalNoticeSubQueue')) {
                 continue;
             }
 
-            $info = legalNoticeQueuedVersionInfo($item);
-            $version = $info['version'];
-            $subject = 'Aktualizácia právnych podmienok (verzia ' . $version . ') - Nefro-projekt Slovensko';
-            $unsubscribeUrl = buildSubscriberUnsubscribeHmacUrl((int) ($item['subscriber_id'] ?? 0), $recipientEmail);
-            $body = buildLegalNoticeEmailHtml($recipientEmail, $version, $info['effectiveDate'], $info['updates'], true, $unsubscribeUrl);
+            $failure = 'SMTP odoslanie zlyhalo.';
+            try {
+                $info = legalNoticeQueuedVersionInfo($item);
+                $version = $info['version'];
+                $subject = 'Aktualizácia právnych podmienok (verzia ' . $version . ') - Nefro-projekt Slovensko';
+                $unsubscribeUrl = buildSubscriberUnsubscribeHmacUrl((int) ($item['subscriber_id'] ?? 0), $recipientEmail);
+                $body = buildLegalNoticeEmailHtml($recipientEmail, $version, $info['effectiveDate'], $info['updates'], true, $unsubscribeUrl);
+                $sent = legalNoticeSendOne($recipientEmail, $subject, $body);
+            } catch (\Throwable $e) {
+                $sent = false;
+                $failure = 'Príprava alebo odoslanie právneho oznámenia zlyhalo.';
+                error_log('Legal notice item failed: queue=' . 'sub' . ' id=' . $queueId . ' type=' . get_class($e));
+            }
 
-            if (legalNoticeSendOne($recipientEmail, $subject, $body)) {
+            if ($sent) {
                 $successStmt->execute(['id' => $queueId]);
                 $stats['sent']++;
             } else {
@@ -469,7 +485,7 @@ if (!function_exists('processLegalNoticeSubQueue')) {
                     'id' => $queueId,
                     'attempts' => $failAttempt,
                     'next_attempt_at' => date('Y-m-d H:i:s', time() + min(3600, (int) pow(2, min($failAttempt, 10)) * 60)),
-                    'last_error' => 'SMTP odoslanie zlyhalo.',
+                    'last_error' => $failure,
                 ]);
                 $stats['failed']++;
             }

@@ -30,7 +30,7 @@ $ogImageHeight = $ogImageHeight ?? 630;
 // Helper for Schema.org
 $structuredData = $structuredData ?? [];
 
-$katexBase = 'assets/katex/0.16.11';
+$katexBase = 'assets/katex/0.18.11';
 $katexCss = $katexBase . '/katex.min.css';
 $katexJs = $katexBase . '/katex.min.js';
 $katexAutoRender = $katexBase . '/contrib/auto-render.min.js';

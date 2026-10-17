@@ -7,9 +7,14 @@ class LegalTestMailbox
 {
     /** @var list<string> */
     public static array $messages = [];
+    public static bool $failNext = false;
 }
 function legalNoticeSendOne(string $email, string $subject, string $bodyHtml, bool $plain = false): bool
 {
+    if (LegalTestMailbox::$failNext) {
+        LegalTestMailbox::$failNext = false;
+        throw new RuntimeException('fictional-secret: transport failed');
+    }
     LegalTestMailbox::$messages[] = $bodyHtml;
     return true;
 }
@@ -112,4 +117,31 @@ foreach ([null, 'broken', '{}', '[42]'] as $invalid) {
     }
     legalTest($rejected, 'Chybný súhrn nesmie viesť k odoslaniu nesprávnej správy.');
 }
+// Chybný snapshot ani výnimka transportu nesmú zablokovať ďalšie položky.
+foreach ([false, true] as $transportFailure) {
+    $prefix = $transportFailure ? 'synthetic-transport-' : 'synthetic-snapshot-';
+    foreach (['bad', 'next'] as $suffix) {
+        $version = $prefix . $suffix;
+        $summary = !$transportFailure && $suffix === 'bad' ? 'broken' : '["Synthetic update"]';
+        $pdo->prepare('INSERT INTO legal_notice_runs VALUES (?, ?, ?, ?, 1, 1)')
+            ->execute([$version, '2026-01-01', $summary, '2026-01-01']);
+        foreach (['legal_notice_queue' => 'user_id', 'legal_notice_sub_queue' => 'subscriber_id'] as $table => $owner) {
+            $pdo->prepare("INSERT INTO $table (legal_version, $owner, email, status, next_attempt_at)
+                VALUES (?, 1, 'fixture@example.invalid', 'pending', '2026-01-01')")
+                ->execute([$version]);
+        }
+    }
+    foreach (['legal_notice_queue' => 'processLegalNoticeQueue', 'legal_notice_sub_queue' => 'processLegalNoticeSubQueue'] as $table => $processor) {
+        LegalTestMailbox::$failNext = $transportFailure;
+        $stats = $processor($pdo);
+        legalTest($stats['failed'] === 1 && $stats['sent'] === 1, 'Chyba jednej položky nezablokuje ďalšieho príjemcu.');
+        $query = $pdo->prepare("SELECT status, attempts, last_error FROM $table WHERE legal_version = ?");
+        $query->execute([$prefix . 'bad']);
+        $failed = $query->fetch();
+        legalTest($failed['status'] === 'failed' && (int) $failed['attempts'] === 1, 'Chybná položka má ohraničený počet retry.');
+        legalTest(!str_contains($failed['last_error'], 'fictional-secret'), 'Detail výnimky sa nesmie uložiť do frontu.');
+        legalTest($processor($pdo)['selected'] === 0, 'Chybná položka sa neskúša znovu pred retry termínom.');
+    }
+}
+
 echo "Legal notifications: $checks PASS\n";

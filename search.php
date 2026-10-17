@@ -238,7 +238,7 @@ $fieldLabels = [
                       $tokens,
                   );
                   $titleHl = highlightSearchTerms(
-                      htmlspecialchars((string) ($row["title"] ?? "")),
+                      (string) ($row["title"] ?? ""),
                       $tokens,
                   );
                   $articleUrl =
@@ -283,13 +283,11 @@ $fieldLabels = [
                 <?php elseif (!empty($row["excerpt"])): ?>
                   <div class="search-result__snippet">
                     <?= highlightSearchTerms(
-                        htmlspecialchars(
-                            mb_substr(
-                                (string) $row["excerpt"],
-                                0,
-                                SEARCH_SNIPPET,
-                                "UTF-8",
-                            ),
+                        mb_substr(
+                            (string) $row["excerpt"],
+                            0,
+                            SEARCH_SNIPPET,
+                            "UTF-8",
                         ),
                         $tokens,
                     ) ?>

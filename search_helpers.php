@@ -201,7 +201,9 @@ function doArticleSearch(
     int $page,
     int $perPage,
 ): array {
-    $offset = ($page - 1) * $perPage;
+    $page = max(1, $page);
+    $perPage = max(1, min(100, $perPage));
+    $offset = min($page - 1, intdiv(PHP_INT_MAX, $perPage)) * $perPage;
     $result = ["items" => [], "total" => 0, "strategy" => "none"];
 
     if (empty($tokens)) {
@@ -234,6 +236,8 @@ function doArticleSearch(
 
 function searchArticles(PDO $pdo, string $rawQuery, int $page, int $perPage): array
 {
+    $page = max(1, $page);
+    $perPage = max(1, min(100, $perPage));
     $tokens = searchTokenize($rawQuery);
     if (empty($tokens)) {
         return [
@@ -301,11 +305,12 @@ function searchViaFullText(
                  FROM articles
                  WHERE is_published = 1
                    AND MATCH(title, excerpt, content) AGAINST(:q IN BOOLEAN MODE)
-                 ORDER BY MATCH(title, excerpt, content) AGAINST(:q IN BOOLEAN MODE) DESC,
-                          published_at DESC
+                 ORDER BY MATCH(title, excerpt, content) AGAINST(:q_score IN BOOLEAN MODE) DESC,
+                          published_at DESC, id DESC
                  LIMIT :lim OFFSET :off",
             );
             $stmt->bindValue(":q", $ftQuery, PDO::PARAM_STR);
+            $stmt->bindValue(":q_score", $ftQuery, PDO::PARAM_STR);
             $stmt->bindValue(":lim", $perPage, PDO::PARAM_INT);
             $stmt->bindValue(":off", $offset, PDO::PARAM_INT);
             $stmt->execute();
@@ -379,7 +384,7 @@ function searchViaLike(
                        FROM articles
                        WHERE is_published = 1
                          AND ({$whereClause})
-                       ORDER BY score DESC, published_at DESC
+                       ORDER BY score DESC, published_at DESC, id DESC
                        LIMIT :lim OFFSET :off";
 
             $selStmt = $pdo->prepare($selSql);
@@ -449,36 +454,38 @@ function buildSearchSnippet(
     $suffix = $start + $snippetLen < mb_strlen($text, "UTF-8") ? "…" : "";
     $snippet = $prefix . trim($snippet) . $suffix;
 
-    return highlightSearchTerms(htmlspecialchars($snippet, ENT_QUOTES, 'UTF-8'), $tokens);
+    return highlightSearchTerms($snippet, $tokens);
 }
 
+/** Prijíma čistý text; escapovanie aj zvýraznenie vykoná v jednom priechode. */
 function highlightSearchTerms(string $text, array $tokens): string
 {
-    $allTerms = [];
+    $terms = [];
     foreach ($tokens as $norm => $orig) {
-        $allTerms[] = $orig;
-        if ($norm !== $orig) {
-            $allTerms[] = $norm;
+        foreach ([$orig, $norm] as $term) {
+            if (mb_strlen($term, 'UTF-8') >= SEARCH_MIN_LEN) {
+                $terms[$term] = $term;
+            }
         }
     }
-    usort(
-        $allTerms,
-        fn($a, $b) => mb_strlen($b, "UTF-8") - mb_strlen($a, "UTF-8"),
-    );
-
-    foreach ($allTerms as $term) {
-        if (mb_strlen($term, "UTF-8") < SEARCH_MIN_LEN) {
-            continue;
-        }
-        $escaped = preg_quote($term, "/");
-        $text = preg_replace(
-            "/(" . $escaped . ")/ui",
-            '<mark class="search-hl">$1</mark>',
-            $text,
-        ) ?? $text;
+    usort($terms, static fn (string $a, string $b): int => mb_strlen($b, 'UTF-8') <=> mb_strlen($a, 'UTF-8'));
+    $escape = static fn (string $value): string => htmlspecialchars($value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
+    if ($terms === []) {
+        return $escape($text);
     }
 
-    return $text;
+    $pattern = '/(?:' . implode('|', array_map(static fn (string $term): string => preg_quote($term, '/'), $terms)) . ')/iu';
+    if (preg_match_all($pattern, $text, $matches, PREG_OFFSET_CAPTURE) === false) {
+        return $escape($text);
+    }
+    $result = '';
+    $offset = 0;
+    foreach ($matches[0] as [$match, $position]) {
+        $result .= $escape(substr($text, $offset, $position - $offset));
+        $result .= '<mark class="search-hl">' . $escape($match) . '</mark>';
+        $offset = $position + strlen($match);
+    }
+    return $result . $escape(substr($text, $offset));
 }
 
 function detectMatchFields(array $row, array $tokens): array

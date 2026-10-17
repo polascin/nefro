@@ -100,9 +100,9 @@ if ($requestMethod === 'POST') {
                     $success = 'Ak účet existuje a čaká na overenie, nový overovací e-mail bol odoslaný.';
                     $stmt = $pdo->prepare(
                         "SELECT id, username, email, email_verified_at, email_verification_sent_at
-                         FROM users WHERE email = :login OR username = :login LIMIT 1"
+                         FROM users WHERE email = :login_email OR username = :login_username LIMIT 1"
                     );
-                    $stmt->execute(['login' => $loginValue]);
+                    $stmt->execute(['login_email' => $loginValue, 'login_username' => $loginValue]);
                     $user = $stmt->fetch();
 
                     // Anti-enumeration: rovnaká odpoveď pre neexistujúci účet aj overený účet

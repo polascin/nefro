@@ -24,6 +24,11 @@ if ! git push "$REMOTE" "HEAD:refs/heads/$REMOTE_BRANCH"; then
 	exit 1
 fi
 
+if [[ $BRANCH != main ]]; then
+	echo "[post-commit] Vetva $BRANCH je pushnutá; produkcia sa nasadzuje iba z main."
+	exit 0
+fi
+
 DEPLOY_SCRIPT="$REPO_ROOT/hooks/deploy.sh"
 if [[ ! -f $DEPLOY_SCRIPT ]]; then
 	echo "[post-commit] Chýba deploy skript: $DEPLOY_SCRIPT" >&2

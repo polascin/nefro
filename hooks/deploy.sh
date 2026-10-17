@@ -68,6 +68,14 @@ if [[ -n $BASE_REF ]] && ! git rev-parse --verify "${BASE_REF}^{commit}" >/dev/n
 	exit 1
 fi
 
+if (( !REMOTE_COMMIT_ONLY && !DRY_RUN )); then
+	DEPLOY_BRANCH=$(git symbolic-ref --quiet --short HEAD 2>/dev/null || true)
+	if [[ $DEPLOY_BRANCH != main ]]; then
+		echo "[deploy] Produkcia sa smie nasadiť iba z vetvy main." >&2
+		exit 1
+	fi
+fi
+
 sftp_escape() {
 	local value=$1
 	value=${value//\\/\\\\}

@@ -275,6 +275,27 @@ function botGuardMutateState(string $identity, callable $mutator): array
     return $state;
 }
 
+/** Jednoriadkový, ohraničený záznam bez query tokenov alebo prihlasovacích údajov. */
+function botGuardLogLine(string $action, string $reason): string
+{
+    $clean = static fn (string $value, int $max): string => mb_substr(
+        (string) preg_replace('/[\x00-\x1F\x7F]/', ' ', $value),
+        0,
+        $max,
+        'UTF-8'
+    );
+    $uri = (string) ($_SERVER['REQUEST_URI'] ?? '-');
+    $path = substr($uri, 0, strcspn($uri, '?#'));
+    return implode("\t", [
+        date('Y-m-d H:i:s'),
+        $clean($action, 40),
+        $clean($reason, 300),
+        $clean(botGuardClientIp(), 45),
+        $clean($path, 300),
+        $clean(botGuardUserAgent() ?: '-', 300),
+    ]) . "\n";
+}
+
 /** Zápis do bot-guard logu s rotáciou. */
 function botGuardLog(string $action, string $reason): void
 {
@@ -288,15 +309,7 @@ function botGuardLog(string $action, string $reason): void
         @rename($file, $file . '.old');
     }
 
-    $ua = botGuardUserAgent();
-    $line = implode("\t", [
-        date('Y-m-d H:i:s'),
-        $action,
-        $reason,
-        botGuardClientIp(),
-        mb_substr((string) ($_SERVER['REQUEST_URI'] ?? '-'), 0, 300),
-        $ua !== '' ? $ua : '-',
-    ]) . "\n";
+    $line = botGuardLogLine($action, $reason);
 
     @file_put_contents($file, $line, FILE_APPEND | LOCK_EX);
     @chmod($file, 0640);

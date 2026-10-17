@@ -20,6 +20,7 @@ if (!hash_equals('1', (string) ($_SERVER['HTTP_X_NPS_NEWSLETTER'] ?? ''))) {
     exit;
 }
 
+require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
 require_once __DIR__ . '/newsletter_notifications.php';

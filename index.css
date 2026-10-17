@@ -1126,6 +1126,26 @@ code {
     white-space: nowrap;
 }
 
+.project-authors__picker {
+    margin-top: 16px;
+}
+
+.project-authors__picker summary {
+    padding: 10px 0;
+    cursor: pointer;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.project-authors__picker form {
+    margin-top: 12px;
+}
+
+.project-authors__picker .btn-primary {
+    width: 100%;
+    white-space: normal;
+}
+
 .project-authors__group-label {
     margin: 14px 0 8px;
     color: var(--text-primary);

@@ -79,11 +79,29 @@ $renderAuthorItem = static function (array $authorStat) use ($authorFilterBase):
     <p class="project-authors__group-label">Autori zdrojových článkov (<?= count(
         $participating['sources'],
     ) ?>)</p>
-    <ul class="expandable-list" data-limit="8">
-      <?php foreach ($participating['sources'] as $authorStat) {
+    <ul>
+      <?php foreach (array_slice($participating['sources'], 0, 8) as $authorStat) {
           $renderAuthorItem($authorStat);
       } ?>
     </ul>
-    <button class="show-more-btn no-print" type="button">Zobraziť viac</button>
+    <?php if (count($participating['sources']) > 8): ?>
+      <details class="project-authors__picker no-print">
+        <summary>Vyhľadať ďalšieho autora</summary>
+        <form method="get" action="<?= htmlspecialchars($authorFilterBase !== '' ? $authorFilterBase : 'index.php', ENT_QUOTES, 'UTF-8') ?>#autor-articles-heading">
+          <div class="form-group">
+            <label for="source-author-choice">Meno autora</label>
+            <input class="form-control" type="search" id="source-author-choice" name="autor"
+                   list="source-author-options" maxlength="200" required autocomplete="off"
+                   placeholder="Začnite písať meno">
+            <datalist id="source-author-options">
+              <?php foreach ($participating['sources'] as $authorStat): ?>
+                <option value="<?= htmlspecialchars($authorStat['author'], ENT_QUOTES, 'UTF-8') ?>"><?= htmlspecialchars(formatProjectArticleCountLabel($authorStat['articles']), ENT_QUOTES, 'UTF-8') ?></option>
+              <?php endforeach; ?>
+            </datalist>
+          </div>
+          <button class="btn-primary" type="submit">Zobraziť články autora</button>
+        </form>
+      </details>
+    <?php endif; ?>
   <?php endif; ?>
 </div>

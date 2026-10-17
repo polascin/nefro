@@ -9,6 +9,9 @@
   var RENDER_OPTS = {
     delimiters: DELIMITERS,
     throwOnError: false,
+    trust: false,
+    maxExpand: 1000,
+    maxSize: 50,
     ignoredTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
   };
 
