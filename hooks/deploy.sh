@@ -58,7 +58,7 @@ if [[ -r $DEPLOY_CONFIG ]]; then
 fi
 
 # Kontrola produkčného markeru a dry-run musia fungovať aj v režime Actions.
-if [[ ${NEFRO_DEPLOY_MODE:-sftp} == actions ]] && (( !REMOTE_COMMIT_ONLY && !DRY_RUN )); then
+if [[ ${NEFRO_DEPLOY_MODE:-sftp} == actions ]] && ((! REMOTE_COMMIT_ONLY && ! DRY_RUN)); then
 	echo "[deploy] Režim Actions: lokálne SFTP nasadenie je vypnuté."
 	exit 0
 fi
@@ -68,7 +68,7 @@ if [[ -n $BASE_REF ]] && ! git rev-parse --verify "${BASE_REF}^{commit}" >/dev/n
 	exit 1
 fi
 
-if (( !REMOTE_COMMIT_ONLY && !DRY_RUN )); then
+if ((! REMOTE_COMMIT_ONLY && ! DRY_RUN)); then
 	DEPLOY_BRANCH=$(git symbolic-ref --quiet --short HEAD 2>/dev/null || true)
 	if [[ $DEPLOY_BRANCH != main ]]; then
 		echo "[deploy] Produkcia sa smie nasadiť iba z vetvy main." >&2
@@ -154,12 +154,10 @@ setup_sftp() {
 		SFTP_OPTIONS+=(-i "$SFTP_KEY")
 	fi
 
-	for command in mktemp; do
-		if ! command -v "$command" >/dev/null 2>&1; then
-			echo "[deploy] Chýba príkaz: $command" >&2
-			exit 1
-		fi
-	done
+	if ! command -v mktemp >/dev/null 2>&1; then
+		echo "[deploy] Chýba príkaz: mktemp" >&2
+		exit 1
+	fi
 }
 
 # Vypíše DEPLOY_COMMIT z produkčného deploy_info.php a skončí. Pri neúspechu

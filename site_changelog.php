@@ -55,7 +55,7 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
-                'date' => '2026-10-18 00:25',
+                'date' => '2026-10-18 00:24',
                 'category' => 'portal',
                 'title' => 'Spoľahlivejšie vyhľadávanie a jednoduchší výber autora',
                 'description' => 'Vyhľadávanie má stabilnejšie poradie a presnejšie zvýraznenie výsledkov. Ďalšieho autora si možno vyhľadať v kompaktnom zozname; opravené bolo aj overovanie účtu a prihlasovanie na odber noviniek.',
