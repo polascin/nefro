@@ -57,7 +57,31 @@ Balík pochádza z [oficiálneho npm registra](https://registry.npmjs.org/katex/
 - Existujúce staršie serverové logy sa nemenili. Nové filtrovanie spätne neodstráni už uložené query; ich retenciu/purge treba riešiť samostatným konkrétne schváleným zásahom.
 - Klinická správnosť všetkých kalkulačiek, úplná WCAG zhoda, zmluvy dodávateľov, obnova zo záloh a organizačné právne dôkazy neboli týmto behom preukázané.
 
-Výsledok nasadenia a živých kontrol sa doplní po vydaní do tohto dokumentu a Behu 129.
+### Nasadenie a živé kontroly
+
+Implementácia je v commite `b5e5c46`; následný `c30882a` opravuje formátovanie
+release guardu a čas záznamu zmien. Produkčný marker po druhom SFTP deployi:
+`c30882a`. Actions validačný job pre implementáciu uspel, produkčný Actions job
+sa správne preskočil. Prvé Trunk CI odhalilo formátovanie shell skriptu;
+opravené pripnutým shfmt, ShellCheck aj 12 simulovaných kontrol následne prešli.
+Výsledky kontrol runtime commitu sú dostupné v
+[Trunk CI](https://github.com/polascin/nefro/actions/runs/39075120604) a
+[validačnom workflow](https://github.com/polascin/nefro/actions/runs/39075120618).
+Nasledujúca dôkazová dokumentácia je v deploy ignore a nemení runtime marker.
+
+- 12 verejných GET stránok vrátane troch skutočných vyhľadávacích dopytov,
+  extrémneho čísla stránky, filtra autora, prihlásenia a právnych stránok: HTTP 200,
+  jeden title, CSP a HSTS, bez zachytenej PHP chyby alebo úniku cesty.
+- Dva interné PHP partialy a interný plán: HTTP 403.
+- Tri používané KaTeX JS/CSS súbory a hlavný WOFF2 font: HTTP 200 a SHA-256
+  zhodný s lokálnymi súbormi; starý `0.16.11/katex.min.js`: HTTP 404.
+- Domovská stránka pred zmenou 536 928 B, po zmene 238 158 B, približne o 56 %
+  menej nekomprimovaného HTML. Ide o veľkosť odpovede, nie meranie p95 výkonu.
+- V mobilnom náhľade prehliadača overené otvorenie výberu autora a odoslanie
+  syntetického mena; výsledná URL obsahuje GET filter a stránka správne uvádza,
+  že autor nemá publikované články. Celá matica prehliadačov zostáva neoverená.
+- Prípravná séria prekročila krátke okno limitera a dostala 429. Ochrana sa
+  nemenila; po uplynutí okna prešla záverečná séria so správnym parametrom `s`.
 
 ## Plán ďalšieho rozvoja
 
