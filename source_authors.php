@@ -518,5 +518,8 @@ function getSourceArticleAuthors(): array {
         // Účastníci spracovaného odborného rozhovoru Medscape Digital Health Pulse
         // zo 16. októbra 2026; mená a úlohy overené v bylinu verejne dostupnej stránky 2026-10-17.
         'ai-governance-klinicka-prax-nefrologia' => ['Nelly Abulata', 'Deepti Pandita'],
+        // Autorka spracovanej správy Medscape Medical News zo 16. októbra 2026;
+        // meno overené v bylinu verejne dostupnej stránky 2026-10-17.
+        'automatizovane-podavanie-inzulinu-dm2-dialyza' => ['Miriam E. Tucker'],
     ];
 }
