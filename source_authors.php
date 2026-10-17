@@ -511,5 +511,9 @@ function getSourceArticleAuthors(): array {
         // Účastníci a autori spracovaného odborného rozhovoru Medscape z 2. októbra 2026;
         // mená, úlohy a dátum overené v metadátach a prepise verejne dostupnej stránky 2026-10-08.
         'stitna-zlaza-diabetes-oblicky-hba1c-glykemia' => ['Kaniksha Desai', 'Shashank Joshi'],
+        // Autori spracovanej analýzy JACC Heart Fail 2026;14(9):103111
+        // (doi 10.1016/j.jchf.2026.103111, PMID 42201301) — 12 mien overených cez
+        // PubMed a byline verejne dostupnej stránky Medscape 2026-10-17.
+        'renin-aldosteron-dapagliflozin-spironolakton-hfpef' => ['João Pedro Ferreira', 'Pedro Marques', 'João Sérgio Neves', 'Ana Rita Leite', 'Cláudia Teixeira', 'Francisca Saraiva', 'Abhinav Sharma', 'Faiez Zannad', 'Joana Pimenta', 'Ricardo Fontes-Carvalho', 'Adelino Leite-Moreira', 'Francisco Vasques-Nóvoa'],
     ];
 }
