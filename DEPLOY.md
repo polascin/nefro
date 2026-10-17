@@ -1,15 +1,27 @@
 # Deploy – nefro.polascin.net
 
-Automatické nasadenie cez GitHub Actions (`.github/workflows/deploy.yml`):
-po každom pushi do `main` (alebo manuálne cez **Actions → Deploy → Run
-workflow**) sa repozitár zosynchronizuje rsyncom do web rootu na WebSupport.
+Predvolený spôsob nasadenia je lokálny SFTP hook (`hooks/post-commit`,
+`hooks/post-merge`, `hooks/deploy.sh`). Hooky sa zapájajú cez
+`pwsh -File ./hooks/install.ps1` a `core.hooksPath=hooks`.
+
+GitHub Actions (`.github/workflows/deploy.yml`) vždy vykonajú validáciu.
+Produkčný job beží iba pri repository variable `NEFRO_DEPLOY_MODE=actions`;
+pri chýbajúcej alebo inej hodnote sa preskočí aj po manuálnom spustení workflow.
+V režime Actions sa po pushi do `main` alebo cez **Run workflow** repozitár
+zosynchronizuje rsyncom do web rootu na WebSupport.
 Súbory vylúčené v `.deployignore` sa nenasadzujú; `--delete` sa nepoužíva,
 takže serverové súbory mimo repozitára zostávajú nedotknuté. Push s
 `[skip deploy]` v commit message deploy preskočí.
 
-Secrets sú nastavené od **2026-09-11**, deploy je teda aktívny. Dovtedy sa
-deploy job iba preskakoval s upozornením a nasadzoval výhradne lokálny SFTP
-hook.
+Samotná prítomnosť secrets nestačí na zapnutie produkčného jobu. Stav nasadenia
+over podľa vykonaných krokov konkrétneho behu, nie podľa zeleného výsledku
+validácie alebo historického dátumu konfigurácie.
+
+Pred prepnutím na Actions vypni lokálne nasadzovanie cez strojovú konfiguráciu
+`NEFRO_DEPLOY_MODE=actions` v lokálnom deploy env súbore. Potom nastav rovnomennú
+repository variable. Pri návrate na SFTP postupuj opačne: najprv vypni Actions,
+počkaj na dokončenie rozbehnutých jobov a až potom znovu povoľ lokálny deploy. Over drift
+a synchronizuj PDF až po dokončení všetkých nasadení.
 
 ## UPSERT zmenených článkov
 
@@ -26,12 +38,12 @@ automatický UPSERT je bezpečný.
 
 ## GitHub Secrets (Settings → Secrets and variables → Actions)
 
-| Secret               | Popis                                                                |
-| -------------------- | -------------------------------------------------------------------- |
-| `DEPLOY_HOST`        | SSH host, napr. `shell.r1.websupport.sk`                              |
-| `DEPLOY_USER`        | SSH používateľ, napr. `uid58858`                                      |
-| `DEPLOY_PORT`        | SSH port (WebSupport shell používa `26650`; predvolené `22`)          |
-| `DEPLOY_SSH_KEY`     | Celý obsah privátneho SSH kľúča                                       |
+| Secret               | Popis                                                                   |
+| -------------------- | ----------------------------------------------------------------------- |
+| `DEPLOY_HOST`        | SSH host, napr. `shell.r1.websupport.sk`                                |
+| `DEPLOY_USER`        | SSH používateľ, napr. `uid58858`                                        |
+| `DEPLOY_PORT`        | SSH port (WebSupport shell používa `26650`; predvolené `22`)            |
+| `DEPLOY_SSH_KEY`     | Celý obsah privátneho SSH kľúča                                         |
 | `DEPLOY_KNOWN_HOSTS` | Host key servera (`ssh-keyscan -p <port> <host>`), formát `[host]:port` |
 | `DEPLOY_REMOTE_PATH` | `/data/8/6/868f981d-e598-4e71-b7f5-246f2e180cef/polascin.net/sub/nefro` |
 
@@ -45,8 +57,8 @@ vygeneruj nový pár, pridaj verejnú časť do `~/.ssh/authorized_keys` na serv
 prepíš secret a zmaž starý riadok — lokálny prístup tým nie je dotknutý.
 Záloha pôvodného súboru je na serveri ako `~/.ssh/authorized_keys.bak-20260911`.
 
-Lokálny SFTP hook (`hooks/deploy.sh`) zostáva funkčný ako záložný spôsob.
-Po zapnutí Actions deployu **nasadzuje každý lokálny commit dvakrát** (hook
-cez SFTP hneď, Actions cez rsync o ~1 min). Nie je to škodlivé (`--delete` sa
-nepoužíva, rsync je idempotentný), ale je to zbytočné — hook možno odinštalovať
-odstránením `post-commit` z `.git/hooks/`.
+Súbežné nasadzovanie cez SFTP a Actions nie je bezpečná záloha: rsync môže
+prepísať novšie serverové PDF a UPSERT ho môže opäť regenerovať počas synchronizácie.
+Beh 128 tento rozdiel potvrdil porovnaním SHA-256. Používaj jeden režim.
+Hooky neodinštalúvaj mazaním `.git/hooks/post-commit`; projekt používa `hooks/`
+cez `core.hooksPath` a validácia musí zostať zapnutá.

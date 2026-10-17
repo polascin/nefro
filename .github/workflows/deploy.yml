@@ -44,7 +44,9 @@ jobs:
     needs: validate
     runs-on: ubuntu-latest
     timeout-minutes: 20
-    if: ${{ github.event_name == 'workflow_dispatch' || !contains(github.event.head_commit.message, '[skip deploy]') }}
+    # Predvolene nasadzuje lokálny SFTP hook. Actions vyžadujú výslovné prepnutie
+    # režimu, aby súbežný rsync/UPSERT neprepísal práve synchronizované PDF.
+    if: ${{ vars.NEFRO_DEPLOY_MODE == 'actions' && (github.event_name == 'workflow_dispatch' || !contains(github.event.head_commit.message, '[skip deploy]')) }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v5

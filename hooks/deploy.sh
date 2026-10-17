@@ -57,6 +57,12 @@ if [[ -r $DEPLOY_CONFIG ]]; then
 	source "$DEPLOY_CONFIG"
 fi
 
+# Kontrola produkčného markeru a dry-run musia fungovať aj v režime Actions.
+if [[ ${NEFRO_DEPLOY_MODE:-sftp} == actions ]] && (( !REMOTE_COMMIT_ONLY && !DRY_RUN )); then
+	echo "[deploy] Režim Actions: lokálne SFTP nasadenie je vypnuté."
+	exit 0
+fi
+
 if [[ -n $BASE_REF ]] && ! git rev-parse --verify "${BASE_REF}^{commit}" >/dev/null 2>&1; then
 	echo "[deploy] Neplatný base-ref: $BASE_REF" >&2
 	exit 1
