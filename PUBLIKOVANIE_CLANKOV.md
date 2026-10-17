@@ -65,13 +65,11 @@ poľom `category` a tým, kde sú vypísané.
    Hlavičky `<thead>` majú mať `<th scope="col">`, riadkové hlavičky `<th scope="row">`.
 6. **Overenie pred commitom:** `php -l add_<slug>_article.php` a
    `php tools/phpstan.phar analyse add_<slug>_article.php --no-progress`
-   Riadok `?? '(bez titulu)'` v šablóne **nechaj** — PHPStan ho však pri každom
-   novom článku nahlási (`nullCoalesce.offset`), pretože pozná presný tvar poľa.
-   Je to očakávané: pridaj pre nový súbor položku do `phpstan-baseline.neon`.
-   Najrýchlejšie: `php tools/phpstan.phar analyse add_<slug>_article.php \
-   --generate-baseline <tmp>.neon --no-progress`, z výsledku prepíš absolútnu
-   cestu na relatívnu a blok pripoj na koniec `phpstan-baseline.neon`.
-   (Celoprojektové `--generate-baseline` zlyháva na internej chybe — nepoužívaj ho.)
+   Pri celoprojektovej kontrole použi `--memory-limit=1G`. Aktuálna šablóna
+   nevyžaduje novú položku v baseline. Ak PHPStan preukáže mŕtvy fallback
+   `?? '(bez titulu)'` nad známym literálovým poľom, odstráň ho v danom súbore;
+   pri neistom tvare poľa ho zachovaj. Chybu neopravuj automatickým rozšírením
+   ani regenerovaním `phpstan-baseline.neon`.
 7. **Commit** (post-commit hook nahrá SFTP na produkciu):
    `git add add_<slug>_article.php img/… && git commit -m "content(<sekcia>): <titul>"`
 8. **Spusti na serveri** cez SSH (vloží do DB + pošle newsletter avízo + vygeneruje PDF):
