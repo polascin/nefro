@@ -521,5 +521,8 @@ function getSourceArticleAuthors(): array {
         // Autorka spracovanej správy Medscape Medical News zo 16. októbra 2026;
         // meno overené v bylinu verejne dostupnej stránky 2026-10-17.
         'automatizovane-podavanie-inzulinu-dm2-dialyza' => ['Miriam E. Tucker'],
+        // Autorka spracovanej kongresovej správy Medscape z EASD 2026 (13. 10. 2026);
+        // meno overené v bylinu verejne dostupnej stránky 2026-10-17.
+        'nizkoenergeticka-dieta-cvicenie-remisia-dm2-reset' => ['Nancy A. Melville'],
     ];
 }
