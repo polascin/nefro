@@ -515,5 +515,8 @@ function getSourceArticleAuthors(): array {
         // (doi 10.1016/j.jchf.2026.103111, PMID 42201301) — 12 mien overených cez
         // PubMed a byline verejne dostupnej stránky Medscape 2026-10-17.
         'renin-aldosteron-dapagliflozin-spironolakton-hfpef' => ['João Pedro Ferreira', 'Pedro Marques', 'João Sérgio Neves', 'Ana Rita Leite', 'Cláudia Teixeira', 'Francisca Saraiva', 'Abhinav Sharma', 'Faiez Zannad', 'Joana Pimenta', 'Ricardo Fontes-Carvalho', 'Adelino Leite-Moreira', 'Francisco Vasques-Nóvoa'],
+        // Účastníci spracovaného odborného rozhovoru Medscape Digital Health Pulse
+        // zo 16. októbra 2026; mená a úlohy overené v bylinu verejne dostupnej stránky 2026-10-17.
+        'ai-governance-klinicka-prax-nefrologia' => ['Nelly Abulata', 'Deepti Pandita'],
     ];
 }
