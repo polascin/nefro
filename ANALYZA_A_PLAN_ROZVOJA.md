@@ -163,6 +163,15 @@ neobsahuje riadky ani osobné údaje. Povinná CI brána navyše overuje SQL.gz,
 cudzie kľúče, pohľad, procedúru, trigger, vypnutú udalosť, odmietnutie
 neplatného SQL a rozpoznanie poškodeného EPUB. To nenahrádza produkčnú zálohu.
 
-Úloha obnovy zostáva otvorená: získať úplnú súborovú zálohu, preveriť jej
-časovú nadväznosť na DB zálohu, zopakovať izolovanú obnovu a doplniť aplikačnú
-a dešifrovaciu skúšku. RPO ani RTO celého systému zatiaľ nie sú preukázané.
+Následná izolovaná skúška úplného súborového ZIP zo 17. 10. 2026 o 15:10
+overila 3 323 súborov (2 705 031 952 bajtov), 60 adresárov a 532 kontrol
+formátov bez chyby. [Strojový výsledok](tools/restore/evidence/2026-10-18-full-files.json)
+potvrdzuje nemennosť zdroja a odstránenie kontajnera. Nástroj podporuje priamy
+ZIP vstup, bezpečné cesty, UTF-8 názvy, prázdne adresáre a samostatný režim
+`--files-only`; negatívne ZIP skúšky sú súčasťou povinnej regresnej brány.
+
+Obnoviteľnosť DB a dodaných súborov je overená oddelene. Zostáva preveriť
+konzistenciu rozdielne datovaných záloh, aplikačné väzby a dešifrovanie.
+Archív obsahuje kandidátsky zdroj odvodenia kľúča v konfigurácii; jeho zhodu
+s aktívnym kľúčom skúška nepotvrdzuje. RPO ani RTO celého systému zatiaľ
+nie sú preukázané. Produkcia sa počas skúšok nemenila.
