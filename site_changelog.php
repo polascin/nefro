@@ -55,6 +55,13 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-10-18 13:10',
+                'category' => 'content',
+                'title' => 'Vyhľadávanie liekov a štúdií opäť vracia výsledky',
+                'description' => 'Textové hľadanie v databáze liekov a klinických štúdií prestalo pri natívnych parametroch databázy potichu vracať prázdny zoznam.',
+                'url' => 'lieky.php',
+            ],
+            [
                 'date' => '2026-10-18 08:40',
                 'category' => 'portal',
                 'title' => 'Spoľahlivejšia ochrana formulárov',

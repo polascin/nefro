@@ -4,6 +4,7 @@
   "tools/test_article_pagination.php",
   "tools/test_botguard_privacy.php",
   "tools/test_calculator_history_guard.php",
+  "tools/test_catalogue_search.php",
   "tools/test_compliance_controls.php",
   "tools/test_legal_notifications.php",
   "tools/test_mkch10_codebook.php",

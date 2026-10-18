@@ -153,8 +153,12 @@ if ($fPub === 'published') {
     $where .= ' AND is_published = 0';
 }
 if ($fQuery !== '') {
-    $where .= ' AND (brief_title LIKE :q ESCAPE \'!\' OR conditions LIKE :q ESCAPE \'!\' OR lead_sponsor LIKE :q ESCAPE \'!\' OR nct_id LIKE :q ESCAPE \'!\')';
-    $params['q'] = likeSearchPattern($fQuery);
+    $pattern = likeSearchPattern($fQuery);
+    $where .= ' AND (brief_title LIKE :q_title ESCAPE \'!\' OR conditions LIKE :q_conditions ESCAPE \'!\' OR lead_sponsor LIKE :q_sponsor ESCAPE \'!\' OR nct_id LIKE :q_nct ESCAPE \'!\')';
+    $params['q_title'] = $pattern;
+    $params['q_conditions'] = $pattern;
+    $params['q_sponsor'] = $pattern;
+    $params['q_nct'] = $pattern;
 }
 
 $trials = [];
