@@ -126,6 +126,44 @@ Apache `.htaccess`, SMTP, SMS, platobný poskytovateľ, ACL hostingu ani RPO/RTO
 Pri inom dátovom modeli treba projektový probe upraviť; chýbajúcu podporu
 nenahrádza úspešná generická obnova.
 
+## Doplnenie izolovanej pracovnej kópie
+
+```bash
+python tools/restore/run.py --files /cesta/k/povodnym-suborom.zip --sql /cesta/k/databaze.zip \
+  --application-probe --file-memory-mib 4096 --file-image nefro-restore-php \
+  --recovery-source /cesta/k/lokalnym-zdrojom --recovery-bundle scratch/nove-doplnky \
+  --report scratch/restore-doplnena-kopia.json
+```
+
+Najprv sa overí úplná zhoda pôvodnej obnovy s archívom. Až potom sa do jej
+pracovnej kópie v `tmpfs` doplnia **iba chýbajúce PDF a rastrové obrázky článkov**
+odkazované databázou. Existujúce súbory sa neprepisujú; `tar -k` musí prípadnú
+kolíziu odmietnuť. Nepridáva sa PHP kód, konfigurácia, SQL, kľúče ani súbory
+účtov. Symlinky, nekanonické cesty a doplnky nad 128 MiB sa odmietajú.
+Spoločný objem dát musí zostať v povolenom pamäťovom rozpočte.
+
+`--recovery-source` je iba zdroj čítania. `--recovery-bundle` musí byť nový
+adresár; uchováva len doplnené verejné súbory v rovnakých relatívnych cestách.
+Po skúške sa celá pamäťová obnova vrátane databázy odstráni. Zopakovať ju možno
+z pôvodných archívov a zachovaného doplnkového balíka ako nového recovery zdroja;
+výstupný balík aj report musia mať pri každom behu nové cesty.
+
+Report uvádza pri každom doplnku SHA-256, veľkosť, druh lokálneho zdroja
+a pri sledovaných súboroch posledný commit a zhodu s blobom `HEAD`.
+Git je voliteľný: bez dostupného programu alebo čitateľného commitu zostávajú
+tieto polia `null`; kopírovanie zo samostatného adresára tým nie je blokované.
+Pri zdroji v podadresári repozitára sa blob číta relatívne k tomuto podadresáru.
+Pri PDF s dostupným titulom článku a nástrojom `pdftotext` sa v pamäti overí
+prítomnosť normalizovaného titulu v texte. Bez tohto nástroja ostáva kontrola
+textovej identity `NOT_RUN`. PDF musí prejsť aj základnou kontrolou formátu,
+obrázky kontrolou čitateľnej veľkosti cez PHP. Po kopírovaní sa znovu overia
+všetky kontrolné súčty doplnkov a celý aplikačný probe.
+
+Úspech doplnenej pracovnej kópie **nemení výsledok pôvodnej dvojice záloh**.
+Zhoda názvu a titulu PDF nepotvrdzuje úplnú obsahovú zhodu s databázovým
+článkom ani pôvodný čas jeho vytvorenia. Doplnenie nie je nový záložný snapshot
+poskytovateľa a nepotvrdzuje spoločný historický bod obnovy.
+
 ## Regresné kontroly
 
 ```bash
@@ -236,3 +274,55 @@ PHP probe súbory sú v allowliste build kontextu, preto podliehajú aj syntaxi
 a PHPStan. Skutočné zálohy, kľúče a reporty s obsahom údajov sa do obrazu nekopírujú.
 
 _Primárny zdroj: [Websupport: Zálohy databáz](https://www.websupport.sk/podpora/kb/zalohy-databaz/), overené 18. 10. 2026. Všeobecný opis služby nepotvrdzuje dostupnosť konkrétnej zálohy Nefro._
+
+## Doplnená pracovná kópia (18. 10. 2026)
+
+[Nový strojový výsledok](evidence/2026-10-18-recovered.json) má **`result=PASS`**
+v rozsahu kontrolovaného aplikačného probe. Pôvodný neúspešný výsledok
+[nezmenenej dvojice záloh](evidence/2026-10-18-consistency.json) zostáva zachovaný.
+
+Všetkých 10 chýbajúcich súborov sa našlo v lokálnom repozitári. Ich SHA-256
+sa zhodujú s príslušnými blobmi `HEAD`; posledný zdrojový commit každého
+súboru je uvedený v novom JSON. Nevykonávalo sa generovanie PDF ani úprava
+článkov alebo obrázkov. Doplnili sa existujúce bajtovo zhodné súbory:
+
+| Spoločný názov PDF a obrázka                         | Doplnené cesty                        |
+| ---------------------------------------------------- | ------------------------------------- |
+| `ai-governance-klinicka-prax-nefrologia`             | `pdf/<nazov>.pdf`, `img/<nazov>.webp` |
+| `automatizovane-podavanie-inzulinu-dm2-dialyza`      | `pdf/<nazov>.pdf`, `img/<nazov>.webp` |
+| `cetp-inhibicia-obicetrapib-lipidy-renalna-funkcia`  | `pdf/<nazov>.pdf`, `img/<nazov>.webp` |
+| `nizkoenergeticka-dieta-cvicenie-remisia-dm2-reset`  | `pdf/<nazov>.pdf`, `img/<nazov>.webp` |
+| `renin-aldosteron-dapagliflozin-spironolakton-hfpef` | `pdf/<nazov>.pdf`, `img/<nazov>.webp` |
+
+Ide spolu o 2 313 497 bajtov. Všetkých 5 PDF prešlo kontrolou formátu
+a overením prítomnosti databázového titulu v extrahovanom texte; 5 WebP
+kontrolou čitateľných rozmerov. Súbory doplnila výhradne vrstva recovery do
+pamäťového `/restore`, bez prepísania ktoréhokoľvek pôvodného súboru.
+
+| Kontrola po doplnení   | Výsledok                                                                                                      |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------- |
+| Pracovná kópia         | 3 323 pôvodných + 10 doplnených súborov = 3 333 súborov pred spustením aplikačného probe.                     |
+| PDF článkov            | 454 zo 454 odkazov dostupných, 0 nedostupných.                                                                |
+| Obrázky článkov        | 544 z 544 odkazov dostupných, 0 nedostupných.                                                                 |
+| Ostatné súborové väzby | 40 súborov plateného katalógu, 6 aktuálnych a 2 archivované avatary dostupné.                                 |
+| Databáza               | 37 tabuliek, 144 649 riadkov; 19 deklarovaných väzieb bez osirelých riadkov.                                  |
+| Aplikácia              | 8 kontrol funkcií, 5 HTTP kontrol s DB vrátane vetvy výsledkov vyhľadávania, 23 kontrol verejného sťahovania. |
+| Dešifrovanie           | 1 z 1 TOTP záznamov úspešne dešifrovaný; nesprávny kľúč a zmenený ciphertext odmietnuté.                      |
+| Nemennosť a izolácia   | Pôvodné archívy aj aplikačné tabuľky nezmenené, DB účet iba `SELECT`, sieť `none`, žiadne porty.              |
+| Upratanie              | Všetky vlastné kontajnery a zväzok socketu odstránené.                                                        |
+
+Lokálny doplnkový balík zostáva v ignorovanom adresári
+`scratch/restore-recovered-assets-20261018/`, s relatívnymi cestami a
+`recovery-manifest.json`. Neobsahuje SQL, konfiguráciu, kľúče ani údaje účtov.
+Celá obnovená databáza a aplikačný strom zostali iba v dočasnej pamäti a po
+kontrole sa odstránili. Balík umožňuje zostaviť tú istú pracovnú kópiu znova
+nad pôvodnými archívmi. Kontrolovaná regresia pokrýva aj doplnenie PDF a PNG,
+odmietnutie nebezpečných ciest a vynechanie nesúvisiaceho INI zo zdroja.
+
+**Zostávajúce obmedzenia:** PASS patrí doplnenej pracovnej kópii, nie pôvodným
+archívom. Použité lokálne verzie pochádzajú z doložených commitov, ale nemusia
+zodpovedať historickému stavu v čase poskytovateľovej zálohy. Kontrola titulu
+PDF nepotvrdzuje zhodu celého textu a obrázkov s článkom. Naďalej nie sú
+overené prihlásenia reálnych účtov, zapisujúce toky nad reálnymi údajmi,
+externé služby, Apache, ACL ani RPO/RTO. DB obsahuje 0 objednávok. Produkcia
+ani pôvodné zálohy sa počas dopĺňania nemenili.

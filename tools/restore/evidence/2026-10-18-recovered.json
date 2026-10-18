@@ -1,0 +1,266 @@
+{
+  "timestamp_utc": "2026-10-18T13:45:06.499838+00:00",
+  "result": "PASS",
+  "verification_scope": "files_and_database",
+  "file_restore": "PASS",
+  "file_format_validation": "PASS",
+  "database_round_trip": "PASS",
+  "network_mode": "none",
+  "published_ports": 0,
+  "source_mount_read_only": true,
+  "database_tcp_and_events_disabled": true,
+  "restore_containers_removed": true,
+  "probe_socket_volume_removed": true,
+  "existing_database_backup_restore_verified": true,
+  "database_source": "existing_backup",
+  "database_backup_sha256": "804ca4ff7ed5011faf68a2041f171dc5c7204a1a8966a5996e4f03cf03a8b3ce",
+  "database_tables": 37,
+  "database_rows": 144649,
+  "database_inventory_sha256": "86a5eaeacefc9a5b9c1af54666e43f947d3ba6fd67954d0ef1f9392af93ff9d9",
+  "database_schema_sha256": "9b834fc9d9eb98464a9a7a3a793d42f42fc7117070ac1938aa641870125179e3",
+  "file_count": 3323,
+  "file_bytes": 2705031952,
+  "directory_count": 60,
+  "file_memory_mib": 4096,
+  "file_backup_archive_sha256": "3e7fa6e098122406894bab1bf21ab53fcc295a4054b53bcd551d9f0418da7a24",
+  "file_manifest_sha256": "c1b2572a3bfe104a5bb08b422fd7422b3e0d6e03007aa5dcff49e9cc3e83d3c1",
+  "format_checks": {
+    "checked": 532,
+    "failures": {},
+    "failed_file_sha256": []
+  },
+  "file_restore_seconds": 162.255,
+  "total_seconds": 272.646,
+  "source_backups_unchanged": true,
+  "file_image_id": "sha256:b42cc6512d36176ace9708c22e165b8c4f52c047d5e10e1823555cc6342d7f1b",
+  "database_image": "mariadb:11.4.13@sha256:250e1609e93c0e6aecf64bfbab2d84d5e89d2481540fe77447ff6c855c3b1873",
+  "limits": [
+    "Application checks cover only the explicit probe scope; see application_probe.limits.",
+    "No full disaster recovery, common recovery timestamp or external-service validation."
+  ],
+  "application_probe": {
+    "result": "PASS",
+    "database_available": true,
+    "references": {
+      "paid_catalog": {
+        "references": 40,
+        "present": 40,
+        "missing_or_unsafe": 0,
+        "unique_missing_paths": 0
+      },
+      "article_pdfs": {
+        "references": 454,
+        "present": 454,
+        "missing_or_unsafe": 0,
+        "unique_missing_paths": 0
+      },
+      "article_images": {
+        "references": 544,
+        "present": 544,
+        "missing_or_unsafe": 0,
+        "unique_missing_paths": 0
+      },
+      "avatars": {
+        "references": 6,
+        "present": 6,
+        "missing_or_unsafe": 0,
+        "unique_missing_paths": 0
+      },
+      "archived_avatars": {
+        "references": 2,
+        "present": 2,
+        "missing_or_unsafe": 0,
+        "unique_missing_paths": 0
+      },
+      "order_files": {
+        "references": 0,
+        "present": 0,
+        "missing_or_unsafe": 0,
+        "unique_missing_paths": 0
+      }
+    },
+    "cryptography": {
+      "key_available": true,
+      "key_source": "NEWSLETTER_UNSUBSCRIBE_SECRET",
+      "synthetic_round_trip": "PASS",
+      "encrypted_records": 1,
+      "decrypted": 1,
+      "failed": 0,
+      "legacy_plaintext_records": 0,
+      "enabled_without_secret": 0,
+      "wrong_key_rejected": 1,
+      "tampered_rejected": 1,
+      "existing_record_decryption": "PASS"
+    },
+    "archived_application_helper_checks": 8,
+    "public_download_http_checks": 23,
+    "database_read_only_account": "PASS",
+    "database_http_checks": 5,
+    "search_results_branch_verified": true,
+    "database_relations": [
+      {
+        "orphaned_rows": 0
+      },
+      {
+        "orphaned_rows": 0
+      },
+      {
+        "orphaned_rows": 0
+      },
+      {
+        "orphaned_rows": 0
+      },
+      {
+        "orphaned_rows": 0
+      },
+      {
+        "orphaned_rows": 0
+      },
+      {
+        "orphaned_rows": 0
+      },
+      {
+        "orphaned_rows": 0
+      },
+      {
+        "orphaned_rows": 0
+      },
+      {
+        "orphaned_rows": 0
+      },
+      {
+        "orphaned_rows": 0
+      },
+      {
+        "orphaned_rows": 0
+      },
+      {
+        "orphaned_rows": 0
+      },
+      {
+        "orphaned_rows": 0
+      },
+      {
+        "orphaned_rows": 0
+      },
+      {
+        "orphaned_rows": 0
+      },
+      {
+        "orphaned_rows": 0
+      },
+      {
+        "orphaned_rows": 0
+      },
+      {
+        "orphaned_rows": 0
+      }
+    ],
+    "limits": [
+      "No authenticated production-account flow, external service, browser rendering or Apache configuration test.",
+      "Synthetic key round trip alone does not prove decryption of an existing record.",
+      "Reference presence does not prove semantic PDF/content parity or a common recovery timestamp."
+    ],
+    "external_images_not_checked": 0,
+    "publication_order_records": 0
+  },
+  "recovery_working_copy": {
+    "scope": "additive_working_copy_only",
+    "supplement_count": 10,
+    "supplement_bytes": 2313497,
+    "entries": [
+      {
+        "path": "img/ai-governance-klinicka-prax-nefrologia.webp",
+        "bytes": 191646,
+        "sha256": "e8ca9adee38dbb0c6df415c9993d6219dd94dca1588267ec2756a8c26ebd5954",
+        "source": "tracked_repository_asset",
+        "last_source_commit": "39502b925dde40c4e8110b370cdb79ff395a57a8",
+        "matches_git_head_blob": true,
+        "database_title_in_pdf_text": "NOT_RUN"
+      },
+      {
+        "path": "img/automatizovane-podavanie-inzulinu-dm2-dialyza.webp",
+        "bytes": 92044,
+        "sha256": "8b3e05e44549a1369cd534c41ab6ca4981e643bb65cc1133590acbd01a0cab98",
+        "source": "tracked_repository_asset",
+        "last_source_commit": "562e05f90aa25c66660bc55f029a9f7afcd2f5f5",
+        "matches_git_head_blob": true,
+        "database_title_in_pdf_text": "NOT_RUN"
+      },
+      {
+        "path": "img/cetp-inhibicia-obicetrapib-lipidy-renalna-funkcia.webp",
+        "bytes": 109658,
+        "sha256": "8e4b6299f247a5d73b2ce790e705ee3fd0cbed4ab70d10215a1d0c291ecff3f6",
+        "source": "tracked_repository_asset",
+        "last_source_commit": "1f81b9e508c523b58390aa70ff1b33b23d601fa5",
+        "matches_git_head_blob": true,
+        "database_title_in_pdf_text": "NOT_RUN"
+      },
+      {
+        "path": "img/nizkoenergeticka-dieta-cvicenie-remisia-dm2-reset.webp",
+        "bytes": 145322,
+        "sha256": "32c74f92a2f7287320e7c6ddc520c3f982d7e57ffc82328749a13159b56043ed",
+        "source": "tracked_repository_asset",
+        "last_source_commit": "5d3542b9fbce1c04a99de3c5510112561af79f20",
+        "matches_git_head_blob": true,
+        "database_title_in_pdf_text": "NOT_RUN"
+      },
+      {
+        "path": "img/renin-aldosteron-dapagliflozin-spironolakton-hfpef.webp",
+        "bytes": 138600,
+        "sha256": "f0422c37cb91498d73ab681a8ad2f579a26cc3a083301734a995e62aaaae52f8",
+        "source": "tracked_repository_asset",
+        "last_source_commit": "6db3a6f01572ba86d07f9d17000e96ff3662b251",
+        "matches_git_head_blob": true,
+        "database_title_in_pdf_text": "NOT_RUN"
+      },
+      {
+        "path": "pdf/ai-governance-klinicka-prax-nefrologia.pdf",
+        "bytes": 405034,
+        "sha256": "883f42e1ded891e2beedd096b130fe7b92a4a4d69f4f0cf85933db7676621fe3",
+        "source": "tracked_repository_asset",
+        "last_source_commit": "e78469661d8bab9a21cea3011620a92f5fddf14f",
+        "matches_git_head_blob": true,
+        "database_title_in_pdf_text": "PASS"
+      },
+      {
+        "path": "pdf/automatizovane-podavanie-inzulinu-dm2-dialyza.pdf",
+        "bytes": 262572,
+        "sha256": "3e404579831025b55537f655d32d60bdb6bd14eb0f96299fdef1b59c76917cfb",
+        "source": "tracked_repository_asset",
+        "last_source_commit": "bb6642e3c85fd5b244909dd0319e6c2b9a3662d5",
+        "matches_git_head_blob": true,
+        "database_title_in_pdf_text": "PASS"
+      },
+      {
+        "path": "pdf/cetp-inhibicia-obicetrapib-lipidy-renalna-funkcia.pdf",
+        "bytes": 293846,
+        "sha256": "67dc33d672acd80c5d021b4eddef7aaea34eda31510786c5c95fef1f310518a9",
+        "source": "tracked_repository_asset",
+        "last_source_commit": "b2e306ab52e9abe5787c0b28b1af94c1fa062fde",
+        "matches_git_head_blob": true,
+        "database_title_in_pdf_text": "PASS"
+      },
+      {
+        "path": "pdf/nizkoenergeticka-dieta-cvicenie-remisia-dm2-reset.pdf",
+        "bytes": 344277,
+        "sha256": "6524a3dd68b025b2f5842973fce9e2f4fef9263e92ba4af6499ea03ac7ef87e0",
+        "source": "tracked_repository_asset",
+        "last_source_commit": "2c61da4021fe1152eeb62e6806ae32b0a03e966f",
+        "matches_git_head_blob": true,
+        "database_title_in_pdf_text": "PASS"
+      },
+      {
+        "path": "pdf/renin-aldosteron-dapagliflozin-spironolakton-hfpef.pdf",
+        "bytes": 330498,
+        "sha256": "c8774804c87124ba64fd0d93b271f33c654a07ed8a142cd14f7c185afa50c64b",
+        "source": "tracked_repository_asset",
+        "last_source_commit": "57aab8b9d79b79376b52cc6d2b663d71449e2644",
+        "matches_git_head_blob": true,
+        "database_title_in_pdf_text": "PASS"
+      }
+    ],
+    "original_restored_files_overwritten": 0,
+    "restored_file_count": 3333
+  }
+}

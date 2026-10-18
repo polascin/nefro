@@ -51,7 +51,12 @@ def collect(sql, container, databases):
                       + quote(database) + "." + quote(table) + (" WHERE " + where if where else ""))
         return [json.loads(bytes.fromhex(line)) for line in content.decode().splitlines()]
 
-    articles = records("articles", {"pdf": "pdf_file", "content": "content"})
+    columns = sql(container, "SELECT COLUMN_NAME FROM information_schema.COLUMNS WHERE TABLE_SCHEMA=CONVERT(0x"
+                  + database.encode().hex() + " USING utf8mb4) AND TABLE_NAME='articles'").decode().splitlines()
+    article_fields = {"pdf": "pdf_file", "content": "content"}
+    if "title" in columns:
+        article_fields["title"] = "title"
+    articles = records("articles", article_fields)
     images = Images()
     for article in articles:
         images.feed(article["content"] or "")
@@ -65,6 +70,7 @@ def collect(sql, container, databases):
         "archived_avatars": [], "order_files": [],
         "totp": records("users", {"secret": "totp_secret", "storage": "totp_backup_codes", "enabled": "totp_enabled"}),
         "relations": [], "publication_order_records": 0,
+        "recovery_pdf_titles": {"pdf/" + PurePosixPath(row["pdf"]).name: row["title"] for row in articles if row["pdf"] and row.get("title")},
     }
     published = sql(container, "SELECT COLUMN_NAME FROM information_schema.COLUMNS WHERE TABLE_SCHEMA=CONVERT(0x"
                     + database.encode().hex() + " USING utf8mb4) AND TABLE_NAME='articles'").decode().splitlines()

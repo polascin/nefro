@@ -1,6 +1,7 @@
 """Exercise the restore drill with synthetic archives and a real MariaDB dump."""
 
 import argparse
+import base64
 import gzip
 import json
 import os
@@ -71,6 +72,54 @@ CREATE EVENT disabled_test ON SCHEDULE EVERY 1 DAY DO INSERT INTO parents VALUES
         app = json.loads(missing_report.read_text(encoding="utf-8"))["application_probe"]
         if not (app["result"] == "FAIL" and app["references"]["article_pdfs"]["missing_or_unsafe"] == 1):
             raise RuntimeError("Missing database/file reference was accepted.")
+        donor = root / "donor"
+        (donor / "pdf").mkdir(parents=True)
+        (donor / "img").mkdir()
+        shutil.copyfile(files / "synthetic.pdf", donor / "pdf/article.pdf")
+        (donor / "img/recovery.png").write_bytes(base64.b64decode("iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+aE1sAAAAASUVORK5CYII="))
+        (donor / "must-not-copy.ini").write_text("synthetic unwanted source", encoding="utf-8")
+        recovery_sql = root / "recovery.sql"
+        recovery_sql.write_bytes((root / "probe.sql").read_bytes().replace(b'<img src="img/fixture.svg">', b'<img src="img/fixture.svg"><img src="img/recovery.png">'))
+        recovered_report = root / "recovered.json"
+        bundle = root / "recovered-assets"
+        subprocess.run(base + ["--sql", str(recovery_sql), "--application-probe", "--recovery-source", str(donor),
+                              "--recovery-bundle", str(bundle), "--report", str(recovered_report)], check=True, timeout=300)
+        recovered = json.loads(recovered_report.read_text(encoding="utf-8"))
+        if not (recovered["result"] == "PASS" and recovered["recovery_working_copy"]["supplement_count"] == 2
+                and recovered["recovery_working_copy"]["original_restored_files_overwritten"] == 0
+                and not (files / "pdf/article.pdf").exists() and not (files / "img/recovery.png").exists()
+                and not (bundle / "must-not-copy.ini").exists() and recovered["source_backups_unchanged"]):
+            raise RuntimeError("Additive recovery changed its source or failed consistency checks.")
+        from recovery import prepare
+        from unittest.mock import patch
+        plain_payload = {"article_pdfs": ["pdf/article.pdf"], "article_images": []}
+        with patch("recovery.shutil.which", return_value=None):
+            plain = prepare(plain_payload, {}, donor, root / "without-git", 768)
+        if not (plain[0]["last_source_commit"] is None and plain[0]["matches_git_head_blob"] is None):
+            raise RuntimeError("Recovery without optional Git failed.")
+        git = shutil.which("git")
+        if git:
+            nested_repo = root / "source-repository"
+            nested_source = nested_repo / "assets"
+            (nested_source / "pdf").mkdir(parents=True)
+            shutil.copyfile(donor / "pdf/article.pdf", nested_source / "pdf/article.pdf")
+            subprocess.run([git, "init", "--quiet", str(nested_repo)], check=True)
+            subprocess.run([git, "-C", str(nested_repo), "add", "--", "assets/pdf/article.pdf"], check=True)
+            subprocess.run([git, "-C", str(nested_repo), "-c", "user.name=SyntheticFixture", "-c",
+                            "user.email=fixture@example.invalid", "commit", "--quiet", "-m", "Synthetic recovery source"], check=True)
+            nested = prepare(plain_payload, {}, nested_source, root / "from-git-subdirectory", 768)
+            if not (nested[0]["last_source_commit"] and nested[0]["matches_git_head_blob"] is True):
+                raise RuntimeError("Recovery Git provenance resolved the wrong directory.")
+        for relative in ("../escape.pdf", "/pdf/article.pdf", "img/../escape.png", "img/unwanted.php"):
+            rejected_bundle = root / "forbidden-recovery"
+            try:
+                prepare({"article_pdfs": [relative], "article_images": []}, {}, donor, rejected_bundle, 768)
+            except RuntimeError:
+                pass
+            else:
+                raise RuntimeError("Unsafe recovery path was accepted.")
+            if rejected_bundle.exists():
+                raise RuntimeError("Rejected recovery created an output directory.")
         shutil.copyfile(files / "synthetic.pdf", files / "pdf/article.pdf")
         (files / "private/nefro.env.ini").write_text("DATA_PROTECTION_KEY=wrong-synthetic-fixture-key\n", encoding="utf-8")
         wrong_key_report = root / "wrong-key.json"
@@ -160,7 +209,7 @@ CREATE EVENT disabled_test ON SCHEDULE EVERY 1 DAY DO INSERT INTO parents VALUES
             )
             if result.returncode == 0 or forbidden_report.exists() or (root / "escaped.txt").exists():
                 raise RuntimeError("Unsafe or damaged file ZIP was accepted.")
-    print("Restore self-test PASS: archives, schema objects, UTF-8, invalid SQL, corrupt EPUB, ZIP security, application HTTP, read-only DB, missing reference and wrong-key rejection.")
+    print("Restore self-test PASS: archives, schema objects, UTF-8, invalid SQL, corrupt EPUB, ZIP security, application HTTP, additive recovery, read-only DB, missing reference and wrong-key rejection.")
 
 
 if __name__ == "__main__":
