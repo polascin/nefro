@@ -201,3 +201,22 @@ Zostáva zabezpečiť konzistentný zálohovací postup pre budúce obnovy a pre
 obsahovú zhodu PDF nad rámec titulov. Doplnková vrstva nie je pôvodný snapshot
 poskytovateľa ani dôkaz spoločného historického bodu obnovy. Predchádzajúce
 obmedzenia autentifikácie, externých služieb, hostingu a RPO/RTO zostávajú platné.
+
+### Celý text doplnených PDF, 18. 10. 2026
+
+Izolovaná obnova tej istej DB umožnila porovnať všetkých 28 strán piatich PDF
+s celým textom článkov vrátane tabuliek, popiskov a bibliografie. Štyri články
+majú zhodnú sekvenciu slov, číslic a interpunkcie; pri RESET sa doložilo jediné
+opakovanie dvojice slov „Kritérium Hodnota“ pri pokračovaní tabuľky na strane 2.
+Po jeho konkrétnom zohľadnení nezostala nevysvetlená textová zmena. Tituly,
+autori a dátumy publikovania sa zhodujú s obnovenou DB. Rozdiely v medzerách
+zostávajú priznané.
+
+[Prísny strojový výsledok](tools/restore/evidence/2026-10-18-pdf-content.json)
+ostáva `PARTIAL`; [posúdenie sadzby](tools/restore/evidence/2026-10-18-pdf-content-assessment.json)
+uvádza dôkaz opakovanej hlavičky. [Postup a obmedzenia](tools/restore/README.md)
+odlišujú textovú zhodu od neoverenej vizuálnej zhody, obrázkov, odkazov a
+medicínskej správnosti. Pôvodné zálohy, PDF a produkcia sa nemenili, dočasná
+DB bola odstránená. Do povinnej regresnej brány pribudla ochrana pred
+prehliadnutím zmien čísel, negácie a matematických znamienok. Ďalšia etapa má
+overiť vizuálnu úplnosť PDF a zabezpečiť časovo konzistentné budúce zálohy.

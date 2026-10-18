@@ -18,9 +18,65 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--file-image", required=True)
     args = parser.parse_args()
+    from run import worst_result
+    # A layout-only PDF difference must never conceal an application failure.
+    if (worst_result("PASS", "FAIL", "PARTIAL") != "FAIL"
+            or worst_result("PARTIAL", "PASS", "FAIL") != "FAIL"
+            or worst_result("PASS", "PARTIAL", "PASS") != "PARTIAL"):
+        raise RuntimeError("Restore result aggregation concealed a failed or incomplete check.")
+    # A content audit must detect clinically meaningful changes, even when most
+    # surrounding prose is identical. It must also retain non-ASCII notation.
+    from pdf_content import ArticleText, canonical, differences, tokens, strip_page_numbers
+    for left, right in [("eGFR 45,5", "eGFR 45,6"), ("nie je účinný", "je účinný"),
+                        ("≥ 30", "> 30"), ("24. 10. 2023", "18. 8. 2025"), ("liečba", "liecba")]:
+        if not differences(tokens(left), tokens(right)):
+            raise RuntimeError("PDF comparison concealed a meaningful text change.")
+    html = ArticleText()
+    html.feed("<p>eGFR <strong>45</strong></p><table><tr><td>≥30</td><td>nie</td></tr></table><script>hidden</script><p>účinný&nbsp;liek</p>")
+    if canonical("".join(html.parts)) != "eGFR 45 ≥30 nie účinný liek":
+        raise RuntimeError("PDF HTML text extraction lost table cells, accents or spacing.")
+    pages, removed = strip_page_numbers("ratio\n1/2\nend\n1 / 2\n\fnext\n2/2\n\f")
+    if removed != ["1/2", "2/2"] or "ratio\n1/2\nend" not in pages:
+        raise RuntimeError("PDF page-label exclusion removed article content.")
     runner = Path(__file__).with_name("run.py")
     with tempfile.TemporaryDirectory(prefix="nefro-restore-test-") as temporary:
         root = Path(temporary)
+        from unittest.mock import patch
+        from types import SimpleNamespace
+        from pdf_content import compare
+        import hashlib
+        text_bundle = root / "pdf-text"
+        (text_bundle / "pdf").mkdir(parents=True)
+        entries = []
+        for name in ("one", "two", "three", "four", "five"):
+            raw = b"synthetic PDF input; extraction is mocked only in this control"
+            (text_bundle / "pdf" / (name + ".pdf")).write_bytes(raw)
+            entries.append({"path": "pdf/" + name + ".pdf", "sha256": hashlib.sha256(raw).hexdigest()})
+        (text_bundle / "recovery-manifest.json").write_text(json.dumps({"recovery": {"entries": entries}}), encoding="utf-8")
+        article = {"title": "Synthetic article", "content": "<p>eGFR ≥ 30; nie 45.</p>", "slug": "synthetic"}
+
+        def text_sql(container, statement):
+            if "information_schema.TABLES" in statement:
+                return b"articles\n"
+            return json.dumps(article).encode().hex().encode() + b"\n"
+
+        extracted = ("NEFRO · NEFRO.POLASCIN.NET\nSynthetic article\neGFR ≥ 30; nie 45.\n"
+                     "Zdroj: https://nefro.polascin.net/article.php?slug=synthetic · Nefro-projekt Slovensko. "
+                     "Obsah má informačný a vzdelávací charakter a nenahrádza konzultáciu s lekárom.\n1/1\n\f")
+        with patch("pdf_content.shutil.which", return_value="synthetic-pdftotext"), patch(
+                "pdf_content.subprocess.run", return_value=SimpleNamespace(stdout=extracted.encode("utf-8"), stderr=b"")):
+            if compare(text_sql, "synthetic", ["fixture"], text_bundle)["result"] != "PASS":
+                raise RuntimeError("Controlled full-body PDF match failed.")
+            article["content"] = "<p>eGFR ≥ 31; nie 45.</p>"
+            if compare(text_sql, "synthetic", ["fixture"], text_bundle)["result"] != "PARTIAL":
+                raise RuntimeError("Full-body PDF comparison concealed a numeric mismatch.")
+            article["title"] = "Different title"
+            try:
+                compare(text_sql, "synthetic", ["fixture"], text_bundle)
+            except RuntimeError:
+                pass
+            else:
+                raise RuntimeError("PDF comparison accepted an unrelated header.")
         files = root / "files"
         files.mkdir()
         (files / "empty").mkdir()
