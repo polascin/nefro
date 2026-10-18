@@ -49,6 +49,7 @@ REPO_ROOT=$(git rev-parse --show-toplevel 2>/dev/null) || {
 	exit 1
 }
 cd "$REPO_ROOT" || exit 1
+DEPLOY_HEAD=$(git rev-parse --verify HEAD) || exit 1
 
 DEPLOY_CONFIG=${NEFRO_DEPLOY_CONFIG:-"$HOME/.config/nefro/deploy.env"}
 if [[ -r $DEPLOY_CONFIG ]]; then
@@ -209,19 +210,19 @@ declare -a DELETES=()
 if [[ -n $BASE_REF ]]; then
 	while IFS= read -r -d '' path; do
 		UPLOADS+=("$path")
-	done < <(git diff --name-only -z --diff-filter=ACMR "$BASE_REF" HEAD -- "${PATHSPECS[@]}")
+	done < <(git diff --name-only -z --diff-filter=ACMR "$BASE_REF" "$DEPLOY_HEAD" -- "${PATHSPECS[@]}")
 	while IFS= read -r -d '' path; do
 		DELETES+=("$path")
-	done < <(git diff --name-only -z --diff-filter=D "$BASE_REF" HEAD -- "${PATHSPECS[@]}")
+	done < <(git diff --name-only -z --diff-filter=D "$BASE_REF" "$DEPLOY_HEAD" -- "${PATHSPECS[@]}")
 else
 	while IFS= read -r -d '' path; do
 		UPLOADS+=("$path")
 	done < <(git diff-tree --root --no-commit-id -r -z --diff-filter=ACMR \
-		--name-only HEAD -- "${PATHSPECS[@]}")
+		--name-only "$DEPLOY_HEAD" -- "${PATHSPECS[@]}")
 	while IFS= read -r -d '' path; do
 		DELETES+=("$path")
 	done < <(git diff-tree --root --no-commit-id -r -z --diff-filter=D \
-		--name-only HEAD -- "${PATHSPECS[@]}")
+		--name-only "$DEPLOY_HEAD" -- "${PATHSPECS[@]}")
 fi
 
 if ((${#UPLOADS[@]} == 0 && ${#DELETES[@]} == 0)); then
@@ -257,8 +258,13 @@ if ((DRY_RUN)); then
 	exit 0
 fi
 
-if ! php "$REPO_ROOT/tools/wait_for_ci.php" "$(git rev-parse HEAD)"; then
+if ! php "$REPO_ROOT/tools/wait_for_ci.php" "$DEPLOY_HEAD"; then
 	echo "[deploy] Povinné CI neprešlo; produkcia nebola zmenená." >&2
+	exit 1
+fi
+
+if [[ $(git rev-parse HEAD) != "$DEPLOY_HEAD" || $(git symbolic-ref --quiet --short HEAD) != main ]]; then
+	echo "[deploy] HEAD alebo vetva sa počas CI zmenili; nasadenie sa nevykonalo." >&2
 	exit 1
 fi
 
@@ -269,9 +275,10 @@ DEPLOY_INFO=$(mktemp "${TMPDIR:-/tmp}/nefro_deploy_info_XXXXXX") || {
 	rm -f "$BATCH_FILE"
 	exit 1
 }
-trap 'rm -f "$BATCH_FILE" "$DEPLOY_INFO"' EXIT
+declare -a SNAPSHOT_FILES=()
+trap 'rm -f "$BATCH_FILE" "$DEPLOY_INFO" ${SNAPSHOT_FILES[@]+"${SNAPSHOT_FILES[@]}"}' EXIT
 
-COMMIT=$(git rev-parse --short HEAD)
+COMMIT=$(git rev-parse --short "$DEPLOY_HEAD")
 BRANCH=$(git symbolic-ref --quiet --short HEAD 2>/dev/null || printf 'detached')
 TIMESTAMP=$(date '+%d.%m.%Y %H:%M')
 UNIX_TS=$(date '+%s')
@@ -313,7 +320,13 @@ for path in ${UPLOADS[@]+"${UPLOADS[@]}"}; do
 done
 
 for path in ${UPLOADS[@]+"${UPLOADS[@]}"}; do
-	local_path=$(sftp_local_path "$path") || exit 1
+	snapshot=$(mktemp "${TMPDIR:-/tmp}/nefro_deploy_source_XXXXXX") || exit 1
+	SNAPSHOT_FILES+=("$snapshot")
+	if ! git show "${DEPLOY_HEAD}:$path" >"$snapshot"; then
+		echo "[deploy] Nepodarilo sa pripraviť overený súbor: $path" >&2
+		exit 1
+	fi
+	local_path=$(sftp_local_path "$snapshot") || exit 1
 	remote=$(sftp_escape "$REMOTE_PATH/$path")
 	printf 'put "%s" "%s"\n' "$local_path" "$remote" >>"$BATCH_FILE"
 done

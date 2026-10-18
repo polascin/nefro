@@ -22,11 +22,13 @@ services:
       dockerfile: tools/integration/Dockerfile
     image: ${COMPOSE_PROJECT_NAME}-php
     command:
-      [
-        sh,
-        -ec,
-        "openssl req -x509 -newkey rsa:2048 -nodes -days 2 -keyout /test-certs/smtp.key -out /test-certs/smtp.crt -subj /CN=mailpit -addext subjectAltName=DNS:mailpit >/dev/null 2>&1; chmod 644 /test-certs/smtp.key /test-certs/smtp.crt",
-      ]
+      - sh
+      - -ec
+      - |
+        openssl req -x509 -newkey rsa:2048 -nodes -days 2 \
+          -keyout /test-certs/smtp.key -out /test-certs/smtp.crt \
+          -subj /CN=mailpit -addext subjectAltName=DNS:mailpit >/dev/null 2>&1
+        chmod 644 /test-certs/smtp.key /test-certs/smtp.crt
     volumes:
       - certs:/test-certs
   mailpit:

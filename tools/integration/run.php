@@ -80,7 +80,7 @@ function integrationLastMail(): string
 }
 
 integrationCheck((int) $pdo->query('SELECT COUNT(*) FROM users')->fetchColumn() === 0, 'fresh synthetic database');
-$password = 'SyntheticTest123';
+$password = 'Aa1-' . bin2hex(random_bytes(16));
 $insert = $pdo->prepare('INSERT INTO users(username,email,password_hash,email_verified_at,is_active) VALUES (:username,:email,:password,:verified,1)');
 $ids = [];
 foreach (['owner', 'other', 'pending'] as $name) {
@@ -123,7 +123,7 @@ integrationHttp('/forgot_password.php', ['login' => 'integration_owner', 'csrf_t
 preg_match('~reset_password\.php\?token=([A-Za-z0-9_-]+)~', integrationLastMail(), $reset);
 integrationCheck(isset($reset[1]), 'password reset request delivered via SMTP');
 $page = integrationHttp('/reset_password.php?token=' . $reset[1]);
-$newPassword = 'SyntheticChanged123';
+$newPassword = 'Aa2-' . bin2hex(random_bytes(16));
 integrationHttp('/reset_password.php', ['token' => $reset[1], 'csrf_token' => integrationCsrf($page['body']), 'new_password' => $newPassword, 'new_password_confirm' => $newPassword]);
 integrationCheck(password_verify($newPassword, (string) $pdo->query('SELECT password_hash FROM users WHERE id=' . $ids['owner'])->fetchColumn()), 'reset changes password in MariaDB');
 integrationCheck((int) $pdo->query('SELECT COUNT(*) FROM password_resets WHERE used_at IS NULL')->fetchColumn() === 0, 'reset token consumed');

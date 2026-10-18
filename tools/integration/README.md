@@ -77,8 +77,11 @@ Testovací HTTP router povoľuje iba potrebné aplikačné trasy a testovacie s�
 - SFTP deploy pred prvým zápisom čaká cez GitHub CLI na úspešný push workflow
   presného HEAD. Starší zelený commit, zlyhanie, zrušenie, preskočenie,
   nedostupné API alebo vypršanie limitu nasadenie nepovolí. Dry-run a čítanie
-  produkčného markeru túto čakaciu bránu nepotrebujú.
-- Na `main` má byť požadovaná úspešná kontrola `regressions / Regression gate`
+  produkčného markeru túto čakaciu bránu nepotrebujú. Pri zmene HEAD počas
+  čakania sa deploy zastaví; nahráva iba bajty z overeného git commitu,
+  nikdy rozpracované lokálne súbory. Samostatná simulácia overuje zlyhanie CI,
+  zmenu HEAD aj odlišný obsah pracovného stromu bez pripojenia k serveru.
+- Na `main` má byť požadovaná úspešná kontrola `regressions / Regression gate` a `Trunk Check Runner`
   z GitHub Actions aj pre administrátora, bez force push a mazania vetvy.
   Aktuálne uplatnenie over cez GitHub branch protection API, nie iba podľa YAML.
 

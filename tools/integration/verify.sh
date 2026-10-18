@@ -2,6 +2,7 @@
 set -euo pipefail
 php tools/integration/guard.php
 php tools/integration/runner_failure_probe.php
+php tools/integration/deploy_probe.php
 php tools/run_regressions.php
 php tools/integration/run.php | tee /tmp/nefro-integration.log
 grep -Eq '^Integration: [1-9][0-9]* checks PASS$' /tmp/nefro-integration.log
