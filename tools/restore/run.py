@@ -43,6 +43,11 @@ def digest(path):
         return hashlib.file_digest(stream, "sha256").hexdigest()
 
 
+def worst_result(*results):
+    priority = {"PASS": 0, "PARTIAL": 1, "FAIL": 2}
+    return max(results, key=priority.__getitem__)
+
+
 def files_manifest(root):
     if root.is_file():
         result = {}
@@ -454,14 +459,12 @@ def main():
         }
         if application is not None:
             report["application_probe"] = application
-            if application["result"] != "PASS":
-                report["result"] = application["result"]
+            report["result"] = worst_result(report["result"], application["result"])
             report["limits"] = ["Application checks cover only the explicit probe scope; see application_probe.limits.",
                                 "No full disaster recovery, common recovery timestamp or external-service validation."]
         if pdf_content is not None:
             report["pdf_content_comparison"] = pdf_content
-            if pdf_content["result"] != "PASS":
-                report["result"] = pdf_content["result"]
+            report["result"] = worst_result(report["result"], pdf_content["result"])
             report["limits"].append("PDF comparison covers extracted text, not visual, image or hyperlink equivalence.")
         if recovery is not None:
             report["recovery_working_copy"] = recovery

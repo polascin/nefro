@@ -403,6 +403,8 @@ python3 tools/restore/run.py \
 Vyžaduje Docker, lokálny integračný obraz a `pdftotext` v PATH. Report musí
 mať novú cestu. Očakávaný prísny výsledok tejto dvojice vstupov je `PARTIAL`,
 nie chyba obnovy; vysvetlenie opakovanej hlavičky sa posudzuje osobitne.
+Pri kombinácii kontrol vždy platí poradie `FAIL` > `PARTIAL` > `PASS`;
+textové `PARTIAL` nikdy nezmierni aplikačné `FAIL`. Pokrýva to regresná skúška.
 Regresná brána navyše kontroluje zmenu čísla, negácie, diakritiky, dátumu a
 matematického znamienka, zachovanie zlomku v obsahu a odmietnutie cudzieho
 titulu. Syntetická skúška extrakcie používa riadenú náhradu `pdftotext`;

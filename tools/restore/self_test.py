@@ -18,6 +18,12 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--file-image", required=True)
     args = parser.parse_args()
+    from run import worst_result
+    # A layout-only PDF difference must never conceal an application failure.
+    if (worst_result("PASS", "FAIL", "PARTIAL") != "FAIL"
+            or worst_result("PARTIAL", "PASS", "FAIL") != "FAIL"
+            or worst_result("PASS", "PARTIAL", "PASS") != "PARTIAL"):
+        raise RuntimeError("Restore result aggregation concealed a failed or incomplete check.")
     # A content audit must detect clinically meaningful changes, even when most
     # surrounding prose is identical. It must also retain non-ASCII notation.
     from pdf_content import ArticleText, canonical, differences, tokens, strip_page_numbers
