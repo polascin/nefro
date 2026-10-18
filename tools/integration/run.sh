@@ -15,3 +15,4 @@ trap cleanup EXIT
 "${COMPOSE[@]}" build certs
 "${COMPOSE[@]}" up --detach --wait --wait-timeout 180 app
 "${COMPOSE[@]}" run --no-deps --rm tests
+python3 tools/restore/self_test.py --file-image "${PROJECT}-php"

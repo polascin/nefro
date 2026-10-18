@@ -2,8 +2,13 @@
 
 ## Spustenie
 
-Potrebný je Docker Engine s Compose a Bash. PHP, Node.js, MariaDB a Mailpit
+Potrebný je Docker Engine s Compose, Bash a Python 3.12 alebo novší pre nácvik obnovy.
+PHP, Node.js, MariaDB a Mailpit
 bežia v kontajneroch, hostiteľské PHP ani produkčné prístupy sa nepoužívajú.
+
+Brána vykoná aj syntetickú skúšku obnovy databázy a súborov podľa
+[návodu obnovy](../restore/README.md). Táto CI kontrola nepotvrdzuje dostupnosť
+ani obnoviteľnosť skutočných produkčných záloh.
 
 ```bash
 bash tools/integration/run.sh

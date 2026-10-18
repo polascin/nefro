@@ -146,3 +146,21 @@ runnera aj tri simulácie deployu; syntax 622 PHP súborov a PHPStan bez chyby.
 Produkčný marker po overenom SFTP deployi je `c46b74f`. Živé verejné GET
 kontroly prešli, testovací INI je na produkcii nedostupný (403).
 Následná dôkazová dokumentácia nemení nasaditeľné súbory.
+
+## Skúška obnovy záloh (18. 10. 2026)
+
+[Postup a hranice obnovy](tools/restore/README.md) a
+[strojový výsledok](tools/restore/evidence/2026-10-18.json) sú súčasťou projektu.
+Existujúca čiastková záloha publikácií sa obnovila v kontajneri bez siete:
+10 súborov, 218 769 019 bajtov, zhodné SHA-256 a nezmenený zdroj.
+Jeden EPUB v zdroji neprešiel kontrolou ZIP kontajnera. Záloha sa nemenila.
+
+Skutočná záloha databázy Nefro sa nenašla; jej obnoviteľnosť zostáva neoverená.
+Syntetický SQL nácvik prešiel vrátane obsahu a schémy po obnove do druhej
+izolovanej MariaDB. Povinná CI brána navyše overuje SQL.gz, diakritiku,
+cudzie kľúče, pohľad, procedúru, trigger, vypnutú udalosť, odmietnutie
+neplatného SQL a rozpoznanie poškodeného EPUB. To nenahrádza produkčnú zálohu.
+
+Úloha obnovy zostáva otvorená: získať existujúcu DB zálohu a úplnú súborovú
+zálohu rovnakého obdobia, zopakovať izolovanú obnovu a doplniť aplikačnú
+a dešifrovaciu skúšku. RPO ani RTO celého systému zatiaľ nie sú preukázané.
