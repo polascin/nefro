@@ -20,6 +20,28 @@ def main():
     args = parser.parse_args()
     from run import worst_result
     from pdf_assets import Assets, local_target, compare_destinations, image_verdict
+    from repair_working_pdfs import public_uri, validate_entries, EXPECTED_LAUNCHES
+    if public_uri("/synthetic/private/article.php?slug=related") != "https://nefro.polascin.net/article.php?slug=related":
+        raise RuntimeError("Working PDF repair lost a public destination.")
+    for target in ("/private/config.ini", "/private/article.php?slug=x&admin=1", "/private/img/../secret.webp",
+                   "/private/notarticle.php?slug=related", "/private/article.php?slug=x&admin=img/foo.webp",
+                   "/private/article.php?slug=x&other=article.php?slug=related", "/private/img/foo.webp#fragment"):
+        try:
+            public_uri(target)
+        except RuntimeError:
+            pass
+        else:
+            raise RuntimeError("Working PDF repair accepted an unknown target.")
+    paths = ["pdf/" + name for name in EXPECTED_LAUNCHES]
+    paths += ["img/" + Path(name).stem + ".webp" for name in EXPECTED_LAUNCHES]
+    validate_entries([{"path": path} for path in paths])
+    for malicious in ("/absolute.pdf", "../escape.pdf", "pdf/../escape.pdf", paths[1]):
+        try:
+            validate_entries([{"path": path} for path in [malicious] + paths[1:]])
+        except RuntimeError:
+            pass
+        else:
+            raise RuntimeError("Working PDF repair accepted unsafe or duplicate output paths.")
     assets = Assets()
     assets.feed('<a href="https://example.invalid/reference?a=1&amp;b=2">test</a><img src="img/synthetic.webp">')
     if (assets.links != ["https://example.invalid/reference?a=1&b=2"] or assets.images != ["img/synthetic.webp"]

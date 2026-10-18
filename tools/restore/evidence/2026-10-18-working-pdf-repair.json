@@ -1,0 +1,316 @@
+{
+  "result": "PASS",
+  "scope": "working_copy_link_and_pagination_repair",
+  "converted_local_links": 35,
+  "https_annotations": 82,
+  "local_annotations": 0,
+  "original_pages": 28,
+  "working_pages": 27,
+  "source_assets_and_manifest_unchanged": true,
+  "manual_visual_review": "All 27 final pages reviewed; no missing image, clipping, overlap or unreadable counter. Governance footer moved to page 6; Helvetica counters replace subset font. Redaction serialization changes antialiasing on 96 pixels on page 2 and 49 on page 5; manually checked, text unchanged. Other 21 pages render pixel-identically.",
+  "entries": [
+    {
+      "path": "pdf/ai-governance-klinicka-prax-nefrologia.pdf",
+      "source_sha256": "883f42e1ded891e2beedd096b130fe7b92a4a4d69f4f0cf85933db7676621fe3",
+      "working_sha256": "d0081236d7257b37538e9790426e2b0ac2ee2c58d6fdf330a848b874109f73ba",
+      "converted_links": 7,
+      "original_pages": 7,
+      "working_pages": 6,
+      "whole_extracted_text_equal_excluding_page_labels": true,
+      "canonical_text_sha256": "abf32e4d3aac2172dd017a2c66438e66de4d1d293241b47612bff1b143f614ee",
+      "embedded_image_streams_identical": true,
+      "https_annotations": 17,
+      "local_annotations": 0,
+      "destination_multiset_unchanged_after_public_mapping": true,
+      "renders_110_dpi": [
+        {
+          "page": 1,
+          "render_sha256": "bdf4cc698b3f1869a772fa74712f2936ca44854bc87ae4352429191e74d41e61",
+          "pixel_identical": false,
+          "body_changed_pixels": 0,
+          "body_cutoff_pdf_y": 800,
+          "visually_reviewed": true
+        },
+        {
+          "page": 2,
+          "render_sha256": "894598da118d025a0441ac9efe1a24c7c5be670d8c58163d43f94b4c41d7c006",
+          "pixel_identical": false,
+          "body_changed_pixels": 96,
+          "body_cutoff_pdf_y": 800,
+          "visually_reviewed": true
+        },
+        {
+          "page": 3,
+          "render_sha256": "dc66ae918efa53e2256a81e497eb420ba7f7d35e569c61345f88dbab1e1db760",
+          "pixel_identical": false,
+          "body_changed_pixels": 0,
+          "body_cutoff_pdf_y": 800,
+          "visually_reviewed": true
+        },
+        {
+          "page": 4,
+          "render_sha256": "e7cee063dc8557f3da40a399b8d054e6e67516241e97b86e341113a90b6a5deb",
+          "pixel_identical": false,
+          "body_changed_pixels": 0,
+          "body_cutoff_pdf_y": 800,
+          "visually_reviewed": true
+        },
+        {
+          "page": 5,
+          "render_sha256": "cbafbe2fcbefb04bf0ce21f2acdf889438bb463efbffbefdb3895c7c421fdcbf",
+          "pixel_identical": false,
+          "body_changed_pixels": 49,
+          "body_cutoff_pdf_y": 800,
+          "visually_reviewed": true
+        },
+        {
+          "page": 6,
+          "render_sha256": "439dc8c1ae0ca60b5da30896d00f4582917de0f4f6389cae21d8038460635f3d",
+          "pixel_identical": false,
+          "body_changed_pixels": 0,
+          "body_cutoff_pdf_y": 778,
+          "visually_reviewed": true
+        }
+      ]
+    },
+    {
+      "path": "pdf/automatizovane-podavanie-inzulinu-dm2-dialyza.pdf",
+      "source_sha256": "3e404579831025b55537f655d32d60bdb6bd14eb0f96299fdef1b59c76917cfb",
+      "working_sha256": "bb7e82399e33413e728b17614507d0d88a3fffa866aea761920132b7eb27e96d",
+      "converted_links": 7,
+      "original_pages": 5,
+      "working_pages": 5,
+      "whole_extracted_text_equal_excluding_page_labels": true,
+      "canonical_text_sha256": "a0a05fd046168d36411cbf625889905f0adfbbb9b55f44c05a5bc5098955316b",
+      "embedded_image_streams_identical": true,
+      "https_annotations": 12,
+      "local_annotations": 0,
+      "destination_multiset_unchanged_after_public_mapping": true,
+      "renders_110_dpi": [
+        {
+          "page": 1,
+          "render_sha256": "85868d508edcab971a7f0c9df48a8c17e9a4c03e100fb1aabda51e53c4e72848",
+          "pixel_identical": true,
+          "body_changed_pixels": 0,
+          "body_cutoff_pdf_y": 800,
+          "visually_reviewed": true
+        },
+        {
+          "page": 2,
+          "render_sha256": "3a090d96711eec4592e6e205a3441b223d7a68d642db4c91eeed78d244c6302c",
+          "pixel_identical": true,
+          "body_changed_pixels": 0,
+          "body_cutoff_pdf_y": 800,
+          "visually_reviewed": true
+        },
+        {
+          "page": 3,
+          "render_sha256": "0d0d139cf7da88a8f6fdeb429bd590a487f6a4e27dafae213136e42fa59a3f2c",
+          "pixel_identical": true,
+          "body_changed_pixels": 0,
+          "body_cutoff_pdf_y": 800,
+          "visually_reviewed": true
+        },
+        {
+          "page": 4,
+          "render_sha256": "014f81297af9e6db7e34ee03379911336c67883974b9c84f4d7c28e2d7707797",
+          "pixel_identical": true,
+          "body_changed_pixels": 0,
+          "body_cutoff_pdf_y": 800,
+          "visually_reviewed": true
+        },
+        {
+          "page": 5,
+          "render_sha256": "ad5d29fe6b16308f2285c9d74774f0f52863d76292390ee2c45fa1716908d70a",
+          "pixel_identical": true,
+          "body_changed_pixels": 0,
+          "body_cutoff_pdf_y": 800,
+          "visually_reviewed": true
+        }
+      ]
+    },
+    {
+      "path": "pdf/cetp-inhibicia-obicetrapib-lipidy-renalna-funkcia.pdf",
+      "source_sha256": "67dc33d672acd80c5d021b4eddef7aaea34eda31510786c5c95fef1f310518a9",
+      "working_sha256": "6ef1a3fad08177534b16d6d5cafe3e8029984c94a1ec2f428dbebdd6cd077e4e",
+      "converted_links": 6,
+      "original_pages": 5,
+      "working_pages": 5,
+      "whole_extracted_text_equal_excluding_page_labels": true,
+      "canonical_text_sha256": "eb6ee0e9238c6dafdf6e06c035904ddbf89b4b8d12c843874016750a9703f6b7",
+      "embedded_image_streams_identical": true,
+      "https_annotations": 24,
+      "local_annotations": 0,
+      "destination_multiset_unchanged_after_public_mapping": true,
+      "renders_110_dpi": [
+        {
+          "page": 1,
+          "render_sha256": "5350557df2892bde77cf9c1a9c5b3f8f4f3acffd52b5b467ca560938869d46e1",
+          "pixel_identical": true,
+          "body_changed_pixels": 0,
+          "body_cutoff_pdf_y": 800,
+          "visually_reviewed": true
+        },
+        {
+          "page": 2,
+          "render_sha256": "3406d54f922b065c76271c23f55cb4f2f8ad6a579e8a115ee41d27cf4a1af9fc",
+          "pixel_identical": true,
+          "body_changed_pixels": 0,
+          "body_cutoff_pdf_y": 800,
+          "visually_reviewed": true
+        },
+        {
+          "page": 3,
+          "render_sha256": "14c03d5c55b33e8b5193b969351433ea2e1bd8acfd1364ede74c52e2974ea295",
+          "pixel_identical": true,
+          "body_changed_pixels": 0,
+          "body_cutoff_pdf_y": 800,
+          "visually_reviewed": true
+        },
+        {
+          "page": 4,
+          "render_sha256": "53ab23b345f66f7ebaceca3f0ee110dad860ca36f95dec1cd45d7e9dac45f3aa",
+          "pixel_identical": true,
+          "body_changed_pixels": 0,
+          "body_cutoff_pdf_y": 800,
+          "visually_reviewed": true
+        },
+        {
+          "page": 5,
+          "render_sha256": "c23cef19ae97b9f43de2e8542cd454a8dbae03bbeb9558ef89503a0c8e28b6b9",
+          "pixel_identical": true,
+          "body_changed_pixels": 0,
+          "body_cutoff_pdf_y": 800,
+          "visually_reviewed": true
+        }
+      ]
+    },
+    {
+      "path": "pdf/nizkoenergeticka-dieta-cvicenie-remisia-dm2-reset.pdf",
+      "source_sha256": "6524a3dd68b025b2f5842973fce9e2f4fef9263e92ba4af6499ea03ac7ef87e0",
+      "working_sha256": "6a3508b2a6efb82d08cab3c0fd76893b9e33f49e8701b9e5bab372ac2f00a65f",
+      "converted_links": 7,
+      "original_pages": 5,
+      "working_pages": 5,
+      "whole_extracted_text_equal_excluding_page_labels": true,
+      "canonical_text_sha256": "61a4c5da3c2104c638684a4c04553843001b986251840764a3c4b77e24d727ae",
+      "embedded_image_streams_identical": true,
+      "https_annotations": 12,
+      "local_annotations": 0,
+      "destination_multiset_unchanged_after_public_mapping": true,
+      "renders_110_dpi": [
+        {
+          "page": 1,
+          "render_sha256": "de485192dde412312e5270f2d40248a68a50fcb7a3eec490f48cf64034f3560e",
+          "pixel_identical": true,
+          "body_changed_pixels": 0,
+          "body_cutoff_pdf_y": 800,
+          "visually_reviewed": true
+        },
+        {
+          "page": 2,
+          "render_sha256": "e504a280da89b1e57101762fe81d90605c09a09b27222b86b818a528bc0c5818",
+          "pixel_identical": true,
+          "body_changed_pixels": 0,
+          "body_cutoff_pdf_y": 800,
+          "visually_reviewed": true
+        },
+        {
+          "page": 3,
+          "render_sha256": "b03fb538ce47c8f9995d2d1e80c288b8231f477535dabbfc780b973e688c013b",
+          "pixel_identical": true,
+          "body_changed_pixels": 0,
+          "body_cutoff_pdf_y": 800,
+          "visually_reviewed": true
+        },
+        {
+          "page": 4,
+          "render_sha256": "19f17e4c27282fd358b2619cf77237f23d551048793e94ce79738e5e84bf6ea7",
+          "pixel_identical": true,
+          "body_changed_pixels": 0,
+          "body_cutoff_pdf_y": 800,
+          "visually_reviewed": true
+        },
+        {
+          "page": 5,
+          "render_sha256": "62f3854fa02be7812782195c873c787335891d4601bdd1e42d9035ee970607ba",
+          "pixel_identical": true,
+          "body_changed_pixels": 0,
+          "body_cutoff_pdf_y": 800,
+          "visually_reviewed": true
+        }
+      ]
+    },
+    {
+      "path": "pdf/renin-aldosteron-dapagliflozin-spironolakton-hfpef.pdf",
+      "source_sha256": "c8774804c87124ba64fd0d93b271f33c654a07ed8a142cd14f7c185afa50c64b",
+      "working_sha256": "4313280ecdbf688cfaf9ffc635324ec12765e1afed5196b323405cf552436473",
+      "converted_links": 8,
+      "original_pages": 6,
+      "working_pages": 6,
+      "whole_extracted_text_equal_excluding_page_labels": true,
+      "canonical_text_sha256": "fed02ccc2148ebc719f156920dfd27384b17b851804166005eaff03e96ddcefd",
+      "embedded_image_streams_identical": true,
+      "https_annotations": 17,
+      "local_annotations": 0,
+      "destination_multiset_unchanged_after_public_mapping": true,
+      "renders_110_dpi": [
+        {
+          "page": 1,
+          "render_sha256": "844f64dc4141f197ac5607501366400c60f5a10dc84aec27b7766f8ccbed530d",
+          "pixel_identical": true,
+          "body_changed_pixels": 0,
+          "body_cutoff_pdf_y": 800,
+          "visually_reviewed": true
+        },
+        {
+          "page": 2,
+          "render_sha256": "85621d4b2f038eaacf64fcb2ea6af637a4f5aadcfd4744e22c66b70eb95f2abf",
+          "pixel_identical": true,
+          "body_changed_pixels": 0,
+          "body_cutoff_pdf_y": 800,
+          "visually_reviewed": true
+        },
+        {
+          "page": 3,
+          "render_sha256": "bab7748e163651a386b117425f772f25eb0d82202e353d21b6c0f2a8d4fa0160",
+          "pixel_identical": true,
+          "body_changed_pixels": 0,
+          "body_cutoff_pdf_y": 800,
+          "visually_reviewed": true
+        },
+        {
+          "page": 4,
+          "render_sha256": "0737c76bc245d16413e4f34c5cf73a1cc76222bfbc3383feba6c83252b255a9f",
+          "pixel_identical": true,
+          "body_changed_pixels": 0,
+          "body_cutoff_pdf_y": 800,
+          "visually_reviewed": true
+        },
+        {
+          "page": 5,
+          "render_sha256": "c5423444e670e4c251ec13a3c1d9e2e955f579a2c41177d5d6de1be58cb0e737",
+          "pixel_identical": true,
+          "body_changed_pixels": 0,
+          "body_cutoff_pdf_y": 800,
+          "visually_reviewed": true
+        },
+        {
+          "page": 6,
+          "render_sha256": "7a426063ac98e680ff00364063b996ec557453fbc1f024fb06d06b041d6191e2",
+          "pixel_identical": true,
+          "body_changed_pixels": 0,
+          "body_cutoff_pdf_y": 800,
+          "visually_reviewed": true
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "No HTTP availability, redirects, authentication or cross-viewer/print/PDF-UA testing.",
+    "Generic DB comparison remains PARTIAL: repeated RESET table header and JPEG/WebP non-identical RGB require separate interpretation.",
+    "No new medical fact review or common historical recovery-point/RPO/RTO verification.",
+    "No original PDF, source backup or production modified."
+  ],
+  "database_check_evidence_sha256": "0a21b6803e38dbf45a4f300c686b97342223e7385b78e1e6f3840b8ad5a192cb"
+}
