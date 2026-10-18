@@ -17,9 +17,13 @@ python tools/restore/run.py --files /cesta/k/suborovej-zalohe --sql /cesta/k/dat
 ```
 
 Na Windowse možno použiť `py` namiesto `python`. Existujúci report sa neprepisuje.
-Vstupom je existujúci adresár zálohy bez symlinkov a existujúci SQL/SQL.gz/ZIP súbor.
-Archív súborov najprv bezpečne rozbaľte do samostatného lokálneho adresára,
-nikdy do pracovnej kópie alebo produkčného adresára. Pôvod, čas vytvorenia
+Vstupom je existujúci adresár zálohy bez symlinkov alebo priamo ZIP a existujúci SQL/SQL.gz/ZIP súbor.
+Súborový ZIP sa rozbalí až v izolovanom kontajneri do pamäte, nie na hostiteľský disk.
+Kontrola odmieta nebezpečné cesty, duplicity, symlinky, špeciálne súbory,
+šifrované položky a poškodené CRC. Limit je 100 000 položiek a 8 GiB po rozbalení.
+Overené ZIP položky sa priebežne prenášajú cez UTF-8 tar do pamäte kontajnera;
+obchádza sa tým nejednotné prekódovanie názvov v Info-ZIP. Porovnávajú sa
+aj názvy a prázdne adresáre. Pôvod, čas vytvorenia
 a príslušnosť oboch záloh k rovnakému obdobiu treba overiť v úložisku.
 Build používa allowlist `.dockerignore`; privátne dáta a kľúče sa doň nepridávajú.
 
@@ -52,7 +56,10 @@ nie je dôkazom obnoviteľnosti produkčnej databázy.
    kontajnerov vrátane obnovených dát. Až potom vznikne report bez obsahu
    riadkov, prihlasovacích údajov a názvov používateľov.
 
-Každý dátový `tmpfs` má limit 768 MiB. Väčšie zálohy potrebujú osobitný plán.
+Databázový `tmpfs` má limit 768 MiB. Pre súbory možno nastaviť
+`--file-memory-mib` v rozsahu 128 až 8192 (predvolene 768).
+Nástroj pred spustením vyžaduje priestor na dáta, 15 % rezervu a 64 MiB režijného priestoru.
+Docker musí mať dostatok voľnej pamäte aj pre ostatné procesy.
 Poškodenie zdrojového formátu sa vykazuje samostatne: presná bajtová obnova
 poškodeného EPUB neznamená použiteľný EPUB. Chyba importu alebo upratania
 nesmie vytvoriť úspešný report. Návratový kód 0 označuje dokončenie nácviku;
@@ -76,6 +83,18 @@ trigger a vypnutú plánovanú udalosť. Overuje odmietnutie neplatného SQL
 a odlíšenie poškodeného EPUB od úspešnej bajtovej obnovy. Spúšťa sa aj
 cez povinnú integračnú bránu `tools/integration/run.sh`.
 
+Samostatná kontrola súborov bez spustenia databázy:
+
+```bash
+python tools/restore/run.py --files /cesta/k/suborom.zip --files-only --file-memory-mib 4096 \
+  --file-image nefro-restore-php --report scratch/restore-subory.json
+```
+
+Takýto úspech má `verification_scope=files_only` a `database_round_trip=NOT_RUN`.
+Nepotvrdzuje obnovu databázy. Regresná brána overuje aj túto vetvu, diakritiku
+v názvoch súborov a adresárov, prázdne adresáre a odmietnutie ZIP traversal,
+symlinkov a poškodeného CRC.
+
 ## Výsledok z 18. októbra 2026
 
 Strojový záznam: [evidence/2026-10-18.json](evidence/2026-10-18.json).
@@ -94,22 +113,29 @@ Strojový záznam: [evidence/2026-10-18.json](evidence/2026-10-18.json).
 systému. RPO nemožno určiť bez overeného dátumu a rozsahu DB aj súborovej zálohy.
 Nový export zo živej databázy sa nevytváral.
 
-## Čo chýba na uzavretie
+## Úplná súborová záloha a zostávajúce hranice
 
-Sprístupniť úplnú súborovú zálohu a overiť jej časovú nadväznosť na DB zálohu. Poskytovateľ uvádza DB zálohy vo Webadmine v sekcii Databázy/Zálohy.
-Po prihlásení používateľa sa konkrétna DB záloha našla a používateľ ju stiahol.
-[Výsledok skutočnej DB obnovy](evidence/2026-10-18-production-db.json) potvrdzuje
-import, kontrolu tabuliek aj opakovanú obnovu. SQL obsah sa do repozitára neukladá.
-Nestláčať obnovu na pôvodnú databázu ani do produkčného adresára; zálohu
-treba iba stiahnuť na izolovanú skúšku. Pri súboroch sa našiel termín 17. 10. 2026
-(15:10); pripravená žiadosť sa týka iba adresára projektu Nefro. Doručovací
-kontakt dopĺňa používateľ priamo u poskytovateľa. Príprava ani stiahnutie
-celého súborového archívu zatiaľ nie sú potvrdené.
+Používateľ stiahol archív adresára projektu zo zálohy poskytovateľa označenej 17. 10. 2026 o 15:10. [Výsledok súborovej obnovy](evidence/2026-10-18-full-files.json)
+potvrdzuje zhodu všetkých 3 323 súborov (2 705 031 952 bajtov) a 60 adresárov.
+Prešlo 532 kontrol formátov bez chyby. Archív zostal nezmenený a jednorazový
+kontajner bol odstránený. Použitý súborový tmpfs mal limit 4 096 MiB.
 
-Úplná súborová záloha musí pokrývať aj publikácie a uploady mimo Gitu
-a osobitne chránenú konfiguráciu a šifrovací kľúč. Konfiguráciu ani kľúč
-nepoužiť ako aktívnu konfiguráciu aplikácie v tomto nácviku. Dešifrovanie
-treba následne preveriť samostatne, izolovane a bez výpisu údajov.
-Poškodený EPUB nahradiť až v novej overenej zálohe; pôvodný dôkaz zachovať.
+Archív pokrýva aplikáciu, publikácie, uploady, PDF článkov aj konfiguračný INI.
+Konfigurácia obsahuje neprázdny kandidátsky zdroj odvodenia dátového kľúča
+`NEWSLETTER_UNSUBSCRIBE_SECRET`; samostatný `data_protection.key` sa v archíve
+nenachádza. Hodnota sa nevypisovala ani nepoužila ako aktívna konfigurácia.
+Zhoda s aktívnym produkčným kľúčom a dešifrovanie údajov nie sú overené.
+
+[Skutočná DB obnova](evidence/2026-10-18-production-db.json) bola overená
+v samostatnej predchádzajúcej skúške. Terajší beh používa `--files-only`;
+DB neimportoval znova. SQL, konfigurácia ani obsah archívu nie sú v repozitári.
+Starší chybný EPUB z čiastkovej zálohy zostáva historickým nálezom;
+kontrolované dokumenty úplného archívu prešli.
+
+DB záloha z 18. 10. 2026 o 03:21:13 a súborová záloha z predchádzajúceho dňa
+netvoria preukázaný spoločný konzistentný bod obnovy. Na uzavretie úplnej
+obnoviteľnosti systému zostáva overiť väzby DB na súbory, aplikačné správanie,
+dešifrovanie a prevádzkový postup vrátane oprávnení. RPO ani RTO celého systému
+nie sú potvrdené. Produkčná obnova sa nespúšťala.
 
 _Primárny zdroj: [Websupport: Zálohy databáz](https://www.websupport.sk/podpora/kb/zalohy-databaz/), overené 18. 10. 2026. Všeobecný opis služby nepotvrdzuje dostupnosť konkrétnej zálohy Nefro._

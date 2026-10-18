@@ -1,0 +1,40 @@
+{
+  "timestamp_utc": "2026-10-18T11:46:49.130028+00:00",
+  "result": "PASS",
+  "verification_scope": "files_only",
+  "file_restore": "PASS",
+  "file_format_validation": "PASS",
+  "database_round_trip": "NOT_RUN",
+  "network_mode": "none",
+  "published_ports": 0,
+  "source_mount_read_only": true,
+  "database_tcp_and_events_disabled": null,
+  "restore_containers_removed": true,
+  "existing_database_backup_restore_verified": false,
+  "database_source": "not_run",
+  "database_backup_sha256": null,
+  "database_tables": null,
+  "database_rows": null,
+  "database_inventory_sha256": null,
+  "database_schema_sha256": null,
+  "file_count": 3323,
+  "file_bytes": 2705031952,
+  "directory_count": 60,
+  "file_memory_mib": 4096,
+  "file_backup_archive_sha256": "3e7fa6e098122406894bab1bf21ab53fcc295a4054b53bcd551d9f0418da7a24",
+  "file_manifest_sha256": "c1b2572a3bfe104a5bb08b422fd7422b3e0d6e03007aa5dcff49e9cc3e83d3c1",
+  "format_checks": {
+    "checked": 532,
+    "failures": {},
+    "failed_file_sha256": []
+  },
+  "file_restore_seconds": 142.745,
+  "total_seconds": 150.318,
+  "source_backups_unchanged": true,
+  "file_image_id": "sha256:bf572bef52c5c19161b8ff9c2320ae6edea484e84dfcd97d270dafab0b8a3378",
+  "database_image": "mariadb:11.4.13@sha256:250e1609e93c0e6aecf64bfbab2d84d5e89d2481540fe77447ff6c855c3b1873",
+  "limits": [
+    "File scope is only the supplied directory or ZIP.",
+    "No application, visual, decryption or full disaster recovery validation."
+  ]
+}
