@@ -9,6 +9,7 @@ hooks/* text eol=lf
 *.yml   text eol=lf
 *.json  text eol=lf
 *.toml  text eol=lf
+*.py    text eol=lf
 
 # Binárne súbory — git ich nesmie normalizovať / meniť konce riadkov
 *.png   binary

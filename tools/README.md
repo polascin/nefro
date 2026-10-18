@@ -96,6 +96,10 @@ trunk fmt --all          # formátovanie podporovaných súborov
 
 ## Izolované regresie a integračné CI
 
+Brána zahŕňa aj syntetickú skúšku obnovy. Postup pre existujúce zálohy,
+výsledok čiastkovej skúšky a jej obmedzenia opisuje
+[návod obnovy](restore/README.md).
+
 Celú sadu spustí `bash tools/integration/run.sh`; postup a hranice overenia sú
 v [integračnom návode](integration/README.md). Rýchle samostatné testy spustí
 `php tools/run_regressions.php`. Povinný CI job vykonáva aj PHPStan a testy nad MariaDB.

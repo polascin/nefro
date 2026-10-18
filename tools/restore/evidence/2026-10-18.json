@@ -1,0 +1,43 @@
+{
+  "timestamp_utc": "2026-10-18T08:04:38.140861+00:00",
+  "result": "PARTIAL",
+  "file_restore": "PASS",
+  "file_format_validation": "FAIL",
+  "database_round_trip": "PASS",
+  "network_mode": "none",
+  "published_ports": 0,
+  "source_mount_read_only": true,
+  "database_tcp_and_events_disabled": true,
+  "restore_containers_removed": true,
+  "existing_database_backup_restore_verified": false,
+  "database_source": "synthetic_fixture_only",
+  "database_backup_sha256": null,
+  "database_tables": 3,
+  "database_rows": 3,
+  "database_inventory_sha256": "0910455f9748d67f7770eaad5dfce3047c864c68bcdcdc9ca84c84129b10fdfa",
+  "database_schema_sha256": "c4f3167abd501d0a0d2c425a6b57690560999684862ae5817b72dd00dfc43c2b",
+  "file_count": 10,
+  "file_bytes": 218769019,
+  "file_manifest_sha256": "dd820093e080ffc8add208fa061b6d7bcb1224389875c32232c217d5aa8125a0",
+  "format_checks": {
+    "checked": 10,
+    "failures": {
+      ".epub": 1
+    },
+    "failed_file_sha256": [
+      {
+        "format": ".epub",
+        "sha256": "58527118b0ade213285ba772be10e5d4ed09f6692a7c361e2a71cbc098acd040"
+      }
+    ]
+  },
+  "file_restore_seconds": 3.242,
+  "total_seconds": 18.659,
+  "source_backups_unchanged": true,
+  "file_image_id": "sha256:bf572bef52c5c19161b8ff9c2320ae6edea484e84dfcd97d270dafab0b8a3378",
+  "database_image": "mariadb:11.4.13@sha256:250e1609e93c0e6aecf64bfbab2d84d5e89d2481540fe77447ff6c855c3b1873",
+  "limits": [
+    "File scope is only the supplied directory.",
+    "No application, visual, decryption or full disaster recovery validation."
+  ]
+}

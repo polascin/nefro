@@ -146,3 +146,23 @@ runnera aj tri simulácie deployu; syntax 622 PHP súborov a PHPStan bez chyby.
 Produkčný marker po overenom SFTP deployi je `c46b74f`. Živé verejné GET
 kontroly prešli, testovací INI je na produkcii nedostupný (403).
 Následná dôkazová dokumentácia nemení nasaditeľné súbory.
+
+## Skúška obnovy záloh (18. 10. 2026)
+
+[Postup a hranice obnovy](tools/restore/README.md) a
+[strojový výsledok](tools/restore/evidence/2026-10-18.json) sú súčasťou projektu.
+Existujúca čiastková záloha publikácií sa obnovila v kontajneri bez siete:
+10 súborov, 218 769 019 bajtov, zhodné SHA-256 a nezmenený zdroj.
+Jeden EPUB v zdroji neprešiel kontrolou ZIP kontajnera. Záloha sa nemenila.
+
+Po prihlásení používateľa sa získala existujúca DB záloha poskytovateľa
+z 18. 10. 2026 o 03:21. Izolovaná obnova overila 37 tabuliek a 144 649 riadkov
+vrátane obsahových súčtov a schémy po obnove do druhej čerstvej MariaDB.
+[Strojový záznam DB obnovy](tools/restore/evidence/2026-10-18-production-db.json)
+neobsahuje riadky ani osobné údaje. Povinná CI brána navyše overuje SQL.gz, diakritiku,
+cudzie kľúče, pohľad, procedúru, trigger, vypnutú udalosť, odmietnutie
+neplatného SQL a rozpoznanie poškodeného EPUB. To nenahrádza produkčnú zálohu.
+
+Úloha obnovy zostáva otvorená: získať úplnú súborovú zálohu, preveriť jej
+časovú nadväznosť na DB zálohu, zopakovať izolovanú obnovu a doplniť aplikačnú
+a dešifrovaciu skúšku. RPO ani RTO celého systému zatiaľ nie sú preukázané.
