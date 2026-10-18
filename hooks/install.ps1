@@ -26,6 +26,23 @@ try {
         throw "Failed to configure core.hooksPath."
     }
 
+    if ($env:OS -eq "Windows_NT") {
+        # Windows Git and WSL share this index but report different file metadata.
+        $sharedIndexSettings = @{
+            "core.autocrlf" = "true"
+            "core.checkStat" = "minimal"
+            "core.trustctime" = "false"
+            "core.fsmonitor" = "false"
+        }
+        foreach ($setting in $sharedIndexSettings.GetEnumerator()) {
+            & git config --local --replace-all $setting.Key $setting.Value
+            if ($LASTEXITCODE -ne 0) {
+                throw "Failed to configure $($setting.Key)."
+            }
+        }
+        Write-Host "Shared Windows/WSL Git index configured." -ForegroundColor Green
+    }
+
     if ($IsLinux -or $IsMacOS) {
         & chmod +x hooks/pre-commit hooks/post-commit hooks/post-merge hooks/deploy.sh
         if ($LASTEXITCODE -ne 0) {

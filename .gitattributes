@@ -3,6 +3,13 @@
 hooks/* text eol=lf
 *.sh    text eol=lf
 
+# Trunk/Prettier must see the same line endings on Windows, WSL and CI.
+*.md    text eol=lf
+*.yaml  text eol=lf
+*.yml   text eol=lf
+*.json  text eol=lf
+*.toml  text eol=lf
+
 # Binárne súbory — git ich nesmie normalizovať / meniť konce riadkov
 *.png   binary
 *.webp  binary
