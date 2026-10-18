@@ -73,7 +73,7 @@ wsl --install -d Ubuntu
 ```bash
 # v Ubuntu termináli (WSL):
 curl https://get.trunk.io -fsSL | bash      # raz: inštalácia Trunku
-cd /mnt/d/www/nefro
+cd /mnt/d/Dev/nefro
 trunk upgrade --dry-run  # skontroluje aktualizácie bez zmeny configu
 trunk check --all        # plný sken; bez --all len zmenené súbory
 trunk fmt --all          # formátovanie podporovaných súborov
@@ -83,6 +83,14 @@ trunk fmt --all          # formátovanie podporovaných súborov
 - **Git hooky:** `pwsh -File .\hooks\install.ps1` nastaví verzovaný adresár
   `hooks/`. Trunk actions s Git hook triggerom musia zostať vypnuté, aby
   neprepísali projektový pre-commit, push a SFTP deploy.
+- **Spoločný index Windows/WSL:** pred prvým behom spusti na Windowse
+  `pwsh -File .\hooks\install.ps1`. Inštalátor zjednotí `core.autocrlf=true`,
+  nastaví `core.checkStat=minimal`, `core.trustctime=false` a `core.fsmonitor=false`.
+  Tým sa obmedzí opakované čítanie nezmenených súborov pri striedaní oboch Gitov.
+  Nastavenia platia iba pre tento checkout. `.gitattributes` určuje LF pre shell skripty
+  aj Markdown, YAML, JSON a TOML, aby Prettier lokálne videl rovnaké súbory ako v CI.
+  Ak Trunk hlási „single player mode“ alebo ignoruje `.trunk/trunk.yaml`, spusti
+  `trunk config share`. Odstráni staré lokálne ignorovanie už verzovanej konfigurácie.
 - **Pozn. (výkon/EOL):** repo na `/mnt/d/...` je vo WSL pomalšie (9p FS); pri `trunk fmt`
   sleduj prípadný CRLF↔LF šum (git má `autocrlf`).
 
