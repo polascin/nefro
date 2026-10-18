@@ -42,3 +42,4 @@ sync_article_pdfs.sh
 tools
 trunk.yaml
 ANALYZA_A_PLAN_ROZVOJA.md
+.dockerignore

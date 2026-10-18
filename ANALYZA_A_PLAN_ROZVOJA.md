@@ -115,3 +115,26 @@ Zmeny schémy a produkčných údajov, cleanup existujúcich logov a spustenie
 workerov vyžadujú konkrétne schválenie. Vývoj a testy ich návrhu môžu prebehnúť
 v izolácii. Pri každej etape zachovať súčasné bezpečnostné kontroly a uvádzať,
 čo je overený výsledok a čo zostáva pracovným návrhom.
+
+## Realizácia prvej etapy: izolácia a CI (18. 10. 2026)
+
+Pripravené sú úlohy izolovaného integračného prostredia a povinného regresného
+jobu. Postup, rozsah, piny a bezpečnostné hranice opisuje
+[integračný návod](tools/integration/README.md). Prevádzkové alarmy a skúšobná
+obnova záloh z tretej úlohy etapy zostávajú samostatnou ďalšou prácou.
+
+Sada používa dočasnú MariaDB v UTC, PHP 8.5.8 v pásme Europe/Bratislava,
+Mailpit so skutočným overovaným STARTTLS a vývojový SMS provider. Platobná
+časť overuje existujúci manuálny model potvrdenia úhrady, nie Stripe API,
+ktoré portál nemá. Produkčné prístupy ani externé SMS/platby sa nepoužívajú.
+
+Regresný runner má 18 testovacích súborov; integračná časť má 41 kontrol.
+Negatívna skúška s návratovým kódom 42 overuje zastavenie runnera. Povinný
+job blokuje Actions deploy; lokálny SFTP navyše čaká na úspech CI presného HEAD.
+Ochrana vetvy musí vyžadovať výsledok tohto jobu aj pre administrátora.
+
+Test odhalil závislosť spoločného rate limitera od zhodného časového pásma
+PHP a DB: pri UTC databáze sa okno obnovovalo príliš skoro. Výpočet uplynutia,
+trvania blokovania aj reset okna teraz používa výhradne databázový čas;
+regresia výslovne zachováva rozdielne pásma. Explicitný `NEFRO_ENV_PATH` sa
+pri chybe už nenahrádza iným konfiguračným súborom. Schéma produkcie sa nemení.

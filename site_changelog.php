@@ -55,6 +55,13 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-10-18 08:40',
+                'category' => 'portal',
+                'title' => 'Spoľahlivejšia ochrana formulárov',
+                'description' => 'Ochrana pred opakovaným odosielaním formulárov správne uplatňuje časové limity aj pri rozdielnom nastavení času serverov.',
+                'url' => '',
+            ],
+            [
                 'date' => '2026-10-18 00:24',
                 'category' => 'portal',
                 'title' => 'Spoľahlivejšie vyhľadávanie a jednoduchší výber autora',

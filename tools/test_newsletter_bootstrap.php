@@ -22,13 +22,15 @@ function newsletterBootstrapTest(bool $ok, string $label): void
     }
 }
 
-class NewsletterLimitTestPdo extends PDO
+class NewsletterLimitTestPdo extends Pdo\Sqlite
 {
     public function prepare(string $query, array $options = []): PDOStatement|false
     {
         $query = str_replace('ON DUPLICATE KEY UPDATE id = id', 'ON CONFLICT(ip, action) DO NOTHING', $query);
         $query = str_replace('FOR UPDATE', '', $query);
         $query = str_replace('IF(:reset_window = 1, NOW(), first_attempt)', 'iif(:reset_window = 1, NOW(), first_attempt)', $query);
+        $query = str_replace('TIMESTAMPDIFF(SECOND, first_attempt, NOW())', "(CAST(strftime('%s', NOW()) AS INTEGER) - CAST(strftime('%s', first_attempt) AS INTEGER))", $query);
+        $query = str_replace('TIMESTAMPADD(SECOND, :window_seconds, NOW())', "datetime(NOW(), '+' || :window_seconds || ' seconds')", $query);
         return parent::prepare($query, $options);
     }
 }
@@ -37,7 +39,7 @@ $pdo = new NewsletterLimitTestPdo('sqlite::memory:');
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 $now = date('Y-m-d H:i:s');
-$pdo->sqliteCreateFunction('NOW', static fn (): string => $now);
+$pdo->createFunction('NOW', static fn (): string => $now);
 $pdo->exec('CREATE TABLE form_rate_limit (id INTEGER PRIMARY KEY, ip TEXT, action TEXT,
     attempt_count INTEGER, first_attempt TEXT, last_attempt TEXT, blocked_until TEXT,
     UNIQUE(ip, action))');

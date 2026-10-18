@@ -85,3 +85,9 @@ trunk fmt --all          # formátovanie podporovaných súborov
   neprepísali projektový pre-commit, push a SFTP deploy.
 - **Pozn. (výkon/EOL):** repo na `/mnt/d/...` je vo WSL pomalšie (9p FS); pri `trunk fmt`
   sleduj prípadný CRLF↔LF šum (git má `autocrlf`).
+
+## Izolované regresie a integračné CI
+
+Celú sadu spustí `bash tools/integration/run.sh`; postup a hranice overenia sú
+v [integračnom návode](integration/README.md). Rýchle samostatné testy spustí
+`php tools/run_regressions.php`. Povinný CI job vykonáva aj PHPStan a testy nad MariaDB.

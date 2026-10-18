@@ -1,0 +1,12 @@
+---
+name: Branch regressions
+on:
+  pull_request:
+  push:
+    branches-ignore: [main]
+  merge_group:
+permissions:
+  contents: read
+jobs:
+  regressions:
+    uses: ./.github/workflows/regressions.yml

@@ -22,7 +22,8 @@ function getAppConfigPaths(): array {
 
     $envOverride = trim((string) getenv('NEFRO_ENV_PATH'));
     if ($envOverride !== '') {
-        $paths[] = $envOverride;
+        // Explicitná konfigurácia nesmie pri chybe prepadnúť na iné prostredie.
+        return [$envOverride];
     }
 
     $appRoot = __DIR__;

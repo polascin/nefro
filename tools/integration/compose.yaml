@@ -1,0 +1,87 @@
+---
+name: nefro-integration
+services:
+  db:
+    image: mariadb:11.4.13@sha256:250e1609e93c0e6aecf64bfbab2d84d5e89d2481540fe77447ff6c855c3b1873
+    environment:
+      TZ: UTC
+      MARIADB_DATABASE: nefro_integration
+      MARIADB_USER: nefro_test
+      MARIADB_PASSWORD: synthetic-local-only
+      MARIADB_RANDOM_ROOT_PASSWORD: "1"
+    tmpfs:
+      - /var/lib/mysql
+    healthcheck:
+      test: [CMD, healthcheck.sh, --connect, --innodb_initialized]
+      interval: 2s
+      timeout: 5s
+      retries: 45
+  certs:
+    build:
+      context: ../..
+      dockerfile: tools/integration/Dockerfile
+    image: ${COMPOSE_PROJECT_NAME}-php
+    command:
+      [
+        sh,
+        -ec,
+        "openssl req -x509 -newkey rsa:2048 -nodes -days 2 -keyout /test-certs/smtp.key -out /test-certs/smtp.crt -subj /CN=mailpit -addext subjectAltName=DNS:mailpit >/dev/null 2>&1; chmod 644 /test-certs/smtp.key /test-certs/smtp.crt",
+      ]
+    volumes:
+      - certs:/test-certs
+  mailpit:
+    image: axllent/mailpit:v1.31.6@sha256:23fe39e81bde596a918000b3135c0f85dc8bb4c9ea6be274b051143f3e300387
+    environment:
+      MP_SMTP_TLS_CERT: /test-certs/smtp.crt
+      MP_SMTP_TLS_KEY: /test-certs/smtp.key
+      MP_SMTP_REQUIRE_STARTTLS: "true"
+      MP_SMTP_AUTH: integration:integration
+    volumes:
+      - certs:/test-certs:ro
+    depends_on:
+      certs:
+        condition: service_completed_successfully
+  app:
+    image: ${COMPOSE_PROJECT_NAME}-php
+    command:
+      [
+        sh,
+        -ec,
+        "php tools/integration/guard.php && php setup_db.php && exec php -S 0.0.0.0:8080 tools/integration/router.php",
+      ]
+    volumes:
+      - certs:/test-certs:ro
+      - publications:/app/private/publications:ro
+    depends_on:
+      certs:
+        condition: service_completed_successfully
+      db:
+        condition: service_healthy
+      mailpit:
+        condition: service_started
+    healthcheck:
+      test:
+        [
+          CMD,
+          php,
+          -r,
+          'exit(@file_get_contents("http://localhost:8080/login.php") === false ? 1 : 0);',
+        ]
+      interval: 3s
+      timeout: 5s
+      retries: 45
+  tests:
+    image: ${COMPOSE_PROJECT_NAME}-php
+    command: [sh, -ec, "bash tools/integration/verify.sh"]
+    volumes:
+      - certs:/test-certs:ro
+      - publications:/app/private/publications
+    depends_on:
+      app:
+        condition: service_healthy
+networks:
+  default:
+    internal: true
+volumes:
+  certs:
+  publications:

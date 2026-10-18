@@ -257,6 +257,11 @@ if ((DRY_RUN)); then
 	exit 0
 fi
 
+if ! php "$REPO_ROOT/tools/wait_for_ci.php" "$(git rev-parse HEAD)"; then
+	echo "[deploy] Povinné CI neprešlo; produkcia nebola zmenená." >&2
+	exit 1
+fi
+
 setup_sftp
 
 BATCH_FILE=$(mktemp "${TMPDIR:-/tmp}/nefro_deploy_batch_XXXXXX") || exit 1

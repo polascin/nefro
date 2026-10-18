@@ -21,9 +21,12 @@ defaults:
     shell: bash
 
 jobs:
+  regressions:
+    uses: ./.github/workflows/regressions.yml
+
   validate:
     name: Validate deployable sources
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 15
     steps:
       - name: Checkout repository
@@ -41,8 +44,8 @@ jobs:
 
   deploy:
     name: Deploy production
-    needs: validate
-    runs-on: ubuntu-latest
+    needs: [validate, regressions]
+    runs-on: ubuntu-24.04
     timeout-minutes: 20
     # Predvolene nasadzuje lokálny SFTP hook. Actions vyžadujú výslovné prepnutie
     # režimu, aby súbežný rsync/UPSERT neprepísal práve synchronizované PDF.

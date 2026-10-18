@@ -37,7 +37,7 @@ function legalTest(bool $condition, string $label): void
 }
 
 // SQLite adaptér mení iba syntax INSERT IGNORE; aplikačné dotazy zostávajú reálne.
-class LegalTestPdo extends PDO
+class LegalTestPdo extends Pdo\Sqlite
 {
     public function prepare(string $query, array $options = []): PDOStatement|false
     {
@@ -48,7 +48,7 @@ class LegalTestPdo extends PDO
 $pdo = new LegalTestPdo('sqlite::memory:');
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-$pdo->sqliteCreateFunction('NOW', static fn (): string => '2026-09-24 00:00:00');
+$pdo->createFunction('NOW', static fn (): string => '2026-09-24 00:00:00');
 $pdo->exec('CREATE TABLE legal_notice_runs (legal_version TEXT PRIMARY KEY, effective_date TEXT,
     change_summary TEXT, dispatched_at TEXT, users_queued INTEGER, subscribers_queued INTEGER)');
 $pdo->exec('CREATE TABLE users (id INTEGER PRIMARY KEY, username TEXT, title_before TEXT,

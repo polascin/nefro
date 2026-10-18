@@ -5,9 +5,9 @@ declare(strict_types=1);
 require_once __DIR__ . '/../publications_common.php';
 
 // Pamäťová SQLite používa skutočný podmienený UPDATE, bez produkčných údajov.
-$pdo = new PDO('sqlite::memory:');
+$pdo = new Pdo\Sqlite('sqlite::memory:');
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-$pdo->sqliteCreateFunction('NOW', static fn (): string => '2026-10-04 12:00:00');
+$pdo->createFunction('NOW', static fn (): string => '2026-10-04 12:00:00');
 $pdo->exec('CREATE TABLE publication_orders (id INTEGER PRIMARY KEY, status TEXT,
     access_expires_at TEXT, download_count INTEGER, last_download_at TEXT, last_download_format TEXT)');
 $pdo->exec("INSERT INTO publication_orders VALUES (1, 'paid', '2026-10-05 12:00:00', 39, NULL, NULL)");

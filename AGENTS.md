@@ -6,6 +6,8 @@ This file provides guidance to WARP (warp.dev) when working with code in this re
 
 - Install tracked git hooks (validation, auto-push and SFTP deploy): `pwsh -File .\hooks\install.ps1`
 - Initialise/update database schema and seed codebooks: `php .\setup_db.php`
+- Run the isolated integration and regression gate: `bash tools/integration/run.sh` (Docker Compose required; see `tools/integration/README.md`).
+- Run fast isolated regression files: `php tools/run_regressions.php`.
 - Run PHP syntax lint across the repository: `php .\tools\lint_all.php`
 - Lint a single PHP file: `php -l .\path\to\file.php`
 - Run newsletter queue worker manually: `php .\newsletter_worker.php --limit=50 --max-attempts=5`
@@ -19,7 +21,7 @@ This file provides guidance to WARP (warp.dev) when working with code in this re
 
 - App is plain PHP (no framework) with MariaDB via PDO.
 - Environment values are loaded via `config_loader.php`, with this practical priority:
-  1. `NEFRO_ENV_PATH`
+  1. `NEFRO_ENV_PATH` (exclusive when set; an invalid explicit file fails without fallback)
   2. `../nefro.env.ini`
   3. `../private/nefro.env.ini`
   4. `../private/env.ini`
@@ -72,14 +74,14 @@ scraper — statistically they are the same shape. Looser global rules would
 weaken the protection for everyone, so instead a tool proves ownership upfront
 with an HMAC-signed token:
 
-```
+```text
 X-Nefro-Trust: nefro1.<tool>.<issued>.<expires>.<base64url HMAC-SHA256>
 ```
 
 Mint and inspect tokens with `botguard_token.php` (CLI only, denied in
 `.htaccess`):
 
-```
+```bash
 php botguard_token.php --tool=ebook-builder --ttl=24h --curl
 php botguard_token.php --verify=<token>
 ```

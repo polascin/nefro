@@ -1,0 +1,20 @@
+[
+  "tools/test_acidbase_display.php",
+  "tools/test_ambulatory_calculator.php",
+  "tools/test_article_pagination.php",
+  "tools/test_botguard_privacy.php",
+  "tools/test_calculator_history_guard.php",
+  "tools/test_compliance_controls.php",
+  "tools/test_legal_notifications.php",
+  "tools/test_mkch10_codebook.php",
+  "tools/test_newsletter_bootstrap.php",
+  "tools/test_prevent_load.php",
+  "tools/test_publication_delivery.php",
+  "tools/test_publication_download.php",
+  "tools/test_publication_stripe.php",
+  "tools/test_search.php",
+  "tools/test_ui_preferences.mjs",
+  "tools/test_katex.mjs",
+  "tools/test_config_isolation.php",
+  "tools/test_ci_gate.php"
+]

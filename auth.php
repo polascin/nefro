@@ -718,6 +718,10 @@ function likeSearchPattern(string $text): string
     return '%' . $escaped . '%';
 }
 
+/**
+ * Kontroluje aj aktualizuje stav pokusov v databáze.
+ * @phpstan-impure
+ */
 function checkFormRateLimit(PDO $pdo, string $action, string $ip, int $maxAttempts, int $windowSeconds): bool
 {
     $pdo->beginTransaction();
@@ -736,7 +740,9 @@ function checkFormRateLimit(PDO $pdo, string $action, string $ip, int $maxAttemp
         )->execute(['ip' => $ip, 'action' => $action]);
 
         $rowStmt = $pdo->prepare(
-            "SELECT attempt_count, first_attempt, blocked_until
+            "SELECT attempt_count,
+                    TIMESTAMPDIFF(SECOND, first_attempt, NOW()) AS elapsed_seconds,
+                    (blocked_until > NOW()) AS is_blocked
              FROM form_rate_limit
              WHERE ip = :ip AND action = :action
              FOR UPDATE"
@@ -744,29 +750,29 @@ function checkFormRateLimit(PDO $pdo, string $action, string $ip, int $maxAttemp
         $rowStmt->execute(['ip' => $ip, 'action' => $action]);
         $row = $rowStmt->fetch();
 
-        $now = time();
-        if ($row && !empty($row['blocked_until']) && strtotime((string) $row['blocked_until']) > $now) {
+        // Všetky porovnania používajú čas DB; PHP môže mať iné časové pásmo.
+        if ($row && !empty($row['is_blocked'])) {
             $pdo->commit();
             return false;
         }
 
-        $firstAttempt = !empty($row['first_attempt']) ? strtotime((string) $row['first_attempt']) : $now;
-        $windowExpired = ($now - $firstAttempt) >= $windowSeconds;
+        $windowExpired = (int) ($row['elapsed_seconds'] ?? 0) >= $windowSeconds;
         $count = $windowExpired ? 1 : ((int) ($row['attempt_count'] ?? 0) + 1);
-        $blockedUntil = ($count > $maxAttempts) ? date('Y-m-d H:i:s', $now + $windowSeconds) : null;
 
         $updStmt = $pdo->prepare(
             "UPDATE form_rate_limit
              SET attempt_count = :count,
                  first_attempt = IF(:reset_window = 1, NOW(), first_attempt),
                  last_attempt = NOW(),
-                 blocked_until = :blocked_until
+                 blocked_until = CASE WHEN :should_block = 1
+                     THEN TIMESTAMPADD(SECOND, :window_seconds, NOW()) ELSE NULL END
              WHERE ip = :ip AND action = :action"
         );
         $updStmt->execute([
             'count' => $count,
             'reset_window' => $windowExpired ? 1 : 0,
-            'blocked_until' => $blockedUntil,
+            'should_block' => $count > $maxAttempts ? 1 : 0,
+            'window_seconds' => $windowSeconds,
             'ip' => $ip,
             'action' => $action,
         ]);

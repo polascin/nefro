@@ -23,6 +23,15 @@ repository variable. Pri návrate na SFTP postupuj opačne: najprv vypni Actions
 počkaj na dokončenie rozbehnutých jobov a až potom znovu povoľ lokálny deploy. Over drift
 a synchronizuj PDF až po dokončení všetkých nasadení.
 
+## Povinné regresie
+
+Pred nasadením musí prejsť izolovaná sada podľa
+[`tools/integration/README.md`](tools/integration/README.md). Actions deploy čaká
+na regresný job; SFTP čaká na úspešný CI workflow presného HEAD. Pri nedostupnom
+GitHub CLI/API sa produkčný upload nevykoná. `--dry-run` a `--remote-commit`
+zostávajú čitateľné bez tejto brány. Pri chránenej vetve používaj pracovnú vetvu
+a pull request, nie neoverený priamy push na `main`.
+
 ## UPSERT zmenených článkov
 
 Rsync nahrá `add_<slug>_article.php`, ale obsah v databáze sa zmení až jeho
