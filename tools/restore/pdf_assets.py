@@ -4,7 +4,7 @@ import hashlib
 from html.parser import HTMLParser
 import io
 from pathlib import Path
-from urllib.parse import unquote, urlsplit
+from urllib.parse import urljoin, urlsplit
 
 
 class Assets(HTMLParser):
@@ -23,12 +23,35 @@ class Assets(HTMLParser):
 
 def local_target(value):
     """Retain only public route suffixes; never expose a machine's absolute path."""
-    value = unquote(value).replace("\\", "/")
+    value = value.replace("\\", "/")
     for marker in ("img/", "article.php?"):
         position = value.rfind(marker)
         if position >= 0:
             return value[position:]
     return None
+
+
+def compare_destinations(hrefs, article_url, remote, local):
+    expected = {urljoin(article_url, value) for value in hrefs}
+    supported = {value for value in expected if urlsplit(value).scheme in {"http", "https"}}
+    actual = set(remote) | {urljoin("https://nefro.polascin.net/", value) for value in local}
+    # A printed source URL is not promised to be clickable by the generator.
+    if article_url in actual:
+        supported.add(article_url)
+    return {"missing": len(supported - actual), "unexpected": len(actual - supported),
+            "unsupported_html_targets": len(expected - supported),
+            "expected_resolved_destinations": len(supported), "actual_resolved_destinations": len(actual),
+            "resolved_destinations_sha256": hashlib.sha256("\n".join(sorted(actual)).encode()).hexdigest(),
+            "expected_resolved_destinations_sha256": hashlib.sha256("\n".join(sorted(supported)).encode()).hexdigest()}
+
+
+def image_verdict(images, embedded_count):
+    if len(images) != embedded_count or any(not item["source_available"]
+            or len(item.get("same_dimension_candidates", [])) != 1 for item in images):
+        return "INCOMPLETE"
+    if any(not item["same_dimension_candidates"][0]["exact_RGB_pixels"] for item in images):
+        return "REQUIRES_VISUAL_REVIEW"
+    return "EXACT_PIXELS"
 
 
 def require_dependencies():
@@ -45,10 +68,7 @@ def inspect_article(path, bundle, article):
 
     parser = Assets()
     parser.feed(article["content"])
-    expected_remote = {unquote(value) for value in parser.links if urlsplit(value).scheme in {"http", "https"}}
     footer_url = "https://nefro.polascin.net/article.php?slug=" + article["slug"]
-    expected_local = {local_target(value) for value in parser.links if not urlsplit(value).scheme}
-    expected_local.discard(None)
     remote = set()
     local = set()
     unknown = 0
@@ -70,7 +90,7 @@ def inspect_article(path, bundle, article):
             for link in page.get_links():
                 link_count += 1
                 if link["kind"] == fitz.LINK_URI:
-                    remote.add(unquote(link["uri"]))
+                    remote.add(link["uri"])
                 elif link["kind"] == fitz.LINK_LAUNCH:
                     target = link.get("file", "")
                     absolute_launches += int(target.startswith(("/", "\\")) or (len(target) > 1 and target[1] == ":"))
@@ -94,29 +114,24 @@ def inspect_article(path, bundle, article):
                 decoded = Image.open(io.BytesIO(data["image"])).convert("RGB")
                 if decoded.size != original.size:
                     continue
-                stat = ImageStat.Stat(ImageChops.difference(original, decoded))
+                difference = ImageChops.difference(original, decoded)
+                stat = ImageStat.Stat(difference)
                 measurements.append({"format": data["ext"], "dimensions": list(decoded.size),
                                      "mean_absolute_RGB_error_0_to_255": round(sum(stat.mean) / 3, 6),
+                                     "exact_RGB_pixels": difference.getbbox() is None,
                                      "embedded_stream_sha256": hashlib.sha256(data["image"]).hexdigest()})
             images.append({"source_available": True, "source_sha256": hashlib.sha256(candidate.read_bytes()).hexdigest(),
                            "source_dimensions": list(original.size), "same_dimension_candidates": measurements})
-    # The generator prints its source URL as plain text. It does not promise a
-    # clickable footer. Accept its optional annotation without requiring one.
-    if footer_url in remote:
-        expected_remote.add(footer_url)
-    mismatch = bool(remote - expected_remote or expected_remote - remote or local - expected_local or expected_local - local or unknown)
+    comparison = compare_destinations(parser.links, footer_url, remote, local)
+    mismatch = bool(comparison["missing"] or comparison["unexpected"] or comparison["unsupported_html_targets"] or unknown)
     geometry = any(page["words_outside_page"] or page["images_outside_page"] for page in pages)
-    incomplete_images = (len(images) != len(embedded) or any(not item["source_available"]
-                         or len(item.get("same_dimension_candidates", [])) != 1 for item in images))
-    return {"result": "PARTIAL" if absolute_launches or mismatch or geometry or incomplete_images else "PASS",
+    verdict = image_verdict(images, len(embedded))
+    return {"result": "PARTIAL" if absolute_launches or mismatch or geometry or verdict != "EXACT_PIXELS" else "PASS",
             "pages": pages, "embedded_images": len(embedded), "images": images,
+            "image_verification": verdict,
             "links": {"annotations": link_count, "unique_remote_destinations": len(remote),
-                      "expected_remote_destinations": len(expected_remote),
-                      "remote_destinations_sha256": hashlib.sha256("\n".join(sorted(remote)).encode()).hexdigest(),
-                      "expected_remote_destinations_sha256": hashlib.sha256("\n".join(sorted(expected_remote)).encode()).hexdigest(),
-                      "remote_missing": len(expected_remote - remote), "remote_unexpected": len(remote - expected_remote),
-                      "unique_local_targets": len(local), "local_missing": len(expected_local - local),
-                      "local_unexpected": len(local - expected_local), "unclassified": unknown,
+                      "unique_local_targets": len(local), "unclassified": unknown,
+                      "destination_comparison": comparison,
                       "absolute_local_launch_annotations": absolute_launches,
                       "printed_source_footer_is_clickable": footer_url in remote,
                       "destinations_match_article_after_public_suffix_mapping": not mismatch},

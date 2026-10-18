@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-10-18T19:11:23.742611+00:00",
+  "timestamp_utc": "2026-10-18T19:24:17.255029+00:00",
   "result": "PARTIAL",
   "verification_scope": "files_and_database",
   "file_restore": "PASS",
@@ -29,8 +29,8 @@
     "failures": {},
     "failed_file_sha256": []
   },
-  "file_restore_seconds": 0.958,
-  "total_seconds": 91.493,
+  "file_restore_seconds": 0.9,
+  "total_seconds": 98.046,
   "source_backups_unchanged": true,
   "file_image_id": "sha256:b42cc6512d36176ace9708c22e165b8c4f52c047d5e10e1823555cc6342d7f1b",
   "database_image": "mariadb:11.4.13@sha256:250e1609e93c0e6aecf64bfbab2d84d5e89d2481540fe77447ff6c855c3b1873",
@@ -146,18 +146,21 @@
               ]
             }
           ],
+          "image_verification": "REQUIRES_VISUAL_REVIEW",
           "links": {
             "annotations": 17,
             "unique_remote_destinations": 10,
-            "expected_remote_destinations": 10,
-            "remote_destinations_sha256": "756732ff7fa29425dd3bac9169f5bec5d5a474232527170ee1fcf6d93a8dc2ea",
-            "expected_remote_destinations_sha256": "756732ff7fa29425dd3bac9169f5bec5d5a474232527170ee1fcf6d93a8dc2ea",
-            "remote_missing": 0,
-            "remote_unexpected": 0,
             "unique_local_targets": 7,
-            "local_missing": 0,
-            "local_unexpected": 0,
             "unclassified": 0,
+            "destination_comparison": {
+              "missing": 0,
+              "unexpected": 0,
+              "unsupported_html_targets": 0,
+              "expected_resolved_destinations": 17,
+              "actual_resolved_destinations": 17,
+              "resolved_destinations_sha256": "d1120b574ec24c65d6e05cfa1b3b5ed7e754d7723957ab84ea3e75781c4533d9",
+              "expected_resolved_destinations_sha256": "d1120b574ec24c65d6e05cfa1b3b5ed7e754d7723957ab84ea3e75781c4533d9"
+            },
             "absolute_local_launch_annotations": 7,
             "printed_source_footer_is_clickable": false,
             "destinations_match_article_after_public_suffix_mapping": true
@@ -242,18 +245,21 @@
               ]
             }
           ],
+          "image_verification": "REQUIRES_VISUAL_REVIEW",
           "links": {
             "annotations": 12,
             "unique_remote_destinations": 5,
-            "expected_remote_destinations": 5,
-            "remote_destinations_sha256": "71870cf558e61caccddaf68611eaf6d2b57468df3f6fbb32ecb25d360ee922be",
-            "expected_remote_destinations_sha256": "71870cf558e61caccddaf68611eaf6d2b57468df3f6fbb32ecb25d360ee922be",
-            "remote_missing": 0,
-            "remote_unexpected": 0,
             "unique_local_targets": 7,
-            "local_missing": 0,
-            "local_unexpected": 0,
             "unclassified": 0,
+            "destination_comparison": {
+              "missing": 0,
+              "unexpected": 0,
+              "unsupported_html_targets": 0,
+              "expected_resolved_destinations": 12,
+              "actual_resolved_destinations": 12,
+              "resolved_destinations_sha256": "f29df20a65532d537cf110ebda64a65295bb22b7d68506876ad12f641e0b88bc",
+              "expected_resolved_destinations_sha256": "f29df20a65532d537cf110ebda64a65295bb22b7d68506876ad12f641e0b88bc"
+            },
             "absolute_local_launch_annotations": 7,
             "printed_source_footer_is_clickable": false,
             "destinations_match_article_after_public_suffix_mapping": true
@@ -338,18 +344,21 @@
               ]
             }
           ],
+          "image_verification": "REQUIRES_VISUAL_REVIEW",
           "links": {
             "annotations": 24,
             "unique_remote_destinations": 18,
-            "expected_remote_destinations": 18,
-            "remote_destinations_sha256": "4138a5e95cf1f5dc5b77d8225702eeea804f27c4bea789104621de431ac85e62",
-            "expected_remote_destinations_sha256": "4138a5e95cf1f5dc5b77d8225702eeea804f27c4bea789104621de431ac85e62",
-            "remote_missing": 0,
-            "remote_unexpected": 0,
             "unique_local_targets": 6,
-            "local_missing": 0,
-            "local_unexpected": 0,
             "unclassified": 0,
+            "destination_comparison": {
+              "missing": 0,
+              "unexpected": 0,
+              "unsupported_html_targets": 0,
+              "expected_resolved_destinations": 24,
+              "actual_resolved_destinations": 24,
+              "resolved_destinations_sha256": "6db92212596290803292a692c718828f76ef27f361dde0a2c1826a6845fbf774",
+              "expected_resolved_destinations_sha256": "6db92212596290803292a692c718828f76ef27f361dde0a2c1826a6845fbf774"
+            },
             "absolute_local_launch_annotations": 6,
             "printed_source_footer_is_clickable": false,
             "destinations_match_article_after_public_suffix_mapping": true
@@ -444,18 +453,21 @@
               ]
             }
           ],
+          "image_verification": "REQUIRES_VISUAL_REVIEW",
           "links": {
             "annotations": 12,
             "unique_remote_destinations": 5,
-            "expected_remote_destinations": 5,
-            "remote_destinations_sha256": "c16f08b2c18f5390e64dd3661438f0cb581623a234de56673ff88c10335eb0ba",
-            "expected_remote_destinations_sha256": "c16f08b2c18f5390e64dd3661438f0cb581623a234de56673ff88c10335eb0ba",
-            "remote_missing": 0,
-            "remote_unexpected": 0,
             "unique_local_targets": 7,
-            "local_missing": 0,
-            "local_unexpected": 0,
             "unclassified": 0,
+            "destination_comparison": {
+              "missing": 0,
+              "unexpected": 0,
+              "unsupported_html_targets": 0,
+              "expected_resolved_destinations": 12,
+              "actual_resolved_destinations": 12,
+              "resolved_destinations_sha256": "d4eba3b0e392df8197f51eb80a8a82d58d9e31a6d0391aaf4a0f7b263e136684",
+              "expected_resolved_destinations_sha256": "d4eba3b0e392df8197f51eb80a8a82d58d9e31a6d0391aaf4a0f7b263e136684"
+            },
             "absolute_local_launch_annotations": 7,
             "printed_source_footer_is_clickable": false,
             "destinations_match_article_after_public_suffix_mapping": true
@@ -547,18 +559,21 @@
               ]
             }
           ],
+          "image_verification": "REQUIRES_VISUAL_REVIEW",
           "links": {
             "annotations": 17,
             "unique_remote_destinations": 9,
-            "expected_remote_destinations": 9,
-            "remote_destinations_sha256": "5cc9ad5865b589058ecc4881b47010094096e90f4296bf0e5c041e6e7f6cb069",
-            "expected_remote_destinations_sha256": "5cc9ad5865b589058ecc4881b47010094096e90f4296bf0e5c041e6e7f6cb069",
-            "remote_missing": 0,
-            "remote_unexpected": 0,
             "unique_local_targets": 8,
-            "local_missing": 0,
-            "local_unexpected": 0,
             "unclassified": 0,
+            "destination_comparison": {
+              "missing": 0,
+              "unexpected": 0,
+              "unsupported_html_targets": 0,
+              "expected_resolved_destinations": 17,
+              "actual_resolved_destinations": 17,
+              "resolved_destinations_sha256": "d63a5f00c9f1598819e9b74103bf8ea449151c626f47874430e24534e6241f2d",
+              "expected_resolved_destinations_sha256": "d63a5f00c9f1598819e9b74103bf8ea449151c626f47874430e24534e6241f2d"
+            },
             "absolute_local_launch_annotations": 8,
             "printed_source_footer_is_clickable": false,
             "destinations_match_article_after_public_suffix_mapping": true

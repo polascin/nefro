@@ -437,6 +437,9 @@ Každé PDF obsahuje jednu ilustráciu 1600 × 1000. Vložený obrázok je JPEG,
 obnovený zdroj WebP; bajtová zhoda sa preto netvrdí. Pri porovnaní dekódovaných
 RGB pixelov je priemerná absolútna odchýlka približne 1,56 až 2,13 z 255.
 Rozmery a vizuálny obsah zodpovedajú príslušným zdrojovým ilustráciám.
+Strojový verdikt pri každom neidentickom RGB obraze zostáva
+`REQUIRES_VISUAL_REVIEW`, aj pri malej alebo zaokrúhlene nulovej odchýlke;
+samotná zhoda rozmerov ani nízka priemerná odchýlka nepotvrdzuje zhodu obsahu.
 Geometrická kontrola nenašla slová ani obrázky mimo hraníc strán; sama osebe
 nenahrádza vizuálnu kontrolu prekrytia alebo čitateľnosti.
 
@@ -468,6 +471,11 @@ zálohy a doložené vstupné PDF zachovať.
 Reprodukcia strojovej kontroly: k predchádzajúcemu príkazu pridať
 `--pdf-asset-review` a zvoliť novú cestu reportu. Voliteľný režim vyžaduje
 PyMuPDF a Pillow na hostiteľovi; ich prítomnosť sa overuje pred obnovou.
+Relatívne HTML odkazy sa pri porovnaní identít riešia voči verejnej URL
+článku, takže kontrola rozpozná aj následnú opravu na HTTPS. Percentuálne
+kódovanie URI sa plošne nedekóduje: zakódovaný oddeľovač parametra musí zostať
+odlíšený od skutočného oddeľovača. Regresie chránia oba tieto prípady aj
+odmietnutie odlišného obrázka s rovnakými rozmermi bez vizuálneho posúdenia.
 Regresná brána bez týchto voliteľných závislostí kontroluje čítanie HTML
 odkazov, dekódovanie entít a nezverejnenie privátnych častí lokálnej cesty.
 Skutočná extrakcia obrázkov a anotácií sa preverila nad piatimi pôvodnými PDF.

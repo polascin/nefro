@@ -5,7 +5,7 @@
   "render_dpi": 110,
   "pymupdf_version": "1.28.0",
   "pillow_version": "12.2.0",
-  "machine_report_sha256": "6705f94dc5f7aacdd7549bc5936d5e19f149a5517b4525ab8a8293de425a48ab",
+  "machine_report_sha256": "80ec149021d98d2f5cd0cbbf3dcc523585a2b613ac072eee46153b17b77a091b",
   "source_images_match_recovery_manifest": true,
   "reviewed_pages": 28,
   "embedded_illustrations": 5,
@@ -193,5 +193,32 @@
     "No new medical fact check or common historical recovery point/RPO/RTO validation."
   ],
   "pdfs_and_backups_modified": false,
-  "production_accessed": false
+  "production_accessed": false,
+  "independent_pixel_identity_checks": [
+    {
+      "path": "pdf/ai-governance-klinicka-prax-nefrologia.pdf",
+      "exact_RGB_pixels": false,
+      "method": "independent ImageChops difference.getbbox after RGB decode; no rounded-score inference"
+    },
+    {
+      "path": "pdf/automatizovane-podavanie-inzulinu-dm2-dialyza.pdf",
+      "exact_RGB_pixels": false,
+      "method": "independent ImageChops difference.getbbox after RGB decode; no rounded-score inference"
+    },
+    {
+      "path": "pdf/cetp-inhibicia-obicetrapib-lipidy-renalna-funkcia.pdf",
+      "exact_RGB_pixels": false,
+      "method": "independent ImageChops difference.getbbox after RGB decode; no rounded-score inference"
+    },
+    {
+      "path": "pdf/nizkoenergeticka-dieta-cvicenie-remisia-dm2-reset.pdf",
+      "exact_RGB_pixels": false,
+      "method": "independent ImageChops difference.getbbox after RGB decode; no rounded-score inference"
+    },
+    {
+      "path": "pdf/renin-aldosteron-dapagliflozin-spironolakton-hfpef.pdf",
+      "exact_RGB_pixels": false,
+      "method": "independent ImageChops difference.getbbox after RGB decode; no rounded-score inference"
+    }
+  ]
 }

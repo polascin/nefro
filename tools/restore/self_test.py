@@ -19,7 +19,7 @@ def main():
     parser.add_argument("--file-image", required=True)
     args = parser.parse_args()
     from run import worst_result
-    from pdf_assets import Assets, local_target
+    from pdf_assets import Assets, local_target, compare_destinations, image_verdict
     assets = Assets()
     assets.feed('<a href="https://example.invalid/reference?a=1&amp;b=2">test</a><img src="img/synthetic.webp">')
     if (assets.links != ["https://example.invalid/reference?a=1&b=2"] or assets.images != ["img/synthetic.webp"]
@@ -27,6 +27,20 @@ def main():
             or local_target("/synthetic/private/path/img/synthetic.webp") != "img/synthetic.webp"
             or local_target("/synthetic/private/config.ini") is not None):
         raise RuntimeError("PDF destination mapping exposed a private path or lost a target.")
+    url = "https://nefro.polascin.net/article.php?slug=synthetic"
+    encoded = compare_destinations(["https://example.invalid/?q=a%26b=c"], url,
+                                   {"https://example.invalid/?q=a&b=c"}, set())
+    repaired = compare_destinations(["article.php?slug=related"], url,
+                                    {"https://nefro.polascin.net/article.php?slug=related"}, set())
+    if encoded["missing"] != 1 or encoded["unexpected"] != 1 or repaired["missing"] or repaired["unexpected"]:
+        raise RuntimeError("PDF comparison conflated encoded parameters or rejected repaired HTTPS links.")
+    for error, expected_verdict in [(255, "REQUIRES_VISUAL_REVIEW"), (2, "REQUIRES_VISUAL_REVIEW"), (0, "EXACT_PIXELS")]:
+        if image_verdict([{"source_available": True, "same_dimension_candidates": [
+                {"mean_absolute_RGB_error_0_to_255": error, "exact_RGB_pixels": error == 0}]}], 1) != expected_verdict:
+            raise RuntimeError("PDF image comparison accepted a differing image without visual assessment.")
+    if image_verdict([{"source_available": True, "same_dimension_candidates": [
+            {"mean_absolute_RGB_error_0_to_255": 0, "exact_RGB_pixels": False}]}], 1) != "REQUIRES_VISUAL_REVIEW":
+        raise RuntimeError("Rounded pixel error concealed a non-identical image.")
     # A layout-only PDF difference must never conceal an application failure.
     if (worst_result("PASS", "FAIL", "PARTIAL") != "FAIL"
             or worst_result("PARTIAL", "PASS", "FAIL") != "FAIL"
