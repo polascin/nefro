@@ -55,8 +55,11 @@ CREATE EVENT disabled_test ON SCHEDULE EVERY 1 DAY DO INSERT INTO parents VALUES
             raise RuntimeError("Invalid SQL was accepted.")
         # Invalid source publications must be reported separately from byte recovery.
         (files / "synthetic.epub").write_bytes(b"truncated archive")
+        zipped_backup = root / "fixture.zip"
+        with zipfile.ZipFile(zipped_backup, "w") as archive:
+            archive.writestr("fixture.sql.gz", backup.read_bytes())
         partial = root / "partial.json"
-        subprocess.run(base + ["--sql", str(backup), "--report", str(partial)], check=True, timeout=300)
+        subprocess.run(base + ["--sql", str(zipped_backup), "--report", str(partial)], check=True, timeout=300)
         evidence = json.loads(partial.read_text(encoding="utf-8"))
         if not (evidence["result"] == "PARTIAL" and evidence["file_restore"] == "PASS"
                 and evidence["file_format_validation"] == "FAIL"

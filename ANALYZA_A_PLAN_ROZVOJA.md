@@ -155,12 +155,14 @@ Existujúca čiastková záloha publikácií sa obnovila v kontajneri bez siete:
 10 súborov, 218 769 019 bajtov, zhodné SHA-256 a nezmenený zdroj.
 Jeden EPUB v zdroji neprešiel kontrolou ZIP kontajnera. Záloha sa nemenila.
 
-Skutočná záloha databázy Nefro sa nenašla; jej obnoviteľnosť zostáva neoverená.
-Syntetický SQL nácvik prešiel vrátane obsahu a schémy po obnove do druhej
-izolovanej MariaDB. Povinná CI brána navyše overuje SQL.gz, diakritiku,
+Po prihlásení používateľa sa získala existujúca DB záloha poskytovateľa
+z 18. 10. 2026 o 03:21. Izolovaná obnova overila 37 tabuliek a 144 649 riadkov
+vrátane obsahových súčtov a schémy po obnove do druhej čerstvej MariaDB.
+[Strojový záznam DB obnovy](tools/restore/evidence/2026-10-18-production-db.json)
+neobsahuje riadky ani osobné údaje. Povinná CI brána navyše overuje SQL.gz, diakritiku,
 cudzie kľúče, pohľad, procedúru, trigger, vypnutú udalosť, odmietnutie
 neplatného SQL a rozpoznanie poškodeného EPUB. To nenahrádza produkčnú zálohu.
 
-Úloha obnovy zostáva otvorená: získať existujúcu DB zálohu a úplnú súborovú
-zálohu rovnakého obdobia, zopakovať izolovanú obnovu a doplniť aplikačnú
+Úloha obnovy zostáva otvorená: získať úplnú súborovú zálohu, preveriť jej
+časovú nadväznosť na DB zálohu, zopakovať izolovanú obnovu a doplniť aplikačnú
 a dešifrovaciu skúšku. RPO ani RTO celého systému zatiaľ nie sú preukázané.

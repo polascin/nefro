@@ -6,6 +6,7 @@ import hashlib
 import json
 import os
 from pathlib import Path
+import re
 import secrets
 import subprocess
 import time
@@ -24,7 +25,9 @@ def run(arguments, *, data=None, environment=None):
     )
     if result.returncode:
         # Database errors can contain personal data or SQL literals.
-        raise RuntimeError("Command failed (" + " ".join(arguments[:2]) + "); raw output was withheld.")
+        code = re.search(rb"ERROR\s+(\d+)", result.stderr)
+        detail = " SQL error " + code[1].decode() if code else ""
+        raise RuntimeError("Command failed (" + " ".join(arguments[:2]) + ")" + detail + "; raw output was withheld.")
     return result.stdout
 
 
@@ -88,7 +91,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--files", type=Path, required=True, help="Existing backup directory (read only).")
     source = parser.add_mutually_exclusive_group(required=True)
-    source.add_argument("--sql", type=Path, help="Existing SQL or SQL.gz backup; never an app config.")
+    source.add_argument("--sql", type=Path, help="Existing SQL, SQL.gz or single-SQL ZIP backup; never an app config.")
     source.add_argument("--synthetic-database", action="store_true")
     parser.add_argument("--file-image", required=True, help="Locally built integration PHP image; pinned to ID before use.")
     parser.add_argument("--report", type=Path, required=True)
@@ -107,8 +110,8 @@ def main():
     image_id = run(["docker", "image", "inspect", args.file_image, "--format", "{{.Id}}"] ).decode().strip()
     # Resolve everything before containers start. No production configuration is loaded.
     sql_path = args.sql.resolve(strict=True) if args.sql else None
-    if sql_path and (not sql_path.is_file() or sql_path.suffix not in {".sql", ".gz"}):
-        raise RuntimeError("Expected a SQL or gzip SQL file.")
+    if sql_path and (not sql_path.is_file() or sql_path.suffix not in {".sql", ".gz", ".zip"}):
+        raise RuntimeError("Expected a SQL, gzip SQL or single-SQL ZIP file.")
     sql_hash = digest(sql_path) if sql_path else None
     token = secrets.token_hex(8)
     password = secrets.token_urlsafe(32)
@@ -144,11 +147,13 @@ def main():
             time.sleep(1)
         raise RuntimeError("Isolated database did not become ready.")
 
-    def sql(container, statement=None, data=None):
+    def sql(container, statement=None, data=None, database=None):
         command = ["docker", "exec", "--interactive", "--env", "MYSQL_PWD", container,
                    "mariadb", "-uroot", "--batch", "--skip-column-names", "--binary-mode=1", "--local-infile=0"]
         if statement is not None:
             command += ["--execute", statement]
+        if database is not None:
+            command += ["--database", database]
         return run(command, data=data, environment=environment)
 
     def inventory(container):
@@ -217,9 +222,21 @@ def main():
         file_elapsed = round(time.monotonic() - started, 3)
         first = create_db("import")
         if sql_path:
-            opener = gzip.open if sql_path.suffix == ".gz" else open
-            with opener(sql_path, "rb") as stream:
-                sql(first, data=stream.read())
+            sql(first, "CREATE DATABASE nefro_restore_import CHARACTER SET utf8mb4")
+            if sql_path.suffix == ".zip":
+                with zipfile.ZipFile(sql_path) as archive:
+                    members = [item for item in archive.infolist() if not item.is_dir()]
+                    if len(members) != 1 or not members[0].filename.lower().endswith((".sql", ".sql.gz")):
+                        raise RuntimeError("ZIP must contain exactly one SQL or SQL.gz file.")
+                    payload = archive.read(members[0])
+                    if members[0].filename.lower().endswith(".gz"):
+                        payload = gzip.decompress(payload)
+            else:
+                opener = gzip.open if sql_path.suffix == ".gz" else open
+                with opener(sql_path, "rb") as stream:
+                    payload = stream.read()
+            sql(first, data=payload, database="nefro_restore_import")
+            del payload
         else:
             sql(first, data=b"CREATE DATABASE nefro_restore_synthetic CHARACTER SET utf8mb4; USE nefro_restore_synthetic; CREATE TABLE users(id INT PRIMARY KEY, label VARCHAR(80)); INSERT INTO users VALUES(1,'synthetic account'); CREATE TABLE articles(id INT PRIMARY KEY, body TEXT); INSERT INTO articles VALUES(1,'synthetic article'); CREATE TABLE calculator_results(id INT PRIMARY KEY, value DECIMAL(10,2)); INSERT INTO calculator_results VALUES(1,42.50);")
         expected = inventory(first)
