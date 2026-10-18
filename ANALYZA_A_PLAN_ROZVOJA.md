@@ -138,3 +138,11 @@ PHP a DB: pri UTC databáze sa okno obnovovalo príliš skoro. Výpočet uplynut
 trvania blokovania aj reset okna teraz používa výhradne databázový čas;
 regresia výslovne zachováva rozdielne pásma. Explicitný `NEFRO_ENV_PATH` sa
 pri chybe už nenahrádza iným konfiguračným súborom. Schéma produkcie sa nemení.
+
+Overenie implementácie `c46b74f`: [regresný workflow](https://github.com/polascin/nefro/actions/runs/39105249048)
+a [Trunk](https://github.com/polascin/nefro/actions/runs/39105249032) úspešné.
+V CI prešlo 18 regresných súborov, 41 integračných kontrol, negatívna skúška
+runnera aj tri simulácie deployu; syntax 622 PHP súborov a PHPStan bez chyby.
+Produkčný marker po overenom SFTP deployi je `c46b74f`. Živé verejné GET
+kontroly prešli, testovací INI je na produkcii nedostupný (403).
+Následná dôkazová dokumentácia nemení nasaditeľné súbory.

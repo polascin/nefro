@@ -89,3 +89,12 @@ Po zapnutí ochrany pracuj na vetve `codex/...`, nechaj prejsť CI a integruj
 cez pull request. Priamy push neovereného nového commitu na `main` sa odmietne.
 Ochranu ani hooky kvôli tomu nevypínaj. Po merge a pulli lokálny hook počká na
 CI nového `main` commitu a až potom vykoná SFTP deploy.
+
+## Overený výsledok zavedenia
+
+Runtime commit `c46b74f` prešiel v GitHub Actions: 18 regresných súborov,
+41 integračných kontrol, negatívna skúška runnera, tri simulácie deployu,
+syntax 622 PHP súborov a PHPStan bez chyby. SFTP overil CI tohto SHA pred
+zápisom a produkčný marker sa s ním zhoduje. Prvý Trunk nález pevného
+syntetického hesla vyriešilo generovanie hesiel pri behu, bez allowlistu.
+Ochranu vetvy overuj cez API podľa vyššie uvedených názvov a zdroja kontrol.
