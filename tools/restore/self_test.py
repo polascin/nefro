@@ -3,7 +3,9 @@
 import argparse
 import gzip
 import json
+import os
 from pathlib import Path
+import shutil
 import stat
 import subprocess
 import sys
@@ -47,6 +49,52 @@ CREATE EVENT disabled_test ON SCHEDULE EVERY 1 DAY DO INSERT INTO parents VALUES
                 and evidence["database_rows"] == 3 and evidence["file_count"] == 5
                 and evidence["source_backups_unchanged"]):
             raise RuntimeError("Positive restore control failed.")
+        # Exercise the optional application probe with fictitious encrypted records.
+        fixture_identity = str(os.getuid()) + ":" + str(os.getgid()) if hasattr(os, "getuid") else "1000:1000"
+        subprocess.run(["docker", "run", "--rm", "--network", "none", "--user", fixture_identity,
+                        "--mount", "type=bind,source=" + str(root) + ",target=/fixture",
+                        "--mount", "type=bind,source=" + str(runner.parent.resolve()) + ",target=/checks,readonly",
+                        "--entrypoint", "php", args.file_image, "/checks/probe_fixture.php"], check=True, timeout=60)
+        app_report = root / "application.json"
+        subprocess.run(base + ["--sql", str(root / "probe.sql"), "--application-probe", "--report", str(app_report)], check=True, timeout=300)
+        app = json.loads(app_report.read_text(encoding="utf-8"))["application_probe"]
+        if not (app["result"] == "PASS" and app["cryptography"]["decrypted"] == 1
+                and app["cryptography"]["wrong_key_rejected"] == 1
+                and app["cryptography"]["tampered_rejected"] == 1
+                and app["database_read_only_account"] == "PASS" and app["database_http_checks"] == 5
+                and app["search_results_branch_verified"]
+                and app["public_download_http_checks"] == 23):
+            raise RuntimeError("Application restore control failed.")
+        (files / "pdf/article.pdf").unlink()
+        missing_report = root / "missing-reference.json"
+        subprocess.run(base + ["--sql", str(root / "probe.sql"), "--application-probe", "--report", str(missing_report)], check=True, timeout=300)
+        app = json.loads(missing_report.read_text(encoding="utf-8"))["application_probe"]
+        if not (app["result"] == "FAIL" and app["references"]["article_pdfs"]["missing_or_unsafe"] == 1):
+            raise RuntimeError("Missing database/file reference was accepted.")
+        shutil.copyfile(files / "synthetic.pdf", files / "pdf/article.pdf")
+        (files / "private/nefro.env.ini").write_text("DATA_PROTECTION_KEY=wrong-synthetic-fixture-key\n", encoding="utf-8")
+        wrong_key_report = root / "wrong-key.json"
+        subprocess.run(base + ["--sql", str(root / "probe.sql"), "--application-probe", "--report", str(wrong_key_report)], check=True, timeout=300)
+        app = json.loads(wrong_key_report.read_text(encoding="utf-8"))["application_probe"]
+        if not (app["result"] == "FAIL" and app["cryptography"]["failed"] == 1
+                and app["cryptography"]["decrypted"] == 0):
+            raise RuntimeError("Wrong archived key was accepted.")
+        (files / "private/nefro.env.ini").write_text("DATA_PROTECTION_KEY=synthetic-restore-fixture-key\n", encoding="utf-8")
+        (files / "search.php").unlink()
+        endpoint_report = root / "missing-endpoint.json"
+        subprocess.run(base + ["--sql", str(root / "probe.sql"), "--application-probe", "--report", str(endpoint_report)], check=True, timeout=300)
+        app = json.loads(endpoint_report.read_text(encoding="utf-8"))["application_probe"]
+        if not (app["result"] == "FAIL" and app["probe_error_stage"].startswith("missing_required_endpoint_")):
+            raise RuntimeError("Missing required application endpoint was accepted.")
+        # Remove synthetic application additions before the original five-file tests.
+        for path in list(files.iterdir()):
+            if path.name not in {"empty", "synthetic.epub", "synthetic.docx", "synthetic.odt", "synthetic.pdf", "synthetic.azw3"}:
+                if path.is_dir():
+                    if not path.resolve().is_relative_to(root.resolve()):
+                        raise RuntimeError("Synthetic cleanup path escaped its temporary workspace.")
+                    shutil.rmtree(path)
+                else:
+                    path.unlink()
         # A corrupt database backup must never produce a successful report.
         invalid = root / "invalid.sql"
         invalid.write_text("THIS IS NOT SQL;\n", encoding="utf-8")
@@ -112,7 +160,7 @@ CREATE EVENT disabled_test ON SCHEDULE EVERY 1 DAY DO INSERT INTO parents VALUES
             )
             if result.returncode == 0 or forbidden_report.exists() or (root / "escaped.txt").exists():
                 raise RuntimeError("Unsafe or damaged file ZIP was accepted.")
-    print("Restore self-test PASS: SQL.gz/ZIP, file ZIP and empty directory, schema objects, invalid SQL, corrupt EPUB, ZIP traversal, symlink and CRC rejection.")
+    print("Restore self-test PASS: archives, schema objects, UTF-8, invalid SQL, corrupt EPUB, ZIP security, application HTTP, read-only DB, missing reference and wrong-key rejection.")
 
 
 if __name__ == "__main__":

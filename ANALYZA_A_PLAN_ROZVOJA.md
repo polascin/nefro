@@ -170,8 +170,20 @@ potvrdzuje nemennosť zdroja a odstránenie kontajnera. Nástroj podporuje priam
 ZIP vstup, bezpečné cesty, UTF-8 názvy, prázdne adresáre a samostatný režim
 `--files-only`; negatívne ZIP skúšky sú súčasťou povinnej regresnej brány.
 
-Obnoviteľnosť DB a dodaných súborov je overená oddelene. Zostáva preveriť
-konzistenciu rozdielne datovaných záloh, aplikačné väzby a dešifrovanie.
-Archív obsahuje kandidátsky zdroj odvodenia kľúča v konfigurácii; jeho zhodu
-s aktívnym kľúčom skúška nepotvrdzuje. RPO ani RTO celého systému zatiaľ
-nie sú preukázané. Produkcia sa počas skúšok nemenila.
+Nadväzujúca [kontrola konzistencie](tools/restore/evidence/2026-10-18-consistency.json)
+odhalila **5 chýbajúcich PDF a 5 chýbajúcich obrázkov článkov**. Preto má
+celkový výsledok `FAIL`, hoci obnova dát, 19 cudzích kľúčov bez osirelých
+riadkov, všetky avatary a 40 súborov plateného katalógu prešli.
+
+Jediný šifrovaný TOTP záznam sa archivovaným kľúčom úspešne dešifroval;
+nesprávny kľúč aj zmenený ciphertext boli odmietnuté. Prešlo 8 kontrol
+aplikačných funkcií, 5 HTTP kontrol s obnovenou DB účtom iba na čítanie
+a 23 kontrol verejného sťahovania. Aplikačné tabuľky aj pôvodné zálohy
+zostali nezmenené; kontajnery a socketový zväzok sa odstránili.
+
+Priorita ďalšej etapy: zosúladiť časový bod záloh alebo preukázateľne doplniť
+chýbajúce súbory do novej pracovnej kópie a zopakovať izolovanú skúšku.
+Rozdiel dátumov je možné vysvetlenie nesúladu, nie potvrdená príčina.
+Nie sú overené prihlásenia reálnych účtov, zapisujúce toky nad reálnymi dátami,
+externé služby, Apache, ACL ani RPO/RTO. DB záloha neobsahovala objednávky,
+takže ich reálnu väzbu na súbory nebolo možné precvičiť. Produkcia sa nemenila.

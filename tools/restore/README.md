@@ -1,8 +1,12 @@
 # Izolovaná skúška obnovy
 
 Nástroj obnoví existujúcu súborovú zálohu a SQL/SQL.gz/ZIP do jednorazových
-kontajnerov. Nespúšťa portál, migrácie, cron, newsletter, SMS ani platby.
-Nepoužíva produkčnú konfiguráciu, prihlasovacie údaje ani sieťové DB spojenie.
+kontajnerov. V predvolenom režime nespúšťa portál. Voliteľná aplikačná skúška
+spúšťa iba určené funkcie a verejné sťahovanie na loopbacku kontajnera bez siete.
+Migrácie, cron, newsletter, SMS ani platby sa nespúšťajú.
+Produkčná DB/SMTP konfigurácia ani prihlasovacie údaje sa neaktivujú.
+Pri aplikačnej skúške sa z archivovanej konfigurácie číta iba zdroj šifrovacieho
+kľúča, výhradne v pamäti izolovaného kontajnera.
 
 ## Príprava a spustenie
 
@@ -72,6 +76,56 @@ Neoveruje sa vizuálna správnosť dokumentov, aplikačné správanie, dešifrov
 2FA, oprávnenia/ACL, externé služby ani obnova celého hostingu. Súčty potvrdzujú
 zhodu s dodanou zálohou, nie jej autenticitu alebo úplnosť oproti produkcii.
 
+## Voliteľná kontrola konzistencie a aplikácie
+
+```bash
+python tools/restore/run.py --files /cesta/k/suborom.zip --sql /cesta/k/databaze.zip \
+  --file-memory-mib 4096 --application-probe --file-image nefro-restore-php \
+  --report scratch/restore-konzistencia.json
+```
+
+Predchádzajúci odsek opisuje hranice predvoleného nácviku. Prepínač
+`--application-probe` navyše výslovne povoľuje vykonanie archivovaného kódu
+v kontajneri bez siete. Dôverovať treba pôvodu kódu aj obrazu; izolácia
+nenahrádza overenie ich integrity. Pôvodné archívy sa nemenia.
+
+- Porovnajú sa odkazy článkov na PDF a obrázky (`src`, `srcset`), aktuálne
+  a archivované avatary, súbory plateného katalógu a formáty objednávok.
+  Externé obrázky sa nesťahujú. Cesty s traversal alebo mimo obnovy sa odmietnu.
+- Pri každom deklarovanom cudzom kľúči sa vyhľadajú osirelé riadky.
+  To nepokrýva nedeklarované obchodné pravidlá ani zhodu obsahu PDF s článkom.
+- Z archivovanej konfigurácie sa načíta iba prvý dostupný zdroj dátového kľúča
+  podľa priorít aplikácie. Aktívna konfigurácia obsahuje len izolované nastavenia.
+  Skutočné TOTP obálky sa dešifrujú a overí sa odmietnutie nesprávneho kľúča
+  aj zmeneného ciphertextu. Tajomstvá sa nevypisujú, nehashujú do reportu ani
+  neukladajú na hostiteľa. Kontrola nepoužíva reálne prihlasovacie kódy.
+- Samostatný syntetický kryptografický cyklus overí použiteľnosť kľúča.
+  Ak v DB nie je šifrovaný záznam, dešifrovanie sa označí `NO_ENCRYPTED_RECORDS`,
+  nie `PASS`. Bez DB je výsledok najviac `PARTIAL`.
+- Obnovená aplikácia sa pripája k prvej jednorazovej DB iba cez Unix socket.
+  Samostatný účet má výhradne `SELECT`; negatívny pokus o vytvorenie tabuľky
+  musí byť odmietnutý. Socket je v samostatnom označenom zväzku a po skúške
+  sa odstráni spolu s kontajnermi. DB naďalej nemá sieťový server ani udalosti.
+- HTTP server počúva len na `127.0.0.1` v kontajneri bez siete a bez portov.
+  Router povoľuje iba konkrétne verejné trasy. Overuje sa zoznam článkov,
+  vyhľadávanie, prihlasovací formulár, článok a odmietnutie neprihláseného
+  sťahovania PDF. Chýbajúci povinný endpoint znamená `FAIL`; bez publikovaného
+  článku nemožno dostať plný `PASS`. Vyhľadávanie používa parameter `s`
+  a musí vykresliť vetvu výsledkov, samotný prázdny formulár nestačí.
+  Verejné publikácie sa prenesú vo všetkých 20 kombináciách
+  vydania a formátu; SHA-256 odpovede musí zodpovedať obnovenému súboru.
+- Po skúške sa znova porovnajú súčty aplikačných tabuliek a pôvodných archívov.
+  Report obsahuje iba agregované výsledky. Chyba či chýbajúca referencia
+  nesmie vytvoriť `PASS`; kontrolovaná chyba má stav `FAIL` a dokončené čiastkové
+  kontroly zostávajú viditeľné. Návratový kód 0 sám osebe nepotvrdzuje úspech.
+
+Skúška nepotvrdzuje prihlásenie reálnych účtov, použitie 2FA autentifikátora,
+zmenu profilu či ďalšie zapisujúce toky nad obnovenými údajmi. Tie sa testujú
+oddelene na syntetických dátach v integračnej bráne. Neoveruje sa prehliadač,
+Apache `.htaccess`, SMTP, SMS, platobný poskytovateľ, ACL hostingu ani RPO/RTO.
+Pri inom dátovom modeli treba projektový probe upraviť; chýbajúcu podporu
+nenahrádza úspešná generická obnova.
+
 ## Regresné kontroly
 
 ```bash
@@ -124,7 +178,8 @@ Archív pokrýva aplikáciu, publikácie, uploady, PDF článkov aj konfiguračn
 Konfigurácia obsahuje neprázdny kandidátsky zdroj odvodenia dátového kľúča
 `NEWSLETTER_UNSUBSCRIBE_SECRET`; samostatný `data_protection.key` sa v archíve
 nenachádza. Hodnota sa nevypisovala ani nepoužila ako aktívna konfigurácia.
-Zhoda s aktívnym produkčným kľúčom a dešifrovanie údajov nie sú overené.
+V pôvodnej súborovej skúške sa dešifrovanie neoverovalo; nadväzujúci výsledok
+je uvedený nižšie. Súčasný stav živej produkcie sa neoveroval.
 
 [Skutočná DB obnova](evidence/2026-10-18-production-db.json) bola overená
 v samostatnej predchádzajúcej skúške. Terajší beh používa `--files-only`;
@@ -134,8 +189,50 @@ kontrolované dokumenty úplného archívu prešli.
 
 DB záloha z 18. 10. 2026 o 03:21:13 a súborová záloha z predchádzajúceho dňa
 netvoria preukázaný spoločný konzistentný bod obnovy. Na uzavretie úplnej
-obnoviteľnosti systému zostáva overiť väzby DB na súbory, aplikačné správanie,
-dešifrovanie a prevádzkový postup vrátane oprávnení. RPO ani RTO celého systému
+obnoviteľnosti systému treba vyriešiť nižšie zistené chýbajúce súbory
+a preveriť prevádzkový postup vrátane oprávnení. RPO ani RTO celého systému
 nie sú potvrdené. Produkčná obnova sa nespúšťala.
+
+## Nadväzujúci výsledok konzistencie (18. 10. 2026)
+
+[Strojový výsledok](evidence/2026-10-18-consistency.json) má správne **`result=FAIL`**:
+dodaná dvojica záloh neprešla kontrolou všetkých súborových referencií.
+Nejde o zlyhanie importu databázy alebo dešifrovania. Archívy sa neopravovali.
+
+| Kontrola            | Výsledok                                                                                                                            |
+| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| Databáza            | 37 tabuliek, 144 649 riadkov; obsah aj schéma zhodné po druhej obnove.                                                              |
+| Súbory              | 3 323 súborov, 60 adresárov, zhodné SHA-256; 532 kontrol formátov bez chyby.                                                        |
+| PDF článkov         | 449 zo 454 referencií dostupných; **5 odlišných PDF chýba**.                                                                        |
+| Obrázky článkov     | 539 z 544 referencií dostupných; **5 odlišných obrázkov chýba**. Externé obrázky: 0.                                                |
+| Avatary             | Všetkých 6 aktuálnych a 2 archivované súbory dostupné.                                                                              |
+| Platený katalóg     | Všetkých 40 súborov dostupných. DB má 0 objednávok, takže reálna väzba objednávky na súbor nebola dátami precvičená.                |
+| Cudzie kľúče        | 19 deklarovaných väzieb, 0 osirelých riadkov.                                                                                       |
+| Dešifrovanie        | Jediný šifrovaný TOTP záznam úspešne dešifrovaný archivovaným kľúčom; nesprávny kľúč aj zmenený ciphertext odmietnuté.              |
+| Ďalšie TOTP stavy   | 0 starých plaintext záznamov a 0 zapnutých TOTP bez tajomstva.                                                                      |
+| Aplikačné funkcie   | 8 kontrol pomocných funkcií archivovaného kódu.                                                                                     |
+| HTTP s obnovenou DB | 5 kontrol: zoznam článkov, vyhľadávanie, login formulár, presmerovanie neprihláseného sťahovania PDF a detail publikovaného článku. |
+| Verejné sťahovanie  | 20 kombinácií vydania a formátu prenesených so zhodným SHA-256; 3 negatívne HTTP kontroly.                                          |
+| Oprávnenia DB       | Samostatný účet iba `SELECT`, vytvorenie tabuľky odmietnuté; aplikačné tabuľky po HTTP skúške nezmenené.                            |
+| Upratanie           | Všetky 3 vlastné kontajnery a zväzok Unix socketu odstránené; zdrojové archívy nezmenené.                                           |
+
+Rozdiel času súborovej a databázovej zálohy je možným vysvetlením chýbajúcich
+súborov, príčina však nebola potvrdená. Tieto zálohy nemožno označiť za úplnú
+konzistentnú obnovu portálu. Ďalším krokom je zabezpečiť časovo zosúladenú
+dvojicu záloh alebo preukázateľne doplniť chýbajúce súbory do novej pracovnej
+kópie a celú kontrolu zopakovať. Pôvodné archívy a tento neúspešný dôkaz zachovať.
+
+Zhoda kľúča je potvrdená pre uložený TOTP záznam v tejto DB zálohe, nie pre
+neskoršie zmeny produkcie ani iné prípadné zdroje šifrovaných dát. Neuskutočnilo
+sa prihlásenie reálneho účtu ani zmena jeho 2FA. Nie sú overené zapisujúce
+aplikačné toky nad obnovenými reálnymi údajmi, doručovanie správ, platby,
+vykreslenie v prehliadači, Apache pravidlá, oprávnenia hostingu ani spoločný
+časový bod obnovy. Lokálne časy v JSON nie sú RTO a nepotvrdzujú RPO.
+
+Povinná CI regresia navyše používa syntetickú aplikáciu a DB: pozitívny
+dešifrovací prípad, samostatný chybný kľúč, chýbajúci PDF odkaz aj povinný endpoint, HTTP a
+odmietnutie DB zápisu. Kontrolované negatívne prípady musia vykázať `FAIL`.
+PHP probe súbory sú v allowliste build kontextu, preto podliehajú aj syntaxi
+a PHPStan. Skutočné zálohy, kľúče a reporty s obsahom údajov sa do obrazu nekopírujú.
 
 _Primárny zdroj: [Websupport: Zálohy databáz](https://www.websupport.sk/podpora/kb/zalohy-databaz/), overené 18. 10. 2026. Všeobecný opis služby nepotvrdzuje dostupnosť konkrétnej zálohy Nefro._
