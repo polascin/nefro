@@ -11,7 +11,8 @@ foreach (['auth.php', 'bot_guard.php', 'config_loader.php', 'totp.php', 'calcula
     'publications_common.php', 'email_verification.php', 'download_free_publication.php'] as $name) {
     copy('/app/' . $name, '/fixture/files/' . $name);
 }
-mkdir('/fixture/files/private', 0700);
+// Fictitious fixtures must be readable by the separate UID 1000 restore container.
+mkdir('/fixture/files/private', 0755);
 file_put_contents('/fixture/files/private/nefro.env.ini', "DATA_PROTECTION_KEY=synthetic-restore-fixture-key\n");
 putenv('NEFRO_ENV_PATH=/fixture/files/private/nefro.env.ini');
 $fixtureRoot = realpath('/fixture/files');
@@ -23,12 +24,12 @@ require $fixtureRoot . '/publications_common.php';
 $storage = encodeTotpStorage('JBSWY3DPEHPK3PXP', []);
 foreach (publications() as $publication) {
     $slug = $publication['slug'];
-    mkdir('/fixture/files/private/publications/' . $slug, 0700, true);
+    mkdir('/fixture/files/private/publications/' . $slug, 0755, true);
     foreach (publicationFormats() as $format => $definition) {
         copy('/fixture/files/synthetic.' . $format, '/fixture/files/private/publications/' . $slug . '/' . $slug . '.' . $definition['ext']);
     }
 }
-mkdir('/fixture/files/pdf/publikacie', 0700, true);
+mkdir('/fixture/files/pdf/publikacie', 0755, true);
 foreach (['sk-nefro-dokazane-pravdepodobne-otvorene', 'sk-nefro-proven-probable-open',
     'sk-nefro-belegt-wahrscheinlich-offen', 'sk-nefro-dimostrato-probabile-aperto'] as $stem) {
     foreach (publicationFormats() as $format => $definition) {

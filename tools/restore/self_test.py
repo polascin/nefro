@@ -3,6 +3,7 @@
 import argparse
 import gzip
 import json
+import os
 from pathlib import Path
 import shutil
 import stat
@@ -49,7 +50,8 @@ CREATE EVENT disabled_test ON SCHEDULE EVERY 1 DAY DO INSERT INTO parents VALUES
                 and evidence["source_backups_unchanged"]):
             raise RuntimeError("Positive restore control failed.")
         # Exercise the optional application probe with fictitious encrypted records.
-        subprocess.run(["docker", "run", "--rm", "--network", "none", "--user", "1000:1000",
+        fixture_identity = str(os.getuid()) + ":" + str(os.getgid()) if hasattr(os, "getuid") else "1000:1000"
+        subprocess.run(["docker", "run", "--rm", "--network", "none", "--user", fixture_identity,
                         "--mount", "type=bind,source=" + str(root) + ",target=/fixture",
                         "--mount", "type=bind,source=" + str(runner.parent.resolve()) + ",target=/checks,readonly",
                         "--entrypoint", "php", args.file_image, "/checks/probe_fixture.php"], check=True, timeout=60)
