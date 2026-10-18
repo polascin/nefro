@@ -18,6 +18,8 @@
 !/tools/ci_gate.php
 !/tools/integration/
 !/tools/integration/**
+!/tools/restore/
+!/tools/restore/*.php
 !/hooks/
 !/hooks/deploy.sh
 !/hooks/deploy-ignore.txt

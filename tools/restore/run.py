@@ -1,4 +1,4 @@
-"""Offline restore drill. Never starts application code or connects to a remote DB."""
+"""Offline restore drill. Archived application checks require an explicit opt-in; no remote DB."""
 
 import argparse
 import gzip
@@ -30,6 +30,10 @@ def run(arguments, *, data=None, environment=None):
         # Database errors can contain personal data or SQL literals.
         code = re.search(rb"ERROR\s+(\d+)", result.stderr)
         detail = " SQL error " + code[1].decode() if code else ""
+        detail += " " + next((item for item in ("cat", "php", "mariadb", "mariadb-dump", "tar") if item in arguments), "")
+        if "/checks/application_probe.php" in arguments:
+            location = re.search(rb"on line (\d+)", result.stderr)
+            detail += " application probe" + (" line " + location[1].decode() if location else "")
         raise RuntimeError("Command failed (" + " ".join(arguments[:2]) + ")" + detail + "; raw output was withheld.")
     return result.stdout
 
@@ -161,6 +165,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--files", type=Path, required=True, help="Existing backup directory or ZIP (read only).")
     parser.add_argument("--file-memory-mib", type=int, default=768, help="File restore tmpfs limit, 128..8192 MiB.")
+    parser.add_argument("--application-probe", action="store_true", help="Opt in to archived helper, HTTP, reference and TOTP checks in the offline container.")
     source = parser.add_mutually_exclusive_group(required=True)
     source.add_argument("--sql", type=Path, help="Existing SQL, SQL.gz or single-SQL ZIP backup; never an app config.")
     source.add_argument("--synthetic-database", action="store_true")
@@ -168,6 +173,8 @@ def main():
     parser.add_argument("--file-image", required=True, help="Locally built integration PHP image; pinned to ID before use.")
     parser.add_argument("--report", type=Path, required=True)
     args = parser.parse_args()
+    if args.application_probe and args.synthetic_database:
+        raise RuntimeError("Application checks require an existing DB backup or explicit files-only scope.")
     if args.files.is_symlink():
         raise RuntimeError("Symlink backup roots are not accepted.")
     files = args.files.resolve(strict=True)
@@ -195,6 +202,8 @@ def main():
     password = secrets.token_urlsafe(32)
     environment = dict(os.environ, MARIADB_ROOT_PASSWORD=password, MYSQL_PWD=password)
     containers = []
+    socket_volume = "nefro-restore-" + token + "-socket" if args.application_probe and not args.files_only else None
+    socket_created = False
     started = time.monotonic()
 
     def create_db(label):
@@ -204,6 +213,7 @@ def main():
              "--label", "nefro.restore.run=" + token,
              "--network", "none", "--security-opt", "no-new-privileges:true",
              "--tmpfs", "/var/lib/mysql:rw,nosuid,nodev,size=768m",
+             *(["--mount", "type=volume,source=" + socket_volume + ",target=/run/mysqld"] if socket_volume and label == "import" else []),
              "--env", "MARIADB_ROOT_PASSWORD", DB_IMAGE,
              "--skip-networking", "--event-scheduler=OFF", "--local-infile=0"], environment=environment)
         for _ in range(90):
@@ -274,7 +284,10 @@ def main():
         return hashlib.sha256(content).hexdigest()
 
     try:
-        # Only the existing file backup is mounted. Restored files are never executed.
+        if socket_volume:
+            run(["docker", "volume", "create", "--label", "nefro.restore.run=" + token, socket_volume])
+            socket_created = True
+        # The source is read only; archived code runs only in the optional offline probe.
         file_container = "nefro-restore-" + token + "-files"
         containers.append(file_container)
         run(["docker", "run", "--detach", "--name", file_container,
@@ -283,6 +296,8 @@ def main():
              "--security-opt", "no-new-privileges:true", "--user", "1000:1000",
              "--tmpfs", f"/restore:rw,nosuid,nodev,noexec,uid=1000,gid=1000,mode=0700,size={args.file_memory_mib}m",
              "--mount", "type=bind,source=" + str(files) + ",target=/input,readonly",
+             *(["--mount", "type=bind,source=" + str(Path(__file__).resolve().parent) + ",target=/checks,readonly"] if args.application_probe else []),
+             *(["--mount", "type=volume,source=" + socket_volume + ",target=/run/mysqld,readonly"] if socket_volume else []),
              "--entrypoint", "sh", image_id, "-ec",
              ("true" if files.is_file() else "cp -R /input/. /restore/") + "; exec sleep 900"])
         # Wait for the copy before hashing it; no restored content leaves tmpfs.
@@ -357,6 +372,20 @@ def main():
                 raise RuntimeError("Database restore differs from the imported backup.")
             if schema(second, expected[0]) != schema_hash:
                 raise RuntimeError("Restored schema, views or stored routines differ.")
+        application = None
+        if args.application_probe:
+            from probe import collect, execute
+            payload = collect(sql, first, expected[0]) if not args.files_only else {"database_available": False}
+            if socket_volume:
+                reader_password = secrets.token_hex(24)
+                sql(first, "CREATE USER 'restore_reader'@'localhost' IDENTIFIED BY '" + reader_password + "'")
+                from probe import quote
+                sql(first, "GRANT SELECT ON " + quote(payload["database_name"]) + ".* TO 'restore_reader'@'localhost'")
+                payload["reader_password"] = reader_password
+            application = execute(run, file_container, payload)
+            del payload
+            if not args.files_only and inventory(first) != expected:
+                raise RuntimeError("Application probe changed restored application records.")
         if (files_manifest(files) != before or directory_manifest(files) != directories_before
                 or (archive_hash and digest(files) != archive_hash) or (sql_path and digest(sql_path) != sql_hash)):
             raise RuntimeError("Source backup changed during the drill.")
@@ -380,6 +409,7 @@ def main():
             "source_mount_read_only": True,
             "database_tcp_and_events_disabled": None if args.files_only else True,
             "restore_containers_removed": True,
+            "probe_socket_volume_removed": True if socket_created else None,
             "existing_database_backup_restore_verified": bool(sql_path),
             "database_source": "not_run" if args.files_only else ("existing_backup" if sql_path else "synthetic_fixture_only"),
             "database_backup_sha256": sql_hash,
@@ -396,6 +426,12 @@ def main():
             "database_image": DB_IMAGE,
             "limits": ["File scope is only the supplied directory or ZIP.", "No application, visual, decryption or full disaster recovery validation."],
         }
+        if application is not None:
+            report["application_probe"] = application
+            if application["result"] != "PASS":
+                report["result"] = application["result"]
+            report["limits"] = ["Application checks cover only the explicit probe scope; see application_probe.limits.",
+                                "No full disaster recovery, common recovery timestamp or external-service validation."]
         # Publish PASS only after all owned containers and tmpfs data are removed.
     finally:
         cleanup_failed = False
@@ -411,6 +447,15 @@ def main():
                 continue
             outcome = subprocess.run(["docker", "rm", "--force", name], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=60, check=False)
             cleanup_failed |= outcome.returncode != 0
+        if socket_created:
+            metadata = run(["docker", "volume", "inspect", socket_volume])
+            owner = json.loads(metadata)[0].get("Labels") or {}
+            if owner.get("nefro.restore.run") != token:
+                cleanup_failed = True
+            else:
+                result = subprocess.run(["docker", "volume", "rm", socket_volume], stdout=subprocess.DEVNULL,
+                                        stderr=subprocess.DEVNULL, timeout=60, check=False)
+                cleanup_failed |= result.returncode != 0
         if cleanup_failed:
             raise RuntimeError("Restore container cleanup failed; no success report was written.")
     args.report.parent.mkdir(parents=True, exist_ok=True)
