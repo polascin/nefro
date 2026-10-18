@@ -8,9 +8,6 @@ import re
 import shutil
 from urllib.parse import urljoin
 
-from pdf_assets import local_target
-
-
 GOVERNANCE = "ai-governance-klinicka-prax-nefrologia.pdf"
 EXPECTED_LAUNCHES = {
     GOVERNANCE: 7,
@@ -26,10 +23,14 @@ def digest(path):
 
 
 def public_uri(target):
-    suffix = local_target(target)
-    if not suffix or not re.fullmatch(r"(?:img/[a-z0-9-]+\.webp|article\.php\?slug=[a-z0-9-]+)", suffix):
+    normalized = target.replace("\\", "/")
+    match = re.fullmatch(
+        r"(?:(?:[A-Za-z]:)?/)?(?:[^/?#&:\x00-\x20]+/)*"
+        r"(img/[a-z0-9-]+\.webp|article\.php\?slug=[a-z0-9-]+)", normalized)
+    if not match:
         raise RuntimeError("Unrecognized local link; refusing to guess its public destination.")
-    return urljoin("https://nefro.polascin.net/", suffix)
+    return urljoin("https://nefro.polascin.net/", match[1])
+
 
 
 def validate_entries(entries):

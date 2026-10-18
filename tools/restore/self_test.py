@@ -23,7 +23,9 @@ def main():
     from repair_working_pdfs import public_uri, validate_entries, EXPECTED_LAUNCHES
     if public_uri("/synthetic/private/article.php?slug=related") != "https://nefro.polascin.net/article.php?slug=related":
         raise RuntimeError("Working PDF repair lost a public destination.")
-    for target in ("/private/config.ini", "/private/article.php?slug=x&admin=1", "/private/img/../secret.webp"):
+    for target in ("/private/config.ini", "/private/article.php?slug=x&admin=1", "/private/img/../secret.webp",
+                   "/private/notarticle.php?slug=related", "/private/article.php?slug=x&admin=img/foo.webp",
+                   "/private/article.php?slug=x&other=article.php?slug=related", "/private/img/foo.webp#fragment"):
         try:
             public_uri(target)
         except RuntimeError:
