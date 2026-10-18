@@ -187,3 +187,17 @@ Rozdiel dátumov je možné vysvetlenie nesúladu, nie potvrdená príčina.
 Nie sú overené prihlásenia reálnych účtov, zapisujúce toky nad reálnymi dátami,
 externé služby, Apache, ACL ani RPO/RTO. DB záloha neobsahovala objednávky,
 takže ich reálnu väzbu na súbory nebolo možné precvičiť. Produkcia sa nemenila.
+
+Následne sa všetkých 5 PDF a 5 WebP našlo v lokálnom Gite a doplnilo iba do
+izolovanej pamäťovej pracovnej kópie. Všetkých 10 SHA-256 sa zhoduje s blobmi
+`HEAD`; zdrojové commity sú zaznamenané. Pôvodné archívy aj neúspešný dôkaz
+zostali nezmenené. [Nový výsledok pracovnej kópie](tools/restore/evidence/2026-10-18-recovered.json)
+je `PASS`: 454/454 PDF, 544/544 obrazových odkazov, bez nedostupných súborov;
+zopakované HTTP, databázové a dešifrovacie kontroly prešli. Doplnková vrstva
+10 verejných súborov a manifest zostávajú v ignorovanom pracovnom adresári,
+obnovená DB ani konfigurácia sa na hostiteľa neukladali.
+
+Zostáva zabezpečiť konzistentný zálohovací postup pre budúce obnovy a preveriť
+obsahovú zhodu PDF nad rámec titulov. Doplnková vrstva nie je pôvodný snapshot
+poskytovateľa ani dôkaz spoločného historického bodu obnovy. Predchádzajúce
+obmedzenia autentifikácie, externých služieb, hostingu a RPO/RTO zostávajú platné.

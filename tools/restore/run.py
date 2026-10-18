@@ -166,6 +166,8 @@ def main():
     parser.add_argument("--files", type=Path, required=True, help="Existing backup directory or ZIP (read only).")
     parser.add_argument("--file-memory-mib", type=int, default=768, help="File restore tmpfs limit, 128..8192 MiB.")
     parser.add_argument("--application-probe", action="store_true", help="Opt in to archived helper, HTTP, reference and TOTP checks in the offline container.")
+    parser.add_argument("--recovery-source", type=Path, help="Read-only source of missing public article assets; never overwrites restored files.")
+    parser.add_argument("--recovery-bundle", type=Path, help="New local directory retaining only the supplemental public assets.")
     source = parser.add_mutually_exclusive_group(required=True)
     source.add_argument("--sql", type=Path, help="Existing SQL, SQL.gz or single-SQL ZIP backup; never an app config.")
     source.add_argument("--synthetic-database", action="store_true")
@@ -175,6 +177,8 @@ def main():
     args = parser.parse_args()
     if args.application_probe and args.synthetic_database:
         raise RuntimeError("Application checks require an existing DB backup or explicit files-only scope.")
+    if bool(args.recovery_source) != bool(args.recovery_bundle) or (args.recovery_source and (not args.application_probe or not args.sql)):
+        raise RuntimeError("Recovery needs both source and new bundle, an existing SQL backup and the application probe.")
     if args.files.is_symlink():
         raise RuntimeError("Symlink backup roots are not accepted.")
     files = args.files.resolve(strict=True)
@@ -373,9 +377,21 @@ def main():
             if schema(second, expected[0]) != schema_hash:
                 raise RuntimeError("Restored schema, views or stored routines differ.")
         application = None
+        recovery = None
         if args.application_probe:
             from probe import collect, execute
             payload = collect(sql, first, expected[0]) if not args.files_only else {"database_available": False}
+            if args.recovery_source:
+                from recovery import prepare, apply
+                if args.recovery_bundle.resolve().is_relative_to(files) or args.recovery_bundle.resolve() == args.recovery_source.resolve():
+                    raise RuntimeError("Recovery output must not replace a source backup or source root.")
+                entries = prepare(payload, before, args.recovery_source, args.recovery_bundle, args.file_memory_mib)
+                if validate_formats(args.recovery_bundle)["failures"]:
+                    raise RuntimeError("Recovery document format validation failed.")
+                apply(run, file_container, args.recovery_bundle, entries)
+                recovery = {"scope": "additive_working_copy_only", "supplement_count": len(entries),
+                            "supplement_bytes": sum(item["bytes"] for item in entries), "entries": entries,
+                            "original_restored_files_overwritten": 0, "restored_file_count": len(before) + len(entries)}
             if socket_volume:
                 reader_password = secrets.token_hex(24)
                 sql(first, "CREATE USER 'restore_reader'@'localhost' IDENTIFIED BY '" + reader_password + "'")
@@ -432,6 +448,8 @@ def main():
                 report["result"] = application["result"]
             report["limits"] = ["Application checks cover only the explicit probe scope; see application_probe.limits.",
                                 "No full disaster recovery, common recovery timestamp or external-service validation."]
+        if recovery is not None:
+            report["recovery_working_copy"] = recovery
         # Publish PASS only after all owned containers and tmpfs data are removed.
     finally:
         cleanup_failed = False
