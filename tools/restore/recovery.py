@@ -53,16 +53,19 @@ def prepare(payload, original, source, bundle, memory_mib):
             shutil.copyfileobj(content, output)
         if digest(candidate) != expected or digest(destination) != expected:
             raise RuntimeError("Recovery source changed or its working copy differs.")
-        tracked = subprocess.run(["git", "-C", str(source), "ls-files", "--error-unmatch", "--", relative],
-                                 stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=False)
+        git = shutil.which("git")
+        tracked = subprocess.run([git, "-C", str(source), "ls-files", "--error-unmatch", "--", relative],
+                                 stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=False) if git else None
         commit = None
         matches_git = None
-        if tracked.returncode == 0:
-            commit = subprocess.run(["git", "-C", str(source), "log", "-1", "--format=%H", "--", relative],
-                                    stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, check=True).stdout.decode().strip()
-            committed = subprocess.run(["git", "-C", str(source), "show", "HEAD:" + relative],
-                                       stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, check=True).stdout
-            matches_git = hashlib.sha256(committed).hexdigest() == expected
+        if tracked is not None and tracked.returncode == 0:
+            history = subprocess.run([git, "-C", str(source), "log", "-1", "--format=%H", "--", relative],
+                                     stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, check=False)
+            committed = subprocess.run([git, "-C", str(source), "show", "HEAD:./" + relative],
+                                       stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, check=False)
+            if history.returncode == 0 and committed.returncode == 0:
+                commit = history.stdout.decode().strip() or None
+                matches_git = hashlib.sha256(committed.stdout).hexdigest() == expected
         text_check = "NOT_RUN"
         title = payload.get("recovery_pdf_titles", {}).get(relative)
         converter = shutil.which("pdftotext")
@@ -73,7 +76,7 @@ def prepare(payload, original, source, bundle, memory_mib):
             if text_check != "PASS":
                 raise RuntimeError("Recovered PDF title does not match its database article: " + relative)
         entries.append({"path": relative, "bytes": destination.stat().st_size, "sha256": expected,
-                        "source": "tracked_repository_asset" if commit else "local_untracked_article_asset",
+                        "source": "tracked_repository_asset" if commit else "local_article_asset_no_git_provenance",
                         "last_source_commit": commit, "matches_git_head_blob": matches_git,
                         "database_title_in_pdf_text": text_check})
     return entries

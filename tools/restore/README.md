@@ -150,6 +150,9 @@ výstupný balík aj report musia mať pri každom behu nové cesty.
 
 Report uvádza pri každom doplnku SHA-256, veľkosť, druh lokálneho zdroja
 a pri sledovaných súboroch posledný commit a zhodu s blobom `HEAD`.
+Git je voliteľný: bez dostupného programu alebo čitateľného commitu zostávajú
+tieto polia `null`; kopírovanie zo samostatného adresára tým nie je blokované.
+Pri zdroji v podadresári repozitára sa blob číta relatívne k tomuto podadresáru.
 Pri PDF s dostupným titulom článku a nástrojom `pdftotext` sa v pamäti overí
 prítomnosť normalizovaného titulu v texte. Bez tohto nástroja ostáva kontrola
 textovej identity `NOT_RUN`. PDF musí prejsť aj základnou kontrolou formátu,

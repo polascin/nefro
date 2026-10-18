@@ -91,6 +91,25 @@ CREATE EVENT disabled_test ON SCHEDULE EVERY 1 DAY DO INSERT INTO parents VALUES
                 and not (bundle / "must-not-copy.ini").exists() and recovered["source_backups_unchanged"]):
             raise RuntimeError("Additive recovery changed its source or failed consistency checks.")
         from recovery import prepare
+        from unittest.mock import patch
+        plain_payload = {"article_pdfs": ["pdf/article.pdf"], "article_images": []}
+        with patch("recovery.shutil.which", return_value=None):
+            plain = prepare(plain_payload, {}, donor, root / "without-git", 768)
+        if not (plain[0]["last_source_commit"] is None and plain[0]["matches_git_head_blob"] is None):
+            raise RuntimeError("Recovery without optional Git failed.")
+        git = shutil.which("git")
+        if git:
+            nested_repo = root / "source-repository"
+            nested_source = nested_repo / "assets"
+            (nested_source / "pdf").mkdir(parents=True)
+            shutil.copyfile(donor / "pdf/article.pdf", nested_source / "pdf/article.pdf")
+            subprocess.run([git, "init", "--quiet", str(nested_repo)], check=True)
+            subprocess.run([git, "-C", str(nested_repo), "add", "--", "assets/pdf/article.pdf"], check=True)
+            subprocess.run([git, "-C", str(nested_repo), "-c", "user.name=SyntheticFixture", "-c",
+                            "user.email=fixture@example.invalid", "commit", "--quiet", "-m", "Synthetic recovery source"], check=True)
+            nested = prepare(plain_payload, {}, nested_source, root / "from-git-subdirectory", 768)
+            if not (nested[0]["last_source_commit"] and nested[0]["matches_git_head_blob"] is True):
+                raise RuntimeError("Recovery Git provenance resolved the wrong directory.")
         for relative in ("../escape.pdf", "/pdf/article.pdf", "img/../escape.png", "img/unwanted.php"):
             rejected_bundle = root / "forbidden-recovery"
             try:
