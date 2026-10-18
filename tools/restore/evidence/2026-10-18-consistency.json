@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-10-18T12:50:24.747772+00:00",
+  "timestamp_utc": "2026-10-18T13:08:32.923546+00:00",
   "result": "FAIL",
   "verification_scope": "files_and_database",
   "file_restore": "PASS",
@@ -29,10 +29,10 @@
     "failures": {},
     "failed_file_sha256": []
   },
-  "file_restore_seconds": 141.914,
-  "total_seconds": 248.259,
+  "file_restore_seconds": 163.153,
+  "total_seconds": 268.234,
   "source_backups_unchanged": true,
-  "file_image_id": "sha256:bf572bef52c5c19161b8ff9c2320ae6edea484e84dfcd97d270dafab0b8a3378",
+  "file_image_id": "sha256:b42cc6512d36176ace9708c22e165b8c4f52c047d5e10e1823555cc6342d7f1b",
   "database_image": "mariadb:11.4.13@sha256:250e1609e93c0e6aecf64bfbab2d84d5e89d2481540fe77447ff6c855c3b1873",
   "limits": [
     "Application checks cover only the explicit probe scope; see application_probe.limits.",
@@ -96,6 +96,7 @@
     "public_download_http_checks": 23,
     "database_read_only_account": "PASS",
     "database_http_checks": 5,
+    "search_results_branch_verified": true,
     "database_relations": [
       {
         "orphaned_rows": 0

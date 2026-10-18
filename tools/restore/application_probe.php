@@ -202,6 +202,7 @@ try {
     $stage = 'http_start';
     $http = [];
     $databaseHttp = 0;
+    $searchResultsVerified = false;
     mkdir('/restore/.drill-sessions', 0700);
     $server = proc_open(['php', '-d', 'display_errors=0', '-d', 'log_errors=0', '-d', 'pdo_mysql.default_socket=/run/mysqld/mysqld.sock', '-d', 'session.save_path=/restore/.drill-sessions', '-S', '127.0.0.1:8099', '-t', '/restore', '/checks/probe_router.php'],
         [['file', '/dev/null', 'r'], ['file', '/dev/null', 'a'], ['file', '/dev/null', 'a']], $unused);
@@ -217,14 +218,15 @@ try {
         }
         if ($databaseReadOnly === 'PASS') {
             $stage = 'http_database';
-            $routes = ['/index.php', '/search.php?q=oblicky', '/login.php', '/download_pdf.php?slug=restore-probe'];
+            foreach (['index.php', 'search.php', 'login.php', 'download_pdf.php', 'article.php'] as $position => $endpoint) {
+                $stage = 'missing_required_endpoint_' . $position;
+                probeCheck(is_file('/restore/' . $endpoint));
+            }
+            $routes = ['/index.php', '/search.php?s=oblicky', '/login.php', '/download_pdf.php?slug=restore-probe'];
             if ($input['published_slug'] ?? null) {
                 $routes[] = '/article.php?slug=' . rawurlencode($input['published_slug']);
             }
             foreach ($routes as $route) {
-                if (!is_file('/restore/' . parse_url($route, PHP_URL_PATH))) {
-                    continue;
-                }
                 $curl = curl_init('http://127.0.0.1:8099' . $route);
                 curl_setopt_array($curl, [CURLOPT_RETURNTRANSFER => true, CURLOPT_TIMEOUT => 30,
                     CURLOPT_FOLLOWLOCATION => false, CURLOPT_USERAGENT => 'Mozilla/5.0 RestoreDrill']);
@@ -234,6 +236,10 @@ try {
                 $stage = 'http_database_check_' . $databaseHttp . '_status_' . $status;
                 probeCheck(is_string($body) && ($expectedStatus === 302 || $body !== '') && $status === $expectedStatus
                     && !preg_match('/Fatal error|Uncaught|Warning:|SQLSTATE|Chyba: Pripojenie|Chyba: Databázová/', $body));
+                if (str_starts_with($route, '/search.php')) {
+                    probeCheck(str_contains($body, 'class="search-meta"') && str_contains($body, 'oblicky'));
+                    $searchResultsVerified = true;
+                }
                 unset($body, $curl);
                 ++$databaseHttp;
             }
@@ -275,13 +281,14 @@ try {
     $result = !$input['database_available'] ? 'PARTIAL' : 'PASS';
     if ($missing || $crypto['existing_record_decryption'] === 'FAIL' || $crypto['enabled_without_secret'] > 0) {
         $result = 'FAIL';
-    } elseif ($crypto['existing_record_decryption'] !== 'PASS') {
+    } elseif ($crypto['existing_record_decryption'] !== 'PASS' || $databaseHttp !== 5) {
         $result = 'PARTIAL';
     }
     echo json_encode(['result' => $result,
         'database_available' => $input['database_available'], 'references' => $references, 'cryptography' => $crypto,
         'archived_application_helper_checks' => $checks, 'public_download_http_checks' => count($http),
         'database_read_only_account' => $databaseReadOnly, 'database_http_checks' => $databaseHttp,
+        'search_results_branch_verified' => $searchResultsVerified,
         'database_relations' => $input['relations'] ?? [],
         'limits' => ['No authenticated production-account flow, external service, browser rendering or Apache configuration test.',
             'Synthetic key round trip alone does not prove decryption of an existing record.',
@@ -292,6 +299,7 @@ try {
         'references' => $references ?? [], 'cryptography' => $crypto ?? [],
         'archived_application_helper_checks' => $checks ?? 0, 'public_download_http_checks' => count($http ?? []),
         'database_read_only_account' => $databaseReadOnly ?? 'NOT_RUN', 'database_http_checks' => $databaseHttp ?? 0,
+        'search_results_branch_verified' => $searchResultsVerified ?? false,
         'database_relations' => $input['relations'] ?? [],
         'limits' => ['Probe stopped at the reported stage; later checks were not executed. Raw data withheld.']], JSON_THROW_ON_ERROR);
 }

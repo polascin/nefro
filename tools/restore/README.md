@@ -109,7 +109,10 @@ nenahrádza overenie ich integrity. Pôvodné archívy sa nemenia.
 - HTTP server počúva len na `127.0.0.1` v kontajneri bez siete a bez portov.
   Router povoľuje iba konkrétne verejné trasy. Overuje sa zoznam článkov,
   vyhľadávanie, prihlasovací formulár, článok a odmietnutie neprihláseného
-  sťahovania PDF. Verejné publikácie sa prenesú vo všetkých 20 kombináciách
+  sťahovania PDF. Chýbajúci povinný endpoint znamená `FAIL`; bez publikovaného
+  článku nemožno dostať plný `PASS`. Vyhľadávanie používa parameter `s`
+  a musí vykresliť vetvu výsledkov, samotný prázdny formulár nestačí.
+  Verejné publikácie sa prenesú vo všetkých 20 kombináciách
   vydania a formátu; SHA-256 odpovede musí zodpovedať obnovenému súboru.
 - Po skúške sa znova porovnajú súčty aplikačných tabuliek a pôvodných archívov.
   Report obsahuje iba agregované výsledky. Chyba či chýbajúca referencia
@@ -209,7 +212,7 @@ Nejde o zlyhanie importu databázy alebo dešifrovania. Archívy sa neopravovali
 | Ďalšie TOTP stavy   | 0 starých plaintext záznamov a 0 zapnutých TOTP bez tajomstva.                                                                      |
 | Aplikačné funkcie   | 8 kontrol pomocných funkcií archivovaného kódu.                                                                                     |
 | HTTP s obnovenou DB | 5 kontrol: zoznam článkov, vyhľadávanie, login formulár, presmerovanie neprihláseného sťahovania PDF a detail publikovaného článku. |
-| Verejné sťahovanie  | 20 vydaní/formátov prenesených so zhodným SHA-256; 3 negatívne HTTP kontroly.                                                       |
+| Verejné sťahovanie  | 20 kombinácií vydania a formátu prenesených so zhodným SHA-256; 3 negatívne HTTP kontroly.                                          |
 | Oprávnenia DB       | Samostatný účet iba `SELECT`, vytvorenie tabuľky odmietnuté; aplikačné tabuľky po HTTP skúške nezmenené.                            |
 | Upratanie           | Všetky 3 vlastné kontajnery a zväzok Unix socketu odstránené; zdrojové archívy nezmenené.                                           |
 
@@ -227,7 +230,7 @@ vykreslenie v prehliadači, Apache pravidlá, oprávnenia hostingu ani spoločn�
 časový bod obnovy. Lokálne časy v JSON nie sú RTO a nepotvrdzujú RPO.
 
 Povinná CI regresia navyše používa syntetickú aplikáciu a DB: pozitívny
-dešifrovací prípad, samostatný chybný kľúč, chýbajúci PDF odkaz, HTTP a
+dešifrovací prípad, samostatný chybný kľúč, chýbajúci PDF odkaz aj povinný endpoint, HTTP a
 odmietnutie DB zápisu. Kontrolované negatívne prípady musia vykázať `FAIL`.
 PHP probe súbory sú v allowliste build kontextu, preto podliehajú aj syntaxi
 a PHPStan. Skutočné zálohy, kľúče a reporty s obsahom údajov sa do obrazu nekopírujú.

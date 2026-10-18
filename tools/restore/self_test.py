@@ -61,7 +61,8 @@ CREATE EVENT disabled_test ON SCHEDULE EVERY 1 DAY DO INSERT INTO parents VALUES
         if not (app["result"] == "PASS" and app["cryptography"]["decrypted"] == 1
                 and app["cryptography"]["wrong_key_rejected"] == 1
                 and app["cryptography"]["tampered_rejected"] == 1
-                and app["database_read_only_account"] == "PASS" and app["database_http_checks"] == 1
+                and app["database_read_only_account"] == "PASS" and app["database_http_checks"] == 5
+                and app["search_results_branch_verified"]
                 and app["public_download_http_checks"] == 23):
             raise RuntimeError("Application restore control failed.")
         (files / "pdf/article.pdf").unlink()
@@ -78,6 +79,13 @@ CREATE EVENT disabled_test ON SCHEDULE EVERY 1 DAY DO INSERT INTO parents VALUES
         if not (app["result"] == "FAIL" and app["cryptography"]["failed"] == 1
                 and app["cryptography"]["decrypted"] == 0):
             raise RuntimeError("Wrong archived key was accepted.")
+        (files / "private/nefro.env.ini").write_text("DATA_PROTECTION_KEY=synthetic-restore-fixture-key\n", encoding="utf-8")
+        (files / "search.php").unlink()
+        endpoint_report = root / "missing-endpoint.json"
+        subprocess.run(base + ["--sql", str(root / "probe.sql"), "--application-probe", "--report", str(endpoint_report)], check=True, timeout=300)
+        app = json.loads(endpoint_report.read_text(encoding="utf-8"))["application_probe"]
+        if not (app["result"] == "FAIL" and app["probe_error_stage"].startswith("missing_required_endpoint_")):
+            raise RuntimeError("Missing required application endpoint was accepted.")
         # Remove synthetic application additions before the original five-file tests.
         for path in list(files.iterdir()):
             if path.name not in {"empty", "synthetic.epub", "synthetic.docx", "synthetic.odt", "synthetic.pdf", "synthetic.azw3"}:
