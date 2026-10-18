@@ -220,3 +220,20 @@ medicínskej správnosti. Pôvodné zálohy, PDF a produkcia sa nemenili, dočas
 DB bola odstránená. Do povinnej regresnej brány pribudla ochrana pred
 prehliadnutím zmien čísel, negácie a matematických znamienok. Ďalšia etapa má
 overiť vizuálnu úplnosť PDF a zabezpečiť časovo konzistentné budúce zálohy.
+
+### Dokončenie vizuálnej a odkazovej kontroly piatich PDF
+
+Skontrolovalo sa všetkých 28 vyrenderovaných strán a päť vložených ilustrácií.
+Nenašlo sa viditeľné orezanie tabuliek, chýbajúca ilustrácia ani prekrytie
+textu. Pri riadení UI ostala posledná strana iba so zdrojovou poznámkou.
+Zistilo sa 35 neprenositeľných absolútnych lokálnych odkazov: 30 na články
+a 5 na obrázky. Ďalších 47 webových anotácií zodpovedá cieľom v obnovenej DB;
+ich dostupnosť cez sieť sa netestovala. [Dôkaz](tools/restore/evidence/2026-10-18-pdf-assets.json)
+a [vizuálny záznam](tools/restore/evidence/2026-10-18-pdf-visual-review.json)
+ponechávajú výsledok `PARTIAL`.
+
+Overovanie je dokončené v doloženom rozsahu. Ďalší konkrétny krok je pripraviť
+nové pracovné PDF s HTTPS cieľmi odkazov a lepším stránkovaním poznámky,
+bez prepísania pôvodných záloh a vstupných PDF, a zopakovať kontroly.
+Produkcia sa počas tohto overovania nemenila. Osobitne zostáva zabezpečiť
+časovo konzistentný zálohovací postup a overiť RPO/RTO.

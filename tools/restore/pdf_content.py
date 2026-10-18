@@ -98,7 +98,7 @@ def differences(expected, actual):
     return result
 
 
-def compare(sql, container, databases, bundle):
+def compare(sql, container, databases, bundle, *, asset_review=False):
     bundle = bundle.resolve(strict=True)
     manifest = json.loads((bundle / "recovery-manifest.json").read_text(encoding="utf-8"))
     entries = [entry for entry in manifest["recovery"]["entries"] if entry["path"].endswith(".pdf")]
@@ -181,8 +181,12 @@ def compare(sql, container, databases, bundle):
                        "token_match": left == right, "difference_groups": changes})
         if digest(path) != entry["sha256"]:
             raise RuntimeError("PDF changed during comparison.")
+        if asset_review:
+            from pdf_assets import inspect_article
+            output[-1]["asset_review"] = inspect_article(path, bundle, article)
     return {"result": "PASS" if all(item["token_match"] and not item["unsupported_list_types"]
-                                     and item["metadata_matches_database"] is not False for item in output) else "PARTIAL",
+                                     and item["metadata_matches_database"] is not False
+                                     and item.get("asset_review", {}).get("result", "PASS") == "PASS" for item in output) else "PARTIAL",
             "method": "NFC and Unicode whitespace normalization; case, accents, digits and punctuation preserved; ordered token diff",
             "pdf_extraction_mode": "pdftotext -raw (content stream order); HTML decimal ordered-list markers included",
             "extractor_version": extractor_version,
