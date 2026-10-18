@@ -126,6 +126,14 @@ def main():
              "--env", "MARIADB_ROOT_PASSWORD", DB_IMAGE,
              "--skip-networking", "--event-scheduler=OFF", "--local-infile=0"], environment=environment)
         for _ in range(90):
+            # The bootstrap socket can accept SQL before entrypoint restarts MariaDB.
+            process = subprocess.run(
+                ["docker", "exec", name, "cat", "/proc/1/comm"],
+                stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, timeout=10, check=False,
+            )
+            if process.returncode != 0 or process.stdout.strip() != b"mariadbd":
+                time.sleep(1)
+                continue
             result = subprocess.run(
                 ["docker", "exec", "--env", "MYSQL_PWD", name, "mariadb", "-uroot", "--execute", "SELECT 1"],
                 env=environment, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,

@@ -58,6 +58,8 @@ poškodeného EPUB neznamená použiteľný EPUB. Chyba importu alebo upratania
 nesmie vytvoriť úspešný report. Návratový kód 0 označuje dokončenie nácviku;
 pri vyhodnotení treba čítať aj `result`, `file_format_validation` a príznak
 skutočnej databázovej zálohy. `PARTIAL` nie je plná úspešná obnova.
+Poškodené publikácie možno identifikovať podľa `failed_file_sha256` bez
+zverejnenia názvov súborov v reporte.
 
 Neoveruje sa vizuálna správnosť dokumentov, aplikačné správanie, dešifrovanie,
 2FA, oprávnenia/ACL, externé služby ani obnova celého hostingu. Súčty potvrdzujú
@@ -97,6 +99,7 @@ Nový export zo živej databázy sa nevytváral.
 Sprístupniť existujúcu databázovú zálohu a úplnú súborovú zálohu rovnakého
 obdobia. Poskytovateľ uvádza DB zálohy vo Webadmine v sekcii Databázy/Zálohy.
 V tomto behu sa dostupnosť konkrétnej zálohy v administrácii nepotvrdila.
+Administrácia sa otvorila na prihlasovacej stránke bez aktívnej relácie.
 Nestláčať obnovu na pôvodnú databázu ani do produkčného adresára; zálohu
 treba iba stiahnuť na izolovanú skúšku a zopakovať príkaz s `--sql`.
 
