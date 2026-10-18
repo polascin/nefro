@@ -417,3 +417,63 @@ odkazov, PDF prístupnosť ani medicínska správnosť citovaných tvrdení. Vý
 nepotvrdzuje spoločný historický bod záloh, RPO/RTO ani neskorší stav produkcie.
 PDF, články, pôvodné zálohy a produkcia sa nemenili. Predchádzajúce dôkazy
 aplikačného správania a dešifrovania sa touto textovou skúškou nerozširujú.
+
+## Vizuálna úplnosť, ilustrácie a odkazy piatich PDF
+
+Dokončená je aj vizuálna kontrola všetkých 28 strán pomocou renderov Poppler
+pri 110 dpi. Text, ilustrácie a tabuľky sú čitateľné; pri tejto kontrole sa
+nenašiel chýbajúci obrázok, viditeľne orezaná tabuľka ani prekrytie textu.
+Opakovanie hlavičky tabuľky RESET na strane 2 je správnym pokračovaním tabuľky.
+Pri článku o riadení UI zostala strana 7 takmer prázdna: obsahuje iba zdrojovú
+poznámku a číslo strany. Je to nedostatok stránkovania, nie strata obsahu.
+
+[Nový strojový výsledok](evidence/2026-10-18-pdf-assets.json) a
+[záznam vizuálnej kontroly](evidence/2026-10-18-pdf-visual-review.json)
+rozširujú predchádzajúce overenie bez jeho prepísania. HTML sa znovu čítalo
+z izolovane obnovenej DB, pretože samotné súčasné zdrojové skripty štyroch
+článkov nemajú zhodný hash s uloženým HTML. Nezamieňali sa za obnovenú DB.
+
+Každé PDF obsahuje jednu ilustráciu 1600 × 1000. Vložený obrázok je JPEG,
+obnovený zdroj WebP; bajtová zhoda sa preto netvrdí. Pri porovnaní dekódovaných
+RGB pixelov je priemerná absolútna odchýlka približne 1,56 až 2,13 z 255.
+Rozmery a vizuálny obsah zodpovedajú príslušným zdrojovým ilustráciám.
+Geometrická kontrola nenašla slová ani obrázky mimo hraníc strán; sama osebe
+nenahrádza vizuálnu kontrolu prekrytia alebo čitateľnosti.
+
+| PDF                                                  | Strany | Webové anotácie | Absolútne lokálne anotácie |
+| ---------------------------------------------------- | -----: | --------------: | -------------------------: |
+| `ai-governance-klinicka-prax-nefrologia`             |      7 |              10 |                          7 |
+| `automatizovane-podavanie-inzulinu-dm2-dialyza`      |      5 |               5 |                          7 |
+| `cetp-inhibicia-obicetrapib-lipidy-renalna-funkcia`  |      5 |              18 |                          6 |
+| `nizkoenergeticka-dieta-cvicenie-remisia-dm2-reset`  |      5 |               5 |                          7 |
+| `renin-aldosteron-dapagliflozin-spironolakton-hfpef` |      6 |               9 |                          8 |
+
+Všetkých 47 webových anotácií smeruje na ciele uložené v príslušných článkoch.
+Zvyšných 35 anotácií tvorí 5 odkazov na ilustrácie a 30 na súvisiace články.
+Ich verejné koncové cesty zodpovedajú HTML, ale samotné PDF ich ukladá ako
+absolútne lokálne súbory typu `Launch`. Také odkazy závisia od cudzieho
+súborového systému a nie sú funkčne rovnocenné webovým URL pre čitateľa.
+Absolútne cesty sa do dôkazov neukladajú. Zdrojová URL v záverečnej poznámke
+je obyčajný text; jej prípadná neklikateľnosť sa nezamieňa za chýbajúcu
+anotáciu HTML odkazu.
+
+**Celkový výsledok zostáva `PARTIAL`.** Obsah a ilustrácie sú vo vyššie
+uvedenom rozsahu overené, ale problém prenositeľnosti lokálnych odkazov
+a osamotená záverečná poznámka zostávajú otvorené. PDF ani generátor sa
+v tomto overení nemenili. Následná oprava má vytvoriť nové pracovné PDF,
+previesť verejné relatívne odkazy na HTTPS URL a upraviť stránkovanie pätičky;
+potom zopakovať textové, obrazové, odkazové a vizuálne porovnanie. Pôvodné
+zálohy a doložené vstupné PDF zachovať.
+
+Reprodukcia strojovej kontroly: k predchádzajúcemu príkazu pridať
+`--pdf-asset-review` a zvoliť novú cestu reportu. Voliteľný režim vyžaduje
+PyMuPDF a Pillow na hostiteľovi; ich prítomnosť sa overuje pred obnovou.
+Regresná brána bez týchto voliteľných závislostí kontroluje čítanie HTML
+odkazov, dekódovanie entít a nezverejnenie privátnych častí lokálnej cesty.
+Skutočná extrakcia obrázkov a anotácií sa preverila nad piatimi pôvodnými PDF.
+
+**Zostávajúce hranice:** neuskutočnili sa HTTP požiadavky na ciele odkazov,
+neoverili sa presmerovania, prihlasovanie, platený obsah ani správanie rôznych
+PDF prehliadačov. Render nie je skúška tlače ani audit PDF/UA. Nevykonalo sa
+nové overovanie medicínskych tvrdení, historického spoločného bodu obnovy
+alebo RPO/RTO. Archívy, doplnené PDF, obrázky a produkcia zostali nezmenené.

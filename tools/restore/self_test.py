@@ -19,6 +19,14 @@ def main():
     parser.add_argument("--file-image", required=True)
     args = parser.parse_args()
     from run import worst_result
+    from pdf_assets import Assets, local_target
+    assets = Assets()
+    assets.feed('<a href="https://example.invalid/reference?a=1&amp;b=2">test</a><img src="img/synthetic.webp">')
+    if (assets.links != ["https://example.invalid/reference?a=1&b=2"] or assets.images != ["img/synthetic.webp"]
+            or local_target("/synthetic/private/path/article.php?slug=synthetic") != "article.php?slug=synthetic"
+            or local_target("/synthetic/private/path/img/synthetic.webp") != "img/synthetic.webp"
+            or local_target("/synthetic/private/config.ini") is not None):
+        raise RuntimeError("PDF destination mapping exposed a private path or lost a target.")
     # A layout-only PDF difference must never conceal an application failure.
     if (worst_result("PASS", "FAIL", "PARTIAL") != "FAIL"
             or worst_result("PARTIAL", "PASS", "FAIL") != "FAIL"
@@ -42,6 +50,14 @@ def main():
     with tempfile.TemporaryDirectory(prefix="nefro-restore-test-") as temporary:
         root = Path(temporary)
         from unittest.mock import patch
+        from pdf_assets import require_dependencies
+        with patch.dict(sys.modules, {"fitz": None}):
+            try:
+                require_dependencies()
+            except RuntimeError:
+                pass
+            else:
+                raise RuntimeError("PDF asset review accepted missing optional dependencies.")
         from types import SimpleNamespace
         from pdf_content import compare
         import hashlib
