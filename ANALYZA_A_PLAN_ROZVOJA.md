@@ -237,3 +237,14 @@ nové pracovné PDF s HTTPS cieľmi odkazov a lepším stránkovaním poznámky,
 bez prepísania pôvodných záloh a vstupných PDF, a zopakovať kontroly.
 Produkcia sa počas tohto overovania nemenila. Osobitne zostáva zabezpečiť
 časovo konzistentný zálohovací postup a overiť RPO/RTO.
+
+### Dokončená izolovaná oprava pracovných PDF (18. 10. 2026)
+
+Päť nových pracovných PDF má opravených 35 lokálnych odkazov na HTTPS;
+spolu 82 HTTPS anotácií bez lokálnych cieľov. Osamotená záverečná poznámka
+článku o riadení UI je na šiestej strane. Úplný text a vložené obrázky
+zostali zhodné so vstupmi, všetkých 27 strán prešlo vizuálnou kontrolou.
+Izolovaná obnova DB znovu overila 37 tabuliek a 144 649 riadkov.
+Pôvodné súbory, zálohy ani produkcia sa nemenili. Rozsah výsledku PASS,
+zostávajúci všeobecný výsledok PARTIAL a jeho dôvody sú v
+[protokole obnovy](tools/restore/README.md#oprava-nových-pracovných-pdf-18-október-2026).
