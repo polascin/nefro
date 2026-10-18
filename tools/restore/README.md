@@ -326,3 +326,92 @@ PDF nepotvrdzuje zhodu celého textu a obrázkov s článkom. Naďalej nie sú
 overené prihlásenia reálnych účtov, zapisujúce toky nad reálnymi údajmi,
 externé služby, Apache, ACL ani RPO/RTO. DB obsahuje 0 objednávok. Produkcia
 ani pôvodné zálohy sa počas dopĺňania nemenili.
+
+## Celý text piatich doplnených PDF (18. 10. 2026)
+
+Porovnanie sa vykonalo nad novou izolovanou obnovou tej istej DB zálohy
+(`804ca4ff…a8b3ce`) a existujúcim doplnkovým balíkom. Nepoužila sa produkčná
+databáza ani konfigurácia. Obnova a kontrolný opätovný import potvrdili
+37 tabuliek a 144 649 riadkov s rovnakým inventárom a schémou ako predtým.
+Kontajnery mali sieť `none`, bez publikovaných portov, vypnuté TCP a udalosti;
+údaje zostali v tmpfs. Po čítaní sa znovu overil inventár aplikačných tabuliek.
+Vlastné kontajnery boli odstránené. SHA-256 vstupnej DB zálohy aj manifest
+doplnkového balíka sa počas skúšky nezmenili. Pôvodná súborová záloha sa
+v tejto etape vôbec neotvárala.
+
+**Výsledok:** v celom extrahovanom texte všetkých piatich článkov sa nenašla
+nevysvetlená obsahová zmena. Štyri PDF majú zhodnú celú usporiadanú sekvenciu
+slov, číslic a interpunkcie; RESET navyše obsahuje opakovanú hlavičku tabuľky.
+Hlavička s titulom, autor a dátum publikovania sa zhodujú s obnovenou DB vo
+všetkých piatich PDF. Overená bola aj zdrojová URL a text záverečného upozornenia.
+
+| PDF, spoločný názov so súborom                       | Strany | Tokeny DB / PDF | Rozdiel po zohľadnení číslovania zoznamov               |
+| ---------------------------------------------------- | -----: | --------------: | ------------------------------------------------------- |
+| `ai-governance-klinicka-prax-nefrologia`             |      7 |   3 635 / 3 635 | 0                                                       |
+| `automatizovane-podavanie-inzulinu-dm2-dialyza`      |      5 |   2 576 / 2 576 | 0                                                       |
+| `cetp-inhibicia-obicetrapib-lipidy-renalna-funkcia`  |      5 |   3 384 / 3 384 | 0                                                       |
+| `nizkoenergeticka-dieta-cvicenie-remisia-dm2-reset`  |      5 |   2 572 / 2 574 | Druhý výskyt „Kritérium Hodnota“ v pokračovaní tabuľky. |
+| `renin-aldosteron-dapagliflozin-spironolakton-hfpef` |      6 |   4 017 / 4 017 | 0                                                       |
+
+### Metóda a vyhodnotenie rozdielov
+
+HTML sa spracovalo ako dáta, bez vykonania PHP, JavaScriptu alebo načítania
+externých zdrojov. Porovnáva sa celý viditeľný text vrátane popiskov, tabuliek,
+zoznamov a bibliografie. Desatinné číslovanie zoznamov sa doplnilo podľa
+`ol`, `start` a `li value`, pretože v HTML nie je uložené ako bežný text.
+Nepodporovaný typ číslovania bráni výsledku `PASS`.
+
+Prvý konzervatívny priechod pred týmto zohľadnením a s predvoleným poradím
+extrakcie zachytil 116 skupín rozdielov. [Pôvodný výsledok](evidence/2026-10-18-pdf-text-baseline.json)
+zostáva zachovaný. Príčinami boli najmä čítanie viacriadkových buniek tabuľky
+po vodorovných riadkoch, automatické čísla zoznamov a odstránenie spojovníkov
+na koncoch riadkov extraktorom.
+
+Kontrolný priechod použil Poppler `pdftotext 25.07.0 -raw`, teda poradie
+textových prvkov v PDF, a explicitné číslovanie HTML zoznamov. Normalizuje sa
+Unicode NFC a biele znaky. Zachováva sa veľkosť písmen, diakritika, číslice,
+interpunkcia a matematické znamienka. Nepoužíva sa prah podobnosti ani
+všeobecné odstraňovanie duplicitných slov. Oddeľuje sa iba overená hlavička,
+metadáta, zdrojová pätička a očakávané poradové číslo na konci každej strany.
+Rozdiely v medzerách zostávajú priznané: normalizované reťazce nie sú úplne
+znakovo zhodné ani pri štyroch PDF so zhodnými tokenmi.
+
+[Strojový výsledok kontrolného priechodu](evidence/2026-10-18-pdf-content.json)
+je **`PARTIAL`**, pretože prísne porovnanie ponechalo opakovanú hlavičku RESET.
+[Samostatné posúdenie](evidence/2026-10-18-pdf-content-assessment.json)
+ju vysvetľuje konkrétnym dôkazom:
+
+- jediný rozdiel tvorí vloženie dvoch tokenov „Kritérium Hodnota“;
+- HTML zdroja obsahuje túto hlavičku v `thead` raz; SHA-256 celého HTML po
+  normalizácii koncov riadkov na LF je zhodný s HTML načítaným z obnovenej DB;
+- výstup `pdftotext -bbox` ju lokalizuje na stranách 1 a 2 v rovnakých stĺpcoch
+  (`xMin` približne 48,14 a 157,18 bodu), druhýkrát hore na strane 2;
+- po zohľadnení výhradne tohto doloženého opakovania je zvyšok celej sekvencie
+  tokenov RESET zhodný. Neodstraňovala sa žiadna veta, hodnota ani citácia.
+
+Reprodukcia prísneho porovnania, bez zmeny vstupov:
+
+```bash
+python3 tools/restore/run.py \
+  --files scratch/restore-recovered-assets-20261018 \
+  --sql /cesta/k/povodnej-db-zalohe.zip \
+  --pdf-content-bundle scratch/restore-recovered-assets-20261018 \
+  --file-image nefro-restore-consistency-php \
+  --report scratch/novy-pdf-content-report.json
+```
+
+Vyžaduje Docker, lokálny integračný obraz a `pdftotext` v PATH. Report musí
+mať novú cestu. Očakávaný prísny výsledok tejto dvojice vstupov je `PARTIAL`,
+nie chyba obnovy; vysvetlenie opakovanej hlavičky sa posudzuje osobitne.
+Regresná brána navyše kontroluje zmenu čísla, negácie, diakritiky, dátumu a
+matematického znamienka, zachovanie zlomku v obsahu a odmietnutie cudzieho
+titulu. Syntetická skúška extrakcie používa riadenú náhradu `pdftotext`;
+skutočné PDF sa overili samostatným vyššie uvedeným priechodom.
+
+**Hranice dôkazu:** ide o zhodu extrahovaného textového obsahu s doloženým
+rozdielom sadzby, nie bajtovú alebo vizuálnu zhodu dokumentov. Neoverovali sa
+pixely a úplnosť obrázkov, vzhľad tabuliek, kreslené vzorce, funkčnosť cieľov
+odkazov, PDF prístupnosť ani medicínska správnosť citovaných tvrdení. Výsledok
+nepotvrdzuje spoločný historický bod záloh, RPO/RTO ani neskorší stav produkcie.
+PDF, články, pôvodné zálohy a produkcia sa nemenili. Predchádzajúce dôkazy
+aplikačného správania a dešifrovania sa touto textovou skúškou nerozširujú.

@@ -166,6 +166,7 @@ def main():
     parser.add_argument("--files", type=Path, required=True, help="Existing backup directory or ZIP (read only).")
     parser.add_argument("--file-memory-mib", type=int, default=768, help="File restore tmpfs limit, 128..8192 MiB.")
     parser.add_argument("--application-probe", action="store_true", help="Opt in to archived helper, HTTP, reference and TOTP checks in the offline container.")
+    parser.add_argument("--pdf-content-bundle", type=Path, help="Compare recovered PDF text against articles in the restored SQL backup.")
     parser.add_argument("--recovery-source", type=Path, help="Read-only source of missing public article assets; never overwrites restored files.")
     parser.add_argument("--recovery-bundle", type=Path, help="New local directory retaining only the supplemental public assets.")
     source = parser.add_mutually_exclusive_group(required=True)
@@ -175,6 +176,8 @@ def main():
     parser.add_argument("--file-image", required=True, help="Locally built integration PHP image; pinned to ID before use.")
     parser.add_argument("--report", type=Path, required=True)
     args = parser.parse_args()
+    if args.pdf_content_bundle and not args.sql:
+        raise RuntimeError("PDF content comparison requires an existing SQL backup.")
     if args.application_probe and args.synthetic_database:
         raise RuntimeError("Application checks require an existing DB backup or explicit files-only scope.")
     if bool(args.recovery_source) != bool(args.recovery_bundle) or (args.recovery_source and (not args.application_probe or not args.sql)):
@@ -376,6 +379,13 @@ def main():
                 raise RuntimeError("Database restore differs from the imported backup.")
             if schema(second, expected[0]) != schema_hash:
                 raise RuntimeError("Restored schema, views or stored routines differ.")
+        pdf_content = None
+        if args.pdf_content_bundle:
+            from pdf_content import compare
+            pdf_content = compare(sql, first, expected[0], args.pdf_content_bundle)
+            if inventory(first) != expected:
+                raise RuntimeError("PDF content comparison changed restored application records.")
+            pdf_content["database_records_unchanged"] = True
         application = None
         recovery = None
         if args.application_probe:
@@ -448,6 +458,11 @@ def main():
                 report["result"] = application["result"]
             report["limits"] = ["Application checks cover only the explicit probe scope; see application_probe.limits.",
                                 "No full disaster recovery, common recovery timestamp or external-service validation."]
+        if pdf_content is not None:
+            report["pdf_content_comparison"] = pdf_content
+            if pdf_content["result"] != "PASS":
+                report["result"] = pdf_content["result"]
+            report["limits"].append("PDF comparison covers extracted text, not visual, image or hyperlink equivalence.")
         if recovery is not None:
             report["recovery_working_copy"] = recovery
         # Publish PASS only after all owned containers and tmpfs data are removed.

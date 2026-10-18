@@ -1,0 +1,68 @@
+{
+  "result": "PASS_WITH_DOCUMENTED_LAYOUT_DIFFERENCE",
+  "scope": "extracted article text and checked PDF metadata; not visual equivalence",
+  "source_report_sha256": "31e6bc266914659cf343117824d13dbe4266fd70b0aa6b5398d931b78b9ddc32",
+  "exact_ordered_token_match": 4,
+  "articles_checked": 5,
+  "articles_with_unexplained_text_changes": 0,
+  "reset_assessment": {
+    "pdf_path": "pdf/nizkoenergeticka-dieta-cvicenie-remisia-dm2-reset.pdf",
+    "pdf_sha256": "6524a3dd68b025b2f5842973fce9e2f4fef9263e92ba4af6499ea03ac7ef87e0",
+    "database_html_sha256": "57658ad4d8b1dc5b932980fcf9818a9d56c25d64ed5ad5408d8c288988b2d444",
+    "read_only_seed_source": "add_nizkoenergeticka-dieta-cvicenie-remisia-dm2-reset_article.php",
+    "seed_html_LF_matches_restored_database_sha256": true,
+    "html_thead_occurrences": 1,
+    "pdf_header_occurrences": 2,
+    "pdf_header_coordinates": [
+      {
+        "page": 1,
+        "words": [
+          {
+            "text": "Kritérium",
+            "xMin": 48.142059,
+            "yMin": 717.169927,
+            "xMax": 89.77407,
+            "yMax": 726.236262
+          },
+          {
+            "text": "Hodnota",
+            "xMin": 157.181471,
+            "yMin": 717.169927,
+            "xMax": 194.42607,
+            "yMax": 726.236262
+          }
+        ]
+      },
+      {
+        "page": 2,
+        "words": [
+          {
+            "text": "Kritérium",
+            "xMin": 48.142059,
+            "yMin": 50.351986,
+            "xMax": 89.77407,
+            "yMax": 59.418321
+          },
+          {
+            "text": "Hodnota",
+            "xMin": 157.181471,
+            "yMin": 50.351986,
+            "xMax": 194.42607,
+            "yMax": 59.418321
+          }
+        ]
+      }
+    ],
+    "sole_extra_pdf_token_range": [360, 362],
+    "extra_tokens": ["Kritérium", "Hodnota"],
+    "all_remaining_ordered_tokens_equal": true
+  },
+  "limits": [
+    "Whitespace placement differs in all five extracted texts.",
+    "Only this single duplicate table header is accounted for; no general duplicate removal or fuzzy threshold.",
+    "No visual, embedded-image, hyperlink destination, accessibility or medical source review.",
+    "No common historical recovery point or RPO/RTO proof."
+  ],
+  "production_accessed": false,
+  "source_backups_modified": false
+}
