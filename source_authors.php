@@ -25,6 +25,9 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
  */
 function getSourceArticleAuthors(): array {
     return [
+        // Autori primárnej randomizovanej štúdie SoBic (Sci Rep 2026, doi 10.1038/s41598-026-68492-9) –
+        // 10 mien overených z plného textu a metadát vydavateľa 2026-10-18.
+        'metabolicka-acidoza-ckd-vyssi-vs-nizsi-ciel-hydrogenuhlicitanu-sobic' => ['Martina Gaggl', 'Christof Aigner', 'Alexandra Repitz', 'Sonja Riesenhuber', 'Christopher Sliber', 'Moritz Madern', 'Andreas Gleiss', 'Melanie Fraunschiel', 'Alice Schmidt', 'Gere Sunder-Plassmann'],
         // Autor spracovaného redakčného komentára CJASN 2026, doi 10.2215/CJN.0000001255
         // (PMID 42853623) – overené cez PubMed eutils 2026-10-15.
         'genomicke-testovanie-nefrologia-vytaznost-implementacia' => ['Xavier F. Vela Parada'],
@@ -524,5 +527,19 @@ function getSourceArticleAuthors(): array {
         // Autorka spracovanej kongresovej správy Medscape z EASD 2026 (13. 10. 2026);
         // meno overené v bylinu verejne dostupnej stránky 2026-10-17.
         'nizkoenergeticka-dieta-cvicenie-remisia-dm2-reset' => ['Nancy A. Melville'],
+        // Autori spracovanej kohortovej štúdie Front Med (Lausanne) 2026;13:1910302
+        // (doi 10.3389/fmed.2026.1910302, PMID 42812376) a autorka nadväzujúcej
+        // správy Physicians Weekly (14. 10. 2026) – 6 mien overených 2026-10-18.
+        'progresia-kalcifikacie-koronarnych-arterii-ckd-horcik-pth' => ['Yutong Chen', 'Wenhao Qiu', 'Yinglan Shu', 'Lifeng Lu', 'Yindeng Luo', 'Jolynn Tumolo'],
+        // Hlavní autori kľúčových publikácií spracovaných v prehľade Q3 2026: ORIGIN 3 (NEJM 2026,
+        // PMID 41196369), APPEAR-C3G (Lancet 2025, PMID 41016405), FINE-ONE (NEJM 2026, PMID 41780000),
+        // MAJESTY (NEJM 2026, PMID 42246654), ESC/ERA 2026 (Eur Heart J 2026, PMID 42661426) a HCPLive.
+        'cielena-liecba-glomerulopatii-skrining-ckd-q3-2026' => ['Richard Lafayette', 'Jonathan Barratt', 'David Kavanagh', 'Richard J. H. Smith', 'Hiddo J. L. Heerspink', 'Janet B. McGill', 'Fernando C. Fervenza', 'Ana Malvar', 'Kevin Damman', 'William G. Herrington', 'Alex Hillenbrand'],
+        // Všetkých 21 autorov pozičného stanoviska International Alliance for POCUS in Nephrology
+        // (Clin Kidney J 2024;17(11):sfae245, doi 10.1093/ckj/sfae245, PMID 39502372) a Kidney360 2021.
+        'integracia-pocus-do-nefrologie-klinicky-prinos-skolenie-bezpecnost' => ['Abhilash Koratala', 'Eduardo R. Argaiz', 'Gregorio Romero-González', 'Nathaniel Reisinger', 'Siddiq Anwar', 'William Beaubien-Souligny', 'Bhavna Bhasin-Chhabra', 'Hugo Diniz', 'Marco Vaca Gallardo', 'Fredzzia Graterol Torres', 'Faeq Husain-Syed', 'Jennifer Hanko', 'Aala Jaberi', 'Amir Kazory', 'Rupesh Raina', 'Claudio Ronco', 'Octavio J. Salgado', 'Sidharth Kumar Sethi', 'Vanessa Villavicencio-Cerón', 'Manjusha Yadla', 'Marcus Gomes Bastos'],
+        // Všetkých 45 menovaných autorov randomizovanej štúdie ICRAKI (N Engl J Med 2026,
+        // doi 10.1056/NEJMoa2608397, PMID 42873070) overených v PubMed zázname 2026-10-18.
+        'intermitentna-hemodialyza-vs-crrt-aki-kriticky-chori-icraki' => ['Stéphane Gaudry', 'Marouane Boubaya', 'Guillaume Louis', 'Khalil Chaïbi', 'Etienne de Montmollin', 'Julien Bohé', 'Maxime Desgrouas', 'Clément Devautour', 'Adrien Joseph', 'Bruno Mégarbane', 'Christophe Camus', 'Pierre Bailly', 'Alexis Lambour', 'Romain Arrestier', 'Samir Jaber', 'Adrien Robine', 'Nicolas Chudeau', 'Guillaume Chevrel', 'Béatrice La Combe', 'Jonathan Nicolas', 'Laurent Argaud', 'Côme Bureau', 'Antoine Kimmoun', 'Noémie Zucman', 'Jean-Damien Ricard', 'Guillaume Thiery', 'Stanislas Faguer', 'Mathieu Jozwiak', 'Nathan Ferrand', 'Benjamin Chousterman', 'Mehdi Marzouk', 'Julien Cadiet', 'Alain Combes', 'Arnaud Mari', 'Damien Contou', 'Roland Amathieu', 'Daniel Da Silva', 'Charlotte Salmon Gandonnière', 'Pierre-André Rodie-Talbere', 'Isabelle Durand-Zaleski', 'Patrick Rossignol', 'Jean-Pierre Quenot', 'Lucie Biard', 'Coralie Bloch', 'Didier Dreyfuss'],
     ];
 }
