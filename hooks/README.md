@@ -42,8 +42,27 @@ lokálne a lokálna `main` sa rozišla s `origin/main` (2026-10-19).
 1. cez `gh` založí PR na `main` (ak PR pre tú vetvu už existuje, len vypíše odkaz),
 1. vypíše príkazy na zosúladenie lokálnej `main` po zlúčení.
 
-Nasadenie potom po zlúčení a `git pull` spustí `post-merge`, ktorý si bázu deployu
-vypýta priamo od produkcie.
+#### Zosúladenie a nasadenie po zlúčení
+
+Squash aj rebase merge pôvodný commit **prepíšu**, takže lokálna `main` ostane
+rozídená s `origin/main`. `git pull` by na nej buď zlyhal, alebo vyrobil merge
+commit, ktorého push ochrana vetvy opäť odmietne — a `post-merge` v tej vetve
+(push zlyhal) končí bez nasadenia. Preto sa zosúlaďuje tvrdým resetom:
+
+```bash
+git fetch origin
+git log --oneline origin/main..main   # prázdne = niet čo stratiť
+git switch main && git reset --hard origin/main
+hooks/deploy.sh "$(hooks/deploy.sh --remote-commit)"
+```
+
+Ak výpis obsahuje commity, ktoré v PR nie sú, najprv ich odlož
+(`git branch zaloha-<sha>`) — `reset --hard` ich zahodí.
+
+Deploy sa volá **výslovne**: po `reset --hard` je `git pull` prázdny, Git nespustí
+žiadny merge, takže `post-merge` sa nevykoná vôbec. `--remote-commit` berie bázu
+z produkčného `deploy_info.php`, takže sa dobehne aj starší rozdiel — rovnako
+self-healing ako `post-merge`.
 
 Presmerovanie sa spúšťa **iba** pri hláške obsahujúcej `GH006`, `protected branch`,
 `required status check` alebo `branch protection`. Výpadok siete, zlá SSH identita

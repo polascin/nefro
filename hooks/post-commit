@@ -74,21 +74,40 @@ open_pull_request_instead() {
 		--title "$subject" \
 		--body "Commit \`$short\` bol pôvodne určený priamo na \`$REMOTE_BRANCH\`; ochrana vetvy priamy push odmietla, preto ide cez PR.
 
-Po zlúčení nasaď na produkciu:
+Po zlúčení zosúlaď pôvodný klon a nasaď **výslovne** — squash alebo rebase merge
+prepíše pôvodný commit, takže \`git pull\` by na rozídenej histórii buď zlyhal, alebo
+vyrobil merge commit, ktorého push ochrana vetvy opäť odmietne:
 
 \`\`\`bash
-git checkout $REMOTE_BRANCH && git pull
+git fetch $REMOTE
+git log --oneline $REMOTE/$REMOTE_BRANCH..$BRANCH   # musí byť prázdne alebo len už zlúčená práca
+git switch $BRANCH && git reset --hard $REMOTE/$REMOTE_BRANCH
+hooks/deploy.sh \"\$(hooks/deploy.sh --remote-commit)\"
 \`\`\`
 
-\`post-merge\` si bázu deployu vypýta od produkcie, takže dobehne aj prípadný starší rozdiel."; then
+Ak výpis obsahuje commity, ktoré v tomto PR nie sú, najprv ich odlož
+(\`git branch zaloha-$short\`) — \`reset --hard\` ich zahodí.
+
+Deploy je tu výslovný zámerne: po \`reset --hard\` je \`git pull\` prázdny, takže
+\`post-merge\` sa nespustí. \`--remote-commit\` berie bázu z produkcie, takže sa
+dobehne aj starší rozdiel."; then
 		echo "[post-commit] Vetva $pr_branch je pushnutá, ale PR sa nepodarilo založiť; sprav to ručne." >&2
 		return 0
 	fi
 
+	# Squash/rebase merge prepíše commit cf. $short, takže lokálna $BRANCH ostane
+	# rozídená. `git pull` by na nej buď zlyhal, alebo vyrobil merge commit, ktorého
+	# push ochrana vetvy opäť odmietne — a post-merge vtedy končí bez nasadenia.
+	# Preto sa zosúlaďuje tvrdým resetom a deploy sa volá výslovne: po resete je
+	# pull prázdny, takže post-merge sa nespustí vôbec.
 	cat >&2 <<EOF
 [post-commit] Lokálna $BRANCH je teraz pred $REMOTE/$REMOTE_BRANCH. Po zlúčení PR sprav:
-[post-commit]   git fetch $REMOTE && git reset --hard $REMOTE/$REMOTE_BRANCH && git pull
-[post-commit] Produkciu nasadí post-merge; núdzovo: hooks/deploy.sh \$(hooks/deploy.sh --remote-commit)
+[post-commit]   git fetch $REMOTE
+[post-commit]   git log --oneline $REMOTE/$REMOTE_BRANCH..$BRANCH   # prázdne = niet čo stratiť
+[post-commit]   git switch $BRANCH && git reset --hard $REMOTE/$REMOTE_BRANCH
+[post-commit]   hooks/deploy.sh "\$(hooks/deploy.sh --remote-commit)"
+[post-commit] Pozor: ak výpis obsahuje commity mimo tohto PR, najprv ich odlož
+[post-commit] (git branch zaloha-$short) — reset --hard ich zahodí.
 EOF
 	return 0
 }
