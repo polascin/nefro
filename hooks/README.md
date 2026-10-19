@@ -28,6 +28,46 @@ Výsledok musí byť `hooks`.
 1. `deploy_info.php` sa odošle v rovnakom SFTP batchi ako ostatné súbory.
 
 Ak push alebo SFTP zlyhá, hook vypíše chybu a deploy neoznačí ako úspešný.
+
+### Commit priamo na main a ochrana vetvy
+
+`main` je na GitHube chránená a vyžaduje úspešné status checks, takže priamy push
+z lokálu odmietne (`GH006`). Predtým tým každý commit na `main` — typicky
+synchronizácia PDF cez `sync_article_pdfs.sh` — skončil chybou, práca ostala len
+lokálne a lokálna `main` sa rozišla s `origin/main` (2026-10-19).
+
+`post-commit` preto pri odmietnutí **ochranou vetvy** commit presmeruje:
+
+1. pushne `HEAD` na vedľajšiu vetvu `auto/main-<slug-správy>-<sha8>`,
+1. cez `gh` založí PR na `main` (ak PR pre tú vetvu už existuje, len vypíše odkaz),
+1. vypíše príkazy na zosúladenie lokálnej `main` po zlúčení.
+
+#### Zosúladenie a nasadenie po zlúčení
+
+Squash aj rebase merge pôvodný commit **prepíšu**, takže lokálna `main` ostane
+rozídená s `origin/main`. `git pull` by na nej buď zlyhal, alebo vyrobil merge
+commit, ktorého push ochrana vetvy opäť odmietne — a `post-merge` v tej vetve
+(push zlyhal) končí bez nasadenia. Preto sa zosúlaďuje tvrdým resetom:
+
+```bash
+git fetch origin
+git log --oneline origin/main..main   # prázdne = niet čo stratiť
+git switch main && git reset --hard origin/main
+hooks/deploy.sh "$(hooks/deploy.sh --remote-commit)"
+```
+
+Ak výpis obsahuje commity, ktoré v PR nie sú, najprv ich odlož
+(`git branch zaloha-<sha>`) — `reset --hard` ich zahodí.
+
+Deploy sa volá **výslovne**: po `reset --hard` je `git pull` prázdny, Git nespustí
+žiadny merge, takže `post-merge` sa nevykoná vôbec. `--remote-commit` berie bázu
+z produkčného `deploy_info.php`, takže sa dobehne aj starší rozdiel — rovnako
+self-healing ako `post-merge`.
+
+Presmerovanie sa spúšťa **iba** pri hláške obsahujúcej `GH006`, `protected branch`,
+`required status check` alebo `branch protection`. Výpadok siete, zlá SSH identita
+či non-fast-forward naďalej končia chybou — skutočný problém sa nesmie schovať za
+„založil som PR". Bez dostupného `gh` zostane vetva pushnutá a PR treba založiť ručne.
 Strojovo lokálne nastavenie sa číta z `~/.config/nefro/deploy.env`, takže Mac
 a Windows môžu používať odlišné SSH identity bez synchronizácie cez repozitár.
 Na Macu je v tomto súbore nastavený host `websupport` z `~/.ssh/config`.
