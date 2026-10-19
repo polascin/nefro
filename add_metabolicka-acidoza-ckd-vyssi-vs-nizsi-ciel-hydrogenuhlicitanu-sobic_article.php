@@ -1,9 +1,8 @@
 <?php
 /**
- * add_progresia-kalcifikacie-koronarnych-arterii-ckd-horcik-pth_article.php
- * Odborný článok o longitudinálnej progresii kalcifikácie koronárnych artérií
- * naprieč štádiami chronickej choroby obličiek a o nelineárnych vzťahoch
- * so sérovým horčíkom a parathormónom (Chen et al., Front Med 2026).
+ * add_metabolicka-acidoza-ckd-vyssi-vs-nizsi-ciel-hydrogenuhlicitanu-sobic_article.php
+ * Odborný článok o randomizovanej štúdii SoBic: vyšší (24 mmol/l) oproti nižšiemu
+ * (20 mmol/l) cieľu sérového hydrogénuhličitanu pri metabolickej acidóze u CKD.
  */
 
 // Ochrana – len admin alebo CLI
@@ -26,7 +25,7 @@ $articles[] = [
     'author'       => 'MUDr. Ľubomír Polaščín',
     'published_at' => date('Y-m-d H:i:s'),
     'is_top'       => 0,
-    'excerpt'      => 'Kalcifikácia koronárnych artérií zrýchľuje z 8,5 %/rok v štádiu CKD G1 až G2 na 29,5 %/rok u dialyzovaných. Čo v 800-člennej kohorte ukázali prahy horčíka 0,82 mmol/l a PTH 120 pg/ml a kde sú hranice intervencie.',
+    'excerpt'      => 'Štúdia SoBic: cieľ HCO₃⁻ 24 oproti 20 mmol/l počas 104 týždňov nespomalil pokles eGFR (rozdiel −0,98 ml/min/1,73 m²; p = 0,648), no zvýšil liekovú záťaž.',
     'content'      => <<<'HTML'
 <figure>
   <a href="img/metabolicka-acidoza-ckd-vyssi-vs-nizsi-ciel-hydrogenuhlicitanu-sobic.webp" target="_blank" rel="noopener noreferrer">
