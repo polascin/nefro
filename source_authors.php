@@ -25,6 +25,9 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
  */
 function getSourceArticleAuthors(): array {
     return [
+        // Autor spracovaného redakčného prehľadu Medscape Medical News (14. 10. 2026) –
+        // byline overený z verejne dostupnej stránky zdroja 2026-10-19.
+        'longevity-normalne-vysledky-cielene-testovanie-ckd' => ['Julie Peck'],
         // Autori primárnej randomizovanej štúdie SoBic (Sci Rep 2026, doi 10.1038/s41598-026-68492-9) –
         // 10 mien overených z plného textu a metadát vydavateľa 2026-10-18.
         'metabolicka-acidoza-ckd-vyssi-vs-nizsi-ciel-hydrogenuhlicitanu-sobic' => ['Martina Gaggl', 'Christof Aigner', 'Alexandra Repitz', 'Sonja Riesenhuber', 'Christopher Sliber', 'Moritz Madern', 'Andreas Gleiss', 'Melanie Fraunschiel', 'Alice Schmidt', 'Gere Sunder-Plassmann'],
