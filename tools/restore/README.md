@@ -417,3 +417,125 @@ odkazov, PDF prístupnosť ani medicínska správnosť citovaných tvrdení. Vý
 nepotvrdzuje spoločný historický bod záloh, RPO/RTO ani neskorší stav produkcie.
 PDF, články, pôvodné zálohy a produkcia sa nemenili. Predchádzajúce dôkazy
 aplikačného správania a dešifrovania sa touto textovou skúškou nerozširujú.
+
+## Vizuálna úplnosť, ilustrácie a odkazy piatich PDF
+
+Dokončená je aj vizuálna kontrola všetkých 28 strán pomocou renderov Poppler
+pri 110 dpi. Text, ilustrácie a tabuľky sú čitateľné; pri tejto kontrole sa
+nenašiel chýbajúci obrázok, viditeľne orezaná tabuľka ani prekrytie textu.
+Opakovanie hlavičky tabuľky RESET na strane 2 je správnym pokračovaním tabuľky.
+Pri článku o riadení UI zostala strana 7 takmer prázdna: obsahuje iba zdrojovú
+poznámku a číslo strany. Je to nedostatok stránkovania, nie strata obsahu.
+
+[Nový strojový výsledok](evidence/2026-10-18-pdf-assets.json) a
+[záznam vizuálnej kontroly](evidence/2026-10-18-pdf-visual-review.json)
+rozširujú predchádzajúce overenie bez jeho prepísania. HTML sa znovu čítalo
+z izolovane obnovenej DB, pretože samotné súčasné zdrojové skripty štyroch
+článkov nemajú zhodný hash s uloženým HTML. Nezamieňali sa za obnovenú DB.
+
+Každé PDF obsahuje jednu ilustráciu 1600 × 1000. Vložený obrázok je JPEG,
+obnovený zdroj WebP; bajtová zhoda sa preto netvrdí. Pri porovnaní dekódovaných
+RGB pixelov je priemerná absolútna odchýlka približne 1,56 až 2,13 z 255.
+Rozmery a vizuálny obsah zodpovedajú príslušným zdrojovým ilustráciám.
+Strojový verdikt pri každom neidentickom RGB obraze zostáva
+`REQUIRES_VISUAL_REVIEW`, aj pri malej alebo zaokrúhlene nulovej odchýlke;
+samotná zhoda rozmerov ani nízka priemerná odchýlka nepotvrdzuje zhodu obsahu.
+Geometrická kontrola nenašla slová ani obrázky mimo hraníc strán; sama osebe
+nenahrádza vizuálnu kontrolu prekrytia alebo čitateľnosti.
+
+| PDF                                                  | Strany | Webové anotácie | Absolútne lokálne anotácie |
+| ---------------------------------------------------- | -----: | --------------: | -------------------------: |
+| `ai-governance-klinicka-prax-nefrologia`             |      7 |              10 |                          7 |
+| `automatizovane-podavanie-inzulinu-dm2-dialyza`      |      5 |               5 |                          7 |
+| `cetp-inhibicia-obicetrapib-lipidy-renalna-funkcia`  |      5 |              18 |                          6 |
+| `nizkoenergeticka-dieta-cvicenie-remisia-dm2-reset`  |      5 |               5 |                          7 |
+| `renin-aldosteron-dapagliflozin-spironolakton-hfpef` |      6 |               9 |                          8 |
+
+Všetkých 47 webových anotácií smeruje na ciele uložené v príslušných článkoch.
+Zvyšných 35 anotácií tvorí 5 odkazov na ilustrácie a 30 na súvisiace články.
+Ich verejné koncové cesty zodpovedajú HTML, ale samotné PDF ich ukladá ako
+absolútne lokálne súbory typu `Launch`. Také odkazy závisia od cudzieho
+súborového systému a nie sú funkčne rovnocenné webovým URL pre čitateľa.
+Absolútne cesty sa do dôkazov neukladajú. Zdrojová URL v záverečnej poznámke
+je obyčajný text; jej prípadná neklikateľnosť sa nezamieňa za chýbajúcu
+anotáciu HTML odkazu.
+
+**Celkový výsledok zostáva `PARTIAL`.** Obsah a ilustrácie sú vo vyššie
+uvedenom rozsahu overené, ale problém prenositeľnosti lokálnych odkazov
+a osamotená záverečná poznámka zostávajú otvorené. PDF ani generátor sa
+v tomto overení nemenili. Následná oprava má vytvoriť nové pracovné PDF,
+previesť verejné relatívne odkazy na HTTPS URL a upraviť stránkovanie pätičky;
+potom zopakovať textové, obrazové, odkazové a vizuálne porovnanie. Pôvodné
+zálohy a doložené vstupné PDF zachovať.
+
+Reprodukcia strojovej kontroly: k predchádzajúcemu príkazu pridať
+`--pdf-asset-review` a zvoliť novú cestu reportu. Voliteľný režim vyžaduje
+PyMuPDF a Pillow na hostiteľovi; ich prítomnosť sa overuje pred obnovou.
+Relatívne HTML odkazy sa pri porovnaní identít riešia voči verejnej URL
+článku, takže kontrola rozpozná aj následnú opravu na HTTPS. Percentuálne
+kódovanie URI sa plošne nedekóduje: zakódovaný oddeľovač parametra musí zostať
+odlíšený od skutočného oddeľovača. Regresie chránia oba tieto prípady aj
+odmietnutie odlišného obrázka s rovnakými rozmermi bez vizuálneho posúdenia.
+Regresná brána bez týchto voliteľných závislostí kontroluje čítanie HTML
+odkazov, dekódovanie entít a nezverejnenie privátnych častí lokálnej cesty.
+Skutočná extrakcia obrázkov a anotácií sa preverila nad piatimi pôvodnými PDF.
+
+**Zostávajúce hranice:** neuskutočnili sa HTTP požiadavky na ciele odkazov,
+neoverili sa presmerovania, prihlasovanie, platený obsah ani správanie rôznych
+PDF prehliadačov. Render nie je skúška tlače ani audit PDF/UA. Nevykonalo sa
+nové overovanie medicínskych tvrdení, historického spoločného bodu obnovy
+alebo RPO/RTO. Archívy, doplnené PDF, obrázky a produkcia zostali nezmenené.
+
+## Oprava nových pracovných PDF, 18. október 2026
+
+V samostatnom odvodenom balíku je opravených 35 lokálnych anotácií: všetkých
+82 odkazov teraz používa HTTPS a ich ciele zodpovedajú obnovenému HTML.
+Päť odkazov smeruje na ilustrácie, 30 na súvisiace články. Nezostala žiadna
+anotácia Launch ani chýbajúci či neočakávaný cieľ.
+
+Pri článku o riadení klinickej UI sa pôvodná vektorová zdrojová poznámka
+presunula zo samostatnej siedmej strany na koniec šiestej. Čísla strán sú
+aktualizované na 1/6 až 6/6; pre číslice sa použil font Helvetica, pretože
+opätovné použitie pôvodného podmnožinového fontu pri prvom náhľade nevykreslilo
+číslice správne. Tento nevyhovujúci medzivýstup nie je finálnym balíkom.
+Finálny balík má spolu 27 strán.
+
+**Výsledok požadovanej opravy: PASS.** Úplný extrahovaný text všetkých piatich
+PDF je po odstránení overených čísel strán a normalizácii Unicode a medzier
+zhodný so vstupom. Bajty vložených obrázkov sú zhodné. Všetkých 27 finálnych
+strán bolo vizuálne skontrolovaných pri 110 dpi bez zisteného prekrytia,
+orezania alebo nečitateľných čísel. Pri 21 stranách je render pixelovo zhodný.
+Pri šiestich stranách riadenia UI sa mení číslovanie a pri poslednej aj
+poznámka. Opätovný zápis obsahových prúdov pri odstránení starých čísel navyše
+zmenil vyhladenie 96 pixelov v tele strany 2 a 49 pixelov na strane 5;
+príslušné miesta boli vizuálne skontrolované, text sa nezmenil.
+
+Izolovaná obnova pôvodnej DB a kontrola nového balíka znovu overili 37 tabuliek,
+144 649 riadkov, zhodný inventár a schému. Kontajnery nemali sieť ani zverejnené
+porty a po skúške boli odstránené. Kontrolné súčty vstupných aktív a DB archívu
+zostali zhodné. Produkcia ani pôvodné PDF a zálohy sa nemenili.
+
+Všeobecný porovnávač stále oprávnene vracia **PARTIAL**: RESET opakuje hlavičku
+pokračujúcej tabuľky a JPEG vložený v pôvodnom PDF nemá identické RGB pixely
+so zdrojovým WebP. Tieto známe obmedzenia sa neprepisujú na PASS; samostatný
+výsledok opravy vychádza aj z úplnej zhody textu a obrázkov pred/po úprave
+a vizuálnej kontroly. Neoverovala sa HTTP dostupnosť cieľov, presmerovania,
+prihlásenie, rôzne PDF prehliadače, tlač ani PDF/UA. Nevzniklo nové overenie
+medicínskych tvrdení ani historického spoločného bodu obnovy či RPO/RTO.
+
+Dôkazy: [strojová kontrola DB a PDF](evidence/2026-10-18-working-pdf-check.json)
+a [porovnanie opravy vrátane kontrolných súčtov](evidence/2026-10-18-working-pdf-repair.json).
+Finálne pracovné súbory sú mimo Git a publikovaných PDF v lokálnom adresári
+`scratch/restore-repaired-20261018/final/`; `output/` je vyradený medzivýstup.
+
+Reprodukcia vyžaduje PyMuPDF, Pillow, Poppler a pôvodný doplnený balík:
+
+```powershell
+py tools/restore/repair_working_pdfs.py --source <vstupny-balik> --output <novy-pracovny-balik>
+py tools/restore/run.py --files <novy-pracovny-balik> --sql <povodny-db-archiv> --pdf-content-bundle <novy-pracovny-balik> --pdf-asset-review --file-image nefro-restore-consistency-php --report <novy-report.json>
+```
+
+Nástroj odmieta existujúci výstupný adresár, neznáme ciele, odlišný počet
+lokálnych anotácií aj nebezpečné alebo duplicitné cesty v manifeste. Očakáva
+presne päť auditovaných PDF a päť ilustrácií. Nie je všeobecným generátorom PDF;
+pri odlišnom rozložení sa má zastaviť a vyžadovať novú kontrolu.

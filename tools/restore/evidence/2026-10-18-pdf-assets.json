@@ -1,0 +1,597 @@
+{
+  "timestamp_utc": "2026-10-18T19:24:17.255029+00:00",
+  "result": "PARTIAL",
+  "verification_scope": "files_and_database",
+  "file_restore": "PASS",
+  "file_format_validation": "PASS",
+  "database_round_trip": "PASS",
+  "network_mode": "none",
+  "published_ports": 0,
+  "source_mount_read_only": true,
+  "database_tcp_and_events_disabled": true,
+  "restore_containers_removed": true,
+  "probe_socket_volume_removed": null,
+  "existing_database_backup_restore_verified": true,
+  "database_source": "existing_backup",
+  "database_backup_sha256": "804ca4ff7ed5011faf68a2041f171dc5c7204a1a8966a5996e4f03cf03a8b3ce",
+  "database_tables": 37,
+  "database_rows": 144649,
+  "database_inventory_sha256": "86a5eaeacefc9a5b9c1af54666e43f947d3ba6fd67954d0ef1f9392af93ff9d9",
+  "database_schema_sha256": "9b834fc9d9eb98464a9a7a3a793d42f42fc7117070ac1938aa641870125179e3",
+  "file_count": 11,
+  "file_bytes": 2318103,
+  "directory_count": 2,
+  "file_memory_mib": 768,
+  "file_backup_archive_sha256": null,
+  "file_manifest_sha256": "5937e74fe8e0e24c10dd5256517017317f9340b30ca9e30f7f1a68b7a2a859c3",
+  "format_checks": {
+    "checked": 5,
+    "failures": {},
+    "failed_file_sha256": []
+  },
+  "file_restore_seconds": 0.9,
+  "total_seconds": 98.046,
+  "source_backups_unchanged": true,
+  "file_image_id": "sha256:b42cc6512d36176ace9708c22e165b8c4f52c047d5e10e1823555cc6342d7f1b",
+  "database_image": "mariadb:11.4.13@sha256:250e1609e93c0e6aecf64bfbab2d84d5e89d2481540fe77447ff6c855c3b1873",
+  "limits": [
+    "File scope is only the supplied directory or ZIP.",
+    "No application, visual, decryption or full disaster recovery validation.",
+    "PDF comparison covers extracted text, not visual, image or hyperlink equivalence."
+  ],
+  "pdf_content_comparison": {
+    "result": "PARTIAL",
+    "method": "NFC and Unicode whitespace normalization; case, accents, digits and punctuation preserved; ordered token diff",
+    "pdf_extraction_mode": "pdftotext -raw (content stream order); HTML decimal ordered-list markers included",
+    "extractor_version": "pdftotext version 25.07.0",
+    "excluded": [
+      "verified site header and article title",
+      "author/date metadata if present",
+      "anchored page-number lines",
+      "verified source/disclaimer footer",
+      "HTML script/style text"
+    ],
+    "entries": [
+      {
+        "path": "pdf/ai-governance-klinicka-prax-nefrologia.pdf",
+        "pdf_sha256": "883f42e1ded891e2beedd096b130fe7b92a4a4d69f4f0cf85933db7676621fe3",
+        "database_html_sha256": "3c5682a69d05c5ef7aa8a9bc6d8fc6b38df369908f5b2f67ba20d60c9e610fa3",
+        "database_visible_text_sha256": "a5e8a382047c24ee9977ea05d721b6a91cd47c3e1eabae1edd3f261f4982d600",
+        "pdf_body_text_sha256": "8864dee5a2ffd5d63478c285cafd9bd34925e4d4474e17643ea8ea82ee5ea5e6",
+        "pdf_pages": 7,
+        "removed_page_number_lines": [
+          "1/7",
+          "2/7",
+          "3/7",
+          "4/7",
+          "5/7",
+          "6/7",
+          "7/7"
+        ],
+        "metadata_removed": true,
+        "header_and_footer_verified": true,
+        "metadata_matches_database": true,
+        "unsupported_list_types": [],
+        "database_tokens": 3635,
+        "pdf_tokens": 3635,
+        "whitespace_normalized_exact_match": false,
+        "token_match": true,
+        "difference_groups": [],
+        "asset_review": {
+          "result": "PARTIAL",
+          "pages": [
+            {
+              "page": 1,
+              "words": 308,
+              "words_outside_page": 0,
+              "image_placements": 1,
+              "images_outside_page": 0
+            },
+            {
+              "page": 2,
+              "words": 535,
+              "words_outside_page": 0,
+              "image_placements": 0,
+              "images_outside_page": 0
+            },
+            {
+              "page": 3,
+              "words": 530,
+              "words_outside_page": 0,
+              "image_placements": 0,
+              "images_outside_page": 0
+            },
+            {
+              "page": 4,
+              "words": 493,
+              "words_outside_page": 0,
+              "image_placements": 0,
+              "images_outside_page": 0
+            },
+            {
+              "page": 5,
+              "words": 533,
+              "words_outside_page": 0,
+              "image_placements": 0,
+              "images_outside_page": 0
+            },
+            {
+              "page": 6,
+              "words": 539,
+              "words_outside_page": 0,
+              "image_placements": 0,
+              "images_outside_page": 0
+            },
+            {
+              "page": 7,
+              "words": 19,
+              "words_outside_page": 0,
+              "image_placements": 0,
+              "images_outside_page": 0
+            }
+          ],
+          "embedded_images": 1,
+          "images": [
+            {
+              "source_available": true,
+              "source_sha256": "e8ca9adee38dbb0c6df415c9993d6219dd94dca1588267ec2756a8c26ebd5954",
+              "source_dimensions": [1600, 1000],
+              "same_dimension_candidates": [
+                {
+                  "format": "jpeg",
+                  "dimensions": [1600, 1000],
+                  "mean_absolute_RGB_error_0_to_255": 2.133465,
+                  "embedded_stream_sha256": "940dd3d25f12cf005cf71b06123b4790b2279e613514135e285d58c2897a9247"
+                }
+              ]
+            }
+          ],
+          "image_verification": "REQUIRES_VISUAL_REVIEW",
+          "links": {
+            "annotations": 17,
+            "unique_remote_destinations": 10,
+            "unique_local_targets": 7,
+            "unclassified": 0,
+            "destination_comparison": {
+              "missing": 0,
+              "unexpected": 0,
+              "unsupported_html_targets": 0,
+              "expected_resolved_destinations": 17,
+              "actual_resolved_destinations": 17,
+              "resolved_destinations_sha256": "d1120b574ec24c65d6e05cfa1b3b5ed7e754d7723957ab84ea3e75781c4533d9",
+              "expected_resolved_destinations_sha256": "d1120b574ec24c65d6e05cfa1b3b5ed7e754d7723957ab84ea3e75781c4533d9"
+            },
+            "absolute_local_launch_annotations": 7,
+            "printed_source_footer_is_clickable": false,
+            "destinations_match_article_after_public_suffix_mapping": true
+          },
+          "limits": [
+            "No URL was requested; HTTP availability and redirects are not tested.",
+            "Public suffix matching does not make absolute file launch annotations portable.",
+            "Pixel differences are measured; visual review is separate and no exact image equality is asserted.",
+            "Geometry checks alone do not detect text overlap or table layout defects."
+          ]
+        }
+      },
+      {
+        "path": "pdf/automatizovane-podavanie-inzulinu-dm2-dialyza.pdf",
+        "pdf_sha256": "3e404579831025b55537f655d32d60bdb6bd14eb0f96299fdef1b59c76917cfb",
+        "database_html_sha256": "ca70387f2440e8252c4927fa0f8da0af5720ddcad8673f603d827ea0c0032bed",
+        "database_visible_text_sha256": "e687a0e08b619b0aa8e9507880d02a03ea14fd6b09a6501ea832d9ce5e80ae84",
+        "pdf_body_text_sha256": "969b2642845b82c42a613a778beda37914d447135ee27d2e3f726b864b88fa07",
+        "pdf_pages": 5,
+        "removed_page_number_lines": ["1/5", "2/5", "3/5", "4/5", "5/5"],
+        "metadata_removed": true,
+        "header_and_footer_verified": true,
+        "metadata_matches_database": true,
+        "unsupported_list_types": [],
+        "database_tokens": 2576,
+        "pdf_tokens": 2576,
+        "whitespace_normalized_exact_match": false,
+        "token_match": true,
+        "difference_groups": [],
+        "asset_review": {
+          "result": "PARTIAL",
+          "pages": [
+            {
+              "page": 1,
+              "words": 299,
+              "words_outside_page": 0,
+              "image_placements": 1,
+              "images_outside_page": 0
+            },
+            {
+              "page": 2,
+              "words": 531,
+              "words_outside_page": 0,
+              "image_placements": 0,
+              "images_outside_page": 0
+            },
+            {
+              "page": 3,
+              "words": 509,
+              "words_outside_page": 0,
+              "image_placements": 0,
+              "images_outside_page": 0
+            },
+            {
+              "page": 4,
+              "words": 512,
+              "words_outside_page": 0,
+              "image_placements": 0,
+              "images_outside_page": 0
+            },
+            {
+              "page": 5,
+              "words": 212,
+              "words_outside_page": 0,
+              "image_placements": 0,
+              "images_outside_page": 0
+            }
+          ],
+          "embedded_images": 1,
+          "images": [
+            {
+              "source_available": true,
+              "source_sha256": "8b3e05e44549a1369cd534c41ab6ca4981e643bb65cc1133590acbd01a0cab98",
+              "source_dimensions": [1600, 1000],
+              "same_dimension_candidates": [
+                {
+                  "format": "jpeg",
+                  "dimensions": [1600, 1000],
+                  "mean_absolute_RGB_error_0_to_255": 1.55629,
+                  "embedded_stream_sha256": "10900e4ddaf73677caf3dac2a6414e231c5985886e944d82bb3773f8ad7adb36"
+                }
+              ]
+            }
+          ],
+          "image_verification": "REQUIRES_VISUAL_REVIEW",
+          "links": {
+            "annotations": 12,
+            "unique_remote_destinations": 5,
+            "unique_local_targets": 7,
+            "unclassified": 0,
+            "destination_comparison": {
+              "missing": 0,
+              "unexpected": 0,
+              "unsupported_html_targets": 0,
+              "expected_resolved_destinations": 12,
+              "actual_resolved_destinations": 12,
+              "resolved_destinations_sha256": "f29df20a65532d537cf110ebda64a65295bb22b7d68506876ad12f641e0b88bc",
+              "expected_resolved_destinations_sha256": "f29df20a65532d537cf110ebda64a65295bb22b7d68506876ad12f641e0b88bc"
+            },
+            "absolute_local_launch_annotations": 7,
+            "printed_source_footer_is_clickable": false,
+            "destinations_match_article_after_public_suffix_mapping": true
+          },
+          "limits": [
+            "No URL was requested; HTTP availability and redirects are not tested.",
+            "Public suffix matching does not make absolute file launch annotations portable.",
+            "Pixel differences are measured; visual review is separate and no exact image equality is asserted.",
+            "Geometry checks alone do not detect text overlap or table layout defects."
+          ]
+        }
+      },
+      {
+        "path": "pdf/cetp-inhibicia-obicetrapib-lipidy-renalna-funkcia.pdf",
+        "pdf_sha256": "67dc33d672acd80c5d021b4eddef7aaea34eda31510786c5c95fef1f310518a9",
+        "database_html_sha256": "af9ec46cc9e0f8ec0f44d5b642a1e1c258b6a892935479ded921f83cdb18de4c",
+        "database_visible_text_sha256": "85ebdf1791c7dd014a9eb3837f00cd2100488b5f580a52a9e4802f5f6ce8be4d",
+        "pdf_body_text_sha256": "9f705b4ee600d88e3f54fcebfcc37b8d431092d5ad20ce1886682489bba1db99",
+        "pdf_pages": 5,
+        "removed_page_number_lines": ["1/5", "2/5", "3/5", "4/5", "5/5"],
+        "metadata_removed": true,
+        "header_and_footer_verified": true,
+        "metadata_matches_database": true,
+        "unsupported_list_types": [],
+        "database_tokens": 3384,
+        "pdf_tokens": 3384,
+        "whitespace_normalized_exact_match": false,
+        "token_match": true,
+        "difference_groups": [],
+        "asset_review": {
+          "result": "PARTIAL",
+          "pages": [
+            {
+              "page": 1,
+              "words": 293,
+              "words_outside_page": 0,
+              "image_placements": 1,
+              "images_outside_page": 0
+            },
+            {
+              "page": 2,
+              "words": 655,
+              "words_outside_page": 0,
+              "image_placements": 0,
+              "images_outside_page": 0
+            },
+            {
+              "page": 3,
+              "words": 530,
+              "words_outside_page": 0,
+              "image_placements": 0,
+              "images_outside_page": 0
+            },
+            {
+              "page": 4,
+              "words": 531,
+              "words_outside_page": 0,
+              "image_placements": 0,
+              "images_outside_page": 0
+            },
+            {
+              "page": 5,
+              "words": 521,
+              "words_outside_page": 0,
+              "image_placements": 0,
+              "images_outside_page": 0
+            }
+          ],
+          "embedded_images": 1,
+          "images": [
+            {
+              "source_available": true,
+              "source_sha256": "8e4b6299f247a5d73b2ce790e705ee3fd0cbed4ab70d10215a1d0c291ecff3f6",
+              "source_dimensions": [1600, 1000],
+              "same_dimension_candidates": [
+                {
+                  "format": "jpeg",
+                  "dimensions": [1600, 1000],
+                  "mean_absolute_RGB_error_0_to_255": 1.646146,
+                  "embedded_stream_sha256": "8627e68c040198a401a5095ed2502d121e34de1b83cb1f764d58e3e965ccf3fa"
+                }
+              ]
+            }
+          ],
+          "image_verification": "REQUIRES_VISUAL_REVIEW",
+          "links": {
+            "annotations": 24,
+            "unique_remote_destinations": 18,
+            "unique_local_targets": 6,
+            "unclassified": 0,
+            "destination_comparison": {
+              "missing": 0,
+              "unexpected": 0,
+              "unsupported_html_targets": 0,
+              "expected_resolved_destinations": 24,
+              "actual_resolved_destinations": 24,
+              "resolved_destinations_sha256": "6db92212596290803292a692c718828f76ef27f361dde0a2c1826a6845fbf774",
+              "expected_resolved_destinations_sha256": "6db92212596290803292a692c718828f76ef27f361dde0a2c1826a6845fbf774"
+            },
+            "absolute_local_launch_annotations": 6,
+            "printed_source_footer_is_clickable": false,
+            "destinations_match_article_after_public_suffix_mapping": true
+          },
+          "limits": [
+            "No URL was requested; HTTP availability and redirects are not tested.",
+            "Public suffix matching does not make absolute file launch annotations portable.",
+            "Pixel differences are measured; visual review is separate and no exact image equality is asserted.",
+            "Geometry checks alone do not detect text overlap or table layout defects."
+          ]
+        }
+      },
+      {
+        "path": "pdf/nizkoenergeticka-dieta-cvicenie-remisia-dm2-reset.pdf",
+        "pdf_sha256": "6524a3dd68b025b2f5842973fce9e2f4fef9263e92ba4af6499ea03ac7ef87e0",
+        "database_html_sha256": "57658ad4d8b1dc5b932980fcf9818a9d56c25d64ed5ad5408d8c288988b2d444",
+        "database_visible_text_sha256": "038c5eefacfcfa1d617a1bcd72ab07fa48f04af774a7fcf11a99fc055ab492c7",
+        "pdf_body_text_sha256": "15d70a0f19be56a0448d8804faa5fe593408be078026072f74d686d3be68f741",
+        "pdf_pages": 5,
+        "removed_page_number_lines": ["1/5", "2/5", "3/5", "4/5", "5/5"],
+        "metadata_removed": true,
+        "header_and_footer_verified": true,
+        "metadata_matches_database": true,
+        "unsupported_list_types": [],
+        "database_tokens": 2572,
+        "pdf_tokens": 2574,
+        "whitespace_normalized_exact_match": false,
+        "token_match": false,
+        "difference_groups": [
+          {
+            "kind": "insert",
+            "database_token_range": [360, 360],
+            "pdf_token_range": [360, 362],
+            "database_text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "pdf_text_sha256": "196728949699d8f8c571b2fce49e8fd6076f0131caae3fbb7457b99595d109ae",
+            "contains_digits": false,
+            "punctuation_only": false
+          }
+        ],
+        "asset_review": {
+          "result": "PARTIAL",
+          "pages": [
+            {
+              "page": 1,
+              "words": 265,
+              "words_outside_page": 0,
+              "image_placements": 1,
+              "images_outside_page": 0
+            },
+            {
+              "page": 2,
+              "words": 473,
+              "words_outside_page": 0,
+              "image_placements": 0,
+              "images_outside_page": 0
+            },
+            {
+              "page": 3,
+              "words": 507,
+              "words_outside_page": 0,
+              "image_placements": 0,
+              "images_outside_page": 0
+            },
+            {
+              "page": 4,
+              "words": 527,
+              "words_outside_page": 0,
+              "image_placements": 0,
+              "images_outside_page": 0
+            },
+            {
+              "page": 5,
+              "words": 313,
+              "words_outside_page": 0,
+              "image_placements": 0,
+              "images_outside_page": 0
+            }
+          ],
+          "embedded_images": 1,
+          "images": [
+            {
+              "source_available": true,
+              "source_sha256": "32c74f92a2f7287320e7c6ddc520c3f982d7e57ffc82328749a13159b56043ed",
+              "source_dimensions": [1600, 1000],
+              "same_dimension_candidates": [
+                {
+                  "format": "jpeg",
+                  "dimensions": [1600, 1000],
+                  "mean_absolute_RGB_error_0_to_255": 1.939839,
+                  "embedded_stream_sha256": "3affdc89f3ae8a1ce036b7e15c1cf2f99ab8f5382ed2fbb3035bf3ef4dbf0fe4"
+                }
+              ]
+            }
+          ],
+          "image_verification": "REQUIRES_VISUAL_REVIEW",
+          "links": {
+            "annotations": 12,
+            "unique_remote_destinations": 5,
+            "unique_local_targets": 7,
+            "unclassified": 0,
+            "destination_comparison": {
+              "missing": 0,
+              "unexpected": 0,
+              "unsupported_html_targets": 0,
+              "expected_resolved_destinations": 12,
+              "actual_resolved_destinations": 12,
+              "resolved_destinations_sha256": "d4eba3b0e392df8197f51eb80a8a82d58d9e31a6d0391aaf4a0f7b263e136684",
+              "expected_resolved_destinations_sha256": "d4eba3b0e392df8197f51eb80a8a82d58d9e31a6d0391aaf4a0f7b263e136684"
+            },
+            "absolute_local_launch_annotations": 7,
+            "printed_source_footer_is_clickable": false,
+            "destinations_match_article_after_public_suffix_mapping": true
+          },
+          "limits": [
+            "No URL was requested; HTTP availability and redirects are not tested.",
+            "Public suffix matching does not make absolute file launch annotations portable.",
+            "Pixel differences are measured; visual review is separate and no exact image equality is asserted.",
+            "Geometry checks alone do not detect text overlap or table layout defects."
+          ]
+        }
+      },
+      {
+        "path": "pdf/renin-aldosteron-dapagliflozin-spironolakton-hfpef.pdf",
+        "pdf_sha256": "c8774804c87124ba64fd0d93b271f33c654a07ed8a142cd14f7c185afa50c64b",
+        "database_html_sha256": "e48279ece546ac137d74d2b7ccee454c014fc7b1325fb9a2daf7b0123dba25f1",
+        "database_visible_text_sha256": "7990473e4c01333452d7d60af4cdb816974e22aac16a517622072fb1037346a2",
+        "pdf_body_text_sha256": "e8d7ea1dd980c130ab8e5b3637125741df266613bfedfc90b08402e2d5ed0c4a",
+        "pdf_pages": 6,
+        "removed_page_number_lines": ["1/6", "2/6", "3/6", "4/6", "5/6", "6/6"],
+        "metadata_removed": true,
+        "header_and_footer_verified": true,
+        "metadata_matches_database": true,
+        "unsupported_list_types": [],
+        "database_tokens": 4017,
+        "pdf_tokens": 4017,
+        "whitespace_normalized_exact_match": false,
+        "token_match": true,
+        "difference_groups": [],
+        "asset_review": {
+          "result": "PARTIAL",
+          "pages": [
+            {
+              "page": 1,
+              "words": 309,
+              "words_outside_page": 0,
+              "image_placements": 1,
+              "images_outside_page": 0
+            },
+            {
+              "page": 2,
+              "words": 574,
+              "words_outside_page": 0,
+              "image_placements": 0,
+              "images_outside_page": 0
+            },
+            {
+              "page": 3,
+              "words": 496,
+              "words_outside_page": 0,
+              "image_placements": 0,
+              "images_outside_page": 0
+            },
+            {
+              "page": 4,
+              "words": 501,
+              "words_outside_page": 0,
+              "image_placements": 0,
+              "images_outside_page": 0
+            },
+            {
+              "page": 5,
+              "words": 500,
+              "words_outside_page": 0,
+              "image_placements": 0,
+              "images_outside_page": 0
+            },
+            {
+              "page": 6,
+              "words": 454,
+              "words_outside_page": 0,
+              "image_placements": 0,
+              "images_outside_page": 0
+            }
+          ],
+          "embedded_images": 1,
+          "images": [
+            {
+              "source_available": true,
+              "source_sha256": "f0422c37cb91498d73ab681a8ad2f579a26cc3a083301734a995e62aaaae52f8",
+              "source_dimensions": [1600, 1000],
+              "same_dimension_candidates": [
+                {
+                  "format": "jpeg",
+                  "dimensions": [1600, 1000],
+                  "mean_absolute_RGB_error_0_to_255": 1.834778,
+                  "embedded_stream_sha256": "497ded607b2db3fcc74a9309664d7b8c749f83e248f79e960d1377efbc8f439d"
+                }
+              ]
+            }
+          ],
+          "image_verification": "REQUIRES_VISUAL_REVIEW",
+          "links": {
+            "annotations": 17,
+            "unique_remote_destinations": 9,
+            "unique_local_targets": 8,
+            "unclassified": 0,
+            "destination_comparison": {
+              "missing": 0,
+              "unexpected": 0,
+              "unsupported_html_targets": 0,
+              "expected_resolved_destinations": 17,
+              "actual_resolved_destinations": 17,
+              "resolved_destinations_sha256": "d63a5f00c9f1598819e9b74103bf8ea449151c626f47874430e24534e6241f2d",
+              "expected_resolved_destinations_sha256": "d63a5f00c9f1598819e9b74103bf8ea449151c626f47874430e24534e6241f2d"
+            },
+            "absolute_local_launch_annotations": 8,
+            "printed_source_footer_is_clickable": false,
+            "destinations_match_article_after_public_suffix_mapping": true
+          },
+          "limits": [
+            "No URL was requested; HTTP availability and redirects are not tested.",
+            "Public suffix matching does not make absolute file launch annotations portable.",
+            "Pixel differences are measured; visual review is separate and no exact image equality is asserted.",
+            "Geometry checks alone do not detect text overlap or table layout defects."
+          ]
+        }
+      }
+    ],
+    "limits": [
+      "Differences are not automatically accepted as layout-only.",
+      "No visual, image, hyperlink destination or formula rendering equivalence is asserted.",
+      "Token equality ignores whitespace placement around punctuation; exact whitespace-normalized equality is also reported."
+    ],
+    "database_records_unchanged": true
+  }
+}

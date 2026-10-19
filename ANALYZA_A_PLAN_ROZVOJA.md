@@ -220,3 +220,31 @@ medicínskej správnosti. Pôvodné zálohy, PDF a produkcia sa nemenili, dočas
 DB bola odstránená. Do povinnej regresnej brány pribudla ochrana pred
 prehliadnutím zmien čísel, negácie a matematických znamienok. Ďalšia etapa má
 overiť vizuálnu úplnosť PDF a zabezpečiť časovo konzistentné budúce zálohy.
+
+### Dokončenie vizuálnej a odkazovej kontroly piatich PDF
+
+Skontrolovalo sa všetkých 28 vyrenderovaných strán a päť vložených ilustrácií.
+Nenašlo sa viditeľné orezanie tabuliek, chýbajúca ilustrácia ani prekrytie
+textu. Pri riadení UI ostala posledná strana iba so zdrojovou poznámkou.
+Zistilo sa 35 neprenositeľných absolútnych lokálnych odkazov: 30 na články
+a 5 na obrázky. Ďalších 47 webových anotácií zodpovedá cieľom v obnovenej DB;
+ich dostupnosť cez sieť sa netestovala. [Dôkaz](tools/restore/evidence/2026-10-18-pdf-assets.json)
+a [vizuálny záznam](tools/restore/evidence/2026-10-18-pdf-visual-review.json)
+ponechávajú výsledok `PARTIAL`.
+
+Overovanie je dokončené v doloženom rozsahu. Ďalší konkrétny krok je pripraviť
+nové pracovné PDF s HTTPS cieľmi odkazov a lepším stránkovaním poznámky,
+bez prepísania pôvodných záloh a vstupných PDF, a zopakovať kontroly.
+Produkcia sa počas tohto overovania nemenila. Osobitne zostáva zabezpečiť
+časovo konzistentný zálohovací postup a overiť RPO/RTO.
+
+### Dokončená izolovaná oprava pracovných PDF (18. 10. 2026)
+
+Päť nových pracovných PDF má opravených 35 lokálnych odkazov na HTTPS;
+spolu 82 HTTPS anotácií bez lokálnych cieľov. Osamotená záverečná poznámka
+článku o riadení UI je na šiestej strane. Úplný text a vložené obrázky
+zostali zhodné so vstupmi, všetkých 27 strán prešlo vizuálnou kontrolou.
+Izolovaná obnova DB znovu overila 37 tabuliek a 144 649 riadkov.
+Pôvodné súbory, zálohy ani produkcia sa nemenili. Rozsah výsledku PASS,
+zostávajúci všeobecný výsledok PARTIAL a jeho dôvody sú v
+[protokole obnovy](tools/restore/README.md#oprava-nových-pracovných-pdf-18-október-2026).

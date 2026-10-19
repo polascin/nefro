@@ -1,0 +1,224 @@
+{
+  "result": "PARTIAL",
+  "scope": "visual inspection of 28 Poppler page renders plus offline image and link inspection against restored database HTML",
+  "renderer": "pdftoppm version 26.07.0",
+  "render_dpi": 110,
+  "pymupdf_version": "1.28.0",
+  "pillow_version": "12.2.0",
+  "machine_report_sha256": "80ec149021d98d2f5cd0cbbf3dcc523585a2b613ac072eee46153b17b77a091b",
+  "source_images_match_recovery_manifest": true,
+  "reviewed_pages": 28,
+  "embedded_illustrations": 5,
+  "web_link_annotations": 47,
+  "absolute_local_launch_annotations": 35,
+  "local_image_links": 5,
+  "local_related_article_links": 30,
+  "network_requests_made": 0,
+  "entries": [
+    {
+      "path": "pdf/ai-governance-klinicka-prax-nefrologia.pdf",
+      "pdf_sha256": "883f42e1ded891e2beedd096b130fe7b92a4a4d69f4f0cf85933db7676621fe3",
+      "visually_reviewed_pages": [1, 2, 3, 4, 5, 6, 7],
+      "observed_missing_illustrations": 0,
+      "observed_clipped_tables": 0,
+      "observed_text_overlaps": 0,
+      "findings": [
+        "Absolute local file launch links are not portable web links.",
+        "Page 7 contains only the source/disclaimer footer and page number; improve pagination."
+      ]
+    },
+    {
+      "path": "pdf/automatizovane-podavanie-inzulinu-dm2-dialyza.pdf",
+      "pdf_sha256": "3e404579831025b55537f655d32d60bdb6bd14eb0f96299fdef1b59c76917cfb",
+      "visually_reviewed_pages": [1, 2, 3, 4, 5],
+      "observed_missing_illustrations": 0,
+      "observed_clipped_tables": 0,
+      "observed_text_overlaps": 0,
+      "findings": [
+        "Absolute local file launch links are not portable web links."
+      ]
+    },
+    {
+      "path": "pdf/cetp-inhibicia-obicetrapib-lipidy-renalna-funkcia.pdf",
+      "pdf_sha256": "67dc33d672acd80c5d021b4eddef7aaea34eda31510786c5c95fef1f310518a9",
+      "visually_reviewed_pages": [1, 2, 3, 4, 5],
+      "observed_missing_illustrations": 0,
+      "observed_clipped_tables": 0,
+      "observed_text_overlaps": 0,
+      "findings": [
+        "Absolute local file launch links are not portable web links."
+      ]
+    },
+    {
+      "path": "pdf/nizkoenergeticka-dieta-cvicenie-remisia-dm2-reset.pdf",
+      "pdf_sha256": "6524a3dd68b025b2f5842973fce9e2f4fef9263e92ba4af6499ea03ac7ef87e0",
+      "visually_reviewed_pages": [1, 2, 3, 4, 5],
+      "observed_missing_illustrations": 0,
+      "observed_clipped_tables": 0,
+      "observed_text_overlaps": 0,
+      "findings": [
+        "Absolute local file launch links are not portable web links."
+      ]
+    },
+    {
+      "path": "pdf/renin-aldosteron-dapagliflozin-spironolakton-hfpef.pdf",
+      "pdf_sha256": "c8774804c87124ba64fd0d93b271f33c654a07ed8a142cd14f7c185afa50c64b",
+      "visually_reviewed_pages": [1, 2, 3, 4, 5, 6],
+      "observed_missing_illustrations": 0,
+      "observed_clipped_tables": 0,
+      "observed_text_overlaps": 0,
+      "findings": [
+        "Absolute local file launch links are not portable web links."
+      ]
+    }
+  ],
+  "page_renders": [
+    {
+      "file": "ai-governance-klinicka-prax-nefrologia-1.png",
+      "sha256": "86d147a9982fb7d5f93b7188db01443b600a5a1304cb23cba488d54fb8d464d2"
+    },
+    {
+      "file": "ai-governance-klinicka-prax-nefrologia-2.png",
+      "sha256": "8e971c1e0c5bdce296af947fa4ad7ece77db5b2ea4995670ce500c4bceb84250"
+    },
+    {
+      "file": "ai-governance-klinicka-prax-nefrologia-3.png",
+      "sha256": "76ebd6351a153e08e79729c2845d83f93e285030ef55be33d677dcbfd73fd149"
+    },
+    {
+      "file": "ai-governance-klinicka-prax-nefrologia-4.png",
+      "sha256": "6fa490f33101c5e78b1a8442df88974c19940a1b4eb0a277cf2fa2315fb19ce9"
+    },
+    {
+      "file": "ai-governance-klinicka-prax-nefrologia-5.png",
+      "sha256": "2e2126c1c8fde4f38cb719b23b704b4b19eb62a48c32ef46e79a9d0d51499b0a"
+    },
+    {
+      "file": "ai-governance-klinicka-prax-nefrologia-6.png",
+      "sha256": "8262fd3b63da51d911a0658033087c1ef5d58fce0e224fa416cd9320bc85116b"
+    },
+    {
+      "file": "ai-governance-klinicka-prax-nefrologia-7.png",
+      "sha256": "1c5c8e1f07fca1b943a9b900076bee06202f048ddff0885ff37c94ff32c9aa34"
+    },
+    {
+      "file": "automatizovane-podavanie-inzulinu-dm2-dialyza-1.png",
+      "sha256": "85868d508edcab971a7f0c9df48a8c17e9a4c03e100fb1aabda51e53c4e72848"
+    },
+    {
+      "file": "automatizovane-podavanie-inzulinu-dm2-dialyza-2.png",
+      "sha256": "3a090d96711eec4592e6e205a3441b223d7a68d642db4c91eeed78d244c6302c"
+    },
+    {
+      "file": "automatizovane-podavanie-inzulinu-dm2-dialyza-3.png",
+      "sha256": "0d0d139cf7da88a8f6fdeb429bd590a487f6a4e27dafae213136e42fa59a3f2c"
+    },
+    {
+      "file": "automatizovane-podavanie-inzulinu-dm2-dialyza-4.png",
+      "sha256": "014f81297af9e6db7e34ee03379911336c67883974b9c84f4d7c28e2d7707797"
+    },
+    {
+      "file": "automatizovane-podavanie-inzulinu-dm2-dialyza-5.png",
+      "sha256": "ad5d29fe6b16308f2285c9d74774f0f52863d76292390ee2c45fa1716908d70a"
+    },
+    {
+      "file": "cetp-inhibicia-obicetrapib-lipidy-renalna-funkcia-1.png",
+      "sha256": "5350557df2892bde77cf9c1a9c5b3f8f4f3acffd52b5b467ca560938869d46e1"
+    },
+    {
+      "file": "cetp-inhibicia-obicetrapib-lipidy-renalna-funkcia-2.png",
+      "sha256": "3406d54f922b065c76271c23f55cb4f2f8ad6a579e8a115ee41d27cf4a1af9fc"
+    },
+    {
+      "file": "cetp-inhibicia-obicetrapib-lipidy-renalna-funkcia-3.png",
+      "sha256": "14c03d5c55b33e8b5193b969351433ea2e1bd8acfd1364ede74c52e2974ea295"
+    },
+    {
+      "file": "cetp-inhibicia-obicetrapib-lipidy-renalna-funkcia-4.png",
+      "sha256": "53ab23b345f66f7ebaceca3f0ee110dad860ca36f95dec1cd45d7e9dac45f3aa"
+    },
+    {
+      "file": "cetp-inhibicia-obicetrapib-lipidy-renalna-funkcia-5.png",
+      "sha256": "c23cef19ae97b9f43de2e8542cd454a8dbae03bbeb9558ef89503a0c8e28b6b9"
+    },
+    {
+      "file": "nizkoenergeticka-dieta-cvicenie-remisia-dm2-reset-1.png",
+      "sha256": "de485192dde412312e5270f2d40248a68a50fcb7a3eec490f48cf64034f3560e"
+    },
+    {
+      "file": "nizkoenergeticka-dieta-cvicenie-remisia-dm2-reset-2.png",
+      "sha256": "e504a280da89b1e57101762fe81d90605c09a09b27222b86b818a528bc0c5818"
+    },
+    {
+      "file": "nizkoenergeticka-dieta-cvicenie-remisia-dm2-reset-3.png",
+      "sha256": "b03fb538ce47c8f9995d2d1e80c288b8231f477535dabbfc780b973e688c013b"
+    },
+    {
+      "file": "nizkoenergeticka-dieta-cvicenie-remisia-dm2-reset-4.png",
+      "sha256": "19f17e4c27282fd358b2619cf77237f23d551048793e94ce79738e5e84bf6ea7"
+    },
+    {
+      "file": "nizkoenergeticka-dieta-cvicenie-remisia-dm2-reset-5.png",
+      "sha256": "62f3854fa02be7812782195c873c787335891d4601bdd1e42d9035ee970607ba"
+    },
+    {
+      "file": "renin-aldosteron-dapagliflozin-spironolakton-hfpef-1.png",
+      "sha256": "844f64dc4141f197ac5607501366400c60f5a10dc84aec27b7766f8ccbed530d"
+    },
+    {
+      "file": "renin-aldosteron-dapagliflozin-spironolakton-hfpef-2.png",
+      "sha256": "85621d4b2f038eaacf64fcb2ea6af637a4f5aadcfd4744e22c66b70eb95f2abf"
+    },
+    {
+      "file": "renin-aldosteron-dapagliflozin-spironolakton-hfpef-3.png",
+      "sha256": "bab7748e163651a386b117425f772f25eb0d82202e353d21b6c0f2a8d4fa0160"
+    },
+    {
+      "file": "renin-aldosteron-dapagliflozin-spironolakton-hfpef-4.png",
+      "sha256": "0737c76bc245d16413e4f34c5cf73a1cc76222bfbc3383feba6c83252b255a9f"
+    },
+    {
+      "file": "renin-aldosteron-dapagliflozin-spironolakton-hfpef-5.png",
+      "sha256": "c5423444e670e4c251ec13a3c1d9e2e955f579a2c41177d5d6de1be58cb0e737"
+    },
+    {
+      "file": "renin-aldosteron-dapagliflozin-spironolakton-hfpef-6.png",
+      "sha256": "7a426063ac98e680ff00364063b996ec557453fbc1f024fb06d06b041d6191e2"
+    }
+  ],
+  "limits": [
+    "No print proof, PDF/UA audit or testing across different PDF viewers.",
+    "No HTTP availability, redirects, authentication or payment checks.",
+    "Pixel identity is not asserted across lossy JPEG/WebP formats.",
+    "No new medical fact check or common historical recovery point/RPO/RTO validation."
+  ],
+  "pdfs_and_backups_modified": false,
+  "production_accessed": false,
+  "independent_pixel_identity_checks": [
+    {
+      "path": "pdf/ai-governance-klinicka-prax-nefrologia.pdf",
+      "exact_RGB_pixels": false,
+      "method": "independent ImageChops difference.getbbox after RGB decode; no rounded-score inference"
+    },
+    {
+      "path": "pdf/automatizovane-podavanie-inzulinu-dm2-dialyza.pdf",
+      "exact_RGB_pixels": false,
+      "method": "independent ImageChops difference.getbbox after RGB decode; no rounded-score inference"
+    },
+    {
+      "path": "pdf/cetp-inhibicia-obicetrapib-lipidy-renalna-funkcia.pdf",
+      "exact_RGB_pixels": false,
+      "method": "independent ImageChops difference.getbbox after RGB decode; no rounded-score inference"
+    },
+    {
+      "path": "pdf/nizkoenergeticka-dieta-cvicenie-remisia-dm2-reset.pdf",
+      "exact_RGB_pixels": false,
+      "method": "independent ImageChops difference.getbbox after RGB decode; no rounded-score inference"
+    },
+    {
+      "path": "pdf/renin-aldosteron-dapagliflozin-spironolakton-hfpef.pdf",
+      "exact_RGB_pixels": false,
+      "method": "independent ImageChops difference.getbbox after RGB decode; no rounded-score inference"
+    }
+  ]
+}
