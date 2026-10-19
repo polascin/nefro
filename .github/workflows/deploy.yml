@@ -128,6 +128,41 @@ jobs:
             -e "ssh -i ~/.ssh/deploy_key -p $PORT -o BatchMode=yes" \
             ./ "$DEPLOY_USER@$DEPLOY_HOST:$REMOTE_PATH/"
 
+      # Produkčný marker: deploy_info.php nie je v repozitári, generuje ho deploy.
+      # Kým ho písal iba SFTP hook, v režime Actions marker zamrzol na poslednom
+      # lokálnom nasadení — hooks/deploy.sh --remote-commit aj post-merge potom
+      # hlásili falošný drift a chceli znova nasadiť už nasadené súbory.
+      # Formát musí zostať zhodný s hooks/deploy.sh, lebo --remote-commit z neho
+      # číta DEPLOY_COMMIT regulárnym výrazom.
+      - name: Write production deploy marker
+        if: steps.cfg.outputs.configured == 'true'
+        env:
+          DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+          DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
+          DEPLOY_PORT: ${{ secrets.DEPLOY_PORT }}
+          REMOTE_PATH: ${{ steps.cfg.outputs.remote_path }}
+        run: |
+          set -euo pipefail
+          PORT="${DEPLOY_PORT:-22}"
+          COMMIT=$(git rev-parse --short "$GITHUB_SHA")
+          # Rovnaká zóna ako pri lokálnom nasadení, nech je zobrazený čas porovnateľný.
+          export TZ=Europe/Bratislava
+          TIMESTAMP=$(date '+%d.%m.%Y %H:%M')
+          UNIX_TS=$(date '+%s')
+          cat >deploy_info.generated.php <<PHPEOF
+          <?php
+          // Automaticky generované deploy skriptom - neupravovať manuálne
+          define('DEPLOY_TIME', '$TIMESTAMP');
+          define('DEPLOY_TIMESTAMP', $UNIX_TS);
+          define('DEPLOY_COMMIT', '$COMMIT');
+          define('DEPLOY_BRANCH', '$GITHUB_REF_NAME');
+          PHPEOF
+          scp -i ~/.ssh/deploy_key -P "$PORT" -o BatchMode=yes \
+            deploy_info.generated.php \
+            "$DEPLOY_USER@$DEPLOY_HOST:$REMOTE_PATH/deploy_info.php"
+          rm -f deploy_info.generated.php
+          echo "::notice::Produkčný marker nastavený na $COMMIT ($GITHUB_REF_NAME)."
+
       # UPSERT zmenených článkov: rsync nahrá add_*_article.php, ale obsah v DB
       # sa zmení až jeho spustením na serveri. Zámerne len --diff-filter=M
       # (upravené), nie A (nové) — pri prvom vložení šablóna rozosiela newsletter
