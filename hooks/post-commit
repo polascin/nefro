@@ -1,4 +1,15 @@
 #!/usr/bin/env bash
+#
+# post-commit: pushne aktuálnu vetvu a (iba z main) nasadí na produkciu.
+#
+# Vetva main je na GitHube chránená a vyžaduje úspešné status checks, takže
+# priamy push z lokálu odmietne (GH006). Bez fallbacku tým každý commit na main
+# — typicky synchronizácia PDF cez sync_article_pdfs.sh — skončil chybou a práca
+# ostala visieť len lokálne, pričom lokálna main sa rozišla s origin/main.
+#
+# Preto sa pri odmietnutí ochranou vetvy commit presmeruje na vedľajšiu vetvu
+# a založí sa PR. Nasadenie potom po zlúčení a `git pull` spustí post-merge,
+# ktorý si bázu deployu vypýta priamo od produkcie.
 
 set -uo pipefail
 
@@ -18,8 +29,80 @@ REMOTE_BRANCH=${REMOTE_BRANCH:-$BRANCH}
 UPSTREAM_REF="refs/remotes/$REMOTE/$REMOTE_BRANCH"
 BASE_REF=$(git rev-parse --verify "$UPSTREAM_REF" 2>/dev/null || true)
 
+# Odmietnutie ochranou vetvy je jediný prípad, v ktorom sa smie siahnuť po PR.
+# Výpadok siete, zlá identita či non-fast-forward musia naďalej skončiť chybou,
+# nech sa skutočný problém neschová za „založil som PR".
+is_protected_branch_rejection() {
+	grep -qiE 'GH006|protected branch|required status check|branch protection' <<<"$1"
+}
+
+slugify_subject() {
+	printf '%s' "$1" |
+		tr '[:upper:]' '[:lower:]' |
+		sed -e 's/[^a-z0-9]\+/-/g' -e 's/^-\+//' -e 's/-\+$//' |
+		cut -c1-40 |
+		sed -e 's/-\+$//'
+}
+
+open_pull_request_instead() {
+	local head_sha short subject slug pr_branch existing_url
+	head_sha=$(git rev-parse HEAD)
+	short=${head_sha:0:8}
+	subject=$(git log -1 --pretty=%s)
+	slug=$(slugify_subject "$subject")
+	slug=${slug:-commit}
+	pr_branch="auto/main-$slug-$short"
+
+	echo "[post-commit] Ochrana vetvy $REMOTE_BRANCH odmietla priamy push; presmerúvam na PR."
+
+	if ! git push "$REMOTE" "HEAD:refs/heads/$pr_branch"; then
+		echo "[post-commit] Push vetvy $pr_branch zlyhal; commit ostal len lokálne." >&2
+		return 1
+	fi
+
+	if ! command -v gh >/dev/null 2>&1; then
+		echo "[post-commit] gh nie je dostupné; vetva $pr_branch je pushnutá, PR založ ručne." >&2
+		return 0
+	fi
+
+	existing_url=$(gh pr list --head "$pr_branch" --state open --json url --jq '.[0].url' 2>/dev/null || true)
+	if [[ -n $existing_url ]]; then
+		echo "[post-commit] PR pre $pr_branch už existuje: $existing_url"
+	elif ! gh pr create \
+		--base "$REMOTE_BRANCH" \
+		--head "$pr_branch" \
+		--title "$subject" \
+		--body "Commit \`$short\` bol pôvodne určený priamo na \`$REMOTE_BRANCH\`; ochrana vetvy priamy push odmietla, preto ide cez PR.
+
+Po zlúčení nasaď na produkciu:
+
+\`\`\`bash
+git checkout $REMOTE_BRANCH && git pull
+\`\`\`
+
+\`post-merge\` si bázu deployu vypýta od produkcie, takže dobehne aj prípadný starší rozdiel."; then
+		echo "[post-commit] Vetva $pr_branch je pushnutá, ale PR sa nepodarilo založiť; sprav to ručne." >&2
+		return 0
+	fi
+
+	cat >&2 <<EOF
+[post-commit] Lokálna $BRANCH je teraz pred $REMOTE/$REMOTE_BRANCH. Po zlúčení PR sprav:
+[post-commit]   git fetch $REMOTE && git reset --hard $REMOTE/$REMOTE_BRANCH && git pull
+[post-commit] Produkciu nasadí post-merge; núdzovo: hooks/deploy.sh \$(hooks/deploy.sh --remote-commit)
+EOF
+	return 0
+}
+
 echo "[post-commit] Push $BRANCH -> $REMOTE/$REMOTE_BRANCH"
-if ! git push "$REMOTE" "HEAD:refs/heads/$REMOTE_BRANCH"; then
+PUSH_OUTPUT=$(git push "$REMOTE" "HEAD:refs/heads/$REMOTE_BRANCH" 2>&1)
+PUSH_RC=$?
+printf '%s\n' "$PUSH_OUTPUT"
+
+if ((PUSH_RC != 0)); then
+	if [[ $BRANCH == main ]] && is_protected_branch_rejection "$PUSH_OUTPUT"; then
+		open_pull_request_instead
+		exit $?
+	fi
 	echo "[post-commit] Push zlyhal; produkcia nebola zmenená." >&2
 	exit 1
 fi

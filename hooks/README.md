@@ -28,6 +28,27 @@ Výsledok musí byť `hooks`.
 1. `deploy_info.php` sa odošle v rovnakom SFTP batchi ako ostatné súbory.
 
 Ak push alebo SFTP zlyhá, hook vypíše chybu a deploy neoznačí ako úspešný.
+
+### Commit priamo na main a ochrana vetvy
+
+`main` je na GitHube chránená a vyžaduje úspešné status checks, takže priamy push
+z lokálu odmietne (`GH006`). Predtým tým každý commit na `main` — typicky
+synchronizácia PDF cez `sync_article_pdfs.sh` — skončil chybou, práca ostala len
+lokálne a lokálna `main` sa rozišla s `origin/main` (2026-10-19).
+
+`post-commit` preto pri odmietnutí **ochranou vetvy** commit presmeruje:
+
+1. pushne `HEAD` na vedľajšiu vetvu `auto/main-<slug-správy>-<sha8>`,
+1. cez `gh` založí PR na `main` (ak PR pre tú vetvu už existuje, len vypíše odkaz),
+1. vypíše príkazy na zosúladenie lokálnej `main` po zlúčení.
+
+Nasadenie potom po zlúčení a `git pull` spustí `post-merge`, ktorý si bázu deployu
+vypýta priamo od produkcie.
+
+Presmerovanie sa spúšťa **iba** pri hláške obsahujúcej `GH006`, `protected branch`,
+`required status check` alebo `branch protection`. Výpadok siete, zlá SSH identita
+či non-fast-forward naďalej končia chybou — skutočný problém sa nesmie schovať za
+„založil som PR". Bez dostupného `gh` zostane vetva pushnutá a PR treba založiť ručne.
 Strojovo lokálne nastavenie sa číta z `~/.config/nefro/deploy.env`, takže Mac
 a Windows môžu používať odlišné SSH identity bez synchronizácie cez repozitár.
 Na Macu je v tomto súbore nastavený host `websupport` z `~/.ssh/config`.
