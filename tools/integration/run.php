@@ -177,6 +177,13 @@ integrationCheck($deleted['status'] === 303 && calculatorFetchSavedResultById($p
 $publication = publications()[0];
 $created = createPublicationOrder($pdo, $publication, ['pdf'], ['email' => 'buyer@example.invalid', 'name' => 'SYNTHETIC BUYER']);
 $order = $created['order'];
+integrationCheck((float) $order['amount_eur'] === publicationPriceFor(['pdf'], $publication), 'stored order uses catalogue price');
+$fiction = findPublication('marza-z-krvi');
+if ($fiction === null) {
+    throw new RuntimeException('Missing fiction publication');
+}
+$fictionOrder = createPublicationOrder($pdo, $fiction, $fiction['formats'], ['email' => 'buyer@example.invalid']);
+integrationCheck((float) $fictionOrder['order']['amount_eur'] === 20.0, 'fiction bundle stores exactly 20 EUR');
 $download = '/download_publication.php?' . http_build_query(['vs' => $order['variable_symbol'], 't' => $created['token'], 'format' => 'pdf']);
 integrationCheck(integrationHttp($download)['status'] === 402, 'unpaid order cannot download');
 integrationCheck(markPublicationOrderPaid($pdo, (int) $order['id'], 'Synthetic settlement, no charge'), 'synthetic manual settlement');

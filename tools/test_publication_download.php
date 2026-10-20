@@ -56,4 +56,14 @@ publicationDownloadTest(
     'Binárny download endpoint je vylúčený z indexovania.',
 );
 
+$fiction = findPublication('marza-z-krvi');
+publicationDownloadTest($fiction !== null, 'Beletria musí byť v katalógu.');
+foreach ([['pdf'], ['epub'], ['pdf', 'epub'], ['pdf', 'epub', 'azw3', 'docx']] as $selection) {
+    publicationDownloadTest(publicationPriceFor($selection, $fiction) === 20.0, 'Cena beletrie je 20 € pri každom výbere formátov.');
+}
+publicationDownloadTest(publicationPriceFor([], $fiction) === 0.0, 'Prázdny výber nemá cenu.');
+$medical = findPublication('sk-nefro-baza-1');
+publicationDownloadTest(publicationPriceFor(['pdf'], $medical) === 7.0, 'Pôvodná cena jedného formátu zostáva 7 €.');
+publicationDownloadTest(publicationPriceFor(['pdf', 'epub'], $medical) === 12.0, 'Pôvodná cena balíka zostáva 12 €.');
+
 echo "Publication download: $checks checks PASS\n";

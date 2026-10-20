@@ -30,7 +30,7 @@ $freeCatalogue = freePublications();
   $pageTitle       = 'Publikácie | ' . $siteName;
   $canonicalUrl    = $baseUrl . 'publikacie.php';
   $seoDescription  = 'Bezplatné aj rozšírené e-knihy z portálu Nefro-projekt Slovensko '
-      . 'o nefrológii, dialýze a internej medicíne. PDF na priame stiahnutie aj viacformátové vydania.';
+      . 'o nefrológii, dialýze a internej medicíne. PDF na priame stiahnutie, viacformátové vydania aj beletria.';
   $seoKeywords     = 'nefrológia e-kniha, SK Nefro Báza, publikácie nefrológia, CKD kniha, '
       . 'dialýza e-book, odborná literatúra nefrológia';
   $ogImage         = $baseUrl . ($freeCatalogue[0]['cover_small'] ?? 'img/og-default.jpg');
@@ -86,7 +86,7 @@ $freeCatalogue = freePublications();
 
     <?php
     $headerTitle = 'Publikácie';
-    $headerIntro = 'Odborný obsah portálu v prehľadných e-knihách';
+    $headerIntro = 'Odborné publikácie a beletria v elektronickej podobe';
     $showLogo    = false;
     include 'header.php';
     ?>
@@ -95,11 +95,11 @@ $freeCatalogue = freePublications();
         <div class="content-wrapper">
 
             <section class="pub-intro">
-                <h2>E-knihy z portálu</h2>
+                <h2>E-knihy</h2>
                 <p class="pub-intro__lead">
                     Články na portáli zostávajú <strong>voľne dostupné a bez paywallu</strong>.
                     Nižšie nájdete bezplatné tematické publikácie na priame stiahnutie aj
-                    rozsiahle vydania celého ročníka vo viacerých formátoch.
+                    rozsiahle vydania celého ročníka vo viacerých formátoch aj beletriu.
                 </p>
             </section>
 
@@ -140,6 +140,7 @@ $freeCatalogue = freePublications();
                 </ul>
             </section>
 
+            <?php $sectionCatalogue = array_values(array_filter($catalogue, static fn (array $p): bool => ($p['category'] ?? '') !== 'beletria')); ?>
             <section class="pub-section" aria-labelledby="pub-extended-heading">
                 <div class="pub-section__heading">
                     <div>
@@ -149,14 +150,14 @@ $freeCatalogue = freePublications();
                     <p>Plné a kompendiálne vydania v slovenčine, angličtine, nemčine a taliančine.</p>
                 </div>
 
-            <?php if ($catalogue === []): ?>
+            <?php if ($sectionCatalogue === []): ?>
                 <div class="info-box-gray">
                     <p>Momentálne nie je v ponuke žiadna publikácia. Pripravujeme ďalšie zväzky —
                        o novinkách informujeme v <a href="index.php#kontakt">newsletteri</a>.</p>
                 </div>
             <?php else: ?>
                 <ul class="pub-catalogue">
-                    <?php foreach ($catalogue as $publication): ?>
+                    <?php foreach ($sectionCatalogue as $publication): ?>
                         <?php
                         $detailUrl   = 'publikacia.php?slug=' . urlencode((string) $publication['slug']);
                         $formatCodes = $publication['formats'];
@@ -176,7 +177,7 @@ $freeCatalogue = freePublications();
                                 <p class="pub-card__excerpt"><?= htmlspecialchars((string) $publication['excerpt']) ?></p>
 
                                 <ul class="pub-card__meta">
-                                    <li><?= (int) $publication['articles'] ?> článkov</li>
+                                    <?php if ((int) $publication['articles'] > 0): ?><li><?= (int) $publication['articles'] ?> článkov</li><?php endif; ?>
                                     <li><?= number_format((int) $publication['pages'], 0, ',', ' ') ?> strán</li>
                                     <?php /* Kompendium je bez obrázkov — „0 ilustrácií“ by znelo ako chyba. */ ?>
                                     <?php if ((int) $publication['images'] > 0): ?>
@@ -194,9 +195,78 @@ $freeCatalogue = freePublications();
                                 </p>
 
                                 <p class="pub-card__price">
-                                    <span class="pub-card__price-main"><?= htmlspecialchars(formatPublicationPrice(PUBLICATION_PRICE_SINGLE)) ?></span>
+                                    <span class="pub-card__price-main"><?= htmlspecialchars(formatPublicationPrice((float) ($publication['price_single'] ?? PUBLICATION_PRICE_SINGLE))) ?></span>
                                     <span class="pub-card__price-note">za jeden formát · všetky formáty
-                                        <?= htmlspecialchars(formatPublicationPrice(PUBLICATION_PRICE_BUNDLE)) ?></span>
+                                        <?= htmlspecialchars(formatPublicationPrice((float) ($publication['price_bundle'] ?? PUBLICATION_PRICE_BUNDLE))) ?></span>
+                                </p>
+
+                                <p class="pub-card__cta">
+                                    <a href="<?= htmlspecialchars($detailUrl) ?>" class="btn-primary">Detail a objednávka</a>
+                                </p>
+                            </div>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+            <?php endif; ?>
+            </section>
+
+            <?php $sectionCatalogue = array_values(array_filter($catalogue, static fn (array $p): bool => ($p['category'] ?? '') === 'beletria')); ?>
+            <section class="pub-section" aria-labelledby="pub-fiction-heading">
+                <div class="pub-section__heading">
+                    <div>
+                        <p class="pub-section__eyebrow">Romány a príbehy</p>
+                        <h2 id="pub-fiction-heading">Beletria</h2>
+                    </div>
+                    <p>Príbehy zo zdravotníckeho prostredia na čítanie v elektronickej podobe.</p>
+                </div>
+
+            <?php if ($sectionCatalogue === []): ?>
+                <div class="info-box-gray">
+                    <p>Momentálne nie je v ponuke žiadna publikácia. Pripravujeme ďalšie zväzky —
+                       o novinkách informujeme v <a href="index.php#kontakt">newsletteri</a>.</p>
+                </div>
+            <?php else: ?>
+                <ul class="pub-catalogue">
+                    <?php foreach ($sectionCatalogue as $publication): ?>
+                        <?php
+                        $detailUrl   = 'publikacia.php?slug=' . urlencode((string) $publication['slug']);
+                        $formatCodes = $publication['formats'];
+                        ?>
+                        <li class="pub-card">
+                            <a href="<?= htmlspecialchars($detailUrl) ?>" class="pub-card__cover-link"
+                               aria-label="Detail publikácie <?= htmlspecialchars((string) $publication['title']) ?>">
+                                <img src="<?= htmlspecialchars((string) $publication['cover_small']) ?>"
+                                     alt="Obálka publikácie <?= htmlspecialchars((string) $publication['title']) ?>"
+                                     class="pub-card__cover" width="600" height="900" loading="lazy">
+                            </a>
+                            <div class="pub-card__body">
+                                <h3 class="pub-card__title">
+                                    <a href="<?= htmlspecialchars($detailUrl) ?>"><?= htmlspecialchars((string) $publication['title']) ?></a>
+                                </h3>
+                                <p class="pub-card__subtitle"><?= htmlspecialchars((string) $publication['subtitle']) ?></p>
+                                <p class="pub-card__excerpt"><?= htmlspecialchars((string) $publication['excerpt']) ?></p>
+
+                                <ul class="pub-card__meta">
+                                    <?php if ((int) $publication['articles'] > 0): ?><li><?= (int) $publication['articles'] ?> článkov</li><?php endif; ?>
+                                    <li><?= number_format((int) $publication['pages'], 0, ',', ' ') ?> strán</li>
+                                    <?php /* Kompendium je bez obrázkov — „0 ilustrácií“ by znelo ako chyba. */ ?>
+                                    <?php if ((int) $publication['images'] > 0): ?>
+                                        <li><?= (int) $publication['images'] ?> ilustrácií</li>
+                                    <?php endif; ?>
+                                    <li><?= htmlspecialchars((string) $publication['edition']) ?></li>
+                                    <li>jazyk: <strong><?= htmlspecialchars((string) $publication['language']) ?></strong></li>
+                                </ul>
+
+                                <p class="pub-card__formats">
+                                    <span class="pub-card__formats-label">Formáty:</span>
+                                    <?php foreach (publicationFormatLabels($formatCodes) as $label): ?>
+                                        <span class="pub-format-badge"><?= htmlspecialchars($label) ?></span>
+                                    <?php endforeach; ?>
+                                </p>
+
+                                <p class="pub-card__price">
+                                    <span class="pub-card__price-main"><?= htmlspecialchars(formatPublicationPrice((float) ($publication['price_single'] ?? PUBLICATION_PRICE_SINGLE))) ?></span>
+                                    <span class="pub-card__price-note">za ľubovoľný výber dostupných formátov</span>
                                 </p>
 
                                 <p class="pub-card__cta">
