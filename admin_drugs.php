@@ -297,8 +297,12 @@ if ($fPub === 'published') {
     $where .= ' AND is_published = 0';
 }
 if ($fQuery !== '') {
-    $where .= ' AND (name_sk LIKE :q ESCAPE \'!\' OR name_intl LIKE :q ESCAPE \'!\' OR drug_class LIKE :q ESCAPE \'!\' OR atc_code LIKE :q ESCAPE \'!\')';
-    $params['q'] = likeSearchPattern($fQuery);
+    $pattern = likeSearchPattern($fQuery);
+    $where .= ' AND (name_sk LIKE :q_name_sk ESCAPE \'!\' OR name_intl LIKE :q_name_intl ESCAPE \'!\' OR drug_class LIKE :q_class ESCAPE \'!\' OR atc_code LIKE :q_atc ESCAPE \'!\')';
+    $params['q_name_sk'] = $pattern;
+    $params['q_name_intl'] = $pattern;
+    $params['q_class'] = $pattern;
+    $params['q_atc'] = $pattern;
 }
 
 $drugs = [];

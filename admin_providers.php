@@ -421,8 +421,13 @@ if ($fPriority !== '') {
     $params['priority'] = $fPriority;
 }
 if ($fQuery !== '') {
-    $where .= ' AND (name LIKE :q ESCAPE \'!\' OR email LIKE :q ESCAPE \'!\' OR contact_person LIKE :q ESCAPE \'!\' OR notes LIKE :q ESCAPE \'!\' OR address LIKE :q ESCAPE \'!\')';
-    $params['q'] = likeSearchPattern($fQuery);
+    $pattern = likeSearchPattern($fQuery);
+    $where .= ' AND (name LIKE :q_name ESCAPE \'!\' OR email LIKE :q_email ESCAPE \'!\' OR contact_person LIKE :q_contact ESCAPE \'!\' OR notes LIKE :q_notes ESCAPE \'!\' OR address LIKE :q_address ESCAPE \'!\')';
+    $params['q_name'] = $pattern;
+    $params['q_email'] = $pattern;
+    $params['q_contact'] = $pattern;
+    $params['q_notes'] = $pattern;
+    $params['q_address'] = $pattern;
 }
 
 // ── Export (bod 1) — CSV / JSON / vCard; rešpektuje aktuálne filtre; admin už overený ──

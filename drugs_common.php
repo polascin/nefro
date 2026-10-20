@@ -118,8 +118,13 @@ function dgFetchDrugs(\PDO $pdo, string $category = '', string $query = '', int 
         $params['cat'] = $category;
     }
     if ($query !== '') {
-        $sql .= " AND (name_sk LIKE :q OR name_intl LIKE :q OR drug_class LIKE :q OR atc_code LIKE :q)";
-        $params['q'] = '%' . $query . '%';
+        // Natívne PDO placeholdery sa v jednom príkaze nesmú opakovať.
+        $pattern = '%' . $query . '%';
+        $sql .= " AND (name_sk LIKE :q_name_sk OR name_intl LIKE :q_name_intl OR drug_class LIKE :q_class OR atc_code LIKE :q_atc)";
+        $params['q_name_sk'] = $pattern;
+        $params['q_name_intl'] = $pattern;
+        $params['q_class'] = $pattern;
+        $params['q_atc'] = $pattern;
     }
     $sql .= " ORDER BY name_sk ASC LIMIT " . (int) $limit;
     $stmt = $pdo->prepare($sql);
