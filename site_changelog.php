@@ -55,7 +55,7 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
-                'date' => '2026-10-20 09:16',
+                'date' => '2026-10-20 16:53',
                 'category' => 'content',
                 'title' => 'Beletria: Marža z krvi',
                 'description' => 'V publikáciách pribudla sekcia Beletria a ilustrovaný triler Marža z krvi. E-kniha stojí 20 € a je dostupná v PDF, EPUB, AZW3 a DOCX.',
