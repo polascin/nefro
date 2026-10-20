@@ -25,15 +25,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v5
-        with:
-          # These binary directories are already excluded by .trunk/trunk.yaml.
-          fetch-depth: 0
-          sparse-checkout-cone-mode: false
-          sparse-checkout: |
-            /*
-            !/pdf/
-            !/img/
-            !/uploads/
 
       - name: Trunk Check
         uses: trunk-io/trunk-action@v1
