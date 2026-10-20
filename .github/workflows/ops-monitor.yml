@@ -1,0 +1,66 @@
+---
+# Prevádzkový monitor produkcie (plán rozvoja, etapa 1: prevádzkové signály).
+# Denne overí verejné odpovede portálu bez prístupu k serveru a bez secrets.
+# Zlyhanie behu GitHub oznámi e-mailom (nastavenie notifikácií účtu);
+# serverovú časť (fronty, cron, marker) kontroluje ops_health.php cez cron.
+name: Production monitor
+on:
+  schedule:
+    - cron: "25 4 * * *" # 06:25 Europe/Bratislava v letnom čase
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ops-monitor
+  cancel-in-progress: false
+jobs:
+  monitor:
+    name: Public response checks
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      BASE_URL: https://nefro.polascin.net
+      # Prefix produkčnej cesty; jeho výskyt v tele znamená únik cesty servera.
+      PATH_LEAK_MARKER: /data/8/
+    steps:
+      - name: Public pages
+        shell: bash
+        run: |
+          set -euo pipefail
+          failures=0
+          fail() { echo "::error::$1"; failures=$((failures + 1)); }
+          php_error='<b>(Fatal error|Parse error|Warning|Deprecated)</b>:|^(Fatal error|Parse error|Warning): '
+          for path in "/" "/privacy.php" "/terms.php" "/calculators.php" "/search.php?q=hyperkali%C3%A9mia"; do
+            body=$(mktemp); headers=$(mktemp)
+            # Predvolený curl UA prechádza WAF hostingu; skrátené prehliadačové UA vracia 466.
+            code=$(curl -sS --max-time 30 -o "$body" -D "$headers" -w '%{http_code}' "${BASE_URL}${path}" || echo 000)
+            size=$(wc -c <"$body")
+            echo "GET ${path} -> HTTP ${code}, ${size} B"
+            [[ "$code" == "200" ]] || fail "${path}: HTTP ${code}"
+            grep -qiE '^content-security-policy:' "$headers" || fail "${path}: chýba Content-Security-Policy"
+            grep -qiE '^strict-transport-security:' "$headers" || fail "${path}: chýba Strict-Transport-Security"
+            if grep -qE "$php_error" "$body"; then fail "${path}: telo obsahuje chybový výstup PHP"; fi
+            if grep -qF "$PATH_LEAK_MARKER" "$body"; then fail "${path}: telo prezrádza cestu servera"; fi
+            titles=$(grep -oi '<title' "$body" | wc -l)
+            [[ "$titles" == "1" ]] || fail "${path}: počet <title> je ${titles}"
+            rm -f "$body" "$headers"
+          done
+          [[ "$failures" == "0" ]] || { echo "::error::${failures} zlyhaní verejných kontrol."; exit 1; }
+
+      - name: Internal paths stay denied
+        shell: bash
+        run: |
+          set -euo pipefail
+          failures=0
+          internal_paths=(
+            "/AGENTS.md" "/hooks/deploy.sh" "/pdf_generator.php"
+            "/ops_health.php" "/private/logs/ops_health.log" "/tools/dependencies.json"
+          )
+          for path in "${internal_paths[@]}"; do
+            code=$(curl -sS --max-time 30 -o /dev/null -w '%{http_code}' "${BASE_URL}${path}" || echo 000)
+            echo "GET ${path} -> HTTP ${code}"
+            if [[ "$code" != "403" && "$code" != "404" ]]; then
+              echo "::error::${path}: očakávané 403/404, dostal ${code}"; failures=$((failures + 1))
+            fi
+          done
+          [[ "$failures" == "0" ]] || exit 1

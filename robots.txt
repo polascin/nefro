@@ -30,6 +30,8 @@ Disallow: /admin_publication_orders.php
 Disallow: /query_article.php
 Disallow: /setup_db.php
 Disallow: /archive_cleanup.php
+Disallow: /ops_health.php
+Disallow: /backup_snapshot.php
 Disallow: /botguard_token.php
 Disallow: /botguard_unban.php
 Disallow: /newsletter_worker.php

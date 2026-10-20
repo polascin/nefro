@@ -55,7 +55,14 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
-                'date' => '2026-10-18 13:10',
+                'date' => '2026-10-20 12:00',
+                'category' => 'content',
+                'title' => 'PDF verzie článkov s funkčnými webovými odkazmi',
+                'description' => 'Novo generované PDF verzie článkov odkazujú na súvisiace články a ilustrácie cez webové adresy portálu, takže odkazy fungujú aj mimo servera.',
+                'url' => '',
+            ],
+            [
+                'date' => '2026-10-20 12:00',
                 'category' => 'content',
                 'title' => 'Vyhľadávanie liekov a štúdií opäť vracia výsledky',
                 'description' => 'Textové hľadanie v databáze liekov a klinických štúdií prestalo pri natívnych parametroch databázy potichu vracať prázdny zoznam.',

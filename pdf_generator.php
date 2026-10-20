@@ -81,6 +81,40 @@ function webpToPngFallbackPath(string $webpPath): ?string
 }
 
 /**
+ * Verejný základ odkazov v PDF. Generátor renderuje HTML s <base href="file://…">,
+ * takže relatívny odkaz na článok alebo ilustráciu by sa do PDF uložil ako
+ * absolútna lokálna cesta servera (anotácia typu Launch), ktorá u čitateľa
+ * nefunguje a prezrádza adresárovú štruktúru. Preto sa odkazy prepisujú na HTTPS.
+ */
+const ARTICLE_PDF_PUBLIC_BASE = 'https://nefro.polascin.net';
+
+/**
+ * Prepíše href z obsahu článku na prenositeľnú podobu pre PDF:
+ *  - absolútne http(s) URL ostávajú;
+ *  - vnútorné kotvy (#id) ostávajú (odkazy v rámci dokumentu);
+ *  - relatívne cesty portálu (article.php?slug=…, /img/…, lieky.php) dostanú
+ *    verejný HTTPS základ;
+ *  - všetko ostatné (javascript:, mailto:, data:, file:, cesty s „..") sa odstráni.
+ */
+function articlePdfPortableHref(string $href): ?string
+{
+    $href = trim($href);
+    if ($href === '') {
+        return null;
+    }
+    if (preg_match('#^https?://#i', $href) === 1) {
+        return $href;
+    }
+    if (preg_match('~^#[A-Za-z0-9_.:-]+$~D', $href) === 1) {
+        return $href;
+    }
+    if (preg_match('~^[A-Za-z0-9_./?&=%#-]+$~D', $href) !== 1 || str_contains($href, '..')) {
+        return null;
+    }
+    return ARTICLE_PDF_PUBLIC_BASE . '/' . ltrim($href, '/');
+}
+
+/**
  * Z PDF vstupu odstráni aktívny obsah a všetky zdroje okrem existujúcich
  * obrázkov v lokálnom /img. Generátor tak nemôže čítať konfiguráciu ani robiť
  * HTTP požiadavky podľa HTML uloženého administrátorom.
@@ -156,9 +190,11 @@ function sanitizeArticlePdfContent(string $content): string
         }
 
         if ($element->hasAttribute('href')) {
-            $href = trim($element->getAttribute('href'));
-            if (preg_match('#^https?://#i', $href) !== 1 && preg_match('~^[A-Za-z0-9_./?&=%#-]+$~D', $href) !== 1) {
+            $portable = articlePdfPortableHref($element->getAttribute('href'));
+            if ($portable === null) {
                 $element->removeAttribute('href');
+            } else {
+                $element->setAttribute('href', $portable);
             }
         }
     }
