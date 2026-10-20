@@ -539,3 +539,23 @@ Nástroj odmieta existujúci výstupný adresár, neznáme ciele, odlišný poč
 lokálnych anotácií aj nebezpečné alebo duplicitné cesty v manifeste. Očakáva
 presne päť auditovaných PDF a päť ilustrácií. Nie je všeobecným generátorom PDF;
 pri odlišnom rozložení sa má zastaviť a vyžadovať novú kontrolu.
+
+## Časovo konzistentný zálohovací postup (20. 10. 2026)
+
+Zistený nesúlad medzi zálohou DB poskytovateľa (03:21) a súborovou zálohou
+z predchádzajúceho dňa rieši skript `backup_snapshot.php` v koreni projektu.
+V jednom behu vytvorí SQL dump v jednej transakcii s konzistentným snapshotom
+(tabuľky, pohľady, triggery, procedúry, udalosti) a hneď potom tar archív
+adresárov mimo gitu (`pdf`, `img`, `uploads`, `private/publications`).
+Výstup v `private/backups/<UTC-čas>/` obsahuje `db.sql.gz`, `files.tar`,
+`manifest.json` s počtami riadkov a `SHA256SUMS`. Neúplný snapshot má v
+manifeste `result: incomplete` a retencia ho odstráni prednostne.
+
+Obnova prebieha podľa tohto návodu: `run.py` prijme `db.sql.gz` ako SQL
+archív a `files.tar` ako súborový vstup. Kontrola konzistencie referencií
+PDF a obrázkov sa potom vykonáva nad spoločným časovým bodom, nie nad dvoma
+zálohami z rôznych dní. Skript je overený izolovanými regresiami
+(`tools/test_backup_snapshot.php`: SQL hodnoty, dávky INSERT, tar argumenty,
+retencia, dry run); skutočný beh na produkcii a zaradenie do cronu sú
+rozhodnutím vlastníka a v tomto zápise nie sú doložené. RPO zodpovedá
+intervalu cronu; RTO sa meria až skúšobnou obnovou takto vytvoreného snapshotu.

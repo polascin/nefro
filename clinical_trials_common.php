@@ -94,8 +94,12 @@ function ctFetchTrials(\PDO $pdo, string $category = '', string $query = '', int
         $params['cat'] = $category;
     }
     if ($query !== '') {
-        $sql .= " AND (brief_title LIKE :q OR conditions LIKE :q OR lead_sponsor LIKE :q)";
-        $params['q'] = '%' . $query . '%';
+        // Natívne PDO placeholdery sa v jednom príkaze nesmú opakovať.
+        $pattern = '%' . $query . '%';
+        $sql .= " AND (brief_title LIKE :q_title OR conditions LIKE :q_conditions OR lead_sponsor LIKE :q_sponsor)";
+        $params['q_title'] = $pattern;
+        $params['q_conditions'] = $pattern;
+        $params['q_sponsor'] = $pattern;
     }
     $sql .= " ORDER BY last_update_posted DESC, id DESC LIMIT " . (int) $limit;
     $stmt = $pdo->prepare($sql);

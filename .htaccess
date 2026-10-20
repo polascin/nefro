@@ -235,6 +235,12 @@ ServerSignature Off
 <Files "archive_cleanup.php">
     Require all denied
 </Files>
+<Files "ops_health.php">
+    Require all denied
+</Files>
+<Files "backup_snapshot.php">
+    Require all denied
+</Files>
 <Files "update_sitemap.php">
     Require all denied
 </Files>

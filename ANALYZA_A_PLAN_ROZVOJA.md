@@ -120,8 +120,9 @@ v izolácii. Pri každej etape zachovať súčasné bezpečnostné kontroly a uv
 
 Pripravené sú úlohy izolovaného integračného prostredia a povinného regresného
 jobu. Postup, rozsah, piny a bezpečnostné hranice opisuje
-[integračný návod](tools/integration/README.md). Prevádzkové alarmy a skúšobná
-obnova záloh z tretej úlohy etapy zostávajú samostatnou ďalšou prácou.
+[integračný návod](tools/integration/README.md). Skúšobná obnova záloh je
+doložená nižšie; prevádzkové signály a konzistentné zálohy dopĺňa oddiel
+„Dokončenie etapy 1 a register závislostí (20. 10. 2026)“.
 
 Sada používa dočasnú MariaDB v UTC, PHP 8.5.8 v pásme Europe/Bratislava,
 Mailpit so skutočným overovaným STARTTLS a vývojový SMS provider. Platobná
@@ -248,3 +249,21 @@ Izolovaná obnova DB znovu overila 37 tabuliek a 144 649 riadkov.
 Pôvodné súbory, zálohy ani produkcia sa nemenili. Rozsah výsledku PASS,
 zostávajúci všeobecný výsledok PARTIAL a jeho dôvody sú v
 [protokole obnovy](tools/restore/README.md#oprava-nových-pracovných-pdf-18-október-2026).
+
+## Dokončenie etapy 1 a register závislostí (20. 10. 2026)
+
+Zvyšné úlohy prvej etapy a prvá úloha druhej etapy sú implementované a kryté
+izolovanými regresiami; výsledky kontrol a nasadenie sú v `.audit.md` (Beh 132).
+
+| Úloha                                | Stav                                                                                                                                                                                                                                    |
+| ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| P0: prevádzkové signály              | `ops_health.php` (CLI): vek frontov z času DB, zlyhania za 24 h, vek retenčného logu, produkčný marker, verejné odpovede; `--mail` pri FAIL. Workflow `ops-monitor.yml` denne overuje verejné odpovede bez secrets. 44 kontrol v teste. |
+| P0: konzistentná záloha              | `backup_snapshot.php`: DB dump v konzistentnom snapshote + tar súborov mimo gitu v jednom behu, manifest so SHA-256 a počtami riadkov, retencia. 26 kontrol v teste. Cron a prvý produkčný beh vyžadujú rozhodnutie vlastníka.          |
+| P1: register závislostí              | `tools/dependencies.json` + `tools/dependency_register.php` (`--check`/`--update`) a `DEPENDENCIES.md`; regresná brána odmietne zmenu dodanej knižnice bez aktualizácie registra. 83 súborov v 5 položkách.                             |
+| Nález z obnovy: lokálne odkazy v PDF | `pdf_generator.php` prepisuje relatívne odkazy článku na HTTPS; interné kotvy ostávajú, nebezpečné schémy sa odstránia. Platí pre novo generované PDF; plošná regenerácia existujúcich PDF je produkčný zásah na rozhodnutie vlastníka. |
+| Otvorený návrh PR 24 (Cursor)        | Duplicitné PDO placeholdery v hľadaní liekov, štúdií a poskytovateľov; zlúčené do vetvy auditu s pôvodným testom (21 kontrol).                                                                                                          |
+
+Ostávajú úlohy etapy 2 a 3 (spoľahlivé fronty so schémou outbox/claim, oddelenie
+bootstrapov, normalizácia autorov, klinické referenčné testy, prístupnosť),
+ktoré vyžadujú migrácie alebo širšiu redakčnú a klinickú účasť. RPO/RTO sa
+potvrdí až skúšobnou obnovou zo snapshotu vytvoreného novým postupom.

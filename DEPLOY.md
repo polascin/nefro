@@ -23,6 +23,27 @@ repository variable. Pri návrate na SFTP postupuj opačne: najprv vypni Actions
 počkaj na dokončenie rozbehnutých jobov a až potom znovu povoľ lokálny deploy. Over drift
 a synchronizuj PDF až po dokončení všetkých nasadení.
 
+## Prevádzkové signály a zálohy
+
+Verejné odpovede kontroluje denne workflow `.github/workflows/ops-monitor.yml`
+(HTTP 200, jediný `<title>`, bez PHP chýb a úniku cesty, hlavičky CSP a HSTS,
+interné cesty 403/404). Beží bez secrets; zlyhanie behu oznámi GitHub podľa
+notifikácií účtu. Serverovú časť pokrýva `php ops_health.php` (CLI): vek
+najstaršej čakajúcej položky vo frontoch newslettera a právnych oznámení,
+zlyhania za 24 h, vek logu retenčného cronu, produkčný marker a tie isté
+verejné kontroly; `--mail` pošle agregované upozornenie na `SMTP_ADMIN_EMAIL`
+pri výsledku FAIL. Záznamy bez osobných údajov sa pripájajú do
+`private/logs/ops_health.log`. Odporúčaný cron: denne po behu workerov.
+
+Časovo konzistentnú aplikačnú zálohu vytvára `php backup_snapshot.php`:
+SQL dump v jednej transakcii s konzistentným snapshotom a tar adresárov mimo
+gitu (`pdf`, `img`, `uploads`, `private/publications`) v tom istom behu,
+s manifestom, počtami riadkov a SHA-256. Snapshoty sú v `private/backups/`,
+predvolená retencia sú dva kompletné snapshoty (jeden snapshot zaberá približne
+1,7 GB). Odporúčaný cron: denne po zálohe poskytovateľa. Obnova a overenie
+podľa `tools/restore/README.md`. Zápis cron úloh na serveri je produkčný zásah,
+ktorý vyžaduje samostatné rozhodnutie vlastníka.
+
 ## Povinné regresie
 
 Pred nasadením musí prejsť izolovaná sada podľa
