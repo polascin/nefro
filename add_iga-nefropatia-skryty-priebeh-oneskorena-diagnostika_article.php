@@ -171,7 +171,7 @@ HTML,
 ];
 
 $result = upsertArticles($pdo, $articles, 'odborne', [
-    'enqueue_newsletter' => true,
+    'enqueue_newsletter' => false,
     'regenerate_pdf' => true,
     'log_prefix' => 'add_iga-nefropatia-skryty-priebeh-oneskorena-diagnostika_article',
 ]);
