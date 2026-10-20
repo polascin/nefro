@@ -35,7 +35,7 @@ Neodstraňuj znak len preto, že sa niekedy spája s AI textom. Zoznam, dlhá ve
 ## Jazyk a hlas
 
 - Odpovedaj v jazyku textu, ak používateľ neurčí inak.
-- Pri slovenčine používaj prirodzenú spisovnú slovenčinu a presnú diakritiku. Odstraňuj doslovné kalky a cudzie väzby, nie zaužívané výrazy.
+- Pri slovenčine používaj prirodzenú spisovnú slovenčinu a presnú diakritiku. Dôsledne odstraňuj a koriguj anglicizmy, bohemizmy, čechizmy, doslovné kalky a cudzie väzby; nahraď ich prirodzenou spisovnou slovenčinou (pri zachovaní ustálených odborných výrazov, ak patria do kontextu).
 - Zachovaj register primeraný situácii. Humanizácia neznamená automaticky hovorovosť, humor ani tykanie.
 - Ak používateľ dodá ukážku vlastného písania, odvoď z nej mieru priamosti, rytmus, slovník a formálnosť. Nekopíruj náhodné chyby ani citlivé údaje.
 - Bez ukážky nevydávaj univerzálny štýl za osobný hlas autora. Zvoľ prirodzenú, vecnú podobu primeranú žánru.

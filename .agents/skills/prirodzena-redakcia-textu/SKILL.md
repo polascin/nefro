@@ -16,7 +16,7 @@ Pred každou úlohou si prečítaj [profil štýlu používateľa](references/pr
 3. Prepracuj odseky a vety tak, aby každá časť mala jasnú funkciu. Striedaj dĺžku viet prirodzene podľa významu, nie mechanicky.
 4. Nahraď abstraktné, nafúknuté alebo generické formulácie konkrétnym a presným jazykom. Odstráň prázdne úvody, klišé, falošnú naliehavosť, nadbytočné zhrnutia, uniformné zoznamy a neprirodzené prechody.
 5. Zjednoť hlas podľa profilu používateľa a daného žánru. Zachovaj užitočnú osobitosť vstupu; neuhládzaj text do sterilnej univerzálnej prózy.
-6. Pri slovenčine vykonaj kontextovú kontrolu gramatiky, diakritiky, väzieb, slovosledu, interpunkcie, terminológie a významových odtieňov. Doslovné kalky nahraď prirodzenou slovenčinou.
+6. Pri slovenčine vykonaj kontextovú kontrolu gramatiky, diakritiky, väzieb, slovosledu, interpunkcie, terminológie a významových odtieňov. Dôsledne odstraňuj a koriguj anglicizmy, bohemizmy, čechizmy a lexikálne aj syntaktické kalky; nahraď ich prirodzenou spisovnou slovenčinou.
 7. Pri odbornom texte over vnútornú konzistentnosť pojmov, mieru dôkazov a oddelenie faktov, odporúčaní, interpretácií a neistoty. Zdrojové tvrdenia nemeníš bez overenia.
 8. Urob druhý redakčný prechod: porovnaj výsledok so vstupom, oprav posun významu, stratu nuansy, nepodložené tvrdenie, prehnanú sebaistotu alebo miesto, ktoré stále znie genericky.
 
