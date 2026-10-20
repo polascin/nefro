@@ -71,7 +71,7 @@ Na Windows nastav `export PYTHONIOENCODING=utf-8`.
 
 ### Slovenská jazyková korektúra
 
-- „dôkazový základ" / „dôkazová základňa", **nie** „evidenčný"; vyhýbaj sa kalkom z angličtiny.
+- Dôsledne odstraňuj a koriguj anglicizmy, bohemizmy, čechizmy a lexikálne aj syntaktické kalky (napr. „dôkazový základ" / „dôkazová základňa", **nie** „evidenčný").
 - Konzistentná odborná terminológia naprieč celým článkom.
 - Prechyľovanie priezvisk podľa pohlavia autora — over, nehádaj.
 

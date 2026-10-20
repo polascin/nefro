@@ -248,6 +248,7 @@ Skontroluj:
 - konzistentné používanie odbornej terminológie,
 - rozvinutie skratiek pri prvom použití,
 - presný preklad výsledkov a koncových ukazovateľov,
+- dôsledné odstránenie a korektúru anglicizmov, bohemizmov, čechizmov a lexikálnych či syntaktických kalkov,
 - prirodzenosť slovenských formulácií,
 - konzistentný zápis jednotiek a desatinných čiarok,
 - rozlíšenie percent a percentuálnych bodov,
