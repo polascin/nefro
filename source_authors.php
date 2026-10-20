@@ -31,6 +31,9 @@ function getSourceArticleAuthors(): array {
         // Autori primárnej práce Clin Interv Aging 2026, doi 10.2147/CIA.S623634 (PMID 42829622) –
         // 10 mien overených cez Crossref a PubMed 2026-10-20.
         'aki-rizikovy-model-starsi-zlyhavanie-srdca' => ['Mingyu Liu', 'Dongxia Qiu', 'Shuang Qiu', 'Wanqing Huang', 'Lemuge Qi', 'Jinjie Zhou', 'Xiaolan Gong', 'Yongyuan Tao', 'Jiuxu Bai', 'Ning Cao'],
+        // Prednasajuci vzdelavacej aktivity ReachMD / Global Learning Collaborative
+        // (uvolnene 31. 8. 2026) – byline overeny priamo z verejneho prepisu 2026-10-20.
+        'iga-nefropatia-skryty-priebeh-oneskorena-diagnostika' => ['Jonathan Barratt'],
         // Autori primárnej randomizovanej štúdie SoBic (Sci Rep 2026, doi 10.1038/s41598-026-68492-9) –
         // 10 mien overených z plného textu a metadát vydavateľa 2026-10-18.
         'metabolicka-acidoza-ckd-vyssi-vs-nizsi-ciel-hydrogenuhlicitanu-sobic' => ['Martina Gaggl', 'Christof Aigner', 'Alexandra Repitz', 'Sonja Riesenhuber', 'Christopher Sliber', 'Moritz Madern', 'Andreas Gleiss', 'Melanie Fraunschiel', 'Alice Schmidt', 'Gere Sunder-Plassmann'],
