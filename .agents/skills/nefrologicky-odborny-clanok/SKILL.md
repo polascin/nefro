@@ -113,8 +113,8 @@ Ak podstatné údaje zostanú nedostupné:
 
 Priprav pracovnú evidenciu s položkami:
 
-| Tvrdenie | Zdroj a miesto | Úroveň prístupu | Obmedzenie | Použitie |
-| :--- | :--- | :--- | :--- | :--- |
+| Tvrdenie                             | Zdroj a miesto                     | Úroveň prístupu                            | Obmedzenie          | Použitie                      |
+| :----------------------------------- | :--------------------------------- | :----------------------------------------- | :------------------ | :---------------------------- |
 | Konkrétny výsledok alebo odporúčanie | Tabuľka, časť textu alebo abstrakt | Plný text, abstrakt alebo sekundárny zdroj | Neistota či nesúlad | Použiť, upraviť alebo vyradiť |
 
 Evidencia slúži na kontrolu. Nemusí byť súčasťou článku.
@@ -248,6 +248,7 @@ Skontroluj:
 - konzistentné používanie odbornej terminológie,
 - rozvinutie skratiek pri prvom použití,
 - presný preklad výsledkov a koncových ukazovateľov,
+- dôsledné odstránenie a korektúru anglicizmov, bohemizmov, čechizmov a lexikálnych či syntaktických kalkov,
 - prirodzenosť slovenských formulácií,
 - konzistentný zápis jednotiek a desatinných čiarok,
 - rozlíšenie percent a percentuálnych bodov,
@@ -345,7 +346,6 @@ Nevypisuj interné uvažovanie. Uvádzaj overiteľné výsledky kontroly a konkr
 - [ ] Opakovaná revízia nezmenila odborný význam.
 - [ ] Zostávajúce nedostatky sú priznané.
 - [ ] Označenie pripravenosti zodpovedá skutočnému overeniu.
-
 
 ## 11. Dôsledná humanizácia odborného textu
 
