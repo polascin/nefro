@@ -36,6 +36,10 @@ if ($publication === null || !$publication['is_available']) {
     $publication = null;
 }
 
+$priceSingle = (float) ($publication['price_single'] ?? PUBLICATION_PRICE_SINGLE);
+$priceBundle = (float) ($publication['price_bundle'] ?? PUBLICATION_PRICE_BUNDLE);
+$isFiction = ($publication['category'] ?? '') === 'beletria';
+
 $isLocalDev   = function_exists('isAppLocalDev') && isAppLocalDev();
 $errors       = [];
 $formValues   = [
@@ -230,8 +234,8 @@ markFormLoadTime('publication_order');
 
       $offers = [];
       foreach ([
-          ['name' => 'Jeden formát', 'price' => PUBLICATION_PRICE_SINGLE],
-          ['name' => 'Všetky formáty', 'price' => PUBLICATION_PRICE_BUNDLE],
+          ['name' => 'Jeden formát', 'price' => $priceSingle],
+          ['name' => 'Všetky formáty', 'price' => $priceBundle],
       ] as $offer) {
           $offers[] = [
               '@type'         => 'Offer',
@@ -330,9 +334,9 @@ markFormLoadTime('publication_order');
                         · <?= htmlspecialchars((string) $publication['edition']) ?></p>
 
                     <dl class="pub-hero__facts">
-                        <div><dt>Článkov</dt><dd><?= number_format((int) $publication['articles'], 0, ',', ' ') ?></dd></div>
+                        <?php if (!$isFiction): ?><div><dt>Článkov</dt><dd><?= number_format((int) $publication['articles'], 0, ',', ' ') ?></dd></div><?php endif; ?>
                         <div><dt>Strán</dt><dd><?= number_format((int) $publication['pages'], 0, ',', ' ') ?></dd></div>
-                        <div><dt>Slov</dt><dd><?= number_format((int) $publication['words'], 0, ',', ' ') ?></dd></div>
+                        <?php if (isset($publication['words'])): ?><div><dt>Slov</dt><dd><?= number_format((int) $publication['words'], 0, ',', ' ') ?></dd></div><?php endif; ?>
                         <?php if ((int) $publication['images'] > 0): ?>
                             <div><dt>Ilustrácií</dt><dd><?= number_format((int) $publication['images'], 0, ',', ' ') ?></dd></div>
                         <?php endif; ?>
@@ -340,9 +344,9 @@ markFormLoadTime('publication_order');
                     </dl>
 
                     <p class="pub-hero__price">
-                        <span class="pub-hero__price-main"><?= htmlspecialchars(formatPublicationPrice(PUBLICATION_PRICE_SINGLE)) ?></span>
+                        <span class="pub-hero__price-main"><?= htmlspecialchars(formatPublicationPrice($priceSingle)) ?></span>
                         <span class="pub-hero__price-note">jeden formát &nbsp;·&nbsp; všetky formáty
-                            <strong><?= htmlspecialchars(formatPublicationPrice(PUBLICATION_PRICE_BUNDLE)) ?></strong></span>
+                            <strong><?= htmlspecialchars(formatPublicationPrice($priceBundle)) ?></strong></span>
                     </p>
                     <p class="pub-hero__cta">
                         <a href="#objednavka" class="btn-primary">Objednať</a>
@@ -444,10 +448,15 @@ markFormLoadTime('publication_order');
                     </table>
                 </div>
                 <p class="pub-note">
-                    Cena je <strong><?= htmlspecialchars(formatPublicationPrice(PUBLICATION_PRICE_SINGLE)) ?></strong>
+                    <?php if ($priceSingle === $priceBundle): ?>
+                        Cena je <strong><?= htmlspecialchars(formatPublicationPrice($priceSingle)) ?></strong>
+                        za ľubovoľný výber dostupných formátov vrátane všetkých naraz.
+                    <?php else: ?>
+                    Cena je <strong><?= htmlspecialchars(formatPublicationPrice($priceSingle)) ?></strong>
                     za jeden formát. Pri dvoch a viac formátoch sa automaticky uplatní balíková cena
-                    <strong><?= htmlspecialchars(formatPublicationPrice(PUBLICATION_PRICE_BUNDLE)) ?></strong>
+                    <strong><?= htmlspecialchars(formatPublicationPrice($priceBundle)) ?></strong>
                     za všetky vybrané — viac než balík teda nikdy nezaplatíte.
+                    <?php endif; ?>
                 </p>
             </section>
 
@@ -483,11 +492,11 @@ markFormLoadTime('publication_order');
                             </label>
                         <?php endforeach; ?>
                         <p class="pub-order-total" id="pubOrderTotal"
-                           data-price-single="<?= htmlspecialchars(number_format(PUBLICATION_PRICE_SINGLE, 2, '.', ''), ENT_QUOTES) ?>"
-                           data-price-bundle="<?= htmlspecialchars(number_format(PUBLICATION_PRICE_BUNDLE, 2, '.', ''), ENT_QUOTES) ?>"
+                           data-price-single="<?= htmlspecialchars(number_format($priceSingle, 2, '.', ''), ENT_QUOTES) ?>"
+                           data-price-bundle="<?= htmlspecialchars(number_format($priceBundle, 2, '.', ''), ENT_QUOTES) ?>"
                            aria-live="polite">
                             Cena:
-                            <strong id="pubOrderTotalValue"><?= htmlspecialchars(formatPublicationPrice(publicationPriceFor($selectedForUi))) ?></strong>
+                            <strong id="pubOrderTotalValue"><?= htmlspecialchars(formatPublicationPrice(publicationPriceFor($selectedForUi, $publication))) ?></strong>
                         </p>
                     </fieldset>
 

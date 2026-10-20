@@ -280,6 +280,40 @@ function publications(): array
 {
     return [
         [
+            'slug' => 'marza-z-krvi',
+            'category' => 'beletria',
+            'title' => 'Marža z krvi',
+            'subtitle' => 'Triler o ukradnutých minútach',
+            'author' => 'MUDr. Ľubomír Polaščín',
+            'edition' => '1. slovenské vydanie, 2026',
+            'published_on' => '2026-10-18',
+            'language' => 'slovenčina',
+            'language_code' => 'sk',
+            'pages' => 298,
+            'articles' => 0,
+            'images' => 59,
+            'cover' => 'img/publikacie/marza-z-krvi-obalka.jpg',
+            'cover_small' => 'img/publikacie/marza-z-krvi-obalka-600.jpg',
+            'formats' => ['pdf', 'epub', 'azw3', 'docx'],
+            'price_single' => 20.00,
+            'price_bundle' => 20.00,
+            'is_available' => true,
+            'excerpt' => 'Nezávislý nefrológ odhaľuje dialyzačný systém, ktorý mení pacientov na finančnú záťaž. Dokáže ho zastaviť skôr, než zničí jeho aj ľudí, ktorí mu pomáhajú?',
+            'description' => [
+                '<strong>Marža z krvi</strong> je triler z prostredia dialýzy o moci, peniazoch a cene času, ktorý patrí pacientom.',
+                'Nezávislý nefrológ sa pokúša odhaliť korporátno-štátny systém, v ktorom sa starostlivosť o pacientov podriaďuje finančným záujmom. S odhaľovaním súvislostí rastie aj nebezpečenstvo pre neho a jeho spolupracovníkov.',
+                'Ide o beletriu. Postavy, organizácie a udalosti sú fiktívne; román nie je odbornou príručkou ani zdrojom medicínskych odporúčaní.',
+            ],
+            'highlights' => [
+                'Triler o ukradnutých minútach z prostredia dialýzy',
+                'Prvé slovenské vydanie na 298 stranách',
+                'Ilustrovaná e-kniha v PDF, EPUB, AZW3 a DOCX',
+                'Cena 20 € za ľubovoľný výber dostupných formátov',
+                'Bez DRM',
+            ],
+            'audience' => 'Čitatelia trilerov zo zdravotníckeho prostredia a príbehov o konflikte svedomia, moci a finančných záujmov.',
+        ],
+        [
             'slug'        => 'sk-nefro-baza-1',
             'title'       => 'SK Nefro Báza 1',
             'subtitle'    => 'Súhrn odborných článkov z portálu nefro.polascin.net, apríl – október 2026',
@@ -681,15 +715,18 @@ function normalizePublicationFormats(array $publication, array $requested): arra
  * uplatňujeme automaticky a kupujúci nemá ako preplatiť.
  *
  * @param array<int, string> $formats
+ * @param array<string, mixed>|null $publication
  */
-function publicationPriceFor(array $formats): float
+function publicationPriceFor(array $formats, ?array $publication = null): float
 {
     $count = count($formats);
     if ($count <= 0) {
         return 0.0;
     }
 
-    return $count === 1 ? PUBLICATION_PRICE_SINGLE : PUBLICATION_PRICE_BUNDLE;
+    return $count === 1
+        ? (float) ($publication['price_single'] ?? PUBLICATION_PRICE_SINGLE)
+        : (float) ($publication['price_bundle'] ?? PUBLICATION_PRICE_BUNDLE);
 }
 
 /**
@@ -1129,7 +1166,7 @@ function publicationOrderToken(array $order): string
  */
 function createPublicationOrder(PDO $pdo, array $publication, array $formats, array $buyer): array
 {
-    $amount = publicationPriceFor($formats);
+    $amount = publicationPriceFor($formats, $publication);
 
     $stmt = $pdo->prepare(
         "INSERT INTO publication_orders
