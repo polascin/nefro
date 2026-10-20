@@ -61,7 +61,7 @@ include 'legal_head.php';
                 <section class="legal-callout" aria-labelledby="pub-terms-disclaimer-heading">
                     <h3 id="pub-terms-disclaimer-heading">Dôležité zdravotnícke upozornenie</h3>
                     <p>
-                        Publikácie majú <strong>informačný a vzdelávací charakter</strong> a sú
+                        Odborné publikácie majú <strong>informačný a vzdelávací charakter</strong> a sú
                         určené zdravotníckym pracovníkom a informovaným pacientom.
                         <strong>Nenahrádzajú odborný lekársky úsudok, vyšetrenie, diagnózu
                         ani liečbu.</strong> Dávkovanie liekov, indikácie a klinické odporúčania
@@ -119,11 +119,15 @@ include 'legal_head.php';
 
                 <h3>3. Cena</h3>
                 <p>
-                    Cena jedného formátu publikácie je
-                    <strong><?= htmlspecialchars(formatPublicationPrice(PUBLICATION_PRICE_SINGLE), ENT_QUOTES, 'UTF-8') ?></strong>.
-                    Pri výbere dvoch a viac formátov sa uplatní balíková cena
-                    <strong><?= htmlspecialchars(formatPublicationPrice(PUBLICATION_PRICE_BUNDLE), ENT_QUOTES, 'UTF-8') ?></strong>
-                    za všetky vybrané formáty. Ceny sú konečné a vrátane všetkých daní;
+                    Cena konkrétnej publikácie a vybraných formátov je uvedená na jej
+                    predajnej stránke a v súhrne objednávky pred jej odoslaním.
+                    Pri odborných vydaniach SK Nefro Báza je cena jedného formátu
+                    <strong><?= htmlspecialchars(formatPublicationPrice(PUBLICATION_PRICE_SINGLE), ENT_QUOTES, 'UTF-8') ?></strong>
+                    a pri dvoch a viac formátoch sa uplatní balíková cena
+                    <strong><?= htmlspecialchars(formatPublicationPrice(PUBLICATION_PRICE_BUNDLE), ENT_QUOTES, 'UTF-8') ?></strong>.
+                    Pri beletrii môže byť cena odlišná; e-kniha Marža z krvi stojí
+                    <strong>20,00 €</strong> za ľubovoľný výber dostupných formátov.
+                    Ceny sú konečné a vrátane všetkých daní;
                     k cene sa neúčtuje poštovné ani iné náklady na dodanie, keďže obsah
                     sa dodáva elektronicky.
                 </p>
