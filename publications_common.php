@@ -58,8 +58,8 @@ const PUBLICATION_FILES_DIR = __DIR__ . '/private/publications';
  * (`consent_terms_version`) — aby bolo pri spore zrejmé, aké znenie kupujúci
  * potvrdil. Pri zmene podmienok zvýš verziu a dátum spolu.
  */
-const PUBLICATION_TERMS_VERSION = '1.2';
-const PUBLICATION_TERMS_EFFECTIVE_DATE = '2026-10-12';
+const PUBLICATION_TERMS_VERSION = '1.3';
+const PUBLICATION_TERMS_EFFECTIVE_DATE = '2026-10-20';
 
 function publicationTermsConsentText(): string
 {
