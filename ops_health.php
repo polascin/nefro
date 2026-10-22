@@ -10,6 +10,9 @@ declare(strict_types=1);
  *   - zlyhané položky za posledných 24 h (WARN);
  *   - vek logu týždenného retenčného cronu (private/archive_cleanup_cron.log);
  *   - produkčný marker deploy_info.php (DEPLOY_COMMIT, vek nasadenia);
+ *   - párovanie perexov: perex v add_*_article.php (zdroj pravdy v gite) sa
+ *     musí zhodovať s articles.excerpt (to, čo číta čitateľ, homepage aj
+ *     meta/OG description); cudzí perex iného článku = FAIL, iný text = WARN;
  *   - verejné stránky: HTTP 200, jediný <title>, bez PHP chýb a úniku cesty,
  *     hlavičky CSP a HSTS (vypne --no-http).
  *
@@ -161,6 +164,131 @@ function opsHealthDeployMarker(string $path): array
 }
 
 /**
+ * Perex (excerpt) článku žije na dvoch miestach: v skripte add_<slug>_article.php
+ * (zdroj pravdy v gite) a v tabuľke articles (čo vidí čitateľ, homepage a
+ * meta/OG description). Deploy spúšťa UPSERT iba pre upravené (M) skripty, takže
+ * oprava perexu v skripte, ktorý sa do mainu dostal ako nový súbor (A), ostane
+ * v DB neuplatnená. Presne tak mal článok SoBic od 2026-10-18 do 2026-10-20 v DB
+ * perex iného článku (CAC/Mg/PTH), hoci commit d98c5dc skript opravil.
+ *
+ * Normalizácia: odstráni escapovanie PHP reťazca v jednoduchých úvodzovkách,
+ * zjednotí biele znaky a oreže okraje; DB porovnanie je citlivé na diakritiku.
+ */
+function opsHealthNormalizeExcerpt(string $text): string
+{
+    $text = str_replace(["\\'", '\\\\'], ["'", '\\'], $text);
+    return trim((string) preg_replace('/\s+/u', ' ', $text));
+}
+
+/**
+ * Perexy zo skriptov článkov: slug => normalizovaný perex. Skript bez
+ * jednoznačného páru slug/excerpt sa preskočí (rovnaká logika ako
+ * tools/test_article_excerpts.php).
+ *
+ * @return array<string, string>
+ */
+function opsHealthScriptExcerpts(string $root): array
+{
+    $bySlug = [];
+    foreach (glob($root . '/add_*_article.php') ?: [] as $file) {
+        $source = (string) file_get_contents($file);
+        $slugCount = preg_match_all("/'slug'\\s*=>\\s*'([^']+)'/u", $source, $slugs);
+        $excerptCount = preg_match_all("/'excerpt'\\s*=>\\s*'((?:[^'\\\\]|\\\\.)*)'/u", $source, $texts);
+        if ($slugCount === 0 || $slugCount !== $excerptCount) {
+            continue;
+        }
+        foreach ($slugs[1] as $i => $slug) {
+            $bySlug[$slug] = opsHealthNormalizeExcerpt($texts[1][$i]);
+        }
+    }
+    ksort($bySlug);
+    return $bySlug;
+}
+
+/**
+ * Porovná perexy skriptov s tabuľkou articles.
+ *
+ * - `foreign`: DB nesie perex, ktorý v skriptoch patrí INÉMU článku
+ *   (perex spárovaný s nesprávnym článkom — chyba viditeľná čitateľom);
+ * - `drift`: DB má iný text než skript (úprava v admin UI alebo neuplatnený
+ *   UPSERT) — na posúdenie, nie nutne chyba;
+ * - `missing`: slug zo skriptu v DB nie je (nepublikovaný alebo premenovaný).
+ *
+ * @param array<string, string> $scriptExcerpts slug => normalizovaný perex
+ * @return array{scripts: int, compared: int, missing: int, drift: list<string>, foreign: list<array{slug: string, owner: string}>}
+ */
+function opsHealthExcerptDrift(PDO $pdo, array $scriptExcerpts): array
+{
+    $owners = [];
+    foreach ($scriptExcerpts as $slug => $excerpt) {
+        if ($excerpt !== '') {
+            $owners[mb_strtolower($excerpt)][] = $slug;
+        }
+    }
+
+    $compared = 0;
+    $drift = [];
+    $foreign = [];
+    $slugs = array_keys($scriptExcerpts);
+    foreach (array_chunk($slugs, 200) as $chunk) {
+        $placeholders = implode(',', array_fill(0, count($chunk), '?'));
+        $stmt = $pdo->prepare("SELECT slug, excerpt FROM articles WHERE slug IN ({$placeholders})");
+        $stmt->execute(array_values($chunk));
+        foreach ($stmt->fetchAll(PDO::FETCH_ASSOC) as $row) {
+            $slug = (string) $row['slug'];
+            if (!isset($scriptExcerpts[$slug])) {
+                continue;
+            }
+            ++$compared;
+            $dbExcerpt = opsHealthNormalizeExcerpt((string) ($row['excerpt'] ?? ''));
+            if ($dbExcerpt === $scriptExcerpts[$slug]) {
+                continue;
+            }
+            $others = array_values(array_diff($owners[mb_strtolower($dbExcerpt)] ?? [], [$slug]));
+            if ($others !== []) {
+                $foreign[] = ['slug' => $slug, 'owner' => $others[0]];
+            } else {
+                $drift[] = $slug;
+            }
+        }
+    }
+    sort($drift);
+    usort($foreign, static fn (array $a, array $b): int => strcmp($a['slug'], $b['slug']));
+
+    return [
+        'scripts' => count($scriptExcerpts),
+        'compared' => $compared,
+        'missing' => count($scriptExcerpts) - $compared,
+        'drift' => $drift,
+        'foreign' => $foreign,
+    ];
+}
+
+/**
+ * @param array{scripts: int, compared: int, missing: int, drift: list<string>, foreign: list<array{slug: string, owner: string}>} $result
+ * @return array{status: string, messages: list<string>}
+ */
+function opsHealthEvaluateExcerptDrift(array $result): array
+{
+    $messages = [];
+    $status = 'PASS';
+    foreach ($result['foreign'] as $item) {
+        $status = 'FAIL';
+        $messages[] = sprintf('perex článku %s je v DB perexom článku %s — spusti php add_%s_article.php (UPSERT bez avíza).',
+            $item['slug'], $item['owner'], $item['slug']);
+    }
+    if ($result['drift'] !== []) {
+        if ($status === 'PASS') {
+            $status = 'WARN';
+        }
+        $shown = array_slice($result['drift'], 0, 5);
+        $messages[] = sprintf('%d článkov má v DB iný perex než skript: %s%s — over, či platí skript alebo admin úprava.',
+            count($result['drift']), implode(', ', $shown), count($result['drift']) > 5 ? ', …' : '');
+    }
+    return ['status' => $status, 'messages' => $messages];
+}
+
+/**
  * Posúdi verejnú odpoveď: stav, telo a bezpečnostné hlavičky.
  *
  * @param array<string, string> $headers kľúče malými písmenami
@@ -260,9 +388,10 @@ function opsHealthCombine(array $statuses): string
  *
  * @param list<array{table: string, pending: int, oldest_pending_s: ?int, retry_overdue: int, failed_24h: int}> $queues
  * @param array<string, int> $http cesta => HTTP kód
+ * @param array{scripts: int, compared: int, missing: int, drift: list<string>, foreign: list<array{slug: string, owner: string}>}|null $excerpts
  * @return array<string, mixed>
  */
-function opsHealthLogEntry(string $result, array $queues, array $http, ?string $deployCommit, ?int $cleanupLogAge): array
+function opsHealthLogEntry(string $result, array $queues, array $http, ?string $deployCommit, ?int $cleanupLogAge, ?array $excerpts = null): array
 {
     $queueSummary = [];
     foreach ($queues as $q) {
@@ -279,6 +408,11 @@ function opsHealthLogEntry(string $result, array $queues, array $http, ?string $
         'deploy_commit' => $deployCommit,
         'cleanup_log_age_d' => $cleanupLogAge === null ? null : intdiv($cleanupLogAge, 86400),
         'queues' => $queueSummary,
+        'excerpts' => $excerpts === null ? null : [
+            'compared' => $excerpts['compared'],
+            'drift' => count($excerpts['drift']),
+            'foreign' => count($excerpts['foreign']),
+        ],
         'http' => $http,
     ];
 }
@@ -317,6 +451,7 @@ function opsHealthMain(array $argv): int
     $lines = [];
     $queueStats = [];
     $httpCodes = [];
+    $excerptDrift = null;
 
     // 1) Databáza a fronty. db_config.php pri chybe konfigurácie končí exit(0)
     // so správou, preto sa pripojenie zostavuje tu s rovnakými parametrami
@@ -349,6 +484,17 @@ function opsHealthMain(array $argv): int
             foreach ($evaluation['messages'] as $message) {
                 $lines[] = '      ' . $message;
             }
+        }
+
+        // 1b) Párovanie perexov: skript add_*_article.php vs articles.excerpt.
+        $excerptDrift = opsHealthExcerptDrift($pdo, opsHealthScriptExcerpts(__DIR__));
+        $excerptEval = opsHealthEvaluateExcerptDrift($excerptDrift);
+        $statuses[] = $excerptEval['status'];
+        $lines[] = sprintf('%-5s perexy článkov: skriptov=%d, porovnaných=%d, bez záznamu v DB=%d, odlišných=%d, cudzích=%d',
+            $excerptEval['status'], $excerptDrift['scripts'], $excerptDrift['compared'], $excerptDrift['missing'],
+            count($excerptDrift['drift']), count($excerptDrift['foreign']));
+        foreach ($excerptEval['messages'] as $message) {
+            $lines[] = '      ' . $message;
         }
     } catch (\Throwable $e) {
         $statuses[] = 'FAIL';
@@ -392,7 +538,7 @@ function opsHealthMain(array $argv): int
     }
 
     $result = opsHealthCombine($statuses);
-    $entry = opsHealthLogEntry($result, $queueStats, $httpCodes, $marker['commit'], $cleanupAge);
+    $entry = opsHealthLogEntry($result, $queueStats, $httpCodes, $marker['commit'], $cleanupAge, $excerptDrift);
 
     $logDir = __DIR__ . '/private/logs';
     if (!is_dir($logDir)) {

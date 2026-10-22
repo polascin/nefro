@@ -104,6 +104,50 @@ $json = json_encode($entry, JSON_THROW_ON_ERROR);
 opsHealthTest(!str_contains($json, '@') && !str_contains($json, 'synthetic'), 'Záznam nesmie obsahovať e-maily.');
 opsHealthTest($entry['result'] === 'WARN' && $entry['cleanup_log_age_d'] === 3 && $entry['queues']['nl_sub_queue']['pending'] === 1 && $entry['http']['/'] === 200, 'Záznam obsahuje agregáty.');
 
+// Párovanie perexov: skript add_*_article.php vs articles.excerpt (regresia SoBic 2026-10-18..20,
+// keď DB niesla perex článku CAC/Mg/PTH, hoci skript bol opravený).
+$scriptsDir = sys_get_temp_dir() . '/nefro-ops-excerpts-' . bin2hex(random_bytes(6));
+mkdir($scriptsDir, 0700, true);
+file_put_contents($scriptsDir . '/add_clanok-a_article.php', "<?php\n\$a = [\n    'title' => 'A',\n    'slug' => 'clanok-a',\n    'excerpt' => 'Perex A s \\'úvodzovkou\\'  a   medzerami.',\n];\n");
+file_put_contents($scriptsDir . '/add_clanok-b_article.php', "<?php\n\$a = ['title' => 'B', 'slug' => 'clanok-b', 'excerpt' => 'Perex B.'];\n");
+file_put_contents($scriptsDir . '/add_clanok-c_article.php', "<?php\n\$a = ['title' => 'C', 'slug' => 'clanok-c', 'excerpt' => 'Perex C (v DB chýba).'];\n");
+// Skript bez jednoznačného páru (dva slugy, jeden perex) sa preskočí.
+file_put_contents($scriptsDir . '/add_zly_article.php', "<?php\n\$a = ['slug' => 'x', 'excerpt' => 'e']; \$b = ['slug' => 'y'];\n");
+$scriptExcerpts = opsHealthScriptExcerpts($scriptsDir);
+opsHealthTest($scriptExcerpts === [
+    'clanok-a' => "Perex A s 'úvodzovkou' a medzerami.",
+    'clanok-b' => 'Perex B.',
+    'clanok-c' => 'Perex C (v DB chýba).',
+], 'Perexy zo skriptov: odstránené escapovanie, zjednotené medzery, nejednoznačný skript preskočený.');
+
+$pdo->exec('CREATE TABLE articles (id INTEGER PRIMARY KEY, slug TEXT NOT NULL UNIQUE, excerpt TEXT NOT NULL)');
+$pdo->exec("INSERT INTO articles (slug, excerpt) VALUES ('clanok-a', 'Perex A s ''úvodzovkou'' a medzerami.'), ('clanok-b', 'Perex B.')");
+$drift = opsHealthExcerptDrift($pdo, $scriptExcerpts);
+opsHealthTest($drift['scripts'] === 3 && $drift['compared'] === 2 && $drift['missing'] === 1 && $drift['drift'] === [] && $drift['foreign'] === [],
+    'Zhodné perexy: nič odlišné, chýbajúci slug sa iba spočíta.');
+opsHealthTest(opsHealthEvaluateExcerptDrift($drift)['status'] === 'PASS', 'Zhodné perexy sú PASS.');
+
+// Perex iného článku v DB = FAIL s oboma slugmi (SoBic niesol perex CAC/Mg/PTH).
+$pdo->exec("UPDATE articles SET excerpt = 'Perex A s ''úvodzovkou'' a medzerami.' WHERE slug = 'clanok-b'");
+$drift = opsHealthExcerptDrift($pdo, $scriptExcerpts);
+opsHealthTest($drift['foreign'] === [['slug' => 'clanok-b', 'owner' => 'clanok-a']] && $drift['drift'] === [], 'Cudzí perex sa priradí k vlastníkovi.');
+$evaluation = opsHealthEvaluateExcerptDrift($drift);
+opsHealthTest($evaluation['status'] === 'FAIL' && str_contains($evaluation['messages'][0], 'clanok-b') && str_contains($evaluation['messages'][0], 'clanok-a')
+    && str_contains($evaluation['messages'][0], 'add_clanok-b_article.php'), 'Cudzí perex je FAIL a správa menuje oba články aj nápravu.');
+
+// Iný text (admin úprava alebo neuplatnený UPSERT) = WARN.
+$pdo->exec("UPDATE articles SET excerpt = 'Upravený perex B.' WHERE slug = 'clanok-b'");
+$drift = opsHealthExcerptDrift($pdo, $scriptExcerpts);
+opsHealthTest($drift['drift'] === ['clanok-b'] && $drift['foreign'] === [], 'Odlišný text bez vlastníka je drift.');
+opsHealthTest(opsHealthEvaluateExcerptDrift($drift)['status'] === 'WARN', 'Odlišný perex je WARN.');
+$entry = opsHealthLogEntry('WARN', [], [], null, null, $drift);
+opsHealthTest($entry['excerpts'] === ['compared' => 2, 'drift' => 1, 'foreign' => 0], 'Záznam nesie iba počty perexov.');
+opsHealthTest(opsHealthLogEntry('PASS', [], [], null, null)['excerpts'] === null, 'Bez DB je údaj o perexoch null.');
+foreach (glob($scriptsDir . '/*.php') ?: [] as $file) {
+    unlink($file);
+}
+rmdir($scriptsDir);
+
 // Priame spustenie bez DB konfigurácie: skript sa nesmie zrútiť, FAIL vráti kód 1 a nezapíše do produkčnej cesty.
 $root = dirname(__DIR__);
 $environment = getenv();
