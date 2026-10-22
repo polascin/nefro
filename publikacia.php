@@ -279,6 +279,10 @@ markFormLoadTime('publication_order');
               ],
           ],
       ];
+      // Schema.org pozná jedno ISBN na knihu; prvá položka katalógu je ISBN e-knihy.
+      if (!empty($publication['isbn'][0]['isbn'])) {
+          $structuredData[0]['isbn'] = (string) $publication['isbn'][0]['isbn'];
+      }
   }
   include 'head_meta.php';
   ?>
@@ -341,6 +345,13 @@ markFormLoadTime('publication_order');
                             <div><dt>Ilustrácií</dt><dd><?= number_format((int) $publication['images'], 0, ',', ' ') ?></dd></div>
                         <?php endif; ?>
                         <div><dt>Jazyk</dt><dd class="pub-hero__facts-lang"><?= htmlspecialchars((string) $publication['language']) ?></dd></div>
+                        <?php if (!empty($publication['isbn'])): ?>
+                            <div class="pub-hero__facts-isbn"><dt>ISBN</dt>
+                                <?php foreach ($publication['isbn'] as $isbn): ?>
+                                    <dd><?= htmlspecialchars((string) $isbn['isbn']) ?> <span><?= htmlspecialchars((string) $isbn['format']) ?></span></dd>
+                                <?php endforeach; ?>
+                            </div>
+                        <?php endif; ?>
                     </dl>
 
                     <p class="pub-hero__price">

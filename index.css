@@ -7381,6 +7381,19 @@ mark.search-hl {
     font-weight: 700;
 }
 
+/* ISBN: viac hodnôt pod jedným popisom, menším písmom, aby sa riadok nelámal. */
+.pub-hero__facts-isbn dd {
+    font-size: 1rem;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+
+.pub-hero__facts-isbn dd span {
+    color: var(--text-tertiary);
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
 .pub-hero__cta {
     margin: 8px 0 0;
     display: flex;

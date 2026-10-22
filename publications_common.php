@@ -292,6 +292,13 @@ function publications(): array
             'pages' => 298,
             'articles' => 0,
             'images' => 59,
+            // Pridelila Národná agentúra ISBN v SR (SNK) 22. 10. 2026,
+            // č. j. NB-OD1/3928/2026. Prvá položka je ISBN e-knihy pre Schema.org.
+            'isbn' => [
+                ['format' => 'PDF', 'isbn' => '978-80-570-8831-8'],
+                ['format' => 'EPUB', 'isbn' => '978-80-570-8832-5'],
+                ['format' => 'brožovaná väzba', 'isbn' => '978-80-570-8830-1'],
+            ],
             'cover' => 'img/publikacie/marza-z-krvi-obalka.jpg',
             'cover_small' => 'img/publikacie/marza-z-krvi-obalka-600.jpg',
             'formats' => ['pdf', 'epub', 'azw3', 'docx'],
@@ -308,6 +315,7 @@ function publications(): array
                 'Triler o ukradnutých minútach z prostredia dialýzy',
                 'Prvé slovenské vydanie na 298 stranách',
                 'Ilustrovaná e-kniha v PDF, EPUB, AZW3 a DOCX',
+                'ISBN pridelené Národnou agentúrou ISBN v SR pre PDF, EPUB aj tlačené vydanie',
                 'Cena 20 € za ľubovoľný výber dostupných formátov',
                 'Bez DRM',
             ],
