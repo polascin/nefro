@@ -73,7 +73,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     $pdo->prepare(
                         "UPDATE nl_sub_queue
                          SET status = 'cancelled', next_attempt_at = NOW(), last_error = 'Odberateľ bol odhlásený administrátorom.'
-                         WHERE subscriber_id = :id AND status IN ('pending', 'failed') AND sent_at IS NULL"
+                         WHERE subscriber_id = :id AND status IN ('pending', 'failed', 'sending') AND sent_at IS NULL"
                     )->execute(['id' => $subId]);
                     $pdo->commit();
                     $actionResult = 'Odberateľ ' . $sub['email'] . ' bol odhlásený z odberu.';

@@ -35,14 +35,39 @@ verejné kontroly; `--mail` pošle agregované upozornenie na `SMTP_ADMIN_EMAIL`
 pri výsledku FAIL. Záznamy bez osobných údajov sa pripájajú do
 `private/logs/ops_health.log`. Odporúčaný cron: denne po behu workerov.
 
-Časovo konzistentnú aplikačnú zálohu vytvára `php backup_snapshot.php`:
+Aplikačnú zálohu s transakčným snapshotom DB vytvára `php backup_snapshot.php`:
 SQL dump v jednej transakcii s konzistentným snapshotom a tar adresárov mimo
 gitu (`pdf`, `img`, `uploads`, `private/publications`) v tom istom behu,
-s manifestom, počtami riadkov a SHA-256. Snapshoty sú v `private/backups/`,
+s manifestom, počtami riadkov a SHA-256. DB a súbory vznikajú postupne;
+spoločná konzistencia sa musí overiť pri obnove. Prázdna, vynechaná alebo
+chybná časť znamená neúplnú zálohu a nesmie spustiť retenciu. Snapshoty sú v `private/backups/`,
 predvolená retencia sú dva kompletné snapshoty (jeden snapshot zaberá približne
 1,7 GB). Odporúčaný cron: denne po zálohe poskytovateľa. Obnova a overenie
 podľa `tools/restore/README.md`. Zápis cron úloh na serveri je produkčný zásah,
 ktorý vyžaduje samostatné rozhodnutie vlastníka.
+
+## Cron úlohy
+
+Úplný plán úloh je v jedinom súbore `tools/crontab.example` — je to jediný zdroj
+pravdy, z ktorého sa plánovač na serveri riadi. Predtým boli jednotlivé úlohy
+rozptýlené po README.md, DEPLOY.md a hlavičkách skriptov, takže sa dali ľahko
+minúť; auditná historie zaznamenala prípad, keď `newsletter_worker.php` existoval
+a fungoval, ale nikdy nebol v crontabe a fronta ticho rástla.
+
+Overenie, že úlohy naozaj bežia:
+
+```bash
+crontab -l | grep -c newsletter_worker.php          # musí byť >= 1
+```
+
+a nad frontou, ktorú daný worker spracúva:
+
+```sql
+SELECT status, COUNT(*) FROM article_newsletter_queue GROUP BY status;
+```
+
+Položka `pending` staršia než dva intervaly cronu je nález. Deploy schéma
+nezahŕňa, takže `setup_db.php` (migrácie) treba po nasadení spustiť ručne.
 
 ## Povinné regresie
 

@@ -200,9 +200,54 @@ integrationCheck(integrationHttp($invalid)['status'] === 404, 'wrong bearer toke
 $firstAttempt = checkFormRateLimit($pdo, 'integration_limit', '192.0.2.10', 1, 60);
 $secondAttempt = checkFormRateLimit($pdo, 'integration_limit', '192.0.2.10', 1, 60);
 integrationCheck($firstAttempt && !$secondAttempt, 'native MariaDB rate limit');
-integrationCheck(date_default_timezone_get() === 'Europe/Bratislava' && (int) $pdo->query('SELECT TIMESTAMPDIFF(SECOND, UTC_TIMESTAMP(), NOW())')->fetchColumn() === 0, 'different PHP and MariaDB timezones intentionally exercised');
+// Server MariaDB má v tejto brane zámerne časové pásmo UTC, kým aplikácia
+// pracuje v Europe/Bratislava. Aplikácia si preto časové pásmo relácie pripne
+// sama: NOW() potom súhlasí s časom, ktorý PHP zapisuje do DATETIME stĺpcov,
+// a hodnoty z TIMESTAMP stĺpcov sa čítajú v čase aplikácie.
+$appOffset = (int) (new DateTimeImmutable('now', new DateTimeZone('Europe/Bratislava')))->format('Z');
+$dbOffset = (int) $pdo->query('SELECT TIMESTAMPDIFF(SECOND, UTC_TIMESTAMP(), NOW())')->fetchColumn();
+$serverTimeZone = strtoupper((string) $pdo->query('SELECT @@system_time_zone')->fetchColumn());
+integrationCheck(
+    date_default_timezone_get() === 'Europe/Bratislava'
+    && $dbOffset === $appOffset
+    && $serverTimeZone === 'UTC',
+    'database session timezone follows the application while the server stays on UTC'
+);
+
+// Regresia zmesi hodín: PHP a databáza zapisujú do tej istej DATETIME kolóny
+// (article_newsletter_queue.next_attempt_at), ktorá sa porovnáva s NOW().
+// Pred opravou sa tam dostával raz čas z PHP a raz čas z databázy, takže
+// porovnanie bolo posunuté o rozdiel časových pásiem.
+$pdo->exec('DELETE FROM article_newsletter_queue');
+$fixtureArticleId = (int) $pdo->query("SELECT id FROM articles WHERE slug = 'integration-fixture'")->fetchColumn();
+$queueInsert = $pdo->prepare(
+    "INSERT INTO article_newsletter_queue (article_id, user_id, email, status, next_attempt_at)
+     VALUES (:article_id, :user_id, :email, 'pending', :next_attempt_at)"
+);
+$queueInsert->execute([
+    'article_id' => $fixtureArticleId,
+    'user_id' => $ids['owner'],
+    'email' => 'owner@example.invalid',
+    'next_attempt_at' => date('Y-m-d H:i:s'),
+]);
+$pdo->prepare(
+    "INSERT INTO article_newsletter_queue (article_id, user_id, email, status, next_attempt_at)
+     VALUES (:article_id, :user_id, :email, 'pending', NOW())"
+)->execute([
+    'article_id' => $fixtureArticleId,
+    'user_id' => $ids['other'],
+    'email' => 'other@example.invalid',
+]);
+$maxClockSkew = 0;
+foreach ($pdo->query('SELECT TIMESTAMPDIFF(SECOND, next_attempt_at, NOW()) AS skew FROM article_newsletter_queue')->fetchAll(PDO::FETCH_ASSOC) as $skewRow) {
+    $maxClockSkew = max($maxClockSkew, abs((int) ($skewRow['skew'] ?? 0)));
+}
+integrationCheck($maxClockSkew <= 5, 'PHP and database write the same clock into the same DATETIME column');
+$pdo->exec('DELETE FROM article_newsletter_queue');
 $remaining = (int) $pdo->query("SELECT TIMESTAMPDIFF(SECOND, NOW(), blocked_until) FROM form_rate_limit WHERE action='integration_limit'")->fetchColumn();
 integrationCheck($remaining > 0 && $remaining <= 60, 'rate block duration uses database clock');
+$blockedFor = formRateLimitBlockedForSeconds($pdo, 'integration_limit', '192.0.2.10');
+integrationCheck($blockedFor > 0 && $blockedFor <= 60, 'blocked identity returns the remaining time from the database clock');
 integrationCheck(!checkFormRateLimit($pdo, 'integration_limit', '192.0.2.10', 1, 60), 'active rate block persists');
 $pdo->exec("UPDATE form_rate_limit SET blocked_until=NULL, first_attempt=DATE_SUB(NOW(), INTERVAL 61 SECOND) WHERE action='integration_limit'");
 integrationCheck(checkFormRateLimit($pdo, 'integration_limit', '192.0.2.10', 1, 60), 'expired rate window resets using database clock');

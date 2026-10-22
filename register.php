@@ -121,7 +121,11 @@ if ($requestMethod === 'POST') {
             }
         } catch (\PDOException $e) {
             error_log('Register rate limit check error: ' . $e->getMessage());
-            // Pri DB chybe pokračuj bez rate limitingu
+            // Pri DB chybe registráciu zastavíme (fail-closed). Bez databázy
+            // sa účet anyway nedá vytvoriť a pokračovaním by sme vystavili
+            // portál hromadnej registrácii účtov.
+            $regIsBlocked = true;
+            $errors[] = "Zatiaľ sa nám podarilo overiť, či môžete registrovať. Skúste to prosím o chvíľu neskôr.";
         }
 
         if (!$regIsBlocked) {

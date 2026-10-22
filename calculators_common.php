@@ -4,6 +4,71 @@ declare(strict_types=1);
 // Kalkulačky skladajú JSON-LD ešte pred načítaním head_meta.php.
 $baseUrl = $baseUrl ?? 'https://nefro.polascin.net/';
 
+/* ── Retencia výsledkov kalkulačiek ───────────────────────────────────────
+ * `calculator_results` ukladá údaje o zdraví: meno, dátum narodenia, rodné
+ * číslo a číslo poisťovne. Bez lehoty by tabuľka rástla donekonečna a
+ * identifikátory by zostávali v DB navždy.
+ *
+ * Preto dvojstupňovo:
+ *   1. po roku sa odstránia priame identifikátory, výsledok zostáva
+ *      anonymizovaný a použiteľný na sledovanie vývoja;
+ *   2. po desiatich rokoch sa riadok maž úplne.
+ *
+ * Lehoty vynucuje `archive_cleanup.php` (cron), nie len text v zásadách —
+ * rovnako ako pri objednávkach publikácií.
+ * ──────────────────────────────────────────────────────────────────────── */
+
+/** Po tomto čase sa z výsledku odstránia priame identifikátory pacienta. */
+const CALCULATOR_RESULT_ANONYMISE_DAYS = 365;
+/** Po tomto čase sa výsledok kalkulačky maž úplne. */
+const CALCULATOR_RESULT_RETENTION_DAYS = 3653;
+
+/**
+ * Odstráni priame identifikátory z výsledku kalkulačky.
+ *
+ * `input_payload` identifikátory neobsahuje — ukladá iba klinické hodnoty
+ * (odber, hmotnosť, laboratórne hodnoty), takže stačí vyčistiť samostatné
+ * stĺpce. Výsledok zostáva cenný: lekár vidí trend eGFR alebo draslíka.
+ *
+ * @return int Počet anonymizovaných riadkov.
+ */
+function calculatorAnonymiseOldResults(PDO $pdo, int $days = CALCULATOR_RESULT_ANONYMISE_DAYS): int
+{
+    $stmt = $pdo->prepare(
+        "UPDATE calculator_results
+         SET patient_first_name = NULL,
+             patient_last_name = NULL,
+             patient_birth_date = NULL,
+             patient_birth_number = NULL,
+             patient_insurance_code = NULL
+         WHERE created_at < DATE_SUB(NOW(), INTERVAL :days DAY)
+           AND (patient_first_name IS NOT NULL
+             OR patient_last_name IS NOT NULL
+             OR patient_birth_date IS NOT NULL
+             OR patient_birth_number IS NOT NULL
+             OR patient_insurance_code IS NOT NULL)"
+    );
+    $stmt->execute(['days' => max(30, $days)]);
+
+    return $stmt->rowCount();
+}
+
+/**
+ * Odstráni výsledky kalkulačiek, ktoré prekročili celú retenčnú lehotu.
+ *
+ * @return int Počet zmazaných riadkov.
+ */
+function calculatorDeleteExpiredResults(PDO $pdo, int $days = CALCULATOR_RESULT_RETENTION_DAYS): int
+{
+    $stmt = $pdo->prepare(
+        "DELETE FROM calculator_results
+         WHERE created_at < DATE_SUB(NOW(), INTERVAL :days DAY)"
+    );
+    $stmt->execute(['days' => max(30, $days)]);
+
+    return $stmt->rowCount();
+}
+
 function calculatorPatientDataFromRequest(array $source): array
 {
     $firstName = trim((string) ($source['patient_first_name'] ?? ''));

@@ -68,6 +68,34 @@ function dependencyRegisterExpand(string $root, array $patterns): array
  * @param array{schema: int, updated: string, entries: list<array<string, mixed>>} $register
  * @return array{schema: int, updated: string, entries: list<array<string, mixed>>}
  */
+/**
+ * SHA-256 súboru s normalizovanými koncami riadkov.
+ *
+ * Register závislostí bol vypočítaný nad súbormi s koncom riadku LF. Na
+ * Windows s `core.autocrlf=true` git pri checkoute konvertuje konce riadkov
+ * na CRLF, takže ten istý obsah dáva iný hash — kontrola by hlásila nesúlad,
+ * hoci by sa naozaj nič nezmenilo.
+ *
+ * Preto textové súbory hashujeme v normalizovanom tvare (CRLF → LF).
+ * Binárne súbory (NUL bajt v prvých 8 kB) nechávame tak, ako sú, aby sa
+ * nezničil ich obsah.
+ */
+function dependencyRegisterHash(string $path): string
+{
+    $contents = @file_get_contents($path);
+    if ($contents === false) {
+        $hash = @hash_file('sha256', $path);
+
+        return $hash === false ? '' : $hash;
+    }
+
+    if (str_contains(substr($contents, 0, 8192), "\0")) {
+        return hash('sha256', $contents);
+    }
+
+    return hash('sha256', str_replace("\r\n", "\n", $contents));
+}
+
 function dependencyRegisterUpdate(array $register, string $root, string $today): array
 {
     foreach ($register['entries'] as &$entry) {
@@ -77,7 +105,7 @@ function dependencyRegisterUpdate(array $register, string $root, string $today):
         }
         $files = [];
         foreach (dependencyRegisterExpand($root, $patterns) as $relative) {
-            $files[$relative] = hash_file('sha256', $root . '/' . $relative);
+            $files[$relative] = dependencyRegisterHash($root . '/' . $relative);
         }
         if ($files === [] && empty($entry['optional'])) {
             throw new RuntimeException('Povinná položka nemá žiadne súbory: ' . (string) ($entry['id'] ?? '?'));
@@ -127,7 +155,7 @@ function dependencyRegisterCheck(array $register, string $root): array
                 $problems[] = "{$id}: neplatný hash pre {$relative}";
                 continue;
             }
-            if (!hash_equals($expected, (string) hash_file('sha256', $path))) {
+            if (!hash_equals($expected, dependencyRegisterHash($path))) {
                 $problems[] = "{$id}: SHA-256 nesedí: {$relative} (zmena dodanej knižnice bez aktualizácie registra).";
             }
         }
