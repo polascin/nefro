@@ -55,6 +55,13 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-10-22 18:00',
+                'category' => 'content',
+                'title' => 'Marža z krvi s prideleným ISBN',
+                'description' => 'Národná agentúra ISBN v SR pridelila trileru Marža z krvi ISBN pre PDF, EPUB aj tlačené vydanie. E-kniha vo všetkých formátoch má ISBN v tiráži; kupujúci si môžu stiahnuť aktualizované súbory.',
+                'url' => 'publikacia.php?slug=marza-z-krvi',
+            ],
+            [
                 'date' => '2026-10-20 16:53',
                 'category' => 'content',
                 'title' => 'Beletria: Marža z krvi',

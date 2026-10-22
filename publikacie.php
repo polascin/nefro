@@ -185,6 +185,9 @@ $freeCatalogue = freePublications();
                                     <?php endif; ?>
                                     <li><?= htmlspecialchars((string) $publication['edition']) ?></li>
                                     <li>jazyk: <strong><?= htmlspecialchars((string) $publication['language']) ?></strong></li>
+                                    <?php if (!empty($publication['isbn'][0]['isbn'])): ?>
+                                        <li>ISBN <?= htmlspecialchars((string) $publication['isbn'][0]['isbn']) ?> (<?= htmlspecialchars((string) $publication['isbn'][0]['format']) ?>)</li>
+                                    <?php endif; ?>
                                 </ul>
 
                                 <p class="pub-card__formats">
@@ -255,6 +258,9 @@ $freeCatalogue = freePublications();
                                     <?php endif; ?>
                                     <li><?= htmlspecialchars((string) $publication['edition']) ?></li>
                                     <li>jazyk: <strong><?= htmlspecialchars((string) $publication['language']) ?></strong></li>
+                                    <?php if (!empty($publication['isbn'][0]['isbn'])): ?>
+                                        <li>ISBN <?= htmlspecialchars((string) $publication['isbn'][0]['isbn']) ?> (<?= htmlspecialchars((string) $publication['isbn'][0]['format']) ?>)</li>
+                                    <?php endif; ?>
                                 </ul>
 
                                 <p class="pub-card__formats">
