@@ -11,6 +11,12 @@ hooks/* text eol=lf
 *.toml  text eol=lf
 *.py    text eol=lf
 
+# Dodané knižnice (katex a podobné) sa overujú registrom závislostí podľa
+# SHA-256. Register bol vypočítaný v tvare s koncom riadku LF; bez tohto
+# pravidla by `core.autocrlf=true` na Windows konvertoval súbory na CRLF
+# a kontrola by hlásila nesúlad, hoci by sa obsah nezmenil.
+assets/katex/** text eol=lf
+
 # Binárne súbory — git ich nesmie normalizovať / meniť konce riadkov
 *.png   binary
 *.webp  binary

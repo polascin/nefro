@@ -101,19 +101,53 @@ if (!function_exists('popRenderCard')) {
 if (!function_exists('getPopularArticles')) {
     /**
      * Publikované popularizačné články (category = 'popularne') v poradí sekcie.
+     *
+     * Príznak `is_medimpax` počíta databáza — obsah článku je LONGTEXT a
+     * jeho prenos cez sieť je najdrahšia časť dotazu. Kontrola na strane PHP
+     * (`stripos`) by navyše musela načítať celý obsah každého článku.
+     *
      * @return array<int,array<string,mixed>>
      */
     function getPopularArticles(\PDO $pdo): array
     {
         try {
             return $pdo->query(
-                "SELECT id, title, slug, author, content, excerpt, published_at, is_top
+                "SELECT id, title, slug, author, content, excerpt, published_at, is_top,
+                        (slug = 'pre-pacientov-uvod' OR content LIKE '%Medimpax%') AS is_medimpax
                  FROM articles
                  WHERE is_published = 1 AND category = 'popularne'
                  ORDER BY is_top DESC, sort_order ASC, published_at DESC"
             )->fetchAll();
         } catch (\PDOException $e) {
             error_log("patient_articles_common: chyba načítania článkov: " . $e->getMessage());
+            return [];
+        }
+    }
+}
+
+if (!function_exists('getMedimpaxPatientArticles')) {
+    /**
+     * Články podsekcie „Dialýza a stredisko Medimpax".
+     *
+     * Filtrácia prebieha v SQL, takže sa na PHP prenáša obsah iba tých
+     * článkov, ktoré sa naozaj zobrazia.
+     *
+     * @return array<int,array<string,mixed>>
+     */
+    function getMedimpaxPatientArticles(\PDO $pdo): array
+    {
+        try {
+            return $pdo->query(
+                "SELECT id, title, slug, author, content, excerpt, published_at, is_top,
+                        1 AS is_medimpax
+                 FROM articles
+                 WHERE is_published = 1
+                   AND category = 'popularne'
+                   AND (slug = 'pre-pacientov-uvod' OR content LIKE '%Medimpax%')
+                 ORDER BY is_top DESC, sort_order ASC, published_at DESC"
+            )->fetchAll();
+        } catch (\PDOException $e) {
+            error_log("patient_articles_common: chyba načítania článkov Medimpax: " . $e->getMessage());
             return [];
         }
     }
@@ -127,20 +161,14 @@ if (!function_exists('isMedimpaxPatientArticle')) {
      */
     function isMedimpaxPatientArticle(array $art): bool
     {
+        // Príznak vypočítaný databázou (pozri getPopularArticles()).
+        if (array_key_exists('is_medimpax', $art)) {
+            return (int) $art['is_medimpax'] === 1;
+        }
+
         if ((string) ($art["slug"] ?? "") === "pre-pacientov-uvod") {
             return true;
         }
         return stripos((string) ($art["content"] ?? ""), "Medimpax") !== false;
-    }
-}
-
-if (!function_exists('getMedimpaxPatientArticles')) {
-    /**
-     * Len články podsekcie „Dialýza a stredisko Medimpax".
-     * @return array<int,array<string,mixed>>
-     */
-    function getMedimpaxPatientArticles(\PDO $pdo): array
-    {
-        return array_values(array_filter(getPopularArticles($pdo), 'isMedimpaxPatientArticle'));
     }
 }

@@ -56,6 +56,166 @@ if (!function_exists('releaseNewsletterProcessLock')) {
     }
 }
 
+/* ── Stav fronty a lease ───────────────────────────────────────────────────
+ * SMTP odoslanie nesmie prebiehať v otvorenej transakcii. Pád procesu po
+ * odoslaní a pred commitom by pri rollbacku vrátil riadok do stavu `pending`
+ * a nasledujúci beh by poslal ten istý e-mail znova — pri dávke by to
+ * znamenalo duplicitné rozoslanie celej dávky.
+ *
+ * Preto sa používa trojstupňový postup:
+ *   1. v krátkej transakcii sa riadky označia ako `sending` (lease),
+ *   2. e-mail sa odošle bez transakcie,
+ *   3. každý zápis stavu je samostatná autokmit transakcia.
+ *
+ * Stav `sending` musí byť v ENUM stĺpca `status` — pozri
+ * add_newsletter_sending_status_migration.php. Kým migrácia nebehla,
+ * pracujeme s pôvodným postupom (odoslanie v transakcii) a píšeme do logu,
+ * aby sa posielanie noviniek nezastavilo.
+ * ──────────────────────────────────────────────────────────────────────── */
+
+/** Lease: po koľkých minútach sa ohlásený riadok považuje za zanechaný. */
+const NEWSLETTER_SENDING_LEASE_SECONDS = 900;
+
+if (!function_exists('newsletterQueueTable')) {
+    /** @return list<string> */
+    function newsletterQueueTable(): array
+    {
+        return ['article_newsletter_queue', 'nl_sub_queue'];
+    }
+}
+
+if (!function_exists('newsletterQueueSupportsSending')) {
+    /**
+     * Podporuje tabuľka stav `sending` v ENUM stĺpca `status`?
+     *
+     * Kým migrácia `add_newsletter_sending_status_migration.php` nebehla,
+     * stav v schéme chýba a `UPDATE … SET status='sending'` by spadol.
+     */
+    function newsletterQueueSupportsSending(PDO $pdo, string $table): bool
+    {
+        static $cache = [];
+        if (isset($cache[$table])) {
+            return $cache[$table];
+        }
+
+        $stmt = $pdo->prepare(
+            "SELECT COLUMN_TYPE FROM INFORMATION_SCHEMA.COLUMNS
+             WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = :table AND COLUMN_NAME = 'status'"
+        );
+        $stmt->execute(['table' => $table]);
+        $type = $stmt->fetchColumn();
+
+        $cache[$table] = $type !== false && stripos((string) $type, "'sending'") !== false;
+
+        return $cache[$table];
+    }
+}
+
+if (!function_exists('newsletterReclaimStaleSending')) {
+    /**
+     * Vráti zanedbané riadky v stave `sending` späť do fronty.
+     *
+     * Worker označí riadok ako `sending` ešte pred odoslaním (aby ho dva
+     * workery nevyzdvihli) a stav zapíše až po odoslaní. Ak proces zomrie
+     * medzi týmito bodmi, riadok zostane visieť v `sending`. Po uplynutí
+     * lehoty ho vrátime do `pending` s pripočítaným pokusom: e-mail sa môže
+     * poslať znova, čo je prijateľnejšie než trvalá strata e-mailu.
+     */
+    function newsletterReclaimStaleSending(PDO $pdo, string $table, int $leaseSeconds = NEWSLETTER_SENDING_LEASE_SECONDS): int
+    {
+        if (!in_array($table, newsletterQueueTable(), true)) {
+            throw new \InvalidArgumentException('Neznáma newsletter fronta: ' . $table);
+        }
+
+        $stmt = $pdo->prepare(
+            "UPDATE `{$table}`
+             SET status = 'pending',
+                 attempts = attempts + 1,
+                 next_attempt_at = NOW(),
+                 last_error = :reason
+             WHERE status = 'sending'
+               AND sent_at IS NULL
+               AND updated_at < DATE_SUB(NOW(), INTERVAL :lease_minutes MINUTE)"
+        );
+        $stmt->bindValue(':lease_minutes', max(1, (int) ceil($leaseSeconds / 60)), \PDO::PARAM_INT);
+        $stmt->bindValue(
+            ':reason',
+            'Predchádzajúci beh newsletter workera sa nedokončil, položka sa vracia do fronty.',
+            \PDO::PARAM_STR
+        );
+        $stmt->execute();
+
+        return $stmt->rowCount();
+    }
+}
+
+if (!function_exists('newsletterClaimQueueRows')) {
+    /**
+     * Vyberie a označí riadky fronty ako `sending` (lease).
+     *
+     * Výber aj označenie prebiehajú v jednej krátkej transakcii s `FOR UPDATE`,
+     * aby dva workery nevyzdvihli tie isté riadky. Transakcia sa končí pred
+     * samotným odoslaním e-mailov.
+     *
+     * Ak schéma zatiaľ neobsahuje stav `sending` (migrácia nebehla), riadky
+     * sa iba vyberú a transakcia zostane otvorená do konca cyklu — správanie
+     * je potom rovnaké ako pôvodne, teda odoslanie v transakcii.
+     *
+     * @return list<int> ID vybraných riadkov.
+     */
+    function newsletterClaimQueueRows(PDO $pdo, string $table, int $limit, int $maxAttempts): array
+    {
+        if (!in_array($table, newsletterQueueTable(), true)) {
+            throw new \InvalidArgumentException('Neznáma newsletter fronta: ' . $table);
+        }
+
+        $supportsSending = newsletterQueueSupportsSending($pdo, $table);
+
+        $pdo->beginTransaction();
+        try {
+            $selectStmt = $pdo->prepare(
+                "SELECT id FROM `{$table}`
+                 WHERE status IN ('pending', 'failed')
+                   AND attempts < :max_attempts
+                   AND next_attempt_at <= NOW()
+                   AND sent_at IS NULL
+                 ORDER BY next_attempt_at ASC, id ASC
+                 LIMIT :limit_rows
+                 FOR UPDATE"
+            );
+            $selectStmt->bindValue(':max_attempts', $maxAttempts, \PDO::PARAM_INT);
+            $selectStmt->bindValue(':limit_rows', $limit, \PDO::PARAM_INT);
+            $selectStmt->execute();
+
+            $ids = array_values(array_map('intval', $selectStmt->fetchAll(\PDO::FETCH_COLUMN)));
+            if ($ids === []) {
+                $pdo->commit();
+                return [];
+            }
+
+            if ($supportsSending) {
+                $claimStmt = $pdo->prepare(
+                    "UPDATE `{$table}` SET status = 'sending' WHERE id IN ("
+                    . implode(',', $ids)
+                    . ')'
+                );
+                $claimStmt->execute();
+                $pdo->commit();
+            }
+
+            // Bez stavu `sending` nechávame transakciu otvorenú: ňou zostávajú
+            // vybrané riadky zamknuté (FOR UPDATE) do konca cyklu.
+
+            return $ids;
+        } catch (\Throwable $e) {
+            if ($pdo->inTransaction()) {
+                $pdo->rollBack();
+            }
+            throw $e;
+        }
+    }
+}
+
 if (!function_exists('getNewsletterUnsubscribeSecret')) {
     function getNewsletterUnsubscribeSecret(): string
     {
@@ -201,7 +361,7 @@ if (!function_exists('cancelPendingArticleNewsletter')) {
                 next_attempt_at = NOW(),
                 last_error = 'Článok bol odpublikovaný pred odoslaním noviniek.'
             WHERE article_id = :article_id
-              AND status IN ('pending', 'failed')
+              AND status IN ('pending', 'failed', 'sending')
               AND sent_at IS NULL");
         $stmt->execute(['article_id' => $articleId]);
         $count = (int) $stmt->rowCount();
@@ -211,7 +371,7 @@ if (!function_exists('cancelPendingArticleNewsletter')) {
                 next_attempt_at = NOW(),
                 last_error = 'Článok bol odpublikovaný pred odoslaním noviniek.'
             WHERE article_id = :article_id
-              AND status IN ('pending', 'failed')
+              AND status IN ('pending', 'failed', 'sending')
               AND sent_at IS NULL");
         $subStmt->execute(['article_id' => $articleId]);
 
@@ -549,23 +709,19 @@ if (!function_exists('processNlSubQueue')) {
         $socketAuth = false;
 
         try {
-            $pdo->beginTransaction();
+            // Vráti zanedbané položky po prerušení workeru do fronty.
+            if (newsletterQueueSupportsSending($pdo, 'nl_sub_queue')) {
+                newsletterReclaimStaleSending($pdo, 'nl_sub_queue');
+            } else {
+                error_log('Newsletter fronta nl_sub_queue nemá stav `sending` — spustite add_newsletter_sending_status_migration.php.');
+            }
 
-            $selectStmt = $pdo->prepare("SELECT id FROM nl_sub_queue
-                WHERE status IN ('pending','failed')
-                  AND attempts < :max_attempts
-                  AND next_attempt_at <= NOW()
-                  AND sent_at IS NULL
-                ORDER BY next_attempt_at ASC, id ASC
-                LIMIT :limit_rows
-                FOR UPDATE");
-        $selectStmt->bindValue(':max_attempts', $maxAttempts, PDO::PARAM_INT);
-        $selectStmt->bindValue(':limit_rows', $limit, PDO::PARAM_INT);
-        $selectStmt->execute();
-        $ids                = $selectStmt->fetchAll(PDO::FETCH_COLUMN);
-        $stats['selected']  = count($ids);
+            // Výber a uzamknutie riadkov. Ak schéma obsahuje stav `sending`,
+            // transakcia sa uzatvorí tu a e-maily sa posielajú bez transakcie.
+            $ids = newsletterClaimQueueRows($pdo, 'nl_sub_queue', $limit, $maxAttempts);
+            $stats['selected'] = count($ids);
 
-        $itemStmt = $pdo->prepare("SELECT q.id, q.article_id, q.subscriber_id, q.email, q.attempts,
+            $itemStmt = $pdo->prepare("SELECT q.id, q.article_id, q.subscriber_id, q.email, q.attempts,
                 a.title, a.slug, a.excerpt, a.is_published,
                 s.verified_at, s.unsubscribed_at
             FROM nl_sub_queue q
@@ -574,7 +730,11 @@ if (!function_exists('processNlSubQueue')) {
             WHERE q.id = :id LIMIT 1");
 
         $cancelStmt = $pdo->prepare("UPDATE nl_sub_queue SET status='cancelled', next_attempt_at=NOW(), last_error=:reason WHERE id=:id AND sent_at IS NULL");
-        $failStmt   = $pdo->prepare("UPDATE nl_sub_queue SET status='failed', attempts=:attempts, next_attempt_at=:next_attempt_at, last_error=:last_error WHERE id=:id AND sent_at IS NULL");
+        // Čas ďalšieho pokusu počíta databáza. Do tej istej DATETIME kolóny sa
+        // inak ukladal raz čas z PHP a raz čas z databázy, pričom sa kolóna
+        // porovnáva s NOW() — pri odlišnom časovom pásme servera to posúvalo
+        // opakovanie pokusu o hodiny.
+        $failStmt   = $pdo->prepare("UPDATE nl_sub_queue SET status='failed', attempts=:attempts, next_attempt_at=DATE_ADD(NOW(), INTERVAL :retry_delay SECOND), last_error=:last_error WHERE id=:id AND sent_at IS NULL");
         $successStmt = $pdo->prepare("UPDATE nl_sub_queue SET status='sent', attempts=attempts+1, sent_at=NOW(), last_error=NULL WHERE id=:id AND sent_at IS NULL");
 
         foreach ($ids as $queueIdRaw) {
@@ -606,8 +766,8 @@ if (!function_exists('processNlSubQueue')) {
             $recipientEmail = trim((string) ($item['email'] ?? ''));
             if ($recipientEmail === '' || !filter_var($recipientEmail, FILTER_VALIDATE_EMAIL)) {
                 $failAttempt    = (int) ($item['attempts'] ?? 0) + 1;
-                $nextAttemptAt  = date('Y-m-d H:i:s', time() + newsletterRetryDelay($failAttempt));
-                $failStmt->execute(['id' => $queueId, 'attempts' => $failAttempt, 'next_attempt_at' => $nextAttemptAt, 'last_error' => 'Neplatný e-mail.']);
+                $retryDelay     = newsletterRetryDelay($failAttempt);
+                $failStmt->execute(['id' => $queueId, 'attempts' => $failAttempt, 'retry_delay' => $retryDelay, 'last_error' => 'Neplatný e-mail.']);
                 $stats['failed']++;
                 continue;
             }
@@ -655,13 +815,15 @@ if (!function_exists('processNlSubQueue')) {
                 $stats['sent']++;
             } else {
                 $failAttempt   = (int) ($item['attempts'] ?? 0) + 1;
-                $nextAttemptAt = date('Y-m-d H:i:s', time() + newsletterRetryDelay($failAttempt));
-                $failStmt->execute(['id' => $queueId, 'attempts' => $failAttempt, 'next_attempt_at' => $nextAttemptAt, 'last_error' => smtpGetLastError()]);
+                $retryDelay    = newsletterRetryDelay($failAttempt);
+                $failStmt->execute(['id' => $queueId, 'attempts' => $failAttempt, 'retry_delay' => $retryDelay, 'last_error' => smtpGetLastError()]);
                 $stats['failed']++;
             }
         }
 
-        $pdo->commit();
+        if ($pdo->inTransaction()) {
+            $pdo->commit();
+        }
         return $stats;
     } catch (\Throwable $e) {
         if ($pdo->inTransaction()) {
@@ -696,26 +858,20 @@ if (!function_exists('processArticleNewsletterQueue')) {
         $socketAuth = false;
 
         try {
-            $pdo->beginTransaction();
+            // Vráti zanedbané položky po prerušení workeru do fronty.
+            if (newsletterQueueSupportsSending($pdo, 'article_newsletter_queue')) {
+                newsletterReclaimStaleSending($pdo, 'article_newsletter_queue');
+            } else {
+                error_log('Newsletter fronta article_newsletter_queue nemá stav `sending` — spustite add_newsletter_sending_status_migration.php.');
+            }
 
-            $selectStmt = $pdo->prepare("SELECT id
-                FROM article_newsletter_queue
-                WHERE status IN ('pending', 'failed')
-                  AND attempts < :max_attempts
-                  AND next_attempt_at <= NOW()
-                  AND sent_at IS NULL
-                ORDER BY next_attempt_at ASC, id ASC
-                LIMIT :limit_rows
-                FOR UPDATE");
-        $selectStmt->bindValue(':max_attempts', $maxAttempts, PDO::PARAM_INT);
-        $selectStmt->bindValue(':limit_rows', $limit, PDO::PARAM_INT);
-        $selectStmt->execute();
+            // Výber a uzamknutie riadkov. Ak schéma obsahuje stav `sending`,
+            // transakcia sa uzatvorí tu a e-maily sa posielajú bez transakcie.
+            $ids = newsletterClaimQueueRows($pdo, 'article_newsletter_queue', $limit, $maxAttempts);
+            $stats['selected'] = count($ids);
 
-        $ids = $selectStmt->fetchAll(PDO::FETCH_COLUMN);
-        $stats['selected'] = count($ids);
-
-        // Príprava dopytov mimo cyklu pre maximalizáciu výkonu
-        $itemStmt = $pdo->prepare("SELECT
+            // Príprava dopytov mimo cyklu pre maximalizáciu výkonu
+            $itemStmt = $pdo->prepare("SELECT
                 q.id, q.article_id, q.user_id, q.email, q.attempts,
                 a.title, a.slug, a.excerpt, a.is_published,
                 u.username, u.title_before, u.first_name, u.middle_name,
@@ -733,10 +889,14 @@ if (!function_exists('processArticleNewsletterQueue')) {
                 last_error = :reason
             WHERE id = :id AND sent_at IS NULL");
 
+        // Čas ďalšieho pokusu počíta databáza. Do tej istej DATETIME kolóny sa
+        // inak ukladal raz čas z PHP a raz čas z databázy, pričom sa kolóna
+        // porovnáva s NOW() — pri odlišnom časovom pásme servera to posúvalo
+        // opakovanie pokusu o hodiny.
         $failStmt = $pdo->prepare("UPDATE article_newsletter_queue
             SET status = 'failed',
                 attempts = :attempts,
-                next_attempt_at = :next_attempt_at,
+                next_attempt_at = DATE_ADD(NOW(), INTERVAL :retry_delay SECOND),
                 last_error = :last_error
             WHERE id = :id AND sent_at IS NULL");
 
@@ -788,12 +948,12 @@ if (!function_exists('processArticleNewsletterQueue')) {
             $recipientEmail = trim((string) ($item['user_email'] ?? $item['email'] ?? ''));
             if ($recipientEmail === '' || !filter_var($recipientEmail, FILTER_VALIDATE_EMAIL)) {
                 $failAttempt = (int) ($item['attempts'] ?? 0) + 1;
-                $nextAttemptAt = date('Y-m-d H:i:s', time() + newsletterRetryDelay($failAttempt));
+                $retryDelay = newsletterRetryDelay($failAttempt);
 
                 $failStmt->execute([
                     'id' => $queueId,
                     'attempts' => $failAttempt,
-                    'next_attempt_at' => $nextAttemptAt,
+                    'retry_delay' => $retryDelay,
                     'last_error' => 'Neplatný alebo chýbajúci e-mail príjemcu.',
                 ]);
                 $stats['failed']++;
@@ -874,19 +1034,21 @@ if (!function_exists('processArticleNewsletterQueue')) {
                 $stats['sent']++;
             } else {
                 $failAttempt = (int) ($item['attempts'] ?? 0) + 1;
-                $nextAttemptAt = date('Y-m-d H:i:s', time() + newsletterRetryDelay($failAttempt));
+                $retryDelay = newsletterRetryDelay($failAttempt);
 
                 $failStmt->execute([
                     'id' => $queueId,
                     'attempts' => $failAttempt,
-                    'next_attempt_at' => $nextAttemptAt,
+                    'retry_delay' => $retryDelay,
                     'last_error' => smtpGetLastError(),
                 ]);
                 $stats['failed']++;
             }
         }
 
-        $pdo->commit();
+        if ($pdo->inTransaction()) {
+            $pdo->commit();
+        }
         return $stats;
     } catch (\Throwable $e) {
         if ($pdo->inTransaction()) {

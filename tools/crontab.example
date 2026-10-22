@@ -1,0 +1,92 @@
+# crontab nefro — jediný zdroj pravdy pre plánované úlohy
+# ═══════════════════════════════════════════════════════════════════════════════
+#
+# Tento súbor je jediným zdrojom pravdy pre to, čo na serveri beží v plánovači.
+# Predtým boli jednotlivé úlohy rozptýlené po README.md, DEPLOY.md a hlavičkách
+# skriptov, takže sa dali ľahko minúť. Auditná historie zaznamenala prípad, keď
+# `newsletter_worker.php` existoval, fungoval, mal CLI guard — a predsa nikdy nebol
+# v crontabe. Fronta potom ticho rástla a desať publikovaných článkov nerozoslalo
+# avízo.
+#
+# Ako použiť
+# ──────────
+#   1. Upravte `NEFRO_PHP` a `NEFRO_ROOT` na reálne hodnoty servera.
+#   2. `crontab -u <uzivatel> -e` a vložte obsah tohto súboru.
+#   3. Overenie, že úlohy naozaj bežia:
+#        crontab -l | grep -c newsletter_worker.php     # musí byť >= 1
+#        SELECT status, COUNT(*) FROM article_newsletter_queue GROUP BY status;
+#      Položka `pending` staršia než dva intervaly cronu je nález.
+#   4. Po každej zmene tohto súboru ho commitnite — plánovač na serveri sa
+#      z neho riadi.
+#
+# Úprava `NEFRO_ROOT` musí sedieť s cestou, ktorú používa deploy (SFTP).
+# Bez `cd` by pracovný adresár cronu bol domovský adresár používateľa.
+#
+# Časy sú v čase servera (Europe/Bratislava).
+# ═══════════════════════════════════════════════════════════════════════════════
+
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+MAILTO=""
+
+# Upravte tieto dve hodnoty.
+NEFRO_PHP=/usr/bin/php
+NEFRO_ROOT=/data/8/6/868f981d-e598-4e71-b7f5-246f2e180cef/polascin.net/sub/nefro
+
+# ── Novinky pre čitateľov ────────────────────────────────────────────────────
+# Worker odošľe článkové avíza z article_newsletter_queue a nl_sub_queue.
+# Raz za minútu: fronta je malá a e-mail má ísť promptne po publikovaní.
+* * * * * cd $NEFRO_ROOT && $NEFRO_PHP newsletter_worker.php --limit=50 --max-attempts=5 >> $NEFRO_ROOT/private/logs/newsletter_worker.log 2>&1
+
+# Týždenný prehľad (digest) — pondelok ráno. Posiela aj zhrnutie zmien
+# portálu zo site_changelog.php.
+0 8 * * 1 cd $NEFRO_ROOT && $NEFRO_PHP newsletter_weekly_digest.php >> $NEFRO_ROOT/private/logs/newsletter_weekly_digest.log 2>&1
+
+# ── Právne oznámenia ──────────────────────────────────────────────────────────
+# Zaznamená novú verziu právnych dokumentov a pošle upozornenie členom
+# a odberateľom. Idempotentné: opakované behy duplikáty nevytvárajú.
+17 * * * * cd $NEFRO_ROOT && $NEFRO_PHP legal_notice_worker.php --limit=50 --max-attempts=5 >> $NEFRO_ROOT/private/logs/legal_notice_worker.log 2>&1
+
+# ── Poskytovatelia zdravotnej starostlivosti ──────────────────────────────────
+# ZÁMERNE BEZ `--send`. Worker vypíše, čo by odoslal, a označí záznamy bez
+# e-mailu ako informované verejne (cl. 14 ods. 5 pism. b). Odoslanie je
+# vedomé rozhodnutie prevádzkovateľa — reálnym zariadeniam sa e-mail nedá
+# vziať späť, preto to nesmie byť vedľajším účinkom cronu.
+# Ručné odoslanie:  php provider_notice_worker.php --status
+#                    php provider_notice_worker.php --send --only=adresa@z.sk
+43 2 * * * cd $NEFRO_ROOT && $NEFRO_PHP provider_notice_worker.php >> $NEFRO_ROOT/private/logs/provider_notice_worker.log 2>&1
+
+# ── Retenčná údržba ───────────────────────────────────────────────────────────
+# Vymazá staré access logy, archívy profilov, ratelimit záznamy, výsledky
+# kalkulačiek po uplynutí lehoty a objednávky po účtovnej dobe.
+# Nedeľa o 02:00 (beh potvrdený v produkčnom logu 2026-10-11).
+0 2 * * 0 cd $NEFRO_ROOT && $NEFRO_PHP archive_cleanup.php >> $NEFRO_ROOT/private/archive_cleanup_cron.log 2>&1
+
+# ── Záloha ────────────────────────────────────────────────────────────────────
+# Časovo konzistentná snapshot (SQL dump + adresáry mimo gitu) v
+# private/backups/<UTC>/. Denné o 03:40, po zálohe poskytovateľa.
+# Obnova a overenie podľa tools/restore/README.md.
+40 3 * * * cd $NEFRO_ROOT && $NEFRO_PHP backup_snapshot.php >> $NEFRO_ROOT/private/logs/backup_snapshot.log 2>&1
+
+# ── Prevádzková kontrola ─────────────────────────────────────────────────────
+# Kontroluje fronty, cron log, deploy marker a verejné stránky. Pri výsledku
+# FAIL pošle agregované upozornenie na SMTP_ADMIN_EMAIL. Výstup: exit 1 = FAIL.
+10 6 * * * cd $NEFRO_ROOT && $NEFRO_PHP ops_health.php --mail >> $NEFRO_ROOT/private/logs/ops_health.log 2>&1
+
+# ── Synchronizácia externých registrov ───────────────────────────────────────
+# Lieky (kurátorský zoznam) a klinické štúdie. Týždenne, mimo pracovných
+# hodín. Migráciu tabuľky drugs spustiť pred prvým syncom:
+#   php add_drugs_migration.php
+# Migrácia tabuľky clinical_trials:
+#   php add_clinical_trials_migration.php
+15 4 * * 1 cd $NEFRO_ROOT && $NEFRO_PHP sync_drugs.php >> $NEFRO_ROOT/private/logs/sync_drugs.log 2>&1
+30 3 * * 1 cd $NEFRO_ROOT && $NEFRO_PHP sync_clinical_trials.php >> $NEFRO_ROOT/private/logs/sync_clinical_trials.log 2>&1
+
+# ── Zámerné OMITNUTÉ ─────────────────────────────────────────────────────────
+# `update_sitemap.php` — sitemap.php je dynamický a validuje sa jednorazovo,
+#   nie pravidelne. Nepotrebuje cron.
+# `newsletter_apology_broken_links.php` — jednorazový ospravedlňujúci e-mail,
+#   už bol odoslaný 2026-10-20. Neopakovat.
+# `provider_notice_worker.php --send` — pozri vyššie, rozhodnutie vlastníka.
+# `setup_db.php` — migrácie spúšťa vlastník ručne po nasadení; deploy
+#   nezahŕňa schému, takže to musí byť vedome vykonaný krok.

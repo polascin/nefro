@@ -23,7 +23,17 @@ require_once __DIR__ . '/pdf_generator.php';
  * @param string $category  Hodnota stĺpca category ('odborne', 'popularne', 'cheatsheet').
  * @param array  $options   'enqueue_newsletter' => bool (predvol true),
  *                          'regenerate_pdf'     => bool (predvol true),
+ *                          'is_published'       => bool|null (predvol null),
  *                          'log_prefix'         => string (predvol 'article_publisher').
+ *
+ * `is_published`:
+ *   null  (predvol) — stav zverejnenia sa pri opakovanom behu NEMENÍ. Článok
+ *          odpublikovaný v administrácii zostane odpublikovaný aj po
+ *          zmení obsahu a opätovnom spustení skriptu. Nový článok sa vloží
+ *          zverejnený.
+ *   true/false     — stav sa výslovne nastaví, teda skript zverejní alebo
+ *          odpublikuje článok.
+ *
  * @return array{inserted:int, updated:int, skipped:int, queued:int, errors:array<string>}
  */
 function upsertArticles(
@@ -35,6 +45,10 @@ function upsertArticles(
     $enqueueNewsletter = (bool) ($options['enqueue_newsletter'] ?? true);
     $regeneratePdf = (bool) ($options['regenerate_pdf'] ?? true);
     $logPrefix = (string) ($options['log_prefix'] ?? 'article_publisher');
+    // null = stav zverejnenia sa pri aktualizácii nemení.
+    $isPublishedOverride = array_key_exists('is_published', $options)
+        ? (int) (bool) $options['is_published']
+        : null;
 
     $inserted = 0;
     $updated = 0;
@@ -53,11 +67,16 @@ function upsertArticles(
             content = VALUES(content),
             excerpt = VALUES(excerpt),
             category = VALUES(category),
-            is_top = VALUES(is_top)"
+            is_top = VALUES(is_top),
+            is_published = IF(:is_published_set = 0, is_published, VALUES(is_published))"
     );
 
     foreach ($articles as $a) {
         try {
+            $isPublishedValue = $isPublishedOverride !== null
+                ? $isPublishedOverride
+                : (int) ($a['is_published'] ?? 1);
+
             $stmt->execute([
                 'title' => (string) ($a['title'] ?? ''),
                 'slug' => (string) ($a['slug'] ?? ''),
@@ -67,7 +86,11 @@ function upsertArticles(
                 'category' => $category,
                 'published_at' => (string) ($a['published_at'] ?? date('Y-m-d H:i:s')),
                 'is_top' => (int) ($a['is_top'] ?? 0),
-                'is_published' => (int) ($a['is_published'] ?? 1),
+                'is_published' => $isPublishedValue,
+                // Dôležité: `execute($params)` prepíše hodnotu každého
+                // placeholdera, ktorý v poli chýba (bindValue sa nezachová).
+                // Preto sa parameter posiela priamo v poli.
+                'is_published_set' => $isPublishedOverride === null ? 0 : 1,
             ]);
 
             // rowCount(): 1 = nový INSERT, 2 = UPDATE existujúceho článku, 0 = bez zmeny.
@@ -86,7 +109,7 @@ function upsertArticles(
 
             if ($rc === 1) {
                 $inserted++;
-                if ($enqueueNewsletter && ((int) ($a['is_published'] ?? 1)) === 1 && $articleId > 0) {
+                if ($enqueueNewsletter && $isPublishedValue === 1 && $articleId > 0) {
                     try {
                         $queued += enqueueArticleNewsletterEmails($pdo, $articleId);
                     } catch (\Throwable $qe) {

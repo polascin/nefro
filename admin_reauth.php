@@ -28,7 +28,10 @@ if ($requestMethod === 'POST') {
             } else {
                 $reauth = verifySensitiveActionPassword($pdo, $userId, $password, $passwordHash);
                 if ($reauth['ok']) {
-                    $returnUrl = (string) ($_SESSION['reauth_return_url'] ?? 'admin.php');
+                    $returnUrl = safeInternalReturnUrl(
+                        (string) ($_SESSION['reauth_return_url'] ?? ''),
+                        'admin.php'
+                    );
                     unset($_SESSION['reauth_return_url']);
                     setFlashMessage('success', 'Opätovné overenie prebehlo úspešne.');
                     header('Location: ' . $returnUrl, true, 303);

@@ -46,6 +46,29 @@ predvolená retencia sú dva kompletné snapshoty (jeden snapshot zaberá pribli
 podľa `tools/restore/README.md`. Zápis cron úloh na serveri je produkčný zásah,
 ktorý vyžaduje samostatné rozhodnutie vlastníka.
 
+## Cron úlohy
+
+Úplný plán úloh je v jedinom súbore `tools/crontab.example` — je to jediný zdroj
+pravdy, z ktorého sa plánovač na serveri riadi. Predtým boli jednotlivé úlohy
+rozptýlené po README.md, DEPLOY.md a hlavičkách skriptov, takže sa dali ľahko
+minúť; auditná historie zaznamenala prípad, keď `newsletter_worker.php` existoval
+a fungoval, ale nikdy nebol v crontabe a fronta ticho rástla.
+
+Overenie, že úlohy naozaj bežia:
+
+```bash
+crontab -l | grep -c newsletter_worker.php          # musí byť >= 1
+```
+
+a nad frontou, ktorú daný worker spracúva:
+
+```sql
+SELECT status, COUNT(*) FROM article_newsletter_queue GROUP BY status;
+```
+
+Položka `pending` staršia než dva intervaly cronu je nález. Deploy schéma
+nezahŕňa, takže `setup_db.php` (migrácie) treba po nasadení spustiť ručne.
+
 ## Povinné regresie
 
 Pred nasadením musí prejsť izolovaná sada podľa

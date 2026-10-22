@@ -335,13 +335,59 @@ function requireAdmin(): void {
 }
 
 /**
+ * Bezpečná návratová URL pre presmerovanie v rámci portálu.
+ *
+ * Akceptuje len relatívne cesty na tomto portáli (`admin.php`,
+ * `admin_articles.php?id=7`). Odmieta absolútne URL, protokolovo-relative
+ * `//cudzidomena.tld`, spätné lomítka a čokoľvek so schémou — tie by
+ * umožnili presmerovanie mimo portálu (open redirect) po úspešnom
+ * opätovnom overení heslom.
+ *
+ * @param string $url      Kandidátna URL.
+ * @param string $fallback Hodnota, ktorá sa použije, ak URL nie je bezpečná.
+ */
+function safeInternalReturnUrl(string $url, string $fallback = 'admin.php'): string {
+    $url = trim($url);
+    if ($url === '') {
+        return $fallback;
+    }
+
+    // Z absolútnej cesty by sa dala spraviť cesta mimo portálu (`//host`,
+    // `/../..`) alebo by šlo o iný protokol.
+    if ($url[0] === '/' || $url[0] === '\\' || str_contains($url, '\\')) {
+        return $fallback;
+    }
+
+    // Schéma (http:, javascript:, data:) alebo hostiteľ v ceste.
+    if (preg_match('#^[a-z][a-z0-9+.\-]*:#i', $url) === 1 || str_contains($url, '//')) {
+        return $fallback;
+    }
+
+    // Povolené znaky relatívnej cesty na tomto portáli.
+    if (preg_match('#^[A-Za-z0-9._~/?&=%+\-]+$#', $url) !== 1) {
+        return $fallback;
+    }
+
+    // Cesta nesmie traverzovať vyššie (zostane sice na tom istom hostiteľovi,
+    // ale je to mimo zmyslu a môže ukázať na neexistujúcu stránku).
+    if (str_contains($url, '..')) {
+        return $fallback;
+    }
+
+    return $url;
+}
+
+/**
  * Pre citlivé admin akcie vyžaduje nedávne opätovné overenie heslom.
  * Ak uplynulo viac ako $graceSeconds od posledného overenia, presmeruje na admin_reauth.php.
  */
 function requireAdminReauth(int $graceSeconds = 300): void {
     requireAdmin();
     if (!hasRecentSensitiveReauthentication($graceSeconds)) {
-        $_SESSION['reauth_return_url'] = (string) ($_SERVER['REQUEST_URI'] ?? 'admin.php');
+        $_SESSION['reauth_return_url'] = safeInternalReturnUrl(
+            (string) ($_SERVER['REQUEST_URI'] ?? ''),
+            'admin.php'
+        );
         setFlashMessage('warning', 'Pre túto akciu zadajte svoje aktuálne heslo.');
         header('Location: admin_reauth.php');
         exit;
@@ -789,6 +835,80 @@ function checkFormRateLimit(PDO $pdo, string $action, string $ip, int $maxAttemp
 }
 
 /**
+ * Je identita (`ip` + `action`) momentálne zablokovaná?
+ *
+ * Na rozdiel od `checkFormRateLimit()` nič nepočíta — iba zistí stav.
+ * Používa sa pred overením hesla, aby sa zbytočne nehashovalo heslo
+ * účtu, na ktorý je už blok.
+ *
+ * Zostávajúci čas počíta databáza (`TIMESTAMPDIFF` medzi `NOW()` a
+ * `blocked_until`), nie PHP. Hodnota z databázy je inak v čase relácie,
+ * ktorý nemusí byť rovnaký ako čas PHP, a prepočet cez `strtotime()`
+ * by ju posunul o rozdiel časových pásiem.
+ *
+ * @return int Počet sekúnd do konca blokácie, 0 ak identita nie je blokovaná.
+ */
+function formRateLimitBlockedForSeconds(PDO $pdo, string $action, string $ip): int
+{
+    $stmt = $pdo->prepare(
+        "SELECT TIMESTAMPDIFF(SECOND, NOW(), blocked_until)
+         FROM form_rate_limit
+         WHERE ip = :ip AND action = :action AND blocked_until IS NOT NULL AND blocked_until > NOW()"
+    );
+    $stmt->execute(['ip' => $ip, 'action' => $action]);
+
+    $seconds = $stmt->fetchColumn();
+    if ($seconds === false || $seconds === null) {
+        return 0;
+    }
+
+    return max(0, (int) $seconds);
+}
+
+/**
+ * Zaznamená neúspešný pokus pre danú identitu a prípadne ju zablokuje.
+ *
+ * Počítadlo sa po uplynutí okna (bez úspešného pokusu) začne odznova.
+ *
+ * @return int Počet evidovaných neúspešných pokusov.
+ */
+function recordFormRateLimitFailure(PDO $pdo, string $action, string $ip, int $maxAttempts, int $windowSeconds): int
+{
+    $pdo->prepare(
+        "INSERT INTO form_rate_limit (ip, action, attempt_count, first_attempt, last_attempt)
+         VALUES (:ip, :action, 1, NOW(), NOW())
+         ON DUPLICATE KEY UPDATE
+            attempt_count = IF(TIMESTAMPDIFF(SECOND, first_attempt, NOW()) >= :window, 1, attempt_count + 1),
+            first_attempt = IF(TIMESTAMPDIFF(SECOND, first_attempt, NOW()) >= :window, NOW(), first_attempt),
+            last_attempt = NOW()"
+    )->execute(['ip' => $ip, 'action' => $action, 'window' => $windowSeconds]);
+
+    $stmt = $pdo->prepare(
+        "SELECT attempt_count FROM form_rate_limit WHERE ip = :ip AND action = :action"
+    );
+    $stmt->execute(['ip' => $ip, 'action' => $action]);
+    $count = (int) ($stmt->fetchColumn() ?? 0);
+
+    if ($count >= $maxAttempts) {
+        $pdo->prepare(
+            "UPDATE form_rate_limit
+             SET blocked_until = DATE_ADD(NOW(), INTERVAL :secs SECOND)
+             WHERE ip = :ip AND action = :action"
+        )->execute(['secs' => $windowSeconds, 'ip' => $ip, 'action' => $action]);
+    }
+
+    return $count;
+}
+
+/** Vymaže počítadlo neúspešných pokusov (po úspešnom overení). */
+function clearFormRateLimit(PDO $pdo, string $action, string $ip): void
+{
+    $pdo->prepare(
+        "DELETE FROM form_rate_limit WHERE ip = :ip AND action = :action"
+    )->execute(['ip' => $ip, 'action' => $action]);
+}
+
+/**
  * Uloženie jednorazovej hlášky do relácie
  */
 function setFlashMessage(string $type, string $message): void {
@@ -855,33 +975,12 @@ function validateJsChallengeToken(?string $token): bool {
 }
 
 /**
- * Centrálna funkcia na získanie klientovej IP adresy.
- * Definovaná primárne v config_loader.php — guard zabraňuje duplikácii.
+ * `getClientIpAddress()` je definovaná v config_loader.php, ktorý auth.php
+ * načíta ako prvý. Toto bol pôvodne duplikát tej istej funkcie, ktorý sa
+ * vďaka guardu `function_exists` nikdy nedefinoval — mŕtvy kód, ktorý pri
+ * úpravách pôsobil ako zdroj pravdy. Jediná definícia je v config_loader.php,
+ * kde sa používa aj pre limiter noviniek (bot_guard.php).
  */
-if (!function_exists('getClientIpAddress')) {
-function getClientIpAddress(): string {
-    $defaultIp = $_SERVER['REMOTE_ADDR'] ?? '0.0.0.0';
-    try {
-        $env = loadAppConfig();
-    } catch (\RuntimeException) {
-        $env = [];
-    }
-
-    if (parseEnvBool($env['TRUST_PROXY_HEADERS'] ?? getenv('TRUST_PROXY_HEADERS'), false)) {
-        $forwarded = $_SERVER['HTTP_X_FORWARDED_FOR'] ?? $_SERVER['HTTP_CLIENT_IP'] ?? $_SERVER['HTTP_X_REAL_IP'] ?? '';
-        if ($forwarded !== '') {
-            foreach (explode(',', $forwarded) as $candidate) {
-                $candidate = trim($candidate);
-                if (filter_var($candidate, FILTER_VALIDATE_IP)) {
-                    return $candidate;
-                }
-            }
-        }
-    }
-
-    return filter_var($defaultIp, FILTER_VALIDATE_IP) ? $defaultIp : '0.0.0.0';
-}
-} // end if (!function_exists('getClientIpAddress'))
 
 /**
  * Overí, či je IP blokovaná pre danú rate-limit tabuľku. Odstraňuje expirované bloky.

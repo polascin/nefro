@@ -64,8 +64,14 @@ const BOT_GUARD_TRUST_PREFIX  = 'nefro1';
 
 /**
  * Menovaní scraperi, SEO-harvestery a AI-tréningové crawlery → tvrdé 403.
- * Zámerne NEobsahuje curl/wget (používajú sa pri QA vlastného webu) ani
- * wkhtmltopdf (generuje PDF verzie článkov a sťahuje si obrázky).
+ * Zámerne NEobsahuje curl/wget (používajú sa pri QA vlastného webu).
+ *
+ * Ani wkhtmltopdf tu nie je: PDF verzie článkov sa generujú z lokálneho HTML
+ * s `<base href="file://…">` a relatívnymi cestami `img/…`, takže wkhtmltopdf
+ * na stránku neposiela žiadny HTTP request. V minulosti sa tu používal skip
+ * celého limitera podľa substringu v User-Agent, čo bolo zfalšovateľné
+ * (ktoľkovoľný scraper si tak vypýtal neobmedzený prístup). Dôveryhodné
+ * vlastné nástroja sa preukazujú podpísaným tokenom, nie reťazcom v UA.
  */
 function botGuardDenyPattern(): string
 {
@@ -174,8 +180,20 @@ function botGuardVerifiableBots(): array
 }
 
 /** Klientská IP adresa. Proxy hlavičkám zámerne nedôverujeme — dajú sa podvrhnúť. */
+/**
+ * IP adresa klienta pre účely limitera.
+ *
+ * Používa `getClientIpAddress()` z config_loader.php — rovnakú funkciu, ktorú
+ * používa limit prihlásenia a overovania 2FA. Obe vrstvy musia vidieť tú istú
+ * identitu: keby limiter noviniek používal `REMOTE_ADDR` a limit prihlásenia
+ * `X-Forwarded-For`, útočník by si hlavičkou podvrhol iba ten druhý limit.
+ */
 function botGuardClientIp(): string
 {
+    if (function_exists('getClientIpAddress')) {
+        return getClientIpAddress();
+    }
+
     $ip = (string) ($_SERVER['REMOTE_ADDR'] ?? '');
     return filter_var($ip, FILTER_VALIDATE_IP) !== false ? $ip : '0.0.0.0';
 }
@@ -671,7 +689,91 @@ function botGuardThrottle(int $retryAfter, string $reason): void
     );
 }
 
-/** Má sa požiadavka vôbec posudzovať? (CLI, lokálny beh, generovanie PDF nie.) */
+/**
+ * Explicitne povolené IP adresy a siete (CIDR) z konfigurácie.
+ *
+ * Používajú sa pre infraštruktúru, ktorá musí obchádzať limiter a nedá sa
+ * preukázať podpísaným tokenom — napr. vlastná egress IP servera, z ktorej
+ * chodí vlastná prevádzka. Na rozdiel od rozpoznávania podľa User-Agent je
+ * takáto výnimka nedokázateľná zvonku: útočník nedokáže zmeniť svoju
+ * zdrojovú adresu.
+ *
+ * Formát: `BOT_GUARD_ALLOW_IPS` v ini súbore alebo v prostredí, hodnoty
+ * oddelené čiarkou, bodkoučiarkou alebo medzerou. Podporuje IPv4 CIDR
+ * (napr. `203.0.113.0/24`) a presné IPv4/IPv6 adresy.
+ */
+function botGuardAllowedIps(): array
+{
+    static $allowed = null;
+    if ($allowed !== null) {
+        return $allowed;
+    }
+
+    $allowed = [];
+
+    try {
+        $env = function_exists('loadAppConfig') ? loadAppConfig() : [];
+    } catch (\RuntimeException) {
+        $env = [];
+    }
+
+    $raw = $env['BOT_GUARD_ALLOW_IPS'] ?? getenv('BOT_GUARD_ALLOW_IPS');
+    $parts = preg_split('/[\s,;]+/', (string) $raw);
+    foreach ($parts === false ? [] : $parts as $entry) {
+        $entry = trim($entry);
+        if ($entry !== '') {
+            $allowed[] = $entry;
+        }
+    }
+
+    return $allowed;
+}
+
+/** Je IP v sieti CIDR (IPv4)? */
+function botGuardIpInCidr(string $ip, string $cidr): bool
+{
+    if (!str_contains($cidr, '/')) {
+        return false;
+    }
+
+    [$network, $bitsRaw] = explode('/', $cidr, 2);
+    $bits = (int) $bitsRaw;
+
+    $ipLong = ip2long($ip);
+    $netLong = ip2long($network);
+    if ($ipLong === false || $netLong === false || $bits < 0 || $bits > 32) {
+        return false;
+    }
+
+    if ($bits === 0) {
+        return true;
+    }
+
+    $mask = -1 << (32 - $bits);
+
+    return ($ipLong & $mask) === ($netLong & $mask);
+}
+
+/** Je daná IP explicitne povolená v konfigurácii? */
+function botGuardIpAllowed(string $ip): bool
+{
+    if ($ip === '' || $ip === '0.0.0.0') {
+        return false;
+    }
+
+    foreach (botGuardAllowedIps() as $entry) {
+        if ($entry === $ip) {
+            return true;
+        }
+        if (botGuardIpInCidr($ip, $entry)) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+/** Má sa požiadavka vôbec posudzovať? (CLI, lokálny beh, explicitne povolená IP.) */
 function botGuardShouldSkip(): bool
 {
     if (PHP_SAPI === 'cli' || PHP_SAPI === 'phpdbg') {
@@ -683,8 +785,8 @@ function botGuardShouldSkip(): bool
         return true;
     }
 
-    // wkhtmltopdf si pri generovaní PDF verzie článku sťahuje vlastné obrázky.
-    if (stripos(botGuardUserAgent(), 'wkhtmltopdf') !== false) {
+    // Explicitne povolená infraštruktúra (napr. vlastná egress IP servera).
+    if (botGuardIpAllowed($ip)) {
         return true;
     }
 

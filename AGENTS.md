@@ -16,7 +16,9 @@ This file provides guidance to WARP (warp.dev) when working with code in this re
   `private/archive_cleanup_cron.log`.
 - Run the operational health check (queues, cron log, deploy marker, excerpt parity of `add_*_article.php` vs `articles.excerpt`, public pages): `php .\ops_health.php [--no-http] [--mail]`;
   exit 1 = FAIL. Daily public-response monitor also runs in `.github/workflows/ops-monitor.yml`.
-- Create a application backup (cross-file consistency requires restore verification) (DB snapshot + files outside git): `php ./backup_snapshot.php [--dry-run]`;
+- Scheduled server jobs live in one file: `tools/crontab.example` (single source of truth for the cron table).
+  When adding a worker, add its entry there in the same commit.
+- Create a time-consistent application backup (cross-file consistency requires restore verification) (DB snapshot + files outside git): `php .\backup_snapshot.php [--dry-run]`;
   output in `private/backups/<UTC>/`, see `tools/restore/README.md`. Scheduling it in cron is the owner's decision.
 - Verify vendored libraries against the dependency register: `php tools\dependency_register.php --check` (`--update` after a library upgrade); overview in `DEPENDENCIES.md`.
 - Run safe UTF-8 checks: `pwsh -File .\smoke_test.ps1 -EncodingOnly`. Run the auth/mobile-verification flow with `-TestEnvironmentConfirmed` only after verifying an isolated test database and an SMS substitute; a localhost URL alone does not prove isolation.

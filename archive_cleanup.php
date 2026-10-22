@@ -7,6 +7,10 @@ declare(strict_types=1);
  * Použitie: php archive_cleanup.php [profile_days] [avatar_days] [access_log_days]
  * Predvolená retenčná lehota: 365 dní pre archívy, 90 dní pre access logy/rate-limit záznamy.
  *
+ * Výsledky kalkulačiek majú vlastnú dvojstupňovú retenciu (lehoty sú
+ * v calculators_common.php): po roku sa odstránia pacientské identifikátory,
+ * po desiatich rokoch sa riadok maž úplne.
+ *
  * Príklad cron jobu (každú nedeľu o 02:00):
  *   0 2 * * 0 /usr/bin/php /path/to/nefro/archive_cleanup.php >> /var/log/nefro_cleanup.log 2>&1
  */
@@ -27,6 +31,8 @@ require_once __DIR__ . '/profile_archive.php';
 // Retenčné doby objednávok publikácií sú v publications_common.php — ten istý
 // zdroj, z ktorého čerpá text zásad ochrany údajov.
 require_once __DIR__ . '/publications_common.php';
+// To isté platí pre výsledky kalkulačiek: lehoty žijú v calculators_common.php.
+require_once __DIR__ . '/calculators_common.php';
 
 echo "Nefro Archív Cleanup\n";
 echo "====================\n";
@@ -60,6 +66,8 @@ $cspReportDeleted = 0;
 $cspRateLimitDeleted = 0;
 $newsletterConsentAuditDeleted = 0;
 $contentNoticesDeleted = 0;
+$calculatorAnonymised = 0;
+$calculatorDeleted = 0;
 
 /**
  * Vyčistí riadky staršie než cutoff z tab-delimited fallback logu.
@@ -318,6 +326,14 @@ try {
     $pubAccStmt->execute(['days' => PUBLICATION_RETENTION_ACCOUNTING_DAYS]);
     $pubAccountingDeleted = $pubAccStmt->rowCount();
 
+    // ── Výsledky kalkulačiek ───────────────────────────────────────────────
+    // `calculator_results` obsahuje údaje o zdraví vrátane rodného čísla.
+    // Bez retencie by identifikátory zostávali v DB navždy. Preto dvojstupňovo:
+    // najprv sa odstránia priame identifikátory (výsledok zostáva použiteľný
+    // na sledovanie vývoja), potom sa po celej lehote zmažú úplne.
+    $calculatorAnonymised = calculatorAnonymiseOldResults($pdo, CALCULATOR_RESULT_ANONYMISE_DAYS);
+    $calculatorDeleted = calculatorDeleteExpiredResults($pdo, CALCULATOR_RESULT_RETENTION_DAYS);
+
 } catch (\PDOException $e) {
     $errors[] = "Databázová chyba: " . $e->getMessage();
 }
@@ -384,6 +400,8 @@ echo "  Objednávky bez IP/prehliadača:      {$pubMetaCleared}\n";
 echo "  Znehodnotené prístupové tokeny:     {$pubTokensRotated}\n";
 echo "  Objednávky bez detailu stiahnutí:   {$pubDownloadDetailCleared}\n";
 echo "  Zmaz. objednávky po účtovnej dobe:  {$pubAccountingDeleted}\n";
+echo "  Anonymizované výsledky kalkulačiek:  {$calculatorAnonymised}\n";
+echo "  Zmazané výsledky kalkulačiek:        {$calculatorDeleted}\n";
 
 if (!empty($errors)) {
     echo "\nUpozornenia:\n";

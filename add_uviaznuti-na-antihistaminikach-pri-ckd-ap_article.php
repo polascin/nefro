@@ -122,7 +122,7 @@ $stmt = $pdo->prepare(
      VALUES (:title, :slug, :author, :content, :excerpt, :published_at, :is_top, 1)
      ON DUPLICATE KEY UPDATE
         title = VALUES(title), author = VALUES(author), content = VALUES(content),
-        excerpt = VALUES(excerpt), is_top = VALUES(is_top), is_published = VALUES(is_published),
+        excerpt = VALUES(excerpt), is_top = VALUES(is_top),
         updated_at = NOW()"
 );
 
