@@ -28,5 +28,6 @@
   "tools/test_publication_consistency.php",
   "tools/test_schema_migrations.php",
   "tools/test_retention_policy.php",
-  "tools/test_pdo_parameter_binding.php"
+  "tools/test_pdo_parameter_binding.php",
+  "tools/test_clock_consistency.php"
 ]

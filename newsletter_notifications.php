@@ -730,7 +730,11 @@ if (!function_exists('processNlSubQueue')) {
             WHERE q.id = :id LIMIT 1");
 
         $cancelStmt = $pdo->prepare("UPDATE nl_sub_queue SET status='cancelled', next_attempt_at=NOW(), last_error=:reason WHERE id=:id AND sent_at IS NULL");
-        $failStmt   = $pdo->prepare("UPDATE nl_sub_queue SET status='failed', attempts=:attempts, next_attempt_at=:next_attempt_at, last_error=:last_error WHERE id=:id AND sent_at IS NULL");
+        // Čas ďalšieho pokusu počíta databáza. Do tej istej DATETIME kolóny sa
+        // inak ukladal raz čas z PHP a raz čas z databázy, pričom sa kolóna
+        // porovnáva s NOW() — pri odlišnom časovom pásme servera to posúvalo
+        // opakovanie pokusu o hodiny.
+        $failStmt   = $pdo->prepare("UPDATE nl_sub_queue SET status='failed', attempts=:attempts, next_attempt_at=DATE_ADD(NOW(), INTERVAL :retry_delay SECOND), last_error=:last_error WHERE id=:id AND sent_at IS NULL");
         $successStmt = $pdo->prepare("UPDATE nl_sub_queue SET status='sent', attempts=attempts+1, sent_at=NOW(), last_error=NULL WHERE id=:id AND sent_at IS NULL");
 
         foreach ($ids as $queueIdRaw) {
@@ -762,8 +766,8 @@ if (!function_exists('processNlSubQueue')) {
             $recipientEmail = trim((string) ($item['email'] ?? ''));
             if ($recipientEmail === '' || !filter_var($recipientEmail, FILTER_VALIDATE_EMAIL)) {
                 $failAttempt    = (int) ($item['attempts'] ?? 0) + 1;
-                $nextAttemptAt  = date('Y-m-d H:i:s', time() + newsletterRetryDelay($failAttempt));
-                $failStmt->execute(['id' => $queueId, 'attempts' => $failAttempt, 'next_attempt_at' => $nextAttemptAt, 'last_error' => 'Neplatný e-mail.']);
+                $retryDelay     = newsletterRetryDelay($failAttempt);
+                $failStmt->execute(['id' => $queueId, 'attempts' => $failAttempt, 'retry_delay' => $retryDelay, 'last_error' => 'Neplatný e-mail.']);
                 $stats['failed']++;
                 continue;
             }
@@ -811,8 +815,8 @@ if (!function_exists('processNlSubQueue')) {
                 $stats['sent']++;
             } else {
                 $failAttempt   = (int) ($item['attempts'] ?? 0) + 1;
-                $nextAttemptAt = date('Y-m-d H:i:s', time() + newsletterRetryDelay($failAttempt));
-                $failStmt->execute(['id' => $queueId, 'attempts' => $failAttempt, 'next_attempt_at' => $nextAttemptAt, 'last_error' => smtpGetLastError()]);
+                $retryDelay    = newsletterRetryDelay($failAttempt);
+                $failStmt->execute(['id' => $queueId, 'attempts' => $failAttempt, 'retry_delay' => $retryDelay, 'last_error' => smtpGetLastError()]);
                 $stats['failed']++;
             }
         }
@@ -885,10 +889,14 @@ if (!function_exists('processArticleNewsletterQueue')) {
                 last_error = :reason
             WHERE id = :id AND sent_at IS NULL");
 
+        // Čas ďalšieho pokusu počíta databáza. Do tej istej DATETIME kolóny sa
+        // inak ukladal raz čas z PHP a raz čas z databázy, pričom sa kolóna
+        // porovnáva s NOW() — pri odlišnom časovom pásme servera to posúvalo
+        // opakovanie pokusu o hodiny.
         $failStmt = $pdo->prepare("UPDATE article_newsletter_queue
             SET status = 'failed',
                 attempts = :attempts,
-                next_attempt_at = :next_attempt_at,
+                next_attempt_at = DATE_ADD(NOW(), INTERVAL :retry_delay SECOND),
                 last_error = :last_error
             WHERE id = :id AND sent_at IS NULL");
 
@@ -940,12 +948,12 @@ if (!function_exists('processArticleNewsletterQueue')) {
             $recipientEmail = trim((string) ($item['user_email'] ?? $item['email'] ?? ''));
             if ($recipientEmail === '' || !filter_var($recipientEmail, FILTER_VALIDATE_EMAIL)) {
                 $failAttempt = (int) ($item['attempts'] ?? 0) + 1;
-                $nextAttemptAt = date('Y-m-d H:i:s', time() + newsletterRetryDelay($failAttempt));
+                $retryDelay = newsletterRetryDelay($failAttempt);
 
                 $failStmt->execute([
                     'id' => $queueId,
                     'attempts' => $failAttempt,
-                    'next_attempt_at' => $nextAttemptAt,
+                    'retry_delay' => $retryDelay,
                     'last_error' => 'Neplatný alebo chýbajúci e-mail príjemcu.',
                 ]);
                 $stats['failed']++;
@@ -1026,12 +1034,12 @@ if (!function_exists('processArticleNewsletterQueue')) {
                 $stats['sent']++;
             } else {
                 $failAttempt = (int) ($item['attempts'] ?? 0) + 1;
-                $nextAttemptAt = date('Y-m-d H:i:s', time() + newsletterRetryDelay($failAttempt));
+                $retryDelay = newsletterRetryDelay($failAttempt);
 
                 $failStmt->execute([
                     'id' => $queueId,
                     'attempts' => $failAttempt,
-                    'next_attempt_at' => $nextAttemptAt,
+                    'retry_delay' => $retryDelay,
                     'last_error' => smtpGetLastError(),
                 ]);
                 $stats['failed']++;

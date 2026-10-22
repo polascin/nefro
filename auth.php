@@ -841,25 +841,28 @@ function checkFormRateLimit(PDO $pdo, string $action, string $ip, int $maxAttemp
  * Používa sa pred overením hesla, aby sa zbytočne nehashovalo heslo
  * účtu, na ktorý je už blok.
  *
- * @return int Unix timestamp konca blokácie, alebo 0 ak identita nie je blokovaná.
+ * Zostávajúci čas počíta databáza (`TIMESTAMPDIFF` medzi `NOW()` a
+ * `blocked_until`), nie PHP. Hodnota z databázy je inak v čase relácie,
+ * ktorý nemusí byť rovnaký ako čas PHP, a prepočet cez `strtotime()`
+ * by ju posunul o rozdiel časových pásiem.
+ *
+ * @return int Počet sekúnd do konca blokácie, 0 ak identita nie je blokovaná.
  */
-function formRateLimitBlockedUntil(PDO $pdo, string $action, string $ip): int
+function formRateLimitBlockedForSeconds(PDO $pdo, string $action, string $ip): int
 {
     $stmt = $pdo->prepare(
-        "SELECT blocked_until
+        "SELECT TIMESTAMPDIFF(SECOND, NOW(), blocked_until)
          FROM form_rate_limit
          WHERE ip = :ip AND action = :action AND blocked_until IS NOT NULL AND blocked_until > NOW()"
     );
     $stmt->execute(['ip' => $ip, 'action' => $action]);
 
-    $value = $stmt->fetchColumn();
-    if ($value === false || $value === null) {
+    $seconds = $stmt->fetchColumn();
+    if ($seconds === false || $seconds === null) {
         return 0;
     }
 
-    $timestamp = strtotime((string) $value);
-
-    return ($timestamp !== false && $timestamp > time()) ? $timestamp : 0;
+    return max(0, (int) $seconds);
 }
 
 /**

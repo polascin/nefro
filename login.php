@@ -135,11 +135,11 @@ function handleLoginPost(PDO $pdo, bool $isLocalDev): array
         $accountKey = $user ? 'user:' . (int) $user['id'] : null;
         if ($accountKey !== null) {
             try {
-                $accountBlockedUntil = formRateLimitBlockedUntil($pdo, 'login', $accountKey);
-                if ($accountBlockedUntil > 0) {
+                $accountBlockedFor = formRateLimitBlockedForSeconds($pdo, 'login', $accountKey);
+                if ($accountBlockedFor > 0) {
                     $errors[] = "Z bezpečnostných dôvodov bol prístup dočasne zablokovaný. Skúste to znova o 15 minút.";
                     if ($isLocalDev) {
-                        $remainingMins = max(1, (int) ceil(($accountBlockedUntil - time()) / 60));
+                        $remainingMins = max(1, (int) ceil($accountBlockedFor / 60));
                         $loginFailureDetails[] = "Prihlásenie na tento účet je blokované ešte približne {$remainingMins} min.";
                     }
                     return compact('errors', 'loginFailureDetails');

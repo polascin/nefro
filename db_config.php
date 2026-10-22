@@ -61,17 +61,22 @@ try {
 
 // ── Časové pásmo databázovej relácie ───────────────────────────────────────
 //
-// Aplikácia zapisuje časy cez PHP v Europe/Bratislava (`date('Y-m-d H:i:s')`)
-// do stĺpcov DATETIME, kým stĺpce TIMESTAMP databáza prekladá pomocou
-// časového pásma relácie. Bez explicitného nastavenia používa relácia
-// nastavenie servera, takže `NOW()` v dotazoch (napr. porovnanie
-// `next_attempt_at <= NOW()`) môže ukazovať iný čas než ten, ktorý PHP
-// naozaj zapísal. Pre dve hodiny rozdielu (letný čas) by sa fronta spracovala
-// oneskoro alebo predčasne.
+// Aplikácia používa jedinú hodinu: Europe/Bratislava. PHP zapisuje časy do
+// stĺpcov DATETIME cez `date('Y-m-d H:i:s')` a `formatUserDateTime()` číta
+// hodnoty z databázy rovnako v tomto pásme. `NOW()` a stĺpce TIMESTAMP sa
+// riadia časovým pásmom relácie, ktoré bez explicitného nastavenia preberá
+// zo servera.
+//
+// Ak server beží v inom pásme (napríklad UTC), do tej istej DATETIME kolóny
+// (`article_newsletter_queue.next_attempt_at`) sa ukladá raz čas z PHP a raz
+// čas z databázy a porovnanie `next_attempt_at <= NOW()` je posunuté o hodiny.
+// Hodnoty z TIMESTAMP stĺpcov sa navyše čítajú v čase servera, takže sa
+// zobrazujú posunuté.
 //
 // Nastavujeme aktuálny posun Europe/Bratislava vypočítaný v PHP: mení sa
 // s letným časom a nezávisí od toho, či server má nainštalované tabuľky
-// časových pásiem.
+// časových pásiem. Relácia tak zostáva v čase aplikácie aj vtedy, keď
+// nastavenie servera zlyhá.
 try {
     $bratislavaOffset = (new \DateTimeImmutable('now', new \DateTimeZone('Europe/Bratislava')))->format('P');
     $pdo->exec("SET time_zone = '{$bratislavaOffset}'");
