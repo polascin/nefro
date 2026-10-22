@@ -113,6 +113,107 @@ foreach ($migrationOnlyTables as $table) {
     );
 }
 
+// ── Poradie podľa závislostí ─────────────────────────────────────────────────
+// Migrácie sa nesmú spúšťať v abecednom poradí: niektoré sú na sebe závislé
+// (tabuľka s cudzím kľúčom musí nasledovať po vytvorení rodiča).
+schemaMigrationTest(
+    str_contains($setup, 'SCHEMA_MIGRATION_ORDER'),
+    'setup_db.php musí definovať explicitné poradie migrácií.',
+);
+
+$orderBlock = '';
+if (preg_match('/SCHEMA_MIGRATION_ORDER\s*=\s*\[(.*?)\]/s', $setup, $orderMatch) === 1) {
+    $orderBlock = $orderMatch[1];
+}
+
+preg_match_all('/\'([^\']+_migration\.php)\'/', $orderBlock, $listedMatches);
+$order = $listedMatches[1];
+
+// 1) Všetky migračné skripty na disku musia byť v zozname.
+$onDisk = array_map('basename', $migrations);
+sort($onDisk);
+$listed = $order;
+sort($listed);
+
+schemaMigrationTest(
+    $onDisk === $listed,
+    'V SCHEMA_MIGRATION_ORDER chýbajú: ' . implode(', ', array_diff($onDisk, $listed))
+        . ' | neexistujúce: ' . implode(', ', array_diff($listed, $onDisk)),
+);
+
+// 2) Každý migračný skript musí mať svoje miesto v poradí.
+foreach ($onDisk as $file) {
+    schemaMigrationTest(
+        in_array($file, $order, true),
+        'Migračný skript ' . $file . ' musí byť uvedený v SCHEMA_MIGRATION_ORDER.',
+    );
+}
+
+// 3) Tabuľka s cudzím kľúčom musí nasledovať po vytvorení rodiča.
+$position = [];
+foreach ($order as $index => $filename) {
+    $position[$filename] = $index;
+}
+
+foreach ($migrations as $migration) {
+    $filename = basename($migration);
+    $source = (string) file_get_contents($migration);
+
+    $creates = [];
+    if (preg_match_all('/CREATE TABLE IF NOT EXISTS\s+`?(\w+)`?/i', $source, $m) > 0) {
+        $creates = $m[1];
+    }
+
+    $fks = [];
+    if (preg_match_all('/REFERENCES\s+`?(\w+)`?\s*\(/i', $source, $m) > 0) {
+        $fks = $m[1];
+    }
+
+    foreach ($fks as $parentTable) {
+        foreach ($migrations as $parentMigration) {
+            $parentName = basename($parentMigration);
+            if ($parentName === $filename) {
+                continue;
+            }
+            $parentSource = (string) file_get_contents($parentMigration);
+            if (preg_match('/CREATE TABLE IF NOT EXISTS\s+`?' . preg_quote($parentTable, '/') . '`?/i', $parentSource) !== 1) {
+                continue;
+            }
+            schemaMigrationTest(
+                $position[$parentName] < $position[$filename],
+                sprintf(
+                    '%s() vytvára tabuľku %s, na ktorú sa viaže %s() — %s() musí ísť skôr.',
+                    $parentName,
+                    $parentTable,
+                    $filename,
+                    $parentName
+                ),
+            );
+        }
+    }
+
+    // Tabuľka upravovaná migráciou musí existovať.
+    if (preg_match_all('/ALTER TABLE\s+`?(\w+)`?/i', $source, $m) > 0) {
+        foreach ($m[1] as $altered) {
+            if ($altered === 'articles' || $altered === 'users') {
+                continue; // vytvára ich setup_db.php
+            }
+            $found = false;
+            foreach ($migrations as $parentMigration) {
+                $parentSource = (string) file_get_contents($parentMigration);
+                if (preg_match('/CREATE TABLE IF NOT EXISTS\s+`?' . preg_quote($altered, '/') . '`?/i', $parentSource) === 1) {
+                    $found = true;
+                    break;
+                }
+            }
+            schemaMigrationTest(
+                $found,
+                'Tabuľka ' . $altered . ', ktorú upravuje ' . $filename . ', nie je vytvorená žiadnou migráciou.',
+            );
+        }
+    }
+}
+
 // ── Pomocníci na detekciu schémy sú zdieľaní ────────────────────────────────
 schemaMigrationTest(
     is_file($root . '/schema_helpers.php'),

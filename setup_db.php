@@ -69,6 +69,43 @@ if (!function_exists('schemaMigrationRecord')) {
     }
 }
 
+/**
+ * Poradie migrácií podľa závislostí.
+ *
+ * Abecedné poradie nestačí: niektoré migrácie sú na sebe závislé.
+ *   • `add_providers_migration.php` vytvára `partner_providers`,
+ *     ku ktorej sa viažu cudzí kľúči;
+ *   • `add_providers_fields_migration.php` pridáva do `partner_providers`
+ *     stĺpec `outreach_status` a `contacted_at`;
+ *   • `add_providers_priority_migration.php` pridáva stĺpec `priority`
+ *     až za `outreach_status`;
+ *   • `add_provider_contacts_migration.php` a `add_provider_notice_migration.php`
+ *     vytvárajú tabuľky s cudzím kľúčom na `partner_providers`;
+ *   • `add_legal_notice_migration.php` sa viaže na `newsletter_subscribers`,
+ *     ktorú vytvára `add_newsletter_tables_migration.php`.
+ *
+ * Kto pridá nový migračný skript, musí ho doplniť aj sem. Skript, ktorý v
+ * zozname chýba, sa aj tak spustí (aby sa nezastavila schéma), ale pri
+ * behu sa na to výrazne upozorní.
+ */
+const SCHEMA_MIGRATION_ORDER = [
+    'add_article_pdf_migration.php',
+    'add_category_migration.php',
+    'add_clinical_trials_migration.php',
+    'add_compliance_controls_migration.php',
+    'add_drugs_migration.php',
+    // partner_providers musí existovať, skôr než sa naň budú viazať cudzie kľúče
+    'add_providers_migration.php',
+    'add_providers_fields_migration.php',
+    'add_providers_priority_migration.php',
+    'add_provider_contacts_migration.php',
+    'add_provider_notice_migration.php',
+    // newsletter_subscribers musí existovať, skôr než naň odkazujú právne oznámenia
+    'add_newsletter_tables_migration.php',
+    'add_legal_notice_migration.php',
+    'add_newsletter_sending_status_migration.php',
+];
+
 if (!function_exists('runPendingSchemaMigrations')) {
     /**
      * Spustí všetky migračné skripty `add_*_migration.php`, ktoré ešte neboli
@@ -84,11 +121,32 @@ if (!function_exists('runPendingSchemaMigrations')) {
     function runPendingSchemaMigrations(PDO $pdo, string $root, callable $out): array
     {
         $files = glob($root . '/add_*_migration.php') ?: [];
-        sort($files);
+
+        // Zoradenie podľa závislostí; súbory mimo zoznamu sa doplnia na koniec
+        // v abecednom poradí.
+        $ordered = [];
+        foreach (SCHEMA_MIGRATION_ORDER as $filename) {
+            foreach ($files as $file) {
+                if (basename($file) === $filename) {
+                    $ordered[] = $file;
+                    unset($files[array_search($file, $files, true)]);
+                    break;
+                }
+            }
+        }
+        $leftovers = array_values($files);
+        sort($leftovers);
+        foreach ($leftovers as $file) {
+            $ordered[] = $file;
+        }
 
         $summary = [];
-        foreach ($files as $file) {
+        foreach ($ordered as $file) {
             $filename = basename($file);
+
+            if (!in_array($filename, SCHEMA_MIGRATION_ORDER, true)) {
+                $out("  ! {$filename}: nie je uvedený v SCHEMA_MIGRATION_ORDER — poradie závislostí nemusí byť správne.\n");
+            }
 
             if (schemaMigrationApplied($pdo, $filename)) {
                 $summary[$filename] = 'už evidovaná';
