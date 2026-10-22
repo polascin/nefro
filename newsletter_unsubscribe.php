@@ -56,7 +56,7 @@ if ($isPost && !validateCsrfToken((string) ($_POST['csrf_token'] ?? ''))) {
             )->execute(['id' => $subId]);
             $cancelStmt = $pdo->prepare(
                 "UPDATE nl_sub_queue SET status='cancelled', next_attempt_at=NOW(), last_error='Odberateľ sa odhlásil.'
-                 WHERE subscriber_id = :sid AND status IN ('pending','failed') AND sent_at IS NULL"
+                 WHERE subscriber_id = :sid AND status IN ('pending','failed','sending') AND sent_at IS NULL"
             );
             $cancelStmt->execute(['sid' => $subId]);
             $cancelled = (int) $cancelStmt->rowCount();
@@ -99,7 +99,7 @@ if ($isPost && !validateCsrfToken((string) ($_POST['csrf_token'] ?? ''))) {
             )->execute(['id' => $subId]);
             $cancelStmt = $pdo->prepare(
                 "UPDATE nl_sub_queue SET status='cancelled', next_attempt_at=NOW(), last_error='Odberateľ sa odhlásil.'
-                 WHERE subscriber_id = :sid AND status IN ('pending','failed') AND sent_at IS NULL"
+                 WHERE subscriber_id = :sid AND status IN ('pending','failed','sending') AND sent_at IS NULL"
             );
             $cancelStmt->execute(['sid' => $subId]);
             $cancelled = (int) $cancelStmt->rowCount();
@@ -152,7 +152,7 @@ if ($isPost && !validateCsrfToken((string) ($_POST['csrf_token'] ?? ''))) {
                     next_attempt_at = NOW(),
                     last_error = 'Používateľ sa odhlásil z noviniek cez odkaz v e-maile.'
                 WHERE user_id = :uid
-                  AND status IN ('pending', 'failed')
+                  AND status IN ('pending', 'failed', 'sending')
                   AND sent_at IS NULL");
             $cancelStmt->execute(['uid' => $uid]);
 

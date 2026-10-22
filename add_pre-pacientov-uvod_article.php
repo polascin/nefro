@@ -78,7 +78,7 @@ $stmt = $pdo->prepare(
      ON DUPLICATE KEY UPDATE
         title = VALUES(title), author = VALUES(author), content = VALUES(content),
         excerpt = VALUES(excerpt), category = VALUES(category), is_top = VALUES(is_top),
-        is_published = VALUES(is_published), updated_at = NOW()"
+        updated_at = NOW()"
 );
 
 foreach ($articles as $a) {

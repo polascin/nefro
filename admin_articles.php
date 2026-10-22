@@ -65,7 +65,7 @@ $queueRecent = [];
 $queueFilterStatus = strtolower(trim((string) ($_GET["q_status"] ?? "")));
 $queueFilterArticleId = max(0, (int) ($_GET["q_article_id"] ?? 0));
 $queuePreset = strtolower(trim((string) ($_GET["q_preset"] ?? "")));
-$queueAllowedStatuses = ["pending", "failed", "sent", "cancelled"];
+$queueAllowedStatuses = ["pending", "failed", "sending", "sent", "cancelled"];
 if (!in_array($queueFilterStatus, $queueAllowedStatuses, true)) {
     $queueFilterStatus = "";
 }

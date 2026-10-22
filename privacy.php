@@ -190,7 +190,7 @@ include 'legal_head.php';
                 <h3>6. Ako dlho údaje uchovávame</h3>
                 <ul>
                     <li><strong>Používateľské kontá:</strong> po dobu aktívneho používania; na žiadosť možné okamžité vymazanie.</li>
-                    <li><strong>Výsledky kalkulačiek uložené v konte:</strong> kým ich používateľ nevymaže alebo nepožiada o zmazanie konta.</li>
+                    <li><strong>Výsledky kalkulačiek uložené v konte:</strong> po roku sa z nich odstránia pacientské identifikátory (meno, dátum narodenia, rodné číslo, poisťovňa) a výsledok zostáva anonymizovaný, takže sa dá použiť na sledovanie vývoja; po desiatich rokoch sa záznam vymaže úplne. Kedykoľvek ich môžete vymazať sami alebo požiadať o zmazanie konta.</li>
                     <li><strong>Lokálna história kalkulačiek pre neprihlásených:</strong> najviac 50 výsledkov v prehliadači, kým ich používateľ nevymaže, neodvolá preferenčný súhlas alebo nevymaže údaje stránky.</li>
                     <li><strong>Server logy:</strong> maximálne 90 dní, potom automaticky mazané.</li>
                     <li><strong>Minimalizovaný audit zrušenia účtu:</strong> maximálne 90 dní; neobsahuje používateľské meno a slúži na bezpečnostnú kontrolu a preukázanie vykonania žiadosti.</li>

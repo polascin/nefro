@@ -55,6 +55,27 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-10-22 10:15',
+                'category' => 'portal',
+                'title' => 'Výsledky kalkulačiek sa po roku anonymizujú',
+                'description' => 'Z výsledkov uložených v konte sa po roku odstránia pacientské identifikátory (meno, rodné číslo, poisťovňa); výsledok zostáva anonymizovaný a použiteľný na sledovanie vývoja. Po desiatich rokoch sa záznam vymaže úplne.',
+                'url' => '',
+            ],
+            [
+                'date' => '2026-10-22 10:15',
+                'category' => 'portal',
+                'title' => 'Novinky sa neposielajú dvakrát',
+                'description' => 'Posielanie noviniek prechádza na nový postup, pri ktorom sa stav odoberu zaznamenáva pred odoslaním. Prerušenie počíta dávky už nespôsobí duplicitné rozoslanie celej dávky.',
+                'url' => '',
+            ],
+            [
+                'date' => '2026-10-22 10:15',
+                'category' => 'portal',
+                'title' => 'Ochrana prihlásenia aj na úrovni účtu',
+                'description' => 'Neúspešné pokusy o prihlásenie sa počítajú aj pre konkrétny účet, takže útok z mnoha rôznych adres už neobmedzuje iba limit podľa IP adresy.',
+                'url' => '',
+            ],
+            [
                 'date' => '2026-10-20 16:53',
                 'category' => 'content',
                 'title' => 'Beletria: Marža z krvi',

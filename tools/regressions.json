@@ -22,5 +22,11 @@
   "tools/test_pdf_links.php",
   "tools/test_ops_health.php",
   "tools/test_dependency_register.php",
-  "tools/test_backup_snapshot.php"
+  "tools/test_backup_snapshot.php",
+  "tools/test_bot_guard_identity.php",
+  "tools/test_safe_return_url.php",
+  "tools/test_publication_consistency.php",
+  "tools/test_schema_migrations.php",
+  "tools/test_retention_policy.php",
+  "tools/test_pdo_parameter_binding.php"
 ]

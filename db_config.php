@@ -59,6 +59,26 @@ try {
     exit("Chyba: Pripojenie k databáze zlyhalo.");
 }
 
+// ── Časové pásmo databázovej relácie ───────────────────────────────────────
+//
+// Aplikácia zapisuje časy cez PHP v Europe/Bratislava (`date('Y-m-d H:i:s')`)
+// do stĺpcov DATETIME, kým stĺpce TIMESTAMP databáza prekladá pomocou
+// časového pásma relácie. Bez explicitného nastavenia používa relácia
+// nastavenie servera, takže `NOW()` v dotazoch (napr. porovnanie
+// `next_attempt_at <= NOW()`) môže ukazovať iný čas než ten, ktorý PHP
+// naozaj zapísal. Pre dve hodiny rozdielu (letný čas) by sa fronta spracovala
+// oneskoro alebo predčasne.
+//
+// Nastavujeme aktuálny posun Europe/Bratislava vypočítaný v PHP: mení sa
+// s letným časom a nezávisí od toho, či server má nainštalované tabuľky
+// časových pásiem.
+try {
+    $bratislavaOffset = (new \DateTimeImmutable('now', new \DateTimeZone('Europe/Bratislava')))->format('P');
+    $pdo->exec("SET time_zone = '{$bratislavaOffset}'");
+} catch (\Throwable $e) {
+    error_log('Nepodarilo sa nastaviť časové pásmo databázovej relácie: ' . $e->getMessage());
+}
+
 // Autentifikačný stav sa kontroluje voči DB pri každom webovom požiadavku.
 // Zmena hesla, roly, aktivity účtu alebo 2FA tak okamžite zruší staré relácie.
 if (php_sapi_name() !== 'cli' && function_exists('synchronizeAuthenticatedSession')) {

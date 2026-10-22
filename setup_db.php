@@ -9,6 +9,9 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__) && php_sapi_name() !==
 require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
 require_once __DIR__ . '/totp.php';
+// Detekcia schémy (stĺpce, indexy, tabuľky) je zdieľaná s migračnými
+// skriptami `add_*_migration.php` — pozri schema_helpers.php.
+require_once __DIR__ . '/schema_helpers.php';
 
 $cliOut = static function (string $s): void {
     if (php_sapi_name() === 'cli') {
@@ -16,14 +19,113 @@ $cliOut = static function (string $s): void {
     }
 };
 
-function columnExists(PDO $pdo, string $table, string $column): bool
-{
-    $stmt = $pdo->prepare(
-        "SELECT COUNT(*) FROM INFORMATION_SCHEMA.COLUMNS
-         WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = :table AND COLUMN_NAME = :column"
-    );
-    $stmt->execute(['table' => $table, 'column' => $column]);
-    return (int) $stmt->fetchColumn() > 0;
+if (!function_exists('schemaMigrationTableExists')) {
+    /**
+     * Tabuľka evidencie spustených migrácií.
+     *
+     * Bez nej sa nedá zistiť, či je databáza na aktuálnej verzii schémy —
+     * `CREATE TABLE IF NOT EXISTS` totiž nič nehovorí o tabuľkách, ktoré
+     * vznikli v samostatných migračných skriptoch.
+     */
+    function schemaMigrationTableExists(PDO $pdo): void
+    {
+        $pdo->exec("CREATE TABLE IF NOT EXISTS schema_migrations (
+            filename VARCHAR(190) NOT NULL PRIMARY KEY,
+            applied_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+            duration_ms INT UNSIGNED NULL,
+            output TEXT NULL
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci");
+    }
+}
+
+if (!function_exists('schemaMigrationApplied')) {
+    /** Bol tento migračný skript už evidovaný? */
+    function schemaMigrationApplied(PDO $pdo, string $filename): bool
+    {
+        $stmt = $pdo->prepare("SELECT COUNT(*) FROM schema_migrations WHERE filename = :filename");
+        $stmt->execute(['filename' => $filename]);
+
+        return (int) $stmt->fetchColumn() > 0;
+    }
+}
+
+if (!function_exists('schemaMigrationRecord')) {
+    /** Zapíše migračný skript do evidencie. */
+    function schemaMigrationRecord(PDO $pdo, string $filename, int $durationMs, string $output): void
+    {
+        $stmt = $pdo->prepare(
+            "INSERT INTO schema_migrations (filename, duration_ms, output)
+             VALUES (:filename, :duration_ms, :output)
+             ON DUPLICATE KEY UPDATE
+                applied_at = CURRENT_TIMESTAMP,
+                duration_ms = VALUES(duration_ms),
+                output = VALUES(output)"
+        );
+        $stmt->execute([
+            'filename' => $filename,
+            'duration_ms' => $durationMs,
+            'output' => mb_substr($output, 0, 4000),
+        ]);
+    }
+}
+
+if (!function_exists('runPendingSchemaMigrations')) {
+    /**
+     * Spustí všetky migračné skripty `add_*_migration.php`, ktoré ešte neboli
+     * evidované v `schema_migrations`.
+     *
+     * Každý skript beží ako samostatný proces: keby jeden zlyhal, ostatné sa
+     * predsa zbehnú a chyba sa zobrazí s názvom skriptu. Všetky migračné
+     * skripty sú idempotentné, takže ich možno spustiť aj opakovane.
+     *
+     * @param callable(string): void $out
+     * @return array<string, string> Súhrn podľa súboru.
+     */
+    function runPendingSchemaMigrations(PDO $pdo, string $root, callable $out): array
+    {
+        $files = glob($root . '/add_*_migration.php') ?: [];
+        sort($files);
+
+        $summary = [];
+        foreach ($files as $file) {
+            $filename = basename($file);
+
+            if (schemaMigrationApplied($pdo, $filename)) {
+                $summary[$filename] = 'už evidovaná';
+                continue;
+            }
+
+            $started = microtime(true);
+            $descriptors = [1 => ['pipe', 'w'], 2 => ['pipe', 'w']];
+            $command = [PHP_BINARY, $file];
+            $process = @proc_open($command, $descriptors, $pipes, $root);
+
+            if (!is_resource($process)) {
+                $summary[$filename] = 'nepodarilo sa spustiť';
+                $out("  • {$filename}: Nepodarilo sa spustiť proces.\n");
+                continue;
+            }
+
+            $output = (string) stream_get_contents($pipes[1]);
+            $errorOutput = (string) stream_get_contents($pipes[2]);
+            fclose($pipes[1]);
+            fclose($pipes[2]);
+            $exitCode = proc_close($process);
+            $durationMs = (int) round((microtime(true) - $started) * 1000);
+            $combined = trim($output . ($errorOutput !== '' ? "\n" . $errorOutput : ''));
+
+            if ($exitCode === 0) {
+                schemaMigrationRecord($pdo, $filename, $durationMs, $combined);
+                $summary[$filename] = 'aplikovaná';
+                $out("  • {$filename}: aplikovaná ({$durationMs} ms)\n");
+            } else {
+                $summary[$filename] = 'zlyhala';
+                $out("  • {$filename}: ZLYHALA (exit {$exitCode}) — " . ($combined !== '' ? $combined : 'bez výstupu') . "\n");
+            }
+        }
+
+        return $summary;
+    }
 }
 
 try {
@@ -86,6 +188,16 @@ try {
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;";
 
     $pdo->exec($sql);
+
+    // ── Index na odber noviniek ────────────────────────────────────────────
+    // Pri každom enqueue newsletteru sa filtruje
+    // `newsletter_consent = 1 AND is_active = 1 AND email_verified_at IS NOT NULL`.
+    // Bez zloženého indexu ide o full scan tabuľky users.
+    if (!indexExists($pdo, 'users', 'idx_users_newsletter')) {
+        $pdo->exec("ALTER TABLE users
+            ADD INDEX idx_users_newsletter (newsletter_consent, is_active, email_verified_at)");
+        $cliOut("Migrácia: index idx_users_newsletter pridaný.\n");
+    }
 
     if (!columnExists($pdo, 'users', 'is_admin')) {
         $pdo->exec("ALTER TABLE users ADD COLUMN is_admin TINYINT(1) DEFAULT 0");
@@ -1091,6 +1203,38 @@ try {
 
 } catch (\PDOException $e) {
     $cliOut("Chyba pri vytváraní tabuľky: " . $e->getMessage());
+    if (php_sapi_name() === 'cli') {
+        exit(1);
+    }
+}
+
+// ── Migrácie ───────────────────────────────────────────────────────────────
+//
+// Základná schéma je v tomto skripte, ale niektoré tabuľky vznikajú len
+// v samostatných migračných skriptoch `add_*_migration.php` (napr. drugs,
+// clinical_trials, partner_providers). `setup_db.php` ich teraz spúšťa
+// sám, takže jeden príkaz zabezpečí celú schému a `schema_migrations`
+// zaznamená, čo už prebehlo.
+//
+// DDL v MariaDB nie je transakčné, preto sú všetky migračné skripty
+// idempotentné a možno ich opakovane spustiť.
+try {
+    schemaMigrationTableExists($pdo);
+    $cliOut("\n── Migrácie ─────────────────────────────────────────\n");
+    $migrationSummary = runPendingSchemaMigrations($pdo, __DIR__, $cliOut);
+
+    $failedMigrations = array_filter(
+        $migrationSummary,
+        static fn (string $state): bool => $state === 'zlyhala' || $state === 'nepodarilo sa spustiť'
+    );
+    if ($failedMigrations !== []) {
+        $cliOut("\nNiektoré migrácie zlyhali: " . implode(', ', array_keys($failedMigrations)) . "\n");
+        if (php_sapi_name() === 'cli') {
+            exit(1);
+        }
+    }
+} catch (\PDOException $e) {
+    $cliOut("Chyba pri spúšťaní migrácií: " . $e->getMessage() . "\n");
     if (php_sapi_name() === 'cli') {
         exit(1);
     }

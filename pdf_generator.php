@@ -49,6 +49,68 @@ function wkhtmltopdfBin(): string
 }
 
 /**
+ * Podporuje wkhtmltopdf vlastnú HTTP hlavičku a jej propagáciu na podzdroje?
+ *
+ * `--custom-header-propagation` existuje až od 0.12.6. Staršia binárka by
+ * príkaz odmietla a PDF by sa nevygenerovalo, preto schopnosť overíme raz
+ * a výsledok si zapamätáme.
+ */
+function wkhtmltopdfSupportsCustomHeader(): bool
+{
+    static $supported = null;
+    if ($supported !== null) {
+        return $supported;
+    }
+
+    $supported = false;
+    $bin = wkhtmltopdfBin();
+    if ($bin === '') {
+        return $supported;
+    }
+
+    $help = (string) @shell_exec(escapeshellarg($bin) . ' --extended-help 2>&1');
+    $supported = str_contains($help, '--custom-header-propagation');
+
+    return $supported;
+}
+
+/**
+ * Argumenty, ktorými sa generátor PDF preukáže podpísaným dôveryhodným tokenom.
+ *
+ * PDF verzie článkov sa dnes generujú z lokálneho HTML s `<base href="file://…">`
+ * a relatívnymi cestami `img/…`, takže wkhtmltopdf na stránku neposiela žiadny
+ * HTTP request. Token je ale predsa len obranná hĺbka: keby sa v obsahu článku
+ * objavil vzdialený zdroj, požiadavka by sa nepripisovala limitu návštevníkov
+ * a dávka PDF by nevyvolala ban vlastnej IP servera.
+ *
+ * Bez podpory hlavičiek sa argumenty vynechajú — generovanie ostáva funkčné,
+ * len sa počíta do bežného limitu.
+ */
+function wkhtmltopdfTrustHeaderArgs(): string
+{
+    if (!function_exists('botGuardMakeTrustToken')) {
+        require_once __DIR__ . '/bot_guard.php';
+    }
+    if (!function_exists('botGuardMakeTrustToken')) {
+        return '';
+    }
+    if (!wkhtmltopdfSupportsCustomHeader()) {
+        return '';
+    }
+
+    try {
+        $token = botGuardMakeTrustToken('pdf-builder', 900);
+    } catch (\Throwable $e) {
+        error_log('PDF generator: podpísaný token sa nepodarilo vyrobiť: ' . $e->getMessage());
+        return '';
+    }
+
+    return ' --custom-header ' . escapeshellarg('X-Nefro-Trust')
+        . ' ' . escapeshellarg($token)
+        . ' --custom-header-propagation';
+}
+
+/**
  * Je generovanie PDF na tomto prostredí dostupné?
  */
 function articlePdfAvailable(): bool
@@ -372,7 +434,9 @@ function generateArticlePdf(PDO $pdo, array $article, bool $updateDb = true, boo
         . ' --margin-top 16 --margin-bottom 16 --margin-left 15 --margin-right 15'
         . ' --footer-center ' . escapeshellarg('[page] / [topage]')
         . ' --footer-font-size 8 --footer-font-name ' . escapeshellarg('DejaVu Sans') . ' --footer-spacing 5'
-        . ' --quiet ' . escapeshellarg($tmpHtml) . ' ' . escapeshellarg($outPath) . ' 2>&1';
+        . ' --quiet'
+        . wkhtmltopdfTrustHeaderArgs()
+        . ' ' . escapeshellarg($tmpHtml) . ' ' . escapeshellarg($outPath) . ' 2>&1';
 
     $res = @shell_exec($cmd);
     @unlink($tmpHtml);

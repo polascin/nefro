@@ -128,6 +128,27 @@ function handleLoginPost(PDO $pdo, bool $isLocalDev): array
         $stmt->execute(['email' => $loginInput, 'username' => $loginInput]);
         $user = $stmt->fetch();
 
+        // ── Limit per účet ────────────────────────────────────────────────────
+        // IP limit bráni tomu, aby jeden zdroj útočil na viacero účtov.
+        // Tento limit bráni tomu, aby sa na jeden účet (napríklad admina)
+        // útočilo z mnoha rôznych IP adres — často poCredential stuffing.
+        $accountKey = $user ? 'user:' . (int) $user['id'] : null;
+        if ($accountKey !== null) {
+            try {
+                $accountBlockedUntil = formRateLimitBlockedUntil($pdo, 'login', $accountKey);
+                if ($accountBlockedUntil > 0) {
+                    $errors[] = "Z bezpečnostných dôvodov bol prístup dočasne zablokovaný. Skúste to znova o 15 minút.";
+                    if ($isLocalDev) {
+                        $remainingMins = max(1, (int) ceil(($accountBlockedUntil - time()) / 60));
+                        $loginFailureDetails[] = "Prihlásenie na tento účet je blokované ešte približne {$remainingMins} min.";
+                    }
+                    return compact('errors', 'loginFailureDetails');
+                }
+            } catch (\PDOException $e) {
+                error_log("Rate limit check (účet) error: " . $e->getMessage());
+            }
+        }
+
         // Vždy voláme password_verify (aj pre neexistujúceho používateľa)
         // aby sme zabránili timing útoku na enumeráciu e-mailov.
         // Konštantný bcrypt dummy hash zachová presne jednu drahú operáciu aj
@@ -158,6 +179,23 @@ function handleLoginPost(PDO $pdo, bool $isLocalDev): array
                     $loginFailureDetails[] = 'Nepodarilo sa aktualizovať počítadlo bezpečnostných pokusov.';
                 }
             }
+
+            // Neúspešný pokus zapíšeme aj na samotný účet — inak by útoč
+            // z mnoha IP adres obmedzoval iba IP limit.
+            if ($accountKey !== null) {
+                try {
+                    $accountCount = recordFormRateLimitFailure($pdo, 'login', $accountKey, $maxAttempts, $blockSecs);
+                    if ($accountCount >= $maxAttempts) {
+                        $errors[] = "Príliš veľa neúspešných pokusov. Prístup bol zablokovaný na 15 minút.";
+                        if ($isLocalDev) {
+                            $loginFailureDetails[] = 'Bol dosiahnutý bezpečnostný limit neúspešných pokusov pre tento účet.';
+                        }
+                    }
+                } catch (\PDOException $e) {
+                    error_log("Rate limit update (účet) error: " . $e->getMessage());
+                }
+            }
+
             return compact('errors', 'loginFailureDetails');
         }
 
@@ -176,9 +214,14 @@ function handleLoginPost(PDO $pdo, bool $isLocalDev): array
             $user['password_hash'] = $rehash;
         }
 
-        // Prihlásenie úspešné — vyčisti IP záznamy
+        // Prihlásenie úspešné — vyčisti IP záznamy aj počítadlo účtu
         try {
             clearIpRateLimit($pdo, 'login_attempts', $clientIp);
+        } catch (\PDOException) { /* ignoruj */ }
+        try {
+            // Účet tu garantovane existuje — vetva `$user` je falsy vyššie
+            // a skončila sa návratom.
+            clearFormRateLimit($pdo, 'login', 'user:' . (int) $user['id']);
         } catch (\PDOException) { /* ignoruj */ }
 
         $emailVerified = !empty($user['email_verified_at']) ? 1 : 0;

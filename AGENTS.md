@@ -16,6 +16,8 @@ This file provides guidance to WARP (warp.dev) when working with code in this re
   `private/archive_cleanup_cron.log`.
 - Run the operational health check (queues, cron log, deploy marker, public pages): `php .\ops_health.php [--no-http] [--mail]`;
   exit 1 = FAIL. Daily public-response monitor also runs in `.github/workflows/ops-monitor.yml`.
+- Scheduled server jobs live in one file: `tools/crontab.example` (single source of truth for the cron table).
+  When adding a worker, add its entry there in the same commit.
 - Create a time-consistent application backup (DB snapshot + files outside git): `php .ackup_snapshot.php [--dry-run]`;
   output in `private/backups/<UTC>/`, see `tools/restore/README.md`. Scheduling it in cron is the owner's decision.
 - Verify vendored libraries against the dependency register: `php tools\dependency_register.php --check` (`--update` after a library upgrade); overview in `DEPENDENCIES.md`.
