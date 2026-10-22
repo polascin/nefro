@@ -64,7 +64,7 @@ if ! git diff --cached --quiet || [ -n "$(git status --porcelain -- pdf/)" ]; th
 fi
 
 echo "[sync-pdf] 1/3 Regenerujem chýbajúce/neaktuálne PDF na serveri…"
-if ! REGEN_OUTPUT=$(ssh -4 -i "$KEY" -p "$PORT" -o StrictHostKeyChecking=accept-new "$USER@$HOST" \
+if ! REGEN_OUTPUT=$(ssh -4 -i "$KEY" -p "$PORT" -o BatchMode=yes -o ConnectTimeout=20 -o StrictHostKeyChecking=accept-new "$USER@$HOST" \
 	"php $REMOTE/generate_all_article_pdfs.php --stale" 2>&1); then
 	printf '%s\n' "$REGEN_OUTPUT" >&2
 	echo "[sync-pdf] Regenerácia zlyhala; sťahovanie a commit sa nevykonali." >&2
@@ -78,7 +78,7 @@ LOCAL_PDF_DIR="$ROOT/pdf"
 if [ "$SFTP_WINDOWS_CLIENT" -eq 1 ]; then
 	LOCAL_PDF_DIR="$(cygpath -m "$LOCAL_PDF_DIR")" || exit 1
 fi
-if ! "$SFTP_BIN" -q -i "$KEY" -P "$PORT" -o StrictHostKeyChecking=accept-new "$USER@$HOST" >/dev/null <<SFTP
+if ! "$SFTP_BIN" -4 -q -b - -i "$KEY" -P "$PORT" -o BatchMode=yes -o ConnectTimeout=20 -o StrictHostKeyChecking=accept-new "$USER@$HOST" >/dev/null <<SFTP
 lcd "$LOCAL_PDF_DIR"
 cd $REMOTE/pdf
 mget *.pdf

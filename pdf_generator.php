@@ -119,7 +119,7 @@ function articlePdfPortableHref(string $href): ?string
  * obrázkov v lokálnom /img. Generátor tak nemôže čítať konfiguráciu ani robiť
  * HTTP požiadavky podľa HTML uloženého administrátorom.
  */
-function sanitizeArticlePdfContent(string $content): string
+function sanitizeArticlePdfContent(string $content, string $articleSlug = ''): string
 {
     if (!class_exists('DOMDocument')) {
         return '<p>' . nl2br(htmlspecialchars(strip_tags($content), ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8')) . '</p>';
@@ -194,6 +194,9 @@ function sanitizeArticlePdfContent(string $content): string
             if ($portable === null) {
                 $element->removeAttribute('href');
             } else {
+                if (str_starts_with($portable, '#') && $articleSlug !== '') {
+                    $portable = 'https://nefro.polascin.net/article.php?slug=' . rawurlencode($articleSlug) . $portable;
+                }
                 $element->setAttribute('href', $portable);
             }
         }
@@ -219,7 +222,7 @@ function buildArticlePdfHtml(array $article): string
     $title  = htmlspecialchars((string) ($article['title'] ?? ''), ENT_QUOTES, 'UTF-8');
     $author = htmlspecialchars((string) ($article['author'] ?? 'MUDr. Ľubomír Polaščín'), ENT_QUOTES, 'UTF-8');
     $slug   = htmlspecialchars((string) ($article['slug'] ?? ''), ENT_QUOTES, 'UTF-8');
-    $content = sanitizeArticlePdfContent((string) ($article['content'] ?? ''));
+    $content = sanitizeArticlePdfContent((string) ($article['content'] ?? ''), (string) ($article['slug'] ?? ''));
 
     $dateRaw = (string) ($article['published_at'] ?? '');
     $date = $dateRaw !== '' ? date('d.m.Y', strtotime($dateRaw)) : '';

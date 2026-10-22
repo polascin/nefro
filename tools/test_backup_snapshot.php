@@ -99,6 +99,21 @@ backupTest($code === 2, 'Neznámy parameter vracia kód 2.');
 [$code] = $run(['--dest=../mimo', '--dry-run']);
 backupTest($code === 2, 'Cesta s .. sa odmietne.');
 
+// An incomplete invocation must fail and must not prune a previous usable backup.
+$partialDest = $dest . '/partial';
+mkdir($partialDest);
+mkdir($partialDest . '/20261001T030000Z');
+file_put_contents($partialDest . '/20261001T030000Z/manifest.json', '{"result":"complete"}');
+[$code, $out] = $run(['--skip-db', '--skip-files', '--dest=' . str_replace('\\', '/', $partialDest)]);
+backupTest($code === 1 && str_contains($out, 'RESULT: incomplete'), 'Skipped backup parts must not report success.');
+backupTest(is_dir($partialDest . '/20261001T030000Z'), 'Incomplete runs must preserve prior backups.');
+$lock = fopen($partialDest . '/.snapshot.lock', 'c');
+flock($lock, LOCK_EX);
+[$code, $out, $err] = $run(['--skip-db', '--skip-files', '--dest=' . str_replace('\\', '/', $partialDest)]);
+backupTest($code === 1 && str_contains($err, 'zámok'), 'Concurrent backup must fail without touching artifacts.');
+flock($lock, LOCK_UN);
+fclose($lock);
+
 backupRemoveDirectory($root);
 backupTest(!is_dir($root), 'Upratanie dočasného koreňa.');
 

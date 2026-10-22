@@ -64,4 +64,7 @@ pdfLinksTest(preg_match('~href="(?!https?://|#|file://)~', $html) !== 1, 'Tlačo
 pdfLinksTest(substr_count($html, '<base ') === 1, 'Obsah článku nesmie vložiť ďalší <base>.');
 pdfLinksTest(str_contains($html, 'https://nefro.polascin.net/article.php?slug=testovaci-clanok'), 'Pätička musí uvádzať verejnú URL článku.');
 
+pdfLinksTest(str_contains($html, 'href="https://nefro.polascin.net/article.php?slug=testovaci-clanok#kotva"'), 'Kotva v tlačovom HTML musí mať verejnú URL; wkhtmltopdf ju inak uloží ako Launch.');
+pdfLinksTest(!str_contains($html, 'href="#'), 'V tlačovom HTML nesmie ostať lokálna kotva.');
+
 echo "PDF links: $checks PASS\n";
