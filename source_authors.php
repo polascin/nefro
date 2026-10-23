@@ -550,5 +550,8 @@ function getSourceArticleAuthors(): array {
         // Všetkých 45 menovaných autorov randomizovanej štúdie ICRAKI (N Engl J Med 2026,
         // doi 10.1056/NEJMoa2608397, PMID 42873070) overených v PubMed zázname 2026-10-18.
         'intermitentna-hemodialyza-vs-crrt-aki-kriticky-chori-icraki' => ['Stéphane Gaudry', 'Marouane Boubaya', 'Guillaume Louis', 'Khalil Chaïbi', 'Etienne de Montmollin', 'Julien Bohé', 'Maxime Desgrouas', 'Clément Devautour', 'Adrien Joseph', 'Bruno Mégarbane', 'Christophe Camus', 'Pierre Bailly', 'Alexis Lambour', 'Romain Arrestier', 'Samir Jaber', 'Adrien Robine', 'Nicolas Chudeau', 'Guillaume Chevrel', 'Béatrice La Combe', 'Jonathan Nicolas', 'Laurent Argaud', 'Côme Bureau', 'Antoine Kimmoun', 'Noémie Zucman', 'Jean-Damien Ricard', 'Guillaume Thiery', 'Stanislas Faguer', 'Mathieu Jozwiak', 'Nathan Ferrand', 'Benjamin Chousterman', 'Mehdi Marzouk', 'Julien Cadiet', 'Alain Combes', 'Arnaud Mari', 'Damien Contou', 'Roland Amathieu', 'Daniel Da Silva', 'Charlotte Salmon Gandonnière', 'Pierre-André Rodie-Talbere', 'Isabelle Durand-Zaleski', 'Patrick Rossignol', 'Jean-Pierre Quenot', 'Lucie Biard', 'Coralie Bloch', 'Didier Dreyfuss'],
+        // Všetci šiesti autori spracúvanej pôvodnej práce (PLOS Med 2026;23(9):e1005213,
+        // doi 10.1371/journal.pmed.1005213, PMID 42752434), overení v Crossref a PubMed 2026-10-24.
+        'rem-spanok-riziko-83-ochoreni-uk-biobank' => ['Jingsong Luo', 'Ruiyi Liu', 'Jie Yin', 'Wangnan Cao', 'Shengzhi Sun', 'Rui Chen'],
     ];
 }
