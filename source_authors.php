@@ -559,5 +559,8 @@ function getSourceArticleAuthors(): array {
         // Autor spracúvaného komentára Medscape Family Medicine (22. 10. 2026), byline overený
         // na verejne prístupnej stránke zdroja 2026-10-24.
         'skrining-ckd-mlady-dospely-preventivne-odbery' => ['Charles P. Vega'],
+        // Autorka spracúvanej správy Medscape Medical News z UEG Week 2026 (22. 10. 2026),
+        // byline overený na verejne prístupnej stránke zdroja 2026-10-24.
+        'obefazimod-ulcerozna-kolitida-abtect-maintenance-nefrologicky-pohlad' => ['Becky McCall'],
     ];
 }
