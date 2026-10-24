@@ -562,5 +562,9 @@ function getSourceArticleAuthors(): array {
         // Autorka spracúvanej správy Medscape Medical News z UEG Week 2026 (22. 10. 2026),
         // byline overený na verejne prístupnej stránke zdroja 2026-10-24.
         'obefazimod-ulcerozna-kolitida-abtect-maintenance-nefrologicky-pohlad' => ['Becky McCall'],
+        // Všetkých sedem autorov spracúvaného Cochranovho prehľadu (Cochrane Database Syst Rev
+        // 2026;10(10):CD013423, doi 10.1002/14651858.CD013423.pub3, PMID 42849912),
+        // overení v Crossref a PubMed 2026-10-24.
+        'farmaceuticky-marketing-predpisovanie-liekov-nefrologia' => ['Barbara Mintzes', 'Joel Lexchin', 'Quinn Grundy', 'Alice Fabbri', 'Geoffrey K. P. Spurling', 'Riaz Qureshi', 'Lisa Bero'],
     ];
 }
