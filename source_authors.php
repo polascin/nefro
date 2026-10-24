@@ -566,5 +566,8 @@ function getSourceArticleAuthors(): array {
         // 2026;10(10):CD013423, doi 10.1002/14651858.CD013423.pub3, PMID 42849912),
         // overení v Crossref a PubMed 2026-10-24.
         'farmaceuticky-marketing-predpisovanie-liekov-nefrologia' => ['Barbara Mintzes', 'Joel Lexchin', 'Quinn Grundy', 'Alice Fabbri', 'Geoffrey K. P. Spurling', 'Riaz Qureshi', 'Lisa Bero'],
+        // Všetkých 14 autorov spracúvanej pôvodnej práce (J Affect Disord 2026;416:122588,
+        // doi 10.1016/j.jad.2026.122588, PMID 42838231), overení v zázname PubMed 2026-10-24.
+        'konopa-riziko-bipolarnej-poruchy-metaanalyza' => ['Cecilia Sanjuan-Ortiz', 'Paula Querol', 'Claudia Aymerich', 'Nuria Laherran', 'Fanny Ditlevsen', 'Pablo Navalón', 'Luis M. Rojo-Bofill', 'Allan H. Young', 'Celso Arango', 'Aditya Sharma', 'Marta Di Forti', 'Robin M. Murray', 'Christoph U. Correll', 'Gonzalo Salazar de Pablo'],
     ];
 }
