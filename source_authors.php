@@ -569,5 +569,17 @@ function getSourceArticleAuthors(): array {
         // Všetkých 14 autorov spracúvanej pôvodnej práce (J Affect Disord 2026;416:122588,
         // doi 10.1016/j.jad.2026.122588, PMID 42838231), overení v zázname PubMed 2026-10-24.
         'konopa-riziko-bipolarnej-poruchy-metaanalyza' => ['Cecilia Sanjuan-Ortiz', 'Paula Querol', 'Claudia Aymerich', 'Nuria Laherran', 'Fanny Ditlevsen', 'Pablo Navalón', 'Luis M. Rojo-Bofill', 'Allan H. Young', 'Celso Arango', 'Aditya Sharma', 'Marta Di Forti', 'Robin M. Murray', 'Christoph U. Correll', 'Gonzalo Salazar de Pablo'],
+        // Autorka spracúvanej správy Medscape News Canada (22. 10. 2026), byline overený
+        // na verejne prístupnej stránke zdroja 2026-10-24.
+        'ai-zapisovace-zdravotna-dokumentacia-nefrologia' => ['Marilynn Larkin'],
+        // Všetkých osem autorov spracúvanej pôvodnej práce (Health Communication 2026,
+        // doi 10.1080/10410236.2026.2734167), overení v Crossref 2026-10-24.
+        'stigma-glp1-komunikacia-s-pacientom-nefrologia' => ['Braidyn Lazenby', 'Ashley Guidry', 'Sarah Price', 'Md Sazzad Mahmud Shuvo', 'Tursynay Alikhanova', 'Chloe Morrison', 'Nicole Davis', 'Madison Lenard'],
+        // Autorka spracúvanej správy Medscape Medical News (20. 10. 2026), byline overený
+        // na verejne prístupnej stránke zdroja 2026-10-24.
+        'retatrutid-glp1-plateau-trojity-agonista' => ['Julie Peck'],
+        // Všetci štyria autori spracúvanej pôvodnej kazuistiky (Fed Pract 2026;43(10):390-393,
+        // doi 10.12788/fp.0763), overení v hlavičke článku na verejne prístupnej stránke 2026-10-24.
+        'kratom-naltrexon-abstinencna-reakcia-kazuistika' => ['Jennifer L. Cole', 'Leah B. Pittman', 'Jomo C. Osborne', 'Michael N. Osinski'],
     ];
 }
