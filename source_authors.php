@@ -556,5 +556,8 @@ function getSourceArticleAuthors(): array {
         // Všetkých deviť autorov spracúvanej pôvodnej práce (Clin Transl Sci 2026;19(10):e70730,
         // doi 10.1111/cts.70730, PMID 42806593), overení v zázname PubMed 2026-10-24.
         'rituximab-relabujuca-refrakterna-lupus-nefritida-metaanalyza' => ['Xiaolong Wang', 'Shuang Liang', 'Xiaowei Sun', 'Fuling Wang', 'Guichun Tang', 'Weizhu Deng', 'Meng Li', 'Qian Wang', 'Zheyi Dong'],
+        // Autor spracúvaného komentára Medscape Family Medicine (22. 10. 2026), byline overený
+        // na verejne prístupnej stránke zdroja 2026-10-24.
+        'skrining-ckd-mlady-dospely-preventivne-odbery' => ['Charles P. Vega'],
     ];
 }
