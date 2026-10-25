@@ -118,7 +118,7 @@ $articles[] = [
 
 <h2>Literatúra</h2>
 
-<p><small><em>1. Cole Jennifer L., Pittman Leah B., Osborne Jomo C., Osinski Michael N. Severe Kratom Withdrawal Induced by Oral Naltrexone: A Case Report and Call for Increased Awareness. <em>Federal Practitioner.</em> 2026;43(10):390–393. DOI: <a href="https://doi.org/10.12788/fp.0763" target="_blank" rel="noopener noreferrer">10.12788/fp.0763</a>. Veterans Health Care System of the Ozarks, Fayetteville, Arkansas. Autori neuvádzajú konflikt záujmov. <a href="https://www.medscape.com/viewarticle/severe-kratom-withdrawal-induced-oral-naltrexone-case-report-2026a10013aw" target="_blank" rel="noopener noreferrer">Celý text</a>.</em></small></p>
+<p><small><em>1. Cole Jennifer L., Pittman Leah B., Osborne Jomo C., Osinski Michael N. Severe Kratom Withdrawal Induced by Oral Naltrexone: A Case Report and Call for Increased Awareness. <em>Federal Practitioner.</em> 2026;43(10):390–393. DOI: <a href="https://www.medscape.com/viewarticle/severe-kratom-withdrawal-induced-oral-naltrexone-case-report-2026a10013aw" target="_blank" rel="noopener noreferrer">10.12788/fp.0763</a>. Veterans Health Care System of the Ozarks, Fayetteville, Arkansas. Autori neuvádzajú konflikt záujmov. <a href="https://www.medscape.com/viewarticle/severe-kratom-withdrawal-induced-oral-naltrexone-case-report-2026a10013aw" target="_blank" rel="noopener noreferrer">Celý text</a>.</em></small></p>
 
 <p><small><em>2. Jarka Christopher, Gregoire Kathryn. Precipitated withdrawal with kratom use following naltrexone administration. <em>Mental Health Clinician.</em> 2023;13(3):155–158. DOI: <a href="https://doi.org/10.9740/mhc.2023.06.155" target="_blank" rel="noopener noreferrer">10.9740/mhc.2023.06.155</a>.</em></small></p>
 
