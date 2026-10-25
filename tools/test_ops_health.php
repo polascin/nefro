@@ -5,6 +5,13 @@ declare(strict_types=1);
 // Includuje iba funkcie; hlavný beh sa spúšťa len pri priamom volaní skriptu.
 require_once __DIR__ . '/../ops_health.php';
 
+// Aplikácia má jedinú hodinu: Europe/Bratislava (db_config.php pripája pásmo
+// relácie k pásmu aplikácie). Test nesmie závisieť od php.ini — v CI je
+// date.timezone=Europe/Bratislava, lokálne býva UTC — inak by padal len podľa
+// prostredia. Navyše nesmie miešať časové rámce: SQLite CURRENT_TIMESTAMP je
+// UTC, kým kód časy z DB číta v pásme aplikácie.
+date_default_timezone_set('Europe/Bratislava');
+
 $checks = 0;
 function opsHealthTest(bool $ok, string $message): void
 {
@@ -27,6 +34,22 @@ foreach (OPS_HEALTH_QUEUES as $table) {
 $dbNow = opsHealthDbNow($pdo);
 opsHealthTest(strtotime($dbNow) !== false, 'Čas DB musí byť parsovateľný.');
 
+// Fixture časy stavujeme od času DB v tom istom ráme, v ktorom ho kód číta.
+// Pôvodne sa používalo SQLite datetime('now', '-2 days'), čo je UTC — a ten sa
+// parsoval v pásme aplikácie. V noci prechodu letného času na zimný (25. 10.
+// 2026) sa UTC offset zmenil o hodinu medzi „teraz" a „pred dvoma dňami", takže
+// vek vychádzal o 3600 s vedľa a regresná brána padala (Beh 134).
+$dbNowTs = (int) strtotime($dbNow);
+$fixture = static fn (int $secondsAgo): string => date('Y-m-d H:i:s', $dbNowTs - $secondsAgo);
+$twoDaysAgo = $fixture(172800);
+$threeHoursAgo = $fixture(10800);
+$fiveDaysAgo = $fixture(5 * 86400);
+$tenDaysAgo = $fixture(10 * 86400);
+// Očakávaný vek vypočítame rovnakým spôsobom, akým ho počíta kód: rozdiel
+// časov z DB v jednom ráme. Kontrola proti 172800 s ostáva (vek sa počíta
+// z času DB), ale s toleranciou pre prechod letného času.
+$expectedAge = $dbNowTs - (int) strtotime($twoDaysAgo);
+
 // Prázdne fronty = PASS.
 foreach (OPS_HEALTH_QUEUES as $table) {
     $stats = opsHealthQueueStats($pdo, $table, $dbNow);
@@ -35,24 +58,29 @@ foreach (OPS_HEALTH_QUEUES as $table) {
 }
 
 // Čakajúca položka stará dva dni (čas DB) = FAIL pri limite 24 h, PASS pri limite 72 h.
-$pdo->exec("INSERT INTO nl_sub_queue (status, created_at, next_attempt_at) VALUES ('pending', datetime('now', '-2 days'), datetime('now', '-2 days'))");
+$pdo->exec("INSERT INTO nl_sub_queue (status, created_at, next_attempt_at) VALUES ('pending', '{$twoDaysAgo}', '{$twoDaysAgo}')");
 $stats = opsHealthQueueStats($pdo, 'nl_sub_queue', $dbNow);
 opsHealthTest($stats['pending'] === 1, 'Čakajúca položka sa musí započítať.');
-opsHealthTest($stats['oldest_pending_s'] !== null && abs($stats['oldest_pending_s'] - 172800) < 120, 'Vek najstaršej položky sa počíta z času DB.');
+opsHealthTest(
+    $stats['oldest_pending_s'] !== null
+        && abs($stats['oldest_pending_s'] - $expectedAge) < 2
+        && abs($stats['oldest_pending_s'] - 172800) <= 3600,
+    'Vek najstaršej položky sa počíta z času DB.',
+);
 opsHealthTest($stats['retry_overdue'] === 1, 'Položka s next_attempt_at pred hodinou je po termíne.');
 $evaluation = opsHealthEvaluateQueue($stats, 24 * 3600);
 opsHealthTest($evaluation['status'] === 'FAIL' && $evaluation['messages'] !== [], 'Dva dni stará položka musí byť FAIL.');
 opsHealthTest(opsHealthEvaluateQueue($stats, 72 * 3600)['status'] === 'WARN', 'Pri vyššom limite ostane iba WARN za oneskorené opakovanie.');
 
 // Zlyhanie za 24 h = WARN; staršie zlyhanie sa nepočíta.
-$pdo->exec("INSERT INTO legal_notice_queue (status, created_at, updated_at) VALUES ('failed', datetime('now', '-3 hours'), datetime('now', '-3 hours'))");
-$pdo->exec("INSERT INTO legal_notice_queue (status, created_at, updated_at) VALUES ('failed', datetime('now', '-5 days'), datetime('now', '-5 days'))");
+$pdo->exec("INSERT INTO legal_notice_queue (status, created_at, updated_at) VALUES ('failed', '{$threeHoursAgo}', '{$threeHoursAgo}')");
+$pdo->exec("INSERT INTO legal_notice_queue (status, created_at, updated_at) VALUES ('failed', '{$fiveDaysAgo}', '{$fiveDaysAgo}')");
 $stats = opsHealthQueueStats($pdo, 'legal_notice_queue', $dbNow);
 opsHealthTest($stats['failed_24h'] === 1, 'Počítajú sa iba zlyhania za posledných 24 h.');
 opsHealthTest(opsHealthEvaluateQueue($stats, 24 * 3600)['status'] === 'WARN', 'Čerstvé zlyhanie musí byť WARN.');
 
 // Odoslané položky sa nepovažujú za čakajúce.
-$pdo->exec("INSERT INTO article_newsletter_queue (status, created_at) VALUES ('sent', datetime('now', '-10 days'))");
+$pdo->exec("INSERT INTO article_newsletter_queue (status, created_at) VALUES ('sent', '{$tenDaysAgo}')");
 opsHealthTest(opsHealthQueueStats($pdo, 'article_newsletter_queue', $dbNow)['pending'] === 0, 'Odoslané položky nie sú čakajúce.');
 
 // Neznámy front sa odmietne (ochrana pred vložením názvu tabuľky).
