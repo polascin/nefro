@@ -87,7 +87,7 @@ $baseUrl = "https://nefro.polascin.net/";
 
                 <p>
                     Nástroj vás prevedie štruktúrovaným postupom podľa odpovedí na cielené otázky.
-                    Slúži ako orientačná pomôcka pre klinické rozhodovanie — <strong>nenahrádza</strong>
+                    Slúži ako orientačná pomôcka pre klinické rozhodovanie; <strong>nenahrádza</strong>
                     vyšetrenie pacienta, močový sediment, laboratórium ani individuálne posúdenie.
                 </p>
 
@@ -117,8 +117,8 @@ $baseUrl = "https://nefro.polascin.net/";
                             <tr><th scope="col">Štádium</th><th scope="col">Sérový kreatinín</th><th scope="col">Diuréza</th></tr>
                         </thead>
                         <tbody>
-                            <tr><th scope="row">1</th><td>1,5–1,9× východisko alebo ↑ ≥ 26,5 µmol/l</td><td>&lt; 0,5 ml/kg/h počas 6–12 h</td></tr>
-                            <tr><th scope="row">2</th><td>2,0–2,9× východisko</td><td>&lt; 0,5 ml/kg/h počas ≥ 12 h</td></tr>
+                            <tr><th scope="row">1</th><td>1,5 až 1,9× východisko alebo ↑ ≥ 26,5 µmol/l</td><td>&lt; 0,5 ml/kg/h počas 6 až 12 h</td></tr>
+                            <tr><th scope="row">2</th><td>2,0 až 2,9× východisko</td><td>&lt; 0,5 ml/kg/h počas ≥ 12 h</td></tr>
                             <tr><th scope="row">3</th><td>≥ 3,0× východisko, alebo SCr ≥ 353,6 µmol/l, alebo začatie KRT</td><td>&lt; 0,3 ml/kg/h počas ≥ 24 h alebo anúria ≥ 12 h</td></tr>
                         </tbody>
                     </table>
@@ -126,17 +126,17 @@ $baseUrl = "https://nefro.polascin.net/";
 
                 <!-- Statická referencia: algoritmus -->
                 <section class="form-section" aria-labelledby="algo-heading">
-                    <h3 id="algo-heading">Diagnostický algoritmus — prehľad</h3>
+                    <h3 id="algo-heading">Diagnostický algoritmus: prehľad</h3>
                     <ol class="tool-step__list">
                         <li><strong>Potvrdiť AKI a štádium</strong> (KDIGO; odlíšiť od CKD / AKI on CKD).</li>
-                        <li><strong>Vylúčiť postrenálnu (obštrukčnú) príčinu</strong> — USG (hydronefróza), močový katéter. Často rýchlo reverzibilné.</li>
-                        <li><strong>Posúdiť prerenálnu (hypoperfúznu) príčinu</strong> — volémia, FENa &lt; 1 % / FEUrea &lt; 35 %, bland sediment, reakcia na korekciu perfúzie.</li>
+                        <li><strong>Vylúčiť postrenálnu (obštrukčnú) príčinu</strong>: USG (hydronefróza), močový katéter. Často rýchlo reverzibilné.</li>
+                        <li><strong>Posúdiť prerenálnu (hypoperfúznu) príčinu</strong>: volémia, FENa &lt; 1 % / FEUrea &lt; 35 %, bland sediment, reakcia na korekciu perfúzie.</li>
                         <li><strong>Intrinsické (renálne) AKI</strong> podľa kompartmentu:
                             <ul class="tool-step__list">
-                                <li><strong>Tubulárne (ATN)</strong> — granulárne valce; ischemické/toxické/pigmentové.</li>
-                                <li><strong>Intersticiálne (AIN)</strong> — leukocytové valce, eozinofília, lieky (PPI, NSA, ATB).</li>
-                                <li><strong>Glomerulárne (nefritické/RPGN)</strong> — erytrocytové valce, dysmorfné erytrocyty, proteinúria; urgentná imunológia + biopsia.</li>
-                                <li><strong>Vaskulárne/mikroangiopatické</strong> — TMA (TTP/HUS/aHUS), ateroembolizmus; schistocyty, ↑LDH.</li>
+                                <li><strong>Tubulárne (ATN)</strong>: granulárne valce; ischemické/toxické/pigmentové.</li>
+                                <li><strong>Intersticiálne (AIN)</strong>: leukocytové valce, eozinofília, lieky (PPI, NSA, ATB).</li>
+                                <li><strong>Glomerulárne (nefritické/RPGN)</strong>: erytrocytové valce, dysmorfné erytrocyty, proteinúria; urgentná imunológia + biopsia.</li>
+                                <li><strong>Vaskulárne/mikroangiopatické</strong>: TMA (TTP/HUS/aHUS), ateroembolizmus; schistocyty, ↑LDH.</li>
                             </ul>
                         </li>
                     </ol>

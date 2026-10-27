@@ -12,7 +12,7 @@
             + 'klinický kontext, močový sediment a laboratórium; mnohé AKI majú zmiešanú etiológiu.',
         nodes: {
             confirm: {
-                id: 'confirm', kind: 'q', step: 'Krok 1 — Potvrdenie a štádium',
+                id: 'confirm', kind: 'q', step: 'Krok 1: Potvrdenie a štádium',
                 title: 'Spĺňa pacient kritériá AKI podľa KDIGO?',
                 body: ['Akútne poškodenie obličiek (AKI) podľa KDIGO 2012 definujeme prítomnosťou aspoň jedného z kritérií:'],
                 bullets: [
@@ -22,13 +22,13 @@
                 ],
                 prompt: 'Je niektoré z kritérií splnené?',
                 options: [
-                    { label: 'Áno — AKI potvrdené', hint: 'Pokračujte v diferenciálnej diagnostike (stage 1–3 podľa rozsahu vzostupu SCr a oligúrie).', next: 'obstruction' },
+                    { label: 'Áno, AKI potvrdené', hint: 'Pokračujte v diferenciálnej diagnostike (stage 1 až 3 podľa rozsahu vzostupu SCr a oligúrie).', next: 'obstruction' },
                     { label: 'Nie / zatiaľ nejasné', hint: 'Sledovať a prehodnotiť.', next: 'not_aki' }
                 ]
             },
 
             obstruction: {
-                id: 'obstruction', kind: 'q', step: 'Krok 2 — Vylúčiť postrenálnu príčinu',
+                id: 'obstruction', kind: 'q', step: 'Krok 2: Vylúčiť postrenálnu príčinu',
                 title: 'Sú prítomné známky obštrukcie močových ciest?',
                 body: ['Postrenálnu (obštrukčnú) príčinu vylučujeme ako prvú, pretože je často rýchlo reverzibilná. Zvážte ju najmä pri:'],
                 bullets: [
@@ -38,13 +38,13 @@
                 ],
                 prompt: 'Potvrdzuje USG hydronefrózu alebo je prítomná retencia moču?',
                 options: [
-                    { label: 'Áno — obštrukcia / hydronefróza', next: 'postrenal' },
-                    { label: 'Nie — USG bez obštrukcie', hint: 'Pokračujte na prerenálnu príčinu.', next: 'prerenal' }
+                    { label: 'Áno, obštrukcia / hydronefróza', next: 'postrenal' },
+                    { label: 'Nie, USG bez obštrukcie', hint: 'Pokračujte na prerenálnu príčinu.', next: 'prerenal' }
                 ]
             },
 
             prerenal: {
-                id: 'prerenal', kind: 'q', step: 'Krok 3 — Posúdiť prerenálnu príčinu',
+                id: 'prerenal', kind: 'q', step: 'Krok 3: Posúdiť prerenálnu príčinu',
                 title: 'Svedčí obraz pre prerenálnu (hypoperfúznu) príčinu?',
                 body: ['Prerenálne AKI vzniká pri zníženej perfúzii obličiek bez štrukturálneho poškodenia (zatiaľ). Typické súvislosti a nálezy:'],
                 bullets: [
@@ -55,13 +55,13 @@
                 ],
                 prompt: 'Reaguje funkcia obličiek na korekciu volémie/perfúzie a sedimentu je nevýrazný?',
                 options: [
-                    { label: 'Áno — pravdepodobne prerenálne', next: 'prerenal_out' },
+                    { label: 'Áno, pravdepodobne prerenálne', next: 'prerenal_out' },
                     { label: 'Nie / pretrváva napriek korekcii volémie', hint: 'Zvážte intrinsické (renálne) AKI.', next: 'intrinsic' }
                 ]
             },
 
             intrinsic: {
-                id: 'intrinsic', kind: 'q', step: 'Krok 4 — Intrinsické (renálne) AKI',
+                id: 'intrinsic', kind: 'q', step: 'Krok 4: Intrinsické (renálne) AKI',
                 title: 'Ktorý nález dominuje v močovom sedimente a klinike?',
                 body: ['Pri intrinsickom AKI určujeme poškodený kompartment podľa močového sedimentu a sprievodných znakov. Vyberte dominujúci obraz:'],
                 prompt: 'Dominujúci nález:',
@@ -77,11 +77,11 @@
             not_aki: {
                 id: 'not_aki', kind: 'r', severity: 'info',
                 category: 'Zatiaľ nespĺňa kritériá AKI',
-                summary: 'Kritériá KDIGO momentálne nie sú naplnené — sledujte vývoj a prehodnoťte.',
+                summary: 'Kritériá KDIGO momentálne nie sú naplnené; sledujte vývoj a prehodnoťte.',
                 sections: [
                     { heading: 'Odporúčaný postup', items: [
                         'Sériovo sledujte sérový kreatinín a diurézu (kritérium môže byť naplnené neskôr).',
-                        'Odlíšte akútne zhoršenie od chronického ochorenia obličiek (AKI on CKD) — využite známu východiskovú hodnotu SCr.',
+                        'Odlíšte akútne zhoršenie od chronického ochorenia obličiek (AKI on CKD); využite známu východiskovú hodnotu SCr.',
                         'Revidujte nefrotoxické lieky a stav volémie aj preventívne.'
                     ] }
                 ],
@@ -94,7 +94,7 @@
             postrenal: {
                 id: 'postrenal', kind: 'r', severity: 'warn',
                 category: 'Postrenálne AKI (obštrukcia)',
-                summary: 'Obraz svedčí pre obštrukciu močových ciest — často rýchlo reverzibilná príčina, urgentne riešiť odtok moču.',
+                summary: 'Obraz svedčí pre obštrukciu močových ciest: často rýchlo reverzibilná príčina, urgentne riešiť odtok moču.',
                 sections: [
                     { heading: 'Časté príčiny', items: [
                         'Benígna hyperplázia prostaty, karcinóm prostaty, malignity malej panvy.',
@@ -104,7 +104,7 @@
                     { heading: 'Vyšetrenia', items: [
                         'USG obličiek a močového mechúra (hydronefróza, postmikčné rezíduum).',
                         'Zavedenie močového katétra (vylúčiť/odstrániť subvezikálnu obštrukciu).',
-                        'CT pri neistote (litiáza, retroperitoneum) — pozor na kontrast pri AKI.'
+                        'CT pri neistote (litiáza, retroperitoneum); pozor na kontrast pri AKI.'
                     ] },
                     { heading: 'Manažment', items: [
                         'Odstrániť obštrukciu: katéter, nefrostómia alebo ureterálny stent (urologické konzílium).',
@@ -116,7 +116,7 @@
             prerenal_out: {
                 id: 'prerenal_out', kind: 'r', severity: 'warn',
                 category: 'Prerenálne AKI (hypoperfúzia)',
-                summary: 'Funkčné AKI z hypoperfúzie — pri včasnej korekcii reverzibilné, pri pretrvávaní prechádza do ATN.',
+                summary: 'Funkčné AKI z hypoperfúzie: pri včasnej korekcii reverzibilné, pri pretrvávaní prechádza do ATN.',
                 sections: [
                     { heading: 'Časté príčiny', items: [
                         'Hypovolémia (krvácanie, GIT straty, nadmerná diuréza), distribučný/kardiogénny šok, sepsa.',
@@ -128,7 +128,7 @@
                         'U-Na < 20 mmol/l, vysoký pomer urea : kreatinín, koncentrovaný moč, bland sediment.'
                     ] },
                     { heading: 'Manažment', items: [
-                        'Optimalizovať volémiu a perfúziu (cielená tekutinová liečba podľa stavu — pozor na preťaženie pri srdcovom zlyhávaní/cirhóze).',
+                        'Optimalizovať volémiu a perfúziu (cielená tekutinová liečba podľa stavu; pozor na preťaženie pri srdcovom zlyhávaní/cirhóze).',
                         'Liečiť vyvolávajúcu príčinu (sepsa, krvácanie, srdcové zlyhávanie).',
                         'Dočasne vysadiť/prehodnotiť nefrotoxíny a RAAS blokádu; upraviť dávkovanie liekov podľa funkcie obličiek.'
                     ] }
@@ -141,7 +141,7 @@
             atn: {
                 id: 'atn', kind: 'r', severity: 'warn',
                 category: 'Akútna tubulárna nekróza (ATN)',
-                summary: 'Najčastejšia príčina intrinsického AKI — ischemická, toxická alebo pigmentová.',
+                summary: 'Najčastejšia príčina intrinsického AKI: ischemická, toxická alebo pigmentová.',
                 sections: [
                     { heading: 'Časté príčiny', items: [
                         'Ischemická: predĺžená hypoperfúzia/šok (kontinuum s prerenálnym AKI).',
@@ -169,14 +169,14 @@
             ain: {
                 id: 'ain', kind: 'r', severity: 'warn',
                 category: 'Akútna intersticiálna nefritída (AIN)',
-                summary: 'Zápalové poškodenie interstícia, najčastejšie poliekové — kľúčové je rozpoznať a vysadiť vyvolávajúci liek.',
+                summary: 'Zápalové poškodenie interstícia, najčastejšie poliekové; kľúčové je rozpoznať a vysadiť vyvolávajúci liek.',
                 sections: [
                     { heading: 'Časté príčiny', items: [
                         'Lieky: inhibítory protónovej pumpy, NSA, antibiotiká (betalaktámy, sulfónamidy, rifampicín), inhibítory kontrolných bodov.',
                         'Infekcie a autoimunitné/granulomatózne ochorenia (sarkoidóza, TINU, IgG4-asociované ochorenie).'
                     ] },
                     { heading: 'Klinické a laboratórne stopy', items: [
-                        'Subfebrílie, vyrážka, artralgie a eozinofília — klasická triáda je však zriedkavá a jej absencia AIN nevylučuje.',
+                        'Subfebrílie, vyrážka, artralgie a eozinofília; klasická triáda je však zriedkavá a jej absencia AIN nevylučuje.',
                         'Sterilná pyúria, leukocytové valce, mierna proteinúria; časová súvislosť s nasadením lieku.'
                     ] },
                     { heading: 'Manažment', items: [
@@ -190,7 +190,7 @@
             gn: {
                 id: 'gn', kind: 'r', severity: 'urgent',
                 category: 'Glomerulárne AKI (nefritický syndróm / RPGN)',
-                summary: 'Nefritický obraz môže znamenať rýchlo progredujúcu glomerulonefritídu — naliehavá situácia vyžadujúca promptnú diagnostiku a liečbu.',
+                summary: 'Nefritický obraz môže znamenať rýchlo progredujúcu glomerulonefritídu: naliehavá situácia vyžadujúca promptnú diagnostiku a liečbu.',
                 sections: [
                     { heading: 'Klinické a laboratórne stopy', items: [
                         'Dysmorfné erytrocyty a erytrocytové valce, proteinúria, hypertenzia, oligúria, edémy.',
@@ -199,11 +199,11 @@
                     { heading: 'Urgentné vyšetrenia', items: [
                         'Imunológia: ANA, anti-dsDNA, ANCA (MPO/PR3), anti-GBM, komplement C3/C4, kryoglobulíny, ASLO.',
                         'Sérológie hepatitíd B a C, HIV; kvantifikácia proteinúrie (UACR/UPCR).',
-                        'Promptná nefrologická konzultácia a biopsia obličky — pri RPGN bezodkladne.'
+                        'Promptná nefrologická konzultácia a biopsia obličky; pri RPGN bezodkladne.'
                     ] },
                     { heading: 'Manažment', items: [
                         'Liečba podľa etiológie (napr. imunosupresia pri ANCA-asociovanej vaskulitíde, anti-GBM, lupusovej nefritíde).',
-                        'Čas je obličkové tkanivo — oneskorenie zhoršuje renálnu prognózu.'
+                        'Čas je obličkové tkanivo; oneskorenie zhoršuje renálnu prognózu.'
                     ] }
                 ],
                 links: [
@@ -214,11 +214,11 @@
             vascular: {
                 id: 'vascular', kind: 'r', severity: 'urgent',
                 category: 'Vaskulárne / mikroangiopatické AKI',
-                summary: 'Postihnutie ciev alebo trombotická mikroangiopatia — niektoré jednotky (TTP, aHUS) sú urgentné a hematologicky/nefrologicky liečiteľné.',
+                summary: 'Postihnutie ciev alebo trombotická mikroangiopatia; niektoré jednotky (TTP, aHUS) sú urgentné a hematologicky/nefrologicky liečiteľné.',
                 sections: [
                     { heading: 'Diferenciálna diagnostika', items: [
                         'Trombotická mikroangiopatia: TTP, typický a atypický HUS (aHUS).',
-                        'Ateroembolická choroba (cholesterolové emboly po angiografii/chirurgii — livedo, eozinofília, oneskorený nástup).',
+                        'Ateroembolická choroba (cholesterolové emboly po angiografii/chirurgii: livedo, eozinofília, oneskorený nástup).',
                         'Trombóza/stenóza renálnej artérie alebo vény, sklerodermická renálna kríza, malígna hypertenzia.'
                     ] },
                     { heading: 'Vyšetrenia', items: [
