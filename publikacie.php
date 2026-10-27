@@ -288,7 +288,7 @@ $freeCatalogue = freePublications();
             <section class="form-section" aria-labelledby="pub-ako-heading">
                 <h3 id="pub-ako-heading">Ako nákup funguje</h3>
                 <ol class="pub-steps">
-                    <li>Vyberiete formáty a odošlete objednávku — stačí e-mailová adresa.</li>
+                    <li>Vyberiete formáty a odošlete objednávku, stačí e-mailová adresa.</li>
                     <li>E-mailom dostanete platobné pokyny s variabilným symbolom a QR kódom.</li>
                     <li>Zaplatíte prevodom, alebo kartou a peňaženkou — Stripe, PayPal, Revolut,
                         Ko-fi, Viamo či kryptomenou.</li>

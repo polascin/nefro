@@ -430,7 +430,7 @@ if ($requestMethod === 'POST') {
 <head>
   <?php
   $pageTitle = 'Registrácia | Nefro-projekt Slovensko';
-  $seoDescription = 'Zaregistrujte sa do Nefro-projekt Slovensko — odborného portálu pre nefrológov a lekárov.';
+  $seoDescription = 'Zaregistrujte sa do Nefro-projekt Slovensko, odborného portálu pre nefrológov a lekárov.';
   $robotsMeta = 'noindex, follow';
   $canonicalUrl = 'https://nefro.polascin.net/register.php';
   include 'head_meta.php';
@@ -447,7 +447,7 @@ if ($requestMethod === 'POST') {
     <main id="main-content" class="container" role="main">
         <div class="auth-container auth-container--wide">
             <h2>Registrácia</h2>
-            <p class="auth-subtitle">Vytvorte si účet za pár sekúnd — stačí e-mail a heslo. Ostatné údaje sú nepovinné a môžete ich kedykoľvek doplniť vo svojom profile.</p>
+            <p class="auth-subtitle">Vytvorte si účet za pár sekúnd, stačí e-mail a heslo. Ostatné údaje sú nepovinné a môžete ich kedykoľvek doplniť vo svojom profile.</p>
 
             <?php if ($requestMethod === 'POST' && !$success): ?>
                 <div class="alert alert-error">
@@ -492,7 +492,7 @@ if ($requestMethod === 'POST') {
 
                     <div class="form-section">
                         <h3>Vytvorenie účtu</h3>
-                        <p class="form-section-hint">Na vytvorenie účtu stačí e-mail a heslo. Všetko ostatné je nepovinné — môžete to doplniť nižšie alebo kedykoľvek neskôr vo svojom profile.</p>
+                        <p class="form-section-hint">Na vytvorenie účtu stačí e-mail a heslo. Všetko ostatné je nepovinné. Môžete to doplniť nižšie alebo kedykoľvek neskôr vo svojom profile.</p>
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="email">E-mailová adresa *</label>
@@ -515,7 +515,7 @@ if ($requestMethod === 'POST') {
                     </div>
 
                     <details class="register-optional">
-                      <summary class="register-optional__summary">Doplniť ďalšie údaje (titul, pracovisko, adresa, sociálne siete) — nepovinné</summary>
+                      <summary class="register-optional__summary">Doplniť ďalšie údaje (titul, pracovisko, adresa, sociálne siete), nepovinné</summary>
 
                     <div class="form-section">
                         <h3>Základné a osobné údaje</h3>
