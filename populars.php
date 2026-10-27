@@ -36,7 +36,7 @@ $baseUrl = "https://nefro.polascin.net/";
 $schemaOrgUrl = "https://schema.org";
 
 $pageTitle = "Pre pacientov – zrozumiteľne o obličkách | " . $siteName;
-$seoDescription = "Popularizačné články o obličkách, ich ochoreniach a liečbe — jednoduchým jazykom, s obrázkami, pre poučených pacientov a verejnosť.";
+$seoDescription = "Popularizačné články o obličkách, ich ochoreniach a liečbe, jednoduchým jazykom, s obrázkami, pre poučených pacientov a verejnosť.";
 $seoKeywords = "obličky, chronické ochorenie obličiek, dialýza, pre pacientov, zrozumiteľne, zdravie obličiek, prevencia, edukácia pacientov";
 $canonicalUrl = $baseUrl . "populars.php";
 $robotsMeta = "index, follow, max-image-preview:large";
@@ -96,7 +96,7 @@ if (!empty($itemListElements)) {
 
   <?php
   $headerTitle = "Nefro-projekt Slovensko";
-  $headerIntro = "Zrozumiteľne o obličkách — pre poučených pacientov a verejnosť.";
+  $headerIntro = "Zrozumiteľne o obličkách pre poučených pacientov a verejnosť.";
   $showLogo = true;
   include_once "header.php";
   ?>
@@ -109,7 +109,7 @@ if (!empty($itemListElements)) {
       <section class="populars-intro" aria-labelledby="populars-heading">
         <h1 id="populars-heading" class="section-heading">Pre pacientov</h1>
         <p class="populars-lead">
-          Zrozumiteľné články o obličkách, ich ochoreniach, vyšetreniach a liečbe —
+          Zrozumiteľné články o obličkách, ich ochoreniach, vyšetreniach a liečbe,
           písané jednoduchým jazykom, s obrázkami, pre poučených pacientov a širokú
           verejnosť. Bez odborného žargónu, s dôrazom na to podstatné.
         </p>
@@ -118,7 +118,7 @@ if (!empty($itemListElements)) {
       <?php if (empty($allArticles)): ?>
         <section class="populars-empty">
           <div class="primary-article">
-            <p>Zatiaľ tu nie sú žiadne články. Čoskoro pribudnú prvé popularizačné príspevky — vráťte sa, prosím, neskôr.</p>
+            <p>Zatiaľ tu nie sú žiadne články. Čoskoro pribudnú prvé popularizačné príspevky; vráťte sa, prosím, neskôr.</p>
             <p>
               Medzitým si môžete prečítať <a href="index.php">odborné články</a>
               alebo využiť <a href="calculators.php">nefrologické kalkulačky</a>.
@@ -141,7 +141,7 @@ if (!empty($itemListElements)) {
         <section class="populars-grid-section populars-subsection" aria-labelledby="medimpax-subheading">
           <h2 id="medimpax-subheading" class="populars-subheading">Dialýza a stredisko Medimpax</h2>
           <p class="populars-sublead">
-            Praktické články o dialýze, nefrologickej ambulancii a transplantácii —
+            Praktické články o dialýze, nefrologickej ambulancii a transplantácii
             a o tom, ako túto starostlivosť poskytuje
             <a href="dialyza-bratislava.php">Dialyzačné stredisko a nefrologická ambulancia Medimpax</a>
             v Bratislave-Dúbravke.

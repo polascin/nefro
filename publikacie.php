@@ -59,7 +59,7 @@ $freeCatalogue = freePublications();
       [
           '@context'    => 'https://schema.org',
           '@type'       => 'CollectionPage',
-          'name'        => 'Publikácie — ' . $siteName,
+          'name'        => 'Publikácie | ' . $siteName,
           'description' => $seoDescription,
           'url'         => $canonicalUrl,
           'inLanguage'  => 'sk-SK',
@@ -152,7 +152,7 @@ $freeCatalogue = freePublications();
 
             <?php if ($sectionCatalogue === []): ?>
                 <div class="info-box-gray">
-                    <p>Momentálne nie je v ponuke žiadna publikácia. Pripravujeme ďalšie zväzky —
+                    <p>Momentálne nie je v ponuke žiadna publikácia. Pripravujeme ďalšie zväzky;
                        o novinkách informujeme v <a href="index.php#kontakt">newsletteri</a>.</p>
                 </div>
             <?php else: ?>
@@ -225,7 +225,7 @@ $freeCatalogue = freePublications();
 
             <?php if ($sectionCatalogue === []): ?>
                 <div class="info-box-gray">
-                    <p>Momentálne nie je v ponuke žiadna publikácia. Pripravujeme ďalšie zväzky —
+                    <p>Momentálne nie je v ponuke žiadna publikácia. Pripravujeme ďalšie zväzky;
                        o novinkách informujeme v <a href="index.php#kontakt">newsletteri</a>.</p>
                 </div>
             <?php else: ?>
@@ -290,9 +290,9 @@ $freeCatalogue = freePublications();
                 <ol class="pub-steps">
                     <li>Vyberiete formáty a odošlete objednávku, stačí e-mailová adresa.</li>
                     <li>E-mailom dostanete platobné pokyny s variabilným symbolom a QR kódom.</li>
-                    <li>Zaplatíte prevodom, alebo kartou a peňaženkou — Stripe, PayPal, Revolut,
+                    <li>Zaplatíte prevodom, alebo kartou a peňaženkou: Stripe, PayPal, Revolut,
                         Ko-fi, Viamo či kryptomenou.</li>
-                    <li>Po potvrdení platby vám publikáciu pošleme e-mailom — súbory, ktoré sa
+                    <li>Po potvrdení platby vám publikáciu pošleme e-mailom; súbory, ktoré sa
                         zmestia do prílohy, prídu priamo v nej; objemnejšie stiahnete na stránke
                         objednávky, ktorej odkaz máte v e-maile.</li>
                 </ol>

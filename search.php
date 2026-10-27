@@ -64,7 +64,7 @@ $pageTitle = $hasQuery
 $seoDescription = $hasQuery
     ? "Výsledky vyhľadávania pre: " .
         $rawQuery .
-        " — odborné nefrologické články, kalkulačky a analýzy."
+        ". Odborné nefrologické články, kalkulačky a analýzy."
     : "Prehľadávajte odborné nefrologické články, kalkulačky CKD, eGFR, KFRE a ďalší obsah portálu Nefro-projekt Slovensko.";
 
 $robotsMeta = "noindex, follow";

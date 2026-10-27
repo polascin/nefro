@@ -57,10 +57,10 @@ $services = [
         'icon'  => '🩸',
         'color' => 'service-card--blue',
         'title' => 'Hemodialýza a hemodiafiltrácia',
-        'desc'  => 'Pravidelná chronická aj akútna náhrada funkcie obličiek — hemodialýza aj hemodiafiltrácia (HDF).',
+        'desc'  => 'Pravidelná chronická aj akútna náhrada funkcie obličiek: hemodialýza aj hemodiafiltrácia (HDF).',
         'list'  => [
             'Hemodialýza (HD)',
-            'Hemodiafiltrácia (HDF) — vyššia eliminácia urémických toxínov',
+            'Hemodiafiltrácia (HDF): vyššia eliminácia urémických toxínov',
             'Jednoihlový (single-needle) režim podľa potreby',
             'Biofeedback pre hemodynamickú stabilitu počas liečby',
         ],
@@ -69,10 +69,10 @@ $services = [
         'icon'  => '🏠',
         'color' => 'service-card--green',
         'title' => 'Peritoneálna dialýza',
-        'desc'  => 'Domáca dialýza s podporou strediska — kontinuálna ambulantná (CAPD) aj automatizovaná (APD) forma.',
+        'desc'  => 'Domáca dialýza s podporou strediska: kontinuálna ambulantná (CAPD) aj automatizovaná (APD) forma.',
         'list'  => [
-            'CAPD — ručné výmeny dialyzačného roztoku',
-            'APD — automatizovaná dialýza počas spánku (cykler)',
+            'CAPD: ručné výmeny dialyzačného roztoku',
+            'APD: automatizovaná dialýza počas spánku (cykler)',
             'Vzdialené sledovanie liečby (telemedicína Sharesource)',
             'Edukácia pacienta a rodinných príslušníkov',
         ],
@@ -81,7 +81,7 @@ $services = [
         'icon'  => '🌴',
         'color' => 'service-card--orange',
         'title' => 'Prázdninové (dovolenkové) dialýzy',
-        'desc'  => 'Hosťovská dialýza pre pacientov na cestách — počas pobytu v Bratislave a okolí.',
+        'desc'  => 'Hosťovská dialýza pre pacientov na cestách, počas pobytu v Bratislave a okolí.',
         'list'  => [
             'Hosťovská HD/HDF počas dovolenky či pracovnej cesty',
             'Pre slovenských aj zahraničných pacientov',
@@ -93,7 +93,7 @@ $services = [
         'icon'  => '🩺',
         'color' => 'service-card--purple',
         'title' => 'Nefrologická ambulancia',
-        'desc'  => 'Preventívna a klinická nefrológia — diagnostika a manažment ochorení obličiek.',
+        'desc'  => 'Preventívna a klinická nefrológia: diagnostika a manažment ochorení obličiek.',
         'list'  => [
             'Preventívne a klinické nefrologické vyšetrenia',
             'Manažment chronického ochorenia obličiek (CKD)',
@@ -143,7 +143,7 @@ $businessContacts = [
 <html lang="sk">
 <head>
   <?php
-  $pageTitle = 'Dialýza Bratislava — dialyzačné stredisko a nefrologická ambulancia | ' . $siteName;
+  $pageTitle = 'Dialýza Bratislava: dialyzačné stredisko a nefrologická ambulancia | ' . $siteName;
   $canonicalUrl = $baseUrl . 'dialyza-bratislava.php';
   $seoDescription =
       'Dialyzačné stredisko a nefrologická ambulancia Medimpax v Bratislave-Dúbravke: hemodialýza, '
@@ -261,7 +261,7 @@ $businessContacts = [
 
     <?php
     $headerTitle = 'Dialyzačné stredisko a nefrologická ambulancia';
-    $headerIntro = 'Medimpax — Bratislava-Dúbravka';
+    $headerIntro = 'Medimpax, Bratislava-Dúbravka';
     $showLogo = false;
     include 'header.php';
     ?>
@@ -273,15 +273,15 @@ $businessContacts = [
                 <h2 id="uvod-heading">Dialýza a nefrologická starostlivosť v Bratislave</h2>
                 <p>
                     <strong><?= htmlspecialchars($center['fullName']) ?></strong> poskytuje komplexnú
-                    starostlivosť <strong>dospelým pacientom</strong> s ochorením obličiek — od preventívnej
+                    starostlivosť <strong>dospelým pacientom</strong> s ochorením obličiek, od preventívnej
                     a klinickej nefrológie cez prípravu na dialýzu až po samotnú dialyzačnú liečbu.
                     Pracovisko sídli na adrese <strong><?= htmlspecialchars($center['siteAddress']) ?></strong>
-                    a najlepšie dostupné je pre <strong>západnú Bratislavu a Záhorie</strong> — slúži však
+                    a najlepšie dostupné je pre <strong>západnú Bratislavu a Záhorie</strong>; slúži však
                     pacientom z <strong>celej Bratislavy aj okolitých okresov</strong>. Kladieme dôraz
                     na dostupnosť, blízkosť a osobný prístup.
                 </p>
                 <p class="donate-note">
-                    Máte právo na <strong>slobodný výber poskytovateľa</strong> zdravotnej starostlivosti —
+                    Máte právo na <strong>slobodný výber poskytovateľa</strong> zdravotnej starostlivosti:
                     o nefrologické vyšetrenie alebo dialýzu v našom stredisku môžete požiadať bez ohľadu na to,
                     kde ste boli doteraz sledovaní.
                 </p>
@@ -317,7 +317,7 @@ $businessContacts = [
                 </figure>
                 <div class="map-embed-consent" id="map-embed-consent">
                     <p>
-                        Interaktívna mapa sa načítava zo serverov spoločnosti Google až po kliknutí —
+                        Interaktívna mapa sa načítava zo serverov spoločnosti Google až po kliknutí;
                         dovtedy sa do Google neprenášajú žiadne údaje. Kliknutím súhlasíte s prenosom
                         IP adresy spoločnosti Google LLC (<a href="https://policies.google.com/privacy"
                         target="_blank" rel="noopener noreferrer">zásady ochrany súkromia Google</a>).
@@ -332,7 +332,7 @@ $businessContacts = [
                         var wrap = document.getElementById('map-embed-consent');
                         var iframe = document.createElement('iframe');
                         iframe.className = 'map-embed';
-                        iframe.title = 'Mapa — Dialyzačné stredisko Medimpax, Na vrátkach 2/A, Bratislava-Dúbravka';
+                        iframe.title = 'Mapa: Dialyzačné stredisko Medimpax, Na vrátkach 2/A, Bratislava-Dúbravka';
                         iframe.src = 'https://maps.google.com/maps?q=48.1903299,17.0442423&hl=sk&z=17&output=embed';
                         iframe.width = '100%';
                         iframe.height = '380';
@@ -373,18 +373,18 @@ $businessContacts = [
                 <div class="features-grid">
                     <div class="feature-card service-card service-card--blue">
                         <div class="service-card__icon" aria-hidden="true">🩸</div>
-                        <h3>Hemodialýza — B. Braun Dialog iQ®</h3>
+                        <h3>Hemodialýza: B. Braun Dialog iQ®</h3>
                         <p>Dialyzačné monitory B. Braun Dialog iQ® s adaptívnym systémom podporujúcim individualizáciu liečby.</p>
                         <ul class="service-card__list">
                             <li>Hemodialýza aj hemodiafiltrácia (HDF) na jednom prístroji</li>
-                            <li>BioLogic Fusion — biofeedback (systolický tlak + relatívny objem krvi)</li>
+                            <li>BioLogic Fusion: biofeedback (systolický tlak + relatívny objem krvi)</li>
                             <li>Plynulé prispôsobenie ultrafiltračnej rýchlosti pre hemodynamickú stabilitu</li>
                             <li>Jednoihlový (single-needle) režim podľa potreby</li>
                         </ul>
                     </div>
                     <div class="feature-card service-card service-card--green">
                         <div class="service-card__icon" aria-hidden="true">🏠</div>
-                        <h3>Peritoneálna dialýza — CAPD a APD</h3>
+                        <h3>Peritoneálna dialýza: CAPD a APD</h3>
                         <p>Domáca dialýza s ručnými výmenami (CAPD) aj s automatizovaným cyklerom (APD).</p>
                         <ul class="service-card__list">
                             <li>Automatizovaná PD počas spánku (cykler, napr. HomeChoice Claria)</li>
@@ -401,12 +401,12 @@ $businessContacts = [
                 <div class="info-box-blue">
                     <p>
                         Od <strong>1. augusta 2026</strong> v stredisku pôsobím ako
-                        <strong>lekár — špecialista v odbore nefrológia</strong>.
+                        <strong>lekár, špecialista v odbore nefrológia</strong>.
                         Na portáli <a href="index.php">Nefro-projekt Slovensko</a> sa venujem
                         odbornému aj pacientskemu vzdelávaniu v nefrológii, dialýze a internej medicíne;
                         v stredisku Medimpax túto starostlivosť poskytujem priamo v klinickej praxi.
                     </p>
-                    <p class="donate-note">— MUDr. Ľubomír Polaščín</p>
+                    <p class="donate-note">MUDr. Ľubomír Polaščín</p>
                 </div>
             </section>
 
@@ -444,7 +444,7 @@ $businessContacts = [
             <section class="features-section" id="clanky-pacienti" aria-labelledby="clanky-pacienti-heading">
                 <h2 id="clanky-pacienti-heading">Pre pacientov: dialýza a naše stredisko</h2>
                 <p>Zrozumiteľné články o dialýze, nefrologickej ambulancii, príprave na liečbu
-                   a transplantácii — čo vás čaká a ako to u nás prebieha.</p>
+                   a transplantácii: čo vás čaká a ako to u nás prebieha.</p>
                 <ul class="populars-grid">
                     <?php foreach ($medimpaxArticles as $art) {
                         popRenderCard($art, $popMonths);

@@ -90,7 +90,7 @@ $hasPaymeQr = is_file(__DIR__ . '/' . $paymeQrImage);
       [
           "@context" => "https://schema.org",
           "@type" => "WebPage",
-          "name" => "Podporiť projekt — " . $siteName,
+          "name" => "Podporiť projekt | " . $siteName,
           "description" => $seoDescription,
           "url" => $canonicalUrl,
           "inLanguage" => "sk-SK",
@@ -137,8 +137,8 @@ $hasPaymeQr = is_file(__DIR__ . '/' . $paymeQrImage);
 
                 <p>
                     <strong><?= htmlspecialchars($siteName) ?></strong> je nezávislý odborný portál
-                    o nefrológii, dialýze a internej medicíne. Celý obsah — odborné články, klinické
-                    kalkulačky aj ich PDF verzie — zostáva <strong>voľne dostupný, bez paywallu a bez
+                    o nefrológii, dialýze a internej medicíne. Celý obsah (odborné články, klinické
+                    kalkulačky aj ich PDF verzie) zostáva <strong>voľne dostupný, bez paywallu a bez
                     reklám</strong>. Ak vám projekt pomáha v praxi alebo pri vzdelávaní, môžete jeho
                     fungovanie podporiť dobrovoľným príspevkom. Ďakujeme.
                 </p>
@@ -189,16 +189,16 @@ $hasPaymeQr = is_file(__DIR__ . '/' . $paymeQrImage);
                     <?php if ($hasQr): ?>
                         <figure class="donate-qr">
                             <img src="<?= htmlspecialchars($qrImage) ?>" alt="PAY by square QR kód pre platbu na účet projektu" width="220" height="220" loading="lazy">
-                            <figcaption>Naskenujte QR kód (PAY by square) v mobilnej aplikácii vašej banky — predvyplní platbu bankovým prevodom.</figcaption>
+                            <figcaption>Naskenujte QR kód (PAY by square) v mobilnej aplikácii vašej banky; predvyplní platbu bankovým prevodom.</figcaption>
                         </figure>
                     <?php endif; ?>
                 </section>
 
                 <section class="form-section" aria-labelledby="viamo-heading">
-                    <h3 id="viamo-heading">Viamo — platba na telefónne číslo</h3>
+                    <h3 id="viamo-heading">Viamo: platba na telefónne číslo</h3>
                     <p>Viamo je okamžitá platba <strong>na telefónne číslo</strong> (bez IBAN); podporujú
                         ju Tatra banka, VÚB a OTP. V aplikácii banky zvoľte <em>Platbu na telefónne číslo</em>
-                        a zadajte číslo príjemcu. Viamo nemá samostatný QR na príjem — pre platbu
+                        a zadajte číslo príjemcu. Viamo nemá samostatný QR na príjem; pre platbu
                         naskenovaním použite payme.sk nižšie.</p>
                     <div class="info-box-blue">
                         <dl class="donate-bank">
@@ -216,12 +216,12 @@ $hasPaymeQr = is_file(__DIR__ . '/' . $paymeQrImage);
                 <section class="form-section" aria-labelledby="payme-heading">
                     <h3 id="payme-heading">Rýchla platba cez QR (payme.sk)</h3>
                     <p>payme.sk (služba Slovenskej bankovej asociácie) otvorí platobnú stránku, z ktorej
-                        zaplatíte priamo v aplikácii svojej banky — vrátane platby na telefónne číslo.
+                        zaplatíte priamo v aplikácii svojej banky, vrátane platby na telefónne číslo.
                         Naskenujte QR kód telefónom alebo kliknite na tlačidlo.</p>
                     <?php if ($hasPaymeQr): ?>
                         <figure class="donate-qr">
                             <img src="<?= htmlspecialchars($paymeQrImage) ?>" alt="QR kód odkazu payme.sk pre platbu na účet projektu" width="220" height="220" loading="lazy">
-                            <figcaption>Naskenujte QR kód fotoaparátom telefónu — otvorí platobnú stránku payme.sk.</figcaption>
+                            <figcaption>Naskenujte QR kód fotoaparátom telefónu; otvorí platobnú stránku payme.sk.</figcaption>
                         </figure>
                     <?php endif; ?>
                     <p class="no-print">
@@ -231,7 +231,7 @@ $hasPaymeQr = is_file(__DIR__ . '/' . $paymeQrImage);
 
                 <section class="form-section" aria-labelledby="paypal-heading">
                     <h3 id="paypal-heading">PayPal</h3>
-                    <p>Prispieť môžete aj cez PayPal — rýchlo a bez zadávania bankových údajov.
+                    <p>Prispieť môžete aj cez PayPal, rýchlo a bez zadávania bankových údajov.
                         Vyberte si ktorýkoľvek z účtov:</p>
                     <ul class="donate-paypal-list">
                         <?php foreach ($paypalAccounts as $ppEmail): ?>
@@ -246,12 +246,12 @@ $hasPaymeQr = is_file(__DIR__ . '/' . $paymeQrImage);
                 <?php if ($enabledPayMethods): ?>
                 <section class="form-section" aria-labelledby="karta-heading">
                     <h3 id="karta-heading">Platobná karta, Apple Pay a Google Pay</h3>
-                    <p>Rýchly príspevok platobnou kartou alebo cez mobilnú peňaženku — bez zadávania
+                    <p>Rýchly príspevok platobnou kartou alebo cez mobilnú peňaženku, bez zadávania
                         bankových údajov. Vyberte si službu:</p>
                     <ul class="donate-paypal-list">
                         <?php foreach ($enabledPayMethods as $m): ?>
                         <li class="donate-paypal-row">
-                            <span><strong><?= htmlspecialchars($m['name']) ?></strong> — <?= htmlspecialchars($m['desc']) ?></span>
+                            <span><strong><?= htmlspecialchars($m['name']) ?></strong>: <?= htmlspecialchars($m['desc']) ?></span>
                             <a href="<?= htmlspecialchars($m['url']) ?>" class="btn-primary" target="_blank" rel="noopener noreferrer"><?= htmlspecialchars($m['cta']) ?></a>
                         </li>
                         <?php endforeach; ?>
@@ -284,13 +284,13 @@ $hasPaymeQr = is_file(__DIR__ . '/' . $paymeQrImage);
                     <strong>Dôležité:</strong> príspevok je <strong>dobrovoľný dar</strong> na podporu
                     prevádzky a tvorby obsahu. Nejde o platbu za tovar ani službu a nezakladá nárok na
                     protiplnenie. Prevádzkovateľ nie je registrovaná nezisková organizácia, preto dar
-                    nie je daňovo uznateľný. Platby sa nespracúvajú na tejto stránke — uskutočňujú sa
+                    nie je daňovo uznateľný. Platby sa nespracúvajú na tejto stránke; uskutočňujú sa
                     priamo cez vašu banku, peňaženku alebo platobnú službu (napr. PayPal, Revolut,
                     Ko‑fi, Stripe či Uphold).
                 </div>
 
                 <p>
-                    Podporiť projekt môžete aj <strong>bez jediného eura</strong> — zdieľaním článkov,
+                    Podporiť projekt môžete aj <strong>bez jediného eura</strong>: zdieľaním článkov,
                     spätnou väzbou alebo odberom noviniek. Novinky a nové články dostávate na e-mail
                     zadarmo a odhlásiť sa môžete kedykoľvek.
                 </p>

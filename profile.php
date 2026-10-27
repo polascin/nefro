@@ -693,7 +693,7 @@ if ($requestMethod === 'POST' && $success && empty($errors)) {
                         Stav 2FA:
                         <?php if ($twoFaEnabled): ?>
                             <strong class="text-primary">Zapnuté</strong>
-                            — záložných kódov zostáva: <strong><?= $twoFaBackupCount ?></strong>
+                            (záložných kódov zostáva: <strong><?= $twoFaBackupCount ?></strong>)
                             <?php if ($twoFaBackupCount <= 2): ?>
                                 <span class="badge-draft">Málo záložných kódov</span>
                             <?php endif; ?>
@@ -835,7 +835,7 @@ if ($requestMethod === 'POST' && $success && empty($errors)) {
 
                 <div id="delete-account-confirm" class="delete-confirm-panel<?= $showDeleteForm ? '' : ' d-none' ?>">
                     <div class="alert alert-error delete-confirm-panel__warning">
-                        <p><strong>Upozornenie — táto akcia je nezvratná!</strong></p>
+                        <p><strong>Upozornenie: táto akcia je nezvratná!</strong></p>
                         <p>Po potvrdení budú <strong>natrvalo vymazané</strong>:</p>
                         <ul>
                             <li>Váš účet a profilové osobné údaje</li>
