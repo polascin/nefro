@@ -193,17 +193,15 @@ ssh -i "$HOME/.ssh/nefro_deploy" -p 26650 -o StrictHostKeyChecking=accept-new \
     "php /data/8/6/868f981d-e598-4e71-b7f5-246f2e180cef/polascin.net/sub/nefro/add_<slug>_article.php"
 ```
 
-Očakávaný výstup nového článku: `1 vložených, 0 aktualizovaných`,
-`Zaradených do fronty avíz: N`.
+Očakávaný výstup nového článku: `1 vložených, 0 aktualizovaných` a
+`Zaradených do fronty avíz: 0`.
 
-**Newsletter avízo sa pošle len pri prvom vložení (`rc === 1`).** Re-run po úprave
-obsahu dá `0 vložených, 1 aktualizovaných` a `Zaradených do fronty avíz: 0`. Je bezpečný.
-Pri **dávke** viacerých článkov naraz dostane každý odberateľ N e-mailov v tej istej
-chvíli. Over to s používateľom, prípadne `'enqueue_newsletter' => false`.
-
-Ak používateľ povie, že sa avíza posielať nemajú, je `'enqueue_newsletter' => false`
-povinné aj pri prvom vložení. Rovnako pri opakovanom publikovaní, kým avíza výslovne
-nepožiada. Do komentára skriptu to napíš. Očakávaný riadok je `Zaradených do fronty avíz: 0`.
+**Avíza sa pri publikovaní článku neposielajú**, pokiaľ používateľ v tej istej
+úlohe výslovne nepožiada, aby sa zaradili. V skripte je `'enqueue_newsletter' => false`
+povinné aj pri prvom vložení. Do komentára skriptu to napíš. Re-run po úprave
+obsahu dá `0 vložených, 1 aktualizovaných` a fronta ostane prázdna. Pri dávke
+viacerých článkov by každý odberateľ dostal N e-mailov naraz, preto aj vtedy
+ostáva `false`, kým používateľ dávku avíz výslovne neschváli.
 
 Pozor: úprava obsahu starších článkov so starou šablónou (`INSERT IGNORE`) nemusí
 zabrať — vtedy updatuj DB priamo + zavolaj `generateArticlePdf`.
@@ -224,6 +222,16 @@ php -r '$c=file_get_contents("pdf/<slug>.pdf"); echo preg_match_all("#/Image#",$
 ```
 
 `>= 3` = logo + vodoznak + ilustrácia. Menej než 100 kB = obrázok chýba.
+
+## 8. Sociálne zhrnutia, len keď o ne tá istá úloha žiada
+
+Krátke zhrnutie v slovenčine a v angličtine, až po live kontrole, s odkazom na
+`https://nefro.polascin.net/article.php?slug=<slug>`. Žiadny textGrain ani obdobný
+postup. Ilustrácia k príspevkom je bez textu, písmen, loga a tvárí. Ak používateľ
+požiada o uloženie na Disk, ulož súbor do účtu, ktorý menuje. Príspevok zverejni
+len na sieťach, ktoré v tej istej úlohe vymenoval. Ak konektor binárny obrázok
+neprijme alebo sieť nie je prihlásená, napíš to a text príspevku nechaj v odpovedi.
+Nepredstieraj zverejnenie.
 Pri hromadnej regenerácii: stiahni PDF **bez commitu medzi regeneráciou a stiahnutím**,
 inak deploy prepíše dobré serverové PDF starou verziou.
 

@@ -15,3 +15,5 @@ Po **každej** dokončenej práci so zmenami v repozitári (nielen po `.doaudit.
 4. Pri zmene publikovaného článku: po nasadení skriptu UPSERT cez `ssh -4` + sync PDF (`sync_article_pdfs.sh` alebo ekvivalent) a PDF tiež commitni/pushni.
 
 Práca nie je hotová, kým nie je `main` na remote aktuálny a produkcia zodpovedá nasaditeľným zmenám.
+
+Pri odbornom článku postupuješ podľa skillu `publikuj-odborny-clanok`. Avíza do newslettera sa neposielajú, pokiaľ o ne používateľ v tej istej úlohe výslovne nepožiada (`enqueue_newsletter` false, vo výstupe 0 zaradených). TextGrain ani obdobný postup sa nepoužíva. Sociálne zhrnutia v slovenčine a angličtine, ilustrácia a zverejnenie na vymenovaných sieťach patria k úlohe len vtedy, keď ich používateľ v tej istej požiadavke chce. Zverejnenie, ktoré sa nepodarí, sa neoznačuje za hotové.
