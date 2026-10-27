@@ -197,9 +197,13 @@ Očakávaný výstup nového článku: `1 vložených, 0 aktualizovaných`,
 `Zaradených do fronty avíz: N`.
 
 **Newsletter avízo sa pošle len pri prvom vložení (`rc === 1`).** Re-run po úprave
-obsahu dá `0 vložených, 1 aktualizovaných` a `Zaradených do fronty avíz: 0` — je bezpečný.
+obsahu dá `0 vložených, 1 aktualizovaných` a `Zaradených do fronty avíz: 0`. Je bezpečný.
 Pri **dávke** viacerých článkov naraz dostane každý odberateľ N e-mailov v tej istej
-chvíli → over to s používateľom, prípadne `'enqueue_newsletter' => false`.
+chvíli. Over to s používateľom, prípadne `'enqueue_newsletter' => false`.
+
+Ak používateľ povie, že sa avíza posielať nemajú, je `'enqueue_newsletter' => false`
+povinné aj pri prvom vložení. Rovnako pri opakovanom publikovaní, kým avíza výslovne
+nepožiada. Do komentára skriptu to napíš. Očakávaný riadok je `Zaradených do fronty avíz: 0`.
 
 Pozor: úprava obsahu starších článkov so starou šablónou (`INSERT IGNORE`) nemusí
 zabrať — vtedy updatuj DB priamo + zavolaj `generateArticlePdf`.
@@ -250,3 +254,25 @@ UPSERT prepíše obsah, newsletter sa neposiela, `published_at` ostáva.
 sh sync_article_pdfs.sh      # všetky chýbajúce + neaktuálne
 ```
 Cielene na serveri: `php generate_all_article_pdfs.php --slug=<slug> --force`.
+
+---
+
+## 8. Príspevky na sociálne siete
+
+Tento krok nie je tiché pokračovanie každého článku. Odoslanie príspevku je správa
+v mene používateľa. Urob ho len vtedy, keď o sociálne siete požiada v tej istej úlohe.
+
+Keď požiada, platia tieto body:
+
+1. Veľmi krátke zhrnutie v slovenčine a v angličtine. V slovenčine oprav anglicizmy,
+   bohemizmy a kalky. V oboch jazykoch skontroluj terminológiu, gramatiku a mieru istoty.
+   Čísla nezaokrúhľuj inak než v článku. Nepoužívaj textGrain ani obdobné postupy.
+2. Ku každej jazykovej verzii ilustrácia bez textu, písmen, loga a tvárí. Pomer 16:10
+   (v Canva najbližší dostupný `LANDSCAPE_3_2`, export 1600×1000, ak ide do článku).
+3. Ilustráciu ulož na Google Disk účtu polascin@gmail.com. Ak konektor prijme len text,
+   súbor nahraj cez prihlásený prehliadač. Ak účet nie je prihlásený, povedz to a súbor
+   nenechaj len v chate.
+4. Príspevok aj s obrázkom zverejni na `x.com/polascin`, `facebook.com/lubomir.polascin`,
+   `linkedin.com/in/lubomirpolascin` a `threads.com/@lubomirpolascin`.
+5. Po zverejnení skontroluj, že príspevok na profile je a že odkaz na článok sedí.
+   Čo sa nepodarilo, povedz menovite. Nevymýšľaj, že príspevok vyšiel.

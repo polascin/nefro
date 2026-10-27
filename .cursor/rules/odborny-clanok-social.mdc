@@ -1,0 +1,12 @@
+---
+description: Odborný článok bez avíz a príspevky na sociálne siete len na výslovnú žiadosť
+alwaysApply: true
+---
+
+# Odborný článok a sociálne siete
+
+Pri publikovaní odborného článku dodrž `.claude/skills/publikuj-odborny-clanok/SKILL.md` a `PUBLIKOVANIE_CLANKOV.md`.
+
+Ak používateľ povie, že sa avíza posielať nemajú, skript má `'enqueue_newsletter' => false` aj pri prvom vložení. Po behu na serveri musí byť `Zaradených do fronty avíz: 0`.
+
+Príspevky na X, Facebook, LinkedIn a Threads nie sú automatická súčasť každého článku. Patria k úlohe len vtedy, keď o ne používateľ v tej istej úlohe výslovne požiada. Potom priprav slovenskú aj anglickú verziu, ku každej ilustráciu bez textu, ulož ilustráciu na Google Disk účtu polascin@gmail.com a príspevok s obrázkom zverejni na účtoch uvedených v skille. TextGrain a obdobné postupy nepoužívaj. Čo sa nepodarilo zverejniť alebo uložiť, povedz. Nevydávaj neodoslaný príspevok za zverejnený.
