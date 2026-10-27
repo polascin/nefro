@@ -80,12 +80,12 @@ $unitRows = [
         <div class="content-wrapper">
             <div class="auth-container auth-container--wide">
                 <h2>Prevodník laboratórnych jednotiek</h2>
-                <p class="auth-subtitle">Obojsmerná konverzia medzi SI a konvenčnými (US) jednotkami vrátane eGFR (ml/min ⇄ ml/s) — píšte do ktoréhokoľvek poľa.</p>
+                <p class="auth-subtitle">Obojsmerná konverzia medzi SI a konvenčnými (US) jednotkami vrátane eGFR (ml/min ⇄ ml/s); píšte do ktoréhokoľvek poľa.</p>
 
                 <div class="info-box">
                     <strong>Ako to funguje:</strong> zadajte hodnotu do ľavého alebo pravého poľa
                     a druhé sa prepočíta naživo. Desatinná čiarka aj bodka sú akceptované. Hodnoty
-                    sú orientačné — referenčné rozsahy závisia od laboratória a metódy.
+                    sú orientačné; referenčné rozsahy závisia od laboratória a metódy.
                 </div>
 
                 <div class="form-section">

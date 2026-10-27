@@ -57,14 +57,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if ($urineVolume === null) {
             $errors[] = "Objem moču musí byť kladné číslo (mL).";
         } elseif ($urineVolume < 100.0 || $urineVolume > 15000.0) {
-            $errors[] = "Objem moču mimo očakávaného rozsahu (100 – 15 000 mL).";
+            $errors[] = "Objem moču mimo očakávaného rozsahu (100 až 15 000 mL).";
         }
 
         $collectionHours = calculatorParsePositiveFloat($form["collection_hours"]);
         if ($collectionHours === null) {
             $errors[] = "Čas zberu musí byť kladné číslo (hodiny).";
         } elseif ($collectionHours < 1.0 || $collectionHours > 48.0) {
-            $errors[] = "Čas zberu mimo očakávaného rozsahu (1 – 48 hodín).";
+            $errors[] = "Čas zberu mimo očakávaného rozsahu (1 až 48 hodín).";
         }
 
         // Klasický klírens voľnej vody — osmolality (obe alebo žiadna)
@@ -78,10 +78,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 $errors[] = "Pre klasický klírens zadajte osmolalitu plazmy aj moču.";
             } else {
                 if ($pOsm < 250.0 || $pOsm > 350.0) {
-                    $errors[] = "Osmolalita plazmy mimo rozsahu (250 – 350 mosm/kg).";
+                    $errors[] = "Osmolalita plazmy mimo rozsahu (250 až 350 mosm/kg).";
                 }
                 if ($uOsm < 30.0 || $uOsm > 1400.0) {
-                    $errors[] = "Osmolalita moču mimo rozsahu (30 – 1400 mosm/kg).";
+                    $errors[] = "Osmolalita moču mimo rozsahu (30 až 1400 mosm/kg).";
                 }
             }
         }
@@ -99,13 +99,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 $errors[] = "Pre elektrolytový klírens zadajte plazmatický Na, močový Na aj močový K.";
             } else {
                 if ($pNa < 110.0 || $pNa > 175.0) {
-                    $errors[] = "Plazmatický sodík mimo rozsahu (110 – 175 mmol/l).";
+                    $errors[] = "Plazmatický sodík mimo rozsahu (110 až 175 mmol/l).";
                 }
                 if ($uNa < 1.0 || $uNa > 300.0) {
-                    $errors[] = "Močový sodík mimo rozsahu (1 – 300 mmol/l).";
+                    $errors[] = "Močový sodík mimo rozsahu (1 až 300 mmol/l).";
                 }
                 if ($uK < 1.0 || $uK > 150.0) {
-                    $errors[] = "Močový draslík mimo rozsahu (1 – 150 mmol/l).";
+                    $errors[] = "Močový draslík mimo rozsahu (1 až 150 mmol/l).";
                 }
             }
         }
@@ -262,7 +262,7 @@ if (isLoggedIn()) {
 
                 <div class="info-box">
                     <strong>Načo:</strong> klírens voľnej vody opisuje, či obličky čistú vodu
-                    <em>vylučujú</em> alebo <em>zadržiavajú</em> — kľúčové pri dysnatriémiách.
+                    <em>vylučujú</em> alebo <em>zadržiavajú</em>, čo je kľúčové pri dysnatriémiách.
                     <strong>Elektrolytový klírens (EFWC)</strong> je pri poruchách sodíka
                     výpovednejší než klasický CH₂O, lebo zohľadňuje len Na a K (nie močovinu/glukózu).
                     EFWC <strong>&gt; 0</strong> = strata voľnej vody (sodík má tendenciu stúpať);
@@ -270,7 +270,7 @@ if (isLoggedIn()) {
                 </div>
 
                 <details open class="calc-formula-box">
-                    <summary>Vzorce — klírens voľnej vody</summary>
+                    <summary>Vzorce: klírens voľnej vody</summary>
                     <div class="calc-formula-content">
                         <div class="calc-formula-line">\[ V = \frac{V_{moč}}{t}, \quad C_{osm} = \frac{U_{osm} \times V}{P_{osm}}, \quad C_{H_2O} = V - C_{osm} \]</div>
                         <div class="calc-formula-line">\[ \text{EFWC} = V \times \left(1 - \frac{U_{Na} + U_{K}}{P_{Na}}\right) \]</div>
@@ -319,7 +319,7 @@ if (isLoggedIn()) {
                     </div>
 
                     <div class="form-section">
-                        <h3>Klasický klírens (osmolality) <span class="optional">— voliteľné</span></h3>
+                        <h3>Klasický klírens (osmolality) <span class="optional">(voliteľné)</span></h3>
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="p_osm">Osmolalita plazmy (mosm/kg)</label>
@@ -333,7 +333,7 @@ if (isLoggedIn()) {
                     </div>
 
                     <div class="form-section">
-                        <h3>Elektrolytový klírens (Na/K) <span class="optional">— voliteľné, výpovednejší</span></h3>
+                        <h3>Elektrolytový klírens (Na/K) <span class="optional">(voliteľné, výpovednejší)</span></h3>
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="p_na">Plazmatický sodík P-Na (mmol/l)</label>

@@ -160,7 +160,7 @@ if (isLoggedIn()) {
                 <h2>Kt/V (Daugirdas II) a Urea Reduction Ratio (URR)</h2>
 
                 <details open class="calc-formula-box">
-                    <summary>Vzorce — Kt/V (Daugirdas II) a URR</summary>
+                    <summary>Vzorce: Kt/V (Daugirdas II) a URR</summary>
                     <div class="calc-formula-content">
                         <div class="calc-formula-line">\[ \text{URR} = \left(1 - \frac{U_{\text{post}}}{U_{\text{pre}}}\right) \times 100\% \]</div>
                         <div class="calc-formula-line">\[ \begin{aligned} r &= \frac{U_{\text{post}}}{U_{\text{pre}}} \\ \text{Kt/V} &= -\ln(r - 0.008 \cdot t) + (4 - 3.5r) \cdot \frac{UF}{W} \end{aligned} \]</div>

@@ -208,7 +208,7 @@ if (isLoggedIn()) {
                 <p class="auth-subtitle">Štandard pre farmakokinetickú úpravu dávkovania väčšiny liekov pri renálnej insuficiencii (napr. DOAK, antibiotiká).</p>
 
                 <details open class="calc-formula-box">
-                    <summary>Vzorec — Cockcroft-Gault</summary>
+                    <summary>Vzorec: Cockcroft-Gault</summary>
                     <div class="calc-formula-content">
                         <div class="calc-formula-line">
                             \[ \text{CrCl} = \frac{(140 - \text{Vek}) \times \text{Hmotnosť}}{72 \times S_{cr}} \times [0.85 \text{ ak žena}] \]

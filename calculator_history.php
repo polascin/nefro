@@ -86,7 +86,7 @@ function patientHeading(array $row): string {
         if ($bd !== '') $parts[] = 'nar. ' . $bd;
         if ($bn !== '') $parts[] = 'RC: ' . $bn;
         if ($ic !== '') $parts[] = 'ZP: ' . $ic;
-        return $name . ($parts ? ' — ' . implode(', ', $parts) : '');
+        return $name . ($parts ? ': ' . implode(', ', $parts) : '');
     }
     if ($bn !== '') return 'RC: ' . $bn;
     return 'Neidentifikovaný pacient';
@@ -223,8 +223,8 @@ $totalCount = array_sum(array_column($statsByCalc, 'count'));
         <p class="calc-history-subtitle">
           <?= count($grouped) ?> pacient<?= count($grouped) === 1 ? '' : (count($grouped) < 5 ? 'i' : 'ov') ?>,
           <?= $totalCount ?> záznamov
-          <?php if ($filterKey): ?> — <em><?= htmlspecialchars(CALC_LABELS[$filterKey] ?? $filterKey) ?></em><?php endif; ?>
-          <?php if ($filterPat): ?> — <em><?= htmlspecialchars($grouped[$filterPat]['heading'] ?? '') ?></em><?php endif; ?>
+          <?php if ($filterKey): ?> &middot; <em><?= htmlspecialchars(CALC_LABELS[$filterKey] ?? $filterKey) ?></em><?php endif; ?>
+          <?php if ($filterPat): ?> &middot; <em><?= htmlspecialchars($grouped[$filterPat]['heading'] ?? '') ?></em><?php endif; ?>
         </p>
       </div>
       <div class="calc-history-actions">

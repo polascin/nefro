@@ -225,7 +225,7 @@ if (isLoggedIn()) {
   $pageTitle = "Poruchy sodíka a vody | Kalkulačky | Nefro-projekt Slovensko";
   $canonicalUrl = "https://nefro.polascin.net/calculator_na.php";
   $seoDescription =
-      "Nefrologická kalkulačka: poruchy sodíka a vody — deficit voľnej vody, Adrogué-Madias, korekcia sodíka na hyperglykémiu (Katz/Hillier) a bezpečná rýchlosť korekcie hyponatrémie (prevencia ODS). Pre lekárov na Slovensku.";
+      "Nefrologická kalkulačka pre poruchy sodíka a vody: deficit voľnej vody, Adrogué-Madias, korekcia sodíka na hyperglykémiu (Katz/Hillier) a bezpečná rýchlosť korekcie hyponatrémie (prevencia ODS). Pre lekárov na Slovensku.";
   $structuredData = [
       [
           "@context" => "https://schema.org",
@@ -281,7 +281,7 @@ if (isLoggedIn()) {
                         <div class="calc-formula-vars">
                             <strong>TBW:</strong> Celková telesná voda v litroch.<br>
                             <strong>Adrogué-Madias:</strong> Odhaduje, o koľko mmol/L sa zmení sérový sodík po podaní 1 litra konkrétneho infúzneho roztoku.<br>
-                            <strong>Korekcia na glykémiu:</strong> hyperglykémia zrieďuje sérový sodík — korigované Na odhaduje skutočnú nátriémiu (Katz 1973 / Hillier 1999).<br>
+                            <strong>Korekcia na glykémiu:</strong> hyperglykémia zrieďuje sérový sodík; korigované Na odhaduje skutočnú nátriémiu (Katz 1973 / Hillier 1999).<br>
                             <strong>Upozornenie (ODS):</strong> pri hyponatrémii nemá rýchlosť korekcie presiahnuť <strong>≤ 8 mmol/L za 24 h</strong> (pri vysokom riziku ≤ 6), inak hrozí osmotický demyelinizačný syndróm.
                         </div>
                     </div>
@@ -344,7 +344,7 @@ if (isLoggedIn()) {
                             <div class="form-group"><label for="target_na">Cieľový S-Na (mmol/L) [Pre hypernatrémiu]</label><input type="text" id="target_na" name="target_na" required class="form-control" value="<?= htmlspecialchars(
                                 $form["target_na"],
                             ) ?>"></div>
-                            <div class="form-group"><label for="s_glucose">Glykémia <span class="optional">— korekcia Na na hyperglykémiu</span></label><input type="text" id="s_glucose" name="s_glucose" class="form-control" value="<?= htmlspecialchars(
+                            <div class="form-group"><label for="s_glucose">Glykémia <span class="optional">(korekcia Na na hyperglykémiu)</span></label><input type="text" id="s_glucose" name="s_glucose" class="form-control" value="<?= htmlspecialchars(
                                 $form["s_glucose"],
                             ) ?>" placeholder="voliteľné"></div>
                             <div class="form-group"><label for="glucose_unit">Jednotka glykémie</label><select id="glucose_unit" name="glucose_unit" class="form-control"><option value="mmol_l" <?= $form["glucose_unit"] === "mmol_l" ? "selected" : "" ?>>mmol/L</option><option value="mg_dl" <?= $form["glucose_unit"] === "mg_dl" ? "selected" : "" ?>>mg/dL</option></select></div>

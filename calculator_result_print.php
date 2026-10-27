@@ -143,8 +143,8 @@ function formatInputValue(string $key, $value): string {
     // ── Typ mutácie ADPKD ───────────────────────────────────────
     if ($key === 'mutation_type') {
         return match($value) {
-            'pkd1_truncating'    => 'PKD1 — skracujúca (truncating)',
-            'pkd1_nontruncating' => 'PKD1 — neskracujúca (non-truncating)',
+            'pkd1_truncating'    => 'PKD1: skracujúca (truncating)',
+            'pkd1_nontruncating' => 'PKD1: neskracujúca (non-truncating)',
             'pkd2'               => 'PKD2',
             'unknown'            => 'Neznáma / Netestovaná',
             default              => $value,

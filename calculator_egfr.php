@@ -235,7 +235,7 @@ if (isLoggedIn()) {
                 <p class="auth-subtitle">Voliteľné údaje pacienta + povinné vstupy pre výpočet.</p>
 
                 <details open class="calc-formula-box">
-                    <summary>Vzorec — CKD-EPI 2021</summary>
+                    <summary>Vzorec: CKD-EPI 2021</summary>
                     <div class="calc-formula-content">
                         <div class="calc-formula-line">\[ \begin{aligned} \text{eGFR} = 142 &\times \min(S_{cr}/\kappa, 1)^\alpha \times \max(S_{cr}/\kappa, 1)^{-1.200} \\ &\times 0.9938^{\text{Vek}} \times [1.012 \text{ ak žena}] \end{aligned} \]</div>
                         <div class="calc-formula-line">\[ S_{cr} [\text{mg/dL}] = S_{cr} [\mu\text{mol/L}] \div 88.4 \]</div>
