@@ -67,12 +67,12 @@ $baseUrl = "https://nefro.polascin.net/";
     <main id="main-content" class="container main-content main-content--single-col" role="main">
         <div class="content-wrapper">
             <div class="auth-container auth-container--wide">
-                <h2>Trombotická mikroangiopatia (TMA) — diferenciálna diagnostika</h2>
+                <h2>Trombotická mikroangiopatia (TMA): diferenciálna diagnostika</h2>
                 <p class="auth-subtitle">Interaktívny krok-za-krokom sprievodca: potvrdenie MAHA a trombocytopénie, odlíšenie TTP, STEC-HUS, atypického HUS a sekundárnej TMA s princípmi manažmentu.</p>
 
                 <p>
                     Nástroj vás prevedie štruktúrovaným postupom podľa odpovedí na cielené otázky.
-                    Slúži ako orientačná pomôcka — <strong>nenahrádza</strong> ADAMTS13, komplementové a STEC
+                    Slúži ako orientačná pomôcka; <strong>nenahrádza</strong> ADAMTS13, komplementové a STEC
                     vyšetrenie ani klinický úsudok. <strong>TMA je urgentná:</strong> pri podozrení na TTP odoberte
                     ADAMTS13 ešte pred podaním plazmy a neodkladajte plazmaferézu.
                 </p>
@@ -108,13 +108,13 @@ $baseUrl = "https://nefro.polascin.net/";
 
                 <!-- Statická referencia: algoritmus -->
                 <section class="form-section" aria-labelledby="algo-heading">
-                    <h3 id="algo-heading">Diagnostický algoritmus — prehľad</h3>
+                    <h3 id="algo-heading">Diagnostický algoritmus: prehľad</h3>
                     <ol class="tool-step__list">
-                        <li><strong>Potvrdiť TMA</strong> — MAHA (schistocyty, ↑LDH, ↓haptoglobín, negat. Coombs) + trombocytopénia.</li>
-                        <li><strong>Odobrať pred liečbou</strong> — ADAMTS13 (pred plazmou), komplement, stolica STEC; tehotenský test, autoprotilátky, revízia liekov, TK.</li>
-                        <li><strong>Posúdiť pravdepodobnosť TTP</strong> — PLASMIC skóre; pri vysokej pravdepodobnosti neodkladná plazmaferéza.</li>
-                        <li><strong>Odlíšiť (a)HUS a sekundárne</strong> — STEC vs komplement vs identifikovateľný spúšťač.</li>
-                        <li><strong>Cielená liečba</strong> — TTP: PLEX; aHUS: eculizumab; STEC-HUS: podporná; sekundárna: liečba príčiny.</li>
+                        <li><strong>Potvrdiť TMA</strong>: MAHA (schistocyty, ↑LDH, ↓haptoglobín, negat. Coombs) + trombocytopénia.</li>
+                        <li><strong>Odobrať pred liečbou</strong>: ADAMTS13 (pred plazmou), komplement, stolica STEC; tehotenský test, autoprotilátky, revízia liekov, TK.</li>
+                        <li><strong>Posúdiť pravdepodobnosť TTP</strong>: PLASMIC skóre; pri vysokej pravdepodobnosti neodkladná plazmaferéza.</li>
+                        <li><strong>Odlíšiť (a)HUS a sekundárne</strong>: STEC vs komplement vs identifikovateľný spúšťač.</li>
+                        <li><strong>Cielená liečba.</strong> TTP: PLEX; aHUS: eculizumab; STEC-HUS: podporná; sekundárna: liečba príčiny.</li>
                     </ol>
                     <div class="info-box-green">
                         <strong>Pozor:</strong> transfúzia trombocytov pri TTP len pri život ohrozujúcom krvácaní;
