@@ -37,24 +37,24 @@ function iganInterpretation(float $risk5yr): array
         $interp[] =
             "5-ročné riziko " .
             number_format($risk5yr, 1, ",", " ") .
-            " % — nízke riziko progresie.";
+            " %: nízke riziko progresie.";
     } elseif ($risk5yr < 15.0) {
         $interp[] =
             "5-ročné riziko " .
             number_format($risk5yr, 1, ",", " ") .
-            " % — stredné riziko; zvážiť optimalizáciu RASB a proteinúrie.";
+            " %: stredné riziko; zvážiť optimalizáciu RASB a proteinúrie.";
     } elseif ($risk5yr < 40.0) {
         $interp[] =
             "5-ročné riziko " .
             number_format($risk5yr, 1, ",", " ") .
-            " % — vysoké riziko; odporúča sa nefrologická konzultácia a zváženie imunosupresie.";
+            " %: vysoké riziko; odporúča sa nefrologická konzultácia a zváženie imunosupresie.";
         $warn[] =
             "Zvážiť imunosupresívnu liečbu podľa KDIGO 2021 IgAN Guidelines.";
     } else {
         $interp[] =
             "5-ročné riziko " .
             number_format($risk5yr, 1, ",", " ") .
-            " % — veľmi vysoké riziko rýchlej progresie.";
+            " %: veľmi vysoké riziko rýchlej progresie.";
         $warn[] =
             "VYSOKÉ RIZIKO: Urgentná nefrologická konzultácia. Zvážiť imunosupresiu a prípravu na náhradu funkcie obličiek.";
     }
@@ -65,9 +65,9 @@ function iganInterpretation(float $risk5yr): array
 $siteName = "Nefro-projekt Slovensko";
 $baseUrl = "https://nefro.polascin.net/";
 $pageUrl = $baseUrl . "calculator_igan.php";
-$pageTitle = "IgAN Prediction Tool — riziko progresie IgA nefropatie";
+$pageTitle = "IgAN Prediction Tool: riziko progresie IgA nefropatie";
 $pageDesc =
-    "International IgA Nephropathy Prediction Tool (Barbour 2019) — odhad 5-ročného rizika poklesu eGFR o ≥50 % alebo ESKD u pacientov s IgA nefropatiou.";
+    "International IgA Nephropathy Prediction Tool (Barbour 2019): odhad 5-ročného rizika poklesu eGFR o ≥50 % alebo ESKD u pacientov s IgA nefropatiou.";
 
 $errors = [];
 $messages = [];
@@ -196,10 +196,10 @@ if (isLoggedIn()) {
 <head>
   <?php
   $pageTitle =
-      "IgAN Prediction Tool — riziko progresie IgA nefropatie | Nefro-projekt Slovensko";
+      "IgAN Prediction Tool: riziko progresie IgA nefropatie | Nefro-projekt Slovensko";
   $canonicalUrl = "https://nefro.polascin.net/calculator_igan.php";
   $seoDescription =
-      "International IgA Nephropathy Prediction Tool (Barbour 2019) — odhad 5-ročného rizika poklesu eGFR o ≥50 % alebo ESKD.";
+      "International IgA Nephropathy Prediction Tool (Barbour 2019): odhad 5-ročného rizika poklesu eGFR o ≥50 % alebo ESKD.";
   $structuredData = [
       [
           "@context" => "https://schema.org",
@@ -252,7 +252,7 @@ if (isLoggedIn()) {
                 </div>
 
                 <details open class="calc-formula-box">
-                    <summary>Vzorec — IgAN Prediction Tool (Barbour 2019)</summary>
+                    <summary>Vzorec: IgAN Prediction Tool (Barbour 2019)</summary>
                     <div class="calc-formula-content">
                         <div class="calc-formula-line">\[ \begin{aligned} LP = &-0.02663 \cdot (\text{eGFR} - 66) + 0.55198 \cdot (\text{prot} - 1.7) \\ &+ 0.00678 \cdot (\text{MAP} - 96) - 0.23079 \cdot (\text{RASB} - 0.65) \\ &- 0.63861 \cdot (\text{IS} - 0.21) \end{aligned} \]</div>
                         <div class="calc-formula-line">\[ \text{Riziko (5 r.)} = (1 - 0.972^{\exp(LP)}) \times 100\% \]</div>
@@ -276,7 +276,7 @@ if (isLoggedIn()) {
 
                 <?php if ($calculated !== null): ?>
                 <div class="calc-result-box" role="status" aria-label="Výsledok kalkulácie" aria-live="polite">
-                    <h3>Výsledok — IgAN Prediction Tool</h3>
+                    <h3>Výsledok: IgAN Prediction Tool</h3>
                     <div class="calc-result-grid">
                         <div class="calc-result-item calc-result-item--highlight">
                             <span class="calc-result-label">5-ročné riziko progresie</span>

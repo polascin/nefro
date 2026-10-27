@@ -449,7 +449,7 @@ function ekfcModeLabel(string $mode): string
     <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>
 
     <?php
-    $headerTitle = 'Kalkulačka eGFR — EKFC';
+    $headerTitle = 'Kalkulačka eGFR: EKFC';
     $headerIntro = 'European Kidney Function Consortium, vek 2 – 120 rokov';
     $showLogo = false;
     include 'header.php';
@@ -466,7 +466,7 @@ function ekfcModeLabel(string $mode): string
                 <div class="info-box">
                     <strong>Kedy použiť EKFC:</strong> rovnica pracuje s reškálovaným biomarkerom
                     (pomer k mediánu normy Q), preto <em>nepotrebuje rasový koeficient</em> a platí
-                    plynulo pre celé vekové spektrum od 2 rokov — bez skoku pri prechode
+                    plynulo pre celé vekové spektrum od 2 rokov, bez skoku pri prechode
                     z pediatrickej do dospelej nefrológie. V hornom pásme filtrácie
                     (&gt; 60 ml/min/1,73 m²) je spravidla presnejšia než CKD-EPI 2021, ktorá tam
                     GFR systematicky nadhodnocuje; to mení zaradenie do štádia CKD aj dávkovanie
@@ -474,7 +474,7 @@ function ekfcModeLabel(string $mode): string
                 </div>
 
                 <details open class="calc-formula-box">
-                    <summary>Vzorec — EKFC</summary>
+                    <summary>Vzorec: EKFC</summary>
                     <div class="calc-formula-content">
                         <div class="calc-formula-line">\[ \text{eGFR} = 107{,}3 \times \left(\frac{\text{biomarker}}{Q}\right)^{\alpha} \times \begin{cases} 1 & \text{vek} \le 40 \\ 0{,}990^{(\text{vek}-40)} & \text{vek} > 40 \end{cases} \]</div>
                         <div class="calc-formula-line">\[ \alpha = \begin{cases} -0{,}322 & \text{ak } \text{biomarker}/Q < 1 \\ -1{,}132 & \text{ak } \text{biomarker}/Q \ge 1 \end{cases} \]</div>
@@ -579,7 +579,7 @@ function ekfcModeLabel(string $mode): string
                     $riskCls = egfrRiskClass($calculated['g_category']);
                 ?>
                     <div class="form-section calculator-result-block <?= htmlspecialchars($riskCls) ?>" role="status" aria-live="polite">
-                        <h3>Výsledok výpočtu — <?= htmlspecialchars(ekfcModeLabel((string) $calculated['mode'])) ?></h3>
+                        <h3>Výsledok výpočtu: <?= htmlspecialchars(ekfcModeLabel((string) $calculated['mode'])) ?></h3>
                         <div class="calc-egfr-result-main">
                             <div class="calc-result-value-block">
                                 <span class="calc-result-big-value"><?= htmlspecialchars(number_format((float) $calculated['egfr'], 1, ',', ' ')) ?></span>
@@ -701,7 +701,7 @@ function ekfcModeLabel(string $mode): string
                 <?php endif; ?>
 
                 <div class="info-box">
-                    <strong>Obmedzenia:</strong> hodnoty Q sú kalibrované na európske populácie —
+                    <strong>Obmedzenia:</strong> hodnoty Q sú kalibrované na európske populácie;
                     mimo nich (subsaharská Afrika, východná Ázia) treba Q lokálne overiť.
                     Kreatinínová verzia zostáva, tak ako každá iná, závislá od svalovej masy:
                     pri sarkopénii, amputácii, kachexii, paraplégii alebo naopak veľkej svalovej

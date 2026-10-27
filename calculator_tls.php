@@ -37,7 +37,7 @@ function tlsRiskLabel(bool $ctls, bool $ltls): string
     if ($ltls) {
         return 'laboratórny TLS';
     }
-    return 'bez TLS (Cairo–Bishop)';
+    return 'bez TLS (Cairo-Bishop)';
 }
 
 // Absolútne prahy Cairo–Bishop (SI jednotky).
@@ -172,7 +172,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                                 $pdo,
                                 (int) $_SESSION["user_id"],
                                 "tls_cairo",
-                                "TLS — Cairo–Bishop klasifikácia",
+                                "TLS: Cairo-Bishop klasifikácia",
                                 $patient,
                                 $inputPayload,
                                 $resultPayload,
@@ -210,10 +210,10 @@ if (isLoggedIn()) {
 <html lang="sk">
 <head>
   <?php
-  $pageTitle = "Syndróm rozpadu nádoru (TLS) — Cairo–Bishop klasifikácia | Kalkulačky | Nefro-projekt Slovensko";
+  $pageTitle = "Syndróm rozpadu nádoru (TLS): Cairo-Bishop klasifikácia | Kalkulačky | Nefro-projekt Slovensko";
   $canonicalUrl = "https://nefro.polascin.net/calculator_tls.php";
   $seoDescription =
-      "Cairo–Bishop klasifikácia syndrómu rozpadu nádoru (TLS): laboratórny TLS = ≥ 2 metabolické odchýlky (kyselina močová ≥ 476 µmol/L, draslík ≥ 6,0, fosfát ≥ 1,45 dospelí / 2,1 deti, vápnik ≤ 1,75 mmol/L); klinický TLS = laboratórny TLS + obličkové postihnutie, arytmia alebo kŕče. Riziko akútneho poškodenia obličiek.";
+      "Cairo-Bishop klasifikácia syndrómu rozpadu nádoru (TLS): laboratórny TLS = ≥ 2 metabolické odchýlky (kyselina močová ≥ 476 µmol/L, draslík ≥ 6,0, fosfát ≥ 1,45 dospelí / 2,1 deti, vápnik ≤ 1,75 mmol/L); klinický TLS = laboratórny TLS + obličkové postihnutie, arytmia alebo kŕče. Riziko akútneho poškodenia obličiek.";
   $baseUrl = "https://nefro.polascin.net/";
   $structuredData = [
       [
@@ -235,7 +235,7 @@ if (isLoggedIn()) {
               [
                   "@type" => "ListItem",
                   "position" => 3,
-                  "name" => "TLS — Cairo–Bishop klasifikácia",
+                  "name" => "TLS: Cairo-Bishop klasifikácia",
                   "item" => $baseUrl . "calculator_tls.php",
               ],
           ],
@@ -250,7 +250,7 @@ if (isLoggedIn()) {
 
     <?php
     $headerTitle = "Syndróm rozpadu nádoru (TLS)";
-    $headerIntro = "Cairo–Bishop klasifikácia — laboratórny vs. klinický TLS";
+    $headerIntro = "Cairo-Bishop klasifikácia: laboratórny vs. klinický TLS";
     $showLogo = false;
     include "header.php";
     ?>
@@ -260,30 +260,30 @@ if (isLoggedIn()) {
     <main id="main-content" class="container main-content main-content--single-col" role="main">
         <div class="content-wrapper">
             <div class="auth-container auth-container--wide">
-                <h2>Syndróm rozpadu nádoru — Cairo–Bishop</h2>
+                <h2>Syndróm rozpadu nádoru: Cairo-Bishop</h2>
                 <p class="auth-subtitle">Voliteľné údaje pacienta + metabolické a klinické kritériá pre klasifikáciu TLS.</p>
 
                 <div class="info-box">
-                    <strong>Čo počíta:</strong> Cairo–Bishop klasifikuje syndróm rozpadu
-                    nádoru (TLS) — život ohrozujúce metabolické rozvraty pri masívnom rozpade
+                    <strong>Čo počíta:</strong> Cairo-Bishop klasifikuje syndróm rozpadu
+                    nádoru (TLS): život ohrozujúce metabolické rozvraty pri masívnom rozpade
                     nádorových buniek (najčastejšie 3 dni pred až 7 dní po začatí cytotoxickej
-                    liečby pri vysoko proliferatívnych nádoroch — Burkittov lymfóm, ALL).
+                    liečby pri vysoko proliferatívnych nádoroch: Burkittov lymfóm, ALL).
                     <strong>Laboratórny TLS</strong> = ≥ 2 metabolické odchýlky;
                     <strong>klinický TLS</strong> = laboratórny TLS + obličkové postihnutie,
                     arytmia alebo kŕče. TLS je častou príčinou akútneho poškodenia obličiek.
                 </div>
 
                 <div class="info-box-yellow">
-                    <strong>Poznámka k metodike:</strong> používame absolútne prahy Cairo–Bishop.
+                    <strong>Poznámka k metodike:</strong> používame absolútne prahy Cairo-Bishop.
                     Pôvodná definícia pripúšťa aj <em>25 % zmenu oproti východisku</em>; Howard
                     (NEJM 2011) toto kritérium spochybnil (25 % zmena v rámci normy nie je
                     klinicky významná) a hypokalciémiu počíta až ako <em>symptomatickú</em>.
                     Klasifikácia <strong>nenahrádza klinické posúdenie</strong> ani dynamiku
-                    laboratórnych hodnôt v čase — TLS je dynamický proces, kontroluj opakovane.
+                    laboratórnych hodnôt v čase: TLS je dynamický proces, kontroluj opakovane.
                 </div>
 
                 <details open class="calc-formula-box">
-                    <summary>Kritériá — Cairo–Bishop (každá odchýlka = 1 bod)</summary>
+                    <summary>Kritériá: Cairo-Bishop (každá odchýlka = 1 bod)</summary>
                     <div class="calc-formula-content">
                         <div class="calc-formula-vars">
                             <strong>Laboratórny TLS</strong> (≥ 2 z nasledujúcich):<br>
@@ -407,13 +407,13 @@ if (isLoggedIn()) {
                             &ensp;&bull;&ensp; kŕče: <?= $calculated["seizure"] ? "áno" : "nie" ?>
                         </p>
                         <?php if ($calculated["ctls"]): ?>
-                            <p class="calc-result-detail"><strong>Klinický TLS — urgentný stav.</strong> Intenzívne monitorovanie a liečba: agresívna hydratácia, rasburikáza pri hyperurikémii, korekcia hyperkaliémie a hyperfosfatémie, zváženie renálnej náhradnej liečby (RRT). Konzultuj nefrológiu a hematológiu/onkológiu.</p>
+                            <p class="calc-result-detail"><strong>Klinický TLS: urgentný stav.</strong> Intenzívne monitorovanie a liečba: agresívna hydratácia, rasburikáza pri hyperurikémii, korekcia hyperkaliémie a hyperfosfatémie, zváženie renálnej náhradnej liečby (RRT). Konzultuj nefrológiu a hematológiu/onkológiu.</p>
                         <?php elseif ($calculated["ltls"]): ?>
                             <p class="calc-result-detail"><strong>Laboratórny TLS.</strong> Zaveď/zintenzívni hydratáciu, urátznižujúcu liečbu (alopurinol/rasburikáza), opakuj laboratórne kontroly (kreatinín, K, fosfát, vápnik, kys. močová) v krátkych intervaloch a sleduj diurézu a EKG.</p>
                         <?php elseif ($calculated["lab_count"] === 1 && $calculated["clinical_count"] >= 1): ?>
-                            <p class="calc-result-detail"><strong>Kritériá TLS zatiaľ nesplnené</strong> (laboratórny TLS vyžaduje ≥ 2 odchýlky), no klinický prejav je prítomný — zachovaj ostražitosť, hľadaj inú príčinu a opakuj laboratórne vyšetrenie. Klinický TLS je definovaný len pri súčasnom laboratórnom TLS.</p>
+                            <p class="calc-result-detail"><strong>Kritériá TLS zatiaľ nesplnené</strong> (laboratórny TLS vyžaduje ≥ 2 odchýlky), no klinický prejav je prítomný; zachovaj ostražitosť, hľadaj inú príčinu a opakuj laboratórne vyšetrenie. Klinický TLS je definovaný len pri súčasnom laboratórnom TLS.</p>
                         <?php else: ?>
-                            <p class="calc-result-detail"><strong>Kritériá Cairo–Bishop pre TLS nie sú splnené.</strong> Pri vysokom riziku (veľká nádorová masa, vysoká proliferácia, prebiehajúca cytoredukcia) pokračuj v profylaxii a opakovanom monitorovaní — TLS sa môže rozvinúť neskôr.</p>
+                            <p class="calc-result-detail"><strong>Kritériá Cairo-Bishop pre TLS nie sú splnené.</strong> Pri vysokom riziku (veľká nádorová masa, vysoká proliferácia, prebiehajúca cytoredukcia) pokračuj v profylaxii a opakovanom monitorovaní: TLS sa môže rozvinúť neskôr.</p>
                         <?php endif; ?>
                         <p class="calc-result-detail">Klasifikácia hodnotí <strong>metabolický syndróm</strong>, nie individuálne riziko jeho vzniku (na stratifikáciu rizika slúžia osobitné modely). Rozhoduj podľa celkového klinického obrazu a dynamiky hodnôt.</p>
                         <div class="form-actions no-print">
