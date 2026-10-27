@@ -35,7 +35,7 @@ $totalCount = array_sum($counts);
 <html lang="sk">
 <head>
   <?php
-  $pageTitle = "Lieky v nefrológii — databáza | " . $siteName;
+  $pageTitle = "Lieky v nefrológii: databáza | " . $siteName;
   $canonicalUrl = $baseUrl . "lieky.php";
   $seoDescription =
       "Kurátorská databáza liekov relevantných v nefrológii: úprava dávkovania podľa funkcie obličiek, nefrotoxicita, dialyzovateľnosť a upozornenia. Farmakológia z ChEMBL, klinický kontext z SPC (ŠÚKL/EMA).";
@@ -80,7 +80,7 @@ $totalCount = array_sum($counts);
             <section class="primary-article">
                 <h1 class="visually-hidden">Lieky v nefrológii</h1>
                 <p>
-                    Kurátorský prehľad liekov relevantných v nefrológii — s dôrazom na
+                    Kurátorský prehľad liekov relevantných v nefrológii, s dôrazom na
                     <strong>úpravu dávkovania podľa funkcie obličiek</strong>, nefrotoxicitu,
                     dialyzovateľnosť a klinické upozornenia. Farmakologické údaje čerpáme
                     z databázy <a href="https://www.ebi.ac.uk/chembl/" target="_blank" rel="noopener noreferrer">ChEMBL</a>
@@ -178,8 +178,8 @@ $totalCount = array_sum($counts);
             </section>
 
             <div class="info-box-green">
-                <strong>Zdroje:</strong> farmakológia — <a href="https://www.ebi.ac.uk/chembl/" target="_blank" rel="noopener noreferrer">ChEMBL</a>
-                (EMBL-EBI); klinický kontext a dávkovanie — oficiálne SPC (<a href="https://www.sukl.sk/" target="_blank" rel="noopener noreferrer">ŠÚKL</a>,
+                <strong>Zdroje:</strong> farmakológia z databázy <a href="https://www.ebi.ac.uk/chembl/" target="_blank" rel="noopener noreferrer">ChEMBL</a>
+                (EMBL-EBI); klinický kontext a dávkovanie z oficiálnych SPC (<a href="https://www.sukl.sk/" target="_blank" rel="noopener noreferrer">ŠÚKL</a>,
                 <a href="https://www.ema.europa.eu/" target="_blank" rel="noopener noreferrer">EMA</a>). Údaje sú orientačné a podliehajú zmenám.
             </div>
         </div>

@@ -40,7 +40,7 @@ function dgSection(string $id, string $title, ?string $body): void
 <head>
   <?php
   if ($drug !== null) {
-      $pageTitle = htmlspecialchars((string) $drug['name_sk']) . " — liek v nefrológii | " . $siteName;
+      $pageTitle = htmlspecialchars((string) $drug['name_sk']) . ": liek v nefrológii | " . $siteName;
       $seoDescription = mb_substr(trim(strip_tags((string) ($drug['mechanism'] ?? $drug['name_sk']))), 0, 200);
       $canonicalUrl = $baseUrl . "liek.php?slug=" . urlencode($slug);
       $structuredData = [
@@ -119,7 +119,7 @@ function dgSection(string $id, string $title, ?string $body): void
 
                     <?php if ((int) ($drug['black_box_warning'] ?? 0) === 1 || (int) ($drug['withdrawn'] ?? 0) === 1): ?>
                         <div class="info-box-yellow">
-                            <?php if ((int) ($drug['black_box_warning'] ?? 0) === 1): ?><strong>⚠ FDA black box warning</strong> — liek má závažné bezpečnostné upozornenie.<?php endif; ?>
+                            <?php if ((int) ($drug['black_box_warning'] ?? 0) === 1): ?><strong>⚠ FDA black box warning</strong>: liek má závažné bezpečnostné upozornenie.<?php endif; ?>
                             <?php if ((int) ($drug['withdrawn'] ?? 0) === 1): ?><br><strong>Stiahnutý z trhu</strong> v niektorých krajinách.<?php endif; ?>
                         </div>
                     <?php endif; ?>

@@ -75,7 +75,7 @@ $baseUrl = "https://nefro.polascin.net/";
 $schemaOrgUrl = "https://schema.org";
 
 $pageTitle = "Ťaháky | " . $siteName;
-$seoDescription = "Tlačiteľné ťaháky pre nefrológiu a internú medicínu — acidobáza, elektrolyty, diuretiká, infúzne roztoky a ďalšie. Rýchly prehľad k dispozícii aj ako PDF na stiahnutie a tlač.";
+$seoDescription = "Tlačiteľné ťaháky pre nefrológiu a internú medicínu: acidobáza, elektrolyty, diuretiká, infúzne roztoky a ďalšie. Rýchly prehľad k dispozícii aj ako PDF na stiahnutie a tlač.";
 $seoKeywords = "ťahák, cheat sheet, rýchla referencia, acidobáza, elektrolyty, diuretiká, infúzne roztoky, nefrológia, tlačiteľná pomôcka, Slovensko";
 $canonicalUrl = $baseUrl . "cheatsheets.php";
 $robotsMeta = "index, follow, max-image-preview:large";
@@ -147,7 +147,7 @@ if (!empty($itemListElements)) {
       <section class="populars-intro" aria-labelledby="cheatsheets-heading">
         <h1 id="cheatsheets-heading" class="section-heading">Ťaháky</h1>
         <p class="populars-lead">
-          Stručné, tlačiteľné prehľady pre klinickú prax — kľúčové čísla,
+          Stručné, tlačiteľné prehľady pre klinickú prax: kľúčové čísla,
           klasifikácie a postupy na jednom mieste. Každý ťahák si možno vytlačiť
           priamo z prehliadača alebo stiahnuť ako PDF (pre prihlásených).
           Sú orientačnou pomôckou a <strong>nenahrádzajú</strong> klinický úsudok.
@@ -157,7 +157,7 @@ if (!empty($itemListElements)) {
       <?php if (empty($articles)): ?>
         <section class="populars-empty">
           <div class="primary-article">
-            <p>Zatiaľ tu nie sú žiadne ťaháky. Čoskoro pribudnú prvé — vráťte sa, prosím, neskôr.</p>
+            <p>Zatiaľ tu nie sú žiadne ťaháky. Čoskoro pribudnú prvé; vráťte sa, prosím, neskôr.</p>
             <p>
               Medzitým si môžete pozrieť <a href="calculators.php">nefrologické kalkulačky</a>
               alebo <a href="nastroje.php">interaktívne nástroje</a>.
