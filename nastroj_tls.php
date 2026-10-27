@@ -14,7 +14,7 @@ $baseUrl = "https://nefro.polascin.net/";
   $pageTitle = "Interaktívny sprievodca syndrómom rozpadu nádoru (TLS) | Nástroje | " . $siteName;
   $canonicalUrl = $baseUrl . "nastroj_tls.php";
   $seoDescription =
-      "Interaktívny sprievodca syndrómom rozpadu nádoru (TLS): stratifikácia rizika podľa typu a nálože nádoru aj faktorov pacienta, voľba profylaxie (hydratácia, alopurinol, rasburikáza) a manažment etablovaného TLS vrátane indikácií dialýzy. Cairo–Bishop, Howard 2011.";
+      "Interaktívny sprievodca syndrómom rozpadu nádoru (TLS): stratifikácia rizika podľa typu a nálože nádoru aj faktorov pacienta, voľba profylaxie (hydratácia, alopurinol, rasburikáza) a manažment etablovaného TLS vrátane indikácií dialýzy. Cairo-Bishop, Howard 2011.";
   $seoKeywords =
       "syndróm rozpadu nádoru, TLS, tumor lysis syndrome, rasburikáza, alopurinol, hyperkaliémia, hyperfosfatémia, hyperurikémia, urátová nefropatia, Cairo-Bishop, onkonefrológia, interaktívny nástroj, nefrológia, Slovensko";
   $structuredData = [
@@ -57,7 +57,7 @@ $baseUrl = "https://nefro.polascin.net/";
 
     <?php
     $headerTitle = "Sprievodca TLS";
-    $headerIntro = "Interaktívny nástroj — riziko, profylaxia a manažment syndrómu rozpadu nádoru";
+    $headerIntro = "Interaktívny nástroj: riziko, profylaxia a manažment syndrómu rozpadu nádoru";
     $showLogo = false;
     include "header.php";
     ?>
@@ -67,14 +67,14 @@ $baseUrl = "https://nefro.polascin.net/";
     <main id="main-content" class="container main-content main-content--single-col" role="main">
         <div class="content-wrapper">
             <div class="auth-container auth-container--wide">
-                <h2>Syndróm rozpadu nádoru (TLS) — riziko, profylaxia a manažment</h2>
+                <h2>Syndróm rozpadu nádoru (TLS): riziko, profylaxia a manažment</h2>
                 <p class="auth-subtitle">Interaktívny krok-za-krokom sprievodca: stratifikácia rizika podľa nádoru a pacienta, voľba profylaxie a manažment etablovaného TLS vrátane indikácií dialýzy.</p>
 
                 <p>
                     Nástroj vás prevedie štruktúrovaným postupom podľa odpovedí na cielené otázky.
-                    Slúži ako orientačná pomôcka pre klinické rozhodovanie — <strong>nenahrádza</strong>
+                    Slúži ako orientačná pomôcka pre klinické rozhodovanie; <strong>nenahrádza</strong>
                     individuálne posúdenie rizika, aktuálne onkologické a nefrologické odporúčania ani
-                    klinický úsudok. Na klasifikáciu etablovaného TLS použite kalkulačku Cairo–Bishop.
+                    klinický úsudok. Na klasifikáciu etablovaného TLS použite kalkulačku Cairo-Bishop.
                 </p>
 
                 <!-- Interaktívny sprievodca (vyžaduje JavaScript) -->
@@ -123,7 +123,7 @@ $baseUrl = "https://nefro.polascin.net/";
 
                 <div class="form-actions no-print">
                     <a href="nastroje.php" class="btn-secondary">← Späť na nástroje</a>
-                    <a href="calculator_tls.php" class="btn-secondary">Kalkulačka TLS (Cairo–Bishop)</a>
+                    <a href="calculator_tls.php" class="btn-secondary">Kalkulačka TLS (Cairo-Bishop)</a>
                 </div>
             </div>
 
