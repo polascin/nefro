@@ -14,7 +14,7 @@
             + 'a sérologický kontext.',
         nodes: {
             pattern: {
-                id: 'pattern', kind: 'q', step: 'Krok 1 — Klinický obraz',
+                id: 'pattern', kind: 'q', step: 'Krok 1: Klinický obraz',
                 title: 'Aký je dominantný glomerulárny obraz?',
                 body: ['Glomerulárne ochorenia tvoria spektrum od nefritického po nefrotický syndróm. '
                     + 'Prvým krokom je zaradiť dominujúci obraz podľa močového sedimentu a veľkosti proteinúrie.'],
@@ -31,35 +31,35 @@
             },
 
             nephritic_speed: {
-                id: 'nephritic_speed', kind: 'q', step: 'Krok 2 — Tempo progresie',
+                id: 'nephritic_speed', kind: 'q', step: 'Krok 2: Tempo progresie',
                 title: 'Ako rýchlo sa zhoršuje funkcia obličiek?',
-                body: ['Rýchlo progredujúca glomerulonefritída (RPGN) je urgentná — histologicky zodpovedá '
+                body: ['Rýchlo progredujúca glomerulonefritída (RPGN) je urgentná: histologicky zodpovedá '
                     + 'polmesiačikom (crescents). Oneskorenie liečby znamená nezvratnú stratu nefrónov.'],
                 prompt: 'Tempo vzostupu kreatinínu:',
                 options: [
-                    { label: 'Rýchle — dni až týždne (RPGN)', hint: 'Pokles GFR o desiatky % počas dní/týždňov, často oligúria.', next: 'rpgn' },
+                    { label: 'Rýchle: dni až týždne (RPGN)', hint: 'Pokles GFR o desiatky % počas dní/týždňov, často oligúria.', next: 'rpgn' },
                     { label: 'Stabilné alebo pozvoľné', hint: 'Pokračujte podľa komplementu.', next: 'complement' }
                 ]
             },
 
             rpgn: {
-                id: 'rpgn', kind: 'q', step: 'RPGN — imunopatologický vzor',
+                id: 'rpgn', kind: 'q', step: 'RPGN: imunopatologický vzor',
                 title: 'RPGN: ktorý imunologický vzor dominuje?',
                 body: ['Polmesiačiková (crescentic) GN má tri základné imunopatologické typy. Urgentne odoberte '
-                    + 'kompletnú imunológiu a zvážte bezodkladnú biopsiu — liečbu nemožno odkladať.'],
+                    + 'kompletnú imunológiu a zvážte bezodkladnú biopsiu; liečbu nemožno odkladať.'],
                 bullets: ['Panel: ANCA (MPO/PR3), anti-GBM, ANA/anti-dsDNA, C3/C4, kryoglobulíny, sérológie hepatitíd B/C a HIV, ASLO.'],
                 prompt: 'Vyberte vzor:',
                 options: [
-                    { label: 'Pauci-imunitný — ANCA pozitívny (MPO/PR3)', hint: 'Málo/žiadne imunodepozity; vaskulitída malých ciev.', next: 'rpgn_anca' },
+                    { label: 'Pauci-imunitný: ANCA pozitívny (MPO/PR3)', hint: 'Málo/žiadne imunodepozity; vaskulitída malých ciev.', next: 'rpgn_anca' },
                     { label: 'Anti-GBM (lineárny IF pozdĺž GBM)', hint: 'Často s pľúcnym krvácaním (Goodpastureov syndróm).', next: 'rpgn_antigbm' },
                     { label: 'Imunokomplexový (granulárny IF, často nízky komplement)', hint: 'Lupus, IgA, postinfekčný, kryoglobulinemický.', next: 'rpgn_ic' }
                 ]
             },
 
             complement: {
-                id: 'complement', kind: 'q', step: 'Krok 3 — Komplement',
+                id: 'complement', kind: 'q', step: 'Krok 3: Komplement',
                 title: 'Aké sú hladiny komplementu (C3, C4)?',
-                body: ['Sérový komplement je klasický rázcestník nefritických glomerulonefritíd — nízke hladiny '
+                body: ['Sérový komplement je klasický rázcestník nefritických glomerulonefritíd: nízke hladiny '
                     + 'výrazne zužujú diferenciálnu diagnostiku.'],
                 prompt: 'Hladiny komplementu:',
                 options: [
@@ -69,12 +69,12 @@
             },
 
             low_complement: {
-                id: 'low_complement', kind: 'q', step: 'Nízky komplement — diferenciál',
+                id: 'low_complement', kind: 'q', step: 'Nízky komplement: diferenciál',
                 title: 'Ktorý klinický kontext sedí najlepšie?',
-                body: ['Nefritída s nízkym komplementom — rozlíšte podľa anamnézy, sérológií a vzoru C3 vs C4.'],
+                body: ['Nefritída s nízkym komplementom; rozlíšte podľa anamnézy, sérológií a vzoru C3 vs C4.'],
                 prompt: 'Vyberte kontext:',
                 options: [
-                    { label: 'Nedávna infekcia (streptokok, koža/dýchacie cesty); izolovane nízke C3', hint: 'C3 sa normalizuje za 6–8 týždňov.', next: 'postinfectious' },
+                    { label: 'Nedávna infekcia (streptokok, koža/dýchacie cesty); izolovane nízke C3', hint: 'C3 sa normalizuje za 6 až 8 týždňov.', next: 'postinfectious' },
                     { label: 'Multisystémové, ANA / anti-dsDNA pozitívne, nízke C3 aj C4', hint: 'Aktivácia klasickej dráhy.', next: 'lupus' },
                     { label: 'Perzistentne nízke C3, membranoproliferatívny vzor', hint: 'C3 glomerulopatia / MPGN.', next: 'mpgn_c3g' },
                     { label: 'Hepatitída C alebo pozitívne kryoglobulíny, nízke C4', hint: 'Kryoglobulinemická GN.', next: 'cryo' }
@@ -82,42 +82,42 @@
             },
 
             normal_complement: {
-                id: 'normal_complement', kind: 'q', step: 'Normálny komplement — diferenciál',
+                id: 'normal_complement', kind: 'q', step: 'Normálny komplement: diferenciál',
                 title: 'Ktorý obraz dominuje pri normálnom komplemente?',
                 body: ['Pri nefritíde s normálnym komplementom dominuje IgA nefropatia; zvážte aj vaskulitídu '
                     + 'malých ciev a hereditárne príčiny izolovanej hematúrie.'],
                 prompt: 'Vyberte:',
                 options: [
                     { label: 'Synfaryngitická hematúria u mladého dospelého', hint: 'Hematúria súčasne s infekciou horných dýchacích ciest.', next: 'iga' },
-                    { label: 'Hmatateľná purpura, bolesti brucha, artralgie', hint: 'IgA vaskulitída (Henoch–Schönlein).', next: 'iga' },
+                    { label: 'Hmatateľná purpura, bolesti brucha, artralgie', hint: 'IgA vaskulitída (Henoch-Schönlein).', next: 'iga' },
                     { label: 'ANCA pozitívny alebo systémové príznaky vaskulitídy', hint: 'Aj indolentná pauci-imunitná GN.', next: 'rpgn_anca' },
                     { label: 'Izolovaná hematúria, rodinný výskyt alebo porucha sluchu', hint: 'Alportov syndróm, choroba tenkých bazálnych membrán.', next: 'hereditary' }
                 ]
             },
 
             nephrotic_dm: {
-                id: 'nephrotic_dm', kind: 'q', step: 'Krok 2 — Kontext nefrotického syndrómu',
+                id: 'nephrotic_dm', kind: 'q', step: 'Krok 2: Kontext nefrotického syndrómu',
                 title: 'Sedí obraz diabetickej nefropatie?',
                 body: ['Diabetická nefropatia je najčastejšou príčinou nefrotickej proteinúrie u dospelých. '
                     + 'Typicky dlhšie trvajúci diabetes, diabetická retinopatia a postupný vzostup albuminúrie '
                     + 'bez aktívneho sedimentu.'],
                 prompt: 'Vyberte:',
                 options: [
-                    { label: 'Áno — dlhotrvajúci diabetes + retinopatia, bland sediment', hint: 'Typický pomalý priebeh.', next: 'diabetic' },
-                    { label: 'Nie / atypický (náhly začiatok, hematúria, bez retinopatie, rýchly pokles GFR)', hint: 'Zvážte primárnu glomerulopatiu — biopsia.', next: 'nephrotic_age' }
+                    { label: 'Áno, dlhotrvajúci diabetes + retinopatia, bland sediment', hint: 'Typický pomalý priebeh.', next: 'diabetic' },
+                    { label: 'Nie / atypický (náhly začiatok, hematúria, bez retinopatie, rýchly pokles GFR)', hint: 'Zvážte primárnu glomerulopatiu; indikovaná je biopsia.', next: 'nephrotic_age' }
                 ]
             },
 
             nephrotic_age: {
-                id: 'nephrotic_age', kind: 'q', step: 'Nefrotický — primárne glomerulopatie',
+                id: 'nephrotic_age', kind: 'q', step: 'Nefrotický: primárne glomerulopatie',
                 title: 'Aký je vek a kontext pacienta?',
                 body: ['Pri primárnom nefrotickom syndróme pomáha vek a sekundárny kontext. Vždy aktívne '
                     + 'hľadajte sekundárne príčiny (malignita, lieky, infekcie, autoimunita).'],
                 prompt: 'Vyberte:',
                 options: [
-                    { label: 'Dieťa (1–10 r), náhly nefrotický syndróm', hint: 'Najpravdepodobnejšie choroba minimálnych zmien.', next: 'mcd' },
-                    { label: 'Dospelý — pozitívny anti-PLA2R alebo membranózny vzor', hint: 'Membranózna nefropatia.', next: 'membranous' },
-                    { label: 'Dospelý — fokálna segmentálna skleróza / rizikové faktory FSGS', hint: 'Primárna alebo sekundárna FSGS.', next: 'fsgs' },
+                    { label: 'Dieťa (1 až 10 r), náhly nefrotický syndróm', hint: 'Najpravdepodobnejšie choroba minimálnych zmien.', next: 'mcd' },
+                    { label: 'Dospelý: pozitívny anti-PLA2R alebo membranózny vzor', hint: 'Membranózna nefropatia.', next: 'membranous' },
+                    { label: 'Dospelý: fokálna segmentálna skleróza / rizikové faktory FSGS', hint: 'Primárna alebo sekundárna FSGS.', next: 'fsgs' },
                     { label: 'Známky systémového/sekundárneho ochorenia (amyloid, malignita, lieky)', hint: 'Sekundárny nefrotický syndróm.', next: 'secondary_nephrotic' }
                 ]
             },
@@ -126,7 +126,7 @@
             mixed: {
                 id: 'mixed', kind: 'r', severity: 'warn',
                 category: 'Zmiešaný nefriticko-nefrotický obraz',
-                summary: 'Prekrývajúce sa črty (difúzna proliferatívna lupusová nefritída, MPGN, kryoglobulinemická GN) — '
+                summary: 'Prekrývajúce sa črty (difúzna proliferatívna lupusová nefritída, MPGN, kryoglobulinemická GN): '
                     + 'postupujte ako pri aktívnej nefritíde: urgentná imunológia a biopsia.',
                 sections: [
                     { heading: 'Vyšetrenia', items: [
@@ -141,14 +141,14 @@
                 ],
                 links: [
                     { href: 'calculator_uacr.php', label: 'UACR a KDIGO klasifikácia' },
-                    { href: 'calculator_kfre.php', label: 'KFRE — riziko zlyhania obličiek' }
+                    { href: 'calculator_kfre.php', label: 'KFRE: riziko zlyhania obličiek' }
                 ]
             },
 
             rpgn_anca: {
                 id: 'rpgn_anca', kind: 'r', severity: 'urgent',
-                category: 'Pauci-imunitná RPGN — ANCA-asociovaná vaskulitída',
-                summary: 'Vaskulitída malých ciev (granulomatóza s polyangiitídou, mikroskopická polyangiitída, EGPA) — '
+                category: 'Pauci-imunitná RPGN: ANCA-asociovaná vaskulitída',
+                summary: 'Vaskulitída malých ciev (granulomatóza s polyangiitídou, mikroskopická polyangiitída, EGPA): '
                     + 'urgentná indukčná imunosupresia, čas rozhoduje o renálnej prognóze.',
                 sections: [
                     { heading: 'Klinické a laboratórne stopy', items: [
@@ -160,7 +160,7 @@
                         'RTG/CT hrudníka, posúdenie alveolárneho krvácania; vylúčiť infekciu pred imunosupresiou.'
                     ] },
                     { heading: 'Manažment', items: [
-                        'Indukcia: glukokortikoidy + rituximab alebo cyklofosfamid; pri ťažkom priebehu zvážiť plazmaferézu (PEXIVAS — selektívne).',
+                        'Indukcia: glukokortikoidy + rituximab alebo cyklofosfamid; pri ťažkom priebehu zvážiť plazmaferézu (PEXIVAS, selektívne).',
                         'Avacopan ako súčasť steroid-šetriaceho režimu; profylaxia infekcií; následná udržiavacia liečba.'
                     ] }
                 ],
@@ -172,7 +172,7 @@
             rpgn_antigbm: {
                 id: 'rpgn_antigbm', kind: 'r', severity: 'urgent',
                 category: 'Anti-GBM choroba (Goodpastureov syndróm)',
-                summary: 'Protilátky proti bazálnej membráne glomerulov — najakútnejšia RPGN. Pri pľúcno-renálnom syndróme '
+                summary: 'Protilátky proti bazálnej membráne glomerulov: najakútnejšia RPGN. Pri pľúcno-renálnom syndróme '
                     + 'okamžitá liečba; renálne prežitie závisí od rýchlosti začatia.',
                 sections: [
                     { heading: 'Klinické a laboratórne stopy', items: [
@@ -190,7 +190,7 @@
                 id: 'rpgn_ic', kind: 'r', severity: 'urgent',
                 category: 'Imunokomplexová RPGN',
                 summary: 'Polmesiačiková GN na podklade ukladania imunokomplexov (lupusová nefritída, IgA nefropatia/'
-                    + 'vaskulitída, postinfekčná, kryoglobulinemická) — granulárny IF, často nízky komplement.',
+                    + 'vaskulitída, postinfekčná, kryoglobulinemická): granulárny IF, často nízky komplement.',
                 sections: [
                     { heading: 'Vyšetrenia', items: [
                         'Imunológia na určenie podkladu: ANA/anti-dsDNA, C3/C4, kryoglobulíny, sérológie hepatitíd, ASLO, IgA.',
@@ -198,7 +198,7 @@
                     ] },
                     { heading: 'Manažment', items: [
                         'Liečba základného ochorenia (napr. imunosupresia pri lupusovej nefritíde) plus podporné renoprotektívne opatrenia.',
-                        'Pri rýchlej progresii nečakajte — konzultujte nefrológiu a začnite cielenú liečbu.'
+                        'Pri rýchlej progresii nečakajte; konzultujte nefrológiu a začnite cielenú liečbu.'
                     ] }
                 ]
             },
@@ -206,16 +206,16 @@
             postinfectious: {
                 id: 'postinfectious', kind: 'r', severity: 'warn',
                 category: 'Postinfekčná / infekčná glomerulonefritída',
-                summary: 'Akútna GN po (alebo počas) infekcie — klasicky poststreptokoková u detí; u dospelých a diabetikov '
+                summary: 'Akútna GN po (alebo počas) infekcie: klasicky poststreptokoková u detí; u dospelých a diabetikov '
                     + 'čoraz častejšie stafylokoková a GN spojená s aktívnou infekciou.',
                 sections: [
                     { heading: 'Klinické a laboratórne stopy', items: [
-                        'Latencia 1–3 týždne po faryngitíde/impetigu (poststreptokoková); izolovane nízke C3 s normálnym C4.',
-                        'ASLO/anti-DNáza B, kultivácie; C3 sa normalizuje do 6–8 týždňov (ak nie, prehodnotiť na MPGN/C3G).'
+                        'Latencia 1 až 3 týždne po faryngitíde/impetigu (poststreptokoková); izolovane nízke C3 s normálnym C4.',
+                        'ASLO/anti-DNáza B, kultivácie; C3 sa normalizuje do 6 až 8 týždňov (ak nie, prehodnotiť na MPGN/C3G).'
                     ] },
                     { heading: 'Manažment', items: [
                         'Liečba aktívnej infekcie; podporná liečba (kontrola TK, edémov, soľ a tekutiny).',
-                        'U detí výborná prognóza; u dospelých/diabetikov horšia — sledovať reziduálnu proteinúriu a funkciu.'
+                        'U detí výborná prognóza; u dospelých/diabetikov horšia; sledovať reziduálnu proteinúriu a funkciu.'
                     ] }
                 ]
             },
@@ -223,7 +223,7 @@
             lupus: {
                 id: 'lupus', kind: 'r', severity: 'warn',
                 category: 'Lupusová nefritída',
-                summary: 'Renálne postihnutie pri systémovom lupus erythematosus — trieda (I–VI podľa ISN/RPS) určuje liečbu; '
+                summary: 'Renálne postihnutie pri systémovom lupus erythematosus: trieda (I až VI podľa ISN/RPS) určuje liečbu; '
                     + 'proliferatívne triedy (III/IV) sú aktívne a vyžadujú imunosupresiu.',
                 sections: [
                     { heading: 'Klinické a laboratórne stopy', items: [
@@ -243,7 +243,7 @@
             mpgn_c3g: {
                 id: 'mpgn_c3g', kind: 'r', severity: 'warn',
                 category: 'MPGN / C3 glomerulopatia',
-                summary: 'Membranoproliferatívny vzor s perzistentne nízkym C3 — moderne sa delí podľa IF na '
+                summary: 'Membranoproliferatívny vzor s perzistentne nízkym C3; moderne sa delí podľa IF na '
                     + 'imunokomplexovú MPGN vs C3 glomerulopatiu (dráha alternatívneho komplementu).',
                 sections: [
                     { heading: 'Vyšetrenia', items: [
@@ -251,19 +251,19 @@
                         'Komplementový panel: C3, C4, C3 nefritický faktor, faktor H/I, membránový atakový komplex (sC5b-9); biopsia s IF a EM.'
                     ] },
                     { heading: 'Manažment', items: [
-                        'Liečiť podkladovú príčinu (antivirotiká pri HCV, klon-cielená liečba pri monoklonálnej gamapatii — pozri MGRS).',
+                        'Liečiť podkladovú príčinu (antivirotiká pri HCV, klon-cielená liečba pri monoklonálnej gamapatii; pozri MGRS).',
                         'Renoprotekcia (RAAS blokáda); pri primárnej C3G individuálne imunosupresia, prípadne anti-C5 v ťažkých prípadoch.'
                     ] }
                 ],
                 links: [
-                    { href: 'calculator_mgrs.php', label: 'MGRS — klasifikácia (renálny význam)' }
+                    { href: 'calculator_mgrs.php', label: 'MGRS: klasifikácia (renálny význam)' }
                 ]
             },
 
             cryo: {
                 id: 'cryo', kind: 'r', severity: 'warn',
                 category: 'Kryoglobulinemická glomerulonefritída',
-                summary: 'Membranoproliferatívny vzor s kryoglobulínmi a výrazne nízkym C4 — najčastejšie pri chronickej '
+                summary: 'Membranoproliferatívny vzor s kryoglobulínmi a výrazne nízkym C4: najčastejšie pri chronickej '
                     + 'hepatitíde C (zmiešaná kryoglobulinémia typ II).',
                 sections: [
                     { heading: 'Klinické a laboratórne stopy', items: [
@@ -279,7 +279,7 @@
             iga: {
                 id: 'iga', kind: 'r', severity: 'warn',
                 category: 'IgA nefropatia / IgA vaskulitída',
-                summary: 'Najčastejšia primárna glomerulonefritída — mezangiálne depozity IgA; IgA vaskulitída (Henoch–Schönlein) '
+                summary: 'Najčastejšia primárna glomerulonefritída: mezangiálne depozity IgA; IgA vaskulitída (Henoch-Schönlein) '
                     + 'je jej systémová forma s purpurou. Normálny komplement.',
                 sections: [
                     { heading: 'Klinické a laboratórne stopy', items: [
@@ -287,7 +287,7 @@
                         'Diagnóza biopsiou (IgA-dominantné mezangiálne depozity); riziko progresie podľa proteinúrie, TK a MEST-C skóre.'
                     ] },
                     { heading: 'Manažment', items: [
-                        'Základ: optimalizovaná podporná liečba — RAAS blokáda, cieľový TK, SGLT2 inhibítory, životospráva (KDIGO 2024).',
+                        'Základ: optimalizovaná podporná liečba, t. j. RAAS blokáda, cieľový TK, SGLT2 inhibítory, životospráva (KDIGO 2024).',
                         'Pri perzistujúcej proteinúrii napriek podpornej liečbe individuálne zvážiť imunosupresiu / cielené terapie (riziko vs prínos).'
                     ] }
                 ],
@@ -300,7 +300,7 @@
             hereditary: {
                 id: 'hereditary', kind: 'r', severity: 'info',
                 category: 'Hereditárna / izolovaná hematúria (Alport, tenké membrány)',
-                summary: 'Perzistentná glomerulárna hematúria s rodinným výskytom — Alportov syndróm (progresívny, s poruchou '
+                summary: 'Perzistentná glomerulárna hematúria s rodinným výskytom: Alportov syndróm (progresívny, s poruchou '
                     + 'sluchu a očí) alebo choroba tenkých bazálnych membrán (zvyčajne benígna).',
                 sections: [
                     { heading: 'Klinické a laboratórne stopy', items: [
@@ -309,7 +309,7 @@
                     ] },
                     { heading: 'Manažment', items: [
                         'Alport: včasná RAAS blokáda spomaľuje progresiu; sledovanie funkcie, sluchu a zraku, genetické poradenstvo.',
-                        'Tenké bazálne membrány: zvyčajne dobrá prognóza — sledovanie proteinúrie a TK.'
+                        'Tenké bazálne membrány: zvyčajne dobrá prognóza; sledovanie proteinúrie a TK.'
                     ] }
                 ]
             },
@@ -317,11 +317,11 @@
             diabetic: {
                 id: 'diabetic', kind: 'r', severity: 'warn',
                 category: 'Diabetická nefropatia (diabetické ochorenie obličiek)',
-                summary: 'Najčastejšia príčina nefrotickej proteinúrie a zlyhania obličiek — postupná albuminúria pri '
+                summary: 'Najčastejšia príčina nefrotickej proteinúrie a zlyhania obličiek: postupná albuminúria pri '
                     + 'dlhotrvajúcom diabete, zvyčajne s retinopatiou a bez aktívneho sedimentu.',
                 sections: [
                     { heading: 'Kedy zvážiť biopsiu (atypický obraz)', items: [
-                        'Náhly nefrotický syndróm, aktívny sediment/hematúria, rýchly pokles GFR, neprítomnosť retinopatie alebo krátke trvanie diabetu — zvážte inú/superponovanú glomerulopatiu.'
+                        'Náhly nefrotický syndróm, aktívny sediment/hematúria, rýchly pokles GFR, neprítomnosť retinopatie alebo krátke trvanie diabetu; zvážte inú/superponovanú glomerulopatiu.'
                     ] },
                     { heading: 'Manažment (piliere)', items: [
                         'RAAS blokáda (ACEi/ARB) titrovaná na maximum, SGLT2 inhibítor, nesteroidný MRA (finerenón) podľa indikácie.',
@@ -330,19 +330,19 @@
                 ],
                 links: [
                     { href: 'calculator_uacr.php', label: 'UACR a KDIGO klasifikácia' },
-                    { href: 'calculator_kfre.php', label: 'KFRE — riziko zlyhania obličiek' }
+                    { href: 'calculator_kfre.php', label: 'KFRE: riziko zlyhania obličiek' }
                 ]
             },
 
             mcd: {
                 id: 'mcd', kind: 'r', severity: 'warn',
                 category: 'Choroba minimálnych zmien (MCD)',
-                summary: 'Najčastejšia príčina nefrotického syndrómu u detí — náhly začiatok, selektívna proteinúria, '
+                summary: 'Najčastejšia príčina nefrotického syndrómu u detí: náhly začiatok, selektívna proteinúria, '
                     + 'svetelná mikroskopia takmer normálna, na EM difúzne stenčenie pedicíl.',
                 sections: [
                     { heading: 'Klinické a laboratórne stopy', items: [
                         'Náhly nefrotický syndróm, normálny TK aj funkcia; u detí sa biopsia spravidla nerobí pred liečbou.',
-                        'U dospelých vylúčiť sekundárne príčiny (NSA, hematologické malignity — najmä Hodgkin).'
+                        'U dospelých vylúčiť sekundárne príčiny (NSA, hematologické malignity, najmä Hodgkin).'
                     ] },
                     { heading: 'Manažment', items: [
                         'Glukokortikoidy (väčšina dobre reaguje); pri častých relapsoch/steroid-dependencii kalcineurínové inhibítory, rituximab.',
@@ -354,12 +354,12 @@
             membranous: {
                 id: 'membranous', kind: 'r', severity: 'warn',
                 category: 'Membranózna nefropatia',
-                summary: 'Častá príčina nefrotického syndrómu u dospelých — subepiteliálne imunodepozity; ~70 % primárnych '
+                summary: 'Častá príčina nefrotického syndrómu u dospelých: subepiteliálne imunodepozity; ~70 % primárnych '
                     + 'je anti-PLA2R pozitívnych. Vždy vylúčiť sekundárne príčiny.',
                 sections: [
                     { heading: 'Klinické a laboratórne stopy', items: [
                         'Anti-PLA2R (a anti-THSD7A) protilátky; titer koreluje s aktivitou a prognózou.',
-                        'Sekundárne príčiny: malignita (skríning podľa veku), lupus (trieda V), infekcie (HBV), lieky (NSA) — aktívne hľadať.'
+                        'Sekundárne príčiny: malignita (skríning podľa veku), lupus (trieda V), infekcie (HBV), lieky (NSA); aktívne hľadať.'
                     ] },
                     { heading: 'Manažment', items: [
                         'Riziková stratifikácia (proteinúria, funkcia, anti-PLA2R); podporná renoprotekcia u nízkeho rizika.',
@@ -374,7 +374,7 @@
             fsgs: {
                 id: 'fsgs', kind: 'r', severity: 'warn',
                 category: 'Fokálna segmentálna glomeruloskleróza (FSGS)',
-                summary: 'Vzor poškodenia podocytov — odlíšiť primárnu (difúzne stenčenie pedicíl, plný nefrotický syndróm) '
+                summary: 'Vzor poškodenia podocytov; odlíšiť primárnu (difúzne stenčenie pedicíl, plný nefrotický syndróm) '
                     + 'od sekundárnej/adaptívnej (hyperfiltrácia, redukcia nefrónov, obezita, refluxová nefropatia).',
                 sections: [
                     { heading: 'Klinické a laboratórne stopy', items: [
@@ -391,7 +391,7 @@
             secondary_nephrotic: {
                 id: 'secondary_nephrotic', kind: 'r', severity: 'warn',
                 category: 'Sekundárny nefrotický syndróm (amyloidóza, paraproteín, iné)',
-                summary: 'Nefrotická proteinúria pri systémovom ochorení — renálna amyloidóza (AL/AA), monoklonálne '
+                summary: 'Nefrotická proteinúria pri systémovom ochorení: renálna amyloidóza (AL/AA), monoklonálne '
                     + 'gamapatie renálneho významu, malignity, lieky a infekcie.',
                 sections: [
                     { heading: 'Vyšetrenia', items: [
@@ -404,8 +404,8 @@
                     ] }
                 ],
                 links: [
-                    { href: 'calculator_mgrs.php', label: 'MGRS — klasifikácia (renálny význam)' },
-                    { href: 'calculator_mgus.php', label: 'MGUS — riziková stratifikácia a κ/λ' }
+                    { href: 'calculator_mgrs.php', label: 'MGRS: klasifikácia (renálny význam)' },
+                    { href: 'calculator_mgus.php', label: 'MGUS: riziková stratifikácia a κ/λ' }
                 ]
             }
         }

@@ -9,28 +9,28 @@
     // Bielkoviny (g/kg/deň) a krátky popis podľa kategórie.
     var CATEGORIES = {
         ckd_nd: {
-            label: 'CKD G3–G5 bez dialýzy, bez diabetu',
+            label: 'CKD G3 až G5 bez dialýzy, bez diabetu',
             proteinLow: 0.55, proteinHigh: 0.60,
-            proteinNote: 'Nízkobielkovinová diéta (0,55–0,60 g/kg/deň) u metabolicky stabilného pacienta '
-                + 'spomaľuje progresiu. Veľmi nízky príjem (0,28–0,43 g/kg/deň) je možný len s keto-analógmi '
+            proteinNote: 'Nízkobielkovinová diéta (0,55 až 0,60 g/kg/deň) u metabolicky stabilného pacienta '
+                + 'spomaľuje progresiu. Veľmi nízky príjem (0,28 až 0,43 g/kg/deň) je možný len s keto-analógmi '
                 + 'a pod dohľadom. Nevyhnutný dostatočný energetický príjem (prevencia malnutrície).'
         },
         ckd_nd_dm: {
-            label: 'CKD G3–G5 bez dialýzy, s diabetom',
+            label: 'CKD G3 až G5 bez dialýzy, s diabetom',
             proteinLow: 0.60, proteinHigh: 0.80,
-            proteinNote: 'Pri diabete sa odporúča mierne vyšší príjem (0,6–0,8 g/kg/deň) pre udržanie '
+            proteinNote: 'Pri diabete sa odporúča mierne vyšší príjem (0,6 až 0,8 g/kg/deň) pre udržanie '
                 + 'glykemickej a nutričnej stability.'
         },
         hd: {
             label: 'Hemodialýza (udržiavacia)',
             proteinLow: 1.0, proteinHigh: 1.2,
-            proteinNote: 'Dialýza zvyšuje potrebu bielkovín (straty do dialyzátu, katabolizmus) — '
-                + '1,0–1,2 g/kg/deň.'
+            proteinNote: 'Dialýza zvyšuje potrebu bielkovín (straty do dialyzátu, katabolizmus): '
+                + '1,0 až 1,2 g/kg/deň.'
         },
         pd: {
             label: 'Peritoneálna dialýza',
             proteinLow: 1.0, proteinHigh: 1.2,
-            proteinNote: 'PD má dodatočné straty bielkovín do dialyzátu — cieľ 1,0–1,2 g/kg/deň '
+            proteinNote: 'PD má dodatočné straty bielkovín do dialyzátu; cieľ 1,0 až 1,2 g/kg/deň '
                 + '(často horná hranica). Zohľadnite kalorický príspevok glukózy z dialyzátu.'
         }
     };
@@ -52,7 +52,7 @@
         var l = Math.round(lo);
         var h = Math.round(hi);
         if (l === h) { return l + ' ' + unit; }
-        return l + '–' + h + ' ' + unit;
+        return l + ' až ' + h + ' ' + unit;
     }
 
     function formatNumber(value, decimals) {
@@ -103,7 +103,7 @@
 
     function buildSummary(result) {
         var lines = [
-            'Plánovač renálnej diéty – vypočítané cieľové denné limity',
+            'Plánovač renálnej diéty: vypočítané cieľové denné limity',
             'Vypočítané: ' + formatDateTime(result.createdAt),
             'Klinická kategória: ' + result.categoryLabel,
             'Telesná hmotnosť: ' + Math.round(result.weightKg) + ' kg',
@@ -192,26 +192,26 @@
             {
                 name: 'Bielkoviny',
                 value: rangeText(cat.proteinLow * weight, cat.proteinHigh * weight, 'g/deň')
-                    + '  (' + formatNumber(cat.proteinLow, 2) + '–'
+                    + '  (' + formatNumber(cat.proteinLow, 2) + ' až '
                     + formatNumber(cat.proteinHigh, 2) + ' g/kg/deň)',
                 note: cat.proteinNote
             },
             {
                 name: 'Energia',
                 value: rangeText(ENERGY_LOW * weight, ENERGY_HIGH * weight, 'kcal/deň')
-                    + '  (25–35 kcal/kg/deň)',
+                    + '  (25 až 35 kcal/kg/deň)',
                 note: 'Upravte podľa veku, fyzickej aktivity a cieľovej hmotnosti. Dostatočná energia je '
                     + 'nevyhnutná, aby sa bielkoviny nevyužívali ako zdroj energie (prevencia malnutrície).'
             },
             {
                 name: 'Sodík',
-                value: '< 2 300 mg/deň (< 100 mmol; ≈ < 5–6 g kuchynskej soli)',
+                value: '< 2 300 mg/deň (< 100 mmol; ≈ < 5 až 6 g kuchynskej soli)',
                 note: 'Obmedzenie sodíka zlepšuje kontrolu krvného tlaku, objemu a účinok RAAS blokády/diuretík. '
                     + 'Hlavný zdroj je spracovaná strava a pridaná soľ.'
             },
             {
                 name: 'Draslík',
-                value: hyperK ? '≈ 2 000–3 000 mg/deň (50–75 mmol) — obmedziť' : 'Individualizovať podľa kalémie',
+                value: hyperK ? '≈ 2 000 až 3 000 mg/deň (50 až 75 mmol), obmedziť' : 'Individualizovať podľa kalémie',
                 note: hyperK
                     ? 'Pri hyperkaliémii obmedzte draslík (ovocie/zelenina s vysokým obsahom, sušené plody, '
                         + 'orechy, čokoláda); zvážte aj acidózu, lieky (RAAS, K-šetriace diuretiká) a zápchu.'
@@ -220,8 +220,8 @@
             },
             {
                 name: 'Fosfor',
-                value: hyperP ? '≈ 800–1 000 mg/deň — prísnejšie obmedziť' : '≈ 800–1 000 mg/deň',
-                note: 'Prednostne obmedzte anorganický fosfát z aditív (konzervanty, kolové nápoje, tavené syry) — '
+                value: hyperP ? '≈ 800 až 1 000 mg/deň, prísnejšie obmedziť' : '≈ 800 až 1 000 mg/deň',
+                note: 'Prednostne obmedzte anorganický fosfát z aditív (konzervanty, kolové nápoje, tavené syry), ktorý '
                     + 'má vysokú vstrebateľnosť. Pri hyperfosfatémii kombinujte s viazačmi fosfátov a posúďte adherenciu.'
             }
         ];
@@ -241,7 +241,7 @@
 
     function appendPrintHeader(out, result) {
         var header = el('div', 'dieta-print-header print-only');
-        header.appendChild(el('h2', null, 'Plánovač renálnej diéty — vypočítané limity'));
+        header.appendChild(el('h2', null, 'Plánovač renálnej diéty: vypočítané limity'));
         header.appendChild(el('p', null,
             'Kategória: ' + result.categoryLabel
             + ' | Hmotnosť: ' + Math.round(result.weightKg) + ' kg'
@@ -327,7 +327,7 @@
 
         if (!cat) { errBox.textContent = 'Vyberte klinickú kategóriu.'; return; }
         if (isNaN(weight) || weight < 20 || weight > 250) {
-            errBox.textContent = 'Zadajte telesnú hmotnosť v rozsahu 20–250 kg (ideálne ideálnu/upravenú).';
+            errBox.textContent = 'Zadajte telesnú hmotnosť v rozsahu 20 až 250 kg (ideálne ideálnu/upravenú).';
             return;
         }
 
