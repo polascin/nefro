@@ -715,8 +715,8 @@ function calculatorRenderRegisterCta(string $variant = 'saved'): void
         return;
     }
     $title = $variant === 'hub'
-        ? 'Vyťažte z kalkulačiek maximum — vytvorte si bezplatný účet'
-        : 'Uložte si tento výpočet — vytvorte si bezplatný účet';
+        ? 'Vyťažte z kalkulačiek maximum: vytvorte si bezplatný účet'
+        : 'Uložte si tento výpočet: vytvorte si bezplatný účet';
     ?>
     <aside class="calc-register-cta" aria-label="Výhody bezplatného účtu">
         <h3 class="calc-register-cta__title"><?= htmlspecialchars($title) ?></h3>
