@@ -55,6 +55,13 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-10-27 23:05',
+                'category' => 'content',
+                'title' => 'Marža z krvi za 7 €',
+                'description' => 'Cena e-knihy Marža z krvi je 7 € za ľubovoľný výber dostupných formátov.',
+                'url' => 'publikacia.php?slug=marza-z-krvi',
+            ],
+            [
                 'date' => '2026-10-22 18:00',
                 'category' => 'content',
                 'title' => 'Marža z krvi s prideleným ISBN',

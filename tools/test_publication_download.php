@@ -59,7 +59,7 @@ publicationDownloadTest(
 $fiction = findPublication('marza-z-krvi');
 publicationDownloadTest($fiction !== null, 'Beletria musí byť v katalógu.');
 foreach ([['pdf'], ['epub'], ['pdf', 'epub'], ['pdf', 'epub', 'azw3', 'docx']] as $selection) {
-    publicationDownloadTest(publicationPriceFor($selection, $fiction) === 20.0, 'Cena beletrie je 20 € pri každom výbere formátov.');
+    publicationDownloadTest(publicationPriceFor($selection, $fiction) === 7.0, 'Cena beletrie je 7 € pri každom výbere formátov.');
 }
 publicationDownloadTest(publicationPriceFor([], $fiction) === 0.0, 'Prázdny výber nemá cenu.');
 $medical = findPublication('sk-nefro-baza-1');
