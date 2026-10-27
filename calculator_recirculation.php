@@ -74,7 +74,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         }
 
         if ($cP !== null && $cV !== null && $cP - $cV <= 0.0) {
-            $errors[] = "Systémová koncentrácia (P) musí byť vyššia než venózna (V) — venózna krv je vyčistená; skontroluj vzorky.";
+            $errors[] = "Systémová koncentrácia (P) musí byť vyššia než venózna (V), lebo venózna krv je vyčistená; skontroluj vzorky.";
         }
 
         if (empty($errors)) {
@@ -159,7 +159,7 @@ if (isLoggedIn()) {
   $pageTitle = "Recirkulácia cievneho prístupu | Kalkulačky | Nefro-projekt Slovensko";
   $canonicalUrl = "https://nefro.polascin.net/calculator_recirculation.php";
   $seoDescription =
-      "Kalkulačka recirkulácie cievneho prístupu pri hemodialýze: ureová trojvzorková metóda (systémová, arteriálna, venózna koncentrácia), výpočet R % a interpretácia podľa KDOQI (hranica 5 – 10 %).";
+      "Kalkulačka recirkulácie cievneho prístupu pri hemodialýze: ureová trojvzorková metóda (systémová, arteriálna, venózna koncentrácia), výpočet R % a interpretácia podľa KDOQI (hranica 5 až 10 %).";
   $baseUrl = "https://nefro.polascin.net/";
   $structuredData = [
       [
@@ -196,7 +196,7 @@ if (isLoggedIn()) {
 
     <?php
     $headerTitle = "Recirkulácia cievneho prístupu";
-    $headerIntro = "Ureová metóda — efektivita hemodialýzy";
+    $headerIntro = "Ureová metóda: efektivita hemodialýzy";
     $showLogo = false;
     include "header.php";
     ?>
@@ -211,7 +211,7 @@ if (isLoggedIn()) {
 
                 <div class="info-box">
                     <strong>Čo meriame:</strong> recirkulácia znamená, že časť práve vyčistenej krvi
-                    z venóznej ihly sa hneď vracia do arteriálnej ihly a dialyzuje sa znova — tým
+                    z venóznej ihly sa hneď vracia do arteriálnej ihly a dialyzuje sa znova; tým
                     klesá <em>účinná</em> dávka dialýzy (Kt/V). Najčastejšie príčiny: <strong>ihly
                     príliš blízko</strong> alebo zamenené linky (arteriálna/venózna), prípadne
                     <strong>nízky prietok prístupu</strong> (stenóza) voči nastavenému prietoku krvi.
@@ -219,7 +219,7 @@ if (isLoggedIn()) {
 
                 <div class="info-box">
                     <strong>Technika odberu:</strong> všetky tri vzorky odoberaj v rovnakej jednotke
-                    (urea mmol/L alebo BUN mg/dL — výsledok je pomer, takže jednotka sa skráti).
+                    (urea mmol/L alebo BUN mg/dL; výsledok je pomer, takže jednotka sa skráti).
                     <strong>P</strong> je systémová koncentrácia (z periférnej žily druhej ruky alebo
                     technikou spomalenia pumpy / „slow-flow“), <strong>A</strong> z arteriálnej linky
                     (krv vstupujúca do dialyzátora) a <strong>V</strong> z venóznej linky (vyčistená
@@ -227,7 +227,7 @@ if (isLoggedIn()) {
                 </div>
 
                 <details open class="calc-formula-box">
-                    <summary>Vzorec — ureová recirkulácia</summary>
+                    <summary>Vzorec: ureová recirkulácia</summary>
                     <div class="calc-formula-content">
                         <div class="calc-formula-line">\[ R\,[\%] = \frac{C_P - C_A}{C_P - C_V} \times 100 \]</div>
                         <div class="calc-formula-vars">
@@ -241,7 +241,7 @@ if (isLoggedIn()) {
                 <div class="info-box-green">
                     <strong>Zdroje:</strong>
                     <a href="https://www.ajkd.org/article/S0272-6386(19)31137-0/fulltext" target="_blank" rel="noopener noreferrer">KDOQI Vascular Access 2019</a> &ensp;&bull;&ensp;
-                    ureová trojvzorková metóda &ensp;&bull;&ensp; hranica významnosti 5 – 10 %
+                    ureová trojvzorková metóda &ensp;&bull;&ensp; hranica významnosti 5 až 10 %
                 </div>
 
                 <?php foreach ($messages as $message): ?>

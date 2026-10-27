@@ -78,14 +78,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if ($urineVolume === null) {
             $errors[] = "Objem moču musí byť kladné číslo (mL).";
         } elseif ($urineVolume < 100.0 || $urineVolume > 15000.0) {
-            $errors[] = "Objem moču mimo očakávaného rozsahu (100 – 15 000 mL).";
+            $errors[] = "Objem moču mimo očakávaného rozsahu (100 až 15 000 mL).";
         }
 
         $collectionHours = calculatorParsePositiveFloat($form["collection_hours"]);
         if ($collectionHours === null) {
             $errors[] = "Čas zberu musí byť kladné číslo (hodiny).";
         } elseif ($collectionHours < 1.0 || $collectionHours > 48.0) {
-            $errors[] = "Čas zberu mimo očakávaného rozsahu (1 – 48 hodín).";
+            $errors[] = "Čas zberu mimo očakávaného rozsahu (1 až 48 hodín).";
         }
 
         // Voliteľná BSA normalizácia — výška aj hmotnosť musia byť obe alebo žiadna
@@ -99,9 +99,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             if ($heightCm === null || $weightKg === null) {
                 $errors[] = "Pre normalizáciu na 1,73 m² zadajte výšku aj hmotnosť (kladné čísla).";
             } elseif ($heightCm < 100.0 || $heightCm > 230.0) {
-                $errors[] = "Výška mimo očakávaného rozsahu (100 – 230 cm).";
+                $errors[] = "Výška mimo očakávaného rozsahu (100 až 230 cm).";
             } elseif ($weightKg < 20.0 || $weightKg > 300.0) {
-                $errors[] = "Hmotnosť mimo očakávaného rozsahu (20 – 300 kg).";
+                $errors[] = "Hmotnosť mimo očakávaného rozsahu (20 až 300 kg).";
             }
         }
 
@@ -266,11 +266,11 @@ if (isLoggedIn()) {
                     (kachexia, amputácie, kulturistika), v tehotenstve, pri rýchlo sa meniacej
                     funkcii obličiek alebo pred dávkovaním liekov s úzkym terapeutickým oknom,
                     keď je odhad eGFR z kreatinínu neistý. Presnosť stojí a padá so <em>správnosťou
-                    zberu moču</em> — neúplný zber meraný klírens podhodnotí.
+                    zberu moču</em>; neúplný zber meraný klírens podhodnotí.
                 </div>
 
                 <details open class="calc-formula-box">
-                    <summary>Vzorec — meraný klírens kreatinínu</summary>
+                    <summary>Vzorec: meraný klírens kreatinínu</summary>
                     <div class="calc-formula-content">
                         <div class="calc-formula-line">\[ \text{CrCl} \,[\text{mL/min}] = \frac{U_{cr} \times V_{moč}}{P_{cr} \times t} \]</div>
                         <div class="calc-formula-line">\[ \text{CrCl}_{norm} = \text{CrCl} \times \frac{1{,}73}{\text{BSA}}, \quad \text{BSA} = 0{,}007184 \times v^{0{,}725} \times h^{0{,}425} \]</div>
@@ -351,11 +351,11 @@ if (isLoggedIn()) {
                                 <input type="text" id="collection_hours" name="collection_hours" required class="form-control" value="<?= htmlspecialchars($form["collection_hours"]) ?>" placeholder="24">
                             </div>
                             <div class="form-group">
-                                <label for="height_cm">Výška (cm) <span class="optional">— pre 1,73 m²</span></label>
+                                <label for="height_cm">Výška (cm) <span class="optional">(pre 1,73 m²)</span></label>
                                 <input type="text" id="height_cm" name="height_cm" class="form-control" value="<?= htmlspecialchars($form["height_cm"]) ?>" placeholder="voliteľné">
                             </div>
                             <div class="form-group">
-                                <label for="weight_kg">Hmotnosť (kg) <span class="optional">— pre 1,73 m²</span></label>
+                                <label for="weight_kg">Hmotnosť (kg) <span class="optional">(pre 1,73 m²)</span></label>
                                 <input type="text" id="weight_kg" name="weight_kg" class="form-control" value="<?= htmlspecialchars($form["weight_kg"]) ?>" placeholder="voliteľné">
                             </div>
                         </div>

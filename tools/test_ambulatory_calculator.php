@@ -247,8 +247,8 @@ testSame(false, isset($egfrOnly['summary']['kfre']), 'Len eGFR nespočíta KFRE'
 testSame(false, isset($egfrOnly['summary']['ckdpc']), 'Len eGFR nespočíta CKD-PC');
 testSame(true, isset($egfrOnly['summary']['ckm']), 'Potvrdená CKD G3b zaradí CKM');
 testSame(true, str_starts_with((string) ($egfrOnly['summary']['ckm'] ?? ''), '2 –'), 'Potvrdená G3b bez uACR je CKM 2');
-testSame(true, in_array('Orientačné riziko G+A — chýba uACR', $egfrOnly['skipped'], true), 'Upozornenie na chýbajúce uACR');
-testSame(true, in_array('eGFR slope — chýba predchádzajúce meranie', $egfrOnly['skipped'], true), 'Upozornenie na chýbajúci slope');
+testSame(true, in_array('Orientačné riziko G+A: chýba uACR', $egfrOnly['skipped'], true), 'Upozornenie na chýbajúce uACR');
+testSame(true, in_array('eGFR slope: chýba predchádzajúce meranie', $egfrOnly['skipped'], true), 'Upozornenie na chýbajúci slope');
 
 $kfreReady = ambulatoryComputeReport(ambulatoryTestInput([
     'age_years' => 60,
@@ -259,7 +259,7 @@ $kfreReady = ambulatoryComputeReport(ambulatoryTestInput([
 ]));
 testSame('2-ročné 10,0 %; 5-ročné 33,5 %', $kfreReady['summary']['kfre'] ?? null, 'KFRE pri kompletných vstupoch');
 testSame(false, isset($kfreReady['summary']['ckdpc']), 'CKD-PC bez BMI a TK sa nespočíta');
-testSame(true, str_contains(implode(' ', $kfreReady['skipped']), 'CKD-PC — chýba'), 'CKD-PC nahlási chýbajúce vstupy');
+testSame(true, str_contains(implode(' ', $kfreReady['skipped']), 'CKD-PC: chýba'), 'CKD-PC nahlási chýbajúce vstupy');
 
 testSame('A1', kdigoACategory(29.9), 'A1 tesne pod 30 mg/g');
 testSame('A2', kdigoACategory(30.0), 'A2 na prahu 30 mg/g');

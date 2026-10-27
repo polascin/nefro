@@ -87,7 +87,7 @@ function guptaRiskCategory(float $score): array
 {
     if ($score <= 5.5) {
         return ['code' => 'low', 'label' => 'nízke riziko', 'risk_class' => 'risk-low',
-            'incidence' => '≈ 0,9 – 1,3 % ťažkého CP-AKI'];
+            'incidence' => '≈ 0,9 až 1,3 % ťažkého CP-AKI'];
     }
     if ($score <= 9.5) {
         return ['code' => 'moderate', 'label' => 'stredné riziko', 'risk_class' => 'risk-moderate',
@@ -98,7 +98,7 @@ function guptaRiskCategory(float $score): array
             'incidence' => 'zvýšená (medzi stredným a veľmi vysokým)'];
     }
     return ['code' => 'veryhigh', 'label' => 'veľmi vysoké riziko', 'risk_class' => 'risk-high',
-        'incidence' => '≈ 16,7 – 23,5 % ťažkého CP-AKI'];
+        'incidence' => '≈ 16,7 až 23,5 % ťažkého CP-AKI'];
 }
 
 $errors = [];
@@ -143,7 +143,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         $age = guptaParseNonNeg($form["age_years"]);
         if ($age === null || $age > 120.0) {
-            $errors[] = "Vek musí byť 0 – 120 rokov.";
+            $errors[] = "Vek musí byť 0 až 120 rokov.";
         }
 
         // Hemoglobín → g/dL
@@ -154,7 +154,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         } else {
             $hbGdl = $form["hemoglobin_unit"] === "g_dl" ? (float) $hbRaw : (float) $hbRaw / 10.0;
             if ($hbGdl < 2.0 || $hbGdl > 25.0) {
-                $errors[] = "Hemoglobín je mimo prijateľného rozsahu (2 – 25 g/dL).";
+                $errors[] = "Hemoglobín je mimo prijateľného rozsahu (2 až 25 g/dL).";
             }
         }
 
@@ -176,7 +176,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         } else {
             $albGdl = $form["albumin_unit"] === "g_dl" ? (float) $albRaw : (float) $albRaw / 10.0;
             if ($albGdl < 1.0 || $albGdl > 7.0) {
-                $errors[] = "Albumín je mimo prijateľného rozsahu (1 – 7 g/dL).";
+                $errors[] = "Albumín je mimo prijateľného rozsahu (1 až 7 g/dL).";
             }
         }
 
@@ -263,7 +263,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                                 $pdo,
                                 (int) $_SESSION["user_id"],
                                 "gupta_cisplatin",
-                                "Gupta — riziko cisplatínového AKI (BMJ 2024)",
+                                "Gupta: riziko cisplatínového AKI (BMJ 2024)",
                                 $patient,
                                 $inputPayload,
                                 $resultPayload,
@@ -301,10 +301,10 @@ if (isLoggedIn()) {
 <html lang="sk">
 <head>
   <?php
-  $pageTitle = "Gupta — riziko cisplatínom indukovaného AKI (CP-AKI) | Kalkulačky | Nefro-projekt Slovensko";
+  $pageTitle = "Gupta: riziko cisplatínom indukovaného AKI (CP-AKI) | Kalkulačky | Nefro-projekt Slovensko";
   $canonicalUrl = "https://nefro.polascin.net/calculator_gupta.php";
   $seoDescription =
-      "Gupta simple risk score (BMJ 2024): predikcia ťažkého cisplatínom indukovaného akútneho poškodenia obličiek (CP-AKI) z 9 faktorov — vek, hypertenzia, diabetes, hemoglobín, leukocyty, trombocyty, albumín, magnézium a dávka cisplatiny. Skóre 0–22,5 → nízke / stredné / vysoké / veľmi vysoké riziko.";
+      "Gupta simple risk score (BMJ 2024): predikcia ťažkého cisplatínom indukovaného akútneho poškodenia obličiek (CP-AKI) z 9 faktorov: vek, hypertenzia, diabetes, hemoglobín, leukocyty, trombocyty, albumín, magnézium a dávka cisplatiny. Skóre 0–22,5 → nízke / stredné / vysoké / veľmi vysoké riziko.";
   $baseUrl = "https://nefro.polascin.net/";
   $structuredData = [
       [
@@ -326,7 +326,7 @@ if (isLoggedIn()) {
               [
                   "@type" => "ListItem",
                   "position" => 3,
-                  "name" => "Gupta — riziko cisplatínového AKI",
+                  "name" => "Gupta: riziko cisplatínového AKI",
                   "item" => $baseUrl . "calculator_gupta.php",
               ],
           ],
@@ -340,7 +340,7 @@ if (isLoggedIn()) {
     <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>
 
     <?php
-    $headerTitle = "Gupta — riziko cisplatínového AKI";
+    $headerTitle = "Gupta: riziko cisplatínového AKI";
     $headerIntro = "Simple risk score pre ťažké CP-AKI (Gupta, BMJ 2024)";
     $showLogo = false;
     include "header.php";
@@ -351,27 +351,27 @@ if (isLoggedIn()) {
     <main id="main-content" class="container main-content main-content--single-col" role="main">
         <div class="content-wrapper">
             <div class="auth-container auth-container--wide">
-                <h2>Gupta — riziko cisplatínového AKI (CP-AKI)</h2>
+                <h2>Gupta: riziko cisplatínového AKI (CP-AKI)</h2>
                 <p class="auth-subtitle">Voliteľné údaje pacienta + 9 faktorov pred podaním cisplatiny pre odhad rizika ťažkého AKI.</p>
 
                 <div class="info-box">
                     <strong>Čo počíta:</strong> jednoduché bodové skóre predikuje riziko
                     <strong>ťažkého cisplatínom indukovaného AKI</strong> (CP-AKI) do 14 dní od
                     podania. Ťažké CP-AKI = vzostup kreatinínu na <strong>≥ 2× východisko</strong>
-                    alebo potreba dialýzy (≈ KDIGO 2 – 3). Skóre 0 – 22,5 zaraďuje pacienta do
+                    alebo potreba dialýzy (≈ KDIGO 2 až 3). Skóre 0 až 22,5 zaraďuje pacienta do
                     štyroch rizikových kategórií. Hodnoty zadávaj <strong>pred podaním</strong>
                     cisplatiny.
                 </div>
 
                 <div class="info-box-yellow">
                     <strong>Pozor:</strong> dávka cisplatiny sa zadáva ako <strong>absolútna (mg)</strong>,
-                    nie mg/m². Model bol odvodený na populácii v USA — pri prenose interpretuj
+                    nie mg/m². Model bol odvodený na populácii v USA; pri prenose interpretuj
                     v klinickom kontexte. Skóre <strong>nenahrádza</strong> klinický úsudok ani
                     rozhodnutie o redukcii dávky či alternatívnom režime.
                 </div>
 
                 <details open class="calc-formula-box">
-                    <summary>Bodovanie (9 faktorov, súčet 0 – 22,5)</summary>
+                    <summary>Bodovanie (9 faktorov, súčet 0 až 22,5)</summary>
                     <div class="calc-formula-content">
                         <div class="calc-formula-vars">
                             <strong>Vek:</strong> ≤45 → 0 · 46–60 → 2,5 · 61–70 → 3,5 · &gt;70 → 4,5 &bull;
@@ -497,7 +497,7 @@ if (isLoggedIn()) {
                         <div class="calc-egfr-result-main">
                             <div class="calc-result-value-block">
                                 <span class="calc-result-big-value"><?= htmlspecialchars(number_format((float) $calculated["score"], 1, ",", " ")) ?></span>
-                                <span class="calc-result-unit">bodov (0 – 22,5)</span>
+                                <span class="calc-result-unit">bodov (0 až 22,5)</span>
                             </div>
                             <div class="calc-result-badge <?= htmlspecialchars($riskCls) ?>">
                                 <?= htmlspecialchars((string) $calculated["label"]) ?>
@@ -507,7 +507,7 @@ if (isLoggedIn()) {
                              data-risk-value="<?= htmlspecialchars((string) $calculated["score"]) ?>"
                              data-risk-max="22.5"
                              data-risk-label="Gupta skóre CP-AKI (0–22,5)"></div>
-                        <p class="calc-result-detail"><strong>Predpokladaná incidencia:</strong> <?= htmlspecialchars((string) $calculated["incidence"]) ?>. Riziko rastie monotónne s kategóriou (OR veľmi vysoké vs. nízke ≈ 18 – 24×).</p>
+                        <p class="calc-result-detail"><strong>Predpokladaná incidencia:</strong> <?= htmlspecialchars((string) $calculated["incidence"]) ?>. Riziko rastie monotónne s kategóriou (OR veľmi vysoké vs. nízke ≈ 18 až 24×).</p>
                         <p class="calc-result-detail"><strong>Rozpis bodov:</strong>
                             vek <?= htmlspecialchars(number_format((float)$calculated["p_age"], 1, ",", " ")) ?>
                             &ensp;&bull;&ensp; HTN <?= htmlspecialchars(number_format((float)$calculated["p_htn"], 0, ",", " ")) ?>

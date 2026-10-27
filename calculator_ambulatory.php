@@ -389,7 +389,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <div class="content-wrapper">
             <div class="auth-container auth-container--wide">
                 <h2>Ambulantná kalkulačka</h2>
-                <p class="auth-subtitle">Z dostupných údajov zostaví KDIGO CGA klasifikáciu, prognostické riziká a čistý text na skopírovanie do ambulantnej správy. Vyplňte len to, čo máte — vypočíta sa iba to, na čo stačia zadané parametre.</p>
+                <p class="auth-subtitle">Z dostupných údajov zostaví KDIGO CGA klasifikáciu, prognostické riziká a čistý text na skopírovanie do ambulantnej správy. Vyplňte len to, čo máte, vypočíta sa iba to, na čo stačia zadané parametre.</p>
 
                 <div class="info-box-blue">
                     Kalkulačka nevyžaduje identifikačné údaje pacienta a výsledok neukladá do databázy. Dátum alebo rok narodenia slúži len na výpočet veku k dátumu vyšetrenia a na serveri sa neukladá. Príčinu CKD, chronicitu, pridružené diagnózy a komplikácie potvrdzuje lekár; nástroj ich neurčuje zo samotných laboratórnych hodnôt. Chýbajúce vstupy sa vo výstupe vynechajú.

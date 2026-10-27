@@ -538,7 +538,7 @@ function ambulatoryComputeReport(array $input): array
         $gaRiskKey = null;
         if ($gCategory !== null xor $aCategory !== null) {
             $missingGa = $gCategory === null ? 'eGFR' : 'uACR';
-            $skipped[] = 'Orientačné riziko G+A — chýba ' . $missingGa;
+            $skipped[] = 'Orientačné riziko G+A: chýba ' . $missingGa;
         }
     }
 
@@ -561,7 +561,7 @@ function ambulatoryComputeReport(array $input): array
             $summary['kfre'] = 'nevypočítané (eGFR mimo 10 až <60 ml/min/1,73 m²)';
         }
     } elseif (count(array_filter($kfrePresent)) >= 2) {
-        $skipped[] = 'KFRE — chýba ' . ambulatoryJoinSlovakList(ambulatoryMissingLabels($kfrePresent));
+        $skipped[] = 'KFRE: chýba ' . ambulatoryJoinSlovakList(ambulatoryMissingLabels($kfrePresent));
     }
 
     $ckdpcPresent = $kfrePresent + [
@@ -610,7 +610,7 @@ function ambulatoryComputeReport(array $input): array
             $summary['ckdpc'] = 'nevypočítané (vek mimo 20–80 rokov)';
         }
     } elseif (count(array_filter($ckdpcPresent)) >= 2) {
-        $skipped[] = 'CKD-PC — chýba ' . ambulatoryJoinSlovakList(ambulatoryMissingLabels($ckdpcPresent));
+        $skipped[] = 'CKD-PC: chýba ' . ambulatoryJoinSlovakList(ambulatoryMissingLabels($ckdpcPresent));
     }
 
     $clinicalCvd = $input['hf'] || $input['chd'] || $input['afib'] || $input['other_clinical_cvd'];
@@ -662,7 +662,7 @@ function ambulatoryComputeReport(array $input): array
             ' ml/min/1,73 m²/rok (merania: ' . $slopeResult['count'] .
             '; obdobie: ' . ambulatoryFormatNumber($slopeResult['duration_years'], 1) . ' r.)';
     } elseif ($egfr !== null && count($input['slope_points']) < 2) {
-        $skipped[] = 'eGFR slope — chýba predchádzajúce meranie';
+        $skipped[] = 'eGFR slope: chýba predchádzajúce meranie';
     }
 
     if ($input['related_diagnoses'] !== '') {

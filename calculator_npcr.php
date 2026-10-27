@@ -29,16 +29,16 @@ function npcrToBunMgDl(float $value, string $unit): float
 function npcrCategory(float $npcr): array
 {
     if ($npcr < 0.8) {
-        return ['risk-high', 'Nízky príjem bielkovín — riziko malnutrície'];
+        return ['risk-high', 'Nízky príjem bielkovín: riziko malnutrície'];
     }
     if ($npcr < 1.0) {
         return ['risk-moderate', 'Hraničný príjem'];
     }
     if ($npcr <= 1.4) {
-        return ['risk-low', 'Cieľové rozpätie (1,0 – 1,4)'];
+        return ['risk-low', 'Cieľové rozpätie (1,0 až 1,4)'];
     }
 
-    return ['risk-moderate', 'Vysoký — hyperkatabolizmus alebo vysoký príjem'];
+    return ['risk-moderate', 'Vysoký: hyperkatabolizmus alebo vysoký príjem'];
 }
 
 $errors = [];
@@ -98,12 +98,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         $heightCm = calculatorParsePositiveFloat($form["height_cm"]);
         if ($heightCm === null || $heightCm < 100.0 || $heightCm > 230.0) {
-            $errors[] = "Výška musí byť v rozsahu 100 – 230 cm.";
+            $errors[] = "Výška musí byť v rozsahu 100 až 230 cm.";
         }
 
         $weightKg = calculatorParsePositiveFloat($form["weight_kg"]);
         if ($weightKg === null || $weightKg < 20.0 || $weightKg > 300.0) {
-            $errors[] = "Hmotnosť (suchá) musí byť v rozsahu 20 – 300 kg.";
+            $errors[] = "Hmotnosť (suchá) musí byť v rozsahu 20 až 300 kg.";
         }
 
         $ureaUnit = in_array($form["urea_unit"], ["mmol_l", "bun_mg_dl"], true)
@@ -127,7 +127,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         $hours = calculatorParsePositiveFloat($form["interdialytic_hours"]);
         if ($hours === null || $hours < 12.0 || $hours > 96.0) {
-            $errors[] = "Interdialytický interval musí byť v rozsahu 12 – 96 hodín.";
+            $errors[] = "Interdialytický interval musí byť v rozsahu 12 až 96 hodín.";
         }
 
         if (empty($errors)) {
@@ -224,10 +224,10 @@ if (isLoggedIn()) {
 <html lang="sk">
 <head>
   <?php
-  $pageTitle = "nPCR / nPNA — katabolizmus bielkovín pri dialýze | Kalkulačky | Nefro-projekt Slovensko";
+  $pageTitle = "nPCR / nPNA: katabolizmus bielkovín pri dialýze | Kalkulačky | Nefro-projekt Slovensko";
   $canonicalUrl = "https://nefro.polascin.net/calculator_npcr.php";
   $seoDescription =
-      "Nefrologická kalkulačka nPCR / nPNA (normalizovaná miera katabolizmu bielkovín) z dvoch hodnôt močoviny a Watsonovho objemu — nutričný ukazovateľ pri hemodialýze. Pre lekárov na Slovensku.";
+      "Nefrologická kalkulačka nPCR / nPNA (normalizovaná miera katabolizmu bielkovín) z dvoch hodnôt močoviny a Watsonovho objemu: nutričný ukazovateľ pri hemodialýze. Pre lekárov na Slovensku.";
   $baseUrl = "https://nefro.polascin.net/";
   $structuredData = [
       [
@@ -275,18 +275,18 @@ if (isLoggedIn()) {
         <div class="content-wrapper">
             <div class="auth-container auth-container--wide">
                 <h2>nPCR / nPNA (katabolizmus bielkovín)</h2>
-                <p class="auth-subtitle">Nutričný ukazovateľ pri hemodialýze — dopĺňa Kt/V. Z dvoch hodnôt močoviny.</p>
+                <p class="auth-subtitle">Nutričný ukazovateľ pri hemodialýze: dopĺňa Kt/V. Z dvoch hodnôt močoviny.</p>
 
                 <div class="info-box">
                     <strong>Kedy použiť:</strong> normalizovaná miera katabolizmu bielkovín
                     (nPCR ≈ nPNA) odhaduje denný príjem/obrat bielkovín u stabilného dialyzovaného
                     pacienta a dopĺňa adekvátnosť dialýzy (Kt/V). Cieľ KDOQI je spravidla
-                    <strong>≥ 1,0 – 1,2 g/kg/deň</strong>; nízke hodnoty signalizujú riziko
+                    <strong>≥ 1,0 až 1,2 g/kg/deň</strong>; nízke hodnoty signalizujú riziko
                     proteínovo-energetickej malnutrície.
                 </div>
 
                 <details open class="calc-formula-box">
-                    <summary>Vzorec — interdialytická urea-kinetika (Sargent–Gotch)</summary>
+                    <summary>Vzorec: interdialytická urea-kinetika (Sargent-Gotch)</summary>
                     <div class="calc-formula-content">
                         <div class="calc-formula-line">\[ G = \frac{(C_{pred} - C_{post}) \times V \times 10}{\theta} \quad [\text{mg/min}] \]</div>
                         <div class="calc-formula-line">\[ \text{PCR} = 9{,}35 \, G + 0{,}294 \, V, \qquad \text{nPCR} = \frac{0{,}58 \times \text{PCR}}{V} \]</div>

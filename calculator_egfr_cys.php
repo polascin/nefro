@@ -120,7 +120,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if ($cystatinValue === null) {
             $errors[] = "Cystatín C musí byť kladné číslo (mg/L).";
         } elseif ($cystatinValue < 0.3 || $cystatinValue > 10.0) {
-            $errors[] = "Cystatín C mimo očakávaného rozsahu (0,3 – 10 mg/L).";
+            $errors[] = "Cystatín C mimo očakávaného rozsahu (0,3 až 10 mg/L).";
         }
 
         if (empty($errors)) {
@@ -298,7 +298,7 @@ if (isLoggedIn()) {
                 </div>
 
                 <details open class="calc-formula-box">
-                    <summary>Vzorec — CKD-EPI 2021 (kreatinín–cystatín C)</summary>
+                    <summary>Vzorec: CKD-EPI 2021 (kreatinín a cystatín C)</summary>
                     <div class="calc-formula-content">
                         <div class="calc-formula-line">\[ \begin{aligned} \text{eGFR} = 135 &\times \min(S_{cr}/\kappa, 1)^{\alpha} \times \max(S_{cr}/\kappa, 1)^{-0.544} \\ &\times \min(S_{cys}/0.8, 1)^{-0.323} \times \max(S_{cys}/0.8, 1)^{-0.778} \\ &\times 0.9961^{\text{Vek}} \times [0.963 \text{ ak žena}] \end{aligned} \]</div>
                         <div class="calc-formula-line">\[ S_{cr} [\text{mg/dL}] = S_{cr} [\mu\text{mol/L}] \div 88.4 \]</div>

@@ -84,20 +84,20 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if ($weight === null) {
             $errors[] = "Hmotnosť musí byť kladné číslo (kg).";
         } elseif ($weight < 20.0 || $weight > 300.0) {
-            $errors[] = "Hmotnosť mimo očakávaného rozsahu (20 – 300 kg).";
+            $errors[] = "Hmotnosť mimo očakávaného rozsahu (20 až 300 kg).";
         }
 
         $dialysate = crrtParseNonNeg($form["dialysate_ml_h"]);
         if ($dialysate === null || $dialysate > 10000.0) {
-            $errors[] = "Prietok dialyzátu musí byť 0 – 10 000 mL/h.";
+            $errors[] = "Prietok dialyzátu musí byť 0 až 10 000 mL/h.";
         }
         $replacement = crrtParseNonNeg($form["replacement_ml_h"]);
         if ($replacement === null || $replacement > 10000.0) {
-            $errors[] = "Prietok substitučného roztoku musí byť 0 – 10 000 mL/h.";
+            $errors[] = "Prietok substitučného roztoku musí byť 0 až 10 000 mL/h.";
         }
         $netUf = crrtParseNonNeg($form["net_uf_ml_h"]);
         if ($netUf === null || $netUf > 2000.0) {
-            $errors[] = "Čistá ultrafiltrácia musí byť 0 – 2 000 mL/h.";
+            $errors[] = "Čistá ultrafiltrácia musí byť 0 až 2 000 mL/h.";
         }
         if ($dialysate !== null && $replacement !== null
             && $dialysate + $replacement <= 0.0) {
@@ -108,12 +108,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if ($targetDose === null) {
             $targetDose = 25.0;
         } elseif ($targetDose < 10.0 || $targetDose > 50.0) {
-            $errors[] = "Cieľová dávka mimo rozsahu (10 – 50 mL/kg/h).";
+            $errors[] = "Cieľová dávka mimo rozsahu (10 až 50 mL/kg/h).";
         }
 
         $downtime = crrtParseNonNeg($form["downtime_pct"]);
         if ($downtime === null || $downtime > 50.0) {
-            $errors[] = "Výpadok času musí byť 0 – 50 %.";
+            $errors[] = "Výpadok času musí byť 0 až 50 %.";
         }
 
         if (empty($errors)) {
@@ -162,7 +162,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                                 $pdo,
                                 (int) $_SESSION["user_id"],
                                 "crrt_dose",
-                                "CRRT — efluentová dávka",
+                                "CRRT: efluentová dávka",
                                 $patient,
                                 $inputPayload,
                                 $resultPayload,
@@ -200,7 +200,7 @@ if (isLoggedIn()) {
 <html lang="sk">
 <head>
   <?php
-  $pageTitle = "CRRT — efluentová dávka (mL/kg/h) | Kalkulačky | Nefro-projekt Slovensko";
+  $pageTitle = "CRRT: efluentová dávka (mL/kg/h) | Kalkulačky | Nefro-projekt Slovensko";
   $canonicalUrl = "https://nefro.polascin.net/calculator_crrt.php";
   $seoDescription =
       "Kalkulačka dávky kontinuálnej náhrady funkcie obličiek (CRRT): efluentová dávka v mL/kg/h z prietokov dialyzátu, substitúcie a ultrafiltrácie, cieľ KDIGO 20–25 mL/kg/h a odhad dodanej dávky pri výpadkoch.";
@@ -225,7 +225,7 @@ if (isLoggedIn()) {
               [
                   "@type" => "ListItem",
                   "position" => 3,
-                  "name" => "CRRT — efluentová dávka",
+                  "name" => "CRRT: efluentová dávka",
                   "item" => $baseUrl . "calculator_crrt.php",
               ],
           ],
@@ -250,19 +250,19 @@ if (isLoggedIn()) {
     <main id="main-content" class="container main-content main-content--single-col" role="main">
         <div class="content-wrapper">
             <div class="auth-container auth-container--wide">
-                <h2>CRRT — efluentová dávka</h2>
+                <h2>CRRT: efluentová dávka</h2>
                 <p class="auth-subtitle">Voliteľné údaje pacienta + prietoky okruhu pre výpočet dávky.</p>
 
                 <div class="info-box">
                     <strong>Cieľ dávky:</strong> KDIGO odporúča dodanú efluentovú dávku
-                    <strong>20 – 25 mL/kg/h</strong>. Keďže reálne dochádza k výpadkom (zrážanie
+                    <strong>20 až 25 mL/kg/h</strong>. Keďže reálne dochádza k výpadkom (zrážanie
                     filtra, výmeny vakov, výkony, transport), <em>predpíš</em> spravidla
-                    <strong>25 – 30 mL/kg/h</strong>, aby dodaná dávka neklesla pod cieľ. Vyššie
+                    <strong>25 až 30 mL/kg/h</strong>, aby dodaná dávka neklesla pod cieľ. Vyššie
                     dávky nemajú dokázaný prínos a zvyšujú stratu antibiotík, fosfátu a nutrientov.
                 </div>
 
                 <details open class="calc-formula-box">
-                    <summary>Vzorec — efluentová dávka CRRT</summary>
+                    <summary>Vzorec: efluentová dávka CRRT</summary>
                     <div class="calc-formula-content">
                         <div class="calc-formula-line">\[ Q_{ef} = Q_{dial} + Q_{subst} + Q_{UF} \]</div>
                         <div class="calc-formula-line">\[ \text{dávka} \,[\text{mL/kg/h}] = \frac{Q_{ef}}{\text{hmotnosť}} \]</div>
@@ -319,15 +319,15 @@ if (isLoggedIn()) {
                                 <input type="text" id="replacement_ml_h" name="replacement_ml_h" class="form-control" value="<?= htmlspecialchars($form["replacement_ml_h"]) ?>" placeholder="pre + post, napr. 1000">
                             </div>
                             <div class="form-group">
-                                <label for="net_uf_ml_h">Čistá ultrafiltrácia (mL/h) <span class="optional">— odber pacienta</span></label>
+                                <label for="net_uf_ml_h">Čistá ultrafiltrácia (mL/h) <span class="optional">(odber pacienta)</span></label>
                                 <input type="text" id="net_uf_ml_h" name="net_uf_ml_h" class="form-control" value="<?= htmlspecialchars($form["net_uf_ml_h"]) ?>" placeholder="napr. 100">
                             </div>
                             <div class="form-group">
-                                <label for="target_dose">Cieľová dávka (mL/kg/h) <span class="optional">— pre návrh prietoku</span></label>
+                                <label for="target_dose">Cieľová dávka (mL/kg/h) <span class="optional">(pre návrh prietoku)</span></label>
                                 <input type="text" id="target_dose" name="target_dose" class="form-control" value="<?= htmlspecialchars($form["target_dose"]) ?>" placeholder="25">
                             </div>
                             <div class="form-group">
-                                <label for="downtime_pct">Výpadok času (%) <span class="optional">— odhad dodanej dávky</span></label>
+                                <label for="downtime_pct">Výpadok času (%) <span class="optional">(odhad dodanej dávky)</span></label>
                                 <input type="text" id="downtime_pct" name="downtime_pct" class="form-control" value="<?= htmlspecialchars($form["downtime_pct"]) ?>" placeholder="napr. 15">
                             </div>
                         </div>
@@ -370,7 +370,7 @@ if (isLoggedIn()) {
                         </p>
                         <p class="calc-result-detail"><strong>Návrh prietoku pre cieľ <?= htmlspecialchars(number_format((float)$calculated["target_dose"], 1, ",", " ")) ?> mL/kg/h:</strong>
                             efluent ≈ <?= htmlspecialchars(number_format((float)$calculated["suggested_effluent"], 0, ",", " ")) ?> mL/h
-                            (cieľ KDIGO dodanej dávky: 20 – 25 mL/kg/h).
+                            (cieľ KDIGO dodanej dávky: 20 až 25 mL/kg/h).
                         </p>
                         <div class="form-actions no-print">
                             <button type="button" class="btn-primary js-print">Vytlačiť výpočet</button>

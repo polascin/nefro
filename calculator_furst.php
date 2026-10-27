@@ -73,17 +73,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         $uNa = furstParseNonNeg($form["u_na"]);
         if ($uNa === null || $uNa > 400.0) {
-            $errors[] = "Sodík v moči musí byť 0 – 400 mmol/L.";
+            $errors[] = "Sodík v moči musí byť 0 až 400 mmol/L.";
         }
         $uK = furstParseNonNeg($form["u_k"]);
         if ($uK === null || $uK > 300.0) {
-            $errors[] = "Draslík v moči musí byť 0 – 300 mmol/L.";
+            $errors[] = "Draslík v moči musí byť 0 až 300 mmol/L.";
         }
         $sNa = calculatorParsePositiveFloat($form["s_na"]);
         if ($sNa === null) {
             $errors[] = "Sérový sodík musí byť kladné číslo (mmol/L).";
         } elseif ($sNa < 100.0 || $sNa > 180.0) {
-            $errors[] = "Sérový sodík mimo očakávaného rozsahu (100 – 180 mmol/L).";
+            $errors[] = "Sérový sodík mimo očakávaného rozsahu (100 až 180 mmol/L).";
         }
 
         if (empty($errors)) {
@@ -161,10 +161,10 @@ if (isLoggedIn()) {
 <html lang="sk">
 <head>
   <?php
-  $pageTitle = "Furstov pomer — reštrikcia tekutín pri hyponatriémii | Kalkulačky | Nefro-projekt Slovensko";
+  $pageTitle = "Furstov pomer: reštrikcia tekutín pri hyponatriémii | Kalkulačky | Nefro-projekt Slovensko";
   $canonicalUrl = "https://nefro.polascin.net/calculator_furst.php";
   $seoDescription =
-      "Furstov pomer (U_Na + U_K) / S_Na predikuje účinnosť reštrikcie tekutín pri hyponatriémii (SIADH): < 0,5 reštrikcia < 1000 mL/deň, 0,5 – 1,0 prísna reštrikcia < 500 mL/deň, > 1,0 reštrikcia neúčinná. Odvodené z klírensu voľnej vody.";
+      "Furstov pomer (U_Na + U_K) / S_Na predikuje účinnosť reštrikcie tekutín pri hyponatriémii (SIADH): < 0,5 reštrikcia < 1000 mL/deň, 0,5 až 1,0 prísna reštrikcia < 500 mL/deň, > 1,0 reštrikcia neúčinná. Odvodené z klírensu voľnej vody.";
   $baseUrl = "https://nefro.polascin.net/";
   $structuredData = [
       [
@@ -211,7 +211,7 @@ if (isLoggedIn()) {
     <main id="main-content" class="container main-content main-content--single-col" role="main">
         <div class="content-wrapper">
             <div class="auth-container auth-container--wide">
-                <h2>Furstov pomer — reštrikcia tekutín</h2>
+                <h2>Furstov pomer: reštrikcia tekutín</h2>
                 <p class="auth-subtitle">Voliteľné údaje pacienta + elektrolyty moču a séra pre predikciu reštrikcie.</p>
 
                 <div class="info-box">
@@ -224,7 +224,7 @@ if (isLoggedIn()) {
                 </div>
 
                 <details open class="calc-formula-box">
-                    <summary>Vzorec — Furstov pomer</summary>
+                    <summary>Vzorec: Furstov pomer</summary>
                     <div class="calc-formula-content">
                         <div class="calc-formula-line">\[ \text{pomer} = \frac{U_{Na} + U_K}{S_{Na}} \]</div>
                         <div class="calc-formula-vars">
@@ -234,7 +234,7 @@ if (isLoggedIn()) {
                         </div>
                         <div class="calc-formula-vars">
                             &lt; 0,5 → reštrikcia &lt; 1000 mL/deň &bull;
-                            0,5 – 1,0 → prísna reštrikcia &lt; 500 mL/deň &bull;
+                            0,5 až 1,0 → prísna reštrikcia &lt; 500 mL/deň &bull;
                             &gt; 1,0 → reštrikcia neúčinná
                         </div>
                     </div>
@@ -317,13 +317,13 @@ if (isLoggedIn()) {
                             &ensp;&bull;&ensp; S<sub>Na</sub> = <?= htmlspecialchars(number_format((float)$calculated["s_na"], 0, ",", " ")) ?> mmol/L
                         </p>
                         <?php if ((float)$calculated["ratio"] > 1.0): ?>
-                            <p class="calc-result-detail"><strong>Reštrikcia tekutín sama o sebe neúčinná.</strong> Moč je elektrolytmi koncentrovanejší než sérum (záporný klírens voľnej vody) — zváž iný/doplnkový postup podľa príčiny (napr. slučkové diuretikum so soľou, urea, vaptan; pri ťažkej symptomatike hypertonický roztok).</p>
+                            <p class="calc-result-detail"><strong>Reštrikcia tekutín sama o sebe neúčinná.</strong> Moč je elektrolytmi koncentrovanejší než sérum (záporný klírens voľnej vody); zváž iný/doplnkový postup podľa príčiny (napr. slučkové diuretikum so soľou, urea, vaptan; pri ťažkej symptomatike hypertonický roztok).</p>
                         <?php elseif ((float)$calculated["ratio"] >= 0.5): ?>
                             <p class="calc-result-detail"><strong>Prísna reštrikcia (&lt; 500 mL/deň).</strong> Reštrikcia môže byť účinná, ale len výrazná; sleduj odpoveď nátriémie a zváž doplnkovú liečbu, ak je pomalá.</p>
                         <?php else: ?>
                             <p class="calc-result-detail"><strong>Reštrikcia &lt; 1000 mL/deň pravdepodobne účinná.</strong> Obličky vylučujú voľnú vodu; samotná reštrikcia tekutín by mala nátriémiu postupne zvyšovať.</p>
                         <?php endif; ?>
-                        <p class="calc-result-detail">Pomer je <strong>pomôcka, nie absolútne pravidlo</strong> — koreguj rýchlosť tekutín so závažnosťou hyponatriémie a limitmi bezpečnej korekcie (riziko ODS).</p>
+                        <p class="calc-result-detail">Pomer je <strong>pomôcka, nie absolútne pravidlo</strong>; koreguj rýchlosť tekutín so závažnosťou hyponatriémie a limitmi bezpečnej korekcie (riziko ODS).</p>
                         <div class="form-actions no-print">
                             <button type="button" class="btn-primary js-print">Vytlačiť výpočet</button>
                             <a href="calculator_history.php?calc=furst_ratio" class="btn-secondary">História Furst</a>

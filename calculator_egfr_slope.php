@@ -294,7 +294,7 @@ if (isLoggedIn()) {
                 <p class="auth-subtitle">KDIGO 2024 zdôrazňuje potrebu identifikovať tzv. "fast progressors" (pokles eGFR &gt; 5 ml/min/rok).</p>
 
                 <details open class="calc-formula-box">
-                    <summary>Vzorec — rýchlosť poklesu eGFR (lineárna regresia)</summary>
+                    <summary>Vzorec: rýchlosť poklesu eGFR (lineárna regresia)</summary>
                     <div class="calc-formula-content">
                         <div class="calc-formula-line">\[ \text{Slope} = \frac{\sum_i (x_i - \bar{x})(y_i - \bar{y})}{\sum_i (x_i - \bar{x})^2} \]</div>
                         <div class="calc-formula-vars">

@@ -175,7 +175,7 @@ if (isLoggedIn()) {
                 <h2>UACR (Urine Albumin-to-Creatinine Ratio) a KDIGO A-štádium</h2>
 
                 <details open class="calc-formula-box">
-                    <summary>Vzorce — UACR a KDIGO A-štádium</summary>
+                    <summary>Vzorce: UACR a KDIGO A-štádium</summary>
                     <div class="calc-formula-content">
                         <div class="calc-formula-line">\[ \text{UACR} = \frac{\text{Alb}_{\text{moč}}}{\text{Cr}_{\text{moč}}} \]</div>
                         <div class="calc-formula-line">\[ \text{UACR [mg/g]} = \text{UACR [mg/mmol]} \times 8.84 \]</div>
