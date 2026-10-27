@@ -43,6 +43,7 @@ const OPS_HEALTH_QUEUES = [
 ];
 
 const OPS_HEALTH_PUBLIC_PATHS = ['/', '/privacy.php', '/calculators.php'];
+const OPS_HEALTH_USER_AGENT = 'nefro-ops-health/1.0';
 
 /**
  * Výraz pre aktuálny čas databázy. Vek sa počíta výhradne z hodín DB
@@ -324,8 +325,9 @@ function opsHealthEvaluateHttp(string $path, int $code, array $headers, string $
 }
 
 /**
- * Jednoduché GET bez vlastného User-Agentu (WAF hostingu blokuje skrátené
- * prehliadačové UA; prázdny UA aj predvolený curl prechádzajú).
+ * Jednoduché GET s vlastným User-Agentom. Prázdny UA web odmieta (403) a WAF
+ * hostingu blokuje skrátené prehliadačové UA; identifikátor nástroja prechádza
+ * a zároveň ho odlíši v logoch (overené 2026-10-27 zo servera aj lokálne).
  *
  * Pri zlyhaní transportu (DNS, TLS, timeout) je code 0 a error nesie príčinu;
  * bez nej sa lokálne chýbajúci CA bundle nedá odlíšiť od výpadku webu.
@@ -342,6 +344,7 @@ function opsHealthFetch(string $url, int $timeout = 20): array
             CURLOPT_FOLLOWLOCATION => false,
             CURLOPT_TIMEOUT => $timeout,
             CURLOPT_CONNECTTIMEOUT => 10,
+            CURLOPT_USERAGENT => OPS_HEALTH_USER_AGENT,
             CURLOPT_HEADERFUNCTION => static function ($curl, string $line) use (&$headers): int {
                 $pos = strpos($line, ':');
                 if ($pos !== false) {
@@ -357,7 +360,7 @@ function opsHealthFetch(string $url, int $timeout = 20): array
         return ['code' => $body === false ? 0 : $code, 'headers' => $headers, 'body' => is_string($body) ? $body : '', 'error' => $error];
     }
 
-    $context = stream_context_create(['http' => ['method' => 'GET', 'timeout' => $timeout, 'ignore_errors' => true, 'follow_location' => 0]]);
+    $context = stream_context_create(['http' => ['method' => 'GET', 'timeout' => $timeout, 'ignore_errors' => true, 'follow_location' => 0, 'user_agent' => OPS_HEALTH_USER_AGENT]]);
     $http_response_header = [];
     $body = @file_get_contents($url, false, $context);
     $code = 0;

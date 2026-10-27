@@ -18,6 +18,10 @@ $environment['NEFRO_REMOTE_PATH'] = '/fixture/nefro';
 $environment['NEFRO_SFTP_BIN'] = $root . '/bin/sftp';
 $environment['NEFRO_CAPTURE'] = $root . '/capture.json';
 $environment['NEFRO_DEPLOY_MODE'] = 'sftp';
+$environment['NEFRO_DEPLOY_GATE'] = 'local';
+$environment['NEFRO_GATE_CMD'] = 'sh "$NEFRO_PROBE_BIN/gate"';
+$environment['NEFRO_PROBE_BIN'] = $root . '/bin';
+$environment['NEFRO_SKIP_POST_DEPLOY'] = '1';
 
 function releaseProbeRun(array $command, string $root, array $environment): array
 {
@@ -37,15 +41,17 @@ try {
     foreach (['ci_gate.php', 'wait_for_ci.php'] as $name) {
         copy(__DIR__ . '/../' . $name, $root . '/tools/' . $name);
     }
-    file_put_contents($root . '/bin/gh', <<<'SHELL'
+    // Náhrada hooks/local_gate.sh: simuluje neúspešnú bránu, zmenu HEAD počas
+    // overovania a neoverené zmeny v pracovnom strome.
+    file_put_contents($root . '/bin/gate', <<<'SHELL'
 #!/bin/sh
 case "$NEFRO_MODE" in
   moved) git -c user.name=Fixture -c user.email=fixture@example.invalid commit --allow-empty -qm newer ;;
   dirty) printf 'unverified working tree' > sample.php ;;
 esac
-printf '[{"headSha":"%s","status":"completed","conclusion":"%s"}]\n' "$NEFRO_SHA" "${NEFRO_CONCLUSION:-success}"
+[ "${NEFRO_CONCLUSION:-success}" = success ]
 SHELL);
-    chmod($root . '/bin/gh', 0755);
+    chmod($root . '/bin/gate', 0755);
     file_put_contents($root . '/bin/sftp', <<<'PHP'
 #!/usr/local/bin/php
 <?php
@@ -69,7 +75,7 @@ PHP);
     $environment['NEFRO_MODE'] = 'normal';
     [$status] = releaseProbeRun(['bash', 'hooks/deploy.sh'], $root, $environment);
     if ($status === 0 || file_exists($root . '/capture.json')) {
-        throw new RuntimeException('Failed CI must stop before SFTP.');
+        throw new RuntimeException('Failed gate must stop before SFTP.');
     }
     $environment['NEFRO_CONCLUSION'] = 'success';
     $environment['NEFRO_MODE'] = 'dirty';
@@ -84,7 +90,7 @@ PHP);
     if ($status === 0 || file_exists($root . '/capture.json')) {
         throw new RuntimeException('Changed HEAD must stop before SFTP.');
     }
-    echo "Release probe: failed CI, immutable file snapshot and changed HEAD PASS\n";
+    echo "Release probe: failed gate, immutable file snapshot and changed HEAD PASS\n";
 } finally {
     $iterator = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($root, FilesystemIterator::SKIP_DOTS), RecursiveIteratorIterator::CHILD_FIRST);
     foreach ($iterator as $item) {

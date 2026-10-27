@@ -9,7 +9,7 @@ if (-not $repoRoot) {
 
 $repoRoot = $repoRoot.Trim()
 $hooksDir = Join-Path $repoRoot "hooks"
-$requiredHooks = @("pre-commit", "post-commit", "post-merge", "deploy.sh", "deploy-ignore.txt")
+$requiredHooks = @("pre-commit", "post-commit", "post-merge", "deploy.sh", "local_gate.sh", "deploy-ignore.txt")
 
 foreach ($name in $requiredHooks) {
     $path = Join-Path $hooksDir $name
@@ -44,7 +44,7 @@ try {
     }
 
     if ($IsLinux -or $IsMacOS) {
-        & chmod +x hooks/pre-commit hooks/post-commit hooks/post-merge hooks/deploy.sh
+        & chmod +x hooks/pre-commit hooks/post-commit hooks/post-merge hooks/deploy.sh hooks/local_gate.sh
         if ($LASTEXITCODE -ne 0) {
             throw "Failed to mark hooks as executable."
         }
@@ -52,7 +52,7 @@ try {
 
     $configuredPath = (& git config --local --get core.hooksPath).Trim()
     Write-Host "Git hooks enabled: $configuredPath" -ForegroundColor Green
-    Write-Host "Commits run validation, push and SFTP deploy; pulls/merges deploy too." -ForegroundColor Cyan
+    Write-Host "Commits on main run the local gate and SFTP deploy, then push to mirrors; merges deploy too." -ForegroundColor Cyan
 }
 finally {
     Pop-Location

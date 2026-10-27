@@ -4,7 +4,8 @@ This file provides guidance to WARP (warp.dev) when working with code in this re
 
 ## Development commands
 
-- Install tracked git hooks (validation, auto-push and SFTP deploy): `pwsh -File .\hooks\install.ps1`
+- Install tracked git hooks (validation, local gate, SFTP deploy, mirror push): `pwsh -File .\hooks\install.ps1`
+- Development does not depend on GitHub (since 2026-10-27). A commit on `main` runs `hooks/local_gate.sh` (PHP lint, regressions, JS syntax), deploys over SFTP with post-deploy UPSERT of modified articles, stale PDFs and a smoke test, then pushes to the mirrors in `git config nefro.mirrors` (`server` = bare repo `~/git/nefro.git` on WebSupport, `origin` = GitHub, optional). No PRs are required; work on a branch and `git merge` it into `main`. Details in `hooks/README.md`.
 - Initialise/update database schema and seed codebooks: `php .\setup_db.php`
 - Run the isolated integration and regression gate: `bash tools/integration/run.sh` (Docker Compose required; see `tools/integration/README.md`).
 - Run fast isolated regression files: `php tools/run_regressions.php`.
@@ -15,7 +16,7 @@ This file provides guidance to WARP (warp.dev) when working with code in this re
   Production also runs it automatically every Sunday at 02:00 through cron; output is written to
   `private/archive_cleanup_cron.log`.
 - Run the operational health check (queues, cron log, deploy marker, excerpt parity of `add_*_article.php` vs `articles.excerpt`, public pages): `php .\ops_health.php [--no-http] [--mail]`;
-  exit 1 = FAIL. Daily public-response monitor also runs in `.github/workflows/ops-monitor.yml`.
+  exit 1 = FAIL. The server cron runs it daily at 06:10 with `--mail` (public pages included).
 - Scheduled server jobs live in one file: `tools/crontab.example` (single source of truth for the cron table).
   When adding a worker, add its entry there in the same commit.
 - Create a time-consistent application backup (cross-file consistency requires restore verification) (DB snapshot + files outside git): `php .\backup_snapshot.php [--dry-run]`;

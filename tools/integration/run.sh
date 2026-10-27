@@ -22,4 +22,14 @@ DUMP=$(mktemp)
 "${COMPOSE[@]}" exec -T db sh -c 'MYSQL_PWD="$MARIADB_PASSWORD" mariadb -u "$MARIADB_USER" "$MARIADB_DATABASE"' <"$DUMP"
 rm -f "$DUMP"
 "${COMPOSE[@]}" run --no-deps --rm tests php tools/integration/backup_probe.php --verify
-python3 tools/restore/self_test.py --file-image "${PROJECT}-php"
+# Na Windows je `python3` často len odkaz do Microsoft Store, ktorý nič nespustí;
+# preto sa použije prvý interpreter, ktorý skutočne odpovie.
+PYTHON=""
+for candidate in python3 python py; do
+	if command -v "$candidate" >/dev/null 2>&1 && "$candidate" -c 'import sys; sys.exit(0 if sys.version_info >= (3, 8) else 1)' >/dev/null 2>&1; then
+		PYTHON=$candidate
+		break
+	fi
+done
+[[ -n $PYTHON ]] || { echo "Python 3.8+ nie je dostupný; test obnovy sa nedá spustiť." >&2; exit 1; }
+"$PYTHON" tools/restore/self_test.py --file-image "${PROJECT}-php"

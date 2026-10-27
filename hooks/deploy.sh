@@ -133,6 +133,8 @@ setup_sftp() {
 	# Bez `declare -g`: systémový macOS Bash 3.2 tento prepínač nepodporuje.
 	# Premenná bez `local` zostáva globálna aj po návrate z funkcie.
 	SFTP_OPTIONS=(-q -o BatchMode=yes -o ConnectTimeout=20 -o StrictHostKeyChecking=accept-new)
+	# Rovnaké pripojenie pre kroky po nasadení (UPSERT článkov, PDF); ssh má port cez -p.
+	SSH_OPTIONS=(-o BatchMode=yes -o ConnectTimeout=20 -o StrictHostKeyChecking=accept-new)
 
 	# Bez strojovo lokálneho cieľa zostáva zachovaný pôvodný explicitný prístup.
 	# Vďaka tomu konfigurácia Macu nemení správanie na synchronizovanom Windows stroji.
@@ -141,6 +143,7 @@ setup_sftp() {
 		SFTP_USER=${NEFRO_SFTP_USER:-"uid58858"}
 		SFTP_TARGET="${SFTP_USER}@${SFTP_HOST}"
 		SFTP_OPTIONS+=(-P "${NEFRO_SFTP_PORT:-26650}")
+		SSH_OPTIONS+=(-p "${NEFRO_SFTP_PORT:-26650}")
 		SFTP_KEY=${NEFRO_SFTP_KEY:-"$HOME/.ssh/nefro_deploy"}
 		if [[ ! -f $SFTP_KEY ]]; then
 			# Pri --remote-commit musí na stdout ísť výlučne SHA, inak by volajúci
@@ -153,6 +156,7 @@ setup_sftp() {
 			exit 0
 		fi
 		SFTP_OPTIONS+=(-i "$SFTP_KEY")
+		SSH_OPTIONS+=(-i "$SFTP_KEY" -o IdentitiesOnly=yes)
 	fi
 
 	if ! command -v mktemp >/dev/null 2>&1; then
@@ -258,13 +262,33 @@ if ((DRY_RUN)); then
 	exit 0
 fi
 
-if ! php "$REPO_ROOT/tools/wait_for_ci.php" "$DEPLOY_HEAD"; then
-	echo "[deploy] Povinné CI neprešlo; produkcia nebola zmenená." >&2
+# Brána pred nasadením. Predvolene lokálna (hooks/local_gate.sh), aby vývoj
+# nezávisel od GitHubu; NEFRO_DEPLOY_GATE=github vráti čakanie na GitHub CI.
+# NEFRO_GATE_CMD umožní v izolovanom teste podstrčiť vlastnú bránu.
+case ${NEFRO_DEPLOY_GATE:-local} in
+github)
+	GATE_CMD=(php "$REPO_ROOT/tools/wait_for_ci.php" "$DEPLOY_HEAD")
+	;;
+local)
+	if [[ -n ${NEFRO_GATE_CMD:-} ]]; then
+		GATE_CMD=(bash -c "$NEFRO_GATE_CMD")
+	else
+		GATE_CMD=(bash "$REPO_ROOT/hooks/local_gate.sh")
+	fi
+	;;
+*)
+	echo "[deploy] Neznáma brána NEFRO_DEPLOY_GATE=${NEFRO_DEPLOY_GATE}; produkcia nebola zmenená." >&2
+	exit 1
+	;;
+esac
+
+if ! "${GATE_CMD[@]}"; then
+	echo "[deploy] Brána pred nasadením neprešla; produkcia nebola zmenená." >&2
 	exit 1
 fi
 
 if [[ $(git rev-parse HEAD) != "$DEPLOY_HEAD" || $(git symbolic-ref --quiet --short HEAD) != main ]]; then
-	echo "[deploy] HEAD alebo vetva sa počas CI zmenili; nasadenie sa nevykonalo." >&2
+	echo "[deploy] HEAD alebo vetva sa počas overovania zmenili; nasadenie sa nevykonalo." >&2
 	exit 1
 fi
 
@@ -356,3 +380,67 @@ if ((RC != 0)); then
 fi
 
 echo "[deploy] Hotovo! ($TIMESTAMP, $BRANCH@$COMMIT)"
+
+# --- Kroky po nasadení (predtým job „Deploy production“ v GitHub Actions) ---
+# UPSERT upravených článkov: nahraný add_*_article.php zmení obsah v DB až
+# spustením na serveri. Zámerne len upravené (M), nie nové (A): pri prvom
+# vložení šablóna rozosiela newsletter avízo a to sa nesmie spustiť bez dozoru.
+if [[ ${NEFRO_SKIP_POST_DEPLOY:-0} == 1 ]]; then
+	exit 0
+fi
+
+resolve_ssh_bin() {
+	SSH_BIN=${NEFRO_SSH_BIN:-""}
+	if [[ -z $SSH_BIN && -x /c/Windows/System32/OpenSSH/ssh.exe ]]; then
+		SSH_BIN=/c/Windows/System32/OpenSSH/ssh.exe
+	fi
+	SSH_BIN=${SSH_BIN:-$(command -v ssh 2>/dev/null || true)}
+	[[ -n $SSH_BIN ]]
+}
+
+POST_FAIL=0
+declare -a CHANGED_ARTICLES=()
+if [[ -n $BASE_REF ]]; then
+	while IFS= read -r -d '' path; do
+		CHANGED_ARTICLES+=("$path")
+	done < <(git diff --name-only -z --diff-filter=M "$BASE_REF" "$DEPLOY_HEAD" -- ':(glob)add_*_article.php')
+else
+	while IFS= read -r -d '' path; do
+		CHANGED_ARTICLES+=("$path")
+	done < <(git diff-tree --no-commit-id -r -z --diff-filter=M --name-only "$DEPLOY_HEAD" -- ':(glob)add_*_article.php')
+fi
+
+if ((${#CHANGED_ARTICLES[@]} > 0)); then
+	if resolve_ssh_bin; then
+		for path in "${CHANGED_ARTICLES[@]}"; do
+			echo "[deploy] UPSERT $path"
+			if ! "$SSH_BIN" "${SSH_OPTIONS[@]}" "$SFTP_TARGET" "php '$REMOTE_PATH/$path'"; then
+				echo "[deploy] UPSERT zlyhal: $path" >&2
+				POST_FAIL=1
+			fi
+		done
+		echo "[deploy] Regenerácia neaktuálnych PDF..."
+		if ! "$SSH_BIN" "${SSH_OPTIONS[@]}" "$SFTP_TARGET" "php '$REMOTE_PATH/generate_all_article_pdfs.php' --stale"; then
+			echo "[deploy] Regenerácia PDF zlyhala." >&2
+			POST_FAIL=1
+		fi
+	else
+		echo "[deploy] Chýba ssh; UPSERT upravených článkov spusti ručne: ${CHANGED_ARTICLES[*]}" >&2
+		POST_FAIL=1
+	fi
+fi
+
+# Smoke test verejných stránok (rovnaké URL ako v bývalom Actions jobe).
+if command -v curl >/dev/null 2>&1; then
+	SMOKE_BASE=${NEFRO_SMOKE_BASE_URL:-"https://nefro.polascin.net"}
+	for path in / /privacy.php /terms.php; do
+		code=$(curl -s -o /dev/null -m 30 -w '%{http_code}' "$SMOKE_BASE$path" || echo 000)
+		echo "[deploy] Smoke $path -> HTTP $code"
+		[[ $code == 200 ]] || POST_FAIL=1
+	done
+fi
+
+if ((POST_FAIL)); then
+	echo "[deploy] Súbory sú nasadené, ale krok po nasadení zlyhal; skontroluj výpis vyššie." >&2
+	exit 3
+fi
