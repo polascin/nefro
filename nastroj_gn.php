@@ -87,7 +87,7 @@ $baseUrl = "https://nefro.polascin.net/";
 
                 <p>
                     Nástroj vás prevedie štruktúrovaným postupom podľa odpovedí na cielené otázky.
-                    Slúži ako orientačná pomôcka pre klinické rozhodovanie — <strong>nenahrádza</strong>
+                    Slúži ako orientačná pomôcka pre klinické rozhodovanie; <strong>nenahrádza</strong>
                     renálnu biopsiu, sérológiu, močový sediment ani individuálne posúdenie. Mnohé
                     glomerulopatie majú prekrývajúce sa prejavy.
                 </p>
@@ -141,18 +141,18 @@ $baseUrl = "https://nefro.polascin.net/";
 
                 <!-- Statická referencia: algoritmus -->
                 <section class="form-section" aria-labelledby="algo-heading">
-                    <h3 id="algo-heading">Diagnostický algoritmus — prehľad</h3>
+                    <h3 id="algo-heading">Diagnostický algoritmus: prehľad</h3>
                     <ol class="tool-step__list">
-                        <li><strong>Zaradiť obraz</strong> — nefritický (aktívny sediment) vs nefrotický (proteinúria ≥ 3,5 g, hypoalbuminémia).</li>
-                        <li><strong>Posúdiť tempo</strong> — rýchly vzostup kreatinínu (dni–týždne) = RPGN: urgentná imunológia a biopsia.</li>
-                        <li><strong>RPGN podľa imunológie</strong> — pauci-imunitná (ANCA), anti-GBM (lineárny IF), imunokomplexová (granulárny IF).</li>
-                        <li><strong>Stabilná nefritída podľa komplementu</strong> — nízky vs normálny zužuje diferenciál (pozri tabuľku).</li>
-                        <li><strong>Nefrotický</strong> — najprv diabetická nefropatia (najčastejšia), potom podľa veku/kontextu MCD, membranózna (anti-PLA2R), FSGS, sekundárne (amyloid, paraproteín).</li>
+                        <li><strong>Zaradiť obraz</strong>: nefritický (aktívny sediment) vs nefrotický (proteinúria ≥ 3,5 g, hypoalbuminémia).</li>
+                        <li><strong>Posúdiť tempo.</strong> Rýchly vzostup kreatinínu (dni až týždne) = RPGN: urgentná imunológia a biopsia.</li>
+                        <li><strong>RPGN podľa imunológie</strong>: pauci-imunitná (ANCA), anti-GBM (lineárny IF), imunokomplexová (granulárny IF).</li>
+                        <li><strong>Stabilná nefritída podľa komplementu</strong>: nízky vs normálny zužuje diferenciál (pozri tabuľku).</li>
+                        <li><strong>Nefrotický</strong>: najprv diabetická nefropatia (najčastejšia), potom podľa veku/kontextu MCD, membranózna (anti-PLA2R), FSGS, sekundárne (amyloid, paraproteín).</li>
                     </ol>
                     <div class="info-box-green">
                         <strong>Spoločné renoprotektívne opatrenia:</strong> kontrola TK a proteinúrie (RAAS blokáda),
                         SGLT2 inhibítor podľa indikácie, manažment edémov, lipidov a kardiovaskulárneho rizika,
-                        revízia nefrotoxínov a — pri aktívnej alebo rýchlo progredujúcej GN — včasná nefrologická
+                        revízia nefrotoxínov a pri aktívnej alebo rýchlo progredujúcej GN včasná nefrologická
                         konzultácia a biopsia.
                     </div>
                 </section>
