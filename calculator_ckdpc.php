@@ -21,26 +21,26 @@ function ckdpcInterpretation(float $risk3yr): array
         $interpretation[] =
             "3-ročné riziko " .
             number_format($risk3yr, 1, ",", " ") .
-            " % — nízke riziko progresie obličkového ochorenia.";
+            " %: nízke riziko progresie obličkového ochorenia.";
     } elseif ($risk3yr < 10.0) {
         $interpretation[] =
             "3-ročné riziko " .
             number_format($risk3yr, 1, ",", " ") .
-            " % — stredne zvýšené riziko, odporúča sa intenzívnejší monitoring eGFR a uACR.";
+            " %: stredne zvýšené riziko, odporúča sa intenzívnejší monitoring eGFR a uACR.";
     } elseif ($risk3yr < 20.0) {
         $interpretation[] =
             "3-ročné riziko " .
             number_format($risk3yr, 1, ",", " ") .
-            " % — zvýšené riziko progresie CKD, zvážiť konzultáciu nefrológa.";
+            " %: zvýšené riziko progresie CKD, zvážiť konzultáciu nefrológa.";
         $warnings[] =
-            "Riziko ≥10 % — zvážiť intenzívnejší/multidisciplinárny model starostlivosti (analogicky s prahom pre 2-ročné riziko z KFRE).";
+            "Riziko ≥10 %: zvážiť intenzívnejší/multidisciplinárny model starostlivosti (analogicky s prahom pre 2-ročné riziko z KFRE).";
     } else {
         $interpretation[] =
             "3-ročné riziko " .
             number_format($risk3yr, 1, ",", " ") .
-            " % — vysoké riziko rýchlej progresie, prioritne zvážiť konzultáciu nefrológa a optimalizáciu terapie.";
+            " %: vysoké riziko rýchlej progresie, prioritne zvážiť konzultáciu nefrológa a optimalizáciu terapie.";
         $warnings[] =
-            "Riziko ≥20 % — zvážiť včasné plánovanie náhrady funkcie obličiek a odoslanie na nefrologickú ambulanciu.";
+            "Riziko ≥20 %: zvážiť včasné plánovanie náhrady funkcie obličiek a odoslanie na nefrologickú ambulanciu.";
     }
 
     return [
@@ -350,10 +350,10 @@ function sexLabel(string $v): string
 <head>
   <?php
   $pageTitle =
-      "CKD-PC — Riziko progresie CKD | Kalkulačky | Nefro-projekt Slovensko";
+      "CKD-PC: riziko progresie CKD | Kalkulačky | Nefro-projekt Slovensko";
   $canonicalUrl = "https://nefro.polascin.net/calculator_ckdpc.php";
   $seoDescription =
-      "Nefrologická kalkulačka a nástroj: CKD-PC — Riziko progresie CKD. CKD Prognosis Consortium — 3-ročné riziko progresie CKD (Grams 2022). Presné klinické výpočty podľa najnovších odporúčaní pre lekárov na Slovensku.";
+      "Nefrologická kalkulačka a nástroj CKD-PC (riziko progresie CKD). CKD Prognosis Consortium: 3-ročné riziko progresie CKD (Grams 2022). Presné klinické výpočty podľa najnovších odporúčaní pre lekárov na Slovensku.";
   $structuredData = [
       [
           "@context" => "https://schema.org",
@@ -374,7 +374,7 @@ function sexLabel(string $v): string
               [
                   "@type" => "ListItem",
                   "position" => 3,
-                  "name" => "CKD-PC — Riziko progresie CKD",
+                  "name" => "CKD-PC: riziko progresie CKD",
                   "item" => $baseUrl . "calculator_ckdpc.php",
               ],
           ],
@@ -389,7 +389,7 @@ function sexLabel(string $v): string
     <?php
     $headerTitle = "CKD-PC Kalkulačka";
     $headerIntro =
-        "CKD Prognosis Consortium — 3-ročné riziko progresie CKD (Grams 2022)";
+        "CKD Prognosis Consortium: 3-ročné riziko progresie CKD (Grams 2022)";
     $showLogo = false;
     include "header.php";
     ?>
@@ -400,7 +400,7 @@ function sexLabel(string $v): string
         <div class="content-wrapper">
             <div class="auth-container auth-container--wide">
 
-                <h2>CKD-PC — Riziko progresie CKD</h2>
+                <h2>CKD-PC: riziko progresie CKD</h2>
                 <p class="auth-subtitle">
                     3-ročné riziko kompozitného endpointu: ≥40 % pokles eGFR alebo zlyhanie obličiek
                     (KRT). Model je validovaný pre <strong>všetky štádiá CKD</strong> vrátane G1–G2
@@ -416,7 +416,7 @@ function sexLabel(string $v): string
                 </div>
 
                 <details open class="calc-formula-box">
-                    <summary>Vzorec — CKD-PC / Grams 2022 (logistická regresia)</summary>
+                    <summary>Vzorec: CKD-PC / Grams 2022 (logistická regresia)</summary>
                     <div class="calc-formula-content">
                         <div class="calc-formula-line">\[ P = \frac{\exp(\eta)}{1 + \exp(\eta)} \]</div>
                         <div class="calc-formula-line">\[ \begin{aligned} \eta = \beta_0 &+ \sum_i \beta_i x_i, \\ x_i &\in \{(\text{vek}-60)/10,\; \text{muž}-0{,}5,\; (\text{eGFR}-E)/5,\; \ln(\text{uACR}/10), \\ &(\text{SBP}-130)/20,\; \text{antihyp},\; \text{SBP}\!\times\!\text{antihyp},\; \text{SZ}-0{,}05,\; \text{ICHS}-0{,}15, \\ &\text{FP},\; \text{fajčenie},\; (\text{BMI}-30)/5,\; \text{HbA1c}-7,\; \text{liečba DM}\}. \end{aligned} \]</div>
@@ -849,14 +849,14 @@ function sexLabel(string $v): string
                     <div class="kfre-threshold">
                         <h4>2-ročné riziko zlyhania obličiek (KFRE)</h4>
                         <ul>
-                            <li><strong>&gt;10 %</strong> — kritérium pre multidisciplinárnu starostlivosť</li>
-                            <li><strong>&gt;40 %</strong> — plánovaná náhrada funkcie obličiek (dialýza/transplantácia)</li>
+                            <li><strong>&gt;10 %</strong>: kritérium pre multidisciplinárnu starostlivosť</li>
+                            <li><strong>&gt;40 %</strong>: plánovaná náhrada funkcie obličiek (dialýza/transplantácia)</li>
                         </ul>
                         <p><a href="calculator_kfre.php">Otvoriť KFRE kalkulačku →</a></p>
                     </div>
 
                     <div class="kfre-threshold threshold-warning">
-                        <h4>3-ročné riziko progresie CKD (táto kalkulačka — CKD-PC / Grams 2022)</h4>
+                        <h4>3-ročné riziko progresie CKD (táto kalkulačka: CKD-PC / Grams 2022)</h4>
                         <ul>
                             <li>Platné pre <strong>všetky štádiá CKD</strong> vrátane G1–G2</li>
                             <li>Endpoint: ≥40 % pokles eGFR <em>alebo</em> zlyhanie obličiek</li>
@@ -872,8 +872,8 @@ function sexLabel(string $v): string
                     <div class="kfre-threshold">
                         <h4>5-ročné riziko zlyhanie obličiek (KFRE)</h4>
                         <ul>
-                            <li><strong>3–5 %</strong> — zvážiť odoslanie k nefrológovi</li>
-                            <li><strong>&gt;5 %</strong> — odporúčaná konzultácia nefrológa</li>
+                            <li><strong>3 až 5 %</strong>: zvážiť odoslanie k nefrológovi</li>
+                            <li><strong>&gt;5 %</strong>: odporúčaná konzultácia nefrológa</li>
                         </ul>
                         <p><a href="calculator_kfre.php">Otvoriť KFRE kalkulačku →</a></p>
                     </div>

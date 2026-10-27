@@ -51,26 +51,26 @@ function adpkdInterpretation(string $class): array
     switch ($class) {
         case "1A":
             $interp[] =
-                "Trieda 1A — pomalá progresia. Pravidelné sledovanie, konzervatívna liečba.";
+                "Trieda 1A: pomalá progresia. Pravidelné sledovanie, konzervatívna liečba.";
             break;
         case "1B":
             $interp[] =
-                "Trieda 1B — mierna progresia. Optimalizácia krvného tlaku, hydratácia.";
+                "Trieda 1B: mierna progresia. Optimalizácia krvného tlaku, hydratácia.";
             break;
         case "1C":
             $interp[] =
-                "Trieda 1C — rýchla progresia. Zvážiť tolvaptan (KDIGO 2024 odporúčanie).";
+                "Trieda 1C: rýchla progresia. Zvážiť tolvaptan (KDIGO 2024 odporúčanie).";
             $warn[] =
                 "Trieda 1C je typický kandidát na špecifickú liečbu tolvaptanom.";
             break;
         case "1D":
             $interp[] =
-                "Trieda 1D — veľmi rýchla progresia. Tolvaptan indikovaný pri absencii kontraindikácií.";
+                "Trieda 1D: veľmi rýchla progresia. Tolvaptan indikovaný pri absencii kontraindikácií.";
             $warn[] = "Odporúčané nefrologické sledovanie každých 6 mesiacov.";
             break;
         case "1E":
             $interp[] =
-                "Trieda 1E — extrémne rýchla progresia. Tolvaptan a včasné plánovanie RRT.";
+                "Trieda 1E: extrémne rýchla progresia. Tolvaptan a včasné plánovanie RRT.";
             $warn[] =
                 "URGENTNÉ: Zvážiť zaradenie do transplantačného programu. Tolvaptan pri absencii hepatotoxicity.";
             break;
@@ -82,9 +82,9 @@ $siteName = "Nefro-projekt Slovensko";
 $baseUrl = "https://nefro.polascin.net/";
 $pageUrl = $baseUrl . "calculator_adpkd.php";
 $pageTitle =
-    "Mayo ADPKD klasifikácia — rýchlosť progresie ADPKD | " . $siteName;
+    "Mayo ADPKD klasifikácia: rýchlosť progresie ADPKD | " . $siteName;
 $pageDesc =
-    "Mayo Clinic ADPKD klasifikácia (Irazabal 2015) — zaradenie do tried 1A–1E podľa výškou adjustovaného celkového objemu obličiek (HtTKV) a veku. Pre výber tolvaptanu a sledovanie ADPKD.";
+    "Mayo Clinic ADPKD klasifikácia (Irazabal 2015): zaradenie do tried 1A až 1E podľa výškou adjustovaného celkového objemu obličiek (HtTKV) a veku. Pre výber tolvaptanu a sledovanie ADPKD.";
 $errors = [];
 $messages = [];
 $calculated = null;
@@ -140,7 +140,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     "httkv" => round($tkvMl / ($heightCm / 100), 1),
                     "k_pct" => null,
                     "interpretation" => [
-                        "Trieda 2 — atypická ADPKD (unilaterálna alebo asymetrická). Mayo klasifikácia nie je aplikovateľná.",
+                        "Trieda 2: atypická ADPKD (unilaterálna alebo asymetrická). Mayo klasifikácia nie je aplikovateľná.",
                     ],
                     "warnings" => [
                         "Odporúčané individuálne genetické vyšetrenie a nefrologické sledovanie.",
@@ -207,10 +207,10 @@ if (isLoggedIn()) {
 <head>
   <?php
   $pageTitle =
-      "Mayo ADPKD klasifikácia — rýchlosť progresie ADPKD | Nefro-projekt Slovensko";
+      "Mayo ADPKD klasifikácia: rýchlosť progresie ADPKD | Nefro-projekt Slovensko";
   $canonicalUrl = "https://nefro.polascin.net/calculator_adpkd.php";
   $seoDescription =
-      "Mayo Clinic ADPKD klasifikácia (Irazabal 2015) — zaradenie do tried 1A–1E podľa výškou adjustovaného celkového objemu obličiek (HtTKV) a veku.";
+      "Mayo Clinic ADPKD klasifikácia (Irazabal 2015): zaradenie do tried 1A až 1E podľa výškou adjustovaného celkového objemu obličiek (HtTKV) a veku.";
   $structuredData = [
       [
           "@context" => "https://schema.org",
@@ -255,10 +255,10 @@ if (isLoggedIn()) {
         <div class="content-wrapper">
             <div class="auth-container auth-container--wide">
                 <h2>Mayo ADPKD klasifikácia</h2>
-                <p class="auth-subtitle">Zaradenie pacienta s autozomálne dominantnou polycystickou chorobou obličiek (ADPKD) do tried 1A–1E podľa Mayo klasifikácie (Irazabal 2015) na základe HtTKV a veku.</p>
+                <p class="auth-subtitle">Zaradenie pacienta s autozomálne dominantnou polycystickou chorobou obličiek (ADPKD) do tried 1A až 1E podľa Mayo klasifikácie (Irazabal 2015) na základe HtTKV a veku.</p>
 
                 <details open class="calc-formula-box">
-                    <summary>Vzorec — Mayo ADPKD klasifikácia (Irazabal 2015)</summary>
+                    <summary>Vzorec: Mayo ADPKD klasifikácia (Irazabal 2015)</summary>
                     <div class="calc-formula-content">
                         <div class="calc-formula-line">\[ \text{HtTKV} = \frac{\text{TKV [mL]}}{\text{výška [m]}} \]</div>
                         <div class="calc-formula-line">\[ k = \frac{\ln(\text{HtTKV} / 150)}{\text{vek}} \]</div>
@@ -305,7 +305,7 @@ if (isLoggedIn()) {
                         default   => "adpkd-result-default",
                     }; ?>
                 <div class="calc-result-box <?= $classSlug ?>" role="status" aria-label="Výsledok klasifikácie" aria-live="polite">
-                    <h3>Výsledok — Mayo ADPKD klasifikácia</h3>
+                    <h3>Výsledok: Mayo ADPKD klasifikácia</h3>
                     <div class="calc-result-grid">
                         <div class="calc-result-item calc-result-item--highlight">
                             <span class="calc-result-label">Mayo trieda</span>
@@ -372,7 +372,7 @@ if (isLoggedIn()) {
                                 <input type="date" id="examination_date" name="examination_date" required class="form-control" max="<?= htmlspecialchars(formatUserTimestamp(time(), 'Y-m-d')) ?>" value="<?= htmlspecialchars($form['examination_date']) ?>">
                             </div>
                                                         <div class="form-group">
-                                <label for="adpkd_tkv">Celkový objem obličiek — TKV (mL) <span class="required">*</span></label>
+                                <label for="adpkd_tkv">Celkový objem obličiek (TKV, mL) <span class="required">*</span></label>
                                 <input type="number" id="adpkd_tkv" name="tkv_ml" min="100" max="10000" step="1" required class="form-control" placeholder="napr. 800" value="<?= htmlspecialchars(
                                     $form["tkv_ml"],
                                 ) ?>">
@@ -397,12 +397,12 @@ if (isLoggedIn()) {
                                         "typical_adpkd"
                                     ] === "1"
                                         ? "selected"
-                                        : "" ?>>Typická (bilaterálna, difúzna) — trieda 1</option>
+                                        : "" ?>>Typická (bilaterálna, difúzna): trieda 1</option>
                                     <option value="0" <?= $form[
                                         "typical_adpkd"
                                     ] === "0"
                                         ? "selected"
-                                        : "" ?>>Atypická (unilaterálna/asymetrická) — trieda 2</option>
+                                        : "" ?>>Atypická (unilaterálna/asymetrická): trieda 2</option>
                                 </select>
                             </div>
                         </div>

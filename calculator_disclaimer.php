@@ -6,7 +6,7 @@ declare(strict_types=1);
  */
 ?>
 <aside class="calc-disclaimer" role="note" aria-label="Právne upozornenie">
-    <h3 class="calc-disclaimer__title">⚕ Právne upozornenie — klinické použitie</h3>
+    <h3 class="calc-disclaimer__title">⚕ Právne upozornenie: klinické použitie</h3>
     <p class="calc-disclaimer__text">
         Výpočty poskytované touto webovou lokalitou slúžia výhradne ako
         <strong>informatívna pomôcka pre odborné medicínske rozhodovanie</strong>.
