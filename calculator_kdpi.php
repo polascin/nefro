@@ -230,7 +230,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                                 $pdo,
                                 (int) $_SESSION["user_id"],
                                 "kdri_kdpi",
-                                "KDRI — index rizika darcu obličky (Rao 2009)",
+                                "KDRI: index rizika darcu obličky (Rao 2009)",
                                 $patient,
                                 $inputPayload,
                                 $resultPayload,
@@ -268,10 +268,10 @@ if (isLoggedIn()) {
 <html lang="sk">
 <head>
   <?php
-  $pageTitle = "KDRI — index rizika darcu obličky (základ KDPI) | Kalkulačky | Nefro-projekt Slovensko";
+  $pageTitle = "KDRI: index rizika darcu obličky (základ KDPI) | Kalkulačky | Nefro-projekt Slovensko";
   $canonicalUrl = "https://nefro.polascin.net/calculator_kdpi.php";
   $seoDescription =
-      "Kidney Donor Risk Index (KDRI, Rao 2009): exaktný výpočet relatívneho rizika zlyhania štepu zomretého darcu z 10 darcovských faktorov (vek, výška, hmotnosť, kreatinín, hypertenzia, diabetes, CVA, HCV, DCD, pôvod). KDPI percentil vyžaduje ročne aktualizovanú referenčnú populáciu OPTN — odkaz na oficiálnu kalkulačku.";
+      "Kidney Donor Risk Index (KDRI, Rao 2009): exaktný výpočet relatívneho rizika zlyhania štepu zomretého darcu z 10 darcovských faktorov (vek, výška, hmotnosť, kreatinín, hypertenzia, diabetes, CVA, HCV, DCD, pôvod). KDPI percentil vyžaduje ročne aktualizovanú referenčnú populáciu OPTN: odkaz na oficiálnu kalkulačku.";
   $baseUrl = "https://nefro.polascin.net/";
   $structuredData = [
       [
@@ -293,7 +293,7 @@ if (isLoggedIn()) {
               [
                   "@type" => "ListItem",
                   "position" => 3,
-                  "name" => "KDRI — index rizika darcu obličky",
+                  "name" => "KDRI: index rizika darcu obličky",
                   "item" => $baseUrl . "calculator_kdpi.php",
               ],
           ],
@@ -307,8 +307,8 @@ if (isLoggedIn()) {
     <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>
 
     <?php
-    $headerTitle = "KDRI — index rizika darcu obličky";
-    $headerIntro = "Kidney Donor Risk Index (Rao 2009) — základ KDPI";
+    $headerTitle = "KDRI: index rizika darcu obličky";
+    $headerIntro = "Kidney Donor Risk Index (Rao 2009): základ KDPI";
     $showLogo = false;
     include "header.php";
     ?>
@@ -318,7 +318,7 @@ if (isLoggedIn()) {
     <main id="main-content" class="container main-content main-content--single-col" role="main">
         <div class="content-wrapper">
             <div class="auth-container auth-container--wide">
-                <h2>KDRI — index rizika darcu obličky</h2>
+                <h2>KDRI: index rizika darcu obličky</h2>
                 <p class="auth-subtitle">Voliteľné údaje + darcovské faktory pre výpočet relatívneho rizika zlyhania štepu.</p>
 
                 <div class="info-box">
@@ -334,15 +334,15 @@ if (isLoggedIn()) {
                     <strong>KDRI ≠ KDPI:</strong> <strong>KDPI</strong> (Kidney Donor Profile Index,
                     0 – 100 %) je <em>percentil</em> KDRI v referenčnej populácii darcov za predošlý
                     rok. Jeho výpočet vyžaduje <strong>ročne aktualizovaný škálovací faktor a mapovaciu
-                    tabuľku OPTN</strong>, ktoré sa každoročne menia — preto tu KDPI percentil zámerne
+                    tabuľku OPTN</strong>, ktoré sa každoročne menia, preto tu KDPI percentil zámerne
                     <strong>neuvádzame</strong>. Pre oficiálny KDPI použi
                     <a href="https://optn.transplant.hrsa.gov/data/allocation-calculators/kdpi-calculator/" target="_blank" rel="noopener noreferrer">kalkulačku OPTN</a>
-                    (zadaj rovnaké faktory + dátum). Model je odvodený z dát USA — pri prenose na
+                    (zadaj rovnaké faktory + dátum). Model je odvodený z dát USA; pri prenose na
                     európsku populáciu interpretuj opatrne.
                 </div>
 
                 <details open class="calc-formula-box">
-                    <summary>Vzorec — KDRI_Rao (10 darcovských faktorov)</summary>
+                    <summary>Vzorec: KDRI_Rao (10 darcovských faktorov)</summary>
                     <div class="calc-formula-content">
                         <div class="calc-formula-line">\[ \text{KDRI} = \exp\!\left(\sum \beta_i x_i\right),\quad S_{cr}[\text{mg/dL}] = S_{cr}[\mu\text{mol/L}] \div 88{,}4 \]</div>
                         <div class="calc-formula-vars">
@@ -471,7 +471,7 @@ if (isLoggedIn()) {
                         </p>
                         <p class="calc-result-detail"><strong>KDPI percentil:</strong> nie je vyčíslený (vyžaduje ročnú referenčnú populáciu OPTN). Pre oficiálny KDPI zadaj tie isté faktory do
                             <a href="https://optn.transplant.hrsa.gov/data/allocation-calculators/kdpi-calculator/" target="_blank" rel="noopener noreferrer">kalkulačky OPTN</a>. Nižší KDRI/KDPI = priaznivejší štep (dlhšia očakávaná funkcia); vyšší = kratšia.</p>
-                        <p class="calc-result-detail">KDRI je <strong>prognostická pomôcka</strong> na úrovni darcu — rozhodnutie o akceptácii štepu zohľadňuje aj recipienta, studenú ischémiu a klinický kontext.</p>
+                        <p class="calc-result-detail">KDRI je <strong>prognostická pomôcka</strong> na úrovni darcu; rozhodnutie o akceptácii štepu zohľadňuje aj recipienta, studenú ischémiu a klinický kontext.</p>
                         <div class="form-actions no-print">
                             <button type="button" class="btn-primary js-print">Vytlačiť výpočet</button>
                             <a href="calculator_history.php?calc=kdri_kdpi" class="btn-secondary">História KDRI</a>
