@@ -17,7 +17,7 @@ $pageDesc =
 $schemaWebApp = [
     "@context" => "https://schema.org",
     "@type" => ["WebApplication", "MedicalWebPage"],
-    "name" => "Nefrologické kalkulačky — Nefro-projekt Slovensko",
+    "name" => "Nefrologické kalkulačky | Nefro-projekt Slovensko",
     "description" => $pageDesc,
     "url" => $pageUrl,
     "inLanguage" => "sk-SK",
@@ -62,7 +62,7 @@ $schemaWebApp = [
         ],
         [
             "@type" => "WebApplication",
-            "name" => "CRRT — efluentová dávka",
+            "name" => "CRRT: efluentová dávka",
             "url" => $baseUrl . "calculator_crrt.php",
         ],
         [
@@ -72,7 +72,7 @@ $schemaWebApp = [
         ],
         [
             "@type" => "WebApplication",
-            "name" => "Gupta — riziko cisplatínového AKI (CP-AKI, BMJ 2024)",
+            "name" => "Gupta: riziko cisplatínového AKI (CP-AKI, BMJ 2024)",
             "url" => $baseUrl . "calculator_gupta.php",
         ],
         [
@@ -92,17 +92,17 @@ $schemaWebApp = [
         ],
         [
             "@type" => "WebApplication",
-            "name" => "KFRE — Kidney Failure Risk Equation",
+            "name" => "KFRE: Kidney Failure Risk Equation",
             "url" => $baseUrl . "calculator_kfre.php",
         ],
         [
             "@type" => "WebApplication",
-            "name" => "CKD-PC — Grams 2022 (3-ročné riziko)",
+            "name" => "CKD-PC: Grams 2022 (3-ročné riziko)",
             "url" => $baseUrl . "calculator_ckdpc.php",
         ],
         [
             "@type" => "WebApplication",
-            "name" => "PREVENT — AHA 2024 (kardiovaskulárne riziko)",
+            "name" => "PREVENT: AHA 2024 (kardiovaskulárne riziko)",
             "url" => $baseUrl . "calculator_prevent.php",
         ],
         [
@@ -172,17 +172,17 @@ $schemaWebApp = [
         ],
         [
             "@type" => "WebApplication",
-            "name" => "MGUS — Mayo riziková stratifikácia a κ/λ pomer",
+            "name" => "MGUS: Mayo riziková stratifikácia a κ/λ pomer",
             "url" => $baseUrl . "calculator_mgus.php",
         ],
         [
             "@type" => "WebApplication",
-            "name" => "MGRS — klasifikácia (monoklonálna gamapatia renálneho významu)",
+            "name" => "MGRS: klasifikácia (monoklonálna gamapatia renálneho významu)",
             "url" => $baseUrl . "calculator_mgrs.php",
         ],
         [
             "@type" => "WebApplication",
-            "name" => "Syndróm rozpadu nádoru (TLS) — Cairo–Bishop klasifikácia",
+            "name" => "Syndróm rozpadu nádoru (TLS): Cairo-Bishop klasifikácia",
             "url" => $baseUrl . "calculator_tls.php",
         ],
         [
@@ -197,7 +197,7 @@ $schemaWebApp = [
         ],
         [
             "@type" => "WebApplication",
-            "name" => "KDRI — index rizika darcu obličky (Rao 2009; základ KDPI)",
+            "name" => "KDRI: index rizika darcu obličky (Rao 2009; základ KDPI)",
             "url" => $baseUrl . "calculator_kdpi.php",
         ],
     ],
@@ -280,7 +280,7 @@ $schemaWebApp = [
                 <div class="features-grid calculators-grid">
                     <article class="feature-card calculator-card">
                         <h3>Ambulantná kalkulačka</h3>
-                        <p>Súhrnný CKD nástroj pre ambulanciu: KDIGO 2024 CGA, KFRE, CKD-PC, štádium CKM, eGFR slope, MKCH-10 štádium a čistý text pripravený na vloženie do lekárskej správy v Nefrise. Vyplňte len dostupné údaje — vypočíta sa to, na čo stačia zadané parametre.</p>
+                        <p>Súhrnný CKD nástroj pre ambulanciu: KDIGO 2024 CGA, KFRE, CKD-PC, štádium CKM, eGFR slope, MKCH-10 štádium a čistý text pripravený na vloženie do lekárskej správy v Nefrise. Vyplňte len dostupné údaje, vypočíta sa to, na čo stačia zadané parametre.</p>
                         <a href="calculator_ambulatory.php" class="btn-primary">Otvoriť kalkulačku</a>
                     </article>
 
@@ -292,7 +292,7 @@ $schemaWebApp = [
 
                     <article class="feature-card calculator-card">
                         <h3>eGFR (kreatinín–cystatín C 2021)</h3>
-                        <p>Presnejší odhad filtrácie a potvrdenie CKD podľa KDIGO 2024 — kombinovaný vzorec CKD-EPI 2021 z kreatinínu a cystatínu C (bez rasy).</p>
+                        <p>Presnejší odhad filtrácie a potvrdenie CKD podľa KDIGO 2024: kombinovaný vzorec CKD-EPI 2021 z kreatinínu a cystatínu C (bez rasy).</p>
                         <a href="calculator_egfr_cys.php" class="btn-primary">Otvoriť kalkulačku</a>
                     </article>
 
@@ -309,7 +309,7 @@ $schemaWebApp = [
                     </article>
 
                     <article class="feature-card calculator-card">
-                        <h3>CRRT — efluentová dávka</h3>
+                        <h3>CRRT: efluentová dávka</h3>
                         <p>Dávka kontinuálnej náhrady funkcie obličiek v mL/kg/h z prietokov dialyzátu, substitúcie a ultrafiltrácie; cieľ KDIGO 20–25 mL/kg/h a odhad dodanej dávky pri výpadkoch.</p>
                         <a href="calculator_crrt.php" class="btn-primary">Otvoriť kalkulačku</a>
                     </article>
@@ -322,13 +322,13 @@ $schemaWebApp = [
 
                     <article class="feature-card calculator-card">
                         <h3>Prevodník jednotiek (SI ⇄ konvenčné)</h3>
-                        <p>Obojsmerná živá konverzia laboratórnych jednotiek — kreatinín, urea/BUN, glukóza, vápnik, fosfát, cholesterol, urát a ďalšie.</p>
+                        <p>Obojsmerná živá konverzia laboratórnych jednotiek: kreatinín, urea/BUN, glukóza, vápnik, fosfát, cholesterol, urát a ďalšie.</p>
                         <a href="calculator_units.php" class="btn-primary">Otvoriť kalkulačku</a>
                     </article>
 
                     <article class="feature-card calculator-card">
                         <h3>nPCR / nPNA (dialýza)</h3>
-                        <p>Normalizovaná miera katabolizmu bielkovín z dvoch hodnôt močoviny a Watsonovho objemu — nutričný ukazovateľ, ktorý dopĺňa Kt/V.</p>
+                        <p>Normalizovaná miera katabolizmu bielkovín z dvoch hodnôt močoviny a Watsonovho objemu, nutričný ukazovateľ, ktorý dopĺňa Kt/V.</p>
                         <a href="calculator_npcr.php" class="btn-primary">Otvoriť kalkulačku</a>
                     </article>
 
@@ -339,14 +339,14 @@ $schemaWebApp = [
                     </article>
 
                     <article class="feature-card calculator-card">
-                        <h3>KFRE — Kidney Failure Risk Equation</h3>
+                        <h3>KFRE: Kidney Failure Risk Equation</h3>
                         <p>Predikcia rizika potreby dialýzy alebo transplantácie obličky na 2 a 5 rokov (Tangri 4-parametrová).</p>
                         <a href="calculator_kfre.php" class="btn-primary">Otvoriť kalkulačku</a>
                     </article>
 
                     <article class="feature-card calculator-card">
-                        <h3>CKD-PC — Grams 2022 (3-ročné riziko)</h3>
-                        <p>Odhad 3-ročného rizika poklesu eGFR o ≥40 % alebo zlyhania obličiek — platné pre všetky štádiá CKD vrátane G1–G2. Rozšírený model s 13+ vstupmi.</p>
+                        <h3>CKD-PC: Grams 2022 (3-ročné riziko)</h3>
+                        <p>Odhad 3-ročného rizika poklesu eGFR o ≥40 % alebo zlyhania obličiek, platný pre všetky štádiá CKD vrátane G1 a G2. Rozšírený model s 13+ vstupmi.</p>
                         <a href="calculator_ckdpc.php" class="btn-primary">Otvoriť kalkulačku</a>
                     </article>
                 </div>
@@ -356,7 +356,7 @@ $schemaWebApp = [
                 <h2 id="cvrisk-calculators-heading">Kardiovaskulárne riziko</h2>
                 <div class="features-grid calculators-grid">
                     <article class="feature-card calculator-card">
-                        <h3>PREVENT — AHA 2024</h3>
+                        <h3>PREVENT: AHA 2024</h3>
                         <p>10- a 30-ročné riziko pre Total CVD, ASCVD a srdcové zlyhávanie (Khan 2024). Nahrádza starý PCE; zahŕňa eGFR a voliteľne UACR, HbA1c a SDI. S interpretáciou rizikovej kategórie a cieľa LDL podľa odporúčaní 2026.</p>
                         <a href="calculator_prevent.php" class="btn-primary">Otvoriť kalkulačku</a>
                     </article>
@@ -377,7 +377,7 @@ $schemaWebApp = [
                         <a href="calculator_aki.php" class="btn-primary">Otvoriť kalkulačku</a>
                     </article>
                     <article class="feature-card calculator-card">
-                        <h3>Gupta — riziko cisplatínového AKI</h3>
+                        <h3>Gupta: riziko cisplatínového AKI</h3>
                         <p>Simple risk score (Gupta, BMJ 2024): z 9 faktorov pred podaním cisplatiny (vek, hypertenzia, diabetes, hemoglobín, leukocyty, trombocyty, albumín, magnézium, dávka) odhadne riziko ťažkého CP-AKI. Skóre 0 – 22,5 → nízke/stredné/vysoké/veľmi vysoké.</p>
                         <a href="calculator_gupta.php" class="btn-primary">Otvoriť kalkulačku</a>
                     </article>
@@ -415,7 +415,7 @@ $schemaWebApp = [
                     </article>
                     <article class="feature-card calculator-card">
                         <h3>Klírens voľnej vody (CH₂O / EFWC)</h3>
-                        <p>Klasický klírens voľnej vody z osmolality a elektrolytový klírens (EFWC) z Na/K — či obličky čistú vodu vylučujú alebo zadržiavajú. Pomôcka pri hyponatrémii a hypernatrémii.</p>
+                        <p>Klasický klírens voľnej vody z osmolality a elektrolytový klírens (EFWC) z Na/K: či obličky čistú vodu vylučujú alebo zadržiavajú. Pomôcka pri hyponatrémii a hypernatrémii.</p>
                         <a href="calculator_free_water.php" class="btn-primary">Otvoriť kalkulačku</a>
                     </article>
                     <article class="feature-card calculator-card">
@@ -425,7 +425,7 @@ $schemaWebApp = [
                     </article>
                     <article class="feature-card calculator-card">
                         <h3>Syndróm rozpadu nádoru (TLS)</h3>
-                        <p>Cairo–Bishop klasifikácia: laboratórny TLS = ≥ 2 metabolické odchýlky (kys. močová, draslík, fosfát, vápnik); klinický TLS + obličkové postihnutie, arytmia alebo kŕče. Častá príčina akútneho poškodenia obličiek v onko-nefrológii.</p>
+                        <p>Cairo-Bishop klasifikácia: laboratórny TLS = ≥ 2 metabolické odchýlky (kys. močová, draslík, fosfát, vápnik); klinický TLS + obličkové postihnutie, arytmia alebo kŕče. Častá príčina akútneho poškodenia obličiek v onko-nefrológii.</p>
                         <a href="calculator_tls.php" class="btn-primary">Otvoriť kalkulačku</a>
                     </article>
                 </div>
@@ -461,13 +461,13 @@ $schemaWebApp = [
                         <a href="calculator_uacr.php" class="btn-primary">Otvoriť kalkulačku</a>
                     </article>
                     <article class="feature-card calculator-card">
-                        <h3>MGUS — riziko progresie a κ/λ</h3>
+                        <h3>MGUS: riziko progresie a κ/λ</h3>
                         <p>Mayo riziková stratifikácia (Rajkumar 2005): M-proteín, izotyp a pomer voľných ľahkých reťazcov → 20-ročné riziko progresie. S poznámkou k MGRS (renálny význam) a renálnemu rozpätiu FLC.</p>
                         <a href="calculator_mgus.php" class="btn-primary">Otvoriť kalkulačku</a>
                     </article>
                     <article class="feature-card calculator-card">
-                        <h3>MGRS — klasifikácia (renálny význam)</h3>
-                        <p>Konsenzus IKMG (Leung 2019): odlíši MGRS od MGUS a od hematologickej malignity. MGRS = klon spôsobujúci obličkové poškodenie bez kritérií malignity — vyžaduje renálnu biopsiu, hematológa a klon-cielenú liečbu napriek nízkej náloži.</p>
+                        <h3>MGRS: klasifikácia (renálny význam)</h3>
+                        <p>Konsenzus IKMG (Leung 2019): odlíši MGRS od MGUS a od hematologickej malignity. MGRS = klon spôsobujúci obličkové poškodenie bez kritérií malignity, vyžaduje renálnu biopsiu, hematológa a klon-cielenú liečbu napriek nízkej náloži.</p>
                         <a href="calculator_mgrs.php" class="btn-primary">Otvoriť kalkulačku</a>
                     </article>
                 </div>
@@ -496,8 +496,8 @@ $schemaWebApp = [
                     </article>
 
                     <article class="feature-card calculator-card">
-                        <h3>KDRI — index rizika darcu obličky</h3>
-                        <p>Kidney Donor Risk Index (Rao 2009): relatívne riziko zlyhania štepu zomretého darcu z 10 faktorov (HR vs. referenčný darca). KDPI percentil vyžaduje ročnú referenciu OPTN — odkaz na oficiálnu kalkulačku.</p>
+                        <h3>KDRI: index rizika darcu obličky</h3>
+                        <p>Kidney Donor Risk Index (Rao 2009): relatívne riziko zlyhania štepu zomretého darcu z 10 faktorov (HR vs. referenčný darca). KDPI percentil vyžaduje ročnú referenciu OPTN, preto odkazujeme na oficiálnu kalkulačku.</p>
                         <a href="calculator_kdpi.php" class="btn-primary">Otvoriť kalkulačku</a>
                     </article>
                 </div>
