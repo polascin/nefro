@@ -327,7 +327,10 @@ function opsHealthEvaluateHttp(string $path, int $code, array $headers, string $
  * Jednoduché GET bez vlastného User-Agentu (WAF hostingu blokuje skrátené
  * prehliadačové UA; prázdny UA aj predvolený curl prechádzajú).
  *
- * @return array{code: int, headers: array<string, string>, body: string}
+ * Pri zlyhaní transportu (DNS, TLS, timeout) je code 0 a error nesie príčinu;
+ * bez nej sa lokálne chýbajúci CA bundle nedá odlíšiť od výpadku webu.
+ *
+ * @return array{code: int, headers: array<string, string>, body: string, error: string}
  */
 function opsHealthFetch(string $url, int $timeout = 20): array
 {
@@ -349,8 +352,9 @@ function opsHealthFetch(string $url, int $timeout = 20): array
         ]);
         $body = curl_exec($ch);
         $code = (int) curl_getinfo($ch, CURLINFO_RESPONSE_CODE);
+        $error = $body === false ? sprintf('curl %d: %s', curl_errno($ch), curl_error($ch)) : '';
         curl_close($ch);
-        return ['code' => $body === false ? 0 : $code, 'headers' => $headers, 'body' => is_string($body) ? $body : ''];
+        return ['code' => $body === false ? 0 : $code, 'headers' => $headers, 'body' => is_string($body) ? $body : '', 'error' => $error];
     }
 
     $context = stream_context_create(['http' => ['method' => 'GET', 'timeout' => $timeout, 'ignore_errors' => true, 'follow_location' => 0]]);
@@ -367,7 +371,12 @@ function opsHealthFetch(string $url, int $timeout = 20): array
             $headers[strtolower(trim(substr($line, 0, $pos)))] = trim(substr($line, $pos + 1));
         }
     }
-    return ['code' => $body === false ? 0 : $code, 'headers' => $headers, 'body' => is_string($body) ? $body : ''];
+    $error = '';
+    if ($body === false) {
+        $last = error_get_last();
+        $error = $last !== null ? $last['message'] : 'požiadavka zlyhala';
+    }
+    return ['code' => $body === false ? 0 : $code, 'headers' => $headers, 'body' => is_string($body) ? $body : '', 'error' => $error];
 }
 
 /**
@@ -531,6 +540,9 @@ function opsHealthMain(array $argv): int
             $evaluation = opsHealthEvaluateHttp($path, $response['code'], $response['headers'], $response['body'], __DIR__);
             $statuses[] = $evaluation['status'];
             $lines[] = sprintf('%-5s GET %s: HTTP %d, %d B', $evaluation['status'], $path, $response['code'], strlen($response['body']));
+            if ($response['error'] !== '') {
+                $lines[] = '      transport: ' . $response['error'];
+            }
             foreach ($evaluation['messages'] as $message) {
                 $lines[] = '      ' . $message;
             }
