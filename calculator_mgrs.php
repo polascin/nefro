@@ -38,13 +38,13 @@ function mgrsClassify(bool $cloneEvidence, bool $biopsyMGRS, bool $clinicalRenal
         if ($biopsyMGRS) {
             return [
                 'code' => 'MGRS',
-                'label' => 'MGRS — potvrdená obličkovou biopsiou',
+                'label' => 'MGRS potvrdená obličkovou biopsiou',
                 'risk_class' => 'risk-high',
             ];
         }
         return [
             'code' => 'MGRS?',
-            'label' => 'MGRS pravdepodobná — nutné potvrdenie obličkovou biopsiou',
+            'label' => 'MGRS pravdepodobná, nutné potvrdenie obličkovou biopsiou',
             'risk_class' => 'risk-high',
         ];
     }
@@ -58,7 +58,7 @@ function mgrsClassify(bool $cloneEvidence, bool $biopsyMGRS, bool $clinicalRenal
     if ($hasRenal) {
         return [
             'code' => 'Klon?',
-            'label' => 'renálne postihnutie bez doloženého klonu — hľadaj okultnú monoklonálnu gamapatiu',
+            'label' => 'renálne postihnutie bez doloženého klonu, hľadaj okultnú monoklonálnu gamapatiu',
             'risk_class' => 'risk-moderate',
         ];
     }
@@ -163,7 +163,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                                 $pdo,
                                 (int) $_SESSION["user_id"],
                                 "mgrs_class",
-                                "MGRS — klasifikácia (renálny význam)",
+                                "MGRS: klasifikácia (renálny význam)",
                                 $patient,
                                 $inputPayload,
                                 $resultPayload,
@@ -201,10 +201,10 @@ if (isLoggedIn()) {
 <html lang="sk">
 <head>
   <?php
-  $pageTitle = "MGRS — klasifikácia (monoklonálna gamapatia renálneho významu) | Kalkulačky | Nefro-projekt Slovensko";
+  $pageTitle = "MGRS: klasifikácia (monoklonálna gamapatia renálneho významu) | Kalkulačky | Nefro-projekt Slovensko";
   $canonicalUrl = "https://nefro.polascin.net/calculator_mgrs.php";
   $seoDescription =
-      "Klasifikačná pomôcka MGRS (monoklonálna gamapatia renálneho významu) podľa konsenzu IKMG (Leung 2019): odlíši MGRS od MGUS a od hematologickej malignity vyžadujúcej liečbu. MGRS = klon spôsobujúci obličkové poškodenie bez kritérií malignity — vyžaduje renálnu biopsiu, hematológa a klon-cielenú liečbu napriek nízkej náloži.";
+      "Klasifikačná pomôcka MGRS (monoklonálna gamapatia renálneho významu) podľa konsenzu IKMG (Leung 2019): odlíši MGRS od MGUS a od hematologickej malignity vyžadujúcej liečbu. MGRS = klon spôsobujúci obličkové poškodenie bez kritérií malignity; vyžaduje renálnu biopsiu, hematológa a klon-cielenú liečbu napriek nízkej náloži.";
   $baseUrl = "https://nefro.polascin.net/";
   $structuredData = [
       [
@@ -226,7 +226,7 @@ if (isLoggedIn()) {
               [
                   "@type" => "ListItem",
                   "position" => 3,
-                  "name" => "MGRS — klasifikácia (renálny význam)",
+                  "name" => "MGRS: klasifikácia (renálny význam)",
                   "item" => $baseUrl . "calculator_mgrs.php",
               ],
           ],
@@ -240,7 +240,7 @@ if (isLoggedIn()) {
     <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>
 
     <?php
-    $headerTitle = "MGRS — klasifikácia";
+    $headerTitle = "MGRS: klasifikácia";
     $headerIntro = "Monoklonálna gamapatia renálneho významu (IKMG, Leung 2019)";
     $showLogo = false;
     include "header.php";
@@ -251,7 +251,7 @@ if (isLoggedIn()) {
     <main id="main-content" class="container main-content main-content--single-col" role="main">
         <div class="content-wrapper">
             <div class="auth-container auth-container--wide">
-                <h2>MGRS — klasifikácia (renálny význam)</h2>
+                <h2>MGRS: klasifikácia (renálny význam)</h2>
                 <p class="auth-subtitle">Voliteľné údaje pacienta + dôkaz klonu, renálne postihnutie a kritériá malignity pre zaradenie.</p>
 
                 <div class="info-box">
@@ -262,15 +262,15 @@ if (isLoggedIn()) {
                     ani inej hematologickej malignity vyžadujúcej liečbu. Tento klasifikátor odlíši
                     MGRS od <a href="calculator_mgus.php">MGUS</a> (bez renálneho významu) a od
                     malignity. Pri MGRS je liečba cielená na klon indikovaná <em>napriek nízkej
-                    nádorovej náloži</em> — kvôli záchrane obličiek.
+                    nádorovej náloži</em>, aby sa zachránili obličky.
                 </div>
 
                 <div class="info-box-yellow">
                     <strong>Pozor:</strong> ide o <strong>edukačnú operacionalizáciu</strong>
-                    konsenzu — diagnóza MGRS stojí na <strong>obličkovej biopsii</strong>
+                    konsenzu. Diagnóza MGRS stojí na <strong>obličkovej biopsii</strong>
                     (imunofluorescencia / elektrónová mikroskopia / typizácia ľahkých reťazcov)
                     a na <strong>hematologickej konzultácii</strong>. Až ~30 % prípadov má
-                    negatívnu sérovú aj močovú imunofixáciu — diagnózu vtedy nesie biopsia.
+                    negatívnu sérovú aj močovú imunofixáciu; diagnózu vtedy nesie biopsia.
                     Nástroj nenahrádza biopsiu ani odborné posúdenie.
                 </div>
 
@@ -278,11 +278,11 @@ if (isLoggedIn()) {
                     <summary>Logika klasifikácie (hierarchicky)</summary>
                     <div class="calc-formula-content">
                         <div class="calc-formula-vars">
-                            <strong>Malignita</strong> — splnené kritériá hematologickej malignity vyžadujúcej liečbu (renálna lézia sa rieši v jej kontexte, nie ako MGRS) &bull;
-                            <strong>MGRS</strong> — dôkaz klonu <em>a zároveň</em> renálne postihnutie pripísateľné paraproteínu, bez kritérií malignity &bull;
-                            <strong>MGUS</strong> — dôkaz klonu bez renálneho postihnutia &bull;
-                            <strong>Klon?</strong> — renálne postihnutie bez doloženého klonu (hľadaj okultný klon) &bull;
-                            <strong>—</strong> — nedostatok kritérií
+                            <strong>Malignita</strong>: splnené kritériá hematologickej malignity vyžadujúcej liečbu (renálna lézia sa rieši v jej kontexte, nie ako MGRS) &bull;
+                            <strong>MGRS</strong>: dôkaz klonu <em>a zároveň</em> renálne postihnutie pripísateľné paraproteínu, bez kritérií malignity &bull;
+                            <strong>MGUS</strong>: dôkaz klonu bez renálneho postihnutia &bull;
+                            <strong>Klon?</strong>: renálne postihnutie bez doloženého klonu (hľadaj okultný klon) &bull;
+                            <strong>—</strong>: nedostatok kritérií
                         </div>
                     </div>
                 </details>
@@ -345,7 +345,7 @@ if (isLoggedIn()) {
                         <fieldset class="form-fieldset">
                             <legend>3. Kritériá malignity vyžadujúcej liečbu (vylučujú MGRS)</legend>
                             <div class="form-check-grid">
-                                <label class="form-check"><input type="checkbox" name="mm_criteria" value="1" <?= $form["mm_criteria"] === "1" ? "checked" : "" ?>> ≥ 10 % klonálnych plazmocytov v dreni + myelóm-definujúca udalosť (SLiM: ≥ 60 % plazmocytov / FLC pomer ≥ 100 / &gt; 1 fokálna MRI lézia — renálne kritérium tu nerozhoduje) <span class="form-check-pts">(malignita)</span></label>
+                                <label class="form-check"><input type="checkbox" name="mm_criteria" value="1" <?= $form["mm_criteria"] === "1" ? "checked" : "" ?>> ≥ 10 % klonálnych plazmocytov v dreni + myelóm-definujúca udalosť (SLiM: ≥ 60 % plazmocytov / FLC pomer ≥ 100 / &gt; 1 fokálna MRI lézia; renálne kritérium tu nerozhoduje) <span class="form-check-pts">(malignita)</span></label>
                                 <label class="form-check"><input type="checkbox" name="lymphoma_criteria" value="1" <?= $form["lymphoma_criteria"] === "1" ? "checked" : "" ?>> Symptomatický lymfóm / Waldenströmova makroglobulinémia / CLL spĺňajúci kritériá na liečbu <span class="form-check-pts">(malignita)</span></label>
                                 <label class="form-check"><input type="checkbox" name="end_organ" value="1" <?= $form["end_organ"] === "1" ? "checked" : "" ?>> Hyperkalciémia, osteolytické lézie alebo anémia jasne z plazmocelulárnej dyskrázie <span class="form-check-pts">(malignita)</span></label>
                             </div>
@@ -380,25 +380,25 @@ if (isLoggedIn()) {
                             &ensp;&bull;&ensp; kritériá malignity: <?= $calculated["has_malignancy"] ? "✓" : "✗" ?>
                         </p>
                         <?php if ($calculated["code"] === "MGRS" || $calculated["code"] === "MGRS?"): ?>
-                            <p class="calc-result-detail"><strong>MGRS.</strong> Indikovaná <strong>klon-cielená liečba</strong> (podľa typu klonu — plazmocelulárny vs. B-lymfocytový) v spolupráci s hematológom, <em>napriek nízkej nádorovej náloži</em>, s cieľom zachovať funkciu obličiek a znížiť riziko recidívy po prípadnej transplantácii.
+                            <p class="calc-result-detail"><strong>MGRS.</strong> Indikovaná <strong>klon-cielená liečba</strong> (podľa typu klonu: plazmocelulárny vs. B-lymfocytový) v spolupráci s hematológom, <em>napriek nízkej nádorovej náloži</em>, s cieľom zachovať funkciu obličiek a znížiť riziko recidívy po prípadnej transplantácii.
                             <?php if ($calculated["code"] === "MGRS?"): ?>
-                                Pred liečbou je nutné <strong>potvrdenie obličkovou biopsiou</strong> — typizovať léziu a depozity.
+                                Pred liečbou je nutné <strong>potvrdenie obličkovou biopsiou</strong> s typizáciou lézie a depozitov.
                             <?php endif; ?>
                             </p>
                         <?php elseif ($calculated["code"] === "Malignita"): ?>
-                            <p class="calc-result-detail"><strong>Mimo definície MGRS.</strong> Klon spĺňa kritériá hematologickej malignity vyžadujúcej liečbu — manažment vedie <strong>hematológ/onkológ</strong> podľa danej diagnózy.
+                            <p class="calc-result-detail"><strong>Mimo definície MGRS.</strong> Klon spĺňa kritériá hematologickej malignity vyžadujúcej liečbu; manažment vedie <strong>hematológ/onkológ</strong> podľa danej diagnózy.
                             <?php if ($calculated["has_renal"]): ?>
                                 Renálna lézia je paraproteinémická, no rieši sa v rámci liečby malignity.
                             <?php endif; ?>
                             </p>
                         <?php elseif ($calculated["code"] === "MGUS"): ?>
-                            <p class="calc-result-detail"><strong>MGUS.</strong> Bez doloženého renálneho významu — sledovanie podľa <a href="calculator_mgus.php">Mayo rizikovej stratifikácie</a>. Pri objavení sa renálnych prejavov (proteinúria, pokles eGFR) prehodnoť na MGRS vrátane biopsie.</p>
+                            <p class="calc-result-detail"><strong>MGUS.</strong> Bez doloženého renálneho významu; sledovanie podľa <a href="calculator_mgus.php">Mayo rizikovej stratifikácie</a>. Pri objavení sa renálnych prejavov (proteinúria, pokles eGFR) prehodnoť na MGRS vrátane biopsie.</p>
                         <?php elseif ($calculated["code"] === "Klon?"): ?>
-                            <p class="calc-result-detail"><strong>Renálne postihnutie bez doloženého klonu.</strong> Ak biopsia ukazuje monoklonálne depozity, hľadaj <strong>okultný klon</strong> (citlivá sérová FLC, imunofixácia séra aj moču, prietoková cytometria dreňe, prípadne PET/CT) — až ~30 % MGRS má negatívne sérum/moč. Inak zváž inú príčinu obličkového postihnutia.</p>
+                            <p class="calc-result-detail"><strong>Renálne postihnutie bez doloženého klonu.</strong> Ak biopsia ukazuje monoklonálne depozity, hľadaj <strong>okultný klon</strong> (citlivá sérová FLC, imunofixácia séra aj moču, prietoková cytometria dreňe, prípadne PET/CT), lebo až ~30 % MGRS má negatívne sérum/moč. Inak zváž inú príčinu obličkového postihnutia.</p>
                         <?php else: ?>
                             <p class="calc-result-detail"><strong>Nedostatok kritérií.</strong> Doplň dôkaz klonu (imunofixácia, FLC, kostná dreň) a posúdenie renálneho postihnutia.</p>
                         <?php endif; ?>
-                        <p class="calc-result-detail">Klasifikácia je <strong>pomôcka</strong>, nie diagnostický test — definitívna diagnóza MGRS stojí na obličkovej biopsii a hematologickom posúdení.</p>
+                        <p class="calc-result-detail">Klasifikácia je <strong>pomôcka</strong>, nie diagnostický test. Definitívna diagnóza MGRS stojí na obličkovej biopsii a hematologickom posúdení.</p>
                         <div class="form-actions no-print">
                             <button type="button" class="btn-primary js-print">Vytlačiť výsledok</button>
                             <a href="calculator_history.php?calc=mgrs_class" class="btn-secondary">História MGRS</a>

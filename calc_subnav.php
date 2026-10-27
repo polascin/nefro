@@ -42,7 +42,7 @@ $_calcSubnavItems = [
     ['file' => 'calculator_units.php',       'label' => 'Jednotky'],
 ];
 ?>
-<nav class="quick-nav-calculators" aria-label="Kalkulačky — rýchla navigácia">
+<nav class="quick-nav-calculators" aria-label="Kalkulačky: rýchla navigácia">
     <div class="container">
         <ul class="quick-nav-list">
             <?php foreach ($_calcSubnavItems as $_item): ?>

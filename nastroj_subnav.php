@@ -12,7 +12,7 @@ $_toolSubnavItems = [
     ['file' => 'nastroj_dieta.php',        'label' => 'Renálna diéta'],
 ];
 ?>
-<nav class="quick-nav-calculators" aria-label="Nástroje — rýchla navigácia">
+<nav class="quick-nav-calculators" aria-label="Nástroje: rýchla navigácia">
     <div class="container">
         <ul class="quick-nav-list">
             <?php foreach ($_toolSubnavItems as $_item): ?>
