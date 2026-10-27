@@ -25,6 +25,13 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
  */
 function getSourceArticleAuthors(): array {
     return [
+        // Autori globálnych odporúčaní ISH 2026, doi 10.1097/HJH.0000000000004451 (PMID 42909506).
+        // Trinásť bibliografických autorov z Crossref a PubMed 2026-10-28. Ďalších 24 mien
+        // v zázname PubMed sú recenzenti uvedení v abstrakte, nie spoluautori.
+        'ish-2026-hypertenzia-chronicka-choroba-obliciek' => ['George S. Stergiou', 'Kazuomi Kario', 'Dagnovar Aristizabal', 'Hind Beheiry', 'Myeong-Chan Cho', 'Débora Simões Almeida Colombari', 'Hiroshi Itoh', 'Tazeen H. Jafar', 'Erika Jones', 'Yan Li', 'Cesar A. Romero', 'U. Muscha Steckelings', 'Bryan Williams'],
+        // Autori pilotnej RCT JASN 2026, doi 10.1681/ASN.0000001271 (PMID 42925875) –
+        // 12 mien overených cez PubMed eutils a Crossref 2026-10-28.
+        'empagliflozin-adpkd-pilotna-studia' => ['Stephen L. Seliger', 'Berenice Gitomer', 'Zhiying You', 'Wei Wang', 'Anna Ostrow', 'Emily Andrews', 'Charalett Diggs', 'Diana George', 'Miranda West', 'Kristen L. Nowak', 'Terry Watnick', 'Michel Chonchol'],
         // Autor spracovaného redakčného prehľadu Medscape Medical News (14. 10. 2026) –
         // byline overený z verejne dostupnej stránky zdroja 2026-10-19.
         'longevity-normalne-vysledky-cielene-testovanie-ckd' => ['Julie Peck'],
