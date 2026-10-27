@@ -23,10 +23,10 @@ $articles[] = [
   <a href="img/inhibitory-sglt2-hemoglobin-anemia-ckd.webp" rel="noopener noreferrer" target="_blank">
     <picture>
       <source srcset="img/inhibitory-sglt2-hemoglobin-anemia-ckd.webp" type="image/webp">
-      <img src="img/inhibitory-sglt2-hemoglobin-anemia-ckd.png" alt="Priesvitná oblička v tme, z rednúcej zásoby stúpa prúd železa do pribúdajúcich červených krviniek" width="1600" height="1000" loading="lazy" decoding="async">
+      <img src="img/inhibitory-sglt2-hemoglobin-anemia-ckd.png" alt="Priesvitná oblička v tme, v kôre pribúdajú červené krvinky a v dolnej časti svieti zásoba železa" width="1600" height="1000" loading="lazy" decoding="async">
     </picture>
   </a>
-  <figcaption>Ilustračná poloschematická scéna, nie snímka pacienta ani lieku. Železo odchádza z rednúcej zásoby do vznikajúcich erytrocytov.</figcaption>
+  <figcaption>Ilustračná poloschematická scéna, nie snímka pacienta ani lieku. V jednej obličke sa stretáva novotvorba erytrocytov so zásobou železa.</figcaption>
 </figure>
 
 <p>Inhibítory sodíkovo-glukózového kotransportéra 2 (SGLT2) v združenej analýze 85 dvojito zaslepených randomizovaných štúdií zvýšili hemoglobín oproti kontrole o 0,60 g/dl a hematokrit o 2,36 percentuálneho bodu. Rozdiel je malý a štatisticky konzistentný. Autori sami označujú jeho klinický význam za nejasný. Priemerný vstupný hemoglobín bol 13,6 g/dl, takže išlo prevažne o ľudí bez anémie, nie o bežnú nefrologickú ambulanciu pacientov s anémiou pri chronickej chorobe obličiek (CKD).</p>
