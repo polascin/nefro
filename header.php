@@ -68,7 +68,7 @@ if ($showUnverifiedNotice && !empty($_SESSION['email'])) {
     <a href="https://www.swatch.com/en-us/internet-time.html"
        target="_blank" rel="noopener noreferrer"
        class="header-beat-link"
-       title="Swiss Internet Time — reálny čas, 1 deň = 1000 beatov">
+       title="Swiss Internet Time: reálny čas, 1 deň = 1000 beatov">
       <span id="beat-clock">@<?= $initBeat ?></span> .beat
     </a>
   </div>
