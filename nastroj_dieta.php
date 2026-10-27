@@ -103,7 +103,7 @@ $baseUrl = "https://nefro.polascin.net/";
                             <div class="form-group">
                                 <label for="dieta-category">Klinická kategória <span class="required">*</span></label>
                                 <select id="dieta-category" class="form-control">
-                                    <option value="">— vyberte —</option>
+                                    <option value="">Vyberte…</option>
                                     <option value="ckd_nd">CKD G3 až G5 bez dialýzy, bez diabetu</option>
                                     <option value="ckd_nd_dm">CKD G3 až G5 bez dialýzy, s diabetom</option>
                                     <option value="hd">Hemodialýza</option>
