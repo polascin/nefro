@@ -72,7 +72,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         $bmi = ckmParseNonNeg($form["bmi"]);
         if ($bmi === null || $bmi < 10.0 || $bmi > 80.0) {
-            $errors[] = "BMI musí byť 10 – 80 kg/m².";
+            $errors[] = "BMI musí byť 10 až 80 kg/m².";
         }
 
         $isAsian = $form["ancestry"] === "asian";
@@ -159,7 +159,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                                 $pdo,
                                 (int) $_SESSION["user_id"],
                                 "ckm_stage",
-                                "CKM syndróm — staging (AHA 2023)",
+                                "CKM syndróm: staging (AHA 2023)",
                                 $patient,
                                 $inputPayload,
                                 $resultPayload,
@@ -197,7 +197,7 @@ if (isLoggedIn()) {
 <html lang="sk">
 <head>
   <?php
-  $pageTitle = "Staging CKM syndrómu (kardio-renálno-metabolický) — AHA 2023 | Kalkulačky | Nefro-projekt Slovensko";
+  $pageTitle = "Staging CKM syndrómu (kardio-renálno-metabolický) podľa AHA 2023 | Kalkulačky | Nefro-projekt Slovensko";
   $canonicalUrl = "https://nefro.polascin.net/calculator_ckm.php";
   $seoDescription =
       "Staging kardiovaskulárno-renálno-metabolického (CKM) syndrómu podľa AHA 2023 (Ndumele): štádium 0 (bez RF), 1 (nadmerná/dysfunkčná adipozita), 2 (metabolické RF a/alebo CKD), 3 (subklinické KV ochorenie / veľmi vysoké riziko CKD), 4 (klinické KV ochorenie; 4a bez / 4b so zlyhaním obličiek). Hierarchická klasifikácia pre prevenciu.";
@@ -237,7 +237,7 @@ if (isLoggedIn()) {
 
     <?php
     $headerTitle = "Staging CKM syndrómu";
-    $headerIntro = "Kardio-renálno-metabolický syndróm — štádium 0–4 (AHA 2023)";
+    $headerIntro = "Kardio-renálno-metabolický syndróm: štádium 0 až 4 (AHA 2023)";
     $showLogo = false;
     include "header.php";
     ?>
@@ -253,7 +253,7 @@ if (isLoggedIn()) {
                 <div class="info-box">
                     <strong>Čo počíta:</strong> kardiovaskulárno-renálno-metabolický (CKM)
                     syndróm zachytáva previazanosť metabolických rizikových faktorov, chronickej
-                    choroby obličiek (CKD) a kardiovaskulárneho systému. Staging (0 – 4) slúži
+                    choroby obličiek (CKD) a kardiovaskulárneho systému. Staging (0 až 4) slúži
                     na <strong>prevenciu naprieč životom</strong> a zaraďuje pacienta do
                     <em>najvyššieho</em> štádia, ktorého kritériá spĺňa. Nástroj je dôležitý pre
                     nefrológiu, keďže CKD je integrálnou súčasťou stagingu.
@@ -261,8 +261,8 @@ if (isLoggedIn()) {
 
                 <div class="info-box-yellow">
                     <strong>Pozor:</strong> ide o <strong>zjednodušenú operacionalizáciu</strong>
-                    stagingu AHA — platia plné kritériá a klinický úsudok. Riziko CKD zadaj podľa
-                    KDIGO mapy (G/A) — pozri <a href="calculator_kdigo_risk.php">KDIGO kalkulačku</a>.
+                    stagingu AHA: platia plné kritériá a klinický úsudok. Riziko CKD zadaj podľa
+                    KDIGO mapy (G/A); pozri <a href="calculator_kdigo_risk.php">KDIGO kalkulačku</a>.
                     Staging nie je diagnostický test; <strong>regresia</strong> medzi štádiami je
                     pri liečbe možná a žiaduca.
                 </div>
@@ -271,11 +271,11 @@ if (isLoggedIn()) {
                     <summary>Štádiá CKM (najvyššie splnené určuje zaradenie)</summary>
                     <div class="calc-formula-content">
                         <div class="calc-formula-vars">
-                            <strong>0</strong> — bez rizikových faktorov CKM &bull;
-                            <strong>1</strong> — nadmerná/dysfunkčná adipozita (BMI ≥ 25; ≥ 23 ázijský pôvod / zvýšený obvod pása / prediabetes) &bull;
-                            <strong>2</strong> — metabolické RF (hypertenzia, diabetes, hypertriglyceridémia, metabolický syndróm) a/alebo CKD stredného–vysokého rizika &bull;
-                            <strong>3</strong> — subklinické KV ochorenie alebo veľmi vysoké riziko CKD &bull;
-                            <strong>4</strong> — klinické KV ochorenie (4a bez / 4b so zlyhaním obličiek)
+                            <strong>0</strong>: bez rizikových faktorov CKM &bull;
+                            <strong>1</strong>: nadmerná/dysfunkčná adipozita (BMI ≥ 25; ≥ 23 ázijský pôvod / zvýšený obvod pása / prediabetes) &bull;
+                            <strong>2</strong>: metabolické RF (hypertenzia, diabetes, hypertriglyceridémia, metabolický syndróm) a/alebo CKD stredného–vysokého rizika &bull;
+                            <strong>3</strong>: subklinické KV ochorenie alebo veľmi vysoké riziko CKD &bull;
+                            <strong>4</strong>: klinické KV ochorenie (4a bez / 4b so zlyhaním obličiek)
                         </div>
                     </div>
                 </details>
@@ -409,7 +409,7 @@ if (isLoggedIn()) {
                             </p>
                         <?php endif; ?>
                         <?php if ($calculated["clinical_cvd"] && !$calculated["any_ckm_factor"]): ?>
-                            <p class="calc-result-detail"><strong>Poznámka:</strong> nezadali ste žiadny CKM rizikový faktor. Staging CKM predpokladá súčasnú prítomnosť metabolických RF, adipozity alebo CKD — klinické KV ochorenie bez nich je mimo rámca CKM. Over zadané údaje.</p>
+                            <p class="calc-result-detail"><strong>Poznámka:</strong> nezadali ste žiadny CKM rizikový faktor. Staging CKM predpokladá súčasnú prítomnosť metabolických RF, adipozity alebo CKD; klinické KV ochorenie bez nich je mimo rámca CKM. Over zadané údaje.</p>
                         <?php endif; ?>
                         <p class="calc-result-detail">Staging je <strong>hierarchický</strong> a slúži prevencii, nie ako diagnostický test. Pri liečbe je regresia do nižšieho štádia možná.</p>
                         <div class="form-actions no-print">

@@ -221,7 +221,7 @@ if (isLoggedIn()) {
 <html lang="sk">
 <head>
   <?php
-  $pageTitle = "Mehran skóre — riziko kontrastom indukovaného AKI | Kalkulačky | Nefro-projekt Slovensko";
+  $pageTitle = "Mehran skóre: riziko kontrastom indukovaného AKI | Kalkulačky | Nefro-projekt Slovensko";
   $canonicalUrl = "https://nefro.polascin.net/calculator_mehran.php";
   $seoDescription =
       "Nefrologická kalkulačka Mehran skóre pre riziko kontrastom indukovaného akútneho poškodenia obličiek (CI-AKI/CIN) pred koronarografiou a CT s kontrastom. Pre lekárov na Slovensku.";
@@ -283,24 +283,24 @@ if (isLoggedIn()) {
                 </div>
 
                 <details open class="calc-formula-box">
-                    <summary>Bodovanie — Mehran 2004</summary>
+                    <summary>Bodovanie: Mehran 2004</summary>
                     <div class="calc-formula-content">
                         <ul class="mb-0">
-                            <li>Hypotenzia — <strong>5</strong> &bull; intraaortálna balónová kontrapulzácia (IABP) — <strong>5</strong> &bull; kongestívne srdcové zlyhanie (NYHA III/IV alebo pľúcny edém) — <strong>5</strong></li>
-                            <li>Vek &gt; 75 rokov — <strong>4</strong> &bull; anémia (Hct &lt; 39 % muži / &lt; 36 % ženy) — <strong>3</strong> &bull; diabetes mellitus — <strong>3</strong></li>
-                            <li>Objem kontrastu — <strong>1 bod / 100 mL</strong></li>
-                            <li>eGFR &lt; 60: 40 – 60 → <strong>2</strong>, 20 – &lt; 40 → <strong>4</strong>, &lt; 20 → <strong>6</strong></li>
+                            <li>Hypotenzia: <strong>5</strong> &bull; intraaortálna balónová kontrapulzácia (IABP): <strong>5</strong> &bull; kongestívne srdcové zlyhanie (NYHA III/IV alebo pľúcny edém): <strong>5</strong></li>
+                            <li>Vek &gt; 75 rokov: <strong>4</strong> &bull; anémia (Hct &lt; 39 % muži / &lt; 36 % ženy): <strong>3</strong> &bull; diabetes mellitus: <strong>3</strong></li>
+                            <li>Objem kontrastu: <strong>1 bod / 100 mL</strong></li>
+                            <li>eGFR &lt; 60: 40 až 60 → <strong>2</strong>, 20 až &lt; 40 → <strong>4</strong>, &lt; 20 → <strong>6</strong></li>
                         </ul>
                         <div class="calc-formula-vars">
-                            Kategórie: ≤ 5 nízke (CIN 7,5 %) &bull; 6 – 10 stredné (14,0 %) &bull;
-                            11 – 15 vysoké (26,1 %) &bull; ≥ 16 veľmi vysoké (57,3 %)
+                            Kategórie: ≤ 5 nízke (CIN 7,5 %) &bull; 6 až 10 stredné (14,0 %) &bull;
+                            11 až 15 vysoké (26,1 %) &bull; ≥ 16 veľmi vysoké (57,3 %)
                         </div>
                     </div>
                 </details>
 
                 <div class="info-box-green">
                     <strong>Porovnanie s referenčným kalkulátorom:</strong>
-                    <a href="https://www.mdcalc.com/calc/10242/mehran-score-post-pci-contrast-nephropathy" target="_blank" rel="noopener noreferrer">MDCalc — Mehran</a>
+                    <a href="https://www.mdcalc.com/calc/10242/mehran-score-post-pci-contrast-nephropathy" target="_blank" rel="noopener noreferrer">MDCalc: Mehran</a>
                 </div>
 
                 <?php foreach ($messages as $message): ?>
@@ -344,7 +344,7 @@ if (isLoggedIn()) {
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="contrast_volume_ml">Objem kontrastu (mL) <span class="optional">— voliteľné</span></label>
+                                <label for="contrast_volume_ml">Objem kontrastu (mL) <span class="optional">(voliteľné)</span></label>
                                 <input type="text" id="contrast_volume_ml" name="contrast_volume_ml" class="form-control" value="<?= htmlspecialchars($form["contrast_volume_ml"]) ?>" placeholder="napr. 150 (alebo prázdne)">
                             </div>
                         </div>
@@ -387,7 +387,7 @@ if (isLoggedIn()) {
                             &ensp;&bull;&ensp;<strong>Riziko dialýzy:</strong>
                             <?= htmlspecialchars((string) $calculated["dialysis_pct"]) ?>
                         </p>
-                        <p class="calc-result-detail"><strong>Body — vek:</strong> <?= (int) $calculated["age_pts"] ?>
+                        <p class="calc-result-detail"><strong>Body za vek:</strong> <?= (int) $calculated["age_pts"] ?>
                             &ensp;&bull;&ensp;<strong>renálne (eGFR <?= htmlspecialchars(calculatorFormatEgfrBothUnits((float) $calculated["egfr"])) ?>):</strong> <?= (int) $calculated["renal_pts"] ?>
                             &ensp;&bull;&ensp;<strong>kontrast (<?= htmlspecialchars(number_format((float)$calculated["contrast_volume_ml"], 0, ",", " ")) ?> mL):</strong> <?= (int) $calculated["contrast_pts"] ?>
                         </p>

@@ -88,7 +88,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         $mProtein = mgusParseNonNeg($form["m_protein"]);
         if ($mProtein === null || $mProtein > 100.0) {
-            $errors[] = "Sérový M-proteín musí byť 0 – 100 g/L.";
+            $errors[] = "Sérový M-proteín musí byť 0 až 100 g/L.";
         }
 
         $isotype = $form["isotype"] === "non_igg" ? "non_igg" : "igg";
@@ -149,7 +149,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                                 $pdo,
                                 (int) $_SESSION["user_id"],
                                 "mgus_risk",
-                                "MGUS — riziková stratifikácia (Mayo)",
+                                "MGUS: riziková stratifikácia (Mayo)",
                                 $patient,
                                 $inputPayload,
                                 $resultPayload,
@@ -187,10 +187,10 @@ if (isLoggedIn()) {
 <html lang="sk">
 <head>
   <?php
-  $pageTitle = "MGUS — riziková stratifikácia (Mayo) a κ/λ pomer | Kalkulačky | Nefro-projekt Slovensko";
+  $pageTitle = "MGUS: riziková stratifikácia (Mayo) a κ/λ pomer | Kalkulačky | Nefro-projekt Slovensko";
   $canonicalUrl = "https://nefro.polascin.net/calculator_mgus.php";
   $seoDescription =
-      "Mayo riziková stratifikácia MGUS (Rajkumar 2005): tri faktory — M-proteín ≥ 15 g/L, non-IgG izotyp, abnormálny κ/λ pomer voľných ľahkých reťazcov — predikujú 20-ročné riziko progresie (5/21/37/58 %). S poznámkou k MGRS a renálnemu rozpätiu FLC.";
+      "Mayo riziková stratifikácia MGUS (Rajkumar 2005), tri faktory: M-proteín ≥ 15 g/L, non-IgG izotyp, abnormálny κ/λ pomer voľných ľahkých reťazcov: predikujú 20-ročné riziko progresie (5/21/37/58 %). S poznámkou k MGRS a renálnemu rozpätiu FLC.";
   $baseUrl = "https://nefro.polascin.net/";
   $structuredData = [
       [
@@ -212,7 +212,7 @@ if (isLoggedIn()) {
               [
                   "@type" => "ListItem",
                   "position" => 3,
-                  "name" => "MGUS — riziková stratifikácia",
+                  "name" => "MGUS: riziková stratifikácia",
                   "item" => $baseUrl . "calculator_mgus.php",
               ],
           ],
@@ -226,7 +226,7 @@ if (isLoggedIn()) {
     <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>
 
     <?php
-    $headerTitle = "MGUS — riziková stratifikácia";
+    $headerTitle = "MGUS: riziková stratifikácia";
     $headerIntro = "Mayo model (Rajkumar 2005) + κ/λ pomer";
     $showLogo = false;
     include "header.php";
@@ -237,7 +237,7 @@ if (isLoggedIn()) {
     <main id="main-content" class="container main-content main-content--single-col" role="main">
         <div class="content-wrapper">
             <div class="auth-container auth-container--wide">
-                <h2>MGUS — riziková stratifikácia (Mayo)</h2>
+                <h2>MGUS: riziková stratifikácia (Mayo)</h2>
                 <p class="auth-subtitle">Voliteľné údaje pacienta + paraproteín a voľné ľahké reťazce pre odhad rizika progresie.</p>
 
                 <div class="info-box">
@@ -245,7 +245,7 @@ if (isLoggedIn()) {
                     progresie monoklonálnej gamapatie nejasného významu (MGUS) na mnohopočetný
                     myelóm alebo príbuznú malignitu podľa troch faktorov: M-proteín ≥ 15 g/L,
                     iný izotyp než IgG a abnormálny pomer voľných ľahkých reťazcov (κ/λ mimo
-                    <strong>0,26 – 1,65</strong>).
+                    <strong>0,26 až 1,65</strong>).
                 </div>
 
                 <div class="info-box-yellow">
@@ -254,12 +254,12 @@ if (isLoggedIn()) {
                     nefrotoxickým paraproteínom <strong>bez ohľadu na tento skóring</strong>.
                     Aj pri nízkom skóre, ak je prítomné renálne postihnutie (proteinúria, pokles
                     eGFR, akcelerovaná CKD), je indikovaná <strong>renálna biopsia a hematologická
-                    konzultácia</strong>. Použi <a href="calculator_mgrs.php">klasifikátor MGRS</a> —
+                    konzultácia</strong>. Použi <a href="calculator_mgrs.php">klasifikátor MGRS</a>;
                     tento nástroj odhaduje len hematologickú progresiu, nie renálny význam.
                 </div>
 
                 <details open class="calc-formula-box">
-                    <summary>Model — tri rizikové faktory (každý = 1 bod)</summary>
+                    <summary>Model: tri rizikové faktory (každý = 1 bod)</summary>
                     <div class="calc-formula-content">
                         <div class="calc-formula-line">\[ \text{pomer} = \frac{\text{voľné } \kappa}{\text{voľné } \lambda} \]</div>
                         <div class="calc-formula-vars">
@@ -277,7 +277,7 @@ if (isLoggedIn()) {
                 <div class="info-box-green">
                     <strong>Zdroje:</strong>
                     <a href="https://pubmed.ncbi.nlm.nih.gov/15855274/" target="_blank" rel="noopener noreferrer">Rajkumar S.V. et&nbsp;al., Blood 2005;106(3):812–7</a>
-                    &ensp;&bull;&ensp; renálne rozpätie κ/λ ~0,37 – 3,1 (Hutchison, CJASN 2008) — pri CKD interpretuj hraničné hodnoty opatrne
+                    &ensp;&bull;&ensp; renálne rozpätie κ/λ ~0,37 až 3,1 (Hutchison, CJASN 2008); pri CKD interpretuj hraničné hodnoty opatrne
                 </div>
 
                 <?php foreach ($messages as $message): ?>
@@ -342,7 +342,7 @@ if (isLoggedIn()) {
                         <div class="calc-egfr-result-main">
                             <div class="calc-result-value-block">
                                 <span class="calc-result-big-value"><?= (int) $calculated["progression_pct"] ?></span>
-                                <span class="calc-result-unit">% — 20-ročné riziko progresie</span>
+                                <span class="calc-result-unit">% (20-ročné riziko progresie)</span>
                             </div>
                             <div class="calc-result-badge <?= htmlspecialchars($riskCls) ?>">
                                 <?= (int) $calculated["factors"] ?> z 3 faktorov
@@ -364,7 +364,7 @@ if (isLoggedIn()) {
                             &ensp;&bull;&ensp; abnormálny κ/λ: <?= $calculated["f_flc"] ? "áno" : "nie" ?>
                         </p>
                         <?php if ((float)$calculated["m_protein"] >= 30.0): ?>
-                            <p class="calc-result-detail"><strong>Upozornenie:</strong> M-proteín ≥ 30 g/L prekračuje definíciu MGUS — zváž smoldering myelóm / mnohopočetný myelóm (potrebné CRAB kritériá, kostná dreň, zobrazenie).</p>
+                            <p class="calc-result-detail"><strong>Upozornenie:</strong> M-proteín ≥ 30 g/L prekračuje definíciu MGUS; zváž smoldering myelóm / mnohopočetný myelóm (potrebné CRAB kritériá, kostná dreň, zobrazenie).</p>
                         <?php endif; ?>
                         <p class="calc-result-detail">Model odhaduje <strong>hematologickú</strong> progresiu, nie renálne riziko. Pri obličkovom postihnutí postupuj podľa <a href="calculator_mgrs.php">algoritmu MGRS</a> (biopsia, hematológ) bez ohľadu na skóre.</p>
                         <div class="form-actions no-print">

@@ -7,7 +7,7 @@ require_once __DIR__ . '/calculators_common.php';
 require_once __DIR__ . '/prevent_model.php';
 
 const PREVENT_CALC_KEY   = 'prevent_aha_2024';
-const PREVENT_CALC_LABEL = 'PREVENT — AHA 2024 (KV riziko)';
+const PREVENT_CALC_LABEL = 'PREVENT: AHA 2024 (KV riziko)';
 
 $errors = [];
 $messages = [];
@@ -292,7 +292,7 @@ function preventRenderOutcome(string $title, array $pair, bool $show30): void
 <html lang="sk">
 <head>
   <?php
-  $pageTitle = 'PREVENT (AHA 2024) — kardiovaskulárne riziko | Kalkulačky | Nefro-projekt Slovensko';
+  $pageTitle = 'PREVENT (AHA 2024): kardiovaskulárne riziko | Kalkulačky | Nefro-projekt Slovensko';
   $canonicalUrl = 'https://nefro.polascin.net/calculator_prevent.php';
   $seoDescription = 'Kalkulačka AHA PREVENT (2024): 10- a 30-ročné riziko pre Total CVD, ASCVD a srdcové zlyhávanie. Zahŕňa eGFR a voliteľne UACR, HbA1c a SDI. S interpretáciou rizikovej kategórie a cieľa LDL podľa odporúčaní 2026. Pre lekárov na Slovensku.';
   $structuredData = [
@@ -314,7 +314,7 @@ function preventRenderOutcome(string $title, array $pair, bool $show30): void
 
     <?php
     $headerTitle = 'Kalkulačka PREVENT';
-    $headerIntro = 'AHA PREVENT (2024) — 10- a 30-ročné kardiovaskulárne riziko (Total CVD, ASCVD, HF)';
+    $headerIntro = 'AHA PREVENT (2024): 10- a 30-ročné kardiovaskulárne riziko (Total CVD, ASCVD, HF)';
     $showLogo = false;
     include 'header.php';
     ?>
@@ -324,11 +324,11 @@ function preventRenderOutcome(string $title, array $pair, bool $show30): void
     <main id="main-content" class="container main-content main-content--single-col" role="main">
         <div class="content-wrapper">
             <div class="auth-container auth-container--wide">
-                <h2>PREVENT — AHA 2024</h2>
-                <p class="auth-subtitle">Predicting Risk of cardiovascular disease EVENTs — 10- a 30-ročné absolútne riziko pre Total CVD, ASCVD a srdcové zlyhávanie (vek 30–79 r.).</p>
+                <h2>PREVENT: AHA 2024</h2>
+                <p class="auth-subtitle">Predicting Risk of cardiovascular disease EVENTs: 10- a 30-ročné absolútne riziko pre Total CVD, ASCVD a srdcové zlyhávanie (vek 30–79 r.).</p>
 
                 <details open class="calc-formula-box">
-                    <summary>Vzorec a model — PREVENT (Khan 2024, logistická regresia)</summary>
+                    <summary>Vzorec a model: PREVENT (Khan 2024, logistická regresia)</summary>
                     <div class="calc-formula-content">
                         <div class="calc-formula-line">\[ \text{Riziko} = \dfrac{e^{\,lp}}{1 + e^{\,lp}} \times 100\% \]</div>
                         <div class="calc-formula-line">\[ lp = \beta_0 + \textstyle\sum \beta_i x_i \quad(\text{sex-špecifické koeficienty}) \]</div>
@@ -504,7 +504,7 @@ function preventRenderOutcome(string $title, array $pair, bool $show30): void
                         </div>
 
                         <?php if (!$calculated['show_30yr']): ?>
-                            <p class="helper-text">30-ročné riziko sa nezobrazuje — PREVENT ho odporúča len pre vek do 59 rokov.</p>
+                            <p class="helper-text">30-ročné riziko sa nezobrazuje: PREVENT ho odporúča len pre vek do 59 rokov.</p>
                         <?php endif; ?>
 
                         <script nonce="<?= htmlspecialchars(getScriptNonce(), ENT_QUOTES) ?>">
