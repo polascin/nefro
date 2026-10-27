@@ -119,7 +119,7 @@ if (!function_exists('providerNoticeDescribeSource')) {
     {
         $source = trim($source);
         if ($source === '') {
-            return 'Verejne dostupné profesijné zdroje — register poskytovateľov zdravotnej '
+            return 'Verejne dostupné profesijné zdroje: register poskytovateľov zdravotnej '
                 . 'starostlivosti e-VÚC a webové stránky zdravotníckych zariadení.';
         }
 
@@ -141,7 +141,7 @@ if (!function_exists('providerNoticeDescribeSource')) {
                 . ($date !== '' ? ', stav k ' . $date : '') . '.';
         }
 
-        return 'Verejne dostupné profesijné zdroje — register poskytovateľov zdravotnej '
+        return 'Verejne dostupné profesijné zdroje: register poskytovateľov zdravotnej '
             . 'starostlivosti e-VÚC a webové stránky zdravotníckych zariadení.';
     }
 }
@@ -203,7 +203,7 @@ ani na automatizované rozhodovanie.</p>
 <h3>Na aký účel a na akom právnom základe</h3>
 <p>Účelom je vedenie prehľadu nefrologických a súvisiacich pracovísk na Slovensku
 a prípadné oslovenie vo veci odbornej spolupráce. Právnym základom je
-<strong>oprávnený záujem</strong> podľa čl. 6 ods. 1 písm. f) GDPR — konkrétne záujem
+<strong>oprávnený záujem</strong> podľa čl. 6 ods. 1 písm. f) GDPR, konkrétne záujem
 udržiavať aktuálny prehľad pracovísk v odbore a nadviazať odbornú spoluprácu.
 Ide o profesijné kontaktné údaje zverejnené na profesijné účely, nie o údaje
 súkromnej povahy, takže zásah do súkromia je minimálny.</p>
@@ -231,12 +231,12 @@ odpoveďou na tento e-mail alebo na adrese <a href="mailto:{$contact}">{$contact
 Nemusíte to nijako odôvodňovať.</strong> Ak namietnete, záznam z adresára bez zbytočného
 odkladu vymažeme a znova vás neoslovíme. Stačí kliknúť:</p>
 
-<p><a href="{$objection}">Namietam — vymažte môj záznam z adresára</a></p>
+<p><a href="{$objection}">Namietam, vymažte môj záznam z adresára</a></p>
 
 <p>Rovnaký účinok má aj obyčajná odpoveď na tento e-mail so slovom „namietam“.</p>
 
 <p>Aby sa ten istý kontakt nedostal do adresára znova pri jeho ďalšej aktualizácii,
-ponecháme si po výmaze jedinú vec — nezvratný odtlačok (hash) vašej e-mailovej adresy,
+ponecháme si po výmaze jedinú vec: nezvratný odtlačok (hash) vašej e-mailovej adresy,
 nie adresu samotnú. Slúži výhradne na to, aby sme vás znova neoslovili.</p>
 HTML;
     }
@@ -409,7 +409,7 @@ if (!function_exists('processProviderNoticeQueue')) {
             "UPDATE partner_providers SET notice_status = 'zlyhal' WHERE LOWER(email) = :email"
         );
 
-        $subject = 'Informácia o spracúvaní kontaktných údajov (čl. 14 GDPR) — nefro.polascin.net';
+        $subject = 'Informácia o spracúvaní kontaktných údajov (čl. 14 GDPR) | nefro.polascin.net';
 
         foreach ($items as $item) {
             $email = (string) $item['email'];

@@ -10,7 +10,7 @@ $pageLastUpdated = formatUserDateTime($info['effectiveDate'], 'd.m.Y');
 $pageTimeZone = getUserTimezoneAbbr() . ' (' . getUserTimezone() . ')';
 
 $legalTitle       = 'Ochrana osobných údajov';
-$legalDescription = 'Zásady ochrany osobných údajov pre Nefro-projekt Slovensko — aké údaje spracúvame, na akom právnom základe, sprostredkovatelia a vaše práva podľa GDPR a zákonov sveta.';
+$legalDescription = 'Zásady ochrany osobných údajov pre Nefro-projekt Slovensko: aké údaje spracúvame, na akom právnom základe, sprostredkovatelia a vaše práva podľa GDPR a zákonov sveta.';
 $legalSlug        = 'privacy.php';
 $legalHeaderTitle = 'Zásady ochrany osobných údajov';
 $legalHeaderIntro = 'Privacy Policy';
@@ -130,12 +130,12 @@ include 'legal_head.php';
                 <ul>
                     <li><strong>Sprostredkovateľ</strong> spracúva údaje výlučne podľa našich
                         pokynov a na základe zmluvy o spracúvaní podľa čl. 28 GDPR.</li>
-                    <li><strong>Samostatný prevádzkovateľ</strong> určuje vlastné účely —
+                    <li><strong>Samostatný prevádzkovateľ</strong> určuje vlastné účely;
                         pri platobných službách je to vykonanie platby, prevencia podvodov
                         a povinnosti podľa predpisov o platobných službách a proti legalizácii
                         príjmov z trestnej činnosti. Nad týmto spracúvaním nemáme zmluvnú
                         kontrolu a riadi sa zásadami príslušnej služby.</li>
-                    <li>Pri časti platobných kanálov <strong>neprenášame nič</strong> —
+                    <li>Pri časti platobných kanálov <strong>neprenášame nič</strong>;
                         zobrazíme len odkaz alebo číslo účtu a spojenie vytvorí váš prehliadač
                         či aplikácia. Uvádzame ich pre úplnosť.</li>
                 </ul>
@@ -166,9 +166,9 @@ include 'legal_head.php';
                 <h3>5. Medzinárodné prenosy</h3>
                 <p>
                     Niektorí poskytovatelia sídlia mimo vašej krajiny. Pri prenose údajov do
-                    tretích krajín sa opierame o vhodné záruky podľa čl. 46 GDPR — najmä
+                    tretích krajín sa opierame o vhodné záruky podľa čl. 46 GDPR, najmä
                     štandardné zmluvné doložky EÚ (SCC), prípadne rámec EU-US Data Privacy
-                    Framework tam, kde sa uplatňuje. Do USA sa — iba po udelení vášho súhlasu —
+                    Framework tam, kde sa uplatňuje. Do USA sa iba po udelení vášho súhlasu
                     prenášajú analytické údaje v Google Analytics 4. Ak si overujete telefónne
                     číslo, vaše číslo sa prenáša spoločnosti Twilio Inc. (USA), ktorá odosiela
                     overovací SMS kód; tento prenos je krytý štandardnými zmluvnými doložkami (SCC).
@@ -177,7 +177,7 @@ include 'legal_head.php';
                 </p>
                 <p>
                     <strong>Pri platbe za publikáciu</strong> sú naši zmluvní partneri v Európskej
-                    únii — Stripe Payments Europe (Írsko) a PayPal (Europe) v Luxembursku. Ak
+                    únii: Stripe Payments Europe (Írsko) a PayPal (Europe) v Luxembursku. Ak
                     tieto služby posielajú údaje ďalej v rámci svojej skupiny do USA, robia tak
                     na základe vlastných záruk (štandardné zmluvné doložky, prípadne rámec
                     EU-US Data Privacy Framework) a ako samostatní prevádzkovatelia. Pri Ko-fi
@@ -206,7 +206,7 @@ include 'legal_head.php';
                 </ul>
 
                 <p>
-                    <strong>Objednávky publikácií</strong> majú zámerne rôzne doby — jednotná
+                    <strong>Objednávky publikácií</strong> majú zámerne rôzne doby; jednotná
                     desaťročná lehota by znamenala, že držíme aj to, čo už nemá účel. Mazanie
                     a anonymizáciu vykonáva automatický cron, nie až reakcia na žiadosť:
                 </p>
@@ -215,7 +215,7 @@ include 'legal_head.php';
                         fakturačné údaje, suma, variabilný symbol, dátumy): 10 rokov podľa
                         § 35 zákona č. 431/2002 Z. z. o účtovníctve.</li>
                     <li><strong>Neuhradená alebo zrušená objednávka:</strong> 90 dní, potom sa
-                        maže celá — účtovný záznam z nej nevznikol.</li>
+                        maže celá, lebo účtovný záznam z nej nevznikol.</li>
                     <li><strong>IP adresa a prehliadač z objednávkového formulára:</strong>
                         90 dní. Potom sa z objednávky odstránia, zvyšok záznamu zostáva.</li>
                     <li><strong>Doklad o súhlasoch</strong> (čas potvrdenia podmienok, čas
@@ -298,7 +298,7 @@ include 'legal_head.php';
                 <p>
                     Tieto Zásady môžeme aktualizovať. Podstatné zmeny zvýrazníme v sekcii
                     „Súhrn posledných zmien“ vyššie a zmení sa dátum poslednej aktualizácie.
-                    Náš systém správy cookies uchováva verziu platného súhlasu — pri každej
+                    Náš systém správy cookies uchováva verziu platného súhlasu; pri každej
                     podstatnej zmene sa verzia aktualizuje a všetkým návštevníkom sa znova
                     zobrazí banner na potvrdenie nových podmienok (v súlade s čl. 7 ods. 3 GDPR).
                 </p>
