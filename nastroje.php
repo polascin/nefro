@@ -9,12 +9,12 @@ $baseUrl = "https://nefro.polascin.net/";
 $pageUrl = $baseUrl . "nastroje.php";
 $pageTitle = "Interaktívne nefrologické nástroje | " . $siteName;
 $pageDesc =
-    "Interaktívne klinické nástroje pre nefrológiu — krok-za-krokom diagnostické a rozhodovacie sprievodcovia: akútne poškodenie obličiek (AKI), hyponatrémia, hypokaliémia, trombotická mikroangiopatia (TMA), syndróm rozpadu nádoru (TLS), glomerulonefritídy (GN) a plánovač renálnej diéty.";
+    "Interaktívne klinické nástroje pre nefrológiu, diagnostickí a rozhodovací sprievodcovia krok za krokom: akútne poškodenie obličiek (AKI), hyponatrémia, hypokaliémia, trombotická mikroangiopatia (TMA), syndróm rozpadu nádoru (TLS), glomerulonefritídy (GN) a plánovač renálnej diéty.";
 
 $schemaWebApp = [
     "@context" => "https://schema.org",
     "@type" => ["WebApplication", "MedicalWebPage"],
-    "name" => "Interaktívne nefrologické nástroje — " . $siteName,
+    "name" => "Interaktívne nefrologické nástroje | " . $siteName,
     "description" => $pageDesc,
     "url" => $pageUrl,
     "inLanguage" => "sk-SK",
@@ -126,7 +126,7 @@ $schemaWebApp = [
                 <h1 class="visually-hidden">Interaktívne nefrologické nástroje</h1>
                 <p>
                     Interaktívne nástroje vás krok za krokom prevedú diagnostickým alebo rozhodovacím
-                    postupom. Na rozdiel od kalkulačiek nepočítajú jednu hodnotu — kladú cielené otázky
+                    postupom. Na rozdiel od kalkulačiek nepočítajú jednu hodnotu; kladú cielené otázky
                     a podľa odpovedí navrhujú pravdepodobnú kategóriu, odporúčané vyšetrenie a princípy
                     manažmentu. Sú orientačnou pomôckou a <strong>nenahrádzajú</strong> klinické vyšetrenie.
                 </p>
@@ -137,27 +137,27 @@ $schemaWebApp = [
                 <div class="features-grid calculators-grid">
                     <article class="feature-card calculator-card">
                         <h3>Sprievodca diagnostikou AKI</h3>
-                        <p>Diferenciálna diagnostika akútneho poškodenia obličiek podľa KDIGO — potvrdenie AKI a triáž príčin (postrenálne, prerenálne, ATN, AIN, glomerulárne, vaskulárne) s odporúčaným vyšetrením a manažmentom.</p>
+                        <p>Diferenciálna diagnostika akútneho poškodenia obličiek podľa KDIGO: potvrdenie AKI a triáž príčin (postrenálne, prerenálne, ATN, AIN, glomerulárne, vaskulárne) s odporúčaným vyšetrením a manažmentom.</p>
                         <a href="nastroj_aki.php" class="btn-primary">Otvoriť nástroj</a>
                     </article>
                     <article class="feature-card calculator-card">
                         <h3>Algoritmus hyponatrémie</h3>
-                        <p>Diagnostický postup pri hyponatrémii — tonicita (osmolalita), závažnosť/symptómy, objemový stav a močové parametre (U-Na, U-osm) s diferenciálnou diagnostikou (SIADH, hypovolémia, hypervolémia) a limitmi korekcie (ODS).</p>
+                        <p>Diagnostický postup pri hyponatrémii: tonicita (osmolalita), závažnosť/symptómy, objemový stav a močové parametre (U-Na, U-osm) s diferenciálnou diagnostikou (SIADH, hypovolémia, hypervolémia) a limitmi korekcie (ODS).</p>
                         <a href="nastroj_hyponatremia.php" class="btn-primary">Otvoriť nástroj</a>
                     </article>
                     <article class="feature-card calculator-card">
                         <h3>Sprievodca hypokaliémiou</h3>
-                        <p>Diagnostika a manažment hypokaliémie — závažnosť/EKG, transcelulárny presun, močový draslík, acidobáza, krvný tlak a močový chlorid; diferenciálna diagnostika (RTA, hyperaldosteronizmus, Bartter/Gitelman) s dôrazom na korekciu magnézia.</p>
+                        <p>Diagnostika a manažment hypokaliémie: závažnosť/EKG, transcelulárny presun, močový draslík, acidobáza, krvný tlak a močový chlorid; diferenciálna diagnostika (RTA, hyperaldosteronizmus, Bartter/Gitelman) s dôrazom na korekciu magnézia.</p>
                         <a href="nastroj_hypokalemia.php" class="btn-primary">Otvoriť nástroj</a>
                     </article>
                     <article class="feature-card calculator-card">
                         <h3>Sprievodca TMA</h3>
-                        <p>Diferenciálna diagnostika trombotickej mikroangiopatie — potvrdenie MAHA a trombocytopénie, odlíšenie TTP (ADAMTS13/PLASMIC), STEC-HUS, atypického HUS (komplement) a sekundárnej TMA s princípmi urgentného manažmentu (plazmaferéza, eculizumab).</p>
+                        <p>Diferenciálna diagnostika trombotickej mikroangiopatie: potvrdenie MAHA a trombocytopénie, odlíšenie TTP (ADAMTS13/PLASMIC), STEC-HUS, atypického HUS (komplement) a sekundárnej TMA s princípmi urgentného manažmentu (plazmaferéza, eculizumab).</p>
                         <a href="nastroj_tma.php" class="btn-primary">Otvoriť nástroj</a>
                     </article>
                     <article class="feature-card calculator-card">
                         <h3>Sprievodca TLS</h3>
-                        <p>Syndróm rozpadu nádoru — stratifikácia rizika podľa typu a nálože nádoru aj faktorov pacienta, voľba profylaxie (hydratácia, alopurinol, rasburikáza) a manažment etablovaného TLS vrátane indikácií dialýzy.</p>
+                        <p>Syndróm rozpadu nádoru: stratifikácia rizika podľa typu a nálože nádoru aj faktorov pacienta, voľba profylaxie (hydratácia, alopurinol, rasburikáza) a manažment etablovaného TLS vrátane indikácií dialýzy.</p>
                         <a href="nastroj_tls.php" class="btn-primary">Otvoriť nástroj</a>
                     </article>
                     <article class="feature-card calculator-card">
@@ -167,7 +167,7 @@ $schemaWebApp = [
                     </article>
                     <article class="feature-card calculator-card">
                         <h3>Sprievodca diagnostikou GN</h3>
-                        <p>Diferenciálna diagnostika glomerulonefritíd — nefritický vs nefrotický obraz, RPGN (ANCA, anti-GBM, imunokomplexová), rozdelenie podľa komplementu (postinfekčná, lupus, MPGN/C3G, kryoglobulinemická, IgA) a nefrotické jednotky (MCD, membranózna, FSGS, diabetická, sekundárne).</p>
+                        <p>Diferenciálna diagnostika glomerulonefritíd: nefritický vs nefrotický obraz, RPGN (ANCA, anti-GBM, imunokomplexová), rozdelenie podľa komplementu (postinfekčná, lupus, MPGN/C3G, kryoglobulinemická, IgA) a nefrotické jednotky (MCD, membranózna, FSGS, diabetická, sekundárne).</p>
                         <a href="nastroj_gn.php" class="btn-primary">Otvoriť nástroj</a>
                     </article>
                 </div>
