@@ -151,7 +151,7 @@ function publicationFormats(): array
             'ext'   => 'pdf',
             'label' => 'PDF',
             'mime'  => 'application/pdf',
-            'note'  => 'Základný formát s pevnou sadzbou — na čítanie na počítači, tablete aj na tlač. Otvorí ho čokoľvek.',
+            'note'  => 'Základný formát s pevnou sadzbou na čítanie na počítači, tablete aj na tlač. Otvorí ho čokoľvek.',
         ],
         'epub' => [
             'ext'   => 'epub',
@@ -163,13 +163,13 @@ function publicationFormats(): array
             'ext'   => 'azw3',
             'label' => 'AZW3 (Kindle)',
             'mime'  => 'application/vnd.amazon.ebook',
-            'note'  => 'Pre čítačky Amazon Kindle — súbor pošlite do zariadenia cez Send to Kindle alebo USB.',
+            'note'  => 'Pre čítačky Amazon Kindle; súbor pošlite do zariadenia cez Send to Kindle alebo USB.',
         ],
         'docx' => [
             'ext'   => 'docx',
             'label' => 'DOCX',
             'mime'  => 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
-            'note'  => 'Editovateľný dokument pre Microsoft Word — ak si chcete robiť vlastné poznámky či výpisky.',
+            'note'  => 'Editovateľný dokument pre Microsoft Word, ak si chcete robiť vlastné poznámky či výpisky.',
         ],
         'odt' => [
             'ext'   => 'odt',
@@ -343,11 +343,11 @@ function publications(): array
                 . 'zoradených a prelinkovaných na čítanie offline.',
             'description'  => [
                 'Prvý zväzok série <strong>SK Nefro Báza</strong> zhromažďuje všetko, čo na portáli '
-                . '<em>Nefro-projekt Slovensko</em> vyšlo od apríla do začiatku októbra 2026 — '
+                . '<em>Nefro-projekt Slovensko</em> vyšlo od apríla do začiatku októbra 2026: '
                 . '387 odborných článkov vrátane ťahákov a checklistov. Popularizačné texty pre pacientov do knihy zaradené nie sú.',
                 'Na webe je obsah rozdrobený do jednotlivých článkov a nájdete ho len cez vyhľadávanie. '
                 . 'V knihe je zoradený, s obsahom, priebežným číslovaním a zachovanými odkazmi na zdroje, '
-                . 'takže sa dá čítať aj listovať ako celok — v ambulancii, na dialýze aj bez internetu.',
+                . 'takže sa dá čítať aj listovať ako celok, v ambulancii, na dialýze aj bez internetu.',
                 'Texty prešli pred zostavením jazykovou korektúrou a zjednotením terminológie '
                 . '(chronická choroba obličiek, glomerulová filtrácia, inhibítor SGLT2, agonista GLP-1, '
                 . 'jednotky mmol/l), takže znenie je konzistentné naprieč celým zväzkom.',
@@ -358,7 +358,7 @@ function publications(): array
                 '16 tematických kapitol a príloha, v kapitolách chronologicky, s obsahom a vnútornými odkazmi',
                 'Zachované citácie a odkazy na primárne zdroje (PubMed, Crossref)',
                 'Jazyková korektúra a zjednotená odborná terminológia',
-                'Bez DRM — kúpený súbor je váš, čítajte ho na čomkoľvek',
+                'Bez DRM: kúpený súbor je váš, čítajte ho na čomkoľvek',
             ],
             'audience'     => 'Nefrológovia, internisti, lekári v špecializačnej príprave, sestry na dialýze '
                 . 'a informovaní pacienti, ktorí chcú mať odborný obsah portálu pohromade a offline.',
@@ -383,7 +383,7 @@ function publications(): array
             'cover_small' => 'img/publikacie/sk-nefro-baza-1-en-obalka-600.jpg',
             'formats'     => ['pdf', 'epub', 'azw3', 'docx', 'odt'],
             'is_available' => true,
-            'excerpt'     => 'Anglický preklad odborného ročníka portálu — 387 článkov o chronickej '
+            'excerpt'     => 'Anglický preklad odborného ročníka portálu: 387 článkov o chronickej '
                 . 'chorobe obličiek, dialýze, transplantácii a internej medicíne. Vhodné na '
                 . 'zdieľanie so zahraničnými kolegami a na citovanie v anglickom prostredí.',
             'description'  => [
@@ -399,12 +399,12 @@ function publications(): array
                 . 'oddeľovače sú prevedené do anglickej konvencie.',
             ],
             'highlights'   => [
-                '387 článkov na 1 782 stranách — odborný ročník v angličtine',
+                '387 článkov na 1 782 stranách, odborný ročník v angličtine',
                 '393 ilustrácií a schém v plnom rozlíšení',
                 'Pri každom článku odkaz na slovenskú online verziu',
                 'Anglická terminológia, jednotky a desatinné oddeľovače',
                 'Zachované citácie a odkazy na primárne zdroje (PubMed, Crossref)',
-                'Bez DRM — kúpený súbor je váš, čítajte ho na čomkoľvek',
+                'Bez DRM: kúpený súbor je váš, čítajte ho na čomkoľvek',
             ],
             'audience'     => 'Zahraniční kolegovia, slovenskí nefrológovia a internisti, ktorí potrebujú '
                 . 'odborný obsah v angličtine na zdieľanie, citovanie alebo prednášky.',
@@ -426,7 +426,7 @@ function publications(): array
             'cover_small' => 'img/publikacie/sk-nefro-baza-1-de-obalka-600.jpg',
             'formats'     => ['pdf', 'epub', 'azw3', 'docx', 'odt'],
             'is_available' => true,
-            'excerpt'     => 'Nemecký preklad odborného ročníka portálu — 387 článkov o chronickej '
+            'excerpt'     => 'Nemecký preklad odborného ročníka portálu: 387 článkov o chronickej '
                 . 'chorobe obličiek, dialýze, transplantácii a internej medicíne. Vhodné na '
                 . 'zdieľanie s nemecky hovoriacimi kolegami a na odborné štúdium.',
             'description'  => [
@@ -440,12 +440,12 @@ function publications(): array
                 . 'a jazykové konvencie sú prispôsobené nemčine.',
             ],
             'highlights'   => [
-                '387 článkov na 1 912 stranách — odborný ročník v nemčine',
+                '387 článkov na 1 912 stranách, odborný ročník v nemčine',
                 '393 ilustrácií a schém v plnom rozlíšení',
                 'Pri každom článku odkaz na slovenskú online verziu',
                 'Nemecká odborná terminológia a jazykové konvencie',
                 'Zachované citácie a odkazy na primárne zdroje (PubMed, Crossref)',
-                'Bez DRM — kúpený súbor je váš, čítajte ho na čomkoľvek',
+                'Bez DRM: kúpený súbor je váš, čítajte ho na čomkoľvek',
             ],
             'audience'     => 'Nemecky hovoriaci nefrológovia, internisti a lekári v špecializačnej príprave '
                 . 'aj slovenskí odborníci, ktorí potrebujú obsah v nemčine na štúdium alebo zdieľanie.',
@@ -470,7 +470,7 @@ function publications(): array
             'cover_small' => 'img/publikacie/sk-nefro-baza-1-kompendium-obalka-600.jpg',
             'formats'     => ['pdf', 'epub', 'azw3', 'docx', 'odt'],
             'is_available' => true,
-            'excerpt'     => 'Zhustené vydanie prvého zväzku — 387 článkov ako abstrakt a štyri až sedem '
+            'excerpt'     => 'Zhustené vydanie prvého zväzku: 387 článkov ako abstrakt a štyri až sedem '
                 . 'kľúčových bodov, k tomu syntéza na začiatku každej zo 16 kapitol. '
                 . 'Celý ročník na 261 stranách namiesto 1 745.',
             'description'  => [
@@ -483,20 +483,20 @@ function publications(): array
                 . 'súvislého obrazu a pri každom tvrdení odkazuje na číslo zdrojového článku. '
                 . 'Číslovanie je zhodné s plným vydaním, takže prechod na celý text je okamžitý.',
                 'Zhustenie má svoju cenu: kompendium <strong>nepreberá zoznamy literatúry, '
-                . 'tabuľky ani obrázky</strong>. Je mapou, nie náhradou plného znenia — '
+                . 'tabuľky ani obrázky</strong>. Je mapou, nie náhradou plného znenia; '
                 . 'pri klinickom rozhodnutí, citovaní alebo výučbe treba siahnuť po '
                 . 'plnom článku v zväzku <em>SK Nefro Báza 1</em> alebo na portáli.',
             ],
             'highlights'   => [
-                '387 článkov na 261 stranách — celý ročník za zlomok rozsahu',
+                '387 článkov na 261 stranách, celý ročník za zlomok rozsahu',
                 'Pri každom článku abstrakt a 4 až 7 kľúčových bodov s číslami',
                 'Syntéza kľúčových posolstiev na začiatku každej zo 16 kapitol',
                 'Číslovanie zhodné s plným vydaním SK Nefro Báza 1',
                 'Odkaz na online verziu pri každom článku',
-                'Bez DRM — kúpený súbor je váš, čítajte ho na čomkoľvek',
+                'Bez DRM: kúpený súbor je váš, čítajte ho na čomkoľvek',
             ],
             'audience'     => 'Lekári, ktorí potrebujú rýchlu orientáciu pri vizite, v ambulancii alebo '
-                . 'pred seminárom — a čitatelia plného vydania, ktorým sa hodí stručný register toho, '
+                . 'pred seminárom, a čitatelia plného vydania, ktorým sa hodí stručný register toho, '
                 . 'čo jednotlivé články priniesli.',
         ],
         [
@@ -519,7 +519,7 @@ function publications(): array
             'cover_small' => 'img/publikacie/sk-nefro-baza-1-kompendium-en-obalka-600.jpg',
             'formats'     => ['pdf', 'epub', 'azw3', 'docx', 'odt'],
             'is_available' => true,
-            'excerpt'     => 'Anglické vydanie kompendia — 387 článkov ako abstrakt a stručné zhrnutie, '
+            'excerpt'     => 'Anglické vydanie kompendia: 387 článkov ako abstrakt a stručné zhrnutie, '
                 . 'k tomu syntéza na začiatku každej zo 16 kapitol. Celý ročník na 275 stranách '
                 . 'namiesto 1 782.',
             'description'  => [
@@ -536,18 +536,18 @@ function publications(): array
                 . 'Odkazy na online verziu vedú na slovenský originál; plné anglické znenie '
                 . 'je v anglickom vydaní zväzku 1.',
                 'Rovnako ako slovenské kompendium <strong>nepreberá zoznamy literatúry, '
-                . 'tabuľky ani obrázky</strong> — je mapou, nie náhradou plného znenia.',
+                . 'tabuľky ani obrázky</strong>; je mapou, nie náhradou plného znenia.',
             ],
             'highlights'   => [
-                '387 článkov na 275 stranách — celý ročník v angličtine za zlomok rozsahu',
+                '387 článkov na 275 stranách, celý ročník v angličtine za zlomok rozsahu',
                 'Pri každom článku abstrakt a stručné zhrnutie s kľúčovými číslami',
                 'Syntéza kľúčových posolstiev na začiatku každej zo 16 kapitol',
                 'Číslovanie zhodné s anglickým plným vydaním (príloha A.1 až A.11)',
                 'Pri každom článku odkaz na slovenskú online verziu',
-                'Bez DRM — kúpený súbor je váš, čítajte ho na čomkoľvek',
+                'Bez DRM: kúpený súbor je váš, čítajte ho na čomkoľvek',
             ],
             'audience'     => 'Zahraniční kolegovia a slovenskí lekári, ktorí potrebujú rýchlu '
-                . 'orientáciu v angličtine — na vizitu, prednášku alebo zdieľanie s kolegami '
+                . 'orientáciu v angličtine, na vizitu, prednášku alebo zdieľanie s kolegami '
                 . 'mimo Slovenska.',
         ],
         [
@@ -567,7 +567,7 @@ function publications(): array
             'cover_small' => 'img/publikacie/sk-nefro-baza-1-kompendium-de-obalka-600.jpg',
             'formats'     => ['pdf', 'epub', 'azw3', 'docx', 'odt'],
             'is_available' => true,
-            'excerpt'     => 'Nemecké vydanie kompendia — 387 článkov ako abstrakt a stručné zhrnutie, '
+            'excerpt'     => 'Nemecké vydanie kompendia: 387 článkov ako abstrakt a stručné zhrnutie, '
                 . 'doplnené syntézou na začiatku každej zo 16 kapitol. Celý ročník na 300 stranách.',
             'description'  => [
                 '<strong>Nemecké vydanie kompendia</strong> prvého zväzku série <em>SK Nefro Báza</em>. '
@@ -580,12 +580,12 @@ function publications(): array
                 . 'rýchla mapa ročníka; pri klinickom rozhodovaní, citovaní alebo výučbe treba použiť plné znenie.',
             ],
             'highlights'   => [
-                '387 článkov na 300 stranách — celý odborný ročník v skratke',
+                '387 článkov na 300 stranách, celý odborný ročník v skratke',
                 'Pri každom článku abstrakt a stručné zhrnutie s kľúčovými číslami',
                 'Syntéza kľúčových posolstiev na začiatku každej zo 16 kapitol',
                 'Číslovanie zhodné s nemeckým plným vydaním',
                 'Pri každom článku odkaz na slovenskú online verziu',
-                'Bez DRM — kúpený súbor je váš, čítajte ho na čomkoľvek',
+                'Bez DRM: kúpený súbor je váš, čítajte ho na čomkoľvek',
             ],
             'audience'     => 'Nemecky hovoriaci lekári, ktorí potrebujú rýchlu orientáciu pri vizite, '
                 . 'v ambulancii alebo pred seminárom, a čitatelia nemeckého plného vydania.',
@@ -607,7 +607,7 @@ function publications(): array
             'cover_small' => 'img/publikacie/sk-nefro-baza-1-it-obalka-600.jpg',
             'formats'     => ['pdf', 'epub', 'azw3', 'docx', 'odt'],
             'is_available' => true,
-            'excerpt'     => 'Taliansky preklad odborného ročníka portálu — 387 článkov o chronickej '
+            'excerpt'     => 'Taliansky preklad odborného ročníka portálu: 387 článkov o chronickej '
                 . 'chorobe obličiek, dialýze, transplantácii a internej medicíne. Vhodné na '
                 . 'zdieľanie s taliansky hovoriacimi kolegami a na odborné štúdium.',
             'description'  => [
@@ -621,12 +621,12 @@ function publications(): array
                 . 'a jazykové konvencie sú prispôsobené taliančine.',
             ],
             'highlights'   => [
-                '387 článkov na 1 853 stranách — odborný ročník v taliančine',
+                '387 článkov na 1 853 stranách, odborný ročník v taliančine',
                 '393 ilustrácií a schém v plnom rozlíšení',
                 'Pri každom článku odkaz na slovenskú online verziu',
                 'Talianska odborná terminológia a jazykové konvencie',
                 'Zachované citácie a odkazy na primárne zdroje (PubMed, Crossref)',
-                'Bez DRM — kúpený súbor je váš, čítajte ho na čomkoľvek',
+                'Bez DRM: kúpený súbor je váš, čítajte ho na čomkoľvek',
             ],
             'audience'     => 'Taliansky hovoriaci nefrológovia, internisti a lekári v špecializačnej príprave '
                 . 'aj slovenskí odborníci, ktorí potrebujú obsah v taliančine na štúdium alebo zdieľanie.',
@@ -648,7 +648,7 @@ function publications(): array
             'cover_small' => 'img/publikacie/sk-nefro-baza-1-kompendium-it-obalka-600.jpg',
             'formats'     => ['pdf', 'epub', 'azw3', 'docx', 'odt'],
             'is_available' => true,
-            'excerpt'     => 'Talianske vydanie kompendia — 387 článkov ako abstrakt a stručné zhrnutie, '
+            'excerpt'     => 'Talianske vydanie kompendia: 387 článkov ako abstrakt a stručné zhrnutie, '
                 . 'doplnené syntézou na začiatku každej zo 16 kapitol. Celý ročník na 290 stranách.',
             'description'  => [
                 '<strong>Talianske vydanie kompendia</strong> prvého zväzku série <em>SK Nefro Báza</em>. '
@@ -661,12 +661,12 @@ function publications(): array
                 . 'rýchla mapa ročníka; pri klinickom rozhodovaní, citovaní alebo výučbe treba použiť plné znenie.',
             ],
             'highlights'   => [
-                '387 článkov na 290 stranách — celý odborný ročník v skratke',
+                '387 článkov na 290 stranách, celý odborný ročník v skratke',
                 'Pri každom článku abstrakt a stručné zhrnutie s kľúčovými číslami',
                 'Syntéza kľúčových posolstiev na začiatku každej zo 16 kapitol',
                 'Číslovanie zhodné s talianskym plným vydaním',
                 'Pri každom článku odkaz na slovenskú online verziu',
-                'Bez DRM — kúpený súbor je váš, čítajte ho na čomkoľvek',
+                'Bez DRM: kúpený súbor je váš, čítajte ho na čomkoľvek',
             ],
             'audience'     => 'Taliansky hovoriaci lekári, ktorí potrebujú rýchlu orientáciu pri vizite, '
                 . 'v ambulancii alebo pred seminárom, a čitatelia talianskeho plného vydania.',
@@ -1028,7 +1028,7 @@ function publicationPaymentMethods(array $order): array
             'key'      => 'stripe',
             'name'     => $stripe['exact']
                 ? 'Platobná karta, Apple Pay a Google Pay'
-                : 'Platobná karta, Apple Pay a Google Pay — sumu zadávate ručne',
+                : 'Platobná karta, Apple Pay a Google Pay (sumu zadávate ručne)',
             'desc'     => $stripe['exact']
                 ? 'Zabezpečená platobná brána Stripe s predvyplnenou sumou ' . $price
                     . '. Platí sa kartou alebo mobilnou peňaženkou, bez zadávania bankových údajov.'
@@ -1037,7 +1037,7 @@ function publicationPaymentMethods(array $order): array
                 // a môže sa preklepnúť — na to musí byť výslovne upozornený,
                 // inak vznikne nedoplatok, ktorý sa rieši dodatočne.
                 : 'Zabezpečená platobná brána Stripe. Platobná stránka ešte nemá pevnú cenu, '
-                    . 'takže sumu ' . $price . ' musíte zadať sami — skontrolujte si ju prosím '
+                    . 'takže sumu ' . $price . ' musíte zadať sami; skontrolujte si ju prosím '
                     . 'pred potvrdením. Číslo objednávky sa prenesie automaticky. '
                     . 'Ak chcete mať sumu predvyplnenú, použite bankový prevod alebo PayPal.',
             'url'      => $stripe['url'],
@@ -1066,7 +1066,7 @@ function publicationPaymentMethods(array $order): array
             'key'      => 'revolut',
             'name'     => 'Revolut',
             'desc'     => 'Karta, Apple Pay aj Google Pay jedným odkazom. Revolut neprenesie sumu '
-                . 'ani číslo objednávky — zadajte sumu ' . $price . ' a do popisu platby '
+                . 'ani číslo objednávky; zadajte sumu ' . $price . ' a do popisu platby '
                 . 'variabilný symbol.',
             'url'      => $cfg['revolut_url'],
             'cta'      => 'Zaplatiť cez Revolut',
@@ -1091,7 +1091,7 @@ function publicationPaymentMethods(array $order): array
     if ($cfg['viamo_phone_raw'] !== '') {
         $methods[] = [
             'key'        => 'viamo',
-            'name'       => 'Viamo — platba na telefónne číslo',
+            'name'       => 'Viamo: platba na telefónne číslo',
             'desc'       => 'Okamžitá platba medzi slovenskými bankami (Tatra banka, VÚB, OTP) '
                 . 'bez IBAN. V aplikácii banky zvoľte platbu na telefónne číslo, zadajte sumu '
                 . $price . ' a do poznámky variabilný symbol.',
@@ -1399,7 +1399,7 @@ function sendPublicationOrderInstructionsEmail(array $order, string $token): boo
     $consentDeliveryAt = (string) ($order['consent_delivery_at'] ?? '');
     $consentVersion = (string) ($order['consent_terms_version'] ?? PUBLICATION_TERMS_VERSION);
 
-    $subject = 'Objednávka ' . $vs . ' — platobné pokyny · ' . EMAIL_BRAND_NAME;
+    $subject = 'Objednávka ' . $vs . ': platobné pokyny · ' . EMAIL_BRAND_NAME;
 
     $rows = [
         'Publikácia'        => $title,
@@ -1431,7 +1431,7 @@ function sendPublicationOrderInstructionsEmail(array $order, string $token): boo
         . $rowsHtml . '</table>'
         . '<p style="margin:0 0 16px;">Platbu spárujeme podľa variabilného symbolu, zvyčajne '
         . 'do jedného pracovného dňa od pripísania na účet. Potom vám pošleme publikáciu '
-        . 'e-mailom — súbory, ktoré sa zmestia do prílohy, prídu priamo v nej, '
+        . 'e-mailom; súbory, ktoré sa zmestia do prílohy, prídu priamo v nej, '
         . 'objemnejšie stiahnete na stránke objednávky.</p>'
         . '<p style="margin:0 0 16px;color:#334155;">Stav objednávky a platobné pokyny máte '
         . 'kedykoľvek na tejto adrese:</p>'
@@ -1445,7 +1445,7 @@ function sendPublicationOrderInstructionsEmail(array $order, string $token): boo
         . '<p style="margin:0 0 16px;color:#334155;">Verzia obchodných podmienok: '
         . escapeEmailHtml($consentVersion) . '.</p>'
         . '<p style="margin:0;color:#64748b;font-size:14px;line-height:22px;">Objednávka je '
-        . 'rezervovaná ' . $dueDays . ' dní. Ak nestihnete zaplatiť, nič sa nedeje — '
+        . 'rezervovaná ' . $dueDays . ' dní. Ak nestihnete zaplatiť, nič sa nedeje, '
         . 'objednávku jednoducho vytvorte znova. Predávajúci: '
         . escapeEmailHtml($seller['name']) . ', ' . escapeEmailHtml($seller['address'])
         . ', IČO ' . escapeEmailHtml($seller['companyId'])
@@ -1464,7 +1464,7 @@ function sendPublicationOrderInstructionsEmail(array $order, string $token): boo
         . publicationDeliveryConsentText() . ' Potvrdené: ' . $consentDeliveryAt . ".\n"
         . 'Verzia obchodných podmienok: ' . $consentVersion . ".\n\n"
         . 'Platbu spárujeme podľa variabilného symbolu, zvyčajne do jedného pracovného dňa '
-        . 'od pripísania na účet. Potom vám pošleme publikáciu e-mailom — súbory, ktoré sa '
+        . 'od pripísania na účet. Potom vám pošleme publikáciu e-mailom; súbory, ktoré sa '
         . 'zmestia do prílohy, prídu priamo v nej, objemnejšie stiahnete na stránke objednávky.' . "\n\n"
         . 'Objednávka je rezervovaná ' . $dueDays . ' dní.' . "\n\n"
         . 'Predávajúci: ' . $seller['name'] . ', ' . $seller['address']
@@ -1773,9 +1773,9 @@ function sendPublicationOrderDeliveryEmail(array $order, string $token): array
         }
         $rest = implode(', ', $restLabels);
         $introHtml .= '<p style="margin:0 0 16px;">Ostatné formáty ('
-            . escapeEmailHtml($rest) . ') posielame v samostatných e-mailoch — '
+            . escapeEmailHtml($rest) . ') posielame v samostatných e-mailoch, lebo '
             . 'do jednej správy sa súbory tejto veľkosti nezmestia.</p>';
-        $introText .= 'Ostatné formáty (' . $rest . ') posielame v samostatných e-mailoch — '
+        $introText .= 'Ostatné formáty (' . $rest . ') posielame v samostatných e-mailoch, lebo '
             . 'do jednej správy sa súbory tejto veľkosti nezmestia.' . "\n\n";
     }
 
@@ -1783,17 +1783,17 @@ function sendPublicationOrderDeliveryEmail(array $order, string $token): array
         $labels = implode(', ', publicationFormatLabels($linked));
         $reason = $batches === []
             ? 'Súbory sú na e-mailovú prílohu príliš veľké, preto ich stiahnete na stránke objednávky'
-            : 'Formát ' . $labels . ' je na e-mailovú prílohu príliš veľký — stiahnete ho na stránke objednávky';
+            : 'Formát ' . $labels . ' je na e-mailovú prílohu príliš veľký; stiahnete ho na stránke objednávky';
         $introHtml .= '<p style="margin:0 0 16px;">' . escapeEmailHtml($reason) . ':</p>'
             . '<p style="margin:0 0 16px;word-break:break-word;"><a href="' . escapeEmailHtml($orderUrl)
             . '" style="color:#0b61d1;text-decoration:underline;">' . escapeEmailHtml($orderUrl) . '</a></p>';
         $introText .= $reason . ':' . "\n" . $orderUrl . "\n\n";
     }
 
-    $introHtml .= '<p style="margin:0 0 16px;color:#334155;">Tento e-mail si odložte — je zároveň '
+    $introHtml .= '<p style="margin:0 0 16px;color:#334155;">Tento e-mail si odložte, je zároveň '
         . 'vaším dokladom o prístupe. Sťahovanie na stránke objednávky je platné '
         . $years . ' roky, so stropom ' . PUBLICATION_DOWNLOAD_MAX . ' stiahnutí.</p>';
-    $introText .= 'Tento e-mail si odložte — je zároveň vaším dokladom o prístupe. '
+    $introText .= 'Tento e-mail si odložte, je zároveň vaším dokladom o prístupe. '
         . 'Sťahovanie na stránke objednávky je platné ' . $years . ' roky, so stropom '
         . PUBLICATION_DOWNLOAD_MAX . ' stiahnutí.' . "\n\n"
         . 'Stránka objednávky: ' . $orderUrl . "\n\n";
@@ -1869,7 +1869,7 @@ function sendPublicationOrderDeliveryEmail(array $order, string $token): array
             );
             if ($firstSent) {
                 error_log('sendPublicationOrderDeliveryEmail: VS ' . $vs
-                    . ' odoslané z technickej adresy — ' . PUBLICATION_DELIVERY_FROM_EMAIL
+                    . ' odoslané z technickej adresy, adresu ' . PUBLICATION_DELIVERY_FROM_EMAIL
                     . ' server odmietol.');
             }
         }
@@ -1885,11 +1885,11 @@ function sendPublicationOrderDeliveryEmail(array $order, string $token): array
         $bodyHtml = '<p style="margin:0 0 16px;">Dobrý deň,</p>'
             . '<p style="margin:0 0 16px;">v prílohe posielame publikáciu <strong>'
             . escapeEmailHtml($title) . '</strong> vo formáte ' . escapeEmailHtml($labels)
-            . ' — časť ' . $part . ' z ' . $batchCount . ' k objednávke <strong>'
+            . ', časť ' . $part . ' z ' . $batchCount . ' k objednávke <strong>'
             . escapeEmailHtml($vs) . '</strong>.</p>';
         $bodyText = 'Dobrý deň' . EMAIL_PLAIN_PARAGRAPH_BREAK
             . 'v prílohe posielame publikáciu ' . $title . ' vo formáte ' . $labels
-            . ' — časť ' . $part . ' z ' . $batchCount . ' k objednávke ' . $vs . '.' . "\n\n"
+            . ', časť ' . $part . ' z ' . $batchCount . ' k objednávke ' . $vs . '.' . "\n\n"
             . 'Stránka objednávky: ' . $orderUrl . "\n\n";
 
         if ($sendMessage($subject, $bodyHtml, $bodyText, $batch)) {
@@ -1951,7 +1951,7 @@ function sendPublicationOrderAdminNotice(array $order): bool
         ))
         . '</ul>'
         . '<p style="margin:0;color:#64748b;font-size:14px;">Po pripísaní platby ju potvrďte '
-        . 'v administrácii objednávok — kupujúcemu sa automaticky pošle odkaz na stiahnutie.</p>';
+        . 'v administrácii objednávok; kupujúcemu sa automaticky pošle odkaz na stiahnutie.</p>';
 
     $htmlMessage = renderEmailHtmlLayout($htmlBody, 'Objednávky publikácií', $adminUrl);
     $plainMessage = "Nová objednávka publikácie čaká na úhradu.\n\n"
