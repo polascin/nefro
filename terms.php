@@ -10,7 +10,7 @@ $pageLastUpdated = formatUserDateTime($info['effectiveDate'], 'd.m.Y');
 $pageTimeZone = getUserTimezoneAbbr() . ' (' . getUserTimezone() . ')';
 
 $legalTitle       = 'Podmienky používania';
-$legalDescription = 'Podmienky používania webovej lokality Nefro-projekt Slovensko — kontá, prijateľné používanie, zdravotnícky disclaimer, zodpovednosť a vaše spotrebiteľské práva.';
+$legalDescription = 'Podmienky používania webovej lokality Nefro-projekt Slovensko: kontá, prijateľné používanie, zdravotnícky disclaimer, zodpovednosť a vaše spotrebiteľské práva.';
 $legalSlug        = 'terms.php';
 $legalHeaderTitle = 'Podmienky používania';
 $legalHeaderIntro = 'User Agreement';
@@ -97,7 +97,7 @@ include 'legal_head.php';
                     Obsah portálu zostáva <strong>voľne dostupný bez platobnej steny</strong>.
                     Samostatne predávame len <strong>elektronické publikácie (e-knihy)</strong>,
                     ktoré ten istý obsah zostavujú do jedného zväzku. Na ich kúpu sa vzťahujú
-                    <a href="/obchodne-podmienky">Obchodné podmienky predaja publikácií</a> —
+                    <a href="/obchodne-podmienky">Obchodné podmienky predaja publikácií</a>;
                     obsahujú identifikáciu predávajúceho, cenu, spôsoby platby, dodanie
                     digitálneho obsahu, odstúpenie od zmluvy, reklamácie a alternatívne
                     riešenie sporov. Tieto Podmienky používania upravujú prístup k portálu
@@ -132,7 +132,7 @@ include 'legal_head.php';
                     <li>
                         hromadne sťahovať obsah Služby (scraping) ani ho používať na
                         trénovanie, doladenie či vyhodnocovanie modelov umelej
-                        inteligencie — pozri výhradu práv v <a href="#tdm">bode 7.1</a>;
+                        inteligencie (pozri výhradu práv v <a href="#tdm">bode 7.1</a>);
                     </li>
                     <li>používať Službu nezákonne ani na zásah do práv iných;</li>
                     <li>zneužívať klinické nástroje na účely, na ktoré nie sú určené;</li>
@@ -171,7 +171,7 @@ include 'legal_head.php';
                 <p>
                     Táto výhrada sa vzťahuje najmä na <strong>trénovanie, dolaďovanie
                     a vyhodnocovanie modelov umelej inteligencie</strong> vrátane
-                    generatívnych jazykových modelov, a to pre všetky formy obsahu —
+                    generatívnych jazykových modelov, a to pre všetky formy obsahu:
                     články, klinické nástroje a kalkulačky, databázu liekov, obrázky, ako
                     aj PDF verzie článkov.
                 </p>

@@ -27,7 +27,7 @@ $pageLastUpdated = formatUserDateTime(PUBLICATION_TERMS_EFFECTIVE_DATE, 'd.m.Y')
 
 $legalTitle       = 'Obchodné podmienky predaja publikácií';
 $legalDescription = 'Obchodné podmienky predaja elektronických publikácií (e-knihy) na portáli '
-    . 'Nefro-projekt Slovensko — cena, platba, dodanie digitálneho obsahu, odstúpenie '
+    . 'Nefro-projekt Slovensko: cena, platba, dodanie digitálneho obsahu, odstúpenie '
     . 'od zmluvy, reklamácie a licencia na použitie.';
 $legalSlug        = 'obchodne-podmienky.php';
 $legalHeaderTitle = 'Obchodné podmienky predaja publikácií';
@@ -97,7 +97,7 @@ include 'legal_head.php';
 
                 <h3>2. Predmet predaja</h3>
                 <p>
-                    Predmetom predaja je <strong>digitálny obsah</strong> — elektronická
+                    Predmetom predaja je <strong>digitálny obsah</strong>: elektronická
                     publikácia dodávaná v súboroch bez technických prostriedkov ochrany
                     (bez DRM). Na stránke každej publikácie je uvedený jej názov, vydanie,
                     rozsah, dostupné formáty a veľkosti súborov.
@@ -106,7 +106,7 @@ include 'legal_head.php';
                     Publikácie zostavujú obsah, ktorý je na portáli dostupný bezplatne. Ich
                     pridanou hodnotou je zoradenie, jazyková korektúra, zjednotenie terminológie,
                     obsah s vnútornými odkazmi a možnosť čítať celok offline alebo v tlači.
-                    Kúpa publikácie nie je podmienkou prístupu k obsahu portálu —
+                    Kúpa publikácie nie je podmienkou prístupu k obsahu portálu;
                     ten zostáva voľne dostupný bez platobnej steny.
                 </p>
                 <p>
@@ -133,14 +133,14 @@ include 'legal_head.php';
                 </p>
                 <p>
                     Cena je uvedená v eurách (EUR). Pri platbe zo zahraničia môže vaša banka
-                    účtovať vlastné poplatky za prevod — tie nie sú súčasťou ceny publikácie
+                    účtovať vlastné poplatky za prevod; tie nie sú súčasťou ceny publikácie
                     a nesie ich kupujúci.
                 </p>
 
                 <h3>4. Objednávka a uzatvorenie zmluvy</h3>
                 <p>
                     Objednávku podáte vyplnením formulára na stránke publikácie. Povinným údajom
-                    je e-mailová adresa — potrebujeme ju na doručenie platobných pokynov aj samotnej
+                    je e-mailová adresa; potrebujeme ju na doručenie platobných pokynov aj samotnej
                     publikácie. Registrácia na portáli sa nevyžaduje. Fakturačné údaje (meno, firma,
                     IČO, DIČ, adresa) sú voliteľné; vyplňte ich, ak potrebujete doklad na firmu.
                 </p>
@@ -152,7 +152,7 @@ include 'legal_head.php';
                 </p>
                 <p>
                     <strong>Kúpna zmluva je uzatvorená pripísaním platby</strong> na účet
-                    predávajúceho. Samotná objednávka vás k ničomu nezaväzuje — ak nezaplatíte,
+                    predávajúceho. Samotná objednávka vás k ničomu nezaväzuje: ak nezaplatíte,
                     nič sa nedeje a objednávka po
                     <?= (int) PUBLICATION_PAYMENT_DAYS ?> dňoch zanikne.
                 </p>
@@ -178,7 +178,7 @@ include 'legal_head.php';
                     </dl>
                 </div>
                 <p>
-                    <strong>Variabilný symbol je povinný</strong> — bez neho predávajúci nedokáže
+                    <strong>Variabilný symbol je povinný</strong>; bez neho predávajúci nedokáže
                     platbu priradiť k objednávke. Dostanete ho v e-maile s platobnými pokynmi
                     a nájdete ho aj na stránke objednávky spolu s QR kódom, ktorý predvyplní
                     platbu v aplikácii vašej banky.
@@ -194,7 +194,7 @@ include 'legal_head.php';
                 </p>
                 <p>
                     Pri Stripe a PayPale sa číslo objednávky prenesie automaticky. Pri ostatných
-                    kanáloch ho prosím <strong>uveďte do poznámky alebo popisu platby</strong> —
+                    kanáloch ho prosím <strong>uveďte do poznámky alebo popisu platby</strong>;
                     bez neho musí predávajúci platbu dohľadávať ručne a dodanie sa zdrží.
                     Cena publikácie sa týmto nemení; prípadné poplatky svojej banky alebo
                     peňaženky nesie kupujúci.
@@ -208,8 +208,8 @@ include 'legal_head.php';
 
                 <h3>6. Dodanie digitálneho obsahu</h3>
                 <p>
-                    Po pripísaní platby a jej spárovaní podľa variabilného symbolu — zvyčajne
-                    do jedného pracovného dňa — predávajúci odošle publikáciu na e-mailovú
+                    Po pripísaní platby a jej spárovaní podľa variabilného symbolu (zvyčajne
+                    do jedného pracovného dňa) predávajúci odošle publikáciu na e-mailovú
                     adresu z objednávky. Súbory, ktoré sa zmestia do limitu veľkosti prílohy
                     poštového servera, prídu <strong>priamo v prílohe e-mailu</strong>;
                     objemnejšie súbory sprístupní predávajúci na <strong>stránke objednávky</strong>,
@@ -242,7 +242,7 @@ include 'legal_head.php';
                     ďalej predávať, prenajímať ani používať na čerpanie údajov (text and data
                     mining) či trénovanie modelov umelej inteligencie. Výhrada práv na čerpanie
                     údajov podľa čl. 4 ods. 3 smernice (EÚ) 2019/790 a § 51c autorského zákona
-                    sa vzťahuje aj na publikácie. Súbory neobsahujú DRM — prosíme preto
+                    sa vzťahuje aj na publikácie. Súbory neobsahujú DRM, prosíme preto
                     o korektnosť: výnos z publikácií drží zvyšok portálu voľne dostupný
                     bez platobnej steny a bez reklám.
                 </p>
@@ -283,7 +283,7 @@ include 'legal_head.php';
                 <h3>9. Reklamácie a vady digitálneho obsahu</h3>
                 <p>
                     Predávajúci zodpovedá za to, že dodaný digitálny obsah zodpovedá opisu
-                    na stránke publikácie — formáty, rozsah a obsah. Ak je súbor poškodený,
+                    na stránke publikácie (formáty, rozsah a obsah). Ak je súbor poškodený,
                     neúplný, nedá sa otvoriť alebo nezodpovedá opisu, oznámte to e-mailom
                     na <a href="mailto:<?= htmlspecialchars($seller['email'], ENT_QUOTES, 'UTF-8') ?>"><?= htmlspecialchars($seller['email'], ENT_QUOTES, 'UTF-8') ?></a>
                     s uvedením variabilného symbolu a popisom problému.
@@ -310,7 +310,7 @@ include 'legal_head.php';
                     porušil vaše práva, môžete sa naň najprv obrátiť so žiadosťou o nápravu
                     (e-mailom). Ak na ňu predávajúci odpovie zamietavo alebo neodpovie do 30 dní,
                     máte ako spotrebiteľ právo podať <strong>návrh na alternatívne riešenie
-                    sporu</strong> subjektu ADR podľa zákona č. 391/2015 Z. z. — napríklad
+                    sporu</strong> subjektu ADR podľa zákona č. 391/2015 Z. z., napríklad
                     Slovenskej obchodnej inšpekcii
                     (<a href="https://www.soi.sk/" target="_blank" rel="noopener noreferrer">soi.sk</a>).
                     Zoznam subjektov ADR vedie Ministerstvo hospodárstva SR. Návrh možno podať
@@ -338,7 +338,7 @@ include 'legal_head.php';
                     (písm. c), a pri obrane prípadných nárokov oprávnený záujem (písm. f).
                 </p>
                 <p>
-                    <strong>Doby uchovávania sa líšia podľa údaja</strong> — nie všetko sa drží
+                    <strong>Doby uchovávania sa líšia podľa údaja</strong>; nie všetko sa drží
                     10 rokov. Zaplatená objednávka ako účtovný doklad vrátane dokladu o súhlasoch
                     10 rokov; neuhradená alebo zrušená objednávka 90 dní; IP adresa a prehliadač
                     90 dní (potom sa z objednávky odstránia); prístup na stiahnutie 2 roky
@@ -349,14 +349,14 @@ include 'legal_head.php';
                 <p>
                     Pri platbe kartou alebo peňaženkou vystupujú platobné služby ako
                     <strong>samostatní prevádzkovatelia</strong>, nie ako sprostredkovatelia
-                    predávajúceho — určujú vlastné účely (vykonanie platby, prevencia podvodov,
+                    predávajúceho; určujú vlastné účely (vykonanie platby, prevencia podvodov,
                     povinnosti podľa predpisov o platobných službách). Pri Stripe sa im prenáša
                     vaša e-mailová adresa a číslo objednávky, pri PayPale číslo objednávky
                     a suma; pri ostatných kanáloch im predávajúci neposiela nič a spojenie
                     vytvára váš prehliadač alebo aplikácia.
                 </p>
                 <p>
-                    Objednávka <strong>neznamená prihlásenie na odber noviniek</strong> —
+                    Objednávka <strong>neznamená prihlásenie na odber noviniek</strong>;
                     newsletter je samostatný a dobrovoľný. Podrobnosti vrátane vašich práv
                     nájdete v <a href="/privacy">Zásadách ochrany osobných údajov</a>.
                 </p>

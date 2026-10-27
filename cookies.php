@@ -42,8 +42,8 @@ include 'legal_head.php';
                 <section class="legal-updates" aria-labelledby="cookie-manage-heading">
                     <h3 id="cookie-manage-heading">Spravovať svoje voľby</h3>
                     <p>
-                        Svoj súhlas — vrátane odhlásenia z akéhokoľvek predaja alebo zdieľania
-                        osobných údajov — môžete kedykoľvek skontrolovať alebo zmeniť.
+                        Svoj súhlas vrátane odhlásenia z akéhokoľvek predaja alebo zdieľania
+                        osobných údajov môžete kedykoľvek skontrolovať alebo zmeniť.
                     </p>
                     <button class="cookie-settings-trigger btn-outline btn-outline--mt"
                             type="button"
@@ -58,7 +58,7 @@ include 'legal_head.php';
                 <p>
                     Cookies sú malé textové súbory, ktoré web ukladá vo vašom prehliadači.
                     Pomáhajú stránke fungovať (napr. udržať vaše prihlásenie), zapamätať si vaše
-                    nastavenia a — len s vaším súhlasom — merať návštevnosť. Podobne funguje
+                    nastavenia a len s vaším súhlasom merať návštevnosť. Podobne funguje
                     aj <code>localStorage</code>, ktoré používame na uloženie vášho súhlasu
                     a po udelení preferenčného súhlasu aj na nastavenia vzhľadu, automatické
                     ukladanie a lokálnu históriu výsledkov kalkulačiek.

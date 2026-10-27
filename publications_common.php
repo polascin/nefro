@@ -365,7 +365,7 @@ function publications(): array
         ],
         [
             'slug'        => 'sk-nefro-baza-1-en',
-            'title'       => 'SK Nefro Báza 1 — English edition',
+            'title'       => 'SK Nefro Báza 1: English edition',
             'subtitle'    => 'Collected specialist articles from nefro.polascin.net, April – October 2026',
             'author'      => 'Ľubomír Polaščín, MD',
             'edition'     => '1. vydanie, október 2026',
@@ -411,7 +411,7 @@ function publications(): array
         ],
         [
             'slug'        => 'sk-nefro-baza-1-de',
-            'title'       => 'SK Nefro Báza 1 — Deutsche Ausgabe',
+            'title'       => 'SK Nefro Báza 1: Deutsche Ausgabe',
             'subtitle'    => 'Gesammelte Fachartikel von nefro.polascin.net, April – Oktober 2026',
             'author'      => 'MUDr. Ľubomír Polaščín',
             'edition'     => '1. vydanie, október 2026',
@@ -501,7 +501,7 @@ function publications(): array
         ],
         [
             'slug'        => 'sk-nefro-baza-1-kompendium-en',
-            'title'       => 'SK Nefro Báza 1 Compendium — English edition',
+            'title'       => 'SK Nefro Báza 1 Compendium: English edition',
             'subtitle'    => 'Abstracts and summaries of specialist articles from nefro.polascin.net, April – October 2026',
             'author'      => 'Ľubomír Polaščín, MD',
             'edition'     => '1. vydanie, október 2026',
@@ -552,7 +552,7 @@ function publications(): array
         ],
         [
             'slug'        => 'sk-nefro-baza-1-kompendium-de',
-            'title'       => 'SK Nefro Báza 1 Kompendium — Deutsche Ausgabe',
+            'title'       => 'SK Nefro Báza 1 Kompendium: Deutsche Ausgabe',
             'subtitle'    => 'Abstracts und Zusammenfassungen der Fachartikel von nefro.polascin.net, April – Oktober 2026',
             'author'      => 'MUDr. Ľubomír Polaščín',
             'edition'     => '1. vydanie, október 2026',
@@ -592,7 +592,7 @@ function publications(): array
         ],
         [
             'slug'        => 'sk-nefro-baza-1-it',
-            'title'       => 'SK Nefro Báza 1 — Edizione italiana',
+            'title'       => 'SK Nefro Báza 1: Edizione italiana',
             'subtitle'    => 'Raccolta di articoli specialistici da nefro.polascin.net, aprile – ottobre 2026',
             'author'      => 'MUDr. Ľubomír Polaščín',
             'edition'     => '1. vydanie, október 2026',
@@ -633,7 +633,7 @@ function publications(): array
         ],
         [
             'slug'        => 'sk-nefro-baza-1-kompendium-it',
-            'title'       => 'SK Nefro Báza 1 Compendio — Edizione italiana',
+            'title'       => 'SK Nefro Báza 1 Compendio: Edizione italiana',
             'subtitle'    => 'Abstract e sintesi degli articoli specialistici di nefro.polascin.net, aprile – ottobre 2026',
             'author'      => 'MUDr. Ľubomír Polaščín',
             'edition'     => '1. vydanie, október 2026',
