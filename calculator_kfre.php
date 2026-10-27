@@ -15,36 +15,36 @@ function kfreInterpretation(float $risk2yr, float $risk5yr): array
         $interpretation[] =
             "5-ročné riziko " .
             number_format($risk5yr, 1, ",", " ") .
-            " % — zvážiť odoslanie k nefrológovi.";
+            " %: zvážiť odoslanie k nefrológovi.";
     } elseif ($risk5yr > 5.0) {
         $interpretation[] =
             "5-ročné riziko " .
             number_format($risk5yr, 1, ",", " ") .
-            " % — výrazne zvýšené, odporúča sa konzultácia nefrológa.";
+            " %: výrazne zvýšené, odporúča sa konzultácia nefrológa.";
     } else {
         $interpretation[] =
             "5-ročné riziko " .
             number_format($risk5yr, 1, ",", " ") .
-            " % — nižšie ako odporúčaný prah pre nefrologickú konzultáciu.";
+            " %: nižšie ako odporúčaný prah pre nefrologickú konzultáciu.";
     }
 
     if ($risk2yr > 10.0) {
         $interpretation[] =
             "2-ročné riziko " .
             number_format($risk2yr, 1, ",", " ") .
-            " % (>10 %) — zvážiť intenzívnejší/multidisciplinárny model starostlivosti.";
+            " % (>10 %): zvážiť intenzívnejší/multidisciplinárny model starostlivosti.";
         $warnings[] =
             "Potrebný multidisciplinárny tím: nefrológ, diabetológ, kardiológ, nutričný terapeuta, všeobecný lekár, edukačná sestra.";
     } else {
         $interpretation[] =
             "2-ročné riziko " .
             number_format($risk2yr, 1, ",", " ") .
-            " % — aktuálne pod prahom 10 % pre intenzívny model.";
+            " %: aktuálne pod prahom 10 % pre intenzívny model.";
     }
 
     if ($risk2yr > 40.0) {
         $warnings[] =
-            "KRITICKÉ: 2-ročné riziko nad 40 % — potrebné včasné plánovanie náhrady funkcie obličiek.";
+            "KRITICKÉ: 2-ročné riziko nad 40 %; potrebné včasné plánovanie náhrady funkcie obličiek.";
     }
 
     return [
@@ -250,7 +250,7 @@ if (isLoggedIn()) {
 <head>
   <?php
   $pageTitle =
-      "KFRE — Kidney Failure Risk Equation | Kalkulačky | Nefro-projekt Slovensko";
+      "KFRE: Kidney Failure Risk Equation | Kalkulačky | Nefro-projekt Slovensko";
   $canonicalUrl = "https://nefro.polascin.net/calculator_kfre.php";
   $seoDescription =
       "Nefrologická kalkulačka KFRE (Kidney Failure Risk Equation, Tangri 2011/2016): 2- a 5-ročné riziko zlyhania obličiek s kalibráciou mimo Severnej Ameriky predvolene pre Slovensko.";
@@ -274,7 +274,7 @@ if (isLoggedIn()) {
               [
                   "@type" => "ListItem",
                   "position" => 3,
-                  "name" => "KFRE — Kidney Failure Risk Equation",
+                  "name" => "KFRE: Kidney Failure Risk Equation",
                   "item" => $baseUrl . "calculator_kfre.php",
               ],
           ],
@@ -289,7 +289,7 @@ if (isLoggedIn()) {
     <?php
     $headerTitle = "Kalkulačka KFRE";
     $headerIntro =
-        "Kidney Failure Risk Equation — predikcia zlyhania obličiek (Tangri 2011/2016)";
+        "Kidney Failure Risk Equation: predikcia zlyhania obličiek (Tangri 2011/2016)";
     $showLogo = false;
     include "header.php";
     ?>
@@ -299,11 +299,11 @@ if (isLoggedIn()) {
     <main id="main-content" class="container main-content main-content--single-col" role="main">
         <div class="content-wrapper">
             <div class="auth-container auth-container--wide">
-                <h2>KFRE — Kidney Failure Risk Equation</h2>
+                <h2>KFRE: Kidney Failure Risk Equation</h2>
                 <p class="auth-subtitle">Predikcia rizika potreby dialýzy alebo transplantácie obličky (Tangri 4-parametrová verzia).</p>
 
                 <details open class="calc-formula-box">
-                    <summary>Vzorec — KFRE (Tangri 2011, Cox model, 4-parametrová)</summary>
+                    <summary>Vzorec: KFRE (Tangri 2011, Cox model, 4-parametrová)</summary>
                     <div class="calc-formula-content">
                         <div class="calc-formula-line">\[ \begin{aligned} X = &-0.2201 \cdot (\text{Vek}/10 - 7.036) + 0.2467 \cdot (\text{Muž} - 0.5642) \\ &- 0.5567 \cdot (\text{eGFR}/5 - 7.222) \\ &+ 0.4510 \cdot (\ln(\text{UACR}) - 5.137) \end{aligned} \]</div>
                         <div class="calc-formula-line">\[ \text{Riziko}(t) = (1 - S_0(t)^{\exp(X)}) \times 100\% \]</div>

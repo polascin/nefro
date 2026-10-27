@@ -32,12 +32,12 @@ function plasmicRiskClass(int $score): string
 function plasmicRiskLabel(int $score): string
 {
     if ($score >= 6) {
-        return 'vysoké riziko (≈ 62 – 82 %)';
+        return 'vysoké riziko (≈ 62 až 82 %)';
     }
     if ($score === 5) {
-        return 'stredné riziko (≈ 5 – 24 %)';
+        return 'stredné riziko (≈ 5 až 24 %)';
     }
-    return 'nízke riziko (≈ 0 – 4 %)';
+    return 'nízke riziko (≈ 0 až 4 %)';
 }
 
 // Prah kreatinínu: 2,0 mg/dL ≈ 176,8 µmol/L (× 88,42).
@@ -80,19 +80,19 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         $platelets = plasmicParseNonNeg($form["platelets"]);
         if ($platelets === null || $platelets > 1500.0) {
-            $errors[] = "Počet trombocytov musí byť 0 – 1500 ×10⁹/L.";
+            $errors[] = "Počet trombocytov musí byť 0 až 1500 ×10⁹/L.";
         }
         $mcv = plasmicParseNonNeg($form["mcv"]);
         if ($mcv === null || $mcv < 50.0 || $mcv > 140.0) {
-            $errors[] = "MCV musí byť 50 – 140 fL.";
+            $errors[] = "MCV musí byť 50 až 140 fL.";
         }
         $inr = plasmicParseNonNeg($form["inr"]);
         if ($inr === null || $inr < 0.5 || $inr > 15.0) {
-            $errors[] = "INR musí byť 0,5 – 15.";
+            $errors[] = "INR musí byť 0,5 až 15.";
         }
         $creatinine = plasmicParseNonNeg($form["creatinine"]);
         if ($creatinine === null || $creatinine < 10.0 || $creatinine > 2000.0) {
-            $errors[] = "Kreatinín musí byť 10 – 2000 µmol/L.";
+            $errors[] = "Kreatinín musí byť 10 až 2000 µmol/L.";
         }
 
         $hemolysis = $form["hemolysis"] === "1";
@@ -192,10 +192,10 @@ if (isLoggedIn()) {
 <html lang="sk">
 <head>
   <?php
-  $pageTitle = "PLASMIC skóre — pravdepodobnosť ťažkého deficitu ADAMTS13 (TTP) | Kalkulačky | Nefro-projekt Slovensko";
+  $pageTitle = "PLASMIC skóre: pravdepodobnosť ťažkého deficitu ADAMTS13 (TTP) | Kalkulačky | Nefro-projekt Slovensko";
   $canonicalUrl = "https://nefro.polascin.net/calculator_plasmic.php";
   $seoDescription =
-      "PLASMIC skóre (Bendapudi 2017) rýchlo odhaduje pravdepodobnosť ťažkého deficitu ADAMTS13 (TTP) u dospelých s trombotickou mikroangiopatiou. 7 komponentov (trombocyty, hemolýza, bez nádoru, bez transplantácie, MCV, INR, kreatinín): 0 – 4 nízke (≈ 0 – 4 %), 5 stredné (≈ 5 – 24 %), 6 – 7 vysoké (≈ 62 – 82 %) riziko.";
+      "PLASMIC skóre (Bendapudi 2017) rýchlo odhaduje pravdepodobnosť ťažkého deficitu ADAMTS13 (TTP) u dospelých s trombotickou mikroangiopatiou. 7 komponentov (trombocyty, hemolýza, bez nádoru, bez transplantácie, MCV, INR, kreatinín): 0 až 4 nízke (≈ 0 až 4 %), 5 stredné (≈ 5 až 24 %), 6 až 7 vysoké (≈ 62 až 82 %) riziko.";
   $baseUrl = "https://nefro.polascin.net/";
   $structuredData = [
       [
@@ -242,12 +242,12 @@ if (isLoggedIn()) {
     <main id="main-content" class="container main-content main-content--single-col" role="main">
         <div class="content-wrapper">
             <div class="auth-container auth-container--wide">
-                <h2>PLASMIC skóre — TTP / ADAMTS13</h2>
+                <h2>PLASMIC skóre: TTP / ADAMTS13</h2>
                 <p class="auth-subtitle">Voliteľné údaje pacienta + 7 komponentov pre odhad pravdepodobnosti ťažkého deficitu ADAMTS13.</p>
 
                 <div class="info-box">
                     <strong>Čo počíta:</strong> u dospelého s trombotickou mikroangiopatiou
-                    (TMA — trombocytopénia + mikroangiopatická hemolytická anémia) PLASMIC skóre
+                    (TMA: trombocytopénia + mikroangiopatická hemolytická anémia) PLASMIC skóre
                     rýchlo odhaduje pravdepodobnosť <strong>ťažkého deficitu ADAMTS13 (≤ 10 %)</strong>,
                     teda trombotickej trombocytopenickej purpury (TTP). Pomáha pri rozhodovaní
                     o <strong>urgentnej výmennej plazmaferéze</strong>, kým nie je dostupný výsledok
@@ -259,13 +259,13 @@ if (isLoggedIn()) {
                 <div class="info-box-yellow">
                     <strong>Pozor:</strong> skóre <strong>nenahrádza</strong> stanovenie aktivity
                     ADAMTS13 ani klinický úsudok. Pri silnom klinickom podozrení na TTP
-                    <strong>nečakaj</strong> na skóre ani na ADAMTS13 — zaháj liečbu empiricky.
+                    <strong>nečakaj</strong> na skóre ani na ADAMTS13; zaháj liečbu empiricky.
                     Nízke skóre nevylučuje inú TMA (STEC-HUS, atypická/komplementová HUS,
-                    sekundárna TMA — lieky, malignita, gravidita, malígna hypertenzia).
+                    sekundárna TMA: lieky, malignita, gravidita, malígna hypertenzia).
                 </div>
 
                 <details open class="calc-formula-box">
-                    <summary>Komponenty — PLASMIC (každý splnený = 1 bod, spolu 0 – 7)</summary>
+                    <summary>Komponenty: PLASMIC (každý splnený = 1 bod, spolu 0 až 7)</summary>
                     <div class="calc-formula-content">
                         <div class="calc-formula-vars">
                             trombocyty &lt; 30 ×10⁹/L &bull;
@@ -277,9 +277,9 @@ if (isLoggedIn()) {
                             kreatinín &lt; 176,8 µmol/L (2,0 mg/dL)
                         </div>
                         <div class="calc-formula-vars">
-                            0 – 4 → nízke riziko (≈ 0 – 4 %) &bull;
-                            5 → stredné (≈ 5 – 24 %) &bull;
-                            6 – 7 → vysoké (≈ 62 – 82 %)
+                            0 až 4 → nízke riziko (≈ 0 až 4 %) &bull;
+                            5 → stredné (≈ 5 až 24 %) &bull;
+                            6 až 7 → vysoké (≈ 62 až 82 %)
                         </div>
                     </div>
                 </details>
@@ -394,9 +394,9 @@ if (isLoggedIn()) {
                         <?php if ($calculated["score"] >= 6): ?>
                             <p class="calc-result-detail"><strong>Vysoká pravdepodobnosť TTP.</strong> Zváž <strong>empirickú výmennú plazmaferézu</strong> a kortikosteroidy ešte pred výsledkom ADAMTS13; urýchli odber ADAMTS13 a konzultuj hematológiu. Pri iTTP zváž kaplacizumab podľa lokálnych protokolov.</p>
                         <?php elseif ($calculated["score"] === 5): ?>
-                            <p class="calc-result-detail"><strong>Stredné riziko — nejednoznačné.</strong> Urýchli stanovenie ADAMTS13 a rozhodni individuálne podľa klinického obrazu a dynamiky; pri zhoršovaní neodkladaj plazmaferézu.</p>
+                            <p class="calc-result-detail"><strong>Stredné riziko: nejednoznačné.</strong> Urýchli stanovenie ADAMTS13 a rozhodni individuálne podľa klinického obrazu a dynamiky; pri zhoršovaní neodkladaj plazmaferézu.</p>
                         <?php else: ?>
-                            <p class="calc-result-detail"><strong>Nízke riziko ťažkého deficitu ADAMTS13.</strong> TTP je menej pravdepodobná — aktívne hľadaj inú príčinu TMA (STEC-HUS, atypická/komplementová HUS, sekundárna TMA). Rozhodnutie však vždy koreluj s klinikou — pri pochybnostiach over ADAMTS13.</p>
+                            <p class="calc-result-detail"><strong>Nízke riziko ťažkého deficitu ADAMTS13.</strong> TTP je menej pravdepodobná; aktívne hľadaj inú príčinu TMA (STEC-HUS, atypická/komplementová HUS, sekundárna TMA). Rozhodnutie však vždy koreluj s klinikou: pri pochybnostiach over ADAMTS13.</p>
                         <?php endif; ?>
                         <p class="calc-result-detail">PLASMIC je <strong>pomôcka pred testom ADAMTS13</strong>, validovaná u dospelých s TMA. Nepoužívaj ho ako jediný dôvod na začatie alebo nezačatie liečby.</p>
                         <div class="form-actions no-print">
