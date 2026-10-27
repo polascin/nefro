@@ -14,7 +14,7 @@ $baseUrl = "https://nefro.polascin.net/";
   $pageTitle = "Interaktívny algoritmus hyponatrémie | Nástroje | " . $siteName;
   $canonicalUrl = $baseUrl . "nastroj_hyponatremia.php";
   $seoDescription =
-      "Interaktívny diagnostický algoritmus hyponatrémie krok za krokom: osmolalita (pravá vs. nehypotonická), závažnosť/symptómy, objemový stav, močový sodík a osmolalita — s diferenciálnou diagnostikou (SIADH, hypovolémia, hypervolémia) a manažmentom vrátane rizika ODS.";
+      "Interaktívny diagnostický algoritmus hyponatrémie krok za krokom: osmolalita (pravá vs. nehypotonická), závažnosť/symptómy, objemový stav, močový sodík a osmolalita, s diferenciálnou diagnostikou (SIADH, hypovolémia, hypervolémia) a manažmentom vrátane rizika ODS.";
   $seoKeywords =
       "hyponatrémia, algoritmus, SIADH, osmotický demyelinizačný syndróm, ODS, objemový stav, močový sodík, Adrogue-Madias, Katz, nefrológia, Slovensko";
   $structuredData = [
@@ -87,7 +87,7 @@ $baseUrl = "https://nefro.polascin.net/";
 
                 <p>
                     Nástroj vás prevedie štruktúrovaným postupom podľa odpovedí na cielené otázky.
-                    Slúži ako orientačná pomôcka pre klinické rozhodovanie — <strong>nenahrádza</strong>
+                    Slúži ako orientačná pomôcka pre klinické rozhodovanie; <strong>nenahrádza</strong>
                     vyšetrenie pacienta, laboratórium ani individuálne posúdenie. Pri korekcii vždy
                     rešpektujte limity a <strong>riziko osmotického demyelinizačného syndrómu (ODS)</strong>.
                 </p>
@@ -106,12 +106,12 @@ $baseUrl = "https://nefro.polascin.net/";
 
                 <!-- Statická referencia: algoritmus -->
                 <section class="form-section" aria-labelledby="algo-heading">
-                    <h3 id="algo-heading">Diagnostický algoritmus — prehľad</h3>
+                    <h3 id="algo-heading">Diagnostický algoritmus: prehľad</h3>
                     <ol class="tool-step__list">
-                        <li><strong>Potvrdiť pravú (hypotonickú) hyponatrémiu</strong> — sérová osmolalita: nízka (&lt; 275) = pravá; normálna/vysoká = pseudo- alebo hypertonická (korekcia Na na glykémiu).</li>
-                        <li><strong>Posúdiť závažnosť a rýchlosť vzniku</strong> — ťažké symptómy (kŕče, kóma, vracanie) = urgentná liečba 3 % NaCl bez ohľadu na príčinu; rešpektovať limity korekcie (ODS).</li>
-                        <li><strong>Posúdiť objemový stav</strong> — hypovolémia / euvolémia / hypervolémia.</li>
-                        <li><strong>Doplniť kľúčové laboratórium</strong> — močový sodík a močová osmolalita podľa objemu.</li>
+                        <li><strong>Potvrdiť pravú (hypotonickú) hyponatrémiu</strong> podľa sérovej osmolality: nízka (&lt; 275) = pravá; normálna/vysoká = pseudo- alebo hypertonická (korekcia Na na glykémiu).</li>
+                        <li><strong>Posúdiť závažnosť a rýchlosť vzniku</strong>: ťažké symptómy (kŕče, kóma, vracanie) = urgentná liečba 3 % NaCl bez ohľadu na príčinu; rešpektovať limity korekcie (ODS).</li>
+                        <li><strong>Posúdiť objemový stav</strong>: hypovolémia / euvolémia / hypervolémia.</li>
+                        <li><strong>Doplniť kľúčové laboratórium</strong>: močový sodík a močová osmolalita podľa objemu.</li>
                     </ol>
                     <table class="tool-table">
                         <caption class="visually-hidden">Diferenciálna diagnostika hypotonickej hyponatrémie podľa objemu a moču</caption>
@@ -125,8 +125,8 @@ $baseUrl = "https://nefro.polascin.net/";
                         </tbody>
                     </table>
                     <div class="info-box-green">
-                        <strong>Limity korekcie (ODS):</strong> spravidla neprekročiť ~8–10 mmol/l za 24 h
-                        (pri vysokom riziku ≤ 6–8 mmol/l/24 h). Rizikoví: chronická hyponatrémia, alkoholizmus,
+                        <strong>Limity korekcie (ODS):</strong> spravidla neprekročiť ~8 až 10 mmol/l za 24 h
+                        (pri vysokom riziku ≤ 6 až 8 mmol/l/24 h). Rizikoví: chronická hyponatrémia, alkoholizmus,
                         malnutrícia, hypokaliémia, choroba pečene. Na plánovanie korekcie využite kalkulačku
                         porúch sodíka (Adrogue-Madias).
                     </div>

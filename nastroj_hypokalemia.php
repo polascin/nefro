@@ -14,7 +14,7 @@ $baseUrl = "https://nefro.polascin.net/";
   $pageTitle = "Interaktívny sprievodca hypokaliémiou | Nástroje | " . $siteName;
   $canonicalUrl = $baseUrl . "nastroj_hypokalemia.php";
   $seoDescription =
-      "Interaktívny diagnostický a manažmentový sprievodca hypokaliémiou krok za krokom: závažnosť/EKG, transcelulárny presun, močový draslík, acidobáza, krvný tlak a močový chlorid — s diferenciálnou diagnostikou (RTA, hyperaldosteronizmus, Bartter/Gitelman) a dôrazom na korekciu magnézia.";
+      "Interaktívny diagnostický a manažmentový sprievodca hypokaliémiou krok za krokom: závažnosť/EKG, transcelulárny presun, močový draslík, acidobáza, krvný tlak a močový chlorid, s diferenciálnou diagnostikou (RTA, hyperaldosteronizmus, Bartter/Gitelman) a dôrazom na korekciu magnézia.";
   $seoKeywords =
       "hypokaliémia, draslík, algoritmus, TTKG, močový draslík, renálna tubulárna acidóza, hyperaldosteronizmus, Bartter, Gitelman, magnézium, nefrológia, Slovensko";
   $structuredData = [
@@ -87,7 +87,7 @@ $baseUrl = "https://nefro.polascin.net/";
 
                 <p>
                     Nástroj vás prevedie štruktúrovaným postupom podľa odpovedí na cielené otázky.
-                    Slúži ako orientačná pomôcka pre klinické rozhodovanie — <strong>nenahrádza</strong>
+                    Slúži ako orientačná pomôcka pre klinické rozhodovanie; <strong>nenahrádza</strong>
                     vyšetrenie pacienta, EKG, laboratórium ani individuálne posúdenie. Pri každej
                     hypokaliémii <strong>zmerajte a korigujte magnézium</strong> (hypomagneziémia spôsobuje
                     refraktérnu hypokaliémiu).
@@ -107,14 +107,14 @@ $baseUrl = "https://nefro.polascin.net/";
 
                 <!-- Statická referencia: algoritmus -->
                 <section class="form-section" aria-labelledby="algo-heading">
-                    <h3 id="algo-heading">Diagnostický algoritmus — prehľad</h3>
+                    <h3 id="algo-heading">Diagnostický algoritmus: prehľad</h3>
                     <ol class="tool-step__list">
-                        <li><strong>Posúdiť závažnosť a naliehavosť</strong> — K &lt; 2,5, symptómy, EKG zmeny alebo digoxín = urgentná i.v. substitúcia pod monitoringom.</li>
-                        <li><strong>Vylúčiť transcelulárny presun</strong> — inzulín, β2-agonisty, alkalóza, refeeding, periodická paralýza (celkový telesný K býva normálny).</li>
-                        <li><strong>Močový draslík</strong> — nízky (U-K &lt; 15, U-K:Cr &lt; 1,5) = extrarenálna strata/nízky príjem; vysoký = renálna strata.</li>
-                        <li><strong>Pri renálnej strate acidobáza</strong> — acidóza (RTA, DKA) vs alkalóza.</li>
-                        <li><strong>Pri alkalóze krvný tlak</strong> — hypertenzia = mineralokortikoidový nadbytok (ARR); normotenzia → močový chlorid.</li>
-                        <li><strong>Močový chlorid</strong> — nízky = chloridom responzívna (vracanie, predošlé diuretiká); vysoký = rezistentná (aktuálne diuretiká, Bartter/Gitelman, deplécia Mg).</li>
+                        <li><strong>Posúdiť závažnosť a naliehavosť</strong>: K &lt; 2,5, symptómy, EKG zmeny alebo digoxín = urgentná i.v. substitúcia pod monitoringom.</li>
+                        <li><strong>Vylúčiť transcelulárny presun</strong>: inzulín, β2-agonisty, alkalóza, refeeding, periodická paralýza (celkový telesný K býva normálny).</li>
+                        <li><strong>Močový draslík</strong>: nízky (U-K &lt; 15, U-K:Cr &lt; 1,5) = extrarenálna strata/nízky príjem; vysoký = renálna strata.</li>
+                        <li><strong>Pri renálnej strate acidobáza</strong>: acidóza (RTA, DKA) vs alkalóza.</li>
+                        <li><strong>Pri alkalóze krvný tlak</strong>: hypertenzia = mineralokortikoidový nadbytok (ARR); normotenzia → močový chlorid.</li>
+                        <li><strong>Močový chlorid</strong>: nízky = chloridom responzívna (vracanie, predošlé diuretiká); vysoký = rezistentná (aktuálne diuretiká, Bartter/Gitelman, deplécia Mg).</li>
                     </ol>
                     <table class="tool-table">
                         <caption class="visually-hidden">Diferenciálna diagnostika renálnej straty draslíka</caption>
@@ -130,7 +130,7 @@ $baseUrl = "https://nefro.polascin.net/";
                     <div class="info-box-green">
                         <strong>Vždy magnézium:</strong> hypomagneziémia (časté pri diuretikách, hnačke,
                         alkoholizme) zvyšuje renálnu stratu draslíka a robí hypokaliémiu refraktérnou na
-                        samotnú substitúciu K — bez korekcie Mg sa kalémia neupraví.
+                        samotnú substitúciu K; bez korekcie Mg sa kalémia neupraví.
                     </div>
                 </section>
 
