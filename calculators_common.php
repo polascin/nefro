@@ -732,7 +732,7 @@ function calculatorRenderRegisterCta(string $variant = 'saved'): void
             <a href="register.php" class="btn-primary calc-register-cta__btn">Vytvoriť bezplatný účet</a>
             <a href="login.php" class="btn-secondary calc-register-cta__btn">Už mám účet</a>
         </div>
-        <p class="calc-register-cta__note">Registrácia trvá ~30&nbsp;sekúnd — stačí e-mail a&nbsp;heslo.</p>
+        <p class="calc-register-cta__note">Registrácia trvá ~30&nbsp;sekúnd, stačí e-mail a&nbsp;heslo.</p>
     </aside>
     <?php
 }

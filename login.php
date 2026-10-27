@@ -287,7 +287,7 @@ if ($requestMethod === 'POST') {
 <head>
   <?php
   $pageTitle      = 'Prihlásenie | Nefro-projekt Slovensko';
-  $seoDescription = 'Prihláste sa do Nefro-projekt Slovensko — odborného portálu pre nefrológov a lekárov.';
+  $seoDescription = 'Prihláste sa do Nefro-projekt Slovensko, odborného portálu pre nefrológov a lekárov.';
   $robotsMeta     = 'noindex, follow';
   $canonicalUrl   = 'https://nefro.polascin.net/login.php';
   include 'head_meta.php';

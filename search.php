@@ -394,7 +394,7 @@ $fieldLabels = [
           <div class="search-empty">
             <p class="search-empty-desc">
               Prehľadávajte odborné nefrologické články, analýzy a komentáre.
-              Vyhľadávanie je jazykovo inteligentné — rozumie slovenčine, diakritike aj medicínskym skratkám.
+              Vyhľadávanie je jazykovo inteligentné: rozumie slovenčine, diakritike aj medicínskym skratkám.
             </p>
 
             <p class="search-section-label-1rem">Obľúbené témy:</p>

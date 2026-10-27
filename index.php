@@ -578,7 +578,7 @@ if (!empty($itemListElements)) {
           <div class="feature-card about-card">
             <div class="about-card__icon" aria-hidden="true">✍️</div>
             <h3>Tvorca a autor</h3>
-            <p>Kladiem dôraz na <strong>presnosť, štýl a jazyk</strong>. Som prekladateľ a jazykový pracovník citlivý na formulácie a významové odtiene — od odborných textov po literárne žánre.</p>
+            <p>Kladiem dôraz na <strong>presnosť, štýl a jazyk</strong>. Som prekladateľ a jazykový pracovník citlivý na formulácie a významové odtiene, od odborných textov po literárne žánre.</p>
           </div>
           <div class="feature-card about-card">
             <div class="about-card__icon" aria-hidden="true">💻</div>
@@ -588,7 +588,7 @@ if (!empty($itemListElements)) {
           <div class="feature-card about-card">
             <div class="about-card__icon" aria-hidden="true">🔗</div>
             <h3>Integrátor disciplín</h3>
-            <p>Medicína, kód, filozofia a spiritualita nie sú oddelené ostrovy — sú súčasťou jedného <strong>intelektuálneho ekosystému</strong>. Zaujíma ma nielen funkčnosť vecí, ale aj ich hlbší zmysel.</p>
+            <p>Medicína, kód, filozofia a spiritualita nie sú oddelené ostrovy, ale súčasť jedného <strong>intelektuálneho ekosystému</strong>. Zaujíma ma nielen funkčnosť vecí, ale aj ich hlbší zmysel.</p>
           </div>
         </div>
       </section>
@@ -614,7 +614,7 @@ if (!empty($itemListElements)) {
           <div class="feature-card contact-community">
             <div class="contact-community__icon" aria-hidden="true">✉</div>
             <h3>Odoberajte novinky</h3>
-            <p>Dostávajte nové odborné články a novinky z portálu priamo do e-mailu — nové štúdie, zmeny v odporúčaniach, praktické závery pre prax a nové kalkulačky či nástroje. Zadarmo, kedykoľvek sa odhlásite.</p>
+            <p>Dostávajte nové odborné články a novinky z portálu priamo do e-mailu: nové štúdie, zmeny v odporúčaniach, praktické závery pre prax a nové kalkulačky či nástroje. Zadarmo, kedykoľvek sa odhlásite.</p>
             <form class="newsletter-cta__form" id="nl-form-home" novalidate>
               <div class="honeypot" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
               <input type="email" name="email" placeholder="váš@email.sk" class="form-control" required aria-label="Vaša e-mailová adresa">
@@ -622,7 +622,7 @@ if (!empty($itemListElements)) {
             </form>
             <output id="nl-msg-home" hidden class="newsletter-cta__status" aria-live="polite"></output>
             <?php if (!isLoggedIn()): ?>
-              <p class="contact-community__account">Chcete diskutovať k článkom? <a href="register.php">Vytvorte si účet</a> — stačí e-mail a heslo.</p>
+              <p class="contact-community__account">Chcete diskutovať k článkom? <a href="register.php">Vytvorte si účet</a>, stačí e-mail a heslo.</p>
             <?php else: ?>
               <div class="badge-highlight contact-community__account">✓ Ste prihlásený</div>
             <?php endif; ?>
