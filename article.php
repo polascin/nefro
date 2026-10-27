@@ -381,7 +381,7 @@ if ($article) {
               <p class="article-pdf__text">📄 <strong>Bonus pre prihlásených:</strong> stiahnite si celý článok aj s ilustráciami ako PDF.</p>
               <a class="btn-primary article-pdf__btn" href="download_pdf.php?slug=<?= $pdfSlug ?>" rel="nofollow">Stiahnuť PDF</a>
             <?php else: ?>
-              <p class="article-pdf__text">📄 <strong>PDF verzia</strong> tohto článku (s ilustráciami) je k dispozícii na stiahnutie pre registrovaných používateľov — zdarma.</p>
+              <p class="article-pdf__text">📄 <strong>PDF verzia</strong> tohto článku (s ilustráciami) je k dispozícii na stiahnutie pre registrovaných používateľov, a to zdarma.</p>
               <p class="article-pdf__cta">
                 <a class="btn-secondary-small" href="login.php">Prihlásiť sa</a>
                 <a class="btn-secondary-small" href="register.php">Zaregistrovať sa zdarma</a>
@@ -450,7 +450,7 @@ if ($article) {
       <div class="widget">
         <h3>O projekte</h3>
         <p>
-          Nefrológia sa rozvíja míľovými krokmi — od molekulárnej biológie po umelú inteligenciu.
+          Nefrológia sa rozvíja míľovými krokmi, od molekulárnej biológie po umelú inteligenciu.
           Sledujte najnovšie poznatky a analýzy.
         </p>
         <div class="project-stats" aria-label="Aktuálne štatistiky projektu">
@@ -484,7 +484,7 @@ if ($article) {
       </div>
       <div class="widget newsletter-widget">
         <h3>Odber noviniek</h3>
-        <p>Dostávajte nové odborné články a novinky z portálu priamo do e-mailu — zadarmo.</p>
+        <p>Dostávajte nové odborné články a novinky z portálu priamo do e-mailu, bezplatne.</p>
         <form class="newsletter-cta__form" id="nl-form-sidebar" novalidate>
           <div class="honeypot" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
           <input type="email" name="email" placeholder="váš@email.sk" class="form-control" required aria-label="Vaša e-mailová adresa">

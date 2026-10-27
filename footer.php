@@ -101,7 +101,7 @@ $swatchBeat = '@' . number_format($beatValue, 2, '.', '');
         <span class="site-footer__bottom-sep" aria-hidden="true">·</span>
         <span class="site-footer__updated">Aktualizované: <a href="https://time.is/" target="_blank" rel="noopener noreferrer" class="site-footer__link"><?= htmlspecialchars($pageLastUpdated, ENT_QUOTES, 'UTF-8') ?> (<?= htmlspecialchars($pageTimeZone, ENT_QUOTES, 'UTF-8') ?>)</a></span>
         <span class="site-footer__bottom-sep" aria-hidden="true">·</span>
-        <a href="https://www.swatch.com/en-us/internet-time.html" target="_blank" rel="noopener noreferrer" class="site-footer__link site-footer__beat" title="Swiss Internet Time — 1 deň = 1000 beatov"><?= htmlspecialchars($swatchBeat, ENT_QUOTES, 'UTF-8') ?> .beat</a>
+        <a href="https://www.swatch.com/en-us/internet-time.html" target="_blank" rel="noopener noreferrer" class="site-footer__link site-footer__beat" title="Swiss Internet Time: 1 deň = 1000 beatov"><?= htmlspecialchars($swatchBeat, ENT_QUOTES, 'UTF-8') ?> .beat</a>
       </div>
     </div>
   </footer>
