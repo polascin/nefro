@@ -9,27 +9,27 @@
     var HYPOK_TREE = {
         start: 'severity',
         outcomeNote: 'Záver je orientačný a vychádza zo zadaných odpovedí. Pri každej hypokaliémii '
-            + 'vždy zmerajte a v prípade potreby korigujte magnézium — hypomagneziémia spôsobuje '
+            + 'vždy zmerajte a v prípade potreby korigujte magnézium, lebo hypomagneziémia spôsobuje '
             + 'refraktérnu hypokaliémiu. Posúďte celkový klinický kontext, EKG a lieky.',
         nodes: {
             severity: {
-                id: 'severity', kind: 'q', step: 'Krok 1 — Závažnosť a naliehavosť',
+                id: 'severity', kind: 'q', step: 'Krok 1: Závažnosť a naliehavosť',
                 title: 'Je hypokaliémia ťažká alebo symptomatická?',
                 body: ['Hypokaliémia = S-K < 3,5 mmol/l. Najprv posúďte naliehavosť (závažnosť + EKG + komorbidity):'],
                 bullets: [
-                    'mierna 3,0–3,4 · stredná 2,5–2,9 · ťažká < 2,5 mmol/l,',
+                    'mierna 3,0 až 3,4 · stredná 2,5 až 2,9 · ťažká < 2,5 mmol/l,',
                     'symptómy: svalová slabosť až paralýza, arytmie, rabdomyolýza,',
                     'EKG: oploštené T, U vlny, depresie ST, predĺžené QU; ↑ riziko pri liečbe digoxínom.'
                 ],
                 prompt: 'Je K < 2,5 mmol/l, prítomné symptómy/EKG zmeny alebo liečba digoxínom?',
                 options: [
-                    { label: 'Áno — ťažká / symptomatická / EKG zmeny / digoxín', hint: 'Urgentná substitúcia.', next: 'urgent' },
-                    { label: 'Nie — mierna, asymptomatická', hint: 'Pokračujte určením mechanizmu.', next: 'shift' }
+                    { label: 'Áno, ťažká / symptomatická / EKG zmeny / digoxín', hint: 'Urgentná substitúcia.', next: 'urgent' },
+                    { label: 'Nie, mierna, asymptomatická', hint: 'Pokračujte určením mechanizmu.', next: 'shift' }
                 ]
             },
 
             shift: {
-                id: 'shift', kind: 'q', step: 'Krok 2 — Transcelulárny presun?',
+                id: 'shift', kind: 'q', step: 'Krok 2: Transcelulárny presun?',
                 title: 'Je prítomná zjavná príčina redistribúcie draslíka do buniek?',
                 body: ['Pri transcelulárnom presune je celkový telesný draslík zvyčajne normálny (porucha je prechodná). Typické príčiny:'],
                 bullets: [
@@ -39,24 +39,24 @@
                 ],
                 prompt: 'Dominuje zjavná príčina redistribúcie?',
                 options: [
-                    { label: 'Áno — redistribúcia', next: 'shift_out' },
-                    { label: 'Nie / neistý — pravdepodobne strata draslíka', hint: 'Určte zdroj straty.', next: 'urine_k' }
+                    { label: 'Áno, redistribúcia', next: 'shift_out' },
+                    { label: 'Nie / neistý, pravdepodobne strata draslíka', hint: 'Určte zdroj straty.', next: 'urine_k' }
                 ]
             },
 
             urine_k: {
-                id: 'urine_k', kind: 'q', step: 'Krok 3 — Močový draslík (zdroj straty)',
+                id: 'urine_k', kind: 'q', step: 'Krok 3: Močový draslík (zdroj straty)',
                 title: 'Aký je močový draslík?',
                 body: ['Močový draslík (bodové U-K, pomer U-K : U-Cr, prípadne TTKG) odlíši renálnu a extrarenálnu stratu:'],
                 prompt: 'Vyberte hodnotu močového draslíka:',
                 options: [
                     { label: 'Nízky (U-K < 15 mmol/l, U-K:Cr < 1,5 mmol/mmol)', hint: 'Obličky šetria draslík → extrarenálna strata/nízky príjem.', next: 'extrarenal' },
-                    { label: 'Vysoký (U-K > 15–20 mmol/l, U-K:Cr > 1,5)', hint: 'Renálna strata draslíka.', next: 'acidbase' }
+                    { label: 'Vysoký (U-K > 15 až 20 mmol/l, U-K:Cr > 1,5)', hint: 'Renálna strata draslíka.', next: 'acidbase' }
                 ]
             },
 
             acidbase: {
-                id: 'acidbase', kind: 'q', step: 'Krok 4 — Acidobázický stav (renálna strata)',
+                id: 'acidbase', kind: 'q', step: 'Krok 4: Acidobázický stav (renálna strata)',
                 title: 'Aký je acidobázický stav?',
                 body: ['Pri renálnej strate draslíka smeruje diagnostiku acidobázický stav:'],
                 prompt: 'Vyberte acidobázický stav:',
@@ -67,7 +67,7 @@
             },
 
             bp: {
-                id: 'bp', kind: 'q', step: 'Krok 5 — Krvný tlak (metabolická alkalóza)',
+                id: 'bp', kind: 'q', step: 'Krok 5: Krvný tlak (metabolická alkalóza)',
                 title: 'Aký je krvný tlak?',
                 body: ['Pri metabolickej alkalóze odlíši krvný tlak mineralokortikoidový nadbytok od ostatných príčin:'],
                 prompt: 'Vyberte krvný tlak:',
@@ -78,26 +78,26 @@
             },
 
             urine_cl: {
-                id: 'urine_cl', kind: 'q', step: 'Krok 6 — Močový chlorid (normotenzia)',
+                id: 'urine_cl', kind: 'q', step: 'Krok 6: Močový chlorid (normotenzia)',
                 title: 'Aký je močový chlorid?',
                 body: ['Pri metabolickej alkalóze s normotenziou rozlišuje močový chlorid chloridom responzívne a rezistentné príčiny:'],
                 prompt: 'Vyberte hodnotu močového chloridu:',
                 options: [
-                    { label: 'Nízky (U-Cl < 20–25 mmol/l) — chloridom responzívna', next: 'cl_responsive' },
-                    { label: 'Vysoký (U-Cl > 40 mmol/l) — chloridom rezistentná', next: 'cl_resistant' }
+                    { label: 'Nízky (U-Cl < 20 až 25 mmol/l): chloridom responzívna', next: 'cl_responsive' },
+                    { label: 'Vysoký (U-Cl > 40 mmol/l): chloridom rezistentná', next: 'cl_resistant' }
                 ]
             },
 
             // ── Výstupné uzly ──────────────────────────────────────────────
             urgent: {
                 id: 'urgent', kind: 'r', severity: 'urgent',
-                category: 'Ťažká / symptomatická hypokaliémia — urgentný stav',
-                summary: 'Riziko život ohrozujúcich arytmií — substituujte parenterálne pod monitoringom a súbežne hľadajte príčinu.',
+                category: 'Ťažká / symptomatická hypokaliémia: urgentný stav',
+                summary: 'Riziko život ohrozujúcich arytmií; substituujte parenterálne pod monitoringom a súbežne hľadajte príčinu.',
                 sections: [
                     { heading: 'Okamžitá liečba', items: [
                         'Intravenózna substitúcia KCl pod kontinuálnym EKG monitoringom; periférne zvyčajne max ~10 mmol/h, vyššie rýchlosti len centrálne na monitorovanom lôžku.',
                         'Vyhnúť sa úvodným roztokom s glukózou (stimuluje inzulín → ďalší presun K do buniek).',
-                        'Zmerať a korigovať magnézium — bez korekcie Mg je hypokaliémia často refraktérna.',
+                        'Zmerať a korigovať magnézium; bez korekcie Mg je hypokaliémia často refraktérna.',
                         'Časté kontroly kalémie; pozor na rebound hyperkaliémiu, najmä ak ide o redistribúciu.'
                     ] },
                     { heading: 'Pozor', items: [
@@ -122,7 +122,7 @@
                     ] },
                     { heading: 'Manažment', items: [
                         'Liečiť vyvolávajúcu príčinu (napr. β-bloker pri tyreotoxickej paralýze, korekcia tyreopatie).',
-                        'Substituovať opatrne — pri redistribúcii hrozí po doplnení rebound hyperkaliémia.',
+                        'Substituovať opatrne; pri redistribúcii hrozí po doplnení rebound hyperkaliémia.',
                         'Monitorovať kalémiu; zmerať magnézium.'
                     ] }
                 ]
@@ -131,7 +131,7 @@
             extrarenal: {
                 id: 'extrarenal', kind: 'r', severity: 'warn',
                 category: 'Extrarenálna strata / nízky príjem (nízky U-K)',
-                summary: 'Obličky správne šetria draslík — strata je mimo obličiek alebo je nedostatočný príjem.',
+                summary: 'Obličky správne šetria draslík; strata je mimo obličiek alebo je nedostatočný príjem.',
                 sections: [
                     { heading: 'Časté príčiny', items: [
                         'Gastrointestinálne straty: hnačka, zneužívanie laxatív, VIPóm, ileostómia.',
@@ -140,7 +140,7 @@
                     { heading: 'Manažment', items: [
                         'Substitúcia draslíka (perorálne pri miernej forme), liečba gastrointestinálnej príčiny.',
                         'Zmerať a korigovať magnézium (časté pri hnačke).',
-                        'Pozn.: vracanie spôsobuje stratu K skôr renálne (cez alkalózu a sekundárny hyperaldosteronizmus) — vtedy býva U-K vyšší.'
+                        'Pozn.: vracanie spôsobuje stratu K skôr renálne (cez alkalózu a sekundárny hyperaldosteronizmus); vtedy býva U-K vyšší.'
                     ] }
                 ]
             },
@@ -148,7 +148,7 @@
             rta: {
                 id: 'rta', kind: 'r', severity: 'warn',
                 category: 'Renálna strata + metabolická acidóza',
-                summary: 'Renálna strata draslíka so súčasnou metabolickou acidózou — typicky renálna tubulárna acidóza alebo ketoacidóza.',
+                summary: 'Renálna strata draslíka so súčasnou metabolickou acidózou: typicky renálna tubulárna acidóza alebo ketoacidóza.',
                 sections: [
                     { heading: 'Časté príčiny', items: [
                         'Renálna tubulárna acidóza: distálna (typ 1) a proximálna (typ 2).',
@@ -172,7 +172,7 @@
                 summary: 'Renálna strata draslíka, metabolická alkalóza a hypertenzia svedčia pre nadbytok mineralokortikoidov.',
                 sections: [
                     { heading: 'Časté príčiny', items: [
-                        'Primárny hyperaldosteronizmus (Connov syndróm) — najčastejší, často podceňovaný.',
+                        'Primárny hyperaldosteronizmus (Connov syndróm): najčastejší, často podceňovaný.',
                         'Renovaskulárna hypertenzia, Cushingov syndróm, kongenitálna adrenálna hyperplázia.',
                         'Liddleov syndróm; zdanlivý mineralokortikoidový nadbytok (nadmerný príjem sladkého drievka).'
                     ] },
@@ -187,7 +187,7 @@
             cl_responsive: {
                 id: 'cl_responsive', kind: 'r', severity: 'warn',
                 category: 'Chloridom responzívna alkalóza (normotenzia, nízky U-Cl)',
-                summary: 'Metabolická alkalóza s normotenziou a nízkym močovým chloridom — reaguje na doplnenie objemu a chloridu.',
+                summary: 'Metabolická alkalóza s normotenziou a nízkym močovým chloridom: reaguje na doplnenie objemu a chloridu.',
                 sections: [
                     { heading: 'Časté príčiny', items: [
                         'Vracanie alebo nazogastrická drenáž.',
@@ -204,10 +204,10 @@
             cl_resistant: {
                 id: 'cl_resistant', kind: 'r', severity: 'warn',
                 category: 'Chloridom rezistentná alkalóza (normotenzia, vysoký U-Cl)',
-                summary: 'Metabolická alkalóza s normotenziou a vysokým močovým chloridom — typicky diuretiká alebo tubulopatie.',
+                summary: 'Metabolická alkalóza s normotenziou a vysokým močovým chloridom: typicky diuretiká alebo tubulopatie.',
                 sections: [
                     { heading: 'Časté príčiny', items: [
-                        'Aktuálne užívané diuretiká (slučkové, tiazidy) — najčastejšie.',
+                        'Aktuálne užívané diuretiká (slučkové, tiazidy): najčastejšie.',
                         'Bartterov syndróm (pripomína slučkové diuretiká) a Gitelmanov syndróm (pripomína tiazidy).',
                         'Ťažká deplécia magnézia.'
                     ] },
