@@ -250,7 +250,7 @@ $totpUri = $pendingSecret ? getTotpUri($pendingSecret, (string) ($user['email'] 
 <head>
   <?php
   $pageTitle      = 'Dvojfaktorové overenie (2FA) | Nefro-projekt Slovensko';
-  $seoDescription = 'Správa dvojfaktorového overenia (2FA) — aktivácia, deaktivácia a obnova záložných kódov.';
+  $seoDescription = 'Správa dvojfaktorového overenia (2FA): aktivácia, deaktivácia a obnova záložných kódov.';
   $robotsMeta     = 'noindex, nofollow';
   $canonicalUrl   = 'https://nefro.polascin.net/2fa_setup.php';
   include 'head_meta.php';
@@ -285,18 +285,18 @@ $totpUri = $pendingSecret ? getTotpUri($pendingSecret, (string) ($user['email'] 
         <?php if ($totpEnabled): ?>
           <p>
             <span class="badge-2fa-on">2FA je ZAPNUTÉ</span>
-            — váš účet je chránený TOTP autentifikátorom.
+            Váš účet je chránený TOTP autentifikátorom.
           </p>
           <p class="avatar-upload-hint">
             Záložných kódov zostáva: <strong><?= count($backupCodes) ?></strong>
             <?php if (count($backupCodes) <= 2): ?>
-              <span class="badge-draft">Málo záložných kódov — odporúčame obnoviť</span>
+              <span class="badge-draft">Málo záložných kódov, odporúčame ich obnoviť</span>
             <?php endif; ?>
           </p>
         <?php else: ?>
           <p>
             <span class="badge-draft">2FA je VYPNUTÉ</span>
-            — odporúčame aktivovať pre vyššiu bezpečnosť účtu.
+            Odporúčame ho aktivovať pre vyššiu bezpečnosť účtu.
           </p>
         <?php endif; ?>
       </div>
@@ -348,7 +348,7 @@ $totpUri = $pendingSecret ? getTotpUri($pendingSecret, (string) ($user['email'] 
             <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
             <input type="hidden" name="action" value="enable_confirm">
             <div class="form-group">
-              <label for="totp_confirm_code">Potvrďte aktiváciu — zadajte prvý kód z aplikácie</label>
+              <label for="totp_confirm_code">Potvrďte aktiváciu: zadajte prvý kód z aplikácie</label>
               <input
                 type="text"
                 id="totp_confirm_code"
