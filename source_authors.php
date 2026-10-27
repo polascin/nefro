@@ -31,6 +31,9 @@ function getSourceArticleAuthors(): array {
         // Autori primárnej práce Clin Interv Aging 2026, doi 10.2147/CIA.S623634 (PMID 42829622) –
         // 10 mien overených cez Crossref a PubMed 2026-10-20.
         'aki-rizikovy-model-starsi-zlyhavanie-srdca' => ['Mingyu Liu', 'Dongxia Qiu', 'Shuang Qiu', 'Wanqing Huang', 'Lemuge Qi', 'Jinjie Zhou', 'Xiaolan Gong', 'Yongyuan Tao', 'Jiuxu Bai', 'Ning Cao'],
+        // Autori primárnej štúdie VIDEO-KD, JAMA Intern Med 2026, doi 10.1001/jamainternmed.2026.5989
+        // (PMID 42911803) – 20 mien v pôvodnom poradí, overených cez Crossref a PubMed 2026-10-28.
+        'video-kd-podpora-rozhodovania-starsi-pokrocila-ckd' => ['Angelo E. Volandes', 'Joshua R. Lakin', 'Yuchiao Chang', 'Charlotta Lindvall', 'Lisa M. Quintiliani', 'Andrew L. Lundquist', 'Annie Liu', 'Manjula Kurella Tamura', 'Mark Unruh', 'Susan P. Y. Wong', 'Aretha Delight Davis', 'Cynthia Garde', 'Lori Henault', 'Upeka Samarakoon', 'Amresh Hanchate', 'Ernest Mandel', 'Jamie A. Green', 'Kyla Lawson', 'Seth N. Randa', 'Michael K. Paasche-Orlow'],
         // Prednasajuci vzdelavacej aktivity ReachMD / Global Learning Collaborative
         // (uvolnene 31. 8. 2026) – byline overeny priamo z verejneho prepisu 2026-10-20.
         'iga-nefropatia-skryty-priebeh-oneskorena-diagnostika' => ['Jonathan Barratt'],
