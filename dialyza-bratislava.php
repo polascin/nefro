@@ -350,6 +350,15 @@ $businessContacts = [
                 </p>
             </section>
 
+            <div class="features-section">
+                <figure class="place-figure">
+                    <video width="2560" height="1440" autoplay muted loop playsinline controls preload="metadata" aria-label="Ilustračné video dialýzy">
+                        <source src="assets/videos/dialyza-realisticke-video.mp4" type="video/mp4">
+                        Váš prehliadač nepodporuje prehrávanie videa. <a href="assets/videos/dialyza-realisticke-video.mp4">Stiahnuť video</a>.
+                    </video>
+                </figure>
+            </div>
+
             <section class="features-section" aria-labelledby="sluzby-heading">
                 <h2 id="sluzby-heading">Naše služby</h2>
                 <div class="features-grid">
@@ -438,6 +447,15 @@ $businessContacts = [
                     </dl>
                 </div>
             </section>
+
+            <div class="features-section">
+                <figure class="place-figure">
+                    <video width="2560" height="1440" autoplay muted loop playsinline controls preload="metadata" aria-label="Ilustrované video dialýzy">
+                        <source src="assets/videos/dialyza-ilustrovane-video.mp4" type="video/mp4">
+                        Váš prehliadač nepodporuje prehrávanie videa. <a href="assets/videos/dialyza-ilustrovane-video.mp4">Stiahnuť video</a>.
+                    </video>
+                </figure>
+            </div>
 
             <?php $medimpaxArticles = getMedimpaxPatientArticles($pdo); ?>
             <?php if (!empty($medimpaxArticles)): $popMonths = popSkMonths(); ?>

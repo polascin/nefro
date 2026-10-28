@@ -55,6 +55,13 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-10-28 01:22',
+                'category' => 'portal',
+                'title' => 'Videá v sekcii Dialýza',
+                'description' => 'Sekciu Dialýza dopĺňajú dve videá s prehrávaním v slučke. Každé video možno pozastaviť pomocou ovládania prehrávača.',
+                'url' => 'dialyza-bratislava.php',
+            ],
+            [
                 'date' => '2026-10-27 23:05',
                 'category' => 'content',
                 'title' => 'Marža z krvi za 7 €',

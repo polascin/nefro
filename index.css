@@ -2777,7 +2777,7 @@ input:disabled + .slider:before {
 .donate-qr img { border: 1px solid var(--border-color); border-radius: 8px; padding: 8px; background: #fff; }
 .donate-qr figcaption { font-size: 0.82rem; color: #6b7280; margin-top: 6px; }
 .place-figure { margin: 0 0 16px; text-align: center; }
-.place-figure img { max-width: 100%; height: auto; border-radius: 8px; display: block; }
+.place-figure img, .place-figure video { max-width: 100%; height: auto; border-radius: 8px; display: block; }
 .place-figure figcaption { font-size: 0.82rem; color: #6b7280; margin-top: 6px; }
 .map-embed { border: 0; width: 100%; max-width: 100%; border-radius: 8px; display: block; }
 .map-embed-consent { border: 1px dashed var(--border-color, #d1d5db); border-radius: 8px; padding: 24px 16px; text-align: center; background: var(--card-bg, #f9fafb); }
