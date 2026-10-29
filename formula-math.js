@@ -160,10 +160,20 @@
     }, 50);
   }
 
-  function loadScript(src, onload) {
+  // Hosting (OpenResty na WebSupporte) občas odmietne požiadavku s 429.
+  // Skript sa preto po chvíli skúsi načítať znova, inak by vzorce ostali surové.
+  function loadScript(src, onload, attempt) {
     var script = document.createElement('script');
     script.src = src;
     script.onload = onload;
+    script.onerror = function () {
+      script.remove();
+      if ((attempt || 0) < 2) {
+        setTimeout(function () {
+          loadScript(src, onload, (attempt || 0) + 1);
+        }, 4000 * ((attempt || 0) + 1));
+      }
+    };
     document.head.appendChild(script);
   }
 
