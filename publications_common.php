@@ -165,6 +165,9 @@ function publicationFormats(): array
             'mime'  => 'application/vnd.amazon.ebook',
             'note'  => 'Pre čítačky Amazon Kindle; súbor pošlite do zariadenia cez Send to Kindle alebo USB.',
         ],
+        // DOCX sa od 29. 10. 2026 v žiadnej publikácii neponúka. Definícia zostáva
+        // iba pre skôr zaplatené objednávky, ktoré majú DOCX medzi formátmi
+        // a majú naň nárok na stiahnutie.
         'docx' => [
             'ext'   => 'docx',
             'label' => 'DOCX',
@@ -205,7 +208,6 @@ function freePublications(): array
                 ['code' => 'pdf', 'label' => 'PDF', 'file' => 'download_free_publication.php?edition=sk&format=pdf', 'download_name' => 'SK-Nefro-Dokazane-pravdepodobne-otvorene.pdf'],
                 ['code' => 'epub', 'label' => 'EPUB', 'file' => 'download_free_publication.php?edition=sk&format=epub', 'download_name' => 'SK-Nefro-Dokazane-pravdepodobne-otvorene.epub'],
                 ['code' => 'azw3', 'label' => 'AZW3 (Kindle)', 'file' => 'download_free_publication.php?edition=sk&format=azw3', 'download_name' => 'SK-Nefro-Dokazane-pravdepodobne-otvorene.azw3'],
-                ['code' => 'docx', 'label' => 'DOCX', 'file' => 'download_free_publication.php?edition=sk&format=docx', 'download_name' => 'SK-Nefro-Dokazane-pravdepodobne-otvorene.docx'],
                 ['code' => 'odt', 'label' => 'ODT', 'file' => 'download_free_publication.php?edition=sk&format=odt', 'download_name' => 'SK-Nefro-Dokazane-pravdepodobne-otvorene.odt'],
             ],
             'excerpt' => 'Sedemnásť rozšírených úvodníkov spája 387 odborných článkov do tematických línií a oddeľuje, čo je dokázané, čo je pravdepodobné a čo zostáva otvorené.',
@@ -224,7 +226,6 @@ function freePublications(): array
                 ['code' => 'pdf', 'label' => 'PDF', 'file' => 'download_free_publication.php?edition=en&format=pdf', 'download_name' => 'SK-Nefro-Proven-Probable-Open.pdf'],
                 ['code' => 'epub', 'label' => 'EPUB', 'file' => 'download_free_publication.php?edition=en&format=epub', 'download_name' => 'SK-Nefro-Proven-Probable-Open.epub'],
                 ['code' => 'azw3', 'label' => 'AZW3 (Kindle)', 'file' => 'download_free_publication.php?edition=en&format=azw3', 'download_name' => 'SK-Nefro-Proven-Probable-Open.azw3'],
-                ['code' => 'docx', 'label' => 'DOCX', 'file' => 'download_free_publication.php?edition=en&format=docx', 'download_name' => 'SK-Nefro-Proven-Probable-Open.docx'],
                 ['code' => 'odt', 'label' => 'ODT', 'file' => 'download_free_publication.php?edition=en&format=odt', 'download_name' => 'SK-Nefro-Proven-Probable-Open.odt'],
             ],
             'excerpt' => 'Anglické vydanie 17 rozšírených úvodníkov, ktoré spájajú 387 odborných článkov a oddeľujú dokázané, pravdepodobné a otvorené otázky.',
@@ -243,7 +244,6 @@ function freePublications(): array
                 ['code' => 'pdf', 'label' => 'PDF', 'file' => 'download_free_publication.php?edition=de&format=pdf', 'download_name' => 'SK-Nefro-Belegt-wahrscheinlich-offen.pdf'],
                 ['code' => 'epub', 'label' => 'EPUB', 'file' => 'download_free_publication.php?edition=de&format=epub', 'download_name' => 'SK-Nefro-Belegt-wahrscheinlich-offen.epub'],
                 ['code' => 'azw3', 'label' => 'AZW3 (Kindle)', 'file' => 'download_free_publication.php?edition=de&format=azw3', 'download_name' => 'SK-Nefro-Belegt-wahrscheinlich-offen.azw3'],
-                ['code' => 'docx', 'label' => 'DOCX', 'file' => 'download_free_publication.php?edition=de&format=docx', 'download_name' => 'SK-Nefro-Belegt-wahrscheinlich-offen.docx'],
                 ['code' => 'odt', 'label' => 'ODT', 'file' => 'download_free_publication.php?edition=de&format=odt', 'download_name' => 'SK-Nefro-Belegt-wahrscheinlich-offen.odt'],
             ],
             'excerpt' => 'Nemecké vydanie 17 rozšírených úvodníkov, ktoré spájajú 387 odborných článkov a oddeľujú doložené, pravdepodobné a otvorené otázky.',
@@ -262,7 +262,6 @@ function freePublications(): array
                 ['code' => 'pdf', 'label' => 'PDF', 'file' => 'download_free_publication.php?edition=it&format=pdf', 'download_name' => 'SK-Nefro-Dimostrato-probabile-aperto.pdf'],
                 ['code' => 'epub', 'label' => 'EPUB', 'file' => 'download_free_publication.php?edition=it&format=epub', 'download_name' => 'SK-Nefro-Dimostrato-probabile-aperto.epub'],
                 ['code' => 'azw3', 'label' => 'AZW3 (Kindle)', 'file' => 'download_free_publication.php?edition=it&format=azw3', 'download_name' => 'SK-Nefro-Dimostrato-probabile-aperto.azw3'],
-                ['code' => 'docx', 'label' => 'DOCX', 'file' => 'download_free_publication.php?edition=it&format=docx', 'download_name' => 'SK-Nefro-Dimostrato-probabile-aperto.docx'],
                 ['code' => 'odt', 'label' => 'ODT', 'file' => 'download_free_publication.php?edition=it&format=odt', 'download_name' => 'SK-Nefro-Dimostrato-probabile-aperto.odt'],
             ],
             'excerpt' => 'Talianske vydanie 17 rozšírených úvodníkov, ktoré spájajú 387 odborných článkov a oddeľujú dokázané, pravdepodobné a otvorené otázky.',
@@ -301,9 +300,9 @@ function publications(): array
             ],
             'cover' => 'img/publikacie/marza-z-krvi-obalka.jpg',
             'cover_small' => 'img/publikacie/marza-z-krvi-obalka-600.jpg',
-            'formats' => ['pdf', 'epub', 'azw3', 'docx'],
-            'price_single' => 7.00,
-            'price_bundle' => 7.00,
+            'formats' => ['pdf', 'epub', 'azw3'],
+            'price_single' => 9.98,
+            'price_bundle' => 9.98,
             'is_available' => true,
             'excerpt' => 'Nezávislý nefrológ odhaľuje dialyzačný systém, ktorý mení pacientov na finančnú záťaž. Dokáže ho zastaviť skôr, než zničí jeho aj ľudí, ktorí mu pomáhajú?',
             'description' => [
@@ -314,9 +313,9 @@ function publications(): array
             'highlights' => [
                 'Triler o ukradnutých minútach z prostredia dialýzy',
                 'Prvé slovenské vydanie na 298 stranách',
-                'Ilustrovaná e-kniha v PDF, EPUB, AZW3 a DOCX',
+                'Ilustrovaná e-kniha v PDF, EPUB a AZW3',
                 'ISBN pridelené Národnou agentúrou ISBN v SR pre PDF, EPUB aj tlačené vydanie',
-                'Cena 7 € za ľubovoľný výber dostupných formátov',
+                'Cena 9,98 € za ľubovoľný výber dostupných formátov',
                 'Bez DRM',
             ],
             'audience' => 'Čitatelia trilerov zo zdravotníckeho prostredia a príbehov o konflikte svedomia, moci a finančných záujmov.',
@@ -336,7 +335,7 @@ function publications(): array
             'images'      => 393,
             'cover'       => 'img/publikacie/sk-nefro-baza-1-obalka.jpg',
             'cover_small' => 'img/publikacie/sk-nefro-baza-1-obalka-600.jpg',
-            'formats'     => ['pdf', 'epub', 'azw3', 'docx', 'odt'],
+            'formats'     => ['pdf', 'epub', 'azw3', 'odt'],
             'is_available' => true,
             'excerpt'     => 'Celý polročný ročník odborného obsahu portálu v jednej knihe: 387 článkov '
                 . 'o chronickej chorobe obličiek, dialýze, transplantácii a internej medicíne, '
@@ -381,7 +380,7 @@ function publications(): array
             'images'      => 393,
             'cover'       => 'img/publikacie/sk-nefro-baza-1-en-obalka.jpg',
             'cover_small' => 'img/publikacie/sk-nefro-baza-1-en-obalka-600.jpg',
-            'formats'     => ['pdf', 'epub', 'azw3', 'docx', 'odt'],
+            'formats'     => ['pdf', 'epub', 'azw3', 'odt'],
             'is_available' => true,
             'excerpt'     => 'Anglický preklad odborného ročníka portálu: 387 článkov o chronickej '
                 . 'chorobe obličiek, dialýze, transplantácii a internej medicíne. Vhodné na '
@@ -424,7 +423,7 @@ function publications(): array
             'images'      => 393,
             'cover'       => 'img/publikacie/sk-nefro-baza-1-de-obalka.jpg',
             'cover_small' => 'img/publikacie/sk-nefro-baza-1-de-obalka-600.jpg',
-            'formats'     => ['pdf', 'epub', 'azw3', 'docx', 'odt'],
+            'formats'     => ['pdf', 'epub', 'azw3', 'odt'],
             'is_available' => true,
             'excerpt'     => 'Nemecký preklad odborného ročníka portálu: 387 článkov o chronickej '
                 . 'chorobe obličiek, dialýze, transplantácii a internej medicíne. Vhodné na '
@@ -468,7 +467,7 @@ function publications(): array
             'images'      => 0,
             'cover'       => 'img/publikacie/sk-nefro-baza-1-kompendium-obalka.jpg',
             'cover_small' => 'img/publikacie/sk-nefro-baza-1-kompendium-obalka-600.jpg',
-            'formats'     => ['pdf', 'epub', 'azw3', 'docx', 'odt'],
+            'formats'     => ['pdf', 'epub', 'azw3', 'odt'],
             'is_available' => true,
             'excerpt'     => 'Zhustené vydanie prvého zväzku: 387 článkov ako abstrakt a štyri až sedem '
                 . 'kľúčových bodov, k tomu syntéza na začiatku každej zo 16 kapitol. '
@@ -517,7 +516,7 @@ function publications(): array
             'images'      => 0,
             'cover'       => 'img/publikacie/sk-nefro-baza-1-kompendium-en-obalka.jpg',
             'cover_small' => 'img/publikacie/sk-nefro-baza-1-kompendium-en-obalka-600.jpg',
-            'formats'     => ['pdf', 'epub', 'azw3', 'docx', 'odt'],
+            'formats'     => ['pdf', 'epub', 'azw3', 'odt'],
             'is_available' => true,
             'excerpt'     => 'Anglické vydanie kompendia: 387 článkov ako abstrakt a stručné zhrnutie, '
                 . 'k tomu syntéza na začiatku každej zo 16 kapitol. Celý ročník na 275 stranách '
@@ -565,7 +564,7 @@ function publications(): array
             'images'      => 0,
             'cover'       => 'img/publikacie/sk-nefro-baza-1-kompendium-de-obalka.jpg',
             'cover_small' => 'img/publikacie/sk-nefro-baza-1-kompendium-de-obalka-600.jpg',
-            'formats'     => ['pdf', 'epub', 'azw3', 'docx', 'odt'],
+            'formats'     => ['pdf', 'epub', 'azw3', 'odt'],
             'is_available' => true,
             'excerpt'     => 'Nemecké vydanie kompendia: 387 článkov ako abstrakt a stručné zhrnutie, '
                 . 'doplnené syntézou na začiatku každej zo 16 kapitol. Celý ročník na 300 stranách.',
@@ -605,7 +604,7 @@ function publications(): array
             'images'      => 393,
             'cover'       => 'img/publikacie/sk-nefro-baza-1-it-obalka.jpg',
             'cover_small' => 'img/publikacie/sk-nefro-baza-1-it-obalka-600.jpg',
-            'formats'     => ['pdf', 'epub', 'azw3', 'docx', 'odt'],
+            'formats'     => ['pdf', 'epub', 'azw3', 'odt'],
             'is_available' => true,
             'excerpt'     => 'Taliansky preklad odborného ročníka portálu: 387 článkov o chronickej '
                 . 'chorobe obličiek, dialýze, transplantácii a internej medicíne. Vhodné na '
@@ -646,7 +645,7 @@ function publications(): array
             'images'      => 0,
             'cover'       => 'img/publikacie/sk-nefro-baza-1-kompendium-it-obalka.jpg',
             'cover_small' => 'img/publikacie/sk-nefro-baza-1-kompendium-it-obalka-600.jpg',
-            'formats'     => ['pdf', 'epub', 'azw3', 'docx', 'odt'],
+            'formats'     => ['pdf', 'epub', 'azw3', 'odt'],
             'is_available' => true,
             'excerpt'     => 'Talianske vydanie kompendia: 387 článkov ako abstrakt a stručné zhrnutie, '
                 . 'doplnené syntézou na začiatku každej zo 16 kapitol. Celý ročník na 290 stranách.',

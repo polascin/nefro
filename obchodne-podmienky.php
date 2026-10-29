@@ -112,7 +112,7 @@ include 'legal_head.php';
                 <p>
                     <strong>Technické požiadavky.</strong> PDF otvorí akýkoľvek prehliadač PDF.
                     EPUB vyžaduje čítačku alebo aplikáciu na čítanie elektronických kníh,
-                    AZW3 čítačku Amazon Kindle, DOCX program Microsoft Word alebo kompatibilný
+                    AZW3 čítačku Amazon Kindle
                     a ODT program LibreOffice či OpenOffice. Pre prístup k súborom je potrebné
                     internetové pripojenie a funkčná e-mailová adresa.
                 </p>

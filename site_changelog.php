@@ -55,6 +55,13 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-10-29 17:05',
+                'category' => 'content',
+                'title' => 'Marža z krvi za 9,98 € a publikácie bez DOCX',
+                'description' => 'Cena e-knihy Marža z krvi je 9,98 € za ľubovoľný výber dostupných formátov. Publikácie sa už neponúkajú vo formáte DOCX; k dispozícii zostávajú PDF, EPUB, AZW3 a pri odborných vydaniach aj ODT.',
+                'url' => 'publikacia.php?slug=marza-z-krvi',
+            ],
+            [
                 'date' => '2026-10-28 01:22',
                 'category' => 'portal',
                 'title' => 'Videá v sekcii Dialýza',

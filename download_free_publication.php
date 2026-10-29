@@ -46,7 +46,6 @@ $mimeTypes = [
     'pdf' => 'application/pdf',
     'epub' => 'application/epub+zip',
     'azw3' => 'application/vnd.amazon.ebook',
-    'docx' => 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
     'odt' => 'application/vnd.oasis.opendocument.text',
 ];
 
