@@ -179,8 +179,13 @@ function sendContentSecurityPolicy(array $extraFormAction = []): void {
         "base-uri 'self'; object-src 'none'; frame-ancestors 'self'; " .
         "form-action {$formAction}; upgrade-insecure-requests";
     header('Content-Security-Policy: ' . $csp);
-    $cspRO = $csp . '; report-uri /csp-report.php';
-    header('Content-Security-Policy-Report-Only: ' . $cspRO);
+    // Zámerne bez Content-Security-Policy-Report-Only: bola totožná
+    // s vynucovanou politikou a jediné, čo prinášala, boli 1 až 3 POST
+    // požiadavky na csp-report.php pri každom zobrazení stránky (Google
+    // Analytics siaha na googletagmanager.com/td a google.sk/ads, ktoré
+    // politika správne blokuje). Každá požiadavka navyše sa počíta do limitu
+    // OpenResty na WebSupporte (429 Too Many Requests). csp-report.php
+    // zostáva pre prípad dočasného zapnutia reportovania pri ladení CSP.
 }
 
 /**

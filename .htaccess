@@ -164,13 +164,25 @@ ServerSignature Off
         Header append Vary Accept
     </FilesMatch>
 
-    # Statika (štýly, skripty, obálky, ikony) nech si ju OpenResty aj prehliadač
-    # podrží. CSS/JS majú v URL verziu podľa filemtime, takže nový súbor sa
-    # načíta hneď. Bez tejto hlavičky každé otvorenie stránky znova žiada
-    # desiatky súborov z originu a pri súbehu PHP workerov OpenResty vráti
-    # celostránkové „429 Too Many Requests“.
-    <FilesMatch "\.(?:css|js|mjs|woff2?|ttf|eot|ico|gif|svg|png|jpe?g|webp|avif)$">
-        Header set Cache-Control "public, max-age=86400"
+    # Statika nech si prehliadač podrží čo najdlhšie. OpenResty na WebSupporte
+    # obmedzuje počet požiadaviek na IP a doménu (zmerané 29. 10. 2026:
+    # približne 25 v dávke, potom okolo 10 za minútu, statické súbory
+    # vrátane) a po prekročení vráti celostránkové „429 Too Many Requests“
+    # ešte pred Apache. Jediná obrana na našej strane je, aby prehliadač pri
+    # ďalších stránkach vôbec nežiadal súbory, ktoré už má.
+    #
+    # CSS/JS majú v URL verziu podľa filemtime (každý odkaz v PHP je
+    # verziovaný), takže sa dajú držať rok ako nemenné. Písma KaTeX majú
+    # verziu v ceste a Inter sa nemení. Obrázky, ikony a manifest sa môžu
+    # vymeniť pod rovnakým názvom, preto týždeň.
+    <FilesMatch "\.(?:css|js|mjs)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+    <FilesMatch "\.(?:woff2?|ttf|eot)$">
+        Header set Cache-Control "public, max-age=2592000, immutable"
+    </FilesMatch>
+    <FilesMatch "\.(?:ico|gif|svg|png|jpe?g|webp|avif|webmanifest)$">
+        Header set Cache-Control "public, max-age=604800"
     </FilesMatch>
 </IfModule>
 

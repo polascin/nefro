@@ -208,10 +208,10 @@ function formatResultKey(string $key): string {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tlač výsledku – <?= htmlspecialchars((string) ($resultRow['calculator_label'] ?? 'Kalkulačka')) ?> – Nefro-projekt Slovensko</title>
     <meta name="robots" content="noindex, nofollow">
-    <link rel="stylesheet" href="index.css?v=20260509-1&cb=<?= filemtime('index.css') ?>">
-    <script src="ui-preferences.js?v=20260511-1&cb=<?= filemtime('ui-preferences.js') ?>"></script>
-    <script src="theme.js?v=20260511-1&cb=<?= filemtime('theme.js') ?>"></script>
-    <script src="ui-preferences-fallback.js?v=20260511-1&cb=<?= filemtime('ui-preferences-fallback.js') ?>" defer></script>
+    <link rel="stylesheet" href="index.css?v=<?= filemtime('index.css') ?>">
+    <script src="ui-preferences.js?v=<?= filemtime('ui-preferences.js') ?>"></script>
+    <script src="theme.js?v=<?= filemtime('theme.js') ?>"></script>
+    <script src="ui-preferences-fallback.js?v=<?= filemtime('ui-preferences-fallback.js') ?>" defer></script>
 </head>
 <body data-auto-print="1">
     <a href="#main-content" class="skip-link">Preskočiť na hlavný obsah</a>

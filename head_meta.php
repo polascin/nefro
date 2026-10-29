@@ -103,11 +103,13 @@ $katexAutoRender = $katexBase . '/contrib/auto-render.min.js';
 <meta name="theme-color" content="#2563eb">
 
 <!-- Assets with Cache-Busting -->
-<!-- KaTeX for mathematical formulas (self-hosted) -->
-<link rel="stylesheet" href="<?= htmlspecialchars($katexCss) ?>?v=<?= filemtime($katexCss) ?>">
-<script defer src="<?= htmlspecialchars($katexJs) ?>?v=<?= filemtime($katexJs) ?>"></script>
-<script defer src="<?= htmlspecialchars($katexAutoRender) ?>?v=<?= filemtime($katexAutoRender) ?>"></script>
-<script defer src="formula-math.js?v=<?= filemtime('formula-math.js') ?>"></script>
+<!-- KaTeX (self-hosted) sťahuje formula-math.js až na stránke, ktorá má blok
+     so vzorcom (.calc-formula-box). Ostatné stránky tak ušetria tri požiadavky,
+     ktoré sa počítajú do limitu OpenResty na WebSupporte (429). -->
+<script defer src="formula-math.js?v=<?= filemtime('formula-math.js') ?>"
+        data-katex-css="<?= htmlspecialchars($katexCss) ?>?v=<?= filemtime($katexCss) ?>"
+        data-katex-js="<?= htmlspecialchars($katexJs) ?>?v=<?= filemtime($katexJs) ?>"
+        data-katex-autorender="<?= htmlspecialchars($katexAutoRender) ?>?v=<?= filemtime($katexAutoRender) ?>"></script>
 
 <link rel="stylesheet" href="index.css?v=<?= filemtime('index.css') ?>">
 <?php

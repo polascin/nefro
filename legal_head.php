@@ -38,10 +38,10 @@ $legalFullTitle   = $legalTitle . ' | ' . $legalSiteName;
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
     <!-- Consent gate musí byť dostupný skôr, než téma číta voliteľné úložisko. -->
-    <script src="ui-preferences.js?v=20260511-1&cb=<?= filemtime('ui-preferences.js') ?>"></script>
+    <script src="ui-preferences.js?v=<?= filemtime('ui-preferences.js') ?>"></script>
     <script nonce="<?= htmlspecialchars(getScriptNonce(), ENT_QUOTES, 'UTF-8') ?>">window.npsServerThemeAuto=1;</script>
     <!-- Logika pre Tmavý režim (na začiatku kvôli prevencii FOUC) -->
-    <script src="theme.js?v=20260509-1&cb=<?= filemtime('theme.js') ?>"></script>
+    <script src="theme.js?v=<?= filemtime('theme.js') ?>"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Bezpečnostné hlavičky (Security) -->
@@ -101,10 +101,10 @@ $legalFullTitle   = $legalTitle . ' | ' . $legalSiteName;
     <link rel="shortcut icon" href="./favicon.ico">
 
     <!-- CSS (Inter self-hosted v index.css) -->
-    <link rel="stylesheet" href="index.css?v=20260509-1&cb=<?= filemtime('index.css') ?>">
+    <link rel="stylesheet" href="index.css?v=<?= filemtime('index.css') ?>">
 
     <!-- Cookie Consent & GA4 Consent Mode v2 -->
-    <script src="ui-preferences-fallback.js?v=20260511-1&cb=<?= filemtime('ui-preferences-fallback.js') ?>" defer></script>
+    <script src="ui-preferences-fallback.js?v=<?= filemtime('ui-preferences-fallback.js') ?>" defer></script>
 </head>
 
 <body>

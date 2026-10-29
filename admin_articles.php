@@ -899,7 +899,7 @@ $pageTimeZone = getUserTimezoneAbbr() . " (" . getUserTimezone() . ")";
   <script src="ui-preferences.js?v=20260511-1&cb=<?= filemtime(
       "ui-preferences.js",
   ) ?>"></script>
-  <script src="theme.js?v=20260509-1&cb=<?= filemtime("theme.js") ?>"></script>
+  <script src="theme.js?v=<?= filemtime("theme.js") ?>"></script>
   <script src="ui-preferences-fallback.js?v=20260511-1&cb=<?= filemtime(
       "ui-preferences-fallback.js",
   ) ?>" defer></script>

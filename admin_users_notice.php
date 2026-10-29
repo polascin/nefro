@@ -298,10 +298,10 @@ $modeLabel = $includeSensitive
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zoznam používateľov - Nefro</title>
     <meta name="robots" content="noindex, nofollow">
-    <link rel="stylesheet" href="index.css?v=20260509-1&cb=<?= filemtime('index.css') ?>">
-    <script src="ui-preferences.js?v=20260511-1&cb=<?= filemtime('ui-preferences.js') ?>"></script>
-    <script src="theme.js?v=20260511-1&cb=<?= filemtime('theme.js') ?>"></script>
-    <script src="ui-preferences-fallback.js?v=20260511-1&cb=<?= filemtime('ui-preferences-fallback.js') ?>" defer></script>
+    <link rel="stylesheet" href="index.css?v=<?= filemtime('index.css') ?>">
+    <script src="ui-preferences.js?v=<?= filemtime('ui-preferences.js') ?>"></script>
+    <script src="theme.js?v=<?= filemtime('theme.js') ?>"></script>
+    <script src="ui-preferences-fallback.js?v=<?= filemtime('ui-preferences-fallback.js') ?>" defer></script>
     <script src="nefro-ui.js?v=<?= filemtime('nefro-ui.js') ?>" defer></script>
     <script nonce="<?= htmlspecialchars(getScriptNonce(), ENT_QUOTES, 'UTF-8') ?>">window.npsSessionTimeoutSeconds=<?= (int) SESSION_IDLE_TIMEOUT ?>;window.npsSessionKeepaliveToken=<?= json_encode(generateSessionKeepaliveToken(), JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?>;window.npsLogoutCsrfToken=<?= json_encode(generateCsrfToken(), JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT) ?>;</script>
     <script src="session-timeout.js?v=<?= filemtime('session-timeout.js') ?>" defer></script>

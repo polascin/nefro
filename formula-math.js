@@ -1,4 +1,6 @@
 (function () {
+  var SELF = document.currentScript;
+
   var DELIMITERS = [
     { left: '$$', right: '$$', display: true },
     { left: '$', right: '$', display: false },
@@ -158,8 +160,50 @@
     }, 50);
   }
 
+  function loadScript(src, onload) {
+    var script = document.createElement('script');
+    script.src = src;
+    script.onload = onload;
+    document.head.appendChild(script);
+  }
+
+  // KaTeX sa sťahuje až tu, nie v <head>: väčšina stránok žiadny vzorec nemá
+  // a tri požiadavky navyše sa počítajú do limitu OpenResty na WebSupporte
+  // (429 Too Many Requests). Adresy súborov nesie data-katex-* na vlastnom
+  // <script> tagu (pozri head_meta.php).
+  function ensureKatex(done) {
+    if (typeof renderMathInElement === 'function') {
+      done();
+      return;
+    }
+    if (!SELF) {
+      return;
+    }
+    var css = SELF.getAttribute('data-katex-css');
+    var js = SELF.getAttribute('data-katex-js');
+    var autoRender = SELF.getAttribute('data-katex-autorender');
+    if (!css || !js || !autoRender) {
+      return;
+    }
+    if (!document.querySelector('link[data-katex-css]')) {
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = css;
+      link.setAttribute('data-katex-css', '');
+      document.head.appendChild(link);
+    }
+    loadScript(js, function () {
+      loadScript(autoRender, done);
+    });
+  }
+
   function init() {
-    waitForKatex(0);
+    if (!document.querySelector('.calc-formula-box')) {
+      return;
+    }
+    ensureKatex(function () {
+      waitForKatex(0);
+    });
   }
 
   if (document.readyState === 'loading') {

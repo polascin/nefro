@@ -496,7 +496,7 @@ if (isLoggedIn()) {
             ); ?>
         </div>
     </main>
-    <script src="patient_autofill.js?v=20260515-1&cb=<?= filemtime("patient_autofill.js") ?>" defer></script>
+    <script src="patient_autofill.js?v=<?= filemtime("patient_autofill.js") ?>" defer></script>
     <?php include "footer.php"; ?>
 </body>
 </html>

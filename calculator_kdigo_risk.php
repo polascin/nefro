@@ -333,7 +333,7 @@ if (isLoggedIn()) {
     </main>
 
     <script src="egfr-units.js?cb=<?= filemtime(__DIR__ . '/egfr-units.js') ?>" defer></script>
-    <script src="patient_autofill.js?v=20260515-1&cb=<?= filemtime("patient_autofill.js") ?>" defer></script>
+    <script src="patient_autofill.js?v=<?= filemtime("patient_autofill.js") ?>" defer></script>
     <?php include "footer.php"; ?>
 </body>
 </html>

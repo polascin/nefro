@@ -732,7 +732,7 @@ function ekfcModeLabel(string $mode): string
             ); ?>
         </div>
     </main>
-    <script src="patient_autofill.js?v=20260515-1&cb=<?= filemtime('patient_autofill.js') ?>" defer></script>
+    <script src="patient_autofill.js?v=<?= filemtime('patient_autofill.js') ?>" defer></script>
     <script nonce="<?= htmlspecialchars(function_exists('getScriptNonce') ? getScriptNonce() : '', ENT_QUOTES) ?>">
     // Zobrazí len vstupy, ktoré zvolený variant rovnice skutočne používa:
     // cystatínová verzia nepotrebuje kreatinín ani pohlavie, a naopak.

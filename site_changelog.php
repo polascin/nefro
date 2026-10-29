@@ -55,6 +55,13 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-10-29 17:42',
+                'category' => 'portal',
+                'title' => 'Menej požiadaviek na jedno zobrazenie stránky',
+                'description' => 'Hosting obmedzuje počet požiadaviek z jednej adresy a pri prekročení ukazoval chybu 429. Štýly a skripty sa teraz v prehliadači držia dlhodobo, knižnica na vzorce sa sťahuje len tam, kde sú vzorce, a stránky už neposielajú zbytočné CSP hlásenia.',
+                'url' => '',
+            ],
+            [
                 'date' => '2026-10-29 17:05',
                 'category' => 'content',
                 'title' => 'Marža z krvi za 9,98 € a publikácie bez DOCX',
