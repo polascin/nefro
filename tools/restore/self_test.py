@@ -172,7 +172,9 @@ CREATE EVENT disabled_test ON SCHEDULE EVERY 1 DAY DO INSERT INTO parents VALUES
                 and app["cryptography"]["tampered_rejected"] == 1
                 and app["database_read_only_account"] == "PASS" and app["database_http_checks"] == 5
                 and app["search_results_branch_verified"]
-                and app["public_download_http_checks"] == 23):
+                # 3 negative HTTP checks + 4 free editions x 4 offered formats
+                # (DOCX left the free downloads on 2026-10-29; it was 23).
+                and app["public_download_http_checks"] == 19):
             raise RuntimeError("Application restore control failed.")
         (files / "pdf/article.pdf").unlink()
         missing_report = root / "missing-reference.json"

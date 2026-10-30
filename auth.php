@@ -884,9 +884,14 @@ function recordFormRateLimitFailure(PDO $pdo, string $action, string $ip, int $m
          VALUES (:ip, :action, 1, NOW(), NOW())
          ON DUPLICATE KEY UPDATE
             attempt_count = IF(TIMESTAMPDIFF(SECOND, first_attempt, NOW()) >= :window, 1, attempt_count + 1),
-            first_attempt = IF(TIMESTAMPDIFF(SECOND, first_attempt, NOW()) >= :window, NOW(), first_attempt),
+            first_attempt = IF(TIMESTAMPDIFF(SECOND, first_attempt, NOW()) >= :window_reset, NOW(), first_attempt),
             last_attempt = NOW()"
-    )->execute(['ip' => $ip, 'action' => $action, 'window' => $windowSeconds]);
+    )->execute([
+        'ip' => $ip,
+        'action' => $action,
+        'window' => $windowSeconds,
+        'window_reset' => $windowSeconds,
+    ]);
 
     $stmt = $pdo->prepare(
         "SELECT attempt_count FROM form_rate_limit WHERE ip = :ip AND action = :action"

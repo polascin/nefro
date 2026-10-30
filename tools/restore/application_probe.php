@@ -257,9 +257,22 @@ try {
         $stage = 'http_downloads';
         $editions = ['sk' => 'sk-nefro-dokazane-pravdepodobne-otvorene', 'en' => 'sk-nefro-proven-probable-open',
             'de' => 'sk-nefro-belegt-wahrscheinlich-offen', 'it' => 'sk-nefro-dimostrato-probabile-aperto'];
+        // Only the formats the free editions actually offer: publicationFormats()
+        // still defines DOCX for earlier paid orders, but the free download
+        // endpoint stopped serving it on 2026-10-29.
+        $offers = [];
+        foreach (freePublications() as $publication) {
+            foreach ($publication['downloads'] as $download) {
+                parse_str((string) parse_url($download['file'], PHP_URL_QUERY), $query);
+                $offers[(string) $query['edition']][] = (string) $query['format'];
+            }
+        }
         foreach ($editions as $edition => $stem) {
-            foreach (publicationFormats() as $format => $definition) {
-                $path = probePath('pdf/publikacie/' . $stem . '.' . $definition['ext']);
+            probeCheck(isset($offers[$edition]));
+            foreach ($offers[$edition] as $format) {
+                $ext = (string) (publicationFormats()[$format]['ext'] ?? '');
+                probeCheck($ext !== '');
+                $path = probePath('pdf/publikacie/' . $stem . '.' . $ext);
                 probeCheck($path !== false);
                 $hash = hash_init('sha256');
                 $curl = curl_init('http://127.0.0.1:8099/download_free_publication.php?edition=' . $edition . '&format=' . $format);
