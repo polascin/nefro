@@ -25,6 +25,10 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
  */
 function getSourceArticleAuthors(): array {
     return [
+        // Autorka spracovaného článku Medscape Medical News „Physicians Spend More Time
+        // on Paperwork Than With Patients: The Squeeze of Invisible Work“ (21. 10. 2026) –
+        // byline overený z verejne dostupnej stránky zdroja 2026-10-30.
+        'administrativna-zataz-lekarov-dokumentacia-vyhorenie' => ['Lambeth Hochwald'],
         // Autori globálnych odporúčaní ISH 2026, doi 10.1097/HJH.0000000000004451 (PMID 42909506).
         // Trinásť bibliografických autorov z Crossref a PubMed 2026-10-28. Ďalších 24 mien
         // v zázname PubMed sú recenzenti uvedení v abstrakte, nie spoluautori.
