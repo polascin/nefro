@@ -183,6 +183,11 @@ git commit -m "content(odborne): <názov článku bez diakritiky>"
 Post-commit hook pushne a nasadí cez SFTP. Ak článok mení **databázovú schému**,
 commitni migráciu **zvlášť a PRED** kódom.
 
+`git commit` vrátane hooku beží bežne dlhšie než 2 minúty a Bash ho utne. **Neopakuj ho** —
+over skutočný stav: `git log --oneline -1`, `git log --oneline -1 origin/main` a
+`sh hooks/deploy.sh --remote-commit`. Ak sa všetky tri zhodujú, commit, push aj nasadenie
+prebehli a stačí pokračovať.
+
 ---
 
 ## 6. Spustenie na serveri
@@ -223,15 +228,6 @@ php -r '$c=file_get_contents("pdf/<slug>.pdf"); echo preg_match_all("#/Image#",$
 
 `>= 3` = logo + vodoznak + ilustrácia. Menej než 100 kB = obrázok chýba.
 
-## 8. Sociálne zhrnutia, len keď o ne tá istá úloha žiada
-
-Krátke zhrnutie v slovenčine a v angličtine, až po live kontrole, s odkazom na
-`https://nefro.polascin.net/article.php?slug=<slug>`. Žiadny textGrain ani obdobný
-postup. Ilustrácia k príspevkom je bez textu, písmen, loga a tvárí. Ak používateľ
-požiada o uloženie na Disk, ulož súbor do účtu, ktorý menuje. Príspevok zverejni
-len na sieťach, ktoré v tej istej úlohe vymenoval. Ak konektor binárny obrázok
-neprijme alebo sieť nie je prihlásená, napíš to a text príspevku nechaj v odpovedi.
-Nepredstieraj zverejnenie.
 Pri hromadnej regenerácii: stiahni PDF **bez commitu medzi regeneráciou a stiahnutím**,
 inak deploy prepíše dobré serverové PDF starou verziou.
 
@@ -251,6 +247,49 @@ Hodnoť **telo odpovede**, nie len stavový kód. Limit `curl` je 20 požiadavie
 
 ---
 
+## 8. Príspevky na sociálne siete
+
+Tento krok nie je tiché pokračovanie každého článku. Odoslanie príspevku je správa
+v mene používateľa. Urob ho len vtedy, keď o sociálne siete požiada v tej istej úlohe.
+
+Keď požiada, platia tieto body:
+
+1. Veľmi krátke zhrnutie v slovenčine a v angličtine, až po live kontrole, s odkazom na
+   `https://nefro.polascin.net/article.php?slug=<slug>`. V slovenčine odstráň anglicizmy,
+   bohemizmy, čechizmy a kalky. V oboch jazykoch skontroluj terminológiu, gramatiku,
+   interpunkciu, diakritiku a mieru istoty. Čísla nezaokrúhľuj inak než v článku.
+   Nepoužívaj textGrain ani obdobné postupy. Prilož aj verziu do 280 znakov pre X.
+2. Ilustrácia k príspevkom bez textu, písmen, čísel, loga a tvárí, v pomere 16:10
+   (v Canve najbližší dostupný `LANDSCAPE_3_2`, export 1600 × 1000). Pre príspevky
+   použi **iný motív** než v článku, aby sa obrázky na profile neopakovali.
+3. **Uloženie na Google Disk účtu polascin@gmail.com.** Konektor Google Drive prijíma
+   binárny obsah len cez `base64Content`, čo pri obrázku 1600 × 1000 prekročí limit
+   výstupu nástroja (PNG ≈ 1,7 MB → ≈ 2,2 mil. znakov base64). Preto **kopíruj súbor
+   priamo do lokálnej synchronizovanej zložky**:
+
+   ```
+   G:\Môj disk\polascin.net – obálky blogu\<RRRR-MM-DD>-<slug>.png
+   ```
+
+   `G:\Môj disk` je koreň Disku účtu polascin@gmail.com (overené cez konektor,
+   `parentId` = `0AJovQ1J8xonsUk9PVA`). Plná kvalita, bez limitu veľkosti. Po kopírovaní
+   over synchronizáciu konektorom:
+   `search_files` s `title contains '<RRRR-MM-DD>-<slug>'` — súbor sa objaví do minúty.
+   Texty príspevkov ulož konektorom ako dokument do koreňa Disku pod názvom
+   `<RRRR-MM-DD> <téma>, príspevky` (zavedená konvencia).
+4. Príspevok aj s obrázkom zverejni na `x.com/polascin`, `facebook.com/lubomir.polascin`,
+   `linkedin.com/in/lubomirpolascin` a `threads.com/@lubomirpolascin`.
+
+   ⚠️ **Overené 31. 10. 2026: pre X, Facebook, LinkedIn ani Threads nie je pripojený
+   žiadny MCP konektor** (dostupné sú Gmail, Google Drive/Docs/Calendar, Canva, Notion,
+   Slack, Zoom, Figma a odborné databázy). Agent teda **nedokáže príspevok zverejniť**.
+   V takom prípade to povedz rovno, odovzdaj hotové texty aj cestu k obrázku na Disku
+   a nepredstieraj zverejnenie. To isté platí, ak sieť nie je prihlásená.
+5. Po zverejnení skontroluj, že príspevok na profile je a že odkaz na článok sedí.
+   Čo sa nepodarilo, povedz menovite.
+
+---
+
 ## Regenerácia existujúceho článku
 
 Uprav `content`/`excerpt`/`title` v jeho `add_<slug>_article.php`, potom kroky 4 → 7.
@@ -264,23 +303,3 @@ sh sync_article_pdfs.sh      # všetky chýbajúce + neaktuálne
 Cielene na serveri: `php generate_all_article_pdfs.php --slug=<slug> --force`.
 
 ---
-
-## 8. Príspevky na sociálne siete
-
-Tento krok nie je tiché pokračovanie každého článku. Odoslanie príspevku je správa
-v mene používateľa. Urob ho len vtedy, keď o sociálne siete požiada v tej istej úlohe.
-
-Keď požiada, platia tieto body:
-
-1. Veľmi krátke zhrnutie v slovenčine a v angličtine. V slovenčine oprav anglicizmy,
-   bohemizmy a kalky. V oboch jazykoch skontroluj terminológiu, gramatiku a mieru istoty.
-   Čísla nezaokrúhľuj inak než v článku. Nepoužívaj textGrain ani obdobné postupy.
-2. Ku každej jazykovej verzii ilustrácia bez textu, písmen, loga a tvárí. Pomer 16:10
-   (v Canva najbližší dostupný `LANDSCAPE_3_2`, export 1600×1000, ak ide do článku).
-3. Ilustráciu ulož na Google Disk účtu polascin@gmail.com. Ak konektor prijme len text,
-   súbor nahraj cez prihlásený prehliadač. Ak účet nie je prihlásený, povedz to a súbor
-   nenechaj len v chate.
-4. Príspevok aj s obrázkom zverejni na `x.com/polascin`, `facebook.com/lubomir.polascin`,
-   `linkedin.com/in/lubomirpolascin` a `threads.com/@lubomirpolascin`.
-5. Po zverejnení skontroluj, že príspevok na profile je a že odkaz na článok sedí.
-   Čo sa nepodarilo, povedz menovite. Nevymýšľaj, že príspevok vyšiel.
