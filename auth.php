@@ -172,9 +172,9 @@ function sendContentSecurityPolicy(array $extraFormAction = []): void {
         "img-src 'self' data: https:; " .
         "style-src 'self'; " .
         "font-src 'self'; " .
-        "script-src 'self' 'nonce-{$nonce}' https://www.googletagmanager.com https://www.google-analytics.com; " .
+        "script-src 'self' 'nonce-{$nonce}' https://www.googletagmanager.com https://www.google-analytics.com https://*.clarity.ms; " .
         "connect-src 'self' https://www.google-analytics.com https://*.google-analytics.com " .
-            "https://analytics.google.com https://*.analytics.google.com https://stats.g.doubleclick.net; " .
+            "https://analytics.google.com https://*.analytics.google.com https://stats.g.doubleclick.net https://*.clarity.ms; " .
         "frame-src https://www.google.com https://maps.google.com; " .
         "base-uri 'self'; object-src 'none'; frame-ancestors 'self'; " .
         "form-action {$formAction}; upgrade-insecure-requests";

@@ -139,3 +139,7 @@ $swatchBeat = '@' . number_format($beatValue, 2, '.', '');
 
   <script src="form-submit-enter.js?v=<?= filemtime('form-submit-enter.js') ?>" defer></script>
   <script src="image-fullview.js?v=<?= filemtime(__DIR__ . '/image-fullview.js') ?>" defer></script>
+
+<?php if (!isLoggedIn()): ?>
+<script src="/clarity-consent.js?v=20261101" data-project="z6sw2qy3dt" data-consent="external" data-paths="/,/index.php,/articles.php,/article.php,/publikacie.php,/publikacia.php,/privacy,/privacy.php,/cookies,/cookies.php,/terms,/terms.php"></script>
+<?php endif; ?>
