@@ -69,7 +69,7 @@ const analyticsSuppressedForPage = (() => {
 // MUSÍ sa zhodovať s `consentVersion` v legal_data.php (legalInfo()).
 // Všetky uložené súhlasy zo staršej verzie sa automaticky invalidujú
 // a banner sa zobrazí znova (GDPR čl. 7 ods. 3 — nový súhlas pri zmene podmienok).
-const consentVersion = '2026-07-16';
+const consentVersion = '2026-11-01';
 const consentMaxAgeMs = consentCookieMaxAgeDays * 24 * 60 * 60 * 1000;
 const consentFutureToleranceMs = 5 * 60 * 1000;
 
@@ -225,6 +225,7 @@ try {
       'analytics_storage': initialConsent.analytics ? 'granted' : 'denied'
     });
 
+    window.dispatchEvent(new CustomEvent('site:analytics-consent', { detail: initialConsent.analytics === true && !analyticsSuppressedForPage }));
     if (initialConsent.analytics || initialConsent.marketing) {
         initializeGA4();
     } else {
@@ -300,7 +301,7 @@ function initPrivacyManager() {
                 <div class="cookie-content">
                     <h2 id="cookieBannerTitle">Vážime si vaše súkromie</h2>
                     <p id="cookieBannerDesc">
-                        Naša webová stránka používa súbory cookies na zabezpečenie základného fungovania (nevyhnutné cookies) a s vaším súhlasom aj na analytické, marketingové a personalizačné účely. Vaše údaje nám pomáhajú zlepšovať obsah a používateľský zážitok.
+                        Naša webová stránka používa súbory cookies na zabezpečenie základného fungovania (nevyhnutné cookies) a s vaším súhlasom aj na analytické, marketingové a personalizačné účely. Analytika zahŕňa Google Analytics 4 a Microsoft Clarity. Clarity na verejných stránkach zaznamenáva kliknutia, posúvanie a priebeh používania s maskovaným textom.
                         Viac v <a href="/cookies">Cookie Policy</a> a <a href="/privacy">Zásadách ochrany osobných údajov</a>.
                     </p>
                     ${globalPrivacyControlEnabled ? '<p>Prehliadač odosiela signál Global Privacy Control. Marketingové spracúvanie preto zostáva vypnuté.</p>' : ''}
@@ -340,7 +341,7 @@ function initPrivacyManager() {
                         <div class="cookie-category">
                             <div class="category-info">
                                 <h3 id="analyticsCookiesTitle">Analytické cookies (Analytics)</h3>
-                                <p>Pomáhajú nám pochopiť, ako návštevníci používajú náš web. Údaje sa spracúvajú pod pseudonymným identifikátorom uloženým v cookie.</p>
+                                <p>Google Analytics 4 a Microsoft Clarity pomáhajú zlepšovať verejné stránky. Clarity zaznamenáva návštevy, kliknutia, posúvanie a priebeh používania s maskovaným textom. Prihlásené a klinické obrazovky sa do Clarity neodosielajú. Údaje sa spracúvajú pod pseudonymným identifikátorom uloženým v cookie.</p>
                             </div>
                             <div class="category-toggle">
                                 <label class="switch">
@@ -429,6 +430,7 @@ function initPrivacyManager() {
     }
 
     function applyConsent(consentData) {
+        window.dispatchEvent(new CustomEvent('site:analytics-consent', { detail: consentData.analytics === true && !analyticsSuppressedForPage }));
         // Aplikácia súhlasu pre Google Analytics 4 (Consent Mode v2)
         gtag('consent', 'update', {
             'analytics_storage': consentData.analytics ? 'granted' : 'denied',

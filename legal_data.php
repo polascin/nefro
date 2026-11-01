@@ -50,7 +50,7 @@ function legalInfo(): array
         'consumerAuthorityUrl'     => 'https://www.soi.sk/kontakt',
         'effectiveDate'            => '2026-10-12',
         'version'                  => '3.0',
-        'consentVersion'           => '2026-07-16',
+        'consentVersion'           => '2026-11-01',
     ];
 }
 

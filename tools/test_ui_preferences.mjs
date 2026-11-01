@@ -61,6 +61,7 @@ function makeContext({
         location: { pathname, search, protocol: 'https:', hostname: 'nefro.polascin.net' },
         dataLayer: [],
         addEventListener() {},
+        dispatchEvent(event) { this.lastConsentEvent = event; },
     };
     const context = vm.createContext({
         window,
@@ -68,6 +69,7 @@ function makeContext({
         localStorage,
         navigator: { globalPrivacyControl: gpc },
         URLSearchParams,
+        CustomEvent: class { constructor(type, options) { this.type = type; this.detail = options.detail; } },
         console: { warn() {}, error() {}, log() {} },
         setTimeout,
         clearTimeout,

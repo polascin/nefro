@@ -315,7 +315,8 @@ include 'legal_head.php';
                 <?php $legalCurrent = 'privacy'; include 'legal_related.php'; ?>
             </article>
         </div>
-    </main>
+    <section><h2>Microsoft Clarity na verejných stránkach</h2><p>Clarity sa načíta iba po analytickom súhlase. Na zlepšovanie webu meria návštevy, kliknutia, posúvanie a priebeh používania s maskovaným textom. Údaje prijíma Microsoft. Prihlásené obrazovky, formuláre a kalkulačky sú z Clarity vylúčené. Reklamný súhlas sa službe Clarity neudeľuje. Cookies <code>_clck</code> a <code>_clsk</code> rozlišujú návštevníkov a spájajú zobrazenia do relácií. Súhlas možno kedykoľvek odvolať v nastaveniach cookies. Podrobnosti vrátane medzinárodných prenosov: <a href="https://privacy.microsoft.com/privacystatement">ochrana súkromia Microsoft</a> a <a href="https://learn.microsoft.com/en-us/clarity/setup-and-installation/clarity-cookies">cookies Clarity</a>.</p></section>
+</main>
 
     <?php include 'footer.php'; ?>
 </body>
