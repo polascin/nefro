@@ -13,6 +13,7 @@ declare(strict_types=1);
 require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
+require_once __DIR__ . '/request_input.php';
 require_once __DIR__ . '/drugs_common.php';
 
 requireAdmin();
@@ -110,40 +111,40 @@ function dgSourcesToText(?string $json): string
 /** Spoločné čítanie a validácia polí formulára (create aj update). */
 function dgReadForm(array $catLabels): array
 {
-    $nameSk = trim((string) ($_POST['name_sk'] ?? ''));
-    $category = (string) ($_POST['category'] ?? 'other');
+    $nameSk = requestScalarString($_POST, 'name_sk');
+    $category = requestScalarString($_POST, 'category', 'other');
     if (!array_key_exists($category, $catLabels)) {
         $category = 'other';
     }
-    $maxPhaseRaw = trim((string) ($_POST['max_phase'] ?? ''));
+    $maxPhaseRaw = requestScalarString($_POST, 'max_phase');
     $maxPhase = $maxPhaseRaw === '' ? null : max(0, min(4, (int) $maxPhaseRaw));
-    $approvalRaw = trim((string) ($_POST['first_approval'] ?? ''));
+    $approvalRaw = requestScalarString($_POST, 'first_approval');
     $approval = $approvalRaw === '' ? null : (int) $approvalRaw;
     if ($approval !== null && ($approval < 1900 || $approval > (int) date('Y') + 1)) {
         $approval = null;
     }
     return [
         'name_sk'        => $nameSk,
-        'name_intl'      => (($v = trim((string) ($_POST['name_intl'] ?? ''))) !== '') ? mb_substr($v, 0, 200) : null,
-        'chembl_id'      => (($v = trim((string) ($_POST['chembl_id'] ?? ''))) !== '') ? mb_substr($v, 0, 20) : null,
-        'atc_code'       => (($v = trim((string) ($_POST['atc_code'] ?? ''))) !== '') ? mb_substr($v, 0, 16) : null,
-        'drug_class'     => (($v = trim((string) ($_POST['drug_class'] ?? ''))) !== '') ? mb_substr($v, 0, 200) : null,
-        'routes'         => (($v = trim((string) ($_POST['routes'] ?? ''))) !== '') ? mb_substr($v, 0, 100) : null,
+        'name_intl'      => (($v = requestScalarString($_POST, 'name_intl')) !== '') ? mb_substr($v, 0, 200) : null,
+        'chembl_id'      => (($v = requestScalarString($_POST, 'chembl_id')) !== '') ? mb_substr($v, 0, 20) : null,
+        'atc_code'       => (($v = requestScalarString($_POST, 'atc_code')) !== '') ? mb_substr($v, 0, 16) : null,
+        'drug_class'     => (($v = requestScalarString($_POST, 'drug_class')) !== '') ? mb_substr($v, 0, 200) : null,
+        'routes'         => (($v = requestScalarString($_POST, 'routes')) !== '') ? mb_substr($v, 0, 100) : null,
         'category'       => $category,
         'max_phase'      => $maxPhase,
         'first_approval' => $approval,
         'black_box_warning' => isset($_POST['black_box_warning']) ? 1 : 0,
         'withdrawn'      => isset($_POST['withdrawn']) ? 1 : 0,
-        'mechanism'      => dgClip((string) ($_POST['mechanism'] ?? '')),
-        'indications'    => dgClip((string) ($_POST['indications'] ?? '')),
-        'renal_dosing'   => dgClip((string) ($_POST['renal_dosing'] ?? '')),
-        'nephrotoxicity' => dgClip((string) ($_POST['nephrotoxicity'] ?? '')),
-        'dialyzability'  => dgClip((string) ($_POST['dialyzability'] ?? '')),
-        'warnings'       => dgClip((string) ($_POST['warnings'] ?? '')),
-        'monitoring'     => dgClip((string) ($_POST['monitoring'] ?? '')),
-        'sk_note'        => dgClip((string) ($_POST['sk_note'] ?? '')),
-        'synonyms'       => dgSynonymsToJson((string) ($_POST['synonyms'] ?? '')),
-        'source_refs'    => dgSourcesToJson((string) ($_POST['source_refs'] ?? '')),
+        'mechanism'      => dgClip(requestScalarString($_POST, 'mechanism')),
+        'indications'    => dgClip(requestScalarString($_POST, 'indications')),
+        'renal_dosing'   => dgClip(requestScalarString($_POST, 'renal_dosing')),
+        'nephrotoxicity' => dgClip(requestScalarString($_POST, 'nephrotoxicity')),
+        'dialyzability'  => dgClip(requestScalarString($_POST, 'dialyzability')),
+        'warnings'       => dgClip(requestScalarString($_POST, 'warnings')),
+        'monitoring'     => dgClip(requestScalarString($_POST, 'monitoring')),
+        'sk_note'        => dgClip(requestScalarString($_POST, 'sk_note')),
+        'synonyms'       => dgSynonymsToJson(requestScalarString($_POST, 'synonyms')),
+        'source_refs'    => dgSourcesToJson(requestScalarString($_POST, 'source_refs')),
         'is_published'   => isset($_POST['is_published']) ? 1 : 0,
     ];
 }
@@ -152,10 +153,10 @@ function dgReadForm(array $catLabels): array
 if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
     if (!checkFormRateLimit($pdo, 'admin_post_' . basename(__FILE__), getClientIpAddress(), 60, 300)) {
         $actionError = 'Príliš veľa požiadaviek. Skúste to neskôr.';
-    } elseif (!validateCsrfToken((string) ($_POST['csrf_token'] ?? ''))) {
+    } elseif (!validateCsrfToken(requestScalarString($_POST, 'csrf_token'))) {
         $actionError = 'Neplatný CSRF token.';
     } else {
-        $action = (string) ($_POST['action'] ?? '');
+        $action = requestScalarString($_POST, 'action');
         switch ($action) {
             case 'create':
             case 'update':
@@ -164,9 +165,9 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                     $actionError = 'Slovenský názov lieku je povinný.';
                     break;
                 }
-                $slug = trim((string) ($_POST['slug'] ?? ''));
+                $slug = requestScalarString($_POST, 'slug');
                 $slug = $slug !== '' ? dgSlugify($slug) : dgSlugify($data['name_sk']);
-                $id = (int) ($_POST['drug_id'] ?? 0);
+                $id = requestScalarInt($_POST, 'drug_id');
 
                 if ($action === 'update' && $id <= 0) {
                     $actionError = DG_ERR_INVALID_ID;
@@ -207,8 +208,8 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 
             case 'toggle_publish':
                 requireAdminReauth();
-                $id = (int) ($_POST['drug_id'] ?? 0);
-                $setPub = (int) ($_POST['set_pub'] ?? -1);
+                $id = requestScalarInt($_POST, 'drug_id');
+                $setPub = requestScalarInt($_POST, 'set_pub', -1);
                 if ($id <= 0) {
                     $actionError = DG_ERR_INVALID_ID;
                     break;
@@ -230,7 +231,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 
             case 'delete':
                 requireAdminReauth();
-                $id = (int) ($_POST['drug_id'] ?? 0);
+                $id = requestScalarInt($_POST, 'drug_id');
                 if ($id <= 0) {
                     $actionError = DG_ERR_INVALID_ID;
                     break;
@@ -260,8 +261,8 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 }
 
 // ── Načítanie lieku na editáciu (GET) ─────────────────────────────────────────
-$editId = (int) ($_GET['id'] ?? 0);
-if (($_GET['action'] ?? '') === 'edit' && $editId > 0) {
+$editId = requestScalarInt($_GET, 'id');
+if (requestScalarString($_GET, 'action') === 'edit' && $editId > 0) {
     try {
         $stmt = $pdo->prepare('SELECT * FROM drugs WHERE id = :id LIMIT 1');
         $stmt->execute(['id' => $editId]);
@@ -272,15 +273,15 @@ if (($_GET['action'] ?? '') === 'edit' && $editId > 0) {
 }
 
 // ── Filtre + zoznam ───────────────────────────────────────────────────────────
-$fCat = (string) ($_GET['kat'] ?? '');
+$fCat = requestScalarString($_GET, 'kat');
 if ($fCat !== '' && !array_key_exists($fCat, $catLabels)) {
     $fCat = '';
 }
-$fPub = (string) ($_GET['pub'] ?? '');
+$fPub = requestScalarString($_GET, 'pub');
 if (!in_array($fPub, ['', 'published', 'hidden'], true)) {
     $fPub = '';
 }
-$fQuery = trim((string) ($_GET['q'] ?? ''));
+$fQuery = requestScalarString($_GET, 'q');
 if (mb_strlen($fQuery) > 100) {
     $fQuery = mb_substr($fQuery, 0, 100);
 }

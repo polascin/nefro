@@ -3,6 +3,7 @@ declare(strict_types=1);
 require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
+require_once __DIR__ . '/request_input.php';
 require_once __DIR__ . '/newsletter_notifications.php';
 
 requireAdmin();
@@ -14,14 +15,14 @@ $actionResult = null;
 $actionError  = null;
 
 if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
-    $postedCsrf = $_POST['csrf_token'] ?? '';
+    $postedCsrf = requestScalarString($_POST, 'csrf_token');
     if (!checkFormRateLimit($pdo, 'admin_post_' . basename(__FILE__), getClientIpAddress(), 60, 300)) {
         $actionError = 'Príliš veľa požiadaviek. Skúste to neskôr.';
     } elseif (!validateCsrfToken($postedCsrf)) {
         $actionError = 'Neplatný CSRF token.';
     } else {
-        $action = $_POST['action'] ?? '';
-        $subId  = (int) ($_POST['sub_id'] ?? 0);
+        $action = requestScalarString($_POST, 'action');
+        $subId  = requestScalarInt($_POST, 'sub_id');
 
         requireAdminReauth();
         switch ($action) {
@@ -134,7 +135,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 }
 
 // Filter
-$statusFilter = strtolower(trim((string) ($_GET['status'] ?? '')));
+$statusFilter = strtolower(requestScalarString($_GET, 'status'));
 if (!in_array($statusFilter, ['active', 'pending', 'unsubscribed'], true)) {
     $statusFilter = '';
 }

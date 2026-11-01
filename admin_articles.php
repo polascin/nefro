@@ -3,6 +3,7 @@ declare(strict_types=1);
 require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
+require_once __DIR__ . '/request_input.php';
 require_once __DIR__ . "/newsletter_notifications.php";
 require_once __DIR__ . '/pdf_generator.php';
 
@@ -62,9 +63,9 @@ $queueSummary = [
 ];
 $articleQueueStats = [];
 $queueRecent = [];
-$queueFilterStatus = strtolower(trim((string) ($_GET["q_status"] ?? "")));
-$queueFilterArticleId = max(0, (int) ($_GET["q_article_id"] ?? 0));
-$queuePreset = strtolower(trim((string) ($_GET["q_preset"] ?? "")));
+$queueFilterStatus = strtolower(requestScalarString($_GET, 'q_status'));
+$queueFilterArticleId = max(0, requestScalarInt($_GET, 'q_article_id'));
+$queuePreset = strtolower(requestScalarString($_GET, 'q_preset'));
 $queueAllowedStatuses = ["pending", "failed", "sending", "sent", "cancelled"];
 if (!in_array($queueFilterStatus, $queueAllowedStatuses, true)) {
     $queueFilterStatus = "";
@@ -188,29 +189,27 @@ function optimizeExcerptForSeo(
 
 // ── Spracovanie POST akcií ────────────────────────────────────────────────────
 if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
-    $postedCsrf = $_POST["csrf_token"] ?? "";
+    $postedCsrf = requestScalarString($_POST, 'csrf_token');
     if (!checkFormRateLimit($pdo, 'admin_post_' . basename(__FILE__), getClientIpAddress(), 60, 300)) {
         $actionError = "Príliš veľa požiadaviek. Skúste to neskôr.";
     } elseif (!validateCsrfToken($postedCsrf)) {
         $actionError = "Neplatný CSRF token.";
     } else {
-        $action = $_POST["action"] ?? "";
+        $action = requestScalarString($_POST, 'action');
 
         switch ($action) {
             // ── CREATE ──────────────────────────────────────────────────────
             case "create":
-                $title = trim((string) ($_POST["title"] ?? ""));
-                $slug = trim((string) ($_POST["slug"] ?? ""));
-                $author = trim(
-                    (string) ($_POST["author"] ?? DEFAULT_ARTICLE_AUTHOR),
-                );
-                $content = trim((string) ($_POST["content"] ?? ""));
-                $excerpt = trim((string) ($_POST["excerpt"] ?? ""));
-                $pubAt = trim((string) ($_POST["published_at"] ?? ""));
+                $title = requestScalarString($_POST, 'title');
+                $slug = requestScalarString($_POST, 'slug');
+                $author = requestScalarString($_POST, 'author', DEFAULT_ARTICLE_AUTHOR);
+                $content = requestScalarString($_POST, 'content');
+                $excerpt = requestScalarString($_POST, 'excerpt');
+                $pubAt = requestScalarString($_POST, 'published_at');
                 $isTop = isset($_POST["is_top"]) ? 1 : 0;
                 $isPub = isset($_POST["is_published"]) ? 1 : 0;
                 $category =
-                    ($_POST["category"] ?? "") === "popularne"
+                    requestScalarString($_POST, 'category') === "popularne"
                         ? "popularne"
                         : "odborne";
 
@@ -308,17 +307,17 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
 
             // ── UPDATE ──────────────────────────────────────────────────────
             case "update":
-                $id = (int) ($_POST["article_id"] ?? 0);
-                $title = trim((string) ($_POST["title"] ?? ""));
-                $slug = trim((string) ($_POST["slug"] ?? ""));
-                $author = trim((string) ($_POST["author"] ?? ""));
-                $content = trim((string) ($_POST["content"] ?? ""));
-                $excerpt = trim((string) ($_POST["excerpt"] ?? ""));
-                $pubAt = trim((string) ($_POST["published_at"] ?? ""));
+                $id = requestScalarInt($_POST, 'article_id');
+                $title = requestScalarString($_POST, 'title');
+                $slug = requestScalarString($_POST, 'slug');
+                $author = requestScalarString($_POST, 'author');
+                $content = requestScalarString($_POST, 'content');
+                $excerpt = requestScalarString($_POST, 'excerpt');
+                $pubAt = requestScalarString($_POST, 'published_at');
                 $isTop = isset($_POST["is_top"]) ? 1 : 0;
                 $isPub = isset($_POST["is_published"]) ? 1 : 0;
                 $category =
-                    ($_POST["category"] ?? "") === "popularne"
+                    requestScalarString($_POST, 'category') === "popularne"
                         ? "popularne"
                         : "odborne";
 
@@ -454,7 +453,7 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
 
             // ── NEWSLETTER: MANUÁLNE AVÍZO PRE ČLÁNOK ───────────────────
             case "enqueue_newsletter":
-                $id = (int) ($_POST["article_id"] ?? 0);
+                $id = requestScalarInt($_POST, 'article_id');
                 if ($id <= 0) {
                     $actionError = ERROR_INVALID_ARTICLE_ID;
                     break;
@@ -482,7 +481,7 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
 
             // ── NEWSLETTER: ZNOVU ZARADIŤ NEODOSLANÉ ───────────────────
             case "requeue_failed_newsletter":
-                $id = (int) ($_POST["article_id"] ?? 0);
+                $id = requestScalarInt($_POST, 'article_id');
                 if ($id <= 0) {
                     $actionError = ERROR_INVALID_ARTICLE_ID;
                     break;
@@ -511,7 +510,7 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
             // ── NEWSLETTER: ODOSLAŤ DUE NOW POLOŽKY ───────────────────
             case "send_newsletter_queue":
                 requireAdminReauth();
-                $limit = (int) ($_POST["send_limit"] ?? 50);
+                $limit = requestScalarInt($_POST, 'send_limit', 50);
                 $limit = max(1, min(200, $limit));
                 $newsletterLockAcquired = false;
                 try {
@@ -562,8 +561,8 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
             // ── NEWSLETTER: ZMAZAŤ ČAKAJÚCE ─────────────────────────────
             case "delete_pending_newsletter":
                 requireAdminReauth();
-                $articleId = (int) ($_POST["article_id"] ?? 0);
-                $confirmAll = (int) ($_POST["confirm_delete_all"] ?? 0);
+                $articleId = requestScalarInt($_POST, 'article_id');
+                $confirmAll = requestScalarInt($_POST, 'confirm_delete_all');
                 if ($articleId <= 0 && $confirmAll !== 1) {
                     $actionError = "Pre zmazanie všetkých čakajúcich avíz je potrebné explicitné potvrdenie.";
                     break;
@@ -613,8 +612,8 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
 
             // ── TOP TOGGLE ───────────────────────────────────────────────
             case "set_top":
-                $id = (int) ($_POST["article_id"] ?? 0);
-                $setTop = (int) ($_POST["set_top"] ?? -1);
+                $id = requestScalarInt($_POST, 'article_id');
+                $setTop = requestScalarInt($_POST, 'set_top', -1);
                 if ($id <= 0) {
                     $actionError = ERROR_INVALID_ARTICLE_ID;
                     break;
@@ -661,7 +660,7 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
 
             // ── MOVE UP ─────────────────────────────────────────────────
             case "move_up":
-                $id = (int) ($_POST["article_id"] ?? 0);
+                $id = requestScalarInt($_POST, 'article_id');
                 if ($id <= 0) {
                     $actionError = ERROR_INVALID_ARTICLE_ID;
                     break;
@@ -715,7 +714,7 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
 
             // ── MOVE DOWN ───────────────────────────────────────────────
             case "move_down":
-                $id = (int) ($_POST["article_id"] ?? 0);
+                $id = requestScalarInt($_POST, 'article_id');
                 if ($id <= 0) {
                     $actionError = ERROR_INVALID_ARTICLE_ID;
                     break;
@@ -770,7 +769,7 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
             // ── DELETE ──────────────────────────────────────────────────────
             case "delete":
                 requireAdminReauth();
-                $id = (int) ($_POST["article_id"] ?? 0);
+                $id = requestScalarInt($_POST, 'article_id');
                 if ($id <= 0) {
                     $actionError = ERROR_INVALID_ARTICLE_ID;
                     break;
@@ -808,8 +807,8 @@ if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
 }
 
 // ── Načítanie článku na editáciu (GET) ────────────────────────────────────────
-$editId = (int) ($_GET["id"] ?? 0);
-if (($_GET["action"] ?? "") === "edit" && $editId > 0) {
+$editId = requestScalarInt($_GET, 'id');
+if (requestScalarString($_GET, 'action') === "edit" && $editId > 0) {
     try {
         $stmt = $pdo->prepare("SELECT * FROM articles WHERE id = :id LIMIT 1");
         $stmt->execute(["id" => $editId]);
@@ -824,7 +823,7 @@ $articles = [];
 $articlesTotal = 0;
 $articleAuthorOptions = [];
 $articlesPerPage = 50; // počet článkov na stránku v administračnom zobrazení
-$articlesPage = max(1, (int) ($_GET['page'] ?? 1));
+$articlesPage = max(1, requestScalarInt($_GET, 'page', 1));
 $articlesOffset = ($articlesPage - 1) * $articlesPerPage;
 try {
     $totalStmt = $pdo->query("SELECT COUNT(*) FROM articles");

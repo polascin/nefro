@@ -55,6 +55,13 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-11-02 00:35',
+                'category' => 'portal',
+                'title' => 'Jednotné parametre aj v administrácii',
+                'description' => 'Správa článkov, liekov, štúdií, diskusie a newslettera číta filtre a formulárové polia rovnako ako verejné stránky: poškodený tvar parametra skončí chybou 400, nie pádom stránky.',
+                'url' => 'admin_articles.php',
+            ],
+            [
                 'date' => '2026-11-02 00:12',
                 'category' => 'portal',
                 'title' => 'Jednotné spracovanie parametrov na ďalších stránkach',

@@ -13,6 +13,7 @@ declare(strict_types=1);
 require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
+require_once __DIR__ . '/request_input.php';
 require_once __DIR__ . '/clinical_trials_common.php';
 
 requireAdmin();
@@ -31,17 +32,17 @@ $catLabels = ctCategoryLabels();
 if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
     if (!checkFormRateLimit($pdo, 'admin_post_' . basename(__FILE__), getClientIpAddress(), 60, 300)) {
         $actionError = 'Príliš veľa požiadaviek. Skúste to neskôr.';
-    } elseif (!validateCsrfToken((string) ($_POST['csrf_token'] ?? ''))) {
+    } elseif (!validateCsrfToken(requestScalarString($_POST, 'csrf_token'))) {
         $actionError = 'Neplatný CSRF token.';
     } else {
-        $action = (string) ($_POST['action'] ?? '');
+        $action = requestScalarString($_POST, 'action');
         switch ($action) {
             // ── Uloženie kurátorských polí ──────────────────────────────────
             case 'save':
-                $id       = (int) ($_POST['trial_id'] ?? 0);
-                $category = (string) ($_POST['category'] ?? '');
+                $id       = requestScalarInt($_POST, 'trial_id');
+                $category = requestScalarString($_POST, 'category');
                 $isPub    = isset($_POST['is_published']) ? 1 : 0;
-                $skNote   = trim((string) ($_POST['sk_note'] ?? ''));
+                $skNote   = requestScalarString($_POST, 'sk_note');
                 if (mb_strlen($skNote) > CT_SK_NOTE_MAXLEN) {
                     $skNote = mb_substr($skNote, 0, CT_SK_NOTE_MAXLEN);
                 }
@@ -81,8 +82,8 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
             // ── Rýchle prepnutie viditeľnosti ──────────────────────────────
             case 'toggle_publish':
                 requireAdminReauth();
-                $id     = (int) ($_POST['trial_id'] ?? 0);
-                $setPub = (int) ($_POST['set_pub'] ?? -1);
+                $id     = requestScalarInt($_POST, 'trial_id');
+                $setPub = requestScalarInt($_POST, 'set_pub', -1);
                 if ($id <= 0) {
                     $actionError = CT_ERR_INVALID_ID;
                     break;
@@ -112,8 +113,8 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 }
 
 // ── Načítanie štúdie na editáciu (GET) ────────────────────────────────────────
-$editId = (int) ($_GET['id'] ?? 0);
-if (($_GET['action'] ?? '') === 'edit' && $editId > 0) {
+$editId = requestScalarInt($_GET, 'id');
+if (requestScalarString($_GET, 'action') === 'edit' && $editId > 0) {
     try {
         $stmt = $pdo->prepare('SELECT * FROM clinical_trials WHERE id = :id LIMIT 1');
         $stmt->execute(['id' => $editId]);
@@ -124,21 +125,21 @@ if (($_GET['action'] ?? '') === 'edit' && $editId > 0) {
 }
 
 // ── Filtre + zoznam ───────────────────────────────────────────────────────────
-$fCat = (string) ($_GET['kat'] ?? '');
+$fCat = requestScalarString($_GET, 'kat');
 if ($fCat !== '' && !array_key_exists($fCat, $catLabels)) {
     $fCat = '';
 }
-$fPub = (string) ($_GET['pub'] ?? ''); // '', 'published', 'hidden'
+$fPub = requestScalarString($_GET, 'pub'); // '', 'published', 'hidden'
 if (!in_array($fPub, ['', 'published', 'hidden'], true)) {
     $fPub = '';
 }
-$fQuery = trim((string) ($_GET['q'] ?? ''));
+$fQuery = requestScalarString($_GET, 'q');
 if (mb_strlen($fQuery) > 100) {
     $fQuery = mb_substr($fQuery, 0, 100);
 }
 
 $perPage = 50;
-$page = max(1, (int) ($_GET['page'] ?? 1));
+$page = max(1, requestScalarInt($_GET, 'page', 1));
 $offset = ($page - 1) * $perPage;
 
 $where = ' WHERE 1=1';
