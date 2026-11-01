@@ -232,7 +232,7 @@ if ($requestMethod === 'POST' && $notice !== null && empty($errors)) {
             <p class="auth-subtitle">Zadajte e-mail alebo používateľské meno a pošleme vám odkaz na obnovenie hesla.</p>
 
             <?php if (!empty($errors)): ?>
-                <div class="alert alert-error" role="alert">
+                <div id="forgot-errors" class="alert alert-error" role="alert" tabindex="-1">
                     <ul>
                         <?php foreach ($errors as $error): ?>
                             <li><?= htmlspecialchars($error) ?></li>
@@ -247,12 +247,14 @@ if ($requestMethod === 'POST' && $notice !== null && empty($errors)) {
                 </div>
             <?php endif; ?>
 
-            <form method="POST" action="forgot_password.php">
+            <form method="POST" action="forgot_password.php"<?= !empty($errors) ? ' aria-describedby="forgot-errors"' : '' ?>>
                 <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
                 <input type="hidden" name="js_token" id="js_token_field" value="">
                 <script nonce="<?= htmlspecialchars(getScriptNonce()) ?>">
                     document.addEventListener('DOMContentLoaded', function() {
                         document.getElementById('js_token_field').value = "<?= htmlspecialchars(generateJsChallengeToken(), ENT_QUOTES) ?>";
+                        var err = document.getElementById('forgot-errors');
+                        if (err) { err.focus(); }
                     });
                 </script>
 
@@ -264,7 +266,7 @@ if ($requestMethod === 'POST' && $notice !== null && empty($errors)) {
 
                 <div class="form-group">
                     <label for="login">E-mail alebo používateľské meno</label>
-                    <input type="text" id="login" name="login" class="form-control" required value="<?= htmlspecialchars($_POST['login'] ?? '') ?>" autocomplete="username">
+                    <input type="text" id="login" name="login" class="form-control" required value="<?= htmlspecialchars($_POST['login'] ?? '') ?>" autocomplete="username"<?= !empty($errors) ? ' aria-invalid="true" aria-describedby="forgot-errors"' : '' ?>>
                 </div>
 
                 <div class="form-actions">

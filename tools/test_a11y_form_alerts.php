@@ -5,7 +5,7 @@ declare(strict_types=1);
 /**
  * A11y: chybové a úspešné alerty na autentifikačných a kalkulačkových
  * stránkach musia mať role="alert" / role="status" (WCAG 4.1.3 / 3.3.1).
- * Prihlásenie navyše viaže polia na zoznam chýb (aria-describedby).
+ * Auth stránky viažu polia na zoznam chýb (aria-describedby) a fokusujú ho.
  */
 
 $checks = 0;
@@ -47,16 +47,32 @@ foreach ($authPages as $page) {
     }
 }
 
-$login = (string) file_get_contents($root . '/login.php');
+$focusBindings = [
+    'login.php' => ['login-errors', 'aria-describedby="login-errors"'],
+    'register.php' => ['register-errors', 'aria-describedby="register-errors"'],
+    'forgot_password.php' => ['forgot-errors', 'aria-describedby="forgot-errors"'],
+    'reset_password.php' => ['reset-errors', 'aria-describedby="reset-errors"'],
+    'resend_verification.php' => ['resend-errors', 'aria-describedby="resend-errors"'],
+    '2fa_verify.php' => ['totp-errors', 'aria-describedby="totp-errors"'],
+];
+
+foreach ($focusBindings as $page => [$errorId, $describedBy]) {
+    $src = (string) file_get_contents($root . '/' . $page);
+    a11yAlertTest(
+        str_contains($src, 'id="' . $errorId . '"')
+            && str_contains($src, $describedBy)
+            && str_contains($src, 'aria-invalid="true"')
+            && (str_contains($src, 'err.focus()') || str_contains($src, 'err.focus();')),
+        "{$page} musí viazať polia na #{$errorId} a fokusovať zoznam chýb.",
+    );
+}
+
+$theme = (string) file_get_contents($root . '/theme.js');
 a11yAlertTest(
-    str_contains($login, 'id="login-errors"')
-        && str_contains($login, 'aria-describedby="login-errors"')
-        && str_contains($login, 'aria-invalid="true"'),
-    'login.php musí viazať polia na #login-errors pri chybách.',
-);
-a11yAlertTest(
-    str_contains($login, "err.focus()") || str_contains($login, 'err.focus();'),
-    'login.php musí po chybe fokusovať zoznam chýb.',
+    str_contains($theme, 'menuFocusables')
+        && str_contains($theme, "event.key === 'Escape'")
+        && str_contains($theme, "event.key !== 'Tab'"),
+    'theme.js musí pri otvorenom menu podporovať Escape a Tab cyklus.',
 );
 
 $css = (string) file_get_contents($root . '/index.css');

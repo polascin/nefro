@@ -144,7 +144,7 @@ if ($requestMethod === 'POST') {
             <h2>Nastavenie nového hesla</h2>
 
             <?php if (!empty($errors)): ?>
-                <div class="alert alert-error" role="alert">
+                <div id="reset-errors" class="alert alert-error" role="alert" tabindex="-1">
                     <ul>
                         <?php foreach ($errors as $error): ?>
                             <li><?= htmlspecialchars($error) ?></li>
@@ -154,9 +154,15 @@ if ($requestMethod === 'POST') {
             <?php endif; ?>
 
             <?php if ($resetRequest === null): ?>
-                <div class="alert alert-error" role="alert">
+                <div id="reset-invalid" class="alert alert-error" role="alert" tabindex="-1">
                     <p>Odkaz na obnovenie hesla je neplatný alebo jeho platnosť vypršala.</p>
                 </div>
+                <script nonce="<?= htmlspecialchars(getScriptNonce()) ?>">
+                    document.addEventListener('DOMContentLoaded', function() {
+                        var err = document.getElementById('reset-invalid');
+                        if (err) { err.focus(); }
+                    });
+                </script>
                 <div class="auth-links">
                     <p><a href="forgot_password.php">Požiadať o nový odkaz</a></p>
                     <p><a href="login.php">Späť na prihlásenie</a></p>
@@ -164,18 +170,24 @@ if ($requestMethod === 'POST') {
             <?php else: ?>
                 <p class="auth-subtitle">Účet: <strong><?= htmlspecialchars((string) ($resetRequest['email'] ?? '')) ?></strong></p>
 
-                <form method="POST" action="reset_password.php">
+                <form method="POST" action="reset_password.php"<?= !empty($errors) ? ' aria-describedby="reset-errors"' : '' ?>>
                     <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
                     <input type="hidden" name="token" value="<?= htmlspecialchars($token) ?>">
+                    <script nonce="<?= htmlspecialchars(getScriptNonce()) ?>">
+                        document.addEventListener('DOMContentLoaded', function() {
+                            var err = document.getElementById('reset-errors');
+                            if (err) { err.focus(); }
+                        });
+                    </script>
 
                     <div class="form-group">
                         <label for="new_password">Nové heslo</label>
-                        <input type="password" id="new_password" name="new_password" class="form-control" required autocomplete="new-password">
+                        <input type="password" id="new_password" name="new_password" class="form-control" required autocomplete="new-password"<?= !empty($errors) ? ' aria-invalid="true" aria-describedby="reset-errors"' : '' ?>>
                     </div>
 
                     <div class="form-group">
                         <label for="new_password_confirm">Potvrdenie nového hesla</label>
-                        <input type="password" id="new_password_confirm" name="new_password_confirm" class="form-control" required autocomplete="new-password">
+                        <input type="password" id="new_password_confirm" name="new_password_confirm" class="form-control" required autocomplete="new-password"<?= !empty($errors) ? ' aria-invalid="true" aria-describedby="reset-errors"' : '' ?>>
                     </div>
 
                     <div class="form-actions">

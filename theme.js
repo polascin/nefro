@@ -257,13 +257,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const mainNavList = document.querySelector('.main-nav ul');
     
     if (menuToggle && mainNavList) {
+        const menuFocusables = () => Array.from(
+            mainNavList.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])')
+        ).filter((el) => !el.hasAttribute('disabled') && el.offsetParent !== null);
+
         const setMenuState = (open, returnFocus = false) => {
             mainNavList.classList.toggle('is-open', open);
             menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
             menuToggle.setAttribute('aria-label', open ? 'Zavrieť menu' : 'Otvoriť menu');
             const label = menuToggle.querySelector('span');
             if (label) label.textContent = open ? 'Zavrieť menu' : 'Menu';
-            if (!open && returnFocus) menuToggle.focus();
+            if (open) {
+                const first = menuFocusables()[0];
+                if (first) {
+                    window.requestAnimationFrame(() => first.focus());
+                }
+            } else if (returnFocus) {
+                menuToggle.focus();
+            }
         };
 
         menuToggle.addEventListener('click', () => {
@@ -285,8 +296,31 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
         document.addEventListener('keydown', (event) => {
-            if (event.key === 'Escape' && mainNavList.classList.contains('is-open')) {
+            if (!mainNavList.classList.contains('is-open')) {
+                return;
+            }
+            if (event.key === 'Escape') {
                 setMenuState(false, true);
+                return;
+            }
+            // Tab v otvorenom menu: cyklus medzi tlačidlom a položkami (klávesnica / a11y)
+            if (event.key !== 'Tab') {
+                return;
+            }
+            const items = menuFocusables();
+            if (items.length === 0) {
+                return;
+            }
+            const cycle = [menuToggle, ...items];
+            const currentIndex = cycle.indexOf(document.activeElement);
+            if (event.shiftKey) {
+                if (currentIndex <= 0) {
+                    event.preventDefault();
+                    cycle[cycle.length - 1].focus();
+                }
+            } else if (currentIndex === -1 || currentIndex === cycle.length - 1) {
+                event.preventDefault();
+                cycle[0].focus();
             }
         });
         const desktopQuery = window.matchMedia('(min-width: 961px)');

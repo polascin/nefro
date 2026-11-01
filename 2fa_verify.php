@@ -274,7 +274,7 @@ if ($requestMethod === 'POST') {
       <p class="auth-subtitle">Zadajte 6-ciferný kód z vašej autentifikačnej aplikácie alebo jeden zo záložných kódov.</p>
 
       <?php if (!empty($errors)): ?>
-        <div class="alert alert-error" role="alert">
+        <div id="totp-errors" class="alert alert-error" role="alert" tabindex="-1">
           <ul>
             <?php foreach ($errors as $e): ?>
               <li><?= htmlspecialchars($e) ?></li>
@@ -283,8 +283,14 @@ if ($requestMethod === 'POST') {
         </div>
       <?php endif; ?>
 
-      <form method="POST" action="2fa_verify.php" autocomplete="off">
+      <form method="POST" action="2fa_verify.php" autocomplete="off"<?= !empty($errors) ? ' aria-describedby="totp-errors"' : '' ?>>
         <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
+        <script nonce="<?= htmlspecialchars(getScriptNonce()) ?>">
+          document.addEventListener('DOMContentLoaded', function() {
+            var err = document.getElementById('totp-errors');
+            if (err) { err.focus(); }
+          });
+        </script>
 
         <div class="form-group">
           <label for="totp_code">Overovací kód</label>
@@ -297,7 +303,7 @@ if ($requestMethod === 'POST') {
             autocomplete="one-time-code"
             maxlength="14"
             placeholder="123456"
-            autofocus
+            <?php if (empty($errors)): ?>autofocus<?php else: ?>aria-invalid="true" aria-describedby="totp-errors"<?php endif; ?>
             required
           >
           <small class="avatar-upload-hint">Zadajte 6-ciferný TOTP kód alebo záložný kód vo formáte XXXXX-XXXXX.</small>

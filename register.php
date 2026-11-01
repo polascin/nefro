@@ -449,14 +449,21 @@ if ($requestMethod === 'POST') {
             <h2>Registrácia</h2>
             <p class="auth-subtitle">Vytvorte si účet za pár sekúnd, stačí e-mail a heslo. Ostatné údaje sú nepovinné a môžete ich kedykoľvek doplniť vo svojom profile.</p>
 
-            <?php if ($requestMethod === 'POST' && !$success): ?>
-                <div class="alert alert-error" role="alert">
+            <?php
+            $registerHasErrors = !empty($errors);
+            $registerShowFail = ($requestMethod === 'POST' && !$success);
+            $registerErrorDescribedBy = $registerHasErrors
+                ? 'register-errors'
+                : ($registerShowFail ? 'register-status' : '');
+            ?>
+            <?php if ($registerShowFail): ?>
+                <div id="register-status" class="alert alert-error" role="alert"<?= $registerHasErrors ? '' : ' tabindex="-1"' ?>>
                     Registrácia nebola úspešná. Skontrolujte chyby nižšie a skúste formulár odoslať znova.
                 </div>
             <?php endif; ?>
 
-            <?php if (!empty($errors)): ?>
-                <div class="alert alert-error" role="alert">
+            <?php if ($registerHasErrors): ?>
+                <div id="register-errors" class="alert alert-error" role="alert" tabindex="-1">
                     <ul>
                         <?php foreach ($errors as $error): ?>
                             <li><?= htmlspecialchars($error) ?></li>
@@ -474,13 +481,15 @@ if ($requestMethod === 'POST') {
                     <p>Po overení sa prihláste na <a href="login.php">prihlasovacej stránke</a>.</p>
                 </div>
             <?php else: ?>
-                <form method="POST" action="register.php" enctype="multipart/form-data">
+                <form method="POST" action="register.php" enctype="multipart/form-data"<?= $registerErrorDescribedBy !== '' ? ' aria-describedby="' . htmlspecialchars($registerErrorDescribedBy, ENT_QUOTES, 'UTF-8') . '"' : '' ?>>
                     <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
                     <input type="hidden" name="js_token" id="js_token_field" value="">
                     <script nonce="<?= htmlspecialchars(getScriptNonce()) ?>">
                         // JS Challenge: Vloží token po načítaní stránky. Boti bez JS toto nespustia.
                         document.addEventListener('DOMContentLoaded', function() {
                             document.getElementById('js_token_field').value = "<?= htmlspecialchars(generateJsChallengeToken(), ENT_QUOTES) ?>";
+                            var err = document.getElementById('register-errors') || document.getElementById('register-status');
+                            if (err) { err.focus(); }
                         });
                     </script>
 
@@ -496,15 +505,15 @@ if ($requestMethod === 'POST') {
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="email">E-mailová adresa *</label>
-                                <input type="email" id="email" name="email" class="form-control" required value="<?= htmlspecialchars($_POST['email'] ?? '') ?>" autocomplete="email">
+                                <input type="email" id="email" name="email" class="form-control" required value="<?= htmlspecialchars($_POST['email'] ?? '') ?>" autocomplete="email"<?= $registerHasErrors ? ' aria-invalid="true" aria-describedby="register-errors"' : '' ?>>
                             </div>
                             <div class="form-group">
                                 <label for="password">Heslo <small>(min. 8 znakov, veľké/malé písmená a číslice)</small> *</label>
-                                <input type="password" id="password" name="password" class="form-control" required autocomplete="new-password">
+                                <input type="password" id="password" name="password" class="form-control" required autocomplete="new-password"<?= $registerHasErrors ? ' aria-invalid="true" aria-describedby="register-errors"' : '' ?>>
                             </div>
                             <div class="form-group">
                                 <label for="password_confirm">Potvrdenie hesla *</label>
-                                <input type="password" id="password_confirm" name="password_confirm" class="form-control" required autocomplete="new-password">
+                                <input type="password" id="password_confirm" name="password_confirm" class="form-control" required autocomplete="new-password"<?= $registerHasErrors ? ' aria-invalid="true" aria-describedby="register-errors"' : '' ?>>
                             </div>
                         </div>
                     </div>

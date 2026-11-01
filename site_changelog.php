@@ -55,6 +55,13 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-11-01 23:12',
+                'category' => 'portal',
+                'title' => 'Prístupnejšie chyby účtu a mobilné menu',
+                'description' => 'Pri chybe na registrácii, obnove hesla, opätovnom overení e-mailu a 2FA sa fokus presunie na zoznam chýb a polia sú s ním prepojené. Mobilné menu sa ovláda klávesnicou vrátane Escape a cyklu Tab.',
+                'url' => 'register.php',
+            ],
+            [
                 'date' => '2026-11-01 22:50',
                 'category' => 'portal',
                 'title' => 'Lepšie hlásenie chýb formulárov a užšie displeje',
