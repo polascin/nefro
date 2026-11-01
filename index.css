@@ -2456,15 +2456,17 @@ input:disabled + .slider:before {
 }
 
 .site-header__brand-place {
-    display: inline-block;
+    flex: 1 0 100%;
+    display: block;
     font-weight: 700;
-    font-size: 0.62em;
-    letter-spacing: 0.18em;
+    font-size: 0.58em;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
     color: rgba(226, 242, 255, 0.92);
-    line-height: 1.2;
-    padding: 0.12em 0 0.02em;
-    border-bottom: 1px solid rgba(186, 230, 253, 0.35);
+    line-height: 1.25;
+    margin-top: 0.12em;
+    padding: 0.08em 0 0.06em;
+    border-bottom: 1px solid rgba(186, 230, 253, 0.32);
 }
 
 .site-header__tagline {

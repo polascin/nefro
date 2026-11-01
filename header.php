@@ -33,7 +33,7 @@ if ($showUnverifiedNotice && !empty($_SESSION['email'])) {
         <a href="index.php" class="site-header__title-link">
             <h1 class="site-header__main-title">
                 <span class="site-header__brand">
-                    <span class="site-header__brand-primary">Nefro</span><span class="site-header__brand-sep" aria-hidden="true">-</span><span class="site-header__brand-secondary">projekt</span>
+                    <span class="site-header__brand-primary">Nefro</span><span class="site-header__brand-sep">-</span><span class="site-header__brand-secondary">projekt</span>
                     <span class="site-header__brand-place">Slovensko</span>
                 </span>
             </h1>
