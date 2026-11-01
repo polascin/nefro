@@ -55,10 +55,10 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
-                'date' => '2026-11-01 09:50',
+                'date' => '2026-11-01 10:30',
                 'category' => 'portal',
-                'title' => 'Obnovený titulný nadpis portálu',
-                'description' => 'Nadpis Nefro-projekt Slovensko v hlavičke má čistejšiu typografiu, lepší kontrast a jemnú vizuálnu hierarchiu namiesto staršieho obrysového efektu.',
+                'title' => 'Dynamický akvamarínový titulný nadpis',
+                'description' => 'Nadpis Nefro-projekt Slovensko v hlavičke má plynulý akvamarínovo-tyrkysovo-modrý gradient so jemnou animáciou a zachovaným režimom zníženého pohybu.',
                 'url' => 'index.php',
             ],
             [
