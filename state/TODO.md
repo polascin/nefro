@@ -2,19 +2,18 @@
 
 ## Ďalšia slučka
 
-1. Po **výslovnom súhlase**: migrácia ENUM `sending` + claim/lease pre legal_notice_*.
-2. Voliteľné so súhlasom: priorita jednému empty partner_providers.
-3. Bez súhlasu: oddelenie bootstrapov P1, alebo manuálny a11y spot-check.
+1. Rozšíriť `request_input` na ďalšie verejné/POST endpointy (login, admin JSON, …).
+2. Po **výslovnom súhlase**: ENUM `sending` + claim/lease legal_notice_*.
+3. Voliteľné so súhlasom: empty partner_providers priority; P1 normalizácia autorov.
 
-## Hotové v slučke 5
+## Hotové v slučke 6
 
-- [x] 2fa_setup fokus/aria
-- [x] confirm_account_deletion fokus/aria
-- [x] nefro-ui toggle fokus + odstránenie duplicity
-- [x] regresia a11y + changelog
+- [x] `request_input.php` (skaláry + 400)
+- [x] search / download_pdf / newsletter_subscribe
+- [x] htaccess deny + regresia + changelog
 
 ## Vedomé mimo rozsahu
 
 - Newsletter avíza (default off).
 - Sociálne siete.
-- Produkčné SQL / migrácie / workery bez konkrétneho súhlasu (vrátane legal `sending`).
+- Produkčné SQL / migrácie / workery / seed priority bez súhlasu.

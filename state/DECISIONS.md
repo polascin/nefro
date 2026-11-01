@@ -51,3 +51,10 @@ na tlačidlo. ENUM `sending` stále bez súhlasu.
 Dokončený auth fokus vzor na 2fa_setup a zrušenie účtu. Duplicitný
 `data-toggle-btn` listener v 2fa_setup odstránený (kolízia s nefro-ui.js).
 Confirm panely fokusujú heslo a synchronizujú `aria-expanded`.
+
+## 2026-11-01 (slučka 6) — request_input bootstrap
+
+Prvý konkrétny krok P1 oddelenia bootstrapov: izolovaný modul skalárnych
+vstupov namiesto rozsypania auth.php. JSON preferencia cez
+`requestInputResponseIsJson()` (CLI headers_list je nespoľahlivý). Claim/lease
+a seed priorít ostávajú bez súhlasu.
