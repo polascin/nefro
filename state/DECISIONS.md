@@ -20,3 +20,16 @@ User-facing zmena portálu musí mať záznam v `site_changelog.php`.
 
 Adresáre `.codex/` a `state/` patria do deploy-ignore (SFTP aj rsync zoznam),
 aby agentné handoffy a session stav neboli vo verejnom web roote.
+
+## 2026-11-01 (slučka 2) — deny add_provider* v htaccess
+
+Priamy HTTP prístup k migráciám/seedom partner_providers je zakázaný
+(`FilesMatch ^add_provider.*\.php$`). Preferovaná cesta je CLI cez SSH.
+Admin HTTP vetva v PHP ostáva ako druhá vrstva pri zlomenej deny konfigurácii,
+ale bežne ju Apache neprepustí.
+
+## 2026-11-01 (slučka 2) — legal retry bez ENUM sending
+
+`next_attempt_at` pri zlyhaní právneho oznámenia počíta databáza. Plný
+claim/lease so stavom `sending` ostáva na samostatný beh so schválenou migráciou;
+worker už má `GET_LOCK`, čo bráni súbehu dvoch procesov.

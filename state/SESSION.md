@@ -1,37 +1,34 @@
 # SESSION
 
-Aktualizované: 2026-11-01 22:20 Europe/Bratislava
+Aktualizované: 2026-11-01 22:37 Europe/Bratislava
 
 ## Aktívna úloha
 
-Vývojová slučka Nefro (iterácia 1 dokončená). Ďalšia slučka nadväzuje na handoff
-`.codex/handoffs/2026-11-01-221917-nefro-dev-loop.md`.
+Vývojová slučka Nefro (iterácia 2 dokončená). Handoff:
+`.codex/handoffs/2026-11-01-223625-nefro-dev-loop.md`.
 
 ## Stav repozitára
 
 - Vetva: `main`
-- HEAD: `1f496131` (docs state/handoff; runtime delta je `43b4090d`)
-- `origin/main` a `server/main`: zhodné po post-commit pushi
-- Produkčný `DEPLOY_COMMIT`: `43b4090d` (dokumentačný drift voči HEAD je očakávaný)
-- Pracovný strom: čistý
+- HEAD / runtime / `DEPLOY_COMMIT`: `34393fea` (zhoda)
+- `origin/main` a `server/main`: aktuálne po post-commit
+- Pracovný strom: čistý po docs commitne state/handoff
 
-## Čo je hotové v tejto slučke
+## Čo je hotové v slučke 2
 
-1. `ops_health.php` zjednocuje časové pásmo s `db_config.php` (nález Behu 134).
-2. Priority A/B/C providerov v `providers_common.php` + regresia.
-3. Changelog Clarity.
-4. Deploy a živý smoke OK.
+1. Produkčný ops_health PASS (fronty 0, perexy OK, marker aktuálny).
+2. Deny `.htaccess` + `robots.txt` pre add_provider* a workery; live 403.
+3. Legal notice retry `next_attempt_at` z času DB.
+4. Priority na produkcii: A57 / B25 / C19 / empty 1 z 102.
 
 ## Executable next step
 
 ```text
-# 1) Overiť fronty na produkcii (SSH alias websupport, cesta podľa servera):
-ssh -4 websupport 'php ~/…/nefro/ops_health.php --no-http'
-
-# 2) Ak PASS/WARN: vybrať 1–2 body z state/TODO.md (defense-in-depth add_providers_*
-#    alebo P1 fronty/claim podľa ANALYZA_A_PLAN_ROZVOJA.md) a spustiť ďalšiu slučku.
+# Súhlas používateľa na migráciu ENUM sending pre legal_notice_* ,
+# alebo a11y/bootstrap P1 bez produkčného SQL:
+# pozri state/TODO.md
 ```
 
 ## Handoff
 
-`.codex/handoffs/2026-11-01-221917-nefro-dev-loop.md`
+`.codex/handoffs/2026-11-01-223625-nefro-dev-loop.md`
