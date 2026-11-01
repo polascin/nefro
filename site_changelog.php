@@ -55,10 +55,10 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
-                'date' => '2026-11-01 10:30',
+                'date' => '2026-11-01 10:34',
                 'category' => 'portal',
                 'title' => 'Dynamický akvamarínový titulný nadpis',
-                'description' => 'Nadpis Nefro-projekt Slovensko v hlavičke má plynulý akvamarínovo-tyrkysovo-modrý gradient so jemnou animáciou a zachovaným režimom zníženého pohybu.',
+                'description' => 'Nadpis Nefro-projekt Slovensko v hlavičke má plynulý akvamarínovo-tyrkysovo-modrý gradient s jemným červeným akcentom, animáciou a režimom zníženého pohybu.',
                 'url' => 'index.php',
             ],
             [
