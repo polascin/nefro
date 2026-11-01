@@ -229,7 +229,7 @@ function formatResultKey(string $key): string {
             <div class="auth-container auth-container--wide">
 
                 <?php if ($errorMessage !== null): ?>
-                    <div class="alert alert-error"><p><?= htmlspecialchars($errorMessage) ?></p></div>
+                    <div class="alert alert-error" role="alert"><p><?= htmlspecialchars($errorMessage) ?></p></div>
                     <p><a href="calculators.php" class="btn-primary">Späť na kalkulačky</a></p>
                 <?php else: ?>
 

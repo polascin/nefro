@@ -274,7 +274,7 @@ if ($requestMethod === 'POST') {
       <p class="auth-subtitle">Zadajte 6-ciferný kód z vašej autentifikačnej aplikácie alebo jeden zo záložných kódov.</p>
 
       <?php if (!empty($errors)): ?>
-        <div class="alert alert-error">
+        <div class="alert alert-error" role="alert">
           <ul>
             <?php foreach ($errors as $e): ?>
               <li><?= htmlspecialchars($e) ?></li>

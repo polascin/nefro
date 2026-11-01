@@ -144,7 +144,7 @@ if ($requestMethod === 'POST') {
             <h2>Nastavenie nového hesla</h2>
 
             <?php if (!empty($errors)): ?>
-                <div class="alert alert-error">
+                <div class="alert alert-error" role="alert">
                     <ul>
                         <?php foreach ($errors as $error): ?>
                             <li><?= htmlspecialchars($error) ?></li>
@@ -154,7 +154,7 @@ if ($requestMethod === 'POST') {
             <?php endif; ?>
 
             <?php if ($resetRequest === null): ?>
-                <div class="alert alert-error">
+                <div class="alert alert-error" role="alert">
                     <p>Odkaz na obnovenie hesla je neplatný alebo jeho platnosť vypršala.</p>
                 </div>
                 <div class="auth-links">

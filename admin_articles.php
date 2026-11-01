@@ -920,7 +920,7 @@ $pageTimeZone = getUserTimezoneAbbr() . " (" . getUserTimezone() . ")";
       <p class="auth-subtitle">Pridávanie, úprava a mazanie článkov na hlavnej stránke.</p>
 
       <?php if ($actionResult !== null): ?>
-        <div class="alert alert-success"><p>
+        <div class="alert alert-success" role="status"><p>
           <?= htmlspecialchars((string) $actionResult) ?>
           <?php if ($actionResultLink !== null): ?>
             <?= $actionResultLink
@@ -930,7 +930,7 @@ $pageTimeZone = getUserTimezoneAbbr() . " (" . getUserTimezone() . ")";
         </p></div>
       <?php endif; ?>
       <?php if ($actionError !== null): ?>
-        <div class="alert alert-error"><p><?= htmlspecialchars(
+        <div class="alert alert-error" role="alert"><p><?= htmlspecialchars(
             $actionError,
         ) ?></p></div>
       <?php endif; ?>

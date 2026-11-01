@@ -214,10 +214,10 @@ include 'admin_menu.php';
     <p class="auth-subtitle">Prehľad a správa príspevkov diskusie.</p>
 
     <?php if ($actionResult !== null): ?>
-      <div class="alert alert-success"><p><?= htmlspecialchars($actionResult) ?></p></div>
+      <div class="alert alert-success" role="status"><p><?= htmlspecialchars($actionResult) ?></p></div>
     <?php endif; ?>
     <?php if ($actionError !== null): ?>
-      <div class="alert alert-error"><p><?= htmlspecialchars($actionError) ?></p></div>
+      <div class="alert alert-error" role="alert"><p><?= htmlspecialchars($actionError) ?></p></div>
     <?php endif; ?>
 
     <!-- ── ŠTATISTIKY ────────────────────────────────────────────────── -->

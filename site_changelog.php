@@ -55,6 +55,13 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-11-01 22:50',
+                'category' => 'portal',
+                'title' => 'Lepšie hlásenie chýb formulárov a užšie displeje',
+                'description' => 'Chybové a úspešné hlásenia na prihlásení, registrácii a kalkulačkách oznamujú čítačky obrazovky; pri chybe prihlásenia sa fokus presunie na zoznam chýb. Na displejoch okolo 320 px sa formuláre a jednotky už nerozťahujú stránku do šírky.',
+                'url' => 'login.php',
+            ],
+            [
                 'date' => '2026-11-01 11:59',
                 'category' => 'portal',
                 'title' => 'Microsoft Clarity len po analytickom súhlase',

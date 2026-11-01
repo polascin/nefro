@@ -172,7 +172,7 @@ if ($requestMethod === 'POST' && $success !== null && empty($errors)) {
             <p class="auth-subtitle">Zadajte e-mail alebo používateľské meno účtu, ktorý chcete overiť.</p>
 
             <?php if (!empty($errors)): ?>
-                <div class="alert alert-error">
+                <div class="alert alert-error" role="alert">
                     <ul>
                         <?php foreach ($errors as $error): ?>
                             <li><?= htmlspecialchars($error) ?></li>
@@ -182,7 +182,7 @@ if ($requestMethod === 'POST' && $success !== null && empty($errors)) {
             <?php endif; ?>
 
             <?php if ($success !== null): ?>
-                <div class="alert alert-success">
+                <div class="alert alert-success" role="status">
                     <p><?= htmlspecialchars($success) ?></p>
                 </div>
             <?php endif; ?>

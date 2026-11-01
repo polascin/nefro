@@ -232,7 +232,7 @@ if ($requestMethod === 'POST' && $notice !== null && empty($errors)) {
             <p class="auth-subtitle">Zadajte e-mail alebo používateľské meno a pošleme vám odkaz na obnovenie hesla.</p>
 
             <?php if (!empty($errors)): ?>
-                <div class="alert alert-error">
+                <div class="alert alert-error" role="alert">
                     <ul>
                         <?php foreach ($errors as $error): ?>
                             <li><?= htmlspecialchars($error) ?></li>
@@ -242,7 +242,7 @@ if ($requestMethod === 'POST' && $notice !== null && empty($errors)) {
             <?php endif; ?>
 
             <?php if ($notice !== null): ?>
-                <div class="alert alert-success">
+                <div class="alert alert-success" role="status">
                     <p><?= htmlspecialchars($notice) ?></p>
                 </div>
             <?php endif; ?>

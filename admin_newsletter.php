@@ -212,10 +212,10 @@ $pageTimeZone = getUserTimezoneAbbr() . ' (' . getUserTimezone() . ')';
             <p class="auth-subtitle">Anonymní odberatelia (bez registrácie). Registrovaných používateľov spravujte v <a href="admin.php">Administrácii</a>.</p>
 
             <?php if ($actionResult !== null): ?>
-                <div class="alert alert-success"><p><?= htmlspecialchars($actionResult) ?></p></div>
+                <div class="alert alert-success" role="status"><p><?= htmlspecialchars($actionResult) ?></p></div>
             <?php endif; ?>
             <?php if ($actionError !== null): ?>
-                <div class="alert alert-error"><p><?= htmlspecialchars($actionError) ?></p></div>
+                <div class="alert alert-error" role="alert"><p><?= htmlspecialchars($actionError) ?></p></div>
             <?php endif; ?>
 
             <!-- Štatistiky -->

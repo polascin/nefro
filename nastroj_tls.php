@@ -82,7 +82,7 @@ $baseUrl = "https://nefro.polascin.net/";
                     <h3 id="tls-tool-heading" class="visually-hidden">Interaktívny sprievodca</h3>
                     <div id="tls-tool" class="tool-mount" role="region" aria-live="polite" aria-label="Interaktívny sprievodca syndrómom rozpadu nádoru"></div>
                     <noscript>
-                        <div class="alert alert-error">
+                        <div class="alert alert-error" role="alert">
                             <p>Interaktívny sprievodca vyžaduje zapnutý JavaScript. Nižšie nájdete statickú
                             referenčnú verziu stratifikácie rizika a profylaxie.</p>
                         </div>

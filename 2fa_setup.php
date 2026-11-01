@@ -270,7 +270,7 @@ $totpUri = $pendingSecret ? getTotpUri($pendingSecret, (string) ($user['email'] 
       <h2>Dvojfaktorové overenie (2FA)</h2>
 
       <?php if (!empty($errors)): ?>
-        <div class="alert alert-error">
+        <div class="alert alert-error" role="alert">
           <ul>
             <?php foreach ($errors as $err): ?>
               <li><?= htmlspecialchars($err) ?></li>
@@ -402,7 +402,7 @@ $totpUri = $pendingSecret ? getTotpUri($pendingSecret, (string) ($user['email'] 
       <?php if ($newPlainBackupCodes !== null): ?>
       <div class="form-section">
         <h3>Záložné kódy</h3>
-        <div class="alert alert-error alert-2fa-backup">
+        <div class="alert alert-error alert-2fa-backup" role="alert">
           <p><strong>Uložte si tieto záložné kódy na bezpečné miesto!</strong></p>
           <p class="avatar-upload-hint">Každý kód môžete použiť raz namiesto TOTP kódu. Po tomto zobrazení ich nebude možné znova zobraziť.</p>
         </div>

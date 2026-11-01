@@ -176,12 +176,12 @@ if (isLoggedIn()) {
                 <?php foreach (
                     $messages
                     as $m
-                ): ?><div class="alert alert-success"><?= htmlspecialchars(
+                ): ?><div class="alert alert-success" role="status"><?= htmlspecialchars(
     $m,
 ) ?></div><?php endforeach; ?>
                 <?php if (
                     !empty($errors)
-                ): ?><div class="alert alert-error"><ul><?php foreach (
+                ): ?><div class="alert alert-error" role="alert"><ul><?php foreach (
     $errors
     as $e
 ): ?><li><?= htmlspecialchars(

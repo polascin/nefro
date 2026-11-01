@@ -5133,6 +5133,52 @@ input:disabled + .slider:before {
     }
 }
 
+/* 320 px a užšie: bez horizontálneho pretečenia (WCAG / plán P1 a11y) */
+html {
+    overflow-x: clip;
+}
+
+@media (max-width: 320px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .auth-container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .form-control,
+    .btn-primary,
+    .btn-secondary,
+    .site-header__title,
+    .primary-article {
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    /* Flex riadky s jednotkou (napr. uACR) sa musia zlomiť, nie roztiahnuť stránku */
+    .flex-08 {
+        flex: 1 1 auto;
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .d-flex,
+    .form-group .d-flex,
+    .input-with-unit {
+        flex-wrap: wrap;
+        min-width: 0;
+        max-width: 100%;
+    }
+}
+
+/* Chybové hlásenie, na ktoré skáče fokus po neúspešnom odoslaní */
+.alert[tabindex="-1"]:focus {
+    outline: 3px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
 /* ============================================================
    ADMIN & FORMULÁRE (Globálne)
    ============================================================ */

@@ -206,8 +206,8 @@ $totalCount = array_sum(array_column($statsByCalc, 'count'));
 <?php $headerTitle = 'História výpočtov'; $showLogo = false; include 'header.php'; ?>
 
 <main id="main-content" class="container calc-history-main" role="main">
-  <?php foreach ($errors   as $e): ?><div class="alert alert-error"><?= htmlspecialchars($e) ?></div><?php endforeach; ?>
-  <?php foreach ($messages as $m): ?><div class="alert alert-success"><?= htmlspecialchars($m) ?></div><?php endforeach; ?>
+  <?php foreach ($errors   as $e): ?><div class="alert alert-error" role="alert"><?= htmlspecialchars($e) ?></div><?php endforeach; ?>
+  <?php foreach ($messages as $m): ?><div class="alert alert-success" role="status"><?= htmlspecialchars($m) ?></div><?php endforeach; ?>
 
   <?php if (!isLoggedIn()): ?>
     <div class="primary-article">

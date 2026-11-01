@@ -306,10 +306,10 @@ if (isLoggedIn()) {
                 </details>
 
                 <?php foreach ($messages as $m): ?>
-                    <div class="alert alert-success"><?= htmlspecialchars($m) ?></div>
+                    <div class="alert alert-success" role="status"><?= htmlspecialchars($m) ?></div>
                 <?php endforeach; ?>
                 <?php if (!empty($errors)): ?>
-                    <div class="alert alert-error"><ul><?php foreach ($errors as $e): ?><li><?= htmlspecialchars($e) ?></li><?php endforeach; ?></ul></div>
+                    <div class="alert alert-error" role="alert"><ul><?php foreach ($errors as $e): ?><li><?= htmlspecialchars($e) ?></li><?php endforeach; ?></ul></div>
                 <?php endif; ?>
 
                 <form method="POST" action="calculator_egfr_slope.php" id="egfr-slope-form">

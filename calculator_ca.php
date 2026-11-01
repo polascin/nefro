@@ -173,13 +173,13 @@ if (isLoggedIn()) {
                 </details>
 
                 <?php foreach ($messages as $message): ?>
-                    <div class="alert alert-success"><p><?= htmlspecialchars(
+                    <div class="alert alert-success" role="status"><p><?= htmlspecialchars(
                         $message,
                     ) ?></p></div>
                 <?php endforeach; ?>
 
                 <?php if (!empty($errors)): ?>
-                    <div class="alert alert-error">
+                    <div class="alert alert-error" role="alert">
                         <ul>
                             <?php foreach ($errors as $error): ?>
                                 <li><?= htmlspecialchars($error) ?></li>

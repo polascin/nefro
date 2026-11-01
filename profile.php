@@ -658,7 +658,7 @@ if ($requestMethod === 'POST' && $success && empty($errors)) {
                 </div>
 
             <?php if (!empty($errors)): ?>
-                <div class="alert alert-error">
+                <div class="alert alert-error" role="alert">
                     <ul>
                         <?php foreach ($errors as $error): ?>
                             <li><?= htmlspecialchars($error) ?></li>
@@ -668,13 +668,13 @@ if ($requestMethod === 'POST' && $success && empty($errors)) {
             <?php endif; ?>
 
             <?php if ($success): ?>
-                <div class="alert alert-success">
+                <div class="alert alert-success" role="status">
                     Profil bol úspešne aktualizovaný.
                 </div>
             <?php endif; ?>
 
             <?php if ($mobileVerificationNotice !== null): ?>
-                <div class="alert alert-success">
+                <div class="alert alert-success" role="status">
                     <p><?= htmlspecialchars($mobileVerificationNotice) ?></p>
                 </div>
             <?php endif; ?>
@@ -834,7 +834,7 @@ if ($requestMethod === 'POST' && $success && empty($errors)) {
                 </button>
 
                 <div id="delete-account-confirm" class="delete-confirm-panel<?= $showDeleteForm ? '' : ' d-none' ?>">
-                    <div class="alert alert-error delete-confirm-panel__warning">
+                    <div class="alert alert-error delete-confirm-panel__warning" role="alert">
                         <p><strong>Upozornenie: táto akcia je nezvratná!</strong></p>
                         <p>Po potvrdení budú <strong>natrvalo vymazané</strong>:</p>
                         <ul>
@@ -848,7 +848,7 @@ if ($requestMethod === 'POST' && $success && empty($errors)) {
                     </div>
 
                     <?php if (!empty($deleteErrors)): ?>
-                        <div class="alert alert-error">
+                        <div class="alert alert-error" role="alert">
                             <ul>
                                 <?php foreach ($deleteErrors as $delErr): ?>
                                     <li><?= htmlspecialchars($delErr) ?></li>

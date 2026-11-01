@@ -326,13 +326,13 @@ if (isLoggedIn()) {
                 </div>
 
                 <?php foreach ($messages as $message): ?>
-                    <div class="alert alert-success"><p><?= htmlspecialchars(
+                    <div class="alert alert-success" role="status"><p><?= htmlspecialchars(
                         $message,
                     ) ?></p></div>
                 <?php endforeach; ?>
 
                 <?php if (!empty($errors)): ?>
-                    <div class="alert alert-error">
+                    <div class="alert alert-error" role="alert">
                         <ul>
                             <?php foreach ($errors as $error): ?>
                                 <li><?= htmlspecialchars($error) ?></li>
@@ -479,7 +479,7 @@ if (isLoggedIn()) {
                             <?php endforeach; ?>
 
                             <?php if (!empty($calculated["warnings"])): ?>
-                                <div class="alert alert-error calc-result-mt12">
+                                <div class="alert alert-error calc-result-mt12" role="alert">
                                     <strong>Varovanie:</strong>
                                     <ul>
                                         <?php foreach (

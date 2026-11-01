@@ -450,13 +450,13 @@ if ($requestMethod === 'POST') {
             <p class="auth-subtitle">Vytvorte si účet za pár sekúnd, stačí e-mail a heslo. Ostatné údaje sú nepovinné a môžete ich kedykoľvek doplniť vo svojom profile.</p>
 
             <?php if ($requestMethod === 'POST' && !$success): ?>
-                <div class="alert alert-error">
+                <div class="alert alert-error" role="alert">
                     Registrácia nebola úspešná. Skontrolujte chyby nižšie a skúste formulár odoslať znova.
                 </div>
             <?php endif; ?>
 
             <?php if (!empty($errors)): ?>
-                <div class="alert alert-error">
+                <div class="alert alert-error" role="alert">
                     <ul>
                         <?php foreach ($errors as $error): ?>
                             <li><?= htmlspecialchars($error) ?></li>
@@ -466,7 +466,7 @@ if ($requestMethod === 'POST') {
             <?php endif; ?>
 
             <?php if (isset($_GET['registered']) && $_GET['registered'] === '1'): ?>
-                <div class="alert alert-success">
+                <div class="alert alert-success" role="status">
                     Ďakujeme za registráciu. Skontrolujte svoju e-mailovú schránku a dokončite overenie účtu.
                 </div>
                 <div class="auth-links">

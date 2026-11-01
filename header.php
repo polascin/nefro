@@ -106,7 +106,7 @@ if ($showUnverifiedNotice && !empty($_SESSION['email'])) {
 
 <?php if ($showUnverifiedNotice): ?>
     <div class="container">
-        <div class="alert alert-error">
+        <div class="alert alert-error" role="alert">
             <p>
                 Váš účet má neoverenú e-mailovú adresu. Neoverení používatelia nemôžu využívať služby určené pre používateľov.
                 <a href="<?= htmlspecialchars($resendLink) ?>">Poslať overenie znova</a>

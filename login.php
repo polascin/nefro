@@ -306,21 +306,21 @@ if ($requestMethod === 'POST') {
             <h2>Prihlásenie</h2>
 
             <?php if (($_GET['account_deleted'] ?? '') === '1'): ?>
-                <div class="alert alert-success">
+                <div class="alert alert-success" role="status">
                     <p><strong>Váš účet bol úspešne zrušený.</strong></p>
                     <p>Všetky vaše osobné údaje boli natrvalo vymazané. Ďakujeme, že ste využívali Nefro-projekt Slovensko.</p>
                 </div>
             <?php endif; ?>
 
             <?php if (($_GET['verified'] ?? '') === '1'): ?>
-                <div class="alert alert-success">
+                <div class="alert alert-success" role="status">
                     <p><strong>E-mailová adresa bola úspešne overená.</strong></p>
                     <p>Váš účet je aktívny. Môžete sa prihlásiť.</p>
                 </div>
             <?php endif; ?>
 
             <?php if (!empty($errors)): ?>
-                <div class="alert alert-error">
+                <div id="login-errors" class="alert alert-error" role="alert" tabindex="-1">
                     <ul>
                         <?php foreach ($errors as $error): ?>
                             <li><?= htmlspecialchars($error) ?></li>
@@ -330,7 +330,7 @@ if ($requestMethod === 'POST') {
             <?php endif; ?>
 
             <?php if (!empty($loginFailureDetails)): ?>
-                <div class="alert alert-error">
+                <div id="login-failure-details" class="alert alert-error" role="alert">
                     <p><strong>Podrobnosti príčin neúspešného prihlásenia:</strong></p>
                     <ul>
                         <?php foreach ($loginFailureDetails as $detail): ?>
@@ -340,7 +340,7 @@ if ($requestMethod === 'POST') {
                 </div>
             <?php endif; ?>
 
-            <form method="POST" action="login.php">
+            <form method="POST" action="login.php"<?= !empty($errors) ? ' aria-describedby="login-errors"' : '' ?>>
                 <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
                 <input type="hidden" name="js_token" id="js_token_field" value="<?= htmlspecialchars(generateJsChallengeToken(), ENT_QUOTES) ?>">
                 <script nonce="<?= htmlspecialchars(getScriptNonce()) ?>">
@@ -349,6 +349,8 @@ if ($requestMethod === 'POST') {
                         if (el && !el.value) {
                             el.value = "<?= htmlspecialchars(generateJsChallengeToken(), ENT_QUOTES) ?>";
                         }
+                        var err = document.getElementById('login-errors');
+                        if (err) { err.focus(); }
                     });
                 </script>
 
@@ -361,12 +363,12 @@ if ($requestMethod === 'POST') {
 
                 <div class="form-group">
                     <label for="login">Používateľské meno alebo e-mailová adresa</label>
-                    <input type="text" id="login" name="login" class="form-control" required value="<?= htmlspecialchars($_POST['login'] ?? '') ?>" autocomplete="username">
+                    <input type="text" id="login" name="login" class="form-control" required value="<?= htmlspecialchars($_POST['login'] ?? '') ?>" autocomplete="username"<?= !empty($errors) ? ' aria-invalid="true" aria-describedby="login-errors"' : '' ?>>
                 </div>
 
                 <div class="form-group">
                     <label for="password">Heslo</label>
-                    <input type="password" id="password" name="password" class="form-control" required autocomplete="current-password">
+                    <input type="password" id="password" name="password" class="form-control" required autocomplete="current-password"<?= !empty($errors) ? ' aria-invalid="true" aria-describedby="login-errors"' : '' ?>>
                 </div>
 
                 <div class="form-actions">

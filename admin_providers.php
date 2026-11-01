@@ -743,10 +743,10 @@ $isEdit = $editProvider !== null;
       </p>
 
       <?php if ($actionResult !== null): ?>
-        <div class="alert alert-success"><p><?= htmlspecialchars((string) $actionResult) ?></p></div>
+        <div class="alert alert-success" role="status"><p><?= htmlspecialchars((string) $actionResult) ?></p></div>
       <?php endif; ?>
       <?php if ($actionError !== null): ?>
-        <div class="alert alert-error"><p><?= htmlspecialchars($actionError) ?></p></div>
+        <div class="alert alert-error" role="alert"><p><?= htmlspecialchars($actionError) ?></p></div>
       <?php endif; ?>
 
       <!-- ── FORMULÁR: pridať / upraviť ─────────────────────────────────── -->

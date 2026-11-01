@@ -437,13 +437,13 @@ function sexLabel(string $v): string
                 </div>
 
                 <?php foreach ($messages as $msg): ?>
-                    <div class="alert alert-success"><p><?= htmlspecialchars(
+                    <div class="alert alert-success" role="status"><p><?= htmlspecialchars(
                         $msg,
                     ) ?></p></div>
                 <?php endforeach; ?>
 
                 <?php if (!empty($errors)): ?>
-                    <div class="alert alert-error">
+                    <div class="alert alert-error" role="alert">
                         <ul>
                             <?php foreach ($errors as $e): ?>
                                 <li><?= htmlspecialchars($e) ?></li>
@@ -731,7 +731,7 @@ function sexLabel(string $v): string
                             <?php endforeach; ?>
 
                             <?php if (!empty($calculated["warnings"])): ?>
-                                <div class="alert alert-error calc-result-mt12">
+                                <div class="alert alert-error calc-result-mt12" role="alert">
                                     <ul>
                                         <?php foreach (
                                             $calculated["warnings"]

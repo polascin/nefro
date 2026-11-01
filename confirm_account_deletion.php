@@ -245,7 +245,7 @@ if ($requestMethod === 'POST') {
             <h2>Zrušenie účtu</h2>
 
             <?php if (!empty($errors)): ?>
-                <div class="alert alert-error">
+                <div class="alert alert-error" role="alert">
                     <ul>
                         <?php foreach ($errors as $error): ?>
                             <li><?= htmlspecialchars($error) ?></li>
@@ -255,7 +255,7 @@ if ($requestMethod === 'POST') {
             <?php endif; ?>
 
             <?php if (empty($deletionRequest)): ?>
-                <div class="alert alert-error">
+                <div class="alert alert-error" role="alert">
                     <p>Potvrdzovací odkaz je neplatný alebo expiroval (platnosť je 24 hodín).</p>
                 </div>
                 <div class="auth-links">
@@ -263,7 +263,7 @@ if ($requestMethod === 'POST') {
                     <p><a href="login.php">Prihlásiť sa</a></p>
                 </div>
             <?php else: ?>
-                <div class="alert alert-error">
+                <div class="alert alert-error" role="alert">
                     <p><strong>Upozornenie — táto akcia je nezvratná!</strong></p>
                     <p>Kliknutím na tlačidlo nižšie natrvalo vymažete účet
                         <strong><?= htmlspecialchars((string) ($deletionRequest['email'] ?? '')) ?></strong>
