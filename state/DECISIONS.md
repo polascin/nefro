@@ -70,3 +70,10 @@ ostávajú mimo rozsahu bez samostatného rozhodnutia.
 Admin drugs/trials/articles (+ discussion, newsletter) čítajú skaláre cez
 `request_input`. Checkboxy ostávajú na `isset`, lebo absencia nie je
 neplatný tvar. Claim/lease ENUM stále bez súhlasu.
+
+## 2026-11-02 (slučka 9) — kalkulačky pred P1 autormi
+
+Zvolené bezpečné rozšírenie `request_input` na POST skaláre kalkulačiek
+(`calculatorPostString`/`Int`) namiesto P1 autorov, ktoré vyžadujú EXPLAIN
+a meranie. Multi-select v ambulatory (`complications[]`, diagnózy) ostáva
+zámerne mimo skalárnej vrstvy.

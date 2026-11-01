@@ -1,32 +1,31 @@
 # SESSION
 
-Aktualizované: 2026-11-02 00:36 Europe/Bratislava
+Aktualizované: 2026-11-02 00:57 Europe/Bratislava
 
 ## Aktívna úloha
 
-Vývojová slučka Nefro (iterácia 8 dokončená). Handoff:
-`.codex/handoffs/2026-11-02-003546-nefro-dev-loop.md`.
+Vývojová slučka Nefro (iterácia 9 dokončená). Handoff:
+`.codex/handoffs/2026-11-02-005650-nefro-dev-loop.md`.
 
 ## Stav repozitára
 
 - Vetva: `main`
-- HEAD: `77686bf2` (docs state/handoff)
-- Runtime / `DEPLOY_COMMIT`: `6227923c` (docs-only drift OK)
+- HEAD: `00d04fc7` (feat kalkulačky request_input)
+- Runtime / `DEPLOY_COMMIT`: `00d04fc7`
 - `origin/main` a `server/main`: aktuálne
 
-## Čo je hotové v slučke 8
+## Čo je hotové v slučke 9
 
-1. `request_input` na admin_drugs / trials / articles (+ discussion, newsletter).
-2. Changelog 00:35; regresia 57 / 35 PASS; deploy zhoda.
-3. Claim/lease a seed priority **nebolo**.
+1. Voľba: kalkulačky POST (nie P1 autori, nie claim/lease).
+2. `calculatorPostString`/`Int` + plošné napojenie; ambulatory polia výnimka.
+3. Regresia 75 PASS; deploy zhoda.
 
 ## Executable next step
 
 ```text
-# P1 autori (EXPLAIN) alebo request_input na kalkulacky POST.
-# Claim/lease IBA so súhlasom.
+# P1 autori (EXPLAIN + meranie), alebo claim/lease IBA so súhlasom.
 ```
 
 ## Handoff
 
-`.codex/handoffs/2026-11-02-003546-nefro-dev-loop.md`
+`.codex/handoffs/2026-11-02-005650-nefro-dev-loop.md`
