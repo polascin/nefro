@@ -11,6 +11,21 @@ Zavedený postup pre `category = 'odborne'`. Pre články v sekcii „Pre pacien
 **Zásada:** každý článok dokonči úplne (vrátane PDF a live kontroly), až potom začni
 ďalší. Pri zásahu do limitu tak ostanú hotové články celé.
 
+### Stojaci postup (skrátený kontrolný zoznam)
+
+1. Vecná kontrola + citácie + slovenská korektúra (bez textGrain / umelého „drsnienia“ textu).
+2. Ilustrácia článku 16:10 → `img/<slug>.png` + watermark + WebP.
+3. `add_<slug>_article.php` s `'enqueue_newsletter' => false` (ak používateľ v tej istej
+   úlohe výslovne nepožiada o avíza).
+4. Lint/PHPStan → commit (SK conventional) → push `main` → SFTP deploy cez hooky.
+5. UPSERT cez `ssh -4` → over `Zaradených do fronty avíz: 0` (ak avíza neboli vyžiadané).
+6. `sync_article_pdfs.sh` → commit/push PDF → live kontrola `https://nefro.polascin.net/`
+   (nie `nefro.sk`) + `DEPLOY_COMMIT` vs. `git rev-parse --short HEAD`.
+7. **Sociálne siete len na výslovnú žiadosť v tej istej úlohe:** SK + EN zhrnutie,
+   iná ilustrácia bez textu, kópia na Google Disk
+   (`G:\Môj disk\polascin.net – obálky blogu\`), zverejnenie na X / Facebook / LinkedIn /
+   Threads. Ak MCP konektor chýba, povedz to rovno a nepredstieraj zverejnenie.
+
 ---
 
 ## 0. Čo NErobiť
@@ -298,11 +313,13 @@ Keď požiada, platia tieto body:
 4. Príspevok aj s obrázkom zverejni na `x.com/polascin`, `facebook.com/lubomir.polascin`,
    `linkedin.com/in/lubomirpolascin` a `threads.com/@lubomirpolascin`.
 
-   ⚠️ **Overené 31. 10. 2026: pre X, Facebook, LinkedIn ani Threads nie je pripojený
+   ⚠️ **Overené 1. 11. 2026: pre X, Facebook, LinkedIn ani Threads nie je pripojený
    žiadny MCP konektor** (dostupné sú Gmail, Google Drive/Docs/Calendar, Canva, Notion,
-   Slack, Zoom, Figma a odborné databázy). Agent teda **nedokáže príspevok zverejniť**.
-   V takom prípade to povedz rovno, odovzdaj hotové texty aj cestu k obrázku na Disku
-   a nepredstieraj zverejnenie. To isté platí, ak sieť nie je prihlásená.
+   Slack, Figma, Tavily a odborné databázy). Agent teda **nedokáže príspevok zverejniť
+   cez MCP**. V takom prípade to povedz rovno, odovzdaj hotové texty aj cestu k obrázku
+   na Disku a nepredstieraj zverejnenie. To isté platí, ak sieť nie je prihlásená.
+   Prehliadačová automatizácia nie je náhradou za chýbajúci konektor, pokiaľ používateľ
+   výslovne nepožiada o iný postup.
    **1. 11. 2026 session nemala pripojený ani jeden MCP server** (`list_mcp_resources`
    vrátil prázdny zoznam), takže nedostupné boli aj Gmail, Disk a Canva. Pred odkazom
    na konektor vždy over `list_mcp_resources`; zoznam dostupných serverov sa medzi

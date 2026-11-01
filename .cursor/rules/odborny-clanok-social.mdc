@@ -5,8 +5,15 @@ alwaysApply: true
 
 # Odborný článok a sociálne siete
 
-Pri publikovaní odborného článku dodrž `.claude/skills/publikuj-odborny-clanok/SKILL.md` a `PUBLIKOVANIE_CLANKOV.md`.
+Pri publikovaní odborného článku dodrž `.claude/skills/publikuj-odborny-clanok/SKILL.md` a `PUBLIKOVANIE_CLANKOV.md` (vrátane skráteného kontrolného zoznamu na začiatku skillu).
 
 Avíza do newslettera sa predvolene neposielajú. V skripte musí byť `'enqueue_newsletter' => false` aj pri prvom vložení, pokiaľ používateľ v tej istej úlohe výslovne nepožiada o zaradenie. Po behu na serveri musí byť `Zaradených do fronty avíz: 0`, ak avíza neboli vyžiadané.
 
-Príspevky na X, Facebook, LinkedIn a Threads nie sú automatická súčasť každého článku. Patria k úlohe len vtedy, keď o ne používateľ v tej istej úlohe výslovne požiada. Potom priprav slovenskú aj anglickú verziu, ku každej ilustráciu bez textu (iný motív než v článku), ulož ilustráciu na Google Disk účtu polascin@gmail.com (lokálna zložka `G:\Môj disk\polascin.net – obálky blogu\`) a príspevok s obrázkom zverejni na účtoch uvedených v skille. Ak MCP konektor pre sieť chýba, povedz to rovno a nepredstieraj zverejnenie. TextGrain a obdobné postupy nepoužívaj. Čo sa nepodarilo zverejniť alebo uložiť, povedz. Nevydávaj neodoslaný príspevok za zverejnený.
+Príspevky na X, Facebook, LinkedIn a Threads nie sú automatická súčasť každého článku. Patria k úlohe len vtedy, keď o ne používateľ v tej istej úlohe výslovne požiada. Potom:
+
+1. Priprav veľmi krátke SK aj EN zhrnutie (plus verziu do 280 znakov pre X), hĺbkovú jazykovú korektúru, bez textGrain.
+2. Vygeneruj samostatnú ilustráciu 16:10 bez textu (iný motív než v článku).
+3. Ulož ilustráciu na Google Disk účtu polascin@gmail.com cez lokálnu zložku `G:\Môj disk\polascin.net – obálky blogu\` (a over synchronizáciu konektorom, ak je dostupný). Texty príspevkov ulož ako dokument na Disk podľa skillu.
+4. Príspevok s obrázkom zverejni na účtoch uvedených v skille.
+
+Ak MCP konektor pre sieť chýba, povedz to rovno a nepredstieraj zverejnenie. Čo sa nepodarilo zverejniť alebo uložiť, povedz. Nevydávaj neodoslaný príspevok za zverejnený.
