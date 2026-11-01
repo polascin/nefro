@@ -595,5 +595,10 @@ function getSourceArticleAuthors(): array {
         // Všetci štyria autori spracúvanej pôvodnej kazuistiky (Fed Pract 2026;43(10):390-393,
         // doi 10.12788/fp.0763), overení v hlavičke článku na verejne prístupnej stránke 2026-10-24.
         'kratom-naltrexon-abstinencna-reakcia-kazuistika' => ['Jennifer L. Cole', 'Leah B. Pittman', 'Jomo C. Osborne', 'Michael N. Osinski'],
+        // Všetkých 15 autorov oboch konferenčných abstraktov štúdie SIMPLIFIED (ASN Kidney Week 2026,
+        // FR-OR101 a FR-PO0503), overených priamo v abstraktoch 2026-11-01. Spracovaným zdrojom je
+        // abstrakt štúdie, preto patria sem; autorka správy Medscape (Nancy A. Melville) nie je
+        // autorkou štúdie a neuvádza sa tu.
+        'simplified-vitamin-d3-dialyza-mortalita' => ['Rona M. Smith', 'Molly Cui', 'Fergus Caskey', 'Afzal Chaudhry', 'John Cunningham', 'Toby Humphrey', 'Sandip Mitra', 'Inez Schoenmakers', 'Adam P. Wagner', 'David C. Wheeler', 'Ian Wilkinson', 'Edward C. F. Wilson', 'Amer Yahia', 'Simon Bond', 'Thomas Hiemstra'],
     ];
 }
