@@ -313,18 +313,17 @@ Keď požiada, platia tieto body:
 4. Príspevok aj s obrázkom zverejni na `x.com/polascin`, `facebook.com/lubomir.polascin`,
    `linkedin.com/in/lubomirpolascin` a `threads.com/@lubomirpolascin`.
 
-   ⚠️ **Overené 1. 11. 2026: pre X, Facebook, LinkedIn ani Threads nie je pripojený
-   žiadny MCP konektor** (dostupné sú Gmail, Google Drive/Docs/Calendar, Canva, Notion,
-   Slack, Figma, Tavily a odborné databázy). Agent teda **nedokáže príspevok zverejniť
-   cez MCP**. V takom prípade to povedz rovno, odovzdaj hotové texty aj cestu k obrázku
-   na Disku a nepredstieraj zverejnenie. To isté platí, ak sieť nie je prihlásená.
+   ⚠️ **Overené opakovane 1. 11. 2026: pre X, Facebook, LinkedIn ani Threads nie je
+   pripojený žiadny MCP konektor** (v tej istej session môžu byť dostupné Gmail,
+   Google Drive/Docs/Calendar, Canva, Notion, Slack, Figma, Tavily a ďalšie, ale
+   sociálne siete nie). Agent teda **nedokáže príspevok zverejniť cez MCP**. V takom
+   prípade to povedz rovno, odovzdaj hotové texty aj cestu k obrázku na Disku a
+   nepredstieraj zverejnenie. To isté platí, ak sieť nie je prihlásená.
    Prehliadačová automatizácia nie je náhradou za chýbajúci konektor, pokiaľ používateľ
-   výslovne nepožiada o iný postup.
-   **1. 11. 2026 session nemala pripojený ani jeden MCP server** (`list_mcp_resources`
-   vrátil prázdny zoznam), takže nedostupné boli aj Gmail, Disk a Canva. Pred odkazom
-   na konektor vždy over `list_mcp_resources`; zoznam dostupných serverov sa medzi
-   session mení. Browser v takej session nemá prihlásené relácie, preto ním príspevok
-   nezverejňuj a prihlasovacie údaje nikdy nezadávaj.
+   výslovne nepožiada o iný postup. Pred odkazom na konektor vždy over dostupnosť
+   namespace (napr. `GetDynamicTools` / katalóg MCP); zoznam sa medzi session mení.
+   Browserom príspevok nezverejňuj bez výslovnej žiadosti a prihlasovacie údaje
+   nikdy nezadávaj.
 5. Po zverejnení skontroluj, že príspevok na profile je a že odkaz na článok sedí.
    Čo sa nepodarilo, povedz menovite.
 
