@@ -68,6 +68,11 @@ Na Windows nastav `export PYTHONIOENCODING=utf-8`.
   zo štruktúrovaného abstraktu a dopln kritické zhodnotenie dizajnu (fáza, n, náhradný
   ukazovateľ, otvorený dizajn).
 - **Vecné chyby v samotnom zdroji** — ak ich nájdeš, oprav ich a rozdiel v článku vysvetli.
+- **Dve prezentácie tej istej štúdie** (ústna prednáška a plagát) môžu mať rôzne uzávierky
+  dát, a teda mierne odlišné počty udalostí a odhady. Nie je to rozpor medzi zdrojmi,
+  kým to tak zdroj nepodá; over oba abstrakty a v článku vysvetli, že ide o dve
+  prezentácie jedného súboru. Pri konferenčnom abstrakte bez recenzovaného plného textu
+  to uveď v limitoch a v poznámke k dôkazom, nie ako hedging v každom odseku.
 
 ### Slovenská jazyková korektúra
 
@@ -83,6 +88,12 @@ Na Windows nastav `export PYTHONIOENCODING=utf-8`.
    V prompte **vždy**: „no text, no letters, no words, no logos, no watermark, no faces".
    Jednotný vizuálny jazyk: tmavé takmer čierne pozadie, dramatické bočné svetlo,
    volumetrický opar, jeden farebný akcent podľa témy, polopriesvitná anatómia.
+   **Ak Canva MCP v session nie je** (over `list_mcp_resources`, prázdny zoznam znamená
+   žiadny konektor), vygeneruj obrázok vstavaným generátorom obrázkov
+   (`experimental_image_generate`) s tým istým vizuálnym jazykom a požiadavkou na pomer
+   16:10. Výstup môže mať iný rozmer: orež na presný pomer 1,6 a zmeň na 1600 × 1000
+   (PIL, `LANCZOS`), potom pokračuj krokom 5. Nástroj, ktorým obrázok vznikol, v článku
+   ani v poznámke neuvádzaj.
 2. Canva design **`DAHWYJ0SGc0`**, strana s rozmermi **1600×1000** (napr. page_index 3,
    `PBSj9SXGdtl93QnB`). Postup:
    - `read-design` s `open_transaction: true` → vráti `transaction_id` a `locator_id`
@@ -115,7 +126,8 @@ vezmi nedávny článok a nahraď hlavičku, `title`, `slug`, `excerpt`, `conten
 a tag v `error_log`.
 
 **Súbory `add_*_article.php` majú CRLF** — pri skriptovanej úprave zachovaj `\r\n`
-(v Pythone `io.open(..., newline='')` a na záver `.replace('\n', '\r\n')`).
+(v Pythone `io.open(..., newline='')` a na záver `.replace('\n', '\r\n')`). Novovytvorený
+súbor môže vyjsť v LF; pred commitom ho na CRLF preveď a over `php -l`.
 
 | Pole | Pravidlo |
 |---|---|
@@ -219,6 +231,9 @@ zabrať — vtedy updatuj DB priamo + zavolaj `generateArticlePdf`.
 sh sync_article_pdfs.sh
 ```
 
+V PowerShelli `sh` nie je na `PATH`; použi `& 'C:\Program Files\Git\bin\sh.exe' sync_article_pdfs.sh`.
+Skript sám commitne aj nasadí, preto ho nespúšťaj súbežne s inou prácou v repozitári.
+
 Preregeneruje neaktuálne PDF na serveri (`--stale`), stiahne ich do `pdf/` a commitne.
 Over, že PDF obsahuje ilustráciu:
 
@@ -276,7 +291,10 @@ Keď požiada, platia tieto body:
    over synchronizáciu konektorom:
    `search_files` s `title contains '<RRRR-MM-DD>-<slug>'` — súbor sa objaví do minúty.
    Texty príspevkov ulož konektorom ako dokument do koreňa Disku pod názvom
-   `<RRRR-MM-DD> <téma>, príspevky` (zavedená konvencia).
+   `<RRRR-MM-DD> <téma>, príspevky` (zavedená konvencia). **Ak konektor v session nie je**,
+   ulož ich priamo do koreňa `G:\Môj disk` ako `.docx` s tým istým názvom; súbor sa
+   zosynchronizuje rovnako, len nebude natívnym Dokumentom Google. Priečinok s obrázkami
+   sa volá presne `polascin.net – obálky blogu` (pomlčka je en dash, nie spojovník).
 4. Príspevok aj s obrázkom zverejni na `x.com/polascin`, `facebook.com/lubomir.polascin`,
    `linkedin.com/in/lubomirpolascin` a `threads.com/@lubomirpolascin`.
 
@@ -285,6 +303,11 @@ Keď požiada, platia tieto body:
    Slack, Zoom, Figma a odborné databázy). Agent teda **nedokáže príspevok zverejniť**.
    V takom prípade to povedz rovno, odovzdaj hotové texty aj cestu k obrázku na Disku
    a nepredstieraj zverejnenie. To isté platí, ak sieť nie je prihlásená.
+   **1. 11. 2026 session nemala pripojený ani jeden MCP server** (`list_mcp_resources`
+   vrátil prázdny zoznam), takže nedostupné boli aj Gmail, Disk a Canva. Pred odkazom
+   na konektor vždy over `list_mcp_resources`; zoznam dostupných serverov sa medzi
+   session mení. Browser v takej session nemá prihlásené relácie, preto ním príspevok
+   nezverejňuj a prihlasovacie údaje nikdy nezadávaj.
 5. Po zverejnení skontroluj, že príspevok na profile je a že odkaz na článok sedí.
    Čo sa nepodarilo, povedz menovite.
 

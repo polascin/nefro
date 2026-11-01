@@ -72,12 +72,15 @@ poľom `category` a tým, kde sú vypísané.
    ani regenerovaním `phpstan-baseline.neon`.
 7. **Commit** (post-commit hook nahrá SFTP na produkciu):
    `git add add_<slug>_article.php img/… && git commit -m "content(<sekcia>): <titul>"`
-8. **Spusti na serveri** cez SSH (vloží do DB + pošle newsletter avízo + vygeneruje PDF):
+8. **Spusti na serveri** cez SSH (vloží do DB + podľa skriptu prípadne PDF):
    ```bash
    ssh -i "$HOME/.ssh/nefro_deploy" -p 26650 uid58858@shell.r1.websupport.sk \
        "php /data/8/6/868f981d-e598-4e71-b7f5-246f2e180cef/polascin.net/sub/nefro/add_<slug>_article.php"
    ```
-   Očakávaný výstup: `1 vložených, 0 aktualizovaných … Zaradených do fronty avíz: N`.
+   V šablóne je `'enqueue_newsletter' => false`. Avíza sa **neposielajú**, pokiaľ
+   používateľ v tej istej úlohe výslovne nepožiada o zaradenie. Očakávaný výstup
+   pri prvom vložení bez avíz: `1 vložených, 0 aktualizovaných` a
+   `Zaradených do fronty avíz: 0`.
 9. **Sync PDF do gitu:** `sh sync_article_pdfs.sh` (stiahne PDF zo servera + commitne).
 10. **Over live:** `curl -s "https://nefro.polascin.net/article.php?slug=<slug>"` —
    ⚠️ **nepoužívaj skrátené `-A "Mozilla/5.0"`** — WAF hostingu tento reťazec vyhodnotí
@@ -105,6 +108,13 @@ poľom `category` a tým, kde sú vypísané.
 > _citovaných_ v origináli** (napr. zoznam „Zdroje" pod pôvodným článkom) —
 > mapa je len pre autorov skutočného spracovaného zdroja.
 
+> 📣 **Sociálne siete** nie sú automatická súčasť publikovania. SK + EN zhrnutie,
+> ilustrácia bez textu, uloženie na Google Disk a zverejnenie na X, Facebook,
+> LinkedIn a Threads rob len vtedy, keď o to používateľ v tej istej úlohe výslovne
+> požiada. Nepoužívaj textGrain ani obdobné postupy. Čo sa nepodarí zverejniť,
+> nevydávaj za hotové. Postup: `.claude/skills/publikuj-odborny-clanok/SKILL.md`
+> (sekcia 8) a `.cursor/rules/odborny-clanok-social.mdc`.
+
 ### B) Regenerovať / upraviť existujúci článok
 
 1. **Uprav `content`/`excerpt`/`title`** priamo v jeho `add_<slug>_article.php`
@@ -117,8 +127,9 @@ poľom `category` a tým, kde sú vypísané.
    (deteguje zmenu podľa `updated_at`), stiahne ho do `pdf/` a commitne.
 5. **Over live** (krok 10).
 
-> ⚠️ **Newsletter avíza** sa pošlú len pri **prvom** vložení článku (`rc === 1`).
-> Pri regenerácii (`rc === 2`) sa neposielajú — netreba sa báť opätovného spustenia.
+> ⚠️ **Newsletter avíza** sa predvolene **neposielajú** (`enqueue_newsletter` => false
+> v šablóne aj pri prvom vložení). Zaradenie do fronty len na výslovnú žiadosť
+> v tej istej úlohe. Pri regenerácii (`rc === 2`) sa avíza neposielajú vždy.
 
 ### C) Len preregenerovať PDF (bez zmeny obsahu)
 
@@ -145,10 +156,10 @@ Alebo cielene na serveri: `php generate_all_article_pdfs.php --slug=<slug> --for
 | `content`      | Telo (HTML)     | Nezačínaj `<h2>` zhodným s titulom; nadpisy `<h2>/<h3>`, zoznamy `<ul>/<ol>`, odkazy `target="_blank" rel="noopener noreferrer"` |
 
 > **UPSERT (idempotentné):** šablóny používajú `INSERT … ON DUPLICATE KEY UPDATE`.
-> Prvé spustenie článok **vloží** (a pošle newsletter avízo + vygeneruje PDF);
-> opätovné spustenie po úprave obsahu článok **prepíše** (regenerácia obsahu aj
-> PDF) a newsletter už **neposiela**. `published_at` ostáva zachované. Alternatíva
-> bez skriptu: **Administrácia → Správa článkov**.
+> Prvé spustenie článok **vloží** a pri `regenerate_pdf` vygeneruje PDF; newsletter
+> avízo sa predvolene **neposiela**. Opätovné spustenie po úprave obsahu článok
+> **prepíše** (regenerácia obsahu aj PDF) a fronta ostáva prázdna.
+> `published_at` ostáva zachované. Alternatíva bez skriptu: **Administrácia → Správa článkov**.
 
 ---
 
