@@ -186,6 +186,10 @@ function getSourceArticleAuthors(): array {
         'igg4-suvisiace-renalne-ochorenie-liecebny-standard' => ['Francesco Peyronel', 'Giulia Palazzini', 'Riccardo Campi', 'Salvatore Granata', 'Lorenzo Masieri', 'Augusto Vaglio'],
         'iga-nefropatia-algoritmus-kdigo-2025-kdoqi' => ['Isabelle Ayoub', 'Gaia Coppock', 'Shikha Wadhwani', 'Timothy Yau'],
         'implementacia-intenzivnej-kontroly-tlaku-esprit-nefrologia' => ['Yu-Jie Zuo', 'Ji-Guang Wang'],
+        // Autorka spracovaného článku Medscape Medical News „APRIL/BAFF-Inhibiting Drugs
+        // Show Sustained Benefits in IgA Nephropathy at 2 Years“ (23. 10. 2026).
+        // byline overený z verejne dostupnej stránky zdroja 2026-11-01.
+        'inhibicia-april-baff-iga-nefropatia-faza-3' => ['Nancy A. Melville'],
         // Autori spracovanej štúdie Nature Communications 2026;17:7581, overení cez Crossref.
         'inhibicia-saga-pghi-4-vankomycin-rezistentny-enterococcus-faecium' => ['Kyong T. Fam', 'Pavan Kumar Chodisetti', 'Zifei Wang', 'Joshua A. Homer', 'Christopher J. Smedley', 'Seiya Kitamura', 'Benjamin Silva', 'Yijun Xiong', 'Althea Hansel-Harris', 'Matthew Holcomb', 'Simeon Babarinde', 'Adrianna M. Turner', 'Daria Van Tyne', 'Ian A. Wilson', 'Stefano Forli', 'Benjamin F. Cravatt', 'Donghyun Park', 'Dennis W. Wolan', 'John E. Moses', 'Howard C. Hang'],
         'inhibicia-tmao-fmc-regresia-fibrozy-ckd-model' => ['Joseph A DiDonato', 'Taylor L Weeks', 'Nilaksh Gupta', 'Deepthi P Mallela', 'Jennifer A Buffa', 'Zeneng Wang', 'Xinmin S Li', 'James T Anderson', 'Xiaoming Fu', 'Naseer Sangwan', 'Ina Nemet', 'Scott J Cameron', 'Stanley L Hazen'],
