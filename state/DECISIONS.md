@@ -64,3 +64,9 @@ a seed priorít ostávajú bez súhlasu.
 PreferPost pre token/slug; heslá bez `trim`. Plošné napojenie verejných
 a auth endpointov; admin_providers GET filtre. P1 autori a claim/lease
 ostávajú mimo rozsahu bez samostatného rozhodnutia.
+
+## 2026-11-02 (slučka 8) — request_input v admin katalógoch
+
+Admin drugs/trials/articles (+ discussion, newsletter) čítajú skaláre cez
+`request_input`. Checkboxy ostávajú na `isset`, lebo absencia nie je
+neplatný tvar. Claim/lease ENUM stále bez súhlasu.
