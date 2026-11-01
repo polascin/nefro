@@ -32,7 +32,10 @@ if ($showUnverifiedNotice && !empty($_SESSION['email'])) {
     <div class="site-header__col site-header__col--center">
         <a href="index.php" class="site-header__title-link">
             <h1 class="site-header__main-title">
-                Nefro-projekt Slovensko
+                <span class="site-header__brand">
+                    <span class="site-header__brand-primary">Nefro</span><span class="site-header__brand-sep" aria-hidden="true">-</span><span class="site-header__brand-secondary">projekt</span>
+                    <span class="site-header__brand-place">Slovensko</span>
+                </span>
             </h1>
         </a>
         <p class="site-header__tagline">Nefrológia&nbsp;· Dialýza&nbsp;· Interná medicína</p>
@@ -42,7 +45,7 @@ if ($showUnverifiedNotice && !empty($_SESSION['email'])) {
                 <?= htmlspecialchars($headerTitle) ?>
             </h2>
         <?php endif; ?>
-        
+
         <?php if (!empty($headerIntro)): ?>
             <p class="site-header__intro">
                 <?= htmlspecialchars($headerIntro) ?>

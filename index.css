@@ -266,23 +266,6 @@ body {
     clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
 }
 
-.site-header__main-title {
-    font-size: clamp(1.5rem, 5vw, 2.5rem);
-    font-weight: 900;
-    margin-bottom: 8px;
-    letter-spacing: -0.02em;
-    line-height: 1.1;
-}
-
-.site-header__tagline {
-    font-size: 0.72rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.65);
-    margin: 2px 0 0;
-    font-weight: 400;
-}
-
 .site-header__subtitle {
     font-size: clamp(1rem, 3vw, 1.4rem);
     opacity: 0.95;
@@ -330,32 +313,6 @@ body {
     filter: drop-shadow(0 10px 20px rgba(255, 255, 255, 0.3));
 }
 
-.site-header h1 {
-    font-size: 4.2rem;
-    font-weight: 900;
-    letter-spacing: -1.5px;
-    position: relative;
-    z-index: 1;
-    background: linear-gradient(135deg, #ffffff 0%, #e0f2fe 50%, #7dd3fc 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
-    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3));
-    animation: textGlow 3s ease-in-out infinite alternate;
-}
-
-@keyframes textGlow {
-    0% {
-        filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3));
-        transform: scale(1);
-    }
-
-    100% {
-        filter: drop-shadow(0 8px 25px rgba(125, 211, 252, 0.7));
-        transform: scale(1.02);
-    }
-}
 
 .site-header p.intro {
     font-size: 1.2rem;
@@ -1822,9 +1779,6 @@ input:disabled + .slider:before {
 }
 
 @media (max-width: 960px) {
-    .site-header h1 {
-        font-size: 3.2rem;
-    }
     .site-header p.intro {
         font-size: 1.1rem;
         padding: 0.8rem;
@@ -1859,10 +1813,6 @@ input:disabled + .slider:before {
 
     .site-header {
         padding: 70px 0 50px;
-    }
-
-    .site-header h1 {
-        font-size: 2.4rem;
     }
 
     .main-content {
@@ -1906,10 +1856,6 @@ input:disabled + .slider:before {
 }
 
 @media (max-width: 480px) {
-    .site-header h1 {
-        font-size: 2rem;
-    }
-
     .header-logo {
         max-width: 50%;
     }
@@ -1992,9 +1938,12 @@ input:disabled + .slider:before {
         scroll-behavior: auto !important;
     }
 
-    .site-header::before,
-    .site-header h1 {
+    .site-header::before {
         animation: none !important;
+    }
+
+    .site-header__title-link::after {
+        transition: none !important;
     }
 
     .primary-article:hover,
@@ -2366,7 +2315,8 @@ input:disabled + .slider:before {
     align-items: center;
     justify-content: flex-start;
     text-align: center;
-    margin-top: -20px;
+    margin-top: -12px;
+    gap: 0;
 }
 
 .site-header__col--right {
@@ -2419,43 +2369,134 @@ input:disabled + .slider:before {
 .site-header__title-link {
     text-decoration: none;
     display: inline-block;
-    transition: transform 0.2s var(--transition-fast);
+    position: relative;
+    z-index: 1;
+    padding-bottom: 0.55rem;
+    transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.site-header__title-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: min(4.5rem, 28%);
+    height: 2px;
+    border-radius: 999px;
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(125, 211, 252, 0.95) 35%,
+        rgba(255, 255, 255, 0.95) 50%,
+        rgba(125, 211, 252, 0.95) 65%,
+        transparent 100%
+    );
+    transform: translateX(-50%);
+    opacity: 0.85;
+    transition:
+        width 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 0.25s ease;
 }
 
 .site-header__title-link:hover {
-    transform: scale(1.03);
+    opacity: 0.92;
+}
+
+.site-header__title-link:hover::after {
+    width: min(7.5rem, 48%);
+    opacity: 1;
+}
+
+.site-header__title-link:focus-visible {
+    outline: 2px solid rgba(255, 255, 255, 0.85);
+    outline-offset: 6px;
+    border-radius: 6px;
 }
 
 .site-header__main-title {
     margin: 0;
-    font-size: clamp(2.2rem, 4vw, 3.5rem);
-    line-height: 1.1;
-    font-weight: 900;
-    background: linear-gradient(90deg, #10b981, #06b6d4, #0ea5e9);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 1.5px var(--text-primary);
-    text-shadow:
-        0px 5px 35px rgba(6, 182, 212, 0.85),
-        0px 0px 15px rgba(16, 185, 129, 0.6);
-    letter-spacing: -0.02em;
+    position: relative;
+    z-index: 1;
+    font-size: clamp(1.85rem, 4.2vw, 3.15rem);
+    line-height: 1.05;
+    font-weight: 700;
+    letter-spacing: -0.035em;
+    color: #ffffff;
+    text-wrap: balance;
+    text-shadow: 0 2px 18px rgba(15, 23, 42, 0.28);
+    -webkit-font-smoothing: antialiased;
+}
+
+.site-header__brand {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0.18em 0.32em;
+    max-width: 100%;
+}
+
+.site-header__brand-primary {
+    font-weight: 800;
+    letter-spacing: -0.045em;
+    color: #ffffff;
+}
+
+.site-header__brand-sep {
+    font-weight: 500;
+    opacity: 0.55;
+    letter-spacing: 0;
+    margin: 0 -0.04em;
+}
+
+.site-header__brand-secondary {
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.site-header__brand-place {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 0.62em;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(226, 242, 255, 0.92);
+    line-height: 1.2;
+    padding: 0.12em 0 0.02em;
+    border-bottom: 1px solid rgba(186, 230, 253, 0.35);
+}
+
+.site-header__tagline {
+    margin: 0.85rem 0 0;
+    font-size: clamp(0.68rem, 1.35vw, 0.78rem);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.72);
+    font-weight: 500;
+    position: relative;
+    z-index: 1;
 }
 
 .site-header__subtitle {
-    margin: 8px 0 0 0;
-    font-size: clamp(1.2rem, 3vw, 1.6rem);
+    margin: 0.7rem 0 0;
+    font-size: clamp(1.05rem, 2.6vw, 1.45rem);
     font-weight: 600;
-    color: var(--text-primary);
+    letter-spacing: -0.015em;
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 0 1px 10px rgba(15, 23, 42, 0.2);
 }
 
 .site-header__intro {
-    margin: 8px auto 0 auto;
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--text-primary);
-    max-width: 600px;
-    opacity: 0.85;
+    margin: 0.55rem auto 0;
+    font-size: clamp(0.92rem, 1.6vw, 1.05rem);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    color: rgba(248, 250, 252, 0.9);
+    max-width: 34rem;
+    line-height: 1.45;
+    position: relative;
+    z-index: 1;
 }
 
 /* ==========================================================================
