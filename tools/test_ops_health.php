@@ -31,8 +31,10 @@ foreach (OPS_HEALTH_QUEUES as $table) {
         updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP, email TEXT NOT NULL DEFAULT 'synthetic@example.invalid'
     )");
 }
+opsHealthApplySessionTimezone($pdo);
 $dbNow = opsHealthDbNow($pdo);
 opsHealthTest(strtotime($dbNow) !== false, 'Čas DB musí byť parsovateľný.');
+opsHealthTest(date_default_timezone_get() === 'Europe/Bratislava', 'ops_health musí nastaviť pásmo aplikácie aj pri SQLite.');
 
 // Fixture časy stavujeme od času DB v tom istom ráme, v ktorom ho kód číta.
 // Pôvodne sa používalo SQLite datetime('now', '-2 days'), čo je UTC — a ten sa

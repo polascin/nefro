@@ -55,6 +55,13 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-11-01 11:59',
+                'category' => 'portal',
+                'title' => 'Microsoft Clarity len po analytickom súhlase',
+                'description' => 'Na verejných neprihlásených stránkach sa po analytickom súhlase môže načítať Microsoft Clarity s maskovaným textom. Prihlásené obrazovky, formuláre a kalkulačky sú vylúčené; reklamný súhlas sa službe neudeľuje. Súhlas možno kedykoľvek odvolať v nastaveniach cookies.',
+                'url' => 'privacy.php',
+            ],
+            [
                 'date' => '2026-11-01 10:34',
                 'category' => 'portal',
                 'title' => 'Dynamický akvamarínový titulný nadpis',

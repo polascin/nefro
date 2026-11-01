@@ -46,6 +46,23 @@ const OPS_HEALTH_PUBLIC_PATHS = ['/', '/privacy.php', '/calculators.php'];
 const OPS_HEALTH_USER_AGENT = 'nefro-ops-health/1.0';
 
 /**
+ * Zjednotí PHP a MySQL reláciu na Europe/Bratislava (rovnaký postup ako
+ * db_config.php). next_attempt_at je DATETIME zapisovaný workerom v čase
+ * aplikácie; bez pásma relácie by retry_overdue a vek TIMESTAMP stĺpcov
+ * pri UTC CLI boli posunuté o 1 až 2 h (nález Behu 134).
+ * SQLite v izolovaných testoch sa neupravuje.
+ */
+function opsHealthApplySessionTimezone(PDO $pdo): void
+{
+    date_default_timezone_set('Europe/Bratislava');
+    if ($pdo->getAttribute(PDO::ATTR_DRIVER_NAME) !== 'mysql') {
+        return;
+    }
+    $bratislavaOffset = (new DateTimeImmutable('now', new DateTimeZone('Europe/Bratislava')))->format('P');
+    $pdo->exec("SET time_zone = '{$bratislavaOffset}'");
+}
+
+/**
  * Výraz pre aktuálny čas databázy. Vek sa počíta výhradne z hodín DB
  * (poučenie z Behu 130: PHP a DB môžu bežať v rozdielnych pásmach).
  */
@@ -482,6 +499,7 @@ function opsHealthMain(array $argv): int
             PDO::ATTR_EMULATE_PREPARES => false,
             PDO::ATTR_TIMEOUT => 10,
         ]);
+        opsHealthApplySessionTimezone($pdo);
         $dbNow = opsHealthDbNow($pdo);
         $lines[] = 'DB: pripojená, čas DB ' . $dbNow;
         foreach (OPS_HEALTH_QUEUES as $table) {
@@ -510,7 +528,7 @@ function opsHealthMain(array $argv): int
         }
     } catch (\Throwable $e) {
         $statuses[] = 'FAIL';
-        $lines[] = 'FAIL  DB: ' . get_class($e) . ' — ' . preg_replace('/\s+/', ' ', $e->getMessage());
+        $lines[] = 'FAIL  DB: ' . get_class($e) . ': ' . preg_replace('/\s+/', ' ', $e->getMessage());
     }
 
     // 2) Retenčný cron

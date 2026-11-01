@@ -49,6 +49,27 @@ clockConsistencyTest(
     'Aplikácia musí mať jednotné referenčné časové pásmo.',
 );
 
+// ops_health.php má vlastné PDO (db_config.php pri chybe končí exit(0)),
+// preto musí pásmo nastaviť rovnako — inak je retry_overdue pri UTC CLI
+// posunutý o 1 až 2 h (nález Behu 134).
+$opsHealth = (string) file_get_contents($root . '/ops_health.php');
+clockConsistencyTest(
+    str_contains($opsHealth, 'function opsHealthApplySessionTimezone'),
+    'ops_health.php musí mať spoločnú funkciu na zjednotenie časového pásma.',
+);
+clockConsistencyTest(
+    str_contains($opsHealth, 'opsHealthApplySessionTimezone($pdo)'),
+    'ops_health.php musí po pripojení k MySQL nastaviť časové pásmo relácie.',
+);
+clockConsistencyTest(
+    str_contains($opsHealth, "date_default_timezone_set('Europe/Bratislava')"),
+    'ops_health.php musí parsovať časy DB v pásme aplikácie.',
+);
+clockConsistencyTest(
+    str_contains($opsHealth, "SET time_zone = '"),
+    'ops_health.php musí nastaviť MySQL time_zone rovnako ako db_config.php.',
+);
+
 // ── 2. Fronty noviniek: čas počíta databáza ─────────────────────────────────
 $newsletter = (string) file_get_contents($root . '/newsletter_notifications.php');
 

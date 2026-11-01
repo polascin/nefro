@@ -100,6 +100,72 @@ if (!function_exists('ppPriorityLabel')) {
     }
 }
 
+if (!function_exists('ppPriorityAssignmentRules')) {
+    /**
+     * Pravidlá prvotného priradenia priority A/B/C podľa lokality a typu.
+     * Používa seed skript; admin môže výsledok neskôr ručne zmeniť.
+     *
+     * @return array{
+     *   west: list<string>,
+     *   east: list<string>,
+     *   mid: list<string>,
+     *   institutions: list<string>,
+     *   overrides: array<string, ?string>
+     * }
+     */
+    function ppPriorityAssignmentRules(): array
+    {
+        return [
+            'west' => [
+                'Bratislava-Dúbravka', 'Bratislava-Karlova Ves', 'Bratislava-Lamač',
+                'Bratislava-Devínska Nová Ves', 'Bratislava-Devín', 'Bratislava-Záhorská Bystrica',
+            ],
+            'east' => [
+                'Bratislava-Ružinov', 'Bratislava-Podunajské Biskupice', 'Bratislava-Vrakuňa',
+                'Bratislava-Rača', 'Bratislava-Petržalka',
+            ],
+            'mid' => [
+                'Bratislava-Nové Mesto', 'Bratislava-Staré Mesto', 'Rovinka', 'Stupava',
+            ],
+            'institutions' => ['nemocnica', 'poliklinika', 'transplant', 'socialna_sluzba'],
+            'overrides' => [
+                'MUDr. Juraj Magyarics' => null,
+                'CINRE' => 'B',
+            ],
+        ];
+    }
+}
+
+if (!function_exists('ppPriorityForProvider')) {
+    /**
+     * Navrhne prioritu A/B/C alebo null (nechať na ručné rozhodnutie).
+     *
+     * @param array{name?: string, provider_type?: string, locality?: string} $provider
+     */
+    function ppPriorityForProvider(array $provider, ?array $rules = null): ?string
+    {
+        $rules ??= ppPriorityAssignmentRules();
+        $name = (string) ($provider['name'] ?? '');
+        foreach ($rules['overrides'] as $prefix => $priority) {
+            if ($prefix !== '' && str_starts_with($name, $prefix)) {
+                return $priority;
+            }
+        }
+        $locality = (string) ($provider['locality'] ?? '');
+        $type = (string) ($provider['provider_type'] ?? '');
+        if (in_array($locality, $rules['east'], true)) {
+            return 'C';
+        }
+        if (in_array($type, $rules['institutions'], true) || in_array($locality, $rules['mid'], true)) {
+            return 'B';
+        }
+        if (in_array($locality, $rules['west'], true)) {
+            return 'A';
+        }
+        return null;
+    }
+}
+
 if (!function_exists('ppLocalitySuggestions')) {
     /** Návrhy lokalít v pracovnom dosahu Dúbravky (západná BA + Záhorie). */
     function ppLocalitySuggestions(): array
