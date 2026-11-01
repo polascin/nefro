@@ -58,3 +58,9 @@ Prvý konkrétny krok P1 oddelenia bootstrapov: izolovaný modul skalárnych
 vstupov namiesto rozsypania auth.php. JSON preferencia cez
 `requestInputResponseIsJson()` (CLI headers_list je nespoľahlivý). Claim/lease
 a seed priorít ostávajú bez súhlasu.
+
+## 2026-11-02 (slučka 7) — request_input rozšírenie
+
+PreferPost pre token/slug; heslá bez `trim`. Plošné napojenie verejných
+a auth endpointov; admin_providers GET filtre. P1 autori a claim/lease
+ostávajú mimo rozsahu bez samostatného rozhodnutia.
