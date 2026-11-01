@@ -4,8 +4,10 @@
 .agents/**
 .claude/**
 .cursor/**
+.codex/**
 .deployignore
 .doaudit.md
+state/**
 .gitattributes
 .github/**
 .gitignore

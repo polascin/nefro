@@ -12,8 +12,10 @@ DEPLOY.md
 .agents
 .claude
 .cursor
+.codex
 .doaudit.md
 .kilo
+state
 .markdownlint.yaml
 .php-cs-fixer.dist.php
 .pre-commit-config.yaml
