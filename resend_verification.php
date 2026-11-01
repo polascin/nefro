@@ -3,6 +3,7 @@ declare(strict_types=1);
 require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
+require_once __DIR__ . '/request_input.php';
 require_once __DIR__ . '/email_verification.php';
 
 $requestMethod = strtoupper((string) ($_SERVER['REQUEST_METHOD'] ?? 'GET'));
@@ -15,7 +16,7 @@ header('Referrer-Policy: no-referrer');
 
 $errors     = [];
 $success    = null;
-$loginValue = trim((string) ($_POST['login'] ?? ''));
+$loginValue = requestScalarString($_POST, 'login', '');
 
 if ($requestMethod === 'GET' && isset($_SESSION['resend_verification_flash'])) {
     $success = (string) $_SESSION['resend_verification_flash'];
@@ -32,7 +33,7 @@ if ($requestMethod === 'POST') {
     if (!validateCsrfToken($postedCsrf)) {
         $errors[] = 'Neplatný CSRF token. Skúste to znova.';
     } else {
-        $loginValue = trim((string) ($_POST['login'] ?? ''));
+        $loginValue = requestScalarString($_POST, 'login', '');
         if ($loginValue === '') {
             $errors[] = 'Zadajte e-mailovú adresu alebo používateľské meno.';
         } else {

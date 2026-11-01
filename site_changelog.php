@@ -55,6 +55,13 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-11-02 00:12',
+                'category' => 'portal',
+                'title' => 'Jednotné spracovanie parametrov na ďalších stránkach',
+                'description' => 'Prihlásenie, články, lieky, štúdie, publikácie, overenie e-mailu a súvisiace formuláre odmietnu poškodený tvar parametrov rovnako ako vyhľadávanie — jasnou chybou 400 namiesto pádu stránky.',
+                'url' => 'login.php',
+            ],
+            [
                 'date' => '2026-11-01 23:52',
                 'category' => 'portal',
                 'title' => 'Bezpečnejšie spracovanie parametrov vo formulároch',

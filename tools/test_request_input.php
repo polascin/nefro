@@ -25,6 +25,7 @@ requestInputTest(!requestIsScalarInput(['a']), 'Pole nie je skalár.');
 requestInputTest(!requestIsScalarInput(new stdClass()), 'Objekt nie je skalár.');
 
 requestInputTest(requestScalarString(['s' => '  hello  '], 's') === 'hello', 'String sa otrimuje.');
+requestInputTest(requestScalarString(['s' => '  keep  '], 's', '', true, false) === '  keep  ', 'Heslo sa neotrimuje.');
 requestInputTest(requestScalarString([], 's', 'def') === 'def', 'Chýbajúci kľúč → default.');
 requestInputTest(requestScalarString(['s' => null], 's', 'def') === 'def', 'Null → default.');
 requestInputTest(
@@ -36,15 +37,44 @@ requestInputTest(requestScalarInt(['page' => '3'], 'page') === 3, 'Číslo zo st
 requestInputTest(requestScalarInt(['page' => 'x'], 'page', 1) === 1, 'Neplatné číslo → default.');
 requestInputTest(requestScalarInt(['page' => ['2']], 'page', 9, false) === 9, 'Pole page so reject=false → default.');
 
+$_POST = ['token' => 'from-post'];
+$_GET = ['token' => 'from-get', 'uid' => '7'];
+requestInputTest(requestScalarStringPreferPost('token') === 'from-post', 'PreferPost berie POST pred GET.');
+requestInputTest(requestScalarIntPreferPost('uid') === 7, 'PreferPost int z GET ak POST chýba.');
+$_POST = [];
+$_GET = [];
+
 $root = dirname(__DIR__);
-foreach (['search.php', 'download_pdf.php', 'newsletter_subscribe.php'] as $page) {
+$wiredPages = [
+    'search.php',
+    'download_pdf.php',
+    'newsletter_subscribe.php',
+    'login.php',
+    'forgot_password.php',
+    'resend_verification.php',
+    'article.php',
+    'liek.php',
+    'lieky.php',
+    'studie.php',
+    'download_free_publication.php',
+    'verify_email.php',
+    'publikacia.php',
+    'reset_password.php',
+    'confirm_account_deletion.php',
+    'calculator_history.php',
+    'admin_providers.php',
+];
+foreach ($wiredPages as $page) {
     $src = (string) file_get_contents($root . '/' . $page);
     requestInputTest(
         str_contains($src, "require_once __DIR__ . '/request_input.php';"),
         "{$page} musí načítavať request_input.php.",
     );
     requestInputTest(
-        str_contains($src, 'requestScalarString') || str_contains($src, 'requestScalarInt'),
+        str_contains($src, 'requestScalarString')
+            || str_contains($src, 'requestScalarInt')
+            || str_contains($src, 'requestScalarStringPreferPost')
+            || str_contains($src, 'requestScalarIntPreferPost'),
         "{$page} musí používať skalárne čítanie.",
     );
 }
@@ -53,7 +83,10 @@ requestInputTest(
     str_contains((string) file_get_contents($root . '/newsletter_subscribe.php'), 'requestInputResponseIsJson(true)'),
     'newsletter_subscribe.php musí preferovať JSON pri rejecte.',
 );
-
+requestInputTest(
+    str_contains((string) file_get_contents($root . '/request_input.php'), 'function requestScalarStringPreferPost'),
+    'request_input.php musí mať PreferPost helper.',
+);
 requestInputTest(
     str_contains((string) file_get_contents($root . '/.htaccess'), 'request_input'),
     '.htaccess musí deny-ovať request_input.php.',

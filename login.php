@@ -2,6 +2,7 @@
 declare(strict_types=1);
 require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/db_config.php';
+require_once __DIR__ . '/request_input.php';
 /** @var \PDO $pdo */
 
 $requestMethod = strtoupper((string) ($_SERVER['REQUEST_METHOD'] ?? 'GET'));
@@ -105,8 +106,8 @@ function handleLoginPost(PDO $pdo, bool $isLocalDev): array
     }
 
     // ── Prihlasovanie údaje ───────────────────────────────────────────────────
-    $loginInput = trim($_POST['login'] ?? '');
-    $password   = $_POST['password'] ?? '';
+    $loginInput = requestScalarString($_POST, 'login', '');
+    $password   = requestScalarString($_POST, 'password', '', true, false);
 
     if (empty($loginInput) || empty($password)) {
         $errors[] = "Zadajte používateľské meno (alebo e-mail) a heslo.";

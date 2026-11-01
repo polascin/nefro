@@ -51,7 +51,7 @@ $email = strtolower(requestScalarString($_POST, 'email', ''));
 $genericSuccessMessage = 'Ak je možné túto adresu prihlásiť na odber, poslali sme na ňu ďalšie pokyny.';
 
 // Honeypot
-if (trim((string) ($_POST['website'] ?? '')) !== '') {
+if (requestScalarString($_POST, 'website', '') !== '') {
     echo json_encode(['success' => true, 'message' => $genericSuccessMessage]);
     exit;
 }

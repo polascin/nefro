@@ -19,12 +19,13 @@ declare(strict_types=1);
 require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
+require_once __DIR__ . '/request_input.php';
 require_once __DIR__ . '/publications_common.php';
 
 $siteName = 'Nefro-projekt Slovensko';
 $baseUrl  = 'https://nefro.polascin.net/';
 
-$slug = trim((string) ($_GET['slug'] ?? $_POST['slug'] ?? ''));
+$slug = requestScalarStringPreferPost('slug', '');
 if ($slug === '' || !isValidPublicationSlug($slug)) {
     header('Location: publikacie.php');
     exit;
@@ -59,13 +60,13 @@ if ($publication !== null && ($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 
     $formValues = [
         'formats'    => $postedFormats,
-        'email'      => strtolower(trim((string) ($_POST['email'] ?? ''))),
-        'name'       => trim((string) ($_POST['buyer_name'] ?? '')),
-        'company'    => trim((string) ($_POST['buyer_company'] ?? '')),
-        'company_id' => trim((string) ($_POST['buyer_company_id'] ?? '')),
-        'tax_id'     => trim((string) ($_POST['buyer_tax_id'] ?? '')),
-        'address'    => trim((string) ($_POST['buyer_address'] ?? '')),
-        'note'       => trim((string) ($_POST['buyer_note'] ?? '')),
+        'email'      => strtolower(requestScalarString($_POST, 'email', '')),
+        'name'       => requestScalarString($_POST, 'buyer_name', ''),
+        'company'    => requestScalarString($_POST, 'buyer_company', ''),
+        'company_id' => requestScalarString($_POST, 'buyer_company_id', ''),
+        'tax_id'     => requestScalarString($_POST, 'buyer_tax_id', ''),
+        'address'    => requestScalarString($_POST, 'buyer_address', ''),
+        'note'       => requestScalarString($_POST, 'buyer_note', ''),
     ];
 
     if (!validateCsrfToken((string) ($_POST['csrf_token'] ?? ''))) {

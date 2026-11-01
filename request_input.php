@@ -89,12 +89,14 @@ if (!function_exists('requestRejectNonScalarInput')) {
 if (!function_exists('requestScalarString')) {
     /**
      * @param array<string, mixed> $source
+     * @param bool $trim Heslá a podobné hodnoty neorezávať (`false`).
      */
     function requestScalarString(
         array $source,
         string $key,
         string $default = '',
-        bool $rejectNonScalar = true
+        bool $rejectNonScalar = true,
+        bool $trim = true
     ): string {
         if (!array_key_exists($key, $source)) {
             return $default;
@@ -109,8 +111,41 @@ if (!function_exists('requestScalarString')) {
         if ($value === null) {
             return $default;
         }
+        $out = (string) $value;
 
-        return trim((string) $value);
+        return $trim ? trim($out) : $out;
+    }
+}
+
+if (!function_exists('requestScalarStringPreferPost')) {
+    /**
+     * POST má prednosť pred GET (typicky token/slug vo formulári aj v odkaze).
+     */
+    function requestScalarStringPreferPost(
+        string $key,
+        string $default = '',
+        bool $rejectNonScalar = true,
+        bool $trim = true
+    ): string {
+        if (array_key_exists($key, $_POST)) {
+            return requestScalarString($_POST, $key, $default, $rejectNonScalar, $trim);
+        }
+
+        return requestScalarString($_GET, $key, $default, $rejectNonScalar, $trim);
+    }
+}
+
+if (!function_exists('requestScalarIntPreferPost')) {
+    function requestScalarIntPreferPost(
+        string $key,
+        int $default = 0,
+        bool $rejectNonScalar = true
+    ): int {
+        if (array_key_exists($key, $_POST)) {
+            return requestScalarInt($_POST, $key, $default, $rejectNonScalar);
+        }
+
+        return requestScalarInt($_GET, $key, $default, $rejectNonScalar);
     }
 }
 

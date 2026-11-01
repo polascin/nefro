@@ -4,12 +4,13 @@ declare(strict_types=1);
 require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
+require_once __DIR__ . '/request_input.php';
 require_once __DIR__ . '/drugs_common.php';
 
 $siteName = "Nefro-projekt Slovensko";
 $baseUrl = "https://nefro.polascin.net/";
 
-$slug = strtolower(trim((string) ($_GET['slug'] ?? '')));
+$slug = strtolower(requestScalarString($_GET, 'slug', ''));
 $drug = null;
 if (preg_match('/^[a-z0-9-]{1,120}$/', $slug) === 1) {
     try {

@@ -3,6 +3,7 @@ declare(strict_types=1);
 require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
+require_once __DIR__ . '/request_input.php';
 require_once __DIR__ . '/calculators_common.php';
 
 $pageTitle = 'História výpočtov | Nefro-projekt Slovensko';
@@ -110,12 +111,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
     if (!validateCsrfToken((string)($_POST['csrf_token'] ?? ''))) {
         $errors[] = 'Neplatný CSRF token.';
     } elseif ($_POST['action'] === 'delete' && isLoggedIn()) {
-        $rid = (int)($_POST['result_id'] ?? 0);
+        $rid = requestScalarInt($_POST, 'result_id', 0);
         if ($rid > 0 && calculatorDeleteSavedResult($pdo, $rid, (int)$_SESSION['user_id'])) {
             $_SESSION['calculator_history_flash'] = 'Záznam bol vymazaný.';
             $redirectQuery = http_build_query(array_filter([
-                'calc' => trim((string) ($_GET['calc'] ?? '')),
-                'patient' => trim((string) ($_GET['patient'] ?? '')),
+                'calc' => requestScalarString($_GET, 'calc', ''),
+                'patient' => requestScalarString($_GET, 'patient', ''),
             ], static fn (string $value): bool => $value !== ''));
             header('Location: calculator_history.php' . ($redirectQuery !== '' ? '?' . $redirectQuery : ''), true, 303);
             exit;
@@ -127,9 +128,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
 
 $allResults  = [];
 $grouped     = [];   // [ patientKey => [ 'heading'=>string, 'rows'=>[], 'egfrTrend'=>[] ] ]
-$filterKey   = trim($_GET['calc'] ?? '');
-$filterPat   = trim($_GET['patient'] ?? '');
-$compareIds  = array_filter(array_map('intval', explode(',', $_GET['compare'] ?? '')));
+$filterKey   = requestScalarString($_GET, 'calc', '');
+$filterPat   = requestScalarString($_GET, 'patient', '');
+$compareIds  = array_filter(array_map('intval', explode(',', requestScalarString($_GET, 'compare', ''))));
 $compareRows = [];
 
 if (isLoggedIn()) {

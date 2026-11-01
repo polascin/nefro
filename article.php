@@ -3,13 +3,14 @@ declare(strict_types=1);
 require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
+require_once __DIR__ . '/request_input.php';
 
 // Načítanie parametra – akceptujeme len slug alebo id
 $article = null;
 $notFound = false;
 
-$rawSlug = trim((string) ($_GET["slug"] ?? ""));
-$rawId = (int) ($_GET["id"] ?? 0);
+$rawSlug = requestScalarString($_GET, 'slug', '');
+$rawId = requestScalarInt($_GET, 'id', 0);
 
 try {
     if ($rawSlug !== "") {

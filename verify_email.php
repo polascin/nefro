@@ -7,6 +7,7 @@ require_once __DIR__ . '/db_config.php';
 if (!isset($pdo) || !$pdo instanceof \PDO) {
     throw new \RuntimeException('Databázové pripojenie nie je dostupné.');
 }
+require_once __DIR__ . '/request_input.php';
 require_once __DIR__ . '/email_verification.php';
 
 const VERIFY_MAX_ATTEMPTS = 20;
@@ -34,8 +35,8 @@ if ($verificationFlash !== '') {
     $autoRedirect = true;
 }
 
-$uid   = (int) ($_GET['uid'] ?? $_POST['uid'] ?? 0);
-$token = trim((string) ($_GET['token'] ?? $_POST['token'] ?? ''));
+$uid   = requestScalarIntPreferPost('uid', 0);
+$token = requestScalarStringPreferPost('token', '');
 $tokenFormatValid = $uid > 0
     && preg_match('/^[A-Za-z0-9_-]{32,128}$/D', $token) === 1;
 

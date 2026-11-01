@@ -4,17 +4,18 @@ declare(strict_types=1);
 require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
+require_once __DIR__ . '/request_input.php';
 require_once __DIR__ . '/clinical_trials_common.php';
 
 $siteName = "Nefro-projekt Slovensko";
 $baseUrl = "https://nefro.polascin.net/";
 
 $catLabels = ctCategoryLabels();
-$selectedCat = (string) ($_GET['kat'] ?? '');
+$selectedCat = requestScalarString($_GET, 'kat', '');
 if ($selectedCat !== '' && !array_key_exists($selectedCat, $catLabels)) {
     $selectedCat = '';
 }
-$searchQuery = trim((string) ($_GET['q'] ?? ''));
+$searchQuery = requestScalarString($_GET, 'q', '');
 if (mb_strlen($searchQuery) > 100) {
     $searchQuery = mb_substr($searchQuery, 0, 100);
 }

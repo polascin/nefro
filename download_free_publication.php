@@ -11,6 +11,7 @@ declare(strict_types=1);
  */
 
 require_once __DIR__ . '/auth.php';
+require_once __DIR__ . '/request_input.php';
 
 if (($_SERVER['REQUEST_METHOD'] ?? 'GET') !== 'GET') {
     http_response_code(405);
@@ -20,8 +21,8 @@ if (($_SERVER['REQUEST_METHOD'] ?? 'GET') !== 'GET') {
     exit("Táto metóda sťahovania nie je podporovaná.\n");
 }
 
-$edition = trim((string) ($_GET['edition'] ?? ''));
-$format = trim((string) ($_GET['format'] ?? ''));
+$edition = requestScalarString($_GET, 'edition', '');
+$format = requestScalarString($_GET, 'format', '');
 
 $publications = [
     'sk' => [

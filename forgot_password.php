@@ -3,6 +3,7 @@ declare(strict_types=1);
 require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
+require_once __DIR__ . '/request_input.php';
 require_once __DIR__ . '/email_verification.php';
 
 $requestMethod = strtoupper((string) ($_SERVER['REQUEST_METHOD'] ?? 'GET'));
@@ -108,7 +109,7 @@ if ($requestMethod === 'POST') {
         }
 
         if (!$fpIsBlocked) {
-        $login = trim((string) ($_POST['login'] ?? ''));
+        $login = requestScalarString($_POST, 'login', '');
 
         if ($login === '') {
             $errors[] = 'Zadajte e-mail alebo používateľské meno.';

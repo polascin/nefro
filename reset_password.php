@@ -3,6 +3,7 @@ declare(strict_types=1);
 require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
+require_once __DIR__ . '/request_input.php';
 
 $requestMethod = strtoupper((string) ($_SERVER['REQUEST_METHOD'] ?? 'GET'));
 if (!in_array($requestMethod, ['GET', 'POST'], true)) {
@@ -12,7 +13,7 @@ if (!in_array($requestMethod, ['GET', 'POST'], true)) {
 }
 
 $errors = [];
-$token = trim((string) ($_GET['token'] ?? $_POST['token'] ?? ''));
+$token = requestScalarStringPreferPost('token', '');
 // Validácia formátu tokenu pred hashovaním (base64url: A-Z a-z 0-9 - _)
 if ($token !== '' && !preg_match('/^[A-Za-z0-9_\-]{32,128}$/', $token)) {
     $token = '';

@@ -11,6 +11,7 @@ declare(strict_types=1);
 require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
+require_once __DIR__ . '/request_input.php';
 require_once __DIR__ . '/providers_common.php';
 
 requireAdmin();
@@ -359,30 +360,30 @@ if (($stayEditId !== null || ($_GET['action'] ?? '') === 'edit') && $editId > 0)
 }
 
 // ── Filtre + zoznam ───────────────────────────────────────────────────────────
-$fType = (string) ($_GET['type'] ?? '');
+$fType = requestScalarString($_GET, 'type', '');
 if ($fType !== '' && !array_key_exists($fType, $typeLabels)) {
     $fType = '';
 }
-$fLoc    = trim((string) ($_GET['loc'] ?? ''));
-$fSpec   = trim((string) ($_GET['spec'] ?? ''));
-$fActive = (string) ($_GET['active'] ?? '');
+$fLoc    = requestScalarString($_GET, 'loc', '');
+$fSpec   = requestScalarString($_GET, 'spec', '');
+$fActive = requestScalarString($_GET, 'active', '');
 if (!in_array($fActive, ['', 'active', 'inactive'], true)) {
     $fActive = '';
 }
-$fOutreach = (string) ($_GET['outreach'] ?? '');
+$fOutreach = requestScalarString($_GET, 'outreach', '');
 if ($fOutreach !== '' && !array_key_exists($fOutreach, ppOutreachLabels())) {
     $fOutreach = '';
 }
-$fPriority = strtoupper((string) ($_GET['priority'] ?? ''));
+$fPriority = strtoupper(requestScalarString($_GET, 'priority', ''));
 if ($fPriority !== '' && !array_key_exists($fPriority, ppPriorityLabels())) {
     $fPriority = '';
 }
-$fGroup = (string) ($_GET['group'] ?? '');
+$fGroup = requestScalarString($_GET, 'group', '');
 if (!in_array($fGroup, ['', 'type', 'locality', 'spec'], true)) {
     $fGroup = '';
 }
 $grouped = $fGroup !== '';
-$fQuery = trim((string) ($_GET['q'] ?? ''));
+$fQuery = requestScalarString($_GET, 'q', '');
 foreach (['fLoc', 'fSpec', 'fQuery'] as $vn) {
     if (mb_strlen($$vn) > 120) {
         $$vn = mb_substr($$vn, 0, 120);
