@@ -86,6 +86,26 @@ clockConsistencyTest(
     'Stĺpec next_attempt_at sa nesmie plniť hodnotou vypočítanou v PHP.',
 );
 
+// Právne oznámenia: rovnaká zmluva (retry termín z NOW()/datetime, nie PHP date).
+$legal = (string) file_get_contents($root . '/legal_notifications.php');
+clockConsistencyTest(
+    str_contains($legal, 'function legalNoticePrepareFailStmt'),
+    'legal_notifications.php musí mať spoločnú prípravu zápisu zlyhania s časom DB.',
+);
+clockConsistencyTest(
+    str_contains($legal, 'DATE_ADD(NOW(), INTERVAL :retry_delay SECOND)'),
+    'Zlyhanie právneho oznámenia musí na MySQL počítať next_attempt_at v databáze.',
+);
+clockConsistencyTest(
+    !str_contains($legal, "date('Y-m-d H:i:s'"),
+    'legal_notifications.php nesmie zapisovať next_attempt_at cez PHP date().',
+);
+clockConsistencyTest(
+    !str_contains($legal, 'next_attempt_at=:next_attempt_at')
+        && !str_contains($legal, 'next_attempt_at = :next_attempt_at'),
+    'Stĺpec next_attempt_at v právnych frontách sa nesmie plniť PHP hodnotou.',
+);
+
 // ── 3. Blokovanie účtu: zostávajúci čas počíta databáza ─────────────────────
 $auth = (string) file_get_contents($root . '/auth.php');
 $login = (string) file_get_contents($root . '/login.php');

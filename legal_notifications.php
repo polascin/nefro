@@ -261,6 +261,58 @@ if (!function_exists('legalNoticeSendOne')) {
     }
 }
 
+if (!function_exists('legalNoticeRetryDelay')) {
+    /** Exponenciálny backoff v sekundách (max 1 h), rovnaký vzorec ako predtým. */
+    function legalNoticeRetryDelay(int $attempt): int
+    {
+        $attempt = max(1, $attempt);
+        return min(3600, (int) pow(2, min($attempt, 10)) * 60);
+    }
+}
+
+if (!function_exists('legalNoticePrepareFailStmt')) {
+    /**
+     * next_attempt_at počíta databáza (NOW()/datetime), nie PHP date() —
+     * rovnaká zmluva ako pri newsletter frontách a ops_health.
+     */
+    function legalNoticePrepareFailStmt(PDO $pdo, string $table): PDOStatement
+    {
+        if (!in_array($table, ['legal_notice_queue', 'legal_notice_sub_queue'], true)) {
+            throw new InvalidArgumentException('Neznáma fronta právnych oznámení.');
+        }
+        if ($pdo->getAttribute(PDO::ATTR_DRIVER_NAME) === 'sqlite') {
+            return $pdo->prepare(
+                "UPDATE `{$table}` SET status='failed', attempts=:attempts,
+                        next_attempt_at=datetime('now', :retry_mod), last_error=:last_error
+                 WHERE id=:id AND sent_at IS NULL"
+            );
+        }
+        return $pdo->prepare(
+            "UPDATE `{$table}` SET status='failed', attempts=:attempts,
+                    next_attempt_at=DATE_ADD(NOW(), INTERVAL :retry_delay SECOND), last_error=:last_error
+             WHERE id=:id AND sent_at IS NULL"
+        );
+    }
+}
+
+if (!function_exists('legalNoticeRecordFailure')) {
+    function legalNoticeRecordFailure(PDOStatement $failStmt, PDO $pdo, int $id, int $attempts, string $lastError): void
+    {
+        $retryDelay = legalNoticeRetryDelay($attempts);
+        $params = [
+            'id' => $id,
+            'attempts' => $attempts,
+            'last_error' => $lastError,
+        ];
+        if ($pdo->getAttribute(PDO::ATTR_DRIVER_NAME) === 'sqlite') {
+            $params['retry_mod'] = '+' . $retryDelay . ' seconds';
+        } else {
+            $params['retry_delay'] = $retryDelay;
+        }
+        $failStmt->execute($params);
+    }
+}
+
 if (!function_exists('processLegalNoticeQueue')) {
     /**
      * Odošle frontu pre registrovaných členov.
@@ -298,11 +350,7 @@ if (!function_exists('processLegalNoticeQueue')) {
             "UPDATE legal_notice_queue SET status='cancelled', next_attempt_at=NOW(), last_error=:reason
              WHERE id=:id AND sent_at IS NULL"
         );
-        $failStmt = $pdo->prepare(
-            "UPDATE legal_notice_queue SET status='failed', attempts=:attempts,
-                    next_attempt_at=:next_attempt_at, last_error=:last_error
-             WHERE id=:id AND sent_at IS NULL"
-        );
+        $failStmt = legalNoticePrepareFailStmt($pdo, 'legal_notice_queue');
         $successStmt = $pdo->prepare(
             "UPDATE legal_notice_queue SET status='sent', attempts=attempts+1, sent_at=NOW(), last_error=NULL
              WHERE id=:id AND sent_at IS NULL"
@@ -336,12 +384,7 @@ if (!function_exists('processLegalNoticeQueue')) {
             $recipientEmail = trim((string) ($item['user_email'] ?? $item['email'] ?? ''));
             if ($recipientEmail === '' || !filter_var($recipientEmail, FILTER_VALIDATE_EMAIL)) {
                 $failAttempt = (int) ($item['attempts'] ?? 0) + 1;
-                $failStmt->execute([
-                    'id' => $queueId,
-                    'attempts' => $failAttempt,
-                    'next_attempt_at' => date('Y-m-d H:i:s', time() + min(3600, (int) pow(2, min($failAttempt, 10)) * 60)),
-                    'last_error' => 'Neplatný alebo chýbajúci e-mail príjemcu.',
-                ]);
+                legalNoticeRecordFailure($failStmt, $pdo, $queueId, $failAttempt, 'Neplatný alebo chýbajúci e-mail príjemcu.');
                 $stats['failed']++;
                 continue;
             }
@@ -365,12 +408,7 @@ if (!function_exists('processLegalNoticeQueue')) {
                 $stats['sent']++;
             } else {
                 $failAttempt = (int) ($item['attempts'] ?? 0) + 1;
-                $failStmt->execute([
-                    'id' => $queueId,
-                    'attempts' => $failAttempt,
-                    'next_attempt_at' => date('Y-m-d H:i:s', time() + min(3600, (int) pow(2, min($failAttempt, 10)) * 60)),
-                    'last_error' => $failure,
-                ]);
+                legalNoticeRecordFailure($failStmt, $pdo, $queueId, $failAttempt, $failure);
                 $stats['failed']++;
             }
         }
@@ -414,11 +452,7 @@ if (!function_exists('processLegalNoticeSubQueue')) {
             "UPDATE legal_notice_sub_queue SET status='cancelled', next_attempt_at=NOW(), last_error=:reason
              WHERE id=:id AND sent_at IS NULL"
         );
-        $failStmt = $pdo->prepare(
-            "UPDATE legal_notice_sub_queue SET status='failed', attempts=:attempts,
-                    next_attempt_at=:next_attempt_at, last_error=:last_error
-             WHERE id=:id AND sent_at IS NULL"
-        );
+        $failStmt = legalNoticePrepareFailStmt($pdo, 'legal_notice_sub_queue');
         $successStmt = $pdo->prepare(
             "UPDATE legal_notice_sub_queue SET status='sent', attempts=attempts+1, sent_at=NOW(), last_error=NULL
              WHERE id=:id AND sent_at IS NULL"
@@ -452,12 +486,7 @@ if (!function_exists('processLegalNoticeSubQueue')) {
             $recipientEmail = trim((string) ($item['sub_email'] ?? $item['email'] ?? ''));
             if ($recipientEmail === '' || !filter_var($recipientEmail, FILTER_VALIDATE_EMAIL)) {
                 $failAttempt = (int) ($item['attempts'] ?? 0) + 1;
-                $failStmt->execute([
-                    'id' => $queueId,
-                    'attempts' => $failAttempt,
-                    'next_attempt_at' => date('Y-m-d H:i:s', time() + min(3600, (int) pow(2, min($failAttempt, 10)) * 60)),
-                    'last_error' => 'Neplatný alebo chýbajúci e-mail príjemcu.',
-                ]);
+                legalNoticeRecordFailure($failStmt, $pdo, $queueId, $failAttempt, 'Neplatný alebo chýbajúci e-mail príjemcu.');
                 $stats['failed']++;
                 continue;
             }
@@ -481,12 +510,7 @@ if (!function_exists('processLegalNoticeSubQueue')) {
                 $stats['sent']++;
             } else {
                 $failAttempt = (int) ($item['attempts'] ?? 0) + 1;
-                $failStmt->execute([
-                    'id' => $queueId,
-                    'attempts' => $failAttempt,
-                    'next_attempt_at' => date('Y-m-d H:i:s', time() + min(3600, (int) pow(2, min($failAttempt, 10)) * 60)),
-                    'last_error' => $failure,
-                ]);
+                legalNoticeRecordFailure($failStmt, $pdo, $queueId, $failAttempt, $failure);
                 $stats['failed']++;
             }
         }

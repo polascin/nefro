@@ -30,5 +30,6 @@
   "tools/test_retention_policy.php",
   "tools/test_pdo_parameter_binding.php",
   "tools/test_clock_consistency.php",
-  "tools/test_providers_priority.php"
+  "tools/test_providers_priority.php",
+  "tools/test_provider_script_deny.php"
 ]
