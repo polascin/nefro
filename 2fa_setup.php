@@ -270,13 +270,19 @@ $totpUri = $pendingSecret ? getTotpUri($pendingSecret, (string) ($user['email'] 
       <h2>Dvojfaktorové overenie (2FA)</h2>
 
       <?php if (!empty($errors)): ?>
-        <div class="alert alert-error" role="alert">
+        <div id="setup-2fa-errors" class="alert alert-error" role="alert" tabindex="-1">
           <ul>
             <?php foreach ($errors as $err): ?>
               <li><?= htmlspecialchars($err) ?></li>
             <?php endforeach; ?>
           </ul>
         </div>
+        <script nonce="<?= htmlspecialchars(getScriptNonce()) ?>">
+          document.addEventListener('DOMContentLoaded', function() {
+            var err = document.getElementById('setup-2fa-errors');
+            if (err) { err.focus(); }
+          });
+        </script>
       <?php endif; ?>
 
       <!-- ── Stav 2FA ─────────────────────────────────────────────────────── -->
@@ -344,7 +350,7 @@ $totpUri = $pendingSecret ? getTotpUri($pendingSecret, (string) ($user['email'] 
             })();
           </script>
 
-          <form method="POST" action="2fa_setup.php">
+          <form method="POST" action="2fa_setup.php"<?= !empty($errors) ? ' aria-describedby="setup-2fa-errors"' : '' ?>>
             <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
             <input type="hidden" name="action" value="enable_confirm">
             <div class="form-group">
@@ -358,7 +364,7 @@ $totpUri = $pendingSecret ? getTotpUri($pendingSecret, (string) ($user['email'] 
                 autocomplete="one-time-code"
                 maxlength="6"
                 placeholder="123456"
-                autofocus
+                <?php if (empty($errors)): ?>autofocus<?php else: ?>aria-invalid="true" aria-describedby="setup-2fa-errors"<?php endif; ?>
                 required
               >
             </div>
@@ -367,12 +373,12 @@ $totpUri = $pendingSecret ? getTotpUri($pendingSecret, (string) ($user['email'] 
             </div>
           </form>
 
-          <form method="POST" action="2fa_setup.php" class="mt-075rem">
+          <form method="POST" action="2fa_setup.php" class="mt-075rem"<?= !empty($errors) ? ' aria-describedby="setup-2fa-errors"' : '' ?>>
             <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
             <input type="hidden" name="action" value="enable_start">
             <div class="form-group">
               <label for="enable_password_regenerate">Aktuálne heslo</label>
-              <input type="password" id="enable_password_regenerate" name="enable_password" class="form-control" required autocomplete="current-password">
+              <input type="password" id="enable_password_regenerate" name="enable_password" class="form-control" required autocomplete="current-password"<?= !empty($errors) ? ' aria-invalid="true" aria-describedby="setup-2fa-errors"' : '' ?>>
             </div>
             <button type="submit" class="btn-secondary">Vygenerovať nový kľúč</button>
           </form>
@@ -383,12 +389,12 @@ $totpUri = $pendingSecret ? getTotpUri($pendingSecret, (string) ($user['email'] 
             Po kliknutí vám zobrazíme tajný kľúč, ktorý pridáte do autentifikačnej aplikácie.
             Potom zadáte prvý 6-ciferný kód pre potvrdenie.
           </p>
-          <form method="POST" action="2fa_setup.php">
+          <form method="POST" action="2fa_setup.php"<?= !empty($errors) ? ' aria-describedby="setup-2fa-errors"' : '' ?>>
             <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
             <input type="hidden" name="action" value="enable_start">
             <div class="form-group">
               <label for="enable_password">Aktuálne heslo</label>
-              <input type="password" id="enable_password" name="enable_password" class="form-control" required autocomplete="current-password">
+              <input type="password" id="enable_password" name="enable_password" class="form-control" required autocomplete="current-password"<?= !empty($errors) ? ' aria-invalid="true" aria-describedby="setup-2fa-errors"' : '' ?>>
             </div>
             <div class="form-actions">
               <button type="submit" class="btn-primary">Aktivovať 2FA</button>
@@ -419,12 +425,12 @@ $totpUri = $pendingSecret ? getTotpUri($pendingSecret, (string) ($user['email'] 
       <div class="form-section">
         <h3>Obnoviť záložné kódy</h3>
         <p class="avatar-upload-hint">Vygeneruje nových 8 záložných kódov. Staré kódy budú zneplatnené.</p>
-        <form method="POST" action="2fa_setup.php">
+        <form method="POST" action="2fa_setup.php"<?= !empty($errors) ? ' aria-describedby="setup-2fa-errors"' : '' ?>>
           <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
           <input type="hidden" name="action" value="regenerate_backup">
           <div class="form-group">
             <label for="regen_password">Potvrdenie heslom</label>
-            <input type="password" id="regen_password" name="regen_password" class="form-control" required autocomplete="current-password" placeholder="Zadajte aktuálne heslo">
+            <input type="password" id="regen_password" name="regen_password" class="form-control" required autocomplete="current-password" placeholder="Zadajte aktuálne heslo"<?= !empty($errors) ? ' aria-invalid="true" aria-describedby="setup-2fa-errors"' : '' ?>>
           </div>
           <div class="form-actions">
             <button type="submit" class="btn-secondary">Obnoviť záložné kódy</button>
@@ -436,16 +442,16 @@ $totpUri = $pendingSecret ? getTotpUri($pendingSecret, (string) ($user['email'] 
       <div class="danger-zone" id="disable-2fa-zone">
         <h3 class="danger-zone__title">Deaktivovať 2FA</h3>
         <p class="danger-zone__desc">Deaktivácia zníži bezpečnosť vášho účtu. Potvrďte aktuálne heslo.</p>
-        <button type="button" class="btn-danger-outline" data-toggle-btn="disable-2fa-confirm">
+        <button type="button" class="btn-danger-outline" data-toggle-btn="disable-2fa-confirm" aria-expanded="false" aria-controls="disable-2fa-confirm">
           Deaktivovať 2FA
         </button>
         <div id="disable-2fa-confirm" class="delete-confirm-panel d-none">
-          <form method="POST" action="2fa_setup.php" class="delete-confirm-panel__form">
+          <form method="POST" action="2fa_setup.php" class="delete-confirm-panel__form"<?= !empty($errors) ? ' aria-describedby="setup-2fa-errors"' : '' ?>>
             <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
             <input type="hidden" name="action" value="disable">
             <div class="form-group">
               <label for="disable_password">Aktuálne heslo</label>
-              <input type="password" id="disable_password" name="disable_password" class="form-control" required autocomplete="current-password" placeholder="Zadajte heslo pre potvrdenie">
+              <input type="password" id="disable_password" name="disable_password" class="form-control" required autocomplete="current-password" placeholder="Zadajte heslo pre potvrdenie"<?= !empty($errors) ? ' aria-invalid="true" aria-describedby="setup-2fa-errors"' : '' ?>>
             </div>
             <div class="form-actions">
               <button type="button" class="btn-secondary" data-toggle-btn="disable-2fa-confirm">Zrušiť</button>
@@ -496,16 +502,8 @@ $totpUri = $pendingSecret ? getTotpUri($pendingSecret, (string) ($user['email'] 
       });
     }
 
-    // Toggle pre disable panel (rovnaký vzor ako v profile.php)
-    document.querySelectorAll('[data-toggle-btn]').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        var targetId = btn.getAttribute('data-toggle-btn');
-        var target   = document.getElementById(targetId);
-        if (target) {
-          target.classList.toggle('d-none');
-        }
-      });
-    });
+    // Toggle panelu rieši nefro-ui.js (fokus + aria-expanded); lokálny
+    // listener by panel prepínal dvakrát a nechal by ho zatvorený.
   })();
   </script>
 

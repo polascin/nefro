@@ -829,7 +829,7 @@ if ($requestMethod === 'POST' && $success && empty($errors)) {
                 <p class="danger-zone__desc">
                     Zrušenie účtu je <strong>nezvratné</strong>. Vymazaný účet, profil ani uložené výsledky nie je možné obnoviť.
                 </p>
-                <button type="button" class="btn-danger-outline" data-toggle-btn="delete-account-confirm">
+                <button type="button" class="btn-danger-outline" data-toggle-btn="delete-account-confirm" aria-expanded="<?= $showDeleteForm ? 'true' : 'false' ?>" aria-controls="delete-account-confirm">
                     Zrušiť môj účet
                 </button>
 

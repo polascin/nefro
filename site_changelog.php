@@ -55,6 +55,13 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-11-01 23:32',
+                'category' => 'portal',
+                'title' => 'Prístupnejšie 2FA nastavenie a zrušenie účtu',
+                'description' => 'Pri chybách v nastavení dvojfaktorového overenia a pri potvrdení zrušenia účtu sa fokus presunie na upozornenie. Potvrdzovacie panely (deaktivácia 2FA, zrušenie účtu) po otvorení fokusujú pole hesla.',
+                'url' => '2fa_setup.php',
+            ],
+            [
                 'date' => '2026-11-01 23:12',
                 'category' => 'portal',
                 'title' => 'Prístupnejšie chyby účtu a mobilné menu',

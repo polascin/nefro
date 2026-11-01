@@ -17,9 +17,30 @@ document.addEventListener('submit', function (e) {
 document.addEventListener('click', function (e) {
     var btn = e.target.closest('[data-toggle-btn]');
     if (!btn) return;
-    var target = document.getElementById(btn.dataset.toggleBtn);
+    var targetId = btn.dataset.toggleBtn;
+    var target = document.getElementById(targetId);
     if (!target) return;
+    var opening = target.classList.contains('d-none');
     target.classList.toggle('d-none');
+
+    // Synchronizuj aria-expanded na všetkých ovládačoch tohto panelu
+    document.querySelectorAll('[data-toggle-btn="' + targetId + '"]').forEach(function (control) {
+        if (control.hasAttribute('aria-expanded') || control.classList.contains('btn-danger-outline')) {
+            control.setAttribute('aria-expanded', opening ? 'true' : 'false');
+        }
+    });
+
+    if (opening) {
+        var focusEl = target.querySelector('input:not([type="hidden"]), select, textarea');
+        if (focusEl) {
+            window.requestAnimationFrame(function () { focusEl.focus(); });
+        }
+    } else {
+        var opener = document.querySelector('.btn-danger-outline[data-toggle-btn="' + targetId + '"]');
+        if (opener) {
+            opener.focus();
+        }
+    }
 });
 
 // ── 3. Print tlačidlá (náhrada onclick="window.print()") ──────────────────────

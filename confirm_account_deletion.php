@@ -245,7 +245,7 @@ if ($requestMethod === 'POST') {
             <h2>Zrušenie účtu</h2>
 
             <?php if (!empty($errors)): ?>
-                <div class="alert alert-error" role="alert">
+                <div id="deletion-errors" class="alert alert-error" role="alert" tabindex="-1">
                     <ul>
                         <?php foreach ($errors as $error): ?>
                             <li><?= htmlspecialchars($error) ?></li>
@@ -255,15 +255,21 @@ if ($requestMethod === 'POST') {
             <?php endif; ?>
 
             <?php if (empty($deletionRequest)): ?>
-                <div class="alert alert-error" role="alert">
+                <div id="deletion-invalid" class="alert alert-error" role="alert" tabindex="-1">
                     <p>Potvrdzovací odkaz je neplatný alebo expiroval (platnosť je 24 hodín).</p>
                 </div>
+                <script nonce="<?= htmlspecialchars(getScriptNonce()) ?>">
+                    document.addEventListener('DOMContentLoaded', function() {
+                        var err = document.getElementById('deletion-errors') || document.getElementById('deletion-invalid');
+                        if (err) { err.focus(); }
+                    });
+                </script>
                 <div class="auth-links">
                     <p><a href="profile.php">Späť na profil</a></p>
                     <p><a href="login.php">Prihlásiť sa</a></p>
                 </div>
             <?php else: ?>
-                <div class="alert alert-error" role="alert">
+                <div id="deletion-warning" class="alert alert-error" role="alert" tabindex="-1">
                     <p><strong>Upozornenie — táto akcia je nezvratná!</strong></p>
                     <p>Kliknutím na tlačidlo nižšie natrvalo vymažete účet
                         <strong><?= htmlspecialchars((string) ($deletionRequest['email'] ?? '')) ?></strong>
@@ -272,13 +278,19 @@ if ($requestMethod === 'POST') {
                         najviac 90 dní podľa Zásad ochrany osobných údajov.
                     </p>
                 </div>
+                <script nonce="<?= htmlspecialchars(getScriptNonce()) ?>">
+                    document.addEventListener('DOMContentLoaded', function() {
+                        var err = document.getElementById('deletion-errors') || document.getElementById('deletion-warning');
+                        if (err) { err.focus(); }
+                    });
+                </script>
 
-                <form method="POST" action="confirm_account_deletion.php">
+                <form method="POST" action="confirm_account_deletion.php" aria-describedby="<?= !empty($errors) ? 'deletion-errors' : 'deletion-warning' ?>">
                     <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
                     <input type="hidden" name="token" value="<?= htmlspecialchars($token) ?>">
 
                     <div class="form-actions">
-                        <button type="submit" class="btn-danger">Áno, natrvalo zrušiť môj účet</button>
+                        <button type="submit" class="btn-danger"<?= !empty($errors) ? ' aria-describedby="deletion-errors"' : ' aria-describedby="deletion-warning"' ?>>Áno, natrvalo zrušiť môj účet</button>
                         <a href="profile.php" class="btn-secondary">Zrušiť</a>
                     </div>
                 </form>

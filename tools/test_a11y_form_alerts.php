@@ -48,24 +48,32 @@ foreach ($authPages as $page) {
 }
 
 $focusBindings = [
-    'login.php' => ['login-errors', 'aria-describedby="login-errors"'],
-    'register.php' => ['register-errors', 'aria-describedby="register-errors"'],
-    'forgot_password.php' => ['forgot-errors', 'aria-describedby="forgot-errors"'],
-    'reset_password.php' => ['reset-errors', 'aria-describedby="reset-errors"'],
-    'resend_verification.php' => ['resend-errors', 'aria-describedby="resend-errors"'],
-    '2fa_verify.php' => ['totp-errors', 'aria-describedby="totp-errors"'],
+    'login.php' => ['login-errors', 'aria-describedby="login-errors"', true],
+    'register.php' => ['register-errors', 'aria-describedby="register-errors"', true],
+    'forgot_password.php' => ['forgot-errors', 'aria-describedby="forgot-errors"', true],
+    'reset_password.php' => ['reset-errors', 'aria-describedby="reset-errors"', true],
+    'resend_verification.php' => ['resend-errors', 'aria-describedby="resend-errors"', true],
+    '2fa_verify.php' => ['totp-errors', 'aria-describedby="totp-errors"', true],
+    '2fa_setup.php' => ['setup-2fa-errors', 'aria-describedby="setup-2fa-errors"', true],
+    'confirm_account_deletion.php' => ['deletion-errors', 'aria-describedby="deletion-errors"', false],
 ];
 
-foreach ($focusBindings as $page => [$errorId, $describedBy]) {
+foreach ($focusBindings as $page => [$errorId, $describedBy, $needsInvalid]) {
     $src = (string) file_get_contents($root . '/' . $page);
     a11yAlertTest(
         str_contains($src, 'id="' . $errorId . '"')
             && str_contains($src, $describedBy)
-            && str_contains($src, 'aria-invalid="true"')
+            && (!$needsInvalid || str_contains($src, 'aria-invalid="true"'))
             && (str_contains($src, 'err.focus()') || str_contains($src, 'err.focus();')),
-        "{$page} musí viazať polia na #{$errorId} a fokusovať zoznam chýb.",
+        "{$page} musí viazať na #{$errorId} a fokusovať zoznam chýb.",
     );
 }
+
+a11yAlertTest(
+    str_contains((string) file_get_contents($root . '/confirm_account_deletion.php'), 'id="deletion-warning"')
+        && str_contains((string) file_get_contents($root . '/confirm_account_deletion.php'), 'id="deletion-invalid"'),
+    'confirm_account_deletion.php musí mať identifikovateľné upozornenie a neplatný odkaz.',
+);
 
 $theme = (string) file_get_contents($root . '/theme.js');
 a11yAlertTest(
@@ -73,6 +81,18 @@ a11yAlertTest(
         && str_contains($theme, "event.key === 'Escape'")
         && str_contains($theme, "event.key !== 'Tab'"),
     'theme.js musí pri otvorenom menu podporovať Escape a Tab cyklus.',
+);
+
+$ui = (string) file_get_contents($root . '/nefro-ui.js');
+a11yAlertTest(
+    str_contains($ui, 'aria-expanded')
+        && str_contains($ui, 'focusEl.focus')
+        && str_contains($ui, 'opening'),
+    'nefro-ui.js musí pri otvorení confirm panelu fokusovať pole a nastaviť aria-expanded.',
+);
+a11yAlertTest(
+    !preg_match('/querySelectorAll\(\'\\[data-toggle-btn\\]\'\)/', (string) file_get_contents($root . '/2fa_setup.php')),
+    '2fa_setup.php nesmie duplicitne prepínať data-toggle-btn (nefro-ui.js).',
 );
 
 $css = (string) file_get_contents($root . '/index.css');
