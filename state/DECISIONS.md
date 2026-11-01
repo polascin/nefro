@@ -39,3 +39,9 @@ worker už má `GET_LOCK`, čo bráni súbehu dvoch procesov.
 Bez súhlasu na ENUM `sending` sa robila prístupnosť: ARIA role na alertoch,
 väzba chýb prihlásenia a layout 320 px. Claim/lease právnych front ostáva
 blokované, kým používateľ výslovne neschváli migráciu.
+
+## 2026-11-01 (slučka 4) — auth fokus + menu trap
+
+Vzor z `login.php` rozšírený na register/forgot/reset/resend/2FA verify.
+Mobilné menu pri Tab zostáva v cykle toggle ↔ položky; Escape vracia fokus
+na tlačidlo. ENUM `sending` stále bez súhlasu.

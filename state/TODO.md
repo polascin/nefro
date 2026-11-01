@@ -2,16 +2,15 @@
 
 ## Ďalšia slučka
 
-1. A11y pokračovanie: `aria-describedby` + fokus chýb na register/forgot/reset; klávesnica mobilného menu.
-2. Po **výslovnom súhlase**: migrácia ENUM `sending` + claim/lease pre legal_notice_* (vzor newsletter).
-3. Voliteľné: priorita jednému empty partner_providers (produkcia: 1).
+1. A11y: fokus/`aria-describedby` na `2fa_setup.php` a `confirm_account_deletion.php`.
+2. Po **výslovnom súhlase**: migrácia ENUM `sending` + claim/lease pre legal_notice_*.
+3. Voliteľné: priorita jednému empty partner_providers; oddelenie bootstrapov.
 
-## Hotové v slučke 3
+## Hotové v slučke 4
 
-- [x] role alert/status na auth + kalkulačky
-- [x] login aria + fokus na chyby
-- [x] CSS 320 px overflow
-- [x] test_a11y_form_alerts + changelog
+- [x] register / forgot / reset / resend / 2fa_verify fokus+aria
+- [x] mobilné menu klávesnica (Tab/Escape/fokus)
+- [x] regresia a11y + changelog
 
 ## Vedomé mimo rozsahu
 
