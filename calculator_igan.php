@@ -75,27 +75,27 @@ $calculated = null;
 $savedResults = [];
 
 $form = [
-    "egfr" => (string) ($_POST["egfr"] ?? ""),
-    "egfr_unit" => (string) ($_POST["egfr_unit"] ?? EGFR_UNIT_ML_MIN),
-    "uprot_g_day" => (string) ($_POST["uprot_g_day"] ?? ""),
-    "map_mmhg" => (string) ($_POST["map_mmhg"] ?? ""),
-    "rasb" => (string) ($_POST["rasb"] ?? "0"),
-    "immuno" => (string) ($_POST["immuno"] ?? "0"),
-    "patient_first_name" => (string) ($_POST["patient_first_name"] ?? ""),
-    "patient_last_name" => (string) ($_POST["patient_last_name"] ?? ""),
-    "patient_birth_date" => (string) ($_POST["patient_birth_date"] ?? ""),
-    "patient_birth_number" => (string) ($_POST["patient_birth_number"] ?? ""),
+    "egfr" => calculatorPostString("egfr"),
+    "egfr_unit" => calculatorPostString("egfr_unit", EGFR_UNIT_ML_MIN),
+    "uprot_g_day" => calculatorPostString("uprot_g_day"),
+    "map_mmhg" => calculatorPostString("map_mmhg"),
+    "rasb" => calculatorPostString("rasb", "0"),
+    "immuno" => calculatorPostString("immuno", "0"),
+    "patient_first_name" => calculatorPostString("patient_first_name"),
+    "patient_last_name" => calculatorPostString("patient_last_name"),
+    "patient_birth_date" => calculatorPostString("patient_birth_date"),
+    "patient_birth_number" => calculatorPostString("patient_birth_number"),
     "patient_insurance_code" =>
-        (string) ($_POST["patient_insurance_code"] ?? ""),
-    "examination_date" => (string) ($_POST["examination_date"] ?? date("Y-m-d")),
+        calculatorPostString("patient_insurance_code"),
+    "examination_date" => calculatorPostString("examination_date", date("Y-m-d")),
 ];
 
 calculatorHandleLoadId($pdo, $form, $messages);
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $action = (string) ($_POST["action"] ?? "");
+    $action = calculatorPostString("action");
 
-    if (!validateCsrfToken((string) ($_POST["csrf_token"] ?? ""))) {
+    if (!validateCsrfToken(calculatorPostString("csrf_token"))) {
         $errors[] = "Neplatný CSRF token.";
     } elseif ($action === "delete_saved") {
         calculatorHandleDeleteSaved($pdo, $errors, $messages, 'calculator_igan');

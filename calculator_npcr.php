@@ -47,29 +47,29 @@ $calculated = null;
 $savedResults = [];
 
 $form = [
-    "sex" => (string) ($_POST["sex"] ?? "male"),
-    "age_years" => (string) ($_POST["age_years"] ?? ""),
-    "height_cm" => (string) ($_POST["height_cm"] ?? ""),
-    "weight_kg" => (string) ($_POST["weight_kg"] ?? ""),
-    "urea_unit" => (string) ($_POST["urea_unit"] ?? "mmol_l"),
-    "urea_pre" => (string) ($_POST["urea_pre"] ?? ""),
-    "urea_post" => (string) ($_POST["urea_post"] ?? ""),
-    "interdialytic_hours" => (string) ($_POST["interdialytic_hours"] ?? "44"),
-    "patient_first_name" => (string) ($_POST["patient_first_name"] ?? ""),
-    "patient_last_name" => (string) ($_POST["patient_last_name"] ?? ""),
-    "patient_birth_date" => (string) ($_POST["patient_birth_date"] ?? ""),
-    "patient_birth_number" => (string) ($_POST["patient_birth_number"] ?? ""),
+    "sex" => calculatorPostString("sex", "male"),
+    "age_years" => calculatorPostString("age_years"),
+    "height_cm" => calculatorPostString("height_cm"),
+    "weight_kg" => calculatorPostString("weight_kg"),
+    "urea_unit" => calculatorPostString("urea_unit", "mmol_l"),
+    "urea_pre" => calculatorPostString("urea_pre"),
+    "urea_post" => calculatorPostString("urea_post"),
+    "interdialytic_hours" => calculatorPostString("interdialytic_hours", "44"),
+    "patient_first_name" => calculatorPostString("patient_first_name"),
+    "patient_last_name" => calculatorPostString("patient_last_name"),
+    "patient_birth_date" => calculatorPostString("patient_birth_date"),
+    "patient_birth_number" => calculatorPostString("patient_birth_number"),
     "patient_insurance_code" =>
-        (string) ($_POST["patient_insurance_code"] ?? ""),
-    "examination_date" => (string) ($_POST["examination_date"] ?? date("Y-m-d")),
+        calculatorPostString("patient_insurance_code"),
+    "examination_date" => calculatorPostString("examination_date", date("Y-m-d")),
 ];
 
 calculatorHandleLoadId($pdo, $form, $messages);
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $action = (string) ($_POST["action"] ?? "");
+    $action = calculatorPostString("action");
 
-    if (!validateCsrfToken((string) ($_POST["csrf_token"] ?? ""))) {
+    if (!validateCsrfToken(calculatorPostString("csrf_token"))) {
         $errors[] = "Neplatný CSRF token.";
     } elseif ($action === "delete_saved") {
         calculatorHandleDeleteSaved($pdo, $errors, $messages, 'calculator_npcr');

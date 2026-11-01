@@ -24,27 +24,27 @@ $calculated = null;
 $savedResults = [];
 
 $form = [
-    "urine_volume_ml" => (string) ($_POST["urine_volume_ml"] ?? ""),
-    "collection_hours" => (string) ($_POST["collection_hours"] ?? "24"),
-    "p_osm" => (string) ($_POST["p_osm"] ?? ""),
-    "u_osm" => (string) ($_POST["u_osm"] ?? ""),
-    "p_na" => (string) ($_POST["p_na"] ?? ""),
-    "u_na" => (string) ($_POST["u_na"] ?? ""),
-    "u_k" => (string) ($_POST["u_k"] ?? ""),
-    "patient_first_name" => (string) ($_POST["patient_first_name"] ?? ""),
-    "patient_last_name" => (string) ($_POST["patient_last_name"] ?? ""),
-    "patient_birth_date" => (string) ($_POST["patient_birth_date"] ?? ""),
-    "patient_birth_number" => (string) ($_POST["patient_birth_number"] ?? ""),
-    "patient_insurance_code" => (string) ($_POST["patient_insurance_code"] ?? ""),
-    "examination_date" => (string) ($_POST["examination_date"] ?? date("Y-m-d")),
+    "urine_volume_ml" => calculatorPostString("urine_volume_ml"),
+    "collection_hours" => calculatorPostString("collection_hours", "24"),
+    "p_osm" => calculatorPostString("p_osm"),
+    "u_osm" => calculatorPostString("u_osm"),
+    "p_na" => calculatorPostString("p_na"),
+    "u_na" => calculatorPostString("u_na"),
+    "u_k" => calculatorPostString("u_k"),
+    "patient_first_name" => calculatorPostString("patient_first_name"),
+    "patient_last_name" => calculatorPostString("patient_last_name"),
+    "patient_birth_date" => calculatorPostString("patient_birth_date"),
+    "patient_birth_number" => calculatorPostString("patient_birth_number"),
+    "patient_insurance_code" => calculatorPostString("patient_insurance_code"),
+    "examination_date" => calculatorPostString("examination_date", date("Y-m-d")),
 ];
 
 calculatorHandleLoadId($pdo, $form, $messages);
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $action = (string) ($_POST["action"] ?? "");
+    $action = calculatorPostString("action");
 
-    if (!validateCsrfToken((string) ($_POST["csrf_token"] ?? ""))) {
+    if (!validateCsrfToken(calculatorPostString("csrf_token"))) {
         $errors[] = "Neplatný CSRF token.";
     } elseif ($action === "delete_saved") {
         calculatorHandleDeleteSaved($pdo, $errors, $messages, 'calculator_free_water');

@@ -14,23 +14,23 @@ $calculated = null;
 $savedResults = [];
 
 // Počet viditeľných riadkov (JS alebo históriou ovplyvnený)
-$maxRow = min(EGFR_SLOPE_MAX_ROWS, max(EGFR_SLOPE_MIN_ROWS, (int)($_POST["max_row"] ?? EGFR_SLOPE_MIN_ROWS)));
+$maxRow = min(EGFR_SLOPE_MAX_ROWS, max(EGFR_SLOPE_MIN_ROWS, calculatorPostInt("max_row", EGFR_SLOPE_MIN_ROWS)));
 
 $form = [
     "max_row" => (string)$maxRow,
     // Jednotka platí pre všetky riadky merania naraz.
-    "egfr_unit" => calculatorNormalizeEgfrUnit((string)($_POST["egfr_unit"] ?? EGFR_UNIT_ML_MIN)),
+    "egfr_unit" => calculatorNormalizeEgfrUnit(calculatorPostString("egfr_unit", EGFR_UNIT_ML_MIN)),
 ];
 for ($i = 1; $i <= EGFR_SLOPE_MAX_ROWS; $i++) {
-    $form["date_$i"] = (string)($_POST["date_$i"] ?? "");
-    $form["egfr_$i"] = (string)($_POST["egfr_$i"] ?? "");
+    $form["date_$i"] = calculatorPostString("date_$i");
+    $form["egfr_$i"] = calculatorPostString("egfr_$i");
 }
-$form["patient_first_name"]    = (string)($_POST["patient_first_name"]    ?? "");
-$form["patient_last_name"]     = (string)($_POST["patient_last_name"]     ?? "");
-$form["patient_birth_date"]    = (string)($_POST["patient_birth_date"]    ?? "");
-$form["patient_birth_number"]  = (string)($_POST["patient_birth_number"]  ?? "");
-$form["patient_insurance_code"] = (string)($_POST["patient_insurance_code"] ?? "");
-$form["examination_date"]      = (string)($_POST["examination_date"]      ?? date("Y-m-d"));
+$form["patient_first_name"]    = calculatorPostString("patient_first_name");
+$form["patient_last_name"]     = calculatorPostString("patient_last_name");
+$form["patient_birth_date"]    = calculatorPostString("patient_birth_date");
+$form["patient_birth_number"]  = calculatorPostString("patient_birth_number");
+$form["patient_insurance_code"] = calculatorPostString("patient_insurance_code");
+$form["examination_date"]      = calculatorPostString("examination_date", date("Y-m-d"));
 
 function calculateSlope(array $x, array $y): ?float
 {
@@ -83,7 +83,7 @@ function fetchPatientEgfrHistory(PDO $pdo, int $userId, string $birthNumber): ar
 
 // ── load_id: načítanie uloženého slope výsledku (len GET) ─────────────────
 if (isLoggedIn() && calculatorIsHistoryLoadRequest()) {
-    $loadId  = (int)$_GET["load_id"];
+    $loadId  = requestScalarInt($_GET, 'load_id');
     $loadedRow = calculatorFetchSavedResultById($pdo, $loadId, (int)$_SESSION["user_id"]);
     if ($loadedRow) {
         $form["patient_first_name"]    = (string)($loadedRow["patient_first_name"]    ?? "");
@@ -116,19 +116,19 @@ if (isLoggedIn() && calculatorIsHistoryLoadRequest()) {
 
 // ── POST spracovanie ──────────────────────────────────────────────────────
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $action = (string)($_POST["action"] ?? "");
-    $maxRow = min(EGFR_SLOPE_MAX_ROWS, max(EGFR_SLOPE_MIN_ROWS, (int)($_POST["max_row"] ?? EGFR_SLOPE_MIN_ROWS)));
+    $action = calculatorPostString("action");
+    $maxRow = min(EGFR_SLOPE_MAX_ROWS, max(EGFR_SLOPE_MIN_ROWS, calculatorPostInt("max_row", EGFR_SLOPE_MIN_ROWS)));
     $form["max_row"] = (string)$maxRow;
-    $form["egfr_unit"] = calculatorNormalizeEgfrUnit((string)($_POST["egfr_unit"] ?? EGFR_UNIT_ML_MIN));
+    $form["egfr_unit"] = calculatorNormalizeEgfrUnit(calculatorPostString("egfr_unit", EGFR_UNIT_ML_MIN));
 
-    if (!validateCsrfToken((string)($_POST["csrf_token"] ?? ""))) {
+    if (!validateCsrfToken(calculatorPostString("csrf_token"))) {
         $errors[] = "Neplatný CSRF token.";
 
     } elseif ($action === "delete_saved") {
         if (!isLoggedIn()) {
             $errors[] = "Na mazanie výsledkov je potrebné prihlásenie.";
         } else {
-            $resultId = (int)($_POST["result_id"] ?? 0);
+            $resultId = calculatorPostInt("result_id");
             if ($resultId > 0) {
                 calculatorDeleteSavedResult($pdo, $resultId, (int)$_SESSION["user_id"]);
                 $messages[] = "Výsledok bol vymazaný.";

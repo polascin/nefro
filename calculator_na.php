@@ -11,30 +11,30 @@ $calculated = null;
 $savedResults = [];
 
 $form = [
-    "sex" => (string) ($_POST["sex"] ?? "female"),
-    "age_years" => (string) ($_POST["age_years"] ?? ""),
-    "weight_kg" => (string) ($_POST["weight_kg"] ?? ""),
-    "s_na" => (string) ($_POST["s_na"] ?? ""),
-    "target_na" => (string) ($_POST["target_na"] ?? "140"),
-    "infusion_na" => (string) ($_POST["infusion_na"] ?? "154"), // 0.9% NaCl has 154 mmol/L
-    "infusion_k" => (string) ($_POST["infusion_k"] ?? "0"),
-    "s_glucose" => (string) ($_POST["s_glucose"] ?? ""),
-    "glucose_unit" => (string) ($_POST["glucose_unit"] ?? "mmol_l"),
-    "patient_first_name" => (string) ($_POST["patient_first_name"] ?? ""),
-    "patient_last_name" => (string) ($_POST["patient_last_name"] ?? ""),
-    "patient_birth_date" => (string) ($_POST["patient_birth_date"] ?? ""),
-    "patient_birth_number" => (string) ($_POST["patient_birth_number"] ?? ""),
+    "sex" => calculatorPostString("sex", "female"),
+    "age_years" => calculatorPostString("age_years"),
+    "weight_kg" => calculatorPostString("weight_kg"),
+    "s_na" => calculatorPostString("s_na"),
+    "target_na" => calculatorPostString("target_na", "140"),
+    "infusion_na" => calculatorPostString("infusion_na", "154"), // 0.9% NaCl has 154 mmol/L
+    "infusion_k" => calculatorPostString("infusion_k", "0"),
+    "s_glucose" => calculatorPostString("s_glucose"),
+    "glucose_unit" => calculatorPostString("glucose_unit", "mmol_l"),
+    "patient_first_name" => calculatorPostString("patient_first_name"),
+    "patient_last_name" => calculatorPostString("patient_last_name"),
+    "patient_birth_date" => calculatorPostString("patient_birth_date"),
+    "patient_birth_number" => calculatorPostString("patient_birth_number"),
     "patient_insurance_code" =>
-        (string) ($_POST["patient_insurance_code"] ?? ""),
-    "examination_date" => (string) ($_POST["examination_date"] ?? date("Y-m-d")),
+        calculatorPostString("patient_insurance_code"),
+    "examination_date" => calculatorPostString("examination_date", date("Y-m-d")),
 ];
 
 calculatorHandleLoadId($pdo, $form, $messages);
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $action = (string) ($_POST["action"] ?? "");
+    $action = calculatorPostString("action");
 
-    if (!validateCsrfToken((string) ($_POST["csrf_token"] ?? ""))) {
+    if (!validateCsrfToken(calculatorPostString("csrf_token"))) {
         $errors[] = "Neplatný CSRF token.";
     } elseif ($action === "delete_saved") {
         calculatorHandleDeleteSaved($pdo, $errors, $messages, 'calculator_na');

@@ -58,30 +58,30 @@ $calculated = null;
 $savedResults = [];
 
 $form = [
-    "age_years" => (string) ($_POST["age_years"] ?? ""),
-    "sex" => (string) ($_POST["sex"] ?? "female"),
-    "egfr" => (string) ($_POST["egfr"] ?? ""),
-    "egfr_unit" => (string) ($_POST["egfr_unit"] ?? EGFR_UNIT_ML_MIN),
-    "uacr_value" => (string) ($_POST["uacr_value"] ?? ""),
-    "uacr_unit" => (string) ($_POST["uacr_unit"] ?? "mg_g"),
-    "diabetes" => (string) ($_POST["diabetes"] ?? "0"),
-    "sbp" => (string) ($_POST["sbp"] ?? ""),
-    "antihtn" => (string) ($_POST["antihtn"] ?? "0"),
-    "hf" => (string) ($_POST["hf"] ?? "0"),
-    "chd" => (string) ($_POST["chd"] ?? "0"),
-    "afib" => (string) ($_POST["afib"] ?? "0"),
-    "bmi" => (string) ($_POST["bmi"] ?? ""),
-    "smoking" => (string) ($_POST["smoking"] ?? "never"),
-    "hba1c" => (string) ($_POST["hba1c"] ?? ""),
-    "insulin" => (string) ($_POST["insulin"] ?? "0"),
-    "oral_dm" => (string) ($_POST["oral_dm"] ?? "0"),
-    "patient_first_name" => (string) ($_POST["patient_first_name"] ?? ""),
-    "patient_last_name" => (string) ($_POST["patient_last_name"] ?? ""),
-    "patient_birth_date" => (string) ($_POST["patient_birth_date"] ?? ""),
-    "patient_birth_number" => (string) ($_POST["patient_birth_number"] ?? ""),
+    "age_years" => calculatorPostString("age_years"),
+    "sex" => calculatorPostString("sex", "female"),
+    "egfr" => calculatorPostString("egfr"),
+    "egfr_unit" => calculatorPostString("egfr_unit", EGFR_UNIT_ML_MIN),
+    "uacr_value" => calculatorPostString("uacr_value"),
+    "uacr_unit" => calculatorPostString("uacr_unit", "mg_g"),
+    "diabetes" => calculatorPostString("diabetes", "0"),
+    "sbp" => calculatorPostString("sbp"),
+    "antihtn" => calculatorPostString("antihtn", "0"),
+    "hf" => calculatorPostString("hf", "0"),
+    "chd" => calculatorPostString("chd", "0"),
+    "afib" => calculatorPostString("afib", "0"),
+    "bmi" => calculatorPostString("bmi"),
+    "smoking" => calculatorPostString("smoking", "never"),
+    "hba1c" => calculatorPostString("hba1c"),
+    "insulin" => calculatorPostString("insulin", "0"),
+    "oral_dm" => calculatorPostString("oral_dm", "0"),
+    "patient_first_name" => calculatorPostString("patient_first_name"),
+    "patient_last_name" => calculatorPostString("patient_last_name"),
+    "patient_birth_date" => calculatorPostString("patient_birth_date"),
+    "patient_birth_number" => calculatorPostString("patient_birth_number"),
     "patient_insurance_code" =>
-        (string) ($_POST["patient_insurance_code"] ?? ""),
-    "examination_date" => (string) ($_POST["examination_date"] ?? date("Y-m-d")),
+        calculatorPostString("patient_insurance_code"),
+    "examination_date" => calculatorPostString("examination_date", date("Y-m-d")),
 ];
 
 calculatorHandleLoadId($pdo, $form, $messages);
@@ -90,9 +90,9 @@ calculatorHandleLoadId($pdo, $form, $messages);
    POST spracovanie
    ───────────────────────────────────────────────────── */
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $action = (string) ($_POST["action"] ?? "");
+    $action = calculatorPostString("action");
 
-    if (!validateCsrfToken((string) ($_POST["csrf_token"] ?? ""))) {
+    if (!validateCsrfToken(calculatorPostString("csrf_token"))) {
         $errors[] = "Neplatný CSRF token.";
     } elseif ($action === "delete_saved") {
         calculatorHandleDeleteSaved($pdo, $errors, $messages, 'calculator_ckdpc');

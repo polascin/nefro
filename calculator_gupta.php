@@ -107,32 +107,32 @@ $calculated = null;
 $savedResults = [];
 
 $form = [
-    "age_years" => (string) ($_POST["age_years"] ?? ""),
+    "age_years" => calculatorPostString("age_years"),
     "hypertension" => isset($_POST["hypertension"]) ? "1" : "",
     "diabetes" => isset($_POST["diabetes"]) ? "1" : "",
-    "hemoglobin_value" => (string) ($_POST["hemoglobin_value"] ?? ""),
-    "hemoglobin_unit" => (($_POST["hemoglobin_unit"] ?? "") === "g_dl") ? "g_dl" : "g_l",
-    "wbc" => (string) ($_POST["wbc"] ?? ""),
-    "platelets" => (string) ($_POST["platelets"] ?? ""),
-    "albumin_value" => (string) ($_POST["albumin_value"] ?? ""),
-    "albumin_unit" => (($_POST["albumin_unit"] ?? "") === "g_dl") ? "g_dl" : "g_l",
-    "magnesium_value" => (string) ($_POST["magnesium_value"] ?? ""),
-    "magnesium_unit" => (($_POST["magnesium_unit"] ?? "") === "mg_dl") ? "mg_dl" : "mmol_l",
-    "cisplatin_dose" => (string) ($_POST["cisplatin_dose"] ?? ""),
-    "patient_first_name" => (string) ($_POST["patient_first_name"] ?? ""),
-    "patient_last_name" => (string) ($_POST["patient_last_name"] ?? ""),
-    "patient_birth_date" => (string) ($_POST["patient_birth_date"] ?? ""),
-    "patient_birth_number" => (string) ($_POST["patient_birth_number"] ?? ""),
-    "patient_insurance_code" => (string) ($_POST["patient_insurance_code"] ?? ""),
-    "examination_date" => (string) ($_POST["examination_date"] ?? date("Y-m-d")),
+    "hemoglobin_value" => calculatorPostString("hemoglobin_value"),
+    "hemoglobin_unit" => ((calculatorPostString("hemoglobin_unit")) === "g_dl") ? "g_dl" : "g_l",
+    "wbc" => calculatorPostString("wbc"),
+    "platelets" => calculatorPostString("platelets"),
+    "albumin_value" => calculatorPostString("albumin_value"),
+    "albumin_unit" => ((calculatorPostString("albumin_unit")) === "g_dl") ? "g_dl" : "g_l",
+    "magnesium_value" => calculatorPostString("magnesium_value"),
+    "magnesium_unit" => ((calculatorPostString("magnesium_unit")) === "mg_dl") ? "mg_dl" : "mmol_l",
+    "cisplatin_dose" => calculatorPostString("cisplatin_dose"),
+    "patient_first_name" => calculatorPostString("patient_first_name"),
+    "patient_last_name" => calculatorPostString("patient_last_name"),
+    "patient_birth_date" => calculatorPostString("patient_birth_date"),
+    "patient_birth_number" => calculatorPostString("patient_birth_number"),
+    "patient_insurance_code" => calculatorPostString("patient_insurance_code"),
+    "examination_date" => calculatorPostString("examination_date", date("Y-m-d")),
 ];
 
 calculatorHandleLoadId($pdo, $form, $messages);
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $action = (string) ($_POST["action"] ?? "");
+    $action = calculatorPostString("action");
 
-    if (!validateCsrfToken((string) ($_POST["csrf_token"] ?? ""))) {
+    if (!validateCsrfToken(calculatorPostString("csrf_token"))) {
         $errors[] = "Neplatný CSRF token.";
     } elseif ($action === "delete_saved") {
         calculatorHandleDeleteSaved($pdo, $errors, $messages, 'calculator_gupta');

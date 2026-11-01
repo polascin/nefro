@@ -55,6 +55,13 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-11-02 00:55',
+                'category' => 'portal',
+                'title' => 'Jednotné parametre vo formulároch kalkulačiek',
+                'description' => 'Klinické kalkulačky čítajú skalárne polia formulára rovnako ako zvyšok portálu. Poškodený tvar parametra (napríklad pole namiesto jednej hodnoty) vráti chybu 400 namiesto pádu stránky; bežné výpočty sa nemenia.',
+                'url' => 'calculators.php',
+            ],
+            [
                 'date' => '2026-11-02 00:35',
                 'category' => 'portal',
                 'title' => 'Jednotné parametre aj v administrácii',

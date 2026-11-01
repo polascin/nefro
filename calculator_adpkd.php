@@ -91,25 +91,25 @@ $calculated = null;
 $savedResults = [];
 
 $form = [
-    "tkv_ml" => (string) ($_POST["tkv_ml"] ?? ""),
-    "height_cm" => (string) ($_POST["height_cm"] ?? ""),
-    "age_years" => (string) ($_POST["age_years"] ?? ""),
-    "typical_adpkd" => (string) ($_POST["typical_adpkd"] ?? "1"),
-    "patient_first_name" => (string) ($_POST["patient_first_name"] ?? ""),
-    "patient_last_name" => (string) ($_POST["patient_last_name"] ?? ""),
-    "patient_birth_date" => (string) ($_POST["patient_birth_date"] ?? ""),
-    "patient_birth_number" => (string) ($_POST["patient_birth_number"] ?? ""),
+    "tkv_ml" => calculatorPostString("tkv_ml"),
+    "height_cm" => calculatorPostString("height_cm"),
+    "age_years" => calculatorPostString("age_years"),
+    "typical_adpkd" => calculatorPostString("typical_adpkd", "1"),
+    "patient_first_name" => calculatorPostString("patient_first_name"),
+    "patient_last_name" => calculatorPostString("patient_last_name"),
+    "patient_birth_date" => calculatorPostString("patient_birth_date"),
+    "patient_birth_number" => calculatorPostString("patient_birth_number"),
     "patient_insurance_code" =>
-        (string) ($_POST["patient_insurance_code"] ?? ""),
-    "examination_date" => (string) ($_POST["examination_date"] ?? date("Y-m-d")),
+        calculatorPostString("patient_insurance_code"),
+    "examination_date" => calculatorPostString("examination_date", date("Y-m-d")),
 ];
 
 calculatorHandleLoadId($pdo, $form, $messages);
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $action = (string) ($_POST["action"] ?? "");
+    $action = calculatorPostString("action");
 
-    if (!validateCsrfToken((string) ($_POST["csrf_token"] ?? ""))) {
+    if (!validateCsrfToken(calculatorPostString("csrf_token"))) {
         $errors[] = "Neplatný CSRF token.";
     } elseif ($action === "delete_saved") {
         calculatorHandleDeleteSaved($pdo, $errors, $messages, 'calculator_adpkd');

@@ -49,27 +49,27 @@ $calculated = null;
 $savedResults = [];
 
 $form = [
-    "platelets" => (string) ($_POST["platelets"] ?? ""),
-    "mcv" => (string) ($_POST["mcv"] ?? ""),
-    "inr" => (string) ($_POST["inr"] ?? ""),
-    "creatinine" => (string) ($_POST["creatinine"] ?? ""),
+    "platelets" => calculatorPostString("platelets"),
+    "mcv" => calculatorPostString("mcv"),
+    "inr" => calculatorPostString("inr"),
+    "creatinine" => calculatorPostString("creatinine"),
     "hemolysis" => isset($_POST["hemolysis"]) ? "1" : "",
     "active_cancer" => isset($_POST["active_cancer"]) ? "1" : "",
     "transplant" => isset($_POST["transplant"]) ? "1" : "",
-    "patient_first_name" => (string) ($_POST["patient_first_name"] ?? ""),
-    "patient_last_name" => (string) ($_POST["patient_last_name"] ?? ""),
-    "patient_birth_date" => (string) ($_POST["patient_birth_date"] ?? ""),
-    "patient_birth_number" => (string) ($_POST["patient_birth_number"] ?? ""),
-    "patient_insurance_code" => (string) ($_POST["patient_insurance_code"] ?? ""),
-    "examination_date" => (string) ($_POST["examination_date"] ?? date("Y-m-d")),
+    "patient_first_name" => calculatorPostString("patient_first_name"),
+    "patient_last_name" => calculatorPostString("patient_last_name"),
+    "patient_birth_date" => calculatorPostString("patient_birth_date"),
+    "patient_birth_number" => calculatorPostString("patient_birth_number"),
+    "patient_insurance_code" => calculatorPostString("patient_insurance_code"),
+    "examination_date" => calculatorPostString("examination_date", date("Y-m-d")),
 ];
 
 calculatorHandleLoadId($pdo, $form, $messages);
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $action = (string) ($_POST["action"] ?? "");
+    $action = calculatorPostString("action");
 
-    if (!validateCsrfToken((string) ($_POST["csrf_token"] ?? ""))) {
+    if (!validateCsrfToken(calculatorPostString("csrf_token"))) {
         $errors[] = "Neplatný CSRF token.";
     } elseif ($action === "delete_saved") {
         calculatorHandleDeleteSaved($pdo, $errors, $messages, 'calculator_plasmic');

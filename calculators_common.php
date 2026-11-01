@@ -1,8 +1,42 @@
 <?php
 declare(strict_types=1);
 
+require_once __DIR__ . '/request_input.php';
+
 // Kalkulačky skladajú JSON-LD ešte pred načítaním head_meta.php.
 $baseUrl = $baseUrl ?? 'https://nefro.polascin.net/';
+
+/**
+ * Skalárny POST reťazec pre kalkulačky (pole → HTTP 400).
+ */
+function calculatorPostString(string $key, string $default = ''): string
+{
+    return requestScalarString($_POST, $key, $default);
+}
+
+/**
+ * Skalárny POST integer pre kalkulačky (pole → HTTP 400).
+ */
+function calculatorPostInt(string $key, int $default = 0): int
+{
+    return requestScalarInt($_POST, $key, $default);
+}
+
+/**
+ * Formulár z POST podľa predvolieb. Checkboxy sem nedávaj — ostávajú na isset.
+ *
+ * @param array<string, string> $defaults
+ * @return array<string, string>
+ */
+function calculatorFormFromPost(array $defaults): array
+{
+    $form = [];
+    foreach ($defaults as $key => $default) {
+        $form[$key] = calculatorPostString($key, (string) $default);
+    }
+
+    return $form;
+}
 
 /* ── Retencia výsledkov kalkulačiek ───────────────────────────────────────
  * `calculator_results` ukladá údaje o zdraví: meno, dátum narodenia, rodné
@@ -71,11 +105,11 @@ function calculatorDeleteExpiredResults(PDO $pdo, int $days = CALCULATOR_RESULT_
 
 function calculatorPatientDataFromRequest(array $source): array
 {
-    $firstName = trim((string) ($source['patient_first_name'] ?? ''));
-    $lastName = trim((string) ($source['patient_last_name'] ?? ''));
-    $birthDate = trim((string) ($source['patient_birth_date'] ?? ''));
-    $birthNumber = trim((string) ($source['patient_birth_number'] ?? ''));
-    $insuranceCode = trim((string) ($source['patient_insurance_code'] ?? ''));
+    $firstName = requestScalarString($source, 'patient_first_name');
+    $lastName = requestScalarString($source, 'patient_last_name');
+    $birthDate = requestScalarString($source, 'patient_birth_date');
+    $birthNumber = requestScalarString($source, 'patient_birth_number');
+    $insuranceCode = requestScalarString($source, 'patient_insurance_code');
 
     return [
         'first_name' => mb_substr($firstName, 0, 100),
@@ -593,7 +627,7 @@ function calculatorIsHistoryLoadRequest(): bool
         return false;
     }
 
-    return isset($_GET['load_id']) && (int) $_GET['load_id'] > 0;
+    return requestScalarInt($_GET, 'load_id') > 0;
 }
 
 /**
@@ -652,7 +686,7 @@ function calculatorHandleLoadId(PDO $pdo, array &$form, array &$messages): void
     if (!isLoggedIn() || !calculatorIsHistoryLoadRequest()) {
         return;
     }
-    $loadId = (int) $_GET['load_id'];
+    $loadId = requestScalarInt($_GET, 'load_id');
     $loadedRow = calculatorFetchSavedResultById($pdo, $loadId, (int) $_SESSION['user_id']);
     if (!$loadedRow) {
         return;
@@ -682,7 +716,7 @@ function calculatorHandleDeleteSaved(PDO $pdo, array &$errors, array &$messages,
         $errors[] = 'Na mazanie výsledkov je potrebné prihlásenie.';
         return;
     }
-    $resultId = (int) ($_POST['result_id'] ?? 0);
+    $resultId = calculatorPostInt('result_id');
     if ($resultId <= 0) {
         $errors[] = 'Neplatné ID záznamu.';
         return;

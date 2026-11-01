@@ -63,6 +63,11 @@ $wiredPages = [
     'confirm_account_deletion.php',
     'calculator_history.php',
     'admin_providers.php',
+    'admin_drugs.php',
+    'admin_trials.php',
+    'admin_articles.php',
+    'admin_discussion.php',
+    'admin_newsletter.php',
 ];
 foreach ($wiredPages as $page) {
     $src = (string) file_get_contents($root . '/' . $page);
@@ -74,10 +79,42 @@ foreach ($wiredPages as $page) {
         str_contains($src, 'requestScalarString')
             || str_contains($src, 'requestScalarInt')
             || str_contains($src, 'requestScalarStringPreferPost')
-            || str_contains($src, 'requestScalarIntPreferPost'),
+            || str_contains($src, 'requestScalarIntPreferPost')
+            || str_contains($src, 'calculatorPostString')
+            || str_contains($src, 'calculatorPostInt'),
         "{$page} musí používať skalárne čítanie.",
     );
 }
+
+$commonSrc = (string) file_get_contents($root . '/calculators_common.php');
+requestInputTest(
+    str_contains($commonSrc, "require_once __DIR__ . '/request_input.php';"),
+    'calculators_common.php musí načítavať request_input.php.',
+);
+requestInputTest(
+    str_contains($commonSrc, 'function calculatorPostString')
+        && str_contains($commonSrc, 'function calculatorPostInt'),
+    'calculators_common.php musí mať calculatorPostString/Int.',
+);
+
+$calcSamples = [
+    'calculator_egfr.php',
+    'calculator_prevent.php',
+    'calculator_ckm.php',
+    'calculator_ambulatory.php',
+    'calculator_egfr_slope.php',
+];
+foreach ($calcSamples as $page) {
+    $src = (string) file_get_contents($root . '/' . $page);
+    requestInputTest(
+        str_contains($src, 'calculatorPostString') || str_contains($src, 'calculatorPostInt'),
+        "{$page} musí používať calculatorPostString/Int.",
+    );
+}
+requestInputTest(
+    str_contains((string) file_get_contents($root . '/calculator_ambulatory.php'), "\$_POST['complications']"),
+    'ambulatory musí nechať complications[] ako pole (nie skalár).',
+);
 
 requestInputTest(
     str_contains((string) file_get_contents($root . '/newsletter_subscribe.php'), 'requestInputResponseIsJson(true)'),

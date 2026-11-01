@@ -32,28 +32,29 @@ $checkboxFields = [
 ];
 
 $form = [
-    'examination_date' => (string) ($_POST['examination_date'] ?? date('Y-m-d')),
+    'examination_date' => calculatorPostString('examination_date', date('Y-m-d')),
+    // Multi-select (pole kódov) — nie skalár; ambulatoryPostedCodeList akceptuje string aj list.
     'cause_diagnoses' => ambulatoryPostedCodeList($_POST['cause_diagnoses'] ?? ''),
-    'cause_note' => (string) ($_POST['cause_note'] ?? ''),
-    'birth_input' => (string) ($_POST['birth_input'] ?? ''),
-    'sex' => (string) ($_POST['sex'] ?? ''),
-    'egfr' => (string) ($_POST['egfr'] ?? ''),
+    'cause_note' => calculatorPostString('cause_note'),
+    'birth_input' => calculatorPostString('birth_input'),
+    'sex' => calculatorPostString('sex'),
+    'egfr' => calculatorPostString('egfr'),
     // Jednotka platí pre aktuálne eGFR aj pre predchádzajúce merania slope.
-    'egfr_unit' => calculatorNormalizeEgfrUnit((string) ($_POST['egfr_unit'] ?? EGFR_UNIT_ML_MIN)),
-    'uacr_value' => (string) ($_POST['uacr_value'] ?? ''),
-    'uacr_unit' => (string) ($_POST['uacr_unit'] ?? 'mg_mmol'),
-    'chronicity' => (string) ($_POST['chronicity'] ?? 'confirmed'),
-    'repeat_date' => (string) ($_POST['repeat_date'] ?? date('Y-m-d', strtotime('+3 months'))),
+    'egfr_unit' => calculatorNormalizeEgfrUnit(calculatorPostString('egfr_unit', EGFR_UNIT_ML_MIN)),
+    'uacr_value' => calculatorPostString('uacr_value'),
+    'uacr_unit' => calculatorPostString('uacr_unit', 'mg_mmol'),
+    'chronicity' => calculatorPostString('chronicity', 'confirmed'),
+    'repeat_date' => calculatorPostString('repeat_date', date('Y-m-d', strtotime('+3 months'))),
     'related_diagnoses' => ambulatoryPostedCodeList($_POST['related_diagnoses'] ?? ''),
-    'sbp' => (string) ($_POST['sbp'] ?? ''),
-    'bmi' => (string) ($_POST['bmi'] ?? ''),
-    'smoking' => (string) ($_POST['smoking'] ?? ''),
-    'hba1c' => (string) ($_POST['hba1c'] ?? ''),
+    'sbp' => calculatorPostString('sbp'),
+    'bmi' => calculatorPostString('bmi'),
+    'smoking' => calculatorPostString('smoking'),
+    'hba1c' => calculatorPostString('hba1c'),
 ];
 
 for ($index = 1; $index <= 3; $index++) {
-    $form['slope_date_' . $index] = (string) ($_POST['slope_date_' . $index] ?? '');
-    $form['slope_egfr_' . $index] = (string) ($_POST['slope_egfr_' . $index] ?? '');
+    $form['slope_date_' . $index] = calculatorPostString('slope_date_' . $index);
+    $form['slope_egfr_' . $index] = calculatorPostString('slope_egfr_' . $index);
 }
 
 foreach ($checkboxFields as $field) {
@@ -68,6 +69,7 @@ $complicationLabels = [
     'hypervolemia' => 'hypervolémia',
 ];
 $selectedComplications = [];
+// complications[] je multi-checkbox — zámerne nie cez request_input skalár.
 $postedComplications = $_POST['complications'] ?? [];
 if (is_array($postedComplications)) {
     foreach ($postedComplications as $complication) {
@@ -79,7 +81,7 @@ if (is_array($postedComplications)) {
 $selectedComplications = array_values(array_unique($selectedComplications));
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (!validateCsrfToken((string) ($_POST['csrf_token'] ?? ''))) {
+    if (!validateCsrfToken(calculatorPostString('csrf_token'))) {
         $errors[] = 'Neplatný CSRF token.';
     } else {
         $causeDiagnosisCodes = mkch10NormalizeCodeList($form['cause_diagnoses']);

@@ -107,11 +107,12 @@ function calcDisplayDate(array $row, bool $withTime = false): string {
 }
 
 // POST akcie
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
-    if (!validateCsrfToken((string)($_POST['csrf_token'] ?? ''))) {
+$historyAction = calculatorPostString('action');
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && $historyAction !== '') {
+    if (!validateCsrfToken(calculatorPostString('csrf_token'))) {
         $errors[] = 'Neplatný CSRF token.';
-    } elseif ($_POST['action'] === 'delete' && isLoggedIn()) {
-        $rid = requestScalarInt($_POST, 'result_id', 0);
+    } elseif ($historyAction === 'delete' && isLoggedIn()) {
+        $rid = calculatorPostInt('result_id');
         if ($rid > 0 && calculatorDeleteSavedResult($pdo, $rid, (int)$_SESSION['user_id'])) {
             $_SESSION['calculator_history_flash'] = 'Záznam bol vymazaný.';
             $redirectQuery = http_build_query(array_filter([

@@ -102,31 +102,31 @@ $calculated = null;
 $savedResults = [];
 
 $form = [
-    "age_years" => (string) ($_POST["age_years"] ?? ""),
-    "height_cm" => (string) ($_POST["height_cm"] ?? ""),
-    "weight_kg" => (string) ($_POST["weight_kg"] ?? ""),
-    "creatinine_value" => (string) ($_POST["creatinine_value"] ?? ""),
-    "creatinine_unit" => (string) ($_POST["creatinine_unit"] ?? "umol_l"),
+    "age_years" => calculatorPostString("age_years"),
+    "height_cm" => calculatorPostString("height_cm"),
+    "weight_kg" => calculatorPostString("weight_kg"),
+    "creatinine_value" => calculatorPostString("creatinine_value"),
+    "creatinine_unit" => calculatorPostString("creatinine_unit", "umol_l"),
     "aa_race" => isset($_POST["aa_race"]) ? "1" : "",
     "hypertension" => isset($_POST["hypertension"]) ? "1" : "",
     "diabetes" => isset($_POST["diabetes"]) ? "1" : "",
     "cva_death" => isset($_POST["cva_death"]) ? "1" : "",
     "hcv" => isset($_POST["hcv"]) ? "1" : "",
     "dcd" => isset($_POST["dcd"]) ? "1" : "",
-    "patient_first_name" => (string) ($_POST["patient_first_name"] ?? ""),
-    "patient_last_name" => (string) ($_POST["patient_last_name"] ?? ""),
-    "patient_birth_date" => (string) ($_POST["patient_birth_date"] ?? ""),
-    "patient_birth_number" => (string) ($_POST["patient_birth_number"] ?? ""),
-    "patient_insurance_code" => (string) ($_POST["patient_insurance_code"] ?? ""),
-    "examination_date" => (string) ($_POST["examination_date"] ?? date("Y-m-d")),
+    "patient_first_name" => calculatorPostString("patient_first_name"),
+    "patient_last_name" => calculatorPostString("patient_last_name"),
+    "patient_birth_date" => calculatorPostString("patient_birth_date"),
+    "patient_birth_number" => calculatorPostString("patient_birth_number"),
+    "patient_insurance_code" => calculatorPostString("patient_insurance_code"),
+    "examination_date" => calculatorPostString("examination_date", date("Y-m-d")),
 ];
 
 calculatorHandleLoadId($pdo, $form, $messages);
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $action = (string) ($_POST["action"] ?? "");
+    $action = calculatorPostString("action");
 
-    if (!validateCsrfToken((string) ($_POST["csrf_token"] ?? ""))) {
+    if (!validateCsrfToken(calculatorPostString("csrf_token"))) {
         $errors[] = "Neplatný CSRF token.";
     } elseif ($action === "delete_saved") {
         calculatorHandleDeleteSaved($pdo, $errors, $messages, 'calculator_kdpi');
