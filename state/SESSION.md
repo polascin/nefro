@@ -10,10 +10,10 @@ Vývojová slučka Nefro (iterácia 1 dokončená). Ďalšia slučka nadväzuje 
 ## Stav repozitára
 
 - Vetva: `main`
-- HEAD: `43b4090d`
+- HEAD: `1f496131` (docs state/handoff; runtime delta je `43b4090d`)
 - `origin/main` a `server/main`: zhodné po post-commit pushi
-- Produkčný `DEPLOY_COMMIT`: `43b4090d` (overené `hooks/deploy.sh --remote-commit`)
-- Pracovný strom: čistý po commitnutí state/handoff (ak ešte nie, stage `.codex/`, `state/`, deploy-ignore)
+- Produkčný `DEPLOY_COMMIT`: `43b4090d` (dokumentačný drift voči HEAD je očakávaný)
+- Pracovný strom: čistý
 
 ## Čo je hotové v tejto slučke
 
