@@ -15,6 +15,7 @@ declare(strict_types=1);
 require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
+require_once __DIR__ . '/request_input.php';
 
 // Iba prihlásení (registrovaní) používatelia
 if (!isLoggedIn()) {
@@ -60,7 +61,7 @@ if ($pdfCount > PDF_DOWNLOAD_MAX) {
 }
 
 // Validácia slugu (len písmená, číslice, pomlčky)
-$slug = trim((string) ($_GET['slug'] ?? ''));
+$slug = requestScalarString($_GET, 'slug', '');
 if ($slug === '' || !preg_match('/^[a-z0-9-]{1,120}$/', $slug)) {
     http_response_code(400);
     header('Content-Type: text/plain; charset=utf-8');

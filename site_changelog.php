@@ -55,6 +55,13 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-11-01 23:52',
+                'category' => 'portal',
+                'title' => 'Bezpečnejšie spracovanie parametrov vo formulároch',
+                'description' => 'Ak príde namiesto jednej hodnoty pole (napríklad v hľadaní, odbere newslettera alebo pri PDF), portál vráti jasnú chybu 400 namiesto pádovej stránky. Bežné použitie sa nemení.',
+                'url' => 'search.php',
+            ],
+            [
                 'date' => '2026-11-01 23:32',
                 'category' => 'portal',
                 'title' => 'Prístupnejšie 2FA nastavenie a zrušenie účtu',

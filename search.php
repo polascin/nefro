@@ -9,12 +9,13 @@ require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
 
+require_once __DIR__ . '/request_input.php';
 require_once __DIR__ . '/search_helpers.php';
 
 // ── Spracovanie vstupu ────────────────────────────────────────────────────────
 
-$rawQuery = trim((string) ($_GET["s"] ?? ""));
-$page = max(1, (int) ($_GET["page"] ?? 1));
+$rawQuery = requestScalarString($_GET, 's', '');
+$page = max(1, requestScalarInt($_GET, 'page', 1));
 
 // Sanitácia: max 200 znakov
 if (mb_strlen($rawQuery, "UTF-8") > 200) {

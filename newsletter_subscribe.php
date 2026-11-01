@@ -23,6 +23,8 @@ if (!hash_equals('1', (string) ($_SERVER['HTTP_X_NPS_NEWSLETTER'] ?? ''))) {
 require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
+require_once __DIR__ . '/request_input.php';
+requestInputResponseIsJson(true);
 require_once __DIR__ . '/newsletter_notifications.php';
 
 // Origin/Referer check — bráni CSRF z tretích stránok.
@@ -45,7 +47,7 @@ if (!isAppLocalDev()) {
     }
 }
 
-$email = strtolower(trim((string) ($_POST['email'] ?? '')));
+$email = strtolower(requestScalarString($_POST, 'email', ''));
 $genericSuccessMessage = 'Ak je možné túto adresu prihlásiť na odber, poslali sme na ňu ďalšie pokyny.';
 
 // Honeypot

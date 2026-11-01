@@ -1,0 +1,92 @@
+<?php
+
+declare(strict_types=1);
+
+/**
+ * P1 bootstrap: skalárne vstupy — pole namiesto skaláru → riadená 400, nie TypeError.
+ */
+
+require_once dirname(__DIR__) . '/request_input.php';
+
+$checks = 0;
+function requestInputTest(bool $ok, string $message): void
+{
+    global $checks;
+    ++$checks;
+    if (!$ok) {
+        throw new RuntimeException($message);
+    }
+}
+
+requestInputTest(requestIsScalarInput('ok'), 'Reťazec je skalár.');
+requestInputTest(requestIsScalarInput(1), 'Int je skalár.');
+requestInputTest(requestIsScalarInput(null), 'Null je povolený vstup (chýbajúci).');
+requestInputTest(!requestIsScalarInput(['a']), 'Pole nie je skalár.');
+requestInputTest(!requestIsScalarInput(new stdClass()), 'Objekt nie je skalár.');
+
+requestInputTest(requestScalarString(['s' => '  hello  '], 's') === 'hello', 'String sa otrimuje.');
+requestInputTest(requestScalarString([], 's', 'def') === 'def', 'Chýbajúci kľúč → default.');
+requestInputTest(requestScalarString(['s' => null], 's', 'def') === 'def', 'Null → default.');
+requestInputTest(
+    requestScalarString(['s' => ['x']], 's', 'def', false) === 'def',
+    'Pole so reject=false → default bez exit.',
+);
+
+requestInputTest(requestScalarInt(['page' => '3'], 'page') === 3, 'Číslo zo stringu.');
+requestInputTest(requestScalarInt(['page' => 'x'], 'page', 1) === 1, 'Neplatné číslo → default.');
+requestInputTest(requestScalarInt(['page' => ['2']], 'page', 9, false) === 9, 'Pole page so reject=false → default.');
+
+$root = dirname(__DIR__);
+foreach (['search.php', 'download_pdf.php', 'newsletter_subscribe.php'] as $page) {
+    $src = (string) file_get_contents($root . '/' . $page);
+    requestInputTest(
+        str_contains($src, "require_once __DIR__ . '/request_input.php';"),
+        "{$page} musí načítavať request_input.php.",
+    );
+    requestInputTest(
+        str_contains($src, 'requestScalarString') || str_contains($src, 'requestScalarInt'),
+        "{$page} musí používať skalárne čítanie.",
+    );
+}
+
+requestInputTest(
+    str_contains((string) file_get_contents($root . '/newsletter_subscribe.php'), 'requestInputResponseIsJson(true)'),
+    'newsletter_subscribe.php musí preferovať JSON pri rejecte.',
+);
+
+requestInputTest(
+    str_contains((string) file_get_contents($root . '/.htaccess'), 'request_input'),
+    '.htaccess musí deny-ovať request_input.php.',
+);
+
+$fixtureDir = sys_get_temp_dir();
+$fixtureJson = $fixtureDir . DIRECTORY_SEPARATOR . 'nefro_test_request_input_json.php';
+$fixtureText = $fixtureDir . DIRECTORY_SEPARATOR . 'nefro_test_request_input_text.php';
+file_put_contents($fixtureJson, "<?php\ndeclare(strict_types=1);\n"
+    . "require " . var_export($root . DIRECTORY_SEPARATOR . 'request_input.php', true) . ";\n"
+    . "\$_SERVER['HTTP_ACCEPT'] = 'application/json';\n"
+    . "requestRejectNonScalarInput('email');\n");
+file_put_contents($fixtureText, "<?php\ndeclare(strict_types=1);\n"
+    . "require " . var_export($root . DIRECTORY_SEPARATOR . 'request_input.php', true) . ";\n"
+    . "requestRejectNonScalarInput('s');\n");
+
+$php = PHP_BINARY;
+$jsonOut = [];
+$jsonCode = 0;
+exec(escapeshellarg($php) . ' -d display_errors=0 ' . escapeshellarg($fixtureJson) . ' 2>&1', $jsonOut, $jsonCode);
+$jsonBody = implode("\n", $jsonOut);
+@unlink($fixtureJson);
+$requestInputJson = json_decode($jsonBody, true);
+requestInputTest(is_array($requestInputJson), 'Reject JSON odpoveď musí byť platný JSON, nie HTML. Got: ' . $jsonBody);
+requestInputTest(($requestInputJson['error'] ?? '') === 'invalid_parameter', 'JSON musí niesť error=invalid_parameter.');
+requestInputTest(!str_contains($jsonBody, '<html') && !str_contains($jsonBody, 'Fatal error'), 'Odpoveď nesmie byť HTML fatál.');
+
+$textOut = [];
+$textCode = 0;
+exec(escapeshellarg($php) . ' -d display_errors=0 ' . escapeshellarg($fixtureText) . ' 2>&1', $textOut, $textCode);
+$textBody = implode("\n", $textOut);
+@unlink($fixtureText);
+requestInputTest(str_contains($textBody, 'Neplatný tvar parametra'), 'Plain text obsahuje správu o parametri.');
+requestInputTest(!str_contains($textBody, '<br') && !str_contains($textBody, 'Fatal'), 'Plain text nie je HTML chyba.');
+
+echo "Request input: $checks PASS\n";

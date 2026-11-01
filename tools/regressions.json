@@ -32,5 +32,6 @@
   "tools/test_clock_consistency.php",
   "tools/test_providers_priority.php",
   "tools/test_provider_script_deny.php",
-  "tools/test_a11y_form_alerts.php"
+  "tools/test_a11y_form_alerts.php",
+  "tools/test_request_input.php"
 ]
