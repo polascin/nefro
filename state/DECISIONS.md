@@ -33,3 +33,9 @@ ale bežne ju Apache neprepustí.
 `next_attempt_at` pri zlyhaní právneho oznámenia počíta databáza. Plný
 claim/lease so stavom `sending` ostáva na samostatný beh so schválenou migráciou;
 worker už má `GET_LOCK`, čo bráni súbehu dvoch procesov.
+
+## 2026-11-01 (slučka 3) — a11y pred claim/lease
+
+Bez súhlasu na ENUM `sending` sa robila prístupnosť: ARIA role na alertoch,
+väzba chýb prihlásenia a layout 320 px. Claim/lease právnych front ostáva
+blokované, kým používateľ výslovne neschváli migráciu.

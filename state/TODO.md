@@ -1,20 +1,20 @@
 # TODO
 
-## Ďalšia slučka (P0/P1)
+## Ďalšia slučka
 
-1. Po súhlase: migrácia `sending` + claim/lease pre `legal_notice_queue` a `legal_notice_sub_queue` (vzor newsletter).
-2. A11y: klávesnica / 320 px / chyby formulárov (P1 plán).
-3. Voliteľné: doplniť prioritu jedinému aktívnemu záznamu bez priority (produkcia: 1 empty).
+1. A11y pokračovanie: `aria-describedby` + fokus chýb na register/forgot/reset; klávesnica mobilného menu.
+2. Po **výslovnom súhlase**: migrácia ENUM `sending` + claim/lease pre legal_notice_* (vzor newsletter).
+3. Voliteľné: priorita jednému empty partner_providers (produkcia: 1).
 
-## Hotové v slučke 2
+## Hotové v slučke 3
 
-- [x] Produkčný ops_health --no-http
-- [x] Defense-in-depth deny add_provider* + provider_notice_worker
-- [x] DB-čas retry v legal_notifications
-- [x] Overenie priorít na produkcii (read-only)
+- [x] role alert/status na auth + kalkulačky
+- [x] login aria + fokus na chyby
+- [x] CSS 320 px overflow
+- [x] test_a11y_form_alerts + changelog
 
 ## Vedomé mimo rozsahu
 
 - Newsletter avíza (default off).
 - Sociálne siete.
-- Produkčné SQL / migrácie / workery bez konkrétneho súhlasu.
+- Produkčné SQL / migrácie / workery bez konkrétneho súhlasu (vrátane legal `sending`).
