@@ -45,6 +45,7 @@
   }
   if (external) {
     window.addEventListener("site:analytics-consent", e => apply(e.detail === true));
+    if (typeof window.npsHasConsent === "function") apply(window.npsHasConsent("analytics"), false);
     return;
   }
   const css = document.createElement("link");
