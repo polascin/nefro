@@ -507,6 +507,9 @@ function getSourceArticleAuthors(): array {
         // Autori spracovaného Core Curriculum 2026 (Am J Kidney Dis, doi 10.1053/j.ajkd.2026.06.008,
         // PMID 42726032) — presne dvaja, AuthorList CompleteYN=Y, overené cez PubMed eutils 2026-09-14.
         'komplement-oblicky-iga-nefropatia-inhibicia-klinik' => ['Joshua M. Thurman', 'Felix Poppelaars'],
+        // Ten istý Core Curriculum 2026 (PMID 42726032), širší prehľad patofyziológie/diagnostiky/terapie;
+        // autori overení znova cez PubMed eutils + Crossref 2026-11-01.
+        'komplement-nefrologia-patofyziologia-diagnostika-terapia' => ['Joshua M. Thurman', 'Felix Poppelaars'],
         // KÓD-01 (Beh 117): tieto články neboli v kurátorskej mape, preto sa pôvodný autor
         // vyťažoval fallbackom z „Zdroj:“ v skrátenej notácii („Rovin BH“, „Floege J“),
         // čím tá istá osoba dostala dve identity vo widgete aj vo filtri ?autor=.
