@@ -2,14 +2,15 @@
 
 ## Ďalšia slučka
 
-1. A11y: fokus/`aria-describedby` na `2fa_setup.php` a `confirm_account_deletion.php`.
-2. Po **výslovnom súhlase**: migrácia ENUM `sending` + claim/lease pre legal_notice_*.
-3. Voliteľné: priorita jednému empty partner_providers; oddelenie bootstrapov.
+1. Po **výslovnom súhlase**: migrácia ENUM `sending` + claim/lease pre legal_notice_*.
+2. Voliteľné so súhlasom: priorita jednému empty partner_providers.
+3. Bez súhlasu: oddelenie bootstrapov P1, alebo manuálny a11y spot-check.
 
-## Hotové v slučke 4
+## Hotové v slučke 5
 
-- [x] register / forgot / reset / resend / 2fa_verify fokus+aria
-- [x] mobilné menu klávesnica (Tab/Escape/fokus)
+- [x] 2fa_setup fokus/aria
+- [x] confirm_account_deletion fokus/aria
+- [x] nefro-ui toggle fokus + odstránenie duplicity
 - [x] regresia a11y + changelog
 
 ## Vedomé mimo rozsahu

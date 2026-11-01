@@ -1,33 +1,32 @@
 # SESSION
 
-Aktualizované: 2026-11-01 23:16 Europe/Bratislava
+Aktualizované: 2026-11-01 23:36 Europe/Bratislava
 
 ## Aktívna úloha
 
-Vývojová slučka Nefro (iterácia 4 dokončená). Handoff:
-`.codex/handoffs/2026-11-01-231535-nefro-dev-loop.md`.
+Vývojová slučka Nefro (iterácia 5 dokončená). Handoff:
+`.codex/handoffs/2026-11-01-233601-nefro-dev-loop.md`.
 
 ## Stav repozitára
 
 - Vetva: `main`
-- HEAD: `1c54b34c` (docs state/handoff)
-- Runtime / `DEPLOY_COMMIT`: `41769807` (docs-only drift OK)
+- HEAD: docs po handoffe (aktualizovať po docs commit)
+- Runtime / `DEPLOY_COMMIT`: `7f4696eb`
 - `origin/main` a `server/main`: aktuálne
-- Pracovný strom: čistý po docs
 
-## Čo je hotové v slučke 4
+## Čo je hotové v slučke 5
 
-1. A11y fokus/aria na register, forgot, reset, resend, 2fa_verify.
-2. Mobilné menu: Tab cyklus, Escape, fokus prvej položky.
+1. A11y fokus/aria na `2fa_setup.php` a `confirm_account_deletion.php`.
+2. `nefro-ui.js` confirm toggle: fokus hesla + aria-expanded; odstránený duplicitný toggle.
 3. Claim/lease ENUM `sending` **nebolo**.
 
 ## Executable next step
 
 ```text
-# a11y: 2fa_setup / confirm_account_deletion; alebo bootstrap P1
-# claim/lease legal IBA po výslovnom súhlase
+# Po súhlase: claim/lease legal ENUM sending, alebo empty provider priority.
+# Bez súhlasu: bootstrap P1 / ďalšie bezpečné a11y spot-checky.
 ```
 
 ## Handoff
 
-`.codex/handoffs/2026-11-01-231535-nefro-dev-loop.md`
+`.codex/handoffs/2026-11-01-233601-nefro-dev-loop.md`

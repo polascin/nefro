@@ -45,3 +45,9 @@ blokované, kým používateľ výslovne neschváli migráciu.
 Vzor z `login.php` rozšírený na register/forgot/reset/resend/2FA verify.
 Mobilné menu pri Tab zostáva v cykle toggle ↔ položky; Escape vracia fokus
 na tlačidlo. ENUM `sending` stále bez súhlasu.
+
+## 2026-11-01 (slučka 5) — 2FA setup + confirm toggle
+
+Dokončený auth fokus vzor na 2fa_setup a zrušenie účtu. Duplicitný
+`data-toggle-btn` listener v 2fa_setup odstránený (kolízia s nefro-ui.js).
+Confirm panely fokusujú heslo a synchronizujú `aria-expanded`.
