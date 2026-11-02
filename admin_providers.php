@@ -39,7 +39,7 @@ function ppClean(string $v, int $max): ?string
 if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
     if (!checkFormRateLimit($pdo, 'admin_post_' . basename(__FILE__), getClientIpAddress(), 60, 300)) {
         $actionError = 'Príliš veľa požiadaviek. Skúste to neskôr.';
-    } elseif (!validateCsrfToken((string) ($_POST['csrf_token'] ?? ''))) {
+    } elseif (!validateCsrfToken(requestCsrfTokenFromPost())) {
         $actionError = 'Neplatný CSRF token.';
     } else {
         $action = (string) ($_POST['action'] ?? '');
@@ -435,7 +435,7 @@ if ($fQuery !== '') {
 $exportFmt = '';
 if (
     $_SERVER['REQUEST_METHOD'] === 'POST'
-    && validateCsrfToken((string) ($_POST['csrf_token'] ?? ''))
+    && validateCsrfToken(requestCsrfTokenFromPost())
 ) {
     $exportFmt = strtolower((string) ($_GET['export'] ?? $_POST['export'] ?? ''));
 }

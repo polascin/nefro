@@ -125,7 +125,7 @@ if ($requestMethod === 'POST' && ($_POST['action'] ?? '') === 'delete_account') 
 }
 
 if ($requestMethod === 'POST' && ($_POST['action'] ?? '') !== 'delete_account') {
-    $postedCsrfToken = $_POST['csrf_token'] ?? '';
+    $postedCsrfToken = requestCsrfTokenFromPost();
     if (!validateCsrfToken($postedCsrfToken)) {
         $errors[] = "Neplatný CSRF token. Skúste to znova.";
 

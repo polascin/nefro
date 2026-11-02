@@ -11,7 +11,7 @@ $requestMethod = strtoupper((string) ($_SERVER['REQUEST_METHOD'] ?? 'GET'));
 $errors = [];
 
 if ($requestMethod === 'POST') {
-    if (!validateCsrfToken((string) ($_POST['csrf_token'] ?? ''))) {
+    if (!validateCsrfToken(requestCsrfTokenFromPost())) {
         $errors[] = 'Neplatný CSRF token. Skúste to znova.';
     } else {
         $password = (string) ($_POST['password'] ?? '');

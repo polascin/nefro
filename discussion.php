@@ -21,7 +21,7 @@ $errorMessage = null;
 // ── POST: nový príspevok alebo odpoveď (len pre prihlásených) ──────────────
 if ($requestMethod === 'POST') {
     $action    = trim((string) ($_POST['action'] ?? ''));
-    $csrfToken = (string) ($_POST['csrf_token'] ?? '');
+    $csrfToken = requestCsrfTokenFromPost();
 
     if (!validateCsrfToken($csrfToken)) {
         $errorMessage = 'Neplatný bezpečnostný token. Obnovte stránku a skúste znova.';

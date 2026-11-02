@@ -11,7 +11,7 @@ requireAdmin();
 $message = '';
 $error = '';
 if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
-    if (!validateCsrfToken((string) ($_POST['csrf_token'] ?? ''))) {
+    if (!validateCsrfToken(requestCsrfTokenFromPost())) {
         $error = 'Neplatný CSRF token.';
     } else {
         $id = max(0, (int) ($_POST['notice_id'] ?? 0));

@@ -66,7 +66,7 @@ if (!$isCli) {
         exit;
     }
 
-    if (!validateCsrfToken((string) ($_POST['csrf_token'] ?? ''))) {
+    if (!validateCsrfToken(requestCsrfTokenFromPost())) {
         http_response_code(403);
         header('Content-Type: text/plain; charset=utf-8');
         exit('Neplatný CSRF token.');

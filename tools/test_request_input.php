@@ -143,6 +143,19 @@ requestInputTest(
     'request_input.php musí mať PreferPost helper.',
 );
 requestInputTest(
+    str_contains((string) file_get_contents($root . '/request_input.php'), 'function requestCsrfTokenFromPost'),
+    'request_input.php musí mať requestCsrfTokenFromPost.',
+);
+requestInputTest(
+    str_contains((string) file_get_contents($root . '/auth.php'), "require_once __DIR__ . '/request_input.php';")
+        && str_contains((string) file_get_contents($root . '/auth.php'), 'requestCsrfTokenFromPost()'),
+    'auth.php musí načítavať request_input a používať requestCsrfTokenFromPost.',
+);
+requestInputTest(
+    str_contains((string) file_get_contents($root . '/login.php'), 'requestCsrfTokenFromPost()'),
+    'login.php musí čítať CSRF cez requestCsrfTokenFromPost.',
+);
+requestInputTest(
     str_contains((string) file_get_contents($root . '/.htaccess'), 'request_input'),
     '.htaccess musí deny-ovať request_input.php.',
 );

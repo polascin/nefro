@@ -16,7 +16,7 @@ $legalBasis = trim((string) ($_POST['legal_basis'] ?? ''));
 $explanation = trim((string) ($_POST['explanation'] ?? ''));
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (!validateCsrfToken((string) ($_POST['csrf_token'] ?? ''))) {
+    if (!validateCsrfToken(requestCsrfTokenFromPost())) {
         $errors[] = 'Platnosť formulára vypršala. Obnovte stránku a skúste to znova.';
     }
     if (!checkFormRateLimit($pdo, 'content_report', getClientIpAddress(), 5, 3600)) {

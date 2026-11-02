@@ -41,7 +41,7 @@ $message          = 'Neplatný alebo neúplný odkaz.';
 $showConfirmation = false;
 $providerName     = '';
 
-if ($isPost && !validateCsrfToken((string) ($_POST['csrf_token'] ?? ''))) {
+if ($isPost && !validateCsrfToken(requestCsrfTokenFromPost())) {
     $message = 'Neplatný CSRF token. Otvorte odkaz z e-mailu znova.';
 } elseif ($providerId > 0 && $expiresAt > 0 && $signature !== '') {
     try {

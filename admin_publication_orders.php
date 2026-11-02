@@ -29,7 +29,7 @@ $actionError  = null;
 if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
     if (!checkFormRateLimit($pdo, 'admin_post_' . basename(__FILE__), getClientIpAddress(), 60, 300)) {
         $actionError = 'Príliš veľa požiadaviek. Skúste to neskôr.';
-    } elseif (!validateCsrfToken($_POST['csrf_token'] ?? '')) {
+    } elseif (!validateCsrfToken(requestCsrfTokenFromPost())) {
         $actionError = 'Neplatný CSRF token.';
     } else {
         $action  = (string) ($_POST['action'] ?? '');

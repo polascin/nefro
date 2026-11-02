@@ -33,7 +33,7 @@ function handleLoginPost(PDO $pdo, bool $isLocalDev): array
     $blockSecs          = 900;
 
     // ── CSRF ─────────────────────────────────────────────────────────────────
-    $postedCsrfToken = $_POST['csrf_token'] ?? '';
+    $postedCsrfToken = requestCsrfTokenFromPost();
     if (!validateCsrfToken($postedCsrfToken)) {
         $errors[] = "Neplatný CSRF token. Skúste to znova.";
         if ($isLocalDev) {

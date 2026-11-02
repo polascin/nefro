@@ -55,6 +55,20 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-11-02 03:15',
+                'category' => 'portal',
+                'title' => 'Bezpečnejšie CSRF tokeny vo formulároch',
+                'description' => 'Prihlásenie, registrácia, profil, 2FA, newsletter a administrácia čítajú CSRF token ako jednu hodnotu. Ak príde namiesto nej pole, portál vráti chybu 400 namiesto pádu stránky.',
+                'url' => 'login.php',
+            ],
+            [
+                'date' => '2026-11-02 03:12',
+                'category' => 'content',
+                'title' => 'Ďalšie štyri články s overenými autormi zdroja',
+                'description' => 'Kurátorská mapa autorov pribudla pri textoch o káve a mikrobióme, DAPA-CKD, KDIGO transplantácii a konsenze o lupusovej nefritíde. Filter autorov používa mená z Crossref.',
+                'url' => 'index.php',
+            ],
+            [
                 'date' => '2026-11-02 02:55',
                 'category' => 'portal',
                 'title' => 'Jednotné parametre aj na úvodnej stránke',

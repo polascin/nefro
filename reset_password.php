@@ -41,7 +41,7 @@ if ($tokenHash !== '') {
 $isLocalDev = isAppLocalDev();
 
 if ($requestMethod === 'POST') {
-    $postedCsrfToken = $_POST['csrf_token'] ?? '';
+    $postedCsrfToken = requestCsrfTokenFromPost();
     if (!validateCsrfToken($postedCsrfToken)) {
         $errors[] = "Neplatný CSRF token. Skúste to znova.";
 

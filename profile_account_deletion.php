@@ -6,7 +6,7 @@ function profileHandleDeleteAccount(PDO $pdo, array $user, int $userId): array
 {
     $deleteErrors   = [];
     $showDeleteForm = true;
-    $postedCsrfToken = (string) ($_POST['csrf_token'] ?? '');
+    $postedCsrfToken = requestCsrfTokenFromPost();
 
     if (!validateCsrfToken($postedCsrfToken)) {
         $deleteErrors[] = "Neplatný CSRF token. Skúste to znova.";
@@ -22,7 +22,7 @@ function profileHandleDeleteAccount(PDO $pdo, array $user, int $userId): array
             }
         }
 
-        $confirmPassword = (string) ($_POST['delete_confirm_password'] ?? '');
+        $confirmPassword = requestScalarString($_POST, 'delete_confirm_password', '', true, false);
         if ($confirmPassword === '') {
             $deleteErrors[] = "Pre potvrdenie zadajte svoje aktuálne heslo.";
         } else {

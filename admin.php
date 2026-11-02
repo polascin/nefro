@@ -20,7 +20,7 @@ if (!empty($_SESSION['admin_temp_password_flash'])) {
 }
 
 if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
-    $postedCsrf = $_POST['csrf_token'] ?? '';
+    $postedCsrf = requestCsrfTokenFromPost();
     if (!checkFormRateLimit($pdo, 'admin_post_' . basename(__FILE__), getClientIpAddress(), 60, 300)) {
         $actionError = 'Príliš veľa požiadaviek. Skúste to neskôr.';
     } elseif (!validateCsrfToken($postedCsrf)) {

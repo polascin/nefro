@@ -9,7 +9,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') {
     header('Allow: POST');
     exit;
 }
-if (!validateCsrfToken((string) ($_POST['csrf_token'] ?? ''))) {
+if (!validateCsrfToken(requestCsrfTokenFromPost())) {
     http_response_code(403);
     exit;
 }

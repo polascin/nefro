@@ -81,7 +81,7 @@ if (!in_array($format, ['view', 'print', 'csv', 'json', 'txt'], true)) {
 $includeSensitive = ((string) ($_REQUEST['include_sensitive'] ?? '0')) === '1';
 
 if ($includeSensitive) {
-    $postedCsrf = $_POST['csrf_token'] ?? '';
+    $postedCsrf = requestCsrfTokenFromPost();
     if ($requestMethod !== 'POST' || !validateCsrfToken($postedCsrf)) {
         http_response_code(403);
         header('Content-Type: text/html; charset=UTF-8');

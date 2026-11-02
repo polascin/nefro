@@ -121,3 +121,10 @@ a ESsCD celiakia pri článku o NCWS. Claim/lease ENUM stále bez súhlasu.
 `index.php` číta `page`/`autor` cez `requestScalarInt`/`String` (pole → 400).
 +12 source_authors; vylúčené >40 autorov, ADA SoC namiesto CONFIDENCE
 pri finerenóne a TMAO/IBD mismatch. Claim/lease ENUM stále bez súhlasu.
+
+## 2026-11-02 (slučka 16) — CSRF skalár + zvyšné DOI autori
+
+`requestCsrfTokenFromPost()` v `request_input.php`; `auth.php` načítava
+request_input a admin mutácie aj auth/admin formuláre čítajú CSRF cez helper
+(pole → 400, bez trim). +4 source_authors; vylúčené Pielotax/Drucker mismatch
+a agave syrup pri sladidlách. Claim/lease ENUM stále bez súhlasu.

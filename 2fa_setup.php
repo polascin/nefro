@@ -62,7 +62,7 @@ $pendingSecret = $_SESSION['2fa_setup_secret'] ?? null;
 // Ak CSRF zlyhá, presmerujeme cez PRG; záložné kódy ostanú v session a zobrazia
 // sa používateľovi správne po presmerovaní na GET, nie zmätene vedľa chybovej hlášky.
 if ($requestMethod === 'POST') {
-    $postedCsrfToken = $_POST['csrf_token'] ?? '';
+    $postedCsrfToken = requestCsrfTokenFromPost();
     $action          = $_POST['action'] ?? '';
 
     if (!validateCsrfToken($postedCsrfToken)) {

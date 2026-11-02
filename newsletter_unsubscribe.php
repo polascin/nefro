@@ -27,7 +27,7 @@ $signature = trim((string) ($request['sig'] ?? ''));
 $subId    = (int) ($request['sub'] ?? 0);
 $subToken = trim((string) ($request['token'] ?? ''));
 
-if ($isPost && !validateCsrfToken((string) ($_POST['csrf_token'] ?? ''))) {
+if ($isPost && !validateCsrfToken(requestCsrfTokenFromPost())) {
     $message = 'Neplatný CSRF token. Otvorte odhlasovací odkaz znova.';
 } elseif ($subId > 0 && $expiresAt > 0 && $signature !== '') {
     // Nový HMAC odhlasovací odkaz (bez DB tokenu)

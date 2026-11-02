@@ -35,7 +35,7 @@ $blockSecs   = 900;
 $clientIp    = getClientIpAddress();
 
 if ($requestMethod === 'POST') {
-    $postedCsrfToken = $_POST['csrf_token'] ?? '';
+    $postedCsrfToken = requestCsrfTokenFromPost();
 
     if (!validateCsrfToken($postedCsrfToken)) {
         $errors[] = "Neplatný CSRF token. Skúste to znova.";

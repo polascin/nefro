@@ -69,7 +69,7 @@ if ($publication !== null && ($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
         'note'       => requestScalarString($_POST, 'buyer_note', ''),
     ];
 
-    if (!validateCsrfToken(requestScalarString($_POST, 'csrf_token', '', true, false))) {
+    if (!validateCsrfToken(requestCsrfTokenFromPost())) {
         $errors[] = 'Neplatný CSRF token. Obnovte stránku a skúste to znova.';
     } else {
         // ── Bot detekcia (User-Agent, honeypot, JS-challenge, time-check) ────

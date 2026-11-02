@@ -229,6 +229,17 @@ if (!function_exists('requestRejectInvalidListInput')) {
     }
 }
 
+if (!function_exists('requestCsrfTokenFromPost')) {
+    /**
+     * CSRF token z POST ako skalár (pole/objekt → HTTP 400).
+     * Neořezáva sa, aby sa token nezmenil medzerami na okrajoch.
+     */
+    function requestCsrfTokenFromPost(): string
+    {
+        return requestScalarString($_POST, 'csrf_token', '', true, false);
+    }
+}
+
 if (!function_exists('requestStringList')) {
     /**
      * Zoznam reťazcov z GET/POST (multi-select / checkbox group).

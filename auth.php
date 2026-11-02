@@ -6,6 +6,7 @@ require_once __DIR__ . '/config_loader.php';
 // includovaní (v CLI kontexte je bez efektu), takže beží skôr, než stránka
 // siahne na databázu. auth.php je prvým require prakticky každej stránky.
 require_once __DIR__ . '/bot_guard.php';
+require_once __DIR__ . '/request_input.php';
 
 /**
  * Vráti CSP nonce pre aktuálnu HTTP požiadavku (lazy singleton per-request).
@@ -500,7 +501,7 @@ function requireAdminMutationConfirmation(string $title = 'Spustiť administrač
 
     $method = strtoupper((string) ($_SERVER['REQUEST_METHOD'] ?? 'GET'));
     if ($method === 'POST') {
-        if (!validateCsrfToken((string) ($_POST['csrf_token'] ?? ''))) {
+        if (!validateCsrfToken(requestCsrfTokenFromPost())) {
             http_response_code(403);
             exit('Neplatný CSRF token.');
         }
