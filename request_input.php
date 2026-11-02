@@ -189,3 +189,107 @@ if (!function_exists('requestScalarInt')) {
         return (int) $raw;
     }
 }
+
+if (!function_exists('requestRejectInvalidListInput')) {
+    /**
+     * Ukončí požiadavku s HTTP 400 pri vnorenom poli/objekte v listovom parametri.
+     */
+    function requestRejectInvalidListInput(string $param): never
+    {
+        $param = preg_replace('/[^a-zA-Z0-9_.\-\[\]]/', '', $param) ?? 'param';
+        $message = 'Neplatný tvar parametra "' . $param . '". Očakáva sa zoznam jednoduchých hodnôt.';
+        $wantsJson = requestInputResponseIsJson();
+
+        if (!headers_sent()) {
+            http_response_code(400);
+            header('Cache-Control: no-store');
+            if ($wantsJson) {
+                header('Content-Type: application/json; charset=UTF-8');
+                echo json_encode([
+                    'ok' => false,
+                    'error' => 'invalid_parameter',
+                    'parameter' => $param,
+                    'message' => $message,
+                ], JSON_UNESCAPED_UNICODE);
+                exit;
+            }
+            header('Content-Type: text/plain; charset=UTF-8');
+        } elseif ($wantsJson) {
+            echo json_encode([
+                'ok' => false,
+                'error' => 'invalid_parameter',
+                'parameter' => $param,
+                'message' => $message,
+            ], JSON_UNESCAPED_UNICODE);
+            exit;
+        }
+
+        echo $message;
+        exit;
+    }
+}
+
+if (!function_exists('requestStringList')) {
+    /**
+     * Zoznam reťazcov z GET/POST (multi-select / checkbox group).
+     *
+     * - chýbajúci kľúč → []
+     * - skalár → jedno orezané neprázdne pole, alebo []
+     * - pole skalárov → list orezaných neprázdnych reťazcov
+     * - vnorené pole/objekt → HTTP 400 (ak $rejectNested)
+     *
+     * @param array<string, mixed> $source
+     * @return list<string>
+     */
+    function requestStringList(
+        array $source,
+        string $key,
+        bool $rejectNested = true,
+        bool $trim = true
+    ): array {
+        if (!array_key_exists($key, $source)) {
+            return [];
+        }
+        $value = $source[$key];
+        if (requestIsScalarInput($value)) {
+            if ($value === null) {
+                return [];
+            }
+            $out = (string) $value;
+            if ($trim) {
+                $out = trim($out);
+            }
+
+            return $out === '' ? [] : [$out];
+        }
+        if (!is_array($value)) {
+            if ($rejectNested) {
+                requestRejectInvalidListInput($key);
+            }
+
+            return [];
+        }
+
+        $items = [];
+        foreach ($value as $item) {
+            if (!requestIsScalarInput($item)) {
+                if ($rejectNested) {
+                    requestRejectInvalidListInput($key);
+                }
+                continue;
+            }
+            if ($item === null) {
+                continue;
+            }
+            $raw = (string) $item;
+            if ($trim) {
+                $raw = trim($raw);
+            }
+            if ($raw !== '') {
+                $items[] = $raw;
+            }
+        }
+
+        return $items;
+    }
+}

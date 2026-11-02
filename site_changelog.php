@@ -55,6 +55,20 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-11-02 02:20',
+                'category' => 'portal',
+                'title' => 'Bezpečnejšie multi-select polia v ambulantnej kalkulačke',
+                'description' => 'Zoznamy diagnóz a komplikácií sa čítajú jednotným listovým helperom. Poškodený tvar poľa (vnorené pole namiesto jednoduchej hodnoty) skončí chybou 400, nie pádom stránky; bežné výpočty sa nemenia.',
+                'url' => 'calculator_ambulatory.php',
+            ],
+            [
+                'date' => '2026-11-02 02:18',
+                'category' => 'content',
+                'title' => 'Ďalších desať článkov s overenými autormi zdroja',
+                'description' => 'Kurátorská mapa autorov pribudla mimo iného pri textoch o pneumokokovom očkovaní, KDOQI cievnych prístupoch, xylitole, iTTP, sarkopénii pri PD a inkrementálnej HD. Filter autorov používa mená z Crossref.',
+                'url' => 'index.php',
+            ],
+            [
                 'date' => '2026-11-02 01:55',
                 'category' => 'content',
                 'title' => 'Ďalších šestnásť článkov s overenými autormi zdroja',

@@ -674,5 +674,25 @@ function getSourceArticleAuthors(): array {
         'nutcracker-syndrom-lava-renalna-vena-diagnostika-liecba' => ['Ernesta Mačionienė', 'Agnė Kerpauskienė', 'Urtė Žakauskienė', 'Monika Vitkauskaitė', 'Rokas Girčius', 'Marius Miglinas'],
         // Metaanalýza príjmu tekutín a funkcie obličiek (Am J Nephrol; doi 10.1159/ajn/ablag027), autori Crossref 2026-11-02.
         'prijem-tekutin-funkcia-obliciek' => ['Jia-Jin Chen', 'Tao Han Lee', 'Cheng-Chia Lee', 'Ming-Jen Chan', 'Tsung-Yu Tsai', 'Pei-Chun Fan', 'Chieh-Li Yen', 'Huang-Yu Yang', 'Yu-Kang Tu', 'Dmytro Ivanov', 'Yung-Chang Chen', 'Chih-Hsiang Chang'],
+        // ACIP odporúčania pneumokokovej vakcíny u dospelých (MMWR; doi 10.15585/mmwr.rr7203a1), autori Crossref 2026-11-02.
+        'pneumokokove-ockovanie-ckd-dialyza' => ['Miwako Kobayashi', 'Tamara Pilishvili', 'Jennifer L. Farrar', 'Andrew J. Leidner', 'Ryan Gierke', 'Namrata Prasad', 'Pedro Moro', 'Doug Campos-Outcalt', 'Rebecca L. Morgan', 'Sarah S. Long', 'Katherine A. Poehling', 'Adam L. Cohen'],
+        // KDOQI Vascular Access 2019 Update (AJKD; doi 10.1053/j.ajkd.2019.12.001), autori Crossref 2026-11-02.
+        'cievne-pristupy-hemodialyza-historia-life-plan' => ['Charmaine E. Lok', 'Thomas S. Huber', 'Timmy Lee', 'Surendra Shenoy', 'Alexander S. Yevzlin', 'Kenneth Abreo', 'Michael Allon', 'Arif Asif', 'Brad C. Astor', 'Marc H. Glickman', 'Janet Graham', 'Louise M. Moist', 'Dheeraj K. Rajan', 'Cynthia Roberts', 'Tushar J. Vachharajani', 'Rudolph P. Valentini'],
+        // Xylitol, trombóza a KV riziko (Eur Heart J; doi 10.1093/eurheartj/ehae244), autori Crossref 2026-11-02.
+        'xylitol-kardiovaskularne-riziko-nefrologicka-prax' => ['Marco Witkowski', 'Ina Nemet', 'Xinmin S Li', 'Jennifer Wilcox', 'Marc Ferrell', 'Hassan Alamri', 'Nilaksh Gupta', 'Zeneng Wang', 'Wai Hong Wilson Tang', 'Stanley L Hazen'],
+        // BSH guideline TTP/TMA (Br J Haematol; doi 10.1111/bjh.19026), autori Crossref 2026-11-02.
+        'imunitne-podmienena-ttp-urgentna-diagnoza-nefrologia' => ['M. Scully', 'R. Rayment', 'A. Clark', 'J. P. Westwood', 'T. Cranfield', 'R. Gooding', 'C. N. Bagot', 'A. Taylor', 'V. Sankar', 'D. Gale', 'T. Dutt', 'J. McIntyre', 'W. Lester'],
+        // Modifikovaný kreatinínový index pri PD (Perit Dial Int; doi 10.1177/08968608261456380), autori Crossref 2026-11-02.
+        'sarkopenia-peritonealna-dialyza-modifikovany-kreatininovy-index' => ['Miłosz Miedziaszczyk', 'Jack Kit-Chung Ng', 'Winston Wing-Shing Fung', 'Gordon Chun-Kau Chan', 'Kai-Ming Chow', 'Cheuk-Chun Szeto'],
+        // Gentamycínová ototoxicita a VOR (Acta Otolaryngol; doi 10.1080/00016480600606673), autori Crossref 2026-11-02.
+        'gentamycinova-vestibulotoxicita-ckd-dialyza' => ['Gail Ishiyama', 'Akira Ishiyama', 'Kevin Kerber', 'Robert W. Baloh'],
+        // Feasibility RCT inkrementálnej HD (Kidney Int; doi 10.1016/j.kint.2021.07.025), autori Crossref 2026-11-02.
+        'inkrementalna-hemodialyza-rezidualna-funkcia-obliciek' => ['Enric Vilar', 'Raja M. Kaja Kamal', 'James Fotheringham', 'Amanda Busby', 'Jocelyn Berdeprado', 'Ewa Kislowska', 'David Wellsted', 'Bassam Alchi', 'James O. Burton', 'Andrew Davenport', 'Ken Farrington'],
+        // Metaanalýzy kvality sacharidov/vlákniny (Lancet; doi 10.1016/S0140-6736(18)31809-9), autori Crossref 2026-11-02.
+        'fibermaxxing-vlaknina-davka-odpoved-ckd' => ['Andrew Reynolds', 'Jim Mann', 'John Cummings', 'Nicola Winter', 'Evelyn Mete', 'Lisa Te Morenga'],
+        // Dlhodobá persistencia hormonálnych adaptácií po chudnutí (NEJM; doi 10.1056/NEJMoa1105816), autori Crossref 2026-11-02.
+        'glp1-obezita-vysadenie-dlhodoba-liecba-nefrologicky-pohlad' => ['Priya Sumithran', 'Luke A. Prendergast', 'Elizabeth Delbridge', 'Katrina Purcell', 'Arthur Shulkes', 'Adamandia Kriketos', 'Joseph Proietto'],
+        // Klesajúci výskyt BSI pri HD (J Nephrol; doi 10.1093/joneph/aajag171), autori Crossref 2026-11-02.
+        'infekcie-krvneho-rieciska-hemodialyza-mikrobiologicke-spektrum' => ['Peter Conlon', 'Mairead Skally', 'Eoghan de Barra', 'Patrick O’Kelly', 'Maria Greene', 'Fidelma Fitzpatrick', 'Peter J Conlon'],
     ];
 }

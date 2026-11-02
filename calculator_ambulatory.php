@@ -33,8 +33,8 @@ $checkboxFields = [
 
 $form = [
     'examination_date' => calculatorPostString('examination_date', date('Y-m-d')),
-    // Multi-select (pole kódov) — nie skalár; ambulatoryPostedCodeList akceptuje string aj list.
-    'cause_diagnoses' => ambulatoryPostedCodeList($_POST['cause_diagnoses'] ?? ''),
+    // Multi-select (pole kódov) — nie skalár; calculatorPostStringList + implode.
+    'cause_diagnoses' => implode(', ', calculatorPostStringList('cause_diagnoses')),
     'cause_note' => calculatorPostString('cause_note'),
     'birth_input' => calculatorPostString('birth_input'),
     'sex' => calculatorPostString('sex'),
@@ -45,7 +45,7 @@ $form = [
     'uacr_unit' => calculatorPostString('uacr_unit', 'mg_mmol'),
     'chronicity' => calculatorPostString('chronicity', 'confirmed'),
     'repeat_date' => calculatorPostString('repeat_date', date('Y-m-d', strtotime('+3 months'))),
-    'related_diagnoses' => ambulatoryPostedCodeList($_POST['related_diagnoses'] ?? ''),
+    'related_diagnoses' => implode(', ', calculatorPostStringList('related_diagnoses')),
     'sbp' => calculatorPostString('sbp'),
     'bmi' => calculatorPostString('bmi'),
     'smoking' => calculatorPostString('smoking'),
@@ -68,14 +68,11 @@ $complicationLabels = [
     'hyperkalemia' => 'hyperkaliémia',
     'hypervolemia' => 'hypervolémia',
 ];
+// complications[] je multi-checkbox — list helper, nie skalár (vnorené polia → 400).
 $selectedComplications = [];
-// complications[] je multi-checkbox — zámerne nie cez request_input skalár.
-$postedComplications = $_POST['complications'] ?? [];
-if (is_array($postedComplications)) {
-    foreach ($postedComplications as $complication) {
-        if (is_string($complication) && isset($complicationLabels[$complication])) {
-            $selectedComplications[] = $complication;
-        }
+foreach (calculatorPostStringList('complications') as $complication) {
+    if (isset($complicationLabels[$complication])) {
+        $selectedComplications[] = $complication;
     }
 }
 $selectedComplications = array_values(array_unique($selectedComplications));

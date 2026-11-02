@@ -6,7 +6,10 @@ declare(strict_types=1);
  * Čisté pomocné funkcie Ambulantnej kalkulačky.
  *
  * Sú bez väzby na HTTP, databázu a HTML, aby sa dali regresne testovať.
+ * request_input sa načítava len pre normalizáciu multi-select zoznamov.
  */
+
+require_once __DIR__ . '/request_input.php';
 
 function ambulatoryNormalizeSingleLine(string $value, int $maxLength): string
 {
@@ -18,15 +21,16 @@ function ambulatoryNormalizeSingleLine(string $value, int $maxLength): string
     return mb_substr($normalized, 0, $maxLength, 'UTF-8');
 }
 
+/**
+ * Normalizuje multi-select kódov diagnóz na reťazec „A, B“ (alebo pôvodný string).
+ * HTTP vrstva má preferovať calculatorPostStringList(); toto ostáva pre regresné testy
+ * a spätnú kompatibilitu so stringovým vstupom.
+ */
 function ambulatoryPostedCodeList(mixed $posted): string
 {
     if (is_array($posted)) {
-        $codes = [];
-        foreach ($posted as $code) {
-            if (is_string($code) && $code !== '') {
-                $codes[] = $code;
-            }
-        }
+        // Rovnaká sémantika ako requestStringList: len skalárne položky, bez vnorení.
+        $codes = requestStringList(['codes' => $posted], 'codes', false);
 
         return implode(', ', $codes);
     }

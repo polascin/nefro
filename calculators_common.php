@@ -23,6 +23,16 @@ function calculatorPostInt(string $key, int $default = 0): int
 }
 
 /**
+ * POST zoznam reťazcov (multi-select / checkbox group). Vnorené polia → HTTP 400.
+ *
+ * @return list<string>
+ */
+function calculatorPostStringList(string $key): array
+{
+    return requestStringList($_POST, $key);
+}
+
+/**
  * Formulár z POST podľa predvolieb. Checkboxy sem nedávaj — ostávajú na isset.
  *
  * @param array<string, string> $defaults

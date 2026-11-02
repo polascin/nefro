@@ -93,8 +93,9 @@ requestInputTest(
 );
 requestInputTest(
     str_contains($commonSrc, 'function calculatorPostString')
-        && str_contains($commonSrc, 'function calculatorPostInt'),
-    'calculators_common.php musí mať calculatorPostString/Int.',
+        && str_contains($commonSrc, 'function calculatorPostInt')
+        && str_contains($commonSrc, 'function calculatorPostStringList'),
+    'calculators_common.php musí mať calculatorPostString/Int/StringList.',
 );
 
 $calcSamples = [
@@ -112,9 +113,21 @@ foreach ($calcSamples as $page) {
     );
 }
 requestInputTest(
-    str_contains((string) file_get_contents($root . '/calculator_ambulatory.php'), "\$_POST['complications']"),
-    'ambulatory musí nechať complications[] ako pole (nie skalár).',
+    str_contains((string) file_get_contents($root . '/calculator_ambulatory.php'), "calculatorPostStringList('complications')"),
+    'ambulatory musí čítať complications[] cez list helper (nie skalár).',
 );
+requestInputTest(
+    str_contains((string) file_get_contents($root . '/calculator_ambulatory.php'), "calculatorPostStringList('cause_diagnoses')"),
+    'ambulatory musí čítať cause_diagnoses cez list helper.',
+);
+requestInputTest(
+    function_exists('requestStringList'),
+    'request_input.php musí exportovať requestStringList.',
+);
+requestInputTest(requestStringList([], 'codes') === [], 'Chýbajúci list → [].');
+requestInputTest(requestStringList(['codes' => 'N18.3'], 'codes') === ['N18.3'], 'Skalár → jedno položkové pole.');
+requestInputTest(requestStringList(['codes' => ['N18.3', 'I12.00']], 'codes') === ['N18.3', 'I12.00'], 'Pole skalárov → list.');
+requestInputTest(requestStringList(['codes' => ['N18.3', ['x']]], 'codes', false) === ['N18.3'], 'Vnorenie so reject=false sa preskočí.');
 
 requestInputTest(
     str_contains((string) file_get_contents($root . '/newsletter_subscribe.php'), 'requestInputResponseIsJson(true)'),

@@ -101,3 +101,11 @@ pribudlo 16 slugov po manuálnej zhode Crossref titulu s témou článku
 a kontrole, že DOI je v obsahu. Vylúčené: multi-štúdiové články
 (sibeprenlimab×3), chybný CETP/torcetrapib DOI, fiber-only pri článku
 o vláknine+pohybe, ťaháky. Claim/lease ENUM stále bez súhlasu.
+
+## 2026-11-02 (slučka 13) — list helper + ďalší source_authors
+
+`requestStringList` / `calculatorPostStringList` pre multi-select
+(ambulatory diagnózy a complications[]): vnorené polia → HTTP 400,
+skaláry a ploché zoznamy ostávajú platné. +10 source_authors (DOI↔téma,
+≤40 autorov); vylúčené SHARP/CATALYST pre príliš dlhý zoznam autorov.
+Claim/lease ENUM stále bez súhlasu.
