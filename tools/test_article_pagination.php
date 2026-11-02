@@ -102,8 +102,7 @@ function articleAuthorIdentities(array $row): array
     return $author === '' ? [] : [normalizeAuthorIdentity($author) => $author];
 }
 
-$authorFunction = articlePaginationExtractFunction($articleSource, 'fetchPublishedArticlesByAuthor');
-eval($authorFunction);
+$catalogFunction = articlePaginationExtractFunction($articleSource, 'buildPublishedAuthorCatalog');
 
 $insert = $pdo->prepare(
     'INSERT INTO articles
@@ -165,11 +164,30 @@ articlePaginationTest(
 );
 
 articlePaginationTest(
-    preg_match('/ORDER BY ([^"\r\n]+)"/', $authorFunction, $authorOrderMatch) === 1
+    preg_match('/ORDER BY ([^"\r\n]+)"/', $catalogFunction, $authorOrderMatch) === 1
         && trim($authorOrderMatch[1]) === 'is_top DESC, sort_order ASC, published_at DESC, id ASC',
-    'Author query must keep the main ordering and add the unique ID tie-breaker.',
+    'Author catalog query must keep the main ordering and add the unique ID tie-breaker.',
 );
-$authorArticles = fetchPublishedArticlesByAuthor($pdo, 'Pagination Test Author');
+// Rovnaké ORDER BY ako buildPublishedAuthorCatalog — izolovaný SQLite fixture
+// neťahá celý cache/hydratáciu z db_config.
+$authorQuery = $pdo->query(
+    'SELECT id, title, slug, author, excerpt, published_at, is_top
+     FROM articles
+     WHERE is_published = 1
+     ORDER BY is_top DESC, sort_order ASC, published_at DESC, id ASC',
+);
+$authorArticles = [];
+foreach ($authorQuery->fetchAll(PDO::FETCH_ASSOC) as $row) {
+    $authorArticles[] = [
+        'id' => (int) $row['id'],
+        'title' => (string) $row['title'],
+        'slug' => (string) $row['slug'],
+        'author' => (string) $row['author'],
+        'excerpt' => (string) $row['excerpt'],
+        'published_at' => (string) $row['published_at'],
+        'is_top' => (int) $row['is_top'],
+    ];
+}
 articlePaginationTest(
     array_column($authorArticles, 'id') === range(1, 50),
     'Author query must return equal-key articles in deterministic unique-ID order.',

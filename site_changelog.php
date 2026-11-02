@@ -55,6 +55,13 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-11-02 01:15',
+                'category' => 'portal',
+                'title' => 'Rýchlejší filter autorov na úvodnej stránke',
+                'description' => 'Zoznam a filter „Zúčastnení autori“ už nenačítava celé texty článkov, ktoré majú kurátorskú mapu autorov. Výsledky filtrovania ostávajú rovnaké, odozva je kratšia.',
+                'url' => 'index.php',
+            ],
+            [
                 'date' => '2026-11-02 00:55',
                 'category' => 'portal',
                 'title' => 'Jednotné parametre vo formulároch kalkulačiek',

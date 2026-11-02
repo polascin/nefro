@@ -116,21 +116,31 @@ function getProjectPublicStats(\PDO $pdo): array {
     if ($signature !== '') {
         $cached = readProjectStatsCache($signature);
         if ($cached !== null) {
-            return $cached;
+            return [
+                'published_articles' => $cached['published_articles'],
+                'users_total' => $cached['users_total'],
+                'authors' => $cached['authors'],
+            ];
         }
     }
 
+    $catalog = buildPublishedAuthorCatalog($pdo);
     $stats = [
         'published_articles' => $meta['published_articles'],
         'users_total' => $meta['users_total'],
-        'authors' => fetchProjectAuthors($pdo),
+        'authors' => $catalog['authors'],
+        'author_index' => $catalog['author_index'],
     ];
 
     if ($signature !== '') {
         writeProjectStatsCache($signature, $stats);
     }
 
-    return $stats;
+    return [
+        'published_articles' => $stats['published_articles'],
+        'users_total' => $stats['users_total'],
+        'authors' => $stats['authors'],
+    ];
 }
 
 /**
@@ -156,10 +166,11 @@ function fetchProjectStatsMeta(\PDO $pdo): array {
         $sourceFingerprint = function_exists('getSourceArticleAuthors')
             ? crc32((string) json_encode(getSourceArticleAuthors()))
             : 0;
+        // author_index_v1: cache musí niesť aj mapu autor→články (P1 výkon).
         $meta['signature'] = hash(
             'sha256',
             $meta['published_articles'] . '|' . (string) ($row['max_updated'] ?? '')
-                . '|' . $meta['users_total'] . '|' . $sourceFingerprint
+                . '|' . $meta['users_total'] . '|' . $sourceFingerprint . '|author_index_v1'
         );
     } catch (\PDOException $e) {
         error_log('project stats: chyba načítania verejných štatistík: ' . $e->getMessage());
@@ -173,7 +184,12 @@ function projectStatsCachePath(): string {
 }
 
 /**
- * @return array{published_articles:int,users_total:int,authors:array<int,array{author:string,articles:int}>}|null
+ * @return array{
+ *   published_articles:int,
+ *   users_total:int,
+ *   authors:array<int,array{author:string,articles:int}>,
+ *   author_index:array<string,list<array{id:int,title:string,slug:string,author:string,excerpt:string,published_at:string,is_top:int}>>
+ * }|null
  */
 function readProjectStatsCache(string $signature): ?array {
     $path = projectStatsCachePath();
@@ -192,6 +208,11 @@ function readProjectStatsCache(string $signature): ?array {
     }
 
     $stats = $data['stats'];
+    if (!is_array($stats['author_index'] ?? null)) {
+        // Stará cache bez indexu — vynúť prepočet (signature by už mala byť iná).
+        return null;
+    }
+
     $authors = [];
     foreach (is_array($stats['authors'] ?? null) ? $stats['authors'] : [] as $author) {
         if (is_array($author)) {
@@ -202,15 +223,45 @@ function readProjectStatsCache(string $signature): ?array {
         }
     }
 
+    /** @var array<string,list<array{id:int,title:string,slug:string,author:string,excerpt:string,published_at:string,is_top:int}>> $authorIndex */
+    $authorIndex = [];
+    foreach ($stats['author_index'] as $key => $articles) {
+        if (!is_string($key) || !is_array($articles)) {
+            continue;
+        }
+        $list = [];
+        foreach ($articles as $article) {
+            if (!is_array($article)) {
+                continue;
+            }
+            $list[] = [
+                'id' => (int) ($article['id'] ?? 0),
+                'title' => (string) ($article['title'] ?? ''),
+                'slug' => (string) ($article['slug'] ?? ''),
+                'author' => (string) ($article['author'] ?? ''),
+                'excerpt' => (string) ($article['excerpt'] ?? ''),
+                'published_at' => (string) ($article['published_at'] ?? ''),
+                'is_top' => (int) ($article['is_top'] ?? 0),
+            ];
+        }
+        $authorIndex[$key] = $list;
+    }
+
     return [
         'published_articles' => (int) ($stats['published_articles'] ?? 0),
         'users_total' => (int) ($stats['users_total'] ?? 0),
         'authors' => $authors,
+        'author_index' => $authorIndex,
     ];
 }
 
 /**
- * @param array{published_articles:int,users_total:int,authors:array<int,array{author:string,articles:int}>} $stats
+ * @param array{
+ *   published_articles:int,
+ *   users_total:int,
+ *   authors:array<int,array{author:string,articles:int}>,
+ *   author_index?:array<string,list<array{id:int,title:string,slug:string,author:string,excerpt:string,published_at:string,is_top:int}>>
+ * } $stats
  */
 function writeProjectStatsCache(string $signature, array $stats): void {
     $dir = __DIR__ . '/private/cache';
@@ -231,30 +282,137 @@ function writeProjectStatsCache(string $signature, array $stats): void {
 }
 
 /**
- * @return array<int,array{author:string,articles:int}>
+ * Doplní `content` len článkom mimo kurátorskej mapy `source_authors.php`.
+ * Mapované slugy riešia identity bez parsovania tela článku (meranie: lokálne
+ * ~492 publikovaných, ~267 mapovaných; načítanie bez content ~3–4× menej ms).
+ *
+ * @param list<array<string,mixed>> $rows
  */
-function fetchProjectAuthors(\PDO $pdo): array {
+function hydrateArticleContentForUnmappedAuthors(\PDO $pdo, array &$rows): void
+{
+    static $sourceMap = null;
+    if ($sourceMap === null) {
+        $sourceMap = function_exists('getSourceArticleAuthors') ? getSourceArticleAuthors() : [];
+    }
+
+    /** @var array<int,int> $needIds id => index v $rows */
+    $needIds = [];
+    foreach ($rows as $i => $row) {
+        $slug = (string) ($row['slug'] ?? '');
+        if ($slug !== '' && isset($sourceMap[$slug])) {
+            $rows[$i]['content'] = '';
+            continue;
+        }
+        $id = (int) ($row['id'] ?? 0);
+        if ($id > 0) {
+            $needIds[$id] = $i;
+        }
+        if (!array_key_exists('content', $rows[$i])) {
+            $rows[$i]['content'] = '';
+        }
+    }
+
+    if ($needIds === []) {
+        return;
+    }
+
+    foreach (array_chunk(array_keys($needIds), 200) as $chunk) {
+        $placeholders = implode(',', array_fill(0, count($chunk), '?'));
+        $stmt = $pdo->prepare("SELECT id, content FROM articles WHERE id IN ($placeholders)");
+        $stmt->execute(array_values($chunk));
+        while ($contentRow = $stmt->fetch(\PDO::FETCH_ASSOC)) {
+            $id = (int) ($contentRow['id'] ?? 0);
+            if (!isset($needIds[$id])) {
+                continue;
+            }
+            $rows[$needIds[$id]]['content'] = (string) ($contentRow['content'] ?? '');
+        }
+    }
+}
+
+/**
+ * Jeden sken publikovaných článkov: štatistiky autorov + index pre filter ?autor=.
+ * Content sa ťahá len pre slugy mimo source_authors (EXPLAIN: full scan je nutný,
+ * lebo is_published≈1 pre väčšinu riadkov; úspora je v I/O tela článku + cache).
+ *
+ * @return array{
+ *   authors:array<int,array{author:string,articles:int}>,
+ *   author_index:array<string,list<array{id:int,title:string,slug:string,author:string,excerpt:string,published_at:string,is_top:int}>>
+ * }
+ */
+function buildPublishedAuthorCatalog(\PDO $pdo): array {
     $authors = [];
+    /** @var array<string,list<array{id:int,title:string,slug:string,author:string,excerpt:string,published_at:string,is_top:int}>> $authorIndex */
+    $authorIndex = [];
 
     try {
-        $authorsStmt = $pdo->query(
-            "SELECT TRIM(author) AS author_name, slug, content
+        $stmt = $pdo->query(
+            "SELECT id, title, slug, author, excerpt, published_at, is_top, sort_order
              FROM articles
-             WHERE is_published = 1"
+             WHERE is_published = 1
+             ORDER BY is_top DESC, sort_order ASC, published_at DESC, id ASC"
         );
+        $rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+        hydrateArticleContentForUnmappedAuthors($pdo, $rows);
 
         $authorBuckets = [];
-        foreach ($authorsStmt->fetchAll(\PDO::FETCH_ASSOC) as $row) {
-            registerArticleAuthors($authorBuckets, $row);
+        foreach ($rows as $row) {
+            $summary = [
+                'id' => (int) ($row['id'] ?? 0),
+                'title' => (string) ($row['title'] ?? ''),
+                'slug' => (string) ($row['slug'] ?? ''),
+                'author' => (string) ($row['author'] ?? ''),
+                'excerpt' => (string) ($row['excerpt'] ?? ''),
+                'published_at' => (string) ($row['published_at'] ?? ''),
+                'is_top' => (int) ($row['is_top'] ?? 0),
+            ];
+            $identities = articleAuthorIdentities([
+                'author_name' => $summary['author'],
+                'author' => $summary['author'],
+                'slug' => $summary['slug'],
+                'content' => (string) ($row['content'] ?? ''),
+            ]);
+            foreach ($identities as $key => $displayName) {
+                registerAuthorContribution($authorBuckets, $displayName);
+                $authorIndex[$key][] = $summary;
+            }
         }
 
         sortAuthorBuckets($authorBuckets);
         $authors = mapAuthorBucketsToStats($authorBuckets);
     } catch (\PDOException $e) {
-        error_log('project stats: chyba načítania autorov článkov: ' . $e->getMessage());
+        error_log('project stats: chyba katalógu autorov: ' . $e->getMessage());
     }
 
-    return $authors;
+    return [
+        'authors' => $authors,
+        'author_index' => $authorIndex,
+    ];
+}
+
+/**
+ * @return array<int,array{author:string,articles:int}>
+ */
+function fetchProjectAuthors(\PDO $pdo): array {
+    $meta = fetchProjectStatsMeta($pdo);
+    if ($meta['signature'] !== '') {
+        $cached = readProjectStatsCache($meta['signature']);
+        if ($cached !== null) {
+            return $cached['authors'];
+        }
+    }
+
+    $catalog = buildPublishedAuthorCatalog($pdo);
+    if ($meta['signature'] !== '') {
+        writeProjectStatsCache($meta['signature'], [
+            'published_articles' => $meta['published_articles'],
+            'users_total' => $meta['users_total'],
+            'authors' => $catalog['authors'],
+            'author_index' => $catalog['author_index'],
+        ]);
+    }
+
+    return $catalog['authors'];
 }
 
 /**
@@ -335,37 +493,25 @@ function fetchPublishedArticlesByAuthor(\PDO $pdo, string $authorName): array {
         return [];
     }
 
-    try {
-        $stmt = $pdo->query(
-            "SELECT id, title, slug, author, excerpt, published_at, content, is_top, sort_order
-             FROM articles
-             WHERE is_published = 1
-             ORDER BY is_top DESC, sort_order ASC, published_at DESC, id ASC"
-        );
-    } catch (\PDOException $e) {
-        error_log('project stats: chyba filtra článkov podľa autora: ' . $e->getMessage());
-        return [];
-    }
-
-    $matches = [];
-    foreach ($stmt->fetchAll(\PDO::FETCH_ASSOC) as $row) {
-        $identities = articleAuthorIdentities($row);
-        if (!isset($identities[$targetKey])) {
-            continue;
+    $meta = fetchProjectStatsMeta($pdo);
+    if ($meta['signature'] !== '') {
+        $cached = readProjectStatsCache($meta['signature']);
+        if ($cached !== null) {
+            return $cached['author_index'][$targetKey] ?? [];
         }
-
-        $matches[] = [
-            'id'           => (int) $row['id'],
-            'title'        => (string) $row['title'],
-            'slug'         => (string) $row['slug'],
-            'author'       => (string) $row['author'],
-            'excerpt'      => (string) $row['excerpt'],
-            'published_at' => (string) $row['published_at'],
-            'is_top'       => (int) $row['is_top'],
-        ];
     }
 
-    return $matches;
+    $catalog = buildPublishedAuthorCatalog($pdo);
+    if ($meta['signature'] !== '') {
+        writeProjectStatsCache($meta['signature'], [
+            'published_articles' => $meta['published_articles'],
+            'users_total' => $meta['users_total'],
+            'authors' => $catalog['authors'],
+            'author_index' => $catalog['author_index'],
+        ]);
+    }
+
+    return $catalog['author_index'][$targetKey] ?? [];
 }
 
 /**

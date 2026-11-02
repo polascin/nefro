@@ -77,3 +77,12 @@ Zvolené bezpečné rozšírenie `request_input` na POST skaláre kalkulačiek
 (`calculatorPostString`/`Int`) namiesto P1 autorov, ktoré vyžadujú EXPLAIN
 a meranie. Multi-select v ambulatory (`complications[]`, diagnózy) ostáva
 zámerne mimo skalárnej vrstvy.
+
+## 2026-11-02 (slučka 10) — P1 autori: meranie + cache indexu
+
+Lokálne (492 publikovaných, 267 mapovaných v source_authors): EXPLAIN na
+`is_published=1` ostáva type=ALL + filesort (selektivita indexu nízka — takmer
+všetky riadky publikované). Index migráciu sme nerobili. Pred: filter autora
+~811 ms s plným `content` (~7,6 MB). Po: hydratácia contentu len pre unmapped
++ `author_index` v `project_stats` cache; teplý filter ~157 ms, parity 172 PASS.
+Claim/lease ENUM stále bez súhlasu.
