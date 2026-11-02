@@ -55,6 +55,13 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-11-02 03:52',
+                'category' => 'tools',
+                'title' => 'Spoločné vzorce EKFC, UACR a Mehran + referenčné testy',
+                'description' => 'EKFC, UACR (A1–A3), Mehran skóre a KDIGO G kategórie majú spoločné čisté funkcie a regresné referenčné príklady (vrátane KFRE). Výsledky kalkulačiek sa nemenia.',
+                'url' => 'calculator_ekfc.php',
+            ],
+            [
                 'date' => '2026-11-02 03:35',
                 'category' => 'portal',
                 'title' => 'Jednotné parametre pri štúdiách, objednávkach a tlači výsledkov',

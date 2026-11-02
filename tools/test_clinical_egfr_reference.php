@@ -49,13 +49,15 @@ foreach ($cases as [$sex, $age, $scr, $expected]) {
 
 $egfrSrc = (string) file_get_contents(dirname(__DIR__) . '/calculator_egfr.php');
 $ekfcSrc = (string) file_get_contents(dirname(__DIR__) . '/calculator_ekfc.php');
+$ekfcLogicSrc = (string) file_get_contents(dirname(__DIR__) . '/calculator_ekfc_logic.php');
 egfrRefTest(
     str_contains($egfrSrc, 'calculatorCkdEpi2021FromCreatinineMgDl'),
     'calculator_egfr.php musí volať spoločný vzorec.',
 );
 egfrRefTest(
-    str_contains($ekfcSrc, 'calculatorCkdEpi2021FromCreatinineMgDl'),
-    'calculator_ekfc.php (porovnanie) musí volať spoločný vzorec.',
+    str_contains($ekfcSrc, 'ekfcCompareCkdEpi2021')
+        && str_contains($ekfcLogicSrc, 'calculatorCkdEpi2021FromCreatinineMgDl'),
+    'EKFC porovnanie musí ísť cez ekfcCompareCkdEpi2021 → spoločný CKD-EPI 2021.',
 );
 
 // Jednotky: 88,4 µmol/L ≈ 1,0 mg/dL

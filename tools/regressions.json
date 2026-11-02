@@ -35,5 +35,6 @@
   "tools/test_a11y_form_alerts.php",
   "tools/test_request_input.php",
   "tools/test_author_identity_parity.php",
-  "tools/test_clinical_egfr_reference.php"
+  "tools/test_clinical_egfr_reference.php",
+  "tools/test_clinical_references.php"
 ]

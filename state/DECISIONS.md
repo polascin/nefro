@@ -135,3 +135,10 @@ a agave syrup pri sladidlách. Claim/lease ENUM stále bez súhlasu.
 GET cez request_input. CKD-EPI 2021 extrahované do
 `calculatorCkdEpi2021FromCreatinineMgDl()` + regresný referenčný test (začiatok
 P1 klinických referencií). Claim/lease ENUM stále bez súhlasu.
+
+## 2026-11-02 (slučka 18) — klinické referencie KFRE/EKFC/UACR/Mehran
+
+Čisté EKFC funkcie do `calculator_ekfc_logic.php`; UACR A-kategórie a Mehran
+body/kategórie do `calculators_common.php`. Nový
+`tools/test_clinical_references.php` (56 assertov). Claim/lease ENUM stále
+bez súhlasu.

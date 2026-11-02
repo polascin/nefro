@@ -59,27 +59,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $cr_g_l = ($cr_mmol_l * 113.12) / 1000;
 
             if ($cr_mmol_l > 0 && $cr_g_l > 0) {
-                $uacr_mg_mmol = $alb_mg_l / $cr_mmol_l;
-                $uacr_mg_g = $alb_mg_l / $cr_g_l;
-
-                $stage = "";
-                $desc = "";
-                if ($uacr_mg_mmol < 3) {
-                    $stage = "A1";
-                    $desc = "Normálna až mierne zvýšená albuminúria";
-                } elseif ($uacr_mg_mmol <= 30) {
-                    $stage = "A2";
-                    $desc = "Stredne zvýšená albuminúria (mikroalbuminúria)";
-                } else {
-                    $stage = "A3";
-                    $desc = "Výrazne zvýšená albuminúria (makroalbuminúria)";
-                }
+                $uacr_mg_mmol = calculatorUacrMgMmol($alb_mg_l, $cr_mmol_l);
+                $uacr_mg_g = calculatorUacrMgG($alb_mg_l, $cr_mmol_l);
+                $category = calculatorUacrACategory($uacr_mg_mmol);
 
                 $calculated = [
                     "mg_mmol" => round($uacr_mg_mmol, 2),
                     "mg_g" => round($uacr_mg_g, 2),
-                    "stage" => $stage,
-                    "desc" => $desc,
+                    "stage" => $category['stage'],
+                    "desc" => $category['desc'],
                 ];
 
                 if ($action === "save") {

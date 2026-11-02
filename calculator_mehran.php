@@ -5,41 +5,6 @@ require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
 require_once __DIR__ . '/calculators_common.php';
 
-/** Renálne body podľa eGFR (mL/min/1,73 m²) — Mehran 2004. */
-function mehranRenalPoints(float $egfr): int
-{
-    if ($egfr >= 60.0) {
-        return 0;
-    }
-    if ($egfr >= 40.0) {
-        return 2;
-    }
-    if ($egfr >= 20.0) {
-        return 4;
-    }
-
-    return 6;
-}
-
-/**
- * Riziková kategória pre celkové Mehran skóre.
- * @return array{0:string,1:string,2:string,3:string} [trieda, popis, CIN %, dialýza %]
- */
-function mehranCategory(int $score): array
-{
-    if ($score <= 5) {
-        return ['risk-low', 'Nízke riziko', '7,5 %', '0,04 %'];
-    }
-    if ($score <= 10) {
-        return ['risk-moderate', 'Stredné riziko', '14,0 %', '0,12 %'];
-    }
-    if ($score <= 15) {
-        return ['risk-high', 'Vysoké riziko', '26,1 %', '1,09 %'];
-    }
-
-    return ['risk-very-high', 'Veľmi vysoké riziko', '57,3 %', '12,6 %'];
-}
-
 $errors = [];
 $messages = [];
 $calculated = null;

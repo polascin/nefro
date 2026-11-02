@@ -339,6 +339,98 @@ function calculatorParseNonNegativeFloat(string $value): ?float
     return $number;
 }
 
+/**
+ * UACR v mg/mmol z albumínu [mg/L] a kreatinínu v moči [mmol/L].
+ */
+function calculatorUacrMgMmol(float $albuminMgL, float $creatinineMmolL): float
+{
+    if ($creatinineMmolL <= 0.0) {
+        throw new InvalidArgumentException('Kreatinín v moči musí byť kladný.');
+    }
+
+    return $albuminMgL / $creatinineMmolL;
+}
+
+/**
+ * UACR v mg/g z albumínu [mg/L] a kreatinínu v moči [mmol/L]
+ * (MW kreatinínu 113,12 g/mol).
+ */
+function calculatorUacrMgG(float $albuminMgL, float $creatinineMmolL): float
+{
+    if ($creatinineMmolL <= 0.0) {
+        throw new InvalidArgumentException('Kreatinín v moči musí byť kladný.');
+    }
+
+    $creatinineGL = ($creatinineMmolL * 113.12) / 1000.0;
+    if ($creatinineGL <= 0.0) {
+        throw new InvalidArgumentException('Kreatinín v moči musí byť kladný.');
+    }
+
+    return $albuminMgL / $creatinineGL;
+}
+
+/**
+ * KDIGO A1/A2/A3 podľa UACR v mg/mmol.
+ *
+ * @return array{stage: string, desc: string}
+ */
+function calculatorUacrACategory(float $uacrMgMmol): array
+{
+    if ($uacrMgMmol < 3.0) {
+        return [
+            'stage' => 'A1',
+            'desc' => 'Normálna až mierne zvýšená albuminúria',
+        ];
+    }
+    if ($uacrMgMmol <= 30.0) {
+        return [
+            'stage' => 'A2',
+            'desc' => 'Stredne zvýšená albuminúria (mikroalbuminúria)',
+        ];
+    }
+
+    return [
+        'stage' => 'A3',
+        'desc' => 'Výrazne zvýšená albuminúria (makroalbuminúria)',
+    ];
+}
+
+/** Renálne body podľa eGFR (mL/min/1,73 m²) — Mehran 2004. */
+function mehranRenalPoints(float $egfr): int
+{
+    if ($egfr >= 60.0) {
+        return 0;
+    }
+    if ($egfr >= 40.0) {
+        return 2;
+    }
+    if ($egfr >= 20.0) {
+        return 4;
+    }
+
+    return 6;
+}
+
+/**
+ * Riziková kategória pre celkové Mehran skóre.
+ *
+ * @return array{0:string,1:string,2:string,3:string} [trieda, popis, CIN %, dialýza %]
+ */
+function mehranCategory(int $score): array
+{
+    if ($score <= 5) {
+        return ['risk-low', 'Nízke riziko', '7,5 %', '0,04 %'];
+    }
+    if ($score <= 10) {
+        return ['risk-moderate', 'Stredné riziko', '14,0 %', '0,12 %'];
+    }
+    if ($score <= 15) {
+        return ['risk-high', 'Vysoké riziko', '26,1 %', '1,09 %'];
+    }
+
+    return ['risk-very-high', 'Veľmi vysoké riziko', '57,3 %', '12,6 %'];
+}
+
 function ckdGCategory(float $value): string
 {
     if ($value >= 90.0) {
