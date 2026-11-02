@@ -117,6 +117,10 @@ requestInputTest(
     'ambulatory musí čítať complications[] cez list helper (nie skalár).',
 );
 requestInputTest(
+    str_contains((string) file_get_contents($root . '/publikacia.php'), "requestStringList(\$_POST, 'formats')"),
+    'publikacia.php musí čítať formats[] cez requestStringList.',
+);
+requestInputTest(
     str_contains((string) file_get_contents($root . '/calculator_ambulatory.php'), "calculatorPostStringList('cause_diagnoses')"),
     'ambulatory musí čítať cause_diagnoses cez list helper.',
 );

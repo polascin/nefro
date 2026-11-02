@@ -109,3 +109,9 @@ o vláknine+pohybe, ťaháky. Claim/lease ENUM stále bez súhlasu.
 skaláry a ploché zoznamy ostávajú platné. +10 source_authors (DOI↔téma,
 ≤40 autorov); vylúčené SHARP/CATALYST pre príliš dlhý zoznam autorov.
 Claim/lease ENUM stále bez súhlasu.
+
+## 2026-11-02 (slučka 14) — formats[] + ďalší source_authors
+
+`publikacia.php` číta `formats[]` cez `requestStringList` (rovnaký vzor
+ako ambulatory). +13 source_authors; vylúčené ERA registry (>40 autorov)
+a ESsCD celiakia pri článku o NCWS. Claim/lease ENUM stále bez súhlasu.

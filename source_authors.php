@@ -694,5 +694,31 @@ function getSourceArticleAuthors(): array {
         'glp1-obezita-vysadenie-dlhodoba-liecba-nefrologicky-pohlad' => ['Priya Sumithran', 'Luke A. Prendergast', 'Elizabeth Delbridge', 'Katrina Purcell', 'Arthur Shulkes', 'Adamandia Kriketos', 'Joseph Proietto'],
         // Klesajúci výskyt BSI pri HD (J Nephrol; doi 10.1093/joneph/aajag171), autori Crossref 2026-11-02.
         'infekcie-krvneho-rieciska-hemodialyza-mikrobiologicke-spektrum' => ['Peter Conlon', 'Mairead Skally', 'Eoghan de Barra', 'Patrick O’Kelly', 'Maria Greene', 'Fidelma Fitzpatrick', 'Peter J Conlon'],
+        // CDC guideline opioidov pri bolesti (MMWR; doi 10.15585/mmwr.rr7103a1), autori Crossref 2026-11-02.
+        'chronicka-bolest-analgetika-bezpecnost-ckd' => ['Deborah Dowell', 'Kathleen R. Ragan', 'Christopher M. Jones', 'Grant T. Baldwin', 'Roger Chou'],
+        // Systematický prehľad zneužívania gabapentínu (Addiction; doi 10.1111/add.13324), autori Crossref 2026-11-02.
+        'gabapentin-bezpecnost-ckd-hemodialyza-temna-strana' => ['Rachel V. Smith', 'Jennifer R. Havens', 'Sharon L. Walsh'],
+        // Toxicita muchotrávky (muscimol/ibotenát) (Clin Toxicol; doi 10.1080/15563650.2018.1497169), autori Crossref 2026-11-02.
+        'muchotravka-cervena-gummies-toxikologia-nefrologicky-rozmer' => ['Michael J. Moss', 'Robert G. Hendrickson'],
+        // Ketamínom asociovaná deštrukcia močových ciest (BJU Int; doi 10.1111/j.1464-410X.2008.07920.x), autori Crossref 2026-11-02.
+        'ketaminom-asociovana-uropatia-deti-adolescenti' => ['Peggy Sau‐Kwan Chu', 'Wai‐Kit Ma', 'Simon Chun‐Wing Wong', 'Ringo Wing‐Hong Chu', 'Cheung‐Hing Cheng', 'Shun Wong', 'Johnny Man‐li Tse', 'Fei‐Lung Lau', 'Ming‐Kwong Yiu', 'Chi‐Wai Man'],
+        // CKDu v poľnohospodárskych komunitách (NEJM; doi 10.1056/NEJMra1813869), autori Crossref 2026-11-02.
+        'ckdnt-pracovnici-horucava-texas-nejasna-etiologia' => ['Richard J. Johnson', 'Catharina Wesseling', 'Lee S. Newman'],
+        // EASL–EASD–EASO CPG pre MASLD (J Hepatol; doi 10.1016/j.jhep.2024.04.031), autori Crossref 2026-11-02.
+        'masld-diagnostika-fibroza-nefrologicka-prax' => ['Frank Tacke', 'Paul Horn', 'Vincent Wai-Sun Wong', 'Vlad Ratziu', 'Elisabetta Bugianesi', 'Sven Francque', 'Shira Zelber-Sagi', 'Luca Valenti', 'Michael Roden', 'Fritz Schick', 'Hannele Yki-Järvinen', 'Amalia Gastaldelli', 'Roberto Vettor', 'Gema Frühbeck', 'Dror Dicker'],
+        // ASAS-EULAR axSpA 2022 (Ann Rheum Dis; doi 10.1136/ard-2022-223296), autori Crossref 2026-11-02.
+        'axialna-spondyloartritida-diagnostika-zobrazovanie-liecba' => ['Sofia Ramiro', 'Elena Nikiphorou', 'Alexandre Sepriano', 'Augusta Ortolan', 'Casper Webers', 'Xenofon Baraliakos', 'Robert B M Landewé', 'Filip E Van den Bosch', 'Boryana Boteva', 'Ann Bremander', 'Philippe Carron', 'Adrian Ciurea', 'Floris A van Gaalen', 'Pál Géher', 'Lianne Gensler', 'Josef Hermann', 'Manouk de Hooge', 'Marketa Husakova', 'Uta Kiltz', 'Clementina López-Medina', 'Pedro M Machado', 'Helena Marzo-Ortega', 'Anna Molto', 'Victoria Navarro-Compán', 'Michael J Nissen', 'Fernando M Pimentel-Santos', 'Denis Poddubnyy', 'Fabian Proft', 'Martin Rudwaleit', 'Mark Telkman', 'Sizheng Steven Zhao', 'Nelly Ziade', 'Désirée van der Heijde'],
+        // Metaanalýza THC a ovplyvnenia riadenia (Neurosci Biobehav Rev; doi 10.1016/j.neubiorev.2021.01.003), autori Crossref 2026-11-02.
+        'kanabis-polyfarmacia-vedenie-vozidla-starsi-pacienti' => ['Danielle McCartney', 'Thomas R. Arkell', 'Christopher Irwin', 'Iain S. McGregor'],
+        // Neurologické komplikácie CKD (JRSM Cardiovasc Dis; doi 10.1177/2048004016677687), autori Crossref 2026-11-02.
+        'polyneuropatia-ckd-diagnostika-liecba-bezpecne-davkovanie' => ['Ria Arnold', 'Tushar Issar', 'Arun V Krishnan', 'Bruce A Pussell'],
+        // Food noise ako typ myslenia (Diabetes Obes Metab; doi 10.1111/dom.71203), autori Crossref 2026-11-02.
+        'vtierave-myslienky-na-jedlo-stigmatizacia-liecba-obezity' => ['Devika Umashanker', 'James Mitchell'],
+        // KDIGO 2024 ANCA vasculitis executive summary (Kidney Int; doi 10.1016/j.kint.2023.10.009), autori Crossref 2026-11-02.
+        'anca-vaskulitida-renalne-postihnutie-standardy-liecby-2026' => ['Jürgen Floege', 'David R.W. Jayne', 'Jan-Stephan F. Sanders', 'Vladimír Tesar', 'Ethan M. Balk', 'Craig E. Gordon', 'Gaelen Adam', 'Marcello A. Tonelli', 'Michael Cheung', 'Amy Earley', 'Brad H. Rovin'],
+        // ERBP komentár ku KDIGO 2026 anémii v CKD (NDT; doi 10.1093/ndt/gfag014), autori Crossref 2026-11-02.
+        'zelezo-anemia-ckd-kdigo-2026-erbp' => ['Lucia Del Vecchio', 'Aleix Cases', 'Michele F Eisenga', 'Jolanta Małyszko', 'Jonathan Barratt', 'Davide Bolignano'],
+        // ADA Standards of Care 2026 — Diabetes Technology (Diabetes Care; doi 10.2337/dc26-S007), autori Crossref 2026-11-02.
+        'integrovane-systemy-cgm-aid-nefrologia' => ['Mandeep Bajaj', 'Rozalina G. McCoy', 'Kirthikaa Balapattabi', 'Raveendhara R. Bannuru', 'Natalie J. Bellini', 'Allison K. Bennett', 'Elizabeth A. Beverly', 'Kathaleen Briggs Early', 'Sathyavathi ChallaSivaKanaka', 'Justin B. Echouffo-Tcheugui', 'Brendan M. Everett', 'Rajesh Garg', 'Lori M. Laffel', 'Rayhan Lal', 'Glenn Matfin', 'Naushira Pandya', 'Elizabeth J. Pekas', 'Anne L. Peters', 'Scott J. Pilla', 'Giulio R. Romeo', 'Sylvia E. Rosas', 'Alissa R. Segal', 'Emily D. Szmuilowicz', 'Nuha A. ElSayed'],
     ];
 }

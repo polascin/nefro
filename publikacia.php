@@ -55,8 +55,8 @@ $formValues   = [
 ];
 
 if ($publication !== null && ($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
-    /** @var array<int, mixed> $postedFormats */
-    $postedFormats = is_array($_POST['formats'] ?? null) ? $_POST['formats'] : [];
+    // formats[] je multi-checkbox — list helper (vnorené polia → HTTP 400).
+    $postedFormats = requestStringList($_POST, 'formats');
 
     $formValues = [
         'formats'    => $postedFormats,
@@ -69,7 +69,7 @@ if ($publication !== null && ($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
         'note'       => requestScalarString($_POST, 'buyer_note', ''),
     ];
 
-    if (!validateCsrfToken((string) ($_POST['csrf_token'] ?? ''))) {
+    if (!validateCsrfToken(requestScalarString($_POST, 'csrf_token', '', true, false))) {
         $errors[] = 'Neplatný CSRF token. Obnovte stránku a skúste to znova.';
     } else {
         // ── Bot detekcia (User-Agent, honeypot, JS-challenge, time-check) ────

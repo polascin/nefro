@@ -55,6 +55,20 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-11-02 02:35',
+                'category' => 'portal',
+                'title' => 'Bezpečnejší výber formátov pri objednávke publikácie',
+                'description' => 'Zaškrtávacie formáty na stránke publikácie sa čítajú rovnakým listovým helperom ako multi-select v kalkulačkách. Poškodený tvar poľa skončí chybou 400 namiesto nejasného správania formulára.',
+                'url' => 'publikacie.php',
+            ],
+            [
+                'date' => '2026-11-02 02:33',
+                'category' => 'content',
+                'title' => 'Ďalších trinásť článkov s overenými autormi zdroja',
+                'description' => 'Kurátorská mapa autorov pribudla mimo iného pri textoch o gabapentíne, ketamínovej uropatii, CKDnt, MASLD, ANCA vaskulitíde a ADA technológiách diabetu. Filter autorov používa mená z Crossref.',
+                'url' => 'index.php',
+            ],
+            [
                 'date' => '2026-11-02 02:20',
                 'category' => 'portal',
                 'title' => 'Bezpečnejšie multi-select polia v ambulantnej kalkulačke',
