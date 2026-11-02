@@ -2,9 +2,16 @@
 
 ## Ďalšia slučka
 
-1. Voliteľne: P1 klinické referenčné testy (inventár vzorcov / referenčné príklady).
-2. Voliteľne doplniť zvyšné `source_authors` (safe DOI kandidáti takmer vyčerpaní).
-3. Po **výslovnom súhlase**: ENUM `sending` + claim/lease; empty provider priority.
+1. Rozšíriť P1 klinické referenčné testy (EKFC, KFRE, PREVENT, Mehran, …).
+2. Po **výslovnom súhlase**: ENUM `sending` + claim/lease; empty provider priority.
+3. Voliteľne zvyšné `source_authors` bez spoľahlivého single DOI (nízka priorita).
+
+## Hotové v slučke 17
+
+- [x] GET request_input na studia/objednavka/download/result_print
+- [x] spoločný CKD-EPI 2021 + referenčný regresný test
+- [x] request_input 95 PASS; regressions 37; deploy `07dea5e1`
+- [x] bez claim/lease ENUM; source_authors DOI low-hanging vyčerpané
 
 ## Hotové v slučke 16
 
@@ -16,16 +23,8 @@
 ## Hotové v slučke 15
 
 - [x] `index.php` page/autor cez request_input
-- [x] +12 source_authors (Crossref, DOI↔téma, ≤40 autorov)
-- [x] request_input 84 PASS; parity 172; deploy `a5aa91e6`
-- [x] bez claim/lease ENUM
-
-## Hotové v slučke 14
-
-- [x] `formats[]` cez `requestStringList` v `publikacia.php`
-- [x] +13 source_authors (Crossref, DOI↔téma, ≤40 autorov)
-- [x] request_input 82 PASS; parity 172; deploy `576a20ba`
-- [x] bez claim/lease ENUM
+- [x] +12 source_authors
+- [x] deploy `a5aa91e6`
 
 ## Vedomé mimo rozsahu
 
