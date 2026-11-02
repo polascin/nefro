@@ -2,9 +2,17 @@
 
 ## Ďalšia slučka
 
-1. Voliteľne doplniť ďalšie `source_authors.php` (manuálna DOI↔téma; často multi-zdroj).
-2. Po **výslovnom súhlase**: ENUM `sending` + claim/lease; empty provider priority.
-3. Voliteľne: P1 klinické referenčné testy.
+1. Voliteľne doplniť ďalšie `source_authors.php` (manuálna DOI↔téma).
+2. Voliteľne: CSRF/`$_POST` skaláre na auth stránkach cez `requestScalarString`.
+3. Po **výslovnom súhlase**: ENUM `sending` + claim/lease; empty provider priority.
+4. Voliteľne: P1 klinické referenčné testy.
+
+## Hotové v slučke 15
+
+- [x] `index.php` page/autor cez request_input
+- [x] +12 source_authors (Crossref, DOI↔téma, ≤40 autorov)
+- [x] request_input 84 PASS; parity 172; deploy `a5aa91e6`
+- [x] bez claim/lease ENUM
 
 ## Hotové v slučke 14
 
@@ -18,13 +26,6 @@
 - [x] list helper `requestStringList` / `calculatorPostStringList` (ambulatory)
 - [x] +10 source_authors (Crossref, DOI↔téma, ≤40 autorov)
 - [x] request_input 81 PASS; parity 172; deploy `d5f6466f`
-- [x] bez claim/lease ENUM
-
-## Hotové v slučke 12
-
-- [x] 16 kurátorských source_authors (Crossref, DOI↔téma + DOI v obsahu)
-- [x] Parity 172 PASS (mapped=56); regresie
-- [x] Changelog + deploy `00d99f49`
 - [x] bez claim/lease ENUM
 
 ## Vedomé mimo rozsahu

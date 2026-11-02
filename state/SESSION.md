@@ -1,31 +1,30 @@
 # SESSION
 
-Aktualizované: 2026-11-02 02:36 Europe/Bratislava
+Aktualizované: 2026-11-02 02:56 Europe/Bratislava
 
 ## Aktívna úloha
 
-Vývojová slučka Nefro (iterácia 14 dokončená). Handoff:
-`.codex/handoffs/2026-11-02-023515-nefro-dev-loop.md`.
+Vývojová slučka Nefro (iterácia 15 dokončená). Handoff:
+`.codex/handoffs/2026-11-02-025541-nefro-dev-loop.md`.
 
 ## Stav repozitára
 
 - Vetva: `main`
-- HEAD: `1afcef09` (docs state/handoff)
-- Runtime / `DEPLOY_COMMIT`: `576a20ba` (docs-only drift OK)
+- HEAD / `DEPLOY_COMMIT`: `a5aa91e6`
 - `origin/main` a `server/main`: aktuálne (post-commit)
 
-## Čo je hotové v slučke 14
+## Čo je hotové v slučke 15
 
-1. `formats[]` v `publikacia.php` cez `requestStringList`.
-2. +13 `source_authors` (mapa 309 → 322); deploy overený (Dowell, Tacke, Chu, Smith).
+1. `index.php`: `page`/`autor` cez `requestScalarInt`/`String`.
+2. +12 `source_authors` (mapa 322 → 334); deploy overený (Agarwal, Beige, Almandoz, Tang).
 3. Claim/lease ENUM **nebol**.
 
 ## Executable next step
 
 ```text
-# Voliteľne ďalšie source_authors / klinické testy, alebo claim/lease IBA so súhlasom.
+# Voliteľne ďalšie source_authors / CSRF skaláre na auth, alebo claim/lease IBA so súhlasom.
 ```
 
 ## Handoff
 
-`.codex/handoffs/2026-11-02-023515-nefro-dev-loop.md`
+`.codex/handoffs/2026-11-02-025541-nefro-dev-loop.md`
