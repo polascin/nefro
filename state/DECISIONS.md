@@ -142,3 +142,11 @@ P1 klinických referencií). Claim/lease ENUM stále bez súhlasu.
 body/kategórie do `calculators_common.php`. Nový
 `tools/test_clinical_references.php` (56 assertov). Claim/lease ENUM stále
 bez súhlasu.
+
+## 2026-11-02 — CI: .htaccess v Docker allowliste
+
+`tools/test_provider_script_deny.php` číta `.htaccess` a `robots.txt`.
+Allowlist `.dockerignore` mal `robots.txt`, nie `.htaccess`, takže Regression
+gate v Actions padala Fatalom. Oprava: `!/.htaccess`. Súvisiace: PHPStan
+(float kľúče G máp → páry), restore fixture kopíruje aj `request_input.php`,
+synthetic git commit v self_test používa `--no-verify`. Claim/lease ENUM nie.

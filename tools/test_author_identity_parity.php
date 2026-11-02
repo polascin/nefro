@@ -9,7 +9,7 @@ declare(strict_types=1);
 
 require_once dirname(__DIR__) . '/db_config.php';
 
-/** @var PDO $pdo */
+// Bez @var: PHPStan inak považuje isset/instanceof za mŕtvy kód.
 if (!isset($pdo) || !$pdo instanceof PDO) {
     fwrite(STDERR, "Author identity parity: no PDO\n");
     exit(1);

@@ -2,9 +2,17 @@
 
 ## Ďalšia slučka
 
-1. Voliteľne PREVENT / ďalšie riziko-modely ako samostatný clinical ref súbor.
-2. Po **výslovnom súhlase**: ENUM `sending` + claim/lease; empty provider priority.
-3. Voliteľne zvyšné `source_authors` bez spoľahlivého single DOI (nízka priorita).
+1. Overiť CI success po CI-fix pushi (ak ešte neoverené).
+2. Voliteľne PREVENT / ďalšie riziko-modely ako samostatný clinical ref súbor.
+3. Po **výslovnom súhlase**: ENUM `sending` + claim/lease; empty provider priority.
+4. Voliteľne zvyšné `source_authors` bez spoľahlivého single DOI (nízka priorita).
+
+## Hotové: CI regression fix (2026-11-02)
+
+- [x] `.dockerignore` `!/.htaccess` (provider script deny v Dockeri)
+- [x] PHPStan: clinical G páry, author PDO, providers note
+- [x] Restore: `request_input.php` vo fixture; self_test `--no-verify`
+- [x] Lokálne integration PASS; bez claim/lease ENUM
 
 ## Hotové v slučke 18
 

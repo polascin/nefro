@@ -1,32 +1,32 @@
 # SESSION
 
-Aktualizované: 2026-11-02 03:58 Europe/Bratislava
+Aktualizované: 2026-11-02 04:18 Europe/Bratislava
 
 ## Aktívna úloha
 
-Vývojová slučka Nefro (iterácia 18 dokončená). Handoff:
-`.codex/handoffs/2026-11-02-035721-nefro-dev-loop.md`.
+Oprava CI Regression gate (Deploy to nefro.polascin.net). Handoff:
+`.codex/handoffs/2026-11-02-041804-ci-regression-fix.md`.
 
 ## Stav repozitára
 
 - Vetva: `main`
-- HEAD: `c3eb71e9` (docs state/handoff)
-- Runtime / `DEPLOY_COMMIT`: `2a5164ea` (docs-only drift OK)
-- `origin/main` a `server/main`: aktuálne (post-commit)
+- HEAD: CI fix commit (po pushi)
+- Predchádzajúci runtime / `DEPLOY_COMMIT`: `2a5164ea` (docs-only drift OK do opravy)
+- Lokálne: `run_regressions` 38 PASS, PHPStan OK, `tools/integration/run.sh` PASS
 
-## Čo je hotové v slučke 18
+## Čo je hotové
 
-1. `calculator_ekfc_logic.php` + UACR/Mehran helpery v `calculators_common.php`.
-2. `tools/test_clinical_references.php` — KFRE, EKFC, UACR, G, Mehran (56 PASS).
-3. Regressions 38 files; deploy overený na produkcii.
+1. `.dockerignore`: `!/.htaccess` (provider deny test v Dockeri).
+2. PHPStan: clinical G páry, author PDO guard, providers note isset.
+3. Restore fixture + self_test `--no-verify` (request_input, ggshield).
 4. Claim/lease ENUM **nebol**.
 
 ## Executable next step
 
 ```text
-# Voliteľne PREVENT clinical refs, alebo claim/lease IBA so súhlasom.
+# Po pushi over gh run success; potom voliteľne PREVENT clinical refs.
 ```
 
 ## Handoff
 
-`.codex/handoffs/2026-11-02-035721-nefro-dev-loop.md`
+`.codex/handoffs/2026-11-02-041804-ci-regression-fix.md`

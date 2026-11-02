@@ -3,6 +3,7 @@
 !/*.js
 !/*.css
 !/robots.txt
+!/.htaccess
 !/phpstan.neon.dist
 !/phpstan-baseline.neon
 !/assets/

@@ -7,8 +7,9 @@ if (PHP_SAPI !== 'cli' || !is_file('/.dockerenv')) {
 }
 
 // Synthetic data only; never read a hosting archive or a host configuration.
-foreach (['auth.php', 'bot_guard.php', 'config_loader.php', 'totp.php', 'calculators_common.php',
-    'publications_common.php', 'email_verification.php', 'download_free_publication.php'] as $name) {
+foreach (['auth.php', 'bot_guard.php', 'config_loader.php', 'request_input.php', 'totp.php',
+    'calculators_common.php', 'publications_common.php', 'email_verification.php',
+    'download_free_publication.php'] as $name) {
     copy('/app/' . $name, '/fixture/files/' . $name);
 }
 // Fictitious fixtures must be readable by the separate UID 1000 restore container.

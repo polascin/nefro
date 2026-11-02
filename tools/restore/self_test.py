@@ -215,8 +215,10 @@ CREATE EVENT disabled_test ON SCHEDULE EVERY 1 DAY DO INSERT INTO parents VALUES
             shutil.copyfile(donor / "pdf/article.pdf", nested_source / "pdf/article.pdf")
             subprocess.run([git, "init", "--quiet", str(nested_repo)], check=True)
             subprocess.run([git, "-C", str(nested_repo), "add", "--", "assets/pdf/article.pdf"], check=True)
+            # --no-verify: synthetic fixture must not inherit host hooks (ggshield a pod.).
             subprocess.run([git, "-C", str(nested_repo), "-c", "user.name=SyntheticFixture", "-c",
-                            "user.email=fixture@example.invalid", "commit", "--quiet", "-m", "Synthetic recovery source"], check=True)
+                            "user.email=fixture@example.invalid", "commit", "--quiet", "--no-verify",
+                            "-m", "Synthetic recovery source"], check=True)
             nested = prepare(plain_payload, {}, nested_source, root / "from-git-subdirectory", 768)
             if not (nested[0]["last_source_commit"] and nested[0]["matches_git_head_blob"] is True):
                 raise RuntimeError("Recovery Git provenance resolved the wrong directory.")

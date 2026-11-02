@@ -358,7 +358,8 @@ foreach ($updates as $id => $u) {
         }
     }
     $notes = (string) ($row['notes'] ?? '');
-    if (isset($u['note']) && !str_contains($notes, $u['note'])) {
+    // Každý záznam v $updates má 'note'; isset() by PHPStan hlásil ako vždy true.
+    if (!str_contains($notes, $u['note'])) {
         $set[]           = 'notes = :notes';
         $params['notes'] = $notes === '' ? $u['note'] : $notes . ' | ' . $u['note'];
     }

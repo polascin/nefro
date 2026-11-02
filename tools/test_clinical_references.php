@@ -110,20 +110,21 @@ $fromUnits = calculatorUacrMgMmol($albMgL, $crMmol);
 clinicalRefApprox(30.0 / 8.84, $fromUnits, 0.01, 'UACR jednotky mg/dL→základ');
 
 // ─── KDIGO G kategórie ───
-$gMap = [
-    95.0 => 'G1',
-    90.0 => 'G1',
-    75.0 => 'G2',
-    60.0 => 'G2',
-    50.0 => 'G3a',
-    45.0 => 'G3a',
-    35.0 => 'G3b',
-    30.0 => 'G3b',
-    20.0 => 'G4',
-    15.0 => 'G4',
-    10.0 => 'G5',
+// Páry [eGFR, kategória]: float kľúče v asociatívnom poli PHPStan odmieta (array.invalidKey).
+$gCases = [
+    [95.0, 'G1'],
+    [90.0, 'G1'],
+    [75.0, 'G2'],
+    [60.0, 'G2'],
+    [50.0, 'G3a'],
+    [45.0, 'G3a'],
+    [35.0, 'G3b'],
+    [30.0, 'G3b'],
+    [20.0, 'G4'],
+    [15.0, 'G4'],
+    [10.0, 'G5'],
 ];
-foreach ($gMap as $egfr => $cat) {
+foreach ($gCases as [$egfr, $cat]) {
     clinicalRefTest(
         ckdGCategory($egfr) === $cat,
         "G kategória eGFR=$egfr → $cat (získané " . ckdGCategory($egfr) . ')',
