@@ -2,9 +2,16 @@
 
 ## Ďalšia slučka
 
-1. Voliteľne doplniť ďalšie `source_authors.php` (stále ~211+ unmapped; len single-source).
+1. Voliteľne doplniť ďalšie `source_authors.php` (~195 unmapped; manuálna DOI↔téma).
 2. Po **výslovnom súhlase**: ENUM `sending` + claim/lease; empty provider priority.
 3. Voliteľne: list helper ambulatory; P1 klinické referenčné testy.
+
+## Hotové v slučke 12
+
+- [x] 16 kurátorských source_authors (Crossref, DOI↔téma + DOI v obsahu)
+- [x] Parity 172 PASS (mapped=56); regresie
+- [x] Changelog + deploy `00d99f49`
+- [x] bez claim/lease ENUM
 
 ## Hotové v slučke 11
 
@@ -19,12 +26,6 @@
 - [x] hydrate unmapped + author_index cache (`author_index_v1`)
 - [x] parity regresia + deploy `288b01e6`
 - [x] bez index migrácie (dôkaz: nízka selektivita)
-
-## Hotové v slučke 9
-
-- [x] request_input / calculatorPost* na kalkulačky POST
-- [x] ambulatory: complications[] a diagnózy ako polia
-- [x] changelog + deploy `00d04fc7`
 
 ## Vedomé mimo rozsahu
 
