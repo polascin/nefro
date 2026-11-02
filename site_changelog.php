@@ -55,6 +55,20 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-11-02 02:55',
+                'category' => 'portal',
+                'title' => 'Jednotné parametre aj na úvodnej stránke',
+                'description' => 'Stránkovanie a filter „Zúčastnení autori“ na úvodnej stránke čítajú parametre rovnako ako zvyšok portálu. Poškodený tvar parametra skončí chybou 400 namiesto pádu stránky.',
+                'url' => 'index.php',
+            ],
+            [
+                'date' => '2026-11-02 02:53',
+                'category' => 'content',
+                'title' => 'Ďalších dvanásť článkov s overenými autormi zdroja',
+                'description' => 'Kurátorská mapa autorov pribudla mimo iného pri textoch o uhlíkovej stope HD, CONFIDENCE, TMAO/L-karnitíne, ESC/EAS dyslipidémii a prechode medzi agonistami GLP-1. Filter autorov používa mená z Crossref.',
+                'url' => 'index.php',
+            ],
+            [
                 'date' => '2026-11-02 02:35',
                 'category' => 'portal',
                 'title' => 'Bezpečnejší výber formátov pri objednávke publikácie',

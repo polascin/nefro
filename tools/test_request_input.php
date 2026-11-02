@@ -46,6 +46,7 @@ $_GET = [];
 
 $root = dirname(__DIR__);
 $wiredPages = [
+    'index.php',
     'search.php',
     'download_pdf.php',
     'newsletter_subscribe.php',

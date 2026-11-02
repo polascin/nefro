@@ -720,5 +720,29 @@ function getSourceArticleAuthors(): array {
         'zelezo-anemia-ckd-kdigo-2026-erbp' => ['Lucia Del Vecchio', 'Aleix Cases', 'Michele F Eisenga', 'Jolanta Małyszko', 'Jonathan Barratt', 'Davide Bolignano'],
         // ADA Standards of Care 2026 — Diabetes Technology (Diabetes Care; doi 10.2337/dc26-S007), autori Crossref 2026-11-02.
         'integrovane-systemy-cgm-aid-nefrologia' => ['Mandeep Bajaj', 'Rozalina G. McCoy', 'Kirthikaa Balapattabi', 'Raveendhara R. Bannuru', 'Natalie J. Bellini', 'Allison K. Bennett', 'Elizabeth A. Beverly', 'Kathaleen Briggs Early', 'Sathyavathi ChallaSivaKanaka', 'Justin B. Echouffo-Tcheugui', 'Brendan M. Everett', 'Rajesh Garg', 'Lori M. Laffel', 'Rayhan Lal', 'Glenn Matfin', 'Naushira Pandya', 'Elizabeth J. Pekas', 'Anne L. Peters', 'Scott J. Pilla', 'Giulio R. Romeo', 'Sylvia E. Rosas', 'Alissa R. Segal', 'Emily D. Szmuilowicz', 'Nuha A. ElSayed'],
+        // Kalkulačka uhlíkovej stopy HD (NDT; doi 10.1093/ndt/gfaf263), autori Crossref 2026-11-02.
+        'uhlikova-stopa-hemodialyzy-meranie-znizovanie-emisii' => ['Joachim Beige', 'Susi Knöller', 'Martin Pachmann', 'Falk Sommer', 'Hans Peter Barth', 'Michael Masanneck', 'Werner Kleophas', 'Roman Schaffron', 'Sylvia Stracke', 'Kirsten deGroot', 'Julia Weinmann-Menke', 'Simone Cosima Boedecker-Lips', 'Raymond Vanholder'],
+        // CONFIDENCE: finerenón + empagliflozín (NEJM; doi 10.1056/NEJMoa2410659), autori Crossref 2026-11-02.
+        'kombinacna-liecba-ckd-styri-piliere-hranice-dokazov' => ['Rajiv Agarwal', 'Jennifer B. Green', 'Hiddo J.L. Heerspink', 'Johannes F.E. Mann', 'Janet B. McGill', 'Amy K. Mottl', 'Julio Rosenstock', 'Peter Rossing', 'Muthiah Vaduganathan', 'Meike Brinker', 'Robert Edfors', 'Na Li', 'Markus F. Scheerer', 'Charlie Scott', 'Masaomi Nangaku'],
+        // Prehľad uránovej nefrotoxicity / AOP (Int J Mol Sci; doi 10.3390/ijms23084397), autori Crossref 2026-11-02.
+        'uran-a-oblicky-nefrotoxicita-radiacne-poskodenie-kovy' => ['Yann Guéguen', 'Marie Frerejacques'],
+        // ESC/EAS 2025 focused update dyslipidémie (Atherosclerosis; doi 10.1016/j.atherosclerosis.2025.120479), autori Crossref 2026-11-02.
+        'dyslipidemia-2026-kardiovaskularne-riziko-ldl-ciele-ckd' => ['François Mach', 'Konstantinos C. Koskinas', 'Jeanine E. Roeters van Lennep', 'Lale Tokgözoğlu', 'Lina Badimon', 'Colin Baigent', 'Marianne Benn', 'Christoph J. Binder', 'Alberico L. Catapano', 'Guy G. De Backer', 'Victoria Delgado', 'Natalia Fabin', 'Brian A. Ference', 'Ian M. Graham', 'Ulf Landmesser', 'Ulrich Laufs', 'Borislava Mihaylova', 'Børge Grønne Nordestgaard', 'Dimitrios J. Richter', 'Marc S. Sabatine'],
+        // EASL CPG: primárna biliárna cholangitída / UDCA (J Hepatol; doi 10.1016/j.jhep.2017.03.022), autori Crossref 2026-11-02.
+        'kyselina-ursodeoxycholova-a-ursolova-rozdiely-klinicky-vyznam' => ['Gideon M. Hirschfield', 'Ulrich Beuers', 'Christophe Corpechot', 'Pietro Invernizzi', 'David Jones', 'Marco Marzioni', 'Christoph Schramm'],
+        // L-karnitín, črevná mikrobiota a ateroskleróza (Nat Med; doi 10.1038/nm.3145), autori Crossref 2026-11-02.
+        'injekcny-l-karnitin-tmao-hemodialyza' => ['Robert A Koeth', 'Zeneng Wang', 'Bruce S Levison', 'Jennifer A Buffa', 'Elin Org', 'Brendan T Sheehy', 'Earl B Britt', 'Xiaoming Fu', 'Yuping Wu', 'Lin Li', 'Jonathan D Smith', 'Joseph A DiDonato', 'Jun Chen', 'Hongzhe Li', 'Gary D Wu', 'James D Lewis', 'Manya Warrier', 'J Mark Brown', 'Ronald M Krauss', 'W H Wilson Tang', 'Frederic D Bushman', 'Aldons J Lusis', 'Stanley L Hazen'],
+        // TMAO dráha a renálna insuficiencia (Circ Res; doi 10.1161/CIRCRESAHA.116.305360), autori Crossref 2026-11-02.
+        'cholin-l-karnitin-doplnky-diabeticka-nefropatia-tmao' => ['W.H. Wilson Tang', 'Zeneng Wang', 'David J. Kennedy', 'Yuping Wu', 'Jennifer A. Buffa', 'Brendan Agatisa-Boyle', 'Xinmin S. Li', 'Bruce S. Levison', 'Stanley L. Hazen'],
+        // Prechod medzi agonistami GLP-1 (Clin Diabetes; doi 10.2337/cd19-0100), autori Crossref 2026-11-02.
+        'prehadzovanie-glp1-agonistov-prakticky-postup-ckd' => ['Jaime P. Almandoz', 'Ildiko Lingvay', 'Javier Morales', 'Carlos Campos'],
+        // Cochrane: psychosociálne intervencie pri SMI + substance misuse (doi 10.1002/14651858.CD001088.pub4), autori Crossref 2026-11-02.
+        'psychoza-uzivanie-navykovych-latok-integrovana-starostlivost' => ['Glenn E Hunt', 'Nandi Siegfried', 'Kirsten Morley', 'Carrie Brooke-Sumner', 'Michelle Cleary'],
+        // Systematický prehľad stiahnutí liekov pre ADR (BMC Med; doi 10.1186/s12916-016-0553-2), autori Crossref 2026-11-02.
+        'postmarketingove-bezpecnostne-zlyhania-liekov-fda-ema' => ['Igho J. Onakpoya', 'Carl J. Heneghan', 'Jeffrey K. Aronson'],
+        // Validácia DIVA 2.0 pre ADHD u dospelých (J Atten Disord; doi 10.1177/1087054716646451), autori Crossref 2026-11-02.
+        'diagnostika-adhd-dospeli-diferencialna-diagnostika' => ['Josep Antoni Ramos-Quiroga', 'Viviana Nasillo', 'Vanesa Richarte', 'Montserrat Corrales', 'Felipe Palma', 'Pol Ibáñez', 'Marieke Michelsen', 'Geurt Van de Glind', 'Miquel Casas', 'J. J. Sandra Kooij'],
+        // Alcohol Intake and Health Study (J Stud Alcohol Drugs; doi 10.15288/jsad.25-00435), autori Crossref 2026-11-02.
+        'alkohol-zdravy-napoj-medicinske-odporucania' => ['Sinead George', 'Timothy S. Naimi', 'Katherine Keyes', 'Priscilla Martinez-Matyszczyk', 'Adam J. Milam', 'Jürgen Rehm', 'Alvaro Alonso', 'Steven Bell', 'Annie Britton', 'Laura Llamosas-Falcón', 'Erin Hobin', 'Suzanne E. Judd', 'Amy Justice', 'Christopher Kahler', 'Suthat Liangpunsakul', 'Stephanie K. Jones', 'Gregory Marcus', 'Katherine McGlynn', 'Derek Satre', 'Mingyang Song', 'Aaron Peter Thrift', 'Tomoko Udo', 'Ashley Wettlaufer', 'Zuo-Feng Zhang', 'Kevin Shield'],
     ];
 }

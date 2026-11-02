@@ -115,3 +115,9 @@ Claim/lease ENUM stále bez súhlasu.
 `publikacia.php` číta `formats[]` cez `requestStringList` (rovnaký vzor
 ako ambulatory). +13 source_authors; vylúčené ERA registry (>40 autorov)
 a ESsCD celiakia pri článku o NCWS. Claim/lease ENUM stále bez súhlasu.
+
+## 2026-11-02 (slučka 15) — index request_input + ďalší source_authors
+
+`index.php` číta `page`/`autor` cez `requestScalarInt`/`String` (pole → 400).
++12 source_authors; vylúčené >40 autorov, ADA SoC namiesto CONFIDENCE
+pri finerenóne a TMAO/IBD mismatch. Claim/lease ENUM stále bez súhlasu.

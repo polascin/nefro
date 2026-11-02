@@ -2,6 +2,7 @@
 declare(strict_types=1);
 require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/db_config.php';
+require_once __DIR__ . '/request_input.php';
 /** @var \PDO $pdo */
 $monthsLocative = [
     1 => "januári",
@@ -94,11 +95,11 @@ $otherArticles = [];
 $otherArticlesPerPage = 21;
 $otherArticlesTotal = 0;
 $otherArticlesTotalPages = 1;
-$otherArticlesPage = isset($_GET["page"]) ? (int) $_GET["page"] : 1;
+$otherArticlesPage = requestScalarInt($_GET, 'page', 1);
 if ($otherArticlesPage < 1) {
     $otherArticlesPage = 1;
 }
-$autorFilter = isset($_GET["autor"]) ? mb_substr(trim($_GET["autor"]), 0, 255) : "";
+$autorFilter = mb_substr(requestScalarString($_GET, 'autor', ''), 0, 255);
 
 try {
     if ($autorFilter !== "") {
