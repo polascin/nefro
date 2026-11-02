@@ -10,7 +10,8 @@ Vývojová slučka Nefro (iterácia 18 dokončená). Handoff:
 ## Stav repozitára
 
 - Vetva: `main`
-- HEAD / `DEPLOY_COMMIT`: `2a5164ea`
+- HEAD: `c3eb71e9` (docs state/handoff)
+- Runtime / `DEPLOY_COMMIT`: `2a5164ea` (docs-only drift OK)
 - `origin/main` a `server/main`: aktuálne (post-commit)
 
 ## Čo je hotové v slučke 18
