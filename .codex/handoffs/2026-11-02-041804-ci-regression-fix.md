@@ -5,7 +5,7 @@
 - Generated At: 2026-11-02T04:18:04+01:00
 - Project Root: D:\Dev\nefro
 - Git Branch: main
-- Head Commit: (po commite CI fix)
+- Head Commit: 1ed7f45d
 
 ## Original Goal
 
@@ -38,12 +38,11 @@ lokálny ggshield hook pri synthetic git commit). Celý
 
 ## Not Yet Validated
 
-- Assumption: GitHub Actions success po pushi (overí sa cez `gh`)
 - Risk: Actions Deploy production ostáva skipped, kým `NEFRO_DEPLOY_MODE != actions` (lokálny SFTP hook je primárny)
 
 ## Remaining Work
 
-- [ ] Overiť CI success na `main` po pushi
+- [x] CI success run 41382755429 (Validate + Regression gate)
 - [ ] Voliteľne PREVENT clinical refs / claim/lease len so súhlasom
 
 ## Decisions Made
