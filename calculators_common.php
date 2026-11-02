@@ -854,6 +854,30 @@ const EGFR_UNIT_ML_MIN = 'ml_min';
 const EGFR_UNIT_ML_S = 'ml_s';
 const EGFR_ML_S_PER_ML_MIN = 60.0;
 
+/**
+ * CKD-EPI 2021 (kreatinín, bez rasy) — spoločný vzorec pre kalkulačku eGFR aj porovnanie v EKFC.
+ * Vstup: Scr v mg/dL, vek v celých rokoch (formulár), sex `female`|`male`.
+ * Zdroj: Inker LA et al., NEJM 2021; KDIGO 2024 používa túto rovnicu.
+ */
+function calculatorCkdEpi2021FromCreatinineMgDl(float $creatinineMgDl, int $ageYears, string $sex): float
+{
+    $sexNorm = $sex === 'female' ? 'female' : 'male';
+    $kappa = $sexNorm === 'female' ? 0.7 : 0.9;
+    $alpha = $sexNorm === 'female' ? -0.241 : -0.302;
+    $ratio = $creatinineMgDl / $kappa;
+
+    $egfr = 142.0
+        * (min($ratio, 1.0) ** $alpha)
+        * (max($ratio, 1.0) ** -1.2)
+        * (0.9938 ** $ageYears);
+
+    if ($sexNorm === 'female') {
+        $egfr *= 1.012;
+    }
+
+    return $egfr;
+}
+
 /** Vráti platnú jednotku eGFR; pri neznámej hodnote kanonickú ml/min/1,73 m². */
 function calculatorNormalizeEgfrUnit(string $unit): string
 {

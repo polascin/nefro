@@ -18,6 +18,7 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/db_config.php';
+require_once __DIR__ . '/request_input.php';
 /** @var \PDO $pdo */
 require_once __DIR__ . '/publications_common.php';
 
@@ -35,9 +36,9 @@ if (($_SERVER['REQUEST_METHOD'] ?? 'GET') !== 'GET') {
     publicationDownloadFail(405, 'Táto metóda sťahovania nie je podporovaná.');
 }
 
-$variableSymbol = trim((string) ($_GET['vs'] ?? ''));
-$token          = trim((string) ($_GET['t'] ?? ''));
-$formatCode     = strtolower(trim((string) ($_GET['format'] ?? '')));
+$variableSymbol = requestScalarString($_GET, 'vs', '');
+$token          = requestScalarString($_GET, 't', '');
+$formatCode     = strtolower(requestScalarString($_GET, 'format', ''));
 
 if ($variableSymbol === '' || $token === '' || $formatCode === '') {
     publicationDownloadFail(400, 'Neúplný odkaz na stiahnutie.');

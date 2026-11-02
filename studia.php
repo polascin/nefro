@@ -3,13 +3,14 @@
 declare(strict_types=1);
 require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/db_config.php';
+require_once __DIR__ . '/request_input.php';
 /** @var \PDO $pdo */
 require_once __DIR__ . '/clinical_trials_common.php';
 
 $siteName = "Nefro-projekt Slovensko";
 $baseUrl = "https://nefro.polascin.net/";
 
-$nct = strtoupper(trim((string) ($_GET['nct'] ?? '')));
+$nct = strtoupper(requestScalarString($_GET, 'nct', ''));
 $trial = null;
 if (preg_match('/^NCT\d{8}$/', $nct) === 1) {
     try {

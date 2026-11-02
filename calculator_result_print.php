@@ -2,13 +2,14 @@
 declare(strict_types=1);
 require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/db_config.php';
+require_once __DIR__ . '/request_input.php';
 /** @var \PDO $pdo */
 require_once __DIR__ . '/calculators_common.php';
 require_once __DIR__ . '/insurance_codes.php';
 
 requireLogin();
 
-$resultId   = (int) ($_GET['result_id'] ?? 0);
+$resultId   = requestScalarInt($_GET, 'result_id', 0);
 $resultRow  = null;
 $errorMessage = null;
 

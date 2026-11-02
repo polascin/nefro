@@ -18,15 +18,16 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/db_config.php';
+require_once __DIR__ . '/request_input.php';
 /** @var \PDO $pdo */
 require_once __DIR__ . '/publications_common.php';
 
 $siteName = 'Nefro-projekt Slovensko';
 $baseUrl  = 'https://nefro.polascin.net/';
 
-$variableSymbol = trim((string) ($_GET['vs'] ?? ''));
-$token          = trim((string) ($_GET['t'] ?? ''));
-$isNewOrder     = ($_GET['new'] ?? '') === '1';
+$variableSymbol = requestScalarString($_GET, 'vs', '');
+$token          = requestScalarString($_GET, 't', '');
+$isNewOrder     = requestScalarString($_GET, 'new', '') === '1';
 
 // Rate limit na overovanie tokenov — bez neho by sa dal token hádať dávkovo.
 // Chyba databázy sa nesmie prejaviť ako 500: kupujúci drží v ruke odkaz

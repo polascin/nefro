@@ -85,20 +85,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     ? (float) $creatinineValue / 88.4
                     : (float) $creatinineValue;
 
-            $kappa = $sex === "female" ? 0.7 : 0.9;
-            $alpha = $sex === "female" ? -0.241 : -0.302;
-
-            $ratio = $creatinineMgDl / $kappa;
-            $egfr =
-                142 *
-                pow(min($ratio, 1), $alpha) *
-                pow(max($ratio, 1), -1.2) *
-                pow(0.9938, (int) $ageYears);
-
-            if ($sex === "female") {
-                $egfr *= 1.012;
-            }
-
+            $egfr = calculatorCkdEpi2021FromCreatinineMgDl(
+                $creatinineMgDl,
+                (int) $ageYears,
+                $sex,
+            );
             $egfrRounded = round($egfr, 1);
             $gCategory = ckdGCategory($egfrRounded);
             $gDescription = ckdGCategoryDescription($gCategory);

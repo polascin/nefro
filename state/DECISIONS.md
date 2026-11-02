@@ -128,3 +128,10 @@ pri finerenóne a TMAO/IBD mismatch. Claim/lease ENUM stále bez súhlasu.
 request_input a admin mutácie aj auth/admin formuláre čítajú CSRF cez helper
 (pole → 400, bez trim). +4 source_authors; vylúčené Pielotax/Drucker mismatch
 a agave syrup pri sladidlách. Claim/lease ENUM stále bez súhlasu.
+
+## 2026-11-02 (slučka 17) — GET request_input + CKD-EPI referencie
+
+`studia`/`objednavka`/`download_publication`/`calculator_result_print` čítajú
+GET cez request_input. CKD-EPI 2021 extrahované do
+`calculatorCkdEpi2021FromCreatinineMgDl()` + regresný referenčný test (začiatok
+P1 klinických referencií). Claim/lease ENUM stále bez súhlasu.

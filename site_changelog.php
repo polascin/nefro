@@ -55,6 +55,20 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-11-02 03:35',
+                'category' => 'portal',
+                'title' => 'Jednotné parametre pri štúdiách, objednávkach a tlači výsledkov',
+                'description' => 'Detail klinickej štúdie, stav objednávky publikácie, sťahovanie súboru a tlač uloženého výsledku kalkulačky čítajú URL parametre rovnako ako zvyšok portálu. Poškodený tvar parametra skončí chybou 400.',
+                'url' => 'objednavka.php',
+            ],
+            [
+                'date' => '2026-11-02 03:33',
+                'category' => 'tools',
+                'title' => 'Spoločný vzorec CKD-EPI 2021 v kalkulačkách',
+                'description' => 'Kalkulačka eGFR a porovnanie v EKFC používajú ten istý vzorec CKD-EPI 2021. Výsledky sa nemenia; pribudla regresná kontrola referenčných príkladov.',
+                'url' => 'calculator_egfr.php',
+            ],
+            [
                 'date' => '2026-11-02 03:15',
                 'category' => 'portal',
                 'title' => 'Bezpečnejšie CSRF tokeny vo formulároch',

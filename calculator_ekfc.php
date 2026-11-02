@@ -142,20 +142,7 @@ function ekfcCore(float $biomarker, float $q, float $ageYears): array
  */
 function ekfcCompareCkdEpi2021(float $creatinineMgDl, float $ageYears, string $sex): float
 {
-    $kappa = $sex === 'female' ? 0.7 : 0.9;
-    $alpha = $sex === 'female' ? -0.241 : -0.302;
-    $ratio = $creatinineMgDl / $kappa;
-
-    $egfr = 142.0
-        * (min($ratio, 1.0) ** $alpha)
-        * (max($ratio, 1.0) ** -1.2)
-        * (0.9938 ** $ageYears);
-
-    if ($sex === 'female') {
-        $egfr *= 1.012;
-    }
-
-    return $egfr;
+    return calculatorCkdEpi2021FromCreatinineMgDl($creatinineMgDl, (int) $ageYears, $sex);
 }
 
 $errors = [];
