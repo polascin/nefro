@@ -2,9 +2,16 @@
 
 ## Ďalšia slučka
 
-1. Rozšíriť P1 klinické referenčné testy (EKFC, KFRE, PREVENT, Mehran, …).
+1. Voliteľne PREVENT / ďalšie riziko-modely ako samostatný clinical ref súbor.
 2. Po **výslovnom súhlase**: ENUM `sending` + claim/lease; empty provider priority.
 3. Voliteľne zvyšné `source_authors` bez spoľahlivého single DOI (nízka priorita).
+
+## Hotové v slučke 18
+
+- [x] `calculator_ekfc_logic.php` + UACR/Mehran v `calculators_common`
+- [x] `test_clinical_references.php` (KFRE/EKFC/UACR/G/Mehran, 56 PASS)
+- [x] regressions 38; deploy `2a5164ea`
+- [x] bez claim/lease ENUM
 
 ## Hotové v slučke 17
 
@@ -19,12 +26,6 @@
 - [x] +4 source_authors (Manghi, Heerspink, Chadban, Reis-Neto)
 - [x] request_input 87 PASS; parity 172; deploy `532db34f`
 - [x] bez claim/lease ENUM
-
-## Hotové v slučke 15
-
-- [x] `index.php` page/autor cez request_input
-- [x] +12 source_authors
-- [x] deploy `a5aa91e6`
 
 ## Vedomé mimo rozsahu
 
