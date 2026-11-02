@@ -93,3 +93,11 @@ Do mapy pribudlo 14 slugov s autormi z Crossref/PubMed, kde článok má
 jednoznačný DOI alebo PMID primárneho zdroja. Vylúčené: chybné DOI
 (eocr/gutmaxxing), sekundárne review (CANVAS, suchej váhy), ťaháky a
 pacientské edukácie. Parita 172 PASS; claim/lease ENUM stále bez súhlasu.
+
+## 2026-11-02 (slučka 12) — source_authors: kurácia podľa zhody DOI↔téma
+
+Automatický single-ID filter už neprinášal nové safe návrhy. Do mapy
+pribudlo 16 slugov po manuálnej zhode Crossref titulu s témou článku
+a kontrole, že DOI je v obsahu. Vylúčené: multi-štúdiové články
+(sibeprenlimab×3), chybný CETP/torcetrapib DOI, fiber-only pri článku
+o vláknine+pohybe, ťaháky. Claim/lease ENUM stále bez súhlasu.

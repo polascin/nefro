@@ -55,6 +55,13 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-11-02 01:55',
+                'category' => 'content',
+                'title' => 'Ďalších šestnásť článkov s overenými autormi zdroja',
+                'description' => 'Kurátorská mapa autorov pribudla pri ďalších odborných textoch (mimo iného ADA/EASD 2026, CKD-aP, SGLT2i a hemoglobín, prehabilitácia). Filter autorov a podpis článku používajú mená z Crossref namiesto odhadu zo textu.',
+                'url' => 'index.php',
+            ],
+            [
                 'date' => '2026-11-02 01:40',
                 'category' => 'content',
                 'title' => 'Presnejší zoznam autorov pri ďalších článkoch',

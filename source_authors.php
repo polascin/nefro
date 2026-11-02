@@ -642,5 +642,37 @@ function getSourceArticleAuthors(): array {
         '4t-skore-heparinom-indukovana-trombocytopenia' => ['G.K. LO', 'D. JUHL', 'T.E. WARKENTIN', 'C.S. SIGOUIN', 'P. EICHLER', 'A. GREINACHER'],
         // Najväčšia štúdia mikrobiom–obličky (PMID 42020064), autori PubMed efetch 2026-11-02.
         'mikrobiom-creva-a-zdravie-obliciek-najvacsia-doterajsia-studia' => ['Brandilyn A Peters'],
+        // CKD-aP mixed-methods pri HD (J Ren Care; doi 10.1111/jorc.70075), autori Crossref 2026-11-02.
+        'svrbenie-pruritus-na-dialyze-preco-sa-udavana-prevalencia-lisi-dvojnasobne-a-co-pacient-sam-nepovie' => ['Gülay Turgay', 'Çiğdem Özdemir Eler'],
+        // Konsenzus ADA/EASD 2026 (Diabetes Care; doi 10.2337/dci26-0141), autori Crossref 2026-11-02.
+        'konsenzus-ada-easd-2026-diabetes-2-typu-nefrologia' => ['Melanie J. Davies', 'Vanita R. Aroda', 'Mandeep Bajaj', 'Nuha A. ElSayed', 'Francesco Giorgino', 'Jennifer Green', 'Rita R. Kalyani', 'Nisa M. Maruthur', 'Chantal Mathieu', 'Sylvia E. Rosas', 'Peter Rossing', 'Tommy Slater', 'Tsvetalina Tankova', 'Pinar Topsever', 'Apostolos Tsapas', 'John B. Buse'],
+        // SGLT2i a hemoglobín/železo/erytropoéza (JAMA; doi 10.1001/jama.2026.19921), autori Crossref 2026-11-02.
+        'inhibitory-sglt2-hemoglobin-anemia-ckd' => ['Yaqin Yang', 'Changyuan Yang', 'Yanmei Wang', 'Pien Rawee', 'Aleix Cases', 'David E. Leaf', 'Lucia del Vecchio', 'Taulant Muka', 'Hiddo J. L. Heerspink', 'Ron T. Gansevoort', 'Michele F. Eisenga'],
+        // Dlhé formy cTnT pri CKD (NDT; doi 10.1093/ndt/gfag239), autori Crossref 2026-11-02.
+        'dlhe-formy-troponinu-t-chronicka-choroba-obliciek' => ['Tapio Hellman', 'Konsta Teppo', 'Anna Linko-Parvinen', 'Hanna-Mari Pallari', 'Helea Junes', 'Tuulia Tuominen', 'Selma Salonen', 'Tuomas Paana', 'Samuli Jaakkola', 'Marjatta Strandberg', 'Tuija Vasankari', 'K E Juhani Airaksinen', 'Saara Wittfooth'],
+        // Úbytok hmotnosti a progresia ADPKD (iScience; doi 10.1016/j.isci.2021.103697), autori Crossref 2026-11-02.
+        'kaloricke-obmedzenie-adpkd-pilotna-studia' => ['Katharina Hopp', 'Victoria A. Catenacci', 'Nidhi Dwivedi', 'Timothy L. Kline', 'Wei Wang', 'Zhiying You', 'Dustin T. Nguyen', 'Kristen Bing', 'Bhavya Poudyal', 'Ginger C. Johnson', 'Matthew R. Jackman', 'Marsha Miller', 'Cortney N. Steele', 'Natalie J. Serkova', 'Paul S. MacLean', 'Raphael A. Nemenoff', 'Berenice Gitomer', 'Michel Chonchol', 'Kristen L. Nowak'],
+        // Mikroplasty v dialyzačných roztokoch (BMC Nephrol; doi 10.1186/s12882-025-04281-2), autori Crossref 2026-11-02.
+        'mikroplasty-nanoplasty-zdravotnictvo-nefrologia-dialyza' => ['Ekrem Kara', 'Kamil Konur', 'Yasemen Şentürk Koca', 'Ülgen Aytan'],
+        // Systematický prehľad midodrínu pri IDH (NDT; doi 10.1093/ndt/gfh420), autori Crossref 2026-11-02.
+        'midodrin-intradialyzacna-hypotenzia-ucinok-dokazy-bezpecnost' => ['S. Prakash', 'A. X. Garg', 'A. P. Heidenheim', 'A. A. House'],
+        // RCT hypertonického manitolu pri IDH (AJKD; doi 10.1053/j.ajkd.2019.03.415), autori Crossref 2026-11-02.
+        'manitol-20-intradialyzacna-hypotenzia-dokazy-bezpecnost' => ['Finnian R. Mc Causland', 'Brian Claggett', 'Venkata S. Sabbisetti', 'Petr Jarolim', 'Sushrut S. Waikar'],
+        // Metaanalýza bezpečnosti želatíny (J Crit Care; doi 10.1016/j.jcrc.2016.04.011), autori Crossref 2026-11-02.
+        'zelatinove-koloidy-gelofusine-intradialyzacna-hypotenzia' => ['Claudia Moeller', 'Carolin Fleischmann', 'Daniel Thomas-Rueddel', 'Vlasislav Vlasakov', 'Bram Rochwerg', 'Philip Theurer', 'Luciano Gattinoni', 'Konrad Reinhart', 'Christiane S. Hartog'],
+        // Prehľad prevencie IDH (Int J Nephrol Renovasc Dis; doi 10.2147/IJNRD.S245621), autori Crossref 2026-11-02.
+        'intradialyzacna-hypotenzia-prevencia-osetrovatelsky-protokol' => ['Seyed Mehrdad Hamrahian', 'Salem Vilayet', 'Johann Herberth', 'Tibor Fülöp'],
+        // Káva a Lawsonibacter (Nat Microbiol; doi 10.1038/s41564-024-01858-9), autori Crossref 2026-11-02.
+        'kava-mikrobiota-lawsonibacter-nefrologicka-prax' => ['Paolo Manghi', 'Amrisha Bhosle', 'Kai Wang', 'Roberta Marconi', 'Marta Selma-Royo', 'Liviana Ricci', 'Francesco Asnicar', 'Davide Golzato', 'Wenjie Ma', 'Dong Hang', 'Kelsey N. Thompson', 'Eric A. Franzosa', 'Amir Nabinejad', 'Sabrina Tamburini', 'Eric B. Rimm', 'Wendy S. Garrett', 'Qi Sun', 'Andrew T. Chan', 'Mireia Valles-Colomer', 'Manimozhiyan Arumugam', 'Kate M. Bermingham', 'Francesca Giordano', 'Richard Davies', 'George Hadjigeorgiou', 'Jonathan Wolf', 'Till Strowig', 'Sarah E. Berry', 'Curtis Huttenhower', 'Tim D. Spector', 'Nicola Segata', 'Mingyang Song'],
+        // Medzinárodný konsenzus nefropatickej cystinózy (NDT; doi 10.1093/ndt/gfu090), autori Crossref 2026-11-02.
+        'cystinoza-fanconiho-syndrom-celozivotna-systemova-starostlivost' => ['F. Emma', 'G. Nesterova', 'C. Langman', 'A. Labbe', 'S. Cherqui', 'P. Goodyer', 'M. C. Janssen', 'M. Greco', 'R. Topaloglu', 'E. Elenberg', 'R. Dohil', 'D. Trauner', 'C. Antignac', 'P. Cochat', 'F. Kaskel', 'A. Servais', 'E. Wuhl', 'P. Niaudet', 'W. Van\'t Hoff', 'W. Gahl', 'E. Levtchenko'],
+        // Multimodálna prehabilitácia pred kolorektálnou operáciou (JAMA Surg; doi 10.1001/jamasurg.2023.0198), autori Crossref 2026-11-02.
+        'prehabilitacia-velka-brusna-chirurgia-cvicenie-vyziva' => ['Charlotte Johanna Laura Molenaar', 'Enrico Maria Minnella', 'Miquel Coca-Martinez', 'David Wouter Gerard ten Cate', 'Marta Regis', 'Rashami Awasthi', 'Graciela Martínez-Palli', 'Manuel López-Baamonde', 'Raquel Sebio-Garcia', 'Carlo Vittorio Feo', 'Stefanus Johannes van Rooijen', 'Jennifer Marijke Janneke Schreinemakers', 'Rasmus Dahlin Bojesen', 'Ismail Gögenur', 'Edwin R. van den Heuvel', 'Francesco Carli', 'Gerrit Dirk Slooter', 'Rudi M.H. Roumen', 'Loes Janssen', 'Jeanne Dieleman', 'Nicky Rademakers', 'Cathrin Van Erven', 'Goof Schep', 'Suzanne A.L.M. van Lankvelt', 'Sandra Beijer', 'Wout Van der Meij', 'Bhagya Lakshmi Tahasildar', 'Susanne Oksbjerg Dalton', 'Rosa Asbert Sagasti', 'Marta Ubre', 'Betina Campero', 'Marina Siso', 'Raquel Risco', 'Silvia Teres', 'Antonio M Lacy', 'Alessandro De Troia', 'Giovanni Grazzi'],
+        // PIVENS: pioglitazón pri NASH (NEJM; doi 10.1056/NEJMoa0907929), autori Crossref 2026-11-02.
+        'pioglitazon-masld-mash-diabetes-ckd' => ['Arun J. Sanyal', 'Naga Chalasani', 'Kris V. Kowdley', 'Arthur McCullough', 'Anna Mae Diehl', 'Nathan M. Bass', 'Brent A. Neuschwander-Tetri', 'Joel E. Lavine', 'James Tonascia', 'Aynur Unalp', 'Mark Van Natta', 'Jeanne Clark', 'Elizabeth M. Brunt', 'David E. Kleiner', 'Jay H. Hoofnagle', 'Patricia R. Robuck'],
+        // Nutcracker syndrome 2026 (CKJ; doi 10.1093/ckj/sfag124), autori Crossref 2026-11-02.
+        'nutcracker-syndrom-lava-renalna-vena-diagnostika-liecba' => ['Ernesta Mačionienė', 'Agnė Kerpauskienė', 'Urtė Žakauskienė', 'Monika Vitkauskaitė', 'Rokas Girčius', 'Marius Miglinas'],
+        // Metaanalýza príjmu tekutín a funkcie obličiek (Am J Nephrol; doi 10.1159/ajn/ablag027), autori Crossref 2026-11-02.
+        'prijem-tekutin-funkcia-obliciek' => ['Jia-Jin Chen', 'Tao Han Lee', 'Cheng-Chia Lee', 'Ming-Jen Chan', 'Tsung-Yu Tsai', 'Pei-Chun Fan', 'Chieh-Li Yen', 'Huang-Yu Yang', 'Yu-Kang Tu', 'Dmytro Ivanov', 'Yung-Chang Chen', 'Chih-Hsiang Chang'],
     ];
 }
