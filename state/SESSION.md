@@ -10,8 +10,8 @@ Vývojová slučka Nefro (iterácia 10 dokončená). Handoff:
 ## Stav repozitára
 
 - Vetva: `main`
-- HEAD: `288b01e6` (perf authors)
-- Runtime / `DEPLOY_COMMIT`: `288b01e6`
+- HEAD: `dca1c303` (docs state/handoff)
+- Runtime / `DEPLOY_COMMIT`: `288b01e6` (docs-only drift OK)
 - `origin/main` a `server/main`: aktuálne
 
 ## Čo je hotové v slučke 10
