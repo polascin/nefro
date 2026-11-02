@@ -86,3 +86,10 @@ všetky riadky publikované). Index migráciu sme nerobili. Pred: filter autora
 ~811 ms s plným `content` (~7,6 MB). Po: hydratácia contentu len pre unmapped
 + `author_index` v `project_stats` cache; teplý filter ~157 ms, parity 172 PASS.
 Claim/lease ENUM stále bez súhlasu.
+
+## 2026-11-02 (slučka 11) — source_authors: len single-source overenia
+
+Do mapy pribudlo 14 slugov s autormi z Crossref/PubMed, kde článok má
+jednoznačný DOI alebo PMID primárneho zdroja. Vylúčené: chybné DOI
+(eocr/gutmaxxing), sekundárne review (CANVAS, suchej váhy), ťaháky a
+pacientské edukácie. Parita 172 PASS; claim/lease ENUM stále bez súhlasu.

@@ -614,5 +614,33 @@ function getSourceArticleAuthors(): array {
         // abstrakt štúdie, preto patria sem; autorka správy Medscape (Nancy A. Melville) nie je
         // autorkou štúdie a neuvádza sa tu.
         'simplified-vitamin-d3-dialyza-mortalita' => ['Rona M. Smith', 'Molly Cui', 'Fergus Caskey', 'Afzal Chaudhry', 'John Cunningham', 'Toby Humphrey', 'Sandip Mitra', 'Inez Schoenmakers', 'Adam P. Wagner', 'David C. Wheeler', 'Ian Wilkinson', 'Edward C. F. Wilson', 'Amer Yahia', 'Simon Bond', 'Thomas Hiemstra'],
+        // Finálna analýza ORIGIN 3 (NEJM; doi 10.1056/NEJMoa2510198, PMID 41196369), autori Crossref 2026-11-02.
+        'trutakna-atacicept-iga-nefropatia-origin-3-finalna-analyza' => ['Richard Lafayette', 'Sean J. Barbour', 'Robert M. Brenner', 'Kirk N. Campbell', 'Tom Doan', 'Necmi Eren', 'Jürgen Floege', 'Vivekanand Jha', 'Beom Seok Kim', 'Adrian Liew', 'Bart Maes', 'Atanu Pal', 'Roberto Pecoits-Filho', 'Richard K.S. Phoon', 'Dana V. Rizk', 'Hitoshi Suzuki', 'Vladimir Tesař', 'Hernán Trimarchi', 'Xuelian Wei', 'Hong Zhang', 'Jonathan Barratt'],
+        // Konsenzus o cystinúrii (J Endourol 2020; doi 10.1089/end.2019.0703), autori Crossref 2026-11-02.
+        'cystinuria-genetika-diagnostika-komplexna-liecba' => ['Brian H. Eisner', 'David S. Goldfarb', 'Michelle A. Baum', 'Craig B. Langman', 'Gary C. Curhan', 'Glenn M. Preminger', 'John C. Lieske', 'Gyan Pareek', 'Kay Thomas', 'Anna L. Zisman', 'Dimitri Papagiannopoulos', 'Roger L. Sur'],
+        // ESMO klinické odporúčania RCC (Ann Oncol; doi 10.1016/j.annonc.2026.08.006), autori Crossref 2026-11-02.
+        'karcinom-oblicky-diagnostika-liecba-nefrologicky-prehlad' => ['N.B. Haas', 'T.B. Powles', 'P. Tomczak', 'S.H. Park', 'B. Venugopal', 'S.N. Symeonides', 'T. Ferguson', 'Y.-H. Chang', 'J.-L. Lee', 'P. Sawrycki', 'N. Sarwar', 'H. Gurney', 'M. Gross-Goupil', 'J.M. Burke', 'G. Doshi', 'J. Cornell', 'J.E. Burgents', 'R.F. Perini', 'T.K. Choueiri'],
+        // Komentár AJKD k improvizovanej HD (doi 10.1053/j.ajkd.2020.11.024, PMID 33771393), autori Crossref 2026-11-02.
+        'improvizovana-hemodialyza-kvalita-vody-dialyzacneho-roztoku' => ['Keiko I. Greenberg', 'Michael J. Choi'],
+        // NEJM AI o digitálnych nerovnostiach (doi 10.1056/AIp2600103), autori Crossref 2026-11-02.
+        'digitalne-zdravotnictvo-nerovnosti-who-nefrologia' => ['Yeon-Mi Hwang', 'Brian T. Rice', 'Tina Hernandez-Boussard'],
+        // CT myosteatóza pri HD (PMID 42599101), autori PubMed efetch 2026-11-02.
+        'myosteatoza-hemodialyza-ct-kvalita-svalstva' => ['Takahiro Yajima', 'Maiko Arao'],
+        // Kohorta BPD a somatické riziko (PMID 41843727), autori PubMed efetch 2026-11-02.
+        'hranicna-porucha-osobnosti-telesne-zdravie-somaticke-riziko' => ['Joe Kwun Nam Chan', 'Ryan Cheuk Yin Li', 'Corine Sau Man Wong', 'Vanessa Ramesh Mahboobani', 'Kam Ming Ku', 'Wing Chung Chang'],
+        // Štúdia JMIR o diagnóze od AI (doi 10.2196/89178), autori Crossref 2026-11-02.
+        'pacient-diagnoza-ai-nefrologicka-ambulancia' => ['Cornelia R Karger'],
+        // Model 3PM/ABE pri PD (doi 10.1038/s41598-026-53800-0), autori Crossref 2026-11-02.
+        'transport-tlmivych-latok-korekcia-acidozy-pd-model-3pm-abe' => ['M. Pietribiasi', 'J. Stachowska-Pietka', 'J. Waniewski', 'B. Lindholm', 'O. Heimbürger'],
+        // ERA register KRT CEE (doi 10.1093/ndt/gfaf268), autori Crossref 2026-11-02.
+        'nahrada-funkcie-obliciek-stredna-vychodna-europa-era-trendy' => ['Marjolein Bonthuis', 'Anneke Kramer', 'Sevcan A Bakkaloğlu', 'Jaakko Helve', 'Nikola Gjorgjievski', 'Halima Resic', 'Anders Åsberg', 'Nicos Mitsides', 'Alicja M Dębska-Ślizień', 'Kirill S Komissarov', 'Viktorija Kuzema', 'Nurhan Seyahi', 'Belén Ponte', 'Edita Ziginskiene', 'Mirjana Lausevic', 'Ivan Rychlík', 'Mai Ots-Rosenberg', 'Evgueniy Vazelov', 'George Moustakas', 'Adrián Okša', 'Ariana Strakosha', 'Liliana Garneata', 'Dajana Katicic', 'Roser Torra', 'Alberto Ortiz', 'Vianda S Stel'],
+        // Observačné údaje ikodextrín/PD/HF (doi 10.1093/ndt/gfaf265), autori Crossref 2026-11-02.
+        'ikodextrin-pd-srdcove-zlyhavanie-observacne-udaje' => ['Li-Yi Ma', 'Yi-Ran Tu', 'Ming-Jen Chan', 'Chan Ip Chan', 'Jia-Jin Chen', 'Cheng-Chia Lee', 'Victor Chien-Chia Wu', 'Pao-Hsien Chu', 'Hsiang-Hao Hsu', 'Chih-Hsiang Chang'],
+        // Hydratačné prestávky vo futbale (doi 10.1007/s40279-026-02398-4), autori Crossref 2026-11-02.
+        'hydratacne-prestavky-futbal-ms-2026' => ['Chris J. Esh', 'Sarah Carter', 'Valérie Bougault', 'Olivier Girard', 'Dina C. Janse van Rensburg', 'Bryna C. R. Chrismas', 'Tim Meyer', 'Lee Taylor'],
+        // Validačná práca 4T skóre HIT (doi 10.1111/j.1538-7836.2006.01787.x), autori Crossref 2026-11-02.
+        '4t-skore-heparinom-indukovana-trombocytopenia' => ['G.K. LO', 'D. JUHL', 'T.E. WARKENTIN', 'C.S. SIGOUIN', 'P. EICHLER', 'A. GREINACHER'],
+        // Najväčšia štúdia mikrobiom–obličky (PMID 42020064), autori PubMed efetch 2026-11-02.
+        'mikrobiom-creva-a-zdravie-obliciek-najvacsia-doterajsia-studia' => ['Brandilyn A Peters'],
     ];
 }

@@ -55,6 +55,13 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-11-02 01:40',
+                'category' => 'content',
+                'title' => 'Presnejší zoznam autorov pri ďalších článkoch',
+                'description' => 'Pri štrnástich odborných textoch je zoznam autorov pôvodného zdroja doplnený z Crossref a PubMed. Filter „Zúčastnení autori“ a podpis článku tak ukazujú overené mená namiesto heuristiky zo textu.',
+                'url' => 'index.php',
+            ],
+            [
                 'date' => '2026-11-02 01:15',
                 'category' => 'portal',
                 'title' => 'Rýchlejší filter autorov na úvodnej stránke',
