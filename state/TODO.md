@@ -2,9 +2,16 @@
 
 ## Ďalšia slučka
 
-1. Voliteľne doplniť `source_authors.php` pre ~225 unmapped slugov (zníži cold I/O).
+1. Voliteľne doplniť ďalšie `source_authors.php` (stále ~211+ unmapped; len single-source).
 2. Po **výslovnom súhlase**: ENUM `sending` + claim/lease; empty provider priority.
 3. Voliteľne: list helper ambulatory; P1 klinické referenčné testy.
+
+## Hotové v slučke 11
+
+- [x] 14 kurátorských source_authors (Crossref/PubMed, single-source)
+- [x] Parity 172 PASS + regresie
+- [x] Changelog + deploy `4827eb75`
+- [x] bez claim/lease ENUM
 
 ## Hotové v slučke 10
 
