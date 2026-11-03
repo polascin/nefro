@@ -92,32 +92,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $fena = null;
             $fenaInterpretation = "";
             if ($canCalcNa) {
-                $fena = (($uNa * $sCrMmol) / ($sNa * $uCrMmol)) * 100.0;
-                if ($fena < 1.0) {
-                    $fenaInterpretation = "Prerenálne zlyhanie (často < 1 %)";
-                } elseif ($fena > 2.0) {
-                    $fenaInterpretation =
-                        "Akútna tubulárna nekróza - ATN (často > 2 %)";
-                } else {
-                    $fenaInterpretation =
-                        "Hraničná hodnota (zmiešaná etiológia)";
-                }
+                $fena = calculatorFractionalExcretion($uNa, $sNa, $uCrMmol, $sCrMmol);
+                $fenaInterpretation = akiFenaInterpretation($fena);
             }
 
             $feurea = null;
             $feureaInterpretation = "";
             if ($canCalcUrea) {
-                $feurea = (($uUrea * $sCrMmol) / ($sUrea * $uCrMmol)) * 100.0;
-                if ($feurea < 35.0) {
-                    $feureaInterpretation =
-                        "Prerenálne zlyhanie (často < 35 %)";
-                } elseif ($feurea > 50.0) {
-                    $feureaInterpretation =
-                        "Akútna tubulárna nekróza - ATN (často > 50 %)";
-                } else {
-                    $feureaInterpretation =
-                        "Hraničná hodnota (zmiešaná etiológia)";
-                }
+                $feurea = calculatorFractionalExcretion($uUrea, $sUrea, $uCrMmol, $sCrMmol);
+                $feureaInterpretation = akiFeureaInterpretation($feurea);
             }
 
             $calculated = [
