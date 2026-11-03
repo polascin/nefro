@@ -256,7 +256,7 @@ a zároveň renálne postihnutie pripísateľné paraproteínu bez kritérií ma
 biopsia, hematológ, klon-cielená liečba napriek nízkej náloži; biopsia s monoklonálnymi depozitmi
 dokladá klon aj pri negatívnom sére/moči ~30 %) ·
 Gupta ✅ (`calculator_gupta.php` — simple risk score pre ťažké cisplatínom indukované AKI,
-Gupta BMJ 2024;385:e077169; 9 faktorov: vek/HTN/DM/Hb/leuko/trombo/albumín/Mg/dávka cisplatiny,
+Gupta BMJ 2024;384:e077169 (PMID 38538012); 9 faktorov: vek/HTN/DM/Hb/leuko/trombo/albumín/Mg/dávka cisplatiny,
 súčet 0–22,5 → nízke 0–5,5 / stredné 6–9,5 / vysoké 10–15,5 / veľmi vysoké ≥16; SK jednotky
 g/l a mmol/l s prepínačmi, dávka v absolútnych mg; bodové hodnoty z Fig 2 doplnené z externej
 validácie + MDCalc, prah trombocytov <150 potvrdený používateľom; kontrola maxima 22,5 ✓) ·

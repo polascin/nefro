@@ -2,9 +2,12 @@
 
 ## Ďalšia slučka
 
-1. P1 klinické referencie: kdpi, igan, adpkd, gupta (vzor Beh 151 až 157).
+1. Plošne overiť PMID odkazy na stránkach kalkulačiek (Beh 159: jeden viedol na nesúvisiaci článok); potom kdpi, mgrs, mgus.
 2. Čaká na majiteľa: limity korekcie hyponatrémie v calculator_na.php (Beh 153).
 3. Čaká na majiteľa: CRRT bez korekcie predilúcie a bez citácie KDIGO (Beh 157).
+4. Čaká na majiteľa: zlúčenie `fix/adpkd-mayo-2026-11-03` (Beh 158).
+5. Čaká na majiteľa: IgAN koeficienty nezodpovedajú opísanému modelu (Beh 158).
+6. Čaká na majiteľa: zlúčenie `fix/gupta-mg-cutoff-2026-11-03` (Beh 159).
 
 ## Hotové: slučka 2026-11-03-s (CRRT)
 

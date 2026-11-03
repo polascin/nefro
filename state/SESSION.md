@@ -1,27 +1,28 @@
 # SESSION
 
-Aktualizované: 2026-11-03 11:28 Europe/Bratislava
+Aktualizované: 2026-11-03 11:55 Europe/Bratislava
 
 ## Aktívna úloha
 
-Beh 157: referenčné testy efluentovej dávky CRRT. Handoff:
-`.codex/handoffs/2026-11-03-112800-crrt-clinical-refs.md`.
+Beh 159: Gupta citácia (nasadené) a hranica horčíka (vetva). Handoff:
+`.codex/handoffs/2026-11-03-115500-gupta-clinical-refs.md`.
 
 ## Stav repozitára
 
 - Vetva: `main` (práca vo worktree `claude/loop-dev-audit-1ec33b`, merge `--no-ff`)
-- Runtime / `DEPLOY_COMMIT`: `bcffbf85`
-- `origin/main` a `server/main`: `bcffbf85` (dokumentačný commit po ňom sa nenasadzuje)
+- Runtime / `DEPLOY_COMMIT`: `6301a428`
+- Pripravené, nezlúčené: `fix/adpkd-mayo-2026-11-03` (`4dd8aebc`), `fix/gupta-mg-cutoff-2026-11-03` (`93fcde65`)
 
 ## Čo je hotové
 
-1. Beh 150 až 157: skalárne vstupy, PHPStan 0, referenčné testy 15 kalkulačiek
-2. Regresie 48 PASS
+1. Beh 150 až 159: skalárne vstupy, PHPStan 0, referenčné testy 16 kalkulačiek
+2. Regresie 49 PASS
 
-## Otvorené
+## Otvorené (súhlas majiteľa)
 
-- Rozhodnutia majiteľa: limity korekcie hyponatrémie (Beh 153), CRRT predilúcia a citácia (Beh 157)
-- Referenčné testy: kdpi, igan, adpkd, gupta, mgrs, mgus
+- Zlúčenie ADPKD a Gupta Mg vetiev
+- IgAN koeficienty / skrytie
+- Limity korekcie hyponatrémie; CRRT predilúcia a citácia
 
 ## Executable next step
 
@@ -31,4 +32,4 @@ php tools/run_regressions.php
 
 ## Handoff
 
-`.codex/handoffs/2026-11-03-112800-crrt-clinical-refs.md`
+`.codex/handoffs/2026-11-03-115500-gupta-clinical-refs.md`
