@@ -156,6 +156,11 @@ requestInputTest(
     'auth.php musí načítavať request_input a používať requestCsrfTokenFromPost.',
 );
 requestInputTest(
+    str_contains((string) file_get_contents($root . '/profile.php'), 'requestRequireScalarPost()')
+        && str_contains((string) file_get_contents($root . '/profile.php'), 'requestScalarString($_POST, $field)'),
+    'profile.php musí odmietnuť poľový POST a čítať polia cez requestScalarString.',
+);
+requestInputTest(
     str_contains((string) file_get_contents($root . '/login.php'), 'requestCsrfTokenFromPost()'),
     'login.php musí čítať CSRF cez requestCsrfTokenFromPost.',
 );
@@ -196,18 +201,24 @@ requestInputTest(!str_contains($textBody, '<br') && !str_contains($textBody, 'Fa
 
 requestRequireScalarPost(['email' => 'a@b.sk', 'age_confirm' => '1', 'empty' => null]);
 requestInputTest(true, 'Skalárny POST prejde bez ukončenia.');
+
+// Windows: php -r + escapeshellarg rozbije vnorené úvodzovky; fixture súbor je spoľahlivý
+// (rovnaký vzor ako reject JSON/text vyššie).
+$fixtureScalarPost = sys_get_temp_dir() . DIRECTORY_SEPARATOR . 'nefro_req_scalar_post_' . getmypid() . '.php';
+file_put_contents($fixtureScalarPost, "<?php\ndeclare(strict_types=1);\n"
+    . "require " . var_export($root . DIRECTORY_SEPARATOR . 'request_input.php', true) . ";\n"
+    . "requestRequireScalarPost(['email' => ['x']]);\n"
+    . "echo 'REACHED';\n");
 $scalarPostOut = [];
 $scalarPostCode = 0;
-exec(
-    escapeshellarg(PHP_BINARY) . ' -d display_errors=0 -r '
-    . escapeshellarg('require ' . var_export(dirname(__DIR__) . '/request_input.php', true) . '; requestRequireScalarPost(["email" => ["x"]]); echo "REACHED";')
-    . ' 2>&1',
-    $scalarPostOut,
-    $scalarPostCode,
-);
+exec(escapeshellarg($php) . ' -d display_errors=0 ' . escapeshellarg($fixtureScalarPost) . ' 2>&1', $scalarPostOut, $scalarPostCode);
 $scalarPostBody = implode("\n", $scalarPostOut);
-requestInputTest(!str_contains($scalarPostBody, 'REACHED'), 'Poľový POST parameter ukončí požiadavku.');
-requestInputTest(str_contains($scalarPostBody, 'Neplatný tvar parametra "email"'), 'Poľový POST → riadená 400 správa.');
+@unlink($fixtureScalarPost);
+requestInputTest(!str_contains($scalarPostBody, 'REACHED'), 'Poľový POST parameter ukončí požiadavku. Got: ' . $scalarPostBody);
+requestInputTest(
+    str_contains($scalarPostBody, 'Neplatný tvar parametra "email"'),
+    'Poľový POST → riadená 400 správa. Got: ' . $scalarPostBody,
+);
 requestInputTest(!str_contains($scalarPostBody, 'Fatal') && !str_contains($scalarPostBody, 'TypeError'), 'Poľový POST nie je fatál.');
 
 echo "Request input: $checks PASS\n";

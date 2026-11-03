@@ -3,16 +3,18 @@
 declare(strict_types=1);
 
 /**
- * P1 klinické referenčné príklady: KFRE, EKFC, UACR, Mehran, G kategórie.
+ * P1 klinické referenčné príklady: KFRE, EKFC, UACR, Mehran, G kategórie, PREVENT.
  *
  * Očakávané KFRE hodnoty sú zosúladené s oficiálnym nástrojom (rovnaké
  * prípady ako tools/test_ambulatory_calculator.php). EKFC/UACR/Mehran
- * chránia koeficienty a prahy pred tichou zmenou.
+ * chránia koeficienty a prahy pred tichou zmenou. PREVENT golden case je
+ * oficiálny preventr README príklad (zhoda s ACC/AHA kalkulátorom).
  */
 
 require_once dirname(__DIR__) . '/calculators_common.php';
 require_once dirname(__DIR__) . '/calculator_ekfc_logic.php';
 require_once dirname(__DIR__) . '/ckd_risk_models.php';
+require_once dirname(__DIR__) . '/prevent_model.php';
 
 $checks = 0;
 
@@ -166,4 +168,59 @@ clinicalRefTest(
     'calculator_ekfc.php musí načítavať calculator_ekfc_logic.php',
 );
 
-echo "Clinical references (KFRE/EKFC/UACR/Mehran/G): $checks PASS\n";
+// ─── PREVENT AHA 2024 (preventr README / ACC/AHA golden case) ───
+$preventBase = [
+    'age' => 50,
+    'sex' => 'female',
+    'total_c' => 200.0,
+    'hdl_c' => 45.0,
+    'chol_unit' => 'mgdl',
+    'sbp' => 160.0,
+    'bp_tx' => true,
+    'statin' => false,
+    'dm' => true,
+    'smoking' => false,
+    'bmi' => 35.0,
+    'egfr' => 90.0,
+];
+$preventOut = preventComputeAll($preventBase);
+clinicalRefTest($preventOut['model'] === 'base', 'PREVENT bez voliteľných → base');
+clinicalRefTest($preventOut['show_30yr'] === true, 'PREVENT vek 50 → 30r áno');
+clinicalRefApprox(14.7, (float) $preventOut['risks']['total_cvd']['10yr'], 0.05, 'PREVENT 10r total CVD');
+clinicalRefApprox(9.2, (float) $preventOut['risks']['ascvd']['10yr'], 0.05, 'PREVENT 10r ASCVD');
+clinicalRefApprox(8.1, (float) $preventOut['risks']['heart_failure']['10yr'], 0.05, 'PREVENT 10r HF');
+clinicalRefApprox(53.0, (float) $preventOut['risks']['total_cvd']['30yr'], 0.05, 'PREVENT 30r total CVD');
+clinicalRefApprox(35.4, (float) $preventOut['risks']['ascvd']['30yr'], 0.05, 'PREVENT 30r ASCVD');
+clinicalRefApprox(39.0, (float) $preventOut['risks']['heart_failure']['30yr'], 0.05, 'PREVENT 30r HF');
+
+$preventUacr = preventComputeAll($preventBase + ['uacr' => 300.0]);
+clinicalRefTest($preventUacr['model'] === 'uacr', 'PREVENT s UACR → uacr variant');
+clinicalRefApprox(13.0, (float) $preventUacr['risks']['ascvd']['10yr'], 0.05, 'PREVENT UACR 300 → 10r ASCVD 13,0');
+
+clinicalRefTest(preventSelectModel(false, false, false) === 'base', 'PREVENT select base');
+clinicalRefTest(preventSelectModel(true, false, false) === 'uacr', 'PREVENT select uacr');
+clinicalRefTest(preventSelectModel(false, true, false) === 'hba1c', 'PREVENT select hba1c');
+clinicalRefTest(preventSelectModel(false, false, true) === 'sdi', 'PREVENT select sdi');
+clinicalRefTest(preventSelectModel(true, true, false) === 'full', 'PREVENT select full');
+
+$age60 = preventComputeAll(array_merge($preventBase, ['age' => 60]));
+clinicalRefTest($age60['show_30yr'] === false, 'PREVENT vek 60 → 30r nie');
+clinicalRefTest($age60['risks']['ascvd']['30yr'] === null, 'PREVENT vek 60 → 30r ASCVD null');
+
+clinicalRefTest(preventRiskClass(2.9) === 'risk-low', 'PREVENT class <3');
+clinicalRefTest(preventRiskClass(3.0) === 'risk-moderate', 'PREVENT class 3–5');
+clinicalRefTest(preventRiskClass(5.0) === 'risk-high', 'PREVENT class 5–10');
+clinicalRefTest(preventRiskClass(10.0) === 'risk-very-high', 'PREVENT class ≥10');
+
+$interp = preventInterpretation(9.2);
+clinicalRefTest($interp['css'] === 'risk-high', 'PREVENT interpretácia 9,2 → high');
+clinicalRefTest(str_contains($interp['category'], 'Stredné riziko'), 'PREVENT interpretácia kategória 5–10');
+
+$preventPageSrc = (string) file_get_contents(dirname(__DIR__) . '/calculator_prevent.php');
+clinicalRefTest(
+    str_contains($preventPageSrc, 'prevent_model.php')
+        && str_contains($preventPageSrc, 'preventComputeAll'),
+    'calculator_prevent.php musí používať prevent_model.php',
+);
+
+echo "Clinical references (KFRE/EKFC/UACR/Mehran/G/PREVENT): $checks PASS\n";

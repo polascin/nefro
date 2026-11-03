@@ -125,6 +125,8 @@ if ($requestMethod === 'POST' && ($_POST['action'] ?? '') === 'delete_account') 
 }
 
 if ($requestMethod === 'POST' && ($_POST['action'] ?? '') !== 'delete_account') {
+    // Formulár profilu nemá poľové polia; email[]/username[] by inak skončilo TypeError v trim().
+    requestRequireScalarPost();
     $postedCsrfToken = requestCsrfTokenFromPost();
     if (!validateCsrfToken($postedCsrfToken)) {
         $errors[] = "Neplatný CSRF token. Skúste to znova.";
@@ -155,10 +157,8 @@ if ($requestMethod === 'POST' && ($_POST['action'] ?? '') !== 'delete_account') 
 
         $data = [];
         foreach ($fields as $field) {
-            $data[$field] = trim($_POST[$field] ?? '');
-            if ($data[$field] === '') {
-                $data[$field] = null;
-            }
+            $value = requestScalarString($_POST, $field);
+            $data[$field] = ($value === '') ? null : $value;
         }
 
         // Whitelist pre gender — ochrana pred vložením ľubovoľného reťazca
