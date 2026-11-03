@@ -2,7 +2,11 @@
 
 ## Ďalšia slučka
 
-1. P1 z `.audit.md`: klinické referencie ďalších kalkulačiek alebo a11y úlohy.
+1. P1 klinické referencie: cg, crcl_24h, free_water, na, recirculation, plasmic (vzor Beh 151).
+
+## Hotové: slučka 2026-11-03-m (Kt/V, nPCR)
+
+- [x] Vzorce v calculators_common + test 25 PASS; deploy `9a1861e7`
 
 ## Hotové: slučka 2026-11-03-l (skalárne superglobály)
 
