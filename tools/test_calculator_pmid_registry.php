@@ -17,6 +17,7 @@ $checks = 0;
 
 /** @var array<string, list<string>> súbor => overené PMID */
 $registry = [
+    'calculator_adpkd.php' => ['24904092'],
     'calculator_ckdpc.php' => ['35856507'],
     'calculator_ckm.php' => ['37807924'],
     'calculator_furst.php' => ['10768609'],
