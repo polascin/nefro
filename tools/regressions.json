@@ -7,6 +7,7 @@
   "tools/test_calculator_history_guard.php",
   "tools/test_catalogue_search.php",
   "tools/test_compliance_controls.php",
+  "tools/test_crontab_cli_ops.php",
   "tools/test_legal_notifications.php",
   "tools/test_mkch10_codebook.php",
   "tools/test_newsletter_bootstrap.php",
