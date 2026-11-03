@@ -231,7 +231,7 @@ podľa dôkazov, rizík a prínosu; rozhodnutia zapisuje sem.
 - **Rollback:** ENUM sa bežne neskracuje; worker zvláda oba režimy. Pri
   incidente reclaim + log.
 
-### Legal notice ENUM `sending` — NIE v tomto behu
+### Legal notice ENUM `sending` — NIE v tomto behu (148)
 
 Legal worker nemá claim/lease cestu (iba GET_LOCK). Migrácia ENUM bez
 kódu by nič nezmenila. Samostatný beh po portovaní newsletter vzoru.
@@ -240,3 +240,15 @@ kódu by nič nezmenila. Samostatný beh po portovaní newsletter vzoru.
 
 `tools/crontab_lib.php` + `render_crontab.php` + `verify_crontab_parity.php`;
 ops_health WARN pri chýbajúcom ENUM sending; regresia pinuje schedule.
+
+## 2026-11-03 (slučka 11 / Beh 149) — legal claim/lease port
+
+### Legal notice ENUM `sending` + claim/lease — ÁNO
+
+- **Pre:** rovnaké riziko duplicít ako pri newsletteri (SMTP mimo transakcie);
+  newsletter vzor je overený; fronty bez pending; GET_LOCK nestačí pri páde
+  po odoslaní pred update statusu.
+- **Proti / riziká:** ALTER ENUM; stale `sending` (mitigácia reclaim 15 min).
+- **Rollback:** worker má feature detection; bez ENUM ostáva legacy režim.
+- **RSI:** reclaim pin v `test_legal_notifications.php`; ops_health pokrýva
+  aj legal ENUM; migrácia `add_legal_sending_status_migration.php`.

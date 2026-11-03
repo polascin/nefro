@@ -208,16 +208,22 @@ opsHealthTest(proc_close($process) === 2, 'Neznámy parameter vracia kód 2.');
 $sendingPass = opsHealthEvaluateNewsletterSendingSupport([
     'article_newsletter_queue' => true,
     'nl_sub_queue' => true,
+    'legal_notice_queue' => true,
+    'legal_notice_sub_queue' => true,
 ]);
-opsHealthTest($sendingPass['status'] === 'PASS' && $sendingPass['messages'] === [], 'Oba ENUM sending = PASS.');
+opsHealthTest($sendingPass['status'] === 'PASS' && $sendingPass['messages'] === [], 'Všetky ENUM sending = PASS.');
 $sendingWarn = opsHealthEvaluateNewsletterSendingSupport([
     'article_newsletter_queue' => false,
     'nl_sub_queue' => true,
+    'legal_notice_queue' => false,
+    'legal_notice_sub_queue' => true,
 ]);
 opsHealthTest(
     $sendingWarn['status'] === 'WARN'
-        && str_contains(implode(' ', $sendingWarn['messages']), 'article_newsletter_queue'),
-    'Chýbajúci ENUM sending = WARN s názvom tabuľky.',
+        && str_contains(implode(' ', $sendingWarn['messages']), 'article_newsletter_queue')
+        && str_contains(implode(' ', $sendingWarn['messages']), 'legal_notice_queue')
+        && str_contains(implode(' ', $sendingWarn['messages']), 'add_legal_sending_status_migration.php'),
+    'Chýbajúci ENUM sending = WARN s názvom tabuľky a migráciou.',
 );
 
 echo "Ops health: $checks PASS\n";

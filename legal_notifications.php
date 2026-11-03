@@ -313,6 +313,160 @@ if (!function_exists('legalNoticeRecordFailure')) {
     }
 }
 
+/* ── Claim/lease stav `sending` (rovnaký vzor ako newsletter) ──────────────
+ * SMTP nesmie bežať v otvorenej transakcii: pád po odoslaní a pred commitom
+ * by pri rollbacku vrátil riadok do `pending` a ďalší beh by poslal e-mail znova.
+ * Migrácia: add_legal_sending_status_migration.php.
+ * ──────────────────────────────────────────────────────────────────────── */
+
+/** Lease: po koľkých sekundách sa ohlásený riadok považuje za zanechaný. */
+const LEGAL_SENDING_LEASE_SECONDS = 900;
+
+if (!function_exists('legalNoticeQueueTables')) {
+    /** @return list<string> */
+    function legalNoticeQueueTables(): array
+    {
+        return ['legal_notice_queue', 'legal_notice_sub_queue'];
+    }
+}
+
+if (!function_exists('legalNoticeQueueSupportsSending')) {
+    /**
+     * Má tabuľka v ENUM/status hodnotu `sending`?
+     * SQLite testy používajú TEXT — claim/lease je tam vždy zapnutý.
+     */
+    function legalNoticeQueueSupportsSending(PDO $pdo, string $table): bool
+    {
+        static $cache = [];
+        $cacheKey = spl_object_id($pdo) . ':' . $table;
+        if (isset($cache[$cacheKey])) {
+            return $cache[$cacheKey];
+        }
+        if (!in_array($table, legalNoticeQueueTables(), true)) {
+            throw new InvalidArgumentException('Neznáma fronta právnych oznámení: ' . $table);
+        }
+        if ($pdo->getAttribute(PDO::ATTR_DRIVER_NAME) === 'sqlite') {
+            return $cache[$cacheKey] = true;
+        }
+
+        $stmt = $pdo->prepare(
+            "SELECT COLUMN_TYPE FROM INFORMATION_SCHEMA.COLUMNS
+             WHERE TABLE_SCHEMA = DATABASE() AND TABLE_NAME = :table AND COLUMN_NAME = 'status'"
+        );
+        $stmt->execute(['table' => $table]);
+        $type = $stmt->fetchColumn();
+        $cache[$cacheKey] = $type !== false && stripos((string) $type, "'sending'") !== false;
+
+        return $cache[$cacheKey];
+    }
+}
+
+if (!function_exists('legalNoticeReclaimStaleSending')) {
+    /**
+     * Vráti zanedbané riadky `sending` späť do `pending` s +1 pokusom.
+     */
+    function legalNoticeReclaimStaleSending(
+        PDO $pdo,
+        string $table,
+        int $leaseSeconds = LEGAL_SENDING_LEASE_SECONDS
+    ): int {
+        if (!in_array($table, legalNoticeQueueTables(), true)) {
+            throw new InvalidArgumentException('Neznáma fronta právnych oznámení: ' . $table);
+        }
+        $leaseMinutes = max(1, (int) ceil($leaseSeconds / 60));
+        $reason = 'Predchádzajúci beh legal notice workera sa nedokončil, položka sa vracia do fronty.';
+
+        if ($pdo->getAttribute(PDO::ATTR_DRIVER_NAME) === 'sqlite') {
+            $stmt = $pdo->prepare(
+                "UPDATE `{$table}`
+                 SET status = 'pending',
+                     attempts = attempts + 1,
+                     next_attempt_at = NOW(),
+                     last_error = :reason
+                 WHERE status = 'sending'
+                   AND sent_at IS NULL
+                   AND updated_at < datetime('now', :lease_mod)"
+            );
+            $stmt->bindValue(':lease_mod', '-' . $leaseMinutes . ' minutes', PDO::PARAM_STR);
+        } else {
+            $stmt = $pdo->prepare(
+                "UPDATE `{$table}`
+                 SET status = 'pending',
+                     attempts = attempts + 1,
+                     next_attempt_at = NOW(),
+                     last_error = :reason
+                 WHERE status = 'sending'
+                   AND sent_at IS NULL
+                   AND updated_at < DATE_SUB(NOW(), INTERVAL :lease_minutes MINUTE)"
+            );
+            $stmt->bindValue(':lease_minutes', $leaseMinutes, PDO::PARAM_INT);
+        }
+        $stmt->bindValue(':reason', $reason, PDO::PARAM_STR);
+        $stmt->execute();
+
+        return $stmt->rowCount();
+    }
+}
+
+if (!function_exists('legalNoticeClaimQueueRows')) {
+    /**
+     * Vyberie a označí riadky ako `sending` (lease) v krátkej transakcii.
+     * Bez ENUM `sending` ostáva transakcia otvorená (legacy FOR UPDATE lock).
+     *
+     * @return list<int>
+     */
+    function legalNoticeClaimQueueRows(PDO $pdo, string $table, int $limit, int $maxAttempts): array
+    {
+        if (!in_array($table, legalNoticeQueueTables(), true)) {
+            throw new InvalidArgumentException('Neznáma fronta právnych oznámení: ' . $table);
+        }
+
+        $supportsSending = legalNoticeQueueSupportsSending($pdo, $table);
+        $forUpdate = $pdo->getAttribute(PDO::ATTR_DRIVER_NAME) === 'sqlite' ? '' : ' FOR UPDATE';
+
+        $pdo->beginTransaction();
+        try {
+            $selectStmt = $pdo->prepare(
+                "SELECT id FROM `{$table}`
+                 WHERE status IN ('pending', 'failed')
+                   AND attempts < :max_attempts
+                   AND next_attempt_at <= NOW()
+                   AND sent_at IS NULL
+                 ORDER BY next_attempt_at ASC, id ASC
+                 LIMIT :limit_rows"
+                . $forUpdate
+            );
+            $selectStmt->bindValue(':max_attempts', $maxAttempts, PDO::PARAM_INT);
+            $selectStmt->bindValue(':limit_rows', $limit, PDO::PARAM_INT);
+            $selectStmt->execute();
+
+            $ids = array_values(array_map('intval', $selectStmt->fetchAll(PDO::FETCH_COLUMN)));
+            if ($ids === []) {
+                $pdo->commit();
+
+                return [];
+            }
+
+            if ($supportsSending) {
+                $claimStmt = $pdo->prepare(
+                    "UPDATE `{$table}` SET status = 'sending' WHERE id IN ("
+                    . implode(',', $ids)
+                    . ')'
+                );
+                $claimStmt->execute();
+                $pdo->commit();
+            }
+
+            return $ids;
+        } catch (Throwable $e) {
+            if ($pdo->inTransaction()) {
+                $pdo->rollBack();
+            }
+            throw $e;
+        }
+    }
+}
+
 if (!function_exists('processLegalNoticeQueue')) {
     /**
      * Odošle frontu pre registrovaných členov.
@@ -324,96 +478,105 @@ if (!function_exists('processLegalNoticeQueue')) {
         $maxAttempts = max(1, min(20, $maxAttempts));
         $stats = ['selected' => 0, 'sent' => 0, 'failed' => 0, 'cancelled' => 0, 'skipped' => 0];
 
-        $selectStmt = $pdo->prepare(
-            "SELECT id FROM legal_notice_queue
-             WHERE status IN ('pending','failed') AND attempts < :max_attempts
-               AND next_attempt_at <= NOW() AND sent_at IS NULL
-             ORDER BY next_attempt_at ASC, id ASC LIMIT :limit_rows"
-        );
-        $selectStmt->bindValue(':max_attempts', $maxAttempts, PDO::PARAM_INT);
-        $selectStmt->bindValue(':limit_rows', $limit, PDO::PARAM_INT);
-        $selectStmt->execute();
-        $ids = $selectStmt->fetchAll(PDO::FETCH_COLUMN);
-        $stats['selected'] = count($ids);
-
-        $itemStmt = $pdo->prepare(
-            "SELECT q.id, q.legal_version, q.user_id, q.email, q.attempts,
-                    u.username, u.title_before, u.first_name, u.middle_name,
-                    u.last_name, u.title_after, u.email AS user_email,
-                    u.is_active, u.email_verified_at, r.effective_date, r.change_summary
-             FROM legal_notice_queue q
-             LEFT JOIN users u ON u.id = q.user_id
-             LEFT JOIN legal_notice_runs r ON r.legal_version = q.legal_version
-             WHERE q.id = :id LIMIT 1"
-        );
-        $cancelStmt = $pdo->prepare(
-            "UPDATE legal_notice_queue SET status='cancelled', next_attempt_at=NOW(), last_error=:reason
-             WHERE id=:id AND sent_at IS NULL"
-        );
-        $failStmt = legalNoticePrepareFailStmt($pdo, 'legal_notice_queue');
-        $successStmt = $pdo->prepare(
-            "UPDATE legal_notice_queue SET status='sent', attempts=attempts+1, sent_at=NOW(), last_error=NULL
-             WHERE id=:id AND sent_at IS NULL"
-        );
-
-        foreach ($ids as $queueIdRaw) {
-            $queueId = (int) $queueIdRaw;
-            if ($queueId <= 0) {
-                $stats['skipped']++;
-                continue;
-            }
-            $itemStmt->execute(['id' => $queueId]);
-            $item = $itemStmt->fetch();
-            if (!$item) {
-                $stats['skipped']++;
-                continue;
-            }
-
-            $cancelReason = null;
-            if ((int) ($item['is_active'] ?? 0) !== 1) {
-                $cancelReason = 'Používateľský účet je neaktívny.';
-            } elseif (empty($item['email_verified_at'])) {
-                $cancelReason = 'E-mail používateľa nie je overený.';
-            }
-            if ($cancelReason !== null) {
-                $cancelStmt->execute(['id' => $queueId, 'reason' => $cancelReason]);
-                $stats['cancelled']++;
-                continue;
-            }
-
-            $recipientEmail = trim((string) ($item['user_email'] ?? $item['email'] ?? ''));
-            if ($recipientEmail === '' || !filter_var($recipientEmail, FILTER_VALIDATE_EMAIL)) {
-                $failAttempt = (int) ($item['attempts'] ?? 0) + 1;
-                legalNoticeRecordFailure($failStmt, $pdo, $queueId, $failAttempt, 'Neplatný alebo chýbajúci e-mail príjemcu.');
-                $stats['failed']++;
-                continue;
-            }
-
-            $failure = 'SMTP odoslanie zlyhalo.';
-            try {
-                $info = legalNoticeQueuedVersionInfo($item);
-                $version = $info['version'];
-                $subject = 'Aktualizácia právnych podmienok (verzia ' . $version . ') - Nefro-projekt Slovensko';
-                $displayName = legalNoticeDisplayName($item, $recipientEmail);
-                $body = buildLegalNoticeEmailHtml($displayName, $version, $info['effectiveDate'], $info['updates'], false);
-                $sent = legalNoticeSendOne($recipientEmail, $subject, $body);
-            } catch (\Throwable $e) {
-                $sent = false;
-                $failure = 'Príprava alebo odoslanie právneho oznámenia zlyhalo.';
-                error_log('Legal notice item failed: queue=' . 'user' . ' id=' . $queueId . ' type=' . get_class($e));
-            }
-
-            if ($sent) {
-                $successStmt->execute(['id' => $queueId]);
-                $stats['sent']++;
+        try {
+            if (legalNoticeQueueSupportsSending($pdo, 'legal_notice_queue')) {
+                legalNoticeReclaimStaleSending($pdo, 'legal_notice_queue');
             } else {
-                $failAttempt = (int) ($item['attempts'] ?? 0) + 1;
-                legalNoticeRecordFailure($failStmt, $pdo, $queueId, $failAttempt, $failure);
-                $stats['failed']++;
+                error_log('Legal fronta legal_notice_queue nemá stav `sending` — spustite add_legal_sending_status_migration.php.');
             }
-        }
 
-        return $stats;
+            $ids = legalNoticeClaimQueueRows($pdo, 'legal_notice_queue', $limit, $maxAttempts);
+            $stats['selected'] = count($ids);
+
+            $itemStmt = $pdo->prepare(
+                "SELECT q.id, q.legal_version, q.user_id, q.email, q.attempts,
+                        u.username, u.title_before, u.first_name, u.middle_name,
+                        u.last_name, u.title_after, u.email AS user_email,
+                        u.is_active, u.email_verified_at, r.effective_date, r.change_summary
+                 FROM legal_notice_queue q
+                 LEFT JOIN users u ON u.id = q.user_id
+                 LEFT JOIN legal_notice_runs r ON r.legal_version = q.legal_version
+                 WHERE q.id = :id LIMIT 1"
+            );
+            $cancelStmt = $pdo->prepare(
+                "UPDATE legal_notice_queue SET status='cancelled', next_attempt_at=NOW(), last_error=:reason
+                 WHERE id=:id AND sent_at IS NULL"
+            );
+            $failStmt = legalNoticePrepareFailStmt($pdo, 'legal_notice_queue');
+            $successStmt = $pdo->prepare(
+                "UPDATE legal_notice_queue SET status='sent', attempts=attempts+1, sent_at=NOW(), last_error=NULL
+                 WHERE id=:id AND sent_at IS NULL"
+            );
+
+            foreach ($ids as $queueIdRaw) {
+                $queueId = (int) $queueIdRaw;
+                if ($queueId <= 0) {
+                    $stats['skipped']++;
+                    continue;
+                }
+                $itemStmt->execute(['id' => $queueId]);
+                $item = $itemStmt->fetch();
+                if (!$item) {
+                    $stats['skipped']++;
+                    continue;
+                }
+
+                $cancelReason = null;
+                if ((int) ($item['is_active'] ?? 0) !== 1) {
+                    $cancelReason = 'Používateľský účet je neaktívny.';
+                } elseif (empty($item['email_verified_at'])) {
+                    $cancelReason = 'E-mail používateľa nie je overený.';
+                }
+                if ($cancelReason !== null) {
+                    $cancelStmt->execute(['id' => $queueId, 'reason' => $cancelReason]);
+                    $stats['cancelled']++;
+                    continue;
+                }
+
+                $recipientEmail = trim((string) ($item['user_email'] ?? $item['email'] ?? ''));
+                if ($recipientEmail === '' || !filter_var($recipientEmail, FILTER_VALIDATE_EMAIL)) {
+                    $failAttempt = (int) ($item['attempts'] ?? 0) + 1;
+                    legalNoticeRecordFailure($failStmt, $pdo, $queueId, $failAttempt, 'Neplatný alebo chýbajúci e-mail príjemcu.');
+                    $stats['failed']++;
+                    continue;
+                }
+
+                $failure = 'SMTP odoslanie zlyhalo.';
+                try {
+                    $info = legalNoticeQueuedVersionInfo($item);
+                    $version = $info['version'];
+                    $subject = 'Aktualizácia právnych podmienok (verzia ' . $version . ') - Nefro-projekt Slovensko';
+                    $displayName = legalNoticeDisplayName($item, $recipientEmail);
+                    $body = buildLegalNoticeEmailHtml($displayName, $version, $info['effectiveDate'], $info['updates'], false);
+                    $sent = legalNoticeSendOne($recipientEmail, $subject, $body);
+                } catch (\Throwable $e) {
+                    $sent = false;
+                    $failure = 'Príprava alebo odoslanie právneho oznámenia zlyhalo.';
+                    error_log('Legal notice item failed: queue=' . 'user' . ' id=' . $queueId . ' type=' . get_class($e));
+                }
+
+                if ($sent) {
+                    $successStmt->execute(['id' => $queueId]);
+                    $stats['sent']++;
+                } else {
+                    $failAttempt = (int) ($item['attempts'] ?? 0) + 1;
+                    legalNoticeRecordFailure($failStmt, $pdo, $queueId, $failAttempt, $failure);
+                    $stats['failed']++;
+                }
+            }
+
+            if ($pdo->inTransaction()) {
+                $pdo->commit();
+            }
+
+            return $stats;
+        } catch (Throwable $e) {
+            if ($pdo->inTransaction()) {
+                $pdo->rollBack();
+            }
+            error_log('processLegalNoticeQueue error: ' . $e->getMessage());
+            throw $e;
+        }
     }
 }
 
@@ -428,94 +591,103 @@ if (!function_exists('processLegalNoticeSubQueue')) {
         $maxAttempts = max(1, min(20, $maxAttempts));
         $stats = ['selected' => 0, 'sent' => 0, 'failed' => 0, 'cancelled' => 0, 'skipped' => 0];
 
-        $selectStmt = $pdo->prepare(
-            "SELECT id FROM legal_notice_sub_queue
-             WHERE status IN ('pending','failed') AND attempts < :max_attempts
-               AND next_attempt_at <= NOW() AND sent_at IS NULL
-             ORDER BY next_attempt_at ASC, id ASC LIMIT :limit_rows"
-        );
-        $selectStmt->bindValue(':max_attempts', $maxAttempts, PDO::PARAM_INT);
-        $selectStmt->bindValue(':limit_rows', $limit, PDO::PARAM_INT);
-        $selectStmt->execute();
-        $ids = $selectStmt->fetchAll(PDO::FETCH_COLUMN);
-        $stats['selected'] = count($ids);
-
-        $itemStmt = $pdo->prepare(
-            "SELECT q.id, q.legal_version, q.subscriber_id, q.email, q.attempts,
-                    s.email AS sub_email, s.verified_at, s.unsubscribed_at, r.effective_date, r.change_summary
-             FROM legal_notice_sub_queue q
-             LEFT JOIN newsletter_subscribers s ON s.id = q.subscriber_id
-             LEFT JOIN legal_notice_runs r ON r.legal_version = q.legal_version
-             WHERE q.id = :id LIMIT 1"
-        );
-        $cancelStmt = $pdo->prepare(
-            "UPDATE legal_notice_sub_queue SET status='cancelled', next_attempt_at=NOW(), last_error=:reason
-             WHERE id=:id AND sent_at IS NULL"
-        );
-        $failStmt = legalNoticePrepareFailStmt($pdo, 'legal_notice_sub_queue');
-        $successStmt = $pdo->prepare(
-            "UPDATE legal_notice_sub_queue SET status='sent', attempts=attempts+1, sent_at=NOW(), last_error=NULL
-             WHERE id=:id AND sent_at IS NULL"
-        );
-
-        foreach ($ids as $queueIdRaw) {
-            $queueId = (int) $queueIdRaw;
-            if ($queueId <= 0) {
-                $stats['skipped']++;
-                continue;
-            }
-            $itemStmt->execute(['id' => $queueId]);
-            $item = $itemStmt->fetch();
-            if (!$item) {
-                $stats['skipped']++;
-                continue;
-            }
-
-            $cancelReason = null;
-            if (empty($item['verified_at'])) {
-                $cancelReason = 'Odberateľ nie je overený.';
-            } elseif (!empty($item['unsubscribed_at'])) {
-                $cancelReason = 'Odberateľ sa odhlásil.';
-            }
-            if ($cancelReason !== null) {
-                $cancelStmt->execute(['id' => $queueId, 'reason' => $cancelReason]);
-                $stats['cancelled']++;
-                continue;
-            }
-
-            $recipientEmail = trim((string) ($item['sub_email'] ?? $item['email'] ?? ''));
-            if ($recipientEmail === '' || !filter_var($recipientEmail, FILTER_VALIDATE_EMAIL)) {
-                $failAttempt = (int) ($item['attempts'] ?? 0) + 1;
-                legalNoticeRecordFailure($failStmt, $pdo, $queueId, $failAttempt, 'Neplatný alebo chýbajúci e-mail príjemcu.');
-                $stats['failed']++;
-                continue;
-            }
-
-            $failure = 'SMTP odoslanie zlyhalo.';
-            try {
-                $info = legalNoticeQueuedVersionInfo($item);
-                $version = $info['version'];
-                $subject = 'Aktualizácia právnych podmienok (verzia ' . $version . ') - Nefro-projekt Slovensko';
-                $unsubscribeUrl = buildSubscriberUnsubscribeHmacUrl((int) ($item['subscriber_id'] ?? 0), $recipientEmail);
-                $body = buildLegalNoticeEmailHtml($recipientEmail, $version, $info['effectiveDate'], $info['updates'], true, $unsubscribeUrl);
-                $sent = legalNoticeSendOne($recipientEmail, $subject, $body);
-            } catch (\Throwable $e) {
-                $sent = false;
-                $failure = 'Príprava alebo odoslanie právneho oznámenia zlyhalo.';
-                error_log('Legal notice item failed: queue=' . 'sub' . ' id=' . $queueId . ' type=' . get_class($e));
-            }
-
-            if ($sent) {
-                $successStmt->execute(['id' => $queueId]);
-                $stats['sent']++;
+        try {
+            if (legalNoticeQueueSupportsSending($pdo, 'legal_notice_sub_queue')) {
+                legalNoticeReclaimStaleSending($pdo, 'legal_notice_sub_queue');
             } else {
-                $failAttempt = (int) ($item['attempts'] ?? 0) + 1;
-                legalNoticeRecordFailure($failStmt, $pdo, $queueId, $failAttempt, $failure);
-                $stats['failed']++;
+                error_log('Legal fronta legal_notice_sub_queue nemá stav `sending` — spustite add_legal_sending_status_migration.php.');
             }
-        }
 
-        return $stats;
+            $ids = legalNoticeClaimQueueRows($pdo, 'legal_notice_sub_queue', $limit, $maxAttempts);
+            $stats['selected'] = count($ids);
+
+            $itemStmt = $pdo->prepare(
+                "SELECT q.id, q.legal_version, q.subscriber_id, q.email, q.attempts,
+                        s.email AS sub_email, s.verified_at, s.unsubscribed_at, r.effective_date, r.change_summary
+                 FROM legal_notice_sub_queue q
+                 LEFT JOIN newsletter_subscribers s ON s.id = q.subscriber_id
+                 LEFT JOIN legal_notice_runs r ON r.legal_version = q.legal_version
+                 WHERE q.id = :id LIMIT 1"
+            );
+            $cancelStmt = $pdo->prepare(
+                "UPDATE legal_notice_sub_queue SET status='cancelled', next_attempt_at=NOW(), last_error=:reason
+                 WHERE id=:id AND sent_at IS NULL"
+            );
+            $failStmt = legalNoticePrepareFailStmt($pdo, 'legal_notice_sub_queue');
+            $successStmt = $pdo->prepare(
+                "UPDATE legal_notice_sub_queue SET status='sent', attempts=attempts+1, sent_at=NOW(), last_error=NULL
+                 WHERE id=:id AND sent_at IS NULL"
+            );
+
+            foreach ($ids as $queueIdRaw) {
+                $queueId = (int) $queueIdRaw;
+                if ($queueId <= 0) {
+                    $stats['skipped']++;
+                    continue;
+                }
+                $itemStmt->execute(['id' => $queueId]);
+                $item = $itemStmt->fetch();
+                if (!$item) {
+                    $stats['skipped']++;
+                    continue;
+                }
+
+                $cancelReason = null;
+                if (empty($item['verified_at'])) {
+                    $cancelReason = 'Odberateľ nie je overený.';
+                } elseif (!empty($item['unsubscribed_at'])) {
+                    $cancelReason = 'Odberateľ sa odhlásil.';
+                }
+                if ($cancelReason !== null) {
+                    $cancelStmt->execute(['id' => $queueId, 'reason' => $cancelReason]);
+                    $stats['cancelled']++;
+                    continue;
+                }
+
+                $recipientEmail = trim((string) ($item['sub_email'] ?? $item['email'] ?? ''));
+                if ($recipientEmail === '' || !filter_var($recipientEmail, FILTER_VALIDATE_EMAIL)) {
+                    $failAttempt = (int) ($item['attempts'] ?? 0) + 1;
+                    legalNoticeRecordFailure($failStmt, $pdo, $queueId, $failAttempt, 'Neplatný alebo chýbajúci e-mail príjemcu.');
+                    $stats['failed']++;
+                    continue;
+                }
+
+                $failure = 'SMTP odoslanie zlyhalo.';
+                try {
+                    $info = legalNoticeQueuedVersionInfo($item);
+                    $version = $info['version'];
+                    $subject = 'Aktualizácia právnych podmienok (verzia ' . $version . ') - Nefro-projekt Slovensko';
+                    $unsubscribeUrl = buildSubscriberUnsubscribeHmacUrl((int) ($item['subscriber_id'] ?? 0), $recipientEmail);
+                    $body = buildLegalNoticeEmailHtml($recipientEmail, $version, $info['effectiveDate'], $info['updates'], true, $unsubscribeUrl);
+                    $sent = legalNoticeSendOne($recipientEmail, $subject, $body);
+                } catch (\Throwable $e) {
+                    $sent = false;
+                    $failure = 'Príprava alebo odoslanie právneho oznámenia zlyhalo.';
+                    error_log('Legal notice item failed: queue=' . 'sub' . ' id=' . $queueId . ' type=' . get_class($e));
+                }
+
+                if ($sent) {
+                    $successStmt->execute(['id' => $queueId]);
+                    $stats['sent']++;
+                } else {
+                    $failAttempt = (int) ($item['attempts'] ?? 0) + 1;
+                    legalNoticeRecordFailure($failStmt, $pdo, $queueId, $failAttempt, $failure);
+                    $stats['failed']++;
+                }
+            }
+
+            if ($pdo->inTransaction()) {
+                $pdo->commit();
+            }
+
+            return $stats;
+        } catch (Throwable $e) {
+            if ($pdo->inTransaction()) {
+                $pdo->rollBack();
+            }
+            error_log('processLegalNoticeSubQueue error: ' . $e->getMessage());
+            throw $e;
+        }
     }
 }
 

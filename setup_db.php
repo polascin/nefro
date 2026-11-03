@@ -104,6 +104,7 @@ const SCHEMA_MIGRATION_ORDER = [
     'add_newsletter_tables_migration.php',
     'add_legal_notice_migration.php',
     'add_newsletter_sending_status_migration.php',
+    'add_legal_sending_status_migration.php',
 ];
 
 if (!function_exists('runPendingSchemaMigrations')) {
@@ -774,7 +775,7 @@ try {
         legal_version VARCHAR(20) NOT NULL,
         user_id INT NOT NULL,
         email VARCHAR(255) NOT NULL,
-        status ENUM('pending','sent','failed','cancelled') NOT NULL DEFAULT 'pending',
+        status ENUM('pending','sending','sent','failed','cancelled') NOT NULL DEFAULT 'pending',
         attempts INT NOT NULL DEFAULT 0,
         next_attempt_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
         sent_at DATETIME NULL,
@@ -794,7 +795,7 @@ try {
         legal_version VARCHAR(20) NOT NULL,
         subscriber_id INT NOT NULL,
         email VARCHAR(255) NOT NULL,
-        status ENUM('pending','sent','failed','cancelled') NOT NULL DEFAULT 'pending',
+        status ENUM('pending','sending','sent','failed','cancelled') NOT NULL DEFAULT 'pending',
         attempts INT NOT NULL DEFAULT 0,
         next_attempt_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
         sent_at DATETIME NULL,

@@ -199,20 +199,30 @@ function opsHealthNormalizeExcerpt(string $text): string
 }
 
 /**
- * Či newsletter fronty majú v ENUM `status` hodnotu `sending` (claim/lease).
+ * Či mailové fronty majú v ENUM `status` hodnotu `sending` (claim/lease).
  *
- * @return array{article_newsletter_queue: bool, nl_sub_queue: bool}
+ * @return array{
+ *   article_newsletter_queue: bool,
+ *   nl_sub_queue: bool,
+ *   legal_notice_queue: bool,
+ *   legal_notice_sub_queue: bool
+ * }
  */
 function opsHealthNewsletterSendingSupport(PDO $pdo): array
 {
     $out = [
         'article_newsletter_queue' => false,
         'nl_sub_queue' => false,
+        'legal_notice_queue' => false,
+        'legal_notice_sub_queue' => false,
     ];
     $stmt = $pdo->prepare(
         "SELECT TABLE_NAME, COLUMN_TYPE FROM INFORMATION_SCHEMA.COLUMNS
          WHERE TABLE_SCHEMA = DATABASE()
-           AND TABLE_NAME IN ('article_newsletter_queue', 'nl_sub_queue')
+           AND TABLE_NAME IN (
+               'article_newsletter_queue', 'nl_sub_queue',
+               'legal_notice_queue', 'legal_notice_sub_queue'
+           )
            AND COLUMN_NAME = 'status'"
     );
     $stmt->execute();
@@ -228,7 +238,7 @@ function opsHealthNewsletterSendingSupport(PDO $pdo): array
 }
 
 /**
- * @param array{article_newsletter_queue: bool, nl_sub_queue: bool} $support
+ * @param array<string, bool> $support
  * @return array{status: string, messages: list<string>}
  */
 function opsHealthEvaluateNewsletterSendingSupport(array $support): array
@@ -243,11 +253,21 @@ function opsHealthEvaluateNewsletterSendingSupport(array $support): array
         return ['status' => 'PASS', 'messages' => []];
     }
 
+    $hints = [];
+    foreach ($missing as $table) {
+        if (str_starts_with($table, 'legal_')) {
+            $hints[] = 'add_legal_sending_status_migration.php';
+        } else {
+            $hints[] = 'add_newsletter_sending_status_migration.php';
+        }
+    }
+    $hints = array_values(array_unique($hints));
+
     return [
         'status' => 'WARN',
         'messages' => [
             'Chýba ENUM sending na: ' . implode(', ', $missing)
-                . ' — spustite add_newsletter_sending_status_migration.php (claim/lease).',
+                . ' — spustite ' . implode(' / ', $hints) . ' (claim/lease).',
         ],
     ];
 }
@@ -587,10 +607,12 @@ function opsHealthMain(array $argv): int
         $sendingEval = opsHealthEvaluateNewsletterSendingSupport($sendingSupport);
         $statuses[] = $sendingEval['status'];
         $lines[] = sprintf(
-            '%-5s newsletter ENUM sending: article=%s, nl_sub=%s',
+            '%-5s mail ENUM sending: article=%s, nl_sub=%s, legal=%s, legal_sub=%s',
             $sendingEval['status'],
             $sendingSupport['article_newsletter_queue'] ? 'ano' : 'nie',
-            $sendingSupport['nl_sub_queue'] ? 'ano' : 'nie'
+            $sendingSupport['nl_sub_queue'] ? 'ano' : 'nie',
+            $sendingSupport['legal_notice_queue'] ? 'ano' : 'nie',
+            $sendingSupport['legal_notice_sub_queue'] ? 'ano' : 'nie'
         );
         foreach ($sendingEval['messages'] as $message) {
             $lines[] = '      ' . $message;

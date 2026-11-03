@@ -62,7 +62,8 @@ $pdo->exec("INSERT INTO newsletter_subscribers VALUES (1, 'subscriber@example.in
 foreach (['legal_notice_queue' => 'user_id', 'legal_notice_sub_queue' => 'subscriber_id'] as $table => $owner) {
     $pdo->exec("CREATE TABLE $table (id INTEGER PRIMARY KEY, legal_version TEXT, $owner INTEGER,
         email TEXT, status TEXT, next_attempt_at TEXT, attempts INTEGER DEFAULT 0,
-        sent_at TEXT, last_error TEXT, UNIQUE(legal_version, $owner))");
+        sent_at TEXT, last_error TEXT, updated_at TEXT DEFAULT '2026-09-24 00:00:00',
+        UNIQUE(legal_version, $owner))");
 }
 
 $current = legalNoticeCurrentVersionInfo();
@@ -142,6 +143,25 @@ foreach ([false, true] as $transportFailure) {
         legalTest(!str_contains($failed['last_error'], 'fictional-secret'), 'Detail výnimky sa nesmie uložiť do frontu.');
         legalTest($processor($pdo)['selected'] === 0, 'Chybná položka sa neskúša znovu pred retry termínom.');
     }
+}
+
+// Claim/lease: stale `sending` sa vráti do fronty a doručí (RSI pin Beh 149).
+foreach (['legal_notice_queue' => 'user_id', 'legal_notice_sub_queue' => 'subscriber_id'] as $table => $owner) {
+    $version = 'lease-' . $table;
+    $pdo->prepare('INSERT INTO legal_notice_runs VALUES (?, ?, ?, ?, 1, 1)')
+        ->execute([$version, '2026-01-01', '["Lease reclaim"]', '2026-01-01']);
+    $pdo->prepare(
+        "INSERT INTO $table (legal_version, $owner, email, status, next_attempt_at, attempts, updated_at)
+         VALUES (?, 1, 'fixture@example.invalid', 'sending', '2026-01-01', 0, '2020-01-01 00:00:00')"
+    )->execute([$version]);
+}
+$beforeMailbox = count(LegalTestMailbox::$messages);
+legalTest(processLegalNoticeQueue($pdo)['sent'] === 1, 'Stale sending v user fronte sa reclaimne a odošle.');
+legalTest(processLegalNoticeSubQueue($pdo)['sent'] === 1, 'Stale sending v sub fronte sa reclaimne a odošle.');
+legalTest(count(LegalTestMailbox::$messages) === $beforeMailbox + 2, 'Reclaim doručí dve správy.');
+foreach (['legal_notice_queue', 'legal_notice_sub_queue'] as $table) {
+    $row = $pdo->query("SELECT status FROM $table WHERE legal_version LIKE 'lease-%'")->fetch();
+    legalTest(($row['status'] ?? '') === 'sent', "Po reclaimi je {$table} v stave sent.");
 }
 
 echo "Legal notifications: $checks PASS\n";
