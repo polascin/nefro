@@ -10,8 +10,8 @@ Beh 148: cron sync + newsletter ENUM sending (mandát RSI). Handoff:
 ## Stav repozitára
 
 - Vetva: `main`
-- HEAD: `eaeaf69c` (LF fix; runtime `bad2398d`)
-- Runtime / `DEPLOY_COMMIT`: `bad2398d`
+- HEAD: `66f6b4e1` (docs Beh 148; runtime `bad2398d`)
+- Runtime / `DEPLOY_COMMIT`: `bad2398d` (ignore drift: tools/docs/state)
 - `origin/main` a `server/main`: aktuálne
 
 ## Čo je hotové
