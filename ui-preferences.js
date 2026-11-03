@@ -271,7 +271,7 @@ function initPrivacyManager() {
             return;
         }
 
-        const bannerIsVisible = !banner.classList.contains('hidden');
+        const bannerIsVisible = !banner.hidden && !banner.classList.contains('hidden');
         const bannerHeight = bannerIsVisible ? Math.ceil(banner.getBoundingClientRect().height) : 0;
         const extraSpace = bannerIsVisible ? Math.max(32, bannerHeight + 24) : 0;
 
@@ -296,8 +296,14 @@ function initPrivacyManager() {
     // Injektovanie HTML do body
     function injectHTML() {
         // Banner
+        // Skrytý banner musí byť mimo a11y stromu (Beh 109): samotná trieda
+        // `.hidden` len posunie CSS transformom a pointer-events vypne, ale
+        // display ostáva flex — AT `hidden` + aria-hidden + inert to odstráni.
+        const bannerDismissedAttrs = hasResponded
+            ? ' class="cookie-banner hidden" hidden aria-hidden="true" inert'
+            : ' class="cookie-banner" aria-hidden="false"';
         const bannerHTML = `
-            <div id="${bannerId}" class="cookie-banner ${hasResponded ? 'hidden' : ''}" role="region" aria-label="Nastavenia súkromia" aria-labelledby="cookieBannerTitle" aria-describedby="cookieBannerDesc">
+            <div id="${bannerId}"${bannerDismissedAttrs} role="region" aria-label="Nastavenia súkromia" aria-labelledby="cookieBannerTitle" aria-describedby="cookieBannerDesc">
                 <div class="cookie-content">
                     <h2 id="cookieBannerTitle">Vážime si vaše súkromie</h2>
                     <p id="cookieBannerDesc">
@@ -415,6 +421,25 @@ function initPrivacyManager() {
     const savedInfo = document.getElementById('cookieConsentSavedInfo');
 
     modal.setAttribute('aria-hidden', 'true');
+
+    function setCookieBannerVisible(visible) {
+        if (!banner) {
+            return;
+        }
+        if (visible) {
+            banner.hidden = false;
+            banner.classList.remove('hidden');
+            banner.setAttribute('aria-hidden', 'false');
+            banner.removeAttribute('inert');
+        } else {
+            banner.classList.add('hidden');
+            banner.hidden = true;
+            banner.setAttribute('aria-hidden', 'true');
+            banner.setAttribute('inert', '');
+        }
+        syncCookieBannerSpace();
+    }
+
     syncCookieBannerSpace();
 
     function saveConsent(consentData) {
@@ -423,8 +448,7 @@ function initPrivacyManager() {
         // stačí aktualizovať konštantu consentVersion na začiatku súboru
         consentData.version = consentVersion;
         persistConsent(consentData);
-        banner.classList.add('hidden');
-        syncCookieBannerSpace();
+        setCookieBannerVisible(false);
         closeModal();
         applyConsent(consentData);
     }

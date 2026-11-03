@@ -180,4 +180,38 @@ for (const search of [
     );
 }
 
+// Beh 109 / slučka 7: zatvorený cookie banner nesmie zostať v a11y strome.
+assert.match(
+    source,
+    /function setCookieBannerVisible\(visible\)/,
+    'ui-preferences.js musí mať setCookieBannerVisible pre a11y dismiss.',
+);
+assert.match(
+    source,
+    /banner\.hidden = true/,
+    'zatvorený banner musí nastaviť HTML atribut hidden.',
+);
+assert.match(
+    source,
+    /banner\.setAttribute\('inert', ''\)/,
+    'zatvorený banner musí nastaviť inert.',
+);
+assert.match(
+    source,
+    /bannerDismissedAttrs[\s\S]*hidden aria-hidden="true" inert/,
+    'pri existujúcom súhlase sa banner musí injektovať už ako a11y-dismissed.',
+);
+
+const fallbackSource = fs.readFileSync(path.join(root, 'ui-preferences-fallback.js'), 'utf8');
+assert.match(
+    fallbackSource,
+    /banner\.hidden = false/,
+    'fallback musí pri zobrazení bannera zrušiť HTML hidden.',
+);
+assert.match(
+    fallbackSource,
+    /banner\.removeAttribute\('inert'\)/,
+    'fallback musí pri zobrazení bannera zrušiť inert.',
+);
+
 console.log('ui-preferences: všetky testy prešli');

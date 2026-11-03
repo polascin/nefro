@@ -26,10 +26,13 @@
             return true;
         }
 
-        // Fallback 2: zobraz banner, ak je skrytý.
+        // Fallback 2: zobraz banner, ak je skrytý (vrátane HTML hidden / inert).
         const banner = document.getElementById('cookieConsentBanner');
         if (banner) {
+            banner.hidden = false;
             banner.classList.remove('hidden');
+            banner.setAttribute('aria-hidden', 'false');
+            banner.removeAttribute('inert');
             return true;
         }
 

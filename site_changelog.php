@@ -55,6 +55,13 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-11-03 07:22',
+                'category' => 'portal',
+                'title' => 'Cookie banner mimo čítačky po súhlase',
+                'description' => 'Po prijatí alebo odmietnutí voliteľných cookies už zatvorený banner nezostáva v strome pre čítačky obrazovky ani neberie fokus. Nastavenia súkromia sa naďalej otvoria z pätičky.',
+                'url' => 'cookies.php',
+            ],
+            [
                 'date' => '2026-11-02 03:52',
                 'category' => 'tools',
                 'title' => 'Spoločné vzorce EKFC, UACR a Mehran + referenčné testy',
