@@ -100,25 +100,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             : "mmol_l";
 
         if (empty($errors)) {
-            // Výpočet celkovej telesnej vody (TBW)
-            $factor = 0.5;
-            if ($sex === "male") {
-                $factor = $ageYears >= 65 ? 0.5 : 0.6;
-            } else {
-                $factor = $ageYears >= 65 ? 0.45 : 0.5;
-            }
-            $tbw = $weightKg * $factor;
+            $tbw = $weightKg * calculatorTbwFraction($sex, (int) $ageYears);
 
             // Deficit voľnej vody (iba ak hypernatrémia)
             $fwd = null;
             if ($sNa > $targetNa) {
-                $fwd = $tbw * ($sNa / $targetNa - 1);
+                $fwd = calculatorFreeWaterDeficit($tbw, $sNa, $targetNa);
             }
 
-            // Adrogué-Madias (Odhadovaná zmena Na po 1L infúzie)
             $changePerL = null;
             if ($infNa !== null && $infK !== null) {
-                $changePerL = ($infNa + $infK - $sNa) / ($tbw + 1);
+                $changePerL = calculatorAdrogueMadias($infNa, $infK, $sNa, $tbw);
             }
 
             // Korekcia Na na hyperglykémiu (Katz 1973: 1,6 ; Hillier 1999: 2,4)
@@ -129,8 +121,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 $glucoseMgDl = $glucoseUnit === "mmol_l"
                     ? (float) $sGlucose * 18.0182
                     : (float) $sGlucose;
-                $correctedNaKatz = (float) $sNa + 1.6 * ($glucoseMgDl - 100.0) / 100.0;
-                $correctedNaHillier = (float) $sNa + 2.4 * ($glucoseMgDl - 100.0) / 100.0;
+                $correctedNaKatz = calculatorSodiumGlucoseCorrection((float) $sNa, $glucoseMgDl, 1.6);
+                $correctedNaHillier = calculatorSodiumGlucoseCorrection((float) $sNa, $glucoseMgDl, 2.4);
             }
 
             // Bezpečná rýchlosť korekcie hyponatrémie (prevencia ODS) — strop za 24 h
