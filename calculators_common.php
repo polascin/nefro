@@ -339,6 +339,128 @@ function calculatorParseNonNegativeFloat(string $value): ?float
     return $number;
 }
 
+/** CSS trieda podľa PLASMIC skóre (0–7). */
+function plasmicRiskClass(int $score): string
+{
+    if ($score >= 6) {
+        return 'risk-high';
+    }
+    if ($score === 5) {
+        return 'risk-moderate';
+    }
+    return 'risk-low';
+}
+
+/** Slovný opis rizikovej skupiny PLASMIC. */
+function plasmicRiskLabel(int $score): string
+{
+    if ($score >= 6) {
+        return 'vysoké riziko (≈ 62 až 82 %)';
+    }
+    if ($score === 5) {
+        return 'stredné riziko (≈ 5 až 24 %)';
+    }
+    return 'nízke riziko (≈ 0 až 4 %)';
+}
+
+// Prah kreatinínu: 2,0 mg/dL ≈ 176,8 µmol/L (× 88,42).
+const PLASMIC_CREA_UMOL = 176.8;
+
+/** CSS trieda podľa klasifikácie Cairo–Bishop. */
+function tlsRiskClass(bool $ctls, bool $ltls): string
+{
+    if ($ctls) {
+        return 'risk-high';
+    }
+    if ($ltls) {
+        return 'risk-moderate';
+    }
+    return 'risk-low';
+}
+
+/** Slovný opis klasifikácie Cairo–Bishop. */
+function tlsRiskLabel(bool $ctls, bool $ltls): string
+{
+    if ($ctls) {
+        return 'klinický TLS';
+    }
+    if ($ltls) {
+        return 'laboratórny TLS';
+    }
+    return 'bez TLS (Cairo-Bishop)';
+}
+
+// Absolútne prahy Cairo–Bishop (SI jednotky).
+const TLS_URIC_ACID = 476.0;   // µmol/L (8 mg/dL)
+const TLS_POTASSIUM = 6.0;     // mmol/L
+const TLS_PHOS_ADULT = 1.45;   // mmol/L (4,5 mg/dL) — dospelí
+const TLS_PHOS_CHILD = 2.1;    // mmol/L (6,5 mg/dL) — deti
+const TLS_CALCIUM = 1.75;      // mmol/L (7 mg/dL) — korigovaný/ionizovaný
+
+/**
+ * PLASMIC skóre (Bendapudi a kol., Lancet Haematol 2017;4(4):e157–e164, PMID 28259520):
+ * po 1 bode trombocyty < 30 ×10⁹/L, hemolýza, bez aktívneho nádoru, bez transplantácie,
+ * MCV < 90 fL, INR < 1,5, kreatinín < 2,0 mg/dL (176,8 µmol/L).
+ *
+ * @return array{platelets: bool, hemolysis: bool, no_cancer: bool, no_transplant: bool, mcv: bool, inr: bool, creatinine: bool, score: int}
+ */
+function plasmicScore(
+    float $plateletsGL,
+    bool $hemolysis,
+    bool $activeCancer,
+    bool $transplant,
+    float $mcvFl,
+    float $inr,
+    float $creatinineUmolL
+): array {
+    $c = [
+        'platelets' => $plateletsGL < 30.0,
+        'hemolysis' => $hemolysis,
+        'no_cancer' => !$activeCancer,
+        'no_transplant' => !$transplant,
+        'mcv' => $mcvFl < 90.0,
+        'inr' => $inr < 1.5,
+        'creatinine' => $creatinineUmolL < PLASMIC_CREA_UMOL,
+    ];
+
+    return $c + ['score' => count(array_filter($c))];
+}
+
+/**
+ * Klasifikácia syndrómu rozpadu nádoru podľa Cairo a Bishop (Br J Haematol 2004;127(1):3–11,
+ * PMID 15384972), absolútne prahy v SI jednotkách. Laboratórny TLS: ≥ 2 odchýlky;
+ * klinický TLS: laboratórny TLS + ≥ 1 klinický prejav.
+ *
+ * @return array{uric: bool, potassium: bool, phosphate: bool, calcium: bool, lab_count: int, clinical_count: int, ltls: bool, ctls: bool}
+ */
+function tlsCairoBishop(
+    float $uricAcidUmolL,
+    float $potassiumMmolL,
+    float $phosphateMmolL,
+    float $calciumMmolL,
+    bool $isChild,
+    bool $creatinineHigh,
+    bool $arrhythmia,
+    bool $seizure
+): array {
+    $lab = [
+        'uric' => $uricAcidUmolL >= TLS_URIC_ACID,
+        'potassium' => $potassiumMmolL >= TLS_POTASSIUM,
+        'phosphate' => $phosphateMmolL >= ($isChild ? TLS_PHOS_CHILD : TLS_PHOS_ADULT),
+        'calcium' => $calciumMmolL <= TLS_CALCIUM,
+    ];
+    $labCount = count(array_filter($lab));
+    $clinicalCount = count(array_filter([$creatinineHigh, $arrhythmia, $seizure]));
+    $ltls = $labCount >= 2;
+
+    return $lab + [
+        'lab_count' => $labCount,
+        'clinical_count' => $clinicalCount,
+        'ltls' => $ltls,
+        'ctls' => $ltls && $clinicalCount >= 1,
+    ];
+}
+
 /**
  * Meraný klírens kreatinínu zo zberu moču: (U_cr · V) / (P_cr · T) v mL/min.
  * U_cr a P_cr v rovnakej jednotke, V v mL, T v hodinách.
