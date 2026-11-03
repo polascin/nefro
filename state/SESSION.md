@@ -10,8 +10,8 @@ Verejné/členské POST majú `requestRequireScalarPost`. Handoff:
 ## Stav repozitára
 
 - Vetva: `main`
-- HEAD: `83cb9d40`
-- Runtime / `DEPLOY_COMMIT`: `83cb9d40`
+- HEAD: `f7eb7b3e` (docs/handoff Beh 143; runtime `83cb9d40`)
+- Runtime / `DEPLOY_COMMIT`: `83cb9d40` (dokumentačný drift HEAD OK)
 - `origin/main` a `server/main`: aktuálne
 
 ## Čo je hotové
