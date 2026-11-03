@@ -135,7 +135,7 @@ $baseUrl = "https://nefro.polascin.net/";
                 <h3 id="zdroje-heading">Zdroje</h3>
                 <ul class="tool-step__list">
                     <li>George JN, Nester CM. Syndromes of thrombotic microangiopathy. <em>N Engl J Med.</em> 2014;371(7):654–666.</li>
-                    <li>Bendapudi PK, et al. Derivation and validation of the PLASMIC score. <em>Lancet Haematol.</em> 2017;4(4):e157–e164.</li>
+                    <li>Bendapudi PK, et al. Derivation and external validation of the PLASMIC score for rapid assessment of adults with thrombotic microangiopathies: a cohort study. <em>Lancet Haematol.</em> 2017;4(4):e157–e164.</li>
                     <li>Brocklebank V, Wood KM, Kavanagh D. Thrombotic Microangiopathy and the Kidney. <em>Clin J Am Soc Nephrol.</em> 2018;13(2):300–317.</li>
                 </ul>
             </section>

@@ -68,4 +68,18 @@ foreach (array_keys($registry) as $file) {
     pmidRegistryTest(isset($found[$file]), "{$file}: register očakáva PubMed odkaz, na stránke chýba.");
 }
 
+// Textové citácie bez odkazu (Beh 161): tituly overené v PubMed (ecitmatch + esummary).
+$textCitations = [
+    'nastroj_tls.php' => 'Cairo MS, Bishop M. Tumour lysis syndrome: new therapeutic strategies and classification.',
+    'nastroj_tma.php' => 'Derivation and external validation of the PLASMIC score for rapid assessment of adults with thrombotic microangiopathies',
+    'nastroj_aki.php' => 'Acute Kidney Injury Network: report of an initiative to improve outcomes in acute kidney injury.',
+];
+foreach ($textCitations as $file => $citation) {
+    pmidRegistryTest(str_contains((string) file_get_contents($root . '/' . $file), $citation), "{$file}: chýba overený titul citácie.");
+}
+pmidRegistryTest(
+    !str_contains((string) file_get_contents($root . '/nastroj_tls.php'), 'classification and grading system'),
+    'nastroj_tls.php: nesprávny titul Cairo a Bishop sa nesmie vrátiť.',
+);
+
 echo "Calculator PMID registry: $checks PASS\n";
