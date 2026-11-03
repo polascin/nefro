@@ -2,7 +2,12 @@
 
 ## Ďalšia slučka
 
-1. P1 klinické referencie: crcl_24h, na, plasmic, kdpi (vzor Beh 151/152).
+1. P1 klinické referencie: plasmic, kdpi, tls, egfr_slope (vzor Beh 151 až 153).
+2. Čaká na majiteľa: limity korekcie hyponatrémie v calculator_na.php (Beh 153).
+
+## Hotové: slučka 2026-11-03-o (CrCl 24 h, nátrium)
+
+- [x] Vzorce v calculators_common + test 28 PASS; deploy `b3e0f4df`
 
 ## Hotové: slučka 2026-11-03-n (CG, recirkulácia, voľná voda)
 
