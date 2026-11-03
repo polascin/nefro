@@ -9,6 +9,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') !== 'POST') {
     header('Allow: POST');
     exit;
 }
+requestRequireScalarPost();
 if (!validateCsrfToken(requestCsrfTokenFromPost())) {
     http_response_code(403);
     exit;

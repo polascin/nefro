@@ -30,11 +30,14 @@ if (!in_array($requestMethod, ['GET', 'POST'], true)) {
 }
 
 $isPost  = $requestMethod === 'POST';
+if ($isPost) {
+    requestRequireScalarPost();
+}
 $request = $isPost ? $_POST : $_GET;
 
-$providerId = (int) ($request['pid'] ?? 0);
-$expiresAt  = (int) ($request['exp'] ?? 0);
-$signature  = trim((string) ($request['sig'] ?? ''));
+$providerId = requestScalarInt($request, 'pid');
+$expiresAt  = requestScalarInt($request, 'exp');
+$signature  = requestScalarString($request, 'sig');
 
 $status           = 'error';
 $message          = 'Neplatný alebo neúplný odkaz.';

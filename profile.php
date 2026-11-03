@@ -115,6 +115,7 @@ $deleteErrors   = [];
 $showDeleteForm = false;
 
 if ($requestMethod === 'POST' && ($_POST['action'] ?? '') === 'delete_account') {
+    requestRequireScalarPost();
     $result = profileHandleDeleteAccount($pdo, $user, $user_id);
     $deleteErrors   = $result['errors'];
     $showDeleteForm = $result['showForm'];

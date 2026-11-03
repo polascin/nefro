@@ -49,6 +49,7 @@ if ($requestMethod === 'GET' && $verificationFlash === '' && $tokenFormatValid) 
 }
 
 if ($requestMethod === 'POST') {
+    requestRequireScalarPost();
     if (!validateCsrfToken(requestCsrfTokenFromPost())) {
         $message = 'Neplatný CSRF token. Skúste to znova.';
         $showConfirmation = $tokenFormatValid;

@@ -20,7 +20,8 @@ $errorMessage = null;
 
 // ── POST: nový príspevok alebo odpoveď (len pre prihlásených) ──────────────
 if ($requestMethod === 'POST') {
-    $action    = trim((string) ($_POST['action'] ?? ''));
+    requestRequireScalarPost();
+    $action    = requestScalarString($_POST, 'action');
     $csrfToken = requestCsrfTokenFromPost();
 
     if (!validateCsrfToken($csrfToken)) {
@@ -33,8 +34,8 @@ if ($requestMethod === 'POST') {
         if ((time() - $lastPost) < 10) {
             $errorMessage = 'Príliš rýchlo. Počkajte prosím chvíľu pred ďalším príspevkom.';
         } else {
-            $content  = trim((string) ($_POST['content'] ?? ''));
-            $parentId = (int) ($_POST['parent_id'] ?? 0);
+            $content  = requestScalarString($_POST, 'content');
+            $parentId = requestScalarInt($_POST, 'parent_id');
 
             if (mb_strlen($content, 'UTF-8') < 3) {
                 $errorMessage = 'Príspevok je príliš krátky (min. 3 znaky).';

@@ -8,14 +8,20 @@ require_once __DIR__ . '/db_config.php';
 
 $errors = [];
 $sent = false;
-$contentUrl = trim((string) ($_POST['content_url'] ?? $_GET['url'] ?? ''));
-$reporterName = trim((string) ($_POST['reporter_name'] ?? ''));
-$reporterEmail = trim((string) ($_POST['reporter_email'] ?? ''));
+$isPost = strtoupper((string) ($_SERVER['REQUEST_METHOD'] ?? 'GET')) === 'POST';
+if ($isPost) {
+    requestRequireScalarPost();
+}
+$contentUrl = $isPost
+    ? requestScalarString($_POST, 'content_url')
+    : requestScalarString($_GET, 'url');
+$reporterName = requestScalarString($_POST, 'reporter_name');
+$reporterEmail = requestScalarString($_POST, 'reporter_email');
 $contactExemption = isset($_POST['contact_exemption']);
-$legalBasis = trim((string) ($_POST['legal_basis'] ?? ''));
-$explanation = trim((string) ($_POST['explanation'] ?? ''));
+$legalBasis = requestScalarString($_POST, 'legal_basis');
+$explanation = requestScalarString($_POST, 'explanation');
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+if ($isPost) {
     if (!validateCsrfToken(requestCsrfTokenFromPost())) {
         $errors[] = 'Platnosť formulára vypršala. Obnovte stránku a skúste to znova.';
     }

@@ -25,6 +25,7 @@ require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
 require_once __DIR__ . '/request_input.php';
 requestInputResponseIsJson(true);
+requestRequireScalarPost();
 require_once __DIR__ . '/newsletter_notifications.php';
 
 // Origin/Referer check — bráni CSRF z tretích stránok.

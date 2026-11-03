@@ -199,6 +199,24 @@ foreach ($adminScalarGuards as $adminFile) {
         $adminFile . ' musí volať requestRequireScalarPost na POST.',
     );
 }
+$publicScalarGuards = [
+    'discussion.php',
+    'content_report.php',
+    'verify_email.php',
+    'provider_namietka.php',
+    'newsletter_subscribe.php',
+    'logout.php',
+];
+foreach ($publicScalarGuards as $publicFile) {
+    requestInputTest(
+        str_contains((string) file_get_contents($root . '/' . $publicFile), 'requestRequireScalarPost()'),
+        $publicFile . ' musí volať requestRequireScalarPost na POST.',
+    );
+}
+requestInputTest(
+    substr_count((string) file_get_contents($root . '/profile.php'), 'requestRequireScalarPost()') >= 2,
+    'profile.php musí volať requestRequireScalarPost aj pri delete_account.',
+);
 requestInputTest(
     str_contains((string) file_get_contents($root . '/.htaccess'), 'request_input'),
     '.htaccess musí deny-ovať request_input.php.',
