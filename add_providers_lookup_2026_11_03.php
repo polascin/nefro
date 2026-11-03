@@ -159,9 +159,10 @@ foreach ($updates as $id => $u) {
         }
     }
     $notes = (string) ($row['notes'] ?? '');
-    if (isset($u['note']) && !str_contains($notes, $u['note'])) {
+    $note  = (string) $u['note'];
+    if (!str_contains($notes, $note)) {
         $set[]           = 'notes = :notes';
-        $params['notes'] = $notes === '' ? $u['note'] : $notes . ' | ' . $u['note'];
+        $params['notes'] = $notes === '' ? $note : $notes . ' | ' . $note;
     }
     $source = (string) ($row['source'] ?? '');
     if (!str_contains($source, $SRCTAG)) {
