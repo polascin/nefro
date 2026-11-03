@@ -5,42 +5,6 @@ require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
 require_once __DIR__ . '/calculators_common.php';
 
-/** Watson odhad celkovej telesnej vody (TBW, L). */
-function npcrWatsonTbw(string $sex, int $age, float $heightCm, float $weightKg): float
-{
-    if ($sex === "male") {
-        return 2.447 - 0.09516 * $age + 0.1074 * $heightCm + 0.3362 * $weightKg;
-    }
-    // female
-    return -2.097 + 0.1069 * $heightCm + 0.2466 * $weightKg;
-}
-
-/** Prepočet močoviny/BUN na BUN (urea-nitrogen) v mg/dL. */
-function npcrToBunMgDl(float $value, string $unit): float
-{
-    // urea mmol/L → BUN mg/dL: × 2,8 ; bun_mg_dl je už BUN mg/dL
-    return $unit === "mmol_l" ? $value * 2.8 : $value;
-}
-
-/**
- * Riziková kategória pre nPCR/nPNA (g/kg/deň).
- * @return array{0:string,1:string} [trieda, popis]
- */
-function npcrCategory(float $npcr): array
-{
-    if ($npcr < 0.8) {
-        return ['risk-high', 'Nízky príjem bielkovín: riziko malnutrície'];
-    }
-    if ($npcr < 1.0) {
-        return ['risk-moderate', 'Hraničný príjem'];
-    }
-    if ($npcr <= 1.4) {
-        return ['risk-low', 'Cieľové rozpätie (1,0 až 1,4)'];
-    }
-
-    return ['risk-moderate', 'Vysoký: hyperkatabolizmus alebo vysoký príjem'];
-}
-
 $errors = [];
 $messages = [];
 $calculated = null;
@@ -134,14 +98,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $bunPre = npcrToBunMgDl((float) $ureaPre, $ureaUnit);
             $bunPost = npcrToBunMgDl((float) $ureaPost, $ureaUnit);
             $tbw = npcrWatsonTbw($sex, (int) $ageYears, (float) $heightCm, (float) $weightKg);
-            $thetaMin = (float) $hours * 60.0;
-
-            // Urea-nitrogen generation rate (mg/min): rozdiel koncentrácií × objem (dL) / čas
-            $gMgMin = (($bunPre - $bunPost) * ($tbw * 10.0)) / $thetaMin;
-            // Sargent–Gotch PNA/PCR (g/deň), anurický pacient
-            $pcr = 9.35 * $gMgMin + 0.294 * $tbw;
-            // Normalizácia na V/0,58 (modelová „normalizovaná" hmotnosť)
-            $npcr = 0.58 * $pcr / $tbw;
+            ['g_mg_min' => $gMgMin, 'pcr' => $pcr, 'npcr' => $npcr] = npcrSargentGotch($bunPre, $bunPost, $tbw, (float) $hours);
 
             $npcrRounded = round($npcr, 2);
             [$riskCls, $riskLabel] = npcrCategory($npcrRounded);
