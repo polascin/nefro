@@ -2,8 +2,13 @@
 
 ## Ďalšia slučka
 
-1. P1 klinické referencie: crrt, kdpi, igan, adpkd (vzor Beh 151 až 156).
+1. P1 klinické referencie: kdpi, igan, adpkd, gupta (vzor Beh 151 až 157).
 2. Čaká na majiteľa: limity korekcie hyponatrémie v calculator_na.php (Beh 153).
+3. Čaká na majiteľa: CRRT bez korekcie predilúcie a bez citácie KDIGO (Beh 157).
+
+## Hotové: slučka 2026-11-03-s (CRRT)
+
+- [x] Výpočet v calculators_common + test 16 PASS; deploy `bcffbf85`
 
 ## Hotové: slučka 2026-11-03-r (Furst, FENa, FEurea)
 
