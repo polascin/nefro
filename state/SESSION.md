@@ -1,32 +1,37 @@
 # SESSION
 
-Aktualizované: 2026-11-03 06:59 Europe/Bratislava
+Aktualizované: 2026-11-03 07:24 Europe/Bratislava
 
 ## Aktívna úloha
 
-Register a 2FA čítajú POST cez `requestScalarString`. Handoff:
-`.codex/handoffs/2026-11-03-065908-register-2fa-scalar-cleanup.md`.
+Cookie banner mimo a11y stromu po súhlase. Handoff:
+`.codex/handoffs/2026-11-03-072407-cookie-banner-a11y.md`.
 
 ## Stav repozitára
 
 - Vetva: `main`
-- HEAD: `72bad02a` (docs/handoff Beh 144; runtime `8bc17a45`)
-- Runtime / `DEPLOY_COMMIT`: `8bc17a45` (dokumentačný drift HEAD OK)
+- HEAD: `f5032e59`
+- Runtime / `DEPLOY_COMMIT`: `f5032e59`
 - `origin/main` a `server/main`: aktuálne
 
 ## Čo je hotové
 
-1. register.php bez `trim($_POST)`; heslá bez trimu
-2. 2fa_setup / 2fa_verify skalárne helpers
-3. request_input 128 PASS; regresie 39; deploy OK
-4. Claim/lease ENUM **nebol**
+1. `setCookieBannerVisible` (hidden + aria-hidden + inert)
+2. Fallback + regresia + site_changelog
+3. Claim/lease ENUM **nebol**
+
+## Otvorené (ops)
+
+Produkčný crontab vs `tools/crontab.example`: chýbajú provider_notice,
+backup_snapshot, sync_drugs, sync_clinical_trials; newsletter_worker `*/30`
+namiesto minútového. Úprava crontabu **iba so súhlasom**.
 
 ## Executable next step
 
 ```text
-# Claim/lease IBA so súhlasom; inak P1 ops/cron/a11y z .audit.md.
+# Po súhlase: sync crontab; inak claim/lease so súhlasom alebo iný P1.
 ```
 
 ## Handoff
 
-`.codex/handoffs/2026-11-03-065908-register-2fa-scalar-cleanup.md`
+`.codex/handoffs/2026-11-03-072407-cookie-banner-a11y.md`

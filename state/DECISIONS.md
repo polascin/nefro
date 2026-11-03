@@ -190,3 +190,9 @@ subscribe, logout + profile delete_account. `publikacia.php` ostáva na
 Po `requestRequireScalarPost` (Beh 138) ešte ostávalo `trim($_POST)` v
 `register.php` a TOTP tokoch. Heslá cez `requestScalarString(..., trim=false)`.
 Claim/lease ENUM stále bez súhlasu.
+
+## 2026-11-03 (slučka 7) — cookie banner a11y (Beh 109)
+
+Zatvorený banner: HTML `hidden` + `aria-hidden` + `inert`, nie len CSS
+`translateY`. Cron drift (crontab.example vs produkcia) zaznamenaný, sync
+až so súhlasom. Claim/lease ENUM stále bez súhlasu.

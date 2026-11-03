@@ -2,24 +2,23 @@
 
 ## Ďalšia slučka
 
-1. Po **výslovnom súhlase**: ENUM `sending` + claim/lease; empty provider priority.
-2. Inak P1 z `.audit.md` (ops/cron/a11y; nie claim/lease bez súhlasu).
+1. Po **súhlase**: zosúladiť produkčný crontab s `tools/crontab.example`
+   (provider_notice_worker, backup_snapshot, sync_drugs, sync_clinical_trials;
+   interval newsletter_worker).
+2. Po **výslovnom súhlase**: ENUM `sending` + claim/lease.
+3. Inak ďalší P1 z `.audit.md`.
 
-## Hotové: slučka 2026-11-03-f (register/2fa scalar cleanup)
+## Hotové: slučka 2026-11-03-g (cookie banner a11y)
 
-- [x] register + 2fa_setup + 2fa_verify cez requestScalarString
-- [x] deploy `8bc17a45`; bez claim/lease ENUM
+- [x] HTML hidden + aria-hidden + inert; fallback; test; changelog
+- [x] deploy `f5032e59`; bez claim/lease ENUM
 
-## Hotové: slučka 2026-11-03-e (public form scalar guards)
+## Hotové: slučka 2026-11-03-f … a
 
-- [x] discussion, DSA, verify_email, namietka, subscribe, logout; `83cb9d40`
-
-## Hotové: slučka 2026-11-03-d / c / b / a
-
-- [x] admin scalar; CKD-PC/CKM; auth scalar; request_input Windows + PREVENT
+- [x] register/2fa scalar; public/admin/auth scalar; CKD-PC/CKM; Windows fixture
 
 ## Vedomé mimo rozsahu
 
 - Newsletter avíza (default off).
 - Sociálne siete.
-- Produkčné SQL / migrácie / seed priority bez súhlasu.
+- Produkčné SQL / migrácie / seed priority / crontab bez súhlasu.
