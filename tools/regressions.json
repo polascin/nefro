@@ -43,5 +43,6 @@
   "tools/test_clinical_references_clearance.php",
   "tools/test_clinical_references_dialysis.php",
   "tools/test_clinical_references_scores.php",
+  "tools/test_clinical_references_trend_calcium.php",
   "tools/test_clinical_references_sodium.php"
 ]

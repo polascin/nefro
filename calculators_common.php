@@ -462,6 +462,59 @@ function tlsCairoBishop(
 }
 
 /**
+ * Korigovaný celkový vápnik pri hypoalbuminémii: Ca + 0,02 · (40 − albumín) v mmol/L
+ * (albumín v g/L). Ide o bežne používaný tvar (0,8 mg/dL na 1 g/dL); Payne a kol.
+ * (Br Med J 1973;4(5893):643–646, PMID 4758544) odvodili v mg/dL koeficient 1,0.
+ */
+function calculatorCorrectedCalcium(float $calciumMmolL, float $albuminGL): float
+{
+    return $calciumMmolL + 0.02 * (40.0 - $albuminGL);
+}
+
+/**
+ * Sklon lineárnej regresie metódou najmenších štvorcov (y na x).
+ * Null pri menej ako 2 bodoch alebo nulovom rozptyle x.
+ *
+ * @param list<float> $x
+ * @param list<float> $y
+ */
+function calculatorOlsSlope(array $x, array $y): ?float
+{
+    $n = count($x);
+    if ($n < 2 || $n !== count($y)) {
+        return null;
+    }
+    $meanX = array_sum($x) / $n;
+    $meanY = array_sum($y) / $n;
+    $num = $den = 0.0;
+    for ($i = 0; $i < $n; $i++) {
+        $num += ($x[$i] - $meanX) * ($y[$i] - $meanY);
+        $den += ($x[$i] - $meanX) ** 2;
+    }
+
+    return $den == 0.0 ? null : $num / $den;
+}
+
+/**
+ * Slovné hodnotenie sklonu eGFR (mL/min/1,73 m² za rok). Pokles rýchlejší než
+ * 5 za rok zodpovedá rýchlej progresii podľa KDIGO.
+ */
+function egfrSlopeInterpretation(float $slope): string
+{
+    if ($slope < -5) {
+        return "Rýchla progresia CKD (> 5 ml/min/rok). Zvážte zintenzívnenie liečby (SGLT2i, RASi) a dispenzarizáciu.";
+    }
+    if ($slope < -2) {
+        return "Stredne rýchla progresia. Prirodzený vekový pokles je zvyčajne okolo 1 ml/min/rok.";
+    }
+    if ($slope > 0) {
+        return "eGFR sa v čase zlepšuje alebo je stabilné.";
+    }
+
+    return "Pomalá progresia, blízka fyziologickému starnutiu.";
+}
+
+/**
  * Meraný klírens kreatinínu zo zberu moču: (U_cr · V) / (P_cr · T) v mL/min.
  * U_cr a P_cr v rovnakej jednotke, V v mL, T v hodinách.
  */
