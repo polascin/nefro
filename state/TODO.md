@@ -2,23 +2,20 @@
 
 ## Ďalšia slučka
 
-1. Legal notice claim/lease (ENUM + worker port z newsletter vzoru) — podľa DECISIONS.md.
-2. Inak P1 z `.audit.md`.
+1. P1 z `.audit.md` (claim/lease newsletter+legal a cron sync sú hotové).
 
-## Hotové: slučka 2026-11-03-j (cron sync + newsletter sending)
+## Hotové: slučka 2026-11-03-k (legal claim/lease)
 
-- [x] Produkčný crontab = `tools/crontab.example` + preserve polascin.net
-- [x] Migrácia ENUM `sending` na newsletter frontách
-- [x] RSI: render/verify/lib, ops_health ENUM, LF pin
-- [x] deploy `bad2398d`; ops_health PASS
+- [x] Port claim/lease do legal_notifications
+- [x] Migrácia ENUM sending; ops_health; reclaim regresia
+- [x] deploy `d4f12dcf`; produkčná migrácia
 
-## Hotové: slučka 2026-11-03-i … a
+## Hotové: slučka 2026-11-03-j … a
 
-- [x] a11y unit selecty; crontab/CLI ops; cookie a11y; scalar guards; clinical refs
+- [x] cron sync + newsletter sending; a11y; scalar; clinical refs
 
 ## Vedomé mimo rozsahu
 
 - Newsletter avíza (default off).
 - Sociálne siete.
-- Legal ENUM sending (až po porte kódu).
-- `provider_notice_worker --send` (vedomé rozhodnutie, nie cron).
+- `provider_notice_worker --send` (nie cron).
