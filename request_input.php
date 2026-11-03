@@ -190,6 +190,23 @@ if (!function_exists('requestScalarInt')) {
     }
 }
 
+if (!function_exists('requestRequireScalarPost')) {
+    /**
+     * Pre formuláre bez poľových polí: akýkoľvek neskalárny POST parameter
+     * (napr. `email[]=x`) skončí riadenou HTTP 400, nie TypeError z `trim()`.
+     *
+     * @param array<string, mixed>|null $post Predvolene `$_POST`.
+     */
+    function requestRequireScalarPost(?array $post = null): void
+    {
+        foreach ($post ?? $_POST as $key => $value) {
+            if (!requestIsScalarInput($value)) {
+                requestRejectNonScalarInput((string) $key);
+            }
+        }
+    }
+}
+
 if (!function_exists('requestRejectInvalidListInput')) {
     /**
      * Ukončí požiadavku s HTTP 400 pri vnorenom poli/objekte v listovom parametri.
