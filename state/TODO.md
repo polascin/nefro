@@ -2,8 +2,12 @@
 
 ## Ďalšia slučka
 
-1. P1 klinické referencie: egfr_slope, ca, furst, kdpi (vzor Beh 151 až 154).
+1. P1 klinické referencie: furst, aki, crrt, kdpi (vzor Beh 151 až 155).
 2. Čaká na majiteľa: limity korekcie hyponatrémie v calculator_na.php (Beh 153).
+
+## Hotové: slučka 2026-11-03-q (sklon eGFR, vápnik)
+
+- [x] Vzorce v calculators_common + test 21 PASS; deploy `7a70938a`
 
 ## Hotové: slučka 2026-11-03-p (PLASMIC, TLS)
 
