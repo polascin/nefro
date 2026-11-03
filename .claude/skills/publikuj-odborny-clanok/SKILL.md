@@ -24,7 +24,8 @@ Zavedený postup pre `category = 'odborne'`. Pre články v sekcii „Pre pacien
 7. **Sociálne siete len na výslovnú žiadosť v tej istej úlohe:** SK + EN zhrnutie,
    iná ilustrácia bez textu, kópia na Google Disk
    (`G:\Môj disk\polascin.net – obálky blogu\`), zverejnenie na X / Facebook / LinkedIn /
-   Threads. Ak MCP konektor chýba, povedz to rovno a nepredstieraj zverejnenie.
+   Threads. Ak MCP chýba: balík + voliteľne browser text+link (over na profile);
+   médium cez Computer Use; nikdy nepredstieraj zverejnenie (detaily v sekcii 8).
 
 ---
 
@@ -313,17 +314,26 @@ Keď požiada, platia tieto body:
 4. Príspevok aj s obrázkom zverejni na `x.com/polascin`, `facebook.com/lubomir.polascin`,
    `linkedin.com/in/lubomirpolascin` a `threads.com/@lubomirpolascin`.
 
-   ⚠️ **Overené opakovane 1. 11. 2026: pre X, Facebook, LinkedIn ani Threads nie je
-   pripojený žiadny MCP konektor** (v tej istej session môžu byť dostupné Gmail,
-   Google Drive/Docs/Calendar, Canva, Notion, Slack, Figma, Tavily a ďalšie, ale
-   sociálne siete nie). Agent teda **nedokáže príspevok zverejniť cez MCP**. V takom
-   prípade to povedz rovno, odovzdaj hotové texty aj cestu k obrázku na Disku a
-   nepredstieraj zverejnenie. To isté platí, ak sieť nie je prihlásená.
-   Prehliadačová automatizácia nie je náhradou za chýbajúci konektor, pokiaľ používateľ
-   výslovne nepožiada o iný postup. Pred odkazom na konektor vždy over dostupnosť
-   namespace (napr. `GetDynamicTools` / katalóg MCP); zoznam sa medzi session mení.
-   Browserom príspevok nezverejňuj bez výslovnej žiadosti a prihlasovacie údaje
-   nikdy nezadávaj.
+   ⚠️ **Overené opakovane 1. a 3. 11. 2026 (RSI):** pre X, Facebook, LinkedIn ani
+   Threads nie je pripojený žiadny MCP konektor. Pred odkazom na konektor vždy over
+   namespace (`GetDynamicTools`); zoznam sa medzi session mení.
+
+   **Keď používateľ social výslovne vyžiadal a MCP chýba:**
+   1. Vždy priprav balík (SK+EN + X≤280, ilustrácie 16:10 na Disku
+      `G:\Môj disk\polascin.net – obálky blogu\`, texty ako Google Doc alebo
+      lokálny `.md`/`.docx` v koreňi Disku / `scratch/`).
+   2. Ak je v IDE prehliadači aktívna prihlásená session danej siete, môžeš
+      skúsiť **text + odkaz** (bez hesla; heslá nikdy nezadávaj). Po kliknutí
+      „Uverejniť“ **over na profile**, či príspevok naozaj je; neúspešný pokus
+      nevydávaj za zverejnenie.
+   3. **Médiá (obrázok):** `DOM.setFileInputFiles` cez CDP je zakázané. Príloha
+      vyžaduje Computer Use (OS dialóg). Sidecar Computer Use môže byť
+      nedostupný (`sidecar_unavailable`) — vtedy text+odkaz alebo STOP s balíkom.
+   4. Ak session nie je prihlásená / pokus zlyhá: povedz rovno, odovzdaj balík,
+      nepredstieraj zverejnenie.
+
+   PowerShell: `sh` nie je na PATH; použi
+   `& 'C:\Program Files\Git\bin\sh.exe'` (deploy/PDF sync).
 5. Po zverejnení skontroluj, že príspevok na profile je a že odkaz na článok sedí.
    Čo sa nepodarilo, povedz menovite.
 

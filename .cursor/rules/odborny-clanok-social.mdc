@@ -16,4 +16,7 @@ Príspevky na X, Facebook, LinkedIn a Threads nie sú automatická súčasť ka�
 3. Ulož ilustráciu na Google Disk účtu polascin@gmail.com cez lokálnu zložku `G:\Môj disk\polascin.net – obálky blogu\` (a over synchronizáciu konektorom, ak je dostupný). Texty príspevkov ulož ako dokument na Disk podľa skillu.
 4. Príspevok s obrázkom zverejni na účtoch uvedených v skille.
 
-Ak MCP konektor pre sieť chýba, povedz to rovno a nepredstieraj zverejnenie. Čo sa nepodarilo zverejniť alebo uložiť, povedz. Nevydávaj neodoslaný príspevok za zverejnený.
+Ak MCP konektor pre sieť chýba: priprav balík (texty + Disk), pri prihlásenej
+browser session môžeš skúsiť text+odkaz a overiť na profile; obrázok vyžaduje
+Computer Use (CDP `setFileInputFiles` je zakázané; sidecar môže byť nedostupný).
+Čo sa nepodarilo, povedz rovno. Nevydávaj neodoslaný príspevok za zverejnený.
