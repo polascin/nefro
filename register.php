@@ -155,14 +155,14 @@ if ($requestMethod === 'POST') {
             error_log('Register rate limit update error: ' . $rlEx->getMessage());
         }
 
-        $email = trim($_POST['email'] ?? '');
+        $email = requestScalarString($_POST, 'email');
 
-        $mobilePhone = normalizeUserMobilePhone($_POST['mobile_phone'] ?? null);
-        $workMobilePhone = normalizeUserMobilePhone($_POST['work_mobile_phone'] ?? null);
-        $otherPhone = normalizeGenericPhone($_POST['other_phone'] ?? null);
-        $password = $_POST['password'] ?? '';
-        $passwordConfirm = $_POST['password_confirm'] ?? '';
-        $username = trim($_POST['username'] ?? '');
+        $mobilePhone = normalizeUserMobilePhone(requestScalarString($_POST, 'mobile_phone') ?: null);
+        $workMobilePhone = normalizeUserMobilePhone(requestScalarString($_POST, 'work_mobile_phone') ?: null);
+        $otherPhone = normalizeGenericPhone(requestScalarString($_POST, 'other_phone') ?: null);
+        $password = requestScalarString($_POST, 'password', '', true, false);
+        $passwordConfirm = requestScalarString($_POST, 'password_confirm', '', true, false);
+        $username = requestScalarString($_POST, 'username');
 
         if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $errors[] = "Zadajte platnú e-mailovú adresu.";
@@ -217,14 +217,14 @@ if ($requestMethod === 'POST') {
 
                     // Whitelist pre gender — hodnoty musia zodpovedať hodnotám <option value="..."> v HTML formulári
                     $allowedGenders  = ['Muž', 'Žena', 'Transgender muž', 'Transgender žena', 'Nebinárna osoba', 'Iné', 'Nechcem uviesť', ''];
-                    $genderRaw       = trim($_POST['gender'] ?? '');
+                    $genderRaw       = requestScalarString($_POST, 'gender');
                     $gender          = in_array($genderRaw, $allowedGenders, true) ? $genderRaw : '';
                     // Pronouns sú voľný text (input type="text") — dĺžkovo obmedzíme a sanitizujeme
-                    $pronounsRaw     = trim($_POST['pronouns'] ?? '');
+                    $pronounsRaw     = requestScalarString($_POST, 'pronouns');
                     $pronouns        = mb_substr($pronounsRaw, 0, 50, 'UTF-8');
 
                     // Whitelist pre typ používateľa — hodnoty musia zodpovedať getUserTypeGroups()
-                    $userTypeRaw     = trim($_POST['user_type'] ?? '');
+                    $userTypeRaw     = requestScalarString($_POST, 'user_type');
                     $userType        = in_array($userTypeRaw, getUserTypeWhitelist(), true) ? $userTypeRaw : '';
 
                     // Dĺžkové limity pre textové polia (prevencia pred oversized vstupmi)
@@ -258,19 +258,19 @@ if ($requestMethod === 'POST') {
                         'address_note'     => 500,
                     ];
                     foreach ($fieldLimits as $_field => $_max) {
-                        $rawVal = trim($_POST[$_field] ?? '');
+                        $rawVal = requestScalarString($_POST, $_field);
                         if (mb_strlen($rawVal, 'UTF-8') > $_max) {
                             $errors[] = 'Pole je príliš dlhé (max. ' . $_max . ' znakov). Skontrolujte zadané údaje.';
                         }
                     }
 
-                    if ((string) ($_POST['age_confirm'] ?? '') !== '1') {
+                    if (requestScalarString($_POST, 'age_confirm') !== '1') {
                         $errors[] = 'Pre registráciu potvrďte, že máte aspoň 16 rokov alebo vyšší minimálny vek požadovaný právom vašej krajiny.';
                     }
 
                     // Dátum narodenia je nepovinný, ale ak je zadaný, musí
                     // zodpovedať vekovej podmienke uvedenej v Podmienkach používania.
-                    $birthDateRaw = trim($_POST['birth_date'] ?? '');
+                    $birthDateRaw = requestScalarString($_POST, 'birth_date');
                     if ($birthDateRaw !== '') {
                         $bd = DateTime::createFromFormat('Y-m-d', $birthDateRaw);
                         $today = new DateTime();
@@ -322,41 +322,36 @@ if ($requestMethod === 'POST') {
                             'pronouns' => $pronouns,
                             'user_type' => $userType,
                             'avatar_path' => $avatarPath,
-                            'title_before' => trim($_POST['title_before'] ?? ''),
-                            'first_name' => trim($_POST['first_name'] ?? ''),
-                            'middle_name' => trim($_POST['middle_name'] ?? ''),
-                            'last_name' => trim($_POST['last_name'] ?? ''),
-                            'title_after' => trim($_POST['title_after'] ?? ''),
-                            'name_note' => trim($_POST['name_note'] ?? ''),
-                            'organization' => trim($_POST['organization'] ?? ''),
-                            'job_function' => trim($_POST['job_function'] ?? ''),
+                            'title_before' => requestScalarString($_POST, 'title_before'),
+                            'first_name' => requestScalarString($_POST, 'first_name'),
+                            'middle_name' => requestScalarString($_POST, 'middle_name'),
+                            'last_name' => requestScalarString($_POST, 'last_name'),
+                            'title_after' => requestScalarString($_POST, 'title_after'),
+                            'name_note' => requestScalarString($_POST, 'name_note'),
+                            'organization' => requestScalarString($_POST, 'organization'),
+                            'job_function' => requestScalarString($_POST, 'job_function'),
                             'work_mobile_phone' => $workMobilePhone,
-                            'org_website' => trim($_POST['org_website'] ?? ''),
-                            'work_email' => trim($_POST['work_email'] ?? ''),
+                            'org_website' => requestScalarString($_POST, 'org_website'),
+                            'work_email' => requestScalarString($_POST, 'work_email'),
                             'mobile_phone' => $mobilePhone,
                             'other_phone' => $otherPhone,
-                            'social_linkedin' => trim($_POST['social_linkedin'] ?? ''),
-                            'social_x' => trim($_POST['social_x'] ?? ''),
-                            'social_facebook' => trim($_POST['social_facebook'] ?? ''),
-                            'social_instagram' => trim($_POST['social_instagram'] ?? ''),
-                            'social_other' => trim($_POST['social_other'] ?? ''),
-                            'other_contact' => trim($_POST['other_contact'] ?? ''),
-                            'website' => trim($_POST['website'] ?? ''),
-                            'birth_date' => (function() {
-                                $raw = $_POST['birth_date'] ?? '';
-                                if (empty($raw)) return null;
-                                $d = DateTime::createFromFormat('Y-m-d', $raw);
-                                return ($d && $d->format('Y-m-d') === $raw) ? $raw : null;
-                            })(),
-                            'street' => trim($_POST['street'] ?? ''),
-                            'house_number' => trim($_POST['house_number'] ?? ''),
-                            'orientation_number' => trim($_POST['orientation_number'] ?? ''),
-                            'zip_code' => trim($_POST['zip_code'] ?? ''),
-                            'city' => trim($_POST['city'] ?? ''),
-                            'district' => trim($_POST['district'] ?? ''),
-                            'region' => trim($_POST['region'] ?? ''),
-                            'country' => trim($_POST['country'] ?? ''),
-                            'address_note' => trim($_POST['address_note'] ?? ''),
+                            'social_linkedin' => requestScalarString($_POST, 'social_linkedin'),
+                            'social_x' => requestScalarString($_POST, 'social_x'),
+                            'social_facebook' => requestScalarString($_POST, 'social_facebook'),
+                            'social_instagram' => requestScalarString($_POST, 'social_instagram'),
+                            'social_other' => requestScalarString($_POST, 'social_other'),
+                            'other_contact' => requestScalarString($_POST, 'other_contact'),
+                            'website' => requestScalarString($_POST, 'website'),
+                            'birth_date' => $birthDateRaw !== '' ? $birthDateRaw : null,
+                            'street' => requestScalarString($_POST, 'street'),
+                            'house_number' => requestScalarString($_POST, 'house_number'),
+                            'orientation_number' => requestScalarString($_POST, 'orientation_number'),
+                            'zip_code' => requestScalarString($_POST, 'zip_code'),
+                            'city' => requestScalarString($_POST, 'city'),
+                            'district' => requestScalarString($_POST, 'district'),
+                            'region' => requestScalarString($_POST, 'region'),
+                            'country' => requestScalarString($_POST, 'country'),
+                            'address_note' => requestScalarString($_POST, 'address_note'),
                             'newsletter_consent' => $newsletterConsent,
                             'theme_auto' => $themeAuto,
                             'email_verification_token_hash' => $tokenData['token_hash'],

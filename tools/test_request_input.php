@@ -217,6 +217,26 @@ requestInputTest(
     substr_count((string) file_get_contents($root . '/profile.php'), 'requestRequireScalarPost()') >= 2,
     'profile.php musí volať requestRequireScalarPost aj pri delete_account.',
 );
+$registerSource = (string) file_get_contents($root . '/register.php');
+requestInputTest(
+    !str_contains($registerSource, 'trim($_POST')
+        && str_contains($registerSource, "requestScalarString(\$_POST, 'email')")
+        && str_contains($registerSource, "requestScalarString(\$_POST, 'password', '', true, false)"),
+    'register.php musí čítať polia a heslá cez requestScalarString, nie trim($_POST).',
+);
+$setup2faSource = (string) file_get_contents($root . '/2fa_setup.php');
+requestInputTest(
+    !str_contains($setup2faSource, 'trim($_POST')
+        && str_contains($setup2faSource, "requestScalarString(\$_POST, 'totp_confirm_code')")
+        && str_contains($setup2faSource, "requestScalarString(\$_POST, 'enable_password', '', true, false)"),
+    '2fa_setup.php musí čítať kódy a heslá cez requestScalarString.',
+);
+$verify2faSource = (string) file_get_contents($root . '/2fa_verify.php');
+requestInputTest(
+    !str_contains($verify2faSource, 'trim($_POST')
+        && str_contains($verify2faSource, "requestScalarString(\$_POST, 'totp_code')"),
+    '2fa_verify.php musí čítať totp_code cez requestScalarString.',
+);
 requestInputTest(
     str_contains((string) file_get_contents($root . '/.htaccess'), 'request_input'),
     '.htaccess musí deny-ovať request_input.php.',

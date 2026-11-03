@@ -68,7 +68,7 @@ $pendingSecret = $_SESSION['2fa_setup_secret'] ?? null;
 // sa používateľovi správne po presmerovaní na GET, nie zmätene vedľa chybovej hlášky.
 if ($requestMethod === 'POST') {
     $postedCsrfToken = requestCsrfTokenFromPost();
-    $action          = $_POST['action'] ?? '';
+    $action          = requestScalarString($_POST, 'action');
 
     if (!validateCsrfToken($postedCsrfToken)) {
         setFlashMessage('error', 'Neplatný CSRF token. Skúste stránku obnoviť a akciu zopakovať.');
@@ -84,7 +84,7 @@ if ($requestMethod === 'POST') {
                 $reauth = verifySensitiveActionPassword(
                     $pdo,
                     (int) $userId,
-                    (string) ($_POST['enable_password'] ?? ''),
+                    requestScalarString($_POST, 'enable_password', '', true, false),
                     (string) $user['password_hash']
                 );
                 if (!$reauth['ok']) {
@@ -114,7 +114,7 @@ if ($requestMethod === 'POST') {
                 unset($_SESSION['2fa_setup_secret'], $_SESSION['2fa_setup_attempts']);
                 $errors[] = 'Príliš veľa nesprávnych kódov. Začnite aktiváciu znova.';
             } else {
-                $confirmCode    = trim($_POST['totp_confirm_code'] ?? '');
+                $confirmCode    = requestScalarString($_POST, 'totp_confirm_code');
                 $matchedCounter = verifyTotpCodeGetCounter($_SESSION['2fa_setup_secret'], $confirmCode, 2);
                 if ($matchedCounter === false) {
                     $_SESSION['2fa_setup_attempts'] = (int) ($_SESSION['2fa_setup_attempts'] ?? 0) + 1;
@@ -159,11 +159,11 @@ if ($requestMethod === 'POST') {
             if (!$totpEnabled) {
                 $errors[] = "2FA nie je aktivované.";
             } else {
-                $confirmPassword = $_POST['disable_password'] ?? '';
+                $confirmPassword = requestScalarString($_POST, 'disable_password', '', true, false);
                 $reauth = verifySensitiveActionPassword(
                     $pdo,
                     (int) $userId,
-                    (string) $confirmPassword,
+                    $confirmPassword,
                     (string) $user['password_hash']
                 );
                 if (!$reauth['ok']) {
@@ -196,11 +196,11 @@ if ($requestMethod === 'POST') {
             if (!$totpEnabled) {
                 $errors[] = "2FA nie je aktivované.";
             } else {
-                $confirmPassword = $_POST['regen_password'] ?? '';
+                $confirmPassword = requestScalarString($_POST, 'regen_password', '', true, false);
                 $reauth = verifySensitiveActionPassword(
                     $pdo,
                     (int) $userId,
-                    (string) $confirmPassword,
+                    $confirmPassword,
                     (string) $user['password_hash']
                 );
                 if (!$reauth['ok']) {

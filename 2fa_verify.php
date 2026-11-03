@@ -105,7 +105,7 @@ if ($requestMethod === 'POST') {
             }
 
             if (!$ipBlocked && empty($errors)) {
-                $inputCode = trim($_POST['totp_code'] ?? '');
+                $inputCode = requestScalarString($_POST, 'totp_code');
 
                 $totpOk   = false;
                 $backupOk = false;
