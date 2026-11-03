@@ -10,7 +10,7 @@ Beh 149: legal claim/lease. Handoff:
 ## Stav repozitára
 
 - Vetva: `main`
-- HEAD: `d4f12dcf`
+- HEAD: `e4ce4392` (docs Beh 149; runtime `d4f12dcf`)
 - Runtime / `DEPLOY_COMMIT`: `d4f12dcf`
 - `origin/main` a `server/main`: aktuálne
 
