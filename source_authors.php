@@ -752,5 +752,9 @@ function getSourceArticleAuthors(): array {
         'transplantacia-oblicky-standard-inovacie-experimenty' => ['Steven J. Chadban', 'Curie Ahn', 'David A. Axelrod', 'Bethany J. Foster', 'Bertram L. Kasiske', 'Vijah Kher', 'Deepali Kumar', 'Rainer Oberbauer', 'Julio Pascual', 'Helen L. Pilmore', 'James R. Rodrigue', 'Dorry L. Segev', 'Neil S. Sheerin', 'Kathryn J. Tinckam', 'Germaine Wong', 'Gregory A. Knoll'],
         // II. konsenzus SBR pre lupusovú nefritídu (Adv Rheumatol; doi 10.1186/s42358-024-00386-8), autori Crossref 2026-11-02.
         'lupusova-nefritida-liecit-hned-biopsiu-co-najskor' => ['Edgard Torres dos Reis-Neto', 'Luciana Parente Costa Seguro', 'Emília Inoue Sato', 'Eduardo Ferreira Borba', 'Evandro Mendes Klumb', 'Lilian Tereza Lavras Costallat', 'Marta Maria das Chagas Medeiros', 'Eloisa Bonfá', 'Nafice Costa Araújo', 'Simone Appenzeller', 'Ana Carolina de Oliveira e Silva Montandon', 'Emily Figueiredo Neves Yuki', 'Roberto Cordeiro de Andrade Teixeira', 'Rosa Weiss Telles', 'Danielle Christinne Soares do Egypto', 'Francinne Machado Ribeiro', 'Andrese Aline Gasparin', 'Antonio Silaide de Araujo Junior', 'Cláudia Lopes Santoro Neiva', 'Debora Cerqueira Calderaro', 'Odirlei Andre Monticielo'],
+        // Autor vzdelávacieho programu Medscape NOW! „Drug Protection for the Kidney: Combining Drug
+        // Therapies for Chronic Kidney Disease“ (Medscape Education 2026); CME Author podľa verejnej
+        // stránky programu overený 2026-11-03. Recenzenti compliance nie sú autori.
+        'kombinovana-nefroprotektivna-liecba-ckd-ras-sglt2-finerenon' => ['Naseem Bazargan'],
     ];
 }
