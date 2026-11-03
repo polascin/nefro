@@ -16,91 +16,6 @@ function guptaParseNonNeg(string $value): ?float
     return $f < 0 ? null : $f;
 }
 
-/** Body za vek (roky). */
-function guptaAgePoints(float $age): float
-{
-    if ($age <= 45.0) {
-        return 0.0;
-    }
-    if ($age <= 60.0) {
-        return 2.5;
-    }
-    if ($age <= 70.0) {
-        return 3.5;
-    }
-    return 4.5;
-}
-
-/** Body za hemoglobín (g/dL). */
-function guptaHbPoints(float $hbGdl): float
-{
-    if ($hbGdl >= 12.0) {
-        return 0.0;
-    }
-    if ($hbGdl >= 11.0) {
-        return 1.0;
-    }
-    return 1.5;
-}
-
-/** Body za albumín (g/dL). */
-function guptaAlbPoints(float $albGdl): float
-{
-    if ($albGdl > 3.8) {
-        return 0.0;
-    }
-    if ($albGdl >= 3.3) {
-        return 1.0;
-    }
-    return 1.5;
-}
-
-/** Body za dávku cisplatiny (absolútne mg). */
-function guptaDosePoints(float $mg): float
-{
-    if ($mg <= 50.0) {
-        return 0.0;
-    }
-    if ($mg <= 75.0) {
-        return 2.0;
-    }
-    if ($mg <= 100.0) {
-        return 2.5;
-    }
-    if ($mg <= 125.0) {
-        return 3.0;
-    }
-    if ($mg <= 150.0) {
-        return 5.0;
-    }
-    if ($mg <= 200.0) {
-        return 7.5;
-    }
-    return 9.5;
-}
-
-/**
- * Riziková kategória podľa celkového skóre.
- * @return array{code: string, label: string, risk_class: string, incidence: string}
- */
-function guptaRiskCategory(float $score): array
-{
-    if ($score <= 5.5) {
-        return ['code' => 'low', 'label' => 'nízke riziko', 'risk_class' => 'risk-low',
-            'incidence' => '≈ 0,9 až 1,3 % ťažkého CP-AKI'];
-    }
-    if ($score <= 9.5) {
-        return ['code' => 'moderate', 'label' => 'stredné riziko', 'risk_class' => 'risk-moderate',
-            'incidence' => 'stredná (medzi nízkym a vysokým)'];
-    }
-    if ($score <= 15.5) {
-        return ['code' => 'high', 'label' => 'vysoké riziko', 'risk_class' => 'risk-high',
-            'incidence' => 'zvýšená (medzi stredným a veľmi vysokým)'];
-    }
-    return ['code' => 'veryhigh', 'label' => 'veľmi vysoké riziko', 'risk_class' => 'risk-high',
-        'incidence' => '≈ 16,7 až 23,5 % ťažkého CP-AKI'];
-}
-
 $errors = [];
 $messages = [];
 $calculated = null;
@@ -201,17 +116,18 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $htn = $form["hypertension"] === "1";
             $dm = $form["diabetes"] === "1";
 
-            $pAge = guptaAgePoints((float) $age);
-            $pHtn = $htn ? 1.0 : 0.0;
-            $pDm = $dm ? 1.0 : 0.0;
-            $pHb = guptaHbPoints((float) $hbGdl);
-            $pWbc = (float) $wbc > 12.0 ? 1.5 : 0.0;
-            $pPlt = (float) $platelets < 150.0 ? 1.0 : 0.0;
-            $pAlb = guptaAlbPoints((float) $albGdl);
-            $pMg = (float) $mgMgdl < 2.0 ? 1.0 : 0.0;
-            $pDose = guptaDosePoints((float) $dose);
-
-            $score = $pAge + $pHtn + $pDm + $pHb + $pWbc + $pPlt + $pAlb + $pMg + $pDose;
+            [
+                'age' => $pAge,
+                'htn' => $pHtn,
+                'dm' => $pDm,
+                'hb' => $pHb,
+                'wbc' => $pWbc,
+                'plt' => $pPlt,
+                'alb' => $pAlb,
+                'mg' => $pMg,
+                'dose' => $pDose,
+                'score' => $score,
+            ] = guptaScore((float) $age, $htn, $dm, (float) $hbGdl, (float) $wbc, (float) $platelets, (float) $albGdl, (float) $mgMgdl, (float) $dose);
             $cat = guptaRiskCategory($score);
 
             $calculated = [
@@ -391,7 +307,7 @@ if (isLoggedIn()) {
 
                 <div class="info-box-green">
                     <strong>Zdroj:</strong>
-                    <a href="https://pubmed.ncbi.nlm.nih.gov/38538052/" target="_blank" rel="noopener noreferrer">Gupta S. et&nbsp;al., BMJ 2024;385:e077169</a>
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/38538012/" target="_blank" rel="noopener noreferrer">Gupta S. et&nbsp;al., BMJ 2024;384:e077169</a>
                     &ensp;&bull;&ensp; bodové hodnoty overené aj cez MDCalc (CP-AKI Risk Calculator)
                 </div>
 
