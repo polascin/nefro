@@ -7,12 +7,17 @@ require_once __DIR__ . '/newsletter_consent_audit.php';
 require_once __DIR__ . '/avatar_upload.php';
 require_once __DIR__ . '/email_verification.php';
 require_once __DIR__ . '/phone_utils.php';
+require_once __DIR__ . '/request_input.php';
 
 $requestMethod = strtoupper((string) ($_SERVER['REQUEST_METHOD'] ?? 'GET'));
 if (!in_array($requestMethod, ['GET', 'POST'], true)) {
     http_response_code(405);
     header('Allow: GET, POST');
     exit;
+}
+
+if ($requestMethod === 'POST') {
+    requestRequireScalarPost();
 }
 
 $errors = [];

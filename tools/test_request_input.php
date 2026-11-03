@@ -194,4 +194,20 @@ $textBody = implode("\n", $textOut);
 requestInputTest(str_contains($textBody, 'Neplatný tvar parametra'), 'Plain text obsahuje správu o parametri.');
 requestInputTest(!str_contains($textBody, '<br') && !str_contains($textBody, 'Fatal'), 'Plain text nie je HTML chyba.');
 
+requestRequireScalarPost(['email' => 'a@b.sk', 'age_confirm' => '1', 'empty' => null]);
+requestInputTest(true, 'Skalárny POST prejde bez ukončenia.');
+$scalarPostOut = [];
+$scalarPostCode = 0;
+exec(
+    escapeshellarg(PHP_BINARY) . ' -d display_errors=0 -r '
+    . escapeshellarg('require ' . var_export(dirname(__DIR__) . '/request_input.php', true) . '; requestRequireScalarPost(["email" => ["x"]]); echo "REACHED";')
+    . ' 2>&1',
+    $scalarPostOut,
+    $scalarPostCode,
+);
+$scalarPostBody = implode("\n", $scalarPostOut);
+requestInputTest(!str_contains($scalarPostBody, 'REACHED'), 'Poľový POST parameter ukončí požiadavku.');
+requestInputTest(str_contains($scalarPostBody, 'Neplatný tvar parametra "email"'), 'Poľový POST → riadená 400 správa.');
+requestInputTest(!str_contains($scalarPostBody, 'Fatal') && !str_contains($scalarPostBody, 'TypeError'), 'Poľový POST nie je fatál.');
+
 echo "Request input: $checks PASS\n";

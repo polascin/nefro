@@ -4,12 +4,17 @@ require_once __DIR__ . '/auth.php';
 require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
 require_once __DIR__ . '/totp.php';
+require_once __DIR__ . '/request_input.php';
 
 $requestMethod = strtoupper((string) ($_SERVER['REQUEST_METHOD'] ?? 'GET'));
 if (!in_array($requestMethod, ['GET', 'POST'], true)) {
     http_response_code(405);
     header('Allow: GET, POST');
     exit;
+}
+
+if ($requestMethod === 'POST') {
+    requestRequireScalarPost();
 }
 
 // Ak je používateľ už prihlásený (2FA dokončené), presmerovať
