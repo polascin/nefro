@@ -44,5 +44,6 @@
   "tools/test_clinical_references_dialysis.php",
   "tools/test_clinical_references_scores.php",
   "tools/test_clinical_references_trend_calcium.php",
+  "tools/test_clinical_references_urine_indices.php",
   "tools/test_clinical_references_sodium.php"
 ]

@@ -462,6 +462,85 @@ function tlsCairoBishop(
 }
 
 /**
+ * Furstov pomer elektrolytov moču a plazmy: (U_Na + U_K) / S_Na
+ * (Furst H a kol., Am J Med Sci 2000;319(4):240–244, PMID 10768609).
+ */
+function calculatorFurstRatio(float $urineNa, float $urineK, float $serumNa): float
+{
+    if ($serumNa <= 0.0) {
+        throw new InvalidArgumentException('Sérový sodík musí byť kladný.');
+    }
+
+    return ($urineNa + $urineK) / $serumNa;
+}
+
+/** CSS trieda podľa Furstovho pomeru (U_Na+U_K)/S_Na. */
+function furstClass(float $ratio): string
+{
+    if ($ratio < 0.5) {
+        return 'risk-low';         // reštrikcia < 1000 mL/deň účinná
+    }
+    if ($ratio <= 1.0) {
+        return 'risk-moderate';    // prísna reštrikcia < 500 mL/deň
+    }
+    return 'risk-high';            // reštrikcia tekutín neúčinná
+}
+
+/** Slovný opis pásma Furstovho pomeru. */
+function furstLabel(float $ratio): string
+{
+    if ($ratio < 0.5) {
+        return 'reštrikcia < 1000 mL/deň účinná';
+    }
+    if ($ratio <= 1.0) {
+        return 'prísna reštrikcia < 500 mL/deň';
+    }
+    return 'reštrikcia tekutín neúčinná';
+}
+
+/**
+ * Frakčná exkrécia látky v %: (U_x · S_cr) / (S_x · U_cr) · 100.
+ * U_x a S_x v rovnakej jednotke, U_cr a S_cr v rovnakej jednotke.
+ */
+function calculatorFractionalExcretion(float $urineX, float $serumX, float $urineCr, float $serumCr): float
+{
+    if ($serumX <= 0.0 || $urineCr <= 0.0) {
+        throw new InvalidArgumentException('Sérová koncentrácia aj kreatinín v moči musia byť kladné.');
+    }
+
+    return (($urineX * $serumCr) / ($serumX * $urineCr)) * 100.0;
+}
+
+/** Slovné hodnotenie FENa: < 1 % prerenálne, > 2 % ATN. */
+function akiFenaInterpretation(float $fena): string
+{
+    if ($fena < 1.0) {
+        return "Prerenálne zlyhanie (často < 1 %)";
+    }
+    if ($fena > 2.0) {
+        return "Akútna tubulárna nekróza - ATN (často > 2 %)";
+    }
+
+    return "Hraničná hodnota (zmiešaná etiológia)";
+}
+
+/**
+ * Slovné hodnotenie FEurea: < 35 % prerenálne, > 50 % ATN. Carvounis a kol.
+ * (Kidney Int 2002;62(6):2223–2229, PMID 12427149) uvádzajú prerenálne ≤ 35 %.
+ */
+function akiFeureaInterpretation(float $feurea): string
+{
+    if ($feurea < 35.0) {
+        return "Prerenálne zlyhanie (často < 35 %)";
+    }
+    if ($feurea > 50.0) {
+        return "Akútna tubulárna nekróza - ATN (často > 50 %)";
+    }
+
+    return "Hraničná hodnota (zmiešaná etiológia)";
+}
+
+/**
  * Korigovaný celkový vápnik pri hypoalbuminémii: Ca + 0,02 · (40 − albumín) v mmol/L
  * (albumín v g/L). Ide o bežne používaný tvar (0,8 mg/dL na 1 g/dL); Payne a kol.
  * (Br Med J 1973;4(5893):643–646, PMID 4758544) odvodili v mg/dL koeficient 1,0.

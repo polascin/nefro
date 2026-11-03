@@ -16,30 +16,6 @@ function furstParseNonNeg(string $value): ?float
     return $f < 0 ? null : $f;
 }
 
-/** CSS trieda podľa Furstovho pomeru (U_Na+U_K)/S_Na. */
-function furstClass(float $ratio): string
-{
-    if ($ratio < 0.5) {
-        return 'risk-low';         // reštrikcia < 1000 mL/deň účinná
-    }
-    if ($ratio <= 1.0) {
-        return 'risk-moderate';    // prísna reštrikcia < 500 mL/deň
-    }
-    return 'risk-high';            // reštrikcia tekutín neúčinná
-}
-
-/** Slovný opis pásma Furstovho pomeru. */
-function furstLabel(float $ratio): string
-{
-    if ($ratio < 0.5) {
-        return 'reštrikcia < 1000 mL/deň účinná';
-    }
-    if ($ratio <= 1.0) {
-        return 'prísna reštrikcia < 500 mL/deň';
-    }
-    return 'reštrikcia tekutín neúčinná';
-}
-
 $errors = [];
 $messages = [];
 $calculated = null;
@@ -87,8 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         }
 
         if (empty($errors)) {
-            // Furstov pomer = (U_Na + U_K) / S_Na
-            $ratio = ((float) $uNa + (float) $uK) / (float) $sNa;
+            $ratio = calculatorFurstRatio((float) $uNa, (float) $uK, (float) $sNa);
 
             $furstClass = furstClass($ratio);
             $furstLabel = furstLabel($ratio);
