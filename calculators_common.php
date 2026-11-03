@@ -461,6 +461,124 @@ function tlsCairoBishop(
     ];
 }
 
+/** Body za vek (roky). */
+function guptaAgePoints(float $age): float
+{
+    if ($age <= 45.0) {
+        return 0.0;
+    }
+    if ($age <= 60.0) {
+        return 2.5;
+    }
+    if ($age <= 70.0) {
+        return 3.5;
+    }
+    return 4.5;
+}
+
+/** Body za hemoglobín (g/dL). */
+function guptaHbPoints(float $hbGdl): float
+{
+    if ($hbGdl >= 12.0) {
+        return 0.0;
+    }
+    if ($hbGdl >= 11.0) {
+        return 1.0;
+    }
+    return 1.5;
+}
+
+/** Body za albumín (g/dL). */
+function guptaAlbPoints(float $albGdl): float
+{
+    if ($albGdl > 3.8) {
+        return 0.0;
+    }
+    if ($albGdl >= 3.3) {
+        return 1.0;
+    }
+    return 1.5;
+}
+
+/** Body za dávku cisplatiny (absolútne mg). */
+function guptaDosePoints(float $mg): float
+{
+    if ($mg <= 50.0) {
+        return 0.0;
+    }
+    if ($mg <= 75.0) {
+        return 2.0;
+    }
+    if ($mg <= 100.0) {
+        return 2.5;
+    }
+    if ($mg <= 125.0) {
+        return 3.0;
+    }
+    if ($mg <= 150.0) {
+        return 5.0;
+    }
+    if ($mg <= 200.0) {
+        return 7.5;
+    }
+    return 9.5;
+}
+
+/**
+ * Riziková kategória podľa celkového skóre.
+ * @return array{code: string, label: string, risk_class: string, incidence: string}
+ */
+function guptaRiskCategory(float $score): array
+{
+    if ($score <= 5.5) {
+        return ['code' => 'low', 'label' => 'nízke riziko', 'risk_class' => 'risk-low',
+            'incidence' => '≈ 0,9 až 1,3 % ťažkého CP-AKI'];
+    }
+    if ($score <= 9.5) {
+        return ['code' => 'moderate', 'label' => 'stredné riziko', 'risk_class' => 'risk-moderate',
+            'incidence' => 'stredná (medzi nízkym a vysokým)'];
+    }
+    if ($score <= 15.5) {
+        return ['code' => 'high', 'label' => 'vysoké riziko', 'risk_class' => 'risk-high',
+            'incidence' => 'zvýšená (medzi stredným a veľmi vysokým)'];
+    }
+    return ['code' => 'veryhigh', 'label' => 'veľmi vysoké riziko', 'risk_class' => 'risk-high',
+        'incidence' => '≈ 16,7 až 23,5 % ťažkého CP-AKI'];
+}
+
+/**
+ * Gupta skóre ťažkej AKI po cisplatine (Gupta S a kol., BMJ 2024;384:e077169,
+ * PMID 38538012): 9 premenných, rozsah 0 až 22,5 bodu. Kategórie premenných podľa
+ * textu článku; bodové hodnoty a hranice rizikových skupín sú v obr. 2.
+ *
+ * @return array{age: float, htn: float, dm: float, hb: float, wbc: float, plt: float, alb: float, mg: float, dose: float, score: float}
+ */
+function guptaScore(
+    float $ageYears,
+    bool $hypertension,
+    bool $diabetes,
+    float $hbGdl,
+    float $wbcGL,
+    float $plateletsGL,
+    float $albGdl,
+    float $mgMgdl,
+    float $cisplatinMg
+): array {
+    $p = [
+        'age' => guptaAgePoints($ageYears),
+        'htn' => $hypertension ? 1.0 : 0.0,
+        'dm' => $diabetes ? 1.0 : 0.0,
+        'hb' => guptaHbPoints($hbGdl),
+        'wbc' => $wbcGL > 12.0 ? 1.5 : 0.0,
+        'plt' => $plateletsGL < 150.0 ? 1.0 : 0.0,
+        'alb' => guptaAlbPoints($albGdl),
+        'mg' => $mgMgdl < 2.0 ? 1.0 : 0.0,
+        'dose' => guptaDosePoints($cisplatinMg),
+    ];
+
+    return $p + ['score' => array_sum($p)];
+}
+
 /**
  * Efluentová dávka CRRT: (dialyzát + substitúcia + čistá UF) [mL/h] / hmotnosť [kg].
  * Dodaná dávka odpočíta podiel výpadku času. Cieľ dodanej dávky 20 až 25 mL/kg/h

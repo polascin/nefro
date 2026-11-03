@@ -43,6 +43,7 @@
   "tools/test_clinical_references_crrt.php",
   "tools/test_clinical_references_clearance.php",
   "tools/test_clinical_references_dialysis.php",
+  "tools/test_clinical_references_gupta.php",
   "tools/test_clinical_references_scores.php",
   "tools/test_clinical_references_trend_calcium.php",
   "tools/test_clinical_references_urine_indices.php",
