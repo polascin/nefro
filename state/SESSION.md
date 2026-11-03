@@ -10,8 +10,8 @@ P1 clinical refs CKD-PC / CKM. Handoff:
 ## Stav repozitária
 
 - Vetva: `main`
-- HEAD: `ed5bd134` (test-only; runtime bez zmeny)
-- Runtime / `DEPLOY_COMMIT`: `03c461fd` (ignore drift OK: `tools/**`)
+- HEAD: `eb6e48bb` (docs Beh 141; runtime test `ed5bd134`)
+- Runtime / `DEPLOY_COMMIT`: `03c461fd` (ignore drift OK: `tools/**`, docs)
 - `origin/main` a `server/main`: aktuálne
 
 ## Čo je hotové
