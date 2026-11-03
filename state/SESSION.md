@@ -29,7 +29,7 @@ A11y companion unit selecty + admin notices labely. Handoff:
 ## Executable next step
 
 ```text
-# Po súhlasu: crontab sync alebo claim/lease; inak ďalší P1 z auditu.
+# Po súhlase: crontab sync alebo claim/lease; inak ďalší P1 z auditu.
 ```
 
 ## Handoff
