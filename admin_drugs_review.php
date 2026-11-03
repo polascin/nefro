@@ -50,11 +50,11 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 
 // ── Filtre ────────────────────────────────────────────────────────────────────
 // Filtre čítame z GET, po akcii (POST) z POST, aby sa zachovali. Predvolene nezverejnené.
-$fPub = (string) ($_GET['pub'] ?? $_POST['pub'] ?? 'hidden');
+$fPub = array_key_exists('pub', $_GET) ? requestScalarString($_GET, 'pub') : requestScalarString($_POST, 'pub', 'hidden');
 if (!in_array($fPub, ['', 'hidden', 'published'], true)) {
     $fPub = 'hidden';
 }
-$fCat = (string) ($_GET['kat'] ?? $_POST['kat'] ?? '');
+$fCat = array_key_exists('kat', $_GET) ? requestScalarString($_GET, 'kat') : requestScalarString($_POST, 'kat', '');
 if ($fCat !== '' && !array_key_exists($fCat, $catLabels)) {
     $fCat = '';
 }

@@ -21,14 +21,14 @@ $examplePath = $root . '/tools/crontab.example';
 $checks = 0;
 $failures = [];
 
-function crontabParityAssert(bool $ok, string $message): void
-{
-    global $checks, $failures;
+// Closure s referenciou namiesto `global`: PHPStan inak $failures vidí ako
+// navždy prázdne pole a záverečnú kontrolu hlási ako mŕtvy kód.
+$crontabParityAssert = static function (bool $ok, string $message) use (&$checks, &$failures): void {
     ++$checks;
     if (!$ok) {
         $failures[] = $message;
     }
-}
+};
 
 $targetArg = $argv[1] ?? '';
 if ($targetArg === '' || $targetArg === '--example') {
@@ -50,21 +50,21 @@ if ($targetArg === '' || $targetArg === '--example') {
     $label = $targetArg;
 }
 
-crontabParityAssert($text !== '', "{$label}: crontab text nesmie byť prázdny.");
+$crontabParityAssert($text !== '', "{$label}: crontab text nesmie byť prázdny.");
 
 foreach (nefroCrontabParityErrors($text) as $err) {
-    crontabParityAssert(false, "{$label}: {$err}");
+    $crontabParityAssert(false, "{$label}: {$err}");
 }
 
 // Pri example navyše pinuj, že knižnica a example majú rovnaký mustSchedule.
 if ($targetArg === '' || $targetArg === '--example') {
     foreach (nefroCrontabMustSchedule() as $script) {
-        crontabParityAssert(
+        $crontabParityAssert(
             is_file($root . '/' . $script),
             "Ops skript {$script} musí existovať v koreni.",
         );
     }
-    crontabParityAssert(
+    $crontabParityAssert(
         is_file($root . '/tools/render_crontab.php'),
         'tools/render_crontab.php musí existovať (RSI inštalácia).',
     );
