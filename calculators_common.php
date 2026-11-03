@@ -340,6 +340,82 @@ function calculatorParseNonNegativeFloat(string $value): ?float
 }
 
 /**
+ * Meraný klírens kreatinínu zo zberu moču: (U_cr · V) / (P_cr · T) v mL/min.
+ * U_cr a P_cr v rovnakej jednotke, V v mL, T v hodinách.
+ */
+function calculatorMeasuredCreatinineClearance(float $urineCr, float $urineMl, float $plasmaCr, float $hours): float
+{
+    if ($plasmaCr <= 0.0 || $hours <= 0.0) {
+        throw new InvalidArgumentException('Plazmatický kreatinín aj čas zberu musia byť kladné.');
+    }
+
+    return ($urineCr * $urineMl) / ($plasmaCr * $hours * 60.0);
+}
+
+/**
+ * Povrch tela podľa Du Boisa a Du Boisa (1916): 0,007184 · výška[cm]^0,725 · hmotnosť[kg]^0,425 (m²).
+ */
+function calculatorBsaDuBois(float $heightCm, float $weightKg): float
+{
+    return 0.007184 * pow($heightCm, 0.725) * pow($weightKg, 0.425);
+}
+
+/**
+ * Podiel celkovej telesnej vody na hmotnosti pri poruchách nátria
+ * (Adrogué a Madias, N Engl J Med 2000;342(20):1493–1499, PMID 10816188):
+ * muži 0,6 (od 65 r 0,5), ženy 0,5 (od 65 r 0,45).
+ */
+function calculatorTbwFraction(string $sex, int $ageYears): float
+{
+    if ($sex === 'male') {
+        return $ageYears >= 65 ? 0.5 : 0.6;
+    }
+
+    return $ageYears >= 65 ? 0.45 : 0.5;
+}
+
+/**
+ * Deficit voľnej vody v litroch: TBW · (S-Na / cieľové Na − 1).
+ */
+function calculatorFreeWaterDeficit(float $tbwLiters, float $serumNa, float $targetNa): float
+{
+    if ($targetNa <= 0.0) {
+        throw new InvalidArgumentException('Cieľové nátrium musí byť kladné.');
+    }
+
+    return $tbwLiters * ($serumNa / $targetNa - 1.0);
+}
+
+/**
+ * Adrogué–Madias: zmena S-Na po 1 L infúzie = (Na_inf + K_inf − S-Na) / (TBW + 1)
+ * (N Engl J Med 2000;342(21):1581–1589, PMID 10824078).
+ */
+function calculatorAdrogueMadias(float $infusateNa, float $infusateK, float $serumNa, float $tbwLiters): float
+{
+    return ($infusateNa + $infusateK - $serumNa) / ($tbwLiters + 1.0);
+}
+
+/**
+ * Korekcia S-Na na hyperglykémiu: S-Na + koeficient · (glykémia[mg/dL] − 100) / 100.
+ * Koeficient 1,6 (Katz, N Engl J Med 1973;289(16):843–844, PMID 4763428)
+ * alebo 2,4 (Hillier a kol., Am J Med 1999;106(4):399–403, PMID 10225241).
+ */
+function calculatorSodiumGlucoseCorrection(float $serumNa, float $glucoseMgDl, float $coefficient): float
+{
+    return $serumNa + $coefficient * ($glucoseMgDl - 100.0) / 100.0;
+}
+
+/** Prepočet koncentrácie kreatinínu na mg/dL (jednotky sa vo vzorci krátia, ale konvertujeme pre istotu). */
+function crclCreatinineToMgDl(float $value, string $unit): float
+{
+    return match ($unit) {
+        "umol_l" => $value / 88.4,
+        "mmol_l" => $value * 1000.0 / 88.4,
+        default  => $value, // mg_dl
+    };
+}
+
+/**
  * Klírens kreatinínu podľa Cockcrofta a Gaulta (Nephron 1976;16(1):31–41, PMID 1244564):
  * (140 − vek) · hmotnosť [kg] / (72 · S-kreatinín [mg/dL]), u žien × 0,85. Výsledok v mL/min.
  */

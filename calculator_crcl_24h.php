@@ -5,16 +5,6 @@ require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
 require_once __DIR__ . '/calculators_common.php';
 
-/** Prepočet koncentrácie kreatinínu na mg/dL (jednotky sa vo vzorci krátia, ale konvertujeme pre istotu). */
-function crclCreatinineToMgDl(float $value, string $unit): float
-{
-    return match ($unit) {
-        "umol_l" => $value / 88.4,
-        "mmol_l" => $value * 1000.0 / 88.4,
-        default  => $value, // mg_dl
-    };
-}
-
 $errors = [];
 $messages = [];
 $calculated = null;
@@ -108,10 +98,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if (empty($errors)) {
             $pCrMgDl = crclCreatinineToMgDl((float) $pCrValue, $pCrUnit);
             $uCrMgDl = crclCreatinineToMgDl((float) $uCrValue, $uCrUnit);
-            $timeMin = (float) $collectionHours * 60.0;
 
-            // Meraný klírens: CrCl = (U_cr × V) / (P_cr × T)
-            $crcl = ($uCrMgDl * (float) $urineVolume) / ($pCrMgDl * $timeMin);
+            $crcl = calculatorMeasuredCreatinineClearance($uCrMgDl, (float) $urineVolume, $pCrMgDl, (float) $collectionHours);
             $crclRounded = round($crcl, 1);
 
             $crclNorm = null;
@@ -119,8 +107,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $gCategory = null;
             $gDescription = null;
             if ($heightCm !== null && $weightKg !== null) {
-                // Du Bois BSA
-                $bsa = 0.007184 * pow((float) $heightCm, 0.725) * pow((float) $weightKg, 0.425);
+                $bsa = calculatorBsaDuBois((float) $heightCm, (float) $weightKg);
                 $crclNorm = round($crcl * 1.73 / $bsa, 1);
                 $gCategory = ckdGCategory($crclNorm);
                 $gDescription = ckdGCategoryDescription($gCategory);
