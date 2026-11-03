@@ -10,8 +10,8 @@ Regresia `crontab.example` + CLI deny. Handoff:
 ## Stav repozitára
 
 - Vetva: `main`
-- HEAD: `3cef9245` (test-only; runtime bez zmeny)
-- Runtime / `DEPLOY_COMMIT`: `f5032e59` (ignore drift OK: `tools/**`)
+- HEAD: `47c96948` (docs Beh 146; runtime test `3cef9245`)
+- Runtime / `DEPLOY_COMMIT`: `f5032e59` (ignore drift OK: `tools/**`, docs)
 - `origin/main` a `server/main`: aktuálne
 
 ## Čo je hotové
