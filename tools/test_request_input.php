@@ -294,4 +294,17 @@ requestInputTest(
 );
 requestInputTest(!str_contains($scalarPostBody, 'Fatal') && !str_contains($scalarPostBody, 'TypeError'), 'Poľový POST nie je fatál.');
 
+// Priame pretypovanie superglobálov obchádza vstupnú vrstvu: `?id[]=1` dá
+// warning „Array to string conversion“ alebo TypeError v trim(). Koreňové
+// stránky preto čítajú $_GET/$_POST iba cez request* helpery.
+$rawCastPattern = '/(?:\(string\)|\(int\)|trim\()\s*\(?\s*\$_(?:GET|POST)\[/';
+requestInputTest(preg_match($rawCastPattern, "(int) (\$_GET['id'] ?? 0)") === 1, 'Vzor priameho pretypovania zachytí (int) ($_GET[...]).');
+$rawCastHits = [];
+foreach (glob($root . '/*.php') ?: [] as $rootPhp) {
+    if (preg_match($rawCastPattern, (string) file_get_contents($rootPhp)) === 1) {
+        $rawCastHits[] = basename($rootPhp);
+    }
+}
+requestInputTest($rawCastHits === [], 'Priame (string)/(int)/trim() na $_GET/$_POST: ' . implode(', ', $rawCastHits));
+
 echo "Request input: $checks PASS\n";

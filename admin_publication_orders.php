@@ -197,7 +197,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 
 // ── Filtre a výpis ──────────────────────────────────────────────────────────
 $allowedFilters = ['', 'awaiting_payment', 'paid', 'cancelled'];
-$filter = (string) ($_GET['status'] ?? '');
+$filter = requestScalarString($_GET, 'status');
 if (!in_array($filter, $allowedFilters, true)) {
     $filter = '';
 }

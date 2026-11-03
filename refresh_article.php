@@ -26,7 +26,7 @@ require_once __DIR__ . '/db_config.php';
 if (!$isCli) {
     $requestMethod = strtoupper((string) ($_SERVER['REQUEST_METHOD'] ?? 'GET'));
     if ($requestMethod === 'GET') {
-        $slug = trim((string) ($_GET['slug'] ?? ''));
+        $slug = requestScalarString($_GET, 'slug');
         if (!preg_match('/^[a-z0-9-]{1,120}$/', $slug)) {
             http_response_code(400);
             header('Content-Type: text/plain; charset=utf-8');
@@ -72,7 +72,7 @@ if (!$isCli) {
         exit('Neplatný CSRF token.');
     }
 
-    $slug = trim((string) ($_POST['slug'] ?? ''));
+    $slug = requestScalarString($_POST, 'slug');
 }
 
 if (!preg_match('/^[a-z0-9-]{1,120}$/', $slug)) {

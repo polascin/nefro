@@ -144,16 +144,16 @@ $csrfToken = generateCsrfToken();
 $noticeAudit = [];
 $noticeAuditAdminOptions = [];
 
-$auditFilterAdminId = max(0, (int) ($_GET['audit_admin_id'] ?? 0));
-$auditFilterFormatRaw = strtolower(trim((string) ($_GET['audit_format'] ?? '')));
+$auditFilterAdminId = max(0, requestScalarInt($_GET, 'audit_admin_id'));
+$auditFilterFormatRaw = strtolower(requestScalarString($_GET, 'audit_format'));
 $auditAllowedFormats = ['view', 'print', 'csv', 'json', 'txt'];
 $auditFilterFormat = in_array($auditFilterFormatRaw, $auditAllowedFormats, true) ? $auditFilterFormatRaw : '';
 
-$auditFilterDateFromRaw = trim((string) ($_GET['audit_date_from'] ?? ''));
-$auditFilterDateToRaw = trim((string) ($_GET['audit_date_to'] ?? ''));
+$auditFilterDateFromRaw = requestScalarString($_GET, 'audit_date_from');
+$auditFilterDateToRaw = requestScalarString($_GET, 'audit_date_to');
 $auditFilterDateFrom = preg_match('/^\d{4}-\d{2}-\d{2}$/', $auditFilterDateFromRaw) ? $auditFilterDateFromRaw : '';
 $auditFilterDateTo = preg_match('/^\d{4}-\d{2}-\d{2}$/', $auditFilterDateToRaw) ? $auditFilterDateToRaw : '';
-$auditDatePreset = strtolower(trim((string) ($_GET['audit_date_preset'] ?? '')));
+$auditDatePreset = strtolower(requestScalarString($_GET, 'audit_date_preset'));
 
 if ($auditDatePreset !== '') {
     switch ($auditDatePreset) {

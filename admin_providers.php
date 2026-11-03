@@ -330,7 +330,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 }
 
 // ── Načítanie na editáciu (GET alebo po zápise kontaktu) ──────────────────────
-$editId = (int) ($_GET['id'] ?? 0);
+$editId = requestScalarInt($_GET, 'id');
 if ($stayEditId !== null) {
     $editId = $stayEditId;
 }
@@ -345,7 +345,7 @@ if (($stayEditId !== null || ($_GET['action'] ?? '') === 'edit') && $editId > 0)
             $cs->execute(['id' => (int) $editProvider['id']]);
             $editContacts = $cs->fetchAll(\PDO::FETCH_ASSOC);
 
-            $contactEditId = (int) ($_GET['contact'] ?? 0);
+            $contactEditId = requestScalarInt($_GET, 'contact');
             if ($contactEditId > 0) {
                 foreach ($editContacts as $c) {
                     if ((int) $c['id'] === $contactEditId) {
@@ -392,7 +392,7 @@ foreach (['fLoc', 'fSpec', 'fQuery'] as $vn) {
 }
 
 $perPage = 50;
-$page    = max(1, (int) ($_GET['page'] ?? 1));
+$page    = max(1, requestScalarInt($_GET, 'page', 1));
 $offset  = ($page - 1) * $perPage;
 
 $where  = ' WHERE 1=1';
@@ -438,7 +438,7 @@ if (
     $_SERVER['REQUEST_METHOD'] === 'POST'
     && validateCsrfToken(requestCsrfTokenFromPost())
 ) {
-    $exportFmt = strtolower((string) ($_GET['export'] ?? $_POST['export'] ?? ''));
+    $exportFmt = strtolower((array_key_exists('export', $_GET) ? requestScalarString($_GET, 'export') : requestScalarString($_POST, 'export', '')));
 }
 if (in_array($exportFmt, ['csv', 'json', 'vcard'], true)) {
     $expStmt = $pdo->prepare('SELECT * FROM partner_providers' . $where . ' ORDER BY provider_type ASC, name ASC');

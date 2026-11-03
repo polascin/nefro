@@ -197,8 +197,8 @@ if ($requestMethod === 'POST' && ($_POST['action'] ?? '') !== 'delete_account') 
             $data['other_phone'] = $normalizedOtherPhone;
         }
 
-        $mobileVerificationAction = trim((string) ($_POST['mobile_verification_action'] ?? ''));
-        $requestedMobileCode = trim((string) ($_POST['mobile_verification_code'] ?? ''));
+        $mobileVerificationAction = requestScalarString($_POST, 'mobile_verification_action');
+        $requestedMobileCode = requestScalarString($_POST, 'mobile_verification_code');
 
         $existingMobilePhone = trim((string) ($user['mobile_phone'] ?? ''));
         $existingMobilePhone = $existingMobilePhone === '' ? null : $existingMobilePhone;

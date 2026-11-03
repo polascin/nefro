@@ -17,7 +17,7 @@ $phpBin = nefroCrontabDefaultPhp();
 $root = nefroCrontabDefaultRoot();
 $preservePath = '';
 
-foreach (array_slice($argv, 1) as $arg) {
+foreach (array_slice($argv ?? [], 1) as $arg) {
     if (str_starts_with($arg, '--php=')) {
         $phpBin = substr($arg, 6);
         continue;
