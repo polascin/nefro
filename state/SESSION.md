@@ -1,27 +1,27 @@
 # SESSION
 
-Aktualizované: 2026-11-03 09:58 Europe/Bratislava
+Aktualizované: 2026-11-03 10:12 Europe/Bratislava
 
 ## Aktívna úloha
 
-Beh 151: referenčné testy Kt/V, Watson TBW, nPCR. Handoff:
-`.codex/handoffs/2026-11-03-095800-dialysis-clinical-refs.md`.
+Beh 152: referenčné testy CG, recirkulácie a voľnej vody. Handoff:
+`.codex/handoffs/2026-11-03-101200-clearance-clinical-refs.md`.
 
 ## Stav repozitára
 
 - Vetva: `main` (práca vo worktree `claude/loop-dev-audit-1ec33b`, merge `--no-ff`)
-- Runtime / `DEPLOY_COMMIT`: `9a1861e7`
-- `origin/main` a `server/main`: `9a1861e7` (dokumentačný commit po ňom sa nenasadzuje)
+- Runtime / `DEPLOY_COMMIT`: `c4eddcc2`
+- `origin/main` a `server/main`: `c4eddcc2` (dokumentačný commit po ňom sa nenasadzuje)
 
 ## Čo je hotové
 
-1. Kt/V a nPCR vzorce v calculators_common.php, test 25 PASS
-2. Živý výpočet zhodný s referenciou
-3. Regresie 42 PASS; PHPStan 0
+1. Beh 150: skalárne superglobály, PHPStan 0
+2. Beh 151: Kt/V, Watson, nPCR (25 PASS)
+3. Beh 152: CG, recirkulácia, voľná voda (25 PASS); regresie 43 PASS
 
 ## Otvorené
 
-- Referenčné testy ďalších kalkulačiek (cg, free_water, na, recirculation, plasmic…)
+- Referenčné testy: crcl_24h, na, plasmic, kdpi a ďalšie
 
 ## Executable next step
 
@@ -31,4 +31,4 @@ php tools/run_regressions.php
 
 ## Handoff
 
-`.codex/handoffs/2026-11-03-095800-dialysis-clinical-refs.md`
+`.codex/handoffs/2026-11-03-101200-clearance-clinical-refs.md`

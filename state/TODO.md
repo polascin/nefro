@@ -2,7 +2,11 @@
 
 ## Ďalšia slučka
 
-1. P1 klinické referencie: cg, crcl_24h, free_water, na, recirculation, plasmic (vzor Beh 151).
+1. P1 klinické referencie: crcl_24h, na, plasmic, kdpi (vzor Beh 151/152).
+
+## Hotové: slučka 2026-11-03-n (CG, recirkulácia, voľná voda)
+
+- [x] Vzorce v calculators_common + test 25 PASS; deploy `c4eddcc2`
 
 ## Hotové: slučka 2026-11-03-m (Kt/V, nPCR)
 
