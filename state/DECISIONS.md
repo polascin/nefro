@@ -158,3 +158,10 @@ Beh 138 pridal `php -r` + `escapeshellarg` na overenie poľového POST. Na
 Windowse to rozbije vnorené úvodzovky, regresná brána padá a SFTP deploy
 nespustí (produkcia ostala na staršom SHA). Riešenie: temp fixture PHP súbor,
 rovnako ako JSON/text reject. Claim/lease ENUM stále bez súhlasu.
+
+## 2026-11-03 (slučka 2) — auth/newsletter scalar POST guard
+
+`requestRequireScalarPost` na login, forgot/reset, resend, confirm deletion,
+admin_reauth a newsletter verify/unsubscribe. Heslá cez
+`requestScalarString(..., trim=false)`. Admin katalógy s multi-selectmi
+nedostávajú plošný guard. Claim/lease ENUM stále bez súhlasu.

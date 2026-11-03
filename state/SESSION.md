@@ -1,36 +1,32 @@
 # SESSION
 
-Aktualizované: 2026-11-03 04:58 Europe/Bratislava
+Aktualizované: 2026-11-03 05:18 Europe/Bratislava
 
 ## Aktívna úloha
 
-Opravený Windows regresný test Behu 138 (blokoval deploy), spevnený profil
-a PREVENT clinical refs. Handoff:
-`.codex/handoffs/2026-11-03-045740-request-input-prevent-refs.md`.
+Auth/newsletter POST majú `requestRequireScalarPost`. Handoff:
+`.codex/handoffs/2026-11-03-051759-auth-scalar-post-guards.md`.
 
 ## Stav repozitára
 
 - Vetva: `main`
-- HEAD: `a089ebc3` (docs SHA sync; runtime fix `84d61269`, handoff `166dee58`)
-- Runtime / `DEPLOY_COMMIT`: `166dee58` (dokumentačný drift HEAD OK; ignore paths)
+- HEAD: `03c461fd`
+- Runtime / `DEPLOY_COMMIT`: `03c461fd`
 - `origin/main` a `server/main`: aktuálne
-- Predchádzajúci `c0f033c7` (Beh 138) sa nenasadil samostatne; brána padala
-  na Windowse a produkcia ostala na `1ed7f45d` až do `84d61269`
 
 ## Čo je hotové
 
-1. `tools/test_request_input.php`: fixture namiesto `php -r` (100 PASS)
-2. `profile.php`: `requestRequireScalarPost` + `requestScalarString` na polia
-3. PREVENT golden case + model select + risk class v clinical refs (80 PASS)
-4. Regresie 38 PASS; PHPStan 0; live smoke OK
-5. Claim/lease ENUM **nebol**
+1. Scalar guard na login, forgot/reset, resend, confirm deletion, admin_reauth
+2. Newsletter verify + unsubscribe POST (a skalárne tokeny)
+3. request_input wiring 107 PASS; regresie 38; deploy OK
+4. Claim/lease ENUM **nebol**
 
 ## Executable next step
 
 ```text
-# Voliteľne requestRequireScalarPost na ďalšie formuláre, alebo claim/lease IBA so súhlasom.
+# Voliteľne clinical refs CKD-PC/CKM, alebo claim/lease IBA so súhlasom.
 ```
 
 ## Handoff
 
-`.codex/handoffs/2026-11-03-045740-request-input-prevent-refs.md`
+`.codex/handoffs/2026-11-03-051759-auth-scalar-post-guards.md`
