@@ -19,33 +19,6 @@ function crrtParseNonNeg(string $value): ?float
     return $f < 0 ? null : $f;
 }
 
-/** CSS trieda podľa dodanej efluentovej dávky voči cieľu KDIGO (20–25 mL/kg/h). */
-function crrtDoseClass(float $dose): string
-{
-    if ($dose < 20.0) {
-        return 'risk-high';        // poddávkovanie
-    }
-    if ($dose <= 30.0) {
-        return 'risk-low';         // cieľ + bežná rezerva na výpadky
-    }
-    return 'risk-moderate';        // nadmerná dávka
-}
-
-/** Slovný opis pásma dávky. */
-function crrtDoseLabel(float $dose): string
-{
-    if ($dose < 20.0) {
-        return 'pod cieľom KDIGO';
-    }
-    if ($dose <= 25.0) {
-        return 'cieľové pásmo KDIGO';
-    }
-    if ($dose <= 30.0) {
-        return 'prijateľná rezerva';
-    }
-    return 'nad cieľom';
-}
-
 $errors = [];
 $messages = [];
 $calculated = null;
@@ -117,9 +90,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         }
 
         if (empty($errors)) {
-            $effluentRate = (float) $dialysate + (float) $replacement + (float) $netUf;
-            $prescribedDose = $effluentRate / (float) $weight;
-            $deliveredDose = $prescribedDose * (1.0 - (float) $downtime / 100.0);
+            [
+                'effluent' => $effluentRate,
+                'prescribed' => $prescribedDose,
+                'delivered' => $deliveredDose,
+            ] = calculatorCrrtEffluentDose((float) $dialysate, (float) $replacement, (float) $netUf, (float) $weight, (float) $downtime);
             $suggestedEffluent = (float) $targetDose * (float) $weight;
 
             $doseClass = crrtDoseClass($deliveredDose);
