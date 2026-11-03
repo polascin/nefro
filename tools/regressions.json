@@ -39,6 +39,7 @@
   "tools/test_author_identity_parity.php",
   "tools/test_clinical_egfr_reference.php",
   "tools/test_clinical_references.php",
+  "tools/test_clinical_references_adpkd.php",
   "tools/test_clinical_references_ckdpc_ckm.php",
   "tools/test_clinical_references_crrt.php",
   "tools/test_clinical_references_clearance.php",

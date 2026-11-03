@@ -5,45 +5,6 @@ require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
 require_once __DIR__ . '/calculators_common.php';
 
-/**
- * Mayo ADPKD klasifikácia — Irazabal et al. JASN 2015;26(8):1987–1994
- * HtTKV = TKV / výška (mL/m)
- * k = ln(HtTKV / 150) / vek  — odhadovaná ročná rýchlosť rastu obličiek
- * Triedy 1A–1E podľa k (prahové hodnoty: 1.5%, 3.0%, 4.5%, 6.0%/rok)
- * Trieda 2 = atypická ADPKD (unilaterálna, asymetrická)
- */
-function adpkdClassify(float $tkv_ml, float $height_cm, float $age): array
-{
-    $height_m = $height_cm / 100.0;
-    $httkv = $tkv_ml / $height_m; // mL/m
-    $k = log($httkv / 150.0) / $age; // ročná miera rastu (log)
-    $annual_pct = (exp($k) - 1.0) * 100.0; // % za rok
-
-    if ($k < 0.015) {
-        $class = "1A";
-        $speed = "Pomalá (<1,5 %/rok)";
-    } elseif ($k < 0.03) {
-        $class = "1B";
-        $speed = "Mierna (1,5–3 %/rok)";
-    } elseif ($k < 0.045) {
-        $class = "1C";
-        $speed = "Rýchla (3–4,5 %/rok)";
-    } elseif ($k < 0.06) {
-        $class = "1D";
-        $speed = "Veľmi rýchla (4,5–6 %/rok)";
-    } else {
-        $class = "1E";
-        $speed = "Extrémne rýchla (>6 %/rok)";
-    }
-
-    return [
-        "httkv" => round($httkv, 1),
-        "k_pct" => round($annual_pct, 2),
-        "class" => $class,
-        "speed" => $speed,
-    ];
-}
-
 function adpkdInterpretation(string $class): array
 {
     $interp = [];
@@ -261,13 +222,13 @@ if (isLoggedIn()) {
                     <summary>Vzorec: Mayo ADPKD klasifikácia (Irazabal 2015)</summary>
                     <div class="calc-formula-content">
                         <div class="calc-formula-line">\[ \text{HtTKV} = \frac{\text{TKV [mL]}}{\text{výška [m]}} \]</div>
-                        <div class="calc-formula-line">\[ k = \frac{\ln(\text{HtTKV} / 150)}{\text{vek}} \]</div>
-                        <div class="calc-formula-line">\[ \begin{aligned} \text{Triedy: } &1A: k \lt 0.015 \quad 1B: 0.015\text{--}0.030 \quad 1C: 0.030\text{--}0.045 \\ &1D: 0.045\text{--}0.060 \quad 1E: k \ge 0.060 \end{aligned} \]</div>
+                        <div class="calc-formula-line">\[ r = \left(\frac{\text{HtTKV}}{150}\right)^{1/\text{vek}} - 1 \]</div>
+                        <div class="calc-formula-line">\[ \begin{aligned} \text{Triedy: } &1A: r \lt 1{,}5\,\% \quad 1B: 1{,}5\text{--}3\,\% \quad 1C: 3\text{--}4{,}5\,\% \\ &1D: 4{,}5\text{--}6\,\% \quad 1E: r \ge 6\,\% \end{aligned} \]</div>
                         <div class="calc-formula-vars">
                             HtTKV = výškou adjustovaný celkový objem obličiek (mL/m) &ensp;&bull;&ensp;
-                            k = odhadovaná ročná miera rastu (exponent) &ensp;&bull;&ensp;
+                            r = odhadovaný ročný prírastok HtTKV od teoretických 150 mL/m &ensp;&bull;&ensp;
                             Platí len pre typickú ADPKD (bilaterálna, difúzna) &ensp;&bull;&ensp;
-                            Zdroj: Irazabal MV et al. <em>JASN.</em> 2015;26(8):1987–1994.
+                            Zdroj: <a href="https://pubmed.ncbi.nlm.nih.gov/24904092/" target="_blank" rel="noopener noreferrer">Irazabal MV et&nbsp;al., <em>J Am Soc Nephrol.</em> 2015;26(1):160–172</a>.
                         </div>
                     </div>
                 </details>

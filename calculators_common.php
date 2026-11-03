@@ -462,6 +462,46 @@ function tlsCairoBishop(
 }
 
 /**
+ * Mayo ADPKD klasifikácia — Irazabal MV a kol., J Am Soc Nephrol 2015;26(1):160–172,
+ * PMID 24904092. HtTKV = TKV / výška (mL/m); teoretický počiatočný HtTKV 150 mL/m.
+ * Ročný prírastok = (HtTKV / 150)^(1/vek) − 1; triedy podľa prírastku
+ * < 1,5 % (1A), 1,5 až 3 % (1B), 3 až 4,5 % (1C), 4,5 až 6 % (1D), > 6 % (1E).
+ * Trieda 2 = atypická ADPKD (unilaterálna, asymetrická)
+ */
+function adpkdClassify(float $tkv_ml, float $height_cm, float $age): array
+{
+    $height_m = $height_cm / 100.0;
+    $httkv = $tkv_ml / $height_m; // mL/m
+    $annual_pct = (pow($httkv / 150.0, 1.0 / $age) - 1.0) * 100.0; // % za rok
+    // Prahy sú ročné percentuálne prírastky (Irazabal 2015), nie logaritmická miera.
+    $k = $annual_pct / 100.0;
+
+    if ($k < 0.015) {
+        $class = "1A";
+        $speed = "Pomalá (<1,5 %/rok)";
+    } elseif ($k < 0.03) {
+        $class = "1B";
+        $speed = "Mierna (1,5–3 %/rok)";
+    } elseif ($k < 0.045) {
+        $class = "1C";
+        $speed = "Rýchla (3–4,5 %/rok)";
+    } elseif ($k < 0.06) {
+        $class = "1D";
+        $speed = "Veľmi rýchla (4,5–6 %/rok)";
+    } else {
+        $class = "1E";
+        $speed = "Extrémne rýchla (>6 %/rok)";
+    }
+
+    return [
+        "httkv" => round($httkv, 1),
+        "k_pct" => round($annual_pct, 2),
+        "class" => $class,
+        "speed" => $speed,
+    ];
+}
+
+/**
  * Efluentová dávka CRRT: (dialyzát + substitúcia + čistá UF) [mL/h] / hmotnosť [kg].
  * Dodaná dávka odpočíta podiel výpadku času. Cieľ dodanej dávky 20 až 25 mL/kg/h
  * (KDIGO AKI 2012, odporúčanie 5.8.1). Bez korekcie na prediluciu.
