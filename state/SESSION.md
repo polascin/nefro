@@ -10,8 +10,8 @@ Cookie banner mimo a11y stromu po súhlase. Handoff:
 ## Stav repozitára
 
 - Vetva: `main`
-- HEAD: `f5032e59`
-- Runtime / `DEPLOY_COMMIT`: `f5032e59`
+- HEAD: `e3995105` (docs/handoff Beh 145; runtime `f5032e59`)
+- Runtime / `DEPLOY_COMMIT`: `f5032e59` (dokumentačný drift HEAD OK)
 - `origin/main` a `server/main`: aktuálne
 
 ## Čo je hotové
