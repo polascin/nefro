@@ -1,35 +1,34 @@
 # SESSION
 
-Aktualizované: 2026-11-03 09:07 Europe/Bratislava
+Aktualizované: 2026-11-03 09:40 Europe/Bratislava
 
 ## Aktívna úloha
 
-Beh 149: legal claim/lease. Handoff:
-`.codex/handoffs/2026-11-03-090700-legal-claim-lease.md`.
+Beh 150: skalárne superglobály + PHPStan 0. Handoff:
+`.codex/handoffs/2026-11-03-094000-scalar-superglobals.md`.
 
 ## Stav repozitára
 
-- Vetva: `main`
-- HEAD: `e4ce4392` (docs Beh 149; runtime `d4f12dcf`)
-- Runtime / `DEPLOY_COMMIT`: `d4f12dcf`
-- `origin/main` a `server/main`: aktuálne
+- Vetva: `main` (práca vo worktree `claude/loop-dev-audit-1ec33b`, merge `--no-ff`)
+- Runtime / `DEPLOY_COMMIT`: `effbd221`
+- `origin/main` a `server/main`: `effbd221` (dokumentačný commit po ňom sa nenasadzuje)
 
 ## Čo je hotové
 
-1. Legal claim/lease podľa newsletter vzoru + ENUM `sending` na produkcii
-2. ops_health: mail ENUM sending ano×4; RESULT PASS
-3. Regresie 41; legal 65 PASS (reclaim pin)
+1. Žiadne priame `(string)`/`(int)`/`trim()` na `$_GET`/`$_POST` v koreňových `*.php` (regresia)
+2. PHPStan 0 (crontab nástroje z Behu 148)
+3. Regresie 41 PASS; request_input 130 PASS
 
 ## Otvorené
 
-- Ďalší P1 z auditu
+- Ďalší P1 z auditu (klinické referencie ďalších kalkulačiek, a11y úlohy)
 
 ## Executable next step
 
 ```text
-# Ďalší P1 z .audit.md
+php tools/run_regressions.php
 ```
 
 ## Handoff
 
-`.codex/handoffs/2026-11-03-090700-legal-claim-lease.md`
+`.codex/handoffs/2026-11-03-094000-scalar-superglobals.md`

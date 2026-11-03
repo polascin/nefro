@@ -2,7 +2,12 @@
 
 ## Ďalšia slučka
 
-1. P1 z `.audit.md` (claim/lease newsletter+legal a cron sync sú hotové).
+1. P1 z `.audit.md`: klinické referencie ďalších kalkulačiek alebo a11y úlohy.
+
+## Hotové: slučka 2026-11-03-l (skalárne superglobály)
+
+- [x] admin/profile/refresh_article cez request* helpery + regresia
+- [x] PHPStan 0; deploy `effbd221`
 
 ## Hotové: slučka 2026-11-03-k (legal claim/lease)
 
