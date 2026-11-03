@@ -20,14 +20,15 @@ if (!empty($_SESSION['admin_temp_password_flash'])) {
 }
 
 if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
+    requestRequireScalarPost();
     $postedCsrf = requestCsrfTokenFromPost();
     if (!checkFormRateLimit($pdo, 'admin_post_' . basename(__FILE__), getClientIpAddress(), 60, 300)) {
         $actionError = 'Príliš veľa požiadaviek. Skúste to neskôr.';
     } elseif (!validateCsrfToken($postedCsrf)) {
         $actionError = 'Neplatný CSRF token.';
     } else {
-        $action       = $_POST['action'] ?? '';
-        $targetUserId = (int) ($_POST['user_id'] ?? 0);
+        $action       = requestScalarString($_POST, 'action');
+        $targetUserId = requestScalarInt($_POST, 'user_id');
 
         switch ($action) {
             case 'toggle_admin':
@@ -94,7 +95,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 
             case 'run_cleanup':
                 requireAdminReauth();
-                $retDays = max(30, min(3650, (int) ($_POST['retention_days'] ?? 365)));
+                $retDays = max(30, min(3650, requestScalarInt($_POST, 'retention_days', 365)));
                 try {
                     $profileScrub = npsScrubProfileArchive($pdo);
                     $s1 = $pdo->prepare("DELETE FROM users_profile_archive WHERE changed_at < DATE_SUB(NOW(), INTERVAL :days DAY)");

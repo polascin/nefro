@@ -37,29 +37,30 @@ function ppClean(string $v, int $max): ?string
 
 // ── Spracovanie POST akcií ────────────────────────────────────────────────────
 if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
+    requestRequireScalarPost();
     if (!checkFormRateLimit($pdo, 'admin_post_' . basename(__FILE__), getClientIpAddress(), 60, 300)) {
         $actionError = 'Príliš veľa požiadaviek. Skúste to neskôr.';
     } elseif (!validateCsrfToken(requestCsrfTokenFromPost())) {
         $actionError = 'Neplatný CSRF token.';
     } else {
-        $action = (string) ($_POST['action'] ?? '');
+        $action = requestScalarString($_POST, 'action');
         switch ($action) {
             case 'save':
-                $id     = (int) ($_POST['provider_id'] ?? 0);
-                $name   = trim((string) ($_POST['name'] ?? ''));
-                $type   = (string) ($_POST['provider_type'] ?? 'specialista');
-                $email  = trim((string) ($_POST['email'] ?? ''));
-                $web    = trim((string) ($_POST['website'] ?? ''));
+                $id     = requestScalarInt($_POST, 'provider_id');
+                $name   = requestScalarString($_POST, 'name');
+                $type   = requestScalarString($_POST, 'provider_type', 'specialista');
+                $email  = requestScalarString($_POST, 'email');
+                $web    = requestScalarString($_POST, 'website');
                 $active = isset($_POST['is_active']) ? 1 : 0;
-                $outreach = (string) ($_POST['outreach_status'] ?? 'nekontaktovany');
+                $outreach = requestScalarString($_POST, 'outreach_status', 'nekontaktovany');
                 if (!array_key_exists($outreach, ppOutreachLabels())) {
                     $outreach = 'nekontaktovany';
                 }
-                $priority = strtoupper((string) ($_POST['priority'] ?? ''));
+                $priority = strtoupper(requestScalarString($_POST, 'priority'));
                 if (!array_key_exists($priority, ppPriorityLabels())) {
                     $priority = null;
                 }
-                $contactedRaw = trim((string) ($_POST['contacted_at'] ?? ''));
+                $contactedRaw = requestScalarString($_POST, 'contacted_at');
                 $contactedVal = null;
                 if ($contactedRaw !== '') {
                     if (preg_match('/^(\d{4}-\d{2}-\d{2})T(\d{2}:\d{2})(:\d{2})?$/', $contactedRaw, $m)) {
@@ -88,16 +89,16 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 $data = [
                     'name'           => mb_substr($name, 0, 255),
                     'provider_type'  => $type,
-                    'specialization' => ppClean((string) ($_POST['specialization'] ?? ''), 255),
-                    'locality'       => ppClean((string) ($_POST['locality'] ?? ''), 120),
-                    'address'        => ppClean((string) ($_POST['address'] ?? ''), 255),
-                    'phone'          => ppClean((string) ($_POST['phone'] ?? ''), 120),
+                    'specialization' => ppClean(requestScalarString($_POST, 'specialization'), 255),
+                    'locality'       => ppClean(requestScalarString($_POST, 'locality'), 120),
+                    'address'        => ppClean(requestScalarString($_POST, 'address'), 255),
+                    'phone'          => ppClean(requestScalarString($_POST, 'phone'), 120),
                     'email'          => $email !== '' ? mb_substr($email, 0, 190) : null,
                     'website'        => $web !== '' ? mb_substr($web, 0, 255) : null,
-                    'contact_person' => ppClean((string) ($_POST['contact_person'] ?? ''), 190),
-                    'notes'          => ppClean((string) ($_POST['notes'] ?? ''), 20000),
-                    'source'         => ppClean((string) ($_POST['source'] ?? ''), 255),
-                    'ico'            => ppClean((string) ($_POST['ico'] ?? ''), 20),
+                    'contact_person' => ppClean(requestScalarString($_POST, 'contact_person'), 190),
+                    'notes'          => ppClean(requestScalarString($_POST, 'notes'), 20000),
+                    'source'         => ppClean(requestScalarString($_POST, 'source'), 255),
+                    'ico'            => ppClean(requestScalarString($_POST, 'ico'), 20),
                     'outreach_status' => $outreach,
                     'contacted_at'   => $contactedVal,
                     'priority'       => $priority,
@@ -142,7 +143,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 
             case 'delete':
                 requireAdminReauth();
-                $id = (int) ($_POST['provider_id'] ?? 0);
+                $id = requestScalarInt($_POST, 'provider_id');
                 if ($id <= 0) {
                     $actionError = 'Neplatné ID.';
                     break;
@@ -160,8 +161,8 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 
             case 'toggle_active':
                 requireAdminReauth();
-                $id     = (int) ($_POST['provider_id'] ?? 0);
-                $setVal = (int) ($_POST['set_active'] ?? -1);
+                $id     = requestScalarInt($_POST, 'provider_id');
+                $setVal = requestScalarInt($_POST, 'set_active', -1);
                 if ($id <= 0 || !in_array($setVal, [0, 1], true)) {
                     $actionError = 'Neplatný vstup.';
                     break;
@@ -180,7 +181,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
             // Rýchle označenie „Oslovený teraz“ — nastaví stav + dátum a čas + zápis do histórie.
             case 'mark_contacted':
                 requireAdminReauth();
-                $id = (int) ($_POST['provider_id'] ?? 0);
+                $id = requestScalarInt($_POST, 'provider_id');
                 if ($id <= 0) {
                     $actionError = 'Neplatné ID.';
                     break;
@@ -206,22 +207,22 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 
             // Zápis kontaktu do histórie (z editačného pohľadu).
             case 'add_contact':
-                $id = (int) ($_POST['provider_id'] ?? 0);
+                $id = requestScalarInt($_POST, 'provider_id');
                 if ($id <= 0) {
                     $actionError = 'Neplatné ID.';
                     break;
                 }
                 $stayEditId = $id;
-                $ch = (string) ($_POST['channel'] ?? 'other');
+                $ch = requestScalarString($_POST, 'channel', 'other');
                 if (!array_key_exists($ch, ppContactChannelLabels())) {
                     $ch = 'other';
                 }
-                $outc = (string) ($_POST['outcome'] ?? '');
+                $outc = requestScalarString($_POST, 'outcome');
                 if ($outc !== '' && !array_key_exists($outc, ppOutreachLabels())) {
                     $outc = '';
                 }
-                $cnote = ppClean((string) ($_POST['contact_note'] ?? ''), 20000);
-                $craw  = trim((string) ($_POST['contact_at'] ?? ''));
+                $cnote = ppClean(requestScalarString($_POST, 'contact_note'), 20000);
+                $craw  = requestScalarString($_POST, 'contact_at');
                 $cval  = null;
                 if ($craw !== '' && preg_match('/^(\d{4}-\d{2}-\d{2})T(\d{2}:\d{2})(:\d{2})?$/', $craw, $m2)) {
                     $cval = $m2[1] . ' ' . $m2[2] . ':00';
@@ -258,23 +259,23 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
 
             // Úprava existujúceho záznamu histórie (needituje stav poskytovateľa).
             case 'update_contact':
-                $cid = (int) ($_POST['contact_id'] ?? 0);
-                $id  = (int) ($_POST['provider_id'] ?? 0);
+                $cid = requestScalarInt($_POST, 'contact_id');
+                $id  = requestScalarInt($_POST, 'provider_id');
                 if ($cid <= 0 || $id <= 0) {
                     $actionError = 'Neplatné ID.';
                     break;
                 }
                 $stayEditId = $id;
-                $ch = (string) ($_POST['channel'] ?? 'other');
+                $ch = requestScalarString($_POST, 'channel', 'other');
                 if (!array_key_exists($ch, ppContactChannelLabels())) {
                     $ch = 'other';
                 }
-                $outc = (string) ($_POST['outcome'] ?? '');
+                $outc = requestScalarString($_POST, 'outcome');
                 if ($outc !== '' && !array_key_exists($outc, ppOutreachLabels())) {
                     $outc = '';
                 }
-                $cnote = ppClean((string) ($_POST['contact_note'] ?? ''), 20000);
-                $craw  = trim((string) ($_POST['contact_at'] ?? ''));
+                $cnote = ppClean(requestScalarString($_POST, 'contact_note'), 20000);
+                $craw  = requestScalarString($_POST, 'contact_at');
                 $cval  = null;
                 if ($craw !== '' && preg_match('/^(\d{4}-\d{2}-\d{2})T(\d{2}:\d{2})(:\d{2})?$/', $craw, $m3)) {
                     $cval = $m3[1] . ' ' . $m3[2] . ':00';
@@ -303,8 +304,8 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
             // Zmazanie záznamu histórie.
             case 'delete_contact':
                 requireAdminReauth();
-                $cid = (int) ($_POST['contact_id'] ?? 0);
-                $id  = (int) ($_POST['provider_id'] ?? 0);
+                $cid = requestScalarInt($_POST, 'contact_id');
+                $id  = requestScalarInt($_POST, 'provider_id');
                 if ($cid <= 0 || $id <= 0) {
                     $actionError = 'Neplatné ID.';
                     break;

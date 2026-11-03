@@ -23,14 +23,15 @@ $actionError = null;
 
 // ── Akcia: zverejniť / skryť jeden liek (rovnaký kontrakt ako admin_drugs.php) ──
 if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
+    requestRequireScalarPost();
     if (!checkFormRateLimit($pdo, 'admin_post_' . basename(__FILE__), getClientIpAddress(), 60, 300)) {
         $actionError = 'Príliš veľa požiadaviek. Skúste to neskôr.';
     } elseif (!validateCsrfToken(requestCsrfTokenFromPost())) {
         $actionError = 'Neplatný CSRF token.';
-    } elseif (($_POST['action'] ?? '') === 'toggle_publish') {
+    } elseif (requestScalarString($_POST, 'action') === 'toggle_publish') {
         requireAdminReauth();
-        $id = (int) ($_POST['drug_id'] ?? 0);
-        $setPub = (int) ($_POST['set_pub'] ?? -1);
+        $id = requestScalarInt($_POST, 'drug_id');
+        $setPub = requestScalarInt($_POST, 'set_pub', -1);
         if ($id <= 0 || !in_array($setPub, [0, 1], true)) {
             $actionError = 'Neplatný vstup.';
         } else {

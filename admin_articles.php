@@ -189,6 +189,7 @@ function optimizeExcerptForSeo(
 
 // ── Spracovanie POST akcií ────────────────────────────────────────────────────
 if (($_SERVER["REQUEST_METHOD"] ?? "") === "POST") {
+    requestRequireScalarPost();
     $postedCsrf = requestScalarString($_POST, 'csrf_token');
     if (!checkFormRateLimit($pdo, 'admin_post_' . basename(__FILE__), getClientIpAddress(), 60, 300)) {
         $actionError = "Príliš veľa požiadaviek. Skúste to neskôr.";

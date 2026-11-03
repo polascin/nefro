@@ -27,13 +27,14 @@ $actionResult = null;
 $actionError  = null;
 
 if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
+    requestRequireScalarPost();
     if (!checkFormRateLimit($pdo, 'admin_post_' . basename(__FILE__), getClientIpAddress(), 60, 300)) {
         $actionError = 'Príliš veľa požiadaviek. Skúste to neskôr.';
     } elseif (!validateCsrfToken(requestCsrfTokenFromPost())) {
         $actionError = 'Neplatný CSRF token.';
     } else {
-        $action  = (string) ($_POST['action'] ?? '');
-        $orderId = (int) ($_POST['order_id'] ?? 0);
+        $action  = requestScalarString($_POST, 'action');
+        $orderId = requestScalarInt($_POST, 'order_id');
         $order   = $orderId > 0 ? findPublicationOrderById($pdo, $orderId) : null;
 
         if ($order === null) {
@@ -43,7 +44,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 case 'mark_paid':
                     requireAdminReauth();
                     try {
-                        $note = trim((string) ($_POST['payment_note'] ?? ''));
+                        $note = requestScalarString($_POST, 'payment_note');
                         if (!markPublicationOrderPaid($pdo, $orderId, $note !== '' ? $note : null)) {
                             $actionError = 'Objednávka už bola označená ako zaplatená.';
                             break;
@@ -135,7 +136,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
                 case 'cancel':
                     requireAdminReauth();
                     try {
-                        $reason = trim((string) ($_POST['cancel_reason'] ?? ''));
+                        $reason = requestScalarString($_POST, 'cancel_reason');
                         if (!cancelPublicationOrder($pdo, $orderId, $reason !== '' ? $reason : 'Zrušené administrátorom.')) {
                             $actionError = 'Objednávka už bola zrušená.';
                             break;

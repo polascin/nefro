@@ -81,6 +81,9 @@ if (!in_array($format, ['view', 'print', 'csv', 'json', 'txt'], true)) {
 $includeSensitive = ((string) ($_REQUEST['include_sensitive'] ?? '0')) === '1';
 
 if ($includeSensitive) {
+    if ($requestMethod === 'POST') {
+        requestRequireScalarPost();
+    }
     $postedCsrf = requestCsrfTokenFromPost();
     if ($requestMethod !== 'POST' || !validateCsrfToken($postedCsrf)) {
         http_response_code(403);

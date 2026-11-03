@@ -11,14 +11,15 @@ requireAdmin();
 $message = '';
 $error = '';
 if (($_SERVER['REQUEST_METHOD'] ?? '') === 'POST') {
+    requestRequireScalarPost();
     if (!validateCsrfToken(requestCsrfTokenFromPost())) {
         $error = 'Neplatný CSRF token.';
     } else {
-        $id = max(0, (int) ($_POST['notice_id'] ?? 0));
-        $status = (string) ($_POST['status'] ?? 'reviewing');
-        $decision = trim((string) ($_POST['decision'] ?? ''));
-        $reason = trim((string) ($_POST['decision_reason'] ?? ''));
-        $affectedEmail = trim((string) ($_POST['affected_email'] ?? ''));
+        $id = max(0, requestScalarInt($_POST, 'notice_id'));
+        $status = requestScalarString($_POST, 'status', 'reviewing');
+        $decision = requestScalarString($_POST, 'decision');
+        $reason = requestScalarString($_POST, 'decision_reason');
+        $affectedEmail = requestScalarString($_POST, 'affected_email');
         if ($id < 1 || !in_array($status, ['reviewing', 'actioned', 'rejected'], true)
             || mb_strlen($decision) > 100 || mb_strlen($reason) < 10 || mb_strlen($reason) > 5000
             || ($affectedEmail !== '' && filter_var($affectedEmail, FILTER_VALIDATE_EMAIL) === false)

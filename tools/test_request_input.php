@@ -180,6 +180,25 @@ foreach ($authScalarGuards as $authFile) {
         $authFile . ' musí volať requestRequireScalarPost na POST.',
     );
 }
+$adminScalarGuards = [
+    'admin.php',
+    'admin_articles.php',
+    'admin_content_notices.php',
+    'admin_discussion.php',
+    'admin_drugs.php',
+    'admin_drugs_review.php',
+    'admin_newsletter.php',
+    'admin_publication_orders.php',
+    'admin_providers.php',
+    'admin_trials.php',
+    'admin_users_notice.php',
+];
+foreach ($adminScalarGuards as $adminFile) {
+    requestInputTest(
+        str_contains((string) file_get_contents($root . '/' . $adminFile), 'requestRequireScalarPost()'),
+        $adminFile . ' musí volať requestRequireScalarPost na POST.',
+    );
+}
 requestInputTest(
     str_contains((string) file_get_contents($root . '/.htaccess'), 'request_input'),
     '.htaccess musí deny-ovať request_input.php.',
