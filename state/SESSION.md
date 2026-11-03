@@ -10,8 +10,8 @@ Register a 2FA čítajú POST cez `requestScalarString`. Handoff:
 ## Stav repozitára
 
 - Vetva: `main`
-- HEAD: `8bc17a45`
-- Runtime / `DEPLOY_COMMIT`: `8bc17a45`
+- HEAD: `72bad02a` (docs/handoff Beh 144; runtime `8bc17a45`)
+- Runtime / `DEPLOY_COMMIT`: `8bc17a45` (dokumentačný drift HEAD OK)
 - `origin/main` a `server/main`: aktuálne
 
 ## Čo je hotové
