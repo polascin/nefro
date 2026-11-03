@@ -3,24 +3,22 @@
 ## Ďalšia slučka
 
 1. Po **výslovnom súhlase**: ENUM `sending` + claim/lease; empty provider priority.
-2. Inak ďalší P1 dlh z `.audit.md` / SESSION (nie claim/lease bez súhlasu).
+2. Voliteľne `register.php` / 2fa: `requestScalarString` namiesto zvyšného `trim($_POST)`.
+3. Inak ďalší P1 dlh z `.audit.md` (ops/cron/a11y; nie claim/lease bez súhlasu).
+
+## Hotové: slučka 2026-11-03-e (public form scalar guards)
+
+- [x] discussion, content_report, verify_email, provider_namietka, subscribe, logout
+- [x] profile delete_account; deploy `83cb9d40`
+- [x] bez claim/lease ENUM
 
 ## Hotové: slučka 2026-11-03-d (admin scalar guards)
 
-- [x] `requestRequireScalarPost` na admin mutácie bez multi-selectov
-- [x] deploy `7f498c59`; bez claim/lease ENUM
+- [x] admin mutácie; deploy `7f498c59`
 
-## Hotové: slučka 2026-11-03-c (CKD-PC/CKM clinical refs)
+## Hotové: slučka 2026-11-03-c / b / a
 
-- [x] `tools/test_clinical_references_ckdpc_ckm.php`; suite 39
-
-## Hotové: slučka 2026-11-03-b (auth scalar guards)
-
-- [x] login/forgot/reset/resend/confirm/admin_reauth + newsletter; `03c461fd`
-
-## Hotové: slučka 2026-11-03 (request-input + PREVENT)
-
-- [x] Windows fixture; profile; PREVENT refs
+- [x] CKD-PC/CKM refs; auth scalar; request_input Windows + PREVENT
 
 ## Vedomé mimo rozsahu
 
