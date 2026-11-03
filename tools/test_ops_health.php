@@ -204,4 +204,20 @@ fclose($pipes[1]);
 fclose($pipes[2]);
 opsHealthTest(proc_close($process) === 2, 'Neznámy parameter vracia kód 2.');
 
+// Claim/lease ENUM sending: hodnotenie bez MySQL INFORMATION_SCHEMA.
+$sendingPass = opsHealthEvaluateNewsletterSendingSupport([
+    'article_newsletter_queue' => true,
+    'nl_sub_queue' => true,
+]);
+opsHealthTest($sendingPass['status'] === 'PASS' && $sendingPass['messages'] === [], 'Oba ENUM sending = PASS.');
+$sendingWarn = opsHealthEvaluateNewsletterSendingSupport([
+    'article_newsletter_queue' => false,
+    'nl_sub_queue' => true,
+]);
+opsHealthTest(
+    $sendingWarn['status'] === 'WARN'
+        && str_contains(implode(' ', $sendingWarn['messages']), 'article_newsletter_queue'),
+    'Chýbajúci ENUM sending = WARN s názvom tabuľky.',
+);
+
 echo "Ops health: $checks PASS\n";

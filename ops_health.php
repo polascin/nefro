@@ -199,6 +199,60 @@ function opsHealthNormalizeExcerpt(string $text): string
 }
 
 /**
+ * Či newsletter fronty majú v ENUM `status` hodnotu `sending` (claim/lease).
+ *
+ * @return array{article_newsletter_queue: bool, nl_sub_queue: bool}
+ */
+function opsHealthNewsletterSendingSupport(PDO $pdo): array
+{
+    $out = [
+        'article_newsletter_queue' => false,
+        'nl_sub_queue' => false,
+    ];
+    $stmt = $pdo->prepare(
+        "SELECT TABLE_NAME, COLUMN_TYPE FROM INFORMATION_SCHEMA.COLUMNS
+         WHERE TABLE_SCHEMA = DATABASE()
+           AND TABLE_NAME IN ('article_newsletter_queue', 'nl_sub_queue')
+           AND COLUMN_NAME = 'status'"
+    );
+    $stmt->execute();
+    foreach ($stmt->fetchAll(PDO::FETCH_ASSOC) as $row) {
+        $table = (string) $row['TABLE_NAME'];
+        if (!array_key_exists($table, $out)) {
+            continue;
+        }
+        $out[$table] = stripos((string) $row['COLUMN_TYPE'], "'sending'") !== false;
+    }
+
+    return $out;
+}
+
+/**
+ * @param array{article_newsletter_queue: bool, nl_sub_queue: bool} $support
+ * @return array{status: string, messages: list<string>}
+ */
+function opsHealthEvaluateNewsletterSendingSupport(array $support): array
+{
+    $missing = [];
+    foreach ($support as $table => $ok) {
+        if (!$ok) {
+            $missing[] = $table;
+        }
+    }
+    if ($missing === []) {
+        return ['status' => 'PASS', 'messages' => []];
+    }
+
+    return [
+        'status' => 'WARN',
+        'messages' => [
+            'Chýba ENUM sending na: ' . implode(', ', $missing)
+                . ' — spustite add_newsletter_sending_status_migration.php (claim/lease).',
+        ],
+    ];
+}
+
+/**
  * Perexy zo skriptov článkov: slug => normalizovaný perex. Skript bez
  * jednoznačného páru slug/excerpt sa preskočí (rovnaká logika ako
  * tools/test_article_excerpts.php).
@@ -524,6 +578,21 @@ function opsHealthMain(array $argv): int
             $excerptEval['status'], $excerptDrift['scripts'], $excerptDrift['compared'], $excerptDrift['missing'],
             count($excerptDrift['drift']), count($excerptDrift['foreign']));
         foreach ($excerptEval['messages'] as $message) {
+            $lines[] = '      ' . $message;
+        }
+
+        // 1c) Newsletter claim/lease: ENUM status musí obsahovať `sending`,
+        // inak worker ostáva v legacy režime (SMTP v otvorenej transakcii).
+        $sendingSupport = opsHealthNewsletterSendingSupport($pdo);
+        $sendingEval = opsHealthEvaluateNewsletterSendingSupport($sendingSupport);
+        $statuses[] = $sendingEval['status'];
+        $lines[] = sprintf(
+            '%-5s newsletter ENUM sending: article=%s, nl_sub=%s',
+            $sendingEval['status'],
+            $sendingSupport['article_newsletter_queue'] ? 'ano' : 'nie',
+            $sendingSupport['nl_sub_queue'] ? 'ano' : 'nie'
+        );
+        foreach ($sendingEval['messages'] as $message) {
             $lines[] = '      ' . $message;
         }
     } catch (\Throwable $e) {

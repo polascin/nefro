@@ -3,11 +3,15 @@
 declare(strict_types=1);
 
 /**
- * Ops v kóde (Beh 43 / 108 / 145): tools/crontab.example je zdroj pravdy
+ * Ops v kóde (Beh 43 / 108 / 145 / 148): tools/crontab.example je zdroj pravdy
  * plánovaných úloh a CLI ops skripty musia mať .htaccess deny.
  *
- * Tento test NEMENÍ produkčný crontab — len bráni driftu v repozitári.
+ * Od Behu 148 navyše pinuje schedule parity cez tools/crontab_lib.php a
+ * existenciu render/verify nástrojov (RSI — drift sa dá overiť aj voči
+ * produkčnému `crontab -l` dumpom).
  */
+
+require __DIR__ . '/crontab_lib.php';
 
 $checks = 0;
 
@@ -26,39 +30,21 @@ $htaccessPath = $root . '/.htaccess';
 
 crontabOpsTest(is_file($crontabPath), 'tools/crontab.example musí existovať.');
 crontabOpsTest(is_file($htaccessPath), '.htaccess musí existovať.');
+crontabOpsTest(is_file($root . '/tools/crontab_lib.php'), 'tools/crontab_lib.php musí existovať.');
+crontabOpsTest(is_file($root . '/tools/render_crontab.php'), 'tools/render_crontab.php musí existovať.');
+crontabOpsTest(is_file($root . '/tools/verify_crontab_parity.php'), 'tools/verify_crontab_parity.php musí existovať.');
 
 $crontab = (string) file_get_contents($crontabPath);
 $htaccess = (string) file_get_contents($htaccessPath);
 
-$mustSchedule = [
-    'newsletter_worker.php',
-    'newsletter_weekly_digest.php',
-    'legal_notice_worker.php',
-    'provider_notice_worker.php',
-    'archive_cleanup.php',
-    'backup_snapshot.php',
-    'ops_health.php',
-    'sync_drugs.php',
-    'sync_clinical_trials.php',
-];
+$mustSchedule = nefroCrontabMustSchedule();
+$intentionalOmit = nefroCrontabIntentionalOmit();
 
-$intentionalOmit = [
-    'update_sitemap.php',
-    'newsletter_apology_broken_links.php',
-];
-
-$cronLines = preg_split('/\R/', $crontab) ?: [];
-$activeJobText = '';
-foreach ($cronLines as $line) {
-    $trim = ltrim($line);
-    if ($trim === '' || str_starts_with($trim, '#')) {
-        continue;
-    }
-    $activeJobText .= $line . "\n";
-}
+$activeJobText = nefroCrontabActiveJobText($crontab);
 
 $omitSection = '';
-if (preg_match('/# ── Zámerné OMITNUTÉ ─+.*$/s', $crontab, $m) === 1) {
+if (preg_match('/# ── Zámerné OMITNUTÉ ─+.*$/s', $crontab) === 1) {
+    preg_match('/# ── Zámerné OMITNUTÉ ─+.*$/s', $crontab, $m);
     $omitSection = $m[0];
 }
 crontabOpsTest($omitSection !== '', 'crontab.example musí mať sekciu „Zámerné OMITNUTÉ“.');
@@ -102,6 +88,19 @@ foreach ($intentionalOmit as $script) {
         ".htaccess musí deny-ovať omit skript {$script}.",
     );
 }
+
+foreach (nefroCrontabParityErrors($crontab) as $err) {
+    crontabOpsTest(false, 'Parity example: ' . $err);
+}
+
+$rendered = nefroCrontabRender($crontabPath);
+foreach (nefroCrontabParityErrors($rendered) as $err) {
+    crontabOpsTest(false, 'Parity rendered: ' . $err);
+}
+crontabOpsTest(
+    str_contains($rendered, 'NEFRO_ROOT=' . nefroCrontabDefaultRoot()),
+    'render musí nastaviť produkčný NEFRO_ROOT.',
+);
 
 // Nový *_worker.php v koreni nesmie uniknúť mimo zoznamov.
 foreach (glob($root . '/*_worker.php') ?: [] as $path) {

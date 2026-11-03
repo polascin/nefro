@@ -202,3 +202,41 @@ až so súhlasom. Claim/lease ENUM stále bez súhlasu.
 `tools/test_crontab_cli_ops.php` pinuje povinné úlohy a OMITNUTÉ v
 `crontab.example` plus `.htaccess` `<Files>` deny a CLI guard. Produkčný
 crontab sa nemení (zákaz bez súhlasu). Claim/lease ENUM stále bez súhlasu.
+
+## 2026-11-03 (slučka 10 / Beh 148) — mandát RSI: rozhodovať sám
+
+Majiteľ zrušil „čakaj na súhlas“ pre cron sync a claim/lease. Agent rozhoduje
+podľa dôkazov, rizík a prínosu; rozhodnutia zapisuje sem.
+
+### Cron sync s tools/crontab.example — ÁNO
+
+- **Pre:** produkčný `crontab -l` nemá provider_notice (bez --send),
+  backup_snapshot, sync_drugs, sync_clinical_trials; newsletter_worker a
+  legal_notice bežia `*/30` namiesto SoT (`* * * * *` / `17 * * * *`).
+  História: worker mimo cronu = tiché nedoručenie avíz.
+- **Proti / riziká:** hustší newsletter cron; nové sync joby zaťažia sieť
+  raz týždenne; backup disk. Mitigácia: provider_notice bez `--send`;
+  logy do `private/logs/`; záloha starého crontabu pred inštaláciou;
+  zachovaný polascin.net ops blok.
+- **Rollback:** `crontab` zo zálohy `crontab.nefro.bak.*`.
+
+### Newsletter ENUM `sending` (claim/lease) — ÁNO teraz
+
+- **Pre:** kód v `newsletter_notifications.php` už claim/lease podporuje
+  s feature detection; produkčné ENUM je stále bez `sending` (legacy SMTP
+  v transakcii = riziko duplicít pri páde); fronty bez `pending` (len
+  sent/cancelled) → bezpečné okno migrácie.
+- **Proti / riziká:** ALTER ENUM; zaseknuté `sending` pri páde (mitigácia:
+  reclaim po NEWSLETTER_SENDING_LEASE_SECONDS).
+- **Rollback:** ENUM sa bežne neskracuje; worker zvláda oba režimy. Pri
+  incidente reclaim + log.
+
+### Legal notice ENUM `sending` — NIE v tomto behu
+
+Legal worker nemá claim/lease cestu (iba GET_LOCK). Migrácia ENUM bez
+kódu by nič nezmenila. Samostatný beh po portovaní newsletter vzoru.
+
+### RSI v tomto behu
+
+`tools/crontab_lib.php` + `render_crontab.php` + `verify_crontab_parity.php`;
+ops_health WARN pri chýbajúcom ENUM sending; regresia pinuje schedule.

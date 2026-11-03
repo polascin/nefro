@@ -10,9 +10,14 @@
 #
 # Ako použiť
 # ──────────
-#   1. Upravte `NEFRO_PHP` a `NEFRO_ROOT` na reálne hodnoty servera.
-#   2. `crontab -u <uzivatel> -e` a vložte obsah tohto súboru.
-#   3. Overenie, že úlohy naozaj bežia:
+#   1. Upravte `NEFRO_PHP` a `NEFRO_ROOT` na reálne hodnoty servera
+#      (alebo: php tools/render_crontab.php [--preserve=cudzie.txt]).
+#   2. Zálohujte aktuálny crontab (`crontab -l > crontab.bak.TIMESTAMP`),
+#      potom `crontab` na vykreslený súbor. Cudzie úlohy hostingu zachovajte
+#      cez --preserve (napr. polascin.net ops blok).
+#   3. Overenie:
+#        php tools/verify_crontab_parity.php              # SoT example
+#        crontab -l | php tools/verify_crontab_parity.php -
 #        crontab -l | grep -c newsletter_worker.php     # musí byť >= 1
 #        SELECT status, COUNT(*) FROM article_newsletter_queue GROUP BY status;
 #      Položka `pending` staršia než dva intervaly cronu je nález.
