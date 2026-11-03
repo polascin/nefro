@@ -289,7 +289,7 @@ if (isLoggedIn()) {
 
                 <div class="info-box-green">
                     <strong>Zdroj:</strong>
-                    <a href="https://pubmed.ncbi.nlm.nih.gov/30401957/" target="_blank" rel="noopener noreferrer">Leung N. et&nbsp;al., International Kidney and Monoclonal Gammopathy Research Group (IKMG) consensus, Nat Rev Nephrol 2019;15(1):45–59</a>
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/30510265/" target="_blank" rel="noopener noreferrer">Leung N. et&nbsp;al., International Kidney and Monoclonal Gammopathy Research Group (IKMG) consensus, Nat Rev Nephrol 2019;15(1):45–59</a>
                 </div>
 
                 <?php foreach ($messages as $message): ?>

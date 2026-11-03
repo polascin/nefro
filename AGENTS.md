@@ -21,6 +21,7 @@ This file provides guidance to WARP (warp.dev) when working with code in this re
   When adding a worker, add its entry there in the same commit.
 - Create a time-consistent application backup (cross-file consistency requires restore verification) (DB snapshot + files outside git): `php .\backup_snapshot.php [--dry-run]`;
   output in `private/backups/<UTC>/`, see `tools/restore/README.md`. Scheduling it in cron is the owner's decision.
+- Verify PubMed links on portal pages against NCBI (first author, year, volume; network): `php tools/check_calculator_pubmed.php`. A reachable link does not prove the right article; after verifying a new link, add its PMID to the offline registry in `tools/test_calculator_pmid_registry.php`.
 - Verify vendored libraries against the dependency register: `php tools\dependency_register.php --check` (`--update` after a library upgrade); overview in `DEPENDENCIES.md`.
 - Run safe UTF-8 checks: `pwsh -File .\smoke_test.ps1 -EncodingOnly`. Run the auth/mobile-verification flow with `-TestEnvironmentConfirmed` only after verifying an isolated test database and an SMS substitute; a localhost URL alone does not prove isolation.
 - Static analysis (PHAR, no Composer): `php tools\phpstan.phar analyse --no-progress` (baseline blocks only NEW issues); style: `php tools\php-cs-fixer.phar fix --dry-run --diff`. Install: `pwsh -File .\tools\install-dev-tools.ps1`.
