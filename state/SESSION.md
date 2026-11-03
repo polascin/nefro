@@ -10,8 +10,8 @@ Auth/newsletter POST majú `requestRequireScalarPost`. Handoff:
 ## Stav repozitára
 
 - Vetva: `main`
-- HEAD: `03c461fd`
-- Runtime / `DEPLOY_COMMIT`: `03c461fd`
+- HEAD: `69676592` (docs/handoff Beh 140; runtime `03c461fd`)
+- Runtime / `DEPLOY_COMMIT`: `03c461fd` (dokumentačný drift HEAD OK)
 - `origin/main` a `server/main`: aktuálne
 
 ## Čo je hotové
