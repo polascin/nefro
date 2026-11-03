@@ -16,44 +16,6 @@ function mgusParseNonNeg(string $value): ?float
     return $f < 0 ? null : $f;
 }
 
-/** CSS trieda podľa počtu rizikových faktorov Mayo MGUS (0–3). */
-function mgusRiskClass(int $factors): string
-{
-    if ($factors <= 0) {
-        return 'risk-low';
-    }
-    if ($factors >= 3) {
-        return 'risk-high';
-    }
-    return 'risk-moderate';
-}
-
-/** Slovný opis rizikovej skupiny Mayo MGUS. */
-function mgusRiskLabel(int $factors): string
-{
-    switch ($factors) {
-        case 0:
-            return 'nízke riziko';
-        case 1:
-            return 'nízko-stredné riziko';
-        case 2:
-            return 'stredne-vysoké riziko';
-        default:
-            return 'vysoké riziko';
-    }
-}
-
-/** 20-ročné absolútne riziko progresie MGUS podľa počtu faktorov (Rajkumar 2005). */
-function mgusProgressionPct(int $factors): int
-{
-    $map = [0 => 5, 1 => 21, 2 => 37, 3 => 58];
-    return $map[$factors] ?? 58;
-}
-
-// Normálne referenčné rozpätie κ/λ FLC pomeru (Mayo model, Katzmann 2002).
-const MGUS_FLC_LOW = 0.26;
-const MGUS_FLC_HIGH = 1.65;
-
 $errors = [];
 $messages = [];
 $calculated = null;
@@ -103,12 +65,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         }
 
         if (empty($errors)) {
-            $ratio = (float) $kappa / (float) $lambda;
-            $abnormalFlc = $ratio < MGUS_FLC_LOW || $ratio > MGUS_FLC_HIGH;
-            $highMProtein = (float) $mProtein >= 15.0;
             $nonIgg = $isotype === "non_igg";
-
-            $factors = ($highMProtein ? 1 : 0) + ($nonIgg ? 1 : 0) + ($abnormalFlc ? 1 : 0);
+            [
+                'ratio' => $ratio,
+                'abnormal_flc' => $abnormalFlc,
+                'high_m_protein' => $highMProtein,
+                'factors' => $factors,
+            ] = mgusMayoRisk((float) $mProtein, $nonIgg, (float) $kappa, (float) $lambda);
 
             $calculated = [
                 "factors" => $factors,
