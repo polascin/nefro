@@ -82,10 +82,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     ? (float) $sCrValue / 88.4
                     : (float) $sCrValue;
 
-            $crcl = ((140 - $ageYears) * $weightKg) / (72 * $sCrMgDl);
-            if ($sex === "female") {
-                $crcl *= 0.85;
-            }
+            $crcl = calculatorCockcroftGault((int) $ageYears, (float) $weightKg, $sCrMgDl, $sex);
 
             $calculated = [
                 "crcl" => round($crcl, 1),

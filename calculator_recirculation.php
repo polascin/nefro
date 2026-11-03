@@ -5,30 +5,6 @@ require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
 require_once __DIR__ . '/calculators_common.php';
 
-/** CSS trieda podľa miery recirkulácie (urea-based periférna/slow-flow metóda). */
-function recircClass(float $pct): string
-{
-    if ($pct <= 5.0) {
-        return 'risk-low';         // bez významnej recirkulácie
-    }
-    if ($pct <= 10.0) {
-        return 'risk-moderate';    // hraničné — over techniku/polohu ihiel
-    }
-    return 'risk-high';            // významná recirkulácia
-}
-
-/** Slovný opis pásma recirkulácie. */
-function recircLabel(float $pct): string
-{
-    if ($pct <= 5.0) {
-        return 'bez významnej recirkulácie';
-    }
-    if ($pct <= 10.0) {
-        return 'hraničná recirkulácia';
-    }
-    return 'významná recirkulácia';
-}
-
 $errors = [];
 $messages = [];
 $calculated = null;
@@ -78,8 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         }
 
         if (empty($errors)) {
-            // R% = (C_P − C_A) / (C_P − C_V) × 100
-            $rawPct = (((float) $cP - (float) $cA) / ((float) $cP - (float) $cV)) * 100.0;
+            $rawPct = calculatorUreaRecirculationPct((float) $cP, (float) $cA, (float) $cV);
             // A ≥ P ⇒ žiadna detegovateľná recirkulácia (záporná hodnota = chyba odberu/laboratória)
             $recircPct = $rawPct < 0.0 ? 0.0 : $rawPct;
             $negativeRaw = $rawPct < 0.0;
