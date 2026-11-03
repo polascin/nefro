@@ -52,13 +52,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $r = $upost / $upre;
             $urr = (1 - $r) * 100;
 
-            $logTerm = $r - 0.008 * $t;
-            if ($logTerm <= 0) {
+            $ktv = calculatorKtvDaugirdas2($r, $t, $uf, $w);
+            if ($ktv === null) {
                 $errors[] =
                     "Zadané hodnoty neumožňujú výpočet logaritmu v Daugirdasovej rovnici (extrémne nízke U_post alebo dlhý čas).";
             } else {
-                $ktv = -log($logTerm) + (4 - 3.5 * $r) * ($uf / $w);
-
                 $calculated = [
                     "urr" => round($urr, 1),
                     "ktv" => round($ktv, 2),

@@ -340,6 +340,72 @@ function calculatorParseNonNegativeFloat(string $value): ?float
 }
 
 /**
+ * spKt/V podľa Daugirdasa II (J Am Soc Nephrol 1993;4(5):1205–1213, PMID 8305648):
+ * −ln(R − 0,008·t) + (4 − 3,5·R)·UF/W. R = U_post/U_pre, t v hodinách,
+ * UF v litroch, W = hmotnosť po dialýze v kg. Null, ak logaritmus nie je definovaný.
+ */
+function calculatorKtvDaugirdas2(float $ratio, float $hours, float $ufLiters, float $weightPostKg): ?float
+{
+    $logTerm = $ratio - 0.008 * $hours;
+    if ($logTerm <= 0.0 || $weightPostKg <= 0.0) {
+        return null;
+    }
+
+    return -log($logTerm) + (4.0 - 3.5 * $ratio) * ($ufLiters / $weightPostKg);
+}
+
+/** Watson odhad celkovej telesnej vody (TBW, L). */
+function npcrWatsonTbw(string $sex, int $age, float $heightCm, float $weightKg): float
+{
+    if ($sex === "male") {
+        return 2.447 - 0.09516 * $age + 0.1074 * $heightCm + 0.3362 * $weightKg;
+    }
+    // female
+    return -2.097 + 0.1069 * $heightCm + 0.2466 * $weightKg;
+}
+
+/** Prepočet močoviny/BUN na BUN (urea-nitrogen) v mg/dL. */
+function npcrToBunMgDl(float $value, string $unit): float
+{
+    // urea mmol/L → BUN mg/dL: × 2,8 ; bun_mg_dl je už BUN mg/dL
+    return $unit === "mmol_l" ? $value * 2.8 : $value;
+}
+
+/**
+ * Riziková kategória pre nPCR/nPNA (g/kg/deň).
+ * @return array{0:string,1:string} [trieda, popis]
+ */
+function npcrCategory(float $npcr): array
+{
+    if ($npcr < 0.8) {
+        return ['risk-high', 'Nízky príjem bielkovín: riziko malnutrície'];
+    }
+    if ($npcr < 1.0) {
+        return ['risk-moderate', 'Hraničný príjem'];
+    }
+    if ($npcr <= 1.4) {
+        return ['risk-low', 'Cieľové rozpätie (1,0 až 1,4)'];
+    }
+
+    return ['risk-moderate', 'Vysoký: hyperkatabolizmus alebo vysoký príjem'];
+}
+
+/**
+ * nPCR (nPNA) v g/kg/deň podľa Sargenta a Gotcha pre anurického pacienta:
+ * G [mg/min] = ΔBUN [mg/dL] · V [dL] / interval [min]; PCR = 9,35·G + 0,294·V [L];
+ * normalizácia na V/0,58. BUN pred dialýzou a po predošlej dialýze.
+ *
+ * @return array{g_mg_min: float, pcr: float, npcr: float} G [mg/min], PCR [g/deň], nPCR [g/kg/deň]
+ */
+function npcrSargentGotch(float $bunPreMgDl, float $bunPostPrevMgDl, float $tbwLiters, float $interdialyticHours): array
+{
+    $gMgMin = (($bunPreMgDl - $bunPostPrevMgDl) * ($tbwLiters * 10.0)) / ($interdialyticHours * 60.0);
+    $pcr = 9.35 * $gMgMin + 0.294 * $tbwLiters;
+
+    return ['g_mg_min' => $gMgMin, 'pcr' => $pcr, 'npcr' => 0.58 * $pcr / $tbwLiters];
+}
+
+/**
  * UACR v mg/mmol z albumínu [mg/L] a kreatinínu v moči [mmol/L].
  */
 function calculatorUacrMgMmol(float $albuminMgL, float $creatinineMmolL): float
