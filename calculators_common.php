@@ -462,6 +462,55 @@ function tlsCairoBishop(
 }
 
 /**
+ * Efluentová dávka CRRT: (dialyzát + substitúcia + čistá UF) [mL/h] / hmotnosť [kg].
+ * Dodaná dávka odpočíta podiel výpadku času. Cieľ dodanej dávky 20 až 25 mL/kg/h
+ * (KDIGO AKI 2012, odporúčanie 5.8.1). Bez korekcie na prediluciu.
+ *
+ * @return array{effluent: float, prescribed: float, delivered: float} mL/h, mL/kg/h, mL/kg/h
+ */
+function calculatorCrrtEffluentDose(float $dialysateMlH, float $replacementMlH, float $netUfMlH, float $weightKg, float $downtimePct): array
+{
+    if ($weightKg <= 0.0) {
+        throw new InvalidArgumentException('Hmotnosť musí byť kladná.');
+    }
+    $effluent = $dialysateMlH + $replacementMlH + $netUfMlH;
+    $prescribed = $effluent / $weightKg;
+
+    return [
+        'effluent' => $effluent,
+        'prescribed' => $prescribed,
+        'delivered' => $prescribed * (1.0 - $downtimePct / 100.0),
+    ];
+}
+
+/** CSS trieda podľa dodanej efluentovej dávky voči cieľu KDIGO (20–25 mL/kg/h). */
+function crrtDoseClass(float $dose): string
+{
+    if ($dose < 20.0) {
+        return 'risk-high';        // poddávkovanie
+    }
+    if ($dose <= 30.0) {
+        return 'risk-low';         // cieľ + bežná rezerva na výpadky
+    }
+    return 'risk-moderate';        // nadmerná dávka
+}
+
+/** Slovný opis pásma dávky. */
+function crrtDoseLabel(float $dose): string
+{
+    if ($dose < 20.0) {
+        return 'pod cieľom KDIGO';
+    }
+    if ($dose <= 25.0) {
+        return 'cieľové pásmo KDIGO';
+    }
+    if ($dose <= 30.0) {
+        return 'prijateľná rezerva';
+    }
+    return 'nad cieľom';
+}
+
+/**
  * Furstov pomer elektrolytov moču a plazmy: (U_Na + U_K) / S_Na
  * (Furst H a kol., Am J Med Sci 2000;319(4):240–244, PMID 10768609).
  */
