@@ -115,8 +115,10 @@ function nefroCrontabRender(
         1
     ) ?? $src;
 
+    // Crontab(5) na Linuxe vyžaduje LF; CRLF z Windows dumpov rozbije „bad minute“.
+    $src = str_replace(["\r\n", "\r"], "\n", $src);
     $src = rtrim($src) . "\n";
-    $extra = trim($extraPreserve);
+    $extra = trim(str_replace(["\r\n", "\r"], "\n", $extraPreserve));
     if ($extra !== '') {
         $src .= "\n# ── Zachované cudzie úlohy (nie nefro SoT) ───────────────────────────────\n";
         $src .= $extra . "\n";

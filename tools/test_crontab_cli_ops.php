@@ -93,13 +93,17 @@ foreach (nefroCrontabParityErrors($crontab) as $err) {
     crontabOpsTest(false, 'Parity example: ' . $err);
 }
 
-$rendered = nefroCrontabRender($crontabPath);
+$rendered = nefroCrontabRender($crontabPath, '', '', "line\r\nwith\rCRLF\n");
 foreach (nefroCrontabParityErrors($rendered) as $err) {
     crontabOpsTest(false, 'Parity rendered: ' . $err);
 }
 crontabOpsTest(
     str_contains($rendered, 'NEFRO_ROOT=' . nefroCrontabDefaultRoot()),
     'render musí nastaviť produkčný NEFRO_ROOT.',
+);
+crontabOpsTest(
+    !str_contains($rendered, "\r"),
+    'render musí emitovať iba LF (CRLF rozbije crontab bad minute).',
 );
 
 // Nový *_worker.php v koreni nesmie uniknúť mimo zoznamov.
