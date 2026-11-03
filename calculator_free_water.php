@@ -5,19 +5,6 @@ require_once __DIR__ . '/db_config.php';
 /** @var \PDO $pdo */
 require_once __DIR__ . '/calculators_common.php';
 
-/** CSS trieda podľa elektrolytového klírensu voľnej vody (tendencia nátriémie). */
-function fwcClass(float $efwc): string
-{
-    // EFWC > 0 → tendencia ↑ Na (vylučovanie voľnej vody); < 0 → tendencia ↓ Na.
-    if ($efwc < -0.5) {
-        return 'risk-high';      // retencia voľnej vody → riziko poklesu Na (SIADH)
-    }
-    if ($efwc > 0.5) {
-        return 'risk-moderate';  // strata voľnej vody → riziko vzostupu Na
-    }
-    return 'risk-low';           // približne neutrálne
-}
-
 $errors = [];
 $messages = [];
 $calculated = null;
@@ -120,13 +107,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $cOsm = null;
             $cH2O = null;
             if ($pOsm !== null && $uOsm !== null) {
-                $cOsm = ($uOsm * $vMlMin) / $pOsm;
-                $cH2O = $vMlMin - $cOsm;
+                ['c_osm' => $cOsm, 'c_h2o' => $cH2O] = calculatorFreeWaterClearance($vMlMin, $uOsm, $pOsm);
             }
 
             $efwc = null;
             if ($pNa !== null && $uNa !== null && $uK !== null) {
-                $efwc = $vMlMin * (1.0 - ($uNa + $uK) / $pNa);
+                $efwc = calculatorElectrolyteFreeWaterClearance($vMlMin, $uNa, $uK, $pNa);
             }
 
             // Trieda podľa elektrolytového (preferovaného), inak klasického klírensu

@@ -340,6 +340,98 @@ function calculatorParseNonNegativeFloat(string $value): ?float
 }
 
 /**
+ * Klírens kreatinínu podľa Cockcrofta a Gaulta (Nephron 1976;16(1):31–41, PMID 1244564):
+ * (140 − vek) · hmotnosť [kg] / (72 · S-kreatinín [mg/dL]), u žien × 0,85. Výsledok v mL/min.
+ */
+function calculatorCockcroftGault(int $ageYears, float $weightKg, float $sCrMgDl, string $sex): float
+{
+    if ($sCrMgDl <= 0.0) {
+        throw new InvalidArgumentException('S-kreatinín musí byť kladný.');
+    }
+    $crcl = ((140 - $ageYears) * $weightKg) / (72.0 * $sCrMgDl);
+
+    return $sex === 'female' ? $crcl * 0.85 : $crcl;
+}
+
+/**
+ * Recirkulácia v cievnom prístupe metódou troch vzoriek močoviny:
+ * R [%] = (C_P − C_A) / (C_P − C_V) · 100. Záporná hodnota (A > P) znamená
+ * chybu odberu; o orezaní na nulu rozhoduje volajúci.
+ */
+function calculatorUreaRecirculationPct(float $systemic, float $arterial, float $venous): float
+{
+    if ($systemic - $venous <= 0.0) {
+        throw new InvalidArgumentException('Systémová koncentrácia musí byť vyššia než venózna.');
+    }
+
+    return (($systemic - $arterial) / ($systemic - $venous)) * 100.0;
+}
+
+/**
+ * Klasický klírens voľnej vody: C_osm = U_osm · V / P_osm, C_H2O = V − C_osm (mL/min).
+ *
+ * @return array{c_osm: float, c_h2o: float}
+ */
+function calculatorFreeWaterClearance(float $urineMlMin, float $urineOsm, float $plasmaOsm): array
+{
+    if ($plasmaOsm <= 0.0) {
+        throw new InvalidArgumentException('Osmolalita plazmy musí byť kladná.');
+    }
+    $cOsm = ($urineOsm * $urineMlMin) / $plasmaOsm;
+
+    return ['c_osm' => $cOsm, 'c_h2o' => $urineMlMin - $cOsm];
+}
+
+/**
+ * Elektrolytový klírens voľnej vody: V · (1 − (U_Na + U_K) / P_Na) v mL/min.
+ */
+function calculatorElectrolyteFreeWaterClearance(float $urineMlMin, float $urineNa, float $urineK, float $plasmaNa): float
+{
+    if ($plasmaNa <= 0.0) {
+        throw new InvalidArgumentException('Nátrium v plazme musí byť kladné.');
+    }
+
+    return $urineMlMin * (1.0 - ($urineNa + $urineK) / $plasmaNa);
+}
+
+/** CSS trieda podľa miery recirkulácie (urea-based periférna/slow-flow metóda). */
+function recircClass(float $pct): string
+{
+    if ($pct <= 5.0) {
+        return 'risk-low';         // bez významnej recirkulácie
+    }
+    if ($pct <= 10.0) {
+        return 'risk-moderate';    // hraničné — over techniku/polohu ihiel
+    }
+    return 'risk-high';            // významná recirkulácia
+}
+
+/** Slovný opis pásma recirkulácie. */
+function recircLabel(float $pct): string
+{
+    if ($pct <= 5.0) {
+        return 'bez významnej recirkulácie';
+    }
+    if ($pct <= 10.0) {
+        return 'hraničná recirkulácia';
+    }
+    return 'významná recirkulácia';
+}
+
+/** CSS trieda podľa elektrolytového klírensu voľnej vody (tendencia nátriémie). */
+function fwcClass(float $efwc): string
+{
+    // EFWC > 0 → tendencia ↑ Na (vylučovanie voľnej vody); < 0 → tendencia ↓ Na.
+    if ($efwc < -0.5) {
+        return 'risk-high';      // retencia voľnej vody → riziko poklesu Na (SIADH)
+    }
+    if ($efwc > 0.5) {
+        return 'risk-moderate';  // strata voľnej vody → riziko vzostupu Na
+    }
+    return 'risk-low';           // približne neutrálne
+}
+
+/**
  * spKt/V podľa Daugirdasa II (J Am Soc Nephrol 1993;4(5):1205–1213, PMID 8305648):
  * −ln(R − 0,008·t) + (4 − 3,5·R)·UF/W. R = U_post/U_pre, t v hodinách,
  * UF v litroch, W = hmotnosť po dialýze v kg. Null, ak logaritmus nie je definovaný.
