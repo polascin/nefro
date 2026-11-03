@@ -134,7 +134,7 @@ $baseUrl = "https://nefro.polascin.net/";
                 <ul class="tool-step__list">
                     <li>Howard SC, Jones DP, Pui CH. The tumor lysis syndrome. <em>N Engl J Med.</em> 2011;364(19):1844–1854.</li>
                     <li>Coiffier B, et al. Guidelines for the management of pediatric and adult tumor lysis syndrome. <em>J Clin Oncol.</em> 2008;26(16):2767–2778.</li>
-                    <li>Cairo MS, Bishop M. Tumour lysis syndrome: classification and grading system. <em>Br J Haematol.</em> 2004;127(1):3–11.</li>
+                    <li>Cairo MS, Bishop M. Tumour lysis syndrome: new therapeutic strategies and classification. <em>Br J Haematol.</em> 2004;127(1):3–11.</li>
                 </ul>
             </section>
         </div>

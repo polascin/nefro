@@ -159,7 +159,7 @@ $baseUrl = "https://nefro.polascin.net/";
                 <h3 id="zdroje-heading">Zdroje</h3>
                 <ul class="tool-step__list">
                     <li>KDIGO Clinical Practice Guideline for Acute Kidney Injury. <em>Kidney Int Suppl.</em> 2012;2(1):1–138.</li>
-                    <li>Mehta RL, et al. Acute Kidney Injury Network (AKIN). <em>Crit Care.</em> 2007;11:R31.</li>
+                    <li>Mehta RL, et al. Acute Kidney Injury Network: report of an initiative to improve outcomes in acute kidney injury. <em>Crit Care.</em> 2007;11:R31.</li>
                     <li>Rahman M, Shad F, Smith MC. Acute Kidney Injury: A Guide to Diagnosis and Management. <em>Am Fam Physician.</em> 2012;86(7):631–639.</li>
                 </ul>
             </section>
