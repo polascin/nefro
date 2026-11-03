@@ -32,20 +32,6 @@ $form["patient_birth_number"]  = calculatorPostString("patient_birth_number");
 $form["patient_insurance_code"] = calculatorPostString("patient_insurance_code");
 $form["examination_date"]      = calculatorPostString("examination_date", date("Y-m-d"));
 
-function calculateSlope(array $x, array $y): ?float
-{
-    $n = count($x);
-    if ($n < 2) return null;
-    $meanX = array_sum($x) / $n;
-    $meanY = array_sum($y) / $n;
-    $num = $den = 0.0;
-    for ($i = 0; $i < $n; $i++) {
-        $num += ($x[$i] - $meanX) * ($y[$i] - $meanY);
-        $den += ($x[$i] - $meanX) ** 2;
-    }
-    return $den == 0.0 ? null : $num / $den;
-}
-
 /** Načíta eGFR merania z uložených výsledkov pre pacienta s daným RC. */
 function fetchPatientEgfrHistory(PDO $pdo, int $userId, string $birthNumber): array
 {
@@ -213,18 +199,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 $y[] = $p["egfr"];
             }
 
-            $slope = calculateSlope($x, $y);
+            $slope = calculatorOlsSlope($x, $y);
 
             if ($slope !== null) {
-                if ($slope < -5) {
-                    $interpretation = "Rýchla progresia CKD (> 5 ml/min/rok). Zvážte zintenzívnenie liečby (SGLT2i, RASi) a dispenzarizáciu.";
-                } elseif ($slope < -2) {
-                    $interpretation = "Stredne rýchla progresia. Prirodzený vekový pokles je zvyčajne okolo 1 ml/min/rok.";
-                } elseif ($slope > 0) {
-                    $interpretation = "eGFR sa v čase zlepšuje alebo je stabilné.";
-                } else {
-                    $interpretation = "Pomalá progresia, blízka fyziologickému starnutiu.";
-                }
+                $interpretation = egfrSlopeInterpretation($slope);
 
                 $calculated = [
                     "slope"          => round($slope, 2),

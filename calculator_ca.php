@@ -46,8 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         }
 
         if (empty($errors)) {
-            // Vzorec: Korigovaný Ca (mmol/l) = Nameraný Ca + 0.02 * (40 - Albumín v g/l)
-            $correctedCa = $ca + 0.02 * (40.0 - $alb);
+            $correctedCa = calculatorCorrectedCalcium($ca, $alb);
 
             $calculated = [
                 "corrected_ca" => round($correctedCa, 2),
