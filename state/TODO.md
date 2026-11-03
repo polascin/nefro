@@ -2,23 +2,21 @@
 
 ## Ďalšia slučka
 
-1. Po **súhlase**: zosúladiť produkčný crontab s `tools/crontab.example`
-   (provider_notice_worker, backup_snapshot, sync_drugs, sync_clinical_trials;
-   interval newsletter_worker).
+1. Po **súhlase**: sync produkčný crontab s `tools/crontab.example`.
 2. Po **výslovnom súhlase**: ENUM `sending` + claim/lease.
-3. Inak ďalší P1 z `.audit.md`.
+3. Inak P1 z `.audit.md` (napr. a11y `aria-label` na unit selectoch).
 
-## Hotové: slučka 2026-11-03-g (cookie banner a11y)
+## Hotové: slučka 2026-11-03-h (crontab/CLI ops regresia)
 
-- [x] HTML hidden + aria-hidden + inert; fallback; test; changelog
-- [x] deploy `f5032e59`; bez claim/lease ENUM
+- [x] `tools/test_crontab_cli_ops.php` + regressions.json (40 PASS)
+- [x] bez zmeny produkčného crontabu; bez claim/lease
 
-## Hotové: slučka 2026-11-03-f … a
+## Hotové: slučka 2026-11-03-g … a
 
-- [x] register/2fa scalar; public/admin/auth scalar; CKD-PC/CKM; Windows fixture
+- [x] cookie a11y; register/2fa; public/admin/auth scalar; CKD-PC/CKM; Windows fixture
 
 ## Vedomé mimo rozsahu
 
 - Newsletter avíza (default off).
 - Sociálne siete.
-- Produkčné SQL / migrácie / seed priority / crontab bez súhlasu.
+- Produkčné SQL / migrácie / seed / crontab / claim-lease bez súhlasu.

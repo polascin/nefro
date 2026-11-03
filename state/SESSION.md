@@ -1,37 +1,36 @@
 # SESSION
 
-Aktualizované: 2026-11-03 07:24 Europe/Bratislava
+Aktualizované: 2026-11-03 07:46 Europe/Bratislava
 
 ## Aktívna úloha
 
-Cookie banner mimo a11y stromu po súhlase. Handoff:
-`.codex/handoffs/2026-11-03-072407-cookie-banner-a11y.md`.
+Regresia `crontab.example` + CLI deny. Handoff:
+`.codex/handoffs/2026-11-03-074603-crontab-cli-ops-regression.md`.
 
 ## Stav repozitára
 
 - Vetva: `main`
-- HEAD: `e3995105` (docs/handoff Beh 145; runtime `f5032e59`)
-- Runtime / `DEPLOY_COMMIT`: `f5032e59` (dokumentačný drift HEAD OK)
+- HEAD: `3cef9245` (test-only; runtime bez zmeny)
+- Runtime / `DEPLOY_COMMIT`: `f5032e59` (ignore drift OK: `tools/**`)
 - `origin/main` a `server/main`: aktuálne
 
 ## Čo je hotové
 
-1. `setCookieBannerVisible` (hidden + aria-hidden + inert)
-2. Fallback + regresia + site_changelog
-3. Claim/lease ENUM **nebol**
+1. `tools/test_crontab_cli_ops.php` (50 PASS); suite 40
+2. Live CLI deny 403
+3. Claim/lease a produkčný crontab **netknuté**
 
-## Otvorené (ops)
+## Otvorené (súhlas)
 
-Produkčný crontab vs `tools/crontab.example`: chýbajú provider_notice,
-backup_snapshot, sync_drugs, sync_clinical_trials; newsletter_worker `*/30`
-namiesto minútového. Úprava crontabu **iba so súhlasom**.
+- Sync produkčného crontabu s `tools/crontab.example`
+- Claim/lease ENUM `sending`
 
 ## Executable next step
 
 ```text
-# Po súhlase: sync crontab; inak claim/lease so súhlasom alebo iný P1.
+# Po súhlase: crontab sync alebo claim/lease; inak ďalší P1 z auditu.
 ```
 
 ## Handoff
 
-`.codex/handoffs/2026-11-03-072407-cookie-banner-a11y.md`
+`.codex/handoffs/2026-11-03-074603-crontab-cli-ops-regression.md`

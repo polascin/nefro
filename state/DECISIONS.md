@@ -196,3 +196,9 @@ Claim/lease ENUM stále bez súhlasu.
 Zatvorený banner: HTML `hidden` + `aria-hidden` + `inert`, nie len CSS
 `translateY`. Cron drift (crontab.example vs produkcia) zaznamenaný, sync
 až so súhlasom. Claim/lease ENUM stále bez súhlasu.
+
+## 2026-11-03 (slučka 8) — crontab.example + CLI deny regresia
+
+`tools/test_crontab_cli_ops.php` pinuje povinné úlohy a OMITNUTÉ v
+`crontab.example` plus `.htaccess` `<Files>` deny a CLI guard. Produkčný
+crontab sa nemení (zákaz bez súhlasu). Claim/lease ENUM stále bez súhlasu.
