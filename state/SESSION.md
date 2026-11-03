@@ -1,31 +1,31 @@
 # SESSION
 
-Aktualizované: 2026-11-03 05:41 Europe/Bratislava
+Aktualizované: 2026-11-03 06:10 Europe/Bratislava
 
 ## Aktívna úloha
 
-P1 clinical refs CKD-PC / CKM. Handoff:
-`.codex/handoffs/2026-11-03-054047-clinical-refs-ckdpc-ckm.md`.
+Admin POST majú `requestRequireScalarPost`. Handoff:
+`.codex/handoffs/2026-11-03-060938-admin-scalar-post-guards.md`.
 
-## Stav repozitária
+## Stav repozitára
 
 - Vetva: `main`
-- HEAD: `eb6e48bb` (docs Beh 141; runtime test `ed5bd134`)
-- Runtime / `DEPLOY_COMMIT`: `03c461fd` (ignore drift OK: `tools/**`, docs)
+- HEAD: `7f498c59`
+- Runtime / `DEPLOY_COMMIT`: `7f498c59`
 - `origin/main` a `server/main`: aktuálne
 
 ## Čo je hotové
 
-1. `tools/test_clinical_references_ckdpc_ckm.php` (37 PASS)
-2. Regresie 39 PASS; live CKD-PC/CKM 200
+1. Scalar guard na 11 admin mutácií (+ reauth)
+2. request_input wiring 118 PASS; regresie 39; deploy OK
 3. Claim/lease ENUM **nebol**
 
 ## Executable next step
 
 ```text
-# Cielené skaláre v admin POST bez multi-selectov, alebo claim/lease IBA so súhlasom.
+# Claim/lease ENUM sending IBA so súhlasom; inak ďalší P1 dlh z auditu.
 ```
 
 ## Handoff
 
-`.codex/handoffs/2026-11-03-054047-clinical-refs-ckdpc-ckm.md`
+`.codex/handoffs/2026-11-03-060938-admin-scalar-post-guards.md`

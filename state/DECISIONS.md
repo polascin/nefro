@@ -172,3 +172,9 @@ Samostatný `tools/test_clinical_references_ckdpc_ckm.php` namiesto ďalšieho
 balíka do PREVENT súboru. CKD-PC pinuje ckdpcrisk.org; CKM pinuje
 `ckmComputeStage` + wiring BMI 23/25 a KF→very-high. Iba tools → SFTP
 deploy marker sa nemení. Claim/lease ENUM stále bez súhlasu.
+
+## 2026-11-03 (slučka 4) — admin scalar POST guards
+
+`requestRequireScalarPost` na všetky súčasné admin mutácie bez `name="…[]"`
+(grep 0 multi-selectov). Providers/notices/orders čítajú skaláre cez helpers.
+Budúci multi-select nesmie dostať plošný guard. Claim/lease ENUM stále bez súhlasu.
