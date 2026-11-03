@@ -151,3 +151,10 @@ Allowlist `.dockerignore` mal `robots.txt`, nie `.htaccess`, takže Regression
 gate v Actions padala Fatalom. Oprava: `!/.htaccess`. Súvisiace: PHPStan
 (float kľúče G máp → páry), restore fixture kopíruje aj `request_input.php`,
 synthetic git commit v self_test používa `--no-verify`. Claim/lease ENUM nie.
+
+## 2026-11-03 — requestRequireScalarPost test cez fixture
+
+Beh 138 pridal `php -r` + `escapeshellarg` na overenie poľového POST. Na
+Windowse to rozbije vnorené úvodzovky, regresná brána padá a SFTP deploy
+nespustí (produkcia ostala na staršom SHA). Riešenie: temp fixture PHP súbor,
+rovnako ako JSON/text reject. Claim/lease ENUM stále bez súhlasu.
