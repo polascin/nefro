@@ -2,12 +2,16 @@
 
 ## Ďalšia slučka
 
-1. Plošne overiť PMID odkazy na stránkach kalkulačiek (Beh 159: jeden viedol na nesúvisiaci článok); potom kdpi, mgrs, mgus.
+1. Overiť citácie bez PubMed odkazu (text, DOI) na stránkach kalkulačiek; potom referenčné testy kdpi, mgrs, mgus.
 2. Čaká na majiteľa: limity korekcie hyponatrémie v calculator_na.php (Beh 153).
 3. Čaká na majiteľa: CRRT bez korekcie predilúcie a bez citácie KDIGO (Beh 157).
 4. Čaká na majiteľa: zlúčenie `fix/adpkd-mayo-2026-11-03` (Beh 158).
 5. Čaká na majiteľa: IgAN koeficienty nezodpovedajú opísanému modelu (Beh 158).
 6. Čaká na majiteľa: zlúčenie `fix/gupta-mg-cutoff-2026-11-03` (Beh 159).
+
+## Hotové: slučka 2026-11-03-t (PubMed odkazy)
+
+- [x] 12 odkazov overených, MGRS opravený; check tool + offline register; deploy `3d09b657`
 
 ## Hotové: slučka 2026-11-03-s (CRRT)
 
