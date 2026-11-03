@@ -17,15 +17,18 @@ $status = 'error';
 $message = 'Neplatný alebo neúplný odhlasovací odkaz.';
 $showConfirmation = false;
 $isPost = $requestMethod === 'POST';
+if ($isPost) {
+    requestRequireScalarPost();
+}
 $request = $isPost ? $_POST : $_GET;
 
 $uid = (int) ($request['uid'] ?? 0);
 $expiresAt = (int) ($request['exp'] ?? 0);
-$signature = trim((string) ($request['sig'] ?? ''));
+$signature = requestScalarString($request, 'sig');
 
 // Anonymný odberateľ (newsletter_subscribers)
 $subId    = (int) ($request['sub'] ?? 0);
-$subToken = trim((string) ($request['token'] ?? ''));
+$subToken = requestScalarString($request, 'token');
 
 if ($isPost && !validateCsrfToken(requestCsrfTokenFromPost())) {
     $message = 'Neplatný CSRF token. Otvorte odhlasovací odkaz znova.';

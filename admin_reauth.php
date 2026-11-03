@@ -11,10 +11,11 @@ $requestMethod = strtoupper((string) ($_SERVER['REQUEST_METHOD'] ?? 'GET'));
 $errors = [];
 
 if ($requestMethod === 'POST') {
+    requestRequireScalarPost();
     if (!validateCsrfToken(requestCsrfTokenFromPost())) {
         $errors[] = 'Neplatný CSRF token. Skúste to znova.';
     } else {
-        $password = (string) ($_POST['password'] ?? '');
+        $password = requestScalarString($_POST, 'password', '', true, false);
         $userId = (int) ($_SESSION['user_id'] ?? 0);
 
         try {

@@ -32,6 +32,9 @@ function handleLoginPost(PDO $pdo, bool $isLocalDev): array
     $maxAttempts        = 10;
     $blockSecs          = 900;
 
+    // Formulár nemá poľové polia (login[] by inak poškodilo honeypot/JS token).
+    requestRequireScalarPost();
+
     // ── CSRF ─────────────────────────────────────────────────────────────────
     $postedCsrfToken = requestCsrfTokenFromPost();
     if (!validateCsrfToken($postedCsrfToken)) {

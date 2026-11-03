@@ -161,9 +161,25 @@ requestInputTest(
     'profile.php musí odmietnuť poľový POST a čítať polia cez requestScalarString.',
 );
 requestInputTest(
-    str_contains((string) file_get_contents($root . '/login.php'), 'requestCsrfTokenFromPost()'),
-    'login.php musí čítať CSRF cez requestCsrfTokenFromPost.',
+    str_contains((string) file_get_contents($root . '/login.php'), 'requestCsrfTokenFromPost()')
+        && str_contains((string) file_get_contents($root . '/login.php'), 'requestRequireScalarPost()'),
+    'login.php musí čítať CSRF cez requestCsrfTokenFromPost a odmietnuť poľový POST.',
 );
+$authScalarGuards = [
+    'forgot_password.php',
+    'reset_password.php',
+    'resend_verification.php',
+    'confirm_account_deletion.php',
+    'admin_reauth.php',
+    'newsletter_verify_sub.php',
+    'newsletter_unsubscribe.php',
+];
+foreach ($authScalarGuards as $authFile) {
+    requestInputTest(
+        str_contains((string) file_get_contents($root . '/' . $authFile), 'requestRequireScalarPost()'),
+        $authFile . ' musí volať requestRequireScalarPost na POST.',
+    );
+}
 requestInputTest(
     str_contains((string) file_get_contents($root . '/.htaccess'), 'request_input'),
     '.htaccess musí deny-ovať request_input.php.',

@@ -41,6 +41,7 @@ if ($tokenHash !== '') {
 $isLocalDev = isAppLocalDev();
 
 if ($requestMethod === 'POST') {
+    requestRequireScalarPost();
     $postedCsrfToken = requestCsrfTokenFromPost();
     if (!validateCsrfToken($postedCsrfToken)) {
         $errors[] = "Neplatný CSRF token. Skúste to znova.";
@@ -57,8 +58,8 @@ if ($requestMethod === 'POST') {
             $errors[] = "[DEV diagnostika] CSRF zlyhanie: " . $csrfReason;
         }
     } else {
-        $newPassword = $_POST['new_password'] ?? '';
-        $newPasswordConfirm = $_POST['new_password_confirm'] ?? '';
+        $newPassword = requestScalarString($_POST, 'new_password', '', true, false);
+        $newPasswordConfirm = requestScalarString($_POST, 'new_password_confirm', '', true, false);
 
         if ($resetRequest === null) {
             $errors[] = 'Odkaz na obnovenie hesla je neplatný alebo jeho platnosť vypršala.';

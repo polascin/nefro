@@ -28,6 +28,7 @@ if ($requestMethod === 'GET' && isset($_SESSION['forgot_password_flash'])) {
 }
 
 if ($requestMethod === 'POST') {
+    requestRequireScalarPost();
     $postedCsrfToken = requestCsrfTokenFromPost();
     if (!validateCsrfToken($postedCsrfToken)) {
         $errors[] = "Neplatný CSRF token. Skúste to znova.";

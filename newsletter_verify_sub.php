@@ -19,7 +19,7 @@ if (!in_array($requestMethod, ['GET', 'POST'], true)) {
     exit;
 }
 
-$token = trim((string) ($_GET['token'] ?? $_POST['token'] ?? ''));
+$token = requestScalarStringPreferPost('token', '');
 $tokenFormatValid = preg_match('/^[a-f0-9]{64}$/Di', $token) === 1;
 
 $status = 'error';
@@ -46,6 +46,7 @@ if ($requestMethod === 'GET' && $verificationFlash === '' && $tokenFormatValid) 
 }
 
 if ($requestMethod === 'POST') {
+    requestRequireScalarPost();
     if (!validateCsrfToken(requestCsrfTokenFromPost())) {
         $message = 'Neplatný CSRF token. Skúste to znova.';
         $showConfirmation = $tokenFormatValid;

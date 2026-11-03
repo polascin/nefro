@@ -39,6 +39,7 @@ if ($tokenHash !== '') {
 }
 
 if ($requestMethod === 'POST') {
+    requestRequireScalarPost();
     $postedCsrfToken = requestCsrfTokenFromPost();
     if (!validateCsrfToken($postedCsrfToken)) {
         $errors[] = "Neplatný CSRF token. Skúste to znova.";

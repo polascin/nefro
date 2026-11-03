@@ -29,6 +29,7 @@ const RESEND_WINDOW_SECS   = 3600; // okno 1 hodina
 const RESEND_COOLDOWN_SECS = 300;  // 5 minút medzi jednotlivými odoslaniami
 
 if ($requestMethod === 'POST') {
+    requestRequireScalarPost();
     $postedCsrf = requestCsrfTokenFromPost();
     if (!validateCsrfToken($postedCsrf)) {
         $errors[] = 'Neplatný CSRF token. Skúste to znova.';
