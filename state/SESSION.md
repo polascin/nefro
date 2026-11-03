@@ -1,24 +1,25 @@
 # SESSION
 
-Aktualizované: 2026-11-03 07:46 Europe/Bratislava
+Aktualizované: 2026-11-03 08:18 Europe/Bratislava
 
 ## Aktívna úloha
 
-Regresia `crontab.example` + CLI deny. Handoff:
-`.codex/handoffs/2026-11-03-074603-crontab-cli-ops-regression.md`.
+A11y companion unit selecty + admin notices labely. Handoff:
+`.codex/handoffs/2026-11-03-081800-a11y-unit-selects.md`.
 
 ## Stav repozitára
 
 - Vetva: `main`
-- HEAD: `47c96948` (docs Beh 146; runtime test `3cef9245`)
-- Runtime / `DEPLOY_COMMIT`: `f5032e59` (ignore drift OK: `tools/**`, docs)
+- HEAD: `9579eea8`
+- Runtime / `DEPLOY_COMMIT`: `9579eea8` (zhoda)
 - `origin/main` a `server/main`: aktuálne
 
 ## Čo je hotové
 
-1. `tools/test_crontab_cli_ops.php` (50 PASS); suite 40
-2. Live CLI deny 403
-3. Claim/lease a produkčný crontab **netknuté**
+1. id + aria-label na UACR/chol companion selectoch (ckdpc, kfre, kdigo, prevent)
+2. Explicitné labely v `admin_content_notices.php`
+3. `tools/test_a11y_unit_selects.php` (22 PASS); suite 41
+4. Live overené; claim/lease a produkčný crontab **netknuté**
 
 ## Otvorené (súhlas)
 
@@ -33,4 +34,4 @@ Regresia `crontab.example` + CLI deny. Handoff:
 
 ## Handoff
 
-`.codex/handoffs/2026-11-03-074603-crontab-cli-ops-regression.md`
+`.codex/handoffs/2026-11-03-081800-a11y-unit-selects.md`

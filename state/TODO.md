@@ -4,16 +4,17 @@
 
 1. Po **súhlase**: sync produkčný crontab s `tools/crontab.example`.
 2. Po **výslovnom súhlase**: ENUM `sending` + claim/lease.
-3. Inak P1 z `.audit.md` (napr. a11y `aria-label` na unit selectoch).
+3. Inak P1 z `.audit.md` (unit select a11y je hotová; hľadaj iný P1).
 
-## Hotové: slučka 2026-11-03-h (crontab/CLI ops regresia)
+## Hotové: slučka 2026-11-03-i (a11y unit selecty)
 
-- [x] `tools/test_crontab_cli_ops.php` + regressions.json (40 PASS)
-- [x] bez zmeny produkčného crontabu; bez claim/lease
+- [x] id na companion UACR/chol selectoch + admin notices labely
+- [x] `tools/test_a11y_unit_selects.php` + regressions.json (41 PASS)
+- [x] deploy `9579eea8`; bez claim/lease; bez sync crontabu
 
-## Hotové: slučka 2026-11-03-g … a
+## Hotové: slučka 2026-11-03-h … a
 
-- [x] cookie a11y; register/2fa; public/admin/auth scalar; CKD-PC/CKM; Windows fixture
+- [x] crontab/CLI ops; cookie a11y; register/2fa; public/admin/auth scalar; CKD-PC/CKM; Windows fixture
 
 ## Vedomé mimo rozsahu
 
