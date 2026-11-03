@@ -165,3 +165,10 @@ rovnako ako JSON/text reject. Claim/lease ENUM stále bez súhlasu.
 admin_reauth a newsletter verify/unsubscribe. Heslá cez
 `requestScalarString(..., trim=false)`. Admin katalógy s multi-selectmi
 nedostávajú plošný guard. Claim/lease ENUM stále bez súhlasu.
+
+## 2026-11-03 (slučka 3) — clinical refs CKD-PC / CKM
+
+Samostatný `tools/test_clinical_references_ckdpc_ckm.php` namiesto ďalšieho
+balíka do PREVENT súboru. CKD-PC pinuje ckdpcrisk.org; CKM pinuje
+`ckmComputeStage` + wiring BMI 23/25 a KF→very-high. Iba tools → SFTP
+deploy marker sa nemení. Claim/lease ENUM stále bez súhlasu.

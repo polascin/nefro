@@ -1,32 +1,31 @@
 # SESSION
 
-Aktualizované: 2026-11-03 05:18 Europe/Bratislava
+Aktualizované: 2026-11-03 05:41 Europe/Bratislava
 
 ## Aktívna úloha
 
-Auth/newsletter POST majú `requestRequireScalarPost`. Handoff:
-`.codex/handoffs/2026-11-03-051759-auth-scalar-post-guards.md`.
+P1 clinical refs CKD-PC / CKM. Handoff:
+`.codex/handoffs/2026-11-03-054047-clinical-refs-ckdpc-ckm.md`.
 
-## Stav repozitára
+## Stav repozitária
 
 - Vetva: `main`
-- HEAD: `69676592` (docs/handoff Beh 140; runtime `03c461fd`)
-- Runtime / `DEPLOY_COMMIT`: `03c461fd` (dokumentačný drift HEAD OK)
+- HEAD: `ed5bd134` (test-only; runtime bez zmeny)
+- Runtime / `DEPLOY_COMMIT`: `03c461fd` (ignore drift OK: `tools/**`)
 - `origin/main` a `server/main`: aktuálne
 
 ## Čo je hotové
 
-1. Scalar guard na login, forgot/reset, resend, confirm deletion, admin_reauth
-2. Newsletter verify + unsubscribe POST (a skalárne tokeny)
-3. request_input wiring 107 PASS; regresie 38; deploy OK
-4. Claim/lease ENUM **nebol**
+1. `tools/test_clinical_references_ckdpc_ckm.php` (37 PASS)
+2. Regresie 39 PASS; live CKD-PC/CKM 200
+3. Claim/lease ENUM **nebol**
 
 ## Executable next step
 
 ```text
-# Voliteľne clinical refs CKD-PC/CKM, alebo claim/lease IBA so súhlasom.
+# Cielené skaláre v admin POST bez multi-selectov, alebo claim/lease IBA so súhlasom.
 ```
 
 ## Handoff
 
-`.codex/handoffs/2026-11-03-051759-auth-scalar-post-guards.md`
+`.codex/handoffs/2026-11-03-054047-clinical-refs-ckdpc-ckm.md`

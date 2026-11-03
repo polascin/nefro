@@ -2,9 +2,15 @@
 
 ## Ďalšia slučka
 
-1. Voliteľne clinical refs pre CKD-PC / CKM (samostatný súbor).
+1. Cielené skaláre v admin POST bez multi-selectov
+   (`admin_reauth` už hotové; zvyšok bez `formats[]` a pod.).
 2. Po **výslovnom súhlase**: ENUM `sending` + claim/lease; empty provider priority.
-3. Admin POST: cielené skaláre len tam, kde nie sú úmyselné listové polia.
+
+## Hotové: slučka 2026-11-03-c (CKD-PC/CKM clinical refs)
+
+- [x] `tools/test_clinical_references_ckdpc_ckm.php` + regressions.json
+- [x] 37 PASS; suite 39; deploy marker bez zmeny (iba tools)
+- [x] bez claim/lease ENUM
 
 ## Hotové: slučka 2026-11-03-b (auth scalar guards)
 
@@ -14,10 +20,7 @@
 
 ## Hotové: slučka 2026-11-03 (request-input + PREVENT)
 
-- [x] Windows fixture pre `requestRequireScalarPost`
-- [x] `profile.php` skalárny guard
-- [x] PREVENT v `test_clinical_references.php`
-- [x] deploy `84d61269`; bez claim/lease ENUM
+- [x] Windows fixture; profile; PREVENT refs; deploy `84d61269`
 
 ## Vedomé mimo rozsahu
 
