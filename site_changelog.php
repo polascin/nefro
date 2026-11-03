@@ -55,6 +55,13 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-11-03 08:15',
+                'category' => 'calculators',
+                'title' => 'Popísané prepínače jednotiek v kalkulačkách',
+                'description' => 'Prepínače jednotiek UACR a cholesterolu majú stabilné id a aria-label, aby ich čítačky obrazovky ohlásili aj bez samostatného viditeľného labelu vedľa hodnoty.',
+                'url' => 'calculators.php',
+            ],
+            [
                 'date' => '2026-11-03 07:22',
                 'category' => 'portal',
                 'title' => 'Cookie banner mimo čítačky po súhlase',

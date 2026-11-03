@@ -112,10 +112,18 @@ include 'admin_menu.php';
       <form method="post" action="admin_content_notices.php">
         <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(generateCsrfToken()) ?>">
         <input type="hidden" name="notice_id" value="<?= $id ?>">
-        <label>Stav <select name="status"><option value="reviewing">Posudzuje sa</option><option value="actioned">Prijaté opatrenie</option><option value="rejected">Zamietnuté</option></select></label>
-        <label>Rozhodnutie <input type="text" name="decision" maxlength="100" value="<?= htmlspecialchars((string) ($notice['decision'] ?? '')) ?>"></label>
-        <label>Odôvodnenie <textarea name="decision_reason" required minlength="10" maxlength="5000" rows="5"><?= htmlspecialchars((string) ($notice['decision_reason'] ?? '')) ?></textarea></label>
-        <label>E-mail dotknutého používateľa <input type="email" name="affected_email" maxlength="254" value="<?= htmlspecialchars((string) ($notice['affected_email'] ?? '')) ?>"></label>
+        <label for="notice_status_<?= $id ?>">Stav</label>
+        <select id="notice_status_<?= $id ?>" name="status" aria-label="Stav oznámenia č. <?= $id ?>">
+          <option value="reviewing"<?= ((string) $notice['status'] === 'reviewing') ? ' selected' : '' ?>>Posudzuje sa</option>
+          <option value="actioned"<?= ((string) $notice['status'] === 'actioned') ? ' selected' : '' ?>>Prijaté opatrenie</option>
+          <option value="rejected"<?= ((string) $notice['status'] === 'rejected') ? ' selected' : '' ?>>Zamietnuté</option>
+        </select>
+        <label for="notice_decision_<?= $id ?>">Rozhodnutie</label>
+        <input id="notice_decision_<?= $id ?>" type="text" name="decision" maxlength="100" value="<?= htmlspecialchars((string) ($notice['decision'] ?? '')) ?>">
+        <label for="notice_reason_<?= $id ?>">Odôvodnenie</label>
+        <textarea id="notice_reason_<?= $id ?>" name="decision_reason" required minlength="10" maxlength="5000" rows="5"><?= htmlspecialchars((string) ($notice['decision_reason'] ?? '')) ?></textarea>
+        <label for="notice_email_<?= $id ?>">E-mail dotknutého používateľa</label>
+        <input id="notice_email_<?= $id ?>" type="email" name="affected_email" maxlength="254" value="<?= htmlspecialchars((string) ($notice['affected_email'] ?? '')) ?>">
         <button type="submit" class="btn-primary">Uložiť a oznámiť rozhodnutie</button>
       </form>
     </article>

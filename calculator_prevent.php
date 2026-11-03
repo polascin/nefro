@@ -464,7 +464,7 @@ function preventRenderOutcome(string $title, array $pair, bool $show30): void
                                 <label for="uacr_value">UACR</label>
                                 <div class="flex-gap-8-end">
                                     <input type="text" id="uacr_value" name="uacr_value" class="form-control flex-1" value="<?= htmlspecialchars($form['uacr_value']) ?>" placeholder="voliteľné">
-                                    <select name="uacr_unit" aria-label="Jednotka UACR" class="form-control flex-08">
+                                    <select name="uacr_unit" id="uacr_unit" aria-label="Jednotka UACR" class="form-control flex-08">
                                         <option value="mg_g" <?= $form['uacr_unit'] === 'mg_g' ? 'selected' : '' ?>>mg/g</option>
                                         <option value="mg_mmol" <?= $form['uacr_unit'] === 'mg_mmol' ? 'selected' : '' ?>>mg/mmol</option>
                                     </select>
