@@ -11,8 +11,9 @@ a PREVENT clinical refs. Handoff:
 ## Stav repozitára
 
 - Vetva: `main`
-- HEAD: `84d61269` (fix request_input fixture + profile + PREVENT refs)
-- Runtime / `DEPLOY_COMMIT`: `84d61269` (lokálny SFTP post-commit)
+- HEAD: `166dee58` (docs/handoff Beh 139; runtime fix `84d61269`)
+- Runtime / `DEPLOY_COMMIT`: `166dee58` (zhoda s HEAD; medzi fixom a docs
+  pribudol `aa9eaad7` providers lookup, tiež nasadený)
 - `origin/main` a `server/main`: aktuálne
 - Predchádzajúci `c0f033c7` (Beh 138) sa nenasadil samostatne; brána padala
   na Windowse a produkcia ostala na `1ed7f45d` až do `84d61269`
