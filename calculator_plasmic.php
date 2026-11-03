@@ -16,33 +16,6 @@ function plasmicParseNonNeg(string $value): ?float
     return $f < 0 ? null : $f;
 }
 
-/** CSS trieda podľa PLASMIC skóre (0–7). */
-function plasmicRiskClass(int $score): string
-{
-    if ($score >= 6) {
-        return 'risk-high';
-    }
-    if ($score === 5) {
-        return 'risk-moderate';
-    }
-    return 'risk-low';
-}
-
-/** Slovný opis rizikovej skupiny PLASMIC. */
-function plasmicRiskLabel(int $score): string
-{
-    if ($score >= 6) {
-        return 'vysoké riziko (≈ 62 až 82 %)';
-    }
-    if ($score === 5) {
-        return 'stredné riziko (≈ 5 až 24 %)';
-    }
-    return 'nízke riziko (≈ 0 až 4 %)';
-}
-
-// Prah kreatinínu: 2,0 mg/dL ≈ 176,8 µmol/L (× 88,42).
-const PLASMIC_CREA_UMOL = 176.8;
-
 $errors = [];
 $messages = [];
 $calculated = null;
@@ -100,17 +73,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $transplant = $form["transplant"] === "1";
 
         if (empty($errors)) {
-            $cPlatelets = (float) $platelets < 30.0;
-            $cHemolysis = $hemolysis;
-            $cNoCancer = !$activeCancer;
-            $cNoTransplant = !$transplant;
-            $cMcv = (float) $mcv < 90.0;
-            $cInr = (float) $inr < 1.5;
-            $cCrea = (float) $creatinine < PLASMIC_CREA_UMOL;
-
-            $score = ($cPlatelets ? 1 : 0) + ($cHemolysis ? 1 : 0)
-                + ($cNoCancer ? 1 : 0) + ($cNoTransplant ? 1 : 0)
-                + ($cMcv ? 1 : 0) + ($cInr ? 1 : 0) + ($cCrea ? 1 : 0);
+            [
+                'platelets' => $cPlatelets,
+                'hemolysis' => $cHemolysis,
+                'no_cancer' => $cNoCancer,
+                'no_transplant' => $cNoTransplant,
+                'mcv' => $cMcv,
+                'inr' => $cInr,
+                'creatinine' => $cCrea,
+                'score' => $score,
+            ] = plasmicScore((float) $platelets, $hemolysis, $activeCancer, $transplant, (float) $mcv, (float) $inr, (float) $creatinine);
 
             $calculated = [
                 "score" => $score,

@@ -16,37 +16,6 @@ function tlsParseNonNeg(string $value): ?float
     return $f < 0 ? null : $f;
 }
 
-/** CSS trieda podľa klasifikácie Cairo–Bishop. */
-function tlsRiskClass(bool $ctls, bool $ltls): string
-{
-    if ($ctls) {
-        return 'risk-high';
-    }
-    if ($ltls) {
-        return 'risk-moderate';
-    }
-    return 'risk-low';
-}
-
-/** Slovný opis klasifikácie Cairo–Bishop. */
-function tlsRiskLabel(bool $ctls, bool $ltls): string
-{
-    if ($ctls) {
-        return 'klinický TLS';
-    }
-    if ($ltls) {
-        return 'laboratórny TLS';
-    }
-    return 'bez TLS (Cairo-Bishop)';
-}
-
-// Absolútne prahy Cairo–Bishop (SI jednotky).
-const TLS_URIC_ACID = 476.0;   // µmol/L (8 mg/dL)
-const TLS_POTASSIUM = 6.0;     // mmol/L
-const TLS_PHOS_ADULT = 1.45;   // mmol/L (4,5 mg/dL) — dospelí
-const TLS_PHOS_CHILD = 2.1;    // mmol/L (6,5 mg/dL) — deti
-const TLS_CALCIUM = 1.75;      // mmol/L (7 mg/dL) — korigovaný/ionizovaný
-
 $errors = [];
 $messages = [];
 $calculated = null;
@@ -101,25 +70,22 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         }
 
         $isChild = $form["age_group"] === "child";
-        $phosThreshold = $isChild ? TLS_PHOS_CHILD : TLS_PHOS_ADULT;
 
         $creaHigh = $form["crea_high"] === "1";
         $arrhythmia = $form["arrhythmia"] === "1";
         $seizure = $form["seizure"] === "1";
 
         if (empty($errors)) {
-            $fUric = (float) $uricAcid >= TLS_URIC_ACID;
-            $fPotassium = (float) $potassium >= TLS_POTASSIUM;
-            $fPhosphate = (float) $phosphate >= $phosThreshold;
-            $fCalcium = (float) $calcium <= TLS_CALCIUM;
-
-            $labCount = ($fUric ? 1 : 0) + ($fPotassium ? 1 : 0)
-                + ($fPhosphate ? 1 : 0) + ($fCalcium ? 1 : 0);
-            $clinicalCount = ($creaHigh ? 1 : 0) + ($arrhythmia ? 1 : 0) + ($seizure ? 1 : 0);
-
-            // Laboratórny TLS: ≥ 2 metabolické odchýlky. Klinický TLS: LTLS + ≥ 1 klinický prejav.
-            $ltls = $labCount >= 2;
-            $ctls = $ltls && $clinicalCount >= 1;
+            [
+                'uric' => $fUric,
+                'potassium' => $fPotassium,
+                'phosphate' => $fPhosphate,
+                'calcium' => $fCalcium,
+                'lab_count' => $labCount,
+                'clinical_count' => $clinicalCount,
+                'ltls' => $ltls,
+                'ctls' => $ctls,
+            ] = tlsCairoBishop((float) $uricAcid, (float) $potassium, (float) $phosphate, (float) $calcium, $isChild, $creaHigh, $arrhythmia, $seizure);
 
             $calculated = [
                 "lab_count" => $labCount,
@@ -127,7 +93,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 "ltls" => $ltls,
                 "ctls" => $ctls,
                 "is_child" => $isChild,
-                "phos_threshold" => $phosThreshold,
+                "phos_threshold" => $isChild ? TLS_PHOS_CHILD : TLS_PHOS_ADULT,
                 "uric_acid" => round((float) $uricAcid, 0),
                 "potassium" => round((float) $potassium, 1),
                 "phosphate" => round((float) $phosphate, 2),
