@@ -184,3 +184,9 @@ Budúci multi-select nesmie dostať plošný guard. Claim/lease ENUM stále bez 
 Diskusia, DSA `content_report`, verify_email, provider_namietka, newsletter
 subscribe, logout + profile delete_account. `publikacia.php` ostáva na
 `requestStringList` pre `formats[]`. Claim/lease ENUM stále bez súhlasu.
+
+## 2026-11-03 (slučka 6) — register/2fa requestScalarString cleanup
+
+Po `requestRequireScalarPost` (Beh 138) ešte ostávalo `trim($_POST)` v
+`register.php` a TOTP tokoch. Heslá cez `requestScalarString(..., trim=false)`.
+Claim/lease ENUM stále bez súhlasu.

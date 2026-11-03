@@ -1,32 +1,32 @@
 # SESSION
 
-Aktualizované: 2026-11-03 06:34 Europe/Bratislava
+Aktualizované: 2026-11-03 06:59 Europe/Bratislava
 
 ## Aktívna úloha
 
-Verejné/členské POST majú `requestRequireScalarPost`. Handoff:
-`.codex/handoffs/2026-11-03-063340-public-form-scalar-guards.md`.
+Register a 2FA čítajú POST cez `requestScalarString`. Handoff:
+`.codex/handoffs/2026-11-03-065908-register-2fa-scalar-cleanup.md`.
 
 ## Stav repozitára
 
 - Vetva: `main`
-- HEAD: `f7eb7b3e` (docs/handoff Beh 143; runtime `83cb9d40`)
-- Runtime / `DEPLOY_COMMIT`: `83cb9d40` (dokumentačný drift HEAD OK)
+- HEAD: `8bc17a45`
+- Runtime / `DEPLOY_COMMIT`: `8bc17a45`
 - `origin/main` a `server/main`: aktuálne
 
 ## Čo je hotové
 
-1. Scalar guard na discussion, DSA report, verify_email, namietka, subscribe, logout
-2. profile delete_account guard
-3. request_input 125 PASS; regresie 39; deploy OK
+1. register.php bez `trim($_POST)`; heslá bez trimu
+2. 2fa_setup / 2fa_verify skalárne helpers
+3. request_input 128 PASS; regresie 39; deploy OK
 4. Claim/lease ENUM **nebol**
 
 ## Executable next step
 
 ```text
-# Claim/lease IBA so súhlasom; inak register scalar cleanup alebo iný P1 z auditu.
+# Claim/lease IBA so súhlasom; inak P1 ops/cron/a11y z .audit.md.
 ```
 
 ## Handoff
 
-`.codex/handoffs/2026-11-03-063340-public-form-scalar-guards.md`
+`.codex/handoffs/2026-11-03-065908-register-2fa-scalar-cleanup.md`

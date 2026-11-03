@@ -3,22 +3,20 @@
 ## Ďalšia slučka
 
 1. Po **výslovnom súhlase**: ENUM `sending` + claim/lease; empty provider priority.
-2. Voliteľne `register.php` / 2fa: `requestScalarString` namiesto zvyšného `trim($_POST)`.
-3. Inak ďalší P1 dlh z `.audit.md` (ops/cron/a11y; nie claim/lease bez súhlasu).
+2. Inak P1 z `.audit.md` (ops/cron/a11y; nie claim/lease bez súhlasu).
+
+## Hotové: slučka 2026-11-03-f (register/2fa scalar cleanup)
+
+- [x] register + 2fa_setup + 2fa_verify cez requestScalarString
+- [x] deploy `8bc17a45`; bez claim/lease ENUM
 
 ## Hotové: slučka 2026-11-03-e (public form scalar guards)
 
-- [x] discussion, content_report, verify_email, provider_namietka, subscribe, logout
-- [x] profile delete_account; deploy `83cb9d40`
-- [x] bez claim/lease ENUM
+- [x] discussion, DSA, verify_email, namietka, subscribe, logout; `83cb9d40`
 
-## Hotové: slučka 2026-11-03-d (admin scalar guards)
+## Hotové: slučka 2026-11-03-d / c / b / a
 
-- [x] admin mutácie; deploy `7f498c59`
-
-## Hotové: slučka 2026-11-03-c / b / a
-
-- [x] CKD-PC/CKM refs; auth scalar; request_input Windows + PREVENT
+- [x] admin scalar; CKD-PC/CKM; auth scalar; request_input Windows + PREVENT
 
 ## Vedomé mimo rozsahu
 
