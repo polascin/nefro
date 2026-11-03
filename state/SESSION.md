@@ -1,6 +1,6 @@
 # SESSION
 
-Aktualizované: 2026-11-03 08:18 Europe/Bratislava
+Aktualizované: 2026-11-03 08:19 Europe/Bratislava
 
 ## Aktívna úloha
 
@@ -10,8 +10,8 @@ A11y companion unit selecty + admin notices labely. Handoff:
 ## Stav repozitára
 
 - Vetva: `main`
-- HEAD: `9579eea8`
-- Runtime / `DEPLOY_COMMIT`: `9579eea8` (zhoda)
+- HEAD: `c31ef0e5` (docs Beh 147; runtime fix `9579eea8`)
+- Runtime / `DEPLOY_COMMIT`: `9579eea8` (ignore drift OK: docs/state/handoff)
 - `origin/main` a `server/main`: aktuálne
 
 ## Čo je hotové
@@ -29,7 +29,7 @@ A11y companion unit selecty + admin notices labely. Handoff:
 ## Executable next step
 
 ```text
-# Po súhlase: crontab sync alebo claim/lease; inak ďalší P1 z auditu.
+# Po súhlasu: crontab sync alebo claim/lease; inak ďalší P1 z auditu.
 ```
 
 ## Handoff
