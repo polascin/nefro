@@ -2,22 +2,23 @@
 
 ## Ďalšia slučka
 
-1. Po **súhlase**: sync produkčný crontab s `tools/crontab.example`.
-2. Po **výslovnom súhlase**: ENUM `sending` + claim/lease.
-3. Inak P1 z `.audit.md` (unit select a11y je hotová; hľadaj iný P1).
+1. Legal notice claim/lease (ENUM + worker port z newsletter vzoru) — podľa DECISIONS.md.
+2. Inak P1 z `.audit.md`.
 
-## Hotové: slučka 2026-11-03-i (a11y unit selecty)
+## Hotové: slučka 2026-11-03-j (cron sync + newsletter sending)
 
-- [x] id na companion UACR/chol selectoch + admin notices labely
-- [x] `tools/test_a11y_unit_selects.php` + regressions.json (41 PASS)
-- [x] deploy `9579eea8`; bez claim/lease; bez sync crontabu
+- [x] Produkčný crontab = `tools/crontab.example` + preserve polascin.net
+- [x] Migrácia ENUM `sending` na newsletter frontách
+- [x] RSI: render/verify/lib, ops_health ENUM, LF pin
+- [x] deploy `bad2398d`; ops_health PASS
 
-## Hotové: slučka 2026-11-03-h … a
+## Hotové: slučka 2026-11-03-i … a
 
-- [x] crontab/CLI ops; cookie a11y; register/2fa; public/admin/auth scalar; CKD-PC/CKM; Windows fixture
+- [x] a11y unit selecty; crontab/CLI ops; cookie a11y; scalar guards; clinical refs
 
 ## Vedomé mimo rozsahu
 
 - Newsletter avíza (default off).
 - Sociálne siete.
-- Produkčné SQL / migrácie / seed / crontab / claim-lease bez súhlasu.
+- Legal ENUM sending (až po porte kódu).
+- `provider_notice_worker --send` (vedomé rozhodnutie, nie cron).

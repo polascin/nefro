@@ -1,37 +1,38 @@
 # SESSION
 
-Aktualizované: 2026-11-03 08:19 Europe/Bratislava
+Aktualizované: 2026-11-03 08:45 Europe/Bratislava
 
 ## Aktívna úloha
 
-A11y companion unit selecty + admin notices labely. Handoff:
-`.codex/handoffs/2026-11-03-081800-a11y-unit-selects.md`.
+Beh 148: cron sync + newsletter ENUM sending (mandát RSI). Handoff:
+`.codex/handoffs/2026-11-03-084500-cron-sync-sending-lease.md`.
 
 ## Stav repozitára
 
 - Vetva: `main`
-- HEAD: `c31ef0e5` (docs Beh 147; runtime fix `9579eea8`)
-- Runtime / `DEPLOY_COMMIT`: `9579eea8` (ignore drift OK: docs/state/handoff)
+- HEAD: `eaeaf69c` (LF fix; runtime `bad2398d`)
+- Runtime / `DEPLOY_COMMIT`: `bad2398d`
 - `origin/main` a `server/main`: aktuálne
 
 ## Čo je hotové
 
-1. id + aria-label na UACR/chol companion selectoch (ckdpc, kfre, kdigo, prevent)
-2. Explicitné labely v `admin_content_notices.php`
-3. `tools/test_a11y_unit_selects.php` (22 PASS); suite 41
-4. Live overené; claim/lease a produkčný crontab **netknuté**
+1. Rozhodnutia v `state/DECISIONS.md` (cron áno, newsletter sending áno, legal nie)
+2. Produkčný crontab = SoT + polascin.net ops; záloha `crontab.nefro.bak.20261103T074351Z`
+3. ENUM `sending` na article_newsletter_queue + nl_sub_queue
+4. RSI: crontab_lib / render / verify; ops_health ENUM check; LF pin
+5. `ops_health --no-http` PASS
 
-## Otvorené (súhlas)
+## Otvorené
 
-- Sync produkčného crontabu s `tools/crontab.example`
-- Claim/lease ENUM `sending`
+- Legal notice claim/lease (port newsletter vzoru)
+- Ďalší P1 z auditu
 
 ## Executable next step
 
 ```text
-# Po súhlase: crontab sync alebo claim/lease; inak ďalší P1 z auditu.
+# Legal claim/lease ALEBO iný P1; php tools/run_regressions.php
 ```
 
 ## Handoff
 
-`.codex/handoffs/2026-11-03-081800-a11y-unit-selects.md`
+`.codex/handoffs/2026-11-03-084500-cron-sync-sending-lease.md`
