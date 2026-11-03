@@ -98,10 +98,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         // Magnézium → mg/dL
         $mgRaw = calculatorParsePositiveFloat($form["magnesium_value"]);
         $mgMgdl = null;
+        $mgMmol = null;
         if ($mgRaw === null) {
             $errors[] = "Magnézium musí byť kladné číslo.";
         } else {
             $mgMgdl = $form["magnesium_unit"] === "mg_dl" ? (float) $mgRaw : (float) $mgRaw * 2.43;
+            // Hranica skóre je v mmol/L (< 0,82); 1 mmol/L Mg = 2,4305 mg/dL.
+            $mgMmol = $form["magnesium_unit"] === "mg_dl" ? (float) $mgRaw / 2.4305 : (float) $mgRaw;
             if ($mgMgdl < 0.2 || $mgMgdl > 10.0) {
                 $errors[] = "Magnézium je mimo prijateľného rozsahu.";
             }
@@ -127,7 +130,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 'mg' => $pMg,
                 'dose' => $pDose,
                 'score' => $score,
-            ] = guptaScore((float) $age, $htn, $dm, (float) $hbGdl, (float) $wbc, (float) $platelets, (float) $albGdl, (float) $mgMgdl, (float) $dose);
+            ] = guptaScore((float) $age, $htn, $dm, (float) $hbGdl, (float) $wbc, (float) $platelets, (float) $albGdl, (float) $mgMmol, (float) $dose);
             $cat = guptaRiskCategory($score);
 
             $calculated = [
