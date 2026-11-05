@@ -641,6 +641,182 @@ function mgusMayoRisk(float $mProteinGL, bool $nonIgg, float $kappaMgL, float $l
 }
 
 /**
+ * Klasifikácia MGRS podľa konsenzu IKMG (Leung N. a kol., Nat Rev Nephrol 2019;15(1):45–59,
+ * PMID 30510265): hierarchické určenie kategórie.
+ *
+ * MGRS = klon B-buniek / plazmocytov produkujúci monoklonálny imunoglobulín, ktorý
+ * spôsobuje obličkové poškodenie, ale nespĺňa kritériá hematologickej malignity
+ * vyžadujúcej cielenú liečbu. Biopsia s monoklonálnymi depozitmi dokladá klon aj
+ * pri negatívnom sére/moči (~30 % MGRS).
+ *
+ * @return array{code: string, label: string, risk_class: string}
+ */
+function mgrsClassify(bool $cloneEvidence, bool $biopsyMGRS, bool $clinicalRenal, bool $hasMalignancy): array
+{
+    $hasClone = $cloneEvidence || $biopsyMGRS;
+    $hasRenal = $biopsyMGRS || $clinicalRenal;
+
+    if ($hasMalignancy) {
+        if ($hasRenal) {
+            return [
+                'code' => 'Malignita',
+                'label' => 'paraproteinémická renálna lézia pri hematologickej malignite (mimo definície MGRS)',
+                'risk_class' => 'risk-high',
+            ];
+        }
+        return [
+            'code' => 'Malignita',
+            'label' => 'hematologická malignita vyžadujúca cielenú liečbu',
+            'risk_class' => 'risk-high',
+        ];
+    }
+    if ($hasClone && $hasRenal) {
+        if ($biopsyMGRS) {
+            return [
+                'code' => 'MGRS',
+                'label' => 'MGRS potvrdená obličkovou biopsiou',
+                'risk_class' => 'risk-high',
+            ];
+        }
+        return [
+            'code' => 'MGRS?',
+            'label' => 'MGRS pravdepodobná, nutné potvrdenie obličkovou biopsiou',
+            'risk_class' => 'risk-high',
+        ];
+    }
+    if ($hasClone) {
+        return [
+            'code' => 'MGUS',
+            'label' => 'monoklonálna gamapatia bez doloženého renálneho významu (MGUS)',
+            'risk_class' => 'risk-low',
+        ];
+    }
+    if ($hasRenal) {
+        return [
+            'code' => 'Klon?',
+            'label' => 'renálne postihnutie bez doloženého klonu, hľadaj okultnú monoklonálnu gamapatiu',
+            'risk_class' => 'risk-moderate',
+        ];
+    }
+    return [
+        'code' => '—',
+        'label' => 'nedostatok kritérií na klasifikáciu',
+        'risk_class' => 'risk-low',
+    ];
+}
+
+/** Nezáporné desatinné číslo; prázdny/neplatný/záporný vstup = null. */
+function kdpiParseNonNeg(string $value): ?float
+{
+    $v = str_replace(',', '.', trim($value));
+    if ($v === '' || !is_numeric($v)) {
+        return null;
+    }
+    $f = (float) $v;
+    return $f < 0 ? null : $f;
+}
+
+/**
+ * Lineárny prediktor KDRI (Rao PS a kol., Transplantation 2009;88(2):231–236, PMID 19623019;
+ * donor-only model používaný OPTN). Sérový kreatinín v mg/dL, výška v cm, hmotnosť v kg,
+ * vek v rokoch. KDRI_Rao = exp(xbeta); referenčný darca (xbeta = 0) má KDRI = 1,00.
+ *
+ * Koeficienty: vek 0,0128 (úpravy < 18: −0,0194; > 50: +0,0107); výška −0,0464 / 10 cm;
+ * hmotnosť < 80 kg: −0,0199 / 5 kg; afroamerický pôvod 0,1790; HTN 0,1260; DM 0,1300;
+ * CVA 0,0881; kreatinín 0,2200 (nad 1,5 mg/dL: −0,2090); HCV 0,2400; DCD 0,1330.
+ * OPTN stropuje sérový kreatinín pri výpočte na 8,0 mg/dL.
+ */
+function kdriXbeta(
+    float $ageYears,
+    float $heightCm,
+    float $weightKg,
+    float $creatMgDl,
+    bool $aaRace,
+    bool $htn,
+    bool $dm,
+    bool $cva,
+    bool $hcv,
+    bool $dcd
+): float {
+    $cr = min($creatMgDl, 8.0);
+
+    $x = 0.0128 * ($ageYears - 40.0);
+    if ($ageYears < 18.0) {
+        $x += -0.0194 * ($ageYears - 18.0);
+    }
+    if ($ageYears > 50.0) {
+        $x += 0.0107 * ($ageYears - 50.0);
+    }
+    $x += -0.0464 * ($heightCm - 170.0) / 10.0;
+    if ($weightKg < 80.0) {
+        $x += -0.0199 * ($weightKg - 80.0) / 5.0;
+    }
+    if ($aaRace) {
+        $x += 0.1790;
+    }
+    if ($htn) {
+        $x += 0.1260;
+    }
+    if ($dm) {
+        $x += 0.1300;
+    }
+    if ($cva) {
+        $x += 0.0881;
+    }
+    $x += 0.2200 * ($cr - 1.0);
+    if ($cr > 1.5) {
+        $x += -0.2090 * ($cr - 1.5);
+    }
+    if ($hcv) {
+        $x += 0.2400;
+    }
+    if ($dcd) {
+        $x += 0.1330;
+    }
+    return $x;
+}
+
+/** KDRI_Rao = exp(xbeta) voči referenčnému darcovi (KDRI = 1,00). */
+function kdriRao(
+    float $ageYears,
+    float $heightCm,
+    float $weightKg,
+    float $creatMgDl,
+    bool $aaRace,
+    bool $htn,
+    bool $dm,
+    bool $cva,
+    bool $hcv,
+    bool $dcd
+): float {
+    return exp(kdriXbeta($ageYears, $heightCm, $weightKg, $creatMgDl, $aaRace, $htn, $dm, $cva, $hcv, $dcd));
+}
+
+/** CSS trieda podľa veľkosti KDRI_Rao (referenčný darca = 1,00). */
+function kdriRiskClass(float $kdri): string
+{
+    if ($kdri < 1.0) {
+        return 'risk-low';
+    }
+    if ($kdri < 1.45) {
+        return 'risk-moderate';
+    }
+    return 'risk-high';
+}
+
+/** Slovný opis veľkosti KDRI_Rao. */
+function kdriRiskLabel(float $kdri): string
+{
+    if ($kdri < 1.0) {
+        return 'nižšie riziko než referenčný darca';
+    }
+    if ($kdri < 1.45) {
+        return 'stredné riziko';
+    }
+    return 'vyššie riziko';
+}
+
+/**
  * Efluentová dávka CRRT: (dialyzát + substitúcia + čistá UF) [mL/h] / hmotnosť [kg].
  * Dodaná dávka odpočíta podiel výpadku času. Cieľ dodanej dávky 20 až 25 mL/kg/h
  * (KDIGO AKI 2012, odporúčanie 5.8.1). Bez korekcie na prediluciu.
