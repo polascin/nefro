@@ -56,9 +56,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             if ($form["u_cr_unit"] === "mg_dl") {
                 $cr_mmol_l = creatinineMgDlToMmolL($ucr);
             }
-            $cr_g_l = ($cr_mmol_l * 113.12) / 1000;
 
-            if ($cr_mmol_l > 0 && $cr_g_l > 0) {
+            if ($cr_mmol_l > 0) {
                 $uacr_mg_mmol = calculatorUacrMgMmol($alb_mg_l, $cr_mmol_l);
                 $uacr_mg_g = calculatorUacrMgG($alb_mg_l, $cr_mmol_l);
                 $category = calculatorUacrACategory($uacr_mg_mmol);

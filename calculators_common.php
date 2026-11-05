@@ -366,6 +366,12 @@ function plasmicRiskLabel(int $score): string
 /** Prepočtový faktor kreatinínu: 1 mg/dL = 88,4 µmol/L (= 0,0884 mmol/L). */
 const CREATININE_UMOL_PER_MGDL = 88.4;
 
+/**
+ * Molárna hmotnosť kreatinínu [g/mol] ≈ 113,12
+ * (= 10 000 / CREATININE_UMOL_PER_MGDL; jeden zdroj pravdy s faktorom 88,4).
+ */
+const CREATININE_MOLAR_MASS_G_PER_MOL = 10000.0 / CREATININE_UMOL_PER_MGDL;
+
 // Prah kreatinínu: 2,0 mg/dL × CREATININE_UMOL_PER_MGDL.
 const PLASMIC_CREA_UMOL = 2.0 * CREATININE_UMOL_PER_MGDL;
 
@@ -1294,6 +1300,12 @@ function creatinineMgDlToMmolL(float $mgDl): float
     return $mgDl * CREATININE_UMOL_PER_MGDL / 1000.0;
 }
 
+/** mmol/L → g/L (MW kreatinínu). */
+function creatinineMmolLToGL(float $mmolL): float
+{
+    return ($mmolL * CREATININE_MOLAR_MASS_G_PER_MOL) / 1000.0;
+}
+
 /** UACR mg/mmol → mg/g. */
 function uacrMgMmolToMgG(float $mgMmol): float
 {
@@ -1500,7 +1512,7 @@ function calculatorUacrMgMmol(float $albuminMgL, float $creatinineMmolL): float
 
 /**
  * UACR v mg/g z albumínu [mg/L] a kreatinínu v moči [mmol/L]
- * (MW kreatinínu 113,12 g/mol).
+ * (MW kreatinínu = CREATININE_MOLAR_MASS_G_PER_MOL).
  */
 function calculatorUacrMgG(float $albuminMgL, float $creatinineMmolL): float
 {
@@ -1508,7 +1520,7 @@ function calculatorUacrMgG(float $albuminMgL, float $creatinineMmolL): float
         throw new InvalidArgumentException('Kreatinín v moči musí byť kladný.');
     }
 
-    $creatinineGL = ($creatinineMmolL * 113.12) / 1000.0;
+    $creatinineGL = creatinineMmolLToGL($creatinineMmolL);
     if ($creatinineGL <= 0.0) {
         throw new InvalidArgumentException('Kreatinín v moči musí byť kladný.');
     }

@@ -74,6 +74,22 @@ unitsRefApprox(1.0, crclCreatinineToMgDl(0.0884, 'mmol_l'), 1e-12, 'crclCreatini
 unitsRefApprox(1.25, crclCreatinineToMgDl(1.25, 'mg_dl'), 0.0, 'crclCreatinineToMgDl mg_dl');
 unitsRefApprox(2.0 * CREATININE_UMOL_PER_MGDL, PLASMIC_CREA_UMOL, 1e-12, 'PLASMIC prah = 2 mg/dL');
 
+// Molárna hmotnosť kreatinínu odvodená z 88,4 (≈ 113,12 g/mol)
+unitsRefApprox(
+    10000.0 / CREATININE_UMOL_PER_MGDL,
+    CREATININE_MOLAR_MASS_G_PER_MOL,
+    0.0,
+    'CREATININE_MOLAR_MASS_G_PER_MOL = 10000/88,4',
+);
+unitsRefApprox(113.122, CREATININE_MOLAR_MASS_G_PER_MOL, 0.001, 'MW kreatinínu ≈ 113,12');
+unitsRefApprox(0.5656108597, creatinineMmolLToGL(5.0), 1e-9, 'creatinineMmolLToGL(5)');
+unitsRefApprox(
+    uacrMgMmolToMgG(calculatorUacrMgMmol(30.0, 5.0)),
+    calculatorUacrMgG(30.0, 5.0),
+    1e-12,
+    'calculatorUacrMgG = mg/mmol × UACR faktor',
+);
+
 // UACR mg/mmol ↔ mg/g (odvodené z kreatinínu / 10)
 unitsRefApprox(CREATININE_UMOL_PER_MGDL / 10.0, UACR_MG_G_PER_MG_MMOL, 0.0, 'UACR_MG_G_PER_MG_MMOL = 88,4/10');
 unitsRefApprox(8.84, UACR_MG_G_PER_MG_MMOL, 1e-12, 'UACR_MG_G_PER_MG_MMOL = 8,84');
@@ -146,6 +162,20 @@ foreach ($uacrPages as $file) {
         str_contains($src, 'uacrToMgG')
             && !preg_match('/\*\s*8\.84|\/\s*8\.84/', $src),
         $file . ' používa uacrToMgG bez inline 8,84',
+    );
+}
+
+// Výpočty UACR / common: bez literálu molárnej hmotnosti 113.12
+$mwSources = [
+    'calculators_common.php' => 'creatinineMmolLToGL',
+    'calculator_uacr.php' => 'calculatorUacrMgG',
+];
+foreach ($mwSources as $file => $helper) {
+    $src = (string) file_get_contents($root . '/' . $file);
+    unitsRefTest(
+        str_contains($src, $helper)
+            && !preg_match('/\b113\.12\b/', $src),
+        $file . ' používa ' . $helper . ' bez inline 113,12',
     );
 }
 
