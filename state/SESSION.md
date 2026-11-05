@@ -1,16 +1,16 @@
 # SESSION
 
-Aktualizované: 2026-11-05 23:34 Europe/Bratislava
+Aktualizované: 2026-11-05 23:54 Europe/Bratislava
 
 ## Aktívna úloha
 
-Beh: spoločné konštanty/helpery fosfát mg/dL ↔ mmol/L. Handoff:
-`.codex/handoffs/2026-11-05-233400-phosphate-helpers.md`.
+Beh: spoločné konštanty/helpery magnézium mg/dL ↔ mmol/L. Handoff:
+`.codex/handoffs/2026-11-05-235350-magnesium-helpers.md`.
 
 ## Stav repozitária
 
-- Vetva: `main` (HEAD `b2bc1e21`; feature `b576b78f`)
-- Runtime / `DEPLOY_COMMIT`: `b576b78f` (docs-only drift po handoffe OK)
+- Vetva: `main` (HEAD `c7a18acd`)
+- Runtime / `DEPLOY_COMMIT`: `c7a18acd`
 - Pripravené, nezlúčené: `fix/adpkd-mayo-2026-11-03`, `fix/gupta-mg-cutoff-2026-11-03`
 
 ## Čo je hotové
@@ -27,6 +27,7 @@ Beh: spoločné konštanty/helpery fosfát mg/dL ↔ mmol/L. Handoff:
 10. Slučka tick 11: `GLUCOSE_MGDL_TO_MMOLL` + `GLUCOSE_MMOLL_TO_MGDL` + helpery; units 104 PASS; sodium 31 PASS; suite 56 PASS
 11. Slučka tick 12: `CALCIUM_MGDL_TO_MMOLL` + `CALCIUM_MMOLL_TO_MGDL` + helpery; units 112 PASS; scores 26 PASS; suite 56 PASS
 12. Slučka tick 13: `PHOSPHATE_MGDL_TO_MMOLL` + `PHOSPHATE_MMOLL_TO_MGDL` + helpery; units 120 PASS; scores 26 PASS; suite 56 PASS
+13. Slučka tick 14: `MAGNESIUM_MGDL_TO_MMOLL` + `MAGNESIUM_MMOLL_TO_MGDL` + helpery; units 128 PASS; scores 26 PASS; suite 56 PASS
 
 ## Otvorené (súhlas majiteľa)
 
@@ -36,9 +37,9 @@ Beh: spoločné konštanty/helpery fosfát mg/dL ↔ mmol/L. Handoff:
 ## Executable next step
 
 ```text
-rg -n 0.4114 calculator_*.php calculators_common.php
+rg -n 59.48 calculator_*.php calculators_common.php
 ```
 
 ## Handoff
 
-`.codex/handoffs/2026-11-05-233400-phosphate-helpers.md`
+`.codex/handoffs/2026-11-05-235350-magnesium-helpers.md`
