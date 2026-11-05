@@ -2,12 +2,16 @@
 
 ## Ďalšia slučka
 
-1. Referenčné testy mgrs (checklist) a kdpi (KDRI, overiť zdroj OPTN).
+1. `php ops_health.php --no-http` (alebo prvý FAIL/WARN); a11y / PHPStan new issues / live smoke.
 2. Čaká na majiteľa: limity korekcie hyponatrémie v calculator_na.php (Beh 153).
 3. Čaká na majiteľa: CRRT bez korekcie predilúcie a bez citácie KDIGO (Beh 157).
 4. Čaká na majiteľa: zlúčenie `fix/adpkd-mayo-2026-11-03` (Beh 158).
 5. Čaká na majiteľa: IgAN koeficienty nezodpovedajú opísanému modelu (Beh 158).
 6. Čaká na majiteľa: zlúčenie `fix/gupta-mg-cutoff-2026-11-03` (Beh 159).
+
+## Hotové: slučka 2026-11-05 (MGRS + KDRI)
+
+- [x] Logika v calculators_common + testy 11+26 PASS; deploy `a6c6b4b1`
 
 ## Hotové: slučka 2026-11-03-v (MGUS)
 

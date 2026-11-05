@@ -1,22 +1,22 @@
 # SESSION
 
-Aktualizované: 2026-11-03 12:42 Europe/Bratislava
+Aktualizované: 2026-11-05 19:22 Europe/Bratislava
 
 ## Aktívna úloha
 
-Beh 162: referenčné testy MGUS. Handoff:
-`.codex/handoffs/2026-11-03-124200-mgus-clinical-refs.md`.
+Beh: referenčné testy MGRS + KDRI/OPTN. Handoff:
+`.codex/handoffs/2026-11-05-192038-mgrs-kdpi-clinical-refs.md`.
 
 ## Stav repozitára
 
-- Vetva: `main` (práca vo worktree `claude/loop-dev-audit-1ec33b`, merge `--no-ff`)
-- Runtime / `DEPLOY_COMMIT`: `3c118c65`
-- Pripravené, nezlúčené: `fix/adpkd-mayo-2026-11-03` (`01e6a45c`), `fix/gupta-mg-cutoff-2026-11-03` (`f10782b6`)
+- Vetva: `main`
+- Runtime / `DEPLOY_COMMIT`: `a6c6b4b1`
+- Pripravené, nezlúčené: `fix/adpkd-mayo-2026-11-03`, `fix/gupta-mg-cutoff-2026-11-03`
 
 ## Čo je hotové
 
-1. Beh 150 až 162: skalárne vstupy, PHPStan 0, referenčné testy 17 kalkulačiek, citácie overené
-2. Regresie 51 PASS
+1. Beh 150 až 162 + slučka 2026-11-05: clinical refs vrátane MGRS a KDRI
+2. Regresie 53 PASS
 
 ## Otvorené (súhlas majiteľa)
 
@@ -26,9 +26,9 @@ Beh 162: referenčné testy MGUS. Handoff:
 ## Executable next step
 
 ```text
-php tools/run_regressions.php
+php ops_health.php --no-http
 ```
 
 ## Handoff
 
-`.codex/handoffs/2026-11-03-124200-mgus-clinical-refs.md`
+`.codex/handoffs/2026-11-05-192038-mgrs-kdpi-clinical-refs.md`
