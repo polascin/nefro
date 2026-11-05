@@ -55,6 +55,13 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-11-05 20:20',
+                'category' => 'calculators',
+                'title' => 'Wintersova kompenzácia v acidobázickej kalkulačke',
+                'description' => 'Pri metabolickej acidóze kalkulačka aniónovej medzery dopočíta očakávané pCO₂ podľa Wintersovej rovnice (1,5 · HCO₃ + 8 ± 2 mmHg) a voliteľne porovná namerané pCO₂ s týmto pásmom.',
+                'url' => 'calculator_acidbase.php',
+            ],
+            [
                 'date' => '2026-11-05 17:10',
                 'category' => 'portal',
                 'title' => 'Jazyková a typografická korektúra textov portálu',

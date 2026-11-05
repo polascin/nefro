@@ -15,6 +15,7 @@ $form = [
     "s_cl" => calculatorPostString("s_cl"),
     "s_hco3" => calculatorPostString("s_hco3"),
     "albumin" => calculatorPostString("albumin", "40"),
+    "pco2" => calculatorPostString("pco2"),
     "patient_first_name" => calculatorPostString("patient_first_name"),
     "patient_last_name" => calculatorPostString("patient_last_name"),
     "patient_birth_date" => calculatorPostString("patient_birth_date"),
@@ -23,6 +24,7 @@ $form = [
         calculatorPostString("patient_insurance_code"),
     "examination_date" => calculatorPostString("examination_date", date("Y-m-d")),
 ];
+$winters = null;
 
 calculatorHandleLoadId($pdo, $form, $messages);
 
@@ -41,6 +43,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $cl = calculatorParsePositiveFloat($form["s_cl"]);
         $hco3 = calculatorParsePositiveFloat($form["s_hco3"]);
         $alb = calculatorParsePositiveFloat($form["albumin"]);
+        $pco2Raw = trim($form["pco2"]);
+        $pco2 = $pco2Raw === "" ? null : calculatorParsePositiveFloat($form["pco2"]);
 
         if ($na === null) {
             $errors[] = "Zadajte platnú hodnotu S-Na.";
@@ -54,9 +58,22 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if ($alb === null) {
             $alb = 40.0;
         }
+        if ($pco2Raw !== "" && $pco2 === null) {
+            $errors[] = "Zadajte platnú hodnotu pCO₂ (mmHg), alebo pole nechajte prázdne.";
+        }
 
         if (empty($errors)) {
             $calculated = calculatorAnionGapAnalysis($na, $cl, $hco3, $alb);
+            $winters = calculatorWintersCompensation($hco3, $pco2);
+            if ($winters !== null) {
+                $calculated = array_merge($calculated, [
+                    "expected_pco2" => $winters["expected_pco2"],
+                    "expected_pco2_low" => $winters["expected_pco2_low"],
+                    "expected_pco2_high" => $winters["expected_pco2_high"],
+                    "measured_pco2" => $winters["measured_pco2"],
+                    "winters_interpretation" => $winters["interpretation"],
+                ]);
+            }
 
             if ($action === "save") {
                 if (!isLoggedIn()) {
@@ -70,6 +87,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                             "s_hco3" => round($hco3, 1),
                             "albumin" => round($alb, 1),
                         ];
+                        if ($pco2 !== null) {
+                            $inputPayload["pco2"] = round($pco2, 1);
+                        }
 
                         if (
                             calculatorSaveResult(
@@ -117,10 +137,10 @@ if (isLoggedIn()) {
 <head>
   <?php
   $pageTitle =
-      "Aniónová medzera a Delta Ratio | Kalkulačky | Nefro-projekt Slovensko";
+      "Aniónová medzera, Delta Ratio a Wintersova kompenzácia | Kalkulačky | Nefro-projekt Slovensko";
   $canonicalUrl = "https://nefro.polascin.net/calculator_acidbase.php";
   $seoDescription =
-      "Nefrologická kalkulačka a nástroj: Aniónová medzera a Delta Ratio. Súčasť analýzy metabolickej acidózy. Presné klinické výpočty podľa najnovších odporúčaní pre lekárov na Slovensku.";
+      "Nefrologická kalkulačka: aniónová medzera, Δ/Δ pomer a Wintersova očakávaná pCO₂ pri metabolickej acidóze. Presné klinické výpočty pre lekárov na Slovensku.";
   $structuredData = [
       [
           "@context" => "https://schema.org",
@@ -163,7 +183,7 @@ if (isLoggedIn()) {
     <main id="main-content" class="container main-content main-content--single-col" role="main">
         <div class="content-wrapper">
             <div class="auth-container auth-container--wide">
-                <h2>Aniónová medzera a Delta-Delta pomer</h2>
+                <h2>Aniónová medzera, Delta-Delta pomer a Wintersova kompenzácia</h2>
                 <p class="auth-subtitle">Základný nástroj na diagnostiku zmiešaných porúch acidobázickej rovnováhy.</p>
 
                 <details open class="calc-formula-box">
@@ -172,12 +192,16 @@ if (isLoggedIn()) {
                         <div class="calc-formula-line">\[ \text{AG} = \text{Na} - (\text{Cl} + \text{HCO}_3) \]</div>
                         <div class="calc-formula-line">\[ \text{AG}_{\text{korig}} = \text{AG} + 0.25 \times (40 - \text{Albumín}) \]</div>
                         <div class="calc-formula-line">\[ \Delta\text{-Ratio} = \frac{\text{AG}_{\text{korig}} - 12}{24 - \text{HCO}_3} \]</div>
+                        <div class="calc-formula-line">\[ \text{pCO}_{2,\text{očak.}} = 1{,}5 \times \text{HCO}_3 + 8 \pm 2\ \text{mmHg} \]</div>
                         <div class="calc-formula-vars">
-                            Normálna aniónová medzera je cca 10-14 mmol/L.<br>
+                            Normálna aniónová medzera je cca 10–14&nbsp;mmol/L.<br>
                             U pacientov s hypoalbuminémiou (časté pri nefrotickom syndróme, závažnom CKD) musí byť AG korigovaná, inak sa falošne podhodnotí.<br>
+                            Wintersova rovnica odhaduje očakávané pCO₂ pri <em>primárnej metabolickej acidóze</em> (HCO₃ &lt; 24&nbsp;mmol/L); voliteľné namerané pCO₂ sa porovná s pásmom ±&nbsp;2&nbsp;mmHg.<br>
                             <a href="https://pubmed.ncbi.nlm.nih.gov/9824071/" target="_blank" rel="noopener noreferrer">Figge J. et&nbsp;al., Crit Care Med 1998;26(11):1807–10</a>
                             &ensp;&bull;&ensp;
                             <a href="https://pubmed.ncbi.nlm.nih.gov/17656477/" target="_blank" rel="noopener noreferrer">Rastegar A., J Am Soc Nephrol 2007;18(9):2429–31</a>
+                            &ensp;&bull;&ensp;
+                            <a href="https://pubmed.ncbi.nlm.nih.gov/6016545/" target="_blank" rel="noopener noreferrer">Albert MS, Dell RB, Winters RW, Ann Intern Med 1967;66(2):312–22</a>
                         </div>
                     </div>
                 </details>
@@ -221,6 +245,9 @@ if (isLoggedIn()) {
                             <div class="form-group"><label for="albumin">S-Albumín (g/L)</label><input type="text" id="albumin" name="albumin" class="form-control" value="<?= htmlspecialchars(
                                 $form["albumin"],
                             ) ?>"></div>
+                            <div class="form-group"><label for="pco2">pCO₂ (mmHg, voliteľné)</label><input type="text" id="pco2" name="pco2" class="form-control" inputmode="decimal" value="<?= htmlspecialchars(
+                                $form["pco2"],
+                            ) ?>"></div>
                         </div>
                     </div>
 
@@ -247,6 +274,21 @@ if (isLoggedIn()) {
                             ) ?></p>
                             <p class="calc-accent-text">Interpretácia: <?= htmlspecialchars(
                                 $calculated["interpretation"],
+                            ) ?></p>
+                        <?php endif; ?>
+                        <?php if ($winters !== null): ?>
+                            <p class="calc-result-mt16"><strong>Wintersova očakávaná pCO₂:</strong> <?= htmlspecialchars(
+                                (string) $winters["expected_pco2"],
+                            ) ?> mmHg
+                            (pásmo <?= htmlspecialchars((string) $winters["expected_pco2_low"]) ?>
+                            až <?= htmlspecialchars((string) $winters["expected_pco2_high"]) ?> mmHg)</p>
+                            <?php if ($winters["measured_pco2"] !== null): ?>
+                                <p><strong>Nameraná pCO₂:</strong> <?= htmlspecialchars(
+                                    (string) $winters["measured_pco2"],
+                                ) ?> mmHg</p>
+                            <?php endif; ?>
+                            <p class="calc-accent-text"><?= htmlspecialchars(
+                                $winters["interpretation"],
                             ) ?></p>
                         <?php endif; ?>
                         <div class="form-actions no-print calc-formula-mt24">

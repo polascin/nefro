@@ -1034,6 +1034,67 @@ function calculatorAnionGapDeltaInterpretation(float $deltaRatio): string
     return 'High-AG metabolická acidóza + súbežná metabolická alkalóza alebo chronická respiračná acidóza.';
 }
 
+/** Winters: očakávané pCO₂ = 1,5 · HCO₃ + 8 (± 2 mmHg) pri metabolickej acidóze. */
+const ACIDBASE_WINTERS_SLOPE = 1.5;
+const ACIDBASE_WINTERS_INTERCEPT = 8.0;
+const ACIDBASE_WINTERS_TOLERANCE_MMHG = 2.0;
+
+/**
+ * Wintersova rovnica: očakávané pCO₂ pri primárnej metabolickej acidóze.
+ *
+ * expected_pCO₂ = 1,5 · [HCO₃⁻] + 8 (± 2 mmHg)
+ * (Albert MS, Dell RB, Winters RW, Ann Intern Med 1967;66(2):312–322, PMID 6016545).
+ * Platí len pri HCO₃ < 24 mmol/L; inak null.
+ *
+ * @return array{
+ *   applicable: bool,
+ *   expected_pco2: ?float,
+ *   expected_pco2_low: ?float,
+ *   expected_pco2_high: ?float,
+ *   measured_pco2: ?float,
+ *   interpretation: string
+ * }|null null len pri neaplikovateľnom HCO₃ (nie acidóza)
+ */
+function calculatorWintersCompensation(float $hco3, ?float $measuredPco2 = null): ?array
+{
+    if ($hco3 >= ACIDBASE_NORMAL_HCO3) {
+        return null;
+    }
+
+    $expected = ACIDBASE_WINTERS_SLOPE * $hco3 + ACIDBASE_WINTERS_INTERCEPT;
+    $low = $expected - ACIDBASE_WINTERS_TOLERANCE_MMHG;
+    $high = $expected + ACIDBASE_WINTERS_TOLERANCE_MMHG;
+    $interpretation = calculatorWintersCompensationInterpretation($measuredPco2, $low, $high);
+
+    return [
+        'applicable' => true,
+        'expected_pco2' => round($expected, 1),
+        'expected_pco2_low' => round($low, 1),
+        'expected_pco2_high' => round($high, 1),
+        'measured_pco2' => $measuredPco2 !== null ? round($measuredPco2, 1) : null,
+        'interpretation' => $interpretation,
+    ];
+}
+
+/** Slovná interpretácia nameraného pCO₂ voči Wintersovmu pásmu ± 2 mmHg. */
+function calculatorWintersCompensationInterpretation(
+    ?float $measuredPco2,
+    float $expectedLow,
+    float $expectedHigh
+): string {
+    if ($measuredPco2 === null) {
+        return 'Wintersova kompenzácia: očakávané pCO₂ pri metabolickej acidóze (bez nameranej hodnoty).';
+    }
+    if ($measuredPco2 < $expectedLow) {
+        return 'Namerané pCO₂ je nižšie než Wintersovo pásmo: súbežná respiračná alkalóza.';
+    }
+    if ($measuredPco2 > $expectedHigh) {
+        return 'Namerané pCO₂ je vyššie než Wintersovo pásmo: súbežná respiračná acidóza (nedostatočná kompenzácia).';
+    }
+
+    return 'Namerané pCO₂ je v Wintersovom pásme: primeraná respiračná kompenzácia.';
+}
+
 /**
  * Sklon lineárnej regresie metódou najmenších štvorcov (y na x).
  * Null pri menej ako 2 bodoch alebo nulovom rozptyle x.

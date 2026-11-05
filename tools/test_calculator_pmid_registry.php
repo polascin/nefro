@@ -17,7 +17,7 @@ $checks = 0;
 
 /** @var array<string, list<string>> súbor => overené PMID */
 $registry = [
-    'calculator_acidbase.php' => ['9824071', '17656477'],
+    'calculator_acidbase.php' => ['6016545', '9824071', '17656477'],
     'calculator_ckdpc.php' => ['35856507'],
     'calculator_ckm.php' => ['37807924'],
     'calculator_furst.php' => ['10768609'],

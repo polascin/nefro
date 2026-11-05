@@ -137,7 +137,7 @@ $schemaWebApp = [
         ],
         [
             "@type" => "WebApplication",
-            "name" => "Aniónová medzera a Delta Ratio",
+            "name" => "Aniónová medzera, Delta Ratio a Winters",
             "url" => $baseUrl . "calculator_acidbase.php",
         ],
         [
@@ -409,8 +409,8 @@ $schemaWebApp = [
                         <a href="calculator_na.php" class="btn-primary">Otvoriť kalkulačku</a>
                     </article>
                     <article class="feature-card calculator-card">
-                        <h3>Aniónová medzera a &Delta;/&Delta;</h3>
-                        <p>Základný nástroj na diferenciálnu diagnostiku a identifikáciu zmiešaných porúch acidobázickej rovnováhy.</p>
+                        <h3>Aniónová medzera, &Delta;/&Delta; a Winters</h3>
+                        <p>Aniónová medzera s korekciou na albumín, Δ/Δ pomer a Wintersova očakávaná pCO₂ pri metabolickej acidóze.</p>
                         <a href="calculator_acidbase.php" class="btn-primary">Otvoriť kalkulačku</a>
                     </article>
                     <article class="feature-card calculator-card">

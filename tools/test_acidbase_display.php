@@ -37,6 +37,16 @@ foreach (['ag', 'corrected_ag', 'delta_ratio', 'alb'] as $key) {
     );
 }
 
+foreach (['expected_pco2', 'expected_pco2_low', 'expected_pco2_high', 'measured_pco2'] as $key) {
+    acidbaseDisplayTest(
+        (bool) preg_match(
+            '/htmlspecialchars\(\s*\(string\)\s*\$winters\["' . preg_quote($key, '/') . '"\]/',
+            $source,
+        ),
+        'Winters pole ' . $key . ' ide do htmlspecialchars ako string.',
+    );
+}
+
 $ag = round(140.0 - (104.0 + 16.0), 1);
 $alb = round(40.0, 1);
 $correctedAg = round($ag + 0.25 * (40.0 - $alb), 1);
