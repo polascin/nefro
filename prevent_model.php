@@ -14,7 +14,7 @@
  *
  * Centrovanie a transformácie (overené oproti referenčnej implementácii preventr):
  *   age       = (vek − 55) / 10            (age_sq = age² len pre 30-ročné modely)
- *   non-HDL-C = (TC − HDL, mmol/L) − 3.5   (mg/dL → mmol/L: × 0.02586)
+ *   non-HDL-C = (TC − HDL, mmol/L) − 3.5   (mg/dL → mmol/L: × CHOLESTEROL_MGDL_TO_MMOLL)
  *   HDL-C     = ((HDL, mmol/L) − 1.3) / 0.3
  *   SBP       = spline pri 110: (min(SBP,110)−110)/20 a (max(SBP,110)−130)/20
  *   BMI       = spline pri 30:  (min(BMI,30)−25)/5   a (max(BMI,30)−30)/5
@@ -60,8 +60,8 @@ function preventBuildPredictors(array $in): array
     $tc  = (float) $in['total_c'];
     $hdl = (float) $in['hdl_c'];
     if (($in['chol_unit'] ?? 'mmol') === 'mgdl') {
-        $nonHdl = ($tc - $hdl) * 0.02586 - 3.5;
-        $hdlT   = (($hdl * 0.02586) - 1.3) / 0.3;
+        $nonHdl = ($tc - $hdl) * CHOLESTEROL_MGDL_TO_MMOLL - 3.5;
+        $hdlT   = (($hdl * CHOLESTEROL_MGDL_TO_MMOLL) - 1.3) / 0.3;
     } else {
         $nonHdl = ($tc - $hdl) - 3.5;
         $hdlT   = ($hdl - 1.3) / 0.3;

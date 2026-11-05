@@ -60,7 +60,9 @@ unitsRefApprox(2.4305, MAGNESIUM_MMOLL_TO_MGDL, 0.0, 'MAGNESIUM_MMOLL_TO_MGDL = 
 unitsRefApprox(URIC_ACID_MGDL_TO_UMOLL, (float) $byName['Kyselina močová'][3], 1e-12, 'Kyselina močová faktor z konštanty');
 unitsRefApprox(59.48, URIC_ACID_MGDL_TO_UMOLL, 0.0, 'URIC_ACID_MGDL_TO_UMOLL = 59,48');
 unitsRefApprox(0.0168, URIC_ACID_UMOLL_TO_MGDL, 0.0, 'URIC_ACID_UMOLL_TO_MGDL = 0,0168');
-unitsRefApprox(0.02586, (float) $byName['Cholesterol'][3], 1e-12, 'Cholesterol faktor 0,02586');
+unitsRefApprox(CHOLESTEROL_MGDL_TO_MMOLL, (float) $byName['Cholesterol'][3], 1e-12, 'Cholesterol faktor z konštanty');
+unitsRefApprox(0.02586, CHOLESTEROL_MGDL_TO_MMOLL, 0.0, 'CHOLESTEROL_MGDL_TO_MMOLL = 0,02586');
+unitsRefApprox(38.67, CHOLESTEROL_MMOLL_TO_MGDL, 0.0, 'CHOLESTEROL_MMOLL_TO_MGDL = 38,67');
 unitsRefApprox(0.01129, (float) $byName['Triglyceridy'][3], 1e-12, 'Triglyceridy faktor 0,01129');
 unitsRefApprox(10.0, (float) $byName['Hemoglobín'][3], 1e-12, 'Hemoglobín faktor 10');
 unitsRefApprox(10.0, (float) $byName['Albumín'][3], 1e-12, 'Albumín faktor 10');
@@ -68,7 +70,7 @@ unitsRefApprox(17.1, (float) $byName['Bilirubín'][3], 1e-12, 'Bilirubín faktor
 unitsRefApprox(1 / 60, (float) $byName['eGFR'][3], 1e-12, 'eGFR faktor 1/60');
 
 // Dokumentované reciproké hodnoty projektu
-unitsRefApprox(38.67, 1.0 / (float) $byName['Cholesterol'][3], 0.01, 'Cholesterol ÷ 38,67');
+unitsRefApprox(CHOLESTEROL_MMOLL_TO_MGDL, 1.0 / (float) $byName['Cholesterol'][3], 0.01, 'Cholesterol ÷ 38,67');
 unitsRefApprox(18.0, 1.0 / (float) $byName['Glukóza'][3], 0.02, 'Glukóza ÷ 18');
 unitsRefApprox(88.57, 1.0 / (float) $byName['Triglyceridy'][3], 0.05, 'Triglyceridy ÷ 88,57');
 
@@ -176,6 +178,17 @@ unitsRefApprox(
     calculatorConvertConventionalToSi(8.0, URIC_ACID_MGDL_TO_UMOLL),
     0.0,
     'uric acid helper = prevodník s URIC_ACID_MGDL_TO_UMOLL',
+);
+
+$cholSi = calculatorConvertConventionalToSi(200.0, (float) $byName['Cholesterol'][3]);
+unitsRefApprox(5.172, $cholSi, 1e-9, 'Cholesterol 200 mg/dL → 5,172 mmol/L');
+unitsRefApprox(5.172, cholesterolMgDlToMmolL(200.0), 1e-9, 'cholesterolMgDlToMmolL(200)');
+unitsRefApprox(386.7, cholesterolMmolLToMgDl(10.0), 1e-9, 'cholesterolMmolLToMgDl(10)');
+unitsRefApprox(
+    cholesterolMgDlToMmolL(200.0),
+    calculatorConvertConventionalToSi(200.0, CHOLESTEROL_MGDL_TO_MMOLL),
+    0.0,
+    'cholesterol helper = prevodník s CHOLESTEROL_MGDL_TO_MMOLL',
 );
 
 $egfrSi = calculatorConvertConventionalToSi(60.0, (float) $byName['eGFR'][3]);
@@ -348,6 +361,27 @@ unitsRefTest(
     !preg_match("/['\"]Kyselina močová['\"].*59\.48/", $commonSrc)
         && !preg_match('/\*\s*0\.0168\b/', $commonSrc),
     'calculators_common bez literálu 59,48 v prevodníku a bez inline × 0,0168',
+);
+
+// Cholesterol mg/dL ↔ mmol/L: konštanty + helpery; bez inline 0.02586 / 38.67 mimo definícií
+unitsRefTest(
+    str_contains($commonSrc, 'CHOLESTEROL_MGDL_TO_MMOLL')
+        && str_contains($commonSrc, 'CHOLESTEROL_MMOLL_TO_MGDL')
+        && str_contains($commonSrc, 'cholesterolMgDlToMmolL')
+        && str_contains($commonSrc, 'cholesterolMmolLToMgDl'),
+    'calculators_common má cholesterolové konštanty a helpery',
+);
+unitsRefTest(
+    !preg_match("/['\"]Cholesterol['\"].*0\.02586/", $commonSrc)
+        && !preg_match('/\*\s*38\.67\b/', $commonSrc),
+    'calculators_common bez literálu 0,02586 v prevodníku a bez inline × 38,67',
+);
+
+$preventSrc = (string) file_get_contents(dirname(__DIR__) . '/prevent_model.php');
+unitsRefTest(
+    str_contains($preventSrc, 'CHOLESTEROL_MGDL_TO_MMOLL')
+        && !preg_match('/\*\s*0\.02586\b/', $preventSrc),
+    'prevent_model používa CHOLESTEROL_MGDL_TO_MMOLL bez inline 0,02586',
 );
 
 echo "Clinical references (units): $checks PASS\n";

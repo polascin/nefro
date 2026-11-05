@@ -459,6 +459,19 @@ const URIC_ACID_MGDL_TO_UMOLL = 59.48;
  */
 const URIC_ACID_UMOLL_TO_MGDL = 0.0168;
 
+/**
+ * Cholesterol mg/dL → mmol/L (konvenčný faktor prevodníka; ≈ 1 / 38,67).
+ * Približne reciproký k CHOLESTEROL_MMOLL_TO_MGDL (MW ≈ 386,65 / 10).
+ */
+const CHOLESTEROL_MGDL_TO_MMOLL = 0.02586;
+
+/**
+ * Cholesterol mmol/L → mg/dL (dokumentovaný deliteľ projektu ÷ 38,67).
+ * Nie je odvodený ako 1/0,02586: samostatne zaokrúhlené klinické konštanty
+ * (prevodník 0,02586; PREVENT a lipidové texty používajú ÷ 38,67).
+ */
+const CHOLESTEROL_MMOLL_TO_MGDL = 38.67;
+
 /** CSS trieda podľa klasifikácie Cairo–Bishop. */
 function tlsRiskClass(bool $ctls, bool $ltls): string
 {
@@ -1455,6 +1468,18 @@ function uricAcidUmolLToMgDl(float $umolL): float
     return $umolL * URIC_ACID_UMOLL_TO_MGDL;
 }
 
+/** Cholesterol mg/dL → mmol/L. */
+function cholesterolMgDlToMmolL(float $mgDl): float
+{
+    return $mgDl * CHOLESTEROL_MGDL_TO_MMOLL;
+}
+
+/** Cholesterol mmol/L → mg/dL. */
+function cholesterolMmolLToMgDl(float $mmolL): float
+{
+    return $mmolL * CHOLESTEROL_MMOLL_TO_MGDL;
+}
+
 /** UACR mg/mmol → mg/g. */
 function uacrMgMmolToMgG(float $mgMmol): float
 {
@@ -1808,7 +1833,7 @@ function calculatorUnitConversionRows(): array
         ['Fosfát (P)', 'mg/dL', 'mmol/L', PHOSPHATE_MGDL_TO_MMOLL, 1, 2],
         ['Magnézium', 'mg/dL', 'mmol/L', MAGNESIUM_MGDL_TO_MMOLL, 1, 2],
         ['Kyselina močová', 'mg/dL', 'µmol/L', URIC_ACID_MGDL_TO_UMOLL, 1, 0],
-        ['Cholesterol', 'mg/dL', 'mmol/L', 0.02586, 0, 2],
+        ['Cholesterol', 'mg/dL', 'mmol/L', CHOLESTEROL_MGDL_TO_MMOLL, 0, 2],
         ['Triglyceridy', 'mg/dL', 'mmol/L', 0.01129, 0, 2],
         ['Hemoglobín', 'g/dL', 'g/L', 10.0, 1, 0],
         ['Albumín', 'g/dL', 'g/L', 10.0, 1, 0],
