@@ -119,7 +119,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $correctedNaHillier = null;
             if ($sGlucose !== null) {
                 $glucoseMgDl = $glucoseUnit === "mmol_l"
-                    ? (float) $sGlucose * 18.0182
+                    ? glucoseMmolLToMgDl((float) $sGlucose)
                     : (float) $sGlucose;
                 $correctedNaKatz = calculatorSodiumGlucoseCorrection((float) $sNa, $glucoseMgDl, 1.6);
                 $correctedNaHillier = calculatorSodiumGlucoseCorrection((float) $sNa, $glucoseMgDl, 2.4);

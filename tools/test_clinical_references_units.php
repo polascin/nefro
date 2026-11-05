@@ -45,7 +45,9 @@ unitsRefApprox(CREATININE_UMOL_PER_MGDL, 88.4, 0.0, 'CREATININE_UMOL_PER_MGDL = 
 unitsRefApprox(BUN_MGDL_TO_UREA_MMOLL, (float) $byName['Urea (BUN)'][3], 1e-12, 'BUN/urea faktor z konštanty');
 unitsRefApprox(0.357, BUN_MGDL_TO_UREA_MMOLL, 0.0, 'BUN_MGDL_TO_UREA_MMOLL = 0,357');
 unitsRefApprox(2.8, UREA_MMOLL_TO_BUN_MGDL, 0.0, 'UREA_MMOLL_TO_BUN_MGDL = 2,8');
-unitsRefApprox(0.0555, (float) $byName['Glukóza'][3], 1e-12, 'Glukóza faktor 0,0555');
+unitsRefApprox(GLUCOSE_MGDL_TO_MMOLL, (float) $byName['Glukóza'][3], 1e-12, 'Glukóza faktor z konštanty');
+unitsRefApprox(0.0555, GLUCOSE_MGDL_TO_MMOLL, 0.0, 'GLUCOSE_MGDL_TO_MMOLL = 0,0555');
+unitsRefApprox(18.0182, GLUCOSE_MMOLL_TO_MGDL, 0.0, 'GLUCOSE_MMOLL_TO_MGDL = 18,0182');
 unitsRefApprox(0.2495, (float) $byName['Vápnik'][3], 1e-12, 'Vápnik faktor 0,2495');
 unitsRefApprox(0.3229, (float) $byName['Fosfát (P)'][3], 1e-12, 'Fosfát faktor 0,3229');
 unitsRefApprox(0.4114, (float) $byName['Magnézium'][3], 1e-12, 'Magnézium faktor 0,4114');
@@ -115,6 +117,14 @@ unitsRefApprox(
 
 $gluSi = calculatorConvertConventionalToSi(100.0, (float) $byName['Glukóza'][3]);
 unitsRefApprox(5.55, $gluSi, 0.01, 'Glukóza 100 mg/dL → 5,55 mmol/L');
+unitsRefApprox(5.55, glucoseMgDlToMmolL(100.0), 0.01, 'glucoseMgDlToMmolL(100)');
+unitsRefApprox(600.0, glucoseMmolLToMgDl(33.3), 0.01, 'glucoseMmolLToMgDl(33,3)');
+unitsRefApprox(
+    glucoseMgDlToMmolL(100.0),
+    calculatorConvertConventionalToSi(100.0, GLUCOSE_MGDL_TO_MMOLL),
+    0.0,
+    'glucose helper = prevodník s GLUCOSE_MGDL_TO_MMOLL',
+);
 
 $egfrSi = calculatorConvertConventionalToSi(60.0, (float) $byName['eGFR'][3]);
 unitsRefApprox(1.0, $egfrSi, 1e-9, 'eGFR 60 ml/min → 1,0 ml/s');
@@ -210,6 +220,26 @@ unitsRefTest(
     str_contains($npcrPage, 'npcrToBunMgDl')
         && !preg_match('/\*\s*2\.8\b|\/\s*0\.357\b/', $npcrPage),
     'calculator_npcr.php používa npcrToBunMgDl bez inline 2,8 / 0,357',
+);
+
+// Glukóza mg/dL ↔ mmol/L: konštanty + helpery; bez inline 0.0555 / 18.0182 mimo definícií
+unitsRefTest(
+    str_contains($commonSrc, 'GLUCOSE_MGDL_TO_MMOLL')
+        && str_contains($commonSrc, 'GLUCOSE_MMOLL_TO_MGDL')
+        && str_contains($commonSrc, 'glucoseMgDlToMmolL')
+        && str_contains($commonSrc, 'glucoseMmolLToMgDl'),
+    'calculators_common má glukózové konštanty a helpery',
+);
+unitsRefTest(
+    !preg_match("/['\"]Glukóza['\"].*0\.0555/", $commonSrc)
+        && !preg_match('/\*\s*18\.0182\b/', $commonSrc),
+    'calculators_common bez literálu 0,0555 v prevodníku a bez inline × 18,0182',
+);
+$naPage = (string) file_get_contents($root . '/calculator_na.php');
+unitsRefTest(
+    str_contains($naPage, 'glucoseMmolLToMgDl')
+        && !preg_match('/\*\s*18\.0182\b|\/\s*0\.0555\b/', $naPage),
+    'calculator_na.php používa glucoseMmolLToMgDl bez inline 18,0182 / 0,0555',
 );
 
 echo "Clinical references (units): $checks PASS\n";

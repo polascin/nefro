@@ -78,8 +78,9 @@ sodiumRefApprox(-3.7209, calculatorAdrogueMadias(0.0, 0.0, 160.0, 42.0), 0.0005,
 // S-Na 125, glykémia 600 mg/dL: Katz 125 + 1,6 · 5 = 133; Hillier 125 + 2,4 · 5 = 137
 sodiumRefApprox(133.0, calculatorSodiumGlucoseCorrection(125.0, 600.0, 1.6), 0.0001, 'Katz');
 sodiumRefApprox(137.0, calculatorSodiumGlucoseCorrection(125.0, 600.0, 2.4), 0.0001, 'Hillier');
-// 33,3 mmol/L glukózy · 18,0182 = 600 mg/dL
-sodiumRefApprox(600.0, 33.3 * 18.0182, 0.01, 'Prepočet glykémie mmol/L → mg/dL');
+// 33,3 mmol/L glukózy · GLUCOSE_MMOLL_TO_MGDL = 600 mg/dL
+sodiumRefApprox(600.0, glucoseMmolLToMgDl(33.3), 0.01, 'Prepočet glykémie mmol/L → mg/dL');
+sodiumRefApprox(18.0182, GLUCOSE_MMOLL_TO_MGDL, 0.0, 'GLUCOSE_MMOLL_TO_MGDL = 18,0182');
 
 // ─── Wiring ───
 $root = dirname(__DIR__);
@@ -90,9 +91,10 @@ sodiumRefTest(
 );
 sodiumRefTest(!str_contains($crclPage, '0.007184') && !str_contains($crclPage, 'function crcl'), 'calculator_crcl_24h.php nesmie mať vlastnú kópiu vzorca.');
 $naPage = (string) file_get_contents($root . '/calculator_na.php');
-foreach (['calculatorTbwFraction(', 'calculatorFreeWaterDeficit(', 'calculatorAdrogueMadias(', 'calculatorSodiumGlucoseCorrection('] as $fn) {
+foreach (['calculatorTbwFraction(', 'calculatorFreeWaterDeficit(', 'calculatorAdrogueMadias(', 'calculatorSodiumGlucoseCorrection(', 'glucoseMmolLToMgDl('] as $fn) {
     sodiumRefTest(str_contains($naPage, $fn), 'calculator_na.php musí volať ' . $fn);
 }
 sodiumRefTest(!str_contains($naPage, '/ ($tbw + 1)'), 'calculator_na.php nesmie mať vlastnú kópiu Adrogué–Madias.');
+sodiumRefTest(!preg_match('/\*\s*18\.0182\b/', $naPage), 'calculator_na.php bez inline × 18,0182');
 
 echo "Clinical references (CrCl 24 h, BSA, nátrium): $checks PASS\n";

@@ -394,6 +394,19 @@ const BUN_MGDL_TO_UREA_MMOLL = 0.357;
  */
 const UREA_MMOLL_TO_BUN_MGDL = 2.8;
 
+/**
+ * Glukóza mg/dL → mmol/L (konvenčný faktor prevodníka; ≈ 1/18).
+ * Približne reciproký k GLUCOSE_MMOLL_TO_MGDL (MW glukózy ≈ 180,16 / 10).
+ */
+const GLUCOSE_MGDL_TO_MMOLL = 0.0555;
+
+/**
+ * Glukóza mmol/L → mg/dL (≈ MW glukózy / 10 = 18,0182).
+ * Nie je odvodený ako 1/0,0555: prevodník a Na kalkulačka používajú samostatne
+ * zaokrúhlené klinické konštanty (0,0555 vs 18,0182).
+ */
+const GLUCOSE_MMOLL_TO_MGDL = 18.0182;
+
 /** CSS trieda podľa klasifikácie Cairo–Bishop. */
 function tlsRiskClass(bool $ctls, bool $ltls): string
 {
@@ -1330,6 +1343,18 @@ function ureaMmolLToBunMgDl(float $ureaMmolL): float
     return $ureaMmolL * UREA_MMOLL_TO_BUN_MGDL;
 }
 
+/** Glukóza mg/dL → mmol/L. */
+function glucoseMgDlToMmolL(float $mgDl): float
+{
+    return $mgDl * GLUCOSE_MGDL_TO_MMOLL;
+}
+
+/** Glukóza mmol/L → mg/dL. */
+function glucoseMmolLToMgDl(float $mmolL): float
+{
+    return $mmolL * GLUCOSE_MMOLL_TO_MGDL;
+}
+
 /** UACR mg/mmol → mg/g. */
 function uacrMgMmolToMgG(float $mgMmol): float
 {
@@ -1678,7 +1703,7 @@ function calculatorUnitConversionRows(): array
     return [
         ['Kreatinín', 'mg/dL', 'µmol/L', CREATININE_UMOL_PER_MGDL, 2, 0],
         ['Urea (BUN)', 'mg/dL (BUN)', 'mmol/L (urea)', BUN_MGDL_TO_UREA_MMOLL, 1, 1],
-        ['Glukóza', 'mg/dL', 'mmol/L', 0.0555, 0, 1],
+        ['Glukóza', 'mg/dL', 'mmol/L', GLUCOSE_MGDL_TO_MMOLL, 0, 1],
         ['Vápnik', 'mg/dL', 'mmol/L', 0.2495, 1, 2],
         ['Fosfát (P)', 'mg/dL', 'mmol/L', 0.3229, 1, 2],
         ['Magnézium', 'mg/dL', 'mmol/L', 0.4114, 1, 2],
