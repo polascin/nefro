@@ -2,12 +2,16 @@
 
 ## Ďalšia slučka
 
-1. `php tools/run_regressions.php` (alebo prvý FAIL); PHPStan new / live smoke / produkčný ops; očakávané pCO₂ pri metabolickej alkalóze (mimo Winters).
+1. `php tools/phpstan.phar analyse --memory-limit=1G --no-progress` (alebo prvý FAIL); live smoke / produkčný ops; ďalšia bezpečná položka mimo „Čaká na majiteľa“.
 2. Čaká na majiteľa: limity korekcie hyponatrémie v calculator_na.php (Beh 153).
 3. Čaká na majiteľa: CRRT bez korekcie predilúcie a bez citácie KDIGO (Beh 157).
 4. Čaká na majiteľa: zlúčenie `fix/adpkd-mayo-2026-11-03` (Beh 158).
 5. Čaká na majiteľa: IgAN koeficienty nezodpovedajú opísanému modelu (Beh 158).
 6. Čaká na majiteľa: zlúčenie `fix/gupta-mg-cutoff-2026-11-03` (Beh 159).
+
+## Hotové: slučka 2026-11-05-e (alkalóza)
+
+- [x] Javaheri 0,7 · HCO₃ + 20 ± 5 v calculators_common + test 42 PASS; deploy `8d5793b8`
 
 ## Hotové: slučka 2026-11-05-d (Winters)
 
