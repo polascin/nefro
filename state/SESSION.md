@@ -1,16 +1,16 @@
 # SESSION
 
-Aktualizované: 2026-11-05 21:37 Europe/Bratislava
+Aktualizované: 2026-11-05 21:55 Europe/Bratislava
 
 ## Aktívna úloha
 
-Beh: spoločné helpery prevodu kreatinínu. Handoff:
-`.codex/handoffs/2026-11-05-213700-creatinine-helpers.md`.
+Beh: spoločné helpery prevodu UACR. Handoff:
+`.codex/handoffs/2026-11-05-215500-uacr-helpers.md`.
 
 ## Stav repozitária
 
-- Vetva: `main` (HEAD `4153ad83`; feature `61b09a7f`)
-- Runtime / `DEPLOY_COMMIT`: `61b09a7f` (docs-only drift po handoffe OK)
+- Vetva: `main` (HEAD `69906449`)
+- Runtime / `DEPLOY_COMMIT`: `69906449`
 - Pripravené, nezlúčené: `fix/adpkd-mayo-2026-11-03`, `fix/gupta-mg-cutoff-2026-11-03`
 
 ## Čo je hotové
@@ -21,6 +21,7 @@ Beh: spoločné helpery prevodu kreatinínu. Handoff:
 4. Slučka tick 5: PHPStan 0; Mehran `mehranScore` + test 24 PASS; suite 55 PASS
 5. Slučka tick 6: ops_health WARN OK; prevodník `calculatorUnitConversionRows` + test 53 PASS; suite 56 PASS
 6. Slučka tick 7: `CREATININE_UMOL_PER_MGDL` + helpery; 7 stránok bez inline 88,4; units 69 PASS; suite 56 PASS
+7. Slučka tick 8: `UACR_MG_G_PER_MG_MMOL` + `uacrToMgG`; 5 súborov bez inline 8,84; units 81 PASS; suite 56 PASS
 
 ## Otvorené (súhlas majiteľa)
 
@@ -30,9 +31,9 @@ Beh: spoločné helpery prevodu kreatinínu. Handoff:
 ## Executable next step
 
 ```text
-rg -n "8\\.84|\\* 8\\.84|/ 8\\.84" calculator_*.php calculators_common.php ckd_risk_models.php
+rg -n "113\\.12" calculator_*.php calculators_common.php
 ```
 
 ## Handoff
 
-`.codex/handoffs/2026-11-05-213700-creatinine-helpers.md`
+`.codex/handoffs/2026-11-05-215500-uacr-helpers.md`
