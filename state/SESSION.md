@@ -9,8 +9,8 @@ Beh: prevodník jednotiek (spoločné konverzné faktory). Handoff:
 
 ## Stav repozitára
 
-- Vetva: `main` (HEAD `8108f319`)
-- Runtime / `DEPLOY_COMMIT`: `8108f319`
+- Vetva: `main` (HEAD `60a6f948`; feature `8108f319`)
+- Runtime / `DEPLOY_COMMIT`: `8108f319` (docs-only drift po handoffe OK)
 - Pripravené, nezlúčené: `fix/adpkd-mayo-2026-11-03`, `fix/gupta-mg-cutoff-2026-11-03`
 
 ## Čo je hotové
