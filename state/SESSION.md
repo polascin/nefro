@@ -9,8 +9,8 @@ Beh: spoločné konštanty/helpery magnézium mg/dL ↔ mmol/L. Handoff:
 
 ## Stav repozitária
 
-- Vetva: `main` (HEAD `c7a18acd`)
-- Runtime / `DEPLOY_COMMIT`: `c7a18acd`
+- Vetva: `main` (HEAD `2bc54eca`; feature `c7a18acd`)
+- Runtime / `DEPLOY_COMMIT`: `c7a18acd` (docs-only drift po handoffe OK)
 - Pripravené, nezlúčené: `fix/adpkd-mayo-2026-11-03`, `fix/gupta-mg-cutoff-2026-11-03`
 
 ## Čo je hotové

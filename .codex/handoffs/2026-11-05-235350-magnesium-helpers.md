@@ -5,8 +5,8 @@
 - Generated At: 2026-11-05T23:53:50+01:00
 - Project Root: D:\Dev\nefro
 - Git Branch: main
-- Head Commit: c7a18acd
-- Runtime / DEPLOY_COMMIT: c7a18acd (SSH grep deploy_info.php)
+- Head Commit: 2bc54eca (feature c7a18acd)
+- Runtime / DEPLOY_COMMIT: c7a18acd (SSH grep deploy_info.php; docs-only drift OK)
 - Pripravené, nezlúčené (bez súhlasu): `fix/adpkd-mayo-2026-11-03`, `fix/gupta-mg-cutoff-2026-11-03`
 
 ## Original Goal
