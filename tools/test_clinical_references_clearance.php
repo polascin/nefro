@@ -51,7 +51,7 @@ clearanceRefApprox(80.0, calculatorCockcroftGault(60, 72.0, 1.0, 'male'), 0.001,
 // Žena s rovnakými údajmi: 80 · 0,85 = 68 mL/min
 clearanceRefApprox(68.0, calculatorCockcroftGault(60, 72.0, 1.0, 'female'), 0.001, 'CG žena');
 // 85 r, 60 kg, 150 µmol/L = 1,6968 mg/dL: 55 · 60 / (72 · 1,6968) = 27,01 mL/min
-clearanceRefApprox(27.01, calculatorCockcroftGault(85, 60.0, 150.0 / 88.4, 'male'), 0.01, 'CG starší muž z µmol/L');
+clearanceRefApprox(27.01, calculatorCockcroftGault(85, 60.0, creatinineUmolLToMgDl(150.0), 'male'), 0.01, 'CG starší muž z µmol/L');
 clearanceRefThrows(static fn () => calculatorCockcroftGault(60, 72.0, 0.0, 'male'), 'CG s nulovým kreatinínom vyhodí výnimku.');
 
 // ─── Recirkulácia ───

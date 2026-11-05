@@ -77,10 +77,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         }
 
         if (empty($errors)) {
-            $sCrMgDl =
-                $sCrUnit === "umol_l"
-                    ? (float) $sCrValue / 88.4
-                    : (float) $sCrValue;
+            $sCrMgDl = crclCreatinineToMgDl((float) $sCrValue, $sCrUnit);
 
             $crcl = calculatorCockcroftGault((int) $ageYears, (float) $weightKg, $sCrMgDl, $sex);
 

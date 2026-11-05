@@ -41,8 +41,8 @@ $justBelow = plasmicScore(29.9, false, false, false, 89.9, 1.49, 176.7);
 scoresRefTest($justBelow['score'] === 6, 'Tesne pod hranicou: 6 bodov.');
 // Aktívny nádor a transplantácia odoberajú body
 scoresRefTest(plasmicScore(12.0, true, true, true, 85.0, 1.1, 110.0)['score'] === 5, 'Nádor + transplantácia → 5.');
-// 2,0 mg/dL × 88,4 = 176,8 µmol/L
-scoresRefApprox(2.0 * 88.4, PLASMIC_CREA_UMOL, 0.001, 'Prah kreatinínu PLASMIC = 2,0 mg/dL.');
+// 2,0 mg/dL × CREATININE_UMOL_PER_MGDL = 176,8 µmol/L
+scoresRefApprox(creatinineMgDlToUmolL(2.0), PLASMIC_CREA_UMOL, 0.001, 'Prah kreatinínu PLASMIC = 2,0 mg/dL.');
 // Rizikové pásma: 0 až 4 nízke, 5 stredné, 6 až 7 vysoké
 scoresRefTest(plasmicRiskClass(4) === 'risk-low', 'PLASMIC 4 je nízke riziko.');
 scoresRefTest(plasmicRiskClass(5) === 'risk-moderate', 'PLASMIC 5 je stredné riziko.');

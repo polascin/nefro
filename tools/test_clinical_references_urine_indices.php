@@ -69,10 +69,10 @@ urineIdxRefApprox(20.0, $feurea, 0.0001, 'FEurea prerenálne');
 urineIdxRefTest(str_starts_with(akiFeureaInterpretation($feurea), 'Prerenálne'), 'FEurea 20 % je prerenálne.');
 urineIdxRefTest(str_starts_with(akiFeureaInterpretation(50.1), 'Akútna tubulárna'), 'FEurea > 50 % je ATN.');
 urineIdxRefTest(str_starts_with(akiFeureaInterpretation(35.0), 'Hraničná'), 'FEurea presne 35 % je v kalkulačke hraničná.');
-// Prepočet U_cr z mg/dL: 100 mg/dL · 0,0884 = 8,84 mmol/L; jednotky kreatinínu sa krátia
+// Prepočet U_cr z mg/dL; jednotky kreatinínu sa krátia
 urineIdxRefApprox(
-    calculatorFractionalExcretion(20.0, 140.0, 8.84, 0.2),
-    calculatorFractionalExcretion(20.0, 140.0, 100.0, 0.2 / 0.0884),
+    calculatorFractionalExcretion(20.0, 140.0, creatinineMgDlToMmolL(100.0), 0.2),
+    calculatorFractionalExcretion(20.0, 140.0, 100.0, creatinineUmolLToMgDl(0.2 * 1000.0)),
     0.0001,
     'FENa nezávisí od jednotky kreatinínu',
 );

@@ -112,9 +112,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if ($needCreatinine) {
                 // Polynómy Q platia pre µmol/L → vstup z mg/dL najprv prepočítame
                 $creatinineUmol = $creatinineUnit === 'mg_dl'
-                    ? (float) $creatinineValue * EKFC_CREATININE_UMOL_PER_MGDL
+                    ? creatinineMgDlToUmolL((float) $creatinineValue)
                     : (float) $creatinineValue;
-                $creatinineMgDl = $creatinineUmol / EKFC_CREATININE_UMOL_PER_MGDL;
+                $creatinineMgDl = creatinineUmolLToMgDl($creatinineUmol);
 
                 $qCrUmol = ekfcQCreatinineUmol($age, $sex);
                 $crPart = ekfcCore($creatinineUmol, $qCrUmol, $age);
@@ -160,7 +160,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 'creatinine_umol' => $creatinineUmol !== null ? round($creatinineUmol, 1) : null,
                 'creatinine_mg_dl' => $creatinineMgDl !== null ? round($creatinineMgDl, 3) : null,
                 'q_cr_umol' => $qCrUmol !== null ? round($qCrUmol, 2) : null,
-                'q_cr_mg_dl' => $qCrUmol !== null ? round($qCrUmol / EKFC_CREATININE_UMOL_PER_MGDL, 3) : null,
+                'q_cr_mg_dl' => $qCrUmol !== null ? round(creatinineUmolLToMgDl($qCrUmol), 3) : null,
                 'cystatin_value' => $cystatinValue !== null ? round((float) $cystatinValue, 2) : null,
                 'q_cys' => $cysPart !== null ? round((float) $cysPart['q'], 3) : null,
                 'egfr_cr' => $crPart !== null ? round((float) $crPart['egfr'], 1) : null,

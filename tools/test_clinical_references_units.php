@@ -40,7 +40,8 @@ foreach ($rows as $row) {
 unitsRefTest(isset($byName['Kreatinín'], $byName['Glukóza'], $byName['eGFR']), 'Kľúčové analyty sú prítomné.');
 
 // Pinované faktory
-unitsRefApprox(88.4, (float) $byName['Kreatinín'][3], 1e-12, 'Kreatinín faktor 88,4');
+unitsRefApprox(CREATININE_UMOL_PER_MGDL, (float) $byName['Kreatinín'][3], 1e-12, 'Kreatinín faktor 88,4');
+unitsRefApprox(CREATININE_UMOL_PER_MGDL, 88.4, 0.0, 'CREATININE_UMOL_PER_MGDL = 88,4');
 unitsRefApprox(0.357, (float) $byName['Urea (BUN)'][3], 1e-12, 'BUN/urea faktor 0,357');
 unitsRefApprox(0.0555, (float) $byName['Glukóza'][3], 1e-12, 'Glukóza faktor 0,0555');
 unitsRefApprox(0.2495, (float) $byName['Vápnik'][3], 1e-12, 'Vápnik faktor 0,2495');
@@ -61,8 +62,17 @@ unitsRefApprox(88.57, 1.0 / (float) $byName['Triglyceridy'][3], 0.05, 'Triglycer
 
 // Obojsmerné konverzie (referenčné príklady)
 $crSi = calculatorConvertConventionalToSi(1.0, (float) $byName['Kreatinín'][3]);
-unitsRefApprox(88.4, $crSi, 1e-9, 'Kreatinín 1,0 mg/dL → 88,4 µmol/L');
+unitsRefApprox(CREATININE_UMOL_PER_MGDL, $crSi, 1e-9, 'Kreatinín 1,0 mg/dL → 88,4 µmol/L');
 unitsRefApprox(1.0, calculatorConvertSiToConventional($crSi, (float) $byName['Kreatinín'][3]), 1e-9, 'Kreatinín round-trip');
+
+// Spoločné kreatinínové helpery
+unitsRefApprox(88.4, creatinineMgDlToUmolL(1.0), 1e-12, 'creatinineMgDlToUmolL(1)');
+unitsRefApprox(1.0, creatinineUmolLToMgDl(88.4), 1e-12, 'creatinineUmolLToMgDl(88,4)');
+unitsRefApprox(0.0884, creatinineMgDlToMmolL(1.0), 1e-12, 'creatinineMgDlToMmolL(1)');
+unitsRefApprox(1.0, crclCreatinineToMgDl(88.4, 'umol_l'), 1e-12, 'crclCreatinineToMgDl umol_l');
+unitsRefApprox(1.0, crclCreatinineToMgDl(0.0884, 'mmol_l'), 1e-12, 'crclCreatinineToMgDl mmol_l');
+unitsRefApprox(1.25, crclCreatinineToMgDl(1.25, 'mg_dl'), 0.0, 'crclCreatinineToMgDl mg_dl');
+unitsRefApprox(2.0 * CREATININE_UMOL_PER_MGDL, PLASMIC_CREA_UMOL, 1e-12, 'PLASMIC prah = 2 mg/dL');
 
 $bunSi = calculatorConvertConventionalToSi(28.0, (float) $byName['Urea (BUN)'][3]);
 unitsRefApprox(10.0, $bunSi, 0.01, 'BUN 28 mg/dL → ≈ 10 mmol/L urea');
@@ -75,7 +85,10 @@ unitsRefApprox(1.0, $egfrSi, 1e-9, 'eGFR 60 ml/min → 1,0 ml/s');
 unitsRefApprox(60.0, calculatorConvertSiToConventional(1.0, (float) $byName['eGFR'][3]), 1e-9, 'eGFR round-trip');
 
 $lookup = calculatorUnitFactorByName('Kreatinín');
-unitsRefTest($lookup !== null && abs($lookup['factor'] - 88.4) < 1e-12, 'Lookup Kreatinín → 88,4');
+unitsRefTest(
+    $lookup !== null && abs($lookup['factor'] - CREATININE_UMOL_PER_MGDL) < 1e-12,
+    'Lookup Kreatinín → 88,4',
+);
 unitsRefTest(calculatorUnitFactorByName('Neexistuje') === null, 'Neznámy analyt → null');
 
 $pageSrc = (string) file_get_contents(dirname(__DIR__) . '/calculator_units.php');
@@ -83,6 +96,31 @@ unitsRefTest(
     str_contains($pageSrc, 'calculatorUnitConversionRows()')
         && !preg_match('/\$unitRows\s*=\s*\[/', $pageSrc),
     'calculator_units.php musí volať calculatorUnitConversionRows()',
+);
+
+// Kalkulačky nesmú mať inline ×/÷ 88,4 (vzorce v LaTeX môžu mať \div 88.4)
+$root = dirname(__DIR__);
+$creatininePages = [
+    'calculator_egfr.php' => 'crclCreatinineToMgDl',
+    'calculator_egfr_cys.php' => 'crclCreatinineToMgDl',
+    'calculator_cg.php' => 'crclCreatinineToMgDl',
+    'calculator_kdpi.php' => 'crclCreatinineToMgDl',
+    'calculator_aki.php' => 'creatinineMgDlToUmolL',
+    'calculator_uacr.php' => 'creatinineMgDlToMmolL',
+    'calculator_ekfc.php' => 'creatinineMgDlToUmolL',
+];
+foreach ($creatininePages as $file => $helper) {
+    $src = (string) file_get_contents($root . '/' . $file);
+    unitsRefTest(
+        str_contains($src, $helper)
+            && !preg_match('/(?:\/|\*)\s*88\.4|\*\s*0\.0884/', $src),
+        $file . ' používa ' . $helper . ' bez inline 88,4',
+    );
+}
+$ekfcLogic = (string) file_get_contents($root . '/calculator_ekfc_logic.php');
+unitsRefTest(
+    !preg_match('/EKFC_CREATININE_UMOL_PER_MGDL|=\s*88\.4/', $ekfcLogic),
+    'calculator_ekfc_logic.php nemá vlastný faktor 88,4',
 );
 
 echo "Clinical references (units): $checks PASS\n";

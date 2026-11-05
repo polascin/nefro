@@ -110,19 +110,28 @@ egfrRefTest(
     'EKFC porovnanie musí ísť cez ekfcCompareCkdEpi2021 → spoločný CKD-EPI 2021.',
 );
 
-// Jednotky: 88,4 µmol/L ≈ 1,0 mg/dL
-$fromUmol = calculatorCkdEpi2021FromCreatinineMgDl(88.4 / 88.4, 50, 'female');
+// Jednotky: CREATININE_UMOL_PER_MGDL µmol/L ≈ 1,0 mg/dL
+$fromUmol = calculatorCkdEpi2021FromCreatinineMgDl(
+    creatinineUmolLToMgDl(CREATININE_UMOL_PER_MGDL),
+    50,
+    'female',
+);
 $fromMg = calculatorCkdEpi2021FromCreatinineMgDl(1.0, 50, 'female');
 egfrRefTest(
     abs($fromUmol - $fromMg) < 1e-9,
-    'Prevod µmol/L → mg/dL delením 88,4 musí sedieť s 1,0 mg/dL.',
+    'Prevod µmol/L → mg/dL musí sedieť s 1,0 mg/dL.',
 );
 
-$fromUmolCys = calculatorCkdEpi2021FromCreatinineCystatinMgDl(88.4 / 88.4, 1.0, 50, 'female');
+$fromUmolCys = calculatorCkdEpi2021FromCreatinineCystatinMgDl(
+    creatinineUmolLToMgDl(CREATININE_UMOL_PER_MGDL),
+    1.0,
+    50,
+    'female',
+);
 $fromMgCys = calculatorCkdEpi2021FromCreatinineCystatinMgDl(1.0, 1.0, 50, 'female');
 egfrRefTest(
     abs($fromUmolCys - $fromMgCys) < 1e-9,
-    'Cr–Cys: prevod µmol/L → mg/dL delením 88,4 musí sedieť s 1,0 mg/dL.',
+    'Cr–Cys: prevod µmol/L → mg/dL musí sedieť s 1,0 mg/dL.',
 );
 
 echo "Clinical eGFR reference: $checks PASS\n";

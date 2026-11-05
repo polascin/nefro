@@ -363,8 +363,11 @@ function plasmicRiskLabel(int $score): string
     return 'nízke riziko (≈ 0 až 4 %)';
 }
 
-// Prah kreatinínu: 2,0 mg/dL ≈ 176,8 µmol/L (× 88,42).
-const PLASMIC_CREA_UMOL = 176.8;
+/** Prepočtový faktor kreatinínu: 1 mg/dL = 88,4 µmol/L (= 0,0884 mmol/L). */
+const CREATININE_UMOL_PER_MGDL = 88.4;
+
+// Prah kreatinínu: 2,0 mg/dL × CREATININE_UMOL_PER_MGDL.
+const PLASMIC_CREA_UMOL = 2.0 * CREATININE_UMOL_PER_MGDL;
 
 /** CSS trieda podľa klasifikácie Cairo–Bishop. */
 function tlsRiskClass(bool $ctls, bool $ltls): string
@@ -1266,13 +1269,34 @@ function calculatorSodiumGlucoseCorrection(float $serumNa, float $glucoseMgDl, f
     return $serumNa + $coefficient * ($glucoseMgDl - 100.0) / 100.0;
 }
 
-/** Prepočet koncentrácie kreatinínu na mg/dL (jednotky sa vo vzorci krátia, ale konvertujeme pre istotu). */
+/** mg/dL → µmol/L. */
+function creatinineMgDlToUmolL(float $mgDl): float
+{
+    return $mgDl * CREATININE_UMOL_PER_MGDL;
+}
+
+/** µmol/L → mg/dL. */
+function creatinineUmolLToMgDl(float $umolL): float
+{
+    return $umolL / CREATININE_UMOL_PER_MGDL;
+}
+
+/** mg/dL → mmol/L (88,4 / 1000). */
+function creatinineMgDlToMmolL(float $mgDl): float
+{
+    return $mgDl * CREATININE_UMOL_PER_MGDL / 1000.0;
+}
+
+/**
+ * Prepočet koncentrácie kreatinínu na mg/dL.
+ * Jednotky: umol_l, mmol_l, mg_dl (iné → bez prepočtu, ako doteraz pri CrCl).
+ */
 function crclCreatinineToMgDl(float $value, string $unit): float
 {
     return match ($unit) {
-        "umol_l" => $value / 88.4,
-        "mmol_l" => $value * 1000.0 / 88.4,
-        default  => $value, // mg_dl
+        'umol_l' => creatinineUmolLToMgDl($value),
+        'mmol_l' => creatinineUmolLToMgDl($value * 1000.0),
+        default => $value, // mg_dl
     };
 }
 
@@ -1588,7 +1612,7 @@ function mehranCategory(int $score): array
 function calculatorUnitConversionRows(): array
 {
     return [
-        ['Kreatinín', 'mg/dL', 'µmol/L', 88.4, 2, 0],
+        ['Kreatinín', 'mg/dL', 'µmol/L', CREATININE_UMOL_PER_MGDL, 2, 0],
         ['Urea (BUN)', 'mg/dL (BUN)', 'mmol/L (urea)', 0.357, 1, 1],
         ['Glukóza', 'mg/dL', 'mmol/L', 0.0555, 0, 1],
         ['Vápnik', 'mg/dL', 'mmol/L', 0.2495, 1, 2],

@@ -65,7 +65,7 @@ clinicalRefApprox(0.855, ekfcQCystatin(55.0), 1e-9, 'EKFC Q Cys 55');
 // EKFC eGFR (zaokrúhlené na 0,1) — dospelí + dieťa + cystatín
 $ekfcCases = [
     // age, sex, Cr µmol/L → eGFR
-    [50, 'male', 88.4, 86.7],
+    [50, 'male', CREATININE_UMOL_PER_MGDL, 86.7],
     [60, 'female', 70.0, 76.5],
     [35, 'male', 100.0, 83.3],
     [70, 'female', 150.0, 29.2],
@@ -105,9 +105,9 @@ clinicalRefTest($a2['stage'] === 'A2', 'UACR A2');
 clinicalRefTest($a2b['stage'] === 'A2', 'UACR A2 na hranici 30');
 clinicalRefTest($a3['stage'] === 'A3', 'UACR A3');
 
-// Prevod mg/dL albumínu → mg/L (×10) a kreatinínu mg/dL → mmol/L (×0,0884)
+// Prevod mg/dL albumínu → mg/L (×10) a kreatinínu mg/dL → mmol/L
 $albMgL = 3.0 * 10; // 3 mg/dL
-$crMmol = 100.0 * 0.0884; // 100 mg/dL
+$crMmol = creatinineMgDlToMmolL(100.0); // 100 mg/dL
 $fromUnits = calculatorUacrMgMmol($albMgL, $crMmol);
 clinicalRefApprox(30.0 / 8.84, $fromUnits, 0.01, 'UACR jednotky mg/dL→základ');
 
@@ -176,14 +176,20 @@ clinicalRefTest(
 );
 $crFactor = calculatorUnitFactorByName('Kreatinín');
 clinicalRefTest(
-    $crFactor !== null && abs($crFactor['factor'] - 88.4) < 1e-12,
+    $crFactor !== null && abs($crFactor['factor'] - CREATININE_UMOL_PER_MGDL) < 1e-12,
     'Prevodník: kreatinín faktor 88,4',
 );
 clinicalRefApprox(
-    88.4,
+    CREATININE_UMOL_PER_MGDL,
     calculatorConvertConventionalToSi(1.0, $crFactor['factor']),
     1e-9,
     'Prevodník: 1 mg/dL kreatinínu → 88,4 µmol/L',
+);
+clinicalRefApprox(
+    CREATININE_UMOL_PER_MGDL,
+    creatinineMgDlToUmolL(1.0),
+    1e-12,
+    'creatinineMgDlToUmolL(1)',
 );
 
 // ─── PREVENT AHA 2024 (preventr README / ACC/AHA golden case) ───

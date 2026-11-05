@@ -9,11 +9,9 @@ declare(strict_types=1);
  * Pottel H, et al. N Engl J Med 2023;388:333–343 (cystatín C)
  */
 
-/** Prepočtový faktor kreatinínu: 1 mg/dL = 88,4 µmol/L. */
-const EKFC_CREATININE_UMOL_PER_MGDL = 88.4;
-
 /**
  * Q — medián normálneho sérového kreatinínu pre daný vek a pohlavie [µmol/L].
+ * Prepočet mg/dL ⇄ µmol/L: CREATININE_UMOL_PER_MGDL v calculators_common.php.
  */
 function ekfcQCreatinineUmol(float $ageYears, string $sex): float
 {

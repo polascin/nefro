@@ -80,10 +80,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         }
 
         if (empty($errors)) {
-            $creatinineMgDl =
-                $creatinineUnit === "umol_l"
-                    ? (float) $creatinineValue / 88.4
-                    : (float) $creatinineValue;
+            $creatinineMgDl = crclCreatinineToMgDl(
+                (float) $creatinineValue,
+                $creatinineUnit,
+            );
 
             $egfr = calculatorCkdEpi2021FromCreatinineMgDl(
                 $creatinineMgDl,

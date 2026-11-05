@@ -67,9 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         }
 
         if (empty($errors)) {
-            $creatMgDl = $creatUnit === "umol_l"
-                ? (float) $creatValue / 88.4
-                : (float) $creatValue;
+            $creatMgDl = crclCreatinineToMgDl((float) $creatValue, $creatUnit);
 
             $aaRace = $form["aa_race"] === "1";
             $htn = $form["hypertension"] === "1";
