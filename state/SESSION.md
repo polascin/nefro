@@ -9,8 +9,8 @@ Beh: spoločná MW kreatinínu + helper mmol/L → g/L. Handoff:
 
 ## Stav repozitária
 
-- Vetva: `main` (HEAD `8c5348a8`)
-- Runtime / `DEPLOY_COMMIT`: `8c5348a8`
+- Vetva: `main` (HEAD `5222f694`; feature `8c5348a8`)
+- Runtime / `DEPLOY_COMMIT`: `8c5348a8` (docs-only drift po handoffe OK)
 - Pripravené, nezlúčené: `fix/adpkd-mayo-2026-11-03`, `fix/gupta-mg-cutoff-2026-11-03`
 
 ## Čo je hotové
