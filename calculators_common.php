@@ -382,6 +382,18 @@ const PLASMIC_CREA_UMOL = 2.0 * CREATININE_UMOL_PER_MGDL;
  */
 const UACR_MG_G_PER_MG_MMOL = CREATININE_UMOL_PER_MGDL / 10.0;
 
+/**
+ * BUN (urea-N) mg/dL → urea mmol/L (konvenčný faktor prevodníka).
+ * Približne reciproký k UREA_MMOLL_TO_BUN_MGDL (2 × 14,007 / 10 ≈ 2,801).
+ */
+const BUN_MGDL_TO_UREA_MMOLL = 0.357;
+
+/**
+ * Urea mmol/L → BUN (urea-N) mg/dL (konvenčný faktor; ≈ 2 × 14,007 / 10).
+ * Nie je odvodený ako 1/0,357: oba faktory sú samostatne zaokrúhlené klinické konštanty.
+ */
+const UREA_MMOLL_TO_BUN_MGDL = 2.8;
+
 /** CSS trieda podľa klasifikácie Cairo–Bishop. */
 function tlsRiskClass(bool $ctls, bool $ltls): string
 {
@@ -1306,6 +1318,18 @@ function creatinineMmolLToGL(float $mmolL): float
     return ($mmolL * CREATININE_MOLAR_MASS_G_PER_MOL) / 1000.0;
 }
 
+/** BUN mg/dL → urea mmol/L. */
+function bunMgDlToUreaMmolL(float $bunMgDl): float
+{
+    return $bunMgDl * BUN_MGDL_TO_UREA_MMOLL;
+}
+
+/** Urea mmol/L → BUN mg/dL. */
+function ureaMmolLToBunMgDl(float $ureaMmolL): float
+{
+    return $ureaMmolL * UREA_MMOLL_TO_BUN_MGDL;
+}
+
 /** UACR mg/mmol → mg/g. */
 function uacrMgMmolToMgG(float $mgMmol): float
 {
@@ -1460,8 +1484,8 @@ function npcrWatsonTbw(string $sex, int $age, float $heightCm, float $weightKg):
 /** Prepočet močoviny/BUN na BUN (urea-nitrogen) v mg/dL. */
 function npcrToBunMgDl(float $value, string $unit): float
 {
-    // urea mmol/L → BUN mg/dL: × 2,8 ; bun_mg_dl je už BUN mg/dL
-    return $unit === "mmol_l" ? $value * 2.8 : $value;
+    // urea mmol/L → BUN mg/dL cez UREA_MMOLL_TO_BUN_MGDL; bun_mg_dl je už BUN mg/dL
+    return $unit === "mmol_l" ? ureaMmolLToBunMgDl($value) : $value;
 }
 
 /**
@@ -1653,7 +1677,7 @@ function calculatorUnitConversionRows(): array
 {
     return [
         ['Kreatinín', 'mg/dL', 'µmol/L', CREATININE_UMOL_PER_MGDL, 2, 0],
-        ['Urea (BUN)', 'mg/dL (BUN)', 'mmol/L (urea)', 0.357, 1, 1],
+        ['Urea (BUN)', 'mg/dL (BUN)', 'mmol/L (urea)', BUN_MGDL_TO_UREA_MMOLL, 1, 1],
         ['Glukóza', 'mg/dL', 'mmol/L', 0.0555, 0, 1],
         ['Vápnik', 'mg/dL', 'mmol/L', 0.2495, 1, 2],
         ['Fosfát (P)', 'mg/dL', 'mmol/L', 0.3229, 1, 2],

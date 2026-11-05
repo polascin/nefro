@@ -42,7 +42,9 @@ unitsRefTest(isset($byName['Kreatinín'], $byName['Glukóza'], $byName['eGFR']),
 // Pinované faktory
 unitsRefApprox(CREATININE_UMOL_PER_MGDL, (float) $byName['Kreatinín'][3], 1e-12, 'Kreatinín faktor 88,4');
 unitsRefApprox(CREATININE_UMOL_PER_MGDL, 88.4, 0.0, 'CREATININE_UMOL_PER_MGDL = 88,4');
-unitsRefApprox(0.357, (float) $byName['Urea (BUN)'][3], 1e-12, 'BUN/urea faktor 0,357');
+unitsRefApprox(BUN_MGDL_TO_UREA_MMOLL, (float) $byName['Urea (BUN)'][3], 1e-12, 'BUN/urea faktor z konštanty');
+unitsRefApprox(0.357, BUN_MGDL_TO_UREA_MMOLL, 0.0, 'BUN_MGDL_TO_UREA_MMOLL = 0,357');
+unitsRefApprox(2.8, UREA_MMOLL_TO_BUN_MGDL, 0.0, 'UREA_MMOLL_TO_BUN_MGDL = 2,8');
 unitsRefApprox(0.0555, (float) $byName['Glukóza'][3], 1e-12, 'Glukóza faktor 0,0555');
 unitsRefApprox(0.2495, (float) $byName['Vápnik'][3], 1e-12, 'Vápnik faktor 0,2495');
 unitsRefApprox(0.3229, (float) $byName['Fosfát (P)'][3], 1e-12, 'Fosfát faktor 0,3229');
@@ -101,6 +103,15 @@ unitsRefApprox(300.0, uacrMgMmolToMgG(uacrMgGToMgMmol(300.0)), 1e-9, 'UACR round
 
 $bunSi = calculatorConvertConventionalToSi(28.0, (float) $byName['Urea (BUN)'][3]);
 unitsRefApprox(10.0, $bunSi, 0.01, 'BUN 28 mg/dL → ≈ 10 mmol/L urea');
+unitsRefApprox(10.0, bunMgDlToUreaMmolL(28.0), 0.01, 'bunMgDlToUreaMmolL(28)');
+unitsRefApprox(70.0, ureaMmolLToBunMgDl(25.0), 1e-12, 'ureaMmolLToBunMgDl(25)');
+unitsRefApprox(70.0, npcrToBunMgDl(25.0, 'mmol_l'), 1e-12, 'npcrToBunMgDl cez ureaMmolLToBunMgDl');
+unitsRefApprox(
+    bunMgDlToUreaMmolL(28.0),
+    calculatorConvertConventionalToSi(28.0, BUN_MGDL_TO_UREA_MMOLL),
+    0.0,
+    'bun helper = prevodník s BUN_MGDL_TO_UREA_MMOLL',
+);
 
 $gluSi = calculatorConvertConventionalToSi(100.0, (float) $byName['Glukóza'][3]);
 unitsRefApprox(5.55, $gluSi, 0.01, 'Glukóza 100 mg/dL → 5,55 mmol/L');
@@ -178,5 +189,27 @@ foreach ($mwSources as $file => $helper) {
         $file . ' používa ' . $helper . ' bez inline 113,12',
     );
 }
+
+// BUN ↔ urea: konštanty + helpery; bez inline 2.8 / 0.357 mimo definícií konštánt
+$commonSrc = (string) file_get_contents($root . '/calculators_common.php');
+unitsRefTest(
+    str_contains($commonSrc, 'BUN_MGDL_TO_UREA_MMOLL')
+        && str_contains($commonSrc, 'UREA_MMOLL_TO_BUN_MGDL')
+        && str_contains($commonSrc, 'bunMgDlToUreaMmolL')
+        && str_contains($commonSrc, 'ureaMmolLToBunMgDl')
+        && str_contains($commonSrc, 'ureaMmolLToBunMgDl($value)'),
+    'calculators_common má BUN/urea konštanty a helpery; npcrToBunMgDl ich volá',
+);
+unitsRefTest(
+    !preg_match('/\*\s*2\.8\b/', $commonSrc)
+        && !preg_match("/['\"]Urea \(BUN\)['\"].*0\.357/", $commonSrc),
+    'calculators_common bez inline × 2,8 a literálu 0,357 v prevodníku',
+);
+$npcrPage = (string) file_get_contents($root . '/calculator_npcr.php');
+unitsRefTest(
+    str_contains($npcrPage, 'npcrToBunMgDl')
+        && !preg_match('/\*\s*2\.8\b|\/\s*0\.357\b/', $npcrPage),
+    'calculator_npcr.php používa npcrToBunMgDl bez inline 2,8 / 0,357',
+);
 
 echo "Clinical references (units): $checks PASS\n";
