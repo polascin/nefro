@@ -9,8 +9,8 @@ Beh: spoločné helpery prevodu UACR. Handoff:
 
 ## Stav repozitária
 
-- Vetva: `main` (HEAD `69906449`)
-- Runtime / `DEPLOY_COMMIT`: `69906449`
+- Vetva: `main` (HEAD `8549ee91`; feature `69906449`)
+- Runtime / `DEPLOY_COMMIT`: `69906449` (docs-only drift po handoffe OK)
 - Pripravené, nezlúčené: `fix/adpkd-mayo-2026-11-03`, `fix/gupta-mg-cutoff-2026-11-03`
 
 ## Čo je hotové
