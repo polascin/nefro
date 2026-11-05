@@ -2,12 +2,16 @@
 
 ## Ďalšia slučka
 
-1. Zjednotiť molárnu hmotnosť kreatinínu `113.12` (UACR mg/g) na konštantu/helper, alebo P1 mimo „Čaká na majiteľa“.
+1. Zjednotiť prevod BUN/močovina (`× 2,8` / faktor `0,357`) na konštantu/helper, alebo P1 mimo „Čaká na majiteľa“.
 2. Čaká na majiteľa: limity korekcie hyponatrémie v calculator_na.php (Beh 153).
 3. Čaká na majiteľa: CRRT bez korekcie predilúcie a bez citácie KDIGO (Beh 157).
 4. Čaká na majiteľa: zlúčenie `fix/adpkd-mayo-2026-11-03` (Beh 158).
 5. Čaká na majiteľa: IgAN koeficienty nezodpovedajú opísanému modelu (Beh 158).
 6. Čaká na majiteľa: zlúčenie `fix/gupta-mg-cutoff-2026-11-03` (Beh 159).
+
+## Hotové: slučka 2026-11-05-j (MW kreatinínu)
+
+- [x] `CREATININE_MOLAR_MASS_G_PER_MOL` + creatinineMmolLToGL; UACR bez 113.12; units 87 PASS; deploy `8c5348a8`
 
 ## Hotové: slučka 2026-11-05-i (UACR helpery)
 

@@ -1,16 +1,16 @@
 # SESSION
 
-Aktualizované: 2026-11-05 21:55 Europe/Bratislava
+Aktualizované: 2026-11-05 22:15 Europe/Bratislava
 
 ## Aktívna úloha
 
-Beh: spoločné helpery prevodu UACR. Handoff:
-`.codex/handoffs/2026-11-05-215500-uacr-helpers.md`.
+Beh: spoločná MW kreatinínu + helper mmol/L → g/L. Handoff:
+`.codex/handoffs/2026-11-05-221548-creatinine-mw.md`.
 
 ## Stav repozitária
 
-- Vetva: `main` (HEAD `8549ee91`; feature `69906449`)
-- Runtime / `DEPLOY_COMMIT`: `69906449` (docs-only drift po handoffe OK)
+- Vetva: `main` (HEAD `8c5348a8`)
+- Runtime / `DEPLOY_COMMIT`: `8c5348a8`
 - Pripravené, nezlúčené: `fix/adpkd-mayo-2026-11-03`, `fix/gupta-mg-cutoff-2026-11-03`
 
 ## Čo je hotové
@@ -22,6 +22,7 @@ Beh: spoločné helpery prevodu UACR. Handoff:
 5. Slučka tick 6: ops_health WARN OK; prevodník `calculatorUnitConversionRows` + test 53 PASS; suite 56 PASS
 6. Slučka tick 7: `CREATININE_UMOL_PER_MGDL` + helpery; 7 stránok bez inline 88,4; units 69 PASS; suite 56 PASS
 7. Slučka tick 8: `UACR_MG_G_PER_MG_MMOL` + `uacrToMgG`; 5 súborov bez inline 8,84; units 81 PASS; suite 56 PASS
+8. Slučka tick 9: `CREATININE_MOLAR_MASS_G_PER_MOL` + `creatinineMmolLToGL`; bez inline 113,12; units 87 PASS; suite 56 PASS
 
 ## Otvorené (súhlas majiteľa)
 
@@ -31,9 +32,9 @@ Beh: spoločné helpery prevodu UACR. Handoff:
 ## Executable next step
 
 ```text
-rg -n "113\\.12" calculator_*.php calculators_common.php
+rg -n "2\\.8|0\\.357" calculator_*.php calculators_common.php
 ```
 
 ## Handoff
 
-`.codex/handoffs/2026-11-05-215500-uacr-helpers.md`
+`.codex/handoffs/2026-11-05-221548-creatinine-mw.md`
