@@ -1,16 +1,16 @@
 # SESSION
 
-Aktualizované: 2026-11-05 23:14 Europe/Bratislava
+Aktualizované: 2026-11-05 23:34 Europe/Bratislava
 
 ## Aktívna úloha
 
-Beh: spoločné konštanty/helpery vápnik mg/dL ↔ mmol/L. Handoff:
-`.codex/handoffs/2026-11-05-231330-calcium-helpers.md`.
+Beh: spoločné konštanty/helpery fosfát mg/dL ↔ mmol/L. Handoff:
+`.codex/handoffs/2026-11-05-233400-phosphate-helpers.md`.
 
 ## Stav repozitária
 
-- Vetva: `main` (HEAD `e82e4433`; feature `55f1d254`)
-- Runtime / `DEPLOY_COMMIT`: `55f1d254` (docs-only drift po handoffe OK)
+- Vetva: `main` (HEAD `b576b78f`; feature `b576b78f`)
+- Runtime / `DEPLOY_COMMIT`: `b576b78f`
 - Pripravené, nezlúčené: `fix/adpkd-mayo-2026-11-03`, `fix/gupta-mg-cutoff-2026-11-03`
 
 ## Čo je hotové
@@ -26,6 +26,7 @@ Beh: spoločné konštanty/helpery vápnik mg/dL ↔ mmol/L. Handoff:
 9. Slučka tick 10: `BUN_MGDL_TO_UREA_MMOLL` + `UREA_MMOLL_TO_BUN_MGDL` + helpery; units 96 PASS; suite 56 PASS
 10. Slučka tick 11: `GLUCOSE_MGDL_TO_MMOLL` + `GLUCOSE_MMOLL_TO_MGDL` + helpery; units 104 PASS; sodium 31 PASS; suite 56 PASS
 11. Slučka tick 12: `CALCIUM_MGDL_TO_MMOLL` + `CALCIUM_MMOLL_TO_MGDL` + helpery; units 112 PASS; scores 26 PASS; suite 56 PASS
+12. Slučka tick 13: `PHOSPHATE_MGDL_TO_MMOLL` + `PHOSPHATE_MMOLL_TO_MGDL` + helpery; units 120 PASS; scores 26 PASS; suite 56 PASS
 
 ## Otvorené (súhlas majiteľa)
 
@@ -35,9 +36,9 @@ Beh: spoločné konštanty/helpery vápnik mg/dL ↔ mmol/L. Handoff:
 ## Executable next step
 
 ```text
-rg -n 0.3229 calculator_*.php calculators_common.php
+rg -n 0.4114 calculator_*.php calculators_common.php
 ```
 
 ## Handoff
 
-`.codex/handoffs/2026-11-05-231330-calcium-helpers.md`
+`.codex/handoffs/2026-11-05-233400-phosphate-helpers.md`
