@@ -1507,6 +1507,56 @@ function mehranRenalPoints(float $egfr): int
 }
 
 /**
+ * Mehran skóre rizika CI-AKI po PCI (Mehran R a kol., J Am Coll Cardiol 2004;44(7):1393–1399,
+ * PMID 15464318). Hypotenzia / IABP / CHF NYHA III–IV: po 5; vek > 75: 4; anémia / diabetes: po 3;
+ * kontrast ≈ 1 bod / 100 mL; eGFR pásma cez mehranRenalPoints().
+ *
+ * @return array{
+ *     score: int,
+ *     age_pts: int,
+ *     renal_pts: int,
+ *     contrast_pts: int,
+ *     hypotension_pts: int,
+ *     iabp_pts: int,
+ *     chf_pts: int,
+ *     anemia_pts: int,
+ *     diabetes_pts: int
+ * }
+ */
+function mehranScore(
+    int $ageYears,
+    float $egfr,
+    float $contrastVolumeMl,
+    bool $hypotension,
+    bool $iabp,
+    bool $chf,
+    bool $anemia,
+    bool $diabetes
+): array {
+    $agePts = $ageYears > 75 ? 4 : 0;
+    $renalPts = mehranRenalPoints($egfr);
+    $contrastPts = (int) round($contrastVolumeMl / 100.0);
+    $hypotensionPts = $hypotension ? 5 : 0;
+    $iabpPts = $iabp ? 5 : 0;
+    $chfPts = $chf ? 5 : 0;
+    $anemiaPts = $anemia ? 3 : 0;
+    $diabetesPts = $diabetes ? 3 : 0;
+
+    return [
+        'score' => $hypotensionPts + $iabpPts + $chfPts + $agePts + $anemiaPts
+            + $diabetesPts + $contrastPts + $renalPts,
+        'age_pts' => $agePts,
+        'renal_pts' => $renalPts,
+        'contrast_pts' => $contrastPts,
+        'hypotension_pts' => $hypotensionPts,
+        'iabp_pts' => $iabpPts,
+        'chf_pts' => $chfPts,
+        'anemia_pts' => $anemiaPts,
+        'diabetes_pts' => $diabetesPts,
+    ];
+}
+
+/**
  * Riziková kategória pre celkové Mehran skóre.
  *
  * @return array{0:string,1:string,2:string,3:string} [trieda, popis, CIN %, dialýza %]

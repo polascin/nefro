@@ -159,9 +159,10 @@ clinicalRefTest(
     'calculator_uacr.php musí používať calculatorUacrACategory',
 );
 clinicalRefTest(
-    str_contains($mehranSrc, 'mehranRenalPoints')
+    str_contains($mehranSrc, 'mehranScore(')
+        && !preg_match('/function\s+mehranScore\s*\(/', $mehranSrc)
         && !preg_match('/function\s+mehranRenalPoints\s*\(/', $mehranSrc),
-    'calculator_mehran.php musí volať spoločný mehranRenalPoints',
+    'calculator_mehran.php musí volať spoločný mehranScore',
 );
 clinicalRefTest(
     str_contains($ekfcPageSrc, 'calculator_ekfc_logic.php'),

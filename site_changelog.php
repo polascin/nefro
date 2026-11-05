@@ -55,6 +55,13 @@ if (!function_exists('siteChangelogEntries')) {
     {
         return [
             [
+                'date' => '2026-11-05 20:55',
+                'category' => 'calculators',
+                'title' => 'Mehran skóre: spoločná funkcia a citácia',
+                'description' => 'Celkové Mehran skóre CI-AKI je v spoločnej funkcii s referenčnými testami (body, hranice veku a eGFR, kategórie rizika). Na stránke je doplnená citácia Mehran 2004 (PMID 15464318); číselné výsledky sa nemenia.',
+                'url' => 'calculator_mehran.php',
+            ],
+            [
                 'date' => '2026-11-05 20:40',
                 'category' => 'calculators',
                 'title' => 'Očakávané pCO₂ pri metabolickej alkalóze',

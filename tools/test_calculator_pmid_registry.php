@@ -24,6 +24,7 @@ $registry = [
     'calculator_gupta.php' => ['38538012'],
     'calculator_kdpi.php' => ['19623019'],
     'calculator_mgrs.php' => ['30510265'],
+    'calculator_mehran.php' => ['15464318'],
     'calculator_mgus.php' => ['15855274'],
     'calculator_plasmic.php' => ['28259520', '31131442'],
     'calculator_tls.php' => ['15384972', '21561350'],

@@ -90,19 +90,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $anemia = $form["anemia"] === "1";
             $diabetes = $form["diabetes"] === "1";
 
-            $agePts = (int) $ageYears > 75 ? 4 : 0;
-            $renalPts = mehranRenalPoints((float) $egfr);
-            $contrastPts = (int) round($contrastVolume / 100.0); // ≈ 1 bod / 100 mL
-            $score =
-                ($hypo ? 5 : 0) +
-                ($iabp ? 5 : 0) +
-                ($chf ? 5 : 0) +
-                $agePts +
-                ($anemia ? 3 : 0) +
-                ($diabetes ? 3 : 0) +
-                $contrastPts +
-                $renalPts;
-
+            $scored = mehranScore(
+                (int) $ageYears,
+                (float) $egfr,
+                $contrastVolume,
+                $hypo,
+                $iabp,
+                $chf,
+                $anemia,
+                $diabetes,
+            );
+            $score = $scored["score"];
             [$riskCls, $riskLabel, $cinPct, $dialysisPct] = mehranCategory($score);
 
             $calculated = [
@@ -111,9 +109,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 "risk_label" => $riskLabel,
                 "cin_pct" => $cinPct,
                 "dialysis_pct" => $dialysisPct,
-                "age_pts" => $agePts,
-                "renal_pts" => $renalPts,
-                "contrast_pts" => $contrastPts,
+                "age_pts" => $scored["age_pts"],
+                "renal_pts" => $scored["renal_pts"],
+                "contrast_pts" => $scored["contrast_pts"],
                 "egfr" => round((float) $egfr, 1),
                 "contrast_volume_ml" => round($contrastVolume, 0),
             ];
@@ -254,7 +252,7 @@ if (isLoggedIn()) {
                             <li>Hypotenzia: <strong>5</strong> &bull; intraaortálna balónová kontrapulzácia (IABP): <strong>5</strong> &bull; kongestívne srdcové zlyhanie (NYHA III/IV alebo pľúcny edém): <strong>5</strong></li>
                             <li>Vek &gt; 75 rokov: <strong>4</strong> &bull; anémia (Hct &lt; 39 % muži / &lt; 36 % ženy): <strong>3</strong> &bull; diabetes mellitus: <strong>3</strong></li>
                             <li>Objem kontrastu: <strong>1 bod / 100 mL</strong></li>
-                            <li>eGFR &lt; 60: 40 až 60 → <strong>2</strong>, 20 až &lt; 40 → <strong>4</strong>, &lt; 20 → <strong>6</strong></li>
+                            <li>eGFR &lt; 60: 40 až &lt; 60 → <strong>2</strong>, 20 až &lt; 40 → <strong>4</strong>, &lt; 20 → <strong>6</strong></li>
                         </ul>
                         <div class="calc-formula-vars">
                             Kategórie: ≤ 5 nízke (CIN 7,5 %) &bull; 6 až 10 stredné (14,0 %) &bull;
@@ -264,7 +262,9 @@ if (isLoggedIn()) {
                 </details>
 
                 <div class="info-box-green">
-                    <strong>Porovnanie s referenčným kalkulátorom:</strong>
+                    <strong>Zdroj:</strong>
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/15464318/" target="_blank" rel="noopener noreferrer">Mehran R. et&nbsp;al., J Am Coll Cardiol 2004;44(7):1393–1399</a>
+                    &ensp;&bull;&ensp;
                     <a href="https://www.mdcalc.com/calc/10242/mehran-score-post-pci-contrast-nephropathy" target="_blank" rel="noopener noreferrer">MDCalc: Mehran</a>
                 </div>
 
