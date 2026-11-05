@@ -28,7 +28,15 @@ function Test-TextFilesEncoding {
 		}
 	} else {
 		$files = Get-ChildItem -Path $RootPath -Recurse -File -Include $textExtensions | Where-Object {
-			$_.FullName -notmatch '\\\.git\\' -and $_.FullName -notmatch '\\\.trunk\\'
+			$_.FullName -notmatch '\\\.git\\' -and
+			$_.FullName -notmatch '\\\.trunk\\' -and
+			$_.FullName -notmatch '\\\.claude\\' -and
+			$_.FullName -notmatch '\\\.codex\\' -and
+			$_.FullName -notmatch '\\\.agents\\' -and
+			$_.FullName -notmatch '\\\.cursor\\' -and
+			$_.FullName -notmatch '\\scratch\\' -and
+			$_.FullName -notmatch '\\node_modules\\' -and
+			$_.FullName -notmatch '\\vendor\\'
 		}
 	}
 

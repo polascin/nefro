@@ -1,22 +1,23 @@
 # SESSION
 
-Aktualizované: 2026-11-05 19:46 Europe/Bratislava
+Aktualizované: 2026-11-05 19:53 Europe/Bratislava
 
 ## Aktívna úloha
 
-Beh: referenčné testy CKD-EPI 2021 kreatinín–cystatín C. Handoff:
+Beh 163 (opakovaný audit). Handoff po predchádzajúcej slučke:
 `.codex/handoffs/2026-11-05-194517-egfr-cys-clinical-refs.md`.
 
 ## Stav repozitára
 
-- Vetva: `main` (HEAD `fc543a83`)
+- Vetva: `main` (HEAD po auditnom commite; runtime `fc543a83`)
 - Runtime / `DEPLOY_COMMIT`: `fc543a83`
 - Pripravené, nezlúčené: `fix/adpkd-mayo-2026-11-03`, `fix/gupta-mg-cutoff-2026-11-03`
 
 ## Čo je hotové
 
-1. Beh 150 až 162 + slučka 2026-11-05: MGRS, KDRI, Cr–Cys eGFR
-2. Regresie 53 PASS; eGFR ref 27 PASS
+1. Beh 150 až 163; MGRS, KDRI, CKD-EPI Cr–Cys referenčné testy
+2. Regresie 53 PASS; lint 718/0 po exclude worktrees
+3. Beh 163: živo OK, §15 dvoch článkov, bez kritického FAIL
 
 ## Otvorené (súhlas majiteľa)
 

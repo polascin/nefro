@@ -16,6 +16,10 @@ parameters:
         # macOS/OneDrive reprezentuje inou Unicode normalizáciou.
         - */.trunk/*
         - */.kilo/*
+        - */.claude/*
+        - */.codex/*
+        - */.agents/*
+        - */.cursor/*
         - */tools/*.phar
         - phar://*/tools/phpstan.phar/*
         - */scratch/*
