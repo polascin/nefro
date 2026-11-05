@@ -1,22 +1,22 @@
 # SESSION
 
-Aktualizované: 2026-11-05 19:22 Europe/Bratislava
+Aktualizované: 2026-11-05 19:46 Europe/Bratislava
 
 ## Aktívna úloha
 
-Beh: referenčné testy MGRS + KDRI/OPTN. Handoff:
-`.codex/handoffs/2026-11-05-192038-mgrs-kdpi-clinical-refs.md`.
+Beh: referenčné testy CKD-EPI 2021 kreatinín–cystatín C. Handoff:
+`.codex/handoffs/2026-11-05-194517-egfr-cys-clinical-refs.md`.
 
 ## Stav repozitára
 
-- Vetva: `main` (HEAD docs `d846c5aa`; nasaditeľný kód `a6c6b4b1`)
-- Runtime / `DEPLOY_COMMIT`: `a6c6b4b1`
+- Vetva: `main` (HEAD `fc543a83`)
+- Runtime / `DEPLOY_COMMIT`: `fc543a83`
 - Pripravené, nezlúčené: `fix/adpkd-mayo-2026-11-03`, `fix/gupta-mg-cutoff-2026-11-03`
 
 ## Čo je hotové
 
-1. Beh 150 až 162 + slučka 2026-11-05: clinical refs vrátane MGRS a KDRI
-2. Regresie 53 PASS
+1. Beh 150 až 162 + slučka 2026-11-05: MGRS, KDRI, Cr–Cys eGFR
+2. Regresie 53 PASS; eGFR ref 27 PASS
 
 ## Otvorené (súhlas majiteľa)
 
@@ -26,9 +26,9 @@ Beh: referenčné testy MGRS + KDRI/OPTN. Handoff:
 ## Executable next step
 
 ```text
-php ops_health.php --no-http
+php tools/test_acidbase_display.php
 ```
 
 ## Handoff
 
-`.codex/handoffs/2026-11-05-192038-mgrs-kdpi-clinical-refs.md`
+`.codex/handoffs/2026-11-05-194517-egfr-cys-clinical-refs.md`
