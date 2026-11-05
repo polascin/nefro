@@ -2,12 +2,16 @@
 
 ## Ďalšia slučka
 
-1. `php ops_health.php` (alebo prvý FAIL); PHPStan new; ďalšia bezpečná položka mimo „Čaká na majiteľa“ (napr. prevodník jednotiek).
+1. Zjednotiť inline prevody `× 88,4` / `0,0884` na spoločné helpery, alebo P1 pokrytie ďalšej stránky mimo „Čaká na majiteľa“ (KDIGO G×A / AKI FENa interpretácie).
 2. Čaká na majiteľa: limity korekcie hyponatrémie v calculator_na.php (Beh 153).
 3. Čaká na majiteľa: CRRT bez korekcie predilúcie a bez citácie KDIGO (Beh 157).
 4. Čaká na majiteľa: zlúčenie `fix/adpkd-mayo-2026-11-03` (Beh 158).
 5. Čaká na majiteľa: IgAN koeficienty nezodpovedajú opísanému modelu (Beh 158).
 6. Čaká na majiteľa: zlúčenie `fix/gupta-mg-cutoff-2026-11-03` (Beh 159).
+
+## Hotové: slučka 2026-11-05-g (prevodník)
+
+- [x] `calculatorUnitConversionRows` + konverzie v calculators_common; test 53 PASS; deploy `8108f319`
 
 ## Hotové: slučka 2026-11-05-f (Mehran)
 
