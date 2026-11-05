@@ -433,6 +433,19 @@ const PHOSPHATE_MGDL_TO_MMOLL = 0.3229;
  */
 const PHOSPHATE_MMOLL_TO_MGDL = 3.097;
 
+/**
+ * Magnézium mg/dL → mmol/L (konvenčný faktor prevodníka; ≈ 10 / 24,305).
+ * Približne reciproký k MAGNESIUM_MMOLL_TO_MGDL (MW Mg ≈ 24,305 / 10).
+ */
+const MAGNESIUM_MGDL_TO_MMOLL = 0.4114;
+
+/**
+ * Magnézium mmol/L → mg/dL (≈ MW magnézia / 10 = 2,4305).
+ * Nie je odvodený ako 1/0,4114: samostatne zaokrúhlené klinické konštanty
+ * (prevodník 0,4114; MW Mg 24,305 → 2,4305).
+ */
+const MAGNESIUM_MMOLL_TO_MGDL = 2.4305;
+
 /** CSS trieda podľa klasifikácie Cairo–Bishop. */
 function tlsRiskClass(bool $ctls, bool $ltls): string
 {
@@ -1405,6 +1418,18 @@ function phosphateMmolLToMgDl(float $mmolL): float
     return $mmolL * PHOSPHATE_MMOLL_TO_MGDL;
 }
 
+/** Magnézium mg/dL → mmol/L. */
+function magnesiumMgDlToMmolL(float $mgDl): float
+{
+    return $mgDl * MAGNESIUM_MGDL_TO_MMOLL;
+}
+
+/** Magnézium mmol/L → mg/dL. */
+function magnesiumMmolLToMgDl(float $mmolL): float
+{
+    return $mmolL * MAGNESIUM_MMOLL_TO_MGDL;
+}
+
 /** UACR mg/mmol → mg/g. */
 function uacrMgMmolToMgG(float $mgMmol): float
 {
@@ -1756,7 +1781,7 @@ function calculatorUnitConversionRows(): array
         ['Glukóza', 'mg/dL', 'mmol/L', GLUCOSE_MGDL_TO_MMOLL, 0, 1],
         ['Vápnik', 'mg/dL', 'mmol/L', CALCIUM_MGDL_TO_MMOLL, 1, 2],
         ['Fosfát (P)', 'mg/dL', 'mmol/L', PHOSPHATE_MGDL_TO_MMOLL, 1, 2],
-        ['Magnézium', 'mg/dL', 'mmol/L', 0.4114, 1, 2],
+        ['Magnézium', 'mg/dL', 'mmol/L', MAGNESIUM_MGDL_TO_MMOLL, 1, 2],
         ['Kyselina močová', 'mg/dL', 'µmol/L', 59.48, 1, 0],
         ['Cholesterol', 'mg/dL', 'mmol/L', 0.02586, 0, 2],
         ['Triglyceridy', 'mg/dL', 'mmol/L', 0.01129, 0, 2],

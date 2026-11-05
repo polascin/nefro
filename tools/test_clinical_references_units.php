@@ -54,7 +54,9 @@ unitsRefApprox(4.008, CALCIUM_MMOLL_TO_MGDL, 0.0, 'CALCIUM_MMOLL_TO_MGDL = 4,008
 unitsRefApprox(PHOSPHATE_MGDL_TO_MMOLL, (float) $byName['Fosfát (P)'][3], 1e-12, 'Fosfát faktor z konštanty');
 unitsRefApprox(0.3229, PHOSPHATE_MGDL_TO_MMOLL, 0.0, 'PHOSPHATE_MGDL_TO_MMOLL = 0,3229');
 unitsRefApprox(3.097, PHOSPHATE_MMOLL_TO_MGDL, 0.0, 'PHOSPHATE_MMOLL_TO_MGDL = 3,097');
-unitsRefApprox(0.4114, (float) $byName['Magnézium'][3], 1e-12, 'Magnézium faktor 0,4114');
+unitsRefApprox(MAGNESIUM_MGDL_TO_MMOLL, (float) $byName['Magnézium'][3], 1e-12, 'Magnézium faktor z konštanty');
+unitsRefApprox(0.4114, MAGNESIUM_MGDL_TO_MMOLL, 0.0, 'MAGNESIUM_MGDL_TO_MMOLL = 0,4114');
+unitsRefApprox(2.4305, MAGNESIUM_MMOLL_TO_MGDL, 0.0, 'MAGNESIUM_MMOLL_TO_MGDL = 2,4305');
 unitsRefApprox(59.48, (float) $byName['Kyselina močová'][3], 1e-12, 'Kyselina močová faktor 59,48');
 unitsRefApprox(0.02586, (float) $byName['Cholesterol'][3], 1e-12, 'Cholesterol faktor 0,02586');
 unitsRefApprox(0.01129, (float) $byName['Triglyceridy'][3], 1e-12, 'Triglyceridy faktor 0,01129');
@@ -150,6 +152,17 @@ unitsRefApprox(
     calculatorConvertConventionalToSi(4.5, PHOSPHATE_MGDL_TO_MMOLL),
     0.0,
     'phosphate helper = prevodník s PHOSPHATE_MGDL_TO_MMOLL',
+);
+
+$mgSi = calculatorConvertConventionalToSi(2.0, (float) $byName['Magnézium'][3]);
+unitsRefApprox(0.8228, $mgSi, 1e-9, 'Magnézium 2,0 mg/dL → 0,8228 mmol/L');
+unitsRefApprox(0.8228, magnesiumMgDlToMmolL(2.0), 1e-9, 'magnesiumMgDlToMmolL(2)');
+unitsRefApprox(24.305, magnesiumMmolLToMgDl(10.0), 1e-9, 'magnesiumMmolLToMgDl(10)');
+unitsRefApprox(
+    magnesiumMgDlToMmolL(2.0),
+    calculatorConvertConventionalToSi(2.0, MAGNESIUM_MGDL_TO_MMOLL),
+    0.0,
+    'magnesium helper = prevodník s MAGNESIUM_MGDL_TO_MMOLL',
 );
 
 $egfrSi = calculatorConvertConventionalToSi(60.0, (float) $byName['eGFR'][3]);
@@ -294,6 +307,20 @@ unitsRefTest(
     !preg_match("/['\"]Fosfát \(P\)['\"].*0\.3229/", $commonSrc)
         && !preg_match('/\*\s*3\.097\b/', $commonSrc),
     'calculators_common bez literálu 0,3229 v prevodníku a bez inline × 3,097',
+);
+
+// Magnézium mg/dL ↔ mmol/L: konštanty + helpery; bez inline 0.4114 / 2.4305 mimo definícií
+unitsRefTest(
+    str_contains($commonSrc, 'MAGNESIUM_MGDL_TO_MMOLL')
+        && str_contains($commonSrc, 'MAGNESIUM_MMOLL_TO_MGDL')
+        && str_contains($commonSrc, 'magnesiumMgDlToMmolL')
+        && str_contains($commonSrc, 'magnesiumMmolLToMgDl'),
+    'calculators_common má magnéziové konštanty a helpery',
+);
+unitsRefTest(
+    !preg_match("/['\"]Magnézium['\"].*0\.4114/", $commonSrc)
+        && !preg_match('/\*\s*2\.4305\b/', $commonSrc),
+    'calculators_common bez literálu 0,4114 v prevodníku a bez inline × 2,4305',
 );
 
 echo "Clinical references (units): $checks PASS\n";
