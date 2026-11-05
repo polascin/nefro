@@ -1,16 +1,16 @@
 # SESSION
 
-Aktualizované: 2026-11-05 23:54 Europe/Bratislava
+Aktualizované: 2026-11-06 00:14 Europe/Bratislava
 
 ## Aktívna úloha
 
-Beh: spoločné konštanty/helpery magnézium mg/dL ↔ mmol/L. Handoff:
-`.codex/handoffs/2026-11-05-235350-magnesium-helpers.md`.
+Beh: spoločné konštanty/helpery kyselina močová mg/dL ↔ µmol/L. Handoff:
+`.codex/handoffs/2026-11-06-001430-uric-acid-helpers.md`.
 
 ## Stav repozitária
 
-- Vetva: `main` (HEAD `2bc54eca`; feature `c7a18acd`)
-- Runtime / `DEPLOY_COMMIT`: `c7a18acd` (docs-only drift po handoffe OK)
+- Vetva: `main` (HEAD `2f5ea0cb`; feature `2f5ea0cb`)
+- Runtime / `DEPLOY_COMMIT`: `2f5ea0cb`
 - Pripravené, nezlúčené: `fix/adpkd-mayo-2026-11-03`, `fix/gupta-mg-cutoff-2026-11-03`
 
 ## Čo je hotové
@@ -28,6 +28,7 @@ Beh: spoločné konštanty/helpery magnézium mg/dL ↔ mmol/L. Handoff:
 11. Slučka tick 12: `CALCIUM_MGDL_TO_MMOLL` + `CALCIUM_MMOLL_TO_MGDL` + helpery; units 112 PASS; scores 26 PASS; suite 56 PASS
 12. Slučka tick 13: `PHOSPHATE_MGDL_TO_MMOLL` + `PHOSPHATE_MMOLL_TO_MGDL` + helpery; units 120 PASS; scores 26 PASS; suite 56 PASS
 13. Slučka tick 14: `MAGNESIUM_MGDL_TO_MMOLL` + `MAGNESIUM_MMOLL_TO_MGDL` + helpery; units 128 PASS; scores 26 PASS; suite 56 PASS
+14. Slučka tick 15: `URIC_ACID_MGDL_TO_UMOLL` + `URIC_ACID_UMOLL_TO_MGDL` + helpery; units 136 PASS; scores 26 PASS; suite 56 PASS
 
 ## Otvorené (súhlas majiteľa)
 
@@ -37,9 +38,9 @@ Beh: spoločné konštanty/helpery magnézium mg/dL ↔ mmol/L. Handoff:
 ## Executable next step
 
 ```text
-rg -n 59.48 calculator_*.php calculators_common.php
+rg -n 0.02586 calculator_*.php calculators_common.php
 ```
 
 ## Handoff
 
-`.codex/handoffs/2026-11-05-235350-magnesium-helpers.md`
+`.codex/handoffs/2026-11-06-001430-uric-acid-helpers.md`

@@ -2,12 +2,16 @@
 
 ## Ďalšia slučka
 
-1. Zjednotiť faktor kyseliny močovej `59.48` na konštantu/helper, alebo P1 mimo „Čaká na majiteľa“.
+1. Zjednotiť faktor cholesterolu `0.02586` na konštantu/helper, alebo P1 mimo „Čaká na majiteľa“.
 2. Čaká na majiteľa: limity korekcie hyponatrémie v calculator_na.php (Beh 153).
 3. Čaká na majiteľa: CRRT bez korekcie predilúcie a bez citácie KDIGO (Beh 157).
 4. Čaká na majiteľa: zlúčenie `fix/adpkd-mayo-2026-11-03` (Beh 158).
 5. Čaká na majiteľa: IgAN koeficienty nezodpovedajú opísanému modelu (Beh 158).
 6. Čaká na majiteľa: zlúčenie `fix/gupta-mg-cutoff-2026-11-03` (Beh 159).
+
+## Hotové: slučka 2026-11-06-a (kyselina močová)
+
+- [x] `URIC_ACID_MGDL_TO_UMOLL` + `URIC_ACID_UMOLL_TO_MGDL` + helpery; units 136 PASS; scores 26 PASS; deploy `2f5ea0cb`
 
 ## Hotové: slučka 2026-11-05-o (magnézium)
 
